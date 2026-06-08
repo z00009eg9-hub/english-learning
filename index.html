@@ -1453,7 +1453,7 @@ const allKW = [
 // READING ARTICLES  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 const articles = [
-// ===SYNC:ARTICLES_START=== sync_date:2026-06-07 count:14
+// ===SYNC:ARTICLES_START=== sync_date:2026-06-08 count:18
   {
     title:"My English Learning Journey",
     titleCn:"我的英文學習之旅",
@@ -1846,6 +1846,118 @@ const articles = [
       {q:"Why does the passage say medical costs in Taiwan are generally lower than in the USA?",
        opts:["Because Taiwanese hospitals refuse to treat serious illness","Because Taiwan has a government insurance system that covers most costs and requires only a small co-pay","Because medicine is free for everyone in Taiwan","Because the USA has no health insurance system at all"],
        ans:1,expl:"中文解析：文章結論指出「Taiwan has lower medical costs because it has a government insurance system. People only pay a small co-pay when they see a doctor.」說明台灣費用較低的原因是政府保險制度幫忙負擔大部分費用，民眾只需支付少額部分負擔，故答案為 B。"}
+    ]
+  },
+  // --- synced from 20260423: The Farmer and the Wise Woman ---
+  {
+    title:"The Farmer and the Wise Woman",
+    titleCn:"農夫與智者",
+    source:"Based on 20260423 lesson notes",
+    highlightWords:["concentrate","consult","coax","irritated","transport","boosted","assembled","weakened","apologize","revealed"],
+    paras:[
+      {en:"Once upon a time, there was a farmer who could not <span class='hl' onclick='speakText(\"concentrate\")'>concentrate</span> because his house was so noisy. He asked many people what to do. They told him to <span class='hl' onclick='speakText(\"consult\")'>consult</span> the Wise Woman for advice. \"Since so many people have referred me to her, I'm sure she can help,\" he thought, and set out for her house.",
+       cn:"從前，有一個農夫因為家裡太吵而無法專心。他問了很多人該怎麼辦，他們告訴他去請教智者，尋求她的建議。「既然這麼多人都向我推薦她，我相信她一定能幫忙，」他心想，便出發前往她的住處。"},
+      {en:"\"I am annoyed and <span class='hl' onclick='speakText(\"irritated\")'>irritated</span> because my house is very small and we have so many noisy children,\" the farmer told her. The Wise Woman said, \"<span class='hl' onclick='speakText(\"coax\")'>Coax</span> your horse to come inside your house by talking to it in a gentle way.\" The farmer thought this was an odd suggestion, but he did as he was told.",
+       cn:"「我感到很煩躁且被激怒，因為我的房子很小，而且有太多吵鬧的孩子，」農夫說。智者說：「用愉快溫和的方式對你的馬說話，哄勸牠進到你的房子裡。」農夫覺得這個建議很奇怪，但他還是照做了。"},
+      {en:"The next day, the farmer returned. He was very angry. \"I reject your advice! I can't manage to get anything done!\" The Wise Woman said, \"<span class='hl' onclick='speakText(\"transport\")'>Transport</span> your brother's cows into your house too.\" The farmer did as he was told. This <span class='hl' onclick='speakText(\"boosted\")'>boosted</span> the noise to an even higher level! The animals <span class='hl' onclick='speakText(\"assembled\")'>assembled</span> all over the house. After weeks of this, the farmer grew very tired and <span class='hl' onclick='speakText(\"weakened\")'>weakened</span>.",
+       cn:"第二天，農夫回來了，他非常生氣。「我拒絕你的建議！我什麼事都無法完成！」智者說：「把你哥哥的牛也運送到你家裡。」農夫照做了。這把噪音提升到了更高的程度！動物們在房子裡到處聚集。這樣過了幾個星期後，農夫變得非常疲憊、虛弱。"},
+      {en:"Finally, the Wise Woman told him to take all the animals outside. Once the house was empty of animals, it felt peaceful and quiet. The farmer came back and said, \"I <span class='hl' onclick='speakText(\"apologize\")'>apologize</span>. My house is back to normal. You have <span class='hl' onclick='speakText(\"revealed\")'>revealed</span> to me a truth about life — people should learn to be content with what they have.\"",
+       cn:"最後，智者告訴他把所有動物都帶到外面去。一旦房子裡沒有了動物，頓時感覺平靜且安靜。農夫回來說：「我道歉。我的房子恢復正常了。妳向我揭示了一個關於生活的真理——人們應該學會滿足於自己所擁有的。」"},
+    ],
+    questions:[
+      {q:"Why did the farmer go to see the Wise Woman?",
+       opts:["His house was too quiet","He could not concentrate because his house was so noisy","He wanted to buy a horse","He needed help with his job"],
+       ans:1,expl:"'He could not concentrate because his house was so noisy' — 農夫因為家裡太吵，無法專心。"},
+      {q:"What lesson did the farmer learn at the end?",
+       opts:["How to keep animals inside the house","That animals make good companions","People should learn to be content with what they have","That consulting a Wise Woman is always helpful"],
+       ans:2,expl:"'people should learn to be content with what they have' — 人們應學會滿足於自己所擁有的。"},
+      {q:"What does 'coax' mean in the story?",
+       opts:["To transport something by truck","To make someone feel irritated","To persuade gently and kindly","To apologize and reveal the truth"],
+       ans:2,expl:"'coax' = 哄勸 — to persuade a person or animal to do something by speaking gently and kindly."},
+    ]
+  },
+  // --- synced from 20260402 & 20260407: 清明節 ---
+  {
+    title:"Sweeping Tombs Day in Taiwan",
+    titleCn:"台灣的清明節",
+    source:"Based on 20260402 & 20260407 lesson notes",
+    highlightWords:["ancestors","offerings","overgrown","superstitious","graves","traditions"],
+    paras:[
+      {en:"Tomb Sweeping Day, known in Chinese as 清明節, is one of the most important traditional holidays in Taiwan. It falls in early April every year. During this time, many families travel long distances to return home and visit the <span class='hl' onclick='speakText(\"graves\")'>graves</span> of their <span class='hl' onclick='speakText(\"ancestors\")'>ancestors</span>.",
+       cn:"清明節是台灣最重要的傳統節日之一，每年在四月初舉行。在這段時間裡，許多家庭長途跋涉返鄉，前往祭掃祖先的墳墓。"},
+      {en:"At the graves, families work together to clean the area. After a year, the grass around the graves often becomes <span class='hl' onclick='speakText(\"overgrown\")'>overgrown</span>, so it needs to be cut and cleared. Families also bring food, flowers, and burn paper money as <span class='hl' onclick='speakText(\"offerings\")'>offerings</span> for their ancestors.",
+       cn:"在墳墓前，家人們一起清理周圍的環境。過了一年，墳墓周圍的草通常長得十分茂盛，需要被剪除和清理。家人們也會帶食物、鮮花，並燒紙錢作為給祖先的祭品。"},
+      {en:"Many <span class='hl' onclick='speakText(\"superstitious\")'>superstitious</span> beliefs are still common during this holiday. For example, many people believe the number four brings bad luck because it sounds like the word for \"death\" in Chinese. In some cities like Taipei, people are not allowed to set off fireworks in public places because it is dangerous.",
+       cn:"許多迷信的觀念在這個節日期間仍然很普遍。例如，許多人認為數字 4 會帶來厄運，因為它的讀音像中文的「死」字。在台北等城市，人們也不被允許在公共場所放煙火，因為那很危險。"},
+      {en:"Tomb Sweeping Day is a time for families to come together and remember those who have passed away. It shows the deep respect that Taiwanese people have for their ancestors and family <span class='hl' onclick='speakText(\"traditions\")'>traditions</span>. Despite modern life being very busy, most families still make time to observe this important holiday.",
+       cn:"清明節是家人聚在一起、緬懷已故親人的時刻，展現了台灣人對祖先和家族傳統的深厚敬意。儘管現代生活非常忙碌，大多數家庭仍會抽出時間來遵守這個重要的節日。"},
+    ],
+    questions:[
+      {q:"When is Tomb Sweeping Day in Taiwan?",
+       opts:["Late December","Early April","Chinese New Year","Mid-September"],
+       ans:1,expl:"'It falls in early April every year' — 清明節每年在四月初舉行。"},
+      {q:"What does 'overgrown' mean in the article?",
+       opts:["Very clean and tidy","Full of flowers","Covered with too much grass or plants","Old and broken down"],
+       ans:2,expl:"'overgrown' = 雜草叢生的 — when grass or plants have grown too much and covered an area."},
+      {q:"Why do families burn paper money on Tomb Sweeping Day?",
+       opts:["To keep the area warm","As offerings for their ancestors","Because it is required by law","To get rid of old paper"],
+       ans:1,expl:"'burn paper money as offerings for their ancestors' — 燒紙錢是給祖先的祭品。"},
+    ]
+  },
+  // --- synced from 20260407: 合租公寓生活 ---
+  {
+    title:"Roommate Life: Living Together",
+    titleCn:"合租公寓生活",
+    source:"Based on 20260407 lesson notes",
+    highlightWords:["negotiate","routines","clash","compromise","chores","convenient"],
+    paras:[
+      {en:"Living with a roommate can be a great experience, but it also comes with challenges. When two people share the same space, their daily <span class='hl' onclick='speakText(\"routines\")'>routines</span> may sometimes <span class='hl' onclick='speakText(\"clash\")'>clash</span>. For example, one person might want quiet in the evening while the other enjoys watching TV or playing music.",
+       cn:"和室友一起住可能是一段很棒的經歷，但也伴隨著挑戰。當兩個人共享同一個空間時，他們的日常作息有時可能會產生衝突。例如，一個人可能想在晚上保持安靜，而另一個人卻喜歡看電視或聽音樂。"},
+      {en:"The key to a happy shared home is communication. Roommates need to <span class='hl' onclick='speakText(\"negotiate\")'>negotiate</span> things like <span class='hl' onclick='speakText(\"chores\")'>chores</span>, grocery shopping, and noise levels. \"We should negotiate our differences calmly instead of arguing,\" is good advice for any roommate situation.",
+       cn:"和睦同住的關鍵是溝通。室友們需要就家事、採購和噪音大小等事項進行協商。「我們應該平靜地協商彼此的分歧，而不是爭吵，」這是適用於任何室友情況的好建議。"},
+      {en:"On the one hand, living with others is <span class='hl' onclick='speakText(\"convenient\")'>convenient</span> because you share the rent and utility bills. On the other hand, it requires patience and respect. A good roommate respects the other person's personal space and schedule, and is willing to <span class='hl' onclick='speakText(\"compromise\")'>compromise</span> when needed.",
+       cn:"一方面，和他人同住很方便，因為可以分擔房租和水電費。另一方面，這需要耐心和尊重。一個好室友會尊重對方的個人空間和行程，並在必要時願意做出妥協。"},
+      {en:"Living together teaches important life skills. You learn how to communicate clearly, share responsibilities, and understand different lifestyles. Many people say that their roommate experience — even with its difficulties — helped them become more mature and understanding.",
+       cn:"同住的生活教導重要的人生技能。你學會如何清楚溝通、分擔責任，以及理解不同的生活方式。許多人說，他們的室友經驗——即使有困難——也幫助他們變得更加成熟和善解人意。"},
+    ],
+    questions:[
+      {q:"What is the most important thing for roommates according to the article?",
+       opts:["Sharing the same interests","Good communication and negotiation","Having the same daily routine","Paying equal rent every month"],
+       ans:1,expl:"'The key to a happy shared home is communication' — 和睦同住的關鍵是溝通。"},
+      {q:"What does 'routines clash' mean?",
+       opts:["Two people have the same schedule","Two people's daily habits create conflict","Roommates argue about chores","One person stays home while the other goes out"],
+       ans:1,expl:"'clash' = 衝突 — when two people's habits or schedules create problems because they don't fit together."},
+      {q:"What is one advantage of living with a roommate?",
+       opts:["You never have to do chores","You can share the rent and utility bills","You always have the same lifestyle","You don't need to communicate"],
+       ans:1,expl:"'living with others is convenient because you share the rent and utility bills' — 可以分擔房租和水電費。"},
+    ]
+  },
+  // --- synced from 20260604: 天氣與災難 ---
+  {
+    title:"Extreme Weather: Tornadoes, Typhoons & Hurricanes",
+    titleCn:"極端天氣：龍捲風、颱風與颶風",
+    source:"Based on 20260604 lesson notes",
+    highlightWords:["forecast","thunderstorm","tornado","typhoon","hurricane","siren","shelter"],
+    paras:[
+      {en:"When the sky turns dark and the wind starts to blow hard, it is time to check what the weather <span class='hl' onclick='speakText(\"forecast\")'>forecast</span> says. A <span class='hl' onclick='speakText(\"thunderstorm\")'>thunderstorm</span> might be coming, or something even more serious — a tornado, a typhoon, or a hurricane. \"The weather forecast says it will rain tomorrow,\" is a common sentence, but extreme weather warnings are much more serious.",
+       cn:"當天空變暗、風開始猛烈吹起時，就是查看天氣預報的時候了。可能有雷雨要來，或是更嚴重的情況——龍捲風、颱風或颶風。「天氣預報說明天會下雨」是一句常見的話，但極端天氣警告就嚴重得多了。"},
+      {en:"A <span class='hl' onclick='speakText(\"tornado\")'>tornado</span> is a fast-rotating column of air that stretches from the clouds down to the ground. It covers a small area but causes very strong, concentrated damage in a short time. When a tornado warning has been issued, people must take <span class='hl' onclick='speakText(\"shelter\")'>shelter</span> immediately. \"Let's go inside — I think a tornado might hit this area,\" someone might say urgently.",
+       cn:"龍捲風是一個快速旋轉的空氣柱，從雲層延伸到地面。它範圍小，但在短時間內造成非常強烈、集中的破壞。當龍捲風警報發布時，人們必須立刻避難。「我們進去吧——我覺得龍捲風可能會襲擊這一帶，」有人可能緊急地說。"},
+      {en:"A <span class='hl' onclick='speakText(\"typhoon\")'>typhoon</span> and a <span class='hl' onclick='speakText(\"hurricane\")'>hurricane</span> are large storms that form over warm ocean water. They both bring strong winds and heavy rain, and can last for several days. The difference is only in the name: in Asia, we call them typhoons; in North and Central America, they are called hurricanes. \"The school is closed today because of the typhoon,\" is a sentence many Taiwanese students know well.",
+       cn:"颱風和颶風都是在溫暖的海洋上形成的大型風暴，帶來強風和暴雨，可以持續好幾天。差別只在名稱：在亞洲稱為颱風，在北美和中美洲則稱為颶風。「因為颱風的關係，學校今天停課，」這是許多台灣學生都很熟悉的一句話。"},
+      {en:"When extreme weather is approaching, preparation is key. People board up their windows, buy extra food and water, and wait for the storm to pass. Suddenly, the <span class='hl' onclick='speakText(\"siren\")'>siren</span> went off — and everyone ran to take shelter. After the storm, they come out to check the damage. Knowing what to do in extreme weather keeps people safe.",
+       cn:"當極端天氣來臨時，事前準備至關重要。人們用木板封住窗戶、購買額外的食物和飲用水，等待風暴過去。突然間，警報聲響起——大家都跑去避難。風暴過後，他們出來查看損壞情況。知道在極端天氣中該怎麼做，能讓人們保持安全。"},
+    ],
+    questions:[
+      {q:"What is the main difference between a tornado and a typhoon?",
+       opts:["A tornado is only in Asia","A tornado covers a small area with strong concentrated damage; a typhoon covers a much larger area","A typhoon is faster than a tornado","Tornadoes only happen in winter"],
+       ans:1,expl:"'Tornado: small area, very strong damage; Typhoon: very wide area, lasts for days' — 龍捲風範圍小但破壞力強且集中；颱風範圍非常大。"},
+      {q:"Why does the article say typhoons and hurricanes are actually the same?",
+       opts:["They both happen in Taiwan","They both form over land","They are the same type of storm but named differently depending on the region","They always last exactly the same number of days"],
+       ans:2,expl:"颱風和颶風本質上是相同類型的風暴，差別只在形成的地理位置和命名區域。"},
+      {q:"What does 'the siren went off' mean?",
+       opts:["The siren was turned off","The siren stopped working","The siren started making a loud warning sound","The siren fell from the wall"],
+       ans:2,expl:"'went off' = 響起 — when an alarm or siren suddenly starts making a loud noise as a warning."},
     ]
   },
 // ===SYNC:ARTICLES_END===
