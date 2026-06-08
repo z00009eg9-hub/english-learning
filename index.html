@@ -736,9 +736,9 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 // VOCABULARY DATA  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
-// ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260604
+// ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-06-08 count:294
+// ===SYNC:VOCAB_START=== sync_date:2026-06-08 count:320
   {w:"thunderstorm",ipa:"/ˈθʌndərstɔːrm/",pos:"n.",cn:"雷雨、雷暴",def:"伴隨雷電的強烈暴風雨",exEn:"Because of the thunderstorm, the power went out for hours.",exCn:"因為雷雨的關係，停電了好幾個小時。",cat:"daily"},
   {w:"spoil",ipa:"/spɔɪl/",pos:"v.",cn:"腐敗、變質",def:"食物因放置過久而變質損壞",exEn:"The food became spoiled after the power went out.",exCn:"停電之後食物變質了。",cat:"daily"},
   {w:"suddenly",ipa:"/ˈsʌdənli/",pos:"adv.",cn:"突然地",def:"在沒有預警的情況下迅速發生",exEn:"They were scared when the elevator stopped suddenly.",exCn:"當電梯突然停住時，他們感到害怕。",cat:"daily"},
@@ -1053,6 +1053,36 @@ const vocab = [
   {w:"run a fever",ipa:"/rʌn ə ˈfiːvər/",pos:"phr.",cn:"發燒",def:"to have a body temperature that is higher than normal because you are sick.",exEn:"The manager is running a high fever right now.",exCn:"經理現在正發著高燒。",cat:"health"},
   {w:"feverish",ipa:"/ˈfiːvərɪʃ/",pos:"adj.",cn:"發燒的／微燒的",def:"feeling hot and unwell because your body temperature is higher than normal.",exEn:"Amy felt a bit feverish, so she decided to go home early.",exCn:"Amy覺得有點發燒，所以她決定早點回家。",cat:"health"},
   {w:"spoiled food",ipa:"/spɔɪld fuːd/",pos:"n.",cn:"變質食物",def:"food that has gone bad and is no longer safe or good to eat.",exEn:"Diarrhea is often caused by a stomach virus or eating spoiled food.",exCn:"腹瀉通常是由胃病毒或吃到變質食物造成的。",cat:"food"},
+  // --- batch: synced from 20260317/20260319/20260326 (時態與日常生活) ---
+  {w:"disappointed",ipa:"/ˌdɪsəˈpɔɪntɪd/",pos:"adj.",cn:"感到失望的",def:"feeling unhappy because something was not as good as expected",exEn:"She was disappointed because the project didn't go well.",exCn:"她感到失望，因為專案進行得不順利。",cat:"daily"},
+  {w:"complain",ipa:"/kəmˈpleɪn/",pos:"v.",cn:"抱怨、投訴",def:"to say that you are unhappy or not satisfied with something",exEn:"My neighbor often complains about the noise.",exCn:"我的鄰居常常抱怨噪音。",cat:"daily"},
+  {w:"population",ipa:"/ˌpɒpjʊˈleɪʃən/",pos:"n.",cn:"人口",def:"all the people living in a particular area or country",exEn:"The city has a large population and traffic is terrible.",exCn:"這座城市人口眾多，交通非常糟糕。",cat:"daily"},
+  {w:"fashionable",ipa:"/ˈfæʃənəbl/",pos:"adj.",cn:"時尚的、流行的",def:"following the latest styles and trends in clothing or lifestyle",exEn:"There are many shops that sell fashionable clothes in this area.",exCn:"這一帶有很多賣時尚衣服的商店。",cat:"daily"},
+  {w:"patience",ipa:"/ˈpeɪʃəns/",pos:"n.",cn:"耐心",def:"the ability to wait or deal with difficult situations without becoming upset",exEn:"Living in a busy city taught me the value of patience.",exCn:"住在繁忙城市讓我體會到耐心的價值。",cat:"learning"},
+  {w:"recognize",ipa:"/ˈrekəɡnaɪz/",pos:"v.",cn:"認出、辨識",def:"to know who someone is or what something is when you see or hear it",exEn:"At first, I couldn't recognize many new words in English texts.",exCn:"起初，我無法認出英文文章裡的許多新單字。",cat:"learning"},
+  {w:"revise",ipa:"/rɪˈvaɪz/",pos:"v.",cn:"修改；複習",def:"to change or correct something; also to review notes before an exam",exEn:"I revise my English notes regularly to remember vocabulary.",exCn:"我定期複習英文筆記以記住單字。",cat:"learning"},
+  {w:"adjust",ipa:"/əˈdʒʌst/",pos:"v.",cn:"調整",def:"to change something slightly to make it fit or work better",exEn:"We need to adjust the design to meet foreign safety standards.",exCn:"我們需要調整設計，以符合國外的安全標準。",cat:"workplace"},
+  {w:"gist",ipa:"/dʒɪst/",pos:"n.",cn:"主旨、要點",def:"the main point or meaning of something",exEn:"The gist of the meeting was about product quality issues.",exCn:"會議的主旨是關於產品品質問題。",cat:"workplace"},
+  // --- batch: synced from 20260402/20260407 (清明節 & 合租公寓) ---
+  {w:"ancestors",ipa:"/ˈænsestərz/",pos:"n.",cn:"祖先",def:"people in your family who lived a long time ago",exEn:"During Tomb Sweeping Day, families visit the graves of their ancestors.",exCn:"在清明節期間，家人們前往祭掃祖先的墳墓。",cat:"daily"},
+  {w:"offerings",ipa:"/ˈɒfərɪŋz/",pos:"n.",cn:"祭品、供品",def:"things brought as gifts or tributes, especially in religious or cultural rituals",exEn:"We burn paper money as offerings for our ancestors.",exCn:"我們燒紙錢作為給祖先的祭品。",cat:"daily"},
+  {w:"overgrown",ipa:"/ˌoʊvərˈɡroʊn/",pos:"adj.",cn:"雜草叢生的",def:"covered with too many weeds or plants that have not been cut",exEn:"After a year, the grass around the graves is overgrown.",exCn:"過了一年，墳墓周圍的草長得太茂盛了。",cat:"daily"},
+  {w:"superstitious",ipa:"/ˌsuːpərˈstɪʃəs/",pos:"adj.",cn:"迷信的",def:"believing in things that cannot be explained by reason or science",exEn:"Many superstitious people believe the number 4 brings bad luck.",exCn:"許多迷信的人認為數字 4 會帶來厄運。",cat:"daily"},
+  {w:"chores",ipa:"/tʃɔːrz/",pos:"n.",cn:"家務瑣事",def:"small regular tasks done around the house, like cleaning and washing dishes",exEn:"Roommates need to negotiate chores so everyone shares the work fairly.",exCn:"室友們需要協商家事，以便每個人都能公平地分擔工作。",cat:"daily"},
+  // --- batch: synced from 20260423/20260507 (農夫與智者 & 基本口說) ---
+  {w:"concentrate",ipa:"/ˈkɒnsəntreɪt/",pos:"v.",cn:"專注、集中",def:"to give all your attention and effort to one thing",exEn:"The farmer could not concentrate because his house was so noisy.",exCn:"農夫因為家裡太吵而無法專心。",cat:"learning"},
+  {w:"consult",ipa:"/kənˈsʌlt/",pos:"v.",cn:"諮詢、查閱",def:"to go to someone for advice or information; to look up a reference",exEn:"He went to consult the Wise Woman to ask for her advice.",exCn:"他去請教智者，尋求她的建議。",cat:"learning"},
+  {w:"devote",ipa:"/dɪˈvoʊt/",pos:"v.",cn:"奉獻、投入",def:"to give a lot of time, energy, or effort to something",exEn:"The farmer devoted all day to chasing the animals around the house.",exCn:"農夫投入一整天的時間在追趕房子裡的動物。",cat:"learning"},
+  {w:"apologize",ipa:"/əˈpɒlədʒaɪz/",pos:"v.",cn:"道歉",def:"to say that you are sorry for something you have done wrong",exEn:"The farmer apologized and thanked the Wise Woman for her advice.",exCn:"農夫道歉，並感謝智者的建議。",cat:"daily"},
+  {w:"irritated",ipa:"/ˈɪrɪteɪtɪd/",pos:"adj.",cn:"感到惱怒的、煩躁的",def:"feeling slightly angry or impatient, especially because of repeated annoyances",exEn:"The manager was irritated by the repeated delays in the project.",exCn:"經理對專案一再延遲感到很惱火。",cat:"workplace"},
+  {w:"heatstroke",ipa:"/ˈhiːtstrəʊk/",pos:"n.",cn:"中暑",def:"a serious medical condition caused by becoming too hot; body cannot cool itself",exEn:"Remember to drink plenty of water when cycling, or you might get heatstroke.",exCn:"騎腳踏車時記得多喝水，否則可能會中暑。",cat:"health"},
+  {w:"commute",ipa:"/kəˈmjuːt/",pos:"v./n.",cn:"通勤",def:"to travel regularly between home and work; the journey itself",exEn:"I ride a scooter to commute to work every morning.",exCn:"我每天早上騎機車通勤上班。",cat:"daily"},
+  // --- batch: synced from 20251226 & 20260305 (壓力管理 & 問候健康) ---
+  {w:"relieve",ipa:"/rɪˈliːv/",pos:"v.",cn:"緩解、減輕",def:"to make an unpleasant feeling or situation less severe",exEn:"I drink tea to relieve stress after a long day at work.",exCn:"我在漫長的工作後喝茶來緩解壓力。",cat:"health"},
+  // --- batch: synced from 20260604 (天氣) ---
+  {w:"tornado",ipa:"/tɔːrˈneɪdoʊ/",pos:"n.",cn:"龍捲風",def:"a fast-rotating column of air that extends from a storm cloud to the ground",exEn:"A tornado warning has been issued — let's take shelter immediately.",exCn:"龍捲風警報已發布——我們立刻去避難吧。",cat:"daily"},
+  {w:"typhoon",ipa:"/taɪˈfuːn/",pos:"n.",cn:"颱風",def:"a large, powerful tropical storm that forms over warm ocean water in Asia",exEn:"The school is closed today because of the typhoon.",exCn:"因為颱風的關係，學校今天停課。",cat:"daily"},
+  {w:"hurricane",ipa:"/ˈhʌrɪkeɪn/",pos:"n.",cn:"颶風",def:"a large, powerful tropical storm that forms over warm ocean water in the Americas",exEn:"People are buying food and water before the hurricane arrives.",exCn:"在颶風來臨之前，人們正在購買食物和飲用水。",cat:"daily"},
 // ===SYNC:VOCAB_END===
 ];
 
@@ -1356,7 +1386,7 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-06-08 count:12
+// ===SYNC:TRANS_START=== sync_date:2026-06-08 count:35
 const allTrans = [
   {p:"天氣預報說明天會下雨。",              a:"The weather forecast says it will rain tomorrow.",                              h:"forecast says…",           kw:["forecast"],                 src:"20260604 各種天氣描述"},
   {p:"龍捲風警報已經發布了。",              a:"A tornado warning has been issued.",                                            h:"issue a warning",          kw:["issue"],                    src:"20260604 各種天氣描述"},
@@ -1370,11 +1400,44 @@ const allTrans = [
   {p:"儘管下雨，我們還是去散步了。",        a:"Despite the rain, we went for a walk.",                                         h:"Despite…",                 kw:["despite"],                  src:"20260331 Progress & Expression"},
   {p:"雷雨總是嚇到我。",                    a:"Thunderstorms always scare me.",                                                h:"scare",                    kw:["scare"],                    src:"20260602 scare / time gap"},
   {p:"衣服洗完後還是晾得微濕。",            a:"My clothes are still damp after washing.",                                      h:"damp",                     kw:["damp"],                     src:"20260528 taste & damp"},
+  // --- 20260317/20260319: 時態與繁忙社區 ---
+  {p:"她的經理給了她很好的回饋，所以她今天感到如釋重負。",a:"Her manager gave her good feedback, so she feels relieved today.",h:"relieved, feedback",kw:["relieved"],src:"20260317 時態與實用句型"},
+  {p:"昨天她有點失望，因為一個專案進行得不順利。",a:"Yesterday, she was a little disappointed because a project did not go well.",h:"disappointed",kw:["disappointed"],src:"20260317 時態與實用句型"},
+  {p:"房東決定今年要增加房租，所以我必須決定要留下還是搬走。",a:"The landlord decided to increase the rent this year, so I had to decide whether to stay or move.",h:"increase, decide",kw:["increase"],src:"20260319 時態、閱讀與目標字彙"},
+  {p:"住在這裡幫助我提升了溝通和耐心等技能。",a:"Living here helped me improve my skills, like communication and patience.",h:"patience, improve",kw:["patience"],src:"20260319 時態、閱讀與目標字彙"},
+  // --- 20260326/20260331: Making Steady Progress ---
+  {p:"我們需要調整設計，以符合國外的安全標準。",a:"We need to adjust the design to meet foreign safety standards.",h:"adjust, meet standards",kw:["adjust"],src:"20260326 Making Steady Progress"},
+  {p:"我沒認出他，因為他當時戴著口罩。",a:"I didn't recognize him because he was wearing a mask.",h:"recognize",kw:["recognize"],src:"20260326 Making Steady Progress"},
+  {p:"我記錄我的學習進度，這樣我就能找出任何問題。",a:"I keep a record of my learning progress so I can identify any problems.",h:"keep a record, identify",kw:["identify"],src:"20260326 Making Steady Progress"},
+  // --- 20260402/20260407: 清明節 & 合租公寓 ---
+  {p:"在清明節期間，許多人長途跋涉返鄉。",a:"During Tomb Sweeping Day, many people travel long distances to return home.",h:"Tomb Sweeping Day",kw:["travel"],src:"20260407 合租公寓生活"},
+  {p:"我們燒紙錢作為給祖先的祭品。",a:"We burn paper money as offerings for our ancestors.",h:"offerings, ancestors",kw:["ancestors"],src:"20260407 合租公寓生活"},
+  {p:"室友們需要協商家事，以便每個人都能公平地分擔工作。",a:"Roommates need to negotiate chores so everyone shares the work fairly.",h:"negotiate, chores",kw:["chores"],src:"20260407 合租公寓生活"},
+  // --- 20260423: The Farmer and the Wise Woman ---
+  {p:"農夫因為家裡太吵而無法專心。",a:"The farmer could not concentrate because his house was so noisy.",h:"concentrate",kw:["concentrate"],src:"20260423 The Farmer and the Wise Woman"},
+  {p:"人們應該學會滿足於自己所擁有的。",a:"People should learn to be content with what they have.",h:"be content with",kw:["content"],src:"20260423 The Farmer and the Wise Woman"},
+  {p:"她對所有的動物哄勸進屋的建議感到非常驚訝。",a:"She was surprised by the suggestion to coax all the animals inside the house.",h:"coax, suggestion",kw:["coax"],src:"20260423 The Farmer and the Wise Woman"},
+  // --- 20260507: 基本口說 ---
+  {p:"我下班後偏頭痛得很厲害，所以我吃了一顆止痛藥並休息了。",a:"I had a terrible migraine after work, so I took a painkiller and rested.",h:"migraine, painkiller",kw:["migraine"],src:"20260507 基本口說"},
+  {p:"每週上一對一的課程真的幫助我提升了英文能力。",a:"Having a one-on-one class every week really helps me boost my English skills.",h:"boost, one-on-one",kw:["boost"],src:"20260507 基本口說"},
+  // --- 20260312: 時態與日常生活 ---
+  {p:"我每天早上騎機車通勤上班，大約需要 20 分鐘。",a:"I ride a scooter to commute to work every morning — it takes about 20 minutes.",h:"commute, scooter",kw:["commute"],src:"20260312 英語時態、日常生活"},
+  {p:"天冷時要注意保暖。",a:"Remember to stay warm during cold weather.",h:"stay warm",kw:["warm"],src:"20260312 英語時態、日常生活"},
+  // --- 20251226: 壓力管理 ---
+  {p:"使用健身器材運動是釋放壓力的好方法。",a:"Working out on fitness equipment is a great way to release stress.",h:"release stress",kw:["release"],src:"20251226 壓力與假設語氣"},
+  {p:"我喜歡在裝滿熱水的浴缸裡放鬆，因為這有助於我緩解壓力。",a:"I like to relax in a bathtub filled with hot water because it helps me relieve stress.",h:"relieve stress",kw:["relieve"],src:"20251226 壓力與假設語氣"},
+  // --- 20260224: 面試 ---
+  {p:"我的主要職責包括檢查和測試健身器材。",a:"My main responsibilities include inspecting and testing fitness equipment.",h:"responsibilities, inspecting",kw:["responsibilities"],src:"20260224 面試 future goal"},
+  {p:"我的長期目標是成為資深品管經理，領導跨部門團隊。",a:"My long-term goal is to become a senior quality manager and lead cross-functional teams.",h:"long-term goal, senior",kw:["goal"],src:"20260224 面試 future goal"},
+  // --- 20260602: time gap ---
+  {p:"日本比台灣快一小時。",a:"Japan is 1 hour ahead of Taiwan.",h:"ahead of",kw:["ahead"],src:"20260602 scare / time gap"},
+  {p:"冬天時，加州比台灣慢 16 個小時。",a:"In winter, California is 16 hours behind Taiwan.",h:"behind",kw:["behind"],src:"20260602 scare / time gap"},
+  {p:"我把茶包留在杯子裡太久了，所以茶喝起來很苦。",a:"I left the tea bag in the cup too long, so the tea tasted bitter.",h:"leave…in, taste + adj.",kw:["bitter"],src:"20260602 scare / time gap"},
 // ===SYNC:TRANS_END===
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-06-08 count:14
+// ===SYNC:KW_START=== sync_date:2026-06-08 count:19
   {w:"forecast",ipa:"/ˈfɔːrkæst/",tag:"預報 · n./v.",exs:[
     {en:"The weather forecast says it will rain tomorrow.",cn:"天氣預報說明天會下雨。"},
     {en:"The forecast calls for rain tomorrow.",cn:"天氣預報明天下雨。"},
@@ -1445,6 +1508,32 @@ const allKW = [
     {en:"My clothes are still damp after washing.",cn:"衣服洗完後還是晾得微濕。"},
     {en:"The basement is always a damp room.",cn:"地下室總是個潮濕的房間。"},
     {en:"It's been damp and cloudy all week.",cn:"這整週都是又濕又陰的天氣。"},
+  ]},
+  // --- synced from 20260423 & 20260507 ---
+  {w:"concentrate",ipa:"/ˈkɒnsəntreɪt/",tag:"專注、集中 · v.",exs:[
+    {en:"The farmer could not concentrate because his house was so noisy.",cn:"農夫因為家裡太吵而無法專心。"},
+    {en:"I need to concentrate on the quality inspection report today.",cn:"我今天需要專心處理品質檢驗報告。"},
+    {en:"It is hard to concentrate when you have a bad headache.",cn:"頭痛很嚴重時很難集中注意力。"},
+  ]},
+  {w:"apologize",ipa:"/əˈpɒlədʒaɪz/",tag:"道歉 · v.",exs:[
+    {en:"The farmer apologized and said he was sorry for his behavior.",cn:"農夫道歉，說他對自己的行為感到抱歉。"},
+    {en:"Please apologize to your colleague if you made a mistake.",cn:"如果你犯了錯，請向你的同事道歉。"},
+    {en:"He apologized for being late to the meeting.",cn:"他為開會遲到道歉。"},
+  ]},
+  {w:"relieve",ipa:"/rɪˈliːv/",tag:"緩解、減輕 · v.",exs:[
+    {en:"I drink tea to relieve stress after a long day at work.",cn:"我在漫長工作後喝茶來緩解壓力。"},
+    {en:"A warm bath can help relieve muscle pain.",cn:"熱水澡可以幫助緩解肌肉疼痛。"},
+    {en:"Reading a book is a good way to relieve anxiety.",cn:"看書是緩解焦慮的好方法。"},
+  ]},
+  {w:"recognize",ipa:"/ˈrekəɡnaɪz/",tag:"認出、辨識 · v.",exs:[
+    {en:"At first, I couldn't recognize many new words in English texts.",cn:"起初，我無法認出英文文章裡的許多新單字。"},
+    {en:"I recognized the song as soon as I heard the first note.",cn:"我一聽到第一個音符就認出了這首歌。"},
+    {en:"She was wearing a mask, so I didn't recognize her at first.",cn:"她戴著口罩，所以我一開始沒認出她。"},
+  ]},
+  {w:"tornado",ipa:"/tɔːrˈneɪdoʊ/",tag:"龍捲風 · n.",exs:[
+    {en:"A tornado warning has been issued — let's take shelter immediately.",cn:"龍捲風警報已發布——我們立刻去避難吧。"},
+    {en:"The sirens went off when a tornado was approaching the city.",cn:"當龍捲風接近城市時，警報聲響起。"},
+    {en:"A tornado is a fast-rotating column of air from the cloud to the ground.",cn:"龍捲風是一個從雲層到地面的快速旋轉空氣柱。"},
   ]},
 // ===SYNC:KW_END===
 ];
