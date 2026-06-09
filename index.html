@@ -468,7 +468,7 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 <div id="sec-tr" class="sec">
   <div class="sec-head">
     <div class="sec-title">🔄 翻譯練習</div>
-    <div class="sec-sub" id="tr-sub">共 10 句 · 中文翻譯成英文 · 附筆記來源</div>
+    <div class="sec-sub" id="tr-sub">每次隨機 10 題 · 中文翻譯成英文 · 附筆記來源</div>
   </div>
   <div class="tr-ctrl">
     <div style="font-size:.85rem;color:var(--sub);font-weight:500;">🇹🇼 中文 → 🇺🇸 英文</div>
@@ -2491,12 +2491,12 @@ function setMode(m){
   if(m==='today'){
     document.getElementById('cat-filter').value='daily';
     document.getElementById('fc-sub').textContent=fcSubText();
-    document.getElementById('tr-sub').textContent=`今日 ${daily.trans.length} 題 · 中文翻英文`;
+    document.getElementById('tr-sub').textContent=`每次隨機 10 題（共 ${daily.trans.length} 題）· 中文翻英文`;
     document.getElementById('kw-sub').textContent=`今日 ${daily.kw.length} 個關鍵字 · 用英文造完整句子`;
   } else {
     document.getElementById('cat-filter').value='all';
     document.getElementById('fc-sub').textContent=fcSubText();
-    document.getElementById('tr-sub').textContent=`全部 ${allTrans.length} 題 · 中文翻英文`;
+    document.getElementById('tr-sub').textContent=`每次隨機 10 題（共 ${allTrans.length} 題）· 中文翻英文`;
     document.getElementById('kw-sub').textContent=`全部 ${allKW.length} 個關鍵字 · 用英文造完整句子`;
   }
   filterCards(); initTR(); initKW();
@@ -2663,8 +2663,7 @@ function resetFC(){ filterCards(); toast('↺ 重新開始！','#64748B'); }
 // ═══════════════════════════════════════════════
 let trList=[], trIdx=0, trOkSess=0, trTotalSess=0;
 function initTR(){
-  let pool=mode==='today'?[...daily.trans]:[...allTrans];
-  trList=pool.sort(()=>Math.random()-.5); trIdx=Math.floor(Math.random()*trList.length); renderTR();
+  trList=[...allTrans].sort(()=>Math.random()-.5).slice(0,10); trIdx=0; renderTR();
 }
 function renderTR(){
   if(!trList.length) return;
@@ -2743,8 +2742,8 @@ function showTRR(ok,t,b){
   document.getElementById('tr-res-t').className='res-title '+(ok?'ok-c':'no-c');
   document.getElementById('tr-res-t').textContent=t; document.getElementById('tr-res-b').innerHTML=b;
 }
-function nextTR(){ trIdx=(trIdx+1)%trList.length; renderTR(); }
-function shuffleTR(){ trList=trList.sort(()=>Math.random()-.5); trIdx=0; renderTR(); }
+function nextTR(){ if(trIdx===trList.length-1){ toast('🎉 10 題完成！換一組新題目吧','#10B981'); initTR(); }else{ trIdx++; renderTR(); } }
+function shuffleTR(){ initTR(); toast('🔀 已換新的 10 題！','#4F46E5'); }
 function resetTR(){ trOkSess=0; trTotalSess=0; document.getElementById('tr-ok').textContent=0; document.getElementById('tr-total').textContent=0; initTR(); }
 
 // ═══════════════════════════════════════════════
@@ -3393,7 +3392,7 @@ loadStorage(); updateUI();
 // 動態計數：每次 /sync-notes 更新資料後自動反映正確數字
 document.getElementById('fc-sub').textContent=fcSubText();
 document.getElementById('opt-all').textContent=`📚 全部 (${vocab.length})`;
-document.getElementById('tr-sub').textContent=`共 ${allTrans.length} 句 · 中文翻譯成英文 · 附筆記來源`;
+document.getElementById('tr-sub').textContent=`每次隨機 10 題（共 ${allTrans.length} 題）· 中文翻英文`;
 renderFC(); initTR(); initKW();
 setQuizType('mix');
 loadArticle(false);
