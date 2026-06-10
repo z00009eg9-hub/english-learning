@@ -736,9 +736,19 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 // VOCABULARY DATA  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
-// ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604
+// ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-06-08 count:320
+// ===SYNC:VOCAB_START=== sync_date:2026-06-10 count:330
+  {w:"flooded",ipa:"/ˈflʌdɪd/",pos:"adj.",cn:"已被淹沒的（靜態結果）",def:"水已經蓋住某處，描述完成的狀態",exEn:"The roads are flooded after the typhoon.",exCn:"颱風過後道路被淹沒了。",cat:"daily"},
+  {w:"flooding",ipa:"/ˈflʌdɪŋ/",pos:"v./adj.",cn:"正在淹水（動態進行）",def:"水正在上漲、淹上來的過程",exEn:"The roads are flooding right now — don't drive!",exCn:"道路正在淹水——不要開車！",cat:"daily"},
+  {w:"raincoat",ipa:"/ˈreɪnkoʊt/",pos:"n.",cn:"雨衣",def:"下雨時穿在身上防水的外套",exEn:"He decided not to wear a raincoat because it was only drizzling.",exCn:"他決定不穿雨衣，因為只是毛毛雨。",cat:"daily"},
+  {w:"polluted",ipa:"/pəˈluːtɪd/",pos:"adj.",cn:"被污染的",def:"因髒污物質而變得不乾淨的",exEn:"It seems the air is polluted because there are too many vehicles.",exCn:"看起來空氣很髒，因為路上有太多車輛。",cat:"daily"},
+  {w:"vehicle",ipa:"/ˈviːɪkl/",pos:"n.",cn:"車輛（統稱）",def:"汽車、機車等交通工具的總稱",exEn:"There are too many vehicles on the road.",exCn:"路上有太多車輛。",cat:"daily"},
+  {w:"affect",ipa:"/əˈfɛkt/",pos:"v.",cn:"影響",def:"對某事物產生作用或改變",exEn:"The typhoon affected the factory plan.",exCn:"颱風影響了工廠的計畫。",cat:"daily"},
+  {w:"to make landfall",ipa:"/meɪk ˈlændfɔːl/",pos:"phr.",cn:"（颱風、颶風）登陸（較正式的說法）",def:"暴風系統從海上移動到陸地",exEn:"The hurricane is projected to make landfall tomorrow morning.",exCn:"颶風預計明天早上登陸。",cat:"daily"},
+  {w:"hail",ipa:"/heɪl/",pos:"n.",cn:"冰雹",def:"從積雨雲落下的成串冰粒",exEn:"Hail is rare in Taiwan, so many people were surprised.",exCn:"冰雹在台灣很罕見，所以很多人感到驚訝。",cat:"daily"},
+  {w:"disposable",ipa:"/dɪˈspoʊzəbl/",pos:"adj.",cn:"一次性的",def:"使用一次後即丟棄的物品",exEn:"There is a disposable container on the back of his motorcycle.",exCn:"他的機車後面有一個一次性容器。",cat:"daily"},
+  {w:"ponytail",ipa:"/ˈpoʊniˌteɪl/",pos:"n.",cn:"馬尾（髮型）",def:"將頭髮綁在腦後成束的髮型",exEn:"She has tied her hair in a ponytail.",exCn:"她把頭髮綁成了馬尾。",cat:"daily"},
   {w:"thunderstorm",ipa:"/ˈθʌndərstɔːrm/",pos:"n.",cn:"雷雨、雷暴",def:"伴隨雷電的強烈暴風雨",exEn:"Because of the thunderstorm, the power went out for hours.",exCn:"因為雷雨的關係，停電了好幾個小時。",cat:"daily"},
   {w:"spoil",ipa:"/spɔɪl/",pos:"v.",cn:"腐敗、變質",def:"食物因放置過久而變質損壞",exEn:"The food became spoiled after the power went out.",exCn:"停電之後食物變質了。",cat:"daily"},
   {w:"suddenly",ipa:"/ˈsʌdənli/",pos:"adv.",cn:"突然地",def:"在沒有預警的情況下迅速發生",exEn:"They were scared when the elevator stopped suddenly.",exCn:"當電梯突然停住時，他們感到害怕。",cat:"daily"},
@@ -1087,8 +1097,18 @@ const vocab = [
 ];
 
 // 每個單字的筆記來源 (key = word, value = note title)
-// ===SYNC:SOURCES_START=== sync_date:2026-06-08
+// ===SYNC:SOURCES_START=== sync_date:2026-06-10
 const vocabSources = {
+  "flooded":       "20260609 洪水與圖片描述",
+  "flooding":      "20260609 洪水與圖片描述",
+  "raincoat":      "20260609 洪水與圖片描述",
+  "polluted":      "20260609 洪水與圖片描述",
+  "vehicle":       "20260609 洪水與圖片描述",
+  "affect":        "20260609 洪水與圖片描述",
+  "to make landfall": "20260609 洪水與圖片描述",
+  "hail":          "20260609 洪水與圖片描述",
+  "disposable":    "20260609 洪水與圖片描述",
+  "ponytail":      "20260609 洪水與圖片描述",
   "thunderstorm":  "20260604 各種天氣描述",
   "spoil":         "20260604 各種天氣描述",
   "suddenly":      "20260604 各種天氣描述",
@@ -1386,8 +1406,18 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-06-08 count:35
+// ===SYNC:TRANS_START=== sync_date:2026-06-10 count:45
 const allTrans = [
+  {p:"路面被淹沒了。",                      a:"The roads are flooded.",                                                        h:"flooded（狀態）",          kw:["flooded"],                  src:"20260609 洪水與圖片描述"},
+  {p:"道路正在淹水。",                      a:"The roads are flooding.",                                                       h:"flooding（動作）",         kw:["flooding"],                 src:"20260609 洪水與圖片描述"},
+  {p:"天氣預報上週說，這週整個星期都會下雨。",a:"The weather forecast said last week that it would rain the whole week.",        h:"said (that) it would…",    kw:["forecast"],                 src:"20260609 洪水與圖片描述"},
+  {p:"他戴著口罩來保護自己免受空氣污染。",  a:"He is wearing a mask to protect himself from air pollution.",                   h:"protect…from…",            kw:["protect"],                  src:"20260609 洪水與圖片描述"},
+  {p:"看起來空氣很髒，因為路上有太多車輛。",a:"It seems the air is polluted because there are too many vehicles.",             h:"It seems (that)…",          kw:["polluted"],                 src:"20260609 洪水與圖片描述"},
+  {p:"她剛下班，正在回家。",                a:"She has just finished work and is heading home.",                               h:"has just + p.p. and is V-ing", kw:["heading"],                src:"20260609 洪水與圖片描述"},
+  {p:"他決定不穿雨衣，因為只是毛毛雨。",    a:"He decided not to wear a raincoat because it was only drizzling.",              h:"decide not to…",           kw:["raincoat"],                 src:"20260609 洪水與圖片描述"},
+  {p:"颱風預計今晚將侵襲東岸。",            a:"The typhoon is expected to strike the eastern coast tonight.",                  h:"strike",                   kw:["strike"],                   src:"20260609 洪水與圖片描述"},
+  {p:"颶風預計明天早上登陸。",              a:"The hurricane is projected to make landfall tomorrow morning.",                 h:"make landfall",            kw:["landfall"],                 src:"20260609 洪水與圖片描述"},
+  {p:"他們警告我們不要進入該區域。",        a:"They warned us not to enter the area.",                                          h:"warn…not to…",             kw:["warn"],                     src:"20260609 洪水與圖片描述"},
   {p:"天氣預報說明天會下雨。",              a:"The weather forecast says it will rain tomorrow.",                              h:"forecast says…",           kw:["forecast"],                 src:"20260604 各種天氣描述"},
   {p:"龍捲風警報已經發布了。",              a:"A tornado warning has been issued.",                                            h:"issue a warning",          kw:["issue"],                    src:"20260604 各種天氣描述"},
   {p:"我非常熱情且充滿動力。",            a:"I was very enthusiastic and motivated.",                                         h:"enthusiastic, motivated",  kw:["enthusiastic","motivated"], src:"20260512 Making Progress"},
@@ -1437,7 +1467,22 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-06-08 count:19
+// ===SYNC:KW_START=== sync_date:2026-06-10 count:22
+  {w:"flood",ipa:"/flʌd/",tag:"淹水 · v./n.",exs:[
+    {en:"The roads are flooded after the typhoon.",cn:"颱風過後道路被淹沒了。"},
+    {en:"The roads are flooding right now — don't drive!",cn:"道路正在淹水——不要開車！"},
+    {en:"The basement was flooded after the storm.",cn:"暴風雨後地下室被淹了。"},
+  ]},
+  {w:"protect",ipa:"/prəˈtɛkt/",tag:"保護 · v.",exs:[
+    {en:"He is wearing a mask to protect himself from air pollution.",cn:"他戴著口罩來保護自己免受空氣污染。"},
+    {en:"I wore a mask to protect myself because of the sandstorm.",cn:"因為沙塵暴，我戴口罩保護自己。"},
+    {en:"People use sunscreen to protect their skin from UV rays.",cn:"人們用防曬乳保護皮膚免受紫外線傷害。"},
+  ]},
+  {w:"seem",ipa:"/siːm/",tag:"看起來、似乎 · v.",exs:[
+    {en:"It seems the air is polluted because there are too many vehicles.",cn:"看起來空氣很髒，因為路上有太多車輛。"},
+    {en:"It seems like it's going to rain soon.",cn:"看起來快要下雨了。"},
+    {en:"It seems that the typhoon has passed.",cn:"看起來颱風已經過去了。"},
+  ]},
   {w:"forecast",ipa:"/ˈfɔːrkæst/",tag:"預報 · n./v.",exs:[
     {en:"The weather forecast says it will rain tomorrow.",cn:"天氣預報說明天會下雨。"},
     {en:"The forecast calls for rain tomorrow.",cn:"天氣預報明天下雨。"},
