@@ -736,9 +736,13 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 // VOCABULARY DATA  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
-// ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609
+// ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-06-10 count:330
+// ===SYNC:VOCAB_START=== sync_date:2026-06-11 count:334
+  {w:"trim",ipa:"/trɪm/",pos:"v.",cn:"修剪、修整",def:"把某物剪短或修整整齊",exEn:"He trims his beard every week.",exCn:"他每週修剪鬍子。",cat:"daily"},
+  {w:"shave",ipa:"/ʃeɪv/",pos:"v.",cn:"刮（鬍子）",def:"用刮鬍刀把鬍子或毛髮刮除乾淨",exEn:"He shaves every morning.",exCn:"他每天早上刮鬍子。",cat:"daily"},
+  {w:"razor",ipa:"/ˈreɪzər/",pos:"n.",cn:"刮鬍刀",def:"用來刮除鬍子或毛髮的工具",exEn:"He bought a new razor for his beard.",exCn:"他為了鬍子買了一支新的刮鬍刀。",cat:"daily"},
+  {w:"fence",ipa:"/fens/",pos:"n.",cn:"柵欄、圍籬",def:"圍繞某個區域的木頭或金屬柵欄",exEn:"Many fences were blown down during the storm last night.",exCn:"昨晚暴風雨中，許多柵欄被吹倒了。",cat:"daily"},
   {w:"flooded",ipa:"/ˈflʌdɪd/",pos:"adj.",cn:"已被淹沒的（靜態結果）",def:"水已經蓋住某處，描述完成的狀態",exEn:"The roads are flooded after the typhoon.",exCn:"颱風過後道路被淹沒了。",cat:"daily"},
   {w:"flooding",ipa:"/ˈflʌdɪŋ/",pos:"v./adj.",cn:"正在淹水（動態進行）",def:"水正在上漲、淹上來的過程",exEn:"The roads are flooding right now — don't drive!",exCn:"道路正在淹水——不要開車！",cat:"daily"},
   {w:"raincoat",ipa:"/ˈreɪnkoʊt/",pos:"n.",cn:"雨衣",def:"下雨時穿在身上防水的外套",exEn:"He decided not to wear a raincoat because it was only drizzling.",exCn:"他決定不穿雨衣，因為只是毛毛雨。",cat:"daily"},
@@ -1406,7 +1410,17 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-06-10 count:45
+// ===SYNC:TRANS_START=== sync_date:2026-06-11 count:55
+  {p:"它將會登陸台灣。",a:"It will make landfall in Taiwan.",h:"make landfall",kw:["landfall"],src:"20260611 修剪刮鬍與颱風強風片語"},
+  {p:"龍捲風已經過去。",a:"The tornado has blown over.",h:"blow over",kw:["blown"],src:"20260611 修剪刮鬍與颱風強風片語"},
+  {p:"颱風即將來臨。",a:"A typhoon is approaching.",h:"be approaching",kw:["approaching"],src:"20260611 修剪刮鬍與颱風強風片語"},
+  {p:"外面下著毛毛雨。",a:"It's drizzling outside.",h:"drizzle (v.)",kw:["drizzling"],src:"20260611 修剪刮鬍與颱風強風片語"},
+  {p:"空氣中充滿了灰塵。",a:"The air is full of dust.",h:"be full of",kw:["full"],src:"20260611 修剪刮鬍與颱風強風片語"},
+  {p:"他們戴著口罩。",a:"They are wearing masks.",h:"be wearing",kw:["wearing"],src:"20260611 修剪刮鬍與颱風強風片語"},
+  {p:"台灣很少下冰雹。",a:"It rarely hails in Taiwan.",h:"hail (v.), rarely",kw:["hails"],src:"20260611 修剪刮鬍與颱風強風片語"},
+  {p:"颱風吹倒了樹木和電線。",a:"The typhoon blew down trees and power lines.",h:"blow down",kw:["blew down"],src:"20260611 修剪刮鬍與颱風強風片語"},
+  {p:"因為颱風，我朋友取消了我們的計畫。",a:"Because of the typhoon, my friend cancelled our plans.",h:"because of + N",kw:["because of"],src:"20260611 修剪刮鬍與颱風強風片語"},
+  {p:"老樹被強風吹倒了。",a:"The old tree was blown down by strong wind.",h:"be blown down by",kw:["blown down"],src:"20260611 修剪刮鬍與颱風強風片語"},
 const allTrans = [
   {p:"路面被淹沒了。",                      a:"The roads are flooded.",                                                        h:"flooded（狀態）",          kw:["flooded"],                  src:"20260609 洪水與圖片描述"},
   {p:"道路正在淹水。",                      a:"The roads are flooding.",                                                       h:"flooding（動作）",         kw:["flooding"],                 src:"20260609 洪水與圖片描述"},
@@ -1467,7 +1481,12 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-06-10 count:22
+// ===SYNC:KW_START=== sync_date:2026-06-11 count:23
+  {w:"blow",ipa:"/bloʊ/",tag:"吹、刮（被風吹動）· v.",exs:[
+    {en:"The wind blew the papers away.",cn:"風把紙吹走了。"},
+    {en:"The old tree was blown down by strong wind.",cn:"老樹被強風吹倒了。"},
+    {en:"This problem will blow over soon.",cn:"這個問題很快就會平息。"},
+  ]},
   {w:"flood",ipa:"/flʌd/",tag:"淹水 · v./n.",exs:[
     {en:"The roads are flooded after the typhoon.",cn:"颱風過後道路被淹沒了。"},
     {en:"The roads are flooding right now — don't drive!",cn:"道路正在淹水——不要開車！"},
