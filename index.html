@@ -738,7 +738,7 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
 // ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-06-18 count:365
+// ===SYNC:VOCAB_START=== sync_date:2026-06-19 count:375
   {w:"trim",ipa:"/trɪm/",pos:"v.",cn:"修剪、修整",def:"把某物剪短或修整整齊",exEn:"He trims his beard every week.",exCn:"他每週修剪鬍子。",cat:"daily"},
   {w:"shave",ipa:"/ʃeɪv/",pos:"v.",cn:"刮（鬍子）",def:"用刮鬍刀把鬍子或毛髮刮除乾淨",exEn:"He shaves every morning.",exCn:"他每天早上刮鬍子。",cat:"daily"},
   {w:"razor",ipa:"/ˈreɪzər/",pos:"n.",cn:"刮鬍刀",def:"用來刮除鬍子或毛髮的工具",exEn:"He bought a new razor for his beard.",exCn:"他為了鬍子買了一支新的刮鬍刀。",cat:"daily"},
@@ -1129,6 +1129,17 @@ const vocab = [
   {w:"get stuck",ipa:"/ɡɛt stʌk/",pos:"phr. v.",cn:"卡住、動彈不得",def:"to be unable to move or progress",exEn:"Cars would get stuck in the mud on the road.",exCn:"車子會卡在路上的泥漿中動彈不得。",cat:"daily"},
   {w:"mess up",ipa:"/mɛs ʌp/",pos:"phr. v.",cn:"搞亂、打亂計畫",def:"to ruin or disrupt something",exEn:"A typhoon often messes up flight schedules.",exCn:"颱風常常打亂班機時刻表。",cat:"daily"},
   {w:"cancel",ipa:"/ˈkænsəl/",pos:"v.",cn:"取消",def:"to decide that something planned will not happen",exEn:"The flights will be cancelled if the typhoon hits.",exCn:"如果颱風登陸，班機將被取消。",cat:"daily"},
+  // --- 20260619: 補充閱讀 Farmer + 天然災害VII ---
+  {w:"concentrate",ipa:"/ˈkɒnsəntreɪt/",pos:"v.",cn:"專心；集中注意力",def:"to focus all your attention on something",exEn:"The farmer could not concentrate because his house was too noisy.",exCn:"農夫因為家裡太吵而無法專心。",cat:"learning"},
+  {w:"coax",ipa:"/koʊks/",pos:"v.",cn:"哄勸；哄誘",def:"to gently persuade someone to do something",exEn:"She coaxed the cat down from the tree with a treat.",exCn:"她用食物把貓哄下樹。",cat:"daily"},
+  {w:"topple",ipa:"/ˈtɒpəl/",pos:"v.",cn:"倒塌；傾倒",def:"to fall or cause something to fall over",exEn:"Strong winds caused trees to topple during the storm.",exCn:"強風導致樹木在暴風中傾倒。",cat:"daily"},
+  {w:"transport",ipa:"/ˈtrænspɔːrt/",pos:"v./n.",cn:"運送；交通運輸",def:"to carry people or goods from one place to another",exEn:"Food and supplies were transported to the disaster zone.",exCn:"食物和物資被運送到災區。",cat:"daily"},
+  {w:"assemble",ipa:"/əˈsɛmbəl/",pos:"v.",cn:"聚集；集合",def:"to bring people or things together in one place",exEn:"Rescue workers assembled outside the collapsed building.",exCn:"救援人員在倒塌的建築物外集合。",cat:"daily"},
+  {w:"weaken",ipa:"/ˈwiːkən/",pos:"v.",cn:"削弱；減弱",def:"to make something or someone less strong",exEn:"The typhoon weakened as it moved inland.",exCn:"颱風在移入內陸時逐漸減弱。",cat:"daily"},
+  {w:"reveal",ipa:"/rɪˈviːl/",pos:"v.",cn:"揭露；透露",def:"to make something known that was secret or hidden",exEn:"The investigation revealed the cause of the accident.",exCn:"調查揭露了事故的原因。",cat:"learning"},
+  {w:"power outage",ipa:"/ˈpaʊər ˈaʊtɪdʒ/",pos:"n.",cn:"停電",def:"a period when the electricity supply is interrupted",exEn:"The typhoon caused a major power outage across the region.",exCn:"颱風導致該地區大範圍停電。",cat:"daily"},
+  {w:"trapped",ipa:"/træpt/",pos:"adj.",cn:"被困的；動彈不得的",def:"unable to escape from a dangerous situation",exEn:"Several residents were trapped inside buildings after the earthquake.",exCn:"地震後，幾名居民被困在建築物內。",cat:"daily"},
+  {w:"shake",ipa:"/ʃeɪk/",pos:"v.",cn:"搖晃；震動（shake-shook-shaken）",def:"to move quickly from side to side or up and down",exEn:"The ground began to shake as the earthquake struck.",exCn:"地震來襲時，地面開始搖晃。",cat:"daily"},
 // ===SYNC:VOCAB_END===
 ];
 
@@ -1473,7 +1484,7 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-06-18 count:83
+// ===SYNC:TRANS_START=== sync_date:2026-06-19 count:88
 const allTrans = [
   // --- 20260618: blow片語+情緒形容詞+天氣 ---
   {p:"強風把我的雨傘吹走了。",a:"The strong wind blew away my umbrella.",h:"blow away",kw:["blew away"],src:"20260618 blow片語+情緒形容詞+天氣"},
@@ -1570,6 +1581,12 @@ const allTrans = [
   {p:"日本比台灣快一小時。",a:"Japan is 1 hour ahead of Taiwan.",h:"ahead of",kw:["ahead"],src:"20260602 scare / time gap"},
   {p:"冬天時，加州比台灣慢 16 個小時。",a:"In winter, California is 16 hours behind Taiwan.",h:"behind",kw:["behind"],src:"20260602 scare / time gap"},
   {p:"我把茶包留在杯子裡太久了，所以茶喝起來很苦。",a:"I left the tea bag in the cup too long, so the tea tasted bitter.",h:"leave…in, taste + adj.",kw:["bitter"],src:"20260602 scare / time gap"},
+  // --- 20260619: 天然災害颱風地震 ---
+  {p:"停電後，我們點蠟燭照明。",a:"After the power outage, we lit candles for light.",h:"power outage, lit",kw:["power outage"],src:"20260618 天然災害颱風地震"},
+  {p:"地震發生時，地面開始劇烈搖晃。",a:"When the earthquake struck, the ground began to shake violently.",h:"shake, strike",kw:["shake"],src:"20260618 天然災害颱風地震"},
+  {p:"幾名居民在地震後被困在廢墟中。",a:"Several residents were trapped in the rubble after the earthquake.",h:"trapped, rubble",kw:["trapped"],src:"20260618 天然災害颱風地震"},
+  {p:"颱風的風力減弱後，居民才開始清理。",a:"Residents began cleaning up only after the typhoon's winds weakened.",h:"weaken, clean up",kw:["weaken"],src:"20260618 天然災害颱風地震"},
+  {p:"調查人員公佈了失蹤人員的名單。",a:"Investigators revealed the list of missing persons.",h:"reveal, missing persons",kw:["reveal"],src:"20260618 天然災害颱風地震"},
 // ===SYNC:TRANS_END===
 ];
 
