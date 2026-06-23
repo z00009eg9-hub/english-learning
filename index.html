@@ -657,7 +657,8 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 
   <!-- ── Flashcard Review ── -->
   <div id="rv-card-mode" style="display:none">
-    <div class="rv-card">
+    <div id="rv-card-empty" class="rv-empty" style="display:none"><div class="rv-em-icon">🎉</div><div class="rv-em-title">所有單字都複習完了！</div><div class="rv-em-sub">太棒了！繼續保持。</div></div>
+    <div class="rv-card" id="rv-card-content">
       <div class="rv-word-hero">
         <div class="rv-source-tag" id="rv-c-src">📝 考題錯誤</div>
         <div class="fc-w" id="rv-c-word" onclick="speak(document.getElementById('rv-c-word').textContent)" style="cursor:pointer">—</div>
@@ -3288,11 +3289,15 @@ function startRvCard(){
   renderRvCard();
 }
 function renderRvCard(){
+  const empty=document.getElementById('rv-card-empty');
+  const content=document.getElementById('rv-card-content');
   if(rvCardList.length===0){
-    document.getElementById('rv-card-mode').innerHTML=
-      '<div class="rv-empty"><div class="rv-em-icon">🎉</div><div class="rv-em-title">所有單字都複習完了！</div><div class="rv-em-sub">太棒了！繼續保持。</div></div>';
+    if(empty) empty.style.display='block';
+    if(content) content.style.display='none';
     return;
   }
+  if(empty) empty.style.display='none';
+  if(content) content.style.display='';
   const c=rvCardList[rvCardIdx%rvCardList.length];
   const src=wrongVocab.has(c.w)?'📝 考題錯誤':(wrongFC.has(c.w)?'🃏 標記複習':'❓');
   document.getElementById('rv-c-src').textContent=src;
@@ -3520,9 +3525,10 @@ function contentStemMatch(a,b){
 }
 function checkContentMatch(refAns,userAns){
   const rw=extractContentWords(refAns);
-  if(rw.length<3) return null; // 內容字太少，無法有效比對
+  if(rw.length<2) return null; // 內容字不足，無法有效比對
   const uw=extractContentWords(userAns);
   const matched=rw.filter(r=>uw.some(u=>contentStemMatch(r,u))).length;
+  // 2個內容字時需全部命中(0.5<0.55→FAIL)，3個以上需55%吻合
   return matched/rw.length<0.55?{matched,total:rw.length}:null;
 }
 function checkMissingVerb(sent){
