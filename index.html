@@ -2795,8 +2795,8 @@ function checkFC(){
     } else {
       setResult(false,'❌ 不對，再加油！',
         '正確答案：<strong>'+c.w+'</strong>（'+c.cn+'）');
-      wrongFC.add(c.w); saveStorage(); updateWrongBadge();
     }
+    wrongFC.add(c.w); saveStorage(); updateWrongBadge();
   }
 }
 function showFCAnswer(){
