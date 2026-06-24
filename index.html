@@ -739,7 +739,17 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
 // ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-06-19 count:375
+// ===SYNC:VOCAB_START=== sync_date:2026-06-24 count:385
+  {w:"evacuation drill",ipa:"/ɪˌvækjuˈeɪʃən drɪl/",pos:"n.phr.",cn:"逃生演練",def:"a practice drill for evacuating a building in an emergency",exEn:"We practice evacuation drills at school every year.",exCn:"我們每年在學校進行逃生演練。",cat:"daily"},
+  {w:"earthquake drill",ipa:"/ˈɜːrθkweɪk drɪl/",pos:"n.phr.",cn:"地震演練",def:"a practice drill to prepare for an earthquake",exEn:"The earthquake drill helped students know what to do in an emergency.",exCn:"地震演練幫助學生知道緊急時該怎麼做。",cat:"daily"},
+  {w:"fire drill",ipa:"/ˈfaɪər drɪl/",pos:"n.phr.",cn:"消防演練",def:"a practice drill to prepare for a fire emergency",exEn:"We had a fire drill at the office this morning.",exCn:"我們今天早上在辦公室進行了消防演練。",cat:"daily"},
+  {w:"volunteer",ipa:"/ˌvɒlənˈtɪər/",pos:"n./v.",cn:"志工；自願做某事",def:"a person who does work without being paid, or to offer help freely",exEn:"Many volunteers helped clean up after the flood.",exCn:"許多志工在洪水過後協助清理。",cat:"daily"},
+  {w:"rescue worker",ipa:"/ˈreskjuː ˈwɜːrkər/",pos:"n.phr.",cn:"救援人員",def:"a person whose job is to save people in dangerous situations",exEn:"Rescue workers searched for survivors all night.",exCn:"救援人員整夜搜尋倖存者。",cat:"daily"},
+  {w:"determination",ipa:"/dɪˌtɜːrmɪˈneɪʃən/",pos:"n.",cn:"決心；意志力",def:"the quality of being firm about what you want to achieve",exEn:"Her determination helped her succeed against all odds.",exCn:"她的決心幫助她克服一切困難，取得成功。",cat:"daily"},
+  {w:"drought",ipa:"/draʊt/",pos:"n.",cn:"乾旱",def:"a long period when there is little or no rain",exEn:"The drought lasted for three months and damaged many crops.",exCn:"這場乾旱持續了三個月，損壞了許多農作物。",cat:"daily"},
+  {w:"wildfire",ipa:"/ˈwaɪldfaɪər/",pos:"n.",cn:"野火；山火",def:"a fire that spreads very quickly over a large area of land",exEn:"The wildfire spread quickly across the dry hills.",exCn:"野火迅速蔓延至乾燥的山丘。",cat:"daily"},
+  {w:"volcanic eruption",ipa:"/vɒlˈkænɪk ɪˈrʌpʃən/",pos:"n.phr.",cn:"火山爆發",def:"an event when a volcano sends out lava, ash, and gas",exEn:"The volcanic eruption forced thousands of people to evacuate.",exCn:"火山爆發迫使數千人撤離。",cat:"daily"},
+  {w:"underestimate",ipa:"/ˌʌndərˈestɪmeɪt/",pos:"v.",cn:"低估",def:"to think something is smaller or less important than it really is",exEn:"Don't underestimate him—he's a smart cookie.",exCn:"別低估他，他很聰明。",cat:"daily"},
   {w:"trim",ipa:"/trɪm/",pos:"v.",cn:"修剪、修整",def:"把某物剪短或修整整齊",exEn:"He trims his beard every week.",exCn:"他每週修剪鬍子。",cat:"daily"},
   {w:"shave",ipa:"/ʃeɪv/",pos:"v.",cn:"刮（鬍子）",def:"用刮鬍刀把鬍子或毛髮刮除乾淨",exEn:"He shaves every morning.",exCn:"他每天早上刮鬍子。",cat:"daily"},
   {w:"razor",ipa:"/ˈreɪzər/",pos:"n.",cn:"刮鬍刀",def:"用來刮除鬍子或毛髮的工具",exEn:"He bought a new razor for his beard.",exCn:"他為了鬍子買了一支新的刮鬍刀。",cat:"daily"},
@@ -1485,8 +1495,19 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-06-19 count:88
+// ===SYNC:TRANS_START=== sync_date:2026-06-24 count:98
 const allTrans = [
+  // --- 20260624: used to + 天災詞彙 ---
+  {p:"我以前住在台灣。",a:"I used to live in Taiwan.",h:"used to + V = 以前習慣做某事",kw:["used to"],src:"20260624 Used to 天災詞彙"},
+  {p:"我以前常常熬夜，但現在不再了。",a:"I used to stay up late often, but I don't anymore.",h:"used to, stay up late, don't anymore",kw:["used to"],src:"20260624 Used to 天災詞彙"},
+  {p:"他以前會抽菸，但現在不抽了。",a:"He used to smoke, but now he doesn't.",h:"used to + V（過去習慣）",kw:["used to"],src:"20260624 Used to 天災詞彙"},
+  {p:"台灣以前有四季之分。",a:"There used to be four distinct seasons in Taiwan.",h:"There used to be... 以前有...",kw:["used to"],src:"20260624 Used to 天災詞彙"},
+  {p:"空腹時不要喝咖啡。",a:"Don't drink coffee on an empty stomach.",h:"on an empty stomach = 空腹",kw:["on an empty stomach"],src:"20260624 Used to 天災詞彙"},
+  {p:"我一早起床就喝咖啡。",a:"I drink coffee first thing in the morning.",h:"first thing in the morning = 起床後第一件事",kw:["first thing in the morning"],src:"20260624 Used to 天災詞彙"},
+  {p:"她很快就解出了謎題，真是個機靈的人。",a:"She figured out the puzzle quickly—she's a smart cookie.",h:"smart cookie = 聰明機靈, figure out = 解出、弄懂",kw:["smart cookie","figure out"],src:"20260624 Used to 天災詞彙"},
+  {p:"Don't underestimate him—he's a smart cookie.",a:"別低估他，他很聰明。",h:"smart cookie = 聰明機靈的人, underestimate = 低估",kw:["smart cookie"],src:"20260624 Used to 天災詞彙"},
+  {p:"我以前早上起床時會空腹喝咖啡。",a:"I used to drink coffee first thing in the morning on an empty stomach.",h:"used to + first thing in the morning + on an empty stomach 三合一",kw:["used to"],src:"20260624 Used to 天災詞彙"},
+  {p:"It's hard to keep up with the news every day.",a:"每天跟上新聞真的很難。",h:"keep up with = 跟上、維持",kw:["keep up with"],src:"20260624 Used to 天災詞彙"},
   // --- 20260618: blow片語+情緒形容詞+天氣 ---
   {p:"強風把我的雨傘吹走了。",a:"The strong wind blew away my umbrella.",h:"blow away",kw:["blew away"],src:"20260618 blow片語+情緒形容詞+天氣"},
   {p:"每個人都被魔術表演驚艷到了。",a:"Everyone was blown away by the magic show.",h:"be blown away（被動引申義）",kw:["blown away"],src:"20260618 blow片語+情緒形容詞+天氣"},
@@ -1592,7 +1613,22 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-06-11 count:23
+// ===SYNC:KW_START=== sync_date:2026-06-24 count:26
+  {w:"used to",ipa:"/ˈjuːst tə/",tag:"以前習慣 · aux.",exs:[
+    {en:"I used to live in Taiwan.",cn:"我以前住在台灣。"},
+    {en:"I used to stay up late often, but I don't anymore.",cn:"我以前常常熬夜，但現在不再了。"},
+    {en:"There used to be four distinct seasons in Taiwan.",cn:"台灣以前有四季之分。"},
+  ]},
+  {w:"smart cookie",ipa:"/smɑːrt ˈkʊki/",tag:"聰明機靈的人 · idiom",exs:[
+    {en:"You're such a smart cookie! You learn so fast.",cn:"你真是個聰明的傢伙！你學得好快。"},
+    {en:"Don't underestimate him—he's a smart cookie.",cn:"別低估他，他很聰明。"},
+    {en:"She figured out the answer immediately. She's a smart cookie.",cn:"她馬上就想出了答案，真是個聰明的人。"},
+  ]},
+  {w:"figure out",ipa:"/ˈfɪɡər aʊt/",tag:"想清楚；解決；弄懂 · phr.v.",exs:[
+    {en:"She figured out the puzzle quickly.",cn:"她很快就解出了謎題。"},
+    {en:"I can't figure out how to use this new software.",cn:"我搞不清楚怎麼使用這個新軟體。"},
+    {en:"We need to figure out a better plan.",cn:"我們需要想出一個更好的計劃。"},
+  ]},
   {w:"blow",ipa:"/bloʊ/",tag:"吹、刮（被風吹動）· v.",exs:[
     {en:"The wind blew the papers away.",cn:"風把紙吹走了。"},
     {en:"The old tree was blown down by strong wind.",cn:"老樹被強風吹倒了。"},
@@ -1717,7 +1753,31 @@ const allKW = [
 // READING ARTICLES  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 const articles = [
-// ===SYNC:ARTICLES_START=== sync_date:2026-06-08 count:29
+// ===SYNC:ARTICLES_START=== sync_date:2026-06-24 count:30
+  {
+    title:"Natural Disasters in Taiwan",
+    titleCn:"台灣的天然災害",
+    source:"Based on 20260624 lesson notes",
+    highlightWords:["earthquake","typhoon","drought","wildfire","volcanic eruption","tectonic plates","landslide","evacuation","determination"],
+    paras:[
+      {en:"Natural disasters are powerful events that can cause serious damage to people, buildings, and the environment. Some common natural disasters include <span class='hl' onclick='speakText(\"earthquake\")'>earthquakes</span>, <span class='hl' onclick='speakText(\"typhoon\")'>typhoons</span>, floods, <span class='hl' onclick='speakText(\"drought\")'>droughts</span>, <span class='hl' onclick='speakText(\"wildfire\")'>wildfires</span>, and <span class='hl' onclick='speakText(\"volcanic eruption\")'>volcanic eruptions</span>.",
+       cn:"天然災害是能對人類、建築物與環境造成嚴重破壞的強大事件。常見的天然災害包括地震、颱風、洪水、乾旱、野火和火山爆發。"},
+      {en:"Taiwan experiences several types of natural disasters every year. Because it is located near the boundary of <span class='hl' onclick='speakText(\"tectonic plates\")'>tectonic plates</span>, <span class='hl' onclick='speakText(\"earthquake\")'>earthquakes</span> are quite common. Taiwan is also affected by <span class='hl' onclick='speakText(\"typhoon\")'>typhoons</span> during the summer and autumn. Heavy rain and strong winds can lead to flooding and <span class='hl' onclick='speakText(\"landslide\")'>landslides</span> in mountainous areas.",
+       cn:"台灣每年都會經歷多種天然災害。由於台灣位於板塊交界處附近，地震相當普遍。台灣在夏秋兩季也受颱風影響，強降雨和強風可能在山區造成洪水和土石流。"},
+      {en:"People can reduce the impact of natural disasters by preparing in advance. Families can keep emergency supplies at home. Schools and workplaces often organize <span class='hl' onclick='speakText(\"evacuation\")'>evacuation</span> drills so everyone knows what to do in an emergency. With <span class='hl' onclick='speakText(\"determination\")'>determination</span> and teamwork, communities can recover from even the most serious disasters.",
+       cn:"人們可以提前準備來減輕天然災害的影響。家庭可以在家中備妥緊急物資。學校和職場通常舉辦逃生演練，讓大家知道緊急情況下該怎麼做。有了決心與團隊合作，社區可以從最嚴重的災害中恢復。"},
+    ],
+    questions:[
+      {q:"What makes earthquakes very common in Taiwan?",
+       opts:["A. Taiwan has many volcanoes","B. Taiwan is near tectonic plate boundaries","C. Taiwan gets a lot of rain","D. Taiwan is a small island"],
+       ans:1,
+       expl:"台灣位於板塊交界處附近，所以地震非常頻繁。Taiwan is located near tectonic plate boundaries, making earthquakes very common."},
+      {q:"What can people do to prepare for natural disasters?",
+       opts:["A. Move to another country","B. Ignore weather warnings","C. Keep emergency supplies and practice drills","D. Build taller buildings"],
+       ans:2,
+       expl:"提前準備，包括備妥緊急物資和參加演練，可以減輕災害影響。Keeping emergency supplies and practicing evacuation drills helps reduce the impact of disasters."},
+    ]
+  },
   {
     title:"My English Learning Journey",
     titleCn:"我的英文學習之旅",

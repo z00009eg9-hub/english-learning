@@ -501,6 +501,245 @@ function changeFontToGoogleSans() {
 
 ---
 
+## 流程 E：使用 Apps Script DocumentApp 直接寫入 Google 文件（2026-06-24 確立）
+
+> **適用情境**：需要把大量結構化內容（多節、含表格、含彩色格式）寫入**現有**空白 Google 文件，  
+> 且以下方法均無法使用時：  
+> ‣ 流程 A/B（Chrome 剪貼簿）→ 失敗原因：Google Docs 分頁無 OS 焦點，`navigator.clipboard.readText()` 回傳 "Document is not focused"，貼上靜默失敗  
+> ‣ `UrlFetchApp.fetch()` 呼叫 Drive REST API PATCH → 失敗原因：GCP 專案未啟用 Drive API（需 GCP Console 設定，不適合快速執行）  
+> ‣ Drive MCP `update_file` → 此工具不存在（只有 `create_file`）
+
+**核心方案**：用 `DocumentApp`（Apps Script 內建服務，永遠可用，不需啟用任何外部 API）直接操作文件。
+
+---
+
+### Step 0 — 準備：建立空白 Google 文件
+
+用 Drive MCP `create_file`（只傳 `title` + `mimeType`，**不傳 content**）：
+```
+title: "YYYYMMDD-主題【完整版】"
+mimeType: "application/vnd.google-apps.document"
+parentId: 資料夾 ID（選用）
+```
+取得回傳的 `id`，組出編輯網址 `https://docs.google.com/document/d/FILE_ID/edit`。
+
+---
+
+### Step 1 — 開啟 Apps Script 編輯器
+
+**本次已建立的可重複使用專案（直接開啟，不需重新建立）：**
+
+| 項目 | 內容 |
+|------|------|
+| 專案名稱 | 英文課堂筆記-DocumentApp寫入腳本 |
+| 專案 ID | `1jdF3o4p3ak0hCG-dQ_fuU7UldMxJJw8uV3JqcVjajpVBQigdZR9Lhkhv` |
+| 編輯器 URL | `https://script.google.com/u/0/home/projects/1jdF3o4p3ak0hCG-dQ_fuU7UldMxJJw8uV3JqcVjajpVBQigdZR9Lhkhv/edit` |
+
+**使用方式**：直接導覽至上方 URL → 修改 `writeToDoc()` 內的 FILE_ID 與內容 → Ctrl+S → ▶ 執行。  
+不需重新建立專案，授權已通過，下次執行不會再要求授權（除非新增 oauthScopes）。
+
+若需為其他 Google 文件建立**全新**專案：在任意 Google 文件中點選「擴充功能 → Apps Script」，  
+或直接導覽至 `https://script.google.com/`。
+
+---
+
+### Step 2 — 透過 Monaco 寫入腳本（不手動輸入）
+
+用 `javascript_tool`（`action: javascript_exec`）直接替換編輯器內容：
+
+```javascript
+var models = monaco.editor.getModels();
+// 找到程式碼.gs 的 model（通常是 model/2，appsscript.json 是 model/5）
+var codeModel = models.find(function(m) {
+  return m.uri.toString().includes('model/2');
+}) || models[0];
+codeModel.setValue(`...完整腳本內容...`);
+```
+
+儲存：`computer key ctrl+s`（等標題列出現「已儲存到雲端硬碟」）。
+
+---
+
+### Step 3 — 設定 OAuth 授權範圍（appsscript.json）
+
+首次執行前需在「專案設定」啟用 manifest 顯示，並加入 `oauthScopes`：
+
+1. 點左側齒輪「**專案設定**」→ 勾選「在編輯器中顯示 `appsscript.json` 資訊清單檔案」
+2. 回到編輯器，點 `appsscript.json`，用 Monaco 替換內容：
+   ```javascript
+   var manifestModel = models.find(function(m) {
+     return m.uri.toString().includes('model/5'); // 或 includes('appsscript')
+   });
+   manifestModel.setValue(JSON.stringify({
+     "timeZone": "Asia/Taipei",
+     "dependencies": {},
+     "exceptionLogging": "STACKDRIVER",
+     "runtimeVersion": "V8",
+     "oauthScopes": [
+       "https://www.googleapis.com/auth/documents",
+       "https://www.googleapis.com/auth/script.external_request"
+     ]
+   }, null, 2));
+   ```
+3. Ctrl+S 儲存
+
+---
+
+### Step 4 — 執行腳本
+
+1. 切回 `程式碼.gs`，確認函式下拉選單顯示正確函式名稱
+2. 點擊 **▶ 執行**
+3. 若出現「需要授權 → 審查權限」對話框：點擊「審查權限」，在彈出的瀏覽器視窗完成 Google 帳號授權  
+   ⚠ 授權完成後**務必再次點「▶ 執行」**，第一次點擊只觸發授權流程，不會真正執行腳本
+4. 執行記錄出現 `Done!` + `執行完畢` → 成功
+
+---
+
+### Step 5 — 標準腳本結構（「照片格式」版）
+
+符合教材風格（橘色區塊標題、callout 卡片、橘色表頭）的標準腳本範本：
+
+```javascript
+function writeToDoc() {
+  var doc = DocumentApp.openById("FILE_ID");
+  var body = doc.getBody();
+  body.clear();
+
+  // ── 顏色常數 ──
+  var ORANGE  = "#FFA726";   // 章節標題底色（amber）
+  var HDR_ROW = "#FFE0B2";   // 表格標題列底色（淺橘）
+  var STRIP   = "#FFD54F";   // callout 左條（黃）
+  var CALLOUT = "#FFFDE7";   // callout 主體底色（極淡黃）
+  var F       = "Google Sans";
+
+  // ── 輔助函式 ──
+
+  // 章節標題：全寬橘色底色區塊（取代 H2）
+  function secHeader(title) {
+    var t = body.appendTable([[title]]);
+    t.setBorderWidth(0);
+    var cell = t.getRow(0).getCell(0);
+    cell.setBackgroundColor(ORANGE);
+    cell.editAsText().setFontFamily(F).setFontSize(15).setBold(true);
+  }
+
+  // H3 子標題（純文字，HEADING3 樣式）
+  function h3(text) {
+    var p = body.appendParagraph(text);
+    p.setHeading(DocumentApp.ParagraphHeading.HEADING3);
+    p.editAsText().setFontFamily(F).setFontSize(14).setBold(false);
+  }
+
+  // Callout 卡片：左黃條 + 淡黃底（陣列，每個元素一行）
+  function callout(lines) {
+    var rows = lines.map(function(l) { return ["", l]; });
+    var t = body.appendTable(rows);
+    t.setBorderWidth(0);
+    try { t.setColumnWidth(0, 10); } catch(e) {}  // 左條寬 10pt
+    for (var r = 0; r < t.getNumRows(); r++) {
+      t.getRow(r).getCell(0).setBackgroundColor(STRIP);
+      var c1 = t.getRow(r).getCell(1);
+      c1.setBackgroundColor(CALLOUT);
+      c1.editAsText().setFontFamily(F).setFontSize(13);
+    }
+  }
+
+  // 資料表格：第一列橘色標題 + 其餘 Google Sans 13pt
+  function styledTable(rows) {
+    var t = body.appendTable(rows);
+    for (var c = 0; c < t.getRow(0).getNumCells(); c++) {
+      t.getRow(0).getCell(c).setBackgroundColor(HDR_ROW);
+      t.getRow(0).getCell(c).editAsText().setFontFamily(F).setFontSize(13).setBold(true);
+    }
+    for (var r = 1; r < t.getNumRows(); r++)
+      for (var c = 0; c < t.getRow(r).getNumCells(); c++)
+        t.getRow(r).getCell(c).editAsText().setFontFamily(F).setFontSize(13);
+  }
+
+  // 普通段落
+  function para(text, size, bold) {
+    var p = body.appendParagraph(text);
+    var e = p.editAsText().setFontFamily(F).setFontSize(size || 13);
+    if (bold) e.setBold(true);
+    return p;
+  }
+
+  // ── 文件標題 ──
+  var title = body.appendParagraph("YYYYMMDD 主題");
+  title.setHeading(DocumentApp.ParagraphHeading.HEADING1);
+  title.editAsText().setFontFamily(F).setFontSize(20).setBold(true);
+  para("副標題 / Topics");
+
+  // ── 各章節 ──
+  secHeader("I. 章節標題");
+  h3("A. 子標題");
+  callout([
+    "📌 說明文字第一行",
+    "• 重點一",
+    "• 重點二",
+  ]);
+  styledTable([
+    ["欄位A","欄位B","欄位C"],
+    ["內容","內容","內容"],
+  ]);
+
+  doc.saveAndClose();
+  Logger.log("Done!");
+}
+```
+
+---
+
+### 閱讀文章 & 理解問題格式（2026-06-24 確立）
+
+包含閱讀文章的筆記，在 `secHeader("IV. 閱讀文章 Reading Article")` 之後使用以下格式：
+
+```javascript
+// 文章標題（雙語）
+para("Article Title in English", 14, true);
+para("中文標題", 13, false);
+
+// 雙欄對照表（英文 | 中文）
+styledTable([
+  ["英文原文 English", "中文翻譯 Chinese"],
+  ["English paragraph 1.", "中文翻譯第一段。"],
+  ["English paragraph 2.", "中文翻譯第二段。"],
+]);
+
+// 理解問題：MCQ 5欄格式（閱讀SKILL原則）
+h3("📝 理解問題 Comprehension Questions（選擇題）");
+styledTable([
+  ["#", "問題 / 中文", "選項 Options", "正確答案 / 中文", "解析 Explanation"],
+  ["1",
+   "Question in English? / 中文問題？",
+   "A. option  B. option  C. option  D. option",
+   "B. Correct answer. / 中文正確答案。",
+   "Explanation. / 中文解析。"
+  ],
+]);
+```
+
+**單字例句格式**：英文例句與中文翻譯放同一儲存格，用 ` / ` 分隔（**不用 `\\n`**，避免 template literal 換行解析問題）：
+```javascript
+["word ⭐", "/ˈaɪpɑː/", "n.", "中文意思", "English example sentence. / 中文翻譯。"]
+```
+
+**腳本參考檔案**：`G:\我的雲端硬碟\英文筆記\20260624\writeToDoc.gs`（完整的20260624課堂筆記腳本，含文法/片語/閱讀/MCQ/單字/複習六大章節）
+
+---
+
+### 常見錯誤與解法
+
+| 錯誤 | 原因 | 解法 |
+|------|------|------|
+| 「需要授權」→ 警告「重試，允許存取」 | 授權 popup 被 Chrome 封鎖或流程未完成 | 再次點「▶ 執行」→ 重新走授權流程 |
+| 403 `Insufficient Permission` | `appsscript.json` 缺少 `oauthScopes`，或授權時未核准 | 加入 Step 3 的 oauthScopes，重新授權 |
+| 403 `Drive API has not been used` | 腳本用了 `UrlFetchApp` 呼叫 Drive REST API | 改用 `DocumentApp`（內建，不需啟用 Drive API） |
+| `monaco.editor.getModels()` 找不到正確 model | model 編號因分頁重新載入而改變 | 用 `models.find(m => m.uri.includes('appsscript'))` 動態尋找 |
+| 執行後 Google 文件沒有更新 | `openById` 用了錯誤的 FILE_ID | 確認 FILE_ID 與 Google 文件 URL 一致 |
+
+---
+
 ## 注意事項
 
 - 一次貼上的內容不要過大（建議單次一份課堂筆記或一個補充章節），避免渲染/複製失敗
