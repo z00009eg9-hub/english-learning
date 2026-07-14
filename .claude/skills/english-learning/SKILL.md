@@ -558,6 +558,39 @@ codeModel.setValue(`...完整腳本內容...`);
 
 儲存：`computer key ctrl+s`（等標題列出現「已儲存到雲端硬碟」）。
 
+#### ⚠ Step 2 進階：大型腳本用「chunk base64」傳輸（2026-07-14 確立，強烈建議）
+
+直接把整段 .gs 貼進 `setValue(\`...\`)` 有兩個雷，**腳本一旦超過 ~8KB 或含中文換行就會踩到**：
+1. **template literal 換行問題**：.gs 字串內若有 `\n`（例如儲存格內換行），包在反引號裡會被解讀成真正換行，導致 .gs 出現「未結束字串」語法錯誤。→ 解法：程式內改用 `var NL = String.fromCharCode(10);`，需要換行處寫 `"...第一行" + NL + "第二行..."`，全檔**不要出現任何 `\n`**。
+2. **傳輸中被截斷／混入空白**：我自己重打 20KB+ base64 容易插入空格或被 Read 工具截斷。
+
+**穩健作法（實測 30KB 腳本成功）**：
+1. 本機把 .gs 寫成檔案（Write 工具），再 `base64 -w0 file.gs > b64.txt`
+2. 用 Python 把 base64 切成 ~6500 字元的 chunk 檔（`v3chunk_0.txt` …），因為 Read 工具單次上限約 25000 tokens，一次讀不完整檔：
+   ```python
+   s=open('b64.txt').read().strip(); n=6500
+   for i,p in enumerate([s[j:j+n] for j in range(0,len(s),n)]):
+       open('chunk_%d.txt'%i,'w').write(p)
+   ```
+3. **先導覽到 Apps Script 分頁**（`window.__b64` 只存在該分頁；不要在 Google Docs 分頁設）。用 `javascript_tool` 逐塊組裝：
+   - 第一塊：`window.__b64 = "<chunk0>"; window.__b64.length;`
+   - 其餘塊：`window.__b64 += "<chunkN>"; window.__b64.length;`（每次回傳長度，最後一塊長度應等於 `wc -c` 的 base64 檔大小，逐塊核對）
+4. 全部組完後**一次解碼並寫入 Monaco**（UTF-8 安全 + 去空白防呆）：
+   ```javascript
+   var code=new TextDecoder().decode(
+     Uint8Array.from(atob(window.__b64.replace(/\s/g,'')), function(c){return c.charCodeAt(0);}));
+   var m=monaco.editor.getModels().find(function(x){return x.uri.toString().indexOf('model/2')>=0;});
+   m.setValue(code);
+   var v=m.getValue();
+   'len='+v.length+' | startFn='+v.indexOf('function 你的函式名')+' | endsOk='+(v.indexOf('你的結尾字串')>0);
+   ```
+   - `.replace(/\s/g,'')` 是防呆：就算 base64 混入空格/換行，atob 前先清掉。
+   - 回傳的 `startFn=0` 且 `endsOk=true` 代表整段完整無損。
+   - ⚠ 若最後回傳字串含看似 cookie/query 的片段，MCP 會顯示「[BLOCKED: Cookie/query string data]」，改回傳 `len` / `indexOf` 布林值即可，別回傳程式碼原文。
+5. 之後照 Step 4 存檔 → 執行。
+
+> 情境：本次同一份文件連續改版（表格版 → 段落版 → 照片卡片版），每次都用新函式名（`writeToDocV2`/`V3`），全檔重寫（`body.clear()` 開頭）最可靠——比「只改某一段」好維護。函式下拉選單會自動切到新函式名。
+
 ---
 
 ### Step 3 — 設定 OAuth 授權範圍（appsscript.json）
@@ -725,6 +758,64 @@ styledTable([
 ```
 
 **腳本參考檔案**：`G:\我的雲端硬碟\英文筆記\20260624\writeToDoc.gs`（完整的20260624課堂筆記腳本，含文法/片語/閱讀/MCQ/單字/複習六大章節）
+
+---
+
+### ★ 作業複習「照片卡片格式」（2026-07-14 確立，使用者指定樣式）
+
+作業複習 Homework Review 一律用**每題一張黃色 callout 卡片**呈現（不用表格、不用純段落）。  
+版面：**第 N 題**（粗體標題）在卡片上方，下方接黃色左邊條 + 淡黃底卡片，卡片內每行一個標籤，標籤粗體、**被訂正的字用紅色斜體**。
+
+卡片行順序：
+- 有訂正的題目：`❌ 原句：` → `✅ 訂正：`（訂正字紅斜體）→ `中文：` → `結構：` → `🔬 文法解說：`
+- 文法正確的題目：`✅ 原句：` → `中文：` → `結構：` → `🔬 文法解說：`（不放訂正行）
+
+DocumentApp helper（每張卡是一個 2 欄無框表格：左黃條 10pt + 內容欄；用 `editAsText().setBold(0, label.length-1, true)` 粗體化標籤，用 `setItalic` + `setForegroundColor(idx, idx+len-1, "#C0392B")` 標紅斜體被改的字）：
+
+```javascript
+var STRIP="#FFD54F", CALLOUT="#FFFDE7", REDW="#C0392B", F="Google Sans";
+// hwCard(題號, 錯句|null, 正確句, 訂正字|null, 中文, 結構, 文法解說)
+function hwCard(num, wrong, right, correctedWord, cn, structure, expl) {
+  var hp = body.appendParagraph("第 " + num + " 題");
+  hp.editAsText().setFontFamily(F).setFontSize(14).setBold(true);
+  var lines = [];
+  if (wrong) { lines.push(["❌ 原句：", wrong, null]); lines.push(["✅ 訂正：", right, correctedWord]); }
+  else       { lines.push(["✅ 原句：", right, null]); }
+  lines.push(["中文：", cn, null]);
+  lines.push(["結構：", structure, null]);
+  lines.push(["🔬 文法解說：", expl, null]);
+  var t = body.appendTable(lines.map(function(){ return ["", ""]; }));
+  t.setBorderWidth(0);
+  try { t.setColumnWidth(0, 10); } catch(e) {}
+  for (var r = 0; r < lines.length; r++) {
+    t.getRow(r).getCell(0).setBackgroundColor(STRIP);
+    var cell = t.getRow(r).getCell(1); cell.setBackgroundColor(CALLOUT);
+    var label = lines[r][0], text = lines[r][1], iw = lines[r][2];
+    var full = label + text, e = cell.editAsText();
+    e.setText(full); e.setFontFamily(F).setFontSize(13); e.setBold(false);
+    e.setBold(0, label.length - 1, true);
+    if (iw) { var idx = full.indexOf(iw, label.length);
+      if (idx >= 0) { e.setItalic(idx, idx+iw.length-1, true); e.setForegroundColor(idx, idx+iw.length-1, REDW); } }
+  }
+  body.appendParagraph("").editAsText().setFontSize(6); // spacer
+}
+```
+
+呼叫範例：
+```javascript
+hwCard("2",
+  "When I arrived at the airplane, I put my carry-on bag in the overhead bin on my seat.",
+  "When I boarded the plane, I put my carry-on bag in the overhead bin above my seat.",
+  "boarded", "當我登機時，我把隨身行李放進座位上方的頭頂置物櫃。",
+  "When + 主詞 + 過去式, 主詞 + 過去式",
+  "登機要用動詞 board，不說 arrive at the airplane；置物櫃在座位「上方」用 above，不是 on。");
+hwCard("1", null, "I put my bags on a trolley at the airport.", null,
+  "我把行李放在機場的行李推車上。", "put + 受詞 + on + 地點",
+  "這句文法正確。trolley 是機場的行李手推車；「放在推車上」用介系詞 on。");
+```
+
+**完整參考腳本**：`G:\我的雲端硬碟\英文筆記\20260714\writeToDocV3.gs`（照片卡片格式作業複習 + 6 大章節）。  
+歷程：同一份文件曾用表格版 → 段落版（V2）→ 照片卡片版（V3），使用者最終選定照片卡片版。
 
 ---
 
