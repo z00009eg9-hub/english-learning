@@ -233,11 +233,17 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 .quiz-final .emoji{font-size:3.5rem;margin-bottom:12px;}
 .quiz-final .score-big{font-size:2.5rem;font-weight:700;color:var(--p);margin-bottom:6px;}
 .quiz-final .grade{font-size:1.1rem;color:var(--sub);margin-bottom:20px;}
-/* Daily quiz (per-lesson) */
+/* Daily study hub (per-lesson) */
 .dq-top{max-width:780px;margin:0 auto;padding:16px 12px 4px;}
 .dq-top .sec-head{margin-bottom:12px;}
-.dm-tog-row{display:flex;justify-content:center;align-items:center;gap:8px;padding:10px 10px 0;}
-.dm-tog-lbl{font-size:.78rem;color:var(--sub);}
+.dq-picker-bar{background:white;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);margin-bottom:12px;}
+.dq-act-tabs{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:14px;}
+.dq-act{padding:7px 15px;border-radius:100px;border:2px solid var(--bdr);background:white;
+  color:var(--sub);font-weight:600;font-size:.86rem;cursor:pointer;font-family:inherit;transition:.15s;}
+.dq-act:hover{border-color:var(--p);color:var(--p);}
+.dq-act.active{background:var(--p);border-color:var(--p);color:white;}
+.dq-empty-msg{background:white;border-radius:14px;padding:30px 20px;text-align:center;
+  color:var(--sub);box-shadow:var(--shadow);font-size:.92rem;}
 .dq-pick{background:white;border-radius:18px;padding:22px;box-shadow:var(--shadow);margin-bottom:12px;}
 .dq-lbl{display:block;font-weight:700;font-size:.9rem;margin-bottom:8px;color:var(--txt);}
 .dq-select{width:100%;padding:12px;border:2px solid var(--bdr);border-radius:12px;
@@ -355,15 +361,33 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 <!-- ══════ TOP: DAILY QUIZ (per-lesson) ══════ -->
 <section class="dq-top">
   <div class="sec-head">
-    <div class="sec-title">📅 每日測驗</div>
-    <div class="sec-sub">選一天的課堂筆記 · 出該天專屬考題 · 自動記錄成績</div>
+    <div class="sec-title">📅 每日學習</div>
+    <div class="sec-sub">選一天的課堂筆記 · 用那天的內容練習：測驗 / 單字 / 翻譯 / 造句 / 閱讀</div>
   </div>
 
-  <!-- 選單 -->
-  <div class="dq-pick" id="dq-pick">
+  <!-- 日期選擇（所有活動共用）-->
+  <div class="dq-picker-bar">
     <label class="dq-lbl" for="dq-date">選擇日期</label>
     <select id="dq-date" class="dq-select"></select>
     <div id="dq-meta" class="dq-meta"></div>
+  </div>
+
+  <!-- 活動切換 -->
+  <div class="dq-act-tabs">
+    <button class="dq-act active" data-act="test" onclick="dqAct('test')">📝 測驗</button>
+    <button class="dq-act" data-act="fc" onclick="dqAct('fc')">🃏 單字</button>
+    <button class="dq-act" data-act="tr" onclick="dqAct('tr')">🔄 翻譯</button>
+    <button class="dq-act" data-act="kw" onclick="dqAct('kw')">✍️ 造句</button>
+    <button class="dq-act" data-act="rd" onclick="dqAct('rd')">📖 閱讀</button>
+  </div>
+
+  <!-- 這天沒有該類內容時的提示 -->
+  <div id="dq-empty" class="dq-empty-msg" style="display:none;"></div>
+
+  <div id="dq-body">
+  <!-- 活動：測驗 -->
+  <div id="act-test" class="dq-act-panel">
+  <div class="dq-pick" id="dq-pick">
     <div class="dq-btn-row">
       <button class="btn btn-p btn-sm" onclick="startDayQuiz(false)">▶ 開始測驗</button>
       <button class="btn btn-out btn-sm" onclick="startDayQuiz(true)">🎲 隨機抽題</button>
@@ -421,6 +445,8 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
       </div>
     </div>
   </div>
+  </div><!-- /act-test -->
+  </div><!-- /dq-body（sec-fc / sec-tr / sec-kw / sec-rd 由 JS 移入此處）-->
 </section>
 
 <!-- Score Strip -->
@@ -431,29 +457,16 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
   <div class="sc"><div class="v" id="s-streak">1</div><div class="l">🔥 連續天</div></div>
 </div>
 
-<!-- 練習範圍切換（今日/全部）-->
-<div class="dm-tog-row">
-  <span class="dm-tog-lbl">以下練習範圍：</span>
-  <div class="dm-tog">
-    <button class="dm-btn active" id="dm-today" onclick="setMode('today')">📅 今日</button>
-    <button class="dm-btn" id="dm-all" onclick="setMode('all')">📚 全部</button>
-  </div>
-</div>
-
-<!-- Tabs -->
+<!-- Tabs（其餘全站功能）-->
 <div class="tabs">
-  <button class="tab-btn active" onclick="switchTab('fc')">🃏 記憶單字</button>
-  <button class="tab-btn" onclick="switchTab('tr')">🔄 翻譯練習</button>
-  <button class="tab-btn" onclick="switchTab('kw')">✍️ 造句練習</button>
-  <button class="tab-btn" onclick="switchTab('qz')">📝 單字考題</button>
-  <button class="tab-btn" onclick="switchTab('rd')">📖 閱讀文章</button>
+  <button class="tab-btn active" onclick="switchTab('qz')">📝 單字考題</button>
   <button class="tab-btn" onclick="switchTab('rv')" id="tab-rv">❌ 錯題複習<span class="rv-badge-tab" id="rv-tab-badge" style="display:none">0</span></button>
 </div>
 
 <div class="main">
 
 <!-- ══════ FLASHCARD ══════ -->
-<div id="sec-fc" class="sec active">
+<div id="sec-fc" class="sec">
   <div class="sec-head">
     <div class="sec-title">🃏 記憶單字</div>
     <div class="sec-sub" id="fc-sub">今日推薦 10 個單字 · 點擊卡片學習 · 🔊 點字發音</div>
@@ -628,7 +641,7 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 </div>
 
 <!-- ══════ QUIZ ══════ -->
-<div id="sec-qz" class="sec">
+<div id="sec-qz" class="sec active">
   <div class="sec-head">
     <div class="sec-title">📝 單字考題</div>
     <div class="sec-sub">每輪 10 題 · 四選一 · 來自你的筆記單字</div>
@@ -3190,11 +3203,10 @@ function setMode(m){
 // TAB
 // ═══════════════════════════════════════════════
 function switchTab(t){
-  ['fc','tr','kw','qz','rd','rv'].forEach((id,i)=>{
+  ['qz','rv'].forEach((id,i)=>{
     document.querySelectorAll('.tab-btn')[i].classList.toggle('active',id===t);
     document.getElementById('sec-'+id).classList.toggle('active',id===t);
   });
-  if(t==='rd') loadArticle(false);
   if(t==='qz') startQuiz();
   if(t==='rv') initReview();
 }
@@ -3688,8 +3700,8 @@ function dqAutoDates(){
 // 該天單字數，決定自動題數（上限 10）
 function dqAutoCount(d){ return Math.min(10, dqWordsFor(d).length); }
 // 以該天單字自動生成一份考題（en→中、中→en 交錯）
-function generateAutoQuiz(d){
-  const words=dqShuffle(dqWordsFor(d)).slice(0,10);
+function generateAutoQuizFrom(wordsAll, title){
+  const words=dqShuffle(wordsAll).slice(0,10);
   const pool=vocab.filter(v=>v.cn);
   const qs=words.map((v,idx)=>{
     const distract=dqShuffle(pool.filter(x=>x.w!==v.w&&x.cn!==v.cn)).slice(0,3);
@@ -3703,10 +3715,14 @@ function generateAutoQuiz(d){
         explain:`${v.w} = ${v.cn}。${v.exEn||''}`};
     }
   });
-  return { title:dqLessonTitle(d), subtitle:'單字測驗（依當天單字自動生成）', questions:qs, auto:true };
+  return { title:title, subtitle:'單字測驗（依單字自動生成）', questions:qs, auto:true };
 }
-// 取得某天題組：精選（DAYQUIZ）優先，否則自動生成
-function dqGetQuiz(d){ return DAYQUIZ[d] ? DAYQUIZ[d] : (dqWordsFor(d).length ? generateAutoQuiz(d) : null); }
+function generateAutoQuiz(d){ return generateAutoQuizFrom(dqWordsFor(d), dqLessonTitle(d)); }
+// 取得某天題組：精選（DAYQUIZ）優先，否則自動生成；「全部」用全部單字
+function dqGetQuiz(d){
+  if(d==='__all__') return generateAutoQuizFrom([...vocab], '全部筆記');
+  return DAYQUIZ[d] ? DAYQUIZ[d] : (dqWordsFor(d).length ? generateAutoQuiz(d) : null);
+}
 
 function initDayQuiz(){
   const sel=document.getElementById('dq-date');
@@ -3719,21 +3735,24 @@ function initDayQuiz(){
     const title=curated?DAYQUIZ[d].title:dqLessonTitle(d);
     const r=recs[d]; const best=r?`（最佳 ${r.best}/${r.total}）`:'';
     return `<option value="${d}">${curated?'⭐ ':''}${d} — ${title}${best}</option>`;
-  }).join('');
+  }).join('') + `<option value="__all__">📚 全部筆記（所有內容）</option>`;
   document.getElementById('dq-pick').style.display='block';
   document.getElementById('dq-game').style.display='none';
   document.getElementById('dq-final').style.display='none';
-  sel.onchange=dqUpdateMeta;
+  sel.onchange=dqOnScopeChange;
   dqUpdateMeta(); dqRenderRecords();
+  dqAct('test');   // 預設顯示「測驗」活動
 }
 
 function dqUpdateMeta(){
   const d=document.getElementById('dq-date').value;
+  const el=document.getElementById('dq-meta');
+  if(d==='__all__'){ el.innerHTML=`📚 全部筆記 · ${vocab.length} 單字 · ${allTrans.length} 句翻譯 · ${articles.length} 篇文章`; return; }
   const curated=!!DAYQUIZ[d];
   const cnt=curated?DAYQUIZ[d].questions.length:dqAutoCount(d);
   const sub=curated?DAYQUIZ[d].subtitle:'單字測驗（依當天單字自動生成）';
   const r=dqRecords()[d];
-  document.getElementById('dq-meta').innerHTML=`${curated?'⭐ 精選題組 · ':''}${sub} · 共 ${cnt} 題`+
+  el.innerHTML=`${curated?'⭐ 精選題組 · ':''}${sub} · 共 ${cnt} 題`+
     (r?` ｜ 已練 ${r.attempts} 次 · 最佳 ${r.best}/${r.total}`:'');
 }
 
@@ -3746,6 +3765,77 @@ function dqRenderRecords(){
     const title=DAYQUIZ[d]?DAYQUIZ[d].title:dqLessonTitle(d);
     return `<div class="dq-rec-row"><span class="dq-rec-date">${d} ${title}</span><span class="dq-rec-score">最佳 ${r.best}/${r.total}（${pct}%）· ${r.attempts}次</span></div>`;
   }).join('');
+}
+
+// ═══════════════════════════════════════════════
+// 每日學習中心：日期範圍 + 活動切換（單字/翻譯/造句/閱讀）
+// ═══════════════════════════════════════════════
+let dqActive='test', dqRdList=[], dqRdPtr=0;
+function curScope(){ return document.getElementById('dq-date').value; }
+function scopeLabel(){ const d=curScope(); return d==='__all__'?'全部筆記':(DAYQUIZ[d]?DAYQUIZ[d].title:dqLessonTitle(d)); }
+function scopeVocab(){ const d=curScope(); return d==='__all__'?[...vocab]:dqWordsFor(d); }
+function scopeTrans(){ const d=curScope(); return d==='__all__'?[...allTrans]:allTrans.filter(t=>t.src&&t.src.indexOf(d)===0); }
+function scopeKW(){ const d=curScope(); return d==='__all__'?[...allKW]:allKW.filter(k=>(vocabSources[k.w]||'').indexOf(d)===0); }
+function scopeArticleIdx(){ const d=curScope();
+  if(d==='__all__') return articles.map((_,i)=>i);
+  return articles.map((a,i)=>({a,i})).filter(x=>x.a.source&&x.a.source.indexOf(d)>=0).map(x=>x.i); }
+
+function dqAct(name){
+  dqActive=name;
+  document.querySelectorAll('.dq-act').forEach(b=>b.classList.toggle('active', b.dataset.act===name));
+  ['act-test','sec-fc','sec-tr','sec-kw','sec-rd'].forEach(id=>{ const e=document.getElementById(id); if(e) e.style.display='none'; });
+  const empty=document.getElementById('dq-empty'); empty.style.display='none';
+  const showEmpty=(msg)=>{ empty.textContent=msg; empty.style.display='block'; };
+  if(name==='test'){
+    document.getElementById('act-test').style.display='block';
+    document.getElementById('dq-pick').style.display='block';
+    document.getElementById('dq-game').style.display='none';
+    document.getElementById('dq-final').style.display='none';
+    return;
+  }
+  if(name==='fc'){
+    const ws=scopeVocab();
+    if(!ws.length){ showEmpty('這天沒有可練的單字。'); return; }
+    document.getElementById('sec-fc').style.display='block';
+    fcCards=dqShuffle(ws); fcIdx=0;
+    const s=document.getElementById('fc-sub'); if(s) s.textContent=`${scopeLabel()} · ${ws.length} 個單字 · 點擊卡片學習 · 🔊 點字發音`;
+    renderFC();
+  } else if(name==='tr'){
+    const ts=scopeTrans();
+    if(!ts.length){ showEmpty('這天沒有可練的翻譯句。'); return; }
+    document.getElementById('sec-tr').style.display='block';
+    trList=dqShuffle(ts).slice(0,10); trIdx=0; trOkSess=0; trTotalSess=0;
+    const ok=document.getElementById('tr-ok'), tot=document.getElementById('tr-total');
+    if(ok) ok.textContent=0; if(tot) tot.textContent=0;
+    const s=document.getElementById('tr-sub'); if(s) s.textContent=`${scopeLabel()} · 共 ${ts.length} 句 · 中文翻英文`;
+    renderTR();
+  } else if(name==='kw'){
+    const ks=scopeKW();
+    if(!ks.length){ showEmpty('這天沒有造句關鍵字。'); return; }
+    document.getElementById('sec-kw').style.display='block';
+    kwPool=dqShuffle(ks); kwIdx=0;
+    const s=document.getElementById('kw-sub'); if(s) s.textContent=`${scopeLabel()} · ${ks.length} 個關鍵字 · 用英文造完整句子`;
+    renderKW();
+  } else if(name==='rd'){
+    const idxs=scopeArticleIdx();
+    if(!idxs.length){ showEmpty('這天沒有閱讀文章。'); return; }
+    document.getElementById('sec-rd').style.display='block';
+    dqRdList=idxs; dqRdPtr=0; currentArticle=idxs[0];
+    const s=document.getElementById('rd-sub'); if(s) s.textContent=`${scopeLabel()} · 共 ${idxs.length} 篇 · 點擊單字聽發音`;
+    loadArticle(false);
+  }
+}
+
+// 日期改變：更新資訊並重整目前活動
+function dqOnScopeChange(){
+  dqUpdateMeta();
+  if(dqActive==='test'){
+    document.getElementById('dq-pick').style.display='block';
+    document.getElementById('dq-game').style.display='none';
+    document.getElementById('dq-final').style.display='none';
+  } else {
+    dqAct(dqActive);
+  }
 }
 
 function startDayQuiz(shuffle){
@@ -3885,7 +3975,10 @@ function setLang(l){
 }
 
 function loadArticle(random=true){
-  if(random) currentArticle=(currentArticle+1)%articles.length;
+  if(random){
+    if(dqRdList && dqRdList.length){ dqRdPtr=(dqRdPtr+1)%dqRdList.length; currentArticle=dqRdList[dqRdPtr]; }
+    else currentArticle=(currentArticle+1)%articles.length;
+  }
   const a=articles[currentArticle];
   document.getElementById('rd-title').textContent=a.title;
   document.getElementById('rd-subtitle').textContent=a.titleCn;
@@ -4293,7 +4386,12 @@ document.getElementById('tr-sub').textContent=`每次隨機 10 題（共 ${allTr
 renderFC(); initTR(); initKW();
 setQuizType('mix');
 loadArticle(false);
-initDayQuiz();  // 頂部每日測驗（常駐）
+// 把 記憶單字/翻譯/造句/閱讀 四個區塊移入頂部「每日學習中心」
+(function relocateActivities(){
+  const body=document.getElementById('dq-body');
+  ['sec-fc','sec-tr','sec-kw','sec-rd'].forEach(id=>{ const el=document.getElementById(id); if(el&&body) body.appendChild(el); });
+})();
+initDayQuiz();  // 頂部每日學習中心（常駐，預設「測驗」活動）
 </script>
 
 </body>
