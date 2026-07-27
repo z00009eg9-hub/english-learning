@@ -234,6 +234,10 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 .quiz-final .score-big{font-size:2.5rem;font-weight:700;color:var(--p);margin-bottom:6px;}
 .quiz-final .grade{font-size:1.1rem;color:var(--sub);margin-bottom:20px;}
 /* Daily quiz (per-lesson) */
+.dq-top{max-width:780px;margin:0 auto;padding:16px 12px 4px;}
+.dq-top .sec-head{margin-bottom:12px;}
+.dm-tog-row{display:flex;justify-content:center;align-items:center;gap:8px;padding:10px 10px 0;}
+.dm-tog-lbl{font-size:.78rem;color:var(--sub);}
 .dq-pick{background:white;border-radius:18px;padding:22px;box-shadow:var(--shadow);margin-bottom:12px;}
 .dq-lbl{display:block;font-weight:700;font-size:.9rem;margin-bottom:8px;color:var(--txt);}
 .dq-select{width:100%;padding:12px;border:2px solid var(--bdr);border-radius:12px;
@@ -348,26 +352,76 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
   </div>
 </header>
 
-<!-- Daily Banner -->
-<div class="daily-banner">
-  <div class="daily-top">
-    <div class="daily-date">📅 今日學習進度</div>
-    <div class="dm-tog">
-      <button class="dm-btn active" id="dm-today" onclick="setMode('today')">📅 今日</button>
-      <button class="dm-btn" id="dm-all" onclick="setMode('all')">📚 全部</button>
+<!-- ══════ TOP: DAILY QUIZ (per-lesson) ══════ -->
+<section class="dq-top">
+  <div class="sec-head">
+    <div class="sec-title">📅 每日測驗</div>
+    <div class="sec-sub">選一天的課堂筆記 · 出該天專屬考題 · 自動記錄成績</div>
+  </div>
+
+  <!-- 選單 -->
+  <div class="dq-pick" id="dq-pick">
+    <label class="dq-lbl" for="dq-date">選擇日期</label>
+    <select id="dq-date" class="dq-select"></select>
+    <div id="dq-meta" class="dq-meta"></div>
+    <div class="dq-btn-row">
+      <button class="btn btn-p btn-sm" onclick="startDayQuiz(false)">▶ 開始測驗</button>
+      <button class="btn btn-out btn-sm" onclick="startDayQuiz(true)">🎲 隨機抽題</button>
+    </div>
+    <div id="dq-records" class="dq-records"></div>
+  </div>
+
+  <!-- 作答中 -->
+  <div id="dq-game" style="display:none;">
+    <div class="quiz-card">
+      <div class="quiz-meta">
+        <div class="quiz-counter" id="dq-counter">第 1 題 / 共 1 題</div>
+        <div class="quiz-score-badge" id="dq-score-badge">✅ 0</div>
+      </div>
+      <div class="prog-row" style="margin-bottom:16px;">
+        <div class="prog-bg"><div class="prog-fill" id="dq-prog" style="width:0%;background:linear-gradient(90deg,#F59E0B,#EC4899)"></div></div>
+        <div class="prog-txt" id="dq-prog-txt">1/1</div>
+      </div>
+      <div class="quiz-src" style="margin-bottom:10px;"><span class="quiz-src-tag" id="dq-tag">—</span></div>
+      <div class="quiz-prompt" id="dq-prompt" style="font-size:1.08rem;line-height:1.5;"></div>
+      <div class="dq-cn" id="dq-cn"></div>
+      <div class="quiz-options" id="dq-options"></div>
+      <div class="dq-fill" id="dq-fill" style="display:none;">
+        <input type="text" id="dq-fill-input" class="dq-fill-input" autocomplete="off" placeholder="輸入答案後按 Enter…">
+        <button class="btn btn-p btn-sm" onclick="dqSubmitFill()" id="dq-fill-btn">送出</button>
+      </div>
+      <div class="dq-trans" id="dq-trans" style="display:none;">
+        <textarea id="dq-trans-input" class="dq-fill-input" rows="2" placeholder="試著把上面的中文翻成英文（可選填）…"></textarea>
+        <button class="btn btn-p btn-sm" onclick="dqTransReveal()" id="dq-trans-reveal">看參考答案對照</button>
+        <div class="dq-trans-grade" id="dq-trans-grade" style="display:none;">
+          <span class="dq-trans-ask">對照後，你翻對了嗎？</span>
+          <button class="btn btn-out btn-sm" onclick="dqTransGrade(true)">✅ 我答對了</button>
+          <button class="btn btn-out btn-sm" onclick="dqTransGrade(false)">❌ 我答錯了</button>
+        </div>
+      </div>
+      <div class="quiz-feedback" id="dq-feedback"></div>
+      <div style="text-align:right;">
+        <button class="btn btn-p btn-sm" id="dq-next-btn" onclick="dqNext()" style="display:none">下一題 ▶</button>
+      </div>
     </div>
   </div>
-  <div class="daily-prog-row">
-    <div class="dp-item"><div class="dp-label"><span>🃏 單字</span><span id="dp-fc-lbl">0/10</span></div>
-      <div class="dp-bar"><div class="dp-fill dp-fc" id="dp-fc-bar" style="width:0%"></div></div></div>
-    <div class="dp-item"><div class="dp-label"><span>🔄 翻譯</span><span id="dp-tr-lbl">0/10</span></div>
-      <div class="dp-bar"><div class="dp-fill dp-tr" id="dp-tr-bar" style="width:0%"></div></div></div>
-    <div class="dp-item"><div class="dp-label"><span>✍️ 造句</span><span id="dp-kw-lbl">0/3</span></div>
-      <div class="dp-bar"><div class="dp-fill dp-kw" id="dp-kw-bar" style="width:0%"></div></div></div>
-    <div class="dp-item"><div class="dp-label"><span>📝 考題</span><span id="dp-qz-lbl">0/10</span></div>
-      <div class="dp-bar"><div class="dp-fill dp-qz" id="dp-qz-bar" style="width:0%"></div></div></div>
+
+  <!-- 結果 -->
+  <div id="dq-final" style="display:none;">
+    <div class="quiz-card">
+      <div class="quiz-final">
+        <div class="emoji" id="dq-final-emoji">🎉</div>
+        <div class="score-big" id="dq-final-score">0 / 0</div>
+        <div class="grade" id="dq-final-grade"></div>
+        <div class="dq-final-rec" id="dq-final-rec"></div>
+        <div class="dq-btn-row" style="justify-content:center;margin-top:14px;">
+          <button class="btn btn-p btn-sm" onclick="startDayQuiz(dqShuffled)">🔄 再考一次</button>
+          <button class="btn btn-out btn-sm" onclick="initDayQuiz()">📅 換一天</button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- Score Strip -->
 <div class="score-strip">
@@ -377,13 +431,21 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
   <div class="sc"><div class="v" id="s-streak">1</div><div class="l">🔥 連續天</div></div>
 </div>
 
+<!-- 練習範圍切換（今日/全部）-->
+<div class="dm-tog-row">
+  <span class="dm-tog-lbl">以下練習範圍：</span>
+  <div class="dm-tog">
+    <button class="dm-btn active" id="dm-today" onclick="setMode('today')">📅 今日</button>
+    <button class="dm-btn" id="dm-all" onclick="setMode('all')">📚 全部</button>
+  </div>
+</div>
+
 <!-- Tabs -->
 <div class="tabs">
   <button class="tab-btn active" onclick="switchTab('fc')">🃏 記憶單字</button>
   <button class="tab-btn" onclick="switchTab('tr')">🔄 翻譯練習</button>
   <button class="tab-btn" onclick="switchTab('kw')">✍️ 造句練習</button>
   <button class="tab-btn" onclick="switchTab('qz')">📝 單字考題</button>
-  <button class="tab-btn" onclick="switchTab('dq')">📅 每日測驗</button>
   <button class="tab-btn" onclick="switchTab('rd')">📖 閱讀文章</button>
   <button class="tab-btn" onclick="switchTab('rv')" id="tab-rv">❌ 錯題複習<span class="rv-badge-tab" id="rv-tab-badge" style="display:none">0</span></button>
 </div>
@@ -608,77 +670,6 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
         <div class="score-big" id="qz-final-score">8 / 10</div>
         <div class="grade" id="qz-final-grade">做得很好！繼續加油！</div>
         <button class="btn btn-p" onclick="startQuiz()" style="margin-top:8px;">🔄 再來一輪</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══════ DAILY QUIZ (per-lesson) ══════ -->
-<div id="sec-dq" class="sec">
-  <div class="sec-head">
-    <div class="sec-title">📅 每日測驗</div>
-    <div class="sec-sub">選一天的課堂筆記 · 出該天專屬考題 · 自動記錄成績</div>
-  </div>
-
-  <!-- 選單 -->
-  <div class="dq-pick" id="dq-pick">
-    <label class="dq-lbl" for="dq-date">選擇日期</label>
-    <select id="dq-date" class="dq-select"></select>
-    <div id="dq-meta" class="dq-meta"></div>
-    <div class="dq-btn-row">
-      <button class="btn btn-p btn-sm" onclick="startDayQuiz(false)">▶ 開始測驗</button>
-      <button class="btn btn-out btn-sm" onclick="startDayQuiz(true)">🎲 隨機抽題</button>
-    </div>
-    <div id="dq-records" class="dq-records"></div>
-  </div>
-
-  <!-- 作答中 -->
-  <div id="dq-game" style="display:none;">
-    <div class="quiz-card">
-      <div class="quiz-meta">
-        <div class="quiz-counter" id="dq-counter">第 1 題 / 共 1 題</div>
-        <div class="quiz-score-badge" id="dq-score-badge">✅ 0</div>
-      </div>
-      <div class="prog-row" style="margin-bottom:16px;">
-        <div class="prog-bg"><div class="prog-fill" id="dq-prog" style="width:0%;background:linear-gradient(90deg,#F59E0B,#EC4899)"></div></div>
-        <div class="prog-txt" id="dq-prog-txt">1/1</div>
-      </div>
-      <div class="quiz-src" style="margin-bottom:10px;"><span class="quiz-src-tag" id="dq-tag">—</span></div>
-      <div class="quiz-prompt" id="dq-prompt" style="font-size:1.08rem;line-height:1.5;"></div>
-      <div class="dq-cn" id="dq-cn"></div>
-      <div class="quiz-options" id="dq-options"></div>
-      <div class="dq-fill" id="dq-fill" style="display:none;">
-        <input type="text" id="dq-fill-input" class="dq-fill-input" autocomplete="off" placeholder="輸入答案後按 Enter…">
-        <button class="btn btn-p btn-sm" onclick="dqSubmitFill()" id="dq-fill-btn">送出</button>
-      </div>
-      <div class="dq-trans" id="dq-trans" style="display:none;">
-        <textarea id="dq-trans-input" class="dq-fill-input" rows="2" placeholder="試著把上面的中文翻成英文（可選填）…"></textarea>
-        <button class="btn btn-p btn-sm" onclick="dqTransReveal()" id="dq-trans-reveal">看參考答案對照</button>
-        <div class="dq-trans-grade" id="dq-trans-grade" style="display:none;">
-          <span class="dq-trans-ask">對照後，你翻對了嗎？</span>
-          <button class="btn btn-out btn-sm" onclick="dqTransGrade(true)">✅ 我答對了</button>
-          <button class="btn btn-out btn-sm" onclick="dqTransGrade(false)">❌ 我答錯了</button>
-        </div>
-      </div>
-      <div class="quiz-feedback" id="dq-feedback"></div>
-      <div style="text-align:right;">
-        <button class="btn btn-p btn-sm" id="dq-next-btn" onclick="dqNext()" style="display:none">下一題 ▶</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- 結果 -->
-  <div id="dq-final" style="display:none;">
-    <div class="quiz-card">
-      <div class="quiz-final">
-        <div class="emoji" id="dq-final-emoji">🎉</div>
-        <div class="score-big" id="dq-final-score">0 / 0</div>
-        <div class="grade" id="dq-final-grade"></div>
-        <div class="dq-final-rec" id="dq-final-rec"></div>
-        <div class="dq-btn-row" style="justify-content:center;margin-top:14px;">
-          <button class="btn btn-p btn-sm" onclick="startDayQuiz(dqShuffled)">🔄 再考一次</button>
-          <button class="btn btn-out btn-sm" onclick="initDayQuiz()">📅 換一天</button>
-        </div>
       </div>
     </div>
   </div>
@@ -3112,19 +3103,21 @@ function saveStorage(){
   localStorage.setItem('el_wrong_tr',JSON.stringify(wrongTR));
 }
 function updateUI(){
-  document.getElementById('s-streak').textContent=streak;
-  document.getElementById('hd-streak').textContent=`🔥 連續第 ${streak} 天`;
-  document.getElementById('s-known').textContent=totKnown;
-  document.getElementById('s-correct').textContent=totTr;
-  document.getElementById('s-qz').textContent=totQz;
-  document.getElementById('dp-fc-lbl').textContent=`${knownToday.size}/10`;
-  document.getElementById('dp-tr-lbl').textContent=`${trOkToday}/10`;
-  document.getElementById('dp-kw-lbl').textContent=`${kwDoneToday}/3`;
-  document.getElementById('dp-qz-lbl').textContent=`${qzOkToday}/10`;
-  document.getElementById('dp-fc-bar').style.width=Math.round(knownToday.size/10*100)+'%';
-  document.getElementById('dp-tr-bar').style.width=Math.round(trOkToday/10*100)+'%';
-  document.getElementById('dp-kw-bar').style.width=Math.round(kwDoneToday/3*100)+'%';
-  document.getElementById('dp-qz-bar').style.width=Math.round(qzOkToday/10*100)+'%';
+  const set=(id,v)=>{const e=document.getElementById(id); if(e) e.textContent=v;};
+  const bar=(id,w)=>{const e=document.getElementById(id); if(e) e.style.width=w;};
+  set('s-streak',streak);
+  set('hd-streak',`🔥 連續第 ${streak} 天`);
+  set('s-known',totKnown);
+  set('s-correct',totTr);
+  set('s-qz',totQz);
+  set('dp-fc-lbl',`${knownToday.size}/10`);
+  set('dp-tr-lbl',`${trOkToday}/10`);
+  set('dp-kw-lbl',`${kwDoneToday}/3`);
+  set('dp-qz-lbl',`${qzOkToday}/10`);
+  bar('dp-fc-bar',Math.round(knownToday.size/10*100)+'%');
+  bar('dp-tr-bar',Math.round(trOkToday/10*100)+'%');
+  bar('dp-kw-bar',Math.round(kwDoneToday/3*100)+'%');
+  bar('dp-qz-bar',Math.round(qzOkToday/10*100)+'%');
   renderKnownList();
   updateWrongBadge();
 }
@@ -3197,13 +3190,12 @@ function setMode(m){
 // TAB
 // ═══════════════════════════════════════════════
 function switchTab(t){
-  ['fc','tr','kw','qz','dq','rd','rv'].forEach((id,i)=>{
+  ['fc','tr','kw','qz','rd','rv'].forEach((id,i)=>{
     document.querySelectorAll('.tab-btn')[i].classList.toggle('active',id===t);
     document.getElementById('sec-'+id).classList.toggle('active',id===t);
   });
   if(t==='rd') loadArticle(false);
   if(t==='qz') startQuiz();
-  if(t==='dq') initDayQuiz();
   if(t==='rv') initReview();
 }
 
@@ -4301,6 +4293,7 @@ document.getElementById('tr-sub').textContent=`每次隨機 10 題（共 ${allTr
 renderFC(); initTR(); initKW();
 setQuizType('mix');
 loadArticle(false);
+initDayQuiz();  // 頂部每日測驗（常駐）
 </script>
 
 </body>
