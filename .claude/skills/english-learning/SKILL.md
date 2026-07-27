@@ -337,7 +337,7 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 }
 ```
 
-**題目物件有兩型：**
+**題目物件有三型：**
 
 選擇題 `mc`（`answer` 是 0-based 索引）：
 ```javascript
@@ -355,6 +355,15 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 ```
 - 比對前系統會 normalize：**轉小寫、壓縮空白、去句尾句點/句號**。所以 `"In."`、`" in "` 都能對到 `"in"`。
 - 若答案含多個字（如 `at / in`、`to some extent`），把常見寫法變體都放進陣列（`["at / in","at/in"]`）。
+
+翻譯題 `trans`（2026-07-27 新增，`answer` 是單一參考英文句；**自評式**）：
+```javascript
+{ type:"trans", tag:"翻譯", q:"中文整句（要翻成英文）",
+  answer:"Model English sentence.",          // 單一參考答案（字串，非陣列）
+  explain:"解說。" }
+```
+- 作答流程：使用者看中文 → 可選填英文 → 按「看參考答案對照」→ 自評「✅ 我答對了 / ❌ 我答錯了」。整句翻譯難自動精確比對，故用自評。
+- 取材：用該堂課的**核心句型或作業訂正後的正確句**，一份題組放 1–2 題即可（放最後面收尾）。
 
 ### 出題規範（品質把關）
 

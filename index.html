@@ -248,6 +248,10 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 .dq-fill-input:focus{outline:none;border-color:var(--p);}
 .dq-fill-input.correct{border-color:var(--ok);background:#F0FDF4;}
 .dq-fill-input.wrong{border-color:var(--err);background:#FEF2F2;}
+.dq-trans{display:flex;flex-direction:column;gap:9px;margin-bottom:14px;}
+.dq-trans textarea{resize:vertical;line-height:1.5;}
+.dq-trans-grade{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.dq-trans-ask{font-size:.82rem;color:var(--sub);margin-right:2px;}
 .dq-records{margin-top:18px;border-top:1px solid var(--bdr);padding-top:14px;}
 .dq-rec-title{font-size:.8rem;font-weight:700;color:var(--sub);margin-bottom:8px;}
 .dq-rec-row{display:flex;justify-content:space-between;align-items:center;gap:10px;
@@ -646,6 +650,15 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
       <div class="dq-fill" id="dq-fill" style="display:none;">
         <input type="text" id="dq-fill-input" class="dq-fill-input" autocomplete="off" placeholder="輸入答案後按 Enter…">
         <button class="btn btn-p btn-sm" onclick="dqSubmitFill()" id="dq-fill-btn">送出</button>
+      </div>
+      <div class="dq-trans" id="dq-trans" style="display:none;">
+        <textarea id="dq-trans-input" class="dq-fill-input" rows="2" placeholder="試著把上面的中文翻成英文（可選填）…"></textarea>
+        <button class="btn btn-p btn-sm" onclick="dqTransReveal()" id="dq-trans-reveal">看參考答案對照</button>
+        <div class="dq-trans-grade" id="dq-trans-grade" style="display:none;">
+          <span class="dq-trans-ask">對照後，你翻對了嗎？</span>
+          <button class="btn btn-out btn-sm" onclick="dqTransGrade(true)">✅ 我答對了</button>
+          <button class="btn btn-out btn-sm" onclick="dqTransGrade(false)">❌ 我答錯了</button>
+        </div>
       </div>
       <div class="quiz-feedback" id="dq-feedback"></div>
       <div style="text-align:right;">
@@ -2863,7 +2876,115 @@ const articles = [
 // 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
 // ═══════════════════════════════════════════════
 const DAYQUIZ = {
-// ===SYNC:DAYQUIZ_START=== sync_date:2026-07-21 count:1
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-07-16 count:3
+  "20260716": {
+    title: "搭機英文 On the Plane",
+    subtitle: "作業複習 · 機上對話 · 搭機單字",
+    questions: [
+      { type:"mc", tag:"單字", q:"「turbulence」的中文意思是？",
+        options:["亂流","候機室","登機證","毯子"], answer:0,
+        explain:"turbulence /ˈtɜːrbjələns/ 亂流（氣流不穩造成飛機晃動）。" },
+      { type:"mc", tag:"單字", q:"「inconsiderate」的意思是？",
+        options:["有禮貌的","不體貼的","直立的","易碎的"], answer:1,
+        explain:"inconsiderate /ˌɪnkənˈsɪdərət/ 不體貼的；反義 considerate 體貼的。" },
+      { type:"mc", tag:"單字", q:"「fasten」（如 fasten your seat belt）的意思是？",
+        options:["鬆開","繫緊、扣上","傾斜","秤重"], answer:1,
+        explain:"fasten /ˈfæsən/ 繫緊、扣上（t 不發音）。" },
+      { type:"mc", tag:"單字", q:"刀叉匙這類「餐具」的英文是？",
+        options:["container","cutlery","blanket","cabin"], answer:1,
+        explain:"cutlery /ˈkʌtləri/ 餐具（刀叉匙）。" },
+      { type:"fill", tag:"文法", q:"習慣動作、第三人稱單數：The flight attendant ___ the trash after the meal.（clear 變化）",
+        cn:"空服員在餐後清理垃圾。", answer:["clears"],
+        explain:"主詞第三人稱單數，現在簡單式動詞加 -s → clears。" },
+      { type:"fill", tag:"文法", q:"被動語態：I couldn't eat because the seat in front of me was ___.（recline 變化）",
+        cn:"我沒辦法吃東西，因為前面的椅背往後傾。", answer:["reclined"],
+        explain:"was + 過去分詞（被動）→ was reclined，椅背被往後傾倒。" },
+      { type:"fill", tag:"文法", q:"間接問句語序：I want to know how heavy my bag ___.（be 動詞）",
+        cn:"我想知道我的包包有多重。", answer:["is"],
+        explain:"間接問句用「主詞+動詞」語序：my bag is（不是 is my bag）。" },
+      { type:"mc", tag:"改錯", q:"「空服員在餐後清理垃圾」哪句正確？",
+        options:[
+          "The flight attendant clears the trash after the meal.",
+          "The flight attendant clear the trash after meal."
+        ], answer:0,
+        explain:"第三人稱單數要 clears；after the meal 需冠詞 the。" },
+      { type:"mc", tag:"改錯", q:"「他很不體貼，因為他講電話很大聲」哪句較精準自然？",
+        options:[
+          "He is inconsiderate because he talks loudly on the phone.",
+          "He is inconsiderate when he talks on the phone loudly."
+        ], answer:0,
+        explain:"表原因用 because 比 when 精準；副詞 loudly 放動詞後 → talks loudly on the phone。" },
+      { type:"mc", tag:"改錯", q:"間接問句哪句正確？",
+        options:[
+          "I want to know how heavy my bag is.",
+          "I want to know how heavy is my bag."
+        ], answer:0,
+        explain:"間接問句子句用「主詞+動詞」：my bag is。" },
+      { type:"mc", tag:"句型", q:"下指令「繫好你的安全帶」哪句正確？",
+        options:["Fasten your seat belt.","Fastened your seat belt.","Fastening your seat belt."], answer:0,
+        explain:"祈使句用原形動詞 Fasten；fastened 用於被動如 Keep your seat belt fastened.。" },
+      { type:"fill", tag:"文法", q:"使變軟（第三人稱現在式）：Hot food ___ the plastic container.（soften 變化）",
+        cn:"熱食會使塑膠容器變軟。", answer:["softens"],
+        explain:"soften（使變軟）第三人稱加 -s → softens；比 makes it soft 更簡潔。" },
+      { type:"trans", tag:"翻譯", q:"我在飛機起飛前一小時到達候機室。",
+        answer:"I got to the departure lounge one hour before the airplane took off.",
+        explain:"時間長度 one hour 放 before 之前；before 後接完整子句 the airplane took off。" },
+      { type:"trans", tag:"翻譯", q:"可以在降落前叫醒我嗎？",
+        answer:"Could you wake me up before we land?",
+        explain:"禮貌請求 Could you + 原形；wake sb up 叫醒某人；before we land 降落前。" }
+    ]
+  },
+  "20260714": {
+    title: "搭機流程與機上英文",
+    subtitle: "登機 · 機上餐 · 座位 · 作業複習",
+    questions: [
+      { type:"mc", tag:"單字", q:"「flight attendant」的中文意思是？",
+        options:["機長","空服員","飛行員","移民官"], answer:1,
+        explain:"flight attendant 空服員；captain 機長、pilot 飛行員。" },
+      { type:"mc", tag:"單字", q:"座位上方放行李的「頭頂置物櫃」英文是？",
+        options:["departure lounge","boarding pass","overhead bin","jet bridge"], answer:2,
+        explain:"overhead bin 頭頂置物櫃。" },
+      { type:"mc", tag:"單字", q:"「recline」（如 recline my seat）的意思是？",
+        options:["把椅背往後調","收起桌板","繫上安全帶","登機"], answer:0,
+        explain:"recline /rɪˈklaɪn/ 把椅背往後調。" },
+      { type:"mc", tag:"單字", q:"「legroom」指的是？",
+        options:["行李空間","腿部空間","逃生通道","走道"], answer:1,
+        explain:"legroom 腿部空間。" },
+      { type:"fill", tag:"文法", q:"登機動作（board 過去式）：When I ___ the plane, I found my seat.",
+        cn:"當我登機時，我找到了座位。", answer:["boarded"],
+        explain:"登機用動詞 board → boarded；不說 arrive at the airplane。" },
+      { type:"fill", tag:"介系詞", q:"把 A 裝滿 B：A flight attendant filled my cup ___ apple juice.",
+        cn:"一位空服員把我的杯子倒滿蘋果汁。", answer:["with"],
+        explain:"fill A with B；不說 fill apple juice into my cup。" },
+      { type:"fill", tag:"介系詞", q:"置物櫃在座位「上方」：I put my bag in the overhead bin ___ my seat.",
+        cn:"我把包包放進座位上方的頭頂置物櫃。", answer:["above"],
+        explain:"座位「上方」用 above；用 on 會變成「在座位上」。" },
+      { type:"mc", tag:"改錯", q:"「他秤了行李以確保沒超重」哪句自然？",
+        options:[
+          "He weighed his luggage to make sure it wasn't over the weight limit.",
+          "He measured his luggage weight to make sure it was not over the weight limit."
+        ], answer:0,
+        explain:"直接用動詞 weigh（秤重）＋受詞，比 measure the weight 簡潔自然。" },
+      { type:"mc", tag:"改錯", q:"「一位空服員把我的杯子倒滿蘋果汁」哪句自然？",
+        options:[
+          "A flight attendant filled my cup with apple juice.",
+          "The flight staff filled my cup with apple juice."
+        ], answer:0,
+        explain:"單一空服員用 a flight attendant，不用 flight staff。" },
+      { type:"mc", tag:"句型", q:"想禮貌問「我可以把椅背往後調嗎」哪句正確？",
+        options:["Can I recline my seat?","Can I reclined my seat?","Can I reclining my seat?"], answer:0,
+        explain:"Can I + 原形動詞 recline。" },
+      { type:"fill", tag:"文法", q:"保持某狀態：Please keep your window shade ___ during landing.（打開）",
+        cn:"降落時請保持遮光板打開。", answer:["open"],
+        explain:"keep + 受詞 + 形容詞（keep it open）；window shade 遮光板。" },
+      { type:"trans", tag:"翻譯", q:"起飛前請將小桌板收起。",
+        answer:"Please fold up your tray table before takeoff.",
+        explain:"fold up 收起；tray table 小桌板；before takeoff 起飛前。" },
+      { type:"trans", tag:"翻譯", q:"當我登機時，我把隨身行李放進座位上方的頭頂置物櫃。",
+        answer:"When I boarded the plane, I put my carry-on bag in the overhead bin above my seat.",
+        explain:"board the plane 登機；above my seat 座位上方。" }
+    ]
+  },
   "20260721": {
     title: "作業複習與機場旅遊英文",
     subtitle: "Homework Review · Airport / Domestic Flight English",
@@ -2916,7 +3037,10 @@ const DAYQUIZ = {
         explain:"regret + V-ing＝後悔做過某事。" },
       { type:"fill", tag:"連接詞", q:"正式表達「在某種程度上」：I regret it ___ ___ extent.（兩個字）",
         cn:"我在某種程度上後悔。", answer:["to some","to some extent","some"],
-        explain:"to some extent＝在某種程度上。" }
+        explain:"to some extent＝在某種程度上。" },
+      { type:"trans", tag:"翻譯", q:"我們在越南的工廠大約有 300 名員工，而且人數還在增加。",
+        answer:"We have approximately 300 employees at our factory in Vietnam, and the number is still increasing.",
+        explain:"at our factory in Vietnam（不是 in Vietnam factory）；後半句補主詞 the number。" }
     ]
   },
 // ===SYNC:DAYQUIZ_END===
@@ -3656,12 +3780,19 @@ function dqRender(){
   document.getElementById('dq-cn').textContent=q.cn||'';
   const fb=document.getElementById('dq-feedback'); fb.className='quiz-feedback';
   document.getElementById('dq-next-btn').style.display='none';
-  const optsEl=document.getElementById('dq-options'), fillEl=document.getElementById('dq-fill');
+  const optsEl=document.getElementById('dq-options'), fillEl=document.getElementById('dq-fill'), transEl=document.getElementById('dq-trans');
+  optsEl.style.display='none'; fillEl.style.display='none'; transEl.style.display='none';
   if(q.type==='mc'){
-    fillEl.style.display='none'; optsEl.style.display='grid';
+    optsEl.style.display='grid';
     optsEl.innerHTML=q.options.map((op,i)=>`<button class="quiz-opt" id="dq-opt-${i}" onclick="dqSelect(${i})">${op}</button>`).join('');
+  } else if(q.type==='trans'){
+    transEl.style.display='flex';
+    const ta=document.getElementById('dq-trans-input'); ta.value=''; ta.disabled=false;
+    document.getElementById('dq-trans-reveal').style.display='inline-flex';
+    document.getElementById('dq-trans-grade').style.display='none';
+    setTimeout(()=>ta.focus(),60);
   } else {
-    optsEl.style.display='none'; optsEl.innerHTML=''; fillEl.style.display='flex';
+    optsEl.innerHTML=''; fillEl.style.display='flex';
     const inp=document.getElementById('dq-fill-input'); inp.value=''; inp.disabled=false; inp.className='dq-fill-input';
     document.getElementById('dq-fill-btn').disabled=false;
     inp.onkeydown=(e)=>{ if(e.key==='Enter') dqSubmitFill(); };
@@ -3700,6 +3831,31 @@ function dqSubmitFill(){
   inp.classList.add(isRight?'correct':'wrong');
   if(!isRight) dqWrong.push(q);
   dqReveal(isRight, q.answer[0], q.explain);
+}
+
+// 翻譯題：先看參考答案對照，再自評對錯
+function dqTransReveal(){
+  const q=dqCur.questions[dqOrder[dqIdx]];
+  document.getElementById('dq-trans-reveal').style.display='none';
+  document.getElementById('dq-trans-input').disabled=true;
+  const fb=document.getElementById('dq-feedback');
+  fb.className='quiz-feedback show';
+  fb.style.background='#F5F3FF'; fb.style.border='1px solid #C4B5FD'; fb.style.color='#4C1D95';
+  fb.innerHTML=`📝 參考答案：<strong>${q.answer}</strong>`+(q.explain?`<br><span style="font-size:.82rem;opacity:.85">💡 ${q.explain}</span>`:'');
+  document.getElementById('dq-trans-grade').style.display='flex';
+}
+function dqTransGrade(isRight){
+  if(dqAnswered) return; dqAnswered=true;
+  const q=dqCur.questions[dqOrder[dqIdx]];
+  document.getElementById('dq-trans-grade').style.display='none';
+  const fb=document.getElementById('dq-feedback');
+  fb.style.background=''; fb.style.border=''; fb.style.color='';  // 清掉 reveal 的 inline 樣式
+  if(isRight){ dqOk++; document.getElementById('dq-score-badge').textContent=`✅ ${dqOk}`; }
+  else { dqWrong.push(q); }
+  fb.className='quiz-feedback show '+(isRight?'ok-fb':'no-fb');
+  fb.innerHTML=(isRight?'✅ 太好了，翻對了！':'❌ 沒關係，記住這個說法：')+`<br>📝 <strong>${q.answer}</strong>`+
+    (q.explain?`<br><span style="font-size:.82rem;opacity:.85">💡 ${q.explain}</span>`:'');
+  document.getElementById('dq-next-btn').style.display='inline-flex';
 }
 
 function dqNext(){ dqIdx++; if(dqIdx>=dqOrder.length) dqFinish(); else dqRender(); }
