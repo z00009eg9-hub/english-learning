@@ -244,6 +244,15 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 .dq-act.active{background:var(--p);border-color:var(--p);color:white;}
 .dq-empty-msg{background:white;border-radius:14px;padding:30px 20px;text-align:center;
   color:var(--sub);box-shadow:var(--shadow);font-size:.92rem;}
+.dq-help{background:var(--pl);border:1px solid var(--bdr);border-radius:12px;margin-bottom:12px;overflow:hidden;}
+.dq-help summary{cursor:pointer;padding:11px 15px;font-weight:600;font-size:.86rem;color:var(--p);list-style:none;}
+.dq-help summary::-webkit-details-marker{display:none;}
+.dq-help[open] summary{border-bottom:1px solid var(--bdr);}
+.dq-help-body{padding:12px 16px 14px;font-size:.84rem;line-height:1.7;color:var(--txt);}
+.dq-help-body p{margin:0 0 8px;}
+.dq-help-body ul{margin:0 0 8px;padding-left:20px;}
+.dq-help-body li{margin-bottom:4px;}
+.dq-help-tip{background:white;border-radius:9px;padding:9px 12px;color:var(--sub);}
 .dq-pick{background:white;border-radius:18px;padding:22px;box-shadow:var(--shadow);margin-bottom:12px;}
 .dq-lbl{display:block;font-weight:700;font-size:.9rem;margin-bottom:8px;color:var(--txt);}
 .dq-select{width:100%;padding:12px;border:2px solid var(--bdr);border-radius:12px;
@@ -364,6 +373,22 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
     <div class="sec-title">📅 每日學習</div>
     <div class="sec-sub">選一天的課堂筆記 · 用那天的內容練習：測驗 / 單字 / 翻譯 / 造句 / 閱讀</div>
   </div>
+
+  <!-- 使用說明（可收合）-->
+  <details class="dq-help">
+    <summary>❓ 使用說明（第一次用點這裡）</summary>
+    <div class="dq-help-body">
+      <p><b>三步驟：</b>① 上方選一個<b>日期</b> → ② 點一個<b>活動鈕</b> → ③ 開始練習。成績會自動記錄。</p>
+      <ul>
+        <li><b>📝 測驗</b>：那天的專屬考題（選擇／填空／翻譯）。作答後即時對答案、算分，下方「📊 我的成績紀錄」會存每天最佳成績。</li>
+        <li><b>🃏 單字</b>：那天的單字卡。點卡片看中文與例句，🔊 可聽發音。</li>
+        <li><b>🔄 翻譯</b>：看中文，把它翻成英文，按「看答案」對照。</li>
+        <li><b>✍️ 造句</b>：用那天的關鍵字造一個完整英文句子。</li>
+        <li><b>📖 閱讀</b>：那天的文章（有的話），附理解測驗。</li>
+      </ul>
+      <p class="dq-help-tip">💡 小提示：日期選單有 <b>⭐</b> 的是老師課堂內容精選題；最下面的 <b>📚 全部筆記</b> 會用所有內容一起練。某天若某個活動沒有內容，會顯示灰色提示，換別的活動即可。下方還有「📝 單字考題」和「❌ 錯題複習」兩個全站練習。</p>
+    </div>
+  </details>
 
   <!-- 日期選擇（所有活動共用）-->
   <div class="dq-picker-bar">
