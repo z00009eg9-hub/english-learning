@@ -1,6 +1,6 @@
 ---
 name: english-learning
-description: 英文課堂筆記的完整自動化工作流程 — 自動建立當天日期資料夾、把課堂筆記寫入 Google 文件（新建或更新，含橘色表頭表格、★作業複習範本、文法解說格式）、以及把筆記重點同步進互動學習網頁 index.html 並推送到 GitHub。當使用者貼上課堂對話/錄音逐字稿/筆記文字、要求把補充教材加入某份 Google 文件、或要求「同步筆記」時使用。
+description: 英文課堂筆記的完整自動化工作流程 — 自動建立當天日期資料夾、把課堂筆記寫入 Google 文件（新建或更新，含橘色表頭表格、★作業複習範本、文法解說格式）、把筆記重點同步進互動學習網頁 index.html、以及為當天筆記自動生成考題並同步到 quiz.html／quiz-data.js，最後推送到 GitHub。當使用者貼上課堂對話/錄音逐字稿/筆記文字、要求把補充教材加入某份 Google 文件、要求「同步筆記」、或要求「出考題/生成考題/更新測驗」時使用。
 ---
 
 # 英文學習筆記工作流程（零步驟自動化）
@@ -188,7 +188,8 @@ description: 英文課堂筆記的完整自動化工作流程 — 自動建立�
    - 不帶 `textContent`（建立空白文件）
 5. 取得回傳的 `id`，組出編輯網址 `https://docs.google.com/document/d/FILE_ID/edit`
 6. 執行下方「核心技術：渲染並貼上」，目標分頁為這份新文件
-7. 完成後回報 Google 文件連結 + 教材摘要（幾個單字、幾個句型等）
+7. **接著執行「流程 F」** 為當天筆記生成考題並同步到 quiz-data.js + 推 GitHub
+8. 完成後回報 Google 文件連結 + 教材摘要（幾個單字、幾個句型等）+ 已出幾題考題
 
 ## 流程 B：新增內容到現有 Google 文件
 
@@ -289,6 +290,10 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 如果 Step 2 找到的新筆記是**當天或近期課堂筆記**（非舊筆記補錄），且尚未有對應的【格式版】文件，
 依照「流程 A」（含流程 0 自動建立資料夾）為該筆記產出格式化 Google 文件。
 
+### Step 8 — 為新筆記生成考題（流程 F）
+若 Step 7 有處理新的課堂筆記，**接著執行「流程 F」**，為該筆記自動出 10–15 題考題，
+同步到 `quiz-data.js` 並隨本次 git push 一起推上 GitHub。
+
 ### 完成後
 告訴使用者：
 - 處理了哪些檔案（日期 + 標題）
@@ -297,6 +302,99 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 - 是否產出了格式化 Google 文件（若有，提供連結）
 - GitHub 推送結果
 - 任何需要人工確認的項目
+
+---
+
+## 流程 F：生成當天考題並同步到 quiz.html + 推 GitHub（2026-07-27 確立）
+
+自動出考題功能。**觸發時機**：
+- 建立當天課堂筆記後（流程 A 完成、或流程 C Step 7 產出格式版文件後）**自動接著執行**
+- 使用者說「出考題 / 生成考題 / 更新測驗 / 幫我出題」，或針對某一天筆記要求出題
+
+### 檔案架構（程式與資料分離）
+
+| 檔案 | 角色 | skill 是否改動 |
+|------|------|------|
+| `G:\我的雲端硬碟\英文筆記\quiz.html` | 考題 App 外殼（選日期、作答、批改、算分、隨機抽題） | ❌ 不動 |
+| `G:\我的雲端硬碟\英文筆記\quiz-data.js` | 題庫資料 `window.QUIZZES`，含 `===SYNC:QUIZ_START/END===` 標記 | ✅ 每次只**追加**一天的題組 |
+
+`quiz.html` 用 `<script src="quiz-data.js">` 載入題庫，可直接以 `file://` 開啟（手機/桌機皆可），**不需要後端、不需要 Firebase**。
+
+### 題庫資料結構
+
+每一天是 `window.QUIZZES` 的一個 key（日期字串），最新日期排最上面：
+```javascript
+"YYYYMMDD": {
+  title: "主題",                          // 與資料夾主題一致（中文）
+  subtitle: "English subtitle line",       // 英文副標
+  questions: [ /* 題目物件，見下 */ ]
+}
+```
+
+**題目物件有兩型：**
+
+選擇題 `mc`（`answer` 是 0-based 索引）：
+```javascript
+{ type:"mc", tag:"單字", q:"題幹（可含英文句子與 ___ 空格）",
+  options:["選項0","選項1","選項2","選項3"], answer:1,
+  explain:"簡短中文解說，最好帶關鍵字或 IPA。" }
+```
+
+填空題 `fill`（`answer` 是「可接受答案陣列」）：
+```javascript
+{ type:"fill", tag:"介系詞", q:"句子含 ___ 表示要填的空格。",
+  cn:"中文提示（選用，會顯示在題幹下方灰字）",
+  answer:["in","into"],                     // 多種可接受寫法都列上
+  explain:"解說。" }
+```
+- 比對前系統會 normalize：**轉小寫、壓縮空白、去句尾句點/句號**。所以 `"In."`、`" in "` 都能對到 `"in"`。
+- 若答案含多個字（如 `at / in`、`to some extent`），把常見寫法變體都放進陣列（`["at / in","at/in"]`）。
+
+### 出題規範（品質把關）
+
+1. **題數 10–15 題**（一天一份）
+2. **內容只能來自當天筆記，嚴禁自行加入筆記沒有的教材**（呼應「課堂筆記 Doc 格式規則」記憶）
+3. **涵蓋面**（依當天筆記實際有的內容取用，不足就略過該類）：
+   - 單字字義（單字表 → mc）
+   - 介系詞 / 固定搭配（wrap in、at...in... → fill）
+   - 文法變化（feel like + V-ing、regret + V-ing、時態 → fill/mc）
+   - 改錯選正確句（作業複習的錯句 vs 訂正句 → mc，兩個選項一錯一對）
+   - 情境問答（機場/職場/口語句型 → mc）
+   - 發音 / 語調觀念（如疑問句句尾上揚 → mc）
+4. `tag` 用簡短中文分類：`單字 / 介系詞 / 文法 / 改錯 / 句型 / 機場 / 發音 / 連接詞` 等
+5. 每題都要 `explain`（簡短中文，幫使用者複習）
+6. 改錯題直接用作業複習裡學生的**原錯句**當誘答選項、**訂正句**當正解，最貼近她的實際錯誤
+
+### 同步步驟
+
+1. `Read` 讀取 `quiz-data.js`
+2. 檢查該 `"YYYYMMDD"` key 是否已存在：
+   - **已存在** → 若要更新就整組替換該區塊；否則跳過（避免重複）
+   - **不存在** → 繼續
+3. 用 **Edit 工具**，在 `// ===SYNC:QUIZ_START=== ...` 那一行的**正下方**插入新題組區塊 `"YYYYMMDD": { ... },`（最新在最上面）
+4. 同步更新標記行的 `sync_date` 與 `count`：
+   `// ===SYNC:QUIZ_START=== sync_date:YYYY-MM-DD count:N`（N = 目前總題組數）
+5. 推 GitHub：
+   ```bash
+   git add quiz.html quiz-data.js
+   git commit -m "Add quiz for YYYYMMDD (主題)"   # 附 Co-Authored-By trailer
+   git push origin main
+   ```
+   （首次含 `quiz.html` 一起加入版控；之後通常只有 `quiz-data.js` 變動）
+
+### ⭐ 產出前自我檢查
+
+- 每個 `mc` 的 `answer` 索引確實指向正確選項（0-based，別 off-by-one）
+- 每個 `fill` 的 `answer` 陣列涵蓋合理寫法變體
+- 答案、選項、解說拼字正確，解說與題目一致
+- **所有題目都能在當天筆記中找到出處**，沒有自行杜撰
+- JS 語法正確（逗號、引號、跳脫）；若題幹含 `"` 用單引號包字串或跳脫
+
+### 完成後回報
+
+- 為哪一天（日期＋主題）新增了幾題、涵蓋哪些類型
+- GitHub 推送結果
+- 提醒使用者用瀏覽器開 `quiz.html` 即可作答（或提供 GitHub Pages 連結，如已啟用）
 
 ---
 
@@ -564,13 +662,21 @@ codeModel.setValue(`...完整腳本內容...`);
 1. **template literal 換行問題**：.gs 字串內若有 `\n`（例如儲存格內換行），包在反引號裡會被解讀成真正換行，導致 .gs 出現「未結束字串」語法錯誤。→ 解法：程式內改用 `var NL = String.fromCharCode(10);`，需要換行處寫 `"...第一行" + NL + "第二行..."`，全檔**不要出現任何 `\n`**。
 2. **傳輸中被截斷／混入空白**：我自己重打 20KB+ base64 容易插入空格或被 Read 工具截斷。
 
-**穩健作法（實測 30KB 腳本成功）**：
-1. 本機把 .gs 寫成檔案（Write 工具），再 `base64 -w0 file.gs > b64.txt`
-2. 用 Python 把 base64 切成 ~6500 字元的 chunk 檔（`v3chunk_0.txt` …），因為 Read 工具單次上限約 25000 tokens，一次讀不完整檔：
+> ⚠ **腳本檔要存進「流程 0 建立的那個含主題後綴資料夾」，不要存進裸日期資料夾**（2026-07-16 確立）
+> `英文筆記` 是 Google Drive 桌面同步夾。若流程 0 建立的 Drive 資料夾是 `YYYYMMDD-主題`（含後綴），
+> 但你把本機 .gs 存到 `G:\...\英文筆記\YYYYMMDD\`（裸日期），這個本機新資料夾會被 Drive 同步**上傳成第二個看起來重複的資料夾**。
+> → 一律把 .gs 存到與 Drive 完全同名的資料夾：`G:\...\英文筆記\YYYYMMDD-主題\file.gs`。
+> （若當天筆記夾本來就是裸日期就沒問題；問題只發生在名稱不一致時。）產出後也不要另建暫存資料夾放 chunk 檔——用 scratchpad 或事後 `rm` 清掉。
+
+**穩健作法（實測成功）**：
+1. 本機把 .gs 寫成檔案（Write 工具，存進上述同名資料夾），再 `base64 -w0 file.gs > b64.txt`
+2. 用 Python 把 base64 切成 chunk 檔。⚠ **chunk 別開太大**：2026-07-16 實測 6500 字元/塊時，MCP 傳輸會**固定掉幾個字元**（每塊少 5 個，base64 對齊被破壞、解碼失敗且難察覺）。**改用 1000 字元/塊 + 每塊 append 後核對 `window.__b64.length` 是否等於預期累計長度**，短了就 `substring` 截回上一個累計長度重貼該塊，直到吻合；如此可 100% 無損：
    ```python
-   s=open('b64.txt').read().strip(); n=6500
+   s=open('b64.txt').read().strip(); n=1000
+   cum=0
    for i,p in enumerate([s[j:j+n] for j in range(0,len(s),n)]):
-       open('chunk_%d.txt'%i,'w').write(p)
+       open('p_%02d.txt'%i,'w').write(p); cum+=len(p)
+       print('p_%02d len=%d cum=%d'%(i,len(p),cum))   # cum 當作每塊 append 後的驗證目標
    ```
 3. **先導覽到 Apps Script 分頁**（`window.__b64` 只存在該分頁；不要在 Google Docs 分頁設）。用 `javascript_tool` 逐塊組裝：
    - 第一塊：`window.__b64 = "<chunk0>"; window.__b64.length;`
