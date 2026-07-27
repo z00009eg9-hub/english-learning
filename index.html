@@ -1370,6 +1370,10 @@ const vocabSources = {
   // --- 20260721 作業複習與機場旅遊英文 ---
   "fragile":"20260721 作業複習與機場旅遊英文","contain":"20260721 作業複習與機場旅遊英文","approximately":"20260721 作業複習與機場旅遊英文","turbulence":"20260721 作業複習與機場旅遊英文","roast":"20260721 作業複習與機場旅遊英文","aluminum foil":"20260721 作業複習與機場旅遊英文","budget airline":"20260721 作業複習與機場旅遊英文","baggage allowance":"20260721 作業複習與機場旅遊英文","domestic flight":"20260721 作業複習與機場旅遊英文","in-flight meal":"20260721 作業複習與機場旅遊英文","purchase":"20260721 作業複習與機場旅遊英文","underestimate":"20260721 作業複習與機場旅遊英文",
   "currently":"20260721 作業複習與機場旅遊英文","hire":"20260721 作業複習與機場旅遊英文","carry-on":"20260721 作業複習與機場旅遊英文","echo":"20260721 作業複習與機場旅遊英文","request":"20260721 作業複習與機場旅遊英文","intonation":"20260721 作業複習與機場旅遊英文","language barrier":"20260721 作業複習與機場旅遊英文","public holiday":"20260721 作業複習與機場旅遊英文",
+  // --- 20260701 假設語氣與火車購票英文 ---
+  "business class":"20260701 假設語氣與火車購票英文","one-way ticket":"20260701 假設語氣與火車購票英文","return ticket":"20260701 假設語氣與火車購票英文","timetable":"20260701 假設語氣與火車購票英文","platform":"20260701 假設語氣與火車購票英文","gate":"20260701 假設語氣與火車購票英文","passenger":"20260701 假設語氣與火車購票英文","ticket counter":"20260701 假設語氣與火車購票英文","cancellation fee ⭐":"20260701 假設語氣與火車購票英文","penalty ⭐":"20260701 假設語氣與火車購票英文",
+  // --- 20260708 A Flight Problem 航班旅遊閱讀 ---
+  "departure":"20260708 A Flight Problem 航班旅遊閱讀","arrival":"20260708 A Flight Problem 航班旅遊閱讀","arrive":"20260708 A Flight Problem 航班旅遊閱讀","immigration officer":"20260708 A Flight Problem 航班旅遊閱讀","airline counter":"20260708 A Flight Problem 航班旅遊閱讀","chef":"20260708 A Flight Problem 航班旅遊閱讀",
   "flooded":       "20260609 洪水與圖片描述",
   "flooding":      "20260609 洪水與圖片描述",
   "raincoat":      "20260609 洪水與圖片描述",
@@ -1708,8 +1712,19 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-07-21 count:144
+// ===SYNC:TRANS_START=== sync_date:2026-07-27 count:154
 const allTrans = [
+  // --- 20260716: 搭機英文 On the Plane ---
+  {p:"不好意思，你可以幫我把隨身行李放進頭頂置物櫃嗎？",a:"Excuse me, could you help me put my carry-on bag in the overhead compartment?",h:"carry-on bag; overhead compartment",kw:["overhead compartment"],src:"20260716 搭機英文 On the Plane"},
+  {p:"裡面有易碎的東西嗎？",a:"Is there anything fragile inside?",h:"fragile",kw:["fragile"],src:"20260716 搭機英文 On the Plane"},
+  {p:"大約需要三個半小時。",a:"It will take approximately three and a half hours.",h:"approximately",kw:["approximately"],src:"20260716 搭機英文 On the Plane"},
+  {p:"請繫好安全帶。",a:"Please fasten your seat belt.",h:"fasten",kw:["fasten"],src:"20260716 搭機英文 On the Plane"},
+  {p:"空服員在餐後清理垃圾。",a:"The flight attendant clears the trash after the meal.",h:"clears (第三人稱單數)",kw:[],src:"20260716 搭機英文 On the Plane"},
+  {p:"我在飛機起飛前一小時到達候機室。",a:"I got to the departure lounge one hour before the airplane took off.",h:"departure lounge; 時間長度 + before",kw:["departure lounge"],src:"20260716 搭機英文 On the Plane"},
+  {p:"熱食會使塑膠容器變軟。",a:"Hot food softens the plastic container.",h:"soften; container",kw:["container"],src:"20260716 搭機英文 On the Plane"},
+  {p:"他很不體貼，因為他講電話很大聲。",a:"He is inconsiderate because he talks loudly on the phone.",h:"inconsiderate; because",kw:["inconsiderate"],src:"20260716 搭機英文 On the Plane"},
+  {p:"我沒辦法吃東西，因為前面的椅背往後傾。",a:"I couldn't eat because the seat in front of me was reclined.",h:"was reclined (被動)",kw:["recline"],src:"20260716 搭機英文 On the Plane"},
+  {p:"可以在降落前叫醒我嗎？",a:"Could you wake me up before we land?",h:"wake me up; before we land",kw:[],src:"20260716 搭機英文 On the Plane"},
   // --- 20260721: 作業複習與機場旅遊英文 ---
   {p:"請在箱子上貼易碎標籤，因為裡面裝了杯子。",a:"Please put a fragile label on the box, because it contains cups.",h:"fragile, contain",kw:["fragile"],src:"20260721 作業複習與機場旅遊英文"},
   {p:"我們在越南的工廠大約有300名員工，而且人數還在增加。",a:"We have approximately 300 employees at our factory in Vietnam, and the number is still increasing.",h:"approximately, the number is still increasing",kw:["approximately"],src:"20260721 作業複習與機場旅遊英文"},
@@ -1876,7 +1891,53 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-07-21 count:35
+// ===SYNC:KW_START=== sync_date:2026-07-27 count:44
+  // --- 20260714/16/21 搭機補充造句 ---
+  {w:"purchase",ipa:"/ˈpɜːrtʃəs/",tag:"購買（正式）· v.",exs:[
+    {en:"Can I purchase extra baggage for this flight?",cn:"我可以為這班航班加購行李嗎？"},
+    {en:"You can purchase a ticket online.",cn:"你可以在線上購票。"},
+    {en:"Where can I purchase a SIM card?",cn:"我在哪裡可以買到 SIM 卡？"},
+  ]},
+  {w:"hire",ipa:"/ˈhaɪər/",tag:"雇用、招募 · v.",exs:[
+    {en:"Our company is hiring more engineers this year.",cn:"我們公司今年要招募更多工程師。"},
+    {en:"They decided to hire a new manager.",cn:"他們決定聘用一位新經理。"},
+    {en:"We are still hiring, so please apply.",cn:"我們還在招募，請來應徵。"},
+  ]},
+  {w:"request",ipa:"/rɪˈkwest/",tag:"要求、請求 · n./v.",exs:[
+    {en:"I sent a meeting request to my manager.",cn:"我發了一個會議邀請給我的主管。"},
+    {en:"Could I make a special request for a vegetarian meal?",cn:"我可以特別要求素食餐嗎？"},
+    {en:"She requested a window seat.",cn:"她要求一個靠窗座位。"},
+  ]},
+  {w:"fasten",ipa:"/ˈfæsən/",tag:"繫緊、扣上 · v.",exs:[
+    {en:"Please fasten your seat belt before takeoff.",cn:"起飛前請繫好安全帶。"},
+    {en:"He fastened his jacket because it was cold.",cn:"因為很冷，他扣上了外套。"},
+    {en:"Make sure the lid is fastened tightly.",cn:"確認蓋子有緊緊蓋好。"},
+  ]},
+  {w:"recline",ipa:"/rɪˈklaɪn/",tag:"把椅背往後調 · v.",exs:[
+    {en:"Can I recline my seat during the flight?",cn:"飛行途中我可以把椅背往後調嗎？"},
+    {en:"Please do not recline your seat during the meal.",cn:"用餐時請不要把椅背往後調。"},
+    {en:"The seat in front of me was reclined, so I had no room.",cn:"前面的椅背往後傾，我沒有空間。"},
+  ]},
+  {w:"weigh",ipa:"/weɪ/",tag:"秤重 · v.",exs:[
+    {en:"Let me weigh your luggage first.",cn:"我先幫你的行李秤重。"},
+    {en:"Please weigh the bag before check-in.",cn:"報到前請先秤行李的重量。"},
+    {en:"The parcel weighs about two kilograms.",cn:"這個包裹大約重兩公斤。"},
+  ]},
+  {w:"trolley",ipa:"/ˈtrɒli/",tag:"行李推車 · n.",exs:[
+    {en:"I put my bags on a trolley at the airport.",cn:"我把行李放在機場的行李推車上。"},
+    {en:"Could you help me find a luggage trolley?",cn:"你可以幫我找一台行李推車嗎？"},
+    {en:"The trolley was full of heavy suitcases.",cn:"推車上滿是沉重的行李箱。"},
+  ]},
+  {w:"seat belt",ipa:"/siːt belt/",tag:"安全帶 · n.",exs:[
+    {en:"Please keep your seat belt fastened.",cn:"請保持安全帶繫好。"},
+    {en:"The seat belt sign is on.",cn:"安全帶指示燈亮了。"},
+    {en:"Children must wear a seat belt too.",cn:"小孩也必須繫安全帶。"},
+  ]},
+  {w:"cabin",ipa:"/ˈkæbɪn/",tag:"客艙 · n.",exs:[
+    {en:"You can take a carry-on bag into the cabin.",cn:"你可以帶一件隨身行李進客艙。"},
+    {en:"The cabin crew will help you find your seat.",cn:"客艙組員會幫你找座位。"},
+    {en:"Please keep the cabin clean during the flight.",cn:"飛行途中請保持客艙整潔。"},
+  ]},
   // --- 20260721: 作業複習與機場旅遊英文 ---
   {w:"baggage",ipa:"/ˈbæɡɪdʒ/",tag:"行李 · n.",exs:[
     {en:"What is the baggage allowance for this domestic flight?",cn:"這班國內航班的行李限額是多少？"},
