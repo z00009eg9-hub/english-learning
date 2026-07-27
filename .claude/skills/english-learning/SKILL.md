@@ -1,6 +1,6 @@
 ---
 name: english-learning
-description: 英文課堂筆記的完整自動化工作流程 — 自動建立當天日期資料夾、把課堂筆記寫入 Google 文件（新建或更新，含橘色表頭表格、★作業複習範本、文法解說格式）、把筆記重點同步進互動學習網頁 index.html、以及為當天筆記自動生成考題並同步到 quiz.html／quiz-data.js，最後推送到 GitHub。當使用者貼上課堂對話/錄音逐字稿/筆記文字、要求把補充教材加入某份 Google 文件、要求「同步筆記」、或要求「出考題/生成考題/更新測驗」時使用。
+description: 英文課堂筆記的完整自動化工作流程 — 自動建立當天日期資料夾、把課堂筆記寫入 Google 文件（新建或更新，含橘色表頭表格、★作業複習範本、文法解說格式）、把筆記重點同步進互動學習網頁 index.html、以及為當天筆記自動生成考題並同步到 index.html 的「每日測驗」分頁（含成績記錄），最後推送到 GitHub。當使用者貼上課堂對話/錄音逐字稿/筆記文字、要求把補充教材加入某份 Google 文件、要求「同步筆記」、或要求「出考題/生成考題/更新測驗」時使用。
 ---
 
 # 英文學習筆記工作流程（零步驟自動化）
@@ -305,24 +305,25 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 
 ---
 
-## 流程 F：生成當天考題並同步到 quiz.html + 推 GitHub（2026-07-27 確立）
+## 流程 F：生成當天考題並同步到 index.html + 推 GitHub（2026-07-27 確立，2026-07-27 併入 index.html）
 
 自動出考題功能。**觸發時機**：
 - 建立當天課堂筆記後（流程 A 完成、或流程 C Step 7 產出格式版文件後）**自動接著執行**
 - 使用者說「出考題 / 生成考題 / 更新測驗 / 幫我出題」，或針對某一天筆記要求出題
 
-### 檔案架構（程式與資料分離）
+### 架構（已併入 index.html「📅 每日測驗」分頁）
 
-| 檔案 | 角色 | skill 是否改動 |
-|------|------|------|
-| `G:\我的雲端硬碟\英文筆記\quiz.html` | 考題 App 外殼（選日期、作答、批改、算分、隨機抽題） | ❌ 不動 |
-| `G:\我的雲端硬碟\英文筆記\quiz-data.js` | 題庫資料 `window.QUIZZES`，含 `===SYNC:QUIZ_START/END===` 標記 | ✅ 每次只**追加**一天的題組 |
+考題功能是 `index.html` 的一個分頁（tab id `dq`），資料嵌在 index.html 的 JS 裡：
+- **題庫**：`const DAYQUIZ = { ... }`，含 `// ===SYNC:DAYQUIZ_START/END===` 標記，以日期為 key
+- **作答/批改/算分/隨機抽題**：`initDayQuiz / startDayQuiz / dqRender / dqSelect / dqSubmitFill / dqNext / dqFinish`
+- **成績記錄**：存在 localStorage `el_dq`（`{ "YYYYMMDD": {attempts,best,total,lastScore,lastPct,ts} }`）；
+  下拉選單與「📊 我的成績紀錄」會顯示每天最佳成績與練習次數。**skill 不需碰記錄邏輯，只需維護 DAYQUIZ 資料**。
 
-`quiz.html` 用 `<script src="quiz-data.js">` 載入題庫，可直接以 `file://` 開啟（手機/桌機皆可），**不需要後端、不需要 Firebase**。
+> 純前端、不需後端、不需 Firebase。獨立的 `quiz.html` / `quiz-data.js` 已於 2026-07-27 廢除併入 index.html，**不要再產生或引用這兩個檔案**。
 
 ### 題庫資料結構
 
-每一天是 `window.QUIZZES` 的一個 key（日期字串），最新日期排最上面：
+`DAYQUIZ` 每一天是一個 key（日期字串），最新日期排最上面：
 ```javascript
 "YYYYMMDD": {
   title: "主題",                          // 與資料夾主題一致（中文）
@@ -360,27 +361,26 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
    - 文法變化（feel like + V-ing、regret + V-ing、時態 → fill/mc）
    - 改錯選正確句（作業複習的錯句 vs 訂正句 → mc，兩個選項一錯一對）
    - 情境問答（機場/職場/口語句型 → mc）
-   - 發音 / 語調觀念（如疑問句句尾上揚 → mc）
-4. `tag` 用簡短中文分類：`單字 / 介系詞 / 文法 / 改錯 / 句型 / 機場 / 發音 / 連接詞` 等
+   - ⚠ **不要出「發音 / 語調」類題目**（2026-07-27 使用者指定移除；文字測驗考發音體驗不佳）
+4. `tag` 用簡短中文分類：`單字 / 介系詞 / 文法 / 改錯 / 句型 / 機場 / 連接詞` 等（**不含「發音」**）
 5. 每題都要 `explain`（簡短中文，幫使用者複習）
 6. 改錯題直接用作業複習裡學生的**原錯句**當誘答選項、**訂正句**當正解，最貼近她的實際錯誤
 
 ### 同步步驟
 
-1. `Read` 讀取 `quiz-data.js`
+1. `Read` 讀取 `index.html`，找到 `const DAYQUIZ = {` 與其下的 `// ===SYNC:DAYQUIZ_START===` 標記
 2. 檢查該 `"YYYYMMDD"` key 是否已存在：
    - **已存在** → 若要更新就整組替換該區塊；否則跳過（避免重複）
    - **不存在** → 繼續
-3. 用 **Edit 工具**，在 `// ===SYNC:QUIZ_START=== ...` 那一行的**正下方**插入新題組區塊 `"YYYYMMDD": { ... },`（最新在最上面）
+3. 用 **Edit 工具**，在 `// ===SYNC:DAYQUIZ_START=== ...` 那一行的**正下方**插入新題組區塊 `"YYYYMMDD": { ... },`（最新在最上面）
 4. 同步更新標記行的 `sync_date` 與 `count`：
-   `// ===SYNC:QUIZ_START=== sync_date:YYYY-MM-DD count:N`（N = 目前總題組數）
-5. 推 GitHub：
+   `// ===SYNC:DAYQUIZ_START=== sync_date:YYYY-MM-DD count:N`（N = 目前總題組數）
+5. 推 GitHub（通常與流程 C 的 index.html 同步一起提交）：
    ```bash
-   git add quiz.html quiz-data.js
-   git commit -m "Add quiz for YYYYMMDD (主題)"   # 附 Co-Authored-By trailer
+   git add index.html
+   git commit -m "Add daily quiz for YYYYMMDD (主題)"   # 附 Co-Authored-By trailer
    git push origin main
    ```
-   （首次含 `quiz.html` 一起加入版控；之後通常只有 `quiz-data.js` 變動）
 
 ### ⭐ 產出前自我檢查
 
@@ -394,7 +394,7 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 
 - 為哪一天（日期＋主題）新增了幾題、涵蓋哪些類型
 - GitHub 推送結果
-- 提醒使用者用瀏覽器開 `quiz.html` 即可作答（或提供 GitHub Pages 連結，如已啟用）
+- 提醒使用者開 `index.html` →「📅 每日測驗」分頁選該日期即可作答（成績會自動記錄）
 
 ---
 

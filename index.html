@@ -233,6 +233,29 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 .quiz-final .emoji{font-size:3.5rem;margin-bottom:12px;}
 .quiz-final .score-big{font-size:2.5rem;font-weight:700;color:var(--p);margin-bottom:6px;}
 .quiz-final .grade{font-size:1.1rem;color:var(--sub);margin-bottom:20px;}
+/* Daily quiz (per-lesson) */
+.dq-pick{background:white;border-radius:18px;padding:22px;box-shadow:var(--shadow);margin-bottom:12px;}
+.dq-lbl{display:block;font-weight:700;font-size:.9rem;margin-bottom:8px;color:var(--txt);}
+.dq-select{width:100%;padding:12px;border:2px solid var(--bdr);border-radius:12px;
+  font-size:.95rem;font-family:inherit;background:white;color:var(--txt);cursor:pointer;}
+.dq-select:focus{outline:none;border-color:var(--p);}
+.dq-meta{font-size:.8rem;color:var(--sub);margin:10px 2px 0;}
+.dq-btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.dq-cn{text-align:center;color:var(--sub);font-size:.86rem;margin:2px 0 14px;}
+.dq-fill{display:flex;gap:8px;margin-bottom:14px;}
+.dq-fill-input{flex:1;padding:12px 14px;border:2px solid var(--bdr);border-radius:12px;
+  font-size:1rem;font-family:inherit;}
+.dq-fill-input:focus{outline:none;border-color:var(--p);}
+.dq-fill-input.correct{border-color:var(--ok);background:#F0FDF4;}
+.dq-fill-input.wrong{border-color:var(--err);background:#FEF2F2;}
+.dq-records{margin-top:18px;border-top:1px solid var(--bdr);padding-top:14px;}
+.dq-rec-title{font-size:.8rem;font-weight:700;color:var(--sub);margin-bottom:8px;}
+.dq-rec-row{display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:8px 12px;border-radius:10px;background:var(--pl);margin-bottom:6px;font-size:.82rem;}
+.dq-rec-date{font-weight:600;color:var(--txt);}
+.dq-rec-score{font-weight:700;color:var(--p);white-space:nowrap;}
+.dq-rec-empty{font-size:.8rem;color:var(--sub);text-align:center;padding:6px;}
+.dq-final-rec{font-size:.9rem;color:var(--sub);line-height:1.7;margin-bottom:4px;}
 .quiz-type-tog{display:flex;justify-content:center;gap:7px;margin-bottom:16px;flex-wrap:wrap;}
 
 /* ═══ READING ═══ */
@@ -356,6 +379,7 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
   <button class="tab-btn" onclick="switchTab('tr')">🔄 翻譯練習</button>
   <button class="tab-btn" onclick="switchTab('kw')">✍️ 造句練習</button>
   <button class="tab-btn" onclick="switchTab('qz')">📝 單字考題</button>
+  <button class="tab-btn" onclick="switchTab('dq')">📅 每日測驗</button>
   <button class="tab-btn" onclick="switchTab('rd')">📖 閱讀文章</button>
   <button class="tab-btn" onclick="switchTab('rv')" id="tab-rv">❌ 錯題複習<span class="rv-badge-tab" id="rv-tab-badge" style="display:none">0</span></button>
 </div>
@@ -580,6 +604,68 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
         <div class="score-big" id="qz-final-score">8 / 10</div>
         <div class="grade" id="qz-final-grade">做得很好！繼續加油！</div>
         <button class="btn btn-p" onclick="startQuiz()" style="margin-top:8px;">🔄 再來一輪</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ DAILY QUIZ (per-lesson) ══════ -->
+<div id="sec-dq" class="sec">
+  <div class="sec-head">
+    <div class="sec-title">📅 每日測驗</div>
+    <div class="sec-sub">選一天的課堂筆記 · 出該天專屬考題 · 自動記錄成績</div>
+  </div>
+
+  <!-- 選單 -->
+  <div class="dq-pick" id="dq-pick">
+    <label class="dq-lbl" for="dq-date">選擇日期</label>
+    <select id="dq-date" class="dq-select"></select>
+    <div id="dq-meta" class="dq-meta"></div>
+    <div class="dq-btn-row">
+      <button class="btn btn-p btn-sm" onclick="startDayQuiz(false)">▶ 開始測驗</button>
+      <button class="btn btn-out btn-sm" onclick="startDayQuiz(true)">🎲 隨機抽題</button>
+    </div>
+    <div id="dq-records" class="dq-records"></div>
+  </div>
+
+  <!-- 作答中 -->
+  <div id="dq-game" style="display:none;">
+    <div class="quiz-card">
+      <div class="quiz-meta">
+        <div class="quiz-counter" id="dq-counter">第 1 題 / 共 1 題</div>
+        <div class="quiz-score-badge" id="dq-score-badge">✅ 0</div>
+      </div>
+      <div class="prog-row" style="margin-bottom:16px;">
+        <div class="prog-bg"><div class="prog-fill" id="dq-prog" style="width:0%;background:linear-gradient(90deg,#F59E0B,#EC4899)"></div></div>
+        <div class="prog-txt" id="dq-prog-txt">1/1</div>
+      </div>
+      <div class="quiz-src" style="margin-bottom:10px;"><span class="quiz-src-tag" id="dq-tag">—</span></div>
+      <div class="quiz-prompt" id="dq-prompt" style="font-size:1.08rem;line-height:1.5;"></div>
+      <div class="dq-cn" id="dq-cn"></div>
+      <div class="quiz-options" id="dq-options"></div>
+      <div class="dq-fill" id="dq-fill" style="display:none;">
+        <input type="text" id="dq-fill-input" class="dq-fill-input" autocomplete="off" placeholder="輸入答案後按 Enter…">
+        <button class="btn btn-p btn-sm" onclick="dqSubmitFill()" id="dq-fill-btn">送出</button>
+      </div>
+      <div class="quiz-feedback" id="dq-feedback"></div>
+      <div style="text-align:right;">
+        <button class="btn btn-p btn-sm" id="dq-next-btn" onclick="dqNext()" style="display:none">下一題 ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 結果 -->
+  <div id="dq-final" style="display:none;">
+    <div class="quiz-card">
+      <div class="quiz-final">
+        <div class="emoji" id="dq-final-emoji">🎉</div>
+        <div class="score-big" id="dq-final-score">0 / 0</div>
+        <div class="grade" id="dq-final-grade"></div>
+        <div class="dq-final-rec" id="dq-final-rec"></div>
+        <div class="dq-btn-row" style="justify-content:center;margin-top:14px;">
+          <button class="btn btn-p btn-sm" onclick="startDayQuiz(dqShuffled)">🔄 再考一次</button>
+          <button class="btn btn-out btn-sm" onclick="initDayQuiz()">📅 換一天</button>
+        </div>
       </div>
     </div>
   </div>
@@ -2772,6 +2858,71 @@ const articles = [
 ];
 
 // ═══════════════════════════════════════════════
+// DAILY QUIZ (per-lesson curated questions)
+// 由 english-learning skill 流程 F 維護。新日期插入在 DAYQUIZ_START 下方（最新在上）。
+// 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
+// ═══════════════════════════════════════════════
+const DAYQUIZ = {
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-07-21 count:1
+  "20260721": {
+    title: "作業複習與機場旅遊英文",
+    subtitle: "Homework Review · Airport / Domestic Flight English",
+    questions: [
+      { type:"mc", tag:"單字", q:"「fragile」的中文意思是？",
+        options:["易碎的","大約的","嘔吐的","國內的"], answer:0,
+        explain:"fragile /ˈfrædʒaɪl/ 易碎的，貨運常標示 FRAGILE。" },
+      { type:"mc", tag:"單字", q:"飛機上遇到的「亂流」英文是？",
+        options:["baggage","turbulence","allowance","intonation"], answer:1,
+        explain:"turbulence /ˈtɜːrbjələns/ 亂流。" },
+      { type:"mc", tag:"單字", q:"「approximately」的意思是？",
+        options:["目前","大約","低估","購買"], answer:1,
+        explain:"approximately /əˈprɑːksɪmətli/ 大約（⭐ B2 字）。" },
+      { type:"mc", tag:"單字", q:"「廉價航空」最自然的說法是？",
+        options:["cheap flight","budget airline","domestic flight","carry-on"], answer:1,
+        explain:"budget airline＝廉價航空（＝low-cost carrier）；別說 cheap flight。" },
+      { type:"mc", tag:"單字", q:"「purchase」在正式情境中的意思是？",
+        options:["退貨","購買","托運","低估"], answer:1,
+        explain:"purchase /ˈpɜːrtʃəs/ 購買（比 buy 正式）。" },
+      { type:"fill", tag:"介系詞", q:"用材料包東西：I wrapped the sweet potato ___ aluminum foil.",
+        cn:"我用鋁箔紙把地瓜包起來。", answer:["in"],
+        explain:"wrap something IN + 材料（不是 with）。" },
+      { type:"fill", tag:"文法", q:"表達「想吐」：I felt like ___ because of the turbulence.（vomit 變化）",
+        cn:"因為亂流，我覺得想吐。", answer:["vomiting"],
+        explain:"feel like + V-ing（動名詞）＝想做某事。" },
+      { type:"fill", tag:"介系詞", q:"We have approximately 300 employees ___ our factory ___ Vietnam.（兩個介系詞，用 / 分隔）",
+        cn:"我們在越南的工廠大約有 300 名員工。", answer:["at / in","at/in"],
+        explain:"at our factory in Vietnam（不是 in Vietnam factory）。" },
+      { type:"mc", tag:"改錯", q:"哪一句最正確自然？",
+        options:[
+          "We have 300 employees in Vietnam factory, and is still increasing.",
+          "We have approximately 300 employees at our factory in Vietnam, and the number is still increasing."
+        ], answer:1,
+        explain:"要用 at our factory in Vietnam，且後半句需補主詞 the number。" },
+      { type:"mc", tag:"改錯", q:"「廉價航空的隨身行李限重 7 公斤」哪句對？",
+        options:[
+          "The carry-on baggage weight limit is 7 kg on budget airlines.",
+          "The carry-on bag weight limt is 7 kg for cheap flight."
+        ], answer:0,
+        explain:"budget airlines（非 cheap flight）；limit 正確拼字。" },
+      { type:"mc", tag:"機場", q:"要「加購行李額度」，最恰當的問句是？",
+        options:[
+          "Can I purchase extra baggage?",
+          "Can I buy more airplane?",
+          "Where is my fragile?"
+        ], answer:0,
+        explain:"Can I purchase extra baggage? ＝我可以加購行李嗎？" },
+      { type:"mc", tag:"句型", q:"「我後悔搬到越南」正確說法是？",
+        options:["I regret to move to Vietnam.","I regret moving to Vietnam.","I regret moved to Vietnam."], answer:1,
+        explain:"regret + V-ing＝後悔做過某事。" },
+      { type:"fill", tag:"連接詞", q:"正式表達「在某種程度上」：I regret it ___ ___ extent.（兩個字）",
+        cn:"我在某種程度上後悔。", answer:["to some","to some extent","some"],
+        explain:"to some extent＝在某種程度上。" }
+    ]
+  },
+// ===SYNC:DAYQUIZ_END===
+};
+
+// ═══════════════════════════════════════════════
 // DAILY SYSTEM
 // ═══════════════════════════════════════════════
 const TODAY = (() => { const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; })();
@@ -2922,12 +3073,13 @@ function setMode(m){
 // TAB
 // ═══════════════════════════════════════════════
 function switchTab(t){
-  ['fc','tr','kw','qz','rd','rv'].forEach((id,i)=>{
+  ['fc','tr','kw','qz','dq','rd','rv'].forEach((id,i)=>{
     document.querySelectorAll('.tab-btn')[i].classList.toggle('active',id===t);
     document.getElementById('sec-'+id).classList.toggle('active',id===t);
   });
   if(t==='rd') loadArticle(false);
   if(t==='qz') startQuiz();
+  if(t==='dq') initDayQuiz();
   if(t==='rv') initReview();
 }
 
@@ -3393,6 +3545,140 @@ function nextQuizQ(){
     const grades=['再加油！多練習幾次','有點進步了！繼續努力','還不錯！','很好！繼續保持！','非常棒！','滿分！太厲害了！'];
     document.getElementById('qz-final-grade').textContent=grades[Math.min(Math.floor(pct/20),5)];
   } else { renderQuizQ(); }
+}
+
+// ═══════════════════════════════════════════════
+// DAILY QUIZ (per-lesson curated questions + records)
+// ═══════════════════════════════════════════════
+let dqCur=null, dqCurDate='', dqOrder=[], dqIdx=0, dqOk=0, dqShuffled=false, dqAnswered=false, dqWrong=[];
+
+function dqRecords(){ try{return JSON.parse(localStorage.getItem('el_dq'))||{};}catch(e){return {};} }
+function dqSaveRecords(r){ localStorage.setItem('el_dq', JSON.stringify(r)); }
+function dqShuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function dqNorm(s){ return (s||'').trim().toLowerCase().replace(/\s+/g,' ').replace(/[.。]$/,''); }
+
+function initDayQuiz(){
+  const sel=document.getElementById('dq-date');
+  const recs=dqRecords();
+  const dates=Object.keys(DAYQUIZ).sort().reverse();
+  if(!dates.length){ document.getElementById('dq-meta').textContent='⚠ 尚無題庫。'; return; }
+  sel.innerHTML=dates.map(d=>{
+    const r=recs[d]; const best=r?`（最佳 ${r.best}/${r.total}）`:'';
+    return `<option value="${d}">${d} — ${DAYQUIZ[d].title}${best}</option>`;
+  }).join('');
+  document.getElementById('dq-pick').style.display='block';
+  document.getElementById('dq-game').style.display='none';
+  document.getElementById('dq-final').style.display='none';
+  sel.onchange=dqUpdateMeta;
+  dqUpdateMeta(); dqRenderRecords();
+}
+
+function dqUpdateMeta(){
+  const d=document.getElementById('dq-date').value; const q=DAYQUIZ[d]; if(!q) return;
+  const r=dqRecords()[d];
+  document.getElementById('dq-meta').innerHTML=`${q.subtitle} · 共 ${q.questions.length} 題`+
+    (r?` ｜ 已練 ${r.attempts} 次 · 最佳 ${r.best}/${r.total}`:'');
+}
+
+function dqRenderRecords(){
+  const recs=dqRecords(); const el=document.getElementById('dq-records');
+  const dates=Object.keys(recs).sort().reverse();
+  if(!dates.length){ el.innerHTML=`<div class="dq-rec-title">📊 我的成績紀錄</div><div class="dq-rec-empty">還沒有紀錄，開始第一份測驗吧！</div>`; return; }
+  el.innerHTML=`<div class="dq-rec-title">📊 我的成績紀錄</div>`+dates.map(d=>{
+    const r=recs[d]; const pct=Math.round(r.best/r.total*100);
+    const title=DAYQUIZ[d]?DAYQUIZ[d].title:'';
+    return `<div class="dq-rec-row"><span class="dq-rec-date">${d} ${title}</span><span class="dq-rec-score">最佳 ${r.best}/${r.total}（${pct}%）· ${r.attempts}次</span></div>`;
+  }).join('');
+}
+
+function startDayQuiz(shuffle){
+  const d=document.getElementById('dq-date').value; if(!DAYQUIZ[d]) return;
+  dqCur=DAYQUIZ[d]; dqCurDate=d; dqShuffled=shuffle;
+  dqOrder=dqCur.questions.map((_,i)=>i);
+  if(shuffle) dqOrder=dqShuffle(dqOrder);
+  dqIdx=0; dqOk=0; dqWrong=[];
+  document.getElementById('dq-pick').style.display='none';
+  document.getElementById('dq-game').style.display='block';
+  document.getElementById('dq-final').style.display='none';
+  dqRender();
+}
+
+function dqRender(){
+  const q=dqCur.questions[dqOrder[dqIdx]]; const total=dqOrder.length; dqAnswered=false;
+  document.getElementById('dq-counter').textContent=`第 ${dqIdx+1} 題 / 共 ${total} 題`;
+  document.getElementById('dq-score-badge').textContent=`✅ ${dqOk}`;
+  document.getElementById('dq-prog').style.width=((dqIdx+1)/total*100)+'%';
+  document.getElementById('dq-prog-txt').textContent=`${dqIdx+1}/${total}`;
+  document.getElementById('dq-tag').textContent=q.tag||'';
+  document.getElementById('dq-prompt').textContent=q.q;
+  document.getElementById('dq-cn').textContent=q.cn||'';
+  const fb=document.getElementById('dq-feedback'); fb.className='quiz-feedback';
+  document.getElementById('dq-next-btn').style.display='none';
+  const optsEl=document.getElementById('dq-options'), fillEl=document.getElementById('dq-fill');
+  if(q.type==='mc'){
+    fillEl.style.display='none'; optsEl.style.display='grid';
+    optsEl.innerHTML=q.options.map((op,i)=>`<button class="quiz-opt" id="dq-opt-${i}" onclick="dqSelect(${i})">${op}</button>`).join('');
+  } else {
+    optsEl.style.display='none'; optsEl.innerHTML=''; fillEl.style.display='flex';
+    const inp=document.getElementById('dq-fill-input'); inp.value=''; inp.disabled=false; inp.className='dq-fill-input';
+    document.getElementById('dq-fill-btn').disabled=false;
+    inp.onkeydown=(e)=>{ if(e.key==='Enter') dqSubmitFill(); };
+    setTimeout(()=>inp.focus(),60);
+  }
+}
+
+function dqReveal(isRight, correctText, explain){
+  const fb=document.getElementById('dq-feedback');
+  if(isRight){ dqOk++; document.getElementById('dq-score-badge').textContent=`✅ ${dqOk}`;
+    fb.className='quiz-feedback show ok-fb';
+    fb.innerHTML=`✅ 正確！${explain?`<br><span style="font-size:.82rem;opacity:.85">💡 ${explain}</span>`:''}`;
+  } else {
+    fb.className='quiz-feedback show no-fb';
+    fb.innerHTML=`❌ 答案是：<strong>${correctText}</strong>${explain?`<br><span style="font-size:.82rem;opacity:.85">💡 ${explain}</span>`:''}`;
+  }
+  document.getElementById('dq-next-btn').style.display='inline-flex';
+}
+
+function dqSelect(i){
+  if(dqAnswered) return; dqAnswered=true;
+  const q=dqCur.questions[dqOrder[dqIdx]]; const isRight=i===q.answer;
+  q.options.forEach((op,k)=>{ const btn=document.getElementById('dq-opt-'+k); btn.disabled=true;
+    if(k===q.answer) btn.classList.add(isRight?'correct':'reveal');
+    else if(k===i) btn.classList.add('wrong'); });
+  if(!isRight) dqWrong.push(q);
+  dqReveal(isRight, q.options[q.answer], q.explain);
+}
+
+function dqSubmitFill(){
+  if(dqAnswered) return;
+  const q=dqCur.questions[dqOrder[dqIdx]]; const inp=document.getElementById('dq-fill-input');
+  const val=dqNorm(inp.value); if(!val){ inp.focus(); return; }
+  dqAnswered=true; inp.disabled=true; document.getElementById('dq-fill-btn').disabled=true;
+  const isRight=q.answer.some(a=>dqNorm(a)===val);
+  inp.classList.add(isRight?'correct':'wrong');
+  if(!isRight) dqWrong.push(q);
+  dqReveal(isRight, q.answer[0], q.explain);
+}
+
+function dqNext(){ dqIdx++; if(dqIdx>=dqOrder.length) dqFinish(); else dqRender(); }
+
+function dqFinish(){
+  document.getElementById('dq-game').style.display='none';
+  document.getElementById('dq-final').style.display='block';
+  const total=dqOrder.length, pct=Math.round(dqOk/total*100);
+  document.getElementById('dq-final-score').textContent=`${dqOk} / ${total}`;
+  const emojis=['😓','😅','🙂','😊','😄','🎉'];
+  document.getElementById('dq-final-emoji').textContent=emojis[Math.min(Math.floor(pct/20),5)];
+  const grades=['再複習一下筆記！','有進步了！','還不錯！','很好！','非常棒！','滿分！太厲害了！'];
+  document.getElementById('dq-final-grade').textContent=grades[Math.min(Math.floor(pct/20),5)];
+  const recs=dqRecords(), prev=recs[dqCurDate];
+  const prevBest=prev?prev.best:-1, improved=dqOk>prevBest;
+  recs[dqCurDate]={ attempts:(prev?prev.attempts:0)+1, best:Math.max(dqOk,prevBest,0), total:total, lastScore:dqOk, lastPct:pct, ts:TODAY };
+  dqSaveRecords(recs);
+  const r=recs[dqCurDate];
+  document.getElementById('dq-final-rec').innerHTML=
+    `${improved?'🏅 刷新最佳成績！<br>':''}最佳 ${r.best}/${r.total} ｜ 已練習 ${r.attempts} 次`+
+    (dqWrong.length?`<br>本次答錯 ${dqWrong.length} 題，建議回筆記複習`:'');
 }
 
 // ═══════════════════════════════════════════════
