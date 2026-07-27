@@ -3557,14 +3557,52 @@ function dqSaveRecords(r){ localStorage.setItem('el_dq', JSON.stringify(r)); }
 function dqShuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function dqNorm(s){ return (s||'').trim().toLowerCase().replace(/\s+/g,' ').replace(/[.。]$/,''); }
 
+// 從已標來源的單字/翻譯資料，找出「有筆記的日期」與各天的單字
+function dqLessonTitle(d){
+  for(const w in vocabSources){ if((vocabSources[w]||'').indexOf(d)===0) return vocabSources[w].slice(8).trim(); }
+  const t=allTrans.find(x=>x.src&&x.src.indexOf(d)===0); if(t) return t.src.slice(8).trim();
+  return '單字複習';
+}
+function dqWordsFor(d){ return vocab.filter(v=>(vocabSources[v.w]||'').indexOf(d)===0 && v.cn); }
+function dqAutoDates(){
+  const set=new Set();
+  for(const w in vocabSources){ const m=(vocabSources[w]||'').match(/^(\d{8})/); if(m) set.add(m[1]); }
+  return set;
+}
+// 該天單字數，決定自動題數（上限 10）
+function dqAutoCount(d){ return Math.min(10, dqWordsFor(d).length); }
+// 以該天單字自動生成一份考題（en→中、中→en 交錯）
+function generateAutoQuiz(d){
+  const words=dqShuffle(dqWordsFor(d)).slice(0,10);
+  const pool=vocab.filter(v=>v.cn);
+  const qs=words.map((v,idx)=>{
+    const distract=dqShuffle(pool.filter(x=>x.w!==v.w&&x.cn!==v.cn)).slice(0,3);
+    if(idx%2===0){
+      const opts=dqShuffle([v.cn,...distract.map(x=>x.cn)]);
+      return {type:'mc',tag:'單字',q:`「${v.w}」的中文意思是？`,options:opts,answer:opts.indexOf(v.cn),
+        explain:`${v.w} ${v.ipa||''} ${v.cn}。${v.exEn||''}`};
+    } else {
+      const opts=dqShuffle([v.w,...distract.map(x=>x.w)]);
+      return {type:'mc',tag:'單字',q:`「${v.cn}」對應的英文單字是？`,options:opts,answer:opts.indexOf(v.w),
+        explain:`${v.w} = ${v.cn}。${v.exEn||''}`};
+    }
+  });
+  return { title:dqLessonTitle(d), subtitle:'單字測驗（依當天單字自動生成）', questions:qs, auto:true };
+}
+// 取得某天題組：精選（DAYQUIZ）優先，否則自動生成
+function dqGetQuiz(d){ return DAYQUIZ[d] ? DAYQUIZ[d] : (dqWordsFor(d).length ? generateAutoQuiz(d) : null); }
+
 function initDayQuiz(){
   const sel=document.getElementById('dq-date');
   const recs=dqRecords();
-  const dates=Object.keys(DAYQUIZ).sort().reverse();
-  if(!dates.length){ document.getElementById('dq-meta').textContent='⚠ 尚無題庫。'; return; }
+  const all=new Set([...Object.keys(DAYQUIZ), ...dqAutoDates()]);
+  const dates=[...all].filter(d=>DAYQUIZ[d] || dqWordsFor(d).length>=4).sort().reverse();
+  if(!dates.length){ document.getElementById('dq-meta').textContent='⚠ 尚無可出題的筆記。'; return; }
   sel.innerHTML=dates.map(d=>{
+    const curated=!!DAYQUIZ[d];
+    const title=curated?DAYQUIZ[d].title:dqLessonTitle(d);
     const r=recs[d]; const best=r?`（最佳 ${r.best}/${r.total}）`:'';
-    return `<option value="${d}">${d} — ${DAYQUIZ[d].title}${best}</option>`;
+    return `<option value="${d}">${curated?'⭐ ':''}${d} — ${title}${best}</option>`;
   }).join('');
   document.getElementById('dq-pick').style.display='block';
   document.getElementById('dq-game').style.display='none';
@@ -3574,9 +3612,12 @@ function initDayQuiz(){
 }
 
 function dqUpdateMeta(){
-  const d=document.getElementById('dq-date').value; const q=DAYQUIZ[d]; if(!q) return;
+  const d=document.getElementById('dq-date').value;
+  const curated=!!DAYQUIZ[d];
+  const cnt=curated?DAYQUIZ[d].questions.length:dqAutoCount(d);
+  const sub=curated?DAYQUIZ[d].subtitle:'單字測驗（依當天單字自動生成）';
   const r=dqRecords()[d];
-  document.getElementById('dq-meta').innerHTML=`${q.subtitle} · 共 ${q.questions.length} 題`+
+  document.getElementById('dq-meta').innerHTML=`${curated?'⭐ 精選題組 · ':''}${sub} · 共 ${cnt} 題`+
     (r?` ｜ 已練 ${r.attempts} 次 · 最佳 ${r.best}/${r.total}`:'');
 }
 
@@ -3586,14 +3627,15 @@ function dqRenderRecords(){
   if(!dates.length){ el.innerHTML=`<div class="dq-rec-title">📊 我的成績紀錄</div><div class="dq-rec-empty">還沒有紀錄，開始第一份測驗吧！</div>`; return; }
   el.innerHTML=`<div class="dq-rec-title">📊 我的成績紀錄</div>`+dates.map(d=>{
     const r=recs[d]; const pct=Math.round(r.best/r.total*100);
-    const title=DAYQUIZ[d]?DAYQUIZ[d].title:'';
+    const title=DAYQUIZ[d]?DAYQUIZ[d].title:dqLessonTitle(d);
     return `<div class="dq-rec-row"><span class="dq-rec-date">${d} ${title}</span><span class="dq-rec-score">最佳 ${r.best}/${r.total}（${pct}%）· ${r.attempts}次</span></div>`;
   }).join('');
 }
 
 function startDayQuiz(shuffle){
-  const d=document.getElementById('dq-date').value; if(!DAYQUIZ[d]) return;
-  dqCur=DAYQUIZ[d]; dqCurDate=d; dqShuffled=shuffle;
+  const d=document.getElementById('dq-date').value;
+  const q=dqGetQuiz(d); if(!q||!q.questions.length) return;
+  dqCur=q; dqCurDate=d; dqShuffled=shuffle;
   dqOrder=dqCur.questions.map((_,i)=>i);
   if(shuffle) dqOrder=dqShuffle(dqOrder);
   dqIdx=0; dqOk=0; dqWrong=[];
