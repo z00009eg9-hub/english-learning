@@ -842,7 +842,57 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
 // ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260721
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-07-21 count:430
+// ===SYNC:VOCAB_START=== sync_date:2026-07-27 count:477
+  // --- 20260714 搭機流程與機上英文（補充）---
+  {w:"departure gate",ipa:"/dɪˈpɑːtʃər ɡeɪt/",pos:"n.",cn:"登機門",def:"The door where you board your plane.",exEn:"Please go to departure gate 12.",exCn:"請前往 12 號登機門。",cat:"daily"},
+  {w:"security check",ipa:"/sɪˈkjʊərəti tʃek/",pos:"n.",cn:"安檢",def:"Where staff check you and your bags for safety.",exEn:"We went through the security check.",exCn:"我們通過了安檢。",cat:"daily"},
+  {w:"trolley",ipa:"/ˈtrɒli/",pos:"n.",cn:"行李推車",def:"A cart with wheels for carrying bags.",exEn:"I put my bags on a trolley at the airport.",exCn:"我把行李放在機場的行李推車上。",cat:"daily"},
+  {w:"plastic cutlery",ipa:"/ˈplæstɪk ˈkʌtləri/",pos:"n.",cn:"塑膠餐具",def:"Knives, forks and spoons made of plastic.",exEn:"The meal came with plastic cutlery.",exCn:"餐點附了塑膠餐具。",cat:"food"},
+  {w:"soft drink",ipa:"/sɒft drɪŋk/",pos:"n.",cn:"汽水／無酒精飲料",def:"A cold drink with no alcohol.",exEn:"Would you like a soft drink?",exCn:"你想要一杯汽水嗎？",cat:"food"},
+  {w:"special meal",ipa:"/ˈspeʃl miːl/",pos:"n.",cn:"特別餐",def:"A meal for special diets, such as vegetarian.",exEn:"I ordered a vegetarian special meal.",exCn:"我預訂了素食特別餐。",cat:"food"},
+  {w:"meal service",ipa:"/miːl ˈsɜːvɪs/",pos:"n.",cn:"餐點服務",def:"When food is served on the plane.",exEn:"Meal service will begin shortly.",exCn:"餐點服務即將開始。",cat:"daily"},
+  {w:"seat belt",ipa:"/siːt belt/",pos:"n.",cn:"安全帶",def:"A strap that keeps you safe in your seat.",exEn:"Please fasten your seat belt.",exCn:"請繫上安全帶。",cat:"daily"},
+  {w:"window shade",ipa:"/ˈwɪndəʊ ʃeɪd/",pos:"n.",cn:"遮光板",def:"The cover you pull down over a plane window.",exEn:"Please keep your window shade open during landing.",exCn:"降落時請保持遮光板打開。",cat:"daily"},
+  {w:"window blind",ipa:"/ˈwɪndəʊ blaɪnd/",pos:"n.",cn:"窗簾／百葉窗",def:"A cover for a window at home.",exEn:"She pulled down the window blind at home.",exCn:"她在家把百葉窗拉下來。",cat:"daily"},
+  {w:"excess baggage fee",ipa:"/ɪkˈses ˈbæɡɪdʒ fiː/",pos:"n.",cn:"超重行李費",def:"Extra money you pay when your bag is too heavy.",exEn:"If your bag is too heavy, you may pay excess baggage fees.",exCn:"如果行李太重，你可能要付超重行李費。",cat:"daily"},
+  {w:"cargo hold",ipa:"/ˈkɑːɡəʊ həʊld/",pos:"n.",cn:"貨艙",def:"The lower part of a plane where luggage is stored.",exEn:"Checked bags are stored in the aircraft's cargo hold.",exCn:"託運行李存放在飛機的貨艙裡。",cat:"daily"},
+  {w:"X-ray machine",ipa:"/ˈeks reɪ məˈʃiːn/",pos:"n.",cn:"X 光機",def:"A machine that scans bags at security.",exEn:"Your carry-on bags will pass through an X-ray machine.",exCn:"你的隨身行李會通過 X 光機掃描。",cat:"daily"},
+  {w:"landing",ipa:"/ˈlændɪŋ/",pos:"n.",cn:"降落",def:"When a plane comes down to the ground.",exEn:"Seats must be upright for landing.",exCn:"降落時椅背必須直立。",cat:"daily"},
+  {w:"tarmac",ipa:"/ˈtɑːmæk/",pos:"n.",cn:"停機坪",def:"The hard ground where planes park.",exEn:"We walked on the tarmac to board the plane.",exCn:"我們走過停機坪登機。",cat:"daily"},
+  {w:"cabin",ipa:"/ˈkæbɪn/",pos:"n.",cn:"客艙",def:"The inside of a plane where passengers sit.",exEn:"You can take a carry-on bag into the cabin.",exCn:"你可以帶一件隨身行李進客艙。",cat:"daily"},
+  {w:"unfold",ipa:"/ʌnˈfəʊld/",pos:"v.",cn:"打開、展開",def:"To open something that was folded.",exEn:"My tray table is broken; I can't unfold it.",exCn:"我的小桌板壞了，打不開。",cat:"daily"},
+  // --- 20260716 搭機英文 On the Plane（補充）---
+  {w:"captain",ipa:"/ˈkæptɪn/",pos:"n.",cn:"機長、船長",def:"The person in charge of a plane or ship.",exEn:"The captain welcomed us on board.",exCn:"機長歡迎我們登機。",cat:"daily"},
+  {w:"departure lounge",ipa:"/dɪˈpɑːrtʃər laʊndʒ/",pos:"n.",cn:"候機室",def:"The place at the airport where you wait before boarding.",exEn:"I waited in the departure lounge before my flight.",exCn:"登機前我在候機室等候。",cat:"daily"},
+  {w:"takeoff",ipa:"/ˈteɪkɔːf/",pos:"n.",cn:"起飛",def:"The moment a plane leaves the ground.",exEn:"Please fasten your seat belt before takeoff.",exCn:"起飛前請繫好安全帶。",cat:"daily"},
+  {w:"fasten",ipa:"/ˈfæsən/",pos:"v.",cn:"繫緊、扣上",def:"To close or attach something firmly.",exEn:"Please fasten your seat belt.",exCn:"請繫好安全帶。",cat:"daily"},
+  {w:"blanket",ipa:"/ˈblæŋkɪt/",pos:"n.",cn:"毯子",def:"A soft cover to keep you warm.",exEn:"Could I have a blanket, please?",exCn:"可以給我一條毯子嗎？",cat:"daily"},
+  {w:"overhead compartment",ipa:"/ˌoʊvərˈhɛd kəmˈpɑːrtmənt/",pos:"n.",cn:"頭頂置物櫃",def:"The storage space above your seat on a plane.",exEn:"Please place your bag in the overhead compartment.",exCn:"請把行李放進頭頂置物櫃。",cat:"daily"},
+  {w:"window seat",ipa:"/ˈwɪndoʊ siːt/",pos:"n.",cn:"靠窗座位",def:"A seat next to the window.",exEn:"She chose a window seat for the view.",exCn:"她選了靠窗座位欣賞風景。",cat:"daily"},
+  {w:"inconsiderate",ipa:"/ˌɪnkənˈsɪdərət/",pos:"adj.",cn:"不體貼的",def:"Not thinking about other people's feelings.",exEn:"He is inconsiderate because he talks loudly on the phone.",exCn:"他很不體貼，因為他講電話很大聲。",cat:"daily"},
+  {w:"cutlery",ipa:"/ˈkʌtləri/",pos:"n.",cn:"餐具（刀叉匙）",def:"Knives, forks and spoons.",exEn:"Plastic cutlery is not good for hot food.",exCn:"塑膠餐具不適合裝熱食。",cat:"food"},
+  {w:"container",ipa:"/kənˈteɪnər/",pos:"n.",cn:"容器",def:"Something you keep or carry things in.",exEn:"Hot food softens the plastic container.",exCn:"熱食會使塑膠容器變軟。",cat:"food"},
+  {w:"receptionist",ipa:"/rɪˈsɛpʃənɪst/",pos:"n.",cn:"接待員",def:"The person who greets visitors at a front desk.",exEn:"The receptionist greeted us at the front desk.",exCn:"接待員在前台歡迎我們。",cat:"workplace"},
+  {w:"certainly",ipa:"/ˈsɜːrtnli/",pos:"adv.",cn:"當然",def:"Yes, of course.",exEn:"Certainly. Would you like anything else?",exCn:"當然。您還需要別的嗎？",cat:"daily"},
+  {w:"polite",ipa:"/pəˈlaɪt/",pos:"adj.",cn:"有禮貌的",def:"Behaving in a kind and respectful way.",exEn:"She is always polite to the staff.",exCn:"她對工作人員總是很有禮貌。",cat:"daily"},
+  {w:"electronic equipment",ipa:"/ɪˌlɛkˈtrɑːnɪk ɪˈkwɪpmənt/",pos:"n.",cn:"電子設備",def:"Devices such as laptops and cameras.",exEn:"I have some electronic equipment in my bag.",exCn:"我的包裡有一些電子設備。",cat:"daily"},
+  {w:"middle seat",ipa:"/ˈmɪdl siːt/",pos:"n.",cn:"中間座位",def:"The seat between the window and the aisle.",exEn:"Nobody likes the middle seat.",exCn:"沒有人喜歡中間座位。",cat:"daily"},
+  {w:"upright",ipa:"/ˈʌpraɪt/",pos:"adj.",cn:"直立的",def:"Straight up, not leaning back.",exEn:"Please put your seat in the upright position for takeoff.",exCn:"起飛時請把椅背調到直立位置。",cat:"daily"},
+  {w:"check-in",ipa:"/ˈtʃɛkɪn/",pos:"n.",cn:"報到手續",def:"Registering at the airport before a flight.",exEn:"Check-in opens two hours before the flight.",exCn:"報到手續在班機起飛前兩小時開始。",cat:"daily"},
+  {w:"vegetarian",ipa:"/ˌvɛdʒəˈtɛriən/",pos:"n.",cn:"素食者",def:"A person who does not eat meat.",exEn:"A vegetarian does not eat meat.",exCn:"素食者不吃肉。",cat:"food"},
+  {w:"pilot",ipa:"/ˈpaɪlət/",pos:"n.",cn:"飛行員",def:"A person who flies a plane.",exEn:"The pilot landed the plane smoothly.",exCn:"飛行員平穩地降落了飛機。",cat:"daily"},
+  {w:"considerate",ipa:"/kənˈsɪdərət/",pos:"adj.",cn:"體貼的",def:"Careful not to trouble other people.",exEn:"A considerate person is careful not to inconvenience others.",exCn:"體貼的人小心不造成他人不便。",cat:"daily"},
+  {w:"weigh",ipa:"/weɪ/",pos:"v.",cn:"秤重",def:"To measure how heavy something is.",exEn:"I want to weigh this cup.",exCn:"我想秤一下這個杯子的重量。",cat:"daily"},
+  {w:"boarding",ipa:"/ˈbɔːrdɪŋ/",pos:"n.",cn:"登機",def:"Getting on a plane.",exEn:"Boarding will begin in ten minutes.",exCn:"十分鐘後開始登機。",cat:"daily"},
+  // --- 20260721 作業複習與機場旅遊英文（補充）---
+  {w:"currently",ipa:"/ˈkɜːrəntli/",pos:"adv.",cn:"目前、現在",def:"At the present time; now.",exEn:"We currently have about 300 employees.",exCn:"我們目前大約有 300 名員工。",cat:"workplace"},
+  {w:"hire",ipa:"/ˈhaɪər/",pos:"v.",cn:"雇用、招募",def:"To give someone a job.",exEn:"We are still hiring more workers.",exCn:"我們還在招募更多員工。",cat:"workplace"},
+  {w:"carry-on",ipa:"/ˈkæri ɑːn/",pos:"n./adj.",cn:"隨身（行李）",def:"A small bag you take onto the plane with you.",exEn:"You can bring one carry-on onto the plane.",exCn:"你可以帶一件隨身行李上飛機。",cat:"daily"},
+  {w:"echo",ipa:"/ˈekoʊ/",pos:"n./v.",cn:"回音",def:"A sound that comes back to you.",exEn:"My voice is echoing on the call.",exCn:"我的聲音在通話中有回音。",cat:"workplace"},
+  {w:"request",ipa:"/rɪˈkwest/",pos:"n./v.",cn:"要求、請求",def:"When you politely ask for something.",exEn:"I sent a meeting request to my manager.",exCn:"我發了一個會議邀請給我的主管。",cat:"workplace"},
+  {w:"intonation",ipa:"/ˌɪntəˈneɪʃn/",pos:"n.",cn:"語調",def:"The way your voice rises and falls when you speak.",exEn:"Question intonation rises at the end.",exCn:"疑問句的語調在句尾上揚。",cat:"learning"},
+  {w:"language barrier",ipa:"/ˈlæŋɡwɪdʒ ˈbæriər/",pos:"n.",cn:"語言隔閡",def:"Difficulty communicating because people speak different languages.",exEn:"The language barrier is a big challenge abroad.",exCn:"語言隔閡在國外是一大挑戰。",cat:"learning"},
+  {w:"public holiday",ipa:"/ˈpʌblɪk ˈhɑːlədeɪ/",pos:"n.",cn:"國定假日",def:"An official day off work for everyone.",exEn:"Taiwan has many public holidays.",exCn:"台灣有很多國定假日。",cat:"daily"},
   // --- 20260721: 作業複習與機場旅遊英文 ---
   {w:"fragile",ipa:"/ˈfrædʒaɪl/",pos:"adj.",cn:"易碎的",def:"Easily broken or damaged.",exEn:"Please put a fragile label on the box, because it contains cups.",exCn:"請在箱子上貼易碎標籤，因為裡面裝了杯子。",cat:"daily"},
   {w:"contain",ipa:"/kənˈteɪn/",pos:"v.",cn:"裝有、包含",def:"To have something inside.",exEn:"The box contains glass cups.",exCn:"這個箱子裝有玻璃杯。",cat:"daily"},
@@ -1309,8 +1359,17 @@ const vocab = [
 ];
 
 // 每個單字的筆記來源 (key = word, value = note title)
-// ===SYNC:SOURCES_START=== sync_date:2026-06-10
+// ===SYNC:SOURCES_START=== sync_date:2026-07-27
 const vocabSources = {
+  // --- 20260714 搭機流程與機上英文 ---
+  "immigration officer":"20260714 搭機流程與機上英文","checked baggage":"20260714 搭機流程與機上英文","departure":"20260714 搭機流程與機上英文",
+  "departure gate":"20260714 搭機流程與機上英文","security check":"20260714 搭機流程與機上英文","trolley":"20260714 搭機流程與機上英文","plastic cutlery":"20260714 搭機流程與機上英文","soft drink":"20260714 搭機流程與機上英文","special meal":"20260714 搭機流程與機上英文","meal service":"20260714 搭機流程與機上英文","seat belt":"20260714 搭機流程與機上英文","window shade":"20260714 搭機流程與機上英文","window blind":"20260714 搭機流程與機上英文","excess baggage fee":"20260714 搭機流程與機上英文","cargo hold":"20260714 搭機流程與機上英文","X-ray machine":"20260714 搭機流程與機上英文","landing":"20260714 搭機流程與機上英文","tarmac":"20260714 搭機流程與機上英文","cabin":"20260714 搭機流程與機上英文","unfold":"20260714 搭機流程與機上英文",
+  // --- 20260716 搭機英文 On the Plane ---
+  "flight attendant":"20260716 搭機英文 On the Plane","carry-on bag":"20260716 搭機英文 On the Plane","aisle seat":"20260716 搭機英文 On the Plane","recline":"20260716 搭機英文 On the Plane","arrival":"20260716 搭機英文 On the Plane","legroom":"20260716 搭機英文 On the Plane","tray table":"20260716 搭機英文 On the Plane","boarding pass":"20260716 搭機英文 On the Plane","jet bridge":"20260716 搭機英文 On the Plane",
+  "captain":"20260716 搭機英文 On the Plane","departure lounge":"20260716 搭機英文 On the Plane","takeoff":"20260716 搭機英文 On the Plane","fasten":"20260716 搭機英文 On the Plane","blanket":"20260716 搭機英文 On the Plane","overhead compartment":"20260716 搭機英文 On the Plane","window seat":"20260716 搭機英文 On the Plane","inconsiderate":"20260716 搭機英文 On the Plane","cutlery":"20260716 搭機英文 On the Plane","container":"20260716 搭機英文 On the Plane","receptionist":"20260716 搭機英文 On the Plane","certainly":"20260716 搭機英文 On the Plane","polite":"20260716 搭機英文 On the Plane","electronic equipment":"20260716 搭機英文 On the Plane","middle seat":"20260716 搭機英文 On the Plane","upright":"20260716 搭機英文 On the Plane","check-in":"20260716 搭機英文 On the Plane","vegetarian":"20260716 搭機英文 On the Plane","pilot":"20260716 搭機英文 On the Plane","considerate":"20260716 搭機英文 On the Plane","weigh":"20260716 搭機英文 On the Plane","boarding":"20260716 搭機英文 On the Plane",
+  // --- 20260721 作業複習與機場旅遊英文 ---
+  "fragile":"20260721 作業複習與機場旅遊英文","contain":"20260721 作業複習與機場旅遊英文","approximately":"20260721 作業複習與機場旅遊英文","turbulence":"20260721 作業複習與機場旅遊英文","roast":"20260721 作業複習與機場旅遊英文","aluminum foil":"20260721 作業複習與機場旅遊英文","budget airline":"20260721 作業複習與機場旅遊英文","baggage allowance":"20260721 作業複習與機場旅遊英文","domestic flight":"20260721 作業複習與機場旅遊英文","in-flight meal":"20260721 作業複習與機場旅遊英文","purchase":"20260721 作業複習與機場旅遊英文","underestimate":"20260721 作業複習與機場旅遊英文",
+  "currently":"20260721 作業複習與機場旅遊英文","hire":"20260721 作業複習與機場旅遊英文","carry-on":"20260721 作業複習與機場旅遊英文","echo":"20260721 作業複習與機場旅遊英文","request":"20260721 作業複習與機場旅遊英文","intonation":"20260721 作業複習與機場旅遊英文","language barrier":"20260721 作業複習與機場旅遊英文","public holiday":"20260721 作業複習與機場旅遊英文",
   "flooded":       "20260609 洪水與圖片描述",
   "flooding":      "20260609 洪水與圖片描述",
   "raincoat":      "20260609 洪水與圖片描述",
