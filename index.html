@@ -893,7 +893,7 @@ header{background:linear-gradient(135deg,#3730A3,#4F46E5 50%,#0E7490);color:whit
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
 // ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260721
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-07-27 count:477
+// ===SYNC:VOCAB_START=== sync_date:2026-07-28 count:484
   // --- 20260714 搭機流程與機上英文（補充）---
   {w:"departure gate",ipa:"/dɪˈpɑːtʃər ɡeɪt/",pos:"n.",cn:"登機門",def:"The door where you board your plane.",exEn:"Please go to departure gate 12.",exCn:"請前往 12 號登機門。",cat:"daily"},
   {w:"security check",ipa:"/sɪˈkjʊərəti tʃek/",pos:"n.",cn:"安檢",def:"Where staff check you and your bags for safety.",exEn:"We went through the security check.",exCn:"我們通過了安檢。",cat:"daily"},
@@ -1406,6 +1406,14 @@ const vocab = [
   {w:"recline",ipa:"/rɪˈklaɪn/",pos:"v.",cn:"把椅背往後調",def:"To lean a seat backward.",exEn:"Can I recline my seat?",exCn:"我可以把椅背往後調嗎？",cat:"daily"},
   {w:"in-flight meal",ipa:"/ˌɪn flaɪt miːl/",pos:"n.",cn:"機上餐",def:"Food served to passengers during a flight.",exEn:"The in-flight meal was delicious.",exCn:"飛機餐很好吃。",cat:"daily"},
   {w:"tray table",ipa:"/treɪ ˈteɪbl/",pos:"n.",cn:"小桌板",def:"The small folding table on the back of the seat in front of you.",exEn:"Please fold up your tray table before takeoff.",exCn:"起飛前請將小桌板收起。",cat:"daily"},
+  // --- 20260728 越南寧平旅遊 Tam Coc Trip ---
+  {w:"countryside",ipa:"/ˈkʌntrisaɪd/",pos:"n.",cn:"鄉間、鄉下",def:"Land outside towns and cities, with fields and farms.",exEn:"I rented an e-bike and rode around the countryside.",exCn:"我租了一台電動車在鄉間騎行。",cat:"daily"},
+  {w:"limestone",ipa:"/ˈlaɪmstoʊn/",pos:"n.",cn:"石灰岩",def:"A type of hard, pale rock often used in building.",exEn:"There was beautiful scenery, including limestone mountains.",exCn:"有美麗的風景，包括石灰岩山。",cat:"daily"},
+  {w:"cave",ipa:"/keɪv/",pos:"n.",cn:"洞穴",def:"A large hole in the side of a hill or under the ground.",exEn:"The boat operator took me through several caves.",exCn:"船夫帶我穿過好幾個洞穴。",cat:"daily"},
+  {w:"sunscreen",ipa:"/ˈsʌnskriːn/",pos:"n.",cn:"防曬乳",def:"A cream you put on your skin to protect it from the sun.",exEn:"Apply or use sunscreen to protect your skin.",exCn:"塗抹或使用防曬乳來保護皮膚。",cat:"health"},
+  {w:"sunburn",ipa:"/ˈsʌnbɜːrn/",pos:"n.",cn:"曬傷",def:"Red, sore skin caused by too much sun.",exEn:"Use sunscreen to prevent sunburn.",exCn:"使用防曬乳來防止曬傷。",cat:"health"},
+  {w:"life jacket",ipa:"/ˈlaɪf ˌdʒækɪt/",pos:"n.",cn:"救生衣",def:"A special jacket that helps you float in water.",exEn:"Passengers must wear life jackets before getting on the boat.",exCn:"乘客上船前必須穿上救生衣。",cat:"daily"},
+  {w:"boat operator",ipa:"/boʊt ˈɑːpəreɪtər/",pos:"n.",cn:"船夫、開船的人",def:"A person who drives a boat for passengers.",exEn:"The boat operator took me through the caves.",exCn:"船夫帶我穿過那些洞穴。",cat:"daily"},
 // ===SYNC:VOCAB_END===
 ];
 
@@ -3035,7 +3043,67 @@ const articles = [
 // 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
 // ═══════════════════════════════════════════════
 const DAYQUIZ = {
-// ===SYNC:DAYQUIZ_START=== sync_date:2026-07-16 count:3
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-07-28 count:4
+  "20260728": {
+    title: "越南寧平旅遊 Tam Coc Trip",
+    subtitle: "take + someone + place · cross one's mind · It takes / spend + 時間句型",
+    questions: [
+      { type:"mc", tag:"單字", q:"「scenery」的中文意思是？",
+        options:["風景、景色","救生衣","洞穴","防曬乳"], answer:0,
+        explain:"scenery /ˈsiːnəri/ 風景、景色（不可數）。" },
+      { type:"mc", tag:"單字", q:"開船、帶遊客遊覽的人叫做？",
+        options:["passenger","boat operator","limestone","trolley"], answer:1,
+        explain:"boat operator 船夫、開船的人；The boat operator took me through the caves." },
+      { type:"mc", tag:"單字", q:"「乘客上船前必須穿上」的東西是？",
+        options:["sunscreen 防曬乳","life jacket 救生衣","seat belt 安全帶","blanket 毯子"], answer:1,
+        explain:"life jacket 救生衣；Passengers must wear life jackets before getting on the boat." },
+      { type:"mc", tag:"單字", q:"防止曬傷（sunburn）應該使用什麼？",
+        options:["sunscreen 防曬乳","cutlery 餐具","limestone 石灰岩","cave 洞穴"], answer:0,
+        explain:"Use sunscreen to prevent sunburn. 使用防曬乳來防止曬傷。" },
+      { type:"fill", tag:"介系詞", q:"The boat operator took me ___ several caves.（穿過）",
+        cn:"船夫帶我穿過好幾個洞穴。", answer:["through"],
+        explain:"take + 人 + through + 地點；through 已含「穿過」之意，不用 pass through。" },
+      { type:"fill", tag:"片語", q:"I was really looking forward ___ the trip.（期待）",
+        cn:"我非常期待這趟旅程。", answer:["to"],
+        explain:"look forward to 是固定片語，to 後面接名詞或 V-ing（the trip / going）。" },
+      { type:"mc", tag:"句型", q:"「一個奇怪的想法閃過我的腦海」哪句正確？",
+        options:[
+          "A strange thought crossed my mind.",
+          "A strange thought crossed to my mind."
+        ], answer:0,
+        explain:"cross one's mind「閃過腦海／突然想到」，主詞是想法，中間不加 to。" },
+      { type:"fill", tag:"文法", q:"It ___ two hours to get there.（花費，現在式）",
+        cn:"到那裡需要兩個小時。", answer:["takes"],
+        explain:"It takes +（某人）+ 時間 + to do sth；主詞 it 第三人稱單數 → takes。" },
+      { type:"fill", tag:"文法", q:"I ___ two hours studying English every day.（花時間，現在式）",
+        cn:"我每天花兩小時讀英文。", answer:["spend"],
+        explain:"主詞（人）+ spend + 時間 + doing sth；後接 V-ing（studying）。" },
+      { type:"mc", tag:"改錯", q:"「我早上租了一台電動車」哪句正確？",
+        options:[
+          "I rented an e-bike in the morning.",
+          "I rent a E-bike in the morning."
+        ], answer:0,
+        explain:"過去的事用過去式 rented；母音開頭用 an e-bike。" },
+      { type:"mc", tag:"改錯", q:"「我拍了很多照片」哪句正確？",
+        options:[
+          "I took many photos.",
+          "I taked many photos."
+        ], answer:0,
+        explain:"take 的過去式是不規則變化 took，不是 taked。" },
+      { type:"mc", tag:"改錯", q:"「船夫帶我穿過洞穴」哪句最自然正確？",
+        options:[
+          "The boat operator took me through the caves.",
+          "The boat operator took me pass through the cave."
+        ], answer:0,
+        explain:"take + 人 + through + 地點即可，不要多加 pass。" },
+      { type:"fill", tag:"單字", q:"The trip took ___ three hours.（大約，a 開頭）",
+        cn:"這趟旅行大約花了三個小時。", answer:["approximately"],
+        explain:"approximately /əˈprɒksɪmətli/ 大約；也可用 about。" },
+      { type:"trans", tag:"翻譯", q:"乘客上船前必須穿上救生衣。",
+        answer:"Passengers must wear life jackets before getting on the boat.",
+        explain:"must + 原形 wear；before getting on the boat 用動名詞（before + V-ing）。" }
+    ]
+  },
   "20260716": {
     title: "搭機英文 On the Plane",
     subtitle: "作業複習 · 機上對話 · 搭機單字",
