@@ -1,6 +1,6 @@
 ---
 name: english-learning
-description: 英文課堂筆記的完整自動化工作流程 — 自動建立當天日期資料夾、把課堂筆記寫入 Google 文件（新建或更新，含橘色表頭表格、★作業複習範本、文法解說格式）、把筆記重點同步進互動學習網頁 index.html、以及為當天筆記自動生成考題並同步到 index.html 的「每日測驗」分頁（含成績記錄），最後推送到 GitHub。當使用者貼上課堂對話/錄音逐字稿/筆記文字、要求把補充教材加入某份 Google 文件、要求「同步筆記」、或要求「出考題/生成考題/更新測驗」時使用。
+description: 英文課堂筆記的完整自動化工作流程 — 自動建立當天日期資料夾、把課堂筆記寫入 Google 文件（新建或更新，含橘色表頭表格、★作業複習範本、文法解說格式）、把筆記重點同步進互動學習網頁 index.html、以及為當天筆記自動生成考題並同步到 index.html 的「每日測驗」分頁（含成績記錄），推送到 GitHub，最後部署到 Firebase 線上網站（https://learning-english-notes.web.app）。當使用者貼上課堂對話/錄音逐字稿/筆記文字、要求把補充教材加入某份 Google 文件、要求「同步筆記」、要求「出考題/生成考題/更新測驗」、或要求「部署網站/更新線上網站/deploy」時使用。
 ---
 
 # 英文學習筆記工作流程（零步驟自動化）
@@ -268,10 +268,20 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 用 **Edit 工具**在每個 `===SYNC:*_START===` 標記後插入新項目，並更新標記中的 `sync_date` 和 `count`：
 - `// ===SYNC:VOCAB_START=== sync_date:YYYY-MM-DD count:N`
 
+> ⚠ **同時更新 SOURCES 區塊（2026-07-30 起，口說活動需要）**：新增 VOCAB 的每個單字，也要在 `// ===SYNC:SOURCES_START===`（`const vocabSources`）加一筆 `"word":"YYYYMMDD 主題"`，讓「🗣️ 單字口說 / 💬 情境開講」能精準把單字對應到日期。
+> （若漏掉，新版 `dayVocab()` 有 fallback 會用「該天翻譯句裡出現的單字」補，但會不完整——最好還是補上 SOURCES。）
+
 ### Step 5 — 推送到 GitHub
 1. `git add index.html`
 2. `git commit -m "Sync English learning notes up to YYYYMMDD (主題)"` + `Co-Authored-By` trailer
 3. `git push origin main`
+
+### Step 5.5 — 部署到 Firebase Hosting（更新線上網站）
+push GitHub 後，**接著執行「流程 G」** 把最新 `index.html` 部署上線：
+```bash
+cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && firebase deploy --only hosting
+```
+線上網址 https://learning-english-notes.web.app 隨即更新（詳見下方「流程 G」）。
 
 ### Step 6 — 更新同步狀態記憶
 更新 `sync_state.md`：
@@ -311,9 +321,13 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 - 建立當天課堂筆記後（流程 A 完成、或流程 C Step 7 產出格式版文件後）**自動接著執行**
 - 使用者說「出考題 / 生成考題 / 更新測驗 / 幫我出題」，或針對某一天筆記要求出題
 
-### 架構（已併入 index.html「📅 每日測驗」分頁）
+> ⚠ **2026-07-30 index.html 已改版為「Speak Up!」口說優先設計**（暖色調、六大口說活動：說出來/跟讀/單字口說/朗讀/情境開講/快速檢查，用 Web Speech API 麥克風辨識）。
+> **但資料層完全沒變**：`const vocab / vocabSources / allTrans / allKW / articles / DAYQUIZ` 與所有 `// ===SYNC:*===` 標記原封不動保留，因此 **流程 C / F 的所有插入步驟不受影響、照舊執行**。
+> 差別只在使用者端：考題現在是「📝 快速檢查」活動（不再叫「每日測驗分頁」），成績不再寫 localStorage `el_dq`（口說進度改存 `speakup_v1`）。出題資料格式（DAYQUIZ 的 mc/fill/trans）不變。
 
-考題功能是 `index.html` 的一個分頁（tab id `dq`），資料嵌在 index.html 的 JS 裡：
+### 架構（DAYQUIZ 題庫嵌在 index.html 的 JS 裡）
+
+考題資料嵌在 index.html 的 JS 裡：
 - **題庫**：`const DAYQUIZ = { ... }`，含 `// ===SYNC:DAYQUIZ_START/END===` 標記，以日期為 key
 - **作答/批改/算分/隨機抽題**：`initDayQuiz / startDayQuiz / dqRender / dqSelect / dqSubmitFill / dqNext / dqFinish`
 - **成績記錄**：存在 localStorage `el_dq`（`{ "YYYYMMDD": {attempts,best,total,lastScore,lastPct,ts} }`）；
@@ -405,6 +419,10 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
    git commit -m "Add daily quiz for YYYYMMDD (主題)"   # 附 Co-Authored-By trailer
    git push origin main
    ```
+6. **接著執行「流程 G」部署到 Firebase**，讓線上網站 https://learning-english-notes.web.app 同步更新（若本次是併在流程 C 一起跑，流程 C Step 5.5 已部署，這裡就不必重複）：
+   ```bash
+   cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && firebase deploy --only hosting
+   ```
 
 ### ⭐ 產出前自我檢查
 
@@ -418,7 +436,38 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 
 - 為哪一天（日期＋主題）新增了幾題、涵蓋哪些類型
 - GitHub 推送結果
-- 提醒使用者開 `index.html` →「📅 每日測驗」分頁選該日期即可作答（成績會自動記錄）
+- 提醒使用者開網站（https://learning-english-notes.web.app）選該日期 →「📝 快速檢查」活動即可作答
+
+---
+
+## 流程 G：部署到 Firebase Hosting（2026-07-30 確立）
+
+**每次 `index.html` 有更新並推上 GitHub 後，接著執行本流程，把最新版同步上線。**
+線上網址：**https://learning-english-notes.web.app**（公開、無密碼；Firebase 專案 ID `learning-english-notes`）。
+
+### 觸發時機
+- 流程 C（同步筆記）push GitHub 之後
+- 流程 F（出考題）push GitHub 之後
+- 使用者說「部署網站 / 更新線上網站 / deploy」
+
+### 部署指令（一行完成：複製最新 index.html → 部署）
+```bash
+cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && firebase deploy --only hosting
+```
+- 部署設定檔已存在：`firebase.json`（public 目錄 `public/`、index.html 設 no-cache）、`.firebaserc`（default = `learning-english-notes`）。
+- `public/index.html` 只是部署用複本，來源永遠是根目錄的 `index.html`，故每次先 `cp` 覆蓋再 deploy。
+- 成功會輸出 `Deploy complete!` 與 `Hosting URL: https://learning-english-notes.web.app`。
+
+### 完成後回報
+- 部署結果（成功／失敗）
+- 線上網址 https://learning-english-notes.web.app（提醒重新整理即可看到最新內容，因已設 no-cache）
+
+### 常見問題
+| 狀況 | 處理 |
+|------|------|
+| `firebase: command not found` | Firebase CLI 未安裝／不在 PATH，請使用者確認（本機已裝 v15.23.0） |
+| `Failed to authenticate` / 要求登入 | 執行 `firebase login`（需使用者互動，不要代填帳密） |
+| deploy 卡住或逾時 | 重跑一次指令；網路問題居多 |
 
 ---
 

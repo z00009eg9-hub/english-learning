@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 只允許存取 Anita / Tom 兩個學習者的進度文件
+    match /progress/{who} {
+      allow read, write: if who == 'anita' || who == 'tom';
+    }
+  }
+}
