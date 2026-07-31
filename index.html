@@ -3294,6 +3294,9 @@ function pickWordsByLevel(list){if(!lvBasic()||list.length<=8)return list;
   return list.slice().sort((a,b)=>a.w.length-b.w.length).slice(0,Math.max(8,Math.ceil(list.length/2)));}
 /* 示範發音語速：基礎較慢 */
 function demoRate(){return lvBasic()?0.78:0.92;}
+/* Tom 是基礎學習者：基礎難度時題數/句數減半，一開始不出太多 */
+function actMax(n){return (PROFILE==='tom'&&lvBasic())?Math.ceil(n/2):n;}
+function trimForTom(list,min){if(PROFILE==='tom'&&lvBasic())return list.slice(0,Math.max(min||4,Math.ceil(list.length/2)));return list;}
 
 /* ---------- 進度 / 連續天數（本機即時 + Firebase 雲端同步） ---------- */
 let ST={streak:1,lastDay:null,spokenToday:0,scoreSum:0,scoreN:0,totalSpoken:0,updatedAt:0};
@@ -3782,7 +3785,7 @@ function renderMeta(){const d=DAY;const v=dayVocab(d).length,s=sayItems(d).lengt
    ═══════════════════════════════════════════════════════════ */
 let sayList=[],sayI=0,sayCur=null;
 function startSay(d){reviewMode=false;renderLvlBar('say');
-  sayList=shuffle(pickByLevel(sayItems(d))).slice(0,20);
+  sayList=trimForTom(shuffle(pickByLevel(sayItems(d))).slice(0,20),5);
   if(!sayList.length){alert('這一天還沒有可練的句子，換一天或選「全部筆記」試試。');return;}
   sayI=0;$('say-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+sayList.length+' 句';
   show('scr-say');sayRender();}
@@ -3820,7 +3823,7 @@ function sayNext(){sayI++;if(sayI>=sayList.length){
    ═══════════════════════════════════════════════════════════ */
 let shList=[],shI=0,shCur=null;
 function startShadow(d){renderLvlBar('shadow');
-  shList=shuffle(pickByLevel(shadowItems(d))).slice(0,20);
+  shList=trimForTom(shuffle(pickByLevel(shadowItems(d))).slice(0,20),5);
   if(!shList.length){alert('這一天還沒有可跟讀的句子，換一天試試。');return;}
   shI=0;show('scr-shadow');shRender();setTimeout(()=>speak(shCur.en,demoRate()),350);}
 function shRender(){const it=shList[shI];shCur=it;
@@ -3847,7 +3850,7 @@ function shNext(){shI++;if(shI>=shList.length){finishAct('🔁 跟讀模仿','�
    ═══════════════════════════════════════════════════════════ */
 let wList=[],wI=0,wCur=null;
 function startWord(d){renderLvlBar('word');
-  wList=shuffle(pickWordsByLevel(wordItems(d))).slice(0,25);
+  wList=trimForTom(shuffle(pickWordsByLevel(wordItems(d))).slice(0,25),5);
   if(!wList.length){alert('這一天還沒有單字，換一天試試。');return;}
   wI=0;$('word-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+wList.length+' 字';
   show('scr-word');wRender();}
@@ -3974,9 +3977,10 @@ function startQuiz(d,level){
     const other=level==='basic'?'advanced':'basic';const q2=quizFor(d,other);
     if(q2){quizLevel=other;return startQuiz(d,other);}
     alert('這一天還沒有測驗題，換一天試試。');return;}
-  /* 初級題數約進階的一半 */
+  /* 初級題數約進階的一半；Tom 基礎再減半（最少 4 題） */
   let max=15;
-  if(quizLevel==='basic'){const adv=quizFor(d,'advanced');max=adv?Math.max(5,Math.ceil(adv.questions.length/2)):8;}
+  if(quizLevel==='basic'){const adv=quizFor(d,'advanced');max=adv?Math.max(5,Math.ceil(adv.questions.length/2)):8;
+    max=Math.max(4,actMax(max));}
   qz=q;qzList=shuffle(q.questions).slice(0,max);qzI=0;qzScore=0;
   renderQuizLevelToggle(d);
   $('quiz-sub').textContent=(q.title||lessonTitle(d))+' · '+lvTag(quizLevel)+' · 共 '+qzList.length+' 題';
@@ -4028,7 +4032,7 @@ function qzFinish(){$('quiz-prog').style.width='100%';$('quiz-card').classList.a
    ═══════════════════════════════════════════════════════════ */
 let lsList=[],lsI=0,lsCur=null;
 function startListen(d){renderLvlBar('listen');
-  lsList=shuffle(pickByLevel(shadowItems(d))).slice(0,15);
+  lsList=trimForTom(shuffle(pickByLevel(shadowItems(d))).slice(0,15),5);
   if(!lsList.length){alert('這一天還沒有可聽寫的句子，換一天或選「全部筆記」試試。');return;}
   lsI=0;$('ls-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+lsList.length+' 句';
   show('scr-listen');lsRender();}
