@@ -41,10 +41,10 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .prof-sw{display:flex;background:rgba(255,255,255,.18);border-radius:100px;padding:3px;gap:2px;}
 .prof-btn{border:none;background:transparent;color:#fff;font-family:inherit;font-weight:800;
   font-size:.78rem;padding:5px 11px;border-radius:100px;cursor:pointer;opacity:.72;transition:.15s;white-space:nowrap;}
-.prof-btn.active{background:#fff;color:var(--coral-d);opacity:1;animation:profBreath 2.4s ease-in-out infinite;}
+.prof-btn.active{background:#fff;color:var(--coral-d);opacity:1;animation:profBreath 3.5s ease-in-out infinite;}
 @keyframes profBreath{
-  0%,100%{box-shadow:0 2px 6px rgba(0,0,0,.12), 0 0 0 0 rgba(255,255,255,.65);}
-  50%{box-shadow:0 2px 10px rgba(0,0,0,.16), 0 0 14px 4px rgba(255,255,255,.9);}
+  0%,100%{box-shadow:0 2px 6px rgba(0,0,0,.12), 0 0 0 0 rgba(255,255,255,.2);}
+  50%{box-shadow:0 2px 8px rgba(0,0,0,.14), 0 0 10px 2px rgba(255,255,255,.45);}
 }
 @media(prefers-reduced-motion:reduce){.prof-btn.active{animation:none;box-shadow:0 2px 6px rgba(0,0,0,.12);}}
 
@@ -143,6 +143,13 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .sub-h{font-size:1.16rem;font-weight:900;letter-spacing:-.3px;}
 .sub-s{font-size:.75rem;color:var(--sub);font-weight:600;}
 .prog{height:7px;background:var(--bdr);border-radius:100px;overflow:hidden;margin-bottom:16px;}
+/* 難度切換（初級/進階） */
+.lvl-tog{display:flex;gap:8px;margin-bottom:12px;}
+.lvl-btn{flex:1;padding:9px 10px;border-radius:12px;border:2px solid var(--bdr2);background:#fff;
+  font-family:inherit;font-size:.86rem;font-weight:800;color:var(--sub);cursor:pointer;transition:.15s;}
+.lvl-btn.active{border-color:var(--coral);background:var(--coral-l);color:var(--coral-d);}
+.lvl-btn:disabled{opacity:.45;cursor:not-allowed;}
+#read-body.nocn .para-cn{display:none;}
 .prog>i{display:block;height:100%;background:linear-gradient(90deg,#159AA6,#35BAC6);
   border-radius:100px;transition:width .5s cubic-bezier(.3,.7,.3,1);width:0;}
 
@@ -403,6 +410,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">🎤 說出來</div><div class="sub-s" id="say-sub">看中文,開口說英文</div></div>
     </div>
+    <div class="lvl-tog" id="lvl-say" style="display:none"></div>
     <div class="prog"><i id="say-prog"></i></div>
     <div class="card" id="say-card">
       <div class="pc">
@@ -433,6 +441,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">🔁 跟讀模仿</div><div class="sub-s">聽一句 → 馬上複誦</div></div>
     </div>
+    <div class="lvl-tog" id="lvl-shadow" style="display:none"></div>
     <div class="prog"><i id="sh-prog"></i></div>
     <div class="card">
       <div class="pc">
@@ -463,6 +472,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">🗣️ 單字口說</div><div class="sub-s" id="word-sub">念單字 + 造句</div></div>
     </div>
+    <div class="lvl-tog" id="lvl-word" style="display:none"></div>
     <div class="prog"><i id="word-prog"></i></div>
     <div class="flip-wrap"><div class="flip" id="word-flip" onclick="wordFlip()" title="點一下翻面，看中文意思與例句">
       <div class="face face-f">
@@ -498,6 +508,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">📖 朗讀文章</div><div class="sub-s" id="read-sub">一段一段念出來</div></div>
     </div>
+    <div class="lvl-tog" id="lvl-read" style="display:none"></div>
     <div id="read-pick"></div>
     <div id="read-body" class="hide"></div>
   </section>
@@ -508,6 +519,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">💬 情境開講</div><div class="sub-s">用完整句子回答,越多越好</div></div>
     </div>
+    <div class="lvl-tog" id="lvl-talk" style="display:none"></div>
     <div class="prog"><i id="talk-prog"></i></div>
     <div class="card">
       <div class="pc" style="padding:10px 14px 2px;min-height:auto">
@@ -538,6 +550,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">📝 快速檢查</div><div class="sub-s" id="quiz-sub">單字與文法小測驗</div></div>
     </div>
+    <div class="lvl-tog" id="quiz-lvl" style="display:none"></div>
     <div class="prog"><i id="quiz-prog"></i></div>
     <div class="card" id="quiz-card"></div>
     <div class="card final hide" id="quiz-final"></div>
@@ -549,6 +562,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">🎧 聽力練習</div><div class="sub-s" id="ls-sub">聽句子，把聽到的英文打出來</div></div>
     </div>
+    <div class="lvl-tog" id="lvl-listen" style="display:none"></div>
     <div class="prog"><i id="ls-prog"></i></div>
     <div class="card">
       <div class="pc">
@@ -3246,13 +3260,40 @@ function setProfile(p){
   if(!PROFILES[p]||p===PROFILE)return;
   micStop();if(window.speechSynthesis)speechSynthesis.cancel();
   PROFILE=p;localStorage.setItem('speakup_profile',p);
-  reviewMode=false;updateProfileUI();show('scr-home');loadST();initHome();
+  reviewMode=false;quizLevel=null;loadLevel();updateProfileUI();show('scr-home');loadST();initHome();
 }
 function updateProfileUI(){
   const a=$('prof-anita'),t=$('prof-tom');
   if(a)a.classList.toggle('active',PROFILE==='anita');
   if(t)t.classList.toggle('active',PROFILE==='tom');
 }
+
+/* ---------- 難度等級（每位學習者各自記住；Tom: A2/B1、Anita: B1/B2） ---------- */
+let LEVEL='advanced';
+function levelKey(){return 'speakup_level_'+PROFILE;}
+function loadLevel(){const v=localStorage.getItem(levelKey());
+  LEVEL=(v==='basic'||v==='advanced')?v:(PROFILE==='tom'?'basic':'advanced');}
+function lvBasic(){return LEVEL==='basic';}
+function levelLabels(){return PROFILE==='tom'?['基礎 A2','進階 B1']:['基礎 B1','進階 B2'];}
+function lvTag(l){const L=levelLabels();return (l||LEVEL)==='basic'?'🟢 '+L[0]:'🔵 '+L[1];}
+function renderLvlBar(act){const el=$('lvl-'+act);if(!el)return;const L=levelLabels();
+  el.style.display='flex';
+  el.innerHTML='<button class="lvl-btn'+(lvBasic()?' active':'')+'" onclick="setActLevel(\''+act+'\',\'basic\')">🟢 '+L[0]+'</button>'
+    +'<button class="lvl-btn'+(lvBasic()?'':' active')+'" onclick="setActLevel(\''+act+'\',\'advanced\')">🔵 '+L[1]+'</button>';}
+function setActLevel(act,l){if(l===LEVEL)return;LEVEL=l;localStorage.setItem(levelKey(),l);
+  micStop();if(window.speechSynthesis)speechSynthesis.cancel();
+  openAct(act);}
+/* 依難度挑句子：基礎=短句優先，進階=完整長句 */
+function pickByLevel(items){if(!items||items.length<=5)return items;
+  const wc=s=>toks(s.en).length;
+  if(lvBasic()){const easy=items.filter(s=>wc(s)<=9);
+    return easy.length>=5?easy:items.slice().sort((a,b)=>wc(a)-wc(b)).slice(0,Math.max(5,Math.ceil(items.length/2)));}
+  const hard=items.filter(s=>wc(s)>=6);return hard.length>=5?hard:items;}
+/* 依難度挑單字：基礎=較短較易的一半，進階=全部 */
+function pickWordsByLevel(list){if(!lvBasic()||list.length<=8)return list;
+  return list.slice().sort((a,b)=>a.w.length-b.w.length).slice(0,Math.max(8,Math.ceil(list.length/2)));}
+/* 示範發音語速：基礎較慢 */
+function demoRate(){return lvBasic()?0.78:0.92;}
 
 /* ---------- 進度 / 連續天數（本機即時 + Firebase 雲端同步） ---------- */
 let ST={streak:1,lastDay:null,spokenToday:0,scoreSum:0,scoreN:0,totalSpoken:0,updatedAt:0};
@@ -3652,11 +3693,17 @@ function autoQuizA2(d){
   const transQs=shuffle(shortS.slice(0,8)).slice(0,2).map(s=>({type:'trans',tag:'翻譯',q:s.cn,answer:s.en,explain:'參考：'+s.en}));
   const all=qs.slice(0,12).concat(transQs);
   if(!all.length)return null;
-  return{title:lessonTitle(d),subtitle:'A2 精選題（取自本課單字與句子）',questions:all};
+  return{title:lessonTitle(d),subtitle:'基礎精選題（取自本課單字與句子）',questions:all};
 }
-function quizFor(d){
-  if(A2BY[d])return{title:A2BY[d].title,subtitle:'A2 基礎測驗（單字・be動詞・現在式）',questions:A2BY[d].quiz.slice()};
-  if(isTom())return TOMQUIZ[d]||null;   /* Tom：每堂手寫 A2 精選題；沒有的課就不出題 */
+/* level: 'basic'(基礎) 或 'advanced'(進階)；不傳則依目前選擇的難度 */
+function quizFor(d,level){
+  level=level||LEVEL;
+  if(level==='basic'){
+    if(A2BY[d])return{title:A2BY[d].title,subtitle:'初級 A2（單字・be動詞・現在式）',questions:A2BY[d].quiz.slice()};
+    return TOMQUIZ[d]||autoQuizA2(d)||null;   /* A2 精選 / A2 自動 */
+  }
+  /* advanced 進階 B1 */
+  if(A2BY[d])return null;                       /* A2 基礎主題沒有進階版 */
   if(d!=='all'&&DAYQUIZ[d])return DAYQUIZ[d];
   const w=dayVocab(d);if(w.length<3)return null;return autoQuiz(w,lessonTitle(d));}
 
@@ -3734,19 +3781,21 @@ function renderMeta(){const d=DAY;const v=dayVocab(d).length,s=sayItems(d).lengt
    1) SAY IT
    ═══════════════════════════════════════════════════════════ */
 let sayList=[],sayI=0,sayCur=null;
-function startSay(d){reviewMode=false;sayList=shuffle(sayItems(d)).slice(0,20);
+function startSay(d){reviewMode=false;renderLvlBar('say');
+  sayList=shuffle(pickByLevel(sayItems(d))).slice(0,20);
   if(!sayList.length){alert('這一天還沒有可練的句子，換一天或選「全部筆記」試試。');return;}
-  sayI=0;$('say-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · 共 '+sayList.length+' 句';
+  sayI=0;$('say-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+sayList.length+' 句';
   show('scr-say');sayRender();}
 function sayRender(){const it=sayList[sayI];sayCur=it;
   $('say-cn').textContent=it.cn;
-  const h=$('say-hint');if(it.hint){h.innerHTML='💡 提示：'+esc(it.hint);h.classList.remove('hide');}else h.classList.add('hide');
+  /* 基礎：直接顯示提示；進階：不給提示，靠自己說 */
+  const h=$('say-hint');if(it.hint&&lvBasic()){h.innerHTML='💡 提示：'+esc(it.hint);h.classList.remove('hide');}else h.classList.add('hide');
   $('say-tag').textContent='第 '+(sayI+1)+' / '+sayList.length+' 句';
   $('say-prog').style.width=(sayI/sayList.length*100)+'%';
   $('say-score').classList.add('hide');$('say-diff').classList.add('hide');
   $('say-heard').innerHTML='';$('say-next').classList.add('hide');$('say-reveal').classList.add('hide');
   $('say-mlbl').textContent=speechOK()?'按一下，開始說':'按 🔊 聽示範跟著念（此瀏覽器不支援辨識）';}
-function sayPlay(){speak(sayCur.en,0.9);}
+function sayPlay(){speak(sayCur.en,demoRate());}
 function sayMic(){micStart({btn:'say-mic',lbl:'say-mlbl',idle:'按一下，開始說',
   onLive:t=>{$('say-heard').innerHTML='你說：<b>'+esc(t)+'</b>';},
   onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('say-mlbl');$('say-reveal').classList.remove('hide');$('say-next').classList.remove('hide');return;}
@@ -3758,7 +3807,8 @@ function sayScore(t){const r=scoreSpeech(t,sayCur.en);showRing('say-score',r.pct
   $('say-heard').innerHTML='你說：<b>'+esc(t)+'</b>';
   $('say-reveal').classList.remove('hide');$('say-next').classList.remove('hide');
   $('say-mlbl').textContent='想再說一次?按我 🎤';
-  logSpeak(r.pct);speak(sayCur.en,0.9);
+  if(toks(t).length>=2)logSpeak(r.pct);   /* 只有真的說出一句(≥2字)才計入 */
+  speak(sayCur.en,0.9);
   if(r.pct===100){$('say-mlbl').textContent='滿分! 自動跳下一句 🎉';setTimeout(()=>{if(!micActive)sayNext();},1600);}}
 function sayRevealAns(){$('say-heard').innerHTML='✅ 正確：<b>'+esc(sayCur.en)+'</b>';speak(sayCur.en,0.9);}
 function sayNext(){sayI++;if(sayI>=sayList.length){
@@ -3769,9 +3819,10 @@ function sayNext(){sayI++;if(sayI>=sayList.length){
    2) SHADOW
    ═══════════════════════════════════════════════════════════ */
 let shList=[],shI=0,shCur=null;
-function startShadow(d){shList=shuffle(shadowItems(d)).slice(0,20);
+function startShadow(d){renderLvlBar('shadow');
+  shList=shuffle(pickByLevel(shadowItems(d))).slice(0,20);
   if(!shList.length){alert('這一天還沒有可跟讀的句子，換一天試試。');return;}
-  shI=0;show('scr-shadow');shRender();setTimeout(()=>speak(shCur.en,0.9),350);}
+  shI=0;show('scr-shadow');shRender();setTimeout(()=>speak(shCur.en,demoRate()),350);}
 function shRender(){const it=shList[shI];shCur=it;
   $('sh-en').textContent=it.en;$('sh-cn').textContent=it.cn||'';
   $('sh-prog').style.width=(shI/shList.length*100)+'%';
@@ -3787,17 +3838,18 @@ function shMic(){micStart({btn:'sh-mic',lbl:'sh-mlbl',idle:'先聽示範，再�
     const diff=$('sh-diff');diff.classList.remove('hide');
     diff.innerHTML=r.diff.map(x=>'<span class="'+(x.ok?'w-ok':'w-miss')+'">'+esc(x.w)+'</span>').join(' ');
     $('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>';$('sh-next').classList.remove('hide');
-    logSpeak(r.pct);
+    if(toks(t).length>=2)logSpeak(r.pct);   /* 只有真的複誦出一句(≥2字)才計入 */
     if(r.pct===100){$('sh-mlbl').textContent='滿分! 自動跳下一句 🎉';setTimeout(()=>{if(!micActive)shNext();},1600);}}});}
-function shNext(){shI++;if(shI>=shList.length){finishAct('🔁 跟讀模仿','你跟讀了 '+shList.length+' 句!節奏會愈練愈順。');return;}shRender();setTimeout(()=>speak(shCur.en,0.9),300);}
+function shNext(){shI++;if(shI>=shList.length){finishAct('🔁 跟讀模仿','你跟讀了 '+shList.length+' 句!節奏會愈練愈順。');return;}shRender();setTimeout(()=>speak(shCur.en,demoRate()),300);}
 
 /* ═══════════════════════════════════════════════════════════
    3) WORD POWER
    ═══════════════════════════════════════════════════════════ */
 let wList=[],wI=0,wCur=null;
-function startWord(d){wList=shuffle(wordItems(d)).slice(0,25);
+function startWord(d){renderLvlBar('word');
+  wList=shuffle(pickWordsByLevel(wordItems(d))).slice(0,25);
   if(!wList.length){alert('這一天還沒有單字，換一天試試。');return;}
-  wI=0;$('word-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · 共 '+wList.length+' 字';
+  wI=0;$('word-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+wList.length+' 字';
   show('scr-word');wRender();}
 function wRender(){const v=wList[wI];wCur=v;$('word-flip').classList.remove('f');
   $('word-w').textContent=v.w;$('word-ipa').textContent=v.ipa||'';$('word-pos').textContent=v.pos||'';
@@ -3815,7 +3867,9 @@ function wordMic(){micStart({btn:'word-mic',lbl:'word-mlbl',idle:'按一下，�
     if(!t){$('word-mlbl').textContent='沒聽清楚，再按一次 🎤';return;}
     const want=toks(wCur.w),got=toks(t);const hit=want.filter(w=>got.includes(w)).length;
     const pct=want.length?Math.round(hit/want.length*100):0;showRing('word-score',pct);
-    $('word-heard').innerHTML='你說：<b>'+esc(t)+'</b>';logSpeak(pct);speak(wCur.w,0.85);
+    $('word-heard').innerHTML='你說：<b>'+esc(t)+'</b>';
+    if(pct>0)logSpeak(pct);   /* 只有真的念出這個字(有辨識到)才計入 */
+    speak(wCur.w,0.85);
     if(pct===100){$('word-mlbl').textContent='滿分! 自動跳下一個 🎉';setTimeout(()=>{if(!micActive)wordNext();},1500);}}});}
 function wordNext(){wI++;if(wI>=wList.length){finishAct('🗣️ 單字口說','你念完了 '+wList.length+' 個單字!把生字變成能說的字。');return;}wRender();}
 
@@ -3824,18 +3878,27 @@ function wordNext(){wI++;if(wI>=wList.length){finishAct('🗣️ 單字口說','
    ═══════════════════════════════════════════════════════════ */
 let READ=null;
 let READLIST=[];
-function startRead(d){let arts=dayArticles(d);let scope=d;
-  if(!arts.length&&!isTom()){arts=articles.slice();scope='all';}
+function startRead(d){renderLvlBar('read');
+  let scope=d;const dayA=dayArticles(d);let arts;
+  if(lvBasic()){
+    /* 基礎：A2 短文（＋當天文章若有） */
+    arts=A2BY[d]?dayA.slice():A2LESSONS.map(l=>l.article).filter(Boolean).concat(dayA);
+  }else{
+    /* 進階：課堂筆記文章；沒有就列出全部筆記文章 */
+    arts=A2BY[d]?[]:dayA.slice();
+    if(!arts.length){arts=articles.slice();scope='all';}
+  }
   READLIST=arts;
   const pick=$('read-pick');$('read-body').classList.add('hide');pick.classList.remove('hide');
-  if(!arts.length){pick.innerHTML='<div class="note">📖 這個主題還沒有文章，換一個試試。</div>';show('scr-read');return;}
-  pick.innerHTML='<div class="note">📖 '+(scope==='all'&&d!=='all'?'這一天沒有文章，以下是全部文章：':'選一篇文章，一段一段朗讀。')+'</div>'
+  if(!arts.length){pick.innerHTML='<div class="note">📖 這個難度還沒有文章，切換難度或換一天試試。</div>';show('scr-read');return;}
+  pick.innerHTML='<div class="note">📖 '+(scope==='all'&&d!=='all'?'這一天沒有文章，以下是全部文章：':'選一篇文章，一段一段朗讀。')+(lvBasic()?'':' <b>進階模式：段落中文翻譯隱藏。</b>')+'</div>'
     +arts.map((a,i)=>'<button class="act" style="width:100%;margin-bottom:10px" onclick="readOpen('+i+')">'
       +'<div class="act-h">'+esc(a.title)+'</div><div class="act-en">'+esc(a.titleCn||'')+'</div>'
       +'<div class="act-d">'+a.paras.length+' 段 · '+esc(a.source||'')+'</div></button>').join('');
   show('scr-read');}
 function readOpen(gi){const a=READLIST[gi];READ={a:a,paras:[]};
   const body=$('read-body');$('read-pick').classList.add('hide');body.classList.remove('hide');
+  body.classList.toggle('nocn',!lvBasic());   /* 進階：隱藏段落中文翻譯 */
   let html='<div class="sub-top" style="margin-bottom:10px"><div><div class="sub-h" style="font-size:1.05rem">'+esc(a.title)+'</div><div class="sub-s">'+esc(a.titleCn||'')+'</div></div></div>';
   a.paras.forEach((p,pi)=>{const text=stripTags(p.en);const tk=text.split(/(\s+)/);
     const spans=tk.map((w,ti)=>{if(/^\s+$/.test(w))return w;const isw=/[a-zA-Z]/.test(w);
@@ -3854,7 +3917,9 @@ function readMic(pi){
     onLive:t=>{const c=markRead(pi,t);$('rcov-'+pi).textContent=c+'%';$('rlbl-'+pi).textContent='🔴 唸吧，說到哪亮到哪…（唸完再按一次）';},
     onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('rlbl-'+pi);return;}
       if(!t){$('rlbl-'+pi).textContent='沒聽清楚，再按一次 🎤';return;}
-      const cov=markRead(pi,t);$('rcov-'+pi).textContent=cov+'%';$('rlbl-'+pi).textContent='唸得好!覆蓋率 '+cov+'%';logSpeak(cov);}});}
+      const cov=markRead(pi,t);$('rcov-'+pi).textContent=cov+'%';$('rlbl-'+pi).textContent='唸得好!覆蓋率 '+cov+'%';
+      if(toks(t).length>=2&&cov>0)logSpeak(cov);   /* 真的朗讀出內容(≥2字且有對到)才計入 */
+    }});}
 function markRead(pi,said){const got={};toks(said).forEach(w=>got[w]=(got[w]||0)+1);
   const tk=READ.paras[pi].tokens;let total=0,hit=0;
   tk.forEach((w,ti)=>{if(/^\s+$/.test(w)||!/[a-zA-Z]/.test(w))return;total++;const n=norm(w);
@@ -3868,7 +3933,7 @@ function tapWord(el){const w=(el.textContent||'').replace(/[^A-Za-z'-]/g,'');if(
    5) TALK TIME
    ═══════════════════════════════════════════════════════════ */
 let talkList=[],talkI=0,talkCur=null,talkWords=[];
-function startTalk(d){talkList=shuffle(TALK_BANK);talkI=0;
+function startTalk(d){renderLvlBar('talk');talkList=shuffle(TALK_BANK);talkI=0;
   talkWords=shuffle(dayVocab(d)).slice(0,6).map(v=>v.w);
   show('scr-talk');talkRender();}
 function talkRender(){const q=talkList[talkI%talkList.length];talkCur=q;
@@ -3883,11 +3948,15 @@ function talkMic(){micStart({btn:'talk-mic',lbl:'talk-mlbl',idle:'按一下，�
   onLive:t=>{$('talk-heard').innerHTML='<b>'+esc(t)+'</b>';$('talk-mlbl').textContent='🔴 慢慢說，說完再按一次結束';},
   onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('talk-mlbl');$('talk-model').classList.remove('hide');return;}
     if(!t){$('talk-mlbl').textContent='沒聽清楚，再按一次 🎤';return;}
-    const n=toks(t).length;$('talk-heard').innerHTML='<b>'+esc(t)+'</b><br><span style="color:var(--sub);font-size:.8rem">你說了約 '+n+' 個字'+(n>=25?' — 很棒的完整回答! 🎉':n>=12?' — 不錯,試著再多說一兩句 💪':' — 試著說更長,加上 because... 說明原因')+'</span>';
-    $('talk-model').classList.remove('hide');logSpeak(Math.min(100,n*5));}});}
+    const n=toks(t).length,hi=lvBasic()?15:25,mid=lvBasic()?8:12;
+    $('talk-heard').innerHTML='<b>'+esc(t)+'</b><br><span style="color:var(--sub);font-size:.8rem">你說了約 '+n+' 個字'+(n>=hi?' — 很棒的完整回答! 🎉':n>=mid?' — 不錯,試著再多說一兩句 💪':' — 試著說更長,加上 because... 說明原因')+'</span>';
+    $('talk-model').classList.remove('hide');
+    if(n>=3)logSpeak(Math.min(100,n*5));   /* 至少說出一句(≥3字)才計入 */
+  }});}
 function talkModel(){const b=$('talk-modelbox');b.classList.remove('hide');
-  const ans=(isTom()&&talkCur.m2)?talkCur.m2:talkCur.model;
-  const cn=(isTom()&&talkCur.m2cn)?talkCur.m2cn:(talkCur.mcn||'');
+  /* 基礎：簡短示範答案；進階：完整示範答案 */
+  const ans=(lvBasic()&&talkCur.m2)?talkCur.m2:talkCur.model;
+  const cn=(lvBasic()&&talkCur.m2cn)?talkCur.m2cn:(talkCur.mcn||'');
   b.innerHTML='💬 <b>示範答案：</b>'+esc(ans)+' <button class="btn btn-o btn-sm" style="margin-left:6px" onclick="speak('+JSON.stringify(ans)+',0.9)">🔊</button>'
     +(cn?'<div style="color:var(--sub);font-size:.86rem;margin-top:6px">'+esc(cn)+'</div>':'');}
 function talkNext(){talkI++;talkRender();}
@@ -3896,12 +3965,33 @@ function talkNext(){talkI++;talkRender();}
    6) QUICK CHECK（測驗）
    ═══════════════════════════════════════════════════════════ */
 let qz=null,qzI=0,qzScore=0,qzList=[];
-function startQuiz(d){const q=quizFor(d);
-  if(!q){alert('這一天還沒有測驗題，換一天試試。');return;}
-  qz=q;qzList=shuffle(q.questions).slice(0,15);qzI=0;qzScore=0;
-  $('quiz-sub').textContent=(q.title||lessonTitle(d))+' · 共 '+qzList.length+' 題';
+let quizLevel=null;
+function startQuiz(d,level){
+  if(!level)level=LEVEL;
+  quizLevel=level;
+  const q=quizFor(d,level);
+  if(!q){/* 該難度沒題目：自動退回另一種 */
+    const other=level==='basic'?'advanced':'basic';const q2=quizFor(d,other);
+    if(q2){quizLevel=other;return startQuiz(d,other);}
+    alert('這一天還沒有測驗題，換一天試試。');return;}
+  /* 初級題數約進階的一半 */
+  let max=15;
+  if(quizLevel==='basic'){const adv=quizFor(d,'advanced');max=adv?Math.max(5,Math.ceil(adv.questions.length/2)):8;}
+  qz=q;qzList=shuffle(q.questions).slice(0,max);qzI=0;qzScore=0;
+  renderQuizLevelToggle(d);
+  $('quiz-sub').textContent=(q.title||lessonTitle(d))+' · '+lvTag(quizLevel)+' · 共 '+qzList.length+' 題';
   $('quiz-final').classList.add('hide');$('quiz-card').classList.remove('hide');
   show('scr-quiz');qzRender();}
+function renderQuizLevelToggle(d){const el=$('quiz-lvl');if(!el)return;
+  const L=levelLabels();
+  const hasBasic=!!quizFor(d,'basic'),hasAdv=!!quizFor(d,'advanced');
+  el.innerHTML='<button class="lvl-btn'+(quizLevel==='basic'?' active':'')+'" '+(hasBasic?'':'disabled')+' onclick="setQuizLevel(\'basic\')">🟢 '+L[0]+'</button>'
+    +'<button class="lvl-btn'+(quizLevel==='advanced'?' active':'')+'" '+(hasAdv?'':'disabled')+' onclick="setQuizLevel(\'advanced\')">🔵 '+L[1]+'</button>';
+  el.style.display='flex';
+}
+function setQuizLevel(l){if(l===quizLevel)return;
+  LEVEL=l;localStorage.setItem(levelKey(),l);   /* 測驗切難度也記住，供其他活動共用 */
+  startQuiz(DAY,l);}
 function qzRender(){const q=qzList[qzI];$('quiz-prog').style.width=(qzI/qzList.length*100)+'%';
   const c=$('quiz-card');let h='<div class="pc-tag">'+esc(q.tag||'題目')+' · '+(qzI+1)+'/'+qzList.length+'</div>';
   h+='<div style="font-size:1.08rem;font-weight:700;line-height:1.5;margin:6px 0 4px">'+esc(q.q)+'</div>';
@@ -3937,18 +4027,20 @@ function qzFinish(){$('quiz-prog').style.width='100%';$('quiz-card').classList.a
    7) LISTENING（聽力打字：你負責口說[TTS 正常/慢速]，我負責打字）
    ═══════════════════════════════════════════════════════════ */
 let lsList=[],lsI=0,lsCur=null;
-function startListen(d){lsList=shuffle(shadowItems(d)).slice(0,15);
+function startListen(d){renderLvlBar('listen');
+  lsList=shuffle(pickByLevel(shadowItems(d))).slice(0,15);
   if(!lsList.length){alert('這一天還沒有可聽寫的句子，換一天或選「全部筆記」試試。');return;}
-  lsI=0;$('ls-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · 共 '+lsList.length+' 句';
+  lsI=0;$('ls-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+lsList.length+' 句';
   show('scr-listen');lsRender();}
 function lsRender(){const it=lsList[lsI];lsCur=it;
   $('ls-tag').textContent='第 '+(lsI+1)+' / '+lsList.length+' 句';
-  $('ls-cn').textContent=it.cn?('提示：'+it.cn):'（先按 🔊 播放，聽聽看）';
+  /* 基礎：顯示中文提示；進階：不給提示，純聽打 */
+  $('ls-cn').textContent=lvBasic()?(it.cn?('提示：'+it.cn):'（先按 🔊 播放，聽聽看）'):'（進階：不看提示，聽完直接打出來）';
   $('ls-prog').style.width=(lsI/lsList.length*100)+'%';
   const inp=$('ls-input');inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.background='';
   $('ls-score').classList.add('hide');$('ls-diff').classList.add('hide');
   $('ls-check').classList.remove('hide');$('ls-next').classList.add('hide');
-  setTimeout(()=>speak(lsCur.en,0.9),300);
+  setTimeout(()=>speak(lsCur.en,demoRate()),300);
   setTimeout(()=>{try{inp.focus();}catch(e){}},120);}
 function lsPlay(r){speak(lsCur.en,r);}
 function lsCheck(){const inp=$('ls-input');const v=inp.value.trim();if(!v){lsPlay(1);return;}
@@ -3957,7 +4049,7 @@ function lsCheck(){const inp=$('ls-input');const v=inp.value.trim();if(!v){lsPla
   diff.innerHTML='正解：'+r.diff.map(x=>'<span class="'+(x.ok?'w-ok':'w-miss')+'">'+esc(x.w)+'</span>').join(' ')
     +(lsCur.cn?'<div class="pc-sub" style="margin-top:6px">'+esc(lsCur.cn)+'</div>':'');
   $('ls-check').classList.add('hide');$('ls-next').classList.remove('hide');
-  logSpeak(r.pct);speak(lsCur.en,0.9);}
+  speak(lsCur.en,0.9);}   /* 聽力是「打字」不是開口，不計入開口/句數統計 */
 function lsNext(){lsI++;if(lsI>=lsList.length){finishAct('🎧 聽力練習','你完成了 '+lsList.length+' 句聽寫!耳朵越來越靈了。');return;}lsRender();}
 
 /* ---------- 共用：評分環 / 活動完成 ---------- */
@@ -3971,7 +4063,7 @@ function finishAct(title,msg){micStop();if(window.speechSynthesis)speechSynthesi
 /* ═══════════════════════════════════════════════════════════
    啟動
    ═══════════════════════════════════════════════════════════ */
-loadST();initHome();renderStats();
+loadLevel();loadST();initHome();renderStats();
 </script>
 </body>
 </html>
