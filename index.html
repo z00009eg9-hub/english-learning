@@ -41,7 +41,12 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .prof-sw{display:flex;background:rgba(255,255,255,.18);border-radius:100px;padding:3px;gap:2px;}
 .prof-btn{border:none;background:transparent;color:#fff;font-family:inherit;font-weight:800;
   font-size:.78rem;padding:5px 11px;border-radius:100px;cursor:pointer;opacity:.72;transition:.15s;white-space:nowrap;}
-.prof-btn.active{background:#fff;color:var(--coral-d);opacity:1;box-shadow:0 2px 6px rgba(0,0,0,.12);}
+.prof-btn.active{background:#fff;color:var(--coral-d);opacity:1;animation:profBreath 2.4s ease-in-out infinite;}
+@keyframes profBreath{
+  0%,100%{box-shadow:0 2px 6px rgba(0,0,0,.12), 0 0 0 0 rgba(255,255,255,.65);}
+  50%{box-shadow:0 2px 10px rgba(0,0,0,.16), 0 0 14px 4px rgba(255,255,255,.9);}
+}
+@media(prefers-reduced-motion:reduce){.prof-btn.active{animation:none;box-shadow:0 2px 6px rgba(0,0,0,.12);}}
 
 /* ═══ LAYOUT ═══ */
 .wrap{max-width:820px;margin:0 auto;padding:18px 15px 60px;}
@@ -95,9 +100,9 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .act:hover{transform:translateY(-3px);box-shadow:var(--sh);}
 .act:active{transform:scale(.98);}
 .act-ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:1.35rem;margin-bottom:11px;}
-.act-h{font-size:1.02rem;font-weight:800;letter-spacing:-.2px;}
-.act-en{font-size:.72rem;font-weight:700;color:var(--faint);font-family:'Inter';margin-top:1px;}
-.act-d{font-size:.76rem;color:var(--sub);margin-top:7px;line-height:1.45;}
+.act-h{font-size:1.28rem;font-weight:900;letter-spacing:-.2px;}
+.act-en{font-size:.82rem;font-weight:800;color:var(--faint);font-family:'Inter';margin-top:2px;}
+.act-d{font-size:.9rem;font-weight:600;color:var(--sub);margin-top:8px;line-height:1.5;}
 .act-badge{position:absolute;top:12px;right:12px;font-size:.62rem;font-weight:800;
   background:var(--coral);color:#fff;padding:2px 8px;border-radius:100px;}
 /* 六個口說活動：繽紛彩色卡片 */
@@ -181,9 +186,16 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .mic.rec{background:linear-gradient(135deg,var(--bad),#BE123C);animation:micpulse 1.3s infinite;}
 @keyframes micpulse{0%{box-shadow:0 0 0 0 rgba(225,29,72,.5)}70%{box-shadow:0 0 0 22px rgba(225,29,72,0)}100%{box-shadow:0 0 0 0 rgba(225,29,72,0)}}
 .mic-lbl{font-size:.8rem;color:var(--sub);margin-top:11px;font-weight:700;min-height:1.2em;text-align:center;}
+#scr-talk .mic{width:58px;height:58px;font-size:1.4rem;}
+#scr-talk .mic-lbl{margin-top:7px;}
 
 /* ═══ ACTION ROW ═══ */
 .actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:12px;}
+/* 底部固定操作列：內容多時麥克風與按鈕仍固定在螢幕底部 */
+.sticky-ctrl{position:sticky;bottom:0;background:var(--card);margin:6px -18px -18px;padding:8px 18px 12px;
+  box-shadow:0 -8px 14px -8px rgba(30,60,70,.14);z-index:20;border-radius:0 0 var(--r) var(--r);}
+.sticky-ctrl .mic-zone{margin-top:2px;}
+.sticky-ctrl .actions{margin-top:8px;}
 .btn{padding:11px 18px;border-radius:13px;border:none;cursor:pointer;font-size:.88rem;font-weight:800;
   font-family:inherit;transition:transform .12s,background .15s,border-color .15s;
   display:inline-flex;align-items:center;gap:6px;}
@@ -401,14 +413,16 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <div class="scorebox hide" id="say-score"></div>
       <div class="diff hide" id="say-diff"></div>
       <div class="heard" id="say-heard"></div>
-      <div class="mic-zone">
-        <button class="mic" id="say-mic" onclick="sayMic()" title="按一下開始說英文，說完再按一次結束並評分">🎤</button>
-        <div class="mic-lbl" id="say-mlbl">按一下,開始說</div>
-      </div>
-      <div class="actions">
-        <button class="btn btn-o" onclick="sayPlay()" title="播放正確英文示範發音">🔊 聽示範</button>
-        <button class="btn btn-o hide" id="say-reveal" onclick="sayRevealAns()" title="顯示正確的英文答案">👀 看答案</button>
-        <button class="btn btn-p hide" id="say-next" onclick="sayNext()" title="換下一句">下一句 →</button>
+      <div class="sticky-ctrl">
+        <div class="mic-zone">
+          <button class="mic" id="say-mic" onclick="sayMic()" title="按一下開始說英文，說完再按一次結束並評分">🎤</button>
+          <div class="mic-lbl" id="say-mlbl">按一下,開始說</div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-o" onclick="sayPlay()" title="播放正確英文示範發音">🔊 聽示範</button>
+          <button class="btn btn-o hide" id="say-reveal" onclick="sayRevealAns()" title="顯示正確的英文答案">👀 看答案</button>
+          <button class="btn btn-p hide" id="say-next" onclick="sayNext()" title="換下一句">下一句 →</button>
+        </div>
       </div>
     </div>
   </section>
@@ -429,14 +443,16 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <div class="scorebox hide" id="sh-score"></div>
       <div class="diff hide" id="sh-diff"></div>
       <div class="heard" id="sh-heard"></div>
-      <div class="mic-zone">
-        <button class="mic" id="sh-mic" onclick="shMic()" title="按一下開始複誦，說完再按一次結束並評分">🎤</button>
-        <div class="mic-lbl" id="sh-mlbl">先聽示範,再按我複誦</div>
-      </div>
-      <div class="actions">
-        <button class="btn btn-t" onclick="shPlay(1)" title="用正常速度播放示範句">🔊 正常速</button>
-        <button class="btn btn-o" onclick="shPlay(.65)" title="放慢速度播放，方便跟讀">🐢 慢速</button>
-        <button class="btn btn-p hide" id="sh-next" onclick="shNext()" title="換下一句">下一句 →</button>
+      <div class="sticky-ctrl">
+        <div class="mic-zone">
+          <button class="mic" id="sh-mic" onclick="shMic()" title="按一下開始複誦，說完再按一次結束並評分">🎤</button>
+          <div class="mic-lbl" id="sh-mlbl">先聽示範,再按我複誦</div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-t" onclick="shPlay(1)" title="用正常速度播放示範句">🔊 正常速</button>
+          <button class="btn btn-o" onclick="shPlay(.65)" title="放慢速度播放，方便跟讀">🐢 慢速</button>
+          <button class="btn btn-p hide" id="sh-next" onclick="shNext()" title="換下一句">下一句 →</button>
+        </div>
       </div>
     </div>
   </section>
@@ -463,14 +479,16 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
     <div class="tap-hint">👆 點卡片翻面看中文與例句</div>
     <div class="scorebox hide" id="word-score"></div>
     <div class="heard" id="word-heard"></div>
-    <div class="mic-zone">
-      <button class="mic" id="word-mic" onclick="wordMic()" title="按一下念出這個單字，再按一次結束並評分">🎤</button>
-      <div class="mic-lbl" id="word-mlbl">按一下,念出這個單字</div>
-    </div>
-    <div class="actions">
-      <button class="btn btn-o" onclick="wordPlay()" title="播放這個單字的標準發音">🔊 聽發音</button>
-      <button class="btn btn-o" onclick="wordPlayEx()" title="播放例句的發音">🔊 聽例句</button>
-      <button class="btn btn-p" onclick="wordNext()" title="換下一個單字">下一個 →</button>
+    <div class="sticky-ctrl" style="margin:6px 0 0;padding-left:0;padding-right:0;padding-bottom:6px;background:var(--bg)">
+      <div class="mic-zone">
+        <button class="mic" id="word-mic" onclick="wordMic()" title="按一下念出這個單字，再按一次結束並評分">🎤</button>
+        <div class="mic-lbl" id="word-mlbl">按一下,念出這個單字</div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-o" onclick="wordPlay()" title="播放這個單字的標準發音">🔊 聽發音</button>
+        <button class="btn btn-o" onclick="wordPlayEx()" title="播放例句的發音">🔊 聽例句</button>
+        <button class="btn btn-p" onclick="wordNext()" title="換下一個單字">下一個 →</button>
+      </div>
     </div>
   </section>
 
@@ -492,23 +510,25 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
     </div>
     <div class="prog"><i id="talk-prog"></i></div>
     <div class="card">
-      <div class="pc">
+      <div class="pc" style="padding:10px 14px 2px;min-height:auto">
         <span class="pc-tag" id="talk-tag">Coach asks…</span>
-        <div class="pc-en" id="talk-q">—</div>
+        <div class="pc-en" id="talk-q" style="font-size:1.2rem">—</div>
         <div class="pc-sub" id="talk-qcn"></div>
       </div>
-      <div class="center" style="font-size:.78rem;color:var(--sub);margin-top:6px">💡 試著用上這些字:</div>
+      <div class="center" style="font-size:.76rem;color:var(--sub);margin-top:4px">💡 試著用上這些字:</div>
       <div class="phrases" id="talk-phrases"></div>
-      <div class="heard" id="talk-heard" style="text-align:center;font-size:.95rem"></div>
-      <div class="mic-zone">
-        <button class="mic" id="talk-mic" onclick="talkMic()" title="按一下開始回答，說完再按一次結束">🎤</button>
-        <div class="mic-lbl" id="talk-mlbl">按一下,開始回答</div>
+      <div class="expl hide" id="talk-modelbox" style="margin-top:10px"></div>
+      <div class="heard" id="talk-heard" style="text-align:center;font-size:.9rem"></div>
+      <div class="sticky-ctrl">
+        <div class="mic-zone" style="margin-top:2px">
+          <button class="mic" id="talk-mic" onclick="talkMic()" title="按一下開始回答，說完再按一次結束">🎤</button>
+          <div class="mic-lbl" id="talk-mlbl">按一下,開始回答</div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-o" id="talk-model" onclick="talkModel()" title="不會回答時，點這裡看老師的示範答案">💡 示範答案</button>
+          <button class="btn btn-p" onclick="talkNext()" title="換一個問題">換一題 →</button>
+        </div>
       </div>
-      <div class="actions">
-        <button class="btn btn-o" id="talk-model" onclick="talkModel()" title="不會回答時，點這裡看老師的示範答案">💡 示範答案</button>
-        <button class="btn btn-p" onclick="talkNext()" title="換一個問題">換一題 →</button>
-      </div>
-      <div class="expl hide" id="talk-modelbox"></div>
     </div>
   </section>
 
@@ -3642,18 +3662,18 @@ function quizFor(d){
 
 /* ---------- Talk Time 題庫（教練提問，通用溝通題） ---------- */
 const TALK_BANK=[
-  {q:"Tell me about your last weekend. What did you do?",qcn:"聊聊你上個週末做了什麼。",model:"Last weekend I stayed home and relaxed. On Saturday I met a friend for coffee, and on Sunday I did some cleaning and watched a movie. It was a quiet but nice weekend.",m2:"Last weekend I stayed home. On Saturday I met a friend. On Sunday I watched TV. It was nice."},
-  {q:"What kind of food do you like, and why?",qcn:"你喜歡什麼食物?為什麼?",model:"I really like noodles because they are warm and filling. I also enjoy trying new restaurants with my friends. I'm not a big fan of very spicy food, though.",m2:"I like noodles. They are warm and tasty. I don't like spicy food."},
-  {q:"Describe a trip you took that you still remember.",qcn:"描述一趟你到現在還記得的旅行。",model:"A few years ago I traveled to Japan with my family. We visited temples and tried local food. The trip was memorable because everything was clean and the people were very friendly.",m2:"Last year I went to Japan with my family. We saw temples and ate good food. It was fun."},
-  {q:"What do you usually do to relax after a busy day?",qcn:"忙碌的一天後,你通常怎麼放鬆?",model:"After a busy day, I usually take a hot shower and listen to music. Sometimes I watch a TV series to take my mind off work. It helps me feel calm before I go to bed.",m2:"After work, I take a shower and listen to music. Sometimes I watch TV. It helps me relax."},
-  {q:"What is your job, and what do you do every day?",qcn:"你的工作是什麼?每天都做些什麼?",model:"I work in an office. Every day I answer emails, join meetings, and work with my team on different projects. Some days are busy, but I enjoy solving problems.",m2:"I work in an office. Every day I answer emails and talk to my team. Some days are busy."},
-  {q:"Talk about a skill you want to improve this year.",qcn:"聊聊今年你想加強的一項技能。",model:"This year I really want to improve my English speaking. I want to feel confident when I talk to people. So I practice a little every day and try not to be afraid of making mistakes.",m2:"This year I want to speak English better. So I practice a little every day."},
-  {q:"Describe the weather today and how it makes you feel.",qcn:"描述今天的天氣,以及它讓你有什麼感覺。",model:"Today it is warm and sunny, so I feel energetic and happy. When the weather is rainy, I usually feel a bit sleepy and just want to stay inside with a cup of coffee.",m2:"Today it is sunny and warm. I feel happy. When it rains, I feel sleepy."},
-  {q:"What do you usually eat for breakfast? Describe it.",qcn:"你早餐通常吃什麼?描述一下。",model:"For breakfast I usually have a sandwich and a cup of coffee. On weekends I like to make a bigger breakfast with eggs and fruit. Breakfast gives me energy for the whole morning.",m2:"For breakfast I have bread and coffee. On weekends I eat eggs and fruit."},
-  {q:"Tell me about your best friend. What are they like?",qcn:"聊聊你最好的朋友,他/她是怎樣的人?",model:"My best friend is kind and funny. We have known each other for many years. She is a good listener, so I can always talk to her when I have a problem.",m2:"My best friend is kind and funny. We talk a lot. She is a good listener."},
-  {q:"If you had a free day tomorrow, what would you do?",qcn:"如果明天有一整天空閒,你會做什麼?",model:"If I had a free day tomorrow, I would sleep in and then go for a walk in the park. In the afternoon I might meet friends for lunch. I want a relaxing day with no plans.",m2:"On a free day, I sleep late and go for a walk. Then I meet friends for lunch."},
-  {q:"What is something new you learned recently?",qcn:"你最近學到什麼新東西?",model:"Recently I learned some new English phrases for travel. I also learned how to make a simple pasta dish. I enjoy learning small new things because it keeps life interesting.",m2:"This week I learned some new English words. I also learned to cook a simple meal."},
-  {q:"Describe your daily routine from morning to night.",qcn:"描述你從早到晚的日常作息。",model:"I usually wake up at seven and have breakfast. Then I go to work until the evening. After dinner I relax, study English for a while, and go to bed around eleven.",m2:"I get up at seven and have breakfast. Then I go to work. At night I study English and go to bed."}
+  {q:"Tell me about your last weekend. What did you do?",qcn:"聊聊你上個週末做了什麼。",model:"Last weekend I stayed home and relaxed. On Saturday I met a friend for coffee, and on Sunday I did some cleaning and watched a movie. It was a quiet but nice weekend.",mcn:"上週末我待在家放鬆。週六我和朋友去喝咖啡，週日我打掃了一下、看了部電影。是個安靜又愉快的週末。",m2:"Last weekend I stayed home. On Saturday I met a friend. On Sunday I watched TV. It was nice.",m2cn:"上週末我待在家。週六我和朋友見面。週日我看電視。很不錯。"},
+  {q:"What kind of food do you like, and why?",qcn:"你喜歡什麼食物?為什麼?",model:"I really like noodles because they are warm and filling. I also enjoy trying new restaurants with my friends. I'm not a big fan of very spicy food, though.",mcn:"我很喜歡麵，因為熱熱的又有飽足感。我也喜歡和朋友嘗試新餐廳。不過我不太愛太辣的食物。",m2:"I like noodles. They are warm and tasty. I don't like spicy food.",m2cn:"我喜歡麵。它們熱熱的又好吃。我不喜歡辣的食物。"},
+  {q:"Describe a trip you took that you still remember.",qcn:"描述一趟你到現在還記得的旅行。",model:"A few years ago I traveled to Japan with my family. We visited temples and tried local food. The trip was memorable because everything was clean and the people were very friendly.",mcn:"幾年前我和家人去了日本。我們參觀寺廟、品嚐當地美食。這趟旅行令人難忘，因為一切都很乾淨、人們也很友善。",m2:"Last year I went to Japan with my family. We saw temples and ate good food. It was fun.",m2cn:"去年我和家人去了日本。我們看了寺廟、吃了好吃的食物。很有趣。"},
+  {q:"What do you usually do to relax after a busy day?",qcn:"忙碌的一天後,你通常怎麼放鬆?",model:"After a busy day, I usually take a hot shower and listen to music. Sometimes I watch a TV series to take my mind off work. It helps me feel calm before I go to bed.",mcn:"忙碌的一天後，我通常會洗個熱水澡、聽音樂。有時我會看影集轉換心情。這幫助我在睡前放鬆。",m2:"After work, I take a shower and listen to music. Sometimes I watch TV. It helps me relax.",m2cn:"下班後，我洗澡、聽音樂。有時我看電視。這幫助我放鬆。"},
+  {q:"What is your job, and what do you do every day?",qcn:"你的工作是什麼?每天都做些什麼?",model:"I work in an office. Every day I answer emails, join meetings, and work with my team on different projects. Some days are busy, but I enjoy solving problems.",mcn:"我在辦公室工作。每天我回覆郵件、開會，和團隊一起處理不同的專案。有些日子很忙，但我喜歡解決問題。",m2:"I work in an office. Every day I answer emails and talk to my team. Some days are busy.",m2cn:"我在辦公室工作。每天我回覆郵件、和團隊討論。有些日子很忙。"},
+  {q:"Talk about a skill you want to improve this year.",qcn:"聊聊今年你想加強的一項技能。",model:"This year I really want to improve my English speaking. I want to feel confident when I talk to people. So I practice a little every day and try not to be afraid of making mistakes.",mcn:"今年我很想加強我的英文口說。我希望和別人說話時更有自信。所以我每天練習一點，盡量不怕犯錯。",m2:"This year I want to speak English better. So I practice a little every day.",m2cn:"今年我想把英文說得更好。所以我每天練習一點。"},
+  {q:"Describe the weather today and how it makes you feel.",qcn:"描述今天的天氣,以及它讓你有什麼感覺。",model:"Today it is warm and sunny, so I feel energetic and happy. When the weather is rainy, I usually feel a bit sleepy and just want to stay inside with a cup of coffee.",mcn:"今天溫暖又晴朗，所以我覺得很有活力、很開心。下雨的時候，我通常有點想睡，只想待在室內配杯咖啡。",m2:"Today it is sunny and warm. I feel happy. When it rains, I feel sleepy.",m2cn:"今天晴朗又溫暖。我覺得開心。下雨時，我覺得想睡。"},
+  {q:"What do you usually eat for breakfast? Describe it.",qcn:"你早餐通常吃什麼?描述一下。",model:"For breakfast I usually have a sandwich and a cup of coffee. On weekends I like to make a bigger breakfast with eggs and fruit. Breakfast gives me energy for the whole morning.",mcn:"我早餐通常吃三明治配咖啡。週末我喜歡做豐盛一點的早餐，有蛋和水果。早餐給我一整個早上的活力。",m2:"For breakfast I have bread and coffee. On weekends I eat eggs and fruit.",m2cn:"早餐我吃麵包配咖啡。週末我吃蛋和水果。"},
+  {q:"Tell me about your best friend. What are they like?",qcn:"聊聊你最好的朋友,他/她是怎樣的人?",model:"My best friend is kind and funny. We have known each other for many years. She is a good listener, so I can always talk to her when I have a problem.",mcn:"我最好的朋友善良又幽默。我們認識很多年了。她是個好聽眾，所以我有煩惱時總能找她聊。",m2:"My best friend is kind and funny. We talk a lot. She is a good listener.",m2cn:"我最好的朋友善良又幽默。我們常聊天。她是個好聽眾。"},
+  {q:"If you had a free day tomorrow, what would you do?",qcn:"如果明天有一整天空閒,你會做什麼?",model:"If I had a free day tomorrow, I would sleep in and then go for a walk in the park. In the afternoon I might meet friends for lunch. I want a relaxing day with no plans.",mcn:"如果明天有一整天空閒，我會睡到自然醒，然後去公園散步。下午可能和朋友吃午餐。我想要一個沒有計劃、輕鬆的一天。",m2:"On a free day, I sleep late and go for a walk. Then I meet friends for lunch.",m2cn:"放假的一天，我會睡晚一點、去散步。然後和朋友吃午餐。"},
+  {q:"What is something new you learned recently?",qcn:"你最近學到什麼新東西?",model:"Recently I learned some new English phrases for travel. I also learned how to make a simple pasta dish. I enjoy learning small new things because it keeps life interesting.",mcn:"最近我學了一些旅遊用的英文片語。我也學會做一道簡單的義大利麵。我喜歡學一些新的小東西，因為這讓生活很有趣。",m2:"This week I learned some new English words. I also learned to cook a simple meal.",m2cn:"這週我學了一些新的英文單字。我也學會煮一道簡單的餐。"},
+  {q:"Describe your daily routine from morning to night.",qcn:"描述你從早到晚的日常作息。",model:"I usually wake up at seven and have breakfast. Then I go to work until the evening. After dinner I relax, study English for a while, and go to bed around eleven.",mcn:"我通常七點起床、吃早餐。然後去上班到傍晚。晚餐後我放鬆一下、讀一會兒英文，大約十一點睡覺。",m2:"I get up at seven and have breakfast. Then I go to work. At night I study English and go to bed.",m2cn:"我七點起床、吃早餐。然後去上班。晚上我讀英文，然後睡覺。"}
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -3867,7 +3887,9 @@ function talkMic(){micStart({btn:'talk-mic',lbl:'talk-mlbl',idle:'按一下，�
     $('talk-model').classList.remove('hide');logSpeak(Math.min(100,n*5));}});}
 function talkModel(){const b=$('talk-modelbox');b.classList.remove('hide');
   const ans=(isTom()&&talkCur.m2)?talkCur.m2:talkCur.model;
-  b.innerHTML='💬 <b>示範答案：</b>'+esc(ans)+' <button class="btn btn-o btn-sm" style="margin-left:6px" onclick="speak('+JSON.stringify(ans)+',0.9)">🔊</button>';}
+  const cn=(isTom()&&talkCur.m2cn)?talkCur.m2cn:(talkCur.mcn||'');
+  b.innerHTML='💬 <b>示範答案：</b>'+esc(ans)+' <button class="btn btn-o btn-sm" style="margin-left:6px" onclick="speak('+JSON.stringify(ans)+',0.9)">🔊</button>'
+    +(cn?'<div style="color:var(--sub);font-size:.86rem;margin-top:6px">'+esc(cn)+'</div>':'');}
 function talkNext(){talkI++;talkRender();}
 
 /* ═══════════════════════════════════════════════════════════
