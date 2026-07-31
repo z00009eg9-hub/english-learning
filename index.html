@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>🎙️ Speak Up! · Anita's English Coach</title>
+<title>Speak Up! · Anita &amp; Tom</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='34'%3E%F0%9F%8D%8E%F0%9F%90%BB%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --coral:#2563EB; --coral-d:#1D4ED8; --coral-l:#E8F0FE;
+  --coral:#159AA6; --coral-d:#0F7A85; --coral-l:#E1F4F5;
   --teal:#0EA5A0; --teal-l:#E6F7F6;
   --amber:#F59E0B; --amber-l:#FEF6E7;
-  --ink:#1B2A3D; --sub:#5B6B82; --faint:#95A3B8;
+  --ink:#226E75; --sub:#6A9AA0; --faint:#A0C2C6;
   --bg:#F3F6FC; --card:#FFFFFF; --bdr:#E6ECF5; --bdr2:#D7E0EE;
   --good:#16A34A; --good-l:#E9F8EF; --bad:#E11D48; --bad-l:#FDE9EE;
   --sh-sm:0 2px 8px rgba(60,40,30,.06);
@@ -25,13 +26,13 @@ body{font-family:'Noto Sans TC','Inter',sans-serif;background:var(--bg);color:va
 .en{font-family:'Inter','Noto Sans TC',sans-serif;}
 
 /* ═══ HEADER ═══ */
-header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
+header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   color:#fff;padding:14px 18px 16px;position:sticky;top:0;z-index:200;
-  box-shadow:0 6px 22px rgba(29,78,216,.30);}
+  box-shadow:0 6px 22px rgba(15,122,133,.30);}
 .hd-in{max-width:820px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;}
 .hd-brand{display:flex;align-items:center;gap:11px;}
-.hd-logo{width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.22);
-  display:grid;place-items:center;font-size:1.5rem;backdrop-filter:blur(4px);flex-shrink:0;}
+.hd-logo{width:48px;height:44px;border-radius:13px;background:rgba(255,255,255,.22);
+  display:grid;place-items:center;font-size:1rem;letter-spacing:-1px;backdrop-filter:blur(4px);flex-shrink:0;}
 .hd-ttl{font-size:1.18rem;font-weight:900;letter-spacing:-.4px;line-height:1.1;}
 .hd-sub{font-size:.72rem;opacity:.9;font-weight:500;margin-top:1px;}
 .hd-streak{background:rgba(255,255,255,.2);border-radius:100px;padding:6px 13px;
@@ -51,11 +52,11 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
   box-shadow:var(--sh-sm);padding:18px;}
 
 /* ═══ COACH GREETING ═══ */
-.coach{display:flex;gap:13px;align-items:flex-start;background:linear-gradient(135deg,#fff,#EEF4FF);
-  border:1px solid var(--bdr);border-radius:var(--r);padding:16px 17px;box-shadow:var(--sh-sm);margin-bottom:16px;}
+.coach{display:flex;gap:13px;align-items:center;background:linear-gradient(135deg,#fff,#EEF4FF);
+  border:1px solid var(--bdr);border-radius:var(--r);padding:18px 17px;box-shadow:var(--sh-sm);margin-bottom:16px;}
 .coach-av{width:50px;height:50px;border-radius:50%;flex-shrink:0;font-size:1.7rem;
-  background:linear-gradient(135deg,#2563EB,#0EA5E9);display:grid;place-items:center;
-  box-shadow:0 4px 14px rgba(37,99,235,.35);}
+  background:linear-gradient(135deg,#159AA6,#35BAC6);display:grid;place-items:center;
+  box-shadow:0 4px 14px rgba(21,154,166,.35);}
 .coach-txt{font-size:.92rem;color:var(--ink);}
 .coach-txt b{color:var(--coral-d);}
 .coach-name{font-size:.74rem;color:var(--sub);font-weight:700;margin-top:5px;}
@@ -63,13 +64,27 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
 /* ═══ DAY SELECTOR ═══ */
 .pick-lbl{font-size:.78rem;font-weight:800;color:var(--sub);margin-bottom:7px;
   display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.5px;}
-.day-sel{width:100%;padding:14px 15px;border-radius:14px;border:2px solid var(--bdr2);
-  background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%232563EB' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center;
-  font-size:.98rem;font-weight:700;color:var(--ink);font-family:inherit;cursor:pointer;
-  -webkit-appearance:none;appearance:none;}
-.day-sel:focus{outline:none;border-color:var(--coral);}
+.day-dd{position:relative;}
+.day-sel{width:100%;padding:14px 15px;border-radius:14px;border:2px solid var(--bdr2);background:#fff;
+  font-size:.98rem;font-weight:700;color:var(--ink);font-family:inherit;cursor:pointer;text-align:left;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.day-sel:focus,.day-sel.open{outline:none;border-color:var(--coral);}
+.dd-caret{color:var(--coral);font-weight:900;transition:transform .2s;flex-shrink:0;}
+.day-sel.open .dd-caret{transform:rotate(180deg);}
+.dd-list{position:absolute;top:calc(100% + 6px);left:0;right:0;z-index:150;display:none;
+  max-height:min(52vh,380px);overflow-y:auto;background:#fff;border:2px solid var(--bdr2);
+  border-radius:14px;box-shadow:var(--sh-lg);padding:5px;}
+.dd-list.open{display:block;}
+.dd-item{padding:11px 13px;border-radius:10px;cursor:pointer;font-size:.92rem;font-weight:600;color:var(--ink);}
+.dd-item:hover{background:var(--coral-l);}
+.dd-item.sel{background:var(--coral-l);color:var(--coral-d);font-weight:800;}
 .day-meta{font-size:.8rem;color:var(--sub);margin-top:9px;display:flex;flex-wrap:wrap;gap:5px 10px;line-height:1.4;}
-.day-meta .chip{background:var(--coral-l);color:var(--coral-d);padding:2px 9px;border-radius:100px;font-weight:700;font-size:.74rem;}
+.day-meta{font-size:.8rem;color:var(--sub);margin-top:9px;display:flex;flex-wrap:wrap;gap:5px 10px;line-height:1.4;}
+.day-meta .chip{padding:2px 9px;border-radius:100px;font-weight:700;font-size:.74rem;background:var(--coral-l);color:var(--coral-d);}
+.day-meta .chip.c1{background:#FFE0E4;color:#E11D48;}
+.day-meta .chip.c2{background:#FCEFC0;color:#B8860B;}
+.day-meta .chip.c3{background:#EAE0FF;color:#7C3AED;}
+.day-meta .chip.c4{background:#D6F5DE;color:#15803D;}
 
 /* ═══ ACTIVITY GRID ═══ */
 .grid-ttl{font-size:.95rem;font-weight:900;margin:22px 3px 12px;display:flex;align-items:center;gap:7px;}
@@ -77,7 +92,7 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
 .act{background:var(--card);border:1.5px solid var(--bdr);border-radius:18px;padding:16px 15px;
   cursor:pointer;transition:transform .16s,box-shadow .16s,border-color .16s;text-align:left;
   font-family:inherit;color:var(--ink);position:relative;overflow:hidden;}
-.act:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:var(--coral);}
+.act:hover{transform:translateY(-3px);box-shadow:var(--sh);}
 .act:active{transform:scale(.98);}
 .act-ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:1.35rem;margin-bottom:11px;}
 .act-h{font-size:1.02rem;font-weight:800;letter-spacing:-.2px;}
@@ -85,12 +100,29 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
 .act-d{font-size:.76rem;color:var(--sub);margin-top:7px;line-height:1.45;}
 .act-badge{position:absolute;top:12px;right:12px;font-size:.62rem;font-weight:800;
   background:var(--coral);color:#fff;padding:2px 8px;border-radius:100px;}
-.i-say{background:var(--coral-l);color:var(--coral-d);}
-.i-shadow{background:var(--teal-l);color:var(--teal);}
-.i-word{background:var(--amber-l);color:var(--amber);}
-.i-read{background:#EDE9FE;color:#7C3AED;}
-.i-talk{background:#E0F2FE;color:#0284C7;}
-.i-quiz{background:var(--good-l);color:var(--good);}
+/* 六個口說活動：繽紛彩色卡片 */
+.i-say{background:#FFE0E4;color:#E11D48;}
+.i-shadow{background:#FFEAD1;color:#EA7A0C;}
+.i-word{background:#FCEFC0;color:#CA8A04;}
+.i-read{background:#EAE0FF;color:#7C3AED;}
+.i-talk{background:#D6EEFC;color:#0284C7;}
+.i-quiz{background:#D6F5DE;color:#16A34A;}
+.act-say{background:var(--card);border-color:#F4A6B6;}
+.act-say:hover{border-color:#E11D48;}
+.act-shadow{background:var(--card);border-color:#F6C283;}
+.act-shadow:hover{border-color:#EA7A0C;}
+.act-word{background:var(--card);border-color:#EBCE73;}
+.act-word:hover{border-color:#CA8A04;}
+.act-read{background:var(--card);border-color:#C6B0F3;}
+.act-read:hover{border-color:#7C3AED;}
+.act-talk{background:var(--card);border-color:#9FD4F4;}
+.act-talk:hover{border-color:#0284C7;}
+.act-quiz{background:var(--card);border-color:#A2DEB4;}
+.act-quiz:hover{border-color:#16A34A;}
+.i-listen{background:#CFF5F0;color:#0D9488;}
+.act-listen{background:var(--card);border-color:#8FD9D0;}
+.act-listen:hover{border-color:#0D9488;}
+.act-say .act-badge{background:#E11D48;}
 
 /* ═══ STAT STRIP ═══ */
 .stats{display:flex;gap:9px;margin-top:20px;}
@@ -106,7 +138,7 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
 .sub-h{font-size:1.16rem;font-weight:900;letter-spacing:-.3px;}
 .sub-s{font-size:.75rem;color:var(--sub);font-weight:600;}
 .prog{height:7px;background:var(--bdr);border-radius:100px;overflow:hidden;margin-bottom:16px;}
-.prog>i{display:block;height:100%;background:linear-gradient(90deg,#2563EB,#0EA5E9);
+.prog>i{display:block;height:100%;background:linear-gradient(90deg,#159AA6,#35BAC6);
   border-radius:100px;transition:width .5s cubic-bezier(.3,.7,.3,1);width:0;}
 
 /* ═══ PROMPT / PRACTICE CARD ═══ */
@@ -142,7 +174,7 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
 .mic-zone{display:flex;flex-direction:column;align-items:center;margin-top:12px;}
 .mic{width:72px;height:72px;border-radius:50%;border:none;cursor:pointer;
   background:linear-gradient(135deg,var(--coral),var(--coral-d));color:#fff;font-size:1.8rem;
-  display:grid;place-items:center;box-shadow:0 10px 26px rgba(29,78,216,.42);
+  display:grid;place-items:center;box-shadow:0 10px 26px rgba(15,122,133,.42);
   transition:transform .15s;position:relative;font-family:inherit;}
 .mic:active{transform:scale(.94);}
 .mic:disabled{background:var(--faint);box-shadow:none;cursor:not-allowed;}
@@ -172,7 +204,7 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
 .face{position:absolute;inset:0;border-radius:22px;backface-visibility:hidden;-webkit-backface-visibility:hidden;
   display:flex;flex-direction:column;justify-content:center;align-items:center;padding:22px;box-shadow:var(--sh);text-align:center;}
 .face-f{background:linear-gradient(150deg,#fff,#EEF4FF);border:1.5px solid var(--bdr);}
-.face-b{background:linear-gradient(150deg,#2563EB,#0EA5E9);color:#fff;transform:rotateY(180deg);}
+.face-b{background:linear-gradient(150deg,#159AA6,#35BAC6);color:#fff;transform:rotateY(180deg);}
 .fw{font-size:1.85rem;font-weight:900;font-family:'Inter';letter-spacing:-.5px;}
 .fpos{font-size:.8rem;color:var(--coral-d);background:var(--coral-l);padding:2px 12px;border-radius:100px;font-weight:800;margin-top:9px;}
 .face-b .fcn{font-size:1.7rem;font-weight:900;}
@@ -183,7 +215,9 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
 /* ═══ READ-ALOUD paragraph ═══ */
 .para{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:var(--sh-sm);}
 .para-en{font-size:1.05rem;line-height:1.75;font-family:'Inter';font-weight:500;}
-.para-en .tok{transition:color .2s,background .2s;border-radius:3px;}
+.para-en .tok{transition:color .2s,background .2s;border-radius:3px;cursor:pointer;}
+.para-en .tok:hover{background:#D2F1F2;text-decoration:underline;text-decoration-color:#7FD6DC;}
+.tok.flash{background:#FDE68A!important;}
 .para-en .tok.hit{color:var(--good);background:var(--good-l);}
 .para-cn{font-size:.84rem;color:var(--sub);margin-top:10px;line-height:1.6;border-top:1px dashed var(--bdr2);padding-top:10px;}
 .para-bar{display:flex;align-items:center;gap:10px;margin-top:12px;}
@@ -251,7 +285,7 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
 <header>
   <div class="hd-in">
     <div class="hd-brand" onclick="goHome()" style="cursor:pointer" title="回首頁">
-      <div class="hd-logo">🎙️</div>
+      <div class="hd-logo">🍎🐻</div>
       <div>
         <div class="hd-ttl">Speak Up!</div>
         <div class="hd-sub" id="hd-date">English Coach</div>
@@ -259,8 +293,8 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
     </div>
     <div class="hd-right">
       <div class="prof-sw" title="切換學習者，各自獨立進度">
-        <button class="prof-btn active" id="prof-anita" onclick="setProfile('anita')">👧 Anita</button>
-        <button class="prof-btn" id="prof-tom" onclick="setProfile('tom')">👦 Tom</button>
+        <button class="prof-btn active" id="prof-anita" onclick="setProfile('anita')">🍎 Anita</button>
+        <button class="prof-btn" id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
       </div>
       <div class="hd-streak">🔥 <span id="hd-streak">1</span> 天 <span id="sync-badge" title="進度已雲端同步（跨裝置共用）" style="display:none">☁️</span></div>
     </div>
@@ -279,7 +313,10 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
 
     <div class="card">
       <div class="pick-lbl">📅 選一天的課堂內容</div>
-      <select class="day-sel" id="day-sel"></select>
+      <div class="day-dd" id="day-dd">
+        <button class="day-sel" id="day-btn" onclick="ddToggle(event)"><span id="day-btn-label">—</span><span class="dd-caret">▾</span></button>
+        <div class="dd-list" id="dd-list"></div>
+      </div>
       <div class="day-meta" id="day-meta"></div>
     </div>
 
@@ -296,42 +333,48 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
 
     <div class="grid-ttl">🚀 選一個口說活動</div>
     <div class="acts">
-      <button class="act" onclick="openAct('say')" title="看中文開口說英文，麥克風幫你抓漏字並給分">
+      <button class="act act-say" onclick="openAct('say')" title="看中文開口說英文，麥克風幫你抓漏字並給分">
         <span class="act-badge">主打</span>
         <div class="act-ico i-say">🎤</div>
         <div class="act-h">說出來</div>
         <div class="act-en">Say It Out Loud</div>
         <div class="act-d">看中文,開口說英文。麥克風幫你抓漏字、給分。</div>
       </button>
-      <button class="act" onclick="openAct('shadow')" title="聽標準示範句，馬上跟著複誦，練節奏與流暢度">
+      <button class="act act-shadow" onclick="openAct('shadow')" title="聽標準示範句，馬上跟著複誦，練節奏與流暢度">
         <div class="act-ico i-shadow">🔁</div>
         <div class="act-h">跟讀模仿</div>
         <div class="act-en">Shadowing</div>
         <div class="act-d">聽示範句 → 馬上跟著複誦,練節奏與流暢度。</div>
       </button>
-      <button class="act" onclick="openAct('word')" title="看字卡念單字並造句，把生字變成能開口說的字">
+      <button class="act act-word" onclick="openAct('word')" title="看字卡念單字並造句，把生字變成能開口說的字">
         <div class="act-ico i-word">🗣️</div>
         <div class="act-h">單字口說</div>
         <div class="act-en">Word Power</div>
         <div class="act-d">看字卡念單字 + 造句,把生字變成能講的字。</div>
       </button>
-      <button class="act" onclick="openAct('read')" title="一段一段朗讀文章，說對的字會即時亮綠燈">
+      <button class="act act-read" onclick="openAct('read')" title="一段一段朗讀文章，說對的字會即時亮綠燈">
         <div class="act-ico i-read">📖</div>
         <div class="act-h">朗讀文章</div>
         <div class="act-en">Read Aloud</div>
         <div class="act-d">一段一段朗讀,說對的字會亮綠燈。</div>
       </button>
-      <button class="act" onclick="openAct('talk')" title="回答教練的問題，用今天學的字自由表達，練 B2 溝通">
+      <button class="act act-talk" onclick="openAct('talk')" title="回答教練的問題，用今天學的字自由表達，練 B2 溝通">
         <div class="act-ico i-talk">💬</div>
         <div class="act-h">情境開講</div>
         <div class="act-en">Talk Time</div>
         <div class="act-d">回答教練的問題,用今天學的字自由表達。</div>
       </button>
-      <button class="act" onclick="openAct('quiz')" title="單字與文法小測驗，鞏固今天的學習重點">
+      <button class="act act-quiz" onclick="openAct('quiz')" title="單字與文法小測驗，鞏固今天的學習重點">
         <div class="act-ico i-quiz">📝</div>
         <div class="act-h">快速檢查</div>
         <div class="act-en">Quick Check</div>
         <div class="act-d">單字與文法小測驗,鞏固今天的重點。</div>
+      </button>
+      <button class="act act-listen" onclick="openAct('listen')" title="聽英文句子（可正常/慢速），把聽到的打出來">
+        <div class="act-ico i-listen">🎧</div>
+        <div class="act-h">聽力練習</div>
+        <div class="act-en">Listening</div>
+        <div class="act-d">聽句子(正常/慢速),把聽到的英文打出來對答案。</div>
       </button>
     </div>
 
@@ -478,6 +521,33 @@ header{background:linear-gradient(135deg,#1E40AF 0%,#2563EB 50%,#0EA5E9 100%);
     <div class="prog"><i id="quiz-prog"></i></div>
     <div class="card" id="quiz-card"></div>
     <div class="card final hide" id="quiz-final"></div>
+  </section>
+
+  <!-- ══════════ LISTENING (聽力打字) ══════════ -->
+  <section class="screen" id="scr-listen">
+    <div class="sub-top">
+      <button class="back" onclick="goHome()" title="回首頁">←</button>
+      <div><div class="sub-h">🎧 聽力練習</div><div class="sub-s" id="ls-sub">聽句子，把聽到的英文打出來</div></div>
+    </div>
+    <div class="prog"><i id="ls-prog"></i></div>
+    <div class="card">
+      <div class="pc">
+        <span class="pc-tag" id="ls-tag">聽力</span>
+        <div style="font-size:2.4rem">🎧</div>
+        <div class="pc-sub" id="ls-cn"></div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-t" onclick="lsPlay(1)" title="正常速度播放">🔊 正常速</button>
+        <button class="btn btn-o" onclick="lsPlay(.6)" title="放慢播放">🐢 慢速</button>
+      </div>
+      <textarea class="fill-in" id="ls-input" rows="2" placeholder="把你聽到的句子打出來…" style="text-align:left;font-size:1.05rem;line-height:1.5;resize:vertical;margin-top:12px" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();lsCheck();}"></textarea>
+      <div class="scorebox hide" id="ls-score"></div>
+      <div class="diff hide" id="ls-diff"></div>
+      <div class="actions">
+        <button class="btn btn-p" id="ls-check" onclick="lsCheck()">✅ 對答案</button>
+        <button class="btn btn-p hide" id="ls-next" onclick="lsNext()">下一句 →</button>
+      </div>
+    </div>
   </section>
 
 </div>
@@ -1045,8 +1115,10 @@ const vocab = [
 ];
 
 // 每個單字的筆記來源 (key = word, value = note title)
-// ===SYNC:SOURCES_START=== sync_date:2026-07-27
+// ===SYNC:SOURCES_START=== sync_date:2026-07-30
 const vocabSources = {
+  // --- 20260730 作業複習、樂觀悲觀與 Hugh Laurie ---
+  "optimist":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","pessimist":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","talented":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","talent":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","passionate":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","constantly":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","main character":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","album":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","success":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","heat":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","hit":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","hopeless":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","hopeful":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","filter coffee":"20260730 作業複習、樂觀悲觀與 Hugh Laurie","conical hat":"20260730 作業複習、樂觀悲觀與 Hugh Laurie",
   // --- 20260714 搭機流程與機上英文 ---
   "immigration officer":"20260714 搭機流程與機上英文","checked baggage":"20260714 搭機流程與機上英文","departure":"20260714 搭機流程與機上英文",
   "departure gate":"20260714 搭機流程與機上英文","security check":"20260714 搭機流程與機上英文","trolley":"20260714 搭機流程與機上英文","plastic cutlery":"20260714 搭機流程與機上英文","soft drink":"20260714 搭機流程與機上英文","special meal":"20260714 搭機流程與機上英文","meal service":"20260714 搭機流程與機上英文","seat belt":"20260714 搭機流程與機上英文","window shade":"20260714 搭機流程與機上英文","window blind":"20260714 搭機流程與機上英文","excess baggage fee":"20260714 搭機流程與機上英文","cargo hold":"20260714 搭機流程與機上英文","X-ray machine":"20260714 搭機流程與機上英文","landing":"20260714 搭機流程與機上英文","tarmac":"20260714 搭機流程與機上英文","cabin":"20260714 搭機流程與機上英文","unfold":"20260714 搭機流程與機上英文",
@@ -3046,50 +3118,55 @@ function scoreSpeech(said,target){
 }
 
 /* ---------- 麥克風引擎 ---------- */
-let micRec=null,micActive=false,micCfg=null,micFinal='',micLive='',micErr=null,micDone=false,micTimer=null,micWatch=null;
+let micRec=null,micActive=false,micCfg=null,micFinal='',micLive='',micErr=null,micDone=false,micTimer=null,micWatch=null,idleTimer=null,micStopping=false;
 function speechOK(){return ('webkitSpeechRecognition' in window)||('SpeechRecognition' in window);}
 function setMicUI(cfg,on){if(!cfg)return;const b=$(cfg.btn);if(b){b.classList.toggle('rec',on);b.textContent=on?'⏹':'🎤';}
   const l=$(cfg.lbl);if(l)l.textContent=on?'🔴 聽你說…（說完再按一次結束）':(cfg.idle||'按一下，開始說');}
-function clearMicTimers(){if(micTimer){clearTimeout(micTimer);micTimer=null;}if(micWatch){clearTimeout(micWatch);micWatch=null;}}
+function clearMicTimers(){[micTimer,micWatch,idleTimer].forEach(t=>{if(t)clearTimeout(t);});micTimer=micWatch=idleTimer=null;}
+/* idle：偵測到說話後開始計時，最後一個字之後過 idleMs 沒新內容就自動收尾 */
+function resetIdle(){if(!micCfg||!micCfg.idleMs)return;if(idleTimer)clearTimeout(idleTimer);
+  idleTimer=setTimeout(()=>{micStopping=true;try{if(micRec)micRec.stop();}catch(e){}
+    setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},300);},micCfg.idleMs);}
 function finishMic(){
   if(micDone)return;micDone=true;micActive=false;clearMicTimers();
   const cfg=micCfg,txt=(micFinal||micLive||'').trim(),err=micErr;
   try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=null;}}catch(e){}
   micRec=null;if(cfg)setMicUI(cfg,false);if(cfg&&cfg.onDone)cfg.onDone(txt,err);
 }
-/* 硬重置：不呼叫 onDone，用於切換活動時清掉卡住的辨識，確保下一個麥克風一定能啟動 */
 function hardResetMic(){
-  clearMicTimers();
+  clearMicTimers();micStopping=true;
   try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=null;micRec.abort();}}catch(e){}
   if(micCfg)setMicUI(micCfg,false);
   micRec=null;micActive=false;micDone=true;micCfg=null;
 }
 function micStop(){
-  if(!micActive)return;
+  if(!micActive)return;micStopping=true;
   try{if(micRec)micRec.stop();}catch(e){}
-  /* fallback：若 350ms 內 onend 沒觸發（某些瀏覽器 stop() 不收尾），強制中止並收尾 */
   if(micTimer)clearTimeout(micTimer);
   micTimer=setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},350);
+}
+function _startRec(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  const r=new SR();r.lang='en-US';r.interimResults=true;r.continuous=!!micCfg.continuous;r.maxAlternatives=1;
+  const base=micFinal;
+  r.onresult=e=>{let f='',itm='';for(let i=0;i<e.results.length;i++){const res=e.results[i];if(res.isFinal)f+=res[0].transcript+' ';else itm+=res[0].transcript;}
+    micFinal=((base?base+' ':'')+f).trim();micLive=(micFinal+' '+itm).trim();micCfg.onLive&&micCfg.onLive(micLive);resetIdle();};
+  r.onerror=e=>{micErr=e.error;};
+  r.onend=()=>{if(micCfg&&micCfg.keepAlive&&!micStopping){try{_startRec();}catch(e){finishMic();}}else finishMic();};
+  micRec=r;try{r.start();}catch(e){micErr='busy';finishMic();}
 }
 function micStart(cfg){
   if(!speechOK()){cfg.onDone&&cfg.onDone('','unsupported');return;}
   if(micActive){
-    /* 同一顆麥克風再按 = 停止；不同活動的麥克風 = 先硬重置舊的再啟動新的 */
     if(micCfg&&micCfg.btn===cfg.btn){micStop();return;}
     hardResetMic();
   }
-  /* 開始辨識前先關掉 TTS，釋放麥克風／音訊裝置，避免剛播完示範就收不到音 */
   if(window.speechSynthesis)speechSynthesis.cancel();
-  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  const r=new SR();r.lang='en-US';r.interimResults=true;r.continuous=!!cfg.continuous;r.maxAlternatives=1;
-  micCfg=cfg;micFinal='';micLive='';micErr=null;micDone=false;
-  r.onresult=e=>{let f='',itm='';for(let i=0;i<e.results.length;i++){const res=e.results[i];if(res.isFinal)f+=res[0].transcript+' ';else itm+=res[0].transcript;}if(f.trim())micFinal=f.trim();micLive=((f||'')+' '+itm).trim();cfg.onLive&&cfg.onLive(micLive);};
-  r.onerror=e=>{micErr=e.error;};
-  r.onend=()=>finishMic();
-  micRec=r;micActive=true;setMicUI(cfg,true);
-  /* 看門狗：一般 15 秒、長句朗讀／開講 30 秒，避免任何情況下永久卡住 */
-  micWatch=setTimeout(()=>{micStop();},cfg.continuous?30000:15000);
-  try{r.start();}catch(e){micErr='busy';finishMic();}
+  micCfg=cfg;micFinal='';micLive='';micErr=null;micDone=false;micStopping=false;
+  micActive=true;setMicUI(cfg,true);
+  /* 看門狗上限：朗讀/開講(keepAlive) 3 分鐘、其餘 15/30 秒 */
+  micWatch=setTimeout(()=>{micStop();},cfg.keepAlive?180000:(cfg.continuous?30000:15000));
+  _startRec();
 }
 function micUnsupported(lbl){const l=$(lbl);if(l)l.innerHTML='⚠ 這個瀏覽器不支援語音辨識，建議用 <b>Chrome</b> 或 <b>Edge</b>。你仍可用 🔊 聽示範跟著念。';}
 
@@ -3128,7 +3205,7 @@ function setProfile(p){
   if(!PROFILES[p]||p===PROFILE)return;
   micStop();if(window.speechSynthesis)speechSynthesis.cancel();
   PROFILE=p;localStorage.setItem('speakup_profile',p);
-  updateProfileUI();loadST();goHome();
+  reviewMode=false;updateProfileUI();initHome();loadST();show('scr-home');
 }
 function updateProfileUI(){
   const a=$('prof-anita'),t=$('prof-tom');
@@ -3154,7 +3231,7 @@ function loadST(){
   }catch(e){}
   renderStats();
   /* 先抓雲端（若較新就採用），再做跨日重置與畫面更新、PIN 鎖檢查，最後訂閱即時同步 */
-  cloudPull(()=>{applyRollover();renderStats();lockGate();});
+  cloudPull(()=>{const prev=ST.lastDay;pendingReview=(prev&&dayDiff(prev,todayStr())>=3);applyRollover();renderStats();lockGate();});
   cloudSubscribe();
 }
 /* ---------- PIN 鎖（4 位數，雲端共用；每台裝置解鎖後記住） ---------- */
@@ -3162,11 +3239,22 @@ let pinMode='enter';
 async function shaPin(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('speakup-pin:'+s));
   return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');}
 function isUnlocked(){return localStorage.getItem('speakup_unlock_'+PROFILE)==='1';}
+let pendingReview=false,reviewMode=false;
 function lockGate(){
-  if(!db){hidePin();return;}                 /* 沒有雲端時不上鎖，維持可用 */
-  if(isUnlocked()){hidePin();return;}
+  if(!db){hidePin();maybeReview();return;}    /* 沒有雲端時不上鎖，維持可用 */
+  if(isUnlocked()){hidePin();maybeReview();return;}
   if(ST.pinHash){pinMode='enter';showPin('🔒 '+PROFILES[PROFILE]+' 的 PIN','請輸入 4 位數密碼');}
   else{pinMode='set';showPin('🔑 設定 '+PROFILES[PROFILE]+' 的 PIN','第一次使用，設定 4 位數密碼<br>之後在任何裝置都用這組登入');}
+}
+/* 3 天沒登入 → 登入後先複習 5 句暖身 */
+function maybeReview(){
+  if(!pendingReview)return;pendingReview=false;
+  const items=shuffle(sayItems('all')).slice(0,5);
+  if(!items.length)return;
+  reviewMode=true;sayList=items;sayI=0;
+  $('say-sub').textContent='🔁 久違複習 · 暖身 5 句';
+  coachSay('好久不見!先跟我複習 <b>5 句</b>暖身,再開始今天的練習 💪');
+  show('scr-say');sayRender();
 }
 function showPin(title,subHtml){$('pin-title').textContent=title;$('pin-sub').innerHTML=subHtml;
   $('pin-msg').textContent='';$('pin-input').value='';$('pin-overlay').style.display='flex';
@@ -3175,8 +3263,8 @@ function hidePin(){$('pin-overlay').style.display='none';}
 async function pinSubmit(){const v=($('pin-input').value||'').trim();
   if(!/^\d{4}$/.test(v)){$('pin-msg').textContent='請輸入 4 位數字';return;}
   const h=await shaPin(v);
-  if(pinMode==='set'){ST.pinHash=h;saveST();localStorage.setItem('speakup_unlock_'+PROFILE,'1');hidePin();coachSay(coachHome());}
-  else if(h===ST.pinHash){localStorage.setItem('speakup_unlock_'+PROFILE,'1');hidePin();coachSay(coachHome());}
+  if(pinMode==='set'){ST.pinHash=h;saveST();localStorage.setItem('speakup_unlock_'+PROFILE,'1');hidePin();coachSay(coachHome());maybeReview();}
+  else if(h===ST.pinHash){localStorage.setItem('speakup_unlock_'+PROFILE,'1');hidePin();coachSay(coachHome());maybeReview();}
   else{$('pin-msg').textContent='PIN 不對，再試一次';$('pin-input').value='';try{$('pin-input').focus();}catch(e){}}
 }
 function pinSwitchOther(){const o=(PROFILE==='anita'?'tom':'anita');hidePin();setProfile(o);}
@@ -3185,19 +3273,256 @@ function renderStats(){$('st-spoken').textContent=ST.spokenToday;$('st-total').t
   $('st-acc').textContent=ST.scoreN?Math.round(ST.scoreSum/ST.scoreN)+'%':'–';$('hd-streak').textContent=ST.streak;
   cloudBadge(!!db);}
 
+/* ═══════════════════════════════════════════════════════════
+   A2 教材包（Tom 專用，A2 → B1）：簡單、日常、短句
+   ═══════════════════════════════════════════════════════════ */
+const A2LESSONS=[
+  {
+    id:'a2-daily', title:'A2 · 日常生活 Daily Life',
+    vocab:[
+      {w:"get up",ipa:"/ɡet ʌp/",pos:"phr.",cn:"起床",def:"to leave your bed in the morning.",exEn:"I get up at seven every day.",exCn:"我每天七點起床。"},
+      {w:"breakfast",ipa:"/ˈbrekfəst/",pos:"n.",cn:"早餐",def:"the first meal of the day.",exEn:"I eat breakfast at home.",exCn:"我在家吃早餐。"},
+      {w:"school",ipa:"/skuːl/",pos:"n.",cn:"學校",def:"a place where children learn.",exEn:"She goes to school by bus.",exCn:"她搭公車去學校。"},
+      {w:"work",ipa:"/wɜːk/",pos:"n./v.",cn:"工作",def:"a job you do to earn money.",exEn:"I go to work in the morning.",exCn:"我早上去上班。"},
+      {w:"bus",ipa:"/bʌs/",pos:"n.",cn:"公車",def:"a big vehicle that carries many people.",exEn:"I take the bus to work.",exCn:"我搭公車上班。"},
+      {w:"lunch",ipa:"/lʌntʃ/",pos:"n.",cn:"午餐",def:"the meal you eat in the middle of the day.",exEn:"We have lunch at noon.",exCn:"我們中午吃午餐。"},
+      {w:"home",ipa:"/həʊm/",pos:"n.",cn:"家",def:"the place where you live.",exEn:"I go home after work.",exCn:"我下班後回家。"},
+      {w:"dinner",ipa:"/ˈdɪnə/",pos:"n.",cn:"晚餐",def:"the main meal in the evening.",exEn:"We eat dinner together.",exCn:"我們一起吃晚餐。"},
+      {w:"sleep",ipa:"/sliːp/",pos:"v.",cn:"睡覺",def:"to rest with your eyes closed at night.",exEn:"I sleep eight hours.",exCn:"我睡八個小時。"},
+      {w:"weekend",ipa:"/ˌwiːkˈend/",pos:"n.",cn:"週末",def:"Saturday and Sunday.",exEn:"I relax on the weekend.",exCn:"我週末放鬆休息。"}
+    ],
+    sentences:[
+      {cn:"我每天七點起床。",en:"I get up at seven every day.",hint:"get up + 時間"},
+      {cn:"我在家吃早餐。",en:"I eat breakfast at home.",hint:"eat breakfast"},
+      {cn:"她搭公車去上班。",en:"She goes to work by bus.",hint:"by bus；第三人稱 goes"},
+      {cn:"我們中午吃午餐。",en:"We have lunch at noon.",hint:"have lunch"},
+      {cn:"你幾點起床？",en:"What time do you get up?",hint:"What time do you...?"},
+      {cn:"我晚上十一點睡覺。",en:"I go to bed at eleven.",hint:"go to bed"},
+      {cn:"我週末喜歡看電視。",en:"I like watching TV on the weekend.",hint:"like + V-ing"},
+      {cn:"我今天很累。",en:"I am tired today.",hint:"be 動詞 am"}
+    ],
+    quiz:[
+      {type:"mc",tag:"單字",q:"「早餐」的英文是？",options:["dinner","breakfast","lunch","school"],answer:1,explain:"breakfast 早餐；lunch 午餐；dinner 晚餐。"},
+      {type:"mc",tag:"單字",q:"「get up」是什麼意思？",options:["睡覺","起床","吃飯","上班"],answer:1,explain:"get up = 起床。"},
+      {type:"fill",tag:"be動詞",q:"I ___ tired today.",cn:"我今天很累。",answer:["am"],explain:"主詞 I 用 am。"},
+      {type:"fill",tag:"be動詞",q:"She ___ my sister.",cn:"她是我妹妹。",answer:["is"],explain:"主詞 she 用 is。"},
+      {type:"mc",tag:"現在式",q:"哪一句正確？",options:["She go to school.","She goes to school."],answer:1,explain:"第三人稱單數，動詞加 s：goes。"},
+      {type:"fill",tag:"介系詞",q:"I get up ___ seven o'clock.",cn:"我七點起床。",answer:["at"],explain:"幾點鐘用 at：at seven o'clock。"},
+      {type:"mc",tag:"單字",q:"「週末」的英文是？",options:["weekend","weekday","morning","night"],answer:0,explain:"weekend = 週末（週六日）。"},
+      {type:"fill",tag:"疑問句",q:"What time ___ you get up?",cn:"你幾點起床？",answer:["do"],explain:"一般動詞疑問句，主詞 you 用 do。"}
+    ],
+    article:{title:"My Morning",titleCn:"我的早晨",source:"A2 level",
+      paras:[
+        {en:"I get up at seven every morning. I wash my face and eat breakfast.",cn:"我每天早上七點起床。我洗臉並吃早餐。"},
+        {en:"Then I go to work by bus. I start work at nine.",cn:"然後我搭公車去上班。我九點開始工作。"},
+        {en:"I have lunch at noon with my friends. I am happy at work.",cn:"我中午和朋友一起吃午餐。我在工作時很開心。"}
+      ],
+      questions:[
+        {q:"What time does the writer get up?",opts:["A. six","B. seven","C. eight","D. nine"],ans:1,expl:"文章說 I get up at seven。七點。"},
+        {q:"How does the writer go to work?",opts:["A. by car","B. by bus","C. on foot","D. by train"],ans:1,expl:"go to work by bus，搭公車。"}
+      ]}
+  },
+  {
+    id:'a2-food', title:'A2 · 食物與飲料 Food & Drink',
+    vocab:[
+      {w:"apple",ipa:"/ˈæpl/",pos:"n.",cn:"蘋果",def:"a round red or green fruit.",exEn:"I eat an apple every day.",exCn:"我每天吃一顆蘋果。"},
+      {w:"water",ipa:"/ˈwɔːtə/",pos:"n.",cn:"水",def:"the clear liquid we drink.",exEn:"Can I have some water?",exCn:"可以給我一些水嗎？"},
+      {w:"rice",ipa:"/raɪs/",pos:"n.",cn:"米飯",def:"small white grains we eat.",exEn:"We eat rice for dinner.",exCn:"我們晚餐吃米飯。"},
+      {w:"milk",ipa:"/mɪlk/",pos:"n.",cn:"牛奶",def:"a white drink from cows.",exEn:"She drinks milk every morning.",exCn:"她每天早上喝牛奶。"},
+      {w:"egg",ipa:"/eɡ/",pos:"n.",cn:"蛋",def:"a food from a hen, with a shell.",exEn:"I like eggs for breakfast.",exCn:"我早餐喜歡吃蛋。"},
+      {w:"bread",ipa:"/bred/",pos:"n.",cn:"麵包",def:"a common food made from flour.",exEn:"I buy bread at the shop.",exCn:"我在店裡買麵包。"},
+      {w:"chicken",ipa:"/ˈtʃɪkɪn/",pos:"n.",cn:"雞肉",def:"the meat of a chicken.",exEn:"We have chicken for lunch.",exCn:"我們午餐吃雞肉。"},
+      {w:"tea",ipa:"/tiː/",pos:"n.",cn:"茶",def:"a hot drink made from leaves.",exEn:"Would you like some tea?",exCn:"你要喝點茶嗎？"},
+      {w:"hungry",ipa:"/ˈhʌŋɡri/",pos:"adj.",cn:"餓的",def:"wanting to eat.",exEn:"I am very hungry now.",exCn:"我現在很餓。"},
+      {w:"delicious",ipa:"/dɪˈlɪʃəs/",pos:"adj.",cn:"美味的",def:"tasting very good.",exEn:"This soup is delicious.",exCn:"這湯很好喝。"}
+    ],
+    sentences:[
+      {cn:"我現在很餓。",en:"I am very hungry now.",hint:"be 動詞 + hungry"},
+      {cn:"我喜歡蘋果。",en:"I like apples.",hint:"like + 複數"},
+      {cn:"你要一些水嗎？",en:"Do you want some water?",hint:"Do you want...?"},
+      {cn:"這道湯很美味。",en:"This soup is delicious.",hint:"is delicious"},
+      {cn:"她每天早上喝牛奶。",en:"She drinks milk every morning.",hint:"第三人稱 drinks"},
+      {cn:"可以給我菜單嗎？",en:"Can I have the menu, please?",hint:"Can I have...?"},
+      {cn:"我不吃肉。",en:"I don't eat meat.",hint:"don't + 原形"},
+      {cn:"這個多少錢？",en:"How much is it?",hint:"How much...?"}
+    ],
+    quiz:[
+      {type:"mc",tag:"單字",q:"「水」的英文是？",options:["milk","water","tea","rice"],answer:1,explain:"water = 水。"},
+      {type:"mc",tag:"單字",q:"「hungry」是什麼意思？",options:["渴的","飽的","餓的","累的"],answer:2,explain:"hungry = 餓的。"},
+      {type:"fill",tag:"疑問句",q:"___ you want some tea?",cn:"你要喝點茶嗎？",answer:["do"],explain:"一般動詞疑問句用 Do：Do you want...?"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",options:["I likes apples.","I like apples."],answer:1,explain:"主詞 I 用原形 like。"},
+      {type:"fill",tag:"否定句",q:"I ___ eat meat.",cn:"我不吃肉。",answer:["don't","do not"],explain:"主詞 I 的否定用 don't + 原形動詞。"},
+      {type:"mc",tag:"單字",q:"「delicious」是什麼意思？",options:["便宜的","美味的","辣的","冷的"],answer:1,explain:"delicious = 美味的。"},
+      {type:"fill",tag:"be動詞",q:"This soup ___ delicious.",cn:"這道湯很美味。",answer:["is"],explain:"主詞 this soup（單數）用 is。"},
+      {type:"mc",tag:"問價錢",q:"想問價錢，要說？",options:["How old is it?","How much is it?"],answer:1,explain:"問價錢用 How much is it?"}
+    ],
+    article:{title:"My Favorite Food",titleCn:"我最喜歡的食物",source:"A2 level",
+      paras:[
+        {en:"I like rice and chicken. They are my favorite food.",cn:"我喜歡米飯和雞肉。它們是我最愛的食物。"},
+        {en:"In the morning, I drink milk and eat bread.",cn:"早上我喝牛奶、吃麵包。"},
+        {en:"When I am hungry, I eat an apple. It is delicious.",cn:"當我餓的時候，我吃一顆蘋果。它很好吃。"}
+      ],
+      questions:[
+        {q:"What does the writer drink in the morning?",opts:["A. tea","B. water","C. milk","D. juice"],ans:2,expl:"文章說 I drink milk，喝牛奶。"},
+        {q:"What does the writer eat when hungry?",opts:["A. an apple","B. bread","C. chicken","D. rice"],ans:0,expl:"When I am hungry, I eat an apple。"}
+      ]}
+  },
+  {
+    id:'a2-people', title:'A2 · 人與感受 People & Feelings',
+    vocab:[
+      {w:"happy",ipa:"/ˈhæpi/",pos:"adj.",cn:"開心的",def:"feeling good and pleased.",exEn:"I am happy today.",exCn:"我今天很開心。"},
+      {w:"sad",ipa:"/sæd/",pos:"adj.",cn:"難過的",def:"feeling unhappy.",exEn:"She is sad because of the rain.",exCn:"她因為下雨而難過。"},
+      {w:"tired",ipa:"/ˈtaɪəd/",pos:"adj.",cn:"疲累的",def:"needing rest or sleep.",exEn:"I feel tired after work.",exCn:"下班後我覺得累。"},
+      {w:"family",ipa:"/ˈfæməli/",pos:"n.",cn:"家人／家庭",def:"your parents, brothers and sisters.",exEn:"I love my family.",exCn:"我愛我的家人。"},
+      {w:"friend",ipa:"/frend/",pos:"n.",cn:"朋友",def:"a person you like and know well.",exEn:"This is my best friend.",exCn:"這是我最好的朋友。"},
+      {w:"brother",ipa:"/ˈbrʌðə/",pos:"n.",cn:"兄弟",def:"a boy or man with the same parents as you.",exEn:"My brother is tall.",exCn:"我哥哥很高。"},
+      {w:"sister",ipa:"/ˈsɪstə/",pos:"n.",cn:"姊妹",def:"a girl or woman with the same parents as you.",exEn:"My sister likes music.",exCn:"我姊姊喜歡音樂。"},
+      {w:"tall",ipa:"/tɔːl/",pos:"adj.",cn:"高的",def:"having more than usual height.",exEn:"He is very tall.",exCn:"他很高。"},
+      {w:"kind",ipa:"/kaɪnd/",pos:"adj.",cn:"善良的",def:"nice and caring to other people.",exEn:"She is very kind.",exCn:"她很善良。"},
+      {w:"busy",ipa:"/ˈbɪzi/",pos:"adj.",cn:"忙碌的",def:"having a lot to do.",exEn:"Are you busy now?",exCn:"你現在忙嗎？"}
+    ],
+    sentences:[
+      {cn:"我今天很開心。",en:"I am happy today.",hint:"be 動詞 am + happy"},
+      {cn:"我哥哥很高。",en:"My brother is tall.",hint:"is + tall"},
+      {cn:"她很善良。",en:"She is very kind.",hint:"is very + 形容詞"},
+      {cn:"我覺得很累。",en:"I feel tired.",hint:"feel + 形容詞"},
+      {cn:"這是我最好的朋友。",en:"This is my best friend.",hint:"This is..."},
+      {cn:"你現在忙嗎？",en:"Are you busy now?",hint:"Are you...?"},
+      {cn:"我愛我的家人。",en:"I love my family.",hint:"love + 受詞"},
+      {cn:"我姊姊喜歡音樂。",en:"My sister likes music.",hint:"第三人稱 likes"}
+    ],
+    quiz:[
+      {type:"mc",tag:"單字",q:"「happy」是什麼意思？",options:["難過的","開心的","累的","忙的"],answer:1,explain:"happy = 開心的。"},
+      {type:"mc",tag:"單字",q:"「善良的」的英文是？",options:["kind","tall","busy","sad"],answer:0,explain:"kind = 善良的。"},
+      {type:"fill",tag:"be動詞",q:"My brother ___ tall.",cn:"我哥哥很高。",answer:["is"],explain:"主詞 my brother（單數）用 is。"},
+      {type:"fill",tag:"be動詞",q:"___ you busy now?",cn:"你現在忙嗎？",answer:["are"],explain:"主詞 you 的疑問句用 Are：Are you busy?"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",options:["My sister like music.","My sister likes music."],answer:1,explain:"第三人稱單數，動詞加 s：likes。"},
+      {type:"mc",tag:"單字",q:"「tired」是什麼意思？",options:["開心的","高的","累的","善良的"],answer:2,explain:"tired = 疲累的。"},
+      {type:"fill",tag:"代名詞",q:"This is my friend. ___ is very kind.",cn:"這是我朋友，她很善良。",answer:["she","he"],explain:"指人用 she/he 當主詞。"},
+      {type:"mc",tag:"單字",q:"「family」是什麼意思？",options:["朋友","家人","老師","同事"],answer:1,explain:"family = 家人／家庭。"}
+    ],
+    article:{title:"My Family",titleCn:"我的家人",source:"A2 level",
+      paras:[
+        {en:"I have a small family. I have one brother and one sister.",cn:"我有一個小家庭。我有一個哥哥和一個姊姊。"},
+        {en:"My brother is tall and kind. My sister likes music.",cn:"我哥哥又高又善良。我姊姊喜歡音樂。"},
+        {en:"I love my family. We are happy together.",cn:"我愛我的家人。我們在一起很開心。"}
+      ],
+      questions:[
+        {q:"How many brothers does the writer have?",opts:["A. one","B. two","C. three","D. none"],ans:0,expl:"I have one brother，一個哥哥。"},
+        {q:"What does the writer's sister like?",opts:["A. sports","B. music","C. food","D. books"],ans:1,expl:"My sister likes music，喜歡音樂。"}
+      ]}
+  }
+];
+const A2BY={};A2LESSONS.forEach(l=>A2BY[l.id]=l);
+function isTom(){return PROFILE==='tom';}
+function a2Scope(d){return d==='all'?A2LESSONS:(A2BY[d]?[A2BY[d]]:[]);}
+
+/* Tom 專用「近期幾課」A2 精選題（取材自各課真實單字 + A2 基礎文法）。
+   其餘課程由 autoQuizA2 自動出題。 */
+const TOMQUIZ={
+"20260708":{"title":"A Flight Problem 航班旅遊英文 A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「departure」的中文意思是？","options":["出發、離開","抵達","移民官","廚師"],"answer":0,"explain":"departure 指出發、離開。"},{"type":"mc","tag":"單字","q":"「抵達」的英文動詞是？","options":["depart","arrive","arrival","immigrate"],"answer":1,"explain":"arrive 是動詞，表示抵達。"},{"type":"mc","tag":"單字","q":"「immigration officer」的中文意思是？","options":["航空公司員工","移民官","廚師","乘客"],"answer":1,"explain":"immigration officer 指移民官、證照查驗官員。"},{"type":"mc","tag":"單字","q":"「航空公司櫃檯」的英文是？","options":["airline counter","ticket counter","immigration office","gate"],"answer":0,"explain":"airline counter 指航空公司櫃檯。"},{"type":"mc","tag":"單字","q":"「chef」的中文意思是？","options":["廚師","司機","官員","乘客"],"answer":0,"explain":"chef 指廚師。"},{"type":"fill","tag":"文法","q":"The arrival of the flight ___ delayed by an hour.","cn":"班機的抵達時間延誤了一小時。","answer":["was"],"explain":"過去式被動語態：was + p.p.。"},{"type":"fill","tag":"文法","q":"We ___ arrive in Paris tomorrow morning.","cn":"我們明天早上會抵達巴黎。","answer":["will"],"explain":"未來式用 will + 原形動詞。"},{"type":"trans","tag":"翻譯","q":"移民官要求查看我的回程票，一切都很順利。","answer":"The immigration officer asked to see my return ticket and everything was fine.","explain":"參考：The immigration officer asked to see my return ticket and everything was fine."},{"type":"trans","tag":"翻譯","q":"我可以透過航空公司的線上平台申請退款。","answer":"I could apply for a refund through the airline's online platform.","explain":"參考：I could apply for a refund through the airline's online platform."},{"type":"trans","tag":"翻譯","q":"你能安排一位司機來接你嗎？","answer":"Could you arrange a driver to pick you up?","explain":"參考：Could you arrange a driver to pick you up?"}]},
+"20260701":{"title":"假設語氣與火車購票英文 A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「timetable」的中文意思是？","options":["時刻表","月台","登機門","乘客"],"answer":0,"explain":"timetable 指時刻表。"},{"type":"mc","tag":"單字","q":"「單程票」的英文是？","options":["return ticket","one-way ticket","business class","ticket counter"],"answer":1,"explain":"one-way ticket 是單程票。"},{"type":"mc","tag":"單字","q":"「platform」的中文意思是？","options":["月台","登機門","售票櫃檯","乘客"],"answer":0,"explain":"platform 指火車月台。"},{"type":"mc","tag":"單字","q":"「取消手續費」的英文是？","options":["penalty","refund","cancellation fee","ticket counter"],"answer":2,"explain":"cancellation fee 指取消手續費。"},{"type":"mc","tag":"單字","q":"「passenger」的中文意思是？","options":["乘客","司機","員工","乘務員"],"answer":0,"explain":"passenger 指乘客。"},{"type":"fill","tag":"文法","q":"If I ___ one thousand dollars, I will book a business class flight to Japan.","cn":"如果我有一千美金，我會訂一張到日本的商務艙機票。","answer":["have"],"explain":"第一類條件句：If + 現在式, will + 原形。"},{"type":"fill","tag":"文法","q":"If I ___ in Taiwan now, I would visit my students.","cn":"如果我現在在台灣，我會去看我的學生。","answer":["were"],"explain":"第二類條件句 be動詞一律用 were。"},{"type":"trans","tag":"翻譯","q":"我需要火車時刻表。","answer":"I need the train timetable.","explain":"參考：I need the train timetable."},{"type":"trans","tag":"翻譯","q":"售票櫃檯在哪裡？","answer":"Where is the ticket counter?","explain":"參考：Where is the ticket counter?"},{"type":"trans","tag":"翻譯","q":"如果我有一台賓士車，我絕對不會開它去長途旅行。","answer":"If I had a Mercedes Benz, I would never take it on a road trip.","explain":"參考：If I had a Mercedes Benz, I would never take it on a road trip."}]},
+"20260625":{"title":"地震海嘯與日本旅行 A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「撤離」的英文動詞是？","options":["evacuate","damage","survive","shelter"],"answer":0,"explain":"evacuate 表示撤離。"},{"type":"mc","tag":"單字","q":"「survivor」的中文意思是？","options":["受害者","倖存者","居民","官員"],"answer":1,"explain":"survivor 指倖存者。"},{"type":"mc","tag":"單字","q":"「避難所」的英文是？","options":["shelter","coast","highlight","memory"],"answer":0,"explain":"shelter 指避難所。"},{"type":"mc","tag":"單字","q":"「fascinating」的中文意思是？","options":["無聊的","令人著迷的","危險的","普通的"],"answer":1,"explain":"fascinating 表示令人著迷的。"},{"type":"mc","tag":"單字","q":"「感激的」的英文是？","options":["grateful","graceful","grateless","greatful"],"answer":0,"explain":"grateful 表示感激的，注意拼字。"},{"type":"fill","tag":"文法","q":"Residents ___ told to evacuate immediately.","cn":"居民被告知立即撤離。","answer":["were"],"explain":"residents 是複數，過去式被動用 were。"},{"type":"fill","tag":"文法","q":"A tsunami ___ the coast after the earthquake.","cn":"地震後，海嘯侵襲了海岸。","answer":["hit"],"explain":"hit 過去式與現在式同形。"},{"type":"trans","tag":"翻譯","q":"地震損毀了城市裡許多建築。","answer":"The earthquake damaged many buildings in the city.","explain":"參考：The earthquake damaged many buildings in the city."},{"type":"trans","tag":"翻譯","q":"倖存者被帶到附近的避難所。","answer":"Survivors were taken to a nearby shelter.","explain":"參考：Survivors were taken to a nearby shelter."},{"type":"trans","tag":"翻譯","q":"我希望有一天能再次造訪這座迷人的城市。","answer":"I hope to visit this fascinating city again one day.","explain":"參考：I hope to visit this fascinating city again one day."}]},
+"20260624":{"title":"過去習慣與生活片語 A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"文法","q":"「以前習慣做某事」的文法是？","options":["used to + V","be used to Ving","use to","get used to"],"answer":0,"explain":"used to + 原形動詞，表示過去的習慣。"},{"type":"mc","tag":"單字","q":"「空腹」的英文怎麼說？","options":["on an empty stomach","first thing in the morning","keep up with","figure out"],"answer":0,"explain":"on an empty stomach 表示空腹。"},{"type":"mc","tag":"單字","q":"「聰明機靈的人」的英文俚語是？","options":["smart cookie","sharp knife","quick fox","clever cat"],"answer":0,"explain":"smart cookie 是口語用法，指聰明機靈的人。"},{"type":"mc","tag":"單字","q":"「figure out」的中文意思是？","options":["低估","解出、弄懂","跟上","忽略"],"answer":1,"explain":"figure out 表示解出、弄懂。"},{"type":"mc","tag":"單字","q":"「keep up with」的中文意思是？","options":["放棄","超越","跟上、維持","停止"],"answer":2,"explain":"keep up with 表示跟上、維持。"},{"type":"fill","tag":"文法","q":"He ___ smoke, but now he doesn't.","cn":"他以前會抽菸，但現在不抽了。","answer":["used to"],"explain":"used to + V 表示過去的習慣，現在已不再。"},{"type":"fill","tag":"文法","q":"Don't drink coffee ___ an empty stomach.","cn":"空腹時不要喝咖啡。","answer":["on"],"explain":"on an empty stomach 是固定介系詞用法。"},{"type":"trans","tag":"翻譯","q":"我以前住在台灣。","answer":"I used to live in Taiwan.","explain":"參考：I used to live in Taiwan."},{"type":"trans","tag":"翻譯","q":"她很快就解出了謎題，真是個機靈的人。","answer":"She figured out the puzzle quickly, she's a smart cookie.","explain":"參考：She figured out the puzzle quickly—she's a smart cookie."},{"type":"trans","tag":"翻譯","q":"每天跟上新聞真的很難。","answer":"It's hard to keep up with the news every day.","explain":"參考：It's hard to keep up with the news every day."}]},
+"20260618":{"title":"blow片語、情緒形容詞與天氣 A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「疲憊的（人的感受）」的英文是？","options":["tired","tiring","bored","boring"],"answer":0,"explain":"-ed 形容詞描述人的感受。"},{"type":"mc","tag":"單字","q":"「boring」的中文意思是？","options":["無聊的（人的感受）","令人無聊的（事物的特質）","興奮的","有趣的"],"answer":1,"explain":"-ing 形容詞描述事物的特質。"},{"type":"mc","tag":"單字","q":"「紓解壓力」的片語是？","options":["blow away","blow over","blow off steam","blow down"],"answer":2,"explain":"blow off steam 表示紓解壓力、發洩情緒。"},{"type":"mc","tag":"單字","q":"「humid」的中文意思是？","options":["濕度","潮濕的","多變的","陰涼處"],"answer":1,"explain":"humid 是形容詞，指潮濕的。"},{"type":"mc","tag":"單字","q":"「土石流」的英文是？","options":["rockfall","landslide","mud","crack"],"answer":1,"explain":"landslide 指山崩、土石流。"},{"type":"fill","tag":"文法","q":"She felt ___ before the exam.","cn":"考試前她壓力很大。","answer":["stressed out"],"explain":"stressed out 描述人的感受。"},{"type":"fill","tag":"文法","q":"The kids ___ excited about the trip.","cn":"孩子們對這次旅行很興奮。","answer":["were"],"explain":"kids 是複數，過去式be動詞用 were。"},{"type":"trans","tag":"翻譯","q":"強風把我的雨傘吹走了。","answer":"The strong wind blew away my umbrella.","explain":"參考：The strong wind blew away my umbrella."},{"type":"trans","tag":"翻譯","q":"地震使道路龜裂。","answer":"The earthquake cracked the roads.","explain":"參考：The earthquake cracked the roads."},{"type":"trans","tag":"翻譯","q":"夏天中午通常有一場陣雨。","answer":"There is usually a shower at noon in the summer.","explain":"參考：There is usually a shower at noon in the summer."}]},
+"20260611":{"title":"颱風與天氣描述 A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「登陸」的英文片語是？","options":["land","make landfall","take off","arrive"],"answer":1,"explain":"make landfall 常用於颱風、颶風登陸。"},{"type":"mc","tag":"單字","q":"「approaching」的中文意思是？","options":["即將來臨","已經過去","吹倒","取消"],"answer":0,"explain":"be approaching 表示即將來臨、逼近中。"},{"type":"mc","tag":"單字","q":"「下毛毛雨」的英文動詞是？","options":["rain","drizzle","pour","shower"],"answer":1,"explain":"drizzle 專指下毛毛雨。"},{"type":"mc","tag":"單字","q":"「blow down」的中文意思是？","options":["吹倒（樹木、電線等）","吹走","吹過","取消"],"answer":0,"explain":"blow down 指強風把高聳物吹倒。"},{"type":"fill","tag":"文法","q":"A typhoon ___ approaching.","cn":"颱風即將來臨。","answer":["is"],"explain":"typhoon 是單數，be動詞用 is。"},{"type":"fill","tag":"文法","q":"The air ___ full of dust.","cn":"空氣中充滿了灰塵。","answer":["is"],"explain":"air 是單數，be動詞用 is。"},{"type":"trans","tag":"翻譯","q":"它將會登陸台灣。","answer":"It will make landfall in Taiwan.","explain":"參考：It will make landfall in Taiwan."},{"type":"trans","tag":"翻譯","q":"老樹被強風吹倒了。","answer":"The old tree was blown down by strong wind.","explain":"參考：The old tree was blown down by strong wind."},{"type":"trans","tag":"翻譯","q":"因為颱風，我朋友取消了我們的計畫。","answer":"Because of the typhoon, my friend cancelled our plans.","explain":"參考：Because of the typhoon, my friend cancelled our plans."},{"type":"mc","tag":"單字","q":"「台灣很少下冰雹」中 rarely 的意思是？","options":["經常","很少","總是","從不"],"answer":1,"explain":"rarely 表示很少發生。"}]},
+"20260609":{"title":"洪水與圖片描述 A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「flooded」的中文意思是？","options":["已被淹沒的","雨衣","車輛","一次性的"],"answer":0,"explain":"flooded 指已被淹沒的狀態（結果）。"},{"type":"mc","tag":"單字","q":"「正在淹水（動態進行）」的英文是？","options":["flooded","flooding","polluted","disposable"],"answer":1,"explain":"flooding 是進行式，強調正在發生的動作。"},{"type":"mc","tag":"單字","q":"「raincoat」的中文意思是？","options":["雨衣","冰雹","馬尾","口罩"],"answer":0,"explain":"raincoat 就是雨衣。"},{"type":"mc","tag":"單字","q":"「車輛（統稱）」的英文是？","options":["raincoat","vehicle","hail","ponytail"],"answer":1,"explain":"vehicle 指車輛的統稱。"},{"type":"mc","tag":"單字","q":"「hail」的中文意思是？","options":["冰雹","雨衣","污染","登陸"],"answer":0,"explain":"hail 是冰雹的意思。"},{"type":"fill","tag":"文法","q":"The roads ___ flooded after the typhoon.","cn":"颱風過後道路被淹沒了。","answer":["are"],"explain":"be動詞現在式複數用 are。"},{"type":"fill","tag":"文法","q":"It seems the air ___ polluted because there are too many vehicles.","cn":"看起來空氣很髒，因為路上有太多車輛。","answer":["is"],"explain":"air 是單數，be動詞用 is。"},{"type":"trans","tag":"翻譯","q":"路面被淹沒了。","answer":"The roads are flooded.","explain":"參考：The roads are flooded."},{"type":"trans","tag":"翻譯","q":"他決定不穿雨衣，因為只是毛毛雨。","answer":"He decided not to wear a raincoat because it was only drizzling.","explain":"參考：He decided not to wear a raincoat because it was only drizzling."},{"type":"trans","tag":"翻譯","q":"颶風預計明天早上登陸。","answer":"The hurricane is projected to make landfall tomorrow morning.","explain":"參考：The hurricane is projected to make landfall tomorrow morning."}]},
+"20260604":{"title":"各種天氣描述 A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「thunderstorm」的中文意思是？","options":["雷雨、雷暴","沙塵暴","龍捲風","冰雹顆粒"],"answer":0,"explain":"thunderstorm 指打雷下雨的暴風雨。"},{"type":"mc","tag":"單字","q":"「預報」的英文是？","options":["predict","forecast","issue","alarm"],"answer":1,"explain":"forecast 常指天氣預報。"},{"type":"mc","tag":"單字","q":"「predict」的中文意思是？","options":["預測","預報","發布","警報聲"],"answer":0,"explain":"predict 是動詞，表示預測某事。"},{"type":"mc","tag":"單字","q":"「獨特的」的英文是？","options":["suddenly","basement","unique","spoil"],"answer":2,"explain":"unique 表示獨一無二的。"},{"type":"mc","tag":"單字","q":"「basement」的中文意思是？","options":["地下室","護照","警報器","雪球"],"answer":0,"explain":"basement 指房屋的地下室。"},{"type":"mc","tag":"單字","q":"「由於、因為」的英文是？","options":["due to","issue","strike","forecast"],"answer":0,"explain":"due to 後面接名詞，表示原因。"},{"type":"mc","tag":"單字","q":"「siren」的中文意思是？","options":["（公共防空/防災）警報聲","鬧鐘","冰雹顆粒","雪球"],"answer":0,"explain":"siren 指防災警報聲。"},{"type":"fill","tag":"文法","q":"The weather ___ says it will rain tomorrow.","cn":"天氣預報說明天會下雨。","answer":["forecast"],"explain":"weather forecast 是固定用法，指天氣預報。"},{"type":"fill","tag":"文法","q":"A tornado warning has been ___.","cn":"龍捲風警報已經發布了。","answer":["issued"],"explain":"has been + 過去分詞 issued，被動語態。"},{"type":"trans","tag":"翻譯","q":"龍捲風警報已經發布了。","answer":"A tornado warning has been issued.","explain":"參考：A tornado warning has been issued."}]},
+"20260602":{"title":"scare / time gap A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「scared」的中文意思是？","options":["感到害怕的（形容人）","令人害怕的（形容事物）","嚇到、使驚嚇","苦的"],"answer":0,"explain":"scared 形容人感到害怕的心情。"},{"type":"mc","tag":"單字","q":"「令人害怕的（描述事物本身）」的英文是？","options":["scared","scary","terrified","bitter"],"answer":1,"explain":"scary 形容事物本身很可怕。"},{"type":"mc","tag":"單字","q":"「terrified」的中文意思是？","options":["極度害怕的、恐懼的","害怕的","苦的","嚇到"],"answer":0,"explain":"terrified 比 scared 程度更深，表示非常害怕。"},{"type":"mc","tag":"單字","q":"「嚇到、使驚嚇」的英文是？","options":["scared","scare","scary","bitter"],"answer":1,"explain":"scare 是動詞，表示使某人害怕。"},{"type":"mc","tag":"單字","q":"「bitter」的中文意思是？","options":["苦的","酸的","鹹的","甜的"],"answer":0,"explain":"bitter 指苦味，例如茶泡太久。"},{"type":"fill","tag":"文法","q":"Walking alone at midnight is ___.","cn":"半夜一個人走路很可怕。","answer":["scary"],"explain":"be動詞 is 後接形容詞 scary 描述事物。"},{"type":"fill","tag":"文法","q":"I ___ of snakes.","cn":"我很怕蛇。","answer":["am scared","'m scared"],"explain":"be動詞 am + scared，第一人稱用 am。"},{"type":"trans","tag":"翻譯","q":"日本比台灣快一小時。","answer":"Japan is 1 hour ahead of Taiwan.","explain":"參考：Japan is 1 hour ahead of Taiwan."},{"type":"trans","tag":"翻譯","q":"冬天時，加州比台灣慢 16 個小時。","answer":"In winter, California is 16 hours behind Taiwan.","explain":"參考：In winter, California is 16 hours behind Taiwan."}]},
+"20260528":{"title":"taste & damp A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「salty」的中文意思是？","options":["鹹的","酸的","清淡的","潮濕的"],"answer":0,"explain":"salty 指鹹味。"},{"type":"mc","tag":"單字","q":"「酸的」的英文是？","options":["salty","sour","bland","damp"],"answer":1,"explain":"sour 指食物酸味。"},{"type":"mc","tag":"單字","q":"「bland」的中文意思是？","options":["清淡的、無刺激性的","鹹的","有霉味的","微濕的"],"answer":0,"explain":"bland 形容食物清淡沒有刺激味道。"},{"type":"mc","tag":"單字","q":"「微濕的、潮濕的」的英文是？","options":["musty","bland","damp","sour"],"answer":2,"explain":"damp 表示微濕的狀態。"},{"type":"mc","tag":"單字","q":"「musty」的中文意思是？","options":["有霉味的、有陳腐氣味的","鹹的","酸的","清淡的"],"answer":0,"explain":"musty 指潮濕發霉的氣味。"},{"type":"fill","tag":"文法","q":"I took a bite and realized the soup was too ___.","cn":"我吃了一口才發現那湯太鹹了。","answer":["salty"],"explain":"too + 形容詞 salty 表示太鹹。"},{"type":"fill","tag":"文法","q":"The clothes smell ___ because the room is too damp.","cn":"衣服聞起來有一股霉味，因為房間太潮濕了。","answer":["musty"],"explain":"smell + 形容詞 musty 表示聞起來有霉味。"},{"type":"trans","tag":"翻譯","q":"衣服洗完後還是晾得微濕。","answer":"My clothes are still damp after washing.","explain":"參考：My clothes are still damp after washing."}]},
+"20260526":{"title":"spoiled, rotten A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「perishable」的中文意思是？","options":["易腐壞的","腐爛的","變質的","令人垂涎的"],"answer":0,"explain":"perishable 指容易腐壞的食物。"},{"type":"mc","tag":"單字","q":"「變質的、壞掉的」的英文是？","options":["rotten","spoiled","perishable","mouth-watering"],"answer":1,"explain":"spoiled 表示食物變質。"},{"type":"mc","tag":"單字","q":"「rotten」的中文意思是？","options":["腐爛的（比 spoiled 嚴重）","易腐壞的","變質的","令人垂涎的"],"answer":0,"explain":"rotten 比 spoiled 更嚴重，指徹底腐爛。"},{"type":"mc","tag":"單字","q":"「令人垂涎的」的英文是？","options":["perishable","rotten","mouth-watering","spoiled"],"answer":2,"explain":"mouth-watering 形容食物香氣誘人。"},{"type":"fill","tag":"文法","q":"Fish and meat are ___ foods.","cn":"魚和肉是易腐壞的食物。","answer":["perishable"],"explain":"複數名詞 foods 前用形容詞 perishable。"},{"type":"fill","tag":"文法","q":"The food was ___ — there was green mold on it.","cn":"食物已經腐爛，上面長了綠色的黴菌。","answer":["rotten"],"explain":"be動詞 was 後接形容詞 rotten。"},{"type":"trans","tag":"翻譯","q":"我在炎熱的天氣中失去食慾。","answer":"I lose my appetite in hot weather.","explain":"參考：I lose my appetite in hot weather."}]},
+"20260521":{"title":"join, attend A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「appetite」的中文意思是？","options":["食慾、胃口","舒服的","持久的","療癒的"],"answer":0,"explain":"appetite 指對食物的慾望。"},{"type":"mc","tag":"單字","q":"「舒服的、舒適的」的英文是？","options":["comfortable","comforting","lasting","appetite"],"answer":0,"explain":"comfortable 形容感覺舒服自在。"},{"type":"mc","tag":"單字","q":"「comforting」的中文意思是？","options":["令人寬慰的、療癒的","食慾","持久的","舒適的"],"answer":0,"explain":"comforting 形容事物讓人感到安慰。"},{"type":"mc","tag":"單字","q":"「長期的、持久的」的英文是？","options":["comfortable","appetite","lasting","comforting"],"answer":2,"explain":"lasting 表示持續長久的。"},{"type":"fill","tag":"文法","q":"I feel very ___ in my new job.","cn":"我在新工作裡感到非常自在。","answer":["comfortable"],"explain":"feel comfortable 表示感到自在。"},{"type":"fill","tag":"文法","q":"Good habits have ___ benefits for your health.","cn":"良好的習慣對健康有長期的好處。","answer":["lasting"],"explain":"lasting benefits 指長期的好處。"},{"type":"trans","tag":"翻譯","q":"她的話語在壞消息後給了人很大的寬慰。","answer":"Her words were very comforting after the bad news.","explain":"參考：Her words were very comforting after the bad news."}]},
+"20260519":{"title":"Stuck vs. Blocked A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「fluctuate」的中文意思是？","options":["波動、起伏不定","卡住的","擔憂","舒服的"],"answer":0,"explain":"fluctuate 指數量、價格上下起伏。"},{"type":"mc","tag":"單字","q":"「卡住的、困住的」的英文是？","options":["fluctuate","stuck","concern","comfortable"],"answer":1,"explain":"stuck 表示卡住、困住的狀態。"},{"type":"mc","tag":"單字","q":"「concern」的中文意思是？","options":["擔憂、關注","波動","卡住","舒服"],"answer":0,"explain":"concern 指擔心、關注的事。"},{"type":"mc","tag":"單字","q":"「波動、起伏不定」的英文是？","options":["stuck","concern","fluctuate","frustrated"],"answer":2,"explain":"fluctuate 表示波動不定。"},{"type":"fill","tag":"文法","q":"Gas prices ___ every week.","cn":"油價每週波動。","answer":["fluctuate"],"explain":"複數主詞 prices，動詞用原形 fluctuate。"},{"type":"fill","tag":"文法","q":"Our customer expressed ___ about the quality.","cn":"我們的客戶對品質表示擔憂。","answer":["concern"],"explain":"express concern 表示表達擔憂。"},{"type":"trans","tag":"翻譯","q":"有時候我嘗試說英文時會卡卡的。","answer":"Sometimes I get stuck when I try to speak English.","explain":"參考：Sometimes I get stuck when I try to speak English."}]},
+"20260514":{"title":"worry / -ing vs -ed A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「感到沮喪的（形容人）」的英文是？","options":["frustrating","frustrated","confused","tired"],"answer":1,"explain":"frustrated 形容「人」的感受，字尾 -ed。"},{"type":"mc","tag":"單字","q":"「frustrating」的中文意思是？","options":["令人挫折的","感到沮喪的","忙碌的","興奮的"],"answer":0,"explain":"frustrating 形容「事物」讓人感到挫折，字尾 -ing。"},{"type":"mc","tag":"單字","q":"「令人挫折的（形容事物）」的英文是？","options":["frustrated","annoying","frustrating","tired"],"answer":2,"explain":"frustrating 用來形容事物本身。"},{"type":"mc","tag":"單字","q":"「frustrated」的中文意思是？","options":["感到沮喪的","令人興奮的","忙碌的","緊張的"],"answer":0,"explain":"frustrated 是人的感受，字尾 -ed。"},{"type":"fill","tag":"文法","q":"English grammar can be ___ at times.","cn":"英文文法有時令人感到挫折。","answer":["frustrating"],"explain":"文法本身讓人挫折，用 frustrating。"},{"type":"trans","tag":"翻譯","q":"當我無法表達想法時，我感到很沮喪。","answer":"I feel frustrated when I can't express my ideas.","explain":"參考：I feel frustrated when I can't express my ideas."}]},
+"20260512":{"title":"Making Progress A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「熱情的、熱衷的」的英文是？","options":["enthusiastic","motivated","obvious","intermediate"],"answer":0,"explain":"enthusiastic 表示「熱情的」。"},{"type":"mc","tag":"單字","q":"「motivated」的中文意思是？","options":["積極的、充滿動力的","熱情的","明顯的","中級的"],"answer":0,"explain":"motivated 表示「積極的、有動力的」。"},{"type":"mc","tag":"單字","q":"「發音」的英文是？","options":["pronunciation","obvious","intermediate","motivated"],"answer":0,"explain":"pronunciation 表示「發音」。"},{"type":"mc","tag":"單字","q":"「obvious」的中文意思是？","options":["明顯的、顯而易見的","中級的","發音","熱情的"],"answer":0,"explain":"obvious 表示「明顯的」。"},{"type":"mc","tag":"單字","q":"「中級的、中階的」的英文是？","options":["intermediate","obvious","pronunciation","enthusiastic"],"answer":0,"explain":"intermediate 表示「中級的」。"},{"type":"fill","tag":"文法","q":"I am highly ___ to improve my English.","cn":"我非常有動力提升我的英文。","answer":["motivated"],"explain":"motivated 表示「有動力的」，be動詞後接形容詞。"},{"type":"fill","tag":"文法","q":"After a while, my ___ improved a lot.","cn":"過了一段時間，我的發音進步了很多。","answer":["pronunciation"],"explain":"pronunciation 是名詞，作主詞。"},{"type":"trans","tag":"翻譯","q":"我非常熱情且充滿動力。","answer":"I was very enthusiastic and motivated.","explain":"參考：I was very enthusiastic and motivated."},{"type":"trans","tag":"翻譯","q":"很明顯地，我正在變得更好。","answer":"It was obvious that I was getting better.","explain":"參考：It was obvious that I was getting better."}]},
+"20260507":{"title":"偏頭痛與一對一課程 A2","subtitle":"A2 精選題","questions":[{"type":"trans","tag":"翻譯","q":"我下班後偏頭痛得很厲害，所以我吃了一顆止痛藥並休息了。","answer":"I had a terrible migraine after work, so I took a painkiller and rested.","explain":"參考：I had a terrible migraine after work, so I took a painkiller and rested."},{"type":"trans","tag":"翻譯","q":"每週上一對一的課程真的幫助我提升了英文能力。","answer":"Having a one-on-one class every week really helps me boost my English skills.","explain":"參考：Having a one-on-one class every week really helps me boost my English skills."},{"type":"mc","tag":"單字","q":"「偏頭痛」的英文是？","options":["migraine","painkiller","boost","one-on-one"],"answer":0,"explain":"migraine 表示「偏頭痛」。"},{"type":"mc","tag":"單字","q":"「boost」的中文意思是？","options":["提升、增強","偏頭痛","止痛藥","一對一"],"answer":0,"explain":"boost 表示「提升、增強」。"},{"type":"fill","tag":"文法","q":"I had a terrible migraine, so I took a ___ and rested.","cn":"我偏頭痛得很厲害，所以我吃了一顆止痛藥並休息了。","answer":["painkiller"],"explain":"painkiller 表示「止痛藥」。"},{"type":"fill","tag":"文法","q":"Having a one-on-one class every week really helps me ___ my English skills.","cn":"每週上一對一的課程真的幫助我提升了英文能力。","answer":["boost"],"explain":"boost 表示「提升」。"}]},
+"20260423":{"title":"農夫與動物 A2","subtitle":"A2 精選題","questions":[{"type":"trans","tag":"翻譯","q":"農夫因為家裡太吵而無法專心。","answer":"The farmer could not concentrate because his house was so noisy.","explain":"參考：The farmer could not concentrate because his house was so noisy."},{"type":"trans","tag":"翻譯","q":"人們應該學會滿足於自己所擁有的。","answer":"People should learn to be content with what they have.","explain":"參考：People should learn to be content with what they have."},{"type":"trans","tag":"翻譯","q":"她對所有的動物哄勸進屋的建議感到非常驚訝。","answer":"She was surprised by the suggestion to coax all the animals inside the house.","explain":"參考：She was surprised by the suggestion to coax all the animals inside the house."},{"type":"mc","tag":"單字","q":"「專心」的英文是？","options":["concentrate","content","coax","suggestion"],"answer":0,"explain":"concentrate 表示「專心」。"},{"type":"mc","tag":"單字","q":"「coax」的中文意思是？","options":["哄勸","專心","滿足","建議"],"answer":0,"explain":"coax 表示「哄勸、勸誘」。"},{"type":"fill","tag":"文法","q":"The farmer could not ___ because his house was so noisy.","cn":"農夫因為家裡太吵而無法專心。","answer":["concentrate"],"explain":"could not 後面接原形動詞 concentrate。"},{"type":"fill","tag":"文法","q":"People should learn to be ___ with what they have.","cn":"人們應該學會滿足於自己所擁有的。","answer":["content"],"explain":"be content with 表示「滿足於」。"}]},
+"20260409":{"title":"Household equipment A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「協商、談判」的英文是？","options":["negotiate","clash","reschedule","cancel"],"answer":0,"explain":"negotiate 表示「協商、談判」。"},{"type":"mc","tag":"單字","q":"「clash」的中文意思是？","options":["衝突、撞期","協商、談判","重新安排時間","取消"],"answer":0,"explain":"clash 表示（時間）衝突、撞期。"},{"type":"mc","tag":"單字","q":"「重新安排時間」的英文是？","options":["reschedule","clash","negotiate","cancel"],"answer":0,"explain":"reschedule 表示「重新安排時間」。"},{"type":"fill","tag":"文法","q":"The two meetings ___, so we need to reschedule.","cn":"兩個會議時間衝突，需要重新安排。","answer":["clash"],"explain":"clash 表示時間上互相衝突。"},{"type":"fill","tag":"文法","q":"Can we ___ the meeting to Thursday?","cn":"我們可以把會議改到週四嗎？","answer":["reschedule"],"explain":"reschedule 表示「重新安排」。"},{"type":"fill","tag":"文法","q":"He is trying to ___ a higher salary.","cn":"他正試著協商更高的薪資。","answer":["negotiate"],"explain":"try to 後面接原形動詞 negotiate。"},{"type":"trans","tag":"翻譯","q":"他在出差前正試著協商更高的薪資。","answer":"He is trying to negotiate a higher salary before his business trip.","explain":"參考：He is trying to negotiate a higher salary before his business trip."}]},
+"20260407":{"title":"清明節與室友生活 A2","subtitle":"A2 精選題","questions":[{"type":"trans","tag":"翻譯","q":"在清明節期間，許多人長途跋涉返鄉。","answer":"During Tomb Sweeping Day, many people travel long distances to return home.","explain":"參考：During Tomb Sweeping Day, many people travel long distances to return home."},{"type":"trans","tag":"翻譯","q":"我們燒紙錢作為給祖先的祭品。","answer":"We burn paper money as offerings for our ancestors.","explain":"參考：We burn paper money as offerings for our ancestors."},{"type":"trans","tag":"翻譯","q":"室友們需要協商家事，以便每個人都能公平地分擔工作。","answer":"Roommates need to negotiate chores so everyone shares the work fairly.","explain":"參考：Roommates need to negotiate chores so everyone shares the work fairly."},{"type":"mc","tag":"單字","q":"「祖先」的英文是？","options":["ancestors","offerings","roommates","chores"],"answer":0,"explain":"ancestors 表示「祖先」。"},{"type":"mc","tag":"單字","q":"「negotiate」的中文意思是？","options":["協商、談判","燒、焚燒","返鄉","分擔"],"answer":0,"explain":"negotiate 表示「協商、談判」。"},{"type":"fill","tag":"文法","q":"Roommates need to ___ chores so everyone shares the work fairly.","cn":"室友們需要協商家事，公平分擔工作。","answer":["negotiate"],"explain":"need to 後面接原形動詞 negotiate。"},{"type":"fill","tag":"文法","q":"We burn paper money as ___ for our ancestors.","cn":"我們燒紙錢作為給祖先的祭品。","answer":["offerings","an offering"],"explain":"offerings 表示「祭品」。"}]},
+"20260331":{"title":"Progress & Expression A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「有效地」的英文是？","options":["effectively","accurately","encouraging","enthusiasm"],"answer":0,"explain":"effectively 表示「有效地」。"},{"type":"mc","tag":"單字","q":"「encouraging」的中文意思是？","options":["令人鼓舞的","準確地","熱情、熱忱","有效地"],"answer":0,"explain":"encouraging 表示「令人鼓舞的」。"},{"type":"mc","tag":"單字","q":"「準確地、精確地」的英文是？","options":["accurately","effectively","enthusiasm","encouraging"],"answer":0,"explain":"accurately 表示「準確地」。"},{"type":"mc","tag":"單字","q":"「enthusiasm」的中文意思是？","options":["熱情、熱忱","令人鼓舞的","準確地","有效地"],"answer":0,"explain":"enthusiasm 表示「熱情、熱忱」。"},{"type":"fill","tag":"文法","q":"She shows lots of ___ for her job.","cn":"她對工作展現出極大的熱忱。","answer":["enthusiasm"],"explain":"lots of 後面接名詞 enthusiasm。"},{"type":"fill","tag":"文法","q":"I passed the test, which was very ___.","cn":"我通過了測驗，這非常令人鼓舞。","answer":["encouraging"],"explain":"encouraging 描述事情令人感到鼓舞。"},{"type":"fill","tag":"文法","q":"I couldn't use the new words ___ at first.","cn":"一開始我無法準確地使用新單字。","answer":["accurately"],"explain":"accurately 修飾動詞 use，是副詞。"},{"type":"trans","tag":"翻譯","q":"儘管下雨，我們還是去散步了。","answer":"Despite the rain, we went for a walk.","explain":"參考：Despite the rain, we went for a walk."}]},
+"20260326":{"title":"調整與辨識 A2","subtitle":"A2 精選題","questions":[{"type":"trans","tag":"翻譯","q":"我們需要調整設計，以符合國外的安全標準。","answer":"We need to adjust the design to meet foreign safety standards.","explain":"參考：We need to adjust the design to meet foreign safety standards."},{"type":"trans","tag":"翻譯","q":"我沒認出他，因為他當時戴著口罩。","answer":"I didn't recognize him because he was wearing a mask.","explain":"參考：I didn't recognize him because he was wearing a mask."},{"type":"trans","tag":"翻譯","q":"我記錄我的學習進度，這樣我就能找出任何問題。","answer":"I keep a record of my learning progress so I can identify any problems.","explain":"參考：I keep a record of my learning progress so I can identify any problems."},{"type":"mc","tag":"單字","q":"「辨認、認出」的英文是？","options":["recognize","adjust","identify","record"],"answer":0,"explain":"recognize 表示「認出、辨識」。"},{"type":"mc","tag":"單字","q":"「identify」的中文意思是？","options":["調整","認出","記錄","找出、確認"],"answer":3,"explain":"identify 意思是「找出、確認」。"},{"type":"fill","tag":"文法","q":"I didn't ___ him because he was wearing a mask.","cn":"我沒認出他，因為他當時戴著口罩。","answer":["recognize"],"explain":"didn't 後面接原形動詞 recognize。"},{"type":"fill","tag":"文法","q":"We need to ___ the design to meet safety standards.","cn":"我們需要調整設計以符合安全標準。","answer":["adjust"],"explain":"adjust 表示「調整」。"}]},
+"20260319":{"title":"房東與租屋 A2","subtitle":"A2 精選題","questions":[{"type":"trans","tag":"翻譯","q":"房東決定今年要增加房租，所以我必須決定要留下還是搬走。","answer":"The landlord decided to increase the rent this year, so I had to decide whether to stay or move.","explain":"參考：The landlord decided to increase the rent this year, so I had to decide whether to stay or move."},{"type":"trans","tag":"翻譯","q":"住在這裡幫助我提升了溝通和耐心等技能。","answer":"Living here helped me improve my skills, like communication and patience.","explain":"參考：Living here helped me improve my skills, like communication and patience."},{"type":"mc","tag":"單字","q":"「房東」的英文是？","options":["landlord","tenant","neighbor","agent"],"answer":0,"explain":"landlord = 房東。"},{"type":"mc","tag":"單字","q":"「patience」的中文意思是？","options":["耐心","溝通","技能","房租"],"answer":0,"explain":"patience = 耐心。"},{"type":"fill","tag":"文法","q":"The landlord ___ (decide) to increase the rent this year.","cn":"房東決定今年要增加房租。","answer":["decided"],"explain":"decide 的過去式為 decided。"},{"type":"fill","tag":"文法","q":"Living here helped me ___ (improve) my skills.","cn":"住在這裡幫助我提升了我的技能。","answer":["improve"],"explain":"help + 受詞 + 原形動詞。"}]},
+"20260317":{"title":"感受與工作 A2","subtitle":"A2 精選題","questions":[{"type":"trans","tag":"翻譯","q":"她的經理給了她很好的回饋，所以她今天感到如釋重負。","answer":"Her manager gave her good feedback, so she feels relieved today.","explain":"參考：Her manager gave her good feedback, so she feels relieved today."},{"type":"trans","tag":"翻譯","q":"昨天她有點失望，因為一個專案進行得不順利。","answer":"Yesterday, she was a little disappointed because a project did not go well.","explain":"參考：Yesterday, she was a little disappointed because a project did not go well."},{"type":"mc","tag":"單字","q":"「如釋重負的」的英文是？","options":["relieved","disappointed","excited","tired"],"answer":0,"explain":"relieved = 如釋重負的。"},{"type":"mc","tag":"單字","q":"「disappointed」的中文意思是？","options":["失望的","開心的","如釋重負的","緊張的"],"answer":0,"explain":"disappointed = 失望的。"},{"type":"fill","tag":"文法","q":"Yesterday, she ___ a little disappointed.","cn":"昨天她有點失望。","answer":["was"],"explain":"過去式 be動詞，she 用 was。"},{"type":"fill","tag":"文法","q":"Her manager ___ (give) her good feedback.","cn":"她的經理給了她很好的回饋。","answer":["gave"],"explain":"give 的過去式為 gave。"}]},
+"20260312":{"title":"通勤與保暖 A2","subtitle":"A2 精選題","questions":[{"type":"trans","tag":"翻譯","q":"我每天早上騎機車通勤上班，大約需要 20 分鐘。","answer":"I ride a scooter to commute to work every morning — it takes about 20 minutes.","explain":"參考：I ride a scooter to commute to work every morning — it takes about 20 minutes."},{"type":"trans","tag":"翻譯","q":"天冷時要注意保暖。","answer":"Remember to stay warm during cold weather.","explain":"參考：Remember to stay warm during cold weather."},{"type":"mc","tag":"單字","q":"「機車」的英文是？","options":["scooter","car","bus","train"],"answer":0,"explain":"scooter = 機車。"},{"type":"mc","tag":"單字","q":"「commute」的中文意思是？","options":["通勤","休息","保暖","旅行"],"answer":0,"explain":"commute = 通勤。"},{"type":"fill","tag":"文法","q":"I ___ (ride) a scooter to commute to work every morning.","cn":"我每天早上騎機車通勤上班。","answer":["ride"],"explain":"主詞 I 用動詞原形。"},{"type":"fill","tag":"文法","q":"___ to stay warm during cold weather.","cn":"天冷時要記得保暖。","answer":["Remember"],"explain":"祈使句用動詞原形開頭，此處用 Remember 提醒對方。"}]},
+"20260310":{"title":"英文八大時態與健康症狀 Tenses & Symptoms A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「發燒（片語）」的英文是？","options":["run a fever","feel happy","feel hungry","feel tired"],"answer":0,"explain":"run a fever = 發燒。"},{"type":"mc","tag":"單字","q":"「feverish」的中文意思是？","options":["發燒的／微燒的","餓的","累的","開心的"],"answer":0,"explain":"feverish = 發燒的、微燒的。"},{"type":"mc","tag":"單字","q":"「變質食物」的英文是？","options":["spoiled food","fresh food","hot food","cold food"],"answer":0,"explain":"spoiled food = 變質食物。"},{"type":"fill","tag":"文法","q":"The manager ___ (run) a high fever right now.","cn":"經理現在正發著高燒。","answer":["is running"],"explain":"現在進行式：be + Ving，描述現在正在發生的事。"},{"type":"fill","tag":"文法","q":"Amy felt a bit ___, so she decided to go home early.","cn":"Amy覺得有點發燒，所以她決定早點回家。","answer":["feverish"],"explain":"feverish = 發燒的、微燒的。"},{"type":"trans","tag":"翻譯","q":"經理現在正發著高燒。","answer":"The manager is running a high fever right now.","explain":"參考：The manager is running a high fever right now."}]},
+"20260305":{"title":"問候與健康詞彙 Greetings & Health A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「發燒」的英文是？","options":["fever","sneeze","vomit","nausea"],"answer":0,"explain":"fever = 發燒。"},{"type":"mc","tag":"單字","q":"「migraine」的中文意思是？","options":["偏頭痛","腹瀉","發燒","噁心"],"answer":0,"explain":"migraine = 偏頭痛。"},{"type":"mc","tag":"單字","q":"「腹瀉」的英文是？","options":["diarrhea","nausea","vomit","illness"],"answer":0,"explain":"diarrhea = 腹瀉。"},{"type":"mc","tag":"單字","q":"「hectic」的中文意思是？","options":["忙亂的、繁忙的","日常作息","昂貴的","不舒服的"],"answer":0,"explain":"hectic = 忙亂的、繁忙的。"},{"type":"mc","tag":"單字","q":"「懷孕的」的英文是？","options":["pregnant","pregnancy","illness","unwell"],"answer":0,"explain":"pregnant = 懷孕的（形容詞）。"},{"type":"fill","tag":"文法","q":"He ___ (feel) very unwell after working all day without rest.","cn":"工作一整天都沒休息後，他覺得非常不舒服。","answer":["feels"],"explain":"He 為第三人稱單數，動詞加 s。"},{"type":"fill","tag":"文法","q":"I'm ___ two minds about whether to take the new job offer.","cn":"我對於是否要接受這份新工作邀約感到猶豫不決。","answer":["in"],"explain":"in two minds = 猶豫不決，介系詞用 in。"},{"type":"trans","tag":"翻譯","q":"她因病請假。","answer":"She is off work due to illness.","explain":"參考：She is off work due to illness."},{"type":"trans","tag":"翻譯","q":"我昨天去看牙醫時，必須支付部分負擔費用。","answer":"I had to pay a co-pay when I visited the dentist yesterday.","explain":"參考：I had to pay a co-pay when I visited the dentist yesterday."}]},
+"20260226":{"title":"保險 Insurance A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「保費」的英文是？","options":["premium","deductible","surgery","treatment"],"answer":0,"explain":"premium = 保費。"},{"type":"mc","tag":"單字","q":"「deductible」的中文意思是？","options":["自負額","保費","雇主","治療"],"answer":0,"explain":"deductible = 自負額。"},{"type":"mc","tag":"單字","q":"「雇主」的英文是？","options":["employer","insurance","surgery","treatment"],"answer":0,"explain":"employer = 雇主。"},{"type":"mc","tag":"單字","q":"「compulsory」的中文意思是？","options":["強制的","昂貴的","負擔得起的","優先處理"],"answer":0,"explain":"compulsory = 強制的、義務的。"},{"type":"mc","tag":"單字","q":"「昂貴的」的英文是？","options":["expensive","affordable","compulsory","employer"],"answer":0,"explain":"expensive = 昂貴的。"},{"type":"fill","tag":"文法","q":"Joining NHI ___ compulsory for all citizens in Taiwan.","cn":"在台灣，加入全民健保對所有公民來說都是強制的。","answer":["is"],"explain":"主詞 Joining NHI 視為單數，be動詞用 is。"},{"type":"fill","tag":"文法","q":"You must pay the deductible ___ insurance covers the rest.","cn":"在保險支付之前，你必須先支付自負額。","answer":["before"],"explain":"before 表示「在...之前」。"},{"type":"fill","tag":"文法","q":"Everyone ___ (pay) a small monthly fee.","cn":"每個人每個月繳納少量的費用。","answer":["pays"],"explain":"Everyone 為第三人稱單數，動詞加 s。"},{"type":"trans","tag":"翻譯","q":"在台灣，加入全民健保對所有公民來說都是強制的。","answer":"Joining NHI is compulsory for all citizens in Taiwan.","explain":"參考：Joining NHI is compulsory for all citizens in Taiwan."},{"type":"trans","tag":"翻譯","q":"健康保險幫助支付醫療費用。","answer":"Health insurance helps cover medical costs.","explain":"參考：Health insurance helps cover medical costs."}]},
+"20260224":{"title":"面試與未來目標 Interview & Future Goals A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「慶祝」的英文是？","options":["celebrate","pray","train","broaden"],"answer":0,"explain":"celebrate = 慶祝。"},{"type":"mc","tag":"單字","q":"「pillow」的中文意思是？","options":["枕頭","目標","貢獻","拓展"],"answer":0,"explain":"pillow = 枕頭。"},{"type":"mc","tag":"單字","q":"「拓展、擴大」的英文是？","options":["broaden","persist","aim","contribute"],"answer":0,"explain":"broaden = 拓展、擴大。"},{"type":"mc","tag":"單字","q":"「long-term」的中文意思是？","options":["長期的","全球的","跨部門的","持續"],"answer":0,"explain":"long-term = 長期的。"},{"type":"mc","tag":"單字","q":"「祈禱、祈求」的英文是？","options":["pray","celebrate","train","aim"],"answer":0,"explain":"pray = 祈禱、祈求。"},{"type":"fill","tag":"文法","q":"My long-term goal ___ to become a senior manager.","cn":"我的長期目標是成為資深經理。","answer":["is"],"explain":"be動詞第三人稱單數用 is。"},{"type":"fill","tag":"文法","q":"I put money in the red envelope and placed it under my ___ to bring good luck.","cn":"我把錢放進紅包裡，然後放在枕頭下以帶來好運。","answer":["pillow"],"explain":"pillow = 枕頭。"},{"type":"trans","tag":"翻譯","q":"我的主要職責包括檢查和測試健身器材。","answer":"My main responsibilities include inspecting and testing fitness equipment.","explain":"參考：My main responsibilities include inspecting and testing fitness equipment."},{"type":"trans","tag":"翻譯","q":"我的長期目標是成為資深品管經理，領導跨部門團隊。","answer":"My long-term goal is to become a senior quality manager and lead cross-functional teams.","explain":"參考：My long-term goal is to become a senior quality manager and lead cross-functional teams."}]},
+"20260212":{"title":"農曆新年 Chinese New Year A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「節日」的英文是？","options":["festival","temple","luck","wealth"],"answer":0,"explain":"festival 指節日。"},{"type":"mc","tag":"單字","q":"「red envelope」的中文意思是？","options":["紅包","燈籠","對聯","團圓飯"],"answer":0,"explain":"red envelope 指紅包。"},{"type":"mc","tag":"單字","q":"「團圓飯、年夜飯」的英文是？","options":["reunion dinner","red envelope","couplet","temple"],"answer":0,"explain":"reunion dinner 指團圓飯、年夜飯。"},{"type":"mc","tag":"單字","q":"「temple」的中文意思是？","options":["寺廟","燈籠","財富","希望"],"answer":0,"explain":"temple 指寺廟。"},{"type":"fill","tag":"文法","q":"People ___ their homes with red couplets and lanterns.","cn":"人們用春聯和燈籠裝飾家裡。","answer":["decorate"],"explain":"decorate 為動詞，表示裝飾。"},{"type":"fill","tag":"文法","q":"Children often receive ___ with money.","cn":"小孩會收到裝有錢的紅包。","answer":["red envelopes"],"explain":"複數名詞加 s：envelope → envelopes。"},{"type":"trans","tag":"翻譯","q":"農曆新年是台灣最重要的節日。","answer":"Chinese New Year is the most important festival in Taiwan.","explain":"參考：Chinese New Year is the most important festival in Taiwan."},{"type":"trans","tag":"翻譯","q":"小孩會收到裝有錢的紅包。","answer":"Children often receive red envelopes with money from their parents or grandparents.","explain":"參考：Children often receive red envelopes with money from their parents or grandparents."},{"type":"mc","tag":"單字","q":"「couplet」的中文意思是？","options":["對聯、押韻對句","燈籠","寺廟","希望"],"answer":0,"explain":"couplet 指對聯。"},{"type":"mc","tag":"單字","q":"「lantern」的中文意思是？","options":["燈籠、提燈","寺廟","對聯","財富"],"answer":0,"explain":"lantern 指燈籠、提燈。"}]},
+"20260210":{"title":"quality engineer 面試詞彙 A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「解決（問題）」的英文是？","options":["resolve","distinguish","monitor","correct"],"answer":0,"explain":"resolve 指解決問題。"},{"type":"mc","tag":"單字","q":"「root cause」的中文意思是？","options":["根本原因","一致、共識","故障、失靈","演變"],"answer":0,"explain":"root cause 指根本原因。"},{"type":"mc","tag":"單字","q":"「malfunction」的中文意思是？","options":["故障、失靈","功能性缺陷","監控","根本原因"],"answer":0,"explain":"malfunction 指故障、失靈。"},{"type":"mc","tag":"單字","q":"「經常地、頻繁地」的英文是？","options":["frequently","evolve","correct","monitor"],"answer":0,"explain":"frequently 指經常地、頻繁地。"},{"type":"fill","tag":"文法","q":"I ___ potential issues early.","cn":"我會及早監控潛在問題。","answer":["monitor"],"explain":"monitor 作動詞，表示監控。"},{"type":"fill","tag":"文法","q":"It's hard to ___ between AI photos and real photos.","cn":"很難辨別 AI 照片和真人照片的區別。","answer":["distinguish"],"explain":"distinguish between A and B 表示辨別A和B。"},{"type":"trans","tag":"翻譯","q":"我經常會調查設備異常。","answer":"I frequently investigate appliance malfunctions.","explain":"參考：I frequently investigate appliance malfunctions and work with design engineers to correct dimensional inaccuracies."},{"type":"trans","tag":"翻譯","q":"在過去十年中，你的職位是如何演變的？","answer":"How has your role evolved over the past ten years?","explain":"參考：How has your role evolved over the past ten years?"},{"type":"mc","tag":"單字","q":"「alignment」的中文意思是？","options":["一致、共識","根本原因","外觀的","故障"],"answer":0,"explain":"alignment 指一致、共識。"},{"type":"mc","tag":"單字","q":"「correct」的中文意思是？","options":["修正、改正","解決","監控","演變"],"answer":0,"explain":"correct 作動詞指修正、改正。"}]},
+"20260203":{"title":"面試與尾牙總結 Interview & Banquet A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「精疲力竭」的英文是？","options":["exhausted","light sleeper","out cold","fast asleep"],"answer":0,"explain":"exhausted 指精疲力竭。"},{"type":"mc","tag":"單字","q":"「out cold」的中文意思是？","options":["睡得不省人事","精疲力竭","睡得很淺的人","熟睡中"],"answer":0,"explain":"out cold 指睡得不省人事。"},{"type":"mc","tag":"單字","q":"「才藝表演」的英文是？","options":["talent show","full refund","potential","foster"],"answer":0,"explain":"talent show 指才藝表演。"},{"type":"mc","tag":"單字","q":"「potential」的中文意思是？","options":["潛在的；潛力","辨認","調查","培養"],"answer":0,"explain":"potential 指潛在的、潛力。"},{"type":"fill","tag":"文法","q":"Tom ___ to snore when he's exhausted.","cn":"湯姆精疲力竭時傾向於打呼。","answer":["tends"],"explain":"現在式第三人稱單數動詞加 s：tend → tends。"},{"type":"fill","tag":"文法","q":"Costco offers a ___ on most items within 30 days.","cn":"好市多在30天內針對大多數商品提供全額退款。","answer":["full refund"],"explain":"full refund 指全額退款。"},{"type":"trans","tag":"翻譯","q":"她睡得不省人事。","answer":"She is out cold.","explain":"參考：She is out cold."},{"type":"trans","tag":"翻譯","q":"我目前在 Rexon 任職，擔任品質工程師。","answer":"I'm currently working as a quality engineer at Rexon.","explain":"參考：I'm currently working as a quality engineer at Rexon, a fitness equipment company."},{"type":"mc","tag":"單字","q":"「foster」的中文意思是？","options":["培養/促進","辨認","調查","潛力"],"answer":0,"explain":"foster 指培養、促進。"},{"type":"mc","tag":"單字","q":"「fitness equipment」的中文意思是？","options":["健身器材","尺寸問題","品質工程師","才藝表演"],"answer":0,"explain":"fitness equipment 指健身器材。"}]},
+"20260129":{"title":"尾牙 Year-End Banquet A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「打呼」的英文是？","options":["snore","heavy sleeper","sleep like a log","lively"],"answer":0,"explain":"snore 指打呼。"},{"type":"mc","tag":"單字","q":"「festive」的中文意思是？","options":["節慶的/歡樂的","熱鬧的","睡得很沉的人","保證"],"answer":0,"explain":"festive 指節慶的、歡樂的氣氛。"},{"type":"mc","tag":"單字","q":"「敬酒」的英文是？","options":["make a toast","lucky draw","gift voucher","dress code"],"answer":0,"explain":"make a toast 表示敬酒。"},{"type":"mc","tag":"單字","q":"「lucky draw」的中文意思是？","options":["抽獎","禮券","套餐","圓桌"],"answer":0,"explain":"lucky draw 指抽獎活動。"},{"type":"fill","tag":"文法","q":"Let's raise our glasses and ___ to our success.","cn":"讓我們舉杯，為我們的成功敬酒。","answer":["make a toast"],"explain":"make a toast 為固定用語「敬酒」。"},{"type":"fill","tag":"文法","q":"The ___ for the banquet is formal wear.","cn":"晚宴的服裝規定是正式服裝。","answer":["dress code"],"explain":"dress code 指服裝規定。"},{"type":"trans","tag":"翻譯","q":"我太累了，整晚睡得像木頭一樣沉。","answer":"I was so tired that I slept like a log all night.","explain":"參考：I was so tired that I slept like a log all night."},{"type":"trans","tag":"翻譯","q":"我們公司每年都會舉辦年終宴會。","answer":"Our company holds an annual banquet every year.","explain":"參考：Our company holds an annual banquet every year."},{"type":"mc","tag":"單字","q":"「MC」的中文意思是？","options":["主持人","套餐","圓桌","禮券"],"answer":0,"explain":"MC 指活動主持人。"},{"type":"mc","tag":"單字","q":"「gift voucher」的中文意思是？","options":["禮券","抽獎","服裝規定","套餐"],"answer":0,"explain":"gift voucher 指禮券。"}]},
+"20260127":{"title":"睡眠與金錢 Sleep & Money A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「失眠症」的英文是？","options":["insomnia","nightmare","doze off","asleep"],"answer":0,"explain":"insomnia 指失眠症。"},{"type":"mc","tag":"單字","q":"「nightmare」的中文意思是？","options":["惡夢","失眠症","輾轉反側","完全清醒的"],"answer":0,"explain":"nightmare 指惡夢。"},{"type":"mc","tag":"單字","q":"「打瞌睡／不知不覺睡著」的英文是？","options":["doze off","toss and turn","wide awake","asleep"],"answer":0,"explain":"doze off 指不小心打瞌睡。"},{"type":"mc","tag":"單字","q":"「toss and turn」的中文意思是？","options":["輾轉反側","打瞌睡","完全清醒的","睡著的"],"answer":0,"explain":"toss and turn 指睡覺時輾轉反側。"},{"type":"fill","tag":"文法","q":"Are you ___?","cn":"你睡著了嗎？","answer":["asleep"],"explain":"be動詞 + asleep 表示「睡著」。"},{"type":"fill","tag":"文法","q":"Money is ___ for daily life.","cn":"金錢對日常生活是必要的。","answer":["essential"],"explain":"essential 為形容詞，表示必要的。"},{"type":"trans","tag":"翻譯","q":"我昨晚一直清醒到凌晨四點。","answer":"I was wide awake last night until 4:00 a.m.","explain":"參考：I was wide awake last night until 4:00 a.m."},{"type":"trans","tag":"翻譯","q":"他患有失眠症，沒有幫助就無法入睡。","answer":"He suffers from insomnia and can't sleep without help.","explain":"參考：He suffers from insomnia and can't sleep without help."}]},
+"20260122":{"title":"Money Makes the World Go Round A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「貪婪」的英文是？","options":["greed","evil","corruption","blackmail"],"answer":0,"explain":"greed 指貪婪。"},{"type":"mc","tag":"單字","q":"「corruption」的中文意思是？","options":["貪污","貪婪","勒索","邪惡"],"answer":0,"explain":"corruption 指貪污、腐敗。"},{"type":"mc","tag":"單字","q":"「許多的（口語）」的英文是？","options":["loads of","share out","root of all evil","gently"],"answer":0,"explain":"loads of 是口語說法「許多的」。"},{"type":"mc","tag":"單字","q":"「blackmail」的中文意思是？","options":["勒索","貪污","奴工","邪惡"],"answer":0,"explain":"blackmail 指勒索、敲詐。"},{"type":"fill","tag":"文法","q":"He was arrested for ___.","cn":"他因勒索而被逮捕。","answer":["blackmail"],"explain":"介系詞 for 後接名詞 blackmail。"},{"type":"fill","tag":"文法","q":"Money is the root of all ___.","cn":"金錢是萬惡之源。","answer":["evil"],"explain":"固定用語 root of all evil。"},{"type":"trans","tag":"翻譯","q":"貪污會傷害經濟。","answer":"Corruption hurts the economy.","explain":"參考：Corruption hurts the economy."},{"type":"trans","tag":"翻譯","q":"我們必須停止奴工。","answer":"We must stop slave labour.","explain":"參考：We must stop slave labour."},{"type":"mc","tag":"單字","q":"「smoothly」的中文意思是？","options":["順利地","溫柔地","分配","許多的"],"answer":0,"explain":"smoothly 指順利地、平穩地。"},{"type":"mc","tag":"單字","q":"「分配；分享」的英文是？","options":["share out","loads of","expression","greed"],"answer":0,"explain":"share out 表示分配、分享出去。"}]},
+"20260120":{"title":"帳單與收據 Bill & Check A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「帳單（美式說法）」的英文是？","options":["check","bill","operation","wrinkle"],"answer":0,"explain":"check 是美式說法，bill 是英式/通用說法。"},{"type":"mc","tag":"單字","q":"「belongings」的中文意思是？","options":["隨身物品","皺紋","手術","過重的"],"answer":0,"explain":"belongings 指個人隨身物品。"},{"type":"mc","tag":"單字","q":"「整形手術」的英文是？","options":["plastic surgery","nose job","operation","wrinkle"],"answer":0,"explain":"plastic surgery 泛指整形手術。"},{"type":"mc","tag":"單字","q":"「wrinkle」的中文意思是？","options":["皺紋","腹部的","過重的","離開"],"answer":0,"explain":"wrinkle 指皺紋。"},{"type":"fill","tag":"文法","q":"I ___ in a hurry this morning.","cn":"我今天早上很趕時間","answer":["was"],"explain":"be動詞過去式，主詞 I 用 was。"},{"type":"fill","tag":"文法","q":"Could we have the ___, please?","cn":"可以給我們帳單嗎？（美式說法）","answer":["check"],"explain":"美式英文用 check 表示帳單。"},{"type":"trans","tag":"翻譯","q":"可以給我帳單嗎？","answer":"May I have the bill, please?","explain":"參考：May I have the bill, please?"},{"type":"trans","tag":"翻譯","q":"她比較喜歡自然的外表。","answer":"She prefers a natural look.","explain":"參考：She prefers a natural look."},{"type":"mc","tag":"單字","q":"「would rather」的中文意思是？","options":["寧願","浪費錢","不自然的","離開"],"answer":0,"explain":"would rather 表示「寧願」。"},{"type":"mc","tag":"單字","q":"「整形外科醫師」的英文是？","options":["cosmetic surgeon","cosmetic surgery","nose job","operation"],"answer":0,"explain":"cosmetic surgeon 是「整形外科醫師」，surgery 是「手術」本身。"}]},
+"20260113":{"title":"使役動詞 Causative Verbs A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「增強；提升」的英文是？","options":["boost","cause","compel","instruction"],"answer":0,"explain":"boost 指增強、提升。"},{"type":"mc","tag":"單字","q":"「responsible」的中文意思是？","options":["負責任的","強迫的","清楚的","成就感"],"answer":0,"explain":"responsible 指負責任的。"},{"type":"mc","tag":"單字","q":"「讓路」的英文是？","options":["make way","cause","boost","instruction"],"answer":0,"explain":"make way 指讓路。"},{"type":"mc","tag":"單字","q":"「compel」的中文意思是？","options":["強迫；迫使","導致","指示","提升"],"answer":0,"explain":"compel 指強迫、迫使。"},{"type":"fill","tag":"文法","q":"The praise ___ (boost) my confidence.","cn":"這份讚美增強了我的自信。","answer":["boosts"],"explain":"第三人稱單數現在式動詞加 s。"},{"type":"fill","tag":"文法","q":"The manager's instructions ___ clear.","cn":"經理的指示很清楚。","answer":["are"],"explain":"複數主詞用 are。"},{"type":"trans","tag":"翻譯","q":"雨迫使我們待在室內。","answer":"The rain compelled us to stay indoors.","explain":"參考：The rain compelled us to stay indoors."},{"type":"trans","tag":"翻譯","q":"打掃房間給了我成就感。","answer":"Cleaning my room gave me a sense of achievement.","explain":"參考：Cleaning my room gave me a sense of achievement."}]},
+"20260108":{"title":"Crowds and Returns A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「收據」的英文是？","options":["receipt","refund","exchange","aisle"],"answer":0,"explain":"receipt 指收據。"},{"type":"mc","tag":"單字","q":"「refund」的中文意思是？","options":["退款","交換","走道","縮水"],"answer":0,"explain":"refund 指退款。"},{"type":"mc","tag":"單字","q":"「模仿」的英文是？","options":["mimic","rearrange","shrink","invisible"],"answer":0,"explain":"mimic 指模仿。"},{"type":"mc","tag":"單字","q":"「invisible」的中文意思是？","options":["隱形的","可見的","重新排列的","交換的"],"answer":0,"explain":"invisible 指隱形的、看不見的。"},{"type":"fill","tag":"文法","q":"You can get a full refund within 30 ___ (day).","cn":"30天內你可以獲得全額退款。","answer":["days"],"explain":"數字大於一要用複數 days。"},{"type":"fill","tag":"文法","q":"The cereal ___ in aisle five.","cn":"麥片在第五走道。","answer":["is"],"explain":"單數主詞用 be動詞 is。"},{"type":"trans","tag":"翻譯","q":"我想把這件襯衫換成大一號的。","answer":"I'd like to exchange this shirt for a larger size.","explain":"參考：I'd like to exchange this shirt for a larger size."},{"type":"trans","tag":"翻譯","q":"我照著說明洗，但這件襯衫洗第一次就縮水了。","answer":"I followed the instructions, but the shirt shrank after the first wash.","explain":"參考：I followed the instructions, but the shirt shrank after the first wash."}]},
+"20260106":{"title":"Landlord and Tenant A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「房東」的英文是？","options":["landlord","tenant","dispute","maintain"],"answer":0,"explain":"landlord 指房東。"},{"type":"mc","tag":"單字","q":"「tenant」的中文意思是？","options":["房東","房客","水管工","鄰居"],"answer":1,"explain":"tenant 指房客、租客。"},{"type":"mc","tag":"單字","q":"「拖延、延誤」的英文是？","options":["arrange","delay","maintain","dispute"],"answer":1,"explain":"delay 指拖延、延誤。"},{"type":"mc","tag":"單字","q":"「minor」的中文意思是？","options":["輕微的","嚴重的","潮濕的","故障的"],"answer":0,"explain":"minor 指輕微的、次要的。"},{"type":"fill","tag":"文法","q":"The tenant ___ responsible for small repairs.","cn":"房客要負責小的維修。","answer":["is"],"explain":"第三人稱單數用 is。"},{"type":"fill","tag":"文法","q":"I noticed dampness ___ the living room wall.","cn":"我注意到客廳牆壁上有潮濕現象。","answer":["on"],"explain":"介系詞 on 表示「在……表面上」。"},{"type":"trans","tag":"翻譯","q":"房東一直拖延維修，總說他沒有時間。","answer":"The landlord kept delaying the repairs, saying he didn't have time.","explain":"參考：The landlord kept delaying the repairs, saying he didn't have time."},{"type":"trans","tag":"翻譯","q":"馬桶沖水不順，所以我們叫了水管工人。","answer":"The toilet wasn't flushing properly, so we called a plumber.","explain":"參考：The toilet wasn't flushing properly, so we called a plumber."}]},
+"20251226":{"title":"條件句文法解析 A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「止痛藥」的英文是？","options":["painkiller","lottery","effort","scenery"],"answer":0,"explain":"painkiller 指止痛藥。"},{"type":"mc","tag":"單字","q":"「release stress」的中文意思是？","options":["緩解壓力","釋放壓力","擺脫壓力","影響"],"answer":1,"explain":"release stress 指釋放、發洩壓力。"},{"type":"mc","tag":"單字","q":"「想像中的、虛構的」的英文是？","options":["imaginary","possibility","conditional","effort"],"answer":0,"explain":"imaginary 指想像中的。"},{"type":"mc","tag":"單字","q":"「lottery」的中文意思是？","options":["彩券","風景","努力","想像力"],"answer":0,"explain":"lottery 指抽獎、彩券。"},{"type":"fill","tag":"文法","q":"This lesson ___ about the first and second conditionals.","cn":"這堂課是關於第一與第二條件句。","answer":["is"],"explain":"第三人稱單數用 is。"},{"type":"fill","tag":"文法","q":"He ___ (take) a painkiller when he has a headache.","cn":"他頭痛時會吃止痛藥。","answer":["takes"],"explain":"第三人稱單數現在式動詞加 s。"},{"type":"trans","tag":"翻譯","q":"使用健身器材運動是釋放壓力的好方法。","answer":"Working out on fitness equipment is a great way to release stress.","explain":"參考：Working out on fitness equipment is a great way to release stress."},{"type":"trans","tag":"翻譯","q":"我喜歡在裝滿熱水的浴缸裡放鬆，因為這有助於我緩解壓力。","answer":"I like to relax in a bathtub filled with hot water because it helps me relieve stress.","explain":"參考：I like to relax in a bathtub filled with hot water because it helps me relieve stress."}]},
+"20251216":{"title":"修繕與職業 Repairs & Occupations A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「水管工人」的英文是？","options":["plumber","mechanic","electrician","carpenter"],"answer":0,"explain":"plumber 指水管工人。"},{"type":"mc","tag":"單字","q":"「electrician」的中文意思是？","options":["木匠","電工","技工","保母"],"answer":1,"explain":"electrician 指電工。"},{"type":"mc","tag":"單字","q":"「水槽、洗手台」的英文是？","options":["glue","socket","sink","pressure"],"answer":2,"explain":"sink 指水槽。"},{"type":"mc","tag":"單字","q":"「faulty」的中文意思是？","options":["故障的","有效率地","檢查","插座"],"answer":0,"explain":"faulty 指故障的、有缺陷的。"},{"type":"fill","tag":"文法","q":"A good mechanic ___ (fix) cars quickly.","cn":"一位好技工很快地修車。","answer":["fixes"],"explain":"第三人稱單數現在式動詞加 s。"},{"type":"fill","tag":"文法","q":"I called a plumber to fix the pipe ___ my house.","cn":"我打電話請水管工人修理我家的管線。","answer":["in"],"explain":"介系詞 in 表示「在……裡面」。"},{"type":"trans","tag":"翻譯","q":"他用強力膠水修好了壞掉的把手。","answer":"He used strong glue to fix the broken handle.","explain":"參考：He used strong glue to fix the broken handle."},{"type":"trans","tag":"翻譯","q":"水槽從牆上掉下來了，因為黏膠沒有塗好。","answer":"The sink fell off the wall because the glue wasn't applied properly.","explain":"參考：The sink fell off the wall because the glue wasn't applied properly."}]},
+"20251209":{"title":"一個度過美好時光的好地方 A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「氣氛」的英文是？","options":["atmosphere","attraction","disaster","bond"],"answer":0,"explain":"atmosphere 指氣氛。"},{"type":"mc","tag":"單字","q":"「hospitable」的中文意思是？","options":["好客的","舒適的","繁忙熱鬧的","美食"],"answer":0,"explain":"hospitable 指好客的。"},{"type":"mc","tag":"單字","q":"「景點」的英文是？","options":["delicacy","attraction","bond","disaster"],"answer":1,"explain":"attraction 指景點、吸引人的地方。"},{"type":"mc","tag":"單字","q":"「bustling」的中文意思是？","options":["災難","好客的","繁忙熱鬧的","加強"],"answer":2,"explain":"bustling 指繁忙熱鬧的。"},{"type":"fill","tag":"文法","q":"It ___ a pleasant day.","cn":"今天天氣很舒適。","answer":["is"],"explain":"It 為第三人稱單數，用 is。"},{"type":"fill","tag":"文法","q":"Taiwanese people ___ very hospitable.","cn":"台灣人很好客。","answer":["are"],"explain":"複數主詞用 are。"},{"type":"trans","tag":"翻譯","q":"我們明天敘敘舊吧！","answer":"Let's catch up tomorrow!","explain":"參考：Let's catch up tomorrow!"},{"type":"trans","tag":"翻譯","q":"夜晚時，市場變得繁忙且熱鬧。","answer":"At night, the market becomes bustling and lively.","explain":"參考：At night, the market becomes bustling and lively."}]},
+"20251016":{"title":"社區教育計畫 Community Project A2","subtitle":"A2 精選題","questions":[{"type":"mc","tag":"單字","q":"「社區」的英文是？","options":["community","government","benefit","decision"],"answer":0,"explain":"community 指社區、社群。"},{"type":"mc","tag":"單字","q":"「confidence」的中文意思是？","options":["緊張的","自信","決定","勇氣"],"answer":1,"explain":"confidence 指自信。"},{"type":"mc","tag":"單字","q":"「決定」的英文是？","options":["achievement","decision","leadership","responsibility"],"answer":1,"explain":"decision 指決定。"},{"type":"mc","tag":"單字","q":"「courage」的中文意思是？","options":["勇氣","自信","責任感","態度"],"answer":0,"explain":"courage 指勇氣。"},{"type":"fill","tag":"文法","q":"She ___ nervous before the test.","cn":"她考試前很緊張。","answer":["is"],"explain":"第三人稱單數用 be動詞 is。"},{"type":"fill","tag":"文法","q":"The government ___ (plan) to lower taxes.","cn":"政府計畫減稅。","answer":["plans"],"explain":"第三人稱單數現在式動詞加 s。"},{"type":"trans","tag":"翻譯","q":"我的家人總是支持我。","answer":"My family always supports me.","explain":"參考：My family always supports me."},{"type":"trans","tag":"翻譯","q":"你需要勇氣面對恐懼。","answer":"You need courage to face your fears.","explain":"參考：You need courage to face your fears."}]},
+
+  "20260730":{title:"作業複習、樂觀悲觀與 Hugh Laurie（A2）",subtitle:"A2 精選 · 單字・be動詞・現在式",questions:[
+    {type:"mc",tag:"單字",q:"「optimist」是什麼意思？",options:["悲觀者","樂觀者","醫生","演員"],answer:1,explain:"optimist = 樂觀者；pessimist = 悲觀者。"},
+    {type:"mc",tag:"單字",q:"「悲觀者」的英文是？",options:["optimist","pessimist","musician","actor"],answer:1,explain:"pessimist = 悲觀者。"},
+    {type:"mc",tag:"單字",q:"「有才華的」的英文是？",options:["talent","talented","hopeful","happy"],answer:1,explain:"talented（形容詞）有才華的；talent（名詞）天賦。"},
+    {type:"fill",tag:"be動詞",q:"House ___ a pessimist.",cn:"豪斯是個悲觀者。",answer:["is"],explain:"主詞 House（單數）用 is。"},
+    {type:"fill",tag:"be動詞",q:"I ___ an optimist.",cn:"我是個樂觀的人。",answer:["am"],explain:"主詞 I 用 am。"},
+    {type:"mc",tag:"單字",q:"「album」是什麼意思？",options:["專輯","電影","書","歌"],answer:0,explain:"album = 專輯。"},
+    {type:"mc",tag:"改錯",q:"哪一句正確？",options:["He are talented.","He is talented."],answer:1,explain:"主詞 He 用 is。"},
+    {type:"fill",tag:"現在式",q:"She ___ (like) music.",cn:"她喜歡音樂。",answer:["likes"],explain:"第三人稱單數，動詞加 s：likes。"},
+    {type:"trans",tag:"翻譯",q:"我是個樂觀的人。",answer:"I am an optimist.",explain:"be 動詞 am + a/an + 名詞。"}
+  ]},
+  "20260716":{title:"搭機英文 On the Plane（A2）",subtitle:"A2 精選 · 機上單字・介系詞",questions:[
+    {type:"mc",tag:"單字",q:"「空服員」的英文是？",options:["pilot","flight attendant","captain","passenger"],answer:1,explain:"flight attendant = 空服員。"},
+    {type:"mc",tag:"單字",q:"「aisle seat」是什麼座位？",options:["靠窗","走道","中間","前排"],answer:1,explain:"aisle seat = 走道座位；window seat = 靠窗。"},
+    {type:"mc",tag:"單字",q:"「靠窗座位」的英文是？",options:["window seat","aisle seat","middle seat","back seat"],answer:0,explain:"window seat = 靠窗座位。"},
+    {type:"fill",tag:"介系詞",q:"Please put your bag ___ the overhead compartment.",cn:"請把包包放進頭頂置物櫃。",answer:["in"],explain:"放「進」置物櫃用 in。"},
+    {type:"fill",tag:"祈使句",q:"Please ___ your seat belt.",cn:"請繫好安全帶。",answer:["fasten"],explain:"fasten your seat belt = 繫好安全帶。"},
+    {type:"mc",tag:"單字",q:"「boarding pass」是什麼？",options:["護照","登機證","行李","機票錢"],answer:1,explain:"boarding pass = 登機證。"},
+    {type:"mc",tag:"改錯",q:"哪一句較有禮貌？",options:["Give me water.","Could I have some water, please?"],answer:1,explain:"用 Could I have...please? 比較有禮貌。"},
+    {type:"trans",tag:"翻譯",q:"我可以要一條毛毯嗎？",answer:"Could I have a blanket, please?",explain:"Could I have + 物品 + please? 是禮貌的請求。"}
+  ]},
+  "20260714":{title:"搭機流程與機上英文（A2）",subtitle:"A2 精選 · 機場單字・現在式",questions:[
+    {type:"mc",tag:"單字",q:"「登機門」的英文是？",options:["check-in","departure gate","security check","baggage"],answer:1,explain:"departure gate = 登機門。"},
+    {type:"mc",tag:"單字",q:"「security check」是什麼？",options:["安檢","登機","報到","退稅"],answer:0,explain:"security check = 安全檢查（安檢）。"},
+    {type:"mc",tag:"單字",q:"「行李推車」的英文是？",options:["trolley","cabin","tarmac","cargo"],answer:0,explain:"trolley = 行李推車。"},
+    {type:"fill",tag:"介系詞",q:"Please go ___ gate 12.",cn:"請前往 12 號登機門。",answer:["to"],explain:"go to + 地點：go to gate 12。"},
+    {type:"fill",tag:"現在式",q:"The plane ___ (land) soon.",cn:"飛機快降落了。",answer:["lands","is landing"],explain:"landing 降落；第三人稱 lands 或現在進行 is landing。"},
+    {type:"mc",tag:"單字",q:"「seat belt」是什麼？",options:["安全帶","毛毯","餐具","窗戶"],answer:0,explain:"seat belt = 安全帶。"},
+    {type:"mc",tag:"改錯",q:"哪一句正確？",options:["I go to security check.","I goes to security check."],answer:0,explain:"主詞 I 用原形 go。"},
+    {type:"trans",tag:"翻譯",q:"安檢在哪裡？",answer:"Where is the security check?",explain:"問地點用 Where is...?"}
+  ]},
+  "20260721":{title:"作業複習與機場旅遊英文（A2）",subtitle:"A2 精選 · 旅遊單字・基礎文法",questions:[
+    {type:"mc",tag:"單字",q:"「fragile」是什麼意思？",options:["很重的","易碎的","便宜的","很大的"],answer:1,explain:"fragile = 易碎的。"},
+    {type:"mc",tag:"單字",q:"「亂流」的英文是？",options:["turbulence","baggage","meal","gate"],answer:0,explain:"turbulence = 亂流。"},
+    {type:"mc",tag:"單字",q:"「domestic flight」是什麼？",options:["國際航班","國內航班","轉機","延誤"],answer:1,explain:"domestic flight = 國內航班。"},
+    {type:"fill",tag:"be動詞",q:"This box ___ fragile.",cn:"這個箱子是易碎的。",answer:["is"],explain:"主詞 this box（單數）用 is。"},
+    {type:"fill",tag:"介系詞",q:"I bought a snack ___ the airport.",cn:"我在機場買了點心。",answer:["at"],explain:"在某地點用 at：at the airport。"},
+    {type:"mc",tag:"單字",q:"「in-flight meal」是什麼？",options:["機場餐廳","機上餐點","免稅品","登機證"],answer:1,explain:"in-flight meal = 機上餐點。"},
+    {type:"mc",tag:"改錯",q:"哪一句正確？",options:["The bags is heavy.","The bags are heavy."],answer:1,explain:"bags 複數，用 are。"},
+    {type:"trans",tag:"翻譯",q:"這是國內航班嗎？",answer:"Is this a domestic flight?",explain:"be 動詞疑問句：Is this...?"}
+  ]}
+};
+
 /* ---------- 依日期切資料 ---------- */
-function lessonTitle(d){if(d==='all')return '全部筆記';
+function lessonTitle(d){if(A2BY[d])return A2BY[d].title;
+  if(d==='all')return '全部筆記';
   for(const w in vocabSources){if((vocabSources[w]||'').slice(0,8)===d)return vocabSources[w].slice(9)||'課堂內容';}
   if(DAYQUIZ[d])return DAYQUIZ[d].title;
   const t=allTrans.find(x=>dOf(x.src)===d);if(t)return (t.src||'').slice(9)||'課堂內容';
   return '課堂內容';}
-function allDates(){const s=new Set();
+function noteDates(){const s=new Set();
   for(const w in vocabSources){const d=(vocabSources[w]||'').slice(0,8);if(/^\d{8}$/.test(d))s.add(d);}
   Object.keys(DAYQUIZ).forEach(d=>{if(/^\d{8}$/.test(d))s.add(d);});
   allTrans.forEach(t=>{const d=dOf(t.src);if(d)s.add(d);});
   articles.forEach(a=>{const d=dOf(a.source);if(d)s.add(d);});
   return [...s].sort().reverse();}
+/* Tom：A2 基礎主題 + 全部真實課程筆記；Anita：只有真實筆記 */
+function allDates(){return isTom()?A2LESSONS.map(l=>l.id).concat(noteDates()):noteDates();}
 function dayVocab(d){
+  if(A2BY[d])return A2BY[d].vocab.slice();
   if(d==='all')return vocab.filter(v=>v.cn);
   let r=vocab.filter(v=>(vocabSources[v.w]||'').slice(0,8)===d&&v.cn);
   if(r.length)return r;
@@ -3211,20 +3536,27 @@ function dayVocab(d){
 }
 function dayTrans(d){return d==='all'?allTrans.slice():allTrans.filter(t=>dOf(t.src)===d);}
 function dayKW(d){return d==='all'?allKW.slice():allKW.filter(k=>(vocabSources[k.w]||'').slice(0,8)===d);}
-function dayArticles(d){const r=d==='all'?articles.slice():articles.filter(a=>dOf(a.source)===d);return r;}
+function dayArticles(d){if(A2BY[d])return [A2BY[d].article].filter(Boolean);
+  const r=d==='all'?articles.slice():articles.filter(a=>dOf(a.source)===d);return r;}
 
-function sayItems(d){const out=[];
+function sayItems(d){
+  if(A2BY[d])return dedupe(A2BY[d].sentences.map(s=>({cn:s.cn,en:s.en,hint:s.hint||''})),'en');
+  const out=[];
   dayTrans(d).forEach(t=>{const pE=isEng(t.p),aE=isEng(t.a);
     if(!pE&&aE)out.push({cn:t.p,en:t.a,hint:t.h});
     else if(pE&&!aE)out.push({cn:t.a,en:t.p,hint:t.h});});
   dayVocab(d).forEach(v=>{if(v.exEn&&v.exCn)out.push({cn:v.exCn,en:v.exEn,hint:v.w});});
   return dedupe(out,'en');}
-function shadowItems(d){const s=[];
+function shadowItems(d){
+  if(A2BY[d])return dedupe(A2BY[d].sentences.map(s=>({en:s.en,cn:s.cn||''})),'en');
+  const s=[];
   dayTrans(d).forEach(t=>{if(isEng(t.a))s.push({en:t.a,cn:isEng(t.p)?'':t.p});else if(isEng(t.p))s.push({en:t.p,cn:isEng(t.a)?'':t.a});});
   dayVocab(d).forEach(v=>{if(v.exEn)s.push({en:v.exEn,cn:v.exCn||''});});
   dayKW(d).forEach(k=>k.exs&&k.exs.forEach(e=>s.push({en:e.en,cn:e.cn||''})));
   return dedupe(s,'en');}
-function wordItems(d){const km={};dayKW(d).forEach(k=>km[k.w]=k.exs);
+function wordItems(d){
+  if(A2BY[d])return dayVocab(d).map(v=>Object.assign({},v,{exs:v.exEn?[{en:v.exEn,cn:v.exCn||''}]:[]}));
+  const km={};dayKW(d).forEach(k=>km[k.w]=k.exs);
   return dayVocab(d).map(v=>Object.assign({},v,{exs:km[v.w]||(v.exEn?[{en:v.exEn,cn:v.exCn||''}]:[])}));}
 
 /* ---------- 自動測驗（無精選題時） ---------- */
@@ -3239,7 +3571,38 @@ function autoQuiz(words,title){
   });
   return{title:title,subtitle:'單字測驗（自動生成）',questions:qs};
 }
-function quizFor(d){if(d!=='all'&&DAYQUIZ[d])return DAYQUIZ[d];const w=dayVocab(d);if(w.length<3)return null;return autoQuiz(w,lessonTitle(d));}
+/* Tom 專用 A2 精選出題：取材自「該課真實單字 + 真實句子」——單字中↔英、例句挖空、整句翻譯 */
+function autoQuizA2(d){
+  const words=dayVocab(d).filter(v=>v.cn);
+  const sents=sayItems(d);
+  if(!words.length&&!sents.length)return null;
+  const pool=vocab.filter(v=>v.cn);const qs=[];
+  function esc2(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+  shuffle(words).forEach((v,i)=>{
+    const dis=shuffle(pool.filter(x=>x.w!==v.w&&x.cn!==v.cn)).slice(0,3);
+    const m=i%3;
+    if(m===0){const opts=shuffle([v.w].concat(dis.map(x=>x.w)));
+      qs.push({type:'mc',tag:'單字',q:'「'+v.cn+'」的英文是？',options:opts,answer:opts.indexOf(v.w),explain:v.w+' = '+v.cn+'。'});}
+    else if(m===1){const opts=shuffle([v.cn].concat(dis.map(x=>x.cn)));
+      qs.push({type:'mc',tag:'單字',q:'「'+v.w+'」的中文意思是？',options:opts,answer:opts.indexOf(v.cn),explain:v.w+' '+(v.ipa||'')+' '+v.cn+'。'});}
+    else{const ex=v.exEn||'';const re=new RegExp('\\b'+esc2(v.w)+'\\b','i');
+      if(ex&&re.test(ex)){const opts=shuffle([v.w].concat(dis.map(x=>x.w)));
+        qs.push({type:'mc',tag:'填空',q:ex.replace(re,'___'),cn:v.exCn||'',options:opts,answer:opts.indexOf(v.w),explain:'正解：'+v.w+'（'+v.cn+'）。'});}
+      else{const opts=shuffle([v.cn].concat(dis.map(x=>x.cn)));
+        qs.push({type:'mc',tag:'單字',q:'「'+v.w+'」的中文意思是？',options:opts,answer:opts.indexOf(v.cn),explain:v.w+' = '+v.cn+'。'});}}
+  });
+  /* 用該課「較短的真實句子」出 2 題整句翻譯（最貼近該課） */
+  const shortS=sents.filter(s=>{const n=toks(s.en).length;return n>=3&&n<=12;}).sort((a,b)=>toks(a.en).length-toks(b.en).length);
+  const transQs=shuffle(shortS.slice(0,8)).slice(0,2).map(s=>({type:'trans',tag:'翻譯',q:s.cn,answer:s.en,explain:'參考：'+s.en}));
+  const all=qs.slice(0,12).concat(transQs);
+  if(!all.length)return null;
+  return{title:lessonTitle(d),subtitle:'A2 精選題（取自本課單字與句子）',questions:all};
+}
+function quizFor(d){
+  if(A2BY[d])return{title:A2BY[d].title,subtitle:'A2 基礎測驗（單字・be動詞・現在式）',questions:A2BY[d].quiz.slice()};
+  if(isTom())return TOMQUIZ[d]||null;   /* Tom：每堂手寫 A2 精選題；沒有的課就不出題 */
+  if(d!=='all'&&DAYQUIZ[d])return DAYQUIZ[d];
+  const w=dayVocab(d);if(w.length<3)return null;return autoQuiz(w,lessonTitle(d));}
 
 /* ---------- Talk Time 題庫（教練提問，通用溝通題） ---------- */
 const TALK_BANK=[
@@ -3262,16 +3625,20 @@ const TALK_BANK=[
    ═══════════════════════════════════════════════════════════ */
 let DAY='all';
 function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo(0,0);}
-function goHome(){micStop();if(window.speechSynthesis)speechSynthesis.cancel();show('scr-home');coachSay(coachHome());}
+function goHome(){reviewMode=false;micStop();if(window.speechSynthesis)speechSynthesis.cancel();show('scr-home');coachSay(coachHome());}
 function openAct(a){micStop();if(window.speechSynthesis)speechSynthesis.cancel();
   if(!speechOK()&&a!=='quiz'&&a!=='read'){/* 仍可進入，會顯示提示 */}
-  ({say:startSay,shadow:startShadow,word:startWord,read:startRead,talk:startTalk,quiz:startQuiz}[a])(DAY);}
+  ({say:startSay,shadow:startShadow,word:startWord,read:startRead,talk:startTalk,quiz:startQuiz,listen:startListen}[a])(DAY);}
 function toggleHelp(){const c=$('help-card');const b=$('help-btn');const open=c.classList.toggle('hide')===false;
   b.innerHTML=open?'❓ 收起說明 ▴':'❓ 第一次使用?點這裡看怎麼練口說 ▾';}
 
 /* ---------- 教練訊息 ---------- */
 function coachSay(html){$('coach-msg').innerHTML=html;}
 function coachHome(){const nm=PROFILES[PROFILE];
+  if(isTom()){const lv='<b>A2 → B1</b>';
+    return ST.totalSpoken>0
+      ?('Hi '+nm+', 很棒!已累計開口 <b>'+ST.totalSpoken+'</b> 句。我們一步一步從基礎練起('+lv+'),選一個主題開始吧!')
+      :('Hi '+nm+', 我們從基礎開始 ('+lv+')。用簡單的句子多開口,你會愈說愈順!選一個主題開始吧。');}
   return ST.totalSpoken>0
     ?('Hi '+nm+', 做得好,你已經累計開口 <b>'+ST.totalSpoken+'</b> 句了!今天繼續保持,選一天的課開始吧。')
     :('Hi '+nm+', 準備好開口了嗎?今天的目標是<b>把學過的字真的「說出來」</b>。選一天的課,挑一個活動開始吧!');}
@@ -3279,25 +3646,34 @@ function coachHome(){const nm=PROFILES[PROFILE];
 /* ═══════════════════════════════════════════════════════════
    HOME
    ═══════════════════════════════════════════════════════════ */
+let DDATES=[];
+function ddLabel(d){if(d==='all')return '📚 全部筆記（所有內容）';return (A2BY[d]?lessonTitle(d):fmtDate(d)+' — '+lessonTitle(d));}
+function buildDayList(){const list=$('dd-list');
+  list.innerHTML=DDATES.map((d,i)=>'<div class="dd-item'+(d===DAY?' sel':'')+'" data-d="'+d+'" onclick="ddSelect(\''+d+'\')">'+(i===0&&d!=='all'?'⭐ ':'')+esc(ddLabel(d))+'</div>').join('');
+  $('day-btn-label').textContent=ddLabel(DAY);}
+function ddToggle(e){if(e)e.stopPropagation();const l=$('dd-list'),b=$('day-btn');
+  const open=l.classList.toggle('open');b.classList.toggle('open',open);
+  if(open){const sel=l.querySelector('.dd-item.sel');if(sel)sel.scrollIntoView({block:'nearest'});}}
+function ddClose(){$('dd-list').classList.remove('open');$('day-btn').classList.remove('open');}
+function ddSelect(d){DAY=d;buildDayList();renderMeta();ddClose();}
+document.addEventListener('click',e=>{if(!e.target.closest('#day-dd'))ddClose();});
 function initHome(){
-  const dates=allDates();const sel=$('day-sel');
-  sel.innerHTML=dates.map((d,i)=>'<option value="'+d+'">'+(i===0?'⭐ ':'')+fmtDate(d)+' — '+esc(lessonTitle(d))+'</option>').join('')
-    +'<option value="all">📚 全部筆記（所有內容）</option>';
-  DAY=dates[0]||'all';sel.value=DAY;
-  sel.onchange=()=>{DAY=sel.value;renderMeta();};
+  DDATES=allDates().concat(['all']);
+  DAY=DDATES[0]||'all';
+  buildDayList();
   updateProfileUI();renderMeta();coachSay(coachHome());
   const wd=['日','一','二','三','四','五','六'][new Date().getDay()];
   $('hd-date').textContent=new Date().getFullYear()+'年'+(new Date().getMonth()+1)+'月'+new Date().getDate()+'日 週'+wd;
 }
 function renderMeta(){const d=DAY;const v=dayVocab(d).length,s=sayItems(d).length,a=dayArticles(d).length,q=quizFor(d);
-  $('day-meta').innerHTML='<span class="chip">🗣️ '+s+' 句可說</span><span class="chip">📇 '+v+' 單字</span>'
-    +(a?'<span class="chip">📖 '+a+' 篇文章</span>':'')+(q?'<span class="chip">📝 '+q.questions.length+' 測驗題</span>':'');}
+  $('day-meta').innerHTML='<span class="chip c1">🗣️ '+s+' 句可說</span><span class="chip c2">📇 '+v+' 單字</span>'
+    +(a?'<span class="chip c3">📖 '+a+' 篇文章</span>':'')+(q?'<span class="chip c4">📝 '+q.questions.length+' 測驗題</span>':'');}
 
 /* ═══════════════════════════════════════════════════════════
    1) SAY IT
    ═══════════════════════════════════════════════════════════ */
 let sayList=[],sayI=0,sayCur=null;
-function startSay(d){sayList=shuffle(sayItems(d)).slice(0,20);
+function startSay(d){reviewMode=false;sayList=shuffle(sayItems(d)).slice(0,20);
   if(!sayList.length){alert('這一天還沒有可練的句子，換一天或選「全部筆記」試試。');return;}
   sayI=0;$('say-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · 共 '+sayList.length+' 句';
   show('scr-say');sayRender();}
@@ -3321,9 +3697,12 @@ function sayScore(t){const r=scoreSpeech(t,sayCur.en);showRing('say-score',r.pct
   $('say-heard').innerHTML='你說：<b>'+esc(t)+'</b>';
   $('say-reveal').classList.remove('hide');$('say-next').classList.remove('hide');
   $('say-mlbl').textContent='想再說一次?按我 🎤';
-  logSpeak(r.pct);speak(sayCur.en,0.9);}
+  logSpeak(r.pct);speak(sayCur.en,0.9);
+  if(r.pct===100){$('say-mlbl').textContent='滿分! 自動跳下一句 🎉';setTimeout(()=>{if(!micActive)sayNext();},1600);}}
 function sayRevealAns(){$('say-heard').innerHTML='✅ 正確：<b>'+esc(sayCur.en)+'</b>';speak(sayCur.en,0.9);}
-function sayNext(){sayI++;if(sayI>=sayList.length){finishAct('🎤 說出來','你完成了 '+sayList.length+' 句口說!敢開口就是進步。');return;}sayRender();}
+function sayNext(){sayI++;if(sayI>=sayList.length){
+    if(reviewMode){reviewMode=false;finishAct('🔁 久違複習','5 句複習完成!暖身好了,開始今天的練習吧。');return;}
+    finishAct('🎤 說出來','你完成了 '+sayList.length+' 句口說!敢開口就是進步。');return;}sayRender();}
 
 /* ═══════════════════════════════════════════════════════════
    2) SHADOW
@@ -3347,7 +3726,8 @@ function shMic(){micStart({btn:'sh-mic',lbl:'sh-mlbl',idle:'先聽示範，再�
     const diff=$('sh-diff');diff.classList.remove('hide');
     diff.innerHTML=r.diff.map(x=>'<span class="'+(x.ok?'w-ok':'w-miss')+'">'+esc(x.w)+'</span>').join(' ');
     $('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>';$('sh-next').classList.remove('hide');
-    logSpeak(r.pct);}});}
+    logSpeak(r.pct);
+    if(r.pct===100){$('sh-mlbl').textContent='滿分! 自動跳下一句 🎉';setTimeout(()=>{if(!micActive)shNext();},1600);}}});}
 function shNext(){shI++;if(shI>=shList.length){finishAct('🔁 跟讀模仿','你跟讀了 '+shList.length+' 句!節奏會愈練愈順。');return;}shRender();setTimeout(()=>speak(shCur.en,0.9),300);}
 
 /* ═══════════════════════════════════════════════════════════
@@ -3374,27 +3754,31 @@ function wordMic(){micStart({btn:'word-mic',lbl:'word-mlbl',idle:'按一下，�
     if(!t){$('word-mlbl').textContent='沒聽清楚，再按一次 🎤';return;}
     const want=toks(wCur.w),got=toks(t);const hit=want.filter(w=>got.includes(w)).length;
     const pct=want.length?Math.round(hit/want.length*100):0;showRing('word-score',pct);
-    $('word-heard').innerHTML='你說：<b>'+esc(t)+'</b>';logSpeak(pct);speak(wCur.w,0.85);}});}
+    $('word-heard').innerHTML='你說：<b>'+esc(t)+'</b>';logSpeak(pct);speak(wCur.w,0.85);
+    if(pct===100){$('word-mlbl').textContent='滿分! 自動跳下一個 🎉';setTimeout(()=>{if(!micActive)wordNext();},1500);}}});}
 function wordNext(){wI++;if(wI>=wList.length){finishAct('🗣️ 單字口說','你念完了 '+wList.length+' 個單字!把生字變成能說的字。');return;}wRender();}
 
 /* ═══════════════════════════════════════════════════════════
    4) READ ALOUD
    ═══════════════════════════════════════════════════════════ */
 let READ=null;
+let READLIST=[];
 function startRead(d){let arts=dayArticles(d);let scope=d;
-  if(!arts.length){arts=articles.slice();scope='all';}
+  if(!arts.length&&!isTom()){arts=articles.slice();scope='all';}
+  READLIST=arts;
   const pick=$('read-pick');$('read-body').classList.add('hide');pick.classList.remove('hide');
+  if(!arts.length){pick.innerHTML='<div class="note">📖 這個主題還沒有文章，換一個試試。</div>';show('scr-read');return;}
   pick.innerHTML='<div class="note">📖 '+(scope==='all'&&d!=='all'?'這一天沒有文章，以下是全部文章：':'選一篇文章，一段一段朗讀。')+'</div>'
-    +arts.map((a,i)=>'<button class="act" style="width:100%;margin-bottom:10px" onclick="readOpen('+ (d==='all'||scope==='all'? articles.indexOf(a): articles.indexOf(a)) +')">'
+    +arts.map((a,i)=>'<button class="act" style="width:100%;margin-bottom:10px" onclick="readOpen('+i+')">'
       +'<div class="act-h">'+esc(a.title)+'</div><div class="act-en">'+esc(a.titleCn||'')+'</div>'
       +'<div class="act-d">'+a.paras.length+' 段 · '+esc(a.source||'')+'</div></button>').join('');
   show('scr-read');}
-function readOpen(gi){const a=articles[gi];READ={a:a,paras:[]};
+function readOpen(gi){const a=READLIST[gi];READ={a:a,paras:[]};
   const body=$('read-body');$('read-pick').classList.add('hide');body.classList.remove('hide');
   let html='<div class="sub-top" style="margin-bottom:10px"><div><div class="sub-h" style="font-size:1.05rem">'+esc(a.title)+'</div><div class="sub-s">'+esc(a.titleCn||'')+'</div></div></div>';
   a.paras.forEach((p,pi)=>{const text=stripTags(p.en);const tk=text.split(/(\s+)/);
     const spans=tk.map((w,ti)=>{if(/^\s+$/.test(w))return w;const isw=/[a-zA-Z]/.test(w);
-      return isw?'<span class="tok" id="rt-'+pi+'-'+ti+'">'+esc(w)+'</span>':esc(w);}).join('');
+      return isw?'<span class="tok" id="rt-'+pi+'-'+ti+'" onclick="tapWord(this)" title="點一下聽這個字的發音">'+esc(w)+'</span>':esc(w);}).join('');
     READ.paras.push({tokens:tk});
     html+='<div class="para"><div class="para-en" id="rp-'+pi+'">'+spans+'</div>'
       +'<div class="para-cn">'+esc(p.cn||'')+'</div>'
@@ -3405,7 +3789,7 @@ function readOpen(gi){const a=articles[gi];READ={a:a,paras:[]};
   body.innerHTML=html;window.scrollTo(0,0);}
 function readText(pi){return stripTags(READ.a.paras[pi].en);}
 function readMic(pi){
-  micStart({btn:'rmic-'+pi,lbl:'rlbl-'+pi,idle:'按 🎤 朗讀這段',continuous:true,
+  micStart({btn:'rmic-'+pi,lbl:'rlbl-'+pi,idle:'按 🎤 朗讀這段',continuous:true,keepAlive:true,idleMs:5000,
     onLive:t=>{const c=markRead(pi,t);$('rcov-'+pi).textContent=c+'%';$('rlbl-'+pi).textContent='🔴 唸吧，說到哪亮到哪…（唸完再按一次）';},
     onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('rlbl-'+pi);return;}
       if(!t){$('rlbl-'+pi).textContent='沒聽清楚，再按一次 🎤';return;}
@@ -3415,6 +3799,9 @@ function markRead(pi,said){const got={};toks(said).forEach(w=>got[w]=(got[w]||0)
   tk.forEach((w,ti)=>{if(/^\s+$/.test(w)||!/[a-zA-Z]/.test(w))return;total++;const n=norm(w);
     const el=$('rt-'+pi+'-'+ti);if(got[n]>0){got[n]--;hit++;if(el)el.classList.add('hit');}});
   return total?Math.round(hit/total*100):0;}
+/* 點文章裡的單字 → 聽發音（去掉標點） */
+function tapWord(el){const w=(el.textContent||'').replace(/[^A-Za-z'-]/g,'');if(!w)return;
+  speak(w,0.8);el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),450);}
 
 /* ═══════════════════════════════════════════════════════════
    5) TALK TIME
@@ -3431,7 +3818,7 @@ function talkRender(){const q=talkList[talkI%talkList.length];talkCur=q;
   ph.innerHTML=(talkWords.length?talkWords:['weekend','because','usually','really','enjoy']).map(w=>'<span class="phrase" onclick="speak(\''+w.replace(/'/g,"\\'")+'\',0.85)" title="點一下聽這個字的發音，試著把它用進回答裡">'+esc(w)+'</span>').join('');
   $('talk-heard').innerHTML='';$('talk-model').classList.add('hide');$('talk-modelbox').classList.add('hide');
   $('talk-mlbl').textContent=speechOK()?'按一下，開始回答':'此瀏覽器不支援辨識，可自己練習口說';}
-function talkMic(){micStart({btn:'talk-mic',lbl:'talk-mlbl',idle:'按一下，開始回答',continuous:true,
+function talkMic(){micStart({btn:'talk-mic',lbl:'talk-mlbl',idle:'按一下，開始回答',continuous:true,keepAlive:true,idleMs:8000,
   onLive:t=>{$('talk-heard').innerHTML='<b>'+esc(t)+'</b>';$('talk-mlbl').textContent='🔴 慢慢說，說完再按一次結束';},
   onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('talk-mlbl');$('talk-model').classList.remove('hide');return;}
     if(!t){$('talk-mlbl').textContent='沒聽清楚，再按一次 🎤';return;}
@@ -3481,6 +3868,33 @@ function qzFinish(){$('quiz-prog').style.width='100%';$('quiz-card').classList.a
   const f=$('quiz-final');f.classList.remove('hide');const pct=Math.round(qzScore/qzList.length*100);
   const emo=pct>=80?'🏆':pct>=60?'👍':'💪';const msg=pct>=80?'太厲害了!這些重點你掌握得很好。':pct>=60?'不錯的表現,再複習錯的地方就更穩了。':'沒關係,多練幾次一定會進步。回去把單字念出來記更牢!';
   f.innerHTML='<div class="final-emo">'+emo+'</div><div class="final-h">測驗完成!</div><div class="final-sc">'+qzScore+' / '+qzList.length+'</div><div class="final-msg">'+msg+'</div><div class="actions"><button class="btn btn-o" onclick="startQuiz(DAY)">🔁 再測一次</button><button class="btn btn-p" onclick="goHome()">🏠 回首頁</button></div>';}
+
+/* ═══════════════════════════════════════════════════════════
+   7) LISTENING（聽力打字：你負責口說[TTS 正常/慢速]，我負責打字）
+   ═══════════════════════════════════════════════════════════ */
+let lsList=[],lsI=0,lsCur=null;
+function startListen(d){lsList=shuffle(shadowItems(d)).slice(0,15);
+  if(!lsList.length){alert('這一天還沒有可聽寫的句子，換一天或選「全部筆記」試試。');return;}
+  lsI=0;$('ls-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · 共 '+lsList.length+' 句';
+  show('scr-listen');lsRender();}
+function lsRender(){const it=lsList[lsI];lsCur=it;
+  $('ls-tag').textContent='第 '+(lsI+1)+' / '+lsList.length+' 句';
+  $('ls-cn').textContent=it.cn?('提示：'+it.cn):'（先按 🔊 播放，聽聽看）';
+  $('ls-prog').style.width=(lsI/lsList.length*100)+'%';
+  const inp=$('ls-input');inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.background='';
+  $('ls-score').classList.add('hide');$('ls-diff').classList.add('hide');
+  $('ls-check').classList.remove('hide');$('ls-next').classList.add('hide');
+  setTimeout(()=>speak(lsCur.en,0.9),300);
+  setTimeout(()=>{try{inp.focus();}catch(e){}},120);}
+function lsPlay(r){speak(lsCur.en,r);}
+function lsCheck(){const inp=$('ls-input');const v=inp.value.trim();if(!v){lsPlay(1);return;}
+  inp.disabled=true;const r=scoreSpeech(v,lsCur.en);showRing('ls-score',r.pct);
+  const diff=$('ls-diff');diff.classList.remove('hide');
+  diff.innerHTML='正解：'+r.diff.map(x=>'<span class="'+(x.ok?'w-ok':'w-miss')+'">'+esc(x.w)+'</span>').join(' ')
+    +(lsCur.cn?'<div class="pc-sub" style="margin-top:6px">'+esc(lsCur.cn)+'</div>':'');
+  $('ls-check').classList.add('hide');$('ls-next').classList.remove('hide');
+  logSpeak(r.pct);speak(lsCur.en,0.9);}
+function lsNext(){lsI++;if(lsI>=lsList.length){finishAct('🎧 聽力練習','你完成了 '+lsList.length+' 句聽寫!耳朵越來越靈了。');return;}lsRender();}
 
 /* ---------- 共用：評分環 / 活動完成 ---------- */
 function showRing(id,pct){const el=$(id);el.classList.remove('hide');
