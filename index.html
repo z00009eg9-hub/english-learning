@@ -41,20 +41,20 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .prof-sw{display:flex;background:rgba(255,255,255,.18);border-radius:100px;padding:3px;gap:2px;}
 .prof-btn{border:none;background:transparent;color:#fff;font-family:inherit;font-weight:800;
   font-size:.78rem;padding:5px 11px;border-radius:100px;cursor:pointer;opacity:.72;transition:.15s;white-space:nowrap;}
-.prof-btn.active{background:#fff;color:var(--coral-d);opacity:1;animation:profBreath 3.5s ease-in-out infinite;}
+.prof-btn.active{background:rgba(255,255,255,.62);color:#0E7C86;opacity:1;animation:profBreath 3.5s ease-in-out infinite;}
 @keyframes profBreath{
-  0%,100%{box-shadow:0 2px 6px rgba(0,0,0,.12), 0 0 0 0 rgba(255,255,255,.2);}
-  50%{box-shadow:0 2px 8px rgba(0,0,0,.14), 0 0 10px 2px rgba(255,255,255,.45);}
+  0%,100%{box-shadow:0 1px 4px rgba(0,0,0,.08), 0 0 0 0 rgba(255,255,255,.12);}
+  50%{box-shadow:0 2px 6px rgba(0,0,0,.10), 0 0 8px 1px rgba(255,255,255,.22);}
 }
 @media(prefers-reduced-motion:reduce){.prof-btn.active{animation:none;box-shadow:0 2px 6px rgba(0,0,0,.12);}}
 
 /* ═══ LAYOUT ═══ */
-.wrap{max-width:820px;margin:0 auto;padding:18px 15px 60px;}
+.wrap{max-width:820px;margin:0 auto;padding:16px 15px 22px;}
 .screen{display:none;animation:pop .32s cubic-bezier(.2,.7,.3,1);}
 .screen.on{display:block;}
 @keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .card{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);
-  box-shadow:var(--sh-sm);padding:18px;}
+  box-shadow:var(--sh-sm);padding:16px;}
 
 /* ═══ COACH GREETING ═══ */
 .coach{display:flex;gap:13px;align-items:center;background:linear-gradient(135deg,#fff,#EEF4FF);
@@ -103,6 +103,14 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .act-h{font-size:1.28rem;font-weight:900;letter-spacing:-.2px;}
 .act-en{font-size:.82rem;font-weight:800;color:var(--faint);font-family:'Inter';margin-top:2px;}
 .act-d{font-size:.9rem;font-weight:600;color:var(--sub);margin-top:8px;line-height:1.5;}
+/* 卡片使用說明：一步一步告訴學習者怎麼玩 */
+.act-how{margin-top:10px;padding-top:9px;border-top:1px dashed var(--bdr2);
+  font-size:.82rem;font-weight:600;color:var(--faint);line-height:1.65;}
+.act-how b{color:var(--teal);font-weight:800;}
+/* 活動頁上方的使用說明條 */
+.how-bar{background:var(--amber-l);border:1px solid #F3DFA6;border-radius:14px;
+  padding:8px 12px;font-size:.8rem;font-weight:600;color:var(--ink);line-height:1.55;margin-bottom:10px;}
+.how-bar b{color:var(--coral-d);font-weight:800;}
 .act-badge{position:absolute;top:12px;right:12px;font-size:.62rem;font-weight:800;
   background:var(--coral);color:#fff;padding:2px 8px;border-radius:100px;}
 /* 六個口說活動：繽紛彩色卡片 */
@@ -136,15 +144,15 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .stat .l{font-size:.68rem;color:var(--sub);margin-top:2px;font-weight:600;}
 
 /* ═══ SUB-SCREEN HEADER ═══ */
-.sub-top{display:flex;align-items:center;gap:11px;margin-bottom:16px;}
+.sub-top{display:flex;align-items:center;gap:11px;margin-bottom:12px;}
 .back{width:42px;height:42px;border-radius:13px;border:1.5px solid var(--bdr2);background:#fff;
   display:grid;place-items:center;font-size:1.15rem;cursor:pointer;flex-shrink:0;color:var(--ink);transition:.15s;}
 .back:hover{border-color:var(--coral);color:var(--coral);}
 .sub-h{font-size:1.16rem;font-weight:900;letter-spacing:-.3px;}
 .sub-s{font-size:.75rem;color:var(--sub);font-weight:600;}
-.prog{height:7px;background:var(--bdr);border-radius:100px;overflow:hidden;margin-bottom:16px;}
+.prog{height:7px;background:var(--bdr);border-radius:100px;overflow:hidden;margin-bottom:12px;}
 /* 難度切換（初級/進階） */
-.lvl-tog{display:flex;gap:8px;margin-bottom:12px;}
+.lvl-tog{display:flex;gap:8px;margin-bottom:10px;}
 .lvl-btn{flex:1;padding:9px 10px;border-radius:12px;border:2px solid var(--bdr2);background:#fff;
   font-family:inherit;font-size:.86rem;font-weight:800;color:var(--sub);cursor:pointer;transition:.15s;}
 .lvl-btn.active{border-color:var(--coral);background:var(--coral-l);color:var(--coral-d);}
@@ -154,9 +162,9 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   border-radius:100px;transition:width .5s cubic-bezier(.3,.7,.3,1);width:0;}
 
 /* ═══ PROMPT / PRACTICE CARD ═══ */
-.pc{text-align:center;padding:16px 16px 8px;min-height:96px;display:flex;flex-direction:column;justify-content:center;}
+.pc{text-align:center;padding:12px 16px 6px;min-height:72px;display:flex;flex-direction:column;justify-content:center;}
 .pc-tag{display:inline-block;font-size:.7rem;font-weight:800;color:var(--sub);background:var(--bg);
-  padding:3px 11px;border-radius:100px;margin:0 auto 14px;}
+  padding:3px 11px;border-radius:100px;margin:0 auto 10px;}
 .pc-cn{font-size:1.5rem;font-weight:800;line-height:1.4;letter-spacing:-.3px;}
 .pc-en{font-size:1.35rem;font-weight:700;line-height:1.4;font-family:'Inter';}
 .pc-hint{font-size:.82rem;color:var(--teal);margin-top:12px;font-weight:600;}
@@ -169,7 +177,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .w-ok{color:var(--good);}
 .w-miss{color:var(--faint);text-decoration:line-through;}
 .w-extra{color:var(--amber);font-style:italic;font-size:.85em;}
-.heard{font-size:.82rem;color:var(--sub);margin-top:10px;font-style:italic;min-height:1em;}
+.heard{font-size:.82rem;color:var(--sub);margin-top:6px;font-style:italic;min-height:1em;}
 .heard b{color:var(--ink);font-style:normal;}
 
 /* score ring */
@@ -183,9 +191,9 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .score-msg .sm{font-size:.8rem;color:var(--sub);margin-top:2px;}
 
 /* ═══ MIC ═══ */
-.mic-zone{display:flex;flex-direction:column;align-items:center;margin-top:12px;}
-.mic{width:72px;height:72px;border-radius:50%;border:none;cursor:pointer;
-  background:linear-gradient(135deg,var(--coral),var(--coral-d));color:#fff;font-size:1.8rem;
+.mic-zone{display:flex;flex-direction:column;align-items:center;margin-top:8px;}
+.mic{width:64px;height:64px;border-radius:50%;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--coral),var(--coral-d));color:#fff;font-size:1.6rem;
   display:grid;place-items:center;box-shadow:0 10px 26px rgba(15,122,133,.42);
   transition:transform .15s;position:relative;font-family:inherit;}
 .mic:active{transform:scale(.94);}
@@ -197,10 +205,9 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 #scr-talk .mic-lbl{margin-top:7px;}
 
 /* ═══ ACTION ROW ═══ */
-.actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:12px;}
-/* 底部固定操作列：內容多時麥克風與按鈕仍固定在螢幕底部 */
-.sticky-ctrl{position:sticky;bottom:0;background:var(--card);margin:6px -18px -18px;padding:8px 18px 12px;
-  box-shadow:0 -8px 14px -8px rgba(30,60,70,.14);z-index:20;border-radius:0 0 var(--r) var(--r);}
+.actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:10px;}
+/* 操作列：跟著卡片內容一起排版（不固定、不切區塊），整頁一次看完 */
+.sticky-ctrl{position:static;background:transparent;margin:10px 0 0;padding:0;box-shadow:none;}
 .sticky-ctrl .mic-zone{margin-top:2px;}
 .sticky-ctrl .actions{margin-top:8px;}
 .btn{padding:11px 18px;border-radius:13px;border:none;cursor:pointer;font-size:.88rem;font-weight:800;
@@ -229,7 +236,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .face-b .fcn{font-size:1.7rem;font-weight:900;}
 .face-b .fdef{font-size:1.14rem;font-weight:600;opacity:.97;margin-top:11px;line-height:1.5;font-family:'Inter';}
 .face-b .fex{font-size:1.1rem;font-weight:600;opacity:.95;margin-top:12px;font-style:italic;font-family:'Inter';border-top:1px solid rgba(255,255,255,.3);padding-top:11px;line-height:1.5;}
-.tap-hint{font-size:.72rem;color:var(--faint);margin-top:9px;text-align:center;}
+.tap-hint{font-size:.72rem;color:var(--faint);margin-top:6px;text-align:center;}
 
 /* ═══ READ-ALOUD paragraph ═══ */
 .para{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:var(--sh-sm);}
@@ -242,7 +249,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .para-bar{display:flex;align-items:center;gap:10px;margin-top:12px;}
 
 /* ═══ TALK phrases ═══ */
-.phrases{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;justify-content:center;}
+.phrases{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px;justify-content:center;}
 .phrase{background:var(--teal-l);color:var(--teal);border:1px solid #BEE9E7;padding:6px 12px;
   border-radius:100px;font-size:.82rem;font-weight:700;cursor:pointer;font-family:'Inter';}
 .phrase:hover{background:var(--teal);color:#fff;}
@@ -357,48 +364,55 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 
     <div class="grid-ttl">🚀 選一個口說活動</div>
     <div class="acts">
-      <button class="act act-say" onclick="openAct('say')" title="看中文開口說英文，麥克風幫你抓漏字並給分">
-        <span class="act-badge">主打</span>
-        <div class="act-ico i-say">🎤</div>
-        <div class="act-h">說出來</div>
-        <div class="act-en">Say It Out Loud</div>
-        <div class="act-d">看中文,開口說英文。麥克風幫你抓漏字、給分。</div>
+      <button class="act act-word" onclick="openAct('word')" title="看字卡念單字並造句，把生字變成能開口說的字">
+        <div class="act-ico i-word">🗣️</div>
+        <div class="act-h">單字口說</div>
+        <div class="act-en">Word Power</div>
+        <div class="act-d">看字卡念單字 + 造句,把生字變成能講的字。</div>
+        <div class="act-how">📌 <b>怎麼玩</b><br>① 先按 🔊 聽發音<br>② 按 🎤 念一次，看分數<br>③ 點卡片翻面對中文與例句<br>④ 按「下一個 →」換字</div>
       </button>
       <button class="act act-shadow" onclick="openAct('shadow')" title="聽標準示範句，馬上跟著複誦，練節奏與流暢度">
         <div class="act-ico i-shadow">🔁</div>
         <div class="act-h">跟讀模仿</div>
         <div class="act-en">Shadowing</div>
         <div class="act-d">聽示範句 → 馬上跟著複誦,練節奏與流暢度。</div>
-      </button>
-      <button class="act act-word" onclick="openAct('word')" title="看字卡念單字並造句，把生字變成能開口說的字">
-        <div class="act-ico i-word">🗣️</div>
-        <div class="act-h">單字口說</div>
-        <div class="act-en">Word Power</div>
-        <div class="act-d">看字卡念單字 + 造句,把生字變成能講的字。</div>
+        <div class="act-how">📌 <b>怎麼玩</b><br>① 按 🔊 正常速（聽不清就 🐢 慢速）<br>② 按 🎤 馬上跟著複誦一次<br>③ 說完再按一次 🎤 結束評分<br>④ 綠字＝說對，紅字＝漏掉</div>
       </button>
       <button class="act act-read" onclick="openAct('read')" title="一段一段朗讀文章，說對的字會即時亮綠燈">
         <div class="act-ico i-read">📖</div>
         <div class="act-h">朗讀文章</div>
         <div class="act-en">Read Aloud</div>
         <div class="act-d">一段一段朗讀,說對的字會亮綠燈。</div>
+        <div class="act-how">📌 <b>怎麼玩</b><br>① 選一篇文章<br>② 每段先按 🔊 聽示範<br>③ 按 🎤 朗讀，說到哪亮到哪<br>④ 唸完再按一次 🎤 看覆蓋率<br>（點文章裡任一個字可聽發音）</div>
       </button>
-      <button class="act act-talk" onclick="openAct('talk')" title="回答教練的問題，用今天學的字自由表達，練 B2 溝通">
-        <div class="act-ico i-talk">💬</div>
-        <div class="act-h">情境開講</div>
-        <div class="act-en">Talk Time</div>
-        <div class="act-d">回答教練的問題,用今天學的字自由表達。</div>
-      </button>
-      <button class="act act-quiz" onclick="openAct('quiz')" title="選擇題測驗：綜合（單字文法）／聽力（用聽的選）／閱讀（讀短文回答）">
-        <div class="act-ico i-quiz">📝</div>
-        <div class="act-h">快速檢查</div>
-        <div class="act-en">Quick Check</div>
-        <div class="act-d">選擇題測驗：📝 綜合 / 🎧 聽力 / 📖 閱讀，可同主題再出新題。</div>
+      <button class="act act-say" onclick="openAct('say')" title="看中文開口說英文，麥克風幫你抓漏字並給分">
+        <span class="act-badge">主打</span>
+        <div class="act-ico i-say">🎤</div>
+        <div class="act-h">說出來</div>
+        <div class="act-en">Say It Out Loud</div>
+        <div class="act-d">看中文,開口說英文。麥克風幫你抓漏字、給分。</div>
+        <div class="act-how">📌 <b>怎麼玩</b><br>① 看中文，先自己想英文<br>② 按 🎤 說出來，說完再按一次<br>③ 想不出來按 💡 看提示<br>④ 看分數與正解，再按下一題</div>
       </button>
       <button class="act act-listen" onclick="openAct('listen')" title="聽英文句子（可正常/慢速），把聽到的打出來">
         <div class="act-ico i-listen">🎧</div>
         <div class="act-h">聽力練習</div>
         <div class="act-en">Listening</div>
         <div class="act-d">聽句子(正常/慢速),把聽到的英文打出來對答案。</div>
+        <div class="act-how">📌 <b>怎麼玩</b><br>① 按 🔊 聽句子（可重聽、🐢 慢速）<br>② 把聽到的英文打進格子<br>③ 按「✅ 對答案」看逐字對照<br>（基礎有中文與提示單字可看）</div>
+      </button>
+      <button class="act act-talk" onclick="openAct('talk')" title="回答教練的問題，用今天學的字自由表達，練 B2 溝通">
+        <div class="act-ico i-talk">💬</div>
+        <div class="act-h">情境開講</div>
+        <div class="act-en">Talk Time</div>
+        <div class="act-d">回答教練的問題,用今天學的字自由表達。</div>
+        <div class="act-how">📌 <b>怎麼玩</b><br>① 看題目，試著用下面的提示字<br>② 按 🎤 慢慢說，說完再按一次<br>③ 卡住就按 💡 看示範答案<br>④ 目標：一次說 3 句以上</div>
+      </button>
+      <button class="act act-quiz" onclick="openAct('quiz')" title="選擇題測驗：綜合（單字文法）／聽力（用聽的選）／閱讀（讀短文回答）">
+        <div class="act-ico i-quiz">📝</div>
+        <div class="act-h">快速檢查</div>
+        <div class="act-en">Quick Check</div>
+        <div class="act-d">選擇題測驗：📝 綜合 / 🎧 聽力 / 📖 閱讀，可同主題再出新題。</div>
+        <div class="act-how">📌 <b>怎麼玩</b><br>① 上方選題型：綜合／聽力／閱讀<br>② 聽力題按 🔊 聽，再選答案<br>③ 閱讀題先讀短文再作答<br>④ 做完可「🔄 同主題再出一份新題」</div>
       </button>
     </div>
 
@@ -415,6 +429,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">🎤 說出來</div><div class="sub-s" id="say-sub">看中文,開口說英文</div></div>
     </div>
+    <div class="how-bar">📌 <b>怎麼玩</b>：① 看中文，先自己想英文 → ② 按 🎤 說出來，說完再按一次結束 → ③ 想不出來按 💡 看提示 → ④ 看分數與正解，按下一題</div>
     <div class="lvl-tog" id="lvl-say" style="display:none"></div>
     <div class="prog"><i id="say-prog"></i></div>
     <div class="card" id="say-card">
@@ -446,6 +461,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">🔁 跟讀模仿</div><div class="sub-s">聽一句 → 馬上複誦</div></div>
     </div>
+    <div class="how-bar">📌 <b>怎麼玩</b>：① 按 🔊 正常速聽示範（聽不清用 🐢 慢速）→ ② 按 🎤 馬上跟著複誦 → ③ 說完再按一次 🎤 結束 → ④ 綠字＝說對，紅字＝漏掉</div>
     <div class="lvl-tog" id="lvl-shadow" style="display:none"></div>
     <div class="prog"><i id="sh-prog"></i></div>
     <div class="card">
@@ -477,6 +493,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">🗣️ 單字口說</div><div class="sub-s" id="word-sub">念單字 + 造句</div></div>
     </div>
+    <div class="how-bar">📌 <b>怎麼玩</b>：① 按 🔊 聽發音 → ② 按 🎤 念一次看分數 → ③ 點卡片翻面看中文與例句（🔊 聽例句）→ ④ 按「下一個 →」換字</div>
     <div class="lvl-tog" id="lvl-word" style="display:none"></div>
     <div class="prog"><i id="word-prog"></i></div>
     <div class="flip-wrap"><div class="flip" id="word-flip" onclick="wordFlip()" title="點一下翻面，看中文意思與例句">
@@ -494,7 +511,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
     <div class="tap-hint">👆 點卡片翻面看中文與例句</div>
     <div class="scorebox hide" id="word-score"></div>
     <div class="heard" id="word-heard"></div>
-    <div class="sticky-ctrl" style="margin:6px 0 0;padding-left:0;padding-right:0;padding-bottom:6px;background:var(--bg)">
+    <div class="sticky-ctrl">
       <div class="mic-zone">
         <button class="mic" id="word-mic" onclick="wordMic()" title="按一下念出這個單字，再按一次結束並評分">🎤</button>
         <div class="mic-lbl" id="word-mlbl">按一下,念出這個單字</div>
@@ -513,6 +530,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">📖 朗讀文章</div><div class="sub-s" id="read-sub">一段一段念出來</div></div>
     </div>
+    <div class="how-bar">📌 <b>怎麼玩</b>：① 選一篇文章 → ② 每段先按 🔊 聽示範 → ③ 按 🎤 朗讀，說到哪亮到哪 → ④ 唸完再按一次 🎤 看覆蓋率（點文章裡任一個字可聽發音）</div>
     <div class="lvl-tog" id="lvl-read" style="display:none"></div>
     <div id="read-pick"></div>
     <div id="read-body" class="hide"></div>
@@ -524,6 +542,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">💬 情境開講</div><div class="sub-s">用完整句子回答,越多越好</div></div>
     </div>
+    <div class="how-bar">📌 <b>怎麼玩</b>：① 看題目，試著用下面的提示字 → ② 按 🎤 慢慢說（說完再按一次結束）→ ③ 卡住就按 💡 看示範答案 → ④ 目標一次說 3 句以上</div>
     <div class="lvl-tog" id="lvl-talk" style="display:none"></div>
     <div class="prog"><i id="talk-prog"></i></div>
     <div class="card">
@@ -555,6 +574,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">📝 快速檢查</div><div class="sub-s" id="quiz-sub">單字與文法小測驗</div></div>
     </div>
+    <div class="how-bar">📌 <b>怎麼玩</b>：① 下面先選題型（📝 綜合／🎧 聽力／📖 閱讀）→ ② 聽力題按 🔊 聽完再選、閱讀題先讀短文 → ③ 作答後看解說 → ④ 做完可「🔄 同主題再出一份新題」</div>
     <div class="lvl-tog" id="quiz-lvl" style="display:none"></div>
     <div class="lvl-tog" id="quiz-mode" style="display:none"></div>
     <div class="prog"><i id="quiz-prog"></i></div>
@@ -568,14 +588,17 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁">←</button>
       <div><div class="sub-h">🎧 聽力練習</div><div class="sub-s" id="ls-sub">聽句子，把聽到的英文打出來</div></div>
     </div>
+    <div class="how-bar">📌 <b>怎麼玩</b>：① 按 🔊 聽句子（可重聽、🐢 慢速）→ ② 把聽到的英文打進格子 → ③ 按「✅ 對答案」看逐字對照（基礎會給中文與提示單字）</div>
     <div class="lvl-tog" id="lvl-listen" style="display:none"></div>
     <div class="prog"><i id="ls-prog"></i></div>
     <div class="card">
       <div class="pc">
         <span class="pc-tag" id="ls-tag">聽力</span>
-        <div style="font-size:2.4rem">🎧</div>
+        <div style="font-size:1.9rem">🎧</div>
         <div class="pc-sub" id="ls-cn"></div>
       </div>
+      <div class="center hide" id="ls-hint-t" style="font-size:.76rem;color:var(--sub);margin-top:6px">💡 提示單字（點一下聽發音）:</div>
+      <div class="phrases" id="ls-hint"></div>
       <div class="actions">
         <button class="btn btn-t" onclick="lsPlay(1)" title="正常速度播放">🔊 正常速</button>
         <button class="btn btn-o" onclick="lsPlay(.6)" title="放慢播放">🐢 慢速</button>
@@ -3973,7 +3996,7 @@ function fitWordCard(){const wrap=document.querySelector('.flip-wrap');if(!wrap)
     if(!f||!b)return;
     wrap.style.height='1200px';                    /* 先撐開再量，內容才不會被 flex 壓縮 */
     const need=Math.max(faceNeed(f),faceNeed(b))+8;
-    wrap.style.height=Math.max(210,Math.round(need))+'px';});}
+    wrap.style.height=Math.max(190,Math.round(need))+'px';});}
 function faceNeed(el){const cs=getComputedStyle(el);
   let h=parseFloat(cs.paddingTop)+parseFloat(cs.paddingBottom);
   [...el.children].forEach(c=>{const m=getComputedStyle(c);
@@ -4242,6 +4265,12 @@ function lsRender(){const it=lsList[lsI];lsCur=it;
   $('ls-tag').textContent='第 '+(lsI+1)+' / '+lsList.length+' 句';
   /* 基礎：顯示中文提示；進階：不給提示，純聽打 */
   $('ls-cn').textContent=lvBasic()?(it.cn?('提示：'+it.cn):'（先按 🔊 播放，聽聽看）'):'（進階：不看提示，聽完直接打出來）';
+  /* 基礎：附上句子裡的關鍵字當提示，減少「完全聽不出來」的挫折 */
+  const hint=$('ls-hint'),hintT=$('ls-hint-t');
+  if(lvBasic()){const ws=keyWordsOf(it.en,4);
+    hint.innerHTML=ws.map(w=>'<span class="phrase" onclick="speak(\''+w.replace(/'/g,"\\'")+'\',0.8)">'+esc(w)+'</span>').join('');
+    hintT.classList.toggle('hide',!ws.length);}
+  else{hint.innerHTML='';hintT.classList.add('hide');}
   $('ls-prog').style.width=(lsI/lsList.length*100)+'%';
   const inp=$('ls-input');inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.background='';
   $('ls-score').classList.add('hide');$('ls-diff').classList.add('hide');
