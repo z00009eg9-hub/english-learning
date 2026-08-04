@@ -428,9 +428,9 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
     </div>
 
     <div class="stats">
-      <div class="stat"><div class="n" id="st-spoken">0</div><div class="l">今日開口</div></div>
+      <div class="stat"><div class="n" id="st-spoken">0</div><div class="l">今日完成</div></div>
       <div class="stat"><div class="n" id="st-acc">–</div><div class="l">平均分數</div></div>
-      <div class="stat"><div class="n" id="st-total">0</div><div class="l">累計句數</div></div>
+      <div class="stat"><div class="n" id="st-total">0</div><div class="l">累計卡片</div></div>
     </div>
   </section>
 
@@ -4085,7 +4085,7 @@ function sayScore(t){
   $('say-heard').innerHTML='你說：<b>'+esc(t)+'</b>';
   $('say-reveal').classList.remove('hide');$('say-next').classList.remove('hide');
   $('say-mlbl').textContent='想再說一次?按我 🎤';
-  if(toks(t).length>=2)logSpeak(r.pct);   /* 只有真的說出一句(≥2字)才計入 */
+  logSpeak(r.pct);   /* 這張卡片完整說完、拿到分數，就計入統計 */
   speak(best.en,0.9);
   if(r.pct===100){$('say-mlbl').textContent='滿分! 自動跳下一句 🎉';setTimeout(()=>{if(!micActive)sayNext();},1600);}}
 function sayRevealAns(){const ans=answersOf(sayCur);
@@ -4119,7 +4119,7 @@ function shMic(){micStart({btn:'sh-mic',lbl:'sh-mlbl',idle:'先聽示範，再�
     const diff=$('sh-diff');diff.classList.remove('hide');
     diff.innerHTML=diffHTML(r,'答案：');
     $('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>';$('sh-next').classList.remove('hide');
-    if(toks(t).length>=2)logSpeak(r.pct);   /* 只有真的複誦出一句(≥2字)才計入 */
+    logSpeak(r.pct);   /* 這張卡片完整複誦完、拿到分數，就計入統計 */
     if(r.pct===100){$('sh-mlbl').textContent='滿分! 自動跳下一句 🎉';setTimeout(()=>{if(!micActive)shNext();},1600);}}});}
 function shNext(){shI++;if(shI>=shList.length){finishAct('🔁 跟讀模仿','你跟讀了 '+shList.length+' 句!節奏會愈練愈順。');return;}shRender();setTimeout(()=>speak(shCur.en,demoRate()),300);}
 
@@ -4164,7 +4164,7 @@ function wordMic(){micStart({btn:'word-mic',lbl:'word-mlbl',idle:'按一下，�
     /* 單字發音允許辨識誤差（Tom 更寬鬆），不要因為一個音抓不準就 0 分 */
     const r=scoreSpeech(t,wCur.w,{fuzzy:true});const pct=r.pct;showRing('word-score',pct);
     $('word-heard').innerHTML='你說：<b>'+esc(t)+'</b>';
-    if(pct>0)logSpeak(pct);   /* 只有真的念出這個字(有辨識到)才計入 */
+    logSpeak(pct);   /* 這張卡片完整念完、拿到分數，就計入統計（就算沒念對也算完成） */
     speak(wCur.w,0.85);
     if(pct===100){$('word-mlbl').textContent='滿分! 自動跳下一個 🎉';setTimeout(()=>{if(!micActive)wordNext();},1500);}}});}
 function wordNext(){wI++;if(wI>=wList.length){finishAct('🗣️ 單字口說','你念完了 '+wList.length+' 個單字!把生字變成能說的字。');return;}wRender();}
@@ -4214,7 +4214,7 @@ function readMic(pi){
     onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('rlbl-'+pi);return;}
       if(!t){$('rlbl-'+pi).textContent='沒聽清楚，再按一次 🎤';return;}
       const cov=markRead(pi,t);$('rcov-'+pi).textContent=cov+'%';$('rlbl-'+pi).textContent='唸得好!覆蓋率 '+cov+'%';
-      if(toks(t).length>=2&&cov>0)logSpeak(cov);   /* 真的朗讀出內容(≥2字且有對到)才計入 */
+      logSpeak(cov);   /* 這段朗讀完整結束、拿到覆蓋率，就計入統計 */
     }});}
 function markRead(pi,said){const got=toks(said),used=new Array(got.length).fill(false),loose=isTom();
   const tk=READ.paras[pi].tokens;let total=0,hit=0;
@@ -4293,7 +4293,7 @@ function talkMic(){micStart({btn:'talk-mic',lbl:'talk-mlbl',idle:'按一下，�
     const n=toks(t).length,hi=lvBasic()?15:25,mid=lvBasic()?8:12;
     $('talk-heard').innerHTML='<b>'+esc(t)+'</b><br><span style="color:var(--sub);font-size:.8rem">你說了約 '+n+' 個字'+(n>=hi?' — 很棒的完整回答! 🎉':n>=mid?' — 不錯,試著再多說一兩句 💪':' — 試著說更長,加上 because... 說明原因')+'</span>';
     $('talk-model').classList.remove('hide');
-    if(n>=3)logSpeak(Math.min(100,n*5));   /* 至少說出一句(≥3字)才計入 */
+    logSpeak(Math.min(100,n*5));   /* 這題完整回答完，就計入統計 */
   }});}
 function talkModel(){const b=$('talk-modelbox');b.classList.remove('hide');
   /* 基礎：簡短示範答案；進階：完整示範答案 */
@@ -4442,7 +4442,8 @@ function lsCheck(){const inp=$('ls-input');const v=inp.value.trim();if(!v){lsPla
   diff.innerHTML=diffHTML(r,'答案：')
     +(lsCur.cn?'<div class="pc-sub" style="margin-top:6px">'+esc(lsCur.cn)+'</div>':'');
   $('ls-check').classList.add('hide');$('ls-next').classList.remove('hide');
-  speak(lsCur.en,0.9);}   /* 聽力是「打字」不是開口，不計入開口/句數統計 */
+  logSpeak(r.pct);   /* 這張聽寫卡片完整核對完，就計入統計 */
+  speak(lsCur.en,0.9);}
 function lsNext(){lsI++;if(lsI>=lsList.length){finishAct('🎧 聽力練習','你完成了 '+lsList.length+' 句聽寫!耳朵越來越靈了。');return;}lsRender();}
 
 /* ---------- 共用：評分環 / 活動完成 ---------- */
