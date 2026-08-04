@@ -181,6 +181,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .w-ok{color:var(--good);}
 .w-miss{color:var(--faint);text-decoration:line-through;}
 .w-soft{color:var(--sub);opacity:.55;}
+.w-near{border-bottom:2px dotted var(--good);}
 .w-extra{color:var(--amber);font-style:italic;font-size:.85em;}
 .heard{font-size:.82rem;color:var(--sub);margin-top:6px;font-style:italic;min-height:1em;}
 .heard b{color:var(--ink);font-style:normal;}
@@ -3214,15 +3215,36 @@ function lev(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;
     const t=prev;prev=cur;cur=t;}
   return prev[n];}
 function stemOf(w){return w.replace(/(ies|ing|ed|es|s)$/,'');}
-/* 兩個字算不算「聽起來就是同一個字」 */
+/* 發音鍵：把中文母語者常混的音歸成同一類（l/r/n、v/w/f、th→s、ch/sh/j、c/k、
+   子音尾巴吃掉、母音只留第一個），發音相近的字會得到同一把鍵。 */
+function phonKey(w){
+  let s=(w||'').toLowerCase().replace(/[^a-z]/g,'');
+  if(!s)return '';
+  s=s.replace(/ough|augh/g,'o').replace(/ph/g,'f').replace(/gh/g,'').replace(/wh/g,'w');
+  s=s.replace(/tch|ch|sh|zh|j|ge/g,'x');       /* ch / sh / j 常互換 */
+  s=s.replace(/th/g,'s');                      /* th 常唸成 s / t / f */
+  s=s.replace(/ck|q|c|k/g,'k');
+  s=s.replace(/z/g,'s').replace(/v|w/g,'f');   /* v / w / f 常互換 */
+  s=s.replace(/[lrn]/g,'l').replace(/m/g,'l'); /* l / r / n / m 常互換 */
+  const head=s[0]||'';
+  s=head+s.slice(1).replace(/[aeiouyh]/g,''); /* 母音只留開頭，其餘不計較 */
+  s=s.replace(/(.)\1+/g,'$1');                 /* 疊字合併 */
+  return s;
+}
+/* 兩個字算不算「聽起來就是同一個字」
+   loose（Tom）：發音相近就放行 — 他是初學者，先建立敢開口的信心 */
 function wordClose(a,b,loose){
   if(a===b)return true;
   const sa=stemOf(a),sb=stemOf(b);
-  if(sa&&sa.length>=3&&sa===sb)return true;
+  if(sa&&sa.length>=3&&sa===sb)return true;   /* 只差字尾 -s/-ed/-ing */
   const n=Math.max(a.length,b.length);
-  if(n<(loose?4:5))return false;
-  const d=lev(a,b);
-  return loose?(d<=(n>=7?2:1)):(d<=1);
+  if(!loose){if(n<5)return false;return lev(a,b)<=1;}
+  /* 以下都是寬鬆模式 */
+  const pa=phonKey(a),pb=phonKey(b);
+  if(pa&&pa===pb)return true;                                   /* 發音鍵相同 */
+  if(pa&&pb&&Math.max(pa.length,pb.length)>=3&&lev(pa,pb)<=1)return true;  /* 發音只差一點 */
+  if(n<5)return false;                       /* 短字只認發音鍵，避免 book/look 這種誤判 */
+  return lev(a,b)<=(n>=8?3:2);
 }
 function scoreSpeech(said,target,opts){
   opts=opts||{};
@@ -3245,13 +3267,16 @@ function scoreSpeech(said,target,opts){
 }
 /* 首字大寫（卡片上的「答案」一律以大寫開頭呈現） */
 function cap(s){return s?String(s).charAt(0).toUpperCase()+String(s).slice(1):s;}
-/* 逐字對照的共用畫法：綠＝說對、灰刪除線＝漏掉、淡灰＝小字沒說(不扣分)、橘＝多說的 */
+/* 逐字對照的共用畫法：綠＝說對、綠底線＝發音接近也算對、灰刪除線＝漏掉、
+   淡灰＝小字沒說(不扣分)、橘＝多說的 */
 function diffHTML(r,label){
+  const near=r.diff.filter(x=>x.near).length;
   return (label||'')
     +r.diff.map((x,i)=>{let w=(x.w==='i'||/^i'/.test(x.w))?cap(x.w):x.w;if(i===0)w=cap(w);
-      const c=x.ok?'w-ok':(x.soft?'w-soft':'w-miss');
+      const c=x.ok?(x.near?'w-ok w-near':'w-ok'):(x.soft?'w-soft':'w-miss');
       return '<span class="'+c+'">'+esc(w)+'</span>';}).join(' ')
-    +((r.extra&&r.extra.length)?' &nbsp;'+r.extra.map(w=>'<span class="w-extra">+'+esc(w)+'</span>').join(' '):'');
+    +((r.extra&&r.extra.length)?' &nbsp;'+r.extra.map(w=>'<span class="w-extra">+'+esc(w)+'</span>').join(' '):'')
+    +(near?'<div class="pc-sub" style="margin-top:6px">≈ 有底線的字發音很接近，算你說對了 👍 再聽一次示範會更準</div>':'');
 }
 /* ---------- 多個參考答案：同一句可接受的其他說法（縮寫／完整寫法） ---------- */
 const CONTRACTIONS=[["i am","i'm"],["you are","you're"],["we are","we're"],["they are","they're"],
