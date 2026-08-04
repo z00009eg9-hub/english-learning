@@ -649,8 +649,10 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
 // ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260721, 20260804
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-08-04 count:514
+// ===SYNC:VOCAB_START=== sync_date:2026-08-04 count:516
   // --- 20260804 樂觀思考、Elaborate 與健康症狀 ---
+  {w:"cramps",ipa:"/kræmps/",pos:"n.",cn:"痙攣、絞痛",def:"sharp, intermittent pains, often in the abdomen.",exEn:"I have stomach cramps and diarrhea.",exCn:"我有胃絞痛和拉肚子。",cat:"health"},
+  {w:"deep pocket",ipa:"/diːp ˈpɒk.ɪt/",pos:"idiom",cn:"有錢、財力雄厚",def:"having a lot of money (informal).",exEn:"If you have a deep pocket, quit your job.",exCn:"如果你很有錢，就辭職吧。",cat:"daily"},
   {w:"elaborate",ipa:"/ɪˈlæb.ər.eɪt/",pos:"v.",cn:"詳細說明",def:"to give more information or details about something.",exEn:"Could you elaborate on your idea?",exCn:"你可以詳細說明你的想法嗎？",cat:"learning"},
   {w:"mindset",ipa:"/ˈmaɪnd.set/",pos:"n.",cn:"心態、思維方式",def:"a way of thinking about things.",exEn:"I have a positive mindset.",exCn:"我有正面的心態。",cat:"daily"},
   {w:"failure",ipa:"/ˈfeɪl.jər/",pos:"n.",cn:"失敗",def:"a situation in which something does not work correctly or does not succeed.",exEn:"Every failure can be a fresh start.",exCn:"每次失敗都可以是一個全新的開始。",cat:"daily"},
@@ -1221,6 +1223,8 @@ const vocabSources = {
   "encouragement":"20260804 樂觀思考Elaborate與健康症狀",
   "stomach pain":"20260804 樂觀思考Elaborate與健康症狀",
   "cheer up":"20260804 樂觀思考Elaborate與健康症狀",
+  "cramps":"20260804 樂觀思考Elaborate與健康症狀",
+  "deep pocket":"20260804 樂觀思考Elaborate與健康症狀",
   // --- 20260728 越南寧平旅遊 Tam Coc Trip ---
   "scenery":"20260728 越南寧平旅遊 Tam Coc Trip","countryside":"20260728 越南寧平旅遊 Tam Coc Trip","limestone":"20260728 越南寧平旅遊 Tam Coc Trip","sunburn":"20260728 越南寧平旅遊 Tam Coc Trip","boat operator":"20260728 越南寧平旅遊 Tam Coc Trip",
   // --- 20260730 作業複習、樂觀悲觀與 Hugh Laurie ---
@@ -1576,7 +1580,7 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-08-04 count:188
+// ===SYNC:TRANS_START=== sync_date:2026-08-04 count:191
 const allTrans = [
   // --- 20260804 樂觀思考、Elaborate 與健康症狀（句子取自筆記原文）---
   {p:"我有正面的心態。",a:"I have a positive mindset.",h:"mindset = 心態",kw:["mindset"],src:"20260804 樂觀思考Elaborate與健康症狀"},
@@ -1589,6 +1593,9 @@ const allTrans = [
   {p:"我覺得我食物中毒了，因為我肚子痛又拉肚子。",a:"I think I have food poisoning because I have stomach pain and diarrhea.",h:"food poisoning；stomach pain",kw:["stomach pain"],src:"20260804 樂觀思考Elaborate與健康症狀"},
   {p:"Don't worry too much.",a:"不要擔心太多。",h:"too much = 太多",kw:[],src:"20260804 樂觀思考Elaborate與健康症狀"},
   {p:"I've been feeling bloated for three days.",a:"我已經脹氣三天了。",h:"have been + V-ing 現在完成進行式",kw:["bloated"],src:"20260804 樂觀思考Elaborate與健康症狀"},
+  {p:"我已經覺得疲倦而且頭痛兩個星期了。",a:"I have been feeling tired and I have had headaches for two weeks.",h:"have been feeling = 現在完成進行式；have had = 現在完成式",kw:[],src:"20260804 樂觀思考Elaborate與健康症狀"},
+  {p:"我有胃絞痛和拉肚子。",a:"I have stomach cramps and diarrhea.",h:"cramps = 絞痛、痙攣",kw:["cramps"],src:"20260804 樂觀思考Elaborate與健康症狀"},
+  {p:"如果你很有錢，就辭職吧。",a:"If you have a deep pocket, quit your job.",h:"deep pocket = 有錢（口語）",kw:["deep pocket"],src:"20260804 樂觀思考Elaborate與健康症狀"},
   // --- 20260728 越南寧平旅遊 Tam Coc Trip（句子取自筆記原文）---
   {p:"那是我第一次去那裡，所以我非常期待這趟旅程。",a:"It was my first time there, so I was really looking forward to the trip.",h:"look forward to + 名詞/V-ing",kw:["look forward to"],src:"20260728 越南寧平旅遊 Tam Coc Trip"},
   {p:"我早上租了一台電動車，在鄉間四處騎行。",a:"I rented an e-bike in the morning and rode around the countryside.",h:"過去式 rented；countryside",kw:["countryside"],src:"20260728 越南寧平旅遊 Tam Coc Trip"},
@@ -2970,6 +2977,15 @@ const DAYQUIZ = {
       {type:"trans",tag:"翻譯",q:"我有正面的心態。",
         answer:"I have a positive mindset.",
         explain:"positive mindset = 正面的心態。也可以說 I have a happy style of thinking."},
+      {type:"mc",tag:"單字",q:"'cramps' 的意思是？",
+        options:["頭暈","脹氣","絞痛、痙攣","噁心"],answer:2,
+        explain:"cramps = 絞痛、痙攣，常用於腹部疼痛：I have stomach cramps."},
+      {type:"mc",tag:"慣用語",q:"'If you have a deep pocket' 是什麼意思？",
+        options:["如果你有很深的口袋","如果你很有錢","如果你有很多口袋","如果你很節省"],answer:1,
+        explain:"deep pocket 是口語慣用語，意思是「很有錢、財力雄厚」。"},
+      {type:"fill",tag:"冠詞",q:"Are you ___ pessimist or ___ optimist?",
+        cn:"你是悲觀者還是樂觀者？",
+        answer:["a","an"],explain:"a 用在子音開頭的字前（a pessimist），an 用在母音開頭的字前（an optimist）。"},
     ]
   },
   "20260730": {
