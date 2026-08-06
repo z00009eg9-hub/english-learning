@@ -1618,7 +1618,7 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-08-06 count:211
+// ===SYNC:TRANS_START=== sync_date:2026-08-06 count:213
 const allTrans = [
   // --- 20260806 成功之鑰與Effectively vs Efficiently（句子取自筆記原文）---
   {p:"她和團隊溝通很有效。",a:"She communicates effectively with her team.",h:"effectively = 有效地",kw:["effectively"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
@@ -1631,6 +1631,8 @@ const allTrans = [
   {p:"越南夏天經常下雨。",a:"It often rains in summer in Vietnam.",h:"現在簡單式表事實；often + V",kw:[],src:"20260806 成功之鑰與Effectively vs Efficiently"},
   {p:"We need to solve this problem effectively.",a:"我們需要有效地解決這個問題。",h:"effectively = 有效地",kw:["effectively"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
   {p:"The technician repaired the machine efficiently and saved time.",a:"技師有效率地修理機器並節省時間。",h:"efficiently = 有效率地",kw:["efficiently"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
+  {p:"今天是雨天。（形容詞描述）",a:"It is rainy today.",h:"rainy = 形容詞；注意 It is rainy（描述狀態）vs It is raining（進行式動作）",kw:[],src:"20260806 成功之鑰與Effectively vs Efficiently（docx補充）"},
+  {p:"他不斷地尋求回饋。",a:"He constantly seeks feedback.",h:"constantly = 不斷地（副詞）；seeks = 尋求（第三人稱+s）",kw:["constantly"],src:"20260806 成功之鑰與Effectively vs Efficiently（docx補充）"},
   // --- 20260709 機場旅遊英文（句子取自筆記原文）---
   {p:"我隨時都能取得這些資料。",a:"I can access the information anytime.",h:"access = 存取／取得",kw:["access"],src:"20260709 機場旅遊英文 Airport & Travel English"},
   {p:"我的護照過期了。",a:"My passport has expired.",h:"has expired = 現在完成式",kw:["expire"],src:"20260709 機場旅遊英文 Airport & Travel English"},
@@ -3050,7 +3052,16 @@ const DAYQUIZ = {
         explain:"文章提到 She made a smart decision to organize a meeting."},
       {type:"trans",tag:"翻譯",q:"團隊既有效地又有效率地解決了問題。",
         answer:"The team solved the problem effectively and efficiently.",
-        explain:"effective = 做對的事；efficient = 用對的方式。兩者可以同時使用。"}
+        explain:"effective = 做對的事；efficient = 用對的方式。兩者可以同時使用。"},
+      {type:"mc",tag:"文法",q:"「今天是雨天」哪句是形容詞描述（非進行式）？",
+        options:["It is raining today.","It is rainy today."],answer:1,
+        explain:"rainy 是形容詞，描述天氣狀態（present simple）；raining 是 V-ing，表示正在下雨（present continuous）。"},
+      {type:"fill",tag:"詞性",q:"She shows _____ effort on the project.（持續的，填形容詞）",
+        cn:"她在專案上展現持續的努力。",answer:["constant"],
+        explain:"constant 是形容詞修飾名詞 effort；constantly 是副詞修飾動詞。"},
+      {type:"fill",tag:"介系詞",q:"The technician elaborated on his experience _____ the new worker.",
+        cn:"技師為新員工詳細說明了他的經驗。",answer:["for"],
+        explain:"elaborate on something for someone = 為某人詳細說明某事。for 比 to 更自然。"}
     ]
   },
   "20260709": {
