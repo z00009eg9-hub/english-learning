@@ -36,7 +36,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .hd-ttl{font-size:1.18rem;font-weight:900;letter-spacing:-.4px;line-height:1.1;}
 .hd-sub{font-size:.72rem;opacity:.9;font-weight:500;margin-top:1px;}
 .hd-topic{display:inline-block;max-width:min(46vw,330px);margin-top:4px;padding:2px 10px;border-radius:100px;
-  background:rgba(255,255,255,.22);font-size:.72rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  background:rgba(255,255,255,.22);font-size:.85rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .hd-streak{background:rgba(255,255,255,.2);border-radius:100px;padding:6px 13px;
   font-size:.8rem;font-weight:800;white-space:nowrap;display:flex;align-items:center;gap:5px;}
 .hd-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end;}
@@ -649,7 +649,15 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
 // ===SYNC:PROCESSED_LESSONS=== 20251016, 20251209, 20251216, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260804
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-08-05 count:526
+// ===SYNC:VOCAB_START=== sync_date:2026-08-06 count:533
+  // --- 20260806 成功之鑰與Effectively vs Efficiently ---
+  {w:"effectively",ipa:"/ɪˈfek.tɪv.li/",pos:"adv.",cn:"有效地（達到正確目標）",def:"achieving the right result or goal.",exEn:"She communicates effectively with her team.",exCn:"她和團隊溝通很有效。",cat:"workplace"},
+  {w:"efficiently",ipa:"/ɪˈfɪʃ.ənt.li/",pos:"adv.",cn:"有效率地（省時省力）",def:"doing something with less time, energy, or resources.",exEn:"He manages his time efficiently.",exCn:"他有效率地管理時間。",cat:"workplace"},
+  {w:"miscommunication",ipa:"/ˌmɪs.kə.mjuː.nɪˈkeɪ.ʃən/",pos:"n.",cn:"溝通不良",def:"a failure to communicate ideas or intentions clearly.",exEn:"There were some miscommunication issues between team members.",exCn:"團隊成員之間有溝通不良的問題。",cat:"workplace"},
+  {w:"intelligent",ipa:"/ɪnˈtel.ɪ.dʒənt/",pos:"adj.",cn:"聰明的",def:"able to think and understand things well.",exEn:"She is intelligent because she thinks carefully before taking action.",exCn:"她很聰明，因為她在採取行動前會仔細思考。",cat:"daily"},
+  {w:"encourage",ipa:"/ɪnˈkɜː.rɪdʒ/",pos:"v.",cn:"鼓勵",def:"to give someone support or confidence to do something.",exEn:"Her manager often encouraged her to keep a positive mindset.",exCn:"她的主管經常鼓勵她保持正面心態。",cat:"daily"},
+  {w:"in no time",ipa:"/ɪn noʊ taɪm/",pos:"idiom",cn:"很快地",def:"very quickly.",exEn:"The technician fixed the machine in no time.",exCn:"技師很快就修好了機器。",cat:"daily"},
+  {w:"constant",ipa:"/ˈkɒn.stənt/",pos:"adj.",cn:"持續的、不斷的",def:"happening all the time or not changing.",exEn:"Because of her constant effort, the team solved the problems.",exCn:"因為她持續的努力，團隊解決了問題。",cat:"daily"},
   // --- 20260804 樂觀思考、Elaborate 與健康症狀 ---
   {w:"cramps",ipa:"/kræmps/",pos:"n.",cn:"痙攣、絞痛",def:"sharp, intermittent pains, often in the abdomen.",exEn:"I have stomach cramps and diarrhea.",exCn:"我有胃絞痛和拉肚子。",cat:"health"},
   {w:"deep pocket",ipa:"/diːp ˈpɒk.ɪt/",pos:"idiom",cn:"有錢、財力雄厚",def:"having a lot of money (informal).",exEn:"If you have a deep pocket, quit your job.",exCn:"如果你很有錢，就辭職吧。",cat:"daily"},
@@ -1221,8 +1229,16 @@ const vocab = [
 ];
 
 // 每個單字的筆記來源 (key = word, value = note title)
-// ===SYNC:SOURCES_START=== sync_date:2026-08-05
+// ===SYNC:SOURCES_START=== sync_date:2026-08-06
 const vocabSources = {
+  // --- 20260806 成功之鑰與Effectively vs Efficiently ---
+  "effectively":"20260806 成功之鑰與Effectively vs Efficiently",
+  "efficiently":"20260806 成功之鑰與Effectively vs Efficiently",
+  "miscommunication":"20260806 成功之鑰與Effectively vs Efficiently",
+  "intelligent":"20260806 成功之鑰與Effectively vs Efficiently",
+  "encourage":"20260806 成功之鑰與Effectively vs Efficiently",
+  "in no time":"20260806 成功之鑰與Effectively vs Efficiently",
+  "constant":"20260806 成功之鑰與Effectively vs Efficiently",
   // --- 20260709 機場旅遊英文 Airport & Travel English ---
   "access":"20260709 機場旅遊英文 Airport & Travel English",
   "expire":"20260709 機場旅遊英文 Airport & Travel English",
@@ -1602,8 +1618,19 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-08-05 count:201
+// ===SYNC:TRANS_START=== sync_date:2026-08-06 count:211
 const allTrans = [
+  // --- 20260806 成功之鑰與Effectively vs Efficiently（句子取自筆記原文）---
+  {p:"她和團隊溝通很有效。",a:"She communicates effectively with her team.",h:"effectively = 有效地",kw:["effectively"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
+  {p:"他有效率地管理時間。",a:"He manages his time efficiently.",h:"efficiently = 有效率地",kw:["efficiently"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
+  {p:"技師很快就修好了機器。",a:"The technician fixed the machine in no time.",h:"in no time = 很快地",kw:["in no time"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
+  {p:"這種藥有效地減輕疼痛。",a:"This medicine works effectively to reduce pain.",h:"works effectively = 有效地起作用",kw:["effectively"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
+  {p:"公司有效率地使用能源。",a:"The company uses energy efficiently.",h:"able to save time/resources",kw:["efficiently"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
+  {p:"團隊既有效地又有效率地解決了問題。",a:"The team solved the problem effectively and efficiently.",h:"effectively = 做對的事；efficiently = 用對的方式",kw:["effectively","efficiently"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
+  {p:"她很聰明，因為她在採取行動前會仔細思考。",a:"She is intelligent because she thinks carefully before taking action.",h:"take action = 採取行動；before + V-ing",kw:["intelligent"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
+  {p:"越南夏天經常下雨。",a:"It often rains in summer in Vietnam.",h:"現在簡單式表事實；often + V",kw:[],src:"20260806 成功之鑰與Effectively vs Efficiently"},
+  {p:"We need to solve this problem effectively.",a:"我們需要有效地解決這個問題。",h:"effectively = 有效地",kw:["effectively"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
+  {p:"The technician repaired the machine efficiently and saved time.",a:"技師有效率地修理機器並節省時間。",h:"efficiently = 有效率地",kw:["efficiently"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
   // --- 20260709 機場旅遊英文（句子取自筆記原文）---
   {p:"我隨時都能取得這些資料。",a:"I can access the information anytime.",h:"access = 存取／取得",kw:["access"],src:"20260709 機場旅遊英文 Airport & Travel English"},
   {p:"我的護照過期了。",a:"My passport has expired.",h:"has expired = 現在完成式",kw:["expire"],src:"20260709 機場旅遊英文 Airport & Travel English"},
@@ -1832,7 +1859,18 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-08-04 count:46
+// ===SYNC:KW_START=== sync_date:2026-08-06 count:48
+  // --- 20260806 成功之鑰與Effectively vs Efficiently（例句全部取自筆記原文）---
+  {w:"effectively",ipa:"/ɪˈfek.tɪv.li/",tag:"有效地 · adv.",exs:[
+    {en:"She communicates effectively with her team.",cn:"她和團隊溝通很有效。"},
+    {en:"This medicine works effectively to reduce pain.",cn:"這種藥有效地減輕疼痛。"},
+    {en:"We need to solve this problem effectively.",cn:"我們需要有效地解決這個問題。"},
+  ]},
+  {w:"efficiently",ipa:"/ɪˈfɪʃ.ənt.li/",tag:"有效率地 · adv.",exs:[
+    {en:"He manages his time efficiently.",cn:"他有效率地管理時間。"},
+    {en:"The technician repaired the machine efficiently and saved time.",cn:"技師有效率地修理機器並節省時間。"},
+    {en:"The company uses energy efficiently.",cn:"公司有效率地使用能源。"},
+  ]},
   // --- 20260804 樂觀思考Elaborate（例句全部取自筆記原文）---
   {w:"elaborate",ipa:"/ɪˈlæb.ər.eɪt/",tag:"詳細說明 · v.",exs:[
     {en:"Can you elaborate?",cn:"你可以詳細說明嗎？"},
@@ -2969,7 +3007,52 @@ const articles = [
 // 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
 // ═══════════════════════════════════════════════
 const DAYQUIZ = {
-// ===SYNC:DAYQUIZ_START=== sync_date:2026-08-05 count:7
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-08-06 count:8
+  "20260806": {
+    title: "成功之鑰與Effectively vs Efficiently",
+    subtitle: "The Key to Success · Effective vs Efficient",
+    questions: [
+      {type:"mc",tag:"單字",q:"\"effectively\" 的意思是？",
+        options:["有效率地","有效地（達到正確目標）","立即地","經常地"],answer:1,
+        explain:"effectively = 有效地，強調達到正確的結果或目標（achieving the right result or goal）。"},
+      {type:"mc",tag:"單字",q:"\"efficiently\" 的意思是？",
+        options:["有效地","聰明地","有效率地（省時省力）","仔細地"],answer:2,
+        explain:"efficiently = 有效率地，強調用更少的時間、精力或資源做事。"},
+      {type:"fill",tag:"比較",q:"A student studies _____ by using good methods.",
+        cn:"一個學生用好的方法來學習（有效地）。",answer:["effectively"],
+        explain:"用好的方法 = 達到正確目標 = effectively（有效地）。"},
+      {type:"fill",tag:"比較",q:"A student studies _____ by spending less time but getting good results.",
+        cn:"一個學生花更少時間卻得到好成績（有效率地）。",answer:["efficiently"],
+        explain:"花更少時間 = 省時省力 = efficiently（有效率地）。"},
+      {type:"mc",tag:"片語",q:"\"in no time\" 的意思是？",
+        options:["沒有時間","準時","很快地","經常"],answer:2,
+        explain:"in no time = very quickly（很快地）。The technician fixed the machine in no time."},
+      {type:"mc",tag:"單字",q:"\"miscommunication\" 的意思是？",
+        options:["有效的溝通","溝通不良","溝通技巧","團隊合作"],answer:1,
+        explain:"miscommunication = 溝通不良、誤解。前綴 mis- 表示「錯誤的」。"},
+      {type:"fill",tag:"句型",q:"The boss encourages us _____ keep a positive mindset.",
+        cn:"老闆鼓勵我們保持正面心態。",answer:["to"],
+        explain:"encourage someone to do something = 鼓勵某人做某事，固定搭配用 to。"},
+      {type:"mc",tag:"改錯",q:"哪一句拼字正確？",
+        options:["Our team communication failure caused the addional costs.","Our team communication failure caused the additional costs."],answer:1,
+        explain:"addional 是拼字錯誤，正確拼法是 additional（額外的）。"},
+      {type:"mc",tag:"改錯",q:"老師建議哪一句更自然？",
+        options:["She is intelligent because she thinks before acting.","She is intelligent because she thinks carefully before taking action."],answer:1,
+        explain:"加上 carefully 讓語意更完整；before taking action 比 before acting 更正式自然。take action = 採取行動。"},
+      {type:"mc",tag:"文法",q:"越南夏天經常下雨。用哪個時態？",
+        options:["現在進行式：It is raining in summer in Vietnam.","現在簡單式：It often rains in summer in Vietnam."],answer:1,
+        explain:"描述一般事實或習慣用現在簡單式。often 是頻率副詞，搭配現在簡單式。"},
+      {type:"mc",tag:"閱讀",q:"What problems did Emma's team face?",
+        options:["Financial problems","Miscommunication issues","Equipment failure","Staff shortage"],answer:1,
+        explain:"文章提到 There were some miscommunication issues between team members."},
+      {type:"mc",tag:"閱讀",q:"How did Emma solve the communication problems?",
+        options:["She fired team members","She ignored the problems","She organized a meeting","She asked her boss for help"],answer:2,
+        explain:"文章提到 She made a smart decision to organize a meeting."},
+      {type:"trans",tag:"翻譯",q:"團隊既有效地又有效率地解決了問題。",
+        answer:"The team solved the problem effectively and efficiently.",
+        explain:"effective = 做對的事；efficient = 用對的方式。兩者可以同時使用。"}
+    ]
+  },
   "20260709": {
     title: "機場旅遊英文 Airport & Travel English",
     subtitle: "Airport, Travel & Homework Review",
