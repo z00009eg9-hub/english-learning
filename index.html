@@ -442,6 +442,11 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .vplay{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:8px;}
 .vid-pin .vtoolbar{margin-top:8px;}
 .vid-pin .vplay .pp{width:52px;height:52px;font-size:1.2rem;}
+/* 練習面板打開時：影片縮小、播放列先收起來，麥克風整組一定看得到 */
+.vid-pin.prac .vid-box{height:min(16vh,30vw);}
+.vid-pin.prac .vplay,.vid-pin.prac .vid-tts,.vid-pin.prac .vtoolbar{display:none;}
+.vid-pin.prac{max-height:calc(100vh - var(--hdh,58px) - 14px);overflow-y:auto;}
+#vid-prac .card{margin-top:8px;box-shadow:var(--sh);}
 .vplay button{border:none;background:transparent;cursor:pointer;font-size:1.4rem;color:var(--ink);font-family:inherit;}
 .vplay .pp{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--coral-d));
   color:#fff;display:grid;place-items:center;font-size:1.4rem;box-shadow:0 8px 22px rgba(15,122,133,.4);}
@@ -738,8 +743,8 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
         <button class="vtool" id="vt-prac" onclick="vPractice()"><span class="i">🎤</span>練習</button>
         <button class="vtool" id="vt-hide" onclick="vToggleEn()"><span class="i">🙈</span>遮字</button>
         </div>
+        <div id="vid-prac" class="hide"></div>
       </div>
-      <div id="vid-prac" class="hide"></div>
       <div class="sub-list" id="vid-subs"></div>
       <div class="actions"><button class="btn btn-o" onclick="startVideo(DAY)">← 換一個素材</button>
         <button class="btn btn-p" onclick="vFinish()">✅ 練完了,看成績</button></div>
@@ -5269,7 +5274,8 @@ function vPractice(){
   if(!VID)return;vPause();
   const line=VID.lines[VID.i];
   const box=$('vid-prac');box.classList.remove('hide');
-  box.innerHTML='<div class="card" style="margin-top:12px"><div class="pc" style="padding:6px 4px 2px;min-height:auto">'
+  const pin=document.querySelector('.vid-pin');if(pin)pin.classList.add('prac');
+  box.innerHTML='<div class="card"><div class="pc" style="padding:6px 4px 2px;min-height:auto">'
     +'<span class="pc-tag">跟著唸這一句</span><div class="pc-en">'+esc(line.en)+'</div>'
     +'<div class="pc-sub">'+esc(line.cn||cnFor(line.en))+'</div></div>'
     +'<div class="scorebox hide" id="vp-score"></div><div class="diff hide" id="vp-diff"></div>'
@@ -5278,8 +5284,10 @@ function vPractice(){
     +'<div class="mic-lbl" id="vp-mlbl">按一下,跟著唸一次</div></div>'
     +'<div class="actions"><button class="btn btn-o" onclick="speak('+JSON.stringify(line.en)+',demoRate())">🔊 再聽一次</button>'
     +'<button class="btn btn-o" onclick="vPracClose()">收起</button></div></div>';
-  scrollIntoViewSoft(box);}
-function vPracClose(){micStop();$('vid-prac').classList.add('hide');$('vid-prac').innerHTML='';}
+  vSetPinH();}
+function vPracClose(){micStop();$('vid-prac').classList.add('hide');$('vid-prac').innerHTML='';
+  const pin=document.querySelector('.vid-pin');if(pin)pin.classList.remove('prac');
+  vSetPinH();}
 function vPracMic(){
   const idx=VID?VID.i:0,line=VID.lines[idx];
   micStart({btn:'vp-mic',lbl:'vp-mlbl',idle:'按一下,跟著唸一次',
