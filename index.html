@@ -417,8 +417,10 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .vid-tts .ico{font-size:2.6rem;}
 .vid-tts .t{font-size:1.16rem;font-weight:900;margin-top:6px;}
 .vid-tts .s{font-size:.95rem;font-weight:600;opacity:.92;margin-top:4px;}
-/* 字幕清單直接跟著頁面捲動（影片已黏在上方，一頁就能同時看影片＋字稿） */
+/* 字幕清單直接跟著頁面捲動（影片已黏在上方，一頁就能同時看影片＋字稿）；
+   底部預留一段空間，最後幾句才能捲到影片下方、不會永遠卡在影片後面 */
 .sub-list{margin-top:12px;display:flex;flex-direction:column;gap:8px;}
+#vid-body{padding-bottom:40vh;}
 .sub-line{background:#fff;border:1px solid var(--bdr);border-left:4px solid transparent;border-radius:13px;
   padding:10px 12px;cursor:pointer;transition:.15s;
   scroll-margin-top:calc(var(--hdh,58px) + var(--pinh,0px) + 14px);scroll-margin-bottom:90px;}
@@ -5202,7 +5204,16 @@ function vHighlight(){
   if(!VID)return;
   VID.lines.forEach((l,i)=>{const el=$('vl-'+i);if(!el)return;
     el.classList.toggle('cur',i===VID.i);el.classList.toggle('done',i<VID.i);});
-  const cur=$('vl-'+VID.i);if(cur)cur.scrollIntoView({block:'nearest',behavior:'smooth'});}
+  vScrollCur();}
+/* 把「現在這一句」捲到黏頂區下方：每次都量黏頂區的即時高度（練習打開、
+   評分出現時它會變高），確保當前句永遠不會被影片區蓋住 */
+function vScrollCur(){
+  if(!VID)return;const cur=$('vl-'+VID.i);if(!cur)return;
+  const pin=document.querySelector('.vid-pin');
+  const top=(pin?pin.getBoundingClientRect().bottom:70)+12;
+  const r=cur.getBoundingClientRect();
+  if(r.top<top||r.bottom>window.innerHeight-16)
+    scrollBySafe(r.top-top);   /* 平滑捲動失敗時會直接跳到位（scrollBySafe 內建保險） */}
 function vPP(){const b=$('vid-pp');if(b)b.textContent=VID&&VID.playing?'⏸':'▶';}
 
 /* ---------- 播放控制 ---------- */
@@ -5284,10 +5295,10 @@ function vPractice(){
     +'<div class="mic-lbl" id="vp-mlbl">按一下,跟著唸一次</div></div>'
     +'<div class="actions"><button class="btn btn-o" onclick="speak('+JSON.stringify(line.en)+',demoRate())">🔊 再聽一次</button>'
     +'<button class="btn btn-o" onclick="vPracClose()">收起</button></div></div>';
-  vSetPinH();}
+  vSetPinH();setTimeout(vScrollCur,550);}
 function vPracClose(){micStop();$('vid-prac').classList.add('hide');$('vid-prac').innerHTML='';
   const pin=document.querySelector('.vid-pin');if(pin)pin.classList.remove('prac');
-  vSetPinH();}
+  vSetPinH();setTimeout(vScrollCur,550);}
 function vPracMic(){
   const idx=VID?VID.i:0,line=VID.lines[idx];
   micStart({btn:'vp-mic',lbl:'vp-mlbl',idle:'按一下,跟著唸一次',
@@ -5299,7 +5310,8 @@ function vPracMic(){
       const d=$('vp-diff');d.classList.remove('hide');d.innerHTML=diffHTML(r,'答案：');
       $('vp-heard').innerHTML='你說：<b>'+esc(t)+'</b>';
       $('vp-mlbl').textContent='想再唸一次?按我 🎤';
-      logSpeak(r.pct);sessLog(idx,line.en,line.cn||cnFor(line.en),r.pct);}});}
+      logSpeak(r.pct);sessLog(idx,line.en,line.cn||cnFor(line.en),r.pct);
+      vSetPinH();setTimeout(vScrollCur,550);}});}
 function vFinish(){const n=VID?VID.lines.length:0;vStop();
   finishAct('🎬 影片精聽','你聽完／練了 '+n+' 句字幕!');}
 
