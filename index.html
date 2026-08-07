@@ -254,7 +254,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .face-b .fex{font-size:1.1rem;font-weight:600;opacity:.95;margin-top:12px;font-style:italic;font-family:'Inter';border-top:1px solid rgba(255,255,255,.3);padding-top:11px;line-height:1.5;}
 /* 例句的中文對照（字卡背面） */
 .face-b .fex-cn{font-size:1.14rem;font-weight:700;font-style:normal;opacity:1;margin-top:7px;line-height:1.55;
-  font-family:'Noto Sans TC',sans-serif;color:#FFF7DC;}
+  font-family:'Noto Sans TC',sans-serif;color:#DCFCE7;}
 .tap-hint{font-size:.85rem;color:var(--faint);margin-top:6px;text-align:center;}
 
 /* ═══ READ-ALOUD paragraph ═══ */
@@ -406,15 +406,20 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .ctype input:focus{outline:none;border-color:var(--coral);}
 
 /* ═══ 影片精聽 ═══ */
-.vid-box{background:#000;border-radius:16px;overflow:hidden;position:relative;padding-top:56.25%;}
+/* 影片＋播放鍵黏在頁面上方：往下捲字幕時，影片仍一直看得到（一頁檢視） */
+.vid-pin{position:sticky;top:calc(var(--hdh,58px) + 6px);z-index:90;background:var(--bg);
+  padding-bottom:6px;border-radius:0 0 18px 18px;}
+.vid-box{background:#000;border-radius:16px;overflow:hidden;position:relative;padding-top:56.25%;box-shadow:var(--sh);}
 .vid-box>iframe,.vid-box>video{position:absolute;inset:0;width:100%;height:100%;border:0;}
 .vid-tts{background:linear-gradient(150deg,#159AA6,#35BAC6);border-radius:16px;padding:26px 18px;text-align:center;color:#fff;}
 .vid-tts .ico{font-size:2.6rem;}
 .vid-tts .t{font-size:1.16rem;font-weight:900;margin-top:6px;}
 .vid-tts .s{font-size:.95rem;font-weight:600;opacity:.92;margin-top:4px;}
-.sub-list{margin-top:12px;max-height:46vh;overflow-y:auto;display:flex;flex-direction:column;gap:8px;padding-right:2px;}
+/* 字幕清單直接跟著頁面捲動（影片已黏在上方，一頁就能同時看影片＋字稿） */
+.sub-list{margin-top:12px;display:flex;flex-direction:column;gap:8px;}
 .sub-line{background:#fff;border:1px solid var(--bdr);border-left:4px solid transparent;border-radius:13px;
-  padding:10px 12px;cursor:pointer;transition:.15s;}
+  padding:10px 12px;cursor:pointer;transition:.15s;
+  scroll-margin-top:calc(var(--hdh,58px) + var(--pinh,0px) + 14px);scroll-margin-bottom:90px;}
 .sub-line:hover{border-color:var(--bdr2);}
 .sub-line.cur{border-left-color:var(--coral);background:#F0FAFB;box-shadow:var(--sh-sm);}
 .sub-line.done{opacity:.72;}
@@ -432,7 +437,9 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .vtool .i{font-size:1.1rem;}
 .vtool.on{background:var(--coral-l);color:var(--coral-d);}
 .vtool:hover{color:var(--coral-d);}
-.vplay{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:12px;}
+.vplay{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:8px;}
+.vid-pin .vtoolbar{margin-top:8px;}
+.vid-pin .vplay .pp{width:52px;height:52px;font-size:1.2rem;}
 .vplay button{border:none;background:transparent;cursor:pointer;font-size:1.4rem;color:var(--ink);font-family:inherit;}
 .vplay .pp{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--coral-d));
   color:#fff;display:grid;place-items:center;font-size:1.4rem;box-shadow:0 8px 22px rgba(15,122,133,.4);}
@@ -713,13 +720,14 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
     <div class="how-bar">📌 <b>怎麼玩</b>：① 選一個素材 → ② 按 ▶ 播放，字幕會跟著亮 → ③ 點任一句可跳到那一句 → ④ 下排：雙語＝中文開關、倍速、復讀＝重播這句、循環＝這句一直重複、詞彙＝亮出今天的單字、練習＝跟著念一次</div>
     <div id="vid-pick"></div>
     <div id="vid-body" class="hide">
-      <div id="vid-stage"></div>
-      <div class="vplay">
-        <button onclick="vPrev()" title="上一句">⏮</button>
-        <button class="pp" id="vid-pp" onclick="vToggle()" title="播放／暫停">▶</button>
-        <button onclick="vNext()" title="下一句">⏭</button>
-      </div>
-      <div class="vtoolbar">
+      <div class="vid-pin">
+        <div id="vid-stage"></div>
+        <div class="vplay">
+          <button onclick="vPrev()" title="上一句">⏮</button>
+          <button class="pp" id="vid-pp" onclick="vToggle()" title="播放／暫停">▶</button>
+          <button onclick="vNext()" title="下一句">⏭</button>
+        </div>
+        <div class="vtoolbar">
         <button class="vtool on" id="vt-cn" onclick="vToggleCn()"><span class="i">🈯</span>雙語</button>
         <button class="vtool" id="vt-rate" onclick="vCycleRate()"><span class="i">⏩</span><span id="vt-rate-l">1x</span></button>
         <button class="vtool" onclick="vRepeat()"><span class="i">🔂</span>復讀</button>
@@ -727,6 +735,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
         <button class="vtool" id="vt-vocab" onclick="vToggleVocab()"><span class="i">📖</span>詞彙</button>
         <button class="vtool" id="vt-prac" onclick="vPractice()"><span class="i">🎤</span>練習</button>
         <button class="vtool" id="vt-hide" onclick="vToggleEn()"><span class="i">🙈</span>遮字</button>
+        </div>
       </div>
       <div id="vid-prac" class="hide"></div>
       <div class="sub-list" id="vid-subs"></div>
@@ -5117,7 +5126,39 @@ function vOpen(i){
     stage.innerHTML='<div class="vid-tts"><div class="ico">🔊</div><div class="t">'+esc(m.title)+'</div>'
       +'<div class="s">'+esc(m.titleCn||'一句一句朗讀，字幕會跟著亮')+'</div></div>';
   }
-  vRenderSubs();vPP();window.scrollTo(0,0);}
+  vRenderSubs();vPP();window.scrollTo(0,0);
+  vSetPinH();vAutoCn(m);}
+/* 記下「黏住的影片區」高度，字幕自動捲動時才不會躲到影片後面 */
+function vSetPinH(){setTimeout(()=>{const p=document.querySelector('.vid-pin');
+  if(p)document.documentElement.style.setProperty('--pinh',p.offsetHeight+'px');},400);}
+
+/* ---------- 自動翻譯：字幕缺中文時，逐句翻成繁中並存回這支影片 ---------- */
+let vTransBusy=false;
+async function vAutoCn(m){
+  if(vTransBusy)return;
+  const need=m.lines.filter(l=>l.en&&!l.cn&&isEng(l.en));
+  if(!need.length)return;
+  vTransBusy=true;
+  const sub=$('vid-sub'),orig=sub?sub.textContent:'';
+  let done=0,fail=0;
+  for(const l of need){
+    if(!VID||VID.m!==m)break;   /* 已經換素材就停 */
+    try{
+      const r=await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-TW&dt=t&q='+encodeURIComponent(l.en));
+      const j=await r.json();
+      const t=((j&&j[0])||[]).map(seg=>(seg&&seg[0])||'').join('').trim();
+      if(t){l.cn=t;done++;}else fail++;
+    }catch(e){fail++;if(fail>=3)break;}
+    if(sub)sub.textContent='🌐 自動翻譯字幕中… '+done+'/'+need.length;
+  }
+  vTransBusy=false;
+  if(sub)sub.textContent=orig;
+  if(done){
+    /* 使用者自己加的影片：把翻譯存回 localStorage，下次不用再翻 */
+    if(typeof m._i==='number'){const list=loadUserVideos();
+      if(list[m._i]){list[m._i].lines=m.lines;saveUserVideos(list);}}
+    if(VID&&VID.m===m){vRenderSubs();vHighlight();}}
+}
 
 function ytLoad(cb){
   if(window.YT&&window.YT.Player){cb();return;}
@@ -5348,7 +5389,11 @@ function sumSwitchLevel(){const l=lvBasic()?'advanced':'basic';
 /* ═══════════════════════════════════════════════════════════
    啟動
    ═══════════════════════════════════════════════════════════ */
-loadLevel();loadST();initHome();renderStats();
+/* 頁首實際高度存成 CSS 變數：影片黏頂位置、字幕捲動邊界都用它對齊（手機頁首較高） */
+function setHdh(){const h=document.querySelector('header');
+  if(h)document.documentElement.style.setProperty('--hdh',h.offsetHeight+'px');}
+window.addEventListener('resize',()=>{setHdh();vSetPinH();});
+loadLevel();loadST();initHome();renderStats();setHdh();
 </script>
 </body>
 </html>
