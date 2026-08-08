@@ -5274,24 +5274,37 @@ function vOpen(i){
 function vSetPinH(){setTimeout(()=>{const p=document.querySelector('.vid-pin');
   if(p)document.documentElement.style.setProperty('--pinh',p.offsetHeight+'px');},400);}
 
-/* ---------- 自動翻譯：字幕缺中文時，逐句翻成繁中並存回這支影片 ---------- */
+/* ---------- 自動翻譯：字幕缺中文時翻成繁中並存回這支影片。
+   一次 6 句同時翻、翻好一批就馬上上畫面（長影片不用等全部翻完），
+   每翻約 60 句就先存回雲端一次，中途關掉也不會白翻。 ---------- */
 let vTransBusy=false;
+function transOne(en){
+  return fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-TW&dt=t&q='+encodeURIComponent(en))
+    .then(r=>r.json())
+    .then(j=>((j&&j[0])||[]).map(seg=>(seg&&seg[0])||'').join('').trim())
+    .catch(()=>'');}
 async function vAutoCn(m){
   if(vTransBusy)return;
   const need=m.lines.filter(l=>l.en&&!l.cn&&isEng(l.en));
   if(!need.length)return;
   vTransBusy=true;
   const sub=$('vid-sub'),orig=sub?sub.textContent:'';
-  let done=0,fail=0;
-  for(const l of need){
+  let done=0,fail=0,lastSave=0;
+  const B=6;
+  for(let i=0;i<need.length;i+=B){
     if(!VID||VID.m!==m)break;   /* 已經換素材就停 */
-    try{
-      const r=await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-TW&dt=t&q='+encodeURIComponent(l.en));
-      const j=await r.json();
-      const t=((j&&j[0])||[]).map(seg=>(seg&&seg[0])||'').join('').trim();
-      if(t){l.cn=t;done++;}else fail++;
-    }catch(e){fail++;if(fail>=3)break;}
+    const batch=need.slice(i,i+B);
+    const rs=await Promise.all(batch.map(l=>transOne(l.en)));
+    rs.forEach((t,k)=>{if(t){batch[k].cn=t;done++;}else fail++;});
     if(sub)sub.textContent='🌐 自動翻譯字幕中… '+done+'/'+need.length;
+    /* 翻好一批就直接補上畫面上的中文 */
+    if(VID&&VID.m===m)m.lines.forEach((l,li)=>{
+      if(!l.cn)return;const el=document.querySelector('#vl-'+li+' .sub-cn');
+      if(el&&!el.textContent)el.textContent=l.cn;});
+    /* 每 ~60 句存一次雲端，長影片中途離開也保得住 */
+    if(m.kind==='yt'&&m.id&&done-lastSave>=60){lastSave=done;vidPutSubs(m.id,m.lines);}
+    if(fail>=30)break;                       /* 連續大量失敗（斷網/被限流）就先停 */
+    await new Promise(r=>setTimeout(r,250)); /* 批與批之間停一下，避免被翻譯服務限流 */
   }
   vTransBusy=false;
   if(sub)sub.textContent=orig;
@@ -5323,9 +5336,9 @@ function vFmt(t){t=Math.max(0,Math.round(t||0));
   return String(Math.floor(t/60)).padStart(2,'0')+':'+String(t%60).padStart(2,'0');}
 /* 詞彙模式：把今天的單字在字幕裡標起來，點一下聽發音＋看中文 */
 function vMark(en){
-  const ws=dayVocab(DAY).filter(v=>v.cn&&/^[a-z][a-z' -]*$/i.test(v.w));
+  const ws=(VID&&VID.vwords)||[];
   let h=esc(en);
-  ws.slice(0,60).forEach(v=>{
+  ws.forEach(v=>{
     const re=new RegExp('\\b('+reEsc(esc(v.w))+'\\w*)\\b','ig');
     h=h.replace(re,m=>'<span class="vw" onclick="event.stopPropagation();vWord('+JSON.stringify(v.w)+')" title="'+esc(v.cn)+'">'+m+'</span>');});
   return h;}
@@ -5410,8 +5423,22 @@ function vCycleRate(){if(!VID)return;
   $('vt-rate-l').textContent=VID.rate+'x';
   if(VID.mode==='yt'&&VID.yt&&VID.yt.setPlaybackRate)try{VID.yt.setPlaybackRate(VID.rate);}catch(e){}
   else if(VID.playing)vSpeakLine(VID.i);}
+/* 詞彙模式：先找「這一天的筆記單字」，字幕裡沒有就退回「全部筆記單字」——
+   真實影片常不含當天的字，退一步至少能把學過的字都標出來 */
 function vToggleVocab(){if(!VID)return;VID.vocab=!VID.vocab;
-  $('vt-vocab').classList.toggle('on',VID.vocab);vRenderSubs();}
+  if(VID.vocab){
+    const blob=' '+norm(VID.lines.map(l=>l.en).join(' '))+' ';
+    const inText=list=>dedupe(list.filter(v=>v.cn&&/^[a-z][a-z' -]*$/i.test(v.w)),'w')
+      .filter(v=>new RegExp('\\b'+reEsc(norm(v.w))+'\\w*\\b').test(blob));
+    const dayWs=inText(dayVocab(DAY)),allWs=inText(vocab);
+    const seen=new Set(dayWs.map(v=>norm(v.w)));
+    const ws=dayWs.concat(allWs.filter(v=>!seen.has(norm(v.w))));   /* 當天的排前面 */
+    VID.vwords=ws.slice(0,80);
+    $('vid-sub').textContent=ws.length
+      ?('📖 詞彙模式：字幕裡有 '+ws.length+' 個筆記單字'+(dayWs.length?'（'+dayWs.length+' 個是這一天的）':'')+'，點黃色字聽發音、看中文')
+      :'📖 這支影片的字幕裡沒有出現筆記單字';
+  }else VID.vwords=null;
+  $('vt-vocab').classList.toggle('on',VID.vocab);vRenderSubs();vHighlight();}
 /* 練習：跟著現在這一句唸一次，給分並記進成績 */
 function vPractice(){
   if(!VID)return;vPause();
