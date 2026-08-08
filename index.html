@@ -3968,6 +3968,7 @@ function loadST(){
   /* 先抓雲端（若較新就採用），再做跨日重置與畫面更新、PIN 鎖檢查，最後訂閱即時同步 */
   cloudPull(()=>{const prev=ST.lastDay;pendingReview=(prev&&dayDiff(prev,todayStr())>=3);applyRollover();renderStats();refreshCoach();lockGate();});
   cloudSubscribe();
+  vidSubscribe();   /* 共用影片庫：跨裝置即時同步 */
 }
 /* 只在首頁時更新教練問候，避免顯示到別的學習者的數字 */
 function refreshCoach(){const h=$('scr-home');if(h&&h.classList.contains('on'))coachSay(coachHome());}
@@ -5039,9 +5040,41 @@ function lsNext(){lsI++;if(lsI>=lsList.length){finishAct('🎧 聽力練習','�
    ═══════════════════════════════════════════════════════════ */
 let VID=null;
 const VID_RATES=[0.75,1,1.25,1.5];
-function vidKey(){return 'speakup_videos_'+PROFILE;}
-function loadUserVideos(){try{return JSON.parse(localStorage.getItem(vidKey())||'[]');}catch(e){return [];}}
-function saveUserVideos(list){try{localStorage.setItem(vidKey(),JSON.stringify(list));}catch(e){}}
+/* ---------- 共用影片庫：Firestore 同步（手機/平板/電腦、Anita/Tom 都看得到同一份）
+   localStorage 只當離線快取；雲端更新會即時推播到每台裝置。 ---------- */
+const VID_LS='speakup_videos_shared';
+let VIDLIB=[];try{VIDLIB=JSON.parse(localStorage.getItem(VID_LS)||'[]');}catch(e){VIDLIB=[];}
+let vidPushTimer=null;
+function vidDoc(){return db?db.collection('shared').doc('videos'):null;}
+function loadUserVideos(){return VIDLIB;}
+function saveUserVideos(list){
+  VIDLIB=list||[];
+  try{localStorage.setItem(VID_LS,JSON.stringify(VIDLIB));}catch(e){}
+  const d=vidDoc();if(!d)return;
+  if(vidPushTimer)clearTimeout(vidPushTimer);
+  vidPushTimer=setTimeout(()=>{d.set({list:VIDLIB,updatedAt:Date.now()}).catch(()=>{});},400);}
+/* 開站訂閱：雲端一變，影片庫跟著變；若正開著素材選單就即時重畫
+   （loadST 在切換學習者時會重跑，這裡只訂閱一次） */
+let vidUnsub=null;
+function vidSubscribe(){const d=vidDoc();if(!d||vidUnsub)return;
+  vidUnsub=d.onSnapshot(snap=>{
+    const cloud=(snap.exists&&snap.data()&&snap.data().list)||[];
+    /* 一次性遷移：把這台裝置舊版存在本機的影片（各學習者各一份）併進共用庫再清掉，
+       之後不管哪台裝置先建立雲端庫，本機加過的影片都不會不見 */
+    const legacy=[];
+    ['speakup_videos_anita','speakup_videos_tom'].forEach(k=>{
+      try{(JSON.parse(localStorage.getItem(k)||'[]')||[]).forEach(v=>{
+        if(v&&v.id&&!legacy.some(x=>x.id===v.id))legacy.push(v);});}catch(e){}
+      localStorage.removeItem(k);});
+    const fresh=legacy.filter(v=>!cloud.some(x=>x.id===v.id));
+    if(fresh.length){saveUserVideos(cloud.concat(fresh));return;}   /* 併完會再推上雲端、再收到一次 snapshot */
+    if(!snap.exists&&!cloud.length&&!VIDLIB.length)return;
+    VIDLIB=cloud;
+    try{localStorage.setItem(VID_LS,JSON.stringify(VIDLIB));}catch(e){}
+    /* 正停在「選素材」畫面就重畫清單（不打斷正在播放的素材） */
+    const scr=document.querySelector('.screen.on');
+    if(scr&&scr.id==='scr-video'&&!$('vid-pick').classList.contains('hide'))startVideo(DAY);
+  },()=>{});}
 /* 從各種 YouTube 連結格式取出影片 ID */
 function ytId(url){
   const s=String(url||'').trim();
@@ -5084,14 +5117,17 @@ function startVideo(d){
   const pick=$('vid-pick'),body=$('vid-body');
   body.classList.add('hide');pick.classList.remove('hide');
   let h='<div class="note">🎬 選一個素材：有影片就邊看邊聽，沒有影片就用「課文朗讀」，字幕一樣會一句一句亮起來。</div>';
-  h+=mats.map((m,i)=>'<button class="act vid-pick" onclick="vOpen('+i+')">'
-    +'<div class="act-h">'+(m.kind==='yt'?'▶️ ':'🔊 ')+esc(m.title)+'</div>'
+  h+=mats.map((m,i)=>'<div style="position:relative">'
+    +'<button class="act vid-pick" onclick="vOpen('+i+')">'
+    +'<div class="act-h" style="padding-right:34px">'+(m.kind==='yt'?'▶️ ':'🔊 ')+esc(m.title)+'</div>'
     +'<div class="act-en">'+esc(m.titleCn||'')+'</div>'
-    +'<div class="act-d">'+(m.kind==='yt'?('YouTube 影片 · '+m.lines.length+' 句字幕'):esc(m.note||''))+'</div>'
-    +'</button>').join('');
+    +'<div class="act-d">'+(m.kind==='yt'?('YouTube 影片 · '+m.lines.length+' 句字幕 · ☁️ 共用'):esc(m.note||''))+'</div>'
+    +'</button>'
+    +(m.kind==='yt'?'<button class="sum-play" style="position:absolute;top:10px;right:10px" title="刪除這支影片（所有裝置都會移除）" onclick="vDelete('+m._i+')">🗑</button>':'')
+    +'</div>').join('');
   h+='<div class="card vid-add">'
     +'<div class="grid-ttl">➕ 加入 YouTube 影片與字幕</div>'
-    +'<div class="note" style="margin-bottom:0">貼上影片連結，字幕一行一句，格式：<b>00:07 English sentence | 中文翻譯</b>（時間與中文可省略）。只存在這台裝置。</div>'
+    +'<div class="note" style="margin-bottom:0">貼上影片連結，字幕一行一句，格式：<b>00:07 English sentence | 中文翻譯</b>（時間與中文可省略，缺中文會自動翻譯）。☁️ 加入後手機／平板／電腦、Anita 和 Tom 都會同步看到。</div>'
     +'<input id="vid-url" placeholder="https://www.youtube.com/watch?v=…">'
     +'<input id="vid-title" placeholder="影片標題（例如：Grocery Shopping &amp; Self-care）">'
     +'<textarea id="vid-subs-in" rows="5" placeholder="00:07 And the first thing that I always do… | 我做的第一件事…&#10;00:12 is I cook myself good food. | 就是給自己做頓好吃的。"></textarea>'
@@ -5107,10 +5143,16 @@ function vAdd(){
   if(!id){alert('看不懂這個 YouTube 連結，請貼完整網址（含 watch?v=…）。');return;}
   const lines=parseSubs($('vid-subs-in').value);
   if(!lines.length){alert('請至少貼一行字幕（格式：00:07 English | 中文）。');return;}
-  const list=loadUserVideos();
-  list.push({id:id,title:($('vid-title').value.trim()||'我的影片'),titleCn:'',lines:lines});
+  const list=loadUserVideos().slice();
+  const item={id:id,title:($('vid-title').value.trim()||'我的影片'),titleCn:'',lines:lines};
+  const at=list.findIndex(v=>v.id===id);
+  if(at>=0)list[at]=item;else list.push(item);   /* 同一支影片重貼 → 更新字幕，不重複 */
   saveUserVideos(list);startVideo(DAY);}
-function vClearAll(){if(!confirm('確定要清空這台裝置上加入的影片嗎？'))return;
+function vDelete(i){const list=loadUserVideos().slice();
+  if(!list[i])return;
+  if(!confirm('刪除「'+(list[i].title||'')+'」？所有裝置都會移除。'))return;
+  list.splice(i,1);saveUserVideos(list);startVideo(DAY);}
+function vClearAll(){if(!confirm('確定要清空共用影片庫嗎？手機／平板／電腦全部都會清掉。'))return;
   saveUserVideos([]);startVideo(DAY);}
 
 /* ---------- 開啟素材 ---------- */
@@ -5163,9 +5205,10 @@ async function vAutoCn(m){
   vTransBusy=false;
   if(sub)sub.textContent=orig;
   if(done){
-    /* 使用者自己加的影片：把翻譯存回 localStorage，下次不用再翻 */
-    if(typeof m._i==='number'){const list=loadUserVideos();
-      if(list[m._i]){list[m._i].lines=m.lines;saveUserVideos(list);}}
+    /* 使用者自己加的影片：把翻譯存回共用影片庫（用影片 id 對回去，位置變了也不會存錯支） */
+    if(m.kind==='yt'&&m.id){const list=loadUserVideos().slice();
+      const at=list.findIndex(v=>v.id===m.id);
+      if(at>=0){list[at]=Object.assign({},list[at],{lines:m.lines});saveUserVideos(list);}}
     if(VID&&VID.m===m){vRenderSubs();vHighlight();}}
 }
 

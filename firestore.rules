@@ -5,5 +5,9 @@ service cloud.firestore {
     match /progress/{who} {
       allow read, write: if who == 'anita' || who == 'tom';
     }
+    // 共用影片庫：所有裝置／學習者同步同一份
+    match /shared/videos {
+      allow read, write: if true;
+    }
   }
 }
