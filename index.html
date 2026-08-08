@@ -5053,13 +5053,14 @@ try{VIDLIB=JSON.parse(localStorage.getItem(VID_LS)||'[]');}catch(e){VIDLIB=[];}
 function vidCol(){return db?db.collection('videos'):null;}
 function loadUserVideos(){return VIDLIB;}
 function cacheMeta(){try{localStorage.setItem(VID_LS,JSON.stringify(
-  VIDLIB.map(v=>({id:v.id,title:v.title,titleCn:v.titleCn||'',n:v.n||0}))));}catch(e){}}
+  VIDLIB.map(v=>({id:v.id,title:v.title,titleCn:v.titleCn||'',day:v.day||'',n:v.n||0}))));}catch(e){}}
 function cacheSubs(id,lines){try{localStorage.setItem(VID_SUB_LS+id,JSON.stringify(lines||[]));}catch(e){}}
 function cachedSubs(id){try{return JSON.parse(localStorage.getItem(VID_SUB_LS+id)||'null');}catch(e){return null;}}
 
 /* 新增／更新一支影片（標題與字幕分開寫，各自不會超過 1 MiB） */
 function vidPut(v){
-  const meta={id:v.id,title:v.title||'我的影片',titleCn:v.titleCn||'',n:(v.lines||[]).length,updatedAt:Date.now()};
+  const meta={id:v.id,title:v.title||'我的影片',titleCn:v.titleCn||'',day:v.day||'',
+    n:(v.lines||[]).length,updatedAt:Date.now()};
   const at=VIDLIB.findIndex(x=>x.id===v.id);
   if(at>=0)VIDLIB[at]=Object.assign({},VIDLIB[at],meta,{lines:v.lines});
   else VIDLIB.push(Object.assign({},meta,{lines:v.lines}));
@@ -5102,7 +5103,11 @@ function vidSubscribe(){const c=vidCol();if(!c||vidUnsub)return;
     const list=[];
     snap.forEach(doc=>{const d=doc.data()||{};
       const old=VIDLIB.find(v=>v.id===doc.id);
-      list.push({id:doc.id,title:d.title||'我的影片',titleCn:d.titleCn||'',n:d.n||0,
+      /* 舊資料還沒有「課堂日」欄位：從標題裡的 8 位數日期補上（一次性回寫雲端） */
+      let day=d.day||'';
+      if(!('day' in d)){day=dOf(d.title||'')||dOf(d.titleCn||'')||'';
+        c.doc(doc.id).set({day:day},{merge:true}).catch(()=>{});}
+      list.push({id:doc.id,title:d.title||'我的影片',titleCn:d.titleCn||'',day:day,n:d.n||0,
         lines:old?old.lines:undefined});});   /* 已下載過的字幕留著，不用重抓 */
     VIDLIB=list;cacheMeta();
     const scr=document.querySelector('.screen.on');
@@ -5123,11 +5128,13 @@ function vidMigrate(){
     /* 只補雲端還沒有的，不覆蓋別台裝置後來改過的字幕 */
     return c.get().then(snap=>{
       const have={};snap.forEach(d=>have[d.id]=1);
-      return Promise.all(local.filter(v=>!have[v.id]).map(v=>vidPut(v)));
+      return Promise.all(local.filter(v=>!have[v.id]).map(v=>vidPut(vidWithDay(v))));
     }).then(()=>{if(s.exists)db.collection('shared').doc('videos').delete().catch(()=>{});});
   }).catch(()=>{
     /* 讀不到舊文件（例如剛好沒權限）也要把本機的搬上去，不能讓影片消失 */
-    if(local.length)local.forEach(v=>vidPut(v));});}
+    if(local.length)local.forEach(v=>vidPut(vidWithDay(v)));});}
+/* 搬家用：沒有課堂日的舊影片，從標題裡的 8 位數日期補 */
+function vidWithDay(v){return Object.assign({},v,{day:v.day||dOf(v.title||'')||dOf(v.titleCn||'')||''});}
 /* 從各種 YouTube 連結格式取出影片 ID */
 function ytId(url){
   const s=String(url||'').trim();
@@ -5151,9 +5158,17 @@ function parseSubs(text){
   out.sort((a,b)=>a.t-b.t);
   return out;}
 
-/* 這一天可用的素材清單 */
+/* 這一天可用的素材清單：影片各歸各的課堂日，選哪一天就只出那一天的影片 */
+function vidDayLabel(d){
+  if(!d)return '📚 只在「全部筆記」顯示';
+  if(d==='all')return '📚 每一天都顯示';
+  return ddLabel(d);}
 function vidMaterials(d){
-  const out=loadUserVideos().map(v=>Object.assign({},v,{kind:'yt'}));
+  const out=loadUserVideos()
+    .filter(v=>{const vd=v.day||'';
+      if(d==='all')return true;               /* 全部筆記：所有影片都列出來 */
+      return vd===d||vd==='all';})            /* 特定一天：只列這一天（或標成每天）的影片 */
+    .map(v=>Object.assign({},v,{kind:'yt'}));
   dayArticles(d).forEach(a=>{
     const lines=(a.paras||[]).map(p=>({en:stripTags(p.en),cn:p.cn||cnFor(stripTags(p.en))}));
     if(lines.length)out.push({kind:'tts',title:a.title,titleCn:a.titleCn||'',lines:lines,
@@ -5174,15 +5189,21 @@ function startVideo(d){
     +'<button class="act vid-pick" onclick="vOpen('+i+')">'
     +'<div class="act-h" style="padding-right:34px">'+(m.kind==='yt'?'▶️ ':'🔊 ')+esc(m.title)+'</div>'
     +'<div class="act-en">'+esc(m.titleCn||'')+'</div>'
-    +'<div class="act-d">'+(m.kind==='yt'?('YouTube 影片 · '+(m.n||(m.lines||[]).length)+' 句字幕 · ☁️ 共用'):esc(m.note||''))+'</div>'
+    +'<div class="act-d">'+(m.kind==='yt'?('YouTube 影片 · '+(m.n||(m.lines||[]).length)+' 句字幕 · ☁️ 共用'
+      +(m.day&&m.day!=='all'&&/^\d{8}$/.test(m.day)?' · 📅 '+m.day.slice(4,6)+'/'+m.day.slice(6,8):'')):esc(m.note||''))+'</div>'
     +'</button>'
-    +(m.kind==='yt'?'<button class="sum-play" style="position:absolute;top:10px;right:10px" title="刪除這支影片（所有裝置都會移除）" onclick="vDelete(\''+m.id+'\')">🗑</button>':'')
+    +(m.kind==='yt'?'<button class="sum-play" style="position:absolute;top:10px;right:10px" title="刪除這支影片（所有裝置都會移除）" onclick="vDelete(\''+m.id+'\')">🗑</button>'
+      +'<button class="sum-play" style="position:absolute;top:52px;right:10px" title="改成歸在哪一天的課堂" onclick="vChangeDay(\''+m.id+'\')">📅</button>':'')
     +'</div>').join('');
   h+='<div class="card vid-add">'
     +'<div class="grid-ttl">➕ 加入 YouTube 影片與字幕</div>'
     +'<div class="note" style="margin-bottom:0">貼上影片連結，字幕一行一句，格式：<b>00:07 English sentence | 中文翻譯</b>（時間與中文可省略，缺中文會自動翻譯）。☁️ 加入後手機／平板／電腦、Anita 和 Tom 都會同步看到。</div>'
     +'<input id="vid-url" placeholder="https://www.youtube.com/watch?v=…">'
     +'<input id="vid-title" placeholder="影片標題（例如：Grocery Shopping &amp; Self-care）">'
+    +'<div style="margin-top:8px;font-size:.85rem;font-weight:700;color:var(--sub)">📅 歸在哪一天的課堂：</div>'
+    +'<select id="vid-day" class="day-sel" style="margin-top:6px">'
+      +DDATES.map(x=>'<option value="'+x+'"'+(x===(d==='all'?'all':d)?' selected':'')+'>'+esc(vidDayLabel(x))+'</option>').join('')
+    +'</select>'
     +'<textarea id="vid-subs-in" rows="5" placeholder="00:07 And the first thing that I always do… | 我做的第一件事…&#10;00:12 is I cook myself good food. | 就是給自己做頓好吃的。"></textarea>'
     +'<div class="actions"><button class="btn btn-p" onclick="vAdd()">加入影片</button></div>'
     +(loadUserVideos().length?'<div class="actions"><button class="btn btn-o" onclick="vClearAll()">🗑 清空我加入的影片</button></div>':'')
@@ -5197,7 +5218,18 @@ function vAdd(){
   const lines=parseSubs($('vid-subs-in').value);
   if(!lines.length){alert('請至少貼一行字幕（格式：00:07 English | 中文）。');return;}
   /* 同一支影片重貼 → 更新字幕，不會多一筆 */
-  vidPut({id:id,title:($('vid-title').value.trim()||'我的影片'),titleCn:'',lines:lines});
+  const day=($('vid-day')&&$('vid-day').value)||DAY;
+  vidPut({id:id,title:($('vid-title').value.trim()||'我的影片'),titleCn:'',day:day,lines:lines});
+  startVideo(DAY);}
+/* 改影片歸屬的課堂日：輸入 8 位數日期 / all（每天）/ 留空（只在全部筆記） */
+function vChangeDay(id){const v=loadUserVideos().find(x=>x.id===id);if(!v)return;
+  const cur=v.day||'';
+  const inp=prompt('「'+(v.title||'')+'」要歸在哪一天？\n輸入 8 位數日期（例如 '+(DAY!=='all'?DAY:'20260806')+'）、all（每一天都顯示）、留空（只在全部筆記顯示）',cur);
+  if(inp===null)return;
+  const day=inp.trim();
+  if(day&&day!=='all'&&!/^\d{8}$/.test(day)&&!A2BY[day]){alert('格式看不懂，請輸入像 20260806 的 8 位數日期，或 all。');return;}
+  v.day=day;cacheMeta();
+  const c=vidCol();if(c)c.doc(id).set({day:day},{merge:true}).catch(()=>{});
   startVideo(DAY);}
 function vDelete(id){const v=loadUserVideos().find(x=>x.id===id);if(!v)return;
   if(!confirm('刪除「'+(v.title||'')+'」？所有裝置都會移除。'))return;
