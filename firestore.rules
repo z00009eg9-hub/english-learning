@@ -5,7 +5,11 @@ service cloud.firestore {
     match /progress/{who} {
       allow read, write: if who == 'anita' || who == 'tom';
     }
-    // 共用影片庫：所有裝置／學習者同步同一份
+    // 共用影片庫：一支影片一份文件（含底下的字幕），所有裝置／學習者共用
+    match /videos/{id}/{sub=**} {
+      allow read, write: if true;
+    }
+    // 舊版整包存一起的文件：保留讀寫，讓已存在的資料能搬家後刪除
     match /shared/videos {
       allow read, write: if true;
     }

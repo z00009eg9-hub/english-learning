@@ -5041,40 +5041,93 @@ function lsNext(){lsI++;if(lsI>=lsList.length){finishAct('🎧 聽力練習','�
 let VID=null;
 const VID_RATES=[0.75,1,1.25,1.5];
 /* ---------- 共用影片庫：Firestore 同步（手機/平板/電腦、Anita/Tom 都看得到同一份）
-   localStorage 只當離線快取；雲端更新會即時推播到每台裝置。 ---------- */
-const VID_LS='speakup_videos_shared';
-let VIDLIB=[];try{VIDLIB=JSON.parse(localStorage.getItem(VID_LS)||'[]');}catch(e){VIDLIB=[];}
-let vidPushTimer=null;
-function vidDoc(){return db?db.collection('shared').doc('videos'):null;}
+   一支影片＝一份文件，分成兩層，避免單一文件 1 MiB 上限、也讓清單載入很輕：
+     videos/{id}            → 標題等基本資料（很小，開站時全部訂閱）
+     videos/{id}/parts/subs → 字幕內容（只有真的點開那支才會下載）
+   localStorage 只當離線快取。 ---------- */
+const VID_LS='speakup_videos_meta';        /* 影片清單（不含字幕）快取 */
+const VID_SUB_LS='speakup_subs_';          /* 各影片字幕快取，後面接影片 id */
+const VID_OLD_LS='speakup_videos_shared';  /* 舊版：整包存一起 */
+let VIDLIB=[];
+try{VIDLIB=JSON.parse(localStorage.getItem(VID_LS)||'[]');}catch(e){VIDLIB=[];}
+function vidCol(){return db?db.collection('videos'):null;}
 function loadUserVideos(){return VIDLIB;}
-function saveUserVideos(list){
-  VIDLIB=list||[];
-  try{localStorage.setItem(VID_LS,JSON.stringify(VIDLIB));}catch(e){}
-  const d=vidDoc();if(!d)return;
-  if(vidPushTimer)clearTimeout(vidPushTimer);
-  vidPushTimer=setTimeout(()=>{d.set({list:VIDLIB,updatedAt:Date.now()}).catch(()=>{});},400);}
-/* 開站訂閱：雲端一變，影片庫跟著變；若正開著素材選單就即時重畫
+function cacheMeta(){try{localStorage.setItem(VID_LS,JSON.stringify(
+  VIDLIB.map(v=>({id:v.id,title:v.title,titleCn:v.titleCn||'',n:v.n||0}))));}catch(e){}}
+function cacheSubs(id,lines){try{localStorage.setItem(VID_SUB_LS+id,JSON.stringify(lines||[]));}catch(e){}}
+function cachedSubs(id){try{return JSON.parse(localStorage.getItem(VID_SUB_LS+id)||'null');}catch(e){return null;}}
+
+/* 新增／更新一支影片（標題與字幕分開寫，各自不會超過 1 MiB） */
+function vidPut(v){
+  const meta={id:v.id,title:v.title||'我的影片',titleCn:v.titleCn||'',n:(v.lines||[]).length,updatedAt:Date.now()};
+  const at=VIDLIB.findIndex(x=>x.id===v.id);
+  if(at>=0)VIDLIB[at]=Object.assign({},VIDLIB[at],meta,{lines:v.lines});
+  else VIDLIB.push(Object.assign({},meta,{lines:v.lines}));
+  cacheMeta();cacheSubs(v.id,v.lines);
+  const c=vidCol();if(!c)return Promise.resolve();
+  return Promise.all([
+    c.doc(v.id).set(meta),
+    c.doc(v.id).collection('parts').doc('subs').set({lines:v.lines||[]})
+  ]).catch(()=>{});}
+/* 只更新字幕（自動翻譯完會用到），標題那份不動 */
+function vidPutSubs(id,lines){
+  const at=VIDLIB.findIndex(x=>x.id===id);
+  if(at>=0)VIDLIB[at].lines=lines;
+  cacheSubs(id,lines);
+  const c=vidCol();if(!c)return;
+  c.doc(id).collection('parts').doc('subs').set({lines:lines||[]}).catch(()=>{});}
+function vidRemove(id){
+  VIDLIB=VIDLIB.filter(v=>v.id!==id);cacheMeta();
+  try{localStorage.removeItem(VID_SUB_LS+id);}catch(e){}
+  const c=vidCol();if(!c)return Promise.resolve();
+  return c.doc(id).collection('parts').doc('subs').delete()
+    .catch(()=>{}).then(()=>c.doc(id).delete()).catch(()=>{});}
+/* 點開影片時才下載字幕（先用本機快取，拿不到再讀雲端） */
+function vidLoadSubs(id){
+  const hit=VIDLIB.find(v=>v.id===id);
+  if(hit&&hit.lines&&hit.lines.length)return Promise.resolve(hit.lines);
+  const cached=cachedSubs(id);
+  if(cached&&cached.length){if(hit)hit.lines=cached;return Promise.resolve(cached);}
+  const c=vidCol();if(!c)return Promise.resolve([]);
+  return c.doc(id).collection('parts').doc('subs').get().then(s=>{
+    const lines=(s.exists&&s.data()&&s.data().lines)||[];
+    if(hit)hit.lines=lines;cacheSubs(id,lines);return lines;}).catch(()=>[]);}
+
+/* 開站訂閱：雲端一變，影片清單跟著變；若正開著素材選單就即時重畫
    （loadST 在切換學習者時會重跑，這裡只訂閱一次） */
 let vidUnsub=null;
-function vidSubscribe(){const d=vidDoc();if(!d||vidUnsub)return;
-  vidUnsub=d.onSnapshot(snap=>{
-    const cloud=(snap.exists&&snap.data()&&snap.data().list)||[];
-    /* 一次性遷移：把這台裝置舊版存在本機的影片（各學習者各一份）併進共用庫再清掉，
-       之後不管哪台裝置先建立雲端庫，本機加過的影片都不會不見 */
-    const legacy=[];
-    ['speakup_videos_anita','speakup_videos_tom'].forEach(k=>{
-      try{(JSON.parse(localStorage.getItem(k)||'[]')||[]).forEach(v=>{
-        if(v&&v.id&&!legacy.some(x=>x.id===v.id))legacy.push(v);});}catch(e){}
-      localStorage.removeItem(k);});
-    const fresh=legacy.filter(v=>!cloud.some(x=>x.id===v.id));
-    if(fresh.length){saveUserVideos(cloud.concat(fresh));return;}   /* 併完會再推上雲端、再收到一次 snapshot */
-    if(!snap.exists&&!cloud.length&&!VIDLIB.length)return;
-    VIDLIB=cloud;
-    try{localStorage.setItem(VID_LS,JSON.stringify(VIDLIB));}catch(e){}
-    /* 正停在「選素材」畫面就重畫清單（不打斷正在播放的素材） */
+function vidSubscribe(){const c=vidCol();if(!c||vidUnsub)return;
+  vidMigrate();
+  vidUnsub=c.onSnapshot(snap=>{
+    const list=[];
+    snap.forEach(doc=>{const d=doc.data()||{};
+      const old=VIDLIB.find(v=>v.id===doc.id);
+      list.push({id:doc.id,title:d.title||'我的影片',titleCn:d.titleCn||'',n:d.n||0,
+        lines:old?old.lines:undefined});});   /* 已下載過的字幕留著，不用重抓 */
+    VIDLIB=list;cacheMeta();
     const scr=document.querySelector('.screen.on');
     if(scr&&scr.id==='scr-video'&&!$('vid-pick').classList.contains('hide'))startVideo(DAY);
   },()=>{});}
+/* 一次性搬家：舊版「整包一份文件」與更早的「各學習者存本機」都併進新的影片庫 */
+function vidMigrate(){
+  const c=vidCol();if(!c)return;
+  const local=[];
+  ['speakup_videos_anita','speakup_videos_tom',VID_OLD_LS].forEach(k=>{
+    try{(JSON.parse(localStorage.getItem(k)||'[]')||[]).forEach(v=>{
+      if(v&&v.id&&!local.some(x=>x.id===v.id))local.push(v);});}catch(e){}
+    localStorage.removeItem(k);});
+  db.collection('shared').doc('videos').get().then(s=>{
+    const cloud=(s.exists&&s.data()&&s.data().list)||[];
+    cloud.forEach(v=>{if(v&&v.id&&!local.some(x=>x.id===v.id))local.push(v);});
+    if(!local.length)return;
+    /* 只補雲端還沒有的，不覆蓋別台裝置後來改過的字幕 */
+    return c.get().then(snap=>{
+      const have={};snap.forEach(d=>have[d.id]=1);
+      return Promise.all(local.filter(v=>!have[v.id]).map(v=>vidPut(v)));
+    }).then(()=>{if(s.exists)db.collection('shared').doc('videos').delete().catch(()=>{});});
+  }).catch(()=>{
+    /* 讀不到舊文件（例如剛好沒權限）也要把本機的搬上去，不能讓影片消失 */
+    if(local.length)local.forEach(v=>vidPut(v));});}
 /* 從各種 YouTube 連結格式取出影片 ID */
 function ytId(url){
   const s=String(url||'').trim();
@@ -5100,7 +5153,7 @@ function parseSubs(text){
 
 /* 這一天可用的素材清單 */
 function vidMaterials(d){
-  const out=loadUserVideos().map((v,i)=>Object.assign({},v,{kind:'yt',_i:i}));
+  const out=loadUserVideos().map(v=>Object.assign({},v,{kind:'yt'}));
   dayArticles(d).forEach(a=>{
     const lines=(a.paras||[]).map(p=>({en:stripTags(p.en),cn:p.cn||cnFor(stripTags(p.en))}));
     if(lines.length)out.push({kind:'tts',title:a.title,titleCn:a.titleCn||'',lines:lines,
@@ -5121,9 +5174,9 @@ function startVideo(d){
     +'<button class="act vid-pick" onclick="vOpen('+i+')">'
     +'<div class="act-h" style="padding-right:34px">'+(m.kind==='yt'?'▶️ ':'🔊 ')+esc(m.title)+'</div>'
     +'<div class="act-en">'+esc(m.titleCn||'')+'</div>'
-    +'<div class="act-d">'+(m.kind==='yt'?('YouTube 影片 · '+m.lines.length+' 句字幕 · ☁️ 共用'):esc(m.note||''))+'</div>'
+    +'<div class="act-d">'+(m.kind==='yt'?('YouTube 影片 · '+(m.n||(m.lines||[]).length)+' 句字幕 · ☁️ 共用'):esc(m.note||''))+'</div>'
     +'</button>'
-    +(m.kind==='yt'?'<button class="sum-play" style="position:absolute;top:10px;right:10px" title="刪除這支影片（所有裝置都會移除）" onclick="vDelete('+m._i+')">🗑</button>':'')
+    +(m.kind==='yt'?'<button class="sum-play" style="position:absolute;top:10px;right:10px" title="刪除這支影片（所有裝置都會移除）" onclick="vDelete(\''+m.id+'\')">🗑</button>':'')
     +'</div>').join('');
   h+='<div class="card vid-add">'
     +'<div class="grid-ttl">➕ 加入 YouTube 影片與字幕</div>'
@@ -5143,21 +5196,27 @@ function vAdd(){
   if(!id){alert('看不懂這個 YouTube 連結，請貼完整網址（含 watch?v=…）。');return;}
   const lines=parseSubs($('vid-subs-in').value);
   if(!lines.length){alert('請至少貼一行字幕（格式：00:07 English | 中文）。');return;}
-  const list=loadUserVideos().slice();
-  const item={id:id,title:($('vid-title').value.trim()||'我的影片'),titleCn:'',lines:lines};
-  const at=list.findIndex(v=>v.id===id);
-  if(at>=0)list[at]=item;else list.push(item);   /* 同一支影片重貼 → 更新字幕，不重複 */
-  saveUserVideos(list);startVideo(DAY);}
-function vDelete(i){const list=loadUserVideos().slice();
-  if(!list[i])return;
-  if(!confirm('刪除「'+(list[i].title||'')+'」？所有裝置都會移除。'))return;
-  list.splice(i,1);saveUserVideos(list);startVideo(DAY);}
+  /* 同一支影片重貼 → 更新字幕，不會多一筆 */
+  vidPut({id:id,title:($('vid-title').value.trim()||'我的影片'),titleCn:'',lines:lines});
+  startVideo(DAY);}
+function vDelete(id){const v=loadUserVideos().find(x=>x.id===id);if(!v)return;
+  if(!confirm('刪除「'+(v.title||'')+'」？所有裝置都會移除。'))return;
+  vidRemove(id).then(()=>startVideo(DAY));startVideo(DAY);}
 function vClearAll(){if(!confirm('確定要清空共用影片庫嗎？手機／平板／電腦全部都會清掉。'))return;
-  saveUserVideos([]);startVideo(DAY);}
+  Promise.all(loadUserVideos().map(v=>vidRemove(v.id))).then(()=>startVideo(DAY));startVideo(DAY);}
 
 /* ---------- 開啟素材 ---------- */
+/* YouTube 素材的字幕是點開才下載（清單只帶標題，載入很輕） */
 function vOpen(i){
   const m=VIDMATS[i];if(!m)return;
+  if(m.kind==='yt'&&!(m.lines&&m.lines.length)){
+    $('vid-pick').classList.add('hide');$('vid-body').classList.remove('hide');
+    $('vid-stage').innerHTML='<div class="note">⏳ 字幕載入中…</div>';
+    $('vid-subs').innerHTML='';
+    vidLoadSubs(m.id).then(lines=>{
+      if(!lines.length){$('vid-stage').innerHTML='<div class="note warn">這支影片的字幕讀不到，請確認網路連線，或重新貼一次字幕。</div>';return;}
+      m.lines=lines;vOpen(i);});
+    return;}
   vStop();
   VID={m:m,mode:m.kind,lines:m.lines,i:0,playing:false,rate:1,loop:false,
     showCn:true,showEn:true,vocab:false,yt:null,timer:null};
@@ -5206,9 +5265,7 @@ async function vAutoCn(m){
   if(sub)sub.textContent=orig;
   if(done){
     /* 使用者自己加的影片：把翻譯存回共用影片庫（用影片 id 對回去，位置變了也不會存錯支） */
-    if(m.kind==='yt'&&m.id){const list=loadUserVideos().slice();
-      const at=list.findIndex(v=>v.id===m.id);
-      if(at>=0){list[at]=Object.assign({},list[at],{lines:m.lines});saveUserVideos(list);}}
+    if(m.kind==='yt'&&m.id)vidPutSubs(m.id,m.lines);
     if(VID&&VID.m===m){vRenderSubs();vHighlight();}}
 }
 
