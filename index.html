@@ -5941,7 +5941,7 @@ function qzSubmitTrans(){const q=qzList[qzI];const el=$('qz-trans');if(!el||el.d
   const act=$('qz-trans-act');if(act)act.classList.add('hide');
   const r=scoreSpeech(mine,q.answer);
   const cmp=diffHTML(r,'');
-  const ok=!!mine&&r.pct>=60;if(ok){qzScore++;}
+  const ok=!!mine&&r.pct>=95;if(ok){qzScore++;}
   qzLog(ok,'你寫：'+(mine||'（空白）')+'　吻合度 '+r.pct+'%');
   const verdict=!mine?'⚠️ 這題沒有作答':ok?'✅ 答對了！吻合度 '+r.pct+'%':'❌ 再加油～吻合度 '+r.pct+'%';
   let h='<div class="expl">'+(mine?'📝 你的答案：<b>'+esc(mine)+'</b><br>':'（這題沒有作答）<br>')
