@@ -1,0 +1,14 @@
+{
+  "name": "Speak Up! 英文筆記",
+  "short_name": "Speak Up!",
+  "description": "Anita 的英文學習筆記與每日測驗",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F3F6FC",
+  "theme_color": "#159AA6",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
