@@ -5935,21 +5935,22 @@ function qzFill(){const q=qzList[qzI];const el=$('qz-fill');if(!el)return;const 
   el.style.borderColor=ok?'var(--good)':'var(--bad)';el.style.background=ok?'var(--good-l)':'var(--bad-l)';
   if(ok)qzScore++;qzLog(ok,'你寫：'+(el.value||'（空白）')+(ok?'':'　正解：'+(q.answer[0]||'')));
   if(!ok)el.value=el.value+'  ✗ 正解：'+(q.answer[0]||'');qzExpl(q,ok);}
-/* 翻譯題：打完字按「提交並核對答案」→ 逐字對照參考答案，吻合度高就自動算對，否則自評 */
+/* 翻譯題：打完字按「提交並核對答案」→ 逐字對照參考答案，系統依吻合度自動判斷 */
 function qzSubmitTrans(){const q=qzList[qzI];const el=$('qz-trans');if(!el||el.disabled)return;
   const mine=el.value.trim();el.disabled=true;
   const act=$('qz-trans-act');if(act)act.classList.add('hide');
   const r=scoreSpeech(mine,q.answer);
   const cmp=diffHTML(r,'');
-  const auto=!!mine&&r.pct>=85;if(auto){qzScore++;qzLog(true,'你寫：'+mine+'　吻合度 '+r.pct+'%');}
+  const ok=!!mine&&r.pct>=60;if(ok){qzScore++;}
+  qzLog(ok,'你寫：'+(mine||'（空白）')+'　吻合度 '+r.pct+'%');
+  const verdict=!mine?'⚠️ 這題沒有作答':ok?'✅ 答對了！吻合度 '+r.pct+'%':'❌ 再加油～吻合度 '+r.pct+'%';
   let h='<div class="expl">'+(mine?'📝 你的答案：<b>'+esc(mine)+'</b><br>':'（這題沒有作答）<br>')
     +'✅ 參考答案：<b>'+esc(cap(q.answer))+'</b> <button class="btn btn-o btn-sm" onclick="speak(qzList[qzI].answer,0.9)">🔊</button>'
     +'<div style="margin-top:6px">逐字對照（綠色＝你有寫到）：'+cmp+'</div>'
-    +(mine?'<div style="margin-top:6px">吻合度 <b>'+r.pct+'%</b>'+(auto?' — 算你答對! 🎉':' — 換句話說也可能是對的，自己判斷一下')+'</div>':'')
+    +'<div style="margin-top:8px;font-size:1.05em"><b>'+verdict+'</b></div>'
     +(q.explain?'<div style="margin-top:6px">'+esc(q.explain)+'</div>':'')+'</div>';
-  if(!auto)h+='<div class="actions"><button class="btn btn-o" onclick="qzSelf(1)">✅ 我答對了</button><button class="btn btn-o" onclick="qzSelf(0)">❌ 我答錯了</button></div>';
   $('qz-expl').innerHTML=h;
-  if(auto)qzNextBtn();else scrollIntoViewSoft($('qz-expl'));}
+  qzNextBtn();}
 function qzSelf(ok){if(ok)qzScore++;qzLog(!!ok,'自評'+(ok?'答對':'答錯'));qzNextBtn();}
 function qzExpl(q,ok){$('qz-expl').innerHTML='<div class="expl">'+(ok?'✅ 答對了!':'❌ 再看看~')+(q.explain?' '+esc(q.explain):'')+'</div>';qzNextBtn();}
 function qzNextBtn(){const e=$('qz-expl');e.innerHTML+='<div class="actions"><button class="btn btn-p btn-block" onclick="qzNext()">'+(qzI+1>=qzList.length?'看成績':'下一題 →')+'</button></div>';scrollIntoViewSoft(e);}
