@@ -197,6 +197,14 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .w-extra{color:var(--amber);font-style:italic;font-size:.85em;}
 .heard{font-size:.95rem;color:var(--sub);margin-top:6px;font-style:italic;min-height:1em;}
 .heard b{color:var(--ink);font-style:normal;}
+/* 瀏覽器辨識的候選字（除錯用）：看得出來是收音沒收到，還是評分太嚴 */
+.alt-line{font-size:.72rem;color:var(--faint);margin-top:5px;font-style:normal;line-height:1.6;word-break:break-word;}
+.alt-line b{color:var(--sub);}
+/* 自動錄音開關（小小一顆，不搶版面） */
+.autorec{display:inline-flex;align-items:center;gap:5px;border:1.5px solid var(--faint);background:#fff;
+  border-radius:999px;padding:5px 11px;font-family:inherit;font-size:.74rem;font-weight:800;
+  color:var(--sub);cursor:pointer;transition:.15s;}
+.autorec.on{border-color:var(--ink);color:var(--ink);background:var(--bg);}
 
 /* score ring */
 .scorebox{display:flex;align-items:center;gap:14px;justify-content:center;margin:14px 0 4px;}
@@ -647,8 +655,10 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
         <div class="actions">
           <button class="btn btn-t" onclick="shPlay(1)" title="用正常速度播放示範句">🔊 正常速</button>
           <button class="btn btn-o" onclick="shPlay(.65)" title="放慢速度播放，方便跟讀">🐢 慢速</button>
+          <button class="btn btn-o hide" id="sh-redo" onclick="micRestart()" title="剛剛說壞了？按這裡清空重說，麥克風不會關掉">🔄 重說</button>
           <button class="btn btn-p hide" id="sh-next" onclick="shNext()" title="換下一句">下一句 →</button>
         </div>
+        <div style="margin-top:9px"><button class="autorec" onclick="toggleAutoRec()" title="開啟後，示範句念完會自動開始錄音">🎙️ 自動錄音：開</button></div>
       </div>
     </div>
   </section>
@@ -851,9 +861,20 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 // VOCABULARY DATA  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
-// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260804
+// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260804, 20260811
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-08-09 count:605
+// ===SYNC:VOCAB_START=== sync_date:2026-08-11 count:615
+  // --- 20260811 補償用語與效率詞彙 Compensate, Make Up For and Efficiency ---
+  {w:"constant",ipa:"/ˈkɑːnstənt/",pos:"adj.",cn:"持續的、不斷的",def:"Happening all the time without stopping.",exEn:"He has a constant cough because the air conditioner is too strong.",exCn:"他一直在咳嗽，因為冷氣太強了。",cat:"daily"},
+  {w:"constantly",ipa:"/ˈkɑːnstəntli/",pos:"adv.",cn:"持續地、不斷地",def:"Happening again and again without stopping.",exEn:"Cars in Vietnam constantly honk their horns, and the noise affects my sleep.",exCn:"越南的車經常按喇叭，噪音影響我的睡眠。",cat:"daily"},
+  {w:"effective",ipa:"/ɪˈfektɪv/",pos:"adj.",cn:"有效的",def:"Producing the result that was wanted.",exEn:"Taking a short break every hour is an effective tip to reduce eye strain.",exCn:"每小時休息一下是減少眼睛疲勞的有效方法。",cat:"daily"},
+  {w:"efficient",ipa:"/ɪˈfɪʃənt/",pos:"adj.",cn:"有效率的",def:"Working well without wasting time or resources.",exEn:"Using two monitors is an efficient setup for engineers.",exCn:"使用兩個螢幕對工程師來說是有效率的配置。",cat:"workplace"},
+  {w:"efficiently",ipa:"/ɪˈfɪʃəntli/",pos:"adv.",cn:"有效率地",def:"In a way that saves time and effort.",exEn:"Digital notebook app helps student to search their study notes efficiently.",exCn:"數位筆記軟體幫助學生有效率地搜尋學習筆記。",cat:"workplace"},
+  {w:"compensate",ipa:"/ˈkɑːmpənseɪt/",pos:"v.",cn:"補償、彌補",def:"To give something to make up for a loss or problem.",exEn:"The hotel gave us a free meal to compensate for the noisy room.",exCn:"飯店給我們免費餐點，以補償房間太吵的問題。",cat:"daily"},
+  {w:"eye strain",ipa:"/aɪ streɪn/",pos:"n.",cn:"眼睛疲勞",def:"Pain or tiredness in your eyes from using them too much.",exEn:"Taking a short break every hour is an effective tip to reduce eye strain.",exCn:"每小時休息一下是減少眼睛疲勞的有效方法。",cat:"health"},
+  {w:"car horn",ipa:"/kɑːr hɔːrn/",pos:"n.",cn:"汽車喇叭",def:"A device in a car that makes a loud warning sound.",exEn:"The car horn is stuck and won't stop honking.",exCn:"汽車喇叭卡住了，一直響不停。",cat:"daily"},
+  {w:"honk",ipa:"/hɑːŋk/",pos:"v.",cn:"按喇叭",def:"To press the horn of a car to make a loud sound.",exEn:"Cars in Vietnam constantly honk their horns.",exCn:"越南的車經常按喇叭。",cat:"daily"},
+  {w:"refund",ipa:"/ˈriːfʌnd/",pos:"n.",cn:"退款",def:"Money that is given back to you.",exEn:"The sponsor offered refunds to compensate the customers.",exCn:"贊助商提供退款來補償顧客。",cat:"daily"},
   // --- 20250717 永遠的好朋友 Always Together ---
   {w:"commute",ipa:"/kəˈmjuːt/",pos:"v. / n.",cn:"通勤",def:"to travel between home and work.",exEn:"I commute by scooter.",exCn:"我騎摩托車上下班。",cat:"daily"},
   {w:"seldom",ipa:"/ˈsel.dəm/",pos:"adv.",cn:"很少、難得",def:"almost never.",exEn:"I seldom get sick.",exCn:"我很少生病。",cat:"daily"},
@@ -1514,8 +1535,19 @@ const vocab = [
 ];
 
 // 每個單字的筆記來源 (key = word, value = note title)
-// ===SYNC:SOURCES_START=== sync_date:2026-08-09
+// ===SYNC:SOURCES_START=== sync_date:2026-08-11
 const vocabSources = {
+  // --- 20260811 補償用語與效率詞彙 ---
+  "constant":"20260811 補償用語與效率詞彙",
+  "constantly":"20260811 補償用語與效率詞彙",
+  "effective":"20260811 補償用語與效率詞彙",
+  "efficient":"20260811 補償用語與效率詞彙",
+  "efficiently":"20260811 補償用語與效率詞彙",
+  "compensate":"20260811 補償用語與效率詞彙",
+  "eye strain":"20260811 補償用語與效率詞彙",
+  "car horn":"20260811 補償用語與效率詞彙",
+  "honk":"20260811 補償用語與效率詞彙",
+  "refund":"20260811 補償用語與效率詞彙",
   // --- 20260806 成功之鑰與Effectively vs Efficiently ---
   "commute":"20250717 永遠的好朋友",
   "seldom":"20250717 永遠的好朋友",
@@ -1975,8 +2007,19 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-08-06 count:213
+// ===SYNC:TRANS_START=== sync_date:2026-08-11 count:223
 const allTrans = [
+  // --- 20260811 補償用語與效率詞彙（句子取自筆記原文）---
+  {p:"他一直在咳嗽，因為冷氣太強了。",a:"He has a constant cough because the air conditioner is too strong.",h:"constant = 持續的, too = 太",kw:["constant"],src:"20260811 補償用語與效率詞彙"},
+  {p:"越南的車持續製造很大的噪音，影響了我的睡眠。",a:"The cars in Vietnam constantly make loud noises, and they affect my sleep.",h:"constantly = 持續地, noises 複數",kw:["constantly"],src:"20260811 補償用語與效率詞彙"},
+  {p:"每小時休息一下是減少眼睛疲勞的有效方法。",a:"Taking a short break every hour is an effective tip to reduce eye strain.",h:"effective = 有效的, eye strain",kw:["effective","eye strain"],src:"20260811 補償用語與效率詞彙"},
+  {p:"航空公司提供免費機票來補償航班延誤。",a:"The airline company offered a free ticket to compensate for the flight delay.",h:"compensate for = 補償",kw:["compensate"],src:"20260811 補償用語與效率詞彙"},
+  {p:"使用兩個螢幕對工程師來說是有效率的配置，方便處理多項任務。",a:"Using two monitors is an efficient setup for engineers to deal with multiple tasks.",h:"efficient = 有效率的, V-ing 當主詞用 is",kw:["efficient"],src:"20260811 補償用語與效率詞彙"},
+  {p:"數位筆記軟體幫助學生有效率地搜尋學習筆記。",a:"Digital notebook app helps student to search their study notes efficiently.",h:"efficiently = 有效率地",kw:["efficiently"],src:"20260811 補償用語與效率詞彙"},
+  {p:"他買花來彌補忘記太太生日的錯誤。",a:"He bought his wife flowers to make up for forgetting her birthday.",h:"make up for = 彌補某件事",kw:["make up for"],src:"20260811 補償用語與效率詞彙"},
+  {p:"飯店給我們免費餐點，以補償房間太吵的問題。",a:"The hotel gave us a free meal to compensate for the noisy room.",h:"compensate for = 正式補償",kw:["compensate"],src:"20260811 補償用語與效率詞彙"},
+  {p:"他因忘記太太的生日向她道歉。",a:"He apologized to his wife for forgetting her birthday.",h:"apologize to sb for sth",kw:["apologize"],src:"20260811 補償用語與效率詞彙"},
+  {p:"抱歉我忘了你的生日，我會補償你的。",a:"I'm sorry I forgot your birthday. I'll make it up to you.",h:"make it up to someone = 補償某人",kw:["make it up to"],src:"20260811 補償用語與效率詞彙"},
   // --- 20260806 成功之鑰與Effectively vs Efficiently（句子取自筆記原文）---
   {p:"她和團隊溝通很有效。",a:"She communicates effectively with her team.",h:"effectively = 有效地",kw:["effectively"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
   {p:"他有效率地管理時間。",a:"He manages his time efficiently.",h:"efficiently = 有效率地",kw:["efficiently"],src:"20260806 成功之鑰與Effectively vs Efficiently"},
@@ -2218,7 +2261,23 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-08-06 count:48
+// ===SYNC:KW_START=== sync_date:2026-08-11 count:51
+  // --- 20260811 補償用語與效率詞彙（例句全部取自筆記原文）---
+  {w:"compensate",ipa:"/ˈkɑːmpənseɪt/",tag:"補償 · v.",exs:[
+    {en:"The hotel gave us a free meal to compensate for the noisy room.",cn:"飯店給我們免費餐點，以補償房間太吵的問題。"},
+    {en:"The airline company offered a free ticket to compensate for the flight delay.",cn:"航空公司提供免費機票來補償航班延誤。"},
+    {en:"He compensated his wife for forgetting her birthday by taking her on a special trip.",cn:"他因為忘記太太的生日，而帶她去特別旅行作為補償。"},
+  ]},
+  {w:"make up for",ipa:"",tag:"彌補某事 · phr.",exs:[
+    {en:"He bought his wife flowers to make up for forgetting her birthday.",cn:"他買花來彌補忘記太太生日的錯誤。"},
+    {en:"The company gave customers a discount to make up for the delay.",cn:"公司給顧客折扣來補償延誤。"},
+    {en:"Nothing can make up for losing a loved one.",cn:"沒有任何東西可以彌補失去親人的痛苦。"},
+  ]},
+  {w:"constant",ipa:"/ˈkɑːnstənt/",tag:"持續的 · adj.",exs:[
+    {en:"He has a constant cough because the air conditioner is too strong.",cn:"他一直在咳嗽，因為冷氣太強了。"},
+    {en:"Cars in Vietnam constantly honk their horns, and the noise affects my sleep.",cn:"越南的車經常按喇叭，噪音影響我的睡眠。"},
+    {en:"The car horn got stuck, so it kept honking.",cn:"汽車喇叭卡住，所以一直按個不停。"},
+  ]},
   // --- 20260806 成功之鑰與Effectively vs Efficiently（例句全部取自筆記原文）---
   {w:"effectively",ipa:"/ɪˈfek.tɪv.li/",tag:"有效地 · adv.",exs:[
     {en:"She communicates effectively with her team.",cn:"她和團隊溝通很有效。"},
@@ -2463,7 +2522,49 @@ const allKW = [
 // READING ARTICLES  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 const articles = [
-// ===SYNC:ARTICLES_START=== sync_date:2026-07-30 count:32
+// ===SYNC:ARTICLES_START=== sync_date:2026-08-06 count:33
+  {
+    title:"The Key to Success",
+    titleCn:"成功之鑰",
+    source:"Based on 20260806 lesson notes",
+    highlightWords:["success","passionate","mindset","miscommunication","failure","elaborate","effective","efficiently","constant","in no time","intelligent","symptom","optimist"],
+    paras:[
+      {en:"Emma always dreamed of achieving success in her career. She was a very passionate employee who loved learning new skills and improving herself. Her manager often encouraged her to keep a positive mindset and believe in her abilities.",
+       cn:"Emma 一直夢想在事業上取得成功。她是一位非常有熱忱的員工，熱愛學習新技能和提升自己。她的主管經常鼓勵她保持正面心態，相信自己的能力。"},
+      {en:"One day, Emma had an important project at work. At first, she faced some unexpected problems. There were some miscommunication issues between team members, and this caused project delays. The team's communication failure created extra work and stress.",
+       cn:"有一天，Emma 有一個重要的工作專案。一開始，她遇到了一些意想不到的問題。團隊成員之間有一些溝通不良的問題，這導致了專案延遲。團隊的溝通失敗造成了額外的工作和壓力。"},
+      {en:"Instead of blaming others, Emma decided to take action. She carefully listened to everyone's opinions and made a smart decision to organize a meeting. During the meeting, she asked each person to elaborate on their ideas and explain the problems clearly.",
+       cn:"Emma 沒有責怪他人，而是決定採取行動。她仔細聆聽每個人的意見，並做了一個聰明的決定來召開會議。在會議中，她要求每個人詳細說明他們的想法，並清楚地解釋問題。"},
+      {en:"Because of her effective communication and constant effort, the team solved the problems efficiently. They finished the project in no time and received positive feedback from their boss.",
+       cn:"因為她有效的溝通和持續的努力，團隊有效率地解決了問題。他們很快就完成了專案，並收到了老闆的正面回饋。"},
+      {en:"Later, Emma's manager asked about her experience. She explained that success does not happen by luck. Intelligent people learn from their mistakes, understand the symptoms of problems, and take action before small issues become big ones.",
+       cn:"後來，Emma 的主管詢問了她的經驗。她解釋說成功不是靠運氣。聰明的人從錯誤中學習，了解問題的症狀，並在小問題變成大問題之前採取行動。"},
+      {en:"Emma remained an optimist and believed every challenge was an opportunity to grow. Her positive attitude and smart decisions helped her become a successful leader.",
+       cn:"Emma 保持樂觀，相信每個挑戰都是成長的機會。她的正面態度和聰明的決定幫助她成為一位成功的領導者。"},
+    ],
+    questions:[
+      {q:"What problems did Emma's team face?",
+       opts:["A. Financial problems","B. Miscommunication issues","C. Equipment failure","D. Staff shortage"],
+       ans:1,
+       expl:"文章說 There were some miscommunication issues between team members. 團隊成員之間有溝通不良的問題。"},
+      {q:"How did Emma solve the communication problems?",
+       opts:["A. She fired team members","B. She ignored the problems","C. She organized a meeting","D. She asked her boss for help"],
+       ans:2,
+       expl:"She made a smart decision to organize a meeting. 她做了聰明的決定召開會議。"},
+      {q:"Why was Emma considered intelligent?",
+       opts:["A. She had a high degree","B. She learned from mistakes and took action early","C. She was lucky","D. She worked overtime"],
+       ans:1,
+       expl:"Intelligent people learn from their mistakes... and take action before small issues become big ones. 聰明的人從錯誤中學習並及早採取行動。"},
+      {q:"What qualities helped Emma achieve success?",
+       opts:["A. Luck and connections","B. Money and power","C. Positive attitude and smart decisions","D. Working alone"],
+       ans:2,
+       expl:"Her positive attitude and smart decisions helped her become a successful leader. 正面態度和聰明的決定。"},
+      {q:"What does 'in no time' mean?",
+       opts:["A. They had no time left","B. They finished very quickly","C. They were always late","D. They worked overtime"],
+       ans:1,
+       expl:"in no time = 很快地（very quickly）。They finished the project in no time. 他們很快就完成專案。"},
+    ]
+  },
   {
     title:"A Pessimist Plays a Pessimist",
     titleCn:"一個悲觀者飾演一個悲觀者",
@@ -3366,7 +3467,58 @@ const articles = [
 // 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
 // ═══════════════════════════════════════════════
 const DAYQUIZ = {
-// ===SYNC:DAYQUIZ_START=== sync_date:2026-08-09 count:25
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-08-11 count:26
+  "20260811": {
+    title: "補償用語與效率詞彙",
+    subtitle: "Compensate, Make Up For and Efficiency",
+    questions: [
+      {type:"mc",tag:"單字",q:"\"constant\" 的意思是？",
+        options:["固定的","持續的、不斷的","堅定的","經常的"],answer:1,
+        explain:"constant 是形容詞，表示「持續的、不斷的」。constant cough 指持續不斷的咳嗽。"},
+      {type:"mc",tag:"單字",q:"\"compensate\" 的意思是？",
+        options:["比較","補償、彌補","競爭","安慰"],answer:1,
+        explain:"compensate /ˈkɑːmpənseɪt/ 是動詞，表示「補償、彌補」。"},
+      {type:"mc",tag:"單字",q:"\"eye strain\" 的意思是？",
+        options:["眼壓","眼睛疲勞","近視","眼睛發炎"],answer:1,
+        explain:"eye strain 指眼睛疲勞，不是 eye pressure（眼壓）。"},
+      {type:"mc",tag:"單字",q:"\"honk\" 的意思是？",
+        options:["鳴笛","按喇叭","停車","加速"],answer:1,
+        explain:"honk /hɑːŋk/ 是動詞，表示「按喇叭」。honk their horns = 按他們的喇叭。"},
+      {type:"fill",tag:"文法",q:"He has a constant cough because the air conditioner is ___ strong.",
+        cn:"他一直在咳嗽，因為冷氣太強了。",answer:["too"],
+        explain:"too + 形容詞表示「太……」，暗示造成了問題。中文常說「冷氣很強」，但英文要用 too strong 才能表達「強到造成問題」的語意。"},
+      {type:"fill",tag:"文法",q:"Taking a short break every ___ is an effective tip to reduce eye strain.",
+        cn:"每小時休息一下是減少眼睛疲勞的有效方法。",answer:["hour"],
+        explain:"every + 單數名詞：every hour，不是 every hours。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["The cars in Vietnam constantly make a loud noise and it affects my sleep.","The cars in Vietnam constantly make loud noises, and they affect my sleep."],answer:1,
+        explain:"車子發出各種不同的聲音，要用複數 loud noises。後半句代替 cars（複數），用 they affect，不是 it affects。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["Taking a short break every hours is an effective tips to reduce eye pressure.","Taking a short break every hour is an effective tip to reduce eye strain."],answer:1,
+        explain:"every + 單數：every hour。an effective tip（單數）。眼睛疲勞用 eye strain，不是 eye pressure（眼壓）。"},
+      {type:"fill",tag:"介系詞",q:"The airline company offered a free ticket to compensate ___ the flight delay.",
+        cn:"航空公司提供免費機票來補償航班延誤。",answer:["for"],
+        explain:"compensate for something = 補償某事。for 不可省略。"},
+      {type:"mc",tag:"句型",q:"「使用兩個螢幕對工程師來說是有效率的配置」，動詞應該用 is 還是 are？",
+        options:["is","are"],answer:0,
+        explain:"主詞是 Using two monitors（動名詞片語），雖然提到兩個螢幕，但整個片語描述的是一件事，視為單數，動詞用 is。"},
+      {type:"mc",tag:"句型",q:"個人關係中彌補某件事，用哪個片語比較自然？",
+        options:["compensate for something","make up for something"],answer:1,
+        explain:"make up for 較口語自然，常用於個人關係、日常情境。compensate for 較正式，常用於金錢、服務、官方場合。"},
+      {type:"fill",tag:"句型",q:"He bought his wife flowers to make ___ for forgetting her birthday.",
+        cn:"他買花來彌補忘記太太生日的錯誤。",answer:["up"],
+        explain:"make up for something = 彌補某件事。"},
+      {type:"fill",tag:"句型",q:"I'm sorry I forgot your birthday. I'll make it up ___ you.",
+        cn:"抱歉我忘了你的生日，我會補償你的。",answer:["to"],
+        explain:"make it up to someone = 補償某人。注意是 to someone，不是 for someone。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["Using two monitors are an efficient setup for engineers to deal with multiple tasks.","Using two monitors is an efficient setup for engineers to deal with multiple tasks."],answer:1,
+        explain:"V-ing 片語當主詞時，整個片語是單數，動詞用 is。"},
+      {type:"trans",tag:"翻譯",q:"飯店給我們免費餐點，以補償房間太吵的問題。",
+        answer:"The hotel gave us a free meal to compensate for the noisy room.",
+        explain:"compensate for + 名詞，表示正式補償。noisy room 用形容詞 noisy 修飾 room。"}
+    ]
+  },
   "20250807": {
     title: "現在進行式與過去進行式",
     subtitle: "Continuous Tenses",
@@ -4766,59 +4918,147 @@ function scoreBest(said,answers,opts){
 
 /* ---------- 麥克風引擎 ---------- */
 let micRec=null,micActive=false,micCfg=null,micFinal='',micLive='',micErr=null,micDone=false,micTimer=null,micWatch=null,idleTimer=null,micStopping=false;
+let micGen=0;            /* 世代編號：上一輪殘留的事件不准影響這一輪 */
+let micAlts=[];          /* 這一輪瀏覽器給的所有候選（除錯 + 挑最接近的那個） */
+let micStartWatch=null;  /* 啟動看門狗：start() 之後遲遲沒真的開始就當作卡死 */
+let micRetried=false;
+const TTS_GAP=280;       /* 示範語音 cancel 之後留一點空檔再開錄，避免喇叭聲被收進去 */
 function speechOK(){return ('webkitSpeechRecognition' in window)||('SpeechRecognition' in window);}
 function setMicUI(cfg,on){if(!cfg)return;const b=$(cfg.btn);if(b){b.classList.toggle('rec',on);b.textContent=on?'⏹':'🎤';}
-  const l=$(cfg.lbl);if(l)l.textContent=on?'🔴 聽你說…（說完再按一次結束）':(cfg.idle||'按一下，開始說');}
-function clearMicTimers(){[micTimer,micWatch,idleTimer].forEach(t=>{if(t)clearTimeout(t);});micTimer=micWatch=idleTimer=null;}
+  const l=$(cfg.lbl);if(l)l.textContent=on?'🔴 聽你說…（說完再按一次結束）':(cfg.idle||'按一下，開始說');
+  if(cfg.redo){const r=$(cfg.redo);if(r)r.classList.toggle('hide',!on);}}
+function clearMicTimers(){[micTimer,micWatch,idleTimer,micStartWatch].forEach(t=>{if(t)clearTimeout(t);});
+  micTimer=micWatch=idleTimer=micStartWatch=null;}
 /* idle：偵測到說話後開始計時，最後一個字之後過 idleMs 沒新內容就自動收尾 */
 function resetIdle(){if(!micCfg||!micCfg.idleMs)return;if(idleTimer)clearTimeout(idleTimer);
   idleTimer=setTimeout(()=>{micStopping=true;try{if(micRec)micRec.stop();}catch(e){}
     setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},300);},micCfg.idleMs);}
 function finishMic(){
-  if(micDone)return;micDone=true;micActive=false;clearMicTimers();
-  const cfg=micCfg,txt=(micFinal||micLive||'').trim(),err=micErr;
-  try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=null;}}catch(e){}
-  micRec=null;if(cfg)setMicUI(cfg,false);if(cfg&&cfg.onDone)cfg.onDone(txt,err);
+  if(micDone)return;micDone=true;micActive=false;micGen++;clearMicTimers();
+  const cfg=micCfg,txt=(micFinal||micLive||'').trim(),err=micErr,alts=micAlts.slice();
+  try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;}}catch(e){}
+  micRec=null;if(cfg)setMicUI(cfg,false);if(cfg&&cfg.onDone)cfg.onDone(txt,err,alts);
 }
 function hardResetMic(){
-  clearMicTimers();micStopping=true;
-  try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=null;micRec.abort();}}catch(e){}
+  clearMicTimers();micStopping=true;micGen++;
+  try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;micRec.abort();}}catch(e){}
   if(micCfg)setMicUI(micCfg,false);
-  micRec=null;micActive=false;micDone=true;micCfg=null;
+  micRec=null;micActive=false;micDone=true;micCfg=null;micAlts=[];
 }
 function micStop(){
-  if(!micActive)return;micStopping=true;
+  if(!micActive){hardResetMic();return;}
+  micStopping=true;
   try{if(micRec)micRec.stop();}catch(e){}
   if(micTimer)clearTimeout(micTimer);
   micTimer=setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},350);
 }
+/* 重說：不結束這一輪，只把已經聽到的內容丟掉、辨識引擎重開，麥克風繼續開著 */
+function micRestart(){
+  if(!micActive||!micCfg)return;
+  const cfg=micCfg;
+  micGen++;
+  try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;micRec.abort();}}catch(e){}
+  micRec=null;micFinal='';micLive='';micAlts=[];micErr=null;micStopping=false;
+  clearMicTimers();
+  if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}
+  cfg.onReset&&cfg.onReset();
+  const l=$(cfg.lbl);if(l)l.textContent='🔄 重來，說吧…（說完按 ⏹ 結束）';
+  armFirstIdle(cfg);armWatchdog(cfg);
+  const gen=micGen;
+  setTimeout(()=>{if(micActive&&gen===micGen)_startRec();},TTS_GAP);
+}
+/* 還沒開口前給更長的思考時間，開口後才用 idleMs 收尾 */
+function armFirstIdle(cfg){if(!cfg.idleMs)return;if(idleTimer)clearTimeout(idleTimer);
+  idleTimer=setTimeout(()=>{micStopping=true;try{if(micRec)micRec.stop();}catch(e){}
+    setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},300);},cfg.firstIdleMs||Math.max(cfg.idleMs,15000));}
+/* 看門狗上限：朗讀/開講(keepAlive) 5 分鐘、連續句 60 秒、單字 40 秒（給學習者充足思考時間） */
+function armWatchdog(cfg){if(micWatch)clearTimeout(micWatch);
+  micWatch=setTimeout(()=>{micStop();},cfg.keepAlive?300000:(cfg.continuous?60000:40000));}
+/* 引擎啟動看門狗：iOS 回到前景、權限被收回時 start() 會靜靜失敗，
+   按鈕會停在 ⏹ 但其實已經死了 — 自動救一次，救不回來就把按鈕放回可按狀態 */
+function armStartWatch(){
+  if(micStartWatch)clearTimeout(micStartWatch);
+  micStartWatch=setTimeout(()=>{
+    micStartWatch=null;if(!micActive)return;
+    if(!micRetried){micRetried=true;micRestart();return;}
+    const cfg=micCfg;hardResetMic();
+    if(cfg&&cfg.lbl){const l=$(cfg.lbl);if(l)l.textContent='⚠ 麥克風沒啟動，請再按一次 🎤';}
+  },4500);
+}
+/* 瀏覽器一次會給好幾個候選，第一個常常不是最像的 — 挑跟題目最接近的那個
+   （只用來「選候選」，不影響後面正式評分的寬鬆度） */
+function pickAlt(res,target){
+  const first=res[0]?res[0].transcript:'';
+  if(!target||res.length<2)return first;
+  let best=first,bs=scoreSpeech(first,target,{fuzzy:true,loose:true}).pct;
+  for(let k=1;k<res.length;k++){
+    const s=scoreSpeech(res[k].transcript,target,{fuzzy:true,loose:true}).pct;
+    if(s>bs){bs=s;best=res[k].transcript;}}
+  return best;
+}
 function _startRec(){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  const r=new SR();r.lang='en-US';r.interimResults=true;r.continuous=!!micCfg.continuous;r.maxAlternatives=1;
-  const base=micFinal;
-  r.onresult=e=>{let f='',itm='';for(let i=0;i<e.results.length;i++){const res=e.results[i];if(res.isFinal)f+=res[0].transcript+' ';else itm+=res[0].transcript;}
-    micFinal=((base?base+' ':'')+f).trim();micLive=(micFinal+' '+itm).trim();micCfg.onLive&&micCfg.onLive(micLive);resetIdle();};
-  r.onerror=e=>{micErr=e.error;};
-  r.onend=()=>{if(micCfg&&micCfg.keepAlive&&!micStopping){try{_startRec();}catch(e){finishMic();}}else finishMic();};
-  micRec=r;try{r.start();}catch(e){micErr='busy';finishMic();}
+  const cfg=micCfg,gen=micGen;
+  let r;try{r=new SR();}catch(e){micErr='unsupported';finishMic();return;}
+  r.lang='en-US';r.interimResults=true;r.continuous=!!cfg.continuous;
+  try{r.maxAlternatives=5;}catch(e){}
+  const base=micFinal,baseAlts=micAlts.slice(),tgt=typeof cfg.target==='function'?cfg.target():cfg.target;
+  const alive=()=>gen===micGen&&micRec===r;
+  r.onstart=()=>{if(!alive())return;micRetried=false;if(micStartWatch){clearTimeout(micStartWatch);micStartWatch=null;}};
+  r.onresult=e=>{if(!alive())return;
+    let f='',itm='';const alts=[];
+    for(let i=0;i<e.results.length;i++){const res=e.results[i];
+      if(res.isFinal){f+=pickAlt(res,tgt)+' ';for(let k=0;k<res.length&&k<5;k++)alts.push(res[k].transcript);}
+      else itm+=res[0].transcript;}
+    micFinal=((base?base+' ':'')+f).trim();micLive=(micFinal+' '+itm).trim();
+    micAlts=baseAlts.concat(alts);
+    cfg.onLive&&cfg.onLive(micLive,micAlts);resetIdle();};
+  r.onerror=e=>{if(!alive())return;micErr=e.error;
+    if(e.error==='not-allowed'||e.error==='service-not-allowed')micStopping=true;};
+  r.onend=()=>{if(!alive())return;
+    if(cfg.keepAlive&&!micStopping&&micActive){
+      setTimeout(()=>{if(gen!==micGen||!micActive||micStopping)return;
+        try{_startRec();}catch(e){finishMic();}},120);
+    }else finishMic();};
+  micRec=r;
+  try{r.start();armStartWatch();}catch(e){micErr='busy';finishMic();}
 }
 function micStart(cfg){
-  if(!speechOK()){cfg.onDone&&cfg.onDone('','unsupported');return;}
+  if(!speechOK()){cfg.onDone&&cfg.onDone('','unsupported',[]);return;}
   if(micActive){
-    if(micCfg&&micCfg.btn===cfg.btn){micStop();return;}
+    /* 同一顆按鈕 + 引擎還活著 → 這是「結束並評分」；否則一律清乾淨重來
+       （引擎死掉但 micActive 還卡在 true 時，以前會整個按不動） */
+    if(micCfg&&micCfg.btn===cfg.btn&&micRec){micStop();return;}
     hardResetMic();
   }
-  if(window.speechSynthesis)speechSynthesis.cancel();
-  micCfg=cfg;micFinal='';micLive='';micErr=null;micDone=false;micStopping=false;
+  if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}
+  micGen++;micRetried=false;
+  micCfg=cfg;micFinal='';micLive='';micAlts=[];micErr=null;micDone=false;micStopping=false;
   micActive=true;setMicUI(cfg,true);
-  /* 還沒開口前給更長的思考時間，開口後才用 idleMs 收尾 */
-  if(cfg.idleMs){if(idleTimer)clearTimeout(idleTimer);
-    idleTimer=setTimeout(()=>{micStopping=true;try{if(micRec)micRec.stop();}catch(e){}
-      setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},300);},cfg.firstIdleMs||Math.max(cfg.idleMs,15000));}
-  /* 看門狗上限：朗讀/開講(keepAlive) 5 分鐘、連續句 60 秒、單字 40 秒（給學習者充足思考時間） */
-  micWatch=setTimeout(()=>{micStop();},cfg.keepAlive?300000:(cfg.continuous?60000:40000));
-  _startRec();
+  armFirstIdle(cfg);armWatchdog(cfg);
+  /* 等示範語音真的停下來再開錄，喇叭聲被收進去會嚴重拖垮辨識 */
+  const gen=micGen;
+  setTimeout(()=>{if(micActive&&gen===micGen)_startRec();},TTS_GAP);
 }
+/* 切到別的 App、鎖螢幕、換分頁：辨識引擎會被瀏覽器中止，先收乾淨，回來才按得動 */
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden&&micActive){
+    const cfg=micCfg;hardResetMic();
+    if(cfg&&cfg.lbl){const l=$(cfg.lbl);if(l)l.textContent='錄音已中斷，按 🎤 重新開始';}
+  }});
+window.addEventListener('pagehide',()=>{if(micActive)hardResetMic();});
+/* 除錯用：把瀏覽器聽到的候選列出來，一眼看出是收音沒收到還是評分太嚴 */
+function altLine(alts,chosen){
+  const u=[];(alts||[]).forEach(a=>{const t=(a||'').trim();if(t&&u.indexOf(t)<0)u.push(t);});
+  if(u.length<2)return '';
+  return '<div class="alt-line">🎧 瀏覽器候選：'
+    +u.slice(0,5).map(t=>norm(t)===norm(chosen||'')?'<b>'+esc(t)+'</b>':esc(t)).join(' ｜ ')+'</div>';
+}
+/* 自動錄音：示範念完就直接開錄（可關） */
+let AUTOREC=(localStorage.getItem('autorec')!=='0');
+function toggleAutoRec(){AUTOREC=!AUTOREC;localStorage.setItem('autorec',AUTOREC?'1':'0');renderAutoRec();}
+function renderAutoRec(){document.querySelectorAll('.autorec').forEach(b=>{
+  b.classList.toggle('on',AUTOREC);b.textContent=AUTOREC?'🎙️ 自動錄音：開':'🎙️ 自動錄音：關';});}
 function micUnsupported(lbl){const l=$(lbl);if(l)l.innerHTML='⚠ 這個瀏覽器不支援語音辨識，建議用 <b>Chrome</b> 或 <b>Edge</b>。你仍可用 🔊 聽示範跟著念。';}
 
 /* ---------- 語音合成 TTS ---------- */
@@ -4828,22 +5068,38 @@ function pickVoice(){const vs=(window.speechSynthesis&&speechSynthesis.getVoices
       ||vs.find(v=>/en[-_]US/i.test(v.lang))||vs.find(v=>/^en/i.test(v.lang))||null;}
 if(window.speechSynthesis){speechSynthesis.onvoiceschanged=pickVoice;pickVoice();}
 const SLOW_RATE=0.5;
-function speak(text,rate){try{if(!window.speechSynthesis)return;
-  if(rate&&rate<=0.7){speakSlow(text);return;}      /* 🐢 慢速一律走分段慢念 */
-  speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=rate||0.92;if(VOICE)u.voice=VOICE;speechSynthesis.speak(u);}catch(e){}}
+/* 念完的回呼會被下一次 speak() 作廢，避免「按🔊打斷上一句」時誤觸自動錄音 */
+let ttsGen=0;
+function ttsEta(text,rate){const w=String(text).split(/\s+/).filter(Boolean).length;
+  return Math.min(90000,900+w*430/(rate||0.92));}
+function speak(text,rate,done){
+  ttsGen++;const gen=ttsGen;let cb=done||null;
+  const fire=()=>{if(gen!==ttsGen||!cb)return;const f=cb;cb=null;f();};
+  try{if(!window.speechSynthesis){fire();return;}
+    if(rate&&rate<=0.7){speakSlow(text,fire);return;}   /* 🐢 慢速一律走分段慢念 */
+    speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=rate||0.92;if(VOICE)u.voice=VOICE;
+    u.onend=fire;u.onerror=fire;
+    speechSynthesis.speak(u);
+    /* 保險：有些瀏覽器長句不觸發 onend，用估算時間補一槍（fire 只會生效一次） */
+    if(cb)setTimeout(fire,ttsEta(text,rate));
+  }catch(e){fire();}}
 /* 慢速：單純調 rate 有些語音幾乎聽不出差別，所以再依標點/字組切成小段分開念，
    段與段之間自然有停頓，聽起來明顯比正常慢。 */
-function speakSlow(text){try{if(!window.speechSynthesis)return;speechSynthesis.cancel();
+function speakSlow(text,done){try{if(!window.speechSynthesis){done&&done();return;}speechSynthesis.cancel();
   const parts=String(text).split(/([,.;:!?—–]+)/).map(s=>s.trim()).filter(Boolean);
   const chunks=[];
   parts.forEach(p=>{
     if(/^[,.;:!?—–]+$/.test(p)){if(chunks.length)chunks[chunks.length-1]+=p;return;}
     const ws=p.split(/\s+/);
     for(let i=0;i<ws.length;i+=3)chunks.push(ws.slice(i,i+3).join(' '));});
-  (chunks.length?chunks:[String(text)]).forEach(c=>{
+  const list=chunks.length?chunks:[String(text)];
+  list.forEach((c,i)=>{
     const u=new SpeechSynthesisUtterance(c);u.lang='en-US';u.rate=SLOW_RATE;u.pitch=1;
-    if(VOICE)u.voice=VOICE;speechSynthesis.speak(u);});}catch(e){}}
+    if(VOICE)u.voice=VOICE;
+    if(done&&i===list.length-1){u.onend=done;u.onerror=done;}
+    speechSynthesis.speak(u);});
+  if(done)setTimeout(done,ttsEta(text,0.42));}catch(e){done&&done();}}
 function speakText(t){speak(t,0.9);}   /* 文章 inline 單字用 */
 
 /* ---------- Firebase 雲端同步 ---------- */
@@ -5577,27 +5833,36 @@ function startShadow(d){renderLvlBar('shadow');
   shList=trimForTom(shuffle(pickByLevel(shadowItems(d))).slice(0,20),5);
   if(!shList.length){alert('這一天還沒有可跟讀的句子，換一天試試。');return;}
   shI=0;sessStart('shadow','🔁 跟讀模仿',shList.length);
-  show('scr-shadow');shRender();setTimeout(()=>speak(shCur.en,demoRate()),350);}
+  show('scr-shadow');shRender();renderAutoRec();setTimeout(()=>shDemo(demoRate()),350);}
 function shRender(){const it=shList[shI];shCur=it;
   $('sh-en').textContent=it.en;$('sh-cn').textContent=it.cn||cnFor(it.en);
   $('sh-prog').style.width=(shI/shList.length*100)+'%';
   $('sh-score').classList.add('hide');$('sh-diff').classList.add('hide');
-  $('sh-heard').innerHTML='';$('sh-next').classList.add('hide');
+  $('sh-heard').innerHTML='';$('sh-next').classList.add('hide');$('sh-redo').classList.add('hide');
   $('sh-mlbl').textContent=speechOK()?'先聽示範，再按我複誦':'此瀏覽器不支援辨識，按 🔊 跟著念';}
-function shPlay(r){speak(shCur.en,r);}
-function shMic(){micStart({btn:'sh-mic',lbl:'sh-mlbl',idle:'先聽示範，再按我複誦',
+/* 聽示範：正在錄音的話先收掉（不評分），示範念完再依設定自動開錄 */
+function shDemo(rate){
+  if(micActive)hardResetMic();
+  $('sh-mlbl').textContent='🔊 聽示範…';
+  speak(shCur.en,rate,()=>{
+    if(AUTOREC&&speechOK()&&!micActive)shMic();
+    else if(!micActive)$('sh-mlbl').textContent='按 🎤 開始複誦';});}
+function shPlay(r){shDemo(r);}
+function shMic(){micStart({btn:'sh-mic',lbl:'sh-mlbl',redo:'sh-redo',idle:'先聽示範，再按我複誦',
   continuous:true,keepAlive:true,idleMs:4000,firstIdleMs:20000,
-  onLive:t=>{$('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>';},
-  onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('sh-mlbl');$('sh-next').classList.remove('hide');return;}
+  target:()=>shCur.en,
+  onReset:()=>{$('sh-heard').innerHTML='';$('sh-score').classList.add('hide');$('sh-diff').classList.add('hide');},
+  onLive:(t,alts)=>{$('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>'+altLine(alts,t);},
+  onDone:(t,err,alts)=>{if(err==='unsupported'){micUnsupported('sh-mlbl');$('sh-next').classList.remove('hide');return;}
     if(!t){$('sh-mlbl').textContent='沒聽清楚，再按一次 🎤';return;}
     const r=scoreSpeech(t,shCur.en,{fuzzy:true});showRing('sh-score',r.pct);
     const diff=$('sh-diff');diff.classList.remove('hide');
     diff.innerHTML=diffHTML(r,'答案：');
-    $('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>';$('sh-next').classList.remove('hide');
+    $('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>'+altLine(alts,t);$('sh-next').classList.remove('hide');
     logSpeak(r.pct);   /* 這張卡片完整複誦完、拿到分數，就計入統計 */
     sessLog(shI,shCur.en,shCur.cn||cnFor(shCur.en),r.pct);
     if(r.pct===100){$('sh-mlbl').textContent='滿分! 自動跳下一句 🎉';setTimeout(()=>{if(!micActive)shNext();},1600);}}});}
-function shNext(){shI++;if(shI>=shList.length){finishAct('🔁 跟讀模仿','你跟讀了 '+shList.length+' 句!節奏會愈練愈順。');return;}shRender();setTimeout(()=>speak(shCur.en,demoRate()),300);}
+function shNext(){shI++;if(shI>=shList.length){finishAct('🔁 跟讀模仿','你跟讀了 '+shList.length+' 句!節奏會愈練愈順。');return;}shRender();setTimeout(()=>shDemo(demoRate()),300);}
 
 /* ═══════════════════════════════════════════════════════════
    3) WORD POWER
@@ -5681,38 +5946,52 @@ function readOpen(gi){const a=READLIST[gi];READ={a:a,paras:[]};
   const body=$('read-body');$('read-pick').classList.add('hide');body.classList.remove('hide');
   body.classList.toggle('nocn',!lvBasic());   /* 進階：隱藏段落中文翻譯 */
   let html='<div class="sub-top" style="margin-bottom:10px"><div style="flex:1"><div class="sub-h" style="font-size:1.05rem">'+esc(a.title)+'</div><div class="sub-s">'+esc(a.titleCn||'')+'</div></div>'
-    +'<button class="btn btn-o btn-sm" id="read-cn-btn" onclick="readToggleCn()" title="顯示或隱藏每一段的中文翻譯">'+(lvBasic()?'🈯 隱藏中文':'🈯 顯示中文')+'</button></div>';
+    +'<button class="btn btn-o btn-sm" id="read-cn-btn" onclick="readToggleCn()" title="顯示或隱藏每一段的中文翻譯">'+(lvBasic()?'🈯 隱藏中文':'🈯 顯示中文')+'</button></div>'
+    +'<div style="margin:-4px 0 10px"><button class="autorec" onclick="toggleAutoRec()" title="開啟後，每段示範念完會自動開始錄音">🎙️ 自動錄音：開</button></div>';
   a.paras.forEach((p,pi)=>{const text=stripTags(p.en);const tk=text.split(/(\s+)/);
     const spans=tk.map((w,ti)=>{if(/^\s+$/.test(w))return w;const isw=/[a-zA-Z]/.test(w);
       return isw?'<span class="tok" id="rt-'+pi+'-'+ti+'" onclick="tapWord(this)" title="點一下聽這個字的發音">'+esc(w)+'</span>':esc(w);}).join('');
     READ.paras.push({tokens:tk});
     html+='<div class="para"><div class="para-en" id="rp-'+pi+'">'+spans+'</div>'
       +'<div class="para-cn">'+esc(p.cn||cnFor(text))+'</div>'
-      +'<div class="para-bar"><button class="btn btn-o btn-sm" onclick="speak(readText('+pi+'),0.9)" title="播放這一段的標準朗讀">🔊 聽示範</button>'
+      +'<div class="para-bar"><button class="btn btn-o btn-sm" onclick="readDemo('+pi+')" title="播放這一段的標準朗讀，念完會自動開始錄音">🔊 聽示範</button>'
       +'<button class="mic" style="width:46px;height:46px;font-size:1.1rem" id="rmic-'+pi+'" onclick="readMic('+pi+')" title="按一下朗讀這一段，說對的字會亮綠燈">🎤</button>'
+      +'<button class="btn btn-o btn-sm hide" id="rredo-'+pi+'" onclick="micRestart()" title="唸壞了？按這裡清空重唸，麥克風不會關掉">🔄 重說</button>'
       +'<span class="mic-lbl" id="rlbl-'+pi+'" style="margin-top:0">按 🎤 朗讀這段</span>'
-      +'<span style="margin-left:auto;font-weight:800;color:var(--good)" id="rcov-'+pi+'"></span></div></div>';});
+      +'<span style="margin-left:auto;font-weight:800;color:var(--good)" id="rcov-'+pi+'"></span></div>'
+      +'<div class="heard" id="rheard-'+pi+'"></div></div>';});
   html+='<div class="actions" style="margin-top:4px"><button class="btn btn-o" onclick="startRead(DAY)">← 換一篇</button>'
     +'<button class="btn btn-p" onclick="readFinish()">✅ 讀完了,看成績</button></div>';
-  body.innerHTML=html;window.scrollTo(0,0);}
+  body.innerHTML=html;renderAutoRec();window.scrollTo(0,0);}
+/* 聽這一段的示範：正在錄音就先收掉，念完再依設定自動開錄 */
+function readDemo(pi){
+  if(micActive)hardResetMic();
+  const l=$('rlbl-'+pi);if(l)l.textContent='🔊 聽示範…';
+  speak(readText(pi),0.9,()=>{
+    if(AUTOREC&&speechOK()&&!micActive)readMic(pi);
+    else if(!micActive&&l)l.textContent='按 🎤 朗讀這段';});}
 function readFinish(){finishAct('📖 朗讀文章','你把這一篇唸完了!');}
 /* 中文翻譯開關：進階預設隱藏（自己先讀讀看），想對照隨時可以打開 */
 function readToggleCn(){const b=$('read-body');const off=b.classList.toggle('nocn');
   const btn=$('read-cn-btn');if(btn)btn.textContent=off?'🈯 顯示中文':'🈯 隱藏中文';}
 function readText(pi){return stripTags(READ.a.paras[pi].en);}
 function readMic(pi){
-  micStart({btn:'rmic-'+pi,lbl:'rlbl-'+pi,idle:'按 🎤 朗讀這段',continuous:true,keepAlive:true,idleMs:12000,
-    onLive:t=>{const c=markRead(pi,t);$('rcov-'+pi).textContent=c+'%';$('rlbl-'+pi).textContent='🔴 唸吧，說到哪亮到哪…（唸完再按一次）';},
-    onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('rlbl-'+pi);return;}
+  micStart({btn:'rmic-'+pi,lbl:'rlbl-'+pi,redo:'rredo-'+pi,idle:'按 🎤 朗讀這段',continuous:true,keepAlive:true,idleMs:12000,
+    target:()=>readText(pi),
+    onReset:()=>{const h=$('rheard-'+pi);if(h)h.innerHTML='';$('rcov-'+pi).textContent='';markRead(pi,'');},
+    onLive:(t,alts)=>{const c=markRead(pi,t);$('rcov-'+pi).textContent=c+'%';$('rlbl-'+pi).textContent='🔴 唸吧，說到哪亮到哪…（唸完再按一次）';
+      const h=$('rheard-'+pi);if(h)h.innerHTML=altLine(alts,t);},
+    onDone:(t,err,alts)=>{if(err==='unsupported'){micUnsupported('rlbl-'+pi);return;}
       if(!t){$('rlbl-'+pi).textContent='沒聽清楚，再按一次 🎤';return;}
       const cov=markRead(pi,t);$('rcov-'+pi).textContent=cov+'%';$('rlbl-'+pi).textContent='唸得好!覆蓋率 '+cov+'%';
+      const h=$('rheard-'+pi);if(h)h.innerHTML=altLine(alts,t);
       logSpeak(cov);   /* 這段朗讀完整結束、拿到覆蓋率，就計入統計 */
       sessLog(pi,readText(pi),READ.a.paras[pi].cn||cnFor(readText(pi)),cov);
     }});}
 function markRead(pi,said){const got=toks(said),used=new Array(got.length).fill(false),loose=isTom();
   const tk=READ.paras[pi].tokens;let total=0,hit=0;
   tk.forEach((w,ti)=>{if(/^\s+$/.test(w)||!/[a-zA-Z]/.test(w))return;total++;const n=norm(w);
-    const el=$('rt-'+pi+'-'+ti);
+    const el=$('rt-'+pi+'-'+ti);if(el)el.classList.remove('hit');   /* 每次重算，重說才清得掉舊的綠字 */
     let i=got.findIndex((s,k)=>!used[k]&&s===n);
     if(i<0)i=got.findIndex((s,k)=>!used[k]&&wordClose(n,s,loose));   /* 辨識誤差容錯 */
     if(i>=0){used[i]=true;hit++;if(el)el.classList.add('hit');}});
