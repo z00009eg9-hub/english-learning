@@ -424,6 +424,51 @@ cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && fi
    cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && firebase deploy --only hosting
    ```
 
+---
+
+## 流程 F2：生成情境對話腳本 DAYTALK（2026-08-12 確立）
+
+**觸發時機：** 每次跑完流程 F（出考題）之後，為同一天再產一組情境對話腳本。
+
+### 為什麼要有這個
+「💬 情境對話」以前是把**上一題的課文句**當教練台詞，但同一天的課文句彼此無關，
+畫面上會出現「教練：Using two monitors is an efficient setup for engineers.」→
+「請用英文說：保險公司為車禍事故提供我們賠償。」這種前言不對後語的狀況（2026-08-12 使用者回報）。
+現在改成 `DAYTALK` 手寫腳本：**教練的問句由你編寫**，**回答句一律逐字取自筆記原文**。
+
+### 資料結構（在 index.html，`const DAYTALK = {`，標記 `// ===SYNC:DAYTALK_START/END===`）
+```javascript
+"YYYYMMDD": {
+  title: "主題",
+  turns: [
+    {q:"教練的英文問句",qCn:"教練問句的中文",
+     en:"筆記原句（學習者要說出來的答案）",cn:"該原句的中文",hint:"提示（文法點或關鍵字）"},
+  ]
+}
+```
+
+### 出題規範
+1. **`en` / `cn` 必須逐字取自當天筆記**（allTrans 的 `a`/`p`、或 vocab 的 `exEn`/`exCn`），不可自行造句
+2. **`q` / `qCn` 是引導語，可自行編寫** —— 這屬於「包裝」不是「教材內容」，與流程 F 的規則一致
+3. **每個 `q` 必須自己成立、不可依賴前一題**：系統會用 `rotatePick` 抽題（每次抽一部分），
+   所以不能寫「Did he say anything **after that**?」這種指代前文的問句；
+   要寫成「Tom forgot his wife's birthday. Did he say anything to her?」
+4. 問句要讓那句筆記原句成為**自然的回答**（問題問什麼、答案就答什麼）
+5. 一天約 8–12 turns，依筆記句子數量而定，寧缺勿造
+6. 沒有 DAYTALK 的日期會自動退回「教練只說引導語」（`TALK_LEAD`），不會壞掉，**不需要回頭補舊日期**
+
+### 同步步驟
+1. 在 `// ===SYNC:DAYTALK_START=== ...` 那一行的**正下方**插入 `"YYYYMMDD": { ... },`（最新在最上面）
+2. 更新標記行的 `sync_date` 與 `count`
+3. 與流程 F 的 DAYQUIZ 一起 commit / push / 部署（流程 G）
+
+### 產出前自我檢查
+- 每個 `en` 都能在當天筆記中找到出處（可用 node 腳本比對 allTrans / vocab）
+- 每個 `q` 不依賴其他 turn 的上下文，單獨看也讀得通
+- `q` 與 `en` 真的是「問 → 答」的關係，不是各說各話
+
+---
+
 ### ⭐ 產出前自我檢查
 
 - 每個 `mc` 的 `answer` 索引確實指向正確選項（0-based，別 off-by-one）
