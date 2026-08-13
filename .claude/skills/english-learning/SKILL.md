@@ -176,6 +176,55 @@ description: 英文課堂筆記的完整自動化工作流程 — 自動建立�
 
 ---
 
+## 流程 A0：⭐ 建立格式版 Google 文件的首選做法 —— HTML 直接上傳（2026-08-13 確立）
+
+**不要再用「Apps Script + base64 分塊貼進編輯器」或「Chrome 渲染後複製貼上」產生新文件。**
+改用 Drive MCP `create_file` + `contentMimeType: "text/html"`，Drive 會直接把 HTML 轉成 Google 文件，
+一次呼叫完成、**中文與符號不會變亂碼**（base64 那條路產生過「顣客」「徝錯誤中」這類壞字）。
+
+```
+create_file(
+  title: "YYYYMMDD-主題【格式版】Topic",
+  parentId: <流程 0 取得的資料夾 ID>,
+  contentMimeType: "text/html",
+  textContent: <完整 HTML>
+)
+```
+
+**HTML 轉檔後會正確保留**（已實測）：
+- 橘色 section bar：單格 `<table>` + `background-color:#FFA726`
+- 黃色 callout：`<table>` 每列 `background-color:#FFFDE7` + `border-left:6px solid #FFD54F`
+- **紅字／藍字**：`❌ 原句` 用 `color:#C0392B`、`✅ 訂正` 用 `color:#1155CC`
+- **表格只有標題列粗體**：`<th>` 粗體、`<td>` 明確寫 `font-weight:normal`
+- `<h1>/<h3>` 階層、⭐ ⚠ ❌ ✅ 等符號
+
+**轉檔做不到、要另外處理的兩件事：**
+
+1. **頁碼** —— 在 Google 文件 UI：`插入 → 頁面元素 → 頁碼 → 頁尾（從第一頁開始）`
+2. **防止表格列跨頁被切成兩半** —— `格式 → 表格` 只有游標在單一表格內才會啟用，無法整份套用。
+   要一次處理全部表格，在 Apps Script 專案加入 **服務 → Google Docs API**（這步會順便啟用 GCP 專案的 Docs API），再跑：
+   ```js
+   function fixOverflow() {
+     var D = "<DOC_ID>";
+     var doc = Docs.Documents.get(D); var r = [];
+     doc.body.content.forEach(function (e) {
+       if (e.table) r.push({ updateTableRowStyle: { tableStartLocation: { index: e.startIndex },
+         tableRowStyle: { preventOverflow: true }, fields: "preventOverflow" } });
+     });
+     if (r.length) Docs.Documents.batchUpdate({ requests: r }, D);
+     Logger.log("tables=" + r.length);
+   }
+   ```
+   ⚠ 不要改用 `UrlFetchApp` 打 Docs REST API —— 沒加進階服務的話 GCP 專案沒啟用 Docs API，會回 403 `SERVICE_DISABLED`。
+
+**其他注意事項：**
+- `create_file` 只能新建、不能覆寫既有文件；Drive MCP 也沒有刪除工具。要取代舊檔就在 Docs UI 改名／到 Drive 丟垃圾桶（**先問使用者**）。
+- 閱讀文章 Reading Article 與理解問題 Comprehension Questions **一律用段落式 `<p>`，不要用表格**（2026-08-13 使用者指定）。
+- 各大章節之間加 `page-break-before:always`，避免資料溢到下一頁。
+- Chrome MCP 操作 Docs 選單時，座標點擊會偏掉（截圖寬度 ≠ CSS 寬度，比例約 1.21）。**一律用 `find` 取 ref 再 `left_click`／`hover`**；選單開著時 `screenshot` 會 timeout，改用 `javascript_tool` 列出 `.goog-menuitem` 文字確認。
+
+---
+
 ## 流程 A：建立全新 Google 文件
 
 1. **解析**：從貼上的內容中提取日期、主題、單字、片語、句型
