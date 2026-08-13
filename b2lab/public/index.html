@@ -845,7 +845,9 @@ RENDER.daily=function(){
      +(d?'<span class="done">✓ 練習 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
   }
   if(!artToday&&!gramToday){
-    h+='<div class="card"><div class="muted">今天還沒有新內容。每日排程通常在早上更新，可以稍後再回來看，或先到「閱讀」與「文法」分頁。</div></div>';
+    h+='<div class="card"><div class="muted">今天還沒有新內容。每日排程通常在早上七點更新，可以稍後再回來看，或先到「閱讀」與「文法」分頁。</div></div>';
+  }else if(!isToday(artToday)&&!isToday(gramToday)){
+    h+='<div class="card"><div class="muted">⏳ 今天（'+t+'）的新內容還沒更新，上面顯示的是最近一次的。每日排程在早上七點跑，稍後重新整理就會出現。</div></div>';
   }
   h+='<div class="card"><h2 class="sec">🎯 今天可以這樣安排</h2>'
    +'<ol style="font-size:15px;padding-left:22px;margin:4px 0">'
