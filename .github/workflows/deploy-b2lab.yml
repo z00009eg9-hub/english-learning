@@ -1,0 +1,43 @@
+name: Deploy B2 Lab to Firebase Hosting
+
+# 每日排程 agent 產生新內容並 push 之後，這個 workflow 會自動把 b2lab 部署上線。
+# 需要一個 repo secret：FIREBASE_SERVICE_ACCOUNT_ENGLISH_B2_LAB
+#   Firebase Console → 專案設定 → 服務帳戶 → 產生新的私密金鑰 → 下載的 JSON 全文
+#   貼到 GitHub → Settings → Secrets and variables → Actions → New repository secret
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'b2lab/public/**'
+      - 'b2lab/firebase.json'
+      - '.github/workflows/deploy-b2lab.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sanity check data files
+        run: |
+          cd b2lab/public
+          for f in data-notes.js data-reading.js data-grammar.js data-focus.js data-daily.js; do
+            node -e "global.window={};require('./$f');console.log('$f ok')"
+          done
+          node -e "
+            global.window={};
+            require('./data-reading.js'); require('./data-daily.js'); require('./data-grammar.js');
+            const r=window.READING.length, d=(window.DAILY.articles||[]).length, g=window.GRAMMAR.length, dg=(window.DAILY.grammar||[]).length;
+            console.log('reading',r,'daily articles',d,'grammar',g,'daily grammar',dg);
+            if(!r||!g||!d||!dg) { console.error('資料檔看起來不完整，停止部署'); process.exit(1); }
+          "
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ENGLISH_B2_LAB }}
+          projectId: english-b2-lab
+          channelId: live
+          entryPoint: b2lab
