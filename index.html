@@ -5228,7 +5228,7 @@ function cloudPull(done){const d=cloudDoc();if(!d){done&&done();return;}
 function cloudSubscribe(){if(!db)return;if(cloudUnsub){cloudUnsub();cloudUnsub=null;}
   const d=cloudDoc();if(!d)return;const mine=PROFILE;
   cloudUnsub=d.onSnapshot(s=>{if(PROFILE!==mine||!s.exists)return;const r=s.data();
-    if((r.updatedAt||0)>(ST.updatedAt||0)){ST=Object.assign({},ST,r);saveLocal();applyRollover();renderStats();renderActProg();refreshCoach();}},()=>{});}
+    if((r.updatedAt||0)>(ST.updatedAt||0)){ST=Object.assign({},ST,r);saveLocal();syncLevelFromST();applyRollover();renderStats();renderActProg();refreshCoach();}},()=>{});}
 function cloudBadge(on){const el=$('sync-badge');if(el)el.style.display=on?'inline-flex':'none';}
 
 /* ---------- 學習者 Profiles（各自獨立進度） ---------- */
@@ -5251,6 +5251,10 @@ function updateProfileUI(){
 /* ---------- 難度等級（每位學習者各自記住；Tom: A2/B1、Anita: B1/B2） ---------- */
 let LEVEL='advanced';
 function levelKey(){return 'speakup_level_'+PROFILE;}
+/* 難度等級：本機記一份（開站即用），同時寫進 ST 讓它跨裝置同步 */
+function saveLevel(l){LEVEL=l;localStorage.setItem(levelKey(),l);ST.level=l;saveST();}
+/* 雲端拉回來的 ST 若帶著較新的難度，就採用它 */
+function syncLevelFromST(){if(ST.level==='basic'||ST.level==='advanced'){if(ST.level!==LEVEL){LEVEL=ST.level;localStorage.setItem(levelKey(),LEVEL);}}}
 function loadLevel(){const v=localStorage.getItem(levelKey());
   LEVEL=(v==='basic'||v==='advanced')?v:(PROFILE==='tom'?'basic':'advanced');}
 function lvBasic(){return LEVEL==='basic';}
@@ -5260,7 +5264,7 @@ function renderLvlBar(act){const el=$('lvl-'+act);if(!el)return;const L=levelLab
   el.style.display='flex';
   el.innerHTML='<button class="lvl-btn'+(lvBasic()?' active':'')+'" onclick="setActLevel(\''+act+'\',\'basic\')">🟢 '+L[0]+'</button>'
     +'<button class="lvl-btn'+(lvBasic()?'':' active')+'" onclick="setActLevel(\''+act+'\',\'advanced\')">🔵 '+L[1]+'</button>';}
-function setActLevel(act,l){if(l===LEVEL)return;LEVEL=l;localStorage.setItem(levelKey(),l);
+function setActLevel(act,l){if(l===LEVEL)return;saveLevel(l);
   micStop();if(window.speechSynthesis)speechSynthesis.cancel();
   openAct(act);}
 /* 依難度挑句子：基礎=短句優先，進階=完整長句 */
@@ -5291,7 +5295,7 @@ function actMax(n){return (PROFILE==='tom'&&lvBasic())?Math.ceil(n/2):n;}
 function trimForTom(list,min){if(PROFILE==='tom'&&lvBasic())return list.slice(0,Math.max(min||4,Math.ceil(list.length/2)));return list;}
 
 /* ---------- 進度 / 連續天數（本機即時 + Firebase 雲端同步） ---------- */
-let ST={streak:1,lastDay:null,spokenToday:0,scoreSum:0,scoreN:0,totalSpoken:0,actToday:{},updatedAt:0};
+let ST={streak:1,lastDay:null,spokenToday:0,scoreSum:0,scoreN:0,totalSpoken:0,actToday:{},level:null,updatedAt:0};
 function todayStr(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function dayDiff(a,b){return Math.round((new Date(b)-new Date(a))/86400000);}
 function saveLocal(){try{localStorage.setItem(skey(),JSON.stringify(ST));}catch(e){}}
@@ -5300,7 +5304,7 @@ function applyRollover(){const t=todayStr();
   if(ST.lastDay!==t){if(ST.lastDay){const df=dayDiff(ST.lastDay,t);ST.streak=df===1?ST.streak+1:1;}
     ST.spokenToday=0;ST.scoreSum=0;ST.scoreN=0;ST.actToday={};ST.lastDay=t;saveST();}}
 function loadST(){
-  ST={streak:1,lastDay:null,spokenToday:0,scoreSum:0,scoreN:0,totalSpoken:0,actToday:{},updatedAt:0};
+  ST={streak:1,lastDay:null,spokenToday:0,scoreSum:0,scoreN:0,totalSpoken:0,actToday:{},level:null,updatedAt:0};
   try{let raw=localStorage.getItem(skey());
     /* 舊版單一 key 的進度，第一次遷移給 Anita */
     if(!raw&&PROFILE==='anita'){const old=localStorage.getItem('speakup_v1');if(old){raw=old;localStorage.setItem(skey(),old);}}
@@ -5308,7 +5312,7 @@ function loadST(){
   }catch(e){}
   renderStats();refreshCoach();
   /* 先抓雲端（若較新就採用），再做跨日重置與畫面更新、PIN 鎖檢查，最後訂閱即時同步 */
-  cloudPull(()=>{const prev=ST.lastDay;pendingReview=(prev&&dayDiff(prev,todayStr())>=3);applyRollover();renderStats();renderActProg();refreshCoach();lockGate();});
+  cloudPull(()=>{const prev=ST.lastDay;pendingReview=(prev&&dayDiff(prev,todayStr())>=3);syncLevelFromST();applyRollover();renderStats();renderActProg();refreshCoach();lockGate();});
   cloudSubscribe();
   vidSubscribe();   /* 共用影片庫：跨裝置即時同步 */
 }
@@ -6315,7 +6319,7 @@ function renderQuizLevelToggle(d){const el=$('quiz-lvl');if(!el)return;
   el.style.display='flex';
 }
 function setQuizLevel(l){if(l===quizLevel)return;
-  LEVEL=l;localStorage.setItem(levelKey(),l);   /* 測驗切難度也記住，供其他活動共用 */
+  saveLevel(l);
   startQuiz(DAY,l);}
 function qzRender(){const q=qzList[qzI];$('quiz-prog').style.width=(qzI/qzList.length*100)+'%';
   const c=$('quiz-card');let h='<div class="pc-tag">'+esc(q.tag||'題目')+' · '+(qzI+1)+'/'+qzList.length+'</div>';
@@ -7011,7 +7015,7 @@ function showSummary(){
 function sumGo(a){openAct(a);}
 function sumAgain(){if(SESS)openAct(SESS.act);else goHome();}
 function sumSwitchLevel(){const l=lvBasic()?'advanced':'basic';
-  LEVEL=l;localStorage.setItem(levelKey(),l);
+  saveLevel(l);
   if(SESS)openAct(SESS.act);else goHome();}
 
 /* ═══════════════════════════════════════════════════════════
