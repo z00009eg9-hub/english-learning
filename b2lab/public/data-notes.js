@@ -1,7 +1,28 @@
 // Auto-generated from ../../index.html — 課堂筆記資料
 window.NOTES = {
   vocab: [
-// ===SYNC:VOCAB_START=== sync_date:2026-08-12 count:618
+// ===SYNC:VOCAB_START=== sync_date:2026-08-13 count:637
+  // --- 20260813 商務溝通與問題解決（摘要補充）Communication, Problem-Solving and Marketing ---
+  {w:"proactive",ipa:"/proʊˈæktɪv/",pos:"adj.",cn:"主動積極的",def:"Acting before a problem happens instead of waiting.",exEn:"Emma decided to take proactive measures.",exCn:"Emma 決定採取主動積極的作為。",cat:"workplace"},
+  {w:"obstacle",ipa:"/ˈɑːbstəkl/",pos:"n.",cn:"阻礙、障礙",def:"Something that makes it hard to succeed.",exEn:"This communication failure became a significant obstacle.",exCn:"這次的溝通失敗成了一大阻礙。",cat:"workplace"},
+  {w:"feedback",ipa:"/ˈfiːdbæk/",pos:"n.",cn:"回饋、意見",def:"Comments about how well you did something.",exEn:"They received positive feedback from their boss.",exCn:"他們得到老闆正面的回饋。",cat:"workplace"},
+  {w:"transparent",ipa:"/trænsˈpærənt/",pos:"adj.",cn:"透明的、公開清楚的",def:"Open and easy for people to understand.",exEn:"The company made its refund policy clearer and more transparent.",exCn:"公司讓退款政策更清楚、更透明。",cat:"workplace"},
+  {w:"escalate",ipa:"/ˈeskəleɪt/",pos:"v.",cn:"（問題）擴大、惡化",def:"To become bigger or more serious.",exEn:"Take action before small issues escalate.",exCn:"在小問題擴大之前先採取行動。",cat:"workplace"},
+  {w:"go viral",ipa:"/goʊ ˈvaɪrəl/",pos:"phr.",cn:"爆紅、瘋傳",def:"To spread very quickly on the internet.",exEn:"One of their videos went viral, receiving thousands of views.",exCn:"他們的一支影片爆紅，獲得數千次觀看。",cat:"daily"},
+  {w:"accountability",ipa:"/əˌkaʊntəˈbɪləti/",pos:"n.",cn:"當責、負起責任",def:"Being willing to accept responsibility for what you do.",exEn:"The company handled the crisis by applying principles of accountability.",exCn:"公司以當責的原則來處理這次危機。",cat:"workplace"},
+  {w:"inevitable",ipa:"/ɪnˈevɪtəbl/",pos:"adj.",cn:"無可避免的",def:"Certain to happen; impossible to avoid.",exEn:"Failure is an inevitable part of business.",exCn:"失敗是做生意中無可避免的一部分。",cat:"workplace"},
+  {w:"dedicated",ipa:"/ˈdedɪkeɪtɪd/",pos:"adj.",cn:"投入的、專注的",def:"Giving a lot of time and energy to something.",exEn:"She was dedicated to learning and self-improvement.",exCn:"她很投入於學習與自我提升。",cat:"learning"},
+  {w:"setback",ipa:"/ˈsetbæk/",pos:"n.",cn:"挫折、倒退",def:"A problem that delays or stops progress.",exEn:"We use mistakes and setbacks as learning experiences.",exCn:"我們把錯誤與挫折當成學習經驗。",cat:"workplace"},
+  // --- 20260813 客訴處理與品牌曝光 Turning a Failure into an Opportunity ---
+  {w:"damaged",ipa:"/ˈdæmɪdʒd/",pos:"adj.",cn:"損壞的",def:"Broken or harmed.",exEn:"Customers complained about damaged products.",exCn:"顧客投訴損壞的產品。",cat:"workplace"},
+  {w:"blame",ipa:"/bleɪm/",pos:"v.",cn:"責怪、怪罪",def:"To say someone is responsible for something bad.",exEn:"The manager wanted to blame the delivery company.",exCn:"經理想要責怪物流公司。",cat:"workplace"},
+  {w:"exposure",ipa:"/ɪkˈspoʊʒər/",pos:"n.",cn:"曝光度",def:"Being seen or noticed by many people.",exEn:"The brand wants more exposure.",exCn:"該品牌想要更多曝光。",cat:"workplace"},
+  {w:"approve",ipa:"/əˈpruːv/",pos:"v.",cn:"同意、認可",def:"To agree with or accept something.",exEn:"Some employees didn't approve of the manager's decision.",exCn:"一些員工不認可經理的決定。",cat:"workplace"},
+  {w:"opinion",ipa:"/əˈpɪnjən/",pos:"n.",cn:"意見、看法",def:"What you think about something.",exEn:"After seeing the results, they changed their opinion.",exCn:"看到成果後，他們改變了看法。",cat:"daily"},
+  {w:"refuse",ipa:"/rɪˈfjuːz/",pos:"v.",cn:"拒絕",def:"To say no to something.",exEn:"The store refused to give me a refund.",exCn:"商店拒絕退款給我。",cat:"daily"},
+  {w:"views",ipa:"/vjuːz/",pos:"n.",cn:"觀看次數",def:"The number of times a video is watched.",exEn:"The video got 2 million views.",exCn:"這部影片有 200 萬次觀看。",cat:"daily"},
+  {w:"sponsor",ipa:"/ˈspɑːnsər/",pos:"v.",cn:"贊助",def:"To pay for an event or show to advertise.",exEn:"The brand sponsors the TV show.",exCn:"該品牌贊助這個電視節目。",cat:"workplace"},
+  {w:"return period",ipa:"/rɪˈtɜːrn ˈpɪriəd/",pos:"n.",cn:"退貨期限",def:"The time you can return something you bought.",exEn:"The return period had expired.",exCn:"退貨期限已經過了。",cat:"daily"},
   // --- 20260731 七月份總複習 July Review ---
   {w:"successful",ipa:"/səkˈsesfl/",pos:"adj.",cn:"成功的",def:"Achieving what you wanted to achieve.",exEn:"The show was very successful.",exCn:"這部劇非常成功。",cat:"daily"},
   {w:"succeed",ipa:"/səkˈsiːd/",pos:"v.",cn:"成功",def:"To achieve something you have been trying to do.",exEn:"Keep trying to succeed.",exCn:"持續努力以獲得成功。",cat:"daily"},
@@ -676,6 +697,9 @@ window.NOTES = {
 // ===SYNC:VOCAB_END===
 ],
   sources: {
+  // --- 20260813 客訴處理與品牌曝光 ---
+  "proactive":"20260813 客訴處理與品牌曝光","obstacle":"20260813 客訴處理與品牌曝光","feedback":"20260813 客訴處理與品牌曝光","transparent":"20260813 客訴處理與品牌曝光","escalate":"20260813 客訴處理與品牌曝光","go viral":"20260813 客訴處理與品牌曝光","accountability":"20260813 客訴處理與品牌曝光","inevitable":"20260813 客訴處理與品牌曝光","dedicated":"20260813 客訴處理與品牌曝光","setback":"20260813 客訴處理與品牌曝光",
+  "damaged":"20260813 客訴處理與品牌曝光","blame":"20260813 客訴處理與品牌曝光","exposure":"20260813 客訴處理與品牌曝光","approve":"20260813 客訴處理與品牌曝光","opinion":"20260813 客訴處理與品牌曝光","refuse":"20260813 客訴處理與品牌曝光","views":"20260813 客訴處理與品牌曝光","sponsor":"20260813 客訴處理與品牌曝光","return period":"20260813 客訴處理與品牌曝光",
   // --- 20260731 七月份總複習 ---
   "successful":"20260731 七月份總複習","succeed":"20260731 七月份總複習",
   // --- 20260811 補償用語與效率詞彙 ---
@@ -1405,6 +1429,28 @@ window.NOTES = {
 // ===SYNC:KW_END===
 ],
   trans: [
+  // --- 20260813 商務溝通與問題解決（摘要補充）---
+  {p:"她沒有指責別人，而是決定採取行動。",a:"Instead of blaming others, she decided to take action.",h:"instead of + V-ing, take action",kw:["instead of"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"團隊成員之間的溝通不良導致專案延誤。",a:"Miscommunication issues among team members led to project delays.",h:"miscommunication, lead to",kw:["led to"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"她組織了一場會議，仔細聆聽每個人的意見。",a:"She organized a meeting and carefully listened to everyone's opinions.",h:"organize a meeting, listen to",kw:["opinions"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"成功不是運氣的問題。",a:"Success is not a matter of luck.",h:"a matter of = ……的問題",kw:["a matter of"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"她請他針對他的提案再詳細說明。",a:"She asked him to elaborate on his proposal.",h:"ask sb to V, elaborate on",kw:["elaborate on"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"Emma decided to take proactive measures.",a:"Emma 決定採取主動積極的作為。",h:"proactive = 主動積極的",kw:[],src:"20260813 客訴處理與品牌曝光"},
+  {p:"This communication failure became a significant obstacle.",a:"這次的溝通失敗成了一大阻礙。",h:"obstacle = 阻礙",kw:[],src:"20260813 客訴處理與品牌曝光"},
+  {p:"They received positive feedback from their boss.",a:"他們得到老闆正面的回饋。",h:"feedback = 回饋",kw:[],src:"20260813 客訴處理與品牌曝光"},
+  {p:"Intelligent people learn from their mistakes and take action before small issues escalate.",a:"聰明的人會從錯誤中學習，並在小問題擴大之前採取行動。",h:"learn from, escalate = 擴大",kw:[],src:"20260813 客訴處理與品牌曝光"},
+  {p:"Emma remained an optimist, viewing every challenge as an opportunity for growth.",a:"Emma 始終保持樂觀，把每個挑戰都視為成長的機會。",h:"optimist = 樂觀的人；view A as B",kw:[],src:"20260813 客訴處理與品牌曝光"},
+  // --- 20260813 客訴處理與品牌曝光 cn-en ---
+  {p:"我們公司賠償了顧客損壞的產品。",a:"Our company compensated the customer for the damaged product.",h:"compensated, damaged",kw:["compensated"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"我遲到了一小時，讓我請你吃晚餐來彌補你。",a:"I was one hour late, so let me make it up to you by buying you dinner.",h:"was one hour late, make it up to",kw:["make it up to"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"商店拒絕退款給我，因為退貨期限已經過了。",a:"The store refused to give me a refund because the return period had expired.",h:"refused, return period, had expired",kw:["refused","had expired"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"該品牌贊助這個電視節目，因為它想要更多曝光。",a:"The brand sponsors the TV show because it wants more exposure.",h:"sponsors, exposure",kw:["exposure"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"一些員工起初不認可經理的決定，但看到成果後，他們改變了看法。",a:"Some employees didn't approve of the manager's decision at first, but after seeing the results, they changed their opinion.",h:"approve of, opinion",kw:["approve of"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"Customers complained about damaged products.",a:"顧客投訴損壞的產品。",h:"damaged = 損壞的",kw:[],src:"20260813 客訴處理與品牌曝光"},
+  {p:"The manager wanted to blame the delivery company.",a:"經理想要責怪物流公司。",h:"blame = 責怪",kw:[],src:"20260813 客訴處理與品牌曝光"},
+  {p:"The video got 2 million views.",a:"這部影片有 200 萬次觀看。",h:"views = 觀看次數",kw:[],src:"20260813 客訴處理與品牌曝光"},
+  {p:"The return period had expired.",a:"退貨期限已經過了。",h:"return period = 退貨期限, expired = 到期",kw:[],src:"20260813 客訴處理與品牌曝光"},
+  {p:"By luck, one of their videos became popular and received thousands of views.",a:"靠運氣，他們的一支影片變得很受歡迎，獲得了數千次觀看。",h:"by luck = 靠運氣",kw:[],src:"20260813 客訴處理與品牌曝光"},
   // --- 20260731 七月份總複習 July Review ---
   {p:"這部劇非常成功。",a:"The show was very successful.",h:"successful 形容詞；success 名詞 → successful 形容詞 → succeed 動詞",kw:["successful"],src:"20260731 七月份總複習"},
   {p:"持續努力以獲得成功。",a:"Keep trying to succeed.",h:"succeed 動詞；keep + V-ing",kw:["succeed"],src:"20260731 七月份總複習"},
