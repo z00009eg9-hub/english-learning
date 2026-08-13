@@ -197,6 +197,20 @@ tr:nth-child(even) td{background:#fdfbf8}
 .ytwrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:12px;overflow:hidden;margin-top:11px}
 .ytwrap>div,.ytwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .spk.rbtn.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+/* ---------- 逐字稿（時間軸同步） ---------- */
+.sline{border-left:3px solid transparent;border-radius:9px;padding:7px 9px;margin-bottom:5px}
+.sline.cur{background:#fff2d9;border-left-color:var(--accent)}
+.srow{display:flex;gap:8px;align-items:flex-start}
+.stime{
+  border:1px solid var(--line);background:#fff;border-radius:7px;font:inherit;
+  font-size:calc(11.5px * var(--fs));font-family:ui-monospace,monospace;color:var(--accent2);
+  padding:2px 6px;cursor:pointer;flex-shrink:0;margin-top:2px
+}
+.sline.cur .stime{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+.sen{flex:1;font-size:calc(16px * var(--fs));line-height:1.7;cursor:pointer}
+.scn{font-size:calc(14px * var(--fs));color:var(--ink2);margin-top:3px;padding-left:52px}
+#sublist.noen .sen{visibility:hidden}
+#sublist.nocn .scn{display:none}
 /* ---------- 文法重點深入說明 ---------- */
 .focus{background:#fff8f1;border:1.5px solid #f2d3b3;border-radius:14px;padding:16px;margin-bottom:14px}
 .focus h3{margin:0 0 4px;font-size:calc(19px * var(--fs));font-weight:800;color:var(--accent2);letter-spacing:.2px}
@@ -372,7 +386,7 @@ function setProfile(p){
   updateProfileUI();
   loadLocal();
   applyFs();
-  cloudPull(()=>{ touchStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); });
+  cloudPull(()=>{ touchStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); vidSubscribe(); });
   RENDER[TAB] && RENDER[TAB]();
 }
 function updateProfileUI(){
@@ -1041,7 +1055,7 @@ function mountPlayer(divId,vid){
   });
 }
 function destroyPlayer(){
-  stopLoop(); loopA=loopB=null;
+  stopLoop(); stopSync(); loopA=loopB=null;
   if(ytPlayer&&ytPlayer.destroy){ try{ytPlayer.destroy();}catch(e){} }
   ytPlayer=null;
 }
@@ -1087,6 +1101,11 @@ function playerBox(divId){
 RENDER.listen=function(){
   const v=$('v-listen');
   if(lsOpen){ v.innerHTML=lessonHTML(lsOpen); mountPlayer('yt-main',lsOpen.yt); showLoop(); return; }
+  if(myVid){
+    const vv=curVidObj();
+    if(vv){ v.innerHTML=myVidHTML(vv); mountPlayer('yt-my',myVid); showLoop(); applySubToggles(); startSync(); return; }
+    myVid=null;   // 影片被別的裝置刪掉了
+  }
   destroyPlayer();
   const list=LESSONS.filter(l=>inBand(l.level));
   v.innerHTML='<div class="card"><h2 class="sec">🎧 影片聽力</h2>'
@@ -1152,29 +1171,172 @@ function ytId(s){
   const m=s.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/);
   return m?m[1]:null;
 }
+/* ---------- 我的影片庫（存 Firestore b2lab_videos，兩位學習者共用、跨裝置同步） ---------- */
+let MYVIDS=[], myUnsub=null, showCn=true, showEn=true, syncTimer=null, curLine=-1;
+
+function vidCol(){ return db ? db.collection('b2lab_videos') : null; }
+function vidSubscribe(){
+  const c=vidCol(); if(!c||myUnsub) return;
+  myUnsub=c.onSnapshot(s=>{
+    MYVIDS=s.docs.map(d=>Object.assign({id:d.id},d.data()))
+                 .sort((a,b)=>String(b.addedAt||'').localeCompare(String(a.addedAt||'')));
+    if(TAB==='listen'&&!lsOpen&&!myVid) RENDER.listen();
+  },()=>{});
+}
+function vidPut(v){
+  const c=vidCol(); if(!c) return Promise.resolve();
+  return c.doc(v.id).set(v,{merge:true}).catch(()=>{});
+}
+function vidDel(id){
+  if(!confirm('刪除這支影片與它的逐字稿嗎？所有裝置都會一起移除。')) return;
+  const c=vidCol(); if(!c) return;
+  c.doc(id).delete().then(()=>{ if(myVid===id){myVid=null;destroyPlayer();} RENDER.listen(); }).catch(()=>{});
+}
+window.vidDel=vidDel;
+
+/* 逐字稿解析：一行一句，格式「00:07 English sentence | 中文翻譯」
+   時間與中文都可以省略；沒寫時間的行會接在上一行後三秒 */
+function parseSubs(text){
+  const out=[];
+  String(text||'').split(/\r?\n/).forEach(line=>{
+    let l=line.trim(); if(!l) return;
+    l=l.replace(/^\[|\]$/g,'');
+    let t=null;
+    const m=l.match(/^(\d{1,2}):(\d{2})(?::(\d{2}))?[\s\]]*[-–]?\s*/);
+    if(m){ t = m[3] ? (+m[1]*3600 + +m[2]*60 + +m[3]) : (+m[1]*60 + +m[2]); l=l.slice(m[0].length); }
+    const parts=l.split(/\s*[|｜]\s*/);
+    const en=(parts[0]||'').trim(); if(!en) return;
+    if(t==null) t = out.length ? out[out.length-1].t+3 : 0;
+    out.push({t:t, en:en, cn:(parts[1]||'').trim()});
+  });
+  return out;
+}
+
 function myVideoCard(){
-  return '<div class="card"><h2 class="sec">📎 貼上自己的 YouTube 影片</h2>'
-   +'<div class="hint">任何 YouTube 連結都可以。可以慢速播放、設 A/B 點反覆聽同一句，生字筆記會跟著雲端同步。<b>這個模式沒有理解測驗</b>——影片內容我無法預先知道。</div>'
-   +'<div class="row"><input id="myurl" placeholder="貼上網址，例如 https://www.youtube.com/watch?v=..." '
-   +'style="flex:1;min-width:180px;padding:9px 11px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:calc(14px * var(--fs))">'
-   +'<button class="btn" onclick="loadMyVid()">載入</button></div>'
-   +'<div id="myvid-err" class="muted" style="margin-top:7px;color:var(--bad);display:none">看不出這是 YouTube 連結，請確認網址是否完整。</div>'
-   +(myVid?'<div style="margin-top:12px">'+playerBox('yt-my')
-      +'<div class="muted" style="margin-top:11px;font-weight:700;font-size:calc(13px * var(--fs))">📝 生字筆記（自動儲存並同步）</div>'
-      +'<textarea id="vnote" oninput="saveNote()" rows="5" placeholder="把聽到的生字、聽不懂的句子記在這裡…" '
-      +'style="width:100%;margin-top:6px;padding:10px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:calc(14px * var(--fs));resize:vertical">'
-      +esc(((ST.vnotes||{})[myVid])||'')+'</textarea></div>':'')
-   +'</div>';
+  let h='<div class="card"><h2 class="sec">📎 我的影片（'+MYVIDS.length+'）</h2>'
+   +'<div class="hint">貼上 YouTube 連結與逐字稿，就會變成一課有<b>時間軸同步字幕</b>的聽力教材：字幕會跟著影片一句一句亮起來，點任一句可以跳到那一秒，點任何一個字查中文。影片庫是<b>兩位學習者共用、跨裝置同步</b>的。</div>';
+  if(!db) h+='<div class="muted" style="color:var(--bad)">目前連不上雲端，影片庫暫時無法使用。</div>';
+  h+= MYVIDS.map(v=>'<div class="item" style="border-left-color:#2b5f92">'
+      +'<div class="row" style="justify-content:space-between;align-items:flex-start">'
+      +'<div class="t" onclick="openMyVid(\''+v.id+'\')" style="flex:1">▶️ '+esc(v.title||'我的影片')+'</div>'
+      +'<button class="spk" onclick="vidDel(\''+v.id+'\');event.stopPropagation()" title="刪除">🗑</button></div>'
+      +'<div class="meta" onclick="openMyVid(\''+v.id+'\')">'
+      +'<span>📅 加入於 '+esc(v.addedAt||'—')+'</span>'
+      +'<span>📝 '+((v.lines||[]).length)+' 句字幕</span>'
+      +(v.addedBy?'<span>'+(v.addedBy==='tom'?'🐻 Tom':'🍎 Anita')+' 加入</span>':'')
+      +((v.lines||[]).some(l=>l.cn)?'<span>🈶 有中譯</span>':'<span>僅英文字幕</span>')
+      +'</div></div>').join('');
+
+  h+='<div style="margin-top:12px;border-top:1px dashed var(--line);padding-top:12px">'
+   +'<div class="muted" style="font-weight:800;font-size:calc(14px * var(--fs));color:var(--accent2)">➕ 加入一支影片</div>'
+   +'<input id="myurl" placeholder="YouTube 網址，例如 https://www.youtube.com/watch?v=…" '
+   +'style="width:100%;margin-top:7px;padding:9px 11px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:calc(14px * var(--fs))">'
+   +'<input id="mytitle" placeholder="影片標題（自己看得懂就好）" '
+   +'style="width:100%;margin-top:7px;padding:9px 11px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:calc(14px * var(--fs))">'
+   +'<textarea id="mysubs" rows="6" placeholder="00:07 And the first thing that I always do… | 我做的第一件事…&#10;00:12 is I cook myself good food. | 就是給自己做頓好吃的。&#10;&#10;時間和中文都可以省略，一行一句就好。" '
+   +'style="width:100%;margin-top:7px;padding:10px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:calc(14px * var(--fs));resize:vertical"></textarea>'
+   +'<div class="muted" style="margin-top:6px;font-size:calc(12.5px * var(--fs))">💡 逐字稿哪裡來：在 YouTube 影片下方按「⋯ 顯示轉錄稿 / Show transcript」，全選複製貼進來就好。中文可以先不填，之後想加再重貼一次（同一支影片會直接更新，不會多一筆）。</div>'
+   +'<div id="myvid-err" class="muted" style="margin-top:7px;color:var(--bad);display:none"></div>'
+   +'<div style="margin-top:10px"><button class="btn" onclick="addMyVid()">加入影片</button></div></div></div>';
+  return h;
 }
-function loadMyVid(){
-  const el=$('myurl'); if(!el) return;
-  const id=ytId(el.value);
+function addMyVid(){
   const err=$('myvid-err');
-  if(!id){ if(err) err.style.display='block'; return; }
+  const fail=m=>{ if(err){err.textContent=m;err.style.display='block';} };
+  const id=ytId(($('myurl')||{}).value);
+  if(!id) return fail('看不出這是 YouTube 連結，請貼完整網址（含 watch?v=…）。');
+  const lines=parseSubs(($('mysubs')||{}).value);
+  if(!lines.length) return fail('請至少貼一行逐字稿。');
   if(err) err.style.display='none';
-  myVid=id; lsOpen=null; RENDER.listen();
-  setTimeout(()=>{ mountPlayer('yt-my',myVid); showLoop(); const t=$('yt-my'); if(t) t.scrollIntoView({block:'center'}); },30);
+  const v={id:id, title:(($('mytitle')||{}).value||'').trim()||'我的影片',
+           lines:lines, addedAt:today(), addedBy:PROFILE, updatedAt:Date.now()};
+  vidPut(v).then(()=>{
+    const i=MYVIDS.findIndex(x=>x.id===id);
+    if(i>=0) MYVIDS[i]=v; else MYVIDS.unshift(v);
+    openMyVid(id);
+  });
 }
+window.addMyVid=addMyVid;
+
+function openMyVid(id){
+  myVid=id; lsOpen=null; curLine=-1;
+  RENDER.listen();
+  window.scrollTo(0,0);
+}
+function closeMyVid(){ destroyPlayer(); myVid=null; RENDER.listen(); }
+window.openMyVid=openMyVid; window.closeMyVid=closeMyVid;
+
+function myVidHTML(v){
+  const hasCn=(v.lines||[]).some(l=>l.cn);
+  let h='<button class="back" onclick="closeMyVid()">← 回聽力課列表</button>'
+   +'<div class="card"><h2 class="sec" style="margin:0">▶️ '+esc(v.title||'我的影片')+'</h2>'
+   +'<div class="muted">📅 加入於 '+esc(v.addedAt||'—')+' · '+((v.lines||[]).length)+' 句字幕'
+   +(v.addedBy?' · '+(v.addedBy==='tom'?'🐻 Tom':'🍎 Anita')+' 加入':'')+'</div>'
+   + playerBox('yt-my')
+   +'<div class="row" style="margin-top:9px">'
+   +'<button class="spk" id="tg-en" onclick="tgEn()">'+(showEn?'👁 英文：顯示':'👁 英文：隱藏')+'</button>'
+   +(hasCn?'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button>':'')
+   +'<button class="spk" onclick="jumpCur()">↕ 跳到目前這句</button></div></div>';
+
+  h+='<div class="card"><h2 class="sec">📜 逐字稿</h2>'
+   +'<div class="hint">播放時字幕會自動亮起來並捲動。<b>點任一句</b>可以跳到那一秒；<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是用電腦語音念（不是影片原聲）。</div>'
+   +'<div id="sublist">'+ (v.lines||[]).map((l,i)=>
+      '<div class="sline" id="sl-'+i+'">'
+      +'<div class="srow"><button class="stime" onclick="seekLine('+i+')">'+fmt(l.t)+'</button>'
+      +'<div class="sen" onclick="seekLine('+i+')">'+tokenize(l.en,null)+'</div>'
+      +spk(l.en)+'</div>'
+      +(l.cn?'<div class="scn">'+esc(l.cn)+'</div>':'')
+      +'</div>').join('') +'</div></div>';
+
+  h+='<div class="card"><h2 class="sec">📝 生字筆記</h2>'
+   +'<div class="hint">自動儲存並跨裝置同步。</div>'
+   +'<textarea id="vnote" oninput="saveNote()" rows="5" placeholder="把聽到的生字、聽不懂的句子記在這裡…" '
+   +'style="width:100%;padding:10px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:calc(14px * var(--fs));resize:vertical">'
+   +esc(((ST.vnotes||{})[v.id])||'')+'</textarea></div>'
+   +'<div class="card" style="text-align:center"><button class="btn" onclick="closeMyVid()">完成，回列表</button></div>';
+  return h;
+}
+function applySubToggles(){
+  const box=$('sublist'); if(!box) return;
+  box.classList.toggle('noen',!showEn);
+  box.classList.toggle('nocn',!showCn);
+  const a=$('tg-en'); if(a) a.textContent = showEn?'👁 英文：顯示':'👁 英文：隱藏';
+  const b=$('tg-cn'); if(b) b.textContent = showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏';
+}
+function tgEn(){ showEn=!showEn; applySubToggles(); }
+function tgCn(){ showCn=!showCn; applySubToggles(); }
+window.tgEn=tgEn; window.tgCn=tgCn;
+
+function curVidObj(){ return MYVIDS.find(x=>x.id===myVid)||null; }
+function seekLine(i){
+  const v=curVidObj(); if(!v||!v.lines[i]) return;
+  if(pReady()){ ytPlayer.seekTo(v.lines[i].t,true); if(ytPlayer.playVideo) ytPlayer.playVideo(); }
+  setCurLine(i,false);
+}
+window.seekLine=seekLine;
+function setCurLine(i,scroll){
+  if(i===curLine) return;
+  const prev=$('sl-'+curLine); if(prev) prev.classList.remove('cur');
+  curLine=i;
+  const el=$('sl-'+i); if(!el) return;
+  el.classList.add('cur');
+  if(scroll!==false) el.scrollIntoView({block:'center',behavior:'smooth'});
+}
+function jumpCur(){ const el=$('sl-'+curLine); if(el) el.scrollIntoView({block:'center',behavior:'smooth'}); }
+window.jumpCur=jumpCur;
+function startSync(){
+  stopSync();
+  syncTimer=setInterval(()=>{
+    const v=curVidObj();
+    if(!v||!pReady()){ return; }
+    const t=ytPlayer.getCurrentTime();
+    let idx=-1;
+    for(let k=0;k<v.lines.length;k++){ if(v.lines[k].t<=t+0.25) idx=k; else break; }
+    if(idx>=0) setCurLine(idx,true);
+  },400);
+}
+function stopSync(){ if(syncTimer){clearInterval(syncTimer);syncTimer=null;} }
+
 let noteTimer=null;
 function saveNote(){
   const ta=$('vnote'); if(!ta||!myVid) return;
@@ -1183,7 +1345,7 @@ function saveNote(){
   if(noteTimer) clearTimeout(noteTimer);
   noteTimer=setTimeout(()=>save(),700);
 }
-window.loadMyVid=loadMyVid; window.saveNote=saveNote;
+window.saveNote=saveNote;
 
 /* ============================================================
    8. 安裝成 App
