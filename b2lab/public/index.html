@@ -20,14 +20,29 @@
   --ok:#2f9e5f; --bad:#d9534f;
   --shadow:0 2px 10px rgba(60,45,30,.07);
   --r:14px;
+  --fs:1.15;   /* 全站字級倍率，可在「進度 → 設定」調整 */
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-  background:var(--bg); color:var(--ink); line-height:1.7; font-size:16px;
-  padding-bottom:84px;
+  background:var(--bg); color:var(--ink); line-height:1.75; font-size:calc(16px * var(--fs));
+  padding-bottom:88px;
 }
+/* ---------- 安裝成 App ---------- */
+.install{
+  background:linear-gradient(135deg,#3b82c4,#2b5f92);color:#fff;border:0;border-radius:14px;
+  padding:14px 16px;margin-bottom:14px;box-shadow:0 3px 12px rgba(40,80,130,.28);width:100%;
+  text-align:left;font:inherit;cursor:pointer;display:block
+}
+.install b{font-size:calc(16px * var(--fs));font-weight:800;display:block}
+.install span{font-size:calc(13px * var(--fs));opacity:.95;display:block;margin-top:4px}
+.xlink{
+  display:block;text-decoration:none;background:linear-gradient(135deg,#159AA6,#0E6E78);color:#fff;
+  border-radius:14px;padding:14px 16px;margin-bottom:14px;box-shadow:0 3px 12px rgba(20,120,130,.26)
+}
+.xlink b{font-size:calc(16px * var(--fs));font-weight:800;display:block}
+.xlink span{font-size:calc(13px * var(--fs));opacity:.95;display:block;margin-top:4px}
 a{color:var(--accent2)}
 /* ---------- header ---------- */
 header{
@@ -35,57 +50,57 @@ header{
   padding:18px 16px 14px; position:sticky; top:0; z-index:50;
   box-shadow:0 2px 12px rgba(160,90,30,.25);
 }
-header h1{margin:0;font-size:19px;letter-spacing:.3px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-header .sub{font-size:12.5px;opacity:.93;margin-top:3px}
+header h1{margin:0;font-size:calc(19px * var(--fs));letter-spacing:.3px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+header .sub{font-size:calc(12.5px * var(--fs));opacity:.93;margin-top:3px}
 header .oldlink{
-  display:inline-block;margin-top:9px;font-size:12px;background:rgba(255,255,255,.2);
+  display:inline-block;margin-top:9px;font-size:calc(12px * var(--fs));background:rgba(255,255,255,.2);
   color:#fff;text-decoration:none;padding:5px 11px;border-radius:20px;border:1px solid rgba(255,255,255,.35)
 }
 header .hdrow{display:flex;align-items:center;gap:9px;margin-top:9px;flex-wrap:wrap}
 header .prof{display:flex;background:rgba(255,255,255,.18);border-radius:20px;padding:2px;border:1px solid rgba(255,255,255,.3)}
 header .prof button{
-  border:0;background:none;color:rgba(255,255,255,.8);font:inherit;font-size:12px;padding:4px 11px;
+  border:0;background:none;color:rgba(255,255,255,.8);font:inherit;font-size:calc(12px * var(--fs));padding:4px 11px;
   border-radius:18px;cursor:pointer
 }
 header .prof button.on{background:#fff;color:var(--accent2);font-weight:700}
-header #sync-badge{font-size:11px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:3px 9px;display:none}
+header #sync-badge{font-size:calc(11px * var(--fs));background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:3px 9px;display:none}
 /* ---------- tabs ---------- */
 nav{
   position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);
   display:flex;z-index:60;padding-bottom:env(safe-area-inset-bottom)
 }
 nav button{
-  flex:1;border:0;background:none;padding:9px 2px 8px;font:inherit;font-size:11px;color:var(--ink2);
+  flex:1;border:0;background:none;padding:9px 2px 8px;font:inherit;font-size:calc(11px * var(--fs));color:var(--ink2);
   cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px
 }
-nav button i{font-style:normal;font-size:21px;line-height:1}
+nav button i{font-style:normal;font-size:calc(21px * var(--fs));line-height:1}
 nav button.on{color:var(--accent2);font-weight:700}
 nav button.on i{transform:translateY(-1px)}
 /* ---------- layout ---------- */
 main{max-width:860px;margin:0 auto;padding:16px 14px 20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;margin-bottom:14px}
-h2.sec{font-size:16px;margin:0 0 10px;display:flex;align-items:center;gap:7px}
-.muted{color:var(--ink2);font-size:13px}
+h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items:center;gap:7px}
+.muted{color:var(--ink2);font-size:calc(13px * var(--fs))}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
 .chip{
-  border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 13px;font-size:13px;
+  border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 13px;font-size:calc(13px * var(--fs));
   cursor:pointer;color:var(--ink2);font-family:inherit
 }
 .chip.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
 .btn{
   border:0;border-radius:10px;background:var(--accent);color:#fff;padding:10px 16px;font:inherit;
-  font-size:14px;font-weight:600;cursor:pointer
+  font-size:calc(14px * var(--fs));font-weight:600;cursor:pointer
 }
 .btn.ghost{background:#fff;color:var(--accent2);border:1.5px solid var(--accent)}
 .btn.gray{background:#efeae3;color:var(--ink2)}
 .btn:active{transform:scale(.97)}
 .btn:disabled{opacity:.5;cursor:default}
-.lv{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:6px;color:#fff;letter-spacing:.4px;white-space:nowrap}
+.lv{font-size:calc(10.5px * var(--fs));font-weight:800;padding:2px 7px;border-radius:6px;color:#fff;letter-spacing:.4px;white-space:nowrap}
 .lv.B1{background:var(--b1)} .lv.B1P{background:var(--b1p)} .lv.B2{background:var(--b2)}
 .spk{
   border:1px solid var(--line);background:#fff;border-radius:8px;cursor:pointer;
-  font-size:14px;padding:3px 8px;color:var(--accent2);line-height:1.4
+  font-size:calc(14px * var(--fs));padding:3px 8px;color:var(--accent2);line-height:1.4
 }
 .spk:active{background:var(--accent-soft)}
 /* ---------- article / unit list ---------- */
@@ -94,14 +109,14 @@ h2.sec{font-size:16px;margin:0 0 10px;display:flex;align-items:center;gap:7px}
   padding:12px 14px;margin-bottom:10px;cursor:pointer;box-shadow:var(--shadow)
 }
 .item:active{background:var(--accent-soft)}
-.item .t{font-weight:700;font-size:15.5px;margin-bottom:2px}
-.item .tc{font-size:13px;color:var(--ink2)}
-.item .meta{font-size:11.5px;color:var(--ink2);margin-top:7px;display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.item .t{font-weight:700;font-size:calc(15.5px * var(--fs));margin-bottom:2px}
+.item .tc{font-size:calc(13px * var(--fs));color:var(--ink2)}
+.item .meta{font-size:calc(11.5px * var(--fs));color:var(--ink2);margin-top:7px;display:flex;gap:9px;flex-wrap:wrap;align-items:center}
 .item .done{color:var(--ok);font-weight:700}
 /* ---------- reading view ---------- */
 .para{margin:0 0 16px}
-.para .en{font-size:17px;line-height:1.85}
-.para .cn{font-size:14px;color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:7px;display:none}
+.para .en{font-size:calc(17px * var(--fs));line-height:1.85}
+.para .cn{font-size:calc(14px * var(--fs));color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:7px;display:none}
 .para.showcn .cn{display:block}
 .para .pbar{margin-top:5px;display:flex;gap:6px}
 w{cursor:pointer;border-radius:3px}
@@ -113,85 +128,85 @@ w:active{background:#ffe0b8}
   margin:0 auto;display:none
 }
 .gloss.on{display:block}
-.gloss .gw{font-size:20px;font-weight:800;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-.gloss .gi{font-size:12.5px;color:var(--ink2);font-family:ui-monospace,monospace}
-.gloss .gc{font-size:16px;color:var(--accent2);font-weight:700;margin-top:3px}
-.gloss .gd{font-size:13.5px;color:var(--ink2);margin-top:6px}
-.gloss .gx{font-size:13.5px;margin-top:8px;border-top:1px dashed var(--line);padding-top:8px}
+.gloss .gw{font-size:calc(20px * var(--fs));font-weight:800;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.gloss .gi{font-size:calc(12.5px * var(--fs));color:var(--ink2);font-family:ui-monospace,monospace}
+.gloss .gc{font-size:calc(16px * var(--fs));color:var(--accent2);font-weight:700;margin-top:3px}
+.gloss .gd{font-size:calc(13.5px * var(--fs));color:var(--ink2);margin-top:6px}
+.gloss .gx{font-size:calc(13.5px * var(--fs));margin-top:8px;border-top:1px dashed var(--line);padding-top:8px}
 .gloss .gx b{font-weight:600}
-.gloss .close{position:absolute;top:8px;right:11px;border:0;background:none;font-size:20px;color:var(--ink2);cursor:pointer}
+.gloss .close{position:absolute;top:8px;right:11px;border:0;background:none;font-size:calc(20px * var(--fs));color:var(--ink2);cursor:pointer}
 /* ---------- tables ---------- */
 .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0}
-table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:340px}
-th{background:var(--accent);color:#fff;padding:8px 10px;text-align:left;font-weight:700;font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:calc(13.5px * var(--fs));min-width:340px}
+th{background:var(--accent);color:#fff;padding:8px 10px;text-align:left;font-weight:700;font-size:calc(13px * var(--fs))}
 td{border:1px solid var(--line);padding:8px 10px;vertical-align:top}
 tr:nth-child(even) td{background:#fdfbf8}
 /* ---------- quiz ---------- */
 .q{border:1px solid var(--line);border-radius:12px;padding:13px;margin-bottom:11px;background:#fff}
-.q .qt{font-weight:600;margin-bottom:9px;font-size:15px}
+.q .qt{font-weight:600;margin-bottom:9px;font-size:calc(15px * var(--fs))}
 .opt{
   display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:9px;
-  padding:9px 12px;margin-bottom:7px;font:inherit;font-size:14.5px;cursor:pointer;color:var(--ink)
+  padding:9px 12px;margin-bottom:7px;font:inherit;font-size:calc(14.5px * var(--fs));cursor:pointer;color:var(--ink)
 }
 .opt:active{background:var(--accent-soft)}
 .opt.right{border-color:var(--ok);background:#eefaf1;font-weight:600}
 .opt.wrong{border-color:var(--bad);background:#fdeeee}
-.expl{font-size:13px;background:#f6f2ec;border-radius:9px;padding:9px 11px;margin-top:4px;display:none}
+.expl{font-size:calc(13px * var(--fs));background:#f6f2ec;border-radius:9px;padding:9px 11px;margin-top:4px;display:none}
 .expl.on{display:block}
-.score{font-size:15px;font-weight:700;padding:11px;background:var(--accent-soft);border-radius:11px;text-align:center}
+.score{font-size:calc(15px * var(--fs));font-weight:700;padding:11px;background:var(--accent-soft);border-radius:11px;text-align:center}
 /* ---------- flashcard ---------- */
 .fc{
   background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 18px rgba(60,45,30,.1);
   padding:26px 18px;text-align:center;min-height:230px;display:flex;flex-direction:column;justify-content:center;gap:6px
 }
-.fc .fw{font-size:34px;font-weight:800;letter-spacing:.5px;word-break:break-word}
-.fc .fi{font-family:ui-monospace,monospace;color:var(--ink2);font-size:14px}
-.fc .fp{font-size:12px;color:var(--accent2);font-weight:700}
-.fc .fcn{font-size:23px;font-weight:700;color:var(--accent2);margin-top:6px}
-.fc .fd{font-size:14px;color:var(--ink2);margin-top:4px}
-.fc .fx{font-size:14.5px;margin-top:12px;border-top:1px dashed var(--line);padding-top:11px;text-align:left}
-.fc .fx .cn{color:var(--ink2);font-size:13px}
-.fc .fsrc{font-size:11px;color:var(--ink2);margin-top:9px}
+.fc .fw{font-size:calc(34px * var(--fs));font-weight:800;letter-spacing:.5px;word-break:break-word}
+.fc .fi{font-family:ui-monospace,monospace;color:var(--ink2);font-size:calc(14px * var(--fs))}
+.fc .fp{font-size:calc(12px * var(--fs));color:var(--accent2);font-weight:700}
+.fc .fcn{font-size:calc(23px * var(--fs));font-weight:700;color:var(--accent2);margin-top:6px}
+.fc .fd{font-size:calc(14px * var(--fs));color:var(--ink2);margin-top:4px}
+.fc .fx{font-size:calc(14.5px * var(--fs));margin-top:12px;border-top:1px dashed var(--line);padding-top:11px;text-align:left}
+.fc .fx .cn{color:var(--ink2);font-size:calc(13px * var(--fs))}
+.fc .fsrc{font-size:calc(11px * var(--fs));color:var(--ink2);margin-top:9px}
 .grade{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:12px}
-.grade button{border:0;border-radius:10px;padding:11px 3px;font:inherit;font-size:13px;font-weight:700;color:#fff;cursor:pointer}
+.grade button{border:0;border-radius:10px;padding:11px 3px;font:inherit;font-size:calc(13px * var(--fs));font-weight:700;color:#fff;cursor:pointer}
 .g1{background:#d9534f}.g2{background:#e8913a}.g3{background:#4a9e6a}.g4{background:#3b82c4}
-.grade small{display:block;font-size:10px;font-weight:400;opacity:.9}
+.grade small{display:block;font-size:calc(10px * var(--fs));font-weight:400;opacity:.9}
 .pbwrap{background:#efeae3;border-radius:20px;height:9px;overflow:hidden;margin:8px 0}
 .pbfill{background:linear-gradient(90deg,#f0964f,#d9691f);height:100%;width:0;transition:width .3s}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:9px}
 .stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 8px;text-align:center}
-.stat b{display:block;font-size:23px;color:var(--accent2);line-height:1.2}
-.stat span{font-size:11.5px;color:var(--ink2)}
+.stat b{display:block;font-size:calc(23px * var(--fs));color:var(--accent2);line-height:1.2}
+.stat span{font-size:calc(11.5px * var(--fs));color:var(--ink2)}
 /* ---------- grammar ---------- */
 .gsec{margin-bottom:16px}
-.gsec h3{font-size:15px;margin:0 0 7px;color:var(--accent2);border-left:3px solid var(--accent);padding-left:8px}
-.gsec ul{margin:6px 0;padding-left:20px;font-size:14.5px}
+.gsec h3{font-size:calc(15px * var(--fs));margin:0 0 7px;color:var(--accent2);border-left:3px solid var(--accent);padding-left:8px}
+.gsec ul{margin:6px 0;padding-left:20px;font-size:calc(14.5px * var(--fs))}
 .gsec ul li{margin-bottom:4px}
 .ex{background:#fdfbf8;border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin:7px 0}
-.ex .een{font-size:15px;font-weight:600;display:flex;gap:8px;align-items:flex-start}
-.ex .ecn{font-size:13.5px;color:var(--ink2)}
-.ex .enote{font-size:12px;color:var(--accent2);margin-top:3px}
-.trap{background:#fff6f5;border:1px solid #f3d5d2;border-radius:10px;padding:10px 12px;margin-bottom:8px;font-size:14px}
+.ex .een{font-size:calc(15px * var(--fs));font-weight:600;display:flex;gap:8px;align-items:flex-start}
+.ex .ecn{font-size:calc(13.5px * var(--fs));color:var(--ink2)}
+.ex .enote{font-size:calc(12px * var(--fs));color:var(--accent2);margin-top:3px}
+.trap{background:#fff6f5;border:1px solid #f3d5d2;border-radius:10px;padding:10px 12px;margin-bottom:8px;font-size:calc(14px * var(--fs))}
 .trap .bad{color:var(--bad)} .trap .good{color:var(--ok);font-weight:600}
-.trap .why{font-size:12.5px;color:var(--ink2);margin-top:4px}
+.trap .why{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:4px}
 .upg{background:#f4f0fb;border:1px solid #e0d6f5;border-radius:12px;padding:14px 15px;margin-bottom:12px}
-.upg .u1{font-size:15.5px;color:#6b6259;font-weight:600}
-.upg .u2{font-size:18px;font-weight:800;margin-top:8px;display:flex;gap:8px;align-items:flex-start;line-height:1.6;color:#2b2438}
-.upg .un{font-size:15px;color:#5b4a86;margin-top:9px;font-weight:600;line-height:1.75;background:#fff;border-radius:9px;padding:9px 11px}
+.upg .u1{font-size:calc(15.5px * var(--fs));color:#6b6259;font-weight:600}
+.upg .u2{font-size:calc(18px * var(--fs));font-weight:800;margin-top:8px;display:flex;gap:8px;align-items:flex-start;line-height:1.6;color:#2b2438}
+.upg .un{font-size:calc(15px * var(--fs));color:#5b4a86;margin-top:9px;font-weight:600;line-height:1.75;background:#fff;border-radius:9px;padding:9px 11px}
 /* ---------- 文法重點深入說明 ---------- */
 .focus{background:#fff8f1;border:1.5px solid #f2d3b3;border-radius:14px;padding:16px;margin-bottom:14px}
-.focus h3{margin:0 0 4px;font-size:19px;font-weight:800;color:var(--accent2);letter-spacing:.2px}
+.focus h3{margin:0 0 4px;font-size:calc(19px * var(--fs));font-weight:800;color:var(--accent2);letter-spacing:.2px}
 .focus .fml{
-  font-size:17px;font-weight:800;background:#fff;border:1.5px dashed var(--accent);border-radius:10px;
+  font-size:calc(17px * var(--fs));font-weight:800;background:#fff;border:1.5px dashed var(--accent);border-radius:10px;
   padding:11px 13px;margin:11px 0;line-height:1.65;color:#8a3f08
 }
 .focus ol{margin:10px 0 4px;padding-left:22px}
-.focus ol li{font-size:16px;font-weight:600;line-height:1.85;margin-bottom:10px;color:#33291f}
-.focus .sub{font-size:14.5px;font-weight:800;color:var(--accent2);margin:14px 0 6px;letter-spacing:.3px}
+.focus ol li{font-size:calc(16px * var(--fs));font-weight:600;line-height:1.85;margin-bottom:10px;color:#33291f}
+.focus .sub{font-size:calc(14.5px * var(--fs));font-weight:800;color:var(--accent2);margin:14px 0 6px;letter-spacing:.3px}
 .focus .gobtn{margin-top:12px}
-.back{border:0;background:none;color:var(--accent2);font:inherit;font-size:14px;font-weight:600;cursor:pointer;padding:4px 0;margin-bottom:6px}
-.hint{font-size:12.5px;color:var(--ink2);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
-@media(max-width:420px){ .fc .fw{font-size:28px} .para .en{font-size:16px} }
+.back{border:0;background:none;color:var(--accent2);font:inherit;font-size:calc(14px * var(--fs));font-weight:600;cursor:pointer;padding:4px 0;margin-bottom:6px}
+.hint{font-size:calc(12.5px * var(--fs));color:var(--ink2);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
+@media(max-width:420px){ .fc .fw{font-size:calc(28px * var(--fs))} .para .en{font-size:calc(16px * var(--fs))} }
 </style>
 </head>
 <body>
@@ -250,7 +265,7 @@ const PROFILES={anita:'Anita',tom:'Tom'};
 let PROFILE=localStorage.getItem('b2lab_profile')||'anita';
 if(!PROFILES[PROFILE]) PROFILE='anita';
 const skey = () => 'b2lab.v1.'+PROFILE;
-const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:0.9, updatedAt:0});
+const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:0.9, fs:1.15, updatedAt:0});
 
 /* ---------- 本機儲存 ---------- */
 let ST=blank();
@@ -341,6 +356,7 @@ function setProfile(p){
   vQueue=[]; vIdx=0; vFlip=false; rdOpen=null; CURG=null; QSTATE={};
   updateProfileUI();
   loadLocal();
+  applyFs();
   cloudPull(()=>{ touchStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); });
   RENDER[TAB] && RENDER[TAB]();
 }
@@ -414,12 +430,12 @@ function showGloss(raw){
     body.innerHTML='<div class="gw">'+esc(raw)+' '+spk(raw)+'</div><div class="gd">這個字還沒有在字庫裡。可以先聽發音，或到「單字卡」分頁瀏覽課堂單字。</div>';
   }else{
     body.innerHTML=
-      '<div class="gw">'+esc(g.w)+' '+spk(g.w)+(g.pos?' <span class="fp" style="font-size:12px">'+esc(g.pos)+'</span>':'')+'</div>'
+      '<div class="gw">'+esc(g.w)+' '+spk(g.w)+(g.pos?' <span class="fp" style="font-size:calc(12px * var(--fs))">'+esc(g.pos)+'</span>':'')+'</div>'
       +(g.ipa?'<div class="gi">'+esc(g.ipa)+'</div>':'')
       +(g.cn?'<div class="gc">'+esc(g.cn)+'</div>':'')
       +(g.def?'<div class="gd">'+esc(g.def)+'</div>':'')
       +(g.exEn?'<div class="gx"><b>'+esc(g.exEn)+'</b> '+spk(g.exEn)+(g.exCn?'<div class="muted">'+esc(g.exCn)+'</div>':'')+'</div>':'')
-      +(g.src?'<div class="muted" style="margin-top:7px;font-size:11.5px">來源：'+esc(g.src)+'</div>':'');
+      +(g.src?'<div class="muted" style="margin-top:7px;font-size:calc(11.5px * var(--fs))">來源：'+esc(g.src)+'</div>':'');
   }
   $('gloss').classList.add('on');
 }
@@ -511,8 +527,8 @@ function readerHTML(a){
    +'<div class="card">'
    +'<div class="row" style="justify-content:space-between;align-items:flex-start"><h2 class="sec" style="margin:0">'+esc(a.title)+'</h2><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span></div>'
    +'<div class="muted">'+esc(a.titleCn)+' · '+a.words+' words'+(a.date?' · 📅 '+esc(a.date):'')+(a.source?' · '+esc(a.source):'')+'</div>'
-   +(a.sourceUrl?'<div style="margin-top:7px"><a href="'+esc(a.sourceUrl)+'" target="_blank" rel="noopener" style="font-size:13px">↗ 看新聞原文</a></div>':'')
-   +(a.focus?'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:14.5px;font-weight:800">📐 文法焦點：'+esc(a.focus)+'</div>'+(a.intro?'<div class="ecn" style="margin-top:5px;font-size:14.5px">'+esc(a.intro)+'</div>':'')+'</div>':'')
+   +(a.sourceUrl?'<div style="margin-top:7px"><a href="'+esc(a.sourceUrl)+'" target="_blank" rel="noopener" style="font-size:calc(13px * var(--fs))">↗ 看新聞原文</a></div>':'')
+   +(a.focus?'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:calc(14.5px * var(--fs));font-weight:800">📐 文法焦點：'+esc(a.focus)+'</div>'+(a.intro?'<div class="ecn" style="margin-top:5px;font-size:calc(14.5px * var(--fs))">'+esc(a.intro)+'</div>':'')+'</div>':'')
    +'<div class="row" style="margin-top:10px">'
    +'<button class="btn ghost" onclick="cnAll(1)">顯示全部中譯</button>'
    +'<button class="btn gray" onclick="cnAll(0)">隱藏中譯</button>'
@@ -527,8 +543,8 @@ function readerHTML(a){
   if((a.target||[]).length){
     h+='<div class="card"><h2 class="sec">🔤 本篇重點字 ('+a.target.length+')</h2>'
      + a.target.map(t=>'<div class="ex"><div class="een">'+esc(t.w)+' '+spk(t.w)+' <span class="fp">'+esc(t.pos)+'</span></div>'
-       +'<div class="gi" style="font-family:ui-monospace,monospace;font-size:12.5px;color:var(--ink2)">'+esc(t.ipa)+'</div>'
-       +'<div style="color:var(--accent2);font-weight:700;font-size:15px">'+esc(t.cn)+'</div>'
+       +'<div class="gi" style="font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2)">'+esc(t.ipa)+'</div>'
+       +'<div style="color:var(--accent2);font-weight:700;font-size:calc(15px * var(--fs))">'+esc(t.cn)+'</div>'
        +'<div class="ecn">'+esc(t.def)+'</div>'
        +'<div class="ecn" style="margin-top:4px">e.g. '+esc(t.ex)+'</div></div>').join('')
      +'</div>';
@@ -554,20 +570,20 @@ function focusHTML(id){
   if(!f) return '';
   const unit=f.unit ? ALL_GRAM.find(g=>g.id===f.unit) : null;
   let h='<div class="focus"><h3>📐 這篇的文法重點</h3>'
-   +'<div style="font-size:17px;font-weight:800;color:#33291f">'+esc(f.title)+'</div>'
+   +'<div style="font-size:calc(17px * var(--fs));font-weight:800;color:#33291f">'+esc(f.title)+'</div>'
    +'<div class="fml">'+esc(f.formula)+'</div>'
    +'<ol>'+f.points.map(p=>'<li>'+esc(p)+'</li>').join('')+'</ol>';
   if((f.examples||[]).length){
     h+='<div class="sub">✏️ 再看三個例子</div>'
-     + f.examples.map(e=>'<div class="ex"><div class="een" style="font-size:16px;font-weight:700">'+esc(e.en)+' '+spk(e.en)+'</div>'
-       +'<div class="ecn" style="font-size:14.5px">'+esc(e.cn)+'</div>'
-       +(e.note?'<div class="enote" style="font-size:13.5px;font-weight:700">→ '+esc(e.note)+'</div>':'')+'</div>').join('');
+     + f.examples.map(e=>'<div class="ex"><div class="een" style="font-size:calc(16px * var(--fs));font-weight:700">'+esc(e.en)+' '+spk(e.en)+'</div>'
+       +'<div class="ecn" style="font-size:calc(14.5px * var(--fs))">'+esc(e.cn)+'</div>'
+       +(e.note?'<div class="enote" style="font-size:calc(13.5px * var(--fs));font-weight:700">→ '+esc(e.note)+'</div>':'')+'</div>').join('');
   }
   if((f.traps||[]).length){
     h+='<div class="sub">⚠️ 這裡最容易寫錯</div>'
-     + f.traps.map(t=>'<div class="trap" style="font-size:15px"><div class="bad" style="font-weight:700">✗ '+esc(t.bad)+'</div>'
-       +'<div class="good" style="font-size:16px">✓ '+esc(t.good)+' '+spk(t.good)+'</div>'
-       +'<div class="why" style="font-size:14px">'+esc(t.why)+'</div></div>').join('');
+     + f.traps.map(t=>'<div class="trap" style="font-size:calc(15px * var(--fs))"><div class="bad" style="font-weight:700">✗ '+esc(t.bad)+'</div>'
+       +'<div class="good" style="font-size:calc(16px * var(--fs))">✓ '+esc(t.good)+' '+spk(t.good)+'</div>'
+       +'<div class="why" style="font-size:calc(14px * var(--fs))">'+esc(t.why)+'</div></div>').join('');
   }
   if(unit){
     h+='<div class="gobtn"><button class="btn" onclick="goUnit(\''+unit.id+'\')">📖 讀完整文法單元：'+esc(unit.titleCn)+' →</button></div>';
@@ -784,11 +800,11 @@ function gramHTML(g){
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+((g.srcDays||[]).length?' · 課堂 '+g.srcDays.join(' / '):'')+'</div>'
-   +'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:13.5px">💡 '+esc(g.summary)+'</div></div></div>';
+   +'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:calc(13.5px * var(--fs))">💡 '+esc(g.summary)+'</div></div></div>';
 
   h+='<div class="card">'+ (g.sections||[]).map(s=>{
     let x='<div class="gsec"><h3>'+esc(s.h)+'</h3>';
-    if(s.body) x+= s.body.map(b=>'<div style="font-size:14.5px;margin-bottom:5px">'+esc(b)+'</div>').join('');
+    if(s.body) x+= s.body.map(b=>'<div style="font-size:calc(14.5px * var(--fs));margin-bottom:5px">'+esc(b)+'</div>').join('');
     if(s.table){
       x+='<div class="tw"><table><tr>'+s.table.head.map(t=>'<th>'+esc(t)+'</th>').join('')+'</tr>'
        + s.table.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</table></div>';
@@ -849,8 +865,9 @@ RENDER.daily=function(){
   }else if(!isToday(artToday)&&!isToday(gramToday)){
     h+='<div class="card"><div class="muted">⏳ 今天（'+t+'）的新內容還沒更新，上面顯示的是最近一次的。每日排程在早上七點跑，稍後重新整理就會出現。</div></div>';
   }
+  h+=installCard();
   h+='<div class="card"><h2 class="sec">🎯 今天可以這樣安排</h2>'
-   +'<ol style="font-size:15px;padding-left:22px;margin:4px 0">'
+   +'<ol style="font-size:calc(15px * var(--fs));padding-left:22px;margin:4px 0">'
    +'<li style="margin-bottom:7px">先讀今日文章，點不懂的字查中文（約 8 分鐘）</li>'
    +'<li style="margin-bottom:7px">做完文章的理解測驗，再看「B1 → B2 句型升級」</li>'
    +'<li style="margin-bottom:7px">讀今日文法單元並做練習題（約 10 分鐘）</li>'
@@ -858,10 +875,11 @@ RENDER.daily=function(){
 
   if(DAILY_ARTS.length>1||DAILY_GRAM.length>1){
     h+='<div class="card"><h2 class="sec">🗂 過去的每日內容</h2>'
-     + DAILY_ARTS.slice(artToday&&isToday(artToday)?1:0).map(a=>'<div class="item" onclick="dailyArt(\''+a.id+'\')"><div class="t" style="font-size:14.5px">📖 '+esc(a.title)+'</div><div class="meta"><span>📅 '+esc(a.date||'')+'</span><span>'+esc(a.titleCn)+'</span></div></div>').join('')
-     + DAILY_GRAM.slice(gramToday&&isToday(gramToday)?1:0).map(g=>'<div class="item" onclick="goUnit(\''+g.id+'\')"><div class="t" style="font-size:14.5px">📐 '+esc(g.titleCn)+'</div><div class="meta"><span>📅 '+esc(g.date||'')+'</span><span>'+esc(g.title)+'</span></div></div>').join('')
+     + DAILY_ARTS.slice(artToday&&isToday(artToday)?1:0).map(a=>'<div class="item" onclick="dailyArt(\''+a.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📖 '+esc(a.title)+'</div><div class="meta"><span>📅 '+esc(a.date||'')+'</span><span>'+esc(a.titleCn)+'</span></div></div>').join('')
+     + DAILY_GRAM.slice(gramToday&&isToday(gramToday)?1:0).map(g=>'<div class="item" onclick="goUnit(\''+g.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📐 '+esc(g.titleCn)+'</div><div class="meta"><span>📅 '+esc(g.date||'')+'</span><span>'+esc(g.title)+'</span></div></div>').join('')
      +'</div>';
   }
+  h+=oldSiteCard();
   $('v-daily').innerHTML=h;
 };
 function dailyArt(id){ go('read'); rdFilter.kind='daily'; rdOpenArt(id); }
@@ -909,18 +927,22 @@ RENDER.prog=function(){
    +'</table></div></div>'
 
    +'<div class="card"><h2 class="sec">⚙️ 設定</h2>'
-   +'<div class="muted">每日新單字上限</div><div class="chips" style="margin-top:6px">'
+   +'<div class="muted">字體大小（全站，包含文章與文法）</div><div class="chips" style="margin-top:6px">'
+   +[['1','標準'],['1.15','大'],['1.3','更大'],['1.45','最大']].map(([v,t])=>'<button class="chip'+(String(ST.fs||1.15)===v?' on':'')+'" onclick="setFs('+v+')">'+t+'</button>').join('')+'</div>'
+   +'<div class="muted" style="margin-top:14px">每日新單字上限</div><div class="chips" style="margin-top:6px">'
    +[8,12,20,30].map(n=>'<button class="chip'+((ST.newPerDay||12)===n?' on':'')+'" onclick="vNewLimit('+n+');go(\'prog\')">'+n+' 個</button>').join('')+'</div>'
    +'<div class="muted" style="margin-top:10px">朗讀速度</div><div class="chips" style="margin-top:6px">'
    +[['0.7','慢'],['0.9','正常'],['1.1','快']].map(([r,t])=>'<button class="chip'+(String(ST.rate)===r?' on':'')+'" onclick="setRate('+r+')">'+t+' '+r+'x</button>').join('')+'</div>'
    +'<div style="margin-top:14px"><button class="btn gray" onclick="wipe()">清除本機學習紀錄</button></div>'
-   +'<div class="muted" style="margin-top:9px;font-size:11.5px">學習紀錄只存在這台裝置的瀏覽器裡，不會上傳。</div>'
+   +'<div class="muted" style="margin-top:9px;font-size:calc(11.5px * var(--fs))">學習紀錄只存在這台裝置的瀏覽器裡，不會上傳。</div>'
    +'</div>'
 
-   +'<div class="card" style="text-align:center"><div class="muted">課堂筆記、每日測驗、口說練習在另一個網站</div>'
-   +'<div style="margin-top:9px"><a class="btn" style="text-decoration:none;display:inline-block" href="https://learning-english-notes.web.app" target="_blank" rel="noopener">↗ 前往課堂筆記網站</a></div></div>';
+   + installCard() + oldSiteCard();
 };
 function setRate(r){ ST.rate=r; save(); say('This is the reading speed.',r); go('prog'); }
+function applyFs(){ document.documentElement.style.setProperty('--fs', String(ST.fs||1.15)); }
+function setFs(v){ ST.fs=v; save(); applyFs(); go('prog'); }
+window.setFs=setFs;
 function wipe(){
   if(!confirm('確定清除 '+PROFILES[PROFILE]+' 的所有學習紀錄（單字複習進度、閱讀與文法成績）嗎？\n雲端上的紀錄也會一起清空，此動作無法復原。')) return;
   ST=blank(); ST.streak=1; ST.lastDay=today();
@@ -937,6 +959,61 @@ document.addEventListener('click',e=>{
   hideGloss();
 });
 
+/* ============================================================
+   8. 安裝成 App
+   ============================================================ */
+let INSTALL_EVT=null;
+const standalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone===true;
+const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+                    (navigator.platform==='MacIntel' && navigator.maxTouchPoints>1);
+window.addEventListener('beforeinstallprompt',e=>{
+  e.preventDefault(); INSTALL_EVT=e;
+  if(RENDER[TAB]) RENDER[TAB]();
+});
+window.addEventListener('appinstalled',()=>{ INSTALL_EVT=null; if(RENDER[TAB]) RENDER[TAB](); });
+
+function installCard(){
+  if(standalone()) return '';                     // 已經是 app 開啟，不用再顯示
+  if(INSTALL_EVT){
+    return '<button class="install" onclick="doInstall()"><b>📲 安裝成 App</b>'
+      +'<span>點一下就會加到手機主畫面，之後像一般 app 一樣全螢幕開啟，離線也能讀</span></button>';
+  }
+  if(isIOS()){
+    return '<button class="install" onclick="iosHelp()"><b>📲 加到主畫面變成 App</b>'
+      +'<span>iPhone / iPad：點下方工具列的「分享」→ 往下找「加入主畫面」→ 加入。點這裡看圖示說明</span></button>';
+  }
+  return '<button class="install" onclick="otherHelp()"><b>📲 安裝成 App</b>'
+    +'<span>Android Chrome：右上角選單 →「安裝應用程式」或「加到主畫面」。點這裡看說明</span></button>';
+}
+async function doInstall(){
+  if(!INSTALL_EVT) return;
+  INSTALL_EVT.prompt();
+  try{ await INSTALL_EVT.userChoice; }catch(e){}
+  INSTALL_EVT=null; if(RENDER[TAB]) RENDER[TAB]();
+}
+function iosHelp(){
+  alert('iPhone / iPad 安裝步驟：\n\n'
+   +'1. 確認你是用 Safari 開這個網站（Chrome 不行）\n'
+   +'2. 點畫面最下方正中間的「分享」圖示（方形加上一個往上的箭頭）\n'
+   +'3. 選單往下滑，找到「加入主畫面」\n'
+   +'4. 右上角按「新增」\n\n'
+   +'完成後主畫面會出現橘色的 B2 LAB 圖示，點開就是全螢幕，沒有網路也能讀已看過的內容。');
+}
+function otherHelp(){
+  alert('安裝步驟：\n\n'
+   +'Android Chrome：右上角三個點的選單 →「安裝應用程式」或「加到主畫面」\n\n'
+   +'電腦版 Chrome / Edge：網址列右邊會有一個「安裝」圖示（螢幕加箭頭），點它就可以\n\n'
+   +'如果都找不到，通常是瀏覽器版本較舊，直接用瀏覽器書籤也一樣能用。');
+}
+window.doInstall=doInstall; window.iosHelp=iosHelp; window.otherHelp=otherHelp;
+
+const OLD_SITE='https://learning-english-notes.web.app';
+function oldSiteCard(){
+  return '<a class="xlink" href="'+OLD_SITE+'" target="_blank" rel="noopener">'
+   +'<b>🍎🐻 Speak Up! 課堂筆記網站</b>'
+   +'<span>課堂逐字筆記 · 每日測驗 · 口說跟讀 · 影片字幕 — 點這裡切換過去 ↗</span></a>';
+}
+
 /* ---------- Service Worker（可安裝成 app、離線也能讀） ---------- */
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{ navigator.serviceWorker.register('sw.js').catch(()=>{}); });
@@ -945,6 +1022,7 @@ if('serviceWorker' in navigator){
 /* ---------- 啟動 ---------- */
 updateProfileUI();
 loadLocal();
+applyFs();
 touchStreak();
 RENDER.daily();
 cloudPull(()=>{ touchStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); });
