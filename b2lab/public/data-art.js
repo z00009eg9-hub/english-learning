@@ -243,6 +243,224 @@ svg:`<svg viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg" font-family="
 <text x="464" y="282" font-size="13" fill="#6b6259">「什麼都不做」並不是中立的選擇，</text>
 <text x="464" y="300" font-size="13" fill="#6b6259">而是一個緩慢地讓自己變窮的決定。</text>
 </svg>`
-}
+},
+
+/* ---------- a02 在便利商店 ---------- */
+a02:{
+cap:"二十四小時營業的便利商店、兩瓶水、茶葉蛋——本文出現的三樣東西。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#eef6f6"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#cfe3e2" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#1f3b3a">AT THE STORE</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">在便利商店</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">open 24 hours a day</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><path d="M10 24 l6 -12 h32 l6 12z" fill="#2b7a78" stroke="#1f3b3a" stroke-width="3"/><rect x="12" y="24" width="40" height="28" fill="#fff" stroke="#1f3b3a" stroke-width="3"/><rect x="26" y="34" width="14" height="18" fill="#cfe3e2"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><path d="M26 20 h12 v5 q7 5 7 13 v16 a4 4 0 0 1 -4 4 h-18 a4 4 0 0 1 -4 -4 v-16 q0 -8 7 -13z" fill="#a7d8f0" stroke="#1f3b3a" stroke-width="3"/><rect x="27" y="12" width="10" height="8" rx="2" fill="#2b7a78" stroke="#1f3b3a" stroke-width="2.5"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><ellipse cx="32" cy="34" rx="15" ry="19" fill="#c89a63" stroke="#1f3b3a" stroke-width="3"/><g stroke="#6f4a2b" stroke-width="2" fill="none" stroke-linecap="round"><path d="M22 30 l6 4 -4 6 6 3"/><path d="M41 26 l-4 6 5 4 -3 6"/></g></g></svg>`
+},
+
+/* ---------- a03 今天該穿什麼？ ---------- */
+a03:{
+cap:"風很強、溫度只有二十度，所以今天要帶雨傘和薄外套。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#eef3fa"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#d3e2f3" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#1c2c45">WHAT SHOULD I WEAR?</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">今天該穿什麼？</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">wind, 20 degrees, a light jacket</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><path d="M8 30 a24 18 0 0 1 48 0z" fill="#3b82c4" stroke="#1c2c45" stroke-width="3"/><path d="M32 30 v20" stroke="#1c2c45" stroke-width="3.5"/><path d="M32 50 q0 6 -7 6" fill="none" stroke="#1c2c45" stroke-width="3.5"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><rect x="27" y="10" width="10" height="30" rx="5" fill="#fff" stroke="#1c2c45" stroke-width="3"/><circle cx="32" cy="46" r="9" fill="#c0392b" stroke="#1c2c45" stroke-width="3"/><rect x="30" y="22" width="4" height="20" fill="#c0392b"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><path d="M22 16 h20 l10 8 -6 8 v22 h-28 v-22 l-6 -8z" fill="#3b82c4" stroke="#1c2c45" stroke-width="3"/><path d="M32 18 v36" stroke="#1c2c45" stroke-width="2.5"/></g></svg>`
+},
+
+/* ---------- a04 我不太舒服 ---------- */
+a04:{
+cap:"文章裡的症狀與看診：頭痛、喉嚨痛、體溫 38 度，醫生開了藥。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#fdf0ef"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#f7d7d3" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#3d1f1c">I DO NOT FEEL WELL</text><text x="42" y="104" font-size="19" font-weight="900" fill="#2b7a78">我不太舒服</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">a headache, a sore throat, 38 degrees</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7d7d3" stroke-width="2.5"/><rect x="27" y="10" width="10" height="30" rx="5" fill="#fff" stroke="#3d1f1c" stroke-width="3"/><circle cx="32" cy="46" r="9" fill="#c0392b" stroke="#3d1f1c" stroke-width="3"/><rect x="30" y="22" width="4" height="20" fill="#c0392b"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7d7d3" stroke-width="2.5"/><rect x="10" y="24" width="44" height="18" rx="9" fill="#fff" stroke="#3d1f1c" stroke-width="3"/><path d="M31 24 v18" stroke="#3d1f1c" stroke-width="3"/><path d="M19 24 h12 v18 h-12 a9 9 0 0 1 0 -18z" fill="#c0392b"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7d7d3" stroke-width="2.5"/><rect x="12" y="18" width="40" height="30" rx="5" fill="#fff" stroke="#3d1f1c" stroke-width="3"/><g fill="#c0392b"><rect x="28" y="24" width="8" height="18"/><rect x="23" y="29" width="18" height="8"/></g></g></svg>`
+},
+
+/* ---------- a05 公車遲到了 ---------- */
+a05:{
+cap:"在公車站等了二十分鐘，最後會議遲到十分鐘。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#eef3fa"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#d3e2f3" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#1c2c45">THE BUS WAS LATE</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">公車遲到了</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">waited 20 min, arrived 10 min late</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><rect x="14" y="10" width="36" height="26" rx="5" fill="#3b82c4" stroke="#1c2c45" stroke-width="3"/><rect x="20" y="16" width="24" height="9" rx="2" fill="#fff"/><circle cx="24" cy="30" r="2.5" fill="#fff"/><circle cx="40" cy="30" r="2.5" fill="#fff"/><path d="M32 36 v20" stroke="#1c2c45" stroke-width="4"/><path d="M22 56 h20" stroke="#1c2c45" stroke-width="4"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><rect x="10" y="16" width="44" height="28" rx="7" fill="#3b82c4" stroke="#1c2c45" stroke-width="3"/><rect x="16" y="22" width="12" height="9" rx="2" fill="#fff"/><rect x="32" y="22" width="12" height="9" rx="2" fill="#fff"/><circle cx="20" cy="48" r="5" fill="#1c2c45"/><circle cx="44" cy="48" r="5" fill="#1c2c45"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><circle cx="32" cy="32" r="24" fill="#fff" stroke="#1c2c45" stroke-width="3.5"/><g stroke="#1c2c45" stroke-width="3.5" stroke-linecap="round"><line x1="32" y1="32" x2="32" y2="17"/><line x1="32" y1="32" x2="43" y2="37"/></g></g></svg>`
+},
+
+/* ---------- a06 打掃日 ---------- */
+a06:{
+cap:"每週六早上九點開始打掃，做完後全家一起喝茶。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#eef7f1"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#cfe9d9" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#1d3a2a">CLEANING DAY</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">打掃日</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">start at nine, tea when we finish</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe9d9" stroke-width="2.5"/><path d="M40 12 l-18 26" stroke="#6b4f36" stroke-width="4" stroke-linecap="round"/><path d="M14 38 h20 l4 16 h-28z" fill="#3f9e64" stroke="#1d3a2a" stroke-width="3"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe9d9" stroke-width="2.5"/><path d="M14 24 h36 l-5 28 h-26z" fill="#3f9e64" stroke="#1d3a2a" stroke-width="3"/><path d="M16 24 a16 8 0 0 1 32 0" fill="none" stroke="#1d3a2a" stroke-width="3"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe9d9" stroke-width="2.5"/><path d="M14 26 h30 v12 a12 12 0 0 1 -30 0z" fill="#fff" stroke="#1d3a2a" stroke-width="3"/><path d="M44 30 q9 5 0 10" fill="none" stroke="#1d3a2a" stroke-width="3"/><line x1="10" y1="52" x2="50" y2="52" stroke="#1d3a2a" stroke-width="3"/></g></svg>`
+},
+
+/* ---------- a07 點午餐 ---------- */
+a07:{
+cap:"牛肉麵少辣、130 元，沒吃完打包當晚餐。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#fdf6ec"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#f7e3c9" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#2b2118">ORDERING LUNCH</text><text x="42" y="104" font-size="19" font-weight="900" fill="#2b7a78">點午餐</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">beef noodles, less spicy, NT$130</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><path d="M10 30 h44 a22 22 0 0 1 -44 0z" fill="#fff" stroke="#2b2118" stroke-width="3"/><path d="M18 24 q6 -8 12 0 q6 -8 12 0" fill="none" stroke="#e8813a" stroke-width="3" stroke-linecap="round"/><line x1="8" y1="52" x2="56" y2="52" stroke="#2b2118" stroke-width="3"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><rect x="14" y="10" width="36" height="44" rx="4" fill="#fff" stroke="#2b2118" stroke-width="3"/><rect x="14" y="10" width="36" height="9" fill="#e8813a"/><g stroke="#2b2118" stroke-width="2.5"><line x1="21" y1="28" x2="43" y2="28"/><line x1="21" y1="36" x2="43" y2="36"/><line x1="21" y1="44" x2="35" y2="44"/></g></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><path d="M10 24 h44 v26 a3 3 0 0 1 -3 3 H13 a3 3 0 0 1 -3 -3z" fill="#e8813a" stroke="#2b2118" stroke-width="3"/><path d="M10 24 l8 -10 h28 l8 10" fill="#fff" stroke="#2b2118" stroke-width="3"/><line x1="32" y1="14" x2="32" y2="53" stroke="#2b2118" stroke-width="2.5"/></g></svg>`
+},
+
+/* ---------- a08 打電話到辦公室 ---------- */
+a08:{
+cap:"女兒發燒，打電話請假，下午改成在家工作。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#eef6f6"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#cfe3e2" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#1f3b3a">A PHONE CALL TO WORK</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">打電話到辦公室</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">daughter has a fever, work from home</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><rect x="20" y="10" width="24" height="44" rx="5" fill="#fff" stroke="#1f3b3a" stroke-width="3"/><rect x="25" y="17" width="14" height="26" fill="#cfe3e2"/><circle cx="32" cy="49" r="2.5" fill="#1f3b3a"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><rect x="14" y="14" width="36" height="24" rx="3" fill="#fff" stroke="#1f3b3a" stroke-width="3"/><rect x="19" y="19" width="26" height="14" fill="#cfe3e2"/><path d="M8 42 h48 l-4 6 h-40 z" fill="#2b7a78" stroke="#1f3b3a" stroke-width="3"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><rect x="27" y="10" width="10" height="30" rx="5" fill="#fff" stroke="#1f3b3a" stroke-width="3"/><circle cx="32" cy="46" r="9" fill="#c0392b" stroke="#1f3b3a" stroke-width="3"/><rect x="30" y="22" width="4" height="20" fill="#c0392b"/></g></svg>`
+},
+
+/* ---------- r01 錯過火車的男人 ---------- */
+r01:{
+cap:"7 點 40 分的火車、忘在廚房桌上的錢包、要等五十分鐘的下一班車。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#eef3fa"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#d3e2f3" opacity=".75"/><text x="42" y="72" font-size="23" font-weight="900" fill="#1c2c45">THE MAN WHO MISSED HIS TRAIN</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">錯過火車的男人</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">the 7:40 train, 50 minutes to wait</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><rect x="12" y="12" width="40" height="34" rx="8" fill="#3b82c4" stroke="#1c2c45" stroke-width="3"/><rect x="19" y="19" width="11" height="10" rx="2" fill="#fff"/><rect x="34" y="19" width="11" height="10" rx="2" fill="#fff"/><circle cx="22" cy="50" r="5" fill="#1c2c45"/><circle cx="42" cy="50" r="5" fill="#1c2c45"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><circle cx="32" cy="32" r="24" fill="#fff" stroke="#1c2c45" stroke-width="3.5"/><g stroke="#1c2c45" stroke-width="3.5" stroke-linecap="round"><line x1="32" y1="32" x2="32" y2="17"/><line x1="32" y1="32" x2="43" y2="37"/></g></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><rect x="10" y="18" width="44" height="30" rx="6" fill="#fff" stroke="#1c2c45" stroke-width="3"/><rect x="10" y="27" width="44" height="7" fill="#3b82c4"/><circle cx="44" cy="38" r="4" fill="#1c2c45"/></g></svg>`
+},
+
+/* ---------- r02 早晨的一個小改變 ---------- */
+r02:{
+cap:"醫生的建議：看手機之前先喝一杯水、走十分鐘。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#eef7f1"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#cfe9d9" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#1d3a2a">ONE SMALL CHANGE</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">早晨的一個小改變</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">water + a ten-minute walk, before the phone</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe9d9" stroke-width="2.5"/><path d="M20 14 h24 l-4 38 a4 4 0 0 1 -4 3 h-8 a4 4 0 0 1 -4 -3 z" fill="#a7d8f0" stroke="#1d3a2a" stroke-width="3"/><line x1="21" y1="26" x2="43" y2="26" stroke="#1d3a2a" stroke-width="2.5"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe9d9" stroke-width="2.5"/><g stroke="#1d3a2a" stroke-width="3.5" stroke-linecap="round" fill="none"><path d="M14 50 h10 v-10 h10 v-10 h10 v-10 h8"/></g><circle cx="46" cy="18" r="4" fill="#3f9e64"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe9d9" stroke-width="2.5"/><rect x="10" y="14" width="44" height="30" rx="4" fill="#fff" stroke="#1d3a2a" stroke-width="3"/><rect x="16" y="20" width="32" height="18" fill="#cfe9d9"/><rect x="26" y="46" width="12" height="5" fill="#1d3a2a"/></g></svg>`
+},
+
+/* ---------- r04 在家工作 ---------- */
+r04:{
+cap:"在家工作的兩面：省下通勤時間，卻少了建立信任的短暫對話。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#eef6f6"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#cfe3e2" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#1f3b3a">WORKING FROM HOME</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">在家工作</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">two sides of the story</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><rect x="14" y="14" width="36" height="24" rx="3" fill="#fff" stroke="#1f3b3a" stroke-width="3"/><rect x="19" y="19" width="26" height="14" fill="#cfe3e2"/><path d="M8 42 h48 l-4 6 h-40 z" fill="#2b7a78" stroke="#1f3b3a" stroke-width="3"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><rect x="14" y="10" width="36" height="46" fill="#fff" stroke="#1f3b3a" stroke-width="3"/><g fill="#cfe3e2"><rect x="20" y="16" width="9" height="7"/><rect x="35" y="16" width="9" height="7"/><rect x="20" y="28" width="9" height="7"/><rect x="35" y="28" width="9" height="7"/><rect x="20" y="40" width="9" height="7"/></g><rect x="35" y="40" width="9" height="16" fill="#2b7a78"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><rect x="10" y="16" width="44" height="28" rx="7" fill="#2b7a78" stroke="#1f3b3a" stroke-width="3"/><rect x="16" y="22" width="12" height="9" rx="2" fill="#fff"/><rect x="32" y="22" width="12" height="9" rx="2" fill="#fff"/><circle cx="20" cy="48" r="5" fill="#1f3b3a"/><circle cx="44" cy="48" r="5" fill="#1f3b3a"/></g></svg>`
+},
+
+/* ---------- r05 什麼都會修的鄰居 ---------- */
+r05:{
+cap:"漏水的水管，林先生用一塊橡膠和一個金屬夾，十五分鐘就止住了。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#fdf6ec"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#f7e3c9" opacity=".75"/><text x="42" y="72" font-size="18" font-weight="900" fill="#2b2118">THE NEIGHBOUR WHO COULD FIX ANYTHING</text><text x="42" y="104" font-size="19" font-weight="900" fill="#2b7a78">什麼都會修的鄰居</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">a leaking pipe, fixed in 15 minutes</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><g transform="rotate(-40 32 32)"><rect x="27" y="22" width="10" height="30" rx="3" fill="#e8813a" stroke="#2b2118" stroke-width="2.5"/><path d="M22 10 h7 v8 h6 v-8 h7 v14 a6 6 0 0 1 -6 6 h-8 a6 6 0 0 1 -6 -6z" fill="#e8813a" stroke="#2b2118" stroke-width="2.5"/><circle cx="32" cy="48" r="3.5" fill="#fff" stroke="#2b2118" stroke-width="2"/></g></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><path d="M12 18 h10 v10 h14 a8 8 0 0 1 8 8 v6 h-9 v-4 a3 3 0 0 0 -3 -3 H22 v9 H12z" fill="#e8813a" stroke="#2b2118" stroke-width="2.5"/><circle cx="22" cy="13" r="5" fill="none" stroke="#2b2118" stroke-width="3"/><circle cx="39" cy="48" r="3" fill="#3b82c4"/><circle cx="39" cy="56" r="2.5" fill="#3b82c4"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><rect x="10" y="26" width="44" height="24" rx="4" fill="#e8813a" stroke="#2b2118" stroke-width="3"/><path d="M24 26 v-6 a4 4 0 0 1 4 -4 h8 a4 4 0 0 1 4 4 v6" fill="none" stroke="#2b2118" stroke-width="3"/><rect x="10" y="34" width="44" height="5" fill="#fff" opacity=".55"/></g></svg>`
+},
+
+/* ---------- r07 改變她想法的那場面試 ---------- */
+r07:{
+cap:"十八個月走了四個人、大多數週末要工作——Claire 最後拒絕了這份工作。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#f4f0fb"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#e0d6f5" opacity=".75"/><text x="42" y="72" font-size="19" font-weight="900" fill="#2b2438">THE INTERVIEW THAT CHANGED HER MIND</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">改變她想法的那場面試</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">four people left in 18 months</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#e0d6f5" stroke-width="2.5"/><rect x="12" y="22" width="40" height="28" rx="4" fill="#8b5cf6" stroke="#2b2438" stroke-width="3"/><path d="M24 22 v-4 a8 8 0 0 1 16 0 v4" fill="none" stroke="#2b2438" stroke-width="3"/><rect x="12" y="32" width="40" height="5" fill="#fff" opacity=".5"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#e0d6f5" stroke-width="2.5"/><path d="M10 16 h34 a4 4 0 0 1 4 4 v14 a4 4 0 0 1 -4 4 H24 l-9 8 v-8 h-1 a4 4 0 0 1 -4 -4 V20 a4 4 0 0 1 4 -4z" fill="#fff" stroke="#2b2438" stroke-width="3"/><g fill="#8b5cf6"><circle cx="21" cy="27" r="3"/><circle cx="30" cy="27" r="3"/><circle cx="39" cy="27" r="3"/></g></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#e0d6f5" stroke-width="2.5"/><rect x="11" y="16" width="42" height="38" rx="4" fill="#fff" stroke="#2b2438" stroke-width="3"/><rect x="11" y="16" width="42" height="10" fill="#8b5cf6"/><g fill="#e0d6f5"><rect x="17" y="31" width="8" height="7"/><rect x="29" y="31" width="8" height="7"/><rect x="41" y="31" width="8" height="7"/><rect x="17" y="42" width="8" height="7"/></g></g></svg>`
+},
+
+/* ---------- r08 整形手術是個人選擇嗎？ ---------- */
+r08:{
+cap:"手術可以是醫療也可以是奢侈；當每天看到修過的臉，「自由選擇」開始像壓力。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#fdf0ef"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#f7d7d3" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#3d1f1c">IS IT A PERSONAL CHOICE?</text><text x="42" y="104" font-size="19" font-weight="900" fill="#2b7a78">整形手術是個人選擇嗎？</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">free choice, or pressure?</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7d7d3" stroke-width="2.5"/><ellipse cx="32" cy="24" rx="17" ry="19" fill="#c0392b" stroke="#3d1f1c" stroke-width="3"/><ellipse cx="32" cy="24" rx="11" ry="13" fill="#eaf4f7" stroke="#3d1f1c" stroke-width="2"/><path d="M27 18 q5 -5 9 1" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><rect x="28" y="42" width="8" height="14" rx="3" fill="#3d1f1c"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7d7d3" stroke-width="2.5"/><path d="M32 15 v31" stroke="#3d1f1c" stroke-width="3.5"/><path d="M13 20 h38" stroke="#3d1f1c" stroke-width="3.5"/><circle cx="32" cy="14" r="3.5" fill="#3d1f1c"/><path d="M6 24 a13 8 0 0 0 14 0z" fill="#c0392b" stroke="#3d1f1c" stroke-width="2.5"/><path d="M44 24 a13 8 0 0 0 14 0z" fill="#c0392b" stroke="#3d1f1c" stroke-width="2.5"/><line x1="13" y1="20" x2="13" y2="24" stroke="#3d1f1c" stroke-width="2"/><line x1="51" y1="20" x2="51" y2="24" stroke="#3d1f1c" stroke-width="2"/><rect x="22" y="46" width="20" height="6" rx="3" fill="#3d1f1c"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7d7d3" stroke-width="2.5"/><rect x="20" y="10" width="24" height="44" rx="5" fill="#fff" stroke="#3d1f1c" stroke-width="3"/><rect x="25" y="17" width="14" height="26" fill="#f7d7d3"/><circle cx="32" cy="49" r="2.5" fill="#3d1f1c"/></g></svg>`
+},
+
+/* ---------- r11 醫生沒時間問的那些事 ---------- */
+r11:{
+cap:"一次看診不到六分鐘，所以能清楚描述症狀的病人得到的照顧好得多。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#eef6f6"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#cfe3e2" opacity=".75"/><text x="42" y="72" font-size="25" font-weight="900" fill="#1f3b3a">WHAT THE DOCTOR CANNOT ASK</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">醫生沒時間問的那些事</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">under six minutes per patient</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><path d="M18 12 v14 a10 10 0 0 0 20 0 V12" fill="none" stroke="#1f3b3a" stroke-width="3.5"/><path d="M28 36 v8 a10 10 0 0 0 20 0" fill="none" stroke="#1f3b3a" stroke-width="3.5"/><circle cx="48" cy="46" r="8" fill="#2b7a78" stroke="#1f3b3a" stroke-width="3"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><circle cx="32" cy="32" r="24" fill="#fff" stroke="#1f3b3a" stroke-width="3.5"/><g stroke="#1f3b3a" stroke-width="3.5" stroke-linecap="round"><line x1="32" y1="32" x2="32" y2="17"/><line x1="32" y1="32" x2="43" y2="37"/></g></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe3e2" stroke-width="2.5"/><rect x="16" y="10" width="32" height="44" rx="3" fill="#fff" stroke="#1f3b3a" stroke-width="3"/><g stroke="#2b7a78" stroke-width="3" stroke-linecap="round"><line x1="23" y1="22" x2="41" y2="22"/><line x1="23" y1="30" x2="41" y2="30"/><line x1="23" y1="38" x2="34" y2="38"/></g></g></svg>`
+},
+
+/* ---------- r13 安靜的那種累 ---------- */
+r13:{
+cap:"睡覺解決不了的耗竭：情緒耗竭、對工作疏離、對自身能力失去信心。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#f4f0fb"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#e0d6f5" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#2b2438">THE QUIET KIND OF TIRED</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">安靜的那種累</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">the exhaustion sleep does not fix</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#e0d6f5" stroke-width="2.5"/><rect x="12" y="20" width="38" height="24" rx="4" fill="#fff" stroke="#2b2438" stroke-width="3"/><rect x="50" y="27" width="5" height="10" rx="2" fill="#2b2438"/><rect x="17" y="25" width="8" height="14" fill="#8b5cf6"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#e0d6f5" stroke-width="2.5"/><rect x="14" y="14" width="36" height="24" rx="3" fill="#fff" stroke="#2b2438" stroke-width="3"/><rect x="19" y="19" width="26" height="14" fill="#e0d6f5"/><path d="M8 42 h48 l-4 6 h-40 z" fill="#8b5cf6" stroke="#2b2438" stroke-width="3"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#e0d6f5" stroke-width="2.5"/><rect x="11" y="16" width="42" height="38" rx="4" fill="#fff" stroke="#2b2438" stroke-width="3"/><rect x="11" y="16" width="42" height="10" fill="#8b5cf6"/><g fill="#e0d6f5"><rect x="17" y="31" width="8" height="7"/><rect x="29" y="31" width="8" height="7"/><rect x="41" y="31" width="8" height="7"/><rect x="17" y="42" width="8" height="7"/></g></g></svg>`
+},
+
+/* ---------- r14 當行程整個垮掉 ---------- */
+r14:{
+cap:"登機前四十分鐘取消：兩百人排同一條隊，打電話的同事四分鐘就改好機位。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#eef3fa"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#d3e2f3" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#1c2c45">WHEN THE PLAN FALLS APART</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">當行程整個垮掉</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">cancelled 40 minutes before boarding</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><path d="M8 34 l48 -16 -10 16 10 16 -48 -16z" fill="#3b82c4" stroke="#1c2c45" stroke-width="2.5" stroke-linejoin="round"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><rect x="20" y="10" width="24" height="44" rx="5" fill="#fff" stroke="#1c2c45" stroke-width="3"/><rect x="25" y="17" width="14" height="26" fill="#d3e2f3"/><circle cx="32" cy="49" r="2.5" fill="#1c2c45"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#d3e2f3" stroke-width="2.5"/><circle cx="22" cy="22" r="8" fill="#f4c9a0" stroke="#1c2c45" stroke-width="2.5"/><path d="M10 52 q0 -14 12 -14 t12 14z" fill="#3b82c4" stroke="#1c2c45" stroke-width="2.5"/><circle cx="46" cy="26" r="7" fill="#f4c9a0" stroke="#1c2c45" stroke-width="2.5"/><path d="M36 52 q0 -12 10 -12 t10 12z" fill="#d3e2f3" stroke="#1c2c45" stroke-width="2.5"/></g></svg>`
+},
+
+/* ---------- r15 從不開口問的客人 ---------- */
+r15:{
+cap:"不想給主人添麻煩，所以兩週午餐幾乎沒吃——改問「這三個你想要哪一個」就解決了。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#fdf6ec"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#f7e3c9" opacity=".75"/><text x="42" y="72" font-size="26" font-weight="900" fill="#2b2118">THE GUEST WHO NEVER ASKED</text><text x="42" y="104" font-size="19" font-weight="900" fill="#2b7a78">從不開口問的客人</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">two weeks of eating almost nothing</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><path d="M10 30 h44 a22 22 0 0 1 -44 0z" fill="#fff" stroke="#2b2118" stroke-width="3"/><path d="M18 24 q6 -8 12 0 q6 -8 12 0" fill="none" stroke="#e8813a" stroke-width="3" stroke-linecap="round"/><line x1="8" y1="52" x2="56" y2="52" stroke="#2b2118" stroke-width="3"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><path d="M10 16 h34 a4 4 0 0 1 4 4 v14 a4 4 0 0 1 -4 4 H24 l-9 8 v-8 h-1 a4 4 0 0 1 -4 -4 V20 a4 4 0 0 1 4 -4z" fill="#fff" stroke="#2b2118" stroke-width="3"/><g fill="#e8813a"><circle cx="21" cy="27" r="3"/><circle cx="30" cy="27" r="3"/><circle cx="39" cy="27" r="3"/></g></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><circle cx="22" cy="22" r="8" fill="#f4c9a0" stroke="#2b2118" stroke-width="2.5"/><path d="M10 52 q0 -14 12 -14 t12 14z" fill="#e8813a" stroke="#2b2118" stroke-width="2.5"/><circle cx="46" cy="26" r="7" fill="#f4c9a0" stroke="#2b2118" stroke-width="2.5"/><path d="M36 52 q0 -12 10 -12 t10 12z" fill="#f7e3c9" stroke="#2b2118" stroke-width="2.5"/></g></svg>`
+},
+
+/* ---------- r17 再也沒回來的押金 ---------- */
+r17:{
+cap:"有日期的照片＋簽署的財物清單＋三句話的信，九天後全額入帳。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#eef7f1"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#cfe9d9" opacity=".75"/><text x="42" y="72" font-size="20" font-weight="900" fill="#1d3a2a">THE DEPOSIT THAT NEVER CAME BACK</text><text x="42" y="104" font-size="19" font-weight="900" fill="#c0561a">再也沒回來的押金</text><text x="42" y="134" font-size="14" font-weight="700" fill="#6b6259">photographs, inventory, fourteen days</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe9d9" stroke-width="2.5"/><circle cx="22" cy="30" r="11" fill="none" stroke="#1d3a2a" stroke-width="4"/><path d="M33 30 h21" stroke="#1d3a2a" stroke-width="4"/><path d="M46 30 v8" stroke="#1d3a2a" stroke-width="4"/><path d="M52 30 v6" stroke="#1d3a2a" stroke-width="4"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe9d9" stroke-width="2.5"/><rect x="10" y="22" width="44" height="28" rx="5" fill="#fff" stroke="#1d3a2a" stroke-width="3"/><circle cx="32" cy="36" r="9" fill="#3f9e64" stroke="#1d3a2a" stroke-width="2.5"/><rect x="24" y="16" width="16" height="7" rx="2" fill="#1d3a2a"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#cfe9d9" stroke-width="2.5"/><rect x="10" y="20" width="44" height="28" rx="4" fill="#fff" stroke="#1d3a2a" stroke-width="3"/><path d="M10 22 l22 16 22 -16" fill="none" stroke="#3f9e64" stroke-width="3"/></g></svg>`
+},
+
+/* ---------- r19 店面樓上的空屋 ---------- */
+r19:{
+cap:"晚上九點過後，許多區域店面樓上亮著的窗戶不到一半。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif"><rect width="800" height="200" rx="14" fill="#243350"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#31456a" opacity=".55"/><text x="42" y="72" font-size="21" font-weight="900" fill="#ffffff">THE EMPTY FLATS ABOVE THE SHOPS</text><text x="42" y="104" font-size="19" font-weight="900" fill="#ffd98a">店面樓上的空屋</text><text x="42" y="134" font-size="14" font-weight="700" fill="#cbd7ea">fewer than half the windows are lit</text><g transform="translate(470,62)"><circle cx="32" cy="32" r="33" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.35)" stroke-width="2.5"/><rect x="14" y="10" width="36" height="46" fill="#fff" stroke="#ffffff" stroke-width="3"/><g fill="#31456a"><rect x="20" y="16" width="9" height="7"/><rect x="35" y="16" width="9" height="7"/><rect x="20" y="28" width="9" height="7"/><rect x="35" y="28" width="9" height="7"/><rect x="20" y="40" width="9" height="7"/></g><rect x="35" y="40" width="9" height="16" fill="#8fa6c9"/></g><g transform="translate(574,62)"><circle cx="32" cy="32" r="33" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.35)" stroke-width="2.5"/><path d="M10 24 l6 -12 h32 l6 12z" fill="#8fa6c9" stroke="#ffffff" stroke-width="3"/><rect x="12" y="24" width="40" height="28" fill="#fff" stroke="#ffffff" stroke-width="3"/><rect x="26" y="34" width="14" height="18" fill="#31456a"/></g><g transform="translate(678,62)"><circle cx="32" cy="32" r="33" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.35)" stroke-width="2.5"/><path d="M18 26 l14 -14 14 14z" fill="#8fa6c9" stroke="#ffffff" stroke-width="3"/><path d="M32 26 v18" stroke="#ffffff" stroke-width="3.5"/><circle cx="32" cy="48" r="7" fill="#ffd98a" stroke="#ffffff" stroke-width="2.5"/></g></svg>`
+},
+
+/* ---------- r09 便宜保險的真正代價（B2）：兩倍價差與自付額 ---------- */
+r09:{
+cap:"文章寫出的對比：第一份保單價格是第二份的兩倍，但任何原因取消都理賠；便宜那份只在航空公司自己取消時理賠。另一個隱藏成本是自付額——保費極低的保單，自付額常高到讓小額理賠實質上毫無意義。",
+svg:`<svg viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="800" height="330" rx="14" fill="#fdf6ec"/>
+<text x="40" y="42" font-size="23" font-weight="900" fill="#2b2118">THE PRICE IS NOT THE COST</text>
+<text x="40" y="64" font-size="14" font-weight="700" fill="#2b7a78">價格不等於代價</text>
+<rect x="40" y="86" width="350" height="150" rx="12" fill="#fff" stroke="#2b7a78" stroke-width="3"/>
+<text x="60" y="114" font-size="15" font-weight="900" fill="#2b7a78">POLICY A</text>
+<rect x="60" y="126" width="120" height="22" rx="4" fill="#2b7a78"/>
+<text x="192" y="143" font-size="15" font-weight="900" fill="#1f5f5d">×2 price</text>
+<text x="60" y="176" font-size="13.5" fill="#2b2118">✓ covers cancellation for ANY reason</text>
+<text x="60" y="196" font-size="12.5" fill="#6b6259">任何原因取消都理賠，包括家人生病</text>
+<text x="60" y="222" font-size="12.5" font-weight="700" fill="#1f5f5d">貴一倍，但真的用得到</text>
+<rect x="410" y="86" width="350" height="150" rx="12" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+<text x="430" y="114" font-size="15" font-weight="900" fill="#c0392b">POLICY B</text>
+<rect x="430" y="126" width="60" height="22" rx="4" fill="#c0392b"/>
+<text x="502" y="143" font-size="15" font-weight="900" fill="#8c261a">×1 price</text>
+<text x="430" y="176" font-size="13.5" fill="#2b2118">✗ only if the AIRLINE cancels</text>
+<text x="430" y="196" font-size="12.5" fill="#6b6259">只有航空公司自己取消時才理賠</text>
+<text x="430" y="222" font-size="12.5" font-weight="700" fill="#8c261a">便宜一半，出事時才發現不賠</text>
+<text x="40" y="270" font-size="15" font-weight="900" fill="#2b2118">DEDUCTIBLE 自付額</text>
+<rect x="210" y="253" width="410" height="24" rx="5" fill="#e6ded2" stroke="#8a7f72" stroke-width="2"/>
+<rect x="210" y="253" width="295" height="24" rx="5" fill="#f7d7d3" stroke="#c0392b" stroke-width="2.5"/>
+<text x="357" y="270" font-size="13" font-weight="800" fill="#8c261a" text-anchor="middle">you pay this first 你要先自己付</text>
+<text x="563" y="270" font-size="13" font-weight="800" fill="#4a4238" text-anchor="middle">insurer pays</text>
+<text x="40" y="304" font-size="13" fill="#2b2118">自付額高到超過小額損失時，理賠就變得沒有意義——省下的保費是真的，</text>
+<text x="40" y="322" font-size="13" fill="#2b2118">但風險也真的從保險公司轉到了你身上。</text>
+</svg>`
+},
+
+/* ---------- r10 睡眠負債（B2）：一週累積 ---------- */
+r10:{
+cap:"依文章敘述畫出的累積：每天少睡一小時、連續一週，缺口就累積成七小時。文章也指出兩件事——受影響的人通常是最後才察覺的，而週末補眠的幫助比多數人期待的少。",
+svg:`<svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="800" height="320" rx="14" fill="#243350"/>
+<path d="M604 24 a24 24 0 1 0 0 48 a19 19 0 0 1 0 -48z" fill="#ffd98a"/>
+<text x="40" y="46" font-size="23" font-weight="900" fill="#ffffff">SLEEP DEBT ADDS UP</text>
+<text x="40" y="68" font-size="14" font-weight="700" fill="#ffd98a">睡眠負債會累積</text>
+<text x="40" y="100" font-size="13.5" font-weight="700" fill="#cbd7ea">−1 hour a night 每晚少睡一小時</text>
+<rect x="40" y="230" width="44" height="20" rx="4" fill="#4a6fa5"/>
+<text x="62" y="224" font-size="12.5" font-weight="800" fill="#cbd7ea" text-anchor="middle">−1h</text>
+<text x="62" y="268" font-size="12" fill="#8fa6c9" text-anchor="middle">day 1</text>
+<rect x="104" y="210" width="44" height="40" rx="4" fill="#4a6fa5"/>
+<text x="126" y="204" font-size="12.5" font-weight="800" fill="#cbd7ea" text-anchor="middle">−2h</text>
+<text x="126" y="268" font-size="12" fill="#8fa6c9" text-anchor="middle">day 2</text>
+<rect x="168" y="190" width="44" height="60" rx="4" fill="#4a6fa5"/>
+<text x="190" y="184" font-size="12.5" font-weight="800" fill="#cbd7ea" text-anchor="middle">−3h</text>
+<text x="190" y="268" font-size="12" fill="#8fa6c9" text-anchor="middle">day 3</text>
+<rect x="232" y="170" width="44" height="80" rx="4" fill="#4a6fa5"/>
+<text x="254" y="164" font-size="12.5" font-weight="800" fill="#cbd7ea" text-anchor="middle">−4h</text>
+<text x="254" y="268" font-size="12" fill="#8fa6c9" text-anchor="middle">day 4</text>
+<rect x="296" y="150" width="44" height="100" rx="4" fill="#4a6fa5"/>
+<text x="318" y="144" font-size="12.5" font-weight="800" fill="#cbd7ea" text-anchor="middle">−5h</text>
+<text x="318" y="268" font-size="12" fill="#8fa6c9" text-anchor="middle">day 5</text>
+<rect x="360" y="130" width="44" height="120" rx="4" fill="#4a6fa5"/>
+<text x="382" y="124" font-size="12.5" font-weight="800" fill="#cbd7ea" text-anchor="middle">−6h</text>
+<text x="382" y="268" font-size="12" fill="#8fa6c9" text-anchor="middle">day 6</text>
+<rect x="424" y="110" width="44" height="140" rx="4" fill="#c0392b"/>
+<text x="446" y="104" font-size="13" font-weight="900" fill="#ffd98a" text-anchor="middle">−7h</text>
+<text x="446" y="268" font-size="12" fill="#8fa6c9" text-anchor="middle">day 7</text>
+<line x1="36" y1="250" x2="480" y2="250" stroke="#8fa6c9" stroke-width="2.5"/>
+<text x="516" y="124" font-size="14" font-weight="900" fill="#ffd98a">WHAT THE STUDY FOUND</text>
+<text x="516" y="150" font-size="13" fill="#ffffff">reaction times like people</text>
+<text x="516" y="168" font-size="13" fill="#ffffff">who had been drinking</text>
+<text x="516" y="186" font-size="12.5" fill="#cbd7ea">反應時間近似飲酒者</text>
+<text x="516" y="216" font-size="13" fill="#ffffff">but they rated their own</text>
+<text x="516" y="234" font-size="13" fill="#ffffff">performance as normal</text>
+<text x="516" y="252" font-size="12.5" fill="#cbd7ea">卻自評表現正常</text>
+<text x="40" y="296" font-size="13.5" font-weight="700" fill="#ffd98a">Sleeping twelve hours at the weekend helps less than most people hope.</text>
+<text x="40" y="314" font-size="12.5" fill="#cbd7ea">週末睡十二小時的幫助比期待的少——記憶的形成需要分布在數個夜晚的深層睡眠。</text>
+</svg>`
+},
+
+/* ---------- r16 風景的帳單誰來付（B2）---------- */
+r16:{
+cap:"文章的核心對比：一天四百名遊客是成功故事，四千名就是另一回事。被高租金擠走的是居民、麵包店與診所。",
+svg:`<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="800" height="200" rx="14" fill="#eef6f6"/>
+<path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#cfe3e2" opacity=".75"/>
+<text x="42" y="66" font-size="24" font-weight="900" fill="#1f3b3a">WHO PAYS FOR THE VIEW?</text>
+<text x="42" y="98" font-size="19" font-weight="900" fill="#c0561a">風景的帳單誰來付？</text>
+<text x="42" y="128" font-size="13.5" font-weight="700" fill="#6b6259">400 visitors a day is a success story. 4,000 is something else.</text>
+<rect x="486" y="72" width="56" height="70" rx="4" fill="#ffffff" stroke="#1f3b3a" stroke-width="3"/>
+<rect x="494" y="82" width="14" height="12" fill="#ffd98a"/>
+<rect x="518" y="82" width="14" height="12" fill="#dfe8e8"/>
+<rect x="494" y="104" width="14" height="12" fill="#dfe8e8"/>
+<rect x="518" y="104" width="14" height="12" fill="#dfe8e8"/>
+<rect x="504" y="124" width="20" height="18" fill="#2b7a78"/>
+<text x="514" y="158" font-size="12" font-weight="700" fill="#1f3b3a" text-anchor="middle">residents</text>
+<path d="M578 96 l7 -14 h34 l7 14z" fill="#c0561a" stroke="#1f3b3a" stroke-width="3"/>
+<rect x="580" y="96" width="44" height="46" fill="#ffffff" stroke="#1f3b3a" stroke-width="3"/>
+<rect x="592" y="108" width="20" height="34" fill="#f7d7d3"/>
+<line x1="592" y1="114" x2="612" y2="136" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>
+<line x1="612" y1="114" x2="592" y2="136" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>
+<text x="602" y="158" font-size="12" font-weight="700" fill="#1f3b3a" text-anchor="middle">the bakery</text>
+<circle cx="690" cy="94" r="9" fill="#f4c9a0" stroke="#1f3b3a" stroke-width="2.5"/>
+<path d="M676 138 q0 -16 14 -16 t14 16z" fill="#2b7a78" stroke="#1f3b3a" stroke-width="2.5"/>
+<circle cx="718" cy="100" r="8" fill="#f4c9a0" stroke="#1f3b3a" stroke-width="2.5"/>
+<path d="M706 138 q0 -14 12 -14 t12 14z" fill="#cfe3e2" stroke="#1f3b3a" stroke-width="2.5"/>
+<text x="704" y="158" font-size="12" font-weight="700" fill="#1f3b3a" text-anchor="middle">4,000 visitors</text>
+</svg>`
+},
 
 };
