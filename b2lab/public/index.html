@@ -242,6 +242,9 @@ tr:nth-child(even) td{background:#fdfbf8}
 .upg.c3{background:#eaf2fb;border-color:#cfe0f2}         .upg.c3 .un{color:#2b5f92}
 /* ---------- 影片播放器（16:9 自適應） ---------- */
 .ytwrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:12px;overflow:hidden;margin-top:11px}
+/* 影片黏在上方：往下捲字幕時影片仍一直看得到（一頁檢視，參照 Speak Up） */
+.vidpin{position:sticky;top:var(--hdh,52px);z-index:40;background:var(--bg);padding:6px 0 8px;margin-bottom:4px}
+.vidpin .ytwrap{margin-top:0;padding-top:0;height:min(32vh,52vw);max-width:100%}
 .ytwrap>div,.ytwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .spk.rbtn.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
 /* ---------- 雜誌版面（仿常春藤內頁） ---------- */
@@ -1365,6 +1368,10 @@ RENDER.prog=function(){
 };
 function setRate(r){ ST.rate=r; save(); say('This is the reading speed.',r); go('prog'); }
 function applyFs(){ document.documentElement.style.setProperty('--fs', String(ST.fs||1.15)); }
+/* 量測 sticky header 高度，讓黏頂的影片剛好貼在 header 下方 */
+function updateHd(){ const hd=document.querySelector('header'); if(hd) document.documentElement.style.setProperty('--hdh',hd.offsetHeight+'px'); }
+window.addEventListener('resize',updateHd);
+window.addEventListener('load',updateHd);
 function setFs(v){ ST.fs=v; save(); applyFs(); go('prog'); }
 window.setFs=setFs;
 function wipe(){
@@ -1456,15 +1463,17 @@ function showLoop(){
 }
 window.setRateY=setRateY; window.markA=markA; window.markB=markB; window.clearLoop=clearLoop; window.startLoop=startLoop;
 
-function playerBox(divId){
-  return '<div class="ytwrap"><div id="'+divId+'"></div></div>'
-   +'<div class="row" style="margin-top:9px">'
+function playerControls(){
+  return '<div class="row" style="margin-top:9px">'
    +'<span class="muted" style="font-size:calc(12.5px * var(--fs));font-weight:700">速度</span>'
    +[0.5,0.75,1].map(r=>'<button class="spk rbtn'+(r===1?' on':'')+'" data-r="'+r+'" onclick="setRateY('+r+')">'+r+'x</button>').join('')
    +'<button class="spk" onclick="markA()">設 A 點</button>'
    +'<button class="spk" onclick="markB()">設 B 點並循環</button>'
    +'<button class="spk" onclick="clearLoop()">取消循環</button>'
    +'</div><div class="muted" id="loop-info" style="margin-top:5px;font-size:calc(12px * var(--fs))">尚未設定循環區間</div>';
+}
+function playerBox(divId){
+  return '<div class="ytwrap"><div id="'+divId+'"></div></div>'+playerControls();
 }
 
 RENDER.listen=function(){
@@ -1638,10 +1647,11 @@ window.openMyVid=openMyVid; window.closeMyVid=closeMyVid;
 function myVidHTML(v){
   const hasCn=(v.lines||[]).some(l=>l.cn);
   let h='<button class="back" onclick="closeMyVid()">← 回聽力課列表</button>'
+   +'<div class="vidpin"><div class="ytwrap"><div id="yt-my"></div></div></div>'
    +'<div class="card"><h2 class="sec" style="margin:0">▶️ '+esc(v.title||'我的影片')+'</h2>'
    +'<div class="muted">📅 加入於 '+esc(v.addedAt||'—')+' · '+((v.lines||[]).length)+' 句字幕'
    +(v.addedBy?' · '+(v.addedBy==='tom'?'🐻 Tom':'🍎 Anita')+' 加入':'')+'</div>'
-   + playerBox('yt-my')
+   + playerControls()
    +'<div class="row" style="margin-top:9px">'
    +'<button class="spk" id="tg-en" onclick="tgEn()">'+(showEn?'👁 英文：顯示':'👁 英文：隱藏')+'</button>'
    +(hasCn?'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button>':'')
@@ -1802,6 +1812,7 @@ if('serviceWorker' in navigator){
 updateProfileUI();
 loadLocal();
 applyFs();
+updateHd();
 touchStreak();
 RENDER.daily();
 cloudPull(()=>{ touchStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); });
