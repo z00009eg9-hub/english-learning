@@ -145,7 +145,13 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 .item .done{color:var(--ok);font-weight:700}
 /* ---------- reading view ---------- */
 .para{margin:0 0 16px}
-.para .en{font-size:calc(17px * var(--fs));line-height:1.85}
+.para .en{font-size:calc(17px * var(--fs));line-height:1.95}
+/* 逐句朗讀：每句後面的小喇叭 */
+.para .sent{border-radius:6px;padding:1px 0}
+.para .sent.reading{background:#fff2d9;box-shadow:0 0 0 3px #fff2d9}
+.para .ssp{border:0;background:none;cursor:pointer;font-size:.72em;padding:0 2px;margin:0 4px 0 1px;
+  vertical-align:middle;opacity:.4;line-height:1}
+.para .ssp:hover,.para .ssp:active{opacity:1}
 .para .cn{font-size:calc(14px * var(--fs));color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:7px;display:none}
 .para.showcn .cn{display:block}
 .para .pbar{margin-top:5px;display:flex;gap:6px}
@@ -544,17 +550,31 @@ function pickVoice(){
 }
 pickVoice();
 if('speechSynthesis' in window) speechSynthesis.onvoiceschanged=pickVoice;
-function say(text,rate){
+function say(text,rate,onend){
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(String(text).replace(/\s+/g,' ').trim());
   u.lang='en-US'; u.rate = rate || ST.rate || 0.9;
   if(VOICE) u.voice=VOICE;
+  if(onend){ u.onend=onend; u.onerror=onend; }
   speechSynthesis.speak(u);
 }
 window.say=say;
+/* 朗讀單一句子，並在朗讀時把那一句高亮起來 */
+function saySent(btn){
+  document.querySelectorAll('.para .sent.reading').forEach(el=>el.classList.remove('reading'));
+  const sent=btn.closest('.sent'); if(sent) sent.classList.add('reading');
+  say(btn.dataset.t, null, ()=>{ if(sent) sent.classList.remove('reading'); });
+}
+window.saySent=saySent;
 function spk(text,label){
   return '<button class="spk" onclick="say(this.dataset.t);event.stopPropagation()" data-t="'+esc(text)+'">🔊'+(label?' '+label:'')+'</button>';
+}
+/* 把一段文字切成一句一句（保留句尾標點） */
+function splitSentences(text){
+  const s=String(text||'').trim();
+  const m=s.match(/[^.!?]+[.!?]+["'”’)\]]*\s*|[^.!?]+$/g);
+  return m ? m.map(x=>x.trim()).filter(Boolean) : (s?[s]:[]);
 }
 
 /* ============================================================
@@ -642,13 +662,18 @@ window.go=go;
    3. 閱讀分頁
    ============================================================ */
 // 課堂筆記文章 → 統一格式
-const NOTE_ARTS=(NOTES.articles||[]).map((a,i)=>({
-  id:'n'+String(i+1).padStart(2,'0'),
-  level:'B1', topic:'課堂筆記', words:(a.paras||[]).reduce((n,p)=>n+p.en.split(/\s+/).length,0),
-  title:a.title, titleCn:a.titleCn, focus:'', intro:'', source:a.source,
-  paras:a.paras||[], questions:a.questions||[], target:[], upgrade:[],
-  hi:(a.highlightWords||[]), kind:'note'
-}));
+const NOTE_ARTS=(NOTES.articles||[]).map((a,i)=>{
+  // 從 source（例「Based on 20260806 lesson notes」）取出上課日期，格式化成 YYYY-MM-DD
+  const dates=((a.source||'').match(/\d{8}/g)||[]).map(d=>d.slice(0,4)+'-'+d.slice(4,6)+'-'+d.slice(6,8));
+  return {
+    id:'n'+String(i+1).padStart(2,'0'),
+    level:'B1', topic:'課堂筆記', words:(a.paras||[]).reduce((n,p)=>n+p.en.split(/\s+/).length,0),
+    title:a.title, titleCn:a.titleCn, focus:'', intro:'', source:a.source,
+    date:dates.join(' / '),
+    paras:a.paras||[], questions:a.questions||[], target:[], upgrade:[],
+    hi:(a.highlightWords||[]), kind:'note'
+  };
+});
 const A2_ARTS=(((window.A2||{}).articles)||[]).map(a=>Object.assign({},a,{kind:'orig',hi:(a.target||[]).map(t=>t.w)}));
 const A2_GRAM=(((window.A2||{}).grammar)||[]);
 const ORIG_ARTS=A2_ARTS.concat((READING||[]).map(a=>Object.assign({},a,{kind:'orig',hi:(a.target||[]).map(t=>t.w)})));
@@ -860,12 +885,17 @@ function readerHTML(a){
    +'<button class="btn ghost" onclick="cnAll(1)">顯示全部中譯</button>'
    +'<button class="btn gray" onclick="cnAll(0)">隱藏中譯</button>'
    +'<button class="btn ghost" onclick="readAll()">🔊 朗讀全文</button></div>'
-   +'<div id="paras">'+a.paras.map((p,i)=>
-      '<div class="para" id="p'+i+'"><div class="en">'+magTokenize(p.en,tmap,used)+'</div>'
-     +'<div class="pbar">'+spk(p.en,'朗讀')+'<button class="spk" onclick="togCn('+i+')">中譯</button></div>'
-     +'<div class="cn">'+esc(p.cn)+'</div></div>').join('')
+   +'<div id="paras">'+a.paras.map((p,i)=>{
+      const enHtml=splitSentences(p.en).map(s=>
+        '<span class="sent">'+magTokenize(s,tmap,used)
+        +'<button class="ssp" title="朗讀這一句" onclick="saySent(this);event.stopPropagation()" data-t="'+esc(s)+'">🔊</button></span>'
+      ).join(' ');
+      return '<div class="para" id="p'+i+'"><div class="en">'+enHtml+'</div>'
+     +'<div class="pbar">'+spk(p.en,'整段')+'<button class="spk" onclick="togCn('+i+')">中譯</button></div>'
+     +'<div class="cn">'+esc(p.cn)+'</div></div>';
+    }).join('')
    +'</div>'
-   +'<div class="muted" style="margin-top:6px;font-size:calc(12.5px * var(--fs))">💡 <b style="color:#c0561a">橘色加粗＋編號</b>的字對應右邊的單字片語；點文章裡<b>任何一個字</b>都能查中文。</div>'
+   +'<div class="muted" style="margin-top:6px;font-size:calc(12.5px * var(--fs))">💡 <b style="color:#c0561a">橘色加粗＋編號</b>的字對應右邊的單字片語；點文章裡<b>任何一個字</b>都能查中文；每句尾端的 🔊 可單獨<b>朗讀那一句</b>，整段用下方「整段」。</div>'
    +'</div></div>';
 
   /* 右欄：Words & Phrases + 補充詞彙 + You Can Do This */
