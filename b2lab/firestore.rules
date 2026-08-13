@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 只允許讀寫 Anita / Tom 兩份學習進度，其他路徑全部拒絕
+    match /b2lab_progress/{who} {
+      allow read, write: if who == 'anita' || who == 'tom';
+    }
+  }
+}

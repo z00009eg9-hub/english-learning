@@ -1,7 +1,9 @@
 # Firebase 本機快取
 .firebase/
 # 部署產物（index.html 的複本，deploy 時自動產生）
-public/
+/public/
+# b2lab/public 是原始碼不是產物，必須進版控
+!b2lab/public/
 # 備份與本機工作檔
 index.backup-*.html
 .sync-log.txt

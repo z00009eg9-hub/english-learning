@@ -503,6 +503,8 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
         <button class="prof-btn" id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
       </div>
       <div class="hd-streak">🔥 <span id="hd-streak">1</span> 天 <span id="sync-badge" title="進度已雲端同步（跨裝置共用）" style="display:none">☁️</span></div>
+      <a href="https://english-b2-lab.web.app" target="_blank" rel="noopener" title="閱讀 · 單字卡 · 文法（B1→B2）"
+         style="display:inline-block;margin-top:4px;font-size:11.5px;text-decoration:none;color:#fff;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:4px 10px;white-space:nowrap">📚 B2 Lab ↗</a>
     </div>
   </div>
 </header>
@@ -525,6 +527,13 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       </div>
       <div class="day-meta" id="day-meta"></div>
     </div>
+
+    <a href="https://english-b2-lab.web.app" target="_blank" rel="noopener"
+       style="display:block;text-decoration:none;background:linear-gradient(135deg,#f0964f,#d9691f);color:#fff;border-radius:14px;padding:14px 16px;margin-bottom:12px;box-shadow:0 3px 12px rgba(190,110,40,.28)">
+      <div style="font-size:16px;font-weight:800;display:flex;align-items:center;gap:8px">📚 English B2 Lab <span style="font-size:11px;background:rgba(255,255,255,.25);border-radius:20px;padding:2px 8px;font-weight:700">B1 → B2</span></div>
+      <div style="font-size:13px;opacity:.95;margin-top:4px">閱讀 · 單字間隔複習 · 文法教材 — 每天自動更新一篇文章與一個文法單元</div>
+      <div style="font-size:12px;margin-top:7px;font-weight:700">前往 ↗</div>
+    </a>
 
     <div class="help" id="help-btn" onclick="toggleHelp()">❓ 第一次使用?點這裡看怎麼練口說 ▾</div>
     <div class="card hide" id="help-card" style="margin-top:-6px;margin-bottom:15px">
@@ -883,7 +892,7 @@ const vocab = [
   {w:"constantly",ipa:"/ˈkɑːnstəntli/",pos:"adv.",cn:"持續地、不斷地",def:"Happening again and again without stopping.",exEn:"Cars in Vietnam constantly honk their horns, and the noise affects my sleep.",exCn:"越南的車經常按喇叭，噪音影響我的睡眠。",cat:"daily"},
   {w:"effective",ipa:"/ɪˈfektɪv/",pos:"adj.",cn:"有效的",def:"Producing the result that was wanted.",exEn:"Taking a short break every hour is an effective tip to reduce eye strain.",exCn:"每小時休息一下是減少眼睛疲勞的有效方法。",cat:"daily"},
   {w:"efficient",ipa:"/ɪˈfɪʃənt/",pos:"adj.",cn:"有效率的",def:"Working well without wasting time or resources.",exEn:"Using two monitors is an efficient setup for engineers.",exCn:"使用兩個螢幕對工程師來說是有效率的配置。",cat:"workplace"},
-  {w:"efficiently",ipa:"/ɪˈfɪʃəntli/",pos:"adv.",cn:"有效率地",def:"In a way that saves time and effort.",exEn:"Digital notebook app helps student to search their study notes efficiently.",exCn:"數位筆記軟體幫助學生有效率地搜尋學習筆記。",cat:"workplace"},
+  {w:"efficiently",ipa:"/ɪˈfɪʃəntli/",pos:"adv.",cn:"有效率地",def:"In a way that saves time and effort.",exEn:"Digital notebook apps help students to search their study notes efficiently.",exCn:"數位筆記軟體幫助學生有效率地搜尋學習筆記。",cat:"workplace"},
   {w:"compensate",ipa:"/ˈkɑːmpənseɪt/",pos:"v.",cn:"補償、彌補",def:"To give something to make up for a loss or problem.",exEn:"The hotel gave us a free meal to compensate for the noisy room.",exCn:"飯店給我們免費餐點，以補償房間太吵的問題。",cat:"daily"},
   {w:"eye strain",ipa:"/aɪ streɪn/",pos:"n.",cn:"眼睛疲勞",def:"Pain or tiredness in your eyes from using them too much.",exEn:"Taking a short break every hour is an effective tip to reduce eye strain.",exCn:"每小時休息一下是減少眼睛疲勞的有效方法。",cat:"health"},
   {w:"car horn",ipa:"/kɑːr hɔːrn/",pos:"n.",cn:"汽車喇叭",def:"A device in a car that makes a loud warning sound.",exEn:"The car horn is stuck and won't stop honking.",exCn:"汽車喇叭卡住了，一直響不停。",cat:"daily"},
@@ -2036,7 +2045,7 @@ const allTrans = [
   {p:"每小時休息一下是減少眼睛疲勞的有效方法。",a:"Taking a short break every hour is an effective tip to reduce eye strain.",h:"effective = 有效的, eye strain",kw:["effective","eye strain"],src:"20260811 補償用語與效率詞彙"},
   {p:"航空公司提供免費機票來補償航班延誤。",a:"The airline company offered a free ticket to compensate for the flight delay.",h:"compensate for = 補償",kw:["compensate"],src:"20260811 補償用語與效率詞彙"},
   {p:"使用兩個螢幕對工程師來說是有效率的配置，方便處理多項任務。",a:"Using two monitors is an efficient setup for engineers to deal with multiple tasks.",h:"efficient = 有效率的, V-ing 當主詞用 is",kw:["efficient"],src:"20260811 補償用語與效率詞彙"},
-  {p:"數位筆記軟體幫助學生有效率地搜尋學習筆記。",a:"Digital notebook app helps student to search their study notes efficiently.",h:"efficiently = 有效率地",kw:["efficiently"],src:"20260811 補償用語與效率詞彙"},
+  {p:"數位筆記軟體幫助學生有效率地搜尋學習筆記。",a:"Digital notebook apps help students to search their study notes efficiently.",h:"efficiently = 有效率地",kw:["efficiently"],src:"20260811 補償用語與效率詞彙"},
   {p:"他買花來彌補忘記太太生日的錯誤。",a:"He bought his wife flowers to make up for forgetting her birthday.",h:"make up for = 彌補某件事",kw:["make up for"],src:"20260811 補償用語與效率詞彙"},
   {p:"飯店給我們免費餐點，以補償房間太吵的問題。",a:"The hotel gave us a free meal to compensate for the noisy room.",h:"compensate for = 正式補償",kw:["compensate"],src:"20260811 補償用語與效率詞彙"},
   {p:"他因忘記太太的生日向她道歉。",a:"He apologized to his wife for forgetting her birthday.",h:"apologize to sb for sth",kw:["apologize"],src:"20260811 補償用語與效率詞彙"},
