@@ -193,6 +193,10 @@ tr:nth-child(even) td{background:#fdfbf8}
 .upg .u1{font-size:calc(15.5px * var(--fs));color:#6b6259;font-weight:600}
 .upg .u2{font-size:calc(18px * var(--fs));font-weight:800;margin-top:8px;display:flex;gap:8px;align-items:flex-start;line-height:1.6;color:#2b2438}
 .upg .un{font-size:calc(15px * var(--fs));color:#5b4a86;margin-top:9px;font-weight:600;line-height:1.75;background:#fff;border-radius:9px;padding:9px 11px}
+/* ---------- 影片播放器（16:9 自適應） ---------- */
+.ytwrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:12px;overflow:hidden;margin-top:11px}
+.ytwrap>div,.ytwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.spk.rbtn.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
 /* ---------- 文法重點深入說明 ---------- */
 .focus{background:#fff8f1;border:1.5px solid #f2d3b3;border-radius:14px;padding:16px;margin-bottom:14px}
 .focus h3{margin:0 0 4px;font-size:calc(19px * var(--fs));font-weight:800;color:var(--accent2);letter-spacing:.2px}
@@ -226,6 +230,7 @@ tr:nth-child(even) td{background:#fdfbf8}
 <main>
   <section id="v-daily"></section>
   <section id="v-read" hidden></section>
+  <section id="v-listen" hidden></section>
   <section id="v-vocab" hidden></section>
   <section id="v-gram" hidden></section>
   <section id="v-prog" hidden></section>
@@ -239,6 +244,7 @@ tr:nth-child(even) td{background:#fdfbf8}
 <nav>
   <button id="t-daily" class="on" onclick="go('daily')"><i>📅</i>今日</button>
   <button id="t-read" onclick="go('read')"><i>📖</i>閱讀</button>
+  <button id="t-listen" onclick="go('listen')"><i>🎧</i>聽力</button>
   <button id="t-vocab" onclick="go('vocab')"><i>🔤</i>單字卡</button>
   <button id="t-gram" onclick="go('gram')"><i>📐</i>文法</button>
   <button id="t-prog" onclick="go('prog')"><i>📊</i>進度</button>
@@ -251,6 +257,7 @@ tr:nth-child(even) td{background:#fdfbf8}
 <script src="data-grammar.js"></script>
 <script src="data-focus.js"></script>
 <script src="data-a2.js"></script>
+<script src="data-listen.js"></script>
 <script src="data-daily.js"></script>
 <script>
 /* ============================================================
@@ -270,7 +277,7 @@ const inBand = l => band().indexOf(l)>=0;
 let PROFILE=localStorage.getItem('b2lab_profile')||'anita';
 if(!PROFILES[PROFILE]) PROFILE='anita';
 const skey = () => 'b2lab.v1.'+PROFILE;
-const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:0.9, fs:1.15, updatedAt:0});
+const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:0.9, fs:1.15, listenDone:{}, vnotes:{}, updatedAt:0});
 
 /* ---------- 本機儲存 ---------- */
 let ST=blank();
@@ -329,6 +336,8 @@ function mergeState(remote){
   out.artDone=Object.assign({},remote.artDone||{},ST.artDone||{});
   out.gramDone=Object.assign({},remote.gramDone||{},ST.gramDone||{});
   out.dayNew=Object.assign({},remote.dayNew||{},ST.dayNew||{});
+  out.listenDone=Object.assign({},remote.listenDone||{},ST.listenDone||{});
+  out.vnotes=Object.assign({},remote.vnotes||{},ST.vnotes||{});
   out.streak=Math.max(ST.streak||0,remote.streak||0);
   return out;
 }
@@ -350,7 +359,7 @@ function cloudSubscribe(){
     const r=s.data()||{};
     if((r.updatedAt||0)<=(ST.updatedAt||0)) return;   // 自己剛推上去的不用理
     ST=mergeState(r); saveLocal(); cloudBadge(true);
-    if(!vQueue.length) RENDER[TAB] && RENDER[TAB]();   // 單字卡複習中不打斷
+    if(!vQueue.length && !(TAB==='listen' && (lsOpen||myVid))) RENDER[TAB] && RENDER[TAB]();   // 單字卡複習中不打斷
   },()=>cloudBadge(false));
 }
 function setProfile(p){
@@ -467,10 +476,11 @@ let TAB='daily';
 const RENDER={};
 function go(t){
   TAB=t;
-  ['daily','read','vocab','gram','prog'].forEach(k=>{
+  ['daily','read','listen','vocab','gram','prog'].forEach(k=>{
     $('v-'+k).hidden = (k!==t);
     $('t-'+k).classList.toggle('on',k===t);
   });
+  if(t!=='listen') destroyPlayer();
   hideGloss();
   window.scrollTo(0,0);
   RENDER[t] && RENDER[t]();
@@ -626,11 +636,14 @@ function quizHTML(qs,ns){
     + q.opts.map((o,j)=>'<button class="opt" id="o-'+ns+'-'+i+'-'+j+'" onclick="pick(\''+ns+'\','+i+','+j+','+q.ans+')">'+esc(o)+'</button>').join('')
     + '<div class="expl" id="e-'+ns+'-'+i+'">'+(q.ans!=null?'✔ 正解：'+esc(q.opts[q.ans])+'<br>':'')+esc(q.expl||'')+'</div></div>').join('');
 }
+/* 三種測驗共用：art=文章、gram=文法單元、listen=聽力課 */
+function qsOf(ns){ return ns==='art' ? (rdOpen&&rdOpen.questions)||[] : ns==='listen' ? (lsOpen&&lsOpen.questions)||[] : (CURG&&CURG.quiz)||[]; }
+function scoreBoxId(ns){ return ns==='art'?'quizScore':ns==='listen'?'lsquizScore':'gquizScore'; }
 function pick(ns,i,j,ans){
   const key=ns+'-'+i;
   if(QSTATE[key]!=null) return;
   QSTATE[key]=(j===ans);
-  const nOpts=(ns==='art'?rdOpen.questions:CURG.quiz)[i].opts.length;
+  const nOpts=qsOf(ns)[i].opts.length;
   for(let k=0;k<nOpts;k++){
     const b=$('o-'+ns+'-'+i+'-'+k); if(!b) continue;
     if(k===ans) b.classList.add('right');
@@ -638,14 +651,15 @@ function pick(ns,i,j,ans){
     b.disabled=true;
   }
   $('e-'+ns+'-'+i).classList.add('on');
-  const qs=(ns==='art'?rdOpen.questions:CURG.quiz);
+  const qs=qsOf(ns);
   const done=qs.filter((_,x)=>QSTATE[ns+'-'+x]!=null).length;
   if(done===qs.length){
     const c=qs.filter((_,x)=>QSTATE[ns+'-'+x]===true).length;
-    const box=$(ns==='art'?'quizScore':'gquizScore');
+    const box=$(scoreBoxId(ns));
     if(box) box.innerHTML='<div class="score">'+(c===qs.length?'🎉 全對！':'成績')+' '+c+' / '+qs.length+'（'+Math.round(c/qs.length*100)+'%）</div>';
     if(ns==='art'&&rdOpen){ ST.artDone[rdOpen.id]={correct:c,total:qs.length,date:today()}; save(); }
     if(ns==='gram'&&CURG){ ST.gramDone[CURG.id]={correct:c,total:qs.length,date:today()}; save(); }
+    if(ns==='listen'&&lsOpen){ if(!ST.listenDone)ST.listenDone={}; ST.listenDone[lsOpen.id]={correct:c,total:qs.length,date:today()}; save(); }
   }
 }
 window.pick=pick;
@@ -937,6 +951,16 @@ RENDER.prog=function(){
    +band().map(l=>{const b=byLv(l);return '<div style="margin-top:9px"><span class="lv '+lvCls(l)+'">'+l+'</span> <span class="muted">'+b.dn+' / '+b.tot+' 篇</span>'+bar(b.dn,b.tot)+'</div>';}).join('')
    +'</div>'
 
+   +(function(){
+      const pool=LESSONS.filter(l=>inBand(l.level));
+      const dn=pool.filter(l=>(ST.listenDone||{})[l.id]).length;
+      const ls=pool.map(l=>(ST.listenDone||{})[l.id]).filter(Boolean);
+      const lavg=ls.length?Math.round(ls.reduce((a,b)=>a+b.correct/b.total,0)/ls.length*100):0;
+      const nv=Object.keys(ST.vnotes||{}).length;
+      return '<div class="card"><h2 class="sec">🎧 聽力</h2>'
+       +'<div class="muted">完成 '+dn+' / '+pool.length+' 課 · 平均理解測驗 '+lavg+'%'+(nv?' · 自備影片筆記 '+nv+' 支':'')+'</div>'
+       +bar(dn,pool.length)+'</div>';
+    })()
    +'<div class="card"><h2 class="sec">📐 文法</h2>'
    +'<div class="muted">完成 '+gramN+' / '+ALL_GRAM.length+' 單元 · 平均練習 '+gavg+'%</div>'+bar(gramN,ALL_GRAM.length)
    +'<div class="tw" style="margin-top:10px"><table><tr><th>單元</th><th>程度</th><th>練習成績</th></tr>'
@@ -975,6 +999,191 @@ document.addEventListener('click',e=>{
   if(e.target.tagName==='W') return;
   hideGloss();
 });
+
+/* ============================================================
+   7.5 影片聽力（YouTube）
+   ============================================================ */
+const LESSONS=((window.LISTEN||{}).lessons||[]);
+// 聽力課的重點字也進字庫
+LESSONS.forEach(l=>(l.pre||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:'',cn:t.cn,def:t.def,exEn:'',exCn:'',src:'聽力：'+l.title})));
+
+let lsOpen=null, ytPlayer=null, ytQ=[], loopA=null, loopB=null, loopTimer=null, curRate=1;
+
+function ytLoad(cb){
+  if(window.YT&&window.YT.Player){cb();return;}
+  ytQ.push(cb);
+  if(!$('yt-api')){
+    const s=document.createElement('script');
+    s.id='yt-api'; s.src='https://www.youtube.com/iframe_api';
+    s.onerror=()=>{ ytQ.splice(0).forEach(f=>f(true)); };
+    document.head.appendChild(s);
+  }
+}
+window.onYouTubeIframeAPIReady=function(){ ytQ.splice(0).forEach(f=>f()); };
+
+function plainIframe(divId,vid){
+  const d=$(divId); if(!d) return;
+  d.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+vid+'?rel=0&playsinline=1" '
+    +'title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" '
+    +'allowfullscreen style="width:100%;height:100%;border:0"></iframe>';
+}
+function mountPlayer(divId,vid){
+  destroyPlayer(); curRate=1;
+  ytLoad(failed=>{
+    if(failed||!window.YT||!YT.Player){ plainIframe(divId,vid); return; }
+    try{
+      ytPlayer=new YT.Player(divId,{
+        videoId:vid,
+        playerVars:{rel:0,modestbranding:1,playsinline:1,cc_load_policy:1},
+        events:{onError:()=>plainIframe(divId,vid)}
+      });
+    }catch(e){ plainIframe(divId,vid); }
+  });
+}
+function destroyPlayer(){
+  stopLoop(); loopA=loopB=null;
+  if(ytPlayer&&ytPlayer.destroy){ try{ytPlayer.destroy();}catch(e){} }
+  ytPlayer=null;
+}
+function pReady(){ return ytPlayer&&ytPlayer.getCurrentTime; }
+function setRateY(r){
+  curRate=r;
+  if(ytPlayer&&ytPlayer.setPlaybackRate) ytPlayer.setPlaybackRate(r);
+  document.querySelectorAll('.rbtn').forEach(b=>b.classList.toggle('on',parseFloat(b.dataset.r)===r));
+}
+function fmt(t){ t=Math.max(0,Math.floor(t||0)); return Math.floor(t/60)+':'+String(t%60).padStart(2,'0'); }
+function markA(){ if(!pReady())return; loopA=ytPlayer.getCurrentTime(); if(loopB!=null&&loopB<=loopA)loopB=null; showLoop(); }
+function markB(){ if(!pReady())return; loopB=ytPlayer.getCurrentTime(); if(loopA==null)loopA=0; if(loopB<=loopA)loopB=loopA+2; showLoop(); startLoop(); }
+function clearLoop(){ loopA=loopB=null; stopLoop(); showLoop(); }
+function startLoop(){
+  stopLoop();
+  if(loopA==null||loopB==null||!pReady()) return;
+  ytPlayer.seekTo(loopA,true);
+  if(ytPlayer.playVideo) ytPlayer.playVideo();
+  loopTimer=setInterval(()=>{
+    if(!pReady()||loopB==null){ stopLoop(); return; }
+    if(ytPlayer.getCurrentTime()>=loopB) ytPlayer.seekTo(loopA,true);
+  },250);
+}
+function stopLoop(){ if(loopTimer){clearInterval(loopTimer);loopTimer=null;} }
+function showLoop(){
+  const el=$('loop-info'); if(!el) return;
+  el.textContent = (loopA==null&&loopB==null) ? '尚未設定循環區間'
+    : 'A ' + (loopA==null?'—':fmt(loopA)) + ' → B ' + (loopB==null?'—':fmt(loopB)) + (loopTimer?'（循環中）':'');
+}
+window.setRateY=setRateY; window.markA=markA; window.markB=markB; window.clearLoop=clearLoop; window.startLoop=startLoop;
+
+function playerBox(divId){
+  return '<div class="ytwrap"><div id="'+divId+'"></div></div>'
+   +'<div class="row" style="margin-top:9px">'
+   +'<span class="muted" style="font-size:calc(12.5px * var(--fs));font-weight:700">速度</span>'
+   +[0.5,0.75,1].map(r=>'<button class="spk rbtn'+(r===1?' on':'')+'" data-r="'+r+'" onclick="setRateY('+r+')">'+r+'x</button>').join('')
+   +'<button class="spk" onclick="markA()">設 A 點</button>'
+   +'<button class="spk" onclick="markB()">設 B 點並循環</button>'
+   +'<button class="spk" onclick="clearLoop()">取消循環</button>'
+   +'</div><div class="muted" id="loop-info" style="margin-top:5px;font-size:calc(12px * var(--fs))">尚未設定循環區間</div>';
+}
+
+RENDER.listen=function(){
+  const v=$('v-listen');
+  if(lsOpen){ v.innerHTML=lessonHTML(lsOpen); mountPlayer('yt-main',lsOpen.yt); showLoop(); return; }
+  destroyPlayer();
+  const list=LESSONS.filter(l=>inBand(l.level));
+  v.innerHTML='<div class="card"><h2 class="sec">🎧 影片聽力</h2>'
+   +'<div class="hint">每一課都有<b>聽前單字</b>、<b>關鍵句跟讀</b>與<b>理解測驗</b>。播放器可以調成 0.5x／0.75x 慢速，也可以設 A、B 兩點<b>反覆循環同一句</b>。影片需要網路，離線時看不了。</div>'
+   +'<div class="muted">共 '+list.length+' 課 · 影片來源 VOA Learning English（美國政府出版物，公共領域）</div></div>'
+   + list.map(l=>{
+     const d=(ST.listenDone||{})[l.id];
+     return '<div class="item" style="border-left-color:#c0392b" onclick="lsGo(\''+l.id+'\')">'
+      +'<div class="row" style="justify-content:space-between"><div class="t">🎬 '+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
+      +'<div class="tc">'+esc(l.titleCn)+'</div>'
+      +'<div class="meta"><span>🏷 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span><span>📐 '+esc(l.focus)+'</span>'
+      +(d?'<span class="done">✓ 已完成 '+d.correct+'/'+d.total+'</span>':'')+'</div>'
+      +'<div class="meta"><span>'+esc(l.series)+'</span></div></div>';
+   }).join('')
+   + myVideoCard();
+};
+function lsGo(id){ lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; go('listen'); }
+function lsClose(){ destroyPlayer(); lsOpen=null; RENDER.listen(); }
+window.lsGo=lsGo; window.lsClose=lsClose;
+
+function lessonHTML(l){
+  let h='<button class="back" onclick="lsClose()">← 回聽力課列表</button>'
+   +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
+   +'<h2 class="sec" style="margin:0">🎬 '+esc(l.title)+'</h2><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
+   +'<div class="muted">'+esc(l.titleCn)+' · ⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</div>'
+   + playerBox('yt-main')
+   +'<div class="ex" style="margin-top:11px"><div class="enote" style="font-size:calc(14.5px * var(--fs));font-weight:800">📐 文法焦點：'+esc(l.focus)+'</div>'
+   +'<div class="ecn" style="margin-top:5px;font-size:calc(14.5px * var(--fs))">'+esc(l.intro)+'</div></div>'
+   +'<div class="upg" style="margin-top:11px"><div class="un" style="margin-top:0">🎯 聽力策略：'+esc(l.tip)+'</div></div>'
+   +'<div class="muted" style="margin-top:9px;font-size:calc(12px * var(--fs))">'+esc(l.source)
+   +' · <a href="'+esc(l.sourceUrl)+'" target="_blank" rel="noopener">↗ 原始課程頁（含完整逐字稿）</a></div></div>';
+
+  if((l.pre||[]).length){
+    h+='<div class="card"><h2 class="sec">🔤 聽前先看這些字 ('+l.pre.length+')</h2>'
+     + l.pre.map(t=>'<div class="ex"><div class="een" style="font-size:calc(16px * var(--fs));font-weight:700">'+esc(t.w)+' '+spk(t.w)+'</div>'
+       +'<div style="font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2)">'+esc(t.ipa||'')+'</div>'
+       +'<div style="color:var(--accent2);font-weight:700;font-size:calc(15px * var(--fs))">'+esc(t.cn)+'</div>'
+       +'<div class="ecn">'+esc(t.def||'')+'</div></div>').join('')+'</div>';
+  }
+  if((l.keyLines||[]).length){
+    h+='<div class="card"><h2 class="sec">🗣 關鍵句跟讀</h2>'
+     +'<div class="hint">先按 🔊 聽一次，再自己念一次。看不懂就按「中譯」。</div>'
+     + l.keyLines.map((k,i)=>'<div class="ex"><div class="een" style="font-size:calc(16.5px * var(--fs));font-weight:700">'+esc(k.en)+' '+spk(k.en)+'</div>'
+       +'<div class="pbar" style="margin-top:5px"><button class="spk" onclick="kcn('+i+')">中譯</button></div>'
+       +'<div class="ecn" id="kc'+i+'" style="display:none;margin-top:4px">'+esc(k.cn)+'</div></div>').join('')+'</div>';
+  }
+  if((l.questions||[]).length){
+    h+='<div class="card"><h2 class="sec">✅ 聽力理解測驗</h2>'
+     +'<div class="hint">建議先只聽、不看逐字稿就作答，答完再回去對照。</div>'
+     + quizHTML(l.questions,'listen')+'<div id="lsquizScore"></div></div>';
+  }
+  h+='<div class="card" style="text-align:center"><button class="btn" onclick="lsClose()">完成，回列表</button></div>';
+  return h;
+}
+function kcn(i){ const e=$('kc'+i); if(e) e.style.display = e.style.display==='none' ? 'block' : 'none'; }
+window.kcn=kcn;
+
+/* ---------- 貼上自己的 YouTube 影片 ---------- */
+let myVid=null;
+function ytId(s){
+  s=String(s||'').trim();
+  if(/^[\w-]{11}$/.test(s)) return s;
+  const m=s.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/);
+  return m?m[1]:null;
+}
+function myVideoCard(){
+  return '<div class="card"><h2 class="sec">📎 貼上自己的 YouTube 影片</h2>'
+   +'<div class="hint">任何 YouTube 連結都可以。可以慢速播放、設 A/B 點反覆聽同一句，生字筆記會跟著雲端同步。<b>這個模式沒有理解測驗</b>——影片內容我無法預先知道。</div>'
+   +'<div class="row"><input id="myurl" placeholder="貼上網址，例如 https://www.youtube.com/watch?v=..." '
+   +'style="flex:1;min-width:180px;padding:9px 11px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:calc(14px * var(--fs))">'
+   +'<button class="btn" onclick="loadMyVid()">載入</button></div>'
+   +'<div id="myvid-err" class="muted" style="margin-top:7px;color:var(--bad);display:none">看不出這是 YouTube 連結，請確認網址是否完整。</div>'
+   +(myVid?'<div style="margin-top:12px">'+playerBox('yt-my')
+      +'<div class="muted" style="margin-top:11px;font-weight:700;font-size:calc(13px * var(--fs))">📝 生字筆記（自動儲存並同步）</div>'
+      +'<textarea id="vnote" oninput="saveNote()" rows="5" placeholder="把聽到的生字、聽不懂的句子記在這裡…" '
+      +'style="width:100%;margin-top:6px;padding:10px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:calc(14px * var(--fs));resize:vertical">'
+      +esc(((ST.vnotes||{})[myVid])||'')+'</textarea></div>':'')
+   +'</div>';
+}
+function loadMyVid(){
+  const el=$('myurl'); if(!el) return;
+  const id=ytId(el.value);
+  const err=$('myvid-err');
+  if(!id){ if(err) err.style.display='block'; return; }
+  if(err) err.style.display='none';
+  myVid=id; lsOpen=null; RENDER.listen();
+  setTimeout(()=>{ mountPlayer('yt-my',myVid); showLoop(); const t=$('yt-my'); if(t) t.scrollIntoView({block:'center'}); },30);
+}
+let noteTimer=null;
+function saveNote(){
+  const ta=$('vnote'); if(!ta||!myVid) return;
+  if(!ST.vnotes) ST.vnotes={};
+  ST.vnotes[myVid]=ta.value;
+  if(noteTimer) clearTimeout(noteTimer);
+  noteTimer=setTimeout(()=>save(),700);
+}
+window.loadMyVid=loadMyVid; window.saveNote=saveNote;
 
 /* ============================================================
    8. 安裝成 App
