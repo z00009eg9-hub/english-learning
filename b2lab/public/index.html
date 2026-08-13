@@ -120,9 +120,19 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 /* ---------- article / unit list ---------- */
 .item{
   background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;
-  padding:12px 14px;margin-bottom:10px;cursor:pointer;box-shadow:var(--shadow)
+  padding:12px 14px;margin-bottom:10px;cursor:pointer;box-shadow:var(--shadow);
+  position:relative;overflow:hidden
 }
 .item:active{background:var(--accent-soft)}
+/* 右上角紅色 NEW 緞帶（今日新內容用） */
+.item.new::after{
+  content:"NEW";position:absolute;top:13px;right:-32px;width:118px;
+  transform:rotate(45deg);text-align:center;letter-spacing:1.5px;
+  background:linear-gradient(135deg,#f2494a,#d21f1f);color:#fff;
+  font-size:calc(10.5px * var(--fs));font-weight:800;line-height:1.7;
+  box-shadow:0 2px 6px rgba(190,25,25,.35)
+}
+.item.new .t{padding-right:34px}
 .item .t{font-weight:700;font-size:calc(15.5px * var(--fs));margin-bottom:2px}
 .item .tc{font-size:calc(13px * var(--fs));color:var(--ink2)}
 .item .meta{font-size:calc(11.5px * var(--fs));color:var(--ink2);margin-top:7px;display:flex;gap:9px;flex-wrap:wrap;align-items:center}
@@ -1177,27 +1187,27 @@ RENDER.daily=function(){
 
   if(artToday){
     const d=ST.artDone[artToday.id];
-    h+='<div class="item" style="border-left-color:#3b82c4" onclick="dailyArt(\''+artToday.id+'\')">'
-     +'<div class="row" style="justify-content:space-between"><div class="t">'+(isToday(artToday)?'🆕 ':'')+'📖 '+esc(artToday.title)+'</div><span class="lv '+lvCls(artToday.level)+'">'+esc(artToday.level)+'</span></div>'
+    h+='<div class="item'+(isToday(artToday)?' new':'')+'" style="border-left-color:#3b82c4" onclick="dailyArt(\''+artToday.id+'\')">'
+     +'<div class="t">📖 '+esc(artToday.title)+'</div>'
      +'<div class="tc">'+esc(artToday.titleCn)+'</div>'
-     +'<div class="meta"><span>📅 '+esc(artToday.date||'')+'</span><span>🏷 '+esc(artToday.topic)+'</span><span>📝 '+artToday.words+' words</span>'
+     +'<div class="meta"><span class="lv '+lvCls(artToday.level)+'">'+esc(artToday.level)+'</span><span>📅 '+esc(artToday.date||'')+'</span><span>🏷 '+esc(artToday.topic)+'</span><span>📝 '+artToday.words+' words</span>'
      +(artToday.kind==='news'||artToday.sourceUrl?'<span>📰 真實新聞改寫</span>':'<span>✍️ 原創</span>')
      +(d?'<span class="done">✓ 已完成 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
   }
   if(gramToday){
     const d=ST.gramDone[gramToday.id];
-    h+='<div class="item" style="border-left-color:#8b5cf6" onclick="goUnit(\''+gramToday.id+'\')">'
-     +'<div class="row" style="justify-content:space-between"><div class="t">'+(isToday(gramToday)?'🆕 ':'')+'📐 '+esc(gramToday.titleCn)+'</div><span class="lv '+lvCls(gramToday.level)+'">'+esc(gramToday.level)+'</span></div>'
+    h+='<div class="item'+(isToday(gramToday)?' new':'')+'" style="border-left-color:#8b5cf6" onclick="goUnit(\''+gramToday.id+'\')">'
+     +'<div class="t">📐 '+esc(gramToday.titleCn)+'</div>'
      +'<div class="tc">'+esc(gramToday.title)+'</div>'
-     +'<div class="meta"><span>📅 '+esc(gramToday.date||'')+'</span>'+(gramToday.unitNo?'<span>Grammar in Use 進度 Unit '+gramToday.unitNo+'</span>':'')
+     +'<div class="meta"><span class="lv '+lvCls(gramToday.level)+'">'+esc(gramToday.level)+'</span><span>📅 '+esc(gramToday.date||'')+'</span>'+(gramToday.unitNo?'<span>Grammar in Use 進度 Unit '+gramToday.unitNo+'</span>':'')
      +(d?'<span class="done">✓ 練習 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
   }
   if(listenToday){
     const d=(ST.listenDone||{})[listenToday.id];
-    h+='<div class="item" style="border-left-color:#159AA6" onclick="lsGo(\''+listenToday.id+'\')">'
-     +'<div class="row" style="justify-content:space-between"><div class="t">🆕 🎧 '+esc(listenToday.title)+'</div><span class="lv '+lvCls(listenToday.level)+'">'+esc(listenToday.level)+'</span></div>'
+    h+='<div class="item new" style="border-left-color:#159AA6" onclick="lsGo(\''+listenToday.id+'\')">'
+     +'<div class="t">🎧 '+esc(listenToday.title)+'</div>'
      +'<div class="tc">'+esc(listenToday.titleCn)+'</div>'
-     +'<div class="meta"><span>📅 '+t+'</span><span>🎬 '+esc(listenToday.topic)+'</span><span>⏱ 約 '+listenToday.minutes+' 分鐘</span>'
+     +'<div class="meta"><span class="lv '+lvCls(listenToday.level)+'">'+esc(listenToday.level)+'</span><span>📅 '+t+'</span><span>🎬 '+esc(listenToday.topic)+'</span><span>⏱ 約 '+listenToday.minutes+' 分鐘</span>'
      +(d?'<span class="done">✓ 已完成 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
   }
   if(!artToday&&!gramToday){
