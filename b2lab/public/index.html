@@ -43,6 +43,14 @@ body{
 }
 .xlink b{font-size:calc(16px * var(--fs));font-weight:800;display:block}
 .xlink span{font-size:calc(13px * var(--fs));opacity:.95;display:block;margin-top:4px}
+/* ---------- 兩站搭配 ---------- */
+.pair{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:720px){ .pair{grid-template-columns:1fr 1fr} }
+.pairbox{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.pairbox .ph{color:#fff;font-weight:800;font-size:calc(15px * var(--fs));padding:8px 12px}
+.pairbox ul{margin:9px 0 10px;padding-left:22px;flex:1}
+.pairbox li{font-size:calc(14px * var(--fs));line-height:1.75;margin-bottom:3px}
+.pairbox .xlink{margin:0 10px 10px}
 a{color:var(--accent2)}
 /* ---------- header（刻意不套用 --fs，保持精簡，把空間留給內容） ---------- */
 header{
@@ -65,6 +73,12 @@ header .prof button{
 }
 header .prof button.on{background:#fff;color:var(--accent2);font-weight:700}
 header #sync-badge{font-size:14px;line-height:1;opacity:.9;display:none}
+header .hdlink{
+  font-size:11.5px;font-weight:800;text-decoration:none;color:#fff;white-space:nowrap;
+  background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.45);
+  border-radius:20px;padding:4px 10px
+}
+header .hdlink:active{background:rgba(255,255,255,.34)}
 /* ---------- tabs（同樣固定尺寸） ---------- */
 nav{
   position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);
@@ -317,6 +331,7 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
     <button id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
   </div>
   <span id="sync-badge" title="進度已雲端同步（跨裝置共用）">☁️</span>
+  <a class="hdlink" href="https://learning-english-notes.web.app" title="Speak Up! 課堂筆記 · 口說練習 · 每日測驗">🍎🐻 Speak&nbsp;Up ↗</a>
 </header>
 
 <main>
@@ -1646,9 +1661,30 @@ window.doInstall=doInstall; window.iosHelp=iosHelp; window.otherHelp=otherHelp;
 
 const OLD_SITE='https://learning-english-notes.web.app';
 function oldSiteCard(){
-  return '<a class="xlink" href="'+OLD_SITE+'" target="_blank" rel="noopener">'
-   +'<b>🍎🐻 Speak Up! 課堂筆記網站</b>'
-   +'<span>課堂逐字筆記 · 每日測驗 · 口說跟讀 · 影片字幕 — 點這裡切換過去 ↗</span></a>';
+  return '<div class="card"><h2 class="sec">🤝 兩個網站怎麼搭配</h2>'
+   +'<div class="hint">同一套課堂筆記，兩邊分工不同：<b>這裡練「看懂」</b>，<b>Speak Up 練「說出來」</b>。兩邊的進度都各自雲端同步。</div>'
+   +'<div class="pair">'
+   +'<div class="pairbox">'
+     +'<div class="ph" style="background:linear-gradient(135deg,#f0964f,#d9691f)">📚 B2 Read（這裡）</div>'
+     +'<ul><li>📅 今日：每天一篇新文章＋一個文法單元</li>'
+     +'<li>📖 閱讀：61 篇分級文章，點字查中文</li>'
+     +'<li>🎧 聽力：影片＋逐字稿，可慢速與單句循環</li>'
+     +'<li>🔤 單字卡：618 字間隔複習</li>'
+     +'<li>📐 文法：19 個單元＋練習題</li></ul>'
+   +'</div>'
+   +'<div class="pairbox">'
+     +'<div class="ph" style="background:linear-gradient(135deg,#159AA6,#0E6E78)">🍎🐻 Speak Up!</div>'
+     +'<ul><li>🎤 說出來：看中文開口說，麥克風給分</li>'
+     +'<li>🔁 跟讀模仿：聽一句馬上複誦</li>'
+     +'<li>🗣️ 單字口說：把生字變成能講的字</li>'
+     +'<li>💬 情境對話：一來一往，說錯即時糾正</li>'
+     +'<li>📝 每日測驗：綜合／聽力／閱讀</li></ul>'
+     +'<a class="xlink" style="margin:10px 0 0" href="'+OLD_SITE+'"><b>前往 Speak Up! ↗</b>'
+     +'<span>把今天讀到的句子拿去開口說一次</span></a>'
+   +'</div></div>'
+   +'<div class="upg" style="margin-top:12px"><div class="un" style="margin-top:0">'
+   +'💡 建議順序：在這裡讀完今日文章與文法 → 到 Speak Up 用「說出來」把今天的句子講一遍 → 回來清掉單字卡到期的字。'
+   +'</div></div></div>';
 }
 
 /* ---------- Service Worker（可安裝成 app、離線也能讀） ---------- */

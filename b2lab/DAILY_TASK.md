@@ -117,6 +117,63 @@ date +%Y-%m-%d                # 今天日期（用 UTC 即可，排程在當地�
 寫作風格要求：解說用中文、例句用英文＋中譯、語氣像家教在講重點，不要像文法書條列。
 一定要說明「為什麼會錯」，不要只說「這樣才對」。
 
+### 3.5 為今天的兩篇文章各產生一張橫幅圖
+
+**不要手寫 SVG**，用現成的產生器（裡面有 68 個圖示與 7 套配色，風格才會跟其他文章一致）：
+
+```bash
+cd b2lab
+node tools/genart.js --list          # 先看有哪些配色與圖示可用
+```
+
+寫一個暫時的規格檔（兩篇各一筆，id 要跟文章的 id 完全一致）：
+
+```json
+{
+  "d20260814a2": {"p":"teal", "i":["store","bottle","clock"],
+    "en":"AT THE MORNING MARKET", "cn":"在早市",
+    "tag":"one short sentence in English",
+    "cap":"中文圖說：說明圖裡的資訊來自文章哪一句"},
+  "d20260814":   {"p":"blue", "i":["plane","phone","people"],
+    "en":"...", "cn":"...", "tag":"...", "cap":"..."}
+}
+```
+
+規則：
+- `p` 配色依主題挑：天災／夜晚用 `night`、健康用 `rose`、金錢與環境用 `green`、
+  職場與科技用 `blue` 或 `teal`、生活與飲食用 `warm`、心理與抽象用 `violet`。
+  **同一天的兩篇不要用同一套配色。**
+- `i` 挑 **3 個**能代表文章內容的圖示（只能用 `--list` 列出來的名稱）。
+- `en` 是英文標題，太長會自動縮小字級，但**盡量不要超過 30 個字元**。
+- `cap` 必須說明「圖裡的資訊出自文章哪裡」，不要寫成純裝飾的句子。
+
+產生並併入：
+
+```bash
+node tools/genart.js /tmp/spec-today.json /tmp/art-today.txt
+# 把 /tmp/art-today.txt 的內容貼進 public/data-art.js：
+# 在最後一筆的 } 後面補上逗號，再把內容貼在結尾的 }; 之前
+```
+
+驗證（**一定要跑**）：
+
+```bash
+cd b2lab/public
+node -e "global.window={};require('./data-art.js');
+const A=window.ART, ids=Object.keys(A);
+console.log('總圖數', ids.length);
+ids.forEach(k=>{const v=A[k];
+  if(!/^<svg/.test(v.svg.trim())) throw k+' 不是 SVG';
+  if(!v.cap) throw k+' 缺圖說';
+  if(/undefined|NaN/.test(v.svg)) throw k+' 有未展開的值';
+  const o=(v.svg.match(/<(svg|g|text)\b/g)||[]).length, c=(v.svg.match(/<\/(svg|g|text)>/g)||[]).length;
+  if(o!==c) throw k+' 標籤沒配對';
+});
+console.log('OK');"
+```
+
+⚠️ 只能畫**橫幅**。文章裡如果有明確數字想畫成圖表，不要自己編數據——沒有把握就只做橫幅。
+
 ### 4. 更新 `b2lab/daily-state.json`
 
 - `lastRun` = 今天
@@ -163,7 +220,7 @@ node -e "JSON.parse(require('fs').readFileSync('../daily-state.json','utf8'));co
 ### 6. commit 並 push
 
 ```bash
-git add b2lab/public/data-daily.js b2lab/daily-state.json
+git add b2lab/public/data-daily.js b2lab/public/data-art.js b2lab/daily-state.json
 git commit -m "Daily content YYYY-MM-DD: <文章標題> + <文法單元中文名>"
 git push origin main
 ```
@@ -176,5 +233,6 @@ push 之後 `.github/workflows/deploy-b2lab.yml` 會自動部署到 https://engl
 - **Tom（A2）**那篇的標題、主題、字數
 - **Anita** 那篇的標題、程度、類型（新聞改寫／原創）、字數，新聞改寫要附原文網址
 - 文法單元名稱與 syllabus 編號、`usedUnits` 還剩幾個單元沒教
+- 兩張橫幅各用了哪套配色與哪三個圖示
 
 若任何步驟失敗，說清楚卡在哪一步、不要留下半套的檔案（寧可完全不 commit，也不要只寫一篇就推上去）。
