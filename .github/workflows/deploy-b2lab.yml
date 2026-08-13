@@ -1,4 +1,4 @@
-name: Deploy B2 Lab to Firebase Hosting
+name: Deploy B2 Read to Firebase Hosting
 
 # 每日排程 agent 產生新內容並 push 之後，這個 workflow 會自動把 b2lab 部署上線。
 # 需要一個 repo secret：FIREBASE_SERVICE_ACCOUNT_ENGLISH_B2_LAB
