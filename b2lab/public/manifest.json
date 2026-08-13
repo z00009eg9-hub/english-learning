@@ -1,6 +1,6 @@
 {
   "name": "English B2 Lab — 閱讀 · 單字 · 文法",
-  "short_name": "B2 Lab",
+  "short_name": "B2 Read",
   "description": "閱讀、單字間隔複習與文法教材，從 B1 推進到 B2。每天自動更新一篇文章與一個文法單元。",
   "start_url": "./index.html",
   "scope": "./",
@@ -10,8 +10,23 @@
   "theme_color": "#e8813a",
   "lang": "zh-Hant",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }

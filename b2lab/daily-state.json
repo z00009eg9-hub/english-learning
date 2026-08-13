@@ -1,13 +1,23 @@
 {
-  "_note": "每日排程用的狀態檔。usedUnits = syllabus.json 裡已經教過的單元編號（含網站原本的 g01–g15）；usedSources = 已經改寫過的新聞網址，避免重複；lastRun = 最後一次成功產生的日期。",
+  "_note": "每日排程用的狀態檔。usedUnits = 已經產生過每日單元的編號（依使用者要求從 Unit 1 依序走完 145 個；只保留 9 是因為 2026-08-13 已經發布過）；usedSources = 已改寫過的新聞網址；lastRun = 最後一次成功產生的日期。",
   "lastRun": "2026-08-13",
   "nextKind": "original",
-  "usedUnits": [1,2,3,4,5,6,7,8,9,11,12,13,14,15,18,27,28,29,30,36,38,39,40,41,42,43,44,46,47,48,61,68,92,93,94,95,96,97,98,105,106,107,108,113,119],
+  "usedUnits": [
+    9
+  ],
   "usedSources": [
     "https://www.taipeitimes.com/News/front/archives/2026/08/08/2003862135"
   ],
   "usedTitles": [
     "A Sea Warning, but No Landfall"
   ],
-  "topicRotation": ["天災與天氣","健康與醫療","旅遊與交通","職場與面試","金錢與居住","食物與生活","學習與心理"]
+  "topicRotation": [
+    "天災與天氣",
+    "健康與醫療",
+    "旅遊與交通",
+    "職場與面試",
+    "金錢與居住",
+    "食物與生活",
+    "學習與心理"
+  ]
 }
