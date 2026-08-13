@@ -250,6 +250,7 @@ tr:nth-child(even) td{background:#fdfbf8}
 <script src="data-reading.js"></script>
 <script src="data-grammar.js"></script>
 <script src="data-focus.js"></script>
+<script src="data-a2.js"></script>
 <script src="data-daily.js"></script>
 <script>
 /* ============================================================
@@ -487,12 +488,16 @@ const NOTE_ARTS=(NOTES.articles||[]).map((a,i)=>({
   paras:a.paras||[], questions:a.questions||[], target:[], upgrade:[],
   hi:(a.highlightWords||[]), kind:'note'
 }));
-const ORIG_ARTS=(READING||[]).map(a=>Object.assign({},a,{kind:'orig',hi:(a.target||[]).map(t=>t.w)}));
+const A2_ARTS=(((window.A2||{}).articles)||[]).map(a=>Object.assign({},a,{kind:'orig',hi:(a.target||[]).map(t=>t.w)}));
+const A2_GRAM=(((window.A2||{}).grammar)||[]);
+const ORIG_ARTS=A2_ARTS.concat((READING||[]).map(a=>Object.assign({},a,{kind:'orig',hi:(a.target||[]).map(t=>t.w)})));
+// A2 的重點字也要進字庫
+A2_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:'',src:'A2 閱讀：'+a.title})));
 // 每日自動產生的文章：只顯示日期已到的（未來日期先藏起來）
 const DAILY_ALL=((window.DAILY||{}).articles||[]).map(a=>Object.assign({},a,{kind:'daily',hi:(a.target||[]).map(t=>t.w)}));
 const DAILY_ARTS=DAILY_ALL.filter(a=>!a.date||a.date<=today()).sort((x,y)=>(y.date||'').localeCompare(x.date||''));
 const DAILY_GRAM=(((window.DAILY||{}).grammar)||[]).filter(g=>!g.date||g.date<=today()).sort((x,y)=>(y.date||'').localeCompare(x.date||''));
-const ALL_GRAM=DAILY_GRAM.concat(GRAMMAR);
+const ALL_GRAM=DAILY_GRAM.concat(A2_GRAM,GRAMMAR);
 const ALL_ARTS=DAILY_ARTS.concat(ORIG_ARTS,NOTE_ARTS);
 // 每日文章的重點字也要進字庫
 DAILY_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:'',src:'每日文章：'+a.title})));
@@ -503,6 +508,7 @@ RENDER.read=function(){
   if(rdOpen){ v.innerHTML=readerHTML(rdOpen); return; }
   const list=ALL_ARTS.filter(a=>
     (rdFilter.kind==='all'||a.kind===rdFilter.kind) &&
+    inBand(a.level) &&
     (rdFilter.level==='all'||a.level===rdFilter.level));
   const kb=[['orig','✍️ 原創分級 '+ORIG_ARTS.length],['daily','📅 每日新文章 '+DAILY_ARTS.length],['note','📓 筆記文章 '+NOTE_ARTS.length],['all','全部']];
   const lb=[['all','全部程度']].concat(band().map(l=>[l,l]));
@@ -559,9 +565,10 @@ function readerHTML(a){
   }
   h+=focusHTML(a.id);
   if((a.upgrade||[]).length){
-    h+='<div class="card"><h2 class="sec">⬆️ B1 → B2 句型升級</h2>'
-     + a.upgrade.map(u=>'<div class="upg"><div class="u1">B1：'+esc(u.b1)+'</div>'
-       +'<div class="u2">B2：'+esc(u.b2)+' '+spk(u.b2)+'</div>'
+    const lo=a.upFrom||'B1', hi=a.upTo||'B2';
+    h+='<div class="card"><h2 class="sec">⬆️ '+lo+' → '+hi+' 句型升級</h2>'
+     + a.upgrade.map(u=>'<div class="upg"><div class="u1">'+lo+'：'+esc(u.b1)+'</div>'
+       +'<div class="u2">'+hi+'：'+esc(u.b2)+' '+spk(u.b2)+'</div>'
        +'<div class="un">💡 '+esc(u.note)+'</div></div>').join('')
      +'</div>';
   }
@@ -840,14 +847,16 @@ function gramHTML(g){
    ============================================================ */
 RENDER.daily=function(){
   const t=today();
-  const artToday=DAILY_ARTS.find(a=>a.date===t)||DAILY_ARTS[0]||null;
+  const mineArts=DAILY_ARTS.filter(a=>inBand(a.level));
+  const pool=mineArts.length?mineArts:DAILY_ARTS;
+  const artToday=pool.find(a=>a.date===t)||pool[0]||null;
   const gramToday=DAILY_GRAM.find(g=>g.date===t)||DAILY_GRAM[0]||null;
   const isToday=x=>x&&x.date===t;
   let h=installCard()
    +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
    +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+' · '+(GOALS[PROFILE]||'')+'</div>'
    +'<div class="hint">每天自動更新<b>一篇文章</b>與<b>一個文法單元</b>。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進，不會重複。</div>'
-   +'<div class="stats"><div class="stat"><b>'+DAILY_ARTS.length+'</b><span>累積每日文章</span></div>'
+   +'<div class="stats"><div class="stat"><b>'+pool.length+'</b><span>累積每日文章</span></div>'
    +'<div class="stat"><b>'+DAILY_GRAM.length+'</b><span>累積每日文法</span></div>'
    +'<div class="stat"><b>'+(ST.streak||1)+'</b><span>連續學習天數</span></div>'
    +'<div class="stat"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'</b><span>今天該複習的字</span></div></div></div>';
@@ -881,9 +890,9 @@ RENDER.daily=function(){
    +'<li style="margin-bottom:7px">讀今日文法單元並做練習題（約 10 分鐘）</li>'
    +'<li>最後去「單字卡」清掉今天到期的字</li></ol></div>';
 
-  if(DAILY_ARTS.length>1||DAILY_GRAM.length>1){
+  if(pool.length>1||DAILY_GRAM.length>1){
     h+='<div class="card"><h2 class="sec">🗂 過去的每日內容</h2>'
-     + DAILY_ARTS.slice(artToday&&isToday(artToday)?1:0).map(a=>'<div class="item" onclick="dailyArt(\''+a.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📖 '+esc(a.title)+'</div><div class="meta"><span>📅 '+esc(a.date||'')+'</span><span>'+esc(a.titleCn)+'</span></div></div>').join('')
+     + pool.slice(artToday&&isToday(artToday)?1:0).map(a=>'<div class="item" onclick="dailyArt(\''+a.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📖 '+esc(a.title)+'</div><div class="meta"><span>📅 '+esc(a.date||'')+'</span><span>'+esc(a.titleCn)+'</span></div></div>').join('')
      + DAILY_GRAM.slice(gramToday&&isToday(gramToday)?1:0).map(g=>'<div class="item" onclick="goUnit(\''+g.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📐 '+esc(g.titleCn)+'</div><div class="meta"><span>📅 '+esc(g.date||'')+'</span><span>'+esc(g.title)+'</span></div></div>').join('')
      +'</div>';
   }

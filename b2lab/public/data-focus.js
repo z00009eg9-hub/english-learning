@@ -5,6 +5,162 @@
 // ============================================================
 window.FOCUS = {
 
+/* ===================== A2 文章（Tom） ===================== */
+
+a01:{ unit:"ga01", title:"現在簡單式：第三人稱要加 -s",
+  formula:"I / You / We / They + 原形　|　He / She / It + 動詞 -s",
+  points:[
+    "現在簡單式講的是「習慣」和「一直都是這樣的事」，不是「現在正在做」。I get up at six thirty. 意思是每天都這樣。",
+    "中文沒有動詞變化，所以最容易漏的就是第三人稱的 -s。只要主詞可以換成 he / she / it，動詞就要加 -s。",
+    "否定和疑問要借 do / does，而且借了之後動詞回原形：He does not eat（不是 eats）／ Does he eat?",
+    "have 是特例：I have / He has。"
+  ],
+  examples:[
+    {en:"My husband gets up at seven.",cn:"我先生七點起床。",note:"He → gets"},
+    {en:"He does not eat breakfast at home.",cn:"他不在家吃早餐。",note:"does not + 原形"},
+    {en:"The bus takes twenty minutes.",cn:"公車要二十分鐘。",note:"The bus = It → takes"}
+  ],
+  traps:[
+    {bad:"He get up at seven.",good:"He gets up at seven.",why:"第三人稱單數一定要加 -s。"},
+    {bad:"She doesn't likes coffee.",good:"She doesn't like coffee.",why:"已經有 doesn't，動詞要回原形。"}
+  ]
+},
+
+a02:{ unit:"ga03", title:"可數與不可數；some 和 any",
+  formula:"some（肯定句）　|　any（否定句、疑問句）",
+  points:[
+    "可數名詞可以加 s、可以配數字：two bottles、three eggs。不可數名詞不行：milk、rice、water、money、time。",
+    "不可數要算數量就借容器或單位：two bottles of water、a bowl of rice、a piece of advice。",
+    "肯定句用 some（I need some milk），否定和疑問用 any（They didn't have any rice / Do you have any questions?）。",
+    "但客氣的邀請和請求要用 some：Would you like some tea? 這是固定的例外。"
+  ],
+  examples:[
+    {en:"I needed some milk and two bottles of water.",cn:"我需要一些牛奶和兩瓶水。",note:"不可數用 some，可數用數字＋複數"},
+    {en:"They did not have any rice.",cn:"他們沒有米。",note:"否定句 → any"},
+    {en:"Would you like some hot tea?",cn:"你想喝點熱茶嗎？",note:"客氣邀請的例外"}
+  ],
+  traps:[
+    {bad:"I need two milks.",good:"I need two bottles of milk.",why:"milk 不可數，要借單位。"},
+    {bad:"Do you have some questions?",good:"Do you have any questions?",why:"一般疑問句用 any。"}
+  ]
+},
+
+a03:{ unit:"g02", title:"現在進行式 vs. 現在簡單式",
+  formula:"現在正在做 → am / is / are + V-ing　|　習慣 → 現在簡單式",
+  points:[
+    "看到 now、right now、at the moment、today，通常就是現在進行式：It is raining now.",
+    "看到 always、usually、often、every day、in summer，就是現在簡單式：In summer it rains a lot.",
+    "同一個動詞兩種都能用，意思差很多：I am wearing a jacket（今天穿著）vs. I wear a jacket in winter（冬天都會穿）。",
+    "V-ing 的拼法：一般加 -ing；字尾 e 去掉再加（make → making）；短母音＋單子音要雙寫（run → running）。"
+  ],
+  examples:[
+    {en:"It is raining now, so I am looking for my umbrella.",cn:"現在正在下雨，所以我在找雨傘。",note:"兩個都是現在進行式"},
+    {en:"In summer it rains a lot in Taiwan.",cn:"夏天台灣常下雨。",note:"習慣 → 簡單式"},
+    {en:"I am wearing a light jacket today.",cn:"我今天穿了薄外套。",note:"today → 進行式"}
+  ],
+  traps:[
+    {bad:"It rains now.",good:"It is raining now.",why:"now 表示此刻正在發生，要用進行式。"},
+    {bad:"I am wear a jacket.",good:"I am wearing a jacket.",why:"be 動詞後面要用 V-ing，不是原形。"}
+  ]
+},
+
+a04:{ unit:"ga02", title:"過去簡單式：was / were 與 -ed",
+  formula:"be 動詞 → was / were　|　一般動詞 → 加 -ed（或不規則變化）",
+  points:[
+    "I / He / She / It 配 was；You / We / They 配 were。看到 yesterday、last night、two days ago 就是過去式。",
+    "一般動詞多半加 -ed（call → called、wait → waited），但最常用的字往往是不規則的：have → had、give → gave、sleep → slept。",
+    "否定和疑問借 did，借了之後動詞回原形：I didn't go（不是 didn't went）／ Did you eat?（不是 Did you ate?）",
+    "be 動詞不用 did：Was she tired?／She wasn't tired."
+  ],
+  examples:[
+    {en:"Yesterday I was very tired.",cn:"昨天我很累。",note:"I → was"},
+    {en:"The doctor gave me some medicine.",cn:"醫生給了我一些藥。",note:"give → gave，不規則"},
+    {en:"I didn't finish the noodles.",cn:"我沒吃完麵。",note:"didn't + 原形"}
+  ],
+  traps:[
+    {bad:"Yesterday I am tired.",good:"Yesterday I was tired.",why:"有 yesterday 就要用過去式 was。"},
+    {bad:"Did you ate lunch?",good:"Did you eat lunch?",why:"Did 後面接原形。"}
+  ]
+},
+
+a05:{ unit:"ga03", title:"there is / there are 與時間介系詞",
+  formula:"單數或不可數 → There is　|　複數 → There are",
+  points:[
+    "中文說「某個地方有…」，英文用 there is / there are，不能用 have。✗ There have a bus stop.",
+    "單複數看緊接在後面的那個名詞：There is a bus stop.／There are three buses.",
+    "過去式是 There was / There were：There were many people at the stop.",
+    "時間介系詞三個一組記：具體時刻用 at（at 8:10）；月份、年、早上下午用 in（in the morning）；星期和日期用 on（on Monday）。"
+  ],
+  examples:[
+    {en:"There is a bus stop in front of my building.",cn:"我家大樓前面有一個公車站。",note:"單數 → There is"},
+    {en:"There were many people at the stop.",cn:"公車站有很多人。",note:"過去＋複數 → There were"},
+    {en:"The bus came at eight ten on Monday morning.",cn:"公車星期一早上八點十分來。",note:"at 時刻、on 星期"}
+  ],
+  traps:[
+    {bad:"There have three buses.",good:"There are three buses.",why:"「某處有」用 there is / there are。"},
+    {bad:"I arrived in eight forty.",good:"I arrived at eight forty.",why:"具體時刻用 at。"}
+  ]
+},
+
+a06:{ unit:"g04", title:"現在完成式入門：have / has + 過去分詞",
+  formula:"have / has + 過去分詞（p.p.）",
+  points:[
+    "現在完成式表示「已經做完了，而且對現在有影響」。I have already washed the floor. 意思是地板現在是乾淨的。",
+    "he / she / it 用 has，其他用 have。過去分詞規則變化跟過去式一樣加 -ed，但不規則要另外記：take → taken、do → done、eat → eaten。",
+    "already 用在肯定句（放在 have 和動詞中間），yet 用在否定與疑問句（放句尾）。",
+    "兩個動作共用一個 have 就好：I have washed the floor and cleaned the bathroom."
+  ],
+  examples:[
+    {en:"I have already washed the floor.",cn:"我已經洗好地板了。",note:"already 放中間"},
+    {en:"My son has taken out the rubbish.",cn:"我兒子把垃圾拿出去了。",note:"He → has；take → taken"},
+    {en:"My husband has not finished the kitchen yet.",cn:"我先生還沒把廚房弄完。",note:"yet 放句尾"}
+  ],
+  traps:[
+    {bad:"I have already wash the floor.",good:"I have already washed the floor.",why:"have 後面要用過去分詞。"},
+    {bad:"He have taken out the rubbish.",good:"He has taken out the rubbish.",why:"第三人稱單數用 has。"}
+  ]
+},
+
+a07:{ unit:null, title:"would like 與 Can I...? 的禮貌說法",
+  formula:"I would like + 名詞 / to + 原形　|　Can I / Could you + 原形?",
+  points:[
+    "I want 在英文裡偏直接，點餐、購物、請求時用 I would like（口語常縮成 I'd like）會客氣很多。",
+    "would like 後面接名詞或 to + 原形：I would like beef noodles.／I would like to order.",
+    "請求別人做事用 Can you...? 或更客氣的 Could you...?；問自己可不可以用 Can I...?",
+    "句尾加 please 是最省力的加分方式，幾乎任何請求都可以加。"
+  ],
+  examples:[
+    {en:"I would like beef noodles, please.",cn:"我想要一份牛肉麵，麻煩你。",note:"would like + 名詞"},
+    {en:"Can I have it less spicy?",cn:"可以少辣一點嗎？",note:"Can I 問自己可否"},
+    {en:"Could you bring me a box, please?",cn:"可以給我一個盒子嗎？",note:"Could 比 Can 更客氣"}
+  ],
+  traps:[
+    {bad:"I would like to beef noodles.",good:"I would like beef noodles.",why:"後面接名詞時不要 to；接動詞才用 to。"},
+    {bad:"I want you give me a box.",good:"Could you give me a box, please?",why:"請求用 Could you + 原形，不要用 I want you。"}
+  ]
+},
+
+a08:{ unit:null, title:"can / cannot 與 will",
+  formula:"can / cannot + 原形　|　will / will not + 原形",
+  points:[
+    "can 表示「能夠、可以」，cannot（口語 can't）是否定。後面永遠接原形，不加 to、不加 -s。",
+    "過去式是 could / could not：I could not go to work this morning.",
+    "will 表示「決定要做」或「承諾」，也接原形：I will finish the report tonight.",
+    "兩個動作共用一個 will 就好：I will finish it and send it before nine."
+  ],
+  examples:[
+    {en:"I cannot come to work today.",cn:"我今天不能來上班。",note:"cannot + 原形"},
+    {en:"Can you work from home this afternoon?",cn:"你下午可以在家工作嗎？",note:"Can + 主詞 + 原形"},
+    {en:"I will finish the report tonight.",cn:"我今晚會完成報告。",note:"will + 原形"}
+  ],
+  traps:[
+    {bad:"I will to finish the report.",good:"I will finish the report.",why:"will 後面不加 to。"},
+    {bad:"She can goes home early.",good:"She can go home early.",why:"can 後面用原形，不加 -s。"}
+  ]
+},
+
+/* ===================== B1 / B1+ / B2 文章（Anita） ===================== */
+
 r01:{ unit:"g03", title:"過去簡單式 vs. 過去進行式",
   formula:"While + 主詞 + was/were + V-ing, 主詞 + 過去簡單式",
   points:[
