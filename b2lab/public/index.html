@@ -762,6 +762,23 @@ function magTokenize(text,tmap,used){
   }
   return out+tokenize(text.slice(last),null);
 }
+/* 閱讀內文專用：一般字只當純文字（點了不跳字卡，交給整句朗讀）；
+   只有橘色重點字保留點擊查詢＋單獨發音，並擋掉冒泡避免同時朗讀整句 */
+function magTokenizeRead(text,tmap,used){
+  if(!tmap||!tmap.keys.length) return esc(text);
+  const re=new RegExp('\\b('+tmap.keys.map(reEsc).join('|')+')(s|es|ed|ing|d)?\\b','ig');
+  let out='',last=0,m;
+  while((m=re.exec(text))){
+    const key=m[1].toLowerCase();
+    const n=tmap.num[key];
+    if(!n||used.has(key)) continue;
+    used.add(key);
+    out+=esc(text.slice(last,m.index));
+    out+='<b><w class="tgt" onclick="showGloss(this.textContent);event.stopPropagation()">'+esc(m[0])+'</w><sup class="tno">'+n+'</sup></b>';
+    last=m.index+m[0].length;
+  }
+  return out+esc(text.slice(last));
+}
 
 /* 補充詞彙：文章裡出現、又在課堂字庫裡、但不是本篇重點字的字 */
 function extraWords(a,tgtSet){
@@ -886,7 +903,7 @@ function readerHTML(a){
    +'<button class="btn ghost" onclick="readAll()">🔊 朗讀全文</button></div>'
    +'<div id="paras">'+a.paras.map((p,i)=>{
       const enHtml=splitSentences(p.en).map(s=>
-        '<span class="sent" title="點這句朗讀" onclick="saySent(this)" data-t="'+esc(s)+'">'+magTokenize(s,tmap,used)+'</span>'
+        '<span class="sent" title="點這句朗讀" onclick="saySent(this)" data-t="'+esc(s)+'">'+magTokenizeRead(s,tmap,used)+'</span>'
       ).join(' ');
       return '<div class="para" id="p'+i+'"><div class="en">'+enHtml+'</div>'
      +'<div class="pbar">'+spk(p.en,'整段')+'<button class="spk" onclick="togCn('+i+')">中譯</button></div>'
