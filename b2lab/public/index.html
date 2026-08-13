@@ -191,6 +191,24 @@ tr:nth-child(even) td{background:#fdfbf8}
 .stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 8px;text-align:center}
 .stat b{display:block;font-size:calc(23px * var(--fs));color:var(--accent2);line-height:1.2}
 .stat span{font-size:calc(11.5px * var(--fs));color:var(--ink2)}
+/* ---------- 每日打卡日曆 ---------- */
+.calhd{display:flex;align-items:center;justify-content:space-between;margin:4px 0 10px}
+.calhd .m{font-weight:800;font-size:calc(15px * var(--fs))}
+.calnav{background:#fff;border:1px solid var(--line);border-radius:9px;width:32px;height:32px;
+  font-size:16px;color:var(--ink);cursor:pointer;line-height:1}
+.calnav:disabled{opacity:.35;cursor:default}
+.calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.calgrid .wd{text-align:center;font-size:calc(11px * var(--fs));color:var(--ink2);padding-bottom:2px}
+.cell{aspect-ratio:1;border-radius:9px;border:1px solid var(--line);background:#fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-size:calc(12px * var(--fs));color:var(--ink2);position:relative}
+.cell.empty{border:0;background:transparent}
+.cell.done{background:linear-gradient(135deg,#f7bd76,#ef9a4f);border-color:#e8813a;color:#fff;font-weight:700}
+.cell.done .dot{font-size:calc(11px * var(--fs));line-height:1}
+.cell.today{outline:2px solid var(--accent2);outline-offset:1px}
+.cell.future{opacity:.4}
+.callegend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:calc(12px * var(--fs));color:var(--ink2)}
+.callegend i{display:inline-block;width:14px;height:14px;border-radius:5px;vertical-align:-2px;margin-right:5px}
 /* ---------- grammar ---------- */
 .gsec{margin-bottom:16px}
 .gsec h3{font-size:calc(15px * var(--fs));margin:0 0 7px;color:var(--accent2);border-left:3px solid var(--accent);padding-left:8px}
@@ -1144,10 +1162,14 @@ RENDER.daily=function(){
   const artToday=pool.find(a=>a.date===t)||pool[0]||null;
   const gramToday=DAILY_GRAM.find(g=>g.date===t)||DAILY_GRAM[0]||null;
   const isToday=x=>x&&x.date===t;
+  // 今日聽力：從你程度的聽力庫，依日期每天輪一課（每天都會有，隔天換下一課）
+  const listenPool=LESSONS.filter(l=>inBand(l.level));
+  const dayNum=Math.floor(new Date(t+'T00:00:00').getTime()/86400000);
+  const listenToday=listenPool.length?listenPool[dayNum%listenPool.length]:null;
   let h=installCard()
    +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
    +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+' · '+(GOALS[PROFILE]||'')+'</div>'
-   +'<div class="hint">每天自動更新<b>一篇文章</b>與<b>一個文法單元</b>。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進，不會重複。</div>'
+   +'<div class="hint">每天都有<b>一篇文章</b>、<b>一個文法單元</b>與<b>一課聽力</b>。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力每天從影片庫換一課讓你練耳朵。</div>'
    +'<div class="stats"><div class="stat"><b>'+pool.length+'</b><span>累積每日文章</span></div>'
    +'<div class="stat"><b>'+DAILY_GRAM.length+'</b><span>累積每日文法</span></div>'
    +'<div class="stat"><b>'+(ST.streak||1)+'</b><span>連續學習天數</span></div>'
@@ -1170,6 +1192,14 @@ RENDER.daily=function(){
      +'<div class="meta"><span>📅 '+esc(gramToday.date||'')+'</span>'+(gramToday.unitNo?'<span>Grammar in Use 進度 Unit '+gramToday.unitNo+'</span>':'')
      +(d?'<span class="done">✓ 練習 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
   }
+  if(listenToday){
+    const d=(ST.listenDone||{})[listenToday.id];
+    h+='<div class="item" style="border-left-color:#159AA6" onclick="lsGo(\''+listenToday.id+'\')">'
+     +'<div class="row" style="justify-content:space-between"><div class="t">🆕 🎧 '+esc(listenToday.title)+'</div><span class="lv '+lvCls(listenToday.level)+'">'+esc(listenToday.level)+'</span></div>'
+     +'<div class="tc">'+esc(listenToday.titleCn)+'</div>'
+     +'<div class="meta"><span>📅 '+t+'</span><span>🎬 '+esc(listenToday.topic)+'</span><span>⏱ 約 '+listenToday.minutes+' 分鐘</span>'
+     +(d?'<span class="done">✓ 已完成 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
+  }
   if(!artToday&&!gramToday){
     h+='<div class="card"><div class="muted">今天還沒有新內容。每日排程通常在早上七點更新，可以稍後再回來看，或先到「閱讀」與「文法」分頁。</div></div>';
   }else if(!isToday(artToday)&&!isToday(gramToday)){
@@ -1180,6 +1210,7 @@ RENDER.daily=function(){
    +'<li style="margin-bottom:7px">先讀今日文章，點不懂的字查中文（約 8 分鐘）</li>'
    +'<li style="margin-bottom:7px">做完文章的理解測驗，再看「B1 → B2 句型升級」</li>'
    +'<li style="margin-bottom:7px">讀今日文法單元並做練習題（約 10 分鐘）</li>'
+   +'<li style="margin-bottom:7px">看今日聽力影片，跟讀關鍵句、做理解測驗（約 8 分鐘）</li>'
    +'<li>最後去「單字卡」清掉今天到期的字</li></ol></div>';
 
   if(pool.length>1||DAILY_GRAM.length>1){
@@ -1197,6 +1228,62 @@ window.dailyArt=dailyArt;
 /* ============================================================
    7. 進度分頁
    ============================================================ */
+/* ---------- 每日打卡日曆 ---------- */
+let calYM=null;   // {y,m}（m 為 0 起算）；null = 當月
+function studyDaySet(){
+  // 哪幾天有學習：當天學了新字、複習過任一單字、或完成了那天的每日文章／文法
+  const s=new Set();
+  Object.keys(ST.dayNew||{}).forEach(d=>{ if((ST.dayNew[d]||0)>0) s.add(d); });
+  Object.values(ST.srs||{}).forEach(x=>{ if(x&&x.seen) s.add(x.seen); });
+  (DAILY_ARTS||[]).forEach(a=>{ if(a.date&&ST.artDone[a.id]) s.add(a.date); });
+  (DAILY_GRAM||[]).forEach(g=>{ if(g.date&&ST.gramDone[g.id]) s.add(g.date); });
+  return s;
+}
+function calendarCard(){
+  const now=new Date();
+  const cy=calYM?calYM.y:now.getFullYear();
+  const cm=calYM?calYM.m:now.getMonth();
+  const set=studyDaySet();
+  const t=today();
+  const pad2=n=>String(n).padStart(2,'0');
+  const key=dn=>cy+'-'+pad2(cm+1)+'-'+pad2(dn);
+  const startWd=new Date(cy,cm,1).getDay();      // 0=週日
+  const days=new Date(cy,cm+1,0).getDate();
+  const wd=['日','一','二','三','四','五','六'];
+  let studied=0;
+  for(let i=1;i<=days;i++){ const ds=key(i); if(set.has(ds)&&ds<=t) studied++; }
+  const atCurrent=(cy>now.getFullYear())||(cy===now.getFullYear()&&cm>=now.getMonth());
+  let h='<div class="card"><h2 class="sec">🗓 每日打卡</h2>'
+   +'<div class="hint">完成當天的文章、文法或單字複習，那一天就會亮起來。目前連續打卡 <b>'+(ST.streak||1)+'</b> 天。</div>'
+   +'<div class="calhd"><button class="calnav" onclick="calShift(-1)">‹</button>'
+   +'<div class="m">'+cy+' 年 '+(cm+1)+' 月 · 本月打卡 '+studied+' 天</div>'
+   +'<button class="calnav" onclick="calShift(1)"'+(atCurrent?' disabled':'')+'>›</button></div>'
+   +'<div class="calgrid">'+wd.map(w=>'<div class="wd">'+w+'</div>').join('');
+  for(let i=0;i<startWd;i++) h+='<div class="cell empty"></div>';
+  for(let i=1;i<=days;i++){
+    const ds=key(i); let cls='cell'; const done=set.has(ds);
+    if(done) cls+=' done';
+    if(ds===t) cls+=' today'; else if(ds>t) cls+=' future';
+    h+='<div class="'+cls+'">'+i+(done?'<span class="dot">✓</span>':'')+'</div>';
+  }
+  h+='</div>'
+   +'<div class="callegend">'
+   +'<span><i style="background:linear-gradient(135deg,#f7bd76,#ef9a4f)"></i>有完成</span>'
+   +'<span><i style="background:#fff;border:1px solid var(--line)"></i>沒打卡</span>'
+   +'<span><i style="background:#fff;border:2px solid var(--accent2)"></i>今天</span>'
+   +'</div></div>';
+  return h;
+}
+function calShift(delta){
+  const now=new Date();
+  const cy=calYM?calYM.y:now.getFullYear();
+  const cm=calYM?calYM.m:now.getMonth();
+  const d=new Date(cy,cm+delta,1);
+  calYM={y:d.getFullYear(),m:d.getMonth()};
+  go('prog');
+}
+window.calShift=calShift;
+
 RENDER.prog=function(){
   const learned=Object.keys(ST.srs).length;
   const mature=Object.values(ST.srs).filter(s=>s.int>=21).length;
@@ -1223,6 +1310,8 @@ RENDER.prog=function(){
    +'<div class="stat"><b>'+dueN+'</b><span>今天該複習</span></div></div>'
    +'<div class="muted" style="margin-top:10px">單字庫共 '+VOCAB.length+' 個字（全部來自你的課堂筆記）'+bar(learned,VOCAB.length)+'</div>'
    +'</div>'
+
+   + calendarCard()
 
    +'<div class="card"><h2 class="sec">📖 閱讀</h2>'
    +'<div class="muted">完成 '+artN+' / '+ALL_ARTS.length+' 篇 · 平均理解測驗 '+avg+'%</div>'+bar(artN,ALL_ARTS.length)
@@ -1625,6 +1714,7 @@ window.addEventListener('beforeinstallprompt',e=>{
 window.addEventListener('appinstalled',()=>{ INSTALL_EVT=null; if(RENDER[TAB]) RENDER[TAB](); });
 
 function installCard(){
+  return '';                                       // 依使用者要求，不再顯示安裝提示
   if(standalone()) return '';                     // 已經是 app 開啟，不用再顯示
   if(INSTALL_EVT){
     return '<button class="install" onclick="doInstall()"><b>📲 安裝成 App</b>'

@@ -174,6 +174,44 @@ console.log('OK');"
 
 ⚠️ 只能畫**橫幅**。文章裡如果有明確數字想畫成圖表，不要自己編數據——沒有把握就只做橫幅。
 
+### 3.6 追加**一課聽力** → 插入 `public/data-listen.js` 的 `lessons` 陣列**最前面**
+
+網站「今日」分頁每天會從聽力庫輪一課給學習者，所以聽力庫每天要長大一課，兩位學習者輪流補：
+
+- 看 `daily-state.json` 的 `nextListenFor`：
+  - `"anita"` → 這次補一課 **VOA Let's Learn English *Level 2***（程度 `B1` 或 `B1+`）
+  - `"tom"` → 這次補一課 **VOA Let's Learn English *Level 1***（程度 `A2`）
+  - 做完把 `nextListenFor` 翻到另一位。
+- 從該系列**編號最小、且不在 `usedVoa` 裡**的那一課開始（`usedVoa` 用 `"L1-7"`、`"L2-3"` 這種代號記錄「第幾級第幾課」）。
+
+**⚠️ 影片鐵則（做不到就跳過這一步，不要硬編）**
+
+1. **YouTube 影片 ID 一定要是真的。** 先 WebFetch 該課的 VOA 課程頁（`learningenglish.voanews.com` 上的 *Let's Learn English* 對應課次），從頁面裡拿到它嵌入的 YouTube 影片 ID，**再用 oEmbed 驗證存在**：
+   ```bash
+   curl -s "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=<ID>&format=json"
+   ```
+   有回傳 JSON（含 `title`、`author_name` 為 VOA Learning English）才算通過；查不到就換下一課，**絕對不要自己猜 ID**。
+2. **對白只能引用該 VOA 頁面上公開的逐字稿**（VOA 是美國政府出版物／公共領域）。`keyLines` 取幾句真實對白即可；`intro`、`tip`、`pre`、`questions` 全部自己原創撰寫。
+3. 理解題的答案必須真的能在逐字稿裡找到依據，`expl` 要引用對白。**沒把握答案就換一課**，不要編。
+
+物件欄位**完全照 `public/data-listen.js` 現有的一筆**（先讀一筆當範本），另外：
+
+| 欄位 | 說明 |
+|---|---|
+| `id` | `"dl"` + YYYYMMDD |
+| `level` | Level 2 → `"B1"` 或 `"B1+"`；Level 1 → `"A2"` |
+| `yt` | 上面驗證過的真實 YouTube ID |
+| `minutes` | 影片長度（分鐘，取整數） |
+| `title` / `titleCn` | 該課英文標題與中譯 |
+| `series` | 例 `"VOA Let's Learn English · Level 2 · Lesson 5"` |
+| `topic` / `focus` | 主題與這課的語言焦點（一句話） |
+| `source` | `"VOA Learning English（美國之音，美國政府出版物／公共領域）"` |
+| `sourceUrl` | 該 VOA 課程頁網址 |
+| `intro` / `tip` | 中文導讀與聽力策略提示（原創） |
+| `pre` | 5–7 個 `{w, ipa, cn, def}` 聽前單字，`def` 用簡單英文 |
+| `keyLines` | 5–7 句 `{en, cn}`，`en` 取自真實對白、`cn` 自己翻 |
+| `questions` | 4–5 個 `{q, opts, ans, expl}`，格式同文章題，`ans` 為 0-based |
+
 ### 4. 更新 `b2lab/daily-state.json`
 
 - `lastRun` = 今天
@@ -183,6 +221,7 @@ console.log('OK');"
 - `usedTitles` 加入今天**兩篇**的標題
 - `topicRotation` 把用掉的主題移到陣列尾端（保持輪替）
 - `usedA2Topics` 加入今天 A2 篇用掉的主題（若已包含全部 `a2Topics`，就清空重新輪）
+- `usedVoa` 加入今天補的那一課代號（例 `"L2-5"`）；`nextListenFor` 翻面（anita ⇄ tom）。**若今天聽力那步跳過了就都不要動。**
 
 ### 5. 驗證（**沒過就不要 commit**）
 
@@ -217,10 +256,23 @@ console.log('OK  A2:',a2.id,a2.title,'('+w+'字) |',hi.level+':',hi.id,hi.title,
 node -e "JSON.parse(require('fs').readFileSync('../daily-state.json','utf8'));console.log('state ok')"
 ```
 
+若今天有補聽力，也驗證聽力庫（沒過就不要 commit 聽力那步的改動）：
+
+```bash
+cd b2lab/public
+node -e "global.window={};require('./data-listen.js');
+const L=window.LISTEN.lessons, x=L[0];
+if(!/^dl\d{8}$/.test(x.id)) throw '最前面那課 id 不是 dl+日期: '+x.id;
+if(!/^[A-Za-z0-9_-]{11}$/.test(x.yt)) throw 'YouTube ID 格式怪怪的: '+x.yt;
+if(!x.keyLines.length||x.questions.length<4) throw '聽力內容不完整';
+x.questions.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw '聽力 ans 索引錯誤: '+q.q});
+console.log('listen ok', x.id, x.title, x.level, x.yt);"
+```
+
 ### 6. commit 並 push
 
 ```bash
-git add b2lab/public/data-daily.js b2lab/public/data-art.js b2lab/daily-state.json
+git add b2lab/public/data-daily.js b2lab/public/data-art.js b2lab/public/data-listen.js b2lab/daily-state.json
 git commit -m "Daily content YYYY-MM-DD: <文章標題> + <文法單元中文名>"
 git push origin main
 ```
@@ -233,6 +285,7 @@ push 之後 `.github/workflows/deploy-b2lab.yml` 會自動部署到 https://engl
 - **Tom（A2）**那篇的標題、主題、字數
 - **Anita** 那篇的標題、程度、類型（新聞改寫／原創）、字數，新聞改寫要附原文網址
 - 文法單元名稱與 syllabus 編號、`usedUnits` 還剩幾個單元沒教
+- 今天補的**聽力**是哪一課（VOA 級別／課次、程度、驗證過的 YouTube ID）；若跳過就說明原因
 - 兩張橫幅各用了哪套配色與哪三個圖示
 
 若任何步驟失敗，說清楚卡在哪一步、不要留下半套的檔案（寧可完全不 commit，也不要只寫一篇就推上去）。
