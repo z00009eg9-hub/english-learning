@@ -215,6 +215,14 @@ tr:nth-child(even) td{background:#fdfbf8}
   font-size:calc(11.5px * var(--fs));font-weight:800;background:#2b2118;color:#fff;
   border-radius:6px;padding:2px 8px
 }
+/* ---------- 文章插圖／圖表 ---------- */
+.artbox{margin:0 0 14px;background:#fff;border:1px solid var(--line);border-radius:14px;
+  box-shadow:var(--shadow);padding:10px;overflow:hidden}
+.artbox svg{display:block;width:100%;height:auto;border-radius:9px}
+.artbox figcaption{
+  font-size:calc(13px * var(--fs));color:var(--ink2);line-height:1.7;margin-top:9px;
+  padding:8px 10px;background:#fdfbf8;border-radius:8px;border-left:3px solid var(--accent)
+}
 /* 內文重點字：橘色加粗＋上標編號 */
 w.tgt{color:#c0561a;font-weight:800}
 sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
@@ -329,6 +337,7 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 <script src="data-grammar.js"></script>
 <script src="data-focus.js"></script>
 <script src="data-a2.js"></script>
+<script src="data-art.js"></script>
 <script src="data-listen.js"></script>
 <script src="data-daily.js"></script>
 <script>
@@ -618,6 +627,14 @@ window.rdSet=rdSet; window.rdOpenArt=rdOpenArt; window.rdClose=rdClose;
 
 const reEsc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
+/* 文章插圖／圖表（來自 data-art.js，全部是本站自己畫的 SVG） */
+function artHTML(id){
+  const a=(window.ART||{})[id];
+  if(!a) return '';
+  return '<figure class="artbox">'+a.svg
+   +(a.cap?'<figcaption>'+esc(a.cap)+'</figcaption>':'')+'</figure>';
+}
+
 /* 內文重點字：橘色加粗＋上標編號（只標第一次出現），其餘字照樣可點查 */
 function magTokenize(text,tmap,used){
   if(!tmap||!tmap.keys.length) return tokenize(text,null);
@@ -745,7 +762,8 @@ function readerHTML(a){
    +'</div>'
    +(a.source?'<div class="set" style="font-style:normal;font-size:calc(12.5px * var(--fs))">'+esc(a.source)
       +(a.sourceUrl?' · <a href="'+esc(a.sourceUrl)+'" target="_blank" rel="noopener">↗ 看新聞原文</a>':'')+'</div>':'')
-   +'</div>';
+   +'</div>'
+   + artHTML(a.id);
 
   h+='<div class="mag">';
 
