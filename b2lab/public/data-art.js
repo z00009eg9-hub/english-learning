@@ -8,53 +8,53 @@ window.ART = {
 /* ---------- a01 My Morning（A2）：作息時間軸 ---------- */
 a01:{
 cap:"文章裡的四個時間點：6:30 起床 → 7:40 出門 → 公車 20 分鐘 → 8:30 開始工作。",
-svg:`<svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
-<rect width="800" height="250" rx="14" fill="#fdf6ec"/>
+svg:`<svg viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="800" height="270" rx="14" fill="#fdf6ec"/>
 <circle cx="742" cy="52" r="26" fill="#ffd98a"/>
 <g stroke="#f0b04e" stroke-width="4" stroke-linecap="round">
 <line x1="742" y1="18" x2="742" y2="10"/><line x1="708" y1="52" x2="700" y2="52"/>
 <line x1="718" y1="28" x2="712" y2="22"/><line x1="718" y1="76" x2="712" y2="82"/>
 </g>
-<line x1="70" y1="150" x2="730" y2="150" stroke="#e0d3c2" stroke-width="5" stroke-linecap="round"/>
+<line x1="70" y1="158" x2="730" y2="158" stroke="#e0d3c2" stroke-width="5" stroke-linecap="round"/>
 <g text-anchor="middle">
   <!-- 6:30 起床 -->
-  <circle cx="120" cy="150" r="15" fill="#e8813a"/>
-  <rect x="82" y="82" width="76" height="34" rx="7" fill="#fff" stroke="#2b2118" stroke-width="2.5"/>
-  <rect x="82" y="99" width="76" height="17" rx="3" fill="#cfe3e2"/>
-  <circle cx="99" cy="93" r="8" fill="#f4c9a0" stroke="#2b2118" stroke-width="2"/>
-  <text x="120" y="137" font-size="15" font-weight="800" fill="#c0561a">6:30</text>
-  <text x="120" y="182" font-size="15" font-weight="700" fill="#2b2118">get up</text>
-  <text x="120" y="202" font-size="13" fill="#6b6259">起床</text>
+  <circle cx="120" cy="158" r="15" fill="#e8813a"/>
+  <rect x="82" y="76" width="76" height="34" rx="7" fill="#fff" stroke="#2b2118" stroke-width="2.5"/>
+  <rect x="82" y="93" width="76" height="17" rx="3" fill="#cfe3e2"/>
+  <circle cx="99" cy="87" r="8" fill="#f4c9a0" stroke="#2b2118" stroke-width="2"/>
+  <text x="120" y="136" font-size="15" font-weight="800" fill="#c0561a">6:30</text>
+  <text x="120" y="192" font-size="15" font-weight="700" fill="#2b2118">get up</text>
+  <text x="120" y="212" font-size="13" fill="#6b6259">起床</text>
   <!-- 洗臉 -->
-  <circle cx="272" cy="150" r="15" fill="#2b7a78"/>
-  <path d="M245 112 h54 a6 6 0 0 1 -6 12 h-42 a6 6 0 0 1 -6 -12 z" fill="#cfe3e2" stroke="#2b2118" stroke-width="2.5"/>
-  <line x1="272" y1="88" x2="272" y2="112" stroke="#2b2118" stroke-width="3"/>
-  <path d="M262 96 q10 -14 20 0" fill="none" stroke="#3b82c4" stroke-width="3" stroke-linecap="round"/>
-  <text x="272" y="182" font-size="15" font-weight="700" fill="#2b2118">wash my face</text>
-  <text x="272" y="202" font-size="13" fill="#6b6259">洗臉</text>
+  <circle cx="272" cy="158" r="15" fill="#2b7a78"/>
+  <path d="M245 104 h54 a6 6 0 0 1 -6 12 h-42 a6 6 0 0 1 -6 -12 z" fill="#cfe3e2" stroke="#2b2118" stroke-width="2.5"/>
+  <line x1="272" y1="80" x2="272" y2="104" stroke="#2b2118" stroke-width="3"/>
+  <path d="M262 88 q10 -14 20 0" fill="none" stroke="#3b82c4" stroke-width="3" stroke-linecap="round"/>
+  <text x="272" y="192" font-size="15" font-weight="700" fill="#2b2118">wash my face</text>
+  <text x="272" y="212" font-size="13" fill="#6b6259">洗臉</text>
   <!-- 咖啡 -->
-  <circle cx="410" cy="150" r="15" fill="#e8813a"/>
-  <path d="M388 96 h40 v22 a20 20 0 0 1 -40 0 z" fill="#fff" stroke="#2b2118" stroke-width="2.5"/>
-  <path d="M428 100 q14 8 0 16" fill="none" stroke="#2b2118" stroke-width="2.5"/>
-  <path d="M398 88 q6 -10 12 0" fill="none" stroke="#a08a74" stroke-width="2.5" stroke-linecap="round"/>
-  <text x="410" y="182" font-size="15" font-weight="700" fill="#2b2118">make coffee</text>
-  <text x="410" y="202" font-size="13" fill="#6b6259">泡咖啡</text>
+  <circle cx="410" cy="158" r="15" fill="#e8813a"/>
+  <path d="M388 88 h40 v22 a20 20 0 0 1 -40 0 z" fill="#fff" stroke="#2b2118" stroke-width="2.5"/>
+  <path d="M428 92 q14 8 0 16" fill="none" stroke="#2b2118" stroke-width="2.5"/>
+  <path d="M398 80 q6 -10 12 0" fill="none" stroke="#a08a74" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="410" y="192" font-size="15" font-weight="700" fill="#2b2118">make coffee</text>
+  <text x="410" y="212" font-size="13" fill="#6b6259">泡咖啡</text>
   <!-- 7:40 公車 -->
-  <circle cx="552" cy="150" r="15" fill="#3b82c4"/>
+  <circle cx="552" cy="158" r="15" fill="#3b82c4"/>
   <rect x="512" y="74" width="80" height="32" rx="7" fill="#3b82c4" stroke="#2b2118" stroke-width="2.5"/>
   <rect x="519" y="81" width="20" height="13" rx="2" fill="#e8f2fb"/>
   <rect x="545" y="81" width="20" height="13" rx="2" fill="#e8f2fb"/>
   <circle cx="530" cy="110" r="6.5" fill="#2b2118"/><circle cx="574" cy="110" r="6.5" fill="#2b2118"/>
-  <text x="552" y="135" font-size="15" font-weight="800" fill="#c0561a">7:40</text>
-  <text x="552" y="182" font-size="15" font-weight="700" fill="#2b2118">20 min by bus</text>
-  <text x="552" y="202" font-size="13" fill="#6b6259">公車 20 分鐘</text>
+  <text x="552" y="136" font-size="15" font-weight="800" fill="#c0561a">7:40</text>
+  <text x="552" y="192" font-size="15" font-weight="700" fill="#2b2118">20 min by bus</text>
+  <text x="552" y="212" font-size="13" fill="#6b6259">公車 20 分鐘</text>
   <!-- 8:30 上班 -->
-  <circle cx="694" cy="150" r="15" fill="#c0392b"/>
+  <circle cx="694" cy="158" r="15" fill="#c0392b"/>
   <rect x="668" y="72" width="52" height="34" rx="4" fill="#fff" stroke="#2b2118" stroke-width="2.5"/>
   <g fill="#cfe3e2"><rect x="675" y="79" width="12" height="9"/><rect x="693" y="79" width="12" height="9"/><rect x="675" y="92" width="12" height="9"/><rect x="693" y="92" width="12" height="9"/></g>
-  <text x="694" y="135" font-size="15" font-weight="800" fill="#c0561a">8:30</text>
-  <text x="694" y="182" font-size="15" font-weight="700" fill="#2b2118">start work</text>
-  <text x="694" y="202" font-size="13" fill="#6b6259">開始工作</text>
+  <text x="694" y="136" font-size="15" font-weight="800" fill="#c0561a">8:30</text>
+  <text x="694" y="192" font-size="15" font-weight="700" fill="#2b2118">start work</text>
+  <text x="694" y="212" font-size="13" fill="#6b6259">開始工作</text>
 </g>
 <text x="70" y="42" font-size="24" font-weight="900" fill="#2b2118">MY MORNING</text>
 <text x="70" y="64" font-size="14" font-weight="700" fill="#2b7a78">A weekday, minute by minute</text>

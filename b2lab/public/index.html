@@ -198,8 +198,20 @@ tr:nth-child(even) td{background:#fdfbf8}
 .ytwrap>div,.ytwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .spk.rbtn.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
 /* ---------- 雜誌版面（仿常春藤內頁） ---------- */
-.mag{display:grid;grid-template-columns:1fr;gap:14px;align-items:start}
-@media(min-width:860px){ .mag{grid-template-columns:1.4fr 1fr} }
+.mag{display:grid;grid-template-columns:1fr;gap:14px;align-items:start;margin-bottom:14px}
+.mag2{display:grid;grid-template-columns:1fr;gap:14px;align-items:start;margin-bottom:14px}
+@media(min-width:860px){
+  .mag{grid-template-columns:1.4fr 1fr}
+  .mag2{grid-template-columns:1fr 1fr}
+  /* 右欄比左欄長太多時改成單欄，單字片語用雙欄流排，避免左下出現大片空白 */
+  .mag.stack{grid-template-columns:1fr}
+  .mag.stack .wpbody.flow{column-count:2;column-gap:20px}
+  .mag.stack .wpbody.flow .wpitem{break-inside:avoid;-webkit-column-break-inside:avoid}
+  /* 右欄沒有內容就不要留一整欄空白 */
+  .mag.solo{grid-template-columns:1fr}
+  /* 內文比右欄長很多時，右欄跟著捲動，空白就變成「單字一直看得到」 */
+  .mag.pin>div:last-child{position:sticky;top:58px}
+}
 .magttl{
   background:linear-gradient(135deg,#fff4e2,#ffe3c2);border:2.5px solid #2b2118;border-radius:16px;
   padding:14px 16px;box-shadow:5px 5px 0 #2b2118;margin-bottom:14px
@@ -596,7 +608,7 @@ DAILY_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,po
 let rdFilter={kind:'orig',level:'all'}, rdOpen=null;
 RENDER.read=function(){
   const v=$('v-read');
-  if(rdOpen){ v.innerHTML=readerHTML(rdOpen); return; }
+  if(rdOpen){ v.innerHTML=readerHTML(rdOpen); rebalanceMag(); return; }
   const list=ALL_ARTS.filter(a=>
     (rdFilter.kind==='all'||a.kind===rdFilter.kind) &&
     inBand(a.level) &&
@@ -620,6 +632,23 @@ RENDER.read=function(){
       +'</div></div>';
     }).join('');
 };
+/* 兩欄高度差太多就自動改版：內文全寬 + 單字片語雙欄流排 */
+function rebalanceMag(){
+  const mag=document.querySelector('#v-read .mag');
+  if(!mag||!mag.children[1]) return;
+  const R0=mag.children[1].getBoundingClientRect().height;
+  if(R0<20){ mag.classList.add('solo'); return; }      // 右欄沒內容 → 不要留空欄
+  if(innerWidth<860) return;
+  const L=mag.children[0].getBoundingClientRect().height;
+  const R=R0;
+  if(R>L*1.2||R-L>250){                                // 右欄太長 → 全寬＋雙欄流排
+    mag.classList.add('stack');
+    const body=mag.children[1].querySelector('.wpbody');
+    if(body) body.classList.add('flow');
+  }else if(L>R*1.2){                                   // 內文太長 → 右欄跟著捲動
+    mag.classList.add('pin');
+  }
+}
 function rdSet(k,v){ rdFilter[k]=v; RENDER.read(); }
 function rdOpenArt(id){ rdOpen=ALL_ARTS.find(a=>a.id===id); QSTATE={}; RENDER.read(); }
 function rdClose(){ rdOpen=null; RENDER.read(); }
@@ -690,7 +719,7 @@ function buildYCD(a,tgIn){
 }
 function ycdHTML(items){
   if(!items.length) return '';
-  return '<div class="wpbox" style="margin-top:14px"><div class="wphead">▼ You Can Do This<span class="zh">英文試金石</span></div>'
+  return '<div class="wpbox"><div class="wphead">▼ You Can Do This<span class="zh">英文試金石</span></div>'
    +'<div class="wpbody"><div class="hint" style="margin-bottom:8px">選出最適當的字完成句子。</div>'
    + items.map((it,i)=>{
        const parts=it.sent.split('\u0000');
@@ -794,14 +823,18 @@ function readerHTML(a){
        +'</div>').join('')
      +'</div></div>';
   }
+  h+='</div></div>';
+
+  /* 補充詞彙與試金石改成全寬並排：右欄比左欄長很多時，左下才不會出現大片空白 */
+  const blocks=[];
   if(extras.length){
-    h+='<div class="wpbox" style="margin-top:14px"><div class="wphead">▼ Extra Words &amp; Phrases<span class="zh">補充詞彙</span></div>'
+    blocks.push('<div class="wpbox"><div class="wphead">▼ Extra Words &amp; Phrases<span class="zh">補充詞彙</span></div>'
      +'<div class="wpbody"><div class="extra">'
      + extras.map(g=>'<span onclick="showGloss(\''+esc(g.w).replace(/'/g,"\\'")+'\')">'+esc(g.w)+' · '+esc(g.cn||'')+'</span>').join('')
-     +'</div><div class="muted" style="margin-top:7px;font-size:calc(12px * var(--fs))">這些字出現在本文，也在你的課堂字庫裡。點一下看完整解釋。</div></div></div>';
+     +'</div><div class="muted" style="margin-top:7px;font-size:calc(12px * var(--fs))">這些字出現在本文，也在你的課堂字庫裡。點一下看完整解釋。</div></div></div>');
   }
-  h+=ycdHTML(YCD);
-  h+='</div></div>';
+  const y=ycdHTML(YCD); if(y) blocks.push(y);
+  if(blocks.length) h+='<div class="mag2">'+blocks.join('')+'</div>';
 
   h+=focusHTML(a.id);
   if((a.upgrade||[]).length){
