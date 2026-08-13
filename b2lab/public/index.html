@@ -835,7 +835,8 @@ RENDER.daily=function(){
   const artToday=DAILY_ARTS.find(a=>a.date===t)||DAILY_ARTS[0]||null;
   const gramToday=DAILY_GRAM.find(g=>g.date===t)||DAILY_GRAM[0]||null;
   const isToday=x=>x&&x.date===t;
-  let h='<div class="card"><h2 class="sec">📅 今日新內容</h2>'
+  let h=installCard()
+   +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
    +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+'</div>'
    +'<div class="hint">每天自動更新<b>一篇文章</b>與<b>一個文法單元</b>。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進，不會重複。</div>'
    +'<div class="stats"><div class="stat"><b>'+DAILY_ARTS.length+'</b><span>累積每日文章</span></div>'
@@ -865,7 +866,6 @@ RENDER.daily=function(){
   }else if(!isToday(artToday)&&!isToday(gramToday)){
     h+='<div class="card"><div class="muted">⏳ 今天（'+t+'）的新內容還沒更新，上面顯示的是最近一次的。每日排程在早上七點跑，稍後重新整理就會出現。</div></div>';
   }
-  h+=installCard();
   h+='<div class="card"><h2 class="sec">🎯 今天可以這樣安排</h2>'
    +'<ol style="font-size:calc(15px * var(--fs));padding-left:22px;margin:4px 0">'
    +'<li style="margin-bottom:7px">先讀今日文章，點不懂的字查中文（約 8 分鐘）</li>'
