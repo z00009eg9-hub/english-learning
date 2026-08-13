@@ -209,7 +209,8 @@ create_file(
 - 橘色 bar 的文字要**靠左**、且**垂直置中**（`cell.setVerticalAlignment(CENTER)` + 段落 `setAlignment(LEFT)`），
   預設的置中＋靠上看起來會偏高
 - **每個橘色 bar 標頭都要自己起新的一頁**（在 bar 表格前 `body.insertParagraph(i,"").appendPageBreak()`），
-  不要和上一節內容擠在同一頁
+  不要和上一節內容擠在同一頁。
+  ⚠ **但第一個 bar（I. 作業複習）不要加分頁**，否則第一頁只剩大標題和副標，整頁空著
 
 **⚠ HTML 轉檔後字型會掉回 Arial**：`<style>` 裡的 `font-family` 只有部分生效，**表格儲存格幾乎一定變 Arial**。
 轉檔後一定要用 Apps Script 走訪所有段落與表格儲存格 `editAsText().setFontFamily("Google Sans")` 補上，
