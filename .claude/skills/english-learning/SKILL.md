@@ -206,6 +206,14 @@ create_file(
   **訂正句本身是黑字，只有被修正的那幾個字用紅色斜體**（`#C0392B` + italic）——整句藍色是錯的；
   **`結構：` 後面的句型才用藍色粗體**（`#1155CC`）
 - 每題開頭放 `🔬 文法解說：`（emoji 轉檔後正常顯示）
+- 橘色 bar 的文字要**靠左**、且**垂直置中**（`cell.setVerticalAlignment(CENTER)` + 段落 `setAlignment(LEFT)`），
+  預設的置中＋靠上看起來會偏高
+- **每個橘色 bar 標頭都要自己起新的一頁**（在 bar 表格前 `body.insertParagraph(i,"").appendPageBreak()`），
+  不要和上一節內容擠在同一頁
+
+**⚠ HTML 轉檔後字型會掉回 Arial**：`<style>` 裡的 `font-family` 只有部分生效，**表格儲存格幾乎一定變 Arial**。
+轉檔後一定要用 Apps Script 走訪所有段落與表格儲存格 `editAsText().setFontFamily("Google Sans")` 補上，
+再用 Docs 工具列確認游標在表格內時顯示的是 Google Sans 而不是 Arial。
 
 **⚠ 表格欄寬一定要指定，否則會被壓扁**：HTML 的 `<colgroup>` 不一定生效，最保險是轉檔後用 Apps Script
 `table.setColumnWidth(j, pt)` 依欄數套用（版面寬 468pt）：5 欄 `[78,104,38,78,170]`、4 欄 `[110,150,60,148]`、
