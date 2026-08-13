@@ -123,6 +123,8 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .how-bar b{color:var(--coral-d);font-weight:800;}
 .act-badge{position:absolute;top:12px;right:12px;font-size:.62rem;font-weight:800;
   background:var(--coral);color:#fff;padding:2px 8px;border-radius:100px;}
+.act-prog{position:absolute;bottom:10px;right:12px;font-size:.66rem;font-weight:800;background:#E8F7EE;color:#1F8A4C;border:1px solid #BFE6CE;border-radius:20px;padding:2px 8px;display:none;letter-spacing:.2px;}
+.act-say .act-prog{bottom:10px;}
 /* 六個口說活動：繽紛彩色卡片 */
 .i-say{background:#FFE0E4;color:#E11D48;}
 .i-shadow{background:#FFEAD1;color:#EA7A0C;}
@@ -548,50 +550,50 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 
     <div class="grid-ttl">🚀 選一個口說活動</div>
     <div class="acts">
-      <button class="act act-word" onclick="openAct('word')" title="看字卡念單字並造句，把生字變成能開口說的字">
+      <button class="act act-word" onclick="openAct('word')" title="看字卡念單字並造句，把生字變成能開口說的字"><span class="act-prog" id="ap-word"></span>
         <div class="act-ico i-word">🗣️</div>
         <div class="act-h">單字口說</div>
         <div class="act-en">Word Power</div>
         <div class="act-d">看字卡念單字 + 造句,把生字變成能講的字。</div>
       </button>
-      <button class="act act-shadow" onclick="openAct('shadow')" title="聽標準示範句，馬上跟著複誦，練節奏與流暢度">
+      <button class="act act-shadow" onclick="openAct('shadow')" title="聽標準示範句，馬上跟著複誦，練節奏與流暢度"><span class="act-prog" id="ap-shadow"></span>
         <div class="act-ico i-shadow">🔁</div>
         <div class="act-h">跟讀模仿</div>
         <div class="act-en">Shadowing</div>
         <div class="act-d">聽示範句 → 馬上跟著複誦,練節奏與流暢度。</div>
       </button>
-      <button class="act act-read" onclick="openAct('read')" title="一段一段朗讀文章，說對的字會即時亮綠燈">
+      <button class="act act-read" onclick="openAct('read')" title="一段一段朗讀文章，說對的字會即時亮綠燈"><span class="act-prog" id="ap-read"></span>
         <div class="act-ico i-read">📖</div>
         <div class="act-h">朗讀文章</div>
         <div class="act-en">Read Aloud</div>
         <div class="act-d">一段一段朗讀,說對的字會亮綠燈。</div>
       </button>
-      <button class="act act-say" onclick="openAct('say')" title="看中文開口說英文，麥克風幫你抓漏字並給分">
+      <button class="act act-say" onclick="openAct('say')" title="看中文開口說英文，麥克風幫你抓漏字並給分"><span class="act-prog" id="ap-say"></span>
         <span class="act-badge">主打</span>
         <div class="act-ico i-say">🎤</div>
         <div class="act-h">說出來</div>
         <div class="act-en">Say It Out Loud</div>
         <div class="act-d">看中文,開口說英文。麥克風幫你抓漏字、給分。</div>
       </button>
-      <button class="act act-listen" onclick="openAct('listen')" title="聽英文句子（可正常/慢速）：基礎用選擇題，進階打字聽寫">
+      <button class="act act-listen" onclick="openAct('listen')" title="聽英文句子（可正常/慢速）：基礎用選擇題，進階打字聽寫"><span class="act-prog" id="ap-listen"></span>
         <div class="act-ico i-listen">🎧</div>
         <div class="act-h">聽力練習</div>
         <div class="act-en">Listening</div>
         <div class="act-d">聽句子(正常/慢速)：基礎選擇題,進階打字聽寫。</div>
       </button>
-      <button class="act act-talk" onclick="openAct('talk')" title="像聊天一樣一句一句對話，說錯馬上給你正確說法">
+      <button class="act act-talk" onclick="openAct('talk')" title="像聊天一樣一句一句對話，說錯馬上給你正確說法"><span class="act-prog" id="ap-talk"></span>
         <div class="act-ico i-talk">💬</div>
         <div class="act-h">情境對話</div>
         <div class="act-en">Talk Time</div>
         <div class="act-d">像聊天一樣一來一往,說錯馬上給正確說法。</div>
       </button>
-      <button class="act act-video" onclick="openAct('video')" title="邊看影片邊看雙語字幕，可暫停、單句復讀、循環、變速">
+      <button class="act act-video" onclick="openAct('video')" title="邊看影片邊看雙語字幕，可暫停、單句復讀、循環、變速"><span class="act-prog" id="ap-video"></span>
         <div class="act-ico i-video">🎬</div>
         <div class="act-h">影片精聽</div>
         <div class="act-en">Watch &amp; Learn</div>
         <div class="act-d">看影片配雙語字幕,可暫停、單句復讀、循環、變速。</div>
       </button>
-      <button class="act act-quiz" onclick="openAct('quiz')" title="選擇題測驗：綜合（單字文法）／聽力（用聽的選）／閱讀（讀短文回答）">
+      <button class="act act-quiz" onclick="openAct('quiz')" title="選擇題測驗：綜合（單字文法）／聽力（用聽的選）／閱讀（讀短文回答）"><span class="act-prog" id="ap-quiz"></span>
         <div class="act-ico i-quiz">📝</div>
         <div class="act-h">快速檢查</div>
         <div class="act-en">Quick Check</div>
@@ -5233,7 +5235,7 @@ function cloudPull(done){const d=cloudDoc();if(!d){done&&done();return;}
 function cloudSubscribe(){if(!db)return;if(cloudUnsub){cloudUnsub();cloudUnsub=null;}
   const d=cloudDoc();if(!d)return;const mine=PROFILE;
   cloudUnsub=d.onSnapshot(s=>{if(PROFILE!==mine||!s.exists)return;const r=s.data();
-    if((r.updatedAt||0)>(ST.updatedAt||0)){ST=Object.assign({},ST,r);saveLocal();applyRollover();renderStats();refreshCoach();}},()=>{});}
+    if((r.updatedAt||0)>(ST.updatedAt||0)){ST=Object.assign({},ST,r);saveLocal();applyRollover();renderStats();renderActProg();refreshCoach();}},()=>{});}
 function cloudBadge(on){const el=$('sync-badge');if(el)el.style.display=on?'inline-flex':'none';}
 
 /* ---------- 學習者 Profiles（各自獨立進度） ---------- */
@@ -5296,16 +5298,16 @@ function actMax(n){return (PROFILE==='tom'&&lvBasic())?Math.ceil(n/2):n;}
 function trimForTom(list,min){if(PROFILE==='tom'&&lvBasic())return list.slice(0,Math.max(min||4,Math.ceil(list.length/2)));return list;}
 
 /* ---------- 進度 / 連續天數（本機即時 + Firebase 雲端同步） ---------- */
-let ST={streak:1,lastDay:null,spokenToday:0,scoreSum:0,scoreN:0,totalSpoken:0,updatedAt:0};
+let ST={streak:1,lastDay:null,spokenToday:0,scoreSum:0,scoreN:0,totalSpoken:0,actToday:{},updatedAt:0};
 function todayStr(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function dayDiff(a,b){return Math.round((new Date(b)-new Date(a))/86400000);}
 function saveLocal(){try{localStorage.setItem(skey(),JSON.stringify(ST));}catch(e){}}
 function saveST(){ST.updatedAt=Date.now();saveLocal();cloudPush();}
 function applyRollover(){const t=todayStr();
   if(ST.lastDay!==t){if(ST.lastDay){const df=dayDiff(ST.lastDay,t);ST.streak=df===1?ST.streak+1:1;}
-    ST.spokenToday=0;ST.scoreSum=0;ST.scoreN=0;ST.lastDay=t;saveST();}}
+    ST.spokenToday=0;ST.scoreSum=0;ST.scoreN=0;ST.actToday={};ST.lastDay=t;saveST();}}
 function loadST(){
-  ST={streak:1,lastDay:null,spokenToday:0,scoreSum:0,scoreN:0,totalSpoken:0,updatedAt:0};
+  ST={streak:1,lastDay:null,spokenToday:0,scoreSum:0,scoreN:0,totalSpoken:0,actToday:{},updatedAt:0};
   try{let raw=localStorage.getItem(skey());
     /* 舊版單一 key 的進度，第一次遷移給 Anita */
     if(!raw&&PROFILE==='anita'){const old=localStorage.getItem('speakup_v1');if(old){raw=old;localStorage.setItem(skey(),old);}}
@@ -5313,7 +5315,7 @@ function loadST(){
   }catch(e){}
   renderStats();refreshCoach();
   /* 先抓雲端（若較新就採用），再做跨日重置與畫面更新、PIN 鎖檢查，最後訂閱即時同步 */
-  cloudPull(()=>{const prev=ST.lastDay;pendingReview=(prev&&dayDiff(prev,todayStr())>=3);applyRollover();renderStats();refreshCoach();lockGate();});
+  cloudPull(()=>{const prev=ST.lastDay;pendingReview=(prev&&dayDiff(prev,todayStr())>=3);applyRollover();renderStats();renderActProg();refreshCoach();lockGate();});
   cloudSubscribe();
   vidSubscribe();   /* 共用影片庫：跨裝置即時同步 */
 }
@@ -5887,7 +5889,7 @@ function initHome(){
   DDATES=allDates().concat(['all']);
   DAY=DDATES[0]||'all';
   buildDayList();
-  updateProfileUI();renderMeta();renderHdTopic();coachSay(coachHome());
+  updateProfileUI();renderMeta();renderHdTopic();coachSay(coachHome());renderActProg();
   const wd=['日','一','二','三','四','五','六'][new Date().getDay()];
   $('hd-date').textContent=new Date().getFullYear()+'年'+(new Date().getMonth()+1)+'月'+new Date().getDate()+'日 週'+wd;
 }
@@ -6950,9 +6952,30 @@ function sessStart(act,title,total,opt){
 function sessLog(i,en,cn,pct,extra){
   if(!SESS)return;
   const cur=SESS.items[i];
+  bumpActToday(cur,pct);
   /* 同一題重試多次時保留最高分 */
   if(cur&&cur.pct!=null&&pct!=null&&cur.pct>=pct){cur.en=en||cur.en;cur.cn=cn||cur.cn;return;}
   SESS.items[i]=Object.assign({en:en||'',cn:cn||'',pct:(pct==null?null:Math.round(pct))},extra||{});}
+/* 記錄「今天在這個活動做了幾題、平均幾分」，首頁卡片右下角會顯示 */
+function bumpActToday(cur,pct){
+  if(!SESS||!SESS.act)return;
+  if(!ST.actToday)ST.actToday={};
+  const o=ST.actToday[SESS.act]||(ST.actToday[SESS.act]={n:0,sum:0,cnt:0});
+  if(!cur){ o.n++; if(pct!=null){o.sum+=Math.round(pct);o.cnt++;} }
+  else if(pct!=null){ if(cur.pct==null){o.sum+=Math.round(pct);o.cnt++;} else if(pct>cur.pct){o.sum+=Math.round(pct)-cur.pct;} }
+  saveST(); renderActProg();
+}
+function renderActProg(){
+  const t=ST.actToday||{};
+  ['word','shadow','read','say','listen','talk','video','quiz'].forEach(k=>{
+    const el=document.getElementById('ap-'+k); if(!el)return;
+    const o=t[k];
+    if(!o||!o.n){ el.style.display='none'; el.textContent=''; return; }
+    const avg=o.cnt?Math.round(o.sum/o.cnt):null;
+    el.textContent='✓ 今天 '+o.n+(avg!=null?' · '+avg+'%':'');
+    el.style.display='inline-block';
+  });
+}
 function pctCls(p){return p==null?'skip':p>=85?'ok':p>=60?'mid':'no';}
 function sumNum(n,l){return '<div class="sum-num"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>';}
 function finishAct(title,msg){micStop();if(window.speechSynthesis)speechSynthesis.cancel();

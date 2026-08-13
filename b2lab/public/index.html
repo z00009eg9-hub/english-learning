@@ -16,7 +16,7 @@
 :root{
   --bg:#faf7f3; --card:#ffffff; --ink:#26211c; --ink2:#6b6259; --line:#e8e0d6;
   --accent:#e8813a; --accent2:#c9631f; --accent-soft:#fdf0e5;
-  --b1:#3f9e64; --b1p:#3b82c4; --b2:#8b5cf6;
+  --a2:#d98324; --b1:#3f9e64; --b1p:#3b82c4; --b2:#8b5cf6;
   --ok:#2f9e5f; --bad:#d9534f;
   --shadow:0 2px 10px rgba(60,45,30,.07);
   --r:14px;
@@ -27,7 +27,7 @@ html,body{margin:0;padding:0}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
   background:var(--bg); color:var(--ink); line-height:1.75; font-size:calc(16px * var(--fs));
-  padding-bottom:88px;
+  padding-bottom:62px;
 }
 /* ---------- 安裝成 App ---------- */
 .install{
@@ -44,38 +44,38 @@ body{
 .xlink b{font-size:calc(16px * var(--fs));font-weight:800;display:block}
 .xlink span{font-size:calc(13px * var(--fs));opacity:.95;display:block;margin-top:4px}
 a{color:var(--accent2)}
-/* ---------- header ---------- */
+/* ---------- header（刻意不套用 --fs，保持精簡，把空間留給內容） ---------- */
 header{
   background:linear-gradient(135deg,#f0964f,#d9691f); color:#fff;
-  padding:18px 16px 14px; position:sticky; top:0; z-index:50;
-  box-shadow:0 2px 12px rgba(160,90,30,.25);
+  padding:8px 12px; position:sticky; top:0; z-index:50;
+  box-shadow:0 2px 10px rgba(160,90,30,.22);
+  display:flex; align-items:center; gap:8px; flex-wrap:wrap;
 }
-header h1{margin:0;font-size:calc(19px * var(--fs));letter-spacing:.3px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-header .sub{font-size:calc(12.5px * var(--fs));opacity:.93;margin-top:3px}
-header .oldlink{
-  display:inline-block;margin-top:9px;font-size:calc(12px * var(--fs));background:rgba(255,255,255,.2);
-  color:#fff;text-decoration:none;padding:5px 11px;border-radius:20px;border:1px solid rgba(255,255,255,.35)
+header .brand{
+  display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-right:auto;
+  background:none;border:0;color:#fff;font:inherit;cursor:pointer;padding:2px 0;text-align:left
 }
-header .hdrow{display:flex;align-items:center;gap:9px;margin-top:9px;flex-wrap:wrap}
+header .brand h1{margin:0;font-size:16.5px;font-weight:800;letter-spacing:.2px;white-space:nowrap}
+header .brand:active{opacity:.75}
+header .lv{font-size:9.5px;padding:1.5px 5px;border-radius:5px}
 header .prof{display:flex;background:rgba(255,255,255,.18);border-radius:20px;padding:2px;border:1px solid rgba(255,255,255,.3)}
 header .prof button{
-  border:0;background:none;color:rgba(255,255,255,.8);font:inherit;font-size:calc(12px * var(--fs));padding:4px 11px;
-  border-radius:18px;cursor:pointer
+  border:0;background:none;color:rgba(255,255,255,.85);font:inherit;font-size:11.5px;padding:3px 9px;
+  border-radius:18px;cursor:pointer;white-space:nowrap
 }
 header .prof button.on{background:#fff;color:var(--accent2);font-weight:700}
-header #sync-badge{font-size:calc(11px * var(--fs));background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:3px 9px;display:none}
-/* ---------- tabs ---------- */
+header #sync-badge{font-size:14px;line-height:1;opacity:.9;display:none}
+/* ---------- tabs（同樣固定尺寸） ---------- */
 nav{
   position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);
   display:flex;z-index:60;padding-bottom:env(safe-area-inset-bottom)
 }
 nav button{
-  flex:1;border:0;background:none;padding:9px 2px 8px;font:inherit;font-size:calc(11px * var(--fs));color:var(--ink2);
-  cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px
+  flex:1;border:0;background:none;padding:5px 2px 4px;font:inherit;font-size:10px;color:var(--ink2);
+  cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.35
 }
-nav button i{font-style:normal;font-size:calc(21px * var(--fs));line-height:1}
+nav button i{font-style:normal;font-size:18px;line-height:1}
 nav button.on{color:var(--accent2);font-weight:700}
-nav button.on i{transform:translateY(-1px)}
 /* ---------- layout ---------- */
 main{max-width:860px;margin:0 auto;padding:16px 14px 20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;margin-bottom:14px}
@@ -97,7 +97,7 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 .btn:active{transform:scale(.97)}
 .btn:disabled{opacity:.5;cursor:default}
 .lv{font-size:calc(10.5px * var(--fs));font-weight:800;padding:2px 7px;border-radius:6px;color:#fff;letter-spacing:.4px;white-space:nowrap}
-.lv.B1{background:var(--b1)} .lv.B1P{background:var(--b1p)} .lv.B2{background:var(--b2)}
+.lv.A2{background:var(--a2)} .lv.B1{background:var(--b1)} .lv.B1P{background:var(--b1p)} .lv.B2{background:var(--b2)}
 .spk{
   border:1px solid var(--line);background:#fff;border-radius:8px;cursor:pointer;
   font-size:calc(14px * var(--fs));padding:3px 8px;color:var(--accent2);line-height:1.4
@@ -212,16 +212,15 @@ tr:nth-child(even) td{background:#fdfbf8}
 <body>
 
 <header>
-  <h1>📚 B2 Read <span class="lv B1">B1</span><span class="lv B1P">B1+</span><span class="lv B2">B2</span></h1>
-  <div class="sub">閱讀 · 單字 · 文法 — 從 B1 穩穩推到 B2</div>
-  <div class="hdrow">
-    <div class="prof" title="切換學習者，各自獨立進度">
-      <button id="prof-anita" class="on" onclick="setProfile('anita')">🍎 Anita</button>
-      <button id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
-    </div>
-    <span id="sync-badge" title="進度已雲端同步（跨裝置共用）">☁️ 已同步</span>
+  <button class="brand" onclick="go('daily')" title="回今日首頁">
+    <h1>📚 B2 Read</h1>
+    <span id="hd-levels"></span>
+  </button>
+  <div class="prof" title="切換學習者，各自獨立進度">
+    <button id="prof-anita" class="on" onclick="setProfile('anita')">🍎 Anita</button>
+    <button id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
   </div>
-  <a class="oldlink" href="https://learning-english-notes.web.app" target="_blank" rel="noopener">↗ 前往課堂筆記互動網站</a>
+  <span id="sync-badge" title="進度已雲端同步（跨裝置共用）">☁️</span>
 </header>
 
 <main>
@@ -258,10 +257,15 @@ tr:nth-child(even) td{background:#fdfbf8}
    ============================================================ */
 const $ = id => document.getElementById(id);
 const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-const lvCls = l => l==='B1+'?'B1P':(l==='B2'?'B2':'B1');
+const lvCls = l => l==='B1+'?'B1P':(l==='B2'?'B2':(l==='A2'?'A2':'B1'));
 
 /* ---------- 學習者 Profile（各自獨立進度，與課堂筆記站同一套） ---------- */
 const PROFILES={anita:'Anita',tom:'Tom'};
+// 每位學習者的程度區間：Tom 從 A2 起步、Anita 往 B2 推進
+const BANDS={anita:['B1','B1+','B2'], tom:['A2','B1','B1+']};
+const GOALS={anita:'從 B1 穩穩推到 B2', tom:'從 A2 穩穩推到 B1+'};
+const band = () => BANDS[PROFILE]||BANDS.anita;
+const inBand = l => band().indexOf(l)>=0;
 let PROFILE=localStorage.getItem('b2lab_profile')||'anita';
 if(!PROFILES[PROFILE]) PROFILE='anita';
 const skey = () => 'b2lab.v1.'+PROFILE;
@@ -354,6 +358,7 @@ function setProfile(p){
   if(cloudUnsub){ cloudUnsub(); cloudUnsub=null; }
   PROFILE=p; localStorage.setItem('b2lab_profile',p);
   vQueue=[]; vIdx=0; vFlip=false; rdOpen=null; CURG=null; QSTATE={};
+  if(!inBand(rdFilter.level)) rdFilter.level='all';   // 舊的程度篩選可能不在新區間裡
   updateProfileUI();
   loadLocal();
   applyFs();
@@ -362,6 +367,9 @@ function setProfile(p){
 }
 function updateProfileUI(){
   ['anita','tom'].forEach(p=>{ const b=$('prof-'+p); if(b) b.classList.toggle('on',PROFILE===p); });
+  const el=$('hd-levels');
+  if(el) el.innerHTML=band().map(l=>'<span class="lv '+lvCls(l)+'">'+l+'</span>').join('');
+  const t=$('hd-title'); if(t) t.textContent=GOALS[PROFILE]||'';
 }
 window.setProfile=setProfile;
 
@@ -497,7 +505,7 @@ RENDER.read=function(){
     (rdFilter.kind==='all'||a.kind===rdFilter.kind) &&
     (rdFilter.level==='all'||a.level===rdFilter.level));
   const kb=[['orig','✍️ 原創分級 '+ORIG_ARTS.length],['daily','📅 每日新文章 '+DAILY_ARTS.length],['note','📓 筆記文章 '+NOTE_ARTS.length],['all','全部']];
-  const lb=[['all','全部程度'],['B1','B1'],['B1+','B1+'],['B2','B2']];
+  const lb=[['all','全部程度']].concat(band().map(l=>[l,l]));
   v.innerHTML=
     '<div class="card"><h2 class="sec">📖 分級閱讀</h2>'
     +'<div class="hint">點文章中<b>任何一個英文字</b>都會跳出中文與例句；黃底字是本篇重點字。每段都有 🔊 朗讀與中譯開關。</div>'
@@ -837,7 +845,7 @@ RENDER.daily=function(){
   const isToday=x=>x&&x.date===t;
   let h=installCard()
    +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
-   +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+'</div>'
+   +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+' · '+(GOALS[PROFILE]||'')+'</div>'
    +'<div class="hint">每天自動更新<b>一篇文章</b>與<b>一個文法單元</b>。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進，不會重複。</div>'
    +'<div class="stats"><div class="stat"><b>'+DAILY_ARTS.length+'</b><span>累積每日文章</span></div>'
    +'<div class="stat"><b>'+DAILY_GRAM.length+'</b><span>累積每日文法</span></div>'
@@ -917,7 +925,7 @@ RENDER.prog=function(){
 
    +'<div class="card"><h2 class="sec">📖 閱讀</h2>'
    +'<div class="muted">完成 '+artN+' / '+ALL_ARTS.length+' 篇 · 平均理解測驗 '+avg+'%</div>'+bar(artN,ALL_ARTS.length)
-   +['B1','B1+','B2'].map(l=>{const b=byLv(l);return '<div style="margin-top:9px"><span class="lv '+lvCls(l)+'">'+l+'</span> <span class="muted">'+b.dn+' / '+b.tot+' 篇</span>'+bar(b.dn,b.tot)+'</div>';}).join('')
+   +band().map(l=>{const b=byLv(l);return '<div style="margin-top:9px"><span class="lv '+lvCls(l)+'">'+l+'</span> <span class="muted">'+b.dn+' / '+b.tot+' 篇</span>'+bar(b.dn,b.tot)+'</div>';}).join('')
    +'</div>'
 
    +'<div class="card"><h2 class="sec">📐 文法</h2>'
