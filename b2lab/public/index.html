@@ -197,6 +197,64 @@ tr:nth-child(even) td{background:#fdfbf8}
 .ytwrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:12px;overflow:hidden;margin-top:11px}
 .ytwrap>div,.ytwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .spk.rbtn.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+/* ---------- 雜誌版面（仿常春藤內頁） ---------- */
+.mag{display:grid;grid-template-columns:1fr;gap:14px;align-items:start}
+@media(min-width:860px){ .mag{grid-template-columns:1.4fr 1fr} }
+.magttl{
+  background:linear-gradient(135deg,#fff4e2,#ffe3c2);border:2.5px solid #2b2118;border-radius:16px;
+  padding:14px 16px;box-shadow:5px 5px 0 #2b2118;margin-bottom:14px
+}
+.magttl h2{
+  margin:0;font-size:calc(25px * var(--fs));font-weight:900;line-height:1.2;letter-spacing:.5px;
+  color:#1f1a14;text-transform:uppercase
+}
+.magttl .cn{font-size:calc(18px * var(--fs));font-weight:900;color:#c0392b;margin-top:4px}
+.magttl .set{font-size:calc(14px * var(--fs));font-style:italic;color:#5b4a3a;margin-top:7px}
+.magttl .bar{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-top:9px}
+.magbadge{
+  font-size:calc(11.5px * var(--fs));font-weight:800;background:#2b2118;color:#fff;
+  border-radius:6px;padding:2px 8px
+}
+/* 內文重點字：橘色加粗＋上標編號 */
+w.tgt{color:#c0561a;font-weight:800}
+sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
+/* 右欄 Words & Phrases */
+.wpbox{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.wphead{
+  background:#2b7a78;color:#fff;padding:8px 13px;font-size:calc(14.5px * var(--fs));font-weight:800;
+  display:flex;justify-content:space-between;align-items:center;gap:8px
+}
+.wphead .zh{font-size:calc(12.5px * var(--fs));opacity:.92;font-weight:700}
+.wpbody{padding:11px 13px}
+.wpitem{border-bottom:1px dashed var(--line);padding:9px 0}
+.wpitem:last-child{border-bottom:0}
+.wpline{font-size:calc(16px * var(--fs));font-weight:800;color:#1f1a14;display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.wpline .n{color:#c0392b;font-weight:900}
+.wpline .ipa{font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2);font-weight:400}
+.wpline .pos{font-size:calc(12.5px * var(--fs));color:#2b7a78;font-weight:800;font-style:italic}
+.wpitem .zh{font-size:calc(15px * var(--fs));font-weight:700;color:var(--accent2);margin-top:2px}
+.wpitem .def{font-size:calc(13.5px * var(--fs));color:var(--ink2);margin-top:3px}
+.wpitem .exs{font-size:calc(14.5px * var(--fs));margin-top:5px;background:#fdfbf8;border-radius:8px;padding:7px 9px}
+.extra{display:flex;flex-wrap:wrap;gap:6px}
+.extra span{
+  font-size:calc(13px * var(--fs));background:#f2f7f7;border:1px solid #cfe3e2;border-radius:20px;
+  padding:3px 10px;cursor:pointer
+}
+/* You Can Do This */
+.ycd{border-bottom:1px dashed var(--line);padding:10px 0}
+.ycd:last-child{border-bottom:0}
+.ycd .q{border:0;padding:0;margin:0;background:none;font-size:calc(15.5px * var(--fs));line-height:1.85}
+.ycd .blank{font-weight:900;color:#c0392b}
+.opt3{display:inline-flex;gap:4px;flex-wrap:wrap;vertical-align:middle;align-items:center}
+.opt3 .par,.opt3 .sl{color:#8a7f72;font-weight:800}
+.opt3 button{
+  border:1.5px solid var(--line);background:#fff;border-radius:8px;font:inherit;
+  font-size:calc(14px * var(--fs));padding:2px 9px;cursor:pointer;color:var(--ink)
+}
+.opt3 button.right{border-color:var(--ok);background:#eefaf1;font-weight:800;color:#1f8a4c}
+.opt3 button.wrong{border-color:var(--bad);background:#fdeeee;color:var(--bad)}
+.ycdcn{font-size:calc(13.5px * var(--fs));color:var(--ink2);margin-top:4px;display:none}
+.ycdcn.on{display:block}
 /* ---------- 逐字稿（時間軸同步） ---------- */
 .sline{border-left:3px solid transparent;border-radius:9px;padding:7px 9px;margin-bottom:5px}
 .sline.cur{background:#fff2d9;border-left-color:var(--accent)}
@@ -538,7 +596,7 @@ RENDER.read=function(){
   const lb=[['all','全部程度']].concat(band().map(l=>[l,l]));
   v.innerHTML=
     '<div class="card"><h2 class="sec">📖 分級閱讀</h2>'
-    +'<div class="hint">點文章中<b>任何一個英文字</b>都會跳出中文與例句；黃底字是本篇重點字。每段都有 🔊 朗讀與中譯開關。</div>'
+    +'<div class="hint">雜誌式版面：內文的<b style="color:#c0561a">橘色加粗＋編號</b>字對應右欄「Words &amp; Phrases」單字片語，另有補充詞彙與選字填空。點<b>任何一個英文字</b>都能查中文。</div>'
     +'<div class="chips">'+kb.map(([k,t])=>'<button class="chip'+(rdFilter.kind===k?' on':'')+'" onclick="rdSet(\'kind\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
     +'<div class="chips">'+lb.map(([k,t])=>'<button class="chip'+(rdFilter.level===k?' on':'')+'" onclick="rdSet(\'level\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
     +'<div class="muted">共 '+list.length+' 篇</div></div>'
@@ -558,35 +616,175 @@ function rdOpenArt(id){ rdOpen=ALL_ARTS.find(a=>a.id===id); QSTATE={}; RENDER.re
 function rdClose(){ rdOpen=null; RENDER.read(); }
 window.rdSet=rdSet; window.rdOpenArt=rdOpenArt; window.rdClose=rdClose;
 
+const reEsc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+
+/* 內文重點字：橘色加粗＋上標編號（只標第一次出現），其餘字照樣可點查 */
+function magTokenize(text,tmap,used){
+  if(!tmap||!tmap.keys.length) return tokenize(text,null);
+  const re=new RegExp('\\b('+tmap.keys.map(reEsc).join('|')+')(s|es|ed|ing|d)?\\b','ig');
+  let out='',last=0,m;
+  while((m=re.exec(text))){
+    const key=m[1].toLowerCase();
+    const n=tmap.num[key];
+    if(!n||used.has(key)) continue;
+    used.add(key);
+    out+=tokenize(text.slice(last,m.index),null);
+    out+='<b>'+tokenize(m[0],null).replace(/<w/g,'<w class="tgt"')+'<sup class="tno">'+n+'</sup></b>';
+    last=m.index+m[0].length;
+  }
+  return out+tokenize(text.slice(last),null);
+}
+
+/* 補充詞彙：文章裡出現、又在課堂字庫裡、但不是本篇重點字的字 */
+function extraWords(a,tgtSet){
+  const seen=new Set(), out=[];
+  const text=a.paras.map(p=>p.en).join(' ');
+  (text.match(/[A-Za-z][A-Za-z'-]*/g)||[]).forEach(raw=>{
+    if(out.length>=10) return;
+    const g=lookup(raw); if(!g) return;
+    const k=g.w.toLowerCase();
+    if(seen.has(k)||tgtSet.has(k)) return;
+    if(g.w.length<5) return;             // 太簡單的字不列
+    seen.add(k); out.push(g);
+  });
+  return out;
+}
+
+/* You Can Do This：用文章自己的句子挖空，選項取自本篇其他重點字 */
+function buildYCD(a,tgIn){
+  const tg=(tgIn||a.target||[]).filter(t=>/^[A-Za-z][A-Za-z' -]*$/.test(t.w));
+  if(tg.length<3) return [];
+  const sents=[];
+  a.paras.forEach(p=>String(p.en).split(/(?<=[.!?])\s+/).forEach(s=>{ if(s.trim()) sents.push(s.trim()); }));
+  const out=[];
+  for(const t of tg){
+    if(out.length>=3) break;
+    const re=new RegExp('\\b'+reEsc(t.w)+'(s|es|ed|ing|d)?\\b','i');
+    const s=sents.find(x=>re.test(x));
+    if(!s) continue;
+    const form=(s.match(re)||[])[0];
+    const others=tg.filter(x=>x.w!==t.w && x.pos===t.pos);
+    const pool=(others.length>=2?others:tg.filter(x=>x.w!==t.w)).slice(0,2);
+    if(pool.length<2) continue;
+    const opts=[t.w,pool[0].w,pool[1].w].sort();
+    out.push({sent:s.replace(re,'\u0000'), form:form, ans:t.w, opts:opts, cn:t.cn, i:out.length});
+  }
+  return out;
+}
+function ycdHTML(items){
+  if(!items.length) return '';
+  return '<div class="wpbox" style="margin-top:14px"><div class="wphead">▼ You Can Do This<span class="zh">英文試金石</span></div>'
+   +'<div class="wpbody"><div class="hint" style="margin-bottom:8px">選出最適當的字完成句子。</div>'
+   + items.map((it,i)=>{
+       const parts=it.sent.split('\u0000');
+       return '<div class="ycd"><div class="q">'+(i+1)+'. '+esc(parts[0])
+        +'<span class="opt3" id="y-'+i+'"><span class="par">(</span>'
+        + it.opts.map((o,j)=>'<button onclick="ycdPick('+i+','+j+')" data-w="'+esc(o)+'">'+esc(o)+'</button>').join('<span class="sl">/</span>')
+        +'<span class="par">)</span></span>'+esc(parts[1]||'')+'</div>'
+        +'<div class="ycdcn" id="ycn-'+i+'">✔ '+esc(it.ans)+'（'+esc(it.cn)+'）→ '+esc(it.sent.replace('\u0000',it.form))+'</div></div>';
+     }).join('')
+   +'</div></div>';
+}
+let YCD=[];
+function ycdPick(i,j){
+  const box=$('y-'+i); if(!box||box.dataset.done) return;
+  box.dataset.done='1';
+  const it=YCD[i];
+  [...box.querySelectorAll('button')].forEach(b=>{
+    if(b.dataset.w===it.ans) b.classList.add('right');
+    else if(b===box.querySelectorAll('button')[j]) b.classList.add('wrong');
+    b.disabled=true;
+  });
+  const cn=$('ycn-'+i); if(cn) cn.classList.add('on');
+  say(it.sent.replace('\u0000',it.form));
+}
+window.ycdPick=ycdPick;
+
 function readerHTML(a){
-  const hiSet=new Set((a.hi||[]).map(w=>String(w).toLowerCase()));
-  (a.hi||[]).forEach(w=>String(w).toLowerCase().split(/\s+/).forEach(p=>hiSet.add(p)));
+  // 課堂筆記文章沒有 target，就用它的 highlightWords 去字庫組出單字片語欄
+  let tg=a.target||[];
+  if(!tg.length&&(a.hi||[]).length){
+    const seen=new Set();
+    tg=(a.hi||[]).map(w=>{
+      const g=lookup(w); if(!g) return null;
+      const k=g.w.toLowerCase(); if(seen.has(k)) return null; seen.add(k);
+      return {w:g.w,ipa:g.ipa||'',pos:g.pos||'',cn:g.cn||'',def:g.def||'',ex:g.exEn||''};
+    }).filter(Boolean);
+  }
+  // 編號照內文出現的順序排（跟雜誌一樣 1、2、3…），沒出現在內文的排到後面
+  const tmap={keys:tg.map(t=>t.w).sort((x,y)=>y.length-x.length), num:{}};
+  if(tg.length){
+    const full=a.paras.map(p=>p.en).join('\n');
+    const re=new RegExp('\\b('+tmap.keys.map(reEsc).join('|')+')(s|es|ed|ing|d)?\\b','ig');
+    const order=[], seenK=new Set(); let mm;
+    while((mm=re.exec(full))){
+      const k=mm[1].toLowerCase();
+      if(!seenK.has(k)){ seenK.add(k); order.push(k); }
+    }
+    tg=tg.slice().sort((x,y)=>{
+      const ix=order.indexOf(x.w.toLowerCase()), iy=order.indexOf(y.w.toLowerCase());
+      return (ix<0?9999:ix)-(iy<0?9999:iy);
+    });
+  }
+  tg.forEach((t,i)=>{ tmap.num[t.w.toLowerCase()]=i+1; });
+  const tgtSet=new Set(tg.map(t=>t.w.toLowerCase()));
+  const used=new Set();
+  YCD=buildYCD(a,tg);
+  const extras=extraWords(a,tgtSet);
+
   let h='<button class="back" onclick="rdClose()">← 回文章列表</button>'
-   +'<div class="card">'
-   +'<div class="row" style="justify-content:space-between;align-items:flex-start"><h2 class="sec" style="margin:0">'+esc(a.title)+'</h2><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span></div>'
-   +'<div class="muted">'+esc(a.titleCn)+' · '+a.words+' words'+(a.date?' · 📅 '+esc(a.date):'')+(a.source?' · '+esc(a.source):'')+'</div>'
-   +(a.sourceUrl?'<div style="margin-top:7px"><a href="'+esc(a.sourceUrl)+'" target="_blank" rel="noopener" style="font-size:calc(13px * var(--fs))">↗ 看新聞原文</a></div>':'')
-   +(a.focus?'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:calc(14.5px * var(--fs));font-weight:800">📐 文法焦點：'+esc(a.focus)+'</div>'+(a.intro?'<div class="ecn" style="margin-top:5px;font-size:calc(14.5px * var(--fs))">'+esc(a.intro)+'</div>':'')+'</div>':'')
-   +'<div class="row" style="margin-top:10px">'
+   +'<div class="magttl">'
+   +'<h2>'+esc(a.title)+'</h2>'
+   +'<div class="cn">'+esc(a.titleCn)+'</div>'
+   +(a.intro?'<div class="set">'+esc(a.intro)+'</div>':'')
+   +'<div class="bar"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'
+   +'<span class="magbadge">🏷 '+esc(a.topic)+'</span>'
+   +'<span class="magbadge">📝 '+a.words+' words</span>'
+   +(a.date?'<span class="magbadge">📅 '+esc(a.date)+'</span>':'')
+   +(a.focus?'<span class="magbadge">📐 '+esc(a.focus)+'</span>':'')
+   +'</div>'
+   +(a.source?'<div class="set" style="font-style:normal;font-size:calc(12.5px * var(--fs))">'+esc(a.source)
+      +(a.sourceUrl?' · <a href="'+esc(a.sourceUrl)+'" target="_blank" rel="noopener">↗ 看新聞原文</a>':'')+'</div>':'')
+   +'</div>';
+
+  h+='<div class="mag">';
+
+  /* 左欄：內文 */
+  h+='<div><div class="card">'
+   +'<div class="row" style="margin-bottom:11px">'
    +'<button class="btn ghost" onclick="cnAll(1)">顯示全部中譯</button>'
    +'<button class="btn gray" onclick="cnAll(0)">隱藏中譯</button>'
-   +'<button class="btn ghost" onclick="readAll()">🔊 朗讀全文</button>'
+   +'<button class="btn ghost" onclick="readAll()">🔊 朗讀全文</button></div>'
+   +'<div id="paras">'+a.paras.map((p,i)=>
+      '<div class="para" id="p'+i+'"><div class="en">'+magTokenize(p.en,tmap,used)+'</div>'
+     +'<div class="pbar">'+spk(p.en,'朗讀')+'<button class="spk" onclick="togCn('+i+')">中譯</button></div>'
+     +'<div class="cn">'+esc(p.cn)+'</div></div>').join('')
+   +'</div>'
+   +'<div class="muted" style="margin-top:6px;font-size:calc(12.5px * var(--fs))">💡 <b style="color:#c0561a">橘色加粗＋編號</b>的字對應右邊的單字片語；點文章裡<b>任何一個字</b>都能查中文。</div>'
    +'</div></div>';
 
-  h+='<div class="card" id="paras">'+a.paras.map((p,i)=>
-      '<div class="para" id="p'+i+'"><div class="en">'+tokenize(p.en,hiSet)+'</div>'
-     +'<div class="pbar">'+spk(p.en,'朗讀')+'<button class="spk" onclick="togCn('+i+')">中譯</button></div>'
-     +'<div class="cn">'+esc(p.cn)+'</div></div>').join('')+'</div>';
-
-  if((a.target||[]).length){
-    h+='<div class="card"><h2 class="sec">🔤 本篇重點字 ('+a.target.length+')</h2>'
-     + a.target.map(t=>'<div class="ex"><div class="een">'+esc(t.w)+' '+spk(t.w)+' <span class="fp">'+esc(t.pos)+'</span></div>'
-       +'<div class="gi" style="font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2)">'+esc(t.ipa)+'</div>'
-       +'<div style="color:var(--accent2);font-weight:700;font-size:calc(15px * var(--fs))">'+esc(t.cn)+'</div>'
-       +'<div class="ecn">'+esc(t.def)+'</div>'
-       +'<div class="ecn" style="margin-top:4px">e.g. '+esc(t.ex)+'</div></div>').join('')
-     +'</div>';
+  /* 右欄：Words & Phrases + 補充詞彙 + You Can Do This */
+  h+='<div>';
+  if(tg.length){
+    h+='<div class="wpbox"><div class="wphead">▼ Words &amp; Phrases<span class="zh">單字片語</span></div><div class="wpbody">'
+     + tg.map((t,i)=>'<div class="wpitem">'
+       +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="showGloss(\''+esc(t.w).replace(/'/g,"\\'")+'\')">'+esc(t.w)+'</w> '
+       +spk(t.w)+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
+       +'<div class="zh">'+esc(t.cn)+'</div>'
+       +(t.def?'<div class="def">'+esc(t.def)+'</div>':'')
+       +(t.ex?'<div class="exs">'+esc(t.ex)+' '+spk(t.ex)+'</div>':'')
+       +'</div>').join('')
+     +'</div></div>';
   }
+  if(extras.length){
+    h+='<div class="wpbox" style="margin-top:14px"><div class="wphead">▼ Extra Words &amp; Phrases<span class="zh">補充詞彙</span></div>'
+     +'<div class="wpbody"><div class="extra">'
+     + extras.map(g=>'<span onclick="showGloss(\''+esc(g.w).replace(/'/g,"\\'")+'\')">'+esc(g.w)+' · '+esc(g.cn||'')+'</span>').join('')
+     +'</div><div class="muted" style="margin-top:7px;font-size:calc(12px * var(--fs))">這些字出現在本文，也在你的課堂字庫裡。點一下看完整解釋。</div></div></div>';
+  }
+  h+=ycdHTML(YCD);
+  h+='</div></div>';
+
   h+=focusHTML(a.id);
   if((a.upgrade||[]).length){
     const lo=a.upFrom||'B1', hi=a.upTo||'B2';
