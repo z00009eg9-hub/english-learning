@@ -1232,14 +1232,18 @@ RENDER.daily=function(){
   const artToday=pool.find(a=>a.date===t)||pool[0]||null;
   const gramToday=DAILY_GRAM.find(g=>g.date===t)||DAILY_GRAM[0]||null;
   const isToday=x=>x&&x.date===t;
-  // 今日聽力：從你程度的聽力庫，依日期每天輪一課（每天都會有，隔天換下一課）
+  // 今日聽力：從你程度的聽力庫輪一課，只在每週三、五換下一課（跟文章／文法同步；其他天維持同一課）
   const listenPool=LESSONS.filter(l=>inBand(l.level));
-  const dayNum=Math.floor(new Date(t+'T00:00:00').getTime()/86400000);
-  const listenToday=listenPool.length?listenPool[dayNum%listenPool.length]:null;
+  const td=new Date(t+'T00:00:00');
+  const N=Math.floor(Date.UTC(td.getFullYear(),td.getMonth(),td.getDate())/86400000); // 1970-01-01(週四)起算的天數
+  const wedCount=N>=6?Math.floor((N-6)/7)+1:0;   // 到今天(含)為止經過幾個週三
+  const friCount=N>=1?Math.floor((N-1)/7)+1:0;   // 到今天(含)為止經過幾個週五
+  const listenStep=wedCount+friCount;            // 每逢週三、週五 +1，其他天不變
+  const listenToday=listenPool.length?listenPool[listenStep%listenPool.length]:null;
   let h=installCard()
    +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
    +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+' · '+(GOALS[PROFILE]||'')+'</div>'
-   +'<div class="hint"><b>每週三、五</b>更新<b>一篇新文章</b>與<b>一個文法單元</b>；<b>聽力每天</b>從影片庫換一課讓你練耳朵。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進。</div>'
+   +'<div class="hint"><b>每週三、五</b>更新<b>一篇新文章</b>、<b>一個文法單元</b>與<b>一課聽力</b>。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力從影片庫輪一課讓你練耳朵。</div>'
    +'<div class="stats"><div class="stat"><b>'+pool.length+'</b><span>累積每日文章</span></div>'
    +'<div class="stat"><b>'+DAILY_GRAM.length+'</b><span>累積每日文法</span></div>'
    +'<div class="stat"><b>'+(ST.streak||1)+'</b><span>連續學習天數</span></div>'
@@ -1273,7 +1277,7 @@ RENDER.daily=function(){
   if(!artToday&&!gramToday){
     h+='<div class="card"><div class="muted">還沒有新內容。新文章與文法在<b>每週三、五</b>早上更新，可以先到「閱讀」與「文法」分頁，或看今日聽力。</div></div>';
   }else if(!isToday(artToday)&&!isToday(gramToday)){
-    h+='<div class="card"><div class="muted">上面顯示的是最近一次的文章與文法。新內容<b>每週三、五</b>早上更新（其他天不會有新的）；聽力則每天換一課。</div></div>';
+    h+='<div class="card"><div class="muted">上面顯示的是最近一次的內容。新文章、文法與聽力<b>每週三、五</b>早上更新，其他天不會有新的。</div></div>';
   }
   h+='<div class="card"><h2 class="sec">🎯 今天可以這樣安排</h2>'
    +'<ol style="font-size:calc(15px * var(--fs));padding-left:22px;margin:4px 0">'
