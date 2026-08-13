@@ -1227,15 +1227,26 @@ function gramHTML(g){
    ============================================================ */
 RENDER.daily=function(){
   const t=today();
-  const mineArts=DAILY_ARTS.filter(a=>inBand(a.level));
-  const pool=mineArts.length?mineArts:DAILY_ARTS;
-  const artToday=pool.find(a=>a.date===t)||pool[0]||null;
-  const gramToday=DAILY_GRAM.find(g=>g.date===t)||DAILY_GRAM[0]||null;
   const isToday=x=>x&&x.date===t;
-  // 今日聽力：優先顯示每週三、五自動新增、屬於你程度的「最新一課」；還沒有新的就顯示影片庫裡的第一課
-  const listenPool=LESSONS.filter(l=>inBand(l.level));
-  const listenDated=listenPool.filter(l=>l.date&&l.date<=t).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
-  const listenToday=listenDated[0]||listenPool[0]||null;
+  // 依目前學習者挑「最新、且符合程度」的一份內容：Tom 取程度較低的、Anita 取程度較高的，
+  // 這樣兩人各看到自己那一份（文章／文法／聽力都用同一套規則）。
+  const lvRank={A2:0,'B1':1,'B1+':2,'B2':3};
+  const preferHigh=(PROFILE!=='tom');
+  const pickMine=(all)=>{
+    const band=(all||[]).filter(x=>inBand(x.level));
+    const p=band.length?band:(all||[]);
+    const dated=p.filter(x=>x.date&&x.date<=t);
+    if(dated.length){
+      const maxDate=dated.reduce((mx,x)=>x.date>mx?x.date:mx,'');
+      const top=dated.filter(x=>x.date===maxDate);
+      return top.slice().sort((a,b)=>preferHigh?((lvRank[b.level]||0)-(lvRank[a.level]||0)):((lvRank[a.level]||0)-(lvRank[b.level]||0)))[0];
+    }
+    return p[0]||null;
+  };
+  const pool=DAILY_ARTS.filter(a=>inBand(a.level));
+  const artToday=pickMine(DAILY_ARTS);
+  const gramToday=pickMine(DAILY_GRAM);
+  const listenToday=pickMine(LESSONS);
   let h=installCard()
    +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
    +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+' · '+(GOALS[PROFILE]||'')+'</div>'
@@ -1841,7 +1852,7 @@ function oldSiteCard(){
    +'<div class="pair">'
    +'<div class="pairbox">'
      +'<div class="ph" style="background:linear-gradient(135deg,#f0964f,#d9691f)">📚 B2 Read（這裡）</div>'
-     +'<ul><li>📅 今日：每天一篇新文章＋一個文法單元</li>'
+     +'<ul><li>📅 今日：每週三、五更新文章、文法與聽力</li>'
      +'<li>📖 閱讀：61 篇分級文章，點字查中文</li>'
      +'<li>🎧 聽力：影片＋逐字稿，可慢速與單句循環</li>'
      +'<li>🔤 單字卡：618 字間隔複習</li>'

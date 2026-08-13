@@ -1,5 +1,5 @@
 {
-  "_note": "內容排程狀態檔（每週三、五各跑一次）。每次執行產生兩篇文章（Tom 的 A2 版 + Anita 的 B1+/B2 版）、一個共用文法單元，並各補一課全新的真實 VOA 聽力（Tom 補 Level 1／Anita 補 Level 2，兩位學習者每次都有新聽力）。usedUnits = 已產生過的每日文法單元編號（依 syllabus.json 從 Unit 1 依序走）；usedSources = 已改寫過的新聞網址；usedVoa = 已加入聽力庫的 VOA 課次代號（L1-x=Level 1 第 x 課、L2-x=Level 2 第 x 課）；lastRun = 最後一次成功產生的日期。",
+  "_note": "內容排程狀態檔（每週三、五各跑一次）。每次執行讓兩位學習者各拿到一整份：兩篇文章（Tom 的 A2 版 + Anita 的 B1+/B2 版）、兩個文法單元（Tom 的 A2/B1 + Anita 的 B1+/B2）、兩課全新的真實 VOA 聽力（Tom 補 Level 1／Anita 補 Level 2）。usedUnits = Anita 已產生過的文法單元編號；usedUnitsTom = Tom 已產生過的文法單元編號（各自從 syllabus.json 依序走、互不影響）；usedSources = 已改寫過的新聞網址；usedVoa = 已加入聽力庫的 VOA 課次代號（L1-x=Level 1 第 x 課、L2-x=Level 2 第 x 課）；lastRun = 最後一次成功產生的日期。",
   "lastRun": "2026-08-13",
   "nextKind": "original",
   "usedVoa": [
@@ -11,6 +11,7 @@
   "usedUnits": [
     9
   ],
+  "usedUnitsTom": [],
   "usedSources": [
     "https://www.taipeitimes.com/News/front/archives/2026/08/08/2003862135"
   ],

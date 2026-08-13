@@ -97,16 +97,24 @@ date +%Y-%m-%d                # 今天日期（用 UTC 即可，排程在當地�
 | `questions` | 4 個 `{q, opts, ans, expl}`；`opts` 4 個選項且以 `"A. "`–`"D. "` 開頭，`ans` 是 0-based 索引，`expl` 用中文並引用原文依據 |
 | `upgrade` | 2 個 `{b1, b2, note}`：同一個意思的 B1 說法 vs. B2 說法，`note` 解釋為什麼升級了 |
 
-### 3. 產生一個文法單元 → 插入 `DAILY.grammar` 陣列的**最前面**
+### 3. 產生**兩個文法單元**（兩位學習者各一個）→ 都插入 `DAILY.grammar` 陣列的**最前面**
 
-- 從 `syllabus.json` 挑出**編號最小、且不在 `usedUnits` 裡**的單元。
-- 完全原創撰寫，物件欄位照 data-grammar.js 的格式，另加 `date` 與 `unitNo`：
+兩位學習者程度差很多，所以每次各給一個**符合自己程度**的文法單元。網站會依目前選的學習者，挑出程度最接近的那一個（Tom 取較低階、Anita 取較高階），所以**兩個都必須寫、而且 Tom 的一定要比 Anita 的簡單**：
+
+| 給誰 | id | 取材 | `level` |
+|---|---|---|---|
+| **Tom** | `"dg"+YYYYMMDD+"a2"` | 從 `syllabus.json` 挑**編號最小、且不在 `usedUnitsTom` 裡**的單元（都是基礎文法，適合 A2/B1） | `"A2"` 或 `"B1"` |
+| **Anita** | `"dg"+YYYYMMDD` | 從 `syllabus.json` 挑**編號最小、且不在 `usedUnits` 裡**的單元 | `"B1+"` 或 `"B2"` |
+
+- 兩人各有自己的進度指標：Tom 用 `usedUnitsTom`（從第 1 課開始走），Anita 用 `usedUnits`（沿用原本進度）。兩份指標各自獨立、可以走到同一個單元編號沒關係。
+- **Tom 的 `level` 一定要 ≤ B1，Anita 的一定要 ≥ B1+**（網站靠程度高低分辨誰是誰；Tom 的內容也要用更短的句子、更基礎的解說）。
+- 兩個都完全原創撰寫，物件欄位照 data-grammar.js 的格式，另加 `date` 與 `unitNo`：
 
 | 欄位 | 說明 |
 |---|---|
-| `id` | `"dg"` + YYYYMMDD |
-| `date` / `unitNo` | 日期／syllabus 單元編號 |
-| `level` | `"B1"`、`"B1+"` 或 `"B2"` |
+| `id` | Tom：`"dg"+YYYYMMDD+"a2"`；Anita：`"dg"+YYYYMMDD` |
+| `date` / `unitNo` | 今天日期／syllabus 單元編號 |
+| `level` | Tom：`"A2"` 或 `"B1"`；Anita：`"B1+"` 或 `"B2"` |
 | `title` / `titleCn` | 英文文法點名稱與中文名稱 |
 | `srcDays` | 空陣列 `[]` |
 | `summary` | 一句話講清楚這個文法點的核心 |
@@ -115,7 +123,7 @@ date +%Y-%m-%d                # 今天日期（用 UTC 即可，排程在當地�
 | `quiz` | 4 個 `{q, opts, ans, expl}`，格式同上，`expl` 用中文 |
 
 寫作風格要求：解說用中文、例句用英文＋中譯、語氣像家教在講重點，不要像文法書條列。
-一定要說明「為什麼會錯」，不要只說「這樣才對」。
+一定要說明「為什麼會錯」，不要只說「這樣才對」。**Tom 那份要更淺白、句子更短。**
 
 ### 3.5 為今天的兩篇文章各產生一張橫幅圖
 
@@ -219,7 +227,7 @@ console.log('OK');"
 
 - `lastRun` = 今天
 - `nextKind` 翻面
-- `usedUnits` 加入今天用掉的文法單元編號
+- `usedUnits` 加入 Anita 今天用掉的文法單元編號；`usedUnitsTom` 加入 Tom 今天用掉的文法單元編號
 - `usedSources` 加入今天的新聞網址（original 那天不用加）
 - `usedTitles` 加入今天**兩篇**的標題
 - `topicRotation` 把用掉的主題移到陣列尾端（保持輪替）
@@ -251,12 +259,18 @@ if(w<60||w>120) throw 'A2 篇字數應在 60–120，實際 '+w;
   if(a.upgrade.length<2) throw a.id+' 升級句不足';
   if(a.words!==a.paras.reduce((n,p)=>n+p.en.split(/\s+/).filter(Boolean).length,0)) throw a.id+' words 欄位與實際字數不符';
 });
-const g=d.grammar[0];
-if(g.date!==TODAY) throw '今天的文法單元沒產生';
-if(g.quiz.length<4) throw '文法題目不足';
-g.quiz.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw '文法 ans 索引錯誤: '+q.q});
-if(!g.sections.length||!g.traps.length) throw '文法單元不完整';
-console.log('OK  A2:',a2.id,a2.title,'('+w+'字) |',hi.level+':',hi.id,hi.title,'|',g.id,g.titleCn,'Unit'+g.unitNo);"
+const grams=d.grammar.filter(x=>x.date===TODAY);
+if(grams.length!==2) throw '今天應該有兩個文法單元（Tom + Anita），實際 '+grams.length;
+const gTom=grams.find(x=>['A2','B1'].includes(x.level));
+const gAnita=grams.find(x=>['B1+','B2'].includes(x.level));
+if(!gTom) throw '缺 Tom 的 A2/B1 文法單元';
+if(!gAnita) throw '缺 Anita 的 B1+/B2 文法單元';
+grams.forEach(g=>{
+  if(g.quiz.length<4) throw g.id+' 文法題目不足';
+  g.quiz.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw g.id+' 文法 ans 索引錯誤: '+q.q});
+  if(!g.sections.length||!g.traps.length) throw g.id+' 文法單元不完整';
+});
+console.log('OK  A2:',a2.id,a2.title,'('+w+'字) |',hi.level+':',hi.id,hi.title,'| 文法 Tom:',gTom.id,gTom.titleCn,'| Anita:',gAnita.id,gAnita.titleCn);"
 node -e "JSON.parse(require('fs').readFileSync('../daily-state.json','utf8'));console.log('state ok')"
 ```
 
