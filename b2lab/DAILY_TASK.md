@@ -60,7 +60,7 @@ date +%Y-%m-%d                # 今天日期（用 UTC 即可，排程在當地�
 - 只用現在簡單式、過去簡單式、現在進行式、can / will、there is / there are。
   **不要用**完成進行式、被動語態、關係子句、分詞構句、假設語氣。
 - 生活情境要具體（便利商店、公車、看醫生、打掃、點餐、請假），主角可以是 Tom 或第一人稱。
-- `target` 5–6 個高頻字；`questions` 3 題（其中一題考本篇文法點）。
+- `target` 5–6 個高頻字（每個都要有 `ex` 例句與 `exCn` 繁體中文翻譯）；`questions` 3 題（其中一題考本篇文法點）。
 - `upgrade` 2 組，並且**一定要加 `upFrom:"A2", upTo:"B1"`** 兩個欄位——這樣網站標題才會顯示「A2 → B1 句型升級」。
 - 參考範例：`b2lab/public/data-a2.js` 裡的 8 篇，語氣與長度照著寫。
 
@@ -93,7 +93,7 @@ date +%Y-%m-%d                # 今天日期（用 UTC 即可，排程在當地�
 | `focus` | 這篇的文法焦點（一句話） |
 | `intro` | 2–3 句中文導讀，說明要注意什麼結構 |
 | `paras` | 4 個 `{en, cn}`，每段都要有完整中譯 |
-| `target` | 7–9 個 `{w, ipa, pos, cn, def, ex}`；`def` 用簡單英文，`ex` 取自本文 |
+| `target` | 7–9 個 `{w, ipa, pos, cn, def, ex, exCn}`；`def` 用簡單英文，`ex` 取自本文，`exCn` 是 `ex` 的繁體中文翻譯（一定要有） |
 | `questions` | 4 個 `{q, opts, ans, expl}`；`opts` 4 個選項且以 `"A. "`–`"D. "` 開頭，`ans` 是 0-based 索引，`expl` 用中文並引用原文依據 |
 | `upgrade` | 2 個 `{b1, b2, note}`：同一個意思的 B1 說法 vs. B2 說法，`note` 解釋為什麼升級了 |
 
@@ -244,6 +244,7 @@ if(w<60||w>120) throw 'A2 篇字數應在 60–120，實際 '+w;
   if(a.questions.length<3) throw a.id+' 題目不足';
   a.questions.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw a.id+' ans 索引錯誤: '+q.q});
   if(a.target.length<5) throw a.id+' 重點字不足';
+  a.target.forEach(t=>{if(t.ex&&!t.exCn) throw a.id+' 重點字缺 exCn 中譯: '+t.w});
   if(a.upgrade.length<2) throw a.id+' 升級句不足';
   if(a.words!==a.paras.reduce((n,p)=>n+p.en.split(/\s+/).filter(Boolean).length,0)) throw a.id+' words 欄位與實際字數不符';
 });

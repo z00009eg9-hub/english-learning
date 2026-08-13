@@ -25,12 +25,12 @@ window.READING = [
      cn:"從那天起，Daniel 就守著一個簡單的規則：準備出門的時候，他絕不接電話。"}
   ],
   target:[
-    {w:"book",ipa:"/bʊk/",pos:"v.",cn:"預訂",def:"To arrange to have a seat, room, or ticket kept for you.",ex:"I booked a ticket for the 7:40 train."},
-    {w:"platform",ipa:"/ˈplætfɔːrm/",pos:"n.",cn:"月台",def:"The raised area beside a railway track where you get on a train.",ex:"He reached the platform at 7:42."},
-    {w:"realize",ipa:"/ˈriːəlaɪz/",pos:"v.",cn:"意識到、發現",def:"To suddenly understand or become aware of something.",ex:"He realized that he had left his wallet at home."},
-    {w:"turn around",ipa:"/tɜːrn əˈraʊnd/",pos:"phr.v.",cn:"轉身、折返",def:"To change direction so that you face or go the opposite way.",ex:"He turned around and went back."},
-    {w:"take a deep breath",ipa:"/teɪk ə diːp breθ/",pos:"phr.",cn:"深呼吸",def:"To breathe in slowly to calm yourself down.",ex:"Daniel sat down and took a deep breath."},
-    {w:"get ready",ipa:"/ɡet ˈredi/",pos:"phr.",cn:"做準備",def:"To prepare yourself for something.",ex:"He never answers the phone while he is getting ready to leave."}
+    {w:"book",ipa:"/bʊk/",pos:"v.",cn:"預訂",def:"To arrange to have a seat, room, or ticket kept for you.",ex:"I booked a ticket for the 7:40 train.",exCn:"我訂了七點四十分那班火車的票。"},
+    {w:"platform",ipa:"/ˈplætfɔːrm/",pos:"n.",cn:"月台",def:"The raised area beside a railway track where you get on a train.",ex:"He reached the platform at 7:42.",exCn:"他七點四十二分才到月台。"},
+    {w:"realize",ipa:"/ˈriːəlaɪz/",pos:"v.",cn:"意識到、發現",def:"To suddenly understand or become aware of something.",ex:"He realized that he had left his wallet at home.",exCn:"他發現自己把錢包忘在家裡了。"},
+    {w:"turn around",ipa:"/tɜːrn əˈraʊnd/",pos:"phr.v.",cn:"轉身、折返",def:"To change direction so that you face or go the opposite way.",ex:"He turned around and went back.",exCn:"他轉身回頭走了回去。"},
+    {w:"take a deep breath",ipa:"/teɪk ə diːp breθ/",pos:"phr.",cn:"深呼吸",def:"To breathe in slowly to calm yourself down.",ex:"Daniel sat down and took a deep breath.",exCn:"丹尼爾坐下來，深吸了一口氣。"},
+    {w:"get ready",ipa:"/ɡet ˈredi/",pos:"phr.",cn:"做準備",def:"To prepare yourself for something.",ex:"He never answers the phone while he is getting ready to leave.",exCn:"他準備出門的時候從不接電話。"}
   ],
   questions:[
     {q:"What was Daniel doing when his phone rang?",
@@ -71,12 +71,12 @@ window.READING = [
      cn:"這個改變很小，但結果很明顯。她現在幾乎不會在下午覺得睏，她說自己的思緒感覺比較平靜。「我沒有在做什麼困難的事，」她解釋，「我只是換了一個開始一天的順序。」"}
   ],
   target:[
-    {w:"screen",ipa:"/skriːn/",pos:"n.",cn:"螢幕",def:"The flat surface of a phone or computer where you see pictures and words.",ex:"She spends nine hours a day in front of a screen."},
-    {w:"advice",ipa:"/ədˈvaɪs/",pos:"n.",cn:"建議（不可數）",def:"An opinion about what someone should do.",ex:"Her doctor gave her simple advice."},
-    {w:"rarely",ipa:"/ˈrerli/",pos:"adv.",cn:"很少地",def:"Almost never.",ex:"She rarely brings her phone to the table."},
-    {w:"hardly ever",ipa:"/ˈhɑːrdli ˈevər/",pos:"phr.",cn:"幾乎從不",def:"Almost never; very seldom.",ex:"She hardly ever feels sleepy in the afternoon."},
-    {w:"result",ipa:"/rɪˈzʌlt/",pos:"n.",cn:"結果",def:"Something that happens because of an action.",ex:"The change is small, but the result is clear."},
-    {w:"in a different order",ipa:"/ɪn ə ˈdɪfrənt ˈɔːrdər/",pos:"phr.",cn:"以不同的順序",def:"Doing the same things but not in the same sequence.",ex:"I am just starting the day in a different order."}
+    {w:"screen",ipa:"/skriːn/",pos:"n.",cn:"螢幕",def:"The flat surface of a phone or computer where you see pictures and words.",ex:"She spends nine hours a day in front of a screen.",exCn:"她每天有九個小時盯著螢幕。"},
+    {w:"advice",ipa:"/ədˈvaɪs/",pos:"n.",cn:"建議（不可數）",def:"An opinion about what someone should do.",ex:"Her doctor gave her simple advice.",exCn:"她的醫生給了她一個很簡單的建議。"},
+    {w:"rarely",ipa:"/ˈrerli/",pos:"adv.",cn:"很少地",def:"Almost never.",ex:"She rarely brings her phone to the table.",exCn:"她很少把手機帶到餐桌上。"},
+    {w:"hardly ever",ipa:"/ˈhɑːrdli ˈevər/",pos:"phr.",cn:"幾乎從不",def:"Almost never; very seldom.",ex:"She hardly ever feels sleepy in the afternoon.",exCn:"她下午幾乎不會覺得想睡。"},
+    {w:"result",ipa:"/rɪˈzʌlt/",pos:"n.",cn:"結果",def:"Something that happens because of an action.",ex:"The change is small, but the result is clear.",exCn:"改變很小，但效果很明顯。"},
+    {w:"in a different order",ipa:"/ɪn ə ˈdɪfrənt ˈɔːrdər/",pos:"phr.",cn:"以不同的順序",def:"Doing the same things but not in the same sequence.",ex:"I am just starting the day in a different order.",exCn:"我只是換個順序開始這一天而已。"}
   ],
   questions:[
     {q:"What did the doctor tell Mei to do first in the morning?",
@@ -117,13 +117,13 @@ window.READING = [
      cn:"好消息是，小習慣就能造成很大的差別。購物前先規劃餐點、正確地保存食物、用剩菜做料理，都能把家庭的食物浪費減少一半。這些做法都不困難，只是需要變成日常而已。"}
   ],
   target:[
-    {w:"roughly",ipa:"/ˈrʌfli/",pos:"adv.",cn:"大約",def:"Approximately; not exactly.",ex:"Roughly a third of the food is never eaten."},
-    {w:"be thrown away",ipa:"/bi θroʊn əˈweɪ/",pos:"phr.",cn:"被丟掉",def:"To be put in the rubbish because it is not wanted.",ex:"A surprising amount is simply thrown away."},
-    {w:"label",ipa:"/ˈleɪbl/",pos:"v.",cn:"標示",def:"To put information on a product.",ex:"Many products are labelled \"best before\"."},
-    {w:"go bad",ipa:"/ɡoʊ bæd/",pos:"phr.v.",cn:"（食物）壞掉",def:"To become unfit to eat.",ex:"By the time they are found, they have gone bad."},
-    {w:"leftovers",ipa:"/ˈleftoʊvərz/",pos:"n.",cn:"剩菜",def:"Food that has not been eaten at the end of a meal.",ex:"Cooking with leftovers reduces waste."},
-    {w:"a great deal of",ipa:"/ə ɡreɪt diːl əv/",pos:"phr.",cn:"大量的（接不可數）",def:"A large amount of something uncountable.",ex:"Small habits make a great deal of difference."},
-    {w:"household",ipa:"/ˈhaʊshoʊld/",pos:"adj./n.",cn:"家庭的；一戶人家",def:"Relating to a house and the people living in it.",ex:"These habits can cut household waste by half."}
+    {w:"roughly",ipa:"/ˈrʌfli/",pos:"adv.",cn:"大約",def:"Approximately; not exactly.",ex:"Roughly a third of the food is never eaten.",exCn:"大約三分之一的食物根本沒被吃掉。"},
+    {w:"be thrown away",ipa:"/bi θroʊn əˈweɪ/",pos:"phr.",cn:"被丟掉",def:"To be put in the rubbish because it is not wanted.",ex:"A surprising amount is simply thrown away.",exCn:"有多得驚人的量就這樣被丟掉了。"},
+    {w:"label",ipa:"/ˈleɪbl/",pos:"v.",cn:"標示",def:"To put information on a product.",ex:"Many products are labelled \"best before\".",exCn:"很多產品都標示著「賞味期限」。"},
+    {w:"go bad",ipa:"/ɡoʊ bæd/",pos:"phr.v.",cn:"（食物）壞掉",def:"To become unfit to eat.",ex:"By the time they are found, they have gone bad.",exCn:"等到被發現時，它們已經壞了。"},
+    {w:"leftovers",ipa:"/ˈleftoʊvərz/",pos:"n.",cn:"剩菜",def:"Food that has not been eaten at the end of a meal.",ex:"Cooking with leftovers reduces waste.",exCn:"用剩菜下廚可以減少浪費。"},
+    {w:"a great deal of",ipa:"/ə ɡreɪt diːl əv/",pos:"phr.",cn:"大量的（接不可數）",def:"A large amount of something uncountable.",ex:"Small habits make a great deal of difference.",exCn:"小小的習慣會帶來很大的不同。"},
+    {w:"household",ipa:"/ˈhaʊshoʊld/",pos:"adj./n.",cn:"家庭的；一戶人家",def:"Relating to a house and the people living in it.",ex:"These habits can cut household waste by half.",exCn:"這些習慣能把家庭的浪費減少一半。"}
   ],
   questions:[
     {q:"What does \"best before\" mainly tell us about?",
@@ -167,13 +167,13 @@ window.READING = [
      cn:"因此，多數公司選擇了折衷方案。員工每週到辦公室兩三天進行討論與訓練，其他天在家工作，處理需要安靜完成的任務。這不是完美的答案，但它同時保住了專注力和同事情誼。"}
   ],
   target:[
-    {w:"employee",ipa:"/ɪmˈplɔɪiː/",pos:"n.",cn:"員工",def:"A person who is paid to work for a company.",ex:"Employees have strong opinions about it."},
-    {w:"concentrate",ipa:"/ˈkɑːnsntreɪt/",pos:"v.",cn:"專心",def:"To give all your attention to one thing.",ex:"They say they concentrate better at home."},
-    {w:"interrupt",ipa:"/ˌɪntəˈrʌpt/",pos:"v.",cn:"打斷",def:"To stop someone while they are speaking or working.",ex:"Nobody interrupts them every ten minutes."},
-    {w:"whereas",ipa:"/werˈæz/",pos:"conj.",cn:"然而、相對地",def:"Used to compare two different facts.",ex:"Meetings are easy online, whereas casual chats disappear."},
-    {w:"build trust",ipa:"/bɪld trʌst/",pos:"phr.",cn:"建立信任",def:"To slowly create a feeling of confidence between people.",ex:"Short conversations build trust."},
-    {w:"suffer",ipa:"/ˈsʌfər/",pos:"v.",cn:"受苦、受到不良影響",def:"To experience something bad.",ex:"New employees suffer the most."},
-    {w:"something in the middle",ipa:"/ˈsʌmθɪŋ ɪn ðə ˈmɪdl/",pos:"phr.",cn:"折衷方案",def:"A compromise between two choices.",ex:"Most companies have chosen something in the middle."}
+    {w:"employee",ipa:"/ɪmˈplɔɪiː/",pos:"n.",cn:"員工",def:"A person who is paid to work for a company.",ex:"Employees have strong opinions about it.",exCn:"員工對這件事有很強烈的看法。"},
+    {w:"concentrate",ipa:"/ˈkɑːnsntreɪt/",pos:"v.",cn:"專心",def:"To give all your attention to one thing.",ex:"They say they concentrate better at home.",exCn:"他們說自己在家比較能專心。"},
+    {w:"interrupt",ipa:"/ˌɪntəˈrʌpt/",pos:"v.",cn:"打斷",def:"To stop someone while they are speaking or working.",ex:"Nobody interrupts them every ten minutes.",exCn:"沒有人每隔十分鐘就來打斷他們。"},
+    {w:"whereas",ipa:"/werˈæz/",pos:"conj.",cn:"然而、相對地",def:"Used to compare two different facts.",ex:"Meetings are easy online, whereas casual chats disappear.",exCn:"線上開會很方便，但隨口閒聊卻不見了。"},
+    {w:"build trust",ipa:"/bɪld trʌst/",pos:"phr.",cn:"建立信任",def:"To slowly create a feeling of confidence between people.",ex:"Short conversations build trust.",exCn:"簡短的交談能建立信任。"},
+    {w:"suffer",ipa:"/ˈsʌfər/",pos:"v.",cn:"受苦、受到不良影響",def:"To experience something bad.",ex:"New employees suffer the most.",exCn:"新進員工受影響最大。"},
+    {w:"something in the middle",ipa:"/ˈsʌmθɪŋ ɪn ðə ˈmɪdl/",pos:"phr.",cn:"折衷方案",def:"A compromise between two choices.",ex:"Most companies have chosen something in the middle.",exCn:"大多數公司都選擇了折衷的做法。"}
   ],
   questions:[
     {q:"According to paragraph 2, what is the first advantage employees mention?",
@@ -217,13 +217,13 @@ window.READING = [
      cn:"從那之後，我請專業師傅修了兩樣東西，請林先生修了三樣。我學到的是：一棟樓不只是水泥和管線，而是那些會注意到有東西出問題的人。"}
   ],
   target:[
-    {w:"plumber",ipa:"/ˈplʌmər/",pos:"n.",cn:"水管工",def:"A person whose job is to fit and repair water pipes.",ex:"He was a plumber before he retired."},
-    {w:"retire",ipa:"/rɪˈtaɪər/",pos:"v.",cn:"退休",def:"To stop working, usually because of age.",ex:"He was a plumber before he retired."},
-    {w:"leak",ipa:"/liːk/",pos:"v./n.",cn:"漏（水）；漏洞",def:"To let liquid or gas escape through a hole.",ex:"The pipe under the sink started leaking."},
-    {w:"drip",ipa:"/drɪp/",pos:"v.",cn:"滴落",def:"To fall in small drops.",ex:"Water was dripping onto the floor."},
-    {w:"refuse",ipa:"/rɪˈfjuːz/",pos:"v.",cn:"拒絕",def:"To say you will not do or accept something.",ex:"He refused to take any money."},
-    {w:"get something repaired",ipa:"/ɡet ˈsʌmθɪŋ rɪˈperd/",pos:"phr.",cn:"請人修好某物",def:"To arrange for someone else to repair something.",ex:"Get it repaired properly next week."},
-    {w:"notice",ipa:"/ˈnoʊtɪs/",pos:"v.",cn:"注意到",def:"To see or become aware of something.",ex:"People who notice when something is wrong."}
+    {w:"plumber",ipa:"/ˈplʌmər/",pos:"n.",cn:"水管工",def:"A person whose job is to fit and repair water pipes.",ex:"He was a plumber before he retired.",exCn:"他退休前是個水電工。"},
+    {w:"retire",ipa:"/rɪˈtaɪər/",pos:"v.",cn:"退休",def:"To stop working, usually because of age.",ex:"He was a plumber before he retired.",exCn:"他退休前是個水電工。"},
+    {w:"leak",ipa:"/liːk/",pos:"v./n.",cn:"漏（水）；漏洞",def:"To let liquid or gas escape through a hole.",ex:"The pipe under the sink started leaking.",exCn:"水槽下面的水管開始漏水了。"},
+    {w:"drip",ipa:"/drɪp/",pos:"v.",cn:"滴落",def:"To fall in small drops.",ex:"Water was dripping onto the floor.",exCn:"水一滴一滴地滴到地板上。"},
+    {w:"refuse",ipa:"/rɪˈfjuːz/",pos:"v.",cn:"拒絕",def:"To say you will not do or accept something.",ex:"He refused to take any money.",exCn:"他不肯收任何錢。"},
+    {w:"get something repaired",ipa:"/ɡet ˈsʌmθɪŋ rɪˈperd/",pos:"phr.",cn:"請人修好某物",def:"To arrange for someone else to repair something.",ex:"Get it repaired properly next week.",exCn:"下週把它好好修一修。"},
+    {w:"notice",ipa:"/ˈnoʊtɪs/",pos:"v.",cn:"注意到",def:"To see or become aware of something.",ex:"People who notice when something is wrong.",exCn:"會察覺到哪裡不對勁的人。"}
   ],
   questions:[
     {q:"What was Mr. Lin's job before he retired?",
@@ -267,13 +267,13 @@ window.READING = [
      cn:"現在我們的準備方式不同了。我們會備好行動電源、瓶裝水，以及一份紙本的電話清單，因為沒電的手機只是一塊玻璃。我不再把颱風當成假日，但也不再害怕颱風了。"}
   ],
   target:[
-    {w:"bend",ipa:"/bend/",pos:"v.",cn:"彎曲",def:"To become curved instead of straight.",ex:"We watched the trees bend in the wind."},
-    {w:"destroy",ipa:"/dɪˈstrɔɪ/",pos:"v.",cn:"摧毀",def:"To damage something so badly that it no longer exists.",ex:"It had destroyed part of a bridge."},
-    {w:"go out",ipa:"/ɡoʊ aʊt/",pos:"phr.v.",cn:"（燈/火）熄滅",def:"To stop shining or burning.",ex:"Our lights went out at nine in the evening."},
-    {w:"flush",ipa:"/flʌʃ/",pos:"v.",cn:"沖（馬桶）",def:"To clean a toilet by sending water through it.",ex:"We could not flush the toilet."},
-    {w:"relative",ipa:"/ˈrelətɪv/",pos:"n.",cn:"親戚",def:"A member of your family.",ex:"She walked to a relative's house."},
-    {w:"power bank",ipa:"/ˈpaʊər bæŋk/",pos:"n.",cn:"行動電源",def:"A portable battery for charging a phone.",ex:"We keep a power bank at home."},
-    {w:"preparation",ipa:"/ˌprepəˈreɪʃn/",pos:"n.",cn:"準備",def:"The act of getting ready for something.",ex:"Now our preparation is different."}
+    {w:"bend",ipa:"/bend/",pos:"v.",cn:"彎曲",def:"To become curved instead of straight.",ex:"We watched the trees bend in the wind.",exCn:"我們看著樹在風中彎下腰。"},
+    {w:"destroy",ipa:"/dɪˈstrɔɪ/",pos:"v.",cn:"摧毀",def:"To damage something so badly that it no longer exists.",ex:"It had destroyed part of a bridge.",exCn:"它摧毀了一座橋的一部分。"},
+    {w:"go out",ipa:"/ɡoʊ aʊt/",pos:"phr.v.",cn:"（燈/火）熄滅",def:"To stop shining or burning.",ex:"Our lights went out at nine in the evening.",exCn:"我們家的燈在晚上九點停電熄掉了。"},
+    {w:"flush",ipa:"/flʌʃ/",pos:"v.",cn:"沖（馬桶）",def:"To clean a toilet by sending water through it.",ex:"We could not flush the toilet.",exCn:"我們沒辦法沖馬桶。"},
+    {w:"relative",ipa:"/ˈrelətɪv/",pos:"n.",cn:"親戚",def:"A member of your family.",ex:"She walked to a relative's house.",exCn:"她走路去了親戚家。"},
+    {w:"power bank",ipa:"/ˈpaʊər bæŋk/",pos:"n.",cn:"行動電源",def:"A portable battery for charging a phone.",ex:"We keep a power bank at home.",exCn:"我們家裡會備一個行動電源。"},
+    {w:"preparation",ipa:"/ˌprepəˈreɪʃn/",pos:"n.",cn:"準備",def:"The act of getting ready for something.",ex:"Now our preparation is different.",exCn:"現在我們的準備方式不一樣了。"}
   ],
   questions:[
     {q:"What had the typhoon already done before it reached the city?",
@@ -317,14 +317,14 @@ window.READING = [
      cn:"她客氣地拒絕了這份工作。朋友們覺得她太過謹慎；或許，如果那個團隊穩定一些，她真的會答應。但她從未後悔這個決定。「薪水高低很容易衡量，」她說，「而一個無法解釋員工為何離職的主管，才是更有用的資訊。」"}
   ],
   target:[
-    {w:"apply for",ipa:"/əˈplaɪ fɔːr/",pos:"phr.v.",cn:"應徵、申請",def:"To make a formal request for a job or place.",ex:"She applied for the position last month."},
-    {w:"impressive",ipa:"/ɪmˈpresɪv/",pos:"adj.",cn:"令人印象深刻的",def:"Causing admiration because it is very good or large.",ex:"The job title sounded impressive."},
-    {w:"be expected to",ipa:"/bi ɪkˈspektɪd tuː/",pos:"phr.",cn:"被要求、被預期要",def:"To be required or believed likely to do something.",ex:"The new hire would be expected to work weekends."},
-    {w:"the right fit",ipa:"/ðə raɪt fɪt/",pos:"phr.",cn:"適合的人／契合",def:"A person who suits a job or team well.",ex:"He said they had not been the right fit."},
-    {w:"turn down",ipa:"/tɜːrn daʊn/",pos:"phr.v.",cn:"拒絕",def:"To refuse an offer or request.",ex:"She turned the offer down politely."},
-    {w:"cautious",ipa:"/ˈkɔːʃəs/",pos:"adj.",cn:"謹慎的",def:"Careful to avoid risk.",ex:"Her friends thought she was too cautious."},
-    {w:"stable",ipa:"/ˈsteɪbl/",pos:"adj.",cn:"穩定的",def:"Not likely to change or move suddenly.",ex:"If the team had been stable, she would have said yes."},
-    {w:"regret",ipa:"/rɪˈɡret/",pos:"v.",cn:"後悔",def:"To feel sorry about something you did or did not do.",ex:"She has never regretted the decision."}
+    {w:"apply for",ipa:"/əˈplaɪ fɔːr/",pos:"phr.v.",cn:"應徵、申請",def:"To make a formal request for a job or place.",ex:"She applied for the position last month.",exCn:"她上個月應徵了那個職位。"},
+    {w:"impressive",ipa:"/ɪmˈpresɪv/",pos:"adj.",cn:"令人印象深刻的",def:"Causing admiration because it is very good or large.",ex:"The job title sounded impressive.",exCn:"那個職稱聽起來很了不起。"},
+    {w:"be expected to",ipa:"/bi ɪkˈspektɪd tuː/",pos:"phr.",cn:"被要求、被預期要",def:"To be required or believed likely to do something.",ex:"The new hire would be expected to work weekends.",exCn:"新進的人會被要求週末上班。"},
+    {w:"the right fit",ipa:"/ðə raɪt fɪt/",pos:"phr.",cn:"適合的人／契合",def:"A person who suits a job or team well.",ex:"He said they had not been the right fit.",exCn:"他說他們並不合適。"},
+    {w:"turn down",ipa:"/tɜːrn daʊn/",pos:"phr.v.",cn:"拒絕",def:"To refuse an offer or request.",ex:"She turned the offer down politely.",exCn:"她客氣地婉拒了那個工作邀約。"},
+    {w:"cautious",ipa:"/ˈkɔːʃəs/",pos:"adj.",cn:"謹慎的",def:"Careful to avoid risk.",ex:"Her friends thought she was too cautious.",exCn:"她的朋友覺得她太過謹慎了。"},
+    {w:"stable",ipa:"/ˈsteɪbl/",pos:"adj.",cn:"穩定的",def:"Not likely to change or move suddenly.",ex:"If the team had been stable, she would have said yes.",exCn:"如果那個團隊夠穩定，她就會答應了。"},
+    {w:"regret",ipa:"/rɪˈɡret/",pos:"v.",cn:"後悔",def:"To feel sorry about something you did or did not do.",ex:"She has never regretted the decision.",exCn:"她從來沒有後悔過那個決定。"}
   ],
   questions:[
     {q:"What did the manager reveal about the team?",
@@ -368,15 +368,15 @@ window.READING = [
      cn:"因此，一個合理的立場既不是禁止，也不是讚揚。手術應該保持合法且可取得，但同時必須搭配誠實的風險說明、非醫療性手術的最低年齡限制，以及更嚴格的廣告規範。選擇很重要，但在壓力下做出的選擇，並不真的算是自由。"}
   ],
   target:[
-    {w:"divide opinion",ipa:"/dɪˈvaɪd əˈpɪnjən/",pos:"phr.",cn:"引起意見分歧",def:"To make people disagree strongly.",ex:"Few subjects divide opinion so quickly."},
-    {w:"dismiss",ipa:"/dɪsˈmɪs/",pos:"v.",cn:"駁回、不予考慮",def:"To refuse to accept that something is important or true.",ex:"That argument is difficult to dismiss."},
-    {w:"admittedly",ipa:"/ədˈmɪtɪdli/",pos:"adv.",cn:"不可否認地",def:"Used to admit that something is true before saying something else.",ex:"Admittedly, surgery can do more than change an appearance."},
-    {w:"arguably",ipa:"/ˈɑːrɡjuəbli/",pos:"adv.",cn:"可以說、可論證地",def:"Used to say something can reasonably be argued.",ex:"It is arguably a form of medical treatment."},
-    {w:"luxury",ipa:"/ˈlʌkʃəri/",pos:"n.",cn:"奢侈品",def:"Something expensive that is pleasant but not necessary.",ex:"Not a luxury but a treatment."},
-    {w:"in a vacuum",ipa:"/ɪn ə ˈvækjuəm/",pos:"phr.",cn:"在真空中（不受外界影響）",def:"Separately from other people or events.",ex:"The decision is rarely made in a vacuum."},
-    {w:"meet demand",ipa:"/miːt dɪˈmænd/",pos:"phr.",cn:"滿足需求",def:"To supply what people want.",ex:"Clinics are not simply meeting demand."},
-    {w:"to some extent",ipa:"/tə sʌm ɪkˈstent/",pos:"phr.",cn:"某種程度上",def:"Partly but not completely.",ex:"To some extent they are creating it."},
-    {w:"be accompanied by",ipa:"/bi əˈkʌmpənid baɪ/",pos:"phr.",cn:"伴隨著",def:"To happen or exist at the same time as something else.",ex:"It should be accompanied by honest information."}
+    {w:"divide opinion",ipa:"/dɪˈvaɪd əˈpɪnjən/",pos:"phr.",cn:"引起意見分歧",def:"To make people disagree strongly.",ex:"Few subjects divide opinion so quickly.",exCn:"很少有話題能這麼快就讓大家意見分歧。"},
+    {w:"dismiss",ipa:"/dɪsˈmɪs/",pos:"v.",cn:"駁回、不予考慮",def:"To refuse to accept that something is important or true.",ex:"That argument is difficult to dismiss.",exCn:"那個論點很難被駁倒。"},
+    {w:"admittedly",ipa:"/ədˈmɪtɪdli/",pos:"adv.",cn:"不可否認地",def:"Used to admit that something is true before saying something else.",ex:"Admittedly, surgery can do more than change an appearance.",exCn:"不可否認，手術能做的不只是改變外貌。"},
+    {w:"arguably",ipa:"/ˈɑːrɡjuəbli/",pos:"adv.",cn:"可以說、可論證地",def:"Used to say something can reasonably be argued.",ex:"It is arguably a form of medical treatment.",exCn:"可以說它是一種醫療。"},
+    {w:"luxury",ipa:"/ˈlʌkʃəri/",pos:"n.",cn:"奢侈品",def:"Something expensive that is pleasant but not necessary.",ex:"Not a luxury but a treatment.",exCn:"這不是奢侈的享受，而是一種治療。"},
+    {w:"in a vacuum",ipa:"/ɪn ə ˈvækjuəm/",pos:"phr.",cn:"在真空中（不受外界影響）",def:"Separately from other people or events.",ex:"The decision is rarely made in a vacuum.",exCn:"這個決定很少是在毫無外界影響下做出的。"},
+    {w:"meet demand",ipa:"/miːt dɪˈmænd/",pos:"phr.",cn:"滿足需求",def:"To supply what people want.",ex:"Clinics are not simply meeting demand.",exCn:"診所並不只是在滿足需求而已。"},
+    {w:"to some extent",ipa:"/tə sʌm ɪkˈstent/",pos:"phr.",cn:"某種程度上",def:"Partly but not completely.",ex:"To some extent they are creating it.",exCn:"某種程度上，他們是在製造需求。"},
+    {w:"be accompanied by",ipa:"/bi əˈkʌmpənid baɪ/",pos:"phr.",cn:"伴隨著",def:"To happen or exist at the same time as something else.",ex:"It should be accompanied by honest information.",exCn:"這應該搭配上誠實的資訊。"}
   ],
   questions:[
     {q:"Why does the writer mention a patient injured in an accident?",
@@ -420,15 +420,15 @@ window.READING = [
      cn:"這一切並不表示貴的保險自動就比較好。它的意思是：價格無法脫離附帶條件被評斷。最有用的問題不是「這要多少錢？」而是「如果我真的需要用到，究竟會發生什麼？」"}
   ],
   target:[
-    {w:"policy",ipa:"/ˈpɑːləsi/",pos:"n.",cn:"保單",def:"A written insurance agreement.",ex:"The attraction of a cheap policy is obvious."},
-    {w:"exclusion",ipa:"/ɪkˈskluːʒn/",pos:"n.",cn:"除外條款",def:"Something an insurance policy does not cover.",ex:"Buyers never examine the list of exclusions."},
-    {w:"cover",ipa:"/ˈkʌvər/",pos:"v.",cn:"（保險）涵蓋、理賠",def:"To include and pay for a particular risk.",ex:"It covers the cancellation of a flight."},
-    {w:"cancellation",ipa:"/ˌkænsəˈleɪʃn/",pos:"n.",cn:"取消",def:"A decision to stop something that was planned.",ex:"It covers cancellation for any reason."},
-    {w:"deductible",ipa:"/dɪˈdʌktəbl/",pos:"n.",cn:"自付額",def:"The amount you pay yourself before insurance pays.",ex:"The policy carries a very high deductible."},
-    {w:"premium",ipa:"/ˈpriːmiəm/",pos:"n.",cn:"保費",def:"The amount you pay regularly for insurance.",ex:"A policy with a very low premium."},
-    {w:"claim",ipa:"/kleɪm/",pos:"n./v.",cn:"理賠（申請）",def:"A request for money from an insurance company.",ex:"Small claims become pointless."},
-    {w:"effectively",ipa:"/ɪˈfektɪvli/",pos:"adv.",cn:"實質上",def:"In practice, although not officially.",ex:"Small claims are effectively pointless."},
-    {w:"risk transfer",ipa:"/rɪsk ˈtrænsfɜːr/",pos:"n.",cn:"風險轉移",def:"Moving the possibility of loss from one party to another.",ex:"The risk transfer moves from the company to you."}
+    {w:"policy",ipa:"/ˈpɑːləsi/",pos:"n.",cn:"保單",def:"A written insurance agreement.",ex:"The attraction of a cheap policy is obvious.",exCn:"便宜保單的吸引力顯而易見。"},
+    {w:"exclusion",ipa:"/ɪkˈskluːʒn/",pos:"n.",cn:"除外條款",def:"Something an insurance policy does not cover.",ex:"Buyers never examine the list of exclusions.",exCn:"買家從不去細看那份不保事項清單。"},
+    {w:"cover",ipa:"/ˈkʌvər/",pos:"v.",cn:"（保險）涵蓋、理賠",def:"To include and pay for a particular risk.",ex:"It covers the cancellation of a flight.",exCn:"它理賠航班的取消。"},
+    {w:"cancellation",ipa:"/ˌkænsəˈleɪʃn/",pos:"n.",cn:"取消",def:"A decision to stop something that was planned.",ex:"It covers cancellation for any reason.",exCn:"它理賠任何原因造成的取消。"},
+    {w:"deductible",ipa:"/dɪˈdʌktəbl/",pos:"n.",cn:"自付額",def:"The amount you pay yourself before insurance pays.",ex:"The policy carries a very high deductible.",exCn:"這份保單的自負額非常高。"},
+    {w:"premium",ipa:"/ˈpriːmiəm/",pos:"n.",cn:"保費",def:"The amount you pay regularly for insurance.",ex:"A policy with a very low premium.",exCn:"一份保費非常低的保單。"},
+    {w:"claim",ipa:"/kleɪm/",pos:"n./v.",cn:"理賠（申請）",def:"A request for money from an insurance company.",ex:"Small claims become pointless.",exCn:"小額理賠變得毫無意義。"},
+    {w:"effectively",ipa:"/ɪˈfektɪvli/",pos:"adv.",cn:"實質上",def:"In practice, although not officially.",ex:"Small claims are effectively pointless.",exCn:"小額理賠實際上等於毫無意義。"},
+    {w:"risk transfer",ipa:"/rɪsk ˈtrænsfɜːr/",pos:"n.",cn:"風險轉移",def:"Moving the possibility of loss from one party to another.",ex:"The risk transfer moves from the company to you.",exCn:"風險就從保險公司轉移到了你身上。"}
   ],
   questions:[
     {q:"Where is the true price of a cheap policy hidden, according to the writer?",
@@ -472,15 +472,15 @@ window.READING = [
      cn:"實務上的建議並不迷人：即使前一晚沒睡好，也維持同樣的起床時間；把光線當成訊號而不是干擾；並停止把疲累當成努力的象徵。一個崇拜每晚只睡四小時的人的社會，崇拜的並不是健康，而是一筆尚未被追討的債。"}
   ],
   target:[
-    {w:"harmless",ipa:"/ˈhɑːrmləs/",pos:"adj.",cn:"無害的",def:"Not able to cause damage.",ex:"Losing an hour of sleep sounds harmless."},
-    {w:"measurable",ipa:"/ˈmeʒərəbl/",pos:"adj.",cn:"可測量的",def:"Large enough to be noticed or measured.",ex:"A measurable drop in attention."},
-    {w:"accumulate",ipa:"/əˈkjuːmjəleɪt/",pos:"v.",cn:"累積",def:"To increase in amount over time.",ex:"The accumulated shortage is called sleep debt."},
-    {w:"reaction time",ipa:"/riˈækʃn taɪm/",pos:"n.",cn:"反應時間",def:"How long you take to respond to something.",ex:"Their reaction times were slower."},
-    {w:"rate",ipa:"/reɪt/",pos:"v.",cn:"評價、評分",def:"To judge the quality or level of something.",ex:"They rated their own performance as normal."},
-    {w:"catch up",ipa:"/kætʃ ʌp/",pos:"phr.v.",cn:"補回、趕上",def:"To do something you did not have time to do earlier.",ex:"Memory formation cannot simply be caught up."},
-    {w:"nuisance",ipa:"/ˈnuːsns/",pos:"n.",cn:"惱人的事物",def:"Something annoying or inconvenient.",ex:"Treat light as a signal, not a nuisance."},
-    {w:"unglamorous",ipa:"/ʌnˈɡlæmərəs/",pos:"adj.",cn:"不吸引人的、平淡的",def:"Not exciting or attractive.",ex:"The practical advice is unglamorous."},
-    {w:"call in (a debt)",ipa:"/kɔːl ɪn/",pos:"phr.v.",cn:"追討（債務）",def:"To ask for money that is owed to be paid back.",ex:"A debt that has not yet been called in."}
+    {w:"harmless",ipa:"/ˈhɑːrmləs/",pos:"adj.",cn:"無害的",def:"Not able to cause damage.",ex:"Losing an hour of sleep sounds harmless.",exCn:"少睡一個小時聽起來沒什麼大不了。"},
+    {w:"measurable",ipa:"/ˈmeʒərəbl/",pos:"adj.",cn:"可測量的",def:"Large enough to be noticed or measured.",ex:"A measurable drop in attention.",exCn:"注意力出現可測量到的下降。"},
+    {w:"accumulate",ipa:"/əˈkjuːmjəleɪt/",pos:"v.",cn:"累積",def:"To increase in amount over time.",ex:"The accumulated shortage is called sleep debt.",exCn:"累積下來的不足就叫做睡眠債。"},
+    {w:"reaction time",ipa:"/riˈækʃn taɪm/",pos:"n.",cn:"反應時間",def:"How long you take to respond to something.",ex:"Their reaction times were slower.",exCn:"他們的反應時間變慢了。"},
+    {w:"rate",ipa:"/reɪt/",pos:"v.",cn:"評價、評分",def:"To judge the quality or level of something.",ex:"They rated their own performance as normal.",exCn:"他們卻認為自己的表現很正常。"},
+    {w:"catch up",ipa:"/kætʃ ʌp/",pos:"phr.v.",cn:"補回、趕上",def:"To do something you did not have time to do earlier.",ex:"Memory formation cannot simply be caught up.",exCn:"記憶的形成沒辦法事後補回來。"},
+    {w:"nuisance",ipa:"/ˈnuːsns/",pos:"n.",cn:"惱人的事物",def:"Something annoying or inconvenient.",ex:"Treat light as a signal, not a nuisance.",exCn:"把光線當成一種訊號，而不是一種干擾。"},
+    {w:"unglamorous",ipa:"/ʌnˈɡlæmərəs/",pos:"adj.",cn:"不吸引人的、平淡的",def:"Not exciting or attractive.",ex:"The practical advice is unglamorous.",exCn:"這個實用的建議其實很平淡無奇。"},
+    {w:"call in (a debt)",ipa:"/kɔːl ɪn/",pos:"phr.v.",cn:"追討（債務）",def:"To ask for money that is owed to be paid back.",ex:"A debt that has not yet been called in.",exCn:"一筆還沒被討回來的債。"}
   ],
   questions:[
     {q:"What did the research team find about tired drivers?",
@@ -528,15 +528,15 @@ window.READING = [
      cn:"離開之前，值得問三個問題：最可能的原因是什麼？出現什麼情況我該回診？有沒有什麼藥我該停掉？一場看起來是在做診斷的看診，其實是在訂一個計畫——而你記不住的計畫，根本不算計畫。"}
   ],
   target:[
-    {w:"consultation",ipa:"/ˌkɑːnslˈteɪʃn/",pos:"n.",cn:"看診、諮詢",def:"A meeting with a doctor to discuss a health problem.",ex:"The average consultation lasts under six minutes."},
-    {w:"symptom",ipa:"/ˈsɪmptəm/",pos:"n.",cn:"症狀",def:"A sign that you have an illness.",ex:"Describe your symptoms clearly."},
-    {w:"examine",ipa:"/ɪɡˈzæmɪn/",pos:"v.",cn:"檢查",def:"To look at someone carefully to find out what is wrong.",ex:"The doctor examined my throat."},
-    {w:"breathe in",ipa:"/briːð ɪn/",pos:"phr.v.",cn:"吸氣",def:"To take air into your lungs.",ex:"It hurts here when I breathe in."},
-    {w:"leave out",ipa:"/liːv aʊt/",pos:"phr.v.",cn:"遺漏、省略",def:"To fail to include something.",ex:"Patients often leave out important details."},
-    {w:"tend to",ipa:"/tend tuː/",pos:"phr.",cn:"往往、傾向於",def:"To usually do something.",ex:"Patients tend to leave out their current medicines."},
-    {w:"dose",ipa:"/doʊs/",pos:"n.",cn:"劑量",def:"A measured amount of medicine.",ex:"He had doubled his own dose."},
-    {w:"dizziness",ipa:"/ˈdɪzinəs/",pos:"n.",cn:"暈眩",def:"The feeling that everything is spinning.",ex:"He described his dizziness for five minutes."},
-    {w:"diagnosis",ipa:"/ˌdaɪəɡˈnoʊsɪs/",pos:"n.",cn:"診斷",def:"A doctor's judgement about what illness you have.",ex:"The consultation is not only about a diagnosis."}
+    {w:"consultation",ipa:"/ˌkɑːnslˈteɪʃn/",pos:"n.",cn:"看診、諮詢",def:"A meeting with a doctor to discuss a health problem.",ex:"The average consultation lasts under six minutes.",exCn:"平均一次看診不到六分鐘。"},
+    {w:"symptom",ipa:"/ˈsɪmptəm/",pos:"n.",cn:"症狀",def:"A sign that you have an illness.",ex:"Describe your symptoms clearly.",exCn:"把你的症狀說清楚。"},
+    {w:"examine",ipa:"/ɪɡˈzæmɪn/",pos:"v.",cn:"檢查",def:"To look at someone carefully to find out what is wrong.",ex:"The doctor examined my throat.",exCn:"醫生檢查了我的喉嚨。"},
+    {w:"breathe in",ipa:"/briːð ɪn/",pos:"phr.v.",cn:"吸氣",def:"To take air into your lungs.",ex:"It hurts here when I breathe in.",exCn:"我吸氣的時候這裡會痛。"},
+    {w:"leave out",ipa:"/liːv aʊt/",pos:"phr.v.",cn:"遺漏、省略",def:"To fail to include something.",ex:"Patients often leave out important details.",exCn:"病人常常會漏掉重要的細節。"},
+    {w:"tend to",ipa:"/tend tuː/",pos:"phr.",cn:"往往、傾向於",def:"To usually do something.",ex:"Patients tend to leave out their current medicines.",exCn:"病人往往會漏講自己目前在吃的藥。"},
+    {w:"dose",ipa:"/doʊs/",pos:"n.",cn:"劑量",def:"A measured amount of medicine.",ex:"He had doubled his own dose.",exCn:"他自己把劑量加倍了。"},
+    {w:"dizziness",ipa:"/ˈdɪzinəs/",pos:"n.",cn:"暈眩",def:"The feeling that everything is spinning.",ex:"He described his dizziness for five minutes.",exCn:"他花了五分鐘描述自己的頭暈。"},
+    {w:"diagnosis",ipa:"/ˌdaɪəɡˈnoʊsɪs/",pos:"n.",cn:"診斷",def:"A doctor's judgement about what illness you have.",ex:"The consultation is not only about a diagnosis.",exCn:"看診並不只是為了得到一個診斷。"}
   ],
   questions:[
     {q:"According to the writer, what makes a description of symptoms useful?",
@@ -580,14 +580,14 @@ window.READING = [
      cn:"兩種模式都不是單純哪個比較好。前者用時間與深度換來了可及性；後者用安全感換來了時間與選擇。兩種制度共同說明的是：醫療真正的代價，從來不只是帳單上印的那個數字。"}
   ],
   target:[
-    {w:"fixed fee",ipa:"/fɪkst fiː/",pos:"n.",cn:"固定費用",def:"An amount that does not change.",ex:"Patients pay a small fixed fee."},
-    {w:"fund",ipa:"/fʌnd/",pos:"v.",cn:"提供資金",def:"To provide money for something.",ex:"The system is funded through payroll contributions."},
-    {w:"contribution",ipa:"/ˌkɑːntrɪˈbjuːʃn/",pos:"n.",cn:"（保費）分攤、繳款",def:"Money paid regularly into a system.",ex:"Payroll contributions fund the system."},
-    {w:"by contrast",ipa:"/baɪ ˈkɑːntræst/",pos:"phr.",cn:"相對地、對比之下",def:"Used to show a clear difference.",ex:"The American system, by contrast, is private."},
-    {w:"delay",ipa:"/dɪˈleɪ/",pos:"v.",cn:"延遲、拖延",def:"To not do something until later.",ex:"Patients delay a check-up."},
-    {w:"check-up",ipa:"/ˈtʃek ʌp/",pos:"n.",cn:"健康檢查",def:"A medical examination to see if you are healthy.",ex:"He delayed his yearly check-up."},
-    {w:"access",ipa:"/ˈækses/",pos:"n.",cn:"可及性、取得的機會",def:"The chance or right to use something.",ex:"The system buys access at the cost of time."},
-    {w:"the former / the latter",ipa:"/ðə ˈfɔːrmər/",pos:"phr.",cn:"前者／後者",def:"The first one mentioned / the second one mentioned.",ex:"The former is cheap; the latter is faster."}
+    {w:"fixed fee",ipa:"/fɪkst fiː/",pos:"n.",cn:"固定費用",def:"An amount that does not change.",ex:"Patients pay a small fixed fee.",exCn:"病人只付一筆小額的固定費用。"},
+    {w:"fund",ipa:"/fʌnd/",pos:"v.",cn:"提供資金",def:"To provide money for something.",ex:"The system is funded through payroll contributions.",exCn:"這套制度是靠薪資扣繳來支應的。"},
+    {w:"contribution",ipa:"/ˌkɑːntrɪˈbjuːʃn/",pos:"n.",cn:"（保費）分攤、繳款",def:"Money paid regularly into a system.",ex:"Payroll contributions fund the system.",exCn:"薪資扣繳的金額支撐著整個制度。"},
+    {w:"by contrast",ipa:"/baɪ ˈkɑːntræst/",pos:"phr.",cn:"相對地、對比之下",def:"Used to show a clear difference.",ex:"The American system, by contrast, is private.",exCn:"相較之下，美國的制度是私人的。"},
+    {w:"delay",ipa:"/dɪˈleɪ/",pos:"v.",cn:"延遲、拖延",def:"To not do something until later.",ex:"Patients delay a check-up.",exCn:"病人會拖著不去做檢查。"},
+    {w:"check-up",ipa:"/ˈtʃek ʌp/",pos:"n.",cn:"健康檢查",def:"A medical examination to see if you are healthy.",ex:"He delayed his yearly check-up.",exCn:"他拖著沒去做年度健康檢查。"},
+    {w:"access",ipa:"/ˈækses/",pos:"n.",cn:"可及性、取得的機會",def:"The chance or right to use something.",ex:"The system buys access at the cost of time.",exCn:"這套制度用時間為代價換來了看病的機會。"},
+    {w:"the former / the latter",ipa:"/ðə ˈfɔːrmər/",pos:"phr.",cn:"前者／後者",def:"The first one mentioned / the second one mentioned.",ex:"The former is cheap; the latter is faster.",exCn:"前者便宜，後者快速。"}
   ],
   questions:[
     {q:"How is Taiwan's system mainly funded?",
@@ -631,15 +631,15 @@ window.READING = [
      cn:"第一個實際的步驟並不迷人，而且很具體：連續兩週寫下哪些任務會消耗你、哪些不會。多數人會發現問題不在工作量，而在兩三個特定情境。把它們指認出來不是治療，但它能把一團模糊的沉重感，變成真正可以被討論的東西。"}
   ],
   target:[
-    {w:"exhaustion",ipa:"/ɪɡˈzɔːstʃən/",pos:"n.",cn:"耗竭、極度疲勞",def:"The state of being extremely tired.",ex:"An exhaustion that sleep does not fix."},
-    {w:"burnout",ipa:"/ˈbɜːrnaʊt/",pos:"n.",cn:"職業倦怠",def:"Extreme tiredness caused by long-term stress at work.",ex:"Burnout builds slowly."},
-    {w:"consistent",ipa:"/kənˈsɪstənt/",pos:"adj.",cn:"一致的",def:"Always the same; not changing.",ex:"The pattern is consistent."},
-    {w:"competence",ipa:"/ˈkɑːmpɪtəns/",pos:"n.",cn:"能力",def:"The ability to do something well.",ex:"A loss of confidence in one's own competence."},
-    {w:"may well",ipa:"/meɪ wel/",pos:"phr.",cn:"很可能",def:"Used to say something is quite likely.",ex:"It may well have been developing for months."},
-    {w:"workload",ipa:"/ˈwɜːrkloʊd/",pos:"n.",cn:"工作量",def:"The amount of work a person has to do.",ex:"He returned to the same workload."},
-    {w:"drain",ipa:"/dreɪn/",pos:"v.",cn:"消耗（精力）",def:"To make someone lose energy.",ex:"Write down which tasks drain you."},
-    {w:"endure",ipa:"/ɪnˈdʊr/",pos:"v.",cn:"忍受",def:"To suffer something difficult patiently.",ex:"A change in what is expected, not only in what is endured."},
-    {w:"vague",ipa:"/veɪɡ/",pos:"adj.",cn:"模糊的",def:"Not clear or exact.",ex:"It turns a vague heaviness into something discussable."}
+    {w:"exhaustion",ipa:"/ɪɡˈzɔːstʃən/",pos:"n.",cn:"耗竭、極度疲勞",def:"The state of being extremely tired.",ex:"An exhaustion that sleep does not fix.",exCn:"一種睡再多也好不了的疲憊。"},
+    {w:"burnout",ipa:"/ˈbɜːrnaʊt/",pos:"n.",cn:"職業倦怠",def:"Extreme tiredness caused by long-term stress at work.",ex:"Burnout builds slowly.",exCn:"職業倦怠是慢慢累積起來的。"},
+    {w:"consistent",ipa:"/kənˈsɪstənt/",pos:"adj.",cn:"一致的",def:"Always the same; not changing.",ex:"The pattern is consistent.",exCn:"這個模式一直都是如此。"},
+    {w:"competence",ipa:"/ˈkɑːmpɪtəns/",pos:"n.",cn:"能力",def:"The ability to do something well.",ex:"A loss of confidence in one's own competence.",exCn:"對自己能力失去信心。"},
+    {w:"may well",ipa:"/meɪ wel/",pos:"phr.",cn:"很可能",def:"Used to say something is quite likely.",ex:"It may well have been developing for months.",exCn:"它很可能已經醞釀好幾個月了。"},
+    {w:"workload",ipa:"/ˈwɜːrkloʊd/",pos:"n.",cn:"工作量",def:"The amount of work a person has to do.",ex:"He returned to the same workload.",exCn:"他又回到了一樣繁重的工作量。"},
+    {w:"drain",ipa:"/dreɪn/",pos:"v.",cn:"消耗（精力）",def:"To make someone lose energy.",ex:"Write down which tasks drain you.",exCn:"把哪些工作讓你精疲力盡寫下來。"},
+    {w:"endure",ipa:"/ɪnˈdʊr/",pos:"v.",cn:"忍受",def:"To suffer something difficult patiently.",ex:"A change in what is expected, not only in what is endured.",exCn:"要改變的是被期待的內容，而不只是硬撐下來的部分。"},
+    {w:"vague",ipa:"/veɪɡ/",pos:"adj.",cn:"模糊的",def:"Not clear or exact.",ex:"It turns a vague heaviness into something discussable.",exCn:"它把一種說不上來的沉重變成可以拿出來討論的東西。"}
   ],
   questions:[
     {q:"How is the second kind of tiredness different from ordinary tiredness?",
@@ -687,15 +687,15 @@ window.READING = [
      cn:"那趟旅行本身很棒。但真正留在我身上的不是回憶，而是一個習慣：現在每趟飛行前，我都會離線存好訂位代號、航空公司的當地與海外電話，以及一條備用路線。要是我早一年就這麼做，那個晚上完全不會讓我損失任何東西。"}
   ],
   target:[
-    {w:"boarding",ipa:"/ˈbɔːrdɪŋ/",pos:"n.",cn:"登機",def:"Getting onto a plane, ship, or train.",ex:"The flight was cancelled before boarding."},
-    {w:"announcement",ipa:"/əˈnaʊnsmənt/",pos:"n.",cn:"廣播、公告",def:"A public statement giving information.",ex:"The announcement gave no reason."},
-    {w:"queue",ipa:"/kjuː/",pos:"n./v.",cn:"排隊（的隊伍）",def:"A line of people waiting.",ex:"Two hundred people were standing in the same queue."},
-    {w:"rebook",ipa:"/riːˈbʊk/",pos:"v.",cn:"改訂、重新訂位",def:"To arrange a new ticket after a change.",ex:"She was rebooked in four minutes."},
-    {w:"booking reference",ipa:"/ˈbʊkɪŋ ˈrefrəns/",pos:"n.",cn:"訂位代號",def:"The code that identifies your reservation.",ex:"Keep digital copies of the booking references."},
-    {w:"be obliged to",ipa:"/bi əˈblaɪdʒd tuː/",pos:"phr.",cn:"有義務、被規定要",def:"To be required by rule or law to do something.",ex:"The airline was obliged to provide a meal voucher."},
-    {w:"voucher",ipa:"/ˈvaʊtʃər/",pos:"n.",cn:"兌換券",def:"A paper you exchange for goods or services.",ex:"They give a meal voucher after a long delay."},
-    {w:"avoidable",ipa:"/əˈvɔɪdəbl/",pos:"adj.",cn:"可避免的",def:"Able to be prevented.",ex:"A small loss, but an avoidable one."},
-    {w:"alternative route",ipa:"/ɔːlˈtɜːrnətɪv ruːt/",pos:"n.",cn:"替代路線",def:"A different way of reaching the same place.",ex:"Save one alternative route offline."}
+    {w:"boarding",ipa:"/ˈbɔːrdɪŋ/",pos:"n.",cn:"登機",def:"Getting onto a plane, ship, or train.",ex:"The flight was cancelled before boarding.",exCn:"那班飛機在登機前就被取消了。"},
+    {w:"announcement",ipa:"/əˈnaʊnsmənt/",pos:"n.",cn:"廣播、公告",def:"A public statement giving information.",ex:"The announcement gave no reason.",exCn:"廣播沒有說明任何原因。"},
+    {w:"queue",ipa:"/kjuː/",pos:"n./v.",cn:"排隊（的隊伍）",def:"A line of people waiting.",ex:"Two hundred people were standing in the same queue.",exCn:"兩百個人排在同一條隊伍裡。"},
+    {w:"rebook",ipa:"/riːˈbʊk/",pos:"v.",cn:"改訂、重新訂位",def:"To arrange a new ticket after a change.",ex:"She was rebooked in four minutes.",exCn:"她在四分鐘內就被重新訂好了位。"},
+    {w:"booking reference",ipa:"/ˈbʊkɪŋ ˈrefrəns/",pos:"n.",cn:"訂位代號",def:"The code that identifies your reservation.",ex:"Keep digital copies of the booking references.",exCn:"把訂位代碼存成電子檔備份。"},
+    {w:"be obliged to",ipa:"/bi əˈblaɪdʒd tuː/",pos:"phr.",cn:"有義務、被規定要",def:"To be required by rule or law to do something.",ex:"The airline was obliged to provide a meal voucher.",exCn:"航空公司有義務提供餐券。"},
+    {w:"voucher",ipa:"/ˈvaʊtʃər/",pos:"n.",cn:"兌換券",def:"A paper you exchange for goods or services.",ex:"They give a meal voucher after a long delay.",exCn:"延誤很久之後他們會發餐券。"},
+    {w:"avoidable",ipa:"/əˈvɔɪdəbl/",pos:"adj.",cn:"可避免的",def:"Able to be prevented.",ex:"A small loss, but an avoidable one.",exCn:"雖然損失不大，但這是可以避免的。"},
+    {w:"alternative route",ipa:"/ɔːlˈtɜːrnətɪv ruːt/",pos:"n.",cn:"替代路線",def:"A different way of reaching the same place.",ex:"Save one alternative route offline.",exCn:"把一條替代路線離線存起來。"}
   ],
   questions:[
     {q:"What did the colleague do instead of queuing?",
@@ -739,14 +739,14 @@ window.READING = [
      cn:"跨文化工作很少是靠背一張習俗清單。它靠的是察覺自己的習慣讓哪些問題無法被誠實回答——然後換一個問法。"}
   ],
   target:[
-    {w:"assume",ipa:"/əˈsuːm/",pos:"v.",cn:"假設、以為",def:"To believe something is true without proof.",ex:"We had assumed he would simply say so."},
-    {w:"preference",ipa:"/ˈprefrəns/",pos:"n.",cn:"偏好",def:"The thing you like better than another.",ex:"A guest who states a preference."},
-    {w:"host",ipa:"/hoʊst/",pos:"n.",cn:"主人、招待方",def:"A person who receives and looks after guests.",ex:"He did not want to create work for the host."},
-    {w:"politeness",ipa:"/pəˈlaɪtnəs/",pos:"n.",cn:"客氣、禮貌",def:"Behaviour that shows respect for others.",ex:"We read his politeness as satisfaction."},
-    {w:"satisfaction",ipa:"/ˌsætɪsˈfækʃn/",pos:"n.",cn:"滿意",def:"The feeling of being pleased with something.",ex:"His silence was mistaken for satisfaction."},
-    {w:"verdict",ipa:"/ˈvɜːrdɪkt/",pos:"n.",cn:"判定、結論",def:"A decision or judgement about something.",ex:"Given a choice rather than a verdict, he answered."},
-    {w:"assignment",ipa:"/əˈsaɪnmənt/",pos:"n.",cn:"派任、任務",def:"A job or task given to someone.",ex:"He ate normally for the rest of the assignment."},
-    {w:"custom",ipa:"/ˈkʌstəm/",pos:"n.",cn:"習俗",def:"A traditional way of behaving in a society.",ex:"It is not about learning a list of customs."}
+    {w:"assume",ipa:"/əˈsuːm/",pos:"v.",cn:"假設、以為",def:"To believe something is true without proof.",ex:"We had assumed he would simply say so.",exCn:"我們原本以為他會直接說出來。"},
+    {w:"preference",ipa:"/ˈprefrəns/",pos:"n.",cn:"偏好",def:"The thing you like better than another.",ex:"A guest who states a preference.",exCn:"一位會表明自己喜好的客人。"},
+    {w:"host",ipa:"/hoʊst/",pos:"n.",cn:"主人、招待方",def:"A person who receives and looks after guests.",ex:"He did not want to create work for the host.",exCn:"他不想給主人添麻煩。"},
+    {w:"politeness",ipa:"/pəˈlaɪtnəs/",pos:"n.",cn:"客氣、禮貌",def:"Behaviour that shows respect for others.",ex:"We read his politeness as satisfaction.",exCn:"我們把他的客氣當成了滿意。"},
+    {w:"satisfaction",ipa:"/ˌsætɪsˈfækʃn/",pos:"n.",cn:"滿意",def:"The feeling of being pleased with something.",ex:"His silence was mistaken for satisfaction.",exCn:"他的沉默被誤以為是滿意。"},
+    {w:"verdict",ipa:"/ˈvɜːrdɪkt/",pos:"n.",cn:"判定、結論",def:"A decision or judgement about something.",ex:"Given a choice rather than a verdict, he answered.",exCn:"當給他的是選擇而不是評斷時，他就回答了。"},
+    {w:"assignment",ipa:"/əˈsaɪnmənt/",pos:"n.",cn:"派任、任務",def:"A job or task given to someone.",ex:"He ate normally for the rest of the assignment.",exCn:"在接下來的行程裡他都吃得很正常。"},
+    {w:"custom",ipa:"/ˈkʌstəm/",pos:"n.",cn:"習俗",def:"A traditional way of behaving in a society.",ex:"It is not about learning a list of customs.",exCn:"重點不在於背下一堆風俗習慣。"}
   ],
   questions:[
     {q:"Why did the engineer say nothing about the food?",
@@ -790,15 +790,15 @@ window.READING = [
      cn:"處理得好的地方往往有三個共同點：對短租的限制、一筆用在當地而非上繳中央的觀光費，以及——最重要的——在人數上限被訂出來之前就被徵詢意見的居民，而不是等抱怨開始才問。觀光本身不是問題，沒人被問過的觀光才是。"}
   ],
   target:[
-    {w:"hidden gem",ipa:"/ˈhɪdn dʒem/",pos:"n.",cn:"秘境、未被發現的好地方",def:"A good place that few people know about.",ex:"Towns once promoted as hidden gems."},
-    {w:"resident",ipa:"/ˈrezɪdənt/",pos:"n.",cn:"居民",def:"A person who lives in a place.",ex:"Residents have been priced out."},
-    {w:"be priced out",ipa:"/bi praɪst aʊt/",pos:"phr.",cn:"因價格上漲而被迫離開",def:"To be unable to afford to stay somewhere.",ex:"Residents have been priced out of their own streets."},
-    {w:"be blamed",ipa:"/bi bleɪmd/",pos:"phr.",cn:"被責怪",def:"To be said to be responsible for something bad.",ex:"Tourists are often blamed."},
-    {w:"mechanism",ipa:"/ˈmekənɪzəm/",pos:"n.",cn:"機制",def:"The way a process works.",ex:"The mechanism is not their fault."},
-    {w:"souvenir",ipa:"/ˌsuːvəˈnɪr/",pos:"n.",cn:"紀念品",def:"An object you keep to remember a place.",ex:"Every second shop sells the same souvenirs."},
-    {w:"granted",ipa:"/ˈɡræntɪd/",pos:"adv.",cn:"誠然、的確",def:"Used to admit that something is true.",ex:"Granted, tourism pays for a great deal."},
-    {w:"short-term rental",ipa:"/ʃɔːrt tɜːrm ˈrentl/",pos:"n.",cn:"短期出租",def:"A flat rented to visitors for a few nights.",ex:"Limits on short-term rentals help."},
-    {w:"consult",ipa:"/kənˈsʌlt/",pos:"v.",cn:"徵詢意見",def:"To ask someone for their opinion before deciding.",ex:"Residents are consulted before the numbers are set."}
+    {w:"hidden gem",ipa:"/ˈhɪdn dʒem/",pos:"n.",cn:"秘境、未被發現的好地方",def:"A good place that few people know about.",ex:"Towns once promoted as hidden gems.",exCn:"曾經被宣傳為私房景點的小鎮。"},
+    {w:"resident",ipa:"/ˈrezɪdənt/",pos:"n.",cn:"居民",def:"A person who lives in a place.",ex:"Residents have been priced out.",exCn:"居民因為物價被迫遷離了。"},
+    {w:"be priced out",ipa:"/bi praɪst aʊt/",pos:"phr.",cn:"因價格上漲而被迫離開",def:"To be unable to afford to stay somewhere.",ex:"Residents have been priced out of their own streets.",exCn:"居民在自己住的街上都被高物價逼得住不下去了。"},
+    {w:"be blamed",ipa:"/bi bleɪmd/",pos:"phr.",cn:"被責怪",def:"To be said to be responsible for something bad.",ex:"Tourists are often blamed.",exCn:"遊客常常被怪罪。"},
+    {w:"mechanism",ipa:"/ˈmekənɪzəm/",pos:"n.",cn:"機制",def:"The way a process works.",ex:"The mechanism is not their fault.",exCn:"這個運作機制並不是他們的錯。"},
+    {w:"souvenir",ipa:"/ˌsuːvəˈnɪr/",pos:"n.",cn:"紀念品",def:"An object you keep to remember a place.",ex:"Every second shop sells the same souvenirs.",exCn:"每隔一間店賣的都是一樣的紀念品。"},
+    {w:"granted",ipa:"/ˈɡræntɪd/",pos:"adv.",cn:"誠然、的確",def:"Used to admit that something is true.",ex:"Granted, tourism pays for a great deal.",exCn:"誠然，觀光業帶來了很多收入。"},
+    {w:"short-term rental",ipa:"/ʃɔːrt tɜːrm ˈrentl/",pos:"n.",cn:"短期出租",def:"A flat rented to visitors for a few nights.",ex:"Limits on short-term rentals help.",exCn:"限制短期出租是有幫助的。"},
+    {w:"consult",ipa:"/kənˈsʌlt/",pos:"v.",cn:"徵詢意見",def:"To ask someone for their opinion before deciding.",ex:"Residents are consulted before the numbers are set.",exCn:"在訂出數字之前會先徵詢居民的意見。"}
   ],
   questions:[
     {q:"Why did the neighbourhood bakery close?",
@@ -846,15 +846,15 @@ window.READING = [
      cn:"全額在九天後入帳，沒有解釋也沒有道歉。這件事的教訓不是房東不誠實——多數並非如此——而是押金靠的是證據，而不是靠公道。到租屋的第一天就把房子拍下來，留好財物清單，並且每一次要求都用書面提出。"}
   ],
   target:[
-    {w:"deposit",ipa:"/dɪˈpɑːzɪt/",pos:"n.",cn:"押金",def:"Money paid in advance and returned if nothing is damaged.",ex:"Half of her deposit had been kept."},
-    {w:"deduct",ipa:"/dɪˈdʌkt/",pos:"v.",cn:"扣除",def:"To take an amount away from a total.",ex:"A landlord who deducts for normal wear."},
-    {w:"wear",ipa:"/wer/",pos:"n.",cn:"損耗",def:"Damage caused by normal use over time.",ex:"Normal wear is not damage."},
-    {w:"handover",ipa:"/ˈhændoʊvər/",pos:"n.",cn:"交屋、移交",def:"The act of giving something to another person officially.",ex:"The condition of the flat at handover."},
-    {w:"dispute",ipa:"/dɪˈspjuːt/",pos:"v.",cn:"爭執、質疑",def:"To say that something is not true or fair.",ex:"The condition could not be disputed."},
-    {w:"inventory",ipa:"/ˈɪnvəntɔːri/",pos:"n.",cn:"財物清單",def:"A written list of the items in a property.",ex:"She kept the inventory signed at move-in."},
-    {w:"tenant",ipa:"/ˈtenənt/",pos:"n.",cn:"房客",def:"A person who pays rent to live somewhere.",ex:"Most tenants never look at it again."},
-    {w:"itemised receipt",ipa:"/ˈaɪtəmaɪzd rɪˈsiːt/",pos:"n.",cn:"逐項收據",def:"A receipt showing the cost of each separate item.",ex:"She asked for an itemised receipt."},
-    {w:"mediation",ipa:"/ˌmiːdiˈeɪʃn/",pos:"n.",cn:"調解",def:"A process in which a third person helps solve a dispute.",ex:"The matter will be taken to mediation."}
+    {w:"deposit",ipa:"/dɪˈpɑːzɪt/",pos:"n.",cn:"押金",def:"Money paid in advance and returned if nothing is damaged.",ex:"Half of her deposit had been kept.",exCn:"她的押金被扣了一半。"},
+    {w:"deduct",ipa:"/dɪˈdʌkt/",pos:"v.",cn:"扣除",def:"To take an amount away from a total.",ex:"A landlord who deducts for normal wear.",exCn:"一個因為正常損耗就扣錢的房東。"},
+    {w:"wear",ipa:"/wer/",pos:"n.",cn:"損耗",def:"Damage caused by normal use over time.",ex:"Normal wear is not damage.",exCn:"正常的損耗不算是損壞。"},
+    {w:"handover",ipa:"/ˈhændoʊvər/",pos:"n.",cn:"交屋、移交",def:"The act of giving something to another person officially.",ex:"The condition of the flat at handover.",exCn:"公寓在交屋時的狀況。"},
+    {w:"dispute",ipa:"/dɪˈspjuːt/",pos:"v.",cn:"爭執、質疑",def:"To say that something is not true or fair.",ex:"The condition could not be disputed.",exCn:"那個狀況是無從爭辯的。"},
+    {w:"inventory",ipa:"/ˈɪnvəntɔːri/",pos:"n.",cn:"財物清單",def:"A written list of the items in a property.",ex:"She kept the inventory signed at move-in.",exCn:"她保留了入住時簽好的財物清單。"},
+    {w:"tenant",ipa:"/ˈtenənt/",pos:"n.",cn:"房客",def:"A person who pays rent to live somewhere.",ex:"Most tenants never look at it again.",exCn:"大多數房客再也不會去看它一眼。"},
+    {w:"itemised receipt",ipa:"/ˈaɪtəmaɪzd rɪˈsiːt/",pos:"n.",cn:"逐項收據",def:"A receipt showing the cost of each separate item.",ex:"She asked for an itemised receipt.",exCn:"她要求對方提供逐項列明的收據。"},
+    {w:"mediation",ipa:"/ˌmiːdiˈeɪʃn/",pos:"n.",cn:"調解",def:"A process in which a third person helps solve a dispute.",ex:"The matter will be taken to mediation.",exCn:"這件事將會交付調解。"}
   ],
   questions:[
     {q:"What reason was given for keeping half the deposit?",
@@ -898,15 +898,15 @@ window.READING = [
      cn:"最可靠的方法也是最不刺激的：在領薪水的當天，就把一筆固定金額移出帳戶，早於任何消費決定。月底才存剩下的錢的人幾乎存不到錢；先存錢再花剩下的錢的人，幾乎都存得到。"}
   ],
   target:[
-    {w:"discipline",ipa:"/ˈdɪsəplɪn/",pos:"n.",cn:"自制力、紀律",def:"The ability to control your own behaviour.",ex:"The answer is rarely a lack of discipline."},
-    {w:"wage",ipa:"/weɪdʒ/",pos:"n.",cn:"薪資",def:"Money paid regularly for work.",ex:"Rents rose faster than wages."},
-    {w:"mortgage",ipa:"/ˈmɔːrɡɪdʒ/",pos:"n.",cn:"房貸",def:"A loan used to buy a house.",ex:"It disappears into somebody else's mortgage."},
-    {w:"inflation",ipa:"/ɪnˈfleɪʃn/",pos:"n.",cn:"通膨",def:"A general rise in prices over time.",ex:"Inflation makes the problem harder to see."},
-    {w:"trivial",ipa:"/ˈtrɪviəl/",pos:"adj.",cn:"微不足道的",def:"Not important or serious.",ex:"Three per cent sounds trivial."},
-    {w:"current account",ipa:"/ˈkɜːrənt əˈkaʊnt/",pos:"n.",cn:"活期存款帳戶",def:"A bank account for everyday money.",ex:"Money left in a current account loses value."},
-    {w:"that said",ipa:"/ðæt sed/",pos:"phr.",cn:"話說回來",def:"Used before saying something that partly contradicts what you just said.",ex:"That said, the usual advice targets the wrong number."},
-    {w:"renegotiate",ipa:"/ˌriːnɪˈɡoʊʃieɪt/",pos:"v.",cn:"重新談（條件）",def:"To discuss an agreement again in order to change it.",ex:"Renegotiating rent can save ten per cent."},
-    {w:"fixed cost",ipa:"/fɪkst kɔːst/",pos:"n.",cn:"固定支出",def:"A cost that stays the same each month.",ex:"Big fixed costs matter more."}
+    {w:"discipline",ipa:"/ˈdɪsəplɪn/",pos:"n.",cn:"自制力、紀律",def:"The ability to control your own behaviour.",ex:"The answer is rarely a lack of discipline.",exCn:"問題的答案很少是不夠自律。"},
+    {w:"wage",ipa:"/weɪdʒ/",pos:"n.",cn:"薪資",def:"Money paid regularly for work.",ex:"Rents rose faster than wages.",exCn:"房租漲得比薪水還快。"},
+    {w:"mortgage",ipa:"/ˈmɔːrɡɪdʒ/",pos:"n.",cn:"房貸",def:"A loan used to buy a house.",ex:"It disappears into somebody else's mortgage.",exCn:"那些錢都流進了別人的房貸裡。"},
+    {w:"inflation",ipa:"/ɪnˈfleɪʃn/",pos:"n.",cn:"通膨",def:"A general rise in prices over time.",ex:"Inflation makes the problem harder to see.",exCn:"通貨膨脹讓這個問題更不容易被看清楚。"},
+    {w:"trivial",ipa:"/ˈtrɪviəl/",pos:"adj.",cn:"微不足道的",def:"Not important or serious.",ex:"Three per cent sounds trivial.",exCn:"百分之三聽起來微不足道。"},
+    {w:"current account",ipa:"/ˈkɜːrənt əˈkaʊnt/",pos:"n.",cn:"活期存款帳戶",def:"A bank account for everyday money.",ex:"Money left in a current account loses value.",exCn:"放在活期帳戶裡的錢會貶值。"},
+    {w:"that said",ipa:"/ðæt sed/",pos:"phr.",cn:"話說回來",def:"Used before saying something that partly contradicts what you just said.",ex:"That said, the usual advice targets the wrong number.",exCn:"話說回來，一般的建議都針對錯了對象。"},
+    {w:"renegotiate",ipa:"/ˌriːnɪˈɡoʊʃieɪt/",pos:"v.",cn:"重新談（條件）",def:"To discuss an agreement again in order to change it.",ex:"Renegotiating rent can save ten per cent.",exCn:"重新談房租可以省下百分之十。"},
+    {w:"fixed cost",ipa:"/fɪkst kɔːst/",pos:"n.",cn:"固定支出",def:"A cost that stays the same each month.",ex:"Big fixed costs matter more.",exCn:"龐大的固定支出更重要。"}
   ],
   questions:[
     {q:"What does the writer say is usually NOT the reason people cannot save?",
@@ -950,16 +950,16 @@ window.READING = [
      cn:"有些城市以「空屋稅」回應：對超過一定月數仍空置的住宅逐步加重課徵，並對整修中與真正待售者設有豁免。成效不大但真實——每年有百分之幾的單位回到租賃市場。值得記住的是：城市不是一堆資產的集合，而是一個人必須有辦法睡覺的地方。"}
   ],
   target:[
-    {w:"commercial",ipa:"/kəˈmɜːrʃl/",pos:"adj.",cn:"商業的",def:"Connected with buying and selling.",ex:"Walk down an older commercial street."},
-    {w:"district",ipa:"/ˈdɪstrɪkt/",pos:"n.",cn:"區、地段",def:"An area of a town or city.",ex:"In many districts fewer than half are lit."},
-    {w:"shortage",ipa:"/ˈʃɔːrtɪdʒ/",pos:"n.",cn:"短缺",def:"A situation in which there is not enough of something.",ex:"It is not a shortage of buildings."},
-    {w:"resale",ipa:"/ˈriːseɪl/",pos:"n.",cn:"轉售",def:"Selling something you bought earlier.",ex:"A property held for resale."},
-    {w:"tenancy",ipa:"/ˈtenənsi/",pos:"n.",cn:"租約、租賃關係",def:"The period or agreement of renting a property.",ex:"Trapped for years by a difficult tenancy."},
-    {w:"caution",ipa:"/ˈkɔːʃn/",pos:"n.",cn:"謹慎",def:"Care taken to avoid risk.",ex:"It looks like caution rather than waste."},
-    {w:"vacancy tax",ipa:"/ˈveɪkənsi tæks/",pos:"n.",cn:"空屋稅",def:"A tax on homes that are left empty.",ex:"Several cities introduced a vacancy tax."},
-    {w:"exemption",ipa:"/ɪɡˈzempʃn/",pos:"n.",cn:"豁免",def:"Permission not to pay or obey something.",ex:"With exemptions for renovation."},
-    {w:"modest",ipa:"/ˈmɑːdɪst/",pos:"adj.",cn:"不大的、有限的",def:"Not large in size or amount.",ex:"Results have been modest but real."},
-    {w:"asset",ipa:"/ˈæset/",pos:"n.",cn:"資產",def:"Something valuable that a person or company owns.",ex:"A city is not a collection of assets."}
+    {w:"commercial",ipa:"/kəˈmɜːrʃl/",pos:"adj.",cn:"商業的",def:"Connected with buying and selling.",ex:"Walk down an older commercial street.",exCn:"沿著一條比較老的商店街走一走。"},
+    {w:"district",ipa:"/ˈdɪstrɪkt/",pos:"n.",cn:"區、地段",def:"An area of a town or city.",ex:"In many districts fewer than half are lit.",exCn:"在很多區域，亮著燈的還不到一半。"},
+    {w:"shortage",ipa:"/ˈʃɔːrtɪdʒ/",pos:"n.",cn:"短缺",def:"A situation in which there is not enough of something.",ex:"It is not a shortage of buildings.",exCn:"問題不在於建築物不夠。"},
+    {w:"resale",ipa:"/ˈriːseɪl/",pos:"n.",cn:"轉售",def:"Selling something you bought earlier.",ex:"A property held for resale.",exCn:"一處為了轉售而持有的房產。"},
+    {w:"tenancy",ipa:"/ˈtenənsi/",pos:"n.",cn:"租約、租賃關係",def:"The period or agreement of renting a property.",ex:"Trapped for years by a difficult tenancy.",exCn:"被一段棘手的租約困住了好幾年。"},
+    {w:"caution",ipa:"/ˈkɔːʃn/",pos:"n.",cn:"謹慎",def:"Care taken to avoid risk.",ex:"It looks like caution rather than waste.",exCn:"這看起來像是謹慎，而不是浪費。"},
+    {w:"vacancy tax",ipa:"/ˈveɪkənsi tæks/",pos:"n.",cn:"空屋稅",def:"A tax on homes that are left empty.",ex:"Several cities introduced a vacancy tax.",exCn:"有好幾個城市開徵了空屋稅。"},
+    {w:"exemption",ipa:"/ɪɡˈzempʃn/",pos:"n.",cn:"豁免",def:"Permission not to pay or obey something.",ex:"With exemptions for renovation.",exCn:"並針對整修的情況給予免稅。"},
+    {w:"modest",ipa:"/ˈmɑːdɪst/",pos:"adj.",cn:"不大的、有限的",def:"Not large in size or amount.",ex:"Results have been modest but real.",exCn:"成效雖然有限，但確實存在。"},
+    {w:"asset",ipa:"/ˈæset/",pos:"n.",cn:"資產",def:"Something valuable that a person or company owns.",ex:"A city is not a collection of assets.",exCn:"一座城市並不是一堆資產的集合。"}
   ],
   questions:[
     {q:"According to the writer, what keeps rents high in these areas?",

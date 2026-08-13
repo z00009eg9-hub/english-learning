@@ -235,6 +235,11 @@ tr:nth-child(even) td{background:#fdfbf8}
 .upg .u1{font-size:calc(15.5px * var(--fs));color:#6b6259;font-weight:600}
 .upg .u2{font-size:calc(18px * var(--fs));font-weight:800;margin-top:8px;display:flex;gap:8px;align-items:flex-start;line-height:1.6;color:#2b2438}
 .upg .un{font-size:calc(15px * var(--fs));color:#5b4a86;margin-top:9px;font-weight:600;line-height:1.75;background:#fff;border-radius:9px;padding:9px 11px}
+/* 每組升級用不同顏色，方便一眼區分 */
+.upg.c0{background:#f4f0fb;border-color:#e0d6f5}         .upg.c0 .un{color:#5b4a86}
+.upg.c1{background:#e9f6f1;border-color:#cfe9df}         .upg.c1 .un{color:#1f6b57}
+.upg.c2{background:#fdf2e5;border-color:#f4ddc1}         .upg.c2 .un{color:#9a5a1c}
+.upg.c3{background:#eaf2fb;border-color:#cfe0f2}         .upg.c3 .un{color:#2b5f92}
 /* ---------- 影片播放器（16:9 自適應） ---------- */
 .ytwrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:12px;overflow:hidden;margin-top:11px}
 .ytwrap>div,.ytwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -297,6 +302,7 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 .wpitem .zh{font-size:calc(15px * var(--fs));font-weight:700;color:var(--accent2);margin-top:2px}
 .wpitem .def{font-size:calc(13.5px * var(--fs));color:var(--ink2);margin-top:3px}
 .wpitem .exs{font-size:calc(14.5px * var(--fs));margin-top:5px;background:#fdfbf8;border-radius:8px;padding:7px 9px}
+.wpitem .exs .excn{font-size:calc(13px * var(--fs));color:var(--ink2);margin-top:4px}
 .extra{display:flex;flex-wrap:wrap;gap:6px}
 .extra span{
   font-size:calc(13px * var(--fs));background:#f2f7f7;border:1px solid #cfe3e2;border-radius:20px;
@@ -556,7 +562,7 @@ function addGloss(k,obj){
   const e=(k.exs||[])[0]||{};
   addGloss(k.w,{w:k.w,ipa:k.ipa,pos:'',cn:(k.tag||'').split('·')[0].trim(),def:'',exEn:e.en,exCn:e.cn,src:'課堂片語'});
 });
-(READING||[]).forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:'',src:'閱讀：'+a.title})));
+(READING||[]).forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:t.exCn||'',src:'閱讀：'+a.title})));
 
 // 簡易還原詞形，讓 studies / studied / studying 都查得到
 function lookup(raw){
@@ -638,7 +644,7 @@ const A2_ARTS=(((window.A2||{}).articles)||[]).map(a=>Object.assign({},a,{kind:'
 const A2_GRAM=(((window.A2||{}).grammar)||[]);
 const ORIG_ARTS=A2_ARTS.concat((READING||[]).map(a=>Object.assign({},a,{kind:'orig',hi:(a.target||[]).map(t=>t.w)})));
 // A2 的重點字也要進字庫
-A2_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:'',src:'A2 閱讀：'+a.title})));
+A2_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:t.exCn||'',src:'A2 閱讀：'+a.title})));
 // 每日自動產生的文章：只顯示日期已到的（未來日期先藏起來）
 const DAILY_ALL=((window.DAILY||{}).articles||[]).map(a=>Object.assign({},a,{kind:'daily',hi:(a.target||[]).map(t=>t.w)}));
 const DAILY_ARTS=DAILY_ALL.filter(a=>!a.date||a.date<=today()).sort((x,y)=>(y.date||'').localeCompare(x.date||''));
@@ -646,7 +652,7 @@ const DAILY_GRAM=(((window.DAILY||{}).grammar)||[]).filter(g=>!g.date||g.date<=t
 const ALL_GRAM=DAILY_GRAM.concat(A2_GRAM,GRAMMAR);
 const ALL_ARTS=DAILY_ARTS.concat(ORIG_ARTS,NOTE_ARTS);
 // 每日文章的重點字也要進字庫
-DAILY_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:'',src:'每日文章：'+a.title})));
+DAILY_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:t.exCn||'',src:'每日文章：'+a.title})));
 
 let rdFilter={kind:'orig',level:'all'}, rdOpen=null;
 RENDER.read=function(){
@@ -862,7 +868,7 @@ function readerHTML(a){
        +spk(t.w)+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
        +'<div class="zh">'+esc(t.cn)+'</div>'
        +(t.def?'<div class="def">'+esc(t.def)+'</div>':'')
-       +(t.ex?'<div class="exs">'+esc(t.ex)+' '+spk(t.ex)+'</div>':'')
+       +(t.ex?'<div class="exs">'+esc(t.ex)+' '+spk(t.ex)+(t.exCn?'<div class="excn">'+esc(t.exCn)+'</div>':'')+'</div>':'')
        +'</div>').join('')
      +'</div></div>';
   }
@@ -873,7 +879,7 @@ function readerHTML(a){
   if(extras.length){
     blocks.push('<div class="wpbox"><div class="wphead">▼ Extra Words &amp; Phrases<span class="zh">補充詞彙</span></div>'
      +'<div class="wpbody"><div class="extra">'
-     + extras.map(g=>'<span onclick="showGloss(\''+esc(g.w).replace(/'/g,"\\'")+'\')">'+esc(g.w)+' · '+esc(g.cn||'')+'</span>').join('')
+     + extras.map(g=>'<span onclick="event.stopPropagation();showGloss(\''+esc(g.w).replace(/'/g,"\\'")+'\')">'+esc(g.w)+' · '+esc(g.cn||'')+'</span>').join('')
      +'</div><div class="muted" style="margin-top:7px;font-size:calc(12px * var(--fs))">這些字出現在本文，也在你的課堂字庫裡。點一下看完整解釋。</div></div></div>');
   }
   const y=ycdHTML(YCD); if(y) blocks.push(y);
@@ -883,7 +889,7 @@ function readerHTML(a){
   if((a.upgrade||[]).length){
     const lo=a.upFrom||'B1', hi=a.upTo||'B2';
     h+='<div class="card"><h2 class="sec">⬆️ '+lo+' → '+hi+' 句型升級</h2>'
-     + a.upgrade.map(u=>'<div class="upg"><div class="u1">'+lo+'：'+esc(u.b1)+'</div>'
+     + a.upgrade.map((u,i)=>'<div class="upg c'+(i%4)+'"><div class="u1">'+lo+'：'+esc(u.b1)+'</div>'
        +'<div class="u2">'+hi+'：'+esc(u.b2)+' '+spk(u.b2)+'</div>'
        +'<div class="un">💡 '+esc(u.note)+'</div></div>').join('')
      +'</div>';
