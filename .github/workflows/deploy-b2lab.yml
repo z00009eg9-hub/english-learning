@@ -10,6 +10,7 @@ on:
     paths:
       - 'b2lab/public/**'
       - 'b2lab/firebase.json'
+      - 'b2lab/firestore.rules'
       - '.github/workflows/deploy-b2lab.yml'
   workflow_dispatch:
 
@@ -41,3 +42,11 @@ jobs:
           projectId: english-b2-lab
           channelId: live
           entryPoint: b2lab
+
+      # 也部署 Firestore 安全規則，否則「我的影片」(b2lab_videos) 的寫入會被拒、無法跨裝置同步
+      - name: Deploy Firestore rules
+        run: |
+          printf '%s' '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ENGLISH_B2_LAB }}' > "$RUNNER_TEMP/gcp-sa.json"
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/gcp-sa.json"
+          cd b2lab
+          npx --yes firebase-tools@13 deploy --only firestore:rules --project english-b2-lab --non-interactive
