@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="B2 Read">
-<meta name="description" content="閱讀、單字間隔複習與文法教材，從 B1 推進到 B2。每日自動更新一篇文章與一個文法單元。">
+<meta name="description" content="閱讀、單字間隔複習與文法教材，從 B1 推進到 B2。每週三、五自動更新一篇文章與一個文法單元。">
 <style>
 :root{
   --bg:#faf7f3; --card:#ffffff; --ink:#26211c; --ink2:#6b6259; --line:#e8e0d6;
@@ -1174,7 +1174,7 @@ RENDER.gram=function(){
   if(CURG){ v.innerHTML=gramHTML(CURG); return; }
   v.innerHTML='<div class="card"><h2 class="sec">📐 文法系統教材</h2>'
     +'<div class="hint">單元順序就是建議的學習順序：先把 B1 的時態基礎穩住，再進 B2 的被動、關係子句、分詞與倒裝。每個單元都有 ⚠️ 常見錯誤與練習題。</div>'
-    +'<div class="muted">共 '+ALL_GRAM.length+' 個單元'+(DAILY_GRAM.length?'（其中 '+DAILY_GRAM.length+' 個是每日自動新增）':'')+'</div></div>'
+    +'<div class="muted">共 '+ALL_GRAM.length+' 個單元'+(DAILY_GRAM.length?'（其中 '+DAILY_GRAM.length+' 個是每週三、五自動新增）':'')+'</div></div>'
     + ALL_GRAM.map(g=>{
       const d=ST.gramDone[g.id];
       return '<div class="item" onclick="gOpen(\''+g.id+'\')">'
@@ -1239,7 +1239,7 @@ RENDER.daily=function(){
   let h=installCard()
    +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
    +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+' · '+(GOALS[PROFILE]||'')+'</div>'
-   +'<div class="hint">每天都有<b>一篇文章</b>、<b>一個文法單元</b>與<b>一課聽力</b>。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力每天從影片庫換一課讓你練耳朵。</div>'
+   +'<div class="hint"><b>每週三、五</b>更新<b>一篇新文章</b>與<b>一個文法單元</b>；<b>聽力每天</b>從影片庫換一課讓你練耳朵。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進。</div>'
    +'<div class="stats"><div class="stat"><b>'+pool.length+'</b><span>累積每日文章</span></div>'
    +'<div class="stat"><b>'+DAILY_GRAM.length+'</b><span>累積每日文法</span></div>'
    +'<div class="stat"><b>'+(ST.streak||1)+'</b><span>連續學習天數</span></div>'
@@ -1271,9 +1271,9 @@ RENDER.daily=function(){
      +(d?'<span class="done">✓ 已完成 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
   }
   if(!artToday&&!gramToday){
-    h+='<div class="card"><div class="muted">今天還沒有新內容。每日排程通常在早上七點更新，可以稍後再回來看，或先到「閱讀」與「文法」分頁。</div></div>';
+    h+='<div class="card"><div class="muted">還沒有新內容。新文章與文法在<b>每週三、五</b>早上更新，可以先到「閱讀」與「文法」分頁，或看今日聽力。</div></div>';
   }else if(!isToday(artToday)&&!isToday(gramToday)){
-    h+='<div class="card"><div class="muted">⏳ 今天（'+t+'）的新內容還沒更新，上面顯示的是最近一次的。每日排程在早上七點跑，稍後重新整理就會出現。</div></div>';
+    h+='<div class="card"><div class="muted">上面顯示的是最近一次的文章與文法。新內容<b>每週三、五</b>早上更新（其他天不會有新的）；聽力則每天換一課。</div></div>';
   }
   h+='<div class="card"><h2 class="sec">🎯 今天可以這樣安排</h2>'
    +'<ol style="font-size:calc(15px * var(--fs));padding-left:22px;margin:4px 0">'
