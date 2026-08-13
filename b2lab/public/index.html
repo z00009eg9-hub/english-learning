@@ -1232,14 +1232,10 @@ RENDER.daily=function(){
   const artToday=pool.find(a=>a.date===t)||pool[0]||null;
   const gramToday=DAILY_GRAM.find(g=>g.date===t)||DAILY_GRAM[0]||null;
   const isToday=x=>x&&x.date===t;
-  // 今日聽力：從你程度的聽力庫輪一課，只在每週三、五換下一課（跟文章／文法同步；其他天維持同一課）
+  // 今日聽力：優先顯示每週三、五自動新增、屬於你程度的「最新一課」；還沒有新的就顯示影片庫裡的第一課
   const listenPool=LESSONS.filter(l=>inBand(l.level));
-  const td=new Date(t+'T00:00:00');
-  const N=Math.floor(Date.UTC(td.getFullYear(),td.getMonth(),td.getDate())/86400000); // 1970-01-01(週四)起算的天數
-  const wedCount=N>=6?Math.floor((N-6)/7)+1:0;   // 到今天(含)為止經過幾個週三
-  const friCount=N>=1?Math.floor((N-1)/7)+1:0;   // 到今天(含)為止經過幾個週五
-  const listenStep=wedCount+friCount;            // 每逢週三、週五 +1，其他天不變
-  const listenToday=listenPool.length?listenPool[listenStep%listenPool.length]:null;
+  const listenDated=listenPool.filter(l=>l.date&&l.date<=t).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  const listenToday=listenDated[0]||listenPool[0]||null;
   let h=installCard()
    +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
    +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+' · '+(GOALS[PROFILE]||'')+'</div>'
@@ -1268,10 +1264,10 @@ RENDER.daily=function(){
   }
   if(listenToday){
     const d=(ST.listenDone||{})[listenToday.id];
-    h+='<div class="item new" style="border-left-color:#159AA6" onclick="lsGo(\''+listenToday.id+'\')">'
+    h+='<div class="item'+(listenToday.date===t?' new':'')+'" style="border-left-color:#159AA6" onclick="lsGo(\''+listenToday.id+'\')">'
      +'<div class="t">🎧 '+esc(listenToday.title)+'</div>'
      +'<div class="tc">'+esc(listenToday.titleCn)+'</div>'
-     +'<div class="meta"><span class="lv '+lvCls(listenToday.level)+'">'+esc(listenToday.level)+'</span><span>📅 '+t+'</span><span>🎬 '+esc(listenToday.topic)+'</span><span>⏱ 約 '+listenToday.minutes+' 分鐘</span>'
+     +'<div class="meta"><span class="lv '+lvCls(listenToday.level)+'">'+esc(listenToday.level)+'</span>'+(listenToday.date?'<span>📅 '+esc(listenToday.date)+'</span>':'')+'<span>🎬 '+esc(listenToday.topic)+'</span><span>⏱ 約 '+listenToday.minutes+' 分鐘</span>'
      +(d?'<span class="done">✓ 已完成 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
   }
   if(!artToday&&!gramToday){
