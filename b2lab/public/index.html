@@ -90,6 +90,12 @@ nav button{
 }
 nav button i{font-style:normal;font-size:18px;line-height:1}
 nav button.on{color:var(--accent2);font-weight:700}
+/* 今日分頁的小日曆圖示：顯示「今天」實際日期，而不是 📅 emoji 內建的固定日期 */
+.dayico{display:inline-flex;flex-direction:column;align-items:center;justify-content:flex-start;
+  width:19px;height:19px;border:1.5px solid currentColor;border-radius:4px;overflow:hidden;font-style:normal}
+.dayico .m{display:block;width:100%;background:currentColor;color:#fff;font-size:6px;font-weight:800;
+  line-height:6px;padding:1px 0;letter-spacing:.5px;text-align:center}
+.dayico .d{display:block;font-size:11px;font-weight:800;line-height:12px;text-align:center}
 /* ---------- layout ---------- */
 main{max-width:860px;margin:0 auto;padding:16px 14px 20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;margin-bottom:14px}
@@ -386,7 +392,7 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 </div>
 
 <nav>
-  <button id="t-daily" class="on" onclick="go('daily')"><i>📅</i>今日</button>
+  <button id="t-daily" class="on" onclick="go('daily')"><i class="dayico"><span class="m" id="dayico-m">—</span><span class="d" id="dayico-d">—</span></i>今日</button>
   <button id="t-read" onclick="go('read')"><i>📖</i>閱讀</button>
   <button id="t-listen" onclick="go('listen')"><i>🎧</i>聽力</button>
   <button id="t-vocab" onclick="go('vocab')"><i>🔤</i>單字卡</button>
@@ -1368,6 +1374,14 @@ RENDER.prog=function(){
 };
 function setRate(r){ ST.rate=r; save(); say('This is the reading speed.',r); go('prog'); }
 function applyFs(){ document.documentElement.style.setProperty('--fs', String(ST.fs||1.15)); }
+/* 今日分頁圖示顯示今天的真實日期（月份縮寫＋日） */
+function updateDayIcon(){
+  const now=new Date();
+  const mon=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][now.getMonth()];
+  const m=$('dayico-m'), d=$('dayico-d');
+  if(m) m.textContent=mon;
+  if(d) d.textContent=now.getDate();
+}
 /* 量測 sticky header 高度，讓黏頂的影片剛好貼在 header 下方 */
 function updateHd(){ const hd=document.querySelector('header'); if(hd) document.documentElement.style.setProperty('--hdh',hd.offsetHeight+'px'); }
 window.addEventListener('resize',updateHd);
@@ -1657,6 +1671,12 @@ function myVidHTML(v){
    +(hasCn?'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button>':'')
    +'<button class="spk" onclick="jumpCur()">↕ 跳到目前這句</button></div></div>';
 
+  h+='<div class="card"><h2 class="sec">📝 生字筆記</h2>'
+   +'<div class="hint">自動儲存並跨裝置同步。邊看邊把生字記在這，下面就是逐字稿。</div>'
+   +'<textarea id="vnote" oninput="saveNote()" rows="3" placeholder="把聽到的生字、聽不懂的句子記在這裡…" '
+   +'style="width:100%;padding:10px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:calc(14px * var(--fs));resize:vertical">'
+   +esc(((ST.vnotes||{})[v.id])||'')+'</textarea></div>';
+
   h+='<div class="card"><h2 class="sec">📜 逐字稿</h2>'
    +'<div class="hint">播放時字幕會自動亮起來並捲動。<b>點任一句</b>可以跳到那一秒；<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是用電腦語音念（不是影片原聲）。</div>'
    +'<div id="sublist">'+ (v.lines||[]).map((l,i)=>
@@ -1665,13 +1685,7 @@ function myVidHTML(v){
       +'<div class="sen" onclick="seekLine('+i+')">'+tokenize(l.en,null)+'</div>'
       +spk(l.en)+'</div>'
       +(l.cn?'<div class="scn">'+esc(l.cn)+'</div>':'')
-      +'</div>').join('') +'</div></div>';
-
-  h+='<div class="card"><h2 class="sec">📝 生字筆記</h2>'
-   +'<div class="hint">自動儲存並跨裝置同步。</div>'
-   +'<textarea id="vnote" oninput="saveNote()" rows="5" placeholder="把聽到的生字、聽不懂的句子記在這裡…" '
-   +'style="width:100%;padding:10px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:calc(14px * var(--fs));resize:vertical">'
-   +esc(((ST.vnotes||{})[v.id])||'')+'</textarea></div>'
+      +'</div>').join('') +'</div></div>'
    +'<div class="card" style="text-align:center"><button class="btn" onclick="closeMyVid()">完成，回列表</button></div>';
   return h;
 }
@@ -1813,6 +1827,7 @@ updateProfileUI();
 loadLocal();
 applyFs();
 updateHd();
+updateDayIcon();
 touchStreak();
 RENDER.daily();
 cloudPull(()=>{ touchStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); vidSubscribe(); });
