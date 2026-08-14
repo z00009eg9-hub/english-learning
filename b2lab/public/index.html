@@ -71,12 +71,7 @@ header .prof button{
   border:0;background:none;color:rgba(255,255,255,.85);font:inherit;font-size:11.5px;padding:3px 9px;
   border-radius:18px;cursor:pointer;white-space:nowrap
 }
-header .prof button.on{background:#fff;color:var(--accent2);font-weight:700;animation:breathe 2.4s ease-in-out infinite}
-/* 目前的學習者：呼吸燈特效 */
-@keyframes breathe{
-  0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.0)}
-  50%{box-shadow:0 0 12px 4px rgba(255,244,220,.85)}
-}
+header .prof button.on{background:#fff;color:var(--accent2);font-weight:700}
 header #sync-badge{font-size:14px;line-height:1;opacity:.9;display:none}
 header .hdlink{
   font-size:11.5px;font-weight:800;text-decoration:none;color:#fff;white-space:nowrap;
@@ -228,6 +223,9 @@ tr:nth-child(even) td{background:#fdfbf8}
 .stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 8px;text-align:center}
 .stat b{display:block;font-size:calc(23px * var(--fs));color:var(--accent2);line-height:1.2}
 .stat span{font-size:calc(11.5px * var(--fs));color:var(--ink2);word-break:keep-all}
+/* 可點擊的統計格（今日待複習 → 直接跳去單字卡複習） */
+.stat.tap{cursor:pointer;border-color:var(--accent)}
+.stat.tap:active{background:#fff7ee}
 /* ---------- 每日打卡日曆 ---------- */
 .calhd{display:flex;align-items:center;justify-content:space-between;margin:4px 0 10px}
 .calhd .m{font-weight:800;font-size:calc(15px * var(--fs))}
@@ -258,6 +256,9 @@ tr:nth-child(even) td{background:#fdfbf8}
 .trap{background:#fff6f5;border:1px solid #f3d5d2;border-radius:10px;padding:10px 12px;margin-bottom:8px;font-size:calc(14px * var(--fs))}
 .trap .bad{color:var(--bad)} .trap .good{color:var(--ok);font-weight:600}
 .trap .why{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:4px}
+/* 錯誤示範一律紅色、正確示範一律綠色（文法解說、例句註解、常見錯誤都適用） */
+.wrong{color:var(--bad);font-weight:600}
+.right{color:var(--ok);font-weight:600}
 .upg{background:#f4f0fb;border:1px solid #e0d6f5;border-radius:12px;padding:14px 15px;margin-bottom:12px}
 .upg .u1{font-size:calc(15.5px * var(--fs));color:#6b6259;font-weight:600}
 .upg .u2{font-size:calc(18px * var(--fs));font-weight:800;margin-top:8px;display:flex;gap:8px;align-items:flex-start;line-height:1.6;color:#2b2438}
@@ -365,6 +366,7 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 .sline.cur .stime{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
 .sen{flex:1;font-size:calc(16px * var(--fs));line-height:1.7;cursor:pointer}
 .scn{font-size:calc(14px * var(--fs));color:var(--ink2);margin-top:3px;padding-left:52px}
+.ssp{font-size:calc(12px * var(--fs));font-weight:800;color:var(--accent2);margin-bottom:2px}
 #sublist.noen .sen{visibility:hidden}
 #sublist.nocn .scn{display:none}
 /* ---------- 文法重點深入說明 ---------- */
@@ -431,6 +433,7 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 <script src="data-art.js"></script>
 <script src="data-gramviz.js"></script>
 <script src="data-listen.js"></script>
+<script src="data-scripts.js"></script>
 <script src="data-daily.js"></script>
 <script>
 /* ============================================================
@@ -439,6 +442,21 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 const $ = id => document.getElementById(id);
 const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const lvCls = l => l==='B1+'?'B1P':(l==='B2'?'B2':(l==='A2'?'A2':'B1'));
+/* 錯誤示範自動變紅、正確示範自動變綠：
+   ✗ / X / ✘ 之後到下一個中文標點或全形括號結束為止，都算「錯的那段」。 */
+function mkWrong(s){
+  return esc(s)
+    .replace(/([✗✘Ⅹ×]|\bX(?=\s))\s*([^（）()「」。；，、,;]*)/g,
+             '<span class="wrong">$1 $2</span>')
+    .replace(/(✓|✔)\s*([^（）()「」。；，、,;]*)/g,
+             '<span class="right">$1 $2</span>');
+}
+/* 句號之後自動換到下一行，長段解說比較好讀 */
+function brSent(s){
+  return String(s==null?'':s).replace(/。(?!\s*$)/g,'。<br>');
+}
+/* 兩者都套用：錯的變紅 + 句號換行 */
+const mkText = s => brSent(mkWrong(s));
 /* 清單卡片左側色條跟著程度走（A2 橘 / B1 綠 / B1+ 藍 / B2 紫） */
 const LVBAR={A2:'--a2',B1:'--b1','B1+':'--b1p',B2:'--b2'};
 const lvBar = l => 'border-left-color:var('+(LVBAR[l]||'--accent')+')';
@@ -989,18 +1007,18 @@ function focusHTML(id){
   let h='<div class="focus"><h3>📐 這篇的文法重點</h3>'
    +'<div style="font-size:calc(17px * var(--fs));font-weight:800;color:#33291f">'+esc(f.title)+'</div>'
    +'<div class="fml">'+esc(f.formula)+'</div>'
-   +'<ol>'+f.points.map(p=>'<li>'+esc(p)+'</li>').join('')+'</ol>';
+   +'<ol>'+f.points.map(p=>'<li>'+mkText(p)+'</li>').join('')+'</ol>';
   if((f.examples||[]).length){
     h+='<div class="sub">✏️ 再看三個例子</div>'
      + f.examples.map(e=>'<div class="ex"><div class="een" style="font-size:calc(16px * var(--fs));font-weight:700">'+esc(e.en)+' '+spk(e.en)+'</div>'
        +'<div class="ecn" style="font-size:calc(14.5px * var(--fs))">'+esc(e.cn)+'</div>'
-       +(e.note?'<div class="enote" style="font-size:calc(13.5px * var(--fs));font-weight:700">→ '+esc(e.note)+'</div>':'')+'</div>').join('');
+       +(e.note?'<div class="enote" style="font-size:calc(13.5px * var(--fs));font-weight:700">→ '+mkText(e.note)+'</div>':'')+'</div>').join('');
   }
   if((f.traps||[]).length){
     h+='<div class="sub">⚠️ 這裡最容易寫錯</div>'
      + f.traps.map(t=>'<div class="trap" style="font-size:calc(15px * var(--fs))"><div class="bad" style="font-weight:700">✗ '+esc(t.bad)+'</div>'
        +'<div class="good" style="font-size:calc(16px * var(--fs))">✓ '+esc(t.good)+' '+spk(t.good)+'</div>'
-       +'<div class="why" style="font-size:calc(14px * var(--fs))">'+esc(t.why)+'</div></div>').join('');
+       +'<div class="why" style="font-size:calc(14px * var(--fs))">'+mkText(t.why)+'</div></div>').join('');
   }
   if(unit){
     h+='<div class="gobtn"><button class="btn" onclick="goUnit(\''+unit.id+'\')">📖 讀完整文法單元：'+esc(unit.titleCn)+' →</button></div>';
@@ -1178,6 +1196,14 @@ function vGrade(g){
 }
 function vQuit(){ vQueue=[]; vIdx=0; vFlip=false; RENDER.vocab(); }
 function vBrowse(){ vBrowseOn=!vBrowseOn; RENDER.vocab(); }
+/* 今日分頁的「今日待複習」點下去：切到單字卡分頁並直接開始複習今天到期的字 */
+function goReview(){
+  vCat='all'; vBrowseOn=false;
+  go('vocab');
+  vStart();
+  window.scrollTo(0,0);
+}
+window.goReview=goReview;
 window.vSet=vSet;window.vStart=vStart;window.vDoFlip=vDoFlip;window.vGrade=vGrade;window.vQuit=vQuit;window.vBrowse=vBrowse;window.vNewLimit=vNewLimit;
 function browseHTML(){
   const pool=VOCAB.filter(v=>vCat==='all'||v.cat===vCat);
@@ -1232,20 +1258,20 @@ function gramHTML(g){
 
   h+='<div class="card">'+ (g.sections||[]).map(s=>{
     let x='<div class="gsec"><h3>'+esc(s.h)+'</h3>';
-    if(s.body) x+= s.body.map(b=>'<div style="font-size:calc(14.5px * var(--fs));margin-bottom:5px">'+esc(b)+'</div>').join('');
+    if(s.body) x+= s.body.map(b=>'<div style="font-size:calc(14.5px * var(--fs));margin-bottom:5px">'+mkText(b)+'</div>').join('');
     if(s.table){
       x+='<div class="tw"><table><tr>'+s.table.head.map(t=>'<th>'+esc(t)+'</th>').join('')+'</tr>'
        + s.table.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</table></div>';
     }
-    if(s.bullets) x+='<ul>'+s.bullets.map(b=>'<li>'+esc(b)+'</li>').join('')+'</ul>';
+    if(s.bullets) x+='<ul>'+s.bullets.map(b=>'<li>'+mkText(b)+'</li>').join('')+'</ul>';
     if(s.examples) x+= s.examples.map(e=>'<div class="ex"><div class="een">'+esc(e.en)+' '+spk(e.en)+'</div>'
-       +'<div class="ecn">'+esc(e.cn)+'</div>'+(e.note?'<div class="enote">→ '+esc(e.note)+'</div>':'')+'</div>').join('');
+       +'<div class="ecn">'+esc(e.cn)+'</div>'+(e.note?'<div class="enote">→ '+mkText(e.note)+'</div>':'')+'</div>').join('');
     return x+'</div>';
   }).join('')+'</div>';
 
   if((g.traps||[]).length){
     h+='<div class="card"><h2 class="sec">⚠️ 最容易錯的地方</h2>'
-     + g.traps.map(t=>'<div class="trap"><div class="bad">✗ '+esc(t.bad)+'</div><div class="good">✓ '+esc(t.good)+' '+spk(t.good)+'</div><div class="why">'+esc(t.why)+'</div></div>').join('')
+     + g.traps.map(t=>'<div class="trap"><div class="bad">✗ '+esc(t.bad)+'</div><div class="good">✓ '+esc(t.good)+' '+spk(t.good)+'</div><div class="why">'+mkText(t.why)+'</div></div>').join('')
      +'</div>';
   }
   if((g.quiz||[]).length){
@@ -1281,7 +1307,7 @@ RENDER.daily=function(){
    +'<div class="stats"><div class="stat"><b>'+pool.length+'</b><span>累積每日文章</span></div>'
    +'<div class="stat"><b>'+DAILY_GRAM.length+'</b><span>累積每日文法</span></div>'
    +'<div class="stat"><b>'+(ST.streak||1)+'</b><span>連續學習天數</span></div>'
-   +'<div class="stat"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'</b><span>今日待複習</span></div></div></div>';
+   +'<div class="stat tap" onclick="goReview()" title="點一下直接開始複習"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'</b><span>今日待複習 ›</span></div></div></div>';
 
   artsToday.forEach(a=>{
     const d=ST.artDone[a.id];
@@ -1589,7 +1615,8 @@ function playerBox(divId){
 
 RENDER.listen=function(){
   const v=$('v-listen');
-  if(lsOpen){ v.innerHTML=lessonHTML(lsOpen); mountPlayer('yt-main',lsOpen.yt); showLoop(); return; }
+  if(lsOpen){ v.innerHTML=lessonHTML(lsOpen); mountPlayer('yt-main',lsOpen.yt); showLoop();
+              if(lsScript(lsOpen)) applySubToggles(); return; }
   if(myVid){
     const vv=curVidObj();
     if(vv){ v.innerHTML=myVidHTML(vv); mountPlayer('yt-my',myVid); showLoop(); applySubToggles(); startSync(); return; }
@@ -1615,12 +1642,23 @@ function lsGo(id){ lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; go('listen'); }
 function lsClose(){ destroyPlayer(); lsOpen=null; RENDER.listen(); }
 window.lsGo=lsGo; window.lsClose=lsClose;
 
+/* 這一課有沒有逐字稿（data-scripts.js） */
+function lsScript(l){ return (window.LISTEN_SCRIPTS||{})[l && l.id] || null; }
+
 function lessonHTML(l){
+  const sc=lsScript(l);
   let h='<button class="back" onclick="lsClose()">← 回聽力課列表</button>'
+   /* 有逐字稿時，影片黏在最上面（跟 Speak Up 一樣），往下捲字幕影片仍看得到 */
+   +(sc?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':'')
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<h2 class="sec" style="margin:0">🎬 '+esc(l.title)+'</h2><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
    +'<div class="muted">'+esc(l.titleCn)+' · ⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</div>'
-   + playerBox('yt-main')
+   + (sc?'':playerBox('yt-main'))
+   + (sc?playerControls()
+        +'<div class="row" style="margin-top:9px">'
+        +'<button class="spk" id="tg-en" onclick="tgEn()">'+(showEn?'👁 英文：顯示':'👁 英文：隱藏')+'</button>'
+        +'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button></div>'
+      :'')
    +'<div class="ex" style="margin-top:11px"><div class="enote" style="font-size:calc(14.5px * var(--fs));font-weight:800">📐 文法焦點：'+esc(l.focus)+'</div>'
    +'<div class="ecn" style="margin-top:5px;font-size:calc(14.5px * var(--fs))">'+esc(l.intro)+'</div></div>'
    +'<div class="upg" style="margin-top:11px"><div class="un" style="margin-top:0">🎯 聽力策略：'+esc(l.tip)+'</div></div>'
@@ -1645,6 +1683,17 @@ function lessonHTML(l){
     h+='<div class="card"><h2 class="sec">✅ 聽力理解測驗</h2>'
      +'<div class="hint">建議先只聽、不看逐字稿就作答，答完再回去對照。</div>'
      + quizHTML(l.questions,'listen')+'<div id="lsquizScore"></div></div>';
+  }
+  if(sc){
+    h+='<div class="card"><h2 class="sec">📜 逐字稿（含中譯）</h2>'
+     +'<div class="hint">影片會一直黏在上面，一邊看一邊對照。<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。上面可以把英文或中譯先蓋起來，自己測驗。</div>'
+     +'<div id="sublist">'+ sc.map((k,i)=>
+        '<div class="sline" id="sl-'+i+'">'
+        +(k.sp?'<div class="ssp">'+esc(k.sp)+'</div>':'')
+        +'<div class="srow"><div class="sen">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
+        +(k.cn?'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>':'')
+        +'</div>').join('')+'</div>'
+     +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">逐字稿英文原文取自 '+esc(l.source)+'；中譯為本站撰寫。</div></div>';
   }
   h+='<div class="card" style="text-align:center"><button class="btn" onclick="lsClose()">完成，回列表</button></div>';
   return h;

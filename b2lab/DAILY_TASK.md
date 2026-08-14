@@ -289,6 +289,24 @@ VOA *Let's Learn English* 只有 Level 1 與 Level 2，沒有更高的級別，�
 | `keyLines` | 5–7 句 `{en, cn}`，`en` 取自真實對白、`cn` 自己翻 |
 | `questions` | 4–5 個 `{q, opts, ans, expl}`，格式同文章題，`ans` 為 0-based |
 
+#### 3.6.1 每一課都要補逐字稿到 `public/data-scripts.js`
+
+網站的聽力課會把影片黏在最上面、**下面接整份逐字稿（英文＋中譯）**，資料來源是
+`public/data-scripts.js` 的 `window.LISTEN_SCRIPTS[課程 id]`：
+
+```js
+"dl20260814":[
+  {sp:"Anna", en:"Ms. Weaver is giving new assignments out.", cn:"Weaver 女士正在分派新任務。"},
+  ...
+]
+```
+
+- **英文一律取自該課程頁（`sourceUrl`）的 Conversation／Transcript 段落，不可自己編。**
+  抓法：下載課程頁 HTML，去掉標籤後撈出 `說話者: 台詞` 這種行。
+- `sp` 是說話者名字（沒有就省略）、`cn` 由自己翻成口語中文。
+- 抓不到逐字稿的影片就**不要選它當今天的聽力**，改挑另一支有逐字稿的。
+- 沒有寫進 `data-scripts.js` 的課，網站只會顯示影片與關鍵句，不會有字幕區。
+
 ### 4. 更新 `b2lab/daily-state.json`
 
 - `lastRun` = 今天
@@ -344,7 +362,8 @@ node -e "JSON.parse(require('fs').readFileSync('../daily-state.json','utf8'));co
 
 ```bash
 cd b2lab/public
-node -e "global.window={};require('./data-listen.js');
+node -e "global.window={};require('./data-listen.js');require('./data-scripts.js');
+const SC=window.LISTEN_SCRIPTS||{};
 const L=window.LISTEN.lessons, TODAY=new Date().toISOString().slice(0,10);
 const todays=L.filter(x=>x.date===TODAY);
 if(todays.length<3) throw '今天聽力至少要有 A2/B1/B1+ 三課，實際 '+todays.length+' 課';
@@ -355,6 +374,7 @@ todays.forEach(x=>{
   if(!/^dl\d{8}(a2|b1|b1p|b2)?$/.test(x.id)) throw 'id 格式錯: '+x.id;
   if(!/^[A-Za-z0-9_-]{11}$/.test(x.yt)) throw 'YouTube ID 格式怪怪的: '+x.yt;
   if(!x.keyLines.length||x.questions.length<4) throw x.id+' 聽力內容不完整';
+  if(!(SC[x.id]||[]).length) throw x.id+' 沒有逐字稿（data-scripts.js）';
   x.questions.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw x.id+' ans 索引錯誤: '+q.q});
 });
 const yts=todays.map(x=>x.yt);
@@ -365,7 +385,7 @@ console.log('listen ok', todays.map(x=>x.id+'('+x.level+','+x.yt+')').join(' | '
 ### 6. commit 並 push
 
 ```bash
-git add b2lab/public/data-daily.js b2lab/public/data-art.js b2lab/public/data-listen.js b2lab/daily-state.json
+git add b2lab/public/data-daily.js b2lab/public/data-art.js b2lab/public/data-listen.js b2lab/public/data-scripts.js b2lab/daily-state.json
 git commit -m "Daily content YYYY-MM-DD: 4 levels (A2/B1/B1+/B2) — <當日主題>"
 git push origin main
 ```
