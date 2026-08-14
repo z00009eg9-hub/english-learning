@@ -381,15 +381,15 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 .focus .sub{font-size:calc(14.5px * var(--fs));font-weight:800;color:var(--accent2);margin:14px 0 6px;letter-spacing:.3px}
 .focus .gobtn{margin-top:12px}
 .back{
-  display:inline-flex;align-items:center;justify-content:center;
+  display:inline-grid;place-content:center;place-items:center;
   width:42px;height:42px;border-radius:12px;border:1.5px solid var(--line);
   background:#fff;box-shadow:0 1px 5px rgba(0,0,0,.10);
-  cursor:pointer;padding:0;margin-bottom:8px;font-size:0;
+  cursor:pointer;padding:0;margin-bottom:8px;font-size:0;line-height:0;
   transition:box-shadow .15s
 }
 .back::after{
-  content:'';display:block;width:26px;height:26px;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,5 5,50 50,95 50,70 95,70 95,30 50,30' fill='%23f5a623' stroke='%23222' stroke-width='6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+  content:'';display:block;width:24px;height:24px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-6 -6 112 112'%3E%3Cpolygon points='50,5 5,50 50,95 50,70 95,70 95,30 50,30' fill='%23f5a623' stroke='%23222' stroke-width='7' stroke-linejoin='round'/%3E%3C/svg%3E") center center/contain no-repeat;
 }
 .back:active{box-shadow:0 0 0 rgba(0,0,0,0);background:#f5f5f5}
 .hint{font-size:calc(12.5px * var(--fs));color:var(--ink2);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
@@ -932,7 +932,7 @@ function readerHTML(a){
   YCD=buildYCD(a,tg);
   const extras=extraWords(a,tgtSet);
 
-  let h='<button class="back" onclick="rdClose()">←</button>'
+  let h='<button class="back" onclick="rdClose()"></button>'
    +'<div class="magttl">'
    +'<h2>'+esc(a.title)+'</h2>'
    +'<div class="cn">'+esc(a.titleCn)+'</div>'
@@ -1260,7 +1260,7 @@ function gClose(){ CURG=null; RENDER.gram(); }
 window.gOpen=gOpen; window.gClose=gClose;
 
 function gramHTML(g){
-  let h='<button class="back" onclick="gClose()">←</button>'
+  let h='<button class="back" onclick="gClose()"></button>'
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+((g.srcDays||[]).length?' · 課堂 '+g.srcDays.join(' / '):'')+'</div>'
@@ -1658,7 +1658,7 @@ function lsScript(l){ return (window.LISTEN_SCRIPTS||{})[l && l.id] || null; }
 
 function lessonHTML(l){
   const sc=lsScript(l);
-  let h='<button class="back" onclick="lsClose()">←</button>'
+  let h='<button class="back" onclick="lsClose()"></button>'
    /* 有逐字稿時，影片黏在最上面（跟 Speak Up 一樣），往下捲字幕影片仍看得到 */
    +(sc?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':'')
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
@@ -1817,7 +1817,7 @@ window.openMyVid=openMyVid; window.closeMyVid=closeMyVid;
 
 function myVidHTML(v){
   const hasCn=(v.lines||[]).some(l=>l.cn);
-  let h='<button class="back" onclick="closeMyVid()">←</button>'
+  let h='<button class="back" onclick="closeMyVid()"></button>'
    +'<div class="vidpin"><div class="ytwrap"><div id="yt-my"></div></div></div>'
    +'<div class="card"><h2 class="sec" style="margin:0">▶️ '+esc(v.title||'我的影片')+'</h2>'
    +'<div class="muted">📅 加入於 '+esc(v.addedAt||'—')+' · '+((v.lines||[]).length)+' 句字幕'

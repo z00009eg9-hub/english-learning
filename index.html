@@ -170,11 +170,12 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 /* ═══ SUB-SCREEN HEADER ═══ */
 .sub-top{display:flex;align-items:center;gap:11px;margin-bottom:12px;}
 .back{width:42px;height:42px;border-radius:13px;border:1.5px solid var(--bdr2);background:#fff;
-  display:grid;place-items:center;font-size:0;cursor:pointer;flex-shrink:0;color:var(--ink);transition:.15s;
+  display:grid;place-content:center;place-items:center;font-size:0;line-height:0;
+  cursor:pointer;flex-shrink:0;color:var(--ink);transition:.15s;padding:0;
   box-shadow:0 1px 5px rgba(0,0,0,.10);}
 .back::after{
-  content:'';display:block;width:26px;height:26px;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,5 5,50 50,95 50,70 95,70 95,30 50,30' fill='%23f5a623' stroke='%23222' stroke-width='6' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+  content:'';display:block;width:24px;height:24px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-6 -6 112 112'%3E%3Cpolygon points='50,5 5,50 50,95 50,70 95,70 95,30 50,30' fill='%23f5a623' stroke='%23222' stroke-width='7' stroke-linejoin='round'/%3E%3C/svg%3E") center center/contain no-repeat;
 }
 .back:hover{border-color:var(--coral);}
 .sub-h{font-size:1.16rem;font-weight:900;letter-spacing:-.3px;}
@@ -639,7 +640,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   <!-- ══════════ SAY IT ══════════ -->
   <section class="screen" id="scr-say">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁">←</button>
+      <button class="back" onclick="goHome()" title="回首頁"></button>
       <div><div class="sub-h">🎤 說出來</div><div class="sub-s" id="say-sub">看中文,開口說英文</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 看中文，先自己想英文 → ② 按 🎤 說出來，說完再按一次結束 → ③ 想不出來按 💡 看提示 → ④ 看分數與答案，按下一題</div>
@@ -672,7 +673,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   <!-- ══════════ SHADOW ══════════ -->
   <section class="screen" id="scr-shadow">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁">←</button>
+      <button class="back" onclick="goHome()" title="回首頁"></button>
       <div><div class="sub-h">🔁 跟讀模仿</div><div class="sub-s">聽一句 → 馬上複誦</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 按 🔊 正常速聽示範（聽不清用 🐢 慢速）→ ② 按 🎤 馬上跟著複誦 → ③ 說完再按一次 🎤 結束 → ④ 綠字＝說對，紅字＝漏掉</div>
@@ -706,7 +707,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   <!-- ══════════ WORD POWER ══════════ -->
   <section class="screen" id="scr-word">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁">←</button>
+      <button class="back" onclick="goHome()" title="回首頁"></button>
       <div><div class="sub-h">🗣️ 單字口說</div><div class="sub-s" id="word-sub">念單字 + 造句</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 按 🔊 聽發音 → ② 按 🎤 念一次看分數 → ③ 點卡片翻面看中文與例句（🔊 聽例句）→ ④ 按「下一個 →」換字</div>
@@ -744,7 +745,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   <!-- ══════════ READ ALOUD ══════════ -->
   <section class="screen" id="scr-read">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁">←</button>
+      <button class="back" onclick="goHome()" title="回首頁"></button>
       <div><div class="sub-h">📖 朗讀文章</div><div class="sub-s" id="read-sub">一段一段念出來</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 選一篇文章 → ② 每段先按 🔊 聽示範 → ③ 按 🎤 朗讀，說到哪亮到哪 → ④ 唸完再按一次 🎤 看覆蓋率（點文章裡任一個字可聽發音）</div>
@@ -756,7 +757,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   <!-- ══════════ TALK TIME（情境對話：聊天泡泡＋逐句糾正）══════════ -->
   <section class="screen" id="scr-talk">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁">←</button>
+      <button class="back" onclick="goHome()" title="回首頁"></button>
       <div><div class="sub-h">💬 情境對話</div><div class="sub-s" id="talk-sub">聽一句 → 用英文回應</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 看教練的訊息（🔊 聽發音 / 譯 看中文 / 👁 遮字）→ ② 看中文提示 → ③ 按 ⬆ 開口說（說完再按一次）→ ④ 說錯會出現「試著說」正確版，可按「請講解給我聽」看說明</div>
@@ -782,7 +783,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   <!-- ══════════ 影片精聽 ══════════ -->
   <section class="screen" id="scr-video">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁">←</button>
+      <button class="back" onclick="goHome()" title="回首頁"></button>
       <div><div class="sub-h">🎬 影片精聽</div><div class="sub-s" id="vid-sub">看影片／聽朗讀，配雙語字幕</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 選一個素材 → ② 按 ▶ 播放，字幕會跟著亮 → ③ 點任一句可跳到那一句 → ④ 下排：雙語＝中文開關、倍速、復讀＝重播這句、循環＝這句一直重複、詞彙＝亮出今天的單字、練習＝跟著念一次</div>
@@ -838,7 +839,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   <!-- ══════════ QUICK CHECK ══════════ -->
   <section class="screen" id="scr-quiz">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁">←</button>
+      <button class="back" onclick="goHome()" title="回首頁"></button>
       <div><div class="sub-h">📝 快速檢查</div><div class="sub-s" id="quiz-sub">單字與文法小測驗</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：選題型 → 🎧 聽力題按 🔊 聽完再選、📖 閱讀題先讀短文 → 作答看解說 → 做完可「🔄 再出一份新題」</div>
@@ -854,7 +855,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   <!-- ══════════ LISTENING (聽力打字) ══════════ -->
   <section class="screen" id="scr-listen">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁">←</button>
+      <button class="back" onclick="goHome()" title="回首頁"></button>
       <div><div class="sub-h">🎧 聽力練習</div><div class="sub-s" id="ls-sub">聽句子，把聽到的英文打出來</div></div>
     </div>
     <div class="how-bar" id="ls-how">📌 <b>怎麼玩</b>：① 按 🔊 聽句子（可重聽、🐢 慢速）→ ② 把聽到的英文打進格子 → ③ 按「✅ 對答案」看逐字對照</div>
