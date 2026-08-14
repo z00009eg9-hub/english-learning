@@ -439,8 +439,12 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 
 /* ═══ 影片精聽 ═══ */
 /* 影片＋播放鍵黏在頁面上方：往下捲字幕時，影片仍一直看得到（一頁檢視） */
-.vid-pin{position:sticky;top:calc(var(--hdh,58px) + 6px);z-index:90;background:var(--bg);
-  padding-bottom:6px;border-radius:0 0 18px 18px;}
+/* 黏在頁首正下方，並用不透明底色鋪滿；上緣再往上補一塊同色遮板，
+   捲動過程中字幕不會從頁首與影片區之間的縫隙透出來 */
+.vid-pin{position:sticky;top:var(--hdh,58px);z-index:90;background:var(--bg);
+  padding-top:8px;padding-bottom:6px;border-radius:0 0 18px 18px;}
+.vid-pin::before{content:'';position:absolute;left:0;right:0;top:-26px;height:28px;
+  background:var(--bg);z-index:-1;}
 /* 影片高度限制在視窗約 1/3：黏頂後下方永遠留得住字幕（寬度依 16:9 自動縮） */
 .vid-box{background:#000;border-radius:16px;overflow:hidden;position:relative;box-shadow:var(--sh);
   aspect-ratio:16/9;height:min(32vh,50vw);max-width:100%;margin:0 auto;}
@@ -480,10 +484,11 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .vid-pin.prac .vid-box{height:min(16vh,30vw);}
 .vid-pin.prac .vplay,.vid-pin.prac .vid-tts,.vid-pin.prac .vtoolbar{display:none;}
 .vid-pin.prac{max-height:calc(100vh - var(--hdh,58px) - 14px);overflow-y:auto;}
-/* 這一句很長時：黏頂區自動縮小（標題卡片收起來、按鈕變小），整段才塞得進畫面 */
+/* 這一句很長時：黏頂區自動縮小（圖片與按鈕變小，但都保留），整段才塞得進畫面 */
 .vid-pin.tight .vid-tts{padding:10px 14px;}
-.vid-pin.tight .vid-tts .ico,.vid-pin.tight .vid-tts .s{display:none;}
-.vid-pin.tight .vid-tts .t{font-size:1rem;margin-top:0;}
+.vid-pin.tight .vid-tts .ico{font-size:1.6rem;}
+.vid-pin.tight .vid-tts .s{display:none;}
+.vid-pin.tight .vid-tts .t{font-size:1rem;margin-top:2px;}
 .vid-pin.tight .vid-box{height:min(18vh,28vw);}
 .vid-pin.tight .vplay{margin-top:4px;gap:14px;}
 .vid-pin.tight .vplay button{font-size:1.15rem;}
