@@ -12,3 +12,15 @@ index.backup-*.html
 .claude/settings.local.json
 node_modules/
 **/desktop.ini
+
+# ⚠️ 密鑰：絕對不能進版控（外洩等於整個 Firebase 專案被接管）
+# Firebase 服務帳號金鑰，例：english-b2-lab-firebase-adminsdk-fbsvc-*.json
+*-firebase-adminsdk-*.json
+*serviceAccount*.json
+*service-account*.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
