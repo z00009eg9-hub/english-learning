@@ -380,7 +380,14 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 .focus ol li{font-size:calc(16px * var(--fs));font-weight:600;line-height:1.85;margin-bottom:10px;color:#33291f}
 .focus .sub{font-size:calc(14.5px * var(--fs));font-weight:800;color:var(--accent2);margin:14px 0 6px;letter-spacing:.3px}
 .focus .gobtn{margin-top:12px}
-.back{border:0;background:none;color:var(--accent2);font:inherit;font-size:calc(14px * var(--fs));font-weight:600;cursor:pointer;padding:4px 0;margin-bottom:6px}
+.back{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:12px;border:1px solid var(--line);
+  background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);
+  color:var(--ink2);font-size:18px;cursor:pointer;padding:0;margin-bottom:8px;
+  transition:box-shadow .15s
+}
+.back:active{box-shadow:0 0 0 rgba(0,0,0,0);background:#f5f5f5}
 .hint{font-size:calc(12.5px * var(--fs));color:var(--ink2);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
 @media(max-width:420px){ .fc .fw{font-size:calc(28px * var(--fs))} .para .en{font-size:calc(16px * var(--fs))} }
 </style>
@@ -921,7 +928,7 @@ function readerHTML(a){
   YCD=buildYCD(a,tg);
   const extras=extraWords(a,tgtSet);
 
-  let h='<button class="back" onclick="rdClose()">← 回文章列表</button>'
+  let h='<button class="back" onclick="rdClose()">←</button>'
    +'<div class="magttl">'
    +'<h2>'+esc(a.title)+'</h2>'
    +'<div class="cn">'+esc(a.titleCn)+'</div>'
@@ -1144,7 +1151,7 @@ RENDER.vocab=function(){
   const pct=Math.round(vIdx/vQueue.length*100);
   v.innerHTML='<div class="card">'
     +'<div class="row" style="justify-content:space-between"><span class="muted">'+(vIdx+1)+' / '+vQueue.length+(isNew(w)?' · 🆕 新字':(s?' · 第 '+(s.reps+1)+' 次':''))+'</span>'
-    +'<button class="back" onclick="vQuit()">結束</button></div>'
+    +'<button class="spk" onclick="vQuit()" style="font-size:calc(12.5px * var(--fs))">結束</button></div>'
     +'<div class="pbwrap"><div class="pbfill" style="width:'+pct+'%"></div></div>'
     +'<div class="fc" onclick="vDoFlip()">'
     +'<div class="fw">'+esc(w)+'</div>'
@@ -1249,7 +1256,7 @@ function gClose(){ CURG=null; RENDER.gram(); }
 window.gOpen=gOpen; window.gClose=gClose;
 
 function gramHTML(g){
-  let h='<button class="back" onclick="gClose()">← 回文法單元列表</button>'
+  let h='<button class="back" onclick="gClose()">←</button>'
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+((g.srcDays||[]).length?' · 課堂 '+g.srcDays.join(' / '):'')+'</div>'
@@ -1647,7 +1654,7 @@ function lsScript(l){ return (window.LISTEN_SCRIPTS||{})[l && l.id] || null; }
 
 function lessonHTML(l){
   const sc=lsScript(l);
-  let h='<button class="back" onclick="lsClose()">← 回聽力課列表</button>'
+  let h='<button class="back" onclick="lsClose()">←</button>'
    /* 有逐字稿時，影片黏在最上面（跟 Speak Up 一樣），往下捲字幕影片仍看得到 */
    +(sc?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':'')
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
@@ -1806,7 +1813,7 @@ window.openMyVid=openMyVid; window.closeMyVid=closeMyVid;
 
 function myVidHTML(v){
   const hasCn=(v.lines||[]).some(l=>l.cn);
-  let h='<button class="back" onclick="closeMyVid()">← 回聽力課列表</button>'
+  let h='<button class="back" onclick="closeMyVid()">←</button>'
    +'<div class="vidpin"><div class="ytwrap"><div id="yt-my"></div></div></div>'
    +'<div class="card"><h2 class="sec" style="margin:0">▶️ '+esc(v.title||'我的影片')+'</h2>'
    +'<div class="muted">📅 加入於 '+esc(v.addedAt||'—')+' · '+((v.lines||[]).length)+' 句字幕'
@@ -1876,32 +1883,72 @@ function startSync(){
 }
 function stopSync(){ if(syncTimer){clearInterval(syncTimer);syncTimer=null;} }
 
-/* ---------- 聽力頁滑動手勢（手機）：向左撥回上一頁、向右撥跳下一部影片 ---------- */
+/* ---------- 全站滑動手勢（手機／平板）----------
+   右滑＝回列表（等於按返回箭頭）
+   左滑＝下一項（下一篇文章 / 下一個文法單元 / 下一課聽力 / 下一張單字卡翻開→評分）
+   在列表頁、首頁、正在打字或操作影片時不觸發。 */
 let swX=null,swY=null;
 document.addEventListener('touchstart',e=>{
   swX=null;
-  if(TAB!=='listen'||(!lsOpen&&!myVid)||e.touches.length!==1) return;
-  if(e.target.closest('textarea,input,.ytwrap')) return;   // 打字或操作影片時不觸發
+  if(e.touches.length!==1) return;
+  if(e.target.closest('textarea,input,.ytwrap,select')) return;
+  /* 必須在某個詳細頁或卡片模式裡才能滑 */
+  const inDetail = rdOpen || CURG || lsOpen || myVid || vQueue.length;
+  if(!inDetail) return;
   swX=e.touches[0].clientX; swY=e.touches[0].clientY;
 },{passive:true});
 document.addEventListener('touchend',e=>{
   if(swX==null) return;
   const t=e.changedTouches[0];
   const dx=t.clientX-swX, dy=t.clientY-swY; swX=null;
-  if(Math.abs(dx)<70 || Math.abs(dy)>60 || Math.abs(dx)<Math.abs(dy)*1.5) return;   // 太短或偏垂直＝捲動
-  if(dx<0){ if(myVid) closeMyVid(); else lsClose(); }
-  else nextVideo();
+  if(Math.abs(dx)<70 || Math.abs(dy)>60 || Math.abs(dx)<Math.abs(dy)*1.5) return;
+  if(dx>0) swipeBack();    // 右滑＝返回
+  else     swipeNext();    // 左滑＝下一項
 },{passive:true});
-function nextVideo(){
-  if(myVid){
-    if(!MYVIDS.length) return;
-    const i=MYVIDS.findIndex(x=>x.id===myVid);
-    openMyVid(MYVIDS[(i+1)%MYVIDS.length].id);
-  }else if(lsOpen){
-    const list=LESSONS.filter(l=>inBand(l.level));
+
+function swipeBack(){
+  if(TAB==='read'   && rdOpen)  { rdClose(); return; }
+  if(TAB==='gram'   && CURG)    { gClose();  return; }
+  if(TAB==='listen' && myVid)   { closeMyVid(); return; }
+  if(TAB==='listen' && lsOpen)  { lsClose(); return; }
+  if(TAB==='vocab'  && vQueue.length) { vQuit(); return; }
+}
+
+function swipeNext(){
+  /* 文章 → 下一篇 */
+  if(TAB==='read' && rdOpen){
+    const list=ALL_ARTS.filter(a=>inBand(a.level));
     if(!list.length) return;
-    const i=list.findIndex(l=>l.id===lsOpen.id);
-    lsGo(list[(i+1)%list.length].id);
+    const i=list.findIndex(a=>a.id===rdOpen.id);
+    rdOpenArt(list[(i+1)%list.length].id);
+    window.scrollTo(0,0);
+    return;
+  }
+  /* 文法 → 下一個單元 */
+  if(TAB==='gram' && CURG){
+    const i=ALL_GRAM.findIndex(g=>g.id===CURG.id);
+    if(i<0) return;
+    gOpen(ALL_GRAM[(i+1)%ALL_GRAM.length].id);
+    return;
+  }
+  /* 單字卡 → 翻開（還沒翻時）或跳過（已翻時直接下一張，等於按「記得」） */
+  if(TAB==='vocab' && vQueue.length){
+    if(!vFlip){ vDoFlip(); }
+    else { vGrade(3); }
+    return;
+  }
+  /* 聽力 → 下一課 */
+  if(TAB==='listen'){
+    if(myVid){
+      if(!MYVIDS.length) return;
+      const i=MYVIDS.findIndex(x=>x.id===myVid);
+      openMyVid(MYVIDS[(i+1)%MYVIDS.length].id);
+    }else if(lsOpen){
+      const list=LESSONS.filter(l=>inBand(l.level));
+      if(!list.length) return;
+      const i=list.findIndex(l=>l.id===lsOpen.id);
+      lsGo(list[(i+1)%list.length].id);
+    }
   }
 }
 
