@@ -9,6 +9,88 @@ window.LISTEN = {
 
 lessons:[
 
+/* ---------------------------------------------------------- 2026-08-14 Tom */
+{
+  id:"dl20260814a2", date:"2026-08-14", level:"A2", yt:"1-U7o9xjWQc", minutes:5,
+  title:"Hello, I'm Anna!", titleCn:"哈囉，我是 Anna！",
+  series:"VOA Let's Learn English · Level 1 · Lesson 2",
+  topic:"認識新鄰居", focus:"be 動詞：I am / She is 與 Where are you from?",
+  source:"VOA Learning English（美國之音，美國政府出版物／公共領域）",
+  sourceUrl:"https://learningenglish.voanews.com/a/lets-learn-english-lesson-2-hello/3113733.html",
+  intro:"Anna 搬到華盛頓特區，在新公寓前認識了鄰居 Jonathan。整段對話都在做同一件事：用 I am... 介紹自己、用 Where are you from? 問對方來自哪裡，還互相報了公寓號碼。這正是上一課 be 動詞的延伸練習。",
+  tip:"第一次聽先數「一共有幾個人講話」。第二次聽抓三個公寓號碼（B4、C2、D7）分別是誰的——數字聽力就是這樣練起來的。",
+  pre:[
+    {w:"new to ...",ipa:"/njuː tuː/",cn:"剛到…、對…還不熟",def:"Arrived at a place for the first time not long ago."},
+    {w:"small town",ipa:"/smɔːl taʊn/",cn:"小鎮",def:"A town that is not big."},
+    {w:"apartment",ipa:"/əˈpɑːrtmənt/",cn:"公寓",def:"A home inside a bigger building."},
+    {w:"roommate",ipa:"/ˈruːmmeɪt/",cn:"室友",def:"A person who lives with you."},
+    {w:"welcome to ...",ipa:"/ˈwelkəm tuː/",cn:"歡迎來到…",def:"What you say when someone arrives at a new place."},
+    {w:"remember to ...",ipa:"/rɪˈmembər tuː/",cn:"記得要…",def:"Do not forget to do something."}
+  ],
+  keyLines:[
+    {en:"Hey, Pete! Who's your friend?",cn:"嘿，Pete！你朋友是誰？"},
+    {en:"She is Anna. She is new to D.C.",cn:"她是 Anna。她剛到華盛頓特區。"},
+    {en:"Where are you from?",cn:"你來自哪裡？"},
+    {en:"I am from a small town.",cn:"我來自一個小鎮。"},
+    {en:"I am Jonathan. I am in apartment B4.",cn:"我是 Jonathan。我住 B4 公寓。"},
+    {en:"I am in apartment C2. Marsha is my roommate.",cn:"我住 C2 公寓。Marsha 是我的室友。"},
+    {en:"Remember to call Marsha at work. Tell her you're here.",cn:"記得打電話到 Marsha 公司，跟她說你到了。"}
+  ],
+  questions:[
+    {q:"Where is Anna from?",opts:["A. Washington, D.C.","B. A small town","C. New York","D. Apartment B4"],ans:1,expl:"Jonathan 問 Where are you from?，Anna 回答 I am from a small town."},
+    {q:"Which apartment is Jonathan in?",opts:["A. B4","B. C2","C. D7","D. A1"],ans:0,expl:"他自我介紹：I am Jonathan. I am in apartment B4."},
+    {q:"Who is Anna's roommate?",opts:["A. Pete","B. Jonathan","C. Marsha","D. Nobody"],ans:2,expl:"Anna 說 I am in apartment C2. Marsha is my roommate."},
+    {q:"What does Pete ask Anna to remember?",opts:["A. To buy food","B. To call Marsha at work","C. To lock the door","D. To take the bus"],ans:1,expl:"Pete 離開前說 Remember to call Marsha at work. Tell her you're here."},
+    {q:"Which sentence is correct?",opts:["A. She are new to D.C.","B. She is new to D.C.","C. She am new to D.C.","D. She be new to D.C."],ans:1,expl:"主詞 she 配 be 動詞 is——這一課從頭到尾都在練這件事。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 2026-08-14 Anita */
+{
+  id:"dl20260814", date:"2026-08-14", level:"B1", yt:"xokbf-np33Q", minutes:5,
+  title:"The Interview", titleCn:"面試",
+  series:"VOA Let's Learn English · Level 2 · Lesson 2",
+  topic:"求職面試", focus:"兩字動詞（phrasal verbs）：give out / find out / take on / tear up / throw away",
+  source:"VOA Learning English（美國之音，美國政府出版物／公共領域）",
+  sourceUrl:"https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-2/3960471.html",
+  intro:"Ms. Weaver 要 Anna 找一個「跟她完全不同」的人一起主持節目，Anna 想到了 Pete——一個自認不愛講話的人，卻要去面試主持人。這集的語言焦點是兩字動詞：give out、find out、take on、tear up、throw away，有的能拆開（give assignments out）、有的不能，聽的時候特別留意。",
+  tip:"每聽到一個兩字動詞就在心裡記一筆，聽完對答案（影片結尾 Professor Bot 會自己列清單）。第二遍再聽 Pete 在面試裡的兩個回答——為什麼「誠實到不利於自己」反而讓他錄取？這種弦外之音正是 B1 → B2 的聽力關鍵。",
+  pre:[
+    {w:"assignment",ipa:"/əˈsaɪnmənt/",cn:"任務、派工",def:"A piece of work given to someone."},
+    {w:"team up with",ipa:"/tiːm ʌp wɪð/",cn:"與…搭檔",def:"To work together with someone."},
+    {w:"people person",ipa:"/ˈpiːpl ˈpɜːrsn/",cn:"擅長與人相處的人",def:"Someone who likes and is good with people."},
+    {w:"want ads",ipa:"/wɑːnt ædz/",cn:"求職廣告",def:"Newspaper ads that list jobs."},
+    {w:"job offer",ipa:"/dʒɑːb ˈɔːfər/",cn:"工作機會",def:"When someone offers you a job."},
+    {w:"grumpy",ipa:"/ˈɡrʌmpi/",cn:"愛發脾氣的、臭臉的",def:"Easily annoyed and not friendly."},
+    {w:"opportunity",ipa:"/ˌɑːpərˈtuːnəti/",cn:"機會",def:"A chance to do something good."}
+  ],
+  keyLines:[
+    {en:"Ms. Weaver is giving new assignments out. I am ready to take on anything she gives me.",cn:"Ms. Weaver 正在發新任務。她給我什麼我都準備好接下來。"},
+    {en:"I want you to team up with someone who is very \"different\" from you.",cn:"我要你跟一個和你非常「不同」的人搭檔。"},
+    {en:"Pete, you can tear these want ads up and throw them away! I have good news!",cn:"Pete，你可以把這些求職廣告撕掉丟了！我有好消息！"},
+    {en:"I need to find out if you have the skills for this job. And I want you to be completely honest.",cn:"我得弄清楚你有沒有這份工作需要的能力。而且我要你完全誠實。"},
+    {en:"Well, okay, sometimes I think people talk too much.",cn:"呃，好吧，有時候我覺得人們話太多了。"},
+    {en:"Well, she said I was grumpy and not good with people. And, I got the job!",cn:"嗯，她說我臭臉又不擅長跟人相處。然後——我錄取了！"}
+  ],
+  questions:[
+    {q:"What kind of person does Ms. Weaver want Anna to team up with?",
+     opts:["A. Someone cheerful like Anna","B. Someone very different from Anna","C. Someone from another company","D. Someone with TV experience"],
+     ans:1,expl:"Ms. Weaver 說 I want you to team up with someone who is very \"different\" from you——因為 Anna 是 cheerful 的 people person，要找一個不是這樣的人。"},
+    {q:"What is Pete doing when Anna meets him?",
+     opts:["A. Writing a book","B. Hosting a show","C. Looking for work","D. Recording a podcast"],
+     ans:2,expl:"Pete 說 I'm busy looking for work（雖然 Anna 發現他其實在玩填字遊戲）。"},
+    {q:"What did Pete do last year that he is most proud of?",
+     opts:["A. He hosted a talk show","B. He locked himself in a cabin and wrote a book","C. He travelled around the world","D. He won a crossword competition"],
+     ans:1,expl:"他說 Last year, I locked myself in a cabin and wrote a book. I didn't speak to anybody the entire time!"},
+    {q:"What was the result of Pete's interview?",
+     opts:["A. He was rejected for being grumpy","B. He was asked to interview again","C. He got the job","D. He turned the job down"],
+     ans:2,expl:"Pete 說 she said I was grumpy and not good with people. And, I got the job!——「跟 Anna 完全不同」正是這份工作要的。"},
+    {q:"\"You can tear these want ads up.\" 這句裡的兩字動詞用法說明了什麼？",
+     opts:["A. tear up 永遠不能拆開","B. 受詞可以放在 tear 和 up 中間","C. tear up 後面不能接受詞","D. up 可以省略"],
+     ans:1,expl:"tear ... up 是可分離的兩字動詞：tear these want ads up ＝ tear up these want ads，受詞可以夾在中間。"}
+  ]
+},
+
 /* ---------------------------------------------------------- A2 1 */
 {
   id:"L01", level:"A2", yt:"WR9_nsLyaEY", minutes:5,

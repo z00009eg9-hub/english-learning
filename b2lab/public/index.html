@@ -71,7 +71,12 @@ header .prof button{
   border:0;background:none;color:rgba(255,255,255,.85);font:inherit;font-size:11.5px;padding:3px 9px;
   border-radius:18px;cursor:pointer;white-space:nowrap
 }
-header .prof button.on{background:#fff;color:var(--accent2);font-weight:700}
+header .prof button.on{background:#fff;color:var(--accent2);font-weight:700;animation:breathe 2.4s ease-in-out infinite}
+/* 目前的學習者：呼吸燈特效 */
+@keyframes breathe{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.0)}
+  50%{box-shadow:0 0 12px 4px rgba(255,244,220,.85)}
+}
 header #sync-badge{font-size:14px;line-height:1;opacity:.9;display:none}
 header .hdlink{
   font-size:11.5px;font-weight:800;text-decoration:none;color:#fff;white-space:nowrap;
@@ -130,6 +135,18 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
   position:relative;overflow:hidden
 }
 .item:active{background:var(--accent-soft)}
+/* 滑鼠滑過清單項目：浮起來的立體感（只在有滑鼠的裝置） */
+@media(hover:hover){
+  .item{transition:transform .18s ease,box-shadow .18s ease}
+  .item:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(60,45,30,.16);border-color:#dccfbe}
+}
+/* 已完成：右上角綠色打勾角標 */
+.item.fin::before{
+  content:"✓";position:absolute;top:0;right:0;width:27px;height:27px;
+  background:var(--ok);color:#fff;font-weight:900;font-size:14px;line-height:27px;
+  text-align:center;border-radius:0 11px 0 11px;box-shadow:-1px 1px 4px rgba(30,120,70,.25)
+}
+.item.fin>.row:first-child{padding-right:26px}
 /* 右上角紅色 NEW 緞帶（今日新內容用） */
 .item.new::after{
   content:"NEW";position:absolute;top:13px;right:-32px;width:118px;
@@ -210,7 +227,7 @@ tr:nth-child(even) td{background:#fdfbf8}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:9px}
 .stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 8px;text-align:center}
 .stat b{display:block;font-size:calc(23px * var(--fs));color:var(--accent2);line-height:1.2}
-.stat span{font-size:calc(11.5px * var(--fs));color:var(--ink2)}
+.stat span{font-size:calc(11.5px * var(--fs));color:var(--ink2);word-break:keep-all}
 /* ---------- 每日打卡日曆 ---------- */
 .calhd{display:flex;align-items:center;justify-content:space-between;margin:4px 0 10px}
 .calhd .m{font-weight:800;font-size:calc(15px * var(--fs))}
@@ -412,6 +429,7 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 <script src="data-focus.js"></script>
 <script src="data-a2.js"></script>
 <script src="data-art.js"></script>
+<script src="data-gramviz.js"></script>
 <script src="data-listen.js"></script>
 <script src="data-daily.js"></script>
 <script>
@@ -421,6 +439,13 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 const $ = id => document.getElementById(id);
 const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const lvCls = l => l==='B1+'?'B1P':(l==='B2'?'B2':(l==='A2'?'A2':'B1'));
+/* 清單卡片左側色條跟著程度走（A2 橘 / B1 綠 / B1+ 藍 / B2 紫） */
+const LVBAR={A2:'--a2',B1:'--b1','B1+':'--b1p',B2:'--b2'};
+const lvBar = l => 'border-left-color:var('+(LVBAR[l]||'--accent')+')';
+/* 已完成：右上角打勾角標（今日新內容的卡片保留原本的文字，避免跟 NEW 緞帶打架） */
+const finCls   = (d,isNew) => (d&&!isNew)?' fin':'';
+const finTitle = (d,label) => d?' title="'+(label||'已完成')+' '+d.correct+'/'+d.total+'"':'';
+const finMeta  = (d,isNew,label) => (d&&isNew)?'<span class="done">✓ '+(label||'已完成')+' '+d.correct+'/'+d.total+'</span>':'';
 
 /* ---------- 學習者 Profile（各自獨立進度，與課堂筆記站同一套） ---------- */
 const PROFILES={anita:'Anita',tom:'Tom'};
@@ -705,12 +730,11 @@ RENDER.read=function(){
     +'<div class="muted">共 '+list.length+' 篇</div></div>'
     +list.map(a=>{
       const d=ST.artDone[a.id];
-      return '<div class="item" onclick="rdOpenArt(\''+a.id+'\')">'
+      return '<div class="item'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="rdOpenArt(\''+a.id+'\')">'
       +'<div class="row" style="justify-content:space-between"><div class="t">'+esc(a.title)+'</div><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span></div>'
       +'<div class="tc">'+esc(a.titleCn)+'</div>'
       +'<div class="meta">'+(a.date?'<span>📅 '+esc(a.date)+'</span>':'')+'<span>🏷 '+esc(a.topic)+'</span><span>📝 '+a.words+' words</span>'
       +(a.focus?'<span>📐 '+esc(a.focus)+'</span>':'')
-      +(d?'<span class="done">✓ 已完成 '+d.correct+'/'+d.total+'</span>':'')
       +'</div></div>';
     }).join('');
 };
@@ -1177,15 +1201,21 @@ RENDER.gram=function(){
     +'<div class="muted">共 '+ALL_GRAM.length+' 個單元'+(DAILY_GRAM.length?'（其中 '+DAILY_GRAM.length+' 個是每週三、五自動新增）':'')+'</div></div>'
     + ALL_GRAM.map(g=>{
       const d=ST.gramDone[g.id];
-      return '<div class="item" onclick="gOpen(\''+g.id+'\')">'
+      return '<div class="item'+finCls(d)+'"'+finTitle(d,'練習')+' style="'+lvBar(g.level)+'" onclick="gOpen(\''+g.id+'\')">'
       +'<div class="row" style="justify-content:space-between"><div class="t">'+esc(g.titleCn)+'</div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
       +'<div class="tc">'+esc(g.title)+'</div>'
       +'<div class="meta"><span>'+esc(g.summary)+'</span></div>'
       +'<div class="meta">'+(g.date?'<span>📅 '+esc(g.date)+' 新增'+(g.unitNo?' · Unit '+g.unitNo:'')+'</span>'
           :((g.srcDays||[]).length?'<span>📓 課堂：'+g.srcDays.join(' / ')+'</span>':'<span>➕ B2 補強單元</span>'))
-      +(d?'<span class="done">✓ 練習 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
+      +'</div></div>';
     }).join('');
 };
+/* 文法圖文說明（來自 data-gramviz.js，兩格對照卡） */
+function gvizHTML(id){
+  const v=(window.GRAMVIZ||{})[id];
+  if(!v) return '';
+  return '<figure class="artbox">'+v.svg+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
 function gOpen(id){ CURG=ALL_GRAM.find(g=>g.id===id); QSTATE={}; RENDER.gram(); window.scrollTo(0,0); }
 function gClose(){ CURG=null; RENDER.gram(); }
 window.gOpen=gOpen; window.gClose=gClose;
@@ -1195,7 +1225,8 @@ function gramHTML(g){
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+((g.srcDays||[]).length?' · 課堂 '+g.srcDays.join(' / '):'')+'</div>'
-   +'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:calc(13.5px * var(--fs))">💡 '+esc(g.summary)+'</div></div></div>';
+   +'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:calc(13.5px * var(--fs))">💡 '+esc(g.summary)+'</div></div></div>'
+   + gvizHTML(g.id);
 
   h+='<div class="card">'+ (g.sections||[]).map(s=>{
     let x='<div class="gsec"><h3>'+esc(s.h)+'</h3>';
@@ -1254,32 +1285,32 @@ RENDER.daily=function(){
    +'<div class="stats"><div class="stat"><b>'+pool.length+'</b><span>累積每日文章</span></div>'
    +'<div class="stat"><b>'+DAILY_GRAM.length+'</b><span>累積每日文法</span></div>'
    +'<div class="stat"><b>'+(ST.streak||1)+'</b><span>連續學習天數</span></div>'
-   +'<div class="stat"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'</b><span>今天該複習的字</span></div></div></div>';
+   +'<div class="stat"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'</b><span>今日待複習</span></div></div></div>';
 
   if(artToday){
     const d=ST.artDone[artToday.id];
-    h+='<div class="item'+(isToday(artToday)?' new':'')+'" style="border-left-color:#3b82c4" onclick="dailyArt(\''+artToday.id+'\')">'
+    h+='<div class="item'+(isToday(artToday)?' new':finCls(d))+'"'+finTitle(d)+' style="border-left-color:#3b82c4" onclick="dailyArt(\''+artToday.id+'\')">'
      +'<div class="t">📖 '+esc(artToday.title)+'</div>'
      +'<div class="tc">'+esc(artToday.titleCn)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(artToday.level)+'">'+esc(artToday.level)+'</span><span>📅 '+esc(artToday.date||'')+'</span><span>🏷 '+esc(artToday.topic)+'</span><span>📝 '+artToday.words+' words</span>'
      +(artToday.kind==='news'||artToday.sourceUrl?'<span>📰 真實新聞改寫</span>':'<span>✍️ 原創</span>')
-     +(d?'<span class="done">✓ 已完成 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
+     +finMeta(d,isToday(artToday))+'</div></div>';
   }
   if(gramToday){
     const d=ST.gramDone[gramToday.id];
-    h+='<div class="item'+(isToday(gramToday)?' new':'')+'" style="border-left-color:#8b5cf6" onclick="goUnit(\''+gramToday.id+'\')">'
+    h+='<div class="item'+(isToday(gramToday)?' new':finCls(d))+'"'+finTitle(d,'練習')+' style="border-left-color:#8b5cf6" onclick="goUnit(\''+gramToday.id+'\')">'
      +'<div class="t">📐 '+esc(gramToday.titleCn)+'</div>'
      +'<div class="tc">'+esc(gramToday.title)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(gramToday.level)+'">'+esc(gramToday.level)+'</span><span>📅 '+esc(gramToday.date||'')+'</span>'+(gramToday.unitNo?'<span>Grammar in Use 進度 Unit '+gramToday.unitNo+'</span>':'')
-     +(d?'<span class="done">✓ 練習 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
+     +finMeta(d,isToday(gramToday),'練習')+'</div></div>';
   }
   if(listenToday){
     const d=(ST.listenDone||{})[listenToday.id];
-    h+='<div class="item'+(listenToday.date===t?' new':'')+'" style="border-left-color:#159AA6" onclick="lsGo(\''+listenToday.id+'\')">'
+    h+='<div class="item'+(listenToday.date===t?' new':finCls(d))+'"'+finTitle(d)+' style="border-left-color:#159AA6" onclick="lsGo(\''+listenToday.id+'\')">'
      +'<div class="t">🎧 '+esc(listenToday.title)+'</div>'
      +'<div class="tc">'+esc(listenToday.titleCn)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(listenToday.level)+'">'+esc(listenToday.level)+'</span>'+(listenToday.date?'<span>📅 '+esc(listenToday.date)+'</span>':'')+'<span>🎬 '+esc(listenToday.topic)+'</span><span>⏱ 約 '+listenToday.minutes+' 分鐘</span>'
-     +(d?'<span class="done">✓ 已完成 '+d.correct+'/'+d.total+'</span>':'')+'</div></div>';
+     +finMeta(d,listenToday.date===t)+'</div></div>';
   }
   if(!artToday&&!gramToday){
     h+='<div class="card"><div class="muted">還沒有新內容。新文章與文法在<b>每週三、五</b>早上更新，可以先到「閱讀」與「文法」分頁，或看今日聽力。</div></div>';
@@ -1460,6 +1491,15 @@ document.addEventListener('click',e=>{
   hideGloss();
 });
 
+/* ---------- 點空白處停止朗讀（點按鈕、句子、單字不算空白） ---------- */
+document.addEventListener('click',e=>{
+  if(!('speechSynthesis' in window)) return;
+  if(!speechSynthesis.speaking && !speechSynthesis.pending) return;
+  if(e.target.closest('button,.spk,.sent,w,a,input,textarea,select,.opt3,.gloss')) return;
+  speechSynthesis.cancel();
+  document.querySelectorAll('.para .sent.reading').forEach(x=>x.classList.remove('reading'));
+});
+
 /* ============================================================
    7.5 影片聽力（YouTube）
    ============================================================ */
@@ -1561,11 +1601,11 @@ RENDER.listen=function(){
    +'<div class="muted">共 '+list.length+' 課 · 影片來源 VOA Learning English（美國政府出版物，公共領域）</div></div>'
    + list.map(l=>{
      const d=(ST.listenDone||{})[l.id];
-     return '<div class="item" style="border-left-color:#c0392b" onclick="lsGo(\''+l.id+'\')">'
+     return '<div class="item'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
       +'<div class="row" style="justify-content:space-between"><div class="t">🎬 '+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
       +'<div class="tc">'+esc(l.titleCn)+'</div>'
       +'<div class="meta"><span>🏷 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span><span>📐 '+esc(l.focus)+'</span>'
-      +(d?'<span class="done">✓ 已完成 '+d.correct+'/'+d.total+'</span>':'')+'</div>'
+      +'</div>'
       +'<div class="meta"><span>'+esc(l.series)+'</span></div></div>';
    }).join('')
    + myVideoCard();
@@ -1785,6 +1825,35 @@ function startSync(){
   },400);
 }
 function stopSync(){ if(syncTimer){clearInterval(syncTimer);syncTimer=null;} }
+
+/* ---------- 聽力頁滑動手勢（手機）：向左撥回上一頁、向右撥跳下一部影片 ---------- */
+let swX=null,swY=null;
+document.addEventListener('touchstart',e=>{
+  swX=null;
+  if(TAB!=='listen'||(!lsOpen&&!myVid)||e.touches.length!==1) return;
+  if(e.target.closest('textarea,input,.ytwrap')) return;   // 打字或操作影片時不觸發
+  swX=e.touches[0].clientX; swY=e.touches[0].clientY;
+},{passive:true});
+document.addEventListener('touchend',e=>{
+  if(swX==null) return;
+  const t=e.changedTouches[0];
+  const dx=t.clientX-swX, dy=t.clientY-swY; swX=null;
+  if(Math.abs(dx)<70 || Math.abs(dy)>60 || Math.abs(dx)<Math.abs(dy)*1.5) return;   // 太短或偏垂直＝捲動
+  if(dx<0){ if(myVid) closeMyVid(); else lsClose(); }
+  else nextVideo();
+},{passive:true});
+function nextVideo(){
+  if(myVid){
+    if(!MYVIDS.length) return;
+    const i=MYVIDS.findIndex(x=>x.id===myVid);
+    openMyVid(MYVIDS[(i+1)%MYVIDS.length].id);
+  }else if(lsOpen){
+    const list=LESSONS.filter(l=>inBand(l.level));
+    if(!list.length) return;
+    const i=list.findIndex(l=>l.id===lsOpen.id);
+    lsGo(list[(i+1)%list.length].id);
+  }
+}
 
 let noteTimer=null;
 function saveNote(){
