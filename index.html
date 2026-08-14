@@ -44,6 +44,12 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .hd-sub{font-size:.72rem;opacity:.9;font-weight:500;margin-top:1px;}
 .hd-topic{display:inline-block;max-width:min(46vw,330px);margin-top:4px;padding:2px 10px;border-radius:100px;
   background:rgba(255,255,255,.22);font-size:.85rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* 迷你日曆：顯示課堂當天的日期數字（取代固定顯示 17 的日曆 emoji） */
+.hd-cal{display:inline-block;width:17px;border-radius:4px;overflow:hidden;background:#fff;
+  vertical-align:-4px;margin-right:3px;line-height:1;}
+.hd-cal i{display:block;height:4px;background:#E11D48;}
+.hd-cal b{display:block;font-style:normal;font-size:10px;font-weight:900;color:#0E6E78;
+  text-align:center;padding:1px 0 2px;letter-spacing:-.5px;}
 .hd-streak{background:rgba(255,255,255,.2);border-radius:100px;padding:6px 13px;
   font-size:.8rem;font-weight:800;white-space:nowrap;display:flex;align-items:center;gap:5px;}
 .hd-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end;}
@@ -123,8 +129,11 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .how-bar b{color:var(--coral-d);font-weight:800;}
 .act-badge{position:absolute;top:12px;right:12px;font-size:.62rem;font-weight:800;
   background:var(--coral);color:#fff;padding:2px 8px;border-radius:100px;}
-.act-prog{position:absolute;bottom:10px;right:12px;font-size:.66rem;font-weight:800;background:#E8F7EE;color:#1F8A4C;border:1px solid #BFE6CE;border-radius:20px;padding:2px 8px;display:none;letter-spacing:.2px;}
-.act-say .act-prog{bottom:10px;}
+/* 當天已「練習完整」（做完看到成績）的活動卡片：右上角打勾 */
+.act-prog{position:absolute;top:10px;right:10px;width:22px;height:22px;border-radius:50%;
+  background:#1F8A4C;color:#fff;border:2px solid #fff;box-shadow:0 2px 6px rgba(31,138,76,.35);
+  font-size:.78rem;font-weight:900;line-height:19px;text-align:center;display:none;}
+.act-say .act-prog{right:56px;}   /* 說出來卡片右上已有「主打」徽章，勾勾往左讓開 */
 /* 六個口說活動：繽紛彩色卡片 */
 .i-say{background:#FFE0E4;color:#E11D48;}
 .i-shadow{background:#FFEAD1;color:#EA7A0C;}
@@ -477,8 +486,10 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 
 @media(max-width:560px){
   /* 手機：主題名稱換到整列顯示，才看得完 */
-  .hd-in{flex-wrap:wrap;}
+  .hd-in{flex-wrap:wrap;position:relative;}
   .hd-topic{max-width:none;width:100%;order:9;margin-top:8px;text-align:center;}
+  /* 手機：B2 Read 移到右上角（跟標題同一列），不再多占一列 */
+  .hd-b2{position:absolute;top:0;right:0;margin-top:0 !important;}
 }
 @media(max-width:420px){
   .acts{grid-template-columns:1fr 1fr;}
@@ -505,7 +516,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
         <button class="prof-btn" id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
       </div>
       <div class="hd-streak">🔥 <span id="hd-streak">1</span> 天 <span id="sync-badge" title="進度已雲端同步（跨裝置共用）" style="display:none">☁️</span></div>
-      <a href="https://english-b2-lab.web.app" title="B2 Read — 閱讀 · 單字間隔複習 · 文法教材，每天自動更新"
+      <a href="https://english-b2-lab.web.app" class="hd-b2" title="B2 Read — 閱讀 · 單字間隔複習 · 文法教材，每天自動更新"
          style="display:inline-block;margin-top:5px;font-size:12px;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(135deg,#f0964f,#d9691f);border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:5px 12px;white-space:nowrap;box-shadow:0 2px 8px rgba(160,80,20,.3)">📚 B2 Read ↗</a>
     </div>
   </div>
@@ -2596,7 +2607,45 @@ const allKW = [
 // READING ARTICLES  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 const articles = [
-// ===SYNC:ARTICLES_START=== sync_date:2026-08-06 count:33
+// ===SYNC:ARTICLES_START=== sync_date:2026-08-13 count:34
+  {
+    title:"Turning a Failure into an Opportunity",
+    titleCn:"轉危為機",
+    source:"Based on 20260813 lesson notes",
+    highlightWords:["damaged","blame","miscommunication","apologize","compensate","effectively","efficiently","return period","transparent","failure","optimist","exposure","go viral","views","approve","refuse","take action"],
+    paras:[
+      {en:"Last year, a small company received several complaints from customers about damaged products. At first, the manager wanted to blame the delivery company. However, instead of blaming others, she decided to take action and find out what had really happened.",
+       cn:"去年，一家小公司收到了幾位顧客關於損壞產品的投訴。起初，經理想要責怪物流公司。然而，她沒有責怪別人，而是決定採取行動，找出到底發生了什麼事。"},
+      {en:"After talking to the employees, she discovered that there had been some miscommunication between the production and delivery teams. The employees had not checked the products carefully before sending them out. The manager apologized to the customers and decided to compensate them for the damaged products.",
+       cn:"與員工溝通後，她發現生產團隊和物流團隊之間出現了溝通不良。員工們在出貨前沒有仔細檢查產品。經理向顧客道歉，並決定補償他們損壞的產品。"},
+      {en:"She also changed the company's procedures so that every product would be checked more effectively and efficiently before delivery. The company also extended its return period and made its refund policy clearer and more transparent.",
+       cn:"她也修改了公司的流程，讓每一件產品在出貨前都能被更有效、更有效率地檢查。公司也延長了退貨期限，並讓退款政策更清楚、更透明。"},
+      {en:"Although the situation was an unexpected failure, the manager had a positive mindset. She was an optimist and believed that every problem could become an opportunity to improve.",
+       cn:"儘管這次情況是一個意料之外的失敗，經理擁有正面的心態。她是個樂觀的人，相信每個問題都能成為進步的機會。"},
+      {en:"At the same time, the company wanted to gain more exposure. Instead of spending a lot of money on traditional advertising, the manager decided to advertise the company's products on social media. By luck, one of their videos went viral and received thousands of views. This gave the company much more exposure than expected.",
+       cn:"同時，公司想要獲得更多曝光。經理沒有花大錢在傳統廣告上，而是決定在社群媒體上推廣公司的產品。靠著運氣，他們的一支影片爆紅，獲得了數千次觀看。這給了公司比預期更多的曝光。"},
+      {en:"Some employees didn't approve of the manager's decision at first, but after seeing the results, they changed their opinion. When asked about the company's success, the manager said, \"We constantly learn from our mistakes. When something goes wrong, we shouldn't refuse to accept responsibility. We should take action and turn a failure into an opportunity.\"",
+       cn:"一些員工起初不認可經理的決定，但看到成果後，他們改變了看法。當被問到公司的成功時，經理說：「我們不斷從錯誤中學習。當事情出錯時，我們不應該拒絕承擔責任。我們應該採取行動，把失敗轉化為機會。」"},
+    ],
+    questions:[
+      {q:"Why did customers complain to the company?",
+       opts:["A. The delivery was too slow","B. They received damaged products","C. The prices were too high","D. The staff was impolite"],
+       ans:1,
+       expl:"文章說 customers complained about damaged products，顧客投訴的是損壞的產品。"},
+      {q:"What did the manager do instead of blaming others?",
+       opts:["A. She ignored the complaints","B. She fired the employees","C. She took action and found out what had happened","D. She closed the company"],
+       ans:2,
+       expl:"文章說 instead of blaming others, she decided to take action and find out what had really happened。"},
+      {q:"What happened to one of the company's videos?",
+       opts:["A. It was deleted","B. It went viral and got thousands of views","C. It received bad comments","D. Nobody watched it"],
+       ans:1,
+       expl:"文章說 one of their videos went viral and received thousands of views，影片爆紅並獲得數千次觀看。"},
+      {q:"How did the employees' opinion change?",
+       opts:["A. They approved at first but disagreed later","B. They never approved of the decision","C. They didn't care about the results","D. They didn't approve at first, but changed their opinion after seeing the results"],
+       ans:3,
+       expl:"文章說 Some employees didn't approve at first, but after seeing the results, they changed their opinion。"},
+    ],
+  },
   {
     title:"The Key to Success",
     titleCn:"成功之鑰",
@@ -6000,7 +6049,10 @@ function ddSelect(d){DAY=d;buildDayList();renderMeta();renderHdTopic();ddClose()
 function renderHdTopic(){const el=$('hd-topic');if(!el)return;
   if(!DAY||DAY==='all'){el.textContent=isTom()?'📚 全部主題':'📚 全部筆記';return;}
   const t=lessonTitle(DAY);
-  el.textContent=(A2BY[DAY]?'🟢 ':'📅 ')+(A2BY[DAY]?'':DAY.slice(4,6)+'/'+DAY.slice(6,8)+' ')+t;}
+  if(A2BY[DAY]){el.textContent='🟢 '+t;return;}
+  /* 迷你日曆顯示課堂當天的日期數字（日曆 emoji 永遠是 17，改用真的日期） */
+  el.innerHTML='<span class="hd-cal"><i></i><b>'+Number(DAY.slice(6,8))+'</b></span> '
+    +DAY.slice(4,6)+'/'+DAY.slice(6,8)+' '+esc(t);}
 document.addEventListener('click',e=>{if(!e.target.closest('#day-dd'))ddClose();});
 function initHome(){
   DDATES=allDates().concat(['all']);
@@ -6815,7 +6867,8 @@ function vOpen(i){
       VID.timer=setInterval(vTick,250);
     }catch(e){stage.innerHTML='<div class="note warn">影片播放器載入失敗，請確認網路連線。字幕仍可點來聽發音。</div>';}});
   }else{
-    stage.innerHTML='<div class="vid-tts"><div class="ico">🔊</div><div class="t">'+esc(m.title)+'</div>'
+    stage.innerHTML='<div class="vid-tts"><div class="ico" id="vtts-ico">'
+      +(m.lines&&m.lines[0]?vScene(m.lines[0].en):'🔊')+'</div><div class="t">'+esc(m.title)+'</div>'
       +'<div class="s">'+esc(m.titleCn||'一句一句朗讀，字幕會跟著亮')+'</div></div>';
   }
   vRenderSubs();vPP();window.scrollTo(0,0);
@@ -6895,10 +6948,36 @@ function vMark(en){
 function vWord(w){const v=vocab.find(x=>norm(x.w)===norm(w));
   speak(w,0.85);
   if(v)$('vid-sub').textContent=v.w+' '+(v.ipa||'')+' '+v.cn;}
+/* 課文朗讀／金句：每一句配上對應的表情符號圖卡（簡易插圖，跟著句子換） */
+const VSCENES=[
+  [/complain|complaint|angry|upset|blame/i,'😠'],[/damaged|broken|break|crack/i,'📦💥'],
+  [/deliver|shipping|package|send out/i,'🚚📦'],[/apolog|sorry/i,'🙏'],
+  [/refund|compensat|make it up|pay back/i,'💸'],[/money|price|expensive|cost|salary/i,'💰'],
+  [/video|film|movie/i,'🎬'],[/viral|views|popular|famous/i,'📈👀'],
+  [/social media|instagram|facebook|internet|online/i,'📱✨'],[/advertis|exposure|brand|sponsor|market/i,'📣🏷️'],
+  [/meeting|discuss|team|colleague/i,'👥💬'],[/boss|manager|leader/i,'👩‍💼'],
+  [/success|achieve|win|goal|dream/i,'🏆'],[/mistake|fail|error|wrong|problem|obstacle|setback/i,'🧗'],
+  [/learn|study|practice|improve|school|class|teacher/i,'📚✏️'],[/opportunit|chance|grow/i,'🌱'],
+  [/customer|store|shop|buy|purchase|return period/i,'🛒'],[/interview|job|career|work|office|project/i,'💼'],
+  [/doctor|sick|ill|pain|symptom|hospital|health|nausea|vomit/i,'🤒'],[/sleep|tired|bed|nap/i,'😴'],
+  [/eat|food|dinner|lunch|cook|restaurant|taste|delicious/i,'🍜'],[/coffee|tea|drink/i,'☕'],
+  [/rain|storm|typhoon|hurricane|tornado|weather|wind|snow/i,'🌪️🌧️'],[/sunny|hot weather|summer/i,'☀️'],
+  [/fly|flight|airport|plane|travel|trip|vacation|tour/i,'✈️🧳'],[/train|ticket|station|bus|mrt/i,'🚆'],
+  [/friend|together|meet up|hang out/i,'👭'],[/family|parent|mother|father|kid|child/i,'👨‍👩‍👧'],
+  [/house|home|apartment|room|rent|landlord|tenant/i,'🏠'],[/repair|fix|plumber|tool|equipment/i,'🔧'],
+  [/phone|message|call|text/i,'📱'],[/music|sing|song|party|celebrat/i,'🎉'],
+  [/happy|glad|excited|enjoy|smile|optimis/i,'😄'],[/sad|cry|disappoint|worry|stress|nervous/i,'😟'],
+  [/listen|hear|sound|noise/i,'👂'],[/talk|say|speak|tell|ask|question|answer|explain|elaborate/i,'🗣️'],
+];
+function vScene(en){const out=[];const s=String(en||'');
+  for(const p of VSCENES){if(p[0].test(s)){out.push(p[1]);if(out.length>=2)break;}}
+  return out.length?out.join(' '):'💬';}
 function vHighlight(){
   if(!VID)return;
   VID.lines.forEach((l,i)=>{const el=$('vl-'+i);if(!el)return;
     el.classList.toggle('cur',i===VID.i);el.classList.toggle('done',i<VID.i);});
+  if(VID.mode!=='yt'){const ic=$('vtts-ico');const l=VID.lines[VID.i];
+    if(ic&&l)ic.textContent=vScene(l.en);}
   vScrollCur();}
 /* 把「現在這一句」捲到黏頂區下方：每次都量黏頂區的即時高度（練習打開、
    評分出現時它會變高），確保當前句永遠不會被影片區蓋住 */
@@ -7082,15 +7161,15 @@ function bumpActToday(cur,pct){
   else if(pct!=null){ if(cur.pct==null){o.sum+=Math.round(pct);o.cnt++;} else if(pct>cur.pct){o.sum+=Math.round(pct)-cur.pct;} }
   saveST(); renderActProg();
 }
+/* 今天有把一輪練完整（看到成績頁）的活動，卡片右上角打勾 */
 function renderActProg(){
   const t=ST.actToday||{};
   ['word','shadow','read','say','listen','talk','video','quiz'].forEach(k=>{
     const el=document.getElementById('ap-'+k); if(!el)return;
     const o=t[k];
-    if(!o||!o.n){ el.style.display='none'; el.textContent=''; return; }
-    const avg=o.cnt?Math.round(o.sum/o.cnt):null;
-    el.textContent='✓ 今天 '+o.n+(avg!=null?' · '+avg+'%':'');
-    el.style.display='inline-block';
+    if(!o||!o.done){ el.style.display='none'; el.textContent=''; return; }
+    el.textContent='✓';
+    el.style.display='block';
   });
 }
 function pctCls(p){return p==null?'skip':p>=85?'ok':p>=60?'mid':'no';}
@@ -7100,6 +7179,10 @@ function finishAct(title,msg){micStop();if(window.speechSynthesis)speechSynthesi
   SESS.msg=msg;showSummary();}
 function showSummary(){
   const S=SESS;if(!S){goHome();return;}
+  /* 記下「今天這個活動已練習完整」，首頁卡片右上角會打勾 */
+  if(S.act){if(!ST.actToday)ST.actToday={};
+    const o=ST.actToday[S.act]||(ST.actToday[S.act]={n:0,sum:0,cnt:0});
+    o.done=true;saveST();renderActProg();}
   document.querySelectorAll('#scr-done .sum-extra').forEach(e=>e.remove());   /* 清掉上一輪加掛的按鈕 */
   const n=Math.max(S.total,S.items.length);
   const rows=[];for(let i=0;i<n;i++)rows.push(S.items[i]||null);
