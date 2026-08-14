@@ -357,6 +357,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .sum-emo{font-size:3.2rem;line-height:1;}
 .sum-h{font-size:1.42rem;font-weight:900;margin-top:8px;}
 .sum-sub{font-size:.95rem;color:var(--sub);font-weight:600;margin-top:4px;}
+.sum-note{font-size:.88rem;color:var(--amber);font-weight:700;margin-top:6px;}
 .sum-nums{display:flex;gap:9px;margin:16px 0 6px;}
 .sum-num{flex:1;background:var(--bg);border:1px solid var(--bdr);border-radius:15px;padding:12px 6px;text-align:center;}
 .sum-num .n{font-size:1.5rem;font-weight:900;color:var(--coral-d);font-family:'Inter';}
@@ -474,6 +475,19 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .vid-pin.prac .vid-box{height:min(16vh,30vw);}
 .vid-pin.prac .vplay,.vid-pin.prac .vid-tts,.vid-pin.prac .vtoolbar{display:none;}
 .vid-pin.prac{max-height:calc(100vh - var(--hdh,58px) - 14px);overflow-y:auto;}
+/* 這一句很長時：黏頂區自動縮小（標題卡片收起來、按鈕變小），整段才塞得進畫面 */
+.vid-pin.tight .vid-tts{padding:10px 14px;}
+.vid-pin.tight .vid-tts .ico,.vid-pin.tight .vid-tts .s{display:none;}
+.vid-pin.tight .vid-tts .t{font-size:1rem;margin-top:0;}
+.vid-pin.tight .vid-box{height:min(18vh,28vw);}
+.vid-pin.tight .vplay{margin-top:4px;gap:14px;}
+.vid-pin.tight .vplay button{font-size:1.15rem;}
+.vid-pin.tight .vplay .pp{width:42px;height:42px;font-size:1rem;}
+.vid-pin.tight .vtoolbar{margin-top:6px;padding:4px 4px;}
+.vid-pin.tight .vtool{font-size:.68rem;padding:3px 2px;gap:1px;}
+.vid-pin.tight .vtool .i{font-size:.95rem;}
+/* 縮小後還是塞不下（超長段落）：黏頂區改成跟著捲走，整段一定讀得完 */
+.vid-pin.unpin{position:static;}
 #vid-prac .card{margin-top:8px;box-shadow:var(--sh);}
 .vplay button{border:none;background:transparent;cursor:pointer;font-size:1.4rem;color:var(--ink);font-family:inherit;}
 .vplay .pp{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--coral-d));
@@ -700,7 +714,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
         <div class="fex" id="word-ex"></div>
       </div>
     </div></div>
-    <div class="tap-hint">👆 點卡片翻面看中文與例句</div>
+    <div class="tap-hint">👆 點卡片翻面看中文與例句（手機／平板：左滑下一張、右滑上一張）</div>
     <div class="scorebox hide" id="word-score"></div>
     <div class="heard" id="word-heard"></div>
     <div class="sticky-ctrl">
@@ -6875,7 +6889,21 @@ function vOpen(i){
   vSetPinH();vAutoCn(m);}
 /* 記下「黏住的影片區」高度，字幕自動捲動時才不會躲到影片後面 */
 function vSetPinH(){setTimeout(()=>{const p=document.querySelector('.vid-pin');
-  if(p)document.documentElement.style.setProperty('--pinh',p.offsetHeight+'px');},400);}
+  if(!p)return;vFitPin();
+  document.documentElement.style.setProperty('--pinh',p.offsetHeight+'px');},400);}
+/* 現在這一句很長（整段課文）時，上方黏住的播放區會把它擠到看不完：
+   先把黏頂區縮小；縮小後還是塞不下就讓它跟著捲走，整段一定看得到 */
+function vFitPin(){
+  const pin=document.querySelector('.vid-pin');if(!pin||!VID)return;
+  if(pin.classList.contains('prac'))return;   /* 練習面板自己有一套版面 */
+  const cur=$('vl-'+VID.i);if(!cur)return;
+  pin.classList.remove('tight','unpin');
+  setHdh();   /* 頁首高度會隨內容變（課程列、換行），先量準才算得出剩多少空間 */
+  const hd=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hdh'))||58;
+  const need=cur.getBoundingClientRect().height;
+  const fits=()=>need<=window.innerHeight-hd-pin.offsetHeight-28;
+  if(!fits()){pin.classList.add('tight');if(!fits())pin.classList.add('unpin');}
+  document.documentElement.style.setProperty('--pinh',pin.offsetHeight+'px');}
 
 /* ---------- 自動翻譯：字幕缺中文時翻成繁中並存回這支影片。
    一次 6 句同時翻、翻好一批就馬上上畫面（長影片不用等全部翻完），
@@ -6981,10 +7009,15 @@ function vHighlight(){
   vScrollCur();}
 /* 把「現在這一句」捲到黏頂區下方：每次都量黏頂區的即時高度（練習打開、
    評分出現時它會變高），確保當前句永遠不會被影片區蓋住 */
-function vScrollCur(){
+function vScrollCur(again){
   if(!VID)return;const cur=$('vl-'+VID.i);if(!cur)return;
+  vFitPin();   /* 先把黏頂區調到「這一句放得下」的大小，再決定要捲到哪 */
+  /* 黏頂區縮放＋平滑捲動會同時進行，等它們停下來再校正一次位置 */
+  if(!again)setTimeout(()=>vScrollCur(true),340);
   const pin=document.querySelector('.vid-pin');
-  const top=(pin?pin.getBoundingClientRect().bottom:70)+12;
+  const hd=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hdh'))||58;
+  /* 黏頂區已經捲走時，改用頁首下緣當基準，句子才不會躲到頁首後面 */
+  const top=Math.max(pin?pin.getBoundingClientRect().bottom:70,hd)+12;
   const r=cur.getBoundingClientRect();
   if(r.top<top||r.bottom>window.innerHeight-16)
     scrollBySafe(r.top-top);   /* 平滑捲動失敗時會直接跳到位（scrollBySafe 內建保險） */}
@@ -7179,14 +7212,17 @@ function finishAct(title,msg){micStop();if(window.speechSynthesis)speechSynthesi
   SESS.msg=msg;showSummary();}
 function showSummary(){
   const S=SESS;if(!S){goHome();return;}
-  /* 記下「今天這個活動已練習完整」，首頁卡片右上角會打勾 */
-  if(S.act){if(!ST.actToday)ST.actToday={};
-    const o=ST.actToday[S.act]||(ST.actToday[S.act]={n:0,sum:0,cnt:0});
-    o.done=true;saveST();renderActProg();}
   document.querySelectorAll('#scr-done .sum-extra').forEach(e=>e.remove());   /* 清掉上一輪加掛的按鈕 */
   const n=Math.max(S.total,S.items.length);
   const rows=[];for(let i=0;i<n;i++)rows.push(S.items[i]||null);
   const done=rows.filter(x=>x&&x.pct!=null);
+  /* 每一題都有作答紀錄才算「今天練完了」，首頁卡片右上角才會打勾；
+     中途跳過或沒作答就不打勾（已經打過勾的日子不會被取消） */
+  const allDone=n>0&&done.length>=n;
+  if(S.act){if(!ST.actToday)ST.actToday={};
+    const o=ST.actToday[S.act]||(ST.actToday[S.act]={n:0,sum:0,cnt:0});
+    if(allDone)o.done=true;
+    saveST();renderActProg();}
   const avg=done.length?Math.round(done.reduce((a,b)=>a+b.pct,0)/done.length):null;
   const isQuiz=S.kind==='quiz';
   const right=rows.filter(x=>x&&x.pct===100).length;
@@ -7194,7 +7230,8 @@ function showSummary(){
   const emo=good==null?'✅':good>=85?'🏆':good>=60?'👍':'💪';
   $('sum-emo').textContent=emo;
   $('sum-h').textContent=S.title+' 完成!';
-  $('sum-sub').textContent=(S.day==='all'?'全部筆記':lessonTitle(S.day))+' · '+lvTag(S.level);
+  $('sum-sub').innerHTML=esc((S.day==='all'?'全部筆記':lessonTitle(S.day))+' · '+lvTag(S.level))
+    +(allDone?'':'<div class="sum-note">還有 '+(n-done.length)+' 題沒有作答紀錄，全部答完首頁才會打勾 ✓</div>');
   $('sum-nums').innerHTML=isQuiz
     ?(sumNum(right+' / '+n,'答對題數')+sumNum(good+'%','正確率')+sumNum(ST.spokenToday,'今日完成'))
     :(sumNum(done.length+' / '+n,'完成題數')+sumNum(avg==null?'–':avg+'%',S.scoreLabel)+sumNum(ST.spokenToday,'今日完成'));
@@ -7220,6 +7257,46 @@ function sumAgain(){if(SESS)openAct(SESS.act);else goHome();}
 function sumSwitchLevel(){const l=lvBasic()?'advanced':'basic';
   saveLevel(l);
   if(SESS)openAct(SESS.act);else goHome();}
+
+/* ═══════════════════════════════════════════════════════════
+   手指滑動換題（手機／平板）：卡片上左滑＝下一題、右滑＝上一題
+   ═══════════════════════════════════════════════════════════ */
+const SWIPE_ACTS={
+  'scr-say'   :{next:()=>sayNext(), prev:()=>{if(sayI>0){sayI--;sayRender();}}},
+  'scr-shadow':{next:()=>shNext(),  prev:()=>{if(shI>0){shI--;shRender();setTimeout(()=>shDemo(demoRate()),300);}}},
+  'scr-word'  :{next:()=>wordNext(),prev:()=>{if(wI>0){wI--;wRender();}}},
+  'scr-listen':{next:()=>lsNext(),  prev:()=>{if(lsI>0){lsI--;lsRender();}}},
+  /* 快速檢查：最後一題不用滑的結束，避免手滑直接跳成績頁 */
+  'scr-quiz'  :{next:()=>{if(qzI+1<qzList.length){qzI++;qzRender();}},prev:()=>{if(qzI>0){qzI--;qzRender();}}},
+  'scr-video' :{next:()=>vNext(),   prev:()=>vPrev()},
+  'scr-talk'  :{next:()=>talkSkip()}
+};
+/* 手指按在輸入框、按鈕或可左右捲的區塊上時不換題，避免誤觸 */
+function swipeBlocked(el){
+  for(let n=el;n&&n!==document.body;n=n.parentElement){
+    if(/^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(n.tagName))return true;
+    if(n.scrollWidth-n.clientWidth>12)return true;
+  }
+  return false;}
+let SW=null;
+document.addEventListener('touchstart',e=>{
+  if(e.touches.length!==1){SW=null;return;}
+  const t=e.touches[0];
+  SW={x:t.clientX,y:t.clientY,t:Date.now(),ok:!swipeBlocked(e.target)};
+},{passive:true});
+document.addEventListener('touchend',e=>{
+  const s=SW;SW=null;
+  if(!s||!s.ok)return;
+  const t=e.changedTouches&&e.changedTouches[0];if(!t)return;
+  const dx=t.clientX-s.x,dy=t.clientY-s.y;
+  if(Date.now()-s.t>700)return;                                /* 慢慢拖不算滑動 */
+  if(Math.abs(dx)<60||Math.abs(dx)<Math.abs(dy)*1.6)return;    /* 上下捲動優先 */
+  const scr=document.querySelector('.screen.on');if(!scr)return;
+  const a=SWIPE_ACTS[scr.id];if(!a)return;
+  if(micActive)micStop();
+  if(scr.id!=='scr-video'&&window.speechSynthesis)speechSynthesis.cancel();
+  const f=dx<0?a.next:a.prev;if(f)f();
+},{passive:true});
 
 /* ═══════════════════════════════════════════════════════════
    啟動
