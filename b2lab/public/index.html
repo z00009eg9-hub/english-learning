@@ -457,7 +457,7 @@ const inBand = l => band().indexOf(l)>=0;
 let PROFILE=localStorage.getItem('b2lab_profile')||'anita';
 if(!PROFILES[PROFILE]) PROFILE='anita';
 const skey = () => 'b2lab.v1.'+PROFILE;
-const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:0.9, fs:1.15, listenDone:{}, vnotes:{}, updatedAt:0});
+const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:1, fs:1.15, listenDone:{}, vnotes:{}, updatedAt:0});
 
 /* ---------- 本機儲存 ---------- */
 let ST=blank();
@@ -471,6 +471,8 @@ function loadLocal(){
       if(old){ raw=old; localStorage.setItem(skey(),old); localStorage.removeItem('b2lab.v1'); }
     }
     if(raw) ST=Object.assign(ST,JSON.parse(raw));
+    const rmap={0.7:0.6, 0.9:1, 0.85:1, 0.55:0.6, 1.1:1.4, 1.25:1.4};
+    if(rmap[ST.rate]!==undefined) ST.rate=rmap[ST.rate];
   }catch(e){}
 }
 function saveLocal(){ try{ localStorage.setItem(skey(),JSON.stringify(ST)); }catch(e){} }
@@ -577,7 +579,7 @@ function say(text,rate,onend){
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(String(text).replace(/\s+/g,' ').trim());
-  u.lang='en-US'; u.rate = rate || ST.rate || 0.9;
+  u.lang='en-US'; u.rate = rate || ST.rate || 1;
   if(VOICE) u.voice=VOICE;
   if(onend){ u.onend=onend; u.onerror=onend; }
   speechSynthesis.speak(u);
@@ -1259,62 +1261,58 @@ function gramHTML(g){
 RENDER.daily=function(){
   const t=today();
   const isToday=x=>x&&x.date===t;
-  // 依目前學習者挑「最新、且符合程度」的一份內容：Tom 取程度較低的、Anita 取程度較高的，
-  // 這樣兩人各看到自己那一份（文章／文法／聽力都用同一套規則）。
   const lvRank={A2:0,'B1':1,'B1+':2,'B2':3};
-  const preferHigh=(PROFILE!=='tom');
-  const pickMine=(all)=>{
-    const band=(all||[]).filter(x=>inBand(x.level));
-    const p=band.length?band:(all||[]);
+  const pickMines=(all)=>{
+    const b=(all||[]).filter(x=>inBand(x.level));
+    const p=b.length?b:(all||[]);
     const dated=p.filter(x=>x.date&&x.date<=t);
-    if(dated.length){
-      const maxDate=dated.reduce((mx,x)=>x.date>mx?x.date:mx,'');
-      const top=dated.filter(x=>x.date===maxDate);
-      return top.slice().sort((a,b)=>preferHigh?((lvRank[b.level]||0)-(lvRank[a.level]||0)):((lvRank[a.level]||0)-(lvRank[b.level]||0)))[0];
-    }
-    return p[0]||null;
+    if(!dated.length) return p.slice(0,1);
+    const maxDate=dated.reduce((mx,x)=>x.date>mx?x.date:mx,'');
+    return dated.filter(x=>x.date===maxDate).sort((a,b)=>(lvRank[a.level]||0)-(lvRank[b.level]||0));
   };
   const pool=DAILY_ARTS.filter(a=>inBand(a.level));
-  const artToday=pickMine(DAILY_ARTS);
-  const gramToday=pickMine(DAILY_GRAM);
-  const listenToday=pickMine(LESSONS);
+  const artsToday=pickMines(DAILY_ARTS);
+  const gramsToday=pickMines(DAILY_GRAM);
+  const listensToday=pickMines(LESSONS);
   let h=installCard()
    +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
    +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+' · '+(GOALS[PROFILE]||'')+'</div>'
-   +'<div class="hint"><b>每週三、五</b>更新<b>一篇新文章</b>、<b>一個文法單元</b>與<b>一課聽力</b>。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力從影片庫輪一課讓你練耳朵。</div>'
+   +'<div class="hint"><b>每週三、五</b>更新，每次都會依你的程度給<b>三份文章</b>、<b>三個文法單元</b>與<b>三課聽力</b>（由淺到深，可以先讀最簡單的再往上挑戰）。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力從影片庫輪課讓你練耳朵。</div>'
    +'<div class="stats"><div class="stat"><b>'+pool.length+'</b><span>累積每日文章</span></div>'
    +'<div class="stat"><b>'+DAILY_GRAM.length+'</b><span>累積每日文法</span></div>'
    +'<div class="stat"><b>'+(ST.streak||1)+'</b><span>連續學習天數</span></div>'
    +'<div class="stat"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'</b><span>今日待複習</span></div></div></div>';
 
-  if(artToday){
-    const d=ST.artDone[artToday.id];
-    h+='<div class="item'+(isToday(artToday)?' new':finCls(d))+'"'+finTitle(d)+' style="border-left-color:#3b82c4" onclick="dailyArt(\''+artToday.id+'\')">'
-     +'<div class="t">📖 '+esc(artToday.title)+'</div>'
-     +'<div class="tc">'+esc(artToday.titleCn)+'</div>'
-     +'<div class="meta"><span class="lv '+lvCls(artToday.level)+'">'+esc(artToday.level)+'</span><span>📅 '+esc(artToday.date||'')+'</span><span>🏷 '+esc(artToday.topic)+'</span><span>📝 '+artToday.words+' words</span>'
-     +(artToday.kind==='news'||artToday.sourceUrl?'<span>📰 真實新聞改寫</span>':'<span>✍️ 原創</span>')
-     +finMeta(d,isToday(artToday))+'</div></div>';
-  }
-  if(gramToday){
-    const d=ST.gramDone[gramToday.id];
-    h+='<div class="item'+(isToday(gramToday)?' new':finCls(d))+'"'+finTitle(d,'練習')+' style="border-left-color:#8b5cf6" onclick="goUnit(\''+gramToday.id+'\')">'
-     +'<div class="t">📐 '+esc(gramToday.titleCn)+'</div>'
-     +'<div class="tc">'+esc(gramToday.title)+'</div>'
-     +'<div class="meta"><span class="lv '+lvCls(gramToday.level)+'">'+esc(gramToday.level)+'</span><span>📅 '+esc(gramToday.date||'')+'</span>'+(gramToday.unitNo?'<span>Grammar in Use 進度 Unit '+gramToday.unitNo+'</span>':'')
-     +finMeta(d,isToday(gramToday),'練習')+'</div></div>';
-  }
-  if(listenToday){
-    const d=(ST.listenDone||{})[listenToday.id];
-    h+='<div class="item'+(listenToday.date===t?' new':finCls(d))+'"'+finTitle(d)+' style="border-left-color:#159AA6" onclick="lsGo(\''+listenToday.id+'\')">'
-     +'<div class="t">🎧 '+esc(listenToday.title)+'</div>'
-     +'<div class="tc">'+esc(listenToday.titleCn)+'</div>'
-     +'<div class="meta"><span class="lv '+lvCls(listenToday.level)+'">'+esc(listenToday.level)+'</span>'+(listenToday.date?'<span>📅 '+esc(listenToday.date)+'</span>':'')+'<span>🎬 '+esc(listenToday.topic)+'</span><span>⏱ 約 '+listenToday.minutes+' 分鐘</span>'
-     +finMeta(d,listenToday.date===t)+'</div></div>';
-  }
-  if(!artToday&&!gramToday){
+  artsToday.forEach(a=>{
+    const d=ST.artDone[a.id];
+    h+='<div class="item'+(isToday(a)?' new':finCls(d))+'"'+finTitle(d)+' style="border-left-color:#3b82c4" onclick="dailyArt(\''+a.id+'\')">'
+     +'<div class="t">📖 '+esc(a.title)+'</div>'
+     +'<div class="tc">'+esc(a.titleCn)+'</div>'
+     +'<div class="meta"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span><span>📅 '+esc(a.date||'')+'</span><span>🏷 '+esc(a.topic)+'</span><span>📝 '+a.words+' words</span>'
+     +(a.kind==='news'||a.sourceUrl?'<span>📰 真實新聞改寫</span>':'<span>✍️ 原創</span>')
+     +finMeta(d,isToday(a))+'</div></div>';
+  });
+  gramsToday.forEach(g=>{
+    const d=ST.gramDone[g.id];
+    h+='<div class="item'+(isToday(g)?' new':finCls(d))+'"'+finTitle(d,'練習')+' style="border-left-color:#8b5cf6" onclick="goUnit(\''+g.id+'\')">'
+     +'<div class="t">📐 '+esc(g.titleCn)+'</div>'
+     +'<div class="tc">'+esc(g.title)+'</div>'
+     +'<div class="meta"><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span><span>📅 '+esc(g.date||'')+'</span>'+(g.unitNo?'<span>Grammar in Use 進度 Unit '+g.unitNo+'</span>':'')
+     +finMeta(d,isToday(g),'練習')+'</div></div>';
+  });
+  listensToday.forEach(l=>{
+    const d=(ST.listenDone||{})[l.id];
+    h+='<div class="item'+(l.date===t?' new':finCls(d))+'"'+finTitle(d)+' style="border-left-color:#159AA6" onclick="lsGo(\''+l.id+'\')">'
+     +'<div class="t">🎧 '+esc(l.title)+'</div>'
+     +'<div class="tc">'+esc(l.titleCn)+'</div>'
+     +'<div class="meta"><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span>'+(l.date?'<span>📅 '+esc(l.date)+'</span>':'')+'<span>🎬 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span>'
+     +finMeta(d,l.date===t)+'</div></div>';
+  });
+  const anyArt=artsToday.length>0, anyGram=gramsToday.length>0;
+  const anyNew=artsToday.some(a=>isToday(a))||gramsToday.some(g=>isToday(g));
+  if(!anyArt&&!anyGram){
     h+='<div class="card"><div class="muted">還沒有新內容。新文章與文法在<b>每週三、五</b>早上更新，可以先到「閱讀」與「文法」分頁，或看今日聽力。</div></div>';
-  }else if(!isToday(artToday)&&!isToday(gramToday)){
+  }else if(!anyNew){
     h+='<div class="card"><div class="muted">上面顯示的是最近一次的內容。新文章、文法與聽力<b>每週三、五</b>早上更新，其他天不會有新的。</div></div>';
   }
   h+='<div class="card"><h2 class="sec">🎯 今天可以這樣安排</h2>'
@@ -1325,10 +1323,13 @@ RENDER.daily=function(){
    +'<li style="margin-bottom:7px">看今日聽力影片，跟讀關鍵句、做理解測驗（約 8 分鐘）</li>'
    +'<li>最後去「單字卡」清掉今天到期的字</li></ol></div>';
 
-  if(pool.length>1||DAILY_GRAM.length>1){
+  const todayIds=new Set([...artsToday,...gramsToday,...listensToday].filter(x=>isToday(x)).map(x=>x.id));
+  const pastArts=pool.filter(a=>!todayIds.has(a.id));
+  const pastGram=DAILY_GRAM.filter(g=>inBand(g.level)&&!todayIds.has(g.id));
+  if(pastArts.length||pastGram.length){
     h+='<div class="card"><h2 class="sec">🗂 過去的每日內容</h2>'
-     + pool.slice(artToday&&isToday(artToday)?1:0).map(a=>'<div class="item" onclick="dailyArt(\''+a.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📖 '+esc(a.title)+'</div><div class="meta"><span>📅 '+esc(a.date||'')+'</span><span>'+esc(a.titleCn)+'</span></div></div>').join('')
-     + DAILY_GRAM.slice(gramToday&&isToday(gramToday)?1:0).map(g=>'<div class="item" onclick="goUnit(\''+g.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📐 '+esc(g.titleCn)+'</div><div class="meta"><span>📅 '+esc(g.date||'')+'</span><span>'+esc(g.title)+'</span></div></div>').join('')
+     + pastArts.map(a=>'<div class="item" onclick="dailyArt(\''+a.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📖 '+esc(a.title)+'</div><div class="meta"><span>📅 '+esc(a.date||'')+'</span><span>'+esc(a.titleCn)+'</span></div></div>').join('')
+     + pastGram.map(g=>'<div class="item" onclick="goUnit(\''+g.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📐 '+esc(g.titleCn)+'</div><div class="meta"><span>📅 '+esc(g.date||'')+'</span><span>'+esc(g.title)+'</span></div></div>').join('')
      +'</div>';
   }
   h+=oldSiteCard();
@@ -1452,7 +1453,7 @@ RENDER.prog=function(){
    +'<div class="muted" style="margin-top:14px">每日新單字上限</div><div class="chips" style="margin-top:6px">'
    +[8,12,20,30].map(n=>'<button class="chip'+((ST.newPerDay||12)===n?' on':'')+'" onclick="vNewLimit('+n+');go(\'prog\')">'+n+' 個</button>').join('')+'</div>'
    +'<div class="muted" style="margin-top:10px">朗讀速度</div><div class="chips" style="margin-top:6px">'
-   +[['0.7','慢'],['0.9','正常'],['1.1','快']].map(([r,t])=>'<button class="chip'+(String(ST.rate)===r?' on':'')+'" onclick="setRate('+r+')">'+t+' '+r+'x</button>').join('')+'</div>'
+   +[['0.6','慢'],['1','正常'],['1.4','快']].map(([r,t])=>'<button class="chip'+(String(ST.rate)===r?' on':'')+'" onclick="setRate('+r+')">'+t+' '+r+'x</button>').join('')+'</div>'
    +'<div style="margin-top:14px"><button class="btn gray" onclick="wipe()">清除本機學習紀錄</button></div>'
    +'<div class="muted" style="margin-top:9px;font-size:calc(11.5px * var(--fs))">學習紀錄只存在這台裝置的瀏覽器裡，不會上傳。</div>'
    +'</div>'

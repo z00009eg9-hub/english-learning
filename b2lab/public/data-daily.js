@@ -49,6 +49,87 @@ articles:[
 },
 
 {
+  id:"d20260814b1", date:"2026-08-14", level:"B1", topic:"天氣與日常", words:122, kind:"orig",
+  title:"A Rainy Typhoon Day at Home",
+  titleCn:"颱風天在家",
+  focus:"過去簡單式＋連接詞 because / so / when",
+  upFrom:"B1", upTo:"B1+",
+  intro:"颱風天不上班不上課，你在家做了什麼？讀的時候注意三個連接詞：because 說原因、so 說結果、when 說時間先後。",
+  paras:[
+    {en:"Last Wednesday there was a typhoon, so we did not go to work. The wind was very strong and the rain was heavy all morning. My mother called me because she was worried about the flooding near our house.",
+     cn:"上週三有颱風，所以我們沒有去上班。風很大，整個早上雨都下得很大。我媽打電話給我，因為她擔心我們家附近會淹水。"},
+    {en:"I stayed home and cleaned the kitchen. Then I watched the news on TV. The reporter said several roads were closed and some trees fell down. When the rain stopped in the afternoon, I went outside to check.",
+     cn:"我待在家裡打掃廚房，然後看電視新聞。記者說好幾條路被封了，有些樹倒了。下午雨停的時候，我出去看了一下。"},
+    {en:"There was water on the street, but it was not too deep. My neighbour was cleaning leaves from the drain. I helped him for about twenty minutes. After that, the sky became clear and we could see the sunset. It was actually a beautiful evening.",
+     cn:"街上有積水，但不算太深。鄰居在清水溝裡的落葉，我幫他清了大約二十分鐘。之後天空放晴，我們看到了夕陽。那其實是個很美的傍晚。"}
+  ],
+  target:[
+    {w:"typhoon",ipa:"/taɪˈfuːn/",pos:"n.",cn:"颱風",def:"A very strong storm with heavy rain and wind.",ex:"Last Wednesday there was a typhoon.",exCn:"上週三有颱風。"},
+    {w:"flooding",ipa:"/ˈflʌdɪŋ/",pos:"n.",cn:"淹水、水災",def:"When water covers an area that is usually dry.",ex:"She was worried about the flooding near our house.",exCn:"她擔心我們家附近會淹水。"},
+    {w:"fall down",ipa:"/fɔːl daʊn/",pos:"phr.v.",cn:"倒下、掉下來",def:"To drop from a standing position to the ground.",ex:"Some trees fell down.",exCn:"有些樹倒了。"},
+    {w:"drain",ipa:"/dreɪn/",pos:"n.",cn:"排水溝",def:"A pipe or channel that carries water away.",ex:"My neighbour was cleaning leaves from the drain.",exCn:"鄰居在清水溝裡的落葉。"},
+    {w:"sunset",ipa:"/ˈsʌnset/",pos:"n.",cn:"日落、夕陽",def:"The time when the sun goes down and the sky turns red or orange.",ex:"We could see the sunset.",exCn:"我們看到了夕陽。"}
+  ],
+  questions:[
+    {q:"Why did they not go to work?",opts:["A. It was a holiday","B. There was a typhoon","C. The office was closed for cleaning","D. They were sick"],ans:1,expl:"Last Wednesday there was a typhoon, so we did not go to work."},
+    {q:"What did the writer do first at home?",opts:["A. Watched TV","B. Called his mother","C. Cleaned the kitchen","D. Went outside"],ans:2,expl:"I stayed home and cleaned the kitchen. Then I watched the news."},
+    {q:"What happened when the rain stopped?",opts:["A. More trees fell down","B. The writer went outside to check","C. The flooding got worse","D. The writer went to work"],ans:1,expl:"When the rain stopped in the afternoon, I went outside to check."}
+  ],
+  upgrade:[
+    {b1:"The wind was strong. The rain was heavy.",
+     b2:"The wind was very strong and the rain was heavy all morning.",
+     note:"用 and 把兩個描述合在一起，再加上 all morning 點出時間長度，資訊更完整。"},
+    {b1:"My mother called me. She was worried.",
+     b2:"My mother called me because she was worried about the flooding.",
+     note:"用 because 把原因接在後面，不用分兩句講，讀起來更流暢。"}
+  ]
+},
+
+{
+  id:"d20260814b1p", date:"2026-08-14", level:"B1+", topic:"天氣與交通", words:146, kind:"orig",
+  title:"The Typhoon That Changed My Plans",
+  titleCn:"颱風打亂了我的計畫",
+  focus:"現在完成式 + 被動語態：描述「到目前為止」的天氣影響",
+  upFrom:"B1+", upTo:"B2",
+  intro:"同一個颱風，這次從「通勤族」的角度來看。注意現在完成式搭配被動的用法：have been cancelled、has been closed——事情已經發生了，而且影響還在。讀的時候找出哪些句子是「已經發生且仍在持續」的。",
+  paras:[
+    {en:"I was supposed to take the train to Taipei this morning, but my trip has been cancelled because of the typhoon. The weather bureau issued a sea warning yesterday, and since then the situation has got worse. More than 200 millimetres of rain has fallen in the northern mountains overnight.",
+     cn:"我今天早上本來要搭火車去台北，但因為颱風我的行程被取消了。氣象局昨天發布了海上警報，從那之後情況越來越糟。北部山區一個晚上降了超過 200 毫米的雨。"},
+    {en:"Several highways have been closed, and train services on the east coast have been suspended until further notice. My colleague texted me that her neighbourhood has been flooded since 5 a.m. She has moved to her parents' house on higher ground. I have never seen this much rain in August before.",
+     cn:"好幾條高速公路已經封閉，東海岸的火車也停駛到另行通知為止。我同事傳訊息跟我說，她家那一帶從早上五點就開始淹水。她已經搬去住在高處的爸媽家了。我從來沒有在八月看過這麼大的雨。"},
+    {en:"The good news is that the typhoon is expected to turn north tonight and move away from Taiwan by tomorrow afternoon. I have already rebooked my train ticket for Friday. For now, I am working from home and hoping the power does not go out.",
+     cn:"好消息是颱風預計今晚會轉向北方，明天下午就會離開台灣。我已經把火車票改訂到週五了。現在我先在家工作，希望不要停電。"}
+  ],
+  target:[
+    {w:"weather bureau",ipa:"/ˈweðər ˈbjʊroʊ/",pos:"n.",cn:"氣象局",def:"A government office that studies and reports the weather.",ex:"The weather bureau issued a sea warning.",exCn:"氣象局發布了海上警報。"},
+    {w:"sea warning",ipa:"/siː ˈwɔːrnɪŋ/",pos:"n.",cn:"海上警報",def:"An official notice about dangerous weather near the coast.",ex:"The weather bureau issued a sea warning yesterday.",exCn:"氣象局昨天發布了海上警報。"},
+    {w:"suspend",ipa:"/səˈspend/",pos:"v.",cn:"暫停",def:"To stop something for a period of time.",ex:"Train services have been suspended.",exCn:"火車停駛了。"},
+    {w:"higher ground",ipa:"/ˈhaɪər ɡraʊnd/",pos:"n.",cn:"高處、地勢較高的地方",def:"Land that is above the level that floods reach.",ex:"She moved to her parents' house on higher ground.",exCn:"她搬去住在高處的爸媽家。"},
+    {w:"rebook",ipa:"/ˌriːˈbʊk/",pos:"v.",cn:"改訂、重新訂位",def:"To book a ticket again for a different time.",ex:"I have already rebooked my train ticket for Friday.",exCn:"我已經把火車票改訂到週五了。"},
+    {w:"work from home",ipa:"/wɜːrk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home instead of going to the office.",ex:"I am working from home.",exCn:"我在家工作。"}
+  ],
+  questions:[
+    {q:"Why has the writer's trip been cancelled?",
+     opts:["A. The train broke down","B. Because of the typhoon","C. The ticket was too expensive","D. The office is closed today"],
+     ans:1,expl:"my trip has been cancelled because of the typhoon。"},
+    {q:"What has the writer's colleague done?",
+     opts:["A. Gone to work anyway","B. Stayed in her flooded house","C. Moved to her parents' house","D. Taken the train to Taipei"],
+     ans:2,expl:"She has moved to her parents' house on higher ground."},
+    {q:"Which sentence uses the present perfect passive?",
+     opts:["A. I was supposed to take the train.","B. Several highways have been closed.","C. The typhoon is expected to turn north.","D. I am working from home."],
+     ans:1,expl:"have been closed ＝ have been + 過去分詞，是現在完成式的被動語態。"}
+  ],
+  upgrade:[
+    {b1:"They cancelled my trip. The typhoon is very bad.",
+     b2:"My trip has been cancelled because of the typhoon.",
+     note:"重點是「我的行程」不是「誰取消的」，用被動把受影響的事放前面；because of 接名詞比分兩句簡潔。"},
+    {b1:"The rain started last night. It is still raining now.",
+     b2:"More than 200 millimetres of rain has fallen overnight.",
+     note:"現在完成式把「過去到現在」壓成一句，加上具體數字讓描述更有力。"}
+  ]
+},
+
+{
   id:"d20260814", date:"2026-08-14", level:"B2", topic:"天災與天氣", words:259, kind:"original",
   title:"Grounded by the Flood",
   titleCn:"被風雨困在機場",
@@ -203,6 +284,50 @@ grammar:[
 },
 
 {
+  id:"dg20260814b1", date:"2026-08-14", unitNo:1,
+  level:"B1", title:"Present Continuous vs Present Simple", titleCn:"現在進行式 vs 現在簡單式",
+  srcDays:[],
+  summary:"什麼時候用 I am doing，什麼時候用 I do？進行式講「現在這段時間」的事，簡單式講「一直都這樣」的事。搞混了意思就不一樣。",
+  sections:[
+    {h:"核心差別", table:{head:["","現在進行式 (I am doing)","現在簡單式 (I do)"],rows:[
+      ["感覺","暫時的、正在發生","永久的、一直都這樣"],
+      ["時間","now / this week / today","every day / usually / always"],
+      ["例句","I'm reading a good book.（最近在讀）","I read before bed every night.（習慣）"]
+    ]}},
+    {h:"比較：同一個動詞，不同意思", examples:[
+      {en:"I'm living with my parents this month.",cn:"這個月我暫時住在爸媽家。",note:"this month ＝ 暫時的 → 進行式"},
+      {en:"I live in Taoyuan.",cn:"我住在桃園。",note:"住在哪裡 ＝ 長期事實 → 簡單式"},
+      {en:"She's working at a café this summer.",cn:"她這個暑假在咖啡廳打工。",note:"this summer ＝ 暫時的 → 進行式"},
+      {en:"She works at a bank.",cn:"她在銀行工作。",note:"職業 ＝ 長期 → 簡單式"}
+    ]},
+    {h:"⚠ 狀態動詞不用進行式", bullets:[
+      "有些動詞描述的是「狀態」而不是「動作」，不能加 -ing：",
+      "✓ I know the answer. ✗ I am knowing the answer.",
+      "✓ She likes coffee. ✗ She is liking coffee.",
+      "✓ I want to go home. ✗ I am wanting to go home.",
+      "常見狀態動詞：know / like / love / want / need / believe / understand / have（擁有）"
+    ]},
+    {h:"have 的特殊情況", examples:[
+      {en:"I have a car.",cn:"我有一台車。",note:"have ＝ 擁有 → 狀態動詞，用簡單式"},
+      {en:"I'm having lunch.",cn:"我正在吃午餐。",note:"have ＝ 吃 → 動作動詞，可以用進行式"},
+      {en:"We're having a meeting at 3.",cn:"我們三點有個會議。",note:"have ＝ 進行（活動）→ 可以用進行式"}
+    ]}
+  ],
+  traps:[
+    {bad:"I am knowing the answer.",good:"I know the answer.",why:"know 是狀態動詞，不能用進行式。中文的「我知道」不分進行不進行，但英文一定用簡單式。"},
+    {bad:"I live with my parents this month.",good:"I'm living with my parents this month.",why:"this month 表示暫時的情況，用進行式才自然。用簡單式會變成「我一直住爸媽家」。"},
+    {bad:"She is working at a bank. (指她的職業)",good:"She works at a bank.",why:"講職業這種長期事實要用簡單式。進行式暗示「暫時的」，面試官可能以為你馬上要離職。"},
+    {bad:"I have dinner now.",good:"I'm having dinner now.",why:"have 當「吃」的意思時是動作動詞，配 now 要用進行式。"}
+  ],
+  quiz:[
+    {q:"I usually ____ tea, but today I ____ coffee.",opts:["drink / am drinking","am drinking / drink","drink / drink","am drinking / am drinking"],ans:0,expl:"usually ＝ 習慣用簡單式；today ＝ 暫時的例外用進行式。"},
+    {q:"She ____ three languages: Chinese, English, and Japanese.",opts:["is speaking","speaks","is knowing","speak"],ans:1,expl:"會講幾種語言是長期能力，用簡單式。"},
+    {q:"Don't call me at 12:30 — I ____ lunch.",opts:["have","am having","having","has"],ans:1,expl:"have ＝ 吃（動作），12:30 是特定時刻正在做的事 → 進行式。"},
+    {q:"He ____ to change jobs. He's happy where he is.",opts:["isn't wanting","doesn't want","don't want","not wants"],ans:1,expl:"want 是狀態動詞，不用進行式；第三人稱用 doesn't want。"}
+  ]
+},
+
+{
   id:"dg20260814", date:"2026-08-14", unitNo:1,
   level:"B1+", title:"Present Continuous: Advanced Uses", titleCn:"現在進行式的進階用法",
   srcDays:[],
@@ -251,6 +376,52 @@ grammar:[
     {q:"We ____ the new client at 10 a.m. tomorrow — the meeting room is already booked.",opts:["will meet","meet","are meeting","met"],ans:2,expl:"會議室都訂了＝敲定的安排 → are meeting。"},
     {q:"選出「抱怨」語氣最強的一句：",opts:["My roommate always leaves dishes in the sink.","My roommate is always leaving dishes in the sink.","My roommate left dishes in the sink.","My roommate leaves dishes in the sink sometimes."],ans:1,expl:"always ＋ 進行式 ＝ 「老是這樣、受不了」的抱怨語氣。"},
     {q:"Why ____ so quiet today? You're usually the loudest person in the office.",opts:["are you","are you being","do you be","you are"],ans:1,expl:"be 的進行式 are you being 表示「今天暫時的表現」，跟平常不同——後句的 usually 就是線索。"}
+  ]
+},
+
+{
+  id:"dg20260814b2", date:"2026-08-14", unitNo:1,
+  level:"B2", title:"Present Tenses in Formal and Narrative Contexts", titleCn:"正式與敘事語境中的現在式",
+  srcDays:[],
+  summary:"到了 B2，現在簡單式和進行式不只區分「習慣 vs 暫時」，還牽涉語域、敘事手法和修辭選擇。新聞標題用簡單式寫「已經發生的事」、敘事用進行式建立背景、正式報告用簡單式陳述事實——選哪一個取決於你想達到什麼效果。",
+  sections:[
+    {h:"① 新聞標題的現在簡單式", body:[
+      "英文新聞標題用現在簡單式報導「已經發生的事」——這叫 headline present：",
+      "Typhoon Hits Northern Coast, Flights Grounded（颱風襲擊北部海岸，航班停飛）",
+      "Company Cuts 500 Jobs After Profit Drop（利潤下滑後公司裁員 500 人）",
+      "讀新聞時看到標題的 hits、cuts，不要以為是「習慣」——它是「剛發生」。"
+    ]},
+    {h:"② 現在進行式建立敘事背景", body:[
+      "在說故事或描述場景時，進行式建立「正在進行的背景」，讓讀者/聽者感覺身臨其境：",
+      "I'm standing at the airport. People are running in every direction. An announcement is playing but nobody is listening.",
+      "這不是「暫時的」，而是「讓你看到畫面」。寫作和口說都很實用。"
+    ]},
+    {h:"③ 正式報告用簡單式陳述事實", bullets:[
+      "The report shows that 40% of residents were affected.（報告顯示…）",
+      "The data suggest a strong link between rainfall and flooding.（數據指出…）",
+      "用 shows / suggests / indicates 而不是 is showing，因為這是「客觀事實的陳述」，不是「暫時的情況」。",
+      "但如果趨勢還在持續：Prices are rising faster than expected.（進行式強調「還在漲」）"
+    ]},
+    {h:"④ 選擇的效果：同一件事，不同溫度", table:{head:["寫法","效果"],rows:[
+      ["The company fires 200 workers.（標題式）","冷、客觀、新聞感"],
+      ["The company is firing 200 workers.（進行式）","正在發生、可能還會繼續"],
+      ["The company has fired 200 workers.（完成式）","結果已經出來、強調影響"]
+    ]}, examples:[
+      {en:"Floodwater is rising in three districts as rescuers work through the night.",cn:"三個區的洪水正在上漲，救援人員徹夜工作。",note:"進行式讓讀者感覺「現在正在發生」"},
+      {en:"The weather bureau issues a sea warning for the north coast.",cn:"氣象局針對北部海岸發布海上警報。",note:"標題式簡單式：已發生的事，寫成「正在發生」的感覺"},
+      {en:"The survey indicates that most commuters prefer working from home during typhoons.",cn:"調查顯示多數通勤者偏好颱風天在家工作。",note:"正式陳述用簡單式"}
+    ]}
+  ],
+  traps:[
+    {bad:"The report is showing that 40% of residents were affected.",good:"The report shows that 40% of residents were affected.",why:"報告的內容是固定的事實，不是「正在改變的趨勢」，用簡單式。"},
+    {bad:"Typhoon is hitting northern coast. (標題)",good:"Typhoon Hits Northern Coast.",why:"新聞標題用簡單式、大寫開頭、省略冠詞。用進行式反而不像標題。"},
+    {bad:"I stand at the airport. People run in every direction. (想營造場景感)",good:"I'm standing at the airport. People are running in every direction.",why:"要讓讀者「看到畫面」，用進行式營造臨場感；簡單式聽起來像在陳述事實而不是說故事。"}
+  ],
+  quiz:[
+    {q:"Which is a typical news headline?",opts:["A. Typhoon Is Hitting Coast","B. Typhoon Hits Coast","C. Typhoon Has Hit Coast","D. Typhoon Was Hitting Coast"],ans:1,expl:"新聞標題用現在簡單式報導已發生的事。"},
+    {q:"Fill in for a formal report: The data ____ a clear pattern.",opts:["are suggesting","suggest","suggested","have been suggesting"],ans:1,expl:"正式報告用 suggest（簡單式）陳述客觀事實。"},
+    {q:"Which creates a vivid narrative scene?",opts:["A. Rain falls and wind blows.","B. Rain is falling and wind is blowing.","C. Rain fell and wind blew.","D. Rain has fallen and wind has blown."],ans:1,expl:"進行式建立「此刻正在發生」的畫面感，是敘事的標準手法。"},
+    {q:"Prices ____ faster than expected this quarter.",opts:["rise","are rising","rose","rising"],ans:1,expl:"this quarter 表示趨勢還在持續中，用進行式強調「還在漲」。"}
   ]
 },
 
