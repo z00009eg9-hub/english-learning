@@ -139,11 +139,11 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 }
 /* 已完成：右上角綠色打勾角標 */
 .item.fin::before{
-  content:"✓";position:absolute;top:0;right:0;width:27px;height:27px;
-  background:var(--ok);color:#fff;font-weight:900;font-size:14px;line-height:27px;
-  text-align:center;border-radius:0 11px 0 11px;box-shadow:-1px 1px 4px rgba(30,120,70,.25)
+  content:"✓";position:absolute;top:0;right:0;width:36px;height:36px;
+  background:var(--ok);color:#fff;font-weight:900;font-size:20px;line-height:36px;
+  text-align:center;border-radius:0 11px 0 14px;box-shadow:-1px 1px 5px rgba(30,120,70,.3)
 }
-.item.fin>.row:first-child{padding-right:26px}
+.item.fin>.row:first-child{padding-right:34px}
 /* 右上角紅色 NEW 緞帶（今日新內容用） */
 .item.new::after{
   content:"NEW";position:absolute;top:13px;right:-32px;width:118px;
@@ -222,7 +222,12 @@ tr:nth-child(even) td{background:#fdfbf8}
 .fc .fx{font-size:calc(14.5px * var(--fs));margin-top:12px;border-top:1px dashed var(--line);padding-top:11px;text-align:left}
 .fc .fx .cn{color:var(--ink2);font-size:calc(13px * var(--fs))}
 .fc .fsrc{font-size:calc(11px * var(--fs));color:var(--ink2);margin-top:9px}
-.grade{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:12px}
+/* 評分列與翻卡鈕黏在畫面下緣（導覽列上方）：卡片再長也不用捲下去找按鈕 */
+.grade{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:12px;
+  position:sticky;bottom:calc(58px + env(safe-area-inset-bottom));z-index:8;
+  background:var(--bg);padding:8px 0 4px;border-radius:12px}
+.flipbar{position:sticky;bottom:calc(58px + env(safe-area-inset-bottom));z-index:8;
+  background:var(--bg);padding:8px 0 4px;margin-top:12px;text-align:center}
 .grade button{border:0;border-radius:10px;padding:11px 3px;font:inherit;font-size:calc(13px * var(--fs));font-weight:700;color:#fff;cursor:pointer}
 .g1{background:#d9534f}.g2{background:#e8913a}.g3{background:#4a9e6a}.g4{background:#3b82c4}
 .grade small{display:block;font-size:calc(10px * var(--fs));font-weight:400;opacity:.9}
@@ -501,6 +506,8 @@ const mkText = s => brSent(mkWrong(s));
 /* 清單卡片左側色條跟著程度走（A2 橘 / B1 綠 / B1+ 藍 / B2 紫） */
 const LVBAR={A2:'--a2',B1:'--b1','B1+':'--b1p',B2:'--b2'};
 const lvBar = l => 'border-left-color:var('+(LVBAR[l]||'--accent')+')';
+/* 清單卡片標題顏色也跟著程度走 */
+const lvTitle = l => 'color:var('+(LVBAR[l]||'--accent2')+')';
 /* 已完成：右上角打勾角標（今日新內容的卡片保留原本的文字，避免跟 NEW 緞帶打架） */
 const finCls   = (d,isNew) => (d&&!isNew)?' fin':'';
 const finTitle = (d,label) => d?' title="'+(label||'已完成')+' '+d.correct+'/'+d.total+'"':'';
@@ -802,7 +809,7 @@ RENDER.read=function(){
     +list.map(a=>{
       const d=ST.artDone[a.id];
       return '<div class="item'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="rdOpenArt(\''+a.id+'\')">'
-      +'<div class="row" style="justify-content:space-between"><div class="t">'+esc(a.title)+'</div><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span></div>'
+      +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(a.level)+'">'+esc(a.title)+'</div><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span></div>'
       +'<div class="tc">'+esc(a.titleCn)+'</div>'
       +'<div class="meta">'+(a.date?'<span>📅 '+esc(a.date)+'</span>':'')+'<span>🏷 '+esc(a.topic)+'</span><span>📝 '+a.words+' words</span>'
       +(a.focus?'<span>📐 '+esc(a.focus)+'</span>':'')
@@ -1044,7 +1051,7 @@ function readerHTML(a){
      +'</div>';
   }
   if((a.questions||[]).length){
-    h+='<div class="card"><h2 class="sec">✅ 閱讀理解測驗</h2><div id="quizBox">'+quizHTML(a.questions,'art')+'</div>'
+    h+='<div class="card"><div class="row" style="align-items:center;margin-bottom:8px"><h2 class="sec" style="margin:0">✅ 閱讀理解測驗</h2>'+qzBtnHTML('art',a.questions)+'</div><div id="quizBox">'+quizHTML(a.questions,'art')+'</div>'
      +'<div id="quizScore"></div></div>';
   }
   h+='<div class="card" style="text-align:center"><button class="btn" onclick="rdClose()">完成，回列表</button></div>';
@@ -1114,10 +1121,14 @@ window.togCn=togCn; window.cnAll=cnAll; window.readAll=readAll;
    4. 通用測驗元件
    ============================================================ */
 let QSTATE={};
+/* 標題列右側的「顯示中譯」開關；沒有中譯資料的測驗回空字串 */
+function qzBtnHTML(ns,qs){
+  const hasCn=(qs||[]).some(q=>q.qCn||(q.optsCn||[]).length);
+  if(!hasCn) return '';
+  return '<button class="spk" id="qcn-'+ns+'" data-ns="'+ns+'" onclick="togQuizCn(this.dataset.ns)" style="margin-left:auto">🈶 顯示中譯</button>';
+}
 function quizHTML(qs,ns){
-  /* 題目有中譯（qCn / optsCn）時，多一顆「顯示中譯」開關；預設隱藏，自己決定要不要看 */
-  const hasCn=qs.some(q=>q.qCn||(q.optsCn||[]).length);
-  return (hasCn?'<div class="row" style="margin-bottom:9px"><button class="spk" id="qcn-'+ns+'" onclick="togQuizCn(\''+ns+'\')">🈶 顯示中譯</button></div>':'')
+  return ''
   +'<div id="quiz-'+ns+'">'
   + qs.map((q,i)=>
     '<div class="q"><div class="qt">'+(i+1)+'. '+esc(q.q)+' '+spk(q.q)
@@ -1262,7 +1273,7 @@ RENDER.vocab=function(){
       +'<button class="g3" onclick="vGrade(3)">記得<small>幾天後</small></button>'
       +'<button class="g4" onclick="vGrade(4)">很簡單<small>更久</small></button>'
       +'</div>'
-      : '<div style="margin-top:12px;text-align:center"><button class="btn" onclick="vDoFlip()">翻開答案</button></div>')
+      : '<div class="flipbar"><button class="btn" onclick="vDoFlip()">翻開答案</button></div>')
     +'</div>';
 };
 let vBrowseOn=false;
@@ -1327,7 +1338,7 @@ RENDER.gram=function(){
     + ALL_GRAM.map(g=>{
       const d=ST.gramDone[g.id];
       return '<div class="item'+finCls(d)+'"'+finTitle(d,'練習')+' style="'+lvBar(g.level)+'" onclick="gOpen(\''+g.id+'\')">'
-      +'<div class="row" style="justify-content:space-between"><div class="t">'+esc(g.titleCn)+'</div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
+      +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(g.level)+'">'+esc(g.titleCn)+'</div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
       +'<div class="tc">'+esc(g.title)+'</div>'
       +'<div class="meta"><span>'+esc(g.summary)+'</span></div>'
       +'<div class="meta">'+(g.date?'<span>📅 '+esc(g.date)+' 新增'+(g.unitNo?' · Unit '+g.unitNo:'')+'</span>'
@@ -1372,7 +1383,7 @@ function gramHTML(g){
      +'</div>';
   }
   if((g.quiz||[]).length){
-    h+='<div class="card"><h2 class="sec">✏️ 練習題</h2><div>'+quizHTML(g.quiz,'gram')+'</div><div id="gquizScore"></div></div>';
+    h+='<div class="card"><div class="row" style="align-items:center;margin-bottom:8px"><h2 class="sec" style="margin:0">✏️ 練習題</h2>'+qzBtnHTML('gram',g.quiz)+'</div><div>'+quizHTML(g.quiz,'gram')+'</div><div id="gquizScore"></div></div>';
   }
   h+='<div class="card" style="text-align:center"><button class="btn" onclick="gClose()">完成，回列表</button></div>';
   return h;
@@ -1409,7 +1420,7 @@ RENDER.daily=function(){
   artsToday.forEach(a=>{
     const d=ST.artDone[a.id];
     h+='<div class="item'+(isToday(a)?' new':finCls(d))+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="dailyArt(\''+a.id+'\')">'
-     +'<div class="t">📖 '+esc(a.title)+'</div>'
+     +'<div class="t" style="'+lvTitle(a.level)+'">📖 '+esc(a.title)+'</div>'
      +'<div class="tc">'+esc(a.titleCn)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span><span>📅 '+esc(a.date||'')+'</span><span>🏷 '+esc(a.topic)+'</span><span>📝 '+a.words+' words</span>'
      +(a.kind==='news'||a.sourceUrl?'<span>📰 真實新聞改寫</span>':'<span>✍️ 原創</span>')
@@ -1418,7 +1429,7 @@ RENDER.daily=function(){
   gramsToday.forEach(g=>{
     const d=ST.gramDone[g.id];
     h+='<div class="item'+(isToday(g)?' new':finCls(d))+'"'+finTitle(d,'練習')+' style="'+lvBar(g.level)+'" onclick="goUnit(\''+g.id+'\')">'
-     +'<div class="t">📐 '+esc(g.titleCn)+'</div>'
+     +'<div class="t" style="'+lvTitle(g.level)+'">📐 '+esc(g.titleCn)+'</div>'
      +'<div class="tc">'+esc(g.title)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span><span>📅 '+esc(g.date||'')+'</span>'+(g.unitNo?'<span>Grammar in Use 進度 Unit '+g.unitNo+'</span>':'')
      +finMeta(d,isToday(g),'練習')+'</div></div>';
@@ -1426,7 +1437,7 @@ RENDER.daily=function(){
   listensToday.forEach(l=>{
     const d=(ST.listenDone||{})[l.id];
     h+='<div class="item'+(l.date===t?' new':finCls(d))+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
-     +'<div class="t">🎧 '+esc(l.title)+'</div>'
+     +'<div class="t" style="'+lvTitle(l.level)+'">🎧 '+esc(l.title)+'</div>'
      +'<div class="tc">'+esc(l.titleCn)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span>'+(l.date?'<span>📅 '+esc(l.date)+'</span>':'')+'<span>🎬 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span>'
      +finMeta(d,l.date===t)+'</div></div>';
@@ -1748,7 +1759,9 @@ function playerBox(divId){
 RENDER.listen=function(){
   const v=$('v-listen');
   if(lsOpen){ v.innerHTML=lessonHTML(lsOpen); mountPlayer('yt-main',lsOpen.yt); showLoop();
-              if(lsScript(lsOpen)) applySubToggles(); return; }
+              if(lsScript(lsOpen)||lessonSubs(lsOpen)) applySubToggles();
+              if(lessonSubs(lsOpen)) startSync(); else stopSync();
+              return; }
   if(myVid){
     const vv=curVidObj();
     if(vv){ v.innerHTML=myVidHTML(vv); mountPlayer('yt-my',myVid); showLoop(); applySubToggles(); startSync(); return; }
@@ -1762,18 +1775,18 @@ RENDER.listen=function(){
    + list.map(l=>{
      const d=(ST.listenDone||{})[l.id];
      return '<div class="item'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
-      +'<div class="row" style="justify-content:space-between"><div class="t">🎬 '+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
+      +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(l.level)+'">🎬 '+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
       +'<div class="tc">'+esc(l.titleCn)+'</div>'
       +'<div class="meta"><span>🏷 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span><span>📐 '+esc(l.focus)+'</span>'
       +(l.kind==='vlog'?'<span>🎥 真人 vlog</span>':'')
-      +(lsScript(l)?'<span>📜 有逐字稿</span>':(l.needsSubs?'<span>⏳ 字幕待補</span>':''))
+      +((lsScript(l)||lessonSubs(l))?'<span>📜 有逐字稿</span>':(l.needsSubs?'<span>⏳ 字幕待補</span>':''))
       +'</div>'
       +'<div class="meta"><span>'+esc(l.series)+'</span></div></div>';
    }).join('')
    + myVideoCard();
 };
 function lsGo(id){ lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; go('listen'); }
-function lsClose(){ destroyPlayer(); lsOpen=null; RENDER.listen(); }
+function lsClose(){ destroyPlayer(); stopSync(); lsOpen=null; RENDER.listen(); }
 window.lsGo=lsGo; window.lsClose=lsClose;
 
 /* 這一課有沒有逐字稿（data-scripts.js） */
@@ -1781,14 +1794,15 @@ function lsScript(l){ return (window.LISTEN_SCRIPTS||{})[l && l.id] || null; }
 
 function lessonHTML(l){
   const sc=lsScript(l);
+  const timed=lessonSubs(l);   /* 學習者貼的時間軸字幕：優先於靜態逐字稿 */
   let h='<button class="back" onclick="lsClose()"></button>'
    /* 有逐字稿時，影片黏在最上面（跟 Speak Up 一樣），往下捲字幕影片仍看得到 */
-   +(sc?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':'')
+   +((sc||timed)?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':'')
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<h2 class="sec" style="margin:0">🎬 '+esc(l.title)+'</h2><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
    +'<div class="muted">'+esc(l.titleCn)+' · ⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</div>'
-   + (sc?'':playerBox('yt-main'))
-   + (sc?playerControls()
+   + ((sc||timed)?'':playerBox('yt-main'))
+   + ((sc||timed)?playerControls()
         +'<div class="row" style="margin-top:9px">'
         +'<button class="spk" id="tg-en" onclick="tgEn()">'+(showEn?'👁 英文：顯示':'👁 英文：隱藏')+'</button>'
         +'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button></div>'
@@ -1814,21 +1828,36 @@ function lessonHTML(l){
        +'<div class="ecn" id="kc'+i+'" style="display:none;margin-top:4px">'+esc(k.cn)+'</div></div>').join('')+'</div>';
   }
   if((l.questions||[]).length){
-    h+='<div class="card"><h2 class="sec">✅ 聽力理解測驗</h2>'
+    h+='<div class="card"><div class="row" style="align-items:center;margin-bottom:8px"><h2 class="sec" style="margin:0">✅ 聽力理解測驗</h2>'+qzBtnHTML('listen',l.questions)+'</div>'
      +'<div class="hint">建議先只聽、不看逐字稿就作答，答完再回去對照。</div>'
      + quizHTML(l.questions,'listen')+'<div id="lsquizScore"></div></div>';
   }
-  if(!sc && l.cc){
+  if(!sc && !timed && l.cc){
     h+='<div class="card"><h2 class="sec">💬 這一課的字幕怎麼開</h2>'
      +'<div class="hint">這是真人 vlog，<b>字幕在影片本身</b>：點播放器右下角的 <b>CC</b> 就會出現英文字幕'
      +'（是頻道自己上的，不是機器聽打，所以很準）。想更慢可以用上面的 0.5x／0.75x。</div>'
      +(l.needsSubs?'<div class="ex" style="border-color:#f0c890;background:#fff8ec">'
         +'<div class="enote" style="font-size:calc(13.5px * var(--fs));font-weight:800">⏳ 站內中譯字幕還沒補上</div>'
-        +'<div class="ecn" style="margin-top:4px">這一課是先把影片收進來，中英對照的字幕之後再補。'
-        +'在那之前請用播放器的 CC 看英文字幕。</div></div>':'')
+        +'<div class="ecn" style="margin-top:4px">在下面貼上逐字稿，這一課就會變成有<b>時間軸同步中英字幕</b>的教材（跟「我的影片」一樣）。</div></div>':'')
+     + lsubBoxHTML(false)
      +'</div>';
   }
-  if(sc){
+  if(timed){
+    const hasCn=timed.some(x=>x.cn);
+    h+='<div class="card"><h2 class="sec">📜 逐字稿（時間軸同步）</h2>'
+     +'<div class="hint">播放時字幕會自動亮起來並捲動。<b>點任一句</b>可以跳到那一秒；<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。</div>'
+     +'<div id="sublist">'+ timed.map((k,i)=>
+        '<div class="sline" id="sl-'+i+'">'
+        +'<div class="srow"><button class="stime" onclick="seekLine('+i+')">'+fmt(k.t)+'</button>'
+        +'<div class="sen" onclick="seekLine('+i+')">'+tokenize(k.en,null)+'</div>'
+        +spk(k.en)+'</div>'
+        +(k.cn?'<div class="scn">'+esc(k.cn)+'</div>':'')
+        +'</div>').join('')+'</div>'
+     +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">這份字幕是學習者自己貼的，兩台裝置共用。</div>'
+     + lsubBoxHTML(true)
+     +'</div>';
+  }
+  else if(sc){
     h+='<div class="card"><h2 class="sec">📜 逐字稿（含中譯）</h2>'
      +'<div class="hint">影片會一直黏在上面，一邊看一邊對照。<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。上面可以把英文或中譯先蓋起來，自己測驗。</div>'
      +'<div id="sublist">'+ sc.map((k,i)=>
@@ -1853,11 +1882,50 @@ function ytId(s){
   const m=s.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/);
   return m?m[1]:null;
 }
+/* ---------- 內建聽力課的補充逐字稿（學習者自己貼的；存 Firestore b2lab_lesson_subs，兩人共用） ---------- */
+let LSUBS={}, lsubUnsub=null;
+try{ LSUBS=JSON.parse(localStorage.getItem('b2lab_lsubs')||'{}')||{}; }catch(e){ LSUBS={}; }
+function lsubCol(){ return db ? db.collection('b2lab_lesson_subs') : null; }
+function lsubSubscribe(){
+  const c=lsubCol(); if(!c||lsubUnsub) return;
+  lsubUnsub=c.onSnapshot(snap=>{
+    snap.docs.forEach(d=>{ const x=d.data(); if(x&&(x.lines||[]).length) LSUBS[d.id]=x.lines; });
+    try{ localStorage.setItem('b2lab_lsubs',JSON.stringify(LSUBS)); }catch(e){}
+    if(TAB==='listen'&&lsOpen) RENDER.listen();
+  },()=>{});
+}
+function lessonSubs(l){ const x=l&&LSUBS[l.id]; return (x&&x.length)?x:null; }
+function saveLessonSubs(){
+  if(!lsOpen) return;
+  const err=$('lsub-err');
+  const fail=m=>{ if(err){err.textContent=m;err.style.display='block';} };
+  const lines=parseSubs(($('lsub-txt')||{}).value);
+  if(!lines.length) return fail('請至少貼一行，格式：00:07 英文句子 | 中文翻譯（時間與中文可省略）。');
+  if(err) err.style.display='none';
+  LSUBS[lsOpen.id]=lines;
+  try{ localStorage.setItem('b2lab_lsubs',JSON.stringify(LSUBS)); }catch(e){}
+  const c=lsubCol();
+  if(c) c.doc(lsOpen.id).set({lines:lines,addedBy:PROFILE,updatedAt:Date.now()},{merge:true}).catch(()=>{});
+  RENDER.listen();
+}
+window.saveLessonSubs=saveLessonSubs;
+/* 貼字幕的輸入框（新貼與更新共用） */
+function lsubBoxHTML(update){
+  return '<div style="margin-top:10px'+(update?';border-top:1px dashed var(--line);padding-top:10px':'')+'">'
+   +'<div class="muted" style="font-weight:800;color:var(--accent2)">'+(update?'🔁 重新貼一次就會更新字幕':'➕ 貼上逐字稿，這一課就會有中英字幕')+'</div>'
+   +'<textarea id="lsub-txt" rows="6" placeholder="00:07 And the first thing that I always do… | 我做的第一件事…&#10;00:12 is I cook myself good food. | 就是給自己做頓好吃的。&#10;&#10;時間和中文都可以省略，一行一句就好。" '
+   +'style="width:100%;margin-top:7px;padding:10px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:calc(14px * var(--fs));resize:vertical"></textarea>'
+   +'<div class="muted" style="margin-top:6px;font-size:calc(12.5px * var(--fs))">💡 逐字稿哪裡來：在 YouTube 影片下方按「⋯ 顯示轉錄稿 / Show transcript」全選複製，再自己補中文；或把英文貼給 AI 請它加時間軸後的中譯。</div>'
+   +'<div id="lsub-err" class="muted" style="margin-top:7px;color:var(--bad);display:none"></div>'
+   +'<div style="margin-top:9px"><button class="btn" onclick="saveLessonSubs()">儲存字幕（所有裝置同步）</button></div></div>';
+}
+
 /* ---------- 我的影片庫（存 Firestore b2lab_videos，兩位學習者共用、跨裝置同步） ---------- */
 let MYVIDS=[], myUnsub=null, showCn=true, showEn=true, syncTimer=null, curLine=-1;
 
 function vidCol(){ return db ? db.collection('b2lab_videos') : null; }
 function vidSubscribe(){
+  lsubSubscribe();
   const c=vidCol(); if(!c||myUnsub) return;
   myUnsub=c.onSnapshot(s=>{
     MYVIDS=s.docs.map(d=>Object.assign({id:d.id},d.data()))
@@ -1991,9 +2059,15 @@ function tgCn(){ showCn=!showCn; applySubToggles(); }
 window.tgEn=tgEn; window.tgCn=tgCn;
 
 function curVidObj(){ return MYVIDS.find(x=>x.id===myVid)||null; }
+/* 目前畫面上有時間軸字幕的那一組（我的影片，或貼了字幕的內建課） */
+function curLines(){
+  if(myVid){ const v=curVidObj(); return v?(v.lines||[]):null; }
+  if(lsOpen) return lessonSubs(lsOpen);
+  return null;
+}
 function seekLine(i){
-  const v=curVidObj(); if(!v||!v.lines[i]) return;
-  if(pReady()){ ytPlayer.seekTo(v.lines[i].t,true); if(ytPlayer.playVideo) ytPlayer.playVideo(); }
+  const L=curLines(); if(!L||!L[i]) return;
+  if(pReady()){ ytPlayer.seekTo(L[i].t,true); if(ytPlayer.playVideo) ytPlayer.playVideo(); }
   setCurLine(i,false);
 }
 window.seekLine=seekLine;
@@ -2010,11 +2084,11 @@ window.jumpCur=jumpCur;
 function startSync(){
   stopSync();
   syncTimer=setInterval(()=>{
-    const v=curVidObj();
-    if(!v||!pReady()){ return; }
+    const L=curLines();
+    if(!L||!pReady()){ return; }
     const t=ytPlayer.getCurrentTime();
     let idx=-1;
-    for(let k=0;k<v.lines.length;k++){ if(v.lines[k].t<=t+0.25) idx=k; else break; }
+    for(let k=0;k<L.length;k++){ if(L[k].t<=t+0.25) idx=k; else break; }
     if(idx>=0) setCurLine(idx,true);
   },400);
 }

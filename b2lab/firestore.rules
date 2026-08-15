@@ -11,5 +11,11 @@ service cloud.firestore {
       allow read: if true;
       allow write: if vid.size() == 11;
     }
+    // 內建聽力課的補充逐字稿（學習者自己貼上的，兩人共用）
+    // 文件 id ＝課程 id（例 vlog01、dl20260814a2）
+    match /b2lab_lesson_subs/{lesson} {
+      allow read: if true;
+      allow write: if lesson.size() >= 3 && lesson.size() <= 24;
+    }
   }
 }

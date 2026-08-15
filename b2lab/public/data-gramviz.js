@@ -59,7 +59,7 @@ V.nowVsAlways=card(
   })(),
   en:'She works every day.', cn:'平常的習慣，不一定此刻正在做'},
  '左邊：am/is/are + V-ing，講「這一刻」；右邊：現在簡單式，講「平常都這樣」。同一件事，看你想說的是哪一種。');
-['g02','ga01','dg20260814','dg20260814a2'].forEach(k=>V[k]=V.nowVsAlways);
+['g02','ga01'].forEach(k=>V[k]=V.nowVsAlways);
 
 /* ---------- 過去進行式（背景）vs 過去簡單式（發生的事） ---------- */
 V.pastBg=card(
@@ -385,6 +385,46 @@ V.g15=card(
    +'<text x="160" y="252" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">可能在、可能不在</text>',
   en:'He might be home.', cn:'不確定的猜測：可能是'},
  '推測的確定度：must be（90%，一定是）> may / might / could be（50%，可能是）> can&#39;t be（90% 確定「不是」）。過去的推測用 must have + p.p.：He must have missed the bus.');
+
+/* ---------- A2：現在進行式（基礎）—— be + V-ing 兩塊缺一不可 ---------- */
+V.dg20260814a2=card(
+ {pw:190,title:'be ＋ V-ing',
+  draw:'<rect x="52" y="118" width="98" height="52" rx="12" fill="#2b5f92"/>'
+   +'<text x="101" y="150" text-anchor="middle" font-size="17" font-weight="900" fill="#fff">am / is / are</text>'
+   +'<text x="163" y="152" text-anchor="middle" font-size="26" font-weight="900" fill="#c9631f">＋</text>'
+   +'<rect x="176" y="118" width="92" height="52" rx="12" fill="#e8913a"/>'
+   +'<text x="222" y="150" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">V-ing</text>'
+   +'<text x="160" y="212" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">兩塊都要有，缺一塊就不成立</text>'
+   +em(160,254,34,'🧩'),
+  en:'She is talking now.', cn:'be 動詞＋動詞-ing，一組出現'},
+ {pw:170,title:'少一塊就錯',
+  draw:'<text x="160" y="128" text-anchor="middle" font-size="16" font-weight="800" fill="#c0392b">✗ She talking.</text>'
+   +'<text x="160" y="156" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7c8b96">（少了 be）</text>'
+   +'<text x="160" y="192" text-anchor="middle" font-size="16" font-weight="800" fill="#c0392b">✗ She is talk.</text>'
+   +'<text x="160" y="220" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7c8b96">（少了 -ing）</text>'
+   +'<text x="160" y="256" text-anchor="middle" font-size="16.5" font-weight="900" fill="#1f8a4c">✓ She is talking.</text>',
+  en:'✓ She is talking.', cn:'be 和 -ing 都到齊才是進行式'},
+ '現在進行式＝be（am/is/are）＋動詞-ing，講「現在這一刻正在做的事」。兩塊缺一不可：She talking（✗ 少 be）、She is talk（✗ 少 -ing）。主詞換了，be 也要跟著換：I am / She is / They are。');
+
+/* ---------- B1+：現在進行式的進階用法 —— 暫時狀態與已敲定的未來 ---------- */
+V.dg20260814=card(
+ {pw:210,title:'暫時狀態 this month',
+  draw:tl(206)
+   +'<rect x="150" y="164" width="120" height="24" rx="12" fill="#f0b04e" opacity=".6"/>'
+   +'<text x="210" y="181" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7a4a08">this month 這陣子</text>'
+   +em(76,150,44,'🏠')+em(120,132,30,'🧳')
+   +'<text x="160" y="120" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">只是暫時的，不是永遠</text>',
+  en:'I&#39;m living with my parents this month.', cn:'這陣子的暫時狀態（平常不是這樣）'},
+ {pw:210,title:'已敲定的未來安排',
+  draw:'<rect x="92" y="104" width="136" height="104" rx="12" fill="#fff" stroke="#8aa8bf" stroke-width="2.5"/>'
+   +'<rect x="92" y="104" width="136" height="30" rx="12" fill="#2b5f92"/>'
+   +'<text x="160" y="125" text-anchor="middle" font-size="13.5" font-weight="900" fill="#fff">THURSDAY 週四</text>'
+   +em(160,178,42,'✈️')
+   +'<circle cx="222" cy="112" r="13" fill="#d9534f"/>'
+   +'<text x="222" y="117" text-anchor="middle" font-size="13" font-weight="900" fill="#fff">✓</text>'
+   +'<text x="160" y="244" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">機票訂好了＝用進行式，不用 will</text>',
+  en:'I&#39;m flying to Taipei on Thursday.', cn:'已敲定的安排（will 聽起來像剛決定）'},
+ '進階兩用法：①暫時狀態（this month / these days）——現在這陣子如此，平常未必；②已敲定的未來安排——票訂了、時間喬好了就用進行式。另外配 always 還能抱怨：He is always losing his keys!（他老是掉鑰匙）');
 
 return V;
 })();
