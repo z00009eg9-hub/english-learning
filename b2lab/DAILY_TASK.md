@@ -237,18 +237,78 @@ console.log('OK');"
 
 ### 3.6 追加**四課聽力**（A2 / B1 / B1+ / B2）→ 都插入 `public/data-listen.js` 的 `lessons` 陣列**最前面**
 
+> **⭐ 2026-08-15 起：聽力以「真人 vlog」為主。**
+> 學習者要求每週三、五的例行更新都以 vlog 為主要素材——也就是真人對著鏡頭講話、
+> 街頭訪問、一日紀錄這一類**真實語速、真實口音**的影片，而不是教室錄製的教材對話。
+> VOA 那種棚內教材只當**備援**：某個程度真的找不到合格 vlog 時才用，並在回報裡說明。
+
 網站「今日」分頁會列出**該學習者程度區間內、當天所有程度**的聽力，所以每次執行要補四課：
 
-| 程度 | 影片來源 | id |
-|---|---|---|
-| `A2` | VOA Let's Learn English **Level 1** | `"dl"+YYYYMMDD+"a2"` |
-| `B1` | VOA Let's Learn English **Level 2**（較前面的課次） | `"dl"+YYYYMMDD+"b1"` |
-| `B1+` | VOA Let's Learn English **Level 2**（較後面的課次） | `"dl"+YYYYMMDD+"b1p"` |
-| `B2` | **TED-Ed** 或 VOA *Everyday Grammar* / *News Words*（見下方 B2 專用規則） | `"dl"+YYYYMMDD+"b2"` |
+| 程度 | 首選（vlog） | 備援 | id |
+|---|---|---|---|
+| `A2` | 慢速、畫面對得上動作的日常 vlog（作息、開箱、料理） | VOA Let's Learn English **Level 1** | `"dl"+YYYYMMDD+"a2"` |
+| `B1` | 兩人對談式 vlog、簡單的街頭訪問 | VOA Let's Learn English **Level 2**（前段課次） | `"dl"+YYYYMMDD+"b1"` |
+| `B1+` | 街頭訪問（多種口音）、旅遊或工作日常 vlog | VOA Let's Learn English **Level 2**（後段課次） | `"dl"+YYYYMMDD+"b1p"` |
+| `B2` | 觀點型 vlog、長一點的訪談 | TED-Ed 或 VOA *Everyday Grammar* / *News Words* | `"dl"+YYYYMMDD+"b2"` |
 
-- VOA 三課都從**編號最小、且不在 `usedVoa` 裡**的那一課開始（`usedVoa` 用 `"L1-7"`、`"L2-3"` 這種代號記錄「第幾級第幾課」）。B1 與 B1+ 同樣抽 Level 2，但**不可以是同一課**。
 - **四課都必須有 `date:"YYYY-MM-DD"` 欄位**（今天日期），網站才會把它當成今天的新聽力顯示。
 - 四課的 `level` 必須剛好是 A2、B1、B1+、B2 各一個。
+- vlog 課要加上 `kind:"vlog"` 與 `cc:true` 兩個欄位（網站靠它顯示「🎥 真人 vlog」標籤，
+  以及「字幕請按播放器的 CC」那張提示卡）。
+- 用備援的 VOA／TED-Ed 時不要加這兩個欄位，照原本的方式處理（含站內逐字稿）。
+- `usedVoa` 一律拿來記錄「今天用掉的素材」避免重複：vlog 用 `"YT-<影片ID>"`，
+  VOA 用 `"L1-9"`、TED-Ed 用 `"TED-<slug>"`。
+
+#### 3.6.0 vlog 怎麼找、怎麼驗（**每一支都要跑完這四關**）
+
+**第一關：找候選。** 抓 YouTube 搜尋結果頁，從 `ytInitialData` 裡撈 `videoRenderer`
+（含 `videoId` / 標題 / 頻道 / 長度）。查詢字串例如
+`easy english street interview daily routine`、`learn english vlog a day in my life`。
+
+**第二關：頻道與長度。** 只用教英文或做英語街訪的正派頻道，例如
+BBC Learning English、Easy Languages / Easy English、Learn English with Bob the Canadian、
+Speak English With Vanessa、English with Lucy、VOA。長度取 **2–10 分鐘**。
+**娛樂型 vlog、個人生活頻道、來源不明的頻道一律不要。**
+
+**第三關：影片真的存在。** oEmbed 驗證，拿到真實 `title` 與 `author_name`：
+
+```bash
+curl -s "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=<ID>&format=json"
+```
+
+**第四關：一定要有「人工上的」英文字幕**（不能是機器自動聽打，auto 的錯字太多）：
+
+```bash
+python -m pip install --quiet youtube-transcript-api
+python -c "
+from youtube_transcript_api import YouTubeTranscriptApi
+api=YouTubeTranscriptApi()
+tl=api.list('<ID>')
+for t in tl:
+    if t.language_code.startswith('en'):
+        print(t.language_code, 'AUTO' if t.is_generated else 'MANUAL', len(t.fetch().to_raw_data()))
+"
+```
+
+印出 **MANUAL** 才算過關；只有 AUTO 或完全沒有就換一支。
+（注意語言代碼可能是 `en-GB`／`en-CA`，`languages` 要一起帶進去。）
+
+> ⚠️ 這個 API 有時會回 `IpBlocked`——短時間查太多支就會被 YouTube 暫時擋掉。
+> 被擋到就**停下來，不要硬編內容**：可以先只補當天找得到的課，缺的在回報裡寫清楚。
+
+#### 3.6.0.1 vlog 的版權處理（**和 VOA 不一樣，務必分清楚**）
+
+BBC、Easy Languages 這些頻道的影片**不是公共領域**，所以：
+
+- **不可以**把它們的逐字稿寫進 `public/data-scripts.js`。vlog 課不做站內逐字稿，
+  改用 `cc:true` 讓網站提示學習者按播放器的 CC 開啟頻道自己上的字幕。
+- 字幕只拿來**當作備課用的參考**：你要先讀過字幕才知道影片實際講了什麼，
+  然後用它來寫**你自己原創的** `intro`、`tip`、`pre`、`questions`。
+- `keyLines` 最多引用 **6 句**、每句盡量短，屬於教學用的少量引用；不要整段搬。
+- `source` 寫頻道名稱（例：`"BBC Learning English（YouTube 官方頻道）"`），
+  `sourceUrl` 填該影片的 YouTube 連結。
+- **沒有實際讀過字幕就不要寫 `pre`／`keyLines`／`questions`**——寧可留空陣列，
+  也不要憑影片標題想像內容。留空的話網站只會顯示影片、導讀與 CC 提示，不會壞掉。
 
 **⚠️ 影片鐵則（做不到就跳過那一課，不要硬編）**
 
@@ -289,7 +349,10 @@ VOA *Let's Learn English* 只有 Level 1 與 Level 2，沒有更高的級別，�
 | `keyLines` | 5–7 句 `{en, cn}`，`en` 取自真實對白、`cn` 自己翻 |
 | `questions` | 4–5 個 `{q, opts, ans, expl}`，格式同文章題，`ans` 為 0-based |
 
-#### 3.6.1 每一課都要補逐字稿到 `public/data-scripts.js`
+#### 3.6.1 公共領域的那幾課要補逐字稿到 `public/data-scripts.js`
+
+> 這一節**只適用於 VOA／TED-Ed 這種可以合法轉錄的備援課**。
+> `kind:"vlog"` 的課**跳過這一節**，改用 `cc:true`（見 3.6.0.1）。
 
 網站的聽力課會把影片黏在最上面、**下面接整份逐字稿（英文＋中譯）**，資料來源是
 `public/data-scripts.js` 的 `window.LISTEN_SCRIPTS[課程 id]`：
@@ -304,24 +367,14 @@ VOA *Let's Learn English* 只有 Level 1 與 Level 2，沒有更高的級別，�
 - **英文一律取自該課程頁（`sourceUrl`）的 Conversation／Transcript 段落，不可自己編。**
   抓法：下載課程頁 HTML，去掉標籤後撈出 `說話者: 台詞` 這種行。
 - `sp` 是說話者名字（沒有就省略）、`cn` 由自己翻成口語中文。
-- 抓不到逐字稿的影片就**不要選它當今天的聽力**，改挑另一支有逐字稿的。
-- 沒有寫進 `data-scripts.js` 的課，網站只會顯示影片與關鍵句，不會有字幕區。
+- 抓不到逐字稿、又不是 vlog 的影片就**不要選它當今天的聽力**，改挑另一支。
+- 沒有寫進 `data-scripts.js` 又沒有 `cc:true` 的課，網站只會顯示影片與關鍵句，不會有字幕區。
 
-### 3.7 每一篇文章都要配一張圖（`public/data-art.js`）
+### 3.7 配圖是硬性要求
 
-網站每篇閱讀文章上方都會出現一張自繪的 SVG 說明圖＋圖說，資料在
-`public/data-art.js` 的 `window.ART[文章 id]`：
-
-```js
-"d20260814b1":{ cap:"圖說：說明圖裡的元素各自對應文章的哪一句", svg:`<svg viewBox="0 0 800 200" ...>...</svg>` }
-```
-
-- **四篇文章都要有**，缺圖的文章上方會是空的。
-- `svg` 用 800×200 的橫幅：深色底 + 英文標題 + 中文標題 + 一句文章原句，右側放三個圓形圖示。
-- 圖示要對應文章真正提到的東西（不要放不相干的裝飾）。
-- `cap` 要寫「圖中的 X 對應文章的哪一句」，並點出這課的文法重點。
-- SVG 內**不要**出現反引號或反斜線（會打斷 JS 樣板字串）。
-- 收尾驗證會檢查今天四篇是否都有圖，缺圖就不要 commit。
+3.5 產生的橫幅圖**四篇都不能少**：網站每篇文章上方都會顯示它，缺圖那篇上方會是空的。
+收尾驗證會逐篇檢查 `window.ART[文章 id]`，缺圖就不要 commit。
+（`cap` 圖說要寫「圖中的 X 對應文章的哪一句」，並點出這課的文法重點。）
 
 ### 4. 更新 `b2lab/daily-state.json`
 
@@ -400,8 +453,14 @@ if(!todays.some(x=>x.level==='B2')) console.warn('⚠ 今天沒有 B2 聽力（�
 todays.forEach(x=>{
   if(!/^dl\d{8}(a2|b1|b1p|b2)?$/.test(x.id)) throw 'id 格式錯: '+x.id;
   if(!/^[A-Za-z0-9_-]{11}$/.test(x.yt)) throw 'YouTube ID 格式怪怪的: '+x.yt;
-  if(!x.keyLines.length||x.questions.length<4) throw x.id+' 聽力內容不完整';
-  if(!(SC[x.id]||[]).length) throw x.id+' 沒有逐字稿（data-scripts.js）';
+  if(x.kind==='vlog'){
+    if(!x.cc) throw x.id+' 是 vlog 但沒有 cc:true';
+    if((SC[x.id]||[]).length) throw x.id+' 是 vlog，不可以放站內逐字稿（版權）';
+    if(x.keyLines.length>6) throw x.id+' vlog 引用超過 6 句（版權）';
+  }else{
+    if(!x.keyLines.length||x.questions.length<4) throw x.id+' 聽力內容不完整';
+    if(!(SC[x.id]||[]).length) throw x.id+' 沒有逐字稿（data-scripts.js）';
+  }
   x.questions.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw x.id+' ans 索引錯誤: '+q.q});
 });
 const yts=todays.map(x=>x.yt);
@@ -423,7 +482,7 @@ push 之後 `.github/workflows/deploy-b2lab.yml` 會自動部署到 https://engl
 
 用繁體中文簡短回報，**依程度列成一張表**：
 
-| 程度 | 文章（標題／字數／類型） | 文法單元（中文名／syllabus 編號） | 聽力（來源／課次／YouTube ID） |
+| 程度 | 文章（標題／字數／類型） | 文法單元（中文名／syllabus 編號） | 聽力（vlog 或備援／頻道／YouTube ID） |
 |---|---|---|---|
 | A2 | | | |
 | B1 | | | |
