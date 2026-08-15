@@ -14,7 +14,7 @@ lessons:[
    適合當作「聽真實英文」的練習。影片本身有影片作者自己上的英文字幕（非機器auto），
    在播放器右下角按 CC 就會出現；因為不是公共領域素材，這裡不轉錄全文逐字稿。 */
 {
-  id:"vlog01", level:"A2", yt:"t25LxJkZ1Ng", minutes:3, kind:"vlog", cc:true,
+  id:"vlog01", level:"A2", yt:"t25LxJkZ1Ng", minutes:3, kind:"vlog", cc:true, needsSubs:true,
   title:"Morning Routine: Phrasal Verbs", titleCn:"早晨例行公事：片語動詞",
   series:"BBC Learning English · Georgie",
   topic:"生活 vlog · 早晨作息", focus:"早晨作息的片語動詞（wake up / get up / get dressed 這一類）",
@@ -28,7 +28,7 @@ lessons:[
 },
 
 {
-  id:"vlog02", level:"B1", yt:"bq6GBbh3uhU", minutes:5, kind:"vlog", cc:true,
+  id:"vlog02", level:"B1", yt:"bq6GBbh3uhU", minutes:5, kind:"vlog", cc:true, needsSubs:true,
   title:"How to Talk About Your Daily Routine", titleCn:"怎麼談你的一天",
   series:"BBC Learning English · Easy English Conversations · Episode 4",
   topic:"生活 vlog · 日常作息", focus:"用現在簡單式描述習慣與例行公事",
@@ -42,7 +42,7 @@ lessons:[
 },
 
 {
-  id:"vlog03", level:"B1+", yt:"OlyYE6USuO0", minutes:6, kind:"vlog", cc:true,
+  id:"vlog03", level:"B1+", yt:"OlyYE6USuO0", minutes:6, kind:"vlog", cc:true, needsSubs:true,
   title:"Easy English: Talking About the Future", titleCn:"街頭訪問：聊未來的計畫",
   series:"Easy English · Episode 29（街頭訪問）",
   topic:"生活 vlog · 街頭訪問", focus:"未來的講法：will / going to / 現在進行式表已排定的計畫",
@@ -56,7 +56,7 @@ lessons:[
 },
 
 {
-  id:"vlog04", level:"B1+", yt:"ecF1y2bI2T4", minutes:8, kind:"vlog", cc:true,
+  id:"vlog04", level:"B1+", yt:"ecF1y2bI2T4", minutes:8, kind:"vlog", cc:true, needsSubs:true,
   title:"A Day in My Life, Acted Out", titleCn:"把一天演給你看",
   series:"Learn English with Bob the Canadian",
   topic:"生活 vlog · 一日作息", focus:"把日常動作講成完整句子（動詞片語 + 時間副詞）",

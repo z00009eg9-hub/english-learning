@@ -294,7 +294,19 @@ for t in tl:
 （注意語言代碼可能是 `en-GB`／`en-CA`，`languages` 要一起帶進去。）
 
 > ⚠️ 這個 API 有時會回 `IpBlocked`——短時間查太多支就會被 YouTube 暫時擋掉。
-> 被擋到就**停下來，不要硬編內容**：可以先只補當天找得到的課，缺的在回報裡寫清楚。
+>
+> **被擋到時的做法（學習者指定）：影片照樣先收進來，字幕之後再補。**
+> 第四關過不了**不代表要放棄這一課**，只要第一到第三關過了（頻道正派、長度合適、
+> oEmbed 驗證影片真的存在），就照常寫進 `data-listen.js`，並且：
+>
+> - 加上 `needsSubs:true`，網站會在該課顯示「⏳ 字幕待補」的標籤與說明卡。
+> - `pre`／`keyLines`／`questions` **一律留空陣列**——沒讀過字幕就不要憑標題編內容。
+> - `intro`／`tip` 照樣自己寫（可以根據影片標題、頻道、主題寫，不要宣稱影片裡有什麼具體句子）。
+> - 在回報裡列出「這幾課字幕待補」，學習者會自己補上。
+>
+> 補字幕的方式：把中英對照寫進 `public/data-scripts.js` 的
+> `window.LISTEN_SCRIPTS["課程 id"]`（格式見 3.6.1），然後把該課的 `needsSubs` 拿掉。
+> 站內一有逐字稿，「字幕待補」提示就會自動消失、換成逐字稿面板。
 
 #### 3.6.0.1 vlog 的版權處理（**和 VOA 不一樣，務必分清楚**）
 
@@ -307,8 +319,9 @@ BBC、Easy Languages 這些頻道的影片**不是公共領域**，所以：
 - `keyLines` 最多引用 **6 句**、每句盡量短，屬於教學用的少量引用；不要整段搬。
 - `source` 寫頻道名稱（例：`"BBC Learning English（YouTube 官方頻道）"`），
   `sourceUrl` 填該影片的 YouTube 連結。
-- **沒有實際讀過字幕就不要寫 `pre`／`keyLines`／`questions`**——寧可留空陣列，
-  也不要憑影片標題想像內容。留空的話網站只會顯示影片、導讀與 CC 提示，不會壞掉。
+- **沒有實際讀過字幕就不要寫 `pre`／`keyLines`／`questions`**——一律留空陣列，
+  並加上 `needsSubs:true`。留空的話網站只會顯示影片、導讀與 CC 提示，不會壞掉，
+  學習者之後會自己補中譯字幕。**不要因為讀不到字幕就放棄整支影片。**
 
 **⚠️ 影片鐵則（做不到就跳過那一課，不要硬編）**
 
@@ -455,8 +468,11 @@ todays.forEach(x=>{
   if(!/^[A-Za-z0-9_-]{11}$/.test(x.yt)) throw 'YouTube ID 格式怪怪的: '+x.yt;
   if(x.kind==='vlog'){
     if(!x.cc) throw x.id+' 是 vlog 但沒有 cc:true';
-    if((SC[x.id]||[]).length) throw x.id+' 是 vlog，不可以放站內逐字稿（版權）';
     if(x.keyLines.length>6) throw x.id+' vlog 引用超過 6 句（版權）';
+    // 自動流程不轉錄 vlog 逐字稿；但學習者自己補上的不算錯，只提醒
+    if((SC[x.id]||[]).length && x.needsSubs) console.warn('⚠ '+x.id+' 已經有逐字稿了，可以把 needsSubs 拿掉');
+    if(!(SC[x.id]||[]).length && !x.needsSubs) throw x.id+' 沒有逐字稿也沒有標 needsSubs:true';
+    if(!x.keyLines.length && !x.needsSubs) throw x.id+' 沒有關鍵句也沒有標 needsSubs:true';
   }else{
     if(!x.keyLines.length||x.questions.length<4) throw x.id+' 聽力內容不完整';
     if(!(SC[x.id]||[]).length) throw x.id+' 沒有逐字稿（data-scripts.js）';
@@ -495,6 +511,8 @@ push 之後 `.github/workflows/deploy-b2lab.yml` 會自動部署到 https://engl
 - `usedUnits` 與 `usedUnitsTom` 各還剩幾個單元沒教
 - 四張橫幅各用了哪套配色與哪三個圖示
 - 有跳過的項目（例如 B2 聽力找不到可驗證的影片）要說明原因
+- **另外列一份「⏳ 字幕待補」清單**：哪幾課因為抓不到字幕（IpBlocked 或影片沒有人工字幕）
+  只收了影片，等學習者補中譯。附上課程 id 與 YouTube 連結，方便直接點開看。
 
 最後提醒一句：Tom 會看到 A2／B1／B1+ 三份，Anita 會看到 B1／B1+／B2 三份。
 

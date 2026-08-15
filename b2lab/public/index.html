@@ -1708,7 +1708,8 @@ RENDER.listen=function(){
       +'<div class="row" style="justify-content:space-between"><div class="t">🎬 '+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
       +'<div class="tc">'+esc(l.titleCn)+'</div>'
       +'<div class="meta"><span>🏷 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span><span>📐 '+esc(l.focus)+'</span>'
-      +(l.kind==='vlog'?'<span>🎥 真人 vlog</span>':'')+(lsScript(l)?'<span>📜 有逐字稿</span>':'')
+      +(l.kind==='vlog'?'<span>🎥 真人 vlog</span>':'')
+      +(lsScript(l)?'<span>📜 有逐字稿</span>':(l.needsSubs?'<span>⏳ 字幕待補</span>':''))
       +'</div>'
       +'<div class="meta"><span>'+esc(l.series)+'</span></div></div>';
    }).join('')
@@ -1763,8 +1764,12 @@ function lessonHTML(l){
   if(!sc && l.cc){
     h+='<div class="card"><h2 class="sec">💬 這一課的字幕怎麼開</h2>'
      +'<div class="hint">這是真人 vlog，<b>字幕在影片本身</b>：點播放器右下角的 <b>CC</b> 就會出現英文字幕'
-     +'（是頻道自己上的，不是機器聽打，所以很準）。想更慢可以用上面的 0.5x／0.75x。<br>'
-     +'因為這支影片不是公共領域素材，站內不轉錄全文逐字稿，請直接看影片內建字幕。</div></div>';
+     +'（是頻道自己上的，不是機器聽打，所以很準）。想更慢可以用上面的 0.5x／0.75x。</div>'
+     +(l.needsSubs?'<div class="ex" style="border-color:#f0c890;background:#fff8ec">'
+        +'<div class="enote" style="font-size:calc(13.5px * var(--fs));font-weight:800">⏳ 站內中譯字幕還沒補上</div>'
+        +'<div class="ecn" style="margin-top:4px">這一課是先把影片收進來，中英對照的字幕之後再補。'
+        +'在那之前請用播放器的 CC 看英文字幕。</div></div>':'')
+     +'</div>';
   }
   if(sc){
     h+='<div class="card"><h2 class="sec">📜 逐字稿（含中譯）</h2>'
