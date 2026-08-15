@@ -166,9 +166,16 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 .para .cn{font-size:calc(14px * var(--fs));color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:7px;display:none}
 .para.showcn .cn{display:block}
 .para .pbar{margin-top:5px;display:flex;gap:6px}
-w{cursor:pointer;border-radius:3px}
+w{cursor:pointer;border-radius:4px;transition:background .12s}
 w.hi{background:#fff2d9;box-shadow:inset 0 -2px 0 #f0b04e;font-weight:600}
 w:active{background:#ffe0b8}
+/* 剛剛點過的字：換色＋浮起來的立體感，一眼看得出查的是哪一個字 */
+w.tapped{
+  display:inline-block;                       /* inline 元素吃不到 transform，要改成 inline-block */
+  background:linear-gradient(#ffd89b,#ffbe57);color:#5b3210;font-weight:700;
+  box-shadow:0 2px 0 #c8801f,0 3px 6px rgba(0,0,0,.22);
+  transform:translateY(-1px);padding:0 3px
+}
 .gloss{
   position:fixed;left:10px;right:10px;bottom:78px;background:#fff;border:1px solid var(--line);
   border-radius:14px;box-shadow:0 8px 28px rgba(60,40,20,.22);padding:14px 15px;z-index:70;max-width:520px;
@@ -684,7 +691,17 @@ function showGloss(raw){
   }
   $('gloss').classList.add('on');
 }
-function hideGloss(){ $('gloss').classList.remove('on'); }
+function hideGloss(){
+  $('gloss').classList.remove('on');
+  document.querySelectorAll('w.tapped').forEach(x=>x.classList.remove('tapped'));
+}
+/* 點到的那個字加上 .tapped（換色＋立體感），下次點別的字才換掉 */
+document.addEventListener('click',function(e){
+  const w=e.target && e.target.closest ? e.target.closest('w') : null;
+  if(!w) return;
+  document.querySelectorAll('w.tapped').forEach(x=>{ if(x!==w) x.classList.remove('tapped'); });
+  w.classList.add('tapped');
+},true);
 window.showGloss=showGloss; window.hideGloss=hideGloss;
 
 // 把英文段落切成可點擊的單字
@@ -956,7 +973,7 @@ function readerHTML(a){
    +'<div class="row" style="margin-bottom:11px">'
    +'<button class="btn ghost" onclick="cnAll(1)">顯示全部中譯</button>'
    +'<button class="btn gray" onclick="cnAll(0)">隱藏中譯</button>'
-   +'<button class="btn ghost" onclick="readAll()">🔊 朗讀全文</button></div>'
+   +'<button class="btn ghost" id="btn-readall" onclick="readAll()">🔊 朗讀全文</button></div>'
    +'<div id="paras">'+a.paras.map((p,i)=>{
       const enHtml=splitSentences(p.en).map(s=>
         '<span class="sent" title="點這句朗讀" onclick="saySent(this)" data-t="'+esc(s)+'">'+magTokenizeRead(s,tmap,used)+'</span>'
@@ -1042,10 +1059,33 @@ window.goUnit=goUnit;
 
 function togCn(i){ $('p'+i).classList.toggle('showcn'); }
 function cnAll(on){ document.querySelectorAll('.para').forEach(p=>p.classList.toggle('showcn',!!on)); }
+/* 朗讀全文：一句一句唸，唸到哪一句就把那一句反黃並捲進畫面 */
+let readSeq=null;
 function readAll(){
   if(!rdOpen) return;
-  say(rdOpen.paras.map(p=>p.en).join(' '));
+  if(readSeq){ stopReadAll(); return; }          // 再按一次＝停止
+  const sents=[].slice.call(document.querySelectorAll('#paras .sent'));
+  if(!sents.length){ say(rdOpen.paras.map(p=>p.en).join(' ')); return; }
+  const btn=$('btn-readall'); if(btn) btn.textContent='⏹ 停止朗讀';
+  readSeq={i:0, list:sents};
+  stepRead();
 }
+function stepRead(){
+  if(!readSeq) return;
+  document.querySelectorAll('#paras .sent.reading').forEach(x=>x.classList.remove('reading'));
+  if(readSeq.i>=readSeq.list.length){ stopReadAll(); return; }
+  const el=readSeq.list[readSeq.i];
+  el.classList.add('reading');
+  el.scrollIntoView({block:'center',behavior:'smooth'});
+  say(el.dataset.t, null, function(){ if(readSeq){ readSeq.i++; stepRead(); } });
+}
+function stopReadAll(){
+  readSeq=null;
+  if('speechSynthesis' in window) speechSynthesis.cancel();
+  document.querySelectorAll('#paras .sent.reading').forEach(x=>x.classList.remove('reading'));
+  const btn=$('btn-readall'); if(btn) btn.textContent='🔊 朗讀全文';
+}
+window.stopReadAll=stopReadAll;
 window.togCn=togCn; window.cnAll=cnAll; window.readAll=readAll;
 
 /* ============================================================
@@ -1090,7 +1130,17 @@ window.pick=pick;
    5. 單字卡 + 間隔複習 (SM-2 簡化版)
    ============================================================ */
 const CATS={daily:'日常生活',workplace:'職場',health:'健康身體',learning:'學習',food:'食物'};
-const VOCAB=(NOTES.vocab||[]).filter(v=>v&&v.w);
+/* 同一個字在不同課的筆記裡可能重複出現，單字卡要去重，
+   否則同一輪複習會一直跳出同一個字（保留欄位最完整的那一筆）。 */
+const VOCAB=(function(){
+  const score=v=>['ipa','pos','cn','def','exEn','exCn','src'].reduce((n,k)=>n+(v[k]?1:0),0);
+  const best={};
+  (NOTES.vocab||[]).filter(v=>v&&v.w).forEach(v=>{
+    const k=String(v.w).toLowerCase().trim();
+    if(!best[k] || score(v)>score(best[k])) best[k]=v;
+  });
+  return Object.values(best);
+})();
 function srs(w){ return ST.srs[w] || null; }
 function isDue(w){ const s=srs(w); return s && s.due<=today(); }
 function isNew(w){ return !srs(w); }
@@ -1323,7 +1373,7 @@ RENDER.daily=function(){
 
   artsToday.forEach(a=>{
     const d=ST.artDone[a.id];
-    h+='<div class="item'+(isToday(a)?' new':finCls(d))+'"'+finTitle(d)+' style="border-left-color:#3b82c4" onclick="dailyArt(\''+a.id+'\')">'
+    h+='<div class="item'+(isToday(a)?' new':finCls(d))+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="dailyArt(\''+a.id+'\')">'
      +'<div class="t">📖 '+esc(a.title)+'</div>'
      +'<div class="tc">'+esc(a.titleCn)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span><span>📅 '+esc(a.date||'')+'</span><span>🏷 '+esc(a.topic)+'</span><span>📝 '+a.words+' words</span>'
@@ -1332,7 +1382,7 @@ RENDER.daily=function(){
   });
   gramsToday.forEach(g=>{
     const d=ST.gramDone[g.id];
-    h+='<div class="item'+(isToday(g)?' new':finCls(d))+'"'+finTitle(d,'練習')+' style="border-left-color:#8b5cf6" onclick="goUnit(\''+g.id+'\')">'
+    h+='<div class="item'+(isToday(g)?' new':finCls(d))+'"'+finTitle(d,'練習')+' style="'+lvBar(g.level)+'" onclick="goUnit(\''+g.id+'\')">'
      +'<div class="t">📐 '+esc(g.titleCn)+'</div>'
      +'<div class="tc">'+esc(g.title)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span><span>📅 '+esc(g.date||'')+'</span>'+(g.unitNo?'<span>Grammar in Use 進度 Unit '+g.unitNo+'</span>':'')
@@ -1340,7 +1390,7 @@ RENDER.daily=function(){
   });
   listensToday.forEach(l=>{
     const d=(ST.listenDone||{})[l.id];
-    h+='<div class="item'+(l.date===t?' new':finCls(d))+'"'+finTitle(d)+' style="border-left-color:#159AA6" onclick="lsGo(\''+l.id+'\')">'
+    h+='<div class="item'+(l.date===t?' new':finCls(d))+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
      +'<div class="t">🎧 '+esc(l.title)+'</div>'
      +'<div class="tc">'+esc(l.titleCn)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span>'+(l.date?'<span>📅 '+esc(l.date)+'</span>':'')+'<span>🎬 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span>'
@@ -1508,6 +1558,19 @@ function updateDayIcon(){
   if(m) m.textContent=mon;
   if(d) d.textContent=now.getDate();
 }
+/* 跨日時圖示要自己換成新日期：分頁重新顯示、視窗回到前景、
+   以及每分鐘檢查一次（手機把網頁擺著過夜也會更新）。 */
+let dayIconStamp=today();
+function refreshDayIfChanged(){
+  const t=today();
+  if(t===dayIconStamp) return;
+  dayIconStamp=t;
+  updateDayIcon();
+  if(TAB==='daily') RENDER.daily && RENDER.daily();   // 今日新內容跟著新日期重算
+}
+document.addEventListener('visibilitychange',()=>{ if(!document.hidden) refreshDayIfChanged(); });
+window.addEventListener('focus',refreshDayIfChanged);
+setInterval(refreshDayIfChanged,60000);
 /* 量測 sticky header 高度，讓黏頂的影片剛好貼在 header 下方 */
 function updateHd(){ const hd=document.querySelector('header'); if(hd) document.documentElement.style.setProperty('--hdh',hd.offsetHeight+'px'); }
 window.addEventListener('resize',updateHd);
@@ -1645,6 +1708,7 @@ RENDER.listen=function(){
       +'<div class="row" style="justify-content:space-between"><div class="t">🎬 '+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
       +'<div class="tc">'+esc(l.titleCn)+'</div>'
       +'<div class="meta"><span>🏷 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span><span>📐 '+esc(l.focus)+'</span>'
+      +(l.kind==='vlog'?'<span>🎥 真人 vlog</span>':'')+(lsScript(l)?'<span>📜 有逐字稿</span>':'')
       +'</div>'
       +'<div class="meta"><span>'+esc(l.series)+'</span></div></div>';
    }).join('')
@@ -1695,6 +1759,12 @@ function lessonHTML(l){
     h+='<div class="card"><h2 class="sec">✅ 聽力理解測驗</h2>'
      +'<div class="hint">建議先只聽、不看逐字稿就作答，答完再回去對照。</div>'
      + quizHTML(l.questions,'listen')+'<div id="lsquizScore"></div></div>';
+  }
+  if(!sc && l.cc){
+    h+='<div class="card"><h2 class="sec">💬 這一課的字幕怎麼開</h2>'
+     +'<div class="hint">這是真人 vlog，<b>字幕在影片本身</b>：點播放器右下角的 <b>CC</b> 就會出現英文字幕'
+     +'（是頻道自己上的，不是機器聽打，所以很準）。想更慢可以用上面的 0.5x／0.75x。<br>'
+     +'因為這支影片不是公共領域素材，站內不轉錄全文逐字稿，請直接看影片內建字幕。</div></div>';
   }
   if(sc){
     h+='<div class="card"><h2 class="sec">📜 逐字稿（含中譯）</h2>'

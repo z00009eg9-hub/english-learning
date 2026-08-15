@@ -9,6 +9,66 @@ window.LISTEN = {
 
 lessons:[
 
+/* ---------------------------------------------------------- 生活 vlog（真人實景、非教室對話）
+   這四支都是真人對著鏡頭或在街頭訪問的影片，語速與口音比 VOA 教材自然，
+   適合當作「聽真實英文」的練習。影片本身有影片作者自己上的英文字幕（非機器auto），
+   在播放器右下角按 CC 就會出現；因為不是公共領域素材，這裡不轉錄全文逐字稿。 */
+{
+  id:"vlog01", level:"A2", yt:"t25LxJkZ1Ng", minutes:3, kind:"vlog", cc:true,
+  title:"Morning Routine: Phrasal Verbs", titleCn:"早晨例行公事：片語動詞",
+  series:"BBC Learning English · Georgie",
+  topic:"生活 vlog · 早晨作息", focus:"早晨作息的片語動詞（wake up / get up / get dressed 這一類）",
+  source:"BBC Learning English（YouTube 官方頻道）",
+  sourceUrl:"https://www.youtube.com/watch?v=t25LxJkZ1Ng",
+  intro:"BBC 的老師 Georgie 對著鏡頭示範自己的早晨，一邊做一邊講。這種「邊做邊說」的影片最適合把片語動詞跟畫面綁在一起記——看到她關掉鬧鐘，就聽到 turn off；看到她起床，就聽到 get up。只有兩分半，建議連看三次。",
+  tip:"第一次不開字幕、只看畫面猜她在說哪個動作；第二次按 CC 開英文字幕對答案；第三次跟著她的節奏念出來。片語動詞要整組記，不要拆開背單字。",
+  pre:[],
+  keyLines:[],
+  questions:[]
+},
+
+{
+  id:"vlog02", level:"B1", yt:"bq6GBbh3uhU", minutes:5, kind:"vlog", cc:true,
+  title:"How to Talk About Your Daily Routine", titleCn:"怎麼談你的一天",
+  series:"BBC Learning English · Easy English Conversations · Episode 4",
+  topic:"生活 vlog · 日常作息", focus:"用現在簡單式描述習慣與例行公事",
+  source:"BBC Learning English（YouTube 官方頻道）",
+  sourceUrl:"https://www.youtube.com/watch?v=bq6GBbh3uhU",
+  intro:"兩位 BBC 老師 Sian 和 Buli 用真實的聊天速度示範「你每天都做什麼？」這個最常見的問題。跟課本對話不同的是，他們會停頓、會插話、會改口——這才是真實的說話方式。",
+  tip:"注意他們怎麼「接話」：不是只回答，而是回答完再把問題丟回去。把這幾個接話的句子抄下來，下次上課就能直接用。",
+  pre:[],
+  keyLines:[],
+  questions:[]
+},
+
+{
+  id:"vlog03", level:"B1+", yt:"OlyYE6USuO0", minutes:6, kind:"vlog", cc:true,
+  title:"Easy English: Talking About the Future", titleCn:"街頭訪問：聊未來的計畫",
+  series:"Easy English · Episode 29（街頭訪問）",
+  topic:"生活 vlog · 街頭訪問", focus:"未來的講法：will / going to / 現在進行式表已排定的計畫",
+  source:"Easy Languages（YouTube 官方頻道）",
+  sourceUrl:"https://www.youtube.com/watch?v=OlyYE6USuO0",
+  intro:"主持人在街上隨機訪問路人「你接下來有什麼打算？」。每個人的口音、語速、用字都不一樣，這正是它的價值：你會聽到同一個意思被三四種不同方式講出來。這一課剛好可以複習你正在讀的「現在進行式表未來」。",
+  tip:"聽的時候專門抓「他用哪一種未來式」：已經訂好的講 I'm flying…（現在進行式），臨時決定的講 I'll…，本來就有打算的講 I'm going to…。抓到三個例子就算成功。",
+  pre:[],
+  keyLines:[],
+  questions:[]
+},
+
+{
+  id:"vlog04", level:"B1+", yt:"ecF1y2bI2T4", minutes:8, kind:"vlog", cc:true,
+  title:"A Day in My Life, Acted Out", titleCn:"把一天演給你看",
+  series:"Learn English with Bob the Canadian",
+  topic:"生活 vlog · 一日作息", focus:"把日常動作講成完整句子（動詞片語 + 時間副詞）",
+  source:"Learn English with Bob the Canadian（YouTube 官方頻道）",
+  sourceUrl:"https://www.youtube.com/watch?v=ecF1y2bI2T4",
+  intro:"加拿大老師 Bob 把自己一天的每個動作實際做一遍給你看，一邊做一邊用完整句子描述。畫面和句子完全對得起來，是最容易「不用翻譯就聽懂」的一種影片。八分鐘偏長，可以分兩天看。",
+  tip:"這支很適合練「影子跟讀」：每聽完一句就按暫停，把整句原封不動念一次，再放下一句。念的時候盡量模仿他的句子長度，不要只講一個單字。",
+  pre:[],
+  keyLines:[],
+  questions:[]
+},
+
 /* ---------------------------------------------------------- 2026-08-14 Tom */
 {
   id:"dl20260814a2", date:"2026-08-14", level:"A2", yt:"1-U7o9xjWQc", minutes:5,

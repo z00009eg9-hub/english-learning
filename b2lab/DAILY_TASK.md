@@ -307,6 +307,22 @@ VOA *Let's Learn English* 只有 Level 1 與 Level 2，沒有更高的級別，�
 - 抓不到逐字稿的影片就**不要選它當今天的聽力**，改挑另一支有逐字稿的。
 - 沒有寫進 `data-scripts.js` 的課，網站只會顯示影片與關鍵句，不會有字幕區。
 
+### 3.7 每一篇文章都要配一張圖（`public/data-art.js`）
+
+網站每篇閱讀文章上方都會出現一張自繪的 SVG 說明圖＋圖說，資料在
+`public/data-art.js` 的 `window.ART[文章 id]`：
+
+```js
+"d20260814b1":{ cap:"圖說：說明圖裡的元素各自對應文章的哪一句", svg:`<svg viewBox="0 0 800 200" ...>...</svg>` }
+```
+
+- **四篇文章都要有**，缺圖的文章上方會是空的。
+- `svg` 用 800×200 的橫幅：深色底 + 英文標題 + 中文標題 + 一句文章原句，右側放三個圓形圖示。
+- 圖示要對應文章真正提到的東西（不要放不相干的裝飾）。
+- `cap` 要寫「圖中的 X 對應文章的哪一句」，並點出這課的文法重點。
+- SVG 內**不要**出現反引號或反斜線（會打斷 JS 樣板字串）。
+- 收尾驗證會檢查今天四篇是否都有圖，缺圖就不要 commit。
+
 ### 4. 更新 `b2lab/daily-state.json`
 
 - `lastRun` = 今天
@@ -356,6 +372,17 @@ const byLv=l=>todays.find(a=>a.level===l);
 console.log('OK 文章:', LV.map(l=>l+' '+byLv(l).id+' ('+byLv(l).words+'字)').join(' | '));
 console.log('OK 文法:', LV.map(l=>l+' '+grams.find(g=>g.level===l).titleCn).join(' | '));"
 node -e "JSON.parse(require('fs').readFileSync('../daily-state.json','utf8'));console.log('state ok')"
+```
+
+也驗證今天四篇文章都有配圖：
+
+```bash
+cd b2lab/public
+node -e "global.window={};require('./data-daily.js');require('./data-art.js');
+const ART=window.ART||{}, TODAY=new Date().toISOString().slice(0,10);
+const todays=(window.DAILY.articles||[]).filter(a=>a.date===TODAY);
+todays.forEach(a=>{ if(!ART[a.id]||!ART[a.id].svg) throw a.id+' 沒有配圖（data-art.js）'; });
+console.log('art ok', todays.map(a=>a.id).join(' | '));"
 ```
 
 也驗證今天補的聽力（每課都要有今天日期；沒過就不要 commit 聽力那步的改動）：
