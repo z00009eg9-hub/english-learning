@@ -34,9 +34,9 @@ articles:[
     {w:"busy",ipa:"/ˈbɪzi/",pos:"adj.",cn:"忙的",def:"Having a lot to do.",ex:"My morning is always busy.",exCn:"我的早上總是很忙。"}
   ],
   questions:[
-    {q:"What time does the writer get up?",opts:["A. Six o'clock","B. Six thirty","C. Seven o'clock","D. Seven forty"],ans:1,expl:"I get up at six thirty every morning."},
-    {q:"Where does her husband eat breakfast?",opts:["A. At home","B. On the bus","C. Near his office","D. He does not eat breakfast"],ans:2,expl:"He buys a sandwich near his office."},
-    {q:"Which sentence is correct?",opts:["He get up at seven.","He gets up at seven.","He getting up at seven.","He are get up at seven."],ans:1,expl:"主詞是 He，現在簡單式動詞要加 -s → gets。"}
+    {q:"What time does the writer get up?",qCn:"作者幾點起床？",opts:["A. Six o'clock","B. Six thirty","C. Seven o'clock","D. Seven forty"],optsCn:["A. 六點", "B. 六點半", "C. 七點", "D. 七點四十"],ans:1,expl:"I get up at six thirty every morning."},
+    {q:"Where does her husband eat breakfast?",qCn:"她先生在哪裡吃早餐？",opts:["A. At home","B. On the bus","C. Near his office","D. He does not eat breakfast"],optsCn:["A. 在家", "B. 在公車上", "C. 在公司附近", "D. 他不吃早餐"],ans:2,expl:"He buys a sandwich near his office."},
+    {q:"Which sentence is correct?",qCn:"哪一句是正確的？",opts:["He get up at seven.","He gets up at seven.","He getting up at seven.","He are get up at seven."],ans:1,expl:"主詞是 He，現在簡單式動詞要加 -s → gets。"}
   ],
   upgrade:[
     {b1:"I get up at six thirty. I wash my face. I make coffee.",
@@ -74,9 +74,9 @@ articles:[
     {w:"friendly",ipa:"/ˈfrendli/",pos:"adj.",cn:"友善的",def:"Kind and easy to talk to.",ex:"The staff are very friendly.",exCn:"店員非常親切。"}
   ],
   questions:[
-    {q:"How long is the store open each day?",opts:["A. Twelve hours","B. Sixteen hours","C. Twenty-four hours","D. Only at night"],ans:2,expl:"It is open twenty-four hours a day."},
-    {q:"What did the store NOT have?",opts:["A. Milk","B. Water","C. Rice","D. Tea eggs"],ans:2,expl:"I also wanted some rice, but they did not have any."},
-    {q:"Choose the correct sentence.",opts:["I need two milks.","I need some milk.","I need a milk.","I need many milk."],ans:1,expl:"milk 不可數，不能加 s、不能用 a／many，用 some。"}
+    {q:"How long is the store open each day?",qCn:"這家店每天開多久？",opts:["A. Twelve hours","B. Sixteen hours","C. Twenty-four hours","D. Only at night"],optsCn:["A. 十二小時", "B. 十六小時", "C. 二十四小時", "D. 只有晚上開"],ans:2,expl:"It is open twenty-four hours a day."},
+    {q:"What did the store NOT have?",qCn:"店裡沒有什麼？",opts:["A. Milk","B. Water","C. Rice","D. Tea eggs"],optsCn:["A. 牛奶", "B. 水", "C. 米", "D. 茶葉蛋"],ans:2,expl:"I also wanted some rice, but they did not have any."},
+    {q:"Choose the correct sentence.",qCn:"選出正確的句子。",opts:["I need two milks.","I need some milk.","I need a milk.","I need many milk."],ans:1,expl:"milk 不可數，不能加 s、不能用 a／many，用 some。"}
   ],
   upgrade:[
     {b1:"I wanted rice. They did not have rice.",
@@ -114,9 +114,9 @@ articles:[
     {w:"light jacket",ipa:"/laɪt ˈdʒækɪt/",pos:"n.",cn:"薄外套",def:"A thin coat.",ex:"I am wearing a light jacket.",exCn:"我穿著一件薄外套。"}
   ],
   questions:[
-    {q:"What is the weather like right now?",opts:["A. Hot and dry","B. Raining and windy","C. Snowing","D. Sunny"],ans:1,expl:"It is raining now... The wind is strong."},
-    {q:"What does the writer usually wear in summer?",opts:["A. A light jacket","B. A T-shirt and short pants","C. A coat","D. A sweater"],ans:1,expl:"I usually wear a T-shirt and short pants."},
-    {q:"Choose the correct sentence for right now.",opts:["It rains now.","It is raining now.","It rain now.","It is rain now."],ans:1,expl:"now → 現在進行式 is raining。"}
+    {q:"What is the weather like right now?",qCn:"現在天氣怎麼樣？",opts:["A. Hot and dry","B. Raining and windy","C. Snowing","D. Sunny"],optsCn:["A. 又熱又乾", "B. 下雨又颳風", "C. 下雪", "D. 晴天"],ans:1,expl:"It is raining now... The wind is strong."},
+    {q:"What does the writer usually wear in summer?",qCn:"作者夏天通常穿什麼？",opts:["A. A light jacket","B. A T-shirt and short pants","C. A coat","D. A sweater"],optsCn:["A. 薄外套", "B. T 恤和短褲", "C. 大衣", "D. 毛衣"],ans:1,expl:"I usually wear a T-shirt and short pants."},
+    {q:"Choose the correct sentence for right now.",qCn:"選出描述「現在」的正確句子。",opts:["It rains now.","It is raining now.","It rain now.","It is rain now."],ans:1,expl:"now → 現在進行式 is raining。"}
   ],
   upgrade:[
     {b1:"It is raining. I want my umbrella. I cannot find it.",
@@ -155,9 +155,9 @@ articles:[
     {w:"much better",ipa:"/mʌtʃ ˈbetər/",pos:"phr.",cn:"好多了",def:"A lot better than before.",ex:"Today I feel much better.",exCn:"我今天覺得好多了。"}
   ],
   questions:[
-    {q:"What was wrong with the writer?",opts:["A. A broken arm","B. A headache and a sore throat","C. A toothache","D. A stomach ache"],ans:1,expl:"I had a headache and my throat hurt."},
-    {q:"What was her temperature?",opts:["A. 36 degrees","B. 37 degrees","C. 38 degrees","D. 39 degrees"],ans:2,expl:"My temperature was 38 degrees."},
-    {q:"Choose the correct past form.",opts:["Yesterday I am tired.","Yesterday I was tired.","Yesterday I were tired.","Yesterday I be tired."],ans:1,expl:"主詞 I 的過去式 be 動詞是 was。"}
+    {q:"What was wrong with the writer?",qCn:"作者哪裡不舒服？",opts:["A. A broken arm","B. A headache and a sore throat","C. A toothache","D. A stomach ache"],optsCn:["A. 手臂骨折", "B. 頭痛和喉嚨痛", "C. 牙痛", "D. 胃痛"],ans:1,expl:"I had a headache and my throat hurt."},
+    {q:"What was her temperature?",qCn:"她的體溫是幾度？",opts:["A. 36 degrees","B. 37 degrees","C. 38 degrees","D. 39 degrees"],optsCn:["A. 36 度", "B. 37 度", "C. 38 度", "D. 39 度"],ans:2,expl:"My temperature was 38 degrees."},
+    {q:"Choose the correct past form.",qCn:"選出正確的過去式。",opts:["Yesterday I am tired.","Yesterday I was tired.","Yesterday I were tired.","Yesterday I be tired."],ans:1,expl:"主詞 I 的過去式 be 動詞是 was。"}
   ],
   upgrade:[
     {b1:"I was sick. I called my office.",
@@ -196,9 +196,9 @@ articles:[
     {w:"late",ipa:"/leɪt/",pos:"adj.",cn:"遲到的",def:"After the right time.",ex:"I was ten minutes late.",exCn:"我遲到了十分鐘。"}
   ],
   questions:[
-    {q:"How long did the writer wait?",opts:["A. Ten minutes","B. Twenty minutes","C. Thirty minutes","D. Forty minutes"],ans:1,expl:"I waited at the bus stop for twenty minutes."},
-    {q:"How late was she for the meeting?",opts:["A. Five minutes","B. Ten minutes","C. Twenty minutes","D. She was not late"],ans:1,expl:"My meeting started at eight thirty... I was ten minutes late."},
-    {q:"Choose the correct sentence.",opts:["There is three buses.","There are three buses.","There have three buses.","There is many buses."],ans:1,expl:"three buses 是複數 → There are。"}
+    {q:"How long did the writer wait?",qCn:"作者等了多久？",opts:["A. Ten minutes","B. Twenty minutes","C. Thirty minutes","D. Forty minutes"],optsCn:["A. 十分鐘", "B. 二十分鐘", "C. 三十分鐘", "D. 四十分鐘"],ans:1,expl:"I waited at the bus stop for twenty minutes."},
+    {q:"How late was she for the meeting?",qCn:"她開會遲到了多久？",opts:["A. Five minutes","B. Ten minutes","C. Twenty minutes","D. She was not late"],optsCn:["A. 五分鐘", "B. 十分鐘", "C. 二十分鐘", "D. 她沒有遲到"],ans:1,expl:"My meeting started at eight thirty... I was ten minutes late."},
+    {q:"Choose the correct sentence.",qCn:"選出正確的句子。",opts:["There is three buses.","There are three buses.","There have three buses.","There is many buses."],ans:1,expl:"three buses 是複數 → There are。"}
   ],
   upgrade:[
     {b1:"The bus came at eight ten. It was very full.",
@@ -237,9 +237,9 @@ articles:[
     {w:"calm",ipa:"/kɑːm/",pos:"adj.",cn:"平靜的",def:"Quiet and relaxed.",ex:"A clean home makes me feel calm.",exCn:"乾淨的家讓我感到平靜。"}
   ],
   questions:[
-    {q:"What has the son done?",opts:["A. Washed the floor","B. Cleaned the bathroom","C. Taken out the rubbish","D. Washed the dishes"],ans:2,expl:"My son has taken out the rubbish."},
-    {q:"What is NOT finished?",opts:["A. The floor","B. The bathroom","C. The kitchen","D. The rubbish"],ans:2,expl:"My husband has not finished the kitchen yet."},
-    {q:"Choose the correct sentence.",opts:["I have already wash the floor.","I have already washed the floor.","I already washed the floor yet.","I has already washed the floor."],ans:1,expl:"have + 過去分詞 washed；yet 用在否定句。"}
+    {q:"What has the son done?",qCn:"兒子已經做了什麼？",opts:["A. Washed the floor","B. Cleaned the bathroom","C. Taken out the rubbish","D. Washed the dishes"],optsCn:["A. 拖了地板", "B. 打掃了浴室", "C. 倒了垃圾", "D. 洗了碗"],ans:2,expl:"My son has taken out the rubbish."},
+    {q:"What is NOT finished?",qCn:"什麼還沒做完？",opts:["A. The floor","B. The bathroom","C. The kitchen","D. The rubbish"],optsCn:["A. 地板", "B. 浴室", "C. 廚房", "D. 垃圾"],ans:2,expl:"My husband has not finished the kitchen yet."},
+    {q:"Choose the correct sentence.",qCn:"選出正確的句子。",opts:["I have already wash the floor.","I have already washed the floor.","I already washed the floor yet.","I has already washed the floor."],ans:1,expl:"have + 過去分詞 washed；yet 用在否定句。"}
   ],
   upgrade:[
     {b1:"I washed the floor. I cleaned the bathroom.",
@@ -278,9 +278,9 @@ articles:[
     {w:"the rest",ipa:"/ðə rest/",pos:"n.",cn:"剩下的部分",def:"The part that is left.",ex:"I ate the rest for dinner.",exCn:"剩下的我留到晚餐吃。"}
   ],
   questions:[
-    {q:"How often does the writer go to the noodle shop?",opts:["A. Every day","B. Two or three times a week","C. Once a month","D. Only on Sundays"],ans:1,expl:"I go there two or three times a week."},
-    {q:"What did she ask the owner to change?",opts:["A. Less salt","B. Less spicy","C. More beef","D. A bigger bowl"],ans:1,expl:"Can I have it less spicy?"},
-    {q:"Which is the most polite?",opts:["I want beef noodles.","Give me beef noodles.","I would like beef noodles, please.","Beef noodles!"],ans:2,expl:"would like + please 是最客氣的說法。"}
+    {q:"How often does the writer go to the noodle shop?",qCn:"作者多久去一次麵店？",opts:["A. Every day","B. Two or three times a week","C. Once a month","D. Only on Sundays"],optsCn:["A. 每天", "B. 一週兩三次", "C. 一個月一次", "D. 只有星期天"],ans:1,expl:"I go there two or three times a week."},
+    {q:"What did she ask the owner to change?",qCn:"她請老闆改什麼？",opts:["A. Less salt","B. Less spicy","C. More beef","D. A bigger bowl"],optsCn:["A. 少放鹽", "B. 不要那麼辣", "C. 多加牛肉", "D. 換大碗"],ans:1,expl:"Can I have it less spicy?"},
+    {q:"Which is the most polite?",qCn:"哪一句最有禮貌？",opts:["I want beef noodles.","Give me beef noodles.","I would like beef noodles, please.","Beef noodles!"],optsCn:["A. 我要牛肉麵。", "B. 給我牛肉麵。", "C. 麻煩給我一碗牛肉麵，謝謝。", "D. 牛肉麵！"],ans:2,expl:"would like + please 是最客氣的說法。"}
   ],
   upgrade:[
     {b1:"I want beef noodles. Please make it not spicy.",
@@ -319,9 +319,9 @@ articles:[
     {w:"one more day",ipa:"/wʌn mɔːr deɪ/",pos:"phr.",cn:"再一天",def:"One extra day.",ex:"She will stay home for one more day.",exCn:"她會再在家待一天。"}
   ],
   questions:[
-    {q:"Why could the writer not go to work?",opts:["A. She was sick","B. Her daughter had a fever","C. The bus was late","D. She had no work"],ans:1,expl:"my daughter had a fever, so I could not go to work."},
-    {q:"What did the manager ask?",opts:["A. To come in the afternoon","B. To work from home in the afternoon","C. To take three days off","D. To call the doctor"],ans:1,expl:"Can you work from home this afternoon?"},
-    {q:"Choose the correct sentence.",opts:["I will to finish the report.","I will finish the report.","I will finishing the report.","I am will finish the report."],ans:1,expl:"will + 原形動詞，中間不加 to、不加 -ing。"}
+    {q:"Why could the writer not go to work?",qCn:"作者為什麼不能去上班？",opts:["A. She was sick","B. Her daughter had a fever","C. The bus was late","D. She had no work"],optsCn:["A. 她生病了", "B. 她女兒發燒", "C. 公車誤點", "D. 她沒有工作"],ans:1,expl:"my daughter had a fever, so I could not go to work."},
+    {q:"What did the manager ask?",qCn:"主管要求什麼？",opts:["A. To come in the afternoon","B. To work from home in the afternoon","C. To take three days off","D. To call the doctor"],optsCn:["A. 下午再進公司", "B. 下午在家工作", "C. 休假三天", "D. 打電話給醫生"],ans:1,expl:"Can you work from home this afternoon?"},
+    {q:"Choose the correct sentence.",qCn:"選出正確的句子。",opts:["I will to finish the report.","I will finish the report.","I will finishing the report.","I am will finish the report."],ans:1,expl:"will + 原形動詞，中間不加 to、不加 -ing。"}
   ],
   upgrade:[
     {b1:"My daughter is sick. I cannot come to work today.",
@@ -375,10 +375,10 @@ grammar:[
     {bad:"He always is late.",good:"He is always late.",why:"頻率副詞放在 be 動詞後面。"}
   ],
   quiz:[
-    {q:"My sister ____ in Taipei.",opts:["live","lives","living","is live"],ans:1,expl:"My sister = She → lives。"},
-    {q:"____ your husband drink coffee?",opts:["Do","Does","Is","Are"],ans:1,expl:"主詞是 your husband（第三人稱單數）→ Does。"},
-    {q:"He ____ eat breakfast at home.",opts:["don't","doesn't","isn't","not"],ans:1,expl:"第三人稱單數的否定用 doesn't。"},
-    {q:"She ____ her homework every evening.",opts:["do","does","dos","doing"],ans:1,expl:"do 的第三人稱單數是 does。"}
+    {q:"My sister ____ in Taipei.",qCn:"我姊姊住在台北。",opts:["live","lives","living","is live"],ans:1,expl:"My sister = She → lives。"},
+    {q:"____ your husband drink coffee?",qCn:"你先生喝咖啡嗎？",opts:["Do","Does","Is","Are"],ans:1,expl:"主詞是 your husband（第三人稱單數）→ Does。"},
+    {q:"He ____ eat breakfast at home.",qCn:"他不在家吃早餐。",opts:["don't","doesn't","isn't","not"],ans:1,expl:"第三人稱單數的否定用 doesn't。"},
+    {q:"She ____ her homework every evening.",qCn:"她每天晚上做功課。",opts:["do","does","dos","doing"],ans:1,expl:"do 的第三人稱單數是 does。"}
   ]
 },
 
@@ -425,10 +425,10 @@ grammar:[
     {bad:"We was late.",good:"We were late.",why:"We 要配 were。"}
   ],
   quiz:[
-    {q:"Last night I ____ a headache.",opts:["have","has","had","having"],ans:2,expl:"have 的過去式是 had。"},
-    {q:"The clinic ____ near my home.",opts:["is","was","were","did"],ans:1,expl:"單數主詞的過去 be 動詞是 was。"},
-    {q:"I ____ finish the report yesterday.",opts:["didn't","don't","wasn't","doesn't"],ans:0,expl:"過去式否定用 didn't。"},
-    {q:"____ you see the doctor yesterday?",opts:["Do","Did","Was","Were"],ans:1,expl:"一般動詞的過去疑問句用 Did。"}
+    {q:"Last night I ____ a headache.",qCn:"昨天晚上我頭痛。",opts:["have","has","had","having"],ans:2,expl:"have 的過去式是 had。"},
+    {q:"The clinic ____ near my home.",qCn:"診所在我家附近。",opts:["is","was","were","did"],ans:1,expl:"單數主詞的過去 be 動詞是 was。"},
+    {q:"I ____ finish the report yesterday.",qCn:"我昨天沒有完成報告。",opts:["didn't","don't","wasn't","doesn't"],ans:0,expl:"過去式否定用 didn't。"},
+    {q:"____ you see the doctor yesterday?",qCn:"你昨天有去看醫生嗎？",opts:["Do","Did","Was","Were"],ans:1,expl:"一般動詞的過去疑問句用 Did。"}
   ]
 },
 
@@ -473,10 +473,10 @@ grammar:[
     {bad:"Do you have some questions?",good:"Do you have any questions?",why:"疑問句一般用 any。"}
   ],
   quiz:[
-    {q:"____ a convenience store next to my building.",opts:["There are","There is","There have","It has"],ans:1,expl:"a convenience store 是單數 → There is。"},
-    {q:"They didn't have ____ rice.",opts:["some","any","many","a"],ans:1,expl:"否定句用 any。"},
-    {q:"There ____ many people at the stop yesterday.",opts:["is","are","was","were"],ans:3,expl:"過去 + 複數 → were。"},
-    {q:"I bought two ____ of water.",opts:["bottle","bottles","bottled","bottle's"],ans:1,expl:"two 後面名詞要複數 bottles。"}
+    {q:"____ a convenience store next to my building.",qCn:"我住的大樓旁邊有一家便利商店。",opts:["There are","There is","There have","It has"],ans:1,expl:"a convenience store 是單數 → There is。"},
+    {q:"They didn't have ____ rice.",qCn:"他們沒有任何米了。",opts:["some","any","many","a"],ans:1,expl:"否定句用 any。"},
+    {q:"There ____ many people at the stop yesterday.",qCn:"昨天站牌那裡有很多人。",opts:["is","are","was","were"],ans:3,expl:"過去 + 複數 → were。"},
+    {q:"I bought two ____ of water.",qCn:"我買了兩瓶水。",opts:["bottle","bottles","bottled","bottle's"],ans:1,expl:"two 後面名詞要複數 bottles。"}
   ]
 }
 

@@ -150,5 +150,241 @@ V.passive=card(
  '主動句焦點在「做的人」，被動句（be + p.p.）把焦點移到「被影響的東西」。新聞與正式文章特別常用被動。');
 V.g09=V.passive;
 
+/* ---------- B1 每日：現在進行式 vs 現在簡單式（同 nowVsAlways） ---------- */
+V.dg20260814b1=V.nowVsAlways;
+
+/* ---------- B2：正式與敘事語境中的現在式 ---------- */
+V.dg20260814b2=card(
+ {pw:190,title:'新聞標題 簡單式',
+  draw:'<rect x="46" y="104" width="228" height="112" rx="10" fill="#fff" stroke="#8aa8bf" stroke-width="2.5"/>'
+   +'<rect x="46" y="104" width="228" height="30" rx="10" fill="#2b5f92"/>'
+   +'<text x="160" y="125" text-anchor="middle" font-size="14" font-weight="900" fill="#fff">DAILY NEWS</text>'
+   +'<text x="160" y="164" text-anchor="middle" font-size="16" font-weight="900" fill="#1c3d5a">Typhoon Hits Coast</text>'
+   +'<line x1="66" y1="182" x2="254" y2="182" stroke="#c9d6e2" stroke-width="5"/>'
+   +'<line x1="66" y1="196" x2="230" y2="196" stroke="#c9d6e2" stroke-width="5"/>'
+   +'<text x="160" y="242" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">標題永遠用簡單式，短而有力</text>',
+  en:'Typhoon Hits Coast', cn:'新聞標題：簡單式（不是 is hitting）'},
+ {pw:190,title:'敘事場景 進行式',
+  draw:em(120,166,54,'🌧️')+em(212,166,50,'🌬️')
+   +'<rect x="60" y="196" width="200" height="24" rx="12" fill="#f0b04e" opacity=".55"/>'
+   +'<text x="160" y="213" text-anchor="middle" font-size="13" font-weight="800" fill="#7a4a08">畫面在你眼前展開…</text>'
+   +'<text x="160" y="248" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">把讀者拉進「正在發生」的現場</text>',
+  en:'Rain is falling. Wind is blowing.', cn:'說故事、描寫場景：進行式最生動'},
+ '正式報告與新聞標題用簡單式（客觀、永恆感）；小說與遊記描寫現場用進行式（身歷其境）。同一個現在式，語境不同選擇就不同。');
+
+/* ---------- A2：過去簡單式 ---------- */
+V.ga02=card(
+ {pw:170,title:'昨天發生了',
+  draw:tl(214)
+   +'<line x1="100" y1="152" x2="100" y2="184" stroke="#d9534f" stroke-width="4"/>'
+   +em(100,130,40,'🤒')
+   +'<text x="100" y="242" text-anchor="middle" font-size="13" font-weight="800" fill="#7c8b96">yesterday</text>'
+   +'<text x="160" y="112" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">事情發生「在過去」，已經結束</text>',
+  en:'I had a headache last night.', cn:'動詞變過去式：have → had'},
+ {pw:190,title:'疑問與否定用 did',
+  draw:bub(160,130,'Did you see the doctor?',252)
+   +em(96,196,48,'🙅')
+   +'<text x="196" y="188" text-anchor="middle" font-size="15.5" font-weight="900" fill="#1c3d5a">didn&#39;t + 原形</text>'
+   +'<text x="196" y="212" text-anchor="middle" font-size="13.5" font-weight="700" fill="#4a5b68">I didn&#39;t finish it.</text>'
+   +'<text x="160" y="252" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">did 出場，動詞就變回原形</text>',
+  en:'Did you…? / I didn&#39;t…', cn:'疑問、否定交給 did，動詞用原形'},
+ '過去簡單式：動詞變過去式（had / went / saw）。要問「有沒有」或說「沒有」時用 did / didn&#39;t，後面的動詞變回原形——不能說 didn&#39;t finished。');
+
+/* ---------- A2：there is / are 與 some / any ---------- */
+V.ga03=card(
+ {pw:210,title:'there is / there are',
+  draw:em(96,152,48,'🏪')
+   +'<text x="96" y="196" text-anchor="middle" font-size="13.5" font-weight="800" fill="#2b5f92">There is a store</text>'
+   +em(212,146,40,'🚌')+em(248,146,40,'🚌')
+   +'<text x="230" y="196" text-anchor="middle" font-size="13.5" font-weight="800" fill="#2b5f92">There are two buses</text>'
+   +'<text x="160" y="240" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">一個 is，兩個以上 are</text>',
+  en:'There is… / There are…', cn:'「有…」：單數 is、複數 are'},
+ {pw:170,title:'some / any',
+  draw:'<text x="88" y="136" text-anchor="middle" font-size="34">🍚</text>'
+   +'<text x="88" y="176" text-anchor="middle" font-size="14" font-weight="800" fill="#1f8a4c">✓ some：肯定句</text>'
+   +'<text x="88" y="196" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4a5b68">I need some rice.</text>'
+   +'<text x="232" y="136" text-anchor="middle" font-size="34">🚫</text>'
+   +'<text x="232" y="176" text-anchor="middle" font-size="14" font-weight="800" fill="#c0392b">any：否定、疑問</text>'
+   +'<text x="232" y="196" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4a5b68">They don&#39;t have any rice.</text>'
+   +'<text x="160" y="240" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">數不清的東西兩個都能用</text>',
+  en:'some ↔ any', cn:'肯定用 some；否定、疑問用 any'},
+ 'There is + 單數、There are + 複數。some 用在肯定句，any 用在否定句和問句：Is there any milk? — Yes, there is some.');
+
+/* ---------- B1：八大時態總覽 ---------- */
+V.g01=card(
+ {pw:170,title:'簡單式家族',
+  draw:tl(196)
+   +'<line x1="80" y1="182" x2="80" y2="210" stroke="#2b5f92" stroke-width="4"/>'
+   +'<text x="80" y="170" text-anchor="middle" font-size="13.5" font-weight="900" fill="#2b5f92">did</text>'
+   +'<line x1="210" y1="182" x2="210" y2="210" stroke="#2f9e5f" stroke-width="4"/>'
+   +'<text x="210" y="146" text-anchor="middle" font-size="13.5" font-weight="900" fill="#2f9e5f">do / does</text>'
+   +'<line x1="268" y1="182" x2="268" y2="210" stroke="#8b5cf6" stroke-width="4"/>'
+   +'<text x="268" y="170" text-anchor="middle" font-size="13.5" font-weight="900" fill="#8b5cf6">will do</text>'
+   +'<text x="160" y="244" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">一個「點」：事實、習慣、事件</text>',
+  en:'did → do → will do', cn:'過去、現在、未來各是一個點'},
+ {pw:170,title:'進行式家族',
+  draw:tl(196)
+   +'<rect x="52" y="176" width="60" height="20" rx="10" fill="#2b5f92" opacity=".45"/>'
+   +'<text x="82" y="166" text-anchor="middle" font-size="13" font-weight="900" fill="#2b5f92">was doing</text>'
+   +'<rect x="182" y="176" width="56" height="20" rx="10" fill="#2f9e5f" opacity=".45"/>'
+   +'<text x="210" y="146" text-anchor="middle" font-size="13" font-weight="900" fill="#2f9e5f">am doing</text>'
+   +'<rect x="242" y="176" width="56" height="20" rx="10" fill="#8b5cf6" opacity=".45"/>'
+   +'<text x="270" y="166" text-anchor="middle" font-size="13" font-weight="900" fill="#8b5cf6">will be doing</text>'
+   +'<text x="160" y="244" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">一段「線」：那個時間正在做</text>',
+  en:'was doing → am doing', cn:'把動作拉成一段正在進行的線'},
+ '八大時態＝三個時間（過去／現在／未來）×「點或線」再加上完成式。簡單式是點，進行式是線；完成式（have done）則是「到某個時間點為止」的累積。先抓住點和線，其他就好懂了。');
+
+/* ---------- B1+：used to / be used to / would ---------- */
+V.g05=card(
+ {pw:170,title:'used to 以前會',
+  draw:em(120,150,50,'🚬')
+   +'<line x1="88" y1="120 " x2="152" y2="178" stroke="#d9534f" stroke-width="6" stroke-linecap="round"/>'
+   +'<text x="224" y="156" text-anchor="middle" font-size="30">➡️</text>'
+   +em(224,208,40,'🙂')
+   +'<text x="160" y="248" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">過去有的習慣，現在沒有了</text>',
+  en:'I used to smoke.', cn:'以前抽菸（現在戒了）'},
+ {pw:210,title:'be used to 習慣了',
+  draw:em(120,152,50,'🌃')+em(200,152,46,'💻')
+   +bub(160,214,'No problem! 已經習慣',210),
+  en:'I&#39;m used to working late.', cn:'be used to + V-ing：已經適應了'},
+ 'used to + 原形＝過去的習慣（現在沒了）；be used to + V-ing＝已經習慣、適應了。另外 would 也能講過去反覆做的事（When I was a kid, we would swim…），但狀態動詞只能用 used to。');
+
+/* ---------- B1+：使役動詞 make / have / let / get ---------- */
+V.g06=card(
+ {pw:170,title:'make 強制',
+  draw:em(96,148,52,'👨‍💼')
+   +'<path d="M132 140 L196 140" stroke="#d9534f" stroke-width="4" stroke-linecap="round"/>'+head(206,140,0,'#d9534f')
+   +em(240,152,46,'😓')
+   +'<text x="160" y="212" text-anchor="middle" font-size="14.5" font-weight="900" fill="#c0392b">make + 人 + 原形</text>'
+   +'<text x="160" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#4a5b68">不能加 to！</text>',
+  en:'She made me redo it.', cn:'強迫、不做不行'},
+ {pw:150,title:'let 允許',
+  draw:'<rect x="196" y="108" width="16" height="112" rx="4" fill="#8aa8bf"/>'
+   +'<rect x="130" y="108" width="70" height="112" rx="6" fill="#d7ead9" stroke="#2f9e5f" stroke-width="3"/>'
+   +em(96,180,48,'🧒')
+   +'<path d="M120 166 L172 166" stroke="#2f9e5f" stroke-width="4" stroke-linecap="round"/>'+head(182,166,0,'#2f9e5f')
+   +'<text x="160" y="256" text-anchor="middle" font-size="14.5" font-weight="900" fill="#1f8a4c">let + 人 + 原形</text>',
+  en:'Mom let me go out.', cn:'允許、開綠燈'},
+ '四個使役動詞force感由強到弱：make（強迫）> have（交辦）> get（說服，要加 to）> let（允許）。make/have/let 後面接原形動詞，只有 get 要加 to：get him to help。');
+
+/* ---------- B2：假設語氣 If 句型 ---------- */
+V.g08=card(
+ {pw:190,title:'真實條件 第一類',
+  draw:em(110,146,48,'☀️')
+   +'<path d="M142 138 L200 138" stroke="#2f9e5f" stroke-width="4" stroke-linecap="round"/>'+head(210,138,0,'#2f9e5f')
+   +em(244,150,46,'🏖️')
+   +'<text x="160" y="204" text-anchor="middle" font-size="14.5" font-weight="900" fill="#1f8a4c">If + 現在式, will + 原形</text>'
+   +'<text x="160" y="240" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">很可能發生，是真的在計畫</text>',
+  en:'If it&#39;s sunny, I&#39;ll go.', cn:'第一類：有機會成真'},
+ {pw:190,title:'與事實相反 第二類',
+  draw:'<circle cx="160" cy="150" r="52" fill="#fff" stroke="#8b5cf6" stroke-width="3" stroke-dasharray="7 6"/>'
+   +em(160,166,46,'🏝️')
+   +'<text x="160" y="222" text-anchor="middle" font-size="14.5" font-weight="900" fill="#6d3fd4">If + 過去式, would + 原形</text>'
+   +'<text x="160" y="248" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">只是想像——現在其實沒有</text>',
+  en:'If I had time, I would go.', cn:'第二類：白日夢（其實沒時間）'},
+ '第一類（If + 現在式 → will）講「可能成真」的條件；第二類（If + 過去式 → would）講「跟現在事實相反」的想像。注意：第二類的過去式不是過去，是「不真實」的記號，be 動詞常用 were：If I were you…');
+
+/* ---------- B2：關係子句 ---------- */
+V.g10=card(
+ {pw:210,title:'限定：指認是哪一個',
+  draw:'<g opacity=".3">'+em(80,150,46,'🧍')+'</g>'
+   +'<circle cx="160" cy="146" r="40" fill="#fff8ec" stroke="#e8813a" stroke-width="3"/>'
+   +em(160,158,44,'🧍')+em(160,116,26,'🎩')
+   +'<g opacity=".3">'+em(240,150,46,'🧍')+'</g>'
+   +'<text x="160" y="222" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">三個人裡「戴帽子的那一個」</text>',
+  en:'the man who is wearing a hat', cn:'限定子句：不加逗號，缺它就不知道是誰'},
+ {pw:210,title:'非限定：補充說明',
+  draw:em(140,152,52,'👨')
+   +bub(202,110,'住台北',86)
+   +'<text x="160" y="216" text-anchor="middle" font-size="14.5" font-weight="900" fill="#2b5f92">, who lives in Taipei,</text>'
+   +'<text x="160" y="244" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">只有一個爸爸，順便多說一句</text>',
+  en:'my father, who lives in Taipei', cn:'非限定子句：加逗號，拿掉也知道是誰'},
+ '限定子句（不加逗號）幫你「指認是哪一個」；非限定子句（加逗號）只是補充資訊。非限定不能用 that：my father, that lives…（✗）。who 指人、which 指物、that 兩者都可（限定時）。');
+
+/* ---------- B2：分詞構句與倒裝 ---------- */
+V.g11=card(
+ {pw:170,title:'分詞構句 壓縮',
+  draw:'<rect x="52" y="112" width="216" height="30" rx="15" fill="#fff" stroke="#8aa8bf" stroke-width="2"/>'
+   +'<text x="160" y="132" text-anchor="middle" font-size="12" font-weight="700" fill="#7c8b96">While I was walking home, I saw…</text>'
+   +'<path d="M160 150 L160 172" stroke="#c9631f" stroke-width="3.5"/>'+head(160,180,90,'#c9631f')
+   +'<rect x="76" y="188" width="168" height="30" rx="15" fill="#fff4e2" stroke="#e8813a" stroke-width="2.5"/>'
+   +'<text x="160" y="208" text-anchor="middle" font-size="13" font-weight="900" fill="#c9631f">Walking home, I saw…</text>'
+   +'<text x="160" y="248" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">同主詞的兩句 → 砍掉連接詞和主詞</text>',
+  en:'Walking home, I saw a cat.', cn:'V-ing 開頭：兩件事、同一個主詞'},
+ {pw:150,title:'倒裝 強調',
+  draw:em(160,150,54,'😲')
+   +'<text x="160" y="204" text-anchor="middle" font-size="15" font-weight="900" fill="#6d3fd4">Never have I seen…</text>'
+   +'<text x="160" y="228" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4a5b68">（否定詞開頭，主詞動詞對調）</text>'
+   +'<text x="160" y="252" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">把 Never 甩到句首，語氣加倍</text>',
+  en:'Never have I seen such rain!', cn:'倒裝：戲劇化的強調'},
+ '分詞構句：兩句同主詞時，把其中一句壓成 V-ing（被動用 p.p.）。倒裝：Never / Rarely / Not only 放句首時，後面要像問句一樣把助動詞提前。兩個都是書面語的進階招式。');
+
+/* ---------- B2：連接與轉折 ---------- */
+V.g12=card(
+ {pw:170,title:'although 讓步',
+  draw:em(110,144,48,'🌧️')
+   +'<text x="160" y="150" text-anchor="middle" font-size="26" font-weight="900" fill="#8aa8bf">↛</text>'
+   +em(220,148,46,'🏃')
+   +'<text x="160" y="206" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">下雨「照樣」出門——出乎意料</text>',
+  en:'Although it rained, I went out.', cn:'讓步：前後結果相反'},
+ {pw:170,title:'because / so 因果',
+  draw:em(110,144,48,'🌧️')
+   +'<path d="M142 138 L196 138" stroke="#2b5f92" stroke-width="4" stroke-linecap="round"/>'+head(206,138,0)
+   +em(240,148,46,'🏠')
+   +'<text x="160" y="206" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">下雨「所以」待在家——順理成章</text>',
+  en:'It rained, so I stayed home.', cn:'因果：原因直接導向結果'},
+ '因果用 because / so（一句只能用一個，不能 Because…so… 連用）；出乎意料的對比用 although / even though；書面對比還有 however / therefore，記得前面用句號或分號。');
+
+/* ---------- B2：轉述句 ---------- */
+V.g13=card(
+ {pw:170,title:'直接引述',
+  draw:em(96,160,52,'👩')
+   +bub(210,120,'“I am tired.”',150)
+   +'<text x="160" y="220" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">當場原話，加引號</text>',
+  en:'“I am tired,” she said.', cn:'一字不改抄下來'},
+ {pw:170,title:'轉述句',
+  draw:em(96,160,52,'🧑')
+   +'<path d="M130 148 L200 148" stroke="#8aa8bf" stroke-width="3.5" stroke-linecap="round"/>'+head(210,148,0,'#8aa8bf')
+   +'<text x="238" y="132" text-anchor="middle" font-size="13.5" font-weight="900" fill="#2b5f92">am → was</text>'
+   +'<text x="238" y="156" text-anchor="middle" font-size="26">⏪</text>'
+   +'<text x="160" y="220" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">時態往回退一格</text>',
+  en:'She said she was tired.', cn:'轉述時 am→was、will→would'},
+ '把別人的話轉述出去：時態退一格（am→was、do→did、will→would、can→could），人稱跟著改（I→she）。問句轉述要變回直述語序：He asked where I lived（不是 where did I live）。');
+
+/* ---------- B1+：比較級、最高級與倍數 ---------- */
+V.g14=card(
+ {pw:190,title:'比較級 -er / more',
+  draw:em(110,178,46,'🧍')
+   +'<text x="110" y="216" text-anchor="middle" font-size="12" font-weight="700" fill="#7c8b96">160cm</text>'
+   +em(212,166,58,'🧍')
+   +'<text x="212" y="216" text-anchor="middle" font-size="12" font-weight="700" fill="#7c8b96">180cm</text>'
+   +'<text x="160" y="120" text-anchor="middle" font-size="15" font-weight="900" fill="#2b5f92">taller than</text>'
+   +'<text x="160" y="248" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">兩個東西比：比較級 + than</text>',
+  en:'He is taller than me.', cn:'兩者相比：-er / more ~ + than'},
+ {pw:190,title:'最高級 the -est',
+  draw:em(90,182,40,'🧍')+em(160,170,50,'🧍')+em(232,158,60,'🧍')
+   +em(232,112,30,'👑')
+   +'<text x="160" y="248" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">三個以上挑第一名：the + 最高級</text>',
+  en:'He is the tallest of the three.', cn:'三者以上：the -est / the most ~'},
+ '兩個比用比較級＋than；三個以上用 the＋最高級。倍數放在比較級前面：three times bigger than／twice as big as。「越來越…」用比較級疊字：It&#39;s getting hotter and hotter.');
+
+/* ---------- B2：情態動詞的推測語氣 ---------- */
+V.g15=card(
+ {pw:170,title:'must be 九成確定',
+  draw:'<rect x="118" y="108" width="84" height="96" rx="10" fill="#fff" stroke="#8aa8bf" stroke-width="2.5"/>'
+   +'<rect x="130" y="120" width="60" height="50" rx="6" fill="#ffe9a8" stroke="#e8b13a" stroke-width="2"/>'
+   +em(160,152,30,'💡')
+   +'<text x="160" y="228" text-anchor="middle" font-size="15" font-weight="900" fill="#1f8a4c">must be ≈ 90%</text>'
+   +'<text x="160" y="252" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">燈亮著——他一定在家</text>',
+  en:'He must be home.', cn:'有依據的推論：一定是'},
+ {pw:190,title:'might be 五五波',
+  draw:em(120,150,50,'🤔')
+   +'<text x="212" y="132" text-anchor="middle" font-size="34" font-weight="900" fill="#8b5cf6">?</text>'
+   +'<text x="244" y="164" text-anchor="middle" font-size="26" font-weight="900" fill="#c9b8f0">?</text>'
+   +'<text x="160" y="228" text-anchor="middle" font-size="15" font-weight="900" fill="#6d3fd4">may / might ≈ 50%</text>'
+   +'<text x="160" y="252" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">可能在、可能不在</text>',
+  en:'He might be home.', cn:'不確定的猜測：可能是'},
+ '推測的確定度：must be（90%，一定是）> may / might / could be（50%，可能是）> can&#39;t be（90% 確定「不是」）。過去的推測用 must have + p.p.：He must have missed the bus.');
+
 return V;
 })();

@@ -34,9 +34,9 @@ articles:[
     {w:"have a great time",ipa:"/hæv ə ɡreɪt taɪm/",pos:"phr.",cn:"玩得很開心",def:"To enjoy yourself very much.",ex:"I had a great time.",exCn:"我玩得很開心。"}
   ],
   questions:[
-    {q:"How did the writer go to the night market?",opts:["A. By car","B. By bus","C. By train","D. On foot"],ans:1,expl:"We took the bus and got there at seven."},
-    {q:"What did the friend buy?",opts:["A. A camera","B. Fried chicken","C. A jacket","D. Papaya milk"],ans:2,expl:"My friend bought a jacket at a small store."},
-    {q:"Which sentence is correct?",opts:["A. I goed to the night market.","B. I went to the night market.","C. I go to the night market yesterday.","D. I was go to the night market."],ans:1,expl:"go 的過去式是不規則的 went，不能加 -ed，也不能配 was。"}
+    {q:"How did the writer go to the night market?",qCn:"作者是怎麼去夜市的？",opts:["A. By car","B. By bus","C. By train","D. On foot"],optsCn:["A. 開車", "B. 搭公車", "C. 搭火車", "D. 走路"],ans:1,expl:"We took the bus and got there at seven."},
+    {q:"What did the friend buy?",qCn:"朋友買了什麼？",opts:["A. A camera","B. Fried chicken","C. A jacket","D. Papaya milk"],optsCn:["A. 相機", "B. 炸雞", "C. 外套", "D. 木瓜牛奶"],ans:2,expl:"My friend bought a jacket at a small store."},
+    {q:"Which sentence is correct?",qCn:"哪一句是正確的？",opts:["A. I goed to the night market.","B. I went to the night market.","C. I go to the night market yesterday.","D. I was go to the night market."],ans:1,expl:"go 的過去式是不規則的 went，不能加 -ed，也不能配 was。"}
   ],
   upgrade:[
     {b1:"We ate fried chicken. We drank papaya milk.",
@@ -71,9 +71,9 @@ articles:[
     {w:"sunset",ipa:"/ˈsʌnset/",pos:"n.",cn:"日落、夕陽",def:"The time when the sun goes down and the sky turns red or orange.",ex:"We could see the sunset.",exCn:"我們看到了夕陽。"}
   ],
   questions:[
-    {q:"Why did they not go to work?",opts:["A. It was a holiday","B. There was a typhoon","C. The office was closed for cleaning","D. They were sick"],ans:1,expl:"Last Wednesday there was a typhoon, so we did not go to work."},
-    {q:"What did the writer do first at home?",opts:["A. Watched TV","B. Called his mother","C. Cleaned the kitchen","D. Went outside"],ans:2,expl:"I stayed home and cleaned the kitchen. Then I watched the news."},
-    {q:"What happened when the rain stopped?",opts:["A. More trees fell down","B. The writer went outside to check","C. The flooding got worse","D. The writer went to work"],ans:1,expl:"When the rain stopped in the afternoon, I went outside to check."}
+    {q:"Why did they not go to work?",qCn:"他們為什麼沒去上班？",opts:["A. It was a holiday","B. There was a typhoon","C. The office was closed for cleaning","D. They were sick"],optsCn:["A. 那天是假日", "B. 有颱風", "C. 辦公室關閉打掃", "D. 他們生病了"],ans:1,expl:"Last Wednesday there was a typhoon, so we did not go to work."},
+    {q:"What did the writer do first at home?",qCn:"作者在家先做了什麼？",opts:["A. Watched TV","B. Called his mother","C. Cleaned the kitchen","D. Went outside"],optsCn:["A. 看電視", "B. 打電話給媽媽", "C. 打掃廚房", "D. 出門"],ans:2,expl:"I stayed home and cleaned the kitchen. Then I watched the news."},
+    {q:"What happened when the rain stopped?",qCn:"雨停之後發生了什麼事？",opts:["A. More trees fell down","B. The writer went outside to check","C. The flooding got worse","D. The writer went to work"],optsCn:["A. 更多樹倒了", "B. 作者出門查看", "C. 淹水變嚴重", "D. 作者去上班"],ans:1,expl:"When the rain stopped in the afternoon, I went outside to check."}
   ],
   upgrade:[
     {b1:"The wind was strong. The rain was heavy.",
@@ -109,15 +109,15 @@ articles:[
     {w:"work from home",ipa:"/wɜːrk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home instead of going to the office.",ex:"I am working from home.",exCn:"我在家工作。"}
   ],
   questions:[
-    {q:"Why has the writer's trip been cancelled?",
+    {q:"Why has the writer's trip been cancelled?",qCn:"作者的行程為什麼被取消？",
      opts:["A. The train broke down","B. Because of the typhoon","C. The ticket was too expensive","D. The office is closed today"],
-     ans:1,expl:"my trip has been cancelled because of the typhoon。"},
-    {q:"What has the writer's colleague done?",
+     optsCn:["A. 火車故障", "B. 因為颱風", "C. 車票太貴", "D. 辦公室今天關門"],ans:1,expl:"my trip has been cancelled because of the typhoon。"},
+    {q:"What has the writer's colleague done?",qCn:"作者的同事做了什麼？",
      opts:["A. Gone to work anyway","B. Stayed in her flooded house","C. Moved to her parents' house","D. Taken the train to Taipei"],
-     ans:2,expl:"She has moved to her parents' house on higher ground."},
-    {q:"Which sentence uses the present perfect passive?",
+     optsCn:["A. 照樣去上班", "B. 留在淹水的家裡", "C. 搬去爸媽家", "D. 搭火車去台北"],ans:2,expl:"She has moved to her parents' house on higher ground."},
+    {q:"Which sentence uses the present perfect passive?",qCn:"哪一句用了現在完成式的被動語態？",
      opts:["A. I was supposed to take the train.","B. Several highways have been closed.","C. The typhoon is expected to turn north.","D. I am working from home."],
-     ans:1,expl:"have been closed ＝ have been + 過去分詞，是現在完成式的被動語態。"}
+     optsCn:["A. 我本來應該搭火車。", "B. 好幾條公路已經被封閉。", "C. 颱風預計轉向北方。", "D. 我正在家工作。"],ans:1,expl:"have been closed ＝ have been + 過去分詞，是現在完成式的被動語態。"}
   ],
   upgrade:[
     {b1:"They cancelled my trip. The typhoon is very bad.",
@@ -157,18 +157,18 @@ articles:[
     {w:"out of your control",ipa:"/aʊt əv jər kənˈtroʊl/",pos:"phr.",cn:"不在你的掌控之中",def:"Something you cannot change or decide.",ex:"When everything is out of your control, stay calm.",exCn:"當一切都不在你的掌控中時，保持冷靜。"}
   ],
   questions:[
-    {q:"Why was the writer's flight cancelled?",
+    {q:"Why was the writer's flight cancelled?",qCn:"作者的班機為什麼被取消？",
      opts:["A. The plane had a technical problem","B. A typhoon was approaching Taiwan","C. The airline overbooked the flight","D. The airport in Vietnam was flooded"],
-     ans:1, expl:"廣播說 a typhoon was approaching the north coast of Taiwan，所以所有早班機 had been grounded。"},
-    {q:"What did the writer ask the airline to do?",
+     optsCn:["A. 飛機有技術問題", "B. 颱風正在接近台灣", "C. 航空公司超賣機位", "D. 越南的機場淹水"],ans:1, expl:"廣播說 a typhoon was approaching the north coast of Taiwan，所以所有早班機 had been grounded。"},
+    {q:"What did the writer ask the airline to do?",qCn:"作者請航空公司做什麼？",
      opts:["A. Give a full refund","B. Provide a free hotel","C. Put her on the waiting list for the next evening","D. Book a flight two days later"],
-     ans:2, expl:"I asked to be put on the waiting list for the next evening instead——她拒絕了兩天後的機位。"},
-    {q:"According to the news, what happened in Taiwan overnight?",
+     optsCn:["A. 全額退費", "B. 提供免費旅館", "C. 把她排進隔天晚上的候補名單", "D. 訂兩天後的班機"],ans:2, expl:"I asked to be put on the waiting list for the next evening instead——她拒絕了兩天後的機位。"},
+    {q:"According to the news, what happened in Taiwan overnight?",qCn:"根據新聞，台灣一夜之間發生了什麼？",
      opts:["A. The airport was closed for a week","B. Several coastal towns were flooded","C. All hotels were evacuated","D. The typhoon changed direction"],
-     ans:1, expl:"Several coastal towns had been flooded overnight, and thousands of homes were left without power。"},
-    {q:"Which sentence uses the passive voice?",
+     optsCn:["A. 機場關閉一週", "B. 好幾個沿海城鎮淹水", "C. 所有旅館都撤離", "D. 颱風改變方向"],ans:1, expl:"Several coastal towns had been flooded overnight, and thousands of homes were left without power。"},
+    {q:"Which sentence uses the passive voice?",qCn:"哪一句用了被動語態？",
      opts:["A. The terminal filled quickly.","B. I understood why the airline was careful.","C. Meal vouchers were handed out around noon.","D. The whole experience taught me two things."],
-     ans:2, expl:"were handed out ＝ be 動詞 + 過去分詞，是被動語態；其他三句都是主動。"}
+     optsCn:["A. 航廈很快就擠滿了人。", "B. 我理解航空公司為何謹慎。", "C. 中午時發放了餐券。", "D. 整個經歷教了我兩件事。"],ans:2, expl:"were handed out ＝ be 動詞 + 過去分詞，是被動語態；其他三句都是主動。"}
   ],
   upgrade:[
     {b1:"The airline cancelled my flight because of the typhoon.",
@@ -210,18 +210,18 @@ articles:[
     {w:"scattered showers",ipa:"/ˈskætərd ˈʃaʊərz/",pos:"n.",cn:"零星陣雨",def:"Short periods of rain in some places but not others.",ex:"Southwesterly winds brought scattered showers.",exCn:"西南風帶來零星陣雨。"}
   ],
   questions:[
-    {q:"Where was Typhoon Dolphin expected to make landfall?",
+    {q:"Where was Typhoon Dolphin expected to make landfall?",qCn:"颱風「海豚」預計在哪裡登陸？",
      opts:["A. Northern Taiwan","B. Green Island","C. Zhejiang Province, China","D. The Hengchun Peninsula"],
-     ans:2, expl:"Forecasters said it would probably reach China's Zhejiang Province instead。"},
-    {q:"Which area was under the highest rainfall alert?",
+     optsCn:["A. 台灣北部", "B. 綠島", "C. 中國浙江省", "D. 恆春半島"],ans:2, expl:"Forecasters said it would probably reach China's Zhejiang Province instead。"},
+    {q:"Which area was under the highest rainfall alert?",qCn:"哪個地區的降雨警戒最高？",
      opts:["A. Southwestern plains","B. Mountainous areas north of Taichung","C. Orchid Island","D. Taipei city centre"],
-     ans:1, expl:"the mountainous areas north of Taichung were placed under the highest rainfall alert。"},
-    {q:"What does \"a storm radius of 280 kilometres\" tell us?",
+     optsCn:["A. 西南平原", "B. 台中以北的山區", "C. 蘭嶼", "D. 台北市中心"],ans:1, expl:"the mountainous areas north of Taichung were placed under the highest rainfall alert。"},
+    {q:"What does \"a storm radius of 280 kilometres\" tell us?",qCn:"「暴風半徑 280 公里」告訴我們什麼？",
      opts:["A. How fast the storm moved","B. How far the storm's edge is from its centre","C. How much rain fell","D. How long the warning lasted"],
-     ans:1, expl:"radius ＝ 半徑，指風暴中心到外緣的距離。"},
-    {q:"Why were forecasters fairly confident about the storm's path?",
+     optsCn:["A. 颱風移動多快", "B. 暴風邊緣離中心多遠", "C. 下了多少雨", "D. 警報持續多久"],ans:1, expl:"radius ＝ 半徑，指風暴中心到外緣的距離。"},
+    {q:"Why were forecasters fairly confident about the storm's path?",qCn:"預報員為什麼對路徑相當有把握？",
      opts:["A. It was very small","B. It was moving slowly, at only 10 kph","C. It had already landed","D. It changed direction often"],
-     ans:1, expl:"had been moving west at only 10 kilometres per hour — slow enough for forecasters to be confident。"}
+     optsCn:["A. 它非常小", "B. 它移動得很慢，時速只有 10 公里", "C. 它已經登陸了", "D. 它常常改變方向"],ans:1, expl:"had been moving west at only 10 kilometres per hour — slow enough for forecasters to be confident。"}
   ],
   upgrade:[
     {b1:"The storm moved west. It was slow.",
@@ -276,10 +276,10 @@ grammar:[
     {bad:"I am go to work now.",good:"I am going to work now.",why:"be 後面的動詞一定要變 -ing，不能放原形。"}
   ],
   quiz:[
-    {q:"Look! It ____ outside.",opts:["rain","rains","is raining","raining"],ans:2,expl:"Look! 表示眼前正在發生 → is raining。"},
-    {q:"— What are you doing? — I ____ TV.",opts:["watch","am watching","watching","is watching"],ans:1,expl:"問句是進行式，答句也用進行式；主詞 I 配 am。"},
-    {q:"She ____ on the phone right now.",opts:["talk","is talking","talking","are talking"],ans:1,expl:"right now ＝ 現在這一刻；she 配 is。"},
-    {q:"run 的 -ing 是哪一個？",opts:["runing","runeing","running","runnning"],ans:2,expl:"短母音＋子音結尾，字尾 n 要重複再加 -ing → running。"}
+    {q:"Look! It ____ outside.",qCn:"你看！外面正在下雨。",opts:["rain","rains","is raining","raining"],ans:2,expl:"Look! 表示眼前正在發生 → is raining。"},
+    {q:"— What are you doing? — I ____ TV.",qCn:"—你在做什麼？—我正在看電視。",opts:["watch","am watching","watching","is watching"],ans:1,expl:"問句是進行式，答句也用進行式；主詞 I 配 am。"},
+    {q:"She ____ on the phone right now.",qCn:"她現在正在講電話。",opts:["talk","is talking","talking","are talking"],ans:1,expl:"right now ＝ 現在這一刻；she 配 is。"},
+    {q:"run 的 -ing 是哪一個？",qCn:"run 的 -ing 形式是哪一個？",opts:["runing","runeing","running","runnning"],ans:2,expl:"短母音＋子音結尾，字尾 n 要重複再加 -ing → running。"}
   ]
 },
 
@@ -320,10 +320,10 @@ grammar:[
     {bad:"I have dinner now.",good:"I'm having dinner now.",why:"have 當「吃」的意思時是動作動詞，配 now 要用進行式。"}
   ],
   quiz:[
-    {q:"I usually ____ tea, but today I ____ coffee.",opts:["drink / am drinking","am drinking / drink","drink / drink","am drinking / am drinking"],ans:0,expl:"usually ＝ 習慣用簡單式；today ＝ 暫時的例外用進行式。"},
-    {q:"She ____ three languages: Chinese, English, and Japanese.",opts:["is speaking","speaks","is knowing","speak"],ans:1,expl:"會講幾種語言是長期能力，用簡單式。"},
-    {q:"Don't call me at 12:30 — I ____ lunch.",opts:["have","am having","having","has"],ans:1,expl:"have ＝ 吃（動作），12:30 是特定時刻正在做的事 → 進行式。"},
-    {q:"He ____ to change jobs. He's happy where he is.",opts:["isn't wanting","doesn't want","don't want","not wants"],ans:1,expl:"want 是狀態動詞，不用進行式；第三人稱用 doesn't want。"}
+    {q:"I usually ____ tea, but today I ____ coffee.",qCn:"我平常喝茶，但今天在喝咖啡。",opts:["drink / am drinking","am drinking / drink","drink / drink","am drinking / am drinking"],ans:0,expl:"usually ＝ 習慣用簡單式；today ＝ 暫時的例外用進行式。"},
+    {q:"She ____ three languages: Chinese, English, and Japanese.",qCn:"她會說三種語言：中文、英文和日文。",opts:["is speaking","speaks","is knowing","speak"],ans:1,expl:"會講幾種語言是長期能力，用簡單式。"},
+    {q:"Don't call me at 12:30 — I ____ lunch.",qCn:"12 點半不要打給我——那時我正在吃午餐。",opts:["have","am having","having","has"],ans:1,expl:"have ＝ 吃（動作），12:30 是特定時刻正在做的事 → 進行式。"},
+    {q:"He ____ to change jobs. He's happy where he is.",qCn:"他不想換工作。他在現在的地方很開心。",opts:["isn't wanting","doesn't want","don't want","not wants"],ans:1,expl:"want 是狀態動詞，不用進行式；第三人稱用 doesn't want。"}
   ]
 },
 
@@ -372,10 +372,10 @@ grammar:[
     {bad:"She is knowing the new process very well.",good:"She knows the new process very well.",why:"know 是狀態動詞，再進階的用法也救不了它——狀態動詞就是不用進行式。"}
   ],
   quiz:[
-    {q:"My car is at the garage, so I ____ the bus to work this week.",opts:["take","am taking","will take","took"],ans:1,expl:"this week ＝ 暫時狀態（車修好就結束），用現在進行式。"},
-    {q:"We ____ the new client at 10 a.m. tomorrow — the meeting room is already booked.",opts:["will meet","meet","are meeting","met"],ans:2,expl:"會議室都訂了＝敲定的安排 → are meeting。"},
-    {q:"選出「抱怨」語氣最強的一句：",opts:["My roommate always leaves dishes in the sink.","My roommate is always leaving dishes in the sink.","My roommate left dishes in the sink.","My roommate leaves dishes in the sink sometimes."],ans:1,expl:"always ＋ 進行式 ＝ 「老是這樣、受不了」的抱怨語氣。"},
-    {q:"Why ____ so quiet today? You're usually the loudest person in the office.",opts:["are you","are you being","do you be","you are"],ans:1,expl:"be 的進行式 are you being 表示「今天暫時的表現」，跟平常不同——後句的 usually 就是線索。"}
+    {q:"My car is at the garage, so I ____ the bus to work this week.",qCn:"我的車在修車廠，所以這禮拜我都搭公車上班。",opts:["take","am taking","will take","took"],ans:1,expl:"this week ＝ 暫時狀態（車修好就結束），用現在進行式。"},
+    {q:"We ____ the new client at 10 a.m. tomorrow — the meeting room is already booked.",qCn:"我們明天早上十點要見新客戶——會議室已經訂好了。",opts:["will meet","meet","are meeting","met"],ans:2,expl:"會議室都訂了＝敲定的安排 → are meeting。"},
+    {q:"選出「抱怨」語氣最強的一句：",qCn:"選出「抱怨」語氣最強的一句：",opts:["My roommate always leaves dishes in the sink.","My roommate is always leaving dishes in the sink.","My roommate left dishes in the sink.","My roommate leaves dishes in the sink sometimes."],optsCn:["A. 我室友總是把碗盤留在水槽。", "B. 我室友老是把碗盤留在水槽（抱怨語氣）。", "C. 我室友把碗盤留在水槽了。", "D. 我室友有時候把碗盤留在水槽。"],ans:1,expl:"always ＋ 進行式 ＝ 「老是這樣、受不了」的抱怨語氣。"},
+    {q:"Why ____ so quiet today? You're usually the loudest person in the office.",qCn:"你今天怎麼這麼安靜？你平常是辦公室最大聲的人。",opts:["are you","are you being","do you be","you are"],ans:1,expl:"be 的進行式 are you being 表示「今天暫時的表現」，跟平常不同——後句的 usually 就是線索。"}
   ]
 },
 
@@ -418,10 +418,10 @@ grammar:[
     {bad:"I stand at the airport. People run in every direction. (想營造場景感)",good:"I'm standing at the airport. People are running in every direction.",why:"要讓讀者「看到畫面」，用進行式營造臨場感；簡單式聽起來像在陳述事實而不是說故事。"}
   ],
   quiz:[
-    {q:"Which is a typical news headline?",opts:["A. Typhoon Is Hitting Coast","B. Typhoon Hits Coast","C. Typhoon Has Hit Coast","D. Typhoon Was Hitting Coast"],ans:1,expl:"新聞標題用現在簡單式報導已發生的事。"},
-    {q:"Fill in for a formal report: The data ____ a clear pattern.",opts:["are suggesting","suggest","suggested","have been suggesting"],ans:1,expl:"正式報告用 suggest（簡單式）陳述客觀事實。"},
-    {q:"Which creates a vivid narrative scene?",opts:["A. Rain falls and wind blows.","B. Rain is falling and wind is blowing.","C. Rain fell and wind blew.","D. Rain has fallen and wind has blown."],ans:1,expl:"進行式建立「此刻正在發生」的畫面感，是敘事的標準手法。"},
-    {q:"Prices ____ faster than expected this quarter.",opts:["rise","are rising","rose","rising"],ans:1,expl:"this quarter 表示趨勢還在持續中，用進行式強調「還在漲」。"}
+    {q:"Which is a typical news headline?",qCn:"哪一個是典型的新聞標題？",opts:["A. Typhoon Is Hitting Coast","B. Typhoon Hits Coast","C. Typhoon Has Hit Coast","D. Typhoon Was Hitting Coast"],ans:1,expl:"新聞標題用現在簡單式報導已發生的事。"},
+    {q:"Fill in for a formal report: The data ____ a clear pattern.",qCn:"正式報告的填空：數據顯示出清楚的模式。",opts:["are suggesting","suggest","suggested","have been suggesting"],ans:1,expl:"正式報告用 suggest（簡單式）陳述客觀事實。"},
+    {q:"Which creates a vivid narrative scene?",qCn:"哪一句營造出生動的敘事場景？",opts:["A. Rain falls and wind blows.","B. Rain is falling and wind is blowing.","C. Rain fell and wind blew.","D. Rain has fallen and wind has blown."],ans:1,expl:"進行式建立「此刻正在發生」的畫面感，是敘事的標準手法。"},
+    {q:"Prices ____ faster than expected this quarter.",qCn:"這一季價格上漲得比預期快。",opts:["rise","are rising","rose","rising"],ans:1,expl:"this quarter 表示趨勢還在持續中，用進行式強調「還在漲」。"}
   ]
 },
 
@@ -466,10 +466,10 @@ grammar:[
     {bad:"I have been reading three books this month.",good:"I have read three books this month.",why:"講「數量／完成幾個」用 have done，不用進行式。"}
   ],
   quiz:[
-    {q:"My hands are dirty. I ____ the car.",opts:["have washed","have been washing","wash","am washed"],ans:1,expl:"手還是髒的＝剛停止且結果看得見 → have been washing。"},
-    {q:"How long ____ Chinese?",opts:["are you learning","do you learn","have you been learning","have you learn"],ans:2,expl:"問持續到現在的時間長度。"},
-    {q:"She ____ him since primary school.",opts:["has been knowing","has known","is knowing","knows"],ans:1,expl:"know 是狀態動詞，用 has known。"},
-    {q:"I ____ this book twice, so I know the ending.",opts:["have been reading","have read","am reading","had been reading"],ans:1,expl:"講次數與完成 → have read。"}
+    {q:"My hands are dirty. I ____ the car.",qCn:"我的手很髒。我剛剛一直在洗車。",opts:["have washed","have been washing","wash","am washed"],ans:1,expl:"手還是髒的＝剛停止且結果看得見 → have been washing。"},
+    {q:"How long ____ Chinese?",qCn:"你學中文多久了？",opts:["are you learning","do you learn","have you been learning","have you learn"],ans:2,expl:"問持續到現在的時間長度。"},
+    {q:"She ____ him since primary school.",qCn:"她從小學就認識他了。",opts:["has been knowing","has known","is knowing","knows"],ans:1,expl:"know 是狀態動詞，用 has known。"},
+    {q:"I ____ this book twice, so I know the ending.",qCn:"這本書我讀過兩次了，所以我知道結局。",opts:["have been reading","have read","am reading","had been reading"],ans:1,expl:"講次數與完成 → have read。"}
   ]
 }
 

@@ -139,7 +139,8 @@ date +%Y-%m-%d                # 今天日期（用 UTC 即可，排程在當地�
 | `intro` | 2–3 句中文導讀，說明要注意什麼結構 |
 | `paras` | 4 個 `{en, cn}`，每段都要有完整中譯 |
 | `target` | A2/B1 篇 5–6 個、B1+/B2 篇 7–9 個 `{w, ipa, pos, cn, def, ex, exCn}`；`def` 用簡單英文，`ex` 取自本文，`exCn` 是 `ex` 的繁體中文翻譯（一定要有） |
-| `questions` | A2/B1 篇 3 題、B1+/B2 篇 4 題 `{q, opts, ans, expl}`；`opts` 4 個選項且以 `"A. "`–`"D. "` 開頭，`ans` 是 0-based 索引，`expl` 用中文並引用原文依據 |
+| `questions` | A2/B1 篇 3 題、B1+/B2 篇 4 題 `{q, qCn, opts, optsCn, ans, expl}`；`opts` 4 個選項且以 `"A. "`–`"D. "` 開頭，`ans` 是 0-based 索引，`expl` 用中文並引用原文依據 |
+| `qCn` / `optsCn` | **每題都要**：`qCn` 是題目的中文翻譯；內容理解題加 `optsCn`（四個選項的中文，一樣 A–D 開頭）。純文法填空題（選項是動詞變化）只要 `qCn` 寫出整句中文意思、不用 `optsCn`。網站的「顯示中譯」開關靠這兩個欄位 |
 | `upgrade` | 2 個 `{b1, b2, note}`：同一個意思的低階說法 vs. 高階說法，`note` 解釋為什麼升級了 |
 | `upFrom` / `upTo` | A2 篇 `"A2"→"B1"`、B1 篇 `"B1"→"B1+"`、B1+ 篇 `"B1+"→"B2"`（B2 篇不用） |
 
@@ -176,6 +177,25 @@ A2 講最基本的 be+V-ing、B1 講 vs 現在簡單式、B1+ 講暫時狀態與
 寫作風格要求：解說用中文、例句用英文＋中譯、語氣像家教在講重點，不要像文法書條列。
 一定要說明「為什麼會錯」，不要只說「這樣才對」。
 **A2 那份要最淺白、句子最短；B2 那份可以談語域、寫作效果與修辭選擇。**
+
+#### 每個文法單元都要有圖文說明（`public/data-gramviz.js`）
+
+網站每個文法單元上方會顯示一張「兩格對照卡」（左右各一格、上方藍色標題膠囊、
+中間插圖、下方例句與中文），資料在 `public/data-gramviz.js` 的 `window.GRAMVIZ[單元 id]`。
+
+- **四個單元都要有**。做法二選一：
+  1. **同主題就共用**：檔案裡已有現成卡片（nowVsAlways、pastBg、goneBeen、hbdHd、
+     edIng、passive…），主題一樣直接 `V.dg20260821b1=V.nowVsAlways;` 指過去即可。
+  2. **新主題就新畫**：用檔案裡的 `card(p1,p2,cap)` 工具照既有風格寫一張，
+     左右兩格各放 title（膠囊標題）、draw（SVG 插圖，可用 emoji 與 tl() 時間軸）、
+     en（例句）、cn（中文說明），cap 是下方圖說。
+- 插圖要對應該單元真正教的對比（例：must be 90% vs might be 50%），不要放裝飾。
+- 收尾驗證會檢查今天四個單元是否都有 GRAMVIZ，缺了就不要 commit。
+
+#### 文法單元的 `quiz` 也要有中譯
+
+每題 `{q, qCn, opts, ans, expl}`：`qCn` 寫出該句的完整中文意思（例：「我平常喝茶，但今天在喝咖啡。」）。
+選項是動詞變化時不用 `optsCn`；選項是完整句子、意思不同時要加 `optsCn`。
 
 ### 3.5 為今天的四篇文章各產生一張橫幅圖
 
@@ -360,7 +380,7 @@ VOA *Let's Learn English* 只有 Level 1 與 Level 2，沒有更高的級別，�
 | `intro` / `tip` | 中文導讀與聽力策略提示（原創） |
 | `pre` | 5–7 個 `{w, ipa, cn, def}` 聽前單字，`def` 用簡單英文 |
 | `keyLines` | 5–7 句 `{en, cn}`，`en` 取自真實對白、`cn` 自己翻 |
-| `questions` | 4–5 個 `{q, opts, ans, expl}`，格式同文章題，`ans` 為 0-based |
+| `questions` | 4–5 個 `{q, qCn, opts, optsCn, ans, expl}`，格式同文章題（含中譯欄位規則），`ans` 為 0-based |
 
 #### 3.6.1 公共領域的那幾課要補逐字稿到 `public/data-scripts.js`
 
@@ -421,6 +441,7 @@ todays.forEach(a=>{
   if(a.paras.length<3) throw a.id+' 段落不足';
   if(!a.paras.every(p=>p.en&&p.cn)) throw a.id+' 有段落缺中譯';
   if(a.questions.length<3) throw a.id+' 題目不足';
+  a.questions.forEach(q=>{if(!q.qCn) throw a.id+' 題目缺 qCn 中譯: '+q.q});
   a.questions.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw a.id+' ans 索引錯誤: '+q.q});
   if(a.target.length<5) throw a.id+' 重點字不足';
   a.target.forEach(t=>{if(t.ex&&!t.exCn) throw a.id+' 重點字缺 exCn 中譯: '+t.w});
@@ -431,9 +452,12 @@ if(grams.length!==4) throw '今天應該有四個文法單元（A2/B1/B1+/B2）�
 LV.forEach(l=>{ if(grams.filter(g=>g.level===l).length!==1) throw '文法缺少或重複 '+l+' 這一級'; });
 grams.forEach(g=>{
   if(g.quiz.length<4) throw g.id+' 文法題目不足';
+  g.quiz.forEach(q=>{if(!q.qCn) throw g.id+' 文法題缺 qCn 中譯: '+q.q});
   g.quiz.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw g.id+' 文法 ans 索引錯誤: '+q.q});
   if(!g.sections.length||!g.traps.length) throw g.id+' 文法單元不完整';
 });
+global.window=global.window||{};require('./data-gramviz.js');
+grams.forEach(g=>{ if(!(window.GRAMVIZ||{})[g.id]) throw g.id+' 沒有圖文說明（data-gramviz.js）'; });
 const byLv=l=>todays.find(a=>a.level===l);
 console.log('OK 文章:', LV.map(l=>l+' '+byLv(l).id+' ('+byLv(l).words+'字)').join(' | '));
 console.log('OK 文法:', LV.map(l=>l+' '+grams.find(g=>g.level===l).titleCn).join(' | '));"

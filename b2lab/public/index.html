@@ -92,11 +92,12 @@ nav button i{font-style:normal;font-size:18px;line-height:1}
 nav button.on{color:var(--accent2);font-weight:700}
 /* 今日分頁的小日曆圖示：顯示「今天」實際日期，而不是 📅 emoji 內建的固定日期 */
 .dayico{display:inline-flex;flex-direction:column;align-items:stretch;
-  width:19px;height:19px;border:1.5px solid currentColor;border-radius:4px;overflow:hidden;font-style:normal}
+  width:20px;height:21px;border:1.5px solid currentColor;border-radius:5px;overflow:hidden;font-style:normal}
 .dayico .m{display:block;width:100%;flex:0 0 auto;background:currentColor;color:#fff;font-size:6px;font-weight:800;
-  line-height:6px;padding:1px 0;letter-spacing:.5px;text-align:center}
+  line-height:7px;letter-spacing:.5px;text-align:center}
+/* 數字不靠字型行高（各瀏覽器算法不同、容易偏下），改用固定高度置中 */
 .dayico .d{flex:1 1 auto;display:flex;align-items:center;justify-content:center;
-  font-size:11px;font-weight:800;line-height:1;text-align:center}
+  font-size:10.5px;font-weight:800;line-height:10.5px;text-align:center;padding-bottom:1px}
 /* ---------- layout ---------- */
 main{max-width:860px;margin:0 auto;padding:16px 14px 20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;margin-bottom:14px}
@@ -234,15 +235,26 @@ tr:nth-child(even) td{background:#fdfbf8}
 /* 可點擊的統計格（今日待複習 → 直接跳去單字卡複習） */
 .stat.tap{cursor:pointer;border-color:var(--accent)}
 .stat.tap:active{background:#fff7ee}
-/* ---------- 每日打卡日曆 ---------- */
-.calhd{display:flex;align-items:center;justify-content:space-between;margin:4px 0 10px}
+/* 功能清單可以直接點過去 */
+.golist li{cursor:pointer;border-radius:8px;padding:2px 4px}
+.golist li:active{background:#fff2e0}
+/* ---------- 進度圓環 ---------- */
+.rings{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:10px;margin-top:12px}
+.ring{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 6px}
+.ring:active{background:#fff7ee}
+.ring .lb{font-size:calc(12.5px * var(--fs));color:var(--ink2);font-weight:700}
+.ring .sub{font-size:calc(11px * var(--fs));color:var(--ink2)}
+/* ---------- 每日打卡日曆（格子縮小、置中） ---------- */
+.calgrid,.calhd{max-width:430px;margin-left:auto;margin-right:auto}
+.calhd{display:flex;align-items:center;justify-content:space-between;margin:4px auto 10px}
 .calhd .m{font-weight:800;font-size:calc(15px * var(--fs))}
 .calnav{background:#fff;border:1px solid var(--line);border-radius:9px;width:32px;height:32px;
   font-size:16px;color:var(--ink);cursor:pointer;line-height:1}
 .calnav:disabled{opacity:.35;cursor:default}
 .calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
 .calgrid .wd{text-align:center;font-size:calc(11px * var(--fs));color:var(--ink2);padding-bottom:2px}
-.cell{aspect-ratio:1;border-radius:9px;border:1px solid var(--line);background:#fff;
+.cell{height:40px;border-radius:9px;border:1px solid var(--line);background:#fff;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   font-size:calc(12px * var(--fs));color:var(--ink2);position:relative}
 .cell.empty{border:0;background:transparent}
@@ -260,10 +272,15 @@ tr:nth-child(even) td{background:#fdfbf8}
 .ex{background:#fdfbf8;border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin:7px 0}
 .ex .een{font-size:calc(15px * var(--fs));font-weight:600;display:flex;gap:8px;align-items:flex-start}
 .ex .ecn{font-size:calc(13.5px * var(--fs));color:var(--ink2)}
-.ex .enote{font-size:calc(12px * var(--fs));color:var(--accent2);margin-top:3px}
-.trap{background:#fff6f5;border:1px solid #f3d5d2;border-radius:10px;padding:10px 12px;margin-bottom:8px;font-size:calc(14px * var(--fs))}
+.ex .enote{font-size:calc(14px * var(--fs));color:var(--accent2);margin-top:3px}
+/* 測驗中譯：預設收起來，按「顯示中譯」才出現 */
+.q .qcn,.opt .ocn{display:none}
+[id^="quiz-"].qcn-on .qcn,[id^="quiz-"].qcn-on .ocn{display:block}
+.q .qcn{font-size:calc(13.5px * var(--fs));color:var(--ink2);font-weight:400;margin-top:3px}
+.opt .ocn{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:2px}
+.trap{background:#fff6f5;border:1px solid #f3d5d2;border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:calc(16px * var(--fs))}
 .trap .bad{color:var(--bad)} .trap .good{color:var(--ok);font-weight:600}
-.trap .why{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:4px}
+.trap .why{font-size:calc(14.5px * var(--fs));color:var(--ink2);margin-top:4px}
 /* 錯誤示範一律紅色、正確示範一律綠色（文法解說、例句註解、常見錯誤都適用） */
 .wrong{color:var(--bad);font-weight:600}
 .right{color:var(--ok);font-weight:600}
@@ -344,8 +361,13 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 .wpitem .exs .excn{font-size:calc(13px * var(--fs));color:var(--ink2);margin-top:4px}
 .extra{display:flex;flex-wrap:wrap;gap:6px}
 .extra span{
-  font-size:calc(13px * var(--fs));background:#f2f7f7;border:1px solid #cfe3e2;border-radius:20px;
-  padding:3px 10px;cursor:pointer
+  font-size:calc(15px * var(--fs));background:#f2f7f7;border:1px solid #cfe3e2;border-radius:20px;
+  padding:5px 13px;cursor:pointer;transition:background .12s
+}
+/* 剛點過的補充詞彙：浮起來的立體感，跟內文單字一致 */
+.extra span.tapped{
+  background:linear-gradient(#ffd89b,#ffbe57);border-color:#c8801f;color:#5b3210;font-weight:700;
+  box-shadow:0 2px 0 #c8801f,0 3px 6px rgba(0,0,0,.22);transform:translateY(-1px)
 }
 /* You Can Do This */
 .ycd{border-bottom:1px dashed var(--line);padding:10px 0}
@@ -693,13 +715,13 @@ function showGloss(raw){
 }
 function hideGloss(){
   $('gloss').classList.remove('on');
-  document.querySelectorAll('w.tapped').forEach(x=>x.classList.remove('tapped'));
+  document.querySelectorAll('w.tapped, .extra span.tapped').forEach(x=>x.classList.remove('tapped'));
 }
 /* 點到的那個字加上 .tapped（換色＋立體感），下次點別的字才換掉 */
 document.addEventListener('click',function(e){
-  const w=e.target && e.target.closest ? e.target.closest('w') : null;
+  const w=e.target && e.target.closest ? e.target.closest('w, .extra span') : null;
   if(!w) return;
-  document.querySelectorAll('w.tapped').forEach(x=>{ if(x!==w) x.classList.remove('tapped'); });
+  document.querySelectorAll('w.tapped, .extra span.tapped').forEach(x=>{ if(x!==w) x.classList.remove('tapped'); });
   w.classList.add('tapped');
 },true);
 window.showGloss=showGloss; window.hideGloss=hideGloss;
@@ -1093,11 +1115,24 @@ window.togCn=togCn; window.cnAll=cnAll; window.readAll=readAll;
    ============================================================ */
 let QSTATE={};
 function quizHTML(qs,ns){
-  return qs.map((q,i)=>
-    '<div class="q"><div class="qt">'+(i+1)+'. '+esc(q.q)+' '+spk(q.q)+'</div>'
-    + q.opts.map((o,j)=>'<button class="opt" id="o-'+ns+'-'+i+'-'+j+'" onclick="pick(\''+ns+'\','+i+','+j+','+q.ans+')">'+esc(o)+'</button>').join('')
-    + '<div class="expl" id="e-'+ns+'-'+i+'">'+(q.ans!=null?'✔ 正解：'+esc(q.opts[q.ans])+'<br>':'')+esc(q.expl||'')+'</div></div>').join('');
+  /* 題目有中譯（qCn / optsCn）時，多一顆「顯示中譯」開關；預設隱藏，自己決定要不要看 */
+  const hasCn=qs.some(q=>q.qCn||(q.optsCn||[]).length);
+  return (hasCn?'<div class="row" style="margin-bottom:9px"><button class="spk" id="qcn-'+ns+'" onclick="togQuizCn(\''+ns+'\')">🈶 顯示中譯</button></div>':'')
+  +'<div id="quiz-'+ns+'">'
+  + qs.map((q,i)=>
+    '<div class="q"><div class="qt">'+(i+1)+'. '+esc(q.q)+' '+spk(q.q)
+    +(q.qCn?'<div class="qcn">'+esc(q.qCn)+'</div>':'')+'</div>'
+    + q.opts.map((o,j)=>'<button class="opt" id="o-'+ns+'-'+i+'-'+j+'" onclick="pick(\''+ns+'\','+i+','+j+','+q.ans+')">'+esc(o)
+       +((q.optsCn||[])[j]?'<span class="ocn">'+esc(q.optsCn[j])+'</span>':'')+'</button>').join('')
+    + '<div class="expl" id="e-'+ns+'-'+i+'">'+(q.ans!=null?'✔ 正解：'+esc(q.opts[q.ans])+'<br>':'')+esc(q.expl||'')+'</div></div>').join('')
+  +'</div>';
 }
+function togQuizCn(ns){
+  const box=$('quiz-'+ns); if(!box) return;
+  const on=box.classList.toggle('qcn-on');
+  const b=$('qcn-'+ns); if(b) b.textContent = on?'🈶 隱藏中譯':'🈶 顯示中譯';
+}
+window.togQuizCn=togQuizCn;
 /* 三種測驗共用：art=文章、gram=文法單元、listen=聽力課 */
 function qsOf(ns){ return ns==='art' ? (rdOpen&&rdOpen.questions)||[] : ns==='listen' ? (lsOpen&&lsOpen.questions)||[] : (CURG&&CURG.quiz)||[]; }
 function scoreBoxId(ns){ return ns==='art'?'quizScore':ns==='listen'?'lsquizScore':'gquizScore'; }
@@ -1400,8 +1435,6 @@ RENDER.daily=function(){
   const anyNew=artsToday.some(a=>isToday(a))||gramsToday.some(g=>isToday(g));
   if(!anyArt&&!anyGram){
     h+='<div class="card"><div class="muted">還沒有新內容。新文章與文法在<b>每週三、五</b>早上更新，可以先到「閱讀」與「文法」分頁，或看今日聽力。</div></div>';
-  }else if(!anyNew){
-    h+='<div class="card"><div class="muted">上面顯示的是最近一次的內容。新文章、文法與聽力<b>每週三、五</b>早上更新，其他天不會有新的。</div></div>';
   }
   h+='<div class="card"><h2 class="sec">🎯 今天可以這樣安排</h2>'
    +'<ol style="font-size:calc(15px * var(--fs));padding-left:22px;margin:4px 0">'
@@ -1485,6 +1518,15 @@ function calShift(delta){
 }
 window.calShift=calShift;
 
+/* SVG 進度圓環：pct 0-100 */
+function ringSVG(pct,color){
+  const r=26, c=2*Math.PI*r, off=c*(1-Math.min(100,pct)/100);
+  return '<svg width="64" height="64" viewBox="0 0 64 64">'
+   +'<circle cx="32" cy="32" r="'+r+'" fill="none" stroke="#f0e4d4" stroke-width="7"/>'
+   +'<circle cx="32" cy="32" r="'+r+'" fill="none" stroke="'+color+'" stroke-width="7" stroke-linecap="round" '
+   +'stroke-dasharray="'+c.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'" transform="rotate(-90 32 32)"/>'
+   +'<text x="32" y="37" text-anchor="middle" font-size="14" font-weight="800" fill="#4a3b2a">'+Math.round(pct)+'%</text></svg>';
+}
 RENDER.prog=function(){
   const learned=Object.keys(ST.srs).length;
   const mature=Object.values(ST.srs).filter(s=>s.int>=21).length;
@@ -1510,6 +1552,21 @@ RENDER.prog=function(){
    +'<div class="stat"><b>'+mature+'</b><span>已精熟 (≥21天)</span></div>'
    +'<div class="stat"><b>'+dueN+'</b><span>今天該複習</span></div></div>'
    +'<div class="muted" style="margin-top:10px">單字庫共 '+VOCAB.length+' 個字（全部來自你的課堂筆記）'+bar(learned,VOCAB.length)+'</div>'
+   +(function(){
+      const pool=LESSONS.filter(l=>inBand(l.level));
+      const lsDn=pool.filter(l=>(ST.listenDone||{})[l.id]).length;
+      const pct=(a,b)=>b?a/b*100:0;
+      const R=[
+        {lb:'閱讀',c:'#3b82c4',dn:artN,tot:ALL_ARTS.length,tab:'read'},
+        {lb:'文法',c:'#8b5cf6',dn:gramN,tot:ALL_GRAM.length,tab:'gram'},
+        {lb:'聽力',c:'#159AA6',dn:lsDn,tot:pool.length,tab:'listen'},
+        {lb:'單字',c:'#e8813a',dn:learned,tot:VOCAB.length,tab:'vocab'}
+      ];
+      return '<div class="rings">'+R.map(x=>
+        '<div class="ring" onclick="go(\''+x.tab+'\')" title="點一下前往'+x.lb+'">'
+        +ringSVG(pct(x.dn,x.tot),x.c)
+        +'<div class="lb">'+x.lb+'</div><div class="sub">'+x.dn+' / '+x.tot+'</div></div>').join('')+'</div>';
+    })()
    +'</div>'
 
    + calendarCard()
@@ -2098,11 +2155,12 @@ function oldSiteCard(){
    +'<div class="pair">'
    +'<div class="pairbox">'
      +'<div class="ph" style="background:linear-gradient(135deg,#f0964f,#d9691f)">📚 B2 Read（這裡）</div>'
-     +'<ul><li>📅 今日：每週三、五更新文章、文法與聽力</li>'
-     +'<li>📖 閱讀：61 篇分級文章，點字查中文</li>'
-     +'<li>🎧 聽力：影片＋逐字稿，可慢速與單句循環</li>'
-     +'<li>🔤 單字卡：618 字間隔複習</li>'
-     +'<li>📐 文法：19 個單元＋練習題</li></ul>'
+     +'<ul class="golist">'
+     +'<li onclick="go(\'daily\')">📅 今日：每週三、五更新文章、文法與聽力 ›</li>'
+     +'<li onclick="go(\'read\')">📖 閱讀：'+ALL_ARTS.length+' 篇分級文章，點字查中文 ›</li>'
+     +'<li onclick="go(\'listen\')">🎧 聽力：影片＋逐字稿，可慢速與單句循環 ›</li>'
+     +'<li onclick="goReview()">🔤 單字卡：'+VOCAB.length+' 字間隔複習 ›</li>'
+     +'<li onclick="go(\'gram\')">📐 文法：'+ALL_GRAM.length+' 個單元＋練習題 ›</li></ul>'
    +'</div>'
    +'<div class="pairbox">'
      +'<div class="ph" style="background:linear-gradient(135deg,#159AA6,#0E6E78)">🍎🐻 Speak Up!</div>'
