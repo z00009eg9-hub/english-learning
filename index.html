@@ -5368,7 +5368,7 @@ function micStart(cfg){
 function micInterrupted(){
   if(!micActive&&!micRec)return;
   const cfg=micCfg;hardResetMic();
-  if(cfg&&cfg.lbl){const l=$(cfg.lbl);if(l)l.textContent='錄音已中斷，按一下重新開始 🎤';}}
+  if(cfg&&cfg.lbl){const l=$(cfg.lbl);if(l)l.textContent='錄音已中斷，按一下重新開始 '+(cfg.icon||'🎤');}}
 document.addEventListener('visibilitychange',()=>{
   /* 離開時收乾淨；回到前景時再收一次 —— 有些手機（iOS）離開時不會通知，
      按鈕會留在 ⏹ 的錄音狀態，怎麼按都沒反應 */
