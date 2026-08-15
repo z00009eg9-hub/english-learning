@@ -307,7 +307,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 
 /* ═══ QUIZ ═══ */
 .opt{display:block;width:100%;text-align:left;padding:10px 13px;border-radius:12px;border:2px solid var(--bdr2);
-  background:#fff;font-size:1.02rem;font-weight:600;line-height:1.5;font-family:inherit;color:var(--ink);cursor:pointer;
+  background:#fff;font-size:1.1rem;font-weight:600;line-height:1.55;font-family:inherit;color:var(--ink);cursor:pointer;
   margin-bottom:7px;transition:.14s;}
 .opt:hover:not(:disabled){border-color:var(--coral);}
 .opt.ok{border-color:var(--good);background:var(--good-l);color:var(--good);font-weight:800;}
@@ -318,12 +318,15 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .fill-in:focus{outline:none;border-color:var(--coral);}
 /* 閱讀測驗短文 */
 .rd-pass{background:var(--teal-l);border:1px solid #BEE9E7;border-radius:12px;padding:9px 12px;margin:2px 0 9px;
-  font-family:'Inter';font-size:.9rem;line-height:1.5;color:var(--ink);max-height:min(17vh,96px);overflow-y:auto;}
+  font-family:'Inter';font-size:1rem;line-height:1.6;color:var(--ink);max-height:min(22vh,140px);overflow-y:auto;}
 .rd-pass .rd-cn{font-family:inherit;font-size:1rem;font-weight:600;color:#4E858B;margin-top:6px;line-height:1.6;}
 .rd-tt{font-size:.66rem;font-weight:800;color:var(--teal);letter-spacing:.5px;margin-bottom:3px;}
 .rd-mk{background:#FFEFB0;border-radius:4px;padding:1px 3px;font-weight:800;}
+/* 測驗的中譯：用開關控制顯示或隱藏（不重畫題目、不影響作答狀態） */
+#quiz-card.cn-off .qz-cn{display:none}
+.qz-cn{font-size:.98rem;color:var(--sub);margin-bottom:12px}
 .expl{background:var(--amber-l);border-left:4px solid var(--amber);border-radius:0 10px 10px 0;
-  padding:12px 15px;font-size:1rem;color:var(--ink);margin-top:12px;line-height:1.65;}
+  padding:12px 15px;font-size:1.08rem;color:var(--ink);margin-top:12px;line-height:1.7;}
 /* 解說／對照裡的中文行 */
 .cn-line{font-size:1.08rem;font-weight:600;color:#4E858B;margin-top:6px;line-height:1.6;}
 
@@ -858,6 +861,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
     <div class="tog-row">
       <div class="lvl-tog" id="quiz-lvl" style="display:none"></div>
       <div class="lvl-tog" id="quiz-mode" style="display:none"></div>
+      <div class="lvl-tog" id="quiz-cn" style="display:none"></div>
     </div>
     <div class="prog"><i id="quiz-prog"></i></div>
     <div class="card" id="quiz-card"></div>
@@ -6509,6 +6513,13 @@ function talkNext(){micStop();
    ═══════════════════════════════════════════════════════════ */
 let qz=null,qzI=0,qzScore=0,qzList=[];
 let quizLevel=null,quizMode='mix';
+/* 測驗中譯開關：記住上次的選擇（預設顯示） */
+let qzCnOn=(localStorage.getItem('su_qzcn')!=='0');
+function renderQuizCnBtn(){const el=$('quiz-cn');if(!el)return;el.style.display='flex';
+  el.innerHTML='<button class="lvl-btn'+(qzCnOn?' active':'')+'" onclick="togQzCn()">🈶 中譯</button>';}
+function togQzCn(){qzCnOn=!qzCnOn;localStorage.setItem('su_qzcn',qzCnOn?'1':'0');
+  renderQuizCnBtn();applyQzCn();}
+function applyQzCn(){const c=$('quiz-card');if(c)c.classList.toggle('cn-off',!qzCnOn);}
 const QUIZ_MODES=[['mix','📝 綜合'],['listen','🎧 聽力'],['read','📖 閱讀']];
 /* mode: mix=原本的單字/文法題；listen=聽力選擇題；read=閱讀理解選擇題 */
 function quizSetFor(d,level,mode){
@@ -6534,7 +6545,7 @@ function startQuiz(d,level,mode){
     max=Math.max(4,actMax(max));}
   /* 輪替出題：同一天再測一次會盡量換新題目 */
   qz=q;qzList=rotatePick(q.questions,'quiz_'+quizMode,d,max,x=>(x.q||'')+'|'+(x.audio||''));qzI=0;qzScore=0;
-  renderQuizLevelToggle(d);renderQuizModeBar();
+  renderQuizLevelToggle(d);renderQuizModeBar();renderQuizCnBtn();applyQzCn();
   $('quiz-sub').textContent=(q.title||lessonTitle(d))+' · '+(q.subtitle||'')+' · '+lvTag(quizLevel)+' · 共 '+qzList.length+' 題';
   $('quiz-final').classList.add('hide');$('quiz-card').classList.remove('hide');
   sessStart('quiz','📝 快速檢查',qzList.length,{kind:'quiz',level:quizLevel});
@@ -6561,9 +6572,9 @@ function qzRender(){const q=qzList[qzI];$('quiz-prog').style.width=(qzI/qzList.l
       ?q.parts.map((t,i)=>i===q.mark?'<span class="rd-mk">'+esc(t)+'</span>':esc(t)).join(' ')
       :esc(q.passage);
     h+='<div class="rd-pass"><div class="rd-tt">READING</div>'+body
-      +(q.passageCn&&lvBasic()?'<div class="rd-cn">'+esc(q.passageCn)+'</div>':'')+'</div>';}
-  h+='<div style="font-size:1rem;font-weight:700;line-height:1.45;margin:4px 0 3px">'+esc(q.q)+'</div>';
-  if(q.cn)h+='<div style="font-size:.85rem;color:var(--sub);margin-bottom:12px">'+esc(q.cn)+'</div>';else h+='<div class="spacer"></div>';
+      +(q.passageCn?'<div class="rd-cn qz-cn" style="margin-bottom:0">'+esc(q.passageCn)+'</div>':'')+'</div>';}
+  h+='<div style="font-size:1.12rem;font-weight:700;line-height:1.5;margin:4px 0 3px">'+esc(q.q)+'</div>';
+  if(q.cn)h+='<div class="qz-cn">'+esc(q.cn)+'</div>';else h+='<div class="spacer"></div>';
   /* 聽力題：題目用聽的，可重複播放 */
   if(q.audio)h+='<div class="actions" style="margin:2px 0 12px"><button class="btn btn-t" onclick="qzPlay(1)" title="正常速度再播一次">🔊 再聽一次</button>'
     +'<button class="btn btn-o" onclick="qzPlay(.6)" title="放慢播放">🐢 慢速</button></div>';
