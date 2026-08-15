@@ -419,6 +419,11 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .cbad-mark{color:var(--bad);font-weight:900;margin-right:6px;}
 .cok{align-self:center;font-size:1rem;font-weight:800;color:var(--good);background:var(--good-l);
   border-radius:100px;padding:5px 15px;}
+/* 情境對話：答完自己按「下一句」，不再自動跳題 */
+.cnext{align-self:center;margin-top:4px;border:none;cursor:pointer;font-family:inherit;font-weight:800;
+  font-size:1.02rem;color:#fff;background:var(--coral);border-radius:100px;padding:11px 26px;
+  box-shadow:0 3px 10px rgba(0,0,0,.12);}
+.cnext:hover{background:var(--coral-d);}
 .cdots{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;margin:14px 0 4px;}
 .cdot{width:8px;height:8px;border-radius:50%;background:var(--bdr2);}
 .cdot.done{background:var(--good);}
@@ -5297,7 +5302,7 @@ function armStartWatch(){
     if(!micRetried){micRetried=true;micRestart();return;}
     const cfg=micCfg;hardResetMic();
     if(cfg&&cfg.lbl){const l=$(cfg.lbl);if(l)l.textContent='⚠ 麥克風沒啟動，請再按一次 🎤';}
-  },4500);
+  },3000);
 }
 /* 瀏覽器一次會給好幾個候選，第一個常常不是最像的 — 挑跟題目最接近的那個
    （只用來「選候選」，不影響後面正式評分的寬鬆度） */
@@ -5340,11 +5345,16 @@ function _startRec(){
 function micStart(cfg){
   if(!speechOK()){cfg.onDone&&cfg.onDone('','unsupported',[]);return;}
   if(micActive){
+    /* 正在收尾（已經按過結束、引擎還沒回話）時又被按 → 直接收乾淨，這一按當作重新開始錄；
+       以前會再跑一次 micStop()，按鈕就一直停在 ⏹ 沒反應 */
+    if(micStopping){hardResetMic();}
     /* 同一顆按鈕 + 引擎還活著 → 這是「結束並評分」；否則一律清乾淨重來
        （引擎死掉但 micActive 還卡在 true 時，以前會整個按不動） */
-    if(micCfg&&micCfg.btn===cfg.btn&&micRec){micStop();return;}
-    hardResetMic();
+    else if(micCfg&&micCfg.btn===cfg.btn&&micRec){micStop();return;}
+    else hardResetMic();
   }
+  /* 上一輪殘留的辨識器沒放掉，新的 start() 會靜靜失敗 —— 開錄前一律先清掉 */
+  if(micRec){try{micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;micRec.abort();}catch(e){}micRec=null;}
   if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}
   micGen++;micRetried=false;
   micCfg=cfg;micFinal='';micLive='';micAlts=[];micErr=null;micDone=false;micStopping=false;
@@ -5355,12 +5365,16 @@ function micStart(cfg){
   setTimeout(()=>{if(micActive&&gen===micGen)_startRec();},TTS_GAP);
 }
 /* 切到別的 App、鎖螢幕、換分頁：辨識引擎會被瀏覽器中止，先收乾淨，回來才按得動 */
+function micInterrupted(){
+  if(!micActive&&!micRec)return;
+  const cfg=micCfg;hardResetMic();
+  if(cfg&&cfg.lbl){const l=$(cfg.lbl);if(l)l.textContent='錄音已中斷，按一下重新開始 🎤';}}
 document.addEventListener('visibilitychange',()=>{
-  if(document.hidden&&micActive){
-    const cfg=micCfg;hardResetMic();
-    if(cfg&&cfg.lbl){const l=$(cfg.lbl);if(l)l.textContent='錄音已中斷，按 🎤 重新開始';}
-  }});
-window.addEventListener('pagehide',()=>{if(micActive)hardResetMic();});
+  /* 離開時收乾淨；回到前景時再收一次 —— 有些手機（iOS）離開時不會通知，
+     按鈕會留在 ⏹ 的錄音狀態，怎麼按都沒反應 */
+  micInterrupted();});
+window.addEventListener('pagehide',()=>{micInterrupted();});
+window.addEventListener('pageshow',()=>{micInterrupted();});
 /* 除錯用：把瀏覽器聽到的候選列出來，一眼看出是收音沒收到還是評分太嚴 */
 function altLine(alts,chosen){
   const u=[];(alts||[]).forEach(a=>{const t=(a||'').trim();if(t&&u.indexOf(t)<0)u.push(t);});
@@ -5817,8 +5831,12 @@ function noteDates(){const s=new Set();
   allTrans.forEach(t=>{const d=dOf(t.src);if(d)s.add(d);});
   articles.forEach(a=>{const d=dOf(a.source);if(d)s.add(d);});
   return [...s].sort().reverse();}
-/* Tom：A2 基礎主題 + 全部真實課程筆記；Anita：只有真實筆記 */
-function allDates(){return isTom()?A2LESSONS.map(l=>l.id).concat(noteDates()):noteDates();}
+/* Tom：全部真實課程筆記（新的在最上面）+ A2 基礎主題排在最後；Anita：只有真實筆記 */
+function allDates(){return isTom()?noteDates().concat(A2LESSONS.map(l=>l.id)):noteDates();}
+/* 預設選哪一天：Tom 先給 A2 基礎主題（清單雖然排最後），Anita 給最新的一篇筆記 */
+function defaultDay(){
+  if(isTom()&&A2LESSONS.length)return A2LESSONS[0].id;
+  return allDates()[0]||'all';}
 function dayVocab(d){
   /* 一律去重：資料表裡同一個字可能被登記多次，重複會讓各活動一直出到同一個字 */
   if(A2BY[d])return dedupe(A2BY[d].vocab,'w');
@@ -6088,7 +6106,8 @@ function renderHdTopic(){const el=$('hd-topic');if(!el)return;
 document.addEventListener('click',e=>{if(!e.target.closest('#day-dd'))ddClose();});
 function initHome(){
   DDATES=allDates().concat(['all']);
-  DAY=DDATES[0]||'all';
+  DAY=defaultDay();
+  if(DDATES.indexOf(DAY)<0)DAY=DDATES[0]||'all';
   buildDayList();
   updateProfileUI();renderMeta();renderHdTopic();coachSay(coachHome());renderActProg();
   const wd=['日','一','二','三','四','五','六'][new Date().getDay()];
@@ -6200,7 +6219,8 @@ function startWord(d){renderLvlBar('word');
   wList=trimForTom(rotatePick(pool,'word',d,25,v=>v.w.toLowerCase()),5);
   if(!wList.length){alert('這一天還沒有單字，換一天試試。');return;}
   wI=0;$('word-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+wList.length+' 字';
-  sessStart('word','🗣️ 單字口說',wList.length,{scoreLabel:'平均發音'});
+  /* 單字口說：只要一張一張翻到最後一張，就算今天練完了（中間跳過的字不影響打勾） */
+  sessStart('word','🗣️ 單字口說',wList.length,{scoreLabel:'平均發音',doneOnReach:true});
   show('scr-word');wRender();}
 function wRender(){const v=wList[wI];wCur=v;$('word-flip').classList.remove('f');
   $('word-w').textContent=v.w;$('word-ipa').textContent=v.ipa||'';$('word-pos').textContent=v.pos||'';
@@ -6244,7 +6264,7 @@ function wordMic(){micStart({btn:'word-mic',lbl:'word-mlbl',redo:'word-redo',idl
     sessLog(wI,wCur.w,wCur.cn||'',pct);
     speak(wCur.w,0.85);
     if(pct===100){$('word-mlbl').textContent='滿分! 自動跳下一個 🎉';setTimeout(()=>{if(!micActive)wordNext();},1500);}}});}
-function wordNext(){wI++;if(wI>=wList.length){finishAct('🗣️ 單字口說','你念完了 '+wList.length+' 個單字!把生字變成能說的字。');return;}wRender();}
+function wordNext(){wI++;if(wI>=wList.length){if(SESS)SESS.reachedEnd=true;finishAct('🗣️ 單字口說','你念完了 '+wList.length+' 個單字!把生字變成能說的字。');return;}wRender();}
 
 /* ═══════════════════════════════════════════════════════════
    4) READ ALOUD
@@ -6450,10 +6470,19 @@ function talkJudge(said){
     chatAdd('<div class="cok">✅ 說得好 '+pct+'%</div>');
     sessLog(talkI,t.en,t.cn,talkBest);
     logSpeak(pct);
-    $('talk-mlbl').textContent='很好! 準備下一句…';
-    setTimeout(()=>{if(!micActive)talkNext();},1500);
+    micStop();
+    talkShowNext();
     return;}
   talkReveal(said,pct);}
+/* 答完不自動跳題：放一顆「下一句」按鈕，讓學習者自己決定什麼時候繼續
+   （想再說一次就按 ⬆，想看解說就按🪄，準備好了才按下一句） */
+function talkShowNext(){
+  const old=document.getElementById('talk-next');if(old)old.remove();
+  const last=talkI>=talkTurns.length-1;
+  chatAdd('<button class="cnext" id="talk-next" onclick="talkNext()">'
+    +(last?'🏁 看這一輪成績':'▶ 下一句')+'</button>');
+  $('talk-mlbl').textContent=last?'想再說一次就按 ⬆，好了就按「看這一輪成績」'
+                                 :'想再說一次就按 ⬆，好了就按「下一句 ▶」';}
 /* 顯示正確說法（照片 3 的「試著說」）＋逐字對照＋可請教練講解 */
 function talkReveal(said,pct){
   const t=talkCur;
@@ -7235,8 +7264,10 @@ function showSummary(){
   const rows=[];for(let i=0;i<n;i++)rows.push(S.items[i]||null);
   const done=rows.filter(x=>x&&x.pct!=null);
   /* 每一題都有作答紀錄才算「今天練完了」，首頁卡片右上角才會打勾；
-     中途跳過或沒作答就不打勾（已經打過勾的日子不會被取消） */
-  const allDone=n>0&&done.length>=n;
+     中途跳過或沒作答就不打勾（已經打過勾的日子不會被取消）。
+     doneOnReach 的活動（單字口說）例外：只要有作答且一路翻到最後一題就算完成。 */
+  const reached=S.doneOnReach&&S.reachedEnd&&done.length>0;
+  const allDone=n>0&&(done.length>=n||reached);
   if(S.act){if(!ST.actToday)ST.actToday={};
     const o=ST.actToday[S.act]||(ST.actToday[S.act]={n:0,sum:0,cnt:0});
     if(allDone)o.done=true;
