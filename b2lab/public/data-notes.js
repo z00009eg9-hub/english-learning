@@ -6,7 +6,7 @@ window.NOTES = {
   {w:"proactive",ipa:"/proʊˈæktɪv/",pos:"adj.",cn:"主動積極的",def:"Acting before a problem happens instead of waiting.",exEn:"Emma decided to take proactive measures.",exCn:"Emma 決定採取主動積極的作為。",cat:"workplace"},
   {w:"obstacle",ipa:"/ˈɑːbstəkl/",pos:"n.",cn:"阻礙、障礙",def:"Something that makes it hard to succeed.",exEn:"This communication failure became a significant obstacle.",exCn:"這次的溝通失敗成了一大阻礙。",cat:"workplace"},
   {w:"feedback",ipa:"/ˈfiːdbæk/",pos:"n.",cn:"回饋、意見",def:"Comments about how well you did something.",exEn:"They received positive feedback from their boss.",exCn:"他們得到老闆正面的回饋。",cat:"workplace"},
-  {w:"transparent",ipa:"/trænsˈpærənt/",pos:"adj.",cn:"透明的、公開清楚的",def:"Open and easy for people to understand.",exEn:"The company made its refund policy clearer and more transparent.",exCn:"公司讓退款政策更清楚、更透明。",cat:"workplace"},
+  {w:"transparent",ipa:"/trænsˈpærənt/",pos:"adj.",cn:"透明的、公開清楚的",def:"Open and easy for people to understand.",exEn:"The company made its refund policy more transparent.",exCn:"公司讓退款政策更透明。",cat:"workplace"},
   {w:"escalate",ipa:"/ˈeskəleɪt/",pos:"v.",cn:"（問題）擴大、惡化",def:"To become bigger or more serious.",exEn:"Take action before small issues escalate.",exCn:"在小問題擴大之前先採取行動。",cat:"workplace"},
   {w:"go viral",ipa:"/goʊ ˈvaɪrəl/",pos:"phr.",cn:"爆紅、瘋傳",def:"To spread very quickly on the internet.",exEn:"One of their videos went viral, receiving thousands of views.",exCn:"他們的一支影片爆紅，獲得數千次觀看。",cat:"daily"},
   {w:"accountability",ipa:"/əˌkaʊntəˈbɪləti/",pos:"n.",cn:"當責、負起責任",def:"Being willing to accept responsibility for what you do.",exEn:"The company handled the crisis by applying principles of accountability.",exCn:"公司以當責的原則來處理這次危機。",cat:"workplace"},

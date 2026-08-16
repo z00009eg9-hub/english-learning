@@ -45,8 +45,8 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   display:grid;place-items:center;font-size:.88rem;letter-spacing:-1px;backdrop-filter:blur(4px);flex-shrink:0;}
 .hd-ttl{font-size:1.08rem;font-weight:900;letter-spacing:-.4px;line-height:1.1;}
 .hd-sub{font-size:.72rem;opacity:.9;font-weight:500;margin-top:1px;}
-.hd-topic{display:inline-block;max-width:min(46vw,420px);margin-top:4px;padding:2px 10px;border-radius:100px;
-  background:rgba(255,255,255,.22);font-size:.85rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.hd-topic{display:inline-block;max-width:min(46vw,460px);margin-top:4px;padding:3px 12px;border-radius:100px;
+  background:rgba(255,255,255,.22);font-size:.98rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 /* 迷你日曆：顯示課堂當天的日期數字（取代固定顯示 17 的日曆 emoji） */
 .hd-cal{display:inline-block;width:17px;border-radius:4px;overflow:hidden;background:#fff;
   vertical-align:-4px;margin-right:3px;line-height:1;}
@@ -78,6 +78,13 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   .hd-streak{padding:5px 9px;font-size:.72rem;}
   .hd-fs{padding:4px 8px;font-size:.7rem;}
   .hd-b2{font-size:10.5px!important;padding:4px 9px!important;}
+  /* 活動卡：英文副標不顯示、標題縮一級不換行、圖示縮小（2026-08-16 使用者要求）
+     min-width:0 讓 nowrap 標題不會把 grid 欄位撐到超出畫面 */
+  .act-en{display:none;}
+  .act{padding:13px 12px;min-width:0;}
+  .act-h{font-size:1rem;padding-right:46px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .act-ico{width:40px;height:40px;font-size:1.3rem;top:12px;right:10px;border-radius:11px;}
+  .act-d{font-size:.88rem;margin-top:6px;}
 }
 
 /* ═══ LAYOUT ═══ */
@@ -89,8 +96,8 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   box-shadow:var(--sh-sm);padding:16px;}
 
 /* ═══ COACH GREETING ═══ */
-.coach{display:flex;gap:11px;align-items:center;background:var(--soft);
-  border:2px solid var(--line);border-radius:16px;padding:10px 13px;box-shadow:var(--sh-sm);margin-bottom:14px;}
+.coach{display:flex;gap:10px;align-items:center;background:var(--soft);
+  border:2px solid var(--line);border-radius:15px;padding:7px 11px;box-shadow:var(--sh-sm);margin-bottom:12px;}
 .coach-av{width:42px;height:42px;border-radius:50%;flex-shrink:0;font-size:1.4rem;
   background:linear-gradient(135deg,#159AA6,#35BAC6);display:grid;place-items:center;
   box-shadow:0 4px 14px rgba(21,154,166,.35);
@@ -108,10 +115,10 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .coach-name{font-size:.74rem;color:var(--sub);font-weight:700;margin-top:5px;}
 
 /* ═══ DAY SELECTOR ═══ */
-.pick-lbl{font-size:.78rem;font-weight:800;color:var(--sub);margin-bottom:7px;
-  display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.5px;}
+.pick-lbl{font-size:.98rem;font-weight:900;color:var(--ink);margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;letter-spacing:.3px;}
 .day-dd{position:relative;}
-.day-sel{width:100%;padding:14px 15px;border-radius:14px;border:2px solid var(--bdr2);background:#fff;
+.day-sel{width:100%;padding:11px 13px;border-radius:14px;border:2px solid var(--bdr2);background:#fff;
   font-size:.98rem;font-weight:700;color:var(--ink);font-family:inherit;cursor:pointer;text-align:left;
   display:flex;align-items:center;justify-content:space-between;gap:10px;}
 .day-sel:focus,.day-sel.open{outline:none;border-color:var(--coral);}
@@ -493,7 +500,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   background:var(--bg);z-index:-1;}
 /* 影片高度限制在視窗約 1/3：黏頂後下方永遠留得住字幕（寬度依 16:9 自動縮） */
 .vid-box{background:#000;border-radius:16px;overflow:hidden;position:relative;box-shadow:var(--sh);
-  aspect-ratio:16/9;height:min(32vh,50vw);max-width:100%;margin:0 auto;}
+  aspect-ratio:16/9;height:min(42vh,54vw);max-width:100%;margin:0 auto;}
 .vid-box>iframe,.vid-box>video{position:absolute;inset:0;width:100%;height:100%;border:0;}
 .vid-tts{background:linear-gradient(150deg,#159AA6,#35BAC6);border-radius:16px;padding:11px 14px;text-align:center;color:#fff;}
 .vid-tts .ico{font-size:1.7rem;}
@@ -516,14 +523,14 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .sub-list.nocn .sub-cn{display:none;}
 .sub-list.noen .sub-en{filter:blur(6px);}
 .sub-en .vw{background:#FFF1C2;border-radius:4px;padding:0 2px;cursor:pointer;font-weight:800;}
-.vtoolbar{display:flex;gap:6px;justify-content:space-between;margin-top:12px;background:#fff;
-  border:1px solid var(--bdr);border-radius:16px;padding:8px 6px;box-shadow:var(--sh-sm);}
+.vtoolbar{display:flex;gap:4px;justify-content:space-between;margin-top:8px;background:#fff;
+  border:1px solid var(--bdr);border-radius:14px;padding:4px 4px;box-shadow:var(--sh-sm);}
 .vtool{flex:1;border:none;background:transparent;cursor:pointer;font-family:inherit;color:var(--sub);
-  font-size:.78rem;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px 2px;border-radius:11px;}
+  font-size:.78rem;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:1px;padding:3px 2px;border-radius:11px;}
 .vtool .i{font-size:1.1rem;}
 .vtool.on{background:var(--coral-l);color:var(--coral-d);}
 .vtool:hover{color:var(--coral-d);}
-.vplay{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:8px;}
+.vplay{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:5px;}
 .vid-pin .vtoolbar{margin-top:8px;}
 .vid-pin .vplay .pp{width:52px;height:52px;font-size:1.2rem;}
 /* 練習面板打開時：影片縮小、播放列先收起來，麥克風整組一定看得到 */
@@ -546,8 +553,8 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .vid-pin.unpin{position:static;}
 #vid-prac .card{margin-top:8px;box-shadow:var(--sh);}
 .vplay button{border:none;background:transparent;cursor:pointer;font-size:1.4rem;color:var(--ink);font-family:inherit;}
-.vplay .pp{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--coral-d));
-  color:#fff;display:grid;place-items:center;font-size:1.4rem;box-shadow:0 8px 22px rgba(15,122,133,.4);}
+.vplay .pp{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--coral-d));
+  color:#fff;display:grid;place-items:center;font-size:1.25rem;box-shadow:0 8px 22px rgba(15,122,133,.4);}
 .vid-pick{width:100%;margin-bottom:10px;text-align:left;}
 .vid-add{margin-top:14px;}
 .vid-add textarea,.vid-add input{width:100%;padding:11px 13px;border-radius:12px;border:2px solid var(--bdr2);
@@ -593,7 +600,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
         <button class="prof-btn" id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
       </div>
       <div class="hd-streak">🔥 <span id="hd-streak">1</span> 天 <span id="sync-badge" title="進度已雲端同步（跨裝置共用）" style="display:none">☁️</span></div>
-      <button class="hd-fs" id="hd-fs" onclick="cycleFS()" title="調整字體大小（標準 → 大 → 特大）">🔠 標準</button>
+      <button class="hd-fs" id="hd-fs" onclick="cycleFS()" title="調整字體大小（標準 → 大 → 特大）">Aa 標準</button>
       <a href="https://english-b2-lab.web.app" class="hd-b2" title="B2 Read — 閱讀 · 單字間隔複習 · 文法教材，每天自動更新"
          style="display:inline-block;margin-top:5px;font-size:12px;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(135deg,#f0964f,#d9691f);border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:5px 12px;white-space:nowrap;box-shadow:0 2px 8px rgba(160,80,20,.3)">📚 B2 Read ↗</a>
     </div>
@@ -611,7 +618,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
     </div>
 
     <div class="card">
-      <div class="pick-lbl">📅 選一天的課堂內容</div>
+      <div class="pick-lbl">選一天的課堂內容</div>
       <div class="day-dd" id="day-dd">
         <button class="day-sel" id="day-btn" onclick="ddToggle(event)"><span id="day-btn-label">—</span><span class="dd-caret">▾</span></button>
         <div class="dd-list" id="dd-list"></div>
@@ -973,7 +980,7 @@ const vocab = [
   {w:"proactive",ipa:"/proʊˈæktɪv/",pos:"adj.",cn:"主動積極的",def:"Acting before a problem happens instead of waiting.",exEn:"Emma decided to take proactive measures.",exCn:"Emma 決定採取主動積極的作為。",cat:"workplace"},
   {w:"obstacle",ipa:"/ˈɑːbstəkl/",pos:"n.",cn:"阻礙、障礙",def:"Something that makes it hard to succeed.",exEn:"This communication failure became a significant obstacle.",exCn:"這次的溝通失敗成了一大阻礙。",cat:"workplace"},
   {w:"feedback",ipa:"/ˈfiːdbæk/",pos:"n.",cn:"回饋、意見",def:"Comments about how well you did something.",exEn:"They received positive feedback from their boss.",exCn:"他們得到老闆正面的回饋。",cat:"workplace"},
-  {w:"transparent",ipa:"/trænsˈpærənt/",pos:"adj.",cn:"透明的、公開清楚的",def:"Open and easy for people to understand.",exEn:"The company made its refund policy clearer and more transparent.",exCn:"公司讓退款政策更清楚、更透明。",cat:"workplace"},
+  {w:"transparent",ipa:"/trænsˈpærənt/",pos:"adj.",cn:"透明的、公開清楚的",def:"Open and easy for people to understand.",exEn:"The company made its refund policy more transparent.",exCn:"公司讓退款政策更透明。",cat:"workplace"},
   {w:"escalate",ipa:"/ˈeskəleɪt/",pos:"v.",cn:"（問題）擴大、惡化",def:"To become bigger or more serious.",exEn:"Take action before small issues escalate.",exCn:"在小問題擴大之前先採取行動。",cat:"workplace"},
   {w:"go viral",ipa:"/goʊ ˈvaɪrəl/",pos:"phr.",cn:"爆紅、瘋傳",def:"To spread very quickly on the internet.",exEn:"One of their videos went viral, receiving thousands of views.",exCn:"他們的一支影片爆紅，獲得數千次觀看。",cat:"daily"},
   {w:"accountability",ipa:"/əˌkaʊntəˈbɪləti/",pos:"n.",cn:"當責、負起責任",def:"Being willing to accept responsibility for what you do.",exEn:"The company handled the crisis by applying principles of accountability.",exCn:"公司以當責的原則來處理這次危機。",cat:"workplace"},
@@ -5148,7 +5155,14 @@ const DAYTALK = {
       {q:"Something went wrong at work. Did the manager point fingers at other people?",qCn:"工作上出了問題。經理有去指責別人嗎？",
        en:"Instead of blaming others, she decided to take action.",cn:"她沒有指責別人，而是決定採取行動。",hint:"instead of + V-ing；take action = 採取行動"},
       {q:"In a meeting, a leader wanted more detail from a team member. What did she ask him to do?",qCn:"會議中，主管想聽到更多細節。她要求他做什麼？",
-       en:"She asked him to elaborate on his proposal.",cn:"她請他針對他的提案再詳細說明。",hint:"elaborate on = 針對……詳細說明"}
+       en:"She asked him to elaborate on his proposal.",cn:"她請他針對他的提案再詳細說明。",hint:"elaborate on = 針對……詳細說明"},
+      /* ── 課堂討論問題 Discussion Questions（2026-08-16 加入，答句取自筆記原文） ── */
+      {q:"Why do companies sponsor TV shows?",qCn:"為什麼公司要贊助電視節目？",
+       en:"Companies sponsor TV shows because they want more people to know their brands and products.",cn:"公司贊助電視節目是因為他們希望更多人知道自己的品牌和產品。",hint:"sponsor = 贊助；brand = 品牌"},
+      {q:"How can a brand gain more exposure?",qCn:"一個品牌可以如何獲得更多曝光？",
+       en:"A brand can gain more exposure by using social media, online advertisements, and TV commercials.",cn:"一個品牌可以透過社群媒體、網路廣告和電視廣告來獲得更多曝光。",hint:"gain more exposure = 獲得更多曝光"},
+      {q:"Can you think of a time when you turned a failure into an opportunity?",qCn:"你能想到自己把失敗轉化為機會的經驗嗎？",
+       en:"I used this failure as an opportunity to find the root cause and improve the testing process.",cn:"我把這次失敗當成一個機會，去找出根本原因並改善測試流程。",hint:"root cause = 根本原因；improve = 改善"}
     ]
   },
   "20260811": {
@@ -5483,8 +5497,10 @@ function ttsFix(t){let s=String(t);TTS_FIX.forEach(f=>{s=s.replace(f[0],f[1]);})
 let ttsGen=0;
 function ttsEta(text,rate){const w=String(text).split(/\s+/).filter(Boolean).length;
   return Math.min(90000,900+w*430/(rate||0.92));}
-function speak(text,rate,done){
-  text=ttsFix(text);
+function speak(text,rate,done,vopt){
+  /* vopt：{voice: 指定語音, pitchAdj: 音高微調}——朗讀示範男女聲交替用 */
+  text=ttsFix(text);vopt=vopt||{};
+  const vc=vopt.voice||VOICE,pAdj=vopt.pitchAdj||0;
   ttsGen++;const gen=ttsGen;let cb=done||null;
   const fire=()=>{if(gen!==ttsGen||!cb)return;const f=cb;cb=null;f();};
   try{if(!window.speechSynthesis){fire();return;}
@@ -5493,16 +5509,16 @@ function speak(text,rate,done){
     const base=rate||0.92;
     const sents=String(text).match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[String(text)];
     if(sents.length<=1){
-      const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=base;u.pitch=1.02;
-      if(VOICE)u.voice=VOICE;u.onend=fire;u.onerror=fire;
+      const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=base;u.pitch=1.02+pAdj;
+      if(vc)u.voice=vc;u.onend=fire;u.onerror=fire;
       speechSynthesis.speak(u);
     }else{
       sents.forEach((s,i)=>{
         const u=new SpeechSynthesisUtterance(s.trim());u.lang='en-US';
         const isQ=/\?$/.test(s.trim()),isEnd=i===sents.length-1;
         u.rate=isEnd?base*0.93:isQ?base*1.02:base*(0.96+i%2*0.06);
-        u.pitch=isQ?1.12:isEnd?0.94:1.0+((i%3)-1)*0.06;
-        if(VOICE)u.voice=VOICE;
+        u.pitch=(isQ?1.12:isEnd?0.94:1.0+((i%3)-1)*0.06)+pAdj;
+        if(vc)u.voice=vc;
         if(isEnd){u.onend=fire;u.onerror=fire;}
         speechSynthesis.speak(u);});}
     if(cb)setTimeout(fire,ttsEta(text,rate));
@@ -6156,7 +6172,7 @@ function toggleHelp(){const c=$('help-card');const b=$('help-btn');const open=c.
   b.innerHTML=open?'❓ 收起說明 ▴':'❓ 第一次使用?點這裡看怎麼練口說 ▾';}
 
 /* ---------- 字級調整（標準/大/特大，記在本機） ---------- */
-const FS_STEPS=[[1,'🔠 標準'],[1.12,'🔠 大'],[1.25,'🔠 特大']];
+const FS_STEPS=[[1,'Aa 標準'],[1.12,'Aa 大'],[1.25,'Aa 特大']];
 function applyFS(){const v=+(localStorage.getItem('speakup_fs')||1);
   const f=FS_STEPS.find(s=>s[0]===v)||FS_STEPS[0];
   document.documentElement.style.fontSize=(16*f[0])+'px';
@@ -6177,24 +6193,24 @@ document.querySelectorAll('section.screen').forEach(sc=>{
 });
 /* ---------- 教練訊息 ---------- */
 function coachSay(html){$('coach-msg').innerHTML=html;}
-function coachHome(){const nm=PROFILES[PROFILE],n=ST.totalSpoken;
+function coachHome(){const nm=PROFILES[PROFILE],n=ST.spokenToday;   /* 只報今天的句數（2026-08-16 使用者要求） */
   if(isTom()){const lv='<b>A2 → B1</b>';
     const tGreet=[
-      'Hi '+nm+'! <b>'+n+'</b> 句了耶～ 不錯不錯！我們繼續從基礎練 ('+lv+')，今天想挑哪個主題？',
-      nm+'～ 哇，已經 <b>'+n+'</b> 句了！一步一步來，你真的愈說愈順了喔。來吧，選一個主題 ('+lv+') 👊',
-      'Hey '+nm+'！累計 <b>'+n+'</b> 句，很棒！慢慢來沒關係，重點是每天都開口～ 挑一個想練的吧 ('+lv+')'];
+      'Hi '+nm+'! 今天已經開口 <b>'+n+'</b> 句了耶～ 不錯不錯！繼續從基礎練 ('+lv+')，想挑哪個主題？',
+      nm+'～ 哇，今天 <b>'+n+'</b> 句了！一步一步來，你真的愈說愈順了喔。來吧，選一個主題 ('+lv+') 👊',
+      'Hey '+nm+'！今天說了 <b>'+n+'</b> 句，很棒！慢慢來沒關係，重點是每天都開口～ ('+lv+')'];
     const tNew=[
       'Hi '+nm+'！我們從簡單的開始 ('+lv+')，大聲說出來就對了～ 別怕，選一個主題吧！',
       nm+'～ 準備好了嗎？簡單的句子、大大的聲音，你一定會愈說愈順！('+lv+')'];
     return n>0?tGreet[n%tGreet.length]:tNew[Math.random()<.5?0:1];}
   const aGreet=[
-    nm+'～ <b>'+n+'</b> 句了耶！哇，不知不覺累積好多。今天也來說幾句吧，選一天的課開始！',
-    'Hey '+nm+'！<b>'+n+'</b> 句！你知道嗎，每天開口一點點，差別真的很大～ 挑一天的課繼續練吧 💪',
-    nm+'！做得好，已經 <b>'+n+'</b> 句了～ 今天想練哪天的？選一個開始吧。',
-    'Hi '+nm+'～ 累計 <b>'+n+'</b> 句，保持這個節奏就對了！來，今天想說什麼？'];
+    nm+'～ 今天已經說了 <b>'+n+'</b> 句耶！保持這個節奏，繼續加油！',
+    'Hey '+nm+'！今天 <b>'+n+'</b> 句！每天開口一點點，差別真的很大～ 繼續練吧 💪',
+    nm+'！做得好，今天累積 <b>'+n+'</b> 句了～ 還想練哪個活動？',
+    'Hi '+nm+'～ 今天 <b>'+n+'</b> 句，狀態很好！來，接下來想說什麼？'];
   const aNew=[
     'Hi '+nm+'！準備好開口了嗎？今天的目標就是——<b>把學過的字真的「說出來」</b>。不用完美，說就對了！選一天的課開始吧～',
-    nm+'～ 嘿！不用怕說錯，大聲說出來就是最好的練習。選一天的課，我們開始吧！',
+    nm+'～ 嘿！今天還沒開口喔。不用怕說錯，大聲說出來就是最好的練習，選一天的課開始吧！',
     'Hey '+nm+'！今天來把筆記裡的字<b>真的講出來</b>吧～ 挑一天的課，準備好就按下去 🎤'];
   return n>0?aGreet[n%aGreet.length]:aNew[Math.floor(Math.random()*aNew.length)];}
 
@@ -6439,9 +6455,12 @@ function readOpen(gi){const a=READLIST[gi];READ={a:a,paras:[]};
 function readDemo(pi){
   if(micActive)hardResetMic();
   const l=$('rlbl-'+pi);if(l)l.textContent='🔊 聽示範…';
+  /* 段落男女聲隨機出現，聽起來像不同的人輪流念（沒有男聲的裝置用降音高模擬） */
+  const male=Math.random()<0.5;
+  const vopt=male?(VOICE_M?{voice:VOICE_M}:{pitchAdj:-0.24}):{};
   speak(readText(pi),0.9,()=>{
     if(AUTOREC&&speechOK()&&!micActive)readMic(pi);
-    else if(!micActive&&l)l.textContent='按 🎤 朗讀這段';});}
+    else if(!micActive&&l)l.textContent='按 🎤 朗讀這段';},vopt);}
 function readFinish(){finishAct('📖 朗讀文章','你把這一篇唸完了!');}
 /* 中文翻譯開關：進階預設隱藏（自己先讀讀看），想對照隨時可以打開 */
 function readToggleCn(){const b=$('read-body');const off=b.classList.toggle('nocn');
@@ -6456,11 +6475,10 @@ function readMic(pi){
       const h=$('rheard-'+pi);if(h)h.innerHTML=altLine(alts,t);},
     onDone:(t,err,alts)=>{if(err==='unsupported'){micUnsupported('rlbl-'+pi);return;}
       if(!t){$('rlbl-'+pi).textContent='沒聽清楚，再按一次 🎤';return;}
-      /* 主要辨識結果 + 瀏覽器候選逐一比對，取覆蓋率最高的那份當成績（引擎聽錯不冤枉扣分） */
-      let best=t,cov=markRead(pi,t);
-      (alts||[]).slice(0,6).forEach(a=>{if(!a)return;const c=markRead(pi,a);
-        if(c>cov){cov=c;best=a;}});
-      if(best!==t)markRead(pi,best);   /* 綠字重畫成最佳那份 */
+      /* 主結果＋瀏覽器候選合併成同一個字池再比對：同一段音訊的不同轉寫各抓到不同的字，
+         合併後綠字亮得最全，而且分數和畫面一定一致（修正 90% 但綠字沒全亮的 bug） */
+      const pool=[t].concat(alts||[]).filter(Boolean).slice(0,7).join(' ');
+      const cov=markRead(pi,pool);
       $('rcov-'+pi).textContent=cov+'%';$('rlbl-'+pi).textContent='唸得好!覆蓋率 '+cov+'%';
       const h=$('rheard-'+pi);if(h)h.innerHTML=altLine(alts,t);
       logSpeak(cov);   /* 這段朗讀完整結束、拿到覆蓋率，就計入統計 */
@@ -6597,7 +6615,8 @@ function talkJudge(said){
     +(pass?'':'<div class="cbub-tools"><button class="ctool" onclick="talkMic()" title="再說一次">↻ 再說一次</button></div>')
     +'</div>');
   if(pass){
-    chatAdd('<div class="cok">✅ 說得好 '+pct+'%</div>');
+    /* 評分和正確答案一起給（2026-08-16 使用者要求）：緊湊一行，不用捲動就看得到 */
+    chatAdd('<div class="cok">✅ 說得好 '+pct+'%　<span style="font-weight:600;color:var(--ink)">'+esc(cap(t.en))+'</span></div>');
     sessLog(talkI,t.en,t.cn,talkBest);
     logSpeak(pct);
     micStop();
@@ -6965,6 +6984,26 @@ function parseSubs(text){
     out.push({t:t,en:en,cn:(parts[1]||'').trim()||cnFor(en)});});
   out.sort((a,b)=>a.t-b.t);
   return out;}
+/* 字幕細分：貼入的字幕常常一行塞好幾句、時間戳很稀疏，影片播到中段時亮的還是同一行，
+   看起來像「沒同步」。把多句的行按句子拆開，時間依字數在「這行～下一行」之間內插，
+   亮字就會跟著影片一句一句走（2026-08-16 使用者回報）。 */
+function refineSubs(lines){
+  if(!lines||lines.length<2)return lines||[];
+  const out=[];
+  lines.forEach((L,li)=>{
+    const sents=String(L.en).match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[L.en];
+    const span=(li+1<lines.length?lines[li+1].t:L.t+sents.length*4)-L.t;
+    if(sents.length<2||span<=6){out.push(L);return;}
+    const totalLen=sents.reduce((s,x)=>s+x.length,0)||1;
+    /* 中文也照句號切；切不齊就整段掛在第一小句 */
+    const cns=String(L.cn||'').replace(/([。！？])/g,'$1').split('').filter(s=>s.trim());
+    let acc=0;
+    sents.forEach((s,si)=>{
+      out.push({t:L.t+span*acc/totalLen,en:s.trim(),
+        cn:cns.length===sents.length?cns[si].trim():(si===0?(L.cn||''):'')});
+      acc+=s.length;});
+  });
+  return out;}
 
 /* 這一天可用的素材清單：影片各歸各的課堂日，選哪一天就只出那一天的影片 */
 function vidDayLabel(d){
@@ -7058,7 +7097,7 @@ function vOpen(i){
       m.lines=lines;vOpen(i);});
     return;}
   vStop();
-  VID={m:m,mode:m.kind,lines:m.lines,i:0,playing:false,rate:1,loop:false,
+  VID={m:m,mode:m.kind,lines:(m.kind==='yt'?refineSubs(m.lines):m.lines),i:0,playing:false,rate:1,loop:false,
     showCn:true,showEn:true,vocab:false,yt:null,timer:null};
   $('vid-pick').classList.add('hide');$('vid-body').classList.remove('hide');
   $('vid-prac').classList.add('hide');$('vid-prac').innerHTML='';
