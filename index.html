@@ -337,10 +337,29 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .para-en .tok.hit{color:var(--good);background:var(--good-l);}
 .para-cn{font-size:1.08rem;font-weight:600;color:#4E858B;margin-top:10px;line-height:1.7;border-top:1px dashed var(--bdr2);padding-top:10px;}
 .para-bar{display:flex;align-items:center;gap:10px;margin-top:12px;}
-/* iPad / 平板：朗讀文章字體加大，看得更清楚 */
+/* iPad / 平板 / 電腦：字體與卡片一起放大，把版面填滿，不要一大片留白
+   （2026-08-16 使用者回報 iPad 上空白太多） */
 @media(min-width:700px){
+  .wrap{max-width:940px;padding:18px 22px 26px;}
   .para-en{font-size:1.34rem;line-height:1.95;}
   .para-cn{font-size:1.22rem;}
+  .card{padding:22px;}
+  /* 說出來／跟讀／聽力：題目卡放大，麥克風與按鈕跟著放大 */
+  .pc{min-height:118px;padding:18px 20px 10px;}
+  .pc-tag{font-size:.78rem;}
+  .pc-cn{font-size:1.95rem;}
+  .pc-en{font-size:1.7rem;}
+  .pc-hint{font-size:1.12rem;}
+  .pc-ipa{font-size:1.12rem;}
+  .mic{width:78px;height:78px;font-size:1.9rem;}
+  .mic-lbl{font-size:1rem;}
+  .btn{padding:13px 22px;font-size:.98rem;}
+  /* 單字卡：字加大（卡片高度由 fitWordCard() 依內容與螢幕決定） */
+  .fw{font-size:2.6rem;}
+  .fpos{font-size:1rem;}
+  .face-b .fcn{font-size:2.1rem;}
+  .face-b .fdef{font-size:1.26rem;}
+  .face-b .fex{font-size:1.2rem;}
 }
 
 /* ═══ TALK phrases ═══ */
@@ -5595,14 +5614,20 @@ function setActLevel(act,l){if(l===LEVEL)return;saveLevel(l);
   micStop();if(window.speechSynthesis)speechSynthesis.cancel();
   openAct(act);}
 /* 依難度挑句子：基礎=短句優先，進階=完整長句 */
+/* 依難度挑句子：基礎＝最短的一半，進階＝去掉最短那幾句之後全給。
+   2026-08-16 修正：舊版基礎收「≤9 字」、進階收「≥6 字」，6～9 字的句子兩邊都收，
+   所以兩個難度的句數幾乎一樣。改成依長度排序切開，兩邊不重疊，基礎一定比進階少。 */
 function pickByLevel(items){if(!items||items.length<=5)return items;
   const wc=s=>toks(s.en).length;
-  if(lvBasic()){const easy=items.filter(s=>wc(s)<=9);
-    return easy.length>=5?easy:items.slice().sort((a,b)=>wc(a)-wc(b)).slice(0,Math.max(5,Math.ceil(items.length/2)));}
-  const hard=items.filter(s=>wc(s)>=6);return hard.length>=5?hard:items;}
-/* 依難度挑單字：基礎=較短較易的一半，進階=全部 */
+  const sorted=items.slice().sort((a,b)=>wc(a)-wc(b));
+  if(lvBasic())return sorted.slice(0,Math.max(5,Math.round(sorted.length*0.5)));
+  return sorted.slice(Math.min(sorted.length-6,Math.floor(sorted.length*0.15)));}
+/* 依難度挑單字：基礎＝較短較易的一半，進階＝全部 */
 function pickWordsByLevel(list){if(!lvBasic()||list.length<=8)return list;
   return list.slice().sort((a,b)=>a.w.length-b.w.length).slice(0,Math.max(8,Math.ceil(list.length/2)));}
+/* 每一輪出幾題的上限：基礎比進階少。
+   光靠 pickByLevel 還不夠——題庫大的日子兩邊都會被同一個上限截成一樣多。 */
+function levelCap(n){return lvBasic()?Math.max(5,Math.round(n*0.6)):n;}
 /* 示範發音語速：基礎較慢 */
 function demoRate(){return lvBasic()?0.78:0.92;}
 /* ---------- 輪替出題：記住最近出過的項目，下一輪優先出沒練過的（基礎難度池子小，特別容易重複） ---------- */
@@ -6259,7 +6284,7 @@ function renderMeta(){const d=DAY;const v=dayVocab(d).length,s=sayItems(d).lengt
    ═══════════════════════════════════════════════════════════ */
 let sayList=[],sayI=0,sayCur=null;
 function startSay(d){reviewMode=false;renderLvlBar('say');
-  sayList=trimForTom(shuffle(pickByLevel(sayItems(d))).slice(0,20),5);
+  sayList=trimForTom(shuffle(pickByLevel(sayItems(d))).slice(0,levelCap(20)),5);
   if(!sayList.length){alert('這一天還沒有可練的句子，換一天或選「全部筆記」試試。');return;}
   sayI=0;$('say-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+sayList.length+' 句';
   sessStart('say','🎤 說出來',sayList.length);
@@ -6312,7 +6337,7 @@ function sayNext(){sayI++;if(sayI>=sayList.length){
    ═══════════════════════════════════════════════════════════ */
 let shList=[],shI=0,shCur=null;
 function startShadow(d){renderLvlBar('shadow');
-  shList=trimForTom(shuffle(pickByLevel(shadowItems(d))).slice(0,20),5);
+  shList=trimForTom(shuffle(pickByLevel(shadowItems(d))).slice(0,levelCap(20)),5);
   if(!shList.length){alert('這一天還沒有可跟讀的句子，換一天試試。');return;}
   shI=0;sessStart('shadow','🔁 跟讀模仿',shList.length);
   show('scr-shadow');shRender();renderAutoRec();setTimeout(()=>shDemo(demoRate()),350);}
@@ -6353,7 +6378,7 @@ let wList=[],wI=0,wCur=null;
 function startWord(d){renderLvlBar('word');
   /* 先去重（同一個字只出現一次），再依難度挑，最後用輪替避免每次都抽到同一批 */
   const pool=pickWordsByLevel(dedupe(wordItems(d),'w'));
-  wList=trimForTom(rotatePick(pool,'word',d,25,v=>v.w.toLowerCase()),5);
+  wList=trimForTom(rotatePick(pool,'word',d,levelCap(25),v=>v.w.toLowerCase()),5);
   if(!wList.length){alert('這一天還沒有單字，換一天試試。');return;}
   wI=0;$('word-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+wList.length+' 字';
   /* 單字口說：只要一張一張翻到最後一張，就算今天練完了（中間跳過的字不影響打勾） */
@@ -6376,7 +6401,9 @@ function fitWordCard(){const wrap=document.querySelector('.flip-wrap');if(!wrap)
     if(!f||!b)return;
     wrap.style.height='1200px';                    /* 先撐開再量，內容才不會被 flex 壓縮 */
     const need=Math.max(faceNeed(f),faceNeed(b))+8;
-    wrap.style.height=Math.max(190,Math.round(need))+'px';};
+    /* 下限依螢幕大小：平板／電腦上卡片太矮會讓下方留一大片空白（2026-08-16 使用者回報） */
+    const floor=innerWidth>=1100?320:innerWidth>=700?290:190;
+    wrap.style.height=Math.max(floor,Math.round(need))+'px';};
   requestAnimationFrame(doFit);
   /* 分頁在背景時 rAF 可能不會觸發，補一次量測，避免字卡被切掉 */
   setTimeout(doFit,120);setTimeout(doFit,600);}
@@ -6787,7 +6814,7 @@ function qzFinish(){$('quiz-prog').style.width='100%';
    ═══════════════════════════════════════════════════════════ */
 let lsList=[],lsI=0,lsCur=null,lsOpts=[],lsAns=-1;
 function startListen(d){renderLvlBar('listen');
-  lsList=trimForTom(shuffle(pickByLevel(shadowItems(d))).slice(0,15),5);
+  lsList=trimForTom(shuffle(pickByLevel(shadowItems(d))).slice(0,levelCap(15)),5);
   if(!lsList.length){alert('這一天還沒有可聽寫的句子，換一天或選「全部筆記」試試。');return;}
   lsI=0;sessStart('listen','🎧 聽力練習',lsList.length,{scoreLabel:lvBasic()?'答對率':'平均聽寫'});
   $('ls-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+lsList.length+' 句';
