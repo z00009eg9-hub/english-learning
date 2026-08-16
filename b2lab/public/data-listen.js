@@ -290,6 +290,132 @@ lessons:[
   ]
 }
 
+],
+
+/* ========================================================== *
+ *  🏙️ 實景場景主題 — 生活英文跟讀                            *
+ *  影片來源：VOA Learning English（公共領域）                  *
+ *  每支 YouTube ID 已用 oEmbed 驗證存在且頻道正確。            *
+ * ========================================================== */
+scenes:[
+
+/* ---------------------------------------------------------- 看醫生 */
+{
+  id:"sc01", level:"B1", yt:"d_4TVWhqX4E", minutes:5, kind:"scene",
+  title:"I Can't Come In", titleCn:"我沒辦法去上班",
+  series:"VOA Let's Learn English · Level 1 · Lesson 27",
+  topic:"🏥 看醫生", focus:"描述身體症狀：I feel / I have a / My ~ hurts",
+  source:"VOA Learning English（美國之音，美國政府出版物／公共領域）",
+  sourceUrl:"https://learningenglish.voanews.com/a/lets-learn-english-lesson-27/3546080.html",
+  intro:"Anna 早上起來不舒服，先打電話跟主管請假，再打給醫生描述症狀。這一課會教你最實用的「我哪裡不舒服」英文——出國旅行如果需要看醫生，這些句子就是你的救命句。",
+  tip:"跟讀的時候刻意把症狀說慢一點、清楚一點。真的看醫生時，醫生最怕病人說了一大串但聽不清楚在哪裡痛。練到可以一句接一句講出來就過關。",
+  pre:[
+    {w:"feel well",ipa:"/fiːl wel/",cn:"覺得身體還好",def:"To feel healthy and normal."},
+    {w:"headache",ipa:"/ˈhedeɪk/",cn:"頭痛",def:"A pain in your head."},
+    {w:"stomachache",ipa:"/ˈstʌməkeɪk/",cn:"肚子痛",def:"A pain in your stomach."},
+    {w:"sore throat",ipa:"/sɔːr θroʊt/",cn:"喉嚨痛",def:"When your throat hurts, often from a cold."},
+    {w:"cough",ipa:"/kɔːf/",cn:"咳嗽",def:"To push air out of your lungs noisily."},
+    {w:"fever",ipa:"/ˈfiːvər/",cn:"發燒",def:"A body temperature that is higher than normal."},
+    {w:"appointment",ipa:"/əˈpɔɪntmənt/",cn:"預約（門診）",def:"A time you plan to see the doctor."},
+    {w:"take medicine",ipa:"/teɪk ˈmedɪsn/",cn:"吃藥",def:"To use pills or liquid to get better."}
+  ],
+  keyLines:[
+    {en:"I don't feel well today. I can't come in.",cn:"我今天不舒服，沒辦法去上班。"},
+    {en:"What's wrong? What are your symptoms?",cn:"怎麼了？你有什麼症狀？"},
+    {en:"I have a really bad headache.",cn:"我頭痛得很厲害。"},
+    {en:"My throat is sore and I have a cough.",cn:"我喉嚨痛，而且一直咳嗽。"},
+    {en:"I think I have a fever, too.",cn:"我覺得我也發燒了。"},
+    {en:"You should see a doctor.",cn:"你應該去看醫生。"},
+    {en:"I'd like to make an appointment, please.",cn:"我想預約看診。"},
+    {en:"Take this medicine and drink lots of water.",cn:"吃這個藥，然後多喝水。"},
+    {en:"Get some rest and you'll feel better soon.",cn:"好好休息，你很快就會好起來。"}
+  ],
+  questions:[
+    {q:"Why can't Anna come to work?",opts:["A. She is on vacation","B. She doesn't feel well","C. She overslept","D. The office is closed"],ans:1,expl:"她打電話說 I don't feel well today. I can't come in."},
+    {q:"Which symptom does Anna NOT mention?",opts:["A. Headache","B. Sore throat","C. Broken arm","D. Cough"],ans:2,expl:"她說了頭痛、喉嚨痛、咳嗽和發燒，但沒提到手臂骨折。"},
+    {q:"What does the doctor tell Anna to do?",opts:["A. Go to the hospital immediately","B. Take medicine and rest","C. Keep working from home","D. Take a hot bath"],ans:1,expl:"醫生說 Take this medicine and drink lots of water. Get some rest."},
+    {q:"\"I have a sore throat\" 的意思是？",opts:["A. 我胃痛","B. 我喉嚨痛","C. 我流鼻水","D. 我頭暈"],ans:1,expl:"sore throat 是喉嚨痛。sore = 疼痛的、throat = 喉嚨。"},
+    {q:"Which is the correct way to describe feeling sick?",opts:["A. I am not feel well.","B. I don't feel well.","C. I no feel well.","D. I not feeling good."],ans:1,expl:"正確句型是 I don't feel well（否定用 do not）。也可以說 I'm not feeling well（進行式）。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 問路 / 社區 */
+{
+  id:"sc02", level:"B1", yt:"8_npDNRKGIE", minutes:5, kind:"scene",
+  title:"This Is My Neighborhood", titleCn:"我的社區",
+  series:"VOA Let's Learn English · Level 1 · Lesson 11",
+  topic:"🗺️ 問路", focus:"Where is the ~? / near / far from / next to / across from",
+  source:"VOA Learning English（美國之音，美國政府出版物／公共領域）",
+  sourceUrl:"https://learningenglish.voanews.com/a/lets-learn-english-lesson-11/3248028.html",
+  intro:"Anna 要去圖書館、郵局、銀行和商店，Marsha 告訴她這些地方在社區的哪裡。這一課的句型在旅行中超常用——不管是在國外找超市還是找地鐵站，開口第一句幾乎都是 Where is the…?",
+  tip:"注意方位詞怎麼搭配使用：near（附近）、next to（旁邊）、across from（對面）、between A and B（在 A 和 B 之間）。跟讀時試著邊說邊用手比方向，身體記憶比只用腦袋記有效。",
+  pre:[
+    {w:"neighborhood",ipa:"/ˈneɪbərhʊd/",cn:"社區、街坊",def:"The area around where you live."},
+    {w:"library",ipa:"/ˈlaɪbreri/",cn:"圖書館",def:"A place where you borrow books."},
+    {w:"post office",ipa:"/poʊst ˈɔːfɪs/",cn:"郵局",def:"A place where you send letters and packages."},
+    {w:"across from",ipa:"/əˈkrɔːs frʌm/",cn:"在…對面",def:"On the other side of the street."},
+    {w:"next to",ipa:"/nekst tuː/",cn:"在…旁邊",def:"Very close to, right beside."},
+    {w:"between",ipa:"/bɪˈtwiːn/",cn:"在…之間",def:"In the middle of two things."},
+    {w:"far from",ipa:"/fɑːr frʌm/",cn:"離…很遠",def:"A long way from a place."}
+  ],
+  keyLines:[
+    {en:"Where is the library?",cn:"圖書館在哪裡？"},
+    {en:"The library is near the park.",cn:"圖書館在公園附近。"},
+    {en:"Is the post office far from here?",cn:"郵局離這裡遠嗎？"},
+    {en:"No, it's not far. It's next to the bank.",cn:"不遠，就在銀行旁邊。"},
+    {en:"The store is across from the library.",cn:"商店在圖書館對面。"},
+    {en:"It's between the bank and the coffee shop.",cn:"它在銀行和咖啡廳之間。"},
+    {en:"Excuse me, how do I get to the post office?",cn:"不好意思，請問郵局怎麼走？"},
+    {en:"Go straight and turn right at the corner.",cn:"直走，到路口右轉。"}
+  ],
+  questions:[
+    {q:"Where does Anna need to go?",opts:["A. The airport","B. The library, post office, bank, and store","C. A restaurant","D. The hospital"],ans:1,expl:"Anna 一一問了圖書館、郵局、銀行和商店的位置。"},
+    {q:"Where is the library?",opts:["A. Far from the park","B. Near the park","C. Next to the bank","D. Across from the school"],ans:1,expl:"Marsha 說 The library is near the park."},
+    {q:"\"Next to\" means ___.",opts:["A. 在…對面","B. 在…旁邊","C. 離…很遠","D. 在…之間"],ans:1,expl:"next to = 在旁邊，就是緊挨著的意思。"},
+    {q:"Which is the best way to ask for directions?",opts:["A. Where is library?","B. Excuse me, where is the library?","C. Library where?","D. I go library."],ans:1,expl:"禮貌問路：Excuse me 開頭，Where is the + 地點？別忘了冠詞 the。"},
+    {q:"\"Across from\" means the place is ___.",opts:["A. behind you","B. on the other side of the street","C. very far away","D. upstairs"],ans:1,expl:"across from = 在對面（馬路的另一邊）。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 購物做飯 */
+{
+  id:"sc03", level:"B1", yt:"6rFolPv2ntQ", minutes:5, kind:"scene",
+  title:"Let's Make Dinner!", titleCn:"一起做晚餐！",
+  series:"VOA Let's Learn English · Level 1 · Lesson 35",
+  topic:"🛒 購物做飯", focus:"食物單字、量詞、購物對話：I need / How much / a pound of",
+  source:"VOA Learning English（美國之音，美國政府出版物／公共領域）",
+  sourceUrl:"https://learningenglish.voanews.com/a/lets-learn-english-lesson-35/3668459.html",
+  intro:"Anna 和 Marsha 要辦一場晚餐派對。Anna 負責去買菜，但她拿錯了清單！這一課會教你逛超市和菜市場最需要的英文：食物的名字、量詞（a pound of / a bottle of）、還有問價錢怎麼問。",
+  tip:"超市購物是最容易「現學現用」的場景。跟讀的時候想像自己站在菜市場，練到不用想就能說出 I need a pound of tomatoes 就成功了。",
+  pre:[
+    {w:"grocery store",ipa:"/ˈɡroʊsəri stɔːr/",cn:"雜貨店、超市",def:"A store that sells food."},
+    {w:"recipe",ipa:"/ˈresəpi/",cn:"食譜",def:"Instructions for cooking food."},
+    {w:"ingredient",ipa:"/ɪnˈɡriːdiənt/",cn:"食材",def:"One of the foods you need to make a dish."},
+    {w:"a pound of",ipa:"/ə paʊnd ʌv/",cn:"一磅的…",def:"A unit of weight (about 0.45 kg)."},
+    {w:"a bottle of",ipa:"/ə ˈbɑːtl ʌv/",cn:"一瓶…",def:"A glass or plastic container of liquid."},
+    {w:"fresh",ipa:"/freʃ/",cn:"新鮮的",def:"Not old, recently picked or made."},
+    {w:"shopping list",ipa:"/ˈʃɑːpɪŋ lɪst/",cn:"購物清單",def:"A list of things you need to buy."},
+    {w:"How much is ~?",ipa:"/haʊ mʌtʃ/",cn:"…多少錢？",def:"What you ask to know the price."}
+  ],
+  keyLines:[
+    {en:"We need to go to the grocery store.",cn:"我們得去超市買東西。"},
+    {en:"Here's the shopping list. Don't forget anything!",cn:"購物清單在這裡，什麼都別忘了！"},
+    {en:"I need a pound of tomatoes, please.",cn:"請給我一磅番茄。"},
+    {en:"How much are the tomatoes?",cn:"番茄多少錢？"},
+    {en:"Do you have any fresh fish?",cn:"你們有新鮮的魚嗎？"},
+    {en:"We also need a bottle of olive oil.",cn:"我們還需要一瓶橄欖油。"},
+    {en:"Oh no! I brought the wrong list!",cn:"糟了！我拿錯清單了！"},
+    {en:"Let me check the recipe again.",cn:"讓我再看一次食譜。"}
+  ],
+  questions:[
+    {q:"Why is Anna going to the store?",opts:["A. To buy a gift","B. To get ingredients for dinner","C. To buy new clothes","D. To return something"],ans:1,expl:"Anna 和 Marsha 要辦晚餐派對，所以去買食材。"},
+    {q:"What mistake does Anna make?",opts:["A. She forgets her wallet","B. She goes to the wrong store","C. She brings the wrong list","D. She buys too much food"],ans:2,expl:"Anna 拿錯了購物清單，買了不該買的東西。"},
+    {q:"\"How much are the tomatoes?\" is asking about ___.",opts:["A. the color","B. the weight","C. the price","D. the number"],ans:2,expl:"How much 問價錢——多少錢。"},
+    {q:"\"A pound of\" is used for ___.",opts:["A. 數量（幾個）","B. 重量（多重）","C. 長度（多長）","D. 時間（多久）"],ans:1,expl:"a pound of 是重量單位（約 0.45 公斤），用在肉、蔬菜、水果等秤重賣的東西。"},
+    {q:"Which is correct at a store?",opts:["A. Give me tomato.","B. I need a pound of tomatoes, please.","C. Tomatoes me give.","D. I wanting tomatoes."],ans:1,expl:"正確又禮貌的說法是 I need + 量詞 + 東西 + please。"}
+  ]
+}
+
 ]
 
 };

@@ -360,6 +360,8 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   .face-b .fcn{font-size:2.1rem;}
   .face-b .fdef{font-size:1.26rem;}
   .face-b .fex{font-size:1.2rem;}
+  .mic-zone{margin-top:0;}
+  .sticky-ctrl{margin-top:6px;}
 }
 
 /* ═══ TALK phrases ═══ */
@@ -6401,8 +6403,7 @@ function fitWordCard(){const wrap=document.querySelector('.flip-wrap');if(!wrap)
     if(!f||!b)return;
     wrap.style.height='1200px';                    /* 先撐開再量，內容才不會被 flex 壓縮 */
     const need=Math.max(faceNeed(f),faceNeed(b))+8;
-    /* 下限依螢幕大小：平板／電腦上卡片太矮會讓下方留一大片空白（2026-08-16 使用者回報） */
-    const floor=innerWidth>=1100?320:innerWidth>=700?290:190;
+    const floor=innerWidth>=700?140:190;
     wrap.style.height=Math.max(floor,Math.round(need))+'px';};
   requestAnimationFrame(doFit);
   /* 分頁在背景時 rAF 可能不會觸發，補一次量測，避免字卡被切掉 */

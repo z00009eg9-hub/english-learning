@@ -1822,7 +1822,7 @@ document.addEventListener('click',e=>{
 /* ============================================================
    7.5 影片聽力（YouTube）
    ============================================================ */
-const LESSONS=((window.LISTEN||{}).lessons||[]);
+const LESSONS=((window.LISTEN||{}).lessons||[]).concat((window.LISTEN||{}).scenes||[]);
 // 聽力課的重點字也進字庫
 LESSONS.forEach(l=>(l.pre||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:'',cn:t.cn,def:t.def,exEn:'',exCn:'',src:'聽力：'+l.title})));
 
@@ -1918,20 +1918,25 @@ RENDER.listen=function(){
   }
   destroyPlayer();
   const list=LESSONS.filter(l=>inBand(l.level));
+  const scenes=list.filter(l=>l.kind==='scene');
+  const others=list.filter(l=>l.kind!=='scene');
+  function lsCard(l){
+    const d=(ST.listenDone||{})[l.id];
+    const icon=l.kind==='scene'?'🏙️':l.kind==='vlog'?'🎥':'🎬';
+    return '<div class="item'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
+     +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(l.level)+'">'+icon+' '+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
+     +'<div class="tc">'+esc(l.titleCn)+'</div>'
+     +'<div class="meta"><span>🏷 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span><span>📐 '+esc(l.focus)+'</span>'
+     +(l.kind==='vlog'?'<span>🎥 真人 vlog</span>':l.kind==='scene'?'<span>🏙️ 實景場景</span>':'')
+     +((lsScript(l)||lessonSubs(l))?'<span>📜 有逐字稿</span>':(l.needsSubs?'<span>⏳ 字幕待補</span>':''))
+     +'</div>'
+     +'<div class="meta"><span>'+esc(l.series)+'</span></div></div>';
+  }
   v.innerHTML='<div class="card"><h2 class="sec">🎧 影片聽力</h2>'
    +'<div class="hint">每一課都有<b>聽前單字</b>、<b>關鍵句跟讀</b>與<b>理解測驗</b>。播放器可以調成 0.5x／0.75x 慢速，也可以設 A、B 兩點<b>反覆循環同一句</b>。影片需要網路，離線時看不了。</div>'
    +'<div class="muted">共 '+list.length+' 課 · 影片來源 VOA Learning English（美國政府出版物，公共領域）</div></div>'
-   + list.map(l=>{
-     const d=(ST.listenDone||{})[l.id];
-     return '<div class="item'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
-      +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(l.level)+'">🎬 '+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
-      +'<div class="tc">'+esc(l.titleCn)+'</div>'
-      +'<div class="meta"><span>🏷 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span><span>📐 '+esc(l.focus)+'</span>'
-      +(l.kind==='vlog'?'<span>🎥 真人 vlog</span>':'')
-      +((lsScript(l)||lessonSubs(l))?'<span>📜 有逐字稿</span>':(l.needsSubs?'<span>⏳ 字幕待補</span>':''))
-      +'</div>'
-      +'<div class="meta"><span>'+esc(l.series)+'</span></div></div>';
-   }).join('')
+   +(scenes.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">🏙️ 實景場景 · 生活英文跟讀</h3>'+scenes.map(lsCard).join(''):'')
+   +(others.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">🎬 影片聽力 · 課程教材</h3>'+others.map(lsCard).join(''):'')
    + myVideoCard();
 };
 function lsGo(id){ lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; go('listen'); }
