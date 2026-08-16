@@ -700,6 +700,7 @@ window.NOTES = {
   // --- 20260813 客訴處理與品牌曝光 ---
   "proactive":"20260813 客訴處理與品牌曝光","obstacle":"20260813 客訴處理與品牌曝光","feedback":"20260813 客訴處理與品牌曝光","transparent":"20260813 客訴處理與品牌曝光","escalate":"20260813 客訴處理與品牌曝光","go viral":"20260813 客訴處理與品牌曝光","accountability":"20260813 客訴處理與品牌曝光","inevitable":"20260813 客訴處理與品牌曝光","dedicated":"20260813 客訴處理與品牌曝光","setback":"20260813 客訴處理與品牌曝光",
   "damaged":"20260813 客訴處理與品牌曝光","blame":"20260813 客訴處理與品牌曝光","exposure":"20260813 客訴處理與品牌曝光","approve":"20260813 客訴處理與品牌曝光","opinion":"20260813 客訴處理與品牌曝光","refuse":"20260813 客訴處理與品牌曝光","views":"20260813 客訴處理與品牌曝光","sponsor":"20260813 客訴處理與品牌曝光","return period":"20260813 客訴處理與品牌曝光",
+  "apologize":"20260813 客訴處理與品牌曝光",
   // --- 20260731 七月份總複習 ---
   "successful":"20260731 七月份總複習","succeed":"20260731 七月份總複習",
   // --- 20260811 補償用語與效率詞彙 ---
@@ -1446,6 +1447,13 @@ window.NOTES = {
   {p:"商店拒絕退款給我，因為退貨期限已經過了。",a:"The store refused to give me a refund because the return period had expired.",h:"refused, return period, had expired",kw:["refused","had expired"],src:"20260813 客訴處理與品牌曝光"},
   {p:"該品牌贊助這個電視節目，因為它想要更多曝光。",a:"The brand sponsors the TV show because it wants more exposure.",h:"sponsors, exposure",kw:["exposure"],src:"20260813 客訴處理與品牌曝光"},
   {p:"一些員工起初不認可經理的決定，但看到成果後，他們改變了看法。",a:"Some employees didn't approve of the manager's decision at first, but after seeing the results, they changed their opinion.",h:"approve of, opinion",kw:["approve of"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"她決定採取行動，找出到底發生了什麼事。",a:"She decided to take action and find out what had really happened.",h:"take action, find out, had happened",kw:["take action"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"公司想要獲得更多曝光。",a:"The company wanted to gain more exposure.",h:"gain more exposure = 獲得更多曝光",kw:["gain","exposure"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"經理向顧客道歉，並決定補償他們損壞的產品。",a:"The manager apologized to the customers and decided to compensate them for the damaged products.",h:"apologize to sb, compensate sb for sth",kw:["apologized","compensate"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"公司延長了退貨期限。",a:"The company extended its return period.",h:"extend = 延長；return period = 退貨期限",kw:["return period"],src:"20260813 客訴處理與品牌曝光"},
+  {p:"There had been some miscommunication between the teams.",a:"團隊之間出現了一些溝通不良。",h:"miscommunication = 溝通不良",kw:[],src:"20260813 客訴處理與品牌曝光"},
+  {p:"The video on Instagram got two million views.",a:"這支 Instagram 影片有 200 萬次觀看。",h:"views = 觀看次數",kw:[],src:"20260813 客訴處理與品牌曝光"},
+  {p:"Sponsoring the show gave the brand more exposure.",a:"贊助這個節目讓品牌獲得更多曝光。",h:"sponsor = 贊助；exposure = 曝光",kw:[],src:"20260813 客訴處理與品牌曝光"},
   {p:"Customers complained about damaged products.",a:"顧客投訴損壞的產品。",h:"damaged = 損壞的",kw:[],src:"20260813 客訴處理與品牌曝光"},
   {p:"The manager wanted to blame the delivery company.",a:"經理想要責怪物流公司。",h:"blame = 責怪",kw:[],src:"20260813 客訴處理與品牌曝光"},
   {p:"The video got 2 million views.",a:"這部影片有 200 萬次觀看。",h:"views = 觀看次數",kw:[],src:"20260813 客訴處理與品牌曝光"},
@@ -1705,7 +1713,45 @@ window.NOTES = {
 // ===SYNC:TRANS_END===
 ],
   articles: [
-// ===SYNC:ARTICLES_START=== sync_date:2026-08-06 count:33
+// ===SYNC:ARTICLES_START=== sync_date:2026-08-16 count:34
+  {
+    title:"Turning a Failure into an Opportunity",
+    titleCn:"轉危為機",
+    source:"Based on 20260813 lesson notes",
+    highlightWords:["damaged","blame","miscommunication","apologize","compensate","effectively","efficiently","return period","failure","optimist","exposure","luck","views","approve","refuse","take action"],
+    paras:[
+      {en:"Last year, a small company received several complaints from customers about damaged products. At first, the manager wanted to blame the delivery company. However, instead of blaming others, she decided to take action and find out what had really happened.",
+       cn:"去年，一家小公司收到了幾位顧客關於損壞產品的投訴。起初，經理想要責怪物流公司。然而，她沒有責怪別人，而是決定採取行動，找出到底發生了什麼事。"},
+      {en:"After talking to the employees, she discovered that there had been some miscommunication between the production and delivery teams. The employees had not checked the products carefully before sending them out. The manager apologized to the customers and decided to compensate them for the damaged products.",
+       cn:"與員工溝通後，她發現生產團隊和物流團隊之間出現了溝通不良。員工們在出貨前沒有仔細檢查產品。經理向顧客道歉，並決定補償他們損壞的產品。"},
+      {en:"She also changed the company's procedures so that every product would be checked more effectively and efficiently before delivery. The company also extended its return period and made its refund policy clearer.",
+       cn:"她也修改了公司的作業流程，以便每一項產品在交貨之前都能被更有效且更有效率地檢查。公司也延長了退貨期限，並讓退款政策更加清楚。"},
+      {en:"Although the situation was an unexpected failure, the manager had a positive mindset. She was an optimist and believed that every problem could become an opportunity to improve.",
+       cn:"儘管這次情況是一個意料之外的失敗，經理擁有正面的心態。她是個樂觀的人，相信每個問題都能成為進步的機會。"},
+      {en:"At the same time, the company wanted to gain more exposure. Instead of spending a lot of money on traditional advertising, the manager decided to advertise the company's products on social media. By luck, one of their videos became popular and received thousands of views. This gave the company much more exposure than expected.",
+       cn:"同時，公司也希望獲得更多曝光。經理沒有花很多錢在傳統廣告上，而是決定在社群媒體上宣傳公司的產品。幸運的是，他們其中一支影片變得很受歡迎，並獲得了數千次觀看。這讓公司獲得了比預期更多的曝光。"},
+      {en:"Some employees didn't approve of the manager's decision at first, but after seeing the results, they changed their opinion. When asked about the company's success, the manager said, \"We constantly learn from our mistakes. When something goes wrong, we shouldn't refuse to accept responsibility. We should take action and turn a failure into an opportunity.\"",
+       cn:"一些員工起初不認可經理的決定，但看到成果後，他們改變了看法。當被問到公司的成功時，經理說：「我們不斷從錯誤中學習。當事情出錯時，我們不應該拒絕承擔責任。我們應該採取行動，把失敗轉化為機會。」"},
+    ],
+    questions:[
+      {q:"Why did customers complain to the company?",
+       opts:["A. The delivery was too slow","B. They received damaged products","C. The prices were too high","D. The staff was impolite"],
+       ans:1,
+       expl:"文章說 customers complained about damaged products，顧客投訴的是損壞的產品。"},
+      {q:"What did the manager do instead of blaming others?",
+       opts:["A. She ignored the complaints","B. She fired the employees","C. She took action and found out what had happened","D. She closed the company"],
+       ans:2,
+       expl:"文章說 instead of blaming others, she decided to take action and find out what had really happened。"},
+      {q:"What happened to one of the company's videos?",
+       opts:["A. It was deleted","B. It became popular and got thousands of views","C. It received bad comments","D. Nobody watched it"],
+       ans:1,
+       expl:"文章說 By luck, one of their videos became popular and received thousands of views，影片變得很受歡迎並獲得數千次觀看。"},
+      {q:"How did the employees' opinion change?",
+       opts:["A. They approved at first but disagreed later","B. They never approved of the decision","C. They didn't care about the results","D. They didn't approve at first, but changed their opinion after seeing the results"],
+       ans:3,
+       expl:"文章說 Some employees didn't approve at first, but after seeing the results, they changed their opinion。"},
+    ],
+  },
   {
     title:"The Key to Success",
     titleCn:"成功之鑰",
