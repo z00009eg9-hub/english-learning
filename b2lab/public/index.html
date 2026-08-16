@@ -1949,14 +1949,16 @@ function lsScript(l){ return (window.LISTEN_SCRIPTS||{})[l && l.id] || null; }
 function lessonHTML(l){
   const sc=lsScript(l);
   const timed=lessonSubs(l);   /* 學習者貼的時間軸字幕：優先於靜態逐字稿 */
+  const isScene=l.kind==='scene'&&(l.keyLines||[]).length;
+  const hasScript=sc||timed||isScene;
   let h='<button class="back" onclick="lsClose()"></button>'
    /* 有逐字稿時，影片黏在最上面（跟 Speak Up 一樣），往下捲字幕影片仍看得到 */
-   +((sc||timed)?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':'')
+   +(hasScript?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':'')
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<h2 class="sec" style="margin:0">🎬 '+esc(l.title)+'</h2><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
    +'<div class="muted">'+esc(l.titleCn)+' · ⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</div>'
-   + ((sc||timed)?'':playerBox('yt-main'))
-   + ((sc||timed)?playerControls()
+   + (hasScript?'':playerBox('yt-main'))
+   + (hasScript?playerControls()
         +'<div class="row" style="margin-top:9px">'
         +'<button class="spk" id="tg-en" onclick="tgEn()">'+(showEn?'👁 英文：顯示':'👁 英文：隱藏')+'</button>'
         +'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button></div>'
@@ -1974,7 +1976,17 @@ function lessonHTML(l){
        +'<div style="color:var(--accent2);font-weight:700;font-size:calc(15px * var(--fs))">'+esc(t.cn)+'</div>'
        +'<div class="ecn">'+esc(t.def||'')+'</div></div>').join('')+'</div>';
   }
-  if((l.keyLines||[]).length){
+  if(isScene){
+    h+='<div class="card"><h2 class="sec">📜 逐字稿（含中譯）</h2>'
+     +'<div class="hint">影片會一直黏在上面，一邊看一邊對照。<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。上面可以把英文或中譯先蓋起來，自己測驗。</div>'
+     +'<div id="sublist">'+ l.keyLines.map((k,i)=>
+        '<div class="sline" id="sl-'+i+'">'
+        +'<div class="srow"><div class="sen">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
+        +'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>'
+        +'</div>').join('')+'</div>'
+     +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">逐字稿英文原文取自 '+esc(l.source)+'；中譯為本站撰寫。</div></div>';
+  }
+  else if((l.keyLines||[]).length){
     h+='<div class="card"><h2 class="sec">🗣 關鍵句跟讀</h2>'
      +'<div class="hint">先按 🔊 聽一次，再自己念一次。看不懂就按「中譯」。</div>'
      + l.keyLines.map((k,i)=>'<div class="ex"><div class="een" style="font-size:calc(16.5px * var(--fs));font-weight:700">'+esc(k.en)+' '+spk(k.en)+'</div>'
