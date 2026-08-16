@@ -364,6 +364,17 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   .sticky-ctrl{margin-top:6px;}
 }
 
+/* ═══ TALK 基礎填空卡：句子挖空，自己想著把整句說出來 ═══ */
+.cloze-card{background:var(--card);border:2px solid var(--line);border-radius:16px;
+  padding:16px 18px;margin:10px 4px;text-align:center;}
+.cloze-tag{display:inline-block;background:var(--teal);color:#fff;border-radius:100px;
+  padding:4px 14px;font-size:.82rem;font-weight:800;margin-bottom:10px;}
+.cloze-line{font-size:1.5rem;font-weight:800;color:var(--sub);line-height:1.9;font-family:'Inter';}
+.cloze-line .blank{display:inline-block;height:1.02em;border-radius:9px;background:var(--soft);
+  border:1px solid #EED9B8;vertical-align:-.14em;}
+.cloze-cn{font-size:1.12rem;color:var(--ink);font-weight:700;margin-top:8px;}
+@media(min-width:700px){.cloze-line{font-size:1.8rem;}.cloze-cn{font-size:1.25rem;}}
+
 /* ═══ TALK phrases ═══ */
 .phrases{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px;justify-content:center;}
 .phrase{background:var(--teal-l);color:var(--teal);border:1px solid #BEE9E7;padding:6px 12px;
@@ -5250,6 +5261,7 @@ function phonKey(w){
   s=s.replace(/th/g,'s');                      /* th 常唸成 s / t / f */
   s=s.replace(/ck|q|c|k/g,'k');
   s=s.replace(/z/g,'s').replace(/v|w/g,'f');   /* v / w / f 常互換 */
+  s=s.replace(/d/g,'t').replace(/b/g,'p').replace(/g/g,'k'); /* 濁音清音互換：d/t、b/p、g/k（辨識引擎常聽反） */
   s=s.replace(/[lrn]/g,'l').replace(/m/g,'l'); /* l / r / n / m 常互換 */
   const head=s[0]||'';
   s=head+s.slice(1).replace(/[aeiouyh]/g,''); /* 母音只留開頭，其餘不計較 */
@@ -5271,6 +5283,16 @@ function wordClose(a,b,loose){
   if(n<5)return false;                       /* 短字只認發音鍵，避免 book/look 這種誤判 */
   return lev(a,b)<=(n>=8?3:2);
 }
+/* 引擎把一個長字聽成兩個字（escalate→"ice cats"、refund→"re fund"）：
+   把相鄰兩個字併起來跟目標字比 */
+function joinClose(w,j,loose){
+  if(w.length<5)return false;
+  if(w===j||stemOf(w)===stemOf(j))return true;
+  const pw=phonKey(w),pj=phonKey(j);
+  if(pw&&pw===pj)return true;
+  if(loose&&pw&&pj&&lev(pw,pj)<=1)return true;
+  return lev(w,j)<=(loose?Math.max(1,Math.round(w.length/3)):1);
+}
 function scoreSpeech(said,target,opts){
   opts=opts||{};
   const fuzzy=!!opts.fuzzy;
@@ -5284,6 +5306,9 @@ function scoreSpeech(said,target,opts){
     let near=false;
     if(i<0&&fuzzy){i=st.findIndex((s,k)=>!used[k]&&wordClose(w,s,loose));near=i>=0;}
     if(i>=0){used[i]=true;matched++;return{w,ok:true,near};}
+    /* 相鄰兩個字併起來再比一次：引擎把長字拆成兩個字時不冤枉扣分 */
+    if(fuzzy){const k=st.findIndex((s,k2)=>!used[k2]&&k2+1<st.length&&!used[k2+1]&&joinClose(w,s+st[k2+1],loose));
+      if(k>=0){used[k]=used[k+1]=true;matched++;return{w,ok:true,near:true};}}
     if(loose&&SOFT_WORDS.has(w)){soft++;return{w,ok:false,soft:true};}
     return{w,ok:false};});
   const extra=st.filter((s,k)=>!used[k]);
@@ -5431,8 +5456,17 @@ function _startRec(){
   try{r.maxAlternatives=5;}catch(e){}
   const base=micFinal,baseAlts=micAlts.slice(),tgt=typeof cfg.target==='function'?cfg.target():cfg.target;
   const alive=()=>gen===micGen&&micRec===r;
-  r.onstart=()=>{if(!alive())return;micRetried=false;if(micStartWatch){clearTimeout(micStartWatch);micStartWatch=null;}};
+  /* 收音看門狗：引擎開著卻一直沒有任何結果（iPad 常見）→ 10 秒靜靜換一顆新引擎，
+     使用者不用重按；有聽到東西之後就不再介入 */
+  let resTimer=null;
+  const armRes=()=>{if(resTimer)clearTimeout(resTimer);
+    resTimer=setTimeout(()=>{if(!alive()||micStopping||!micActive)return;
+      if((micLive||micFinal).trim())return;
+      try{r.onend=r.onresult=r.onerror=r.onstart=null;r.abort();}catch(e){}
+      if(micRec===r){micRec=null;_startRec();}},10000);};
+  r.onstart=()=>{if(!alive())return;micRetried=false;if(micStartWatch){clearTimeout(micStartWatch);micStartWatch=null;}armRes();};
   r.onresult=e=>{if(!alive())return;
+    if(resTimer){clearTimeout(resTimer);resTimer=null;}
     let f='',itm='';const alts=[];
     for(let i=0;i<e.results.length;i++){const res=e.results[i];
       if(res.isFinal){f+=pickAlt(res,tgt)+' ';for(let k=0;k<res.length&&k<5;k++)alts.push(res[k].transcript);}
@@ -5443,7 +5477,10 @@ function _startRec(){
   r.onerror=e=>{if(!alive())return;micErr=e.error;
     if(e.error==='not-allowed'||e.error==='service-not-allowed')micStopping=true;};
   r.onend=()=>{if(!alive())return;
-    if(cfg.keepAlive&&!micStopping&&micActive){
+    if(resTimer){clearTimeout(resTimer);resTimer=null;}
+    /* keepAlive 之外：引擎「什麼都還沒聽到」就自己結束（iOS 常見）也自動重開，
+       不要立刻回報「沒聽清楚」害使用者重按 */
+    if(!micStopping&&micActive&&(cfg.keepAlive||!(micLive||micFinal).trim())){
       setTimeout(()=>{if(gen!==micGen||!micActive||micStopping)return;
         try{_startRec();}catch(e){finishMic();}},120);
     }else finishMic();};
@@ -6483,12 +6520,10 @@ function readOpen(gi){const a=READLIST[gi];READ={a:a,paras:[]};
 function readDemo(pi){
   if(micActive)hardResetMic();
   const l=$('rlbl-'+pi);if(l)l.textContent='🔊 聽示範…';
-  /* 段落男女聲隨機出現，聽起來像不同的人輪流念（沒有男聲的裝置用降音高模擬） */
-  const male=Math.random()<0.5;
-  const vopt=male?(VOICE_M?{voice:VOICE_M}:{pitchAdj:-0.24}):{};
+  /* 朗讀示範固定用女聲（2026-08-16 使用者要求取消男女混聲） */
   speak(readText(pi),0.9,()=>{
     if(AUTOREC&&speechOK()&&!micActive)readMic(pi);
-    else if(!micActive&&l)l.textContent='按 🎤 朗讀這段';},vopt);}
+    else if(!micActive&&l)l.textContent='按 🎤 朗讀這段';});}
 function readFinish(){finishAct('📖 朗讀文章','你把這一篇唸完了!');}
 /* 中文翻譯開關：進階預設隱藏（自己先讀讀看），想對照隨時可以打開 */
 function readToggleCn(){const b=$('read-body');const off=b.classList.toggle('nocn');
@@ -6600,14 +6635,34 @@ function startTalk(d){renderLvlBar('talk');
   sessStart('talk','💬 情境對話',talkTurns.length,{scoreLabel:'平均正確率'});
   show('scr-talk');talkRender();}
 
+/* 基礎填空卡（2026-08-16 使用者要求，比照 Duolingo）：
+   把答案句挖掉幾個重點字，看得到句型骨架、想得出挖掉的字，再把整句說出來 */
+function talkCloze(en){
+  const words=(en||'').trim().split(/\s+/);
+  const cand=[];   /* 可以挖的字：內容字（太短的、功能詞不挖） */
+  words.forEach((raw,i)=>{const w=norm(raw);
+    if(w.length>=3&&!SOFT_WORDS.has(w))cand.push({i,len:w.length});});
+  /* 挖掉約四成、至少 1 個；字愈長愈優先（重點字通常比較長） */
+  const nMask=Math.max(1,Math.min(cand.length-1||1,Math.round(words.length*0.4)));
+  const mask=new Set(cand.sort((a,b)=>b.len-a.len).slice(0,nMask).map(c=>c.i));
+  return words.map((raw,i)=>{
+    if(!mask.has(i))return esc(i===0?cap(raw):raw);
+    const m=raw.match(/([.,!?;:]+)$/);              /* 標點留在挖空外面 */
+    const tail=m?m[1]:'',core=tail?raw.slice(0,-tail.length):raw;
+    const em=Math.min(6.5,Math.max(2.2,core.length*.62));
+    return '<span class="blank" style="width:'+em.toFixed(1)+'em"></span>'+esc(tail);
+  }).join(' ');}
+
 function talkRender(){
   const t=talkTurns[talkI];talkCur=t;talkTries=0;talkBest=null;
   $('talk-chat').innerHTML='';
   /* ① 教練先開口：有腳本就問腳本裡的問題，沒有就說一句引導語 */
   const lead=t.ask||TALK_LEAD[talkI%TALK_LEAD.length];
   chatAdd(cbub('l',lead.en,lead.cn,'教練'));
-  /* ② 中文提示：基礎才顯示，進階不提示 */
-  if(lvBasic()) chatAdd('<div class="cask"><span class="sp">✨</span><span>請用英文說：「'+esc(t.cn)+'」</span></div>');
+  /* ② 基礎：填空卡（句型骨架＋中文），進階不提示 */
+  if(lvBasic()) chatAdd('<div class="cloze-card"><div class="cloze-tag">🎙 請開口說</div>'
+    +'<div class="cloze-line">'+talkCloze(t.en)+'</div>'
+    +'<div class="cloze-cn">'+esc(t.cn)+'</div></div>');
   $('talk-input').value='';
   $('talk-mlbl').textContent=speechOK()?'按一下 ⬆,開口說':'此瀏覽器不支援辨識,可改用 ⌨ 打字';
   talkDots();
