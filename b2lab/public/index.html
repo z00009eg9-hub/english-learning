@@ -302,6 +302,9 @@ tr:nth-child(even) td{background:#fdfbf8}
 .ytwrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:12px;overflow:hidden;margin-top:11px}
 /* 影片黏在上方：往下捲字幕時影片仍一直看得到（一頁檢視，參照 Speak Up） */
 .vidpin{position:sticky;top:var(--hdh,52px);z-index:40;background:var(--bg);padding:6px 0 8px;margin-bottom:4px}
+/* 純語音課沒有影片，改用黏頂的播放控制列，往下捲逐字稿時控制鈕仍在手邊 */
+.aupin{position:sticky;top:var(--hdh,52px);z-index:40;background:var(--bg);padding:8px 0 9px;margin-bottom:4px;
+  border-bottom:1px solid var(--line)}
 .vidpin .ytwrap{margin-top:0;padding-top:0;height:min(32vh,52vw);max-width:100%}
 .ytwrap>div,.ytwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .spk.rbtn.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
@@ -843,7 +846,8 @@ function tokenize(text,hiSet){
   return String(text).replace(/[A-Za-z][A-Za-z'’\-]*/g, m=>{
     const bare=m.toLowerCase().replace(/[^a-z'’-]/g,'');
     const hi = hiSet && (hiSet.has(bare) || hiSet.has(bare.replace(/s$/,''))) ? ' class="hi"' : '';
-    return '<w'+hi+' onclick="showGloss(this.textContent)">'+esc(m)+'</w>';
+    /* stopPropagation：查單字不要順便觸發外層整句的「跳到這句／從這句播」 */
+    return '<w'+hi+' onclick="showGloss(this.textContent);event.stopPropagation()">'+esc(m)+'</w>';
   });
 }
 
@@ -1831,7 +1835,9 @@ document.addEventListener('click',e=>{
 /* ============================================================
    7.5 影片聽力（YouTube）
    ============================================================ */
-const LESSONS=((window.LISTEN||{}).lessons||[]).concat((window.LISTEN||{}).scenes||[]);
+const LESSONS=((window.LISTEN||{}).notes||[])
+  .concat((window.LISTEN||{}).scenes||[])
+  .concat((window.LISTEN||{}).lessons||[]);
 // 聽力課的重點字也進字庫
 LESSONS.forEach(l=>(l.pre||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:'',cn:t.cn,def:t.def,exEn:'',exCn:'',src:'聽力：'+l.title})));
 
@@ -1870,6 +1876,7 @@ function mountPlayer(divId,vid){
 }
 function destroyPlayer(){
   stopLoop(); stopSync(); loopA=loopB=null;
+  if(typeof auStop==='function') auStop();   /* 離開課程時把 TTS 也停掉 */
   if(ytPlayer&&ytPlayer.destroy){ try{ytPlayer.destroy();}catch(e){} }
   ytPlayer=null;
 }
@@ -1914,12 +1921,98 @@ function playerBox(divId){
   return '<div class="ytwrap"><div id="'+divId+'"></div></div>'+playerControls();
 }
 
+/* ---------- 純語音課（無影片）：用 TTS 逐句播放／跟讀 ----------
+   這些課的素材是本站依課堂筆記單字自製的對話，沒有影片，
+   所以「播放器」就是語音合成：整段連播、或念一句停一下讓學習者跟著念。 */
+let auLines=[], auIdx=-1, auOn=false, auShadow=false, auRate=1, auTimer=null, auWatch=null, auKeep=null;
+function auSet(lines){ auStop(); auLines=lines||[]; }
+function auClearHi(){ document.querySelectorAll('#sublist .sline').forEach(el=>el.classList.remove('cur')); }
+function auHi(i){
+  auClearHi();
+  const el=$('sl-'+i);
+  if(el){ el.classList.add('cur'); el.scrollIntoView({block:'center',behavior:'smooth'}); }
+}
+function auBtns(){
+  const p=$('au-play'), s=$('au-shadow');
+  if(p) p.textContent = (auOn&&!auShadow) ? '⏸ 停止播放' : '▶️ 播放全部';
+  if(s) s.textContent = (auOn&&auShadow)  ? '⏸ 停止跟讀' : '🔁 逐句跟讀';
+}
+function auStop(){
+  auOn=false; auShadow=false; auIdx=-1;
+  if(auTimer){ clearTimeout(auTimer); auTimer=null; }
+  if(auWatch){ clearTimeout(auWatch); auWatch=null; }
+  if(auKeep){ clearInterval(auKeep); auKeep=null; }
+  if('speechSynthesis' in window) speechSynthesis.cancel();
+  auClearHi(); auBtns();
+}
+function auNext(){
+  if(!auOn) return;
+  auIdx++;
+  if(auIdx>=auLines.length){ auStop(); return; }
+  auHi(auIdx);
+  const txt=String(auLines[auIdx].en||'');
+  const words=txt.split(/\s+/).filter(Boolean).length;
+  let moved=false;
+  const step=()=>{
+    if(moved||!auOn) return;
+    moved=true;
+    if(auWatch){ clearTimeout(auWatch); auWatch=null; }
+    /* 跟讀模式：留一段和原句長度差不多的空白，讓學習者跟著念完再接下一句 */
+    const gap = auShadow ? Math.max(1400, words*400/auRate) : 400;
+    auTimer=setTimeout(auNext, gap);
+  };
+  say(txt, auRate, step);
+  /* 看門狗：Web Speech 的 onend 並不可靠——語音還沒載入、句子太長、
+     或 Chrome 已知的長時間朗讀中斷，都可能永遠不觸發，整段就會卡在同一句。
+     用「字數推估的時長」當上限，時間到了沒收到 onend 就自己往下走。 */
+  auWatch=setTimeout(step, Math.max(1800, words*430/auRate) + 2600);
+}
+function auPlay(shadow){
+  const wasOn=auOn, wasShadow=auShadow;
+  auStop();
+  if(wasOn && wasShadow===!!shadow) return;   /* 同一顆再按一次＝停止 */
+  auOn=true; auShadow=!!shadow; auIdx=-1;
+  /* Chrome 連續朗讀超過約 15 秒會自己停住，定期 resume 一下把它推回去 */
+  if('speechSynthesis' in window){
+    auKeep=setInterval(()=>{
+      if(!auOn){ clearInterval(auKeep); auKeep=null; return; }
+      if(speechSynthesis.speaking && !speechSynthesis.paused) speechSynthesis.resume();
+    },8000);
+  }
+  auBtns(); auNext();
+}
+function auFrom(i){ auStop(); auOn=true; auShadow=false; auIdx=i-1; auBtns(); auNext(); }
+function auSetRate(r){
+  auRate=r;
+  document.querySelectorAll('.rbtn').forEach(b=>b.classList.toggle('on',parseFloat(b.dataset.r)===r));
+}
+window.auPlay=auPlay; window.auStop=auStop; window.auFrom=auFrom; window.auSetRate=auSetRate;
+
+function audioControls(){
+  return '<div class="row" style="margin-top:2px">'
+   +'<button class="spk" id="au-play" onclick="auPlay(false)">▶️ 播放全部</button>'
+   +'<button class="spk" id="au-shadow" onclick="auPlay(true)">🔁 逐句跟讀</button>'
+   +'<button class="spk" onclick="auStop()">⏹ 停止</button>'
+   +'</div>'
+   +'<div class="row" style="margin-top:6px">'
+   +'<span class="muted" style="font-size:calc(12.5px * var(--fs));font-weight:700">速度</span>'
+   +[0.5,0.75,1].map(r=>'<button class="spk rbtn'+(r===1?' on':'')+'" data-r="'+r+'" onclick="auSetRate('+r+')">'+r+'x</button>').join('')
+   +'</div>';
+}
+
 RENDER.listen=function(){
   const v=$('v-listen');
-  if(lsOpen){ v.innerHTML=lessonHTML(lsOpen); mountPlayer('yt-main',lsOpen.yt); showLoop();
-              if(lsScript(lsOpen)||lessonSubs(lsOpen)) applySubToggles();
-              if(lessonSubs(lsOpen)) startSync(); else stopSync();
-              return; }
+  if(lsOpen){
+    v.innerHTML=lessonHTML(lsOpen);
+    if(!lsOpen.yt && (lsOpen.script||[]).length){
+      /* 純語音課：沒有影片可掛，改把逐字稿餵給 TTS 播放器 */
+      destroyPlayer(); auSet(lsOpen.script); applySubToggles();
+    }else{
+      auStop(); mountPlayer('yt-main',lsOpen.yt); showLoop();
+      if(lsScript(lsOpen)||lessonSubs(lsOpen)) applySubToggles();
+      if(lessonSubs(lsOpen)) startSync(); else stopSync();
+    }
+    return; }
   if(myVid){
     const vv=curVidObj();
     if(vv){ v.innerHTML=myVidHTML(vv); mountPlayer('yt-my',myVid); showLoop(); applySubToggles(); startSync(); return; }
@@ -1927,26 +2020,30 @@ RENDER.listen=function(){
   }
   destroyPlayer();
   const list=LESSONS.filter(l=>inBand(l.level));
+  const notes=list.filter(l=>l.kind==='note');
   const scenes=list.filter(l=>l.kind==='scene');
-  const others=list.filter(l=>l.kind!=='scene');
+  const others=list.filter(l=>l.kind!=='scene'&&l.kind!=='note');
   function lsCard(l){
     const d=(ST.listenDone||{})[l.id];
-    const icon=l.kind==='scene'?'🏙️':l.kind==='vlog'?'🎥':'🎬';
+    const icon=l.kind==='note'?'📒':l.kind==='scene'?'🏙️':'🎧';
+    const lines=(l.script||l.keyLines||[]).length;
     return '<div class="item'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
      +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(l.level)+'">'+icon+' '+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
      +'<div class="tc">'+esc(l.titleCn)+'</div>'
      +'<div class="meta"><span>🏷 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span><span>📐 '+esc(l.focus)+'</span>'
-     +(l.kind==='vlog'?'<span>🎥 真人 vlog</span>':l.kind==='scene'?'<span>🏙️ 實景場景</span>':'')
-     +((lsScript(l)||lessonSubs(l))?'<span>📜 有逐字稿</span>':(l.needsSubs?'<span>⏳ 字幕待補</span>':''))
+     +(l.kind==='note'?'<span>📒 取自你的筆記</span>':l.kind==='scene'?'<span>🏙️ 生活場景</span>':'')
+     +(lines?'<span>📜 '+lines+' 句逐字稿</span>':'')
      +'</div>'
      +'<div class="meta"><span>'+esc(l.series)+'</span></div></div>';
   }
-  v.innerHTML='<div class="card"><h2 class="sec">🎧 影片聽力</h2>'
-   +'<div class="hint">每一課都是同一套跟讀流程：<b>聽前單字</b> → <b>逐字稿跟讀</b>（影片黏在最上面，點任何一個英文字查中文，可把英文或中譯蓋起來自我測驗）→ <b>理解測驗</b>。播放器可以調成 0.5x／0.75x 慢速，也可以設 A、B 兩點<b>反覆循環同一句</b>。影片需要網路，離線時看不了。</div>'
-   +'<div class="muted">共 '+list.length+' 課 · 影片來源 VOA Learning English（美國政府出版物，公共領域）</div></div>'
-   +(scenes.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">🏙️ 實景場景 · 生活英文跟讀</h3>'+scenes.map(lsCard).join(''):'')
-   +(others.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">🎬 影片聽力 · 課程教材</h3>'+others.map(lsCard).join(''):'')
-   + myVideoCard();
+  v.innerHTML='<div class="card"><h2 class="sec">🎧 聽力跟讀</h2>'
+   +'<div class="hint">每一課都是同一套流程：<b>聽前單字</b> → <b>對話逐字稿跟讀</b> → <b>理解測驗</b>。'
+   +'播放用的是<b>裝置內建的語音朗讀</b>，不需要網路影片：可以整段連播、也可以<b>逐句跟讀</b>（念一句停一下讓你跟著念），速度能調 0.5x／0.75x。'
+   +'點任何一個英文字查中文，也可以把英文或中譯蓋起來自我測驗。</div>'
+   +'<div class="muted">共 '+list.length+' 課</div></div>'
+   +(notes.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">📒 依你的課堂筆記自製</h3>'+notes.map(lsCard).join(''):'')
+   +(scenes.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">🏙️ 生活場景 · 實用對話</h3>'+scenes.map(lsCard).join(''):'')
+   +(others.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">🎬 VOA 課程教材</h3>'+others.map(lsCard).join(''):'');
 };
 function lsGo(id){ lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; go('listen'); }
 function lsClose(){ destroyPlayer(); stopSync(); lsOpen=null; RENDER.listen(); }
@@ -1958,28 +2055,36 @@ function lsScript(l){ return (window.LISTEN_SCRIPTS||{})[l && l.id] || null; }
 function lessonHTML(l){
   const sc=lsScript(l);
   const timed=lessonSubs(l);   /* 學習者貼的時間軸字幕：優先於靜態逐字稿 */
-  /* 沒有完整逐字稿的課，就把 keyLines 當逐字稿用，讓每一課都是同一種跟讀版面 */
-  const klSc=(!sc&&!timed&&(l.keyLines||[]).length)?l.keyLines:null;
-  /* drill：版權影片無法轉錄全文，改放本站自編的跟讀句（照 focus 寫），不冒充逐字稿 */
-  const drill=(l.drill||[]).length?l.drill:null;
-  const hasScript=sc||timed||klSc||drill;
+  /* 這一課的逐字稿內容，依序找：自製對話 → VOA 逐字稿 → 關鍵句 → 練習句 */
+  const body=(l.script||[]).length?l.script
+            :sc?sc
+            :(l.keyLines||[]).length?l.keyLines
+            :(l.drill||[]).length?l.drill:null;
+  /* 沒有影片的課一律走 TTS 語音跟讀（現在所有內建課程都是這一種） */
+  const au=(!l.yt&&body)?body:null;
+  const klSc=null, drill=null;
+  const hasScript=sc||timed;
+  const toggles='<div class="row" style="margin-top:9px">'
+   +'<button class="spk" id="tg-en" onclick="tgEn()">'+(showEn?'👁 英文：顯示':'👁 英文：隱藏')+'</button>'
+   +'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button></div>';
   let h='<button class="back" onclick="lsClose()"></button>'
-   /* 有逐字稿時，影片黏在最上面（跟 Speak Up 一樣），往下捲字幕影片仍看得到 */
-   +(hasScript?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':'')
+   /* 有逐字稿時，影片（或語音控制列）黏在最上面，往下捲字幕仍在手邊 */
+   +(au?'<div class="aupin">'+audioControls()+'</div>'
+       :hasScript?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':'')
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
-   +'<h2 class="sec" style="margin:0">🎬 '+esc(l.title)+'</h2><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
+   +'<h2 class="sec" style="margin:0">'+(au?'🎧 ':'🎬 ')+esc(l.title)+'</h2><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
    +'<div class="muted">'+esc(l.titleCn)+' · ⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</div>'
-   + (hasScript?'':playerBox('yt-main'))
-   + (hasScript?playerControls()
-        +'<div class="row" style="margin-top:9px">'
-        +'<button class="spk" id="tg-en" onclick="tgEn()">'+(showEn?'👁 英文：顯示':'👁 英文：隱藏')+'</button>'
-        +'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button></div>'
-      :'')
+   + (au?toggles:(hasScript?'':playerBox('yt-main')))
+   + (!au&&hasScript?playerControls()+toggles:'')
    +'<div class="ex" style="margin-top:11px"><div class="enote" style="font-size:calc(14.5px * var(--fs));font-weight:800">📐 文法焦點：'+esc(l.focus)+'</div>'
    +'<div class="ecn" style="margin-top:5px;font-size:calc(14.5px * var(--fs))">'+esc(l.intro)+'</div></div>'
    +'<div class="upg" style="margin-top:11px"><div class="un" style="margin-top:0">🎯 聽力策略：'+esc(l.tip)+'</div></div>'
-   +'<div class="muted" style="margin-top:9px;font-size:calc(12px * var(--fs))">'+esc(l.source)
-   +' · <a href="'+esc(l.sourceUrl)+'" target="_blank" rel="noopener">↗ 原始課程頁（含完整逐字稿）</a></div></div>';
+   +'<div class="muted" style="margin-top:9px;font-size:calc(12px * var(--fs))">'
+   +(l.kind==='note'
+     ?'本站自製教材，取材自你的課堂筆記'+(l.noteRef?'：'+esc(l.noteRef):'')
+     :esc(l.source||''))
+   +(au?'。朗讀為裝置內建的電腦語音。':'')
+   +'</div></div>';
 
   if((l.pre||[]).length){
     h+='<div class="card"><h2 class="sec">🔤 聽前先看這些字 ('+l.pre.length+')</h2>'
@@ -1989,7 +2094,18 @@ function lessonHTML(l){
        +'<div class="ecn">'+esc(t.def||'')+'</div></div>').join('')+'</div>';
   }
   /* 逐字稿／跟讀句：每一課都放在「聽前單字」之後、「測驗」之前，版面一致 */
-  if(timed){
+  if(au){
+    h+='<div class="card"><h2 class="sec">📜 對話逐字稿（含中譯）</h2>'
+     +'<div class="hint">上面的控制列會一直黏在頂端。<b>▶️ 播放全部</b>整段連著念、<b>🔁 逐句跟讀</b>會念一句停一下讓你跟著念；'
+     +'<b>點任一句</b>可以從那一句開始播，<b>點任何一個英文字</b>會跳出中文。想自我測驗就把英文或中譯蓋起來。</div>'
+     +'<div id="sublist">'+ au.map((k,i)=>
+        '<div class="sline" id="sl-'+i+'">'
+        +(k.sp?'<div class="ssp">'+esc(k.sp)+'</div>':'')
+        +'<div class="srow"><div class="sen" onclick="auFrom('+i+')">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
+        +(k.cn?'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>':'')
+        +'</div>').join('')+'</div></div>';
+  }
+  else if(timed){
     h+='<div class="card"><h2 class="sec">📜 逐字稿（時間軸同步）</h2>'
      +'<div class="hint">播放時字幕會自動亮起來並捲動。<b>點任一句</b>可以跳到那一秒；<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。</div>'
      +'<div id="sublist">'+ timed.map((k,i)=>
@@ -2036,16 +2152,6 @@ function lessonHTML(l){
     h+='<div class="card"><div class="row" style="align-items:center;margin-bottom:8px"><h2 class="sec" style="margin:0">✅ 聽力理解測驗</h2>'+qzBtnHTML('listen',l.questions)+'</div>'
      +'<div class="hint">建議先把上面的逐字稿用「👁 英文：隱藏」蓋起來、只聽影片作答，答完再打開對照。</div>'
      + quizHTML(l.questions,'listen')+'<div id="lsquizScore"></div></div>';
-  }
-  if(!sc && !timed && l.cc){
-    h+='<div class="card"><h2 class="sec">💬 這一課的字幕怎麼開</h2>'
-     +'<div class="hint">這是真人 vlog，<b>字幕在影片本身</b>：點播放器右下角的 <b>CC</b> 就會出現英文字幕'
-     +'（是頻道自己上的，不是機器聽打，所以很準）。想更慢可以用上面的 0.5x／0.75x。</div>'
-     +(l.needsSubs?'<div class="ex" style="border-color:#f0c890;background:#fff8ec">'
-        +'<div class="enote" style="font-size:calc(13.5px * var(--fs));font-weight:800">⏳ 站內中譯字幕還沒補上</div>'
-        +'<div class="ecn" style="margin-top:4px">在下面貼上逐字稿，這一課就會變成有<b>時間軸同步中英字幕</b>的教材（跟「我的影片」一樣）。</div></div>':'')
-     + lsubBoxHTML(false)
-     +'</div>';
   }
   h+='<div class="card" style="text-align:center"><button class="btn" onclick="lsClose()">完成，回列表</button></div>';
   return h;
