@@ -674,17 +674,22 @@ let VOICE=null;
 function pickVoice(){
   const vs=speechSynthesis.getVoices().filter(v=>/^en(-|_)/i.test(v.lang));
   if(!vs.length) return;
-  /* 依「像不像真人」打分：裝置上有下載加強版（Enhanced/Premium/Natural/Siri）就優先用，
-     沒有才退回一般美式語音。iPhone/iPad 可到 設定→輔助使用→語音內容 下載更自然的聲音。 */
   const score=v=>{
     const n=(v.name||'').toLowerCase();
     let s=0;
     if(/en[-_]us/i.test(v.lang)) s+=4;
-    if(/premium/.test(n)) s+=10;
-    if(/enhanced|natural|neural/.test(n)) s+=8;
+    if(!v.localService) s+=6;
+    if(/premium/.test(n)) s+=14;
+    if(/enhanced/.test(n)) s+=12;
+    if(/\bnatural\b/.test(n)) s+=11;
+    if(/\bneural\b/.test(n)) s+=11;
+    if(/\bonline\b/.test(n)) s+=10;
     if(/siri/.test(n)) s+=7;
-    if(/ava|samantha|allison|zoe|nicky|joelle|aria|jenny|evan|nathan|google us english/.test(n)) s+=3;
-    if(/compact/.test(n)) s-=5;
+    if(/ava|zoe|samantha|joelle|flo|grandma|reed|rocko|sandy/.test(n)) s+=5;
+    if(/allison|nicky|aria|jenny|evan|nathan|guy/.test(n)) s+=3;
+    if(/google us english/.test(n)) s+=3;
+    if(/compact|legacy/.test(n)) s-=8;
+    if(n.length<10 && !/siri|ava|zoe|flo|guy/.test(n)) s-=2;
     return s;
   };
   VOICE=vs.slice().sort((a,b)=>score(b)-score(a))[0];
@@ -694,11 +699,30 @@ if('speechSynthesis' in window) speechSynthesis.onvoiceschanged=pickVoice;
 function say(text,rate,onend){
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(String(text).replace(/\s+/g,' ').trim());
-  u.lang='en-US'; u.rate = rate || ST.rate || 1;
-  if(VOICE) u.voice=VOICE;
-  if(onend){ u.onend=onend; u.onerror=onend; }
-  speechSynthesis.speak(u);
+  const t=String(text).replace(/\s+/g,' ').trim();
+  const base=rate||ST.rate||1;
+  const isQ=/\?\s*$/.test(t), isEx=/!\s*$/.test(t);
+  const sents=t.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[t];
+  if(sents.length<=1){
+    const u=new SpeechSynthesisUtterance(t);
+    u.lang='en-US';
+    u.rate=isQ?base*1.02:base*0.96;
+    u.pitch=isQ?1.08:isEx?1.02:0.97;
+    if(VOICE) u.voice=VOICE;
+    if(onend){u.onend=onend;u.onerror=onend;}
+    speechSynthesis.speak(u);
+  }else{
+    sents.forEach((s,i)=>{
+      const u=new SpeechSynthesisUtterance(s.trim());
+      u.lang='en-US';
+      const sq=/\?$/.test(s.trim()), last=i===sents.length-1;
+      u.rate=last?base*0.93:sq?base*1.02:base*(0.96+i%2*0.04);
+      u.pitch=sq?1.10:last?0.94:1.0+((i%3)-1)*0.05;
+      if(VOICE) u.voice=VOICE;
+      if(last&&onend){u.onend=onend;u.onerror=onend;}
+      speechSynthesis.speak(u);
+    });
+  }
 }
 window.say=say;
 /* 點整句就朗讀那一句，並在朗讀時把那一句高亮起來 */
