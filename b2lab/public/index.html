@@ -428,13 +428,26 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 }
 .back:active{box-shadow:0 0 0 rgba(0,0,0,0);background:#f5f5f5}
 .hint{font-size:calc(12.5px * var(--fs));color:var(--ink2);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
+/* 按下去的功能鈕要看得出「目前是開著的」：整段朗讀、中譯開關都適用 */
+.btn.ghost.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.gray.on{background:var(--ink2);color:#fff}
+.spk.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+/* 標頭的全站中譯開關（button 版 hdlink） */
+button.hdlink{font:inherit;font-size:11.5px;font-weight:800;cursor:pointer}
+button.hdlink.off{opacity:.65}
+/* 全站中譯開關＝開：所有中譯不用逐一點就直接顯示 */
+body.cnall .para .cn{display:block}
+body.cnall .qcn,body.cnall .ocn{display:block}
+body.cnall .ycdcn{display:block}
+body.cnall #sublist .scn{display:block!important}
+body.cnall [id^="kc"]{display:block!important}
 @media(max-width:420px){ .fc .fw{font-size:calc(28px * var(--fs))} .para .en{font-size:calc(16px * var(--fs))} }
 </style>
 </head>
 <body>
 
 <header>
-  <button class="brand" onclick="go('daily')" title="回今日首頁">
+  <button class="brand" onclick="toTop()" title="回到頁面頂端">
     <h1>📚 B2 Read</h1>
     <span id="hd-levels"></span>
   </button>
@@ -443,6 +456,7 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
     <button id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
   </div>
   <span id="sync-badge" title="進度已雲端同步（跨裝置共用）">☁️</span>
+  <button class="hdlink" id="hd-cn" onclick="togGlobalCn()" title="全站中譯一鍵顯示／隱藏">🈶 中譯</button>
   <a class="hdlink" href="https://learning-english-notes.web.app" title="Speak Up! 課堂筆記 · 口說練習 · 每日測驗">🍎🐻 Speak&nbsp;Up ↗</a>
 </header>
 
@@ -501,8 +515,16 @@ function mkWrong(s){
 function brSent(s){
   return String(s==null?'':s).replace(/。(?!\s*$)/g,'。<br>');
 }
-/* 兩者都套用：錯的變紅 + 句號換行 */
-const mkText = s => brSent(mkWrong(s));
+/* 解說裡「用到的英文句子」自動加粗（連續 3 個以上英文字才算句子，避免粗到單一個字）。
+   只處理標籤外的純文字，不會弄壞已經上色的 ✗/✓ 片段。 */
+function boldEn(html){
+  return String(html).split(/(<[^>]+>)/g).map(seg=>{
+    if(seg.charAt(0)==='<') return seg;
+    return seg.replace(/[A-Za-z][A-Za-z0-9'’\-]*(?:[ ,]+[A-Za-z0-9'’\-]+){2,}[.!?]*/g,m=>'<b>'+m+'</b>');
+  }).join('');
+}
+/* 三者都套用：錯的變紅 + 句號換行 + 英文例句加粗 */
+const mkText = s => boldEn(brSent(mkWrong(s)));
 /* 清單卡片左側色條跟著程度走（A2 橘 / B1 綠 / B1+ 藍 / B2 紫） */
 const LVBAR={A2:'--a2',B1:'--b1','B1+':'--b1p',B2:'--b2'};
 const lvBar = l => 'border-left-color:var('+(LVBAR[l]||'--accent')+')';
@@ -569,10 +591,26 @@ function cloudPush(){
   if(!db) return;
   if(pushTimer) clearTimeout(pushTimer);
   pushTimer=setTimeout(()=>{
+    pushTimer=null;
     const d=cloudDoc(); if(!d) return;
     d.set(ST,{merge:true}).then(()=>cloudBadge(true)).catch(()=>cloudBadge(false));
   },1200);
 }
+/* 切走 app 或關掉頁面時，還沒推上雲端的進度要馬上送出去，
+   否則「做完測驗就關掉」的那一筆會留在本機，另一台裝置看不到打勾 */
+function cloudFlush(){
+  if(!pushTimer) return;
+  clearTimeout(pushTimer); pushTimer=null;
+  const d=cloudDoc(); if(d) d.set(ST,{merge:true}).catch(()=>{});
+}
+window.addEventListener('pagehide',cloudFlush);
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden){ cloudFlush(); return; }
+  /* 回到前景：把雲端最新進度拉下來合併（另一台裝置剛做完的也會亮打勾） */
+  cloudPull(()=>{
+    if(!vQueue.length && !(TAB==='listen' && (lsOpen||myVid))) RENDER[TAB] && RENDER[TAB]();
+  });
+});
 /* 兩邊的單字複習紀錄逐字合併，取比較新的那一筆，避免換裝置時覆蓋掉進度 */
 function mergeState(remote){
   const out=Object.assign({},ST,remote);
@@ -636,8 +674,20 @@ let VOICE=null;
 function pickVoice(){
   const vs=speechSynthesis.getVoices().filter(v=>/^en(-|_)/i.test(v.lang));
   if(!vs.length) return;
-  VOICE = vs.find(v=>/en-US/i.test(v.lang)&&/natural|google|samantha|aria|zira/i.test(v.name))
-       || vs.find(v=>/en-US/i.test(v.lang)) || vs[0];
+  /* 依「像不像真人」打分：裝置上有下載加強版（Enhanced/Premium/Natural/Siri）就優先用，
+     沒有才退回一般美式語音。iPhone/iPad 可到 設定→輔助使用→語音內容 下載更自然的聲音。 */
+  const score=v=>{
+    const n=(v.name||'').toLowerCase();
+    let s=0;
+    if(/en[-_]us/i.test(v.lang)) s+=4;
+    if(/premium/.test(n)) s+=10;
+    if(/enhanced|natural|neural/.test(n)) s+=8;
+    if(/siri/.test(n)) s+=7;
+    if(/ava|samantha|allison|zoe|nicky|joelle|aria|jenny|evan|nathan|google us english/.test(n)) s+=3;
+    if(/compact/.test(n)) s-=5;
+    return s;
+  };
+  VOICE=vs.slice().sort((a,b)=>score(b)-score(a))[0];
 }
 pickVoice();
 if('speechSynthesis' in window) speechSynthesis.onvoiceschanged=pickVoice;
@@ -662,11 +712,23 @@ window.saySent=saySent;
 function spk(text,label){
   return '<button class="spk" onclick="say(this.dataset.t);event.stopPropagation()" data-t="'+esc(text)+'">🔊'+(label?' '+label:'')+'</button>';
 }
-/* 把一段文字切成一句一句（保留句尾標點） */
+/* 把一段文字切成一句一句（保留句尾標點）。
+   縮寫（a. m. / p.m. / Mr. / U.S. 等）後面的句點不能當斷句，
+   否則朗讀會把一句唸成好幾段，跟畫面上的內容對不起來。 */
+const ABBR_END=/(?:^|[\s(（"'“‘])(?:[A-Za-z]|Mr|Mrs|Ms|Dr|St|vs|etc|e\.g|i\.e|a\.m|p\.m|U\.S|U\.K)\.["'”’)\]]*$/;
 function splitSentences(text){
   const s=String(text||'').trim();
   const m=s.match(/[^.!?]+[.!?]+["'”’)\]]*\s*|[^.!?]+$/g);
-  return m ? m.map(x=>x.trim()).filter(Boolean) : (s?[s]:[]);
+  if(!m) return s?[s]:[];
+  const out=[];
+  m.map(x=>x.trim()).filter(Boolean).forEach(x=>{
+    const prev=out[out.length-1];
+    const startsLower=/^[a-z]/.test(x);
+    const tiny=/^[A-Za-z]\.["'”’)\]]*$/.test(x);
+    if(prev && ABBR_END.test(prev) && (startsLower||tiny)) out[out.length-1]=prev+' '+x;
+    else out.push(x);
+  });
+  return out;
 }
 
 /* ============================================================
@@ -687,7 +749,8 @@ function addGloss(k,obj){
 
 // 簡易還原詞形，讓 studies / studied / studying 都查得到
 function lookup(raw){
-  const w=String(raw).toLowerCase().replace(/[^a-z'-]/g,'');
+  // 空格要保留，weather bureau 這類片語才查得到（片語在字庫裡就是含空格的 key）
+  const w=String(raw).toLowerCase().replace(/[^a-z'\- ]/g,'').replace(/\s+/g,' ').trim();
   if(!w) return null;
   const tries=[w];
   if(w.endsWith("'s")) tries.push(w.slice(0,-2));
@@ -759,6 +822,23 @@ function go(t){
   RENDER[t] && RENDER[t]();
 }
 window.go=go;
+/* 點標頭回到頁面頂端 */
+function toTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
+window.toTop=toTop;
+
+/* ---------- 全站中譯開關（標頭 🈶）：開＝所有中譯直接顯示，關＝回到逐項點開 ---------- */
+let CNALL=localStorage.getItem('b2lab_cnall')==='1';
+function applyCnAll(){
+  document.body.classList.toggle('cnall',CNALL);
+  const b=$('hd-cn');
+  if(b){ b.textContent=CNALL?'🈶 中譯：開':'🈶 中譯：關'; b.classList.toggle('off',!CNALL); }
+}
+function togGlobalCn(){
+  CNALL=!CNALL;
+  try{ localStorage.setItem('b2lab_cnall',CNALL?'1':'0'); }catch(e){}
+  applyCnAll();
+}
+window.togGlobalCn=togGlobalCn;
 
 /* ============================================================
    3. 閱讀分頁
@@ -903,12 +983,14 @@ function buildYCD(a,tgIn){
   if(tg.length<3) return [];
   const sents=[];
   a.paras.forEach(p=>String(p.en).split(/(?<=[.!?])\s+/).forEach(s=>{ if(s.trim()) sents.push(s.trim()); }));
-  const out=[];
+  const out=[], usedSent=new Set();
   for(const t of tg){
     if(out.length>=3) break;
     const re=new RegExp('\\b'+reEsc(t.w)+'(s|es|ed|ing|d)?\\b','i');
-    const s=sents.find(x=>re.test(x));
+    // 每一題用不同的句子，同一句不出兩次
+    const s=sents.find(x=>re.test(x)&&!usedSent.has(x));
     if(!s) continue;
+    usedSent.add(s);
     const form=(s.match(re)||[])[0];
     const others=tg.filter(x=>x.w!==t.w && x.pos===t.pos);
     const pool=(others.length>=2?others:tg.filter(x=>x.w!==t.w)).slice(0,2);
@@ -1000,15 +1082,15 @@ function readerHTML(a){
   /* 左欄：內文 */
   h+='<div><div class="card">'
    +'<div class="row" style="margin-bottom:11px">'
-   +'<button class="btn ghost" onclick="cnAll(1)">顯示全部中譯</button>'
-   +'<button class="btn gray" onclick="cnAll(0)">隱藏中譯</button>'
+   +'<button class="btn ghost" id="btn-cn-show" onclick="cnAll(1)">顯示全部中譯</button>'
+   +'<button class="btn gray" id="btn-cn-hide" onclick="cnAll(0)">隱藏中譯</button>'
    +'<button class="btn ghost" id="btn-readall" onclick="readAll()">🔊 朗讀全文</button></div>'
    +'<div id="paras">'+a.paras.map((p,i)=>{
       const enHtml=splitSentences(p.en).map(s=>
         '<span class="sent" title="點這句朗讀" onclick="saySent(this)" data-t="'+esc(s)+'">'+magTokenizeRead(s,tmap,used)+'</span>'
       ).join(' ');
       return '<div class="para" id="p'+i+'"><div class="en">'+enHtml+'</div>'
-     +'<div class="pbar">'+spk(p.en,'整段')+'<button class="spk" onclick="togCn('+i+')">中譯</button></div>'
+     +'<div class="pbar"><button class="spk" id="pab'+i+'" onclick="readPara('+i+')">🔊 整段</button><button class="spk" id="cnb'+i+'" onclick="togCn('+i+')">中譯</button></div>'
      +'<div class="cn">'+esc(p.cn)+'</div></div>';
     }).join('')
    +'</div>'
@@ -1086,8 +1168,17 @@ function focusHTML(id){
 function goUnit(id){ rdOpen=null; go('gram'); gOpen(id); }
 window.goUnit=goUnit;
 
-function togCn(i){ $('p'+i).classList.toggle('showcn'); }
-function cnAll(on){ document.querySelectorAll('.para').forEach(p=>p.classList.toggle('showcn',!!on)); }
+function togCn(i){
+  const on=$('p'+i).classList.toggle('showcn');
+  const b=$('cnb'+i); if(b) b.classList.toggle('on',on);   // 按下去要看得出開了
+}
+function cnAll(on){
+  document.querySelectorAll('.para').forEach(p=>p.classList.toggle('showcn',!!on));
+  document.querySelectorAll('[id^="cnb"]').forEach(b=>b.classList.toggle('on',!!on));
+  const a=$('btn-cn-show'), b=$('btn-cn-hide');
+  if(a) a.classList.toggle('on',!!on);
+  if(b) b.classList.toggle('on',!on);
+}
 /* 朗讀全文：一句一句唸，唸到哪一句就把那一句反黃並捲進畫面 */
 let readSeq=null;
 function readAll(){
@@ -1095,7 +1186,7 @@ function readAll(){
   if(readSeq){ stopReadAll(); return; }          // 再按一次＝停止
   const sents=[].slice.call(document.querySelectorAll('#paras .sent'));
   if(!sents.length){ say(rdOpen.paras.map(p=>p.en).join(' ')); return; }
-  const btn=$('btn-readall'); if(btn) btn.textContent='⏹ 停止朗讀';
+  const btn=$('btn-readall'); if(btn){ btn.textContent='⏹ 停止朗讀'; btn.classList.add('on'); }
   readSeq={i:0, list:sents};
   stepRead();
 }
@@ -1106,13 +1197,29 @@ function stepRead(){
   const el=readSeq.list[readSeq.i];
   el.classList.add('reading');
   el.scrollIntoView({block:'center',behavior:'smooth'});
-  say(el.dataset.t, null, function(){ if(readSeq){ readSeq.i++; stepRead(); } });
+  /* cancel 之後馬上 speak 在 iOS 會偶爾掉句（音訊跟畫面對不上），隔一小拍再唸 */
+  setTimeout(function(){
+    if(readSeq) say(el.dataset.t, null, function(){ if(readSeq){ readSeq.i++; stepRead(); } });
+  },80);
 }
+/* 整段朗讀：跟朗讀全文一樣逐句唸、唸到哪句反黃到哪句，只是範圍限定在這一段 */
+function readPara(i){
+  if(readSeq && readSeq.p===i){ stopReadAll(); return; }   // 再按一次＝停止
+  if(readSeq) stopReadAll();
+  const box=$('p'+i); if(!box) return;
+  const sents=[].slice.call(box.querySelectorAll('.sent'));
+  if(!sents.length) return;
+  const b=$('pab'+i); if(b) b.classList.add('on');
+  readSeq={i:0, list:sents, p:i};
+  stepRead();
+}
+window.readPara=readPara;
 function stopReadAll(){
   readSeq=null;
   if('speechSynthesis' in window) speechSynthesis.cancel();
   document.querySelectorAll('#paras .sent.reading').forEach(x=>x.classList.remove('reading'));
-  const btn=$('btn-readall'); if(btn) btn.textContent='🔊 朗讀全文';
+  const btn=$('btn-readall'); if(btn){ btn.textContent='🔊 朗讀全文'; btn.classList.remove('on'); }
+  document.querySelectorAll('[id^="pab"].on').forEach(b=>b.classList.remove('on'));
 }
 window.stopReadAll=stopReadAll;
 window.togCn=togCn; window.cnAll=cnAll; window.readAll=readAll;
@@ -2260,6 +2367,7 @@ if('serviceWorker' in navigator){
 updateProfileUI();
 loadLocal();
 applyFs();
+applyCnAll();
 updateHd();
 updateDayIcon();
 touchStreak();

@@ -86,7 +86,7 @@ V.goneBeen=card(
    +dash('M84 132 Q160 84 234 122')+head(240,126,32)
    +em(250,150,46,'🍕')
    +em(250,214,44,'🧍')
-   +bub(150,206,'Still here! 還在那裡',180),
+   +bub(145,206,'Still here! 還在那裡',160),
   en:'James has gone to Italy.', cn:'去了「還沒回來」，人現在在義大利'},
  {pw:150,title:'been to',
   draw:em(250,150,46,'🍕')
@@ -113,7 +113,7 @@ V.hbdHd=card(
    +em(140,150,52,'🖼️')
    +'<circle cx="196" cy="140" r="20" fill="#2f9e5f"/>'
    +'<text x="196" y="148" text-anchor="middle" font-size="22" font-weight="900" fill="#fff">✓</text>'
-   +'<text x="160" y="112" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1f8a4c">做完了！看得到結果</text>',
+   +'<text x="160" y="94" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1f8a4c">做完了！看得到結果</text>',
   en:'I have painted the wall.', cn:'重點是「完成的結果」，', cn2:'牆已經漆好了'},
  '完成進行式問「做多久了」（過程），完成式問「做完了沒」（結果）。How long → have been doing；How many/much → have done。');
 V.dg20260813=V.hbdHd;
@@ -179,7 +179,7 @@ V.ga02=card(
    +'<line x1="100" y1="152" x2="100" y2="184" stroke="#d9534f" stroke-width="4"/>'
    +em(100,130,40,'🤒')
    +'<text x="100" y="242" text-anchor="middle" font-size="13" font-weight="800" fill="#7c8b96">yesterday</text>'
-   +'<text x="160" y="112" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">事情發生「在過去」，已經結束</text>',
+   +'<text x="160" y="86" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">事情發生「在過去」，已經結束</text>',
   en:'I had a headache last night.', cn:'動詞變過去式：have → had'},
  {pw:190,title:'疑問與否定用 did',
   draw:bub(160,130,'Did you see the doctor?',252)
@@ -229,7 +229,7 @@ V.g01=card(
    +'<rect x="182" y="176" width="56" height="20" rx="10" fill="#2f9e5f" opacity=".45"/>'
    +'<text x="210" y="146" text-anchor="middle" font-size="13" font-weight="900" fill="#2f9e5f">am doing</text>'
    +'<rect x="242" y="176" width="56" height="20" rx="10" fill="#8b5cf6" opacity=".45"/>'
-   +'<text x="270" y="166" text-anchor="middle" font-size="13" font-weight="900" fill="#8b5cf6">will be doing</text>'
+   +'<text x="274" y="166" text-anchor="middle" font-size="13" font-weight="900" fill="#8b5cf6">will be doing</text>'
    +'<text x="160" y="244" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">一段「線」：那個時間正在做</text>',
   en:'was doing → am doing', cn:'把動作拉成一段正在進行的線'},
  '八大時態＝三個時間（過去／現在／未來）×「點或線」再加上完成式。簡單式是點，進行式是線；完成式（have done）則是「到某個時間點為止」的累積。先抓住點和線，其他就好懂了。');
@@ -358,7 +358,7 @@ V.g14=card(
    +'<text x="110" y="216" text-anchor="middle" font-size="12" font-weight="700" fill="#7c8b96">160cm</text>'
    +em(212,166,58,'🧍')
    +'<text x="212" y="216" text-anchor="middle" font-size="12" font-weight="700" fill="#7c8b96">180cm</text>'
-   +'<text x="160" y="120" text-anchor="middle" font-size="15" font-weight="900" fill="#2b5f92">taller than</text>'
+   +'<text x="160" y="102" text-anchor="middle" font-size="15" font-weight="900" fill="#2b5f92">taller than</text>'
    +'<text x="160" y="248" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">兩個東西比：比較級 + than</text>',
   en:'He is taller than me.', cn:'兩者相比：-er / more ~ + than'},
  {pw:190,title:'最高級 the -est',
@@ -409,11 +409,11 @@ V.dg20260814a2=card(
 /* ---------- B1+：現在進行式的進階用法 —— 暫時狀態與已敲定的未來 ---------- */
 V.dg20260814=card(
  {pw:210,title:'暫時狀態 this month',
-  draw:tl(206)
-   +'<rect x="150" y="164" width="120" height="24" rx="12" fill="#f0b04e" opacity=".6"/>'
-   +'<text x="210" y="181" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7a4a08">this month 這陣子</text>'
-   +em(76,150,44,'🏠')+em(120,132,30,'🧳')
-   +'<text x="160" y="120" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">只是暫時的，不是永遠</text>',
+  draw:tl(210)
+   +'<rect x="150" y="150" width="120" height="24" rx="12" fill="#f0b04e" opacity=".6"/>'
+   +'<text x="210" y="167" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7a4a08">this month 這陣子</text>'
+   +em(66,150,40,'🏠')+em(106,130,26,'🧳')
+   +'<text x="160" y="98" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">只是暫時的，不是永遠</text>',
   en:'I&#39;m living with my parents this month.', cn:'這陣子的暫時狀態（平常不是這樣）'},
  {pw:210,title:'已敲定的未來安排',
   draw:'<rect x="92" y="104" width="136" height="104" rx="12" fill="#fff" stroke="#8aa8bf" stroke-width="2.5"/>'
