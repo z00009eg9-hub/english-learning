@@ -22,9 +22,34 @@ lessons:[
   sourceUrl:"https://www.youtube.com/watch?v=t25LxJkZ1Ng",
   intro:"BBC 的老師 Georgie 對著鏡頭示範自己的早晨，一邊做一邊講。這種「邊做邊說」的影片最適合把片語動詞跟畫面綁在一起記——看到她關掉鬧鐘，就聽到 turn off；看到她起床，就聽到 get up。只有兩分半，建議連看三次。",
   tip:"第一次不開字幕、只看畫面猜她在說哪個動作；第二次按 CC 開英文字幕對答案；第三次跟著她的節奏念出來。片語動詞要整組記，不要拆開背單字。",
-  pre:[],
+  pre:[
+    {w:"go off",ipa:"/ɡoʊ ɔːf/",cn:"（鬧鐘）響起",def:"When an alarm makes a sound to wake you."},
+    {w:"wake up",ipa:"/weɪk ʌp/",cn:"醒來（張開眼睛）",def:"To stop sleeping."},
+    {w:"get up",ipa:"/ɡet ʌp/",cn:"起床（離開床）",def:"To get out of bed."},
+    {w:"turn off",ipa:"/tɜːrn ɔːf/",cn:"關掉",def:"To stop a machine, light, or alarm."},
+    {w:"get dressed",ipa:"/ɡet drest/",cn:"穿衣服",def:"To put your clothes on."},
+    {w:"brush your teeth",ipa:"/brʌʃ jɔːr tiːθ/",cn:"刷牙",def:"To clean your teeth with a toothbrush."},
+    {w:"have breakfast",ipa:"/hæv ˈbrekfəst/",cn:"吃早餐",def:"To eat the first meal of the day."},
+    {w:"leave the house",ipa:"/liːv ðə haʊs/",cn:"出門",def:"To go out of your home."}
+  ],
+  drill:[
+    {en:"My alarm goes off at six thirty.",cn:"我的鬧鐘六點半響。"},
+    {en:"I wake up, but I don't get up right away.",cn:"我醒了，但沒有馬上起床。"},
+    {en:"I turn off the alarm and lie there for five minutes.",cn:"我把鬧鐘關掉，躺著再五分鐘。"},
+    {en:"Then I get up and go to the bathroom.",cn:"然後我起床，走去浴室。"},
+    {en:"I brush my teeth and wash my face.",cn:"我刷牙、洗臉。"},
+    {en:"I get dressed and go downstairs.",cn:"我穿好衣服下樓。"},
+    {en:"I have breakfast and check my phone.",cn:"我吃早餐、看一下手機。"},
+    {en:"I leave the house at half past seven.",cn:"我七點半出門。"}
+  ],
   keyLines:[],
-  questions:[]
+  questions:[
+    {q:"\"wake up\" 和 \"get up\" 差在哪裡？",opts:["A. 完全一樣，可互換","B. wake up 是醒來（張眼），get up 是離開床鋪","C. wake up 是起床，get up 是醒來","D. get up 只能用在早上"],ans:1,expl:"wake up = 從睡眠中醒過來；get up = 身體離開床。所以可以說 I wake up at six but I get up at six thirty（六點醒、六點半才爬起來）。"},
+    {q:"鬧鐘「響了」英文怎麼說？",opts:["A. My alarm rings up.","B. My alarm goes off.","C. My alarm turns on.","D. My alarm wakes off."],ans:1,expl:"固定說法是 the alarm goes off。注意 go off 用在鬧鐘是「響起」，不是「關掉」——關掉是 turn off。"},
+    {q:"下面哪一句的 turn off 用法正確？",opts:["A. I turn the alarm off.","B. I turn off the alarm.","C. A 和 B 都正確","D. 兩句都錯"],ans:2,expl:"turn off 是「可分離」的片語動詞，受詞可以放中間也可以放後面：turn off the alarm ＝ turn the alarm off。但受詞是代名詞時只能放中間：turn it off（不能說 turn off it）。"},
+    {q:"「我穿好衣服」正確說法是？",opts:["A. I dress up my clothes.","B. I wear dressed.","C. I get dressed.","D. I get dress."],ans:2,expl:"get dressed 是固定用法（dressed 是形容詞）。注意 dress up 是「盛裝打扮」，意思不一樣。"},
+    {q:"描述「每天的習慣」要用哪一種時態？",opts:["A. 現在進行式（I am getting up at seven.）","B. 現在簡單式（I get up at seven.）","C. 過去式（I got up at seven.）","D. 未來式（I will get up at seven.）"],ans:1,expl:"講固定的例行公事、習慣，用現在簡單式。現在進行式 I'm getting up 是指「此時此刻正在起床」。"}
+  ]
 },
 
 {
@@ -36,9 +61,33 @@ lessons:[
   sourceUrl:"https://www.youtube.com/watch?v=bq6GBbh3uhU",
   intro:"兩位 BBC 老師 Sian 和 Buli 用真實的聊天速度示範「你每天都做什麼？」這個最常見的問題。跟課本對話不同的是，他們會停頓、會插話、會改口——這才是真實的說話方式。",
   tip:"注意他們怎麼「接話」：不是只回答，而是回答完再把問題丟回去。把這幾個接話的句子抄下來，下次上課就能直接用。",
-  pre:[],
+  pre:[
+    {w:"routine",ipa:"/ruːˈtiːn/",cn:"例行公事、固定作息",def:"The things you normally do every day."},
+    {w:"usually",ipa:"/ˈjuːʒuəli/",cn:"通常",def:"Most of the time."},
+    {w:"hardly ever",ipa:"/ˈhɑːrdli ˈevər/",cn:"幾乎不",def:"Almost never."},
+    {w:"sleep in",ipa:"/sliːp ɪn/",cn:"睡晚一點、賴床",def:"To sleep later than usual, often on weekends."},
+    {w:"take it easy",ipa:"/teɪk ɪt ˈiːzi/",cn:"放輕鬆、不趕",def:"To relax and not work hard."},
+    {w:"work from home",ipa:"/wɜːrk frʌm hoʊm/",cn:"在家工作",def:"To do your job at home instead of an office."},
+    {w:"How about you?",ipa:"/haʊ əˈbaʊt juː/",cn:"那你呢？",def:"A way to ask the same question back."}
+  ],
+  drill:[
+    {en:"What do you usually do in the morning?",cn:"你早上通常都做什麼？"},
+    {en:"I usually get up around seven.",cn:"我通常七點左右起床。"},
+    {en:"I don't have much time, so I eat breakfast quickly.",cn:"我時間不多，所以早餐吃很快。"},
+    {en:"How about you? What's your morning like?",cn:"那你呢？你早上都怎麼過？"},
+    {en:"I work from home, so I start at nine.",cn:"我在家工作，所以九點才開始。"},
+    {en:"On weekends I sleep in and take it easy.",cn:"週末我會賴床、放輕鬆。"},
+    {en:"I hardly ever go out during the week.",cn:"平常上班日我幾乎不出門。"},
+    {en:"That sounds nice. Mine is a lot busier.",cn:"聽起來不錯。我的行程忙多了。"}
+  ],
   keyLines:[],
-  questions:[]
+  questions:[
+    {q:"問對方「你的日常作息」最自然的說法是？",opts:["A. What do you do every day always?","B. What's your daily routine?","C. How is your everyday?","D. What you do in a day?"],ans:1,expl:"What's your daily routine? 是最自然的問法。也可以說 What do you usually do in the morning?"},
+    {q:"頻率副詞 usually 應該放在哪裡？",opts:["A. I get up usually at seven.","B. Usually I get up at seven. / I usually get up at seven.","C. I get at seven usually up.","D. I am usually get up at seven."],ans:1,expl:"頻率副詞放在一般動詞「前面」（I usually get up），或整句開頭（Usually, I…）。但 be 動詞要放「後面」：I am usually tired."},
+    {q:"\"I hardly ever go out.\" 的意思是？",opts:["A. 我很努力出門","B. 我幾乎不出門","C. 我常常出門","D. 我很難出門"],ans:1,expl:"hardly ever = 幾乎從不。注意 hardly 不是 hard（努力）的副詞，它本身就是否定意味的字。"},
+    {q:"\"sleep in\" 是什麼意思？",opts:["A. 在室內睡覺","B. 睡過頭遲到","C. 比平常晚起（通常是週末刻意的）","D. 睡在別人家"],ans:2,expl:"sleep in = 刻意睡晚一點，通常是假日。不小心睡過頭是 oversleep。"},
+    {q:"對方講完自己的作息後，要把問題丟回去，最自然的一句是？",opts:["A. And you too?","B. How about you?","C. Same you?","D. What about of you?"],ans:1,expl:"How about you? 或 What about you? 都可以，是英語會話裡最常用的接話方式。"}
+  ]
 },
 
 {
@@ -50,9 +99,33 @@ lessons:[
   sourceUrl:"https://www.youtube.com/watch?v=OlyYE6USuO0",
   intro:"主持人在街上隨機訪問路人「你接下來有什麼打算？」。每個人的口音、語速、用字都不一樣，這正是它的價值：你會聽到同一個意思被三四種不同方式講出來。這一課剛好可以複習你正在讀的「現在進行式表未來」。",
   tip:"聽的時候專門抓「他用哪一種未來式」：已經訂好的講 I'm flying…（現在進行式），臨時決定的講 I'll…，本來就有打算的講 I'm going to…。抓到三個例子就算成功。",
-  pre:[],
+  pre:[
+    {w:"plan",ipa:"/plæn/",cn:"計畫、打算",def:"Something you have decided to do."},
+    {w:"be going to",ipa:"/bi ˈɡoʊɪŋ tuː/",cn:"打算要…",def:"Used for something you have already decided to do."},
+    {w:"look forward to",ipa:"/lʊk ˈfɔːrwərd tuː/",cn:"期待",def:"To feel happy about something that will happen."},
+    {w:"book a table",ipa:"/bʊk ə ˈteɪbl/",cn:"訂位",def:"To reserve a place at a restaurant."},
+    {w:"make up my mind",ipa:"/meɪk ʌp maɪ maɪnd/",cn:"下定決心、決定好",def:"To decide something."},
+    {w:"probably",ipa:"/ˈprɑːbəbli/",cn:"大概、可能",def:"Likely, but not certain."},
+    {w:"end up",ipa:"/end ʌp/",cn:"最後變成、結果是",def:"To finally be in a situation you did not plan."}
+  ],
+  drill:[
+    {en:"What are you doing this weekend?",cn:"你這週末要做什麼？"},
+    {en:"I'm meeting some friends on Saturday.",cn:"我星期六要跟幾個朋友碰面。（已經約好了）"},
+    {en:"We're going to try that new restaurant.",cn:"我們打算去試試那間新餐廳。（早就有打算）"},
+    {en:"I haven't made up my mind yet. Maybe I'll just stay home.",cn:"我還沒決定。也許我就待在家吧。（當下才決定）"},
+    {en:"I'm flying to Japan next month.",cn:"我下個月要飛日本。（機票已經訂好）"},
+    {en:"I think it'll be busy, so we should book a table.",cn:"我想會很多人，我們應該訂位。（預測）"},
+    {en:"She's going to look for a new job this year.",cn:"她今年打算找新工作。"},
+    {en:"Don't worry — I'll help you with that.",cn:"別擔心，我會幫你。（當場答應）"}
+  ],
   keyLines:[],
-  questions:[]
+  questions:[
+    {q:"機票已經訂好了，要說「我下個月飛日本」，最自然的是？",opts:["A. I will fly to Japan next month.","B. I'm flying to Japan next month.","C. I fly to Japan next month.","D. I am going to flying to Japan next month."],ans:1,expl:"已經排定、訂好的行程用「現在進行式表未來」：I'm flying…。這是母語者最常用的講法。"},
+    {q:"朋友說「這個袋子好重」，你當場決定要幫忙，要說？",opts:["A. I'm going to help you.","B. I'm helping you.","C. I'll help you.","D. I help you."],ans:2,expl:"說話當下才決定的事用 will（I'll help you）。going to 是「早就打算好」，用在這裡就不對了。"},
+    {q:"\"I'm going to look for a new job.\" 表示什麼？",opts:["A. 我正在找新工作","B. 我已經有打算要找新工作","C. 我剛剛才決定要找工作","D. 我一定會找到新工作"],ans:1,expl:"be going to 表示「先前就已經有這個打算、意圖」，不是當下臨時決定（那是 will），也不是正在進行。"},
+    {q:"下面哪一句是「預測」而不是「計畫」？",opts:["A. I'm meeting John at six.","B. I'm going to study tonight.","C. I think it'll rain tomorrow.","D. We're flying out on Monday."],ans:2,expl:"I think it'll rain 是根據判斷做的預測，用 will。其他三句都是已經排定或打算好的行動。"},
+    {q:"\"I haven't made up my mind yet.\" 意思是？",opts:["A. 我還沒改變心意","B. 我還沒決定","C. 我不想去","D. 我忘記了"],ans:1,expl:"make up one's mind = 下定決心／做出決定。所以 haven't made up my mind = 還沒決定好。"}
+  ]
 },
 
 {
@@ -64,9 +137,34 @@ lessons:[
   sourceUrl:"https://www.youtube.com/watch?v=ecF1y2bI2T4",
   intro:"加拿大老師 Bob 把自己一天的每個動作實際做一遍給你看，一邊做一邊用完整句子描述。畫面和句子完全對得起來，是最容易「不用翻譯就聽懂」的一種影片。八分鐘偏長，可以分兩天看。",
   tip:"這支很適合練「影子跟讀」：每聽完一句就按暫停，把整句原封不動念一次，再放下一句。念的時候盡量模仿他的句子長度，不要只講一個單字。",
-  pre:[],
+  pre:[
+    {w:"curtains",ipa:"/ˈkɜːrtnz/",cn:"窗簾",def:"Cloth that covers a window."},
+    {w:"take the dog for a walk",ipa:"/teɪk ðə dɔːɡ fɔːr ə wɔːk/",cn:"帶狗去散步",def:"To walk outside with your dog."},
+    {w:"feed",ipa:"/fiːd/",cn:"餵（食）",def:"To give food to a person or animal."},
+    {w:"chores",ipa:"/tʃɔːrz/",cn:"家事、雜務",def:"Small jobs you have to do at home."},
+    {w:"do the dishes",ipa:"/duː ðə ˈdɪʃɪz/",cn:"洗碗",def:"To wash the plates and cups after a meal."},
+    {w:"head out",ipa:"/hed aʊt/",cn:"出發、動身",def:"To leave a place and go somewhere."},
+    {w:"wrap up",ipa:"/ræp ʌp/",cn:"收尾、結束",def:"To finish something."},
+    {w:"go to bed",ipa:"/ɡoʊ tuː bed/",cn:"上床睡覺",def:"To get into bed to sleep."}
+  ],
+  drill:[
+    {en:"I wake up early and open the curtains.",cn:"我早起，把窗簾拉開。"},
+    {en:"After breakfast, I take the dog for a walk.",cn:"吃完早餐，我帶狗去散步。"},
+    {en:"In the morning, I answer emails at my desk.",cn:"早上我在書桌前回電子郵件。"},
+    {en:"At noon, I make myself a simple lunch.",cn:"中午我幫自己做個簡單的午餐。"},
+    {en:"In the afternoon, I head out and do some work outside.",cn:"下午我出門，到外面做點事。"},
+    {en:"Before dinner, I feed the animals and do a few chores.",cn:"晚餐前我餵動物、做一些家事。"},
+    {en:"After we eat, I do the dishes and wrap up for the day.",cn:"吃完飯，我洗碗，然後把一天收尾。"},
+    {en:"In the evening, we sit down and watch TV together.",cn:"晚上我們坐下來一起看電視。"}
+  ],
   keyLines:[],
-  questions:[]
+  questions:[
+    {q:"時間副詞片語 in the morning / at noon 通常放在句子的哪裡？",opts:["A. 只能放句尾","B. 只能放句首","C. 句首或句尾都可以","D. 一定要放在動詞前面"],ans:2,expl:"In the morning, I answer emails. ＝ I answer emails in the morning. 兩種都對；放句首時後面通常加逗號，語氣上會強調時間。"},
+    {q:"哪一個介系詞搭配正確？",opts:["A. in noon / at the morning","B. at noon / in the morning","C. on noon / on the morning","D. at noon / on the morning"],ans:1,expl:"固定搭配：at noon、at night，但 in the morning / in the afternoon / in the evening。這組很常考也很常錯。"},
+    {q:"「帶狗去散步」正確說法是？",opts:["A. I walk with my dog outside.","B. I take my dog to walk.","C. I take the dog for a walk.","D. I bring the dog walking."],ans:2,expl:"固定用法是 take + 對象 + for a walk。也可以直接說 I walk the dog（walk 當及物動詞用）。"},
+    {q:"\"do the dishes\" 是什麼意思？",opts:["A. 做菜","B. 洗碗","C. 擺餐具","D. 買碗盤"],ans:1,expl:"do the dishes = 洗碗（wash the dishes 也可以）。注意「做菜」是 cook 或 make dinner。"},
+    {q:"Bob 用完整句子而不是單字描述動作，對學習者的好處是？",opts:["A. 可以背比較多單字","B. 動詞、介系詞、時間副詞整組一起記住，之後能直接說出整句","C. 影片會比較短","D. 不用學文法"],ans:1,expl:"跟讀整句的價值就在這裡：語塊（chunk）一起進腦袋，開口時不必臨時組裝文法，句子自然會出來。"}
+  ]
 },
 
 /* ---------------------------------------------------------- 2026-08-14 Tom */

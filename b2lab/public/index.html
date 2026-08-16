@@ -862,6 +862,9 @@ function go(t){
   hideGloss();
   window.scrollTo(0,0);
   RENDER[t] && RENDER[t]();
+  /* header 在手機上會換行、換分頁時高度也會變，這裡重量一次，
+     黏頂影片的 top 才不會停在舊高度、卡在半空中 */
+  updateHd();
 }
 window.go=go;
 /* 點標頭回到頁面頂端 */
@@ -1792,6 +1795,12 @@ setInterval(refreshDayIfChanged,60000);
 function updateHd(){ const hd=document.querySelector('header'); if(hd) document.documentElement.style.setProperty('--hdh',hd.offsetHeight+'px'); }
 window.addEventListener('resize',updateHd);
 window.addEventListener('load',updateHd);
+/* header 內容重排（換人、換分頁、手機上換行）不會觸發 resize，值會留在舊高度，
+   黏頂的影片就會卡在半空中——用 ResizeObserver 盯著，高度一變就重新量。 */
+if(window.ResizeObserver){
+  const hd0=document.querySelector('header');
+  if(hd0) new ResizeObserver(updateHd).observe(hd0);
+}
 function setFs(v){ ST.fs=v; save(); applyFs(); go('prog'); }
 window.setFs=setFs;
 function wipe(){
@@ -1933,7 +1942,7 @@ RENDER.listen=function(){
      +'<div class="meta"><span>'+esc(l.series)+'</span></div></div>';
   }
   v.innerHTML='<div class="card"><h2 class="sec">🎧 影片聽力</h2>'
-   +'<div class="hint">每一課都有<b>聽前單字</b>、<b>關鍵句跟讀</b>與<b>理解測驗</b>。播放器可以調成 0.5x／0.75x 慢速，也可以設 A、B 兩點<b>反覆循環同一句</b>。影片需要網路，離線時看不了。</div>'
+   +'<div class="hint">每一課都是同一套跟讀流程：<b>聽前單字</b> → <b>逐字稿跟讀</b>（影片黏在最上面，點任何一個英文字查中文，可把英文或中譯蓋起來自我測驗）→ <b>理解測驗</b>。播放器可以調成 0.5x／0.75x 慢速，也可以設 A、B 兩點<b>反覆循環同一句</b>。影片需要網路，離線時看不了。</div>'
    +'<div class="muted">共 '+list.length+' 課 · 影片來源 VOA Learning English（美國政府出版物，公共領域）</div></div>'
    +(scenes.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">🏙️ 實景場景 · 生活英文跟讀</h3>'+scenes.map(lsCard).join(''):'')
    +(others.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">🎬 影片聽力 · 課程教材</h3>'+others.map(lsCard).join(''):'')
@@ -1949,8 +1958,11 @@ function lsScript(l){ return (window.LISTEN_SCRIPTS||{})[l && l.id] || null; }
 function lessonHTML(l){
   const sc=lsScript(l);
   const timed=lessonSubs(l);   /* 學習者貼的時間軸字幕：優先於靜態逐字稿 */
-  const isScene=l.kind==='scene'&&(l.keyLines||[]).length;
-  const hasScript=sc||timed||isScene;
+  /* 沒有完整逐字稿的課，就把 keyLines 當逐字稿用，讓每一課都是同一種跟讀版面 */
+  const klSc=(!sc&&!timed&&(l.keyLines||[]).length)?l.keyLines:null;
+  /* drill：版權影片無法轉錄全文，改放本站自編的跟讀句（照 focus 寫），不冒充逐字稿 */
+  const drill=(l.drill||[]).length?l.drill:null;
+  const hasScript=sc||timed||klSc||drill;
   let h='<button class="back" onclick="lsClose()"></button>'
    /* 有逐字稿時，影片黏在最上面（跟 Speak Up 一樣），往下捲字幕影片仍看得到 */
    +(hasScript?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':'')
@@ -1976,40 +1988,8 @@ function lessonHTML(l){
        +'<div style="color:var(--accent2);font-weight:700;font-size:calc(15px * var(--fs))">'+esc(t.cn)+'</div>'
        +'<div class="ecn">'+esc(t.def||'')+'</div></div>').join('')+'</div>';
   }
-  if(isScene){
-    h+='<div class="card"><h2 class="sec">📜 逐字稿（含中譯）</h2>'
-     +'<div class="hint">影片會一直黏在上面，一邊看一邊對照。<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。上面可以把英文或中譯先蓋起來，自己測驗。</div>'
-     +'<div id="sublist">'+ l.keyLines.map((k,i)=>
-        '<div class="sline" id="sl-'+i+'">'
-        +'<div class="srow"><div class="sen">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
-        +'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>'
-        +'</div>').join('')+'</div>'
-     +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">逐字稿英文原文取自 '+esc(l.source)+'；中譯為本站撰寫。</div></div>';
-  }
-  else if((l.keyLines||[]).length){
-    h+='<div class="card"><h2 class="sec">🗣 關鍵句跟讀</h2>'
-     +'<div class="hint">先按 🔊 聽一次，再自己念一次。看不懂就按「中譯」。</div>'
-     + l.keyLines.map((k,i)=>'<div class="ex"><div class="een" style="font-size:calc(16.5px * var(--fs));font-weight:700">'+esc(k.en)+' '+spk(k.en)+'</div>'
-       +'<div class="pbar" style="margin-top:5px"><button class="spk" onclick="kcn('+i+')">中譯</button></div>'
-       +'<div class="ecn" id="kc'+i+'" style="display:none;margin-top:4px">'+esc(k.cn)+'</div></div>').join('')+'</div>';
-  }
-  if((l.questions||[]).length){
-    h+='<div class="card"><div class="row" style="align-items:center;margin-bottom:8px"><h2 class="sec" style="margin:0">✅ 聽力理解測驗</h2>'+qzBtnHTML('listen',l.questions)+'</div>'
-     +'<div class="hint">建議先只聽、不看逐字稿就作答，答完再回去對照。</div>'
-     + quizHTML(l.questions,'listen')+'<div id="lsquizScore"></div></div>';
-  }
-  if(!sc && !timed && l.cc){
-    h+='<div class="card"><h2 class="sec">💬 這一課的字幕怎麼開</h2>'
-     +'<div class="hint">這是真人 vlog，<b>字幕在影片本身</b>：點播放器右下角的 <b>CC</b> 就會出現英文字幕'
-     +'（是頻道自己上的，不是機器聽打，所以很準）。想更慢可以用上面的 0.5x／0.75x。</div>'
-     +(l.needsSubs?'<div class="ex" style="border-color:#f0c890;background:#fff8ec">'
-        +'<div class="enote" style="font-size:calc(13.5px * var(--fs));font-weight:800">⏳ 站內中譯字幕還沒補上</div>'
-        +'<div class="ecn" style="margin-top:4px">在下面貼上逐字稿，這一課就會變成有<b>時間軸同步中英字幕</b>的教材（跟「我的影片」一樣）。</div></div>':'')
-     + lsubBoxHTML(false)
-     +'</div>';
-  }
+  /* 逐字稿／跟讀句：每一課都放在「聽前單字」之後、「測驗」之前，版面一致 */
   if(timed){
-    const hasCn=timed.some(x=>x.cn);
     h+='<div class="card"><h2 class="sec">📜 逐字稿（時間軸同步）</h2>'
      +'<div class="hint">播放時字幕會自動亮起來並捲動。<b>點任一句</b>可以跳到那一秒；<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。</div>'
      +'<div id="sublist">'+ timed.map((k,i)=>
@@ -2023,16 +2003,49 @@ function lessonHTML(l){
      + lsubBoxHTML(true)
      +'</div>';
   }
-  else if(sc){
+  else if(sc||klSc){
+    const lines=sc||klSc;
     h+='<div class="card"><h2 class="sec">📜 逐字稿（含中譯）</h2>'
      +'<div class="hint">影片會一直黏在上面，一邊看一邊對照。<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。上面可以把英文或中譯先蓋起來，自己測驗。</div>'
-     +'<div id="sublist">'+ sc.map((k,i)=>
+     +'<div id="sublist">'+ lines.map((k,i)=>
         '<div class="sline" id="sl-'+i+'">'
         +(k.sp?'<div class="ssp">'+esc(k.sp)+'</div>':'')
         +'<div class="srow"><div class="sen">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
         +(k.cn?'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>':'')
         +'</div>').join('')+'</div>'
      +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">逐字稿英文原文取自 '+esc(l.source)+'；中譯為本站撰寫。</div></div>';
+  }
+  else if(drill){
+    h+='<div class="card"><h2 class="sec">🗣 跟讀練習句</h2>'
+     +'<div class="hint">這一課的影片有版權，站內不轉錄原片逐字稿——<b>影片原文請按播放器右下角 CC</b>。下面是本站照這一課文法焦點自編的練習句，用法跟逐字稿一樣：<b>點任何一個英文字</b>查中文、按 🔊 聽一次再自己念一次，上面可以把英文或中譯蓋起來自我測驗。</div>'
+     +'<div id="sublist">'+ drill.map((k,i)=>
+        '<div class="sline" id="sl-'+i+'">'
+        +'<div class="srow"><div class="sen">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
+        +'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>'
+        +'</div>').join('')+'</div>'
+     +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">練習句與中譯皆為本站原創撰寫，非影片逐字稿。</div></div>';
+  }
+  if(!klSc && (l.keyLines||[]).length){
+    h+='<div class="card"><h2 class="sec">🗣 重點句加強跟讀</h2>'
+     +'<div class="hint">先按 🔊 聽一次，再自己念一次。看不懂就按「中譯」。</div>'
+     + l.keyLines.map((k,i)=>'<div class="ex"><div class="een" style="font-size:calc(16.5px * var(--fs));font-weight:700">'+esc(k.en)+' '+spk(k.en)+'</div>'
+       +'<div class="pbar" style="margin-top:5px"><button class="spk" onclick="kcn('+i+')">中譯</button></div>'
+       +'<div class="ecn" id="kc'+i+'" style="display:none;margin-top:4px">'+esc(k.cn)+'</div></div>').join('')+'</div>';
+  }
+  if((l.questions||[]).length){
+    h+='<div class="card"><div class="row" style="align-items:center;margin-bottom:8px"><h2 class="sec" style="margin:0">✅ 聽力理解測驗</h2>'+qzBtnHTML('listen',l.questions)+'</div>'
+     +'<div class="hint">建議先把上面的逐字稿用「👁 英文：隱藏」蓋起來、只聽影片作答，答完再打開對照。</div>'
+     + quizHTML(l.questions,'listen')+'<div id="lsquizScore"></div></div>';
+  }
+  if(!sc && !timed && l.cc){
+    h+='<div class="card"><h2 class="sec">💬 這一課的字幕怎麼開</h2>'
+     +'<div class="hint">這是真人 vlog，<b>字幕在影片本身</b>：點播放器右下角的 <b>CC</b> 就會出現英文字幕'
+     +'（是頻道自己上的，不是機器聽打，所以很準）。想更慢可以用上面的 0.5x／0.75x。</div>'
+     +(l.needsSubs?'<div class="ex" style="border-color:#f0c890;background:#fff8ec">'
+        +'<div class="enote" style="font-size:calc(13.5px * var(--fs));font-weight:800">⏳ 站內中譯字幕還沒補上</div>'
+        +'<div class="ecn" style="margin-top:4px">在下面貼上逐字稿，這一課就會變成有<b>時間軸同步中英字幕</b>的教材（跟「我的影片」一樣）。</div></div>':'')
+     + lsubBoxHTML(false)
+     +'</div>';
   }
   h+='<div class="card" style="text-align:center"><button class="btn" onclick="lsClose()">完成，回列表</button></div>';
   return h;
