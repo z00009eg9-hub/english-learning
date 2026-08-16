@@ -129,14 +129,14 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .acts{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .act{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px 15px;
   cursor:pointer;transition:transform .16s,box-shadow .16s;text-align:left;
-  font-family:inherit;color:var(--ink);position:relative;overflow:hidden;}
+  font-family:inherit;color:var(--ink);position:relative;overflow:visible;}   /* 勾勾要卡在框角外，不能裁掉 */
 .act:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--line);}
 .act:active{transform:scale(.98);}
 .act-ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.75rem;
-  position:absolute;top:50%;right:14px;transform:translateY(-50%);}   /* 圖示放右側置中、加大 */
+  position:absolute;top:18px;right:14px;}   /* 圖示放右上角、加大；top 18 讓開框角的勾勾 */
 .act-h{font-size:1.28rem;font-weight:900;letter-spacing:-.2px;padding-right:66px;}
 .act-en{font-size:.82rem;font-weight:800;color:var(--faint);font-family:'Inter';margin-top:2px;}
-.act-d{font-size:1rem;font-weight:600;color:var(--sub);margin-top:8px;line-height:1.5;padding-right:66px;}
+.act-d{font-size:1rem;font-weight:600;color:var(--sub);margin-top:8px;line-height:1.5;}
 /* 卡片使用說明：一步一步告訴學習者怎麼玩 */
 .act-how{margin-top:10px;padding-top:9px;border-top:1px dashed var(--bdr2);
   font-size:.82rem;font-weight:600;color:var(--faint);line-height:1.65;}
@@ -145,13 +145,13 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .how-bar{background:var(--amber-l);border:1px solid #F3DFA6;border-radius:14px;
   padding:8px 12px;font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.55;margin-bottom:9px;}
 .how-bar b{color:var(--coral-d);font-weight:800;}
-.act-badge{position:absolute;top:-2px;left:-2px;font-size:.62rem;font-weight:800;
-  background:var(--coral);color:#fff;padding:3px 10px;border-radius:14px 0 12px 0;}   /* 主打：左上角角標 */
-.act-say .act-h{padding-top:12px;}   /* 標題往下讓開左上角的「主打」角標 */
-/* 當天已「練習完整」（做完看到成績）的活動卡片：右上角打勾（圖示置中右側，不會被遮住） */
-.act-prog{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:50%;
+.act-badge{position:absolute;top:-2px;left:-2px;font-size:.8rem;font-weight:800;
+  background:var(--coral);color:#fff;padding:4px 13px;border-radius:14px 0 12px 0;}   /* 主打：左上角角標（加大） */
+.act-say .act-h{padding-top:16px;}   /* 標題往下讓開左上角的「主打」角標 */
+/* 當天已「練習完整」的活動卡片：勾勾卡在方框右上角（框外），不遮圖示 */
+.act-prog{position:absolute;top:-10px;right:-10px;width:27px;height:27px;border-radius:50%;
   background:#1F8A4C;color:#fff;border:2.5px solid #fff;box-shadow:0 2px 8px rgba(31,138,76,.4);
-  font-size:1rem;font-weight:900;line-height:26px;text-align:center;display:none;}
+  font-size:.95rem;font-weight:900;line-height:23px;text-align:center;display:none;z-index:2;}
 /* 六個口說活動：繽紛彩色卡片 */
 .i-say{background:#FFE0E4;color:#E11D48;}
 .i-shadow{background:#FFEAD1;color:#EA7A0C;}
@@ -180,6 +180,17 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 
 /* ═══ SUB-SCREEN HEADER ═══ */
 .sub-top{display:flex;align-items:center;gap:11px;margin-bottom:12px;}
+/* 標題和副標排同一行（2026-08-16 使用者要求） */
+.sub-top>div{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;}
+/* 「怎麼玩」收合鈕：放在標題旁，點了展開說明條 */
+.how-tog{border:1.5px solid var(--bdr);background:#fff;color:var(--sub);border-radius:100px;
+  padding:3px 11px;font-size:.8rem;font-weight:800;cursor:pointer;font-family:inherit;white-space:nowrap;}
+.how-tog.on{background:var(--amber-l);border-color:#F3DFA6;color:var(--coral-d);}
+/* 中文 ON/OFF 開關：開＝青綠色、關＝灰白（2026-08-16 使用者要求） */
+.cn-tog{border:2px solid var(--bdr2);background:#fff;color:var(--faint);border-radius:100px;
+  padding:6px 14px;font-size:.88rem;font-weight:800;cursor:pointer;font-family:inherit;
+  white-space:nowrap;transition:background .15s,color .15s,border-color .15s;}
+.cn-tog.on{background:var(--teal);border-color:var(--teal);color:#fff;}
 .back{width:42px;height:42px;border-radius:13px;border:1.5px solid var(--bdr2);background:#fff;
   display:grid;place-content:center;place-items:center;font-size:0;line-height:0;
   cursor:pointer;flex-shrink:0;color:var(--ink);transition:.15s;padding:0;
@@ -475,10 +486,10 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .vid-box{background:#000;border-radius:16px;overflow:hidden;position:relative;box-shadow:var(--sh);
   aspect-ratio:16/9;height:min(32vh,50vw);max-width:100%;margin:0 auto;}
 .vid-box>iframe,.vid-box>video{position:absolute;inset:0;width:100%;height:100%;border:0;}
-.vid-tts{background:linear-gradient(150deg,#159AA6,#35BAC6);border-radius:16px;padding:26px 18px;text-align:center;color:#fff;}
-.vid-tts .ico{font-size:2.6rem;}
-.vid-tts .t{font-size:1.16rem;font-weight:900;margin-top:6px;}
-.vid-tts .s{font-size:.95rem;font-weight:600;opacity:.92;margin-top:4px;}
+.vid-tts{background:linear-gradient(150deg,#159AA6,#35BAC6);border-radius:16px;padding:11px 14px;text-align:center;color:#fff;}
+.vid-tts .ico{font-size:1.7rem;}
+.vid-tts .t{font-size:1.02rem;font-weight:900;margin-top:3px;}
+.vid-tts .s{font-size:.85rem;font-weight:600;opacity:.92;margin-top:2px;}
 /* 字幕清單直接跟著頁面捲動（影片已黏在上方，一頁就能同時看影片＋字稿）；
    底部預留一段空間，最後幾句才能捲到影片下方、不會永遠卡在影片後面 */
 .sub-list{margin-top:12px;display:flex;flex-direction:column;gap:8px;}
@@ -903,7 +914,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       </div>
       <div class="center hide" id="ls-hint-t" style="font-size:.76rem;color:var(--sub);margin-top:6px">💡 提示單字（點一下聽發音）:</div>
       <div class="phrases" id="ls-hint"></div>
-      <div class="actions">
+      <div class="actions" style="margin-bottom:18px">
         <button class="btn btn-t" onclick="lsPlay(1)" title="正常速度播放">🔊 正常速</button>
         <button class="btn btn-o" onclick="lsPlay(.6)" title="放慢播放">🐢 慢速</button>
       </div>
@@ -5443,10 +5454,13 @@ function renderAutoRec(){document.querySelectorAll('.autorec').forEach(b=>{
 function micUnsupported(lbl){const l=$(lbl);if(l)l.innerHTML='⚠ 這個瀏覽器不支援語音辨識，建議用 <b>Chrome</b> 或 <b>Edge</b>。你仍可用 🔊 聽示範跟著念。';}
 
 /* ---------- 語音合成 TTS ---------- */
-let VOICE=null;
+let VOICE=null,VOICE_M=null;
 function pickVoice(){const vs=(window.speechSynthesis&&speechSynthesis.getVoices())||[];
   VOICE=vs.find(v=>/en[-_]US/i.test(v.lang)&&/(female|samantha|google us|zira|aria|jenny)/i.test(v.name))
-      ||vs.find(v=>/en[-_]US/i.test(v.lang))||vs.find(v=>/^en/i.test(v.lang))||null;}
+      ||vs.find(v=>/en[-_]US/i.test(v.lang))||vs.find(v=>/^en/i.test(v.lang))||null;
+  /* 男聲：金句連播男女交替用；找不到就退回 null（改用降低音高模擬） */
+  VOICE_M=vs.find(v=>/en[-_]US/i.test(v.lang)&&/(male|david|guy|alex|daniel|fred|mark|aaron|evan)/i.test(v.name)&&v!==VOICE)
+      ||vs.find(v=>/^en/i.test(v.lang)&&/(male|david|guy|alex|daniel)/i.test(v.name))||null;}
 if(window.speechSynthesis){speechSynthesis.onvoiceschanged=pickVoice;pickVoice();}
 const SLOW_RATE=0.5;
 /* 發音修正字典：合成語音會念錯的字，統一在這裡改寫成念得對的拼法。
@@ -6142,6 +6156,16 @@ function cycleFS(){const v=+(localStorage.getItem('speakup_fs')||1);
   const i=(FS_STEPS.findIndex(s=>s[0]===v)+1)%FS_STEPS.length;
   localStorage.setItem('speakup_fs',FS_STEPS[i][0]);applyFS();}
 applyFS();
+/* ---------- 「怎麼玩」說明條：收合成標題旁的小鈕，點了才展開（2026-08-16） ---------- */
+document.querySelectorAll('section.screen').forEach(sc=>{
+  const hb=sc.querySelector('.how-bar');if(!hb)return;
+  hb.classList.add('hide');
+  const head=sc.querySelector('.sub-top>div');
+  const b=document.createElement('button');
+  b.className='how-tog';b.type='button';b.textContent='❓ 怎麼玩';
+  b.onclick=()=>{const off=hb.classList.toggle('hide');b.classList.toggle('on',!off);};
+  if(head)head.appendChild(b);else hb.parentNode.insertBefore(b,hb);
+});
 /* ---------- 教練訊息 ---------- */
 function coachSay(html){$('coach-msg').innerHTML=html;}
 function coachHome(){const nm=PROFILES[PROFILE],n=ST.totalSpoken;
@@ -6360,11 +6384,10 @@ function wordNext(){wI++;if(wI>=wList.length){if(SESS)SESS.reachedEnd=true;finis
 let READ=null;
 let READLIST=[];
 function startRead(d){
-  /* 2026-08-16：Anita 不需要「基礎」列表（那是 A2 短文），直接給進階；Tom 保留切換 */
-  if(isTom())renderLvlBar('read');
-  else{const lb=$('lvl-read');if(lb)lb.style.display='none';}
+  /* 2026-08-16：朗讀頁不再顯示基礎/進階切換；Tom 固定 A2 短文、Anita 固定進階文章 */
+  const lb=$('lvl-read');if(lb)lb.style.display='none';
   let scope=d;const dayA=dayArticles(d);let arts;
-  if(isTom()&&lvBasic()){
+  if(isTom()){
     /* 基礎：A2 短文（＋當天文章若有） */
     arts=A2BY[d]?dayA.slice():A2LESSONS.map(l=>l.article).filter(Boolean).concat(dayA);
   }else{
@@ -6384,8 +6407,9 @@ function readOpen(gi){const a=READLIST[gi];READ={a:a,paras:[]};
   sessStart('read','📖 朗讀文章',a.paras.length,{scoreLabel:'平均覆蓋率'});
   const body=$('read-body');$('read-pick').classList.add('hide');body.classList.remove('hide');
   body.classList.toggle('nocn',!lvBasic());   /* 進階：隱藏段落中文翻譯 */
-  let html='<div class="sub-top" style="margin-bottom:10px"><div style="flex:1"><div class="sub-h" style="font-size:1.05rem">'+esc(a.title)+'</div><div class="sub-s">'+esc(a.titleCn||'')+'</div></div>'
-    +'<button class="btn btn-o btn-sm" id="read-cn-btn" onclick="readToggleCn()" title="顯示或隱藏每一段的中文翻譯">'+(lvBasic()?'🈯 隱藏中文':'🈯 顯示中文')+'</button></div>'
+  const cnOn=lvBasic();   /* 基礎預設顯示中文 → ON */
+  let html='<div class="sub-top" style="margin-bottom:10px"><div style="flex:1"><div class="sub-h" style="font-size:1.35rem;color:var(--coral-d)">'+esc(a.title)+'</div><div class="sub-s">'+esc(a.titleCn||'')+'</div></div>'
+    +'<button class="cn-tog'+(cnOn?' on':'')+'" id="read-cn-btn" onclick="readToggleCn()" title="開啟或關閉每一段的中文翻譯">🈯 中文 '+(cnOn?'ON':'OFF')+'</button></div>'
     +'<div style="margin:-4px 0 10px"><button class="autorec" onclick="toggleAutoRec()" title="開啟後，每段示範念完會自動開始錄音">🎙️ 自動錄音：開</button></div>';
   a.paras.forEach((p,pi)=>{const text=stripTags(p.en);const tk=text.split(/(\s+)/);
     const spans=tk.map((w,ti)=>{if(/^\s+$/.test(w))return w;const isw=/[a-zA-Z]/.test(w);
@@ -6412,7 +6436,8 @@ function readDemo(pi){
 function readFinish(){finishAct('📖 朗讀文章','你把這一篇唸完了!');}
 /* 中文翻譯開關：進階預設隱藏（自己先讀讀看），想對照隨時可以打開 */
 function readToggleCn(){const b=$('read-body');const off=b.classList.toggle('nocn');
-  const btn=$('read-cn-btn');if(btn)btn.textContent=off?'🈯 顯示中文':'🈯 隱藏中文';}
+  const btn=$('read-cn-btn');
+  if(btn){btn.textContent='🈯 中文 '+(off?'OFF':'ON');btn.classList.toggle('on',!off);}}
 function readText(pi){return stripTags(READ.a.paras[pi].en);}
 function readMic(pi){
   micStart({btn:'rmic-'+pi,lbl:'rlbl-'+pi,redo:'rredo-'+pi,idle:'按 🎤 朗讀這段',continuous:true,keepAlive:true,idleMs:12000,
@@ -7212,7 +7237,9 @@ function vSpeakLine(i){
   speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(ttsFix(VID.lines[i].en));
   u.lang='en-US';u.rate=Math.max(0.4,0.92*VID.rate);
-  if(VOICE)u.voice=VOICE;
+  /* 金句連播：一句女聲、一句男聲交替，聽起來像兩個人輪流念；沒有男聲就用較低音高模擬 */
+  if(i%2&&VOICE_M){u.voice=VOICE_M;}
+  else{if(VOICE)u.voice=VOICE;if(i%2)u.pitch=0.78;}
   u.onend=()=>{if(!VID||!VID.playing||VID.i!==i)return;
     if(VID.loop){setTimeout(()=>{if(VID&&VID.playing)vSpeakLine(i);},600);return;}
     if(i+1<VID.lines.length)setTimeout(()=>{if(VID&&VID.playing)vSpeakLine(i+1);},500);
