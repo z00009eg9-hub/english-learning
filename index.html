@@ -37,13 +37,13 @@ body{font-family:'Noto Sans TC','Inter',sans-serif;background:var(--bg);color:va
 
 /* ═══ HEADER ═══ */
 header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
-  color:#fff;padding:calc(14px + env(safe-area-inset-top)) 18px 16px;position:sticky;top:0;z-index:200;
+  color:#fff;padding:calc(8px + env(safe-area-inset-top)) 18px 9px;position:sticky;top:0;z-index:200;
   box-shadow:0 6px 22px rgba(15,122,133,.30);}
 .hd-in{max-width:1060px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;}
 .hd-brand{display:flex;align-items:center;gap:11px;}
-.hd-logo{width:48px;height:44px;border-radius:13px;background:rgba(255,255,255,.22);
-  display:grid;place-items:center;font-size:1rem;letter-spacing:-1px;backdrop-filter:blur(4px);flex-shrink:0;}
-.hd-ttl{font-size:1.18rem;font-weight:900;letter-spacing:-.4px;line-height:1.1;}
+.hd-logo{width:40px;height:37px;border-radius:11px;background:rgba(255,255,255,.22);
+  display:grid;place-items:center;font-size:.88rem;letter-spacing:-1px;backdrop-filter:blur(4px);flex-shrink:0;}
+.hd-ttl{font-size:1.08rem;font-weight:900;letter-spacing:-.4px;line-height:1.1;}
 .hd-sub{font-size:.72rem;opacity:.9;font-weight:500;margin-top:1px;}
 .hd-topic{display:inline-block;max-width:min(46vw,420px);margin-top:4px;padding:2px 10px;border-radius:100px;
   background:rgba(255,255,255,.22);font-size:.85rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
@@ -56,6 +56,11 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .hd-streak{background:rgba(255,255,255,.2);border-radius:100px;padding:6px 13px;
   font-size:.8rem;font-weight:800;white-space:nowrap;display:flex;align-items:center;gap:5px;}
 .hd-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end;}
+/* 字級調整按鈕（標準/大/特大 循環） */
+.hd-fs{border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.18);color:#fff;
+  border-radius:100px;padding:5px 11px;font-weight:800;font-size:.76rem;cursor:pointer;
+  font-family:inherit;white-space:nowrap;}
+.hd-fs:active{transform:scale(.95);}
 .prof-sw{display:flex;background:rgba(255,255,255,.18);border-radius:100px;padding:3px;gap:2px;}
 .prof-btn{border:none;background:transparent;color:#fff;font-family:inherit;font-weight:800;
   font-size:.78rem;padding:5px 11px;border-radius:100px;cursor:pointer;opacity:.7;transition:.15s;white-space:nowrap;}
@@ -75,12 +80,21 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   box-shadow:var(--sh-sm);padding:16px;}
 
 /* ═══ COACH GREETING ═══ */
-.coach{display:flex;gap:13px;align-items:center;background:var(--soft);
-  border:2px solid var(--line);border-radius:var(--r);padding:18px 17px;box-shadow:var(--sh-sm);margin-bottom:16px;}
-.coach-av{width:50px;height:50px;border-radius:50%;flex-shrink:0;font-size:1.7rem;
+.coach{display:flex;gap:11px;align-items:center;background:var(--soft);
+  border:2px solid var(--line);border-radius:16px;padding:10px 13px;box-shadow:var(--sh-sm);margin-bottom:14px;}
+.coach-av{width:42px;height:42px;border-radius:50%;flex-shrink:0;font-size:1.4rem;
   background:linear-gradient(135deg,#159AA6,#35BAC6);display:grid;place-items:center;
-  box-shadow:0 4px 14px rgba(21,154,166,.35);}
-.coach-txt{font-size:1.05rem;color:var(--ink);}
+  box-shadow:0 4px 14px rgba(21,154,166,.35);
+  animation:coachBob 2.8s ease-in-out infinite;transform-origin:50% 90%;}
+@keyframes coachBob{
+  0%,100%{transform:rotate(0) translateY(0);}
+  8%{transform:rotate(-7deg) translateY(-2px);}
+  16%{transform:rotate(6deg) translateY(-3px);}
+  24%{transform:rotate(-4deg) translateY(-1px);}
+  32%{transform:rotate(0) translateY(0);}
+}
+@media(prefers-reduced-motion:reduce){.coach-av{animation:none;}}
+.coach-txt{font-size:.98rem;color:var(--ink);}
 .coach-txt b{color:var(--coral-d);}
 .coach-name{font-size:.74rem;color:var(--sub);font-weight:700;margin-top:5px;}
 
@@ -118,11 +132,11 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   font-family:inherit;color:var(--ink);position:relative;overflow:hidden;}
 .act:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--line);}
 .act:active{transform:scale(.98);}
-.act-ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:1.35rem;
-  position:absolute;top:14px;right:14px;}   /* 2026-08-16 使用者要求：圖示放右上角 */
-.act-h{font-size:1.28rem;font-weight:900;letter-spacing:-.2px;padding-right:56px;}
+.act-ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.75rem;
+  position:absolute;top:50%;right:14px;transform:translateY(-50%);}   /* 圖示放右側置中、加大 */
+.act-h{font-size:1.28rem;font-weight:900;letter-spacing:-.2px;padding-right:66px;}
 .act-en{font-size:.82rem;font-weight:800;color:var(--faint);font-family:'Inter';margin-top:2px;}
-.act-d{font-size:1rem;font-weight:600;color:var(--sub);margin-top:8px;line-height:1.5;}
+.act-d{font-size:1rem;font-weight:600;color:var(--sub);margin-top:8px;line-height:1.5;padding-right:66px;}
 /* 卡片使用說明：一步一步告訴學習者怎麼玩 */
 .act-how{margin-top:10px;padding-top:9px;border-top:1px dashed var(--bdr2);
   font-size:.82rem;font-weight:600;color:var(--faint);line-height:1.65;}
@@ -131,13 +145,13 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .how-bar{background:var(--amber-l);border:1px solid #F3DFA6;border-radius:14px;
   padding:8px 12px;font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.55;margin-bottom:9px;}
 .how-bar b{color:var(--coral-d);font-weight:800;}
-.act-badge{position:absolute;top:12px;right:66px;font-size:.62rem;font-weight:800;
-  background:var(--coral);color:#fff;padding:2px 8px;border-radius:100px;}   /* 圖示佔右上角，徽章往左讓 */
-/* 當天已「練習完整」（做完看到成績）的活動卡片：圖示左側打勾 */
-.act-prog{position:absolute;top:18px;right:62px;width:32px;height:32px;border-radius:50%;
+.act-badge{position:absolute;top:-2px;left:-2px;font-size:.62rem;font-weight:800;
+  background:var(--coral);color:#fff;padding:3px 10px;border-radius:14px 0 12px 0;}   /* 主打：左上角角標 */
+.act-say .act-h{padding-top:12px;}   /* 標題往下讓開左上角的「主打」角標 */
+/* 當天已「練習完整」（做完看到成績）的活動卡片：右上角打勾（圖示置中右側，不會被遮住） */
+.act-prog{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:50%;
   background:#1F8A4C;color:#fff;border:2.5px solid #fff;box-shadow:0 2px 8px rgba(31,138,76,.4);
-  font-size:1.1rem;font-weight:900;line-height:28px;text-align:center;display:none;}
-.act-say .act-prog{right:118px;}   /* 說出來卡片有「主打」徽章，勾勾再往左讓開 */
+  font-size:1rem;font-weight:900;line-height:26px;text-align:center;display:none;}
 /* 六個口說活動：繽紛彩色卡片 */
 .i-say{background:#FFE0E4;color:#E11D48;}
 .i-shadow{background:#FFEAD1;color:#EA7A0C;}
@@ -559,6 +573,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
         <button class="prof-btn" id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
       </div>
       <div class="hd-streak">🔥 <span id="hd-streak">1</span> 天 <span id="sync-badge" title="進度已雲端同步（跨裝置共用）" style="display:none">☁️</span></div>
+      <button class="hd-fs" id="hd-fs" onclick="cycleFS()" title="調整字體大小（標準 → 大 → 特大）">🔠 標準</button>
       <a href="https://english-b2-lab.web.app" class="hd-b2" title="B2 Read — 閱讀 · 單字間隔複習 · 文法教材，每天自動更新"
          style="display:inline-block;margin-top:5px;font-size:12px;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(135deg,#f0964f,#d9691f);border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:5px 12px;white-space:nowrap;box-shadow:0 2px 8px rgba(160,80,20,.3)">📚 B2 Read ↗</a>
     </div>
@@ -5204,7 +5219,8 @@ function wordClose(a,b,loose){
 function scoreSpeech(said,target,opts){
   opts=opts||{};
   const fuzzy=!!opts.fuzzy;
-  const loose=fuzzy&&(opts.loose!==undefined?opts.loose:isTom());
+  /* 2026-08-16：寬鬆比對（發音鍵相近就算對）開放給所有學習者，辨識引擎聽錯不扣冤枉分 */
+  const loose=fuzzy&&(opts.loose!==undefined?opts.loose:true);
   const st=toks(said),tt=toks(target);
   const used=new Array(st.length).fill(false);
   let matched=0,soft=0;
@@ -5885,10 +5901,8 @@ function noteDates(){const s=new Set();
   return [...s].sort().reverse();}
 /* Tom：全部真實課程筆記（新的在最上面）+ A2 基礎主題排在最後；Anita：只有真實筆記 */
 function allDates(){return isTom()?noteDates().concat(A2LESSONS.map(l=>l.id)):noteDates();}
-/* 預設選哪一天：Tom 先給 A2 基礎主題（清單雖然排最後），Anita 給最新的一篇筆記 */
-function defaultDay(){
-  if(isTom()&&A2LESSONS.length)return A2LESSONS[0].id;
-  return allDates()[0]||'all';}
+/* 預設選哪一天：兩位學習者一致，都停在最新的一篇筆記（2026-08-16 使用者要求） */
+function defaultDay(){return allDates()[0]||'all';}
 function dayVocab(d){
   /* 一律去重：資料表裡同一個字可能被登記多次，重複會讓各活動一直出到同一個字 */
   if(A2BY[d])return dedupe(A2BY[d].vocab,'w');
@@ -6118,6 +6132,16 @@ function openAct(a){micStop();if(typeof vStop==='function'&&a!=='video')vStop();
 function toggleHelp(){const c=$('help-card');const b=$('help-btn');const open=c.classList.toggle('hide')===false;
   b.innerHTML=open?'❓ 收起說明 ▴':'❓ 第一次使用?點這裡看怎麼練口說 ▾';}
 
+/* ---------- 字級調整（標準/大/特大，記在本機） ---------- */
+const FS_STEPS=[[1,'🔠 標準'],[1.12,'🔠 大'],[1.25,'🔠 特大']];
+function applyFS(){const v=+(localStorage.getItem('speakup_fs')||1);
+  const f=FS_STEPS.find(s=>s[0]===v)||FS_STEPS[0];
+  document.documentElement.style.fontSize=(16*f[0])+'px';
+  const b=$('hd-fs');if(b)b.textContent=f[1];}
+function cycleFS(){const v=+(localStorage.getItem('speakup_fs')||1);
+  const i=(FS_STEPS.findIndex(s=>s[0]===v)+1)%FS_STEPS.length;
+  localStorage.setItem('speakup_fs',FS_STEPS[i][0]);applyFS();}
+applyFS();
 /* ---------- 教練訊息 ---------- */
 function coachSay(html){$('coach-msg').innerHTML=html;}
 function coachHome(){const nm=PROFILES[PROFILE],n=ST.totalSpoken;
@@ -6335,9 +6359,12 @@ function wordNext(){wI++;if(wI>=wList.length){if(SESS)SESS.reachedEnd=true;finis
    ═══════════════════════════════════════════════════════════ */
 let READ=null;
 let READLIST=[];
-function startRead(d){renderLvlBar('read');
+function startRead(d){
+  /* 2026-08-16：Anita 不需要「基礎」列表（那是 A2 短文），直接給進階；Tom 保留切換 */
+  if(isTom())renderLvlBar('read');
+  else{const lb=$('lvl-read');if(lb)lb.style.display='none';}
   let scope=d;const dayA=dayArticles(d);let arts;
-  if(lvBasic()){
+  if(isTom()&&lvBasic()){
     /* 基礎：A2 短文（＋當天文章若有） */
     arts=A2BY[d]?dayA.slice():A2LESSONS.map(l=>l.article).filter(Boolean).concat(dayA);
   }else{
@@ -6395,12 +6422,17 @@ function readMic(pi){
       const h=$('rheard-'+pi);if(h)h.innerHTML=altLine(alts,t);},
     onDone:(t,err,alts)=>{if(err==='unsupported'){micUnsupported('rlbl-'+pi);return;}
       if(!t){$('rlbl-'+pi).textContent='沒聽清楚，再按一次 🎤';return;}
-      const cov=markRead(pi,t);$('rcov-'+pi).textContent=cov+'%';$('rlbl-'+pi).textContent='唸得好!覆蓋率 '+cov+'%';
+      /* 主要辨識結果 + 瀏覽器候選逐一比對，取覆蓋率最高的那份當成績（引擎聽錯不冤枉扣分） */
+      let best=t,cov=markRead(pi,t);
+      (alts||[]).slice(0,6).forEach(a=>{if(!a)return;const c=markRead(pi,a);
+        if(c>cov){cov=c;best=a;}});
+      if(best!==t)markRead(pi,best);   /* 綠字重畫成最佳那份 */
+      $('rcov-'+pi).textContent=cov+'%';$('rlbl-'+pi).textContent='唸得好!覆蓋率 '+cov+'%';
       const h=$('rheard-'+pi);if(h)h.innerHTML=altLine(alts,t);
       logSpeak(cov);   /* 這段朗讀完整結束、拿到覆蓋率，就計入統計 */
       sessLog(pi,readText(pi),READ.a.paras[pi].cn||cnFor(readText(pi)),cov);
     }});}
-function markRead(pi,said){const got=toks(said),used=new Array(got.length).fill(false),loose=isTom();
+function markRead(pi,said){const got=toks(said),used=new Array(got.length).fill(false),loose=true;   /* 寬鬆比對全員適用 */
   const tk=READ.paras[pi].tokens;let total=0,hit=0;
   tk.forEach((w,ti)=>{if(/^\s+$/.test(w)||!/[a-zA-Z]/.test(w))return;total++;const n=norm(w);
     const el=$('rt-'+pi+'-'+ti);if(el)el.classList.remove('hit');   /* 每次重算，重說才清得掉舊的綠字 */
@@ -6667,11 +6699,19 @@ function qzSubmitTrans(){const q=qzList[qzI];const el=$('qz-trans');if(!el||el.d
   const ok=!!mine&&r.pct>=95;if(ok){qzScore++;}
   qzLog(ok,'你寫：'+(mine||'（空白）')+'　吻合度 '+r.pct+'%');
   const verdict=!mine?'⚠️ 這題沒有作答':ok?'✅ 答對了！吻合度 '+r.pct+'%':'❌ 再加油～吻合度 '+r.pct+'%';
-  let h='<div class="expl">'+(mine?'📝 你的答案：<b>'+esc(mine)+'</b><br>':'（這題沒有作答）<br>')
+  /* 你的答案：對不上參考答案的字直接標紅（2026-08-16 使用者要求） */
+  const extraSet=new Set(r.extra||[]);
+  const mineHTML=mine?mine.split(/\s+/).map(w=>{
+    const tk=toks(w)[0]||'';
+    return extraSet.has(tk)?'<span style="color:var(--bad);font-weight:800;text-decoration:underline wavy var(--bad)">'+esc(w)+'</span>':esc(w);
+  }).join(' '):'';
+  /* q.explain 若只是「參考：原句」就不再重複顯示（參考答案上面已經有了） */
+  const showExpl=q.explain&&!/^參考[:：]/.test(q.explain.trim());
+  let h='<div class="expl">'+(mine?'📝 你的答案：<b>'+mineHTML+'</b><br>':'（這題沒有作答）<br>')
     +'✅ 參考答案：<b>'+esc(cap(q.answer))+'</b> <button class="btn btn-o btn-sm" onclick="speak(qzList[qzI].answer,0.9)">🔊</button>'
     +'<div style="margin-top:6px">逐字對照（綠色＝你有寫到）：'+cmp+'</div>'
     +'<div style="margin-top:8px;font-size:1.05em"><b>'+verdict+'</b></div>'
-    +(q.explain?'<div style="margin-top:6px">'+explHTML(q.explain)+'</div>':'')+'</div>';
+    +(showExpl?'<div style="margin-top:6px">'+explHTML(q.explain)+'</div>':'')+'</div>';
   $('qz-expl').innerHTML=h;
   qzNextBtn();}
 function qzSelf(ok){if(ok)qzScore++;qzLog(!!ok,'自評'+(ok?'答對':'答錯'));qzNextBtn();}
