@@ -308,6 +308,17 @@ tr:nth-child(even) td{background:#fdfbf8}
 .vidpin .ytwrap{margin-top:0;padding-top:0;height:min(32vh,52vw);max-width:100%}
 .ytwrap>div,.ytwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .spk.rbtn.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+/* 播放全部：橘色脈動 */
+#au-play.playing{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700;
+  animation:auPulse 1.6s ease-in-out infinite}
+@keyframes auPulse{0%,100%{box-shadow:0 0 0 0 rgba(193,130,60,.45)}50%{box-shadow:0 0 0 7px rgba(193,130,60,0)}}
+/* 逐句跟讀：藍綠色呼吸 */
+#au-shadow.shadowing{background:#2b7a78;color:#fff;border-color:#2b7a78;font-weight:700;
+  animation:auBreathe 2s ease-in-out infinite}
+@keyframes auBreathe{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(43,122,120,.4)}50%{opacity:.85;box-shadow:0 0 0 7px rgba(43,122,120,0)}}
+/* 對話中不同角色的名字顏色 */
+.ssp.sp-a{color:var(--accent2)}
+.ssp.sp-b{color:#2b7a78}
 /* ---------- 雜誌版面（仿常春藤內頁） ---------- */
 .mag{display:grid;grid-template-columns:1fr;gap:14px;align-items:start;margin-bottom:14px}
 .mag2{display:grid;grid-template-columns:1fr;gap:14px;align-items:start;margin-bottom:14px}
@@ -463,6 +474,35 @@ body.cnall [id^="kc"]{display:block!important}
   .flipbar{max-width:480px}
   .grade{max-width:480px}
 }
+/* ---------- 課本（照課堂筆記 Doc 版面） ---------- */
+.bkbar{background:#fbe3cc;border:1px solid #f0c9a0;border-radius:10px;text-align:center;font-weight:800;
+  font-size:calc(16px * var(--fs));color:#8a4a12;padding:9px 12px;margin:18px 0 12px}
+.bkq{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:13px 15px;margin-bottom:12px}
+.bkq .qn{font-weight:800;color:var(--accent2);margin-bottom:6px;font-size:calc(15px * var(--fs))}
+.bkline{font-size:calc(15.5px * var(--fs));margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;flex-wrap:wrap}
+.bkline b.lb{flex-shrink:0}
+.bkcn{font-size:calc(14px * var(--fs));color:var(--ink2);margin-bottom:6px}
+.bkpatline{font-size:calc(13.5px * var(--fs));font-weight:700;color:#8a4a12;background:#fdf3e7;border-radius:8px;padding:6px 10px;margin-bottom:6px}
+.bknote{font-size:calc(14px * var(--fs));background:#f6f2ec;border-radius:9px;padding:9px 11px}
+.bkfml{font-size:calc(16px * var(--fs));font-weight:800;background:#fff;border:1.5px dashed var(--accent);border-radius:10px;
+  padding:10px 13px;margin:9px 0;color:#8a3f08;line-height:1.65}
+.bkul{margin:8px 0;padding-left:20px;font-size:calc(14.5px * var(--fs))}
+.bkul li{margin-bottom:5px}
+.bkex{background:#fdfbf8;border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin:7px 0}
+.bkex .een{font-size:calc(15.5px * var(--fs));font-weight:600}
+.bkex .ecn{font-size:calc(13.5px * var(--fs));color:var(--ink2);margin-top:3px}
+.bktag{font-size:calc(11px * var(--fs));font-weight:800;border-radius:6px;padding:1px 7px;color:#fff;background:#3b82c4;margin-right:6px}
+.bktag.inf{background:#2f9e5f}
+.bkwarn{background:#fff6f5;border:1px solid #f3d5d2;border-radius:12px;padding:12px 14px;margin:10px 0}
+.bkwarn div{margin-bottom:4px;font-size:calc(14.5px * var(--fs))}
+/* 單字表：桌機用 Doc 的五欄表格、手機改直式卡片 */
+.bkvm{display:none}
+@media(max-width:640px){ .bkvd{display:none} .bkvm{display:block} }
+.bkvcard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:11px;padding:11px 13px;margin-bottom:9px}
+.bkvcard .w{font-size:calc(17px * var(--fs));font-weight:800;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.bkvcard .ipa{font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2)}
+.bkvcard .pos{color:#2b7a78;font-weight:800;font-style:italic;font-size:calc(12.5px * var(--fs))}
+.bkvcard .cnw{color:var(--accent2);font-weight:700;font-size:calc(15px * var(--fs));margin-top:2px}
 </style>
 </head>
 <body>
@@ -484,6 +524,7 @@ body.cnall [id^="kc"]{display:block!important}
 <main>
   <section id="v-daily"></section>
   <section id="v-read" hidden></section>
+  <section id="v-book" hidden></section>
   <section id="v-listen" hidden></section>
   <section id="v-vocab" hidden></section>
   <section id="v-gram" hidden></section>
@@ -498,6 +539,7 @@ body.cnall [id^="kc"]{display:block!important}
 <nav>
   <button id="t-daily" class="on" onclick="go('daily')"><i class="dayico"><span class="m" id="dayico-m">—</span><span class="d" id="dayico-d">—</span></i>今日</button>
   <button id="t-read" onclick="go('read')"><i>📖</i>閱讀</button>
+  <button id="t-book" onclick="go('book')"><i>📕</i>課本</button>
   <button id="t-listen" onclick="go('listen')"><i>🎧</i>聽力</button>
   <button id="t-vocab" onclick="go('vocab')"><i>🔤</i>單字卡</button>
   <button id="t-gram" onclick="go('gram')"><i>📐</i>文法</button>
@@ -515,6 +557,7 @@ body.cnall [id^="kc"]{display:block!important}
 <script src="data-gramviz.js"></script>
 <script src="data-listen.js"></script>
 <script src="data-daily.js"></script>
+<script src="data-book.js"></script>
 <script>
 /* ============================================================
    0. 基礎工具
@@ -690,7 +733,7 @@ function updateProfileUI(){
 window.setProfile=setProfile;
 
 /* ---------- 語音朗讀 (TTS) ---------- */
-let VOICE=null;
+let VOICE=null, VOICE2=null;
 function pickVoice(){
   const vs=speechSynthesis.getVoices().filter(v=>/^en(-|_)/i.test(v.lang));
   if(!vs.length) return;
@@ -712,23 +755,26 @@ function pickVoice(){
     if(n.length<10 && !/siri|ava|zoe|flo|guy/.test(n)) s-=2;
     return s;
   };
-  VOICE=vs.slice().sort((a,b)=>score(b)-score(a))[0];
+  const ranked=vs.slice().sort((a,b)=>score(b)-score(a));
+  VOICE=ranked[0];
+  VOICE2=ranked.length>1?ranked[1]:null;
 }
 pickVoice();
 if('speechSynthesis' in window) speechSynthesis.onvoiceschanged=pickVoice;
-function say(text,rate,onend){
+function say(text,rate,onend,voice){
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
   const t=String(text).replace(/\s+/g,' ').trim();
   const base=rate||ST.rate||1;
   const isQ=/\?\s*$/.test(t), isEx=/!\s*$/.test(t);
+  const v=voice||VOICE;
   const sents=t.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[t];
   if(sents.length<=1){
     const u=new SpeechSynthesisUtterance(t);
     u.lang='en-US';
     u.rate=isQ?base*1.02:base*0.96;
     u.pitch=isQ?1.08:isEx?1.02:0.97;
-    if(VOICE) u.voice=VOICE;
+    if(v) u.voice=v;
     if(onend){u.onend=onend;u.onerror=onend;}
     speechSynthesis.speak(u);
   }else{
@@ -738,7 +784,7 @@ function say(text,rate,onend){
       const sq=/\?$/.test(s.trim()), last=i===sents.length-1;
       u.rate=last?base*0.93:sq?base*1.02:base*(0.96+i%2*0.04);
       u.pitch=sq?1.10:last?0.94:1.0+((i%3)-1)*0.05;
-      if(VOICE) u.voice=VOICE;
+      if(v) u.voice=v;
       if(last&&onend){u.onend=onend;u.onerror=onend;}
       speechSynthesis.speak(u);
     });
@@ -857,7 +903,7 @@ let TAB='daily';
 const RENDER={};
 function go(t){
   TAB=t;
-  ['daily','read','listen','vocab','gram','prog'].forEach(k=>{
+  ['daily','read','book','listen','vocab','gram','prog'].forEach(k=>{
     $('v-'+k).hidden = (k!==t);
     $('t-'+k).classList.toggle('on',k===t);
   });
@@ -1832,6 +1878,123 @@ document.addEventListener('click',e=>{
 });
 
 /* ============================================================
+   7.4 課本（完整照課堂筆記 Google Doc 的版面）
+   ============================================================ */
+const BOOK_LESSONS=((window.BOOK||{}).lessons||[]).slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+// 課本單字也進字庫，全站點字都查得到
+BOOK_LESSONS.forEach(b=>(b.vocab||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:'',exEn:t.ex,exCn:t.exCn,src:'課本：'+b.titleCn})));
+let bkOpen=null;
+RENDER.book=function(){
+  const v=$('v-book');
+  if(bkOpen){ v.innerHTML=bookHTML(bkOpen); return; }
+  v.innerHTML=
+    '<div class="card"><h2 class="sec">📕 課本</h2>'
+    +'<div class="hint">課堂筆記的完整版面：作業複習、單字、片語、句型文法、比較表、補充例句與快速總結，'
+    +'內容與上課的 Google 文件一字不差。<b>每個單字、每個句子都有 🔊</b>，按了就唸給你聽。</div>'
+    +'<div class="muted">共 '+BOOK_LESSONS.length+' 課</div></div>'
+    + BOOK_LESSONS.map(b=>'<div class="item" onclick="bkGo(\''+b.id+'\')">'
+      +'<div class="t">📕 '+esc(b.titleCn)+'</div>'
+      +'<div class="tc">'+esc(b.title)+'</div>'
+      +'<div class="meta"><span>📅 '+esc(b.date)+'</span><span>🔤 '+(b.vocab||[]).length+' 個單字</span>'
+      +'<span>📐 '+(b.grammar||[]).length+' 個句型</span><span>📝 作業複習 '+(b.hw||[]).length+' 題</span></div>'
+      +'</div>').join('');
+};
+function bkGo(id){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; RENDER.book(); window.scrollTo(0,0); }
+function bkClose(){ bkOpen=null; RENDER.book(); window.scrollTo(0,0); }
+window.bkGo=bkGo; window.bkClose=bkClose;
+
+function bookHTML(b){
+  const exRow=e=>'<div class="bkex"><div class="een">'
+    +(e.tag?'<span class="bktag'+(e.tag==='非正式'?' inf':'')+'">'+esc(e.tag)+'</span> ':'')
+    +esc(e.en)+' '+spk(e.en)+'</div>'
+    +(e.cn?'<div class="ecn">'+esc(e.cn)+'</div>':'')+'</div>';
+  let h='<button class="back" onclick="bkClose()"></button>';
+
+  /* 標題（Doc 首行：日期＋中文標題／英文標題／Topics） */
+  h+='<div class="card"><h2 class="sec" style="margin:0">📕 '+esc((b.date||'').replace(/-/g,'/'))+' '+esc(b.titleCn)+'</h2>'
+   +'<div style="font-weight:700;margin-top:4px">'+esc(b.title)+' '+spk(b.title)+'</div>'
+   +'<div class="muted" style="margin-top:4px">Topics: '+esc(b.topics)+'</div></div>';
+
+  /* ★ 作業複習 */
+  h+='<div class="bkbar">'+esc(b.hwTitle)+'</div>'
+   + (b.hw||[]).map(q=>{
+      let x='<div class="bkq"><div class="qn">第 '+q.n+' 題</div>';
+      if(q.wrong) x+='<div class="bkline"><b class="lb wrong">❌ 原句：</b><span>'+esc(q.wrong)+'</span></div>'
+        +'<div class="bkline"><b class="lb right">✅ 訂正：</b><span>'+esc(q.fix)+'</span>'+spk(q.fix)+'</div>';
+      else x+='<div class="bkline"><b class="lb right">✅ 原句：</b><span>'+esc(q.ok)+'</span>'+spk(q.ok)+'</div>';
+      x+='<div class="bkcn">中文：'+esc(q.cn)+'</div>'
+       +'<div class="bkpatline">結構：'+esc(q.pat)+'</div>'
+       +'<div class="bknote">💬 文法解説：'+esc(q.note)+'</div></div>';
+      return x;
+    }).join('');
+
+  /* I. 單字：桌機照 Doc 五欄表格，手機直式卡片（同一份資料） */
+  h+='<div class="bkbar">I. 單字 Vocabulary</div>'
+   +'<div class="bkvd card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+   +'<tr><th>單字</th><th>音標</th><th>詞性</th><th>中文</th><th>例句</th></tr>'
+   + (b.vocab||[]).map(t=>'<tr><td style="white-space:nowrap;font-weight:700">'+esc(t.w)+(t.star?' ⭐':'')+'<br>'+spk(t.w)+'</td>'
+     +'<td style="font-family:ui-monospace,monospace">'+esc(t.ipa)+'</td><td>'+esc(t.pos)+'</td><td>'+esc(t.cn)+'</td>'
+     +'<td>'+esc(t.ex)+' '+spk(t.ex)+'<div class="muted">'+esc(t.exCn)+'</div></td></tr>').join('')
+   +'</table></div></div>'
+   +'<div class="bkvm">'+(b.vocab||[]).map(t=>'<div class="bkvcard">'
+     +'<div class="w">'+esc(t.w)+(t.star?' ⭐':'')+' <span class="pos">'+esc(t.pos)+'</span>'+spk(t.w)+'</div>'
+     +'<div class="ipa">'+esc(t.ipa)+'</div>'
+     +'<div class="cnw">'+esc(t.cn)+'</div>'
+     +'<div class="bkex" style="margin-bottom:0"><div class="een">'+esc(t.ex)+' '+spk(t.ex)+'</div><div class="ecn">'+esc(t.exCn)+'</div></div>'
+     +'</div>').join('')+'</div>';
+
+  /* II. 片語與搭配詞：Doc 分兩組（搭配詞＋英文解釋、片語＋例句） */
+  h+='<div class="bkbar">II. 片語與搭配詞 Phrases &amp; Collocations</div>'
+   +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+   +'<tr><th>片語</th><th>中文</th><th>英文解釋</th></tr>'
+   + (b.colloc||[]).map(c=>'<tr><td style="font-weight:700">'+esc(c.p)+'<br>'+spk(c.p)+'</td><td>'+esc(c.cn)+'</td>'
+     +'<td>'+esc(c.def)+'<div class="muted">'+esc(c.defCn)+'</div></td></tr>').join('')
+   +'</table></div></div>'
+   + (b.phrases||[]).map(p=>'<div class="bkq"><div class="bkline" style="margin-bottom:2px"><b>'+esc(p.p)+'</b>'+spk(p.p)
+     +'<span class="muted">'+esc(p.cn)+'</span></div>'
+     +exRow({en:p.ex,cn:p.exCn})+'</div>').join('');
+
+  /* III. 句型與文法解説 */
+  h+='<div class="bkbar">III. 句型與文法解説 Sentence Patterns &amp; Grammar</div>'
+   + (b.grammar||[]).map(g=>{
+      let x='<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(g.k)+'. '+esc(g.title)+'</h2>';
+      if(g.pat) x+='<div class="bkfml">📌 句型：'+esc(g.pat)+'</div>';
+      else if(g.patLabel) x+='<div class="bkfml">📌 '+esc(g.patLabel)+'</div>';
+      x+='<ul class="bkul">'+(g.pts||[]).map(p=>'<li>'+esc(p)+'</li>').join('')+'</ul>'
+       +(g.exs||[]).map(exRow).join('')+'</div>';
+      return x;
+    }).join('');
+
+  /* IV. 比較表＋注意搭配 */
+  h+='<div class="bkbar">IV. 比較表 Comparison Table</div>'
+   +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+   +'<tr><th>用法</th><th>中文</th><th>適用場景</th><th>例句</th></tr>'
+   + (b.cmp||[]).map(c=>'<tr><td style="font-weight:700">'+esc(c.u)+'<br>'+spk(c.u)+'</td><td>'+esc(c.cn)+'</td><td>'+esc(c.sc)+'</td>'
+     +'<td>'+esc(c.ex)+' '+spk(c.ex)+'<div class="muted">'+esc(c.exCn)+'</div></td></tr>').join('')
+   +'</table></div></div>';
+  if(b.cmpWarn){
+    h+='<div class="bkwarn"><div style="font-weight:800">'+esc(b.cmpWarn.title)+'</div>'
+     +'<div class="wrong">❌ '+esc(b.cmpWarn.bad)+'</div>'
+     +(b.cmpWarn.good||[]).map(g=>'<div class="right">✅ '+esc(g)+'</div>').join('')+'</div>';
+  }
+
+  /* V. 補充例句 */
+  h+='<div class="bkbar">V. 補充例句 Additional Examples</div>'
+   + (b.extra||[]).map(s=>'<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(s.title)+'</h2>'
+     + (s.exs||[]).map(exRow).join('')+'</div>').join('');
+
+  /* VI. 快速總結 */
+  h+='<div class="bkbar">VI. 快速總結 Quick Summary</div>'
+   +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+   +'<tr><th>重點</th><th>說明</th></tr>'
+   + (b.summary||[]).map(s=>'<tr><td style="font-weight:700">'+esc(s.k)+'</td><td>'+esc(s.v)+'</td></tr>').join('')
+   +'</table></div></div>';
+
+  h+='<div class="card" style="text-align:center"><button class="btn" onclick="bkClose()">完成，回列表</button></div>';
+  return h;
+}
+
+/* ============================================================
    7.5 影片聽力（YouTube）
    ============================================================ */
 const LESSONS=((window.LISTEN||{}).notes||[])
@@ -1923,8 +2086,13 @@ function playerBox(divId){
 /* ---------- 純語音課（無影片）：用 TTS 逐句播放／跟讀 ----------
    這些課的素材是本站依課堂筆記單字自製的對話，沒有影片，
    所以「播放器」就是語音合成：整段連播、或念一句停一下讓學習者跟著念。 */
-let auLines=[], auIdx=-1, auOn=false, auShadow=false, auRate=1, auTimer=null, auWatch=null, auKeep=null;
-function auSet(lines){ auStop(); auLines=lines||[]; }
+let auLines=[], auIdx=-1, auOn=false, auShadow=false, auRate=1, auTimer=null, auWatch=null, auKeep=null, auSpMap={};
+function auSet(lines){
+  auStop(); auLines=lines||[];
+  const speakers=[...new Set(auLines.map(l=>l.sp).filter(Boolean))];
+  auSpMap={};
+  if(speakers.length>=2){ auSpMap[speakers[0]]=VOICE; auSpMap[speakers[1]]=VOICE2||VOICE; }
+}
 function auClearHi(){ document.querySelectorAll('#sublist .sline').forEach(el=>el.classList.remove('cur')); }
 function auHi(i){
   auClearHi();
@@ -1933,8 +2101,8 @@ function auHi(i){
 }
 function auBtns(){
   const p=$('au-play'), s=$('au-shadow');
-  if(p) p.textContent = (auOn&&!auShadow) ? '⏸ 停止播放' : '▶️ 播放全部';
-  if(s) s.textContent = (auOn&&auShadow)  ? '⏸ 停止跟讀' : '🔁 逐句跟讀';
+  if(p){ p.textContent = (auOn&&!auShadow) ? '⏸ 停止播放' : '▶️ 播放全部'; p.classList.toggle('playing',auOn&&!auShadow); }
+  if(s){ s.textContent = (auOn&&auShadow)  ? '⏸ 停止跟讀' : '🔁 逐句跟讀'; s.classList.toggle('shadowing',auOn&&auShadow); }
 }
 function auStop(){
   auOn=false; auShadow=false; auIdx=-1;
@@ -1960,7 +2128,8 @@ function auNext(){
     const gap = auShadow ? Math.max(1400, words*400/auRate) : 400;
     auTimer=setTimeout(auNext, gap);
   };
-  say(txt, auRate, step);
+  const spVoice=auSpMap[auLines[auIdx].sp]||null;
+  say(txt, auRate, step, spVoice);
   /* 看門狗：Web Speech 的 onend 並不可靠——語音還沒載入、句子太長、
      或 Chrome 已知的長時間朗讀中斷，都可能永遠不觸發，整段就會卡在同一句。
      用「字數推估的時長」當上限，時間到了沒收到 onend 就自己往下走。 */
@@ -2048,6 +2217,103 @@ function lsGo(id){ lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; go('listen'); }
 function lsClose(){ destroyPlayer(); stopSync(); lsOpen=null; RENDER.listen(); }
 window.lsGo=lsGo; window.lsClose=lsClose;
 
+/* 每課的場景插圖：用簡單的 SVG 讓學習者先看到情境再聽對話 */
+function lessonIllust(id){
+  const scenes={
+    au01:'<rect x="20" y="60" width="260" height="160" rx="12" fill="#fff4e2" stroke="#c0561a" stroke-width="2"/>'
+     +'<rect x="50" y="80" width="80" height="50" rx="6" fill="#e8d5c0"/><text x="90" y="110" text-anchor="middle" font-size="28">📦</text>'
+     +'<text x="90" y="145" text-anchor="middle" font-size="11" fill="#c0561a" font-weight="700">damaged</text>'
+     +'<rect x="170" y="80" width="80" height="50" rx="6" fill="#fce4ec"/><text x="210" y="110" text-anchor="middle" font-size="28">📱</text>'
+     +'<text x="210" y="145" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="700">50K views</text>'
+     +'<text x="150" y="195" text-anchor="middle" font-size="13" fill="#5b4a3a" font-weight="700">💬 Customer complaint goes viral</text>'
+     +'<rect x="310" y="60" width="270" height="160" rx="12" fill="#eaf2fb" stroke="#2b5f92" stroke-width="2"/>'
+     +'<circle cx="380" cy="120" r="25" fill="#fff4e2" stroke="#c0561a" stroke-width="2"/><text x="380" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#c0561a">Ryan</text>'
+     +'<circle cx="510" cy="120" r="25" fill="#e0f2f1" stroke="#2b7a78" stroke-width="2"/><text x="510" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#2b7a78">Emma</text>'
+     +'<text x="445" y="195" text-anchor="middle" font-size="13" fill="#2b5f92" font-weight="700">🏢 Office crisis meeting</text>',
+    au12:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#fff9e6" stroke="#d4a017" stroke-width="2"/>'
+     +'<text x="300" y="110" text-anchor="middle" font-size="42">🎰</text>'
+     +'<text x="300" y="150" text-anchor="middle" font-size="16" fill="#5b4a3a" font-weight="700">If I won the lottery...</text>'
+     +'<text x="140" y="190" font-size="22">🏠</text><text x="220" y="190" font-size="22">✈️</text><text x="300" y="190" font-size="22">💰</text><text x="380" y="190" font-size="22">🎓</text><text x="460" y="190" font-size="22">🤔</text>',
+    vlog01:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>'
+     +'<text x="80" y="130" font-size="32">⏰</text><text x="160" y="130" font-size="32">☕</text><text x="240" y="130" font-size="32">🪥</text><text x="320" y="130" font-size="32">🚿</text><text x="400" y="130" font-size="32">👔</text><text x="480" y="130" font-size="32">🚗</text>'
+     +'<text x="300" y="190" text-anchor="middle" font-size="15" fill="#2e7d32" font-weight="700">🌅 Morning routine with phrasal verbs</text>',
+    au02:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>'
+     +'<text x="150" y="130" text-anchor="middle" font-size="36">🤵</text><text x="150" y="160" text-anchor="middle" font-size="12" fill="#1976d2" font-weight="700">Candidate</text>'
+     +'<text x="300" y="115" text-anchor="middle" font-size="28">📋</text>'
+     +'<text x="450" y="130" text-anchor="middle" font-size="36">👩‍💼</text><text x="450" y="160" text-anchor="middle" font-size="12" fill="#1976d2" font-weight="700">Interviewer</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#1565c0" font-weight="700">🔧 Quality Engineer job interview</text>',
+    au07:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>'
+     +'<text x="150" y="130" text-anchor="middle" font-size="36">🤒</text><text x="150" y="160" text-anchor="middle" font-size="12" fill="#c62828" font-weight="700">Patient</text>'
+     +'<text x="300" y="115" text-anchor="middle" font-size="28">🩺</text>'
+     +'<text x="450" y="130" text-anchor="middle" font-size="36">👨‍⚕️</text><text x="450" y="160" text-anchor="middle" font-size="12" fill="#c62828" font-weight="700">Doctor</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#c62828" font-weight="700">🏥 Describing symptoms at the clinic</text>',
+    vlog03:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#e8eaf6" stroke="#5c6bc0" stroke-width="2"/>'
+     +'<text x="100" y="130" font-size="32">📅</text><text x="200" y="130" font-size="32">🎯</text><text x="300" y="130" font-size="32">✈️</text><text x="400" y="130" font-size="32">📝</text><text x="500" y="130" font-size="32">🔮</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#3949ab" font-weight="700">📅 will / going to / present continuous</text>',
+    au04:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#e0f7fa" stroke="#00acc1" stroke-width="2"/>'
+     +'<text x="80" y="130" font-size="30">🧳</text><text x="170" y="130" font-size="30">🛂</text><text x="260" y="130" font-size="30">🎫</text><text x="350" y="130" font-size="30">🛫</text><text x="440" y="130" font-size="30">💺</text><text x="520" y="130" font-size="30">✈️</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#00838f" font-weight="700">✈️ Check-in → Gate → Takeoff</text>',
+    au10:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>'
+     +'<text x="150" y="130" text-anchor="middle" font-size="36">🧑</text><text x="150" y="160" text-anchor="middle" font-size="12" fill="#e65100" font-weight="700">Traveler</text>'
+     +'<text x="300" y="115" text-anchor="middle" font-size="28">🎫</text>'
+     +'<text x="450" y="130" text-anchor="middle" font-size="36">🧑‍💼</text><text x="450" y="160" text-anchor="middle" font-size="12" fill="#e65100" font-weight="700">Clerk</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#e65100" font-weight="700">🚆 Buying a train ticket</text>',
+    vlog04:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>'
+     +'<text x="80" y="130" font-size="30">🌅</text><text x="160" y="130" font-size="30">🏋️</text><text x="240" y="130" font-size="30">💻</text><text x="320" y="130" font-size="30">🍽️</text><text x="400" y="130" font-size="30">📖</text><text x="480" y="130" font-size="30">🌙</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#7b1fa2" font-weight="700">🌞 A full day from morning to night</text>',
+    au05:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#e8f5e9" stroke="#43a047" stroke-width="2"/>'
+     +'<text x="150" y="120" text-anchor="middle" font-size="36">⛰️</text>'
+     +'<text x="300" y="100" text-anchor="middle" font-size="32">🌧️</text>'
+     +'<text x="450" y="120" text-anchor="middle" font-size="36">🤔</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#2e7d32" font-weight="700">🌦️ Cancel the hike or risk the rain?</text>',
+    au11:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#fafafa" stroke="#78909c" stroke-width="2"/>'
+     +'<text x="180" y="130" text-anchor="middle" font-size="36">😐</text><text x="180" y="160" text-anchor="middle" font-size="12" fill="#546e7a" font-weight="700">Pessimist</text>'
+     +'<text x="420" y="130" text-anchor="middle" font-size="36">😊</text><text x="420" y="160" text-anchor="middle" font-size="12" fill="#546e7a" font-weight="700">Optimist</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#546e7a" font-weight="700">🙂 Two mindsets, same situation</text>',
+    vlog02:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#e0f2f1" stroke="#26a69a" stroke-width="2"/>'
+     +'<text x="80" y="130" font-size="30">🛏️</text><text x="160" y="130" font-size="30">🥣</text><text x="240" y="130" font-size="30">🚌</text><text x="320" y="130" font-size="30">💼</text><text x="400" y="130" font-size="30">🏠</text><text x="480" y="130" font-size="30">😴</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#00695c" font-weight="700">🕘 Daily routine vocabulary</text>',
+    au03:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>'
+     +'<text x="150" y="130" text-anchor="middle" font-size="42">💰</text>'
+     +'<text x="300" y="100" text-anchor="middle" font-size="28">⚖️</text>'
+     +'<text x="450" y="130" text-anchor="middle" font-size="42">😈</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#f57f17" font-weight="700">💰 Is money the root of all evil?</text>',
+    au08:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#e3f2fd" stroke="#42a5f5" stroke-width="2"/>'
+     +'<text x="150" y="130" text-anchor="middle" font-size="36">🏥</text>'
+     +'<text x="300" y="115" text-anchor="middle" font-size="28">💳</text>'
+     +'<text x="450" y="130" text-anchor="middle" font-size="36">🇹🇼</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#1565c0" font-weight="700">💳 Taiwan NHI: how it works</text>',
+    au13:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>'
+     +'<text x="150" y="130" text-anchor="middle" font-size="36">📚</text>'
+     +'<text x="300" y="115" text-anchor="middle" font-size="28">🤝</text>'
+     +'<text x="450" y="130" text-anchor="middle" font-size="36">👥</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#2e7d32" font-weight="700">🤝 Choosing a leader for the reading program</text>',
+    au06:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#efebe9" stroke="#8d6e63" stroke-width="2"/>'
+     +'<text x="150" y="120" text-anchor="middle" font-size="36">💧</text>'
+     +'<text x="300" y="100" text-anchor="middle" font-size="32">🏠</text>'
+     +'<text x="450" y="120" text-anchor="middle" font-size="36">🔧</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#5d4037" font-weight="700">🔧 Water leak! Tenant calls the landlord</text>',
+    au09:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>'
+     +'<text x="100" y="130" font-size="30">🎉</text><text x="200" y="130" font-size="30">🍽️</text><text x="300" y="130" font-size="30">🎤</text><text x="400" y="130" font-size="30">🧧</text><text x="500" y="130" font-size="30">🎊</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#c62828" font-weight="700">🎉 Year-end banquet & lucky draw</text>',
+    sc01:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#fce4ec" stroke="#ef5350" stroke-width="2"/>'
+     +'<text x="150" y="130" text-anchor="middle" font-size="36">🤧</text><text x="150" y="160" text-anchor="middle" font-size="12" fill="#c62828" font-weight="700">Employee</text>'
+     +'<text x="300" y="115" text-anchor="middle" font-size="28">📞</text>'
+     +'<text x="450" y="130" text-anchor="middle" font-size="36">👩‍💼</text><text x="450" y="160" text-anchor="middle" font-size="12" fill="#c62828" font-weight="700">Boss</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#c62828" font-weight="700">🏥 Calling in sick</text>',
+    sc02:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#e8eaf6" stroke="#7986cb" stroke-width="2"/>'
+     +'<text x="150" y="130" text-anchor="middle" font-size="36">🧑</text><text x="150" y="160" text-anchor="middle" font-size="12" fill="#3949ab" font-weight="700">Visitor</text>'
+     +'<text x="300" y="115" text-anchor="middle" font-size="28">🗺️</text>'
+     +'<text x="450" y="130" text-anchor="middle" font-size="36">🧑‍🦱</text><text x="450" y="160" text-anchor="middle" font-size="12" fill="#3949ab" font-weight="700">Local</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#3949ab" font-weight="700">🗺️ Asking for directions</text>',
+    sc03:'<rect x="20" y="60" width="560" height="160" rx="12" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>'
+     +'<text x="100" y="130" font-size="30">🛒</text><text x="200" y="130" font-size="30">🥕</text><text x="300" y="130" font-size="30">🍳</text><text x="400" y="130" font-size="30">🍝</text><text x="500" y="130" font-size="30">😋</text>'
+     +'<text x="300" y="195" text-anchor="middle" font-size="14" fill="#2e7d32" font-weight="700">🛒 Shopping and cooking together</text>'
+  };
+  const svg=scenes[id];
+  if(!svg) return '';
+  return '<div class="artbox" style="margin:0 0 10px"><svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" style="background:#fdfbf8;border-radius:9px">'+svg+'</svg></div>';
+}
 function lessonHTML(l){
   const timed=lessonSubs(l);   /* 學習者貼的時間軸字幕 */
   /* 這一課的逐字稿內容：自製對話，或早期教材的關鍵句／練習句 */
@@ -2061,6 +2327,10 @@ function lessonHTML(l){
   const toggles='<div class="row" style="margin-top:9px">'
    +'<button class="spk" id="tg-en" onclick="tgEn()">'+(showEn?'👁 英文：顯示':'👁 英文：隱藏')+'</button>'
    +'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button></div>';
+  /* 找出這課的角色清單，前兩位分配不同顏色（所有類型的逐字稿都適用） */
+  const allLines=au||body||[];
+  const speakers=[...new Set(allLines.map(k=>k.sp).filter(Boolean))];
+  const spCls=s=>{ const idx=speakers.indexOf(s); return idx===0?'sp-a':idx>=1?'sp-b':''; };
   let h='<button class="back" onclick="lsClose()"></button>'
    /* 有逐字稿時，影片（或語音控制列）黏在最上面，往下捲字幕仍在手邊 */
    +(au?'<div class="aupin">'+audioControls()+'</div>'
@@ -2070,7 +2340,60 @@ function lessonHTML(l){
    +'<div class="muted">'+esc(l.titleCn)+' · ⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</div>'
    + (au?toggles:(hasScript?'':playerBox('yt-main')))
    + (!au&&hasScript?playerControls()+toggles:'')
-   +'<div class="ex" style="margin-top:11px"><div class="enote" style="font-size:calc(14.5px * var(--fs));font-weight:800">📐 文法焦點：'+esc(l.focus)+'</div>'
+   +'</div>'
+   + lessonIllust(l.id);
+  /* 逐字稿移到最上面：先看對話內容，再看文法焦點和單字 */
+  if(au){
+    h+='<div class="card"><h2 class="sec">📜 對話逐字稿（含中譯）</h2>'
+     +'<div class="hint">上面的控制列會一直黏在頂端。<b>▶️ 播放全部</b>整段連著念、<b>🔁 逐句跟讀</b>會念一句停一下讓你跟著念；'
+     +'<b>點任一句</b>可以從那一句開始播，<b>點任何一個英文字</b>會跳出中文。想自我測驗就把英文或中譯蓋起來。</div>'
+     +'<div id="sublist">'+ au.map((k,i)=>
+        '<div class="sline" id="sl-'+i+'">'
+        +(k.sp?'<div class="ssp '+spCls(k.sp)+'">'+esc(k.sp)+'</div>':'')
+        +'<div class="srow"><div class="sen" onclick="auFrom('+i+')">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
+        +(k.cn?'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>':'')
+        +'</div>').join('')+'</div></div>';
+  }
+  /* 所有類型的逐字稿都統一放在插圖之後、文法焦點之前 */
+  if(!au && timed){
+    h+='<div class="card"><h2 class="sec">📜 逐字稿（時間軸同步）</h2>'
+     +'<div class="hint">播放時字幕會自動亮起來並捲動。<b>點任一句</b>可以跳到那一秒；<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。</div>'
+     +'<div id="sublist">'+ timed.map((k,i)=>
+        '<div class="sline" id="sl-'+i+'">'
+        +'<div class="srow"><button class="stime" onclick="seekLine('+i+')">'+fmt(k.t)+'</button>'
+        +'<div class="sen" onclick="seekLine('+i+')">'+tokenize(k.en,null)+'</div>'
+        +spk(k.en)+'</div>'
+        +(k.cn?'<div class="scn">'+esc(k.cn)+'</div>':'')
+        +'</div>').join('')+'</div>'
+     +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">這份字幕是學習者自己貼的，兩台裝置共用。</div>'
+     + lsubBoxHTML(true)
+     +'</div>';
+  }
+  else if(!au && (sc||klSc)){
+    const lines=sc||klSc;
+    h+='<div class="card"><h2 class="sec">📜 逐字稿（含中譯）</h2>'
+     +'<div class="hint">影片會一直黏在上面，一邊看一邊對照。<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。上面可以把英文或中譯先蓋起來，自己測驗。</div>'
+     +'<div id="sublist">'+ lines.map((k,i)=>
+        '<div class="sline" id="sl-'+i+'">'
+        +(k.sp?'<div class="ssp '+spCls(k.sp)+'">'+esc(k.sp)+'</div>':'')
+        +'<div class="srow"><div class="sen">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
+        +(k.cn?'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>':'')
+        +'</div>').join('')+'</div>'
+     +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">逐字稿英文原文取自 '+esc(l.source)+'；中譯為本站撰寫。</div></div>';
+  }
+  else if(!au && drill){
+    h+='<div class="card"><h2 class="sec">🗣 跟讀練習句</h2>'
+     +'<div class="hint">這一課的影片有版權，站內不轉錄原片逐字稿——<b>影片原文請按播放器右下角 CC</b>。下面是本站照這一課文法焦點自編的練習句，用法跟逐字稿一樣：<b>點任何一個英文字</b>查中文、按 🔊 聽一次再自己念一次，上面可以把英文或中譯蓋起來自我測驗。</div>'
+     +'<div id="sublist">'+ drill.map((k,i)=>
+        '<div class="sline" id="sl-'+i+'">'
+        +'<div class="srow"><div class="sen">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
+        +'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>'
+        +'</div>').join('')+'</div>'
+     +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">練習句與中譯皆為本站原創撰寫，非影片逐字稿。</div></div>';
+  }
+  /* 文法焦點、聽力策略、出處——所有類型都放在逐字稿之後 */
+  h+='<div class="card">'
+   +'<div class="ex" style="margin-top:0"><div class="enote" style="font-size:calc(14.5px * var(--fs));font-weight:800">📐 文法焦點：'+esc(l.focus)+'</div>'
    +'<div class="ecn" style="margin-top:5px;font-size:calc(14.5px * var(--fs))">'+esc(l.intro)+'</div></div>'
    +'<div class="upg" style="margin-top:11px"><div class="un" style="margin-top:0">🎯 聽力策略：'+esc(l.tip)+'</div></div>'
    +'<div class="muted" style="margin-top:9px;font-size:calc(12px * var(--fs))">'
@@ -2087,54 +2410,6 @@ function lessonHTML(l){
        +'<div style="font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2)">'+esc(t.ipa||'')+'</div>'
        +'<div style="color:var(--accent2);font-weight:700;font-size:calc(15px * var(--fs))">'+esc(t.cn)+'</div>'
        +'<div class="ecn">'+esc(t.def||'')+'</div></div>').join('')+'</div>';
-  }
-  /* 逐字稿／跟讀句：每一課都放在「聽前單字」之後、「測驗」之前，版面一致 */
-  if(au){
-    h+='<div class="card"><h2 class="sec">📜 對話逐字稿（含中譯）</h2>'
-     +'<div class="hint">上面的控制列會一直黏在頂端。<b>▶️ 播放全部</b>整段連著念、<b>🔁 逐句跟讀</b>會念一句停一下讓你跟著念；'
-     +'<b>點任一句</b>可以從那一句開始播，<b>點任何一個英文字</b>會跳出中文。想自我測驗就把英文或中譯蓋起來。</div>'
-     +'<div id="sublist">'+ au.map((k,i)=>
-        '<div class="sline" id="sl-'+i+'">'
-        +(k.sp?'<div class="ssp">'+esc(k.sp)+'</div>':'')
-        +'<div class="srow"><div class="sen" onclick="auFrom('+i+')">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
-        +(k.cn?'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>':'')
-        +'</div>').join('')+'</div></div>';
-  }
-  else if(timed){
-    h+='<div class="card"><h2 class="sec">📜 逐字稿（時間軸同步）</h2>'
-     +'<div class="hint">播放時字幕會自動亮起來並捲動。<b>點任一句</b>可以跳到那一秒；<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。</div>'
-     +'<div id="sublist">'+ timed.map((k,i)=>
-        '<div class="sline" id="sl-'+i+'">'
-        +'<div class="srow"><button class="stime" onclick="seekLine('+i+')">'+fmt(k.t)+'</button>'
-        +'<div class="sen" onclick="seekLine('+i+')">'+tokenize(k.en,null)+'</div>'
-        +spk(k.en)+'</div>'
-        +(k.cn?'<div class="scn">'+esc(k.cn)+'</div>':'')
-        +'</div>').join('')+'</div>'
-     +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">這份字幕是學習者自己貼的，兩台裝置共用。</div>'
-     + lsubBoxHTML(true)
-     +'</div>';
-  }
-  else if(sc||klSc){
-    const lines=sc||klSc;
-    h+='<div class="card"><h2 class="sec">📜 逐字稿（含中譯）</h2>'
-     +'<div class="hint">影片會一直黏在上面，一邊看一邊對照。<b>點任何一個英文字</b>會跳出中文；每句右邊的 🔊 是電腦語音（不是影片原聲）。上面可以把英文或中譯先蓋起來，自己測驗。</div>'
-     +'<div id="sublist">'+ lines.map((k,i)=>
-        '<div class="sline" id="sl-'+i+'">'
-        +(k.sp?'<div class="ssp">'+esc(k.sp)+'</div>':'')
-        +'<div class="srow"><div class="sen">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
-        +(k.cn?'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>':'')
-        +'</div>').join('')+'</div>'
-     +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">逐字稿英文原文取自 '+esc(l.source)+'；中譯為本站撰寫。</div></div>';
-  }
-  else if(drill){
-    h+='<div class="card"><h2 class="sec">🗣 跟讀練習句</h2>'
-     +'<div class="hint">這一課的影片有版權，站內不轉錄原片逐字稿——<b>影片原文請按播放器右下角 CC</b>。下面是本站照這一課文法焦點自編的練習句，用法跟逐字稿一樣：<b>點任何一個英文字</b>查中文、按 🔊 聽一次再自己念一次，上面可以把英文或中譯蓋起來自我測驗。</div>'
-     +'<div id="sublist">'+ drill.map((k,i)=>
-        '<div class="sline" id="sl-'+i+'">'
-        +'<div class="srow"><div class="sen">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
-        +'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>'
-        +'</div>').join('')+'</div>'
-     +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">練習句與中譯皆為本站原創撰寫，非影片逐字稿。</div></div>';
   }
   if(!klSc && (l.keyLines||[]).length){
     h+='<div class="card"><h2 class="sec">🗣 重點句加強跟讀</h2>'
@@ -2384,7 +2659,7 @@ document.addEventListener('touchstart',e=>{
   if(e.touches.length!==1) return;
   if(e.target.closest('textarea,input,.ytwrap,select')) return;
   /* 必須在某個詳細頁或卡片模式裡才能滑 */
-  const inDetail = rdOpen || CURG || lsOpen || myVid || vQueue.length;
+  const inDetail = rdOpen || CURG || lsOpen || myVid || bkOpen || vQueue.length;
   if(!inDetail) return;
   swX=e.touches[0].clientX; swY=e.touches[0].clientY;
 },{passive:true});
@@ -2399,6 +2674,7 @@ document.addEventListener('touchend',e=>{
 
 function swipeBack(){
   if(TAB==='read'   && rdOpen)  { rdClose(); return; }
+  if(TAB==='book'   && bkOpen)  { bkClose(); return; }
   if(TAB==='gram'   && CURG)    { gClose();  return; }
   if(TAB==='listen' && myVid)   { closeMyVid(); return; }
   if(TAB==='listen' && lsOpen)  { lsClose(); return; }
@@ -2413,6 +2689,13 @@ function swipeNext(){
     const i=list.findIndex(a=>a.id===rdOpen.id);
     rdOpenArt(list[(i+1)%list.length].id);
     window.scrollTo(0,0);
+    return;
+  }
+  /* 課本 → 下一課 */
+  if(TAB==='book' && bkOpen){
+    if(BOOK_LESSONS.length<2) return;
+    const i=BOOK_LESSONS.findIndex(x=>x.id===bkOpen.id);
+    bkGo(BOOK_LESSONS[(i+1)%BOOK_LESSONS.length].id);
     return;
   }
   /* 文法 → 下一個單元 */
