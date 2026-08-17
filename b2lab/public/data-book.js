@@ -6,6 +6,7 @@ window.BOOK = {
   lessons: [
     {
       id: 'bk20260811',
+      icon: '🎁',
       date: '2026-08-11',
       title: 'Compensate, Make Up For and Efficiency',
       titleCn: '補償用語與效率詞彙',

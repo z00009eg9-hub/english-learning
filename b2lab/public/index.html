@@ -503,6 +503,17 @@ body.cnall [id^="kc"]{display:block!important}
 .bkvcard .ipa{font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2)}
 .bkvcard .pos{color:#2b7a78;font-weight:800;font-style:italic;font-size:calc(12.5px * var(--fs))}
 .bkvcard .cnw{color:var(--accent2);font-weight:700;font-size:calc(15px * var(--fs));margin-top:2px}
+/* 課本表格：表頭一律一行、音標與片語/中文欄不在奇怪的地方斷行（表格改用橫向捲動） */
+#v-book th{white-space:nowrap}
+#v-book td.nw{white-space:nowrap}
+/* 課本的句子中譯跟著右上角全站 🈶 中譯開關 */
+#v-book .cnx{display:none}
+body.cnall #v-book .cnx{display:block!important}
+/* 課本日曆與搜尋 */
+#bk-q{width:100%;margin:4px 0 12px;padding:9px 12px;border:1.5px solid var(--line);border-radius:10px;
+  font:inherit;font-size:calc(14px * var(--fs))}
+#v-book .cell .dot{font-size:11px;line-height:1}
+#v-book .cell.done{cursor:pointer}
 </style>
 </head>
 <body>
@@ -538,8 +549,8 @@ body.cnall [id^="kc"]{display:block!important}
 
 <nav>
   <button id="t-daily" class="on" onclick="go('daily')"><i class="dayico"><span class="m" id="dayico-m">—</span><span class="d" id="dayico-d">—</span></i>今日</button>
-  <button id="t-read" onclick="go('read')"><i>📖</i>閱讀</button>
   <button id="t-book" onclick="go('book')"><i>📕</i>課本</button>
+  <button id="t-read" onclick="go('read')"><i>📖</i>閱讀</button>
   <button id="t-listen" onclick="go('listen')"><i>🎧</i>聽力</button>
   <button id="t-vocab" onclick="go('vocab')"><i>🔤</i>單字卡</button>
   <button id="t-gram" onclick="go('gram')"><i>📐</i>文法</button>
@@ -1883,35 +1894,106 @@ document.addEventListener('click',e=>{
 const BOOK_LESSONS=((window.BOOK||{}).lessons||[]).slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
 // 課本單字也進字庫，全站點字都查得到
 BOOK_LESSONS.forEach(b=>(b.vocab||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:'',exEn:t.ex,exCn:t.exCn,src:'課本：'+b.titleCn})));
-let bkOpen=null;
+let bkOpen=null, bkCalY=null, bkCalM=null, bkQuery='';
+/* 例句裡用到該單字／片語就加粗（compensate 也會對到 compensated；片語去掉 something/someone 佔位字再比對） */
+function bkHi(sent,w){
+  let s=esc(sent);
+  const core=String(w||'').replace(/\b(something|someone)\b/gi,' ').replace(/\s+/g,' ').trim();
+  if(!core) return s;
+  const q=core.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  let re=new RegExp('\\b('+q+'[a-z]*)','gi');
+  if(re.test(s)) return s.replace(re,'<b>$1</b>');
+  /* 整個片語比不到（如 compensate someone for），退而加粗第一個字的變化形 */
+  const first=q.split(' ')[0];
+  re=new RegExp('\\b('+first+'[a-z]*)','gi');
+  return s.replace(re,'<b>$1</b>');
+}
+function bkItem(b){
+  const md=(b.date||'').slice(5).replace('-','/');
+  return '<div class="item" onclick="bkGo(\''+b.id+'\')">'
+   +'<div class="t">'+(b.icon||'📕')+' '+esc(b.titleCn)+(md?'（'+md+'）':'')+'</div>'
+   +'<div class="tc">'+esc(b.title)+'</div>'
+   +'<div class="meta"><span>📅 '+esc(b.date)+'</span><span>🔤 '+(b.vocab||[]).length+' 個單字</span>'
+   +'<span>📐 '+(b.grammar||[]).length+' 個句型</span><span>📝 作業複習 '+(b.hw||[]).length+' 題</span></div>'
+   +'</div>';
+}
 RENDER.book=function(){
   const v=$('v-book');
   if(bkOpen){ v.innerHTML=bookHTML(bkOpen); return; }
+  if(bkCalY==null){ const t=new Date(); bkCalY=t.getFullYear(); bkCalM=t.getMonth(); }
   v.innerHTML=
     '<div class="card"><h2 class="sec">📕 課本</h2>'
-    +'<div class="hint">課堂筆記的完整版面：作業複習、單字、片語、句型文法、比較表、補充例句與快速總結，'
-    +'內容與上課的 Google 文件一字不差。<b>每個單字、每個句子都有 🔊</b>，按了就唸給你聽。</div>'
-    +'<div class="muted">共 '+BOOK_LESSONS.length+' 課</div></div>'
-    + BOOK_LESSONS.map(b=>'<div class="item" onclick="bkGo(\''+b.id+'\')">'
-      +'<div class="t">📕 '+esc(b.titleCn)+'</div>'
-      +'<div class="tc">'+esc(b.title)+'</div>'
-      +'<div class="meta"><span>📅 '+esc(b.date)+'</span><span>🔤 '+(b.vocab||[]).length+' 個單字</span>'
-      +'<span>📐 '+(b.grammar||[]).length+' 個句型</span><span>📝 作業複習 '+(b.hw||[]).length+' 題</span></div>'
-      +'</div>').join('');
+    +'<div class="hint">課堂筆記的完整版面，內容與上課的 Google 文件一字不差。'
+    +'日曆上<b>橘色的日期</b>就是有筆記的日子，點一下直接開課文；也可以用搜尋欄找主題或單字。'
+    +'<b>每個單字、每個句子都有 🔊</b>；句子的中譯跟著右上角的「🈶 中譯」開關。</div>'
+    +'<input id="bk-q" value="'+esc(bkQuery)+'" oninput="bkSearch(this.value)" placeholder="🔍 快速搜尋：主題、單字、片語…">'
+    +'<div id="bk-results"></div>'
+    +'<div id="bk-cal">'+bkCalHTML()+'</div>'
+    +'</div>';
+  bkSearch(bkQuery);
 };
+function bkCalHTML(){
+  const map={};
+  BOOK_LESSONS.forEach(b=>{ if(b.date&&!map[b.date]) map[b.date]=b; });
+  const startWd=new Date(bkCalY,bkCalM,1).getDay();
+  const days=new Date(bkCalY,bkCalM+1,0).getDate();
+  const td=today();
+  let h='<div class="calhd"><button class="calnav" onclick="bkCalShift(-1)">‹</button>'
+   +'<span class="m">'+bkCalY+' 年 '+(bkCalM+1)+' 月</span>'
+   +'<button class="calnav" onclick="bkCalShift(1)">›</button></div>'
+   +'<div class="calgrid">'+'日一二三四五六'.split('').map(w=>'<div class="wd">'+w+'</div>').join('');
+  for(let i=0;i<startWd;i++) h+='<div class="cell empty"></div>';
+  for(let d=1;d<=days;d++){
+    const ds=bkCalY+'-'+String(bkCalM+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
+    const b=map[ds];
+    h+='<div class="cell'+(b?' done':'')+(ds===td?' today':'')+'"'
+     +(b?' onclick="bkGo(\''+b.id+'\')" title="'+esc(b.titleCn)+'"':'')
+     +'>'+d+(b?'<span class="dot">'+(b.icon||'📕')+'</span>':'')+'</div>';
+  }
+  h+='</div>'
+   +'<div class="callegend"><span><i style="background:linear-gradient(135deg,#f7bd76,#ef9a4f)"></i>有筆記，點日期開課文</span>'
+   +'<span><i style="outline:2px solid var(--accent2);outline-offset:-2px;background:#fff"></i>今天</span></div>';
+  const mm=BOOK_LESSONS.filter(b=>(b.date||'').indexOf(bkCalY+'-'+String(bkCalM+1).padStart(2,'0'))===0);
+  h+= mm.length ? '<div style="margin-top:12px">'+mm.map(bkItem).join('')+'</div>'
+    : '<div class="muted" style="margin-top:12px">這個月沒有筆記。</div>';
+  return h;
+}
+function bkCalShift(d){
+  bkCalM+=d;
+  if(bkCalM<0){ bkCalM=11; bkCalY--; }
+  if(bkCalM>11){ bkCalM=0; bkCalY++; }
+  const c=$('bk-cal'); if(c) c.innerHTML=bkCalHTML();
+}
+function bkSearch(q){
+  bkQuery=String(q||'');
+  const res=$('bk-results'), cal=$('bk-cal');
+  if(!res) return;
+  const s=bkQuery.trim().toLowerCase();
+  if(!s){ res.innerHTML=''; if(cal) cal.style.display='block'; return; }
+  if(cal) cal.style.display='none';
+  const hits=BOOK_LESSONS.filter(b=>{
+    const hay=[b.date,b.title,b.titleCn,b.topics,
+      (b.vocab||[]).map(t=>t.w+' '+t.cn).join(' '),
+      (b.phrases||[]).map(p=>p.p+' '+p.cn).join(' '),
+      (b.colloc||[]).map(c=>c.p+' '+c.cn).join(' ')].join(' ').toLowerCase();
+    return hay.indexOf(s)>=0;
+  });
+  res.innerHTML='<div class="muted" style="margin:2px 0 8px">找到 '+hits.length+' 課</div>'
+    + hits.map(bkItem).join('');
+}
 function bkGo(id){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; RENDER.book(); window.scrollTo(0,0); }
 function bkClose(){ bkOpen=null; RENDER.book(); window.scrollTo(0,0); }
-window.bkGo=bkGo; window.bkClose=bkClose;
+window.bkGo=bkGo; window.bkClose=bkClose; window.bkCalShift=bkCalShift; window.bkSearch=bkSearch;
 
 function bookHTML(b){
   const exRow=e=>'<div class="bkex"><div class="een">'
     +(e.tag?'<span class="bktag'+(e.tag==='非正式'?' inf':'')+'">'+esc(e.tag)+'</span> ':'')
-    +esc(e.en)+' '+spk(e.en)+'</div>'
-    +(e.cn?'<div class="ecn">'+esc(e.cn)+'</div>':'')+'</div>';
+    +bkHi(e.en,e.hi)+' '+spk(e.en)+'</div>'
+    +(e.cn?'<div class="ecn cnx">'+esc(e.cn)+'</div>':'')+'</div>';
   let h='<button class="back" onclick="bkClose()"></button>';
 
   /* 標題（Doc 首行：日期＋中文標題／英文標題／Topics） */
-  h+='<div class="card"><h2 class="sec" style="margin:0">📕 '+esc((b.date||'').replace(/-/g,'/'))+' '+esc(b.titleCn)+'</h2>'
+  h+='<div class="card"><h2 class="sec" style="margin:0">'+(b.icon||'📕')+' '+esc((b.date||'').replace(/-/g,'/'))+' '+esc(b.titleCn)+'</h2>'
    +'<div style="font-weight:700;margin-top:4px">'+esc(b.title)+' '+spk(b.title)+'</div>'
    +'<div class="muted" style="margin-top:4px">Topics: '+esc(b.topics)+'</div></div>';
 
@@ -1922,9 +2004,9 @@ function bookHTML(b){
       if(q.wrong) x+='<div class="bkline"><b class="lb wrong">❌ 原句：</b><span>'+esc(q.wrong)+'</span></div>'
         +'<div class="bkline"><b class="lb right">✅ 訂正：</b><span>'+esc(q.fix)+'</span>'+spk(q.fix)+'</div>';
       else x+='<div class="bkline"><b class="lb right">✅ 原句：</b><span>'+esc(q.ok)+'</span>'+spk(q.ok)+'</div>';
-      x+='<div class="bkcn">中文：'+esc(q.cn)+'</div>'
+      x+='<div class="bkcn cnx">中文：'+esc(q.cn)+'</div>'
        +'<div class="bkpatline">結構：'+esc(q.pat)+'</div>'
-       +'<div class="bknote">💬 文法解説：'+esc(q.note)+'</div></div>';
+       +'<div class="bknote"><b>💬 文法解説：</b><br>'+brSent(esc(q.note))+'</div></div>';
       return x;
     }).join('');
 
@@ -1932,27 +2014,27 @@ function bookHTML(b){
   h+='<div class="bkbar">I. 單字 Vocabulary</div>'
    +'<div class="bkvd card" style="padding:10px"><div class="tw" style="margin:0"><table>'
    +'<tr><th>單字</th><th>音標</th><th>詞性</th><th>中文</th><th>例句</th></tr>'
-   + (b.vocab||[]).map(t=>'<tr><td style="white-space:nowrap;font-weight:700">'+esc(t.w)+(t.star?' ⭐':'')+'<br>'+spk(t.w)+'</td>'
-     +'<td style="font-family:ui-monospace,monospace">'+esc(t.ipa)+'</td><td>'+esc(t.pos)+'</td><td>'+esc(t.cn)+'</td>'
-     +'<td>'+esc(t.ex)+' '+spk(t.ex)+'<div class="muted">'+esc(t.exCn)+'</div></td></tr>').join('')
+   + (b.vocab||[]).map(t=>'<tr><td class="nw" style="font-weight:700">'+esc(t.w)+(t.star?' ⭐':'')+'<br>'+spk(t.w)+'</td>'
+     +'<td class="nw" style="font-family:ui-monospace,monospace">'+esc(t.ipa)+'</td><td class="nw">'+esc(t.pos)+'</td><td>'+esc(t.cn)+'</td>'
+     +'<td>'+bkHi(t.ex,t.w)+' '+spk(t.ex)+'<div class="muted cnx">'+esc(t.exCn)+'</div></td></tr>').join('')
    +'</table></div></div>'
    +'<div class="bkvm">'+(b.vocab||[]).map(t=>'<div class="bkvcard">'
      +'<div class="w">'+esc(t.w)+(t.star?' ⭐':'')+' <span class="pos">'+esc(t.pos)+'</span>'+spk(t.w)+'</div>'
      +'<div class="ipa">'+esc(t.ipa)+'</div>'
      +'<div class="cnw">'+esc(t.cn)+'</div>'
-     +'<div class="bkex" style="margin-bottom:0"><div class="een">'+esc(t.ex)+' '+spk(t.ex)+'</div><div class="ecn">'+esc(t.exCn)+'</div></div>'
+     +'<div class="bkex" style="margin-bottom:0"><div class="een">'+bkHi(t.ex,t.w)+' '+spk(t.ex)+'</div><div class="ecn cnx">'+esc(t.exCn)+'</div></div>'
      +'</div>').join('')+'</div>';
 
   /* II. 片語與搭配詞：Doc 分兩組（搭配詞＋英文解釋、片語＋例句） */
   h+='<div class="bkbar">II. 片語與搭配詞 Phrases &amp; Collocations</div>'
    +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
    +'<tr><th>片語</th><th>中文</th><th>英文解釋</th></tr>'
-   + (b.colloc||[]).map(c=>'<tr><td style="font-weight:700">'+esc(c.p)+'<br>'+spk(c.p)+'</td><td>'+esc(c.cn)+'</td>'
-     +'<td>'+esc(c.def)+'<div class="muted">'+esc(c.defCn)+'</div></td></tr>').join('')
+   + (b.colloc||[]).map(c=>'<tr><td class="nw" style="font-weight:700">'+esc(c.p)+'<br>'+spk(c.p)+'</td><td class="nw">'+esc(c.cn)+'</td>'
+     +'<td>'+esc(c.def)+'<div class="muted cnx">'+esc(c.defCn)+'</div></td></tr>').join('')
    +'</table></div></div>'
    + (b.phrases||[]).map(p=>'<div class="bkq"><div class="bkline" style="margin-bottom:2px"><b>'+esc(p.p)+'</b>'+spk(p.p)
      +'<span class="muted">'+esc(p.cn)+'</span></div>'
-     +exRow({en:p.ex,cn:p.exCn})+'</div>').join('');
+     +exRow({en:p.ex,cn:p.exCn,hi:p.p})+'</div>').join('');
 
   /* III. 句型與文法解説 */
   h+='<div class="bkbar">III. 句型與文法解説 Sentence Patterns &amp; Grammar</div>'
@@ -1969,8 +2051,8 @@ function bookHTML(b){
   h+='<div class="bkbar">IV. 比較表 Comparison Table</div>'
    +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
    +'<tr><th>用法</th><th>中文</th><th>適用場景</th><th>例句</th></tr>'
-   + (b.cmp||[]).map(c=>'<tr><td style="font-weight:700">'+esc(c.u)+'<br>'+spk(c.u)+'</td><td>'+esc(c.cn)+'</td><td>'+esc(c.sc)+'</td>'
-     +'<td>'+esc(c.ex)+' '+spk(c.ex)+'<div class="muted">'+esc(c.exCn)+'</div></td></tr>').join('')
+   + (b.cmp||[]).map(c=>'<tr><td class="nw" style="font-weight:700">'+esc(c.u)+'<br>'+spk(c.u)+'</td><td class="nw">'+esc(c.cn)+'</td><td>'+esc(c.sc)+'</td>'
+     +'<td>'+bkHi(c.ex,c.u)+' '+spk(c.ex)+'<div class="muted cnx">'+esc(c.exCn)+'</div></td></tr>').join('')
    +'</table></div></div>';
   if(b.cmpWarn){
     h+='<div class="bkwarn"><div style="font-weight:800">'+esc(b.cmpWarn.title)+'</div>'
