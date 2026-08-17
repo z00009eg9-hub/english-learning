@@ -1,23 +1,22 @@
 // ============================================================
 //  🎧 聽力跟讀教材（純語音，無影片）
 //
-//  這個檔案裡的每一課都用「裝置內建的語音朗讀（TTS）」播放，
-//  站內不再嵌入任何 YouTube 影片，離線時也能練。
+//  每一課都用「裝置內建的語音朗讀（TTS）」播放，站內不嵌入任何影片，
+//  離線時也能練。
 //
-//  三種來源：
-//   kind:"note"  — 依 data-notes.js 裡的課堂筆記單字自製的對話。
-//                  pre 的音標／中文／英文定義都直接取自筆記，未自行杜撰；
-//                  對話與理解題為本站原創撰寫。noteRef 標明取材自哪一堂課。
-//   kind:"scene" — 生活場景對話，主題參考 VOA 同名課程，但句子是本站原創。
-//   kind:"voa"   — VOA Learning English（美國政府出版物，公共領域），
-//                  逐字稿原文放在 data-scripts.js，中譯為本站撰寫。
+//   kind:"note"  — 本站自製對話。有 noteRef 的，聽前單字的音標／中文／
+//                  英文定義都直接取自 data-notes.js 的課堂筆記，未自行杜撰；
+//                  對話與理解題為原創撰寫。date 是每週三／五的更新日，
+//                  「今日」分頁會取 <= 今天的最新一批。
+//   kind:"scene" — 生活場景對話，主題參考 VOA 同名課程，句子為本站原創。
 // ============================================================
 window.LISTEN = {
 
-/* ========== 依課堂筆記自製 ========== */
+/* ========== 依課堂筆記自製（每週三／五更新） ========== */
 notes:[
 {
   id:"au01",
+  date:"2026-08-14",
   level:"B1",
   minutes:3,
   kind:"note",
@@ -69,7 +68,103 @@ notes:[
 },
 
 {
+  id:"au12",
+  date:"2026-08-14",
+  level:"B1+",
+  minutes:3,
+  kind:"note",
+  title:"If I Won the Lottery",
+  titleCn:"如果我中了樂透",
+  series:"本站自製聽力 · 取材自課堂筆記",
+  noteRef:"20251226 條件句文法解析",
+  topic:"💭 條件句與想像",
+  focus:"第二條件句（If + 過去式, would + 原形動詞）用來談想像、不真實的情況；第一條件句（If + 現在式, will + 原形動詞）則用來談真實會發生的可能性。順便聽 If I were you 的固定說法。",
+  intro:"老師 Mia 用一個經典問題開場：如果你明天中了樂透，你會先做什麼？Anna 想馬上辭職，Ben 想搬去風景好的地方。兩個人在回答的同時，剛好把第二條件句整組句型示範了一遍。這一課要聽的不是內容有多誇張，而是「過去式」在這裡其實不是過去，而是「離現實有距離」。",
+  tip:"第一次聽只抓 If 後面用什麼時態、主要子句用 will 還是 would。第二次再回頭比較 If it rains 和 If it rained 這兩句，感覺一下真實與想像的差別。",
+  pre:[
+    {w:"lottery",ipa:"/ˈlɑː.tər.i/",cn:"抽獎、彩券",def:"a game where people buy tickets with numbers, hoping to win a large amount of money"},
+    {w:"daydream",ipa:"/ˈdeɪ.driːm/",cn:"做白日夢",def:"to let your mind wander and imagine pleasant things instead of focusing on what you should be doing"},
+    {w:"scenery",ipa:"/ˈsiːnəri/",cn:"風景、景色",def:"the natural features of an area such as mountains and fields."},
+    {w:"conditional",ipa:"/kənˈdɪʃ.ən.əl/",cn:"條件的；條件句（文法用語）",def:"a grammar term for a sentence that describes what happens if something else happens first"},
+    {w:"imaginary",ipa:"/ɪˈmædʒ.ə.ner.i/",cn:"想像中的、虛構的",def:"existing only in your mind, not real"},
+    {w:"possibility",ipa:"/ˌpɑː.səˈbɪl.ə.ti/",cn:"可能性",def:"a chance that something may happen or be true"},
+    {w:"fluently",ipa:"/ˈfluː.ənt.li/",cn:"流利地",def:"in a smooth way, without stopping or making mistakes, when speaking a language"},
+    {w:"effort",ipa:"/ˈef.ərt/",cn:"努力",def:"the physical or mental energy that you use to do something"}
+  ],
+  script:[
+    {sp:"Mia",en:"Okay, quick warm-up before we start. If you won the lottery tomorrow, what would you do first?",cn:"好，開始上課前先來個暖身。如果你明天中了樂透，你會先做什麼？"},
+    {sp:"Anna",en:"Ha, that's my favourite daydream. If I won, I would quit my job the same afternoon.",cn:"哈，那是我最愛的白日夢。如果我中了，我當天下午就辭職。"},
+    {sp:"Ben",en:"Really? I would keep working. I'd just move somewhere with better scenery.",cn:"真的嗎？我會繼續工作。我只會搬去風景比較好的地方。"},
+    {sp:"Mia",en:"Nice. And notice what you both just did - that's the second conditional.",cn:"很好。而且注意你們兩個剛剛做了什麼 - 那就是第二條件句。"},
+    {sp:"Anna",en:"So the second conditional is for imaginary situations, right? Not real ones.",cn:"所以第二條件句是用在想像的情況，對吧？不是真實的情況。"},
+    {sp:"Mia",en:"Exactly. If plus past simple, then would plus the base verb. The past tense here doesn't mean past time.",cn:"沒錯。If 加過去簡單式，然後 would 加原形動詞。這裡的過去式並不是指過去的時間。"},
+    {sp:"Ben",en:"Then what does it mean?",cn:"那它是什麼意思？"},
+    {sp:"Mia",en:"Distance from reality. The further from the truth, the further back the tense goes.",cn:"跟現實的距離。離事實越遠，時態就往後退得越遠。"},
+    {sp:"Anna",en:"And the first conditional is for a real possibility?",cn:"那第一條件句是用在真實的可能性嗎？"},
+    {sp:"Mia",en:"Right. If it rains tomorrow, we will stay inside. That's a genuine possibility.",cn:"對。If it rains tomorrow, we will stay inside. 那是真的有可能發生。"},
+    {sp:"Ben",en:"But if it rained tomorrow, we would stay inside sounds softer somehow.",cn:"但是 if it rained tomorrow, we would stay inside 聽起來不知為何比較委婉。"},
+    {sp:"Mia",en:"Softer and less likely. Same words, different level of reality.",cn:"比較委婉，也比較不可能。一樣的字，但現實程度不同。"},
+    {sp:"Anna",en:"Let me try one. If I spoke English fluently, I would apply for that job in Singapore.",cn:"我試一句。如果我英文說得流利，我就會去應徵新加坡那個工作。"},
+    {sp:"Mia",en:"Perfect. And you don't speak fluently yet, so the sentence stays imaginary - that's why we use would.",cn:"完美。而且你還沒說得流利，所以這句話還停留在想像 - 這就是為什麼用 would。"},
+    {sp:"Ben",en:"If I had more time, I would study every single morning.",cn:"如果我有更多時間，我每天早上都會念書。"},
+    {sp:"Mia",en:"Honestly, though, fluency is less about the lottery and more about effort.",cn:"不過老實說，流利這件事跟中樂透沒什麼關係，比較是靠努力。"},
+    {sp:"Anna",en:"One last thing. Is it if I was rich, or if I were rich?",cn:"最後一個問題。是 if I was rich，還是 if I were rich？"},
+    {sp:"Mia",en:"You hear both, but were is the safer form. If I were you, I would start tonight.",cn:"兩種都聽得到，但 were 比較保險。如果我是你，我今晚就開始。"}
+  ],
+  questions:[
+    {q:"What would Anna do if she won the lottery?",opts:["A. Move to a place with better scenery.","B. Quit her job the same afternoon.","C. Apply for a job in Singapore.","D. Buy a house for her family."],ans:1,expl:"Anna 說 If I won, I would quit my job the same afternoon.（如果中了，我當天下午就辭職）。搬去風景好的地方是 Ben 的答案。"},
+    {q:"According to Mia, what does the past tense show in a second conditional?",opts:["A. That the event happened last year.","B. That the speaker is being polite to a stranger.","C. That the situation is distant from reality.","D. That the sentence is a question."],ans:2,expl:"Mia 說 Distance from reality，第二條件句的過去式不是指過去時間，而是表示「離現實有距離」。"},
+    {q:"Which sentence is a first conditional about a real possibility?",opts:["A. If it rained tomorrow, we would stay inside.","B. If I were you, I would start tonight.","C. If I had more time, I would study every morning.","D. If it rains tomorrow, we will stay inside."],ans:3,expl:"第一條件句是 If + 現在簡單式, will + 原形動詞，所以 If it rains tomorrow, we will stay inside 才是談真實可能性的那一句。"},
+    {q:"Why does Mia say Anna's Singapore sentence must use would?",opts:["A. Because Anna does not speak fluently yet, so it is imaginary.","B. Because the job interview already happened.","C. Because Singapore is far away from Taiwan.","D. Because would is always more polite than will."],ans:0,expl:"Mia 說 you don't speak fluently yet, so the sentence stays imaginary - 因為還沒發生、只是想像，所以用 would。"},
+    {q:"What does Mia say about becoming fluent?",opts:["A. It depends mostly on luck.","B. It depends more on effort than on the lottery.","C. It is impossible without moving abroad.","D. It only works if you have more free time."],ans:1,expl:"Mia 說 fluency is less about the lottery and more about effort，強調靠的是努力而不是運氣。"}
+  ]
+},
+
+{
+  id:"vlog01",
+  date:"2026-08-14",
+  level:"A2",
+  minutes:3,
+  kind:"note",
+  title:"Morning Routine: Phrasal Verbs",
+  titleCn:"早晨例行公事：片語動詞",
+  series:"本站自製聽力 · 生活作息主題",
+  topic:"🌅 早晨作息",
+  focus:"早晨作息的片語動詞（wake up / get up / get dressed 這一類）",
+  intro:"從鬧鐘響到出門，一連串動作全部用片語動詞講一遍。片語動詞要整組記，不要拆開背單字——wake up 是醒來（張開眼睛）、get up 是離開床鋪，差一個字意思就不一樣。",
+  tip:"跟讀時把每個片語動詞念重一點，讓嘴巴記住整組的節奏。念完一次後試著閉上眼睛，用自己的話把今天早上的流程講一遍。",
+  pre:[
+    {w:"go off",ipa:"/ɡoʊ ɔːf/",cn:"（鬧鐘）響起",def:"When an alarm makes a sound to wake you."},
+    {w:"wake up",ipa:"/weɪk ʌp/",cn:"醒來（張開眼睛）",def:"To stop sleeping."},
+    {w:"get up",ipa:"/ɡet ʌp/",cn:"起床（離開床）",def:"To get out of bed."},
+    {w:"turn off",ipa:"/tɜːrn ɔːf/",cn:"關掉",def:"To stop a machine, light, or alarm."},
+    {w:"get dressed",ipa:"/ɡet drest/",cn:"穿衣服",def:"To put your clothes on."},
+    {w:"brush your teeth",ipa:"/brʌʃ jɔːr tiːθ/",cn:"刷牙",def:"To clean your teeth with a toothbrush."},
+    {w:"have breakfast",ipa:"/hæv ˈbrekfəst/",cn:"吃早餐",def:"To eat the first meal of the day."},
+    {w:"leave the house",ipa:"/liːv ðə haʊs/",cn:"出門",def:"To go out of your home."}
+  ],
+  script:[
+    {en:"My alarm goes off at six thirty.",cn:"我的鬧鐘六點半響。"},
+    {en:"I wake up, but I don't get up right away.",cn:"我醒了，但沒有馬上起床。"},
+    {en:"I turn off the alarm and lie there for five minutes.",cn:"我把鬧鐘關掉，躺著再五分鐘。"},
+    {en:"Then I get up and go to the bathroom.",cn:"然後我起床，走去浴室。"},
+    {en:"I brush my teeth and wash my face.",cn:"我刷牙、洗臉。"},
+    {en:"I get dressed and go downstairs.",cn:"我穿好衣服下樓。"},
+    {en:"I have breakfast and check my phone.",cn:"我吃早餐、看一下手機。"},
+    {en:"I leave the house at half past seven.",cn:"我七點半出門。"}
+  ],
+  questions:[
+    {q:"\"wake up\" 和 \"get up\" 差在哪裡？",opts:["A. 完全一樣，可互換","B. wake up 是醒來（張眼），get up 是離開床鋪","C. wake up 是起床，get up 是醒來","D. get up 只能用在早上"],ans:1,expl:"wake up = 從睡眠中醒過來；get up = 身體離開床。所以可以說 I wake up at six but I get up at six thirty（六點醒、六點半才爬起來）。"},
+    {q:"鬧鐘「響了」英文怎麼說？",opts:["A. My alarm rings up.","B. My alarm goes off.","C. My alarm turns on.","D. My alarm wakes off."],ans:1,expl:"固定說法是 the alarm goes off。注意 go off 用在鬧鐘是「響起」，不是「關掉」——關掉是 turn off。"},
+    {q:"下面哪一句的 turn off 用法正確？",opts:["A. I turn the alarm off.","B. I turn off the alarm.","C. A 和 B 都正確","D. 兩句都錯"],ans:2,expl:"turn off 是「可分離」的片語動詞，受詞可以放中間也可以放後面：turn off the alarm ＝ turn the alarm off。但受詞是代名詞時只能放中間：turn it off（不能說 turn off it）。"},
+    {q:"「我穿好衣服」正確說法是？",opts:["A. I dress up my clothes.","B. I wear dressed.","C. I get dressed.","D. I get dress."],ans:2,expl:"get dressed 是固定用法（dressed 是形容詞）。注意 dress up 是「盛裝打扮」，意思不一樣。"},
+    {q:"描述「每天的習慣」要用哪一種時態？",opts:["A. 現在進行式（I am getting up at seven.）","B. 現在簡單式（I get up at seven.）","C. 過去式（I got up at seven.）","D. 未來式（I will get up at seven.）"],ans:1,expl:"講固定的例行公事、習慣，用現在簡單式。現在進行式 I'm getting up 是指「此時此刻正在起床」。"}
+  ]
+},
+
+{
   id:"au02",
+  date:"2026-08-12",
   level:"B1",
   minutes:3,
   kind:"note",
@@ -121,58 +216,103 @@ notes:[
 },
 
 {
-  id:"au03",
+  id:"au07",
+  date:"2026-08-12",
   level:"B1",
   minutes:3,
   kind:"note",
-  title:"Is Money Really the Root of All Evil?",
-  titleCn:"金錢真的是萬惡之源嗎？",
+  title:"At the Doctor's Office",
+  titleCn:"在診所看醫生",
   series:"本站自製聽力 · 取材自課堂筆記",
-  noteRef:"20260122 Money Makes the World Go Round",
-  topic:"💰 金錢觀",
-  focus:"表達不同意與提出反例的句型：That's not... that's...、So you'd blame...、如何用一個比喻收尾。",
-  intro:"Nina 和 Tom 在爭論一句老話：「金錢是萬惡之源。」Tom 舉貪污和血汗勞工當證據，Nina 卻認為問題不在錢，而在人的貪婪和分配方式。這是一段很典型的英文觀點辯論，語速自然、句子不長，很適合練習「聽出立場」。",
-  tip:"聽的時候把兩個人的立場各記一句話。特別注意 Nina 每次反駁都用同一個句型：That's not X, that's Y。",
+  noteRef:"20260305 問候與健康詞彙 Greetings & Health",
+  topic:"🏥 身體症狀",
+  focus:"描述身體不適的症狀，以及醫生問診、給建議的常見說法。",
+  intro:"Anna 昨晚吃了油膩的炸雞，隔天開始發燒、頭暈又想吐。她到診所看醫生，把自己的症狀一項一項描述出來。這段對話示範了「我覺得…」的症狀說法，以及醫生如何診斷與給藥。",
+  tip:"第一次聽先抓「她哪裡不舒服」這條主線，不要急著聽懂每個字。第二次再專心聽數字（體溫、天數）和醫生的建議。",
   pre:[
-    {w:"root of all evil",ipa:"/ruːt əv ɔːl ˈiː.vəl/",cn:"萬惡之源",def:"a saying used to describe something believed to be the main cause of bad things"},
-    {w:"expression",ipa:"/ɪkˈspreʃ.ən/",cn:"詞語、措詞",def:"a word or phrase used in a particular way."},
-    {w:"evil",ipa:"/ˈiː.vəl/",cn:"邪惡；壞事",def:"morally very bad, or something morally very bad"},
-    {w:"greed",ipa:"/ɡriːd/",cn:"貪婪",def:"a strong desire to have more money or things than you need"},
-    {w:"corruption",ipa:"/kəˈrʌp.ʃən/",cn:"貪污；腐敗",def:"dishonest or illegal behavior by people in power, especially for money"},
-    {w:"slave labour",ipa:"/sleɪv ˈleɪ.bər/",cn:"奴工；強迫勞動",def:"work that people are forced to do for little or no pay"},
-    {w:"loads of",ipa:"/loʊdz əv/",cn:"許多的（口語）",def:"a large amount or number of something, used in informal speech"},
-    {w:"share out",ipa:"/ʃer aʊt/",cn:"分配；分享",def:"to divide something among a group of people so everyone gets a part"}
+    {w:"symptom",ipa:"/ˈsɪmp.təm/",cn:"症狀",def:"a sign that you have an illness."},
+    {w:"fever",ipa:"/ˈfiː.vɚ/",cn:"發燒",def:"a body temperature that is higher than normal."},
+    {w:"nauseous",ipa:"/ˈnɔː.ʃəs/",cn:"噁心想吐的",def:"feeling like you might vomit."},
+    {w:"dizzy",ipa:"/ˈdɪz.i/",cn:"頭暈的",def:"feeling like everything is turning around you."},
+    {w:"stomach pain",ipa:"/ˈstʌm.ək peɪn/",cn:"胃痛、肚子痛",def:"a pain in the area of your stomach."},
+    {w:"food poisoning",ipa:"/ˈfuːd ˌpɔɪ.zən.ɪŋ/",cn:"食物中毒",def:"an illness caused by eating food that contains harmful bacteria."},
+    {w:"painkiller",ipa:"/ˈpeɪnˌkɪlər/",cn:"止痛藥",def:"a medicine that reduces or stops pain in your body"},
+    {w:"relieve",ipa:"/rɪˈliːv/",cn:"緩解、減輕",def:"to make an unpleasant feeling or situation less severe"}
   ],
   script:[
-    {sp:"Nina",en:"Tom, do you know the expression “money is the root of all evil”?",cn:"Tom，你知道那句話嗎：「金錢是萬惡之源」？"},
-    {sp:"Tom",en:"Of course. My grandmother said it about once a week.",cn:"當然知道。我奶奶大概每週都要講一次。"},
-    {sp:"Nina",en:"I've never really agreed with it. Money is just paper.",cn:"我其實從來不同意這句話。錢不過就是紙。"},
-    {sp:"Tom",en:"Maybe, but look at the news. Corruption, politicians taking money under the table...",cn:"也許吧，但你看看新聞。貪污、政治人物私下收錢……"},
-    {sp:"Nina",en:"That's not money being evil. That's people being greedy.",cn:"那不是錢在作惡，那是人在貪心。"},
-    {sp:"Tom",en:"So you'd blame greed instead?",cn:"所以你反而會怪貪婪囉？"},
-    {sp:"Nina",en:"Yes. Greed is the problem, not the money itself.",cn:"對。問題出在貪婪，而不是錢本身。"},
-    {sp:"Tom",en:"Fair enough. But some companies make loads of money using slave labour. That feels pretty evil to me.",cn:"有道理。可是有些公司靠奴工賺了大把的錢。這在我看來就相當邪惡。"},
-    {sp:"Nina",en:"It is evil. But that's a choice someone made. The money didn't decide anything.",cn:"那確實是邪惡。但那是有人做出的選擇，錢自己什麼都沒決定。"},
-    {sp:"Tom",en:"Okay, then if money is neutral, why does it cause so much trouble?",cn:"好，那如果錢是中立的，它為什麼會造成這麼多麻煩？"},
-    {sp:"Nina",en:"Because we never share out anything fairly. A small group holds most of it.",cn:"因為我們從來沒有公平地分配過任何東西。一小群人握著大部分的錢。"},
-    {sp:"Tom",en:"So the real question is how we share out what we already have.",cn:"所以真正的問題是，我們怎麼分配已經有的東西。"},
-    {sp:"Nina",en:"Exactly. Give the same money to a good government and you get schools and hospitals.",cn:"完全正確。把同樣的錢給一個好政府，你得到的是學校和醫院。"},
-    {sp:"Tom",en:"And give it to a bad one and you get corruption.",cn:"給一個壞政府，你得到的就是貪污。"},
-    {sp:"Nina",en:"Right. So the expression is wrong. Money isn't the root of all evil. It's a mirror.",cn:"沒錯。所以那句話是錯的。金錢不是萬惡之源，它是一面鏡子。"},
-    {sp:"Tom",en:"A mirror. I like that. I'm still going to worry about my rent, though.",cn:"一面鏡子。我喜歡這個說法。不過我還是會擔心我的房租。"},
-    {sp:"Nina",en:"That's not greed. That's Taipei.",cn:"那不是貪婪，那叫台北。"}
+    {sp:"Doctor",en:"Good morning, Anna. Please sit down. What brings you in today?",cn:"早安，Anna。請坐。今天是哪裡不舒服呢？"},
+    {sp:"Anna",en:"I've been feeling unwell since yesterday evening. I think I have a fever.",cn:"我從昨天傍晚就一直不太舒服。我覺得我在發燒。"},
+    {sp:"Doctor",en:"Let me check your temperature. Yes, it's 38.5 degrees. You're definitely running a fever.",cn:"我幫你量一下體溫。嗯，38.5 度。你確實在發燒。"},
+    {sp:"Anna",en:"I also feel dizzy when I stand up, and I feel nauseous almost all the time.",cn:"我站起來的時候會頭暈，而且幾乎一直覺得噁心想吐。"},
+    {sp:"Doctor",en:"Do you have any stomach pain?",cn:"你有肚子痛嗎？"},
+    {sp:"Anna",en:"Yes, quite a lot. The stomach pain started after dinner last night.",cn:"有，滿嚴重的。肚子痛是昨天晚餐之後開始的。"},
+    {sp:"Doctor",en:"What did you have for dinner?",cn:"你晚餐吃了什麼？"},
+    {sp:"Anna",en:"A big plate of fried chicken from a night market stall. It was very greasy.",cn:"夜市攤子買的一大盤炸雞。非常油膩。"},
+    {sp:"Doctor",en:"That's a very common symptom pattern after greasy street food. I think you have food poisoning.",cn:"吃完油膩的路邊小吃之後，這是很常見的症狀組合。我認為你是食物中毒。"},
+    {sp:"Anna",en:"Is food poisoning serious? Do I need to stay in the hospital?",cn:"食物中毒嚴重嗎？我需要住院嗎？"},
+    {sp:"Doctor",en:"No, not in your case. Drink plenty of water, eat plain rice, and rest at home for two days.",cn:"不用，你的情況不需要。多喝水、吃清淡的白飯，在家休息兩天。"},
+    {sp:"Anna",en:"Can I take a painkiller for the stomach pain? I have some at home.",cn:"我可以吃止痛藥止肚子痛嗎？我家裡有一些。"},
+    {sp:"Doctor",en:"You can, but only after eating something light. I'll also give you medicine to relieve the nausea.",cn:"可以，但一定要先吃點清淡的東西再吃。我也會開藥幫你緩解噁心的感覺。"},
+    {sp:"Anna",en:"Thank you. How long will it take before I feel normal again?",cn:"謝謝。大概要多久我才會恢復正常？"},
+    {sp:"Doctor",en:"Most people recover in two or three days. If the fever doesn't go down by Friday, come back and see me.",cn:"大部分的人兩三天就會好。如果到星期五還沒退燒，就再回來找我。"},
+    {sp:"Anna",en:"I will. Thank you very much, Doctor.",cn:"我會的。非常謝謝你，醫生。"}
   ],
   questions:[
-    {q:"Which expression are Nina and Tom discussing?",opts:["A. Time is money.","B. Money is the root of all evil.","C. Money talks.","D. Money can't buy happiness."],ans:1,expl:"Nina 一開頭就問 do you know the expression “money is the root of all evil”。"},
-    {q:"What does Nina believe is the real problem?",opts:["A. Money itself","B. Banks and interest rates","C. Human greed and the choices people make","D. Old sayings from grandparents"],ans:2,expl:"Nina 說 That's not money being evil. That's people being greedy.，並且說 Greed is the problem, not the money itself。"},
-    {q:"What example does Tom use to argue that money can be evil?",opts:["A. Companies making loads of money using slave labour","B. People saving too much for retirement","C. Governments building schools and hospitals","D. His grandmother's weekly advice"],ans:0,expl:"Tom 舉的例子是有些公司靠 slave labour 賺 loads of money。"},
-    {q:"In this dialogue, \"share out\" means:",opts:["A. to tell someone a secret","B. to divide something among a group of people","C. to sell something at a low price","D. to keep money in a bank"],ans:1,expl:"share out 是把東西分配給一群人；Nina 說 we never share out anything fairly，指分配不公。"},
-    {q:"What does Nina compare money to at the end?",opts:["A. A weapon","B. A river","C. A mirror","D. A machine"],ans:2,expl:"Nina 最後說 Money isn't the root of all evil. It's a mirror.（錢是一面鏡子，映照出人的樣子）。"}
+    {q:"What does the doctor think is wrong with Anna?",opts:["A. She has a migraine.","B. She has food poisoning.","C. She has motion sickness.","D. She broke her arm."],ans:1,expl:"醫生說「I think you have food poisoning.」，因為她吃了油膩的夜市炸雞。"},
+    {q:"What is Anna's temperature?",opts:["A. 36.5 degrees","B. 37.5 degrees","C. 38.5 degrees","D. 39.5 degrees"],ans:2,expl:"醫生量完體溫後說「it's 38.5 degrees」。"},
+    {q:"What did Anna eat for dinner the night before?",opts:["A. Fried chicken from a night market","B. A fresh salad","C. Plain rice porridge","D. Nothing at all"],ans:0,expl:"Anna 說她吃了夜市攤子的一大盤炸雞（fried chicken），而且很油膩。"},
+    {q:"In the dialogue, what does \"relieve\" mean?",opts:["A. To make an unpleasant feeling less severe","B. To make the pain much worse","C. To measure someone's temperature","D. To cancel an appointment"],ans:0,expl:"relieve 是「緩解、減輕」，醫生開藥是為了減輕噁心的感覺。"},
+    {q:"When should Anna go back to the doctor?",opts:["A. Tomorrow morning, no matter what","B. If the fever is still there on Friday","C. Only if she loses her medicine","D. In two weeks for a check-up"],ans:1,expl:"醫生說「If the fever doesn't go down by Friday, come back and see me.」"}
+  ]
+},
+
+{
+  id:"vlog03",
+  date:"2026-08-12",
+  level:"B1+",
+  minutes:6,
+  kind:"note",
+  title:"Talking About the Future",
+  titleCn:"聊未來的計畫",
+  series:"本站自製聽力 · 生活作息主題",
+  topic:"📅 未來計畫",
+  focus:"未來的講法：will / going to / 現在進行式表已排定的計畫",
+  intro:"聊接下來的打算。同一件「未來的事」，英文有三種講法：已經訂好的用現在進行式、本來就有打算的用 going to、當下才決定的用 will。這一課把三種放在一起對照。",
+  tip:"每聽一句就在心裡標記它用了哪一種未來式，以及為什麼是這一種。抓到三個不同的例子就算過關。",
+  pre:[
+    {w:"plan",ipa:"/plæn/",cn:"計畫、打算",def:"Something you have decided to do."},
+    {w:"be going to",ipa:"/bi ˈɡoʊɪŋ tuː/",cn:"打算要…",def:"Used for something you have already decided to do."},
+    {w:"look forward to",ipa:"/lʊk ˈfɔːrwərd tuː/",cn:"期待",def:"To feel happy about something that will happen."},
+    {w:"book a table",ipa:"/bʊk ə ˈteɪbl/",cn:"訂位",def:"To reserve a place at a restaurant."},
+    {w:"make up my mind",ipa:"/meɪk ʌp maɪ maɪnd/",cn:"下定決心、決定好",def:"To decide something."},
+    {w:"probably",ipa:"/ˈprɑːbəbli/",cn:"大概、可能",def:"Likely, but not certain."},
+    {w:"end up",ipa:"/end ʌp/",cn:"最後變成、結果是",def:"To finally be in a situation you did not plan."}
+  ],
+  script:[
+    {en:"Do you have any plans for the summer?",cn:"你暑假有什麼計畫嗎？"},
+    {en:"What are you doing this weekend?",cn:"你這週末要做什麼？"},
+    {en:"I'm meeting some friends on Saturday.",cn:"我星期六要跟幾個朋友碰面。（已經約好了）"},
+    {en:"We're going to try that new restaurant.",cn:"我們打算去試試那間新餐廳。（早就有打算）"},
+    {en:"I'm really looking forward to it.",cn:"我非常期待。"},
+    {en:"I haven't made up my mind yet. Maybe I'll just stay home.",cn:"我還沒決定。也許我就待在家吧。（當下才決定）"},
+    {en:"I'm flying to Japan next month.",cn:"我下個月要飛日本。（機票已經訂好）"},
+    {en:"I think it'll be busy, so I'll probably book a table for Friday.",cn:"我想會很多人，所以我大概會訂星期五的位子。（預測＋當下決定）"},
+    {en:"She's going to look for a new job this year.",cn:"她今年打算找新工作。"},
+    {en:"Don't worry — I'll help you with that.",cn:"別擔心，我會幫你。（當場答應）"},
+    {en:"If we can't decide, we usually end up staying home anyway.",cn:"如果決定不了，反正我們最後通常都待在家。"}
+  ],
+  questions:[
+    {q:"機票已經訂好了，要說「我下個月飛日本」，最自然的是？",opts:["A. I will fly to Japan next month.","B. I'm flying to Japan next month.","C. I fly to Japan next month.","D. I am going to flying to Japan next month."],ans:1,expl:"已經排定、訂好的行程用「現在進行式表未來」：I'm flying…。這是母語者最常用的講法。"},
+    {q:"朋友說「這個袋子好重」，你當場決定要幫忙，要說？",opts:["A. I'm going to help you.","B. I'm helping you.","C. I'll help you.","D. I help you."],ans:2,expl:"說話當下才決定的事用 will（I'll help you）。going to 是「早就打算好」，用在這裡就不對了。"},
+    {q:"\"I'm going to look for a new job.\" 表示什麼？",opts:["A. 我正在找新工作","B. 我已經有打算要找新工作","C. 我剛剛才決定要找工作","D. 我一定會找到新工作"],ans:1,expl:"be going to 表示「先前就已經有這個打算、意圖」，不是當下臨時決定（那是 will），也不是正在進行。"},
+    {q:"下面哪一句是「預測」而不是「計畫」？",opts:["A. I'm meeting John at six.","B. I'm going to study tonight.","C. I think it'll rain tomorrow.","D. We're flying out on Monday."],ans:2,expl:"I think it'll rain 是根據判斷做的預測，用 will。其他三句都是已經排定或打算好的行動。"},
+    {q:"\"I haven't made up my mind yet.\" 意思是？",opts:["A. 我還沒改變心意","B. 我還沒決定","C. 我不想去","D. 我忘記了"],ans:1,expl:"make up one's mind = 下定決心／做出決定。所以 haven't made up my mind = 還沒決定好。"}
   ]
 },
 
 {
   id:"au04",
+  date:"2026-08-07",
   level:"B1",
   minutes:3,
   kind:"note",
@@ -224,7 +364,104 @@ notes:[
 },
 
 {
+  id:"au10",
+  date:"2026-08-07",
+  level:"B1",
+  minutes:3,
+  kind:"note",
+  title:"One Way or Return?",
+  titleCn:"單程還是來回？",
+  series:"本站自製聽力 · 取材自課堂筆記",
+  noteRef:"20260701 假設語氣與火車購票英文",
+  topic:"🚆 火車購票",
+  focus:"車站買票的實用問答，搭配 would / if 假設語氣：「如果我取消會怎樣」「我會建議你…」這類禮貌又不失明確的說法。",
+  intro:"Kai 走到車站的售票櫃檯，想買一張去慕尼黑的票，但他還不確定什麼時候回來。站務員 Mia 幫他比較單程票和來回票，也說明取消和改票要付多少錢。整段對話都是真的在車站會用到的句子，而且大量出現 would 和 if。",
+  tip:"第一次聽只要抓三個數字：幾點的車、加價多少、幾號月台。第二次再注意 Mia 每次給建議時是不是都用了 would 或 if。",
+  pre:[
+    {w:"ticket counter",ipa:"/ˈtɪkɪt ˈkaʊntər/",cn:"售票櫃檯",def:"The place at a station or airport where you buy tickets."},
+    {w:"timetable",ipa:"/ˈtaɪmˌteɪbl/",cn:"時刻表",def:"A list showing when trains, buses, or planes arrive and leave."},
+    {w:"one-way ticket",ipa:"/wʌn weɪ ˈtɪkɪt/",cn:"單程票",def:"A ticket for a trip to a place without coming back."},
+    {w:"return ticket",ipa:"/rɪˈtɜːrn ˈtɪkɪt/",cn:"來回票",def:"A ticket for a trip to a place and back again."},
+    {w:"cancellation fee",ipa:"/ˌkænsəˈleɪʃn fiː/",cn:"取消手續費",def:"Money you must pay if you cancel a booking."},
+    {w:"penalty",ipa:"/ˈpenəlti/",cn:"罰款、處罰",def:"Money you must pay as a punishment for breaking a rule."},
+    {w:"business class",ipa:"/ˈbɪznəs klæs/",cn:"商務艙",def:"A more expensive and comfortable class of travel on a plane, train, etc."},
+    {w:"platform",ipa:"/ˈplætˌfɔːrm/",cn:"月台",def:"The area beside the tracks at a train station where people wait for trains."}
+  ],
+  script:[
+    {sp:"Kai",en:"Excuse me, is this the ticket counter for the express trains?",cn:"不好意思，這裡是快車的售票櫃檯嗎？"},
+    {sp:"Mia",en:"It is. You're at the right ticket counter. Where are you going today?",cn:"是的，你找對售票櫃檯了。你今天要去哪裡？"},
+    {sp:"Kai",en:"Munich. I looked at the timetable online, but I couldn't tell which train is fastest.",cn:"慕尼黑。我在網路上看過時刻表，但我看不出來哪一班最快。"},
+    {sp:"Mia",en:"The timetable changed on Monday, so that's normal. The 9:40 gets you there in three hours.",cn:"時刻表星期一改過了，所以這很正常。九點四十那班三個小時就到。"},
+    {sp:"Kai",en:"Great. Would a one-way ticket be cheaper, or should I take a return ticket?",cn:"太好了。單程票會比較便宜，還是我應該買來回票？"},
+    {sp:"Mia",en:"If you know when you're coming back, the return ticket saves you about twenty percent.",cn:"如果你知道自己什麼時候回來，來回票可以幫你省大約兩成。"},
+    {sp:"Kai",en:"That's the problem. My meeting could run long.",cn:"問題就在這裡。我的會議可能會拖很久。"},
+    {sp:"Mia",en:"Then I'd just take the one-way ticket now and buy the second half later.",cn:"那我會建議你現在先買單程票，回程之後再買。"},
+    {sp:"Kai",en:"And if I booked the return and my plans changed, is there a cancellation fee?",cn:"那如果我訂了來回票、後來計畫變了，會有取消手續費嗎？"},
+    {sp:"Mia",en:"There's a small cancellation fee, but only if you cancel less than one day before.",cn:"會有一筆小額的取消手續費，不過只有在出發前一天以內取消才要付。"},
+    {sp:"Kai",en:"What if I simply miss the train? Would I have to pay a penalty?",cn:"那如果我只是錯過班車呢？我要付罰款嗎？"},
+    {sp:"Mia",en:"You'd pay a ten-euro penalty and take the next one. It's not a disaster.",cn:"你要付十歐元的罰款，然後搭下一班。沒那麼嚴重。"},
+    {sp:"Kai",en:"That's fair. Okay, one-way to Munich on the 9:40, please.",cn:"這算合理。好，那就麻煩九點四十到慕尼黑的單程票。"},
+    {sp:"Mia",en:"Sure. And if you'd like more space, business class is only fifteen euros more today.",cn:"沒問題。另外如果你想要寬敞一點，今天升等商務艙只要多十五歐元。"},
+    {sp:"Kai",en:"Fifteen? I'd be silly to say no. Business class, then.",cn:"十五？不加就太傻了。那就商務艙吧。"},
+    {sp:"Mia",en:"Done. Here's your ticket. Your train leaves from platform 7.",cn:"好了，這是你的車票。你的車在七號月台發車。"},
+    {sp:"Kai",en:"Platform 7. How early should I be there?",cn:"七號月台。我要提早多久到？"},
+    {sp:"Mia",en:"Ten minutes is plenty. Have a good trip.",cn:"提早十分鐘就很夠了。旅途愉快。"}
+  ],
+  questions:[
+    {q:"Why can't Kai decide between a one-way ticket and a return ticket?",opts:["A. He does not know how much money he has.","B. He is not sure when his meeting will finish.","C. He has never been to Munich before.","D. The return ticket is sold out."],ans:1,expl:"Kai 說 My meeting could run long，他不確定會議何時結束，所以無法決定回程時間。"},
+    {q:"What does Mia advise Kai to do?",opts:["A. Buy the one-way ticket now and the return part later.","B. Buy the return ticket and cancel it if needed.","C. Wait until tomorrow to buy anything.","D. Book online instead of at the counter."],ans:0,expl:"Mia 說 I'd just take the one-way ticket now and buy the second half later，先買單程、之後再買回程。"},
+    {q:"When does the passenger have to pay a cancellation fee?",opts:["A. Every time a ticket is cancelled.","B. Only for business class tickets.","C. Only if you cancel less than one day before.","D. Only if you cancel on the platform."],ans:2,expl:"Mia 說 only if you cancel less than one day before，出發前一天以內取消才要付。"},
+    {q:"What happens if Kai misses his train?",opts:["A. His ticket becomes useless.","B. He pays a ten-euro penalty and takes the next train.","C. He must buy a new return ticket.","D. He gets a free upgrade to business class."],ans:1,expl:"Mia 說 You'd pay a ten-euro penalty and take the next one，付十歐元罰款後搭下一班。"},
+    {q:"In this dialogue, \"timetable\" means:",opts:["A. the price list for tickets","B. the number of the platform","C. the list of train arrival and departure times","D. the rules about cancelling a ticket"],ans:2,expl:"timetable 是時刻表，也就是列出班次到站與發車時間的表，對應 The timetable changed on Monday。"}
+  ]
+},
+
+{
+  id:"vlog04",
+  date:"2026-08-07",
+  level:"B1+",
+  minutes:8,
+  kind:"note",
+  title:"A Day in My Life",
+  titleCn:"我的一天",
+  series:"本站自製聽力 · 生活作息主題",
+  topic:"🌞 一日作息",
+  focus:"把日常動作講成完整句子（動詞片語 + 時間副詞）",
+  intro:"把一天從早到晚的動作用完整句子講出來，每一句都是「時間副詞 + 動詞片語」。重點不是背單字，而是把整個語塊一起記住，開口時句子才會自然跑出來。",
+  tip:"刻意模仿句子的長度，不要只講一個單字。練到不用想就能說出 In the afternoon, I… 這種完整句子就成功了。",
+  pre:[
+    {w:"curtains",ipa:"/ˈkɜːrtnz/",cn:"窗簾",def:"Cloth that covers a window."},
+    {w:"take the dog for a walk",ipa:"/teɪk ðə dɔːɡ fɔːr ə wɔːk/",cn:"帶狗去散步",def:"To walk outside with your dog."},
+    {w:"feed",ipa:"/fiːd/",cn:"餵（食）",def:"To give food to a person or animal."},
+    {w:"chores",ipa:"/tʃɔːrz/",cn:"家事、雜務",def:"Small jobs you have to do at home."},
+    {w:"do the dishes",ipa:"/duː ðə ˈdɪʃɪz/",cn:"洗碗",def:"To wash the plates and cups after a meal."},
+    {w:"head out",ipa:"/hed aʊt/",cn:"出發、動身",def:"To leave a place and go somewhere."},
+    {w:"wrap up",ipa:"/ræp ʌp/",cn:"收尾、結束",def:"To finish something."},
+    {w:"go to bed",ipa:"/ɡoʊ tuː bed/",cn:"上床睡覺",def:"To get into bed to sleep."}
+  ],
+  script:[
+    {en:"I wake up early and open the curtains.",cn:"我早起，把窗簾拉開。"},
+    {en:"After breakfast, I take the dog for a walk.",cn:"吃完早餐，我帶狗去散步。"},
+    {en:"In the morning, I answer emails at my desk.",cn:"早上我在書桌前回電子郵件。"},
+    {en:"At noon, I make myself a simple lunch.",cn:"中午我幫自己做個簡單的午餐。"},
+    {en:"In the afternoon, I head out and do some work outside.",cn:"下午我出門，到外面做點事。"},
+    {en:"Before dinner, I feed the animals and do a few chores.",cn:"晚餐前我餵動物、做一些家事。"},
+    {en:"After we eat, I do the dishes and wrap up for the day.",cn:"吃完飯，我洗碗，然後把一天收尾。"},
+    {en:"In the evening, we sit down and watch TV together.",cn:"晚上我們坐下來一起看電視。"},
+    {en:"I usually go to bed around eleven.",cn:"我通常十一點左右上床睡覺。"}
+  ],
+  questions:[
+    {q:"時間副詞片語 in the morning / at noon 通常放在句子的哪裡？",opts:["A. 只能放句尾","B. 只能放句首","C. 句首或句尾都可以","D. 一定要放在動詞前面"],ans:2,expl:"In the morning, I answer emails. ＝ I answer emails in the morning. 兩種都對；放句首時後面通常加逗號，語氣上會強調時間。"},
+    {q:"哪一個介系詞搭配正確？",opts:["A. in noon / at the morning","B. at noon / in the morning","C. on noon / on the morning","D. at noon / on the morning"],ans:1,expl:"固定搭配：at noon、at night，但 in the morning / in the afternoon / in the evening。這組很常考也很常錯。"},
+    {q:"「帶狗去散步」正確說法是？",opts:["A. I walk with my dog outside.","B. I take my dog to walk.","C. I take the dog for a walk.","D. I bring the dog walking."],ans:2,expl:"固定用法是 take + 對象 + for a walk。也可以直接說 I walk the dog（walk 當及物動詞用）。"},
+    {q:"\"do the dishes\" 是什麼意思？",opts:["A. 做菜","B. 洗碗","C. 擺餐具","D. 買碗盤"],ans:1,expl:"do the dishes = 洗碗（wash the dishes 也可以）。注意「做菜」是 cook 或 make dinner。"},
+    {q:"Bob 用完整句子而不是單字描述動作，對學習者的好處是？",opts:["A. 可以背比較多單字","B. 動詞、介系詞、時間副詞整組一起記住，之後能直接說出整句","C. 影片會比較短","D. 不用學文法"],ans:1,expl:"跟讀整句的價值就在這裡：語塊（chunk）一起進腦袋，開口時不必臨時組裝文法，句子自然會出來。"}
+  ]
+},
+
+{
   id:"au05",
+  date:"2026-08-05",
   level:"B1",
   minutes:3,
   kind:"note",
@@ -274,7 +511,259 @@ notes:[
 },
 
 {
+  id:"au11",
+  date:"2026-08-05",
+  level:"B1",
+  minutes:3,
+  kind:"note",
+  title:"A Pessimist Who Shows Up",
+  titleCn:"一個會出現的悲觀者",
+  series:"本站自製聽力 · 取材自課堂筆記",
+  noteRef:"20260730 作業複習、樂觀悲觀與 Hugh Laurie",
+  topic:"🙂 樂觀與悲觀",
+  focus:"描述個性的形容詞與名詞（optimist / pessimist / talented / passionate），以及用 constantly、be passionate about 這類說法談一個人的習慣和熱情。",
+  intro:"Lily 和 Ben 聊到影集《怪醫豪斯》的主角，順便聊起演員 Hugh Laurie 本人。House 醫生是有名的悲觀者，但演他的人其實既有才華又充滿熱忱。兩個人最後談到一個很實際的問題：你一定要樂觀，才能持續做下去嗎？",
+  tip:"先聽出誰說自己是 optimist、誰比較像 pessimist。第二次再注意 constantly 和 passionate about 各出現在什麼句子裡。",
+  pre:[
+    {w:"optimist",ipa:"/ˈɒptɪmɪst/",cn:"樂觀者、樂天派",def:"A person who always expects good things to happen."},
+    {w:"pessimist",ipa:"/ˈpesɪmɪst/",cn:"悲觀者",def:"A person who expects bad things to happen."},
+    {w:"main character",ipa:"/meɪn ˈkærəktər/",cn:"主角",def:"The most important person in a story, film or TV series."},
+    {w:"constantly",ipa:"/ˈkɑːnstəntli/",cn:"持續地、不斷地",def:"Happening again and again without stopping."},
+    {w:"talented",ipa:"/ˈtæləntɪd/",cn:"有才華的",def:"Very good at doing something."},
+    {w:"album",ipa:"/ˈælbəm/",cn:"專輯",def:"A collection of songs on a CD or online."},
+    {w:"passionate",ipa:"/ˈpæʃənət/",cn:"充滿熱忱的",def:"Having very strong feelings about something you love."},
+    {w:"hit",ipa:"/hɪt/",cn:"熱門作品（很成功、很受歡迎）",def:"Something very popular and successful, such as a TV series or song."}
+  ],
+  script:[
+    {sp:"Lily",en:"Ben, be honest with me. Are you an optimist or a pessimist?",cn:"Ben，老實跟我說。你是樂觀的人還是悲觀的人？"},
+    {sp:"Ben",en:"A realist. Which, according to my sister, is just a pessimist with better manners.",cn:"我是務實的人。不過照我姐的說法，那只是比較有禮貌的悲觀者。"},
+    {sp:"Lily",en:"That sounds exactly like Dr. House.",cn:"這聽起來根本就是 House 醫生。"},
+    {sp:"Ben",en:"The main character in that old medical series?",cn:"那部舊醫療影集的主角嗎？"},
+    {sp:"Lily",en:"Yes. He's the main character, and he's constantly telling everyone that the worst thing will happen.",cn:"對。他就是主角，而且他不斷地告訴所有人最糟的事一定會發生。"},
+    {sp:"Ben",en:"And he's usually right, isn't he? That's the annoying part.",cn:"而且他通常都說對了，對吧？這才是討厭的地方。"},
+    {sp:"Lily",en:"Sometimes. But the actor is nothing like him. Hugh Laurie is incredibly talented.",cn:"有時候啦。不過演員本人跟他完全不一樣。Hugh Laurie 非常有才華。"},
+    {sp:"Ben",en:"Talented how? I only know him from the show.",cn:"哪方面有才華？我只從那部戲認識他。"},
+    {sp:"Lily",en:"He plays the piano, he sings, and he even recorded a blues album.",cn:"他會彈鋼琴、會唱歌，甚至還錄過一張藍調專輯。"},
+    {sp:"Ben",en:"An album? Really? A grumpy doctor who makes records.",cn:"專輯？真的假的？一個脾氣很差的醫生還出唱片。"},
+    {sp:"Lily",en:"He's passionate about music. He said acting paid the bills, but music kept him happy.",cn:"他對音樂充滿熱忱。他說演戲是為了生活，但音樂讓他保持快樂。"},
+    {sp:"Ben",en:"Okay, that's impressive. Was the show a hit right from the start?",cn:"好吧，這確實厲害。那部戲一開始就很紅嗎？"},
+    {sp:"Lily",en:"It became a huge hit, but he never expected it. He thought it would be cancelled in six weeks.",cn:"它後來變成超級熱門影集，但他從沒料到。他以為六個星期就會被停播。"},
+    {sp:"Ben",en:"See? Pessimist.",cn:"你看吧？悲觀者。"},
+    {sp:"Lily",en:"Maybe. But he kept working anyway. That's the part I actually like.",cn:"也許吧。但他還是繼續做下去。這才是我真正欣賞的地方。"},
+    {sp:"Ben",en:"So an optimist says this will work, and he said this won't work and did it anyway.",cn:"所以樂觀的人會說「這會成功」，而他是說「這不會成功」然後照做不誤。"},
+    {sp:"Lily",en:"Exactly. You don't have to feel hopeful every morning to keep going.",cn:"沒錯。你不必每天早上都充滿希望，才能繼續前進。"},
+    {sp:"Ben",en:"Fine. I'll be a pessimist who shows up. That sounds achievable.",cn:"好吧。那我就當一個會出現的悲觀者。這聽起來做得到。"}
+  ],
+  questions:[
+    {q:"How does Ben describe himself at the beginning?",opts:["A. As an optimist.","B. As a realist.","C. As a musician.","D. As a doctor."],ans:1,expl:"Ben 一開始說 A realist，並開玩笑說那只是比較有禮貌的悲觀者。"},
+    {q:"What does Lily say about the main character of the medical series?",opts:["A. He constantly expects the worst to happen.","B. He is always kind to his patients.","C. He gave up medicine to play music.","D. He is the most hopeful person on the show."],ans:0,expl:"Lily 說 he's constantly telling everyone that the worst thing will happen，主角不斷預期最糟的結果。"},
+    {q:"Why does Lily think Hugh Laurie is talented?",opts:["A. Because he wrote the TV series himself.","B. Because he speaks several languages.","C. Because he plays piano, sings, and recorded an album.","D. Because he trained as a real doctor."],ans:2,expl:"Lily 說他會彈鋼琴、唱歌，甚至錄過一張藍調專輯，所以說他非常有才華。"},
+    {q:"What did the actor think about the show at the start?",opts:["A. He thought it would win many prizes.","B. He thought it would be cancelled in six weeks.","C. He thought it would run for ten years.","D. He refused to join the show."],ans:1,expl:"Lily 說 He thought it would be cancelled in six weeks，他沒想到這部戲會變成熱門作品。"},
+    {q:"In this dialogue, \"passionate about\" means:",opts:["A. worried about something","B. having very strong feelings about something you love","C. very good at explaining something","D. paid a lot of money for something"],ans:1,expl:"be passionate about 是「對……充滿熱忱」，對應 He's passionate about music。"}
+  ]
+},
+
+{
+  id:"vlog02",
+  date:"2026-08-05",
+  level:"B1",
+  minutes:5,
+  kind:"note",
+  title:"How to Talk About Your Daily Routine",
+  titleCn:"怎麼談你的一天",
+  series:"本站自製聽力 · 生活作息主題",
+  topic:"🕘 日常作息",
+  focus:"用現在簡單式描述習慣與例行公事",
+  intro:"兩個人互相問「你每天都做什麼」，示範怎麼用現在簡單式講習慣，以及回答完之後怎麼把問題丟回去——這是英語會話最常用的接話方式。",
+  tip:"特別注意頻率副詞的位置：usually、hardly ever 放在一般動詞前面，但 be 動詞要放後面。跟讀完，換成自己的作息再講一次。",
+  pre:[
+    {w:"routine",ipa:"/ruːˈtiːn/",cn:"例行公事、固定作息",def:"The things you normally do every day."},
+    {w:"usually",ipa:"/ˈjuːʒuəli/",cn:"通常",def:"Most of the time."},
+    {w:"hardly ever",ipa:"/ˈhɑːrdli ˈevər/",cn:"幾乎不",def:"Almost never."},
+    {w:"sleep in",ipa:"/sliːp ɪn/",cn:"睡晚一點、賴床",def:"To sleep later than usual, often on weekends."},
+    {w:"take it easy",ipa:"/teɪk ɪt ˈiːzi/",cn:"放輕鬆、不趕",def:"To relax and not work hard."},
+    {w:"work from home",ipa:"/wɜːrk frʌm hoʊm/",cn:"在家工作",def:"To do your job at home instead of an office."},
+    {w:"How about you?",ipa:"/haʊ əˈbaʊt juː/",cn:"那你呢？",def:"A way to ask the same question back."}
+  ],
+  script:[
+    {en:"So what is your daily routine like?",cn:"那你每天的作息大概是怎樣？"},
+    {en:"What do you usually do in the morning?",cn:"你早上通常都做什麼？"},
+    {en:"I usually get up around seven.",cn:"我通常七點左右起床。"},
+    {en:"I don't have much time, so I eat breakfast quickly.",cn:"我時間不多，所以早餐吃很快。"},
+    {en:"How about you? What's your morning like?",cn:"那你呢？你早上都怎麼過？"},
+    {en:"I work from home, so I start at nine.",cn:"我在家工作，所以九點才開始。"},
+    {en:"On weekends I sleep in and take it easy.",cn:"週末我會賴床、放輕鬆。"},
+    {en:"I hardly ever go out during the week.",cn:"平常上班日我幾乎不出門。"},
+    {en:"That sounds nice. Mine is a lot busier.",cn:"聽起來不錯。我的行程忙多了。"}
+  ],
+  questions:[
+    {q:"問對方「你的日常作息」最自然的說法是？",opts:["A. What do you do every day always?","B. What's your daily routine?","C. How is your everyday?","D. What you do in a day?"],ans:1,expl:"What's your daily routine? 是最自然的問法。也可以說 What do you usually do in the morning?"},
+    {q:"頻率副詞 usually 應該放在哪裡？",opts:["A. I get up usually at seven.","B. Usually I get up at seven. / I usually get up at seven.","C. I get at seven usually up.","D. I am usually get up at seven."],ans:1,expl:"頻率副詞放在一般動詞「前面」（I usually get up），或整句開頭（Usually, I…）。但 be 動詞要放「後面」：I am usually tired."},
+    {q:"\"I hardly ever go out.\" 的意思是？",opts:["A. 我很努力出門","B. 我幾乎不出門","C. 我常常出門","D. 我很難出門"],ans:1,expl:"hardly ever = 幾乎從不。注意 hardly 不是 hard（努力）的副詞，它本身就是否定意味的字。"},
+    {q:"\"sleep in\" 是什麼意思？",opts:["A. 在室內睡覺","B. 睡過頭遲到","C. 比平常晚起（通常是週末刻意的）","D. 睡在別人家"],ans:2,expl:"sleep in = 刻意睡晚一點，通常是假日。不小心睡過頭是 oversleep。"},
+    {q:"對方講完自己的作息後，要把問題丟回去，最自然的一句是？",opts:["A. And you too?","B. How about you?","C. Same you?","D. What about of you?"],ans:1,expl:"How about you? 或 What about you? 都可以，是英語會話裡最常用的接話方式。"}
+  ]
+},
+
+{
+  id:"au03",
+  date:"2026-07-31",
+  level:"B1",
+  minutes:3,
+  kind:"note",
+  title:"Is Money Really the Root of All Evil?",
+  titleCn:"金錢真的是萬惡之源嗎？",
+  series:"本站自製聽力 · 取材自課堂筆記",
+  noteRef:"20260122 Money Makes the World Go Round",
+  topic:"💰 金錢觀",
+  focus:"表達不同意與提出反例的句型：That's not... that's...、So you'd blame...、如何用一個比喻收尾。",
+  intro:"Nina 和 Tom 在爭論一句老話：「金錢是萬惡之源。」Tom 舉貪污和血汗勞工當證據，Nina 卻認為問題不在錢，而在人的貪婪和分配方式。這是一段很典型的英文觀點辯論，語速自然、句子不長，很適合練習「聽出立場」。",
+  tip:"聽的時候把兩個人的立場各記一句話。特別注意 Nina 每次反駁都用同一個句型：That's not X, that's Y。",
+  pre:[
+    {w:"root of all evil",ipa:"/ruːt əv ɔːl ˈiː.vəl/",cn:"萬惡之源",def:"a saying used to describe something believed to be the main cause of bad things"},
+    {w:"expression",ipa:"/ɪkˈspreʃ.ən/",cn:"詞語、措詞",def:"a word or phrase used in a particular way."},
+    {w:"evil",ipa:"/ˈiː.vəl/",cn:"邪惡；壞事",def:"morally very bad, or something morally very bad"},
+    {w:"greed",ipa:"/ɡriːd/",cn:"貪婪",def:"a strong desire to have more money or things than you need"},
+    {w:"corruption",ipa:"/kəˈrʌp.ʃən/",cn:"貪污；腐敗",def:"dishonest or illegal behavior by people in power, especially for money"},
+    {w:"slave labour",ipa:"/sleɪv ˈleɪ.bər/",cn:"奴工；強迫勞動",def:"work that people are forced to do for little or no pay"},
+    {w:"loads of",ipa:"/loʊdz əv/",cn:"許多的（口語）",def:"a large amount or number of something, used in informal speech"},
+    {w:"share out",ipa:"/ʃer aʊt/",cn:"分配；分享",def:"to divide something among a group of people so everyone gets a part"}
+  ],
+  script:[
+    {sp:"Nina",en:"Tom, do you know the expression “money is the root of all evil”?",cn:"Tom，你知道那句話嗎：「金錢是萬惡之源」？"},
+    {sp:"Tom",en:"Of course. My grandmother said it about once a week.",cn:"當然知道。我奶奶大概每週都要講一次。"},
+    {sp:"Nina",en:"I've never really agreed with it. Money is just paper.",cn:"我其實從來不同意這句話。錢不過就是紙。"},
+    {sp:"Tom",en:"Maybe, but look at the news. Corruption, politicians taking money under the table...",cn:"也許吧，但你看看新聞。貪污、政治人物私下收錢……"},
+    {sp:"Nina",en:"That's not money being evil. That's people being greedy.",cn:"那不是錢在作惡，那是人在貪心。"},
+    {sp:"Tom",en:"So you'd blame greed instead?",cn:"所以你反而會怪貪婪囉？"},
+    {sp:"Nina",en:"Yes. Greed is the problem, not the money itself.",cn:"對。問題出在貪婪，而不是錢本身。"},
+    {sp:"Tom",en:"Fair enough. But some companies make loads of money using slave labour. That feels pretty evil to me.",cn:"有道理。可是有些公司靠奴工賺了大把的錢。這在我看來就相當邪惡。"},
+    {sp:"Nina",en:"It is evil. But that's a choice someone made. The money didn't decide anything.",cn:"那確實是邪惡。但那是有人做出的選擇，錢自己什麼都沒決定。"},
+    {sp:"Tom",en:"Okay, then if money is neutral, why does it cause so much trouble?",cn:"好，那如果錢是中立的，它為什麼會造成這麼多麻煩？"},
+    {sp:"Nina",en:"Because we never share out anything fairly. A small group holds most of it.",cn:"因為我們從來沒有公平地分配過任何東西。一小群人握著大部分的錢。"},
+    {sp:"Tom",en:"So the real question is how we share out what we already have.",cn:"所以真正的問題是，我們怎麼分配已經有的東西。"},
+    {sp:"Nina",en:"Exactly. Give the same money to a good government and you get schools and hospitals.",cn:"完全正確。把同樣的錢給一個好政府，你得到的是學校和醫院。"},
+    {sp:"Tom",en:"And give it to a bad one and you get corruption.",cn:"給一個壞政府，你得到的就是貪污。"},
+    {sp:"Nina",en:"Right. So the expression is wrong. Money isn't the root of all evil. It's a mirror.",cn:"沒錯。所以那句話是錯的。金錢不是萬惡之源，它是一面鏡子。"},
+    {sp:"Tom",en:"A mirror. I like that. I'm still going to worry about my rent, though.",cn:"一面鏡子。我喜歡這個說法。不過我還是會擔心我的房租。"},
+    {sp:"Nina",en:"That's not greed. That's Taipei.",cn:"那不是貪婪，那叫台北。"}
+  ],
+  questions:[
+    {q:"Which expression are Nina and Tom discussing?",opts:["A. Time is money.","B. Money is the root of all evil.","C. Money talks.","D. Money can't buy happiness."],ans:1,expl:"Nina 一開頭就問 do you know the expression “money is the root of all evil”。"},
+    {q:"What does Nina believe is the real problem?",opts:["A. Money itself","B. Banks and interest rates","C. Human greed and the choices people make","D. Old sayings from grandparents"],ans:2,expl:"Nina 說 That's not money being evil. That's people being greedy.，並且說 Greed is the problem, not the money itself。"},
+    {q:"What example does Tom use to argue that money can be evil?",opts:["A. Companies making loads of money using slave labour","B. People saving too much for retirement","C. Governments building schools and hospitals","D. His grandmother's weekly advice"],ans:0,expl:"Tom 舉的例子是有些公司靠 slave labour 賺 loads of money。"},
+    {q:"In this dialogue, \"share out\" means:",opts:["A. to tell someone a secret","B. to divide something among a group of people","C. to sell something at a low price","D. to keep money in a bank"],ans:1,expl:"share out 是把東西分配給一群人；Nina 說 we never share out anything fairly，指分配不公。"},
+    {q:"What does Nina compare money to at the end?",opts:["A. A weapon","B. A river","C. A mirror","D. A machine"],ans:2,expl:"Nina 最後說 Money isn't the root of all evil. It's a mirror.（錢是一面鏡子，映照出人的樣子）。"}
+  ]
+},
+
+{
+  id:"au08",
+  date:"2026-07-31",
+  level:"B1",
+  minutes:3,
+  kind:"note",
+  title:"Understanding Taiwan's Health Insurance",
+  titleCn:"認識台灣的健保",
+  series:"本站自製聽力 · 取材自課堂筆記",
+  noteRef:"20260226 健康保險 Health Insurance",
+  topic:"💳 健康保險",
+  focus:"用簡單的英文解釋制度：誰付錢、保險給付什麼、和私人保險的差別。",
+  intro:"David 是剛來台灣工作的外國同事，他看到薪資單上有一筆看不懂的扣款。同事 Lisa 用簡單的英文向他解釋全民健保是什麼、怎麼收費、又給付哪些項目。",
+  tip:"這種「解釋制度」的對話會有很多數字和專有名詞。聽的時候先分清楚「誰付錢」和「付什麼」兩件事，數字可以第二次再補。",
+  pre:[
+    {w:"National Health Insurance (NHI)",ipa:"/ˈnæʃənəl hɛlθ ɪnˈʃʊrəns/",cn:"全民健康保險",def:"Taiwan's government program that helps everyone pay for medical care."},
+    {w:"government program",ipa:"/ˈgʌvərnmənt ˈproʊˌgræm/",cn:"政府計畫",def:"a system or plan that is organized and run by the government."},
+    {w:"monthly fee",ipa:"/ˈmʌnθli fi/",cn:"每月費用",def:"an amount of money that you have to pay every month."},
+    {w:"employer",ipa:"/ɪmˈplɔɪər/",cn:"雇主",def:"the person or company that you work for and that pays your salary."},
+    {w:"covered by insurance",ipa:"/ˈkʌvərd baɪ ɪnˈʃʊrəns/",cn:"由保險支付",def:"paid for by an insurance plan instead of by yourself."},
+    {w:"medical expenses",ipa:"/ˈmɛdɪkəl ɪkˈspɛnsɪz/",cn:"醫療費用／醫療開銷",def:"the total money spent on healthcare, doctors, and medicine, often emphasizing the cost or spending."},
+    {w:"private insurance",ipa:"/ˈpraɪvɪt ɪnˈʃʊrəns/",cn:"私人保險",def:"an insurance plan that a person buys themselves rather than getting from the government."},
+    {w:"affordable",ipa:"/əˈfɔːrdəbl/",cn:"負擔得起的／便宜的",def:"not too expensive, so that ordinary people can pay for it."}
+  ],
+  script:[
+    {sp:"David",en:"Lisa, I just got my first payslip in Taiwan, and there's one deduction I don't understand.",cn:"Lisa，我剛拿到在台灣的第一張薪資單，上面有一筆扣款我看不懂。"},
+    {sp:"Lisa",en:"Let me have a look. Ah, that one is for the National Health Insurance (NHI).",cn:"我看看。啊，那一筆是全民健康保險的費用。"},
+    {sp:"David",en:"What exactly is that? Is it the same as buying insurance from a company?",cn:"那到底是什麼？跟向保險公司買保險一樣嗎？"},
+    {sp:"Lisa",en:"No, it's a government program that helps everyone in Taiwan pay for medical care.",cn:"不一樣，那是一個政府計畫，幫助在台灣的每個人負擔醫療照護的費用。"},
+    {sp:"David",en:"So everyone has to join? Even foreign workers like me?",cn:"所以每個人都要加入？連我這種外籍工作者也要嗎？"},
+    {sp:"Lisa",en:"Yes, everyone. You pay a small monthly fee, and your employer pays part of it too.",cn:"對，每個人都要。你每個月付一筆小額費用，你的雇主也會幫你負擔一部分。"},
+    {sp:"David",en:"That explains why my company took some money as well. How much do they pay?",cn:"難怪我的公司也扣了一些錢。他們付多少？"},
+    {sp:"Lisa",en:"Your employer covers about sixty percent, so your own part stays affordable.",cn:"你的雇主大約負擔六成，所以你自己要付的部分是負擔得起的。"},
+    {sp:"David",en:"And what does the card actually pay for?",cn:"那這張卡實際上給付什麼？"},
+    {sp:"Lisa",en:"Most doctor visits, medicine, and hospital stays are covered by insurance. You only pay a small fee at the counter.",cn:"大部分的看診、藥品和住院都由保險支付。你在櫃檯只需要付一小筆錢。"},
+    {sp:"David",en:"In my country, medical expenses can be really high. One night in the hospital costs a fortune.",cn:"在我的國家，醫療費用可能非常高。住院一晚就要花一大筆錢。"},
+    {sp:"Lisa",en:"Here it's much cheaper. That's why many people say the NHI is one of the best things about living in Taiwan.",cn:"這裡便宜多了。所以很多人說健保是住在台灣最棒的事情之一。"},
+    {sp:"David",en:"Do people still buy private insurance, then?",cn:"那大家還會買私人保險嗎？"},
+    {sp:"Lisa",en:"Some do. Private insurance helps with things the NHI doesn't cover, like a single room or expensive cancer drugs.",cn:"有些人會。私人保險可以支付健保不給付的項目，像是單人病房或昂貴的癌症用藥。"},
+    {sp:"David",en:"I see. So the government plan is the base, and private insurance is the extra layer.",cn:"我懂了。所以政府的計畫是基礎，私人保險是額外的一層。"},
+    {sp:"Lisa",en:"Exactly. For most families, that monthly fee is definitely worth it.",cn:"沒錯。對大多數家庭來說，那筆每月費用絕對值得。"}
+  ],
+  questions:[
+    {q:"What was the deduction on David's payslip for?",opts:["A. Income tax","B. National Health Insurance","C. His apartment rent","D. A company lunch plan"],ans:1,expl:"Lisa 說「that one is for the National Health Insurance (NHI)」。"},
+    {q:"Who helps David pay for the insurance?",opts:["A. His landlord","B. His employer","C. His family back home","D. Nobody — he pays it all"],ans:1,expl:"Lisa 說「your employer pays part of it too」，而且大約負擔六成。"},
+    {q:"About what percentage does the employer cover?",opts:["A. About 20 percent","B. About 40 percent","C. About 60 percent","D. 100 percent"],ans:2,expl:"對話中提到「Your employer covers about sixty percent」。"},
+    {q:"According to Lisa, what does private insurance help with?",opts:["A. Things the NHI does not cover","B. Exactly the same things as the NHI","C. Paying the rent","D. Buying plane tickets home"],ans:0,expl:"Lisa 說私人保險用來支付健保不給付的項目，例如單人病房或昂貴的癌症用藥。"},
+    {q:"What does \"affordable\" mean?",opts:["A. Very expensive","B. Not too expensive to pay for","C. Completely free","D. Against the law"],ans:1,expl:"affordable 是「負擔得起的」，指價格不會太貴，一般人付得起。"}
+  ]
+},
+
+{
+  id:"au13",
+  date:"2026-07-31",
+  level:"B1",
+  minutes:3,
+  kind:"note",
+  title:"Who Will Lead the Reading Program?",
+  titleCn:"誰來帶這個閱讀計畫？",
+  series:"本站自製聽力 · 取材自課堂筆記",
+  noteRef:"20251016 社區教育計畫 Community Project",
+  topic:"🤝 社區計畫",
+  focus:"談社區計畫時常用的抽象名詞（opportunity、leadership、responsibility、confidence、achievement），以及怎麼用英文接下一個角色、同時誠實說出自己的緊張。",
+  intro:"市政府核准了一年的補助，社區的課後閱讀計畫要正式開跑。Leo 想請 Grace 出來帶團隊，Grace 卻擔心自己沒帶過人，也怕站在四十位家長面前講話。這段對話示範了怎麼談責任、談自信，也示範了怎麼在答應之前先提出自己的條件。",
+  tip:"第一次聽先抓「Grace 最後有沒有答應、她提出什麼條件」。第二次再注意那些 -ship、-ility、-ment 結尾的名詞，聽聽看它們各出現在什麼情境。",
+  pre:[
+    {w:"community",ipa:"/kəˈmjuː.nə.ti/",cn:"社區",def:"A group of people who live in the same area or share something in common."},
+    {w:"opportunity",ipa:"/ˌɑː.pɚˈtuː.nə.t̬i/",cn:"機會、機遇",def:"a chance to do something."},
+    {w:"leadership",ipa:"/ˈliː.də.ʃɪp/",cn:"領導力",def:"The ability to guide or direct a group of people."},
+    {w:"responsibility",ipa:"/rɪˌspɒn.sɪˈbɪl.ə.ti/",cn:"責任感",def:"A duty or job that you are expected to do."},
+    {w:"nervous",ipa:"/ˈnɜː.vəs/",cn:"緊張的",def:"Feeling worried or afraid about something that is going to happen."},
+    {w:"audience",ipa:"/ˈɔː.di.əns/",cn:"觀眾",def:"A group of people who watch or listen to a show or speech."},
+    {w:"confidence",ipa:"/ˈkɒn.fɪ.dəns/",cn:"自信",def:"A feeling of trust in your own abilities."},
+    {w:"achievement",ipa:"/əˈtʃiːv.mənt/",cn:"成就",def:"Something good that you succeed in doing through effort."}
+  ],
+  script:[
+    {sp:"Leo",en:"Grace, good news. The city office approved our funding. The community reading program runs for a whole year.",cn:"Grace，好消息。市政府核准我們的補助了。社區閱讀計畫可以辦整整一年。"},
+    {sp:"Grace",en:"A whole year? That's a real opportunity for the kids around here.",cn:"整整一年？這對這附近的孩子來說是個真正的機會。"},
+    {sp:"Leo",en:"I know. Most of them have never had a free class after school before.",cn:"我知道。他們大部分從來沒上過免費的課後班。"},
+    {sp:"Grace",en:"So who takes the leadership role? Somebody has to organize the volunteers.",cn:"那誰來擔任領導的角色？總得有人來組織志工。"},
+    {sp:"Leo",en:"I was hoping you would. You've been running the Saturday group since March.",cn:"我本來就希望是你。你從三月就一直在帶週六的班了。"},
+    {sp:"Grace",en:"Honestly, that's a lot of responsibility. I've never managed a team before.",cn:"老實說，那是很大的責任。我沒有帶過團隊。"},
+    {sp:"Leo",en:"Nobody has, the first time. You learn it by doing it.",cn:"第一次的時候大家都沒帶過。這種事是做中學的。"},
+    {sp:"Grace",en:"I'm also a bit nervous about the parents' meeting on Friday.",cn:"我對星期五的家長會也有點緊張。"},
+    {sp:"Leo",en:"Why? You know this program better than anyone in the room.",cn:"為什麼？在場沒有人比你更了解這個計畫。"},
+    {sp:"Grace",en:"Standing in front of an audience of forty adults isn't the same as teaching eight children.",cn:"站在四十位大人面前，跟教八個小孩完全不是同一回事。"},
+    {sp:"Leo",en:"That's fair. But your confidence has grown a lot this year. I've watched it happen.",cn:"這說得有理。但你今年的自信成長了很多。我都看在眼裡。"},
+    {sp:"Grace",en:"Maybe. Last year I wouldn't even read the announcements out loud.",cn:"也許吧。去年我連公告都不敢念出來。"},
+    {sp:"Leo",en:"Exactly. For someone that shy, that's already an achievement.",cn:"就是說啊。以一個那麼害羞的人來說，那已經算是一項成就了。"},
+    {sp:"Grace",en:"All right, I'll take the role. But I want two co-leaders working with me.",cn:"好吧，我接下這個角色。但我要有兩位共同負責人跟我一起。"},
+    {sp:"Leo",en:"Deal. Shall we ask Ray and Ms Lin?",cn:"成交。我們要不要問問 Ray 和林老師？"},
+    {sp:"Grace",en:"Yes. And let's keep the talk short - twenty minutes, then open questions.",cn:"好。而且我們把報告講短一點 - 二十分鐘，然後開放提問。"},
+    {sp:"Leo",en:"Good call. A short talk to a friendly audience. Nothing to be nervous about.",cn:"好主意。對著友善的聽眾講一小段。沒什麼好緊張的。"},
+    {sp:"Grace",en:"We'll see on Friday. But I do think this community will get behind it.",cn:"星期五就知道了。不過我真的覺得這個社區會支持這件事。"}
+  ],
+  questions:[
+    {q:"How long will the community reading program run?",opts:["A. Three months","B. Six months","C. One whole year","D. Two years"],ans:2,expl:"Leo 一開始就說 The community reading program runs for a whole year，市政府核准了一年的補助。"},
+    {q:"Why does Leo want Grace to take the leadership role?",opts:["A. She has been running the Saturday group since March.","B. She works at the city office.","C. She is the only volunteer left.","D. She has managed several teams before."],ans:0,expl:"Leo 說 You've been running the Saturday group since March，理由是她已經帶了半年多的週六班；她自己也說從沒帶過團隊。"},
+    {q:"What makes Grace nervous?",opts:["A. Teaching eight children on Saturday","B. Speaking to an audience of forty parents","C. Losing the funding from the city","D. Working together with Ray and Ms Lin"],ans:1,expl:"Grace 說對星期五的家長會緊張，因為 standing in front of an audience of forty adults 跟教八個小孩不一樣。"},
+    {q:"What condition does Grace give before accepting the role?",opts:["A. She wants to be paid for the work.","B. She wants the meeting to be cancelled.","C. She wants two co-leaders to work with her.","D. She wants to start only next year."],ans:2,expl:"她說 I'll take the role. But I want two co-leaders working with me. 答應了，但要求有兩位共同負責人。"},
+    {q:"In this dialogue, \"achievement\" means:",opts:["A. a duty that somebody expects you to do","B. a group of people listening to a speech","C. a chance to do something new","D. something good you succeed in doing through effort"],ans:3,expl:"achievement 是「成就」，指靠努力做成的好事；Leo 說對害羞的人來說，敢念公告已經是一項成就了。"}
+  ]
+},
+
+{
   id:"au06",
+  date:"2026-07-29",
   level:"B1",
   minutes:3,
   kind:"note",
@@ -326,107 +815,8 @@ notes:[
 },
 
 {
-  id:"au07",
-  level:"B1",
-  minutes:3,
-  kind:"note",
-  title:"At the Doctor's Office",
-  titleCn:"在診所看醫生",
-  series:"本站自製聽力 · 取材自課堂筆記",
-  noteRef:"20260305 問候與健康詞彙 Greetings & Health",
-  topic:"🏥 身體症狀",
-  focus:"描述身體不適的症狀，以及醫生問診、給建議的常見說法。",
-  intro:"Anna 昨晚吃了油膩的炸雞，隔天開始發燒、頭暈又想吐。她到診所看醫生，把自己的症狀一項一項描述出來。這段對話示範了「我覺得…」的症狀說法，以及醫生如何診斷與給藥。",
-  tip:"第一次聽先抓「她哪裡不舒服」這條主線，不要急著聽懂每個字。第二次再專心聽數字（體溫、天數）和醫生的建議。",
-  pre:[
-    {w:"symptom",ipa:"/ˈsɪmp.təm/",cn:"症狀",def:"a sign that you have an illness."},
-    {w:"fever",ipa:"/ˈfiː.vɚ/",cn:"發燒",def:"a body temperature that is higher than normal."},
-    {w:"nauseous",ipa:"/ˈnɔː.ʃəs/",cn:"噁心想吐的",def:"feeling like you might vomit."},
-    {w:"dizzy",ipa:"/ˈdɪz.i/",cn:"頭暈的",def:"feeling like everything is turning around you."},
-    {w:"stomach pain",ipa:"/ˈstʌm.ək peɪn/",cn:"胃痛、肚子痛",def:"a pain in the area of your stomach."},
-    {w:"food poisoning",ipa:"/ˈfuːd ˌpɔɪ.zən.ɪŋ/",cn:"食物中毒",def:"an illness caused by eating food that contains harmful bacteria."},
-    {w:"painkiller",ipa:"/ˈpeɪnˌkɪlər/",cn:"止痛藥",def:"a medicine that reduces or stops pain in your body"},
-    {w:"relieve",ipa:"/rɪˈliːv/",cn:"緩解、減輕",def:"to make an unpleasant feeling or situation less severe"}
-  ],
-  script:[
-    {sp:"Doctor",en:"Good morning, Anna. Please sit down. What brings you in today?",cn:"早安，Anna。請坐。今天是哪裡不舒服呢？"},
-    {sp:"Anna",en:"I've been feeling unwell since yesterday evening. I think I have a fever.",cn:"我從昨天傍晚就一直不太舒服。我覺得我在發燒。"},
-    {sp:"Doctor",en:"Let me check your temperature. Yes, it's 38.5 degrees. You're definitely running a fever.",cn:"我幫你量一下體溫。嗯，38.5 度。你確實在發燒。"},
-    {sp:"Anna",en:"I also feel dizzy when I stand up, and I feel nauseous almost all the time.",cn:"我站起來的時候會頭暈，而且幾乎一直覺得噁心想吐。"},
-    {sp:"Doctor",en:"Do you have any stomach pain?",cn:"你有肚子痛嗎？"},
-    {sp:"Anna",en:"Yes, quite a lot. The stomach pain started after dinner last night.",cn:"有，滿嚴重的。肚子痛是昨天晚餐之後開始的。"},
-    {sp:"Doctor",en:"What did you have for dinner?",cn:"你晚餐吃了什麼？"},
-    {sp:"Anna",en:"A big plate of fried chicken from a night market stall. It was very greasy.",cn:"夜市攤子買的一大盤炸雞。非常油膩。"},
-    {sp:"Doctor",en:"That's a very common symptom pattern after greasy street food. I think you have food poisoning.",cn:"吃完油膩的路邊小吃之後，這是很常見的症狀組合。我認為你是食物中毒。"},
-    {sp:"Anna",en:"Is food poisoning serious? Do I need to stay in the hospital?",cn:"食物中毒嚴重嗎？我需要住院嗎？"},
-    {sp:"Doctor",en:"No, not in your case. Drink plenty of water, eat plain rice, and rest at home for two days.",cn:"不用，你的情況不需要。多喝水、吃清淡的白飯，在家休息兩天。"},
-    {sp:"Anna",en:"Can I take a painkiller for the stomach pain? I have some at home.",cn:"我可以吃止痛藥止肚子痛嗎？我家裡有一些。"},
-    {sp:"Doctor",en:"You can, but only after eating something light. I'll also give you medicine to relieve the nausea.",cn:"可以，但一定要先吃點清淡的東西再吃。我也會開藥幫你緩解噁心的感覺。"},
-    {sp:"Anna",en:"Thank you. How long will it take before I feel normal again?",cn:"謝謝。大概要多久我才會恢復正常？"},
-    {sp:"Doctor",en:"Most people recover in two or three days. If the fever doesn't go down by Friday, come back and see me.",cn:"大部分的人兩三天就會好。如果到星期五還沒退燒，就再回來找我。"},
-    {sp:"Anna",en:"I will. Thank you very much, Doctor.",cn:"我會的。非常謝謝你，醫生。"}
-  ],
-  questions:[
-    {q:"What does the doctor think is wrong with Anna?",opts:["A. She has a migraine.","B. She has food poisoning.","C. She has motion sickness.","D. She broke her arm."],ans:1,expl:"醫生說「I think you have food poisoning.」，因為她吃了油膩的夜市炸雞。"},
-    {q:"What is Anna's temperature?",opts:["A. 36.5 degrees","B. 37.5 degrees","C. 38.5 degrees","D. 39.5 degrees"],ans:2,expl:"醫生量完體溫後說「it's 38.5 degrees」。"},
-    {q:"What did Anna eat for dinner the night before?",opts:["A. Fried chicken from a night market","B. A fresh salad","C. Plain rice porridge","D. Nothing at all"],ans:0,expl:"Anna 說她吃了夜市攤子的一大盤炸雞（fried chicken），而且很油膩。"},
-    {q:"In the dialogue, what does \"relieve\" mean?",opts:["A. To make an unpleasant feeling less severe","B. To make the pain much worse","C. To measure someone's temperature","D. To cancel an appointment"],ans:0,expl:"relieve 是「緩解、減輕」，醫生開藥是為了減輕噁心的感覺。"},
-    {q:"When should Anna go back to the doctor?",opts:["A. Tomorrow morning, no matter what","B. If the fever is still there on Friday","C. Only if she loses her medicine","D. In two weeks for a check-up"],ans:1,expl:"醫生說「If the fever doesn't go down by Friday, come back and see me.」"}
-  ]
-},
-
-{
-  id:"au08",
-  level:"B1",
-  minutes:3,
-  kind:"note",
-  title:"Understanding Taiwan's Health Insurance",
-  titleCn:"認識台灣的健保",
-  series:"本站自製聽力 · 取材自課堂筆記",
-  noteRef:"20260226 健康保險 Health Insurance",
-  topic:"💳 健康保險",
-  focus:"用簡單的英文解釋制度：誰付錢、保險給付什麼、和私人保險的差別。",
-  intro:"David 是剛來台灣工作的外國同事，他看到薪資單上有一筆看不懂的扣款。同事 Lisa 用簡單的英文向他解釋全民健保是什麼、怎麼收費、又給付哪些項目。",
-  tip:"這種「解釋制度」的對話會有很多數字和專有名詞。聽的時候先分清楚「誰付錢」和「付什麼」兩件事，數字可以第二次再補。",
-  pre:[
-    {w:"National Health Insurance (NHI)",ipa:"/ˈnæʃənəl hɛlθ ɪnˈʃʊrəns/",cn:"全民健康保險",def:"Taiwan's government program that helps everyone pay for medical care."},
-    {w:"government program",ipa:"/ˈgʌvərnmənt ˈproʊˌgræm/",cn:"政府計畫",def:"a system or plan that is organized and run by the government."},
-    {w:"monthly fee",ipa:"/ˈmʌnθli fi/",cn:"每月費用",def:"an amount of money that you have to pay every month."},
-    {w:"employer",ipa:"/ɪmˈplɔɪər/",cn:"雇主",def:"the person or company that you work for and that pays your salary."},
-    {w:"covered by insurance",ipa:"/ˈkʌvərd baɪ ɪnˈʃʊrəns/",cn:"由保險支付",def:"paid for by an insurance plan instead of by yourself."},
-    {w:"medical expenses",ipa:"/ˈmɛdɪkəl ɪkˈspɛnsɪz/",cn:"醫療費用／醫療開銷",def:"the total money spent on healthcare, doctors, and medicine, often emphasizing the cost or spending."},
-    {w:"private insurance",ipa:"/ˈpraɪvɪt ɪnˈʃʊrəns/",cn:"私人保險",def:"an insurance plan that a person buys themselves rather than getting from the government."},
-    {w:"affordable",ipa:"/əˈfɔːrdəbl/",cn:"負擔得起的／便宜的",def:"not too expensive, so that ordinary people can pay for it."}
-  ],
-  script:[
-    {sp:"David",en:"Lisa, I just got my first payslip in Taiwan, and there's one deduction I don't understand.",cn:"Lisa，我剛拿到在台灣的第一張薪資單，上面有一筆扣款我看不懂。"},
-    {sp:"Lisa",en:"Let me have a look. Ah, that one is for the National Health Insurance (NHI).",cn:"我看看。啊，那一筆是全民健康保險的費用。"},
-    {sp:"David",en:"What exactly is that? Is it the same as buying insurance from a company?",cn:"那到底是什麼？跟向保險公司買保險一樣嗎？"},
-    {sp:"Lisa",en:"No, it's a government program that helps everyone in Taiwan pay for medical care.",cn:"不一樣，那是一個政府計畫，幫助在台灣的每個人負擔醫療照護的費用。"},
-    {sp:"David",en:"So everyone has to join? Even foreign workers like me?",cn:"所以每個人都要加入？連我這種外籍工作者也要嗎？"},
-    {sp:"Lisa",en:"Yes, everyone. You pay a small monthly fee, and your employer pays part of it too.",cn:"對，每個人都要。你每個月付一筆小額費用，你的雇主也會幫你負擔一部分。"},
-    {sp:"David",en:"That explains why my company took some money as well. How much do they pay?",cn:"難怪我的公司也扣了一些錢。他們付多少？"},
-    {sp:"Lisa",en:"Your employer covers about sixty percent, so your own part stays affordable.",cn:"你的雇主大約負擔六成，所以你自己要付的部分是負擔得起的。"},
-    {sp:"David",en:"And what does the card actually pay for?",cn:"那這張卡實際上給付什麼？"},
-    {sp:"Lisa",en:"Most doctor visits, medicine, and hospital stays are covered by insurance. You only pay a small fee at the counter.",cn:"大部分的看診、藥品和住院都由保險支付。你在櫃檯只需要付一小筆錢。"},
-    {sp:"David",en:"In my country, medical expenses can be really high. One night in the hospital costs a fortune.",cn:"在我的國家，醫療費用可能非常高。住院一晚就要花一大筆錢。"},
-    {sp:"Lisa",en:"Here it's much cheaper. That's why many people say the NHI is one of the best things about living in Taiwan.",cn:"這裡便宜多了。所以很多人說健保是住在台灣最棒的事情之一。"},
-    {sp:"David",en:"Do people still buy private insurance, then?",cn:"那大家還會買私人保險嗎？"},
-    {sp:"Lisa",en:"Some do. Private insurance helps with things the NHI doesn't cover, like a single room or expensive cancer drugs.",cn:"有些人會。私人保險可以支付健保不給付的項目，像是單人病房或昂貴的癌症用藥。"},
-    {sp:"David",en:"I see. So the government plan is the base, and private insurance is the extra layer.",cn:"我懂了。所以政府的計畫是基礎，私人保險是額外的一層。"},
-    {sp:"Lisa",en:"Exactly. For most families, that monthly fee is definitely worth it.",cn:"沒錯。對大多數家庭來說，那筆每月費用絕對值得。"}
-  ],
-  questions:[
-    {q:"What was the deduction on David's payslip for?",opts:["A. Income tax","B. National Health Insurance","C. His apartment rent","D. A company lunch plan"],ans:1,expl:"Lisa 說「that one is for the National Health Insurance (NHI)」。"},
-    {q:"Who helps David pay for the insurance?",opts:["A. His landlord","B. His employer","C. His family back home","D. Nobody — he pays it all"],ans:1,expl:"Lisa 說「your employer pays part of it too」，而且大約負擔六成。"},
-    {q:"About what percentage does the employer cover?",opts:["A. About 20 percent","B. About 40 percent","C. About 60 percent","D. 100 percent"],ans:2,expl:"對話中提到「Your employer covers about sixty percent」。"},
-    {q:"According to Lisa, what does private insurance help with?",opts:["A. Things the NHI does not cover","B. Exactly the same things as the NHI","C. Paying the rent","D. Buying plane tickets home"],ans:0,expl:"Lisa 說私人保險用來支付健保不給付的項目，例如單人病房或昂貴的癌症用藥。"},
-    {q:"What does \"affordable\" mean?",opts:["A. Very expensive","B. Not too expensive to pay for","C. Completely free","D. Against the law"],ans:1,expl:"affordable 是「負擔得起的」，指價格不會太貴，一般人付得起。"}
-  ]
-},
-
-{
   id:"au09",
+  date:"2026-07-29",
   level:"B1",
   minutes:3,
   kind:"note",
@@ -506,6 +896,7 @@ scenes:[
     {en:"What's wrong? What are your symptoms?",cn:"怎麼了？你有什麼症狀？"},
     {en:"I have a really bad headache.",cn:"我頭痛得很厲害。"},
     {en:"My throat is sore and I have a cough.",cn:"我喉嚨痛，而且一直咳嗽。"},
+    {en:"I also have a stomachache, so I can't eat much.",cn:"我還肚子痛，所以吃不太下。"},
     {en:"I think I have a fever, too.",cn:"我覺得我也發燒了。"},
     {en:"You should see a doctor.",cn:"你應該去看醫生。"},
     {en:"I'd like to make an appointment, please.",cn:"我想預約看診。"},
@@ -546,6 +937,7 @@ scenes:[
   keyLines:[
     {en:"Where is the library?",cn:"圖書館在哪裡？"},
     {en:"The library is near the park.",cn:"圖書館在公園附近。"},
+    {en:"I really like this neighborhood. Everything is close by.",cn:"我很喜歡這個社區，什麼都很近。"},
     {en:"Is the post office far from here?",cn:"郵局離這裡遠嗎？"},
     {en:"No, it's not far. It's next to the bank.",cn:"不遠，就在銀行旁邊。"},
     {en:"The store is across from the library.",cn:"商店在圖書館對面。"},
@@ -593,7 +985,8 @@ scenes:[
     {en:"Do you have any fresh fish?",cn:"你們有新鮮的魚嗎？"},
     {en:"We also need a bottle of olive oil.",cn:"我們還需要一瓶橄欖油。"},
     {en:"Oh no! I brought the wrong list!",cn:"糟了！我拿錯清單了！"},
-    {en:"Let me check the recipe again.",cn:"讓我再看一次食譜。"}
+    {en:"Let me check the recipe again.",cn:"讓我再看一次食譜。"},
+    {en:"Good news — we already have every ingredient we need.",cn:"好消息，我們需要的食材都已經有了。"}
   ],
   questions:[
     {q:"Why is Anna going to the store?",opts:["A. To buy a gift","B. To get ingredients for dinner","C. To buy new clothes","D. To return something"],ans:1,expl:"Anna 和 Marsha 要辦晚餐派對，所以去買食材。"},
@@ -601,240 +994,6 @@ scenes:[
     {q:"\"How much are the tomatoes?\" is asking about ___.",opts:["A. the color","B. the weight","C. the price","D. the number"],ans:2,expl:"How much 問價錢——多少錢。"},
     {q:"\"A pound of\" is used for ___.",opts:["A. 數量（幾個）","B. 重量（多重）","C. 長度（多長）","D. 時間（多久）"],ans:1,expl:"a pound of 是重量單位（約 0.45 公斤），用在肉、蔬菜、水果等秤重賣的東西。"},
     {q:"Which is correct at a store?",opts:["A. Give me tomato.","B. I need a pound of tomatoes, please.","C. Tomatoes me give.","D. I wanting tomatoes."],ans:1,expl:"正確又禮貌的說法是 I need + 量詞 + 東西 + please。"}
-  ]
-}
-],
-
-/* ========== VOA 課程教材（公共領域逐字稿在 data-scripts.js） ========== */
-lessons:[
-{
-  id:"dl20260814a2",
-  date:"2026-08-14",
-  level:"A2",
-  minutes:5,
-  kind:"voa",
-  title:"Hello, I'm Anna!",
-  titleCn:"哈囉，我是 Anna！",
-  series:"VOA Let's Learn English · Level 1 · Lesson 2",
-  topic:"認識新鄰居",
-  focus:"be 動詞：I am / She is 與 Where are you from?",
-  source:"VOA Learning English（美國之音，美國政府出版物／公共領域）",
-  intro:"Anna 搬到華盛頓特區，在新公寓前認識了鄰居 Jonathan。整段對話都在做同一件事：用 I am... 介紹自己、用 Where are you from? 問對方來自哪裡，還互相報了公寓號碼。這正是上一課 be 動詞的延伸練習。",
-  tip:"第一次聽先數「一共有幾個人講話」。第二次聽抓三個公寓號碼（B4、C2、D7）分別是誰的——數字聽力就是這樣練起來的。",
-  pre:[
-    {w:"new to ...",ipa:"/njuː tuː/",cn:"剛到…、對…還不熟",def:"Arrived at a place for the first time not long ago."},
-    {w:"small town",ipa:"/smɔːl taʊn/",cn:"小鎮",def:"A town that is not big."},
-    {w:"apartment",ipa:"/əˈpɑːrtmənt/",cn:"公寓",def:"A home inside a bigger building."},
-    {w:"roommate",ipa:"/ˈruːmmeɪt/",cn:"室友",def:"A person who lives with you."},
-    {w:"welcome to ...",ipa:"/ˈwelkəm tuː/",cn:"歡迎來到…",def:"What you say when someone arrives at a new place."},
-    {w:"remember to ...",ipa:"/rɪˈmembər tuː/",cn:"記得要…",def:"Do not forget to do something."}
-  ],
-  keyLines:[
-    {en:"Hey, Pete! Who's your friend?",cn:"嘿，Pete！你朋友是誰？"},
-    {en:"She is Anna. She is new to D.C.",cn:"她是 Anna。她剛到華盛頓特區。"},
-    {en:"Where are you from?",cn:"你來自哪裡？"},
-    {en:"I am from a small town.",cn:"我來自一個小鎮。"},
-    {en:"I am Jonathan. I am in apartment B4.",cn:"我是 Jonathan。我住 B4 公寓。"},
-    {en:"I am in apartment C2. Marsha is my roommate.",cn:"我住 C2 公寓。Marsha 是我的室友。"},
-    {en:"Remember to call Marsha at work. Tell her you're here.",cn:"記得打電話到 Marsha 公司，跟她說你到了。"}
-  ],
-  questions:[
-    {q:"Where is Anna from?",opts:["A. Washington, D.C.","B. A small town","C. New York","D. Apartment B4"],ans:1,expl:"Jonathan 問 Where are you from?，Anna 回答 I am from a small town."},
-    {q:"Which apartment is Jonathan in?",opts:["A. B4","B. C2","C. D7","D. A1"],ans:0,expl:"他自我介紹：I am Jonathan. I am in apartment B4."},
-    {q:"Who is Anna's roommate?",opts:["A. Pete","B. Jonathan","C. Marsha","D. Nobody"],ans:2,expl:"Anna 說 I am in apartment C2. Marsha is my roommate."},
-    {q:"What does Pete ask Anna to remember?",opts:["A. To buy food","B. To call Marsha at work","C. To lock the door","D. To take the bus"],ans:1,expl:"Pete 離開前說 Remember to call Marsha at work. Tell her you're here."},
-    {q:"Which sentence is correct?",opts:["A. She are new to D.C.","B. She is new to D.C.","C. She am new to D.C.","D. She be new to D.C."],ans:1,expl:"主詞 she 配 be 動詞 is——這一課從頭到尾都在練這件事。"}
-  ]
-},
-
-{
-  id:"dl20260814",
-  date:"2026-08-14",
-  level:"B1",
-  minutes:5,
-  kind:"voa",
-  title:"The Interview",
-  titleCn:"面試",
-  series:"VOA Let's Learn English · Level 2 · Lesson 2",
-  topic:"求職面試",
-  focus:"兩字動詞（phrasal verbs）：give out / find out / take on / tear up / throw away",
-  source:"VOA Learning English（美國之音，美國政府出版物／公共領域）",
-  intro:"Ms. Weaver 要 Anna 找一個「跟她完全不同」的人一起主持節目，Anna 想到了 Pete——一個自認不愛講話的人，卻要去面試主持人。這集的語言焦點是兩字動詞：give out、find out、take on、tear up、throw away，有的能拆開（give assignments out）、有的不能，聽的時候特別留意。",
-  tip:"每聽到一個兩字動詞就在心裡記一筆，聽完對答案（影片結尾 Professor Bot 會自己列清單）。第二遍再聽 Pete 在面試裡的兩個回答——為什麼「誠實到不利於自己」反而讓他錄取？這種弦外之音正是 B1 → B2 的聽力關鍵。",
-  pre:[
-    {w:"assignment",ipa:"/əˈsaɪnmənt/",cn:"任務、派工",def:"A piece of work given to someone."},
-    {w:"team up with",ipa:"/tiːm ʌp wɪð/",cn:"與…搭檔",def:"To work together with someone."},
-    {w:"people person",ipa:"/ˈpiːpl ˈpɜːrsn/",cn:"擅長與人相處的人",def:"Someone who likes and is good with people."},
-    {w:"want ads",ipa:"/wɑːnt ædz/",cn:"求職廣告",def:"Newspaper ads that list jobs."},
-    {w:"job offer",ipa:"/dʒɑːb ˈɔːfər/",cn:"工作機會",def:"When someone offers you a job."},
-    {w:"grumpy",ipa:"/ˈɡrʌmpi/",cn:"愛發脾氣的、臭臉的",def:"Easily annoyed and not friendly."},
-    {w:"opportunity",ipa:"/ˌɑːpərˈtuːnəti/",cn:"機會",def:"A chance to do something good."}
-  ],
-  keyLines:[
-    {en:"Ms. Weaver is giving new assignments out. I am ready to take on anything she gives me.",cn:"Ms. Weaver 正在發新任務。她給我什麼我都準備好接下來。"},
-    {en:"I want you to team up with someone who is very \"different\" from you.",cn:"我要你跟一個和你非常「不同」的人搭檔。"},
-    {en:"Pete, you can tear these want ads up and throw them away! I have good news!",cn:"Pete，你可以把這些求職廣告撕掉丟了！我有好消息！"},
-    {en:"I need to find out if you have the skills for this job. And I want you to be completely honest.",cn:"我得弄清楚你有沒有這份工作需要的能力。而且我要你完全誠實。"},
-    {en:"Well, okay, sometimes I think people talk too much.",cn:"呃，好吧，有時候我覺得人們話太多了。"},
-    {en:"Well, she said I was grumpy and not good with people. And, I got the job!",cn:"嗯，她說我臭臉又不擅長跟人相處。然後——我錄取了！"}
-  ],
-  questions:[
-    {q:"What kind of person does Ms. Weaver want Anna to team up with?",opts:["A. Someone cheerful like Anna","B. Someone very different from Anna","C. Someone from another company","D. Someone with TV experience"],ans:1,expl:"Ms. Weaver 說 I want you to team up with someone who is very \"different\" from you——因為 Anna 是 cheerful 的 people person，要找一個不是這樣的人。"},
-    {q:"What is Pete doing when Anna meets him?",opts:["A. Writing a book","B. Hosting a show","C. Looking for work","D. Recording a podcast"],ans:2,expl:"Pete 說 I'm busy looking for work（雖然 Anna 發現他其實在玩填字遊戲）。"},
-    {q:"What did Pete do last year that he is most proud of?",opts:["A. He hosted a talk show","B. He locked himself in a cabin and wrote a book","C. He travelled around the world","D. He won a crossword competition"],ans:1,expl:"他說 Last year, I locked myself in a cabin and wrote a book. I didn't speak to anybody the entire time!"},
-    {q:"What was the result of Pete's interview?",opts:["A. He was rejected for being grumpy","B. He was asked to interview again","C. He got the job","D. He turned the job down"],ans:2,expl:"Pete 說 she said I was grumpy and not good with people. And, I got the job!——「跟 Anna 完全不同」正是這份工作要的。"},
-    {q:"\"You can tear these want ads up.\" 這句裡的兩字動詞用法說明了什麼？",opts:["A. tear up 永遠不能拆開","B. 受詞可以放在 tear 和 up 中間","C. tear up 後面不能接受詞","D. up 可以省略"],ans:1,expl:"tear ... up 是可分離的兩字動詞：tear these want ads up ＝ tear up these want ads，受詞可以夾在中間。"}
-  ]
-},
-
-{
-  id:"L01",
-  level:"A2",
-  minutes:5,
-  kind:"voa",
-  title:"Welcome!",
-  titleCn:"歡迎！",
-  series:"VOA Let's Learn English · Level 1 · Lesson 1",
-  topic:"自我介紹",
-  focus:"Are you...? / I am... 與拼出名字",
-  source:"VOA Learning English（美國之音，美國政府出版物／公共領域）",
-  intro:"最基礎的初次見面對話。Anna 第一次見到 Pete，兩個人確認彼此的名字，還拼了一次名字的字母。聽的時候注意 Are you...? 和 I am... 的一問一答，以及英文母語者怎麼拼名字。",
-  tip:"第一次聽先不要看字，只抓「他們在打招呼還是在道別」。第二次聽再抓名字和地址的數字。",
-  pre:[
-    {w:"Nice to meet you.",ipa:"/naɪs tə miːt juː/",cn:"很高興認識你",def:"What you say when you meet someone for the first time."},
-    {w:"Welcome to ...",ipa:"/ˈwelkəm tuː/",cn:"歡迎來到…",def:"What you say when someone arrives at your place."},
-    {w:"apartment",ipa:"/əˈpɑːrtmənt/",cn:"公寓",def:"A home inside a bigger building."},
-    {w:"Hi there!",ipa:"/haɪ ðer/",cn:"嗨！（輕鬆的招呼）",def:"A friendly way to say hello."},
-    {w:"try that again",ipa:"/traɪ ðæt əˈɡen/",cn:"再試一次",def:"To do something one more time."}
-  ],
-  keyLines:[
-    {en:"Hi! Are you Anna?",cn:"嗨！你是 Anna 嗎？"},
-    {en:"Yes! Hi there! Are you Pete?",cn:"是的！嗨！你是 Pete 嗎？"},
-    {en:"Nice to meet you.",cn:"很高興認識你。"},
-    {en:"Let's try that again. I'm Anna.",cn:"我們再來一次。我是 Anna。"},
-    {en:"Welcome to 1400 Irving Street!",cn:"歡迎來到 Irving 街 1400 號！"}
-  ],
-  questions:[
-    {q:"Who are the two people in this lesson?",opts:["A. Anna and Pete","B. Anna and Caty","C. Pete and Jonathan","D. Anna and Amelia"],ans:0,expl:"對話一開始 Pete 問 Are you Anna?，兩人互相確認名字。"},
-    {q:"How does Anna spell her name?",opts:["A. A-N-A","B. A-N-N-A","C. A-N-N-E","D. A-N-A-H"],ans:1,expl:"Pete 先猜 A-N-A，Anna 說 No. A-N-N-A（兩個 n）。"},
-    {q:"What is at 1400 Irving Street?",opts:["A. Anna's office","B. Anna's new apartment","C. A coffee shop","D. Pete's house"],ans:1,expl:"Anna 說 My new apartment! Yes!"},
-    {q:"Which sentence is the correct answer to \"Are you Pete?\"",opts:["A. Yes, I Pete.","B. Yes, I am Pete.","C. Yes, I am Pete?","D. Yes, am I Pete."],ans:1,expl:"回答 Are you...? 要用 I am + 名字。"}
-  ]
-},
-
-{
-  id:"L02",
-  level:"A2",
-  minutes:5,
-  kind:"voa",
-  title:"What Are You Doing?",
-  titleCn:"你在做什麼？",
-  series:"VOA Let's Learn English · Level 1 · Lesson 7",
-  topic:"職場初見面",
-  focus:"現在進行式：What are you doing? / I'm V-ing",
-  source:"VOA Learning English（美國之音，美國政府出版物／公共領域）",
-  intro:"Anna 第一天上班，見了主管，然後一個一個問同事在做什麼。整集就是同一個句型 What are you doing? 的反覆練習——這正是 A2 最該練熟的現在進行式。",
-  tip:"每次有人回答 I'm ...ing，就在心裡跟著念一次。這集的答句短，很適合直接跟讀。",
-  pre:[
-    {w:"boss",ipa:"/bɔːs/",cn:"主管、老闆",def:"The person who leads you at work."},
-    {w:"co-worker",ipa:"/ˈkoʊwɜːrkər/",cn:"同事",def:"A person who works with you."},
-    {w:"busy",ipa:"/ˈbɪzi/",cn:"忙的",def:"Having a lot to do."},
-    {w:"record",ipa:"/rɪˈkɔːrd/",cn:"錄音、錄影",def:"To keep sound or pictures to use later."},
-    {w:"Oh dear.",ipa:"/oʊ dɪr/",cn:"糟糕、哎呀",def:"What you say when something small goes wrong."},
-    {w:"Sure thing.",ipa:"/ʃʊr θɪŋ/",cn:"當然、沒問題",def:"A friendly way to say yes."}
-  ],
-  keyLines:[
-    {en:"I am your boss, Caty Weaver. But please call me Caty.",cn:"我是你的主管 Caty Weaver，不過請叫我 Caty。"},
-    {en:"Please meet your co-workers. But remember, they are busy working.",cn:"去認識你的同事吧。但記得，他們在忙著工作。"},
-    {en:"Nice to meet you. What are you doing?",cn:"很高興認識你。你在做什麼？"},
-    {en:"Um, I'm writing.",cn:"嗯，我在寫東西。"},
-    {en:"I am doing my show!",cn:"我在做我的節目！"},
-    {en:"Are you reading the news?",cn:"你在讀新聞嗎？"}
-  ],
-  questions:[
-    {q:"What does Anna's boss ask Anna to call her?",opts:["A. Ms. Weaver","B. Caty","C. Boss","D. Anne"],ans:1,expl:"她說 I am your boss, Caty Weaver. But please call me Caty.（Anna 一直叫 Ms. Weaver，被糾正了兩次。）"},
-    {q:"What is Anne doing?",opts:["A. Reading","B. Recording","C. Writing","D. Eating"],ans:2,expl:"Anne 回答 Um, I'm writing."},
-    {q:"Why is Jonathan not happy with Anna?",opts:["A. She spilled his coffee","B. She interrupted his recording","C. She took his desk","D. She is late"],ans:1,expl:"他說 I am doing my show! 接著 And, now I have to record again!——被打斷所以要重錄。"},
-    {q:"Which question means \"你正在做什麼？\"",opts:["A. What do you do?","B. What are you doing?","C. What did you do?","D. What you doing?"],ans:1,expl:"問此刻正在做的事用現在進行式 What are you doing?；What do you do? 是問職業。"}
-  ]
-},
-
-{
-  id:"L03",
-  level:"B1",
-  minutes:5,
-  kind:"voa",
-  title:"Budget Cuts",
-  titleCn:"預算削減",
-  series:"VOA Let's Learn English · Level 2 · Lesson 1",
-  topic:"職場謠言",
-  focus:"現在完成進行式與職業名稱的字尾 -er / -or",
-  source:"VOA Learning English（美國之音，美國政府出版物／公共領域）",
-  intro:"辦公室收到一封「重要會議，全員必到」的信，謠言就開始傳了。這集大量使用 has been talking / have been worrying 這類現在完成進行式，正好接你學過的那個單元；也順便教「動詞加字尾變成職業名稱」。",
-  tip:"聽的時候特別注意 have / has been + V-ing 出現幾次。另外注意謠言怎麼從一個人傳成「大家都在說」。",
-  pre:[
-    {w:"budget cuts",ipa:"/ˈbʌdʒɪt kʌts/",cn:"預算削減",def:"When a company decides to spend less money."},
-    {w:"gossip",ipa:"/ˈɡɑːsɪp/",cn:"閒話、說人是非",def:"To talk about other people's private business."},
-    {w:"rumor",ipa:"/ˈruːmər/",cn:"謠言",def:"A story that people tell but nobody has proved."},
-    {w:"raise",ipa:"/reɪz/",cn:"加薪",def:"More money for the same job."},
-    {w:"résumé",ipa:"/ˈrezəmeɪ/",cn:"履歷",def:"A paper that lists your work experience."},
-    {w:"fire (someone)",ipa:"/ˈfaɪər/",cn:"解僱",def:"To make someone leave their job."},
-    {w:"assignment",ipa:"/əˈsaɪnmənt/",cn:"任務、派工",def:"A piece of work given to someone."}
-  ],
-  keyLines:[
-    {en:"I have heard people in the building talking about budget cuts.",cn:"我聽到樓裡有人在說預算要削減。"},
-    {en:"Wait, who has been talking about budget cuts?",cn:"等等，是誰一直在說預算削減的事？"},
-    {en:"That's one person. That's not \"people.\"",cn:"那只是一個人，不算「大家」。"},
-    {en:"We shouldn't gossip. That's how rumors start.",cn:"我們不該說人是非，謠言就是這樣開始的。"},
-    {en:"We've been worrying that you are going to fire us!",cn:"我們一直在擔心你要解僱我們！"},
-    {en:"Budget cuts have been happening. But only one person has lost their job.",cn:"預算削減一直在進行，但只有一個人失去了工作。"}
-  ],
-  questions:[
-    {q:"Who did Jonathan actually hear the news from?",opts:["A. Ms. Weaver","B. Mark in Accounting","C. Amelia","D. Kaveh"],ans:1,expl:"Jonathan 說 people in the building 在說，但被 Anna 追問後承認只有 Mark in Accounting 一個人。"},
-    {q:"What was Kaveh's job before he became a reporter?",opts:["A. A detective","B. A videographer","C. A teacher","D. An accountant"],ans:2,expl:"他說 I can't go back to being a teacher! High school kids scare me!"},
-    {q:"Why did Ms. Weaver call the meeting?",opts:["A. To fire everyone","B. To praise the team and give new assignments","C. To announce her own resignation","D. To cut everyone's pay"],ans:1,expl:"她說開會是 to tell you what a good job you've been doing and give out new assignments."},
-    {q:"Who actually lost their job?",opts:["A. Nobody","B. Penelope","C. Kaveh","D. Mark in Accounting"],ans:3,expl:"Ms. Weaver 說 only one person has lost their job -- Mark in Accounting?——散播謠言的那個人自己被裁了。"},
-    {q:"Choose the sentence with the present perfect continuous.",opts:["A. Budget cuts happened last year.","B. Budget cuts have been happening.","C. Budget cuts will happen.","D. Budget cuts happen often."],ans:1,expl:"have been + V-ing 才是現在完成進行式。"}
-  ]
-},
-
-{
-  id:"L04",
-  level:"B1+",
-  minutes:5,
-  kind:"voa",
-  title:"He Said - She Said",
-  titleCn:"他說 — 她說",
-  series:"VOA Let's Learn English · Level 2 · Lesson 3",
-  topic:"遲到與各說各話",
-  focus:"過去完成式（had + p.p.）與轉述",
-  source:"VOA Learning English（美國之音，美國政府出版物／公共領域）",
-  intro:"Anna 和 Pete 開會遲到 43 分鐘，然後對同一個早上講出兩個完全不同的版本。這集的文法焦點是過去完成式：兩件過去的事，先發生的那件用 had + 過去分詞。聽的時候把每個 had 都抓出來。",
-  tip:"這集適合練「聽出立場」。同一件事兩個人講，注意各自省略了什麼、強調了什麼——這是 B2 聽力的核心能力。",
-  pre:[
-    {w:"consultant",ipa:"/kənˈsʌltənt/",cn:"顧問",def:"An expert who is paid to give advice."},
-    {w:"on time",ipa:"/ɑːn taɪm/",cn:"準時",def:"Not late."},
-    {w:"take turns",ipa:"/teɪk tɜːrnz/",cn:"輪流",def:"To do something one after another."},
-    {w:"waste time",ipa:"/weɪst taɪm/",cn:"浪費時間",def:"To use time badly."},
-    {w:"commute",ipa:"/kəˈmjuːt/",cn:"通勤",def:"The journey between home and work."},
-    {w:"point of view",ipa:"/pɔɪnt əv vjuː/",cn:"觀點",def:"The way one person sees something."},
-    {w:"leave a message",ipa:"/liːv ə ˈmesɪdʒ/",cn:"留言",def:"To leave words for someone who is not there."}
-  ],
-  keyLines:[
-    {en:"Yesterday, Pete had promised to meet me here at 8:00 a.m., but he did not come on time.",cn:"昨天 Pete 答應八點在這裡跟我碰面，但他沒有準時來。"},
-    {en:"You two are late — exactly 43 minutes late! What happened?",cn:"你們兩個遲到了——整整 43 分鐘！發生什麼事？"},
-    {en:"You can't both talk at the same time. You have to take turns.",cn:"你們不能同時講話，必須輪流。"},
-    {en:"I had waited 15 minutes when Pete arrived!",cn:"Pete 到的時候我已經等了十五分鐘！"},
-    {en:"After Pete had wasted time waiting for coffee, we were late.",cn:"Pete 浪費時間排咖啡之後，我們就遲到了。"},
-    {en:"By the time she had fed all the birds, we were late.",cn:"等她把鳥全部餵完，我們已經遲到了。"},
-    {en:"It's good to see things differently.",cn:"用不同角度看事情是好事。"}
-  ],
-  questions:[
-    {q:"How late were Anna and Pete?",opts:["A. 15 minutes","B. 30 minutes","C. 43 minutes","D. An hour"],ans:2,expl:"Kelly 說 exactly 43 minutes late!"},
-    {q:"According to Anna, why were they late?",opts:["A. She was feeding birds","B. Pete waited for his special coffee","C. The scooter broke","D. Kelly changed the time"],ans:1,expl:"Anna 說 After Pete had wasted time waiting for coffee, we were late."},
-    {q:"According to Pete, what did Anna do on the way?",opts:["A. She slept late","B. She stopped to feed the birds","C. She forgot the address","D. She lost her phone"],ans:1,expl:"Pete 說 Anna stopped by a pond to feed the birds，還幫鳥取了 Romeo、Juliet、Sherlock 這些名字。"},
-    {q:"What does Kelly decide to do with their disagreement?",opts:["A. Fire both of them","B. Make it the name of the show","C. Ask them to work separately","D. Report them to the boss"],ans:1,expl:"她說 we will call the show \"He Said, She Said.\"——把缺點變成節目特色。"},
-    {q:"Which sentence uses the past perfect correctly?",opts:["A. I had waited 15 minutes when Pete arrived.","B. I have waited 15 minutes when Pete arrived.","C. I was waiting 15 minutes when Pete had arrived.","D. I waited 15 minutes when Pete had arrived."],ans:0,expl:"先發生的動作（等）用 had + p.p.，後發生的（到達）用過去簡單式。"}
   ]
 }
 ]

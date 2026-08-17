@@ -2,7 +2,7 @@
    策略：同源檔案用 network-first（有網路一定拿到最新的每日內容），
    離線時回退到快取，所以在飛機上或沒訊號也能讀已載入過的內容。
    Firestore / gstatic 等跨網域請求完全不攔截，避免影響雲端同步。 */
-const CACHE = 'b2lab-v22';
+const CACHE = 'b2lab-v23';
 const SHELL = [
   './',
   './index.html',
@@ -16,7 +16,6 @@ const SHELL = [
   './data-art.js',
   './data-gramviz.js',
   './data-listen.js',
-  './data-scripts.js',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/apple-touch-icon.png'

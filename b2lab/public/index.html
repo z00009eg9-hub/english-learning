@@ -514,7 +514,6 @@ body.cnall [id^="kc"]{display:block!important}
 <script src="data-art.js"></script>
 <script src="data-gramviz.js"></script>
 <script src="data-listen.js"></script>
-<script src="data-scripts.js"></script>
 <script src="data-daily.js"></script>
 <script>
 /* ============================================================
@@ -1567,7 +1566,7 @@ RENDER.daily=function(){
   let h=installCard()
    +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
    +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+' · '+(GOALS[PROFILE]||'')+'</div>'
-   +'<div class="hint"><b>每週三、五</b>更新，每次都會依你的程度給<b>三份文章</b>、<b>三個文法單元</b>與<b>三課聽力</b>（由淺到深，可以先讀最簡單的再往上挑戰）。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力從影片庫輪課讓你練耳朵。</div>'
+   +'<div class="hint"><b>每週三、五</b>更新，每次都會依你的程度給<b>三份文章</b>、<b>三個文法單元</b>與<b>三課聽力</b>（由淺到深，可以先讀最簡單的再往上挑戰）。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力是<b>依你的課堂筆記單字自製的對話</b>，用語音朗讀跟讀練習。</div>'
    +'<div class="stats"><div class="stat"><b>'+pool.length+'</b><span>累積每日文章</span></div>'
    +'<div class="stat"><b>'+DAILY_GRAM.length+'</b><span>累積每日文法</span></div>'
    +'<div class="stat"><b>'+(ST.streak||1)+'</b><span>連續學習天數</span></div>'
@@ -1595,7 +1594,7 @@ RENDER.daily=function(){
     h+='<div class="item'+(l.date===t?' new':finCls(d))+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
      +'<div class="t" style="'+lvTitle(l.level)+'">🎧 '+esc(l.title)+'</div>'
      +'<div class="tc">'+esc(l.titleCn)+'</div>'
-     +'<div class="meta"><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span>'+(l.date?'<span>📅 '+esc(l.date)+'</span>':'')+'<span>🎬 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span>'
+     +'<div class="meta"><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span>'+(l.date?'<span>📅 '+esc(l.date)+'</span>':'')+'<span>🏷 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span>'
      +finMeta(d,l.date===t)+'</div></div>';
   });
   const anyArt=artsToday.length>0, anyGram=gramsToday.length>0;
@@ -2009,7 +2008,7 @@ RENDER.listen=function(){
       destroyPlayer(); auSet(lsOpen.script); applySubToggles();
     }else{
       auStop(); mountPlayer('yt-main',lsOpen.yt); showLoop();
-      if(lsScript(lsOpen)||lessonSubs(lsOpen)) applySubToggles();
+      if(lessonSubs(lsOpen)) applySubToggles();
       if(lessonSubs(lsOpen)) startSync(); else stopSync();
     }
     return; }
@@ -2049,21 +2048,16 @@ function lsGo(id){ lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; go('listen'); }
 function lsClose(){ destroyPlayer(); stopSync(); lsOpen=null; RENDER.listen(); }
 window.lsGo=lsGo; window.lsClose=lsClose;
 
-/* 這一課有沒有逐字稿（data-scripts.js） */
-function lsScript(l){ return (window.LISTEN_SCRIPTS||{})[l && l.id] || null; }
-
 function lessonHTML(l){
-  const sc=lsScript(l);
-  const timed=lessonSubs(l);   /* 學習者貼的時間軸字幕：優先於靜態逐字稿 */
-  /* 這一課的逐字稿內容，依序找：自製對話 → VOA 逐字稿 → 關鍵句 → 練習句 */
+  const timed=lessonSubs(l);   /* 學習者貼的時間軸字幕 */
+  /* 這一課的逐字稿內容：自製對話，或早期教材的關鍵句／練習句 */
   const body=(l.script||[]).length?l.script
-            :sc?sc
             :(l.keyLines||[]).length?l.keyLines
             :(l.drill||[]).length?l.drill:null;
   /* 沒有影片的課一律走 TTS 語音跟讀（現在所有內建課程都是這一種） */
   const au=(!l.yt&&body)?body:null;
   const klSc=null, drill=null;
-  const hasScript=sc||timed;
+  const hasScript=timed;
   const toggles='<div class="row" style="margin-top:9px">'
    +'<button class="spk" id="tg-en" onclick="tgEn()">'+(showEn?'👁 英文：顯示':'👁 英文：隱藏')+'</button>'
    +'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button></div>';
@@ -2081,7 +2075,8 @@ function lessonHTML(l){
    +'<div class="upg" style="margin-top:11px"><div class="un" style="margin-top:0">🎯 聽力策略：'+esc(l.tip)+'</div></div>'
    +'<div class="muted" style="margin-top:9px;font-size:calc(12px * var(--fs))">'
    +(l.kind==='note'
-     ?'本站自製教材，取材自你的課堂筆記'+(l.noteRef?'：'+esc(l.noteRef):'')
+     ?(l.noteRef?'本站自製教材，取材自你的課堂筆記：'+esc(l.noteRef)
+               :'本站自製教材（對話與練習句皆為原創撰寫）')
      :esc(l.source||''))
    +(au?'。朗讀為裝置內建的電腦語音。':'')
    +'</div></div>';
