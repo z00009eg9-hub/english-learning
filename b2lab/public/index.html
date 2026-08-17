@@ -509,6 +509,8 @@ body.cnall [id^="kc"]{display:block!important}
 /* 課本的句子中譯跟著右上角全站 🈶 中譯開關 */
 #v-book .cnx{display:none}
 body.cnall #v-book .cnx{display:block!important}
+body.cnall #v-book th.cnx,body.cnall #v-book td.cnx{display:table-cell!important}
+body.cnall #v-book span.cnx{display:inline!important}
 /* 課本日曆與搜尋 */
 #bk-q{width:100%;margin:4px 0 12px;padding:9px 12px;border:1.5px solid var(--line);border-radius:10px;
   font:inherit;font-size:calc(14px * var(--fs))}
@@ -1893,7 +1895,7 @@ document.addEventListener('click',e=>{
    ============================================================ */
 const BOOK_LESSONS=((window.BOOK||{}).lessons||[]).slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
 // 課本單字也進字庫，全站點字都查得到
-BOOK_LESSONS.forEach(b=>(b.vocab||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:'',exEn:t.ex,exCn:t.exCn,src:'課本：'+b.titleCn})));
+BOOK_LESSONS.forEach(b=>(b.vocab||[]).concat(b.vocab2||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:'',exEn:t.ex,exCn:t.exCn,src:'課本：'+b.titleCn})));
 let bkOpen=null, bkCalY=null, bkCalM=null, bkQuery='';
 /* 例句裡用到該單字／片語就加粗（compensate 也會對到 compensated；片語去掉 something/someone 佔位字再比對） */
 function bkHi(sent,w){
@@ -1985,11 +1987,32 @@ function bkGo(id){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; RENDER.book(); 
 function bkClose(){ bkOpen=null; RENDER.book(); window.scrollTo(0,0); }
 window.bkGo=bkGo; window.bkClose=bkClose; window.bkCalShift=bkCalShift; window.bkSearch=bkSearch;
 
+/* 文法重點的 ✅／❌ 自動上色（到左括號或行尾為止） */
+function bkMark(s){
+  return esc(s)
+    .replace(/❌\s*([^（(]*)/g,'<span class="wrong">❌ $1</span>')
+    .replace(/✅\s*([^（(]*)/g,'<span class="right">✅ $1</span>');
+}
 function bookHTML(b){
   const exRow=e=>'<div class="bkex"><div class="een">'
     +(e.tag?'<span class="bktag'+(e.tag==='非正式'?' inf':'')+'">'+esc(e.tag)+'</span> ':'')
     +bkHi(e.en,e.hi)+' '+spk(e.en)+'</div>'
     +(e.cn?'<div class="ecn cnx">'+esc(e.cn)+'</div>':'')+'</div>';
+  /* 單字表（桌機表格＋手機卡片共用；中文欄放最後、跟中譯開關） */
+  const vtable=list=>'<div class="bkvd card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+    +'<tr><th>單字</th><th>音標</th><th>詞性</th><th>例句</th><th class="cnx">中文</th></tr>'
+    + list.map(t=>'<tr><td class="nw" style="font-weight:700">'+esc(t.w)+(t.star?' ⭐':'')+'<br>'+spk(t.w)+'</td>'
+      +'<td class="nw" style="font-family:ui-monospace,monospace">'+esc(t.ipa)+'</td><td class="nw">'+esc(t.pos)+'</td>'
+      +'<td>'+bkHi(t.ex,t.w)+' '+spk(t.ex)+'<div class="muted cnx">'+esc(t.exCn)+'</div></td>'
+      +'<td class="nw cnx">'+esc(t.cn)+'</td></tr>').join('')
+    +'</table></div></div>'
+    +'<div class="bkvm">'+list.map(t=>'<div class="bkvcard">'
+      +'<div class="w">'+esc(t.w)+(t.star?' ⭐':'')+' <span class="pos">'+esc(t.pos)+'</span>'+spk(t.w)+'</div>'
+      +'<div class="ipa">'+esc(t.ipa)+'</div>'
+      +'<div class="cnw cnx">'+esc(t.cn)+'</div>'
+      +'<div class="bkex" style="margin-bottom:0"><div class="een">'+bkHi(t.ex,t.w)+' '+spk(t.ex)+'</div><div class="ecn cnx">'+esc(t.exCn)+'</div></div>'
+      +'</div>').join('')+'</div>';
+  const subh=t=>'<h2 class="sec" style="color:var(--accent2);margin:14px 0 8px">'+esc(t)+'</h2>';
   let h='<button class="back" onclick="bkClose()"></button>';
 
   /* 標題（Doc 首行：日期＋中文標題／英文標題／Topics） */
@@ -2010,63 +2033,115 @@ function bookHTML(b){
       return x;
     }).join('');
 
-  /* I. 單字：桌機照 Doc 五欄表格，手機直式卡片（同一份資料） */
-  h+='<div class="bkbar">I. 單字 Vocabulary</div>'
-   +'<div class="bkvd card" style="padding:10px"><div class="tw" style="margin:0"><table>'
-   +'<tr><th>單字</th><th>音標</th><th>詞性</th><th>中文</th><th>例句</th></tr>'
-   + (b.vocab||[]).map(t=>'<tr><td class="nw" style="font-weight:700">'+esc(t.w)+(t.star?' ⭐':'')+'<br>'+spk(t.w)+'</td>'
-     +'<td class="nw" style="font-family:ui-monospace,monospace">'+esc(t.ipa)+'</td><td class="nw">'+esc(t.pos)+'</td><td>'+esc(t.cn)+'</td>'
-     +'<td>'+bkHi(t.ex,t.w)+' '+spk(t.ex)+'<div class="muted cnx">'+esc(t.exCn)+'</div></td></tr>').join('')
-   +'</table></div></div>'
-   +'<div class="bkvm">'+(b.vocab||[]).map(t=>'<div class="bkvcard">'
-     +'<div class="w">'+esc(t.w)+(t.star?' ⭐':'')+' <span class="pos">'+esc(t.pos)+'</span>'+spk(t.w)+'</div>'
-     +'<div class="ipa">'+esc(t.ipa)+'</div>'
-     +'<div class="cnw">'+esc(t.cn)+'</div>'
-     +'<div class="bkex" style="margin-bottom:0"><div class="een">'+bkHi(t.ex,t.w)+' '+spk(t.ex)+'</div><div class="ecn cnx">'+esc(t.exCn)+'</div></div>'
-     +'</div>').join('')+'</div>';
+  /* 單字：主表＋補充單字＋前次已學（有才顯示） */
+  h+='<div class="bkbar">'+esc(b.vocabTitle||'I. 單字 Vocabulary')+'</div>'+vtable(b.vocab||[]);
+  if((b.vocab2||[]).length){
+    h+=subh(b.vocab2Title||'補充單字')+vtable(b.vocab2);
+  }
+  if((b.vocabReview||[]).length){
+    h+=subh(b.vocabReviewTitle||'⭐ 前次已學單字')
+     +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+     +'<tr><th>單字</th><th>音標</th><th>詞性</th><th class="cnx">中文</th></tr>'
+     + b.vocabReview.map(t=>'<tr><td class="nw" style="font-weight:700">'+esc(t.w)+' '+spk(t.w)+'</td>'
+       +'<td class="nw" style="font-family:ui-monospace,monospace">'+esc(t.ipa)+'</td><td class="nw">'+esc(t.pos)+'</td>'
+       +'<td class="nw cnx">'+esc(t.cn)+'</td></tr>').join('')
+     +'</table></div></div>';
+  }
 
-  /* II. 片語與搭配詞：Doc 分兩組（搭配詞＋英文解釋、片語＋例句） */
-  h+='<div class="bkbar">II. 片語與搭配詞 Phrases &amp; Collocations</div>'
-   +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
-   +'<tr><th>片語</th><th>中文</th><th>英文解釋</th></tr>'
-   + (b.colloc||[]).map(c=>'<tr><td class="nw" style="font-weight:700">'+esc(c.p)+'<br>'+spk(c.p)+'</td><td class="nw">'+esc(c.cn)+'</td>'
-     +'<td>'+esc(c.def)+'<div class="muted cnx">'+esc(c.defCn)+'</div></td></tr>').join('')
-   +'</table></div></div>'
-   + (b.phrases||[]).map(p=>'<div class="bkq"><div class="bkline" style="margin-bottom:2px"><b>'+esc(p.p)+'</b>'+spk(p.p)
-     +'<span class="muted">'+esc(p.cn)+'</span></div>'
+  /* 片語與搭配詞（英文解釋在前、中文最後） */
+  h+='<div class="bkbar">'+esc(b.phrasesTitle||'II. 片語與搭配詞 Phrases & Collocations')+'</div>';
+  if((b.colloc||[]).length){
+    h+='<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+     +'<tr><th>片語</th><th>英文解釋</th><th class="cnx">中文</th></tr>'
+     + b.colloc.map(c=>'<tr><td class="nw" style="font-weight:700">'+esc(c.p)+'<br>'+spk(c.p)+'</td>'
+       +'<td>'+esc(c.def)+'<div class="muted cnx">'+esc(c.defCn)+'</div></td>'
+       +'<td class="nw cnx">'+esc(c.cn)+'</td></tr>').join('')
+     +'</table></div></div>';
+  }
+  h+= (b.phrases||[]).map(p=>'<div class="bkq"><div class="bkline" style="margin-bottom:2px"><b>'+esc(p.p)+'</b>'+spk(p.p)
+     +'<span class="muted cnx">'+esc(p.cn)+'</span></div>'
      +exRow({en:p.ex,cn:p.exCn,hi:p.p})+'</div>').join('');
 
-  /* III. 句型與文法解説 */
-  h+='<div class="bkbar">III. 句型與文法解説 Sentence Patterns &amp; Grammar</div>'
+  /* 句型與文法解説 */
+  h+='<div class="bkbar">'+esc(b.grammarTitle||'III. 句型與文法解説 Sentence Patterns & Grammar')+'</div>'
    + (b.grammar||[]).map(g=>{
       let x='<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(g.k)+'. '+esc(g.title)+'</h2>';
       if(g.pat) x+='<div class="bkfml">📌 句型：'+esc(g.pat)+'</div>';
       else if(g.patLabel) x+='<div class="bkfml">📌 '+esc(g.patLabel)+'</div>';
-      x+='<ul class="bkul">'+(g.pts||[]).map(p=>'<li>'+esc(p)+'</li>').join('')+'</ul>'
+      x+='<ul class="bkul">'+(g.pts||[]).map(p=>'<li>'+bkMark(p)+'</li>').join('')+'</ul>'
        +(g.exs||[]).map(exRow).join('')+'</div>';
       return x;
     }).join('');
 
-  /* IV. 比較表＋注意搭配 */
-  h+='<div class="bkbar">IV. 比較表 Comparison Table</div>'
-   +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
-   +'<tr><th>用法</th><th>中文</th><th>適用場景</th><th>例句</th></tr>'
-   + (b.cmp||[]).map(c=>'<tr><td class="nw" style="font-weight:700">'+esc(c.u)+'<br>'+spk(c.u)+'</td><td class="nw">'+esc(c.cn)+'</td><td>'+esc(c.sc)+'</td>'
-     +'<td>'+bkHi(c.ex,c.u)+' '+spk(c.ex)+'<div class="muted cnx">'+esc(c.exCn)+'</div></td></tr>').join('')
-   +'</table></div></div>';
-  if(b.cmpWarn){
-    h+='<div class="bkwarn"><div style="font-weight:800">'+esc(b.cmpWarn.title)+'</div>'
-     +'<div class="wrong">❌ '+esc(b.cmpWarn.bad)+'</div>'
-     +(b.cmpWarn.good||[]).map(g=>'<div class="right">✅ '+esc(g)+'</div>').join('')+'</div>';
+  /* 比較表＋注意搭配（有才顯示；中文欄最後） */
+  if((b.cmp||[]).length){
+    h+='<div class="bkbar">'+esc(b.cmpTitle||'IV. 比較表 Comparison Table')+'</div>'
+     +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+     +'<tr><th>用法</th><th>適用場景</th><th>例句</th><th class="cnx">中文</th></tr>'
+     + b.cmp.map(c=>'<tr><td class="nw" style="font-weight:700">'+esc(c.u)+'<br>'+spk(c.u)+'</td><td>'+esc(c.sc)+'</td>'
+       +'<td>'+bkHi(c.ex,c.u)+' '+spk(c.ex)+'<div class="muted cnx">'+esc(c.exCn)+'</div></td>'
+       +'<td class="nw cnx">'+esc(c.cn)+'</td></tr>').join('')
+     +'</table></div></div>';
+    if(b.cmpWarn){
+      h+='<div class="bkwarn"><div style="font-weight:800">'+esc(b.cmpWarn.title)+'</div>'
+       +'<div class="wrong">❌ '+esc(b.cmpWarn.bad)+'</div>'
+       +(b.cmpWarn.good||[]).map(g=>'<div class="right">✅ '+esc(g)+'</div>').join('')+'</div>';
+    }
   }
 
-  /* V. 補充例句 */
-  h+='<div class="bkbar">V. 補充例句 Additional Examples</div>'
-   + (b.extra||[]).map(s=>'<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(s.title)+'</h2>'
-     + (s.exs||[]).map(exRow).join('')+'</div>').join('');
+  /* 閱讀文章（有才顯示）：段落中英對照＋理解問題＋Simple Summary */
+  (b.reading||[]).forEach(r=>{
+    h+='<div class="bkbar">'+esc(r.bar)+'</div>'
+     +'<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(r.title)+' '+spk(r.title)+'</h2>'
+     +'<div class="muted cnx" style="font-weight:700;margin-bottom:8px">'+esc(r.titleCn)+'</div>'
+     + (r.paras||[]).map(p=>'<div class="para"><div class="en">'+esc(p.en)+' '+spk(p.en)+'</div>'
+       +'<div class="ecn cnx" style="font-size:calc(14px * var(--fs));color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:6px">'+esc(p.cn)+'</div></div>').join('')
+     +'</div>';
+    if((r.questions||[]).length){
+      h+='<div class="card"><h2 class="sec" style="color:var(--accent2)">📌 理解問題 Comprehension Questions</h2>'
+       + r.questions.map((q,i)=>'<div class="bkex"><div class="een">'+(i+1)+'. '+esc(q.q)+' '+spk(q.q)+'</div>'
+         +'<div class="ecn cnx">'+esc(q.qCn)+'</div>'
+         +'<div style="margin-top:5px">'+esc(q.a)+' '+spk(q.a)+'</div>'
+         +'<div class="ecn cnx">'+esc(q.aCn)+'</div></div>').join('')
+       +'</div>';
+    }
+    if((r.sumEn||[]).length){
+      h+='<div class="card"><h2 class="sec" style="color:var(--accent2)">📌 Simple Summary 簡單摘要</h2>'
+       + r.sumEn.map(p=>'<div class="para"><div class="en">'+esc(p)+' '+spk(p)+'</div></div>').join('')
+       +'<div class="ecn cnx" style="font-size:calc(14px * var(--fs));color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px">'
+       + (r.sumCn||[]).map(p=>esc(p)).join('<br><br>')+'</div></div>';
+    }
+  });
 
-  /* VI. 快速總結 */
-  h+='<div class="bkbar">VI. 快速總結 Quick Summary</div>'
+  /* 補充例句（0811 型，有才顯示） */
+  if((b.extra||[]).length){
+    h+='<div class="bkbar">'+esc(b.extraTitle||'V. 補充例句 Additional Examples')+'</div>'
+     + b.extra.map(s=>'<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(s.title)+'</h2>'
+       + (s.exs||[]).map(exRow).join('')+'</div>').join('');
+  }
+
+  /* 補充字彙與句型（0813 型，有才顯示；中文欄最後） */
+  if((b.extraVocab||[]).length){
+    h+='<div class="bkbar">'+esc(b.extraVocabTitle||'補充字彙與句型 Additional Vocabulary & Expressions')+'</div>'
+     +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+     +'<tr><th>補充內容</th><th>英文</th><th class="cnx">中文</th></tr>'
+     + b.extraVocab.map(x=>'<tr><td class="nw" style="font-weight:700">'+esc(x.k)+'</td>'
+       +'<td>'+esc(x.en)+' '+spk(x.en)+'</td><td class="cnx">'+esc(x.cn)+'</td></tr>').join('')
+     +'</table></div></div>';
+  }
+
+  /* 課堂討論問題（有才顯示） */
+  if((b.discussion||[]).length){
+    h+='<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(b.discussionTitle||'課堂討論問題 Discussion Questions')+'</h2>'
+     + b.discussion.map(d=>'<div class="bkex"><div class="een">• '+esc(d.q)+' '+spk(d.q)+'</div>'
+       +'<div class="ecn cnx">'+esc(d.qCn)+'</div>'
+       +'<div style="margin-top:5px">'+esc(d.a)+' '+spk(d.a)+'</div>'
+       +'<div class="ecn cnx">'+esc(d.aCn)+'</div></div>').join('')
+     +'</div>';
+  }
+
+  /* 快速總結 */
+  h+='<div class="bkbar">'+esc(b.summaryTitle||'VI. 快速總結 Quick Summary')+'</div>'
    +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
    +'<tr><th>重點</th><th>說明</th></tr>'
    + (b.summary||[]).map(s=>'<tr><td style="font-weight:700">'+esc(s.k)+'</td><td>'+esc(s.v)+'</td></tr>').join('')
