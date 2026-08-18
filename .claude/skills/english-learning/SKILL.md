@@ -1115,6 +1115,33 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
 
 ---
 
+## 流程 H：同步課堂筆記到 B2 Lab 課本（2026-08-18 確立）
+
+**觸發時機**：每次建立或更新課堂筆記 Google Doc（流程 A / B / C Step 7）之後，**自動接著執行**，把同一份筆記同步到 B2 Read 的「📕 課本」分頁。使用者說「更新課本」也觸發。
+
+### 步驟
+
+1. **讀 Doc**：用 Drive MCP `read_file_content` 讀取該課的 Google Doc（優先【格式版】）。
+2. **轉成 lesson 物件**：加進 `G:\我的雲端硬碟\英文筆記\b2lab\public\data-book.js` 的 `window.BOOK.lessons` 陣列（附加在陣列尾端即可，執行時會依 date 排序）。
+   - **內容不增不減**，逐字取自 Doc；schema 參考檔內 `bk20260813`（最完整範例）。
+   - 常用欄位：`id`（bk+YYYYMMDD，同日兩份加 a/b）、`icon`（貼題 emoji）、`date`、`doc`（Google Doc 連結）、`title`/`titleCn`/`topics`、`hwTitle`+`hw[]`（n/wrong/fix/ok/cn/pat/note）、`vocabTitle`+`vocab[]`（w/star/ipa/pos/cn/ex/exCn）、`vocab2`/`vocabReview`、`phrasesTitle`+`phrases[]`（p/cn/ex/exCn）、`colloc[]`（p/def/defCn/cn）、`grammarTitle`+`grammar[]`（k/title/pat|patLabel/pts[]/exs[{tag,en,cn}]）、`cmpTitle`+`cmp[]`+`cmpWarn`、`reading[]`（bar/title/titleCn/paras[{en,cn}]/questions[{q,qCn,a,aCn}]/sumEn[]/sumCn[]）、`extraTitle`+`extra[]`（title+exs）、`extraVocabTitle`+`extraVocab[]`（k/en/cn）、`discussionTitle`+`discussion[]`（q/qCn/a/aCn）、`summaryTitle`+`summary[]`（k/v）。
+   - 渲染器沒有的區塊會自動跳過，不必硬湊；區塊順序固定為 hw→vocab→phrases→grammar→cmp→reading→extra→extraVocab→discussion→summary，對不上 Doc 順序沒關係，標題可自訂。
+3. **閱讀文章一定要加五圓插圖**：在 data-book.js 檔尾的插圖 IIFE 中，把該課加進 `S`（spec）——`S[lessonId] = [ [五個圖示 key 陣列, '中文圖說'], ... ]`（每篇 reading 一組）。
+   - 圖示從既有圖示庫 `I` 挑（house/talk/warning/check/coin/plane/food/heart/star/chartUp…共 37 個）；缺的圖示才新增（64×64 線稿，深色 `#2b2118`、橘色 `#e8813a`，仿現有風格）。
+   - 圖說描述文章的故事階段（「A → B → C → D → E。」格式），內容取自文章本身。
+   - 新增圖示後要用 headless Chrome 截圖驗證（`chrome --headless=new --screenshot`，輸出到本機可寫目錄，G: 或 scratchpad 會存取被拒）。
+4. **驗證**：`node -e "global.window={}; require('./data-book.js'); ..."` 檢查語法與 lessons 數；本機 `bkGo(id)` 渲染不報錯。
+5. **sw.js 快取版本 +1**（`b2lab/public/sw.js` 的 `CACHE = 'b2lab-vNN'`）。
+6. **部署**：`cd b2lab && npx firebase deploy --only hosting`。
+7. **commit + push**（訊息註明課次日期與主題）。
+
+### 注意
+- 若是「更新既有課」（Doc 內容有改），直接改 data-book.js 裡對應 lesson 物件的欄位，不要重複新增。
+- 月度複習彙整類文件（如 202606-月度複習）內容與各課重複，不匯入課本。
+- 課本 vocab/vocab2 會自動進全站字庫（addGloss），不需另外處理。
+
+---
+
 ### 常見錯誤與解法
 
 | 錯誤 | 原因 | 解法 |
