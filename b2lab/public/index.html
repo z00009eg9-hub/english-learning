@@ -588,9 +588,11 @@ body.cnall #v-book span.cnx{display:inline!important}
 @media(max-width:640px){ #v-book .magico{font-size:36px;right:12px;top:12px} #v-book .magico svg{width:56px;height:56px} #v-book .magttl h2{padding-right:52px} }
 #v-book .sent{cursor:pointer;border-radius:4px;transition:background .15s}
 #v-book .sent.reading{background:#fff2d9;box-shadow:0 0 0 2px #fff2d9}
-/* 課本文章：標題加大 3pt、每段開頭空兩格 */
+/* 課本文章：標題加大 3pt；段落開頭不空格（與左邊界對齊） */
 #v-book .bkattl{font-size:calc(19px * var(--fs))}
-#v-book .para .en{text-indent:2ch}
+#v-book .para .en{text-indent:0}
+/* 卡片內的插圖：去掉自己的白框與內距，寬度與內文完全同寬 */
+.artbox.flush{background:transparent;border:0;box-shadow:none;padding:0}
 /* 閱讀檢視（桌機）：整篇比照課本放寬到 1120px */
 @media(min-width:920px){
   #v-read.rdopen>*{width:min(1120px,calc(100vw - 44px));position:relative;left:50%;transform:translateX(-50%)}
@@ -1127,7 +1129,7 @@ const reEsc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 function artHTML(id){
   const a=(window.ART||{})[id];
   if(!a) return '';
-  return '<figure class="artbox">'+a.svg
+  return '<figure class="artbox flush" style="margin:0 0 14px">'+a.svg
    +(a.cap?'<figcaption>'+esc(a.cap)+'</figcaption>':'')+'</figure>';
 }
 
@@ -1276,8 +1278,7 @@ function readerHTML(a){
    +'</div>'
    +(a.source?'<div class="set" style="font-style:normal;font-size:calc(12.5px * var(--fs))">'+esc(a.source)
       +(a.sourceUrl?' · <a href="'+esc(a.sourceUrl)+'" target="_blank" rel="noopener">↗ 看新聞原文</a>':'')+'</div>':'')
-   +'</div>'
-   + artHTML(a.id);
+   +'</div>';
 
   h+='<div class="mag">';
 
@@ -1289,6 +1290,7 @@ function readerHTML(a){
    +'<button class="btn ghost sm" id="btn-readall" onclick="readAll()">🔊 朗讀全文</button>'
    +'<button class="spk" style="margin-left:auto" onclick="togHintBox(this)">💡 說明 ▼</button></div>'
    +'<div class="hint" style="display:none">💡 點<b>任何一句</b>就會<b>朗讀那一句</b>（那句會亮起來）；<b style="color:#c0561a">橘色加粗＋編號</b>的字對應右邊的單字片語；整段一起唸用各段下方「🔊 整段」。</div>'
+   + artHTML(a.id)
    +'<div id="paras">'+a.paras.map((p,i)=>{
       const enHtml=splitSentences(p.en).map(s=>
         '<span class="sent" title="點這句朗讀" onclick="saySent(this)" data-t="'+esc(s)+'">'+magTokenizeRead(s,tmap,used)+'</span>'
@@ -2239,8 +2241,8 @@ function bookHTML(b){
    +(b.doc?'<a class="magbadge" href="'+esc(b.doc)+'" target="_blank" rel="noopener" style="text-decoration:none">📄 原始 Google 文件 ↗</a>':'')
    +'</div></div>';
 
-  /* ★ 作業複習（原句錯的字反紅、訂正改對的字反綠） */
-  h+='<div class="bkbar">'+esc(b.hwTitle)+'</div>'
+  /* ★ 作業複習（原句錯的字反紅、訂正改對的字反綠；沒有作業就整節跳過） */
+  if((b.hw||[]).length) h+='<div class="bkbar">'+esc(b.hwTitle)+'</div>'
    + (b.hw||[]).map(q=>{
       let x='<div class="bkq"><div class="qn">第 '+q.n+' 題</div>';
       if(q.wrong) x+='<div class="bkline"><b class="lb wrong">❌ 原句：</b><span>'+bkDiff(q.wrong,q.fix,'wrong')+'</span></div>'
@@ -2253,7 +2255,7 @@ function bookHTML(b){
     }).join('');
 
   /* 單字：主表＋補充單字＋前次已學（有才顯示） */
-  h+='<div class="bkbar">'+esc(b.vocabTitle||'I. 單字 Vocabulary')+'</div>'+vtable(b.vocab||[]);
+  if((b.vocab||[]).length) h+='<div class="bkbar">'+esc(b.vocabTitle||'I. 單字 Vocabulary')+'</div>'+vtable(b.vocab);
   if((b.vocab2||[]).length){
     h+=subh(b.vocab2Title||'補充單字')+vtable(b.vocab2);
   }
@@ -2267,8 +2269,9 @@ function bookHTML(b){
      +'</table></div></div>';
   }
 
-  /* 片語與搭配詞（英文解釋在前、中文最後） */
-  h+='<div class="bkbar">'+esc(b.phrasesTitle||'II. 片語與搭配詞 Phrases & Collocations')+'</div>';
+  /* 片語與搭配詞（英文解釋在前、中文最後；沒有就整節跳過） */
+  if((b.colloc||[]).length||(b.phrases||[]).length)
+    h+='<div class="bkbar">'+esc(b.phrasesTitle||'II. 片語與搭配詞 Phrases & Collocations')+'</div>';
   if((b.colloc||[]).length){
     h+='<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
      +'<tr><th>片語</th><th>英文解釋</th><th class="cnx">中文</th></tr>'
@@ -2281,8 +2284,8 @@ function bookHTML(b){
      +'<span class="muted cnx">'+esc(p.cn)+'</span></div>'
      +exRow({en:p.ex,cn:p.exCn,hi:p.p})+'</div>').join('');
 
-  /* 句型與文法解説 */
-  h+='<div class="bkbar">'+esc(b.grammarTitle||'III. 句型與文法解説 Sentence Patterns & Grammar')+'</div>'
+  /* 句型與文法解説（沒有就整節跳過） */
+  if((b.grammar||[]).length) h+='<div class="bkbar">'+esc(b.grammarTitle||'III. 句型與文法解説 Sentence Patterns & Grammar')+'</div>'
    + (b.grammar||[]).map(g=>{
       let x='<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(g.k)+'. '+esc(g.title)+'</h2>';
       if(g.pat) x+='<div class="bkfml">📌 句型：'+esc(g.pat)+'</div>';
@@ -2319,12 +2322,12 @@ function bookHTML(b){
      +'<button class="spk" onclick="togHintBox(this)">💡 ▼</button></span></div>'
      +'<div class="hint" style="display:none;margin-top:8px">點<b>任何一句</b>就朗讀那一句並反黃；「🔊 朗讀全文」與「🔊 整段」會一句一句念、念到哪句亮到哪句，再點一下空白處可停止。</div>'
      +'<div class="muted cnx" style="font-weight:700;margin:6px 0 8px">'+esc(r.titleCn)+'</div>'
+     /* 文章插圖：五個大圓圖示，放在標題下方、與內文同寬（有才顯示） */
+     + (r.art?'<figure class="artbox flush" style="margin:0 0 14px">'+r.art+(r.artCap?'<figcaption>'+esc(r.artCap)+'</figcaption>':'')+'</figure>':'')
      + (r.paras||[]).map(p=>'<div class="para"><div class="en">'+sentSpans(p.en)+'</div>'
        +'<div class="pbar"><button class="spk" onclick="bkReadPara(this)">🔊 整段</button></div>'
        +'<div class="ecn cnx" style="font-size:calc(15px * var(--fs));color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:6px">'+esc(p.cn)+'</div></div>').join('')
      +'</div>';
-    /* 文章插圖：五個大圓圖示（有才顯示） */
-    if(r.art) h+='<figure class="artbox">'+r.art+(r.artCap?'<figcaption>'+esc(r.artCap)+'</figcaption>':'')+'</figure>';
     if((r.questions||[]).length){
       h+='<div class="card"><div class="row" style="justify-content:space-between;align-items:center">'
        +'<h2 class="sec" style="margin:0;color:var(--accent2)">📌 理解問題 Comprehension Questions</h2>'
@@ -2336,7 +2339,9 @@ function bookHTML(b){
        +'</div>';
     }
     if((r.sumEn||[]).length){
-      h+='<div class="card"><h2 class="sec" style="color:var(--accent2)">📌 Simple Summary 簡單摘要</h2>'
+      h+='<div class="card bksum"><div class="row" style="justify-content:space-between;align-items:center">'
+       +'<h2 class="sec" style="color:var(--accent2);margin:0">📌 Simple Summary 簡單摘要</h2>'
+       +'<button class="spk" onclick="bkReadAll(this)">🔊 朗讀全文</button></div>'
        + r.sumEn.map(p=>'<div class="para"><div class="en">'+sentSpans(p)+'</div>'
          +'<div class="pbar"><button class="spk" onclick="bkReadPara(this)">🔊 整段</button></div></div>').join('')
        +'<div class="ecn cnx" style="font-size:calc(15px * var(--fs));color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px">'
@@ -2371,11 +2376,11 @@ function bookHTML(b){
      +'</div>';
   }
 
-  /* 快速總結 */
-  h+='<div class="bkbar">'+esc(b.summaryTitle||'VI. 快速總結 Quick Summary')+'</div>'
+  /* 快速總結（沒有就整節跳過） */
+  if((b.summary||[]).length) h+='<div class="bkbar">'+esc(b.summaryTitle||'VI. 快速總結 Quick Summary')+'</div>'
    +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
    +'<tr><th>重點</th><th>說明</th></tr>'
-   + (b.summary||[]).map(s=>'<tr><td style="font-weight:700">'+esc(s.k)+'</td><td>'+esc(s.v)+'</td></tr>').join('')
+   + b.summary.map(s=>'<tr><td style="font-weight:700">'+esc(s.k)+'</td><td>'+esc(s.v)+'</td></tr>').join('')
    +'</table></div></div>';
 
   h+='<div class="card" style="text-align:center"><button class="btn" onclick="bkClose()">完成，回列表</button></div>';
