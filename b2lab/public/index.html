@@ -88,17 +88,17 @@ nav button{
   flex:1;border:0;background:none;padding:6px 2px 5px;font:inherit;font-size:11px;color:var(--ink2);
   cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;line-height:1.35
 }
-nav button i{font-style:normal;font-size:23px;line-height:1;transition:transform .18s ease}
+nav button i{font-style:normal;font-size:20px;line-height:1;transition:transform .18s ease}
 nav button.on{color:var(--accent2);font-weight:700}
 /* 目前所在分頁：圖示放大浮起＋橘色光暈底盤，一眼看出在哪一頁 */
 nav button.on i{
-  transform:translateY(-2px) scale(1.2);
-  background:var(--accent-soft);border-radius:10px;padding:3px 8px;
-  box-shadow:0 2px 8px rgba(200,110,40,.25)
+  transform:translateY(-1px) scale(1.1);
+  background:var(--accent-soft);border-radius:9px;padding:2px 7px;
+  box-shadow:0 2px 6px rgba(200,110,40,.22)
 }
 /* 今日分頁的小日曆圖示：顯示「今天」實際日期，而不是 📅 emoji 內建的固定日期 */
 .dayico{display:inline-flex;flex-direction:column;align-items:stretch;
-  width:23px;height:24px;border:1.5px solid currentColor;border-radius:6px;overflow:hidden;font-style:normal}
+  width:21px;height:22px;border:1.5px solid currentColor;border-radius:5px;overflow:hidden;font-style:normal}
 .dayico .m{display:block;width:100%;flex:0 0 auto;background:currentColor;color:#fff;font-size:6px;font-weight:800;
   line-height:7px;letter-spacing:.5px;text-align:center}
 /* 數字不靠字型行高（各瀏覽器算法不同、容易偏下），改用固定高度置中 */
@@ -122,6 +122,7 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 }
 .btn.ghost{background:#fff;color:var(--accent2);border:1.5px solid var(--accent)}
 .btn.gray{background:#efeae3;color:var(--ink2)}
+.btn.sm{font-size:calc(12.5px * var(--fs));padding:6px 11px;border-radius:9px}
 .btn:active{transform:scale(.97)}
 .btn:disabled{opacity:.5;cursor:default}
 .lv{font-size:calc(10.5px * var(--fs));font-weight:800;padding:2px 7px;border-radius:6px;color:#fff;letter-spacing:.4px;white-space:nowrap}
@@ -545,6 +546,25 @@ body.cnall #v-book span.cnx{display:inline!important}
 #v-book .bkvcard .cnw{font-size:calc(17px * var(--fs))}
 #v-book .para .en{font-size:calc(19px * var(--fs))}
 #v-book .muted{font-size:calc(15px * var(--fs))}
+/* 文法解說 (1)(2)(3)：編號懸掛縮排，折行後內容對齊編號後方 */
+.bknum{display:flex;gap:3px;align-items:flex-start;margin-top:2px}
+.bknum .no{flex-shrink:0;font-weight:700}
+/* 課本錯誤字用正紅色 */
+#v-book .wrong{color:#FF0000}
+/* 單字表桌機版跳出主欄限寬，例句欄更寬 */
+@media(min-width:920px){
+  #v-book .bkvd.card{width:min(1120px,calc(100vw - 44px));position:relative;left:50%;transform:translateX(-50%)}
+}
+/* 課本標題卡：右側大圖示＋彩色徽章 */
+#v-book .magttl{position:relative}
+#v-book .magttl h2{padding-right:84px}
+#v-book .magico{position:absolute;right:20px;top:16px;font-size:58px;line-height:1;
+  filter:drop-shadow(3px 3px 0 rgba(43,33,24,.22))}
+@media(max-width:640px){ #v-book .magico{font-size:36px;right:12px;top:12px} #v-book .magttl h2{padding-right:52px} }
+#v-book .magbadge.c1{background:#d9691f}
+#v-book .magbadge.c2{background:#2b7a78}
+#v-book .magbadge.c3{background:#8b5cf6}
+#v-book a.magbadge{background:#3b82c4}
 </style>
 </head>
 <body>
@@ -970,15 +990,20 @@ function applyCnAll(){
   if(b){ b.textContent=CNALL?'🈶 中譯：開':'🈶 中譯：關'; b.classList.toggle('off',!CNALL); }
 }
 function togGlobalCn(){
-  /* 以畫面上方附近的元素當錨點：切換後把它捲回原本的位置，畫面才不會跳 */
-  const anchor=document.elementFromPoint(Math.min(80,innerWidth/3), 140);
+  /* 以畫面上方附近「切換後仍看得到的區塊」當錨點：切換後把它捲回原本位置，畫面不跳。
+     錨點要選整張卡片／段落，不能選中譯本身（切換後會被藏起來、量不到位置）。 */
+  let anchor=document.elementFromPoint(Math.min(90,innerWidth/3), 170);
+  anchor=anchor ? (anchor.closest('.bkq,.bkex,.para,.bkbar,.card,.item,.magttl,section')||anchor) : null;
   const prevTop=anchor?anchor.getBoundingClientRect().top:null;
   CNALL=!CNALL;
   try{ localStorage.setItem('b2lab_cnall',CNALL?'1':'0'); }catch(e){}
   applyCnAll();
   if(anchor&&prevTop!=null){
-    const d=anchor.getBoundingClientRect().top-prevTop;
-    if(d) window.scrollBy(0,d);
+    const r=anchor.getBoundingClientRect();
+    if(r.height>0){
+      const d=r.top-prevTop;
+      if(d) window.scrollBy({top:d,behavior:'instant'});
+    }
   }
 }
 window.togGlobalCn=togGlobalCn;
@@ -1224,10 +1249,12 @@ function readerHTML(a){
 
   /* 左欄：內文 */
   h+='<div><div class="card">'
-   +'<div class="row" style="margin-bottom:11px">'
-   +'<button class="btn ghost" id="btn-cn-show" onclick="cnAll(1)">顯示全部中譯</button>'
-   +'<button class="btn gray" id="btn-cn-hide" onclick="cnAll(0)">隱藏中譯</button>'
-   +'<button class="btn ghost" id="btn-readall" onclick="readAll()">🔊 朗讀全文</button></div>'
+   +'<div class="row" style="margin-bottom:11px;align-items:center">'
+   +'<button class="btn ghost sm" id="btn-cn-show" onclick="cnAll(1)">顯示全部中譯</button>'
+   +'<button class="btn gray sm" id="btn-cn-hide" onclick="cnAll(0)">隱藏中譯</button>'
+   +'<button class="btn ghost sm" id="btn-readall" onclick="readAll()">🔊 朗讀全文</button>'
+   +'<button class="spk" style="margin-left:auto" onclick="togHintBox(this)">💡 說明 ▼</button></div>'
+   +'<div class="hint" style="display:none">💡 點<b>任何一句</b>就會<b>朗讀那一句</b>（那句會亮起來）；<b style="color:#c0561a">橘色加粗＋編號</b>的字對應右邊的單字片語；整段一起唸用各段下方「🔊 整段」。</div>'
    +'<div id="paras">'+a.paras.map((p,i)=>{
       const enHtml=splitSentences(p.en).map(s=>
         '<span class="sent" title="點這句朗讀" onclick="saySent(this)" data-t="'+esc(s)+'">'+magTokenizeRead(s,tmap,used)+'</span>'
@@ -1237,7 +1264,6 @@ function readerHTML(a){
      +'<div class="cn">'+esc(p.cn)+'</div></div>';
     }).join('')
    +'</div>'
-   +'<div class="muted" style="margin-top:6px;font-size:calc(12.5px * var(--fs))">💡 點<b>任何一句</b>就會<b>朗讀那一句</b>（那句會亮起來）；<b style="color:#c0561a">橘色加粗＋編號</b>的字對應右邊的單字片語；整段一起唸用下方「🔊 整段」。</div>'
    +'</div></div>';
 
   /* 右欄：Words & Phrases + 補充詞彙 + You Can Do This */
@@ -1962,13 +1988,16 @@ function bkDiff(a,b,cls){
     return k ? '<span class="'+cls+'">'+esc(w)+'</span>' : esc(w);
   }).join(' ');
 }
-/* 文法解說排版：句號後換行，(1)(2)(3) 也各自一行 */
+/* 文法解說排版：句號後換行；(1)(2)(3) 各自成段、編號懸掛縮排（折行後內容對齊） */
 function bkNote(s){
-  let x=esc(s);
-  x=x.replace(/[（(](\d+)[)）]/g,(m,d,off)=> (off===0?'':'<br>')+'（'+d+'）');
-  x=x.replace(/。(?!\s*$)/g,'。<br>');
-  x=x.replace(/(<br>\s*)+/g,'<br>');
-  return x;
+  const brk=x=>esc(x).replace(/。(?!\s*$)/g,'。<br>').replace(/(<br>\s*)+/g,'<br>').replace(/^<br>|<br>$/g,'');
+  const parts=String(s).split(/(?=[（(]\d+[)）])/);
+  if(parts.length<2) return '<div>'+brk(s)+'</div>';
+  return parts.map(p=>{
+    const m=p.match(/^[（(](\d+)[)）]\s*([\s\S]*)$/);
+    if(m) return '<div class="bknum"><span class="no">（'+m[1]+'）</span><div>'+brk(m[2])+'</div></div>';
+    return p.trim()?'<div>'+brk(p)+'</div>':'';
+  }).join('');
 }
 function bkItem(b,extraMeta){
   return '<div class="item" onclick="bkGo(\''+b.id+'\')">'
@@ -2091,6 +2120,34 @@ function bkReadPara(btn){
   speechSynthesis.cancel();
   step();
 }
+/* 朗讀全文（課本文章）：整張卡的句子一句句念、念到哪句反黃＋捲進畫面 */
+function bkReadAll(btn){
+  const card=btn.closest('.card'); if(!card) return;
+  const sents=[...card.querySelectorAll('.sent')];
+  let i=0;
+  const step=()=>{
+    document.querySelectorAll('.para .sent.reading').forEach(x=>x.classList.remove('reading'));
+    if(i>=sents.length) return;
+    const el=sents[i++]; el.classList.add('reading');
+    el.scrollIntoView({block:'center',behavior:'smooth'});
+    say(el.dataset.t,null,step);
+  };
+  speechSynthesis.cancel();
+  step();
+}
+/* 💡 說明展開/收合（按鈕往上找最近的 .hint 兄弟區塊） */
+function togHintBox(btn){
+  let el=btn, hint=null;
+  while(el && el!==document.body && !hint){
+    let sib=el.nextElementSibling;
+    while(sib){ if(sib.classList&&sib.classList.contains('hint')){ hint=sib; break; } sib=sib.nextElementSibling; }
+    el=el.parentElement;
+  }
+  if(!hint) return;
+  const show=hint.style.display==='none';
+  hint.style.display=show?'block':'none';
+  btn.textContent=btn.textContent.indexOf('說明')>=0?(show?'💡 說明 ▲':'💡 說明 ▼'):(show?'💡 ▲':'💡 ▼');
+}
 /* 理解問題：答案顯示/隱藏 */
 function bkTogAns(btn){
   const card=btn.closest('.card'); if(!card) return;
@@ -2099,6 +2156,7 @@ function bkTogAns(btn){
 }
 window.bkGo=bkGo; window.bkClose=bkClose; window.bkCalShift=bkCalShift; window.bkSearch=bkSearch;
 window.bkTogHint=bkTogHint; window.bkReadPara=bkReadPara; window.bkTogAns=bkTogAns;
+window.bkReadAll=bkReadAll; window.togHintBox=togHintBox;
 
 /* 文法重點的 ✅／❌ 自動上色（到左括號或行尾為止） */
 function bkMark(s){
@@ -2128,13 +2186,14 @@ function bookHTML(b){
   const subh=t=>'<h2 class="sec" style="color:var(--accent2);margin:14px 0 8px">'+esc(t)+'</h2>';
   let h='<button class="back" onclick="bkClose()"></button>';
 
-  /* 標題卡：雜誌風（仿閱讀分頁的漫畫標題卡）＋原始 Google 文件連結 */
-  h+='<div class="magttl"><h2>'+esc(b.title)+' '+spk(b.title)+'</h2>'
+  /* 標題卡：雜誌風＋右側大圖示＋彩色徽章＋原始 Google 文件連結 */
+  h+='<div class="magttl"><div class="magico">'+(b.icon||'📕')+'</div>'
+   +'<h2>'+esc(b.title)+' '+spk(b.title)+'</h2>'
    +'<div class="cn">'+esc(b.titleCn)+'</div>'
    +'<div class="set">Topics: '+esc(b.topics)+'</div>'
-   +'<div class="bar"><span class="magbadge">📅 '+bkDate(b.date)+'</span>'
-   +'<span class="magbadge">🔤 '+((b.vocab||[]).length+(b.vocab2||[]).length)+' 個單字</span>'
-   +'<span class="magbadge">📐 '+(b.grammar||[]).length+' 個句型</span>'
+   +'<div class="bar"><span class="magbadge c1">📅 '+bkDate(b.date)+'</span>'
+   +'<span class="magbadge c2">🔤 '+((b.vocab||[]).length+(b.vocab2||[]).length)+' 個單字</span>'
+   +'<span class="magbadge c3">📐 '+(b.grammar||[]).length+' 個句型</span>'
    +(b.doc?'<a class="magbadge" href="'+esc(b.doc)+'" target="_blank" rel="noopener" style="text-decoration:none">📄 原始 Google 文件 ↗</a>':'')
    +'</div></div>';
 
@@ -2147,7 +2206,7 @@ function bookHTML(b){
       else x+='<div class="bkline"><b class="lb right">✅ 原句：</b><span>'+esc(q.ok)+'</span>'+spk(q.ok)+'</div>';
       x+='<div class="bkcn cnx">中文：'+esc(q.cn)+'</div>'
        +'<div class="bkpatline">結構：'+esc(q.pat)+'</div>'
-       +'<div class="bknote"><b>💬 文法解説：</b><br>'+bkNote(q.note)+'</div></div>';
+       +'<div class="bknote"><b>💬 文法解説：</b>'+bkNote(q.note)+'</div></div>';
       return x;
     }).join('');
 
@@ -2211,9 +2270,13 @@ function bookHTML(b){
   const sentSpans=t=>splitSentences(t).map(s=>'<span class="sent" data-t="'+esc(s)+'" onclick="saySent(this)">'+esc(s)+'</span>').join(' ');
   (b.reading||[]).forEach(r=>{
     h+='<div class="bkbar">'+esc(r.bar)+'</div>'
-     +'<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(r.title)+' '+spk(r.title)+'</h2>'
-     +'<div class="muted cnx" style="font-weight:700;margin-bottom:8px">'+esc(r.titleCn)+'</div>'
-     +'<div class="hint">點<b>任何一句</b>就朗讀那一句並反黃；🔊 整段會一句一句念、念到哪句亮到哪句。</div>'
+     +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
+     +'<h2 class="sec" style="color:var(--accent2);margin:0;flex:1">'+esc(r.title)+' '+spk(r.title)+'</h2>'
+     +'<span class="row" style="flex-wrap:nowrap;gap:6px">'
+     +'<button class="spk" onclick="bkReadAll(this)">🔊 朗讀全文</button>'
+     +'<button class="spk" onclick="togHintBox(this)">💡 ▼</button></span></div>'
+     +'<div class="hint" style="display:none;margin-top:8px">點<b>任何一句</b>就朗讀那一句並反黃；「🔊 朗讀全文」與「🔊 整段」會一句一句念、念到哪句亮到哪句，再點一下空白處可停止。</div>'
+     +'<div class="muted cnx" style="font-weight:700;margin:6px 0 8px">'+esc(r.titleCn)+'</div>'
      + (r.paras||[]).map(p=>'<div class="para"><div class="en">'+sentSpans(p.en)+'</div>'
        +'<div class="pbar"><button class="spk" onclick="bkReadPara(this)">🔊 整段</button></div>'
        +'<div class="ecn cnx" style="font-size:calc(15px * var(--fs));color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:6px">'+esc(p.cn)+'</div></div>').join('')
