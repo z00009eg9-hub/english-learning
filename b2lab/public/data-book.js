@@ -9107,6 +9107,158 @@ window.BOOK = {
         { k: '時態', v: 'Present Simple = 習慣／事實；Present Continuous = 正在發生' },
         { k: '溝通問題的說法', v: 'poor communication / miscommunication / communication problem / ineffective communication / communication failure' }
       ]
+    },
+    {
+      id: 'bk20260818',
+      icon: '🤝',
+      date: '2026-08-18',
+      doc: 'https://docs.google.com/document/d/1rKkl4yemKQDVgW7zQNU87mEJC7hrcjQanXhawG-ak-M/edit',
+      title: 'Behavior Descriptions and Interpersonal Communication',
+      titleCn: '行為描述與人際互動',
+      topics: 'reputation, bully, curious, apology, distraction, ridiculous, troublesome, curiosity, threaten, confuse, apologize',
+      hwTitle: 'I. ★ 08/18 作業複習 Homework Review',
+      hw: [
+        { n: 1, ok: 'We should not blame others before we find out the problem clearly.',
+          cn: '我們在弄清楚問題之前不應該責怪別人。',
+          pat: 'Subject + should not + V + before + subject + V + object + adverb',
+          note: '文法正確。should not blame 表示「不應該責怪」；before 引導時間副詞子句。' },
+        { n: 2, wrong: 'There was a miscommunication between the two countries because of language problems.',
+          fix: 'There was a communication problem between the two countries because of language barriers.',
+          cn: '兩國之間因為語言障礙而有溝通問題。',
+          pat: 'There was + noun + between + noun + because of + noun',
+          note: '兩處修正：(1) miscommunication 改為 communication problem，因為不是訊息傳達錯誤，而是語言不同造成的溝通困難；(2) language problems 改為 language barriers，barrier 專指「屏障、障礙」，更精準描述語言不通的情境。' },
+        { n: 3, ok: 'Before traveling, we should make sure our passports have not expired.',
+          cn: '旅行前，我們應該確認護照沒有過期。',
+          pat: 'Before + V-ing, subject + should + make sure + clause',
+          note: '文法正確。make sure + that 子句表示「確認」；have not expired 用現在完成式表示「到目前為止尚未過期」。' },
+        { n: 4, ok: 'We asked the supplier to investigate, but they refused.',
+          cn: '我們要求供應商調查，但他們拒絕了。',
+          pat: 'Subject + asked + object + to V, but + subject + refused',
+          note: '文法正確。asked someone to do something 表示「要求某人做某事」；refused 表示「拒絕」。' },
+        { n: 5, wrong: 'My son couldn\'t come to the trip because of the exam, so I plan to buying souvenirs for him.',
+          fix: 'My son couldn\'t come on the trip because he had an exam, so I plan to buy him some souvenirs.',
+          cn: '我兒子因為有考試不能來旅行，所以我打算幫他買一些紀念品。',
+          pat: 'Subject + couldn\'t come on + noun + because + clause, so + subject + plan to + V + object',
+          note: '多處修正：(1) come to the trip → come on the trip（旅行用 on）；(2) because of the exam → because he had an exam（用子句更自然）；(3) plan to buying → plan to buy（plan to 後面接原形動詞）；(4) buying souvenirs for him → buy him some souvenirs（雙受詞較自然）。' }
+      ],
+      vocabTitle: 'II. 單字 Vocabulary',
+      vocab: [
+        { w: 'reputation', star: true, ipa: '/ˌrɛpjuˈteɪʃən/', pos: 'n.', cn: '名聲；聲譽',
+          ex: 'He has a good reputation at work.', exCn: '他在工作上名聲很好。' },
+        { w: 'bully', ipa: '/ˈbʊli/', pos: 'v./n.', cn: '欺負；霸凌；霸凌者',
+          ex: 'The older kids used to bully him at school.', exCn: '那些大孩子以前在學校常欺負他。' },
+        { w: 'curious', ipa: '/ˈkjʊriəs/', pos: 'adj.', cn: '好奇的；想知道的',
+          ex: 'She is curious about everything.', exCn: '她對什麼事都很好奇。' },
+        { w: 'apology', ipa: '/əˈpɑːlədʒi/', pos: 'n.', cn: '道歉；歉意',
+          ex: 'He offered an apology for being late.', exCn: '他為遲到道了歉。' },
+        { w: 'distraction', star: true, ipa: '/dɪˈstrækʃən/', pos: 'n.', cn: '分心的事物；干擾',
+          ex: 'Phone notifications are a big distraction.', exCn: '手機通知是很大的干擾。' },
+        { w: 'ridiculous', star: true, ipa: '/rɪˈdɪkjələs/', pos: 'adj.', cn: '荒謬的；可笑的',
+          ex: 'That excuse sounds ridiculous.', exCn: '那個藉口聽起來很荒謬。' },
+        { w: 'troublesome', star: true, ipa: '/ˈtrʌblsəm/', pos: 'adj.', cn: '麻煩的；令人困擾的',
+          ex: 'This issue has been very troublesome.', exCn: '這個問題一直很令人困擾。' },
+        { w: 'curiosity', star: true, ipa: '/ˌkjʊriˈɑːsəti/', pos: 'n.', cn: '好奇心',
+          ex: 'Curiosity killed the cat.', exCn: '好奇心會害死人。（諺語）' },
+        { w: 'difficulty', ipa: '/ˈdɪfɪkəlti/', pos: 'n.', cn: '困難；難題',
+          ex: 'She had difficulty understanding the instructions.', exCn: '她很難理解那些指示。' },
+        { w: 'threaten', star: true, ipa: '/ˈθrɛtən/', pos: 'v.', cn: '威脅；恐嚇',
+          ex: 'He threatened to call the police.', exCn: '他威脅要報警。' },
+        { w: 'concern', ipa: '/kənˈsɜːrn/', pos: 'n.', cn: '擔心；關切；問題',
+          ex: 'Safety is our main concern.', exCn: '安全是我們最大的擔心。' },
+        { w: 'confuse', star: true, ipa: '/kənˈfjuːz/', pos: 'v.', cn: '把…弄混；混淆',
+          ex: 'Don\'t confuse an opinion as a fact.', exCn: '不要把意見混淆為事實。' },
+        { w: 'apologize', ipa: '/əˈpɑːlədʒaɪz/', pos: 'v.', cn: '道歉',
+          ex: 'He apologized for the mistake.', exCn: '他為那個錯誤道歉了。' }
+      ],
+      phrasesTitle: 'III. 片語與搭配詞 Phrases & Collocations',
+      phrases: [
+        { p: 'pick on someone', cn: '找某人的麻煩；欺負某人',
+          ex: 'Stop picking on your little brother.', exCn: '別再找你弟弟的麻煩了。' },
+        { p: 'chill out', cn: '放鬆；冷靜下來',
+          ex: 'Just chill out and enjoy the weekend.', exCn: '放鬆一下，享受週末吧。' },
+        { p: 'laugh at', cn: '嘲笑',
+          ex: 'Don\'t laugh at other people\'s mistakes.', exCn: '不要嘲笑別人的錯誤。' },
+        { p: 'highly skilled', cn: '技術高超的',
+          ex: 'She is a highly skilled engineer.', exCn: '她是一位技術高超的工程師。' },
+        { p: 'catch up with', cn: '趕上；補上進度',
+          ex: 'I need to catch up with my classmates.', exCn: '我需要趕上同學們的進度。' },
+        { p: 'get my point across to', cn: '讓某人理解我的意思',
+          ex: 'I tried to get my point across to my manager.', exCn: '我試著讓經理理解我的意思。' },
+        { p: 'make my blood boil', cn: '讓我火冒三丈',
+          ex: 'His rude behavior makes my blood boil.', exCn: '他粗魯的行為讓我火冒三丈。' },
+        { p: 'make an excuse', cn: '找藉口',
+          ex: 'He always makes an excuse for being late.', exCn: '他總是為遲到找藉口。' },
+        { p: 'take up much time', cn: '花費很多時間',
+          ex: 'This project takes up much time.', exCn: '這個專案花費很多時間。' },
+        { p: "don't have to", cn: '不必；不用',
+          ex: "You don't have to come if you're busy.", exCn: '如果你忙的話，不用來。' }
+      ],
+      grammarTitle: 'IV. 句型與文法解說 Sentence Patterns & Grammar',
+      grammar: [
+        {
+          k: 'A', title: 'be curious about something',
+          pat: 'be + curious + about + N / V-ing',
+          pts: [
+            'curious 後面要用介系詞 about，表示「對……好奇」。',
+            '✅ She is curious about the new project.（她對新專案很好奇。）',
+            '✅ He is curious about learning Japanese.（他對學日文很好奇。）'
+          ]
+        },
+        {
+          k: 'B', title: 'confuse A as / with B',
+          pat: 'confuse + A + as / with + B',
+          pts: [
+            'confuse A as B 把 A 誤認為 B；confuse A with B 把 A 跟 B 搞混。',
+            '✅ Don\'t confuse an opinion as a fact.（不要把意見混淆為事實。）',
+            '✅ People often confuse "affect" with "effect".（人們常把 affect 和 effect 搞混。）'
+          ]
+        },
+        {
+          k: 'C', title: 'make it up to someone',
+          pat: 'make it up to + 人 + by + V-ing',
+          pts: [
+            '表示「彌補某人」，後面用 by + V-ing 說明彌補的方式。',
+            '✅ I\'ll make it up to you by buying you dinner.（我會請你吃晚餐來彌補你。）',
+            '✅ She made it up to her friend by helping with the project.（她幫忙專案來彌補她的朋友。）'
+          ]
+        }
+      ],
+      extra: [
+        {
+          title: 'Appetite 食慾相關表達',
+          exs: [
+            { en: 'The medicine may reduce your appetite.', cn: '這種藥可能會降低你的食慾。' },
+            { en: 'I lost my appetite because of the bad news.', cn: '因為壞消息我沒有食慾了。' },
+            { en: 'Exercise can increase the appetite.', cn: '運動可以增加食慾。' },
+            { en: 'After recovering, she gained her appetite back.', cn: '康復後，她恢復了食慾。' },
+            { en: 'She wants to lose weight before summer.', cn: '她想在夏天前減重。' }
+          ]
+        },
+        {
+          title: 'Word Families 單字家族',
+          exs: [
+            { en: 'success (n.) / succeed (v.) / successful (adj.)', cn: '成功（名詞）／成功（動詞）／成功的（形容詞）' },
+            { en: 'failure (n.) / fail (v.) / failed (adj.)', cn: '失敗（名詞）／失敗（動詞）／失敗的（形容詞）' }
+          ]
+        },
+        {
+          title: 'Problem Expressions 描述問題的三種說法',
+          exs: [
+            { en: 'Something went wrong with my Wi-Fi.', cn: '我的 Wi-Fi 出了問題。' },
+            { en: 'There is something wrong with my Wi-Fi.', cn: '我的 Wi-Fi 有問題。' },
+            { en: 'There is a problem with my Wi-Fi.', cn: '我的 Wi-Fi 有問題。' }
+          ]
+        },
+        {
+          title: '補充 Extra Notes',
+          exs: [
+            { en: 'opinion = idea', cn: 'opinion 和 idea 意思相近，都是「想法、看法」。' },
+            { en: 'ideal = perfect', cn: 'ideal 等同於 perfect，意思是「理想的、完美的」。' },
+            { en: 'The investigation exposed several problems.', cn: '調查揭露了好幾個問題。' },
+            { en: 'Curiosity killed the cat.', cn: '好奇心會害死人。（諺語）' }
+          ]
+        }
+      ]
     }
   ]
 };
