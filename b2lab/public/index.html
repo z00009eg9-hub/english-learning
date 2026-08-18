@@ -563,15 +563,16 @@ body.cnall #v-book span.cnx{display:inline!important}
 #v-book table.bkrev td:nth-child(2),#v-book table.bkrev th:nth-child(2){width:36%}
 #v-book table.bkrev td:nth-child(3),#v-book table.bkrev th:nth-child(3){width:10%}
 /* 課本標題卡：右側大圖示＋彩色徽章 */
-#v-book .magttl{position:relative}
+#v-book .magttl{position:relative;padding-top:50px}
+#v-book .magttl .back{position:absolute;top:-21px;left:0;z-index:2;margin:0}
 #v-book .magttl h2{padding-right:84px}
 #v-book .magico{position:absolute;right:20px;top:16px;font-size:58px;line-height:1;
+  cursor:pointer;
   filter:drop-shadow(3px 3px 0 rgba(43,33,24,.22))}
 #v-book .magico svg{width:96px;height:96px;display:block}
 @media(max-width:640px){ #v-book .magico{font-size:36px;right:12px;top:12px} #v-book .magico svg{width:56px;height:56px} #v-book .magttl h2{padding-right:52px} }
-#v-book .magbadge.c1{background:#d9691f}
-#v-book .magbadge.c2{background:#2b7a78}
-#v-book .magbadge.c3{background:#8b5cf6}
+#v-book .sent{cursor:pointer;border-radius:4px;transition:background .15s}
+#v-book .sent.reading{background:#fff2d9;box-shadow:0 0 0 2px #fff2d9}
 #v-book a.magbadge{background:#3b82c4}
 </style>
 </head>
@@ -864,7 +865,7 @@ window.say=say;
 /* 點整句就朗讀那一句，並在朗讀時把那一句高亮起來 */
 function saySent(el){
   const sent=el&&el.closest?el.closest('.sent'):el; if(!sent) return;
-  document.querySelectorAll('.para .sent.reading').forEach(x=>x.classList.remove('reading'));
+  document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
   sent.classList.add('reading');
   say(sent.dataset.t, null, ()=>{ sent.classList.remove('reading'); });
 }
@@ -1957,7 +1958,7 @@ document.addEventListener('click',e=>{
   if(!speechSynthesis.speaking && !speechSynthesis.pending) return;
   if(e.target.closest('button,.spk,.sent,w,a,input,textarea,select,.opt3,.gloss')) return;
   speechSynthesis.cancel();
-  document.querySelectorAll('.para .sent.reading').forEach(x=>x.classList.remove('reading'));
+  document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
 });
 
 /* ============================================================
@@ -2121,7 +2122,7 @@ function bkReadPara(btn){
   const sents=[...para.querySelectorAll('.sent')];
   let i=0;
   const step=()=>{
-    document.querySelectorAll('.para .sent.reading').forEach(x=>x.classList.remove('reading'));
+    document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
     if(i>=sents.length) return;
     const el=sents[i++]; el.classList.add('reading');
     say(el.dataset.t,null,step);
@@ -2135,7 +2136,7 @@ function bkReadAll(btn){
   const sents=[...card.querySelectorAll('.sent')];
   let i=0;
   const step=()=>{
-    document.querySelectorAll('.para .sent.reading').forEach(x=>x.classList.remove('reading'));
+    document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
     if(i>=sents.length) return;
     const el=sents[i++]; el.classList.add('reading');
     el.scrollIntoView({block:'center',behavior:'smooth'});
@@ -2182,27 +2183,28 @@ function bkPt(p){
 function bookHTML(b){
   const exRow=e=>'<div class="bkex"><div class="een">'
     +(e.tag?'<span class="bktag'+(e.tag==='非正式'?' inf':'')+'">'+esc(e.tag)+'</span> ':'')
-    +bkHi(e.en,e.hi)+' '+spk(e.en)+'</div>'
+    +'<span class="sent" data-t="'+esc(e.en)+'" onclick="saySent(this)">'+bkHi(e.en,e.hi)+'</span> '+spk(e.en)+'</div>'
     +(e.cn?'<div class="ecn cnx">'+esc(e.cn)+'</div>':'')+'</div>';
   /* 單字表（桌機表格＋手機卡片共用；中文欄放最後、跟中譯開關） */
   const vtable=list=>'<div class="bkvd card" style="padding:10px"><div class="tw" style="margin:0"><table>'
     +'<tr><th>單字</th><th>音標</th><th>詞性</th><th>例句</th><th class="cnx">中文</th></tr>'
     + list.map(t=>'<tr><td class="nw" style="font-weight:700">'+esc(t.w)+(t.star?' ⭐':'')+'<br>'+spk(t.w)+'</td>'
       +'<td class="nw" style="font-family:ui-monospace,monospace">'+esc(t.ipa)+'</td><td class="nw">'+esc(t.pos)+'</td>'
-      +'<td>'+bkHi(t.ex,t.w)+' '+spk(t.ex)+'<div class="muted cnx">'+esc(t.exCn)+'</div></td>'
+      +'<td><span class="sent" data-t="'+esc(t.ex)+'" onclick="saySent(this)">'+bkHi(t.ex,t.w)+'</span> '+spk(t.ex)+'<div class="muted cnx">'+esc(t.exCn)+'</div></td>'
       +'<td class="nw cnx">'+esc(t.cn)+'</td></tr>').join('')
     +'</table></div></div>'
     +'<div class="bkvm">'+list.map(t=>'<div class="bkvcard">'
       +'<div class="w">'+esc(t.w)+(t.star?' ⭐':'')+' <span class="pos">'+esc(t.pos)+'</span>'+spk(t.w)+'</div>'
       +'<div class="ipa">'+esc(t.ipa)+'</div>'
       +'<div class="cnw cnx">'+esc(t.cn)+'</div>'
-      +'<div class="bkex" style="margin-bottom:0"><div class="een">'+bkHi(t.ex,t.w)+' '+spk(t.ex)+'</div><div class="ecn cnx">'+esc(t.exCn)+'</div></div>'
+      +'<div class="bkex" style="margin-bottom:0"><div class="een"><span class="sent" data-t="'+esc(t.ex)+'" onclick="saySent(this)">'+bkHi(t.ex,t.w)+'</span> '+spk(t.ex)+'</div><div class="ecn cnx">'+esc(t.exCn)+'</div></div>'
       +'</div>').join('')+'</div>';
   const subh=t=>'<h2 class="sec bksub" style="color:var(--accent2);margin:14px 0 8px">'+esc(t)+'</h2>';
-  let h='<button class="back" onclick="bkClose()"></button>';
+  let h='';
 
   /* 標題卡：雜誌風＋右側大圖示＋彩色徽章＋原始 Google 文件連結 */
-  h+='<div class="magttl"><div class="magico">'+(b.iconSvg||b.icon||'📕')+'</div>'
+  h+='<div class="magttl"><button class="back" onclick="bkClose()"></button>'
+   +'<div class="magico" onclick="window.scrollTo({top:0,behavior:\'smooth\'})">'+(b.iconSvg||b.icon||'📕')+'</div>'
    +'<h2>'+esc(b.title)+' '+spk(b.title)+'</h2>'
    +'<div class="cn">'+esc(b.titleCn)+'</div>'
    +'<div class="set">Topics: '+esc(b.topics)+'</div>'
@@ -2217,8 +2219,8 @@ function bookHTML(b){
    + (b.hw||[]).map(q=>{
       let x='<div class="bkq"><div class="qn">第 '+q.n+' 題</div>';
       if(q.wrong) x+='<div class="bkline"><b class="lb wrong">❌ 原句：</b><span>'+bkDiff(q.wrong,q.fix,'wrong')+'</span></div>'
-        +'<div class="bkline"><b class="lb right">✅ 訂正：</b><span>'+bkDiff(q.fix,q.wrong,'right')+'</span>'+spk(q.fix)+'</div>';
-      else x+='<div class="bkline"><b class="lb right">✅ 原句：</b><span>'+esc(q.ok)+'</span>'+spk(q.ok)+'</div>';
+        +'<div class="bkline"><b class="lb right">✅ 訂正：</b><span class="sent" data-t="'+esc(q.fix)+'" onclick="saySent(this)">'+bkDiff(q.fix,q.wrong,'right')+'</span>'+spk(q.fix)+'</div>';
+      else x+='<div class="bkline"><b class="lb right">✅ 原句：</b><span class="sent" data-t="'+esc(q.ok)+'" onclick="saySent(this)">'+esc(q.ok)+'</span>'+spk(q.ok)+'</div>';
       x+='<div class="bkcn cnx">中文：'+esc(q.cn)+'</div>'
        +'<div class="bkpatline">結構：'+esc(q.pat)+'</div>'
        +'<div class="bknote"><b>💬 文法解説：</b>'+bkNote(q.note)+'</div></div>';
@@ -2271,7 +2273,7 @@ function bookHTML(b){
      +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
      +'<tr><th>用法</th><th>適用場景</th><th>例句</th><th class="cnx">中文</th></tr>'
      + b.cmp.map(c=>'<tr><td class="nw" style="font-weight:700">'+esc(c.u)+'<br>'+spk(c.u)+'</td><td>'+esc(c.sc)+'</td>'
-       +'<td>'+bkHi(c.ex,c.u)+' '+spk(c.ex)+'<div class="muted cnx">'+esc(c.exCn)+'</div></td>'
+       +'<td><span class="sent" data-t="'+esc(c.ex)+'" onclick="saySent(this)">'+bkHi(c.ex,c.u)+'</span> '+spk(c.ex)+'<div class="muted cnx">'+esc(c.exCn)+'</div></td>'
        +'<td class="nw cnx">'+esc(c.cn)+'</td></tr>').join('')
      +'</table></div></div>';
     if(b.cmpWarn){
@@ -2300,9 +2302,9 @@ function bookHTML(b){
       h+='<div class="card"><div class="row" style="justify-content:space-between;align-items:center">'
        +'<h2 class="sec" style="margin:0;color:var(--accent2)">📌 理解問題 Comprehension Questions</h2>'
        +'<button class="spk" onclick="bkTogAns(this)">🙈 隱藏答案</button></div>'
-       + r.questions.map((q,i)=>'<div class="bkex"><div class="een">'+(i+1)+'. '+esc(q.q)+' '+spk(q.q)+'</div>'
+       + r.questions.map((q,i)=>'<div class="bkex"><div class="een">'+(i+1)+'. <span class="sent" data-t="'+esc(q.q)+'" onclick="saySent(this)">'+esc(q.q)+'</span> '+spk(q.q)+'</div>'
          +'<div class="ecn cnx">'+esc(q.qCn)+'</div>'
-         +'<div class="bkans"><div style="margin-top:5px">'+esc(q.a)+' '+spk(q.a)+'</div>'
+         +'<div class="bkans"><div style="margin-top:5px"><span class="sent" data-t="'+esc(q.a)+'" onclick="saySent(this)">'+esc(q.a)+'</span> '+spk(q.a)+'</div>'
          +'<div class="ecn cnx">'+esc(q.aCn)+'</div></div></div>').join('')
        +'</div>';
     }
@@ -2328,16 +2330,16 @@ function bookHTML(b){
      +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
      +'<tr><th>補充內容</th><th>英文</th><th class="cnx">中文</th></tr>'
      + b.extraVocab.map(x=>'<tr><td class="nw" style="font-weight:700">'+esc(x.k)+'</td>'
-       +'<td>'+esc(x.en)+' '+spk(x.en)+'</td><td class="cnx">'+esc(x.cn)+'</td></tr>').join('')
+       +'<td><span class="sent" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+esc(x.en)+'</span> '+spk(x.en)+'</td><td class="cnx">'+esc(x.cn)+'</td></tr>').join('')
      +'</table></div></div>';
   }
 
   /* 課堂討論問題（有才顯示） */
   if((b.discussion||[]).length){
     h+='<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(b.discussionTitle||'課堂討論問題 Discussion Questions')+'</h2>'
-     + b.discussion.map(d=>'<div class="bkex"><div class="een">• '+esc(d.q)+' '+spk(d.q)+'</div>'
+     + b.discussion.map(d=>'<div class="bkex"><div class="een">• <span class="sent" data-t="'+esc(d.q)+'" onclick="saySent(this)">'+esc(d.q)+'</span> '+spk(d.q)+'</div>'
        +'<div class="ecn cnx">'+esc(d.qCn)+'</div>'
-       +'<div style="margin-top:5px">'+esc(d.a)+' '+spk(d.a)+'</div>'
+       +'<div style="margin-top:5px"><span class="sent" data-t="'+esc(d.a)+'" onclick="saySent(this)">'+esc(d.a)+'</span> '+spk(d.a)+'</div>'
        +'<div class="ecn cnx">'+esc(d.aCn)+'</div></div>').join('')
      +'</div>';
   }
