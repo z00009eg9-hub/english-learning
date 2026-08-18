@@ -1137,6 +1137,7 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
 
 ### 注意
 - 若是「更新既有課」（Doc 內容有改），直接改 data-book.js 裡對應 lesson 物件的欄位，不要重複新增。
+- 使用者只說「同步」沒指明哪一課時：用 Drive `search_files` 以 `modifiedTime > '上次同步日'` 找出最近變動的課堂筆記 Doc，逐一 `read_file_content` 與課本現況比對後更新（新增的段落補進去、刪掉的移除，維持不增不減）。
 - 月度複習彙整類文件（如 202606-月度複習）內容與各課重複，不匯入課本。
 - 課本 vocab/vocab2 會自動進全站字庫（addGloss），不需另外處理。
 
