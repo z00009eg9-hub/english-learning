@@ -9168,7 +9168,11 @@ window.BOOK = {
         { w: 'confuse', star: true, ipa: '/kənˈfjuːz/', pos: 'v.', cn: '把…弄混；混淆',
           ex: 'Don\'t confuse an opinion as a fact.', exCn: '不要把意見混淆為事實。' },
         { w: 'apologize', ipa: '/əˈpɑːlədʒaɪz/', pos: 'v.', cn: '道歉',
-          ex: 'He apologized for the mistake.', exCn: '他為那個錯誤道歉了。' }
+          ex: 'He apologized for the mistake.', exCn: '他為那個錯誤道歉了。' },
+        { w: 'complaint', star: true, ipa: '/kəmˈpleɪnt/', pos: 'n.', cn: '投訴；抱怨',
+          ex: 'The company began receiving several complaints from customers regarding damaged products.', exCn: '公司開始收到好幾位顧客針對損壞產品的投訴。' },
+        { w: 'loophole', star: true, ipa: '/ˈluːphoʊl/', pos: 'n.', cn: '漏洞；缺口',
+          ex: 'It is crucial to investigate the root cause and identify any loopholes.', exCn: '調查根本原因並找出任何漏洞是至關重要的。' }
       ],
       phrasesTitle: 'III. 片語與搭配詞 Phrases & Collocations',
       phrases: [
@@ -9256,6 +9260,16 @@ window.BOOK = {
             { en: 'ideal = perfect', cn: 'ideal 等同於 perfect，意思是「理想的、完美的」。' },
             { en: 'The investigation exposed several problems.', cn: '調查揭露了好幾個問題。' },
             { en: 'Curiosity killed the cat.', cn: '好奇心會害死人。（諺語）' }
+          ]
+        },
+        {
+          title: '摘要補充：副詞變化與比較級 Adverb Formation & Comparatives',
+          exs: [
+            { en: 'Most adjectives → adverb by adding -ly: effective → effectively, efficient → efficiently, hopeful → hopefully, careful → carefully.', cn: '大部分形容詞加 -ly 變副詞：effective → effectively（有效地）、efficient → efficiently（有效率地）。' },
+            { en: 'Some adjectives cannot add -ly: old, damaged, etc.', cn: '有些形容詞不能加 -ly：old（老的）、damaged（損壞的）等。' },
+            { en: 'The comparative of "clear" is "clearer" (not "more clear").', cn: 'clear 的比較級是 clearer（更清楚的），而非 more clear。' },
+            { en: 'complaint (n.) = a statement that something is unsatisfactory. 投訴；抱怨', cn: 'The company received several complaints from customers. 公司收到好幾位顧客的投訴。' },
+            { en: 'loophole (n.) = a flaw or gap in a system. 漏洞；缺口', cn: 'It is crucial to identify any loopholes. 找出任何漏洞是至關重要的。' }
           ]
         }
       ]
