@@ -7,6 +7,7 @@ window.BOOK = {
     {
       id: 'bk20260813',
       icon: '📣',
+      iconSvg: '<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><circle cx="48" cy="48" r="45" fill="#fff" stroke="#f0c9a0" stroke-width="3"/><path d="M26 40 h14 l24 -14 v44 l-24 -14 h-14 z" fill="#e8913a" stroke="#2b2118" stroke-width="3.5" stroke-linejoin="round"/><rect x="34" y="58" width="11" height="15" rx="3" fill="#c9631f" stroke="#2b2118" stroke-width="3"/><g stroke="#d9691f" stroke-width="3.5" stroke-linecap="round" fill="none"><line x1="72" y1="34" x2="79" y2="29"/><line x1="74" y1="48" x2="83" y2="48"/><line x1="72" y1="62" x2="79" y2="67"/></g></svg>',
       date: '2026-08-13',
       doc: 'https://docs.google.com/document/d/1DrQ6SYlK672dOGpeB6djxdTROqIJiA17Rgz8F9YgEaA/edit',
       title: 'Turning a Failure into an Opportunity',
@@ -343,6 +344,7 @@ window.BOOK = {
     {
       id: 'bk20260811',
       icon: '🎁',
+      iconSvg: '<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><circle cx="48" cy="48" r="45" fill="#fff" stroke="#f0c9a0" stroke-width="3"/><rect x="26" y="44" width="44" height="28" rx="4" fill="#e86a6a" stroke="#2b2118" stroke-width="3.5"/><rect x="23" y="34" width="50" height="12" rx="3" fill="#f08080" stroke="#2b2118" stroke-width="3.5"/><rect x="43" y="34" width="10" height="38" fill="#f5c04e" stroke="#2b2118" stroke-width="3"/><path d="M48 33 c-3 -8 -14 -10 -15 -4 c-1 5 8 6 15 4z" fill="#f5c04e" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><path d="M48 33 c3 -8 14 -10 15 -4 c1 5 -8 6 -15 4z" fill="#f5c04e" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/></svg>',
       date: '2026-08-11',
       doc: 'https://docs.google.com/document/d/1hCMPoRpipQMOWeicXBdmLO8wSSCWQNZhX7ujsfFh5qw/edit',
       title: 'Compensate, Make Up For and Efficiency',

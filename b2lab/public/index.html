@@ -533,7 +533,7 @@ body.cnall #v-book span.cnx{display:inline!important}
 #v-book .bkcn{font-size:calc(16px * var(--fs))}
 #v-book .bkpatline{font-size:calc(15.5px * var(--fs))}
 #v-book .bknote{font-size:calc(16px * var(--fs))}
-#v-book .bkfml{font-size:calc(18px * var(--fs))}
+#v-book .bkfml{font-size:calc(17px * var(--fs))}
 #v-book .bkul{font-size:calc(16.5px * var(--fs))}
 #v-book .bkex .een{font-size:calc(17.5px * var(--fs))}
 #v-book .bkex .ecn{font-size:calc(15.5px * var(--fs))}
@@ -551,16 +551,24 @@ body.cnall #v-book span.cnx{display:inline!important}
 .bknum .no{flex-shrink:0;font-weight:700}
 /* 課本錯誤字用正紅色 */
 #v-book .wrong{color:#FF0000}
-/* 單字表桌機版跳出主欄限寬，例句欄更寬 */
+/* 課文檢視（桌機）：整頁跳出 860px 主欄放寬到 1120px——橘色區塊標題、表格、卡片同寬對齊 */
 @media(min-width:920px){
-  #v-book .bkvd.card{width:min(1120px,calc(100vw - 44px));position:relative;left:50%;transform:translateX(-50%)}
+  #v-book.bkopen .bkbar,#v-book.bkopen .card,#v-book.bkopen .bkq,#v-book.bkopen .bkwarn,
+  #v-book.bkopen .magttl,#v-book.bkopen .bkvm,#v-book.bkopen .bksub{
+    width:min(1120px,calc(100vw - 44px));position:relative;left:50%;transform:translateX(-50%)
+  }
 }
+/* 前次已學（無例句欄）：欄寬比照上方單字表 */
+#v-book table.bkrev td:nth-child(1),#v-book table.bkrev th:nth-child(1){width:24%}
+#v-book table.bkrev td:nth-child(2),#v-book table.bkrev th:nth-child(2){width:36%}
+#v-book table.bkrev td:nth-child(3),#v-book table.bkrev th:nth-child(3){width:10%}
 /* 課本標題卡：右側大圖示＋彩色徽章 */
 #v-book .magttl{position:relative}
 #v-book .magttl h2{padding-right:84px}
 #v-book .magico{position:absolute;right:20px;top:16px;font-size:58px;line-height:1;
   filter:drop-shadow(3px 3px 0 rgba(43,33,24,.22))}
-@media(max-width:640px){ #v-book .magico{font-size:36px;right:12px;top:12px} #v-book .magttl h2{padding-right:52px} }
+#v-book .magico svg{width:96px;height:96px;display:block}
+@media(max-width:640px){ #v-book .magico{font-size:36px;right:12px;top:12px} #v-book .magico svg{width:56px;height:56px} #v-book .magttl h2{padding-right:52px} }
 #v-book .magbadge.c1{background:#d9691f}
 #v-book .magbadge.c2{background:#2b7a78}
 #v-book .magbadge.c3{background:#8b5cf6}
@@ -2016,6 +2024,7 @@ function bkTogHint(){
 }
 RENDER.book=function(){
   const v=$('v-book');
+  v.classList.toggle('bkopen',!!bkOpen);
   if(bkOpen){ v.innerHTML=bookHTML(bkOpen); return; }
   if(bkCalY==null){ const t=new Date(); bkCalY=t.getFullYear(); bkCalM=t.getMonth(); }
   v.innerHTML=
@@ -2164,6 +2173,12 @@ function bkMark(s){
     .replace(/❌\s*([^（(]*)/g,'<span class="wrong">❌ $1</span>')
     .replace(/✅\s*([^（(]*)/g,'<span class="right">✅ $1</span>');
 }
+/* 文法重點條列：英文例句後面的（中文翻譯…）跟著全站中譯開關隱藏／顯示 */
+function bkPt(p){
+  const m=String(p).match(/^([✅❌⚠️️\s]*)([A-Za-z][\s\S]*?[.!?])\s*([（(][\s\S]*)$/);
+  if(m) return bkMark(m[1]+m[2])+' <span class="cnx">'+esc(m[3])+'</span>';
+  return bkMark(p);
+}
 function bookHTML(b){
   const exRow=e=>'<div class="bkex"><div class="een">'
     +(e.tag?'<span class="bktag'+(e.tag==='非正式'?' inf':'')+'">'+esc(e.tag)+'</span> ':'')
@@ -2183,11 +2198,11 @@ function bookHTML(b){
       +'<div class="cnw cnx">'+esc(t.cn)+'</div>'
       +'<div class="bkex" style="margin-bottom:0"><div class="een">'+bkHi(t.ex,t.w)+' '+spk(t.ex)+'</div><div class="ecn cnx">'+esc(t.exCn)+'</div></div>'
       +'</div>').join('')+'</div>';
-  const subh=t=>'<h2 class="sec" style="color:var(--accent2);margin:14px 0 8px">'+esc(t)+'</h2>';
+  const subh=t=>'<h2 class="sec bksub" style="color:var(--accent2);margin:14px 0 8px">'+esc(t)+'</h2>';
   let h='<button class="back" onclick="bkClose()"></button>';
 
   /* 標題卡：雜誌風＋右側大圖示＋彩色徽章＋原始 Google 文件連結 */
-  h+='<div class="magttl"><div class="magico">'+(b.icon||'📕')+'</div>'
+  h+='<div class="magttl"><div class="magico">'+(b.iconSvg||b.icon||'📕')+'</div>'
    +'<h2>'+esc(b.title)+' '+spk(b.title)+'</h2>'
    +'<div class="cn">'+esc(b.titleCn)+'</div>'
    +'<div class="set">Topics: '+esc(b.topics)+'</div>'
@@ -2217,7 +2232,7 @@ function bookHTML(b){
   }
   if((b.vocabReview||[]).length){
     h+=subh(b.vocabReviewTitle||'⭐ 前次已學單字')
-     +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+     +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table class="bkrev">'
      +'<tr><th>單字</th><th>音標</th><th>詞性</th><th class="cnx">中文</th></tr>'
      + b.vocabReview.map(t=>'<tr><td class="nw" style="font-weight:700">'+esc(t.w)+' '+spk(t.w)+'</td>'
        +'<td class="nw" style="font-family:ui-monospace,monospace">'+esc(t.ipa)+'</td><td class="nw">'+esc(t.pos)+'</td>'
@@ -2245,7 +2260,7 @@ function bookHTML(b){
       let x='<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(g.k)+'. '+esc(g.title)+'</h2>';
       if(g.pat) x+='<div class="bkfml">📌 句型：'+esc(g.pat)+'</div>';
       else if(g.patLabel) x+='<div class="bkfml">📌 '+esc(g.patLabel)+'</div>';
-      x+='<ul class="bkul">'+(g.pts||[]).map(p=>'<li>'+bkMark(p)+'</li>').join('')+'</ul>'
+      x+='<ul class="bkul">'+(g.pts||[]).map(p=>'<li>'+bkPt(p)+'</li>').join('')+'</ul>'
        +(g.exs||[]).map(exRow).join('')+'</div>';
       return x;
     }).join('');
