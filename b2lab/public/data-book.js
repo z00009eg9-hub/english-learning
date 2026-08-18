@@ -9110,3 +9110,111 @@ window.BOOK = {
     }
   ]
 };
+
+/* ============================================================
+   閱讀文章插圖：五個大圓圖示（自動掛到各課 reading 上）
+   - I  = 圖示庫（64×64 線稿，深色 #2b2118、橘色 #e8813a，同 bk20260813 風格）
+   - S  = 每課的插圖規格：S[lessonId] = [ [五個圖示 key, 圖說], ... ]（依 reading 順序）
+   - 已有 r.art 的閱讀（如 bk20260813）不會被覆蓋
+   ============================================================ */
+(function(){
+  var D='#2b2118', A='#e8813a';
+  var I={
+    warning:'<path d="M32 13 L53 49 H11 z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><line x1="32" y1="26" x2="32" y2="37" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="32" cy="43" r="2.5" fill="#fff"/>',
+    talk:'<path d="M14 17 h36 a4 4 0 0 1 4 4 v15 a4 4 0 0 1 -4 4 H29 l-9 8 v-8 h-6 a4 4 0 0 1 -4 -4 V21 a4 4 0 0 1 4 -4z" fill="#fff" stroke="'+D+'" stroke-width="3"/><g fill="'+A+'"><circle cx="24" cy="29" r="3"/><circle cx="33" cy="29" r="3"/><circle cx="42" cy="29" r="3"/></g>',
+    mail:'<rect x="13" y="19" width="38" height="26" rx="4" fill="#fff" stroke="'+D+'" stroke-width="3"/><path d="M13 22 L32 36 L51 22" fill="none" stroke="'+A+'" stroke-width="3" stroke-linejoin="round"/>',
+    gift:'<rect x="14" y="28" width="36" height="22" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><rect x="11" y="20" width="42" height="10" rx="3" fill="#fff" stroke="'+D+'" stroke-width="3"/><line x1="32" y1="20" x2="32" y2="50" stroke="'+D+'" stroke-width="3"/><path d="M32 20 c-4 -8 -14 -6 -10 0" fill="none" stroke="'+D+'" stroke-width="3"/><path d="M32 20 c4 -8 14 -6 10 0" fill="none" stroke="'+D+'" stroke-width="3"/>',
+    thumb:'<rect x="14" y="32" width="9" height="20" rx="2" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><path d="M23 50 h17 a5 5 0 0 0 5 -4 l3 -12 a4 4 0 0 0 -4 -5 h-11 l2 -9 a4 4 0 0 0 -7 -3 l-5 12 v21z" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/>',
+    house:'<path d="M13 33 L32 15 L51 33" fill="none" stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M18 30 V50 H46 V30" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><rect x="27" y="37" width="10" height="13" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>',
+    gear:'<circle cx="32" cy="32" r="11" fill="#fff" stroke="'+D+'" stroke-width="3"/><circle cx="32" cy="32" r="4.5" fill="'+A+'"/><g stroke="'+D+'" stroke-width="3" stroke-linecap="round"><line x1="45" y1="32" x2="50" y2="32"/><line x1="41.2" y1="41.2" x2="44.7" y2="44.7"/><line x1="32" y1="45" x2="32" y2="50"/><line x1="22.8" y1="41.2" x2="19.3" y2="44.7"/><line x1="19" y1="32" x2="14" y2="32"/><line x1="22.8" y1="22.8" x2="19.3" y2="19.3"/><line x1="32" y1="19" x2="32" y2="14"/><line x1="41.2" y1="22.8" x2="44.7" y2="19.3"/></g>',
+    phone:'<rect x="23" y="13" width="18" height="38" rx="4" fill="#fff" stroke="'+D+'" stroke-width="3"/><line x1="28" y1="18" x2="36" y2="18" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><line x1="28" y1="45" x2="36" y2="45" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>',
+    check:'<circle cx="32" cy="32" r="17" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><path d="M23 32 l7 7 l12 -14" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>',
+    coin:'<circle cx="32" cy="32" r="17" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><circle cx="32" cy="32" r="11" fill="#fff" stroke="'+D+'" stroke-width="3"/><path d="M36.5 27.5 a4.5 3.5 0 0 0 -9 .8 c0 3.6 9 2.6 9 6.4 a4.5 3.5 0 0 1 -9 .8" fill="none" stroke="'+D+'" stroke-width="2.8" stroke-linecap="round"/><line x1="32" y1="23.5" x2="32" y2="40.5" stroke="'+D+'" stroke-width="2.2" stroke-linecap="round"/>',
+    globe:'<circle cx="32" cy="32" r="17" fill="#fff" stroke="'+D+'" stroke-width="3"/><ellipse cx="32" cy="32" rx="7.5" ry="17" fill="none" stroke="'+A+'" stroke-width="3"/><line x1="15" y1="32" x2="49" y2="32" stroke="'+A+'" stroke-width="3"/>',
+    smile:'<circle cx="32" cy="32" r="17" fill="#fff" stroke="'+D+'" stroke-width="3"/><circle cx="26" cy="28" r="2.6" fill="'+D+'"/><circle cx="38" cy="28" r="2.6" fill="'+D+'"/><path d="M24 37 q8 8 16 0" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>',
+    calendar:'<rect x="15" y="18" width="34" height="30" rx="4" fill="#fff" stroke="'+D+'" stroke-width="3"/><line x1="15" y1="27" x2="49" y2="27" stroke="'+D+'" stroke-width="3"/><line x1="23" y1="13" x2="23" y2="21" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><line x1="41" y1="13" x2="41" y2="21" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="38" r="4.5" fill="'+A+'"/>',
+    food:'<path d="M15 32 h34 a17 17 0 0 1 -34 0z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><line x1="20" y1="15" x2="44" y2="23" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><line x1="20" y1="23" x2="44" y2="15" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>',
+    mic:'<rect x="26" y="13" width="12" height="22" rx="6" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><path d="M20 30 a12 12 0 0 0 24 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><line x1="32" y1="42" x2="32" y2="49" stroke="'+D+'" stroke-width="3"/><line x1="25" y1="49" x2="39" y2="49" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>',
+    people:'<circle cx="24" cy="24" r="6.5" fill="#fff" stroke="'+D+'" stroke-width="3"/><path d="M13 47 a11 11 0 0 1 22 0" fill="#fff" stroke="'+D+'" stroke-width="3"/><circle cx="42" cy="24" r="6.5" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><path d="M31 47 a11 11 0 0 1 22 0" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>',
+    building:'<rect x="19" y="15" width="26" height="35" fill="#fff" stroke="'+D+'" stroke-width="3"/><g fill="'+A+'"><rect x="24" y="21" width="6" height="6"/><rect x="34" y="21" width="6" height="6"/><rect x="24" y="31" width="6" height="6"/><rect x="34" y="31" width="6" height="6"/></g><rect x="28" y="41" width="8" height="9" fill="'+D+'"/>',
+    star:'<path d="M32 13 l5.6 11.3 12.5 1.8 -9 8.8 2.1 12.4 -11.2 -5.9 -11.2 5.9 2.1 -12.4 -9 -8.8 12.5 -1.8z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/>',
+    chartUp:'<path d="M16 15 V48 H49" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><path d="M21 42 l8 -9 6 5 12 -15" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M47 20 h-7 M47 20 v7" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" fill="none"/>',
+    doc:'<rect x="19" y="13" width="26" height="38" rx="3" fill="#fff" stroke="'+D+'" stroke-width="3"/><g stroke="'+A+'" stroke-width="3" stroke-linecap="round"><line x1="25" y1="23" x2="39" y2="23"/><line x1="25" y1="31" x2="39" y2="31"/><line x1="25" y1="39" x2="34" y2="39"/></g>',
+    briefcase:'<rect x="15" y="24" width="34" height="24" rx="4" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><path d="M26 24 v-6 h12 v6" fill="none" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><line x1="15" y1="34" x2="49" y2="34" stroke="'+D+'" stroke-width="3"/><rect x="29" y="31" width="6" height="6" rx="1" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>',
+    cross:'<circle cx="32" cy="32" r="17" fill="#fff" stroke="'+D+'" stroke-width="3"/><path d="M28 21 h8 v7 h7 v8 h-7 v7 h-8 v-7 h-7 v-8 h7z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>',
+    target:'<circle cx="32" cy="32" r="17" fill="#fff" stroke="'+D+'" stroke-width="3"/><circle cx="32" cy="32" r="10" fill="none" stroke="'+A+'" stroke-width="3"/><circle cx="32" cy="32" r="4" fill="'+A+'"/>',
+    book:'<path d="M32 18 c-6 -4 -14 -4.5 -18 -2.5 v30 c4 -2 12 -1.5 18 2.5 c6 -4 14 -4.5 18 -2.5 v-30 c-4 -2 -12 -1.5 -18 2.5z" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><line x1="32" y1="18" x2="32" y2="48" stroke="'+D+'" stroke-width="3"/><line x1="20" y1="26" x2="28" y2="24" stroke="'+A+'" stroke-width="2.5" stroke-linecap="round"/><line x1="36" y1="24" x2="44" y2="26" stroke="'+A+'" stroke-width="2.5" stroke-linecap="round"/>',
+    heart:'<path d="M32 47 C20 39 13.5 30.5 17.5 22.5 c3 -6 11.5 -6 14.5 0 c3 -6 11.5 -6 14.5 0 c4 8 -2.5 16.5 -14.5 24.5z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/>',
+    clock:'<circle cx="32" cy="32" r="17" fill="#fff" stroke="'+D+'" stroke-width="3"/><line x1="32" y1="32" x2="32" y2="21" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><line x1="32" y1="32" x2="41" y2="37" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>',
+    paw:'<ellipse cx="32" cy="39" rx="9" ry="7.5" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><g fill="#fff" stroke="'+D+'" stroke-width="2.5"><circle cx="20" cy="28" r="4"/><circle cx="28" cy="21" r="4"/><circle cx="37" cy="21" r="4"/><circle cx="44" cy="28" r="4"/></g>',
+    box:'<path d="M16 24 l16 -8 16 8 v18 l-16 8 -16 -8z" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M16 24 l16 8 16 -8" fill="none" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><line x1="32" y1="32" x2="32" y2="50" stroke="'+D+'" stroke-width="3"/><path d="M24 20 l16 8" fill="none" stroke="'+A+'" stroke-width="3"/>',
+    flame:'<path d="M32 13 c8 9 12 15 12 22 a12 12 0 0 1 -24 0 c0 -7 4 -13 12 -22z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M32 30 c3.5 4 5 6.5 5 9.5 a5 5 0 0 1 -10 0 c0 -3 1.5 -5.5 5 -9.5z" fill="#fff"/>',
+    bolt:'<path d="M35 13 L21 36 h8.5 l-4.5 15 L43 28 h-9 l4.5 -15z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/>',
+    trash:'<rect x="21" y="24" width="22" height="25" rx="3" fill="#fff" stroke="'+D+'" stroke-width="3"/><line x1="16" y1="24" x2="48" y2="24" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><path d="M27 24 v-4 h10 v4" fill="none" stroke="'+D+'" stroke-width="3"/><g stroke="'+A+'" stroke-width="3" stroke-linecap="round"><line x1="27" y1="30" x2="27" y2="43"/><line x1="32" y1="30" x2="32" y2="43"/><line x1="37" y1="30" x2="37" y2="43"/></g>',
+    umbrella:'<path d="M14 32 a18 18 0 0 1 36 0z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><line x1="32" y1="14" x2="32" y2="32" stroke="'+D+'" stroke-width="3"/><path d="M32 32 v13 a4.5 4.5 0 0 1 -9 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>',
+    scooter:'<circle cx="20" cy="44" r="6" fill="#fff" stroke="'+D+'" stroke-width="3"/><circle cx="46" cy="44" r="6" fill="#fff" stroke="'+D+'" stroke-width="3"/><path d="M26 44 h11 l6 -16 h5" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="44" y1="24" x2="52" y2="21" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/><path d="M26 33 h9" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>',
+    cloudRain:'<path d="M20 33 a8 8 0 0 1 2.5 -15.5 a10 10 0 0 1 19 -1 a7.5 7.5 0 0 1 2.5 16.5z" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><g stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"><line x1="23" y1="39" x2="20" y2="47"/><line x1="33" y1="39" x2="30" y2="47"/><line x1="43" y1="39" x2="40" y2="47"/></g>',
+    plane:'<path d="M13 31 L51 17 42 47 32 37 22 43z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M51 17 L32 37" fill="none" stroke="'+D+'" stroke-width="3"/>',
+    leaf:'<path d="M19 45 C19 26 33 15 48 15 c0 19 -11 31 -29 30z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M21 43 C29 35 37 27 45 19" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>',
+    snow:'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round"><line x1="32" y1="15" x2="32" y2="49"/><line x1="17" y1="23.5" x2="47" y2="40.5"/><line x1="47" y1="23.5" x2="17" y2="40.5"/></g><circle cx="32" cy="32" r="4" fill="'+A+'"/>',
+    music:'<path d="M26 44 V20 l17 -4.5 V38" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="44" r="5.5" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><circle cx="38" cy="38" r="5.5" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>'
+  };
+  function art(keys){
+    var xs=[44,198,352,506,660];
+    return '<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">'
+      +'<rect width="800" height="200" rx="14" fill="#fdf6ec"/>'
+      +'<path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#f7e3c9" opacity=".75"/>'
+      +keys.map(function(k,i){
+        return '<g transform="translate('+xs[i]+',52) scale(1.5)">'
+          +'<circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/>'
+          +(I[k]||'')+'</g>';
+      }).join('')
+      +'</svg>';
+  }
+  var S={
+    bk20260106a:[[['house','phone','talk','gear','check'],'故事的五個階段：公寓出現多處問題 → 多次聯絡房東 → 面對面溝通 → 同意請專業人員 → 完成維修恢復安全。']],
+    bk20260106b:[[['house','phone','talk','gear','check'],'故事的五個階段：公寓出現多處問題 → 多次聯絡房東 → 面對面溝通 → 同意請專業人員 → 完成維修恢復安全。']],
+    bk20260120a:[[['smile','cross','coin','warning','heart'],'文章的想法：想改變外表嗎 → 最常見的是隆鼻手術 → 人們花大錢找整形醫師 → 做太多會看起來不自然 → 作者寧願保持自然。']],
+    bk20260122:[[['coin','globe','warning','smile','gift'],'文章的四個觀點：金錢讓世界運轉 → 金錢與罪惡（貪婪）→ 金錢能否買到快樂 → 把錢分享出去，世界更快樂。']],
+    bk20260129a:[[['calendar','food','mic','gift','thumb'],'尾牙五重點：農曆新年前舉辦 → 圓桌合菜聚餐 → 老闆致詞與表演 → 抽獎發獎品 → 大家一起同樂慶祝。']],
+    bk20260129b:[[['building','people','star','chartUp','heart'],'公司宴會的目的：企業活動的里程碑 → 全體員工齊聚 → 肯定與感謝 → 提升士氣與動力 → 強化團隊與文化。']],
+    bk20260203b:[[['briefcase','doc','talk','star','check'],'本章重點：專業面試指南 → 架構你的回答 → 使用精準語言 → 善用現有經驗 → 成為理想人選。']],
+    bk20260212:[[['calendar','house','food','mail','building'],'春節五重點：一、二月最重要的節日 → 大掃除與裝飾 → 年夜飯（魚、餃子、年糕）→ 收紅包 → 拜廟走春看燈節。']],
+    bk20260226a:[[['cross','coin','doc','warning','check'],'兩種制度：台灣全民健保 → 少量部分負擔 → 美國雇主保險與自購保單 → 保費與自負額高昂 → 台灣醫療費用相對便宜。']],
+    bk20260317:[
+      [['warning','smile','mail','doc','check'],'Anna 的一天：平常工作壓力大 → 今天獲得好回饋很開心 → 用 email 溝通更方便 → 決定任務順序、必要時求助 → 情況好轉能平靜工作。'],
+      [['building','scooter','warning','talk','chartUp'],'繁忙社區的生活：搬到擁擠的市區 → 尖峰車潮與噪音 → 與鄰居起爭執、房租調漲 → 學會溝通與耐心 → 在困難中成長。']
+    ],
+    bk20260319:[[['target','book','clock','chartUp','star'],'我的學習目標：設定明確目標 → 每天練習的簡單計畫 → 每月學 50 個新單字 → 落後就調整、開始進步 → 步入正軌更有自信。']],
+    bk20260324:[[['book','doc','talk','warning','chartUp'],'英文學習之旅：從上下文猜單字 → 記錄新單字與片語 → 大聲朗讀並用於對話 → 犯錯是學習的機會 → 每天練習穩定進步。']],
+    bk20260326:[[['mic','smile','book','warning','chartUp'],'Making Progress：初期熱情但發音困難 → 過一陣子進步了很受鼓舞 → 中級階段新單字很多 → 更意識到錯誤、有點挫折 → 持續練習繼續變好。']],
+    bk20260331:[[['warning','talk','heart','book','chartUp'],'收到鼓勵回饋：上個月對英文感到挫折 → 老師課後給了鼓勵 → 因此變得非常有動力 → 每天練習聽力與閱讀 → 口說真正進步、更有自信。']],
+    bk20260402:[[['calendar','house','food','heart','people'],'清明節五重點：每年四月初 → 掃墓清理雜草 → 準備祭品與潤餅 → 展現尊敬與愛 → 家人相聚緬懷祖先。']],
+    bk20260407:[[['house','people','warning','talk','heart'],'合租生活：分攤房租有伴 → 室友作息不同 → 家務與習慣起衝突 → 靠協商與清楚溝通 → 建立持久的友誼與社區感。']],
+    bk20260423:[[['house','talk','paw','warning','smile'],'農夫與智者：家裡太吵無法專心 → 請教智者 → 把馬和牛帶進屋裡更亂 → 把動物帶出去 → 恢復平靜、學會知足。']],
+    bk20260512:[
+      [['mic','smile','book','warning','chartUp'],'Making Progress：初期熱情但發音困難 → 過一陣子進步了很受鼓舞 → 中級階段新單字很多 → 更意識到錯誤、有點挫折 → 持續練習繼續變好。'],
+      [['book','doc','talk','warning','chartUp'],'英文學習之旅：從上下文猜單字 → 記錄新單字與片語 → 大聲朗讀並用於對話 → 犯錯是學習的機會 → 每天練習穩定進步。']
+    ],
+    bk20260521:[[['warning','box','flame','smile','heart'],'外食疲乏的一晚：連吃好幾週外食沒胃口 → 冰箱裡的剩菜便當 → 用氣炸鍋加熱雞塊 → 簡單卻令人滿足 → 好習慣比任何一餐更持久。']],
+    bk20260526:[[['box','warning','bolt','trash','doc'],'凱文的冰箱慘劇：放了一週的義大利麵 → 發酸長黴已腐爛 → 想起前幾天停電 → 全部丟掉並清理冰箱 → 從此貼日期標籤、盡快吃完食材。']],
+    bk20260609:[[['cloudRain','umbrella','people','scooter','warning'],'兩張圖片描述：下著毛毛雨 → 撐透明傘的女士剛下班回家 → 風吹著她的圍巾 → 騎士被堵在車陣中 → 戴口罩防空氣污染。']],
+    bk20260618:[
+      [['warning','house','cloudRain','bolt','check'],'兩則災害報導：花蓮發生規模 3.2 地震 → 居民外出避難、擔心餘震 → 颱風帶來大雨強風 → 樹倒、淹水、停電停課 → 幸好一切很快恢復正常。'],
+      [['house','talk','paw','warning','smile'],'農夫與智慧老婦：家裡太吵無法專心 → 請教智者 → 動物進屋噪音更大 → 把動物帶到屋外 → 恢復平靜、學會知足常樂。']
+    ],
+    bk20260623:[[['globe','cloudRain','warning','box','people'],'天然災害：地震颱風洪水等災害 → 台灣位於板塊交界、夏秋有颱風 → 豪雨引發洪水與土石流 → 備妥緊急物資、參加演練 → 災後志工與居民同心重建。']],
+    bk20260625:[[['plane','house','leaf','box','heart'],'京都五日遊：第一次造訪日本 → 入住市中心小旅館 → 賞櫻、參觀寺廟與觀光 → 背包忘在咖啡廳幸運取回 → 帶著感激的美好回憶回家。']],
+    bk20260630:[[['coin','plane','snow','flame','gift'],'如果我有一千美元：訂商務艙飛日本 → 第一站北海道 → 滑雪賞雪景、吃冰淇淋甜點 → 泡溫泉放鬆紓壓 → 買紀念品送台灣的朋友。']],
+    bk20260707:[[['doc','plane','cloudRain','coin','check'],'飛行問題：出發前仔細查時刻表 → 訂了機票準時到機場 → 天氣不好班機延誤後取消 → 線上申請退款 → 改訂隔天班機並趕上火車。']],
+    bk20260730:[[['star','warning','music','globe','smile'],'悲觀者飾演悲觀者：《怪醫豪斯》的主角豪斯醫生 → 演員 Hugh Laurie 本人也很悲觀 → 但他熱愛藍調、錄了專輯 → 他說悲觀是因為他是蘇格蘭人 → 路人常叫他「振作點」。']],
+    bk20260806:[[['target','warning','talk','check','star'],'成功之鑰：Emma 夢想在事業上成功 → 團隊溝通不良造成延遲 → 她召開會議請大家詳細說明 → 有效溝通迅速解決問題 → 保持樂觀成為成功的領導者。']]
+  };
+  ((window.BOOK||{}).lessons||[]).forEach(function(b){
+    var specs=S[b.id]; if(!specs) return;
+    (b.reading||[]).forEach(function(r,i){
+      var s=specs[i]; if(!s||r.art) return;
+      r.art=art(s[0]); r.artCap=s[1];
+    });
+  });
+})();
