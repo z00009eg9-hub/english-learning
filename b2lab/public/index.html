@@ -432,8 +432,19 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
   font-size:calc(17px * var(--fs));font-weight:800;background:#fff;border:1.5px dashed var(--accent);border-radius:10px;
   padding:11px 13px;margin:11px 0;line-height:1.65;color:#8a3f08
 }
-.focus ol{margin:10px 0 4px;padding-left:22px}
-.focus ol li{font-size:calc(16px * var(--fs));font-weight:600;line-height:1.85;margin-bottom:10px;color:#33291f}
+/* 重點條列：一點一張白色小卡＋橘色圓形編號，不再擠成一團 */
+.focus ol{margin:10px 0 4px;padding-left:0;list-style:none;counter-reset:fp}
+.focus ol li{
+  counter-increment:fp;position:relative;
+  font-size:calc(15.5px * var(--fs));font-weight:500;line-height:1.85;color:#33291f;
+  background:#fff;border:1px solid #f2d3b3;border-radius:11px;
+  padding:10px 13px 10px 46px;margin-bottom:9px
+}
+.focus ol li::before{
+  content:counter(fp);position:absolute;left:12px;top:12px;
+  width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;
+  font-weight:800;font-size:calc(13.5px * var(--fs));line-height:24px;text-align:center
+}
 .focus .sub{font-size:calc(14.5px * var(--fs));font-weight:800;color:var(--accent2);margin:14px 0 6px;letter-spacing:.3px}
 .focus .gobtn{margin-top:12px}
 .back{
@@ -562,17 +573,31 @@ body.cnall #v-book span.cnx{display:inline!important}
 #v-book table.bkrev td:nth-child(1),#v-book table.bkrev th:nth-child(1){width:24%}
 #v-book table.bkrev td:nth-child(2),#v-book table.bkrev th:nth-child(2){width:36%}
 #v-book table.bkrev td:nth-child(3),#v-book table.bkrev th:nth-child(3){width:10%}
-/* 課本標題卡：右側大圖示＋彩色徽章 */
-#v-book .magttl{position:relative;padding-top:50px}
-#v-book .magttl .back{position:absolute;top:-21px;left:0;z-index:2;margin:0}
+/* 返回鍵（課本＋閱讀共用）：窄螢幕疊在標題卡左上角；夠寬時移到卡片外左側，標題卡不動 */
+#v-book .magttl,#v-read .magttl{position:relative;padding-top:50px}
+#v-book .magttl .back,#v-read .magttl .back{position:absolute;top:-21px;left:0;z-index:2;margin:0}
+@media(min-width:1240px){
+  #v-book .magttl,#v-read .magttl{padding-top:14px}
+  #v-book .magttl .back,#v-read .magttl .back{top:-2px;left:-58px}
+}
+/* 課本標題卡：右側大圖示（純裝飾）＋彩色徽章 */
 #v-book .magttl h2{padding-right:84px}
 #v-book .magico{position:absolute;right:20px;top:16px;font-size:58px;line-height:1;
-  cursor:pointer;
   filter:drop-shadow(3px 3px 0 rgba(43,33,24,.22))}
 #v-book .magico svg{width:96px;height:96px;display:block}
 @media(max-width:640px){ #v-book .magico{font-size:36px;right:12px;top:12px} #v-book .magico svg{width:56px;height:56px} #v-book .magttl h2{padding-right:52px} }
 #v-book .sent{cursor:pointer;border-radius:4px;transition:background .15s}
 #v-book .sent.reading{background:#fff2d9;box-shadow:0 0 0 2px #fff2d9}
+/* 課本文章：標題加大 3pt、每段開頭空兩格 */
+#v-book .bkattl{font-size:calc(19px * var(--fs))}
+#v-book .para .en{text-indent:2ch}
+/* 閱讀檢視（桌機）：整篇比照課本放寬到 1120px */
+@media(min-width:920px){
+  #v-read.rdopen>*{width:min(1120px,calc(100vw - 44px));position:relative;left:50%;transform:translateX(-50%)}
+}
+/* 閱讀的單字中文（詞義＋例句中譯）跟著全站中譯開關 */
+body:not(.cnall) #v-read .wpitem .zh{display:none}
+body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
 #v-book a.magbadge{background:#3b82c4}
 </style>
 </head>
@@ -1002,7 +1027,7 @@ function togGlobalCn(){
   /* 以畫面上方附近「切換後仍看得到的區塊」當錨點：切換後把它捲回原本位置，畫面不跳。
      錨點要選整張卡片／段落，不能選中譯本身（切換後會被藏起來、量不到位置）。 */
   let anchor=document.elementFromPoint(Math.min(90,innerWidth/3), 170);
-  anchor=anchor ? (anchor.closest('.bkq,.bkex,.para,.bkbar,.card,.item,.magttl,section')||anchor) : null;
+  anchor=anchor ? (anchor.closest('.bkq,.bkex,.para,.wpitem,.wpbox,.focus,.upg,.bkbar,.card,.item,.magttl,section')||anchor) : null;
   const prevTop=anchor?anchor.getBoundingClientRect().top:null;
   CNALL=!CNALL;
   try{ localStorage.setItem('b2lab_cnall',CNALL?'1':'0'); }catch(e){}
@@ -1050,6 +1075,7 @@ DAILY_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,po
 let rdFilter={kind:'orig',level:'all'}, rdOpen=null;
 RENDER.read=function(){
   const v=$('v-read');
+  v.classList.toggle('rdopen',!!rdOpen);
   if(rdOpen){ v.innerHTML=readerHTML(rdOpen); rebalanceMag(); return; }
   const list=ALL_ARTS.filter(a=>
     (rdFilter.kind==='all'||a.kind===rdFilter.kind) &&
@@ -1238,8 +1264,7 @@ function readerHTML(a){
   YCD=buildYCD(a,tg);
   const extras=extraWords(a,tgtSet);
 
-  let h='<button class="back" onclick="rdClose()"></button>'
-   +'<div class="magttl">'
+  let h='<div class="magttl"><button class="back" onclick="rdClose()"></button>'
    +'<h2>'+esc(a.title)+'</h2>'
    +'<div class="cn">'+esc(a.titleCn)+'</div>'
    +(a.intro?'<div class="set">'+esc(a.intro)+'</div>':'')
@@ -2204,7 +2229,7 @@ function bookHTML(b){
 
   /* 標題卡：雜誌風＋右側大圖示＋彩色徽章＋原始 Google 文件連結 */
   h+='<div class="magttl"><button class="back" onclick="bkClose()"></button>'
-   +'<div class="magico" onclick="window.scrollTo({top:0,behavior:\'smooth\'})">'+(b.iconSvg||b.icon||'📕')+'</div>'
+   +'<div class="magico">'+(b.iconSvg||b.icon||'📕')+'</div>'
    +'<h2>'+esc(b.title)+' '+spk(b.title)+'</h2>'
    +'<div class="cn">'+esc(b.titleCn)+'</div>'
    +'<div class="set">Topics: '+esc(b.topics)+'</div>'
@@ -2288,7 +2313,7 @@ function bookHTML(b){
   (b.reading||[]).forEach(r=>{
     h+='<div class="bkbar">'+esc(r.bar)+'</div>'
      +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
-     +'<h2 class="sec" style="color:var(--accent2);margin:0;flex:1">'+esc(r.title)+' '+spk(r.title)+'</h2>'
+     +'<h2 class="sec bkattl" style="color:var(--accent2);margin:0;flex:1">'+esc(r.title)+' '+spk(r.title)+'</h2>'
      +'<span class="row" style="flex-wrap:nowrap;gap:6px">'
      +'<button class="spk" onclick="bkReadAll(this)">🔊 朗讀全文</button>'
      +'<button class="spk" onclick="togHintBox(this)">💡 ▼</button></span></div>'
@@ -2298,6 +2323,8 @@ function bookHTML(b){
        +'<div class="pbar"><button class="spk" onclick="bkReadPara(this)">🔊 整段</button></div>'
        +'<div class="ecn cnx" style="font-size:calc(15px * var(--fs));color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:6px">'+esc(p.cn)+'</div></div>').join('')
      +'</div>';
+    /* 文章插圖：五個大圓圖示（有才顯示） */
+    if(r.art) h+='<figure class="artbox">'+r.art+(r.artCap?'<figcaption>'+esc(r.artCap)+'</figcaption>':'')+'</figure>';
     if((r.questions||[]).length){
       h+='<div class="card"><div class="row" style="justify-content:space-between;align-items:center">'
        +'<h2 class="sec" style="margin:0;color:var(--accent2)">📌 理解問題 Comprehension Questions</h2>'
