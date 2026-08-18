@@ -322,7 +322,11 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .tap-hint{font-size:.85rem;color:var(--faint);margin-top:6px;text-align:center;}
 
 /* ═══ READ-ALOUD paragraph ═══ */
-.para{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:var(--sh-sm);}
+.para{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:var(--sh-sm);transition:background .25s,border-color .25s;}
+/* 1. 朗讀示範時：正在念的那段反黃底 */
+.para.tts-active{background:#FFFBE6;border-color:#FACC15;}
+/* 4. 已練過的段落：左側綠色豎條 + 淺綠底色 */
+.para.practiced{border-left:5px solid var(--good);background:var(--good-l);}
 .para-en{font-size:1.05rem;line-height:1.75;font-family:'Inter';font-weight:500;}
 /* 綠字要跟上說話速度：過場時間縮到最短，亮起來幾乎即時 */
 .para-en .tok{transition:color .05s,background .05s;border-radius:3px;cursor:pointer;}
@@ -330,7 +334,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .tok.flash{background:#FDE68A!important;}
 .para-en .tok.hit{color:var(--good);background:var(--good-l);}
 .para-cn{font-size:1.08rem;font-weight:600;color:#4E858B;margin-top:10px;line-height:1.7;border-top:1px dashed var(--bdr2);padding-top:10px;}
-.para-bar{display:flex;align-items:center;gap:10px;margin-top:12px;}
+.para-bar{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap;}
 /* iPad / 平板 / 電腦：字體與卡片一起放大，把版面填滿，不要一大片留白
    （2026-08-16 使用者回報 iPad 上空白太多） */
 @media(min-width:700px){
@@ -609,6 +613,9 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   .act-h{font-size:.95rem;padding-right:36px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .act-ico{width:30px;height:30px;font-size:1.05rem;top:11px;right:9px;border-radius:9px;}
   .act-d{font-size:.88rem;margin-top:6px;}
+  /* 手機：朗讀段落按鈕列重排——🔊和🎤同列靠左，狀態文字獨占下一列 */
+  .para-bar{gap:8px;}
+  .para-bar .mic-lbl{width:100%;order:9;margin-top:2px;font-size:.88rem;}
 }
 @media(max-width:420px){
   .acts{grid-template-columns:1fr 1fr;}
@@ -721,7 +728,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
         <div class="act-ico i-quiz">📝</div>
         <div class="act-h">快速檢查</div>
         <div class="act-en">Quick Check</div>
-        <div class="act-d">選擇題測驗：📝 綜合 / 🎧 聽力 / 📖 閱讀，可同主題再出新題。</div>
+        <div class="act-d">選擇題測驗：綜合 / 聽力 / 閱讀，可同主題再出新題。</div>
       </button>
     </div>
 
@@ -1010,7 +1017,18 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
 // ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260731, 20260804, 20260811
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-08-16 count:637
+// ===SYNC:VOCAB_START=== sync_date:2026-08-18 count:647
+  // --- 20260818 行為描述與人際互動 ---
+  {w:"reputation",ipa:"/ˌrɛpjuˈteɪʃən/",pos:"n.",cn:"名聲；聲譽",def:"What people think about someone or something.",exEn:"The manager was worried about the employee's bad reputation.",exCn:"經理擔心這位員工的名聲不好。",cat:"workplace"},
+  {w:"bully",ipa:"/ˈbʊli/",pos:"v./n.",cn:"欺負；霸凌；霸凌者",def:"To hurt or frighten someone weaker than you.",exEn:"The student was afraid because the older boy tried to bully him.",exCn:"那個學生很害怕，因為那個大男孩試圖欺負他。",cat:"daily"},
+  {w:"curious",ipa:"/ˈkjʊriəs/",pos:"adj.",cn:"好奇的；想知道的",def:"Wanting to know or learn about something.",exEn:"Sarah was curious about the strange noise coming from the room.",exCn:"Sarah 對房間傳來的奇怪聲音很好奇。",cat:"daily"},
+  {w:"curiosity",ipa:"/ˌkjʊriˈɑːsəti/",pos:"n.",cn:"好奇心",def:"A strong wish to know about something.",exEn:"She likes learning about other cultures because of her strong curiosity.",exCn:"她喜歡學習其他文化，因為她有很強的好奇心。",cat:"daily"},
+  {w:"distraction",ipa:"/dɪˈstrækʃən/",pos:"n.",cn:"分心的事物；干擾",def:"Something that takes your attention away.",exEn:"The meeting was delayed because of a lot of unnecessary distraction.",exCn:"會議因為很多不必要的干擾而延誤了。",cat:"workplace"},
+  {w:"ridiculous",ipa:"/rɪˈdɪkjələs/",pos:"adj.",cn:"荒謬的；可笑的",def:"Very silly or not reasonable.",exEn:"It's ridiculous to believe that one person can do everything perfectly.",exCn:"認為一個人可以把所有事做到完美，這是荒謬的。",cat:"daily"},
+  {w:"troublesome",ipa:"/ˈtrʌblsəm/",pos:"adj.",cn:"麻煩的；令人困擾的",def:"Causing difficulty or problems.",exEn:"The problem was troublesome, but we solved it after discussing it.",exCn:"這個問題很麻煩，但我們討論後解決了。",cat:"workplace"},
+  {w:"threaten",ipa:"/ˈθrɛtən/",pos:"v.",cn:"威脅；恐嚇",def:"To say you will hurt someone or cause problems.",exEn:"The older boy tried to threaten the younger student.",exCn:"那個大男孩試圖威脅年紀較小的學生。",cat:"daily"},
+  {w:"confuse",ipa:"/kənˈfjuːz/",pos:"v.",cn:"把…弄混；混淆",def:"To think one thing is another thing by mistake.",exEn:"Don't confuse his silence as anger.",exCn:"不要把他的沉默誤認為是生氣。",cat:"daily"},
+  {w:"difficulty",ipa:"/ˈdɪfɪkəlti/",pos:"n.",cn:"困難；難題",def:"A problem or something that is hard to do.",exEn:"I had some difficulty understanding the new software at first.",exCn:"我一開始在理解新軟體時有些困難。",cat:"workplace"},
   // --- 20260813 商務溝通與問題解決（摘要補充）Communication, Problem-Solving and Marketing ---
   {w:"proactive",ipa:"/proʊˈæktɪv/",pos:"adj.",cn:"主動積極的",def:"Acting before a problem happens instead of waiting.",exEn:"Emma decided to take proactive measures.",exCn:"Emma 決定採取主動積極的作為。",cat:"workplace"},
   {w:"obstacle",ipa:"/ˈɑːbstəkl/",pos:"n.",cn:"阻礙、障礙",def:"Something that makes it hard to succeed.",exEn:"This communication failure became a significant obstacle.",exCn:"這次的溝通失敗成了一大阻礙。",cat:"workplace"},
@@ -1707,8 +1725,10 @@ const vocab = [
 ];
 
 // 每個單字的筆記來源 (key = word, value = note title)
-// ===SYNC:SOURCES_START=== sync_date:2026-08-16
+// ===SYNC:SOURCES_START=== sync_date:2026-08-18
 const vocabSources = {
+  // --- 20260818 行為描述與人際互動 ---
+  "reputation":"20260818 行為描述與人際互動","bully":"20260818 行為描述與人際互動","curious":"20260818 行為描述與人際互動","curiosity":"20260818 行為描述與人際互動","distraction":"20260818 行為描述與人際互動","ridiculous":"20260818 行為描述與人際互動","troublesome":"20260818 行為描述與人際互動","threaten":"20260818 行為描述與人際互動","confuse":"20260818 行為描述與人際互動","difficulty":"20260818 行為描述與人際互動",
   // --- 20260813 商務溝通與問題解決（摘要補充）---
   "proactive":"20260813 客訴處理與品牌曝光","obstacle":"20260813 客訴處理與品牌曝光","feedback":"20260813 客訴處理與品牌曝光","transparent":"20260813 客訴處理與品牌曝光","escalate":"20260813 客訴處理與品牌曝光","go viral":"20260813 客訴處理與品牌曝光","accountability":"20260813 客訴處理與品牌曝光","inevitable":"20260813 客訴處理與品牌曝光","dedicated":"20260813 客訴處理與品牌曝光","setback":"20260813 客訴處理與品牌曝光",
   // --- 20260813 客訴處理與品牌曝光 ---
@@ -2187,8 +2207,20 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-08-16 count:252
+// ===SYNC:TRANS_START=== sync_date:2026-08-18 count:262
 const allTrans = [
+  // --- 20260818 行為描述與人際互動 cn-en ---
+  {p:"不要再欺負你弟弟了。取笑他是不好的。",a:"Stop picking on your younger brother. It's not nice to make fun of him.",h:"pick on = 欺負, make fun of = 取笑",kw:["picking on"],src:"20260818 行為描述與人際互動"},
+  {p:"他對我說謊時我非常生氣。他的行為真的讓我火冒三丈。",a:"I was very angry when he lied to me. His behavior really made my blood boil.",h:"make my blood boil = 火冒三丈",kw:["made my blood boil"],src:"20260818 行為描述與人際互動"},
+  {p:"他犯了一個嚴重的錯誤，但他不想承認。相反地，他試圖找藉口。",a:"He made a serious mistake, but he didn't want to admit it. Instead, he tried to make an excuse.",h:"make an excuse = 找藉口, admit = 承認",kw:["make an excuse"],src:"20260818 行為描述與人際互動"},
+  {p:"喝奇亞籽水可以降低你的食慾。",a:"Drinking chia seed water can reduce your appetite.",h:"reduce appetite = 降低食慾",kw:["reduce"],src:"20260818 行為描述與人際互動"},
+  {p:"有時候因為語言障礙，我和越南員工之間有溝通問題。",a:"Sometimes, I have communication problems with Vietnamese employees because of language barriers.",h:"communication problems, language barriers",kw:["language barriers"],src:"20260818 行為描述與人際互動"},
+  // --- 20260818 行為描述與人際互動 en-cn ---
+  {p:"The manager was worried about the employee's bad reputation because he was rude to customers.",a:"經理擔心這位員工的名聲不好，因為他對客人很無禮。",h:"reputation = 名聲",kw:[],src:"20260818 行為描述與人際互動"},
+  {p:"My new colleague is highly skilled. He can fix complicated machines very quickly.",a:"我的新同事技術高超。他能很快地修理複雜的機器。",h:"highly skilled = 技術高超",kw:[],src:"20260818 行為描述與人際互動"},
+  {p:"Don't confuse his silence as anger. Maybe he is just tired.",a:"不要把他的沉默誤認為是生氣。也許他只是累了。",h:"confuse A as B = 把A誤認為B",kw:[],src:"20260818 行為描述與人際互動"},
+  {p:"The investigation exposed several problems.",a:"這項調查揭露了幾個問題。",h:"expose = 揭露, investigation = 調查",kw:[],src:"20260818 行為描述與人際互動"},
+  {p:"Curiosity killed the cat.",a:"好奇心害死貓。（英文諺語，告誡人不要太好奇）",h:"curiosity = 好奇心",kw:[],src:"20260818 行為描述與人際互動"},
   // --- 20260813 商務溝通與問題解決（摘要補充）cn-en ---
   {p:"她沒有指責別人，而是決定採取行動。",a:"Instead of blaming others, she decided to take action.",h:"instead of + V-ing, take action",kw:["instead of"]},
   {p:"團隊成員之間的溝通不良導致專案延誤。",a:"Miscommunication issues among team members led to project delays.",h:"miscommunication, lead to",kw:["led to"]},
@@ -3719,7 +3751,50 @@ const articles = [
 // 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
 // ═══════════════════════════════════════════════
 const DAYQUIZ = {
-// ===SYNC:DAYQUIZ_START=== sync_date:2026-08-16 count:28
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-08-18 count:29
+  "20260818": {
+    title: "行為描述與人際互動",
+    subtitle: "Behavior Descriptions and Interpersonal Communication",
+    questions: [
+      {type:"mc",tag:"改錯",q:"哪一句比較自然道地？",
+        options:["I have miscommunication with Vietnamese employees because of language problems.","I have communication problems with Vietnamese employees because of language barriers."],answer:1,
+        explain:"communication problems 比 miscommunication 更自然；language barriers（語言障礙）是更精準的搭配詞。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["Tom couldn't join the trip because of the exam, so I will make it up to him by buying souvenirs.","Tom couldn't join the trip because he had an exam, so I will make it up to him by buying him some souvenirs."],answer:1,
+        explain:"because + 子句比 because of + 名詞更完整；buy 是雙受詞動詞，要加 him 表示「買給他」。"},
+      {type:"mc",tag:"單字",q:"reputation 的中文意思是什麼？",
+        options:["名聲；聲譽","道歉；歉意","困難；難題","好奇心"],answer:0,
+        explain:"reputation /ˌrɛpjuˈteɪʃən/ 意思是「名聲、聲譽」。"},
+      {type:"mc",tag:"單字",q:"ridiculous 的中文意思是什麼？",
+        options:["麻煩的","荒謬的；可笑的","好奇的","擔心的"],answer:1,
+        explain:"ridiculous /rɪˈdɪkjələs/ 意思是「荒謬的、可笑的、不合理的」。"},
+      {type:"fill",tag:"片語",q:"Stop ___ your younger brother. It's not nice to make fun of him.",
+        answer:["picking on"],
+        explain:"pick on someone 意思是「找某人的麻煩、欺負某人」，Stop 後面接 V-ing。"},
+      {type:"fill",tag:"片語",q:"The teacher asked the students to ___ and stop shouting.",
+        answer:["chill out"],
+        explain:"chill out 意思是「放鬆、冷靜下來」。"},
+      {type:"fill",tag:"單字",q:"I had some ___ understanding the new software at first.",
+        answer:["difficulty"],
+        explain:"difficulty 意思是「困難」，have difficulty + V-ing 是「做…有困難」的固定搭配。"},
+      {type:"fill",tag:"搭配",q:"Don't ___ his silence as anger. Maybe he is just tired.",
+        answer:["confuse"],
+        explain:"confuse A as B 意思是「把 A 誤認為 B」。"},
+      {type:"mc",tag:"詞類",q:"success / succeed / successful，哪一個是動詞？",
+        options:["success","succeed","successful"],answer:1,
+        explain:"succeed 是動詞（成功）；success 是名詞；successful 是形容詞。"},
+      {type:"mc",tag:"食慾",q:"「降低食慾」的英文是什麼？",
+        options:["lose appetite","reduce appetite","gain appetite","increase appetite"],answer:1,
+        explain:"reduce appetite = 降低食慾。lose appetite = 失去食慾（食慾不振）。"},
+      {type:"fill",tag:"慣用語",q:"His behavior really ___. (讓我火冒三丈)",
+        cn:"他的行為真的讓我火冒三丈。",
+        answer:["made my blood boil"],
+        explain:"make my blood boil 是慣用語，意思是「讓我非常生氣、火冒三丈」。"},
+      {type:"trans",tag:"翻譯",q:"Tom 因為有考試不能參加旅行，所以我會買一些紀念品來補償他。",
+        answer:"Tom couldn't join the trip because he had an exam, so I will make it up to him by buying him some souvenirs.",
+        explain:"make it up to someone = 補償某人；by + V-ing 表示方式；buy him some souvenirs = 買紀念品給他。"},
+    ]
+  },
   "20260813": {
     title: "客訴處理與品牌曝光",
     subtitle: "Turning a Failure into an Opportunity — Complaints, Compensation and Brand Exposure",
@@ -5161,7 +5236,32 @@ const DAYQUIZ = {
 // 沒有腳本的日期會自動退回「教練只說引導語」的模式。
 // ═══════════════════════════════════════════════
 const DAYTALK = {
-// ===SYNC:DAYTALK_START=== sync_date:2026-08-16 count:2
+// ===SYNC:DAYTALK_START=== sync_date:2026-08-18 count:3
+  "20260818": {
+    title: "行為描述與人際互動",
+    turns: [
+      {q:"An employee was rude to customers. What happened to his reputation?",qCn:"一個員工對客人很無禮。他的名聲怎麼了？",
+       en:"The manager was worried about the employee's bad reputation because he was rude to customers.",cn:"經理擔心這位員工的名聲不好，因為他對客人很無禮。",hint:"reputation = 名聲"},
+      {q:"Your colleague can fix complicated machines quickly. How would you describe him?",qCn:"你的同事能很快修理複雜機器。你會怎麼形容他？",
+       en:"My new colleague is highly skilled. He can fix complicated machines very quickly.",cn:"我的新同事技術高超。他能很快地修理複雜的機器。",hint:"highly skilled = 技術高超"},
+      {q:"Your brother was making fun of someone. What would you tell him to stop doing?",qCn:"你弟弟在取笑別人。你會叫他停止做什麼？",
+       en:"Stop picking on your younger brother. It's not nice to make fun of him.",cn:"不要再欺負你弟弟了。取笑他是不好的。",hint:"pick on = 欺負"},
+      {q:"Someone lied to you and you were furious. How did his behavior make you feel?",qCn:"有人對你說謊，你非常憤怒。他的行為讓你有什麼感覺？",
+       en:"I was very angry when he lied to me. His behavior really made my blood boil.",cn:"他對我說謊時我非常生氣。他的行為真的讓我火冒三丈。",hint:"make my blood boil = 火冒三丈"},
+      {q:"Sarah heard a strange noise from a room. What was she feeling about it?",qCn:"Sarah 聽到房間傳來奇怪聲音。她對此有什麼感覺？",
+       en:"Sarah was curious about the strange noise coming from the room, so she went to check it.",cn:"Sarah 對房間傳來的奇怪聲音很好奇，所以她去查看了。",hint:"curious about = 對…好奇"},
+      {q:"He made a serious mistake but didn't want to admit it. What did he try to do instead?",qCn:"他犯了一個嚴重的錯誤但不想承認。他反而試著做什麼？",
+       en:"He made a serious mistake, but he didn't want to admit it. Instead, he tried to make an excuse.",cn:"他犯了一個嚴重的錯誤，但他不想承認。相反地，他試圖找藉口。",hint:"make an excuse = 找藉口"},
+      {q:"You missed several classes. What do you need to do with your homework?",qCn:"你缺了好幾堂課。你需要對你的作業做什麼？",
+       en:"I need to catch up with my homework because I missed several classes.",cn:"我需要補上我的作業，因為我缺了好幾堂課。",hint:"catch up with = 補上進度"},
+      {q:"You tried to explain your idea to your boss but he didn't understand. What happened?",qCn:"你試著向老闆解釋你的想法，但他不懂。發生了什麼？",
+       en:"I tried to get my point across to my boss, but he didn't understand my idea.",cn:"我試著讓老闆理解我的意思，但他不懂我的想法。",hint:"get my point across to = 讓人理解我的意思"},
+      {q:"Someone is silent. Should you assume they are angry?",qCn:"有人沉默不語。你應該認為他生氣嗎？",
+       en:"Don't confuse his silence as anger. Maybe he is just tired.",cn:"不要把他的沉默誤認為是生氣。也許他只是累了。",hint:"confuse A as B = 把A誤認為B"},
+      {q:"Drinking chia seed water has a benefit for appetite. What does it do?",qCn:"喝奇亞籽水對食慾有好處。它有什麼作用？",
+       en:"Drinking chia seed water can reduce your appetite.",cn:"喝奇亞籽水可以降低你的食慾。",hint:"reduce appetite = 降低食慾"},
+    ]
+  },
   "20260813": {
     title: "客訴處理與品牌曝光",
     turns: [
@@ -6531,8 +6631,11 @@ function readOpen(gi){const a=READLIST[gi];READ={a:a,paras:[]};
 function readDemo(pi){
   if(micActive)hardResetMic();
   const l=$('rlbl-'+pi);if(l)l.textContent='🔊 聽示範…';
-  /* 朗讀示範固定用女聲（2026-08-16 使用者要求取消男女混聲） */
+  /* 反黃底：正在播的那段亮起來，其餘段取消 */
+  document.querySelectorAll('.para.tts-active').forEach(el=>el.classList.remove('tts-active'));
+  const paraEl=$('rp-'+pi);if(paraEl)paraEl.closest('.para').classList.add('tts-active');
   speak(readText(pi),0.9,()=>{
+    if(paraEl)paraEl.closest('.para').classList.remove('tts-active');
     if(AUTOREC&&speechOK()&&!micActive)readMic(pi);
     else if(!micActive&&l)l.textContent='按 🎤 朗讀這段';});}
 function readFinish(){finishAct('📖 朗讀文章','你把這一篇唸完了!');}
@@ -6555,7 +6658,11 @@ function readMic(pi){
       const cov=markRead(pi,pool);
       $('rcov-'+pi).textContent=cov+'%';$('rlbl-'+pi).textContent='唸得好!覆蓋率 '+cov+'%';
       const h=$('rheard-'+pi);if(h)h.innerHTML=altLine(alts,t);
-      logSpeak(cov);   /* 這段朗讀完整結束、拿到覆蓋率，就計入統計 */
+      /* 練過的段落加上視覺標記：覆蓋率 ≥50% 綠邊，≥80% 加勾 */
+      const pEl=$('rp-'+pi);if(pEl){const pd=pEl.closest('.para');
+        if(cov>=50)pd.classList.add('practiced');
+        if(cov>=80)$('rcov-'+pi).textContent='✅ '+cov+'%';}
+      logSpeak(cov);
       sessLog(pi,readText(pi),READ.a.paras[pi].cn||cnFor(readText(pi)),cov);
     }});}
 function markRead(pi,said){const got=toks(said),used=new Array(got.length).fill(false),loose=true;   /* 寬鬆比對全員適用 */
@@ -6628,8 +6735,7 @@ function talkScript(d){
   const sc=DAYTALK[d];
   if(sc&&sc.turns&&sc.turns.length){
     let picked=trimForTom(rotatePick(pickByLevel(sc.turns),'talk',d,10,s=>s.en),4);
-    /* rotatePick 會打亂順序；腳本是寫好的流程，抽完再排回原順序比較順 */
-    picked=picked.slice().sort((a,b)=>sc.turns.indexOf(a)-sc.turns.indexOf(b));
+    shuffle(picked);
     return picked.map(t=>({en:t.en,cn:t.cn,hint:t.hint||'',ask:{en:t.q,cn:t.qCn||''}}));}
   let pool=dedupe(sayItems(d).filter(s=>s.en&&s.cn&&toks(s.en).length>=3),'en');
   if(pool.length<3)pool=dedupe(sayItems('all').filter(s=>s.en&&s.cn&&toks(s.en).length>=3),'en');
@@ -7367,7 +7473,8 @@ function vStop(){
 function vSeek(i){
   if(!VID)return;VID.i=Math.max(0,Math.min(i,VID.lines.length-1));vHighlight();
   if(VID.mode==='yt'){if(VID.yt&&VID.yt.seekTo){VID.yt.seekTo(VID.lines[VID.i].t,true);if(VID.playing)VID.yt.playVideo();}}
-  else if(VID.playing)vSpeakLine(VID.i);}
+  else if(VID.playing)vSpeakLine(VID.i);
+  const pbox=$('vid-prac');if(pbox&&!pbox.classList.contains('hide'))vPractice();}
 function vNext(){if(VID)vSeek(VID.i+1);}
 function vPrev(){if(VID)vSeek(VID.i-1);}
 function vRepeat(){if(!VID)return;VID.playing=true;vPP();vSeek(VID.i);}
