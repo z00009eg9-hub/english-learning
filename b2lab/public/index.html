@@ -105,7 +105,7 @@ nav button.on i{
 .dayico .d{flex:1 1 auto;display:flex;align-items:center;justify-content:center;
   font-size:10.5px;font-weight:800;line-height:10.5px;text-align:center;padding-bottom:1px}
 /* ---------- layout ---------- */
-main{max-width:860px;margin:0 auto;padding:16px 14px 20px}
+main{max-width:1100px;margin:0 auto;padding:16px 14px 20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;margin-bottom:14px}
 h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items:center;gap:7px}
 .muted{color:var(--ink2);font-size:calc(13px * var(--fs))}
@@ -273,6 +273,8 @@ tr:nth-child(even) td{background:#fdfbf8}
 .cell.done{background:linear-gradient(135deg,#f7bd76,#ef9a4f);border-color:#e8813a;color:#fff;font-weight:700}
 .cell.done .dot{font-size:calc(11px * var(--fs));line-height:1}
 .cell.today{outline:2px solid var(--accent2);outline-offset:1px}
+/* 課本日曆的「有筆記」格子：改用藍色底，避免跟橘黃色 emoji 圖示混在一起看不清 */
+#bk-cal .cell.done{background:linear-gradient(135deg,#d3e7fa,#a9cff0);border-color:#5b9bd5;color:#17456e}
 .cell.future{opacity:.4}
 .callegend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:calc(12px * var(--fs));color:var(--ink2)}
 .callegend i{display:inline-block;width:14px;height:14px;border-radius:5px;vertical-align:-2px;margin-right:5px}
@@ -2061,7 +2063,7 @@ RENDER.book=function(){
     +'<button class="spk" id="bk-hint-btn" onclick="bkTogHint()">'+(bkHintOpen?'💡 說明 ▲':'💡 說明 ▼')+'</button></div>'
     +'<div class="hint" id="bk-hint" style="display:'+(bkHintOpen?'block':'none')+';margin-top:8px">'
     +'課堂筆記的完整版面，內容與上課的 Google 文件一字不差。'
-    +'日曆上<b>橘色的日期</b>就是有筆記的日子，點一下直接開課文；« » 換年、‹ › 換月。'
+    +'日曆上<b>藍色的日期</b>就是有筆記的日子，點一下直接開課文；« » 換年、‹ › 換月。'
     +'搜尋欄輸入單字或主題，會列出這個字<b>出現在哪幾課、哪個段落</b>。'
     +'<b>每個單字、每個句子都有 🔊</b>；中譯跟著右上角的「🈶 中譯」開關。</div>'
     +'<input id="bk-q" value="'+esc(bkQuery)+'" oninput="bkSearch(this.value)" placeholder="🔍 快速搜尋：單字、片語、主題…（會列出出現在哪篇）">'
@@ -2092,7 +2094,7 @@ function bkCalHTML(){
      +'>'+d+(b?'<span class="dot">'+(b.icon||'📕')+'</span>':'')+'</div>';
   }
   h+='</div>'
-   +'<div class="callegend"><span><i style="background:linear-gradient(135deg,#f7bd76,#ef9a4f)"></i>有筆記，點日期開課文</span>'
+   +'<div class="callegend"><span><i style="background:linear-gradient(135deg,#d3e7fa,#a9cff0);border:1px solid #5b9bd5"></i>有筆記，點日期開課文</span>'
    +'<span><i style="outline:2px solid var(--accent2);outline-offset:-2px;background:#fff"></i>今天</span></div>';
   const mm=BOOK_LESSONS.filter(b=>(b.date||'').indexOf(bkCalY+'-'+String(bkCalM+1).padStart(2,'0'))===0);
   h+= mm.length ? '<div style="margin-top:12px">'+mm.map(b=>bkItem(b)).join('')+'</div>'
