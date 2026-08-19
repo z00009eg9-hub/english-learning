@@ -738,6 +738,8 @@ function save(){ ST.updatedAt=Date.now(); saveLocal(); cloudPush(); }
 // 用「當地日期」而不是 UTC，否則台灣早上八點前會被算成前一天
 function dstr(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
 const today = () => dstr(new Date());
+// 本週一的日期（週一為一週的開始）：今日分頁「過去的每日內容」只保留本週
+const weekStart = () => { const d=new Date(); d.setDate(d.getDate()-((d.getDay()+6)%7)); return dstr(d); };
 function touchStreak(){
   const d=today();
   if(ST.lastDay===d) return;
@@ -1103,7 +1105,7 @@ const ALL_ARTS=DAILY_ARTS.concat(ORIG_ARTS,NOTE_ARTS);
 // 每日文章的重點字也要進字庫
 DAILY_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:t.exCn||'',src:'每日文章：'+a.title})));
 
-let rdFilter={kind:'orig',level:'all'}, rdOpen=null;
+let rdFilter={kind:'all',level:'all'}, rdOpen=null;   // 預設「全部」：每日文章依日期排在最上方
 RENDER.read=function(){
   const v=$('v-read');
   v.classList.toggle('rdopen',!!rdOpen);
@@ -1797,12 +1799,21 @@ RENDER.daily=function(){
    +'<li>最後去「單字卡」清掉今天到期的字</li></ol></div>';
 
   const todayIds=new Set([...artsToday,...gramsToday,...listensToday].filter(x=>isToday(x)).map(x=>x.id));
-  const pastArts=pool.filter(a=>!todayIds.has(a.id));
-  const pastGram=DAILY_GRAM.filter(g=>inBand(g.level)&&!todayIds.has(g.id));
-  if(pastArts.length||pastGram.length){
-    h+='<div class="card"><h2 class="sec">🗂 過去的每日內容</h2>'
+  // 只保留「本週」（週一起算）的過去內容；更早的依分類回歸 閱讀／聽力／文法 分頁（各分頁最上方）
+  const ws=weekStart();
+  const thisWeek=x=>x.date&&x.date>=ws&&x.date<=t;
+  const pastArts=pool.filter(a=>!todayIds.has(a.id)&&thisWeek(a));
+  const pastGram=DAILY_GRAM.filter(g=>inBand(g.level)&&!todayIds.has(g.id)&&thisWeek(g));
+  const pastListen=LESSONS.filter(l=>inBand(l.level)&&!todayIds.has(l.id)&&thisWeek(l));
+  const olderN=pool.filter(a=>!todayIds.has(a.id)&&!thisWeek(a)).length
+    +DAILY_GRAM.filter(g=>inBand(g.level)&&!todayIds.has(g.id)&&!thisWeek(g)).length
+    +LESSONS.filter(l=>inBand(l.level)&&!todayIds.has(l.id)&&l.date&&l.date<ws).length;
+  if(pastArts.length||pastGram.length||pastListen.length||olderN){
+    h+='<div class="card"><h2 class="sec">🗂 本週的每日內容</h2>'
      + pastArts.map(a=>'<div class="item" onclick="dailyArt(\''+a.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📖 '+esc(a.title)+'</div><div class="meta"><span>📅 '+esc(a.date||'')+'</span><span>'+esc(a.titleCn)+'</span></div></div>').join('')
+     + pastListen.map(l=>'<div class="item" onclick="lsGo(\''+l.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">🎧 '+esc(l.title)+'</div><div class="meta"><span>📅 '+esc(l.date||'')+'</span><span>'+esc(l.titleCn)+'</span></div></div>').join('')
      + pastGram.map(g=>'<div class="item" onclick="goUnit(\''+g.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📐 '+esc(g.titleCn)+'</div><div class="meta"><span>📅 '+esc(g.date||'')+'</span><span>'+esc(g.title)+'</span></div></div>').join('')
+     +(olderN?'<div class="hint" style="margin-top:8px">更早的 '+olderN+' 份內容已依分類回歸 <b>閱讀</b>、<b>聽力</b>、<b>文法</b> 分頁，都排在各分頁最上方（日期新的在前）。</div>':'')
      +'</div>';
   }
   h+=oldSiteCard();
