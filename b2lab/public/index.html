@@ -171,8 +171,10 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 .para .sent{border-radius:6px;padding:1px 2px;cursor:pointer;transition:background .15s}
 .para .sent:hover{background:#fff6ea}
 .para .sent.reading{background:#fff2d9;box-shadow:0 0 0 2px #fff2d9}
-/* 🔊 按鈕朗讀時，該句所在區塊反黃 */
-.spkhl{background:#fff2b8 !important;box-shadow:0 0 0 3px #fff2b8;border-radius:6px;transition:background .15s}
+/* 🔊 朗讀時反黃：只包住文字本身（到句尾為止），顏色與課文朗讀反黃統一（#fff2d9）
+   box-decoration-break:clone 讓跨行時每一行的頭尾都有完整圓角底色 */
+.spktxt{border-radius:5px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.spkon{background:#fff2d9;box-shadow:0 0 0 2px #fff2d9;border-radius:5px;transition:background .15s}
 /* 有喇叭的那一行文字本身也可點（等同按 🔊） */
 .exs:has(.spk),.u2:has(.spk),.qt:has(.spk),.een:has(.spk),.good:has(.spk),.bkline:has(.spk),.wpline:has(.spk),.fx:has(.spk),.gx:has(.spk){cursor:pointer}
 .para .cn{font-size:calc(14px * var(--fs));color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:7px;display:none}
@@ -904,12 +906,24 @@ function saySent(el){
   say(sent.dataset.t, null, ()=>{ sent.classList.remove('reading'); });
 }
 window.saySent=saySent;
-/* 所有 🔊 按鈕共用：朗讀該句，並把那一句所在的區塊反黃（唸完自動恢復） */
+/* 所有 🔊 按鈕共用：朗讀該句，並把「喇叭前的那段文字」反黃（唸完自動恢復）。
+   反黃只貼著文字、到句子最後一個字／句點為止，不是整條區塊；
+   做法：第一次點擊時把喇叭鈕之前的節點包進行內 span.spktxt，之後反黃這個 span。 */
 function spkGo(btn){
   const box=btn.closest('.exs,.wpline,.u2,.good,.een,.qt,.opt,.kl,.ycd,.trans-line,li')||btn.parentElement;
-  document.querySelectorAll('.spkhl').forEach(x=>x.classList.remove('spkhl'));
-  if(box) box.classList.add('spkhl');
-  say(btn.dataset.t, null, ()=>{ if(box) box.classList.remove('spkhl'); });
+  let t=null;
+  if(box){
+    t=box.querySelector(':scope > .spktxt');
+    if(!t && box.contains(btn)){
+      t=document.createElement('span'); t.className='spktxt';
+      while(box.firstChild && box.firstChild!==btn) t.appendChild(box.firstChild);
+      box.insertBefore(t,btn);
+    }
+  }
+  const hl=t||box;
+  document.querySelectorAll('.spkon').forEach(x=>x.classList.remove('spkon'));
+  if(hl) hl.classList.add('spkon');
+  say(btn.dataset.t, null, ()=>{ if(hl) hl.classList.remove('spkon'); });
 }
 window.spkGo=spkGo;
 function spk(text,label){
