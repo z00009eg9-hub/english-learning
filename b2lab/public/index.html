@@ -173,6 +173,8 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 .para .sent.reading{background:#fff2d9;box-shadow:0 0 0 2px #fff2d9}
 /* 🔊 按鈕朗讀時，該句所在區塊反黃 */
 .spkhl{background:#fff2b8 !important;box-shadow:0 0 0 3px #fff2b8;border-radius:6px;transition:background .15s}
+/* 有喇叭的那一行文字本身也可點（等同按 🔊） */
+.exs:has(.spk),.u2:has(.spk),.qt:has(.spk),.een:has(.spk),.good:has(.spk),.bkline:has(.spk),.wpline:has(.spk),.fx:has(.spk),.gx:has(.spk){cursor:pointer}
 .para .cn{font-size:calc(14px * var(--fs));color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:7px;display:none}
 .para.showcn .cn{display:block}
 .para .pbar{margin-top:5px;display:flex;gap:6px}
@@ -1999,6 +2001,17 @@ document.addEventListener('click',e=>{
   if(e.target.closest('button,.spk,.sent,w,a,input,textarea,select,.opt3,.gloss')) return;
   speechSynthesis.cancel();
   document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
+});
+
+/* ---------- 點「有喇叭的那一行文字」＝等同按 🔊：朗讀＋反黃（2026-08-19 使用者指定）
+   涵蓋：閱讀的單字例句(.exs)、句型升級(.u2)、測驗題目(.qt)、文法重點例句(.een)與訂正句(.good)、
+   課本的片語標題與作業複習行(.bkline)、單字行(.wpline)、字義卡例句(.gx/.fx)、聽力關鍵句(.srow) ---------- */
+document.addEventListener('click',e=>{
+  if(e.target.closest('button,.spk,w,a,input,textarea,select,.sent,.sen,.opt3,.gloss')) return;
+  const box=e.target.closest('.exs,.u2,.qt,.een,.good,.bkline,.wpline,.fx,.gx,.srow');
+  if(!box) return;
+  const b=box.querySelector('.spk[data-t]');
+  if(b) spkGo(b);
 });
 
 /* ============================================================
