@@ -98,21 +98,19 @@ const I = {
   star:    c=>`<path d="M32 8 l7 16 18 2 -13 12 4 18 -16 -9 -16 9 4 -18 -13 -12 18 -2z" fill="#ffd98a" stroke="${c.ink}" stroke-width="2.5" stroke-linejoin="round"/>`
 };
 
+/* 2026-08-19 版面規則：橫幅只放「五圓圖示」，不放任何文字（標題／中文／tag 一律不畫）。
+   spec.i 要給 5 個圖示；只給 3 個時會置中排（舊 spec 相容），en/cn/tag 欄位即使有也會被忽略。 */
 function banner(spec){
   const c = P[spec.p];
   if(!c) throw new Error('沒有這個配色: ' + spec.p);
-  const icons = spec.i.map((name,k)=>{
+  const XS = spec.i.length>=5 ? [44,198,352,506,660] : [198,352,506];
+  const icons = spec.i.slice(0,5).map((name,k)=>{
     if(!I[name]) throw new Error('沒有這個圖示: ' + name);
-    const x = 470 + k*104, y = 62;
-    return `<g transform="translate(${x},${y})"><circle cx="32" cy="32" r="33" fill="${c.dark?'rgba(255,255,255,.10)':'#ffffff'}" stroke="${c.dark?'rgba(255,255,255,.35)':c.band}" stroke-width="2.5"/>${I[name](c)}</g>`;
+    return `<g transform="translate(${XS[k]},52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="${c.dark?'rgba(255,255,255,.10)':'#ffffff'}" stroke="${c.dark?'rgba(255,255,255,.35)':c.band}" stroke-width="2.5"/>${I[name](c)}</g>`;
   }).join('');
-  const fs = Math.max(16, Math.min(26, Math.floor(400/(spec.en.length*0.60))));
   return `<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">`
    +`<rect width="800" height="200" rx="14" fill="${c.bg}"/>`
    +`<path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="${c.band}" opacity="${c.dark?'.55':'.75'}"/>`
-   +`<text x="42" y="72" font-size="${fs}" font-weight="900" fill="${c.ink}">${spec.en}</text>`
-   +`<text x="42" y="104" font-size="19" font-weight="900" fill="${c.sub}">${spec.cn}</text>`
-   +`<text x="42" y="134" font-size="14" font-weight="700" fill="${c.dark?'#cbd7ea':'#6b6259'}">${spec.tag}</text>`
    + icons
    +`</svg>`;
 }
