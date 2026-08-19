@@ -15,6 +15,173 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週三／五更新） ========== */
 notes:[
 {
+  id:"dl20260819a2",
+  date:"2026-08-19",
+  level:"A2",
+  minutes:2,
+  kind:"note",
+  title:"Grandma Feels Better",
+  titleCn:"奶奶好多了",
+  series:"本站自製聽力 · 家人與健康主題",
+  topic:"👵 家人與健康",
+  focus:"現在簡單式描述現在的狀況，過去簡單式描述昨天發生的事（did you see...?）",
+  intro:"Tom打電話問候奶奶，昨天奶奶去看了醫生。這一課句子都很短，重點是聽出「現在」和「昨天」的差別：現在簡單式講現在的狀況，did 開頭的問句講昨天做了什麼。",
+  tip:"第一次聽先抓「奶奶現在好不好」，第二次再聽「她昨天做了什麼」。聽到 did 就是在問過去的事。",
+  pre:[
+    {w:"feel",ipa:"/fiːl/",cn:"覺得",def:"To have a certain feeling in your body or mind."},
+    {w:"medicine",ipa:"/ˈmedɪsn/",cn:"藥",def:"Something you take to help you feel better when you are sick."},
+    {w:"headache",ipa:"/ˈhedeɪk/",cn:"頭痛",def:"A pain inside your head."},
+    {w:"rest",ipa:"/rest/",cn:"休息",def:"To relax your body and stop working."},
+    {w:"visit",ipa:"/ˈvɪzɪt/",cn:"拜訪",def:"To go and see a person or place."},
+    {w:"warm",ipa:"/wɔːrm/",cn:"溫暖的",def:"A little hot, not cold."}
+  ],
+  script:[
+    {sp:"Tom",en:"Hi Grandma! How are you feeling today?",cn:"嗨奶奶！你今天覺得怎麼樣？"},
+    {sp:"Grandma",en:"Much better, Tom. Thank you for asking.",cn:"好多了，Tom。謝謝你關心。"},
+    {sp:"Tom",en:"Did you see the doctor yesterday?",cn:"你昨天有去看醫生嗎？"},
+    {sp:"Grandma",en:"Yes, I did. The doctor gave me some medicine.",cn:"有，我去了。醫生給了我一些藥。"},
+    {sp:"Tom",en:"That's good. Do you still have a headache?",cn:"太好了。你還會頭痛嗎？"},
+    {sp:"Grandma",en:"No, I don't. I feel much better now.",cn:"不會了。我現在感覺好多了。"},
+    {sp:"Tom",en:"Are you resting today?",cn:"你今天有在休息嗎？"},
+    {sp:"Grandma",en:"Yes, I am. I'm drinking warm tea and watching TV.",cn:"有。我正在喝溫茶、看電視。"},
+    {sp:"Tom",en:"I can visit you again this weekend.",cn:"我這個週末可以再來看你。"},
+    {sp:"Grandma",en:"I would love that, Tom.",cn:"我會很開心的，Tom。"}
+  ],
+  questions:[
+    {q:"How does Grandma feel today?",qCn:"奶奶今天感覺怎麼樣？",opts:["A. Worse than yesterday","B. Much better","C. Exactly the same","D. Very sick"],optsCn:["A. 比昨天更糟","B. 好多了","C. 跟平常一樣","D. 非常不舒服"],ans:1,expl:"Grandma says \"Much better, Tom.\""},
+    {q:"What did the doctor give Grandma?",qCn:"醫生給了奶奶什麼？",opts:["A. Some tea","B. Some medicine","C. A book","D. A new phone"],optsCn:["A. 一些茶","B. 一些藥","C. 一本書","D. 一支新手機"],ans:1,expl:"\"The doctor gave me some medicine.\""},
+    {q:"Does Grandma still have a headache?",qCn:"奶奶還會頭痛嗎？",opts:["A. Yes, a little","B. No, she doesn't","C. She isn't sure","D. She didn't answer"],optsCn:["A. 會，還有一點","B. 不會了","C. 她不確定","D. 她沒有回答"],ans:1,expl:"\"No, I don't. I feel much better now.\""},
+    {q:"Tom ____ visit his grandmother again this weekend.",qCn:"Tom這個週末可以再來看奶奶。",opts:["can","cans","canning","is can"],ans:0,expl:"can 是助動詞，後面直接加動詞原形 visit，不需要加 s。"},
+    {q:"What is Grandma doing today?",qCn:"奶奶今天在做什麼？",opts:["A. Cooking dinner","B. Drinking tea and watching TV","C. Going shopping","D. Cleaning the house"],optsCn:["A. 煮晚餐","B. 喝茶、看電視","C. 去買東西","D. 打掃房子"],ans:1,expl:"\"I'm drinking warm tea and watching TV.\""}
+  ]
+},
+
+{
+  id:"dl20260819b1",
+  date:"2026-08-19",
+  level:"B1",
+  minutes:3,
+  kind:"note",
+  title:"A Distracted Day at the Office",
+  titleCn:"心不在焉的上班日",
+  series:"本站自製聽力 · 家人與健康主題",
+  topic:"💬 辦公室裡的關心",
+  focus:"現在簡單式（習慣）vs 現在進行式／現在完成式（她已經有預約了）",
+  intro:"Anita在越南的辦公室裡，同事Ben發現她今天心不在焉。這一課示範怎麼用英文簡短地聊「家人的健康狀況」，也複習現在簡單式跟現在完成式的差別。",
+  tip:"第一次聽抓住「Anita的媽媽怎麼了」，第二次再聽Ben給了什麼建議、Anita最後決定怎麼做。",
+  pre:[
+    {w:"distracted",ipa:"/dɪˈstræktɪd/",cn:"分心的",def:"Not able to focus because you are thinking about something else."},
+    {w:"cough",ipa:"/kɔːf/",cn:"咳嗽",def:"A sudden noise made when air is pushed out of the lungs."},
+    {w:"tired",ipa:"/ˈtaɪərd/",cn:"疲累的",def:"Feeling like you need to rest."},
+    {w:"appointment",ipa:"/əˈpɔɪntmənt/",cn:"預約（門診）",def:"A time you plan to see the doctor."},
+    {w:"take care of",ipa:"/teɪk keər ʌv/",cn:"照顧",def:"To look after someone."},
+    {w:"suggest",ipa:"/səˈdʒest/",cn:"建議",def:"To give an idea about what someone should do."}
+  ],
+  script:[
+    {sp:"Ben",en:"You look a bit distracted today. Is everything okay?",cn:"你今天看起來有點心不在焉，還好嗎？"},
+    {sp:"Anita",en:"Not really. I called my mother in Taiwan last night, and she didn't sound well.",cn:"不太好。我昨晚打給在台灣的媽媽，她聽起來不太對勁。"},
+    {sp:"Ben",en:"What's wrong with her?",cn:"她怎麼了？"},
+    {sp:"Anita",en:"She has a cough, and she's been feeling tired for a few days.",cn:"她咳嗽，而且已經覺得累好幾天了。"},
+    {sp:"Ben",en:"Is she seeing a doctor?",cn:"她有要看醫生嗎？"},
+    {sp:"Anita",en:"Yes, she is. I told her to go this week, and she already has an appointment.",cn:"有。我叫她這禮拜去看，她已經有預約了。"},
+    {sp:"Ben",en:"That's good. Try not to worry too much.",cn:"那很好。試著別太擔心。"},
+    {sp:"Anita",en:"I know, but she takes care of my brother's kids every day, so she never really rests.",cn:"我知道，但她每天都要照顧我哥的小孩，所以她從來沒真正休息過。"},
+    {sp:"Ben",en:"Maybe you should ask your brother to help more this week.",cn:"也許你可以請你哥這禮拜多幫忙一點。"},
+    {sp:"Anita",en:"That's a good idea. I'll call her again tonight and suggest it.",cn:"這是個好主意。我今晚再打給她，跟她提這件事。"}
+  ],
+  questions:[
+    {q:"Why is Anita distracted at work?",qCn:"Anita今天上班為什麼心不在焉？",opts:["A. She lost her phone","B. Her mother didn't sound well on the phone last night","C. She has too much work","D. She is planning a trip"],optsCn:["A. 她的手機不見了","B. 昨晚媽媽電話裡聽起來不太對勁","C. 她工作太多","D. 她在計畫旅行"],ans:1,expl:"I called my mother in Taiwan last night, and she didn't sound well."},
+    {q:"What symptoms does Anita's mother have?",qCn:"Anita媽媽有什麼症狀？",opts:["A. A headache and a fever","B. A cough and tiredness","C. A stomachache","D. A sore throat"],optsCn:["A. 頭痛和發燒","B. 咳嗽和疲累","C. 肚子痛","D. 喉嚨痛"],ans:1,expl:"She has a cough, and she's been feeling tired for a few days."},
+    {q:"She ____ care of my brother's kids every day.",qCn:"她每天都要照顧我哥的小孩。",opts:["is taking","takes","took","take"],ans:1,expl:"every day 表示習慣，用現在簡單式，第三人稱加 s：takes。"},
+    {q:"What does Ben suggest?",qCn:"Ben建議什麼？",opts:["A. Anita should fly back to Taiwan","B. Anita's brother should help more this week","C. Anita should stop calling her mother","D. Anita should take a day off"],optsCn:["A. Anita應該飛回台灣","B. Anita的哥哥這禮拜應該多幫忙","C. Anita應該不要再打給媽媽","D. Anita應該請一天假"],ans:1,expl:"Maybe you should ask your brother to help more this week."},
+    {q:"What will Anita do tonight?",qCn:"Anita今晚會做什麼？",opts:["A. Book a flight to Taiwan","B. Call her mother again and suggest her brother help","C. Visit the clinic herself","D. Ask Ben to call her mother"],optsCn:["A. 訂機票回台灣","B. 再打給媽媽，建議哥哥幫忙","C. 自己去診所","D. 請Ben打給媽媽"],ans:1,expl:"I'll call her again tonight and suggest it."}
+  ]
+},
+
+{
+  id:"dl20260819b1p",
+  date:"2026-08-19",
+  level:"B1+",
+  minutes:3,
+  kind:"note",
+  title:"Two Hours in the Waiting Room",
+  titleCn:"在候診室等了兩小時",
+  series:"本站自製聽力 · 健康與醫療主題",
+  topic:"🏥 擁擠的診所",
+  focus:"被動語態（was consulted）與現在完成式（have been crowded）",
+  intro:"Sara跟Ben在辦公室聊起昨天在診所等了快兩小時的經驗，Ben提到遠距醫療（telemedicine）這個選項。留意對話裡的被動語態，還有「到目前為止一直如此」的現在完成式。",
+  tip:"第一次聽抓住Sara等了多久、為什麼；第二次再聽Ben對遠距醫療的建議是什麼、什麼情況還是要親自去診所。",
+  pre:[
+    {w:"crowded",ipa:"/ˈkraʊdɪd/",cn:"擁擠的",def:"Full of people."},
+    {w:"waiting room",ipa:"/ˈweɪtɪŋ ruːm/",cn:"候診室",def:"A room where people wait to see a doctor."},
+    {w:"telemedicine",ipa:"/ˌtelɪˈmedɪsɪn/",cn:"遠距醫療",def:"Medical care given through a video call instead of an in-person visit."},
+    {w:"consulted",ipa:"/kənˈsʌltɪd/",cn:"被看診、諮詢",def:"Given professional advice, such as by a doctor."},
+    {w:"in person",ipa:"/ɪn ˈpɜːrsn/",cn:"親自、面對面",def:"Physically present, not by phone or video."},
+    {w:"serious",ipa:"/ˈsɪriəs/",cn:"嚴重的",def:"Important or dangerous, not small."}
+  ],
+  script:[
+    {sp:"Sara",en:"I waited almost two hours at the clinic yesterday.",cn:"我昨天在診所等了快兩個小時。"},
+    {sp:"Ben",en:"I heard clinics have been really crowded this summer.",cn:"我聽說今年夏天診所真的很擁擠。"},
+    {sp:"Sara",en:"Exactly. The nurse said the waiting room has been full since early morning.",cn:"沒錯。護理師說候診室從一大早就滿了。"},
+    {sp:"Ben",en:"Have you tried telemedicine? A friend of mine was consulted by video call last week.",cn:"你試過遠距醫療嗎？我一個朋友上禮拜就是透過視訊看診的。"},
+    {sp:"Sara",en:"Not yet. Is it as good as an in-person visit?",cn:"還沒試過。它跟親自去看診一樣好嗎？"},
+    {sp:"Ben",en:"For small problems, yes. You still get seen by a real doctor.",cn:"小問題的話是可以的。你還是會由真正的醫生看診。"},
+    {sp:"Sara",en:"That's good to know. I might try it next time instead of waiting two hours.",cn:"這個資訊很有用。下次我可能會試試看，不要再等兩個小時了。"},
+    {sp:"Ben",en:"Just remember, if the problem seems serious, you should still go in person.",cn:"但要記得，如果問題看起來很嚴重，還是應該親自去一趟。"},
+    {sp:"Sara",en:"Good point. I'll keep that in mind.",cn:"有道理，我會記住的。"}
+  ],
+  questions:[
+    {q:"How long did Sara wait at the clinic?",qCn:"Sara在診所等了多久？",opts:["A. About 20 minutes","B. Almost two hours","C. All day","D. She didn't wait at all"],optsCn:["A. 大約20分鐘","B. 快兩個小時","C. 一整天","D. 完全沒等"],ans:1,expl:"I waited almost two hours at the clinic yesterday."},
+    {q:"A friend of Ben's ____ by video call last week.",qCn:"Ben的一個朋友上禮拜是透過視訊看診的。",opts:["consulted","was consulted","consults","is consulting"],ans:1,expl:"「被看診」是被動語態：was consulted（be動詞過去式+過去分詞）。"},
+    {q:"According to Ben, when should someone still go to the clinic in person?",qCn:"根據Ben的說法，什麼時候還是應該親自去診所？",opts:["A. Only on weekends","B. If the problem seems serious","C. Never, telemedicine is always better","D. Only if it's raining"],optsCn:["A. 只有週末","B. 如果問題看起來很嚴重","C. 從來不用，遠距醫療永遠比較好","D. 只有下雨天"],ans:1,expl:"if the problem seems serious, you should still go in person."},
+    {q:"Why has the waiting room been so full recently, based on the conversation?",qCn:"根據對話，候診室最近為什麼一直很滿？",opts:["A. The clinic reduced its opening hours","B. Clinics have been crowded this summer","C. There is only one doctor working","D. The clinic is closing soon"],optsCn:["A. 診所縮短了看診時間","B. 今年夏天診所一直很擁擠","C. 只有一位醫生在看診","D. 診所快要關閉了"],ans:1,expl:"clinics have been really crowded this summer... the waiting room has been full since early morning."},
+    {q:"What does Sara plan to do next time?",qCn:"Sara下次打算怎麼做？",opts:["A. Wait two hours again","B. Try telemedicine instead of waiting","C. Go to a different clinic","D. Stop seeing doctors"],optsCn:["A. 再等兩小時","B. 試試遠距醫療，不要再等","C. 換一間診所","D. 不再看醫生"],ans:1,expl:"I might try it next time instead of waiting two hours."}
+  ]
+},
+
+{
+  id:"dl20260819b2",
+  date:"2026-08-19",
+  level:"B2",
+  minutes:4,
+  kind:"note",
+  title:"Extending the Vaccination Window",
+  titleCn:"延長疫苗接種期",
+  series:"本站自製聽力 · 健康與醫療主題",
+  topic:"🎙️ 健康時事訪談",
+  focus:"正式訪談語域：tend to / can 緩和語氣，被動語態與現在完成式在新聞討論中的用法",
+  intro:"一段模擬的健康時事訪談：主持人訪問Lin醫生，討論台灣延長免費疫苗接種計畫的決定。留意訪談裡比較正式、留有餘地的說法，例如 tend to be more vulnerable，而不是直接斷言。",
+  tip:"第一次聽抓住「為什麼延長」和「誰風險比較高」；第二次再注意Lin醫生怎麼用 tend to、can 這類詞讓陳述聽起來更嚴謹、不武斷。",
+  pre:[
+    {w:"variant",ipa:"/ˈveəriənt/",cn:"（病毒）變異株",def:"A slightly different form of a virus."},
+    {w:"outpatient",ipa:"/ˈaʊtpeɪʃnt/",cn:"門診病患",def:"A patient who visits a hospital or clinic but does not stay overnight."},
+    {w:"vulnerable",ipa:"/ˈvʌlnərəbl/",cn:"容易受傷害的",def:"More likely to be harmed or affected by something."},
+    {w:"chronic",ipa:"/ˈkrɒnɪk/",cn:"慢性的",def:"Lasting a long time, often used for illnesses."},
+    {w:"extension",ipa:"/ɪkˈstenʃn/",cn:"延長",def:"A longer period of time given for something."},
+    {w:"available",ipa:"/əˈveɪləbl/",cn:"可取得的",def:"Able to be used or obtained."}
+  ],
+  script:[
+    {sp:"Host",en:"Taiwan's CDC recently extended the free COVID-19 vaccination program through the end of September. Dr. Lin, why was this decision made?",cn:"台灣疾管署最近把免費COVID-19疫苗接種計畫延長到九月底。Lin醫生，為什麼會做這個決定？"},
+    {sp:"Dr. Lin",en:"Case numbers climbed sharply in late July, and a new variant, nicknamed Nimbus, has been spreading quickly.",cn:"七月下旬病例數急遽上升，一款暱稱Nimbus的新變異株也一直快速傳播。"},
+    {sp:"Host",en:"How serious is this wave, compared to previous ones?",cn:"跟之前幾波相比，這一波有多嚴重？"},
+    {sp:"Dr. Lin",en:"Outpatient visits more than doubled in a single week, so it's a significant jump.",cn:"門診就診人次一週內就翻了一倍以上，所以這是相當顯著的上升。"},
+    {sp:"Host",en:"Who is most at risk this season?",cn:"這一季誰的風險最高？"},
+    {sp:"Dr. Lin",en:"Older adults and people with chronic illness tend to be more vulnerable, especially if they haven't been vaccinated.",cn:"年長者和慢性病患者往往比較容易受影響，尤其是還沒接種疫苗的人。"},
+    {sp:"Host",en:"What would you say to someone who hasn't gotten this year's shot yet?",cn:"對還沒打今年疫苗的人，你會怎麼說？"},
+    {sp:"Dr. Lin",en:"I'd say the extension gives you extra time, but don't wait until the peak arrives in mid-August.",cn:"我會說，這次延長給了大家多一點時間，但不要等到八月中的高峰才行動。"},
+    {sp:"Host",en:"Any final advice?",cn:"還有什麼最後的建議嗎？"},
+    {sp:"Dr. Lin",en:"Free vaccines are available at most clinics and community health stations. A short visit now can prevent a much longer illness later.",cn:"大部分診所與社區健康站都還有免費疫苗。現在去一趟，可能就能避免之後一場更長的病。"}
+  ],
+  questions:[
+    {q:"Why did Taiwan's CDC extend the vaccination program?",qCn:"台灣疾管署為什麼延長疫苗接種計畫？",opts:["A. Because vaccine supplies ran out","B. Because cases climbed sharply due to a new variant","C. Because the previous program had errors","D. Because fewer clinics were open"],optsCn:["A. 因為疫苗供應用完了","B. 因為新變異株導致病例急遽上升","C. 因為之前的計畫有錯誤","D. 因為開放的診所變少了"],ans:1,expl:"Case numbers climbed sharply in late July, and a new variant, nicknamed Nimbus, has been spreading quickly."},
+    {q:"According to Dr. Lin, who tends to be more vulnerable this season?",qCn:"根據Lin醫生，這一季誰往往比較容易受影響？",opts:["A. Young children only","B. Older adults and people with chronic illness","C. People who travel often","D. Office workers"],optsCn:["A. 只有幼童","B. 年長者和慢性病患者","C. 常常旅行的人","D. 上班族"],ans:1,expl:"Older adults and people with chronic illness tend to be more vulnerable."},
+    {q:"In this conversation, what does \"tend to\" suggest?",qCn:"在這段對話中，「tend to」這個說法暗示什麼？",opts:["A. A rule with no exceptions","B. A general pattern, not an absolute rule","C. Something that happened only once","D. A personal opinion with no evidence"],optsCn:["A. 一個沒有例外的規則","B. 一種普遍傾向，不是絕對規則","C. 只發生過一次的事","D. 沒有根據的個人意見"],ans:1,expl:"tend to 是正式語域緩和武斷語氣的說法，表示「通常、往往」而非「every single time」。"},
+    {q:"How much did outpatient visits increase in a single week?",qCn:"門診就診人次一週內增加了多少？",opts:["A. They stayed about the same","B. They more than doubled","C. They decreased slightly","D. They increased by ten percent"],optsCn:["A. 大致沒變","B. 翻了一倍以上","C. 略微下降","D. 增加了百分之十"],ans:1,expl:"Outpatient visits more than doubled in a single week."},
+    {q:"What is Dr. Lin's final advice?",qCn:"Lin醫生最後的建議是什麼？",opts:["A. Wait until the peak to get vaccinated","B. Get vaccinated soon since free vaccines are available","C. Avoid clinics until October","D. Only vaccinate children"],optsCn:["A. 等到高峰再接種","B. 儘快接種，因為免費疫苗還可以取得","C. 十月前避免去診所","D. 只讓兒童接種"],ans:1,expl:"Free vaccines are available at most clinics... A short visit now can prevent a much longer illness later."}
+  ]
+},
+
+{
   id:"au01",
   date:"2026-08-14",
   level:"B1",

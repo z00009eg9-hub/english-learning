@@ -426,5 +426,48 @@ V.dg20260814=card(
   en:'I&#39;m flying to Taipei on Thursday.', cn:'已敲定的安排（will 聽起來像剛決定）'},
  '進階兩用法：①暫時狀態（this month / these days）——現在這陣子如此，平常未必；②已敲定的未來安排——票訂了、時間喬好了就用進行式。另外配 always 還能抱怨：He is always losing his keys!（他老是掉鑰匙）');
 
+/* ---------- A2：現在簡單式（基礎）—— 第三人稱單數加 s ---------- */
+V.dg20260819a2=card(
+ {pw:190,title:'I / you / we / they',
+  draw:em(160,150,54,'🧑')
+   +bub(160,214,'visit 原形不變',150),
+  en:'I visit my grandmother.', cn:'主詞是 I/you/we/they，動詞用原形'},
+ {pw:190,title:'he / she / it',
+  draw:em(160,150,54,'👵')
+   +'<text x="160" y="196" text-anchor="middle" font-size="26" font-weight="900" fill="#d9534f">visit+s</text>'
+   +'<text x="160" y="222" text-anchor="middle" font-size="13" font-weight="700" fill="#7c8b96">別忘了加 s！</text>',
+  en:'She visits her grandmother.', cn:'主詞是 he/she/it，動詞一定要加 s'},
+ '現在簡單式的重點在第三人稱單數：he/she/it 當主詞時，動詞要加 s（watch→watches、study→studies），這是最容易忘記的地方。');
+
+/* ---------- B1：現在簡單式 vs 現在進行式（同 nowVsAlways） ---------- */
+V.dg20260819b1=V.nowVsAlways;
+
+/* ---------- B1+：普遍事實／定律 vs 已排定的未來時刻表 ---------- */
+V.dg20260819b1p=card(
+ {pw:190,title:'普遍事實／定律',
+  draw:em(160,156,56,'🌡️')
+   +'<text x="160" y="210" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">不管什麼時候，一直都對</text>',
+  en:'A fever means infection.', cn:'不受時間影響的事實、道理'},
+ {pw:200,title:'已排定的未來時刻表',
+  draw:em(160,150,54,'🗓️')
+   +'<text x="160" y="200" text-anchor="middle" font-size="15" font-weight="900" fill="#2b5f92">9:00 → 18:00</text>'
+   +'<text x="160" y="224" text-anchor="middle" font-size="13" font-weight="700" fill="#7c8b96">別人排好，不會臨時改</text>',
+  en:'The clinic opens at nine tomorrow.', cn:'時刻表式的未來，不是臨時決定'},
+ '現在簡單式除了習慣，還能講「永遠成立的事實」和「已經排定、不會臨時變動的未來時刻表」——這兩種都跟 will（臨時決定）不一樣。');
+
+/* ---------- B2：現在簡單式的語域與修辭效果 ---------- */
+V.dg20260819b2=card(
+ {pw:210,title:'歷史現在式：口語敘事',
+  draw:bub(160,130,'So I walk in… 🚶',190)
+   +em(160,190,50,'😲')
+   +'<text x="160" y="238" text-anchor="middle" font-size="13" font-weight="800" fill="#c9631f">講過去的事，卻用現在式，更生動</text>',
+  en:'So I walk in, and the room is full.', cn:'明明是過去發生的事，用現在式說故事更有臨場感'},
+ {pw:210,title:'正式寫作：緩和語氣',
+  draw:'<text x="160" y="130" text-anchor="middle" font-size="14" font-weight="900" fill="#c0392b">❌ prevent（太武斷）</text>'
+   +'<text x="160" y="170" text-anchor="middle" font-size="14" font-weight="900" fill="#1f8a4c">✓ tend to reduce（留餘地）</text>'
+   +'<text x="160" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#7c8b96">學術與正式寫作偏好後者</text>',
+  en:'Vaccines tend to reduce severe illness.', cn:'tend to / can 讓陳述留有例外空間，比直接斷言更嚴謹'},
+ '同樣是現在簡單式：口語敘事可以用「歷史現在式」拉近距離、增加戲劇效果；正式與學術寫作則常用 tend to / can 緩和過度武斷的語氣。');
+
 return V;
 })();

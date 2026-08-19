@@ -1,7 +1,7 @@
 {
-  "_note": "內容排程狀態檔（每週三、五各跑一次）。每次執行讓兩位學習者各拿到一整份：兩篇文章（Tom 的 A2 版 + Anita 的 B1+/B2 版）、兩個文法單元（Tom 的 A2/B1 + Anita 的 B1+/B2）、兩課全新的真實 VOA 聽力（Tom 補 Level 1／Anita 補 Level 2）。usedUnits = Anita 已產生過的文法單元編號；usedUnitsTom = Tom 已產生過的文法單元編號（各自從 syllabus.json 依序走、互不影響）；usedSources = 已改寫過的新聞網址；usedVoa = 已加入聽力庫的 VOA 課次代號（L1-x=Level 1 第 x 課、L2-x=Level 2 第 x 課）；lastRun = 最後一次成功產生的日期。",
-  "lastRun": "2026-08-14",
-  "nextKind": "news",
+  "_note": "內容排程狀態檔（每週三、五各跑一次）。每次執行讓兩位學習者各拿到一整份：四個程度（A2/B1/B1+/B2）的文章、文法、聽力。usedUnits = Anita 那條線（B1+/B2）已教過的文法單元編號；usedUnitsTom = Tom 那條線（A2/B1）已教過的文法單元編號（各自從 syllabus.json 依序走、互不影響）；usedSources = 已改寫過的新聞網址；usedVoa = 已加入聽力庫的 VOA／YouTube 素材代號（2026-08-19 起聽力改為本站原創 TTS 對話，未使用外部影片，故此欄位本次未異動）；lastRun = 最後一次成功產生的日期。",
+  "lastRun": "2026-08-19",
+  "nextKind": "original",
   "usedVoa": [
     "L1-1",
     "L1-7",
@@ -12,27 +12,34 @@
   ],
   "usedUnits": [
     9,
-    1
+    1,
+    2
   ],
   "usedUnitsTom": [
-    1
+    1,
+    2
   ],
   "usedSources": [
-    "https://www.taipeitimes.com/News/front/archives/2026/08/08/2003862135"
+    "https://www.taipeitimes.com/News/front/archives/2026/08/08/2003862135",
+    "https://focustaiwan.tw/society/202607250008"
   ],
   "usedTitles": [
     "A Sea Warning, but No Landfall",
     "My Saturday at the Night Market",
-    "Grounded by the Flood"
+    "Grounded by the Flood",
+    "A Visit to Grandma",
+    "A Call Across the Distance",
+    "Why Clinics Get So Crowded in Summer",
+    "Taiwan Extends Free COVID-19 Vaccination Program"
   ],
   "topicRotation": [
-    "健康與醫療",
     "旅遊與交通",
     "職場與面試",
     "金錢與居住",
     "食物與生活",
     "學習與心理",
-    "天災與天氣"
+    "天災與天氣",
+    "健康與醫療"
   ],
   "dualLevel": {
     "tom": "A2",
@@ -50,15 +57,5 @@
     "週末活動",
     "家人與朋友"
   ],
-  "usedA2Topics": [
-    "日常作息",
-    "購物",
-    "天氣與衣服",
-    "健康",
-    "交通",
-    "居家",
-    "飲食",
-    "職場",
-    "週末活動"
-  ]
+  "usedA2Topics": []
 }
