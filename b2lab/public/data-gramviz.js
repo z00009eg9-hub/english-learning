@@ -23,15 +23,15 @@ function side(ox,p){
    +'<rect x="'+(160-p.pw/2)+'" y="20" width="'+p.pw+'" height="36" rx="18" fill="#2b5f92"/>'
    +'<text x="160" y="44" text-anchor="middle" font-size="17.5" font-weight="800" fill="#fff">'+p.title+'</text>'
    +p.draw
-   +'<text x="160" y="302" text-anchor="middle" font-size="16.5" font-weight="800" fill="#1c3d5a">'+p.en+'</text>'
-   +'<text x="160" y="328" text-anchor="middle" font-size="13.5" font-weight="700" fill="#4a5b68">'+p.cn+'</text>';
-  if(p.cn2) s+='<text x="160" y="348" text-anchor="middle" font-size="13.5" font-weight="700" fill="#4a5b68">'+p.cn2+'</text>';
+   +'<text x="160" y="278" text-anchor="middle" font-size="16.5" font-weight="800" fill="#1c3d5a">'+p.en+'</text>'
+   +'<text x="160" y="302" text-anchor="middle" font-size="13.5" font-weight="700" fill="#4a5b68">'+p.cn+'</text>';
+  if(p.cn2) s+='<text x="160" y="322" text-anchor="middle" font-size="13.5" font-weight="700" fill="#4a5b68">'+p.cn2+'</text>';
   return s+'</g>';
 }
 function card(p1,p2,cap){
-  return {cap:cap, svg:'<svg viewBox="0 0 640 372" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif">'
-   +'<rect x="2" y="2" width="636" height="368" rx="18" fill="#eef6fc" stroke="#bcd8ec" stroke-width="2"/>'
-   +'<line x1="320" y1="24" x2="320" y2="350" stroke="#bcd8ec" stroke-width="2" stroke-dasharray="6 6"/>'
+  return {cap:cap, svg:'<svg viewBox="0 0 640 338" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif">'
+   +'<rect x="2" y="2" width="636" height="334" rx="18" fill="#eef6fc" stroke="#bcd8ec" stroke-width="2"/>'
+   +'<line x1="320" y1="24" x2="320" y2="320" stroke="#bcd8ec" stroke-width="2" stroke-dasharray="6 6"/>'
    +side(0,p1)+side(320,p2)+'</svg>'};
 }
 

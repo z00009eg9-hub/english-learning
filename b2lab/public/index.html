@@ -299,7 +299,8 @@ tr:nth-child(even) td{background:#fdfbf8}
 .q .qcn{font-size:calc(13.5px * var(--fs));color:var(--ink2);font-weight:400;margin-top:3px}
 .opt .ocn{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:2px}
 .trap{background:#fff6f5;border:1px solid #f3d5d2;border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:calc(16px * var(--fs))}
-.trap .bad{color:var(--bad)} .trap .good{color:var(--ok);font-weight:600}
+.trap .bad{color:var(--bad);text-decoration:line-through;text-decoration-color:rgba(217,83,79,.45);opacity:.7}
+.trap .good{color:var(--ok);font-weight:700;background:linear-gradient(to bottom,transparent 60%,rgba(47,158,95,.13) 60%);display:inline}
 .trap .why{font-size:calc(14.5px * var(--fs));color:var(--ink2);margin-top:4px}
 /* 錯誤示範一律紅色、正確示範一律綠色（文法解說、例句註解、常見錯誤都適用） */
 .wrong{color:var(--bad);font-weight:600}
@@ -468,6 +469,13 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 }
 .back:active{box-shadow:0 0 0 rgba(0,0,0,0);background:#f5f5f5}
 .hint{font-size:calc(12.5px * var(--fs));color:var(--ink2);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
+.hint-toggle{border:1px dashed var(--line);border-radius:10px;margin-bottom:12px;background:#fff;overflow:hidden}
+.hint-toggle .hint{border:none;border-radius:0 0 10px 10px;margin:0}
+.hint-sum{font-size:calc(13px * var(--fs));font-weight:700;color:var(--ink2);padding:8px 11px;cursor:pointer;list-style:none;user-select:none}
+.hint-sum::-webkit-details-marker{display:none}
+.hint-sum::after{content:'▸';float:right;transition:transform .2s}
+.hint-toggle[open]>.hint-sum::after{transform:rotate(90deg)}
+.hint-toggle[open]>.hint-sum{border-bottom:1px dashed var(--line)}
 /* 按下去的功能鈕要看得出「目前是開著的」：整段朗讀、中譯開關都適用 */
 .btn.ghost.on{background:var(--accent);color:#fff;border-color:var(--accent)}
 .btn.gray.on{background:var(--ink2);color:#fff}
@@ -1700,9 +1708,8 @@ function gClose(){ CURG=null; RENDER.gram(); }
 window.gOpen=gOpen; window.gClose=gClose;
 
 function gramHTML(g){
-  let h='<button class="back" onclick="gClose()"></button>'
-   +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
-   +'<h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
+  let h='<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
+   +'<div class="row" style="align-items:center;gap:10px;flex:1"><button class="back" onclick="gClose()" style="margin:0;flex-shrink:0"></button><h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+((g.srcDays||[]).length?' · 課堂 '+g.srcDays.join(' / '):'')+'</div>'
    +'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:calc(13.5px * var(--fs))">💡 '+esc(g.summary)+'</div></div></div>'
    + gvizHTML(g.id);
@@ -1754,7 +1761,7 @@ RENDER.daily=function(){
   let h=installCard()
    +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
    +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+' · '+(GOALS[PROFILE]||'')+'</div>'
-   +'<div class="hint"><b>每週三、五</b>更新，每次都會依你的程度給<b>三份文章</b>、<b>三個文法單元</b>與<b>三課聽力</b>（由淺到深，可以先讀最簡單的再往上挑戰）。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力是<b>依你的課堂筆記單字自製的對話</b>，用語音朗讀跟讀練習。</div>'
+   +'<details class="hint-toggle"><summary class="hint-sum">📌 使用說明</summary><div class="hint"><b>每週三、五</b>更新，每次都會依你的程度給<b>三份文章</b>、<b>三個文法單元</b>與<b>三課聽力</b>（由淺到深，可以先讀最簡單的再往上挑戰）。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力是<b>依你的課堂筆記單字自製的對話</b>，用語音朗讀跟讀練習。</div></details>'
    +'<div class="stats"><div class="stat"><b>'+pool.length+'</b><span>累積每日文章</span></div>'
    +'<div class="stat"><b>'+DAILY_GRAM.length+'</b><span>累積每日文法</span></div>'
    +'<div class="stat"><b>'+(ST.streak||1)+'</b><span>連續學習天數</span></div>'
@@ -2775,10 +2782,10 @@ function lessonHTML(l){
   const allLines=au||body||[];
   const speakers=[...new Set(allLines.map(k=>k.sp).filter(Boolean))];
   const spCls=s=>{ const idx=speakers.indexOf(s); return idx===0?'sp-a':idx>=1?'sp-b':''; };
-  let h='<button class="back" onclick="lsClose()"></button>'
+  let h=''
    /* 有逐字稿時，影片（或語音控制列）黏在最上面，往下捲字幕仍在手邊 */
-   +(au?'<div class="aupin">'+audioControls()+'</div>'
-       :hasScript?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':'')
+   +(au?'<div class="aupin"><div class="row" style="align-items:center"><button class="back" onclick="lsClose()" style="margin:0 6px 0 0;flex-shrink:0"></button><div style="flex:1">'+audioControls()+'</div></div></div>'
+       :'<button class="back" onclick="lsClose()"></button>'+(hasScript?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':''))
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<h2 class="sec" style="margin:0">'+(au?'🎧 ':'🎬 ')+esc(l.title)+'</h2><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
    +'<div class="muted">'+esc(l.titleCn)+' · ⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</div>'
