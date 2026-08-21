@@ -5,6 +5,299 @@
 window.BOOK = {
   lessons: [
     {
+      id: 'bk20260821',
+      icon: '💻',
+      iconSvg: '<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><circle cx="48" cy="48" r="45" fill="#fff" stroke="#f0c9a0" stroke-width="3"/><rect x="28" y="28" width="40" height="28" rx="3" fill="#fff" stroke="#2b2118" stroke-width="3.5"/><rect x="33" y="33" width="30" height="18" fill="#e8913a"/><path d="M21 62 h54 l-5 9 H26 z" fill="#c9631f" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="64" width="12" height="3.5" rx="1.5" fill="#fff"/></svg>',
+      date: '2026-08-21',
+      doc: 'https://docs.google.com/document/d/1S_BR8OXSSKX88iSxZ-qB3mz5OghQHgiM7fw7ftNAiJk/edit',
+      title: 'Laptops, Files & Office English',
+      titleCn: '電腦檔案與辦公室英文',
+      topics: 'lend, borrow, battery, HDMI, subfolder, corrupted, under construction, invoice',
+      hwTitle: 'I. ★ 08/21 作業複習 Homework Review',
+      hw: [
+        {
+          n: 1,
+          wrong: 'If someone is bullying you, you should report manager this problem.',
+          fix: 'If someone is bullying you, you should report the problem to your manager.',
+          cn: '如果有人霸凌你，你應該向你的主管回報這個問題。',
+          pat: 'Subject + should report + the problem + to + someone',
+          note: 'report 要先接「事情」，再用 to 接「人」：report the problem to your manager；它不像 tell / give 可以說 report manager this problem。If 子句用現在進行式 is bullying，表示霸凌正在發生。'
+        },
+        {
+          n: 2,
+          ok: 'Tom was curious about my life in Vietnam.',
+          cn: 'Tom 對我在越南的生活感到好奇。',
+          pat: 'Subject + was + curious about + noun',
+          note: 'curious 固定搭配介系詞 about；動詞用過去式 was，呼應過去發生的對話情境。'
+        },
+        {
+          n: 3,
+          wrong: 'She misunderstood him, so she need to gave him an apology.',
+          fix: 'She misunderstood him, so she needs to apologize to him.',
+          cn: '她誤會了他，所以她需要向他道歉。',
+          pat: 'Subject + needs to + V + to + someone',
+          note: '主詞 she 是第三人稱單數，動詞要加 s → needs；need to 後面只能接原形動詞，不能接過去式 gave；「向某人道歉」最自然的說法是動詞 apologize to someone，比 give him an apology 更道地。'
+        },
+        {
+          n: 4,
+          wrong: 'My phone is a big distration, so I need to take away it.',
+          fix: 'My phone is a big distraction, so I need to put it away.',
+          cn: '我的手機很讓我分心，所以我需要把它收起來。',
+          pat: 'Subject + need to + put + it + away',
+          note: 'distraction（使人分心的事物）；「把東西收起來」用片語動詞 put away；受詞是代名詞（it）時必須放在中間：put it away，不能說 put away it，也不用 take away it。'
+        },
+        {
+          n: 5,
+          wrong: "It's ridiculous to change the spec at last time.",
+          fix: "It's ridiculous to change the specifications at the last minute.",
+          cn: '在最後一刻才改規格實在很荒謬。',
+          pat: "It's + 形容詞 + to V + at the last minute",
+          note: 'spec 是 specifications（規格）的口語縮寫，完整句子用全稱，發音 /ˌspesɪfɪˈkeɪʃnz/（課堂提示：spe-ci-fi-CA-tions，重音在 ca）；「在最後一刻」是固定片語 at the last minute，不說 at last time。'
+        },
+        {
+          n: 6,
+          wrong: "The new equipment doesn't have any instructions that confused me.",
+          fix: "The new equipment doesn't have any instructions, which confused me.",
+          cn: '新設備沒有任何使用說明，這讓我很困惑。',
+          pat: '主句, which + 動詞（非限定關係子句）',
+          note: '原句的 that confused me 會變成修飾 instructions，意思成了「沒有任何『讓我困惑的』說明書」；要說「這件事讓我困惑」，用逗號 + which 引導的非限定關係子句，which 代指前面整件事。另外 equipment 是不可數名詞，不加 s。'
+        }
+      ],
+      vocabTitle: 'II. 單字 Vocabulary',
+      vocab: [
+        { w: 'bully', ipa: '/ˈbʊli/', pos: 'v.', cn: '霸凌',
+          ex: 'If someone is bullying you, you should report the problem to your manager.', exCn: '如果有人霸凌你，你應該向主管回報這個問題。' },
+        { w: 'curious', ipa: '/ˈkjʊriəs/', pos: 'adj.', cn: '好奇的',
+          ex: 'Tom was curious about my life in Vietnam.', exCn: 'Tom 對我在越南的生活感到好奇。' },
+        { w: 'apologize', ipa: '/əˈpɑːlədʒaɪz/', pos: 'v.', cn: '道歉',
+          ex: 'She needs to apologize to him.', exCn: '她需要向他道歉。' },
+        { w: 'distraction', star: true, ipa: '/dɪˈstrækʃn/', pos: 'n.', cn: '使人分心的事物',
+          ex: 'My phone is a big distraction, so I need to put it away.', exCn: '我的手機很讓我分心，所以我需要把它收起來。' },
+        { w: 'ridiculous', ipa: '/rɪˈdɪkjələs/', pos: 'adj.', cn: '荒謬的',
+          ex: "It's ridiculous to change the specifications at the last minute.", exCn: '在最後一刻才改規格實在很荒謬。' },
+        { w: 'specifications', star: true, ipa: '/ˌspesɪfɪˈkeɪʃnz/', pos: 'n.', cn: '規格（口語縮寫 spec）',
+          ex: "It's ridiculous to change the specifications at the last minute.", exCn: '在最後一刻才改規格實在很荒謬。' },
+        { w: 'lend', ipa: '/lend/', pos: 'v.', cn: '借出（lend–lent–lent）',
+          ex: "My client's laptop was out of battery, so I lent him mine.", exCn: '我客戶的筆電沒電了，所以我把我的借給他。' },
+        { w: 'borrow', ipa: '/ˈbɑːroʊ/', pos: 'v.', cn: '借入',
+          ex: 'Borrow means take; lend means give.', exCn: 'borrow 是「拿進來」（借入）；lend 是「給出去」（借出）。' },
+        { w: 'charge', ipa: '/tʃɑːrdʒ/', pos: 'v.', cn: '充電；電量',
+          ex: 'I need to charge my laptop.', exCn: '我需要幫筆電充電。' },
+        { w: 'subfolder', ipa: '/ˈsʌbfoʊldər/', pos: 'n.', cn: '子資料夾',
+          ex: 'I created five subfolders in the ABC folder.', exCn: '我在 ABC 資料夾裡建立了五個子資料夾。' },
+        { w: 'corrupted', star: true, ipa: '/kəˈrʌptɪd/', pos: 'adj.', cn: '（檔案）損毀的',
+          ex: 'As you can see, my file is corrupted.', exCn: '如你所見，我的檔案損毀了。' },
+        { w: 'identical', star: true, ipa: '/aɪˈdentɪkl/', pos: 'adj.', cn: '完全相同的',
+          ex: "The files are identical, so we don't need to open them again.", exCn: '這些檔案完全相同，所以我們不需要再開啟它們。' },
+        { w: 'compress', star: true, ipa: '/kəmˈpres/', pos: 'v.', cn: '壓縮',
+          ex: 'compress the file', exCn: '壓縮檔案' },
+        { w: 'temporarily', ipa: '/ˌtempəˈrerəli/', pos: 'adv.', cn: '暫時地',
+          ex: "We'll just stay in this room temporarily until the construction is done.", exCn: '在施工完成之前，我們暫時先待在這個房間。' },
+        { w: 'construction', ipa: '/kənˈstrʌkʃn/', pos: 'n.', cn: '施工；建造',
+          ex: 'The test room is still under construction.', exCn: '測試室還在施工中。' },
+        { w: 'purchase', star: true, ipa: '/ˈpɜːrtʃəs/', pos: 'v.', cn: '購買（buy 的正式說法）',
+          ex: "I'll purchase the necessary equipment for the test room soon.", exCn: '我很快就會購買測試室所需的設備。' },
+        { w: 'invoice', star: true, ipa: '/ˈɪnvɔɪs/', pos: 'n.', cn: '發票；請款單',
+          ex: "The invoices are under my boss's review.", exCn: '發票正在我老闆審核中。' },
+        { w: 'equipment', ipa: '/ɪˈkwɪpmənt/', pos: 'n.', cn: '設備（不可數）',
+          ex: 'I will complete the equipment setup.', exCn: '我會完成設備的安裝。' }
+      ],
+      vocab2Title: '補充單字（取自講義摘要 Summary）',
+      vocab2: [
+        { w: 'adapter', ipa: '/əˈdæptər/', pos: 'n.', cn: '轉接器（extra cable）',
+          ex: 'He needed an extra cable to connect to the HDMI port.', exCn: '他需要一條額外的轉接線才能接上 HDMI 埠。' },
+        { w: 'sort out', star: true, ipa: '/sɔːrt aʊt/', pos: 'phr. v.', cn: '解決（問題）',
+          ex: 'After sorting out the issues, he successfully connected his device to the TV.', exCn: '解決問題之後，他成功把裝置連上電視。' },
+        { w: 'device', ipa: '/dɪˈvaɪs/', pos: 'n.', cn: '裝置',
+          ex: 'I can lend you my device.', exCn: '我可以把我的裝置借給你。' }
+      ],
+      phrasesTitle: 'III. 片語與搭配詞 Phrases & Collocations',
+      phrases: [
+        { p: 'report something to someone', cn: '向某人回報某事',
+          ex: 'You should report the problem to your manager.', exCn: '你應該向主管回報這個問題。' },
+        { p: 'apologize to someone', cn: '向某人道歉',
+          ex: 'She needs to apologize to him.', exCn: '她需要向他道歉。' },
+        { p: 'put away', cn: '收起來',
+          ex: 'My phone is a big distraction, so I need to put it away.', exCn: '我的手機很讓我分心，所以我需要把它收起來。' },
+        { p: 'at the last minute', cn: '在最後一刻',
+          ex: 'We finished the project at the last minute.', exCn: '我們在最後一刻才完成專案。' },
+        { p: '(be) out of battery', cn: '沒電',
+          ex: "My client's laptop was out of battery.", exCn: '我客戶的筆電沒電了。' },
+        { p: 'run out of battery', cn: '電快用完',
+          ex: 'My laptop is running out of battery.', exCn: '我的筆電快沒電了。' },
+        { p: 'connect ... to ...', cn: '把……連接到……',
+          ex: 'He wanted to connect his laptop to the TV using an HDMI cable.', exCn: '他想用 HDMI 線把筆電接到電視上。' },
+        { p: 'sort out', cn: '解決（問題）',
+          ex: 'After sorting out the issues, he successfully connected his device to the TV.', exCn: '解決問題之後，他成功把裝置連上電視。' },
+        { p: 'click on ...', cn: '點擊……',
+          ex: 'Please click on ...', exCn: '請點擊……（帶操作時的指令句）' },
+        { p: 'go back to / return to', cn: '回到',
+          ex: 'Please go back to the previous folder. Please return to the last folder.', exCn: '請回到上一個資料夾。' },
+        { p: 'under construction', cn: '施工中',
+          ex: 'The test room is still under construction.', exCn: '測試室還在施工中。' },
+        { p: 'under review', cn: '審核中',
+          ex: "The invoices are under my boss's review.", exCn: '發票正在我老闆審核中。' },
+        { p: "That's all (for ...)", cn: '（簡報）到此結束',
+          ex: "That's all for my presentation.", exCn: '我的簡報到這裡。' }
+      ],
+      grammarTitle: 'IV. 句型與文法解說 Sentence Patterns & Grammar',
+      grammar: [
+        {
+          k: 'A', title: 'report + 事情 + to + 人',
+          pat: 'report + something + to + someone',
+          pts: [
+            'report 先接「事情」，再用 to 接「人」：You should report the problem to your manager.',
+            '⚠️ ❌ report manager this problem（report 不像 tell / give 有雙受詞用法）。'
+          ]
+        },
+        {
+          k: 'B', title: '片語動詞 + 代名詞：put it away',
+          pat: 'put + it / them + away',
+          pts: [
+            '受詞是代名詞時要放中間：My phone is a big distraction, so I need to put it away.',
+            '⚠️ ❌ put away it / take away it。'
+          ]
+        },
+        {
+          k: 'C', title: 'lend vs. borrow（借出與借入）',
+          pat: 'lend + 人 + 物（lend – lent – lent）',
+          pts: [
+            'Lend means give 📤（借出）；Borrow means take 📥（借入）。',
+            "✅ My client's laptop was out of battery, so I lent him mine.（mine ＝ my laptop，所有格代名詞）"
+          ]
+        },
+        {
+          k: 'D', title: 'connect A to B ＋ using ＋ to V',
+          pat: 'connect + A + to + B + using + 工具 + to + V',
+          pts: [
+            '✅ He wanted to connect his laptop to the TV using an HDMI cable to show his PowerPoint presentation.',
+            'using an HDMI cable 是分詞片語表「方式」；to show... 是不定詞表「目的」。'
+          ]
+        },
+        {
+          k: 'E', title: 'under + 名詞／Before + V-ing',
+          pat: 'under + 名詞（construction／review）；Before + V-ing, 主句',
+          pts: [
+            "under + 名詞 表「正在……中」：The test room is still under construction. / The invoices are under my boss's review.",
+            '✅ Before purchasing the equipment, we need to submit the invoice to our boss, and I did.（句尾 did 代替前面整個動作，避免重複）'
+          ]
+        },
+        {
+          k: 'F', title: '非限定關係子句 , which',
+          pat: '主句, which + 動詞（which 指前面整件事）',
+          pts: [
+            "✅ The new equipment doesn't have any instructions, which confused me.",
+            '⚠️ ❌ ...instructions that confused me（變成修飾 instructions，意思不同）。'
+          ]
+        },
+        {
+          k: 'G', title: "It's + 形容詞 + to V",
+          pat: "It's + 形容詞 + to + V",
+          pts: [
+            "✅ It's ridiculous to change the specifications at the last minute.",
+            'at the last minute ＝ 在最後一刻（固定片語，不說 at last time）。'
+          ]
+        }
+      ],
+      extraTitle: 'V. 情境例句 Situational Sentences',
+      extra: [
+        {
+          title: 'A. 筆電電量與簡報 Laptop Battery & Presentation',
+          exs: [
+            { en: 'I need to charge my laptop.', cn: '我需要幫筆電充電。' },
+            { en: 'My laptop is running out of battery.', cn: '我的筆電快沒電了。' },
+            { en: 'My laptop died. / My laptop is dead.', cn: '我的筆電沒電了（口語說法）。' },
+            { en: 'He wanted to use an HDMI cable to show his PowerPoint presentation.', cn: '他想用 HDMI 線來播放他的 PowerPoint 簡報。' },
+            { en: 'Finally he connected to the TV successfully.', cn: '最後他成功連接到電視了。' },
+            { en: 'I can lend you my device.', cn: '我可以把我的裝置借給你。' },
+            { en: "That's all for my presentation.", cn: '我的簡報到這裡（結束）。' }
+          ]
+        },
+        {
+          title: 'B. 檔案與資料夾 Files & Folders',
+          exs: [
+            { en: 'I created five subfolders in the ABC folder.', cn: '我在 ABC 資料夾裡建立了五個子資料夾。' },
+            { en: 'I organized the files into five folders.', cn: '我把檔案整理進五個資料夾。' },
+            { en: 'I separated the files into different folders.', cn: '我把檔案分到不同的資料夾。' },
+            { en: 'Please open the first folder.', cn: '請打開第一個資料夾。' },
+            { en: 'Please look at the file.', cn: '請看這個檔案。' },
+            { en: "My file isn't working properly.", cn: '我的檔案無法正常運作。' },
+            { en: "My file is broken. My file is damaged. I can't open my file.", cn: '我的檔案壞了。損壞了，我打不開。' },
+            { en: 'There is some problem with this folder.', cn: '這個資料夾有些問題。' },
+            { en: 'As you can see, my file is corrupted.', cn: '如你所見，我的檔案損毀了。' },
+            { en: 'The file is too large, so we need to reduce its size. / make it smaller.', cn: '檔案太大了，所以我們需要縮小檔案大小。' },
+            { en: "These files are the same. / The files are identical, so we don't need to open them again.", cn: '這些檔案完全相同，所以我們不需要再開啟它們。' }
+          ]
+        },
+        {
+          title: 'C. 辦公室與工程情境 Office & Construction',
+          exs: [
+            { en: 'The test room is still under construction.', cn: '測試室還在施工中。' },
+            { en: "We'll just stay in this room temporarily until the construction is done.", cn: '在施工完成之前，我們暫時先待在這個房間。' },
+            { en: 'This is a newly built company.', cn: '這是一間新建的公司。' },
+            { en: 'I will complete the equipment setup.', cn: '我會完成設備的安裝。' },
+            { en: "I'll buy the equipment for the test room very soon.", cn: '我很快就會買測試室的設備。' },
+            { en: "I'll purchase the necessary equipment for the test room soon.", cn: '我很快就會購買測試室所需的設備。（purchase 較正式）' },
+            { en: 'Before purchasing the equipment, we needed to submit the invoice to our boss, and I did.', cn: '購買設備之前，我們需要把發票提交給老闆，而我已經提交了。' },
+            { en: "The invoices are under my boss's review.", cn: '發票正在我老闆審核中。' }
+          ]
+        }
+      ],
+      reading: [
+        {
+          bar: 'VI. 情境故事（一）Story 1',
+          title: 'A Client Visit with Technical Problems',
+          titleCn: '客戶來訪的技術狀況',
+          artCap: '故事的五個階段：客戶來訪 → 筆電沒電 → 借出筆電 → 需要轉接線 → 成功連上電視。',
+          art: `<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="200" rx="14" fill="#fdf6ec"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#f7e3c9" opacity=".75"/><g transform="translate(44,52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><circle cx="32" cy="23" r="9" fill="#e8813a" stroke="#2b2118" stroke-width="3"/><path d="M16 51 a16 13 0 0 1 32 0" fill="#fff" stroke="#2b2118" stroke-width="3"/></g><g transform="translate(198,52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><rect x="13" y="24" width="33" height="18" rx="3" fill="#fff" stroke="#2b2118" stroke-width="3"/><rect x="46" y="29" width="5" height="8" rx="1.5" fill="#2b2118"/><rect x="17" y="28" width="7" height="10" fill="#e8813a"/><line x1="32" y1="14" x2="27" y2="20" stroke="#e8813a" stroke-width="3" stroke-linecap="round"/><line x1="38" y1="13" x2="36" y2="19" stroke="#e8813a" stroke-width="3" stroke-linecap="round"/></g><g transform="translate(352,52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><path d="M14 25 h26 l-6 -7 m6 7 l-6 7" fill="none" stroke="#e8813a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 41 h-26 l6 -7 m-6 7 l6 7" fill="none" stroke="#2b2118" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(506,52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><rect x="24" y="14" width="16" height="14" rx="2" fill="#e8813a" stroke="#2b2118" stroke-width="3"/><line x1="28" y1="18" x2="28" y2="24" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="36" y1="18" x2="36" y2="24" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="M32 28 C32 40 20 40 20 50" fill="none" stroke="#2b2118" stroke-width="3.5" stroke-linecap="round"/></g><g transform="translate(660,52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><rect x="14" y="18" width="36" height="24" rx="3" fill="#fff" stroke="#2b2118" stroke-width="3"/><line x1="32" y1="42" x2="32" y2="48" stroke="#2b2118" stroke-width="3"/><line x1="23" y1="50" x2="41" y2="50" stroke="#2b2118" stroke-width="3" stroke-linecap="round"/><path d="M23 30 l6 6 l12 -12" fill="none" stroke="#e8813a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></svg>`,
+          paras: [
+            { en: 'This week, my foreign client came to our company in Vietnam. In the meeting, he wanted to show his PowerPoint presentation using an HDMI cable, but his laptop died because it was out of battery. I lent him mine. However, there was another problem. His laptop was an Apple, and he needed an extra cable to connect to the HDMI port. Finally, after sorting out the issues, he successfully connected his device to the TV.',
+              cn: '這週我的外國客戶來到我們在越南的公司。會議中他想用 HDMI 線播放 PowerPoint 簡報，但他的筆電因為沒電而關機了。我把我的借給他。不過還有另一個問題：他的筆電是 Apple，需要一條額外的轉接線才能接上 HDMI 埠。最後，解決這些問題之後，他成功把裝置連上了電視。' }
+          ]
+        },
+        {
+          bar: 'VI. 情境故事（二）Story 2',
+          title: 'Office Update',
+          titleCn: '辦公室現況說明',
+          artCap: '辦公室現況：新建的公司 → 測試室施工中 → 暫用這個房間 → 採購設備 → 發票由老闆審核。',
+          art: `<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="200" rx="14" fill="#fdf6ec"/><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="#f7e3c9" opacity=".75"/><g transform="translate(44,52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><rect x="18" y="16" width="28" height="36" rx="2" fill="#fff" stroke="#2b2118" stroke-width="3"/><g fill="#e8813a"><rect x="23" y="21" width="6" height="6"/><rect x="35" y="21" width="6" height="6"/><rect x="23" y="31" width="6" height="6"/><rect x="35" y="31" width="6" height="6"/></g><rect x="28" y="42" width="8" height="10" fill="#c9631f" stroke="#2b2118" stroke-width="2.5"/></g><g transform="translate(198,52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><path d="M32 14 L44 48 H20 z" fill="#fff" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><path d="M27 28 h10 l2 6 h-14 z" fill="#e8813a"/><line x1="14" y1="48" x2="50" y2="48" stroke="#2b2118" stroke-width="3" stroke-linecap="round"/></g><g transform="translate(352,52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><rect x="21" y="16" width="22" height="36" rx="2" fill="#fff" stroke="#2b2118" stroke-width="3"/><circle cx="38" cy="35" r="2.5" fill="#e8813a"/><path d="M14 52 h36" stroke="#2b2118" stroke-width="3" stroke-linecap="round"/></g><g transform="translate(506,52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><path d="M14 18 h6 l5 20 h20 l4 -14 h-26" fill="none" stroke="#2b2118" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="27" cy="46" r="3.5" fill="#e8813a" stroke="#2b2118" stroke-width="2.5"/><circle cx="42" cy="46" r="3.5" fill="#e8813a" stroke="#2b2118" stroke-width="2.5"/></g><g transform="translate(660,52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="#f7e3c9" stroke-width="2.5"/><rect x="18" y="14" width="24" height="32" rx="3" fill="#fff" stroke="#2b2118" stroke-width="3"/><g stroke="#e8813a" stroke-width="2.5" stroke-linecap="round"><line x1="23" y1="22" x2="37" y2="22"/><line x1="23" y1="28" x2="37" y2="28"/><line x1="23" y1="34" x2="31" y2="34"/></g><circle cx="40" cy="41" r="7" fill="none" stroke="#2b2118" stroke-width="3"/><line x1="45" y1="46" x2="50" y2="51" stroke="#2b2118" stroke-width="3.5" stroke-linecap="round"/></g></svg>`,
+          paras: [
+            { en: "This is a newly built company, and our main test room is still under construction. So, we will use this room temporarily for today's testing until the permanent one is finished. I will be purchasing the necessary equipment for the new test room very soon.",
+              cn: '這是一間新建的公司，我們的主測試室還在施工中。所以今天的測試我們會暫時使用這個房間，直到正式的測試室完工。我很快就會購買新測試室所需的設備。' }
+          ],
+          sumEn: [],
+          sumCn: []
+        }
+      ],
+      extraVocabTitle: 'VII. 補充字彙與句型 Additional Vocabulary & Expressions',
+      extraVocab: [
+        { k: 'lend 的動詞三態', en: 'lend – lent – lent', cn: '借出（不規則動詞）' },
+        { k: '筆電沒電的口語', en: 'My laptop died. / My laptop is dead.', cn: '筆電沒電了（正式一點說 run out of battery）' },
+        { k: 'spec 的全稱', en: 'spec ＝ specification', cn: '規格（發音 spe-ci-fi-CA-tion，重音在 ca）' },
+        { k: '檔案壞掉的說法', en: 'broken（口語）／damaged／corrupted（技術）', cn: '壞掉的／損壞的／損毀的' },
+        { k: '完全相同', en: 'the same ＝ identical', cn: '一樣的／完全相同的' },
+        { k: '簡報／說明結尾', en: "That's all. That's all about this part. Done.", cn: '就這樣。這部分到此。完成了。' },
+        { k: '更自然的謝詞', en: 'Thank you for listening.（講義原文：Thank you for your listening）', cn: '謝謝聆聽（for + V-ing，不加 your）' },
+        { k: '如你所見', en: 'As you can see, ... / As you see, ...', cn: '如你所見，……（簡報常用開場）' },
+        { k: '壓縮檔案', en: 'compress the file（＝ reduce its size / make it smaller）', cn: '壓縮檔案／縮小檔案大小' },
+        { k: '避免重複的 one', en: 'until the permanent one is finished', cn: 'one 代替 test room（指正式的那間測試室）' },
+        { k: '未來進行式', en: 'I will be purchasing the necessary equipment very soon.', cn: '表示已安排好、即將進行的計劃' }
+      ],
+      summaryTitle: 'VIII. 快速總結 Quick Summary',
+      summary: [
+        { k: '借出 vs 借入', v: 'lend（give 📤）– lent – lent；borrow（take 📥）' },
+        { k: '筆電沒電', v: 'My laptop is running out of battery. / My laptop died. / My laptop is dead.' },
+        { k: '檔案壞了', v: "My file is corrupted. / broken / isn't working properly / I can't open my file." },
+        { k: '檔案太大', v: 'reduce its size / make it smaller / compress the file' },
+        { k: '「正在……中」', v: 'under construction 施工中；under review 審核中' },
+        { k: '片語動詞 + 代名詞', v: 'put it away（代名詞放中間，不說 put away it）' },
+        { k: '最後一刻', v: 'at the last minute（不說 at last time）' },
+        { k: '回報問題', v: 'report the problem to your manager（report + 事 + to + 人）' },
+        { k: '道歉', v: 'apologize to someone（比 give an apology 更道地）' },
+        { k: '簡報結尾', v: "That's all for my presentation." }
+      ]
+    },
+    {
       id: 'bk20260813',
       icon: '📣',
       iconSvg: '<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><circle cx="48" cy="48" r="45" fill="#fff" stroke="#f0c9a0" stroke-width="3"/><path d="M26 40 h14 l24 -14 v44 l-24 -14 h-14 z" fill="#e8913a" stroke="#2b2118" stroke-width="3.5" stroke-linejoin="round"/><rect x="34" y="58" width="11" height="15" rx="3" fill="#c9631f" stroke="#2b2118" stroke-width="3"/><g stroke="#d9691f" stroke-width="3.5" stroke-linecap="round" fill="none"><line x1="72" y1="34" x2="79" y2="29"/><line x1="74" y1="48" x2="83" y2="48"/><line x1="72" y1="62" x2="79" y2="67"/></g></svg>',

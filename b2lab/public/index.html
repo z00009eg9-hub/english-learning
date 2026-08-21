@@ -150,7 +150,11 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
   background:var(--ok);color:#fff;font-weight:900;font-size:20px;line-height:36px;
   text-align:center;border-radius:0 11px 0 14px;box-shadow:-1px 1px 5px rgba(30,120,70,.3)
 }
-.item.fin>.row:first-child{padding-right:34px}
+@media(max-width:499px){
+  .item.fin::before{width:26px;height:26px;font-size:14px;line-height:26px;border-radius:0 11px 0 10px}
+  .item.fin>.row:first-child,.item.fin>.t:first-child{padding-right:24px}
+}
+.item.fin>.row:first-child,.item.fin>.t:first-child{padding-right:34px}
 /* 右上角紅色 NEW 緞帶（今日新內容用） */
 .item.new::after{
   content:"NEW";position:absolute;top:13px;right:-32px;width:118px;
@@ -369,6 +373,7 @@ tr:nth-child(even) td{background:#fdfbf8}
 .artbox{margin:0 0 14px;background:#fff;border:1px solid var(--line);border-radius:14px;
   box-shadow:var(--shadow);padding:10px;overflow:hidden}
 .artbox svg{display:block;width:100%;height:auto;border-radius:9px}
+@media(min-width:900px){.artbox{max-width:680px;margin-left:auto;margin-right:auto}}
 .artbox figcaption{
   font-size:calc(13px * var(--fs));color:var(--ink2);line-height:1.7;margin-top:9px;
   padding:8px 10px;background:#fdfbf8;border-radius:8px;border-left:3px solid var(--accent)
@@ -634,6 +639,7 @@ body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
   <span id="sync-badge" title="進度已雲端同步（跨裝置共用）">☁️</span>
   <button class="hdlink" id="hd-cn" onclick="togGlobalCn()" title="全站中譯一鍵顯示／隱藏">🈶 中譯</button>
   <a class="hdlink" href="https://learning-english-notes.web.app" title="Speak Up! 課堂筆記 · 口說練習 · 每日測驗">🍎🐻 Speak&nbsp;Up ↗</a>
+  <a class="hdlink" href="https://rexon-qa-english.web.app/" title="英文題庫練習">🔤 題庫 ↗</a>
 </header>
 
 <main>
@@ -687,7 +693,9 @@ function mkWrong(s){
     .replace(/([✗✘Ⅹ×]|\bX(?=\s))\s*([^（）()「」。；，、,;]*)/g,
              '<span class="wrong">$1 $2</span>')
     .replace(/(✓|✔)\s*([^（）()「」。；，、,;]*)/g,
-             '<span class="right">$1 $2</span>');
+             '<span class="right">$1 $2</span>')
+    .replace(/<\/span>\s*<span class="wrong">/g,
+             '</span><br><span class="wrong">');
 }
 /* 句號之後自動換到下一行，長段解說比較好讀 */
 function brSent(s){
@@ -703,6 +711,14 @@ function boldEn(html){
 }
 /* 三者都套用：錯的變紅 + 句號換行 + 英文例句加粗 */
 const mkText = s => boldEn(brSent(mkWrong(s)));
+/* 加粗＋🔊 版：文法 body/bullet 裡的英文句子也能點擊朗讀 */
+function boldEnSpk(html){
+  return String(html).split(/(<[^>]+>)/g).map(seg=>{
+    if(seg.charAt(0)==='<') return seg;
+    return seg.replace(/[A-Za-z][A-Za-z0-9''\-]*(?:[ ,]+[A-Za-z0-9''\-]+){2,}[.!?]*/g,m=>'<b>'+m+'</b>'+spk(m));
+  }).join('');
+}
+const mkTextSpk = s => boldEnSpk(brSent(mkWrong(s)));
 /* 清單卡片左側色條跟著程度走（A2 橘 / B1 綠 / B1+ 藍 / B2 紫） */
 const LVBAR={A2:'--a2',B1:'--b1','B1+':'--b1p',B2:'--b2'};
 const lvBar = l => 'border-left-color:var('+(LVBAR[l]||'--accent')+')';
@@ -920,7 +936,7 @@ window.saySent=saySent;
    反黃只貼著文字、到句子最後一個字／句點為止，不是整條區塊；
    做法：第一次點擊時把喇叭鈕之前的節點包進行內 span.spktxt，之後反黃這個 span。 */
 function spkGo(btn){
-  const box=btn.closest('.exs,.wpline,.u2,.good,.een,.qt,.opt,.kl,.ycd,.trans-line,li')||btn.parentElement;
+  const box=btn.closest('.exs,.wpline,.u2,.good,.een,.qt,.opt,.kl,.ycd,.trans-line,.gline,li')||btn.parentElement;
   let t=null;
   if(box){
     t=box.querySelector(':scope > .spktxt');
@@ -1037,12 +1053,13 @@ function tokenize(text,hiSet){
    2. 分頁切換
    ============================================================ */
 let TAB='daily';
+let FROM_TAB=null;
 const RENDER={};
-function go(t){
+function go(t,visualTab){
   TAB=t;
   ['daily','read','book','listen','vocab','gram','prog'].forEach(k=>{
     $('v-'+k).hidden = (k!==t);
-    $('t-'+k).classList.toggle('on',k===t);
+    $('t-'+k).classList.toggle('on', k===(visualTab||t));
   });
   if(t!=='listen') destroyPlayer();
   hideGloss();
@@ -1159,7 +1176,7 @@ function rebalanceMag(){
 }
 function rdSet(k,v){ rdFilter[k]=v; RENDER.read(); }
 function rdOpenArt(id){ rdOpen=ALL_ARTS.find(a=>a.id===id); QSTATE={}; RENDER.read(); }
-function rdClose(){ rdOpen=null; RENDER.read(); }
+function rdClose(){ rdOpen=null; if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.read(); }
 window.rdSet=rdSet; window.rdOpenArt=rdOpenArt; window.rdClose=rdClose;
 
 const reEsc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
@@ -1342,16 +1359,22 @@ function readerHTML(a){
    +'</div></div>';
 
   /* 右欄：Words & Phrases + 補充詞彙 + You Can Do This */
+  const _artLow=a.paras.map(p=>p.en.toLowerCase()).join(' ');
+  const _exInArt=ex=>{if(!ex)return false;const k=ex.toLowerCase().replace(/[.!?,;:"'']/g,'').trim();return k.length>15&&_artLow.includes(k.slice(0,40));};
   h+='<div>';
   if(tg.length){
     h+='<div class="wpbox"><div class="wphead">▼ Words &amp; Phrases<span class="zh">單字片語</span></div><div class="wpbody">'
-     + tg.map((t,i)=>'<div class="wpitem">'
+     + tg.map((t,i)=>{
+       const dup=_exInArt(t.ex);
+       return '<div class="wpitem">'
        +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="showGloss(\''+esc(t.w).replace(/'/g,"\\'")+'\')">'+esc(t.w)+'</w> '
        +spk(t.w)+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
        +'<div class="zh">'+esc(t.cn)+'</div>'
        +(t.def?'<div class="def">'+esc(t.def)+'</div>':'')
-       +(t.ex?'<div class="exs">'+esc(t.ex)+' '+spk(t.ex)+(t.exCn?'<div class="excn">'+esc(t.exCn)+'</div>':'')+'</div>':'')
-       +'</div>').join('')
+       +(t.ex?(dup?'<div class="exs" style="color:var(--ink2);font-style:italic;font-size:calc(13px * var(--fs))">→ 例句見上方文章</div>'
+              :'<div class="exs">'+esc(t.ex)+' '+spk(t.ex)+(t.exCn?'<div class="excn">'+esc(t.exCn)+'</div>':'')+'</div>')
+        :'')
+       +'</div>';}).join('')
      +'</div></div>';
   }
   h+='</div></div>';
@@ -1704,7 +1727,7 @@ function gvizHTML(id){
   return '<figure class="artbox">'+v.svg+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function gOpen(id){ CURG=ALL_GRAM.find(g=>g.id===id); QSTATE={}; RENDER.gram(); window.scrollTo(0,0); }
-function gClose(){ CURG=null; RENDER.gram(); }
+function gClose(){ CURG=null; if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.gram(); }
 window.gOpen=gOpen; window.gClose=gClose;
 
 function gramHTML(g){
@@ -1716,12 +1739,12 @@ function gramHTML(g){
 
   h+='<div class="card">'+ (g.sections||[]).map(s=>{
     let x='<div class="gsec"><h3>'+esc(s.h)+'</h3>';
-    if(s.body) x+= s.body.map(b=>'<div style="font-size:calc(14.5px * var(--fs));margin-bottom:5px">'+mkText(b)+'</div>').join('');
+    if(s.body) x+= s.body.map(b=>'<div class="gline" style="font-size:calc(14.5px * var(--fs));margin-bottom:5px">'+mkTextSpk(b)+'</div>').join('');
     if(s.table){
       x+='<div class="tw"><table><tr>'+s.table.head.map(t=>'<th>'+esc(t)+'</th>').join('')+'</tr>'
        + s.table.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</table></div>';
     }
-    if(s.bullets) x+='<ul>'+s.bullets.map(b=>'<li>'+mkText(b)+'</li>').join('')+'</ul>';
+    if(s.bullets) x+='<ul>'+s.bullets.map(b=>'<li class="gline">'+mkTextSpk(b)+'</li>').join('')+'</ul>';
     if(s.examples) x+= s.examples.map(e=>'<div class="ex"><div class="een">'+esc(e.en)+' '+spk(e.en)+'</div>'
        +'<div class="ecn">'+esc(e.cn)+'</div>'+(e.note?'<div class="enote">→ '+mkText(e.note)+'</div>':'')+'</div>').join('');
     return x+'</div>';
@@ -1778,7 +1801,7 @@ RENDER.daily=function(){
   });
   gramsToday.forEach(g=>{
     const d=ST.gramDone[g.id];
-    h+='<div class="item'+(isToday(g)?' new':finCls(d))+'"'+finTitle(d,'練習')+' style="'+lvBar(g.level)+'" onclick="goUnit(\''+g.id+'\')">'
+    h+='<div class="item'+(isToday(g)?' new':finCls(d))+'"'+finTitle(d,'練習')+' style="'+lvBar(g.level)+'" onclick="dailyGram(\''+g.id+'\')">'
      +'<div class="t" style="'+lvTitle(g.level)+'">📐 '+esc(g.titleCn)+'</div>'
      +'<div class="tc">'+esc(g.title)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span><span>📅 '+esc(g.date||'')+'</span>'+(g.unitNo?'<span>Grammar in Use 進度 Unit '+g.unitNo+'</span>':'')
@@ -1786,7 +1809,7 @@ RENDER.daily=function(){
   });
   listensToday.forEach(l=>{
     const d=(ST.listenDone||{})[l.id];
-    h+='<div class="item'+(l.date===t?' new':finCls(d))+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
+    h+='<div class="item'+(l.date===t?' new':finCls(d))+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="dailyListen(\''+l.id+'\')">'
      +'<div class="t" style="'+lvTitle(l.level)+'">🎧 '+esc(l.title)+'</div>'
      +'<div class="tc">'+esc(l.titleCn)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span>'+(l.date?'<span>📅 '+esc(l.date)+'</span>':'')+'<span>🏷 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span>'
@@ -1818,16 +1841,18 @@ RENDER.daily=function(){
   if(pastArts.length||pastGram.length||pastListen.length||olderN){
     h+='<div class="card"><h2 class="sec">🗂 本週的每日內容</h2>'
      + pastArts.map(a=>'<div class="item" onclick="dailyArt(\''+a.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📖 '+esc(a.title)+'</div><div class="meta"><span>📅 '+esc(a.date||'')+'</span><span>'+esc(a.titleCn)+'</span></div></div>').join('')
-     + pastListen.map(l=>'<div class="item" onclick="lsGo(\''+l.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">🎧 '+esc(l.title)+'</div><div class="meta"><span>📅 '+esc(l.date||'')+'</span><span>'+esc(l.titleCn)+'</span></div></div>').join('')
-     + pastGram.map(g=>'<div class="item" onclick="goUnit(\''+g.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📐 '+esc(g.titleCn)+'</div><div class="meta"><span>📅 '+esc(g.date||'')+'</span><span>'+esc(g.title)+'</span></div></div>').join('')
+     + pastListen.map(l=>'<div class="item" onclick="dailyListen(\''+l.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">🎧 '+esc(l.title)+'</div><div class="meta"><span>📅 '+esc(l.date||'')+'</span><span>'+esc(l.titleCn)+'</span></div></div>').join('')
+     + pastGram.map(g=>'<div class="item" onclick="dailyGram(\''+g.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📐 '+esc(g.titleCn)+'</div><div class="meta"><span>📅 '+esc(g.date||'')+'</span><span>'+esc(g.title)+'</span></div></div>').join('')
      +(olderN?'<div class="hint" style="margin-top:8px">更早的 '+olderN+' 份內容已依分類回歸 <b>閱讀</b>、<b>聽力</b>、<b>文法</b> 分頁，都排在各分頁最上方（日期新的在前）。</div>':'')
      +'</div>';
   }
   h+=oldSiteCard();
   $('v-daily').innerHTML=h;
 };
-function dailyArt(id){ go('read'); rdFilter.kind='daily'; rdOpenArt(id); }
-window.dailyArt=dailyArt;
+function dailyArt(id){ FROM_TAB='daily'; go('read','daily'); rdFilter.kind='daily'; rdOpenArt(id); }
+function dailyGram(id){ FROM_TAB='daily'; go('gram','daily'); gOpen(id); }
+function dailyListen(id){ FROM_TAB='daily'; lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; go('listen','daily'); }
+window.dailyArt=dailyArt; window.dailyGram=dailyGram; window.dailyListen=dailyListen;
 
 /* ============================================================
    7. 進度分頁
@@ -2035,12 +2060,12 @@ document.addEventListener('click',e=>{
   document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
 });
 
-/* ---------- 點「有喇叭的那一行文字」＝等同按 🔊：朗讀＋反黃（2026-08-19 使用者指定）
+/* ---------- 點「有喇叭的那一行文字」＝等同按 🔊：朗讀＋反黃
    涵蓋：閱讀的單字例句(.exs)、句型升級(.u2)、測驗題目(.qt)、文法重點例句(.een)與訂正句(.good)、
-   課本的片語標題與作業複習行(.bkline)、單字行(.wpline)、字義卡例句(.gx/.fx)、聽力關鍵句(.srow) ---------- */
+   文法 body/bullet(.gline)、課本片語與作業(.bkline)、單字行(.wpline)、字義卡(.gx/.fx)、聽力(.srow) ---------- */
 document.addEventListener('click',e=>{
   if(e.target.closest('button,.spk,w,a,input,textarea,select,.sent,.sen,.opt3,.gloss')) return;
-  const box=e.target.closest('.exs,.u2,.qt,.een,.good,.bkline,.wpline,.fx,.gx,.srow');
+  const box=e.target.closest('.exs,.u2,.qt,.een,.good,.gline,.bkline,.wpline,.fx,.gx,.srow');
   if(!box) return;
   const b=box.querySelector('.spk[data-t]');
   if(b) spkGo(b);
@@ -2665,7 +2690,7 @@ RENDER.listen=function(){
    +(others.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">🎬 VOA 課程教材</h3>'+others.map(lsCard).join(''):'');
 };
 function lsGo(id){ lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; go('listen'); }
-function lsClose(){ destroyPlayer(); stopSync(); lsOpen=null; RENDER.listen(); }
+function lsClose(){ destroyPlayer(); stopSync(); lsOpen=null; if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.listen(); }
 window.lsGo=lsGo; window.lsClose=lsClose;
 
 /* 每課的場景插圖：用簡單的 SVG 讓學習者先看到情境再聽對話 */
