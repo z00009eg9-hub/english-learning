@@ -9,6 +9,191 @@ window.DAILY = {
 articles:[
 
 {
+  id:"d20260821a2", date:"2026-08-21", level:"A2", topic:"交通", words:102, kind:"orig",
+  title:"Tom Waits for the Bus",
+  titleCn:"Tom 在等公車",
+  focus:"現在簡單式描述固定習慣，現在進行式描述現在正在發生的事",
+  upFrom:"A2", upTo:"B1",
+  intro:"這篇文章前半段用現在簡單式講Tom平常搭公車的習慣，後半段換成現在進行式講「現在正在發生」的事——公車遲到了。讀的時候注意兩種時態怎麼切換。",
+  paras:[
+    {en:"Tom takes the bus to work every morning. The bus usually comes at eight o'clock. He waits at the bus stop near his apartment.",
+     cn:"Tom每天早上都搭公車去上班。公車通常八點會來。他在自己公寓附近的公車站等車。"},
+    {en:"Today is different. Tom is standing at the bus stop, but there is no bus yet. He is checking his phone for the time.",
+     cn:"今天不一樣。Tom正站在公車站，但公車還沒來。他正在看手機確認時間。"},
+    {en:"A woman next to him says the bus is late today. She thinks there is a problem on the road. Tom feels worried because he has a meeting at nine.",
+     cn:"他旁邊的一位女士說今天公車遲到了。她覺得路上可能有狀況。Tom覺得有點擔心，因為他九點有會議。"},
+    {en:"Finally, the bus arrives at eight fifteen. Tom gets on quickly and finds a seat. He can still be at his meeting on time.",
+     cn:"終於，公車在八點十五分抵達。Tom很快上車，找到一個位子。他還是可以準時到會議。"}
+  ],
+  target:[
+    {w:"apartment",ipa:"/əˈpɑːrtmənt/",pos:"n.",cn:"公寓",def:"A place where someone lives, usually inside a larger building.",ex:"He waits at the bus stop near his apartment.",exCn:"他在自己公寓附近的公車站等車。"},
+    {w:"late",ipa:"/leɪt/",pos:"adj.",cn:"遲到的、晚的",def:"Arriving or happening after the expected time.",ex:"A woman next to him says the bus is late today.",exCn:"他旁邊的一位女士說今天公車遲到了。"},
+    {w:"problem",ipa:"/ˈprɑːbləm/",pos:"n.",cn:"問題、狀況",def:"Something that is not working correctly or causes trouble.",ex:"She thinks there is a problem on the road.",exCn:"她覺得路上可能有狀況。"},
+    {w:"worried",ipa:"/ˈwɜːrid/",pos:"adj.",cn:"擔心的",def:"Feeling nervous or unhappy about something.",ex:"Tom feels worried because he has a meeting at nine.",exCn:"Tom覺得有點擔心，因為他九點有會議。"},
+    {w:"finally",ipa:"/ˈfaɪnəli/",pos:"adv.",cn:"終於",def:"After a long time or wait.",ex:"Finally, the bus arrives at eight fifteen.",exCn:"終於，公車在八點十五分抵達。"},
+    {w:"quickly",ipa:"/ˈkwɪkli/",pos:"adv.",cn:"快速地",def:"In a fast way, not slowly.",ex:"Tom gets on quickly and finds a seat.",exCn:"Tom很快上車，找到一個位子。"}
+  ],
+  questions:[
+    {q:"What time does the bus usually come?",qCn:"公車通常幾點會來？",opts:["A. Seven o'clock","B. Eight o'clock","C. Eight fifteen","D. Nine o'clock"],optsCn:["A. 七點","B. 八點","C. 八點十五分","D. 九點"],ans:1,expl:"The bus usually comes at eight o'clock."},
+    {q:"Why does Tom feel worried?",qCn:"Tom為什麼覺得擔心？",opts:["A. He lost his phone","B. He does not like the bus","C. He has a meeting at nine and the bus is late","D. He forgot his bag"],optsCn:["A. 他手機不見了","B. 他不喜歡搭公車","C. 他九點有會議，但公車遲到了","D. 他忘記帶包包"],ans:2,expl:"Tom feels worried because he has a meeting at nine, and the bus is late today."},
+    {q:"Look! The bus ___ now.",qCn:"你看！公車現在正過來。（選出正確的動詞形式）",opts:["A. comes","B. is coming","C. come","D. was coming"],ans:1,expl:"現在正在發生的事，用現在進行式：is coming，不能用現在簡單式 comes。"}
+  ],
+  upgrade:[
+    {b1:"The bus is late. Tom feels worried.",
+     b2:"The bus is late, so Tom feels worried.",
+     note:"用 so 連接原因和結果，比兩個短句更順，這是B1開始練習的連接詞用法。"},
+    {b1:"Tom waits at the bus stop. He checks his phone for the time.",
+     b2:"Tom waits at the bus stop and checks his phone for the time.",
+     note:"同一個主詞（Tom）做兩件事時，用 and 連起來、主詞只寫一次，句子更自然、不重複。"}
+  ]
+},
+
+{
+  id:"d20260821b1", date:"2026-08-21", level:"B1", topic:"交通與通勤", words:149, kind:"orig",
+  title:"A Signal Problem on the Line",
+  titleCn:"這條線發生了號誌問題",
+  focus:"現在簡單式（習慣）vs 比較級；現在完成式（基礎，for + 一段時間）",
+  upFrom:"B1", upTo:"B1+",
+  intro:"這篇換成Mia的角度，她平常搭捷運上班，但今天遇到號誌問題。留意現在完成式 has taken / has never seen 怎麼講「到目前為止的經驗」，還有 more crowded than usual 這種比較級的用法。",
+  paras:[
+    {en:"Mia takes the MRT to work every day. The ride usually takes twenty-five minutes, and the platform is not too crowded in the morning. She likes reading on the train because it helps her relax before work.",
+     cn:"Mia每天都搭捷運去上班。車程通常要二十五分鐘，早上月台也不會太擁擠。她喜歡在車上看書，因為這能幫助她在上班前放鬆。"},
+    {en:"This morning, however, was different. When Mia arrived at the station, an announcement said there was a signal problem on the line. The platform quickly became more crowded than usual, and everyone looked a little worried.",
+     cn:"不過今天早上不一樣。Mia到站的時候，廣播說這條線發生了號誌問題。月台很快就變得比平常擁擠，大家看起來都有點擔心。"},
+    {en:"Mia waited almost fifteen minutes before a train finally arrived. It was much slower than her usual train, so she sent a quick message to her manager. Her manager said it was fine because two other coworkers were also late.",
+     cn:"Mia等了快十五分鐘，列車才終於進站。它比她平常搭的班次慢了很多，所以她傳了一則簡短的訊息給主管。主管說沒關係，因為另外兩位同事也遲到了。"},
+    {en:"Mia has taken this MRT line for three years, but she has never seen the platform so crowded. She hopes the signal problem is fixed again soon, so tomorrow's ride can be as easy as usual.",
+     cn:"Mia搭這條捷運線已經三年了，但她從沒看過月台這麼擁擠。她希望號誌問題能快點修好，這樣明天的通勤才能跟平常一樣輕鬆。"}
+  ],
+  target:[
+    {w:"ride",ipa:"/raɪd/",pos:"n.",cn:"車程、搭乘",def:"A trip made in a vehicle such as a bus or train.",ex:"The ride usually takes twenty-five minutes, and the platform is not too crowded in the morning.",exCn:"車程通常要二十五分鐘，早上月台也不會太擁擠。"},
+    {w:"signal",ipa:"/ˈsɪɡnəl/",pos:"n.",cn:"號誌",def:"A system used to control trains and keep them a safe distance apart.",ex:"An announcement said there was a signal problem on the line.",exCn:"廣播說這條線發生了號誌問題。"},
+    {w:"crowded",ipa:"/ˈkraʊdɪd/",pos:"adj.",cn:"擁擠的",def:"Full of people.",ex:"The platform quickly became more crowded than usual, and everyone looked a little worried.",exCn:"月台很快就變得比平常擁擠，大家看起來都有點擔心。"},
+    {w:"finally",ipa:"/ˈfaɪnəli/",pos:"adv.",cn:"終於",def:"After a period of waiting.",ex:"Mia waited almost fifteen minutes before a train finally arrived.",exCn:"Mia等了快十五分鐘，列車才終於進站。"},
+    {w:"coworkers",ipa:"/ˈkoʊˌwɜːrkərz/",pos:"n.",cn:"同事",def:"People you work with.",ex:"Her manager said it was fine because two other coworkers were also late.",exCn:"主管說沒關係，因為另外兩位同事也遲到了。"},
+    {w:"fixed",ipa:"/fɪkst/",pos:"v./adj.",cn:"修好的",def:"Repaired so it works correctly again.",ex:"She hopes the signal problem is fixed again soon, so tomorrow's ride can be as easy as usual.",exCn:"她希望號誌問題能快點修好，這樣明天的通勤才能跟平常一樣輕鬆。"}
+  ],
+  questions:[
+    {q:"Why did the platform become more crowded than usual?",qCn:"為什麼月台變得比平常擁擠？",
+     opts:["A. The MRT company closed one exit","B. A signal problem made trains slower","C. There was a public holiday","D. The escalator was broken"],
+     optsCn:["A. 捷運公司關閉了一個出口","B. 號誌問題讓列車變慢","C. 那天是國定假日","D. 電扶梯故障了"],ans:1,expl:"an announcement said there was a signal problem on the line... the platform quickly became more crowded than usual."},
+    {q:"What did Mia do when she knew she would be late?",qCn:"Mia知道自己會遲到時做了什麼？",
+     opts:["A. She got off and took a taxi","B. She called her manager","C. She sent a quick message to her manager","D. She went back home"],
+     optsCn:["A. 她下車改搭計程車","B. 她打電話給主管","C. 她傳了簡短的訊息給主管","D. 她回家了"],ans:2,expl:"she sent a quick message to her manager."},
+    {q:"Mia ___ this MRT line for three years.",qCn:"Mia搭這條捷運線已經三年了。（選出正確的動詞形式）",
+     opts:["A. takes","B. took","C. has taken","D. is taking"],ans:2,expl:"「持續到現在」的經驗要用現在完成式：has taken，搭配 for three years。"}
+  ],
+  upgrade:[
+    {b1:"A signal problem made the trains slower.",
+     b2:"Trains on the line were slowed down by a signal problem that was reported early in the morning.",
+     note:"用被動語態（were slowed down）與 that 引導的關係子句，把「發生了什麼事」和「什麼時候被通報」講得更完整，這是B1+才開始練習的句型。"},
+    {b1:"Mia was worried about being late, so she sent a quick message to her manager.",
+     b2:"Mia, who was worried about being late, sent a quick message to her manager.",
+     note:"用 who 引導的關係子句直接插入主詞後面補充資訊，比兩個分開的短句更精簡緊湊，是B1+開始練習的寫法。"}
+  ]
+},
+
+{
+  id:"d20260821b1p", date:"2026-08-21", level:"B1+", topic:"交通與通勤", words:186, kind:"orig",
+  title:"When One Signal Fault Slows a Whole Line",
+  titleCn:"一個號誌故障，拖慢整條線",
+  focus:"被動語態、現在完成式＋被動、關係子句（who／that／which）",
+  upFrom:"B1+", upTo:"B2",
+  intro:"從Mia一個人的故事拉遠到整個捷運系統的號誌問題。注意被動語態（are slowed down、were held、have been asked）怎麼把焦點放在「發生了什麼事」而不是「誰做的」，還有 who／that／which 引導的關係子句怎麼補充資訊。",
+  paras:[
+    {en:"Every few months, a signal problem somewhere on the MRT network causes delays that affect thousands of commuters. When a fault is detected, trains on that line are slowed down immediately, and platforms that are usually quiet within minutes become packed with waiting passengers.",
+     cn:"每隔幾個月，捷運路網上某處的號誌問題就會造成延誤，影響數千名通勤族。一旦偵測到故障，那條線的列車會立刻被降速，原本安靜的月台幾分鐘內就會擠滿等車的乘客。"},
+    {en:"This week, a fault that was reported early Monday morning affected the Red Line for nearly two hours. Announcements were made every few minutes, and commuters who were already running late grew increasingly frustrated. Several trains were held at stations while engineers checked the signal system.",
+     cn:"這週，一起週一清晨通報的故障，讓紅線受到將近兩小時的影響。廣播每隔幾分鐘就播報一次，本來就快遲到的通勤族越來越不耐煩。好幾班列車被留置在車站，等工程人員檢查號誌系統。"},
+    {en:"According to the transit authority, most signal problems are caused by aging equipment that has not yet been replaced. A new system, which is expected to be installed next year, should reduce these delays significantly. Until then, riders are advised to check the transit app before leaving home.",
+     cn:"根據捷運局的說法，大部分的號誌問題都是老舊、還沒被更換的設備所造成的。一套新系統預計明年安裝，屆時應該能大幅減少這類延誤。在那之前，建議乘客出門前先查看捷運App。"},
+    {en:"Commuters have been asked to allow extra time during rush hour, especially on lines where older equipment is still being used. For workers like Mia, who rely on the MRT every day, even a short delay can turn a calm morning into a stressful rush to the office.",
+     cn:"通勤族被要求在尖峰時段多預留一些時間，尤其是還在使用老舊設備的路線。對像Mia這樣每天仰賴捷運的上班族來說，就算只是小小的延誤，也可能讓平靜的早晨變成趕著進辦公室的壓力時刻。"}
+  ],
+  target:[
+    {w:"fault",ipa:"/fɔːlt/",pos:"n.",cn:"故障",def:"A problem that stops something from working correctly.",ex:"When a fault is detected, trains on that line are slowed down immediately.",exCn:"一旦偵測到故障，那條線的列車會立刻被降速。"},
+    {w:"packed",ipa:"/pækt/",pos:"adj.",cn:"擠滿的",def:"Extremely full of people.",ex:"Platforms that are usually quiet within minutes become packed with waiting passengers.",exCn:"原本安靜的月台幾分鐘內就會擠滿等車的乘客。"},
+    {w:"frustrated",ipa:"/ˈfrʌstreɪtɪd/",pos:"adj.",cn:"感到不耐煩、沮喪的",def:"Feeling annoyed because something is not going the way you want.",ex:"Commuters who were already running late grew increasingly frustrated.",exCn:"本來就快遲到的通勤族越來越不耐煩。"},
+    {w:"transit authority",ipa:"/ˈtrænzɪt əˈθɒrəti/",pos:"n.",cn:"捷運局、運輸主管機關",def:"The organization in charge of running public transportation.",ex:"According to the transit authority, most signal problems are caused by aging equipment that has not yet been replaced.",exCn:"根據捷運局的說法，大部分的號誌問題都是老舊、還沒被更換的設備所造成的。"},
+    {w:"aging",ipa:"/ˈeɪdʒɪŋ/",pos:"adj.",cn:"老舊的",def:"Old and often close to needing replacement.",ex:"Most signal problems are caused by aging equipment that has not yet been replaced.",exCn:"大部分的號誌問題都是老舊、還沒被更換的設備所造成的。"},
+    {w:"significantly",ipa:"/sɪɡˈnɪfɪkəntli/",pos:"adv.",cn:"顯著地、大幅地",def:"By a large or noticeable amount.",ex:"A new system... should reduce these delays significantly.",exCn:"一套新系統...應該能大幅減少這類延誤。"},
+    {w:"rush hour",ipa:"/rʌʃ ˈaʊər/",pos:"n.",cn:"尖峰時段",def:"The time of day when traffic and public transportation are the busiest.",ex:"Commuters have been asked to allow extra time during rush hour.",exCn:"通勤族被要求在尖峰時段多預留一些時間。"},
+    {w:"rely on",ipa:"/rɪˈlaɪ ɒn/",pos:"phr.v.",cn:"仰賴、依靠",def:"To depend on someone or something regularly.",ex:"For workers like Mia, who rely on the MRT every day, even a short delay can turn a calm morning into a stressful rush to the office.",exCn:"對像Mia這樣每天仰賴捷運的上班族來說，就算只是小小的延誤，也可能讓平靜的早晨變成趕著進辦公室的壓力時刻。"}
+  ],
+  questions:[
+    {q:"Why did the Red Line have delays this week?",qCn:"這週紅線為什麼會延誤？",
+     opts:["A. A new station was being built","B. A fault reported Monday morning affected the line for nearly two hours","C. There was a citywide power outage","D. The line was closed for cleaning"],
+     optsCn:["A. 有一個新車站正在興建","B. 週一清晨通報的故障影響了這條線將近兩小時","C. 全市發生大停電","D. 這條線因清潔而關閉"],ans:1,expl:"a fault that was reported early Monday morning affected the Red Line for nearly two hours."},
+    {q:"According to the transit authority, what is the main cause of most signal problems?",qCn:"根據捷運局的說法，大部分號誌問題的主要原因是什麼？",
+     opts:["A. Bad weather","B. Aging equipment that has not been replaced","C. Too many passengers","D. Human error by drivers"],
+     optsCn:["A. 天氣不好","B. 尚未更換的老舊設備","C. 乘客太多","D. 駕駛人為疏失"],ans:1,expl:"most signal problems are caused by aging equipment that has not yet been replaced."},
+    {q:"Several trains ___ at stations while engineers checked the signal system.",qCn:"好幾班列車被留置在車站，等工程人員檢查號誌系統。（選出正確的動詞形式）",
+     opts:["A. held","B. were held","C. hold","D. are holding"],ans:1,expl:"「被留置」是被動語態，過去式：were held（be動詞過去式+過去分詞）。"},
+    {q:"What are commuters advised to do because of these delays?",qCn:"因為這些延誤，通勤族被建議怎麼做？",
+     opts:["A. Stop using the MRT completely","B. Check the transit app and allow extra time during rush hour","C. Only travel late at night","D. Complain to the transit authority in person"],
+     optsCn:["A. 完全不要搭捷運","B. 查看捷運App並在尖峰時段多留時間","C. 只在深夜出門","D. 親自去向捷運局抱怨"],ans:1,expl:"riders are advised to check the transit app before leaving home... allow extra time during rush hour."}
+  ],
+  upgrade:[
+    {b1:"A fault caused delays. The company will fix the system next year.",
+     b2:"A fault that was reported early Monday morning caused delays lasting nearly two hours, and a replacement system is scheduled to be installed next year.",
+     note:"用 that 引導的關係子句補充細節、加上具體的時間長度，資訊密度更高，是B2程度常見的寫法。"},
+    {b1:"Riders should check the app before they leave home.",
+     b2:"Riders are advised to check the transit app before leaving home, particularly during rush hour on lines with older equipment.",
+     note:"用被動語態（are advised）與更精確的條件描述，語氣更正式、更像官方公告的寫法。"}
+  ]
+},
+
+{
+  id:"d20260821b2", date:"2026-08-21", level:"B2", topic:"旅遊與交通", words:278, kind:"original",
+  title:"The Real Skill of Business Travel",
+  titleCn:"商務出差真正的本事",
+  focus:"過去完成式（含被動）交代事件先後；tend to 緩和語氣的正式語域",
+  intro:"完全原創的商務出差故事。注意過去完成式（had boarded、had been held up）怎麼交代「延誤發生前，還發生了什麼事」的時間先後，也留意 tend to 這種正式語域裡緩和武斷語氣的說法。",
+  paras:[
+    {en:"Anita had boarded her flight from Ho Chi Minh City to Taipei with plenty of time to spare before her quarterly review meeting the next morning. Twenty minutes before departure, however, the gate agent announced a delay: the incoming aircraft had been held up by a mechanical inspection at its previous stop, and a new departure time had not yet been confirmed.",
+     cn:"Anita早早就登機了，從胡志明市飛往台北，離隔天早上的季度檢討會議還有充裕的時間。然而，起飛前二十分鐘，登機門地勤人員宣布班機延誤：機組的入境班機因為在前一站接受機械檢查而被耽擱，新的起飛時間也尚未確定。"},
+    {en:"Rather than panicking, Anita opened her laptop and began reviewing the presentation she would give the following day. She sent a short message to her manager, explaining that she might land later than planned, and asked a colleague to confirm the meeting room booking in case her schedule shifted. Around her, other business travelers were doing much the same: answering emails, rebooking connecting trains, or simply resigning themselves to a longer wait.",
+     cn:"Anita沒有慌張，而是打開筆電，開始複習隔天要做的簡報。她傳了一則簡短的訊息給主管，說明自己可能會比預期晚降落，也請一位同事確認會議室的預約，以防行程有變。在她周圍，其他出差的商務人士也在做類似的事：回覆信件、改訂轉乘的火車班次，或乾脆接受得再多等一陣子。"},
+    {en:"Frequent flyers tend to develop small routines that make delays easier to absorb — a backup charger, a downloaded document, a flexible mindset about what \"on time\" really means. Anita had learned this after two years of monthly trips between Vietnam and Taiwan; a delay was rarely a crisis unless it was treated as one. What mattered more, she had come to believe, was whether the traveler could keep working productively while waiting.",
+     cn:"常搭飛機出差的人往往會養成一些小習慣，讓延誤變得比較容易承受——備用充電器、事先下載好的文件、對「準時」這件事保有彈性的心態。Anita在越南與台灣之間每月往返兩年後學到了這一點：延誤很少真的是危機，除非你把它當成危機看待。她漸漸相信，更重要的是旅客能不能在等待的同時仍然有效率地工作。"},
+    {en:"Three hours later than scheduled, the flight finally took off, and Anita landed in Taipei just after midnight. The review meeting still went ahead as planned the next morning, slightly shorter than usual but no less productive. As she later told a colleague, the delay had cost her a night's sleep, not the meeting itself — and that, she said, was the real skill of business travel: protecting what actually mattered.",
+     cn:"比表定時間晚了三小時，班機終於起飛，Anita在午夜過後不久抵達台北。隔天早上的檢討會議仍照原訂計畫進行，時間比平常略短，但成效絲毫不打折。她後來告訴一位同事，這場延誤付出的代價是少睡一晚，而不是那場會議——她說，這才是商務出差真正的本事：守住真正重要的事。"}
+  ],
+  target:[
+    {w:"boarded",ipa:"/bɔːrdɪd/",pos:"v.",cn:"登機、上（交通工具）",def:"Got onto a plane, train, or ship.",ex:"Anita had boarded her flight from Ho Chi Minh City to Taipei with plenty of time to spare before her quarterly review meeting the next morning.",exCn:"Anita早早就登機了，從胡志明市飛往台北，離隔天早上的季度檢討會議還有充裕的時間。"},
+    {w:"mechanical inspection",ipa:"/məˈkænɪkl ɪnˈspekʃn/",pos:"n.",cn:"機械檢查",def:"A check to make sure a machine, such as an aircraft, is working safely.",ex:"The incoming aircraft had been held up by a mechanical inspection at its previous stop.",exCn:"機組的入境班機因為在前一站接受機械檢查而被耽擱。"},
+    {w:"resigning themselves to",ipa:"/rɪˈzaɪnɪŋ ðəmˈselvz tuː/",pos:"phr.",cn:"認命接受、無奈接受",def:"Accepting something unpleasant because you cannot change it.",ex:"Other business travelers were doing much the same... or simply resigning themselves to a longer wait.",exCn:"其他出差的商務人士也在做類似的事...或乾脆接受得再多等一陣子。"},
+    {w:"absorb",ipa:"/əbˈzɔːrb/",pos:"v.",cn:"承受、消化（衝擊）",def:"To deal with something difficult without being badly affected by it.",ex:"Frequent flyers tend to develop small routines that make delays easier to absorb.",exCn:"常搭飛機出差的人往往會養成一些小習慣，讓延誤變得比較容易承受。"},
+    {w:"backup",ipa:"/ˈbækʌp/",pos:"adj.",cn:"備用的",def:"Kept ready to use if the main one fails.",ex:"a backup charger, a downloaded document, a flexible mindset about what \"on time\" really means.",exCn:"備用充電器、事先下載好的文件、對「準時」這件事保有彈性的心態。"},
+    {w:"productively",ipa:"/prəˈdʌktɪvli/",pos:"adv.",cn:"有效率地、有生產力地",def:"In a way that produces good, useful results.",ex:"What mattered more... was whether the traveler could keep working productively while waiting.",exCn:"更重要的是旅客能不能在等待的同時仍然有效率地工作。"},
+    {w:"scheduled",ipa:"/ˈskedʒuːld/",pos:"adj.",cn:"表定的、預定的",def:"Planned to happen at a particular time.",ex:"Three hours later than scheduled, the flight finally took off.",exCn:"比表定時間晚了三小時，班機終於起飛。"},
+    {w:"protecting",ipa:"/prəˈtektɪŋ/",pos:"v.",cn:"保護、守住",def:"Keeping something safe from being lost or damaged.",ex:"That, she said, was the real skill of business travel: protecting what actually mattered.",exCn:"她說，這才是商務出差真正的本事：守住真正重要的事。"}
+  ],
+  questions:[
+    {q:"Why was Anita's flight delayed?",qCn:"Anita的班機為什麼延誤？",
+     opts:["A. Bad weather at the departure airport","B. The incoming aircraft needed a mechanical inspection","C. Anita missed the check-in deadline","D. The airline overbooked the flight"],
+     optsCn:["A. 出發機場天氣不好","B. 入境的班機需要接受機械檢查","C. Anita錯過了報到時間","D. 航空公司超賣機位"],ans:1,expl:"the incoming aircraft had been held up by a mechanical inspection at its previous stop."},
+    {q:"What did Anita do while waiting for the delayed flight?",qCn:"Anita在等待延誤的班機時做了什麼？",
+     opts:["A. She cancelled the meeting","B. She reviewed her presentation and messaged her manager","C. She booked a hotel near the airport","D. She asked for a full refund"],
+     optsCn:["A. 她取消了會議","B. 她複習簡報並傳訊息給主管","C. 她在機場附近訂了旅館","D. 她要求全額退費"],ans:1,expl:"Anita opened her laptop and began reviewing the presentation... She sent a short message to her manager."},
+    {q:"According to the article, what do frequent flyers tend to develop?",qCn:"根據文章，常出差的人往往會養成什麼？",
+     opts:["A. A dislike of air travel","B. Small routines that make delays easier to handle","C. A habit of complaining to airline staff","D. A preference for late flights"],
+     optsCn:["A. 對搭飛機的反感","B. 讓延誤更容易應付的一些小習慣","C. 向航空公司人員抱怨的習慣","D. 偏好搭晚班飛機"],ans:1,expl:"Frequent flyers tend to develop small routines that make delays easier to absorb."},
+    {q:"In this article, what does the phrase \"tend to develop\" suggest?",qCn:"在這篇文章中，「tend to develop」這個說法暗示什麼？",
+     opts:["A. A rule that is true for every single frequent flyer","B. A general pattern, not an absolute rule","C. Something that happened only once to Anita","D. An official airline policy"],
+     optsCn:["A. 對每一位常出差的人都成立的規則","B. 一種普遍傾向，不是絕對的規則","C. 只發生在Anita身上一次的事","D. 航空公司的正式政策"],ans:1,expl:"tend to 是緩和武斷語氣的說法，表示「通常、往往」，而不是「每一個人都一定會這樣」。"}
+  ],
+  upgrade:[
+    {b1:"The flight was late because a machine needed to be checked.",
+     b2:"The incoming aircraft had been held up by a mechanical inspection at its previous stop, and a new departure time had not yet been confirmed.",
+     note:"用過去完成式的被動（had been held up）交代「班機延誤之前，飛機已經發生了什麼事」，時間先後更精確，是B2敘事文常見的寫法。"},
+    {b1:"Anita didn't panic. She kept working on her laptop.",
+     b2:"Rather than panicking, Anita opened her laptop and began reviewing the presentation she would give the following day.",
+     note:"用 Rather than + V-ing 開頭取代兩個短句，語氣更流暢，是B2程度常見的句子開頭方式。"}
+  ]
+},
+
+{
   id:"d20260819a2", date:"2026-08-19", level:"A2", topic:"家人與朋友", words:98, kind:"orig",
   title:"A Visit to Grandma",
   titleCn:"探望奶奶",
@@ -423,6 +608,165 @@ articles:[
 ],
 
 grammar:[
+
+{
+  id:"dg20260821a2", date:"2026-08-21", unitNo:3,
+  level:"A2", title:"Present Continuous vs Present Simple (Now vs Every Day)", titleCn:"現在進行式 vs 現在簡單式（現在 vs 每天）",
+  srcDays:[],
+  summary:"現在進行式：am/is/are + V-ing，講「現在正在做」的事。現在簡單式：主詞+動詞（第三人稱加s），講「每天都這樣」的習慣。兩個看起來很像，但意思差很多。",
+  sections:[
+    {h:"基本形式對照", table:{head:["","現在進行式","現在簡單式"],rows:[
+      ["結構","am/is/are + V-ing","主詞 + 動詞（第三人稱加 s）"],
+      ["意思","現在正在做","每天都這樣（習慣）"],
+      ["例句","The bus is coming.","The bus comes at eight."]
+    ]}},
+    {h:"哪些字告訴你要用哪一個", bullets:[
+      "現在進行式常跟 now, right now, look! 一起出現",
+      "現在簡單式常跟 every day, usually, always 一起出現"
+    ], examples:[
+      {en:"Look! The bus is coming now.",cn:"你看！公車現在來了。",note:"現在正在發生"},
+      {en:"The bus comes at eight every morning.",cn:"公車每天早上八點來。",note:"每天的習慣"}
+    ]},
+    {h:"疑問句與否定句", bullets:[
+      "現在進行式疑問：Is the bus coming?　否定：The bus isn't coming.",
+      "現在簡單式疑問：Does the bus come at eight?　否定：The bus doesn't come at eight."
+    ]}
+  ],
+  traps:[
+    {bad:"The bus comes now.",good:"The bus is coming now.",why:"now 表示「現在正在發生」，要用現在進行式 is coming，不能用現在簡單式 comes。"},
+    {bad:"Look! The bus comes.",good:"Look! The bus is coming.",why:"Look! 提示「現在正在看到的事」，要用現在進行式。"},
+    {bad:"The bus is coming every day at eight.",good:"The bus comes every day at eight.",why:"every day 是習慣，要用現在簡單式 comes，不能用進行式。"},
+    {bad:"He is take the bus to work.",good:"He takes the bus to work.",why:"現在簡單式不需要 be 動詞，動詞直接加 s：takes，不能寫成 is take。"}
+  ],
+  quiz:[
+    {q:"The bus ___ at eight o'clock every morning.",qCn:"公車每天早上八點會來。",opts:["come","comes","is coming","is come"],ans:1,expl:"every morning 是習慣，用現在簡單式，第三人稱加s：comes。"},
+    {q:"Look! The bus ___ now.",qCn:"你看！公車現在正過來。",opts:["comes","is coming","come","was coming"],ans:1,expl:"now 表示現在正在發生，用現在進行式：is coming。"},
+    {q:"Tom ___ the bus to work every day.",qCn:"Tom每天都搭公車上班。",opts:["take","takes","is taking","taking"],ans:1,expl:"every day 是習慣，主詞是Tom（三單），動詞加s：takes。"},
+    {q:"___ you waiting for the bus right now?",qCn:"你現在正在等公車嗎？",opts:["Do","Does","Are","Is"],ans:2,expl:"主詞是you，現在進行式疑問句用 Are。"}
+  ]
+},
+
+{
+  id:"dg20260821b1", date:"2026-08-21", unitNo:3,
+  level:"B1", title:"Present Simple vs Present Continuous: State Verbs and Temporary Situations", titleCn:"現在簡單式 vs 現在進行式：狀態動詞與暫時的情況",
+  srcDays:[],
+  summary:"除了「習慣 vs 現在」，這兩個時態還有另一個常見的對比：永久的狀態用簡單式，暫時的情況用進行式；而且某些「狀態動詞」完全不能用進行式。",
+  sections:[
+    {h:"永久狀態 vs 暫時情況", table:{head:["","現在簡單式","現在進行式"],rows:[
+      ["時間感","長期、一直如此","這陣子、暫時"],
+      ["例句","Mia takes the MRT to work.","Mia is taking a taxi this week because the MRT is closed."]
+    ]}, examples:[
+      {en:"Mia takes the MRT to work every day.",cn:"Mia每天都搭捷運上班。",note:"長期的通勤方式"},
+      {en:"Mia is taking a taxi this week because of the signal problem.",cn:"因為號誌問題，Mia這禮拜改搭計程車。",note:"這禮拜的暫時安排"}
+    ]},
+    {h:"⚠ 狀態動詞不能用進行式", bullets:[
+      "know, like, want, need, believe, have（擁有）這類動詞描述「狀態」，不是「動作」",
+      "✓ Mia knows the platform is crowded. ✗ Mia is knowing the platform is crowded."
+    ]},
+    {h:"have 的例外", bullets:[
+      "have 當「擁有」時不能用進行式：She has a monthly pass.",
+      "have 當「經歷、吃」時可以用進行式：She is having a hard morning."
+    ]},
+    {h:"頻率副詞的位置", bullets:[
+      "一般動詞前：Mia usually takes the MRT.",
+      "be動詞後：The platform is usually quiet."
+    ]}
+  ],
+  traps:[
+    {bad:"Mia is knowing the train is late.",good:"Mia knows the train is late.",why:"know 是狀態動詞，不能加 -ing，不管句子聽起來多「現在」都一樣。"},
+    {bad:"Mia takes a taxi this week because of the signal problem.",good:"Mia is taking a taxi this week because of the signal problem.",why:"this week 是暫時的安排，要用現在進行式，不能用習慣性的現在簡單式。"},
+    {bad:"Mia is having a monthly pass.",good:"Mia has a monthly pass.",why:"have 表示「擁有」時是狀態動詞，不能用進行式；只有 have 表示「經歷」時才能加 -ing。"},
+    {bad:"The platform usually is crowded at eight.",good:"The platform is usually crowded at eight.",why:"頻率副詞 usually 要放在 be 動詞後面，不是前面。"}
+  ],
+  quiz:[
+    {q:"Mia ___ the platform is more crowded than usual today.",qCn:"Mia知道今天月台比平常擁擠。",opts:["is knowing","knows","know","is know"],ans:1,expl:"know 是狀態動詞，不能用進行式，第三人稱要加s：knows。"},
+    {q:"Mia ___ a taxi this week because the MRT line has a problem.",qCn:"因為捷運線出問題，Mia這禮拜改搭計程車。",opts:["takes","take","is taking","took"],ans:2,expl:"this week 是暫時的安排，用現在進行式：is taking。"},
+    {q:"The platform ___ usually crowded before eight.",qCn:"月台通常八點前都很擁擠。",opts:["are","is","be","being"],ans:1,expl:"主詞 platform 是單數，用 is；usually 放在 be 動詞後面。"},
+    {q:"Which sentence is correct?",qCn:"哪一句是正確的？",opts:["Mia is having a monthly pass.","Mia has a monthly pass.","Mia have a monthly pass.","Mia is have a monthly pass."],ans:1,expl:"have 表示「擁有」是狀態動詞，第三人稱單數用 has，不能用進行式。"}
+  ]
+},
+
+{
+  id:"dg20260821b1p", date:"2026-08-21", unitNo:3,
+  level:"B1+", title:"Present Continuous for Fixed Plans vs Present Simple for Timetables", titleCn:"現在進行式表示已安排好的計畫 vs 現在簡單式表示時刻表",
+  srcDays:[],
+  summary:"到了B1+，這兩個時態都能講「未來」：現在進行式講「我已經安排好、跟別人約好的計畫」；現在簡單式講「像時刻表一樣、不是我能決定的固定行程」。",
+  sections:[
+    {h:"兩種「未來」的差別", table:{head:["","現在進行式表未來","現在簡單式表未來"],rows:[
+      ["用在誰的決定","說話者自己安排、約好的計畫","時刻表、別人排定、不會臨時改"],
+      ["例句","I'm meeting my manager at nine tomorrow.","The train leaves at nine every weekday."]
+    ]}, examples:[
+      {en:"Mia is taking the earlier train tomorrow because she has a meeting.",cn:"Mia明天要搭比較早的班次，因為她有會議。",note:"她自己安排的計畫"},
+      {en:"The first train leaves the station at five thirty every day.",cn:"首班車每天五點半從車站出發。",note:"固定的時刻表，不是臨時決定"}
+    ]},
+    {h:"為什麼不是用 will", bullets:[
+      "will 通常是「臨時決定」或「預測」：I think I'll take a taxi.（臨時想到）",
+      "已經安排好、跟別人約好的事，用現在進行式更自然：I'm taking a taxi at seven.（已經約好、訂好了）"
+    ]},
+    {h:"暫時 vs 習慣的細微差別", bullets:[
+      "現在進行式也能表示「這陣子的趨勢」，不一定是「這一刻」：More people are using bikes to commute these days.",
+      "這種用法常搭配 these days, this month, recently 這類字"
+    ]},
+    {h:"疑問句的語氣差別", examples:[
+      {en:"Are you taking the MRT tomorrow?",cn:"你明天要搭捷運嗎？",note:"問對方的個人安排"},
+      {en:"Does the MRT run on public holidays?",cn:"國定假日捷運有開嗎？",note:"問一般的規則、時刻表"}
+    ]}
+  ],
+  traps:[
+    {bad:"I will meet my manager at nine tomorrow, we already agreed on it.",good:"I'm meeting my manager at nine tomorrow.",why:"已經約好的計畫要用現在進行式，will 聽起來像是臨時才決定的。"},
+    {bad:"The first train will leave at five thirty every day.",good:"The first train leaves at five thirty every day.",why:"固定不變的時刻表用現在簡單式講未來，will 反而讓人以為時間可能會變。"},
+    {bad:"More people use bikes to commute these days.",good:"More people are using bikes to commute these days.",why:"these days 表示「這陣子的趨勢」，即使不是「這一刻」也要用現在進行式，不能用現在簡單式。"},
+    {bad:"Does the MRT running on public holidays?",good:"Does the MRT run on public holidays?",why:"疑問句 Does 後面的動詞要用原形 run，不能加 -ing。"}
+  ],
+  quiz:[
+    {q:"I ___ my manager at nine tomorrow — we already agreed on it.",qCn:"我明天九點要跟主管開會——我們已經約好了。",opts:["will meet","am meeting","meet","met"],ans:1,expl:"已經約好的計畫用現在進行式表未來：am meeting。"},
+    {q:"The first train ___ the station at five thirty every day.",qCn:"首班車每天五點半從車站出發。",opts:["is leaving","leaves","will leave","leave"],ans:1,expl:"固定的時刻表用現在簡單式表未來：leaves。"},
+    {q:"More people ___ bikes to commute these days.",qCn:"這陣子越來越多人騎腳踏車通勤。",opts:["use","uses","are using","used"],ans:2,expl:"these days 表示這陣子的趨勢，用現在進行式：are using。"},
+    {q:"___ the MRT run on public holidays?",qCn:"國定假日捷運有開嗎？",opts:["Is","Are","Does","Do"],ans:2,expl:"問一般規則用現在簡單式疑問句，主詞 the MRT 是第三人稱單數：Does。"}
+  ]
+},
+
+{
+  id:"dg20260821b2", date:"2026-08-21", unitNo:3,
+  level:"B2", title:"Present Continuous and Present Simple: Register and Rhetorical Effect", titleCn:"現在進行式與現在簡單式的語域與修辭效果",
+  srcDays:[],
+  summary:"到了B2，這兩個時態不只是文法規則：現在進行式加上 always/constantly 可以表達「抱怨、不滿」；新聞標題常用現在簡單式製造即時感；而正式報告則偏好用現在簡單式陳述通則、少用進行式的情緒色彩。",
+  sections:[
+    {h:"① always/constantly + 現在進行式：抱怨的語氣", body:[
+      "加上 always 或 constantly，現在進行式不再是「現在正在做」，而是「一直這樣，很煩」：",
+      "The Red Line is always having signal problems.（抱怨：這條線老是出狀況）",
+      "對比中性的說法：The Red Line has signal problems sometimes.（客觀陳述，沒有情緒）"
+    ]},
+    {h:"② 新聞標題：現在簡單式製造即時感", bullets:[
+      "新聞標題常省略助動詞，用現在簡單式講剛發生的事，讓讀者感覺「正在發生」：",
+      "Signal Fault Delays Thousands（標題：現在簡單式，即使是已發生的事）",
+      "但新聞內文仍然用過去式：A fault delayed thousands of commuters this morning."
+    ]},
+    {h:"③ 現在進行式描述「發展中的趨勢」", table:{head:["寫法","效果"],rows:[
+      ["Ridership is falling.","強調「正在改變中」的動態趨勢，常見於分析報導"],
+      ["Ridership falls in winter.","陳述一個固定、重複發生的模式"]
+    ]}, examples:[
+      {en:"More commuters are switching to bikes as delays increase.",cn:"隨著誤點增加，越來越多通勤族正在轉向騎腳踏車。",note:"強調正在發展中的趨勢，語氣較生動"}
+    ]},
+    {h:"④ 正式報告偏好現在簡單式", bullets:[
+      "正式報告、學術寫作陳述通則或結論時，偏好現在簡單式，語氣客觀、不帶情緒：",
+      "Aging infrastructure tends to cause more frequent delays.（正式、客觀）",
+      "少用 always + 進行式這種帶情緒的說法，除非是刻意引用受訪者的抱怨。"
+    ]}
+  ],
+  traps:[
+    {bad:"The Red Line has signal problems sometimes, I'm so tired of it!",good:"The Red Line is always having signal problems, I'm so tired of it!",why:"想表達「抱怨、受不了了」的語氣，要用 always/constantly + 現在進行式，單純的現在簡單式聽起來太中性、沒有情緒。"},
+    {bad:"（新聞標題）A Fault Delayed Thousands This Morning",good:"（新聞標題）Signal Fault Delays Thousands",why:"新聞標題習慣用現在簡單式製造「即時感」，就算事情已經發生了；但內文報導本身還是要用過去式。"},
+    {bad:"Ridership falls this month compared to last month, we don't know why yet.",good:"Ridership is falling this month compared to last month, we don't know why yet.",why:"講「正在變化中、還沒結束」的趨勢，要用現在進行式；現在簡單式聽起來像是已經確定、固定的模式。"},
+    {bad:"Aging infrastructure is tending to cause more frequent delays.（正式報告）",good:"Aging infrastructure tends to cause more frequent delays.",why:"tend to 本身已經表達「傾向、通常」的意思，是狀態動詞用法，正式寫作中不需要、也不該再加 -ing。"}
+  ],
+  quiz:[
+    {q:"Which sentence best expresses a complaint?",qCn:"哪一句最能表達「抱怨」的語氣？",opts:["The Red Line has signal problems sometimes.","The Red Line is always having signal problems.","The Red Line had a signal problem yesterday.","The Red Line will have a signal problem."],ans:1,expl:"always + 現在進行式是表達不滿、抱怨的固定用法。"},
+    {q:"Which is a typical news headline style?",qCn:"哪一個比較像典型的新聞標題寫法？",opts:["Signal Fault Delays Thousands","A Signal Fault Delayed Thousands This Morning","A Signal Fault Was Delaying Thousands","A Signal Fault Has Delayed Thousands"],ans:0,expl:"新聞標題習慣用現在簡單式製造即時感，即使事情已經發生。"},
+    {q:"Ridership ___ this month, and analysts are not sure why yet.",qCn:"這個月的搭乘人次正在下滑，分析師還不確定原因。",opts:["falls","is falling","fell","has fallen"],ans:1,expl:"強調「正在變化中、還沒有定論」的趨勢，用現在進行式：is falling。"},
+    {q:"Which sentence is more appropriate in a formal report?",qCn:"哪一句比較適合出現在正式報告中？",opts:["Aging infrastructure is tending to cause more frequent delays.","Aging infrastructure tends to cause more frequent delays.","Aging infrastructure is always causing more frequent delays.","Aging infrastructure will be causing more frequent delays."],ans:1,expl:"tend to 是狀態動詞用法，正式報告的客觀陳述不需要、也不能加 -ing。"}
+  ]
+},
 
 {
   id:"dg20260819a2", date:"2026-08-19", unitNo:2,

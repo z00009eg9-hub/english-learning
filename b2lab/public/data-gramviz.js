@@ -469,5 +469,49 @@ V.dg20260819b2=card(
   en:'Vaccines tend to reduce severe illness.', cn:'tend to / can 讓陳述留有例外空間，比直接斷言更嚴謹'},
  '同樣是現在簡單式：口語敘事可以用「歷史現在式」拉近距離、增加戲劇效果；正式與學術寫作則常用 tend to / can 緩和過度武斷的語氣。');
 
+/* ---------- A2：現在進行式 vs 現在簡單式（同 nowVsAlways） ---------- */
+V.dg20260821a2=V.nowVsAlways;
+
+/* ---------- B1：長期習慣 vs 暫時的安排 ---------- */
+V.dg20260821b1=card(
+ {pw:190,title:'長期的習慣',
+  draw:em(160,150,58,'🚇')
+   +'<text x="160" y="212" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">every day 每天都這樣</text>',
+  en:'Mia takes the MRT every day.', cn:'長期不變的通勤方式'},
+ {pw:200,title:'暫時的安排',
+  draw:em(160,150,58,'🚕')
+   +bub(160,214,'⏳ THIS WEEK',140),
+  en:'Mia is taking a taxi this week.', cn:'加上 this week 這類字，表示暫時、之後會改回來'},
+ '左邊：現在簡單式，長期不變的通勤習慣；右邊：現在進行式，加上 this week 這類字，表示暫時的安排，之後會改回來。');
+
+/* ---------- B1+：已經約好的計畫 vs 時刻表 ---------- */
+V.dg20260821b1p=card(
+ {pw:200,title:'已經約好的計畫',
+  draw:em(120,150,50,'🤝')
+   +bub(226,120,'9:00 tomorrow',120)
+   +'<text x="160" y="220" text-anchor="middle" font-size="13" font-weight="800" fill="#c9631f">自己安排、跟別人約好</text>',
+  en:"I'm meeting my manager at nine tomorrow.", cn:'現在進行式：說話者自己安排的計畫'},
+ {pw:190,title:'時刻表，不是決定',
+  draw:em(160,148,54,'🕠')
+   +'<text x="160" y="200" text-anchor="middle" font-size="15" font-weight="900" fill="#2b5f92">05:30 每天</text>'
+   +'<text x="160" y="222" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7c8b96">別人排好，不會臨時改</text>',
+  en:'The first train leaves at five thirty every day.', cn:'現在簡單式：像時刻表一樣固定的未來'},
+ '左邊：現在進行式，講自己已經安排、跟別人約好的計畫；右邊：現在簡單式，講像時刻表一樣、不是誰能臨時決定的固定行程。');
+
+/* ---------- B2：always+進行式的抱怨語氣 vs 新聞標題的現在簡單式 ---------- */
+V.dg20260821b2=card(
+ {pw:210,title:'always + 進行式：抱怨',
+  draw:em(140,140,50,'😤')
+   +bub(190,190,'always having problems',196)
+   +'<text x="160" y="238" text-anchor="middle" font-size="13" font-weight="800" fill="#c9631f">帶著不滿、抱怨的情緒</text>',
+  en:'The Red Line is always having problems.', cn:'加上 always，現在進行式變成抱怨的語氣'},
+ {pw:210,title:'新聞標題：現在簡單式',
+  draw:'<rect x="30" y="96" width="260" height="66" rx="6" fill="#fff" stroke="#1c2c45" stroke-width="3"/>'
+   +'<text x="160" y="126" text-anchor="middle" font-size="15" font-weight="900" fill="#1c2c45">Signal Fault</text>'
+   +'<text x="160" y="150" text-anchor="middle" font-size="15" font-weight="900" fill="#1c2c45">Delays Thousands</text>'
+   +'<text x="160" y="238" text-anchor="middle" font-size="13" font-weight="800" fill="#7c8b96">標題省略助動詞，製造即時感</text>',
+  en:'Signal Fault Delays Thousands', cn:'新聞標題用現在簡單式，即使事情已發生'},
+ 'always/constantly + 現在進行式帶著抱怨、不滿的情緒；新聞標題則用現在簡單式製造「即時感」——兩種都不是字面上的「現在」，而是修辭效果。');
+
 return V;
 })();

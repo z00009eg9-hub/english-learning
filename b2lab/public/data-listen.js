@@ -15,6 +15,171 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週三／五更新） ========== */
 notes:[
 {
+  id:"dl20260821a2",
+  date:"2026-08-21",
+  level:"A2",
+  minutes:2,
+  kind:"note",
+  title:"The Bus Was Late This Morning",
+  titleCn:"今天早上公車遲到了",
+  series:"本站自製聽力 · 交通主題",
+  topic:"🚌 等公車",
+  focus:"過去簡單式描述早上發生的事（was late, came）；現在簡單式描述習慣（usually comes）",
+  intro:"Tom的同事Amy發現他今天看起來很累，問他怎麼了。這一課句子都很短，重點是聽出「平常怎樣」和「今天怎樣」的差別：usually 開頭的是習慣，today 開頭的是今天特別發生的事。",
+  tip:"第一次聽先抓「今天早上發生了什麼事」，第二次再聽Tom最後有沒有遲到。",
+  pre:[
+    {w:"late",ipa:"/leɪt/",cn:"遲到的、晚的",def:"Arriving after the expected time."},
+    {w:"stressful",ipa:"/ˈstresfl/",cn:"有壓力的",def:"Making you feel worried or nervous."},
+    {w:"meeting",ipa:"/ˈmiːtɪŋ/",cn:"會議",def:"A time when people talk about work together."},
+    {w:"problem",ipa:"/ˈprɑːbləm/",cn:"問題、狀況",def:"Something that is not working correctly."},
+    {w:"wait",ipa:"/weɪt/",cn:"等",def:"To stay in a place until something happens."},
+    {w:"made it",ipa:"/meɪd ɪt/",cn:"及時趕到、辦到了",def:"Arrived somewhere in time, or succeeded at something."}
+  ],
+  script:[
+    {sp:"Amy",en:"Hi Tom! Are you okay? You look tired.",cn:"嗨Tom！你還好嗎？你看起來很累。"},
+    {sp:"Tom",en:"I'm okay, but my morning was a little stressful.",cn:"我還好，但今天早上有點有壓力。"},
+    {sp:"Amy",en:"What happened?",cn:"發生什麼事了？"},
+    {sp:"Tom",en:"The bus was late today. It usually comes at eight, but it came at eight fifteen.",cn:"公車今天遲到了。它通常八點會來，但今天八點十五分才來。"},
+    {sp:"Amy",en:"Oh no! Were you late for the meeting?",cn:"喔不！你會議遲到了嗎？"},
+    {sp:"Tom",en:"No, I wasn't. I ran to the office and made it just in time.",cn:"沒有，我沒遲到。我跑去辦公室，剛好趕上了。"},
+    {sp:"Amy",en:"That's good. Do you know why the bus was late?",cn:"太好了。你知道公車為什麼遲到嗎？"},
+    {sp:"Tom",en:"A woman at the bus stop said there was a problem on the road.",cn:"公車站的一位女士說路上有狀況。"},
+    {sp:"Amy",en:"I hope it's better tomorrow.",cn:"希望明天會好一點。"},
+    {sp:"Tom",en:"Me too! I don't like waiting in the morning.",cn:"我也希望！我不喜歡早上一直等。"}
+  ],
+  questions:[
+    {q:"How did Tom feel this morning?",qCn:"Tom今天早上覺得怎麼樣？",opts:["A. Very happy","B. A little stressful","C. Very hungry","D. Very sleepy"],optsCn:["A. 非常開心","B. 有點有壓力","C. 非常餓","D. 非常想睡"],ans:1,expl:"I'm okay, but my morning was a little stressful."},
+    {q:"What time did the bus usually come?",qCn:"公車通常幾點會來？",opts:["A. Seven o'clock","B. Eight o'clock","C. Eight fifteen","D. Nine o'clock"],optsCn:["A. 七點","B. 八點","C. 八點十五分","D. 九點"],ans:1,expl:"It usually comes at eight, but it came at eight fifteen."},
+    {q:"Was Tom late for the meeting?",qCn:"Tom會議遲到了嗎？",opts:["A. Yes, he was very late","B. No, he made it just in time","C. He did not go to the meeting","D. The meeting was cancelled"],optsCn:["A. 是的，他遲到很久","B. 沒有，他剛好趕上了","C. 他沒有去開會","D. 會議取消了"],ans:1,expl:"No, I wasn't. I ran to the office and made it just in time."},
+    {q:"Tom ____ visit the bus stop woman's story to Amy.",qCn:"Tom把公車站那位女士說的話告訴了Amy。（選出正確的動詞形式）",opts:["tell","tells","told","telling"],ans:2,expl:"這是過去發生的事，動詞用過去式：told。"},
+    {q:"Why was the bus late, according to the woman at the bus stop?",qCn:"根據公車站那位女士的說法，公車為什麼遲到？",opts:["A. The driver was sick","B. There was a problem on the road","C. It was a public holiday","D. The bus broke down"],optsCn:["A. 司機生病了","B. 路上有狀況","C. 那天是國定假日","D. 公車故障了"],ans:1,expl:"A woman at the bus stop said there was a problem on the road."}
+  ]
+},
+
+{
+  id:"dl20260821b1",
+  date:"2026-08-21",
+  level:"B1",
+  minutes:3,
+  kind:"note",
+  title:"Mia's Delayed Commute",
+  titleCn:"Mia的通勤延誤",
+  series:"本站自製聽力 · 交通與通勤主題",
+  topic:"🚇 捷運號誌問題",
+  focus:"現在完成式（have taken / have never seen）與比較級（more crowded than usual）",
+  intro:"Mia跟同事Ben聊起今天早上的捷運號誌問題。留意現在完成式怎麼講「到目前為止的經驗」，還有比較級 more crowded than 的用法。",
+  tip:"第一次聽抓住「Mia今天早上發生了什麼事」，第二次再聽她傳訊息給主管之後，主管怎麼回應。",
+  pre:[
+    {w:"signal",ipa:"/ˈsɪɡnəl/",cn:"號誌",def:"A system used to control trains and keep them a safe distance apart."},
+    {w:"crowded",ipa:"/ˈkraʊdɪd/",cn:"擁擠的",def:"Full of people."},
+    {w:"delayed",ipa:"/dɪˈleɪd/",cn:"被延誤的",def:"Made to happen later than planned."},
+    {w:"exhausted",ipa:"/ɪɡˈzɔːstɪd/",cn:"筋疲力盡的",def:"Extremely tired."},
+    {w:"coworkers",ipa:"/ˈkoʊˌwɜːrkərz/",cn:"同事",def:"People you work with."},
+    {w:"fixed",ipa:"/fɪkst/",cn:"修好的",def:"Repaired so it works correctly again."}
+  ],
+  script:[
+    {sp:"Ben",en:"You look exhausted. Rough morning?",cn:"你看起來筋疲力盡。今天早上不太順嗎？"},
+    {sp:"Mia",en:"Very rough. There was a signal problem on my MRT line today.",cn:"非常不順。我搭的那條捷運線今天有號誌問題。"},
+    {sp:"Ben",en:"Oh no, how long were you delayed?",cn:"喔不，你被延誤了多久？"},
+    {sp:"Mia",en:"About fifteen minutes. The platform was more crowded than I have ever seen it.",cn:"大概十五分鐘。月台比我以前看過的都還要擁擠。"},
+    {sp:"Ben",en:"Did you message anyone about being late?",cn:"你有傳訊息跟誰說你會遲到嗎？"},
+    {sp:"Mia",en:"Yes, I sent a quick message to my manager. She said it was fine because other coworkers were late too.",cn:"有，我傳了簡短的訊息給主管。她說沒關係，因為其他同事也遲到了。"},
+    {sp:"Ben",en:"That's good that she understood.",cn:"她能理解真是太好了。"},
+    {sp:"Mia",en:"I know. I've taken this line for three years, but today was different.",cn:"對啊。我搭這條線已經三年了，但今天不一樣。"},
+    {sp:"Ben",en:"Do you think it will happen again tomorrow?",cn:"你覺得明天還會再發生嗎？"},
+    {sp:"Mia",en:"I hope not. I really hope the signal problem is fixed soon.",cn:"希望不會。我真的希望號誌問題能快點修好。"}
+  ],
+  questions:[
+    {q:"Why was Mia's platform so crowded this morning?",qCn:"為什麼Mia今天早上的月台這麼擁擠？",opts:["A. It was a public holiday","B. There was a signal problem on the line","C. A new station just opened","D. The escalator was broken"],optsCn:["A. 那天是國定假日","B. 這條線有號誌問題","C. 新車站剛開幕","D. 電扶梯故障了"],ans:1,expl:"There was a signal problem on my MRT line today."},
+    {q:"How long was Mia delayed?",qCn:"Mia被延誤了多久？",opts:["A. About five minutes","B. About fifteen minutes","C. About one hour","D. She was not delayed"],optsCn:["A. 大約五分鐘","B. 大約十五分鐘","C. 大約一小時","D. 她沒有被延誤"],ans:1,expl:"About fifteen minutes."},
+    {q:"Why did Mia's manager say it was fine that she was late?",qCn:"為什麼Mia的主管說她遲到沒關係？",opts:["A. The manager was also late","B. Other coworkers were late too","C. There was no work that day","D. Mia had already finished her tasks"],optsCn:["A. 主管也遲到了","B. 其他同事也遲到了","C. 那天沒有工作","D. Mia已經完成她的工作了"],ans:1,expl:"She said it was fine because other coworkers were late too."},
+    {q:"Mia ____ this MRT line for three years.",qCn:"Mia搭這條捷運線已經三年了。（選出正確的動詞形式）",opts:["takes","took","has taken","is taking"],ans:2,expl:"「持續到現在」的經驗要用現在完成式：has taken，搭配 for three years。"},
+    {q:"What does Mia hope will happen?",qCn:"Mia希望發生什麼事？",opts:["A. The MRT will be free tomorrow","B. The signal problem will be fixed soon","C. She will get a new manager","D. The line will be closed"],optsCn:["A. 明天捷運免費","B. 號誌問題能快點修好","C. 她會有新主管","D. 這條線會關閉"],ans:1,expl:"I really hope the signal problem is fixed soon."}
+  ]
+},
+
+{
+  id:"dl20260821b1p",
+  date:"2026-08-21",
+  level:"B1+",
+  minutes:3,
+  kind:"note",
+  title:"Commuters React to the Signal Fault",
+  titleCn:"通勤族對號誌故障的反應",
+  series:"本站自製聽力 · 交通與通勤主題",
+  topic:"🚆 城市級的號誌問題",
+  focus:"被動語態（were held, is expected）與關係子句（that／who）在對話中的用法",
+  intro:"兩位通勤族Leo和Nina聊起這週紅線的號誌故障，話題從一個人的經驗拉遠到整個系統。留意被動語態怎麼把焦點放在「發生了什麼事」，還有 that／who 引導的關係子句怎麼補充資訊。",
+  tip:"第一次聽抓住「這次故障影響了多久、為什麼發生」；第二次再聽兩人對「該怎麼應對」達成了什麼共識。",
+  pre:[
+    {w:"fault",ipa:"/fɔːlt/",cn:"故障",def:"A problem that stops something from working correctly."},
+    {w:"aging",ipa:"/ˈeɪdʒɪŋ/",cn:"老舊的",def:"Old and often close to needing replacement."},
+    {w:"transit authority",ipa:"/ˈtrænzɪt əˈθɒrəti/",cn:"捷運局、運輸主管機關",def:"The organization in charge of running public transportation."},
+    {w:"replaced",ipa:"/rɪˈpleɪst/",cn:"被更換的",def:"Had a new one put in the place of the old one."},
+    {w:"rush hour",ipa:"/rʌʃ ˈaʊər/",cn:"尖峰時段",def:"The time of day when traffic and public transportation are the busiest."},
+    {w:"advised",ipa:"/ədˈvaɪzd/",cn:"被建議的",def:"Told what would be a good thing to do."},
+    {w:"equipment",ipa:"/ɪˈkwɪpmənt/",cn:"設備",def:"The machines or tools needed for a particular job."}
+  ],
+  script:[
+    {sp:"Nina",en:"Did you hear? The Red Line was delayed for almost two hours this morning.",cn:"你聽說了嗎？紅線今天早上被延誤了將近兩小時。"},
+    {sp:"Leo",en:"Yes, I read that the fault was reported early on Monday.",cn:"有，我看到報導說這個故障是週一清晨通報的。"},
+    {sp:"Nina",en:"Several trains were held at stations while engineers checked the system.",cn:"好幾班列車被留置在車站，等工程人員檢查系統。"},
+    {sp:"Leo",en:"I heard most signal problems are caused by aging equipment that hasn't been replaced yet.",cn:"我聽說大部分號誌問題都是還沒被更換的老舊設備造成的。"},
+    {sp:"Nina",en:"A new system is expected to be installed next year, right?",cn:"新系統預計明年安裝，對吧？"},
+    {sp:"Leo",en:"That's what the transit authority said. Until then, we're advised to check the app before leaving home.",cn:"捷運局是這樣說的。在那之前，建議我們出門前先查App。"},
+    {sp:"Nina",en:"I guess we should just allow extra time during rush hour.",cn:"看來我們尖峰時段就是要多留一點時間。"},
+    {sp:"Leo",en:"Exactly. Especially on lines where older equipment is still being used.",cn:"沒錯，尤其是還在使用老舊設備的路線。"}
+  ],
+  questions:[
+    {q:"How long was the Red Line delayed this morning?",qCn:"紅線今天早上被延誤了多久？",opts:["A. About fifteen minutes","B. Almost two hours","C. All day","D. It was not delayed"],optsCn:["A. 大約十五分鐘","B. 將近兩小時","C. 一整天","D. 沒有被延誤"],ans:1,expl:"The Red Line was delayed for almost two hours this morning."},
+    {q:"According to Leo, what causes most signal problems?",qCn:"根據Leo的說法，大部分號誌問題的原因是什麼？",opts:["A. Bad weather","B. Aging equipment that hasn't been replaced","C. Too many passengers","D. Human error"],optsCn:["A. 天氣不好","B. 還沒被更換的老舊設備","C. 乘客太多","D. 人為疏失"],ans:1,expl:"I heard most signal problems are caused by aging equipment that hasn't been replaced yet."},
+    {q:"Several trains ____ at stations while engineers checked the system.",qCn:"好幾班列車被留置在車站，等工程人員檢查系統。（選出正確的動詞形式）",opts:["held","were held","hold","are holding"],ans:1,expl:"「被留置」是被動語態，過去式：were held。"},
+    {q:"What are commuters advised to do until the new system is installed?",qCn:"在新系統安裝之前，通勤族被建議怎麼做？",opts:["A. Stop using the MRT","B. Check the app before leaving home","C. Only travel at night","D. Complain to the transit authority in person"],optsCn:["A. 不要搭捷運","B. 出門前先查App","C. 只在晚上出門","D. 親自去向捷運局抱怨"],ans:1,expl:"we're advised to check the app before leaving home."},
+    {q:"When is the new signal system expected to be installed?",qCn:"新的號誌系統預計什麼時候安裝？",opts:["A. Next week","B. Next year","C. It was already installed","D. There are no plans for a new system"],optsCn:["A. 下週","B. 明年","C. 已經安裝好了","D. 沒有安裝新系統的計畫"],ans:1,expl:"A new system is expected to be installed next year."}
+  ]
+},
+
+{
+  id:"dl20260821b2",
+  date:"2026-08-21",
+  level:"B2",
+  minutes:4,
+  kind:"note",
+  title:"The Secret to Handling Travel Delays",
+  titleCn:"應付出差延誤的訣竅",
+  series:"本站自製聽力 · 商務旅行主題",
+  topic:"🎙️ 出差心法訪談",
+  focus:"正式訪談語域：tend to 緩和語氣；hedging 與抽象名詞（mindset, buffer, crisis）",
+  intro:"一段模擬的訪談：主持人訪問常出差的Ms. Chen，聊她怎麼應付班機延誤。留意她怎麼用 tend to 這類詞讓建議聽起來更嚴謹、不武斷，也留意她怎麼把「延誤」重新定義成心態問題而不是時間問題。",
+  tip:"第一次聽抓住Ms. Chen給的具體建議有哪些；第二次再注意她怎麼用 tend to、rather than 這類詞讓語氣更正式、更留有餘地。",
+  pre:[
+    {w:"frequent",ipa:"/ˈfriːkwənt/",cn:"頻繁的",def:"Happening often."},
+    {w:"routine",ipa:"/ruːˈtiːn/",cn:"固定的習慣、常規",def:"A regular way of doing things."},
+    {w:"backup",ipa:"/ˈbækʌp/",cn:"備用的",def:"Kept ready to use if the main one fails."},
+    {w:"mindset",ipa:"/ˈmaɪndset/",cn:"心態",def:"A person's usual way of thinking about things."},
+    {w:"buffer",ipa:"/ˈbʌfər/",cn:"緩衝時間",def:"Extra time or space kept in case something goes wrong."},
+    {w:"crisis",ipa:"/ˈkraɪsɪs/",cn:"危機",def:"A time of great difficulty or danger."},
+    {w:"productive",ipa:"/prəˈdʌktɪv/",cn:"有生產力的、有效率的",def:"Producing good, useful results."}
+  ],
+  script:[
+    {sp:"Host",en:"Delays seem to be part of business travel these days. What's your best advice for staying productive?",cn:"現在出差好像很難避免延誤。你給大家保持效率的最佳建議是什麼？"},
+    {sp:"Ms. Chen",en:"Frequent travelers tend to build small routines — a backup charger, offline documents, that sort of thing.",cn:"常出差的人往往會建立一些小習慣——備用充電器、離線的文件，諸如此類。"},
+    {sp:"Host",en:"How do you personally handle a sudden delay, like a mechanical issue?",cn:"你自己遇到突發延誤，像是機械問題，會怎麼處理？"},
+    {sp:"Ms. Chen",en:"I try not to panic. I open my laptop and keep working on whatever I can, rather than watching the departure board.",cn:"我試著不要慌張。我會打開筆電，繼續做能做的工作，而不是一直盯著出境看板。"},
+    {sp:"Host",en:"Is there a mindset shift that helps?",cn:"有什麼心態上的轉變有幫助嗎？"},
+    {sp:"Ms. Chen",en:"Definitely. A delay is rarely a real crisis unless you treat it as one. What matters is protecting your sleep and your focus, not the exact arrival time.",cn:"當然有。延誤很少真的是危機，除非你把它當成危機看待。重要的是保護你的睡眠和專注力，而不是精確的抵達時間。"},
+    {sp:"Host",en:"Any final advice for someone flying for an important meeting tomorrow?",cn:"對明天要搭機去開重要會議的人，有什麼最後的建議嗎？"},
+    {sp:"Ms. Chen",en:"Plan a buffer if you can, but if a delay happens anyway, remember: the meeting almost always still goes ahead. It's usually just shorter, not cancelled.",cn:"可以的話，安排一點緩衝時間；但就算還是延誤了，記住：會議幾乎都還是會照常進行，通常只是變短，不會被取消。"}
+  ],
+  questions:[
+    {q:"According to Ms. Chen, what do frequent travelers tend to do?",qCn:"根據Ms. Chen的說法，常出差的人往往會怎麼做？",opts:["A. Avoid business trips completely","B. Build small routines like carrying a backup charger","C. Always fly first class","D. Complain to the airline immediately"],optsCn:["A. 完全避免出差","B. 建立像帶備用充電器這樣的小習慣","C. 總是搭商務艙","D. 立刻向航空公司抱怨"],ans:1,expl:"Frequent travelers tend to build small routines — a backup charger, offline documents, that sort of thing."},
+    {q:"What does Ms. Chen do instead of watching the departure board?",qCn:"Ms. Chen不會一直盯著出境看板，而是做什麼？",opts:["A. She calls her family","B. She keeps working on her laptop","C. She goes shopping at the airport","D. She sleeps in the lounge"],optsCn:["A. 她打電話給家人","B. 她繼續用筆電工作","C. 她去機場逛街","D. 她在貴賓室睡覺"],ans:1,expl:"I open my laptop and keep working on whatever I can, rather than watching the departure board."},
+    {q:"In this conversation, what does \"tend to\" suggest?",qCn:"在這段對話中，「tend to」這個說法暗示什麼？",opts:["A. A rule with no exceptions","B. A general pattern, not an absolute rule","C. Something that happened only once","D. A personal opinion with no evidence"],optsCn:["A. 一個沒有例外的規則","B. 一種普遍傾向，不是絕對規則","C. 只發生過一次的事","D. 沒有根據的個人意見"],ans:1,expl:"tend to 是正式語域緩和武斷語氣的說法，表示「通常、往往」而非「every single time」。"},
+    {q:"What does Ms. Chen say usually happens to a meeting after a travel delay?",qCn:"Ms. Chen說，出差延誤後，會議通常會怎麼樣？",opts:["A. It is always cancelled","B. It almost always still goes ahead, just shorter","C. It is rescheduled for the next week","D. It is moved online"],optsCn:["A. 一定會被取消","B. 幾乎都還是會照常進行，只是變短","C. 會延到下週","D. 會改成線上進行"],ans:1,expl:"the meeting almost always still goes ahead. It's usually just shorter, not cancelled."}
+  ]
+},
+
+{
   id:"dl20260819a2",
   date:"2026-08-19",
   level:"A2",
