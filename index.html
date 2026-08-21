@@ -644,7 +644,9 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <div class="hd-streak">🔥 <span id="hd-streak">1</span> 天 <span id="sync-badge" title="進度已雲端同步（跨裝置共用）" style="display:none">☁️</span></div>
       <button class="hd-fs" id="hd-fs" onclick="cycleFS()" title="調整字體大小（標準 → 大 → 特大）">Aa 標準</button>
       <a href="https://english-b2-lab.web.app" class="hd-b2" title="B2 Read — 閱讀 · 單字間隔複習 · 文法教材，每天自動更新"
-         style="display:inline-block;margin-top:5px;font-size:12px;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(135deg,#f0964f,#d9691f);border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:5px 12px;white-space:nowrap;box-shadow:0 2px 8px rgba(160,80,20,.3)">📚 B2 Read ↗</a>
+         style="display:inline-flex;align-items:center;font-size:12px;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(135deg,#f0964f,#d9691f);border:1px solid rgba(255,255,255,.5);border-radius:100px;padding:5px 12px;white-space:nowrap;box-shadow:0 2px 8px rgba(160,80,20,.3)">📚 B2 Read ↗</a>
+      <a href="https://rexon-qa-english.web.app/" class="hd-b2" title="Rexon QA — 英文練習題庫"
+         style="display:inline-flex;align-items:center;font-size:12px;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(135deg,#6fa8dc,#3d78b4);border:1px solid rgba(255,255,255,.5);border-radius:100px;padding:5px 12px;white-space:nowrap;box-shadow:0 2px 8px rgba(40,80,160,.3)">📝 QA ↗</a>
     </div>
   </div>
 </header>
@@ -1017,7 +1019,18 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
 // ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260731, 20260804, 20260811
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-08-18 count:648
+// ===SYNC:VOCAB_START=== sync_date:2026-08-21 count:658
+  // --- 20260821 電腦檔案與辦公室英文 ---
+  {w:"specifications",ipa:"/ˌspesɪfɪˈkeɪʃnz/",pos:"n.",cn:"規格（口語縮寫 spec）",def:"A detailed description of how something should be made.",exEn:"It's ridiculous to change the specifications at the last minute.",exCn:"在最後一刻才改規格實在很荒謬。",cat:"workplace"},
+  {w:"corrupted",ipa:"/kəˈrʌptɪd/",pos:"adj.",cn:"（檔案）損毀的",def:"Damaged so that it cannot open or work correctly.",exEn:"As you can see, my file is corrupted.",exCn:"如你所見，我的檔案損毀了。",cat:"workplace"},
+  {w:"identical",ipa:"/aɪˈdentɪkl/",pos:"adj.",cn:"完全相同的",def:"Exactly the same.",exEn:"The files are identical, so we don't need to open them again.",exCn:"這些檔案完全相同，所以我們不需要再開啟它們。",cat:"workplace"},
+  {w:"compress",ipa:"/kəmˈpres/",pos:"v.",cn:"壓縮",def:"To make a file smaller.",exEn:"The file is too large, so we need to compress the file.",exCn:"檔案太大了，所以我們需要壓縮檔案。",cat:"workplace"},
+  {w:"invoice",ipa:"/ˈɪnvɔɪs/",pos:"n.",cn:"發票；請款單",def:"A document that lists what must be paid.",exEn:"The invoices are under my boss's review.",exCn:"發票正在我老闆審核中。",cat:"workplace"},
+  {w:"lend",ipa:"/lend/",pos:"v.",cn:"借出（lend–lent–lent）",def:"To give something to someone for a short time.",exEn:"My client's laptop was out of battery, so I lent him mine.",exCn:"我客戶的筆電沒電了，所以我把我的借給他。",cat:"workplace"},
+  {w:"borrow",ipa:"/ˈbɑːroʊ/",pos:"v.",cn:"借入",def:"To take something from someone for a short time.",exEn:"Borrow means take; lend means give.",exCn:"borrow 是「拿進來」（借入）；lend 是「給出去」（借出）。",cat:"daily"},
+  {w:"sort out",ipa:"/sɔːrt aʊt/",pos:"phr. v.",cn:"解決（問題）",def:"To deal with a problem successfully.",exEn:"After sorting out the issues, he successfully connected his device to the TV.",exCn:"解決問題之後，他成功把裝置連上電視。",cat:"workplace"},
+  {w:"adapter",ipa:"/əˈdæptər/",pos:"n.",cn:"轉接器",def:"A small device that connects two different ports or plugs.",exEn:"His laptop was an Apple, and he needed an extra cable to connect to the HDMI port.",exCn:"他的筆電是 Apple，需要一條額外的轉接線才能接上 HDMI 埠。",cat:"workplace"},
+  {w:"subfolder",ipa:"/ˈsʌbfoʊldər/",pos:"n.",cn:"子資料夾",def:"A folder inside another folder.",exEn:"I created five subfolders in the ABC folder.",exCn:"我在 ABC 資料夾裡建立了五個子資料夾。",cat:"workplace"},
   // --- 20260818 行為描述與人際互動（摘要補充）Management and Communication ---
   {w:"complaint",ipa:"/kəmˈpleɪnt/",pos:"n.",cn:"投訴；抱怨",def:"A statement that something is unsatisfactory.",exEn:"The company began receiving several complaints from customers regarding damaged products.",exCn:"公司開始收到好幾位顧客針對損壞產品的投訴。",cat:"workplace"},
   // --- 20260818 行為描述與人際互動 ---
@@ -1729,6 +1742,8 @@ const vocab = [
 // 每個單字的筆記來源 (key = word, value = note title)
 // ===SYNC:SOURCES_START=== sync_date:2026-08-18
 const vocabSources = {
+  // --- 20260821 電腦檔案與辦公室英文 ---
+  "specifications":"20260821 電腦檔案與辦公室英文","corrupted":"20260821 電腦檔案與辦公室英文","identical":"20260821 電腦檔案與辦公室英文","compress":"20260821 電腦檔案與辦公室英文","invoice":"20260821 電腦檔案與辦公室英文","lend":"20260821 電腦檔案與辦公室英文","borrow":"20260821 電腦檔案與辦公室英文","sort out":"20260821 電腦檔案與辦公室英文","adapter":"20260821 電腦檔案與辦公室英文","subfolder":"20260821 電腦檔案與辦公室英文",
   // --- 20260818 行為描述與人際互動（摘要補充）---
   "complaint":"20260818 行為描述與人際互動",
   // --- 20260818 行為描述與人際互動 ---
@@ -2213,6 +2228,18 @@ const vocabSources = {
 
 // ===SYNC:TRANS_START=== sync_date:2026-08-18 count:263
 const allTrans = [
+  // --- 20260821 電腦檔案與辦公室英文 cn-en ---
+  {p:"我客戶的筆電沒電了，所以我把我的借給他。",a:"My client's laptop was out of battery, so I lent him mine.",h:"out of battery = 沒電, lend–lent = 借出",kw:["lent"],src:"20260821 電腦檔案與辦公室英文"},
+  {p:"我的手機很讓我分心，所以我需要把它收起來。",a:"My phone is a big distraction, so I need to put it away.",h:"distraction = 分心的事物, put it away = 收起來（代名詞放中間）",kw:["put it away"],src:"20260821 電腦檔案與辦公室英文"},
+  {p:"在最後一刻才改規格實在很荒謬。",a:"It's ridiculous to change the specifications at the last minute.",h:"specifications = 規格, at the last minute = 在最後一刻",kw:["at the last minute"],src:"20260821 電腦檔案與辦公室英文"},
+  {p:"如果有人霸凌你，你應該向你的主管回報這個問題。",a:"If someone is bullying you, you should report the problem to your manager.",h:"report + 事 + to + 人",kw:["report the problem to"],src:"20260821 電腦檔案與辦公室英文"},
+  {p:"檔案太大了，所以我們需要縮小檔案大小。",a:"The file is too large, so we need to reduce its size.",h:"reduce its size = 縮小大小",kw:["reduce"],src:"20260821 電腦檔案與辦公室英文"},
+  {p:"在施工完成之前，我們暫時先待在這個房間。",a:"We'll just stay in this room temporarily until the construction is done.",h:"temporarily = 暫時地, construction = 施工",kw:["temporarily"],src:"20260821 電腦檔案與辦公室英文"},
+  // --- 20260821 電腦檔案與辦公室英文 en-cn ---
+  {p:"The new equipment doesn't have any instructions, which confused me.",a:"新設備沒有任何使用說明，這讓我很困惑。",h:", which 指前面整件事（非限定關係子句）",kw:[],src:"20260821 電腦檔案與辦公室英文"},
+  {p:"As you can see, my file is corrupted.",a:"如你所見，我的檔案損毀了。",h:"corrupted = 損毀的",kw:[],src:"20260821 電腦檔案與辦公室英文"},
+  {p:"The invoices are under my boss's review.",a:"發票正在我老闆審核中。",h:"under review = 審核中",kw:[],src:"20260821 電腦檔案與辦公室英文"},
+  {p:"The files are identical, so we don't need to open them again.",a:"這些檔案完全相同，所以我們不需要再開啟它們。",h:"identical = 完全相同的",kw:[],src:"20260821 電腦檔案與辦公室英文"},
   // --- 20260818 行為描述與人際互動（摘要補充）cn-en ---
   {p:"公司開始收到好幾位顧客針對損壞產品的投訴。",a:"The company began receiving several complaints from customers regarding damaged products.",h:"complaint = 投訴, regarding = 關於",kw:["complaints"],src:"20260818 行為描述與人際互動"},
   // --- 20260818 行為描述與人際互動 cn-en ---
@@ -2513,7 +2540,23 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-08-11 count:51
+// ===SYNC:KW_START=== sync_date:2026-08-21 count:54
+  // --- 20260821 電腦檔案與辦公室英文（例句全部取自筆記原文）---
+  {w:"lend",ipa:"/lend/",tag:"借出 · v.",exs:[
+    {en:"My client's laptop was out of battery, so I lent him mine.",cn:"我客戶的筆電沒電了，所以我把我的借給他。"},
+    {en:"I can lend you my device.",cn:"我可以把我的裝置借給你。"},
+    {en:"Borrow means take; lend means give.",cn:"borrow 是「拿進來」（借入）；lend 是「給出去」（借出）。"},
+  ]},
+  {w:"connect",ipa:"/kəˈnekt/",tag:"連接 · v.",exs:[
+    {en:"He wanted to connect his laptop to the TV using an HDMI cable.",cn:"他想用 HDMI 線把筆電接到電視上。"},
+    {en:"Finally he connected to the TV successfully.",cn:"最後他成功連接到電視了。"},
+    {en:"After sorting out the issues, he successfully connected his device to the TV.",cn:"解決問題之後，他成功把裝置連上電視。"},
+  ]},
+  {w:"equipment",ipa:"/ɪˈkwɪpmənt/",tag:"設備（不可數）· n.",exs:[
+    {en:"I will complete the equipment setup.",cn:"我會完成設備的安裝。"},
+    {en:"I'll purchase the necessary equipment for the test room soon.",cn:"我很快就會購買測試室所需的設備。"},
+    {en:"Before purchasing the equipment, we need to submit the invoice to our boss, and I did.",cn:"購買設備之前，我們需要把發票提交給老闆，而我已經提交了。"},
+  ]},
   // --- 20260811 補償用語與效率詞彙（例句全部取自筆記原文）---
   {w:"compensate",ipa:"/ˈkɑːmpənseɪt/",tag:"補償 · v.",exs:[
     {en:"The hotel gave us a free meal to compensate for the noisy room.",cn:"飯店給我們免費餐點，以補償房間太吵的問題。"},
@@ -3757,7 +3800,59 @@ const articles = [
 // 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
 // ═══════════════════════════════════════════════
 const DAYQUIZ = {
-// ===SYNC:DAYQUIZ_START=== sync_date:2026-08-18 count:29
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-08-21 count:30
+  "20260821": {
+    title: "電腦檔案與辦公室英文",
+    subtitle: "Laptops, Files & Office English",
+    questions: [
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["If someone is bullying you, you should report manager this problem.","If someone is bullying you, you should report the problem to your manager."],answer:1,
+        explain:"report 要先接「事情」再用 to 接「人」：report the problem to your manager；report 不像 tell/give 有雙受詞用法。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["She misunderstood him, so she needs to apologize to him.","She misunderstood him, so she need to gave him an apology."],answer:0,
+        explain:"she 是第三人稱單數 → needs；need to 後接原形動詞；「向某人道歉」最自然說 apologize to someone。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["My phone is a big distraction, so I need to take away it.","My phone is a big distraction, so I need to put it away."],answer:1,
+        explain:"「收起來」用 put away；受詞是代名詞 it 時必須放中間：put it away，不能說 put away it / take away it。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["It's ridiculous to change the spec at last time.","It's ridiculous to change the specifications at the last minute."],answer:1,
+        explain:"完整句子用全稱 specifications；「在最後一刻」是固定片語 at the last minute，不說 at last time。"},
+      {type:"mc",tag:"改錯",q:"要表達「新設備沒有說明書，這讓我很困惑」，哪一句正確？",
+        options:["The new equipment doesn't have any instructions that confused me.","The new equipment doesn't have any instructions, which confused me."],answer:1,
+        explain:"逗號 + which 的非限定關係子句代指前面整件事；that confused me 會變成修飾 instructions，意思不同。"},
+      {type:"mc",tag:"單字",q:"corrupted 的中文意思是什麼？",
+        options:["（檔案）損毀的","完全相同的","暫時的","荒謬的"],answer:0,
+        explain:"corrupted /kəˈrʌptɪd/ 指檔案「損毀的」：As you can see, my file is corrupted."},
+      {type:"mc",tag:"單字",q:"identical 的中文意思是什麼？",
+        options:["損壞的","完全相同的","分心的","必要的"],answer:1,
+        explain:"identical /aɪˈdentɪkl/ 意思是「完全相同的」：The files are identical."},
+      {type:"mc",tag:"單字",q:"invoice 的中文意思是什麼？",
+        options:["規格","設備","發票；請款單","轉接器"],answer:2,
+        explain:"invoice /ˈɪnvɔɪs/ 是「發票、請款單」：The invoices are under my boss's review."},
+      {type:"fill",tag:"片語",q:"My client's laptop was ___ of battery, so I lent him mine.",
+        cn:"我客戶的筆電沒電了，所以我把我的借給他。",
+        answer:["out"],
+        explain:"(be) out of battery = 沒電；快沒電用進行式 is running out of battery。"},
+      {type:"fill",tag:"單字",q:"The test room is still under ___.",
+        cn:"測試室還在施工中。",
+        answer:["construction"],
+        explain:"under + 名詞表「正在……中」：under construction 施工中、under review 審核中。"},
+      {type:"fill",tag:"文法",q:"My laptop is ___ out of battery.",
+        cn:"我的筆電快沒電了。",
+        answer:["running"],
+        explain:"run out of battery 用現在進行式 is running out of battery 表示「正在快沒電」。"},
+      {type:"fill",tag:"搭配",q:"He wanted to ___ his laptop to the TV using an HDMI cable.",
+        cn:"他想用 HDMI 線把筆電接到電視上。",
+        answer:["connect"],
+        explain:"connect A to B = 把 A 連接到 B；using an HDMI cable 表「方式」。"},
+      {type:"trans",tag:"翻譯",q:"我可以把我的裝置借給你。",
+        answer:"I can lend you my device.",
+        explain:"lend + 人 + 物；device = 裝置。"},
+      {type:"trans",tag:"翻譯",q:"這是一間新建的公司，我們的主測試室還在施工中。",
+        answer:"This is a newly built company, and our main test room is still under construction.",
+        explain:"newly built = 新建的（副詞＋過去分詞）；under construction = 施工中。"},
+    ]
+  },
   "20260818": {
     title: "行為描述與人際互動",
     subtitle: "Behavior Descriptions and Interpersonal Communication",
@@ -5242,7 +5337,36 @@ const DAYQUIZ = {
 // 沒有腳本的日期會自動退回「教練只說引導語」的模式。
 // ═══════════════════════════════════════════════
 const DAYTALK = {
-// ===SYNC:DAYTALK_START=== sync_date:2026-08-18 count:3
+// ===SYNC:DAYTALK_START=== sync_date:2026-08-21 count:4
+  "20260821": {
+    title: "電腦檔案與辦公室英文",
+    turns: [
+      {q:"Your client's laptop was out of battery in a meeting. What did you do?",qCn:"你客戶的筆電在會議中沒電了。你做了什麼？",
+       en:"My client's laptop was out of battery, so I lent him mine.",cn:"我客戶的筆電沒電了，所以我把我的借給他。",hint:"lend–lent = 借出"},
+      {q:"Your laptop has very little battery left. How do you describe it?",qCn:"你的筆電電量剩很少。你會怎麼描述？",
+       en:"My laptop is running out of battery.",cn:"我的筆電快沒電了。",hint:"run out of battery = 電快用完"},
+      {q:"A client wanted to show his PowerPoint presentation on the TV. How did he plan to connect his laptop?",qCn:"客戶想在電視上播放簡報。他打算怎麼接筆電？",
+       en:"He wanted to connect his laptop to the TV using an HDMI cable.",cn:"他想用 HDMI 線把筆電接到電視上。",hint:"connect A to B"},
+      {q:"Someone's laptop is dead and they still need to present. What can you offer?",qCn:"別人的筆電沒電了但還要簡報。你可以提供什麼？",
+       en:"I can lend you my device.",cn:"我可以把我的裝置借給你。",hint:"lend + 人 + 物"},
+      {q:"You organized your files inside the ABC folder. What did you create?",qCn:"你整理了 ABC 資料夾裡的檔案。你建立了什麼？",
+       en:"I created five subfolders in the ABC folder.",cn:"我在 ABC 資料夾裡建立了五個子資料夾。",hint:"subfolder = 子資料夾"},
+      {q:"Your file cannot be opened during a presentation. How do you describe it to the audience?",qCn:"簡報時你的檔案打不開。你會怎麼向大家說明？",
+       en:"As you can see, my file is corrupted.",cn:"如你所見，我的檔案損毀了。",hint:"corrupted = 損毀的"},
+      {q:"Two files are exactly the same. Do we need to open them again?",qCn:"兩個檔案完全一樣。我們需要再開啟它們嗎？",
+       en:"The files are identical, so we don't need to open them again.",cn:"這些檔案完全相同，所以我們不需要再開啟它們。",hint:"identical = 完全相同的"},
+      {q:"A file is too big to send. What do we need to do?",qCn:"檔案太大寄不出去。我們需要做什麼？",
+       en:"The file is too large, so we need to reduce its size.",cn:"檔案太大了，所以我們需要縮小檔案大小。",hint:"reduce its size = 縮小大小"},
+      {q:"The test room isn't finished yet. Where will you stay for now?",qCn:"測試室還沒完工。你們暫時要待在哪裡？",
+       en:"We'll just stay in this room temporarily until the construction is done.",cn:"在施工完成之前，我們暫時先待在這個房間。",hint:"temporarily...until = 暫時……直到"},
+      {q:"You submitted the invoices to your boss. What is their status now?",qCn:"你把發票交給老闆了。現在進度如何？",
+       en:"The invoices are under my boss's review.",cn:"發票正在我老闆審核中。",hint:"under review = 審核中"},
+      {q:"Your phone keeps taking your attention away from work. What do you need to do?",qCn:"你的手機一直讓你分心。你需要做什麼？",
+       en:"My phone is a big distraction, so I need to put it away.",cn:"我的手機很讓我分心，所以我需要把它收起來。",hint:"put it away = 把它收起來"},
+      {q:"You just finished showing your slides. What do you say to end?",qCn:"你剛講完簡報。結尾要說什麼？",
+       en:"That's all for my presentation.",cn:"我的簡報到這裡（結束）。",hint:"That's all for..."},
+    ]
+  },
   "20260818": {
     title: "行為描述與人際互動",
     turns: [
@@ -5681,7 +5805,14 @@ function speak(text,rate,done,vopt){
     /* cancel 之後隔一拍再開口，iOS 才不會整個卡住 */
     setTimeout(()=>{if(gen!==ttsGen)return;
     const base=rate||0.92;
-    const sents=String(text).match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[String(text)];
+    let sents=String(text).match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[String(text)];
+    /* 長子句再依逗號/分號拆開，避免平板 TTS 斷句異常 */
+    const MAX_CHUNK=80;
+    sents=sents.flatMap(s=>{
+      if(s.length<=MAX_CHUNK)return[s];
+      return s.split(/(?<=[,;])\s+/).reduce((a,p)=>{
+        if(a.length&&(a[a.length-1]+' '+p).length<=MAX_CHUNK)a[a.length-1]+=' '+p;
+        else a.push(p);return a;},[]);});
     if(sents.length<=1){
       const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=base;u.pitch=1.02+pAdj;
       if(vc)u.voice=vc;u.onend=fire;u.onerror=fire;
@@ -6822,7 +6953,7 @@ function talkJudge(said){
     +'</div>');
   if(pass){
     /* 評分和正確答案一起給（2026-08-16 使用者要求）：緊湊一行，不用捲動就看得到 */
-    chatAdd('<div class="cok">✅ 說得好 '+pct+'%　<span style="font-weight:600;color:var(--ink)">'+esc(cap(t.en))+'</span></div>');
+    chatAdd('<div class="cok">✅ 說得好 '+pct+'%　<span style="font-weight:600;color:var(--ink);cursor:pointer" onclick="speak(this.textContent,0.92)">'+esc(cap(t.en))+'</span> <button class="ctool" onclick="speak(this.previousElementSibling.textContent,0.5)" title="慢速聽" style="font-size:.85em;vertical-align:middle">🐢</button></div>');
     sessLog(talkI,t.en,t.cn,talkBest);
     logSpeak(pct);
     micStop();
