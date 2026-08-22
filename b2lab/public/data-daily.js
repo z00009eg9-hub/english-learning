@@ -26,12 +26,12 @@ articles:[
      cn:"終於，公車在八點十五分抵達。Tom很快上車，找到一個位子。他還是可以準時到會議。"}
   ],
   target:[
-    {w:"apartment",ipa:"/əˈpɑːrtmənt/",pos:"n.",cn:"公寓",def:"A place where someone lives, usually inside a larger building.",ex:"He waits at the bus stop near his apartment.",exCn:"他在自己公寓附近的公車站等車。"},
-    {w:"late",ipa:"/leɪt/",pos:"adj.",cn:"遲到的、晚的",def:"Arriving or happening after the expected time.",ex:"A woman next to him says the bus is late today.",exCn:"他旁邊的一位女士說今天公車遲到了。"},
-    {w:"problem",ipa:"/ˈprɑːbləm/",pos:"n.",cn:"問題、狀況",def:"Something that is not working correctly or causes trouble.",ex:"She thinks there is a problem on the road.",exCn:"她覺得路上可能有狀況。"},
-    {w:"worried",ipa:"/ˈwɜːrid/",pos:"adj.",cn:"擔心的",def:"Feeling nervous or unhappy about something.",ex:"Tom feels worried because he has a meeting at nine.",exCn:"Tom覺得有點擔心，因為他九點有會議。"},
+    {w:"apartment",ipa:"/əˈpɑːrtmənt/",pos:"n.",cn:"公寓",def:"A place where someone lives, usually inside a larger building.",ex:"My apartment is small, but it is close to the park.",exCn:"我的公寓很小，但離公園很近。"},
+    {w:"late",ipa:"/leɪt/",pos:"adj.",cn:"遲到的、晚的",def:"Arriving or happening after the expected time.",ex:"Sorry, I am late. The bus did not come.",exCn:"抱歉我遲到了，公車沒有來。"},
+    {w:"problem",ipa:"/ˈprɑːbləm/",pos:"n.",cn:"問題、狀況",def:"Something that is not working correctly or causes trouble.",ex:"There is a problem with my phone. It does not turn on.",exCn:"我的手機有問題，它開不了機。"},
+    {w:"worried",ipa:"/ˈwɜːrid/",pos:"adj.",cn:"擔心的",def:"Feeling nervous or unhappy about something.",ex:"She is worried about her English test tomorrow.",exCn:"她很擔心明天的英文考試。"},
     {w:"finally",ipa:"/ˈfaɪnəli/",pos:"adv.",cn:"終於",def:"After a long time or wait.",ex:"Finally, the bus arrives at eight fifteen.",exCn:"終於，公車在八點十五分抵達。"},
-    {w:"quickly",ipa:"/ˈkwɪkli/",pos:"adv.",cn:"快速地",def:"In a fast way, not slowly.",ex:"Tom gets on quickly and finds a seat.",exCn:"Tom很快上車，找到一個位子。"}
+    {w:"quickly",ipa:"/ˈkwɪkli/",pos:"adv.",cn:"快速地",def:"In a fast way, not slowly.",ex:"Please finish your lunch quickly. The movie starts at one.",exCn:"請快點吃完午餐，電影一點開始。"}
   ],
   questions:[
     {q:"What time does the bus usually come?",qCn:"公車通常幾點會來？",opts:["A. Seven o'clock","B. Eight o'clock","C. Eight fifteen","D. Nine o'clock"],optsCn:["A. 七點","B. 八點","C. 八點十五分","D. 九點"],ans:1,expl:"The bus usually comes at eight o'clock."},
@@ -66,12 +66,12 @@ articles:[
      cn:"Mia搭這條捷運線已經三年了，但她從沒看過月台這麼擁擠。她希望號誌問題能快點修好，這樣明天的通勤才能跟平常一樣輕鬆。"}
   ],
   target:[
-    {w:"ride",ipa:"/raɪd/",pos:"n.",cn:"車程、搭乘",def:"A trip made in a vehicle such as a bus or train.",ex:"The ride usually takes twenty-five minutes, and the platform is not too crowded in the morning.",exCn:"車程通常要二十五分鐘，早上月台也不會太擁擠。"},
-    {w:"signal",ipa:"/ˈsɪɡnəl/",pos:"n.",cn:"號誌",def:"A system used to control trains and keep them a safe distance apart.",ex:"An announcement said there was a signal problem on the line.",exCn:"廣播說這條線發生了號誌問題。"},
-    {w:"crowded",ipa:"/ˈkraʊdɪd/",pos:"adj.",cn:"擁擠的",def:"Full of people.",ex:"The platform quickly became more crowded than usual, and everyone looked a little worried.",exCn:"月台很快就變得比平常擁擠，大家看起來都有點擔心。"},
-    {w:"finally",ipa:"/ˈfaɪnəli/",pos:"adv.",cn:"終於",def:"After a period of waiting.",ex:"Mia waited almost fifteen minutes before a train finally arrived.",exCn:"Mia等了快十五分鐘，列車才終於進站。"},
-    {w:"coworkers",ipa:"/ˈkoʊˌwɜːrkərz/",pos:"n.",cn:"同事",def:"People you work with.",ex:"Her manager said it was fine because two other coworkers were also late.",exCn:"主管說沒關係，因為另外兩位同事也遲到了。"},
-    {w:"fixed",ipa:"/fɪkst/",pos:"v./adj.",cn:"修好的",def:"Repaired so it works correctly again.",ex:"She hopes the signal problem is fixed again soon, so tomorrow's ride can be as easy as usual.",exCn:"她希望號誌問題能快點修好，這樣明天的通勤才能跟平常一樣輕鬆。"}
+    {w:"ride",ipa:"/raɪd/",pos:"n.",cn:"車程、搭乘",def:"A trip made in a vehicle such as a bus or train.",ex:"The bus ride to the airport takes about an hour.",exCn:"搭公車到機場的車程大約要一小時。"},
+    {w:"signal",ipa:"/ˈsɪɡnəl/",pos:"n.",cn:"號誌",def:"A system used to control trains and keep them a safe distance apart.",ex:"The traffic signal turned red, so all the cars stopped.",exCn:"交通號誌轉成紅燈，所以所有車子都停了下來。"},
+    {w:"crowded",ipa:"/ˈkraʊdɪd/",pos:"adj.",cn:"擁擠的",def:"Full of people.",ex:"The night market was so crowded that we could hardly walk.",exCn:"夜市擠到我們幾乎走不動。"},
+    {w:"finally",ipa:"/ˈfaɪnəli/",pos:"adv.",cn:"終於",def:"After a period of waiting.",ex:"After three tries, I finally passed my driving test.",exCn:"考了三次之後，我終於通過駕照考試了。"},
+    {w:"coworkers",ipa:"/ˈkoʊˌwɜːrkərz/",pos:"n.",cn:"同事",def:"People you work with.",ex:"My coworkers and I have lunch together every Friday.",exCn:"我和同事每週五一起吃午餐。"},
+    {w:"fixed",ipa:"/fɪkst/",pos:"v./adj.",cn:"修好的",def:"Repaired so it works correctly again.",ex:"The elevator is fixed now, so you do not need to take the stairs.",exCn:"電梯現在修好了，你不用再走樓梯。"}
   ],
   questions:[
     {q:"Why did the platform become more crowded than usual?",qCn:"為什麼月台變得比平常擁擠？",
@@ -112,12 +112,12 @@ articles:[
   ],
   target:[
     {w:"fault",ipa:"/fɔːlt/",pos:"n.",cn:"故障",def:"A problem that stops something from working correctly.",ex:"When a fault is detected, trains on that line are slowed down immediately.",exCn:"一旦偵測到故障，那條線的列車會立刻被降速。"},
-    {w:"packed",ipa:"/pækt/",pos:"adj.",cn:"擠滿的",def:"Extremely full of people.",ex:"Platforms that are usually quiet within minutes become packed with waiting passengers.",exCn:"原本安靜的月台幾分鐘內就會擠滿等車的乘客。"},
-    {w:"frustrated",ipa:"/ˈfrʌstreɪtɪd/",pos:"adj.",cn:"感到不耐煩、沮喪的",def:"Feeling annoyed because something is not going the way you want.",ex:"Commuters who were already running late grew increasingly frustrated.",exCn:"本來就快遲到的通勤族越來越不耐煩。"},
+    {w:"packed",ipa:"/pækt/",pos:"adj.",cn:"擠滿的",def:"Extremely full of people.",ex:"The concert hall was packed an hour before the show began.",exCn:"演出開始前一小時，音樂廳就已經擠滿了人。"},
+    {w:"frustrated",ipa:"/ˈfrʌstreɪtɪd/",pos:"adj.",cn:"感到不耐煩、沮喪的",def:"Feeling annoyed because something is not going the way you want.",ex:"I get frustrated when the website keeps logging me out.",exCn:"網站一直把我登出，讓我很不耐煩。"},
     {w:"transit authority",ipa:"/ˈtrænzɪt əˈθɒrəti/",pos:"n.",cn:"捷運局、運輸主管機關",def:"The organization in charge of running public transportation.",ex:"According to the transit authority, most signal problems are caused by aging equipment that has not yet been replaced.",exCn:"根據捷運局的說法，大部分的號誌問題都是老舊、還沒被更換的設備所造成的。"},
-    {w:"aging",ipa:"/ˈeɪdʒɪŋ/",pos:"adj.",cn:"老舊的",def:"Old and often close to needing replacement.",ex:"Most signal problems are caused by aging equipment that has not yet been replaced.",exCn:"大部分的號誌問題都是老舊、還沒被更換的設備所造成的。"},
+    {w:"aging",ipa:"/ˈeɪdʒɪŋ/",pos:"adj.",cn:"老舊的",def:"Old and often close to needing replacement.",ex:"The city is replacing its aging water pipes one street at a time.",exCn:"市政府正一條街一條街地更換老舊的水管。"},
     {w:"significantly",ipa:"/sɪɡˈnɪfɪkəntli/",pos:"adv.",cn:"顯著地、大幅地",def:"By a large or noticeable amount.",ex:"A new system... should reduce these delays significantly.",exCn:"一套新系統...應該能大幅減少這類延誤。"},
-    {w:"rush hour",ipa:"/rʌʃ ˈaʊər/",pos:"n.",cn:"尖峰時段",def:"The time of day when traffic and public transportation are the busiest.",ex:"Commuters have been asked to allow extra time during rush hour.",exCn:"通勤族被要求在尖峰時段多預留一些時間。"},
+    {w:"rush hour",ipa:"/rʌʃ ˈaʊər/",pos:"n.",cn:"尖峰時段",def:"The time of day when traffic and public transportation are the busiest.",ex:"Try to avoid driving downtown during rush hour.",exCn:"尖峰時段盡量不要開車進市區。"},
     {w:"rely on",ipa:"/rɪˈlaɪ ɒn/",pos:"phr.v.",cn:"仰賴、依靠",def:"To depend on someone or something regularly.",ex:"For workers like Mia, who rely on the MRT every day, even a short delay can turn a calm morning into a stressful rush to the office.",exCn:"對像Mia這樣每天仰賴捷運的上班族來說，就算只是小小的延誤，也可能讓平靜的早晨變成趕著進辦公室的壓力時刻。"}
   ],
   questions:[
@@ -160,10 +160,10 @@ articles:[
      cn:"比表定時間晚了三小時，班機終於起飛，Anita在午夜過後不久抵達台北。隔天早上的檢討會議仍照原訂計畫進行，時間比平常略短，但成效絲毫不打折。她後來告訴一位同事，這場延誤付出的代價是少睡一晚，而不是那場會議——她說，這才是商務出差真正的本事：守住真正重要的事。"}
   ],
   target:[
-    {w:"boarded",ipa:"/bɔːrdɪd/",pos:"v.",cn:"登機、上（交通工具）",def:"Got onto a plane, train, or ship.",ex:"Anita had boarded her flight from Ho Chi Minh City to Taipei with plenty of time to spare before her quarterly review meeting the next morning.",exCn:"Anita早早就登機了，從胡志明市飛往台北，離隔天早上的季度檢討會議還有充裕的時間。"},
-    {w:"mechanical inspection",ipa:"/məˈkænɪkl ɪnˈspekʃn/",pos:"n.",cn:"機械檢查",def:"A check to make sure a machine, such as an aircraft, is working safely.",ex:"The incoming aircraft had been held up by a mechanical inspection at its previous stop.",exCn:"機組的入境班機因為在前一站接受機械檢查而被耽擱。"},
-    {w:"resigning themselves to",ipa:"/rɪˈzaɪnɪŋ ðəmˈselvz tuː/",pos:"phr.",cn:"認命接受、無奈接受",def:"Accepting something unpleasant because you cannot change it.",ex:"Other business travelers were doing much the same... or simply resigning themselves to a longer wait.",exCn:"其他出差的商務人士也在做類似的事...或乾脆接受得再多等一陣子。"},
-    {w:"absorb",ipa:"/əbˈzɔːrb/",pos:"v.",cn:"承受、消化（衝擊）",def:"To deal with something difficult without being badly affected by it.",ex:"Frequent flyers tend to develop small routines that make delays easier to absorb.",exCn:"常搭飛機出差的人往往會養成一些小習慣，讓延誤變得比較容易承受。"},
+    {w:"boarded",ipa:"/bɔːrdɪd/",pos:"v.",cn:"登機、上（交通工具）",def:"Got onto a plane, train, or ship.",ex:"We boarded the ferry just minutes before it left the harbor.",exCn:"我們在渡輪離港前幾分鐘才上船。"},
+    {w:"mechanical inspection",ipa:"/məˈkænɪkl ɪnˈspekʃn/",pos:"n.",cn:"機械檢查",def:"A check to make sure a machine, such as an aircraft, is working safely.",ex:"Every taxi must pass a mechanical inspection once a year.",exCn:"每輛計程車每年都必須通過一次機械檢查。"},
+    {w:"resigning themselves to",ipa:"/rɪˈzaɪnɪŋ ðəmˈselvz tuː/",pos:"phr.",cn:"認命接受、無奈接受",def:"Accepting something unpleasant because you cannot change it.",ex:"Resigning themselves to a long wait, the passengers sat down on the floor.",exCn:"乘客們認命接受要等很久的事實，就在地板上坐了下來。"},
+    {w:"absorb",ipa:"/əbˈzɔːrb/",pos:"v.",cn:"承受、消化（衝擊）",def:"To deal with something difficult without being badly affected by it.",ex:"Small shops cannot absorb a sudden rise in rent the way big chains can.",exCn:"小店沒辦法像大型連鎖店那樣承受租金突然上漲。"},
     {w:"backup",ipa:"/ˈbækʌp/",pos:"adj.",cn:"備用的",def:"Kept ready to use if the main one fails.",ex:"a backup charger, a downloaded document, a flexible mindset about what \"on time\" really means.",exCn:"備用充電器、事先下載好的文件、對「準時」這件事保有彈性的心態。"},
     {w:"productively",ipa:"/prəˈdʌktɪvli/",pos:"adv.",cn:"有效率地、有生產力地",def:"In a way that produces good, useful results.",ex:"What mattered more... was whether the traveler could keep working productively while waiting.",exCn:"更重要的是旅客能不能在等待的同時仍然有效率地工作。"},
     {w:"scheduled",ipa:"/ˈskedʒuːld/",pos:"adj.",cn:"表定的、預定的",def:"Planned to happen at a particular time.",ex:"Three hours later than scheduled, the flight finally took off.",exCn:"比表定時間晚了三小時，班機終於起飛。"},
@@ -211,12 +211,12 @@ articles:[
      cn:"現在奶奶在家休息，喝著溫茶。她很快就會好轉，所以Tom現在不擔心了。Tom這個週末可以再去看她，關心她的狀況。"}
   ],
   target:[
-    {w:"alone",ipa:"/əˈloʊn/",pos:"adj.",cn:"單獨的、獨自",def:"Without other people with you.",ex:"She lives alone in a small house near the market.",exCn:"她一個人住在市場附近的一間小房子裡。"},
+    {w:"alone",ipa:"/əˈloʊn/",pos:"adj.",cn:"單獨的、獨自",def:"Without other people with you.",ex:"My grandmother lives alone, so I call her every evening.",exCn:"我奶奶一個人住，所以我每天晚上都打電話給她。"},
     {w:"tired",ipa:"/ˈtaɪərd/",pos:"adj.",cn:"疲累的",def:"Feeling like you need to rest.",ex:"Last Saturday, Tom saw that grandma looked very tired.",exCn:"上週六，Tom發現奶奶看起來很累。"},
-    {w:"headache",ipa:"/ˈhedeɪk/",pos:"n.",cn:"頭痛",def:"A pain inside your head.",ex:"She had a headache and felt a little sick.",exCn:"她頭痛，而且覺得有點不舒服。"},
-    {w:"clinic",ipa:"/ˈklɪnɪk/",pos:"n.",cn:"診所",def:"A small place where doctors see patients.",ex:"Tom took her to a small clinic near their house.",exCn:"Tom帶她去他們家附近的一間小診所。"},
+    {w:"headache",ipa:"/ˈhedeɪk/",pos:"n.",cn:"頭痛",def:"A pain inside your head.",ex:"I have a headache, so I am going to bed early tonight.",exCn:"我頭痛，所以今晚要早點睡。"},
+    {w:"clinic",ipa:"/ˈklɪnɪk/",pos:"n.",cn:"診所",def:"A small place where doctors see patients.",ex:"The clinic near my office opens at nine in the morning.",exCn:"我辦公室附近的診所早上九點開門。"},
     {w:"worried",ipa:"/ˈwɜːrid/",pos:"adj.",cn:"擔心的",def:"Feeling nervous about something.",ex:"She will feel better soon, so Tom isn't worried now.",exCn:"她很快就會好轉，所以Tom現在不擔心了。"},
-    {w:"check on",ipa:"/tʃek ɒn/",pos:"phr.",cn:"去看看（某人）、關心狀況",def:"To visit someone to see if they are okay.",ex:"Tom can visit her again this weekend to check on her.",exCn:"Tom這個週末可以再去看她，關心她的狀況。"}
+    {w:"check on",ipa:"/tʃek ɒn/",pos:"phr.",cn:"去看看（某人）、關心狀況",def:"To visit someone to see if they are okay.",ex:"Can you check on the baby? I think she is crying.",exCn:"你可以去看看寶寶嗎？我覺得她在哭。"}
   ],
   questions:[
     {q:"Why did Tom take his grandmother to the clinic?",qCn:"Tom為什麼帶奶奶去診所？",opts:["A. Because she wanted to buy medicine","B. Because she had a headache and felt sick","C. Because it was her regular checkup day","D. Because the doctor called her"],optsCn:["A. 因為她想買藥","B. 因為她頭痛又不舒服","C. 因為那天是她固定回診的日子","D. 因為醫生打電話給她"],ans:1,expl:"Tom saw that grandma looked very tired. She had a headache and felt a little sick."},
@@ -251,11 +251,11 @@ articles:[
      cn:"Anita叫媽媽儘快去看醫生。媽媽已經看過醫生了，也開始吃一些藥。現在她感覺好多了，Anita也鬆了一口氣、很開心。"}
   ],
   target:[
-    {w:"distance",ipa:"/ˈdɪstəns/",pos:"n.",cn:"距離",def:"The amount of space between two places.",ex:"She calls her mother in Taiwan every Sunday evening, because video calls make the distance feel shorter.",exCn:"她每週日晚上都會打電話給在台灣的媽媽，因為視訊通話讓距離感覺變近了。"},
+    {w:"distance",ipa:"/ˈdɪstəns/",pos:"n.",cn:"距離",def:"The amount of space between two places.",ex:"The distance between the two stations is only two kilometers.",exCn:"這兩站之間的距離只有兩公里。"},
     {w:"cough",ipa:"/kɔːf/",pos:"n.",cn:"咳嗽",def:"A sudden noise made when air is pushed out of the lungs.",ex:"She had a cough and felt very tired, but she said it was nothing serious.",exCn:"她有點咳嗽，也覺得很累，但她說沒什麼大礙。"},
     {w:"serious",ipa:"/ˈsɪriəs/",pos:"adj.",cn:"嚴重的",def:"Important or dangerous, not small.",ex:"She had a cough and felt very tired, but she said it was nothing serious.",exCn:"她有點咳嗽，也覺得很累，但她說沒什麼大礙。"},
     {w:"grandchildren",ipa:"/ˈɡrænˌtʃɪldrən/",pos:"n.",cn:"孫子孫女",def:"The children of your son or daughter.",ex:"Anita knew her mother, who takes care of two grandchildren every day, was more tired than usual.",exCn:"Anita知道媽媽每天要照顧兩個孫子，比平常更累。"},
-    {w:"harder",ipa:"/ˈhɑːrdər/",pos:"adj.",cn:"比較辛苦的（hard的比較級）",def:"Needing more effort; the comparative form of hard.",ex:"Taking care of small children is harder work than most people think.",exCn:"照顧小小孩比大部分人想的還要辛苦。"},
+    {w:"harder",ipa:"/ˈhɑːrdər/",pos:"adj.",cn:"比較辛苦的（hard的比較級）",def:"Needing more effort; the comparative form of hard.",ex:"The second test was much harder than the first one.",exCn:"第二次考試比第一次難多了。"},
     {w:"relieved",ipa:"/rɪˈliːvd/",pos:"adj.",cn:"鬆了一口氣的",def:"Feeling less worried after a problem is solved.",ex:"Now she feels much better, and Anita feels relieved and happy.",exCn:"現在她感覺好多了，Anita也鬆了一口氣、很開心。"}
   ],
   questions:[
@@ -296,13 +296,13 @@ articles:[
   ],
   target:[
     {w:"filled",ipa:"/fɪld/",pos:"adj.",cn:"擠滿的",def:"Completely full of something.",ex:"Every summer, clinics across Taiwan are filled with more patients than usual.",exCn:"每年夏天，台灣各地的診所都會擠滿比平常更多的病患。"},
-    {w:"affected",ipa:"/əˈfektɪd/",pos:"adj.",cn:"受影響的",def:"Influenced or changed by something, often in a bad way.",ex:"Doctors say that more people have been affected by seasonal viruses this year than last year.",exCn:"醫生說今年受季節性病毒影響的人比去年更多。"},
-    {w:"extended",ipa:"/ɪkˈstendɪd/",pos:"v.",cn:"延長了",def:"Made something longer in time.",ex:"Several clinics have extended their opening hours.",exCn:"好幾家診所都延長了看診時間。"},
+    {w:"affected",ipa:"/əˈfektɪd/",pos:"adj.",cn:"受影響的",def:"Influenced or changed by something, often in a bad way.",ex:"Thousands of affected families are still waiting for help after the flood.",exCn:"水災過後，數千個受影響的家庭仍在等待援助。"},
+    {w:"extended",ipa:"/ɪkˈstendɪd/",pos:"v.",cn:"延長了",def:"Made something longer in time.",ex:"The library has extended its opening hours during the exam period.",exCn:"圖書館在考試期間延長了開放時間。"},
     {w:"telemedicine",ipa:"/ˌtelɪˈmedɪsɪn/",pos:"n.",cn:"遠距醫療",def:"Medical care given through a video call instead of an in-person visit.",ex:"Some people now choose telemedicine, a video call with a doctor from home.",exCn:"有些人現在選擇遠距醫療，也就是在家透過視訊看診。"},
-    {w:"consulted",ipa:"/kənˈsʌltɪd/",pos:"v.",cn:"（被）看診、諮詢",def:"Given professional advice, such as by a doctor.",ex:"Patients who arrive after six in the morning may still wait for over an hour before being consulted.",exCn:"六點以後才到的病人，可能還要再等超過一小時才輪到看診。"},
-    {w:"infection",ipa:"/ɪnˈfekʃn/",pos:"n.",cn:"感染",def:"An illness caused by germs entering the body.",ex:"Washing your hands often and getting enough sleep can lower the risk of infection.",exCn:"常洗手、睡眠充足可以降低感染的風險。"},
+    {w:"consulted",ipa:"/kənˈsʌltɪd/",pos:"v.",cn:"（被）看診、諮詢",def:"Given professional advice, such as by a doctor.",ex:"Before taking the medicine, she consulted a pharmacist.",exCn:"吃藥之前，她先諮詢了藥師。"},
+    {w:"infection",ipa:"/ɪnˈfekʃn/",pos:"n.",cn:"感染",def:"An illness caused by germs entering the body.",ex:"Wash the cut carefully to prevent an infection.",exCn:"仔細清洗傷口，以免感染。"},
     {w:"pressure",ipa:"/ˈpreʃər/",pos:"n.",cn:"壓力、負擔",def:"A difficult situation that needs a lot of effort to deal with.",ex:"To ease the pressure, some people now choose telemedicine, a video call with a doctor from home.",exCn:"為了減輕負擔，有些人現在選擇遠距醫療，也就是在家透過視訊看診。"},
-    {w:"habits",ipa:"/ˈhæbɪts/",pos:"n.",cn:"習慣",def:"Things you regularly do, often without thinking.",ex:"Health experts remind everyone that small habits make a real difference.",exCn:"健康專家提醒大家，微小的習慣真的會帶來不同的結果。"}
+    {w:"habits",ipa:"/ˈhæbɪts/",pos:"n.",cn:"習慣",def:"Things you regularly do, often without thinking.",ex:"Good sleep habits make a big difference to your energy level.",exCn:"良好的睡眠習慣對你的精力影響很大。"}
   ],
   questions:[
     {q:"Why do clinics get so crowded in summer, according to the article?",qCn:"根據文章，為什麼夏天診所會這麼擁擠？",
@@ -348,13 +348,13 @@ articles:[
   ],
   target:[
     {w:"authorities",ipa:"/əˈθɒrətiz/",pos:"n.",cn:"當局、主管機關",def:"The government or officials in charge of something.",ex:"Taiwan's health authorities announced in late July that the country's free COVID-19 vaccination program, originally scheduled to end in July, would continue through the end of September.",exCn:"台灣衛生主管機關在七月下旬宣布，原訂七月結束的全民免費COVID-19疫苗接種計畫將延長至九月底。"},
-    {w:"extension",ipa:"/ɪkˈstenʃn/",pos:"n.",cn:"延長",def:"A longer period of time given for something.",ex:"Health officials said the extension was meant to give more time for people who have not yet received this year's shot.",exCn:"衛生官員表示，延長接種期是為了讓還沒打今年疫苗的人有更多時間。"},
-    {w:"variant",ipa:"/ˈveəriənt/",pos:"n.",cn:"（病毒）變異株",def:"A slightly different form of a virus.",ex:"Officials said the sudden jump was largely driven by a new variant, nicknamed \"Nimbus,\" which has been spreading quickly since early summer.",exCn:"官員表示，這波急遽上升主要是由一款暱稱「Nimbus」的新變異株所驅動，自初夏以來一直快速傳播。"},
-    {w:"peak",ipa:"/piːk/",pos:"n./v.",cn:"高峰、達到高峰",def:"The highest point of something.",ex:"Health officials expect the current wave to peak around the middle of August before slowly declining.",exCn:"衛生官員預期這波疫情將在八月中旬左右達到高峰，之後才會慢慢趨緩。"},
+    {w:"extension",ipa:"/ɪkˈstenʃn/",pos:"n.",cn:"延長",def:"A longer period of time given for something.",ex:"The company asked for a two-week extension on the project deadline.",exCn:"公司要求把專案期限延長兩週。"},
+    {w:"variant",ipa:"/ˈveəriənt/",pos:"n.",cn:"（病毒）變異株",def:"A slightly different form of a virus.",ex:"Scientists are studying a new variant of the flu virus.",exCn:"科學家正在研究一種新的流感病毒變異株。"},
+    {w:"peak",ipa:"/piːk/",pos:"n./v.",cn:"高峰、達到高峰",def:"The highest point of something.",ex:"Ticket prices usually peak during the summer holidays.",exCn:"票價通常在暑假期間達到高峰。"},
     {w:"severe",ipa:"/sɪˈvɪr/",pos:"adj.",cn:"嚴重的",def:"Very bad or serious.",ex:"They also pointed to a worrying pattern: more than ninety percent of people who developed severe symptoms this season had not received this year's updated vaccine.",exCn:"他們也指出一個令人擔憂的現象：這一季出現重症症狀的人當中，超過九成都還沒接種今年更新版的疫苗。"},
-    {w:"chronic",ipa:"/ˈkrɒnɪk/",pos:"adj.",cn:"慢性的",def:"Lasting a long time, often used for illnesses.",ex:"Most of these serious cases involved adults over sixty-five or people with chronic illnesses.",exCn:"這些重症病例大多發生在六十五歲以上的長者，或本身有慢性病的人身上。"},
-    {w:"vaccinated",ipa:"/ˈvæksɪneɪtɪd/",pos:"adj.",cn:"接種疫苗的",def:"Having received a vaccine.",ex:"Officials urged anyone who has not been vaccinated this season, particularly older residents, to make an appointment soon.",exCn:"官員呼籲今年還沒接種疫苗的人，尤其是年長的居民，儘快預約接種。"},
-    {w:"available",ipa:"/əˈveɪləbl/",pos:"adj.",cn:"可取得的",def:"Able to be used or obtained.",ex:"Free vaccines remain available at hospitals, clinics, and many community health stations across the country.",exCn:"免費疫苗目前仍可在全國各醫院、診所與許多社區健康站施打。"}
+    {w:"chronic",ipa:"/ˈkrɒnɪk/",pos:"adj.",cn:"慢性的",def:"Lasting a long time, often used for illnesses.",ex:"He has suffered from chronic back pain for years.",exCn:"他多年來一直受慢性背痛所苦。"},
+    {w:"vaccinated",ipa:"/ˈvæksɪneɪtɪd/",pos:"adj.",cn:"接種疫苗的",def:"Having received a vaccine.",ex:"Only vaccinated travelers were allowed to enter the country.",exCn:"只有接種過疫苗的旅客才獲准入境。"},
+    {w:"available",ipa:"/əˈveɪləbl/",pos:"adj.",cn:"可取得的",def:"Able to be used or obtained.",ex:"The new model will be available in stores next month.",exCn:"新款下個月就會在店裡買得到。"}
   ],
   questions:[
     {q:"Why did Taiwan's CDC decide to extend the free vaccination program?",qCn:"台灣疾管署為什麼決定延長免費疫苗接種計畫？",
@@ -398,12 +398,12 @@ articles:[
      cn:"我們十點半回到家。我很累，但玩得很開心。"}
   ],
   target:[
-    {w:"night market",ipa:"/naɪt ˈmɑːrkɪt/",pos:"n.",cn:"夜市",def:"A street market that opens at night.",ex:"I went to the night market with my friend.",exCn:"我和朋友去逛夜市。"},
-    {w:"take the bus",ipa:"/teɪk ðə bʌs/",pos:"phr.",cn:"搭公車",def:"To travel by bus.",ex:"We took the bus and got there at seven.",exCn:"我們搭公車，七點到那裡。"},
-    {w:"buy",ipa:"/baɪ/",pos:"v.",cn:"買（過去式 bought）",def:"To get something with money.",ex:"My friend bought a jacket at a small store.",exCn:"我朋友在一家小店買了一件外套。"},
-    {w:"cheap",ipa:"/tʃiːp/",pos:"adj.",cn:"便宜的",def:"Not costing a lot of money.",ex:"I saw a cheap camera.",exCn:"我看到一台便宜的相機。"},
+    {w:"night market",ipa:"/naɪt ˈmɑːrkɪt/",pos:"n.",cn:"夜市",def:"A street market that opens at night.",ex:"We eat at the night market every Saturday.",exCn:"我們每週六都去夜市吃東西。"},
+    {w:"take the bus",ipa:"/teɪk ðə bʌs/",pos:"phr.",cn:"搭公車",def:"To travel by bus.",ex:"I take the bus to school because it is cheap.",exCn:"我搭公車上學，因為很便宜。"},
+    {w:"buy",ipa:"/baɪ/",pos:"v.",cn:"買（過去式 bought）",def:"To get something with money.",ex:"She bought a new umbrella because it was raining.",exCn:"因為在下雨，她買了一把新雨傘。"},
+    {w:"cheap",ipa:"/tʃiːp/",pos:"adj.",cn:"便宜的",def:"Not costing a lot of money.",ex:"This shirt was very cheap. It was only two hundred dollars.",exCn:"這件襯衫很便宜，只要兩百元。"},
     {w:"tired",ipa:"/ˈtaɪərd/",pos:"adj.",cn:"累的",def:"Needing rest or sleep.",ex:"I was tired, but I had a great time.",exCn:"我很累，但玩得很開心。"},
-    {w:"have a great time",ipa:"/hæv ə ɡreɪt taɪm/",pos:"phr.",cn:"玩得很開心",def:"To enjoy yourself very much.",ex:"I had a great time.",exCn:"我玩得很開心。"}
+    {w:"have a great time",ipa:"/hæv ə ɡreɪt taɪm/",pos:"phr.",cn:"玩得很開心",def:"To enjoy yourself very much.",ex:"We had a great time at the beach last weekend.",exCn:"我們上週末在海邊玩得很開心。"}
   ],
   questions:[
     {q:"How did the writer go to the night market?",qCn:"作者是怎麼去夜市的？",opts:["A. By car","B. By bus","C. By train","D. On foot"],optsCn:["A. 開車", "B. 搭公車", "C. 搭火車", "D. 走路"],ans:1,expl:"We took the bus and got there at seven."},
@@ -436,11 +436,11 @@ articles:[
      cn:"街上有積水，但不算太深。鄰居在清水溝裡的落葉，我幫他清了大約二十分鐘。之後天空放晴，我們看到了夕陽。那其實是個很美的傍晚。"}
   ],
   target:[
-    {w:"typhoon",ipa:"/taɪˈfuːn/",pos:"n.",cn:"颱風",def:"A very strong storm with heavy rain and wind.",ex:"Last Wednesday there was a typhoon.",exCn:"上週三有颱風。"},
-    {w:"flooding",ipa:"/ˈflʌdɪŋ/",pos:"n.",cn:"淹水、水災",def:"When water covers an area that is usually dry.",ex:"She was worried about the flooding near our house.",exCn:"她擔心我們家附近會淹水。"},
-    {w:"fall down",ipa:"/fɔːl daʊn/",pos:"phr.v.",cn:"倒下、掉下來",def:"To drop from a standing position to the ground.",ex:"Some trees fell down.",exCn:"有些樹倒了。"},
-    {w:"drain",ipa:"/dreɪn/",pos:"n.",cn:"排水溝",def:"A pipe or channel that carries water away.",ex:"My neighbour was cleaning leaves from the drain.",exCn:"鄰居在清水溝裡的落葉。"},
-    {w:"sunset",ipa:"/ˈsʌnset/",pos:"n.",cn:"日落、夕陽",def:"The time when the sun goes down and the sky turns red or orange.",ex:"We could see the sunset.",exCn:"我們看到了夕陽。"}
+    {w:"typhoon",ipa:"/taɪˈfuːn/",pos:"n.",cn:"颱風",def:"A very strong storm with heavy rain and wind.",ex:"Schools were closed for two days because of the typhoon.",exCn:"因為颱風，學校停課了兩天。"},
+    {w:"flooding",ipa:"/ˈflʌdɪŋ/",pos:"n.",cn:"淹水、水災",def:"When water covers an area that is usually dry.",ex:"Heavy rain caused flooding in several parts of the city.",exCn:"大雨造成市區好幾個地方淹水。"},
+    {w:"fall down",ipa:"/fɔːl daʊn/",pos:"phr.v.",cn:"倒下、掉下來",def:"To drop from a standing position to the ground.",ex:"Be careful, the old fence might fall down in the strong wind.",exCn:"小心，那道舊圍籬可能會被強風吹倒。"},
+    {w:"drain",ipa:"/dreɪn/",pos:"n.",cn:"排水溝",def:"A pipe or channel that carries water away.",ex:"The drain outside our house was full of leaves.",exCn:"我們家外面的排水溝塞滿了落葉。"},
+    {w:"sunset",ipa:"/ˈsʌnset/",pos:"n.",cn:"日落、夕陽",def:"The time when the sun goes down and the sky turns red or orange.",ex:"We watched the sunset from the top of the hill.",exCn:"我們在山頂上看日落。"}
   ],
   questions:[
     {q:"Why did they not go to work?",qCn:"他們為什麼沒去上班？",opts:["A. It was a holiday","B. There was a typhoon","C. The office was closed for cleaning","D. They were sick"],optsCn:["A. 那天是假日", "B. 有颱風", "C. 辦公室關閉打掃", "D. 他們生病了"],ans:1,expl:"Last Wednesday there was a typhoon, so we did not go to work."},
@@ -473,12 +473,12 @@ articles:[
      cn:"好消息是颱風預計今晚會轉向北方，明天下午就會離開台灣。我已經把火車票改訂到週五了。現在我先在家工作，希望不要停電。"}
   ],
   target:[
-    {w:"weather bureau",ipa:"/ˈweðər ˈbjʊroʊ/",pos:"n.",cn:"氣象局",def:"A government office that studies and reports the weather.",ex:"The weather bureau issued a sea warning.",exCn:"氣象局發布了海上警報。"},
-    {w:"sea warning",ipa:"/siː ˈwɔːrnɪŋ/",pos:"n.",cn:"海上警報",def:"An official notice about dangerous weather near the coast.",ex:"The weather bureau issued a sea warning yesterday.",exCn:"氣象局昨天發布了海上警報。"},
+    {w:"weather bureau",ipa:"/ˈweðər ˈbjʊroʊ/",pos:"n.",cn:"氣象局",def:"A government office that studies and reports the weather.",ex:"The weather bureau says the rain will stop by Friday.",exCn:"氣象局說雨到週五就會停。"},
+    {w:"sea warning",ipa:"/siː ˈwɔːrnɪŋ/",pos:"n.",cn:"海上警報",def:"An official notice about dangerous weather near the coast.",ex:"Fishing boats returned to port after the sea warning was issued.",exCn:"海上警報發布後，漁船都回港了。"},
     {w:"suspend",ipa:"/səˈspend/",pos:"v.",cn:"暫停",def:"To stop something for a period of time.",ex:"Train services have been suspended.",exCn:"火車停駛了。"},
     {w:"higher ground",ipa:"/ˈhaɪər ɡraʊnd/",pos:"n.",cn:"高處、地勢較高的地方",def:"Land that is above the level that floods reach.",ex:"She moved to her parents' house on higher ground.",exCn:"她搬去住在高處的爸媽家。"},
-    {w:"rebook",ipa:"/ˌriːˈbʊk/",pos:"v.",cn:"改訂、重新訂位",def:"To book a ticket again for a different time.",ex:"I have already rebooked my train ticket for Friday.",exCn:"我已經把火車票改訂到週五了。"},
-    {w:"work from home",ipa:"/wɜːrk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home instead of going to the office.",ex:"I am working from home.",exCn:"我在家工作。"}
+    {w:"rebook",ipa:"/ˌriːˈbʊk/",pos:"v.",cn:"改訂、重新訂位",def:"To book a ticket again for a different time.",ex:"I had to rebook my flight for the following morning.",exCn:"我必須把航班改訂到隔天早上。"},
+    {w:"work from home",ipa:"/wɜːrk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home instead of going to the office.",ex:"Many people still work from home two days a week.",exCn:"很多人現在仍然每週在家工作兩天。"}
   ],
   questions:[
     {q:"Why has the writer's trip been cancelled?",qCn:"作者的行程為什麼被取消？",
@@ -518,13 +518,13 @@ articles:[
      cn:"最後，我被改訂到週四晚上的航班，台北的飯店也免費改期。整件事教了我兩件事：第一，旅行計畫隨時可能被天氣毀掉，重要會議絕對不要排在落地當天；第二，當一切都不在你的掌控之中時，隊伍裡最冷靜的人通常最先被服務——至少會被對待得最好。"}
   ],
   target:[
-    {w:"departure board",ipa:"/dɪˈpɑːrtʃər bɔːrd/",pos:"n.",cn:"出境航班看板",def:"A screen at an airport that shows which flights are leaving.",ex:"The departure board was covered in red.",exCn:"出境看板一片紅字。"},
-    {w:"ground (a flight)",ipa:"/ɡraʊnd/",pos:"v.",cn:"（航班）停飛",def:"To stop a plane from flying.",ex:"Every morning flight to the island had been grounded.",exCn:"所有飛往該島的早班機都被停飛。"},
+    {w:"departure board",ipa:"/dɪˈpɑːrtʃər bɔːrd/",pos:"n.",cn:"出境航班看板",def:"A screen at an airport that shows which flights are leaving.",ex:"I kept checking the departure board, but my gate had not been announced yet.",exCn:"我一直看著出境航班看板，但我的登機門還沒公布。"},
+    {w:"ground (a flight)",ipa:"/ɡraʊnd/",pos:"v.",cn:"（航班）停飛",def:"To stop a plane from flying.",ex:"Thick fog grounded dozens of flights at the airport this morning.",exCn:"今天早上濃霧讓機場數十班航班停飛。"},
     {w:"until further notice",ipa:"/ənˈtɪl ˈfɜːrðər ˈnoʊtɪs/",pos:"phr.",cn:"直到另行通知",def:"From now until an official change is announced.",ex:"Flights had been grounded until further notice.",exCn:"航班被停飛，直到另行通知。"},
-    {w:"voucher",ipa:"/ˈvaʊtʃər/",pos:"n.",cn:"券、兌換券",def:"A piece of paper you can use instead of money.",ex:"Meal vouchers were handed out around noon.",exCn:"中午前後發放了餐券。"},
-    {w:"waiting list",ipa:"/ˈweɪtɪŋ lɪst/",pos:"n.",cn:"候補名單",def:"A list of people waiting for something to become available.",ex:"I asked to be put on the waiting list.",exCn:"我要求排進候補名單。"},
-    {w:"suspend",ipa:"/səˈspend/",pos:"v.",cn:"暫停、停駛",def:"To stop a service for a period of time.",ex:"Train services along the east coast were suspended.",exCn:"東海岸的火車停駛。"},
-    {w:"low-lying",ipa:"/ˌloʊ ˈlaɪɪŋ/",pos:"adj.",cn:"低窪的",def:"Close to sea level and easy to flood.",ex:"Residents in low-lying areas were advised to move.",exCn:"低窪地區的居民被勸告撤離。"},
+    {w:"voucher",ipa:"/ˈvaʊtʃər/",pos:"n.",cn:"券、兌換券",def:"A piece of paper you can use instead of money.",ex:"The hotel gave us a breakfast voucher to apologize for the noise.",exCn:"飯店給了我們一張早餐券，為噪音致歉。"},
+    {w:"waiting list",ipa:"/ˈweɪtɪŋ lɪst/",pos:"n.",cn:"候補名單",def:"A list of people waiting for something to become available.",ex:"The course is full, but you can put your name on the waiting list.",exCn:"這門課已經額滿，但你可以把名字登記在候補名單上。"},
+    {w:"suspend",ipa:"/səˈspend/",pos:"v.",cn:"暫停、停駛",def:"To stop a service for a period of time.",ex:"The city will suspend bus services if the typhoon gets stronger.",exCn:"如果颱風增強，市府將暫停公車服務。"},
+    {w:"low-lying",ipa:"/ˌloʊ ˈlaɪɪŋ/",pos:"adj.",cn:"低窪的",def:"Close to sea level and easy to flood.",ex:"Residents of low-lying villages were moved to higher ground.",exCn:"低窪村落的居民被移往地勢較高的地方。"},
     {w:"rebook",ipa:"/ˌriːˈbʊk/",pos:"v.",cn:"改訂、重新訂位",def:"To book a ticket again for a different time.",ex:"I was rebooked on Thursday's evening flight.",exCn:"我被改訂到週四晚上的航班。"},
     {w:"out of your control",ipa:"/aʊt əv jər kənˈtroʊl/",pos:"phr.",cn:"不在你的掌控之中",def:"Something you cannot change or decide.",ex:"When everything is out of your control, stay calm.",exCn:"當一切都不在你的掌控中時，保持冷靜。"}
   ],
@@ -574,12 +574,12 @@ articles:[
   target:[
     {w:"issue a warning",ipa:"/ˈɪʃuː ə ˈwɔːrnɪŋ/",pos:"phr.",cn:"發布警報",def:"To officially tell the public about a danger.",ex:"The agency issued a sea warning.",exCn:"氣象單位發布了海上警報。"},
     {w:"sustained winds",ipa:"/səˈsteɪnd wɪndz/",pos:"n.",cn:"持續風速",def:"Wind speed measured over a period of time, not a single gust.",ex:"Maximum sustained winds of 144 kph.",exCn:"最大持續風速為每小時 144 公里。"},
-    {w:"storm radius",ipa:"/stɔːrm ˈreɪdiəs/",pos:"n.",cn:"暴風半徑",def:"The distance from the centre of a storm to its outer edge.",ex:"A storm radius of 280 kilometres.",exCn:"暴風半徑為 280 公里。"},
+    {w:"storm radius",ipa:"/stɔːrm ˈreɪdiəs/",pos:"n.",cn:"暴風半徑",def:"The distance from the centre of a storm to its outer edge.",ex:"The storm radius is so wide that the whole island will feel strong winds.",exCn:"暴風半徑非常大，全島都會感受到強風。"},
     {w:"make landfall",ipa:"/meɪk ˈlændfɔːl/",pos:"phr.",cn:"登陸",def:"When a storm reaches land from the sea.",ex:"It was not expected to make landfall in Taiwan.",exCn:"預計不會在台灣登陸。"},
     {w:"forecaster",ipa:"/ˈfɔːrkæstər/",pos:"n.",cn:"預報人員",def:"A person whose job is to say what the weather will be.",ex:"Forecasters were confident about its path.",exCn:"預報人員對它的路徑很有把握。"},
     {w:"alert",ipa:"/əˈlɜːrt/",pos:"n.",cn:"警戒（等級）",def:"An official warning about a possible danger.",ex:"The area was placed under the highest rainfall alert.",exCn:"該地區被列入最高等級的降雨警報。"},
     {w:"swell",ipa:"/swel/",pos:"n.",cn:"長浪、湧浪",def:"Long, slow waves far from where the wind is blowing.",ex:"Long swells were expected along the east coast.",exCn:"東岸預計會有長浪。"},
-    {w:"scattered showers",ipa:"/ˈskætərd ˈʃaʊərz/",pos:"n.",cn:"零星陣雨",def:"Short periods of rain in some places but not others.",ex:"Southwesterly winds brought scattered showers.",exCn:"西南風帶來零星陣雨。"}
+    {w:"scattered showers",ipa:"/ˈskætərd ˈʃaʊərz/",pos:"n.",cn:"零星陣雨",def:"Short periods of rain in some places but not others.",ex:"Expect scattered showers in the afternoon, so bring an umbrella.",exCn:"下午會有零星陣雨，記得帶傘。"}
   ],
   questions:[
     {q:"Where was Typhoon Dolphin expected to make landfall?",qCn:"颱風「海豚」預計在哪裡登陸？",

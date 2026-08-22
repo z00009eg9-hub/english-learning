@@ -373,7 +373,6 @@ tr:nth-child(even) td{background:#fdfbf8}
 .artbox{margin:0 0 14px;background:#fff;border:1px solid var(--line);border-radius:14px;
   box-shadow:var(--shadow);padding:10px;overflow:hidden}
 .artbox svg{display:block;width:100%;height:auto;border-radius:9px}
-@media(min-width:900px){.artbox{max-width:680px;margin-left:auto;margin-right:auto}}
 .artbox figcaption{
   font-size:calc(13px * var(--fs));color:var(--ink2);line-height:1.7;margin-top:9px;
   padding:8px 10px;background:#fdfbf8;border-radius:8px;border-left:3px solid var(--accent)
@@ -485,6 +484,7 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 .btn.ghost.on{background:var(--accent);color:#fff;border-color:var(--accent)}
 .btn.gray.on{background:var(--ink2);color:#fff}
 .spk.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+.spk.stopbtn,.btn.stopbtn{background:#c0392b!important;color:#fff!important;border-color:#c0392b!important;font-weight:700;animation:auPulse 1.6s ease-in-out infinite}
 /* 標頭的全站中譯開關（button 版 hdlink） */
 button.hdlink{font:inherit;font-size:11.5px;font-weight:800;cursor:pointer}
 /* 中譯開關：開＝白底橘字（跟 Anita/Tom 切換一樣明顯），關＝半透明 */
@@ -893,7 +893,7 @@ function pickVoice(){
   VOICE2=ranked.length>1?ranked[1]:null;
 }
 pickVoice();
-if('speechSynthesis' in window) speechSynthesis.onvoiceschanged=pickVoice;
+if('speechSynthesis' in window) speechSynthesis.onvoiceschanged=function(){ pickVoice(); if(typeof auApplyVoices==='function'&&auLines.length){ auApplyVoices(); auFillVoices(); } };
 function say(text,rate,onend,voice){
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
@@ -949,7 +949,8 @@ function spkGo(btn){
   const hl=t||box;
   document.querySelectorAll('.spkon').forEach(x=>x.classList.remove('spkon'));
   if(hl) hl.classList.add('spkon');
-  say(btn.dataset.t, null, ()=>{ if(hl) hl.classList.remove('spkon'); });
+  const spv=(btn.dataset.sp&&typeof auSpMap!=='undefined')?auSpMap[btn.dataset.sp]:null;
+  say(btn.dataset.t, null, ()=>{ if(hl) hl.classList.remove('spkon'); }, spv||undefined);
 }
 window.spkGo=spkGo;
 function spk(text,label){
@@ -1365,15 +1366,12 @@ function readerHTML(a){
   if(tg.length){
     h+='<div class="wpbox"><div class="wphead">▼ Words &amp; Phrases<span class="zh">單字片語</span></div><div class="wpbody">'
      + tg.map((t,i)=>{
-       const dup=_exInArt(t.ex);
        return '<div class="wpitem">'
        +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="showGloss(\''+esc(t.w).replace(/'/g,"\\'")+'\')">'+esc(t.w)+'</w> '
        +spk(t.w)+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
        +'<div class="zh">'+esc(t.cn)+'</div>'
        +(t.def?'<div class="def">'+esc(t.def)+'</div>':'')
-       +(t.ex?(dup?'<div class="exs" style="color:var(--ink2);font-style:italic;font-size:calc(13px * var(--fs))">→ 例句見上方文章</div>'
-              :'<div class="exs">'+esc(t.ex)+' '+spk(t.ex)+(t.exCn?'<div class="excn">'+esc(t.exCn)+'</div>':'')+'</div>')
-        :'')
+       +(t.ex?'<div class="exs">'+esc(t.ex)+' '+spk(t.ex)+(t.exCn?'<div class="excn">'+esc(t.exCn)+'</div>':'')+'</div>':'')
        +'</div>';}).join('')
      +'</div></div>';
   }
@@ -1453,7 +1451,7 @@ function readAll(){
   if(readSeq){ stopReadAll(); return; }          // 再按一次＝停止
   const sents=[].slice.call(document.querySelectorAll('#paras .sent'));
   if(!sents.length){ say(rdOpen.paras.map(p=>p.en).join(' ')); return; }
-  const btn=$('btn-readall'); if(btn){ btn.textContent='⏹ 停止朗讀'; btn.classList.add('on'); }
+  const btn=$('btn-readall'); if(btn){ btn.textContent='⏹ 停止朗讀'; btn.classList.add('on','stopbtn'); }
   readSeq={i:0, list:sents};
   stepRead();
 }
@@ -1465,8 +1463,13 @@ function stepRead(){
   el.classList.add('reading');
   el.scrollIntoView({block:'center',behavior:'smooth'});
   /* cancel 之後馬上 speak 在 iOS 會偶爾掉句（音訊跟畫面對不上），隔一小拍再唸 */
+  const seq=readSeq; let moved=false;
+  const next=function(){ if(moved||readSeq!==seq) return; moved=true; if(seq.wd) clearTimeout(seq.wd); seq.i++; stepRead(); };
+  const words=String(el.dataset.t||'').split(/\s+/).filter(Boolean).length;
   setTimeout(function(){
-    if(readSeq) say(el.dataset.t, null, function(){ if(readSeq){ readSeq.i++; stepRead(); } });
+    if(readSeq!==seq) return;
+    say(el.dataset.t, null, next);
+    seq.wd=setTimeout(next, Math.max(1800, words*430/(ST.rate||1))+2600);
   },80);
 }
 /* 整段朗讀：跟朗讀全文一樣逐句唸、唸到哪句反黃到哪句，只是範圍限定在這一段 */
@@ -1476,17 +1479,18 @@ function readPara(i){
   const box=$('p'+i); if(!box) return;
   const sents=[].slice.call(box.querySelectorAll('.sent'));
   if(!sents.length) return;
-  const b=$('pab'+i); if(b) b.classList.add('on');
+  const b=$('pab'+i); if(b){ b.classList.add('on','stopbtn'); b.textContent='⏹ 停止'; }
   readSeq={i:0, list:sents, p:i};
   stepRead();
 }
 window.readPara=readPara;
 function stopReadAll(){
+  if(readSeq&&readSeq.wd) clearTimeout(readSeq.wd);
   readSeq=null;
   if('speechSynthesis' in window) speechSynthesis.cancel();
   document.querySelectorAll('#paras .sent.reading').forEach(x=>x.classList.remove('reading'));
-  const btn=$('btn-readall'); if(btn){ btn.textContent='🔊 朗讀全文'; btn.classList.remove('on'); }
-  document.querySelectorAll('[id^="pab"].on').forEach(b=>b.classList.remove('on'));
+  const btn=$('btn-readall'); if(btn){ btn.textContent='🔊 朗讀全文'; btn.classList.remove('on','stopbtn'); }
+  document.querySelectorAll('[id^="pab"].on').forEach(b=>{ b.classList.remove('on','stopbtn'); b.textContent='🔊 整段'; });
 }
 window.stopReadAll=stopReadAll;
 window.togCn=togCn; window.cnAll=cnAll; window.readAll=readAll;
@@ -1828,7 +1832,7 @@ RENDER.daily=function(){
    +'<li style="margin-bottom:7px">看今日聽力影片，跟讀關鍵句、做理解測驗（約 8 分鐘）</li>'
    +'<li>最後去「單字卡」清掉今天到期的字</li></ol></div>';
 
-  const todayIds=new Set([...artsToday,...gramsToday,...listensToday].filter(x=>isToday(x)).map(x=>x.id));
+  const todayIds=new Set([...artsToday,...gramsToday,...listensToday].map(x=>x.id));
   // 只保留「本週」（週一起算）的過去內容；更早的依分類回歸 閱讀／聽力／文法 分頁（各分頁最上方）
   const ws=weekStart();
   const thisWeek=x=>x.date&&x.date>=ws&&x.date<=t;
@@ -2056,6 +2060,8 @@ document.addEventListener('click',e=>{
   if(!('speechSynthesis' in window)) return;
   if(!speechSynthesis.speaking && !speechSynthesis.pending) return;
   if(e.target.closest('button,.spk,.sent,w,a,input,textarea,select,.opt3,.gloss')) return;
+  if(typeof readSeq!=='undefined'&&readSeq) stopReadAll();
+  if(typeof bkSeq!=='undefined'&&bkSeq) bkStop();
   speechSynthesis.cancel();
   document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
 });
@@ -2226,35 +2232,49 @@ function bkSearch(q){
 }
 function bkGo(id){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; RENDER.book(); window.scrollTo(0,0); }
 function bkClose(){ bkOpen=null; RENDER.book(); window.scrollTo(0,0); }
-/* 整段朗讀：一句一句念、念到哪句反黃到哪句 */
+/* 課本朗讀（整段／全文共用）：一句一句念、念到哪句反黃到哪句；
+   按下去的按鈕變紅色「⏹ 停止」，再按一次或點空白處就停。
+   Web Speech 的 onend 在 iOS/Chrome 不一定會觸發，所以每句都有看門狗，時間到就自己往下念。 */
+let bkSeq=null;
+function bkStop(){
+  if(bkSeq&&bkSeq.wd) clearTimeout(bkSeq.wd);
+  bkSeq=null;
+  if('speechSynthesis' in window) speechSynthesis.cancel();
+  document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
+  document.querySelectorAll('.spk.stopbtn').forEach(b=>{ b.classList.remove('stopbtn','on'); if(b.dataset.lbl) b.textContent=b.dataset.lbl; });
+}
+function bkRun(btn,sents){
+  if(bkSeq&&bkSeq.btn===btn){ bkStop(); return; }
+  stopReadAll(); bkStop();
+  if(!sents.length) return;
+  btn.dataset.lbl=btn.textContent; btn.textContent='⏹ 停止朗讀'; btn.classList.add('on','stopbtn');
+  bkSeq={i:0,list:sents,btn:btn};
+  bkStep();
+}
+function bkStep(){
+  const seq=bkSeq; if(!seq) return;
+  document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
+  if(seq.i>=seq.list.length){ bkStop(); return; }
+  const el=seq.list[seq.i]; el.classList.add('reading');
+  el.scrollIntoView({block:'center',behavior:'smooth'});
+  let moved=false;
+  const next=()=>{ if(moved||bkSeq!==seq) return; moved=true; if(seq.wd) clearTimeout(seq.wd); seq.i++; bkStep(); };
+  const words=String(el.dataset.t||'').split(/\s+/).filter(Boolean).length;
+  setTimeout(()=>{
+    if(bkSeq!==seq) return;
+    say(el.dataset.t,null,next);
+    seq.wd=setTimeout(next, Math.max(1800, words*430/(ST.rate||1))+2600);
+  },80);
+}
 function bkReadPara(btn){
   const para=btn.closest('.para'); if(!para) return;
-  const sents=[...para.querySelectorAll('.sent')];
-  let i=0;
-  const step=()=>{
-    document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
-    if(i>=sents.length) return;
-    const el=sents[i++]; el.classList.add('reading');
-    say(el.dataset.t,null,step);
-  };
-  speechSynthesis.cancel();
-  step();
+  bkRun(btn,[...para.querySelectorAll('.sent')]);
 }
-/* 朗讀全文（課本文章）：整張卡的句子一句句念、念到哪句反黃＋捲進畫面 */
 function bkReadAll(btn){
   const card=btn.closest('.card'); if(!card) return;
-  const sents=[...card.querySelectorAll('.sent')];
-  let i=0;
-  const step=()=>{
-    document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
-    if(i>=sents.length) return;
-    const el=sents[i++]; el.classList.add('reading');
-    el.scrollIntoView({block:'center',behavior:'smooth'});
-    say(el.dataset.t,null,step);
-  };
-  speechSynthesis.cancel();
-  step();
+  bkRun(btn,[...card.querySelectorAll('.sent')]);
 }
+window.bkStop=bkStop;
 /* 💡 說明展開/收合（按鈕往上找最近的 .hint 兄弟區塊） */
 function togHintBox(btn){
   let el=btn, hint=null;
@@ -2563,11 +2583,49 @@ function playerBox(divId){
    這些課的素材是本站依課堂筆記單字自製的對話，沒有影片，
    所以「播放器」就是語音合成：整段連播、或念一句停一下讓學習者跟著念。 */
 let auLines=[], auIdx=-1, auOn=false, auShadow=false, auRate=1, auTimer=null, auWatch=null, auKeep=null, auSpMap={};
+let auSpeakers=[];
+function auVoiceList(){
+  if(!('speechSynthesis' in window)) return [];
+  return speechSynthesis.getVoices().filter(v=>/^en(-|_)/i.test(v.lang))
+    .sort((a,b)=>(a.lang>b.lang?1:a.lang<b.lang?-1:0)||a.name.localeCompare(b.name));
+}
+function auPickedVoice(slot){
+  const name=localStorage.getItem('b2_voice_'+slot);
+  const vs=auVoiceList();
+  return (name&&vs.find(v=>v.name===name))||null;
+}
+function auApplyVoices(){
+  auSpMap={};
+  if(auSpeakers.length>=1) auSpMap[auSpeakers[0]]=auPickedVoice('a')||VOICE;
+  if(auSpeakers.length>=2) auSpMap[auSpeakers[1]]=auPickedVoice('b')||VOICE2||VOICE;
+}
+function auFillVoices(){
+  const vs=auVoiceList();
+  ['a','b'].forEach((slot,i)=>{
+    const sel=$('au-v'+slot); if(!sel) return;
+    const cur=(auSpMap[auSpeakers[i]]||{}).name||'';
+    sel.innerHTML=vs.map(v=>'<option value="'+esc(v.name)+'"'+(v.name===cur?' selected':'')+'>'+esc(v.name.replace(/^Microsoft |^Google /,''))+(/en[-_]us/i.test(v.lang)?'':' ('+esc(v.lang)+')')+'</option>').join('');
+    if(!vs.length) sel.innerHTML='<option>（此裝置沒有英文語音）</option>';
+  });
+  const wrap=$('au-vrow'); if(wrap&&auSpeakers.length<2) wrap.style.display='none';
+  ['a','b'].forEach((slot,i)=>{ const lb=$('au-vl'+slot); if(lb&&auSpeakers[i]) lb.textContent=auSpeakers[i]; });
+}
+function auSetVoice(slot,name){
+  localStorage.setItem('b2_voice_'+slot,name);
+  auApplyVoices(); auTestVoice(slot);
+}
+function auTestVoice(slot){
+  const i=slot==='a'?0:1;
+  const v=auSpMap[auSpeakers[i]]||VOICE;
+  const line=auLines.find(l=>l.sp===auSpeakers[i]);
+  if('speechSynthesis' in window) speechSynthesis.cancel();
+  say(line?line.en:'Hi, this is my voice. Nice to meet you.', auRate, null, v);
+}
+window.auSetVoice=auSetVoice; window.auTestVoice=auTestVoice;
 function auSet(lines){
   auStop(); auLines=lines||[];
-  const speakers=[...new Set(auLines.map(l=>l.sp).filter(Boolean))];
-  auSpMap={};
-  if(speakers.length>=2){ auSpMap[speakers[0]]=VOICE; auSpMap[speakers[1]]=VOICE2||VOICE; }
+  auSpeakers=[...new Set(auLines.map(l=>l.sp).filter(Boolean))];
+  auApplyVoices(); auFillVoices();
 }
 function auClearHi(){ document.querySelectorAll('#sublist .sline').forEach(el=>el.classList.remove('cur')); }
 function auHi(i){
@@ -2641,6 +2699,11 @@ function audioControls(){
    +'<div class="row" style="margin-top:6px">'
    +'<span class="muted" style="font-size:calc(12.5px * var(--fs));font-weight:700">速度</span>'
    +[0.5,0.75,1].map(r=>'<button class="spk rbtn'+(r===1?' on':'')+'" data-r="'+r+'" onclick="auSetRate('+r+')">'+r+'x</button>').join('')
+   +'</div>'
+   +'<div class="row" id="au-vrow" style="margin-top:6px;align-items:center;gap:6px">'
+   +'<span class="muted" style="font-size:calc(12.5px * var(--fs));font-weight:700">語音</span>'
+   +'<span class="muted" id="au-vla" style="font-size:calc(12.5px * var(--fs))">A</span><select class="spk" id="au-va" onchange="auSetVoice(\'a\',this.value)"></select><button class="spk" onclick="auTestVoice(\'a\')">🔊</button>'
+   +'<span class="muted" id="au-vlb" style="font-size:calc(12.5px * var(--fs))">B</span><select class="spk" id="au-vb" onchange="auSetVoice(\'b\',this.value)"></select><button class="spk" onclick="auTestVoice(\'b\')">🔊</button>'
    +'</div>';
 }
 
@@ -2826,7 +2889,7 @@ function lessonHTML(l){
      +'<div id="sublist">'+ au.map((k,i)=>
         '<div class="sline" id="sl-'+i+'">'
         +(k.sp?'<div class="ssp '+spCls(k.sp)+'">'+esc(k.sp)+'</div>':'')
-        +'<div class="srow"><div class="sen" onclick="auFrom('+i+')">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
+        +'<div class="srow"><div class="sen" onclick="auFrom('+i+')">'+tokenize(k.en,null)+'</div>'+spk(k.en).replace('<button ','<button data-sp="'+esc(k.sp||'')+'" ')+'</div>'
         +(k.cn?'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>':'')
         +'</div>').join('')+'</div></div>';
   }
