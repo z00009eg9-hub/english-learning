@@ -182,6 +182,35 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .act-listen{background:#EAF3F0;}
 .act-say .act-badge{background:var(--red);}
 
+/* ═══ 大廳視覺層級：主力輸出卡放大、輔助卡縮小 ═══ */
+.acts-hero{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+.acts-hero .act{padding:22px 16px 18px;border-width:2.5px;}
+.acts-hero .act-h{font-size:1.45rem;}
+.acts-hero .act-ico{width:58px;height:58px;font-size:2rem;}
+.acts.acts-sub .act{padding:12px 13px;}
+.acts.acts-sub .act-h{font-size:1.06rem;padding-right:52px;}
+.acts.acts-sub .act-en{font-size:.74rem;padding-right:52px;}
+.acts.acts-sub .act-d{display:none;}
+.acts.acts-sub .act-ico{width:40px;height:40px;font-size:1.35rem;top:12px;border-radius:11px;}
+.acts.acts-sub .act-meta{margin-top:6px;}
+/* 卡片角落的 ⏱️ 時間與難度微型標籤 */
+.act-meta{margin-top:9px;display:flex;gap:5px;flex-wrap:wrap;}
+.act-meta span{font-size:.7rem;font-weight:800;background:rgba(255,255,255,.75);border:1px solid var(--bdr2);border-radius:100px;padding:2px 8px;color:var(--sub);white-space:nowrap;}
+.act-meta .m-lv{color:var(--teal);}
+.act-meta .m-hard{color:var(--coral-d);}
+/* 課前暖身快捷條（週二/四外師課當天顯示） */
+.warmup-bar{display:flex;align-items:center;gap:11px;width:100%;background:linear-gradient(135deg,#FFF3D6,#FFE1D2);border:2px solid var(--coral);border-radius:16px;padding:12px 15px;margin-bottom:14px;cursor:pointer;font-family:inherit;text-align:left;box-shadow:var(--sh-sm);transition:transform .16s;}
+.warmup-bar:hover{transform:translateY(-2px);}
+.warmup-bar .wu-ico{font-size:1.7rem;}
+.warmup-bar b{font-size:1.02rem;color:var(--coral-d);display:block;}
+.warmup-bar .wu-sub{font-size:.79rem;color:var(--sub);font-weight:600;margin-top:2px;}
+/* 今日目標進度環（取代冷冰冰的歸零數字） */
+.stat-goal .goal-row{display:flex;align-items:center;justify-content:center;gap:7px;}
+.gring{transform:rotate(-90deg);}
+.gring .bg{stroke:var(--bdr2);}
+.gring .fg{stroke:var(--coral);transition:stroke-dashoffset .5s;}
+.gring.full .fg{stroke:var(--good);}
+
 /* ═══ STAT STRIP ═══ */
 .stats{display:flex;gap:9px;margin-top:20px;}
 .stat{flex:1;background:var(--card);border:2px solid var(--line);border-radius:15px;padding:12px 8px;text-align:center;box-shadow:var(--sh-sm);}
@@ -244,6 +273,18 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .w-soft{color:var(--sub);opacity:.55;}
 .w-near{border-bottom:2px dotted var(--good);}
 .w-extra{color:var(--amber);font-style:italic;font-size:.85em;}
+/* 聽寫智慧比對：黃＝拼字小誤（typo，仍算對）；紅底線保留給真的聽錯 */
+.w-typo{color:#B45309;font-weight:800;border-bottom:2.5px solid #F59E0B;}
+/* 聽寫「你打的 vs 答案」上下疊加對照 */
+.dict-stack{margin-top:8px;font-size:.92rem;line-height:1.7;}
+.dict-stack .row-l{font-size:.72rem;font-weight:800;color:var(--faint);}
+/* 跟讀盲測模式：字幕上霧，純靠耳朵 */
+.blindtxt{filter:blur(9px);user-select:none;pointer-events:none;}
+/* 連音 ‿ 與重音粗體提示 */
+.liai{color:var(--coral);font-weight:900;margin:0 -2px;}
+.strs{font-weight:900;}
+/* 聽力選擇題：答案關鍵字（可點聽發音） */
+.kw{color:var(--teal);font-weight:900;border-bottom:2px dashed var(--teal);cursor:pointer;}
 .heard{font-size:.95rem;color:var(--sub);margin-top:6px;font-style:italic;min-height:1em;}
 .heard b{color:var(--ink);font-style:normal;}
 /* 瀏覽器辨識的候選字（除錯用）：看得出來是收音沒收到，還是評分太嚴 */
@@ -616,6 +657,11 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   /* 手機：朗讀段落按鈕列重排——🔊和🎤同列靠左，狀態文字獨占下一列 */
   .para-bar{gap:8px;}
   .para-bar .mic-lbl{width:100%;order:9;margin-top:2px;font-size:.88rem;}
+  /* 手機：主力卡改單欄直排，卡片才夠寬放得下說明與標籤 */
+  .acts-hero{grid-template-columns:1fr;}
+  .acts-hero .act-h{font-size:1.2rem;white-space:normal;}
+  .act-meta span{font-size:.66rem;padding:2px 6px;}
+  .stat-goal .l{font-size:.62rem;}
 }
 @media(max-width:420px){
   .acts{grid-template-columns:1fr 1fr;}
@@ -681,61 +727,81 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       </div>
     </div>
 
-    <div class="grid-ttl">🚀 選一個口說活動</div>
-    <div class="acts">
-      <button class="act act-word" onclick="openAct('word')" title="看字卡念單字並造句，把生字變成能開口說的字"><span class="act-prog" id="ap-word"></span>
-        <div class="act-ico i-word">🗣️</div>
-        <div class="act-h">單字口說</div>
-        <div class="act-en">Word Power</div>
-        <div class="act-d">看字卡念單字 + 造句,把生字變成能講的字。</div>
-      </button>
-      <button class="act act-shadow" onclick="openAct('shadow')" title="聽標準示範句，馬上跟著複誦，練節奏與流暢度"><span class="act-prog" id="ap-shadow"></span>
-        <div class="act-ico i-shadow">🔁</div>
-        <div class="act-h">跟讀模仿</div>
-        <div class="act-en">Shadowing</div>
-        <div class="act-d">聽示範句 → 馬上跟著複誦,練節奏與流暢度。</div>
-      </button>
-      <button class="act act-read" onclick="openAct('read')" title="一段一段朗讀文章，說對的字會即時亮綠燈"><span class="act-prog" id="ap-read"></span>
-        <div class="act-ico i-read">📖</div>
-        <div class="act-h">朗讀文章</div>
-        <div class="act-en">Read Aloud</div>
-        <div class="act-d">一段一段朗讀,說對的字會亮綠燈。</div>
-      </button>
+    <button class="warmup-bar hide" id="warmup-bar" onclick="startWarmup()" title="上課前 15 分鐘快速暖身：5 句說出來，開口熱身">
+      <span class="wu-ico">⚡</span>
+      <span><b>15 分鐘上課暖身 Warm-up</b><span class="wu-sub" id="warmup-sub">今晚有外師口說課！先說 5 句熱個身，上課更快進入狀況</span></span>
+    </button>
+
+    <div class="grid-ttl">🚀 主力輸出訓練（先挑戰這兩個！）</div>
+    <div class="acts-hero">
       <button class="act act-say" onclick="openAct('say')" title="看中文開口說英文，麥克風幫你抓漏字並給分"><span class="act-prog" id="ap-say"></span>
         <span class="act-badge">主打</span>
         <div class="act-ico i-say">🎤</div>
         <div class="act-h">說出來</div>
         <div class="act-en">Say It Out Loud</div>
         <div class="act-d">看中文,開口說英文。麥克風幫你抓漏字、給分。</div>
-      </button>
-      <button class="act act-listen" onclick="openAct('listen')" title="聽英文句子（可正常/慢速）：基礎用選擇題，進階打字聽寫"><span class="act-prog" id="ap-listen"></span>
-        <div class="act-ico i-listen">🎧</div>
-        <div class="act-h">聽力練習</div>
-        <div class="act-en">Listening</div>
-        <div class="act-d">聽句子(正常/慢速)：基礎選擇題,進階打字聽寫。</div>
+        <div class="act-meta"><span>⏱️ 8 mins</span><span class="m-hard">🔥 高強度輸出</span><span class="m-lv">B1→B2</span></div>
       </button>
       <button class="act act-talk" onclick="openAct('talk')" title="像聊天一樣一句一句對話，說錯馬上給你正確說法"><span class="act-prog" id="ap-talk"></span>
         <div class="act-ico i-talk">💬</div>
         <div class="act-h">情境對話</div>
         <div class="act-en">Talk Time</div>
         <div class="act-d">像聊天一樣一來一往,說錯馬上給正確說法。</div>
+        <div class="act-meta"><span>⏱️ 10 mins</span><span class="m-hard">🔥 實戰對話</span><span class="m-lv">B1→B2</span></div>
+      </button>
+    </div>
+
+    <div class="grid-ttl">🧩 輔助練習（輸入與鞏固）</div>
+    <div class="acts acts-sub">
+      <button class="act act-shadow" onclick="openAct('shadow')" title="聽標準示範句，馬上跟著複誦，練節奏與流暢度"><span class="act-prog" id="ap-shadow"></span>
+        <div class="act-ico i-shadow">🔁</div>
+        <div class="act-h">跟讀模仿</div>
+        <div class="act-en">Shadowing</div>
+        <div class="act-meta"><span>⏱️ 8 mins</span><span class="m-lv">B1 鞏固</span></div>
+      </button>
+      <button class="act act-listen" onclick="openAct('listen')" title="聽英文句子（可正常/慢速）：基礎用選擇題，進階打字聽寫"><span class="act-prog" id="ap-listen"></span>
+        <div class="act-ico i-listen">🎧</div>
+        <div class="act-h">聽力練習</div>
+        <div class="act-en">Listening</div>
+        <div class="act-meta"><span>⏱️ 8 mins</span><span class="m-lv">基礎B1 / 進階B2</span></div>
+      </button>
+      <button class="act act-word" onclick="openAct('word')" title="看字卡念單字並造句，把生字變成能開口說的字"><span class="act-prog" id="ap-word"></span>
+        <div class="act-ico i-word">🗣️</div>
+        <div class="act-h">單字口說</div>
+        <div class="act-en">Word Power</div>
+        <div class="act-meta"><span>⏱️ 6 mins</span><span class="m-lv">B1 鞏固</span></div>
+      </button>
+      <button class="act act-read" onclick="openAct('read')" title="一段一段朗讀文章，說對的字會即時亮綠燈"><span class="act-prog" id="ap-read"></span>
+        <div class="act-ico i-read">📖</div>
+        <div class="act-h">朗讀文章</div>
+        <div class="act-en">Read Aloud</div>
+        <div class="act-meta"><span>⏱️ 10 mins</span><span class="m-lv">B1→B2</span></div>
       </button>
       <button class="act act-video" onclick="openAct('video')" title="邊看影片邊看雙語字幕，可暫停、單句復讀、循環、變速"><span class="act-prog" id="ap-video"></span>
         <div class="act-ico i-video">🎬</div>
         <div class="act-h">影片精聽</div>
         <div class="act-en">Watch &amp; Learn</div>
-        <div class="act-d">看影片配雙語字幕,可暫停、單句復讀、循環、變速。</div>
+        <div class="act-meta"><span>⏱️ 15 mins</span><span class="m-hard">B2 挑戰</span></div>
       </button>
       <button class="act act-quiz" onclick="openAct('quiz')" title="選擇題測驗：綜合（單字文法）／聽力（用聽的選）／閱讀（讀短文回答）"><span class="act-prog" id="ap-quiz"></span>
         <div class="act-ico i-quiz">📝</div>
         <div class="act-h">快速檢查</div>
         <div class="act-en">Quick Check</div>
-        <div class="act-d">選擇題測驗：綜合 / 聽力 / 閱讀，可同主題再出新題。</div>
+        <div class="act-meta"><span>⏱️ 5 mins</span><span>共 10 題</span></div>
       </button>
     </div>
 
     <div class="stats">
-      <div class="stat"><div class="n" id="st-spoken">0</div><div class="l">今日完成</div></div>
+      <div class="stat stat-goal">
+        <div class="goal-row">
+          <svg class="gring" id="goal-ring" width="34" height="34" viewBox="0 0 34 34">
+            <circle class="bg" cx="17" cy="17" r="14" fill="none" stroke-width="5"></circle>
+            <circle class="fg" id="goal-fg" cx="17" cy="17" r="14" fill="none" stroke-width="5" stroke-linecap="round" stroke-dasharray="87.96" stroke-dashoffset="87.96"></circle>
+          </svg>
+          <div class="n"><span id="st-goal">0</span>/3</div>
+        </div>
+        <div class="l">🎯 今日目標：完成 3 項任務（<span id="st-spoken">0</span> 句）</div>
+      </div>
       <div class="stat"><div class="n" id="st-acc">–</div><div class="l">平均分數</div></div>
       <div class="stat"><div class="n" id="st-total">0</div><div class="l">累計卡片</div></div>
     </div>
@@ -765,7 +831,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
           <div class="mic-lbl" id="say-mlbl">按一下,開始說</div>
         </div>
         <div class="actions">
-          <button class="btn btn-o" onclick="sayPlay()" title="播放正確英文示範發音">🔊 聽示範</button>
+          <button class="btn btn-o" id="say-demo" onclick="sayPlay()" title="播放正確英文示範發音（每題先自己試 4 秒才解鎖）">🔊 聽示範</button>
           <button class="btn btn-o hide" id="say-redo" onclick="micRestart()" title="剛剛說壞了？按這裡清空重說，麥克風不會關掉">🔄 重說</button>
           <button class="btn btn-o hide" id="say-reveal" onclick="sayRevealAns()" title="顯示正確的英文答案">👀 看答案</button>
           <button class="btn btn-p hide" id="say-next" onclick="sayNext()" title="換下一句">下一句 →</button>
@@ -780,7 +846,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁"></button>
       <div><div class="sub-h">🔁 跟讀模仿</div><div class="sub-s">聽一句 → 馬上複誦</div></div>
     </div>
-    <div class="how-bar">📌 <b>怎麼玩</b>：① 按 🔊 正常速聽示範（聽不清用 🐢 慢速）→ ② 按 🎤 馬上跟著複誦 → ③ 說完再按一次 🎤 結束 → ④ 綠字＝說對，紅字＝漏掉</div>
+    <div class="how-bar">📌 <b>怎麼玩</b>：① 按 🔊 正常速聽示範（聽不清用 🐢 慢速）→ ② 按 🎤 馬上跟著複誦 → ③ 說完再按一次 🎤 結束 → ④ 綠字＝說對，紅字＝漏掉。<br>💡 句子裡<b>粗體＝重音字</b>、<span style="color:var(--coral);font-weight:900">‿</span>＝連音位置（像 lend‿you 要連著唸）；進步後按 👁️ 隱藏字幕，純靠耳朵盲測！</div>
     <div class="lvl-tog" id="lvl-shadow" style="display:none"></div>
     <div class="prog"><i id="sh-prog"></i></div>
     <div class="card">
@@ -800,8 +866,9 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
         <div class="actions">
           <button class="btn btn-t" onclick="shPlay(1)" title="用正常速度播放示範句">🔊 正常速</button>
           <button class="btn btn-o" onclick="shPlay(.65)" title="放慢速度播放，方便跟讀">🐢 慢速</button>
+          <button class="btn btn-o" id="sh-blind" onclick="shBlindTog()" title="盲測模式：遮住中英文字幕，純靠耳朵聽音複誦（B2 必練）">👁️ 隱藏字幕</button>
           <button class="btn btn-o hide" id="sh-redo" onclick="micRestart()" title="剛剛說壞了？按這裡清空重說，麥克風不會關掉">🔄 重說</button>
-          <button class="btn btn-p hide" id="sh-next" onclick="shNext()" title="換下一句">下一句 →</button>
+          <button class="btn btn-p" id="sh-next" onclick="shNext()" title="換下一句">下一句 →</button>
         </div>
         <div style="margin-top:9px"><button class="autorec" onclick="toggleAutoRec()" title="開啟後，示範句念完會自動開始錄音">🎙️ 自動錄音：開</button></div>
       </div>
@@ -5557,7 +5624,7 @@ function diffHTML(r,label){
   const near=r.diff.filter(x=>x.near).length;
   return (label||'')
     +r.diff.map((x,i)=>{let w=(x.w==='i'||/^i'/.test(x.w))?cap(x.w):x.w;if(i===0)w=cap(w);
-      const c=x.ok?(x.near?'w-ok w-near':'w-ok'):(x.soft?'w-soft':'w-miss');
+      const c=x.ok?(x.typo?'w-typo':(x.near?'w-ok w-near':'w-ok')):(x.soft?'w-soft':'w-miss');
       return '<span class="'+c+'">'+esc(w)+'</span>';}).join(' ')
     +((r.extra&&r.extra.length)?' &nbsp;'+r.extra.map(w=>'<span class="w-extra">+'+esc(w)+'</span>').join(' '):'')
     +(near?'<div class="pc-sub" style="margin-top:6px">≈ 有底線的字發音很接近，算你說對了 👍 再聽一次示範會更準</div>':'');
@@ -5989,6 +6056,12 @@ function pinSwitchOther(){const o=(PROFILE==='anita'?'tom':'anita');hidePin();se
 function logSpeak(pct){ST.spokenToday++;ST.totalSpoken++;if(pct!=null){ST.scoreSum+=pct;ST.scoreN++;}saveST();renderStats();}
 function renderStats(){$('st-spoken').textContent=ST.spokenToday;$('st-total').textContent=ST.totalSpoken;
   $('st-acc').textContent=ST.scoreN?Math.round(ST.scoreSum/ST.scoreN)+'%':'–';$('hd-streak').textContent=ST.streak;
+  /* 今日目標進度環：今天完整練完的活動數 / 3 */
+  const goal=3,done=Object.values(ST.actToday||{}).filter(o=>o&&o.done).length;
+  const g=$('st-goal'),fg=$('goal-fg'),ring=$('goal-ring');
+  if(g){g.textContent=Math.min(done,goal)+(done>goal?'+':'');
+    const C=87.96;if(fg)fg.style.strokeDashoffset=C*(1-Math.min(1,done/goal));
+    if(ring)ring.classList.toggle('full',done>=goal);}
   cloudBadge(!!db);}
 
 /* ═══════════════════════════════════════════════════════════
@@ -6475,7 +6548,7 @@ const TALK_BANK=[
    ═══════════════════════════════════════════════════════════ */
 let DAY='all';
 function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo(0,0);}
-function goHome(){reviewMode=false;micStop();if(typeof vStop==='function')vStop();if(window.speechSynthesis)speechSynthesis.cancel();show('scr-home');coachSay(coachHome());}
+function goHome(){reviewMode=false;if(typeof WARMUP!=='undefined')WARMUP=false;micStop();if(typeof vStop==='function')vStop();if(window.speechSynthesis)speechSynthesis.cancel();show('scr-home');coachSay(coachHome());renderWarmup();}
 function openAct(a){micStop();if(typeof vStop==='function'&&a!=='video')vStop();if(window.speechSynthesis)speechSynthesis.cancel();
   if(!speechOK()&&a!=='quiz'&&a!=='read'){/* 仍可進入，會顯示提示 */}
     const f={say:startSay,shadow:startShadow,word:startWord,read:startRead,talk:startTalk,quiz:startQuiz,listen:startListen,video:startVideo}[a];
@@ -6558,10 +6631,20 @@ function initHome(){
   DAY=defaultDay();
   if(DDATES.indexOf(DAY)<0)DAY=DDATES[0]||'all';
   buildDayList();
-  updateProfileUI();renderMeta();renderHdTopic();coachSay(coachHome());renderActProg();
+  updateProfileUI();renderMeta();renderHdTopic();coachSay(coachHome());renderActProg();renderWarmup();
   const wd=['日','一','二','三','四','五','六'][new Date().getDay()];
   $('hd-date').textContent=new Date().getFullYear()+'年'+(new Date().getMonth()+1)+'月'+new Date().getDate()+'日 週'+wd;
 }
+/* ---------- 課前暖身快捷（每週二/四晚上有外師一對一，當天顯示） ---------- */
+function renderWarmup(){const bar=$('warmup-bar');if(!bar)return;
+  const now=new Date(),wd=now.getDay(),h=now.getHours();
+  const classDay=(wd===2||wd===4);            /* 週二、週四晚上有課 */
+  bar.classList.toggle('hide',!(classDay&&h>=8&&h<22));
+  if(classDay){const sub=$('warmup-sub');
+    if(sub)sub.textContent=h<17?'今晚有外師口說課！先說 5 句熱個身，上課更快進入狀況'
+                               :'快上課了！5 句快速暖身，開口就進入狀況 💪';}}
+let WARMUP=false;
+function startWarmup(){WARMUP=true;openAct('say');}
 function renderMeta(){const d=DAY;const v=dayVocab(d).length,s=sayItems(d).length,a=dayArticles(d).length,q=quizFor(d);
   $('day-meta').innerHTML='<span class="chip c1">🗣️ '+s+' 句可說</span><span class="chip c2">📇 '+v+' 單字</span>'
     +(a?'<span class="chip c3">📖 '+a+' 篇文章</span>':'')+(vidMaterials(d).length?'<span class="chip c5">🎬 '+vidMaterials(d).length+' 個影音素材</span>':'')+(q?'<span class="chip c4">📝 '+q.questions.length+' 測驗題</span>':'');}
@@ -6572,19 +6655,38 @@ function renderMeta(){const d=DAY;const v=dayVocab(d).length,s=sayItems(d).lengt
 let sayList=[],sayI=0,sayCur=null;
 function startSay(d){reviewMode=false;renderLvlBar('say');
   sayList=trimForTom(shuffle(pickByLevel(sayItems(d))).slice(0,levelCap(20)),5);
-  if(!sayList.length){alert('這一天還沒有可練的句子，換一天或選「全部筆記」試試。');return;}
-  sayI=0;$('say-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+sayList.length+' 句';
+  if(WARMUP)sayList=sayList.slice(0,5);   /* 課前暖身：只練 5 句，快速開嗓 */
+  if(!sayList.length){WARMUP=false;alert('這一天還沒有可練的句子，換一天或選「全部筆記」試試。');return;}
+  sayI=0;$('say-sub').textContent=(WARMUP?'⚡ 課前暖身':(d==='all'?'全部筆記':lessonTitle(d)))+' · '+lvTag()+' · 共 '+sayList.length+' 句';
   sessStart('say','🎤 說出來',sayList.length);
   show('scr-say');sayRender();}
+/* 漸進式提示：英文單字只露首字母（r_____ its s___），中文照常顯示；點了才解鎖全貌 */
+function maskHint(s){return String(s).replace(/[A-Za-z][A-Za-z'-]{2,}/g,w=>w[0]+'_'.repeat(Math.min(6,w.length-1)));}
+function sayHintFull(){const h=$('say-hint');if(sayCur&&sayCur.hint)h.innerHTML='💡 提示：'+esc(sayCur.hint);}
+/* 聽示範延遲解鎖：先逼自己憑直覺開口，4 秒後才能求救（避免練成聽力跟讀） */
+let sayDemoTimer=null;
+function sayDemoLock(){const b=$('say-demo');if(!b)return;
+  if(sayDemoTimer){clearInterval(sayDemoTimer);sayDemoTimer=null;}
+  if(!speechOK()){b.disabled=false;b.textContent='🔊 聽示範';return;}   /* 不支援辨識時唯一靠示範，不鎖 */
+  let s=4;b.disabled=true;b.textContent='🔊 聽示範 ('+s+')';
+  sayDemoTimer=setInterval(()=>{s--;
+    if(s<=0){clearInterval(sayDemoTimer);sayDemoTimer=null;b.disabled=false;b.textContent='🔊 聽示範';}
+    else b.textContent='🔊 聽示範 ('+s+')';},1000);}
 function sayRender(){const it=sayList[sayI];sayCur=it;
   $('say-cn').textContent=it.cn;
-  /* 基礎：直接顯示提示；進階：不給提示，靠自己說 */
-  const h=$('say-hint');if(it.hint&&lvBasic()){h.innerHTML='💡 提示：'+esc(it.hint);h.classList.remove('hide');}else h.classList.add('hide');
+  /* 基礎：先給遮罩版提示（點了才看全貌）；進階：不給提示，靠自己說 */
+  const h=$('say-hint');
+  if(it.hint&&lvBasic()){
+    h.innerHTML='💡 提示：<span style="letter-spacing:.5px">'+esc(maskHint(it.hint))+'</span>'
+      +' <button class="btn btn-o btn-sm" style="padding:2px 10px;font-size:.76rem" onclick="sayHintFull()">🔓 完整提示</button>';
+    h.classList.remove('hide');
+  }else h.classList.add('hide');
   $('say-tag').textContent='第 '+(sayI+1)+' / '+sayList.length+' 句';
   $('say-prog').style.width=(sayI/sayList.length*100)+'%';
   $('say-score').classList.add('hide');$('say-diff').classList.add('hide');
   $('say-heard').innerHTML='';$('say-next').classList.add('hide');$('say-reveal').classList.add('hide');
-  $('say-mlbl').textContent=speechOK()?'按一下，開始說':'按 🔊 聽示範跟著念（此瀏覽器不支援辨識）';}
+  $('say-mlbl').textContent=speechOK()?'按一下，開始說':'按 🔊 聽示範跟著念（此瀏覽器不支援辨識）';
+  sayDemoLock();}
 function sayPlay(){speak(sayCur.en,demoRate());}
 /* 連續辨識 + 停頓 4 秒才收尾：避免只說兩個字、中間想一下就被自動結束 */
 function sayMic(){micStart({btn:'say-mic',lbl:'say-mlbl',redo:'say-redo',idle:'按一下，開始說',
@@ -6617,6 +6719,7 @@ function sayRevealAns(){const ans=answersOf(sayCur);
   speak(sayCur.en,0.9);}
 function sayNext(){sayI++;if(sayI>=sayList.length){
     if(reviewMode){reviewMode=false;finishAct('🔁 久違複習','5 句複習完成!暖身好了,開始今天的練習吧。');return;}
+    if(WARMUP){WARMUP=false;finishAct('⚡ 課前暖身','開嗓完成!接著去「💬 情境對話」實戰一輪，上課就不會卡住了。');return;}
     finishAct('🎤 說出來','你完成了 '+sayList.length+' 句口說!敢開口就是進步。');return;}sayRender();}
 
 /* ═══════════════════════════════════════════════════════════
@@ -6628,11 +6731,31 @@ function startShadow(d){renderLvlBar('shadow');
   if(!shList.length){alert('這一天還沒有可跟讀的句子，換一天試試。');return;}
   shI=0;sessStart('shadow','🔁 跟讀模仿',shList.length);
   show('scr-shadow');shRender();renderAutoRec();setTimeout(()=>shDemo(demoRate()),350);}
+/* 連音與重音視覺化：粗體＝內容字（重音落點）、‿＝子音尾＋母音頭的連音位置 */
+function cueHTML(en){
+  const parts=String(en).split(/\s+/);
+  const isVstart=w=>/^([aeiou]|y[aeiou])/i.test(w.replace(/^[^a-z]+/i,''));   /* 母音開頭；也含 you/your 這類 d+y 連音 */
+  const endsCons=w=>{const c=w.replace(/[^a-z]+$/i,'');return /[bcdfgklmnprstvz]$/i.test(c)&&!/[.,!?;:]$/.test(w);};
+  return parts.map((w,i)=>{
+    const core=w.toLowerCase().replace(/[^a-z']/g,'');
+    const strs=core.length>=4&&!SOFT_WORDS.has(core);
+    let h='<span class="'+(strs?'strs':'')+'">'+esc(w)+'</span>';
+    if(i<parts.length-1&&endsCons(w)&&isVstart(parts[i+1]))h+='<span class="liai">‿</span>';
+    else if(i<parts.length-1)h+=' ';
+    return h;}).join('');}
+/* 盲測模式：遮住字幕，強迫「聽音→複誦」，戒掉看字依賴（記在本機） */
+let SH_BLIND=localStorage.getItem('speakup_shblind')==='1';
+function shBlindTog(){SH_BLIND=!SH_BLIND;localStorage.setItem('speakup_shblind',SH_BLIND?'1':'0');shBlindApply();}
+function shBlindApply(){
+  $('sh-en').classList.toggle('blindtxt',SH_BLIND);
+  $('sh-cn').classList.toggle('blindtxt',SH_BLIND);
+  const b=$('sh-blind');if(b){b.textContent=SH_BLIND?'🙈 顯示字幕':'👁️ 隱藏字幕';b.classList.toggle('btn-p',SH_BLIND);b.classList.toggle('btn-o',!SH_BLIND);}}
 function shRender(){const it=shList[shI];shCur=it;
-  $('sh-en').textContent=it.en;$('sh-cn').textContent=it.cn||cnFor(it.en);
+  $('sh-en').innerHTML=cueHTML(it.en);$('sh-cn').textContent=it.cn||cnFor(it.en);
+  shBlindApply();
   $('sh-prog').style.width=(shI/shList.length*100)+'%';
   $('sh-score').classList.add('hide');$('sh-diff').classList.add('hide');
-  $('sh-heard').innerHTML='';$('sh-next').classList.add('hide');$('sh-redo').classList.add('hide');
+  $('sh-heard').innerHTML='';$('sh-redo').classList.add('hide');
   $('sh-mlbl').textContent=speechOK()?'先聽示範，再按我複誦':'此瀏覽器不支援辨識，按 🔊 跟著念';}
 /* 聽示範：正在錄音的話先收掉（不評分），示範念完再依設定自動開錄 */
 function shDemo(rate){
@@ -7126,11 +7249,17 @@ let lsList=[],lsI=0,lsCur=null,lsOpts=[],lsAns=-1;
 function startListen(d){renderLvlBar('listen');
   lsList=trimForTom(shuffle(pickByLevel(shadowItems(d))).slice(0,levelCap(15)),5);
   if(!lsList.length){alert('這一天還沒有可聽寫的句子，換一天或選「全部筆記」試試。');return;}
+  /* 錯題本優先複習：基礎模式把之前答錯的句子（最多 3 句）排在前面 */
+  if(lvBasic()){
+    const book=shuffle(lsBookGet()).slice(0,3)
+      .filter(x=>x&&x.en&&!lsList.some(y=>norm(y.en)===norm(x.en)))
+      .map(x=>({en:x.en,cn:x.cn,__review:true}));
+    if(book.length)lsList=book.concat(lsList).slice(0,levelCap(15));}
   lsI=0;sessStart('listen','🎧 聽力練習',lsList.length,{scoreLabel:lvBasic()?'答對率':'平均聽寫'});
   $('ls-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+lsList.length+' 句';
   $('ls-how').innerHTML=lvBasic()
-    ?'📌 <b>怎麼玩</b>：① 按 🔊 聽句子（可重聽、🐢 慢速）→ ② 從四個選項中選出你聽到的那一句 → ③ 看答案與中文，按「下一句」'
-    :'📌 <b>怎麼玩</b>：① 按 🔊 聽句子（可重聽、🐢 慢速）→ ② 把聽到的英文打進格子 → ③ 按「✅ 對答案」看逐字對照';
+    ?'📌 <b>怎麼玩</b>：① 按 🔊 聽句子（可重聽、🐢 慢速）→ ② 從四個選項中選出你聽到的那一句 → ③ 看答案與中文，按「下一句」<br>⌨️ <b>快捷鍵</b>：數字 <b>1~4</b> 選答案、<b>空白鍵</b>重播、<b>Enter</b> 下一句'
+    :'📌 <b>怎麼玩</b>：① 按 🔊 聽句子（可重聽、🐢 慢速）→ ② 把聽到的英文打進格子 → ③ 按「✅ 對答案」看逐字對照<br>⌨️ <b>快捷鍵</b>（雙手不離鍵盤）：<b>Ctrl+Space</b> 重播正常速、<b>Ctrl+Shift+Space</b> 慢速、<b>Enter</b> 對答案／下一句';
   show('scr-listen');lsRender();}
 /* 基礎選擇題的誘答：盡量挑長度相近的句子，不然一眼就看出哪句最像 */
 function lsMakeOpts(it){
@@ -7141,7 +7270,7 @@ function lsMakeOpts(it){
   if(dis.length<3)return null;
   return shuffle([it.en].concat(dis));}
 function lsRender(){const it=lsList[lsI];lsCur=it;
-  $('ls-tag').textContent='第 '+(lsI+1)+' / '+lsList.length+' 句';
+  $('ls-tag').textContent='第 '+(lsI+1)+' / '+lsList.length+' 句'+(it.__review?' · 📒 錯題複習':'');
   $('ls-prog').style.width=(lsI/lsList.length*100)+'%';
   $('ls-score').classList.add('hide');$('ls-diff').classList.add('hide');
   $('ls-expl').innerHTML='';$('ls-next').classList.add('hide');
@@ -7151,8 +7280,8 @@ function lsRender(){const it=lsList[lsI];lsCur=it;
     lsOpts=opts;lsAns=opts.indexOf(it.en);
     $('ls-typebox').classList.add('hide');
     $('ls-opts').classList.remove('hide');
-    $('ls-opts').innerHTML=opts.map((o,i)=>'<button class="opt" onclick="lsPick('+i+')">'+esc(cap(o))+'</button>').join('');
-    $('ls-cn').textContent='聽完，選出你聽到的那一句';
+    $('ls-opts').innerHTML=opts.map((o,i)=>'<button class="opt" onclick="lsPick('+i+')"><b style="opacity:.45;margin-right:5px">'+(i+1)+'</b>'+esc(cap(o))+'</button>').join('');
+    $('ls-cn').textContent='聽完，選出你聽到的那一句（鍵盤 1~4 快選、空白鍵重播）';
     $('ls-hint').innerHTML='';$('ls-hint-t').classList.add('hide');
   }else{
     lsOpts=[];lsAns=-1;
@@ -7164,12 +7293,26 @@ function lsRender(){const it=lsList[lsI];lsCur=it;
     if(lvBasic()){const ws=keyWordsOf(it.en,4);
       hint.innerHTML=ws.map(w=>'<span class="phrase" onclick="speak(\''+w.replace(/'/g,"\\'")+'\',0.8)">'+esc(w)+'</span>').join('');
       hintT.classList.toggle('hide',!ws.length);}
-    else{hint.innerHTML='';hintT.classList.add('hide');}
+    else{hint.innerHTML='<button class="btn btn-o btn-sm" style="padding:3px 12px;font-size:.78rem" onclick="lsSkel()">💡 給點提示（字首＋字數）</button>';hintT.classList.add('hide');}
     const inp=$('ls-input');inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.background='';
     $('ls-check').classList.remove('hide');
     setTimeout(()=>{try{inp.focus();}catch(e){}},120);
   }
   setTimeout(()=>speak(lsCur.en,demoRate()),300);}
+/* 答案句關鍵字高亮：點一下可單獨聽該字發音，選錯題變成一次單字複習 */
+function kwSentHTML(en){
+  const kws=new Set(keyWordsOf(en,5));
+  return String(en).split(/\s+/).map((w,i)=>{
+    const c=norm(w);let out=esc(i===0?cap(w):w);
+    if(c&&kws.has(c))out='<span class="kw" onclick="speak(\''+c.replace(/'/g,"\\'")+'\',0.75)" title="點一下聽這個字的發音">'+out+'</span>';
+    return out;}).join(' ');}
+/* 聽力錯題本：答錯自動收錄（存本機），下次基礎聽力優先複習；答對就移出 */
+function lsBookKey(){return 'speakup_lsbook_'+PROFILE;}
+function lsBookGet(){try{return JSON.parse(localStorage.getItem(lsBookKey())||'[]');}catch(e){return [];}}
+function lsBookMark(ok){
+  let b=lsBookGet().filter(x=>norm(x.en)!==norm(lsCur.en));
+  if(!ok){b.unshift({en:lsCur.en,cn:lsCur.cn||cnFor(lsCur.en)});b=b.slice(0,40);}
+  try{localStorage.setItem(lsBookKey(),JSON.stringify(b));}catch(e){}}
 /* 基礎選擇題作答 */
 function lsPick(i){
   document.querySelectorAll('#ls-opts .opt').forEach((b,bi)=>{b.disabled=true;
@@ -7177,22 +7320,66 @@ function lsPick(i){
     if(bi===i&&i!==lsAns)b.classList.add('no');});
   const ok=(i===lsAns),cn=lsCur.cn||cnFor(lsCur.en);
   $('ls-expl').innerHTML='<div class="expl">'+(ok?'✅ 答對了!':'❌ 再看看~')
-    +explHTML('\n'+cap(lsCur.en)+(cn?'\n（'+cn+'）':''))+'</div>';
+    +'<br>'+kwSentHTML(lsCur.en)+(cn?'<br>'+esc('（'+cn+'）'):'')
+    +'<div class="pc-sub" style="margin-top:5px">🔍 綠色虛線的關鍵字，點一下可以單獨聽發音</div>'
+    +(ok?(lsCur.__review?'<div class="pc-sub" style="margin-top:4px">📒 複習答對，已從錯題本移除 🎉</div>':'')
+        :'<div class="pc-sub" style="margin-top:4px">📒 已自動加入聽力錯題本，之後會優先出現幫你補強</div>')+'</div>';
+  lsBookMark(ok);
   sessLog(lsI,lsCur.en,cn,ok?100:0);
   logSpeak(ok?100:0);
   $('ls-next').classList.remove('hide');
   speak(lsCur.en,0.9);}
 function lsPlay(r){speak(lsCur.en,r);}
+/* 聽寫智慧比對：標點大小寫本來就不計較（norm 已處理）；再把「只差 1~2 個字母」
+   的字判成拼字小誤（黃字、算你聽對），真的聽錯或漏聽才亮紅——區分聽力錯誤與手滑 */
+function scoreDict(said,target){
+  const r=scoreSpeech(said,target);
+  const extras=r.extra.slice();
+  r.diff.forEach(x=>{
+    if(x.ok)return;
+    const n=x.w.length;if(n<4)return;
+    const tol=n>=7?2:1;
+    const k=extras.findIndex(e=>Math.abs(e.length-n)<=tol&&lev(e,x.w)<=tol);
+    if(k>=0){x.ok=true;x.typo=true;delete x.soft;extras.splice(k,1);r.matched++;}});
+  r.extra=extras;
+  r.pct=r.total?Math.min(100,Math.round(r.matched/r.total*100)):0;
+  return r;}
+/* 進階聽寫的防卡關提示：不公佈答案，只給每個字的字首＋字數底線 */
+function lsSkel(){
+  const sk=String(lsCur.en).split(/\s+/).map(w=>{
+    const c=w.replace(/[^A-Za-z']/g,'');
+    return c?c[0]+'_'.repeat(Math.max(1,c.length-1)):w;}).join(' ');
+  $('ls-hint').innerHTML='<span style="font-family:monospace;font-weight:700;letter-spacing:1.5px">'+esc(sk)+'</span>';
+  try{$('ls-input').focus();}catch(e){}}
 function lsCheck(){const inp=$('ls-input');const v=inp.value.trim();if(!v){lsPlay(1);return;}
-  inp.disabled=true;const r=scoreSpeech(v,lsCur.en);showRing('ls-score',r.pct);
+  inp.disabled=true;const r=scoreDict(v,lsCur.en);showRing('ls-score',r.pct);
   const diff=$('ls-diff');diff.classList.remove('hide');
-  diff.innerHTML=diffHTML(r,'答案：')
+  const typos=r.diff.filter(x=>x.typo).length;
+  /* 上下疊加對照：你打的 vs 標準答案，漏聽的介系詞、連音一眼看出來 */
+  diff.innerHTML='<div class="dict-stack"><div class="row-l">你打的</div><div>'+esc(v)+'</div>'
+    +'<div class="row-l" style="margin-top:5px">標準答案</div><div>'+diffHTML(r,'')+'</div></div>'
+    +(typos?'<div class="pc-sub" style="margin-top:6px">🟡 黃底線＝只是拼字手滑（算你聽對了）；刪除線＝真的漏聽的字</div>':'')
     +((lsCur.cn||cnFor(lsCur.en))?'<div class="pc-sub" style="margin-top:6px">'+esc(lsCur.cn||cnFor(lsCur.en))+'</div>':'');
   $('ls-check').classList.add('hide');$('ls-next').classList.remove('hide');
   sessLog(lsI,lsCur.en,lsCur.cn||cnFor(lsCur.en),r.pct);
   logSpeak(r.pct);   /* 這張聽寫卡片完整核對完，就計入統計 */
   speak(lsCur.en,0.9);}
 function lsNext(){lsI++;if(lsI>=lsList.length){finishAct('🎧 聽力練習','你完成了 '+lsList.length+' 句聽寫!耳朵越來越靈了。');return;}lsRender();}
+/* 聽力頁鍵盤快捷鍵：打字中途不必抓滑鼠（Ctrl+Space 重播、Ctrl+Shift+Space 慢速）；
+   選擇題用數字 1~4 快選、空白鍵重播；答完 Enter 直接下一句 */
+document.addEventListener('keydown',e=>{
+  const scr=document.querySelector('.screen.on');
+  if(!scr||scr.id!=='scr-listen'||!lsCur)return;
+  if(e.ctrlKey&&e.code==='Space'){e.preventDefault();lsPlay(e.shiftKey?0.6:1);return;}
+  const mcOn=!$('ls-opts').classList.contains('hide');
+  const nextOn=!$('ls-next').classList.contains('hide');
+  if(mcOn){
+    const btns=document.querySelectorAll('#ls-opts .opt');
+    if(/^[1-4]$/.test(e.key)&&btns[+e.key-1]&&!btns[+e.key-1].disabled){e.preventDefault();lsPick(+e.key-1);return;}
+    if(e.code==='Space'){e.preventDefault();lsPlay(1);return;}
+    if(e.key==='Enter'&&nextOn){e.preventDefault();lsNext();return;}
+  }else if(e.key==='Enter'&&nextOn&&$('ls-input').disabled){e.preventDefault();lsNext();}
+});
 
 /* ---------- 共用：評分環 / 活動完成 ---------- */
 
@@ -7799,7 +7986,7 @@ function showSummary(){
   if(S.act){if(!ST.actToday)ST.actToday={};
     const o=ST.actToday[S.act]||(ST.actToday[S.act]={n:0,sum:0,cnt:0});
     if(allDone)o.done=true;
-    saveST();renderActProg();}
+    saveST();renderActProg();renderStats();   /* 首頁目標環要跟著更新 */}
   const avg=done.length?Math.round(done.reduce((a,b)=>a+b.pct,0)/done.length):null;
   const isQuiz=S.kind==='quiz';
   const right=rows.filter(x=>x&&x.pct===100).length;
