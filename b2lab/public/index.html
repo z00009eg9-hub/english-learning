@@ -114,7 +114,8 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
   border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 13px;font-size:calc(13px * var(--fs));
   cursor:pointer;color:var(--ink2);font-family:inherit
 }
-.chip.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+/* 已選取的篩選：柔和底色＋橘色邊框（實心橘保留給主要行動按鈕與標題，避免搶走視覺焦點） */
+.chip.on{background:var(--accent-soft);border-color:var(--accent2);color:var(--accent2);font-weight:700}
 .btn{
   border:0;border-radius:10px;background:var(--accent);color:#fff;padding:10px 16px;font:inherit;
   font-size:calc(14px * var(--fs));font-weight:600;cursor:pointer
@@ -172,7 +173,7 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 .item.new .t{padding-right:34px}
 .item .t{font-weight:700;font-size:calc(15.5px * var(--fs));margin-bottom:2px}
 .item .tc{font-size:calc(13px * var(--fs));color:var(--ink2)}
-.item .meta{font-size:calc(11.5px * var(--fs));color:#57504a;margin-top:7px;display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.item .meta{font-size:calc(11.5px * var(--fs));color:#57504a;margin-top:7px;display:flex;gap:6px 15px;flex-wrap:wrap;align-items:center}
 .item .done{color:var(--ok);font-weight:700}
 /* ---------- reading view ---------- */
 .para{margin:0 0 16px}
@@ -1166,12 +1167,17 @@ const ALL_ARTS=DAILY_ARTS.concat(ORIG_ARTS,NOTE_ARTS);
 DAILY_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:t.exCn||'',src:'每日文章：'+a.title})));
 
 let rdFilter={kind:'all',level:'all',gram:'all'}, rdOpen=null;   // 預設「全部」：每日文章依日期排在最上方
+/* 記憶上次的篩選狀態（換人或程度區間變動時，不合法的等級會自動退回「全部」） */
+try{ Object.assign(rdFilter,JSON.parse(localStorage.getItem('b2lab_rdfilter')||'{}')); }catch(e){}
+let rdGramOpen=false;                                     // 文法篩選預設收合，主畫面保持清爽
+let rdHintOff=localStorage.getItem('b2lab_rdhint')==='1'; // 頂部說明可關閉，熟悉後釋放閱讀空間
 /* 文法主題快速篩選：從文章的「文法重點」欄位歸納出常見主題（順序長詞優先，避免「現在完成進行式」被記成「進行式」） */
 const RD_GRAMKEYS=['現在完成進行式','現在完成式','過去完成式','現在進行式','過去進行式','過去簡單式','現在簡單式','未來式','被動語態','假設語氣','使役動詞','情態動詞','關係代名詞','關係子句','間接問句','分詞構句','比較級','最高級','連接詞','不定詞','動名詞','倒裝'];
 RENDER.read=function(){
   const v=$('v-read');
   v.classList.toggle('rdopen',!!rdOpen);
   if(rdOpen){ v.innerHTML=readerHTML(rdOpen); rebalanceMag(); return; }
+  if(rdFilter.level!=='all'&&!inBand(rdFilter.level)) rdFilter.level='all';
   const base=ALL_ARTS.filter(a=>
     (rdFilter.kind==='all'||a.kind===rdFilter.kind) &&
     inBand(a.level) &&
@@ -1184,12 +1190,21 @@ RENDER.read=function(){
   base.forEach(a=>{const f=a.focus||'';RD_GRAMKEYS.forEach(k=>{if(f.includes(k))gCnt[k]=(gCnt[k]||0)+1;});});
   if(rdFilter.gram!=='all'&&!gCnt[rdFilter.gram])gCnt[rdFilter.gram]=0;
   const gb=[['all','全部文法']].concat(RD_GRAMKEYS.filter(k=>gCnt[k]!=null).map(k=>[k,k+' '+gCnt[k]]));
+  /* 文法篩選收在「📐 文法篩選」按鈕後面；收合時若有作用中的主題，直接顯示在按鈕上 */
+  const gramRow = gb.length>1
+    ? '<div class="chips"><button class="chip'+(rdFilter.gram!=='all'?' on':'')+'" onclick="rdGramTog()">📐 文法篩選'
+      +(rdFilter.gram!=='all'?'：'+esc(rdFilter.gram):'')+' '+(rdGramOpen?'▴':'▾')+'</button>'
+      +(rdGramOpen?gb.map(([k,t])=>'<button class="chip'+(rdFilter.gram===k?' on':'')+'" onclick="rdSet(\'gram\',\''+k+'\')">'+t+'</button>').join(''):'')
+      +'</div>'
+    : '';
   v.innerHTML=
-    '<div class="card"><h2 class="sec">📖 分級閱讀</h2>'
-    +'<div class="hint">雜誌式版面：內文的<b style="color:#c0561a">橘色加粗＋編號</b>字對應右欄「Words &amp; Phrases」單字片語，另有補充詞彙與選字填空。點<b>任何一個英文字</b>都能查中文。</div>'
+    '<div class="card"><h2 class="sec">📖 分級閱讀'
+    +(rdHintOff?' <button class="spk" onclick="rdHint(0)" title="顯示操作說明" style="margin-left:auto">ℹ️</button>':'')+'</h2>'
+    +(rdHintOff?'':'<div class="hint" style="position:relative;padding-right:34px">雜誌式版面：內文的<b style="color:#c0561a">橘色加粗＋編號</b>字對應右欄「Words &amp; Phrases」單字片語，另有補充詞彙與選字填空。點<b>任何一個英文字</b>都能查中文。'
+      +'<button onclick="rdHint(1)" title="關閉說明" style="position:absolute;top:6px;right:8px;border:0;background:none;cursor:pointer;font-size:15px;color:var(--ink2);line-height:1;padding:3px">✕</button></div>')
     +'<div class="chips">'+kb.map(([k,t])=>'<button class="chip'+(rdFilter.kind===k?' on':'')+'" onclick="rdSet(\'kind\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
     +'<div class="chips">'+lb.map(([k,t])=>'<button class="chip'+(rdFilter.level===k?' on':'')+'" onclick="rdSet(\'level\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
-    +(gb.length>1?'<div class="chips">'+gb.map(([k,t])=>'<button class="chip'+(rdFilter.gram===k?' on':'')+'" onclick="rdSet(\'gram\',\''+k+'\')">'+t+'</button>').join('')+'</div>':'')
+    +gramRow
     +'<div class="muted">共 '+list.length+' 篇</div></div>'
     +list.map(a=>{
       const d=ST.artDone[a.id];
@@ -1218,10 +1233,20 @@ function rebalanceMag(){
     mag.classList.add('pin');
   }
 }
-function rdSet(k,v){ rdFilter[k]=v; RENDER.read(); }
+function rdSet(k,v){
+  rdFilter[k]=v;
+  try{ localStorage.setItem('b2lab_rdfilter',JSON.stringify(rdFilter)); }catch(e){}
+  RENDER.read();
+}
+function rdGramTog(){ rdGramOpen=!rdGramOpen; RENDER.read(); }
+function rdHint(off){
+  rdHintOff=!!off;
+  try{ localStorage.setItem('b2lab_rdhint',off?'1':'0'); }catch(e){}
+  RENDER.read();
+}
 function rdOpenArt(id){ rdOpen=ALL_ARTS.find(a=>a.id===id); QSTATE={}; RENDER.read(); }
 function rdClose(){ rdOpen=null; if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.read(); }
-window.rdSet=rdSet; window.rdOpenArt=rdOpenArt; window.rdClose=rdClose;
+window.rdSet=rdSet; window.rdOpenArt=rdOpenArt; window.rdClose=rdClose; window.rdGramTog=rdGramTog; window.rdHint=rdHint;
 
 const reEsc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
