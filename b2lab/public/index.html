@@ -953,13 +953,21 @@ function pickVoice(){
 }
 pickVoice();
 if('speechSynthesis' in window) speechSynthesis.onvoiceschanged=function(){ pickVoice(); if(typeof auApplyVoices==='function'&&auLines.length){ auApplyVoices(); auFillVoices(); } };
+/* Chrome 的語音清單更新後，舊的 voice 物件會「無聲失敗」（不報錯、直接沒聲音）。
+   朗讀前先確認選到的語音還在清單裡；不在就重挑，再不行就交給瀏覽器預設語音。 */
+function voiceAlive(v){
+  if(!v) return null;
+  const vs=speechSynthesis.getVoices();
+  return vs.indexOf(v)>=0 ? v : (vs.find(x=>x.name===v.name&&x.lang===v.lang)||null);
+}
 function say(text,rate,onend,voice){
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
   const t=String(text).replace(/\s+/g,' ').trim();
   const base=rate||ST.rate||1;
   const isQ=/\?\s*$/.test(t), isEx=/!\s*$/.test(t);
-  const v=voice||VOICE;
+  let v=voiceAlive(voice||VOICE);
+  if((voice||VOICE)&&!v){ pickVoice(); v=voiceAlive(voice)||VOICE; }
   const sents=t.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[t];
   if(sents.length<=1){
     const u=new SpeechSynthesisUtterance(t);
@@ -981,6 +989,9 @@ function say(text,rate,onend,voice){
       speechSynthesis.speak(u);
     });
   }
+  /* 引擎有時會卡在 paused 狀態（cancel 的時機不巧就會發生），推它一下 */
+  if(speechSynthesis.paused) speechSynthesis.resume();
+  setTimeout(()=>{ if(speechSynthesis.paused) speechSynthesis.resume(); },150);
 }
 window.say=say;
 /* 點整句就朗讀那一句，並在朗讀時把那一句高亮起來 */
@@ -1127,6 +1138,7 @@ function go(t,visualTab){
     const b=$('t-'+k); if(b) b.classList.toggle('on', k===vt);
   });
   if(t!=='listen') destroyPlayer();
+  if(t!=='listen'&&typeof recFinish==='function') recFinish();   // 換分頁就停止錄音、釋放麥克風
   hideGloss();
   window.scrollTo(0,0);
   RENDER[t] && RENDER[t]();
