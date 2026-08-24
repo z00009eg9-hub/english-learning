@@ -155,6 +155,13 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
   .item.fin>.row:first-child,.item.fin>.t:first-child{padding-right:24px}
 }
 .item.fin>.row:first-child,.item.fin>.t:first-child{padding-right:34px}
+/* 已完成卡片整體降飽和變灰，視線掃過時自動聚焦在還沒讀的項目；綠色打勾角標維持原色 */
+.item.fin{background:#f7f4ee;border-left-color:#d9d0c3!important}
+.item.fin .t,.item.fin .tc,.item.fin .meta,.item.fin .lv{filter:saturate(.25) opacity(.6)}
+@media(hover:hover){
+  .item.fin:hover{background:#fff}
+  .item.fin:hover .t,.item.fin:hover .tc,.item.fin:hover .meta,.item.fin:hover .lv{filter:none}
+}
 /* 右上角紅色 NEW 緞帶（今日新內容用） */
 .item.new::after{
   content:"NEW";position:absolute;top:13px;right:-32px;width:118px;
@@ -166,7 +173,7 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 .item.new .t{padding-right:34px}
 .item .t{font-weight:700;font-size:calc(15.5px * var(--fs));margin-bottom:2px}
 .item .tc{font-size:calc(13px * var(--fs));color:var(--ink2)}
-.item .meta{font-size:calc(11.5px * var(--fs));color:var(--ink2);margin-top:7px;display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.item .meta{font-size:calc(11.5px * var(--fs));color:#57504a;margin-top:7px;display:flex;gap:9px;flex-wrap:wrap;align-items:center}
 .item .done{color:var(--ok);font-weight:700}
 /* ---------- reading view ---------- */
 .para{margin:0 0 16px}
@@ -662,8 +669,7 @@ body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
   <button id="t-book" onclick="go('book')"><i>📕</i>課本</button>
   <button id="t-read" onclick="go('read')"><i>📖</i>閱讀</button>
   <button id="t-listen" onclick="go('listen')"><i>🎧</i>聽力</button>
-  <button id="t-vocab" onclick="go('vocab')"><i>🔤</i>單字卡</button>
-  <button id="t-gram" onclick="go('gram')"><i>📐</i>文法</button>
+  <button id="t-prac" onclick="go(PRAC_LAST)"><i>🎯</i>練習</button>
   <button id="t-prog" onclick="go('prog')"><i>📊</i>進度</button>
 </nav>
 
@@ -724,6 +730,8 @@ const LVBAR={A2:'--a2',B1:'--b1','B1+':'--b1p',B2:'--b2'};
 const lvBar = l => 'border-left-color:var('+(LVBAR[l]||'--accent')+')';
 /* 清單卡片標題顏色也跟著程度走 */
 const lvTitle = l => 'color:var('+(LVBAR[l]||'--accent2')+')';
+/* 字數 → 預估閱讀時間（學習者精讀約 130 wpm），方便評估現在有沒有空檔讀完 */
+const wordsMeta = w => '📝 '+w+' words · ⏱ 約 '+Math.max(1,Math.round(w/130))+' 分鐘';
 /* 已完成：右上角打勾角標（今日新內容的卡片保留原本的文字，避免跟 NEW 緞帶打架） */
 const finCls   = (d,isNew) => (d&&!isNew)?' fin':'';
 const finTitle = (d,label) => d?' title="'+(label||'已完成')+' '+d.correct+'/'+d.total+'"':'';
@@ -1056,11 +1064,16 @@ function tokenize(text,hiSet){
 let TAB='daily';
 let FROM_TAB=null;
 const RENDER={};
+/* 底部導覽把「單字卡＋文法」收攏成一顆「練習」：記住上次停留的子分頁，下次點練習直接回到那頁 */
+let PRAC_LAST='vocab';
+const NAVMAP={vocab:'prac',gram:'prac'};
 function go(t,visualTab){
   TAB=t;
-  ['daily','read','book','listen','vocab','gram','prog'].forEach(k=>{
-    $('v-'+k).hidden = (k!==t);
-    $('t-'+k).classList.toggle('on', k===(visualTab||t));
+  if(NAVMAP[t]==='prac') PRAC_LAST=t;
+  const vt=NAVMAP[visualTab||t]||visualTab||t;
+  ['daily','read','book','listen','vocab','gram','prog'].forEach(k=>{ $('v-'+k).hidden = (k!==t); });
+  ['daily','read','book','listen','prac','prog'].forEach(k=>{
+    const b=$('t-'+k); if(b) b.classList.toggle('on', k===vt);
   });
   if(t!=='listen') destroyPlayer();
   hideGloss();
@@ -1131,29 +1144,38 @@ const ALL_ARTS=DAILY_ARTS.concat(ORIG_ARTS,NOTE_ARTS);
 // 每日文章的重點字也要進字庫
 DAILY_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:t.exCn||'',src:'每日文章：'+a.title})));
 
-let rdFilter={kind:'all',level:'all'}, rdOpen=null;   // 預設「全部」：每日文章依日期排在最上方
+let rdFilter={kind:'all',level:'all',gram:'all'}, rdOpen=null;   // 預設「全部」：每日文章依日期排在最上方
+/* 文法主題快速篩選：從文章的「文法重點」欄位歸納出常見主題（順序長詞優先，避免「現在完成進行式」被記成「進行式」） */
+const RD_GRAMKEYS=['現在完成進行式','現在完成式','過去完成式','現在進行式','過去進行式','過去簡單式','現在簡單式','未來式','被動語態','假設語氣','使役動詞','情態動詞','關係代名詞','關係子句','間接問句','分詞構句','比較級','最高級','連接詞','不定詞','動名詞','倒裝'];
 RENDER.read=function(){
   const v=$('v-read');
   v.classList.toggle('rdopen',!!rdOpen);
   if(rdOpen){ v.innerHTML=readerHTML(rdOpen); rebalanceMag(); return; }
-  const list=ALL_ARTS.filter(a=>
+  const base=ALL_ARTS.filter(a=>
     (rdFilter.kind==='all'||a.kind===rdFilter.kind) &&
     inBand(a.level) &&
     (rdFilter.level==='all'||a.level===rdFilter.level));
+  const list=base.filter(a=>rdFilter.gram==='all'||(a.focus||'').includes(rdFilter.gram));
   const kb=[['orig','✍️ 原創分級 '+ORIG_ARTS.length],['daily','📅 每日新文章 '+DAILY_ARTS.length],['note','📓 筆記文章 '+NOTE_ARTS.length],['all','全部']];
   const lb=[['all','全部程度']].concat(band().map(l=>[l,l]));
+  /* 文法主題 chips：只列目前 kind/程度篩選下實際出現的主題（附篇數）；已選的主題就算變 0 篇也保留，才點得回「全部文法」 */
+  const gCnt={};
+  base.forEach(a=>{const f=a.focus||'';RD_GRAMKEYS.forEach(k=>{if(f.includes(k))gCnt[k]=(gCnt[k]||0)+1;});});
+  if(rdFilter.gram!=='all'&&!gCnt[rdFilter.gram])gCnt[rdFilter.gram]=0;
+  const gb=[['all','全部文法']].concat(RD_GRAMKEYS.filter(k=>gCnt[k]!=null).map(k=>[k,k+' '+gCnt[k]]));
   v.innerHTML=
     '<div class="card"><h2 class="sec">📖 分級閱讀</h2>'
     +'<div class="hint">雜誌式版面：內文的<b style="color:#c0561a">橘色加粗＋編號</b>字對應右欄「Words &amp; Phrases」單字片語，另有補充詞彙與選字填空。點<b>任何一個英文字</b>都能查中文。</div>'
     +'<div class="chips">'+kb.map(([k,t])=>'<button class="chip'+(rdFilter.kind===k?' on':'')+'" onclick="rdSet(\'kind\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
     +'<div class="chips">'+lb.map(([k,t])=>'<button class="chip'+(rdFilter.level===k?' on':'')+'" onclick="rdSet(\'level\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
+    +(gb.length>1?'<div class="chips">'+gb.map(([k,t])=>'<button class="chip'+(rdFilter.gram===k?' on':'')+'" onclick="rdSet(\'gram\',\''+k+'\')">'+t+'</button>').join('')+'</div>':'')
     +'<div class="muted">共 '+list.length+' 篇</div></div>'
     +list.map(a=>{
       const d=ST.artDone[a.id];
       return '<div class="item'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="rdOpenArt(\''+a.id+'\')">'
       +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(a.level)+'">'+esc(a.title)+'</div><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span></div>'
       +'<div class="tc">'+esc(a.titleCn)+'</div>'
-      +'<div class="meta">'+(a.date?'<span>📅 '+esc(a.date)+'</span>':'')+'<span>🏷 '+esc(a.topic)+'</span><span>📝 '+a.words+' words</span>'
+      +'<div class="meta">'+(a.date?'<span>📅 '+esc(a.date)+'</span>':'')+'<span>🏷 '+esc(a.topic)+'</span><span>'+wordsMeta(a.words)+'</span>'
       +(a.focus?'<span>📐 '+esc(a.focus)+'</span>':'')
       +'</div></div>';
     }).join('');
@@ -1329,7 +1351,7 @@ function readerHTML(a){
    +(a.intro?'<div class="set">'+esc(a.intro)+'</div>':'')
    +'<div class="bar"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'
    +'<span class="magbadge">🏷 '+esc(a.topic)+'</span>'
-   +'<span class="magbadge">📝 '+a.words+' words</span>'
+   +'<span class="magbadge">'+wordsMeta(a.words)+'</span>'
    +(a.date?'<span class="magbadge">📅 '+esc(a.date)+'</span>':'')
    +(a.focus?'<span class="magbadge">📐 '+esc(a.focus)+'</span>':'')
    +'</div>'
@@ -1597,6 +1619,9 @@ function grade(w,g){
   save();
 }
 
+/* 練習分頁頂部的子分頁切換（單字卡 ↔ 文法） */
+const pracTabs=cur=>'<div class="chips" style="margin-bottom:12px">'
+  +[['vocab','🔤 單字卡'],['gram','📐 文法']].map(([k,t])=>'<button class="chip'+(cur===k?' on':'')+'" onclick="go(\''+k+'\')">'+t+'</button>').join('')+'</div>';
 let vCat='all', vQueue=[], vIdx=0, vFlip=false, vSession={done:0,again:0};
 RENDER.vocab=function(){
   const v=$('v-vocab');
@@ -1606,7 +1631,7 @@ RENDER.vocab=function(){
     Object.keys(CATS).forEach(c=>counts[c]=VOCAB.filter(x=>x.cat===c).length);
     const learned=Object.keys(ST.srs).length;
     const dueN=VOCAB.filter(x=>isDue(x.w)).length;
-    v.innerHTML='<div class="card"><h2 class="sec">🔤 單字卡 · 間隔複習</h2>'
+    v.innerHTML=pracTabs('vocab')+'<div class="card"><h2 class="sec">🔤 單字卡 · 間隔複習</h2>'
       +'<div class="hint">系統會根據你按的按鈕自動安排下次複習日：<b>忘記</b>當天再出現，<b>很簡單</b>會拉長到好幾天甚至幾週後。每天新字上限 '+(ST.newPerDay||12)+' 個。</div>'
       +'<div class="stats"><div class="stat"><b>'+VOCAB.length+'</b><span>課堂總單字</span></div>'
       +'<div class="stat"><b>'+learned+'</b><span>已開始學</span></div>'
@@ -1710,7 +1735,7 @@ let CURG=null;
 RENDER.gram=function(){
   const v=$('v-gram');
   if(CURG){ v.innerHTML=gramHTML(CURG); return; }
-  v.innerHTML='<div class="card"><h2 class="sec">📐 文法系統教材</h2>'
+  v.innerHTML=pracTabs('gram')+'<div class="card"><h2 class="sec">📐 文法系統教材</h2>'
     +'<div class="hint">單元順序就是建議的學習順序：先把 B1 的時態基礎穩住，再進 B2 的被動、關係子句、分詞與倒裝。每個單元都有 ⚠️ 常見錯誤與練習題。</div>'
     +'<div class="muted">共 '+ALL_GRAM.length+' 個單元'+(DAILY_GRAM.length?'（其中 '+DAILY_GRAM.length+' 個是每週三、五自動新增）':'')+'</div></div>'
     + ALL_GRAM.map(g=>{
@@ -1799,7 +1824,7 @@ RENDER.daily=function(){
     h+='<div class="item'+(isToday(a)?' new':finCls(d))+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="dailyArt(\''+a.id+'\')">'
      +'<div class="t" style="'+lvTitle(a.level)+'">📖 '+esc(a.title)+'</div>'
      +'<div class="tc">'+esc(a.titleCn)+'</div>'
-     +'<div class="meta"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span><span>📅 '+esc(a.date||'')+'</span><span>🏷 '+esc(a.topic)+'</span><span>📝 '+a.words+' words</span>'
+     +'<div class="meta"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span><span>📅 '+esc(a.date||'')+'</span><span>🏷 '+esc(a.topic)+'</span><span>'+wordsMeta(a.words)+'</span>'
      +(a.kind==='news'||a.sourceUrl?'<span>📰 真實新聞改寫</span>':'<span>✍️ 原創</span>')
      +finMeta(d,isToday(a))+'</div></div>';
   });
