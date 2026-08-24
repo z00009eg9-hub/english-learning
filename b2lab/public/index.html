@@ -89,8 +89,10 @@ nav button{
   cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;line-height:1.35
 }
 nav button i{font-style:normal;font-size:20px;line-height:1;transition:transform .18s ease}
-nav button.on{color:var(--accent2);font-weight:700;font-size:11.5px}
-/* 目前所在分頁：圖示微放大＋柔和橢圓底盤（不用光暈，較精緻），文字也稍大 */
+nav button.on{color:var(--accent2);font-weight:800;font-size:11.5px}
+/* 未選取的分頁圖示稍微降飽和，讓目前所在的分頁一眼跳出來 */
+nav button:not(.on) i{filter:grayscale(.35) opacity(.75)}
+/* 目前所在分頁：圖示微放大＋柔和橢圓底盤（不用光暈，較精緻），文字橘色加粗也稍大 */
 nav button.on i{
   transform:translateY(-1px) scale(1.12);
   background:var(--accent-soft);border-radius:16px;padding:3px 13px
@@ -298,6 +300,15 @@ tr:nth-child(even) td{background:#fdfbf8}
 .cell.future{opacity:.4}
 .callegend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:calc(12px * var(--fs));color:var(--ink2)}
 .callegend i{display:inline-block;width:14px;height:14px;border-radius:5px;vertical-align:-2px;margin-right:5px}
+/* ---------- 閱讀清單：完成度進度條＋卡片右側「›」點擊暗示 ---------- */
+.rdprog{display:flex;align-items:center;gap:12px;margin-top:2px}
+.rdprog span{font-size:calc(13px * var(--fs));color:var(--ink2);white-space:nowrap}
+.rdbar{flex:1;max-width:260px;height:6px;background:#efe8dd;border-radius:4px;overflow:hidden}
+.rdbar i{display:block;height:100%;background:linear-gradient(90deg,#f2953f,#e0731f);border-radius:4px;transition:width .3s}
+.item.arw{padding-right:36px}
+.item.arw::after{content:"›";position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  font-size:24px;font-weight:700;color:#cfc4b4;line-height:1}
+@media(hover:hover){.item.arw:hover::after{color:var(--accent2)}}
 /* ---------- 課本課程卡片：日期小標籤＋大標題＋統計數據卡片＋開始課程按鈕 ---------- */
 .bkdate{font-size:calc(12px * var(--fs));color:#57504a;font-weight:600;margin-bottom:2px}
 .item .t.bkbig{font-size:calc(18px * var(--fs));margin-bottom:3px}
@@ -583,7 +594,7 @@ body.cnall #v-book .cnx{display:block!important}
 body.cnall #v-book th.cnx,body.cnall #v-book td.cnx{display:table-cell!important}
 body.cnall #v-book span.cnx{display:inline!important}
 /* 課本日曆與搜尋 */
-#bk-q{width:100%;margin:4px 0 12px;padding:9px 12px;border:1.5px solid var(--line);border-radius:10px;
+#bk-q,#rd-q{width:100%;margin:4px 0 12px;padding:9px 12px;border:1.5px solid var(--line);border-radius:10px;
   font:inherit;font-size:calc(14px * var(--fs))}
 #v-book .cell .dot{font-size:11px;line-height:1}
 #v-book .cell.done{cursor:pointer}
@@ -1171,18 +1182,41 @@ let rdFilter={kind:'all',level:'all',gram:'all'}, rdOpen=null;   // 預設「全
 try{ Object.assign(rdFilter,JSON.parse(localStorage.getItem('b2lab_rdfilter')||'{}')); }catch(e){}
 let rdGramOpen=false;                                     // 文法篩選預設收合，主畫面保持清爽
 let rdHintOff=localStorage.getItem('b2lab_rdhint')==='1'; // 頂部說明可關閉，熟悉後釋放閱讀空間
+let rdQuery='';                                           // 全域搜尋：中英文標題、主題、文法重點
 /* 文法主題快速篩選：從文章的「文法重點」欄位歸納出常見主題（順序長詞優先，避免「現在完成進行式」被記成「進行式」） */
 const RD_GRAMKEYS=['現在完成進行式','現在完成式','過去完成式','現在進行式','過去進行式','過去簡單式','現在簡單式','未來式','被動語態','假設語氣','使役動詞','情態動詞','關係代名詞','關係子句','間接問句','分詞構句','比較級','最高級','連接詞','不定詞','動名詞','倒裝'];
-RENDER.read=function(){
-  const v=$('v-read');
-  v.classList.toggle('rdopen',!!rdOpen);
-  if(rdOpen){ v.innerHTML=readerHTML(rdOpen); rebalanceMag(); return; }
+/* 篩選管線：類型/程度 → 文法主題 → 搜尋關鍵字（base 給文法 chips 統計用） */
+function rdFiltered(){
   if(rdFilter.level!=='all'&&!inBand(rdFilter.level)) rdFilter.level='all';
   const base=ALL_ARTS.filter(a=>
     (rdFilter.kind==='all'||a.kind===rdFilter.kind) &&
     inBand(a.level) &&
     (rdFilter.level==='all'||a.level===rdFilter.level));
-  const list=base.filter(a=>rdFilter.gram==='all'||(a.focus||'').includes(rdFilter.gram));
+  let list=base.filter(a=>rdFilter.gram==='all'||(a.focus||'').includes(rdFilter.gram));
+  const q=rdQuery.trim().toLowerCase();
+  if(q) list=list.filter(a=>[a.title,a.titleCn,a.topic,a.focus,a.intro].some(x=>String(x||'').toLowerCase().indexOf(q)>=0));
+  return {base,list};
+}
+function rdCards(list){
+  return list.length ? list.map(a=>{
+    const d=ST.artDone[a.id];
+    return '<div class="item arw'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="rdOpenArt(\''+a.id+'\')">'
+    +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(a.level)+'">'+esc(a.title)+'</div><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span></div>'
+    +'<div class="tc">'+esc(a.titleCn)+'</div>'
+    +'<div class="meta">'+(a.date?'<span>📅 '+esc(a.date)+'</span>':'')+'<span>🏷 '+esc(a.topic)+'</span><span>'+wordsMeta(a.words)+'</span>'
+    +(a.focus?'<span>📐 '+esc(a.focus)+'</span>':'')
+    +'</div></div>';
+  }).join('') : '<div class="muted" style="padding:8px 4px">找不到符合的文章，換個關鍵字或放寬篩選試試。</div>';
+}
+function rdProg(list){
+  const n=list.filter(a=>ST.artDone[a.id]).length;
+  return {txt:'已完成 '+n+' / 共 '+list.length+' 篇', pct:list.length?Math.round(n*100/list.length):0};
+}
+RENDER.read=function(){
+  const v=$('v-read');
+  v.classList.toggle('rdopen',!!rdOpen);
+  if(rdOpen){ v.innerHTML=readerHTML(rdOpen); rebalanceMag(); return; }
+  const {base,list}=rdFiltered();
   const kb=[['orig','✍️ 原創分級 '+ORIG_ARTS.length],['daily','📅 每日新文章 '+DAILY_ARTS.length],['note','📓 筆記文章 '+NOTE_ARTS.length],['all','全部']];
   const lb=[['all','全部程度']].concat(band().map(l=>[l,l]));
   /* 文法主題 chips：只列目前 kind/程度篩選下實際出現的主題（附篇數）；已選的主題就算變 0 篇也保留，才點得回「全部文法」 */
@@ -1202,20 +1236,23 @@ RENDER.read=function(){
     +(rdHintOff?' <button class="spk" onclick="rdHint(0)" title="顯示操作說明" style="margin-left:auto">ℹ️</button>':'')+'</h2>'
     +(rdHintOff?'':'<div class="hint" style="position:relative;padding-right:34px">雜誌式版面：內文的<b style="color:#c0561a">橘色加粗＋編號</b>字對應右欄「Words &amp; Phrases」單字片語，另有補充詞彙與選字填空。點<b>任何一個英文字</b>都能查中文。'
       +'<button onclick="rdHint(1)" title="關閉說明" style="position:absolute;top:6px;right:8px;border:0;background:none;cursor:pointer;font-size:15px;color:var(--ink2);line-height:1;padding:3px">✕</button></div>')
+    +'<input id="rd-q" value="'+esc(rdQuery)+'" oninput="rdQ(this.value)" placeholder="🔍 搜尋文章：中英文標題、主題、文法重點…">'
     +'<div class="chips">'+kb.map(([k,t])=>'<button class="chip'+(rdFilter.kind===k?' on':'')+'" onclick="rdSet(\'kind\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
     +'<div class="chips">'+lb.map(([k,t])=>'<button class="chip'+(rdFilter.level===k?' on':'')+'" onclick="rdSet(\'level\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
     +gramRow
-    +'<div class="muted">共 '+list.length+' 篇</div></div>'
-    +list.map(a=>{
-      const d=ST.artDone[a.id];
-      return '<div class="item'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="rdOpenArt(\''+a.id+'\')">'
-      +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(a.level)+'">'+esc(a.title)+'</div><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span></div>'
-      +'<div class="tc">'+esc(a.titleCn)+'</div>'
-      +'<div class="meta">'+(a.date?'<span>📅 '+esc(a.date)+'</span>':'')+'<span>🏷 '+esc(a.topic)+'</span><span>'+wordsMeta(a.words)+'</span>'
-      +(a.focus?'<span>📐 '+esc(a.focus)+'</span>':'')
-      +'</div></div>';
-    }).join('');
+    +(function(){const p=rdProg(list);return '<div class="rdprog"><span id="rd-count">'+p.txt+'</span><div class="rdbar"><i id="rd-fill" style="width:'+p.pct+'%"></i></div></div>';})()
+    +'</div>'
+    +'<div id="rd-list">'+rdCards(list)+'</div>';
 };
+/* 搜尋輸入：只更新清單與計數，不重畫整個分頁（輸入框才不會失去焦點） */
+function rdQ(val){
+  rdQuery=val;
+  const {list}=rdFiltered();
+  const el=$('rd-list'); if(el) el.innerHTML=rdCards(list);
+  const p=rdProg(list);
+  const c=$('rd-count'); if(c) c.textContent=p.txt;
+  const f=$('rd-fill'); if(f) f.style.width=p.pct+'%';
+}
 /* 兩欄高度差太多就自動改版：內文全寬 + 單字片語雙欄流排 */
 function rebalanceMag(){
   const mag=document.querySelector('#v-read .mag');
@@ -1246,7 +1283,7 @@ function rdHint(off){
 }
 function rdOpenArt(id){ rdOpen=ALL_ARTS.find(a=>a.id===id); QSTATE={}; RENDER.read(); }
 function rdClose(){ rdOpen=null; if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.read(); }
-window.rdSet=rdSet; window.rdOpenArt=rdOpenArt; window.rdClose=rdClose; window.rdGramTog=rdGramTog; window.rdHint=rdHint;
+window.rdSet=rdSet; window.rdOpenArt=rdOpenArt; window.rdClose=rdClose; window.rdGramTog=rdGramTog; window.rdHint=rdHint; window.rdQ=rdQ;
 
 const reEsc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
