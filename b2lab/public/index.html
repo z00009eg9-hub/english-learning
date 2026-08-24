@@ -300,6 +300,21 @@ tr:nth-child(even) td{background:#fdfbf8}
 .cell.future{opacity:.4}
 .callegend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:calc(12px * var(--fs));color:var(--ink2)}
 .callegend i{display:inline-block;width:14px;height:14px;border-radius:5px;vertical-align:-2px;margin-right:5px}
+/* ---------- 進度分頁：文法主題分組清單 ---------- */
+.pggrp{display:flex;align-items:center;gap:7px;width:100%;margin-top:12px;padding:9px 12px;cursor:pointer;
+  border:1px solid var(--line);border-radius:10px;background:#faf6f0;font:inherit;font-weight:800;font-size:calc(14px * var(--fs));color:var(--ink)}
+.pggrp:active{background:var(--accent-soft)}
+.pgrow{display:flex;align-items:center;gap:8px;padding:8px 11px;margin-top:6px;cursor:pointer;
+  border:1px solid var(--line);border-radius:10px;background:#fff}
+.pgrow:active{background:var(--accent-soft)}
+@media(hover:hover){.pgrow:hover{border-color:#dccfbe;box-shadow:0 3px 10px rgba(60,45,30,.1)}}
+.pgrow .pgt{flex:1;min-width:0;font-size:calc(13.5px * var(--fs))}
+.pgtag{font-size:calc(10.5px * var(--fs));background:#fdf0e5;color:#b4571e;border:1px solid #ecd3bb;border-radius:12px;padding:1px 7px;white-space:nowrap}
+.pgact{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.pgo{border:1.5px solid var(--accent2);background:#fff;color:var(--accent2);border-radius:16px;
+  padding:4px 12px;font:inherit;font-weight:700;font-size:calc(12px * var(--fs));cursor:pointer}
+.pgo.cont{background:var(--accent2);color:#fff}
+.pgok{color:var(--ok);font-weight:800;font-size:calc(12.5px * var(--fs))}
 /* ---------- 閱讀清單：完成度進度條＋卡片右側「›」點擊暗示 ---------- */
 .rdprog{display:flex;align-items:center;gap:12px;margin-top:2px}
 .rdprog span{font-size:calc(13px * var(--fs));color:var(--ink2);white-space:nowrap}
@@ -473,6 +488,9 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
   padding:2px 6px;cursor:pointer;flex-shrink:0;margin-top:2px
 }
 .sline.cur .stime{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+/* 逐句錄音鍵：錄音中變紅色＋輕微脈動，一眼看出正在收音 */
+.recb.recording{background:#e2483d;border-color:#c93a30;color:#fff;animation:recpulse 1.2s ease-in-out infinite}
+@keyframes recpulse{0%,100%{box-shadow:0 0 0 0 rgba(226,72,61,.45)}50%{box-shadow:0 0 0 6px rgba(226,72,61,0)}}
 .sen{flex:1;font-size:calc(16px * var(--fs));line-height:1.7;cursor:pointer}
 .scn{font-size:calc(14px * var(--fs));color:var(--ink2);margin-top:3px;padding-left:52px}
 .ssp{font-size:calc(12px * var(--fs));font-weight:800;color:var(--accent2);margin-bottom:2px}
@@ -2025,6 +2043,83 @@ function calShift(delta){
 }
 window.calShift=calShift;
 
+/* ---------- 進度分頁的文法清單：程度/狀態篩選 ＋ 主題分組折疊 ＋ 明確行動按鈕 ---------- */
+let pgLv='all', pgSt='all', pgGrpOpen=null;
+/* 依標題把單元歸進四大主題（順序即顯示順序） */
+const PG_GROUPS=['時態總覽','語態與語氣','子句與句構','其他重點'];
+function pgCat(g){
+  const t=(g.titleCn||'')+(g.title||'');
+  if(/時態|進行式|完成式|未來|過去簡單|現在簡單|簡單式|過去式/.test(t)) return '時態總覽';
+  if(/被動|假設|語氣|情態|使役/.test(t)) return '語態與語氣';
+  if(/子句|關係|間接|分詞|倒裝|連接/.test(t)) return '子句與句構';
+  return '其他重點';
+}
+/* 實戰價值標籤：職場信件/報告/排程確認最常用到的單元 */
+function pgHot(g){
+  const t=(g.titleCn||'')+(g.title||'');
+  if(/被動|未來|情態|間接|使役/.test(t)) return '💼 職場高頻';
+  if(/現在完成|關係/.test(t)) return '⭐ 必修重點';
+  return '';
+}
+function pgStatus(g){
+  const d=ST.gramDone[g.id];
+  return !d?'todo':(d.correct>=d.total?'done':'part');
+}
+/* 小號進度圓環（練到一半的單元用） */
+function ringMini(pct){
+  const r=10, c=2*Math.PI*r, off=c*(1-Math.min(100,pct)/100);
+  return '<svg width="26" height="26" viewBox="0 0 26 26" style="vertical-align:-7px">'
+   +'<circle cx="13" cy="13" r="'+r+'" fill="none" stroke="#f0e4d4" stroke-width="4"/>'
+   +'<circle cx="13" cy="13" r="'+r+'" fill="none" stroke="#e0731f" stroke-width="4" stroke-linecap="round" '
+   +'stroke-dasharray="'+c.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'" transform="rotate(-90 13 13)"/></svg>';
+}
+function pgGramHTML(){
+  const pool=ALL_GRAM.filter(g=>inBand(g.level));
+  const stCnt={todo:0,part:0,done:0};
+  pool.forEach(g=>stCnt[pgStatus(g)]++);
+  if(pgLv!=='all'&&!inBand(pgLv)) pgLv='all';
+  const list=pool.filter(g=>(pgLv==='all'||g.level===pgLv)&&(pgSt==='all'||pgStatus(g)===pgSt));
+  /* 第一次進來：有「進行中」的主題先展開，其他先收合，頁面短一點 */
+  if(!pgGrpOpen){
+    pgGrpOpen={};
+    PG_GROUPS.forEach(n=>pgGrpOpen[n]=pool.some(g=>pgCat(g)===n&&pgStatus(g)==='part'));
+    if(!Object.values(pgGrpOpen).some(Boolean)) pgGrpOpen[PG_GROUPS[0]]=true;
+  }
+  const lvChips=[['all','全部程度']].concat(band().map(l=>[l,l]))
+    .map(([k,t])=>'<button class="chip'+(pgLv===k?' on':'')+'" onclick="pgSet(\'lv\',\''+k+'\')">'+t+'</button>').join('');
+  const stChips=[['all','全部'],['todo','未開始 '+stCnt.todo],['part','進行中 '+stCnt.part],['done','已完成 '+stCnt.done]]
+    .map(([k,t])=>'<button class="chip'+(pgSt===k?' on':'')+'" onclick="pgSet(\'st\',\''+k+'\')">'+t+'</button>').join('');
+  const order={part:0,todo:1,done:2};
+  let h='<div class="chips" style="margin-top:12px">'+lvChips+'</div><div class="chips">'+stChips+'</div>';
+  PG_GROUPS.forEach(name=>{
+    const items=list.filter(g=>pgCat(g)===name).sort((a,b)=>order[pgStatus(a)]-order[pgStatus(b)]);
+    if(!items.length) return;
+    const dn=items.filter(g=>pgStatus(g)==='done').length;
+    /* 篩選「未開始/進行中/已完成」時全部展開，收合的組才不會藏住符合的單元 */
+    const open=pgSt!=='all'||!!pgGrpOpen[name];
+    h+='<button class="pggrp" onclick="pgGrpTog(\''+name+'\')">'+(open?'▾':'▸')+' '+name
+      +'<span class="muted" style="margin-left:auto;font-size:calc(12px * var(--fs))">'+dn+' / '+items.length+' 完成</span></button>';
+    if(open) h+=items.map(g=>{
+      const st=pgStatus(g), d=ST.gramDone[g.id], hot=pgHot(g);
+      const act= st==='todo' ? '<button class="pgo">開始練習</button>'
+        : st==='part' ? ringMini(Math.round(d.correct*100/d.total))+'<button class="pgo cont">繼續 '+d.correct+'/'+d.total+'</button>'
+        : '<span class="pgok">✓ '+d.correct+'/'+d.total+'</span>';
+      return '<div class="pgrow" onclick="goUnit(\''+g.id+'\')">'
+        +'<span class="lv '+lvCls(g.level)+'">'+g.level+'</span>'
+        +'<span class="pgt">'+esc(g.titleCn)+'</span>'
+        +(hot?'<span class="pgtag">'+hot+'</span>':'')
+        +'<span class="pgact">'+act+'</span></div>';
+    }).join('');
+  });
+  if(!list.length) h+='<div class="muted" style="margin-top:10px">這個組合下沒有單元，換個篩選試試。</div>';
+  return h;
+}
+/* 只更新文法區塊，不重畫整頁（畫面不會跳回頂端） */
+function pgRefresh(){ const e=$('pg-gram'); if(e) e.innerHTML=pgGramHTML(); else go('prog'); }
+function pgSet(k,v){ if(k==='lv')pgLv=v; else pgSt=v; pgRefresh(); }
+function pgGrpTog(n){ pgGrpOpen[n]=!pgGrpOpen[n]; pgRefresh(); }
+window.pgSet=pgSet; window.pgGrpTog=pgGrpTog;
+
 /* SVG 進度圓環：pct 0-100 */
 function ringSVG(pct,color){
   const r=26, c=2*Math.PI*r, off=c*(1-Math.min(100,pct)/100);
@@ -2095,9 +2190,8 @@ RENDER.prog=function(){
     })()
    +'<div class="card"><h2 class="sec">📐 文法</h2>'
    +'<div class="muted">完成 '+gramN+' / '+ALL_GRAM.length+' 單元 · 平均練習 '+gavg+'%</div>'+bar(gramN,ALL_GRAM.length)
-   +'<div class="tw" style="margin-top:10px"><table><tr><th>單元</th><th>程度</th><th>練習成績</th></tr>'
-   + ALL_GRAM.map(g=>{const d=ST.gramDone[g.id];return '<tr><td>'+esc(g.titleCn)+'</td><td><span class="lv '+lvCls(g.level)+'">'+g.level+'</span></td><td>'+(d?d.correct+'/'+d.total:'—')+'</td></tr>';}).join('')
-   +'</table></div></div>'
+   +'<div id="pg-gram">'+pgGramHTML()+'</div>'
+   +'</div>'
 
    +'<div class="card"><h2 class="sec">⚙️ 設定</h2>'
    +'<div class="muted">字體大小（全站，包含文章與文法）</div><div class="chips" style="margin-top:6px">'
@@ -2713,12 +2807,24 @@ function auApplyVoices(){
   if(auSpeakers.length>=1) auSpMap[auSpeakers[0]]=auPickedVoice('a')||VOICE;
   if(auSpeakers.length>=2) auSpMap[auSpeakers[1]]=auPickedVoice('b')||VOICE2||VOICE;
 }
+/* 口音一目瞭然：依語音的地區代碼加上對應國旗 */
+function auFlag(lang){
+  const l=String(lang||'').toLowerCase();
+  return l.indexOf('en-us')>=0||l.indexOf('en_us')>=0?'🇺🇸':
+         l.indexOf('en-gb')>=0||l.indexOf('en_gb')>=0?'🇬🇧':
+         l.indexOf('en-au')>=0||l.indexOf('en_au')>=0?'🇦🇺':
+         l.indexOf('en-ca')>=0||l.indexOf('en_ca')>=0?'🇨🇦':
+         l.indexOf('en-in')>=0||l.indexOf('en_in')>=0?'🇮🇳':
+         l.indexOf('en-ie')>=0||l.indexOf('en_ie')>=0?'🇮🇪':
+         l.indexOf('en-nz')>=0||l.indexOf('en_nz')>=0?'🇳🇿':
+         l.indexOf('en-za')>=0||l.indexOf('en_za')>=0?'🇿🇦':'🌐';
+}
 function auFillVoices(){
   const vs=auVoiceList();
   ['a','b'].forEach((slot,i)=>{
     const sel=$('au-v'+slot); if(!sel) return;
     const cur=(auSpMap[auSpeakers[i]]||{}).name||'';
-    sel.innerHTML=vs.map(v=>'<option value="'+esc(v.name)+'"'+(v.name===cur?' selected':'')+'>'+esc(v.name.replace(/^Microsoft |^Google /,''))+(/en[-_]us/i.test(v.lang)?'':' ('+esc(v.lang)+')')+'</option>').join('');
+    sel.innerHTML=vs.map(v=>'<option value="'+esc(v.name)+'"'+(v.name===cur?' selected':'')+'>'+auFlag(v.lang)+' '+esc(v.name.replace(/^Microsoft |^Google /,''))+(/en[-_]us/i.test(v.lang)?'':' ('+esc(v.lang)+')')+'</option>').join('');
     if(!vs.length) sel.innerHTML='<option>（此裝置沒有英文語音）</option>';
   });
   const wrap=$('au-vrow'); if(wrap&&auSpeakers.length<2) wrap.style.display='none';
@@ -2736,8 +2842,62 @@ function auTestVoice(slot){
   say(line?line.en:'Hi, this is my voice. Nice to meet you.', auRate, null, v);
 }
 window.auSetVoice=auSetVoice; window.auTestVoice=auTestVoice;
+
+/* ---------- 逐句錄音自我檢核：🎙️ 錄自己的發音，錄完立刻回放、跟原音交叉比對 ----------
+   錄音只存在記憶體（換一課就清掉），不會上傳任何地方。 */
+let recMedia=null, recChunks=[], recIdx=null, recUrls={}, recAudio=null;
+function recBtnHTML(i){
+  return '<button class="spk recb" id="rec-'+i+'" onclick="recTog('+i+',event)" title="錄下自己的發音，跟原音比對">🎙️</button>'
+   +'<button class="spk recp" id="recp-'+i+'" onclick="recPlay('+i+',event)" title="回放我的錄音" style="display:'+(recUrls[i]?'':'none')+'">▶️🎙️</button>';
+}
+function recPaint(){
+  document.querySelectorAll('.recb').forEach(b=>{
+    const i=+b.id.slice(4);
+    b.classList.toggle('recording',recIdx===i);
+    b.textContent=recIdx===i?'⏹':'🎙️';
+  });
+  Object.keys(recUrls).forEach(i=>{ const p=$('recp-'+i); if(p) p.style.display=''; });
+}
+async function recTog(i,ev){
+  if(ev) ev.stopPropagation();
+  if(recIdx===i){ try{recMedia.stop();}catch(e){} return; }   // 再按一次＝停止並存檔
+  recFinish();
+  if(!navigator.mediaDevices||!window.MediaRecorder){ alert('這個瀏覽器不支援錄音功能。'); return; }
+  try{
+    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+    if('speechSynthesis' in window) speechSynthesis.cancel();   // 錄音時先安靜
+    recChunks=[]; recIdx=i;
+    recMedia=new MediaRecorder(stream);
+    recMedia.ondataavailable=e=>{ if(e.data&&e.data.size) recChunks.push(e.data); };
+    recMedia.onstop=()=>{
+      stream.getTracks().forEach(t=>t.stop());
+      const at=recIdx; recIdx=null;
+      if(recChunks.length){
+        if(recUrls[at]) URL.revokeObjectURL(recUrls[at]);
+        recUrls[at]=URL.createObjectURL(new Blob(recChunks,{type:recMedia.mimeType||'audio/webm'}));
+      }
+      recPaint();
+    };
+    recMedia.start(); recPaint();
+  }catch(e){ recIdx=null; alert('無法使用麥克風（請允許麥克風權限）：'+e.message); }
+}
+function recPlay(i,ev){
+  if(ev) ev.stopPropagation();
+  if(!recUrls[i]) return;
+  if('speechSynthesis' in window) speechSynthesis.cancel();
+  if(recAudio){ try{recAudio.pause();}catch(e){} }
+  recAudio=new Audio(recUrls[i]); recAudio.play();
+}
+function recFinish(){ if(recIdx!=null&&recMedia){ try{recMedia.stop();}catch(e){} } }
+function recReset(){
+  recFinish();
+  Object.values(recUrls).forEach(u=>{ try{URL.revokeObjectURL(u);}catch(e){} });
+  recUrls={};
+}
+window.recTog=recTog; window.recPlay=recPlay;
+
 function auSet(lines){
-  auStop(); auLines=lines||[];
+  auStop(); recReset(); auLines=lines||[];
   auSpeakers=[...new Set(auLines.map(l=>l.sp).filter(Boolean))];
   auApplyVoices(); auFillVoices();
 }
@@ -2804,20 +2964,33 @@ function auSetRate(r){
 }
 window.auPlay=auPlay; window.auStop=auStop; window.auFrom=auFrom; window.auSetRate=auSetRate;
 
+/* 進階設定（速度／語音）收在 ⚙️ 後面，主控制列只留核心三顆；展開狀態會記住 */
+function auAdvTog(){
+  const e=$('au-adv'); if(!e) return;
+  const show=e.style.display==='none';
+  e.style.display=show?'block':'none';
+  try{ localStorage.setItem('b2lab_auadv',show?'1':'0'); }catch(x){}
+  const b=$('au-advbtn'); if(b) b.classList.toggle('on',show);
+}
+window.auAdvTog=auAdvTog;
 function audioControls(){
+  const adv=localStorage.getItem('b2lab_auadv')==='1';
   return '<div class="row" style="margin-top:2px">'
    +'<button class="spk" id="au-play" onclick="auPlay(false)">▶️ 播放全部</button>'
    +'<button class="spk" id="au-shadow" onclick="auPlay(true)">🔁 逐句跟讀</button>'
    +'<button class="spk" onclick="auStop()">⏹ 停止</button>'
+   +'<button class="spk'+(adv?' on':'')+'" id="au-advbtn" onclick="auAdvTog()" title="速度與語音設定">⚙️ 設定</button>'
    +'</div>'
+   +'<div id="au-adv" style="display:'+(adv?'block':'none')+'">'
    +'<div class="row" style="margin-top:6px">'
    +'<span class="muted" style="font-size:calc(12.5px * var(--fs));font-weight:700">速度</span>'
-   +[0.5,0.75,1].map(r=>'<button class="spk rbtn'+(r===1?' on':'')+'" data-r="'+r+'" onclick="auSetRate('+r+')">'+r+'x</button>').join('')
+   +[0.5,0.75,1,1.25].map(r=>'<button class="spk rbtn'+(r===auRate?' on':'')+'" data-r="'+r+'" onclick="auSetRate('+r+')">'+r+'x</button>').join('')
    +'</div>'
    +'<div class="row" id="au-vrow" style="margin-top:6px;align-items:center;gap:6px">'
    +'<span class="muted" style="font-size:calc(12.5px * var(--fs));font-weight:700">語音</span>'
    +'<span class="muted" id="au-vla" style="font-size:calc(12.5px * var(--fs))">A</span><select class="spk" id="au-va" onchange="auSetVoice(\'a\',this.value)"></select><button class="spk" onclick="auTestVoice(\'a\')">🔊</button>'
    +'<span class="muted" id="au-vlb" style="font-size:calc(12.5px * var(--fs))">B</span><select class="spk" id="au-vb" onchange="auSetVoice(\'b\',this.value)"></select><button class="spk" onclick="auTestVoice(\'b\')">🔊</button>'
+   +'</div>'
    +'</div>';
 }
 
@@ -2999,11 +3172,12 @@ function lessonHTML(l){
   if(au){
     h+='<div class="card"><h2 class="sec">📜 對話逐字稿（含中譯）</h2>'
      +'<div class="hint">上面的控制列會一直黏在頂端。<b>▶️ 播放全部</b>整段連著念、<b>🔁 逐句跟讀</b>會念一句停一下讓你跟著念；'
-     +'<b>點任一句</b>可以從那一句開始播，<b>點任何一個英文字</b>會跳出中文。想自我測驗就把英文或中譯蓋起來。</div>'
+     +'<b>點任一句</b>可以從那一句開始播，<b>點任何一個英文字</b>會跳出中文。'
+     +'每句右邊的 <b>🎙️ 可以錄下自己的發音</b>，錄完按 ▶️🎙️ 回放、再按 🔊 聽原音交叉比對咬字與語調。想自我測驗就把英文或中譯蓋起來。</div>'
      +'<div id="sublist">'+ au.map((k,i)=>
         '<div class="sline" id="sl-'+i+'">'
         +(k.sp?'<div class="ssp '+spCls(k.sp)+'">'+esc(k.sp)+'</div>':'')
-        +'<div class="srow"><div class="sen" onclick="auFrom('+i+')">'+tokenize(k.en,null)+'</div>'+spk(k.en).replace('<button ','<button data-sp="'+esc(k.sp||'')+'" ')+'</div>'
+        +'<div class="srow"><div class="sen" onclick="auFrom('+i+')">'+tokenize(k.en,null)+'</div>'+spk(k.en).replace('<button ','<button data-sp="'+esc(k.sp||'')+'" ')+recBtnHTML(i)+'</div>'
         +(k.cn?'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>':'')
         +'</div>').join('')+'</div></div>';
   }
@@ -3039,7 +3213,7 @@ function lessonHTML(l){
      +'<div class="hint">這一課的影片有版權，站內不轉錄原片逐字稿——<b>影片原文請按播放器右下角 CC</b>。下面是本站照這一課文法焦點自編的練習句，用法跟逐字稿一樣：<b>點任何一個英文字</b>查中文、按 🔊 聽一次再自己念一次，上面可以把英文或中譯蓋起來自我測驗。</div>'
      +'<div id="sublist">'+ drill.map((k,i)=>
         '<div class="sline" id="sl-'+i+'">'
-        +'<div class="srow"><div class="sen">'+tokenize(k.en,null)+'</div>'+spk(k.en)+'</div>'
+        +'<div class="srow"><div class="sen">'+tokenize(k.en,null)+'</div>'+spk(k.en)+recBtnHTML(i)+'</div>'
         +'<div class="scn" style="padding-left:0">'+esc(k.cn)+'</div>'
         +'</div>').join('')+'</div>'
      +'<div class="muted" style="margin-top:8px;font-size:calc(12px * var(--fs))">練習句與中譯皆為本站原創撰寫，非影片逐字稿。</div></div>';
