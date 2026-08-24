@@ -513,5 +513,58 @@ V.dg20260821b2=card(
   en:'Signal Fault Delays Thousands', cn:'新聞標題用現在簡單式，即使事情已發生'},
  'always/constantly + 現在進行式帶著抱怨、不滿的情緒；新聞標題則用現在簡單式製造「即時感」——兩種都不是字面上的「現在」，而是修辭效果。');
 
+
+/* ---------- 2026-08-24 A2：狀態動詞不加 -ing vs 動作動詞 ---------- */
+V.dg20260824a2=card(
+ {pw:210,title:'感覺・想法：不加 -ing',
+  draw:em(110,150,54,'❤️')+em(210,150,54,'☕')
+   +'<text x="160" y="206" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">like / want / know 永遠用原形</text>',
+  en:'He likes coffee.', cn:'感覺一直都在，不是正在做的動作'},
+ {pw:190,title:'動作：可加 -ing',
+  draw:em(160,148,54,'🍳')
+   +bub(160,208,'⏰ NOW',96),
+  en:'He is making eggs now.', cn:'動作正在進行 → am/is/are + V-ing'},
+ '左邊：like、want、know 講感覺和想法，永遠不加 -ing；右邊：make、eat 這種動作，正在做的時候才用現在進行式。');
+
+/* ---------- 2026-08-24 B1：have 的兩張臉 ---------- */
+V.dg20260824b1=card(
+ {pw:190,title:'have = 擁有（狀態）',
+  draw:em(160,148,54,'🚗')
+   +'<text x="160" y="208" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">擁有不能「暫停」→ 不加 -ing</text>',
+  en:'She has a car.', cn:'擁有、有：狀態動詞，用 has'},
+ {pw:210,title:'have lunch = 吃（動作）',
+  draw:em(160,148,54,'🍱')
+   +bub(160,208,'⏰ NOW',96),
+  en:'She is having lunch now.', cn:'吃飯是動作，正在吃 → is having'},
+ '同一個 have：講「擁有」是狀態，不加 -ing；講 have lunch、have a shower 這種「做的事」是動作，正在做就用 is having。判斷方法：能暫停再繼續的是動作。');
+
+/* ---------- 2026-08-24 B1+：You are quiet vs You are being quiet ---------- */
+V.dg20260824b1p=card(
+ {pw:190,title:'You are quiet：個性',
+  draw:em(160,148,54,'😌')
+   +'<text x="160" y="208" text-anchor="middle" font-size="14" font-weight="800" fill="#7c8b96">一直都這樣（個性、常態）</text>',
+  en:'You are quiet.', cn:'評論個性：他本來就是安靜的人'},
+ {pw:230,title:'You are being quiet：今天特別',
+  draw:em(140,148,54,'🤐')
+   +bub(212,120,'today?',86)
+   +'<text x="160" y="208" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">只有現在暫時這樣，怪怪的</text>',
+  en:'You are being quiet today.', cn:'暫時的行為：平常不是這樣'},
+ '左邊：are quiet 講個性，一直如此；右邊：are being quiet 講「此刻的行為表現」——今天特別安靜，平常不會，常帶一點「發生什麼事了？」的語氣。');
+
+/* ---------- 2026-08-24 B2：正式 I love it vs 廣告口語 I'm loving it ---------- */
+V.dg20260824b2=card(
+ {pw:200,title:'正式・一般：I love it',
+  draw:'<rect x="60" y="104" width="200" height="64" rx="8" fill="#fff" stroke="#1c2c45" stroke-width="3"/>'
+   +'<text x="160" y="130" text-anchor="middle" font-size="15" font-weight="900" fill="#1c2c45">I love my job.</text>'
+   +'<text x="160" y="152" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7c8b96">報告、履歷、一般陳述</text>'
+   +'<text x="160" y="208" text-anchor="middle" font-size="14" font-weight="800" fill="#7c8b96">恆常的事實，語氣客觀</text>',
+  en:'I love my job.', cn:'狀態動詞用簡單式：不變的事實'},
+ {pw:230,title:"廣告・口語：I'm loving it",
+  draw:em(140,146,50,'🍔')
+   +bub(210,116,'🔥 so far!',96)
+   +'<text x="160" y="208" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">故意加 -ing：把愛講成正在發生</text>',
+  en:"I'm loving the new project so far.", cn:'刻意打破規則：強調此刻的熱度'},
+ '左邊：正式語域中 love、mean、suggest 一律簡單式，陳述恆常事實；右邊：廣告與口語刻意加 -ing，把感覺講成「正在燃燒的動作」——不是文法錯誤，是修辭選擇。know、believe 則永遠不能這樣玩。');
+
 return V;
 })();

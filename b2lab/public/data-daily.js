@@ -7,6 +7,691 @@
 window.DAILY = {
 
 articles:[
+{
+  "id": "d20260824a2",
+  "date": "2026-08-24",
+  "level": "A2",
+  "topic": "日常作息",
+  "words": 81,
+  "kind": "orig",
+  "title": "Tom's Monday Morning",
+  "titleCn": "Tom 的星期一早晨",
+  "focus": "like、want、know 這類「狀態動詞」用現在簡單式，不加 -ing；正在做的動作才用現在進行式",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "這篇文章裡有兩種動詞：like、want、know 講的是「感覺和想法」，永遠用原形；is making、is reading 講的是「現在正在做的動作」。讀的時候注意這兩種動詞長得不一樣。",
+  "paras": [
+    {
+      "en": "Tom gets up at six thirty every Monday. He washes his face and makes coffee. He likes coffee with milk.",
+      "cn": "Tom每個星期一六點半起床。他洗臉、煮咖啡。他喜歡加牛奶的咖啡。"
+    },
+    {
+      "en": "This morning he is making eggs too. He wants a big breakfast today. There is a long meeting at work.",
+      "cn": "今天早上他還在煎蛋。他今天想吃一頓豐盛的早餐，因為公司有一場很長的會議。"
+    },
+    {
+      "en": "Tom knows his boss will ask many questions. So he is reading his notes at the table. He feels ready now.",
+      "cn": "Tom知道主管會問很多問題。所以他正在餐桌邊看筆記。他現在覺得準備好了。"
+    },
+    {
+      "en": "At seven thirty he leaves home. The sky is clear and the air is cool. Monday is not so bad.",
+      "cn": "七點半他出門。天空晴朗，空氣涼爽。星期一也沒那麼糟嘛。"
+    }
+  ],
+  "target": [
+    {
+      "w": "get up",
+      "ipa": "/ɡet ʌp/",
+      "pos": "phr.",
+      "cn": "起床",
+      "def": "To leave your bed in the morning.",
+      "ex": "I get up at seven every day.",
+      "exCn": "我每天七點起床。"
+    },
+    {
+      "w": "breakfast",
+      "ipa": "/ˈbrekfəst/",
+      "pos": "n.",
+      "cn": "早餐",
+      "def": "The first meal of the day, in the morning.",
+      "ex": "He wants a big breakfast today.",
+      "exCn": "他今天想吃一頓豐盛的早餐。"
+    },
+    {
+      "w": "meeting",
+      "ipa": "/ˈmiːtɪŋ/",
+      "pos": "n.",
+      "cn": "會議",
+      "def": "A time when people talk about work together.",
+      "ex": "There is a long meeting at work.",
+      "exCn": "公司有一場很長的會議。"
+    },
+    {
+      "w": "notes",
+      "ipa": "/noʊts/",
+      "pos": "n.",
+      "cn": "筆記",
+      "def": "Short things you write down to help you remember.",
+      "ex": "He is reading his notes at the table.",
+      "exCn": "他正在餐桌邊看筆記。"
+    },
+    {
+      "w": "ready",
+      "ipa": "/ˈredi/",
+      "pos": "adj.",
+      "cn": "準備好的",
+      "def": "Prepared and able to do something.",
+      "ex": "He feels ready now.",
+      "exCn": "他現在覺得準備好了。"
+    },
+    {
+      "w": "clear",
+      "ipa": "/klɪr/",
+      "pos": "adj.",
+      "cn": "晴朗的、清楚的",
+      "def": "With no clouds; easy to see through.",
+      "ex": "The sky is clear and the air is cool.",
+      "exCn": "天空晴朗，空氣涼爽。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What time does Tom get up on Mondays?",
+      "qCn": "Tom星期一幾點起床？",
+      "opts": [
+        "A. Six o'clock",
+        "B. Six thirty",
+        "C. Seven o'clock",
+        "D. Seven thirty"
+      ],
+      "optsCn": [
+        "A. 六點",
+        "B. 六點半",
+        "C. 七點",
+        "D. 七點半"
+      ],
+      "ans": 1,
+      "expl": "Tom gets up at six thirty every Monday."
+    },
+    {
+      "q": "Tom ___ coffee with milk.",
+      "qCn": "Tom喜歡加牛奶的咖啡。（選出正確的動詞形式）",
+      "opts": [
+        "A. is liking",
+        "B. likes",
+        "C. like",
+        "D. liking"
+      ],
+      "ans": 1,
+      "expl": "like 是講「感覺」的狀態動詞，不加 -ing，主詞是Tom（三單）所以用 likes。"
+    },
+    {
+      "q": "Why does Tom want a big breakfast?",
+      "qCn": "Tom為什麼想吃豐盛的早餐？",
+      "opts": [
+        "A. He is very hungry",
+        "B. There is a long meeting at work",
+        "C. It is his birthday",
+        "D. Amy is coming for breakfast"
+      ],
+      "optsCn": [
+        "A. 他非常餓",
+        "B. 公司有一場很長的會議",
+        "C. 今天是他生日",
+        "D. Amy要來吃早餐"
+      ],
+      "ans": 1,
+      "expl": "He wants a big breakfast today. There is a long meeting at work."
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "He likes coffee with milk.",
+      "b2": "He prefers his coffee with milk rather than black.",
+      "note": "prefer A rather than B 能說出「兩個裡面更喜歡哪一個」，比 like 更精確。"
+    },
+    {
+      "b1": "He knows his boss will ask many questions.",
+      "b2": "He expects a lot of questions from his boss.",
+      "note": "expect 一個字就表達「預期會發生」，句子更短、更自然。"
+    }
+  ]
+},
+
+{
+  "id": "d20260824b1",
+  "date": "2026-08-24",
+  "level": "B1",
+  "topic": "日常作息",
+  "words": 130,
+  "kind": "orig",
+  "title": "Amy's New Morning Routine",
+  "titleCn": "Amy 的新晨間作息",
+  "focus": "現在完成式（has changed / has finished）描述「改變到現在仍有效」；because / so / but 連接前因後果",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Amy搬家之後改變了整套晨間作息。注意文章怎麼用現在完成式 has changed、has finished 講「已經改變、而且到現在都是這樣」，再用 because 和 so 把原因和結果串起來。",
+  "paras": [
+    {
+      "en": "Amy moved to a new apartment last month. Her old place was near the office, but the new one is thirty minutes away. Now her mornings are busier than before.",
+      "cn": "Amy上個月搬進新公寓。舊家離公司很近，但新家要三十分鐘的路程。現在她的早晨比以前忙碌。"
+    },
+    {
+      "en": "She has changed her routine because of the longer trip. She gets up at six, not seven. She prepares her clothes and her bag the night before, so she saves time in the morning.",
+      "cn": "因為通勤變長，她改變了作息。她現在六點起床，而不是七點。她前一天晚上就把衣服和包包準備好，所以早上省下不少時間。"
+    },
+    {
+      "en": "At first the change was hard. She felt tired in the afternoon and drank too much coffee. But after two weeks, her body got used to the new schedule.",
+      "cn": "一開始這個改變很辛苦。她下午覺得累，咖啡也喝太多。但兩個星期之後，身體就習慣了新的時間表。"
+    },
+    {
+      "en": "Now Amy thinks the early start is a good thing. The office is quiet when she arrives, so she finishes her hardest work before nine. She has already finished today's report, and it is only eight thirty.",
+      "cn": "現在Amy覺得早起是件好事。她到公司時辦公室很安靜，所以九點前就能做完最難的工作。她已經寫完今天的報告了，現在才八點半。"
+    }
+  ],
+  "target": [
+    {
+      "w": "routine",
+      "ipa": "/ruːˈtiːn/",
+      "pos": "n.",
+      "cn": "例行作息、固定流程",
+      "def": "The things you do in the same order every day.",
+      "ex": "She has changed her routine because of the longer trip.",
+      "exCn": "因為通勤變長，她改變了作息。"
+    },
+    {
+      "w": "prepare",
+      "ipa": "/prɪˈper/",
+      "pos": "v.",
+      "cn": "準備",
+      "def": "To make something ready before you need it.",
+      "ex": "She prepares her clothes and her bag the night before.",
+      "exCn": "她前一天晚上就把衣服和包包準備好。"
+    },
+    {
+      "w": "schedule",
+      "ipa": "/ˈskedʒuːl/",
+      "pos": "n.",
+      "cn": "時間表、行程",
+      "def": "A plan of times for doing things.",
+      "ex": "Her body got used to the new schedule.",
+      "exCn": "她的身體習慣了新的時間表。"
+    },
+    {
+      "w": "get used to",
+      "ipa": "/ɡet juːst tuː/",
+      "pos": "phr.",
+      "cn": "習慣（某事）",
+      "def": "To become comfortable with something new.",
+      "ex": "After two weeks, her body got used to the new schedule.",
+      "exCn": "兩個星期之後，身體就習慣了新的時間表。"
+    },
+    {
+      "w": "quiet",
+      "ipa": "/ˈkwaɪət/",
+      "pos": "adj.",
+      "cn": "安靜的",
+      "def": "With little or no noise.",
+      "ex": "The office is quiet when she arrives.",
+      "exCn": "她到公司時辦公室很安靜。"
+    },
+    {
+      "w": "already",
+      "ipa": "/ɔːlˈredi/",
+      "pos": "adv.",
+      "cn": "已經",
+      "def": "Before now, or earlier than expected.",
+      "ex": "She has already finished today's report.",
+      "exCn": "她已經寫完今天的報告了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why are Amy's mornings busier now?",
+      "qCn": "為什麼Amy現在的早晨比較忙？",
+      "opts": [
+        "A. She has a new job",
+        "B. Her new apartment is farther from the office",
+        "C. She drinks too much coffee",
+        "D. Her meetings start earlier"
+      ],
+      "optsCn": [
+        "A. 她換了新工作",
+        "B. 新公寓離公司比較遠",
+        "C. 她咖啡喝太多",
+        "D. 她的會議提早開始"
+      ],
+      "ans": 1,
+      "expl": "Her old place was near the office, but the new one is thirty minutes away."
+    },
+    {
+      "q": "She ___ already ___ today's report.",
+      "qCn": "她已經寫完今天的報告了。（選出正確的動詞形式）",
+      "opts": [
+        "A. has / finished",
+        "B. have / finished",
+        "C. is / finishing",
+        "D. was / finished"
+      ],
+      "ans": 0,
+      "expl": "already 常搭配現在完成式，主詞是she（三單）用 has + 過去分詞 finished。"
+    },
+    {
+      "q": "What does Amy do the night before?",
+      "qCn": "Amy前一天晚上會做什麼？",
+      "opts": [
+        "A. She writes her report",
+        "B. She prepares her clothes and her bag",
+        "C. She goes to bed at six",
+        "D. She takes a taxi home"
+      ],
+      "optsCn": [
+        "A. 她寫報告",
+        "B. 她把衣服和包包準備好",
+        "C. 她六點就睡覺",
+        "D. 她搭計程車回家"
+      ],
+      "ans": 1,
+      "expl": "She prepares her clothes and her bag the night before, so she saves time in the morning."
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "She gets up at six, not seven.",
+      "b2": "She has moved her alarm an hour earlier.",
+      "note": "用現在完成式 has moved 點出「這個改變到現在還持續有效」，比只講事實多一層時間感。"
+    },
+    {
+      "b1": "The office is quiet when she arrives.",
+      "b2": "By the time she arrives, hardly anyone is in yet.",
+      "note": "by the time＋hardly anyone 讓句子更有畫面，也更接近母語者的口語。"
+    }
+  ]
+},
+
+{
+  "id": "d20260824b1p",
+  "date": "2026-08-24",
+  "level": "B1+",
+  "topic": "職場與面試",
+  "words": 174,
+  "kind": "orig",
+  "title": "On the Other Side of the Table",
+  "titleCn": "坐到面試桌的另一邊",
+  "focus": "被動語態（was invited / is reviewed / are asked）描述公司流程；關係子句 that / which 補充說明",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "敘述者第一次當面試官，用一連串被動語態介紹公司的徵才流程——注意「流程」當主角時，動作的執行者常常不重要，這正是被動語態最自然的使用場景。也留意 that / which 帶出的關係子句。",
+  "paras": [
+    {
+      "en": "Last week I was invited to help with interviews at our factory. Two engineers will be hired for the quality team, and my manager wanted a second opinion. It was the first time I sat on the other side of the table.",
+      "cn": "上星期我受邀協助工廠的面試。品保團隊要招聘兩位工程師，而主管想要多一個人的意見。這是我第一次坐到面試桌的另一邊。"
+    },
+    {
+      "en": "Our process has been changed a lot in recent years. In the past, candidates were chosen mainly by their diplomas. Now every application is reviewed by two people, and the names of the schools are hidden, so the reviewers only see skills and experience.",
+      "cn": "近年來我們的流程改了很多。以前，應徵者主要是看文憑來挑選的。現在每一份履歷都由兩個人審查，而且學校名稱會被遮住，所以審查的人只看得到技能和經歷。"
+    },
+    {
+      "en": "The interview itself has three parts. First, candidates are asked to describe a real problem that they solved. Then they are given a small task, which must be finished in thirty minutes. Finally, they meet the team that they will work with.",
+      "cn": "面試本身分成三個部分。首先，應徵者要描述一個他們實際解決過的問題。接著會拿到一個小任務，必須在三十分鐘內完成。最後，他們會見到未來一起工作的團隊。"
+    },
+    {
+      "en": "I liked the new system more than I expected. A quiet candidate who was almost rejected last year is now one of our best inspectors. When people are judged by what they can do, the company finds workers who are often missed by the old way.",
+      "cn": "我比預期中更喜歡這套新制度。去年一位差點被刷掉的安靜應徵者，現在是我們最優秀的檢驗員之一。當人是用「能做什麼」來評斷時，公司就能找到那些常被舊方法漏掉的人才。"
+    }
+  ],
+  "target": [
+    {
+      "w": "candidate",
+      "ipa": "/ˈkændɪdət/",
+      "pos": "n.",
+      "cn": "應徵者、候選人",
+      "def": "A person who applies for a job or position.",
+      "ex": "In the past, candidates were chosen mainly by their diplomas.",
+      "exCn": "以前，應徵者主要是看文憑來挑選的。"
+    },
+    {
+      "w": "hire",
+      "ipa": "/haɪr/",
+      "pos": "v.",
+      "cn": "聘用、僱用",
+      "def": "To give someone a job.",
+      "ex": "Two engineers will be hired for the quality team.",
+      "exCn": "品保團隊要招聘兩位工程師。"
+    },
+    {
+      "w": "review",
+      "ipa": "/rɪˈvjuː/",
+      "pos": "v.",
+      "cn": "審查、檢視",
+      "def": "To look at something carefully and judge it.",
+      "ex": "Now every application is reviewed by two people.",
+      "exCn": "現在每一份履歷都由兩個人審查。"
+    },
+    {
+      "w": "hidden",
+      "ipa": "/ˈhɪdn/",
+      "pos": "adj.",
+      "cn": "被隱藏的、被遮住的",
+      "def": "Kept out of sight so that people cannot see it.",
+      "ex": "The names of the schools are hidden.",
+      "exCn": "學校名稱會被遮住。"
+    },
+    {
+      "w": "task",
+      "ipa": "/tæsk/",
+      "pos": "n.",
+      "cn": "任務、工作項目",
+      "def": "A piece of work that must be done.",
+      "ex": "They are given a small task, which must be finished in thirty minutes.",
+      "exCn": "他們會拿到一個小任務，必須在三十分鐘內完成。"
+    },
+    {
+      "w": "reject",
+      "ipa": "/rɪˈdʒekt/",
+      "pos": "v.",
+      "cn": "拒絕、刷掉",
+      "def": "To say no to someone or something; not to accept.",
+      "ex": "A quiet candidate who was almost rejected last year is now one of our best inspectors.",
+      "exCn": "去年一位差點被刷掉的安靜應徵者，現在是我們最優秀的檢驗員之一。"
+    },
+    {
+      "w": "inspector",
+      "ipa": "/ɪnˈspektər/",
+      "pos": "n.",
+      "cn": "檢驗員",
+      "def": "A person whose job is to check that things are correct or good enough.",
+      "ex": "She is now one of our best inspectors.",
+      "exCn": "她現在是我們最優秀的檢驗員之一。"
+    },
+    {
+      "w": "judge",
+      "ipa": "/dʒʌdʒ/",
+      "pos": "v.",
+      "cn": "評斷、判斷",
+      "def": "To form an opinion about someone or something after thinking carefully.",
+      "ex": "When people are judged by what they can do, the company finds better workers.",
+      "exCn": "當人是用「能做什麼」來評斷時，公司就能找到更好的人才。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What was new for the writer last week?",
+      "qCn": "上星期對敘述者來說，什麼事情是全新的體驗？",
+      "opts": [
+        "A. Applying for a new job",
+        "B. Sitting on the interviewer's side for the first time",
+        "C. Moving to a new factory",
+        "D. Taking a thirty-minute test"
+      ],
+      "optsCn": [
+        "A. 應徵新工作",
+        "B. 第一次坐在面試官那一邊",
+        "C. 調到新的工廠",
+        "D. 參加三十分鐘的測驗"
+      ],
+      "ans": 1,
+      "expl": "It was the first time I sat on the other side of the table."
+    },
+    {
+      "q": "How were candidates chosen in the past?",
+      "qCn": "以前應徵者是怎麼被挑選的？",
+      "opts": [
+        "A. Mainly by their diplomas",
+        "B. By a thirty-minute task",
+        "C. By meeting the team",
+        "D. By two reviewers"
+      ],
+      "optsCn": [
+        "A. 主要看文憑",
+        "B. 用三十分鐘的任務",
+        "C. 由團隊面談決定",
+        "D. 由兩位審查者決定"
+      ],
+      "ans": 0,
+      "expl": "In the past, candidates were chosen mainly by their diplomas."
+    },
+    {
+      "q": "Every application ___ by two people now.",
+      "qCn": "現在每一份履歷都由兩個人審查。（選出正確的動詞形式）",
+      "opts": [
+        "A. reviews",
+        "B. is reviewed",
+        "C. is reviewing",
+        "D. reviewed"
+      ],
+      "ans": 1,
+      "expl": "主詞 application 是「被審查」的對象，用被動語態 is reviewed。"
+    },
+    {
+      "q": "What happened to the quiet candidate?",
+      "qCn": "那位安靜的應徵者後來怎麼了？",
+      "opts": [
+        "A. She was rejected and left",
+        "B. She was almost rejected, but is now one of the best inspectors",
+        "C. She became the manager",
+        "D. She failed the thirty-minute task"
+      ],
+      "optsCn": [
+        "A. 她被刷掉離開了",
+        "B. 她差點被刷掉，但現在是最優秀的檢驗員之一",
+        "C. 她成為主管",
+        "D. 她三十分鐘的任務沒有過"
+      ],
+      "ans": 1,
+      "expl": "A quiet candidate who was almost rejected last year is now one of our best inspectors."
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Now every application is reviewed by two people.",
+      "b2": "Every application now goes through a two-person review.",
+      "note": "把被動句改成以「流程」當主詞的說法（go through a review），是報告與簡報常見的高階寫法。"
+    },
+    {
+      "b1": "They are given a small task, which must be finished in thirty minutes.",
+      "b2": "They are set a thirty-minute practical task.",
+      "note": "set someone a task 是更道地的職場動詞搭配，把時間限制放進形容詞（thirty-minute）句子更精簡。"
+    }
+  ]
+},
+
+{
+  "id": "d20260824b2",
+  "date": "2026-08-24",
+  "level": "B2",
+  "topic": "新聞·職場與面試",
+  "words": 268,
+  "kind": "news",
+  "title": "Hired for Playing Video Games",
+  "titleCn": "打電動也能被錄取",
+  "focus": "論說文中的狀態動詞（demand, mean, sound, care）一律用現在簡單式，陳述不隨時間改變的道理",
+  "source": "改寫自 Taipei Times 社論（2026/08/21）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://www.taipeitimes.com/News/editorials/archives/2026/08/21/2003862851",
+  "intro": "美國航管局把「打電動」當成正式的錄取條件之一，台灣的社論作者認為這正是徵才方式該有的轉變。讀的時候注意論說文裡的狀態動詞——demands、means、sounds、cares——全部用現在簡單式，因為它們講的是不隨時間改變的道理，不是正在發生的動作。",
+  "paras": [
+    {
+      "en": "Would you put video games on your resume? In the United States, that idea has stopped sounding strange. The Federal Aviation Administration launched a recruitment program in April, and within months it had hired more than two thousand people who play video games to train as air traffic controllers. According to the Secretary of Transportation, the program has already reached more than ninety percent of its annual recruitment target.",
+      "cn": "你會把電動遊戲寫進履歷嗎？在美國，這個想法已經不再顯得奇怪。美國聯邦航空總署四月啟動了一項徵才計畫，短短幾個月內就錄取了兩千多名玩電動的人，培訓他們成為飛航管制員。據美國運輸部長表示，這項計畫已達成年度徵才目標的九成以上。"
+    },
+    {
+      "en": "The logic behind the program is simple. Air traffic control demands fast decisions, steady attention, and calm thinking under pressure, and these are exactly the abilities that serious gamers practice for thousands of hours. Instead of asking where candidates studied, the agency asked what their hobby had trained them to do.",
+      "cn": "這項計畫背後的邏輯很簡單。飛航管制需要快速決策、穩定的專注力，以及高壓下的冷靜思考——而這些正是認真的玩家花上千小時反覆練習的能力。與其問應徵者在哪裡唸書，航空總署問的是：你的嗜好把你訓練成能做什麼？"
+    },
+    {
+      "en": "A recent editorial in the Taipei Times argues that Taiwan should learn from this shift. In May, the Ministry of Digital Affairs upgraded its guidelines for accrediting AI talent, adding new competencies such as AI governance literacy and the ability to work with AI tools. The direction is clear: instead of collecting courses and certificates, companies now want people who can solve the problems that industry actually faces.",
+      "cn": "《台北時報》最近一篇社論主張，台灣應該向這個轉變學習。五月，數位發展部把AI人才認證指引升級，新增了「AI治理素養」與「與AI工具協作」等能力項目。方向很清楚：企業要的不再是收集課程與證書的人，而是能解決產業實際面臨問題的人。"
+    },
+    {
+      "en": "The editorial suggests that employers, including Taiwan's public sector, should give more weight to work samples, simulated tasks, and digital portfolios, and less to the name of a candidate's university. What a person has actually built and solved often means more than the field printed on a diploma. For job seekers, the message sounds encouraging but demanding at the same time: your next interview may care less about where you come from, and much more about what you can show.",
+      "cn": "社論建議，包括台灣公部門在內的雇主，應該把更多權重放在工作實例、模擬任務與數位作品集上，而不是應徵者唸的是哪一所大學。一個人實際做出過什麼、解決過什麼，往往比文憑上印的科系更有意義。對求職者來說，這個訊息既鼓舞人心又充滿挑戰：你的下一場面試，可能不太在乎你從哪裡來，而更在乎你能拿出什麼。"
+    }
+  ],
+  "target": [
+    {
+      "w": "resume",
+      "ipa": "/ˈrezəmeɪ/",
+      "pos": "n.",
+      "cn": "履歷",
+      "def": "A short written record of your education and work experience, used when applying for jobs.",
+      "ex": "Would you put video games on your resume?",
+      "exCn": "你會把電動遊戲寫進履歷嗎？"
+    },
+    {
+      "w": "recruitment",
+      "ipa": "/rɪˈkruːtmənt/",
+      "pos": "n.",
+      "cn": "徵才、招募",
+      "def": "The process of finding new people to join a company or organization.",
+      "ex": "The Federal Aviation Administration launched a recruitment program in April.",
+      "exCn": "美國聯邦航空總署四月啟動了一項徵才計畫。"
+    },
+    {
+      "w": "target",
+      "ipa": "/ˈtɑːrɡɪt/",
+      "pos": "n.",
+      "cn": "目標",
+      "def": "A result that you try to achieve.",
+      "ex": "The program has already reached more than ninety percent of its annual recruitment target.",
+      "exCn": "這項計畫已達成年度徵才目標的九成以上。"
+    },
+    {
+      "w": "steady",
+      "ipa": "/ˈstedi/",
+      "pos": "adj.",
+      "cn": "穩定的",
+      "def": "Not changing; staying at the same level.",
+      "ex": "Air traffic control demands fast decisions and steady attention.",
+      "exCn": "飛航管制需要快速決策和穩定的專注力。"
+    },
+    {
+      "w": "under pressure",
+      "ipa": "/ˈʌndər ˈpreʃər/",
+      "pos": "phr.",
+      "cn": "在壓力下",
+      "def": "In a situation where you must act quickly or carefully while feeling stress.",
+      "ex": "The job demands calm thinking under pressure.",
+      "exCn": "這份工作需要高壓下的冷靜思考。"
+    },
+    {
+      "w": "competency",
+      "ipa": "/ˈkɑːmpɪtənsi/",
+      "pos": "n.",
+      "cn": "能力項目、職能",
+      "def": "A skill that you need to do a job well.",
+      "ex": "The ministry added new competencies such as AI governance literacy.",
+      "exCn": "數位發展部新增了「AI治理素養」等能力項目。"
+    },
+    {
+      "w": "certificate",
+      "ipa": "/sərˈtɪfɪkət/",
+      "pos": "n.",
+      "cn": "證書",
+      "def": "An official paper that shows you have finished a course or passed a test.",
+      "ex": "Companies want problem solvers, not people who only collect certificates.",
+      "exCn": "企業要的是能解決問題的人，而不是只會收集證書的人。"
+    },
+    {
+      "w": "portfolio",
+      "ipa": "/pɔːrtˈfoʊlioʊ/",
+      "pos": "n.",
+      "cn": "作品集",
+      "def": "A collection of your work that shows what you can do.",
+      "ex": "Employers should give more weight to work samples and digital portfolios.",
+      "exCn": "雇主應該把更多權重放在工作實例與數位作品集上。"
+    },
+    {
+      "w": "diploma",
+      "ipa": "/dɪˈploʊmə/",
+      "pos": "n.",
+      "cn": "文憑",
+      "def": "An official paper showing that you have finished a school or university program.",
+      "ex": "What a person has built often means more than the field printed on a diploma.",
+      "exCn": "一個人實際做出過什麼，往往比文憑上印的科系更有意義。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did the Federal Aviation Administration do?",
+      "qCn": "美國聯邦航空總署做了什麼？",
+      "opts": [
+        "A. It banned video games at work",
+        "B. It hired more than two thousand gamers to train as air traffic controllers",
+        "C. It closed its recruitment program in April",
+        "D. It moved its offices to Taiwan"
+      ],
+      "optsCn": [
+        "A. 禁止上班玩電動",
+        "B. 錄取兩千多名玩家培訓為飛航管制員",
+        "C. 四月結束了徵才計畫",
+        "D. 把辦公室搬到台灣"
+      ],
+      "ans": 1,
+      "expl": "Within months it had hired more than two thousand people who play video games to train as air traffic controllers."
+    },
+    {
+      "q": "Why does the program make sense, according to the article?",
+      "qCn": "根據文章，這項計畫為什麼合理？",
+      "opts": [
+        "A. Gamers accept lower salaries",
+        "B. Video games are popular in the US",
+        "C. Serious gamers practice fast decisions and calm thinking under pressure",
+        "D. The agency could not find university graduates"
+      ],
+      "optsCn": [
+        "A. 玩家願意接受較低的薪水",
+        "B. 電動遊戲在美國很流行",
+        "C. 認真的玩家長期練習快速決策與高壓下的冷靜思考",
+        "D. 航空總署找不到大學畢業生"
+      ],
+      "ans": 2,
+      "expl": "These are exactly the abilities that serious gamers practice for thousands of hours."
+    },
+    {
+      "q": "What did Taiwan's Ministry of Digital Affairs do in May?",
+      "qCn": "台灣數位發展部五月做了什麼？",
+      "opts": [
+        "A. It started hiring gamers",
+        "B. It upgraded its AI talent guidelines and added new competencies",
+        "C. It cancelled all certificates",
+        "D. It opened a new university"
+      ],
+      "optsCn": [
+        "A. 開始招募電玩玩家",
+        "B. 升級AI人才指引並新增能力項目",
+        "C. 取消所有證書",
+        "D. 成立一所新大學"
+      ],
+      "ans": 1,
+      "expl": "In May, the Ministry of Digital Affairs upgraded its guidelines for accrediting AI talent, adding new competencies."
+    },
+    {
+      "q": "What a person has actually built often ___ more than the field on a diploma.",
+      "qCn": "一個人實際做出過什麼，往往比文憑上的科系更有意義。（選出正確的動詞形式）",
+      "opts": [
+        "A. means",
+        "B. is meaning",
+        "C. mean",
+        "D. meaning"
+      ],
+      "ans": 0,
+      "expl": "mean 是狀態動詞，陳述不隨時間改變的道理時用現在簡單式；主詞是 what 子句（單數）所以用 means。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Games can teach useful skills.",
+      "b2": "The agency asked what their hobby had trained them to do.",
+      "note": "把「學到技能」具體化成 what one's hobby had trained them to do 的名詞子句，論點立刻精準有力。"
+    },
+    {
+      "b1": "Companies should look at real work, not only diplomas.",
+      "b2": "Employers should give more weight to work samples than to the name of a university.",
+      "note": "give more weight to A than to B 是評論文章常用的比較句式，比 look at 更正式、更可量化。"
+    }
+  ]
+},
+
 
 {
   id:"d20260821a2", date:"2026-08-21", level:"A2", topic:"交通", words:102, kind:"orig",
@@ -608,6 +1293,602 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260824a2",
+  "date": "2026-08-24",
+  "unitNo": 4,
+  "level": "A2",
+  "title": "Like, Want, Know — Verbs with No -ing",
+  "titleCn": "like、want、know——不加 -ing 的動詞",
+  "srcDays": [],
+  "summary": "有一群動詞講的是「感覺」和「想法」，不是動作——like（喜歡）、want（想要）、know（知道）。這些動詞永遠用原形（第三人稱加s），就算是「現在」也不加 -ing。",
+  "sections": [
+    {
+      "h": "兩種動詞",
+      "table": {
+        "head": [
+          "",
+          "動作動詞",
+          "感覺・想法動詞（狀態動詞）"
+        ],
+        "rows": [
+          [
+            "例子",
+            "eat, run, make, read",
+            "like, want, know, need, love"
+          ],
+          [
+            "講現在",
+            "He is making eggs.（正在做）",
+            "He likes coffee.（不加 -ing）"
+          ],
+          [
+            "為什麼",
+            "動作有開始有結束",
+            "感覺一直都在，不是「正在做」的動作"
+          ]
+        ]
+      }
+    },
+    {
+      "h": "最常用的狀態動詞",
+      "bullets": [
+        "like / love / hate — 喜歡、愛、討厭",
+        "want / need — 想要、需要",
+        "know / understand — 知道、了解",
+        "have（= 擁有的時候）— He has a car. 不能說 He is having a car."
+      ],
+      "examples": [
+        {
+          "en": "Tom likes coffee with milk.",
+          "cn": "Tom喜歡加牛奶的咖啡。",
+          "note": "感覺 → 不加 -ing"
+        },
+        {
+          "en": "He wants a big breakfast today.",
+          "cn": "他今天想吃豐盛的早餐。",
+          "note": "就算加了 today 也一樣用原形"
+        },
+        {
+          "en": "He is making eggs now.",
+          "cn": "他現在正在煎蛋。",
+          "note": "make 是動作 → 可以加 -ing"
+        }
+      ]
+    },
+    {
+      "h": "疑問句也一樣",
+      "bullets": [
+        "問感覺：Do you like coffee?（不能說 Are you liking coffee?）",
+        "問動作：Are you making coffee?（正在做的動作才用 Are you -ing）"
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I am liking this song.",
+      "good": "I like this song.",
+      "why": "like 是感覺，不是動作，永遠不加 -ing——就算是「現在正喜歡」也一樣。"
+    },
+    {
+      "bad": "She is wanting a new phone.",
+      "good": "She wants a new phone.",
+      "why": "want 是狀態動詞。中文的「正想要」會讓人想加 -ing，但英文不行。"
+    },
+    {
+      "bad": "I am knowing the answer.",
+      "good": "I know the answer.",
+      "why": "know 講的是「知道」這個狀態，沒有「正在知道」這種動作。"
+    },
+    {
+      "bad": "He is having a car.",
+      "good": "He has a car.",
+      "why": "have 當「擁有」講的時候是狀態動詞，用 has，不能加 -ing。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Tom ___ coffee with milk.",
+      "qCn": "Tom喜歡加牛奶的咖啡。",
+      "opts": [
+        "is liking",
+        "likes",
+        "like",
+        "liking"
+      ],
+      "ans": 1,
+      "expl": "like 是狀態動詞不加 -ing，主詞Tom是三單，動詞加s：likes。"
+    },
+    {
+      "q": "I ___ the answer to this question.",
+      "qCn": "我知道這個問題的答案。",
+      "opts": [
+        "am knowing",
+        "knows",
+        "know",
+        "am know"
+      ],
+      "ans": 2,
+      "expl": "know 是狀態動詞，主詞是I，用原形 know。"
+    },
+    {
+      "q": "Look! He ___ breakfast in the kitchen.",
+      "qCn": "你看！他正在廚房做早餐。",
+      "opts": [
+        "makes",
+        "is making",
+        "make",
+        "is make"
+      ],
+      "ans": 1,
+      "expl": "make 是動作動詞，Look! 表示現在正在發生，用現在進行式 is making。"
+    },
+    {
+      "q": "___ you ___ a bigger bag?",
+      "qCn": "你需要一個更大的包包嗎？",
+      "opts": [
+        "Are / needing",
+        "Do / need",
+        "Does / need",
+        "Are / need"
+      ],
+      "ans": 1,
+      "expl": "need 是狀態動詞，疑問句用 Do you need...?，不能用進行式。"
+    }
+  ]
+},
+
+{
+  "id": "dg20260824b1",
+  "date": "2026-08-24",
+  "unitNo": 4,
+  "level": "B1",
+  "title": "One Verb, Two Meanings: have, think, see",
+  "titleCn": "一字兩用：have、think、see 什麼時候能加 -ing",
+  "srcDays": [],
+  "summary": "have、think、see 這幾個動詞有兩張臉：講「狀態」的時候不加 -ing，講「動作」的時候可以加。關鍵不是背規則，而是問自己：這句話講的是想法感覺，還是正在做的事？",
+  "sections": [
+    {
+      "h": "同一個動詞、兩種意思",
+      "table": {
+        "head": [
+          "動詞",
+          "狀態（不加 -ing）",
+          "動作（可加 -ing）"
+        ],
+        "rows": [
+          [
+            "have",
+            "She has a car.（擁有）",
+            "She is having lunch.（吃 = 動作）"
+          ],
+          [
+            "think",
+            "I think it's a good plan.（認為）",
+            "I'm thinking about the plan.（正在思考）"
+          ],
+          [
+            "see",
+            "I see what you mean.（明白）",
+            "I'm seeing the doctor at three.（會面）"
+          ]
+        ]
+      }
+    },
+    {
+      "h": "判斷的方法：問「能不能暫停」",
+      "body": "動作可以暫停再繼續——吃午餐吃到一半可以停。狀態不能暫停——你不能「擁有汽車到一半停一下」。能暫停的，就能加 -ing。",
+      "examples": [
+        {
+          "en": "I think this schedule is better.",
+          "cn": "我認為這個時間表比較好。",
+          "note": "think = 認為（意見），狀態"
+        },
+        {
+          "en": "I'm thinking about changing my schedule.",
+          "cn": "我正在考慮改變我的作息。",
+          "note": "think about = 思考中，動作"
+        },
+        {
+          "en": "Amy is having coffee with Ben right now.",
+          "cn": "Amy現在正在和Ben喝咖啡。",
+          "note": "have coffee = 喝，動作"
+        }
+      ]
+    },
+    {
+      "h": "have 的常見動作片語",
+      "bullets": [
+        "have breakfast / lunch / dinner — 吃飯（動作，可加 -ing）",
+        "have a shower / a break / a meeting — 洗澡、休息、開會（動作）",
+        "have a car / a brother / time — 擁有、有（狀態，不加 -ing）"
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I am thinking this is a good idea.",
+      "good": "I think this is a good idea.",
+      "why": "表達「意見、認為」時 think 是狀態動詞。I'm thinking 後面要接 about/of＋正在考慮的事，不能直接接意見。"
+    },
+    {
+      "bad": "She is having two brothers.",
+      "good": "She has two brothers.",
+      "why": "have 表示「擁有、有」的時候是狀態；只有 have lunch、have a shower 這類「做的事」才能加 -ing。"
+    },
+    {
+      "bad": "I am seeing your point.",
+      "good": "I see your point.",
+      "why": "see 當「明白」講是狀態動詞；is seeing 是「跟某人會面／交往」的意思，整句意思會跑掉。"
+    },
+    {
+      "bad": "We are having a meeting every Monday.",
+      "good": "We have a meeting every Monday.",
+      "why": "have a meeting 雖然是動作，但 every Monday 是「習慣」，習慣用現在簡單式，不是進行式。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I ___ this new schedule is better than the old one.",
+      "qCn": "我認為這個新時間表比舊的好。",
+      "opts": [
+        "am thinking",
+        "think",
+        "thinks",
+        "am thought"
+      ],
+      "ans": 1,
+      "expl": "「認為」是意見，think 當狀態動詞用現在簡單式。"
+    },
+    {
+      "q": "Sorry, Amy can't answer the phone. She ___ lunch.",
+      "qCn": "抱歉，Amy不能接電話，她正在吃午餐。",
+      "opts": [
+        "has",
+        "is having",
+        "have",
+        "had"
+      ],
+      "ans": 1,
+      "expl": "have lunch 是「吃」這個動作，現在正在做，用 is having。"
+    },
+    {
+      "q": "I ___ what you mean, but I don't agree.",
+      "qCn": "我明白你的意思，但我不同意。",
+      "opts": [
+        "am seeing",
+        "see",
+        "sees",
+        "am seen"
+      ],
+      "ans": 1,
+      "expl": "see = 明白，是狀態動詞，用現在簡單式 see。"
+    },
+    {
+      "q": "I'm ___ about changing my morning routine.",
+      "qCn": "我正在考慮改變我的晨間作息。",
+      "opts": [
+        "think",
+        "thinks",
+        "thinking",
+        "thought"
+      ],
+      "ans": 2,
+      "expl": "「正在考慮」是進行中的動作，用 I'm thinking about + V-ing。"
+    }
+  ]
+},
+
+{
+  "id": "dg20260824b1p",
+  "date": "2026-08-24",
+  "unitNo": 4,
+  "level": "B1+",
+  "title": "Temporary or Typical? feel, look, and \"being\"",
+  "titleCn": "暫時還是平常？feel、look 與 be being 的細微差別",
+  "srcDays": [],
+  "summary": "進階版的狀態動詞：有些字加不加 -ing 意思都通，但語感不同——加 -ing 強調「暫時、只有現在」。最特別的是 be：You are quiet 講個性，You are being quiet 講「今天特別安靜」。",
+  "sections": [
+    {
+      "h": "加 -ing = 強調暫時",
+      "table": {
+        "head": [
+          "",
+          "平常・一直如此",
+          "暫時・只有現在"
+        ],
+        "rows": [
+          [
+            "feel",
+            "I feel tired every afternoon.（每天都這樣）",
+            "I'm feeling tired today.（只有今天）"
+          ],
+          [
+            "look",
+            "You look great in that jacket.（一般評論）",
+            "You're looking great these days!（最近這陣子）"
+          ],
+          [
+            "be",
+            "You are quiet.（個性內向）",
+            "You are being quiet today.（今天特別安靜，怪怪的）"
+          ]
+        ]
+      }
+    },
+    {
+      "h": "be being：講「行為」不講「個性」",
+      "body": "be + being + 形容詞是這個單元最容易被忽略的用法：它把形容詞從「個性」變成「現在的行為表現」。He is careful 是他一向謹慎；He is being careful 是他此刻刻意小心——可能平常並不是這樣。",
+      "examples": [
+        {
+          "en": "The new candidate is being very careful with her answers.",
+          "cn": "這位新應徵者回答得非常謹慎。",
+          "note": "此刻的表現，不代表個性"
+        },
+        {
+          "en": "Why are you being so polite? Did something happen?",
+          "cn": "你今天怎麼這麼客氣？發生什麼事了？",
+          "note": "暗示平常不是這樣，帶一點懷疑"
+        },
+        {
+          "en": "He is honest.",
+          "cn": "他是個誠實的人。",
+          "note": "個性，用一般的 be"
+        }
+      ]
+    },
+    {
+      "h": "feel 的特權",
+      "bullets": [
+        "問候身體狀況時，How do you feel? 和 How are you feeling? 兩句都對、意思幾乎一樣——feel 是少數兩種都通的狀態動詞",
+        "但講意見時只能用簡單式：I feel this plan is too risky.（不能說 I'm feeling this plan...）"
+      ]
+    },
+    {
+      "h": "taste / smell：主動測 vs 客觀是",
+      "bullets": [
+        "The soup tastes salty. — 湯「嘗起來」鹹（狀態：它本身如此）",
+        "The chef is tasting the soup. — 廚師「正在試」味道（動作：他主動去嘗）"
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "You are very quiet today.（想表達「今天怪怪的」）",
+      "good": "You are being very quiet today.",
+      "why": "You are quiet 聽起來像在評論個性；加 being 才能表達「只有今天這樣、平常不會」的暫時行為。"
+    },
+    {
+      "bad": "I'm feeling this schedule is too tight.",
+      "good": "I feel this schedule is too tight.",
+      "why": "feel 接「意見子句」時是狀態動詞，只能用簡單式；-ing 只用在身體感受（I'm feeling tired）。"
+    },
+    {
+      "bad": "The chef tastes the soup right now.",
+      "good": "The chef is tasting the soup right now.",
+      "why": "right now＋主動去嘗的動作要用進行式；tastes 是「湯本身嘗起來如何」的狀態用法。"
+    },
+    {
+      "bad": "He is being tall.",
+      "good": "He is tall.",
+      "why": "be being 只能接「行為可以控制」的形容詞（careful, polite, quiet…）；身高不是行為，不能暫時一下。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The new inspector ___ very careful with every measurement today — maybe the manager is watching.",
+      "qCn": "這位新檢驗員今天每個量測都特別小心——也許是主管在看吧。",
+      "opts": [
+        "is",
+        "is being",
+        "be",
+        "was"
+      ],
+      "ans": 1,
+      "expl": "「今天特別小心（平常不一定）」是暫時行為，用 is being careful。"
+    },
+    {
+      "q": "How ___ today? Any better than yesterday?",
+      "qCn": "你今天感覺怎麼樣？有比昨天好一點嗎？",
+      "opts": [
+        "do you feeling",
+        "are you feeling",
+        "are you feel",
+        "you feel"
+      ],
+      "ans": 1,
+      "expl": "問身體狀況 How are you feeling? 正確；How do you feel? 也對，但選項A、C、D文法都錯。"
+    },
+    {
+      "q": "This coffee ___ strange. Did you change the beans?",
+      "qCn": "這杯咖啡喝起來怪怪的。你換豆子了嗎？",
+      "opts": [
+        "is tasting",
+        "tastes",
+        "taste",
+        "tasted"
+      ],
+      "ans": 1,
+      "expl": "「咖啡本身嘗起來如何」是狀態用法，用 tastes；is tasting 是「某人正在試喝」。"
+    },
+    {
+      "q": "Ben is usually loud, but he ___ very quiet in this meeting.",
+      "qCn": "Ben平常很大聲，但這場會議裡他特別安靜。",
+      "opts": [
+        "is",
+        "is being",
+        "be",
+        "been"
+      ],
+      "ans": 1,
+      "expl": "but 前後對比「平常 vs 此刻」，此刻的暫時行為用 is being quiet。"
+    }
+  ]
+},
+
+{
+  "id": "dg20260824b2",
+  "date": "2026-08-24",
+  "unitNo": 4,
+  "level": "B2",
+  "title": "\"I'm loving it\": Breaking the Rule on Purpose",
+  "titleCn": "「I'm loving it」——故意打破規則的語感",
+  "srcDays": [],
+  "summary": "B2 的重點不是背哪些動詞不能加 -ing，而是理解母語者什麼時候「故意」打破這條規則——廣告與口語用 I'm loving it 製造熱度與當下感，正式寫作與客氣請求則各有自己的一套選擇。",
+  "sections": [
+    {
+      "h": "三種語域、三種選擇",
+      "table": {
+        "head": [
+          "語域",
+          "慣用形式",
+          "效果"
+        ],
+        "rows": [
+          [
+            "正式書面（報告、論文）",
+            "狀態動詞一律簡單式：The data suggest…, This result means…",
+            "陳述不隨時間改變的事實，語氣客觀"
+          ],
+          [
+            "廣告與口語",
+            "刻意加 -ing：I'm loving it. / I'm missing you already.",
+            "把感覺講成「正在燃燒的動作」，熱烈、即時"
+          ],
+          [
+            "客氣的請求",
+            "進行式軟化語氣：I'm hoping you can help. / I was wondering if…",
+            "把請求講成「未定案的進行中」，留給對方拒絕的空間"
+          ]
+        ]
+      }
+    },
+    {
+      "h": "廣告為什麼要寫 I'm loving it",
+      "body": "文法書說 love 不加 -ing，但廣告偏要加——因為簡單式的 I love it 是恆常的事實陳述，冷靜而抽象；I'm loving it 把「愛」變成此刻正在發生、可以感覺到溫度的動作。這不是文法錯誤，是刻意選擇的修辭效果。同樣的手法也出現在口語：I'm loving this new schedule!（我最近愛死這個新作息了）強調的是「這陣子的新鮮感」，而不是永恆的偏好。",
+      "examples": [
+        {
+          "en": "I love my job.",
+          "cn": "我熱愛我的工作。",
+          "note": "恆常事實，中性"
+        },
+        {
+          "en": "I'm loving the new project so far.",
+          "cn": "目前為止我超喜歡這個新專案。",
+          "note": "this month／so far 的暫時熱度，口語"
+        },
+        {
+          "en": "The committee loves the proposal.",
+          "cn": "委員會很滿意這份提案。",
+          "note": "正式場合仍用簡單式"
+        }
+      ]
+    },
+    {
+      "h": "職場書信的軟化技巧",
+      "body": "進行式讓請求聽起來「還在進行、尚未定案」，因此比簡單式客氣。I hope you can reply by Friday 幾乎是通知；I'm hoping you can reply by Friday 則保留了商量的餘地。再退一步的 I was wondering if you could… 用過去進行式把姿態放到最低，是英文email裡最客氣的開場之一。",
+      "examples": [
+        {
+          "en": "I'm hoping we can reschedule the interview.",
+          "cn": "我在想我們是否能重新安排面試時間。",
+          "note": "比 I hope 委婉"
+        },
+        {
+          "en": "I was wondering if you could send the report again.",
+          "cn": "不知道您是否方便再寄一次報告？",
+          "note": "最客氣的請求開場"
+        }
+      ]
+    },
+    {
+      "h": "寫作上的底線",
+      "bullets": [
+        "履歷、報告、論文：狀態動詞一律簡單式——I'm knowing、We are believing 在任何語域都是錯的，know 和 believe 沒有「暫時加溫」的用法",
+        "能玩這個規則的只有一小群「感受類」動詞：love, like, enjoy, miss, hope, wonder",
+        "拿不準的時候用簡單式——打破規則要有明確的修辭理由，沒有理由的 -ing 只會像文法錯誤"
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I am knowing the test procedure very well.（求職面試中）",
+      "good": "I know the test procedure very well.",
+      "why": "know 沒有任何「暫時」用法，加 -ing 在所有語域都是錯的——這條規則不能玩。"
+    },
+    {
+      "bad": "We are believing this design is safer.（正式報告）",
+      "good": "We believe this design is safer.",
+      "why": "believe 同上；正式報告中的判斷動詞（believe, mean, suggest）一律簡單式，否則顯得不專業。"
+    },
+    {
+      "bad": "I hope you could send me the file.（想表達客氣）",
+      "good": "I was wondering if you could send me the file.",
+      "why": "hope 接 could 文法彆扭；要放低姿態，母語者用 I was wondering if you could… 這個固定句式。"
+    },
+    {
+      "bad": "The data is suggesting that the process is stable.（論文）",
+      "good": "The data suggest that the process is stable.",
+      "why": "學術寫作中 suggest、indicate、mean 用簡單式陳述「資料恆常顯示的事」；進行式會把結論講成暫時現象。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "McDonald's chose \"I'm ___ it\" instead of \"I ___ it\" for its slogan because the -ing form sounds more immediate and alive.",
+      "qCn": "麥當勞的標語選擇 I'm loving it 而不是 I love it，因為 -ing 聽起來更即時、更有溫度。",
+      "opts": [
+        "loving / love",
+        "love / loving",
+        "loved / love",
+        "love / loved"
+      ],
+      "ans": 0,
+      "expl": "廣告刻意用 I'm loving it 打破規則製造當下感；一般陳述才是 I love it。"
+    },
+    {
+      "q": "Which sentence is the MOST polite way to ask for a reschedule?",
+      "qCn": "哪一句是要求改期「最客氣」的說法？",
+      "opts": [
+        "Reschedule the interview.",
+        "I want to reschedule the interview.",
+        "I'm hoping we can reschedule the interview.",
+        "You must reschedule the interview."
+      ],
+      "optsCn": [
+        "A. 把面試改期。",
+        "B. 我想要改面試時間。",
+        "C. 我在想我們是否能重新安排面試時間。",
+        "D. 你必須改面試時間。"
+      ],
+      "ans": 2,
+      "expl": "I'm hoping 用進行式把請求講成「尚未定案」，是選項中最委婉的；A、D是命令，B是直接要求。"
+    },
+    {
+      "q": "In a formal report: \"The measurement results ___ that the new fixture is stable.\"",
+      "qCn": "正式報告：「量測結果顯示新治具是穩定的。」",
+      "opts": [
+        "are suggesting",
+        "suggest",
+        "suggests",
+        "are suggested"
+      ],
+      "ans": 1,
+      "expl": "學術與報告語域中 suggest 用簡單式陳述恆常結論；results 是複數，動詞不加s。"
+    },
+    {
+      "q": "\"I'm ___ this new morning schedule!\" — a natural, casual way to say the new routine feels great these days.",
+      "qCn": "「我最近愛死這個新作息了！」——口語中表達「這陣子特別喜歡」的自然說法。",
+      "opts": [
+        "love",
+        "loved",
+        "loving",
+        "loves"
+      ],
+      "ans": 2,
+      "expl": "口語中 I'm loving 強調「這陣子的暫時熱度」，是母語者刻意打破規則的道地用法。"
+    }
+  ]
+},
+
 
 {
   id:"dg20260821a2", date:"2026-08-21", unitNo:3,

@@ -15,6 +15,793 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週三／五更新） ========== */
 notes:[
 {
+  "id": "dl20260824a2",
+  "date": "2026-08-24",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Monday Breakfast at the Office",
+  "titleCn": "星期一辦公室的早餐",
+  "series": "本站自製聽力 · 日常作息主題",
+  "topic": "☕ 早晨作息",
+  "focus": "狀態動詞 like / want / know 用原形；正在做的動作用現在進行式（is making）",
+  "intro": "星期一早上，Tom在辦公室的茶水間遇到Amy。這一課的句子很短，重點是聽出兩種動詞：like、want、know 這些「感覺」動詞永遠不加 -ing，而 is making 這種「正在做」的動作才有 -ing。",
+  "tip": "第一次聽先抓「Tom早上做了什麼」，第二次注意聽 likes、want、know 這三個字——它們後面都沒有 -ing 的音。",
+  "pre": [
+    {
+      "w": "kitchen",
+      "ipa": "/ˈkɪtʃɪn/",
+      "cn": "廚房、茶水間",
+      "def": "A room where people make food or drinks."
+    },
+    {
+      "w": "smell",
+      "ipa": "/smel/",
+      "cn": "聞起來、氣味",
+      "def": "What your nose tells you about something."
+    },
+    {
+      "w": "fresh",
+      "ipa": "/freʃ/",
+      "cn": "新鮮的、剛做好的",
+      "def": "Just made; new and good."
+    },
+    {
+      "w": "hungry",
+      "ipa": "/ˈhʌŋɡri/",
+      "cn": "餓的",
+      "def": "Wanting to eat food."
+    },
+    {
+      "w": "early",
+      "ipa": "/ˈɜːrli/",
+      "cn": "早的、提早",
+      "def": "Before the usual time."
+    },
+    {
+      "w": "ready",
+      "ipa": "/ˈredi/",
+      "cn": "準備好的",
+      "def": "Prepared and able to do something."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Amy",
+      "en": "Good morning, Tom! Something smells good in the kitchen.",
+      "cn": "早安，Tom！茶水間有什麼東西好香。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I'm making fresh coffee. Do you want a cup?",
+      "cn": "我正在煮新鮮的咖啡。你要來一杯嗎？"
+    },
+    {
+      "sp": "Amy",
+      "en": "Yes, please! I know you make the best coffee here.",
+      "cn": "好，麻煩你！我知道你煮的咖啡是這裡最好喝的。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Thanks. I like coffee with milk. How about you?",
+      "cn": "謝啦。我喜歡加牛奶的咖啡。你呢？"
+    },
+    {
+      "sp": "Amy",
+      "en": "I like it black. No milk, no sugar.",
+      "cn": "我喜歡黑咖啡。不加牛奶，不加糖。"
+    },
+    {
+      "sp": "Tom",
+      "en": "You are here early today. It's only eight o'clock.",
+      "cn": "你今天很早到。現在才八點。"
+    },
+    {
+      "sp": "Amy",
+      "en": "I know. I get up at six now, so I arrive early.",
+      "cn": "對啊。我現在六點起床，所以到得早。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Six? That is very early! Are you tired?",
+      "cn": "六點？好早！你會累嗎？"
+    },
+    {
+      "sp": "Amy",
+      "en": "A little. But I want quiet time in the morning.",
+      "cn": "有一點。但我想要早上有安靜的時間。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That is a good idea. Oh, the coffee is ready!",
+      "cn": "好主意。喔，咖啡好了！"
+    },
+    {
+      "sp": "Amy",
+      "en": "Great! Thank you, Tom. Have a nice Monday!",
+      "cn": "太好了！謝謝你，Tom。星期一愉快！"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is Tom making in the kitchen?",
+      "qCn": "Tom正在茶水間做什麼？",
+      "opts": [
+        "A. Breakfast",
+        "B. Fresh coffee",
+        "C. Tea",
+        "D. Eggs"
+      ],
+      "optsCn": [
+        "A. 早餐",
+        "B. 新鮮的咖啡",
+        "C. 茶",
+        "D. 蛋"
+      ],
+      "ans": 1,
+      "expl": "I'm making fresh coffee."
+    },
+    {
+      "q": "How does Amy like her coffee?",
+      "qCn": "Amy喜歡怎麼樣的咖啡？",
+      "opts": [
+        "A. With milk",
+        "B. With sugar",
+        "C. Black, no milk and no sugar",
+        "D. With milk and sugar"
+      ],
+      "optsCn": [
+        "A. 加牛奶",
+        "B. 加糖",
+        "C. 黑咖啡，不加牛奶不加糖",
+        "D. 加牛奶和糖"
+      ],
+      "ans": 2,
+      "expl": "I like it black. No milk, no sugar."
+    },
+    {
+      "q": "Why does Amy arrive early now?",
+      "qCn": "Amy為什麼現在到得早？",
+      "opts": [
+        "A. She gets up at six",
+        "B. She takes a taxi",
+        "C. Her home is near the office",
+        "D. Tom drives her to work"
+      ],
+      "optsCn": [
+        "A. 她六點起床",
+        "B. 她搭計程車",
+        "C. 她家離公司近",
+        "D. Tom開車載她上班"
+      ],
+      "ans": 0,
+      "expl": "I get up at six now, so I arrive early."
+    },
+    {
+      "q": "Amy: \"I ___ quiet time in the morning.\"",
+      "qCn": "Amy說：「我想要早上有安靜的時間。」（選出正確的動詞形式）",
+      "opts": [
+        "am wanting",
+        "want",
+        "wants",
+        "wanting"
+      ],
+      "ans": 1,
+      "expl": "want 是狀態動詞不加 -ing，主詞是I，用原形 want。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260824b1",
+  "date": "2026-08-24",
+  "level": "B1",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Getting Used to Early Mornings",
+  "titleCn": "習慣早起的日子",
+  "series": "本站自製聽力 · 日常作息主題",
+  "topic": "⏰ 作息改變",
+  "focus": "現在完成式 have changed / has become 講「改變持續到現在」；think 表達意見時不加 -ing",
+  "intro": "Amy跟同事Ben聊她搬家後的新作息。注意她用現在完成式（I've changed, It has become）講「已經改變、現在還是這樣」的事，以及 I think 開頭的意見句——think 在這裡是狀態動詞，不加 -ing。",
+  "tip": "聽的時候抓兩層時間：過去發生的事（moved, was hard）用過去式，改變之後一直到現在的狀態（have changed）用現在完成式。",
+  "pre": [
+    {
+      "w": "move",
+      "ipa": "/muːv/",
+      "cn": "搬家",
+      "def": "To go to live in a different place."
+    },
+    {
+      "w": "commute",
+      "ipa": "/kəˈmjuːt/",
+      "cn": "通勤",
+      "def": "The trip between your home and your work."
+    },
+    {
+      "w": "completely",
+      "ipa": "/kəmˈpliːtli/",
+      "cn": "完全地",
+      "def": "Totally; in every way."
+    },
+    {
+      "w": "at first",
+      "ipa": "/æt fɜːrst/",
+      "cn": "起初",
+      "def": "In the beginning, before things changed."
+    },
+    {
+      "w": "focus",
+      "ipa": "/ˈfoʊkəs/",
+      "cn": "專注",
+      "def": "To give all your attention to something."
+    },
+    {
+      "w": "productive",
+      "ipa": "/prəˈdʌktɪv/",
+      "cn": "有效率的、多產的",
+      "def": "Able to finish a lot of work."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Ben",
+      "en": "Amy, you look different these days. More awake, maybe?",
+      "cn": "Amy，你最近看起來不太一樣。好像比較有精神？"
+    },
+    {
+      "sp": "Amy",
+      "en": "Ha! Maybe. I've changed my whole morning routine since I moved.",
+      "cn": "哈！也許吧。搬家之後我把整套晨間作息都改了。"
+    },
+    {
+      "sp": "Ben",
+      "en": "That's right, your commute is longer now. How far is it?",
+      "cn": "對喔，你現在通勤變長了。有多遠？"
+    },
+    {
+      "sp": "Amy",
+      "en": "Thirty minutes by bus. So I get up at six instead of seven.",
+      "cn": "搭公車三十分鐘。所以我六點起床，而不是七點。"
+    },
+    {
+      "sp": "Ben",
+      "en": "Six! I could never do that. Was it hard?",
+      "cn": "六點！我絕對做不到。會很辛苦嗎？"
+    },
+    {
+      "sp": "Amy",
+      "en": "At first, yes. I was tired every afternoon and drank too much coffee.",
+      "cn": "起初會。我每天下午都很累，咖啡也喝太多。"
+    },
+    {
+      "sp": "Ben",
+      "en": "And now?",
+      "cn": "那現在呢？"
+    },
+    {
+      "sp": "Amy",
+      "en": "Now my body has got used to it. I even wake up before my alarm.",
+      "cn": "現在身體已經習慣了。我甚至會在鬧鐘響之前醒來。"
+    },
+    {
+      "sp": "Ben",
+      "en": "So the early start has become a good thing?",
+      "cn": "所以早起反而變成好事了？"
+    },
+    {
+      "sp": "Amy",
+      "en": "I think so. The office is quiet before nine, so I can really focus.",
+      "cn": "我覺得是。九點前辦公室很安靜，所以我可以很專注。"
+    },
+    {
+      "sp": "Amy",
+      "en": "I've already finished my report today, and it's only eight thirty.",
+      "cn": "我今天的報告已經寫完了，現在才八點半。"
+    },
+    {
+      "sp": "Ben",
+      "en": "Wow. Maybe I should try it. You've become the most productive person here!",
+      "cn": "哇。也許我也該試試。你已經變成這裡最有效率的人了！"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Amy change her morning routine?",
+      "qCn": "Amy為什麼改變她的晨間作息？",
+      "opts": [
+        "A. Her doctor told her to",
+        "B. She moved and her commute is longer now",
+        "C. Her boss asked her to come early",
+        "D. She wanted to drink less coffee"
+      ],
+      "optsCn": [
+        "A. 醫生要她改",
+        "B. 她搬家了，通勤變長",
+        "C. 主管要她早點到",
+        "D. 她想少喝咖啡"
+      ],
+      "ans": 1,
+      "expl": "I've changed my whole morning routine since I moved. ... your commute is longer now."
+    },
+    {
+      "q": "How did Amy feel at first?",
+      "qCn": "起初Amy的感覺如何？",
+      "opts": [
+        "A. She was tired every afternoon",
+        "B. She felt great from day one",
+        "C. She was angry with Ben",
+        "D. She wanted to move again"
+      ],
+      "optsCn": [
+        "A. 她每天下午都很累",
+        "B. 她從第一天就覺得很棒",
+        "C. 她對Ben很生氣",
+        "D. 她想再搬一次家"
+      ],
+      "ans": 0,
+      "expl": "At first, yes. I was tired every afternoon and drank too much coffee."
+    },
+    {
+      "q": "Amy: \"My body ___ used to it.\"",
+      "qCn": "Amy說：「我的身體已經習慣了。」（選出正確的動詞形式）",
+      "opts": [
+        "has got",
+        "is getting",
+        "got",
+        "get"
+      ],
+      "ans": 0,
+      "expl": "「已經習慣、到現在還是」用現在完成式 has got used to。"
+    },
+    {
+      "q": "Why can Amy focus well in the morning?",
+      "qCn": "Amy為什麼早上能專注？",
+      "opts": [
+        "A. She drinks a lot of coffee",
+        "B. The office is quiet before nine",
+        "C. Ben helps her",
+        "D. She works from home"
+      ],
+      "optsCn": [
+        "A. 她喝很多咖啡",
+        "B. 九點前辦公室很安靜",
+        "C. Ben會幫她",
+        "D. 她在家工作"
+      ],
+      "ans": 1,
+      "expl": "The office is quiet before nine, so I can really focus."
+    },
+    {
+      "q": "What has Amy already finished today?",
+      "qCn": "Amy今天已經完成了什麼？",
+      "opts": [
+        "A. Her breakfast",
+        "B. Her report",
+        "C. Her meeting",
+        "D. Her commute plan"
+      ],
+      "optsCn": [
+        "A. 她的早餐",
+        "B. 她的報告",
+        "C. 她的會議",
+        "D. 她的通勤計畫"
+      ],
+      "ans": 1,
+      "expl": "I've already finished my report today, and it's only eight thirty."
+    }
+  ]
+},
+
+{
+  "id": "dl20260824b1p",
+  "date": "2026-08-24",
+  "level": "B1+",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Helping with the Interviews",
+  "titleCn": "第一次當面試官",
+  "series": "本站自製聽力 · 職場主題",
+  "topic": "💼 面試流程",
+  "focus": "被動語態（are reviewed, are asked, was rejected）描述流程；is being careful 描述暫時行為",
+  "intro": "敘述者被主管邀請一起面試新的品保工程師。對話裡有大量被動語態——is reviewed、are asked、was almost rejected——因為講「流程」的時候，誰執行動作不重要。最後還有一句 is being very careful，聽聽看它跟 is careful 差在哪裡。",
+  "tip": "每次聽到 be 動詞，注意後面接的是過去分詞（被動）還是形容詞。第二次聽再想：哪些句子的「動作執行者」根本沒被講出來？",
+  "pre": [
+    {
+      "w": "second opinion",
+      "ipa": "/ˈsekənd əˈpɪnjən/",
+      "cn": "第二意見",
+      "def": "Advice from another person before you decide."
+    },
+    {
+      "w": "application",
+      "ipa": "/ˌæplɪˈkeɪʃn/",
+      "cn": "應徵資料、申請",
+      "def": "The papers you send when you want a job."
+    },
+    {
+      "w": "blind review",
+      "ipa": "/blaɪnd rɪˈvjuː/",
+      "cn": "匿名審查",
+      "def": "Checking work without knowing who made it."
+    },
+    {
+      "w": "practical",
+      "ipa": "/ˈpræktɪkl/",
+      "cn": "實作的、實際的",
+      "def": "About doing real things, not only ideas."
+    },
+    {
+      "w": "nervous",
+      "ipa": "/ˈnɜːrvəs/",
+      "cn": "緊張的",
+      "def": "Worried and a little afraid."
+    },
+    {
+      "w": "fair",
+      "ipa": "/fer/",
+      "cn": "公平的",
+      "def": "Treating everyone in the same way."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Manager",
+      "en": "Thanks for joining us today. I wanted a second opinion on the two candidates.",
+      "cn": "謝謝你今天加入。這兩位應徵者我想聽聽第二意見。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Of course. It's my first time on this side of the table, so tell me how it works.",
+      "cn": "沒問題。這是我第一次坐在這一邊，跟我說一下流程怎麼跑。"
+    },
+    {
+      "sp": "Manager",
+      "en": "Sure. First, every application is reviewed by two people, separately.",
+      "cn": "好。首先，每一份應徵資料都由兩個人分開審查。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I heard the school names are hidden now. Is that true?",
+      "cn": "我聽說現在學校名稱都會被遮住，是真的嗎？"
+    },
+    {
+      "sp": "Manager",
+      "en": "Yes. Since last year, only skills and experience are shown to the reviewers.",
+      "cn": "真的。從去年開始，審查的人只看得到技能和經歷。"
+    },
+    {
+      "sp": "Manager",
+      "en": "Then, in the interview, candidates are asked to describe a real problem they solved.",
+      "cn": "接著在面試中，應徵者要描述一個他們實際解決過的問題。"
+    },
+    {
+      "sp": "Anita",
+      "en": "And the practical task? I saw a caliper and a test piece on the table.",
+      "cn": "那實作任務呢？我看到桌上有卡尺和一個測試件。"
+    },
+    {
+      "sp": "Manager",
+      "en": "Right. They are given thirty minutes to measure it and write a short report.",
+      "cn": "對。他們有三十分鐘量測並寫一份簡短報告。"
+    },
+    {
+      "sp": "Anita",
+      "en": "The first candidate is being very careful with her answers today. Maybe she's nervous.",
+      "cn": "第一位應徵者今天回答得特別謹慎。也許她很緊張。"
+    },
+    {
+      "sp": "Manager",
+      "en": "Maybe. But remember — a quiet person who was almost rejected last year is now one of our best inspectors.",
+      "cn": "也許吧。但記得——去年一位差點被刷掉的安靜應徵者，現在是我們最優秀的檢驗員之一。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That's a good reminder. People should be judged by what they can do.",
+      "cn": "這提醒得好。評斷一個人，應該看他能做什麼。"
+    },
+    {
+      "sp": "Manager",
+      "en": "Exactly. That's why the whole process was redesigned. It's fairer now.",
+      "cn": "正是。所以整個流程才會重新設計。現在公平多了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why was Anita invited to the interviews?",
+      "qCn": "Anita為什麼受邀參加面試？",
+      "opts": [
+        "A. She is applying for a new job",
+        "B. The manager wanted a second opinion",
+        "C. She designed the process",
+        "D. She is being interviewed today"
+      ],
+      "optsCn": [
+        "A. 她在應徵新工作",
+        "B. 主管想聽第二意見",
+        "C. 流程是她設計的",
+        "D. 她今天要被面試"
+      ],
+      "ans": 1,
+      "expl": "I wanted a second opinion on the two candidates."
+    },
+    {
+      "q": "What can the reviewers see in an application?",
+      "qCn": "審查者在應徵資料裡看得到什麼？",
+      "opts": [
+        "A. Only the school names",
+        "B. Only skills and experience",
+        "C. Everything, including photos",
+        "D. Only the candidate's age"
+      ],
+      "optsCn": [
+        "A. 只有學校名稱",
+        "B. 只有技能和經歷",
+        "C. 全部，包括照片",
+        "D. 只有應徵者的年齡"
+      ],
+      "ans": 1,
+      "expl": "Only skills and experience are shown to the reviewers."
+    },
+    {
+      "q": "\"Every application ___ by two people, separately.\"",
+      "qCn": "「每一份應徵資料都由兩個人分開審查。」（選出正確的動詞形式）",
+      "opts": [
+        "reviews",
+        "is reviewed",
+        "is reviewing",
+        "reviewed"
+      ],
+      "ans": 1,
+      "expl": "application 是被審查的對象，用被動語態 is reviewed。"
+    },
+    {
+      "q": "What does \"She is being very careful today\" suggest?",
+      "qCn": "「She is being very careful today」這句話暗示什麼？",
+      "opts": [
+        "A. She is always a careful person",
+        "B. Her behavior today is especially careful, maybe from nerves",
+        "C. She is careless",
+        "D. She was careful last year only"
+      ],
+      "optsCn": [
+        "A. 她一直是個謹慎的人",
+        "B. 她今天的表現特別謹慎，也許是因為緊張",
+        "C. 她很粗心",
+        "D. 她只有去年謹慎"
+      ],
+      "ans": 1,
+      "expl": "is being + 形容詞講「此刻的暫時行為」，不是個性——今天特別謹慎，可能是緊張。"
+    },
+    {
+      "q": "What happened to the quiet candidate from last year?",
+      "qCn": "去年那位安靜的應徵者後來怎麼了？",
+      "opts": [
+        "A. She was rejected and never came back",
+        "B. She is now one of the best inspectors",
+        "C. She became the manager",
+        "D. She left the company"
+      ],
+      "optsCn": [
+        "A. 她被刷掉，再也沒回來",
+        "B. 她現在是最優秀的檢驗員之一",
+        "C. 她成為主管",
+        "D. 她離開了公司"
+      ],
+      "ans": 1,
+      "expl": "A quiet person who was almost rejected last year is now one of our best inspectors."
+    }
+  ]
+},
+
+{
+  "id": "dl20260824b2",
+  "date": "2026-08-24",
+  "level": "B2",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Would You Hire a Gamer?",
+  "titleCn": "你會錄取一個電玩玩家嗎？",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "🎮 用人新思維",
+  "focus": "表達意見的狀態動詞（think, believe, mean, sound）用簡單式；I'm thinking about 表示「正在考慮」",
+  "intro": "兩位同事在午餐時討論一則新聞：美國航管局錄取了兩千多名電玩玩家培訓成飛航管制員。聽他們怎麼用 I think、That sounds、It means 交換意見——這些狀態動詞全用簡單式；但注意其中一句 I'm thinking about applying，那是「正在考慮」的動作，可以加 -ing。",
+  "tip": "這課的重點是「換句話說」的能力：同一個意見，兩個人用不同的動詞（think / believe / sound / mean）表達。試著在第二次聽的時候，把每個意見動詞記下來。",
+  "pre": [
+    {
+      "w": "air traffic controller",
+      "ipa": "/er ˈtræfɪk kənˈtroʊlər/",
+      "cn": "飛航管制員",
+      "def": "A person who guides planes safely from the ground."
+    },
+    {
+      "w": "reaction time",
+      "ipa": "/riˈækʃn taɪm/",
+      "cn": "反應時間",
+      "def": "How fast you can respond to something."
+    },
+    {
+      "w": "qualification",
+      "ipa": "/ˌkwɑːlɪfɪˈkeɪʃn/",
+      "cn": "資格、學經歷",
+      "def": "An exam you have passed or a skill you officially have."
+    },
+    {
+      "w": "prove",
+      "ipa": "/pruːv/",
+      "cn": "證明",
+      "def": "To show that something is true."
+    },
+    {
+      "w": "work sample",
+      "ipa": "/wɜːrk ˈsæmpl/",
+      "cn": "工作實例",
+      "def": "A real piece of work that shows your ability."
+    },
+    {
+      "w": "open-minded",
+      "ipa": "/ˌoʊpən ˈmaɪndɪd/",
+      "cn": "心態開放的",
+      "def": "Ready to accept new and different ideas."
+    },
+    {
+      "w": "make sense",
+      "ipa": "/meɪk sens/",
+      "cn": "有道理",
+      "def": "To be reasonable and easy to understand."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lily",
+      "en": "Did you read that story about the gamers? An aviation agency in the US hired over two thousand of them.",
+      "cn": "你有看到那則玩家的新聞嗎？美國一個航空機構錄取了兩千多名電玩玩家。"
+    },
+    {
+      "sp": "Mark",
+      "en": "As air traffic controllers, right? Honestly, that sounds crazy to me.",
+      "cn": "當飛航管制員對吧？老實說，我覺得聽起來很瘋狂。"
+    },
+    {
+      "sp": "Lily",
+      "en": "Does it? I think it makes perfect sense. Strategy games train fast decisions and calm thinking under pressure.",
+      "cn": "會嗎？我覺得非常有道理。策略遊戲訓練的就是快速決策和高壓下的冷靜思考。"
+    },
+    {
+      "sp": "Mark",
+      "en": "Hmm. I believe a job like that needs real qualifications, not hobbies.",
+      "cn": "嗯，我認為那種工作需要真正的資格，而不是嗜好。"
+    },
+    {
+      "sp": "Lily",
+      "en": "But that's the point — the program means hobbies can prove real skills. Thousands of hours of practice is real.",
+      "cn": "但重點就在這——這個計畫的意思是，嗜好也能證明真本事。上千小時的練習是真實的。"
+    },
+    {
+      "sp": "Mark",
+      "en": "I see what you mean. Reaction time, attention, staying calm... you can't fake those in a game.",
+      "cn": "我懂你的意思。反應時間、專注力、保持冷靜……這些在遊戲裡是裝不出來的。"
+    },
+    {
+      "sp": "Lily",
+      "en": "Exactly. And Taiwan is moving the same way. Companies now want work samples and real tasks, not just certificates.",
+      "cn": "沒錯。而且台灣也在往同一個方向走。企業現在要的是工作實例和實作任務，不只是證書。"
+    },
+    {
+      "sp": "Mark",
+      "en": "That part I agree with. Our own factory hides school names when applications are reviewed.",
+      "cn": "這部分我同意。我們自己的工廠在審履歷時也會遮住學校名稱。"
+    },
+    {
+      "sp": "Lily",
+      "en": "See? You already work for an open-minded company.",
+      "cn": "你看吧？你已經在一間心態開放的公司上班了。"
+    },
+    {
+      "sp": "Mark",
+      "en": "Fair enough. Actually... I'm thinking about putting my chess ranking on my profile now.",
+      "cn": "好吧有道理。其實……我現在正在考慮把我的西洋棋等級放進個人檔案。"
+    },
+    {
+      "sp": "Lily",
+      "en": "Ha! Do it. It shows patience and planning — and those matter in quality work too.",
+      "cn": "哈！放啊。那代表耐心和規劃能力——這些在品保工作裡也很重要。"
+    },
+    {
+      "sp": "Mark",
+      "en": "You know what? This conversation has changed my mind a little.",
+      "cn": "你知道嗎？這場對話讓我的想法有點改變了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What was Mark's first reaction to the news?",
+      "qCn": "Mark對這則新聞的第一反應是什麼？",
+      "opts": [
+        "A. He thought it sounded crazy",
+        "B. He wanted to apply immediately",
+        "C. He thought it made perfect sense",
+        "D. He had already read it twice"
+      ],
+      "optsCn": [
+        "A. 他覺得聽起來很瘋狂",
+        "B. 他想立刻去應徵",
+        "C. 他覺得非常有道理",
+        "D. 他已經讀過兩次了"
+      ],
+      "ans": 0,
+      "expl": "Honestly, that sounds crazy to me."
+    },
+    {
+      "q": "Why does Lily think the program makes sense?",
+      "qCn": "Lily為什麼覺得這個計畫有道理？",
+      "opts": [
+        "A. Gamers are cheaper to hire",
+        "B. Strategy games train fast decisions and calm thinking under pressure",
+        "C. The agency had no other choice",
+        "D. Games are fun"
+      ],
+      "optsCn": [
+        "A. 錄取玩家比較便宜",
+        "B. 策略遊戲訓練快速決策和高壓下的冷靜思考",
+        "C. 機構沒有別的選擇",
+        "D. 遊戲很好玩"
+      ],
+      "ans": 1,
+      "expl": "Strategy games train fast decisions and calm thinking under pressure."
+    },
+    {
+      "q": "Mark: \"I ___ a job like that needs real qualifications.\"",
+      "qCn": "Mark說：「我認為那種工作需要真正的資格。」（選出正確的動詞形式）",
+      "opts": [
+        "am believing",
+        "believe",
+        "believes",
+        "am believed"
+      ],
+      "ans": 1,
+      "expl": "believe 表達意見時是狀態動詞，用簡單式；主詞是I，用原形 believe。"
+    },
+    {
+      "q": "What does Mark's company do when applications are reviewed?",
+      "qCn": "Mark的公司在審查應徵資料時會怎麼做？",
+      "opts": [
+        "A. It only accepts famous universities",
+        "B. It hides the school names",
+        "C. It asks for photos",
+        "D. It skips the review"
+      ],
+      "optsCn": [
+        "A. 只收名校",
+        "B. 遮住學校名稱",
+        "C. 要求附照片",
+        "D. 跳過審查"
+      ],
+      "ans": 1,
+      "expl": "Our own factory hides school names when applications are reviewed."
+    },
+    {
+      "q": "Mark says \"I'm thinking about putting my chess ranking on my profile.\" Why is the -ing form correct here?",
+      "qCn": "Mark說「我正在考慮把西洋棋等級放進個人檔案」。這裡為什麼可以用 -ing？",
+      "opts": [
+        "A. think is never a state verb",
+        "B. \"think about\" here means an ongoing action of considering, not an opinion",
+        "C. It is a common mistake",
+        "D. Because the sentence is a question"
+      ],
+      "optsCn": [
+        "A. think從來不是狀態動詞",
+        "B. 這裡的 think about 是「正在考慮」的進行中動作，不是表達意見",
+        "C. 這是常見的錯誤用法",
+        "D. 因為這句是疑問句"
+      ],
+      "ans": 1,
+      "expl": "think about + V-ing 是「正在考慮」的動作，可用進行式；I think + 子句才是不加 -ing 的意見用法。"
+    }
+  ]
+},
+
+{
   id:"dl20260821a2",
   date:"2026-08-21",
   level:"A2",
