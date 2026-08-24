@@ -1981,6 +1981,35 @@ function wbItems(){
 }
 let wbListOn=false;
 function wbTogList(){ wbListOn=!wbListOn; RENDER.vocab(); }
+/* 轉存到 Speak Up：把生詞本（含字義、例句）寫進 Speak Up 站的 progress 文件（b2wb 欄位）。
+   Speak Up 的日期選單會多出「⭐ B2 生詞本」，單字口說、說出來、測驗都能拿這批字練。
+   每次轉存都是整份覆蓋（在這裡移除的字，那邊也會消失）。 */
+let spkDb=null;
+function spkFirestore(){
+  if(spkDb) return spkDb;
+  try{
+    const cfg={apiKey:"AIzaSyD3iz0cyBPVWoaJKriIdqWCrOGikrf69qM",authDomain:"learning-english-notes.firebaseapp.com",projectId:"learning-english-notes",appId:"1:522125379097:web:303f0bfcd55f1b603d4c88"};
+    const app=(firebase.apps||[]).find(a=>a.name==='speakup')||firebase.initializeApp(cfg,'speakup');
+    spkDb=app.firestore();
+  }catch(e){ spkDb=null; }
+  return spkDb;
+}
+function wbExport(btn){
+  const items=wbItems();
+  if(!items.length) return;
+  const d=spkFirestore();
+  if(!d){ if(btn) btn.textContent='⚠️ 離線中，稍後再試'; return; }
+  if(btn){ btn.disabled=true; btn.textContent='⏳ 轉存中…'; }
+  const now=Date.now(), map={};
+  items.forEach(x=>{ map[wbKey(x.w)]={w:x.w,cn:x.cn||'',ipa:x.ipa||'',pos:x.pos||'',def:x.def||'',exEn:x.exEn||'',exCn:x.exCn||'',src:x.src||'',t:now}; });
+  d.collection('progress').doc(PROFILE)
+   .set({b2wb:map,b2wbAt:now,updatedAt:now},{mergeFields:['b2wb','b2wbAt','updatedAt']})
+   .then(()=>{ if(btn){ btn.textContent='✅ 已轉存 '+items.length+' 字'; }
+     const m=$('wb-export-msg'); if(m) m.innerHTML='已送到 <a href="https://learning-english-notes.web.app" target="_blank" rel="noopener">Speak Up ↗</a>：日期選單裡選「⭐ B2 生詞本」就能練（單字口說、說出來、測驗）。';
+   })
+   .catch(()=>{ if(btn){ btn.disabled=false; btn.textContent='⚠️ 轉存失敗，再試一次'; } });
+}
+window.wbExport=wbExport;
 function wbStart(){
   const items=wbItems(); if(!items.length) return;
   vQueue=items.slice();
@@ -1997,7 +2026,9 @@ function wbCard(){
     return h;
   }
   h+='<div class="row"><button class="btn" onclick="wbStart()">複習生詞本 '+items.length+' 張</button>'
-   +'<button class="btn ghost" onclick="wbTogList()">'+(wbListOn?'收合清單':'瀏覽清單')+'</button></div>';
+   +'<button class="btn ghost" onclick="wbTogList()">'+(wbListOn?'收合清單':'瀏覽清單')+'</button>'
+   +'<button class="btn ghost" onclick="wbExport(this)">📤 轉存到 Speak Up</button></div>'
+   +'<div class="muted" id="wb-export-msg" style="margin-top:8px"></div>';
   if(wbListOn){
     h+='<div class="tw" style="margin-top:12px"><table><tr><th>單字</th><th>中文</th><th>來源</th><th style="width:44px">移除</th></tr>'
      + items.map(x=>'<tr><td><w onclick="showGloss(\''+esc(x.w)+'\')" style="font-weight:600;color:var(--accent2)">'+esc(x.w)+'</w> '+spk(x.w)+'</td>'
