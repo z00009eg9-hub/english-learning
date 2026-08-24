@@ -587,17 +587,56 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   padding:10px 12px;cursor:pointer;transition:.15s;
   scroll-margin-top:calc(var(--hdh,58px) + var(--pinh,0px) + 14px);scroll-margin-bottom:90px;}
 .sub-line:hover{border-color:var(--bdr2);}
-.sub-line.cur{border-left-color:var(--coral);background:#F0FAFB;box-shadow:var(--sh-sm);}
+/* 當前句：更醒目的沉浸高亮（粗框＋淡藍底），播放中左側出現動態聲波 */
+.sub-line.cur{border-color:var(--coral);border-left:5px solid var(--coral);background:#EBF7FA;box-shadow:0 3px 10px rgba(15,118,110,.13);}
 .sub-line.done{opacity:.72;}
 .sub-t{font-size:.8rem;color:var(--faint);font-family:'Inter';font-weight:700;}
-.sub-en{font-size:1.12rem;font-weight:700;font-family:'Inter';line-height:1.55;margin-top:2px;word-break:break-word;}
+/* 視覺重心在英文：英文加大、中文縮小降對比 */
+.sub-en{font-size:1.22rem;font-weight:700;font-family:'Inter';line-height:1.55;margin-top:2px;word-break:break-word;}
 .sub-line.cur .sub-en{color:var(--coral-d);}
-.sub-cn{font-size:1.06rem;font-weight:600;color:#4E858B;margin-top:5px;line-height:1.6;}
+.sub-cn{font-size:.94rem;font-weight:600;color:#7BA3A8;margin-top:5px;line-height:1.6;}
+.sub-line.cur .sub-cn{color:#4E858B;}
 .sub-list.nocn .sub-cn{display:none;}
 .sub-list.noen .sub-en{filter:blur(6px);}
 .sub-en .vw{background:#FFF1C2;border-radius:4px;padding:0 2px;cursor:pointer;font-weight:800;}
+/* 卡拉 OK 逐字變色（課文朗讀模式：唸到哪個字，哪個字轉青綠） */
+.sub-en .kar{transition:color .12s;}
+.sub-en .kar.sung{color:var(--teal);}
+/* 播放中的動態聲波（等化器）圖示 */
+.eq{display:inline-flex;align-items:flex-end;gap:2px;height:14px;margin-right:6px;vertical-align:-2px;}
+.eq i{width:3px;background:var(--coral);border-radius:2px;animation:eqb 1s infinite ease-in-out;}
+.eq i:nth-child(1){height:60%;animation-delay:0s;}
+.eq i:nth-child(2){height:100%;animation-delay:.2s;}
+.eq i:nth-child(3){height:45%;animation-delay:.4s;}
+@keyframes eqb{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
+@media(prefers-reduced-motion:reduce){.eq i{animation:none;}}
+/* 每句右側的快捷小工具（單句發音） */
+.sub-act{float:right;margin-left:8px;border:1px solid var(--bdr);background:#fff;border-radius:9px;
+  padding:2px 7px;font-size:.85rem;cursor:pointer;color:var(--sub);}
+.sub-act:hover{border-color:var(--teal);color:var(--teal);}
 .vtoolbar{display:flex;gap:4px;justify-content:space-between;margin-top:8px;background:#fff;
   border:1px solid var(--bdr);border-radius:14px;padding:4px 4px;box-shadow:var(--sh-sm);}
+/* 工具列分組：播放操作類｜切換顯示類，中間細分隔線 */
+.vt-div{width:1px;background:var(--bdr2);margin:4px 2px;flex:none;align-self:stretch;}
+/* AB 循環按鈕的三種狀態 */
+.vtool.ab-a{color:var(--amber);}
+.vtool.ab-on{color:var(--coral-d);background:var(--amber-l);}
+/* 跟讀：弱讀虛詞淡化、意群停頓豎線、語調箭頭 */
+.w-weak{opacity:.5;font-size:.86em;font-weight:600;}
+.chunk{color:var(--bdr2);font-weight:400;margin:0 3px;}
+.iton{font-weight:900;margin-left:4px;}
+.iton.up{color:var(--teal);}
+.iton.down{color:var(--coral);}
+/* 情境對話：背景情境小卡 */
+.scene-card{display:flex;align-items:center;gap:8px;background:var(--amber-l);border:1px dashed #E8C97A;
+  border-radius:12px;padding:7px 12px;margin-bottom:8px;font-size:.85rem;font-weight:700;color:var(--sub);}
+/* 進階兩階提示按鈕 */
+.thint{margin:4px 0 6px;}
+.thint .btn{padding:4px 12px;font-size:.8rem;}
+.thint-body{font-size:.95rem;font-weight:600;color:var(--sub);background:#fff;border:1px dashed var(--bdr2);
+  border-radius:11px;padding:7px 11px;margin-top:6px;line-height:1.6;}
+/* 基礎填空：挖空格內的淡灰字首提示 */
+.blank .bk-hint{color:#B9AE9C;font-weight:800;font-style:normal;letter-spacing:2px;}
 .vtool{flex:1;border:none;background:transparent;cursor:pointer;font-family:inherit;color:var(--sub);
   font-size:.78rem;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:1px;padding:3px 2px;border-radius:11px;}
 .vtool .i{font-size:1.1rem;}
@@ -846,7 +885,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁"></button>
       <div><div class="sub-h">🔁 跟讀模仿</div><div class="sub-s">聽一句 → 馬上複誦</div></div>
     </div>
-    <div class="how-bar">📌 <b>怎麼玩</b>：① 按 🔊 正常速聽示範（聽不清用 🐢 慢速）→ ② 按 🎤 馬上跟著複誦 → ③ 說完再按一次 🎤 結束 → ④ 綠字＝說對，紅字＝漏掉。<br>💡 句子裡<b>粗體＝重音字</b>、<span style="color:var(--coral);font-weight:900">‿</span>＝連音位置（像 lend‿you 要連著唸）；進步後按 👁️ 隱藏字幕，純靠耳朵盲測！</div>
+    <div class="how-bar">📌 <b>怎麼玩</b>：① 按 🔊 正常速聽示範（聽不清用 🐢 慢速）→ ② 按 🎤 馬上跟著複誦（停下來 2 秒會自動評分）→ ③ 綠字＝說對，紅字＝漏掉。<br>💡 發音標記：<b>粗體＝重音字</b>、<span style="opacity:.5;font-size:.9em">淡字＝弱讀虛詞</span>、<span style="color:var(--coral);font-weight:900">‿</span>＝連音（lend‿you 連著唸）、<span style="color:#C9BFAF">｜</span>＝意群換氣點、句尾 <span style="color:var(--teal);font-weight:900">↗</span><span style="color:var(--coral);font-weight:900">↘</span>＝語調升降；進步後按 👁️ 隱藏字幕，純靠耳朵盲測！</div>
     <div class="lvl-tog" id="lvl-shadow" style="display:none"></div>
     <div class="prog"><i id="sh-prog"></i></div>
     <div class="card">
@@ -957,7 +996,7 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <button class="back" onclick="goHome()" title="回首頁"></button>
       <div><div class="sub-h">🎬 影片精聽</div><div class="sub-s" id="vid-sub">看影片／聽朗讀，配雙語字幕</div></div>
     </div>
-    <div class="how-bar">📌 <b>怎麼玩</b>：① 選一個素材 → ② 按 ▶ 播放，字幕會跟著亮 → ③ 點任一句可跳到那一句 → ④ 下排：雙語＝中文開關、倍速、復讀＝重播這句、循環＝這句一直重複、詞彙＝亮出今天的單字、練習＝跟著念一次</div>
+    <div class="how-bar">📌 <b>怎麼玩</b>：① 選一個素材 → ② 按 ▶ 播放，字幕會跟著亮（朗讀模式會逐字變色）→ ③ 點任一句跳到那一句、點句尾 🔊 單獨聽那一句 → ④ 工具列左半是播放操作（倍速/復讀/循環/AB段落循環/±3秒），右半是顯示切換（雙語/遮字/詞彙/練習）<br>⌨️ <b>快捷鍵</b>：<b>空白鍵</b>播放/暫停、<b>←/→</b> 上下句、<b>R</b> 重複這句</div>
     <div id="vid-pick"></div>
     <div id="vid-body" class="hide">
       <div class="vid-pin">
@@ -968,13 +1007,17 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
           <button onclick="vNext()" title="下一句">⏭</button>
         </div>
         <div class="vtoolbar">
-        <button class="vtool on" id="vt-cn" onclick="vToggleCn()"><span class="i">🈯</span>雙語</button>
-        <button class="vtool" id="vt-rate" onclick="vCycleRate()"><span class="i">⏩</span><span id="vt-rate-l">1x</span></button>
-        <button class="vtool" onclick="vRepeat()"><span class="i">🔂</span>復讀</button>
-        <button class="vtool" id="vt-loop" onclick="vToggleLoop()"><span class="i">🔁</span>循環</button>
-        <button class="vtool" id="vt-vocab" onclick="vToggleVocab()"><span class="i">📖</span>詞彙</button>
-        <button class="vtool" id="vt-prac" onclick="vPractice()"><span class="i">🎤</span>練習</button>
-        <button class="vtool" id="vt-hide" onclick="vToggleEn()"><span class="i">🙈</span>遮字</button>
+        <button class="vtool" id="vt-rate" onclick="vCycleRate()" title="播放速度"><span class="i">⏩</span><span id="vt-rate-l">1x</span></button>
+        <button class="vtool" onclick="vRepeat()" title="重播現在這一句"><span class="i">🔂</span>復讀</button>
+        <button class="vtool" id="vt-loop" onclick="vToggleLoop()" title="這一句一直重複"><span class="i">🔁</span>循環</button>
+        <button class="vtool" id="vt-ab" onclick="vAB()" title="AB 段落循環：按一下設 A 點、再按設 B 點開始循環、第三下取消"><span class="i">🅰🅱</span><span id="vt-ab-l">AB循環</span></button>
+        <button class="vtool vt-yt" id="vt-b3" onclick="vJump(-3)" title="倒退 3 秒"><span class="i">↩</span>-3s</button>
+        <button class="vtool vt-yt" id="vt-f3" onclick="vJump(3)" title="前進 3 秒"><span class="i">↪</span>+3s</button>
+        <span class="vt-div"></span>
+        <button class="vtool on" id="vt-cn" onclick="vToggleCn()" title="中文翻譯開關"><span class="i">🈯</span>雙語</button>
+        <button class="vtool" id="vt-hide" onclick="vToggleEn()" title="遮住英文（盲聽模式）"><span class="i">🙈</span>遮字</button>
+        <button class="vtool" id="vt-vocab" onclick="vToggleVocab()" title="把今天的筆記單字標亮"><span class="i">📖</span>詞彙</button>
+        <button class="vtool" id="vt-prac" onclick="vPractice()" title="跟著現在這一句唸一次"><span class="i">🎤</span>練習</button>
         </div>
         <div id="vid-prac" class="hide"></div>
       </div>
@@ -6731,18 +6774,34 @@ function startShadow(d){renderLvlBar('shadow');
   if(!shList.length){alert('這一天還沒有可跟讀的句子，換一天試試。');return;}
   shI=0;sessStart('shadow','🔁 跟讀模仿',shList.length);
   show('scr-shadow');shRender();renderAutoRec();setTimeout(()=>shDemo(demoRate()),350);}
-/* 連音與重音視覺化：粗體＝內容字（重音落點）、‿＝子音尾＋母音頭的連音位置 */
+/* 發音標記體系（B2）：粗體＝重音內容字、淡小字＝弱讀虛詞、‿＝連音、
+   ｜＝意群停頓（長句先在這裡換氣）、句尾 ↗↘＝語調 */
+const WEAK_WORDS=new Set(['a','an','the','to','of','and','or','is','are','am','was','were','do','does','did',
+  'that','it','in','on','at','for','with','as','be','been','him','her','his','my','your','our','their','them','us']);
+const CHUNK_BEFORE=new Set(['so','but','because','when','if','until','although','while','after','before','unless']);
 function cueHTML(en){
   const parts=String(en).split(/\s+/);
   const isVstart=w=>/^([aeiou]|y[aeiou])/i.test(w.replace(/^[^a-z]+/i,''));   /* 母音開頭；也含 you/your 這類 d+y 連音 */
   const endsCons=w=>{const c=w.replace(/[^a-z]+$/i,'');return /[bcdfgklmnprstvz]$/i.test(c)&&!/[.,!?;:]$/.test(w);};
-  return parts.map((w,i)=>{
+  const long=parts.length>=7;   /* 長句才畫意群線，短句畫了反而干擾 */
+  let h=parts.map((w,i)=>{
     const core=w.toLowerCase().replace(/[^a-z']/g,'');
-    const strs=core.length>=4&&!SOFT_WORDS.has(core);
-    let h='<span class="'+(strs?'strs':'')+'">'+esc(w)+'</span>';
-    if(i<parts.length-1&&endsCons(w)&&isVstart(parts[i+1]))h+='<span class="liai">‿</span>';
-    else if(i<parts.length-1)h+=' ';
-    return h;}).join('');}
+    const weak=WEAK_WORDS.has(core);
+    const strs=!weak&&core.length>=4&&!SOFT_WORDS.has(core);
+    let out='';
+    if(long&&i>0&&CHUNK_BEFORE.has(core))out+='<span class="chunk">｜</span>';
+    out+='<span class="'+(strs?'strs':weak?'w-weak':'')+'">'+esc(w)+'</span>';
+    if(long&&/[,;:]$/.test(w))out+='<span class="chunk">｜</span>';
+    if(i<parts.length-1&&endsCons(w)&&isVstart(parts[i+1]))out+='<span class="liai">‿</span>';
+    else if(i<parts.length-1)out+=' ';
+    return out;}).join('');
+  /* 語調：Yes/No 問句尾音上揚 ↗；Wh 問句與直述句下降 ↘ */
+  const first=(parts[0]||'').toLowerCase().replace(/[^a-z]/g,'');
+  const isQ=/\?\s*$/.test(en);
+  const yn=isQ&&['do','does','did','is','are','am','was','were','can','could','will','would','should','may','might','have','has','had'].includes(first);
+  h+=yn?'<span class="iton up" title="Yes/No 問句：尾音上揚">↗</span>'
+       :'<span class="iton down" title="'+(isQ?'Wh 問句':'直述句')+'：尾音下降">↘</span>';
+  return h;}
 /* 盲測模式：遮住字幕，強迫「聽音→複誦」，戒掉看字依賴（記在本機） */
 let SH_BLIND=localStorage.getItem('speakup_shblind')==='1';
 function shBlindTog(){SH_BLIND=!SH_BLIND;localStorage.setItem('speakup_shblind',SH_BLIND?'1':'0');shBlindApply();}
@@ -6765,8 +6824,10 @@ function shDemo(rate){
     if(AUTOREC&&speechOK()&&!micActive)shMic();
     else if(!micActive)$('sh-mlbl').textContent='按 🎤 開始複誦';});}
 function shPlay(r){shDemo(r);}
+/* 跟讀是複誦剛聽完的句子（不用邊想邊說），停頓 2.2 秒就自動收尾評分，
+   免去「說完再按一次」的手動負擔；說出來/情境對話要思考，維持 4 秒 */
 function shMic(){micStart({btn:'sh-mic',lbl:'sh-mlbl',redo:'sh-redo',idle:'先聽示範，再按我複誦',
-  continuous:true,keepAlive:true,idleMs:4000,firstIdleMs:20000,
+  continuous:true,keepAlive:true,idleMs:2200,firstIdleMs:20000,
   target:()=>shCur.en,
   onReset:()=>{$('sh-heard').innerHTML='';$('sh-score').classList.add('hide');$('sh-diff').classList.add('hide');},
   onLive:(t,alts)=>{$('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>'+altLine(alts,t);},
@@ -7006,6 +7067,7 @@ function talkScript(d){
 function startTalk(d){renderLvlBar('talk');
   talkTurns=talkScript(d);
   if(!talkTurns.length){alert('這一天還沒有可對話的句子，換一天或選「全部筆記」試試。');return;}
+  talkDay=d;
   talkI=0;talkTries=0;talkBest=null;talkTyping=false;
   $('talk-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+lvTag()+' · 共 '+talkTurns.length+' 句';
   $('talk-type').classList.add('hide');
@@ -7027,23 +7089,46 @@ function talkCloze(en){
     const m=raw.match(/([.,!?;:]+)$/);              /* 標點留在挖空外面 */
     const tail=m?m[1]:'',core=tail?raw.slice(0,-tail.length):raw;
     const em=Math.min(6.5,Math.max(2.2,core.length*.62));
-    return '<span class="blank" style="width:'+em.toFixed(1)+'em"></span>'+esc(tail);
+    /* 挖空格裡給淡灰「字首＋字數點點」，好預估答案長短（2026-08-24 使用者回饋） */
+    const hint=core[0]+'‧'.repeat(Math.min(5,Math.max(1,core.length-1)));
+    return '<span class="blank" style="width:'+em.toFixed(1)+'em;text-align:center"><i class="bk-hint">'+esc(hint)+'</i></span>'+esc(tail);
   }).join(' ');}
 
+let talkDay='all',talkHintLv=0;
 function talkRender(){
-  const t=talkTurns[talkI];talkCur=t;talkTries=0;talkBest=null;
+  const t=talkTurns[talkI];talkCur=t;talkTries=0;talkBest=null;talkHintLv=0;
   $('talk-chat').innerHTML='';
+  /* ⓪ 背景情境小卡：讓 B2 學習者先掌握「這是在什麼場景講話」 */
+  const sc=DAYTALK[talkDay];
+  chatAdd('<div class="scene-card">🏢<span>情境：'
+    +esc(sc&&sc.title?sc.title:(talkDay==='all'?'綜合複習':lessonTitle(talkDay)))
+    +'｜和外師教練一問一答，把它當真實對話回應</span></div>');
   /* ① 教練先開口：有腳本就問腳本裡的問題，沒有就說一句引導語 */
   const lead=t.ask||TALK_LEAD[talkI%TALK_LEAD.length];
   chatAdd(cbub('l',lead.en,lead.cn,'教練'));
-  /* ② 基礎：填空卡（句型骨架＋中文），進階不提示 */
+  /* ② 基礎：填空卡（句型骨架＋中文），進階改「兩階提示」——先自己想，卡住再逐步求救 */
   if(lvBasic()) chatAdd('<div class="cloze-card"><div class="cloze-tag">🎙 請開口說</div>'
     +'<div class="cloze-line">'+talkCloze(t.en)+'</div>'
     +'<div class="cloze-cn">'+esc(t.cn)+'</div></div>');
+  else chatAdd('<div class="thint" id="talk-hint"><button class="btn btn-o btn-sm" onclick="talkHint()">💡 給點提示（第 1 階：關鍵詞）</button></div>');
   $('talk-input').value='';
   $('talk-mlbl').textContent=speechOK()?'按一下 ⬆,開口說':'此瀏覽器不支援辨識,可改用 ⌨ 打字';
   talkDots();
   setTimeout(()=>speak(lead.en,demoRate()),350);}
+/* 進階兩階提示：第 1 階給關鍵詞（筆記 hint 或句中內容字），第 2 階給句型骨架（挖空版），
+   不直接公佈答案——先逼大腦自己組句 */
+function talkHint(){
+  const t=talkCur;if(!t)return;
+  const box=document.getElementById('talk-hint');if(!box)return;
+  talkHintLv++;
+  if(talkHintLv===1){
+    const kws=t.hint?[t.hint]:keyWordsOf(t.en,3);
+    box.innerHTML='<div class="thint-body">🔑 關鍵詞：'+kws.map(k=>'<b>'+esc(k)+'</b>').join('、')+'</div>'
+      +'<button class="btn btn-o btn-sm" style="margin-top:6px" onclick="talkHint()">💡 還是卡住（第 2 階：句型骨架）</button>';
+  }else{
+    box.innerHTML='<div class="thint-body">🔑 '+(t.hint?('關鍵詞：<b>'+esc(t.hint)+'</b><br>'):'')
+      +'🧱 句型骨架：<span class="cloze-line" style="font-size:1.05rem">'+talkCloze(t.en)+'</span></div>';}
+  $('talk-chat').scrollTop=$('talk-chat').scrollHeight;}
 function talkDots(){
   $('talk-dots').innerHTML=talkTurns.map((x,i)=>
     '<span class="cdot'+(i<talkI?' done':i===talkI?' cur':'')+'"></span>').join('');}
@@ -7390,7 +7475,7 @@ document.addEventListener('keydown',e=>{
    ② 課文朗讀（沒有影片時，用語音合成一句一句唸，字幕一樣會跟著亮）
    ═══════════════════════════════════════════════════════════ */
 let VID=null;
-const VID_RATES=[0.75,1,1.25,1.5];
+const VID_RATES=[0.75,0.85,1,1.25,1.5];
 /* ---------- 共用影片庫：Firestore 同步（手機/平板/電腦、Anita/Tom 都看得到同一份）
    一支影片＝一份文件，分成兩層，避免單一文件 1 MiB 上限、也讓清單載入很輕：
      videos/{id}            → 標題等基本資料（很小，開站時全部訂閱）
@@ -7622,7 +7707,10 @@ function vOpen(i){
     return;}
   vStop();
   VID={m:m,mode:m.kind,lines:(m.kind==='yt'?refineSubs(m.lines):m.lines),i:0,playing:false,rate:1,loop:false,
-    showCn:true,showEn:true,vocab:false,yt:null,timer:null};
+    showCn:true,showEn:true,vocab:false,yt:null,timer:null,ab:null,lastCur:-1};
+  /* ±3 秒只對真的影片有意義，朗讀模式藏起來；AB 循環按鈕歸零 */
+  document.querySelectorAll('.vt-yt').forEach(b=>b.style.display=(m.kind==='yt'?'':'none'));
+  vABUI();
   $('vid-pick').classList.add('hide');$('vid-body').classList.remove('hide');
   $('vid-prac').classList.add('hide');$('vid-prac').innerHTML='';
   sessStart('video','🎬 影片精聽',m.lines.length,{scoreLabel:'平均跟讀'});
@@ -7715,6 +7803,7 @@ function vRenderSubs(){
   box.classList.toggle('noen',!VID.showEn);
   box.innerHTML=VID.lines.map((l,i)=>
     '<div class="sub-line'+(i===VID.i?' cur':i<VID.i?' done':'')+'" id="vl-'+i+'" onclick="vSeek('+i+')">'
+    +'<button class="sub-act" onclick="event.stopPropagation();speak('+JSON.stringify(l.en)+',0.92)" title="單獨聽這一句的發音（不動影片）">🔊</button>'
     +(VID.mode==='yt'?'<div class="sub-t">'+vFmt(l.t)+'</div>':'')
     +'<div class="sub-en">'+(VID.vocab?vMark(l.en):esc(l.en))+'</div>'
     +'<div class="sub-cn">'+esc(l.cn||cnFor(l.en))+'</div></div>').join('');}
@@ -7759,9 +7848,32 @@ function vHighlight(){
   if(!VID)return;
   VID.lines.forEach((l,i)=>{const el=$('vl-'+i);if(!el)return;
     el.classList.toggle('cur',i===VID.i);el.classList.toggle('done',i<VID.i);});
+  /* 換句時：上一句的卡拉 OK 字回復純文字，新的當前句準備逐字 span */
+  if(VID.lastCur!==VID.i){
+    const old=$('vl-'+VID.lastCur);
+    if(old&&VID.lines[VID.lastCur]){const en=old.querySelector('.sub-en');
+      if(en)en.innerHTML=VID.vocab?vMark(VID.lines[VID.lastCur].en):esc(VID.lines[VID.lastCur].en);}
+    VID.lastCur=VID.i;
+    if(VID.mode!=='yt'&&!VID.vocab)vKarPrep(VID.i);}
+  vEq();
   if(VID.mode!=='yt'){const ic=$('vtts-ico');const l=VID.lines[VID.i];
     if(ic&&l)ic.textContent=vScene(l.en);}
   vScrollCur();}
+/* 卡拉 OK：把當前句拆成字 span，朗讀時 onboundary 逐字點亮 */
+function vKarPrep(i){
+  const el=$('vl-'+i);if(!el||!VID)return;
+  const en=el.querySelector('.sub-en');if(!en)return;
+  en.innerHTML=String(VID.lines[i].en).split(/\s+/)
+    .map((w,k)=>'<span class="kar" data-wi="'+k+'">'+esc(w)+'</span>').join(' ');}
+function vKarMark(i,wi){
+  const el=$('vl-'+i);if(!el)return;
+  el.querySelectorAll('.sub-en .kar').forEach(s=>s.classList.toggle('sung',+s.dataset.wi<=wi));}
+/* 播放中的動態聲波：只掛在當前句 */
+function vEq(){
+  document.querySelectorAll('.sub-line .eq').forEach(e=>e.remove());
+  if(!VID||!VID.playing)return;
+  const en=document.querySelector('#vl-'+VID.i+' .sub-en');
+  if(en)en.insertAdjacentHTML('afterbegin','<span class="eq"><i></i><i></i><i></i></span>');}
 /* 把「現在這一句」捲到黏頂區下方：每次都量黏頂區的即時高度（練習打開、
    評分出現時它會變高），確保當前句永遠不會被影片區蓋住 */
 function vScrollCur(again){
@@ -7776,7 +7888,7 @@ function vScrollCur(again){
   const r=cur.getBoundingClientRect();
   if(r.top<top||r.bottom>window.innerHeight-16)
     scrollBySafe(r.top-top);   /* 平滑捲動失敗時會直接跳到位（scrollBySafe 內建保險） */}
-function vPP(){const b=$('vid-pp');if(b)b.textContent=VID&&VID.playing?'⏸':'▶';}
+function vPP(){const b=$('vid-pp');if(b)b.textContent=VID&&VID.playing?'⏸':'▶';vEq();}
 
 /* ---------- 播放控制 ---------- */
 function vToggle(){if(!VID)return;VID.playing?vPause():vPlay();}
@@ -7812,11 +7924,19 @@ function vSpeakLine(i){
   /* cancel 之後馬上 speak 在 iOS 會整個卡死（按復讀沒反應）→ 隔一拍再開口 */
   setTimeout(()=>{
     if(!VID||VID.sgen!==sg||VID.i!==i||!VID.playing)return;
-    const u=new SpeechSynthesisUtterance(ttsFix(VID.lines[i].en));
+    const spoken=ttsFix(VID.lines[i].en);
+    const u=new SpeechSynthesisUtterance(spoken);
     u.lang='en-US';u.rate=Math.max(0.4,0.92*VID.rate);
     if(VOICE)u.voice=VOICE;   /* 金句連播固定女聲（2026-08-16 使用者要求取消男聲） */
+    /* 卡拉 OK 逐字變色：引擎每唸到一個字就點亮到那個字（不支援 boundary 的環境自動略過） */
+    u.onboundary=e=>{if(!VID||VID.i!==i||VID.vocab)return;
+      const wi=spoken.slice(0,e.charIndex).trim().split(/\s+/).filter(Boolean).length;
+      vKarMark(i,wi);};
     u.onend=()=>{if(!VID||!VID.playing||VID.i!==i)return;
+      vKarMark(i,VID.lines[i].en.split(/\s+/).length);   /* 唸完整句全亮 */
       if(VID.loop){setTimeout(()=>{if(VID&&VID.playing)vSpeakLine(i);},600);return;}
+      /* AB 段落循環：唸完 B 句就跳回 A 句 */
+      if(VID.ab&&VID.ab.b!=null&&i>=VID.ab.b){setTimeout(()=>{if(VID&&VID.playing)vSpeakLine(VID.ab.a);},600);return;}
       if(i+1<VID.lines.length)setTimeout(()=>{if(VID&&VID.playing)vSpeakLine(i+1);},500);
       else{VID.playing=false;vPP();}};
     speechSynthesis.speak(u);
@@ -7831,8 +7951,31 @@ function vTick(){
     const end=L[VID.i+1]?L[VID.i+1].t:1e9;
     if(t>=end-0.05||t<L[VID.i].t-0.5){try{VID.yt.seekTo(L[VID.i].t,true);}catch(e){}return;}
     return;}
+  /* AB 段落循環：播過 B 句的結尾就跳回 A 句開頭 */
+  if(VID.ab&&VID.ab.b!=null){
+    const end=L[VID.ab.b+1]?L[VID.ab.b+1].t:1e9;
+    if(t>=end-0.05){try{VID.yt.seekTo(L[VID.ab.a].t,true);}catch(e){}return;}}
   let idx=0;for(let k=0;k<L.length;k++){if(t+0.2>=L[k].t)idx=k;}
   if(idx!==VID.i){VID.i=idx;vHighlight();}}
+/* AB 段落循環：第一下設 A 點（目前句）、第二下設 B 點並開始循環、第三下取消 */
+function vAB(){
+  if(!VID)return;
+  if(!VID.ab)VID.ab={a:VID.i,b:null};
+  else if(VID.ab.b==null){VID.ab.b=Math.max(VID.ab.a,VID.i);
+    if(VID.loop)vToggleLoop();   /* 跟單句循環互斥 */
+    if(VID.mode!=='yt'){vSeek(VID.ab.a);if(!VID.playing)vPlay();}}
+  else VID.ab=null;
+  vABUI();}
+function vABUI(){
+  const b=$('vt-ab'),l=$('vt-ab-l');if(!b||!l)return;
+  b.classList.remove('ab-a','ab-on');
+  if(VID&&VID.ab&&VID.ab.b!=null){b.classList.add('ab-on');l.textContent='A'+(VID.ab.a+1)+'-B'+(VID.ab.b+1);}
+  else if(VID&&VID.ab){b.classList.add('ab-a');l.textContent='A'+(VID.ab.a+1)+'→設B';}
+  else l.textContent='AB循環';}
+/* 影片 ±3 秒微跳轉（只在 YouTube 模式顯示） */
+function vJump(sec){
+  if(!VID||VID.mode!=='yt'||!VID.yt||!VID.yt.getCurrentTime)return;
+  try{VID.yt.seekTo(Math.max(0,VID.yt.getCurrentTime()+sec),true);}catch(e){}}
 
 /* ---------- 下排工具 ---------- */
 function vToggleCn(){if(!VID)return;VID.showCn=!VID.showCn;
@@ -7841,6 +7984,7 @@ function vToggleEn(){if(!VID)return;VID.showEn=!VID.showEn;
   $('vt-hide').classList.toggle('on',!VID.showEn);$('vid-subs').classList.toggle('noen',!VID.showEn);}
 function vToggleLoop(){if(!VID)return;VID.loop=!VID.loop;
   $('vt-loop').classList.toggle('on',VID.loop);
+  if(VID.loop&&VID.ab){VID.ab=null;vABUI();}   /* 跟 AB 段落循環互斥 */
   if(VID.loop&&VID.mode!=='yt'&&VID.playing)vSpeakLine(VID.i);}
 function vCycleRate(){if(!VID)return;
   const i=(VID_RATES.indexOf(VID.rate)+1)%VID_RATES.length;VID.rate=VID_RATES[i];
@@ -7897,6 +8041,16 @@ function vPracMic(){
       vSetPinH();setTimeout(vScrollCur,550);}});}
 function vFinish(){const n=VID?VID.lines.length:0;vStop();
   finishAct('🎬 影片精聽','你聽完／練了 '+n+' 句字幕!');}
+/* 影片精聽鍵盤快捷鍵：空白鍵播放/暫停、←/→ 上下句、R 重複這句（輸入框打字時不攔截） */
+document.addEventListener('keydown',e=>{
+  const scr=document.querySelector('.screen.on');
+  if(!scr||scr.id!=='scr-video'||!VID)return;
+  if(/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName))return;
+  if(e.code==='Space'){e.preventDefault();vToggle();}
+  else if(e.key==='ArrowLeft'){e.preventDefault();vPrev();}
+  else if(e.key==='ArrowRight'){e.preventDefault();vNext();}
+  else if(e.key==='r'||e.key==='R'){e.preventDefault();vRepeat();}
+});
 
 function showRing(id,pct){const el=$(id);el.classList.remove('hide');
   /* Tom（基礎）用比較寬的標準，鼓勵為主 */
