@@ -727,6 +727,11 @@ body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
 #v-book table.bkxv th:nth-child(3),#v-book table.bkxv td:nth-child(3){width:30%}
 /* 快速總結：重點18% 說明82% */
 #v-book table.bksm th:nth-child(1),#v-book table.bksm td:nth-child(1){width:18%}
+/* ☆ 生詞本收藏鈕：未收藏淡金色空星、已收藏實心金星 */
+.wbb{border:0;background:none;cursor:pointer;font:inherit;font-size:calc(17px * var(--fs));
+  color:#cbb787;padding:0 3px;line-height:1;vertical-align:-1px;transition:transform .12s}
+.wbb.on{color:#e8a013;text-shadow:0 1px 2px rgba(180,120,10,.3)}
+.wbb:active{transform:scale(1.25)}
 /* ⭐ 重點單字：標準化黃色星號膠囊，放單字前面 */
 .starb{display:inline-block;background:#fff5d6;border:1px solid #eed27a;border-radius:10px;
   font-size:calc(11px * var(--fs));line-height:1.5;padding:0 5px;margin-right:4px;vertical-align:2px}
@@ -806,7 +811,8 @@ body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
   <button id="t-book" onclick="go('book')"><i>📕</i>課本</button>
   <button id="t-read" onclick="go('read')"><i>📖</i>閱讀</button>
   <button id="t-listen" onclick="go('listen')"><i>🎧</i>聽力</button>
-  <button id="t-prac" onclick="go(PRAC_LAST)"><i>🎯</i>練習</button>
+  <button id="t-prac" onclick="go('vocab')"><i>🎯</i>單字卡</button>
+  <button id="t-gram" onclick="go('gram')"><i>📐</i>文法</button>
   <button id="t-prog" onclick="go('prog')"><i>📊</i>進度</button>
 </nav>
 
@@ -884,7 +890,7 @@ const inBand = l => band().indexOf(l)>=0;
 let PROFILE=localStorage.getItem('b2lab_profile')||'anita';
 if(!PROFILES[PROFILE]) PROFILE='anita';
 const skey = () => 'b2lab.v1.'+PROFILE;
-const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:1, fs:1.15, listenDone:{}, vnotes:{}, updatedAt:0});
+const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:1, fs:1.15, listenDone:{}, vnotes:{}, wb:{}, updatedAt:0});
 
 /* ---------- 本機儲存 ---------- */
 let ST=blank();
@@ -965,6 +971,12 @@ function mergeState(remote){
   out.dayNew=Object.assign({},remote.dayNew||{},ST.dayNew||{});
   out.listenDone=Object.assign({},remote.listenDone||{},ST.listenDone||{});
   out.vnotes=Object.assign({},remote.vnotes||{},ST.vnotes||{});
+  /* 生詞本逐字合併：取時間戳較新的那筆（含「移除」的墓碑紀錄，跨裝置移除才不會又跑回來） */
+  out.wb=Object.assign({},ST.wb||{});
+  Object.keys(remote.wb||{}).forEach(w=>{
+    const a=(ST.wb||{})[w], b=remote.wb[w];
+    out.wb[w] = (!a || (b.t||0)>=(a.t||0)) ? b : a;
+  });
   out.streak=Math.max(ST.streak||0,remote.streak||0);
   return out;
 }
@@ -1172,10 +1184,10 @@ function showGloss(raw){
   const g=lookup(raw);
   const body=$('glossBody');
   if(!g){
-    body.innerHTML='<div class="gw">'+esc(raw)+' '+spk(raw)+'</div><div class="gd">這個字還沒有在字庫裡。可以先聽發音，或到「單字卡」分頁瀏覽課堂單字。</div>';
+    body.innerHTML='<div class="gw">'+esc(raw)+' '+spk(raw)+' '+wbBtn(raw,'點字查詢')+'</div><div class="gd">這個字還沒有在字庫裡。可以先聽發音，或到「單字卡」分頁瀏覽課堂單字。</div>';
   }else{
     body.innerHTML=
-      '<div class="gw">'+esc(g.w)+' '+spk(g.w)+(g.pos?' <span class="fp" style="font-size:calc(12px * var(--fs))">'+esc(g.pos)+'</span>':'')+'</div>'
+      '<div class="gw">'+esc(g.w)+' '+spk(g.w)+' '+wbBtn(g.w,g.src||'點字查詢')+(g.pos?' <span class="fp" style="font-size:calc(12px * var(--fs))">'+esc(g.pos)+'</span>':'')+'</div>'
       +(g.ipa?'<div class="gi">'+esc(g.ipa)+'</div>':'')
       +(g.cn?'<div class="gc">'+esc(g.cn)+'</div>':'')
       +(g.def?'<div class="gd">'+esc(g.def)+'</div>':'')
@@ -1214,14 +1226,13 @@ let TAB='daily';
 let FROM_TAB=null;
 const RENDER={};
 /* 底部導覽把「單字卡＋文法」收攏成一顆「練習」：記住上次停留的子分頁，下次點練習直接回到那頁 */
-let PRAC_LAST='vocab';
-const NAVMAP={vocab:'prac',gram:'prac'};
+/* 文法在 2026-08-24 依使用者要求恢復為獨立分頁；「練習」改名「單字卡」只放單字複習 */
+const NAVMAP={vocab:'prac'};
 function go(t,visualTab){
   TAB=t;
-  if(NAVMAP[t]==='prac') PRAC_LAST=t;
   const vt=NAVMAP[visualTab||t]||visualTab||t;
   ['daily','read','book','listen','vocab','gram','prog'].forEach(k=>{ $('v-'+k).hidden = (k!==t); });
-  ['daily','read','book','listen','prac','prog'].forEach(k=>{
+  ['daily','read','book','listen','prac','gram','prog'].forEach(k=>{
     const b=$('t-'+k); if(b) b.classList.toggle('on', k===vt);
   });
   if(t!=='listen') destroyPlayer();
@@ -1597,7 +1608,7 @@ function readerHTML(a){
      + tg.map((t,i)=>{
        return '<div class="wpitem">'
        +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="showGloss(\''+esc(t.w).replace(/'/g,"\\'")+'\')">'+esc(t.w)+'</w> '
-       +spk(t.w)+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
+       +spk(t.w)+wbBtn(t.w,'閱讀文章')+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
        +'<div class="zh">'+esc(t.cn)+'</div>'
        +(t.def?'<div class="def">'+esc(t.def)+'</div>':'')
        +(t.ex?'<div class="exs">'+esc(t.ex)+' '+spk(t.ex)+(t.exCn?'<div class="excn">'+esc(t.exCn)+'</div>':'')+'</div>':'')
@@ -1826,9 +1837,6 @@ function grade(w,g){
   save();
 }
 
-/* 練習分頁頂部的子分頁切換（單字卡 ↔ 文法） */
-const pracTabs=cur=>'<div class="chips" style="margin-bottom:12px">'
-  +[['vocab','🔤 單字卡'],['gram','📐 文法']].map(([k,t])=>'<button class="chip'+(cur===k?' on':'')+'" onclick="go(\''+k+'\')">'+t+'</button>').join('')+'</div>';
 let vCat='all', vQueue=[], vIdx=0, vFlip=false, vSession={done:0,again:0};
 RENDER.vocab=function(){
   const v=$('v-vocab');
@@ -1838,7 +1846,7 @@ RENDER.vocab=function(){
     Object.keys(CATS).forEach(c=>counts[c]=VOCAB.filter(x=>x.cat===c).length);
     const learned=Object.keys(ST.srs).length;
     const dueN=VOCAB.filter(x=>isDue(x.w)).length;
-    v.innerHTML=pracTabs('vocab')+'<div class="card"><h2 class="sec">🔤 單字卡 · 間隔複習</h2>'
+    v.innerHTML='<div class="card"><h2 class="sec">🔤 單字卡 · 間隔複習</h2>'
       +'<div class="hint">系統會根據你按的按鈕自動安排下次複習日：<b>忘記</b>當天再出現，<b>很簡單</b>會拉長到好幾天甚至幾週後。每天新字上限 '+(ST.newPerDay||12)+' 個。</div>'
       +'<div class="stats"><div class="stat"><b>'+VOCAB.length+'</b><span>課堂總單字</span></div>'
       +'<div class="stat"><b>'+learned+'</b><span>已開始學</span></div>'
@@ -1853,6 +1861,7 @@ RENDER.vocab=function(){
       +((q.due.length+q.fresh.length)?'':'<div class="muted" style="margin-top:9px">✅ 這個分類今天沒有要複習的字了。可以調整每日新字上限：'
         +'<button class="chip" onclick="vNewLimit(12)">12</button><button class="chip" onclick="vNewLimit(20)">20</button><button class="chip" onclick="vNewLimit(30)">30</button></div>')
       +'</div>'
+      + wbCard()
       + (vBrowseOn?browseHTML():'');
     return;
   }
@@ -1923,6 +1932,82 @@ function goReview(){
 }
 window.goReview=goReview;
 window.vSet=vSet;window.vStart=vStart;window.vDoFlip=vDoFlip;window.vGrade=vGrade;window.vQuit=vQuit;window.vBrowse=vBrowse;window.vNewLimit=vNewLimit;
+
+/* ============================================================
+   5.5 生詞本（星號收藏，跨裝置同步）
+   - 課本單字表、單字彈窗、單字總表都有 ☆ 收藏鈕
+   - 收藏的字集中在「單字卡」分頁的生詞本卡片，可獨立複習
+   - 存在 ST.wb（per-字 {on, t, src}），移除留墓碑，跨裝置合併取較新
+   ============================================================ */
+function wbGet(){ if(!ST.wb) ST.wb={}; return ST.wb; }
+function wbKey(w){ return String(w||'').toLowerCase().trim(); }
+function wbOn(w){ const e=wbGet()[wbKey(w)]; return !!(e&&e.on); }
+function wbCount(){ const wb=wbGet(); return Object.keys(wb).filter(k=>wb[k].on).length; }
+function wbTog(w,src){
+  const k=wbKey(w); if(!k) return;
+  const wb=wbGet();
+  const on=!(wb[k]&&wb[k].on);
+  wb[k]={on:on?1:0, t:Date.now(), src:src||((wb[k]||{}).src||'')};
+  save();
+  /* 同一個字的所有星號一起換狀態（表格、彈窗、生詞本清單可能同時各有一顆） */
+  document.querySelectorAll('.wbb').forEach(b=>{
+    if(wbKey(b.dataset.w)!==k) return;
+    b.classList.toggle('on',on);
+    b.textContent=on?'★':'☆';
+    b.title=on?'已在生詞本，點一下移除':'加入生詞本';
+  });
+  const n=$('wb-count'); if(n) n.textContent=wbCount();
+  if(TAB==='vocab'&&!vQueue.length) RENDER.vocab();   // 生詞本卡片的清單同步刷新
+}
+function wbBtn(w,src){
+  const k=wbKey(w); if(!k) return '';
+  const on=wbOn(k);
+  return '<button class="wbb'+(on?' on':'')+'" data-w="'+esc(k)+'" data-src="'+esc(src||'')+'"'
+   +' onclick="event.stopPropagation();wbTog(this.dataset.w,this.dataset.src)"'
+   +' title="'+(on?'已在生詞本，點一下移除':'加入生詞本')+'">'+(on?'★':'☆')+'</button>';
+}
+/* 收藏的字補齊卡片資訊：優先用課堂單字庫 VOCAB，其次全站字庫 GLOSS */
+function wbItems(){
+  const wb=wbGet();
+  return Object.keys(wb).filter(k=>wb[k].on)
+    .sort((a,b)=>(wb[b].t||0)-(wb[a].t||0))
+    .map(k=>{
+      const g=GLOSS[k]||{};
+      const v=VOCAB.find(x=>wbKey(x.w)===k)||{};
+      return {w:v.w||g.w||k, ipa:v.ipa||g.ipa||'', pos:v.pos||g.pos||'', cn:v.cn||g.cn||'',
+        def:v.def||g.def||'', exEn:v.exEn||g.exEn||'', exCn:v.exCn||g.exCn||'',
+        src:wb[k].src||g.src||v.src||''};
+    });
+}
+let wbListOn=false;
+function wbTogList(){ wbListOn=!wbListOn; RENDER.vocab(); }
+function wbStart(){
+  const items=wbItems(); if(!items.length) return;
+  vQueue=items.slice();
+  for(let i=vQueue.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=vQueue[i]; vQueue[i]=vQueue[j]; vQueue[j]=t; }
+  vIdx=0; vFlip=false; vSession={done:0,again:0};
+  go('vocab'); RENDER.vocab(); window.scrollTo(0,0);
+}
+function wbCard(){
+  const items=wbItems();
+  let h='<div class="card"><h2 class="sec">⭐ 我的生詞本（<span id="wb-count">'+items.length+'</span>）</h2>'
+   +'<div class="hint">在<b>課本單字表</b>、<b>單字總表</b>或<b>點字查詢的彈窗</b>裡點 ☆，不熟的字就會收進來。收藏的字可以獨立複習，跟每日單字卡分開、不佔新字額度。</div>';
+  if(!items.length){
+    h+='<div class="muted">還沒有收藏任何字。去課本或文章裡把不熟的字點 ☆ 收進來吧。</div></div>';
+    return h;
+  }
+  h+='<div class="row"><button class="btn" onclick="wbStart()">複習生詞本 '+items.length+' 張</button>'
+   +'<button class="btn ghost" onclick="wbTogList()">'+(wbListOn?'收合清單':'瀏覽清單')+'</button></div>';
+  if(wbListOn){
+    h+='<div class="tw" style="margin-top:12px"><table><tr><th>單字</th><th>中文</th><th>來源</th><th style="width:44px">移除</th></tr>'
+     + items.map(x=>'<tr><td><w onclick="showGloss(\''+esc(x.w)+'\')" style="font-weight:600;color:var(--accent2)">'+esc(x.w)+'</w> '+spk(x.w)+'</td>'
+       +'<td>'+esc(x.cn||'—')+'</td><td class="muted" style="font-size:calc(11.5px * var(--fs))">'+esc(x.src||'—')+'</td>'
+       +'<td style="text-align:center">'+wbBtn(x.w)+'</td></tr>').join('')
+     +'</table></div>';
+  }
+  return h+'</div>';
+}
+window.wbTog=wbTog; window.wbStart=wbStart; window.wbTogList=wbTogList;
 function browseHTML(){
   const pool=VOCAB.filter(v=>vCat==='all'||v.cat===vCat);
   return '<div class="card"><h2 class="sec">📋 單字總表（'+pool.length+'）</h2>'
@@ -1930,7 +2015,7 @@ function browseHTML(){
    + pool.map(v=>{
        const s=srs(v.w);
        const st = !s ? '—' : (s.due<=today()?'🔁 待複習':'✓ '+s.due);
-       return '<tr><td><w onclick="showGloss(\''+esc(v.w)+'\')" style="font-weight:600;color:var(--accent2)">'+esc(v.w)+'</w></td><td>'+esc(v.pos||'')+'</td><td>'+esc(v.cn||'')+'</td><td>'+st+'</td></tr>';
+       return '<tr><td><w onclick="showGloss(\''+esc(v.w)+'\')" style="font-weight:600;color:var(--accent2)">'+esc(v.w)+'</w> '+wbBtn(v.w,'課堂單字')+'</td><td>'+esc(v.pos||'')+'</td><td>'+esc(v.cn||'')+'</td><td>'+st+'</td></tr>';
      }).join('')
    +'</table></div></div>';
 }
@@ -1942,7 +2027,7 @@ let CURG=null;
 RENDER.gram=function(){
   const v=$('v-gram');
   if(CURG){ v.innerHTML=gramHTML(CURG); return; }
-  v.innerHTML=pracTabs('gram')+'<div class="card"><h2 class="sec">📐 文法系統教材</h2>'
+  v.innerHTML='<div class="card"><h2 class="sec">📐 文法系統教材</h2>'
     +'<div class="hint">單元順序就是建議的學習順序：先把 B1 的時態基礎穩住，再進 B2 的被動、關係子句、分詞與倒裝。每個單元都有 ⚠️ 常見錯誤與練習題。</div>'
     +'<div class="muted">共 '+ALL_GRAM.length+' 個單元'+(DAILY_GRAM.length?'（其中 '+DAILY_GRAM.length+' 個是每週三、五自動新增）':'')+'</div></div>'
     + ALL_GRAM.map(g=>{
@@ -1975,12 +2060,14 @@ function gramHTML(g){
 
   h+='<div class="card">'+ (g.sections||[]).map(s=>{
     let x='<div class="gsec"><h3>'+esc(s.h)+'</h3>';
-    if(s.body) x+= s.body.map(b=>'<div class="gline" style="font-size:calc(14.5px * var(--fs));margin-bottom:5px">'+mkTextSpk(b)+'</div>').join('');
+    /* 每日文法的資料有時把 body/bullets 寫成單一字串而不是陣列，這裡都收：
+       之前遇過字串直接 .map 拋錯，整個單元打不開 */
+    if(s.body) x+= (Array.isArray(s.body)?s.body:[s.body]).map(b=>'<div class="gline" style="font-size:calc(14.5px * var(--fs));margin-bottom:5px">'+mkTextSpk(b)+'</div>').join('');
     if(s.table){
       x+='<div class="tw"><table><tr>'+s.table.head.map(t=>'<th>'+esc(t)+'</th>').join('')+'</tr>'
        + s.table.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</table></div>';
     }
-    if(s.bullets) x+='<ul>'+s.bullets.map(b=>'<li class="gline">'+mkTextSpk(b)+'</li>').join('')+'</ul>';
+    if(s.bullets) x+='<ul>'+(Array.isArray(s.bullets)?s.bullets:[s.bullets]).map(b=>'<li class="gline">'+mkTextSpk(b)+'</li>').join('')+'</ul>';
     if(s.examples) x+= s.examples.map(e=>'<div class="ex"><div class="een">'+esc(e.en)+' '+spk(e.en)+'</div>'
        +'<div class="ecn">'+esc(e.cn)+'</div>'+(e.note?'<div class="enote">→ '+mkText(e.note)+'</div>':'')+'</div>').join('');
     return x+'</div>';
@@ -2673,13 +2760,13 @@ function bookHTML(b){
   /* 單字表（桌機表格＋手機卡片共用；中文欄放最後、跟中譯開關） */
   const vtable=list=>'<div class="bkvd card" style="padding:10px"><div class="tw" style="margin:0"><table class="bkvtab">'
     +'<tr><th>單字</th><th>音標</th><th>詞性</th><th>例句</th><th class="cnx">中文</th></tr>'
-    + list.map(t=>'<tr><td style="font-weight:700">'+(t.star?'<span class="starb" title="重點單字">⭐</span>':'')+esc(t.w)+' '+spk(t.w)+'</td>'
+    + list.map(t=>'<tr><td style="font-weight:700">'+(t.star?'<span class="starb" title="重點單字">⭐</span>':'')+esc(t.w)+' '+spk(t.w)+wbBtn(t.w,'課本：'+b.titleCn)+'</td>'
       +'<td class="nw" style="font-family:ui-monospace,monospace">'+esc(t.ipa)+'</td><td class="nw">'+esc(t.pos)+'</td>'
       +'<td><span class="sent" data-t="'+esc(t.ex)+'" onclick="saySent(this)">'+bkHi(t.ex,t.w)+'</span> '+spk(t.ex)+'<div class="muted cnx">'+esc(t.exCn)+'</div></td>'
       +'<td class="nw cnx">'+esc(t.cn)+'</td></tr>').join('')
     +'</table></div></div>'
     +'<div class="bkvm">'+list.map(t=>'<div class="bkvcard">'
-      +'<div class="w">'+(t.star?'<span class="starb" title="重點單字">⭐</span>':'')+esc(t.w)+' <span class="pos">'+esc(t.pos)+'</span>'+spk(t.w)+'</div>'
+      +'<div class="w">'+(t.star?'<span class="starb" title="重點單字">⭐</span>':'')+esc(t.w)+' <span class="pos">'+esc(t.pos)+'</span>'+spk(t.w)+wbBtn(t.w,'課本：'+b.titleCn)+'</div>'
       +'<div class="ipa">'+esc(t.ipa)+'</div>'
       +'<div class="cnw cnx">'+esc(t.cn)+'</div>'
       +'<div class="bkex" style="margin-bottom:0"><div class="een"><span class="sent" data-t="'+esc(t.ex)+'" onclick="saySent(this)">'+bkHi(t.ex,t.w)+'</span> '+spk(t.ex)+'</div><div class="ecn cnx">'+esc(t.exCn)+'</div></div>'
@@ -2724,7 +2811,7 @@ function bookHTML(b){
     h+=subh(b.vocabReviewTitle||'⭐ 前次已學單字')
      +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table class="bkrev">'
      +'<tr><th>單字</th><th>音標</th><th>詞性</th><th class="cnx">中文</th></tr>'
-     + b.vocabReview.map(t=>'<tr><td class="nw" style="font-weight:700">'+esc(t.w)+' '+spk(t.w)+'</td>'
+     + b.vocabReview.map(t=>'<tr><td class="nw" style="font-weight:700">'+esc(t.w)+' '+spk(t.w)+wbBtn(t.w,'課本：'+b.titleCn)+'</td>'
        +'<td class="nw" style="font-family:ui-monospace,monospace">'+esc(t.ipa)+'</td><td class="nw">'+esc(t.pos)+'</td>'
        +'<td class="nw cnx">'+esc(t.cn)+'</td></tr>').join('')
      +'</table></div></div>';
