@@ -20,7 +20,7 @@ window.BOOK = {
           wrong: 'If someone is bullying you, you should report manager this problem.',
           fix: 'If someone is bullying you, you should report the problem to your manager.',
           cn: '如果有人霸凌你，你應該向你的主管回報這個問題。',
-          pat: 'Subject + should report + the problem + to + someone',
+          pat: 'Subject + (modal) + report + something + to + someone',
           note: 'report 要先接「事情」，再用 to 接「人」：report the problem to your manager；它不像 tell / give 可以說 report manager this problem。If 子句用現在進行式 is bullying，表示霸凌正在發生。'
         },
         {
@@ -65,7 +65,7 @@ window.BOOK = {
       ],
       vocabTitle: 'II. 單字 Vocabulary',
       vocab: [
-        { w: 'bully', ipa: '/ˈbʊli/', pos: 'v.', cn: '霸凌',
+        { w: 'bully', ipa: '/ˈbʊli/', pos: 'v.', cn: '霸凌（亦可作 n. 霸凌者）',
           ex: 'If someone is bullying you, you should report the problem to your manager.', exCn: '如果有人霸凌你，你應該向主管回報這個問題。' },
         { w: 'curious', ipa: '/ˈkjʊriəs/', pos: 'adj.', cn: '好奇的',
           ex: 'Tom was curious about my life in Vietnam.', exCn: 'Tom 對我在越南的生活感到好奇。' },
@@ -99,13 +99,13 @@ window.BOOK = {
           ex: "I'll purchase the necessary equipment for the test room soon.", exCn: '我很快就會購買測試室所需的設備。' },
         { w: 'invoice', star: true, ipa: '/ˈɪnvɔɪs/', pos: 'n.', cn: '發票；請款單',
           ex: "The invoices are under my boss's review.", exCn: '發票正在我老闆審核中。' },
-        { w: 'equipment', ipa: '/ɪˈkwɪpmənt/', pos: 'n.', cn: '設備（不可數）',
+        { w: 'equipment', ipa: '/ɪˈkwɪpmənt/', pos: 'n.', cn: '設備 [U]（不可數）',
           ex: 'I will complete the equipment setup.', exCn: '我會完成設備的安裝。' }
       ],
       vocab2Title: '補充單字（取自講義摘要 Summary）',
       vocab2: [
-        { w: 'adapter', ipa: '/əˈdæptər/', pos: 'n.', cn: '轉接器（extra cable）',
-          ex: 'He needed an extra cable to connect to the HDMI port.', exCn: '他需要一條額外的轉接線才能接上 HDMI 埠。' },
+        { w: 'adapter', ipa: '/əˈdæptər/', pos: 'n.', cn: '轉接器／適配器',
+          ex: 'He needed an HDMI adapter to connect his laptop to the TV.', exCn: '他需要一個 HDMI 轉接器，才能把筆電接上電視。' },
         { w: 'sort out', star: true, ipa: '/sɔːrt aʊt/', pos: 'phr. v.', cn: '解決（問題）',
           ex: 'After sorting out the issues, he successfully connected his device to the TV.', exCn: '解決問題之後，他成功把裝置連上電視。' },
         { w: 'device', ipa: '/dɪˈvaɪs/', pos: 'n.', cn: '裝置',
@@ -113,11 +113,11 @@ window.BOOK = {
       ],
       phrasesTitle: 'III. 片語與搭配詞 Phrases & Collocations',
       phrases: [
-        { p: 'report something to someone', cn: '向某人回報某事',
+        { p: 'report something to someone', cn: '把某事回報給某人',
           ex: 'You should report the problem to your manager.', exCn: '你應該向主管回報這個問題。' },
         { p: 'apologize to someone', cn: '向某人道歉',
           ex: 'She needs to apologize to him.', exCn: '她需要向他道歉。' },
-        { p: 'put away', cn: '收起來',
+        { p: 'put something away', cn: '把某物收起來（代名詞 it / them 一定放中間）',
           ex: 'My phone is a big distraction, so I need to put it away.', exCn: '我的手機很讓我分心，所以我需要把它收起來。' },
         { p: 'at the last minute', cn: '在最後一刻',
           ex: 'We finished the project at the last minute.', exCn: '我們在最後一刻才完成專案。' },
@@ -143,18 +143,19 @@ window.BOOK = {
       grammarTitle: 'IV. 句型與文法解說 Sentence Patterns & Grammar',
       grammar: [
         {
-          k: 'A', title: 'report + 事情 + to + 人',
+          k: 'A', title: '回報：report sth to sb',
           pat: 'report + something + to + someone',
           pts: [
             'report 先接「事情」，再用 to 接「人」：You should report the problem to your manager.',
-            '⚠️ ❌ report manager this problem（report 不像 tell / give 有雙受詞用法）。'
+            '⚠️ ❌ report the manager this problem（report 不像 tell / give 有「人＋事」的雙受詞用法，人一定要用 to 帶出）。'
           ]
         },
         {
           k: 'B', title: '片語動詞 + 代名詞：put it away',
-          pat: 'put + it / them + away',
+          pat: 'put + 代名詞/名詞 + away',
           pts: [
             '受詞是代名詞時要放中間：My phone is a big distraction, so I need to put it away.',
+            '普通名詞放中間或後面都可以（put the phone away ／ put away the phone），但代名詞 it / them 一定要放中間。',
             '⚠️ ❌ put away it / take away it。'
           ]
         },
@@ -162,7 +163,7 @@ window.BOOK = {
           k: 'C', title: 'lend vs. borrow（借出與借入）',
           pat: 'lend + 人 + 物（lend – lent – lent）',
           pts: [
-            'Lend means give 📤（借出）；Borrow means take 📥（借入）。',
+            'Lend（借出 📤 out）：lend something to someone；Borrow（借入 📥 in）：borrow something from someone。',
             "✅ My client's laptop was out of battery, so I lent him mine.（mine ＝ my laptop，所有格代名詞）"
           ]
         },
@@ -204,10 +205,10 @@ window.BOOK = {
         {
           title: 'A. 筆電電量與簡報 Laptop Battery & Presentation',
           exs: [
-            { en: 'I need to charge my laptop.', cn: '我需要幫筆電充電。' },
-            { en: 'My laptop is running out of battery.', cn: '我的筆電快沒電了。' },
-            { en: 'My laptop died. / My laptop is dead.', cn: '我的筆電沒電了（口語說法）。' },
-            { en: 'He wanted to use an HDMI cable to show his PowerPoint presentation.', cn: '他想用 HDMI 線來播放他的 PowerPoint 簡報。' },
+            { en: 'I need to charge my laptop.', cn: '我需要幫筆電充電。', hi: 'charge' },
+            { en: 'My laptop is running out of battery.', cn: '我的筆電快沒電了（正在耗盡、還沒完全沒電）。', hi: 'running out of' },
+            { en: 'My laptop died. / My laptop is dead.', cn: '我的筆電沒電了（口語；指已經完全沒電、關機了）。', hi: 'died dead' },
+            { en: 'He wanted to use an HDMI cable to show his PowerPoint presentation.', cn: '他想用 HDMI 線進行 PowerPoint 簡報。', hi: 'HDMI cable' },
             { en: 'Finally he connected to the TV successfully.', cn: '最後他成功連接到電視了。' },
             { en: 'I can lend you my device.', cn: '我可以把我的裝置借給你。' },
             { en: "That's all for my presentation.", cn: '我的簡報到這裡（結束）。' }
@@ -274,7 +275,7 @@ window.BOOK = {
         { k: 'lend 的動詞三態', en: 'lend – lent – lent', cn: '借出（不規則動詞）' },
         { k: '筆電沒電的口語', en: 'My laptop died. / My laptop is dead.', cn: '筆電沒電了（正式一點說 run out of battery）' },
         { k: 'spec 的全稱', en: 'spec ＝ specification（spe-ci-fi-CA-tion）', cn: '規格（重音在 CA 音節）' },
-        { k: '檔案壞掉的說法', en: 'broken（口語）／damaged／corrupted（技術）', cn: '壞掉的／損壞的／損毀的' },
+        { k: '檔案壞掉的說法', en: 'corrupted（檔案最道地）／damaged／broken（口語，多指實體物品）', cn: '損毀的／損壞的／壞掉的' },
         { k: '完全相同', en: 'the same ＝ identical', cn: '一樣的／完全相同的' },
         { k: '簡報／說明結尾', en: "That's all. That's all about this part. Done.", cn: '就這樣。這部分到此。完成了。' },
         { k: '更自然的謝詞', en: 'Thank you for listening.（講義原文：Thank you for your listening）', cn: '謝謝聆聽（for + V-ing，不加 your）' },
@@ -285,15 +286,15 @@ window.BOOK = {
       ],
       summaryTitle: 'VIII. 快速總結 Quick Summary',
       summary: [
-        { k: '借出 vs 借入', v: 'lend（give 📤）– lent – lent；borrow（take 📥）' },
+        { k: '借出 vs 借入', v: 'lend something to someone（借出 📤 out）– lent – lent；borrow something from someone（借入 📥 in）' },
         { k: '筆電沒電', v: 'My laptop is running out of battery. / My laptop died. / My laptop is dead.' },
-        { k: '檔案壞了', v: "My file is corrupted. / broken / isn't working properly / I can't open my file." },
+        { k: '檔案壞了', v: "My file is corrupted. / is damaged / isn't working properly / I can't open my file.（broken 多指實體物品）" },
         { k: '檔案太大', v: 'reduce its size / make it smaller / compress the file' },
         { k: '「正在……中」', v: 'under construction 施工中；under review 審核中' },
         { k: '片語動詞 + 代名詞', v: 'put it away（代名詞放中間，不說 put away it）' },
         { k: '最後一刻', v: 'at the last minute（不說 at last time）' },
         { k: '回報問題', v: 'report the problem to your manager（report + 事 + to + 人）' },
-        { k: '道歉', v: 'apologize to someone（比 give an apology 更道地）' },
+        { k: '道歉', v: 'apologize to someone for something（比 give an apology 更道地）' },
         { k: '簡報結尾', v: "That's all for my presentation." }
       ]
     },
