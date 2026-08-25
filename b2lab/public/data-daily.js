@@ -298,8 +298,8 @@ articles:[
   "upgrade": [
     {
       "b1": "She gets up at six, not seven.",
-      "b2": "She has moved her alarm an hour earlier.",
-      "note": "用現在完成式 has moved 點出「這個改變到現在還持續有效」，比只講事實多一層時間感。"
+      "b2": "She has set her alarm an hour earlier.",
+      "note": "調鬧鐘道地的動詞搭配是 set an alarm；用現在完成式 has set 點出「這個改變到現在還持續有效」，比只講事實多一層時間感。"
     },
     {
       "b1": "The office is quiet when she arrives.",
@@ -1301,7 +1301,7 @@ grammar:[
   "title": "Like, Want, Know — Verbs with No -ing",
   "titleCn": "like、want、know——不加 -ing 的動詞",
   "srcDays": [],
-  "summary": "有一群動詞講的是「感覺」和「想法」，不是動作——like（喜歡）、want（想要）、know（知道）。這些動詞永遠用原形（第三人稱加s），就算是「現在」也不加 -ing。",
+  "summary": "有一群動詞講的是「感覺」和「想法」，不是動作——like（喜歡）、want（想要）、know（知道）。這類動詞叫「狀態動詞（Stative Verbs）」：不用進行式（-ing），用現在簡單式——第三人稱單數記得加 -s（He likes）。",
   "sections": [
     {
       "h": "兩種動詞",
@@ -1319,8 +1319,8 @@ grammar:[
           ],
           [
             "講現在",
-            "He is making eggs.（正在做）",
-            "He likes coffee.（不加 -ing）"
+            "He is making eggs.（現在進行式）",
+            "He likes coffee.（現在簡單式）"
           ],
           [
             "為什麼",
@@ -1397,7 +1397,13 @@ grammar:[
         "liking"
       ],
       "ans": 1,
-      "expl": "like 是狀態動詞不加 -ing，主詞Tom是三單，動詞加s：likes。"
+      "expl": "like 是狀態動詞不加 -ing，主詞Tom是三單，動詞加s：likes。",
+      "optExpl": [
+        "💡 like 是狀態動詞，不能用進行式喔！",
+        null,
+        "💡 主詞 Tom 是第三人稱單數，記得加 -s 喔！",
+        "💡 liking 前面沒有 be 動詞不能單獨當動詞，而且 like 是狀態動詞——直接用 likes。"
+      ]
     },
     {
       "q": "I ___ the answer to this question.",
@@ -1406,10 +1412,16 @@ grammar:[
         "am knowing",
         "knows",
         "know",
-        "am know"
+        "knowing"
       ],
       "ans": 2,
-      "expl": "know 是狀態動詞，主詞是I，用原形 know。"
+      "expl": "know 是狀態動詞，主詞是I，用原形 know。",
+      "optExpl": [
+        "💡 know 是狀態動詞，不能用進行式喔！",
+        "💡 主詞是 I，動詞不用加 -s。",
+        null,
+        "💡 knowing 前面沒有 be 動詞不能單獨當動詞，而且 know 是狀態動詞——直接用 know。"
+      ]
     },
     {
       "q": "Look! He ___ breakfast in the kitchen.",
@@ -1421,7 +1433,13 @@ grammar:[
         "is make"
       ],
       "ans": 1,
-      "expl": "make 是動作動詞，Look! 表示現在正在發生，用現在進行式 is making。"
+      "expl": "make 是動作動詞，Look! 表示現在正在發生，用現在進行式 is making。",
+      "optExpl": [
+        "💡 Look! 表示「此刻正在發生」，要用現在進行式。",
+        null,
+        "💡 此刻正在做的動作 → be + V-ing。",
+        "💡 is 後面要接 V-ing：is making。"
+      ]
     },
     {
       "q": "___ you ___ a bigger bag?",
@@ -1433,7 +1451,13 @@ grammar:[
         "Are / need"
       ],
       "ans": 1,
-      "expl": "need 是狀態動詞，疑問句用 Do you need...?，不能用進行式。"
+      "expl": "need 是狀態動詞，疑問句用 Do you need...?，不能用進行式。",
+      "optExpl": [
+        "💡 need 是狀態動詞，不能用進行式喔！",
+        null,
+        "💡 主詞是 you，助動詞用 Do 不是 Does。",
+        "💡 一般動詞的疑問句用 Do，不是 Are。"
+      ]
     }
   ]
 },

@@ -188,6 +188,9 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 .item .meta{font-size:calc(11.5px * var(--fs));color:#57504a;margin-top:7px;display:flex;gap:6px 15px;flex-wrap:wrap;align-items:center}
 /* meta 靠右群組：字數＋預估時間靠右對齊，跟左側「難度＋類別」分開呈現 */
 .item .meta .mR{margin-left:auto;white-space:nowrap}
+/* 清單卡片右下的行動引導：讓「可以點進去」一目了然 */
+.item .goCta{text-align:right;color:var(--accent2);font-weight:800;font-size:calc(13px * var(--fs));margin-top:6px}
+@media(hover:hover){.item:hover .goCta{text-decoration:underline}}
 .item .done{color:var(--ok);font-weight:700}
 /* ---------- reading view ---------- */
 .para{margin:0 0 16px}
@@ -281,7 +284,8 @@ tr:nth-child(even) td{background:#fdfbf8}
 .stat.tap:active{background:#fff7ee}
 .stat.go{cursor:pointer}
 .stat.go:active{background:#fff7ee}
-@media(hover:hover){.stat.go:hover,.stat.tap:hover{border-color:var(--accent2);box-shadow:0 3px 10px rgba(60,45,30,.1)}}
+@media(hover:hover){.stat.go:hover,.stat.tap:hover{border-color:var(--accent2);background:#fffaf2;box-shadow:0 3px 10px rgba(60,45,30,.12);transform:translateY(-1px)}}
+.stat.go,.stat.tap{transition:background .12s,box-shadow .12s,transform .12s}
 /* 今日待複習 > 0：整格改深橘滿版當 CTA，第一眼就知道先去清複習 */
 .stat.cta{background:linear-gradient(135deg,#f0964f,#d9691f);border-color:#c95f16}
 .stat.cta b,.stat.cta b i,.stat.cta span{color:#fff}
@@ -378,7 +382,9 @@ tr:nth-child(even) td{background:#fdfbf8}
 .q .qcn{font-size:calc(13.5px * var(--fs));color:var(--ink2);font-weight:400;margin-top:3px}
 .opt .ocn{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:2px}
 .trap{background:#fff6f5;border:1px solid #f3d5d2;border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:calc(16px * var(--fs))}
-.trap .bad{color:var(--bad);text-decoration:line-through;text-decoration-color:rgba(217,83,79,.45);opacity:.7}
+.trap .bad{color:var(--bad);text-decoration:line-through;text-decoration-color:#b3261e;text-decoration-thickness:2px;opacity:.85}
+.cnTrap{display:inline-block;background:#fff1de;border:1px solid #e8b13a;color:#9a5a1c;border-radius:6px;padding:1px 7px;font-size:calc(12px * var(--fs));font-weight:800;margin-right:5px;text-decoration:none}
+.expl .ohint{background:#fff6e8;border:1px solid #f0cf9a;border-radius:8px;padding:6px 9px;margin-bottom:6px;color:#8a5410;font-weight:700}
 .trap .good{color:var(--ok);font-weight:700;background:linear-gradient(to bottom,transparent 60%,rgba(47,158,95,.13) 60%);display:inline}
 .trap .why{font-size:calc(14.5px * var(--fs));color:var(--ink2);margin-top:4px}
 /* 錯誤示範一律紅色、正確示範一律綠色（文法解說、例句註解、常見錯誤都適用） */
@@ -393,6 +399,8 @@ tr:nth-child(even) td{background:#fdfbf8}
 .upg.c1{background:#e9f6f1;border-color:#cfe9df}         .upg.c1 .un{color:#1f6b57}
 .upg.c2{background:#fdf2e5;border-color:#f4ddc1}         .upg.c2 .un{color:#9a5a1c}
 .upg.c3{background:#eaf2fb;border-color:#cfe0f2}         .upg.c3 .un{color:#2b5f92}
+/* 升級句裡「跟 B1 不一樣的字」上底色，一眼看出升級了哪裡 */
+.upg .udiff{background:linear-gradient(to bottom,transparent 55%,#ffd89b 55%);color:#8a4a0e;border-radius:3px;padding:0 1px}
 /* ---------- 影片播放器（16:9 自適應） ---------- */
 .ytwrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:12px;overflow:hidden;margin-top:11px}
 /* 影片黏在上方：往下捲字幕時影片仍一直看得到（一頁檢視，參照 Speak Up） */
@@ -449,9 +457,11 @@ tr:nth-child(even) td{background:#fdfbf8}
   box-shadow:var(--shadow);padding:10px;overflow:hidden}
 .artbox svg{display:block;width:100%;height:auto;border-radius:9px}
 .artbox figcaption{
-  font-size:calc(13px * var(--fs));color:var(--ink2);line-height:1.7;margin-top:9px;
-  padding:8px 10px;background:#fdfbf8;border-radius:8px;border-left:3px solid var(--accent)
+  font-size:calc(13.5px * var(--fs));color:var(--ink2);line-height:1.8;margin-top:9px;
+  padding:9px 11px;background:#fdfbf8;border-radius:8px;border-left:3px solid var(--accent)
 }
+.artbox .steps{margin:0}
+.artbox .steps .stp{font-size:calc(13px * var(--fs))}
 /* 內文重點字：橘色加粗＋上標編號 */
 w.tgt{color:#c0561a;font-weight:800}
 sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
@@ -466,6 +476,10 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 .wpitem{border-bottom:1px dashed var(--line);padding:9px 0}
 .wpitem:last-child{border-bottom:0}
 .wpline{font-size:calc(16px * var(--fs));font-weight:800;color:#1f1a14;display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+/* 單字列的 🔊 與 ★ 點擊熱區放大＋hover 反饋，滑鼠和觸控都好按 */
+.wpline .spk,.wpline .wbb{font-size:calc(15px * var(--fs));padding:4px 10px;min-width:34px}
+@media(hover:hover){.wpline .spk:hover,.wpline .wbb:hover{background:var(--accent-soft);border-color:var(--accent)}}
+.wpitem.flash{background:#fff3dd;box-shadow:0 0 0 2px #e8b13a inset;border-radius:10px}
 .wpline .n{color:#c0392b;font-weight:900}
 .wpline .ipa{font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2);font-weight:400}
 .wpline .pos{font-size:calc(12.5px * var(--fs));color:#2b7a78;font-weight:800;font-style:italic}
@@ -476,8 +490,10 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 .extra{display:flex;flex-wrap:wrap;gap:6px}
 .extra span{
   font-size:calc(15px * var(--fs));background:#f2f7f7;border:1px solid #cfe3e2;border-radius:20px;
-  padding:5px 13px;cursor:pointer;transition:background .12s
+  padding:5px 13px;cursor:pointer;transition:background .12s,border-color .12s
 }
+.extra span::after{content:' ›';color:#5f8f8d;font-weight:800}
+@media(hover:hover){.extra span:hover{background:#e3efee;border-color:#9cc4c2}}
 /* 剛點過的補充詞彙：浮起來的立體感，跟內文單字一致 */
 .extra span.tapped{
   background:linear-gradient(#ffd89b,#ffbe57);border-color:#c8801f;color:#5b3210;font-weight:700;
@@ -860,21 +876,31 @@ function boldEn(html){
 }
 /* 三者都套用：錯的變紅 + 句號換行 + 英文例句加粗 */
 const mkText = s => boldEn(brSent(mkWrong(s)));
-/* 加粗＋🔊 版：文法 body/bullet 裡的英文句子也能點擊朗讀 */
+/* 加粗＋🔊 版：文法 body/bullet 裡的英文句子也能點擊朗讀。
+   「不能說 / ✗」後面的錯誤示範不給發音鈕（不該讓學習者聽錯誤的句子），改標紅 */
 function boldEnSpk(html){
   return String(html).split(/(<[^>]+>)/g).map(seg=>{
     if(seg.charAt(0)==='<') return seg;
-    return seg.replace(/[A-Za-z][A-Za-z0-9''\-]*(?:[ ,]+[A-Za-z0-9''\-]+){2,}[.!?]*/g,m=>'<b>'+m+'</b>'+spk(m));
+    return seg.replace(/[A-Za-z][A-Za-z0-9''\-]*(?:[ ,]+[A-Za-z0-9''\-]+){2,}[.!?]*/g,(m,off,str)=>{
+      const before=str.slice(Math.max(0,off-14),off);
+      if(/不能說|不能寫成|不可說|不可寫|別說|[✗✘×]/.test(before)) return '<b class="wrong">'+m+'</b>';
+      return '<b>'+m+'</b>'+spk(m);
+    });
   }).join('');
 }
 const mkTextSpk = s => boldEnSpk(brSent(mkWrong(s)));
+/* 陷阱解析：提到「中文…」的母語干擾提醒，統一掛上「中文思維陷阱」標籤 */
+function trapWhy(w){
+  const tag=/中文/.test(String(w||''))?'<span class="cnTrap">💡 中文思維陷阱</span>':'';
+  return tag+mkText(w);
+}
 /* 清單卡片左側色條跟著程度走（A2 橘 / B1 綠 / B1+ 藍 / B2 紫） */
 const LVBAR={A2:'--a2',B1:'--b1','B1+':'--b1p',B2:'--b2'};
 const lvBar = l => 'border-left-color:var('+(LVBAR[l]||'--accent')+')';
 /* 清單卡片標題顏色也跟著程度走 */
 const lvTitle = l => 'color:var('+(LVBAR[l]||'--accent2')+')';
-/* 字數 → 預估閱讀時間（學習者精讀約 130 wpm），方便評估現在有沒有空檔讀完 */
-const wordsMeta = w => '📝 '+w+' words · ⏱ 約 '+Math.max(1,Math.round(w/130))+' 分鐘';
+/* 字數 → 預估閱讀時間（學習者精讀約 130 wpm），給區間比單一數字自然 */
+const wordsMeta = w => { const m=Math.max(1,Math.round(w/130)); return '📝 '+w+' words · ⏱ '+m+'–'+(m+1)+' 分鐘'; };
 /* 已完成：右上角打勾角標（今日新內容的卡片保留原本的文字，避免跟 NEW 緞帶打架） */
 const finCls   = (d,isNew) => (d&&!isNew)?' fin':'';
 const finTitle = (d,label) => d?' title="'+(label||'已完成')+' '+d.correct+'/'+d.total+'"':'';
@@ -1422,13 +1448,60 @@ window.rdSet=rdSet; window.rdOpenArt=rdOpenArt; window.rdClose=rdClose; window.r
 
 const reEsc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
-/* 文章插圖／圖表（來自 data-art.js，全部是本站自己畫的 SVG） */
+/* 文章插圖／圖表（來自 data-art.js，全部是本站自己畫的 SVG）。
+   圖說若是「A=… → B=… → C=…」的圖示對照鏈，改成編號步驟膠囊，比擠成一段好讀 */
 function artHTML(id){
   const a=(window.ART||{})[id];
   if(!a) return '';
-  return '<figure class="artbox flush" style="margin:0 0 14px">'+a.svg
-   +(a.cap?'<figcaption>'+esc(a.cap)+'</figcaption>':'')+'</figure>';
+  let cap='';
+  if(a.cap){
+    const s=String(a.cap);
+    const parts=s.split(/\s*→\s*/);
+    if(parts.length>=3){
+      const mm=parts[parts.length-1].match(/^(.*?)(?:[。．]\s*(.+))?$/);
+      parts[parts.length-1]=mm[1];
+      const rest=(mm[2]||'').trim();
+      cap='<figcaption><div class="steps">'
+       +parts.map((p,i)=>'<span class="stp">'+(i+1)+'. '+esc(p.replace(/[。．]+$/,''))+'</span>'
+         +(i<parts.length-1?'<span class="sarr">➔</span>':'')).join('')
+       +'</div>'+(rest?'<div style="margin-top:7px">'+esc(rest)+'</div>':'')+'</figcaption>';
+    }else cap='<figcaption>'+esc(s)+'</figcaption>';
+  }
+  return '<figure class="artbox flush" style="margin:0 0 14px">'+a.svg+cap+'</figure>';
 }
+
+/* 升級句 vs 原句：把 B2 句裡「B1 句沒有的字」上底色，一眼看出升級了哪裡。
+   兩句幾乎整句不同時（差異字超過七成）就不標，整句都是底色反而沒有重點 */
+function upDiff(b1,b2){
+  const has=new Set(String(b1||'').toLowerCase().match(/[a-z'’]+/g)||[]);
+  const words=String(b2||'').match(/[A-Za-z][A-Za-z'’]*/g)||[];
+  const nDiff=words.filter(w=>!has.has(w.toLowerCase())).length;
+  if(!words.length || nDiff/words.length>0.7) return esc(b2);
+  return String(b2||'').split(/([A-Za-z][A-Za-z'’]*)/g).map((t,i)=>
+    i%2 ? (has.has(t.toLowerCase())?esc(t):'<mark class="udiff">'+esc(t)+'</mark>') : esc(t)
+  ).join('');
+}
+
+/* 內文點編號重點字 → 右欄 Words & Phrases 同步捲動並閃爍定位（窄版單欄不捲，避免跳走） */
+function wpFlash(n){
+  const el=$('wp-'+n); if(!el) return;
+  if(window.innerWidth>=900) el.scrollIntoView({block:'center',behavior:'smooth'});
+  el.classList.add('flash');
+  setTimeout(()=>el.classList.remove('flash'),1600);
+}
+window.wpFlash=wpFlash;
+
+/* 朗讀語速快速切換：0.8x ↔ 1x ↔ 1.2x（進度分頁的語速設定仍可選慢／快） */
+function cycleRate(){
+  const seq=[0.8,1,1.2];
+  const cur=Number(ST.rate)||1;
+  const i=seq.findIndex(r=>Math.abs(r-cur)<0.05);
+  ST.rate = i<0 ? 1 : seq[(i+1)%seq.length];
+  save();
+  const b=$('btn-rate'); if(b) b.textContent='⏱ '+ST.rate+'x';
+  say('This is the reading speed.');
+}
+window.cycleRate=cycleRate;
 
 /* 內文重點字：橘色加粗＋上標編號（只標第一次出現），其餘字照樣可點查 */
 function magTokenize(text,tmap,used){
@@ -1458,7 +1531,7 @@ function magTokenizeRead(text,tmap,used){
     if(!n||used.has(key)) continue;
     used.add(key);
     out+=esc(text.slice(last,m.index));
-    out+='<b><w class="tgt" onclick="showGloss(this.textContent);event.stopPropagation()">'+esc(m[0])+'</w><sup class="tno">'+n+'</sup></b>';
+    out+='<b><w class="tgt" onclick="showGloss(this.textContent);wpFlash('+n+');event.stopPropagation()">'+esc(m[0])+'</w><sup class="tno">'+n+'</sup></b>';
     last=m.index+m[0].length;
   }
   return out+esc(text.slice(last));
@@ -1479,6 +1552,28 @@ function extraWords(a,tgtSet){
   return out;
 }
 
+/* 把字尾變化套到干擾選項上：句子挖的是 prepares，選項就全部給三單形，
+   不讓學員光靠「有沒有加 -s」就用文法排除掉干擾項 */
+function applySuf(w,suf){
+  if(!suf) return w;
+  if(suf==='s'||suf==='es'){
+    if(/[^aeiou]y$/.test(w)) return w.slice(0,-1)+'ies';
+    if(/(s|sh|ch|x|o)$/.test(w)) return w+'es';
+    return w+'s';
+  }
+  if(suf==='d'||suf==='ed'){
+    if(/e$/.test(w)) return w+'d';
+    if(/[^aeiou]y$/.test(w)) return w.slice(0,-1)+'ied';
+    return w+'ed';
+  }
+  if(suf==='ing'){
+    if(/ie$/.test(w)) return w.slice(0,-2)+'ying';
+    if(/e$/.test(w)&&!/ee$/.test(w)) return w.slice(0,-1)+'ing';
+    return w+'ing';
+  }
+  return w+suf;
+}
+
 /* You Can Do This：用文章自己的句子挖空，選項取自本篇其他重點字 */
 function buildYCD(a,tgIn){
   const tg=(tgIn||a.target||[]).filter(t=>/^[A-Za-z][A-Za-z' -]*$/.test(t.w));
@@ -1493,12 +1588,20 @@ function buildYCD(a,tgIn){
     const s=sents.find(x=>re.test(x)&&!usedSent.has(x));
     if(!s) continue;
     usedSent.add(s);
-    const form=(s.match(re)||[])[0];
+    const mm=s.match(re); if(!mm) continue;
+    const form=mm[0], suf=mm[1]||'';
     const others=tg.filter(x=>x.w!==t.w && x.pos===t.pos);
-    const pool=(others.length>=2?others:tg.filter(x=>x.w!==t.w)).slice(0,2);
-    if(pool.length<2) continue;
-    const opts=[t.w,pool[0].w,pool[1].w].sort();
-    out.push({sent:s.replace(re,'\u0000'), form:form, ans:t.w, opts:opts, cn:t.cn, i:out.length});
+    const cand=(others.length>=2?others:tg.filter(x=>x.w!==t.w));
+    if(cand.length<2) continue;
+    /* 干擾項每題輪換起點，避免三題都是同一組選項、寫到第三題只剩消去法；
+       選項套用跟挖空處相同的字尾變化，不讓「有沒有加 -s」洩題 */
+    const rot=out.length%cand.length;
+    const pool=cand.slice(rot).concat(cand.slice(0,rot)).slice(0,2);
+    /* 詞性相同（或名詞的複數 -s）才套字尾，避免造出 quiets 這種怪字；
+       全部轉小寫再排序：挖空字在句首時大寫會直接洩題 */
+    const inf=x=>(x.pos===t.pos||(suf==='s'&&/^n/.test(x.pos||'')))?applySuf(x.w,suf):x.w;
+    const opts=[form,inf(pool[0]),inf(pool[1])].map(w=>w.toLowerCase()).sort();
+    out.push({sent:s.replace(re,'\u0000'), form:form, ans:form.toLowerCase(), opts:opts, cn:t.cn, i:out.length});
   }
   return out;
 }
@@ -1563,19 +1666,24 @@ function readerHTML(a){
   YCD=buildYCD(a,tg);
   const extras=extraWords(a,tgtSet);
 
+  /* 標題卡只留標題＋基本標籤；導讀與文法重點收進可展開的提示區，資訊不再擠成一團 */
   let h='<div class="magttl"><button class="back" onclick="rdClose()"></button>'
    +'<h2>'+esc(a.title)+'</h2>'
    +'<div class="cn">'+esc(a.titleCn)+'</div>'
-   +(a.intro?'<div class="set">'+esc(a.intro)+'</div>':'')
    +'<div class="bar"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'
    +'<span class="magbadge">🏷 '+esc(a.topic)+'</span>'
    +'<span class="magbadge">'+wordsMeta(a.words)+'</span>'
    +(a.date?'<span class="magbadge">📅 '+esc(a.date)+'</span>':'')
-   +(a.focus?'<span class="magbadge">📐 '+esc(a.focus)+'</span>':'')
    +'</div>'
    +(a.source?'<div class="set" style="font-style:normal;font-size:calc(12.5px * var(--fs))">'+esc(a.source)
       +(a.sourceUrl?' · <a href="'+esc(a.sourceUrl)+'" target="_blank" rel="noopener">↗ 看新聞原文</a>':'')+'</div>':'')
    +'</div>';
+  if(a.intro||a.focus){
+    h+='<details class="hint-toggle"><summary class="hint-sum">📌 導讀與文法重點</summary><div class="hint">'
+     +(a.intro?'<div>'+esc(a.intro)+'</div>':'')
+     +(a.focus?'<div'+(a.intro?' style="margin-top:7px"':'')+'>📐 <b>文法重點：</b>'+esc(a.focus)+'</div>':'')
+     +'</div></details>';
+  }
 
   h+='<div class="mag">';
 
@@ -1585,6 +1693,7 @@ function readerHTML(a){
    +'<button class="btn ghost sm" id="btn-cn-show" onclick="cnAll(1)">顯示全部中譯</button>'
    +'<button class="btn gray sm" id="btn-cn-hide" onclick="cnAll(0)">隱藏中譯</button>'
    +'<button class="btn ghost sm" id="btn-readall" onclick="readAll()">🔊 朗讀全文</button>'
+   +'<button class="btn ghost sm" id="btn-rate" onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button>'
    +'<button class="spk" style="margin-left:auto" onclick="togHintBox(this)">💡 說明 ▼</button></div>'
    +'<div class="hint" style="display:none">💡 點<b>任何一句</b>就會<b>朗讀那一句</b>（那句會亮起來）；<b style="color:#c0561a">橘色加粗＋編號</b>的字對應右邊的單字片語；整段一起唸用各段下方「🔊 整段」。</div>'
    + artHTML(a.id)
@@ -1606,7 +1715,7 @@ function readerHTML(a){
   if(tg.length){
     h+='<div class="wpbox"><div class="wphead">▼ Words &amp; Phrases<span class="zh">單字片語</span></div><div class="wpbody">'
      + tg.map((t,i)=>{
-       return '<div class="wpitem">'
+       return '<div class="wpitem" id="wp-'+(i+1)+'">'
        +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="showGloss(\''+esc(t.w).replace(/'/g,"\\'")+'\')">'+esc(t.w)+'</w> '
        +spk(t.w)+wbBtn(t.w,'閱讀文章')+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
        +'<div class="zh">'+esc(t.cn)+'</div>'
@@ -1632,8 +1741,8 @@ function readerHTML(a){
   if((a.upgrade||[]).length){
     const lo=a.upFrom||'B1', hi=a.upTo||'B2';
     h+='<div class="card"><h2 class="sec">⬆️ '+lo+' → '+hi+' 句型升級</h2>'
-     + a.upgrade.map((u,i)=>'<div class="upg c'+(i%4)+'"><div class="u1">'+lo+'：'+esc(u.b1)+'</div>'
-       +'<div class="u2">'+hi+'：'+esc(u.b2)+' '+spk(u.b2)+'</div>'
+     + a.upgrade.map((u,i)=>'<div class="upg c'+(i%4)+'"><div class="u1">'+lo+'：'+esc(u.b1)+' '+spk(u.b1)+'</div>'
+       +'<div class="u2">'+hi+'：<span>'+upDiff(u.b1,u.b2)+'</span> '+spk(u.b2)+'</div>'
        +'<div class="un">💡 '+esc(u.note)+'</div></div>').join('')
      +'</div>';
   }
@@ -1663,7 +1772,7 @@ function focusHTML(id){
     h+='<div class="sub">⚠️ 這裡最容易寫錯</div>'
      + f.traps.map(t=>'<div class="trap" style="font-size:calc(15px * var(--fs))"><div class="bad" style="font-weight:700">✗ '+esc(t.bad)+'</div>'
        +'<div class="good" style="font-size:calc(16px * var(--fs))">✓ '+esc(t.good)+' '+spk(t.good)+'</div>'
-       +'<div class="why" style="font-size:calc(14px * var(--fs))">'+mkText(t.why)+'</div></div>').join('');
+       +'<div class="why" style="font-size:calc(14px * var(--fs))">'+trapWhy(t.why)+'</div></div>').join('');
   }
   if(unit){
     h+='<div class="gobtn"><button class="btn" onclick="goUnit(\''+unit.id+'\')">📖 讀完整文法單元：'+esc(unit.titleCn)+' →</button></div>';
@@ -1746,10 +1855,11 @@ function qzBtnHTML(ns,qs){
   return '<button class="spk" id="qcn-'+ns+'" data-ns="'+ns+'" onclick="togQuizCn(this.dataset.ns)" style="margin-left:auto">🈶 顯示中譯</button>';
 }
 function quizHTML(qs,ns){
+  /* 題幹朗讀把挖空唸成 blank，作答前點 🔊 不會洩漏答案 */
   return ''
   +'<div id="quiz-'+ns+'">'
   + qs.map((q,i)=>
-    '<div class="q"><div class="qt">'+(i+1)+'. '+esc(q.q)+' '+spk(q.q)
+    '<div class="q"><div class="qt">'+(i+1)+'. '+esc(q.q)+' '+spk(String(q.q).replace(/_{2,}/g,' blank '))
     +(q.qCn?'<div class="qcn">'+esc(q.qCn)+'</div>':'')+'</div>'
     + q.opts.map((o,j)=>'<button class="opt" id="o-'+ns+'-'+i+'-'+j+'" onclick="pick(\''+ns+'\','+i+','+j+','+q.ans+')">'+esc(o)
        +((q.optsCn||[])[j]?'<span class="ocn">'+esc(q.optsCn[j])+'</span>':'')+'</button>').join('')
@@ -1769,14 +1879,21 @@ function pick(ns,i,j,ans){
   const key=ns+'-'+i;
   if(QSTATE[key]!=null) return;
   QSTATE[key]=(j===ans);
-  const nOpts=qsOf(ns)[i].opts.length;
+  const q=qsOf(ns)[i];
+  const nOpts=q.opts.length;
   for(let k=0;k<nOpts;k++){
     const b=$('o-'+ns+'-'+i+'-'+k); if(!b) continue;
     if(k===ans) b.classList.add('right');
     else if(k===j) b.classList.add('wrong');
     b.disabled=true;
   }
-  $('e-'+ns+'-'+i).classList.add('on');
+  const eb=$('e-'+ns+'-'+i);
+  /* 選錯且該選項有針對性提示：把「為什麼這個選項錯」放在解析最前面 */
+  if(j!==ans && q.optExpl && q.optExpl[j] && !eb.dataset.hinted){
+    eb.dataset.hinted='1';
+    eb.innerHTML='<div class="ohint">'+esc(q.optExpl[j])+'</div>'+eb.innerHTML;
+  }
+  eb.classList.add('on');
   const qs=qsOf(ns);
   const done=qs.filter((_,x)=>QSTATE[ns+'-'+x]!=null).length;
   if(done===qs.length){
@@ -2121,7 +2238,7 @@ function gramHTML(g){
 
   if((g.traps||[]).length){
     h+='<div class="card"><h2 class="sec">⚠️ 最容易錯的地方</h2>'
-     + g.traps.map(t=>'<div class="trap"><div class="bad">✗ '+esc(t.bad)+'</div><div class="good">✓ '+esc(t.good)+' '+spk(t.good)+'</div><div class="why">'+mkText(t.why)+'</div></div>').join('')
+     + g.traps.map(t=>'<div class="trap"><div class="bad">✗ '+esc(t.bad)+'</div><div class="good">✓ '+esc(t.good)+' '+spk(t.good)+'</div><div class="why">'+trapWhy(t.why)+'</div></div>').join('')
      +'</div>';
   }
   if((g.quiz||[]).length){
@@ -2157,7 +2274,7 @@ RENDER.daily=function(){
    +'<div class="stats"><div class="stat go" onclick="statGo(\'read\')" title="點一下看全部每日文章"><b>'+pool.length+'<i>篇</i></b><span>累積每日文章 ›</span></div>'
    +'<div class="stat go" onclick="statGo(\'gram\')" title="點一下看全部文法單元"><b>'+DAILY_GRAM.length+'<i>單元</i></b><span>累積每日文法 ›</span></div>'
    +'<div class="stat go" onclick="statGo(\'prog\')" title="點一下看打卡日曆與成就"><b>'+(ST.streak||1)+'<i>天</i></b><span>連續學習天數 ›</span></div>'
-   +'<div class="stat tap'+(VOCAB.filter(x=>isDue(x.w)).length>0?' cta':'')+'" onclick="goReview()" title="點一下直接開始複習"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'<i>字</i></b><span>今日待複習 ›</span></div></div></div>';
+   +'<div class="stat tap'+(VOCAB.filter(x=>isDue(x.w)).length>0?' cta':'')+'" onclick="goReview()" title="點一下直接開始複習"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'<i>個</i></b><span>今日待複習單字 ›</span></div></div></div>';
 
   artsToday.forEach(a=>{
     const d=ST.artDone[a.id];
@@ -2166,7 +2283,8 @@ RENDER.daily=function(){
      +'<div class="tc">'+esc(a.titleCn)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'+(isToday(a)?'':'<span>📅 '+esc(a.date||'')+'</span>')+'<span>🏷 '+esc(a.topic)+'</span>'
      +(a.kind==='news'||a.sourceUrl?'<span>📰 真實新聞改寫</span>':'<span>✍️ 原創</span>')
-     +finMeta(d,isToday(a))+'<span class="mR">'+wordsMeta(a.words)+'</span></div></div>';
+     +finMeta(d,isToday(a))+'<span class="mR">'+wordsMeta(a.words)+'</span></div>'
+     +'<div class="goCta">'+(d?'再讀一次':'開始閱讀')+' ➔</div></div>';
   });
   gramsToday.forEach(g=>{
     const d=ST.gramDone[g.id];
@@ -2174,7 +2292,8 @@ RENDER.daily=function(){
      +'<div class="t" style="'+lvTitle(g.level)+'">📐 '+esc(g.titleCn)+'</div>'
      +'<div class="tc">'+esc(g.title)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span>'+(isToday(g)?'':'<span>📅 '+esc(g.date||'')+'</span>')+(g.unitNo?'<span>Grammar in Use 進度 Unit '+g.unitNo+'</span>':'')
-     +finMeta(d,isToday(g),'練習')+'</div></div>';
+     +finMeta(d,isToday(g),'練習')+'</div>'
+     +'<div class="goCta">'+(d?'再練一次':'開始練習')+' ➔</div></div>';
   });
   listensToday.forEach(l=>{
     const d=(ST.listenDone||{})[l.id];
@@ -2182,7 +2301,8 @@ RENDER.daily=function(){
      +'<div class="t" style="'+lvTitle(l.level)+'">🎧 '+esc(l.title)+'</div>'
      +'<div class="tc">'+esc(l.titleCn)+'</div>'
      +'<div class="meta"><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span>'+(l.date&&l.date!==t?'<span>📅 '+esc(l.date)+'</span>':'')+'<span>🏷 '+esc(l.topic)+'</span>'
-     +finMeta(d,l.date===t)+'<span class="mR">⏱ 約 '+l.minutes+' 分鐘</span></div></div>';
+     +finMeta(d,l.date===t)+'<span class="mR">⏱ 約 '+l.minutes+' 分鐘</span></div>'
+     +'<div class="goCta">'+(d?'再聽一次':'開始聽')+' ➔</div></div>';
   });
   const anyArt=artsToday.length>0, anyGram=gramsToday.length>0;
   const anyNew=artsToday.some(a=>isToday(a))||gramsToday.some(g=>isToday(g));

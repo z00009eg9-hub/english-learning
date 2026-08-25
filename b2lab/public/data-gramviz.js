@@ -516,15 +516,18 @@ V.dg20260821b2=card(
 
 /* ---------- 2026-08-24 A2：狀態動詞不加 -ing vs 動作動詞 ---------- */
 V.dg20260824a2=card(
- {pw:210,title:'感覺・想法：不加 -ing',
-  draw:em(110,150,54,'❤️')+em(210,150,54,'☕')
-   +'<text x="160" y="206" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">like / want / know 永遠用原形</text>',
-  en:'He likes coffee.', cn:'感覺一直都在，不是正在做的動作'},
- {pw:190,title:'動作：可加 -ing',
-  draw:em(160,148,54,'🍳')
-   +bub(160,208,'⏰ NOW',96),
-  en:'He is making eggs now.', cn:'動作正在進行 → am/is/are + V-ing'},
- '左邊：like、want、know 講感覺和想法，永遠不加 -ing；右邊：make、eat 這種動作，正在做的時候才用現在進行式。');
+ {pw:220,title:'狀態動詞：不用 -ing',
+  draw:'<text x="160" y="92" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7c8b96">Stative Verbs（感覺・想法）</text>'
+   +em(110,150,54,'❤️')+em(210,150,54,'☕')
+   +'<text x="160" y="206" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">like / want / know → 現在簡單式（V / V-s）</text>',
+  en:'He likes coffee.', cn:'感覺一直都在，用現在簡單式（不加 -ing）'},
+ {pw:220,title:'動作動詞：可加 -ing',
+  draw:'<text x="160" y="92" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7c8b96">Action Verbs（動作）</text>'
+   +em(160,152,54,'🍳')
+   +'<path d="M146 108 q-5 -9 0 -18 M160 104 q-5 -9 0 -18 M174 108 q-5 -9 0 -18" fill="none" stroke="#8aa8bf" stroke-width="2.5" stroke-linecap="round" opacity=".85"/>'
+   +bub(160,210,'⏰ NOW',96),
+  en:'He is making eggs now.', cn:'正在進行 → 現在進行式（am/is/are + V-ing）'},
+ '考點小撇步：千萬不要寫成 He is liking coffee（✗）——like、want、know 這類「狀態動詞（Stative Verbs）」不用進行式；make、eat 這類動作動詞，正在做的時候才用 am/is/are + V-ing。');
 
 /* ---------- 2026-08-24 B1：have 的兩張臉 ---------- */
 V.dg20260824b1=card(
