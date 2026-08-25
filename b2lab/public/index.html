@@ -1958,6 +1958,7 @@ function wbTog(w,src){
   });
   const n=$('wb-count'); if(n) n.textContent=wbCount();
   if(TAB==='vocab'&&!vQueue.length) RENDER.vocab();   // 生詞本卡片的清單同步刷新
+  wbAutoSync();   // 轉存過 Speak Up 的話，加減字自動重新轉存，那邊即時跟上
 }
 function wbBtn(w,src){
   const k=wbKey(w); if(!k) return '';
@@ -1994,22 +1995,36 @@ function spkFirestore(){
   }catch(e){ spkDb=null; }
   return spkDb;
 }
+function wbWrite(){
+  const d=spkFirestore(); if(!d) return null;
+  const now=Date.now(), map={};
+  wbItems().forEach(x=>{ map[wbKey(x.w)]={w:x.w,cn:x.cn||'',ipa:x.ipa||'',pos:x.pos||'',def:x.def||'',exEn:x.exEn||'',exCn:x.exCn||'',src:x.src||'',t:now}; });
+  return d.collection('progress').doc(PROFILE)
+   .set({b2wb:map,b2wbAt:now,updatedAt:now},{mergeFields:['b2wb','b2wbAt','updatedAt']});
+}
+function wbSyncedKey(){ return 'b2wb_synced_'+PROFILE; }
 function wbExport(btn){
   const items=wbItems();
   if(!items.length) return;
-  const d=spkFirestore();
-  if(!d){ if(btn) btn.textContent='⚠️ 離線中，稍後再試'; return; }
+  const p=wbWrite();
+  if(!p){ if(btn) btn.textContent='⚠️ 離線中，稍後再試'; return; }
   if(btn){ btn.disabled=true; btn.textContent='⏳ 轉存中…'; }
-  const now=Date.now(), map={};
-  items.forEach(x=>{ map[wbKey(x.w)]={w:x.w,cn:x.cn||'',ipa:x.ipa||'',pos:x.pos||'',def:x.def||'',exEn:x.exEn||'',exCn:x.exCn||'',src:x.src||'',t:now}; });
-  d.collection('progress').doc(PROFILE)
-   .set({b2wb:map,b2wbAt:now,updatedAt:now},{mergeFields:['b2wb','b2wbAt','updatedAt']})
-   .then(()=>{ if(btn){ btn.textContent='✅ 已轉存 '+items.length+' 字'; }
-     const m=$('wb-export-msg'); if(m) m.innerHTML='已送到 <a href="https://learning-english-notes.web.app" target="_blank" rel="noopener">Speak Up ↗</a>：日期選單裡選「⭐ B2 生詞本」就能練（單字口說、說出來、測驗）。';
+  p.then(()=>{ try{ localStorage.setItem(wbSyncedKey(),'1'); }catch(e){}
+     if(btn){ btn.textContent='✅ 已轉存 '+items.length+' 字'; }
+     const m=$('wb-export-msg'); if(m) m.innerHTML='已送到 <a href="https://learning-english-notes.web.app" target="_blank" rel="noopener">Speak Up ↗</a>：日期選單裡選「⭐ B2 生詞本」就能練（單字口說、說出來、測驗）。之後在這裡加減字都會自動同步過去。';
    })
    .catch(()=>{ if(btn){ btn.disabled=false; btn.textContent='⚠️ 轉存失敗，再試一次'; } });
 }
 window.wbExport=wbExport;
+/* 曾經轉存過的話，之後每次加減字都自動重新轉存（整份覆蓋），
+   在這裡移除的字 Speak Up 端才會跟著消失，不用再手動按一次轉存 */
+let wbSyncTimer=null;
+function wbAutoSync(){
+  let synced=false; try{ synced=localStorage.getItem(wbSyncedKey())==='1'; }catch(e){}
+  if(!synced) return;
+  if(wbSyncTimer) clearTimeout(wbSyncTimer);
+  wbSyncTimer=setTimeout(()=>{ const p=wbWrite(); if(p) p.catch(()=>{}); }, 1500);
+}
 function wbStart(){
   const items=wbItems(); if(!items.length) return;
   vQueue=items.slice();

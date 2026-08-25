@@ -61,6 +61,16 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   border-radius:100px;padding:5px 11px;font-weight:800;font-size:.76rem;cursor:pointer;
   font-family:inherit;white-space:nowrap;}
 .hd-fs:active{transform:scale(.95);}
+/* 右上角 ⚙️ 選單：把與學習無關的設定（字級、外站連結）收進來，頂部專注學習狀態 */
+.hd-gear-wrap{position:relative;}
+.gear-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:300;display:none;
+  flex-direction:column;gap:2px;min-width:180px;background:#fff;border:2px solid var(--line);
+  border-radius:14px;padding:7px;box-shadow:var(--sh);}
+.gear-menu.open{display:flex;}
+.gear-it{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;
+  background:none;border:none;font-family:inherit;font-size:.88rem;font-weight:700;
+  color:var(--ink);text-align:left;text-decoration:none;cursor:pointer;white-space:nowrap;}
+.gear-it:hover{background:var(--coral-l);color:var(--coral-d);}
 .prof-sw{display:flex;background:rgba(255,255,255,.18);border-radius:100px;padding:3px;gap:2px;}
 .prof-btn{border:none;background:transparent;color:#fff;font-family:inherit;font-weight:800;
   font-size:.78rem;padding:5px 11px;border-radius:100px;cursor:pointer;opacity:.7;transition:.15s;white-space:nowrap;}
@@ -133,6 +143,9 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .day-meta .chip.c3{background:#EAE0FF;color:#7C3AED;}
 .day-meta .chip.c4{background:#D6F5DE;color:#15803D;}
 .day-meta .chip.c5{background:#FFE3EC;color:#DB2777;}
+/* 課堂內容統計：從多色膠囊改為安靜的「icon＋數字」一行字，中間用點分隔 */
+.day-meta .mi{display:inline-flex;align-items:center;gap:3px;font-weight:700;color:var(--sub);font-size:.84rem;}
+.day-meta .mi+.mi::before{content:'·';margin-right:9px;color:var(--bdr);font-weight:900;}
 
 /* ═══ ACTIVITY GRID ═══ */
 .grid-ttl{font-size:.95rem;font-weight:900;margin:22px 3px 12px;display:flex;align-items:center;gap:7px;}
@@ -145,8 +158,8 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .act-ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.75rem;
   position:absolute;top:18px;right:14px;}   /* 圖示放右上角、加大；top 18 讓開框角的勾勾 */
 .act-h{font-size:1.28rem;font-weight:900;letter-spacing:-.2px;padding-right:66px;}
-.act-en{font-size:.82rem;font-weight:800;color:var(--faint);font-family:'Inter';margin-top:2px;padding-right:66px;}
-.act-d{font-size:1rem;font-weight:600;color:var(--sub);margin-top:8px;line-height:1.5;}
+.act-en{font-size:.82rem;font-weight:800;color:var(--sub);font-family:'Inter';margin-top:2px;padding-right:66px;}
+.act-d{font-size:.95rem;font-weight:600;color:var(--sub);margin-top:8px;line-height:1.5;}
 /* 卡片使用說明：一步一步告訴學習者怎麼玩 */
 .act-how{margin-top:10px;padding-top:9px;border-top:1px dashed var(--bdr2);
   font-size:.82rem;font-weight:600;color:var(--faint);line-height:1.65;}
@@ -155,11 +168,8 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .how-bar{background:var(--amber-l);border:1px solid #F3DFA6;border-radius:14px;
   padding:8px 12px;font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.55;margin-bottom:9px;}
 .how-bar b{color:var(--coral-d);font-weight:800;}
-.act-badge{position:absolute;top:-2px;left:-2px;font-size:.8rem;font-weight:800;
-  background:var(--coral);color:#fff;padding:4px 13px;border-radius:14px 0 12px 0;}   /* 主打：左上角角標（加大） */
-.act-say .act-h{padding-top:16px;}   /* 標題往下讓開左上角的「主打」角標 */
-/* 當天已「練習完整」的活動卡片：勾勾卡在方框右上角（框外），不遮圖示 */
-.act-prog{position:absolute;top:-10px;right:-10px;width:27px;height:27px;border-radius:50%;
+/* 當天已「練習完整」的活動卡片：勾勾放在卡片內部右上角，不破壞邊框 */
+.act-prog{position:absolute;top:9px;right:9px;width:27px;height:27px;border-radius:50%;
   background:#1F8A4C;color:#fff;border:2.5px solid #fff;box-shadow:0 2px 8px rgba(31,138,76,.4);
   font-size:.95rem;font-weight:900;line-height:23px;text-align:center;display:none;z-index:2;}
 /* 六個口說活動：繽紛彩色卡片 */
@@ -180,7 +190,9 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .act-video{background:#FAE4EC;}
 .i-listen{background:#CFF5F0;color:#0D9488;}
 .act-listen{background:#EAF3F0;}
-.act-say .act-badge{background:var(--red);}
+/* 主打卡（說出來）：不用「主打」貼紙，改用加粗邊框＋底部色條突出 */
+.acts-hero .act-say{border-width:3.5px;box-shadow:0 4px 0 var(--red);}
+.acts-hero .act-say:hover{box-shadow:0 6px 0 var(--red);}
 
 /* ═══ 大廳視覺層級：主力輸出卡放大、輔助卡縮小 ═══ */
 .acts-hero{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
@@ -242,13 +254,14 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .sub-h{font-size:1.16rem;font-weight:900;letter-spacing:-.3px;}
 .sub-s{font-size:.88rem;color:var(--sub);font-weight:600;}
 .prog{height:7px;background:var(--bdr);border-radius:100px;overflow:hidden;margin-bottom:12px;}
-/* 難度切換（初級/進階） */
-.lvl-tog{display:flex;gap:8px;margin-bottom:8px;}
-.tog-row{display:flex;gap:10px;flex-wrap:wrap;}
-.tog-row .lvl-tog{flex:1 1 240px;margin-bottom:8px;}
-.lvl-btn{flex:1;padding:7px 10px;border-radius:12px;border:2px solid var(--bdr2);background:#fff;
-  font-family:inherit;font-size:.82rem;font-weight:800;color:var(--sub);cursor:pointer;transition:.15s;}
-.lvl-btn.active{border-color:var(--coral);background:var(--coral-l);color:var(--coral-d);}
+/* 難度切換：縮小成置中的分段控制器（segmented control），不搶題目的注意力 */
+.lvl-tog{display:flex;gap:0;margin:0 auto 10px;justify-content:center;width:max-content;max-width:100%;
+  background:#fff;border:1.5px solid var(--bdr2);border-radius:100px;padding:3px;}
+.tog-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+.tog-row .lvl-tog{margin:0 0 8px;}
+.lvl-btn{flex:0 0 auto;padding:5px 16px;border-radius:100px;border:none;background:none;
+  font-family:inherit;font-size:.8rem;font-weight:800;color:var(--sub);cursor:pointer;transition:.15s;}
+.lvl-btn.active{background:var(--coral);color:#fff;}
 .lvl-btn:disabled{opacity:.45;cursor:not-allowed;}
 #read-body.nocn .para-cn{display:none;}
 .prog>i{display:block;height:100%;background:linear-gradient(90deg,#159AA6,#35BAC6);
@@ -256,12 +269,24 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 
 /* ═══ PROMPT / PRACTICE CARD ═══ */
 .pc{text-align:center;padding:12px 16px 6px;min-height:72px;display:flex;flex-direction:column;justify-content:center;}
+/* 說出來主卡：整組內容（題目＋麥克風）垂直置中，避免擠在上半部、底下一片留白 */
+#say-card{display:flex;flex-direction:column;justify-content:center;min-height:min(54vh,470px);}
 .pc-tag{display:inline-block;font-size:.7rem;font-weight:800;color:var(--sub);background:var(--bg);
   padding:3px 11px;border-radius:100px;margin:0 auto 6px;}
 .pc-cn{font-size:1.5rem;font-weight:800;line-height:1.4;letter-spacing:-.3px;}
 .pc-en{font-size:1.35rem;font-weight:700;line-height:1.4;font-family:'Inter';}
-.pc-hint{font-size:1rem;color:var(--teal);margin-top:12px;font-weight:600;}
+.pc-hint{font-size:1rem;color:var(--teal);margin-top:12px;font-weight:600;
+  display:flex;flex-wrap:wrap;gap:7px;justify-content:center;align-items:center;}
+.pc-hint.hide{display:none;}
 .pc-hint b{background:var(--teal-l);padding:1px 7px;border-radius:6px;}
+/* 提示膠囊：遮罩提示（灰）與解鎖鈕（品牌色）統一成膠囊樣式，解鎖後轉綠 */
+.hint-cap{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;border-radius:100px;
+  background:var(--bg);border:1.5px solid var(--bdr2);color:var(--sub);
+  font-size:.92rem;font-weight:700;letter-spacing:.5px;line-height:1.5;}
+button.hint-cap.hint-lock{background:var(--coral-l);border-color:var(--coral);color:var(--coral-d);
+  cursor:pointer;font-family:inherit;letter-spacing:0;}
+button.hint-cap.hint-lock:active{transform:scale(.96);}
+.hint-cap.hint-open{background:var(--teal-l);border-color:var(--teal);color:var(--teal);letter-spacing:0;text-align:left;}
 .pc-ipa{font-size:1rem;color:var(--sub);font-family:'Inter';margin-top:4px;}
 /* 中文對照：字級放大、顏色加深，念的時候看得清楚 */
 .pc-sub{font-size:1.2rem;color:var(--ink);font-weight:600;margin-top:8px;line-height:1.5;}
@@ -275,6 +300,10 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .w-extra{color:var(--amber);font-style:italic;font-size:.85em;}
 /* 聽寫智慧比對：黃＝拼字小誤（typo，仍算對）；紅底線保留給真的聽錯 */
 .w-typo{color:#B45309;font-weight:800;border-bottom:2.5px solid #F59E0B;}
+/* 逐字對照下方的小圖例：解釋底線／+字 這些標記是什麼意思 */
+.diff-legend{font-size:.78rem;font-weight:600;color:var(--sub);margin-top:7px;
+  font-family:'Noto Sans TC',sans-serif;word-spacing:normal;line-height:1.6;}
+.diff-legend span{font-size:.9em;}
 /* 聽寫「你打的 vs 答案」上下疊加對照 */
 .dict-stack{margin-top:8px;font-size:.92rem;line-height:1.7;}
 .dict-stack .row-l{font-size:.72rem;font-weight:800;color:var(--faint);}
@@ -285,8 +314,11 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
 .strs{font-weight:900;}
 /* 聽力選擇題：答案關鍵字（可點聽發音） */
 .kw{color:var(--teal);font-weight:900;border-bottom:2px dashed var(--teal);cursor:pointer;}
-.heard{font-size:.95rem;color:var(--sub);margin-top:6px;font-style:italic;min-height:1em;}
-.heard b{color:var(--ink);font-style:normal;}
+/* 「你說：…」加深顏色並墊底色塊，行動裝置上才看得清楚（有內容時才顯示底塊） */
+.heard{font-size:1.02rem;color:var(--sub);margin-top:6px;font-style:italic;min-height:1em;}
+.heard:not(:empty){background:var(--bg);border:1px solid var(--bdr2);border-radius:10px;
+  padding:7px 12px;margin-top:10px;}
+.heard b{color:var(--ink);font-style:normal;font-weight:800;}
 /* 瀏覽器辨識的候選字（除錯用）：看得出來是收音沒收到，還是評分太嚴 */
 .alt-line{font-size:.72rem;color:var(--faint);margin-top:5px;font-style:normal;line-height:1.6;word-break:break-word;}
 .alt-line b{color:var(--sub);}
@@ -313,10 +345,26 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   display:grid;place-items:center;box-shadow:0 10px 26px rgba(15,122,133,.42);
   transition:transform .15s;position:relative;font-family:inherit;}
 .mic:active{transform:scale(.94);}
-.mic:disabled{background:var(--faint);box-shadow:none;cursor:not-allowed;}
+.mic:disabled{background:var(--faint);box-shadow:none;cursor:not-allowed;animation:none;}
 .mic.rec{background:linear-gradient(135deg,var(--bad),#BE123C);animation:micpulse 1.3s infinite;}
 @keyframes micpulse{0%{box-shadow:0 0 0 0 rgba(225,29,72,.5)}70%{box-shadow:0 0 0 22px rgba(225,29,72,0)}100%{box-shadow:0 0 0 0 rgba(225,29,72,0)}}
+/* 主 CTA 呼吸光暈：待機時緩慢脈動，一眼看出「按這裡開始說」 */
+.mic:not(.rec):not(:disabled){animation:micbreathe 2.8s ease-in-out infinite;}
+@keyframes micbreathe{
+  0%,100%{box-shadow:0 10px 26px rgba(15,122,133,.42),0 0 0 0 rgba(21,154,166,.32);}
+  50%{box-shadow:0 12px 30px rgba(15,122,133,.52),0 0 0 13px rgba(21,154,166,0);}}
 .mic-lbl{font-size:.95rem;color:var(--sub);margin-top:11px;font-weight:700;min-height:1.2em;text-align:center;}
+/* 聽示範改成麥克風旁的小圓鈕（左右各留同寬佔位，麥克風保持置中） */
+.mic-row{display:flex;align-items:flex-start;gap:20px;justify-content:center;}
+.mic-side{display:flex;flex-direction:column;align-items:center;gap:3px;width:64px;margin-top:6px;
+  border:none;background:none;cursor:pointer;font-family:inherit;color:var(--sub);padding:0;}
+.mic-side .ms-ico{width:46px;height:46px;border-radius:50%;background:#fff;border:2px solid var(--bdr2);
+  display:grid;place-items:center;font-size:1.15rem;box-shadow:var(--sh-sm);transition:border-color .15s;}
+.mic-side:hover .ms-ico{border-color:var(--coral);}
+.mic-side:active .ms-ico{transform:scale(.94);}
+.mic-side:disabled{opacity:.5;cursor:not-allowed;}
+.mic-side .ms-t{font-size:.72rem;font-weight:800;white-space:nowrap;}
+.mic-side-ph{width:64px;flex-shrink:0;}
 #scr-talk .mic{width:58px;height:58px;font-size:1.4rem;}
 /* 情境開講：題目與示範答案字大一點、粗一點，念的時候看得清楚 */
 #scr-talk #talk-q{font-size:1.5rem;font-weight:800;line-height:1.35;}
@@ -457,10 +505,15 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
   border-radius:12px;padding:11px 14px;line-height:1.55;margin-bottom:14px;display:flex;gap:8px;}
 .note.warn{background:var(--bad-l);border-color:#F6C9D4;color:#9F1239;}
 .hide{display:none!important;}
+/* 畫面底部固定一層淡淡的漸層遮罩：內容被折線切到時，暗示「下面還有、可以捲動」 */
+body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointer-events:none;
+  z-index:190;background:linear-gradient(to top,rgba(120,70,40,.13),transparent);}
 .center{text-align:center;}
 .spacer{height:10px;}
-.help{font-size:.8rem;color:var(--coral-d);background:var(--coral-l);border:1px solid #F6D5C8;
-  border-radius:12px;padding:12px 14px;margin-bottom:15px;cursor:pointer;font-weight:700;}
+/* 新手說明：降為右對齊的小文字連結，不干擾往下看活動卡的視覺動線 */
+.help{font-size:.78rem;color:var(--faint);background:none;border:none;text-align:right;
+  padding:0 4px;margin:-4px 0 11px;cursor:pointer;font-weight:700;}
+.help:hover{color:var(--coral-d);text-decoration:underline;}
 .help-body{font-size:.95rem;color:var(--ink);line-height:1.75;padding:2px 2px 4px;}
 .help-body b{color:var(--coral-d);}
 
@@ -727,11 +780,14 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
         <button class="prof-btn" id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
       </div>
       <div class="hd-streak">🔥 <span id="hd-streak">1</span> 天 <span id="sync-badge" title="進度已雲端同步（跨裝置共用）" style="display:none">☁️</span></div>
-      <button class="hd-fs" id="hd-fs" onclick="cycleFS()" title="調整字體大小（標準 → 大 → 特大）">Aa 標準</button>
-      <a href="https://english-b2-lab.web.app" class="hd-b2" title="B2 Read — 閱讀 · 單字間隔複習 · 文法教材，每天自動更新"
-         style="display:inline-flex;align-items:center;font-size:12px;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(135deg,#f0964f,#d9691f);border:1px solid rgba(255,255,255,.5);border-radius:100px;padding:5px 12px;white-space:nowrap;box-shadow:0 2px 8px rgba(160,80,20,.3)">📚 B2 Read ↗</a>
-      <a href="https://rexon-qa-english.web.app/" class="hd-b2" title="Rexon QA — 英文練習題庫"
-         style="display:inline-flex;align-items:center;font-size:12px;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(135deg,#6fa8dc,#3d78b4);border:1px solid rgba(255,255,255,.5);border-radius:100px;padding:5px 12px;white-space:nowrap;box-shadow:0 2px 8px rgba(40,80,160,.3)">📝 QA ↗</a>
+      <div class="hd-gear-wrap">
+        <button class="hd-fs" onclick="gearTog(event)" title="設定與其他學習網站（字級、B2 Read、QA 題庫）">⚙️</button>
+        <div class="gear-menu" id="gear-menu">
+          <button class="gear-it" id="hd-fs" onclick="cycleFS()" title="調整字體大小（標準 → 大 → 特大）">Aa 標準</button>
+          <a href="https://english-b2-lab.web.app" class="gear-it" title="B2 Read — 閱讀 · 單字間隔複習 · 文法教材，每天自動更新">📚 B2 Read ↗</a>
+          <a href="https://rexon-qa-english.web.app/" class="gear-it" title="Rexon QA — 英文練習題庫">📝 QA 題庫 ↗</a>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -774,7 +830,6 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
     <div class="grid-ttl">🚀 主力輸出訓練（先挑戰這兩個！）</div>
     <div class="acts-hero">
       <button class="act act-say" onclick="openAct('say')" title="看中文開口說英文，麥克風幫你抓漏字並給分"><span class="act-prog" id="ap-say"></span>
-        <span class="act-badge">主打</span>
         <div class="act-ico i-say">🎤</div>
         <div class="act-h">說出來</div>
         <div class="act-en">Say It Out Loud</div>
@@ -866,11 +921,14 @@ header{background:linear-gradient(135deg,#0E6E78 0%,#159AA6 50%,#35BAC6 100%);
       <div class="heard" id="say-heard"></div>
       <div class="sticky-ctrl">
         <div class="mic-zone">
-          <button class="mic" id="say-mic" onclick="sayMic()" title="按一下開始說英文，說完再按一次結束並評分">🎤</button>
+          <div class="mic-row">
+            <button class="mic-side" id="say-demo" onclick="sayPlay()" title="播放正確英文示範發音（每題先自己試 4 秒才解鎖）"><span class="ms-ico">🔊</span><span class="ms-t" id="say-demo-t">聽示範</span></button>
+            <button class="mic" id="say-mic" onclick="sayMic()" title="按一下開始說英文，說完再按一次結束並評分">🎤</button>
+            <span class="mic-side-ph"></span>
+          </div>
           <div class="mic-lbl" id="say-mlbl">按一下,開始說</div>
         </div>
         <div class="actions">
-          <button class="btn btn-o" id="say-demo" onclick="sayPlay()" title="播放正確英文示範發音（每題先自己試 4 秒才解鎖）">🔊 聽示範</button>
           <button class="btn btn-o hide" id="say-redo" onclick="micRestart()" title="剛剛說壞了？按這裡清空重說，麥克風不會關掉">🔄 重說</button>
           <button class="btn btn-o hide" id="say-reveal" onclick="sayRevealAns()" title="顯示正確的英文答案">👀 看答案</button>
           <button class="btn btn-p hide" id="say-next" onclick="sayNext()" title="換下一句">下一句 →</button>
@@ -5664,13 +5722,17 @@ function cap(s){return s?String(s).charAt(0).toUpperCase()+String(s).slice(1):s;
 /* 逐字對照的共用畫法：綠＝說對、綠底線＝發音接近也算對、灰刪除線＝漏掉、
    淡灰＝小字沒說(不扣分)、橘＝多說的 */
 function diffHTML(r,label){
-  const near=r.diff.filter(x=>x.near).length;
+  const near=r.diff.filter(x=>x.near).length,extraN=(r.extra||[]).length;
+  /* 圖例：橘色 +字、綠底線接近判定都要有說明，第一眼就看得懂標記的意思 */
+  const legends=[];
+  if(near)legends.push('<span class="w-ok w-near">底線字</span>＝發音接近，算你說對');
+  if(extraN)legends.push('<span class="w-extra">+字</span>＝你多說的字（不扣分）');
   return (label||'')
     +r.diff.map((x,i)=>{let w=(x.w==='i'||/^i'/.test(x.w))?cap(x.w):x.w;if(i===0)w=cap(w);
       const c=x.ok?(x.typo?'w-typo':(x.near?'w-ok w-near':'w-ok')):(x.soft?'w-soft':'w-miss');
       return '<span class="'+c+'">'+esc(w)+'</span>';}).join(' ')
-    +((r.extra&&r.extra.length)?' &nbsp;'+r.extra.map(w=>'<span class="w-extra">+'+esc(w)+'</span>').join(' '):'')
-    +(near?'<div class="pc-sub" style="margin-top:6px">≈ 有底線的字發音很接近，算你說對了 👍 再聽一次示範會更準</div>':'');
+    +(extraN?' &nbsp;'+r.extra.map(w=>'<span class="w-extra">+'+esc(w)+'</span>').join(' '):'')
+    +(legends.length?'<div class="diff-legend">'+legends.join('　')+'</div>':'');
 }
 /* ---------- 多個參考答案：同一句可接受的其他說法（縮寫／完整寫法） ---------- */
 const CONTRACTIONS=[["i am","i'm"],["you are","you're"],["we are","we're"],["they are","they're"],
@@ -5965,13 +6027,26 @@ try{if(window.firebase&&firebase.initializeApp){firebase.initializeApp(FB_CONFIG
 let cloudUnsub=null,pushTimer=null;
 function cloudDoc(){return db?db.collection('progress').doc(PROFILE):null;}
 function cloudPush(){if(!db)return;if(pushTimer)clearTimeout(pushTimer);
-  pushTimer=setTimeout(()=>{const d=cloudDoc();if(d)d.set(ST,{merge:true}).catch(()=>{});},1000);}
+  pushTimer=setTimeout(()=>{const d=cloudDoc();if(!d)return;
+    /* b2wb 由 B2 Read 站全權管理：merge:true 是深合併，把本機舊的 b2wb 一起推上去
+       會讓 B2 Read 那邊已移除的字在雲端復活，所以推送前一律剔除 */
+    const body=Object.assign({},ST);delete body.b2wb;delete body.b2wbAt;
+    d.set(body,{merge:true}).catch(()=>{});},1000);}
 function cloudPull(done){const d=cloudDoc();if(!d){done&&done();return;}
-  d.get().then(s=>{if(s.exists){const r=s.data();if((r.updatedAt||0)>(ST.updatedAt||0)){ST=Object.assign(ST,r);saveLocal();}}done&&done();}).catch(()=>done&&done());}
+  d.get().then(s=>{if(s.exists){const r=s.data();
+    /* B2 生詞本不受 updatedAt 閘門限制：這欄位是 B2 Read 站寫的，本站的進度時間戳比它新是常態，
+       用閘門擋會永遠收不到。空物件也要照收——那代表 B2 Read 把字全移除了 */
+    if(r.b2wb!==undefined){ST.b2wb=r.b2wb||{};}
+    if((r.updatedAt||0)>(ST.updatedAt||0)){ST=Object.assign(ST,r);}
+    saveLocal();}done&&done();}).catch(()=>done&&done());}
 function cloudSubscribe(){if(!db)return;if(cloudUnsub){cloudUnsub();cloudUnsub=null;}
   const d=cloudDoc();if(!d)return;const mine=PROFILE;
   cloudUnsub=d.onSnapshot(s=>{if(PROFILE!==mine||!s.exists)return;const r=s.data();
-    if((r.updatedAt||0)>(ST.updatedAt||0)){ST=Object.assign({},ST,r);saveLocal();syncLevelFromST();applyRollover();renderStats();renderActProg();refreshCoach();}},()=>{});}
+    /* B2 生詞本一律即時採用（不受 updatedAt 閘門限制），轉存完馬上出現在日期選單；
+       空物件也照收——B2 Read 那邊移除的字，這邊要跟著消失 */
+    if(r.b2wb!==undefined){ST.b2wb=r.b2wb||{};saveLocal();if(typeof refreshDD==='function')refreshDD();}
+    if((r.updatedAt||0)>(ST.updatedAt||0)){ST=Object.assign({},ST,r);saveLocal();syncLevelFromST();applyRollover();renderStats();renderActProg();refreshCoach();
+      if(typeof refreshDD==='function')refreshDD();}},()=>{});}
 function cloudBadge(on){const el=$('sync-badge');if(el)el.style.display=on?'inline-flex':'none';}
 
 /* ---------- 學習者 Profiles（各自獨立進度） ---------- */
@@ -6061,7 +6136,8 @@ function loadST(){
   }catch(e){}
   renderStats();refreshCoach();
   /* 先抓雲端（若較新就採用），再做跨日重置與畫面更新、PIN 鎖檢查，最後訂閱即時同步 */
-  cloudPull(()=>{const prev=ST.lastDay;pendingReview=(prev&&dayDiff(prev,todayStr())>=3);syncLevelFromST();applyRollover();renderStats();renderActProg();refreshCoach();lockGate();});
+  cloudPull(()=>{const prev=ST.lastDay;pendingReview=(prev&&dayDiff(prev,todayStr())>=3);syncLevelFromST();applyRollover();renderStats();renderActProg();refreshCoach();lockGate();
+    if(typeof refreshDD==='function')refreshDD();   /* 雲端帶回 B2 生詞本時，日期選單補上「⭐ B2 生詞本」 */});
   cloudSubscribe();
   vidSubscribe();   /* 共用影片庫：跨裝置即時同步 */
 }
@@ -6354,7 +6430,11 @@ const TOMQUIZ={
 };
 
 /* ---------- 依日期切資料 ---------- */
+/* B2 Read 轉存過來的生詞本：存在 progress 文件的 b2wb 欄位（B2 Read 站按「轉存到 Speak Up」時寫入） */
+function b2wbItems(){const m=ST.b2wb||{};
+  return Object.keys(m).map(k=>m[k]).filter(x=>x&&x.w).sort((a,b)=>(b.t||0)-(a.t||0));}
 function lessonTitle(d){if(A2BY[d])return A2BY[d].title;
+  if(d==='b2wb')return 'B2 生詞本';
   if(d==='all')return '全部筆記';
   for(const w in vocabSources){if((vocabSources[w]||'').slice(0,8)===d)return vocabSources[w].slice(9)||'課堂內容';}
   if(DAYQUIZ[d])return DAYQUIZ[d].title;
@@ -6372,6 +6452,7 @@ function allDates(){return isTom()?noteDates().concat(A2LESSONS.map(l=>l.id)):no
 function defaultDay(){return allDates()[0]||'all';}
 function dayVocab(d){
   /* 一律去重：資料表裡同一個字可能被登記多次，重複會讓各活動一直出到同一個字 */
+  if(d==='b2wb')return dedupe(b2wbItems().filter(v=>v.cn),'w');   /* B2 Read 生詞本（單字口說/測驗/例句都吃這份） */
   if(A2BY[d])return dedupe(A2BY[d].vocab,'w');
   if(d==='all')return dedupe(vocab.filter(v=>v.cn),'w');
   let r=dedupe(vocab.filter(v=>(vocabSources[v.w]||'').slice(0,8)===d&&v.cn),'w');
@@ -6609,6 +6690,10 @@ function cycleFS(){const v=+(localStorage.getItem('speakup_fs')||1);
   const i=(FS_STEPS.findIndex(s=>s[0]===v)+1)%FS_STEPS.length;
   localStorage.setItem('speakup_fs',FS_STEPS[i][0]);applyFS();}
 applyFS();
+/* 右上角 ⚙️ 選單（字級、B2 Read、QA 題庫收在這裡，頂部留給學習狀態） */
+function gearTog(e){e.stopPropagation();const g=$('gear-menu');if(g)g.classList.toggle('open');}
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.hd-gear-wrap')){const g=$('gear-menu');if(g)g.classList.remove('open');}});
 /* ---------- 「怎麼玩」說明條：收合成標題旁的小鈕，點了才展開（2026-08-16） ---------- */
 document.querySelectorAll('section.screen').forEach(sc=>{
   const hb=sc.querySelector('.how-bar');if(!hb)return;
@@ -6647,6 +6732,7 @@ function coachHome(){const nm=PROFILES[PROFILE],n=ST.spokenToday;   /* 只報今
    ═══════════════════════════════════════════════════════════ */
 let DDATES=[];
 function ddLabel(d){
+  if(d==='b2wb')return '⭐ B2 生詞本（'+b2wbItems().length+' 字）';
   if(d==='all')return isTom()?'📚 全部主題':'📚 全部筆記（所有內容）';
   const t=A2BY[d]?lessonTitle(d):fmtDate(d)+' — '+lessonTitle(d);
   if(isTom())return (A2BY[d]?'🟢 基礎｜':'🔵 進階｜')+t;
@@ -6662,6 +6748,7 @@ function ddClose(){$('dd-list').classList.remove('open');$('day-btn').classList.
 function ddSelect(d){DAY=d;buildDayList();renderMeta();renderHdTopic();ddClose();}
 /* 標題列顯示目前選到哪一篇主題，進入活動後也看得到 */
 function renderHdTopic(){const el=$('hd-topic');if(!el)return;
+  if(DAY==='b2wb'){el.textContent='⭐ B2 生詞本';return;}
   if(!DAY||DAY==='all'){el.textContent=isTom()?'📚 全部主題':'📚 全部筆記';return;}
   const t=lessonTitle(DAY);
   if(A2BY[DAY]){el.textContent='🟢 '+t;return;}
@@ -6669,8 +6756,15 @@ function renderHdTopic(){const el=$('hd-topic');if(!el)return;
   el.innerHTML='<span class="hd-cal"><i></i><b>'+Number(DAY.slice(6,8))+'</b></span> '
     +DAY.slice(4,6)+'/'+DAY.slice(6,8)+' '+esc(t);}
 document.addEventListener('click',e=>{if(!e.target.closest('#day-dd'))ddClose();});
+/* 日期選單重建：B2 生詞本有字才出現在清單裡（雲端拉完可能才有，所以拉完會再呼叫一次） */
+function refreshDD(){
+  const b2=b2wbItems().length?['b2wb']:[];
+  DDATES=allDates().concat(b2,['all']);
+  if(DDATES.indexOf(DAY)<0)DAY=defaultDay();
+  buildDayList();
+}
 function initHome(){
-  DDATES=allDates().concat(['all']);
+  refreshDD();
   DAY=defaultDay();
   if(DDATES.indexOf(DAY)<0)DAY=DDATES[0]||'all';
   buildDayList();
@@ -6688,9 +6782,10 @@ function renderWarmup(){const bar=$('warmup-bar');if(!bar)return;
                                :'快上課了！5 句快速暖身，開口就進入狀況 💪';}}
 let WARMUP=false;
 function startWarmup(){WARMUP=true;openAct('say');}
-function renderMeta(){const d=DAY;const v=dayVocab(d).length,s=sayItems(d).length,a=dayArticles(d).length,q=quizFor(d);
-  $('day-meta').innerHTML='<span class="chip c1">🗣️ '+s+' 句可說</span><span class="chip c2">📇 '+v+' 單字</span>'
-    +(a?'<span class="chip c3">📖 '+a+' 篇文章</span>':'')+(vidMaterials(d).length?'<span class="chip c5">🎬 '+vidMaterials(d).length+' 個影音素材</span>':'')+(q?'<span class="chip c4">📝 '+q.questions.length+' 測驗題</span>':'');}
+function renderMeta(){const d=DAY;const v=dayVocab(d).length,s=sayItems(d).length,a=dayArticles(d).length,q=quizFor(d),vd=vidMaterials(d).length;
+  /* 依回饋把多色膠囊改成安靜的 icon＋數字一行字，資訊在、不搶戲 */
+  $('day-meta').innerHTML='<span class="mi">🗣️ '+s+' 句</span><span class="mi">📇 '+v+' 字</span>'
+    +(a?'<span class="mi">📖 '+a+' 篇</span>':'')+(vd?'<span class="mi">🎬 '+vd+' 部</span>':'')+(q?'<span class="mi">📝 '+q.questions.length+' 題</span>':'');}
 
 /* ═══════════════════════════════════════════════════════════
    1) SAY IT
@@ -6705,23 +6800,25 @@ function startSay(d){reviewMode=false;renderLvlBar('say');
   show('scr-say');sayRender();}
 /* 漸進式提示：英文單字只露首字母（r_____ its s___），中文照常顯示；點了才解鎖全貌 */
 function maskHint(s){return String(s).replace(/[A-Za-z][A-Za-z'-]{2,}/g,w=>w[0]+'_'.repeat(Math.min(6,w.length-1)));}
-function sayHintFull(){const h=$('say-hint');if(sayCur&&sayCur.hint)h.innerHTML='💡 提示：'+esc(sayCur.hint);}
+function sayHintFull(){const h=$('say-hint');
+  if(sayCur&&sayCur.hint)h.innerHTML='<span class="hint-cap hint-open">💡 '+esc(sayCur.hint)+'</span>';}
 /* 聽示範延遲解鎖：先逼自己憑直覺開口，4 秒後才能求救（避免練成聽力跟讀） */
 let sayDemoTimer=null;
-function sayDemoLock(){const b=$('say-demo');if(!b)return;
+function sayDemoLock(){const b=$('say-demo'),t=$('say-demo-t');if(!b||!t)return;
   if(sayDemoTimer){clearInterval(sayDemoTimer);sayDemoTimer=null;}
-  if(!speechOK()){b.disabled=false;b.textContent='🔊 聽示範';return;}   /* 不支援辨識時唯一靠示範，不鎖 */
-  let s=4;b.disabled=true;b.textContent='🔊 聽示範 ('+s+')';
+  if(!speechOK()){b.disabled=false;t.textContent='聽示範';return;}   /* 不支援辨識時唯一靠示範，不鎖 */
+  let s=4;b.disabled=true;t.textContent='聽示範('+s+')';
   sayDemoTimer=setInterval(()=>{s--;
-    if(s<=0){clearInterval(sayDemoTimer);sayDemoTimer=null;b.disabled=false;b.textContent='🔊 聽示範';}
-    else b.textContent='🔊 聽示範 ('+s+')';},1000);}
+    if(s<=0){clearInterval(sayDemoTimer);sayDemoTimer=null;b.disabled=false;t.textContent='聽示範';}
+    else t.textContent='聽示範('+s+')';},1000);}
 function sayRender(){const it=sayList[sayI];sayCur=it;
   $('say-cn').textContent=it.cn;
   /* 基礎：先給遮罩版提示（點了才看全貌）；進階：不給提示，靠自己說 */
   const h=$('say-hint');
   if(it.hint&&lvBasic()){
-    h.innerHTML='💡 提示：<span style="letter-spacing:.5px">'+esc(maskHint(it.hint))+'</span>'
-      +' <button class="btn btn-o btn-sm" style="padding:2px 10px;font-size:.76rem" onclick="sayHintFull()">🔓 完整提示</button>';
+    /* 遮罩提示與解鎖鈕統一成膠囊樣式：灰＝遮罩中、品牌色＝可點解鎖、綠＝已解鎖 */
+    h.innerHTML='<span class="hint-cap">💡 '+esc(maskHint(it.hint))+'</span>'
+      +'<button class="hint-cap hint-lock" onclick="sayHintFull()" title="解鎖完整提示">🔓 完整提示</button>';
     h.classList.remove('hide');
   }else h.classList.add('hide');
   $('say-tag').textContent='第 '+(sayI+1)+' / '+sayList.length+' 句';
@@ -6747,7 +6844,7 @@ function sayAltsHTML(ans,used){
     +rest.map(a=>'<span class="phrase" onclick="speak('+JSON.stringify(a)+',0.9)">'+esc(cap(a))+'</span>').join(' ')+'</div>';}
 function sayScore(t){
   const ans=answersOf(sayCur),best=scoreBest(t,ans,{fuzzy:true}),r=best.r;
-  showRing('say-score',r.pct);
+  showRing('say-score',r.pct,r.diff.filter(x=>x.near).length);
   const diff=$('say-diff');diff.classList.remove('hide');
   diff.innerHTML=diffHTML(r,'答案：')+sayAltsHTML(ans,best.en);
   $('say-heard').innerHTML='你說：<b>'+esc(t)+'</b>';
@@ -6756,7 +6853,8 @@ function sayScore(t){
   logSpeak(r.pct);   /* 這張卡片完整說完、拿到分數，就計入統計 */
   sessLog(sayI,best.en,sayCur.cn,r.pct);
   speak(best.en,0.9);
-  if(r.pct===100){$('say-mlbl').textContent='滿分! 自動跳下一句 🎉';setTimeout(()=>{if(!micActive)sayNext();},1600);}}
+  /* 2026-08-25 依回饋取消滿分自動跳題：由學習者自己按「下一句」，不打斷看答案的節奏 */
+  if(r.pct===100)$('say-mlbl').textContent='滿分! 🎉 按「下一句」繼續';}
 function sayRevealAns(){const ans=answersOf(sayCur);
   $('say-heard').innerHTML='✅ 答案：<b>'+esc(cap(sayCur.en))+'</b>'+sayAltsHTML(ans,sayCur.en);
   speak(sayCur.en,0.9);}
@@ -6833,13 +6931,13 @@ function shMic(){micStart({btn:'sh-mic',lbl:'sh-mlbl',redo:'sh-redo',idle:'先�
   onLive:(t,alts)=>{$('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>'+altLine(alts,t);},
   onDone:(t,err,alts)=>{if(err==='unsupported'){micUnsupported('sh-mlbl');$('sh-next').classList.remove('hide');return;}
     if(!t){$('sh-mlbl').textContent='沒聽清楚，再按一次 🎤';return;}
-    const r=scoreSpeech(t,shCur.en,{fuzzy:true});showRing('sh-score',r.pct);
+    const r=scoreSpeech(t,shCur.en,{fuzzy:true});showRing('sh-score',r.pct,r.diff.filter(x=>x.near).length);
     const diff=$('sh-diff');diff.classList.remove('hide');
     diff.innerHTML=diffHTML(r,'答案：');
     $('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>'+altLine(alts,t);$('sh-next').classList.remove('hide');
     logSpeak(r.pct);   /* 這張卡片完整複誦完、拿到分數，就計入統計 */
     sessLog(shI,shCur.en,shCur.cn||cnFor(shCur.en),r.pct);
-    if(r.pct===100){$('sh-mlbl').textContent='滿分! 自動跳下一句 🎉';setTimeout(()=>{if(!micActive)shNext();},1600);}}});}
+    if(r.pct===100)$('sh-mlbl').textContent='滿分! 🎉 按「下一句」繼續';}});}
 function shNext(){shI++;if(shI>=shList.length){finishAct('🔁 跟讀模仿','你跟讀了 '+shList.length+' 句!節奏會愈練愈順。');return;}shRender();setTimeout(()=>shDemo(demoRate()),300);}
 
 /* ═══════════════════════════════════════════════════════════
@@ -6892,12 +6990,12 @@ function wordMic(){micStart({btn:'word-mic',lbl:'word-mlbl',redo:'word-redo',idl
   onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('word-mlbl');return;}
     if(!t){$('word-mlbl').textContent='沒聽清楚，再按一次 🎤';return;}
     /* 單字發音允許辨識誤差（Tom 更寬鬆），不要因為一個音抓不準就 0 分 */
-    const r=scoreSpeech(t,wCur.w,{fuzzy:true});const pct=r.pct;showRing('word-score',pct);
+    const r=scoreSpeech(t,wCur.w,{fuzzy:true});const pct=r.pct;showRing('word-score',pct,r.diff.filter(x=>x.near).length);
     $('word-heard').innerHTML='你說：<b>'+esc(t)+'</b>';
     logSpeak(pct);   /* 這張卡片完整念完、拿到分數，就計入統計（就算沒念對也算完成） */
     sessLog(wI,wCur.w,wCur.cn||'',pct);
     speak(wCur.w,0.85);
-    if(pct===100){$('word-mlbl').textContent='滿分! 自動跳下一個 🎉';setTimeout(()=>{if(!micActive)wordNext();},1500);}}});}
+    if(pct===100)$('word-mlbl').textContent='滿分! 🎉 按「下一個」繼續';}});}
 function wordNext(){wI++;if(wI>=wList.length){if(SESS)SESS.reachedEnd=true;finishAct('🗣️ 單字口說','你念完了 '+wList.length+' 個單字!把生字變成能說的字。');return;}wRender();}
 
 /* ═══════════════════════════════════════════════════════════
@@ -8033,7 +8131,7 @@ function vPracMic(){
     onLive:t=>{$('vp-heard').innerHTML='你說：<b>'+esc(t)+'</b>';},
     onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('vp-mlbl');return;}
       if(!t){$('vp-mlbl').textContent='沒聽清楚，再按一次 🎤';return;}
-      const r=scoreSpeech(t,line.en,{fuzzy:true});showRing('vp-score',r.pct);
+      const r=scoreSpeech(t,line.en,{fuzzy:true});showRing('vp-score',r.pct,r.diff.filter(x=>x.near).length);
       const d=$('vp-diff');d.classList.remove('hide');d.innerHTML=diffHTML(r,'答案：');
       $('vp-heard').innerHTML='你說：<b>'+esc(t)+'</b>';
       $('vp-mlbl').textContent='想再唸一次?按我 🎤';
@@ -8052,12 +8150,15 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='r'||e.key==='R'){e.preventDefault();vRepeat();}
 });
 
-function showRing(id,pct){const el=$(id);el.classList.remove('hide');
+function showRing(id,pct,near){const el=$(id);el.classList.remove('hide');
   /* Tom（基礎）用比較寬的標準，鼓勵為主 */
   const hi=isTom()?75:85,mid=isTom()?45:60;
   const c=pct>=hi?'var(--good)':pct>=mid?'var(--amber)':'var(--bad)';
-  const m=pct>=hi?['太棒了! 🎉','發音很完整，繼續保持']:pct>=mid?['不錯! 👍','再補上漏掉的字就更好了']:['再試一次 💪','先按 🔊 聽示範，慢慢說'];
-  el.innerHTML='<div class="ring" style="--pct:'+pct+';--rc:'+c+'"><i>'+pct+'%</i></div><div class="score-msg"><div class="big">'+m[0]+'</div><div class="sm">'+m[1]+'</div></div>';
+  let m=pct>=hi?['太棒了! 🎉','發音很完整，繼續保持']:pct>=mid?['不錯! 👍','再補上漏掉的字就更好了']:['再試一次 💪','先按 🔊 聽示範，慢慢說'];
+  let ringTxt=pct+'%';
+  /* 有字是靠「發音接近」判定的：不宣告滿分，改標「判定通過」，跟實際辨識結果一致 */
+  if(near&&pct>=hi){ringTxt='≈'+pct+'%';m=['判定通過 ✅','有 '+near+' 個字用發音接近判定，再聽一次示範會更準'];}
+  el.innerHTML='<div class="ring" style="--pct:'+pct+';--rc:'+c+'"><i style="font-size:'+(ringTxt.length>4?'1rem':'1.2rem')+'">'+ringTxt+'</i></div><div class="score-msg"><div class="big">'+m[0]+'</div><div class="sm">'+m[1]+'</div></div>';
   scrollIntoViewSoft(el);}
 /* 評分/解說出現後，把它捲進畫面，避免內容被底部固定列擋住或看不完整 */
 /* 捲動：先試平滑，若環境不支援(沒真的動)就直接跳過去，確保一定看得到 */
