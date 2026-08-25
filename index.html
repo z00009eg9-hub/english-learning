@@ -102,6 +102,10 @@ body.home-active .hd-topic{display:none;}
 @keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .card{background:var(--card);border:2px solid var(--line);border-radius:var(--r);
   box-shadow:var(--sh-sm);padding:16px;}
+/* 設定型卡片（選課）：弱化外框，把黑粗框留給下方核心操作卡，建立層級 */
+.card-soft{border:1.5px solid var(--bdr);box-shadow:none;background:rgba(255,255,255,.5);}
+/* 選課卡與下方行動區之間拉開間距，減少堆疊壓迫感 */
+.pick-card{margin-bottom:22px;}
 
 /* ═══ COACH GREETING ═══ */
 .coach{display:flex;gap:10px;align-items:center;background:var(--soft);
@@ -121,6 +125,13 @@ body.home-active .hd-topic{display:none;}
 .coach-txt{font-size:.98rem;color:var(--ink);}
 .coach-txt b{color:var(--coral-d);}
 .coach-name{font-size:.74rem;color:var(--sub);font-weight:700;margin-top:5px;}
+/* 今日進度條：招呼語下方一行，帶出「已完成幾項／已說幾句」，提高動機 */
+.coach-prog{display:flex;align-items:center;gap:8px;margin-top:7px;}
+.coach-prog .cp-track{flex:1;height:6px;background:rgba(43,36,28,.12);border-radius:100px;overflow:hidden;min-width:60px;}
+.coach-prog .cp-track i{display:block;height:100%;width:0;border-radius:100px;
+  background:linear-gradient(90deg,#159AA6,#35BAC6);transition:width .5s cubic-bezier(.3,.7,.3,1);}
+.coach-prog .cp-lbl{font-size:.74rem;font-weight:800;color:var(--coral-d);white-space:nowrap;}
+.coach-prog.done .cp-track i{background:linear-gradient(90deg,#16A34A,#4ADE80);}
 
 /* ═══ DAY SELECTOR ═══ */
 .pick-lbl{font-size:.98rem;font-weight:900;color:var(--ink);margin-bottom:6px;
@@ -139,6 +150,23 @@ body.home-active .hd-topic{display:none;}
 .dd-item{padding:11px 13px;border-radius:10px;cursor:pointer;font-size:1rem;font-weight:600;color:var(--ink);}
 .dd-item:hover{background:var(--coral-l);}
 .dd-item.sel{background:var(--coral-l);color:var(--coral-d);font-weight:800;}
+/* 日期膠囊軌道：水平滾動切換課堂（取代下拉選單） */
+.day-rail{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 6px;scroll-snap-type:x proximity;
+  -webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--bdr) transparent;}
+.day-rail::-webkit-scrollbar{height:6px;}
+.day-rail::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:100px;}
+.day-pill{flex:0 0 auto;scroll-snap-align:start;min-width:74px;max-width:150px;cursor:pointer;
+  background:#fff;border:2px solid var(--bdr2);border-radius:13px;padding:8px 12px;text-align:left;
+  font-family:inherit;transition:transform .12s,border-color .15s,background .15s;}
+.day-pill:hover{border-color:var(--coral);transform:translateY(-1px);}
+.day-pill:active{transform:scale(.97);}
+.day-pill .dp-top{font-size:1.02rem;font-weight:900;color:var(--ink);letter-spacing:-.3px;line-height:1.1;}
+.day-pill .dp-wd{font-size:.72rem;font-weight:800;color:var(--coral-d);margin-top:2px;}
+.day-pill .dp-ttl{font-size:.72rem;font-weight:600;color:var(--sub);margin-top:3px;line-height:1.3;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.day-pill.sel{background:var(--coral);border-color:var(--coral);box-shadow:0 4px 12px rgba(21,154,166,.32);}
+.day-pill.sel .dp-top{color:#fff;}
+.day-pill.sel .dp-wd,.day-pill.sel .dp-ttl{color:rgba(255,255,255,.92);}
 .day-meta{font-size:.8rem;color:var(--sub);margin-top:9px;display:flex;flex-wrap:wrap;gap:5px 10px;line-height:1.4;}
 .day-meta{font-size:.8rem;color:var(--sub);margin-top:9px;display:flex;flex-wrap:wrap;gap:5px 10px;line-height:1.4;}
 .day-meta .chip{padding:2px 9px;border-radius:100px;font-weight:700;font-size:.74rem;background:var(--coral-l);color:var(--coral-d);}
@@ -157,7 +185,7 @@ body.home-active .hd-topic{display:none;}
 .act{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px 15px;
   cursor:pointer;transition:transform .16s,box-shadow .16s;text-align:left;
   font-family:inherit;color:var(--ink);position:relative;overflow:visible;}   /* 勾勾要卡在框角外，不能裁掉 */
-.act:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--line);}
+.act:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--line);border-color:var(--coral);}
 .act:active{transform:scale(.98);}
 .act-ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.75rem;
   position:absolute;top:18px;right:14px;}   /* 圖示放右上角、加大；top 18 讓開框角的勾勾 */
@@ -212,12 +240,20 @@ body.home-active .hd-topic{display:none;}
 .acts.acts-sub .act-meta{margin-top:6px;}
 /* 卡片角落的 ⏱️ 時間與難度微型標籤 */
 .act-meta{margin-top:9px;display:flex;gap:5px;flex-wrap:wrap;}
-.act-meta span{font-size:.72rem;font-weight:800;background:rgba(255,255,255,.8);border:1px solid var(--bdr2);border-radius:100px;padding:3px 11px;color:var(--sub);white-space:nowrap;}
-.act-meta .m-lv{color:var(--teal);}
-.act-meta .m-hard{color:var(--coral-d);}
+/* 標籤統一膠囊、依類型給粉彩底色：時間＝中性、難度＝暖橘、程度＝品牌綠 */
+.act-meta span{font-size:.72rem;font-weight:800;background:#fff;border:1px solid var(--bdr2);border-radius:100px;padding:3px 11px;color:var(--sub);white-space:nowrap;}
+.act-meta .m-lv{color:var(--teal);background:var(--teal-l);border-color:transparent;}
+.act-meta .m-hard{color:var(--coral-d);background:var(--coral-l);border-color:transparent;}
+/* 卡片右下角「開始練習」行動提示（整卡本身即按鈕，這是視覺引導，非巢狀按鈕） */
+.act-cta{display:inline-flex;align-items:center;gap:4px;margin-top:12px;
+  background:var(--coral);color:#fff;font-size:.82rem;font-weight:800;
+  padding:7px 15px;border-radius:100px;box-shadow:0 3px 10px rgba(21,154,166,.3);
+  transition:background .15s;}
+.acts-hero .act:hover .act-cta{background:var(--coral-d);}
 /* 課前暖身快捷條（週二/四外師課當天顯示） */
-.warmup-bar{display:flex;align-items:center;gap:11px;width:100%;background:linear-gradient(135deg,#FFF3D6,#FFE1D2);border:2px solid var(--coral);border-radius:16px;padding:12px 15px;margin-bottom:14px;cursor:pointer;font-family:inherit;text-align:left;box-shadow:var(--sh-sm);transition:transform .16s;}
-.warmup-bar:hover{transform:translateY(-2px);}
+/* 暖身橫幅：拿掉硬框、改滿版柔和底色＋微陰影自然浮現，明確區隔「設定區」與「行動區」 */
+.warmup-bar{display:flex;align-items:center;gap:11px;width:100%;background:linear-gradient(135deg,#FFF3D6,#FFE1D2);border:1px solid rgba(224,123,57,.28);border-radius:16px;padding:13px 16px;margin-bottom:22px;cursor:pointer;font-family:inherit;text-align:left;box-shadow:0 6px 18px rgba(224,123,57,.18);transition:transform .16s,box-shadow .16s;}
+.warmup-bar:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(224,123,57,.26);}
 .warmup-bar:hover .wu-go{background:var(--coral-d);}
 .warmup-bar .wu-ico{font-size:1.7rem;flex-shrink:0;}
 .warmup-bar .wu-txt{flex:1;min-width:0;}
@@ -810,16 +846,15 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
   <section class="screen on" id="scr-home">
     <div class="coach">
       <div class="coach-av">👩‍🏫</div>
-      <div>
-        <div class="coach-txt" id="coach-msg">Hi Anita &amp; Tom，準備好開口了嗎？今天我們的目標是<b>把學過的字真的「說出來」</b>。選一天的課，然後挑一個活動開始吧！</div>      </div>
+      <div style="flex:1;min-width:0">
+        <div class="coach-txt" id="coach-msg">Hi Anita &amp; Tom，準備好開口了嗎？今天我們的目標是<b>把學過的字真的「說出來」</b>。選一天的課，然後挑一個活動開始吧！</div>
+        <div class="coach-prog" id="coach-prog"><div class="cp-track"><i id="cp-fill"></i></div><span class="cp-lbl" id="cp-lbl"></span></div>
+      </div>
     </div>
 
-    <div class="card">
-      <div class="pick-lbl">選一天的課堂內容</div>
-      <div class="day-dd" id="day-dd">
-        <button class="day-sel" id="day-btn" onclick="ddToggle(event)"><span id="day-btn-label">—</span><span class="dd-caret">▾</span></button>
-        <div class="dd-list" id="dd-list"></div>
-      </div>
+    <div class="card card-soft pick-card">
+      <div class="pick-lbl">📅 選一天的課堂內容<span style="font-weight:600;font-size:.8rem;color:var(--faint);margin-left:auto">← 左右滑動切換</span></div>
+      <div class="day-rail" id="day-rail"></div>
       <div class="day-meta" id="day-meta"></div>
     </div>
 
@@ -848,6 +883,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
         <div class="act-en">Say It Out Loud</div>
         <div class="act-d">看中文，開口說英文。麥克風幫你抓漏字、給分。</div>
         <div class="act-meta"><span>⏱️ 8 mins</span><span class="m-hard">🔥 高強度輸出</span><span class="m-lv">B1→B2</span></div>
+        <span class="act-cta">開始練習 ➔</span>
       </button>
       <button class="act act-talk" onclick="openAct('talk')" title="像聊天一樣一句一句對話，說錯馬上給你正確說法"><span class="act-prog" id="ap-talk"></span>
         <div class="act-ico i-talk">💬</div>
@@ -855,6 +891,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
         <div class="act-en">Talk Time</div>
         <div class="act-d">像聊天一樣一來一往，說錯馬上給你正確說法。</div>
         <div class="act-meta"><span>⏱️ 10 mins</span><span class="m-hard">🔥 實戰對話</span><span class="m-lv">B1→B2</span></div>
+        <span class="act-cta">開始練習 ➔</span>
       </button>
     </div>
 
@@ -6194,6 +6231,11 @@ function renderStats(){$('st-spoken').textContent=ST.spokenToday;$('st-total').t
   if(g){g.textContent=Math.min(done,goal)+(done>goal?'+':'');
     const C=87.96;if(fg)fg.style.strokeDashoffset=C*(1-Math.min(1,done/goal));
     if(ring)ring.classList.toggle('full',done>=goal);}
+  /* 招呼語下方的今日進度條（跟底部目標環同一份資料） */
+  const cp=$('coach-prog'),cf=$('cp-fill'),cl=$('cp-lbl');
+  if(cf)cf.style.width=Math.min(100,done/goal*100)+'%';
+  if(cl)cl.textContent=done>=goal?('🎉 今日達標 · 已說 '+ST.spokenToday+' 句'):('今日 '+Math.min(done,goal)+'/'+goal+' 項 · 已說 '+ST.spokenToday+' 句');
+  if(cp)cp.classList.toggle('done',done>=goal);
   cloudBadge(!!db);}
 
 /* ═══════════════════════════════════════════════════════════
@@ -6753,14 +6795,29 @@ function ddLabel(d){
   if(isTom())return (A2BY[d]?'🟢 基礎｜':'🔵 進階｜')+t;
   return t;
 }
-function buildDayList(){const list=$('dd-list');
-  list.innerHTML=DDATES.map((d,i)=>'<div class="dd-item'+(d===DAY?' sel':'')+'" data-d="'+d+'" onclick="ddSelect(\''+d+'\')">'+(i===0&&d!=='all'?'⭐ ':'')+esc(ddLabel(d))+'</div>').join('');
-  $('day-btn-label').textContent=ddLabel(DAY);}
-function ddToggle(e){if(e)e.stopPropagation();const l=$('dd-list'),b=$('day-btn');
-  const open=l.classList.toggle('open');b.classList.toggle('open',open);
-  if(open){const sel=l.querySelector('.dd-item.sel');if(sel)sel.scrollIntoView({block:'nearest'});}}
-function ddClose(){$('dd-list').classList.remove('open');$('day-btn').classList.remove('open');}
-function ddSelect(d){DAY=d;buildDayList();renderMeta();renderHdTopic();ddClose();}
+/* 一顆日期膠囊的三行內容：主行（日期/圖示）、週幾、課堂標題 */
+function dayPillParts(d){
+  if(d==='b2wb')return {top:'⭐',wd:'生詞本',ttl:b2wbItems().length+' 字'};
+  if(d==='all')return {top:'📚',wd:'全部',ttl:isTom()?'所有主題':'所有筆記'};
+  if(/^\d{8}$/.test(d)){
+    const y=+d.slice(0,4),m=+d.slice(4,6),day=+d.slice(6,8);
+    const wd='日一二三四五六'[new Date(y,m-1,day).getDay()];
+    return {top:m+'/'+day,wd:'週'+wd,ttl:lessonTitle(d)};
+  }
+  return {top:'🟢',wd:'基礎',ttl:lessonTitle(d)};   /* Tom 的 A2 主題 */
+}
+function buildDayList(){const rail=$('day-rail');if(!rail)return;
+  rail.innerHTML=DDATES.map(d=>{const p=dayPillParts(d);
+    return '<button class="day-pill'+(d===DAY?' sel':'')+'" data-d="'+d+'" onclick="ddSelect(\''+d+'\')" title="'+esc(ddLabel(d))+'">'
+      +'<div class="dp-top">'+esc(p.top)+'</div><div class="dp-wd">'+esc(p.wd)+'</div>'
+      +'<div class="dp-ttl">'+esc(p.ttl)+'</div></button>';}).join('');
+  const sel=rail.querySelector('.day-pill.sel');
+  /* 只捲動軌道本身（不用 scrollIntoView，避免連帶把整頁往下捲） */
+  if(sel)rail.scrollLeft=sel.offsetLeft-rail.clientWidth/2+sel.clientWidth/2;}
+/* 舊下拉相容用的 no-op（影片選單另用 <select>，不受影響） */
+function ddToggle(e){if(e)e.stopPropagation();}
+function ddClose(){}
+function ddSelect(d){DAY=d;buildDayList();renderMeta();renderHdTopic();}
 /* 標題列顯示目前選到哪一篇主題，進入活動後也看得到 */
 function renderHdTopic(){const el=$('hd-topic');if(!el)return;
   if(DAY==='b2wb'){el.textContent='⭐ B2 生詞本';return;}
@@ -6770,8 +6827,7 @@ function renderHdTopic(){const el=$('hd-topic');if(!el)return;
   /* 迷你日曆顯示課堂當天的日期數字（日曆 emoji 永遠是 17，改用真的日期） */
   el.innerHTML='<span class="hd-cal"><i></i><b>'+Number(DAY.slice(6,8))+'</b></span> '
     +DAY.slice(4,6)+'/'+DAY.slice(6,8)+' '+esc(t);}
-document.addEventListener('click',e=>{if(!e.target.closest('#day-dd'))ddClose();});
-/* 日期選單重建：B2 生詞本有字才出現在清單裡（雲端拉完可能才有，所以拉完會再呼叫一次） */
+/* 日期軌道重建：B2 生詞本有字才出現在清單裡（雲端拉完可能才有，所以拉完會再呼叫一次） */
 function refreshDD(){
   const b2=b2wbItems().length?['b2wb']:[];
   DDATES=allDates().concat(b2,['all']);
