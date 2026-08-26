@@ -15,6 +15,770 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週三／五更新） ========== */
 notes:[
 {
+  "id": "dl20260826a2",
+  "date": "2026-08-26",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "A New Desk for the Room",
+  "titleCn": "房間的新書桌",
+  "series": "本站自製聽力 · 居家主題",
+  "topic": "🏠 整理房間",
+  "focus": "過去簡單式描述已做的事（moved, put, painted）；did / didn't 表示肯定和否定",
+  "intro": "Tom昨天整理房間、搬了新書桌。他今天在辦公室跟Amy分享昨晚做了什麼。這一課句子很短，重點是聽出過去式的動詞：moved、put、painted 是已經做完的事，didn't finish 是還沒做完的事。",
+  "tip": "第一次聽先抓「Tom昨天做了哪些事」——至少有三件。第二次注意聽哪一件還沒完成。",
+  "pre": [
+    {
+      "w": "desk",
+      "ipa": "/desk/",
+      "cn": "書桌",
+      "def": "A table you use for working or studying."
+    },
+    {
+      "w": "move",
+      "ipa": "/muːv/",
+      "cn": "移動、搬",
+      "def": "To change the place of something."
+    },
+    {
+      "w": "heavy",
+      "ipa": "/ˈhevi/",
+      "cn": "重的",
+      "def": "Difficult to lift because of its weight."
+    },
+    {
+      "w": "paint",
+      "ipa": "/peɪnt/",
+      "cn": "油漆、粉刷",
+      "def": "To put colour on a wall using a brush."
+    },
+    {
+      "w": "shelf",
+      "ipa": "/ʃelf/",
+      "cn": "架子",
+      "def": "A flat board on a wall where you put things."
+    },
+    {
+      "w": "tidy",
+      "ipa": "/ˈtaɪdi/",
+      "cn": "整齊的",
+      "def": "Clean and with everything in the right place."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Amy",
+      "en": "You look happy today, Tom. Did something good happen?",
+      "cn": "你今天看起來很開心，Tom。有什麼好事嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes! I got a new desk yesterday, and I moved it into my room.",
+      "cn": "有！我昨天拿到一張新書桌，搬進我的房間了。"
+    },
+    {
+      "sp": "Amy",
+      "en": "A new desk? Was it heavy?",
+      "cn": "新書桌？很重嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Very heavy! My brother helped me carry it upstairs.",
+      "cn": "超重的！我哥幫我搬上樓。"
+    },
+    {
+      "sp": "Amy",
+      "en": "That was nice of him. Did you put it near the window?",
+      "cn": "他真好。你把書桌放在窗戶旁邊嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes, I put it next to the window. The light is good there.",
+      "cn": "對，我放在窗戶旁邊。那裡光線很好。"
+    },
+    {
+      "sp": "Amy",
+      "en": "Nice! Did you do anything else to the room?",
+      "cn": "不錯！你還有對房間做其他的事嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I painted one wall white. But I didn't finish the shelf.",
+      "cn": "我把一面牆漆成白色的。但架子還沒弄好。"
+    },
+    {
+      "sp": "Amy",
+      "en": "Still, that sounds like a lot of work for one evening.",
+      "cn": "不過這樣一個晚上做了很多事耶。"
+    },
+    {
+      "sp": "Tom",
+      "en": "It was! But now my room looks really tidy. I'm very pleased.",
+      "cn": "真的！但現在我的房間看起來很整齊。我很滿意。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did Tom get yesterday?",
+      "qCn": "Tom昨天拿到了什麼？",
+      "opts": [
+        "A. A new bed",
+        "B. A new desk",
+        "C. A new chair",
+        "D. A new lamp"
+      ],
+      "optsCn": [
+        "A. 新的床",
+        "B. 新的書桌",
+        "C. 新的椅子",
+        "D. 新的檯燈"
+      ],
+      "ans": 1,
+      "expl": "I got a new desk yesterday."
+    },
+    {
+      "q": "Who helped Tom carry the desk?",
+      "qCn": "誰幫Tom搬書桌？",
+      "opts": [
+        "A. Amy",
+        "B. His mother",
+        "C. His brother",
+        "D. His friend"
+      ],
+      "optsCn": [
+        "A. Amy",
+        "B. 他媽媽",
+        "C. 他哥哥",
+        "D. 他朋友"
+      ],
+      "ans": 2,
+      "expl": "My brother helped me carry it upstairs."
+    },
+    {
+      "q": "Where did Tom put the desk?",
+      "qCn": "Tom把書桌放在哪裡？",
+      "opts": [
+        "A. Next to the door",
+        "B. In the living room",
+        "C. Next to the window",
+        "D. In the kitchen"
+      ],
+      "optsCn": [
+        "A. 門旁邊",
+        "B. 客廳",
+        "C. 窗戶旁邊",
+        "D. 廚房"
+      ],
+      "ans": 2,
+      "expl": "I put it next to the window."
+    },
+    {
+      "q": "Tom: \"I ___ one wall white.\"",
+      "qCn": "Tom說：「我把一面牆漆成白色。」（選出正確的動詞形式）",
+      "opts": [
+        "paint",
+        "painting",
+        "painted",
+        "was paint"
+      ],
+      "ans": 2,
+      "expl": "昨天做的事用過去簡單式：painted。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260826b1",
+  "date": "2026-08-26",
+  "level": "B1",
+  "minutes": 2,
+  "kind": "note",
+  "title": "The Deposit Was Gone",
+  "titleCn": "押金回不來了",
+  "series": "本站自製聯力 · 金錢與居住主題",
+  "topic": "💰 租屋押金",
+  "focus": "過去簡單式敘述已結束的事件（paid, moved, kept）；because / so 表達因果關係",
+  "intro": "Anita上個月搬家了，但她的舊房東沒有退還押金。她跟同事Ben聊這件事。注意她用過去式講已經結束的經歷（I paid, he kept, I found），用 because 和 so 把原因和結果串起來。",
+  "tip": "第一次聽先抓「Anita到底拿回押金了沒有」，第二次注意 because 和 so 各出現幾次。",
+  "pre": [
+    {
+      "w": "deposit",
+      "ipa": "/dɪˈpɑːzɪt/",
+      "cn": "押金",
+      "def": "Money you pay when you move in; you get it back when you leave."
+    },
+    {
+      "w": "landlord",
+      "ipa": "/ˈlændlɔːrd/",
+      "cn": "房東",
+      "def": "The person who owns the place you rent."
+    },
+    {
+      "w": "receipt",
+      "ipa": "/rɪˈsiːt/",
+      "cn": "收據",
+      "def": "A paper that shows you paid for something."
+    },
+    {
+      "w": "fair",
+      "ipa": "/fer/",
+      "cn": "公平的",
+      "def": "Treating everyone in the same way."
+    },
+    {
+      "w": "damage",
+      "ipa": "/ˈdæmɪdʒ/",
+      "cn": "損壞",
+      "def": "Harm done to something so it is broken or not as good."
+    },
+    {
+      "w": "lesson",
+      "ipa": "/ˈlesn/",
+      "cn": "教訓",
+      "def": "Something you learn from a bad experience."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Ben",
+      "en": "Anita, you moved last month, right? How was it?",
+      "cn": "Anita，你上個月搬家了對吧？還順利嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The move was fine, but I had a problem with my old landlord.",
+      "cn": "搬家本身沒問題，但我跟舊房東起了爭議。"
+    },
+    {
+      "sp": "Ben",
+      "en": "What happened?",
+      "cn": "怎麼了？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I paid two months' deposit when I moved in. But he kept it all.",
+      "cn": "我搬進去的時候付了兩個月的押金。但他全部都沒退。"
+    },
+    {
+      "sp": "Ben",
+      "en": "Why? Was there damage?",
+      "cn": "為什麼？有損壞嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "He said there was, but I cleaned everything before I left. It wasn't fair.",
+      "cn": "他說有，但我搬走前全部都清理乾淨了。很不公平。"
+    },
+    {
+      "sp": "Ben",
+      "en": "Did you take photos?",
+      "cn": "你有拍照嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Yes, I did. So I showed him the photos, and he gave half back.",
+      "cn": "有拍。所以我給他看照片，他退了一半。"
+    },
+    {
+      "sp": "Ben",
+      "en": "Only half? That's still not right.",
+      "cn": "只有一半？那還是不對啊。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I know. But I didn't have a receipt for the other half, so I couldn't prove it.",
+      "cn": "我知道。但另一半我沒有收據，所以無法證明。"
+    },
+    {
+      "sp": "Ben",
+      "en": "That's a tough lesson. I always keep every receipt now because of a similar thing.",
+      "cn": "這個教訓很痛。我現在都會保留每一張收據，因為以前也遇過類似的事。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Same here. I learned that the hard way.",
+      "cn": "我也是。我用最辛苦的方式學到了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How much deposit did Anita pay?",
+      "qCn": "Anita付了多少押金？",
+      "opts": [
+        "A. One month",
+        "B. Two months",
+        "C. Three months",
+        "D. Half a month"
+      ],
+      "optsCn": [
+        "A. 一個月",
+        "B. 兩個月",
+        "C. 三個月",
+        "D. 半個月"
+      ],
+      "ans": 1,
+      "expl": "I paid two months' deposit when I moved in."
+    },
+    {
+      "q": "Why did the landlord keep the deposit?",
+      "qCn": "房東為什麼不退押金？",
+      "opts": [
+        "A. Anita was late on rent",
+        "B. He said there was damage",
+        "C. Anita broke the contract",
+        "D. He forgot about it"
+      ],
+      "optsCn": [
+        "A. Anita拖欠房租",
+        "B. 他說有損壞",
+        "C. Anita違約",
+        "D. 他忘記了"
+      ],
+      "ans": 1,
+      "expl": "He said there was [damage]."
+    },
+    {
+      "q": "How much did Anita get back in the end?",
+      "qCn": "Anita最後拿回了多少？",
+      "opts": [
+        "A. All of it",
+        "B. Nothing",
+        "C. Half",
+        "D. A quarter"
+      ],
+      "optsCn": [
+        "A. 全部",
+        "B. 什麼都沒有",
+        "C. 一半",
+        "D. 四分之一"
+      ],
+      "ans": 2,
+      "expl": "He gave half back."
+    },
+    {
+      "q": "Anita: \"I ___ everything before I left.\"",
+      "qCn": "Anita說：「我搬走前全部清理乾淨了。」（選出正確的動詞形式）",
+      "opts": [
+        "clean",
+        "cleaning",
+        "cleaned",
+        "have cleaned"
+      ],
+      "ans": 2,
+      "expl": "搬走前做的事，已經結束，用過去簡單式 cleaned。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260826b1p",
+  "date": "2026-08-26",
+  "level": "B1+",
+  "minutes": 3,
+  "kind": "note",
+  "title": "The Night the Pipe Burst",
+  "titleCn": "水管爆裂的那一晚",
+  "series": "本站自製聽力 · 金錢與居住主題",
+  "topic": "🔧 居家維修",
+  "focus": "過去簡單式在敘事中搭配時間連接詞（as soon as, by the time, the moment）串聯事件順序",
+  "intro": "Anita在新家第一個月就遇到廚房水管破裂。她跟同事Lily講當晚的經過：從發現漏水、到打電話叫修、到等維修人員——整段敘述用過去簡單式，再用 as soon as、by the time、the moment 串起事件先後順序。",
+  "tip": "第一次聽先照順序抓「發生了哪幾件事」，第二次注意每個時間連接詞（the moment, as soon as, by the time）後面接的事件是先發生還是後發生的。",
+  "pre": [
+    {
+      "w": "pipe",
+      "ipa": "/paɪp/",
+      "cn": "水管",
+      "def": "A tube that carries water through a building."
+    },
+    {
+      "w": "burst",
+      "ipa": "/bɜːrst/",
+      "cn": "爆裂",
+      "def": "To break open suddenly with force."
+    },
+    {
+      "w": "leak",
+      "ipa": "/liːk/",
+      "cn": "漏水",
+      "def": "Water coming through a hole or crack it shouldn't."
+    },
+    {
+      "w": "plumber",
+      "ipa": "/ˈplʌmər/",
+      "cn": "水電工",
+      "def": "A person who fixes water pipes."
+    },
+    {
+      "w": "valve",
+      "ipa": "/vælv/",
+      "cn": "閥門",
+      "def": "A device that controls the flow of water or gas."
+    },
+    {
+      "w": "insurance",
+      "ipa": "/ɪnˈʃʊrəns/",
+      "cn": "保險",
+      "def": "A plan where you pay money to a company and they pay if something goes wrong."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lily",
+      "en": "Anita, what happened to your kitchen? You mentioned a problem last week.",
+      "cn": "Anita，你廚房怎麼了？你上禮拜提到有狀況。"
+    },
+    {
+      "sp": "Anita",
+      "en": "A pipe under the sink burst on Tuesday night. Water went everywhere.",
+      "cn": "星期二晚上水槽下面的水管爆了。水噴得到處都是。"
+    },
+    {
+      "sp": "Lily",
+      "en": "Oh no! What did you do first?",
+      "cn": "天啊！你第一步做了什麼？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The moment I heard the noise, I ran to the kitchen and turned off the main valve.",
+      "cn": "我一聽到聲音，馬上跑去廚房關掉主閥門。"
+    },
+    {
+      "sp": "Lily",
+      "en": "Good thinking. Then what?",
+      "cn": "反應很快。然後呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "As soon as I stopped the water, I called the landlord. He didn't answer.",
+      "cn": "我一止住水就打給房東。他沒接。"
+    },
+    {
+      "sp": "Lily",
+      "en": "Of course. It was probably late.",
+      "cn": "當然。可能很晚了吧。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It was almost midnight. So I found a plumber online and called him directly.",
+      "cn": "快半夜了。所以我自己上網找了一個水電工，直接打給他。"
+    },
+    {
+      "sp": "Lily",
+      "en": "Did he come quickly?",
+      "cn": "他有很快來嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "By the time he arrived, the floor was already soaked. But he fixed the pipe in thirty minutes.",
+      "cn": "等他到的時候，地板已經濕透了。但他三十分鐘就把水管修好了。"
+    },
+    {
+      "sp": "Lily",
+      "en": "What about the cost? Did the landlord pay?",
+      "cn": "費用呢？房東有出嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "He called back the next morning and agreed to pay. Luckily, the insurance covered most of it.",
+      "cn": "他隔天早上回電，同意出錢。幸好保險理賠了大部分。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What happened on Tuesday night?",
+      "qCn": "星期二晚上發生了什麼事？",
+      "opts": [
+        "A. The electricity went out",
+        "B. A pipe under the sink burst",
+        "C. The roof leaked",
+        "D. The window broke"
+      ],
+      "optsCn": [
+        "A. 停電了",
+        "B. 水槽下的水管爆了",
+        "C. 屋頂漏水",
+        "D. 窗戶破了"
+      ],
+      "ans": 1,
+      "expl": "A pipe under the sink burst on Tuesday night."
+    },
+    {
+      "q": "What was the first thing Anita did?",
+      "qCn": "Anita第一件做的事是什麼？",
+      "opts": [
+        "A. She called the landlord",
+        "B. She ran to the kitchen and turned off the main valve",
+        "C. She called a plumber",
+        "D. She cleaned the floor"
+      ],
+      "optsCn": [
+        "A. 她打電話給房東",
+        "B. 她跑去廚房關主閥門",
+        "C. 她打電話給水電工",
+        "D. 她擦地板"
+      ],
+      "ans": 1,
+      "expl": "The moment I heard the noise, I ran to the kitchen and turned off the main valve."
+    },
+    {
+      "q": "\"___ I stopped the water, I called the landlord.\" Choose the correct connector.",
+      "qCn": "「我一止住水就打給房東。」選出正確的連接詞。",
+      "opts": [
+        "By the time",
+        "As soon as",
+        "The moment after",
+        "Until"
+      ],
+      "ans": 1,
+      "expl": "As soon as I stopped the water, I called the landlord — as soon as 表示「一……就……」。"
+    },
+    {
+      "q": "What does \"By the time he arrived, the floor was already soaked\" mean?",
+      "qCn": "「等他到的時候，地板已經濕透了」這句話傳達什麼意思？",
+      "opts": [
+        "A. He arrived before the floor got wet",
+        "B. The floor was wet before he arrived",
+        "C. He made the floor wet",
+        "D. The floor was dry when he left"
+      ],
+      "optsCn": [
+        "A. 他在地板弄濕之前到了",
+        "B. 他到之前地板就已經濕了",
+        "C. 他把地板弄濕了",
+        "D. 他走的時候地板是乾的"
+      ],
+      "ans": 1,
+      "expl": "by the time 表示「到……的時候（另一件事已經發生了）」。"
+    },
+    {
+      "q": "Who paid for the repair?",
+      "qCn": "維修費用誰出的？",
+      "opts": [
+        "A. Anita paid everything",
+        "B. The plumber did it for free",
+        "C. The landlord agreed to pay, and insurance covered most of it",
+        "D. Lily lent Anita the money"
+      ],
+      "optsCn": [
+        "A. Anita全部自己出",
+        "B. 水電工免費修",
+        "C. 房東同意出錢，保險理賠了大部分",
+        "D. Lily借錢給Anita"
+      ],
+      "ans": 2,
+      "expl": "He agreed to pay. Luckily, the insurance covered most of it."
+    }
+  ]
+},
+
+{
+  "id": "dl20260826b2",
+  "date": "2026-08-26",
+  "level": "B2",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Why We Moved Back to Taoyuan",
+  "titleCn": "我們為什麼搬回桃園",
+  "series": "本站自製聽力 · 金錢與居住主題",
+  "topic": "🏙️ 城市與生活成本",
+  "focus": "過去簡單式在正式敘述中報告決策過程（calculated, realized, decided）；學術語域的用字選擇",
+  "intro": "Anita和同事Mark討論住在台北和住在外縣市的利弊。Mark去年搬回桃園，他用過去式回顧整個決策過程——從算出數字、到意識到問題、再到做出決定。注意他怎麼用 calculated、realized、decided 這些「正式動詞」來描述理性的思考步驟，而不是用口語的 figured out。",
+  "tip": "第一次聽先抓「Mark搬走的最大原因是什麼」。第二次聽注意他用哪些動詞描述思考和決策——這些動詞在正式書寫中也會頻繁出現。",
+  "pre": [
+    {
+      "w": "calculate",
+      "ipa": "/ˈkælkjuleɪt/",
+      "cn": "計算",
+      "def": "To use numbers to find out a total or result."
+    },
+    {
+      "w": "realize",
+      "ipa": "/ˈriːəlaɪz/",
+      "cn": "意識到",
+      "def": "To suddenly understand something you did not know before."
+    },
+    {
+      "w": "commute",
+      "ipa": "/kəˈmjuːt/",
+      "cn": "通勤",
+      "def": "The trip between your home and your work."
+    },
+    {
+      "w": "trade-off",
+      "ipa": "/ˈtreɪd ɒf/",
+      "cn": "取捨",
+      "def": "Giving up one thing to gain another."
+    },
+    {
+      "w": "sacrifice",
+      "ipa": "/ˈsækrɪfaɪs/",
+      "cn": "犧牲",
+      "def": "To give up something important for a larger goal."
+    },
+    {
+      "w": "disposable income",
+      "ipa": "/dɪˈspoʊzəbl ˈɪnkʌm/",
+      "cn": "可支配所得",
+      "def": "The money left after you pay rent, bills, and taxes."
+    },
+    {
+      "w": "rational",
+      "ipa": "/ˈræʃənl/",
+      "cn": "理性的",
+      "def": "Based on reason and logic, not feelings."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Anita",
+      "en": "Mark, you moved back to Taoyuan last year, right? Do you regret it?",
+      "cn": "Mark，你去年搬回桃園了對吧？你後悔嗎？"
+    },
+    {
+      "sp": "Mark",
+      "en": "Not at all. I calculated the numbers before I made the decision, and it was clear.",
+      "cn": "完全不會。我做決定之前先算了數字，結論很明確。"
+    },
+    {
+      "sp": "Anita",
+      "en": "What exactly did you calculate?",
+      "cn": "你到底算了什麼？"
+    },
+    {
+      "sp": "Mark",
+      "en": "Rent, transport, food, everything. I realized I spent almost sixty percent of my salary just on rent and daily costs in Taipei.",
+      "cn": "房租、交通、伙食、全部。我發現光是房租和台北的日常開銷就花掉我薪水的將近六成。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Sixty percent? That's enormous.",
+      "cn": "六成？太高了。"
+    },
+    {
+      "sp": "Mark",
+      "en": "Exactly. So I compared the same costs in Taoyuan. The rent alone dropped by forty percent.",
+      "cn": "就是說啊。所以我拿桃園同樣的開銷來比。光房租就少了四成。"
+    },
+    {
+      "sp": "Anita",
+      "en": "But you sacrificed the convenience. Taipei has more restaurants, more nightlife.",
+      "cn": "但你犧牲了便利性啊。台北餐廳多、夜生活也多。"
+    },
+    {
+      "sp": "Mark",
+      "en": "True. I gave that up. But I gained a bigger apartment and a higher disposable income.",
+      "cn": "沒錯。那些我放棄了。但我換到更大的房子和更高的可支配所得。"
+    },
+    {
+      "sp": "Anita",
+      "en": "And the commute?",
+      "cn": "那通勤呢？"
+    },
+    {
+      "sp": "Mark",
+      "en": "Forty-five minutes by express train. It's a trade-off, but I read or study on the train, so the time isn't wasted.",
+      "cn": "搭快車四十五分鐘。是一種取捨，但我在車上看書或學習，所以時間不算浪費。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That sounds like a very rational decision.",
+      "cn": "聽起來是個很理性的決定。"
+    },
+    {
+      "sp": "Mark",
+      "en": "It was. I looked at the data, I weighed the options, and I decided. No emotion, just numbers.",
+      "cn": "的確是。我看了數據，權衡了選項，然後做了決定。沒有情緒，只看數字。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What percentage of Mark's salary went to rent and daily costs in Taipei?",
+      "qCn": "Mark在台北的房租和日常開銷占了薪水的多少？",
+      "opts": [
+        "A. About forty percent",
+        "B. About sixty percent",
+        "C. About thirty percent",
+        "D. About eighty percent"
+      ],
+      "optsCn": [
+        "A. 約四成",
+        "B. 約六成",
+        "C. 約三成",
+        "D. 約八成"
+      ],
+      "ans": 1,
+      "expl": "I spent almost sixty percent of my salary just on rent and daily costs in Taipei."
+    },
+    {
+      "q": "What is one thing Mark sacrificed by moving?",
+      "qCn": "Mark搬家後犧牲了什麼？",
+      "opts": [
+        "A. A higher salary",
+        "B. Convenience and nightlife",
+        "C. A shorter commute",
+        "D. His friends"
+      ],
+      "optsCn": [
+        "A. 較高的薪水",
+        "B. 便利性和夜生活",
+        "C. 較短的通勤",
+        "D. 他的朋友"
+      ],
+      "ans": 1,
+      "expl": "You sacrificed the convenience. Taipei has more restaurants, more nightlife."
+    },
+    {
+      "q": "Mark: \"I ___ the numbers before I made the decision.\"",
+      "qCn": "Mark說：「我做決定之前先算了數字。」（選出正確的動詞形式）",
+      "opts": [
+        "calculate",
+        "was calculating",
+        "calculated",
+        "have calculated"
+      ],
+      "ans": 2,
+      "expl": "描述已完成的決策過程，用過去簡單式 calculated。"
+    },
+    {
+      "q": "How does Mark use his commute time?",
+      "qCn": "Mark通勤時間怎麼利用？",
+      "opts": [
+        "A. He sleeps",
+        "B. He reads or studies",
+        "C. He watches movies",
+        "D. He calls friends"
+      ],
+      "optsCn": [
+        "A. 他睡覺",
+        "B. 他看書或學習",
+        "C. 他看電影",
+        "D. 他打電話給朋友"
+      ],
+      "ans": 1,
+      "expl": "I read or study on the train, so the time isn't wasted."
+    },
+    {
+      "q": "Why does Anita call Mark's decision \"rational\"?",
+      "qCn": "Anita為什麼說Mark的決定「很理性」？",
+      "opts": [
+        "A. He moved because his friend told him to",
+        "B. He based his choice on data and numbers, not emotion",
+        "C. He asked his family to decide for him",
+        "D. He didn't think about it at all"
+      ],
+      "optsCn": [
+        "A. 他因為朋友建議才搬的",
+        "B. 他根據數據和數字做選擇，不憑情緒",
+        "C. 他請家人幫他決定",
+        "D. 他完全沒想過"
+      ],
+      "ans": 1,
+      "expl": "I looked at the data, I weighed the options, and I decided. No emotion, just numbers."
+    }
+  ]
+},
+
+{
   "id": "dl20260824a2",
   "date": "2026-08-24",
   "level": "A2",

@@ -8,6 +8,671 @@ window.DAILY = {
 
 articles:[
 {
+  "id": "d20260826a2",
+  "date": "2026-08-26",
+  "level": "A2",
+  "topic": "居家",
+  "words": 116,
+  "kind": "orig",
+  "title": "Tom's New Room",
+  "titleCn": "Tom 的新房間",
+  "focus": "過去簡單式（moved, cleaned, bought）——用過去式說昨天做了什麼事",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom搬進新公寓，文章用了很多過去簡單式（moved, cleaned, bought, came, made）告訴你「已經做完」的事。讀的時候注意這些動詞的過去式長什麼樣——有的加 -ed，有的整個字都變了。",
+  "paras": [
+    {
+      "en": "Tom moved to a new apartment last weekend. The old place was very small and dark. The new one has two rooms and a small kitchen.",
+      "cn": "Tom上個週末搬進了新公寓。舊的地方又小又暗。新的有兩個房間和一間小廚房。"
+    },
+    {
+      "en": "On Saturday he cleaned the apartment from morning to noon. He washed the floor and put all his books on a new shelf. He also hung a clock on the wall in the bedroom.",
+      "cn": "星期六他從早上打掃到中午。他擦了地板，把所有的書放到新書架上。他還在臥室的牆上掛了一個時鐘。"
+    },
+    {
+      "en": "His friend Amy helped him carry the heavy boxes. They worked together until five in the afternoon. Amy said the new apartment looked really nice and clean.",
+      "cn": "他的朋友Amy幫他搬那些沉重的箱子。他們一起工作到下午五點。Amy說新公寓看起來很漂亮又乾淨。"
+    },
+    {
+      "en": "That night Tom cooked dinner in his new kitchen. He sat by the window and looked at the city lights. He smiled and felt happy about his new home.",
+      "cn": "那天晚上Tom在新廚房裡煮了晚餐。他坐在窗邊，望著城市的燈光。他微笑著，對自己的新家感到開心。"
+    }
+  ],
+  "target": [
+    {
+      "w": "apartment",
+      "ipa": "/əˈpɑːrtmənt/",
+      "pos": "n.",
+      "cn": "公寓",
+      "def": "A set of rooms in a building where someone lives.",
+      "ex": "Tom moved to a new apartment last weekend.",
+      "exCn": "Tom上個週末搬進了新公寓。"
+    },
+    {
+      "w": "shelf",
+      "ipa": "/ʃelf/",
+      "pos": "n.",
+      "cn": "架子、層板",
+      "def": "A flat board on a wall or in furniture for putting things on.",
+      "ex": "He put all his books on a new shelf.",
+      "exCn": "他把所有的書放到新書架上。"
+    },
+    {
+      "w": "carry",
+      "ipa": "/ˈkæri/",
+      "pos": "v.",
+      "cn": "搬、提",
+      "def": "To hold something and take it somewhere.",
+      "ex": "His friend Amy helped him carry the heavy boxes.",
+      "exCn": "他的朋友Amy幫他搬那些沉重的箱子。"
+    },
+    {
+      "w": "heavy",
+      "ipa": "/ˈhevi/",
+      "pos": "adj.",
+      "cn": "重的",
+      "def": "Weighing a lot; hard to move.",
+      "ex": "His friend helped him carry the heavy boxes.",
+      "exCn": "他的朋友幫他搬那些沉重的箱子。"
+    },
+    {
+      "w": "cook",
+      "ipa": "/kʊk/",
+      "pos": "v.",
+      "cn": "煮菜、做飯",
+      "def": "To make food ready by using heat.",
+      "ex": "That night Tom cooked dinner in his new kitchen.",
+      "exCn": "那天晚上Tom在新廚房裡煮了晚餐。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "When did Tom move to the new apartment?",
+      "qCn": "Tom什麼時候搬進新公寓？",
+      "opts": [
+        "A. Last Monday",
+        "B. Last weekend",
+        "C. Yesterday",
+        "D. This morning"
+      ],
+      "optsCn": [
+        "A. 上個星期一",
+        "B. 上個週末",
+        "C. 昨天",
+        "D. 今天早上"
+      ],
+      "ans": 1,
+      "expl": "Tom moved to a new apartment last weekend."
+    },
+    {
+      "q": "Who helped Tom carry the boxes?",
+      "qCn": "誰幫Tom搬箱子？",
+      "opts": [
+        "A. His mother",
+        "B. His neighbour",
+        "C. His friend Amy",
+        "D. Nobody"
+      ],
+      "optsCn": [
+        "A. 他媽媽",
+        "B. 他的鄰居",
+        "C. 他的朋友Amy",
+        "D. 沒有人"
+      ],
+      "ans": 2,
+      "expl": "His friend Amy helped him carry the heavy boxes."
+    },
+    {
+      "q": "He ___ the floor on Saturday.",
+      "qCn": "他星期六擦了地板。（選出正確的動詞形式）",
+      "opts": [
+        "A. washes",
+        "B. washed",
+        "C. is washing",
+        "D. wash"
+      ],
+      "ans": 1,
+      "expl": "星期六是過去的事，用過去簡單式 washed。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "He went to a shop. He bought a shelf.",
+      "b2": "He went to a shop and bought a new shelf for his books.",
+      "note": "用 and 連接兩個動作不必重複主詞，句子更流暢。"
+    },
+    {
+      "b1": "Amy helped him. The boxes were heavy.",
+      "b2": "Amy helped him carry the heavy boxes.",
+      "note": "把形容詞放在名詞前面（heavy boxes），不用另起一句解釋。"
+    }
+  ]
+},
+
+{
+  "id": "d20260826b1",
+  "date": "2026-08-26",
+  "level": "B1",
+  "topic": "金錢與居住",
+  "words": 140,
+  "kind": "orig",
+  "title": "Saving for a Bigger Place",
+  "titleCn": "為更大的房子存錢",
+  "focus": "現在完成式（has saved / has wanted）講「做了某件事、到現在結果有效」；because / so 串因果",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Amy住在太小的套房裡，花了六個月存錢，終於存夠了押金。注意文章用現在完成式（has saved、has wanted、has never had）講「到目前為止」的結果，跟過去簡單式（decided、stopped、started）講的「六個月前做的事」形成對比。",
+  "paras": [
+    {
+      "en": "Amy has lived in a small studio apartment for three years. The rent is cheap, but the room is so small that she cannot invite friends over. She has wanted a bigger place for a long time.",
+      "cn": "Amy在一間小套房裡住了三年。房租很便宜，但房間太小，她沒辦法邀朋友來。她想要一個大一點的地方已經很久了。"
+    },
+    {
+      "en": "Six months ago she decided to save more money every month. She stopped eating out so often because restaurant meals cost a lot. She also started bringing lunch to work instead of buying it.",
+      "cn": "六個月前她決定每個月多存一些錢。她不再那麼常外食，因為餐廳吃一頓花費不少。她也開始帶午餐去上班，不再外面買。"
+    },
+    {
+      "en": "The first two months were more difficult than she expected. She missed going to her favourite coffee shop after work. But after a while she got used to cooking at home.",
+      "cn": "最初那兩個月比她預想的還難。她懷念下班後去最喜歡的咖啡店。但過了一陣子，她就習慣在家煮飯了。"
+    },
+    {
+      "en": "Now Amy has saved enough for the deposit on a bigger apartment. She found one near a park, so she can go running in the morning. She is excited because she has never had her own balcony before.",
+      "cn": "現在Amy已經存夠了押金，可以租一間大一點的公寓。她找到一間在公園旁邊的，所以早上可以去跑步。她很興奮，因為她從來沒有自己的陽台。"
+    }
+  ],
+  "target": [
+    {
+      "w": "save",
+      "ipa": "/seɪv/",
+      "pos": "v.",
+      "cn": "存（錢）；節省",
+      "def": "To keep money for later use instead of spending it.",
+      "ex": "Now Amy has saved enough for the deposit.",
+      "exCn": "現在Amy已經存夠了押金。"
+    },
+    {
+      "w": "rent",
+      "ipa": "/rent/",
+      "pos": "n.",
+      "cn": "房租",
+      "def": "Money you pay every month to use someone else's house or room.",
+      "ex": "The rent is cheap, but the room is too small.",
+      "exCn": "房租很便宜，但房間太小。"
+    },
+    {
+      "w": "deposit",
+      "ipa": "/dɪˈpɑːzɪt/",
+      "pos": "n.",
+      "cn": "押金、訂金",
+      "def": "Money you pay before you move in to show you are serious.",
+      "ex": "She has saved enough for the deposit on a bigger apartment.",
+      "exCn": "她已經存夠了大一點公寓的押金。"
+    },
+    {
+      "w": "instead of",
+      "ipa": "/ɪnˈsted ʌv/",
+      "pos": "phr.",
+      "cn": "而不是",
+      "def": "In place of something else.",
+      "ex": "She started bringing lunch instead of buying it.",
+      "exCn": "她開始帶午餐而不是外面買。"
+    },
+    {
+      "w": "balcony",
+      "ipa": "/ˈbælkəni/",
+      "pos": "n.",
+      "cn": "陽台",
+      "def": "A small area outside a window where you can stand or sit.",
+      "ex": "She has never had her own balcony before.",
+      "exCn": "她從來沒有自己的陽台。"
+    },
+    {
+      "w": "excited",
+      "ipa": "/ɪkˈsaɪtɪd/",
+      "pos": "adj.",
+      "cn": "興奮的",
+      "def": "Very happy and looking forward to something.",
+      "ex": "She is excited because she has never had her own balcony.",
+      "exCn": "她很興奮，因為她從來沒有自己的陽台。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why does Amy want to move?",
+      "qCn": "Amy為什麼想搬家？",
+      "opts": [
+        "A. The rent is too expensive",
+        "B. Her room is too small to invite friends",
+        "C. She does not like her neighbours",
+        "D. Her office is too far"
+      ],
+      "optsCn": [
+        "A. 房租太貴",
+        "B. 房間太小沒辦法邀朋友",
+        "C. 她不喜歡鄰居",
+        "D. 辦公室太遠"
+      ],
+      "ans": 1,
+      "expl": "The room is so small that she cannot invite friends over."
+    },
+    {
+      "q": "She ___ enough money for the deposit.",
+      "qCn": "她已經存夠了押金的錢。（選出正確的動詞形式）",
+      "opts": [
+        "A. has saved",
+        "B. saved",
+        "C. is saving",
+        "D. saves"
+      ],
+      "ans": 0,
+      "expl": "「已經存好、結果到現在有效」用現在完成式 has saved。"
+    },
+    {
+      "q": "What did Amy do to save money?",
+      "qCn": "Amy做了什麼來省錢？",
+      "opts": [
+        "A. She stopped drinking coffee",
+        "B. She stopped eating out so often and started bringing lunch",
+        "C. She moved to a cheaper city",
+        "D. She asked her parents for money"
+      ],
+      "optsCn": [
+        "A. 她不再喝咖啡",
+        "B. 她不再那麼常外食，並且開始帶午餐",
+        "C. 她搬到比較便宜的城市",
+        "D. 她跟父母要錢"
+      ],
+      "ans": 1,
+      "expl": "She stopped eating out so often... She also started bringing lunch to work instead of buying it."
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "She stopped eating out because it cost a lot.",
+      "b2": "She cut down on eating out, which had been taking up most of her food budget.",
+      "note": "cut down on 比 stopped 更精準（減少、不是完全停），which 帶出的關係子句補充背景。"
+    },
+    {
+      "b1": "She is excited because she has never had a balcony.",
+      "b2": "For the first time in her life, she will have a place with its own balcony.",
+      "note": "for the first time in her life 比 never 更有畫面感，its own 強調「屬於自己的」。"
+    }
+  ]
+},
+
+{
+  "id": "d20260826b1p",
+  "date": "2026-08-26",
+  "level": "B1+",
+  "topic": "金錢與居住",
+  "words": 179,
+  "kind": "orig",
+  "title": "When the Landlord Raised the Rent",
+  "titleCn": "房東調漲房租的時候",
+  "focus": "被動語態（was told / was raised / is spent）描述房客的處境；關係子句 that / which 補充說明",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "Anita在胡志明市租屋，房東突然調漲房租百分之二十。注意文章用一連串被動語態描述她的處境——was told、would be raised、is spent、are priced——在這些句子裡，重點不是「誰做的」，而是「事情發生在她身上」。也留意 that 和 which 帶出的關係子句怎麼補充額外的資訊。",
+  "paras": [
+    {
+      "en": "When Anita arrived in Ho Chi Minh City two years ago, she rented a small room near her factory. The monthly rent was reasonable, and the room came with basic furniture that she needed. She thought she had found a good deal.",
+      "cn": "兩年前Anita來到胡志明市，在工廠附近租了一間小房間。月租合理，房間裡有她需要的基本家具。她以為自己找到了划算的好房子。"
+    },
+    {
+      "en": "Last month she was told that the rent would be raised by twenty percent starting in September. The building has been renovated recently, with new paint and better lighting. A security camera was also installed at the entrance. The landlord explained that these improvements had to be paid for by the tenants.",
+      "cn": "上個月她被告知，房租從九月開始要調漲百分之二十。整棟大樓最近剛整修過，重新粉刷、改善了照明。入口處也裝了一台監視器。房東解釋說，這些改善的費用必須由房客來分攤。"
+    },
+    {
+      "en": "Anita looked at her budget carefully. Nearly half of her salary is already spent on rent and bills. She called several agents, but most rooms in the area are priced even higher than her current one.",
+      "cn": "Anita仔細看了自己的預算。她薪水的將近一半已經花在房租和帳單上了。她打了幾間仲介，但這一帶大部分的房間定價還比她現在的更高。"
+    },
+    {
+      "en": "In the end she decided to stay and adjust her spending in other ways. She started cooking more meals at home, which saves about two hundred dollars a month. It is not a perfect solution, but she has learned that housing costs must be planned for, not just accepted.",
+      "cn": "最後她決定留下來，從其他方面調整開銷。她開始在家煮更多餐，每個月大約省下兩百塊。這不是完美的解決辦法，但她學到了一件事：居住成本必須事先規劃，而不是被動接受。"
+    }
+  ],
+  "target": [
+    {
+      "w": "raise",
+      "ipa": "/reɪz/",
+      "pos": "v.",
+      "cn": "提高、調漲",
+      "def": "To increase the amount of something, especially a price.",
+      "ex": "The rent would be raised by twenty percent.",
+      "exCn": "房租要調漲百分之二十。"
+    },
+    {
+      "w": "renovate",
+      "ipa": "/ˈrenəveɪt/",
+      "pos": "v.",
+      "cn": "整修、翻新",
+      "def": "To make a building look new again by repairing and improving it.",
+      "ex": "The building has been renovated recently.",
+      "exCn": "整棟大樓最近剛整修過。"
+    },
+    {
+      "w": "security camera",
+      "ipa": "/sɪˈkjʊrəti ˈkæmərə/",
+      "pos": "n.",
+      "cn": "監視器",
+      "def": "A camera that records what happens in a building for safety.",
+      "ex": "A security camera was installed at the entrance.",
+      "exCn": "入口處裝了一台監視器。"
+    },
+    {
+      "w": "improvement",
+      "ipa": "/ɪmˈpruːvmənt/",
+      "pos": "n.",
+      "cn": "改善、改良",
+      "def": "A change that makes something better.",
+      "ex": "These improvements had to be paid for by the tenants.",
+      "exCn": "這些改善的費用必須由房客來分攤。"
+    },
+    {
+      "w": "budget",
+      "ipa": "/ˈbʌdʒɪt/",
+      "pos": "n.",
+      "cn": "預算",
+      "def": "A plan for how you will spend your money.",
+      "ex": "Anita looked at her budget carefully.",
+      "exCn": "Anita仔細看了自己的預算。"
+    },
+    {
+      "w": "salary",
+      "ipa": "/ˈsæləri/",
+      "pos": "n.",
+      "cn": "薪水",
+      "def": "The money you receive for your work, usually every month.",
+      "ex": "Nearly half of her salary is already spent on rent and bills.",
+      "exCn": "她薪水的將近一半已經花在房租和帳單上了。"
+    },
+    {
+      "w": "adjust",
+      "ipa": "/əˈdʒʌst/",
+      "pos": "v.",
+      "cn": "調整",
+      "def": "To change something a little to make it better or more suitable.",
+      "ex": "She decided to stay and adjust her spending.",
+      "exCn": "她決定留下來，調整自己的開銷。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why was the rent raised?",
+      "qCn": "房租為什麼要調漲？",
+      "opts": [
+        "A. Because Anita's contract ended",
+        "B. Because the building was renovated",
+        "C. Because the landlord moved away",
+        "D. Because the government changed the law"
+      ],
+      "optsCn": [
+        "A. 因為Anita的合約到期",
+        "B. 因為大樓做了整修",
+        "C. 因為房東搬走了",
+        "D. 因為政府改了法律"
+      ],
+      "ans": 1,
+      "expl": "The building has been renovated recently... the landlord explained that these improvements had to be paid for by the tenants."
+    },
+    {
+      "q": "What did Anita find when she called agents?",
+      "qCn": "Anita打電話給仲介時發現了什麼？",
+      "opts": [
+        "A. Many cheap rooms were available",
+        "B. Most rooms are priced even higher",
+        "C. No rooms were for rent",
+        "D. The agents refused to help"
+      ],
+      "optsCn": [
+        "A. 有很多便宜的房間",
+        "B. 大部分的房間定價更高",
+        "C. 沒有房間出租",
+        "D. 仲介拒絕幫忙"
+      ],
+      "ans": 1,
+      "expl": "Most rooms in the area are priced even higher than her current one."
+    },
+    {
+      "q": "She ___ that the rent would be raised.",
+      "qCn": "她被告知房租要調漲。（選出正確的動詞形式）",
+      "opts": [
+        "A. was told",
+        "B. told",
+        "C. is telling",
+        "D. has telling"
+      ],
+      "ans": 0,
+      "expl": "Anita 是被告知（被動），用 was told。"
+    },
+    {
+      "q": "How does Anita save money now?",
+      "qCn": "Anita現在怎麼省錢？",
+      "opts": [
+        "A. She moved to a cheaper room",
+        "B. She cooks more meals at home",
+        "C. She asked for a higher salary",
+        "D. She stopped paying rent"
+      ],
+      "optsCn": [
+        "A. 她搬到比較便宜的房間",
+        "B. 她在家煮更多餐",
+        "C. 她要求加薪",
+        "D. 她不再繳房租"
+      ],
+      "ans": 1,
+      "expl": "She started cooking more meals at home, which saves about two hundred dollars a month."
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Nearly half of her salary is spent on rent.",
+      "b2": "Rent alone absorbs close to half of her monthly take-home pay.",
+      "note": "absorb（吸收）比 spend 更生動，take-home pay 是薪資的道地說法，指實拿到手的錢。"
+    },
+    {
+      "b1": "She has learned that housing costs must be planned for.",
+      "b2": "The experience has underscored a principle she once overlooked: housing is a cost that demands forward planning.",
+      "note": "underscore（強調）、principle（原則）、forward planning（事先規劃）讓語氣更正式精準。"
+    }
+  ]
+},
+
+{
+  "id": "d20260826b2",
+  "date": "2026-08-26",
+  "level": "B2",
+  "topic": "金錢與居住",
+  "words": 286,
+  "kind": "original",
+  "title": "The Real Cost of City Living",
+  "titleCn": "城市生活的真正代價",
+  "focus": "過去簡單式在論說文中的功能——用 rose / climbed / doubled 陳述已完成的事實，為論點鋪底",
+  "intro": "這篇文章用一連串過去簡單式（rose、climbed、doubled、found、spent）陳述已經發生的事實——租金漲了多少、薪水差了多少、研究發現了什麼。注意論說文裡的過去簡單式功能不是「講故事」，而是用客觀完成的數據為接下來的觀點鋪底。",
+  "paras": [
+    {
+      "en": "A decade ago a young engineer in Taipei could rent a decent studio near an MRT station for about twelve thousand dollars a month. That figure has since climbed to eighteen or even twenty thousand. The jump may not sound dramatic on paper, but for someone who earns a starting salary of thirty-five thousand, it means the share of income devoted to housing has risen from roughly a third to well over half.",
+      "cn": "十年前，一個在台北的年輕工程師可以用大約一萬兩千元在捷運站附近租到一間不錯的套房。那個數字後來漲到一萬八、甚至兩萬。紙面上的漲幅聽起來或許不算劇烈，但對一個起薪只有三萬五的人來說，這代表投入在居住上的收入比例已從大約三分之一升到超過一半。"
+    },
+    {
+      "en": "The pattern is not unique to Taiwan. Across Southeast Asia, Ho Chi Minh City and Bangkok saw rental prices double in certain districts between 2020 and 2025. Economists point out that wages did not keep up: while rents rose by fifty to a hundred percent, average salaries grew by only ten to fifteen. The gap left millions of workers choosing between a longer commute and a tighter household budget.",
+      "cn": "這個現象不是台灣獨有的。在東南亞，胡志明市和曼谷的特定區域在 2020 到 2025 年間，租金翻了一倍。經濟學家指出，薪資沒有跟上：租金漲了五成到一倍，但平均薪水只成長了一成到一成五。這個落差讓數百萬工作者在「更長的通勤」和「更緊的家庭預算」之間做選擇。"
+    },
+    {
+      "en": "What makes the problem harder to solve is that housing costs are rarely just the rent. A family that moved from a central neighbourhood to a cheaper suburb often found that transport expenses, childcare fees, and the time lost in traffic ate into the savings. One study estimated that a household relocating twenty kilometres from the city centre spent an extra eight percent of its income on commuting alone.",
+      "cn": "問題更難解決的原因在於：居住成本很少只是房租。一個從市中心搬到較便宜郊區的家庭，常常發現交通費、托兒費和通勤時間把省下的錢吃掉了。一項研究估計，搬離市中心二十公里的家庭，光是通勤就多花了收入的百分之八。"
+    },
+    {
+      "en": "None of this means people should stop looking for affordable housing. It does mean, however, that the search works best when every hidden cost is included from the start. Before signing a lease, experienced renters now calculate not only the monthly rent but also utility bills, commuting time, and the opportunity cost of living far from their workplace. The real price of a home, it turns out, is never just the number on the contract.",
+      "cn": "這不代表大家應該放棄尋找負擔得起的住處。但這確實表示，在搜尋的時候，最好一開始就把每一項隱性成本算進去。在簽約之前，有經驗的租屋族現在不只會算月租，還會算水電帳單、通勤時間，以及住得離工作地點太遠的機會成本。一個「家」的真正價格，到頭來絕不只是合約上的那個數字。"
+    }
+  ],
+  "target": [
+    {
+      "w": "decent",
+      "ipa": "/ˈdiːsnt/",
+      "pos": "adj.",
+      "cn": "不錯的、像樣的",
+      "def": "Good enough in quality; acceptable.",
+      "ex": "A young engineer could rent a decent studio near an MRT station.",
+      "exCn": "一個年輕工程師可以在捷運站附近租到一間不錯的套房。"
+    },
+    {
+      "w": "figure",
+      "ipa": "/ˈfɪɡjər/",
+      "pos": "n.",
+      "cn": "數字、金額",
+      "def": "A number, especially in official data.",
+      "ex": "That figure has since climbed to eighteen or even twenty thousand.",
+      "exCn": "那個數字後來漲到一萬八、甚至兩萬。"
+    },
+    {
+      "w": "devoted",
+      "ipa": "/dɪˈvoʊtɪd/",
+      "pos": "adj.",
+      "cn": "投入的、用於…的",
+      "def": "Given or used for a particular purpose.",
+      "ex": "The share of income devoted to housing has risen.",
+      "exCn": "投入在居住上的收入比例已經上升。"
+    },
+    {
+      "w": "district",
+      "ipa": "/ˈdɪstrɪkt/",
+      "pos": "n.",
+      "cn": "區域、行政區",
+      "def": "A part of a city or country with clear borders.",
+      "ex": "Rental prices doubled in certain districts between 2020 and 2025.",
+      "exCn": "特定區域在 2020 到 2025 年間租金翻了一倍。"
+    },
+    {
+      "w": "commute",
+      "ipa": "/kəˈmjuːt/",
+      "pos": "n.",
+      "cn": "通勤",
+      "def": "The regular trip between your home and your workplace.",
+      "ex": "Workers had to choose between a longer commute and a tighter budget.",
+      "exCn": "工作者必須在更長的通勤和更緊的預算之間做選擇。"
+    },
+    {
+      "w": "relocate",
+      "ipa": "/ˌriːloʊˈkeɪt/",
+      "pos": "v.",
+      "cn": "搬遷、遷居",
+      "def": "To move to a different place, usually for work or cost reasons.",
+      "ex": "A household relocating twenty kilometres from the city centre spent more on commuting.",
+      "exCn": "搬離市中心二十公里的家庭在通勤上花了更多錢。"
+    },
+    {
+      "w": "utility",
+      "ipa": "/juːˈtɪləti/",
+      "pos": "n.",
+      "cn": "公共事業費（水電瓦斯）",
+      "def": "Services such as water, electricity, and gas supplied to a building.",
+      "ex": "Renters now calculate not only the rent but also utility bills.",
+      "exCn": "租屋族現在不只算月租，還會算水電帳單。"
+    },
+    {
+      "w": "lease",
+      "ipa": "/liːs/",
+      "pos": "n.",
+      "cn": "租約",
+      "def": "A legal agreement to rent a building or land for a set period.",
+      "ex": "Before signing a lease, experienced renters calculate every hidden cost.",
+      "exCn": "在簽約之前，有經驗的租屋族會把每一項隱性成本都算進去。"
+    },
+    {
+      "w": "opportunity cost",
+      "ipa": "/ˌɑːpərˈtuːnəti kɒst/",
+      "pos": "n.",
+      "cn": "機會成本",
+      "def": "The benefit you lose by choosing one option instead of another.",
+      "ex": "They also consider the opportunity cost of living far from their workplace.",
+      "exCn": "他們也會考慮住得離工作地點太遠的機會成本。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How much has rent risen for a studio near an MRT station in Taipei?",
+      "qCn": "台北捷運站附近套房的租金漲了多少？",
+      "opts": [
+        "A. From twelve thousand to fifteen thousand",
+        "B. From twelve thousand to eighteen or twenty thousand",
+        "C. From twenty thousand to thirty thousand",
+        "D. It has not changed"
+      ],
+      "optsCn": [
+        "A. 從一萬二漲到一萬五",
+        "B. 從一萬二漲到一萬八甚至兩萬",
+        "C. 從兩萬漲到三萬",
+        "D. 沒有變化"
+      ],
+      "ans": 1,
+      "expl": "That figure has since climbed to eighteen or even twenty thousand."
+    },
+    {
+      "q": "Why did moving to a cheaper suburb not always save money?",
+      "qCn": "為什麼搬到比較便宜的郊區不一定能省錢？",
+      "opts": [
+        "A. Suburban rent rose faster",
+        "B. Transport, childcare, and commuting time ate into the savings",
+        "C. Suburbs had no shops",
+        "D. The government raised taxes"
+      ],
+      "optsCn": [
+        "A. 郊區的房租漲得更快",
+        "B. 交通費、托兒費和通勤時間把省下的錢吃掉了",
+        "C. 郊區沒有商店",
+        "D. 政府調高了稅"
+      ],
+      "ans": 1,
+      "expl": "Transport expenses, childcare fees, and the time lost in traffic ate into the savings."
+    },
+    {
+      "q": "Rental prices ___ in certain districts between 2020 and 2025.",
+      "qCn": "特定區域的租金在 2020 到 2025 年間翻倍了。（選出正確的動詞形式）",
+      "opts": [
+        "A. doubled",
+        "B. have doubled",
+        "C. double",
+        "D. are doubling"
+      ],
+      "ans": 0,
+      "expl": "講的是一段已經完成的歷史區間（between 2020 and 2025），用過去簡單式 doubled。"
+    },
+    {
+      "q": "What should renters calculate before signing a lease?",
+      "qCn": "租屋族在簽約前應該計算什麼？",
+      "opts": [
+        "A. Only the monthly rent",
+        "B. Rent, utility bills, commuting time, and opportunity cost",
+        "C. Only transport fees",
+        "D. The landlord's income"
+      ],
+      "optsCn": [
+        "A. 只有月租",
+        "B. 房租、水電帳單、通勤時間和機會成本",
+        "C. 只有交通費",
+        "D. 房東的收入"
+      ],
+      "ans": 1,
+      "expl": "Renters now calculate not only the monthly rent but also utility bills, commuting time, and the opportunity cost of living far from their workplace."
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The rent went up a lot.",
+      "b2": "The share of income devoted to housing has risen from roughly a third to well over half.",
+      "note": "用具體數據（a third → well over half）取代模糊的 a lot，並用 devoted to housing 精確指出是哪一塊支出。"
+    },
+    {
+      "b1": "Moving to a suburb did not always save money.",
+      "b2": "Transport expenses, childcare fees, and the time lost in traffic ate into the savings.",
+      "note": "ate into（侵蝕）是財經常見的搭配，列出三項具體支出比一個 did not save 更有說服力。"
+    }
+  ]
+},
+
+{
   "id": "d20260824a2",
   "date": "2026-08-24",
   "level": "A2",
@@ -1293,6 +1958,607 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260826a2",
+  "date": "2026-08-26",
+  "unitNo": 5,
+  "level": "A2",
+  "title": "Past Simple (I did)",
+  "titleCn": "過去簡單式（我做了）",
+  "srcDays": [],
+  "summary": "過去簡單式講「已經結束的事」。規則動詞加 -ed（cleaned, washed），不規則動詞要背（went, bought, made）。問句和否定句交給 did / didn't，後面的動詞變回原形。",
+  "sections": [
+    {
+      "h": "怎麼變過去式",
+      "table": {
+        "head": [
+          "",
+          "規則動詞",
+          "不規則動詞"
+        ],
+        "rows": [
+          [
+            "原形",
+            "clean, wash, move",
+            "go, buy, make, come"
+          ],
+          [
+            "過去式",
+            "cleaned, washed, moved",
+            "went, bought, made, came"
+          ],
+          [
+            "變法",
+            "字尾加 -ed",
+            "整個字都變了，要背"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Tom moved to a new apartment last weekend.",
+          "cn": "Tom上個週末搬進新公寓。",
+          "note": "move → moved（加 -d）"
+        },
+        {
+          "en": "He cleaned the floor on Saturday.",
+          "cn": "他星期六擦了地板。",
+          "note": "clean → cleaned（加 -ed）"
+        },
+        {
+          "en": "Amy came to help him carry the boxes.",
+          "cn": "Amy來幫他搬箱子。",
+          "note": "come → came（不規則）"
+        }
+      ]
+    },
+    {
+      "h": "疑問句和否定句用 did",
+      "bullets": [
+        "問句：Did you clean the room? — Yes, I did.",
+        "否定：I didn't buy a new shelf.（didn't 後面用原形 buy，不是 bought）",
+        "重要：did 出場，動詞就變回原形！"
+      ],
+      "examples": [
+        {
+          "en": "Did she help you move?",
+          "cn": "她有幫你搬家嗎？",
+          "note": "did 後面用原形 help"
+        },
+        {
+          "en": "He didn't cook dinner last night.",
+          "cn": "他昨天晚上沒有煮晚餐。",
+          "note": "didn't 後面用原形 cook，不是 cooked"
+        }
+      ]
+    },
+    {
+      "h": "什麼時候用過去簡單式",
+      "bullets": [
+        "有明確的過去時間：yesterday, last week, on Saturday, two years ago",
+        "已經結束的事：I lived there for three years.（已經搬走了）",
+        "一連串過去的動作：He got up, washed his face, and left."
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I didn't cleaned the room.",
+      "good": "I didn't clean the room.",
+      "why": "didn't 已經是過去了，後面的動詞要用原形。不能 didn't + 過去式。"
+    },
+    {
+      "bad": "Did he went to the shop?",
+      "good": "Did he go to the shop?",
+      "why": "Did 出場，動詞要變回原形 go，不是 went。"
+    },
+    {
+      "bad": "He goed to work yesterday.",
+      "good": "He went to work yesterday.",
+      "why": "go 是不規則動詞，過去式是 went，不是加 -ed。"
+    },
+    {
+      "bad": "I move to Taipei last year.",
+      "good": "I moved to Taipei last year.",
+      "why": "last year 是過去的事，動詞要用過去式 moved。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Tom ___ to a new apartment last weekend.",
+      "qCn": "Tom上個週末搬進了新公寓。",
+      "opts": [
+        "moves",
+        "moved",
+        "is moving",
+        "move"
+      ],
+      "ans": 1,
+      "expl": "last weekend 是過去的事，用過去簡單式 moved。"
+    },
+    {
+      "q": "___ she ___ you with the boxes yesterday?",
+      "qCn": "她昨天有幫你搬箱子嗎？",
+      "opts": [
+        "Did / help",
+        "Did / helped",
+        "Does / help",
+        "Is / helping"
+      ],
+      "ans": 0,
+      "expl": "過去式的問句用 Did + 原形，不能用 Did helped。"
+    },
+    {
+      "q": "He ___ dinner last night.",
+      "qCn": "他昨天晚上沒有煮晚餐。",
+      "opts": [
+        "didn't cook",
+        "didn't cooked",
+        "doesn't cook",
+        "isn't cooking"
+      ],
+      "ans": 0,
+      "expl": "否定的過去式用 didn't + 原形，不能用 didn't cooked。"
+    },
+    {
+      "q": "Amy ___ to help, and they ___ the room together.",
+      "qCn": "Amy過來幫忙，他們一起打掃了房間。",
+      "opts": [
+        "came / cleaned",
+        "come / cleaned",
+        "came / clean",
+        "comes / cleans"
+      ],
+      "ans": 0,
+      "expl": "兩個都是過去的事：come → came（不規則），clean → cleaned（規則）。"
+    }
+  ]
+},
+
+{
+  "id": "dg20260826b1",
+  "date": "2026-08-26",
+  "unitNo": 5,
+  "level": "B1",
+  "title": "Past Simple vs Present Perfect",
+  "titleCn": "過去簡單式 vs 現在完成式：什麼時候用哪一個",
+  "srcDays": [],
+  "summary": "兩個都講「做過的事」，差別在：過去簡單式（I did）有明確的過去時間、事情已經結束；現在完成式（I have done）不說什麼時候、重點是「到現在」的結果。",
+  "sections": [
+    {
+      "h": "一張表看懂差別",
+      "table": {
+        "head": [
+          "",
+          "過去簡單式 I did",
+          "現在完成式 I have done"
+        ],
+        "rows": [
+          [
+            "時間",
+            "有明確的過去時間",
+            "不說什麼時候，或說 already / ever / yet"
+          ],
+          [
+            "重點",
+            "事情發生在過去、已結束",
+            "結果「到現在」還有效"
+          ],
+          [
+            "例",
+            "I saved money last month.",
+            "I have saved enough money.（已經存夠了）"
+          ],
+          [
+            "時間詞",
+            "yesterday / last week / ago",
+            "already / just / ever / never / yet"
+          ]
+        ]
+      }
+    },
+    {
+      "h": "看例句就懂了",
+      "examples": [
+        {
+          "en": "She moved to a new apartment last month.",
+          "cn": "她上個月搬進了新公寓。",
+          "note": "last month → 過去簡單式"
+        },
+        {
+          "en": "She has moved to a new apartment.",
+          "cn": "她已經搬進了新公寓。（現在住在那裡）",
+          "note": "不說什麼時候 → 完成式，重點是現在的狀態"
+        },
+        {
+          "en": "I didn't eat breakfast this morning.",
+          "cn": "我今天早上沒吃早餐。",
+          "note": "this morning 已經過了 → 過去簡單式"
+        }
+      ]
+    },
+    {
+      "h": "常見的混淆情境",
+      "bullets": [
+        "Have you ever lived abroad? — Yes, I lived in Japan for two years.（第一句問經驗用完成式，回答具體時間用過去式）",
+        "I lost my key. = 講這件事（過去）/ I have lost my key. = 重點是現在找不到（結果）",
+        "中文的「了」可以是過去也可以是完成，所以中文母語者容易搞混——看英文的時間詞就知道了。"
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I have saved money last month.",
+      "good": "I saved money last month.",
+      "why": "有 last month 這個具體時間，只能用過去簡單式。"
+    },
+    {
+      "bad": "She already moved to the new place.",
+      "good": "She has already moved to the new place.",
+      "why": "already 搭配完成式，強調「到現在」的結果。"
+    },
+    {
+      "bad": "Did you ever visit Japan?",
+      "good": "Have you ever visited Japan?",
+      "why": "ever 問「這輩子有沒有」經驗，用完成式。"
+    },
+    {
+      "bad": "I have bought this shelf yesterday.",
+      "good": "I bought this shelf yesterday.",
+      "why": "yesterday 是明確的過去時間，不能跟 have bought 一起用。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I ___ money every month last year.",
+      "qCn": "我去年每個月都在存錢。",
+      "opts": [
+        "have saved",
+        "saved",
+        "am saving",
+        "save"
+      ],
+      "ans": 1,
+      "expl": "last year 是明確的過去時間，用過去簡單式。"
+    },
+    {
+      "q": "She ___ already ___ enough for the deposit.",
+      "qCn": "她已經存夠了押金的錢。",
+      "opts": [
+        "has / saved",
+        "did / save",
+        "is / saving",
+        "was / saved"
+      ],
+      "ans": 0,
+      "expl": "already 搭配完成式：has already saved，重點是到現在的結果。"
+    },
+    {
+      "q": "___ you ever ___ in a different city?",
+      "qCn": "你有住過其他城市嗎？",
+      "opts": [
+        "Have / lived",
+        "Did / lived",
+        "Have / live",
+        "Do / live"
+      ],
+      "ans": 0,
+      "expl": "ever 問經驗用完成式 Have you ever lived，注意 lived 是過去分詞。"
+    },
+    {
+      "q": "We ___ to this apartment two years ago.",
+      "qCn": "我們兩年前搬到這間公寓。",
+      "opts": [
+        "have moved",
+        "moved",
+        "move",
+        "are moving"
+      ],
+      "ans": 1,
+      "expl": "two years ago 是具體的過去時間，只能用過去簡單式。"
+    }
+  ]
+},
+
+{
+  "id": "dg20260826b1p",
+  "date": "2026-08-26",
+  "unitNo": 5,
+  "level": "B1+",
+  "title": "Past Simple in Narratives",
+  "titleCn": "過去簡單式在敘事中的用法：時間順序與子句",
+  "srcDays": [],
+  "summary": "講故事的時候，過去簡單式是主力時態。搭配 when / after / before / as soon as 等連接詞，可以把好幾個事件按順序排好。注意：after 子句裡的動詞也用過去式，不要因為「先發生」就改成完成式。",
+  "sections": [
+    {
+      "h": "時間連接詞 + 過去簡單式",
+      "table": {
+        "head": [
+          "連接詞",
+          "用法",
+          "例句"
+        ],
+        "rows": [
+          [
+            "when",
+            "兩件事同時或緊接",
+            "When she arrived, the landlord showed her the room."
+          ],
+          [
+            "after",
+            "A 先 → B 後",
+            "After she signed the lease, she moved in."
+          ],
+          [
+            "before",
+            "A 在 B 之前",
+            "Before she moved, she checked the bus routes."
+          ],
+          [
+            "as soon as",
+            "一…就…",
+            "As soon as she saw the balcony, she decided to take it."
+          ]
+        ]
+      }
+    },
+    {
+      "h": "一連串動作的敘事節奏",
+      "body": "敘述一件接一件的事，全部用過去簡單式就好：She opened the door, put down her bags, turned on the light, and smiled. 這就是英文敘事的基本節奏——動作一個接一個，不需要每句都加 then 或 and then。",
+      "examples": [
+        {
+          "en": "She arrived at six, unpacked her bags, and cooked a simple dinner.",
+          "cn": "她六點到，打開行李，煮了一頓簡單的晚餐。",
+          "note": "三個動作同一個主詞，用逗號和 and 串起來"
+        },
+        {
+          "en": "When the agent called, she was at work, so she called back after lunch.",
+          "cn": "仲介打來的時候她在上班，所以午餐後她回了電話。",
+          "note": "when 引出時間背景，主要事件用過去簡單式"
+        }
+      ]
+    },
+    {
+      "h": "after 子句要不要用過去完成式？",
+      "bullets": [
+        "口語和一般寫作：After she signed the lease, she moved in. → 兩邊都用過去簡單式就好。",
+        "正式寫作或強調「先完成」：After she had signed the lease, she moved in. → had signed 更精準，但不是一定要用。",
+        "重點：先學好過去簡單式的用法，完成式的差別到 B2 再深究。"
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "When she arrived, the landlord shows her the room.",
+      "good": "When she arrived, the landlord showed her the room.",
+      "why": "兩邊都是過去的事，主句也要用過去式 showed。"
+    },
+    {
+      "bad": "After she signed the lease, she is moving in.",
+      "good": "After she signed the lease, she moved in.",
+      "why": "故事講的是過去已經發生的事，不能混進現在進行式。"
+    },
+    {
+      "bad": "She opened the door, and then she is turning on the light.",
+      "good": "She opened the door and turned on the light.",
+      "why": "一連串的過去動作全部用過去簡單式，保持一致。"
+    },
+    {
+      "bad": "Before she moves, she checked the bus routes.",
+      "good": "Before she moved, she checked the bus routes.",
+      "why": "整個敘事在過去，before 子句也要用過去式 moved。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "When she ___, the landlord ___ her the room.",
+      "qCn": "她到的時候，房東帶她看了房間。",
+      "opts": [
+        "arrived / showed",
+        "arrives / shows",
+        "arrived / shows",
+        "arrive / showed"
+      ],
+      "ans": 0,
+      "expl": "兩邊都是過去的事，兩個動詞都用過去簡單式。"
+    },
+    {
+      "q": "After she ___ the lease, she ___ in the next day.",
+      "qCn": "她簽完租約之後，隔天就搬進去了。",
+      "opts": [
+        "signed / moved",
+        "signs / moves",
+        "signed / moves",
+        "sign / moved"
+      ],
+      "ans": 0,
+      "expl": "故事在過去，after 子句和主句都用過去簡單式。"
+    },
+    {
+      "q": "She ___ the door, ___ down her bags, and ___ on the light.",
+      "qCn": "她打開門，放下行李，開了燈。",
+      "opts": [
+        "opened / put / turned",
+        "opens / puts / turns",
+        "opened / putted / turned",
+        "open / put / turn"
+      ],
+      "ans": 0,
+      "expl": "三個過去的動作串在一起：opened, put（不規則，原形和過去式一樣），turned。"
+    },
+    {
+      "q": "As soon as she ___ the balcony, she ___ to take the apartment.",
+      "qCn": "她一看到陽台，就決定租下來了。",
+      "opts": [
+        "saw / decided",
+        "sees / decides",
+        "saw / decides",
+        "seen / decided"
+      ],
+      "ans": 0,
+      "expl": "as soon as + 過去簡單式，主句也用過去簡單式。"
+    }
+  ]
+},
+
+{
+  "id": "dg20260826b2",
+  "date": "2026-08-26",
+  "unitNo": 5,
+  "level": "B2",
+  "title": "Past Simple in Formal and Academic Writing",
+  "titleCn": "正式與學術寫作中的過去簡單式",
+  "srcDays": [],
+  "summary": "在正式文章裡，過去簡單式不只是「講過去的事」——它是建立客觀論據的工具。用 rose / declined / estimated 這類動詞陳述已完成的數據事實，為接下來的分析鋪底。跟完成式的差別：完成式暗示「現在還相關」，過去式暗示「報告一個已定論的事實」。",
+  "sections": [
+    {
+      "h": "論說文中的過去簡單式 vs 現在完成式",
+      "table": {
+        "head": [
+          "",
+          "過去簡單式",
+          "現在完成式"
+        ],
+        "rows": [
+          [
+            "語氣",
+            "客觀陳述已結束的事實",
+            "暗示到現在還有影響"
+          ],
+          [
+            "常見於",
+            "研究報告、歷史回顧、引用數據",
+            "前言、結論、政策建議"
+          ],
+          [
+            "例",
+            "Rents rose by 50% between 2020 and 2025.",
+            "Rents have risen sharply in recent years."
+          ],
+          [
+            "差別",
+            "明確時間段、已成定論",
+            "不給時間、暗示趨勢持續"
+          ]
+        ]
+      }
+    },
+    {
+      "h": "正式寫作常用的過去式動詞",
+      "bullets": [
+        "數據類：rose / fell / climbed / declined / doubled / remained stable",
+        "研究類：found / estimated / concluded / demonstrated / revealed",
+        "政策類：introduced / implemented / enacted / amended"
+      ],
+      "examples": [
+        {
+          "en": "Rental prices doubled in certain districts between 2020 and 2025.",
+          "cn": "特定區域的租金在 2020 到 2025 年間翻了一倍。",
+          "note": "明確時間段 → 過去簡單式"
+        },
+        {
+          "en": "One study estimated that commuting costs absorbed eight percent of household income.",
+          "cn": "一項研究估計，通勤成本吃掉了家庭收入的百分之八。",
+          "note": "引用已完成的研究結果 → 過去簡單式"
+        },
+        {
+          "en": "The government introduced a rent cap in 2024, but landlords found ways around it.",
+          "cn": "政府在 2024 年實施了租金上限，但房東找到了繞過去的方法。",
+          "note": "歷史事件 → 過去簡單式"
+        }
+      ]
+    },
+    {
+      "h": "什麼時候應該用完成式而不是過去式",
+      "body": "如果你的重點是「這件事到現在還在影響」，用完成式：Housing costs have risen sharply, and the trend shows no sign of slowing. 如果你的重點是「陳述一段已經結束的事實」，用過去式：Housing costs rose by 60% between 2018 and 2024. 很多論文在第一段用完成式點出問題的現在相關性，中間段落用過去式報告具體數據，最後一段再切回完成式談未來。",
+      "examples": [
+        {
+          "en": "The share of income devoted to housing has risen from a third to over half. (intro)",
+          "cn": "投入在居住上的收入比例已從三分之一升到超過一半。（前言）",
+          "note": "完成式：到現在都相關"
+        },
+        {
+          "en": "Between 2020 and 2025, the average rent in District 1 rose by 94%. (data section)",
+          "cn": "2020 到 2025 年間，第一郡的平均租金上漲了 94%。（數據段落）",
+          "note": "過去式：已完成的數據"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "Rents have doubled between 2020 and 2025.",
+      "good": "Rents doubled between 2020 and 2025.",
+      "why": "between 2020 and 2025 是封閉的時間段，已經結束，用過去簡單式。"
+    },
+    {
+      "bad": "One study has estimated that commuting costs were high.",
+      "good": "One study estimated that commuting costs were high.",
+      "why": "引用已發表的研究結果，用過去簡單式（那篇研究已經完成了）。"
+    },
+    {
+      "bad": "The government introduced a rent cap, and it has helped so far.",
+      "good": "正確！前半句過去式（引入政策），後半句完成式（效果持續到現在）。兩個混用是合理的。",
+      "why": "同一句裡可以混用：過去式講事件，完成式講到現在的影響。"
+    },
+    {
+      "bad": "Housing costs rose sharply in recent years.",
+      "good": "Housing costs have risen sharply in recent years.",
+      "why": "in recent years 包含現在，暗示趨勢還在繼續，用現在完成式更準確。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Rental prices ___ in certain districts between 2020 and 2025.",
+      "qCn": "特定區域的租金在 2020 到 2025 年間翻了一倍。",
+      "opts": [
+        "doubled",
+        "have doubled",
+        "double",
+        "are doubling"
+      ],
+      "ans": 0,
+      "expl": "between 2020 and 2025 是封閉的過去時間段，用過去簡單式 doubled。"
+    },
+    {
+      "q": "One study ___ that households spent more on commuting after they relocated.",
+      "qCn": "一項研究估計，家庭搬遷之後在通勤上花了更多錢。",
+      "opts": [
+        "estimated",
+        "has estimated",
+        "estimates",
+        "estimating"
+      ],
+      "ans": 0,
+      "expl": "引用已完成的研究結果，用過去簡單式 estimated。"
+    },
+    {
+      "q": "Housing costs ___ sharply in recent years, and the trend continues.",
+      "qCn": "近年來居住成本急劇上升，而且趨勢還在繼續。",
+      "opts": [
+        "have risen",
+        "rose",
+        "rise",
+        "were rising"
+      ],
+      "ans": 0,
+      "expl": "in recent years 包含現在、趨勢持續中，用現在完成式 have risen。"
+    },
+    {
+      "q": "The government ___ a new housing policy last March.",
+      "qCn": "政府去年三月推出了一項新的住房政策。",
+      "opts": [
+        "introduced",
+        "has introduced",
+        "introduces",
+        "is introducing"
+      ],
+      "ans": 0,
+      "expl": "last March 是明確的過去時間，用過去簡單式 introduced。"
+    }
+  ]
+},
+
 {
   "id": "dg20260824a2",
   "date": "2026-08-24",

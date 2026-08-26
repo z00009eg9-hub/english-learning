@@ -569,5 +569,63 @@ V.dg20260824b2=card(
   en:"I'm loving the new project so far.", cn:'刻意打破規則：強調此刻的熱度'},
  '左邊：正式語域中 love、mean、suggest 一律簡單式，陳述恆常事實；右邊：廣告與口語刻意加 -ing，把感覺講成「正在燃燒的動作」——不是文法錯誤，是修辭選擇。know、believe 則永遠不能這樣玩。');
 
+/* ---------- 2026-08-26 A2：過去簡單式（規則 vs 不規則） ---------- */
+V.dg20260826a2=card(
+ {pw:220,title:'規則動詞：加 -ed',
+  draw:'<text x="160" y="92" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7c8b96">Regular Verbs</text>'
+   +em(110,150,54,'🎨')+em(210,150,54,'🧹')
+   +'<text x="160" y="206" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">paint → painted ／ clean → cleaned</text>',
+  en:'I painted the wall yesterday.', cn:'規則動詞過去式：直接在字尾加 -ed'},
+ {pw:220,title:'不規則動詞：要背',
+  draw:'<text x="160" y="92" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7c8b96">Irregular Verbs</text>'
+   +em(110,150,54,'📦')+em(210,150,54,'🏃')
+   +'<text x="160" y="206" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">put → put ／ get → got</text>',
+  en:'I put the desk near the window.', cn:'不規則動詞：過去式形狀不同，要記'},
+ '過去簡單式講「已經做完的事」。規則動詞加 -ed（painted, moved, cleaned），不規則動詞形狀不同（put → put, get → got）。否定用 didn\'t + 原形：I didn\'t finish it。');
+
+/* ---------- 2026-08-26 B1：過去簡單式 vs 現在完成式 ---------- */
+V.dg20260826b1=card(
+ {pw:200,title:'Past Simple：已結束',
+  draw:em(160,130,54,'📅')
+   +'<text x="160" y="92" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7c8b96">事情結束了、時間確定</text>'
+   +'<text x="160" y="206" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">I paid the deposit last month.</text>',
+  en:'I paid the deposit last month.', cn:'有明確時間 → 用過去簡單式'},
+ {pw:230,title:'Present Perfect：連到現在',
+  draw:em(160,130,54,'🔗')
+   +'<text x="160" y="92" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7c8b96">經驗／影響延續到此刻</text>'
+   +'<text x="160" y="206" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">I have learned a lot from it.</text>',
+  en:'I have learned a lot from it.', cn:'沒有講「什麼時候」，重點是到現在'},
+ '左邊：過去簡單式搭配明確的時間（last month, yesterday），講已結束的事；右邊：現在完成式不講確切時間，重點是「經驗或影響延續到現在」。判斷關鍵：有 last / ago / yesterday → 過去式；有 already / since / so far → 完成式。');
+
+/* ---------- 2026-08-26 B1+：過去簡單式搭配時間連接詞 ---------- */
+V.dg20260826b1p=card(
+ {pw:240,title:'as soon as：一……就……',
+  draw:'<text x="160" y="92" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7c8b96">兩件事緊接發生</text>'
+   +em(100,148,46,'💧')+em(160,148,20,'➡️')+em(220,148,46,'📞')
+   +'<text x="160" y="206" text-anchor="middle" font-size="13" font-weight="800" fill="#c9631f">As soon as I stopped the water, I called.</text>',
+  en:'As soon as I stopped the water, I called.', cn:'一止住水，馬上打電話'},
+ {pw:240,title:'by the time：到……的時候',
+  draw:'<text x="160" y="92" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7c8b96">另一件事已先發生</text>'
+   +em(100,148,46,'🔧')+em(160,148,20,'⏳')+em(220,148,46,'💦')
+   +'<text x="160" y="206" text-anchor="middle" font-size="13" font-weight="800" fill="#c9631f">By the time he arrived, the floor was soaked.</text>',
+  en:'By the time he arrived, the floor was soaked.', cn:'他到的時候，地板已經濕透了'},
+ 'as soon as 強調兩件事緊接發生（一……就……）；by the time 強調「到那時候，另一件事已經先發生了」。兩者都用過去簡單式，但 by the time 的主句常帶 already，暗示等待的結果。');
+
+/* ---------- 2026-08-26 B2：過去簡單式在正式報告中的用法 ---------- */
+V.dg20260826b2=card(
+ {pw:220,title:'口語敘述',
+  draw:'<rect x="60" y="104" width="200" height="64" rx="8" fill="#fff" stroke="#1c2c45" stroke-width="3"/>'
+   +'<text x="160" y="130" text-anchor="middle" font-size="14.5" font-weight="900" fill="#1c2c45">I figured out the cost.</text>'
+   +'<text x="160" y="152" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7c8b96">日常對話、口語報告</text>'
+   +'<text x="160" y="208" text-anchor="middle" font-size="14" font-weight="800" fill="#7c8b96">figured out：口語、非正式</text>',
+  en:'I figured out the cost.', cn:'口語動詞 figured out：語氣輕鬆'},
+ {pw:240,title:'正式 / 學術寫作',
+  draw:'<rect x="50" y="104" width="220" height="64" rx="8" fill="#fff" stroke="#1c2c45" stroke-width="3"/>'
+   +'<text x="160" y="130" text-anchor="middle" font-size="14.5" font-weight="900" fill="#1c2c45">I calculated the total cost.</text>'
+   +'<text x="160" y="152" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7c8b96">報告、論文、商業分析</text>'
+   +'<text x="160" y="208" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">calculated：正式動詞，精準有力</text>',
+  en:'I calculated the total cost.', cn:'正式動詞 calculated：語氣客觀'},
+ '同一個意思——口語用 figured out，正式寫作用 calculated。其他配對：found out → discovered; got → obtained; thought about → considered。正式報告裡的過去簡單式選詞精準，一個字取代一整個片語，讓語氣更客觀有力。');
+
 return V;
 })();
