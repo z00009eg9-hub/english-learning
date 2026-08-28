@@ -8,6 +8,688 @@ window.DAILY = {
 
 articles:[
 {
+  "id": "d20260828a2",
+  "date": "2026-08-28",
+  "level": "A2",
+  "topic": "飲食",
+  "words": 89,
+  "kind": "orig",
+  "title": "Tom Was Cooking When the Phone Rang",
+  "titleCn": "Tom正在煮飯的時候電話響了",
+  "focus": "過去簡單式（cooked, forgot, tasted）描述已經做完的事",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom昨晚在廚房煮麵，結果講電話忘記顧爐火。文章全部用過去簡單式（cooked, rang, forgot, tasted）講「已經做完」的事，讀的時候留意這些動詞的過去式長什麼樣。",
+  "paras": [
+    {
+      "en": "Tom cooked dinner in his small kitchen last night. He made a big bowl of hot noodle soup.",
+      "cn": "Tom昨晚在他的小廚房煮晚餐。他煮了一大碗熱騰騰的麵湯。"
+    },
+    {
+      "en": "The phone rang when the soup was almost ready. Tom talked to his mother for ten minutes. He completely forgot to turn off the stove.",
+      "cn": "湯快煮好的時候電話響了。Tom跟他媽媽講了十分鐘的電話。他完全忘記關瓦斯爐。"
+    },
+    {
+      "en": "When he came back, the soup was too thick. Some noodles stuck to the bottom of the pot.",
+      "cn": "他回來的時候，湯已經太濃稠了。有些麵黏在鍋底。"
+    },
+    {
+      "en": "Tom still ate the thick soup and it tasted fine. Next time, he will turn off the stove first. There is always something funny happening in his kitchen.",
+      "cn": "Tom還是把濃稠的湯吃完了，味道還不錯。下次他會先關瓦斯爐再接電話。他的廚房裡總是有有趣的事發生。"
+    }
+  ],
+  "target": [
+    {
+      "w": "kitchen",
+      "ipa": "/ˈkɪtʃɪn/",
+      "pos": "n.",
+      "cn": "廚房",
+      "def": "A room where you cook food.",
+      "ex": "Tom cooked dinner in his small kitchen last night.",
+      "exCn": "Tom昨晚在他的小廚房煮晚餐。"
+    },
+    {
+      "w": "noodle",
+      "ipa": "/ˈnuːdl/",
+      "pos": "n.",
+      "cn": "麵條",
+      "def": "A long thin piece of food made from flour.",
+      "ex": "He made a big bowl of hot noodle soup.",
+      "exCn": "他煮了一大碗熱騰騰的麵湯。"
+    },
+    {
+      "w": "stove",
+      "ipa": "/stoʊv/",
+      "pos": "n.",
+      "cn": "瓦斯爐",
+      "def": "A machine in the kitchen used for cooking food.",
+      "ex": "He completely forgot to turn off the stove.",
+      "exCn": "他完全忘記關瓦斯爐。"
+    },
+    {
+      "w": "forget",
+      "ipa": "/fərˈɡet/",
+      "pos": "v.",
+      "cn": "忘記",
+      "def": "To not remember to do something.",
+      "ex": "He completely forgot to turn off the stove.",
+      "exCn": "他完全忘記關瓦斯爐。"
+    },
+    {
+      "w": "thick",
+      "ipa": "/θɪk/",
+      "pos": "adj.",
+      "cn": "濃稠的；厚的",
+      "def": "Not thin; having a large distance between opposite sides.",
+      "ex": "When he came back, the soup was too thick.",
+      "exCn": "他回來的時候，湯已經太濃稠了。"
+    },
+    {
+      "w": "stick",
+      "ipa": "/stɪk/",
+      "pos": "v.",
+      "cn": "黏住",
+      "def": "To become attached to something and not move easily.",
+      "ex": "Some noodles stuck to the bottom of the pot.",
+      "exCn": "有些麵黏在鍋底。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did Tom make for dinner?",
+      "qCn": "Tom晚餐煮了什麼？",
+      "opts": [
+        "A. A big bowl of noodle soup",
+        "B. Fried rice",
+        "C. A sandwich",
+        "D. Dumplings"
+      ],
+      "optsCn": [
+        "A. 一大碗麵湯",
+        "B. 炒飯",
+        "C. 三明治",
+        "D. 水餃"
+      ],
+      "ans": 0,
+      "expl": "He made a big bowl of hot noodle soup."
+    },
+    {
+      "q": "Why did the soup become too thick?",
+      "qCn": "湯為什麼變得太濃稠？",
+      "opts": [
+        "A. Tom added too much flour",
+        "B. Tom forgot to turn off the stove while on the phone",
+        "C. Tom used the wrong pot",
+        "D. The noodles were old"
+      ],
+      "optsCn": [
+        "A. Tom加了太多麵粉",
+        "B. Tom講電話的時候忘記關瓦斯爐",
+        "C. Tom用錯了鍋子",
+        "D. 麵條太舊了"
+      ],
+      "ans": 1,
+      "expl": "The phone rang... Tom talked to his mother for ten minutes. He completely forgot to turn off the stove."
+    },
+    {
+      "q": "Tom ___ dinner in his small kitchen last night.",
+      "qCn": "Tom昨晚在他的小廚房煮了晚餐。（選出正確的動詞形式）",
+      "opts": [
+        "A. cooks",
+        "B. cooked",
+        "C. is cooking",
+        "D. cook"
+      ],
+      "ans": 1,
+      "expl": "last night 是過去的事，用過去簡單式 cooked。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Tom cooked dinner. He talked on the phone. He forgot the stove.",
+      "b2": "While Tom was talking on the phone, he forgot to turn off the stove.",
+      "note": "用 while + 過去進行式（was talking）連接兩個同時發生的動作，比三個短句更順。"
+    },
+    {
+      "b1": "The soup was thick. Tom ate it. It tasted fine.",
+      "b2": "Even though the soup was too thick, Tom still ate it and it tasted fine.",
+      "note": "even though 帶出讓步子句，比三個短句更能表達「雖然…但…」的語氣。"
+    }
+  ]
+},
+
+{
+  "id": "d20260828b1",
+  "date": "2026-08-28",
+  "level": "B1",
+  "topic": "飲食",
+  "words": 149,
+  "kind": "orig",
+  "title": "Amy's Dinner Party Surprise",
+  "titleCn": "Amy的晚餐派對驚喜",
+  "focus": "過去進行式 vs 過去簡單式：while/when 連接「正在做的事」與「突然發生的事」",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Amy在準備晚餐派對時，朋友Lily提早到訪，接著又發生了一場小意外。文章用while/when連接過去進行式（正在做的背景動作）和過去簡單式（突然發生的短動作），也可以留意because/so怎麼串起前後因果。",
+  "paras": [
+    {
+      "en": "Amy was planning a dinner party for six friends on Saturday evening. She wanted everything to be ready before seven o'clock, so she started cooking early in the afternoon.",
+      "cn": "Amy正在為週六晚上的六位朋友籌劃一場晚餐派對。她想在七點前把一切準備好，所以下午就提早開始煮飯。"
+    },
+    {
+      "en": "At six thirty, while she was chopping vegetables for the salad, the doorbell rang. Her friend Lily arrived thirty minutes early because she got the time wrong. Amy quickly wiped her hands and opened the door.",
+      "cn": "六點半，她正在切沙拉用的蔬菜時，門鈴響了。她的朋友Lily提早了三十分鐘到，因為她記錯了時間。Amy趕緊擦乾手，去開門。"
+    },
+    {
+      "en": "Lily offered to help, so the two of them worked together in the kitchen. Amy was frying the chicken when the smoke alarm suddenly went off, and both women laughed loudly. The chicken was a little more burnt than usual, but nobody minded.",
+      "cn": "Lily主動說要幫忙，於是兩人一起在廚房裡忙。Amy正在炸雞的時候，煙霧警報器突然響了，兩個人都笑得很大聲。雞肉比平常燒焦了一點，但沒有人介意。"
+    },
+    {
+      "en": "By seven o'clock, all six guests were sitting around the table. The food was simpler than Amy planned, but the evening was much more fun because of Lily's early arrival. Amy decided that a little chaos always makes a party better.",
+      "cn": "到了七點，六位客人都圍坐在餐桌旁。菜色比Amy原本計劃的簡單一些，但因為Lily提早到，整個晚上反而更有趣。Amy覺得，一點小混亂總是能讓派對更好玩。"
+    }
+  ],
+  "target": [
+    {
+      "w": "dinner party",
+      "ipa": "/ˈdɪnər ˈpɑːrti/",
+      "pos": "n.",
+      "cn": "晚餐派對",
+      "def": "A social event where people eat a meal together.",
+      "ex": "Amy was planning a dinner party for six friends.",
+      "exCn": "Amy正在為六位朋友籌劃一場晚餐派對。"
+    },
+    {
+      "w": "chop",
+      "ipa": "/tʃɑːp/",
+      "pos": "v.",
+      "cn": "切、剁",
+      "def": "To cut something into small pieces with a knife.",
+      "ex": "She was chopping vegetables for the salad.",
+      "exCn": "她正在切沙拉用的蔬菜。"
+    },
+    {
+      "w": "doorbell",
+      "ipa": "/ˈdɔːrbel/",
+      "pos": "n.",
+      "cn": "門鈴",
+      "def": "A button by a door that makes a sound when pressed.",
+      "ex": "The doorbell rang while she was chopping vegetables.",
+      "exCn": "她正在切菜的時候門鈴響了。"
+    },
+    {
+      "w": "arrive",
+      "ipa": "/əˈraɪv/",
+      "pos": "v.",
+      "cn": "到達",
+      "def": "To reach a place.",
+      "ex": "Her friend Lily arrived thirty minutes early.",
+      "exCn": "她的朋友Lily提早了三十分鐘到。"
+    },
+    {
+      "w": "smoke alarm",
+      "ipa": "/smoʊk əˈlɑːrm/",
+      "pos": "n.",
+      "cn": "煙霧警報器",
+      "def": "A device that makes a loud sound when it senses smoke.",
+      "ex": "The smoke alarm suddenly went off.",
+      "exCn": "煙霧警報器突然響了。"
+    },
+    {
+      "w": "burnt",
+      "ipa": "/bɜːrnt/",
+      "pos": "adj.",
+      "cn": "燒焦的",
+      "def": "Damaged or darkened by too much heat.",
+      "ex": "The chicken was a little more burnt than usual.",
+      "exCn": "雞肉比平常燒焦了一點。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What was Amy doing when the doorbell rang?",
+      "qCn": "門鈴響的時候Amy正在做什麼？",
+      "opts": [
+        "A. Frying chicken",
+        "B. Chopping vegetables for the salad",
+        "C. Setting the table",
+        "D. Washing dishes"
+      ],
+      "optsCn": [
+        "A. 正在炸雞",
+        "B. 正在切沙拉用的蔬菜",
+        "C. 正在擺餐桌",
+        "D. 正在洗碗"
+      ],
+      "ans": 1,
+      "expl": "while she was chopping vegetables for the salad, the doorbell rang."
+    },
+    {
+      "q": "Why did Lily arrive early?",
+      "qCn": "Lily為什麼提早到？",
+      "opts": [
+        "A. She wanted to help cook",
+        "B. She got the time wrong",
+        "C. She lived very close",
+        "D. The bus came early"
+      ],
+      "optsCn": [
+        "A. 她想幫忙煮飯",
+        "B. 她記錯了時間",
+        "C. 她住得很近",
+        "D. 公車提早到了"
+      ],
+      "ans": 1,
+      "expl": "Her friend Lily arrived thirty minutes early because she got the time wrong."
+    },
+    {
+      "q": "Amy ___ the chicken when the smoke alarm went off.",
+      "qCn": "警報器響的時候，Amy正在炸雞。（選出正確的動詞形式）",
+      "opts": [
+        "A. fries",
+        "B. fried",
+        "C. was frying",
+        "D. has fried"
+      ],
+      "ans": 2,
+      "expl": "went off 是突然發生的短動作，背景「正在做的事」用過去進行式 was frying。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The doorbell rang. Amy was chopping vegetables.",
+      "b2": "The doorbell rang just as Amy was chopping vegetables for the salad.",
+      "note": "just as 比單純用 while 更強調「恰好在那一刻」，是B1+常見的加強寫法。"
+    },
+    {
+      "b1": "The chicken was burnt. Nobody minded.",
+      "b2": "Although the chicken ended up slightly burnt, nobody seemed to mind at all.",
+      "note": "although 帶出讓步子句，seemed to 讓語氣更委婉、不那麼直接。"
+    }
+  ]
+},
+
+{
+  "id": "d20260828b1p",
+  "date": "2026-08-28",
+  "level": "B1+",
+  "topic": "食物與生活",
+  "words": 198,
+  "kind": "orig",
+  "title": "The Blackout During Dinner",
+  "titleCn": "煮晚餐時的那場停電",
+  "focus": "被動語態（was cut, was sent, were being carried out）描述停電的處境；關係子句 that / which 補充說明",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "Anita在胡志明市租的套房裡煮晚餐時遇上停電。注意文章用一連串被動語態描述停電的處境——had been cut、was sent、were being carried out——重點不是「誰做的」，而是「事情發生在她身上」。也留意 that 和 which 帶出的關係子句怎麼補充額外的資訊。",
+  "paras": [
+    {
+      "en": "Anita was cooking dinner in her rented studio in Ho Chi Minh City last Tuesday evening. She had just switched on the rice cooker and was chopping vegetables for a stir-fry that she planned to eat before an online meeting at seven.",
+      "cn": "上週二晚上，Anita正在胡志明市租的套房裡煮晚餐。她剛打開電子鍋，正在切炒菜要用的蔬菜，打算在七點的線上會議前吃完。"
+    },
+    {
+      "en": "Suddenly all the lights went out. The power in her whole building had been cut, and a message was later sent to every tenant explaining that emergency repairs were being carried out on the transformer outside. Anita's phone, which was almost out of battery, could not tell her how long the outage would last.",
+      "cn": "突然間所有的燈都熄了。整棟大樓的電都被切斷了，後來有一則訊息發給每位房客，解釋說外面的變壓器正在進行緊急維修。Anita的手機幾乎快沒電了，沒辦法查到停電還要多久。"
+    },
+    {
+      "en": "For nearly two hours she sat in the dark with half-cooked rice and raw vegetables that could not be finished. When the electricity was finally restored, the rice had gone cold and the vegetables had wilted, so she threw both away and ordered noodles from a shop nearby instead.",
+      "cn": "她在黑暗中坐了將近兩個小時，旁邊是半熟的米飯和沒辦法煮完的生蔬菜。電終於恢復的時候，飯已經冷了，蔬菜也蔫了，於是她把兩樣都丟了，改叫了附近店家的麵。"
+    },
+    {
+      "en": "The experience taught her something useful: a backup plan is needed for evenings when the power cannot be relied on. She has since bought a small gas stove that is kept in a cupboard for emergencies, and she now keeps a few instant meals in the fridge that can be prepared without electricity.",
+      "cn": "這次經驗教會她一件有用的事：需要有備用方案，來應付電力不可靠的晚上。她後來買了一個小瓦斯爐，放在櫃子裡以備不時之需，現在冰箱裡也常備幾份不用插電就能準備好的即食餐。"
+    }
+  ],
+  "target": [
+    {
+      "w": "stir-fry",
+      "ipa": "/ˈstɜːr fraɪ/",
+      "pos": "n.",
+      "cn": "快炒菜",
+      "def": "A dish made by quickly cooking small pieces of food in a hot pan.",
+      "ex": "She was chopping vegetables for a stir-fry.",
+      "exCn": "她正在切炒菜要用的蔬菜。"
+    },
+    {
+      "w": "tenant",
+      "ipa": "/ˈtenənt/",
+      "pos": "n.",
+      "cn": "房客",
+      "def": "A person who pays to live in a building owned by someone else.",
+      "ex": "A message was later sent to every tenant.",
+      "exCn": "後來有一則訊息發給每位房客。"
+    },
+    {
+      "w": "transformer",
+      "ipa": "/trænsˈfɔːrmər/",
+      "pos": "n.",
+      "cn": "變壓器",
+      "def": "A device that changes electricity to a form buildings can use.",
+      "ex": "Emergency repairs were being carried out on the transformer outside.",
+      "exCn": "外面的變壓器正在進行緊急維修。"
+    },
+    {
+      "w": "outage",
+      "ipa": "/ˈaʊtɪdʒ/",
+      "pos": "n.",
+      "cn": "停電",
+      "def": "A period when the electricity supply stops working.",
+      "ex": "Her phone could not tell her how long the outage would last.",
+      "exCn": "她的手機沒辦法查到停電還要多久。"
+    },
+    {
+      "w": "restore",
+      "ipa": "/rɪˈstɔːr/",
+      "pos": "v.",
+      "cn": "恢復",
+      "def": "To bring something back to its normal condition.",
+      "ex": "When the electricity was finally restored, the rice had gone cold.",
+      "exCn": "電終於恢復的時候，飯已經冷了。"
+    },
+    {
+      "w": "wilt",
+      "ipa": "/wɪlt/",
+      "pos": "v.",
+      "cn": "枯萎、蔫掉",
+      "def": "To become weak and droop, especially because of heat or lack of water.",
+      "ex": "The vegetables had wilted.",
+      "exCn": "蔬菜也蔫了。"
+    },
+    {
+      "w": "backup",
+      "ipa": "/ˈbækʌp/",
+      "pos": "n.",
+      "cn": "備用（的）",
+      "def": "Something kept ready in case the usual thing fails.",
+      "ex": "A backup plan is needed for evenings when the power cannot be relied on.",
+      "exCn": "需要有備用方案，來應付電力不可靠的晚上。"
+    },
+    {
+      "w": "instant",
+      "ipa": "/ˈɪnstənt/",
+      "pos": "adj.",
+      "cn": "即食的、速食的",
+      "def": "Able to be prepared very quickly, usually just by adding water or heat.",
+      "ex": "She now keeps a few instant meals in the fridge.",
+      "exCn": "她現在冰箱裡也常備幾份即食餐。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What was Anita doing when the power went out?",
+      "qCn": "停電的時候Anita正在做什麼？",
+      "opts": [
+        "A. Watching an online meeting",
+        "B. Cooking a stir-fry for dinner",
+        "C. Charging her phone",
+        "D. Cleaning her kitchen"
+      ],
+      "optsCn": [
+        "A. 正在看線上會議",
+        "B. 正在煮晚餐要吃的快炒菜",
+        "C. 正在幫手機充電",
+        "D. 正在打掃廚房"
+      ],
+      "ans": 1,
+      "expl": "She had just switched on the rice cooker and was chopping vegetables for a stir-fry."
+    },
+    {
+      "q": "Why was the power cut, according to the message sent to tenants?",
+      "qCn": "根據發給房客的訊息，電為什麼被切斷？",
+      "opts": [
+        "A. A storm damaged the building",
+        "B. Emergency repairs were being carried out on the transformer",
+        "C. The building had not paid its electricity bill",
+        "D. Anita's apartment had an electrical fault"
+      ],
+      "optsCn": [
+        "A. 暴風雨損壞了大樓",
+        "B. 外面的變壓器正在進行緊急維修",
+        "C. 大樓沒有繳電費",
+        "D. Anita的公寓有電路故障"
+      ],
+      "ans": 1,
+      "expl": "a message was later sent to every tenant explaining that emergency repairs were being carried out on the transformer outside."
+    },
+    {
+      "q": "What did Anita do with the rice and vegetables after the power came back?",
+      "qCn": "電恢復後Anita怎麼處理那些米飯和蔬菜？",
+      "opts": [
+        "A. She reheated them",
+        "B. She threw them away and ordered noodles instead",
+        "C. She gave them to a neighbor",
+        "D. She finished cooking them"
+      ],
+      "optsCn": [
+        "A. 她重新加熱了",
+        "B. 她把它們丟了，改叫了麵",
+        "C. 她送給了鄰居",
+        "D. 她把它們煮完了"
+      ],
+      "ans": 1,
+      "expl": "she threw both away and ordered noodles from a shop nearby instead."
+    },
+    {
+      "q": "Emergency repairs ___ on the transformer outside.",
+      "qCn": "外面的變壓器正在進行緊急維修。（選出正確的動詞形式）",
+      "opts": [
+        "A. were carrying out",
+        "B. were being carried out",
+        "C. carried out",
+        "D. have carried out"
+      ],
+      "ans": 1,
+      "expl": "維修的對象是變壓器（被維修），且是當時正在進行的被動語態：were being carried out。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The power went out. Anita's food was ruined.",
+      "b2": "A sudden outage during the dinner rush left Anita's half-cooked meal beyond saving.",
+      "note": "用「名詞化」（a sudden outage）取代 The power went out 的完整句子，是B2常見的精簡寫法，left...beyond saving 也比 was ruined 更生動。"
+    },
+    {
+      "b1": "She bought a gas stove so she would be ready next time.",
+      "b2": "She has since invested in a small gas stove as a hedge against future outages.",
+      "note": "invested in 比 bought 更強調「為了未來的保障而花錢」，as a hedge against 是財經／風險用語，語域更正式。"
+    }
+  ]
+},
+
+{
+  "id": "d20260828b2",
+  "date": "2026-08-28",
+  "level": "B2",
+  "topic": "新聞·食物與生活",
+  "words": 285,
+  "kind": "news",
+  "source": "改寫自 Focus Taiwan 報導（2026/08/26）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202608260024",
+  "title": "A Sesame Oil Recall Joins Taiwan's Widening Cooking-Oil Scandal",
+  "titleCn": "芝麻油回收案，加入台灣持續擴大的食用油風暴",
+  "focus": "被動語態陳述新聞事實（was found, was ordered, will be pulled）",
+  "intro": "這篇報導改寫自嘉義芝麻油廠商自報檢驗未過關、遭勒令停產的新聞。文章大量使用被動語態（was found, was ordered, were being tested）陳述已確認的事實，也點出這起事件跟七月黃豆油風暴的關聯。",
+  "paras": [
+    {
+      "en": "Taiwan's food safety authorities widened an ongoing cooking-oil investigation this week after Uni-Procurement Corp, a Chiayi-based brand with more than seventy years in business, reported that one of its own products had failed an internal carcinogen test. City health inspectors visited the factory on Monday, confirmed the result, and ordered the company to halt sesame oil production immediately.",
+      "cn": "台灣的食品安全主管機關本週擴大了一項還在進行中的食用油調查，起因是嘉義一家經營超過七十年的老字號廠商 Uni-Procurement Corp 自行通報，公司一項產品未通過內部的致癌物檢測。市府衛生單位週一到廠稽查，確認了檢測結果，並下令該公司立刻停止生產芝麻油。"
+    },
+    {
+      "en": "The product in question was a 255-millilitre bottle of black sesame oil. Testing found a concentration of 3.2 micrograms of benzo[a]pyrene per kilogram, well above the legal ceiling of 2 micrograms set by Taiwanese regulators. Inspectors also collected samples from storage tanks at the factory to check whether other batches were affected before allowing production to resume.",
+      "cn": "涉案產品是一瓶255毫升的黑芝麻油。檢測發現苯并芘濃度為每公斤3.2微克，遠超過台灣法規訂定的每公斤2微克上限。稽查人員也在工廠內的儲存槽採樣，確認其他批次是否也受影響，才決定是否允許恢復生產。"
+    },
+    {
+      "en": "The sesame oil case adds a third product type to a scandal that began in July, when regulators found soybean oil made by Central Union Oil Corp. contained benzo[a]pyrene at more than four times the legal limit, with one batch testing as high as 8.1 micrograms per kilogram. About 1,300 tonnes of that oil had already reached other manufacturers before the problem was caught, and the recall eventually covered more than 400 downstream products, from packaged chicken to instant noodles. Central Union was later fined NT$165.2 million, the largest such penalty in Taiwanese food safety history.",
+      "cn": "這起芝麻油事件，是這波食安風暴中出現的第三種油品。整起事件從七月開始，主管機關發現 Central Union Oil Corp 生產的黃豆油苯并芘超標四倍以上，其中一批甚至測出每公斤8.1微克。當時已有約1,300公噸的問題油品流入其他下游廠商，最終回收範圍擴及四百多項下游產品，從包裝雞胸肉到泡麵都有。Central Union 後來被裁罰新台幣1億6,520萬元，是台灣食安史上金額最高的一筆罰款。"
+    },
+    {
+      "en": "Investigators who reviewed the earlier soybean oil case blamed a mix of management failures: poor controls over high-risk raw materials, weak oversight of production, and insufficient testing before products left the factory. Officials say the sesame oil case fits the same pattern and are now pushing smaller manufacturers to test every batch rather than rely on occasional spot checks. Any product confirmed to exceed the limit will continue to be pulled from shelves nationwide.",
+      "cn": "調查人員檢討先前的黃豆油事件時，歸咎於一連串的管理疏失：對高風險原料把關不足、生產流程的監督不夠嚴謹，以及產品出廠前的檢驗不足。官員表示這次的芝麻油事件模式相同，目前正在推動規模較小的廠商每一批都要檢驗，而不是只靠偶爾的抽驗。任何確認超標的產品，之後都會持續被下架回收。"
+    }
+  ],
+  "target": [
+    {
+      "w": "carcinogen",
+      "ipa": "/kɑːrˈsɪnədʒən/",
+      "pos": "n.",
+      "cn": "致癌物",
+      "def": "A substance that can cause cancer.",
+      "ex": "One of its own products had failed an internal carcinogen test.",
+      "exCn": "公司一項產品未通過內部的致癌物檢測。"
+    },
+    {
+      "w": "ceiling",
+      "ipa": "/ˈsiːlɪŋ/",
+      "pos": "n.",
+      "cn": "（數量、價格的）上限",
+      "def": "The highest legal or acceptable level allowed for something.",
+      "ex": "Testing found a concentration well above the legal ceiling of 2 micrograms.",
+      "exCn": "檢測發現濃度遠超過每公斤2微克的法定上限。"
+    },
+    {
+      "w": "batch",
+      "ipa": "/bætʃ/",
+      "pos": "n.",
+      "cn": "一批（產品）",
+      "def": "A group of products made or tested together at one time.",
+      "ex": "Inspectors collected samples to check whether other batches were affected.",
+      "exCn": "稽查人員採樣確認其他批次是否也受影響。"
+    },
+    {
+      "w": "recall",
+      "ipa": "/rɪˈkɔːl/",
+      "pos": "n./v.",
+      "cn": "（產品）回收",
+      "def": "An order for a company to take a product back because it is unsafe.",
+      "ex": "The recall eventually covered more than 400 downstream products.",
+      "exCn": "回收範圍最終擴及四百多項下游產品。"
+    },
+    {
+      "w": "downstream",
+      "ipa": "/ˈdaʊnstriːm/",
+      "pos": "adj.",
+      "cn": "下游的",
+      "def": "Later in a supply chain, closer to the final customer.",
+      "ex": "The recall covered more than 400 downstream products.",
+      "exCn": "回收範圍擴及四百多項下游產品。"
+    },
+    {
+      "w": "penalty",
+      "ipa": "/ˈpenəlti/",
+      "pos": "n.",
+      "cn": "罰款、處罰",
+      "def": "A punishment, often a fine, for breaking a rule or law.",
+      "ex": "Central Union was fined NT$165.2 million, the largest such penalty in Taiwanese food safety history.",
+      "exCn": "Central Union被裁罰新台幣1億6,520萬元，是台灣食安史上金額最高的一筆罰款。"
+    },
+    {
+      "w": "oversight",
+      "ipa": "/ˈoʊvərsaɪt/",
+      "pos": "n.",
+      "cn": "監督",
+      "def": "The act of watching and checking a process to make sure it is done correctly.",
+      "ex": "Investigators blamed weak oversight of production.",
+      "exCn": "調查人員歸咎於生產流程的監督不夠嚴謹。"
+    },
+    {
+      "w": "spot check",
+      "ipa": "/spɑːt tʃek/",
+      "pos": "n.",
+      "cn": "抽驗",
+      "def": "A test done on a small, randomly chosen sample instead of on everything.",
+      "ex": "Manufacturers should test every batch rather than rely on occasional spot checks.",
+      "exCn": "廠商應該每一批都檢驗，而不是只靠偶爾的抽驗。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Chiayi health inspectors visit Uni-Procurement Corp on Monday?",
+      "qCn": "嘉義衛生稽查人員為什麼週一到Uni-Procurement Corp稽查？",
+      "opts": [
+        "A. A customer complained about the taste",
+        "B. The company itself reported a failed carcinogen test",
+        "C. A competitor reported the company",
+        "D. The government carried out a routine annual check"
+      ],
+      "optsCn": [
+        "A. 有顧客抱怨味道",
+        "B. 公司自己通報了未通過的致癌物檢測",
+        "C. 有競爭對手檢舉該公司",
+        "D. 政府進行例行年度檢查"
+      ],
+      "ans": 1,
+      "expl": "Uni-Procurement Corp... reported that one of its own products had failed an internal carcinogen test."
+    },
+    {
+      "q": "How did the benzo[a]pyrene level in the sesame oil compare to the legal limit?",
+      "qCn": "芝麻油中的苯并芘濃度和法定上限相比如何？",
+      "opts": [
+        "A. It was exactly at the limit",
+        "B. It was above the limit, at 3.2 micrograms versus a 2-microgram ceiling",
+        "C. It was ten times the limit",
+        "D. It was below the limit"
+      ],
+      "optsCn": [
+        "A. 剛好等於上限",
+        "B. 超過上限，3.2微克對2微克的上限",
+        "C. 是上限的十倍",
+        "D. 低於上限"
+      ],
+      "ans": 1,
+      "expl": "a concentration of 3.2 micrograms... well above the legal ceiling of 2 micrograms."
+    },
+    {
+      "q": "What was the outcome of the earlier soybean oil case involving Central Union Oil Corp?",
+      "qCn": "先前Central Union Oil Corp黃豆油事件的結果是什麼？",
+      "opts": [
+        "A. The company was cleared of wrongdoing",
+        "B. The company was fined NT$165.2 million after a recall covering more than 400 products",
+        "C. The company closed permanently",
+        "D. No products were recalled"
+      ],
+      "optsCn": [
+        "A. 公司被判定無罪",
+        "B. 回收超過400項產品後，公司被罰新台幣1億6,520萬元",
+        "C. 公司永久歇業",
+        "D. 沒有任何產品被回收"
+      ],
+      "ans": 1,
+      "expl": "the recall eventually covered more than 400 downstream products... Central Union was later fined NT$165.2 million."
+    },
+    {
+      "q": "According to investigators, what mainly caused the earlier contamination?",
+      "qCn": "根據調查人員的說法，先前的污染事件主要是什麼原因造成的？",
+      "opts": [
+        "A. A natural disaster damaged the factory",
+        "B. A combination of management failures such as weak raw-material controls and insufficient testing",
+        "C. Deliberate poisoning by a competitor",
+        "D. A shortage of soybeans"
+      ],
+      "optsCn": [
+        "A. 天災損壞了工廠",
+        "B. 一連串管理疏失，例如原料把關不足與檢驗不足",
+        "C. 競爭對手蓄意下毒",
+        "D. 黃豆短缺"
+      ],
+      "ans": 1,
+      "expl": "Investigators... blamed a mix of management failures: poor controls over high-risk raw materials, weak oversight of production, and insufficient testing."
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The company didn't tell people fast enough that its oil was bad.",
+      "b2": "The company was fined for failing to report the contamination promptly, a delay regulators called the most serious violation in the case.",
+      "note": "被動語態（was fined for failing to）加上同位語（a delay regulators called...）是新聞報導常見的精簡寫法，一句話交代處罰理由與嚴重性。"
+    },
+    {
+      "b1": "The problem happened because the company didn't check things well.",
+      "b2": "Investigators attributed the contamination to systemic gaps in quality control rather than an isolated accident.",
+      "note": "attributed...to 是正式報導動詞，systemic gaps 比「沒有做好」更精確地指出「制度性」的問題，語域明顯更正式。"
+    }
+  ]
+},
+
+{
   "id": "d20260826a2",
   "date": "2026-08-26",
   "level": "A2",
@@ -1958,6 +2640,244 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260828a2",
+  "date": "2026-08-28",
+  "unitNo": 6,
+  "level": "A2",
+  "title": "Past Continuous (I was doing)",
+  "titleCn": "過去進行式（我當時正在做）",
+  "srcDays": [],
+  "summary": "過去進行式（was/were + V-ing）講「在過去某個時間點，正在做的事」。跟過去簡單式不一樣：過去簡單式講「做完了」，過去進行式講「當時正在做，還沒做完」。",
+  "sections": [
+    {
+      "h": "怎麼組成：was/were + V-ing",
+      "table": {
+        "head": ["主詞", "was/were", "動詞-ing"],
+        "rows": [
+          ["I / he / she / it", "was", "doing, cooking, watching"],
+          ["you / we / they", "were", "doing, cooking, watching"]
+        ]
+      },
+      "examples": [
+        {"en": "I was cooking dinner at seven last night.", "cn": "我昨晚七點的時候正在煮晚餐。", "note": "was + cooking"},
+        {"en": "They were watching TV at eight o'clock.", "cn": "他們八點的時候正在看電視。", "note": "were + watching"},
+        {"en": "She was sleeping when I called.", "cn": "我打電話的時候她正在睡覺。", "note": "was + sleeping"}
+      ]
+    },
+    {
+      "h": "什麼時候用",
+      "bullets": [
+        "說「在過去某個時間點，正在做的事」：at eight o'clock, at that time",
+        "強調「動作進行中，還沒結束」，不是「已經做完」",
+        "常常搭配一個特定的過去時間點，例如 last night at nine"
+      ]
+    },
+    {
+      "h": "跟過去簡單式比一比",
+      "table": {
+        "head": ["", "過去簡單式 I did", "過去進行式 I was doing"],
+        "rows": [
+          ["重點", "事情做完了", "動作正在進行中"],
+          ["例句", "I cooked dinner.（煮完了）", "I was cooking dinner.（還在煮）"]
+        ]
+      }
+    }
+  ],
+  "traps": [
+    {"bad": "I was cook dinner.", "good": "I was cooking dinner.", "why": "was/were 後面一定要加V-ing，不能用原形動詞。"},
+    {"bad": "She were watching TV.", "good": "She was watching TV.", "why": "she是單數主詞要用was，不能用were（were是you/we/they用的）。"},
+    {"bad": "I was cooking dinner yesterday I finished at eight.", "good": "I was cooking dinner at eight last night.", "why": "過去進行式通常搭配一個時間點（at eight），不是整句話都用進行式描述已完成的事。"},
+    {"bad": "I cooking dinner now.", "good": "I was cooking dinner last night.", "why": "忘記加was/were，現在進行式才用am/is/are，過去要用was/were。"}
+  ],
+  "quiz": [
+    {"q": "I ___ dinner at seven last night.", "qCn": "我昨晚七點的時候正在煮晚餐。", "opts": ["cook", "cooked", "was cooking", "am cooking"], "ans": 2, "expl": "at seven last night是過去某個時間點，正在做的事用was cooking。"},
+    {"q": "They ___ TV when I arrived.", "qCn": "我到的時候他們正在看電視。", "opts": ["was watching", "were watching", "watch", "watched"], "ans": 1, "expl": "they是複數主詞用were，was watching是錯的組合。"},
+    {"q": "She ___ when I called her.", "qCn": "我打電話給她的時候她正在睡覺。", "opts": ["sleep", "slept", "was sleep", "was sleeping"], "ans": 3, "expl": "was後面要加V-ing：was sleeping，不能用was sleep。"},
+    {"q": "___ you ___ dinner at eight?", "qCn": "你八點的時候在煮晚餐嗎？", "opts": ["Did / cook", "Were / cooking", "Was / cooking", "Are / cooking"], "ans": 1, "expl": "you用複數形式的was/were（were），問句把were放最前面：Were you cooking？"}
+  ]
+},
+
+{
+  "id": "dg20260828b1",
+  "date": "2026-08-28",
+  "unitNo": 6,
+  "level": "B1",
+  "title": "Past Continuous vs Past Simple",
+  "titleCn": "過去進行式 vs 過去簡單式：背景動作 vs 突然發生的事",
+  "srcDays": [],
+  "summary": "兩個常常一起出現：過去進行式（was/were doing）講「比較長、正在進行的背景動作」；過去簡單式（did）講「突然發生、打斷背景的短動作」。常用while接過去進行式、when接過去簡單式。",
+  "sections": [
+    {
+      "h": "while + 過去進行式，when + 過去簡單式",
+      "table": {
+        "head": ["功能", "時態", "常用連接詞"],
+        "rows": [
+          ["背景（比較長）", "過去進行式 was/were doing", "while"],
+          ["突然發生（比較短）", "過去簡單式 did", "when（也可以不加連接詞）"]
+        ]
+      },
+      "bullets": [
+        "While she was chopping vegetables, the doorbell rang.（背景動作 while + was chopping；突然發生的短動作用過去簡單式 rang）",
+        "When the doorbell rang, she was chopping vegetables.（順序可以顛倒，意思一樣）"
+      ],
+      "examples": [
+        {"en": "While she was chopping vegetables, the doorbell rang.", "cn": "她正在切菜的時候，門鈴響了。", "note": "背景動作 was chopping + 突然發生 rang"},
+        {"en": "Amy was frying the chicken when the smoke alarm went off.", "cn": "警報器響起的時候，Amy正在炸雞。", "note": "先講背景was frying，再講突然發生went off"}
+      ]
+    },
+    {
+      "h": "兩個過去進行式同時發生",
+      "bullets": ["while 前後都是過去進行式，表示「兩件事同時在進行」，沒有誰打斷誰"],
+      "examples": [
+        {"en": "While Tom was cooking, Amy was setting the table.", "cn": "Tom在煮飯的時候，Amy正在擺餐桌。", "note": "兩件事同時進行，都用過去進行式"}
+      ]
+    },
+    {
+      "h": "常見混淆點",
+      "table": {
+        "head": ["句子", "對不對", "為什麼"],
+        "rows": [
+          ["While she chopped vegetables, the doorbell rang.", "✗ 不自然", "while後面通常接『正在進行的背景動作』，要用過去進行式"],
+          ["While she was answering the phone, her sister came in.", "✓ 常見", "接電話這段時間是背景，妹妹進來是突然發生的事"]
+        ]
+      }
+    }
+  ],
+  "traps": [
+    {"bad": "While she chopped vegetables, the doorbell rang.", "good": "While she was chopping vegetables, the doorbell rang.", "why": "while後面通常接「正在進行的背景動作」，要用過去進行式was chopping，不是過去簡單式chopped。"},
+    {"bad": "Amy was frying the chicken when the smoke alarm was going off.", "good": "Amy was frying the chicken when the smoke alarm went off.", "why": "突然發生的短動作（警報器響）用過去簡單式went off，不是過去進行式。"},
+    {"bad": "When I was cooking dinner, my friend was arriving.", "good": "When I was cooking dinner, my friend arrived.", "why": "到達（arrive）是瞬間發生的短動作，用過去簡單式arrived，不是過去進行式。"},
+    {"bad": "While I was watch TV, she called me.", "good": "While I was watching TV, she called me.", "why": "was後面要加V-ing：watching，不能用原形watch。"}
+  ],
+  "quiz": [
+    {"q": "While Amy ___ vegetables, the doorbell rang.", "qCn": "Amy正在切菜的時候，門鈴響了。", "opts": ["chopped", "was chopping", "chops", "chop"], "ans": 1, "expl": "while後面接背景動作，用過去進行式was chopping。"},
+    {"q": "The smoke alarm ___ while Amy was frying the chicken.", "qCn": "Amy正在炸雞的時候，警報器響了。", "opts": ["was going off", "went off", "goes off", "were going off"], "ans": 1, "expl": "警報器響是突然發生的短動作，用過去簡單式went off。"},
+    {"q": "While Tom ___ dinner, Amy ___ the table.", "qCn": "Tom煮飯的時候，Amy正在擺餐桌。", "opts": ["cooked / set", "was cooking / was setting", "cooks / sets", "was cooking / set"], "ans": 1, "expl": "兩件事同時進行，前後都用過去進行式was cooking / was setting。"},
+    {"q": "When Lily arrived, Amy ___ vegetables.", "qCn": "Lily到的時候，Amy正在切菜。", "opts": ["chopped", "chops", "was chopping", "is chopping"], "ans": 2, "expl": "arrived是突然發生的短動作，Amy正在做的背景動作用過去進行式was chopping。"}
+  ]
+},
+
+{
+  "id": "dg20260828b1p",
+  "date": "2026-08-28",
+  "unitNo": 6,
+  "level": "B1+",
+  "title": "Past Continuous: Advanced Uses",
+  "titleCn": "過去進行式進階：場景鋪陳、always的抱怨句、與used to的差別",
+  "srcDays": [],
+  "summary": "過去進行式除了「背景動作」，還有三個進階用法：(1) 在敘事開頭鋪陳場景；(2) was/were always + V-ing表達「對某人重複行為的抱怨」；(3) 跟used to不同——was doing是「那一次正在做」，used to是「過去的習慣，現在已經不是了」。",
+  "sections": [
+    {
+      "h": "用法一：敘事開頭的場景鋪陳",
+      "bullets": ["新聞、故事、報告常常先用過去進行式描述『當時的畫面』，再用過去簡單式講『發生了什麼事』", "這樣讀者會先有畫面感，再知道發生了什麼"],
+      "examples": [
+        {"en": "Anita was cooking dinner in her rented studio last Tuesday evening when the lights suddenly went out.", "cn": "上週二晚上Anita正在她租的套房裡煮晚餐，這時燈突然熄了。", "note": "故事一開始先用過去進行式鋪陳背景畫面，再用過去簡單式帶出關鍵事件"}
+      ]
+    },
+    {
+      "h": "用法二：was/were always + V-ing（抱怨、驚訝的重複行為）",
+      "table": {
+        "head": ["句型", "語氣"],
+        "rows": [
+          ["He always forgot his keys.", "中性描述習慣"],
+          ["He was always forgetting his keys!", "帶情緒——抱怨、覺得很誇張、很頻繁"]
+        ]
+      },
+      "examples": [
+        {"en": "The old rice cooker was always breaking down.", "cn": "那台舊電子鍋老是壞掉。（語氣：很煩、很無奈）", "note": "was always + V-ing 表達不滿"}
+      ]
+    },
+    {
+      "h": "用法三：was doing vs used to",
+      "table": {
+        "head": ["", "was/were doing", "used to do"],
+        "rows": [
+          ["時間", "那一次、那個時間點", "過去一段時間的習慣，現在已經不同"],
+          ["例句", "I was cooking when the power went out.（那次）", "I used to cook every night, but now I order food.（以前的習慣）"]
+        ]
+      }
+    },
+    {
+      "h": "跟被動語態一起用",
+      "bullets": ["過去進行式也可以是被動：was/were being + 過去分詞", "強調『當時正在被進行』的動作"],
+      "examples": [
+        {"en": "While repairs were being carried out on the transformer, residents were left without power.", "cn": "變壓器正在維修的時候，居民就沒電可用。", "note": "were being carried out是過去進行式的被動語態：was/were being + p.p."}
+      ]
+    }
+  ],
+  "traps": [
+    {"bad": "He always was forgetting his keys.", "good": "He was always forgetting his keys.", "why": "always要放在was和V-ing中間，不是放在was前面。"},
+    {"bad": "I used to cook when the power went out.", "good": "I was cooking when the power went out.", "why": "那一次正在做的事用was doing；used to是講『以前的習慣、現在不同了』，不能用在『那一次』的情境。"},
+    {"bad": "Repairs were carrying out on the transformer.", "good": "Repairs were being carried out on the transformer.", "why": "被動的過去進行式要用was/were being + 過去分詞，不能只用were carrying（那是主動語態）。"},
+    {"bad": "Anita cooking dinner when the lights went out.", "good": "Anita was cooking dinner when the lights went out.", "why": "過去進行式一定要有was/were，不能只寫V-ing。"}
+  ],
+  "quiz": [
+    {"q": "The old rice cooker ___ breaking down—it really annoyed her.", "qCn": "那台舊電子鍋老是壞掉，讓她很煩。", "opts": ["always was", "was always", "always", "is always"], "ans": 1, "expl": "was always + V-ing 表達對重複行為的抱怨，always放在was後面。"},
+    {"q": "Anita ___ dinner when the power went out.", "qCn": "停電的時候，Anita正在煮晚餐。", "opts": ["used to cook", "was cooking", "cooks", "has cooked"], "ans": 1, "expl": "那一次正在做的事用was cooking，不是used to（那是過去的習慣）。"},
+    {"q": "While repairs ___ on the transformer, residents had no power.", "qCn": "變壓器正在維修的時候，居民沒有電可用。", "opts": ["were carrying out", "were being carried out", "carried out", "are carried out"], "ans": 1, "expl": "變壓器是被維修的一方，過去進行式的被動要用were being carried out。"},
+    {"q": "I ___ working here when I met my best friend.", "qCn": "我認識我最好的朋友時，剛好在這裡上班。", "opts": ["was", "used to", "am", "have been"], "ans": 0, "expl": "was working是場景鋪陳，講『那時候正在做的事』，句子接下來會帶出關鍵事件met。"}
+  ]
+},
+
+{
+  "id": "dg20260828b2",
+  "date": "2026-08-28",
+  "unitNo": 6,
+  "level": "B2",
+  "title": "Past Continuous: Register, Narrative Effect, and Rhetorical Choices",
+  "titleCn": "過去進行式的語域與修辭效果：新聞敘事、對比與強調",
+  "srcDays": [],
+  "summary": "在敘事性新聞或正式寫作裡，過去進行式常用來營造『事件發生當下的畫面』，跟過去簡單式的『事實陳述』形成對比，也可以用來凸顯『被打斷』或『諷刺』的效果。選擇用哪個時態，反映的是作者想強調『過程』還是『結果』。",
+  "sections": [
+    {
+      "h": "新聞敘事：鋪陳畫面 vs 陳述事實",
+      "bullets": ["記者常用過去進行式描述『事件發生當下，還有什麼事正在進行』，製造時間上的張力", "過去簡單式則用來陳述『已經確認的事實』，語氣更肯定、更適合報告數據"],
+      "examples": [
+        {"en": "Regulators were still reviewing the earlier soybean oil case when the sesame oil report arrived.", "cn": "監管單位還在審查先前的黃豆油案件時，芝麻油的報告就送來了。", "note": "were reviewing鋪陳『調查仍在進行』的畫面，when之後接過去簡單式的關鍵事件arrived"}
+      ]
+    },
+    {
+      "h": "對比效果：強調『過程』還是『結果』",
+      "table": {
+        "head": ["句子", "強調重點"],
+        "rows": [
+          ["Inspectors were testing the batches for two days.", "強調『過程』——花了多久、多麼繁瑣"],
+          ["Inspectors tested the batches.", "強調『結果』——單純陳述完成的動作"]
+        ]
+      }
+    },
+    {
+      "h": "修辭效果：暗示『諷刺』或『對比落差』",
+      "bullets": ["把『還在討論』（was/were + V-ing）和『已經發生』的事並列，可以不用直接批評，就讓讀者感受到反應太慢的諷刺"],
+      "examples": [
+        {"en": "While regulators were still debating new rules, another contaminated batch had already reached supermarket shelves.", "cn": "就在監管單位還在爭論新規範的時候，另一批受污染的產品已經流入超市貨架。", "note": "過去進行式（were debating）和過去完成式（had already reached）並列，凸顯『反應太慢』的諷刺感"}
+      ]
+    },
+    {
+      "h": "寫作應用：什麼時候選過去進行式",
+      "bullets": [
+        "想營造『現場感』、讓讀者感覺身歷其境時",
+        "想強調『某件事被打斷』或『兩件事同時發生』時",
+        "想製造『對比落差』的修辭效果時",
+        "單純陳述已完成的事實、列數據時，用過去簡單式更合適，不要濫用過去進行式"
+      ]
+    }
+  ],
+  "traps": [
+    {"bad": "Investigators were finding the contamination in July.", "good": "Investigators found the contamination in July.", "why": "find是瞬間動作，通常不用進行式描述『已確認的單一事實』，除非要特別強調『找的過程很長』。"},
+    {"bad": "整篇報導從頭到尾都用過去進行式描述數據", "good": "陳述數據、結論用過去簡單式；只有要營造畫面或強調過程時才用過去進行式", "why": "過度使用過去進行式會讓陳述事實的語氣變得不肯定、不夠正式。"},
+    {"bad": "While the scandal was growing, but nobody acted.", "good": "While the scandal was growing, nobody acted.", "why": "while已經是連接詞，後面不能再接but，一個句子的兩個子句只能有一個連接詞。"},
+    {"bad": "The company was always failing to report problems, so it get fined.", "good": "The company was always failing to report problems, so it got fined.", "why": "so帶出的是過去的結果，動詞要用過去簡單式got，不是現在式get。"}
+  ],
+  "quiz": [
+    {"q": "___ regulators were still reviewing the soybean oil case, the sesame oil report arrived.", "qCn": "監管單位還在審查黃豆油案件的時候，芝麻油的報告就送來了。", "opts": ["While", "Since", "Although", "Because"], "ans": 0, "expl": "while表示『在…期間』，搭配過去進行式were reviewing鋪陳背景。"},
+    {"q": "Inspectors ___ the batches for two days before they released the results.", "qCn": "稽查人員在公布結果之前，花了兩天測試那些批次。", "opts": ["tested", "were testing", "have tested", "test"], "ans": 1, "expl": "for two days強調『過程花了多久』，用過去進行式were testing比單純過去式更凸顯繁瑣的過程。"},
+    {"q": "While regulators ___ new rules, another contaminated batch had already reached supermarket shelves.", "qCn": "監管單位還在爭論新規範的時候，另一批受污染的產品已經流入超市貨架。", "opts": ["were still debating", "still debated", "have still debated", "still debate"], "ans": 0, "expl": "were still debating（過去進行式）和had already reached（過去完成式）並列，製造『反應太慢』的諷刺對比。"},
+    {"q": "Which sentence more appropriately reports a completed, confirmed fact in a formal news article?", "qCn": "哪一句最適合在正式新聞報導中陳述一個已確認、已完成的事實？", "opts": ["Regulators were finding the contamination in July.", "Regulators found the contamination in July.", "Regulators are finding the contamination in July.", "Regulators have been finding the contamination in July."], "ans": 1, "expl": "報告『已確認、已完成』的單一事實，用過去簡單式found最恰當；找到污染是一次性、已完成的動作，不適合用進行式或完成進行式。"}
+  ]
+},
+
 {
   "id": "dg20260826a2",
   "date": "2026-08-26",

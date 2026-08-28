@@ -15,6 +15,298 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週三／五更新） ========== */
 notes:[
 {
+  "id": "dl20260828a2",
+  "date": "2026-08-28",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Buying Vegetables for Dinner",
+  "titleCn": "買晚餐要煮的菜",
+  "series": "本站自製聽力 · 飲食主題",
+  "topic": "🥕 買菜與煮飯",
+  "focus": "過去簡單式描述已完成的購物與烹飪動作；can 表示能力／請求",
+  "intro": "Amy下班後去傳統市場買菜，準備晚上煮飯。這一課句子簡短，重點是聽出過去式的動詞（went, bought, cut）跟can的用法（Can you...?）。",
+  "tip": "先聽一次抓「Amy買了哪些東西」，再聽一次抓「Tom幫忙做了什麼」。",
+  "pre": [
+    {"w": "market", "ipa": "/ˈmɑːrkɪt/", "cn": "市場", "def": "A place where people buy food and other goods."},
+    {"w": "vegetable", "ipa": "/ˈvedʒtəbl/", "cn": "蔬菜", "def": "A plant food such as carrots or onions."},
+    {"w": "fresh", "ipa": "/freʃ/", "cn": "新鮮的", "def": "Recently made or picked, not old."},
+    {"w": "cut", "ipa": "/kʌt/", "cn": "切", "def": "To divide something with a knife."},
+    {"w": "boil", "ipa": "/bɔɪl/", "cn": "煮沸", "def": "To heat water until it bubbles."},
+    {"w": "delicious", "ipa": "/dɪˈlɪʃəs/", "cn": "美味的", "def": "Tasting very good."}
+  ],
+  "script": [
+    {"sp": "Tom", "en": "Hi Amy! Where were you this afternoon?", "cn": "嗨Amy！你今天下午去哪裡了？"},
+    {"sp": "Amy", "en": "I went to the market to buy vegetables for dinner.", "cn": "我去市場買晚餐要煮的菜。"},
+    {"sp": "Tom", "en": "What did you buy?", "cn": "你買了什麼？"},
+    {"sp": "Amy", "en": "I bought some carrots, onions, and fresh fish.", "cn": "我買了一些紅蘿蔔、洋蔥，還有新鮮的魚。"},
+    {"sp": "Tom", "en": "Sounds great! Can you cook fish soup tonight?", "cn": "聽起來很棒！你今晚可以煮魚湯嗎？"},
+    {"sp": "Amy", "en": "Yes, I can! I already cut the vegetables.", "cn": "可以！我已經把菜切好了。"},
+    {"sp": "Tom", "en": "Do you need any help?", "cn": "需要幫忙嗎？"},
+    {"sp": "Amy", "en": "Can you boil the water for me?", "cn": "你可以幫我把水煮開嗎？"},
+    {"sp": "Tom", "en": "Sure, no problem!", "cn": "當然，沒問題！"},
+    {"sp": "Amy", "en": "Thanks! The soup will be ready in twenty minutes.", "cn": "謝謝！湯二十分鐘後就好了。"},
+    {"sp": "Tom", "en": "It smells delicious already!", "cn": "已經聞起來很美味了！"},
+    {"sp": "Amy", "en": "I hope you like it!", "cn": "希望你會喜歡！"}
+  ],
+  "questions": [
+    {
+      "q": "Where did Amy go this afternoon?",
+      "qCn": "Amy今天下午去了哪裡？",
+      "opts": ["A. The market", "B. The office", "C. School", "D. The gym"],
+      "optsCn": ["A. 市場", "B. 辦公室", "C. 學校", "D. 健身房"],
+      "ans": 0,
+      "expl": "I went to the market to buy vegetables for dinner."
+    },
+    {
+      "q": "What did Amy buy?",
+      "qCn": "Amy買了什麼？",
+      "opts": ["A. Only fish", "B. Carrots, onions, and fresh fish", "C. Only vegetables", "D. Bread and milk"],
+      "optsCn": ["A. 只有魚", "B. 紅蘿蔔、洋蔥，還有新鮮的魚", "C. 只有蔬菜", "D. 麵包和牛奶"],
+      "ans": 1,
+      "expl": "I bought some carrots, onions, and fresh fish."
+    },
+    {
+      "q": "What does Tom offer to do?",
+      "qCn": "Tom提議幫忙做什麼？",
+      "opts": ["A. Cut the vegetables", "B. Boil the water", "C. Buy more fish", "D. Wash the dishes"],
+      "optsCn": ["A. 切菜", "B. 把水煮開", "C. 買更多魚", "D. 洗碗"],
+      "ans": 1,
+      "expl": "Can you boil the water for me? — Sure, no problem!"
+    },
+    {
+      "q": "Amy ___ some carrots, onions, and fresh fish.",
+      "qCn": "Amy買了一些紅蘿蔔、洋蔥，還有新鮮的魚。（選出正確的動詞形式）",
+      "opts": ["A. buy", "B. buys", "C. bought", "D. was buying"],
+      "ans": 2,
+      "expl": "已經買完的事，用過去簡單式 bought。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260828b1",
+  "date": "2026-08-28",
+  "level": "B1",
+  "minutes": 2,
+  "kind": "note",
+  "title": "A Kitchen Disaster",
+  "titleCn": "廚房裡的小意外",
+  "series": "本站自製聽力 · 飲食主題",
+  "topic": "🍳 廚房小意外",
+  "focus": "過去進行式 vs 過去簡單式：while描述正在做的事，被突然發生的事打斷",
+  "intro": "Emma問Ryan昨晚在廚房發生了什麼事。這一課練習「正在做某件事的時候，突然發生了另一件事」的說法——while + 過去進行式，加上過去簡單式的短動作。",
+  "tip": "先聽抓「Ryan正在做什麼」，再聽抓「發生了什麼突然的事」。",
+  "pre": [
+    {"w": "stove", "ipa": "/stoʊv/", "cn": "瓦斯爐", "def": "A machine used for cooking food."},
+    {"w": "burn", "ipa": "/bɜːrn/", "cn": "燒焦", "def": "To damage something with too much heat."},
+    {"w": "smoke", "ipa": "/smoʊk/", "cn": "煙", "def": "The grey cloud that rises when something burns."},
+    {"w": "alarm", "ipa": "/əˈlɑːrm/", "cn": "警報器", "def": "A device that makes a loud sound to warn people."},
+    {"w": "distract", "ipa": "/dɪˈstrækt/", "cn": "分散注意力", "def": "To take someone's attention away from what they are doing."},
+    {"w": "mess", "ipa": "/mes/", "cn": "亂七八糟的狀況", "def": "A dirty or untidy situation."}
+  ],
+  "script": [
+    {"sp": "Emma", "en": "Ryan, I heard something happened in your kitchen last night.", "cn": "Ryan，我聽說你昨晚廚房發生了什麼事。"},
+    {"sp": "Ryan", "en": "Yeah, it was a disaster! I was cooking pasta when my phone rang.", "cn": "對啊，一場災難！我正在煮義大利麵，我的手機就響了。"},
+    {"sp": "Emma", "en": "Who was calling?", "cn": "誰打來的？"},
+    {"sp": "Ryan", "en": "My brother. While I was talking to him, the water started boiling over.", "cn": "我哥。我正在跟他講電話的時候，水開始滾出來了。"},
+    {"sp": "Emma", "en": "Oh no! What happened next?", "cn": "喔不！接下來發生了什麼？"},
+    {"sp": "Ryan", "en": "I ran back to the stove, but I was still on the phone, so I wasn't paying attention.", "cn": "我跑回瓦斯爐旁邊，但我還在講電話，所以沒有專心。"},
+    {"sp": "Emma", "en": "Did you burn anything?", "cn": "你有把什麼燒焦嗎？"},
+    {"sp": "Ryan", "en": "Yes! While I was cleaning up the water, the pasta on the stove burned.", "cn": "有！我正在清理那些水的時候，爐子上的義大利麵就燒焦了。"},
+    {"sp": "Emma", "en": "That sounds stressful!", "cn": "聽起來壓力很大！"},
+    {"sp": "Ryan", "en": "It was! The smoke alarm was going off, and my dog was barking at the same time.", "cn": "真的！煙霧警報器一直響，我的狗同時也在叫。"},
+    {"sp": "Emma", "en": "What a mess. Did you finally eat?", "cn": "真是一團亂。你最後有吃到東西嗎？"},
+    {"sp": "Ryan", "en": "In the end, I ordered pizza instead.", "cn": "最後我改叫了披薩。"}
+  ],
+  "questions": [
+    {
+      "q": "What was Ryan doing when his phone rang?",
+      "qCn": "手機響的時候Ryan正在做什麼？",
+      "opts": ["A. Watching TV", "B. Cooking pasta", "C. Cleaning the kitchen", "D. Walking his dog"],
+      "optsCn": ["A. 看電視", "B. 煮義大利麵", "C. 打掃廚房", "D. 遛狗"],
+      "ans": 1,
+      "expl": "I was cooking pasta when my phone rang."
+    },
+    {
+      "q": "Who was calling Ryan?",
+      "qCn": "誰打電話給Ryan？",
+      "opts": ["A. His mother", "B. His brother", "C. Emma", "D. A friend from work"],
+      "optsCn": ["A. 他媽媽", "B. 他哥哥", "C. Emma", "D. 一位工作上的朋友"],
+      "ans": 1,
+      "expl": "My brother."
+    },
+    {
+      "q": "What happened while Ryan was talking on the phone?",
+      "qCn": "Ryan講電話的時候發生了什麼事？",
+      "opts": ["A. The water started boiling over", "B. The dog ran away", "C. The lights went out", "D. Emma arrived"],
+      "optsCn": ["A. 水開始滾出來了", "B. 狗跑走了", "C. 燈熄了", "D. Emma到了"],
+      "ans": 0,
+      "expl": "While I was talking to him, the water started boiling over."
+    },
+    {
+      "q": "The smoke alarm ___, and my dog was barking at the same time.",
+      "qCn": "煙霧警報器一直響，我的狗同時也在叫。（選出正確的動詞形式）",
+      "opts": ["A. was going off", "B. went off", "C. goes off", "D. is going off"],
+      "ans": 0,
+      "expl": "兩件事同時持續發生，都用過去進行式：was going off、was barking。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260828b1p",
+  "date": "2026-08-28",
+  "level": "B1+",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Talking About the Oil Recall",
+  "titleCn": "聊食用油回收事件",
+  "series": "本站自製聽力 · 飲食主題",
+  "topic": "📰 職場閒聊 · 食安新聞",
+  "focus": "被動語態描述新聞事件（was found, was tested, have been affected）",
+  "intro": "Anita在辦公室跟同事Mark聊到最近食用油回收的新聞。這一課練習用被動語態描述「新聞裡發生的事」——重點不是誰做的，而是「發生在什麼東西上」。",
+  "tip": "留意句子裡的was/were + 過去分詞，那就是被動語態，通常表示「某個東西被檢查、被回收、被影響」。",
+  "pre": [
+    {"w": "recall", "ipa": "/rɪˈkɔːl/", "cn": "（產品）回收", "def": "An order to take an unsafe product back from shops."},
+    {"w": "contaminate", "ipa": "/kənˈtæmɪneɪt/", "cn": "污染", "def": "To make something dirty or unsafe with an unwanted substance."},
+    {"w": "inspect", "ipa": "/ɪnˈspekt/", "cn": "檢查、稽查", "def": "To look at something carefully to check it is safe."},
+    {"w": "limit", "ipa": "/ˈlɪmɪt/", "cn": "上限", "def": "The largest amount allowed."},
+    {"w": "affected", "ipa": "/əˈfektɪd/", "cn": "受影響的", "def": "Changed or damaged by something."},
+    {"w": "brand", "ipa": "/brænd/", "cn": "品牌", "def": "The name a company sells its products under."}
+  ],
+  "script": [
+    {"sp": "Mark", "en": "Did you see the news about the cooking oil recall?", "cn": "你有看到食用油回收的新聞嗎？"},
+    {"sp": "Anita", "en": "Yes, I read it this morning. Another brand was found to have contaminated oil.", "cn": "有，我今天早上看到的。又有一個品牌被發現油品受污染了。"},
+    {"sp": "Mark", "en": "Really? Which one this time?", "cn": "真的嗎？這次是哪一家？"},
+    {"sp": "Anita", "en": "A sesame oil company in Chiayi. Their product was tested and found to be above the legal limit.", "cn": "嘉義的一家芝麻油公司。他們的產品被檢測出超過法定上限。"},
+    {"sp": "Mark", "en": "That's the third company this year, right?", "cn": "這是今年第三家了吧？"},
+    {"sp": "Anita", "en": "I think so. So many products have been affected by this scandal.", "cn": "我想是的。這次的風暴已經影響到好多產品了。"},
+    {"sp": "Mark", "en": "Do you check the brand before you buy oil now?", "cn": "你現在買油之前會先查品牌嗎？"},
+    {"sp": "Anita", "en": "Definitely. I always check if a product has been recalled before I cook with it.", "cn": "當然會。我用產品煮飯之前，一定會先查它有沒有被回收。"},
+    {"sp": "Mark", "en": "Good idea. I should start doing that too.", "cn": "好主意，我也應該開始這樣做。"},
+    {"sp": "Anita", "en": "It's a bit scary, but at least these problems are being found and reported.", "cn": "雖然有點嚇人，但至少這些問題有被發現、被報導出來。"}
+  ],
+  "questions": [
+    {
+      "q": "What did Anita read about this morning?",
+      "qCn": "Anita今天早上看到了什麼新聞？",
+      "opts": ["A. A weather report", "B. A cooking oil recall", "C. A recipe", "D. A restaurant review"],
+      "optsCn": ["A. 天氣報告", "B. 食用油回收", "C. 一份食譜", "D. 餐廳評論"],
+      "ans": 1,
+      "expl": "Another brand was found to have contaminated oil."
+    },
+    {
+      "q": "Which type of company was found to have contaminated oil this time?",
+      "qCn": "這次是哪一種公司被發現油品受污染？",
+      "opts": ["A. A rice company", "B. A sesame oil company in Chiayi", "C. A coffee company", "D. A vegetable company"],
+      "optsCn": ["A. 米商", "B. 嘉義的芝麻油公司", "C. 咖啡公司", "D. 蔬菜公司"],
+      "ans": 1,
+      "expl": "A sesame oil company in Chiayi."
+    },
+    {
+      "q": "What does Anita say she always does now?",
+      "qCn": "Anita說她現在都會做什麼？",
+      "opts": ["A. Cooks with any oil she finds", "B. Checks if a product has been recalled before cooking with it", "C. Buys only imported oil", "D. Stops eating oil completely"],
+      "optsCn": ["A. 找到什麼油就用", "B. 用產品煮飯前先查是否被回收", "C. 只買進口油", "D. 完全不吃油"],
+      "ans": 1,
+      "expl": "I always check if a product has been recalled before I cook with it."
+    },
+    {
+      "q": "Their product ___ and found to be above the legal limit.",
+      "qCn": "他們的產品被檢測出超過法定上限。（選出正確的動詞形式）",
+      "opts": ["A. tested", "B. was tested", "C. is testing", "D. has testing"],
+      "ans": 1,
+      "expl": "產品是被檢測的一方，用被動語態was tested。"
+    },
+    {
+      "q": "So many products ___ by this scandal.",
+      "qCn": "這次的風暴已經影響到好多產品了。（選出正確的動詞形式）",
+      "opts": ["A. affect", "B. affected", "C. have been affected", "D. are affecting"],
+      "ans": 2,
+      "expl": "「到目前為止已經受影響的產品」用現在完成式的被動：have been affected。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260828b2",
+  "date": "2026-08-28",
+  "level": "B2",
+  "minutes": 3,
+  "kind": "note",
+  "title": "A Quality Engineer's Take on the Oil Scandal",
+  "titleCn": "品質工程師怎麼看食用油事件",
+  "series": "本站自製聽力 · 飲食主題",
+  "topic": "🔍 品質觀點 · 食安反思",
+  "focus": "被動語態＋正式語域：以品管專業角度討論制度性問題，對比『單一事故』與『制度失靈』",
+  "intro": "這一課是Anita以品質工程師的角度，錄的一段簡短獨白，反思最近食用油回收事件背後的品管問題。語氣比對話更正式，句子也更長，練習聽懂『被動語態＋抽象名詞』的正式英文。",
+  "tip": "這是獨白不是對話，句子比較長，可以先聽整段抓大意，再逐句聽細節。",
+  "pre": [
+    {"w": "systemic", "ipa": "/sɪˈstemɪk/", "cn": "系統性的、制度性的", "def": "Affecting an entire system, not just one part."},
+    {"w": "isolated", "ipa": "/ˈaɪsəleɪtɪd/", "cn": "單一的、孤立的", "def": "Happening alone, not connected to a wider pattern."},
+    {"w": "root cause", "ipa": "/ruːt kɔːz/", "cn": "根本原因", "def": "The real reason something happened, not just the surface reason."},
+    {"w": "batch", "ipa": "/bætʃ/", "cn": "一批（產品）", "def": "A group of products made at one time."},
+    {"w": "oversight", "ipa": "/ˈoʊvərsaɪt/", "cn": "監督", "def": "The process of checking that something is being done correctly."},
+    {"w": "prevent", "ipa": "/prɪˈvent/", "cn": "預防", "def": "To stop something from happening."},
+    {"w": "punish", "ipa": "/ˈpʌnɪʃ/", "cn": "處罰", "def": "To make someone suffer a penalty for doing something wrong."}
+  ],
+  "script": [
+    {"sp": "Anita", "en": "Hi, this is Anita. I want to share a few thoughts about the recent cooking oil scandal, from a quality engineer's point of view.", "cn": "嗨，我是Anita。我想以品質工程師的角度，分享一些對最近食用油事件的想法。"},
+    {"sp": "Anita", "en": "As a quality engineer, I read stories like this oil recall a little differently than most people.", "cn": "身為品質工程師，我讀這類食用油回收的新聞時，角度跟大部分人不太一樣。"},
+    {"sp": "Anita", "en": "The public usually asks, 'How could this happen?' But my first question is always, 'Was this really one bad batch, or a sign of a bigger problem?'", "cn": "大眾通常會問：『這怎麼會發生？』但我的第一個問題永遠是：『這真的只是一批出問題，還是更大問題的徵兆？』"},
+    {"sp": "Anita", "en": "In this case, investigators found that the earlier contamination was not caused by a single accident.", "cn": "在這個案例裡，調查人員發現先前的污染不是單一意外造成的。"},
+    {"sp": "Anita", "en": "It was caused by weak controls over raw materials and not enough testing before products left the factory.", "cn": "而是原料控管不足，加上產品出廠前檢驗不夠所造成的。"},
+    {"sp": "Anita", "en": "That is what we call a systemic issue, not an isolated one.", "cn": "這就是我們所說的『系統性問題』，而不是單一事件。"},
+    {"sp": "Anita", "en": "An isolated problem can be fixed by punishing one company.", "cn": "單一事件只要處罰一家公司就能解決。"},
+    {"sp": "Anita", "en": "A systemic problem needs every company in the industry to change how often they test, not just react after something goes wrong.", "cn": "但系統性問題需要整個產業的每一家公司都改變檢驗的頻率，而不是只在出事之後才反應。"},
+    {"sp": "Anita", "en": "That is the real lesson here: prevention has to happen before a product reaches the shelf, not after.", "cn": "這才是真正的教訓：預防必須發生在產品上架之前，而不是之後。"},
+    {"sp": "Anita", "en": "So next time you hear about a recall, ask yourself: was this an accident, or was it something that could have been prevented with better systems?", "cn": "所以下次你聽到產品回收的新聞時，問問自己：這是意外，還是靠更好的制度其實可以預防的？"}
+  ],
+  "questions": [
+    {
+      "q": "According to Anita, what question does she ask first when she hears about a recall?",
+      "qCn": "根據Anita的說法，她聽到回收新聞時，第一個會問什麼問題？",
+      "opts": ["A. Who is responsible?", "B. Was this one bad batch, or a sign of a bigger problem?", "C. How much will it cost?", "D. When will it be fixed?"],
+      "optsCn": ["A. 誰該負責？", "B. 這真的只是一批出問題，還是更大問題的徵兆？", "C. 這要花多少錢？", "D. 什麼時候會修好？"],
+      "ans": 1,
+      "expl": "my first question is always, 'Was this really one bad batch, or a sign of a bigger problem?'"
+    },
+    {
+      "q": "What did investigators find caused the earlier contamination?",
+      "qCn": "調查人員發現先前的污染是什麼原因造成的？",
+      "opts": ["A. A single accident", "B. Weak controls over raw materials and insufficient testing", "C. Bad weather", "D. A new law"],
+      "optsCn": ["A. 單一意外", "B. 原料控管不足與檢驗不夠", "C. 天氣不好", "D. 一項新法規"],
+      "ans": 1,
+      "expl": "It was caused by weak controls over raw materials and not enough testing before products left the factory."
+    },
+    {
+      "q": "How does Anita distinguish a systemic issue from an isolated one?",
+      "qCn": "Anita怎麼區分『系統性問題』和『單一事件』？",
+      "opts": ["A. A systemic issue only affects one company", "B. An isolated problem can be fixed by punishing one company; a systemic problem needs the whole industry to change", "C. There is no real difference", "D. Isolated issues are more serious"],
+      "optsCn": ["A. 系統性問題只影響一家公司", "B. 單一事件處罰一家公司就能解決；系統性問題需要整個產業改變", "C. 兩者其實沒有差別", "D. 單一事件比較嚴重"],
+      "ans": 1,
+      "expl": "An isolated problem can be fixed by punishing one company. A systemic problem needs every company in the industry to change."
+    },
+    {
+      "q": "The contamination ___ by weak controls over raw materials.",
+      "qCn": "污染是原料控管不足所造成的。（選出正確的動詞形式）",
+      "opts": ["A. was caused", "B. caused", "C. causes", "D. has cause"],
+      "ans": 0,
+      "expl": "污染是被造成的，用被動語態was caused。"
+    },
+    {
+      "q": "According to Anita, when does prevention have to happen?",
+      "qCn": "根據Anita的說法，預防必須發生在什麼時候？",
+      "opts": ["A. After a product reaches the shelf", "B. Before a product reaches the shelf", "C. Only during factory audits", "D. Only when customers complain"],
+      "optsCn": ["A. 產品上架之後", "B. 產品上架之前", "C. 只有工廠稽核的時候", "D. 只有顧客抱怨的時候"],
+      "ans": 1,
+      "expl": "prevention has to happen before a product reaches the shelf, not after."
+    }
+  ]
+},
+
+{
   "id": "dl20260826a2",
   "date": "2026-08-26",
   "level": "A2",

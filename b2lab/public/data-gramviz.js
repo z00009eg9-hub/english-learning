@@ -627,5 +627,11 @@ V.dg20260826b2=card(
   en:'I calculated the total cost.', cn:'正式動詞 calculated：語氣客觀'},
  '同一個意思——口語用 figured out，正式寫作用 calculated。其他配對：found out → discovered; got → obtained; thought about → considered。正式報告裡的過去簡單式選詞精準，一個字取代一整個片語，讓語氣更客觀有力。');
 
+/* ---------- 2026-08-28：過去進行式（was doing）四個程度共用背景動作 vs 突然發生的對照卡 ---------- */
+V.dg20260828a2=V.pastBg;
+V.dg20260828b1=V.pastBg;
+V.dg20260828b1p=V.pastBg;
+V.dg20260828b2=V.pastBg;
+
 return V;
 })();

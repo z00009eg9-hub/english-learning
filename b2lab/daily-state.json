@@ -1,7 +1,7 @@
 {
   "_note": "內容排程狀態檔（每週三、五各跑一次）。每次執行讓兩位學習者各拿到一整份：四個程度（A2/B1/B1+/B2）的文章、文法、聽力。usedUnits = Anita 那條線（B1+/B2）已教過的文法單元編號；usedUnitsTom = Tom 那條線（A2/B1）已教過的文法單元編號（各自從 syllabus.json 依序走、互不影響）；usedSources = 已改寫過的新聞網址；usedVoa = 已加入聽力庫的 VOA／YouTube 素材代號（2026-08-19 起聽力改為本站原創 TTS 對話，未使用外部影片，故此欄位本次未異動）；lastRun = 最後一次成功產生的日期。",
-  "lastRun": "2026-08-26",
-  "nextKind": "news",
+  "lastRun": "2026-08-28",
+  "nextKind": "original",
   "usedVoa": [
     "L1-1",
     "L1-7",
@@ -16,19 +16,22 @@
     2,
     3,
     4,
-    5
+    5,
+    6
   ],
   "usedUnitsTom": [
     1,
     2,
     3,
     4,
-    5
+    5,
+    6
   ],
   "usedSources": [
     "https://www.taipeitimes.com/News/front/archives/2026/08/08/2003862135",
     "https://focustaiwan.tw/society/202607250008",
-    "https://www.taipeitimes.com/News/editorials/archives/2026/08/21/2003862851"
+    "https://www.taipeitimes.com/News/editorials/archives/2026/08/21/2003862851",
+    "https://focustaiwan.tw/society/202608260024"
   ],
   "usedTitles": [
     "A Sea Warning, but No Landfall",
@@ -49,16 +52,20 @@
     "Tom's New Room",
     "Saving for a Bigger Place",
     "When the Landlord Raised the Rent",
-    "The Real Cost of City Living"
+    "The Real Cost of City Living",
+    "Tom Was Cooking When the Phone Rang",
+    "Amy's Dinner Party Surprise",
+    "The Blackout During Dinner",
+    "A Sesame Oil Recall Joins Taiwan's Widening Cooking-Oil Scandal"
   ],
   "topicRotation": [
-    "食物與生活",
     "學習與心理",
     "天災與天氣",
     "健康與醫療",
     "旅遊與交通",
     "職場與面試",
-    "金錢與居住"
+    "金錢與居住",
+    "食物與生活"
   ],
   "dualLevel": {
     "tom": "A2",
@@ -79,6 +86,7 @@
   "usedA2Topics": [
     "交通",
     "日常作息",
-    "居家"
+    "居家",
+    "飲食"
   ]
 }
