@@ -552,6 +552,352 @@ window.BOOK = {
       ]
     },
     {
+      id: 'bk20260825',
+      icon: '🕐',
+      iconSvg: '<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><circle cx="48" cy="48" r="45" fill="#fff" stroke="#f0c9a0" stroke-width="3"/><circle cx="48" cy="48" r="26" fill="#fff" stroke="#2b2118" stroke-width="3.5"/><path d="M22 48 h52" stroke="#e8913a" stroke-width="3" stroke-dasharray="4 4"/><path d="M48 30 v18 l13 8" fill="none" stroke="#c9631f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="48" cy="48" r="3.5" fill="#2b2118"/></svg>',
+      date: '2026-08-25',
+      doc: 'https://docs.google.com/document/d/1eFRRCunTsLbsVdFXYCVt5KGfgeXQbgfatixa1aFeXQU/edit',
+      title: 'Time Zones, Common Ground and Useful Expressions',
+      titleCn: '時差表達與默契用語',
+      topics: 'time difference, be down, think alike, have a lot in common, rapport & chemistry, taste in, out of, manage to, under + N, submit / review / confirm',
+      hwTitle: 'I. ★ 08/25 作業複習 Homework Review',
+      hw: [
+        {
+          n: 1,
+          ok: 'Our QA office is under construction, so we are working temporarily in another office.',
+          cn: '我們的品保辦公室正在施工，所以我們暫時在另一間辦公室工作。',
+          pat: '主詞 + be + under construction, so + 主詞 + be + V-ing + temporarily + 地點',
+          note: '原句（Our QA office is under construction, so we are working in another office.）文法正確。under construction 是固定片語，表示「施工中、建造中」，前面用 be 動詞。老師補上 temporarily（暫時地）讓語意更完整——注意要用副詞 temporarily，不是形容詞 temporary。are working 用現在進行式，正好呼應「暫時換辦公室」的語意。'
+        },
+        {
+          n: 2,
+          wrong: "The product can't be shipped, because the quality issue is under review.",
+          fix: "The products can't be shipped because the quality issue is under review.",
+          cn: '這些產品無法出貨，因為品質問題正在審核中。',
+          pat: "主詞 + can't be + 過去分詞 + because + 子句",
+          note: "can't be shipped 是被動語態（be + 過去分詞），表示「無法被運送」。兩個要修的地方：(1) 談整批貨品時用複數 products。(2) because 引導的原因子句放在句尾時，前面不加逗號（No comma before \"because\" in neutral prose）。"
+        },
+        {
+          n: 3,
+          wrong: 'The cloud service was broken and caused the document to become corrupted.',
+          fix: 'The cloud service was down, which caused the document to become corrupted.',
+          cn: '雲端服務當機了，這導致文件毀損。',
+          pat: '主詞 + was down, which + 動詞（非限定關係子句）',
+          note: '系統、網站、伺服器「停止運作」要用 be down（＝ not functioning），broken 多指實體東西壞掉，用在服務上不自然。要說「這件事造成……」，用逗號 + which 引導非限定關係子句，which 代指前面整件事；原句 and caused 會變成「雲端服務」自己去造成，語意較鬆散。'
+        },
+        {
+          n: 4,
+          ok: 'We temporarily stopped production because of a quality issue.',
+          cn: '我們因為品質問題暫時停止生產。',
+          pat: '主詞 + 副詞 + 過去式動詞 + because of + 名詞',
+          note: 'temporarily 是副詞，放在主詞和動詞之間修飾 stopped。because of 後面只能接名詞或名詞片語（a quality issue），若要接完整子句則要用 because。production 是不可數名詞，不加 s。'
+        },
+        {
+          n: 5,
+          wrong: 'I bought identical shirts with my friend. We always think same.',
+          fix: 'I bought identical shirts with my friend. We always think alike.',
+          cn: '我和我朋友買了一模一樣的襯衫。我們的想法總是很相似。',
+          pat: '主詞 + think alike',
+          note: 'think same 是中式英文，正確說法是 think alike；alike 是副詞，放在動詞後面，不加 the same。identical 意思是「在外觀或設計上完全相同的」，比 the same 更強調一模一樣。💡 更自然的主詞寫法：My friend and I bought identical shirts.（提到兩個人時，用「X and I」當主詞更自然。）'
+        },
+        {
+          n: 6,
+          ok: 'My phone storage is full, so I need to compress my photos.',
+          cn: '我的手機儲存空間滿了，所以我需要壓縮我的照片。',
+          pat: '主詞 + be + full, so + 主詞 + need to + 原形動詞',
+          note: '原句用 compress the photos，課堂版本改成 compress my photos。storage 是不可數名詞，用 is；compress 是技術用語，意思是「壓縮、縮小檔案大小」。need to 後面接原形動詞。'
+        }
+      ],
+      vocabTitle: 'II. 詞彙 Vocabulary — A. 單字 Words',
+      vocab: [
+        { w: 'ahead', ipa: '/əˈhed/', pos: 'adv.', cn: '（時間）早於；領先',
+          ex: 'Taiwan is one hour ahead of Vietnam.', exCn: '台灣比越南早一小時。' },
+        { w: 'behind', ipa: '/bɪˈhaɪnd/', pos: 'prep.', cn: '（時間）晚於；落後',
+          ex: 'Vietnam is one hour behind Taiwan.', exCn: '越南比台灣晚一小時。' },
+        { w: 'gap', ipa: '/ɡæp/', pos: 'n.', cn: '差距；間隔',
+          ex: 'What is the time gap between us?', exCn: '我們之間的時差是多少？' },
+        { w: 'difference', ipa: '/ˈdɪfrəns/', pos: 'n.', cn: '差異；差別',
+          ex: 'What is the time difference between us?', exCn: '我們之間的時差是多少？' },
+        { w: 'down', ipa: '/daʊn/', pos: 'adj.', cn: '（系統）當機的；停止運作的',
+          ex: 'The service is down.', exCn: '服務停擺了。' },
+        { w: 'corrupted', star: true, ipa: '/kəˈrʌptɪd/', pos: 'adj.', cn: '毀損的；損毀的',
+          ex: 'The document became corrupted.', exCn: '文件毀損了。' },
+        { w: 'identical', star: true, ipa: '/aɪˈdentɪkl/', pos: 'adj.', cn: '完全相同的（外觀或設計）',
+          ex: 'We bought identical shirts.', exCn: '我們買了一模一樣的襯衫。' },
+        { w: 'alike', ipa: '/əˈlaɪk/', pos: 'adv.', cn: '相似地；一樣地',
+          ex: 'We always think alike.', exCn: '我們的想法總是很相似。' },
+        { w: 'chemistry', ipa: '/ˈkeməstri/', pos: 'n.', cn: '默契；契合的感覺',
+          ex: 'We have great chemistry.', exCn: '我們很有默契。' },
+        { w: 'rapport', star: true, ipa: '/ræˈpɔːr/', pos: 'n.', cn: '融洽關係；默契',
+          ex: 'We have a good rapport.', exCn: '我們相處融洽、溝通順暢。' },
+        { w: 'trait', star: true, ipa: '/treɪt/', pos: 'n.', cn: '特質；特點',
+          ex: 'Personality traits are patterns of thought, feeling, and behavior.', exCn: '人格特質是思考、感受與行為的慣性模式。' },
+        { w: 'twins', ipa: '/twɪnz/', pos: 'n.', cn: '雙胞胎',
+          ex: 'Identical twins look alike.', exCn: '同卵雙胞胎長得一模一樣。' },
+        { w: 'taste', ipa: '/teɪst/', pos: 'n.', cn: '品味；喜好',
+          ex: 'We have similar taste in clothes.', exCn: '我們對衣服的品味很相似。' },
+        { w: 'compress', star: true, ipa: '/kəmˈpres/', pos: 'v.', cn: '壓縮（縮小檔案大小）',
+          ex: 'I need to compress my photos.', exCn: '我需要壓縮我的照片。' },
+        { w: 'manage', ipa: '/ˈmænɪdʒ/', pos: 'v.', cn: '設法做到；成功完成',
+          ex: 'I managed to catch the last train.', exCn: '我設法趕上了最後一班火車。' },
+        { w: 'submit', star: true, ipa: '/səbˈmɪt/', pos: 'v.', cn: '呈交；提交（正式）',
+          ex: 'I need to submit the invoices to my boss.', exCn: '我需要把發票呈交給我老闆。' },
+        { w: 'review', ipa: '/rɪˈvjuː/', pos: 'n. / v.', cn: '審核；審查',
+          ex: 'The invoice is under review.', exCn: '這張發票正在審核中。' },
+        { w: 'confirm', ipa: '/kənˈfɜːrm/', pos: 'v.', cn: '確認；核准',
+          ex: 'My boss needs to confirm the invoices.', exCn: '我老闆需要確認這些發票。' },
+        { w: 'invoice', ipa: '/ˈɪnvɔɪs/', pos: 'n.', cn: '發票；請款單',
+          ex: "The invoices are under my boss's review.", exCn: '這些發票正在我老闆的審核中。' },
+        { w: 'purchase', star: true, ipa: '/ˈpɜːrtʃəs/', pos: 'v. / n.', cn: '購買',
+          ex: 'Before purchasing the equipment, I need to submit the invoices.', exCn: '購買設備之前，我需要呈交發票。' },
+        { w: 'responsible', ipa: '/rɪˈspɑːnsəbl/', pos: 'adj.', cn: '負責的',
+          ex: 'I am responsible for the test room equipment.', exCn: '我負責測試室的設備。' },
+        { w: 'temporarily', ipa: '/ˌtempəˈrerəli/', pos: 'adv.', cn: '暫時地',
+          ex: 'We are working temporarily in another office.', exCn: '我們暫時在另一間辦公室工作。' },
+        { w: 'construction', ipa: '/kənˈstrʌkʃn/', pos: 'n.', cn: '建造；施工',
+          ex: 'Our QA office is under construction.', exCn: '我們的品保辦公室正在施工。' },
+        { w: 'stuck', ipa: '/stʌk/', pos: 'adj.', cn: '卡住的',
+          ex: 'The paper is stuck in the printer.', exCn: '紙卡在印表機裡了。' },
+        { w: 'fortune teller', ipa: '/ˈfɔːrtʃən ˌtelər/', pos: 'n.', cn: '算命師',
+          ex: "It's like the fortune teller could read my mind.", exCn: '好像算命師能讀懂我的心思。' }
+      ],
+      phrasesTitle: 'II-B. 片語與慣用語 Phrases and Idioms（本表只列「片語 ＋ 中文」，詳細用法、例句與比較請看後面 III～VII 各章）',
+      phrases: [
+        { p: 'be [n] hours ahead of / behind', cn: '比……早／晚 n 小時（詳見 III. 時差表達）',
+          ex: 'Taiwan is one hour ahead of Vietnam. = Vietnam is one hour behind Taiwan.', exCn: '台灣比越南早一小時。＝ 越南比台灣晚一小時。' },
+        { p: 'think alike', cn: '想法很相似（限於想法、意見）（詳見 IV-A）',
+          ex: 'We always think alike.', exCn: '我們的想法總是很相似。' },
+        { p: 'look alike', cn: '長得像（外表相似）（詳見 IV-A）',
+          ex: 'Identical twins look alike.', exCn: '同卵雙胞胎長得一模一樣。' },
+        { p: 'have a lot in common (with)', cn: '（和某人）有很多共同點（詳見 IV-A、IV-B）',
+          ex: 'I have a lot in common with my best friend.', exCn: '我跟我最好的朋友有很多共同點。' },
+        { p: 'have nothing in common', cn: '完全沒有共同點（詳見 IV-B）',
+          ex: 'They have nothing in common.', exCn: '他們毫無共同點。' },
+        { p: 'have good chemistry', cn: '很有默契（自然的契合）（詳見 IV-C）',
+          ex: 'We have good chemistry.', exCn: '我們很有默契。' },
+        { p: 'have a good rapport', cn: '關係融洽（職場常用）（詳見 IV-C）',
+          ex: 'We have a good rapport.', exCn: '我們相處融洽。' },
+        { p: 'be on the same page', cn: '想法／目標一致（詳見 IV-C）',
+          ex: 'We are on the same page.', exCn: '我們的認知一致。' },
+        { p: "read someone's mind", cn: '讀懂某人的心思（詳見 IV-D）',
+          ex: "I can read my friend's mind.", exCn: '我可以猜到我朋友在想什麼。' },
+        { p: 'have similar / the same taste in', cn: '對……品味相似／相同（詳見 V. 品味的說法）',
+          ex: 'We have similar taste in clothes and food.', exCn: '我們對衣服和食物的品味很相似。' },
+        { p: 'be out of + N', cn: '……用完了／沒有了（詳見 VI. Be Out Of）',
+          ex: 'The printer is out of paper.', exCn: '印表機沒紙了。' },
+        { p: 'be stuck / get stuck in', cn: '卡住（狀態／事件）（詳見 VI. 卡紙的說法）',
+          ex: 'The paper is stuck in the printer.', exCn: '紙卡在印表機裡了。' },
+        { p: 'manage to + V', cn: '設法做到；成功做到（詳見 VII-A）',
+          ex: 'I managed to finish the report on time.', exCn: '我設法及時完成了報告。' },
+        { p: 'be under construction', cn: '施工中（用於實體空間）（詳見 VII-B）',
+          ex: 'Our QA office is under construction.', exCn: '我們的品保辦公室正在施工。' },
+        { p: 'be under review', cn: '審核中（用於文件、議題）（詳見 VII-B）',
+          ex: 'The issue is under review.', exCn: '這個問題正在檢查中。' },
+        { p: 'be under control', cn: '在掌控中（≠ 審核中）（詳見 VII-B）',
+          ex: "The project is under the manager's control.", exCn: '這個專案由經理掌控。' },
+        { p: 'be down', cn: '（系統、服務）故障、停止運作（詳見 VII-C）',
+          ex: 'The service is down.', exCn: '服務停擺了。' },
+        { p: 'submit ... to someone', cn: '把……呈交給某人（口語 hand in）（詳見 VII-D）',
+          ex: 'I need to submit the invoices to my boss.', exCn: '我需要把發票呈交給我老闆。' },
+        { p: 'be responsible for', cn: '負責……（詳見 VII-D）',
+          ex: 'I am responsible for the test room equipment.', exCn: '我負責測試室的設備。' }
+      ],
+      grammarTitle: 'III～VII. 句型與文法重點 Sentence Patterns & Grammar',
+      grammar: [
+        {
+          k: 'III', title: '時差表達 Time Difference Expressions',
+          pat: 'A is [n] hour(s) ahead of B. ＝ B is [n] hour(s) behind A.',
+          pts: [
+            '同一組時差一定有正反兩種說法，意思完全相同。behind 直接接地點；ahead 後面一定要加 of。',
+            '時差是不變的事實，一律用現在簡單式；要強調恆常不變可加 always。',
+            '問時差的兩種問句：What is the time gap between Taiwan and California?／What is the time difference between us?　兩種都可以用，但 time difference 在正式英文中更常見，time gap 較口語；兩者都用 between A and B 說明比較的對象。',
+            '⚠️ 常見錯誤：❌ Taiwan is one hour before noon.（before noon 是「中午之前」，不符合時差語境）；正確的對比句型永遠是 ahead of / behind。'
+          ],
+          exs: [
+            { tag: '台灣 ↔ 越南', en: 'Taiwan is one hour ahead of Vietnam. = Vietnam is one hour behind Taiwan. So when it is 12:00 noon in Taiwan, it is 11:00 a.m. in Vietnam.', cn: '相差 1 小時；台灣中午 12 點時越南是上午 11 點。' },
+            { tag: '台灣 ↔ 柏林', en: 'Taiwan is one hour ahead of Berlin, so Berlin is one hour behind Taiwan. If it is 12:00 noon in Taiwan, it is 11:00 a.m. in Berlin.', cn: '相差 1 小時；用 so 帶出反向說法。' },
+            { tag: '台灣 ↔ 馬尼拉', en: 'Taiwan is always one hour ahead of Manila.', cn: '用 always 強調時差固定不變。' },
+            { tag: '台灣 ↔ 加州', en: 'Taiwan is sixteen hours ahead of California. = California is sixteen hours behind Taiwan. When it is 8:00 a.m. in Taiwan, it is 4:00 p.m. (previous day) in California.', cn: '相差 16 小時；會跨到前一天（previous day）。' },
+            { tag: '台灣 ↔ 日本', en: 'Japan is one hour ahead of Taiwan.', cn: '相差 1 小時。' }
+          ]
+        },
+        {
+          k: 'IV-A', title: 'think alike ／ look alike ／ have a lot in common',
+          pat: 'think alike（想法）／ look alike（外表）／ have a lot in common with（範圍最廣）',
+          pts: [
+            '1. think alike（範圍最窄）：只講「想法、意見相似」。',
+            '2. look alike：只講「外表相似」，不是想法。',
+            '3. have a lot in common（範圍最廣）：涵蓋共同的興趣、嗜好、經歷與人格特質（interests, hobbies, experiences, personality traits）。',
+            '💡 介系詞：「和某人有共同點」用 with ── have a lot in common with someone。'
+          ],
+          exs: [
+            { tag: 'think alike', en: 'We always think alike.', cn: '我們的想法總是很相似。' },
+            { tag: 'look alike', en: 'Identical twins look alike.', cn: '同卵雙胞胎長得一模一樣。' },
+            { tag: 'in common', en: 'I have a lot in common with my best friend.', cn: '我跟我最好的朋友有很多共同點。' },
+            { tag: 'in common', en: 'My coworker and I have a lot in common. We both love traveling.', cn: '我和我同事有很多共同點，我們都喜歡旅行。' }
+          ]
+        },
+        {
+          k: 'IV-B', title: 'have something in common ／ have nothing in common',
+          pat: '主詞 + have something / nothing + in common (with someone)',
+          pts: [
+            'have something in common ＝ 有共同的興趣或特質；have nothing in common ＝ 完全沒有共同點。',
+            "⚠️ 避免中式英文：不要說 ❌ didn't have any in common，要用完整片語 have something in common 或 have nothing in common。"
+          ],
+          exs: [
+            { tag: 'something', en: 'I think you and your sister have a lot in common.', cn: '我覺得你和你姊姊有很多共同點。' },
+            { tag: 'nothing', en: 'They have nothing in common.', cn: '他們毫無共同點。' },
+            { tag: '關係破裂', en: 'She broke up with her boyfriend because they had nothing in common.', cn: '她和男友分手了，因為他們毫無共同點。' },
+            { tag: '話不投機', en: "We don't talk much because we have nothing in common.", cn: '我們不太聊天，因為我們沒有共同點。' }
+          ]
+        },
+        {
+          k: 'IV-D', title: "read someone's mind　讀懂某人的心思",
+          pat: "read + 所有格 + mind ／ read each other's minds",
+          pts: [
+            "read someone's mind 是慣用語，表達「直覺上的理解」，不是真的會讀心術。常用來形容親近的關係，或形容老師、主管能預先看出對方的需求與問題。",
+            "所有格要對應主詞：一個人用 my friend's mind，互相讀心用 each other's minds（複數）。"
+          ],
+          exs: [
+            { tag: '單數', en: "I can read my friend's mind.", cn: '我可以猜到我朋友在想什麼。' },
+            { tag: '複數', en: "We can read each other's minds.", cn: '我們很有默契，彼此都能猜到對方在想什麼。' },
+            { tag: '情境例句', en: "It's like the fortune teller could read my mind.", cn: '好像算命師能讀懂我的心思。' },
+            { tag: '同義說法', en: 'The fortune teller seemed to know exactly what I was thinking.', cn: '算命師似乎完全知道我在想什麼。' }
+          ]
+        },
+        {
+          k: 'V', title: '品味的說法 Taste in ...',
+          pat: '主詞 + have similar / the same / different taste in + 領域',
+          pts: [
+            'taste 後面固定用介系詞 in 帶出領域，這個句型在所有領域通用。taste in clothes 可以指偏好的顏色、風格或穿搭。',
+            '可代入的領域：clothes（衣服）／food（食物）／music（音樂）／movies（電影）／books（書）／art（藝術）／fashion（時尚）。',
+            '⚠️ 避免中式英文：Use the same taste, not ❌ a same taste.（same 前面一定用 the，不用 a。）',
+            '💡 加強語氣的副詞：completely / totally / entirely + different taste in ...；兩個人一起當主詞時用「X and I」最自然。'
+          ],
+          exs: [
+            { tag: '相似', en: 'We have similar taste in clothes and food.', cn: '我們對衣服和食物的品味很相似。' },
+            { tag: '相同', en: 'We have the same taste in music.', cn: '我們的音樂品味相同。' },
+            { tag: '不同', en: 'My friend and I have different taste in movies.', cn: '我和我朋友的電影品味不同。' },
+            { tag: '完全不同', en: 'My boyfriend and I have completely different taste in music.', cn: '我和我男朋友的音樂品味完全不同。' }
+          ]
+        },
+        {
+          k: 'VI', title: '東西用完了 Be Out Of ...／卡紙的說法 Paper Jams',
+          pat: '主詞 + be動詞 + out of + 名詞',
+          pts: [
+            'out of 後面接「用完的東西」，通常是不可數名詞（ink, money, coffee, paper, milk），不加 a／不加 s。主詞可以是物品、人或店家。',
+            '卡紙——狀態：The paper is stuck in the printer.（現在卡住的狀態）；事件：The paper got stuck in the printer.（描述卡住這件事發生了）。兩句都很自然，差別只在你要講「狀態」還是「事件」。'
+          ],
+          exs: [
+            { tag: '物品當主詞', en: 'My pen is out of ink.', cn: '我的筆沒水了。' },
+            { tag: '人當主詞', en: 'I am out of money.', cn: "我沒錢了。（＝ I don't have money.）" },
+            { tag: '存貨用完', en: 'We are out of coffee.', cn: "我們的咖啡喝完了。（＝ We don't have coffee.）" },
+            { tag: '店家賣完', en: 'The store is out of milk.', cn: '這家店的牛奶賣完了。' },
+            { tag: '辦公室設備', en: 'The printer is out of paper. The printer is out of ink.', cn: '印表機沒紙了。印表機沒墨水了。' }
+          ]
+        },
+        {
+          k: 'VII-A', title: 'manage to + V　設法做到、成功做到',
+          pat: '主詞 + managed to + 原形動詞',
+          pts: [
+            'manage to do something 表示「在困難的情況下仍達成目標」，同時包含努力與成功兩層意思，很適合用來描述解決技術或流程上的問題。',
+            '⚠️ 使用限制：Use it only to describe past situations.（只用來描述已經發生的過去情況，所以動詞用過去式 managed。）'
+          ],
+          exs: [
+            { tag: '技術問題', en: 'He managed to connect his Apple laptop to the TV using an HDMI cable.', cn: '他設法用 HDMI 線把他的 Apple 筆電接上電視。' },
+            { tag: '如期完成', en: 'I managed to finish the report on time.', cn: '我設法及時完成了報告。' },
+            { tag: '修好機器', en: 'She managed to fix the printer.', cn: '她成功把印表機修好了。' },
+            { tag: '解決問題', en: 'We managed to solve the problem.', cn: '我們設法解決了這個問題。' }
+          ]
+        },
+        {
+          k: 'VII-B', title: 'under + 名詞　「正在……中」',
+          pat: '主詞 + be動詞 + under + 名詞',
+          pts: [
+            'under 加上抽象名詞，表示「正處於某種狀態／過程中」，是職場非常常用的一組說法，但三個片語用途完全不同，不能互換。',
+            '⚠️ 常見混淆：under control ≠ under review。under control 是「情況被妥善管理」，不是「正在被審查」；文件、議題一律用 under review。',
+            "under construction／under review 中間不加冠詞（不說 ❌ under the construction）；但 under someone's control 因為有所有格，要寫成 under the manager's control。"
+          ],
+          exs: [
+            { tag: 'under construction（實體空間）', en: 'Our test room is under construction, so we are working temporarily in another office.', cn: '我們的測試室正在施工，所以我們暫時在另一間辦公室工作。' },
+            { tag: 'under review（文件、議題）', en: 'The issue is under review.', cn: '這個問題正在檢查中。' },
+            { tag: "under someone's control（情況被有效管理）", en: "The project is under the manager's control.", cn: '這個專案由經理掌控。' }
+          ]
+        },
+        {
+          k: 'VII-C', title: 'be down　（系統／服務）故障、停止運作',
+          pat: '主詞 + be動詞 + down, which + 動詞',
+          pts: [
+            'be down ＝ not functioning。網站、系統、雲端服務「掛掉」都用 be down，不用 broken。',
+            '逗號 + which 是非限定關係子句，which 代指「前面整件事」，用來說明造成的結果。cause + 受詞 + to + 原形動詞 表示「導致某物變成……」。'
+          ],
+          exs: [
+            { tag: '完整例句', en: 'The cloud service was down, which caused the document to become corrupted.', cn: '雲端服務當機了，這導致文件毀損。' }
+          ]
+        },
+        {
+          k: 'VII-D', title: 'submit / review / confirm　採購與文件核准流程',
+          pat: 'Before + V-ing, 主詞 + need to + submit + 物 + to + 人 + to review and confirm + 受詞',
+          pts: [
+            'Before + V-ing 表示「在做……之前」。to review and confirm 是表示「目的」的不定詞，兩個動詞共用一個 to。',
+            '⚠️ 注意：❌ equipments → ✅ equipment。equipment 是不可數名詞，永遠不加 s。'
+          ],
+          exs: [
+            { tag: '完整例句', en: 'Before purchasing the equipment, I need to submit the invoices to my boss to review and confirm them.', cn: '購買設備之前，我需要把發票呈交給老闆審核並確認。' }
+          ]
+        }
+      ],
+      cmpTitle: 'IV-C. 默契的四種說法 chemistry / rapport / understanding / on the same page',
+      cmp: [
+        { u: 'chemistry', sc: '人際、私人關係', ex: 'We have good chemistry.', exCn: '我們很有默契。', cn: '指自然而然、直覺般的契合；用在團隊時表示合作順暢、有活力。' },
+        { u: 'rapport', sc: '職場（老師、主管、客戶）', ex: 'We have a good rapport.', exCn: '我們相處融洽。', cn: '強調信任與溝通融洽。' },
+        { u: 'understanding', sc: '最一般性的說法', ex: 'We understand each other really well.', exCn: '我們非常了解彼此。', cn: '表示彼此互相理解。' },
+        { u: 'be on the same page', sc: '會議或專案規劃', ex: 'We are on the same page.', exCn: '我們的認知一致。', cn: '指認知、目標一致。' }
+      ],
+      cmpWarn: '💬 重要觀念：英文沒有一個單字能完全對應中文的「默契」。要靠 chemistry、rapport、being on the same page 這幾個說法，依情境搭配使用，才能表達出「直覺性的協調與相互理解」。',
+      extraTitle: 'VII-D 附表：採購與文件核准流程的動詞與片語',
+      extra: [
+        {
+          title: 'submit → review → confirm 流程用語',
+          exs: [
+            { en: 'I need to submit the invoices to my boss.', cn: 'submit ＝ 呈交、送出以供審核（正式）：我需要把發票呈交給我老闆。', hi: 'submit' },
+            { en: 'I need to hand in the invoices.', cn: 'hand in / give ＝ submit 的較口語說法：我需要繳交這些發票。', hi: 'hand in' },
+            { en: "The invoices are under my boss's review.", cn: 'be under review ＝ 正在審核中：這些發票正在我老闆的審核中。', hi: 'under review' },
+            { en: 'My boss needs to confirm the invoices.', cn: 'confirm ＝ 確認、核准：我老闆需要確認這些發票。', hi: 'confirm' },
+            { en: "I'm waiting for him to confirm them.", cn: 'wait for someone to V ＝ 等待某人做某事：我在等他確認這些發票。', hi: 'waiting for' },
+            { en: 'I am responsible for the test room equipment.', cn: 'be responsible for ＝ 負責……：我負責測試室的設備。', hi: 'responsible for' }
+          ]
+        }
+      ],
+      extraVocabTitle: 'VIII. 填空練習 Fill in the Blanks（附解答）',
+      extraVocab: [
+        { k: '填空 1', en: 'Taiwan is one hour ahead of Vietnam, so Vietnam is one hour behind Taiwan.', cn: '答案：ahead of / behind（ahead 一定加 of，behind 直接接地點）' },
+        { k: '填空 2', en: 'What is the time gap between Taiwan and California?', cn: '答案：gap / difference（time difference 較正式常用）' },
+        { k: '填空 3', en: 'When it is 8:00 a.m. in Taiwan, it is 4:00 p.m. (previous day) in California.', cn: '答案：previous day（時差 16 小時會跨到前一天）' },
+        { k: '填空 4', en: 'Our QA office is under construction, so we are working temporarily in another office.', cn: '答案：construction / temporarily（用副詞 temporarily，不是形容詞 temporary）' },
+        { k: '填空 5', en: "The products can't be shipped because the quality issue is under review.", cn: '答案：because（句尾的 because 子句前不加逗號）' },
+        { k: '填空 6', en: 'The cloud service was down, which caused the document to become corrupted.', cn: '答案：down / which（系統故障用 be down；, which 代指前面整件事）' },
+        { k: '填空 7', en: 'I bought identical shirts with my friend. We always think alike.', cn: '答案：identical / alike（不說 think same）' },
+        { k: '填空 8', en: 'Identical twins look alike.', cn: '答案：look alike（外表相似用 look alike）' },
+        { k: '填空 9', en: 'I have a lot in common with my best friend.', cn: '答案：in common with（和某人有共同點用 with）' },
+        { k: '填空 10', en: 'She broke up with her boyfriend because they had nothing in common.', cn: '答案：nothing（完全沒有共同點）' },
+        { k: '填空 11', en: 'We have good chemistry.', cn: '答案：chemistry（私人關係的默契）' },
+        { k: '填空 12', en: 'We have a good rapport.', cn: '答案：rapport（職場上關係融洽）' },
+        { k: '填空 13', en: 'We are on the same page.', cn: '答案：page（認知一致）' },
+        { k: '填空 14', en: "We can read each other's minds.", cn: '答案：minds（互相讀心用複數 minds）' },
+        { k: '填空 15', en: 'We have similar taste in clothes and food.', cn: '答案：taste in（taste 後面固定接介系詞 in）' },
+        { k: '填空 16', en: 'My boyfriend and I have completely different taste in music.', cn: '答案：completely（加強語氣：completely / totally / entirely）' },
+        { k: '填空 17', en: 'The printer is out of paper.', cn: '答案：out of（be out of ＋ 不可數名詞）' },
+        { k: '填空 18', en: 'The paper got stuck in the printer.', cn: '答案：got stuck（描述事件發生；狀態則用 is stuck）' },
+        { k: '填空 19', en: 'He managed to connect his Apple laptop to the TV using an HDMI cable.', cn: '答案：managed（manage to + 原形動詞，只用於過去情況）' },
+        { k: '填空 20', en: "The project is under the manager's control.", cn: "答案：control（under someone's control ＝ 情況被有效管理）" },
+        { k: '填空 21', en: 'I need to submit the invoices to my boss.', cn: '答案：submit（正式用語，口語可說 hand in）' },
+        { k: '填空 22', en: 'My boss needs to confirm the invoices.', cn: '答案：confirm（確認、核准）' },
+        { k: '填空 23', en: 'I am responsible for the test room equipment.', cn: '答案：responsible for（負責……）' },
+        { k: '填空 24', en: 'My phone storage is full, so I need to compress my photos.', cn: '答案：compress（壓縮、縮小檔案大小）' }
+      ]
+    },
+    {
       id: 'bk20260821',
       icon: '💻',
       iconSvg: '<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><circle cx="48" cy="48" r="45" fill="#fff" stroke="#f0c9a0" stroke-width="3"/><rect x="28" y="28" width="40" height="28" rx="3" fill="#fff" stroke="#2b2118" stroke-width="3.5"/><rect x="33" y="33" width="30" height="18" fill="#e8913a"/><path d="M21 62 h54 l-5 9 H26 z" fill="#c9631f" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="64" width="12" height="3.5" rx="1.5" fill="#fff"/></svg>',

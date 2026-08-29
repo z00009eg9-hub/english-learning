@@ -21,6 +21,39 @@ description: 英文課堂筆記的完整自動化工作流程 — 自動建立�
 
 ---
 
+## 流程 00：Git 前置與收尾檢查（2026-08-29 新增，**每次同步/部署都必做**）
+
+> ⚠ **為什麼有這一節**：這個 repo 有**兩個寫入者**在推同一條 `main` —— 你在本機推，
+> 雲端 daily content routine 也用 `Claude <noreply@anthropic.com>` 直接推 `origin/main`。
+> 2026-08-28 就出過事：本機三個 commit（含 B2 Read 桌機側邊欄改版、8/25 課本內容）還沒 push，
+> 雲端又推了新的，`git pull --rebase` 撞到衝突後 `--abort`，那三個 commit 被留在
+> `backup-local-0828` 分支再也沒人接回來，線上網站整整少了一版排版和一堂課。
+> 8/29 才發現並手動還原。以下三步就是為了不要再發生。
+
+### A. 開工前（改任何檔案「之前」）
+```bash
+cd "G:/我的雲端硬碟/英文筆記" && git status --porcelain && git pull --rebase origin main
+```
+- 工作區乾淨時才 rebase，衝突面最小。
+- **如果 rebase 出現衝突**：解完衝突走 `git rebase --continue`。
+  **不要**用 `git rebase --abort` 就當作沒事——abort 會讓本地 commit 停在原地脫離 `main`。
+  真的要 abort，就當場記下落單的 commit hash，並在收尾檢查（C）把它們 cherry-pick 回來。
+
+### B. 收工立刻 push
+不要讓本地 commit 過夜。commit 完就 `git push origin main`，
+本地與 `origin/main` 之間留的 commit 越少，下次撞車的機率越低。
+
+### C. 收尾檢查：有沒有東西落單
+```bash
+cd "G:/我的雲端硬碟/英文筆記" && git log --oneline origin/main..main && git branch --no-merged main
+```
+- 第一個指令要**空的**（表示本地沒有沒 push 的 commit）。
+- 第二個指令列出來的分支，都是**還沒併回 `main`** 的——逐一確認裡面的東西是不是該併回來。
+  2026-08-28 那次如果有跑這條，當天就會看到 `backup-local-0828`。
+- 兩個指令都乾淨才算同步完成，再進入部署（流程 G / 流程 H 的部署步驟）。
+
+---
+
 ## 流程 0：自動建立/尋找當天日期資料夾（2026-06-11 新增）
 
 情境 1（建立全新 Google 文件）執行前，**先自動處理目標資料夾**，使用者不需手動建立：
@@ -41,9 +74,13 @@ description: 英文課堂筆記的完整自動化工作流程 — 自動建立�
 
 ## 共用：教材內容規範
 
-- 單字表格固定 5 欄：單字｜音標｜詞性｜**中文**｜**例句**（**例句放最後一欄；例句格內＝英文句（該課單字粗體）＋換行＋中文翻譯**。2026-08-21 使用者指定：格式以 20260813 文件為準，取代 2026-08-19 的舊規則）
-  - 片語表格：片語｜中文｜例句（例句放最後，格內同樣英文＋換行＋中譯，片語在例句中粗體）
-  - **通則：比照 20260813 版型——「例句」欄放最右，中文意思欄在例句前面**
+- 單字表格固定 5 欄：單字｜音標｜詞性｜**例句**｜**中文**（例句格內＝英文句（該課單字粗體）＋換行＋中文翻譯）
+  - 片語表格：片語｜例句｜中文（格內同樣英文＋換行＋中譯，片語在例句中粗體）
+  - **通則（2026-08-29 使用者指定，取代 2026-08-21「例句放最右」的舊規則）：任何表格只要同時有「例句」欄與「中文」欄，一律「例句」在前、「中文」在後 —— 中文意思欄放最右**
+    - 適用所有章節，不只單字／片語表：職場用語、易混淆比較、人際用語等「說法｜中文｜例句」三欄表，一律改成 **說法｜例句｜中文**
+    - 欄寬要跟著換（例句欄拿寬的那格），否則例句會被擠成逐字換行
+    - ⚠ 例外：表頭寫「意思」「重點」「語氣／使用情境」「說明」「詳見」的欄位**不算「中文」欄**，位置不動（這些是分類/解說欄，本來就該排在例句前）
+    - 既有文件要補救時，用整欄對調的腳本（含表頭列＋欄寬一起換），不要重打內容：參考 `20260827-動名詞與不定詞、默契用語/move-chinese-after-example.gs`（`moveChineseAfterExample()`，靠表頭文字自動找「中文」「例句」欄索引，只在中文排在例句前面時才動）
   - 章節框架也比照 20260813：標題＋英文副標＋Topics 行 → I. ★ MM/DD 作業複習（卡片：❌原句/✅訂正紅斜體/中文/結構藍粗體/🔬文法解說）→ II. 單字（含「補充單字」h3 小節）→ III. 片語與搭配詞 → IV. 句型與文法解說（h3 A/B/C… 每個一張 callout：句型：藍粗體＋• 條列）→ V… 閱讀/情境 → 補充字彙與句型（補充內容｜英文｜中文 三欄）→ 快速總結（重點｜說明）。參考重建腳本：`20260821-電腦檔案與辦公室英文/rebuild20260821.gs`
 - B1 以上單字、句型、片語**全部收錄**，不省略
 - B2+ 單字加 ⭐ 標記
@@ -227,6 +264,7 @@ create_file(
 **⚠ 表格欄寬一定要指定，否則會被壓扁**：HTML 的 `<colgroup>` 不一定生效，最保險是轉檔後用 Apps Script
 `table.setColumnWidth(j, pt)` 依欄數套用（版面寬 468pt）：5 欄 `[78,104,38,170,78]`（單字/音標/詞性/**例句**/**中文意思**，例句最寬）、4 欄 `[110,150,60,148]`、
 3 欄 `[112,100,256]`、2 欄 `[130,338]`。判斷「這是資料表格而非 callout」用第一列第一格背景 `#ffe0b2`。
+⚠ 3 欄若是「說法／片語｜**例句**｜**中文**」（見上方 2026-08-29 欄序規則），寬度改用 `[112,256,100]` —— 寬的那格要給例句。
 沒調欄寬時「例句」欄會窄到每個英文字一行，整份文件會從 8 頁暴增到 29 頁。
 
 **轉檔做不到、要另外處理的兩件事：**
@@ -352,9 +390,11 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 > （若漏掉，新版 `dayVocab()` 有 fallback 會用「該天翻譯句裡出現的單字」補，但會不完整——最好還是補上 SOURCES。）
 
 ### Step 5 — 推送到 GitHub
+0. ⚠ **開工前應已跑過「流程 00-A」的 `git pull --rebase origin main`**；若還沒跑，先跑完再 commit
 1. `git add index.html`
 2. `git commit -m "Sync English learning notes up to YYYYMMDD (主題)"` + `Co-Authored-By` trailer
 3. `git push origin main`
+4. **跑「流程 00-C」收尾檢查**：`git log --oneline origin/main..main`（要空的）＋ `git branch --no-merged main`（確認沒有落單分支）
 
 ### Step 5.5 — 部署到 Firebase Hosting（更新線上網站）
 push GitHub 後，**接著執行「流程 G」** 把最新 `index.html` 部署上線：
@@ -498,6 +538,7 @@ cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && fi
    git commit -m "Add daily quiz for YYYYMMDD (主題)"   # 附 Co-Authored-By trailer
    git push origin main
    ```
+   跑完 push 記得做「流程 00-C」收尾檢查（`git log --oneline origin/main..main` 要空的、`git branch --no-merged main` 沒有落單分支）。
 6. **接著執行「流程 G」部署到 Firebase**，讓線上網站 https://learning-english-notes.web.app 同步更新（若本次是併在流程 C 一起跑，流程 C Step 5.5 已部署，這裡就不必重複）：
    ```bash
    cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && firebase deploy --only hosting
@@ -1139,8 +1180,9 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
    - 新增圖示後要用 headless Chrome 截圖驗證（`chrome --headless=new --screenshot`，輸出到本機可寫目錄，G: 或 scratchpad 會存取被拒）。
 4. **驗證**：`node -e "global.window={}; require('./data-book.js'); ..."` 檢查語法與 lessons 數；本機 `bkGo(id)` 渲染不報錯。
 5. **sw.js 快取版本 +1**（`b2lab/public/sw.js` 的 `CACHE = 'b2lab-vNN'`）。
-6. **部署**：`cd b2lab && npx firebase deploy --only hosting`。
-7. **commit + push**（訊息註明課次日期與主題）。
+6. **部署**：`cd b2lab && npx firebase-tools deploy --only hosting --project english-b2-lab`。
+   - 部署後用 `curl -s -I https://english-b2-lab.web.app/ | grep -i cache-control` 確認回傳 `no-cache, max-age=0`。（`b2lab/firebase.json` 已於 2026-08-29 補上裸路徑 `/` 的 no-cache 規則；原本只比對 `**/*.@(html|js|json)`，不吃 `/`，導致部署後直接開網址會拿到 CDN 一小時的舊首頁。）
+7. **commit + push**（訊息註明課次日期與主題），然後跑「流程 00-C」收尾檢查：`git log --oneline origin/main..main` 要空的、`git branch --no-merged main` 沒有落單分支。
 
 ### 注意
 - 若是「更新既有課」（Doc 內容有改），直接改 data-book.js 裡對應 lesson 物件的欄位，不要重複新增。
