@@ -1235,12 +1235,12 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
 // VOCABULARY DATA  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
-// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260731, 20260804, 20260811
+// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260731, 20260804, 20260811, 20260813, 20260818, 20260821, 20260825, 20260827
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-08-29 count:668
+// ===SYNC:VOCAB_START=== sync_date:2026-08-29 count:678
   // --- 20260827 動名詞與不定詞、默契用語 ---
-  {w:"chemistry",ipa:"/ˈkemɪstri/",pos:"n.",cn:"默契、化學反應",def:"A natural good feeling between people who work well together.",exEn:"Our team has great chemistry, so we can communicate efficiently.",exCn:"我們團隊很有默契，所以能夠有效率地溝通。",cat:"workplace"},
-  {w:"rapport",ipa:"/ræˈpɔːr/",pos:"n.",cn:"融洽的關係",def:"A friendly relationship in which people understand each other.",exEn:"It's important to build good rapport with our clients.",exCn:"與客戶建立良好的融洽關係是很重要的。",cat:"workplace"},
+  /* chemistry / rapport / manage / submit 已在 20260825 收錄，此處不重複登記（vocabSources 是單一對應，
+     同一個字登記兩天會讓其中一天的 dayVocab 抓不到）。本日改收 Unit 53/54 動詞清單裡尚未收錄的字。 */
   {w:"convince",ipa:"/kənˈvɪns/",pos:"v.",cn:"說服、使某人相信",def:"To make someone believe that something is true.",exEn:"He convinced me that he was innocent.",exCn:"他讓我相信他是清白的。",cat:"daily"},
   {w:"persuade",ipa:"/pərˈsweɪd/",pos:"v.",cn:"說服（使人去做某事）",def:"To make someone agree to do something.",exEn:"She persuaded me to stay.",exCn:"她說服我留下來。",cat:"daily"},
   {w:"deny",ipa:"/dɪˈnaɪ/",pos:"v.",cn:"否認",def:"To say that something is not true.",exEn:"They denied doing anything wrong.",exCn:"他們否認做錯任何事。",cat:"daily"},
@@ -1248,7 +1248,20 @@ const vocab = [
   {w:"postpone",ipa:"/poʊˈspoʊn/",pos:"v.",cn:"延期（＝put off，較正式）",def:"To move something to a later time.",exEn:"They postponed the meeting.",exCn:"他們把會議延期了。",cat:"workplace"},
   {w:"interrupt",ipa:"/ˌɪntəˈrʌpt/",pos:"v.",cn:"打斷（說話）",def:"To stop someone while they are speaking.",exEn:"You keep interrupting when I am talking.",exCn:"我講話的時候你一直打斷我。",cat:"daily"},
   {w:"unreliable",ipa:"/ˌʌnrɪˈlaɪəbl/",pos:"adj.",cn:"不可靠的",def:"Not able to be trusted to work well.",exEn:"My car is unreliable. It keeps breaking down.",exCn:"我的車不可靠，老是拋錨。",cat:"daily"},
-  {w:"manage",ipa:"/ˈmænɪdʒ/",pos:"v.",cn:"設法做到、成功做到",def:"To succeed in doing something difficult.",exEn:"I managed to catch the last train.",exCn:"我設法趕上了最後一班火車。",cat:"daily"},
+  {w:"pretend",ipa:"/prɪˈtend/",pos:"v.",cn:"假裝",def:"To act as if something is true when it is not.",exEn:"I pretended to be reading the newspaper.",exCn:"我假裝在看報紙。",cat:"daily"},
+  {w:"consider",ipa:"/kənˈsɪdər/",pos:"v.",cn:"考慮",def:"To think carefully about doing something.",exEn:"I considered applying for the job.",exCn:"我考慮過應徵那份工作。",cat:"daily"},
+  {w:"recommend",ipa:"/ˌrekəˈmend/",pos:"v.",cn:"推薦、建議（suggest 的近義詞）",def:"To say that something is good and worth doing.",exEn:"I recommend travelling by train.",exCn:"我建議搭火車。",cat:"daily"},
+  // --- 20260825 時差表達與默契用語 ---
+  {w:"ahead",ipa:"/əˈhed/",pos:"adv.",cn:"（時間）早於；領先",def:"Earlier in time than someone or something else.",exEn:"Taiwan is one hour ahead of Vietnam.",exCn:"台灣比越南早一小時。",cat:"daily"},
+  {w:"behind",ipa:"/bɪˈhaɪnd/",pos:"prep.",cn:"（時間）晚於；落後",def:"Later in time than someone or something else.",exEn:"Vietnam is one hour behind Taiwan.",exCn:"越南比台灣晚一小時。",cat:"daily"},
+  {w:"gap",ipa:"/ɡæp/",pos:"n.",cn:"差距；間隔",def:"A space or difference between two things.",exEn:"What is the time gap between us?",exCn:"我們之間的時差是多少？",cat:"daily"},
+  {w:"alike",ipa:"/əˈlaɪk/",pos:"adv.",cn:"相似地；一樣地",def:"In a similar way.",exEn:"We always think alike.",exCn:"我們的想法總是很相似。",cat:"daily"},
+  {w:"chemistry",ipa:"/ˈkeməstri/",pos:"n.",cn:"默契；契合的感覺",def:"A natural, easy connection between people.",exEn:"We have great chemistry.",exCn:"我們很有默契。",cat:"daily"},
+  {w:"rapport",ipa:"/ræˈpɔːr/",pos:"n.",cn:"融洽關係；默契（職場常用）",def:"A good relationship with easy communication and trust.",exEn:"We have a good rapport.",exCn:"我們相處融洽、溝通順暢。",cat:"workplace"},
+  {w:"trait",ipa:"/treɪt/",pos:"n.",cn:"特質；特點",def:"A quality that is part of someone's character.",exEn:"Personality traits are patterns of thought, feeling, and behavior.",exCn:"人格特質是思考、感受與行為的慣性模式。",cat:"daily"},
+  {w:"taste",ipa:"/teɪst/",pos:"n.",cn:"品味；喜好",def:"What kind of things a person likes.",exEn:"We have similar taste in clothes.",exCn:"我們對衣服的品味很相似。",cat:"daily"},
+  {w:"manage",ipa:"/ˈmænɪdʒ/",pos:"v.",cn:"設法做到；成功完成",def:"To succeed in doing something difficult.",exEn:"I managed to catch the last train.",exCn:"我設法趕上了最後一班火車。",cat:"daily"},
+  {w:"submit",ipa:"/səbˈmɪt/",pos:"v.",cn:"呈交；提交（正式）",def:"To give a document to someone so they can check it.",exEn:"I need to submit the invoices to my boss.",exCn:"我需要把發票呈交給我老闆。",cat:"workplace"},
   // --- 20260821 電腦檔案與辦公室英文 ---
   {w:"specifications",ipa:"/ˌspesɪfɪˈkeɪʃnz/",pos:"n.",cn:"規格（口語縮寫 spec）",def:"A detailed description of how something should be made.",exEn:"It's ridiculous to change the specifications at the last minute.",exCn:"在最後一刻才改規格實在很荒謬。",cat:"workplace"},
   {w:"corrupted",ipa:"/kəˈrʌptɪd/",pos:"adj.",cn:"（檔案）損毀的",def:"Damaged so that it cannot open or work correctly.",exEn:"As you can see, my file is corrupted.",exCn:"如你所見，我的檔案損毀了。",cat:"workplace"},
@@ -1972,9 +1985,13 @@ const vocab = [
 // ===SYNC:SOURCES_START=== sync_date:2026-08-29
 const vocabSources = {
   // --- 20260827 動名詞與不定詞、默契用語 ---
-  "chemistry":"20260827 動名詞與不定詞、默契用語","rapport":"20260827 動名詞與不定詞、默契用語","convince":"20260827 動名詞與不定詞、默契用語","persuade":"20260827 動名詞與不定詞、默契用語","deny":"20260827 動名詞與不定詞、默契用語","admit":"20260827 動名詞與不定詞、默契用語","postpone":"20260827 動名詞與不定詞、默契用語","interrupt":"20260827 動名詞與不定詞、默契用語","unreliable":"20260827 動名詞與不定詞、默契用語","manage":"20260827 動名詞與不定詞、默契用語",
-  /* keep / suggest 沒有進單字表，但有造句關鍵字（allKW），登記來源才能被 dayKW 抓到 */
-  "keep":"20260827 動名詞與不定詞、默契用語","suggest":"20260827 動名詞與不定詞、默契用語",
+  "convince":"20260827 動名詞與不定詞、默契用語","persuade":"20260827 動名詞與不定詞、默契用語","deny":"20260827 動名詞與不定詞、默契用語","admit":"20260827 動名詞與不定詞、默契用語","postpone":"20260827 動名詞與不定詞、默契用語","interrupt":"20260827 動名詞與不定詞、默契用語","unreliable":"20260827 動名詞與不定詞、默契用語","pretend":"20260827 動名詞與不定詞、默契用語","consider":"20260827 動名詞與不定詞、默契用語","recommend":"20260827 動名詞與不定詞、默契用語",
+  /* keep / suggest / stop 沒有進單字表，但有造句關鍵字（allKW），登記來源才能被 dayKW 抓到 */
+  "keep":"20260827 動名詞與不定詞、默契用語","suggest":"20260827 動名詞與不定詞、默契用語","stop":"20260827 動名詞與不定詞、默契用語",
+  // --- 20260825 時差表達與默契用語 ---
+  "ahead":"20260825 時差表達與默契用語","behind":"20260825 時差表達與默契用語","gap":"20260825 時差表達與默契用語","alike":"20260825 時差表達與默契用語","chemistry":"20260825 時差表達與默契用語","rapport":"20260825 時差表達與默契用語","trait":"20260825 時差表達與默契用語","taste":"20260825 時差表達與默契用語","manage":"20260825 時差表達與默契用語","submit":"20260825 時差表達與默契用語",
+  /* have a lot in common / manage to 沒有進單字表，但有造句關鍵字（allKW），登記來源才能被 dayKW 抓到 */
+  "have a lot in common":"20260825 時差表達與默契用語","manage to":"20260825 時差表達與默契用語",
   // --- 20260821 電腦檔案與辦公室英文 ---
   "specifications":"20260821 電腦檔案與辦公室英文","corrupted":"20260821 電腦檔案與辦公室英文","identical":"20260821 電腦檔案與辦公室英文","compress":"20260821 電腦檔案與辦公室英文","invoice":"20260821 電腦檔案與辦公室英文","lend":"20260821 電腦檔案與辦公室英文","borrow":"20260821 電腦檔案與辦公室英文","sort out":"20260821 電腦檔案與辦公室英文","adapter":"20260821 電腦檔案與辦公室英文","subfolder":"20260821 電腦檔案與辦公室英文",
   // --- 20260818 行為描述與人際互動（摘要補充）---
@@ -2459,7 +2476,7 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-08-29 count:283
+// ===SYNC:TRANS_START=== sync_date:2026-08-29 count:293
 const allTrans = [
   // --- 20260827 動名詞與不定詞、默契用語 cn-en ---
   {p:"我們團隊很有默契，所以能夠有效率地溝通。",a:"Our team has great chemistry, so we can communicate efficiently.",h:"chemistry = 默契（不可數）, efficiently = 有效率地",kw:["great chemistry"],src:"20260827 動名詞與不定詞、默契用語"},
@@ -2472,6 +2489,18 @@ const allTrans = [
   {p:"我負責採購測試設備。",a:"I am responsible for purchasing the test equipment.",h:"responsible for + 名詞或 V-ing",kw:["responsible for"],src:"20260827 動名詞與不定詞、默契用語"},
   {p:"居民們設法把火撲滅了。",a:"The residents managed to put out the fire.",h:"put out = 撲滅（不是 put off 延後）",kw:["put out"],src:"20260827 動名詞與不定詞、默契用語"},
   {p:"我的車不可靠，老是拋錨。",a:"My car is unreliable. It keeps breaking down.",h:"keep + V-ing = 老是……, break down = 故障",kw:["keeps breaking down"],src:"20260827 動名詞與不定詞、默契用語"},
+  // --- 20260825 時差表達與默契用語 cn-en ---
+  {p:"台灣比越南早一小時。",a:"Taiwan is one hour ahead of Vietnam.",h:"ahead of = 早於（一定加 of）",kw:["ahead of"],src:"20260825 時差表達與默契用語"},
+  {p:"我們之間的時差是多少？",a:"What is the time difference between us?",h:"time difference = 時差, between A and B",kw:["time difference"],src:"20260825 時差表達與默契用語"},
+  {p:"雲端服務當機了，這導致文件毀損。",a:"The cloud service was down, which caused the document to become corrupted.",h:"be down = 當機（不用 broken）, , which 指前面整件事",kw:["was down"],src:"20260825 時差表達與默契用語"},
+  {p:"我跟我最好的朋友有很多共同點。",a:"I have a lot in common with my best friend.",h:"have a lot in common with someone",kw:["in common with"],src:"20260825 時差表達與默契用語"},
+  {p:"我們對衣服和食物的品味很相似。",a:"We have similar taste in clothes and food.",h:"taste in = 對……的品味（介系詞用 in）",kw:["taste in"],src:"20260825 時差表達與默契用語"},
+  {p:"我需要把發票呈交給老闆審核並確認。",a:"I need to submit the invoices to my boss to review and confirm them.",h:"submit ... to 人, to review and confirm = 目的",kw:["submit"],src:"20260825 時差表達與默契用語"},
+  // --- 20260825 時差表達與默契用語 en-cn ---
+  {p:"Our QA office is under construction, so we are working temporarily in another office.",a:"我們的品保辦公室正在施工，所以我們暫時在另一間辦公室工作。",h:"under construction = 施工中；temporarily 是副詞",kw:[],src:"20260825 時差表達與默契用語"},
+  {p:"We always think alike.",a:"我們的想法總是很相似。",h:"think alike（不說 think same）",kw:[],src:"20260825 時差表達與默契用語"},
+  {p:"He managed to connect his Apple laptop to the TV using an HDMI cable.",a:"他設法用 HDMI 線把他的 Apple 筆電接上電視。",h:"manage to + 原形動詞（只用於過去）",kw:[],src:"20260825 時差表達與默契用語"},
+  {p:"The printer is out of paper.",a:"印表機沒紙了。",h:"be out of + 不可數名詞 = 用完了",kw:[],src:"20260825 時差表達與默契用語"},
   // --- 20260821 電腦檔案與辦公室英文 cn-en ---
   {p:"我客戶的筆電沒電了，所以我把我的借給他。",a:"My client's laptop was out of battery, so I lent him mine.",h:"out of battery = 沒電, lend–lent = 借出",kw:["lent"],src:"20260821 電腦檔案與辦公室英文"},
   {p:"我的手機很讓我分心，所以我需要把它收起來。",a:"My phone is a big distraction, so I need to put it away.",h:"distraction = 分心的事物, put it away = 收起來（代名詞放中間）",kw:["put it away"],src:"20260821 電腦檔案與辦公室英文"},
@@ -2784,7 +2813,7 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-08-29 count:57
+// ===SYNC:KW_START=== sync_date:2026-08-29 count:60
   // --- 20260827 動名詞與不定詞、默契用語（例句全部取自筆記原文）---
   {w:"keep",ipa:"/kiːp/",tag:"一直、反覆做 · v.",exs:[
     {en:"You keep interrupting when I am talking.",cn:"我講話的時候你一直打斷我。"},
@@ -2798,11 +2827,27 @@ const allKW = [
     {en:"I suggested that Ted go for a run.",cn:"我建議 Ted 去跑步。"},
     {en:"We were hungry, so I suggested having dinner early.",cn:"我們餓了，所以我建議早點吃晚餐。"},
   ]},
-  {w:"manage",ipa:"/ˈmænɪdʒ/",tag:"設法做到 · v.",exs:[
+  {w:"stop",ipa:"/stɑːp/",tag:"停止（+V-ing／+to V 意思不同）· v.",exs:[
+    {en:"Suddenly everybody stopped talking. There was silence.",cn:"突然大家都停止說話，一片寂靜。"},
+    {en:"The movie was very funny. I couldn't stop laughing.",cn:"那部電影很好笑，我笑到停不下來。"},
+    {en:"He stopped to answer the phone.",cn:"他停下手邊的事去接電話。"},
+    {en:"You can't stop people doing what they want.",cn:"你無法阻止別人做他們想做的事。"},
+  ]},
+  // --- 20260825 時差表達與默契用語（例句全部取自筆記原文）---
+  {w:"alike",ipa:"/əˈlaɪk/",tag:"相似地 · adv.",exs:[
+    {en:"We always think alike.",cn:"我們的想法總是很相似。"},
+    {en:"Identical twins look alike.",cn:"同卵雙胞胎長得一模一樣。"},
+    {en:"I bought identical shirts with my friend. We always think alike.",cn:"我和我朋友買了一模一樣的襯衫。我們的想法總是很相似。"},
+  ]},
+  {w:"have a lot in common",ipa:"",tag:"有很多共同點 · phr.",exs:[
+    {en:"I have a lot in common with my best friend.",cn:"我跟我最好的朋友有很多共同點。"},
+    {en:"My coworker and I have a lot in common. We both love traveling.",cn:"我和我同事有很多共同點，我們都喜歡旅行。"},
+    {en:"I think you and your sister have a lot in common.",cn:"我覺得你和你姊姊有很多共同點。"},
+  ]},
+  {w:"manage to",ipa:"/ˈmænɪdʒ tuː/",tag:"設法做到 · phr.",exs:[
     {en:"I managed to finish the report on time.",cn:"我設法及時完成了報告。"},
     {en:"She managed to fix the printer.",cn:"她成功把印表機修好了。"},
     {en:"We managed to solve the problem.",cn:"我們設法解決了這個問題。"},
-    {en:"I managed to catch the last train.",cn:"我設法趕上了最後一班火車。"},
   ]},
   // --- 20260821 電腦檔案與辦公室英文（例句全部取自筆記原文）---
   {w:"lend",ipa:"/lend/",tag:"借出 · v.",exs:[
@@ -4063,7 +4108,7 @@ const articles = [
 // 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
 // ═══════════════════════════════════════════════
 const DAYQUIZ = {
-// ===SYNC:DAYQUIZ_START=== sync_date:2026-08-29 count:31
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-08-29 count:32
   "20260827": {
     title: "動名詞與不定詞、默契用語",
     subtitle: "Verb + -ing / Verb + to, Team Chemistry and Workplace English",
@@ -4120,6 +4165,67 @@ const DAYQUIZ = {
       {type:"trans",tag:"翻譯",q:"與客戶建立良好的融洽關係是很重要的。",
         answer:"It's important to build good rapport with our clients.",
         explain:"It 是虛主詞，真正的主詞是後面的 to build good rapport with our clients。"}
+    ]
+  },
+  "20260825": {
+    title: "時差表達與默契用語",
+    subtitle: "Time Zones, Common Ground and Useful Expressions",
+    questions: [
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["The product can't be shipped, because the quality issue is under review.","The products can't be shipped because the quality issue is under review."],answer:1,
+        explain:"兩個修正：(1) 談整批貨品用複數 products；(2) because 引導的原因子句放句尾時，前面不加逗號。"},
+      {type:"mc",tag:"改錯",q:"要說「雲端服務當機了，這導致文件毀損」，哪一句正確？",
+        options:["The cloud service was broken and caused the document to become corrupted.","The cloud service was down, which caused the document to become corrupted."],answer:1,
+        explain:"系統、網站、雲端服務「停止運作」用 be down；要說「這件事造成……」用逗號 + which 引導非限定關係子句。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["I bought identical shirts with my friend. We always think same.","I bought identical shirts with my friend. We always think alike."],answer:1,
+        explain:"「想法相似」用 think alike，不說 think same；identical 強調外觀或設計完全相同。"},
+      {type:"mc",tag:"辨析",q:"「同卵雙胞胎長得一模一樣」要用哪一個？",
+        options:["Identical twins think alike.","Identical twins look alike.","Identical twins have chemistry.","Identical twins are on the same page."],answer:1,
+        explain:"think alike＝想法相似；look alike＝外表相似；have a lot in common 範圍最廣（興趣、經歷、人格特質）。"},
+      {type:"mc",tag:"辨析",q:"要形容「職場上與主管、客戶關係融洽」，最合適的字是？",
+        options:["chemistry","rapport","difference","construction"],answer:1,
+        explain:"chemistry（私人）／rapport（職場）／understanding（一般）／on the same page（目標一致）——英文沒有單一對應「默契」的字。"},
+      {type:"mc",tag:"單字",q:"rapport 的中文意思是什麼？",
+        options:["差距；間隔","融洽關係；默契","特質；特點","品味；喜好"],answer:1,
+        explain:"rapport /ræˈpɔːr/ 是「融洽關係、默契」：We have a good rapport."},
+      {type:"mc",tag:"單字",q:"trait 的中文意思是什麼？",
+        options:["特質；特點","雙胞胎","發票","算命師"],answer:0,
+        explain:"trait /treɪt/ 是「特質、特點」：Personality traits are patterns of thought, feeling, and behavior."},
+      {type:"fill",tag:"時差",q:"Taiwan is one hour ___ ___ Vietnam, so Vietnam is one hour ___ Taiwan.",
+        cn:"台灣比越南早一小時，所以越南比台灣晚一小時。",
+        answer:["ahead of / behind","ahead of behind","ahead of, behind"],
+        explain:"ahead 後面一定加 of；behind 直接接地點。同一組時差一定有正反兩種說法。"},
+      {type:"fill",tag:"文法",q:"Our QA office is under ___, so we are working ___ in another office.",
+        cn:"我們的品保辦公室正在施工，所以我們暫時在另一間辦公室工作。",
+        answer:["construction / temporarily","construction temporarily","construction, temporarily"],
+        explain:"under construction＝施工中（中間不加冠詞）；要用副詞 temporarily，不是形容詞 temporary。"},
+      {type:"fill",tag:"片語",q:"I have a lot ___ ___ ___ my best friend.",
+        cn:"我跟我最好的朋友有很多共同點。",
+        answer:["in common with"],
+        explain:"「和某人有共同點」用 have a lot in common with someone，介系詞是 with。"},
+      {type:"fill",tag:"片語",q:"We have similar ___ ___ clothes and food.",
+        cn:"我們對衣服和食物的品味很相似。",
+        answer:["taste in"],
+        explain:"taste 後面固定用介系詞 in 帶出領域；「相同」要說 the same taste，不說 a same taste。"},
+      {type:"fill",tag:"片語",q:"The printer is ___ ___ paper.",
+        cn:"印表機沒紙了。",
+        answer:["out of"],
+        explain:"be out of + 名詞＝用完了，後面多接不可數名詞（ink / money / coffee / paper / milk）。"},
+      {type:"fill",tag:"文法",q:"He ___ to connect his Apple laptop to the TV using an HDMI cable.",
+        cn:"他設法用 HDMI 線把他的 Apple 筆電接上電視。",
+        answer:["managed"],
+        explain:"manage to + 原形動詞＝設法做到（含努力＋成功），只用來描述過去情況，所以用 managed。"},
+      {type:"fill",tag:"片語",q:"We can read each other's ___.",
+        cn:"我們很有默契，彼此都能猜到對方在想什麼。",
+        answer:["minds"],
+        explain:"互相讀心時所有格是 each other's，mind 要用複數 minds。"},
+      {type:"trans",tag:"翻譯",q:"我們之間的時差是多少？",
+        answer:"What is the time difference between us?",
+        explain:"time difference 在正式英文中比 time gap 更常見；用 between A and B 說明比較對象。"},
+      {type:"trans",tag:"翻譯",q:"我需要把發票呈交給老闆審核並確認。",
+        answer:"I need to submit the invoices to my boss to review and confirm them.",
+        explain:"submit ... to 人（正式，口語可說 hand in）；to review and confirm 是表目的的不定詞，兩個動詞共用一個 to。"},
     ]
   },
   "20260821": {
@@ -5658,7 +5764,7 @@ const DAYQUIZ = {
 // 沒有腳本的日期會自動退回「教練只說引導語」的模式。
 // ═══════════════════════════════════════════════
 const DAYTALK = {
-// ===SYNC:DAYTALK_START=== sync_date:2026-08-29 count:5
+// ===SYNC:DAYTALK_START=== sync_date:2026-08-29 count:6
   "20260827": {
     title: "動名詞與不定詞、默契用語",
     turns: [
@@ -5686,6 +5792,45 @@ const DAYTALK = {
        en:"You keep interrupting when I am talking.",cn:"我講話的時候你一直打斷我。",hint:"keep interrupting"},
       {q:"Your client is worried because the project is late. How do you say that?",qCn:"客戶因為專案延遲而擔心。你會怎麼說？",
        en:"Our client was concerned about the project delay.",cn:"我們的客戶很擔心專案延遲。",hint:"be concerned about"}
+    ]
+  },
+  "20260825": {
+    title: "時差表達與默契用語",
+    turns: [
+      {q:"You work with a team in Vietnam. How do you describe the time difference?",qCn:"你和越南的團隊合作。你會怎麼說時差？",
+       en:"Taiwan is one hour ahead of Vietnam.",cn:"台灣比越南早一小時。",hint:"ahead of = 早於"},
+      {q:"Now say the same thing from Vietnam's side.",qCn:"換成從越南的角度說同一件事。",
+       en:"Vietnam is one hour behind Taiwan.",cn:"越南比台灣晚一小時。",hint:"behind = 晚於（不加 of）"},
+      {q:"You want to ask a colleague abroad about the time gap. What do you ask?",qCn:"你想問國外同事時差多少。你會怎麼問？",
+       en:"What is the time difference between us?",cn:"我們之間的時差是多少？",hint:"time difference between us"},
+      {q:"The cloud service stopped working and your document was damaged. What happened?",qCn:"雲端服務停止運作，你的文件毀損了。發生了什麼事？",
+       en:"The cloud service was down, which caused the document to become corrupted.",cn:"雲端服務當機了，這導致文件毀損。",hint:"be down（不說 broken）"},
+      {q:"Your office is being renovated. Where are you working now?",qCn:"你的辦公室正在施工。你現在在哪裡工作？",
+       en:"Our QA office is under construction, so we are working temporarily in another office.",cn:"我們的品保辦公室正在施工，所以我們暫時在另一間辦公室工作。",hint:"under construction / temporarily"},
+      {q:"You and your friend often have the same ideas. How do you say it?",qCn:"你和朋友常常想法一樣。你會怎麼說？",
+       en:"We always think alike.",cn:"我們的想法總是很相似。",hint:"think alike（不說 think same）"},
+      {q:"How do you describe twins who look exactly the same?",qCn:"要形容長得一模一樣的雙胞胎呢？",
+       en:"Identical twins look alike.",cn:"同卵雙胞胎長得一模一樣。",hint:"look alike = 外表相似"},
+      {q:"You share many interests and experiences with your best friend. How do you say it?",qCn:"你和最好的朋友有很多共同的興趣與經歷。你會怎麼說？",
+       en:"I have a lot in common with my best friend.",cn:"我跟我最好的朋友有很多共同點。",hint:"in common with"},
+      {q:"Your team works together smoothly and naturally. What can you say?",qCn:"你的團隊合作起來自然又順暢。你可以怎麼說？",
+       en:"We have good chemistry.",cn:"我們很有默契。",hint:"chemistry = 私人關係的默契"},
+      {q:"Now say it about your manager at work, where trust and communication matter.",qCn:"換成講職場上與主管之間的信任與溝通呢？",
+       en:"We have a good rapport.",cn:"我們相處融洽。",hint:"rapport = 職場的融洽關係"},
+      {q:"In a meeting everyone agrees on the goal. How do you say it?",qCn:"開會時大家對目標的認知一致。你會怎麼說？",
+       en:"We are on the same page.",cn:"我們的認知一致。",hint:"on the same page"},
+      {q:"You and your friend like the same kinds of clothes and food. How do you say it?",qCn:"你和朋友喜歡同樣類型的衣服和食物。你會怎麼說？",
+       en:"We have similar taste in clothes and food.",cn:"我們對衣服和食物的品味很相似。",hint:"taste in（介系詞用 in）"},
+      {q:"The printer has no paper left. What do you say?",qCn:"印表機沒紙了。你會怎麼說？",
+       en:"The printer is out of paper.",cn:"印表機沒紙了。",hint:"be out of + 名詞"},
+      {q:"Paper got jammed inside the printer. Describe it as an event.",qCn:"紙卡進印表機裡了。用「事件」的方式描述。",
+       en:"The paper got stuck in the printer.",cn:"紙卡進印表機裡了。",hint:"got stuck（狀態則用 is stuck）"},
+      {q:"You finished a report on time even though it was difficult. How do you say it?",qCn:"雖然很困難，你還是及時完成了報告。你會怎麼說？",
+       en:"I managed to finish the report on time.",cn:"我設法及時完成了報告。",hint:"manage to + 原形動詞"},
+      {q:"Before buying equipment, what do you need to do with the invoices?",qCn:"購買設備之前，你需要對發票做什麼？",
+       en:"Before purchasing the equipment, I need to submit the invoices to my boss to review and confirm them.",cn:"購買設備之前，我需要把發票呈交給老闆審核並確認。",hint:"submit → review → confirm"},
+      {q:"What are you in charge of in the test room?",qCn:"測試室裡你負責什麼？",
+       en:"I am responsible for the test room equipment.",cn:"我負責測試室的設備。",hint:"be responsible for"},
     ]
   },
   "20260821": {
