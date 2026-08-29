@@ -31,13 +31,29 @@ description: 英文課堂筆記的完整自動化工作流程 — 自動建立�
 > 8/29 才發現並手動還原。以下三步就是為了不要再發生。
 
 ### A. 開工前（改任何檔案「之前」）
+
+**A-1　先 fetch 對一次遠端狀態，看清楚再動作**（2026-08-29 使用者指定，不可跳過）：
+```bash
+cd "G:/我的雲端硬碟/英文筆記" && git fetch origin && git status -sb --untracked-files=no && git log --oneline HEAD..origin/main && git log --oneline origin/main..HEAD
+```
+- 先 `fetch` 而不是直接 `pull --rebase`：要先**知道**本地與遠端各差哪些 commit，再決定怎麼併。
+  這個 repo 除了雲端 routine，還可能有**其他 Claude Code session 併行在動同一條 `main`**
+  （2026-08-29 就出現過我這邊剛 push 完，另一個 session 隨即推了三個 commit）。
+- 兩份清單都看過、確認沒有不認識的東西，才進入 A-2。
+
+**A-2　工作區乾淨時再 rebase**：
 ```bash
 cd "G:/我的雲端硬碟/英文筆記" && git status --porcelain && git pull --rebase origin main
 ```
-- 工作區乾淨時才 rebase，衝突面最小。
 - **如果 rebase 出現衝突**：解完衝突走 `git rebase --continue`。
   **不要**用 `git rebase --abort` 就當作沒事——abort 會讓本地 commit 停在原地脫離 `main`。
   真的要 abort，就當場記下落單的 commit hash，並在收尾檢查（C）把它們 cherry-pick 回來。
+- ⚠ **`git rebase --skip` 之前一定要先看那個 commit 的完整 diff 清單**
+  （`git show --stat <hash>`），不能只看衝突的那幾個檔就 skip。
+  2026-08-28 被 skip 掉的 daily content commit 裡，還夾帶了 B2 Read 桌機側邊欄、
+  課本 Dashboard Calendar 版面與 8/25 課本內容——那些檔案**沒有衝突**，所以完全沒被提示，
+  就跟著整個 commit 一起消失了，隔天才由另一個 session 手動補回。
+  只想丟掉 commit 裡的一部分時，正確做法是解衝突後改內容再 `--continue`，不是 `--skip`。
 
 ### B. 收工立刻 push
 不要讓本地 commit 過夜。commit 完就 `git push origin main`，
