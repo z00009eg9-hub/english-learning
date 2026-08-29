@@ -494,44 +494,6 @@ window.BOOK = {
           ]
         }
       ],
-      extraVocabTitle: 'XI. 課堂其他小句與複習計畫 Extra Notes & Study Plan',
-      extraVocab: [
-        { k: '比……快／慢 X 小時', en: 'Taiwan is 16 hours ahead of California. Vietnam is one hour behind Taiwan.', cn: 'ahead 後面一定加 of；behind 後面直接接地點。' },
-        { k: '就我記憶所及', en: 'as I remember / as far as I remember', cn: '語氣較保留，表示不敢百分之百確定。' },
-        { k: '越南國慶日', en: 'Vietnam National Day', cn: '本週放假的原因，課堂閒聊時提到。' },
-        { k: 'convince / persuade 快速判斷', en: 'convince sb that … ／ persuade sb to do …', cn: '重點在「心裡怎麼想」用 convince；重點在「人去做了什麼」用 persuade。現代英文中 convince sb to do 也很常見，但考試上仍以 persuade sb to do 最安全。' },
-        { k: 'be out of 要有動詞', en: 'I am out of money. He is out of money. The store is out of coffee.', cn: '完整句子一定要有動詞，不能只寫 I out of money；be 動詞要跟主詞一致。' },
-        { k: 'responsible for + N / V-ing', en: 'I am responsible for purchasing the test equipment.', cn: 'for 是介系詞，後面要接名詞或動名詞（purchasing），不能接原形動詞 purchase。' },
-        { k: 'concern 的詞性', en: 'Thank you for your concern. ／ be concerned about something', cn: 'concern 可當名詞也可當動詞；形容詞形式是 concerned，固定搭配 be concerned about something。curious 是形容詞，名詞是 curiosity。' },
-        { k: '54.4 的判斷原則', en: 'to be + V-ing ／ to have + 過去分詞 ／ to + 原形', cn: '原句是進行式（is worried / is getting / is enjoying）→ 改成 to be + V-ing；原句是完成式（has broken down / have solved）→ 改成 to have + 過去分詞；原句是簡單式（know）→ 直接 to + 原形。' },
-        { k: '① 複習範圍', en: '8/1 – 8/27', cn: '複習 8 月 1 日以來所有分享過的單字與筆記。' },
-        { k: '② 背 -ing 動詞清單', en: 'enjoy、mind、suggest、recommend、consider、admit、deny、avoid、risk、imagine、fancy、stop、finish', cn: '把接 -ing 的動詞清單背起來，連拼字和發音一起記。' },
-        { k: '③ 完成課本練習', en: 'Unit 53 練習 53.1 ～ 53.4', cn: '先把動詞寫出來、背熟，再做題目。' },
-        { k: '④ 練習成對字', en: 'admit ↔ deny ／ recommend ≈ suggest', cn: '練習拼字與成對字：反義詞 admit ↔ deny、近義詞 recommend ≈ suggest。' },
-        { k: '⑤ 多造句練習', en: 'stop someone doing something ／ imagine someone doing something', cn: '多造句練習這兩個句型。' },
-        { k: '⑥ 下次上課主題', en: 'stop to do vs. stop doing', cn: 'Unit 54 意思會改變的動詞，其中 stop 是代表例子。' }
-      ],
-      summaryTitle: 'XII. 快速總結 Quick Summary',
-      summary: [
-        { k: '兩個動詞的規則', v: '第一個動詞屬於 -ing 清單時，第二個動詞變 V-ing；只有第一個動詞跟著時態變。' },
-        { k: 'enjoy / mind / suggest', v: '後面只能接 V-ing，不能接 to；I enjoy reading（不能說 I enjoy to read）。' },
-        { k: '接 -ing 的動詞群', v: 'enjoy、mind、suggest、recommend、consider、admit、deny、avoid、risk、imagine、fancy、stop、finish' },
-        { k: '片語動詞 + V-ing', v: 'give up、put off、go on / carry on、keep / keep on 之後一律 V-ing。' },
-        { k: '動名詞的否定', v: 'not + V-ing（enjoy not having），否定詞放最前面。' },
-        { k: '動詞 + 某人 + V-ing', v: 'stop people doing、imagine George riding、keep you waiting' },
-        { k: '接 to 的動詞群', v: 'offer、agree、refuse、decide、plan、arrange、hope、forget、manage、fail、promise、threaten、deserve、afford、learn、tend' },
-        { k: '不定詞的否定', v: 'not to + 原形（decided not to go），不是 to not go。' },
-        { k: 'manage to + 原形', v: '設法做到、成功做到（有難度但做成了），主要用來講已發生的事。' },
-        { k: "daren't", v: "dare not / daren't 後面不加 to。" },
-        { k: '疑問詞 + to', v: 'ask / know / decide / remember / forget / learn / explain / understand / wonder + what / how / where / whether + to' },
-        { k: 'put off ≠ put out', v: 'put off ＝ 延後（＝postpone）；put out ＝ 撲滅（火、燈）。' },
-        { k: 'handle vs. under control', v: '✅ handle a problem ／ ✅ keep a problem under control ／ ✗ handle a problem under control' },
-        { k: 'be out of vs. run out of', v: 'be out of ＝ 現在沒了（The store is out of coffee.）；run out of ＝ 用光的過程。' },
-        { k: 'submit / responsible for', v: 'submit ＝ send、hand in；responsible for 後面接名詞或 V-ing。' },
-        { k: '成對字', v: 'admit ↔ deny（反義）｜recommend ≈ suggest（近義）｜imagine (v.) ↔ image (n.)｜silence (n.) ↔ silent (adj.)' },
-        { k: 'chemistry / rapport', v: '兩者都是不可數名詞；great chemistry、build rapport with sb。' },
-        { k: 'ahead of / behind', v: 'ahead 後面一定加 of（Taiwan is 16 hours ahead of California.）；behind 後面直接接地點。' }
-      ]
     },
     {
       id: 'bk20260825',

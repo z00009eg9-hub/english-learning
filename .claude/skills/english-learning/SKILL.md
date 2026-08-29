@@ -1247,6 +1247,15 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
 ### 步驟
 
 1. **讀 Doc**：用 Drive MCP `read_file_content` 讀取該課的 Google Doc（優先【格式版】）。
+   - ⚠ **每次都要重讀一次最新版，不可沿用對話中稍早讀到的內容**（2026-08-29 使用者指定）。
+     筆記會被繼續編輯：2026-08-29 同步 20260827 時，我用的是當天稍早讀到的版本，
+     照著做了「XI. 課堂其他小句與複習計畫」與「XII. 快速總結」兩節，
+     但使用者後來已把這兩節從 Doc 刪掉，課本因此多出原稿沒有的內容。
+   - **已存在的課要更新時，讀完 Doc 先與 `data-book.js` 現況逐節比對**：
+     Doc 有而課本沒有的補進去、**Doc 已刪掉的要從課本移除**，維持不增不減。
+     只補不刪會讓課本停在舊版。
+   - `read_file_content` 對長文件會截斷。文件很長時，回報中要說明你確認到哪一節，
+     不要對沒讀到的段落做假設。
 2. **轉成 lesson 物件**：加進 `G:\我的雲端硬碟\英文筆記\b2lab\public\data-book.js` 的 `window.BOOK.lessons` 陣列（附加在陣列尾端即可，執行時會依 date 排序）。
    - **內容不增不減**，逐字取自 Doc；schema 參考檔內 `bk20260813`（最完整範例）。
    - 常用欄位：`id`（bk+YYYYMMDD，同日兩份加 a/b）、`icon`（貼題 emoji）、`date`、`doc`（Google Doc 連結）、`title`/`titleCn`/`topics`、`hwTitle`+`hw[]`（n/wrong/fix/ok/cn/pat/note）、`vocabTitle`+`vocab[]`（w/star/ipa/pos/cn/ex/exCn）、`vocab2`/`vocabReview`、`phrasesTitle`+`phrases[]`（p/cn/ex/exCn）、`colloc[]`（p/def/defCn/cn）、`grammarTitle`+`grammar[]`（k/title/pat|patLabel/pts[]/exs[{tag,en,cn}]）、`cmpTitle`+`cmp[]`+`cmpWarn`、`reading[]`（bar/title/titleCn/paras[{en,cn}]/questions[{q,qCn,a,aCn}]/sumEn[]/sumCn[]）、`extraTitle`+`extra[]`（title+exs）、`extraVocabTitle`+`extraVocab[]`（k/en/cn）、`discussionTitle`+`discussion[]`（q/qCn/a/aCn）、`summaryTitle`+`summary[]`（k/v）。
