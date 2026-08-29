@@ -3426,9 +3426,11 @@ function bookHTML(b){
        +'<td class="nw cnx">'+esc(c.cn)+'</td></tr>').join('')
      +'</table></div></div>';
   }
+  /* p.ex 可以省略：索引式片語表（SKILL.md「⭐ 內容去重原則」第 3 條）只列片語＋中文＋詳見章節，
+     例句寫在對應章節。沒有 ex 就不畫例句列，不要讓 exRow 印出 undefined。 */
   h+= (b.phrases||[]).map(p=>'<div class="bkq"><div class="bkline" style="margin-bottom:2px"><b>'+bkVars(p.p)+'</b>'+spk(p.p)
      +'<span class="muted cnx cnR">'+esc(p.cn)+'</span></div>'
-     +exRow({en:p.ex,cn:p.exCn,hi:p.p})+'</div>').join('');
+     +(p.ex?exRow({en:p.ex,cn:p.exCn,hi:p.p}):'')+'</div>').join('');
 
   /* 句型與文法解説（沒有就整節跳過） */
   if((b.grammar||[]).length) h+='<div class="bkbar" id="bksec-gram">'+esc(b.grammarTitle||'III. 句型與文法解説 Sentence Patterns & Grammar')+'</div>'
