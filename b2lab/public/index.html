@@ -21,6 +21,7 @@
   --shadow:0 2px 10px rgba(60,45,30,.07);
   --r:14px;
   --fs:1.15;   /* 全站字級倍率，可在「進度 → 設定」調整 */
+  --sb-w:0px;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
@@ -116,7 +117,7 @@ nav button.on::after{content:'';position:absolute;bottom:1px;left:50%;transform:
 .dayico .d{flex:1 1 auto;display:flex;align-items:center;justify-content:center;
   font-size:10.5px;font-weight:800;line-height:10.5px;text-align:center;padding-bottom:1px}
 /* ---------- layout ---------- */
-main{max-width:1100px;margin:0 auto;padding:16px 14px 20px}
+main{max-width:min(1100px,calc(100vw - var(--sb-w,0px) - 28px));margin:0 auto;padding:16px 14px 20px;overflow-x:hidden}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;margin-bottom:14px}
 h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items:center;gap:7px}
 .muted{color:var(--ink2);font-size:calc(13px * var(--fs))}
@@ -177,10 +178,10 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 /* 右上角 NEW 小圖章（改用卡片內部 Badge，不再壓到圓角、不遮文字） */
 .item.new::after{
   content:"NEW";position:absolute;top:10px;right:10px;
-  background:linear-gradient(135deg,#f2494a,#d21f1f);color:#fff;
+  background:#fff0e8;color:var(--accent2);border:1px solid #f0c9a0;
   font-size:calc(10px * var(--fs));font-weight:800;letter-spacing:1px;
   line-height:1;padding:4px 8px;border-radius:12px;
-  box-shadow:0 2px 6px rgba(190,25,25,.35)
+  box-shadow:0 1px 4px rgba(160,90,30,.12)
 }
 .item.new .t{padding-right:52px}
 .item .t{font-weight:800;font-size:calc(16.5px * var(--fs));margin-bottom:4px;line-height:1.45}
@@ -284,9 +285,9 @@ tr:nth-child(even) td{background:#fdfbf8}
 .pbwrap{background:#efeae3;border-radius:20px;height:9px;overflow:hidden;margin:8px 0}
 .pbfill{background:linear-gradient(90deg,#f0964f,#d9691f);height:100%;width:0;transition:width .3s}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:9px}
-.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 8px;text-align:center}
-.stat b{display:block;font-size:calc(26px * var(--fs));color:var(--accent2);line-height:1.2}
-.stat b i{font-style:normal;font-size:calc(12px * var(--fs));font-weight:600;color:var(--ink2);margin-left:2px}
+.stat{background:#f9fafb;border:1px solid var(--line);border-radius:12px;padding:13px 8px;text-align:center}
+.stat b{display:block;font-size:calc(32px * var(--fs));color:var(--accent2);line-height:1.15;font-weight:900}
+.stat b i{font-style:normal;font-size:calc(11px * var(--fs));font-weight:600;color:var(--ink2);margin-left:2px;vertical-align:2px}
 .stat span{font-size:calc(11.5px * var(--fs));color:var(--ink2);word-break:keep-all}
 /* 可點擊的統計格（點了跳到對應清單） */
 .stat.tap{cursor:pointer;border-color:var(--accent)}
@@ -295,10 +296,11 @@ tr:nth-child(even) td{background:#fdfbf8}
 .stat.go:active{background:#fff7ee}
 @media(hover:hover){.stat.go:hover,.stat.tap:hover{border-color:var(--accent2);background:#fffaf2;box-shadow:0 3px 10px rgba(60,45,30,.12);transform:translateY(-1px)}}
 .stat.go,.stat.tap{transition:background .12s,box-shadow .12s,transform .12s}
-/* 今日待複習 > 0：整格改深橘滿版當 CTA，第一眼就知道先去清複習 */
-.stat.cta{background:linear-gradient(135deg,#f0964f,#d9691f);border-color:#c95f16}
-.stat.cta b,.stat.cta b i,.stat.cta span{color:#fff}
-.stat.cta:active{filter:brightness(.93)}
+/* 今日待複習 > 0：柔和橘色邊框＋暖底色 CTA */
+.stat.cta{background:#fff7ee;border-color:var(--accent);border-left:4px solid var(--accent)}
+.stat.cta b{color:var(--accent2)}
+.stat.cta span{color:var(--accent2);font-weight:700}
+.stat.cta:active{background:#ffecd4}
 /* 功能清單可以直接點過去 */
 .golist li{cursor:pointer;border-radius:8px;padding:2px 4px}
 .golist li:active{background:#fff2e0}
@@ -325,14 +327,79 @@ tr:nth-child(even) td{background:#fdfbf8}
 .cell.done{background:linear-gradient(135deg,#f7bd76,#ef9a4f);border-color:#e8813a;color:#fff;font-weight:700}
 .cell.done .dot{font-size:calc(11px * var(--fs));line-height:1}
 .cell.today{outline:2px solid var(--accent2);outline-offset:1px}
-/* 課本日曆的「有筆記」格子：改用藍色底，避免跟橘黃色 emoji 圖示混在一起看不清 */
-/* 課本日曆：有筆記/課程的日子統一用深藍底白字（跟「今天」的橘色形成對比）；今天改實心橘底 */
-#bk-cal .cell.done{background:linear-gradient(135deg,#44608a,#33496b);border-color:#2c4160;color:#fff;font-weight:700}
-#bk-cal .cell.today{outline:none;background:linear-gradient(135deg,#f2953f,#e0731f);border-color:#d3661a;color:#fff;font-weight:800}
-#bk-cal .calhd .m{font-size:calc(20px * var(--fs))}
+/* ---------- 課本日曆：Dashboard Calendar（月曆＝瀏覽日期，右側面板＝選定日期課程） ----------
+   三種狀態嚴格區分——今天：淡橘底＋小橘點；選取中：實心橘底白字；有課程：藍色小圓點；沒課程：透明。 */
+#bk-cal .cell{height:auto;min-height:42px;justify-content:center;align-items:center;padding:4px 2px;
+  border:0;background:transparent;cursor:pointer;gap:2px;border-radius:9px;transition:background .12s}
+@media(hover:hover){#bk-cal .cell:not(.empty):hover{background:#F6F2EC}}
+#bk-cal .cell.empty{cursor:default}
+#bk-cal .cell .caldnum{line-height:1.1;font-size:calc(12.5px * var(--fs))}
+/* 有課程：藍色小圓點（多堂顯示 +N） */
+#bk-cal .cell .caldot{width:5px;height:5px;border-radius:50%;background:#3B82F6;flex-shrink:0}
+#bk-cal .cell .calmore{position:absolute;top:2px;right:3px;font-size:9px;color:#3B82F6;font-weight:700;line-height:1}
+#bk-cal .cell.has .caldnum{color:var(--ink);font-weight:700}
+/* 今天：淡橘底＋橘色日期（跟「選取」明確區分） */
+#bk-cal .cell.today{background:#FFF3E6}
+#bk-cal .cell.today .caldnum{color:var(--accent2);font-weight:800}
+/* 選取中：實心橘底＋白字（品牌色只留給目前選取） */
+#bk-cal .cell.sel{background:var(--accent2)}
+#bk-cal .cell.sel .caldnum{color:#fff;font-weight:800}
+#bk-cal .cell.sel .caldot{background:#fff}
+#bk-cal .cell.sel .calmore{color:#fff}
+@media(hover:hover){#bk-cal .cell.sel:hover{background:var(--accent2)}}
+#bk-cal .calhd .m{font-size:calc(17px * var(--fs))}
 .cell.future{opacity:.4}
-.callegend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:calc(12px * var(--fs));color:var(--ink2)}
-.callegend i{display:inline-block;width:14px;height:14px;border-radius:5px;vertical-align:-2px;margin-right:5px}
+.callegend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:calc(11.5px * var(--fs));color:var(--ink2)}
+.callegend i{display:inline-block;width:12px;height:12px;border-radius:4px;vertical-align:-1px;margin-right:5px}
+.callegend .leg-has{width:6px;height:6px;border-radius:50%;background:#3B82F6;vertical-align:1px}
+.callegend .leg-today{background:#FFF3E6;border:1px solid #F5CFA4}
+.callegend .leg-sel{background:var(--accent2)}
+/* ---------- 右側：Selected Date Panel ---------- */
+.bkday-hd{margin:2px 0 10px}
+.bkday-date{font-size:calc(20px * var(--fs));font-weight:800;color:var(--ink);display:flex;align-items:baseline;gap:8px}
+.bkday-wd{font-size:calc(12.5px * var(--fs));color:var(--ink2);font-weight:600}
+.bkday-today{font-size:calc(10.5px * var(--fs));font-weight:700;color:var(--accent2);background:#FFF3E6;
+  border-radius:10px;padding:1px 8px;align-self:center}
+.bkday-sub{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:2px}
+/* 課程扁平卡：小 padding、細框、無陰影；統計改一行 inline metadata；CTA 縮小 */
+.bkday-card{display:flex;align-items:center;gap:11px;background:#fff;border:1px solid var(--line);
+  border-radius:10px;padding:11px 13px;margin-bottom:8px;cursor:pointer;transition:border-color .12s,background .12s}
+@media(hover:hover){.bkday-card:hover{border-color:#e0b98c;background:#fffdf9}}
+.bkday-ico{font-size:24px;line-height:1;flex-shrink:0}
+.bkday-body{flex:1;min-width:0}
+.bkday-t{font-size:calc(15.5px * var(--fs));font-weight:800;color:var(--ink);line-height:1.4}
+.bkday-tc{font-size:calc(12px * var(--fs));color:var(--ink2);font-weight:400;margin-top:1px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bkday-meta{font-size:calc(11.5px * var(--fs));color:#8a8178;margin-top:4px}
+.bkday-cta{flex-shrink:0;border:0;border-radius:16px;padding:7px 14px;cursor:pointer;
+  background:var(--accent2);color:#fff;font:inherit;font-weight:700;font-size:calc(12.5px * var(--fs));
+  transition:filter .12s}
+@media(hover:hover){.bkday-cta:hover{filter:brightness(1.08)}}
+.bkday-cta:active{filter:brightness(.92)}
+/* 空狀態：置中提示＋最近課程捷徑 */
+.bkday-empty{border:1px dashed var(--line);border-radius:10px;padding:22px 14px;text-align:center;
+  color:var(--ink2);font-size:calc(13.5px * var(--fs))}
+.bkday-jump{margin-top:10px;border:1.5px solid var(--accent2);background:#fff;color:var(--accent2);
+  border-radius:16px;padding:6px 14px;font:inherit;font-weight:700;font-size:calc(12.5px * var(--fs));cursor:pointer}
+.bkday-jump:active{background:var(--accent-soft)}
+/* 本月課程摺疊清單（面板底部）：一行一堂，點列＝選取那天 */
+.bkmon{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
+.bkmon-tog{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;background:none;
+  padding:4px 2px;font:inherit;font-weight:700;font-size:calc(13px * var(--fs));color:var(--ink2);cursor:pointer}
+@media(hover:hover){.bkmon-tog:hover{color:var(--accent2)}}
+.bkmon-arr{font-size:calc(10.5px * var(--fs))}
+.bkmon-list{margin-top:6px}
+.bkmon-row{display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;text-align:left;
+  padding:6px 8px;border-radius:8px;font:inherit;font-size:calc(13px * var(--fs));color:var(--ink);cursor:pointer}
+@media(hover:hover){.bkmon-row:hover{background:#F6F2EC}}
+.bkmon-row .bkmon-d{flex-shrink:0;font-weight:700;color:var(--ink2);font-size:calc(12px * var(--fs));
+  font-variant-numeric:tabular-nums}
+.bkmon-row .bkmon-t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bkmon-row.cur{background:#FFF3E6}
+.bkmon-row.cur .bkmon-d,.bkmon-row.cur .bkmon-t{color:var(--accent2);font-weight:700}
+/* 分頁卡片點擊後跳到對應章節，短暫高亮 */
+.bksec-flash{animation:bksecFlash 1.2s ease}
+@keyframes bksecFlash{0%,100%{box-shadow:none}30%{box-shadow:0 0 0 3px var(--accent)}}
 /* ---------- 進度分頁：文法主題分組清單 ---------- */
 .pggrp{display:flex;align-items:center;gap:7px;width:100%;margin-top:12px;padding:9px 12px;cursor:pointer;
   border:1px solid var(--line);border-radius:10px;background:#faf6f0;font:inherit;font-weight:800;font-size:calc(14px * var(--fs));color:var(--ink)}
@@ -350,31 +417,43 @@ tr:nth-child(even) td{background:#fdfbf8}
 .pgok{color:var(--ok);font-weight:800;font-size:calc(12.5px * var(--fs))}
 /* ---------- 閱讀清單：完成度進度條＋卡片右側「›」點擊暗示 ---------- */
 .rdprog{display:flex;align-items:center;gap:12px;margin-top:2px}
-.rdprog span{font-size:calc(13px * var(--fs));color:var(--ink2);white-space:nowrap}
-.rdbar{flex:1;max-width:260px;height:6px;background:#efe8dd;border-radius:4px;overflow:hidden}
-.rdbar i{display:block;height:100%;background:linear-gradient(90deg,#f2953f,#e0731f);border-radius:4px;transition:width .3s}
+.rdprog span{font-size:calc(13px * var(--fs));color:var(--ink2);white-space:nowrap;font-weight:700}
+.rdbar{flex:1;max-width:300px;height:12px;background:#efe8dd;border-radius:8px;overflow:hidden;position:relative}
+.rdbar i{display:block;height:100%;background:linear-gradient(90deg,#f2953f,#e0731f);border-radius:8px;transition:width .3s}
 .item.arw{padding-right:36px}
 .item.arw::after{content:"›";position:absolute;right:14px;top:50%;transform:translateY(-50%);
   font-size:24px;font-weight:700;color:#cfc4b4;line-height:1}
 @media(hover:hover){.item.arw:hover::after{color:var(--accent2)}}
 /* ---------- 課本課程卡片：日期小標籤＋大標題＋統計數據卡片＋開始課程按鈕 ---------- */
 .bkdate{font-size:calc(12px * var(--fs));color:#57504a;font-weight:600;margin-bottom:2px}
-.item .t.bkbig{font-size:calc(18px * var(--fs));margin-bottom:3px}
+.item .t.bkbig{font-size:calc(19px * var(--fs));margin-bottom:2px;line-height:1.35}
+.item .tc.bksub{font-size:calc(13px * var(--fs));color:var(--ink2);margin-bottom:6px;font-weight:400}
 .bkstats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
-.bstat{background:#faf7f2;border:1px solid var(--line);border-radius:10px;padding:8px 6px;text-align:center}
-.bstat i{font-style:normal;font-size:calc(15px * var(--fs));display:block}
-.bstat b{display:block;font-size:calc(19px * var(--fs));line-height:1.3}
-.bstat span{font-size:calc(11px * var(--fs));color:#57504a}
-.bkstart{display:block;margin-top:10px;width:100%;border:0;border-radius:22px;padding:9px 0;cursor:pointer;
-  background:linear-gradient(135deg,#f2953f,#e0731f);color:#fff;font:inherit;font-weight:800;font-size:calc(14px * var(--fs))}
+.bstat{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:10px 6px;text-align:center;
+  cursor:pointer;transition:border-color .15s,box-shadow .15s,background .15s}
+@media(hover:hover){.bstat:hover{border-color:#D1D5DB;box-shadow:0 2px 8px rgba(0,0,0,.08);background:#fff}}
+.bstat:active{background:#F3F4F6}
+.bstat i{font-style:normal;font-size:calc(15px * var(--fs));display:block;color:#4B5563}
+.bstat b{display:block;font-size:calc(28px * var(--fs));line-height:1.2;color:#1F2937;font-weight:800}
+.bstat span{font-size:calc(11px * var(--fs));color:#6B7280;font-weight:600}
+.bstat .bstat-hint{display:none;font-size:calc(10px * var(--fs));color:var(--accent2);margin-top:2px}
+@media(hover:hover){.bstat:hover .bstat-hint{display:block}}
+.bkstart{display:block;margin-top:10px;width:100%;border:0;border-radius:22px;padding:10px 0;cursor:pointer;
+  background:linear-gradient(135deg,#f2953f,#e0731f);color:#fff;font:inherit;font-weight:800;font-size:calc(14px * var(--fs));
+  box-shadow:0 2px 8px rgba(224,115,31,.25);transition:filter .15s,box-shadow .15s}
+@media(hover:hover){.bkstart:hover{filter:brightness(1.04);box-shadow:0 4px 14px rgba(224,115,31,.35)}}
 .bkstart:active{filter:brightness(.92)}
-/* 寬螢幕：當月課程卡片排兩欄，開始按鈕貼齊卡片底部 */
-.bkgrid{margin-top:12px}
+/* 課本：標題列搜尋＋說明同行 */
+.bk-hdr-row{display:flex;align-items:center;gap:8px;margin:4px 0 8px}
+.bk-hdr-row input{flex:1;margin:0}
+.bk-hdr-row .spk{flex-shrink:0;white-space:nowrap}
+/* 桌機：月曆（45%）＋選定日期面板（55%）雙欄；平板/手機直向堆疊（月曆在上、當日課程在下） */
+.bk-split{display:block}
+.bk-day-col{margin-top:16px}
 @media(min-width:860px){
-  .bkgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}
-  .bkgrid .item{margin-bottom:0;display:flex;flex-direction:column}
-  .bkgrid .bkstart{margin-top:auto}
-  .bkgrid .bkstats{margin-bottom:10px}
+  .bk-split{display:grid;grid-template-columns:45fr 55fr;gap:24px;align-items:start}
+  .bk-split .bk-cal-col{position:sticky;top:64px}
+  .bk-day-col{margin-top:0}
 }
 /* ---------- grammar ---------- */
 .gsec{margin-bottom:16px}
@@ -564,16 +643,17 @@ sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
 .focus .sub{font-size:calc(14.5px * var(--fs));font-weight:800;color:var(--accent2);margin:14px 0 6px;letter-spacing:.3px}
 .focus .gobtn{margin-top:12px}
 .back{
-  display:inline-grid;place-content:center;place-items:center;
-  width:42px;height:42px;border-radius:12px;border:1.5px solid var(--line);
+  display:inline-flex;align-items:center;gap:6px;
+  height:38px;border-radius:12px;border:1.5px solid var(--line);
   background:#fff;box-shadow:0 1px 5px rgba(0,0,0,.10);
-  cursor:pointer;padding:0;margin-bottom:8px;font-size:0;line-height:0;
-  transition:box-shadow .15s
+  cursor:pointer;padding:0 14px 0 10px;margin-bottom:8px;font:inherit;font-size:calc(13px * var(--fs));line-height:1;
+  transition:box-shadow .15s,border-color .15s;color:var(--ink)
 }
-.back::after{
-  content:'';display:block;width:24px;height:24px;
+.back::before{
+  content:'';display:block;flex-shrink:0;width:20px;height:20px;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -3 106 106'%3E%3Cpolygon points='50,5 5,50 50,95 50,70 95,70 95,30 50,30' fill='%23f5a623' stroke='%23222' stroke-width='7' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
 }
+@media(hover:hover){.back:hover{border-color:#dccfbe;box-shadow:0 2px 8px rgba(60,45,30,.12)}}
 .back:active{box-shadow:0 0 0 rgba(0,0,0,0);background:#f5f5f5}
 .hint{font-size:calc(12.5px * var(--fs));color:var(--ink2);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
 .hint-toggle{border:1px dashed var(--line);border-radius:10px;margin-bottom:12px;background:#fff;overflow:hidden}
@@ -634,10 +714,15 @@ body.cnall [id^="kc"]{display:block!important}
 .bkul{margin:8px 0;padding-left:20px;font-size:calc(14.5px * var(--fs))}
 .bkul li{margin-bottom:5px}
 .bkex{background:#fdfbf8;border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin:7px 0}
-.bkex .een{font-size:calc(15.5px * var(--fs));font-weight:600}
-.bkex .ecn{font-size:calc(13.5px * var(--fs));color:var(--ink2);margin-top:3px}
-.bktag{font-size:calc(11px * var(--fs));font-weight:800;border-radius:6px;padding:1px 7px;color:#fff;background:#3b82c4;margin-right:6px}
-.bktag.inf{background:#2f9e5f}
+/* 例句英文：第一視覺焦點（深色、加粗、放大）；發音鈕接句尾齊平 */
+.bkex .een{font-size:calc(16px * var(--fs));font-weight:700;color:#1F2937}
+.bkex .een .spk{margin-left:8px;vertical-align:middle}
+/* 中文翻譯：次要資訊（中灰、縮小、常規字重） */
+.bkex .ecn{font-size:calc(14px * var(--fs));color:#6B7280;font-weight:400;margin-top:6px}
+/* 片語標籤：統一暖淡黃底＋深橘字（融入主題不搶戲） */
+.bktag{font-size:calc(12px * var(--fs));font-weight:600;border-radius:4px;padding:2px 8px;
+  color:#B45309;background:#FEF3C7;border:1px solid #FDE68A;margin-right:8px;vertical-align:middle}
+.bktag.inf{color:#1f7a46;background:#eefaf1;border-color:#cfe9df}
 .bkwarn{background:#fff6f5;border:1px solid #f3d5d2;border-radius:12px;padding:12px 14px;margin:10px 0}
 .bkwarn div{margin-bottom:4px;font-size:calc(14.5px * var(--fs))}
 /* 單字表：桌機用 Doc 的五欄表格、手機改直式卡片 */
@@ -645,7 +730,7 @@ body.cnall [id^="kc"]{display:block!important}
 @media(max-width:640px){ .bkvd{display:none} .bkvm{display:block} }
 .bkvcard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:11px;padding:11px 13px;margin-bottom:9px}
 .bkvcard .w{font-size:calc(17px * var(--fs));font-weight:800;display:flex;gap:8px;align-items:center;flex-wrap:nowrap;min-width:0}
-.bkvcard .ipa{font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2)}
+.bkvcard .ipa{font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2);white-space:nowrap}
 .bkvcard .pos{color:#2b7a78;font-weight:800;font-style:italic;font-size:calc(12.5px * var(--fs))}
 .bkvcard .cnw{color:var(--accent2);font-weight:700;font-size:calc(15px * var(--fs));margin-top:2px}
 /* 課本表格：表頭一律一行、音標與片語/中文欄不在奇怪的地方斷行（表格改用橫向捲動） */
@@ -656,6 +741,128 @@ body.cnall [id^="kc"]{display:block!important}
 body.cnall #v-book .cnx{display:block!important}
 body.cnall #v-book th.cnx,body.cnall #v-book td.cnx{display:table-cell!important}
 body.cnall #v-book span.cnx{display:inline!important}
+/* ---------- desktop sidebar ---------- */
+#sidebar{display:none}
+#sidebar .sb-label{display:inline}
+@media(min-width:769px){
+  :root{--sb-w:220px}
+  #sidebar{
+    display:flex;flex-direction:column;position:fixed;left:0;top:0;bottom:0;width:var(--sb-w);
+    background:#fff;border-right:1px solid rgba(217,186,145,.2);z-index:45;padding-top:50px;
+    overflow-y:auto;transition:width .3s cubic-bezier(.4,0,.2,1)
+  }
+  #sidebar .sb-brand{display:none}
+  /* streak */
+  #sidebar .sb-streak{
+    display:flex;align-items:center;gap:8px;padding:12px 16px;font-size:13px;font-weight:700;
+    color:var(--accent2);border-bottom:1px solid rgba(217,186,145,.15);background:transparent;
+    overflow:hidden;white-space:nowrap
+  }
+  #sidebar .sb-streak .streak-icon{
+    width:40px;height:40px;border-radius:50%;background:#FFF7ED;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0
+  }
+  #sidebar .sb-streak .streak-icon svg{width:20px;height:20px;color:#ea580c;fill:#ea580c}
+  #sidebar .sb-streak .streak-text{overflow:hidden}
+  #sidebar .sb-streak .streak-text small{display:block;font-size:11px;color:#9CA3AF;font-weight:500}
+  #sidebar .sb-streak .streak-text strong{display:block;font-size:13px;color:#ea580c}
+  #sidebar.collapsed .sb-streak .streak-text{width:0;opacity:0}
+  /* nav */
+  #sidebar .sb-nav{flex:1;padding:8px}
+  #sidebar .sb-nav button{
+    display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;padding:12px;
+    font:inherit;font-size:14px;color:#6B7280;cursor:pointer;border-radius:12px;text-align:left;
+    transition:background .15s,color .15s;appearance:none;-webkit-appearance:none;
+    position:relative;overflow:hidden;white-space:nowrap
+  }
+  #sidebar .sb-nav button .sb-icon{width:20px;height:20px;flex-shrink:0;color:#6B7280}
+  #sidebar .sb-nav button:hover{background:rgba(245,158,11,.08);color:#92400e}
+  #sidebar .sb-nav button:hover .sb-icon{color:#92400e}
+  #sidebar .sb-nav button.on{background:rgba(245,158,11,.12);color:#92400e;font-weight:700}
+  #sidebar .sb-nav button.on .sb-icon{color:#b45309}
+  #sidebar .sb-nav button:not(.on) .sb-icon{opacity:.6}
+  #sidebar .sb-label{transition:opacity .2s,width .2s}
+  #sidebar.collapsed .sb-label{opacity:0;width:0;overflow:hidden}
+  /* tooltip on collapsed hover */
+  #sidebar .sb-nav button .sb-tip{
+    position:absolute;left:100%;top:50%;transform:translateY(-50%);margin-left:8px;
+    background:#1F2937;color:#fff;font-size:12px;font-weight:500;padding:4px 10px;border-radius:6px;
+    white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .15s;z-index:99;
+    box-shadow:0 4px 12px rgba(0,0,0,.15)
+  }
+  #sidebar:not(.collapsed) .sb-tip{display:none}
+  #sidebar.collapsed .sb-nav button:hover .sb-tip{opacity:1}
+  /* toggle button */
+  #sidebar .sb-toggle{
+    padding:8px;border-top:1px solid rgba(217,186,145,.15)
+  }
+  #sidebar .sb-toggle button{
+    display:flex;align-items:center;justify-content:center;width:100%;border:0;background:none;
+    padding:8px;border-radius:8px;color:#9CA3AF;cursor:pointer;transition:background .15s,color .15s;
+    appearance:none;-webkit-appearance:none
+  }
+  #sidebar .sb-toggle button:hover{background:rgba(245,158,11,.08);color:#92400e}
+  #sidebar .sb-toggle button svg{width:20px;height:20px;transition:transform .3s}
+  #sidebar.collapsed .sb-toggle button svg{transform:rotate(180deg)}
+  nav{display:none!important}
+  header{z-index:60}
+  main{margin-left:var(--sb-w);transition:margin-left .3s cubic-bezier(.4,0,.2,1)}
+  body.sb-col{--sb-w:64px}
+  body{padding-bottom:20px}
+}
+/* streak badge in header (mobile) */
+.hd-streak{font-size:11.5px;font-weight:800;color:#fff;background:rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:3px 9px;white-space:nowrap}
+/* tag chips on cards */
+.tag-chip{display:inline-block;font-size:calc(11.5px * var(--fs));font-weight:700;
+  background:#f2f7f7;border:1px solid #d5e5e4;border-radius:14px;padding:2px 10px;color:#2b6b69;white-space:nowrap}
+.tag-chip.gram{background:#fdf0e5;border-color:#ecd3bb;color:#8a4a12}
+@media(max-width:1024px){ .tag-chip.gram{white-space:normal;overflow-wrap:anywhere;line-height:1.5;max-width:100%} }
+.tag-chip.topic{background:#f0ecfb;border-color:#d6cef0;color:#5b4a86}
+/* status badge on cards */
+.status-badge{position:absolute;top:8px;right:10px;font-size:calc(10px * var(--fs));font-weight:800;
+  border-radius:10px;padding:2px 8px;white-space:nowrap}
+.status-badge.done{background:#eefaf1;border:1px solid #c4e5ce;color:#1f7a46}
+.status-badge.prog{background:#fff7ee;border:1px solid #ecd3bb;color:var(--accent2)}
+.status-badge.todo{background:#f1ede6;border:1px solid #e2dbd0;color:#8a7f72}
+/* segmented control */
+.seg-ctrl{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:12px}
+.seg-ctrl button{border:0;background:#fff;padding:7px 14px;font:inherit;font-size:calc(13px * var(--fs));
+  cursor:pointer;color:var(--ink2);font-weight:600;border-right:1px solid var(--line);transition:background .12s,color .12s}
+.seg-ctrl button:last-child{border-right:0}
+.seg-ctrl button.on{background:var(--accent);color:#fff;font-weight:700}
+.seg-ctrl button:active{opacity:.85}
+/* compact filter dropdown */
+.filter-sel{border:1.5px solid var(--line);border-radius:10px;padding:7px 12px;font:inherit;
+  font-size:calc(13px * var(--fs));color:var(--ink2);background:#fff;cursor:pointer;margin-bottom:12px}
+/* audio player bar */
+.au-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.au-bar .au-main{
+  display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;
+  background:var(--accent);color:#fff;border:0;font-size:18px;cursor:pointer;flex-shrink:0;
+  box-shadow:0 2px 8px rgba(200,100,30,.3);transition:transform .12s}
+.au-bar .au-main:active{transform:scale(.92)}
+.au-bar .au-main.playing{background:#2b7a78;animation:auPulse 1.6s ease-in-out infinite}
+.au-bar .au-main.shadowing{background:#2b7a78;animation:auBreathe 2s ease-in-out infinite}
+.au-prog-wrap{flex:1;min-width:80px;display:flex;flex-direction:column;gap:3px}
+.au-prog-info{font-size:calc(12px * var(--fs));color:var(--ink2);font-weight:700;display:flex;justify-content:space-between}
+.au-prog-bar{height:5px;background:#efe8dd;border-radius:4px;overflow:hidden}
+.au-prog-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#d9691f);border-radius:4px;transition:width .3s;width:0}
+.au-mode{display:inline-flex;border:1.5px solid var(--line);border-radius:8px;overflow:hidden}
+.au-mode button{border:0;background:#fff;padding:5px 10px;font:inherit;font-size:calc(12px * var(--fs));
+  cursor:pointer;color:var(--ink2);font-weight:600;border-right:1px solid var(--line)}
+.au-mode button:last-child{border-right:0}
+.au-mode button.on{background:var(--accent);color:#fff}
+/* completion toast */
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(80px);
+  background:#fff;border:1.5px solid var(--ok);border-radius:14px;padding:14px 18px;
+  box-shadow:0 8px 28px rgba(30,80,50,.2);z-index:80;max-width:380px;width:calc(100% - 32px);
+  text-align:center;opacity:0;transition:transform .35s ease,opacity .35s ease;pointer-events:none}
+.toast.on{transform:translateX(-50%) translateY(0);opacity:1;pointer-events:auto}
+.toast .tt{font-size:calc(16px * var(--fs));font-weight:800;color:var(--ok);margin-bottom:6px}
+.toast .tb{font-size:calc(13px * var(--fs));color:var(--ink2);margin-bottom:10px}
+.toast .ta{display:flex;gap:8px;justify-content:center}
+@media(min-width:769px){.toast{bottom:30px}}
 /* 課本日曆與搜尋 */
 #bk-q,#rd-q{width:100%;margin:4px 0 12px;padding:9px 12px;border:1.5px solid var(--line);border-radius:10px;
   font:inherit;font-size:calc(14px * var(--fs))}
@@ -671,8 +878,8 @@ body.cnall #v-book span.cnx{display:inline!important}
 #v-book .bknote{font-size:calc(16px * var(--fs))}
 #v-book .bkfml{font-size:calc(17px * var(--fs))}
 #v-book .bkul{font-size:calc(16.5px * var(--fs))}
-#v-book .bkex .een{font-size:calc(17.5px * var(--fs))}
-#v-book .bkex .ecn{font-size:calc(15.5px * var(--fs))}
+#v-book .bkex .een{font-size:calc(18px * var(--fs))}
+#v-book .bkex .ecn{font-size:calc(14px * var(--fs))}
 #v-book .bkwarn div{font-size:calc(16.5px * var(--fs))}
 #v-book .bkq .qn{font-size:calc(17px * var(--fs))}
 #v-book table{font-size:calc(15.5px * var(--fs))}
@@ -687,24 +894,29 @@ body.cnall #v-book span.cnx{display:inline!important}
 .bknum .no{flex-shrink:0;font-weight:700}
 /* 課本錯誤字用正紅色 */
 #v-book .wrong{color:#FF0000}
-/* 課文檢視（桌機）：整頁跳出 860px 主欄放寬到 1120px——橘色區塊標題、表格、卡片同寬對齊 */
+/* 課文檢視（桌機）：整頁跳出 860px 主欄放寬到 1120px——橘色區塊標題、表格、卡片同寬對齊
+   有側邊欄時減去 220px，避免內容被遮擋 */
 @media(min-width:920px){
   #v-book.bkopen .bkbar,#v-book.bkopen .card,#v-book.bkopen .bkq,#v-book.bkopen .bkwarn,
   #v-book.bkopen .magttl,#v-book.bkopen .bkvm,#v-book.bkopen .bksub{
     width:min(1120px,calc(100vw - 44px));position:relative;left:50%;transform:translateX(-50%)
   }
 }
+@media(min-width:920px) and (min-width:769px){
+  #v-book.bkopen .bkbar,#v-book.bkopen .card,#v-book.bkopen .bkq,#v-book.bkopen .bkwarn,
+  #v-book.bkopen .magttl,#v-book.bkopen .bkvm,#v-book.bkopen .bksub{
+    width:auto;max-width:calc(100vw - var(--sb-w) - 44px);left:0;transform:none;margin-left:auto;margin-right:auto
+  }
+}
 /* 前次已學（無例句欄）：欄寬比照上方單字表 */
 #v-book table.bkrev td:nth-child(1),#v-book table.bkrev th:nth-child(1){width:24%}
 #v-book table.bkrev td:nth-child(2),#v-book table.bkrev th:nth-child(2){width:36%}
 #v-book table.bkrev td:nth-child(3),#v-book table.bkrev th:nth-child(3){width:10%}
-/* 返回鍵（課本＋閱讀共用）：窄螢幕疊在標題卡左上角；夠寬時移到卡片外左側，標題卡不動 */
-#v-book .magttl,#v-read .magttl{position:relative;padding-top:50px}
-#v-book .magttl .back,#v-read .magttl .back{position:absolute;top:-21px;left:0;z-index:2;margin:0}
-@media(min-width:1240px){
-  #v-book .magttl,#v-read .magttl{padding-top:14px}
-  #v-book .magttl .back,#v-read .magttl .back{top:-2px;left:-58px}
-}
+/* 返回鍵（課本＋閱讀共用）：標題卡上方獨立一行，不再 absolute 定位，避免被側邊欄遮擋 */
+#v-book .magttl .back,#v-read .magttl .back{display:inline-flex;align-items:center;gap:6px;
+  margin:0 0 10px;font-size:calc(13px * var(--fs));line-height:1;z-index:2}
+#v-book .magttl .back .back-label,#v-read .magttl .back .back-label{
+  font-size:calc(13px * var(--fs));font-weight:700;color:var(--ink2)}
 /* 課本標題卡：右側大圖示（純裝飾）＋彩色徽章 */
 #v-book .magttl h2{padding-right:84px}
 #v-book .magico{position:absolute;right:20px;top:16px;font-size:58px;line-height:1;
@@ -718,9 +930,16 @@ body.cnall #v-book span.cnx{display:inline!important}
 #v-book .para .en{text-indent:0}
 /* 卡片內的插圖：去掉自己的白框與內距，寬度與內文完全同寬 */
 .artbox.flush{background:transparent;border:0;box-shadow:none;padding:0}
-/* 閱讀檢視（桌機）：整篇比照課本放寬到 1120px */
+/* 閱讀檢視（桌機）：整篇放寬填滿可用空間 */
 @media(min-width:920px){
   #v-read.rdopen>*{width:min(1120px,calc(100vw - 44px));position:relative;left:50%;transform:translateX(-50%)}
+}
+@media(min-width:920px) and (min-width:769px){
+  #v-read.rdopen>*{width:auto;max-width:calc(100vw - var(--sb-w) - 44px);left:0;transform:none;margin-left:auto;margin-right:auto}
+}
+/* 內文視圖：main 放寬，讓閱讀/課本內頁填滿 */
+@media(min-width:769px){
+  main:has(.rdopen),main:has(.bkopen){max-width:calc(100vw - var(--sb-w) - 28px)}
 }
 /* 閱讀的單字中文（詞義＋例句中譯）跟著全站中譯開關 */
 body:not(.cnall) #v-read .wpitem .zh{display:none}
@@ -743,17 +962,24 @@ body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
 /* 單字表欄寬：單字15% 音標15% 詞性5% 例句50% 中文15%，例句有足夠空間流暢呈現 */
 /* fixed 版面才能真正壓住欄寬：詞性固定 70px 置中，省下的寬度讓給例句與中文 */
 #v-book table.bkvtab{table-layout:fixed;width:100%}
-#v-book table.bkvtab th:nth-child(1),#v-book table.bkvtab td:nth-child(1){width:22%}
-#v-book table.bkvtab th:nth-child(2),#v-book table.bkvtab td:nth-child(2){width:11%}
-#v-book table.bkvtab th:nth-child(3),#v-book table.bkvtab td:nth-child(3){width:70px;text-align:center}
+#v-book table.bkvtab th:nth-child(1),#v-book table.bkvtab td:nth-child(1){width:19%}
+#v-book table.bkvtab th:nth-child(2),#v-book table.bkvtab td:nth-child(2){width:16%}
+#v-book table.bkvtab th:nth-child(3),#v-book table.bkvtab td:nth-child(3){width:64px;text-align:center}
 #v-book table.bkvtab th:nth-child(4),#v-book table.bkvtab td:nth-child(4){width:auto}
-#v-book table.bkvtab th:nth-child(5),#v-book table.bkvtab td:nth-child(5){width:16%}
+#v-book table.bkvtab th:nth-child(5),#v-book table.bkvtab td:nth-child(5){width:15%}
 #v-book table.bkvtab td:nth-child(1){white-space:normal}
-#v-book table.bkvtab td:nth-child(2){white-space:normal;overflow-wrap:anywhere}
+/* 音標整段不斷字（不在符號中間折行）；字級略縮以容納長音標 */
+#v-book table.bkvtab td:nth-child(2){white-space:nowrap;overflow-wrap:normal;word-break:keep-all;font-size:calc(12.5px * var(--fs))}
 #v-book table.bkvtab td:nth-child(3){white-space:normal}
 /* 單字＋發音＋星號鎖在同一行，不因字長被擠到第二行 */
 #v-book .wln{display:inline-flex;align-items:center;gap:4px;flex-wrap:nowrap;white-space:nowrap;max-width:100%}
 #v-book table.bkvtab .wln .spk{padding:3px 6px}
+/* 平板（641–1024px）：單字欄變窄放不下長單字＋🔊＋★ 的 nowrap 群組，改允許換行避免按鈕溢出被音標欄蓋住 */
+@media(min-width:641px) and (max-width:1024px){
+  #v-book table.bkvtab th:nth-child(1),#v-book table.bkvtab td:nth-child(1){width:23%}
+  #v-book table.bkvtab th:nth-child(2),#v-book table.bkvtab td:nth-child(2){width:13%}
+  #v-book .wln{flex-wrap:wrap;white-space:normal;overflow-wrap:anywhere;row-gap:2px}
+}
 /* 補充字彙表：類別20% 英文50% 中文30% */
 #v-book table.bkxv th:nth-child(1),#v-book table.bkxv td:nth-child(1){width:20%;white-space:normal}
 #v-book table.bkxv th:nth-child(2),#v-book table.bkxv td:nth-child(2){width:50%}
@@ -777,6 +1003,10 @@ body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
 .qbadge{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
   border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:calc(13.5px * var(--fs));
   flex-shrink:0}
+/* 填空練習：英文句中的答案字改成可見的空格膠囊（答案仍在中文欄），一眼看出要填哪裡 */
+.bkblank{display:inline-block;min-width:58px;text-align:center;color:#B45309;font-weight:800;
+  background:#FEF3C7;border:1px dashed #F0B357;border-radius:6px;padding:0 8px;margin:0 3px;
+  letter-spacing:1px;line-height:1.5;vertical-align:baseline}
 /* 片語通用變數（something / someone / 人 / 事）：淺灰膠囊，凸顯固定的動詞＋介系詞骨架 */
 .varb{display:inline-block;background:#f0ece5;border:1px dashed #cfc4b4;border-radius:8px;
   color:#8a7f72;font-weight:600;font-size:.88em;padding:0 7px;margin:0 2px;line-height:1.6}
@@ -818,11 +1048,30 @@ body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
     <button id="prof-anita" class="on" onclick="setProfile('anita')">🍎 Anita</button>
     <button id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
   </div>
+  <span class="hd-streak" id="hd-streak" title="連續學習天數">🔥 1 天</span>
   <span id="sync-badge" title="進度已雲端同步（跨裝置共用）">☁️</span>
   <button class="hdlink" id="hd-cn" onclick="togGlobalCn()" title="全站中譯一鍵顯示／隱藏">🈶 中譯</button>
   <a class="hdlink ext" href="https://learning-english-notes.web.app" title="Speak Up! 課堂筆記 · 口說練習 · 每日測驗">🍎🐻 Speak&nbsp;Up ↗</a>
   <a class="hdlink ext" href="https://rexon-qa-english.web.app/" title="英文題庫練習">🔤 題庫 ↗</a>
 </header>
+
+<aside id="sidebar">
+  <button class="sb-brand" onclick="toTop()"><span style="font-size:18px">📚</span><h2>B2 Read</h2></button>
+  <div class="sb-streak" id="sb-streak">
+    <div class="streak-icon"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 23c-3.6 0-7-2.5-7-7 0-3.5 2.6-6.7 5-9.5.4-.5 1.2-.5 1.6 0C14 9.3 19 13 19 16c0 4.5-3.4 7-7 7zm0-12.3C10.2 13 7 15.5 7 16c0 3.3 2.2 5 5 5s5-1.7 5-5c0-1.8-2.3-4-5-5.3z"/></svg></div>
+    <div class="streak-text"><small>連續學習</small><strong><span id="sb-streak-n">1</span> 天</strong></div>
+  </div>
+  <div class="sb-nav">
+    <button id="sb-daily" class="on" onclick="go('daily')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span class="sb-label">今日</span><span class="sb-tip">今日</span></button>
+    <button id="sb-book" onclick="go('book')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5z"/></svg><span class="sb-label">課本</span><span class="sb-tip">課本</span></button>
+    <button id="sb-read" onclick="go('read')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg><span class="sb-label">閱讀</span><span class="sb-tip">閱讀</span></button>
+    <button id="sb-listen" onclick="go('listen')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg><span class="sb-label">聽力</span><span class="sb-tip">聽力</span></button>
+    <button id="sb-prac" onclick="go('vocab')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 7h10M7 12h10M7 17h6"/></svg><span class="sb-label">單字卡</span><span class="sb-tip">單字卡</span></button>
+    <button id="sb-gram" onclick="go('gram')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21L12 3l9 18"/><path d="M6.5 15h11"/></svg><span class="sb-label">文法</span><span class="sb-tip">文法</span></button>
+    <button id="sb-prog" onclick="go('prog')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg><span class="sb-label">進度</span><span class="sb-tip">進度</span></button>
+  </div>
+  <div class="sb-toggle"><button onclick="togSidebar()" title="收合/展開"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button></div>
+</aside>
 
 <main>
   <section id="v-daily"></section>
@@ -837,6 +1086,12 @@ body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
 <div class="gloss" id="gloss">
   <button class="close" onclick="hideGloss()">×</button>
   <div id="glossBody"></div>
+</div>
+
+<div class="toast" id="toast">
+  <div class="tt" id="toast-title">🎉 完成！</div>
+  <div class="tb" id="toast-body"></div>
+  <div class="ta" id="toast-actions"></div>
 </div>
 
 <nav>
@@ -1277,6 +1532,7 @@ function go(t,visualTab){
   ['daily','read','book','listen','vocab','gram','prog'].forEach(k=>{ $('v-'+k).hidden = (k!==t); });
   ['daily','read','book','listen','prac','gram','prog'].forEach(k=>{
     const b=$('t-'+k); if(b) b.classList.toggle('on', k===vt);
+    const sb=$('sb-'+k); if(sb) sb.classList.toggle('on', k===vt);
   });
   if(t!=='listen') destroyPlayer();
   if(t!=='listen'&&typeof recFinish==='function') recFinish();   // 換分頁就停止錄音、釋放麥克風
@@ -1288,9 +1544,47 @@ function go(t,visualTab){
   updateHd();
 }
 window.go=go;
+function updateStreak(){
+  const s=ST.streak||1;
+  const hs=$('hd-streak'); if(hs) hs.textContent='🔥 '+s+' 天';
+  const ss=$('sb-streak-n'); if(ss) ss.textContent=s;
+}
+let toastTimer=null;
+function showToast(title,body,actions){
+  const t=$('toast'); if(!t) return;
+  $('toast-title').textContent=title;
+  $('toast-body').textContent=body||'';
+  $('toast-actions').innerHTML=(actions||[]).map(a=>
+    '<button class="btn sm" onclick="hideToast();'+a.fn+'">'+esc(a.label)+'</button>').join('');
+  t.classList.add('on');
+  if(toastTimer) clearTimeout(toastTimer);
+  toastTimer=setTimeout(hideToast, 5000);
+}
+function hideToast(){ const t=$('toast'); if(t) t.classList.remove('on'); }
+window.showToast=showToast; window.hideToast=hideToast;
 /* 點標頭回到頁面頂端 */
 function toTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
 window.toTop=toTop;
+/* 側欄收合/展開 */
+function togSidebar(){
+  const sb=$('sidebar'); if(!sb) return;
+  const col=sb.classList.toggle('collapsed');
+  document.body.classList.toggle('sb-col',col);
+  try{ localStorage.setItem('b2lab_sb_col',col?'1':'0'); }catch(e){}
+}
+window.togSidebar=togSidebar;
+function sbAutoCollapse(){
+  const sb=$('sidebar'); if(!sb||sb.classList.contains('collapsed')) return;
+  sb.classList.add('collapsed'); document.body.classList.add('sb-col');
+}
+function sbAutoExpand(){
+  const sb=$('sidebar'); if(!sb||!sb.classList.contains('collapsed')) return;
+  try{ if(localStorage.getItem('b2lab_sb_col')==='1') return; }catch(e){}
+  sb.classList.remove('collapsed'); document.body.classList.remove('sb-col');
+}
+(function(){try{if(localStorage.getItem('b2lab_sb_col')==='1'){
+  const sb=$('sidebar'); if(sb){sb.classList.add('collapsed'); document.body.classList.add('sb-col');}
+}}catch(e){}})();
 
 /* ---------- 全站中譯開關（標頭 🈶）：開＝所有中譯直接顯示，關＝回到逐項點開 ---------- */
 let CNALL=localStorage.getItem('b2lab_cnall')==='1';
@@ -1301,8 +1595,13 @@ function applyCnAll(){
 }
 function togGlobalCn(){
   /* 以畫面上方附近「切換後仍看得到的區塊」當錨點：切換後把它捲回原本位置，畫面不跳。
-     錨點要選整張卡片／段落，不能選中譯本身（切換後會被藏起來、量不到位置）。 */
-  let anchor=document.elementFromPoint(Math.min(90,innerWidth/3), 170);
+     取樣點必須落在主內容欄內（避開左側固定側邊欄），否則量到不動的側邊欄→補償失效→畫面跳。 */
+  const main=document.querySelector('main');
+  const mr=main?main.getBoundingClientRect():{left:0};
+  const hd=document.querySelector('header');
+  const hb=hd?hd.getBoundingClientRect().bottom:0;
+  const ax=Math.max(10,mr.left)+30, ay=hb+30;
+  let anchor=document.elementFromPoint(ax, ay);
   anchor=anchor ? (anchor.closest('.bkq,.bkex,.para,.wpitem,.wpbox,.focus,.upg,.bkbar,.card,.item,.magttl,section')||anchor) : null;
   const prevTop=anchor?anchor.getBoundingClientRect().top:null;
   CNALL=!CNALL;
@@ -1371,12 +1670,17 @@ function rdFiltered(){
 function rdCards(list){
   return list.length ? list.map(a=>{
     const d=ST.artDone[a.id];
+    const tw=(a.target||[]).length;
     return '<div class="item arw'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="rdOpenArt(\''+a.id+'\')">'
     +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(a.level)+'">'+esc(a.title)+'</div><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span></div>'
     +'<div class="tc">'+esc(a.titleCn)+'</div>'
-    +'<div class="meta">'+(a.date?'<span>📅 '+esc(a.date)+'</span>':'')+'<span>🏷 '+esc(a.topic)+'</span>'
-    +(a.focus?'<span>📐 '+esc(a.focus)+'</span>':'')
-    +'<span class="mR">'+wordsMeta(a.words)+'</span></div></div>';
+    +'<div class="meta" style="margin-top:6px"><span class="tag-chip topic">🏷 '+esc(a.topic)+'</span>'
+    +(a.focus?'<span class="tag-chip gram">📐 '+esc(a.focus)+'</span>':'')
+    +(tw?'<span class="tag-chip">🔤 '+tw+' 重點字</span>':'')
+    +'</div>'
+    +'<div class="meta" style="justify-content:space-between;margin-top:5px">'
+    +'<span>'+wordsMeta(a.words)+'</span>'
+    +'<span class="goCta" style="margin:0"><i>'+(d?'再讀一次':'開始閱讀 ➔')+'</i></span></div></div>';
   }).join('') : '<div class="muted" style="padding:8px 4px">找不到符合的文章，換個關鍵字或放寬篩選試試。</div>';
 }
 function rdProg(list){
@@ -1407,9 +1711,10 @@ RENDER.read=function(){
     +(rdHintOff?' <button class="spk" onclick="rdHint(0)" title="顯示操作說明" style="margin-left:auto">ℹ️</button>':'')+'</h2>'
     +(rdHintOff?'':'<div class="hint" style="position:relative;padding-right:34px">雜誌式版面：內文的<b style="color:#c0561a">橘色加粗＋編號</b>字對應右欄「Words &amp; Phrases」單字片語，另有補充詞彙與選字填空。點<b>任何一個英文字</b>都能查中文。'
       +'<button onclick="rdHint(1)" title="關閉說明" style="position:absolute;top:6px;right:8px;border:0;background:none;cursor:pointer;font-size:15px;color:var(--ink2);line-height:1;padding:3px">✕</button></div>')
-    +'<input id="rd-q" value="'+esc(rdQuery)+'" oninput="rdQ(this.value)" placeholder="🔍 搜尋文章：中英文標題、主題、文法重點…">'
-    +'<div class="chips">'+kb.map(([k,t])=>'<button class="chip'+(rdFilter.kind===k?' on':'')+'" onclick="rdSet(\'kind\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
-    +'<div class="chips">'+lb.map(([k,t])=>'<button class="chip'+(rdFilter.level===k?' on':'')+'" onclick="rdSet(\'level\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
+    +'<div class="row" style="gap:10px;margin-bottom:10px;flex-wrap:wrap;align-items:center">'
+    +'<input id="rd-q" value="'+esc(rdQuery)+'" oninput="rdQ(this.value)" placeholder="🔍 搜尋文章…" style="flex:1;min-width:140px;margin:0">'
+    +'<select class="filter-sel" onchange="rdSet(\'kind\',this.value)" style="margin:0">'+kb.map(([k,t])=>'<option value="'+k+'"'+(rdFilter.kind===k?' selected':'')+'>'+t+'</option>').join('')+'</select></div>'
+    +'<div class="seg-ctrl">'+lb.map(([k,t])=>'<button'+(rdFilter.level===k?' class="on"':'')+' onclick="rdSet(\'level\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
     +gramRow
     +(function(){const p=rdProg(list);return '<div class="rdprog"><span id="rd-count">'+p.txt+'</span><div class="rdbar"><i id="rd-fill" style="width:'+p.pct+'%"></i></div></div>';})()
     +'</div>'
@@ -1459,8 +1764,8 @@ function rdHint(off){
   try{ localStorage.setItem('b2lab_rdhint',off?'1':'0'); }catch(e){}
   RENDER.read();
 }
-function rdOpenArt(id){ rdOpen=ALL_ARTS.find(a=>a.id===id); QSTATE={}; RENDER.read(); }
-function rdClose(){ rdOpen=null; if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.read(); }
+function rdOpenArt(id){ rdOpen=ALL_ARTS.find(a=>a.id===id); QSTATE={}; sbAutoCollapse(); RENDER.read(); }
+function rdClose(){ rdOpen=null; sbAutoExpand(); if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.read(); }
 window.rdSet=rdSet; window.rdOpenArt=rdOpenArt; window.rdClose=rdClose; window.rdGramTog=rdGramTog; window.rdHint=rdHint; window.rdQ=rdQ;
 
 const reEsc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
@@ -1684,7 +1989,7 @@ function readerHTML(a){
   const extras=extraWords(a,tgtSet);
 
   /* 標題卡只留標題＋基本標籤；導讀與文法重點收進可展開的提示區，資訊不再擠成一團 */
-  let h='<div class="magttl"><button class="back" onclick="rdClose()"></button>'
+  let h='<div class="magttl"><button class="back" onclick="rdClose()"><span class="back-label">← 返回閱讀</span></button>'
    +'<h2>'+esc(a.title)+'</h2>'
    +'<div class="cn">'+esc(a.titleCn)+'</div>'
    +'<div class="bar"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'
@@ -1920,6 +2225,11 @@ function pick(ns,i,j,ans){
     if(ns==='art'&&rdOpen){ ST.artDone[rdOpen.id]={correct:c,total:qs.length,date:today()}; save(); }
     if(ns==='gram'&&CURG){ ST.gramDone[CURG.id]={correct:c,total:qs.length,date:today()}; save(); }
     if(ns==='listen'&&lsOpen){ if(!ST.listenDone)ST.listenDone={}; ST.listenDone[lsOpen.id]={correct:c,total:qs.length,date:today()}; save(); }
+    showToast(c===qs.length?'🎉 全對！太棒了！':'完成測驗 '+c+'/'+qs.length,
+      ns==='art'?'閱讀理解完成':ns==='listen'?'聽力測驗完成':'文法練習完成',
+      ns==='art'?[{label:'複習單字卡 ›',fn:'goReview()'}]
+        :ns==='listen'?[{label:'回列表 ›',fn:'lsClose()'}]
+        :[]);
   }
 }
 window.pick=pick;
@@ -2301,6 +2611,7 @@ RENDER.daily=function(){
      +'<div class="meta"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'+(d?'':'<span class="stc">未開始</span>')+(isToday(a)?'':'<span>📅 '+esc(a.date||'')+'</span>')+'<span>🏷 '+esc(a.topic)+'</span>'
      +(a.kind==='news'||a.sourceUrl?'<span>📰 真實新聞改寫</span>':'<span>✍️ 原創</span>')
      +finMeta(d,isToday(a))+'<span class="mR">'+wordsMeta(a.words)+'</span></div>'
+     +((a.target||[]).length||a.focus?'<div class="meta" style="margin-top:3px">'+((a.target||[]).length?'<span class="tag-chip">🔤 '+(a.target||[]).length+' 重點字</span>':'')+(a.focus?'<span class="tag-chip gram">📐 '+esc(a.focus)+'</span>':'')+'</div>':'')
      +'<div class="goCta'+(d?' again':'')+'"><i>'+(d?'再讀一次':'開始閱讀')+' ➔</i></div></div>';
   });
   gramsToday.forEach(g=>{
@@ -2357,7 +2668,7 @@ RENDER.daily=function(){
 };
 function dailyArt(id){ FROM_TAB='daily'; go('read','daily'); rdFilter.kind='daily'; rdOpenArt(id); }
 function dailyGram(id){ FROM_TAB='daily'; go('gram','daily'); gOpen(id); }
-function dailyListen(id){ FROM_TAB='daily'; lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; go('listen','daily'); }
+function dailyListen(id){ FROM_TAB='daily'; lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; sbAutoCollapse(); go('listen','daily'); }
 window.dailyArt=dailyArt; window.dailyGram=dailyGram; window.dailyListen=dailyListen;
 /* 儀表板統計格點擊：跳到對應的歷史清單 */
 function statGo(t){
@@ -2713,17 +3024,21 @@ function bkNote(s){
 }
 function bkItem(b,extraMeta){
   const nV=(b.vocab||[]).length+(b.vocab2||[]).length;
+  const nG=(b.grammar||[]).length, nH=(b.hw||[]).length;
   return '<div class="item" onclick="bkGo(\''+b.id+'\')">'
-   +'<div class="bkdate">'+bkDate(b.date)+'</div>'
-   +'<div class="t bkbig">'+(b.icon||'📕')+' '+esc(b.titleCn)+'</div>'
-   +'<div class="tc">'+esc(b.title)+'</div>'
+   +'<div class="bkdate">'+(b.icon||'📕')+' '+bkDate(b.date)+'</div>'
+   +'<div class="t bkbig">'+esc(b.titleCn)+'</div>'
+   +'<div class="tc bksub">'+esc(b.title)+'</div>'
    +'<div class="bkstats">'
-   +'<div class="bstat"><i>🔤</i><b>'+nV+'</b><span>單字</span></div>'
-   +'<div class="bstat"><i>📐</i><b>'+(b.grammar||[]).length+'</b><span>句型</span></div>'
-   +'<div class="bstat"><i>📝</i><b>'+(b.hw||[]).length+'</b><span>作業複習</span></div>'
+   +'<div class="bstat" onclick="event.stopPropagation();bkGo(\''+b.id+'\',\'vocab\')" title="開啟單字表">'
+   +'<i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B5563" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg></i><b>'+nV+'</b><span>單字</span><span class="bstat-hint">複習 ›</span></div>'
+   +'<div class="bstat" onclick="event.stopPropagation();bkGo(\''+b.id+'\',\'gram\')" title="開啟句型文法">'
+   +'<i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B5563" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21L12 3l9 18"/><path d="M6.5 15h11"/></svg></i><b>'+nG+'</b><span>句型</span><span class="bstat-hint">練習 ›</span></div>'
+   +'<div class="bstat" onclick="event.stopPropagation();bkGo(\''+b.id+'\',\'hw\')" title="開啟作業複習">'
+   +'<i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B5563" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4Z"/></svg></i><b>'+nH+'</b><span>作業複習</span><span class="bstat-hint">檢視 ›</span></div>'
    +'</div>'
    +(extraMeta||'')
-   +'<button class="bkstart">開始課程 ›</button>'
+   +'<button class="bkstart">開始課程 ➔</button>'
    +'</div>';
 }
 let bkHintOpen=false;
@@ -2738,27 +3053,37 @@ RENDER.book=function(){
   if(bkOpen){ v.innerHTML=bookHTML(bkOpen); return; }
   if(bkCalY==null){ const t=new Date(); bkCalY=t.getFullYear(); bkCalM=t.getMonth(); }
   v.innerHTML=
-    '<div class="card"><div class="row" style="justify-content:space-between;align-items:center">'
-    +'<h2 class="sec" style="margin:0">📕 課本</h2>'
+    '<div class="card"><h2 class="sec" style="margin:0 0 4px">📕 課本</h2>'
+    +'<div class="bk-hdr-row">'
+    +'<input id="bk-q" value="'+esc(bkQuery)+'" oninput="bkSearch(this.value)" placeholder="🔍 搜尋單字、片語、主題…">'
     +'<button class="spk" id="bk-hint-btn" onclick="bkTogHint()">'+(bkHintOpen?'💡 說明 ▲':'💡 說明 ▼')+'</button></div>'
-    +'<div class="hint" id="bk-hint" style="display:'+(bkHintOpen?'block':'none')+';margin-top:8px">'
+    +'<div class="hint" id="bk-hint" style="display:'+(bkHintOpen?'block':'none')+';margin-top:4px">'
     +'課堂筆記的完整版面，內容與上課的 Google 文件一字不差。'
-    +'日曆上<b>深藍色的日期</b>就是有筆記/課程的日子，點一下直接開課文；<b>橘色</b>是今天；« » 換年、‹ › 換月。'
+    +'日曆上<b>有藍色小圓點</b>的日期就是有筆記/課程的日子，點日期後右側（手機為下方）會列出當天課程，再按「開始學習」開課文；<b>淡橘格</b>是今天、<b>實心橘格</b>是目前選取；« » 換年、‹ › 換月。'
     +'搜尋欄輸入單字或主題，會列出這個字<b>出現在哪幾課、哪個段落</b>。'
     +'<b>每個單字、每個句子都有 🔊</b>；中譯跟著右上角的「🈶 中譯」開關。</div>'
-    +'<input id="bk-q" value="'+esc(bkQuery)+'" oninput="bkSearch(this.value)" placeholder="🔍 快速搜尋：單字、片語、主題…（會列出出現在哪篇）">'
     +'<div id="bk-results"></div>'
     +'<div id="bk-cal">'+bkCalHTML()+'</div>'
     +'</div>';
   bkSearch(bkQuery);
 };
+/* 「月曆負責瀏覽日期，右側面板負責顯示選定日期的課程」——點日期＝選取，開課走面板的「開始學習」 */
+let bkSelDate=null;
+function bkLessonsOn(ds){ return BOOK_LESSONS.filter(b=>b.date===ds); }
 function bkCalHTML(){
+  const td=today();
+  if(!bkSelDate){
+    /* 預設選今天；今天沒課就選最近一堂課的日期，右側不留白（月曆跟著跳到那個月） */
+    bkSelDate = bkLessonsOn(td).length ? td :
+      (BOOK_LESSONS.filter(b=>(b.date||'')<=td).map(b=>b.date).sort().pop() || td);
+    const p=bkSelDate.split('-'); bkCalY=+p[0]; bkCalM=+p[1]-1;
+  }
   const map={};
-  BOOK_LESSONS.forEach(b=>{ if(b.date&&!map[b.date]) map[b.date]=b; });
+  BOOK_LESSONS.forEach(b=>{ if(b.date){ (map[b.date]=map[b.date]||[]).push(b); } });
   const startWd=new Date(bkCalY,bkCalM,1).getDay();
   const days=new Date(bkCalY,bkCalM+1,0).getDate();
-  const td=today();
-  let h='<div class="calhd">'
+  let h='<div class="bk-split"><div class="bk-cal-col">'
+   +'<div class="calhd">'
    +'<span><button class="calnav" onclick="bkCalShift(-12)" title="前一年">«</button> '
    +'<button class="calnav" onclick="bkCalShift(-1)" title="前一個月">‹</button></span>'
    +'<span class="m">'+bkCalY+' 年 '+(bkCalM+1)+' 月</span>'
@@ -2768,18 +3093,84 @@ function bkCalHTML(){
   for(let i=0;i<startWd;i++) h+='<div class="cell empty"></div>';
   for(let d=1;d<=days;d++){
     const ds=bkCalY+'-'+String(bkCalM+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
-    const b=map[ds];
-    h+='<div class="cell'+(b?' done':'')+(ds===td?' today':'')+'"'
-     +(b?' onclick="bkGo(\''+b.id+'\')" title="'+esc(b.titleCn)+'"':'')
-     +'>'+d+(b?'<span class="dot">'+(b.icon||'📕')+'</span>':'')+'</div>';
+    const ls=map[ds]||[];
+    const tip=ls.length? ls.map(b=>esc(b.titleCn)).join('、') :'';
+    h+='<div class="cell'+(ls.length?' has':'')+(ds===td?' today':'')+(ds===bkSelDate?' sel':'')+'"'
+     +' onclick="bkSelDay(\''+ds+'\')"'+(tip?' title="'+tip+'"':'')+'>'
+     +'<span class="caldnum">'+d+'</span>'
+     +(ls.length?'<span class="caldot"></span>'+(ls.length>1?'<span class="calmore">+'+(ls.length-1)+'</span>':''):'')
+     +'</div>';
   }
   h+='</div>'
-   +'<div class="callegend"><span>📓 有筆記/課程，點日期開課文</span>'
-   +'<span><i style="background:linear-gradient(135deg,#f2953f,#e0731f);border-radius:50%"></i>今天</span></div>';
-  const mm=BOOK_LESSONS.filter(b=>(b.date||'').indexOf(bkCalY+'-'+String(bkCalM+1).padStart(2,'0'))===0);
-  h+= mm.length ? '<div class="bkgrid">'+mm.map(b=>bkItem(b)).join('')+'</div>'
-    : '<div class="muted" style="margin-top:12px">這個月沒有筆記。</div>';
+   +'<div class="callegend">'
+   +'<span><i class="leg-has"></i>有課程</span>'
+   +'<span><i class="leg-today"></i>今天</span>'
+   +'<span><i class="leg-sel"></i>選取中</span></div>'
+   +'</div>'
+   +'<div class="bk-day-col">'+bkDayPanel()+'</div>'
+   +'</div>';
   return h;
+}
+/* 右側：選定日期面板（日期標頭＋當天課程扁平清單；沒課給引導不留白） */
+function bkDayPanel(){
+  const ds=bkSelDate, td=today();
+  const ls=bkLessonsOn(ds);
+  const [y,m,d]=ds.split('-');
+  const wd='日一二三四五六'.charAt(new Date(+y,+m-1,+d).getDay());
+  let h='<div class="bkday-hd"><div class="bkday-date">'+y+' / '+m+' / '+d
+   +'<span class="bkday-wd">週'+wd+'</span>'+(ds===td?'<span class="bkday-today">今天</span>':'')+'</div>'
+   +'<div class="bkday-sub">'+(ds===td?'今日課程':'當日課程')+(ls.length?'（'+ls.length+'）':'')+'</div></div>';
+  if(!ls.length){
+    /* 空狀態：給最近一堂課捷徑，不留大面積空白 */
+    const prev=BOOK_LESSONS.filter(b=>(b.date||'')<ds).map(b=>b.date).sort().pop();
+    h+='<div class="bkday-empty"><div>'+(ds===td?'今天沒有安排課程':'這天沒有安排課程')+'</div>'
+     +'<div class="muted" style="margin-top:4px">點日曆上有藍點的日期查看課程</div>'
+     +(prev?'<button class="bkday-jump" onclick="bkSelDay(\''+prev+'\')">← 查看最近一堂（'+esc(prev.slice(5).replace('-','/'))+'）</button>':'')
+     +'</div>';
+  }else{
+    h+=ls.map(b=>{
+      const nV=(b.vocab||[]).length+(b.vocab2||[]).length;
+      const nG=(b.grammar||[]).length, nH=(b.hw||[]).length;
+      const meta=[nV?nV+' 單字':'',nG?nG+' 句型':'',nH?nH+' 複習':''].filter(Boolean).join(' · ');
+      return '<div class="bkday-card" onclick="bkGo(\''+b.id+'\')">'
+       +'<div class="bkday-ico">'+(b.icon||'📕')+'</div>'
+       +'<div class="bkday-body">'
+       +'<div class="bkday-t">'+esc(b.titleCn)+'</div>'
+       +'<div class="bkday-tc">'+esc(b.title||'')+'</div>'
+       +(meta?'<div class="bkday-meta">'+meta+'</div>':'')
+       +'</div>'
+       +'<button class="bkday-cta" onclick="event.stopPropagation();bkGo(\''+b.id+'\')">開始學習 →</button>'
+       +'</div>';
+    }).join('');
+  }
+  /* 本月課程摺疊清單：掃一眼整月主題；點一列＝選取那天（跟月曆同一套互動） */
+  const ym=bkCalY+'-'+String(bkCalM+1).padStart(2,'0');
+  const mm=BOOK_LESSONS.filter(b=>(b.date||'').indexOf(ym)===0).sort((a,b)=>a.date<b.date?-1:1);
+  h+='<div class="bkmon">'
+   +'<button class="bkmon-tog" onclick="bkMonTog()">📅 '+(bkCalM+1)+' 月課程（'+mm.length+'）'
+   +'<span class="bkmon-arr">'+(bkMonOpen?'▲':'▼')+'</span></button>';
+  if(bkMonOpen){
+    h+= mm.length
+      ? '<div class="bkmon-list">'+mm.map(b=>
+          '<button class="bkmon-row'+(b.date===bkSelDate?' cur':'')+'" onclick="bkSelDay(\''+b.date+'\')">'
+          +'<span class="bkmon-d">'+b.date.slice(5).replace('-','/')+'</span>'
+          +'<span class="bkmon-t">'+(b.icon||'📕')+' '+esc(b.titleCn)+'</span></button>').join('')
+        +'</div>'
+      : '<div class="muted" style="margin-top:6px;font-size:calc(12.5px * var(--fs))">這個月沒有課程。</div>';
+  }
+  h+='</div>';
+  return h;
+}
+let bkMonOpen=false;
+function bkMonTog(){
+  bkMonOpen=!bkMonOpen;
+  const c=$('bk-cal'); if(c) c.innerHTML=bkCalHTML();
+}
+function bkSelDay(ds){
+  bkSelDate=ds;
+  /* 選到別的月份（例如空狀態的「查看最近一堂」）就把月曆一起切過去 */
+  const p=ds.split('-'); bkCalY=+p[0]; bkCalM=+p[1]-1;
+  const c=$('bk-cal'); if(c) c.innerHTML=bkCalHTML();
 }
 function bkCalShift(d){
   bkCalM+=d;
@@ -2823,8 +3214,10 @@ function bkSearch(q){
   res.innerHTML='<div class="muted" style="margin:2px 0 8px">「'+esc(bkQuery.trim())+'」出現在 '+hits.length+' 課</div>'
     + hits.map(x=>bkItem(x.b,'<div class="meta" style="margin-top:4px"><span>🔍 出現在：'+x.where.map(esc).join('、')+'</span></div>')).join('');
 }
-function bkGo(id){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; RENDER.book(); window.scrollTo(0,0); }
-function bkClose(){ bkOpen=null; RENDER.book(); window.scrollTo(0,0); }
+function bkGo(id,sec){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; sbAutoCollapse(); RENDER.book();
+  if(sec){ const el=$('bksec-'+sec); if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); el.classList.add('bksec-flash'); setTimeout(()=>el.classList.remove('bksec-flash'),1200); return; } }
+  window.scrollTo(0,0); }
+function bkClose(){ bkOpen=null; sbAutoExpand(); RENDER.book(); window.scrollTo(0,0); }
 /* 課本朗讀（整段／全文共用）：一句一句念、念到哪句反黃到哪句；
    按下去的按鈕變紅色「⏹ 停止」，再按一次或點空白處就停。
    Web Speech 的 onend 在 iOS/Chrome 不一定會觸發，所以每句都有看門狗，時間到就自己往下念。 */
@@ -2935,6 +3328,23 @@ function bkVars(s){
   return esc(s).replace(/\b(something|someone|somebody|anything|anyone|sth|sb)\b/gi,'<span class="varb">$1</span>')
     .replace(/(人|事情|事|某人|某事)/g,'<span class="varb">$1</span>');
 }
+/* 填空練習：把「答案：X」裡的答案字，在英文句子中換成可見的空格膠囊（答案仍留在中文欄）。
+   只對 cn 以「答案：」開頭的項目生效，其他補充字彙表照舊顯示。 */
+function bkFillBlanks(en,cn){
+  const m=String(cn).match(/^答案[：:]\s*([^（(]*)/);
+  if(!m) return null;
+  const tokens=m[1].split('/').map(s=>s.trim()).filter(Boolean).sort((a,b)=>b.length-a.length);
+  if(!tokens.length) return null;
+  const MARK='B';
+  let out=String(en), n=0;
+  tokens.forEach(tok=>{
+    const e=tok.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    const re=new RegExp('(^|[^A-Za-z0-9])('+e+')(?![A-Za-z0-9])','i');
+    if(re.test(out)){ out=out.replace(re,'$1'+MARK); n++; }
+  });
+  if(!n) return null;
+  return out.split(MARK).map(esc).join('<span class="bkblank">____</span>');
+}
 function bookHTML(b){
   const exRow=e=>'<div class="bkex"><div class="een">'
     +(e.tag?'<span class="bktag'+(e.tag==='非正式'?' inf':'')+'">'+esc(e.tag)+'</span> ':'')
@@ -2958,7 +3368,7 @@ function bookHTML(b){
   let h='';
 
   /* 標題卡：雜誌風＋右側大圖示＋彩色徽章＋原始 Google 文件連結 */
-  h+='<div class="magttl"><button class="back" onclick="bkClose()"></button>'
+  h+='<div class="magttl"><button class="back" onclick="bkClose()"><span class="back-label">← 返回課本</span></button>'
    +'<div class="magico">'+(b.iconSvg||b.icon||'📕')+'</div>'
    +'<h2>'+esc(b.title)+' '+spk(b.title)+'</h2>'
    +'<div class="cn">'+esc(b.titleCn)+'</div>'
@@ -2978,9 +3388,9 @@ function bookHTML(b){
    +'</div></div>';
 
   /* ★ 作業複習（原句錯的字反紅、訂正改對的字反綠；沒有作業就整節跳過） */
-  if((b.hw||[]).length) h+='<div class="bkbar">'+esc(b.hwTitle)+'</div>'
+  if((b.hw||[]).length) h+='<div class="bkbar" id="bksec-hw">'+esc(b.hwTitle)+'</div>'
    + (b.hw||[]).map(q=>{
-      let x='<div class="bkq"><div class="qn"><span class="qbadge">'+q.n+'</span>第 '+q.n+' 題</div>';
+      let x='<div class="bkq"><div class="qn">第 '+q.n+' 題</div>';
       if(q.wrong) x+='<div class="bkline hwbad"><b class="lb wrong">❌ 原句：</b><span>'+bkDiff(q.wrong,q.fix,'wrong')+'</span></div>'
         +'<div class="bkline hwok"><b class="lb right">✅ 訂正：</b>'+spk(q.fix)+'<span class="sent" data-t="'+esc(q.fix)+'" onclick="saySent(this)">'+bkDiff(q.fix,q.wrong,'right')+'</span></div>';
       else x+='<div class="bkline hwok"><b class="lb right">✅ 原句：</b>'+spk(q.ok)+'<span class="sent" data-t="'+esc(q.ok)+'" onclick="saySent(this)">'+esc(q.ok)+'</span></div>';
@@ -2991,7 +3401,7 @@ function bookHTML(b){
     }).join('');
 
   /* 單字：主表＋補充單字＋前次已學（有才顯示） */
-  if((b.vocab||[]).length) h+='<div class="bkbar">'+esc(b.vocabTitle||'I. 單字 Vocabulary')+'</div>'+vtable(b.vocab);
+  if((b.vocab||[]).length) h+='<div class="bkbar" id="bksec-vocab">'+esc(b.vocabTitle||'I. 單字 Vocabulary')+'</div>'+vtable(b.vocab);
   if((b.vocab2||[]).length){
     h+=subh(b.vocab2Title||'補充單字')+vtable(b.vocab2);
   }
@@ -3021,7 +3431,7 @@ function bookHTML(b){
      +exRow({en:p.ex,cn:p.exCn,hi:p.p})+'</div>').join('');
 
   /* 句型與文法解説（沒有就整節跳過） */
-  if((b.grammar||[]).length) h+='<div class="bkbar">'+esc(b.grammarTitle||'III. 句型與文法解説 Sentence Patterns & Grammar')+'</div>'
+  if((b.grammar||[]).length) h+='<div class="bkbar" id="bksec-gram">'+esc(b.grammarTitle||'III. 句型與文法解説 Sentence Patterns & Grammar')+'</div>'
    + (b.grammar||[]).map(g=>{
       let x='<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(g.k)+'. '+esc(g.title)+'</h2>';
       if(g.pat) x+='<div class="bkfml">📌 句型：'+bkVars(g.pat)+'</div>';
@@ -3097,8 +3507,13 @@ function bookHTML(b){
     h+='<div class="bkbar">'+esc(b.extraVocabTitle||'補充字彙與句型 Additional Vocabulary & Expressions')+'</div>'
      +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table class="bkxv">'
      +'<tr><th>補充內容</th><th>英文</th><th class="cnx">中文</th></tr>'
-     + b.extraVocab.map(x=>'<tr><td style="font-weight:700">'+esc(x.k)+'</td>'
-       +'<td><span class="sent" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+bkForms(bkMark(x.en))+'</span> '+spk(x.en)+'</td><td class="cnx">'+esc(x.cn)+'</td></tr>').join('')
+     + b.extraVocab.map(x=>{
+         const fb=bkFillBlanks(x.en,x.cn);
+         const enHtml=fb!==null ? fb : bkForms(bkMark(x.en));
+         return '<tr><td style="font-weight:700">'+esc(x.k)+'</td>'
+           +'<td><span class="sent" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+enHtml+'</span> '+spk(x.en)+'</td>'
+           +'<td class="cnx">'+esc(x.cn)+'</td></tr>';
+       }).join('')
      +'</table></div></div>';
   }
 
@@ -3343,11 +3758,15 @@ function auHi(i){
   auClearHi();
   const el=$('sl-'+i);
   if(el){ el.classList.add('cur'); el.scrollIntoView({block:'center',behavior:'smooth'}); }
+  const total=auLines.length||1;
+  const pt=$('au-prog-txt'); if(pt) pt.textContent='句 '+(i+1)+' / '+total;
+  const pf=$('au-prog-fill'); if(pf) pf.style.width=Math.round((i+1)*100/total)+'%';
 }
 function auBtns(){
   const p=$('au-play'), s=$('au-shadow');
-  if(p){ p.textContent = (auOn&&!auShadow) ? '⏸ 停止播放' : '▶️ 播放全部'; p.classList.toggle('playing',auOn&&!auShadow); }
-  if(s){ s.textContent = (auOn&&auShadow)  ? '⏸ 停止跟讀' : '🔁 逐句跟讀'; s.classList.toggle('shadowing',auOn&&auShadow); }
+  if(p){ p.textContent = (auOn&&!auShadow) ? '⏸' : '▶'; p.classList.toggle('playing',auOn&&!auShadow); p.classList.toggle('shadowing',auOn&&auShadow); }
+  const mp=$('au-mode-play'); if(mp) mp.classList.toggle('on',!auShadow||(!auOn));
+  if(s){ s.classList.toggle('on',auOn&&auShadow); }
 }
 function auStop(){
   auOn=false; auShadow=false; auIdx=-1;
@@ -3356,6 +3775,9 @@ function auStop(){
   if(auKeep){ clearInterval(auKeep); auKeep=null; }
   if('speechSynthesis' in window) speechSynthesis.cancel();
   auClearHi(); auBtns();
+  const total=auLines.length||1;
+  const pt=$('au-prog-txt'); if(pt) pt.textContent='句 0 / '+total;
+  const pf=$('au-prog-fill'); if(pf) pf.style.width='0';
 }
 function auNext(){
   if(!auOn) return;
@@ -3412,11 +3834,16 @@ function auAdvTog(){
 window.auAdvTog=auAdvTog;
 function audioControls(){
   const adv=localStorage.getItem('b2lab_auadv')==='1';
-  return '<div class="row" style="margin-top:2px">'
-   +'<button class="spk" id="au-play" onclick="auPlay(false)">▶️ 播放全部</button>'
-   +'<button class="spk" id="au-shadow" onclick="auPlay(true)">🔁 逐句跟讀</button>'
-   +'<button class="spk" onclick="auStop()">⏹ 停止</button>'
-   +'<button class="spk'+(adv?' on':'')+'" id="au-advbtn" onclick="auAdvTog()" title="速度與語音設定">⚙️ 設定</button>'
+  const total=auLines.length||1;
+  return '<div class="au-bar">'
+   +'<button class="au-main" id="au-play" onclick="auPlay(false)" title="播放全部">▶</button>'
+   +'<div class="au-prog-wrap"><div class="au-prog-info"><span id="au-prog-txt">句 0 / '+total+'</span><span id="au-speed">'+auRate+'x</span></div>'
+   +'<div class="au-prog-bar"><i id="au-prog-fill" style="width:0"></i></div></div>'
+   +'<div class="au-mode">'
+   +'<button id="au-mode-play" class="on" onclick="auPlay(false)">▶ 連播</button>'
+   +'<button id="au-shadow" onclick="auPlay(true)">🔁 跟讀</button></div>'
+   +'<button class="spk" onclick="auStop()" title="停止">⏹</button>'
+   +'<button class="spk'+(adv?' on':'')+'" id="au-advbtn" onclick="auAdvTog()" title="速度與語音設定">⚙️</button>'
    +'</div>'
    +'<div id="au-adv" style="display:'+(adv?'block':'none')+'">'
    +'<div class="row" style="margin-top:6px">'
@@ -3461,23 +3888,32 @@ RENDER.listen=function(){
     return '<div class="item'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
      +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(l.level)+'">'+icon+' '+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
      +'<div class="tc">'+esc(l.titleCn)+'</div>'
-     +'<div class="meta"><span>🏷 '+esc(l.topic)+'</span><span>⏱ 約 '+l.minutes+' 分鐘</span><span>📐 '+esc(l.focus)+'</span>'
-     +(l.kind==='note'?'<span>📒 取自你的筆記</span>':l.kind==='scene'?'<span>🏙️ 生活場景</span>':'')
-     +(lines?'<span>📜 '+lines+' 句逐字稿</span>':'')
+     +'<div class="meta" style="margin-top:6px"><span class="tag-chip topic">🏷 '+esc(l.topic)+'</span>'
+     +'<span class="tag-chip gram">📐 '+esc(l.focus)+'</span>'
+     +(lines?'<span class="tag-chip">📜 '+lines+' 句</span>':'')
      +'</div>'
-     +'<div class="meta"><span>'+esc(l.series)+'</span></div></div>';
+     +'<div class="meta" style="justify-content:space-between;margin-top:5px">'
+     +'<span>⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</span>'
+     +'<span class="goCta" style="margin:0"><i>'+(d?'再聽一次':'▶ 開始聽練 ➔')+'</i></span></div></div>';
   }
-  v.innerHTML='<div class="card"><h2 class="sec">🎧 聽力跟讀</h2>'
-   +'<div class="hint">每一課都是同一套流程：<b>聽前單字</b> → <b>對話逐字稿跟讀</b> → <b>理解測驗</b>。'
+  const lsDone=list.filter(l=>(ST.listenDone||{})[l.id]).length;
+  const lsPct=list.length?Math.round(lsDone*100/list.length):0;
+  v.innerHTML='<div class="card"><div class="row" style="justify-content:space-between;align-items:center"><h2 class="sec" style="margin:0">🎧 聽力跟讀</h2>'
+   +'<span class="lv" style="background:var(--ink2)">共 '+list.length+' 課</span></div>'
+   +'<div class="steps" style="margin:12px 0 6px">'
+   +'<span class="stp">1. 🔤 聽前單字</span><span class="sarr">➔</span>'
+   +'<span class="stp">2. 🗣 逐句跟讀</span><span class="sarr">➔</span>'
+   +'<span class="stp">3. ✅ 理解測驗</span></div>'
+   +'<details class="hint-toggle"><summary class="hint-sum">📌 詳細說明</summary><div class="hint">'
    +'播放用的是<b>裝置內建的語音朗讀</b>，不需要網路影片：可以整段連播、也可以<b>逐句跟讀</b>（念一句停一下讓你跟著念），速度能調 0.5x／0.75x。'
-   +'點任何一個英文字查中文，也可以把英文或中譯蓋起來自我測驗。</div>'
-   +'<div class="muted">共 '+list.length+' 課</div></div>'
+   +'點任何一個英文字查中文，也可以把英文或中譯蓋起來自我測驗。</div></details>'
+   +'<div class="rdprog" style="margin-top:8px"><span>已完成 '+lsDone+' / '+list.length+' 課</span><div class="rdbar"><i style="width:'+lsPct+'%"></i></div></div></div>'
    +(notes.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">📒 依你的課堂筆記自製</h3>'+notes.map(lsCard).join(''):'')
    +(scenes.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">🏙️ 生活場景 · 實用對話</h3>'+scenes.map(lsCard).join(''):'')
    +(others.length?'<h3 style="margin:16px 0 8px;font-size:calc(15px * var(--fs));color:var(--ink2)">🎬 VOA 課程教材</h3>'+others.map(lsCard).join(''):'');
 };
-function lsGo(id){ lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; go('listen'); }
-function lsClose(){ destroyPlayer(); stopSync(); lsOpen=null; if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.listen(); }
+function lsGo(id){ lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; sbAutoCollapse(); go('listen'); }
+function lsClose(){ destroyPlayer(); stopSync(); lsOpen=null; sbAutoExpand(); if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.listen(); }
 window.lsGo=lsGo; window.lsClose=lsClose;
 
 /* 每課的場景插圖：用簡單的 SVG 讓學習者先看到情境再聽對話 */
@@ -4091,8 +4527,9 @@ applyCnAll();
 updateHd();
 updateDayIcon();
 touchStreak();
+updateStreak();
 RENDER.daily();
-cloudPull(()=>{ touchStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); vidSubscribe(); });
+cloudPull(()=>{ touchStreak(); updateStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); vidSubscribe(); });
 </script>
 </body>
 </html>
