@@ -5,6 +5,553 @@
 window.BOOK = {
   lessons: [
     {
+      id: 'bk20260827',
+      icon: '🤝',
+      date: '2026-08-27',
+      doc: 'https://docs.google.com/document/d/1Tc_GtWYY4j3snp1lN2F4sIEEpyaHzYPNth7sw9nGCMM/edit',
+      title: 'Verb + -ing / Verb + to …, Team Chemistry and Workplace English',
+      titleCn: '動名詞與不定詞、默契用語與職場英文',
+      topics: 'Unit 53 動名詞（enjoy / mind / suggest doing）｜Unit 54 不定詞（decide / manage / forget to do）｜片語動詞 + -ing（give up / put off / keep on）｜疑問詞 + to｜團隊默契與人際搭配詞｜職場實用表達（be out of / submit / responsible for）｜Unit 53–54 課本練習完整解答',
+      hwTitle: 'I. ★ 08/27 作業複習 Homework Review',
+      hw: [
+        {
+          n: 1,
+          ok: 'Our team has great chemistry, so we can communicate efficiently.',
+          cn: '我們團隊很有默契，所以能夠有效率地溝通。',
+          pat: 'S + have + chemistry, so + S + can + V',
+          note: 'chemistry 在這裡是不可數名詞，指人與人之間「自然而然合得來」的默契、化學反應，常用搭配是 great / good / real chemistry，不加 a、也不加 s。efficiently 是副詞，修飾動詞 communicate。'
+        },
+        {
+          n: 2,
+          ok: "It's important to build good rapport with our clients.",
+          cn: '與客戶建立良好的融洽關係是很重要的。',
+          pat: 'It is + 形容詞 + to + 原形動詞（虛主詞 it）',
+          note: 'It 是虛主詞，真正的主詞是後面的 to build good rapport with our clients。rapport 指「友善且彼此理解的關係」，也是不可數名詞，固定搭配為 build / establish rapport with somebody。'
+        },
+        {
+          n: 3,
+          wrong: 'I found that we had a lot in common because we talked more.',
+          fix: 'I found that we had a lot in common as we got to know each other better.',
+          cn: '隨著我們越來越了解彼此，我發現我們有很多共同點。',
+          pat: 'S + found + that 子句 + as + 子句（隨著……）',
+          note: 'because we talked more（因為我們聊比較多）語意生硬，也沒說出「逐漸」的過程，改用 as 引導「隨著……」的漸進關係更道地；get to know somebody better 是固定用法，表示「透過實際互動逐漸更了解某人」。主句用過去式 found，後面的 had、got 也要跟著用過去式（時態一致）。課堂延伸句：They talked about all kinds of things and understood each other well, so they realized they had a lot in common.（他們無所不談、也很懂彼此，因此發現他們有很多共同點。）'
+        },
+        {
+          n: 4,
+          wrong: 'We need to handle this problem under control before it gets worse.',
+          fix: 'We need to handle this problem before it gets worse. ／ We need to keep this problem under control before it gets worse.',
+          cn: '我們必須在情況惡化之前處理這個問題／把這個問題控制住。',
+          pat: 'handle + something ／ keep + something + under control',
+          note: '老師指出 handle 本身就含有「控制、掌握」的意思，所以 handle a problem 語意已完整，後面不能再接 under control。要強調「維持在受控狀態」時，用另一個固定搭配 keep / get / bring something under control。兩個講法各自都對，但不能混在一起。另外 before 引導時間副詞子句時，用現在簡單式 gets 代替未來式，不寫 before it will get worse。'
+        },
+        {
+          n: 5,
+          ok: "After working together for many years, Tom and I can almost read each other's minds.",
+          cn: '一起共事多年之後，Tom 和我幾乎能讀出彼此的心思（很有默契）。',
+          pat: 'After + V-ing, S + can + 原形動詞',
+          note: "這句文法正確，而且正好用到本課重點：After 當介系詞時，後面要接動名詞 working，不能接原形 work。read each other's minds 是慣用語，表示「默契好到不用開口說話」；each other's 後面接複數 minds（兩個人各有一顆 mind）。"
+        }
+      ],
+      vocabTitle: 'II. 單字 Vocabulary',
+      vocab: [
+        { w: 'chemistry', ipa: '/ˈkemɪstri/', pos: 'n.', cn: '默契、化學反應',
+          ex: 'Our team has great chemistry.', exCn: '我們團隊很有默契。' },
+        { w: 'rapport', star: true, ipa: '/ræˈpɔːr/', pos: 'n.', cn: '融洽的關係',
+          ex: 'We build good rapport with our clients.', exCn: '我們與客戶建立良好的關係。' },
+        { w: 'convince', ipa: '/kənˈvɪns/', pos: 'v.', cn: '說服、使某人相信',
+          ex: 'She was curious how I convinced my boss.', exCn: '她很好奇我是怎麼說服我老闆的。' },
+        { w: 'persuade', star: true, ipa: '/pərˈsweɪd/', pos: 'v.', cn: '說服（使人去做某事）',
+          ex: 'She persuaded me to stay.', exCn: '她說服我留下來。' },
+        { w: 'concern', ipa: '/kənˈsɜːrn/', pos: 'n. / v.', cn: '擔心、關心',
+          ex: 'Thank you for your concern.', exCn: '謝謝你的關心。' },
+        { w: 'concerned', ipa: '/kənˈsɜːrnd/', pos: 'adj.', cn: '擔心的、關切的',
+          ex: 'Our client was concerned about the project delay.', exCn: '我們的客戶很擔心專案延遲。' },
+        { w: 'curiosity', star: true, ipa: '/ˌkjʊriˈɑːsəti/', pos: 'n.', cn: '好奇心',
+          ex: 'Her curiosity made her ask more questions.', exCn: '好奇心讓她問了更多問題。' },
+        { w: 'curious', ipa: '/ˈkjʊriəs/', pos: 'adj.', cn: '好奇的',
+          ex: 'She was curious how I convinced my boss.', exCn: '她很好奇我是怎麼說服我老闆的。' },
+        { w: 'identical', star: true, ipa: '/aɪˈdentɪkl/', pos: 'adj.', cn: '完全相同的（＝the same）',
+          ex: 'They are identical twins.', exCn: '他們是同卵雙胞胎。' },
+        { w: 'deny', ipa: '/dɪˈnaɪ/', pos: 'v.', cn: '否認',
+          ex: 'They denied doing anything wrong.', exCn: '他們否認做錯任何事。' },
+        { w: 'imagine', ipa: '/ɪˈmædʒɪn/', pos: 'v.', cn: '想像（動詞）',
+          ex: "I can't imagine living in another country.", exCn: '我無法想像住在另一個國家。' },
+        { w: 'image', ipa: '/ˈɪmɪdʒ/', pos: 'n.', cn: '影像、形象（名詞）',
+          ex: 'This image is not clear.', exCn: '這張影像不清楚。' },
+        { w: 'postpone', star: true, ipa: '/poʊˈspoʊn/', pos: 'v.', cn: '延期（＝put off，較正式）',
+          ex: 'They postponed the meeting.', exCn: '他們把會議延期了。' },
+        { w: 'silence', ipa: '/ˈsaɪləns/', pos: 'n.', cn: '寂靜、沉默',
+          ex: 'There was silence.', exCn: '一片寂靜。' },
+        { w: 'silent', ipa: '/ˈsaɪlənt/', pos: 'adj.', cn: '沉默的、無聲的',
+          ex: 'Please put your phone on silent mode.', exCn: '請把你的手機調成靜音模式。' },
+        { w: 'innocent', ipa: '/ˈɪnəsnt/', pos: 'adj.', cn: '清白的、無辜的',
+          ex: 'They said they were innocent.', exCn: '他們說他們是清白的。' },
+        { w: 'interrupt', ipa: '/ˌɪntəˈrʌpt/', pos: 'v.', cn: '打斷（說話）',
+          ex: 'You keep interrupting when I am talking.', exCn: '我講話的時候你一直打斷我。' },
+        { w: 'unreliable', star: true, ipa: '/ˌʌnrɪˈlaɪəbl/', pos: 'adj.', cn: '不可靠的',
+          ex: 'My car is unreliable.', exCn: '我的車不可靠。' },
+        { w: 'manage', ipa: '/ˈmænɪdʒ/', pos: 'v.', cn: '設法做到、成功做到',
+          ex: 'I managed to catch the last train.', exCn: '我設法趕上了最後一班火車。' },
+        { w: 'resident', star: true, ipa: '/ˈrezɪdənt/', pos: 'n.', cn: '居民、住戶',
+          ex: 'The residents called for help.', exCn: '居民們求救。' },
+        { w: 'submit', star: true, ipa: '/səbˈmɪt/', pos: 'v.', cn: '提交、繳交（＝send、hand in）',
+          ex: 'I need to submit the invoices to my boss for review.', exCn: '我需要把發票交給老闆審核。' },
+        { w: 'corrupted', star: true, ipa: '/kəˈrʌptɪd/', pos: 'adj.', cn: '（檔案）毀損的、打不開的',
+          ex: 'The document is corrupted.', exCn: '這份文件毀損了。' },
+        { w: 'temporary', star: true, ipa: '/ˈtempəreri/', pos: 'adj.', cn: '暫時的（＝for a short time）',
+          ex: 'This is only a temporary solution.', exCn: '這只是暫時的解決辦法。' },
+        { w: 'compress', star: true, ipa: '/kəmˈpres/', pos: 'v.', cn: '壓縮（檔案）',
+          ex: 'I need to compress the file.', exCn: '我需要把檔案壓縮。' },
+        { w: 'efficiently', ipa: '/ɪˈfɪʃntli/', pos: 'adv.', cn: '有效率地',
+          ex: 'We work efficiently together.', exCn: '我們合作很有效率。' }
+      ],
+      vocab2Title: '補充單字（Unit 53 / Unit 54）',
+      vocab2: [
+        { w: 'fancy', ipa: '/ˈfænsi/', pos: 'v.', cn: '想要、有興趣（英式口語）',
+          ex: "I don't fancy going out this evening.", exCn: '我今晚不太想出門。' },
+        { w: 'admit', ipa: '/ədˈmɪt/', pos: 'v.', cn: '承認（deny 的相反詞）',
+          ex: 'She admitted not telling the truth.', exCn: '她承認沒有說實話。' },
+        { w: 'consider', ipa: '/kənˈsɪdər/', pos: 'v.', cn: '考慮',
+          ex: 'I considered applying for the job.', exCn: '我考慮過應徵那份工作。' },
+        { w: 'recommend', ipa: '/ˌrekəˈmend/', pos: 'v.', cn: '推薦、建議（suggest 的近義詞）',
+          ex: 'I recommend travelling by train.', exCn: '我建議搭火車。' },
+        { w: 'risk', ipa: '/rɪsk/', pos: 'v.', cn: '冒……的風險',
+          ex: 'If you gamble, you risk losing your money.', exCn: '如果你賭博，你就有輸錢的風險。' },
+        { w: 'afford', star: true, ipa: '/əˈfɔːrd/', pos: 'v.', cn: '負擔得起',
+          ex: "We couldn't afford to live in London.", exCn: '我們負擔不起住在倫敦。' },
+        { w: 'deserve', star: true, ipa: '/dɪˈzɜːrv/', pos: 'v.', cn: '值得、應得',
+          ex: 'You deserve to win.', exCn: '你值得贏。' },
+        { w: 'threaten', star: true, ipa: '/ˈθretn/', pos: 'v.', cn: '威脅',
+          ex: 'He threatened to call the police.', exCn: '他威脅說要報警。' },
+        { w: 'tend', ipa: '/tend/', pos: 'v.', cn: '傾向於、往往會',
+          ex: 'He tends to talk too much.', exCn: '他往往話太多。' },
+        { w: 'pretend', star: true, ipa: '/prɪˈtend/', pos: 'v.', cn: '假裝',
+          ex: 'I pretended to be reading.', exCn: '我假裝在看書。' },
+        { w: 'claim', star: true, ipa: '/kleɪm/', pos: 'v.', cn: '聲稱',
+          ex: 'They claim to have solved the problem.', exCn: '他們聲稱已經解決了問題。' },
+        { w: 'dare', ipa: '/der/', pos: 'v.', cn: '敢',
+          ex: 'Nobody dared to say anything.', exCn: '沒有人敢說任何話。' }
+      ],
+      phrasesTitle: 'III. 片語與搭配詞索引 Phrases & Collocations',
+      phrases: [
+        { p: 'have a lot in common', cn: '有很多共同點',
+          ex: 'I found that we had a lot in common as we got to know each other better.', exCn: '隨著我們越來越了解彼此，我發現我們有很多共同點。' },
+        { p: 'get to know somebody', cn: '逐漸認識、了解某人',
+          ex: 'I found that we had a lot in common as we got to know each other better.', exCn: '隨著我們越來越了解彼此，我發現我們有很多共同點。' },
+        { p: "read each other's minds", cn: '心有靈犀、很有默契',
+          ex: "After working together for many years, Tom and I can almost read each other's minds.", exCn: '一起共事多年之後，Tom 和我幾乎能讀出彼此的心思。' },
+        { p: 'build rapport with somebody', cn: '與某人建立融洽關係',
+          ex: "It's important to build good rapport with our clients.", exCn: '與客戶建立良好的融洽關係是很重要的。' },
+        { p: 'have the same taste in …', cn: '在……方面品味相同',
+          ex: 'We have the same taste in food / clothes / movies.', exCn: '我們在食物／衣服／電影方面品味相同。' },
+        { p: 'keep something under control', cn: '把某事控制住',
+          ex: 'We need to keep this problem under control before it gets worse.', exCn: '我們必須在情況惡化之前把這個問題控制住。' },
+        { p: 'be concerned about …', cn: '擔心、關切……',
+          ex: 'Our client was concerned about the project delay.', exCn: '我們的客戶很擔心專案延遲。' },
+        { p: 'be out of + 名詞', cn: '（東西）用完了、缺貨',
+          ex: 'The store is out of coffee.', exCn: '那家店咖啡賣完了。' },
+        { p: 'run out of + 名詞', cn: '逐漸用光',
+          ex: 'We ran out of coffee during the meeting.', exCn: '開會開到一半咖啡就喝完了。' },
+        { p: 'be responsible for + N / V-ing', cn: '負責……',
+          ex: 'I am responsible for purchasing the test equipment.', exCn: '我負責採購測試設備。' },
+        { p: "That's all about …", cn: '關於……就講到這裡',
+          ex: "That's all about my presentation.", exCn: '我的簡報就到這裡。' },
+        { p: 'manage to + 原形動詞', cn: '設法做到、成功做到',
+          ex: 'I managed to finish the report on time.', exCn: '我設法及時完成了報告。' },
+        { p: 'give up + V-ing', cn: '放棄（做某事）',
+          ex: 'I have given up buying newspapers.', exCn: '我已經不再買報紙了。' },
+        { p: 'put off + V-ing', cn: '延後、拖延（做某事）',
+          ex: "You shouldn't put off telling him what happened.", exCn: '你不該拖著不告訴他發生了什麼事。' },
+        { p: 'put out + 受詞', cn: '撲滅（火、燈）',
+          ex: 'The firefighters put out the fire in ten minutes.', exCn: '消防員十分鐘內把火撲滅了。' },
+        { p: 'go on / carry on + V-ing', cn: '繼續（做某事）',
+          ex: "Catherine doesn't want to retire. She wants to carry on working.", exCn: 'Catherine 不想退休，她想繼續工作。' },
+        { p: 'keep / keep on + V-ing', cn: '一直、反覆（做某事）',
+          ex: 'You keep interrupting when I am talking.', exCn: '我講話的時候你一直打斷我。' },
+        { p: 'keep somebody waiting', cn: '讓某人等著',
+          ex: 'Sorry to keep you waiting so long.', exCn: '抱歉讓你等這麼久。' },
+        { p: 'keep breaking down', cn: '三天兩頭故障',
+          ex: 'My car is unreliable. It keeps breaking down.', exCn: '我的車不可靠，老是拋錨。' },
+        { p: 'be X hours ahead of / behind …', cn: '比……快／慢 X 小時',
+          ex: 'Taiwan is 16 hours ahead of California.', exCn: '台灣比加州快 16 小時。' }
+      ],
+      grammarTitle: 'IV–V. Unit 53 動詞 + -ing／Unit 54 動詞 + to',
+      grammar: [
+        {
+          k: 'A', title: 'enjoy / mind / suggest 後面一定接 -ing',
+          pat: '主詞 + enjoy / mind / suggest + V-ing',
+          pts: [
+            '⭐ 老師強調的核心原則：一個句子裡如果有兩個動詞，而第一個動詞屬於下面的清單，第二個動詞就要變成 -ing；而且只有第一個動詞會隨時態變化（現在式／過去式／未來式），後面的 -ing 動詞永遠不變。',
+            '老師列出的完整 -ing 動詞清單：enjoy、mind、suggest、recommend、consider、admit、deny、avoid、risk、imagine、fancy、stop、finish。',
+            '⚠️ 不能說 I enjoy to read／mind to close／suggested to go。',
+            '這些動詞後面接的是動名詞（V-ing，當名詞用），不是不定詞。中文母語者最容易把「我喜歡讀書」直翻成 I enjoy to read，這是本課最重要的陷阱。fancy doing something ＝ 有興趣做某事；I don’t fancy… 就是「我不太想……」。',
+            '否定形是 not + V-ing。'
+          ],
+          exs: [
+            { en: 'I enjoy reading.', cn: '我喜歡讀書。', hi: 'reading' },
+            { en: 'Would you mind closing the door?', cn: '你介意把門關上嗎？', hi: 'closing' },
+            { en: 'Chris suggested going to the cinema.', cn: 'Chris 建議去看電影。', hi: 'suggested going' },
+            { en: 'He will do the shopping when he has finished cleaning the flat.', cn: '他打掃完公寓後就會去買東西。', hi: 'finished cleaning' },
+            { en: 'He tried to avoid answering my question.', cn: '他試圖避開我的問題。', hi: 'avoid answering' },
+            { en: 'Have you ever considered going to live in another country?', cn: '你有沒有考慮過搬到別的國家住？', hi: 'considered going' },
+            { en: 'They denied doing anything wrong.', cn: '他們否認做錯任何事。', hi: 'denied doing' },
+            { en: "When I'm on holiday, I enjoy not having to get up early.", cn: '放假時我很享受不用早起。', hi: 'not having' }
+          ]
+        },
+        {
+          k: 'B', title: '片語動詞後面也接 -ing',
+          pat: 'give up / put off / go on / carry on / keep (on) + V-ing',
+          pts: [
+            'give up ＝ 放棄（＝stop）；put off ＝ 延後（＝postpone、delay）；go on / carry on ＝ 繼續；keep / keep on ＝ 一直、反覆做（常帶負面語氣）。',
+            'keep + V-ing 也常用來描述機器「老是、三天兩頭」故障。'
+          ],
+          exs: [
+            { en: 'I have given up buying newspapers.', cn: '我已經不再買報紙了。', hi: 'given up buying' },
+            { en: "You shouldn't put off telling him what happened.", cn: '你不該拖著不告訴他發生了什麼事。', hi: 'put off telling' },
+            { en: "Catherine doesn't want to retire. She wants to carry on working.", cn: 'Catherine 不想退休，她想繼續工作。', hi: 'carry on working' },
+            { en: 'You keep interrupting when I am talking.', cn: '我講話的時候你一直打斷我。', hi: 'keep interrupting' },
+            { en: 'My car is unreliable. It keeps breaking down.', cn: '我的車不可靠，老是拋錨。', hi: 'keeps breaking down' },
+            { en: 'The system keeps crashing.', cn: '系統一直當機。', hi: 'keeps crashing' }
+          ]
+        },
+        {
+          k: 'C', title: '動詞 + 某人 + -ing',
+          pat: '動詞 + somebody + V-ing（stop / imagine / keep / remember someone doing something）',
+          pts: [
+            '中間插入的「某人」是動名詞的意義上的主詞——是「她說」、「George 騎」。口語常用受格（her、you、people），正式寫法可用所有格（her saying）。',
+            '老師建議特別多練 stop someone doing something 與 imagine someone doing something 這兩個句型。'
+          ],
+          exs: [
+            { en: "You can't stop people doing what they want.", cn: '你無法阻止別人做他們想做的事。', hi: 'stop people doing' },
+            { en: "I can't imagine George riding a motorbike.", cn: '我無法想像 George 騎機車的樣子。', hi: 'imagine George riding' },
+            { en: "I don't remember her saying that.", cn: '我不記得她說過那句話。', hi: 'remember her saying' },
+            { en: 'Sorry to keep you waiting so long.', cn: '抱歉讓你等這麼久。（＝我遲到，害你一直等）', hi: 'keep you waiting' }
+          ]
+        },
+        {
+          k: 'D', title: '完成動名詞 having done（強調已經做完）',
+          pat: '動詞 + having + 過去分詞',
+          pts: [
+            '不一定要用 having：They admitted stealing the money. 意思一樣。'
+          ],
+          exs: [
+            { en: 'They admitted having stolen the money.', cn: '他們承認偷了那筆錢。', hi: 'having stolen' },
+            { en: 'I now regret saying that. = I now regret having said that.', cn: '我現在後悔說了那句話。', hi: 'having said' }
+          ]
+        },
+        {
+          k: 'E', title: 'admit / deny / suggest / recommend 也可以接 that 子句',
+          patLabel: '動名詞寫法 ↔ that 子句寫法（兩種都可以）',
+          pts: [
+            'They denied doing anything wrong. ＝ They denied that they had done anything wrong.（他們否認做錯任何事。）',
+            'Chris suggested going to the cinema. ＝ Chris suggested that we go to the cinema.（Chris 建議我們去看電影。）',
+            'I recommend travelling by train. ＝ I recommend that you travel by train.（我建議你搭火車。）',
+            '⚠️ 課堂訂正：學生寫的 I suggest Ted running outside. 不通順。要嘛簡單寫 I suggested going for a run.（我建議去跑步）；要嘛指名某人時改用 that 子句：I suggested that Ted go for a run.（正式英文中 that 子句用原形動詞 go）。'
+          ]
+        },
+        {
+          k: 'F', title: '這些動詞後面接 to + 原形動詞',
+          pat: '主詞 + 動詞 + to + 原形動詞',
+          pts: [
+            '動詞群：offer、agree、refuse、decide、plan、arrange、hope、forget、manage、fail、promise、threaten、deserve、afford、learn、tend。',
+            '⭐ 課堂重點 manage to + 原形動詞：設法做到、成功做到、想辦法完成。用來描述已經發生、有難度但做成了的事（過去式）。'
+          ],
+          exs: [
+            { en: 'It was a long way to walk, so we decided to take a taxi home.', cn: '路太遠，所以我們決定搭計程車回家。', hi: 'decided to take' },
+            { en: 'I waved to Karen, but failed to attract her attention.', cn: '我向 Karen 揮手，但沒能引起她的注意。', hi: 'failed to attract' },
+            { en: 'I like Dan, but I think he tends to talk too much.', cn: '我喜歡 Dan，但我覺得他往往話太多。', hi: 'tends to talk' },
+            { en: 'I managed to finish the report on time.', cn: '我設法及時完成了報告。', hi: 'managed to finish' },
+            { en: 'She managed to fix the printer.', cn: '她成功把印表機修好了。', hi: 'managed to fix' },
+            { en: 'We managed to solve the problem.', cn: '我們設法解決了這個問題。', hi: 'managed to solve' },
+            { en: 'I managed to catch the last train.', cn: '我設法趕上了最後一班火車。', hi: 'managed to catch' }
+          ]
+        },
+        {
+          k: 'G', title: '否定形是 not to',
+          pat: '主詞 + 動詞 + not to + 原形動詞',
+          pts: [
+            'not 放在 to 的前面，不是 to not be。這和動名詞的否定（not having）位置邏輯一致：否定詞都放在該結構的最前面。'
+          ],
+          exs: [
+            { en: 'We decided not to go out because of the weather.', cn: '因為天氣的關係，我們決定不出門。', hi: 'not to go' },
+            { en: 'I promised not to be late.', cn: '我答應不會遲到。', hi: 'not to be' }
+          ]
+        },
+        {
+          k: 'H', title: 'dare 敢',
+          patLabel: '肯定句 dare (to) V；否定 dare not / daren’t + 原形（不加 to）',
+          pts: [
+            '肯定句可加 to、也可不加：I didn’t dare to tell him. ＝ I didn’t dare tell him.',
+            '⚠️ 但 dare not / daren’t 後面絕對不加 to：I daren’t tell him what happened.（不能說 I daren’t to tell him）'
+          ]
+        },
+        {
+          k: 'I', title: 'seem / appear / pretend / claim + 不定詞',
+          patLabel: 'to + 原形／to be + V-ing／to have + 過去分詞／not to …',
+          pts: [
+            'to + 原形（現在的狀態）：They seem to have plenty of money.（他們似乎很有錢。）',
+            'to be + V-ing（進行式不定詞）：I pretended to be reading the newspaper. ＝ I pretended that I was reading.（我假裝在看報紙。）',
+            'to have + 過去分詞（完成式不定詞）：I seem to have lost them. ＝ It seems that I have lost them.（我好像把它們弄丟了。）',
+            '否定：She claimed not to have seen me. ＝ She claimed that she hadn’t seen me.（她聲稱沒看到我。）'
+          ]
+        },
+        {
+          k: 'J', title: '疑問詞 + to（what / how / where / whether + to）',
+          pat: '動詞 + 疑問詞 + to + 原形動詞',
+          pts: [
+            '可接疑問詞 + to 的動詞：ask、know、decide、remember、forget、learn、explain、understand、wonder。',
+            '也可以是「動詞 + 某人 + 疑問詞 + to」：show / tell / ask / advise / teach somebody what / how / where to do something。'
+          ],
+          exs: [
+            { en: 'We asked how to get to the station.', cn: '我們問了要怎麼去車站。', hi: 'how to get' },
+            { en: 'Have you decided where to go on holiday?', cn: '你決定好假期要去哪裡了嗎？', hi: 'where to go' },
+            { en: "I don't know whether to apply for the job or not.", cn: '我不知道要不要應徵那份工作。', hi: 'whether to apply' },
+            { en: 'Can somebody show me how to use this camera?', cn: '有人可以教我怎麼用這台相機嗎？', hi: 'how to use' },
+            { en: "Ask Jack. He'll tell you what to do.", cn: '問 Jack，他會告訴你該怎麼做。', hi: 'what to do' }
+          ]
+        },
+        {
+          k: 'K', title: '其他成對字（老師特別提醒要一起背）',
+          patLabel: '反義詞／近義詞／詞性不同',
+          pts: [
+            'admit ↔ deny（反義詞）：admit ＝ 承認、deny ＝ 否認。She admitted not telling the truth. ↔ They denied doing anything wrong.',
+            'recommend ≈ suggest（近義詞）：兩者都是「建議」，後面都接 V-ing 或 that 子句。I recommend travelling by train. ／ Chris suggested going to the cinema.',
+            'imagine ↔ image（詞性不同）：imagine 是動詞（想像）；image 是名詞（影像、圖片、形象）。I can’t imagine George riding a motorbike. ／ This image is not clear.',
+            'silence ↔ silent（詞性不同）：silence 是名詞；silent 是形容詞。There was silence. ／ Please put your phone on silent mode.',
+            'convince ≈ persuade（近義詞）：詳見下方比較表。'
+          ]
+        },
+        {
+          k: 'L', title: '描述「合得來、有默契」的四種說法',
+          patLabel: '團隊默契與人際用語 Chemistry, Rapport & Common Ground',
+          pts: [
+            'have (great) chemistry ── 強調自然而然的來電、火花，常用於團隊或搭檔（很有默契、很來電）。',
+            'build rapport with sb ── 較正式，強調「刻意經營」出來的友善互信關係，商務場合常用（建立融洽關係）。',
+            'have a lot in common ── 中性，指興趣、背景、想法上的共同點；常與 get to know each other 一起出現（有很多共同點）。',
+            "read each other's minds ── 最口語誇張，形容默契好到不用開口（心有靈犀）。",
+            'chemistry 與 rapport 都是不可數名詞，不加 a、不加 -s。common 在 have a lot in common 裡是名詞用法（共同之處），程度可換成 have something / nothing / a great deal in common。'
+          ]
+        }
+      ],
+      cmpTitle: 'VI. 易混淆比較 Tricky Pairs',
+      cmp: [
+        { u: 'put off', sc: '延後、拖延（＝postpone、delay），後面接事情或 V-ing',
+          ex: 'They put off the meeting until Friday.', exCn: '他們把會議延到星期五。', cn: '延後、拖延' },
+        { u: 'put off + V-ing', sc: '拖著不做某事',
+          ex: "I've put off paying this bill so many times.", exCn: '這張帳單我已經拖了好多次沒付。', cn: '拖著不做某事' },
+        { u: 'put out', sc: '撲滅（火、燈、菸），後面接 fire、light、cigarette',
+          ex: 'The firefighters put out the fire in ten minutes.', exCn: '消防員十分鐘內把火撲滅了。', cn: '撲滅' },
+        { u: 'convince', sc: '讓對方相信某件事是真的（改變想法）：convince sb that 子句／of something',
+          ex: 'He convinced me that he was innocent.', exCn: '他讓我相信他是清白的。', cn: '說服、使某人相信' },
+        { u: 'persuade', sc: '讓對方去做某個動作（改變行為）：persuade sb to do something',
+          ex: 'She persuaded me to stay.', exCn: '她說服我留下來。', cn: '說服（使人去做某事）' },
+        { u: 'stop + V-ing', sc: '停止「正在做的那件事」',
+          ex: 'Suddenly everybody stopped talking. There was silence.', exCn: '突然大家都停止說話，一片寂靜。', cn: '停止正在做的事' },
+        { u: 'stop + to V', sc: '停下來「為了去做另一件事」（to 表目的）',
+          ex: 'He stopped to answer the phone.', exCn: '他停下手邊的事去接電話。', cn: '停下來去做另一件事' }
+      ],
+      cmpWarn: {
+        title: '⚠ 課堂例句訂正：put off vs. put out',
+        bad: 'The residents managed to put off the fire.',
+        good: ['The residents managed to put out the fire.　居民們設法把火撲滅了。']
+      },
+      extraTitle: 'VII–X. 職場與人際用語、課本練習完整解答',
+      extra: [
+        {
+          title: 'A. be out of ／ run out of（東西用完、缺貨）',
+          exs: [
+            { en: 'I am out of money.', cn: '我沒錢了。（be out of ＝ 強調現在的狀態）', hi: 'out of' },
+            { en: 'He is out of money.', cn: '他沒錢了。', hi: 'out of' },
+            { en: 'The store is out of coffee.', cn: '那家店咖啡賣完了。', hi: 'out of' },
+            { en: 'My pen is out of ink.', cn: '我的筆沒墨水了。', hi: 'out of' },
+            { en: 'We ran out of coffee during the meeting.', cn: '開會開到一半咖啡就喝完了。（run out of ＝ 強調用光的過程）', hi: 'ran out of' }
+          ]
+        },
+        {
+          title: 'B. 系統與檔案出狀況',
+          exs: [
+            { en: "The cloud service is down, so I can't upload the file.", cn: '雲端服務掛了，所以我沒辦法上傳檔案。', hi: 'service is down' },
+            { en: "The document is corrupted and I can't open it.", cn: '這份文件毀損了，我打不開。', hi: 'corrupted' },
+            { en: 'I need to compress the file before sending it.', cn: '我需要先把檔案壓縮再寄出。', hi: 'compress the file' },
+            { en: 'Sorry, the connection is not good today.', cn: '抱歉，今天連線品質不太好。', hi: 'connection is not good' }
+          ]
+        },
+        {
+          title: 'C. 提交、負責與收尾用語',
+          exs: [
+            { en: 'I need to submit the invoices to my boss for review.', cn: '我需要把發票交給老闆審核。（submit ＝ send / hand in，較正式）', hi: 'submit' },
+            { en: 'I need to submit my test report to my clients.', cn: '我需要把測試報告交給客戶。', hi: 'submit' },
+            { en: 'I am responsible for purchasing the test equipment.', cn: '我負責採購測試設備。', hi: 'responsible for' },
+            { en: "That's all about my presentation.", cn: '我的簡報就到這裡。', hi: "That's all about" },
+            { en: "That's all about today's lesson.", cn: '今天的課就上到這裡。', hi: "That's all about" },
+            { en: 'This is only a temporary solution.', cn: '這只是暫時的解決辦法。（temporary ＝ for a short time）', hi: 'temporary' }
+          ]
+        },
+        {
+          title: 'D. 描述「品味相同」',
+          exs: [
+            { en: 'We have the same taste in food / clothes / movies.', cn: '我們在食物／衣服／電影方面品味相同。', hi: 'the same taste in' },
+            { en: 'They are identical twins.', cn: '他們是同卵雙胞胎。（identical ＝ the same，語氣更強）', hi: 'identical' }
+          ]
+        },
+        {
+          title: 'E. 表達關心與好奇',
+          exs: [
+            { en: 'Our client was concerned about the project delay.', cn: '我們的客戶很擔心專案延遲。', hi: 'concerned about' },
+            { en: 'Thank you for your concern.', cn: '謝謝你的關心。（回應別人表達擔心時的固定說法，concern 此處為名詞）', hi: 'concern' },
+            { en: 'She was curious how I convinced my boss.', cn: '她很好奇我是怎麼說服我老闆的。', hi: 'curious how' }
+          ]
+        },
+        {
+          title: 'F. 課本練習 53.1　Complete the sentences for each situation. Use -ing.',
+          exs: [
+            { en: 'She suggested going to the zoo.', cn: '1. A: What shall we do? B: We could go to the zoo.／她建議去動物園。', hi: 'suggested going' },
+            { en: "He didn't fancy playing tennis.", cn: '2. A: Do you want to play tennis? B: No, not really.／他不太想打網球。', hi: 'fancy playing' },
+            { en: 'She suggested going for a walk.', cn: "3. A: Let's go for a walk. B: Good idea!／她建議去散步。", hi: 'suggested going' },
+            { en: 'He denied causing the accident.', cn: "4. A: You caused the accident. B: No, I didn't.／他否認造成了這場意外。", hi: 'denied causing' },
+            { en: "They didn't mind waiting a few minutes.", cn: '5. A: Can you wait a few minutes? B: Sure, no problem.／他們不介意等幾分鐘。', hi: 'mind waiting' },
+            { en: 'She admitted not telling the truth.', cn: "6. A: You didn't tell the truth. B: That's right. I didn't.／她承認沒有說實話。", hi: 'admitted not telling' }
+          ]
+        },
+        {
+          title: 'G. 課本練習 53.2　Complete the sentences（answer、apply、forget、interrupt、listen、live、lose、make、pay、read、travel、try，每個用一次）',
+          exs: [
+            { en: 'He tried to avoid answering my question.', cn: '1. 他試圖避開我的問題。', hi: 'answering' },
+            { en: "I'm trying to concentrate. Please stop making so much noise!", cn: '2. 我正在專心，請不要再製造這麼多噪音了！', hi: 'making' },
+            { en: 'I enjoy listening to music.', cn: '3. 我喜歡聽音樂。', hi: 'listening' },
+            { en: 'I considered applying for the job, but in the end I decided against it.', cn: '4. 我考慮過應徵那份工作，但最後決定不去。', hi: 'applying' },
+            { en: 'Have you finished reading the newspaper yet?', cn: '5. 報紙你看完了嗎？', hi: 'reading' },
+            { en: "We need to change our routine. We can't go on living like this.", cn: '6. 我們得改變作息，不能再這樣過下去了。', hi: 'living' },
+            { en: "It's better to avoid travelling during the rush hour.", cn: '7. 最好避免在尖峰時間移動。', hi: 'travelling' },
+            { en: 'My memory is getting worse. I keep forgetting things.', cn: '8. 我記性越來越差，老是忘東忘西。', hi: 'forgetting' },
+            { en: "I've put off paying this bill so many times. I really must do it today.", cn: '9. 這張帳單我已經拖了好多次沒付，今天真的得付了。', hi: 'paying' },
+            { en: "I've given up trying to learn Japanese. I was making no progress.", cn: '10. 我放棄學日文了，一直沒有進步。', hi: 'trying' },
+            { en: 'If you gamble, you risk losing your money.', cn: '11. 如果你賭博，你就有輸錢的風險。', hi: 'losing' },
+            { en: 'Would you mind not interrupting me all the time? Let me speak!', cn: '12. 你可以不要一直打斷我嗎？讓我說話！', hi: 'not interrupting' }
+          ]
+        },
+        {
+          title: 'H. 課本練習 53.3　Put the words in the right order.',
+          exs: [
+            { en: "I don't remember her saying that.", cn: '1. Did she really say that?／我不記得她說過那句話。', hi: 'remember her saying' },
+            { en: "I don't mind you driving it.", cn: '2. It’s OK if you want to drive my car.／我不介意你開它。', hi: 'mind you driving' },
+            { en: 'Can you imagine anybody being so stupid?', cn: '3. What a stupid thing to do!／你能想像有人這麼笨嗎？', hi: 'imagine anybody being' },
+            { en: "We can't stop it raining.", cn: "4. We can't control the weather.／我們無法阻止下雨。", hi: 'stop it raining' },
+            { en: "I don't want to keep you waiting.", cn: '5. I’ll be as quick as I can.／我不想讓你一直等。', hi: 'keep you waiting' }
+          ]
+        },
+        {
+          title: 'I. 課本練習 53.4　Use your own ideas. Use -ing.（開放題，以下為課堂／參考答案）',
+          exs: [
+            { en: "She's a very interesting person. I always enjoy talking to her.", cn: '1. 她是個很有趣的人，我總是很享受和她聊天。（課本範例）', hi: 'talking to her' },
+            { en: "I'm not feeling very well. I don't fancy going out this evening.", cn: '2. 我不太舒服，今晚不太想出門。', hi: 'going out this evening' },
+            { en: "I'm afraid there aren't any chairs. I hope you don't mind standing up.", cn: '3. 恐怕沒有椅子了，希望你不介意站著。（⭐ 課堂答案）', hi: 'standing up' },
+            { en: 'It was a beautiful day, so I suggested going for a walk.', cn: '4. 那天天氣很好，所以我建議去散步／去跑步（I suggested going for a run.）。（⭐ 課堂答案）', hi: 'going for a walk' },
+            { en: "The movie was very funny. I couldn't stop laughing.", cn: '5. 那部電影很好笑，我笑到停不下來。（⭐ 課堂訂正：因為 funny，要用 laughing，不是 watching）', hi: 'laughing' },
+            { en: 'My car is unreliable. It keeps breaking down.', cn: '6. 我的車不可靠，老是拋錨。（⭐ 課堂答案：keep + V-ing；break down 是「機械故障」的固定搭配）', hi: 'breaking down' }
+          ]
+        },
+        {
+          title: 'J. 課本練習 54.1　Complete the sentences for these situations.',
+          exs: [
+            { en: 'They decided to get married.', cn: "1. A: Shall we get married? B: Yes, let's.／他們決定結婚。", hi: 'to get married' },
+            { en: 'She agreed to help him.', cn: '2. A: Please help me. B: OK.／她答應幫他。', hi: 'to help him' },
+            { en: 'He offered to carry her bag.', cn: '3. A: Can I carry your bag for you? B: No, thanks. I can manage.／他主動要幫她提袋子。', hi: 'to carry her bag' },
+            { en: "They arranged to meet at 8 o'clock.", cn: "4. A: Let's meet at 8 o'clock. B: OK, fine.／他們約好八點見面。", hi: 'to meet' },
+            { en: 'She refused to tell him her name.', cn: "5. A: What's your name? B: I'm not going to tell you.／她拒絕告訴他自己的名字。", hi: 'to tell him her name' },
+            { en: 'She promised not to tell anyone.', cn: "6. A: Please don't tell anyone. B: I won't. I promise.／她答應不告訴任何人。", hi: 'not to tell anyone' }
+          ]
+        },
+        {
+          title: 'K. 課本練習 54.2　Complete the sentences. Use a suitable verb.',
+          exs: [
+            { en: "Don't forget to lock the door when you go out.", cn: '1. 出門時別忘了鎖門。', hi: 'to lock' },
+            { en: 'There was a lot of traffic, but we managed to get to the airport in time.', cn: '2. 路上很塞，但我們設法及時趕到機場。', hi: 'to get' },
+            { en: "We couldn't afford to live in London. It's too expensive.", cn: '3. 我們負擔不起住在倫敦，太貴了。', hi: 'to live' },
+            { en: "I can't play a musical instrument, but I'd like to learn to play the guitar.", cn: '4. 我不會樂器，但我想學彈吉他。', hi: 'to play' },
+            { en: 'I don’t want Mark to know what happened. I decided not to tell him.', cn: '5. 我不想讓 Mark 知道發生什麼事，我決定不告訴他。', hi: 'not to tell' },
+            { en: 'We were all afraid to speak. Nobody dared to say anything.', cn: '6. 我們都不敢說話，沒有人敢說任何事。', hi: 'to say' }
+          ]
+        },
+        {
+          title: 'L. 課本練習 54.3　Put the verb into the correct form, to … or -ing.',
+          exs: [
+            { en: "When I'm tired, I enjoy watching TV. It's relaxing.", cn: '1. (watch) 我累的時候喜歡看電視，很放鬆。', hi: 'watching' },
+            { en: "I've decided to look for another job. I need a change.", cn: '2. (look) 我決定找另一份工作，我需要改變。', hi: 'to look' },
+            { en: "I'm not going anywhere! I refuse to move.", cn: '3. (move) 我哪裡都不去！我拒絕移動。', hi: 'to move' },
+            { en: "I'm not in a hurry. I don't mind waiting.", cn: '4. (wait) 我不趕時間，我不介意等。', hi: 'waiting' },
+            { en: 'Tina ran in a marathon last week, but she failed to finish.', cn: '5. (finish) Tina 上週跑了馬拉松，但沒能跑完。', hi: 'to finish' },
+            { en: "I wish that dog would stop barking. It's driving me crazy.", cn: '6. (bark) 真希望那隻狗別再叫了，快把我逼瘋了。', hi: 'barking' },
+            { en: 'They didn’t know I was listening to them. I pretended to be asleep.', cn: '7. (be) 他們不知道我在聽，我假裝睡著了。', hi: 'to be' },
+            { en: 'We were hungry, so I suggested having dinner early.', cn: '8. (have) 我們餓了，所以我建議早點吃晚餐。', hi: 'having' },
+            { en: "Hurry up! I don't want to risk missing the train.", cn: '9. (miss) 快點！我不想冒錯過火車的風險。', hi: 'missing' },
+            { en: 'David is very quiet. He tends not to say much.', cn: '10. (say) David 很安靜，他往往話不多。', hi: 'not to say' }
+          ]
+        },
+        {
+          title: 'M. 課本練習 54.4　Make a new sentence using the verb in brackets.',
+          exs: [
+            { en: 'I seem to have lost my keys.', cn: "1. I've lost my keys. (seem)／我好像把鑰匙弄丟了。（課本範例）", hi: 'to have lost' },
+            { en: 'Tom appears to be worried about something.', cn: '2. Tom is worried about something. (appear)／Tom 好像在擔心什麼事。', hi: 'to be worried' },
+            { en: 'You seem to know a lot of people.', cn: '3. You know a lot of people. (seem)／你好像認識很多人。', hi: 'to know' },
+            { en: 'My English seems to be getting better.', cn: '4. My English is getting better. (seem)／我的英文好像在進步。', hi: 'to be getting' },
+            { en: 'That car appears to have broken down.', cn: '5. That car has broken down. (appear)／那輛車好像拋錨了。', hi: 'to have broken down' },
+            { en: 'Rachel seems to be enjoying her job.', cn: '6. Rachel is enjoying her job. (seem)／Rachel 好像很喜歡她的工作。', hi: 'to be enjoying' },
+            { en: 'They claim to have solved the problem.', cn: '7. They have solved the problem. (claim)／他們聲稱已經解決了問題。', hi: 'to have solved' }
+          ]
+        },
+        {
+          title: 'N. 課本練習 54.5　Complete each sentence using what / how / where / whether + these verbs（do、get、go、put、ride、use）',
+          exs: [
+            { en: 'Do you know how to get to the airport from here?', cn: '1. 你知道從這裡怎麼去機場嗎？', hi: 'how to get to' },
+            { en: 'Would you know what to do if there was a fire in the building?', cn: '2. 如果大樓失火，你知道該怎麼做嗎？', hi: 'what to do' },
+            { en: "You'll never forget how to ride a bike once you've learnt.", cn: '3. 學會騎腳踏車之後，你永遠不會忘記怎麼騎。', hi: 'how to ride' },
+            { en: "I've been invited to the party, but I haven't decided whether to go or not.", cn: '4. 我被邀請去派對了，但還沒決定要不要去。', hi: 'whether to go' },
+            { en: "My room is very untidy. I've got so many things and I don't know where to put them.", cn: '5. 我的房間很亂，東西太多了，我不知道該把它們放哪裡。', hi: 'where to put' },
+            { en: 'I have some clothes to wash. Can you show me how to use the washing machine?', cn: '6. 我有些衣服要洗，你可以教我怎麼用洗衣機嗎？', hi: 'how to use' }
+          ]
+        }
+      ],
+      extraVocabTitle: 'XI. 課堂其他小句與複習計畫 Extra Notes & Study Plan',
+      extraVocab: [
+        { k: '比……快／慢 X 小時', en: 'Taiwan is 16 hours ahead of California. Vietnam is one hour behind Taiwan.', cn: 'ahead 後面一定加 of；behind 後面直接接地點。' },
+        { k: '就我記憶所及', en: 'as I remember / as far as I remember', cn: '語氣較保留，表示不敢百分之百確定。' },
+        { k: '越南國慶日', en: 'Vietnam National Day', cn: '本週放假的原因，課堂閒聊時提到。' },
+        { k: 'convince / persuade 快速判斷', en: 'convince sb that … ／ persuade sb to do …', cn: '重點在「心裡怎麼想」用 convince；重點在「人去做了什麼」用 persuade。現代英文中 convince sb to do 也很常見，但考試上仍以 persuade sb to do 最安全。' },
+        { k: 'be out of 要有動詞', en: 'I am out of money. He is out of money. The store is out of coffee.', cn: '完整句子一定要有動詞，不能只寫 I out of money；be 動詞要跟主詞一致。' },
+        { k: 'responsible for + N / V-ing', en: 'I am responsible for purchasing the test equipment.', cn: 'for 是介系詞，後面要接名詞或動名詞（purchasing），不能接原形動詞 purchase。' },
+        { k: 'concern 的詞性', en: 'Thank you for your concern. ／ be concerned about something', cn: 'concern 可當名詞也可當動詞；形容詞形式是 concerned，固定搭配 be concerned about something。curious 是形容詞，名詞是 curiosity。' },
+        { k: '54.4 的判斷原則', en: 'to be + V-ing ／ to have + 過去分詞 ／ to + 原形', cn: '原句是進行式（is worried / is getting / is enjoying）→ 改成 to be + V-ing；原句是完成式（has broken down / have solved）→ 改成 to have + 過去分詞；原句是簡單式（know）→ 直接 to + 原形。' },
+        { k: '① 複習範圍', en: '8/1 – 8/27', cn: '複習 8 月 1 日以來所有分享過的單字與筆記。' },
+        { k: '② 背 -ing 動詞清單', en: 'enjoy、mind、suggest、recommend、consider、admit、deny、avoid、risk、imagine、fancy、stop、finish', cn: '把接 -ing 的動詞清單背起來，連拼字和發音一起記。' },
+        { k: '③ 完成課本練習', en: 'Unit 53 練習 53.1 ～ 53.4', cn: '先把動詞寫出來、背熟，再做題目。' },
+        { k: '④ 練習成對字', en: 'admit ↔ deny ／ recommend ≈ suggest', cn: '練習拼字與成對字：反義詞 admit ↔ deny、近義詞 recommend ≈ suggest。' },
+        { k: '⑤ 多造句練習', en: 'stop someone doing something ／ imagine someone doing something', cn: '多造句練習這兩個句型。' },
+        { k: '⑥ 下次上課主題', en: 'stop to do vs. stop doing', cn: 'Unit 54 意思會改變的動詞，其中 stop 是代表例子。' }
+      ],
+      summaryTitle: 'XII. 快速總結 Quick Summary',
+      summary: [
+        { k: '兩個動詞的規則', v: '第一個動詞屬於 -ing 清單時，第二個動詞變 V-ing；只有第一個動詞跟著時態變。' },
+        { k: 'enjoy / mind / suggest', v: '後面只能接 V-ing，不能接 to；I enjoy reading（不能說 I enjoy to read）。' },
+        { k: '接 -ing 的動詞群', v: 'enjoy、mind、suggest、recommend、consider、admit、deny、avoid、risk、imagine、fancy、stop、finish' },
+        { k: '片語動詞 + V-ing', v: 'give up、put off、go on / carry on、keep / keep on 之後一律 V-ing。' },
+        { k: '動名詞的否定', v: 'not + V-ing（enjoy not having），否定詞放最前面。' },
+        { k: '動詞 + 某人 + V-ing', v: 'stop people doing、imagine George riding、keep you waiting' },
+        { k: '接 to 的動詞群', v: 'offer、agree、refuse、decide、plan、arrange、hope、forget、manage、fail、promise、threaten、deserve、afford、learn、tend' },
+        { k: '不定詞的否定', v: 'not to + 原形（decided not to go），不是 to not go。' },
+        { k: 'manage to + 原形', v: '設法做到、成功做到（有難度但做成了），主要用來講已發生的事。' },
+        { k: "daren't", v: "dare not / daren't 後面不加 to。" },
+        { k: '疑問詞 + to', v: 'ask / know / decide / remember / forget / learn / explain / understand / wonder + what / how / where / whether + to' },
+        { k: 'put off ≠ put out', v: 'put off ＝ 延後（＝postpone）；put out ＝ 撲滅（火、燈）。' },
+        { k: 'handle vs. under control', v: '✅ handle a problem ／ ✅ keep a problem under control ／ ✗ handle a problem under control' },
+        { k: 'be out of vs. run out of', v: 'be out of ＝ 現在沒了（The store is out of coffee.）；run out of ＝ 用光的過程。' },
+        { k: 'submit / responsible for', v: 'submit ＝ send、hand in；responsible for 後面接名詞或 V-ing。' },
+        { k: '成對字', v: 'admit ↔ deny（反義）｜recommend ≈ suggest（近義）｜imagine (v.) ↔ image (n.)｜silence (n.) ↔ silent (adj.)' },
+        { k: 'chemistry / rapport', v: '兩者都是不可數名詞；great chemistry、build rapport with sb。' },
+        { k: 'ahead of / behind', v: 'ahead 後面一定加 of（Taiwan is 16 hours ahead of California.）；behind 後面直接接地點。' }
+      ]
+    },
+    {
       id: 'bk20260821',
       icon: '💻',
       iconSvg: '<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><circle cx="48" cy="48" r="45" fill="#fff" stroke="#f0c9a0" stroke-width="3"/><rect x="28" y="28" width="40" height="28" rx="3" fill="#fff" stroke="#2b2118" stroke-width="3.5"/><rect x="33" y="33" width="30" height="18" fill="#e8913a"/><path d="M21 62 h54 l-5 9 H26 z" fill="#c9631f" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="64" width="12" height="3.5" rx="1.5" fill="#fff"/></svg>',
