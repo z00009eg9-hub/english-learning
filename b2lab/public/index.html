@@ -1226,8 +1226,11 @@ function mkWrong(s){
              '</span><br><span class="wrong">');
 }
 /* 句號之後自動換到下一行，長段解說比較好讀 */
+/* 句號斷行。但後面緊接收尾標點（）)］]」』】〉》”’"'）時不斷，
+   否則那個括號會被留在下一行變孤兒（2026-08-29／30 使用者兩次回報）。
+   全站共用：mkText / mkTextSpk / 快速總結 / bkNote 都走這裡，只在這一處維護。 */
 function brSent(s){
-  return String(s==null?'':s).replace(/。(?!\s*$)/g,'。<br>');
+  return String(s==null?'':s).replace(/。(?!\s*$)(?![）)\］\]」』】〉》”’"'])/g,'。<br>');
 }
 /* 解說裡「用到的英文句子」自動加粗（連續 3 個以上英文字才算句子，避免粗到單一個字）。
    只處理標籤外的純文字，不會弄壞已經上色的 ✗/✓ 片段。 */
@@ -3258,8 +3261,8 @@ function bkDiff(a,b,cls){
 }
 /* 文法解說排版：句號後換行；(1)(2)(3) 各自成段、編號懸掛縮排（折行後內容對齊） */
 function bkNote(s){
-  /* 句號換行；但後面緊接著收尾標點（）」』】》”’"'）時不斷，否則那個括號會被留在下一行變孤兒 */
-  const brk=x=>esc(x).replace(/。(?!\s*$)(?![）)\］\]」』】〉》”’"'])/g,'。<br>').replace(/(<br>\s*)+/g,'<br>').replace(/^<br>|<br>$/g,'');
+  /* 斷句規則統一走 brSent（含「收尾標點不斷行」），這裡只多做去重與去頭尾 */
+  const brk=x=>brSent(esc(x)).replace(/(<br>\s*)+/g,'<br>').replace(/^<br>|<br>$/g,'');
   const parts=String(s).split(/(?=[（(]\d+[)）])/);
   if(parts.length<2) return '<div>'+brk(s)+'</div>';
   return parts.map(p=>{
