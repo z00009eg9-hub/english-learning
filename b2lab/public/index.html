@@ -550,6 +550,28 @@ tr:nth-child(even) td{background:#fdfbf8}
 }
 .artbox .steps{margin:0}
 .artbox .steps .stp{font-size:calc(13px * var(--fs))}
+/* 舊版大型 infographic 在手機上會縮到 ~300px 寬、圖內文字只剩 6px 左右（文字是畫進 SVG 的，
+   不會跟著版面重排）。手機給一個「點圖放大」，用全螢幕檢視器以原始尺寸呈現。
+   （2026-08-30 使用者指定：全部文法都要照 RWD 辦理） */
+.artbox{position:relative}
+.artbox .zoomb{display:none}
+@media(max-width:640px){
+  .artbox .zoomb{display:inline-flex;align-items:center;gap:5px;position:absolute;right:14px;top:14px;
+    background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:999px;
+    padding:5px 11px;font-size:calc(12px * var(--fs));font-weight:700;color:var(--accent2);
+    box-shadow:0 1px 6px rgba(60,45,30,.16);cursor:pointer}
+  .artbox svg{cursor:zoom-in}
+}
+#figovl{position:fixed;inset:0;background:rgba(30,22,14,.88);z-index:120;display:none;
+  align-items:center;justify-content:center;padding:14px}
+#figovl.on{display:flex}
+#figovl .inner{background:#fff;border-radius:14px;max-width:100%;max-height:88vh;overflow:auto;
+  -webkit-overflow-scrolling:touch;padding:10px}
+#figovl .inner svg{display:block;width:640px;max-width:none;height:auto}
+#figovl .x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.95);border:0;font-size:19px;color:#3d332a;cursor:pointer;line-height:1}
+#figovl .tip{position:absolute;left:0;right:0;bottom:16px;text-align:center;color:#fff;
+  font-size:calc(12.5px * var(--fs))}
 
 /* ============================================================
    Visual Grammar System（2026-08-29）
@@ -566,16 +588,36 @@ tr:nth-child(even) td{background:#fdfbf8}
 .gvmap .m .v{font-size:calc(13.5px * var(--fs));color:var(--ink);line-height:1.7}
 .gvmap .m.form .v{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:#1d4ed8}
 .gvsub{font-size:calc(13px * var(--fs));color:var(--ink2);margin:2px 0 9px;line-height:1.7}
+/* 時間線：桌機一張寬圖；手機逐列堆疊（文字用 HTML，不畫進 SVG，才不會縮到看不見） */
+.gvtl .gvtl-narrow{display:none}
+.gvtlrow{padding:10px 2px;border-top:1px dashed #eee4d8}
+.gvtlrow:first-child{border-top:0;padding-top:2px}
+.gvtlrow .lb{font-size:calc(12.5px * var(--fs));font-weight:800;color:#3d332a;margin-bottom:4px}
+.gvtlrow .bar{display:block;width:100%;height:auto;max-width:320px}
+.gvtlrow .axl{display:flex;justify-content:space-between;max-width:320px;
+  font-size:calc(11.5px * var(--fs));color:var(--ink2);margin:-2px 0 5px}
+.gvtlrow .axl .now{color:var(--accent2);font-weight:800}
+.gvtlrow .en{font-size:calc(14.5px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
+.gvtlrow .cn{font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.7}
+@media(max-width:640px){
+  .gvtl .gvtl-wide{display:none}
+  .gvtl .gvtl-narrow{display:block}
+}
 .gvh{display:flex;align-items:center;gap:8px;margin:0 0 9px}
 .gvh h3{font-size:calc(15.5px * var(--fs));margin:0;color:var(--accent2)}
 .gvh .step{background:var(--accent-soft);color:var(--accent2);font-size:calc(11px * var(--fs));
   font-weight:800;border-radius:999px;padding:2px 9px;white-space:nowrap}
 
 /* 情境卡：圖 → 意義 → 例句，一張卡只回答一個問題 */
-/* 情境卡最多 3 欄：auto-fit 在寬螢幕會排到 4 欄，卡片變窄、例句被擠成多行 */
-.gvgrid{display:grid;grid-template-columns:1fr;gap:11px}
-@media(min-width:560px){ .gvgrid{grid-template-columns:repeat(2,1fr)} }
-@media(min-width:1100px){ .gvgrid{grid-template-columns:repeat(3,1fr)} }
+/* 全站文法統一的欄數規則（2026-08-30 使用者指定）：
+   1 欄 → 560px 起 2 欄 → 1100px 起 3 欄，上限 3 欄。
+   不用 auto-fit：那在 1440px 會排到 4 欄，卡片被壓到 250px、例句被擠成多行。
+   .gvgrid = 視覺化文法的情境卡；.gvcols = 舊版文法的例句／常見錯誤等重複卡片區塊。 */
+.gvgrid,.gvcols{display:grid;grid-template-columns:1fr;gap:11px}
+@media(min-width:560px){ .gvgrid,.gvcols{grid-template-columns:repeat(2,1fr)} }
+@media(min-width:1100px){ .gvgrid,.gvcols{grid-template-columns:repeat(3,1fr)} }
+/* 進了格線就由 gap 控間距，卡片自己的 margin 要歸零，否則欄距不一致 */
+.gvcols > .ex,.gvcols > .trap,.gvcols > .gvmis{margin:0}
 .gvcard{background:#fff;border:1px solid var(--line);border-radius:13px;padding:13px;
   box-shadow:var(--shadow);display:flex;flex-direction:column;gap:7px}
 .gvcard .ill{display:flex;align-items:center;justify-content:center;height:84px;border-radius:10px;
@@ -2632,8 +2674,32 @@ RENDER.gram=function(){
 function gvizHTML(id){
   const v=(window.GRAMVIZ||{})[id];
   if(!v) return '';
-  return '<figure class="artbox">'+v.svg+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  /* 圖內有文字的才需要放大鈕：那些字是畫進 SVG 的，手機縮圖後會小到看不清楚 */
+  const zoom=/<text/i.test(v.svg)?'<button class="zoomb" onclick="figZoom(this)">🔍 點圖放大</button>':'';
+  return '<figure class="artbox">'+v.svg+zoom+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
+/* 全螢幕圖片檢視器：把 SVG 以原始寬度放進可捲動的容器，手機上才讀得到圖內文字 */
+function figZoom(el){
+  const fig=el.closest('.artbox'); if(!fig) return;
+  const svg=fig.querySelector('svg'); if(!svg) return;
+  let o=document.getElementById('figovl');
+  if(!o){
+    o=document.createElement('div'); o.id='figovl';
+    o.innerHTML='<button class="x" onclick="figClose()" aria-label="關閉">✕</button>'
+      +'<div class="inner"></div><div class="tip">左右滑動看完整圖 · 點背景關閉</div>';
+    o.addEventListener('click',e=>{ if(e.target===o) figClose(); });
+    document.body.appendChild(o);
+  }
+  o.querySelector('.inner').innerHTML=svg.outerHTML;
+  o.classList.add('on'); document.body.style.overflow='hidden';
+}
+function figClose(){
+  const o=document.getElementById('figovl');
+  if(o){ o.classList.remove('on'); o.querySelector('.inner').innerHTML=''; }
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') figClose(); });
+window.figZoom=figZoom; window.figClose=figClose;
 /* 點進內頁自動收側欄成圖示、回列表再展開——與閱讀／課本／聽力一致（2026-08-29 使用者指定「全部都比照辦理」）*/
 function gOpen(id){ CURG=ALL_GRAM.find(g=>g.id===id); QSTATE={}; sbAutoCollapse(); RENDER.gram(); window.scrollTo(0,0); }
 function gClose(){ CURG=null; sbAutoExpand(); if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.gram(); }
@@ -2698,7 +2764,39 @@ function gvTimeline(t){
     if(r.sub) s+='<text x="'+X0+'" y="'+(y+44)+'" font-size="13" font-weight="700" fill="#1f2937">'+esc(r.sub)+'</text>';
     if(r.subCn) s+='<text x="'+X0+'" y="'+(y+62)+'" font-size="12" fill="#8a7d6d">'+esc(r.subCn)+'</text>';
   });
-  return '<figure class="artbox">'+s+'</svg>'+(t.cap?'<figcaption>'+esc(t.cap)+'</figcaption>':'')+'</figure>';
+  s+='</svg>';
+  /* 手機版：不縮那張 640 寬的圖（文字會小到 5px 讀不了），改成逐列堆疊——
+     每列一條小軸線（圖裡不放文字）＋句子用 HTML 排版，字級跟著全站 --fs 走、也會自動換行。 */
+  const NB=(function(){
+    const bw=280, bx0=12, bx1=268, bnow=228;
+    return rows.map(function(r){
+      const col=r.tone==='accent'?'#e8813a':'#8a7d6d';
+      let b='<svg class="bar" viewBox="0 0 '+bw+' 34" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">';
+      b+='<line x1="'+bx0+'" y1="17" x2="'+bx1+'" y2="17" stroke="#e6dccf" stroke-width="2"/>';
+      b+='<line x1="'+bnow+'" y1="2" x2="'+bnow+'" y2="32" stroke="#e8813a" stroke-width="2" stroke-dasharray="4 3"/>';
+      if(r.kind==='span'){
+        b+='<line x1="46" y1="17" x2="'+bnow+'" y2="17" stroke="'+col+'" stroke-width="6" stroke-linecap="round"/>'
+         + '<circle cx="46" cy="17" r="6" fill="#fff" stroke="'+col+'" stroke-width="3.5"/>'
+         + '<path d="M'+(bnow-2)+' 10 l8 7 -8 7" fill="none" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>';
+      } else if(r.kind==='range'){
+        b+='<rect x="132" y="6" width="'+(bnow-132)+'" height="22" rx="6" fill="#fdead9" stroke="'+col+'" stroke-width="2.5"/>';
+      } else {
+        b+='<circle cx="112" cy="17" r="7.5" fill="'+col+'" stroke="#fff" stroke-width="2.5"/>';
+      }
+      b+='</svg>';
+      const axl=r.kind==='point' ? esc(r.at||'') : esc((r.from||'')+(r.kind==='range'?' → ':' ')+'');
+      return '<div class="gvtlrow">'
+        +'<div class="lb">'+esc(r.label||'')+'</div>'+b
+        +'<div class="axl"><span>'+axl+'</span><span class="now">NOW</span></div>'
+        +(r.sub?'<div class="en"><span class="sent" data-t="'+esc(r.sub)+'" onclick="saySent(this)">'+esc(r.sub)+'</span> '+spk(r.sub)+'</div>':'')
+        +(r.subCn?'<div class="cn cnx">'+esc(r.subCn)+'</div>':'')
+        +'</div>';
+    }).join('');
+  })();
+  return '<figure class="artbox gvtl">'
+    +'<div class="gvtl-wide">'+s+'</div>'
+    +'<div class="gvtl-narrow">'+NB+'</div>'
+    +(t.cap?'<figcaption>'+esc(t.cap)+'</figcaption>':'')+'</figure>';
 }
 /* 情境卡：圖 → 意義 → 例句；「為什麼？」點了才展開（漸進揭露） */
 function gvScenario(s,i){
@@ -2778,7 +2876,7 @@ function gvHTML(g){
     +gvComparison(g.comparison)+'</div>';
 
   if((g.mistakes||[]).length) h+='<div class="card"><div class="gvh"><span class="step">Step 5 · CHECK</span><h3>⚠️ 最容易錯的地方</h3></div>'
-    +g.mistakes.map(gvMistake).join('')+'</div>';
+    +'<div class="gvcols">'+g.mistakes.map(gvMistake).join('')+'</div></div>';
 
   if((g.quiz||[]).length) h+='<div class="card"><div class="row" style="align-items:center;margin-bottom:8px">'
     +'<div class="gvh" style="margin:0;flex:1"><span class="step">Step 6 · PRACTICE</span><h3>✏️ Mini Practice</h3></div>'+qzBtnHTML('gram',g.quiz)+'</div>'
@@ -2806,14 +2904,14 @@ function gramHTML(g){
        + s.table.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</table></div>';
     }
     if(s.bullets) x+='<ul>'+(Array.isArray(s.bullets)?s.bullets:[s.bullets]).map(b=>'<li class="gline">'+mkTextSpk(b)+'</li>').join('')+'</ul>';
-    if(s.examples) x+= s.examples.map(e=>'<div class="ex"><div class="een">'+esc(e.en)+' '+spk(e.en)+'</div>'
-       +'<div class="ecn">'+esc(e.cn)+'</div>'+(e.note?'<div class="enote">→ '+mkText(e.note)+'</div>':'')+'</div>').join('');
+    if(s.examples) x+= '<div class="gvcols">'+ s.examples.map(e=>'<div class="ex"><div class="een">'+esc(e.en)+' '+spk(e.en)+'</div>'
+       +'<div class="ecn">'+esc(e.cn)+'</div>'+(e.note?'<div class="enote">→ '+mkText(e.note)+'</div>':'')+'</div>').join('')+'</div>';
     return x+'</div>';
   }).join('')+'</div>';
 
   if((g.traps||[]).length){
     h+='<div class="card"><h2 class="sec">⚠️ 最容易錯的地方</h2>'
-     + g.traps.map(t=>'<div class="trap"><div class="bad">✗ '+esc(t.bad)+'</div><div class="good">✓ '+esc(t.good)+' '+spk(t.good)+'</div><div class="why">'+trapWhy(t.why)+'</div></div>').join('')
+     + '<div class="gvcols">'+g.traps.map(t=>'<div class="trap"><div class="bad">✗ '+esc(t.bad)+'</div><div class="good">✓ '+esc(t.good)+' '+spk(t.good)+'</div><div class="why">'+trapWhy(t.why)+'</div></div>').join('')
      +'</div>';
   }
   if((g.quiz||[]).length){
