@@ -2892,30 +2892,50 @@ function gramHTML(g){
    +'<div class="row" style="align-items:center;gap:10px;flex:1"><button class="back" onclick="gClose()" style="margin:0;flex-shrink:0"></button><h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+((g.srcDays||[]).length?' · 課堂 '+g.srcDays.join(' / '):'')+'</div>'
    +'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:calc(13.5px * var(--fs))">💡 '+esc(g.summary)+'</div></div></div>'
-   + gvizHTML(g.id);
+   +'</div>';
 
-  h+='<div class="card">'+ (g.sections||[]).map(s=>{
-    let x='<div class="gsec"><h3>'+esc(s.h)+'</h3>';
-    /* 每日文法的資料有時把 body/bullets 寫成單一字串而不是陣列，這裡都收：
-       之前遇過字串直接 .map 拋錯，整個單元打不開 */
-    if(s.body) x+= (Array.isArray(s.body)?s.body:[s.body]).map(b=>'<div class="gline" style="font-size:calc(14.5px * var(--fs));margin-bottom:5px">'+mkTextSpk(b)+'</div>').join('');
-    if(s.table){
+  /* 舊版 15 課與每日文法也照 SEE → UNDERSTAND → READ → COMPARE → PRACTICE 分段
+     （2026-08-30 使用者指定）。做法是把每個 section 的組成拆開重新分組：
+       body / bullets → 規則（UNDERSTAND）
+       examples       → 例句（READ）
+       table          → 對照表（COMPARE）
+     section 標題會跟著各自的內容重複出現，讀者不會失去上下文；資料本身完全沒動。
+     某一步沒有內容就整段跳過，步驟標籤固定不重新編號。 */
+  const SECS=g.sections||[];
+  /* 每日文法的資料有時把 body/bullets 寫成單一字串而不是陣列，這裡都收：
+     之前遇過字串直接 .map 拋錯，整個單元打不開 */
+  const arr=v=>Array.isArray(v)?v:[v];
+  const part=(want)=>SECS.map(s=>{
+    let x='';
+    if(want==='rule'){
+      if(s.body) x+= arr(s.body).map(b=>'<div class="gline" style="font-size:calc(14.5px * var(--fs));margin-bottom:5px">'+mkTextSpk(b)+'</div>').join('');
+      if(s.bullets) x+='<ul>'+arr(s.bullets).map(b=>'<li class="gline">'+mkTextSpk(b)+'</li>').join('')+'</ul>';
+    } else if(want==='table' && s.table){
       x+='<div class="tw"><table><tr>'+s.table.head.map(t=>'<th>'+esc(t)+'</th>').join('')+'</tr>'
        + s.table.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</table></div>';
-    }
-    if(s.bullets) x+='<ul>'+(Array.isArray(s.bullets)?s.bullets:[s.bullets]).map(b=>'<li class="gline">'+mkTextSpk(b)+'</li>').join('')+'</ul>';
-    if(s.examples) x+= '<div class="gvcols">'+ s.examples.map(e=>'<div class="ex"><div class="een">'+esc(e.en)+' '+spk(e.en)+'</div>'
+    } else if(want==='ex' && s.examples){
+      x+='<div class="gvcols">'+ s.examples.map(e=>'<div class="ex"><div class="een">'+esc(e.en)+' '+spk(e.en)+'</div>'
        +'<div class="ecn">'+esc(e.cn)+'</div>'+(e.note?'<div class="enote">→ '+mkText(e.note)+'</div>':'')+'</div>').join('')+'</div>';
-    return x+'</div>';
-  }).join('')+'</div>';
+    }
+    return x?'<div class="gsec"><h3>'+esc(s.h)+'</h3>'+x+'</div>':'';
+  }).join('');
+  const stepCard=(step,title,body,sub)=>body?'<div class="card"><div class="gvh"><span class="step">'+step+'</span><h3>'+title+'</h3></div>'
+    +(sub?'<div class="gvsub">'+sub+'</div>':'')+body+'</div>':'';
+
+  const viz=gvizHTML(g.id);
+  h+=stepCard('Step 1 · SEE','圖解：先看懂整體關係',viz);
+  h+=stepCard('Step 2 · UNDERSTAND','核心規則',part('rule'));
+  h+=stepCard('Step 3 · READ','例句',part('ex'));
+  h+=stepCard('Step 4 · COMPARE','對照表',part('table'));
 
   if((g.traps||[]).length){
-    h+='<div class="card"><h2 class="sec">⚠️ 最容易錯的地方</h2>'
-     + '<div class="gvcols">'+g.traps.map(t=>'<div class="trap"><div class="bad">✗ '+esc(t.bad)+'</div><div class="good">✓ '+esc(t.good)+' '+spk(t.good)+'</div><div class="why">'+trapWhy(t.why)+'</div></div>').join('')
-     +'</div>';
+    h+=stepCard('Step 5 · CHECK','⚠️ 最容易錯的地方',
+      '<div class="gvcols">'+g.traps.map(t=>'<div class="trap"><div class="bad">✗ '+esc(t.bad)+'</div><div class="good">✓ '+esc(t.good)+' '+spk(t.good)+'</div><div class="why">'+trapWhy(t.why)+'</div></div>').join('')+'</div>');
   }
   if((g.quiz||[]).length){
-    h+='<div class="card"><div class="row" style="align-items:center;margin-bottom:8px"><h2 class="sec" style="margin:0">✏️ 練習題</h2>'+qzBtnHTML('gram',g.quiz)+'</div><div>'+quizHTML(g.quiz,'gram')+'</div><div id="gquizScore"></div></div>';
+    h+='<div class="card"><div class="row" style="align-items:center;margin-bottom:8px">'
+     +'<div class="gvh" style="margin:0;flex:1"><span class="step">Step 6 · PRACTICE</span><h3>✏️ 練習題</h3></div>'+qzBtnHTML('gram',g.quiz)+'</div>'
+     +'<div>'+quizHTML(g.quiz,'gram')+'</div><div id="gquizScore"></div></div>';
   }
   h+='<div class="card" style="text-align:center"><button class="btn" onclick="gClose()">完成，回列表</button></div>';
   return h;
