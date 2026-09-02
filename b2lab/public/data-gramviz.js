@@ -633,5 +633,27 @@ V.dg20260828b1=V.pastBg;
 V.dg20260828b1p=V.pastBg;
 V.dg20260828b2=V.pastBg;
 
+/* ---------- have done（沒說時間，強調現在的結果）vs did（有明確過去時間點） ---------- */
+V.havePastSimple=card(
+ {pw:210,title:'have done 沒說時間',
+  draw:tl(212)
+   +em(140,150,50,'📚')
+   +'<circle cx="196" cy="140" r="20" fill="#2f9e5f"/>'
+   +'<text x="196" y="148" text-anchor="middle" font-size="20" font-weight="900" fill="#fff">✓</text>'
+   +'<text x="160" y="88" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1f8a4c">重點：現在已經完成了</text>',
+  en:'I have finished the course.', cn:'沒說什麼時候，重點是「現在的結果」'},
+ {pw:210,title:'did 有明確時間',
+  draw:tl(212)
+   +em(120,148,44,'📚')
+   +'<rect x="150" y="150" width="46" height="24" rx="4" fill="#d9534f"/>'
+   +'<text x="173" y="167" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">2023</text>'
+   +'<text x="160" y="88" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c0392b">重點：那個時間點做的</text>',
+  en:'I finished the course in 2023.', cn:'有明確的過去時間，跟現在的關聯不是重點'},
+ '沒有明確時間、強調「現在的結果」用現在完成式 have done；有明確的過去時間點（in 2023, yesterday, last week）一定要用過去簡單式 did，兩者不能混用。');
+V.dg20260902a2=V.havePastSimple;
+V.dg20260902b1=V.havePastSimple;
+V.dg20260902b1p=V.havePastSimple;
+V.dg20260902b2=V.havePastSimple;
+
 return V;
 })();

@@ -8,6 +8,685 @@ window.DAILY = {
 
 articles:[
 {
+  "id": "d20260902a2",
+  "date": "2026-09-02",
+  "level": "A2",
+  "topic": "週末活動",
+  "words": 101,
+  "kind": "orig",
+  "title": "Tom's First Swimming Lesson",
+  "titleCn": "Tom的第一堂游泳課",
+  "focus": "過去簡單式（went, felt, could, was）描述已經發生的事；can表示能力",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom上週六去游泳池上了第一堂游泳課，一開始很緊張。文章全部用過去簡單式（went, felt, could, was）講「已經發生」的事，讀的時候留意這些動詞的過去式長什麼樣。",
+  "paras": [
+    {
+      "en": "Last Saturday, Tom went to the pool for his first swimming lesson. He felt very nervous before the class began.",
+      "cn": "上週六，Tom去泳池上了他的第一堂游泳課。在課程開始前，他覺得非常緊張。"
+    },
+    {
+      "en": "The teacher was very friendly and kind to him. She showed him how to kick his legs in the water. Tom tried hard, but he swallowed some water twice.",
+      "cn": "老師對他非常友善又親切。她示範給他看怎麼在水裡踢腿。Tom很努力嘗試，但他嗆到水兩次。"
+    },
+    {
+      "en": "After thirty minutes, Tom could float on his back. He was so happy and proud of himself. The other students in the class clapped for him.",
+      "cn": "三十分鐘後，Tom可以仰漂了。他覺得非常開心又以自己為榮。班上其他學生都為他鼓掌。"
+    },
+    {
+      "en": "Now Tom practices every weekend at the same pool. He can swim about ten meters without stopping. There is a swimming competition for beginners in October.",
+      "cn": "現在Tom每個週末都在同一個泳池練習。他現在可以連續游大約十公尺不停。十月有一場給初學者的游泳比賽。"
+    }
+  ],
+  "target": [
+    {
+      "w": "nervous",
+      "ipa": "/ˈnɜːrvəs/",
+      "pos": "adj.",
+      "cn": "緊張的",
+      "def": "Feeling worried or afraid about something.",
+      "ex": "He felt very nervous before the class began.",
+      "exCn": "在課程開始前，他覺得非常緊張。"
+    },
+    {
+      "w": "friendly",
+      "ipa": "/ˈfrendli/",
+      "pos": "adj.",
+      "cn": "友善的",
+      "def": "Kind and pleasant to other people.",
+      "ex": "The teacher was very friendly and kind to him.",
+      "exCn": "老師對他非常友善又親切。"
+    },
+    {
+      "w": "kick",
+      "ipa": "/kɪk/",
+      "pos": "v.",
+      "cn": "踢",
+      "def": "To hit or move something with your foot.",
+      "ex": "She showed him how to kick his legs in the water.",
+      "exCn": "她示範給他看怎麼在水裡踢腿。"
+    },
+    {
+      "w": "float",
+      "ipa": "/floʊt/",
+      "pos": "v.",
+      "cn": "漂浮",
+      "def": "To stay on top of water without sinking.",
+      "ex": "After thirty minutes, Tom could float on his back.",
+      "exCn": "三十分鐘後，Tom可以仰漂了。"
+    },
+    {
+      "w": "proud",
+      "ipa": "/praʊd/",
+      "pos": "adj.",
+      "cn": "驕傲的、以...為榮",
+      "def": "Feeling very pleased about something you did.",
+      "ex": "He was so happy and proud of himself.",
+      "exCn": "他覺得非常開心又以自己為榮。"
+    },
+    {
+      "w": "competition",
+      "ipa": "/ˌkɑːmpəˈtɪʃn/",
+      "pos": "n.",
+      "cn": "比賽",
+      "def": "An event where people try to win.",
+      "ex": "There is a swimming competition for beginners in October.",
+      "exCn": "十月有一場給初學者的游泳比賽。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did Tom do last Saturday?",
+      "qCn": "Tom上週六做了什麼事？",
+      "opts": [
+        "A. He went to the pool for his first swimming lesson",
+        "B. He went to a birthday party",
+        "C. He watched a swimming competition",
+        "D. He stayed home and rested"
+      ],
+      "optsCn": [
+        "A. 他去泳池上了他的第一堂游泳課",
+        "B. 他去參加生日派對",
+        "C. 他去看游泳比賽",
+        "D. 他待在家休息"
+      ],
+      "ans": 0,
+      "expl": "Last Saturday, Tom went to the pool for his first swimming lesson."
+    },
+    {
+      "q": "What could Tom do after thirty minutes?",
+      "qCn": "三十分鐘後，Tom能做到什麼？",
+      "opts": [
+        "A. Swim about ten meters",
+        "B. Float on his back",
+        "C. Win the competition",
+        "D. Teach the other students"
+      ],
+      "optsCn": [
+        "A. 游大約十公尺",
+        "B. 仰漂",
+        "C. 贏得比賽",
+        "D. 教其他學生"
+      ],
+      "ans": 1,
+      "expl": "After thirty minutes, Tom could float on his back."
+    },
+    {
+      "q": "Tom ___ to the pool for his first swimming lesson.",
+      "qCn": "Tom去了泳池上他的第一堂游泳課。（選出正確的動詞形式）",
+      "opts": [
+        "A. go",
+        "B. goes",
+        "C. went",
+        "D. going"
+      ],
+      "ans": 2,
+      "expl": "Last Saturday是過去的時間，用過去簡單式went。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Tom went to the pool. He felt nervous. The class began.",
+      "b2": "Tom felt nervous when the class began, but he still went to the pool.",
+      "note": "用when連接兩個過去的動作，比三個短句更順，也交代了先後順序。"
+    },
+    {
+      "b1": "He was happy. He was proud. His classmates clapped.",
+      "b2": "He was so happy and proud that his classmates clapped for him.",
+      "note": "用so...that帶出結果子句，把三個短句合併成一句更自然的英文。"
+    }
+  ]
+},
+
+{
+  "id": "d20260902b1",
+  "date": "2026-09-02",
+  "level": "B1",
+  "topic": "學習與心理",
+  "words": 147,
+  "kind": "orig",
+  "title": "Amy Learns to Bake",
+  "titleCn": "Amy學烤麵包",
+  "focus": "現在完成式基礎（has baked, has never tried）vs 過去簡單式（decided, found）；because/so連接原因與結果",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Amy第一次嘗試自己烤麵包，過程有點手忙腳亂但很有成就感。文章用現在完成式的基礎用法（has baked, has never tried）講「到目前為止」的經驗，也可以留意because/so怎麼連接原因和結果。",
+  "paras": [
+    {
+      "en": "Amy has always wanted to bake her own bread, but she has never tried it before. Last Sunday, she finally decided to start, because she found a simple recipe online.",
+      "cn": "Amy一直都想自己烤麵包，但她從來沒試過。上週日，她終於決定開始動手，因為她在網路上找到一個簡單的食譜。"
+    },
+    {
+      "en": "She has already bought all the ingredients: flour, yeast, salt, and sugar. When she began mixing the dough, her hands got sticky and messy. She felt a little frustrated, so she almost gave up twice.",
+      "cn": "她已經買齊了所有食材：麵粉、酵母、鹽和糖。當她開始揉麵團時，她的手變得又黏又髒。她覺得有點挫折，所以差點放棄了兩次。"
+    },
+    {
+      "en": "After two hours, the bread finally came out of the oven. It looked smaller than the picture in the recipe, but it smelled amazing. Amy has never felt so proud of something she made herself.",
+      "cn": "兩個小時後，麵包終於出爐了。它看起來比食譜上的照片小，但聞起來很香。Amy從來沒有對自己做的東西感到這麼驕傲過。"
+    },
+    {
+      "en": "Now she has baked bread three times this month, and each loaf is better than the last one. Her friends have already asked her to bake for their next party. Amy still gets nervous before every attempt, but she has learned that mistakes are part of learning.",
+      "cn": "現在她這個月已經烤了三次麵包，而且每一條都比上一條做得更好。她的朋友已經拜託她在下次的派對上烤麵包。Amy在每次嘗試前還是會緊張，但她學到了犯錯是學習的一部分。"
+    }
+  ],
+  "target": [
+    {
+      "w": "ingredient",
+      "ipa": "/ɪnˈɡriːdiənt/",
+      "pos": "n.",
+      "cn": "食材、原料",
+      "def": "One of the foods used to make a dish.",
+      "ex": "She has already bought all the ingredients: flour, yeast, salt, and sugar.",
+      "exCn": "她已經買齊了所有食材：麵粉、酵母、鹽和糖。"
+    },
+    {
+      "w": "dough",
+      "ipa": "/doʊ/",
+      "pos": "n.",
+      "cn": "麵團",
+      "def": "A soft mixture of flour and water used for making bread.",
+      "ex": "When she began mixing the dough, her hands got sticky and messy.",
+      "exCn": "當她開始揉麵團時，她的手變得又黏又髒。"
+    },
+    {
+      "w": "frustrated",
+      "ipa": "/ˈfrʌstreɪtɪd/",
+      "pos": "adj.",
+      "cn": "感到挫折的",
+      "def": "Feeling annoyed because something is difficult.",
+      "ex": "She felt a little frustrated, so she almost gave up twice.",
+      "exCn": "她覺得有點挫折，所以差點放棄了兩次。"
+    },
+    {
+      "w": "recipe",
+      "ipa": "/ˈresəpi/",
+      "pos": "n.",
+      "cn": "食譜",
+      "def": "A set of instructions for cooking a dish.",
+      "ex": "It looked smaller than the picture in the recipe.",
+      "exCn": "它看起來比食譜上的照片小。"
+    },
+    {
+      "w": "attempt",
+      "ipa": "/əˈtempt/",
+      "pos": "n.",
+      "cn": "嘗試",
+      "def": "An act of trying to do something.",
+      "ex": "Amy still gets nervous before every attempt.",
+      "exCn": "Amy在每次嘗試前還是會緊張。"
+    },
+    {
+      "w": "loaf",
+      "ipa": "/loʊf/",
+      "pos": "n.",
+      "cn": "一條（麵包）",
+      "def": "A shaped piece of baked bread.",
+      "ex": "Each loaf is better than the last one.",
+      "exCn": "每一條麵包都比上一條做得更好。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Amy decide to start baking bread last Sunday?",
+      "qCn": "Amy上週日為什麼決定開始烤麵包？",
+      "opts": [
+        "A. She found a simple recipe online",
+        "B. Her friend told her to",
+        "C. She wanted to save money",
+        "D. She had extra flour at home"
+      ],
+      "optsCn": [
+        "A. 她在網路上找到一個簡單的食譜",
+        "B. 她朋友叫她做的",
+        "C. 她想省錢",
+        "D. 她家裡有多的麵粉"
+      ],
+      "ans": 0,
+      "expl": "she finally decided to start, because she found a simple recipe online."
+    },
+    {
+      "q": "How did Amy feel while mixing the dough?",
+      "qCn": "揉麵團的時候，Amy覺得怎麼樣？",
+      "opts": [
+        "A. Bored",
+        "B. Frustrated",
+        "C. Sleepy",
+        "D. Angry at her friend"
+      ],
+      "optsCn": [
+        "A. 無聊",
+        "B. 挫折",
+        "C. 想睡覺",
+        "D. 對朋友生氣"
+      ],
+      "ans": 1,
+      "expl": "She felt a little frustrated, so she almost gave up twice."
+    },
+    {
+      "q": "Amy ___ bread three times this month.",
+      "qCn": "Amy這個月已經烤了三次麵包了。（選出正確的動詞形式）",
+      "opts": [
+        "A. bakes",
+        "B. baked",
+        "C. has baked",
+        "D. is baking"
+      ],
+      "ans": 2,
+      "expl": "現在完成式has baked強調「到目前為止」的次數，跟this month搭配。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Amy has never baked bread before. She wanted to try it.",
+      "b2": "Amy, who had never baked bread before, finally decided to give it a try.",
+      "note": "用who帶出的關係子句補充說明Amy的背景，比兩個短句更精簡、更像B1+的寫法。"
+    },
+    {
+      "b1": "Amy felt frustrated. She almost gave up.",
+      "b2": "Amy felt so frustrated that she almost gave up twice while mixing the dough.",
+      "note": "用so...that連接原因與結果，比兩個短句更緊湊，也交代了發生的情境。"
+    }
+  ]
+},
+
+{
+  "id": "d20260902b1p",
+  "date": "2026-09-02",
+  "level": "B1+",
+  "topic": "學習與心理",
+  "words": 183,
+  "kind": "orig",
+  "title": "Anita's Steep Learning Curve",
+  "titleCn": "Anita的陡峭學習曲線",
+  "focus": "現在完成式＋被動語態（has been enrolled, has been given, has been shared）；which/who帶出的關係子句補充資訊",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "Anita被公司安排去上一門統計課程，一開始很挫折，後來靠著真實的職場專題慢慢建立信心。文章大量使用「現在完成式＋被動語態」（has been enrolled, has been given feedback, has been shared）描述「到目前為止發生的事」，也留意which/who帶出的關係子句怎麼補充額外資訊。",
+  "paras": [
+    {
+      "en": "Anita has recently been enrolled in an online course that teaches statistical methods for quality engineers. She has always felt nervous about math, so she signed up mostly to challenge herself. The course, which runs for eight weeks, has already covered three difficult modules.",
+      "cn": "Anita最近被安排參加了一門教品管工程師統計方法的線上課程。她對數學一直都感到緊張，所以她報名主要是為了挑戰自己。這門課程為期八週，目前已經教完三個困難的單元。"
+    },
+    {
+      "en": "In the first two weeks, Anita struggled with the assignments and was often confused by the formulas. She has been given detailed feedback by her instructor after every quiz, which has slowly built her confidence. A study group was formed by several classmates who wanted extra practice.",
+      "cn": "頭兩週，Anita在寫作業時很吃力，也常常被公式搞混。她每次小考後都會收到老師詳細的回饋意見，這件事漸漸建立了她的信心。有幾位想要多練習的同學組成了一個讀書會。"
+    },
+    {
+      "en": "Last week, a real workplace problem was solved using a method Anita had just learned in class. Her manager was impressed, and her solution has since been shared with the whole department. Anita, who once doubted her own ability, finally felt like a capable learner.",
+      "cn": "上週，一個真實的職場問題用Anita剛在課堂上學到的方法解決了。她的主管印象深刻，她的解決方案後來也被分享給了整個部門。Anita曾經懷疑自己的能力，最後終於覺得自己是個有能力的學習者。"
+    },
+    {
+      "en": "She has completed five of the eight modules, and the final project has been assigned for next month. Anita has realized that learning something difficult is often uncomfortable before it becomes rewarding. She has told her younger colleagues that anyone who is patient can learn new skills.",
+      "cn": "她已經完成了八個單元中的五個，期末專題也已經被指派在下個月了。Anita體會到，學習困難的事情往往是先不舒服，後來才變得值得。她告訴年輕的同事，只要有耐心，任何人都能學會新技能。"
+    }
+  ],
+  "target": [
+    {
+      "w": "enroll",
+      "ipa": "/ɪnˈroʊl/",
+      "pos": "v.",
+      "cn": "使註冊、使加入",
+      "def": "To officially arrange for someone to join a course or program.",
+      "ex": "Anita has recently been enrolled in an online course that teaches statistical methods for quality engineers.",
+      "exCn": "Anita最近被安排參加了一門教品管工程師統計方法的線上課程。"
+    },
+    {
+      "w": "formula",
+      "ipa": "/ˈfɔːrmjələ/",
+      "pos": "n.",
+      "cn": "公式",
+      "def": "A fixed mathematical rule for calculating something.",
+      "ex": "Anita struggled with the assignments and was often confused by the formulas.",
+      "exCn": "Anita在寫作業時很吃力，也常常被公式搞混。"
+    },
+    {
+      "w": "feedback",
+      "ipa": "/ˈfiːdbæk/",
+      "pos": "n.",
+      "cn": "回饋意見",
+      "def": "Comments about how well someone is doing.",
+      "ex": "She has been given detailed feedback by her instructor after every quiz.",
+      "exCn": "她每次小考後都會收到老師詳細的回饋意見。"
+    },
+    {
+      "w": "confidence",
+      "ipa": "/ˈkɑːnfɪdəns/",
+      "pos": "n.",
+      "cn": "信心",
+      "def": "A feeling of trust in your own ability.",
+      "ex": "The feedback has slowly built her confidence.",
+      "exCn": "這些回饋漸漸建立了她的信心。"
+    },
+    {
+      "w": "workplace",
+      "ipa": "/ˈwɜːrkpleɪs/",
+      "pos": "n.",
+      "cn": "職場",
+      "def": "The place where people work.",
+      "ex": "Last week, a real workplace problem was solved using a method Anita had just learned in class.",
+      "exCn": "上週，一個真實的職場問題用Anita剛在課堂上學到的方法解決了。"
+    },
+    {
+      "w": "impressed",
+      "ipa": "/ɪmˈprest/",
+      "pos": "adj.",
+      "cn": "印象深刻的",
+      "def": "Feeling admiration because something is very good.",
+      "ex": "Her manager was impressed, and her solution has since been shared with the whole department.",
+      "exCn": "她的主管印象深刻，她的解決方案後來也被分享給了整個部門。"
+    },
+    {
+      "w": "department",
+      "ipa": "/dɪˈpɑːrtmənt/",
+      "pos": "n.",
+      "cn": "部門",
+      "def": "A section of a company or organization.",
+      "ex": "Her solution has since been shared with the whole department.",
+      "exCn": "她的解決方案後來也被分享給了整個部門。"
+    },
+    {
+      "w": "capable",
+      "ipa": "/ˈkeɪpəbl/",
+      "pos": "adj.",
+      "cn": "有能力的",
+      "def": "Able to do something well.",
+      "ex": "Anita, who once doubted her own ability, finally felt like a capable learner.",
+      "exCn": "Anita曾經懷疑自己的能力，最後終於覺得自己是個有能力的學習者。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Anita decide to enroll in the statistics course?",
+      "qCn": "Anita為什麼決定報名這門統計課程？",
+      "opts": [
+        "A. To challenge herself, since she always felt nervous about math",
+        "B. Because her manager forced her to attend every class",
+        "C. Because she wanted a promotion immediately",
+        "D. Because her classmates asked her to join"
+      ],
+      "optsCn": [
+        "A. 為了挑戰自己，因為她一直對數學感到緊張",
+        "B. 因為主管強迫她每堂課都要出席",
+        "C. 因為她想馬上升職",
+        "D. 因為同學邀她一起報名"
+      ],
+      "ans": 0,
+      "expl": "She has always felt nervous about math, so she signed up mostly to challenge herself."
+    },
+    {
+      "q": "What helped build Anita's confidence during the first two weeks?",
+      "qCn": "頭兩週，什麼幫助Anita建立信心？",
+      "opts": [
+        "A. Skipping difficult assignments",
+        "B. Detailed feedback from her instructor after every quiz",
+        "C. Switching to an easier course",
+        "D. Working alone without any help"
+      ],
+      "optsCn": [
+        "A. 跳過困難的作業",
+        "B. 老師每次小考後給的詳細回饋",
+        "C. 換去更簡單的課程",
+        "D. 完全自己一個人努力，沒有任何協助"
+      ],
+      "ans": 1,
+      "expl": "She has been given detailed feedback by her instructor after every quiz, which has slowly built her confidence."
+    },
+    {
+      "q": "What happened when a real workplace problem was assigned as a group project?",
+      "qCn": "當一個真實的職場問題被指派為小組專題時，發生了什麼事？",
+      "opts": [
+        "A. Anita's manager was impressed by her solution",
+        "B. Anita failed to solve the problem",
+        "C. Anita dropped out of the course",
+        "D. The project was cancelled"
+      ],
+      "optsCn": [
+        "A. Anita的主管對她的解決方案印象深刻",
+        "B. Anita沒能解決那個問題",
+        "C. Anita退出了這門課程",
+        "D. 這個專題被取消了"
+      ],
+      "ans": 0,
+      "expl": "a real workplace problem was solved using a method Anita had just learned in class. Her manager was impressed."
+    },
+    {
+      "q": "Her solution ___ with the whole department.",
+      "qCn": "她的解決方案後來被分享給了整個部門。（選出正確的動詞形式）",
+      "opts": [
+        "A. has since shared",
+        "B. has since been shared",
+        "C. shares",
+        "D. is sharing"
+      ],
+      "ans": 1,
+      "expl": "解決方案是被分享的一方，用現在完成式的被動：has been shared。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Anita's manager liked her solution, so she shared it with everyone.",
+      "b2": "Anita's solution so impressed her manager that it was shared with the entire department.",
+      "note": "用so...that帶出結果，並保留被動語態was shared，語氣更正式、更像書面報告的寫法。"
+    },
+    {
+      "b1": "Learning something new is hard, but it gets easier later.",
+      "b2": "Discomfort is often simply the price one pays for acquiring a new skill.",
+      "note": "one pays是正式英文常見的泛稱主詞，acquiring也比learning更書面，整體語域明顯提升。"
+    }
+  ]
+},
+
+{
+  "id": "d20260902b2",
+  "date": "2026-09-02",
+  "level": "B2",
+  "topic": "學習與心理",
+  "words": 274,
+  "kind": "original",
+  "title": "What Eight Weeks of Struggling With Statistics Taught Me",
+  "titleCn": "苦讀統計八週教會我的事",
+  "focus": "被動語態、分詞構句（Being forced to...）與正式語域：以第一人稱反思寫作呈現學習心理",
+  "intro": "這篇是Anita以第一人稱寫的反思文章，回顧自己苦讀統計認證八週的心路歷程。留意文章怎麼用被動語態、分詞構句（Being forced to apply...）和正式的詞彙，呈現「學習的不舒服其實是進步的訊號」這個心理學角度的觀察。",
+  "paras": [
+    {
+      "en": "Six months ago, I would have said that I was not a 'numbers person.' I had avoided statistics since university, convinced my brain was simply not built for formulas. Then my manager suggested that everyone on the quality team complete a short certification in statistical process control. I signed up reluctantly, expecting to fail.",
+      "cn": "六個月前，我一定會說自己不是「數字腦」的人。我從大學畢業後就一直逃避統計學，深信自己的腦袋天生就不適合處理公式。後來我的主管建議品管團隊的每個人都去修一個統計製程管制的短期認證。我心不甘情不願地報了名，心裡想著大概會被當掉。"
+    },
+    {
+      "en": "The first few weeks were humbling. Concepts that seemed obvious to my younger classmates took me three tries, and I was often the last to finish a quiz. What surprised me most was not the material's difficulty, but how much energy went into simply managing my frustration. I found myself avoiding study sessions on discouraging days, a pattern psychologists call avoidance behavior.",
+      "cn": "頭幾個禮拜真的讓人很挫折。對年輕同學來說一看就懂的觀念，我要試三次才搞懂，而且我常常是全班最後一個交完小考卷的人。最讓我意外的不是內容本身有多難，而是光是應付自己的挫折感就花掉好多心力。我發現自己會在心情特別低落的那幾天故意不去唸書，這正是心理學家所說的「逃避行為」。"
+    },
+    {
+      "en": "Something shifted around week five, when a genuine workplace problem was assigned as a group project. Suddenly the formulas were not abstract exercises; they explained why a supplier's defect rate kept rising. Being forced to apply what I had barely learned, under a real deadline, built more confidence than any textbook practice could. I began to notice that discomfort was often a sign that real learning was happening, not a sign to quit.",
+      "cn": "大概到了第五週，事情有了轉變——課堂指派了一個真實的職場問題當作小組專題。突然間那些公式不再是抽象的練習題；它們變成解釋「為什麼某供應商的不良率一直上升」的工具。被迫在真實的期限壓力下，運用自己才剛學會、還不太熟的東西，反而比任何課本練習都更能建立信心。我開始注意到：不舒服的感覺，往往不是要我放棄的訊號，而是代表真正的學習正在發生。"
+    },
+    {
+      "en": "I have since finished the course, though I would not claim to be a 'numbers person' even now. What has changed is my relationship with not knowing something yet. I no longer assume struggle means I am unsuited to a subject; it is simply the price of learning a new skill. If a colleague ever tells me they are too old or too unqualified to learn something new, I will tell them what took me years to learn: the discomfort passes, but the skill stays.",
+      "cn": "我後來把這門課修完了，雖然到現在也不敢說自己是「數字腦」的人。真正改變的是我看待「還不會的事」的態度。我不再認為卡關代表自己不適合某個領域；那不過是學一項新技能必須付出的代價。如果哪天有同事跟我說自己太老、或太不夠格學新東西，我會告訴他們我花了好幾年才學到的一課：不舒服的感覺會過去，但學到的技能會留下來。"
+    }
+  ],
+  "target": [
+    {
+      "w": "humbling",
+      "ipa": "/ˈhʌmblɪŋ/",
+      "pos": "adj.",
+      "cn": "令人謙卑的",
+      "def": "Making you feel less proud or confident, often in a useful way.",
+      "ex": "The first few weeks were humbling.",
+      "exCn": "頭幾週的經驗讓我學會謙卑。"
+    },
+    {
+      "w": "avoidance",
+      "ipa": "/əˈvɔɪdəns/",
+      "pos": "n.",
+      "cn": "逃避",
+      "def": "The act of staying away from something.",
+      "ex": "I found myself avoiding study sessions on discouraging days, a pattern psychologists call avoidance behavior.",
+      "exCn": "我發現自己會在心情特別低落的那幾天故意不去唸書，這正是心理學家所說的「逃避行為」。"
+    },
+    {
+      "w": "genuine",
+      "ipa": "/ˈdʒenjuɪn/",
+      "pos": "adj.",
+      "cn": "真實的、真正的",
+      "def": "Real, not fake or invented.",
+      "ex": "Something shifted around week five, when a genuine workplace problem was assigned as a group project.",
+      "exCn": "大概到了第五週，事情有了轉變——課堂指派了一個真實的職場問題當作小組專題。"
+    },
+    {
+      "w": "textbook",
+      "ipa": "/ˈtekstbʊk/",
+      "pos": "n.",
+      "cn": "教科書",
+      "def": "A book used for studying a subject.",
+      "ex": "Being forced to apply what I had barely learned built more confidence than any textbook practice could.",
+      "exCn": "被迫運用自己才剛學會的東西，反而比任何課本練習都更能建立信心。"
+    },
+    {
+      "w": "discomfort",
+      "ipa": "/dɪsˈkʌmfərt/",
+      "pos": "n.",
+      "cn": "不舒服的感覺",
+      "def": "A feeling of being uneasy or slightly upset.",
+      "ex": "I began to notice that discomfort was often a sign that real learning was happening, not a sign to quit.",
+      "exCn": "我開始注意到：不舒服的感覺，往往不是要我放棄的訊號，而是代表真正的學習正在發生。"
+    },
+    {
+      "w": "reluctantly",
+      "ipa": "/rɪˈlʌktəntli/",
+      "pos": "adv.",
+      "cn": "不情願地",
+      "def": "Done without wanting to.",
+      "ex": "I signed up reluctantly, expecting to fail.",
+      "exCn": "我心不甘情不願地報了名，心裡想著大概會被當掉。"
+    },
+    {
+      "w": "unsuited",
+      "ipa": "/ʌnˈsuːtɪd/",
+      "pos": "adj.",
+      "cn": "不適合的",
+      "def": "Not right or suitable for something.",
+      "ex": "I no longer assume struggle means I am unsuited to a subject.",
+      "exCn": "我不再認為卡關代表自己不適合某個領域。"
+    },
+    {
+      "w": "certification",
+      "ipa": "/ˌsɜːrtɪfɪˈkeɪʃn/",
+      "pos": "n.",
+      "cn": "認證",
+      "def": "An official qualification showing you have completed training.",
+      "ex": "My manager suggested that everyone on the quality team complete a short certification in statistical process control.",
+      "exCn": "我的主管建議品管團隊的每個人都去修一個統計製程管制的短期認證。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did the narrator sign up for the statistics certification?",
+      "qCn": "敘述者為什麼報名這個統計認證？",
+      "opts": [
+        "A. Her manager suggested it, and she wanted to challenge her belief that she was not a 'numbers person'",
+        "B. She needed it for an immediate pay raise",
+        "C. All of her friends were taking it",
+        "D. She wanted to change careers completely"
+      ],
+      "optsCn": [
+        "A. 主管建議她修這門課，她也想挑戰自己「不是數字腦」的想法",
+        "B. 她需要靠這個立刻加薪",
+        "C. 她所有的朋友都在修這門課",
+        "D. 她想完全轉換跑道"
+      ],
+      "ans": 0,
+      "expl": "my manager suggested that everyone on the quality team complete a short certification... I signed up reluctantly, expecting to fail."
+    },
+    {
+      "q": "What surprised the narrator most during the first few weeks?",
+      "qCn": "頭幾週最讓敘述者意外的是什麼？",
+      "opts": [
+        "A. How much harder the material was compared to a textbook",
+        "B. How much energy went into managing her own frustration, not just the material's difficulty",
+        "C. How quickly she finished every quiz",
+        "D. How little support she received from her instructor"
+      ],
+      "optsCn": [
+        "A. 內容比課本困難很多",
+        "B. 光是應付自己的挫折感就花掉好多心力，不只是內容本身難",
+        "C. 她每次都很快就交完小考卷",
+        "D. 老師給她的支援很少"
+      ],
+      "ans": 1,
+      "expl": "What surprised me most was not the material's difficulty, but how much energy went into simply managing my frustration."
+    },
+    {
+      "q": "What changed the narrator's confidence around week five?",
+      "qCn": "第五週左右，什麼改變了敘述者的信心？",
+      "opts": [
+        "A. She switched to an easier course",
+        "B. A real workplace problem was assigned as a group project, forcing her to apply what she had learned",
+        "C. She stopped attending classes",
+        "D. Her manager gave her extra time off"
+      ],
+      "optsCn": [
+        "A. 她換去更簡單的課程",
+        "B. 一個真實的職場問題被指派為小組專題，逼她運用所學",
+        "C. 她不再去上課",
+        "D. 她的主管給她額外的假"
+      ],
+      "ans": 1,
+      "expl": "Something shifted around week five, when a genuine workplace problem was assigned as a group project... built more confidence than any textbook practice could."
+    },
+    {
+      "q": "According to the narrator, what does discomfort usually signal?",
+      "qCn": "根據敘述者的說法，不舒服的感覺通常代表什麼？",
+      "opts": [
+        "A. That she should quit immediately",
+        "B. That real learning is happening, not that she should quit",
+        "C. That the course is too advanced for her",
+        "D. That she chose the wrong subject"
+      ],
+      "optsCn": [
+        "A. 她應該立刻放棄",
+        "B. 真正的學習正在發生，不是要她放棄的訊號",
+        "C. 這門課對她來說太進階了",
+        "D. 她選錯了主題"
+      ],
+      "ans": 1,
+      "expl": "I began to notice that discomfort was often a sign that real learning was happening, not a sign to quit."
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "I didn't like numbers, but I decided to try the course anyway.",
+      "b2": "I would have said that I was not a 'numbers person,' yet I signed up regardless of my doubts.",
+      "note": "would have said帶出「過去對自己的假設」，regardless of比anyway語域更正式，是B2常見的讓步語。"
+    },
+    {
+      "b1": "The workplace problem was hard, but I learned a lot from doing it.",
+      "b2": "Being forced to apply what I had barely learned, under a real deadline, built more confidence than any textbook practice could.",
+      "note": "Being forced to...是分詞構句開頭的正式寫法，比直接的「主詞+動詞」更精簡、更書面。"
+    }
+  ]
+},
+{
   "id": "d20260828a2",
   "date": "2026-08-28",
   "level": "A2",
@@ -2640,6 +3319,267 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260902a2",
+  "date": "2026-09-02",
+  "unitNo": 7,
+  "level": "A2",
+  "title": "Present Perfect: have/has + done",
+  "titleCn": "現在完成式基礎：have/has + 過去分詞",
+  "srcDays": [],
+  "summary": "have/has + 過去分詞，用來說「已經做完的事」，重點不是「什麼時候做的」，而是「現在已經做完了」。",
+  "sections": [
+    {
+      "h": "怎麼組成：have/has + 過去分詞",
+      "table": {
+        "head": ["主詞", "have/has", "過去分詞"],
+        "rows": [
+          ["I / you / we / they", "have", "done, finished, eaten"],
+          ["he / she / it", "has", "done, finished, eaten"]
+        ]
+      },
+      "examples": [
+        {"en": "I have finished my homework.", "cn": "我已經寫完功課了。", "note": "have + finished"},
+        {"en": "She has eaten lunch already.", "cn": "她已經吃過午餐了。", "note": "has + eaten"},
+        {"en": "They have cleaned the room.", "cn": "他們已經打掃過房間了。", "note": "have + cleaned"}
+      ]
+    },
+    {
+      "h": "什麼時候用",
+      "bullets": [
+        "說「已經做完的事」，不強調是什麼時候做的",
+        "常常搭配already（已經）、yet（還沒，用在否定和問句）",
+        "跟過去簡單式不一樣：過去簡單式常常要說出明確時間（yesterday, last week）"
+      ]
+    },
+    {
+      "h": "肯定、否定、問句",
+      "table": {
+        "head": ["句型", "例句"],
+        "rows": [
+          ["肯定", "I have finished my homework."],
+          ["否定", "I have not (haven't) finished my homework."],
+          ["問句", "Have you finished your homework?"]
+        ]
+      }
+    }
+  ],
+  "traps": [
+    {"bad": "I have finish my homework.", "good": "I have finished my homework.", "why": "have/has後面要接過去分詞（finished），不能用原形動詞（finish）。"},
+    {"bad": "She have eaten lunch.", "good": "She has eaten lunch.", "why": "she是第三人稱單數，要用has，不能用have。"},
+    {"bad": "I have finished my homework yesterday.", "good": "I finished my homework yesterday.", "why": "有明確的過去時間（yesterday）要用過去簡單式finished，不能用現在完成式have finished。"},
+    {"bad": "Have you finish your homework?", "good": "Have you finished your homework?", "why": "問句一樣要用過去分詞finished，不能用原形finish。"}
+  ],
+  "quiz": [
+    {"q": "I ___ my homework already.", "qCn": "我已經寫完功課了。", "opts": ["finish", "finished", "have finished", "am finishing"], "ans": 2, "expl": "already常搭配現在完成式have finished，表示已經做完。"},
+    {"q": "She ___ lunch. She isn't hungry now.", "qCn": "她已經吃過午餐了，她現在不餓。", "opts": ["have eaten", "has eaten", "eat", "is eating"], "ans": 1, "expl": "she是第三人稱單數用has，has eaten表示已經做完的事。"},
+    {"q": "I ___ my homework yesterday.", "qCn": "我昨天寫完了功課。", "opts": ["have finished", "has finished", "finished", "am finishing"], "ans": 2, "expl": "yesterday是明確的過去時間，要用過去簡單式finished，不能用現在完成式。"},
+    {"q": "___ you ___ your room yet?", "qCn": "你打掃房間了嗎？", "opts": ["Did / clean", "Have / cleaned", "Are / cleaning", "Do / clean"], "ans": 1, "expl": "yet常用在現在完成式的問句：Have you cleaned...?"}
+  ]
+},
+
+{
+  "id": "dg20260902b1",
+  "date": "2026-09-02",
+  "unitNo": 7,
+  "level": "B1",
+  "title": "Present Perfect vs Past Simple",
+  "titleCn": "現在完成式 vs 過去簡單式：有沒有說明確時間",
+  "srcDays": [],
+  "summary": "現在完成式（have/has done）用在「沒有說明確時間、強調到現在為止」的事；過去簡單式（did）用在「有明確的過去時間點、事情已經結束、跟現在沒關係」。常見信號字：ever/never/already/yet/just（完成式）vs yesterday/last week/in 2020（簡單式）。",
+  "sections": [
+    {
+      "h": "兩個時態的差別",
+      "table": {
+        "head": ["", "現在完成式 have done", "過去簡單式 did"],
+        "rows": [
+          ["時間點", "沒說清楚是什麼時候", "有明確的過去時間"],
+          ["重點", "到現在為止的經驗／結果", "已經結束、跟現在沒關係"],
+          ["常用字", "ever, never, already, yet, just", "yesterday, last week, in 2020"]
+        ]
+      },
+      "examples": [
+        {"en": "I have never tried Vietnamese coffee.", "cn": "我從來沒喝過越南咖啡。", "note": "沒說時間，講經驗"},
+        {"en": "I tried Vietnamese coffee last week.", "cn": "我上週喝了越南咖啡。", "note": "明確時間last week，用過去簡單式"}
+      ]
+    },
+    {
+      "h": "ever / never / already / yet / just 怎麼用",
+      "table": {
+        "head": ["字", "位置", "例句"],
+        "rows": [
+          ["ever", "問句，have和過去分詞中間", "Have you ever eaten pho?"],
+          ["never", "肯定句，have和過去分詞中間", "I have never eaten pho."],
+          ["already", "肯定句尾或have後面", "I have already eaten."],
+          ["yet", "否定句或問句句尾", "I haven't eaten yet."],
+          ["just", "have和過去分詞中間", "I have just eaten."]
+        ]
+      }
+    },
+    {
+      "h": "常見混淆點",
+      "bullets": [
+        "中文「我做過」常常兩種時態都能翻，要看有沒有明確時間點來判斷",
+        "如果句子裡出現yesterday/last night/in 2020這種明確時間，一定要用過去簡單式，不能用現在完成式"
+      ],
+      "examples": [
+        {"en": "Have you ever been to Da Nang?", "cn": "你去過峴港嗎？", "note": "問經驗，用ever+現在完成式"},
+        {"en": "I went to Da Nang in 2023.", "cn": "我2023年去過峴港。", "note": "有明確時間in 2023，用過去簡單式"}
+      ]
+    }
+  ],
+  "traps": [
+    {"bad": "I have visited Da Nang in 2023.", "good": "I visited Da Nang in 2023.", "why": "in 2023是明確的過去時間，要用過去簡單式，不能用現在完成式。"},
+    {"bad": "Did you ever eat pho?", "good": "Have you ever eaten pho?", "why": "ever問「有沒有這樣的經驗」，通常搭配現在完成式Have you ever + 過去分詞，不是過去簡單式。"},
+    {"bad": "I have eaten already lunch.", "good": "I have already eaten lunch.", "why": "already通常放在have和過去分詞中間，不是放在動詞後面。"},
+    {"bad": "She has finished her homework last night.", "good": "She finished her homework last night.", "why": "last night是明確過去時間，要用過去簡單式finished。"}
+  ],
+  "quiz": [
+    {"q": "___ you ever ___ pho?", "qCn": "你吃過越南河粉嗎？", "opts": ["Did / eat", "Have / eaten", "Do / eat", "Are / eating"], "ans": 1, "expl": "問經驗用ever，搭配現在完成式Have you ever eaten...?"},
+    {"q": "I ___ to Da Nang in 2023.", "qCn": "我2023年去了峴港。", "opts": ["have gone", "have been", "went", "have went"], "ans": 2, "expl": "in 2023是明確過去時間，用過去簡單式went。"},
+    {"q": "She ___ her homework already.", "qCn": "她已經寫完功課了。", "opts": ["finished", "has finished", "have finished", "finish"], "ans": 1, "expl": "already常搭配現在完成式，she用has finished。"},
+    {"q": "I ___ my keys yet. Can you help me find them?", "qCn": "我還沒找到我的鑰匙，你可以幫我找嗎？", "opts": ["didn't find", "haven't found", "don't find", "hasn't found"], "ans": 1, "expl": "yet常用在現在完成式的否定句：haven't + 過去分詞。"}
+  ]
+},
+
+{
+  "id": "dg20260902b1p",
+  "date": "2026-09-02",
+  "unitNo": 7,
+  "level": "B1+",
+  "title": "Present Perfect: Unfinished Time & Common Pitfalls",
+  "titleCn": "現在完成式進階：「還沒結束的時間」與中文母語者常見陷阱",
+  "srcDays": [],
+  "summary": "現在完成式常常跟「還沒結束的時間」一起用（today, this week, this month）；過去簡單式跟「已經結束的時間」一起用（yesterday, last week）。同一個時間詞，加不加this/last，時態完全不同。另外，for/since的用法、以及被動語態的結合，都是中文母語者常見的陷阱。",
+  "sections": [
+    {
+      "h": "還沒結束 vs 已經結束的時間",
+      "table": {
+        "head": ["時間詞", "時態", "例句"],
+        "rows": [
+          ["today, this week, this month（還沒結束）", "現在完成式", "I have finished three modules this week."],
+          ["yesterday, last week, last month（已經結束）", "過去簡單式", "I finished the report last week."]
+        ]
+      },
+      "examples": [
+        {"en": "Anita has completed five modules this month.", "cn": "Anita這個月已經完成五個單元了。", "note": "this month還沒結束，用現在完成式"},
+        {"en": "Anita completed the first module last month.", "cn": "Anita上個月完成了第一個單元。", "note": "last month已經結束，用過去簡單式"}
+      ]
+    },
+    {
+      "h": "for（多久）vs since（從什麼時候開始）",
+      "table": {
+        "head": ["字", "意思", "例句"],
+        "rows": [
+          ["for", "一段時間長度", "She has studied statistics for two months."],
+          ["since", "起點（從...開始）", "She has studied statistics since July."]
+        ]
+      }
+    },
+    {
+      "h": "常見陷阱：中文母語者容易犯的錯",
+      "bullets": [
+        "中文「我剛...」常常直接翻成just，但just通常搭配現在完成式，不會跟明確時間一起出現",
+        "中文沒有時態變化，容易忘記過去分詞要變形（gone, done, written，不是go, do, write）",
+        "已經結束的具體時間點（yesterday, last night）絕對不能跟現在完成式一起用，這是最常見的錯誤"
+      ],
+      "examples": [
+        {"en": "Anita has just finished the fifth module.", "cn": "Anita剛完成了第五個單元。", "note": "just + 現在完成式，沒有明確時間"}
+      ]
+    },
+    {
+      "h": "跟被動語態一起用",
+      "bullets": [
+        "現在完成式的被動：have/has been + 過去分詞",
+        "強調「到目前為止已經被做了」的事"
+      ],
+      "examples": [
+        {"en": "The final project has been assigned for next month.", "cn": "期末專題已經被指派在下個月了。", "note": "has been assigned是現在完成式的被動"}
+      ]
+    }
+  ],
+  "traps": [
+    {"bad": "Anita has completed the module last month.", "good": "Anita completed the module last month.", "why": "last month是已經結束的時間，要用過去簡單式，不能用現在完成式。"},
+    {"bad": "She has studied statistics since two months.", "good": "She has studied statistics for two months.", "why": "表示「一段時間長度」要用for，since後面接的是「起點」（例如since July），不是時間長度。"},
+    {"bad": "Anita has just went to the training.", "good": "Anita has just gone to the training.", "why": "have/has後面一定要接過去分詞（gone），不能用過去簡單式（went）。"},
+    {"bad": "The project has assigned for next month.", "good": "The project has been assigned for next month.", "why": "project是被指派的一方，現在完成式的被動要加been：has been assigned。"}
+  ],
+  "quiz": [
+    {"q": "Anita ___ five modules this month.", "qCn": "Anita這個月已經完成五個單元了。", "opts": ["completed", "has completed", "complete", "is completing"], "ans": 1, "expl": "this month還沒結束，用現在完成式has completed。"},
+    {"q": "She has studied statistics ___ two months.", "qCn": "她已經學統計學兩個月了。", "opts": ["since", "for", "from", "during"], "ans": 1, "expl": "表示「一段時間長度」用for，不是since。"},
+    {"q": "Anita has just ___ the training session.", "qCn": "Anita剛去上完那堂訓練課。", "opts": ["went", "go", "gone", "going"], "ans": 2, "expl": "has後面要接過去分詞gone，不能用went。"},
+    {"q": "The final project ___ for next month.", "qCn": "期末專題已經被指派在下個月了。", "opts": ["has assigned", "has been assigned", "assigned", "is assigning"], "ans": 1, "expl": "project是被指派的一方，要用現在完成式的被動has been assigned。"}
+  ]
+},
+
+{
+  "id": "dg20260902b2",
+  "date": "2026-09-02",
+  "unitNo": 7,
+  "level": "B2",
+  "title": "Present Perfect in Register and Rhetoric",
+  "titleCn": "現在完成式的語域與修辭效果：新聞前導句、正式報告與「至今」的說服力",
+  "srcDays": [],
+  "summary": "現在完成式除了文法規則，還有修辭功能：新聞常用它當「前導句」先給結果，再用過去簡單式補細節；正式報告用它強調「政策或狀態至今仍然有效」；口語裡，過去簡單式有時會取代現在完成式表達「剛發生」的事（尤其美式英語），這是語域和地區差異，而不是文法錯誤。",
+  "sections": [
+    {
+      "h": "新聞寫作：前導句用現在完成式，細節用過去簡單式",
+      "bullets": [
+        "新聞標題和第一句常用現在完成式，先給「目前的結果」",
+        "接下來的段落再用過去簡單式交代「發生的細節、時間、地點」"
+      ],
+      "examples": [
+        {"en": "Regulators have ordered a nationwide recall of the affected batches.", "cn": "主管機關已經下令全國回收受影響的批次。", "note": "前導句：現在完成式，強調「目前的結果」"},
+        {"en": "Inspectors visited the factory on Monday and confirmed the contamination.", "cn": "稽查人員週一到廠稽查，確認了污染情況。", "note": "細節句：過去簡單式，交代明確時間"}
+      ]
+    },
+    {
+      "h": "正式報告：強調「至今仍然有效」",
+      "bullets": [
+        "現在完成式暗示「這個狀態到現在都還成立」，比過去簡單式更適合用在政策、規定、持續中的計畫",
+        "例如：'The policy has remained unchanged since 2020.'（政策至今未變）比過去簡單式更強調「現在還是這樣」"
+      ],
+      "examples": [
+        {"en": "The company has maintained the same safety standard for a decade.", "cn": "這家公司十年來一直維持著同樣的安全標準。", "note": "強調「到現在都還是如此」，用於正式報告特別自然"}
+      ]
+    },
+    {
+      "h": "口語與地區差異：過去簡單式代替現在完成式",
+      "table": {
+        "head": ["語域", "例句", "說明"],
+        "rows": [
+          ["正式／英式", "I have just finished the report.", "just通常搭配現在完成式"],
+          ["口語／美式", "I just finished the report.", "美式口語常直接用過去簡單式代替，語感更輕鬆隨意"]
+        ]
+      },
+      "bullets": [
+        "這不是文法錯誤，而是語域和地區的選擇：正式寫作、英式英語傾向嚴格區分；美式口語比較彈性"
+      ]
+    },
+    {
+      "h": "寫作應用：用現在完成式製造「懸念」或「鋪陳」",
+      "bullets": [
+        "先用現在完成式點出「已經發生的變化」，再解釋「為什麼」，可以製造閱讀的懸念感",
+        "例如先說'Something has changed.'，再用過去簡單式解釋細節，比一開始就把所有細節說完更吸引讀者"
+      ],
+      "examples": [
+        {"en": "Something has shifted in how the team approaches testing.", "cn": "這個團隊處理測試的方式，已經有了轉變。", "note": "先給「已經改變」的懸念，後面再解釋細節"}
+      ]
+    }
+  ],
+  "traps": [
+    {"bad": "（正式報告）The policy changed since 2020 and is still the same.", "good": "The policy has remained unchanged since 2020.", "why": "強調「政策至今仍然有效」要用現在完成式，過去簡單式changed聽起來像「已經結束、跟現在無關」。"},
+    {"bad": "堅持'I just finished the report.'一定是錯的文法，必須改成'I have just finished.'", "good": "美式口語的'I just finished the report.'是可以接受的用法，只是語域比較口語，不是文法錯誤。", "why": "這是語域和地區差異，不是文法錯誤——正式寫作與英式英語傾向用現在完成式，但美式口語常用過去簡單式表達「剛發生」。"},
+    {"bad": "新聞第一句：Inspectors confirmed the contamination and ordered a recall.（前導句和細節句混在一起）", "good": "Regulators have ordered a recall. Inspectors confirmed the contamination on Monday.", "why": "前導句適合用現在完成式先給結果，細節句再用過去簡單式交代明確時間，兩者分工不同，混在一起會讓語氣不夠俐落。"},
+    {"bad": "The company maintained the same safety standard for a decade, but nobody knows if it still applies.", "good": "The company has maintained the same safety standard for a decade.", "why": "如果要表達「這個狀態到現在都還成立」，用現在完成式has maintained，過去簡單式maintained會讓人以為「已經結束了」。"}
+  ],
+  "quiz": [
+    {"q": "（新聞前導句，強調目前結果）Regulators ___ a nationwide recall of the affected batches.", "qCn": "主管機關已經下令全國回收受影響的批次。", "opts": ["ordered", "have ordered", "order", "are ordering"], "ans": 1, "expl": "新聞前導句強調「目前的結果」，用現在完成式have ordered。"},
+    {"q": "Inspectors ___ the factory on Monday and confirmed the contamination.", "qCn": "稽查人員週一到廠稽查，確認了污染情況。", "opts": ["have visited", "visited", "have been visiting", "visit"], "ans": 1, "expl": "on Monday是明確的過去時間，細節句要用過去簡單式visited。"},
+    {"q": "（強調至今仍然有效）The company ___ the same safety standard for a decade.", "qCn": "這家公司十年來一直維持著同樣的安全標準。", "opts": ["maintained", "has maintained", "maintains", "was maintaining"], "ans": 1, "expl": "強調「到現在都還是如此」要用現在完成式has maintained，過去簡單式聽起來像已經結束了。"},
+    {"q": "Which sentence best creates suspense by giving the result first, then explaining details later?", "qCn": "哪一句最能「先給結果製造懸念、再解釋細節」？", "opts": ["Something changed yesterday.", "Something has shifted in how the team approaches testing.", "The team is changing its approach.", "The team changes its approach sometimes."], "optsCn": ["昨天有些改變。", "這個團隊處理測試的方式已經有了轉變。", "這個團隊正在改變做法。", "這個團隊有時候會改變做法。"], "ans": 1, "expl": "現在完成式Something has shifted先給「已經改變」的懸念感，符合「先結果、後解釋」的寫作效果。"}
+  ]
+},
 {
   "id": "dg20260828a2",
   "date": "2026-08-28",

@@ -15,6 +15,276 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週三／五更新） ========== */
 notes:[
 {
+  "id": "dl20260902a2",
+  "date": "2026-09-02",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Tom Tries Roller-Skating",
+  "titleCn": "Tom嘗試溜直排輪",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "🛼 學新技能",
+  "focus": "過去簡單式描述已經發生的事；can表示現在的能力",
+  "intro": "Tom跟Amy分享他第一次玩直排輪的經驗，跌倒了好幾次但還是學到了一些技巧。這一課句子很短，重點是聽出過去式的動詞（tried, fell, hurt）和can表示『現在做得到』的能力。",
+  "tip": "先聽一次抓「Tom跌倒了幾次」，再聽一次抓「他現在會不會轉彎」。",
+  "pre": [
+    {"w": "roller-skate", "ipa": "/ˈroʊlər skeɪt/", "cn": "溜直排輪", "def": "To move around on skates with small wheels."},
+    {"w": "fall down", "ipa": "/fɔːl daʊn/", "cn": "跌倒", "def": "To drop suddenly to the ground."},
+    {"w": "difficult", "ipa": "/ˈdɪfɪkəlt/", "cn": "困難的", "def": "Not easy to do."},
+    {"w": "hurt", "ipa": "/hɜːrt/", "cn": "疼痛、受傷", "def": "To feel pain in a part of your body."},
+    {"w": "turn", "ipa": "/tɜːrn/", "cn": "轉彎", "def": "To change direction."},
+    {"w": "practice", "ipa": "/ˈpræktɪs/", "cn": "練習", "def": "To do something again and again to get better."}
+  ],
+  "script": [
+    {"sp": "Tom", "en": "Amy, guess what I did yesterday!", "cn": "Amy，你猜我昨天做了什麼！"},
+    {"sp": "Amy", "en": "What did you do?", "cn": "你做了什麼？"},
+    {"sp": "Tom", "en": "I tried roller-skating for the first time!", "cn": "我第一次嘗試溜直排輪！"},
+    {"sp": "Amy", "en": "Wow! Was it difficult?", "cn": "哇！困難嗎？"},
+    {"sp": "Tom", "en": "Yes, very difficult! I fell down three times.", "cn": "對，非常困難！我跌倒了三次。"},
+    {"sp": "Amy", "en": "Oh no! Are you okay?", "cn": "喔不！你還好嗎？"},
+    {"sp": "Tom", "en": "I'm okay. My legs hurt a little, but I'm fine.", "cn": "我還好。我的腿有點痛，但我沒事。"},
+    {"sp": "Amy", "en": "Can you skate now?", "cn": "你現在會溜了嗎？"},
+    {"sp": "Tom", "en": "I can skate a little bit. I can't turn very well yet.", "cn": "我可以溜一點點了。我還不太會轉彎。"},
+    {"sp": "Amy", "en": "That's still great for your first try! Practice makes perfect.", "cn": "第一次能這樣已經很棒了！熟能生巧。"}
+  ],
+  "questions": [
+    {
+      "q": "What did Tom do yesterday?",
+      "qCn": "Tom昨天做了什麼？",
+      "opts": ["A. He tried roller-skating for the first time", "B. He went swimming", "C. He rode a bicycle", "D. He played basketball"],
+      "optsCn": ["A. 他第一次嘗試溜直排輪", "B. 他去游泳", "C. 他騎腳踏車", "D. 他打籃球"],
+      "ans": 0,
+      "expl": "I tried roller-skating for the first time!"
+    },
+    {
+      "q": "How many times did Tom fall down?",
+      "qCn": "Tom跌倒了幾次？",
+      "opts": ["A. Once", "B. Twice", "C. Three times", "D. He didn't fall"],
+      "optsCn": ["A. 一次", "B. 兩次", "C. 三次", "D. 他沒有跌倒"],
+      "ans": 2,
+      "expl": "I fell down three times."
+    },
+    {
+      "q": "What can Tom do now?",
+      "qCn": "Tom現在會做什麼？",
+      "opts": ["A. Turn very well", "B. Skate a little bit, but not turn well", "C. Skate perfectly", "D. Nothing at all"],
+      "optsCn": ["A. 很會轉彎", "B. 可以溜一點點，但不太會轉彎", "C. 溜得非常完美", "D. 完全不會"],
+      "ans": 1,
+      "expl": "I can skate a little bit. I can't turn very well yet."
+    },
+    {
+      "q": "I ___ roller-skating for the first time.",
+      "qCn": "我第一次嘗試溜直排輪。（選出正確的動詞形式）",
+      "opts": ["A. try", "B. tried", "C. am trying", "D. tries"],
+      "ans": 1,
+      "expl": "yesterday是過去的時間，用過去簡單式tried。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260902b1",
+  "date": "2026-09-02",
+  "level": "B1",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Amy's Second Loaf",
+  "titleCn": "Amy的第二條麵包",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "🍞 烘焙進度",
+  "focus": "現在完成式（到目前為止）vs 過去簡單式（那一次的細節）",
+  "intro": "Amy跟Lily聊到這禮拜已經烤了兩次麵包，第一次失敗、第二次成功。這一課練習現在完成式（have baked, have tried）講『到目前為止的次數／經驗』，也留意過去簡單式（burned, tasted）講『那一次發生的事』。",
+  "tip": "留意Amy什麼時候用have baked（到目前為止），什麼時候改用過去簡單式burned、tasted（那一次的細節）。",
+  "pre": [
+    {"w": "loaf", "ipa": "/loʊf/", "cn": "一條（麵包）", "def": "A shaped piece of baked bread."},
+    {"w": "disaster", "ipa": "/dɪˈzæstər/", "cn": "大失敗、災難", "def": "A complete failure or a very bad event."},
+    {"w": "burn", "ipa": "/bɜːrn/", "cn": "燒焦", "def": "To damage food by cooking it too long."},
+    {"w": "temperature", "ipa": "/ˈtemprətʃər/", "cn": "溫度", "def": "How hot or cold something is."},
+    {"w": "herb", "ipa": "/ɜːrb/", "cn": "香草", "def": "A plant used to add flavor to food."},
+    {"w": "rosemary", "ipa": "/ˈroʊzməri/", "cn": "迷迭香", "def": "A type of herb with a strong smell, often used in cooking."}
+  ],
+  "script": [
+    {"sp": "Lily", "en": "Amy, have you baked bread again this week?", "cn": "Amy，你這禮拜又烤麵包了嗎？"},
+    {"sp": "Amy", "en": "Yes, I have! I've baked it twice this week already.", "cn": "有啊！我這禮拜已經烤了兩次了。"},
+    {"sp": "Lily", "en": "Really? How was your first loaf last Sunday?", "cn": "真的嗎？上週日那一條怎麼樣？"},
+    {"sp": "Amy", "en": "It was a disaster. I burned the bottom, and it tasted a little strange.", "cn": "根本是災難。底部燒焦了，味道也有點怪。"},
+    {"sp": "Lily", "en": "What about this week's loaf?", "cn": "那這禮拜這一條呢？"},
+    {"sp": "Amy", "en": "This one came out perfect! I finally got the temperature right.", "cn": "這一條完美出爐！我終於抓對溫度了。"},
+    {"sp": "Lily", "en": "Have you ever tried adding herbs to the dough?", "cn": "你有試過在麵團裡加香草嗎？"},
+    {"sp": "Amy", "en": "No, I haven't tried that yet, but I want to next time.", "cn": "沒有，我還沒試過，但下次想試試看。"},
+    {"sp": "Lily", "en": "You should! I tried rosemary bread last year, and it was amazing.", "cn": "你應該試試！我去年試過迷迭香麵包，超好吃。"},
+    {"sp": "Amy", "en": "That sounds great. I'll buy some rosemary this weekend.", "cn": "聽起來很棒。我這週末去買一些迷迭香。"}
+  ],
+  "questions": [
+    {
+      "q": "How many times has Amy baked bread this week?",
+      "qCn": "Amy這禮拜已經烤了幾次麵包？",
+      "opts": ["A. Once", "B. Twice", "C. Three times", "D. She hasn't baked at all"],
+      "optsCn": ["A. 一次", "B. 兩次", "C. 三次", "D. 她完全沒烤"],
+      "ans": 1,
+      "expl": "I've baked it twice this week already."
+    },
+    {
+      "q": "What went wrong with Amy's first loaf last Sunday?",
+      "qCn": "Amy上週日的第一條麵包出了什麼問題？",
+      "opts": ["A. She burned the bottom", "B. She forgot the sugar", "C. She used the wrong flour", "D. It didn't rise"],
+      "optsCn": ["A. 底部燒焦了", "B. 她忘記加糖", "C. 她用錯了麵粉", "D. 麵團沒有發起來"],
+      "ans": 0,
+      "expl": "I burned the bottom, and it tasted a little strange."
+    },
+    {
+      "q": "Has Amy ever added herbs to her dough?",
+      "qCn": "Amy有在麵團裡加過香草嗎？",
+      "opts": ["A. Yes, many times", "B. No, but she wants to try", "C. Yes, once last year", "D. She doesn't like herbs"],
+      "optsCn": ["A. 有，很多次", "B. 沒有，但她想試試看", "C. 有，去年試過一次", "D. 她不喜歡香草"],
+      "ans": 1,
+      "expl": "No, I haven't tried that yet, but I want to next time."
+    },
+    {
+      "q": "I ___ bread twice this week.",
+      "qCn": "我這禮拜已經烤了兩次麵包了。（選出正確的動詞形式）",
+      "opts": ["A. bake", "B. baked", "C. have baked", "D. am baking"],
+      "ans": 2,
+      "expl": "this week還沒結束，強調到目前為止的次數，用現在完成式have baked。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260902b1p",
+  "date": "2026-09-02",
+  "level": "B1+",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Talking About the New Training Course",
+  "titleCn": "聊聊新的培訓課程",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "📊 職場培訓",
+  "focus": "現在完成式＋被動語態描述『到目前為止、被動發生』的事",
+  "intro": "Mark跟Anita聊到她最近在上的統計課程，還有她怎麼用剛學的方法解決了真實的職場問題。這一課大量使用現在完成式加被動語態（has been given, has been shared），描述『到目前為止已經發生、而且是被動發生』的事。",
+  "tip": "留意句子裡have/has been後面接的過去分詞，那些通常代表「被誰做了什麼」。",
+  "pre": [
+    {"w": "enroll", "ipa": "/ɪnˈroʊl/", "cn": "註冊、報名", "def": "To officially join a course."},
+    {"w": "challenging", "ipa": "/ˈtʃælɪndʒɪŋ/", "cn": "有挑戰性的", "def": "Difficult in a way that tests your skill."},
+    {"w": "defect rate", "ipa": "/ˈdiːfekt reɪt/", "cn": "不良率", "def": "The percentage of products that are faulty."},
+    {"w": "impressive", "ipa": "/ɪmˈpresɪv/", "cn": "令人印象深刻的", "def": "Causing admiration because of quality or skill."},
+    {"w": "worth", "ipa": "/wɜːrθ/", "cn": "值得的", "def": "Deserving the time or effort spent."},
+    {"w": "registration", "ipa": "/ˌredʒɪˈstreɪʃn/", "cn": "報名、註冊", "def": "The process of signing up for something."}
+  ],
+  "script": [
+    {"sp": "Mark", "en": "Anita, I heard you've been enrolled in a new statistics course. How is it going?", "cn": "Anita，我聽說你被安排去上新的統計課程了，上得怎麼樣？"},
+    {"sp": "Anita", "en": "It's been challenging. I've been given a lot of homework every week.", "cn": "滿有挑戰性的。我每週都被交代很多作業。"},
+    {"sp": "Mark", "en": "Have you learned anything useful yet?", "cn": "你有學到什麼有用的東西了嗎？"},
+    {"sp": "Anita", "en": "Definitely. Last week, a real defect-rate problem was solved using something I had just learned.", "cn": "當然有。上週，一個真實的不良率問題就是用我剛學的方法解決的。"},
+    {"sp": "Mark", "en": "That's impressive! Was your manager happy about it?", "cn": "太厲害了！你的主管開心嗎？"},
+    {"sp": "Anita", "en": "Yes, she was. My solution has since been shared with the whole department.", "cn": "對，她很開心。我的解決方案後來也被分享給了整個部門。"},
+    {"sp": "Mark", "en": "Do you think the course has been worth the extra work?", "cn": "你覺得這門課值得花這些額外的力氣嗎？"},
+    {"sp": "Anita", "en": "Yes, I do. I've realized that being uncomfortable is part of learning something new.", "cn": "值得。我體會到，感到不舒服本來就是學新東西的一部分。"},
+    {"sp": "Mark", "en": "That's a great way to look at it. Maybe I should sign up for the next round.", "cn": "這樣想真的很棒。也許我該報名下一梯次。"},
+    {"sp": "Anita", "en": "You should! Registration hasn't closed yet.", "cn": "你應該報名！報名還沒截止。"}
+  ],
+  "questions": [
+    {
+      "q": "Why has the statistics course been challenging for Anita?",
+      "qCn": "為什麼這門統計課程對Anita來說很有挑戰性？",
+      "opts": ["A. She has been given a lot of homework every week", "B. The classroom is far from her office", "C. Her manager doesn't support it", "D. She has no time to attend classes"],
+      "optsCn": ["A. 她每週都被交代很多作業", "B. 教室離她辦公室很遠", "C. 她的主管不支持", "D. 她沒有時間上課"],
+      "ans": 0,
+      "expl": "I've been given a lot of homework every week."
+    },
+    {
+      "q": "What happened to the defect-rate problem last week?",
+      "qCn": "上週那個不良率問題發生了什麼事？",
+      "opts": ["A. It remained unsolved", "B. It was solved using something Anita had just learned", "C. It was given to another department", "D. It was ignored by management"],
+      "optsCn": ["A. 一直沒解決", "B. 用Anita剛學的方法解決了", "C. 被轉給了其他部門", "D. 被主管忽略了"],
+      "ans": 1,
+      "expl": "a real defect-rate problem was solved using something I had just learned."
+    },
+    {
+      "q": "What did Anita's manager do with her solution?",
+      "qCn": "Anita的主管怎麼處理她的解決方案？",
+      "opts": ["A. Rejected it", "B. Shared it with the whole department", "C. Kept it private", "D. Forgot about it"],
+      "optsCn": ["A. 拒絕了", "B. 分享給了整個部門", "C. 保密不公開", "D. 忘記這件事"],
+      "ans": 1,
+      "expl": "My solution has since been shared with the whole department."
+    },
+    {
+      "q": "My solution ___ with the whole department.",
+      "qCn": "我的解決方案已經被分享給整個部門了。（選出正確的動詞形式）",
+      "opts": ["A. has shared", "B. has been shared", "C. shares", "D. is sharing"],
+      "ans": 1,
+      "expl": "solution是被分享的一方，用現在完成式的被動has been shared。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260902b2",
+  "date": "2026-09-02",
+  "level": "B2",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Rethinking Discomfort",
+  "titleCn": "重新看待不舒服的感覺",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "🧠 學習心理反思",
+  "focus": "正式語域的獨白：被動語態與抽象名詞描述心理轉變",
+  "intro": "這是Anita錄的一段簡短獨白，反思自己從統計課程學到的一個心理學觀察：不舒服的感覺，其實常常代表學習正在發生。語氣比對話更正式，句子也更長。",
+  "tip": "這是獨白不是對話，可以先聽整段抓大意，再逐句聽細節，留意她怎麼把「假設」與「被挑戰」這種抽象概念講清楚。",
+  "pre": [
+    {"w": "unlikely", "ipa": "/ʌnˈlaɪkli/", "cn": "不太可能的、意想不到的", "def": "Not expected to happen or be true."},
+    {"w": "assumption", "ipa": "/əˈsʌmpʃn/", "cn": "假設", "def": "Something believed to be true without proof."},
+    {"w": "challenge", "ipa": "/ˈtʃælɪndʒ/", "cn": "挑戰、質疑", "def": "To question whether something is true or right."},
+    {"w": "evidence", "ipa": "/ˈevɪdəns/", "cn": "證據", "def": "Facts that show something is true."},
+    {"w": "confusion", "ipa": "/kənˈfjuːʒn/", "cn": "困惑", "def": "A state of not understanding something clearly."},
+    {"w": "unfamiliar", "ipa": "/ˌʌnfəˈmɪliər/", "cn": "不熟悉的", "def": "Not known or recognized."}
+  ],
+  "script": [
+    {"sp": "Anita", "en": "Hi, this is Anita again. I want to talk briefly about something I've learned from an unlikely source: a statistics course.", "cn": "嗨，我是Anita。我想簡短談談我從一個意想不到的來源學到的事：一門統計課程。"},
+    {"sp": "Anita", "en": "For most of my life, I assumed that if something felt uncomfortable, it probably wasn't for me.", "cn": "我這輩子大部分時間都以為，如果一件事讓我覺得不舒服，那可能就代表這件事不適合我。"},
+    {"sp": "Anita", "en": "That assumption has been challenged over the past two months.", "cn": "這個假設在過去兩個月被推翻了。"},
+    {"sp": "Anita", "en": "I've discovered that discomfort is often simply evidence that real learning is taking place.", "cn": "我發現，不舒服的感覺，往往只是代表真正的學習正在發生的證據。"},
+    {"sp": "Anita", "en": "When a concept finally clicked, it was never during an easy moment; it was always after a period of confusion.", "cn": "每次一個觀念終於『通了』，都不是在輕鬆的時刻，而是總是在一段困惑之後才發生。"},
+    {"sp": "Anita", "en": "I've started applying this idea outside the classroom, too.", "cn": "我也開始把這個想法應用在課堂以外的地方。"},
+    {"sp": "Anita", "en": "Whenever a task at work feels unfamiliar or slightly stressful, I now ask myself a different question.", "cn": "每當工作上的一項任務讓我覺得陌生或有點有壓力，我現在會問自己一個不一樣的問題。"},
+    {"sp": "Anita", "en": "Instead of asking, 'Am I bad at this?', I ask, 'What is this discomfort teaching me?'", "cn": "我不再問『我是不是很不擅長這件事？』，而是問『這種不舒服的感覺在教我什麼？』"},
+    {"sp": "Anita", "en": "It's a small shift, but it has changed how I approach almost everything new.", "cn": "這是個小小的轉變，但它改變了我面對幾乎所有新事物的方式。"}
+  ],
+  "questions": [
+    {
+      "q": "What does Anita say she used to assume?",
+      "qCn": "Anita說她以前是怎麼想的？",
+      "opts": ["A. That discomfort meant something wasn't for her", "B. That statistics was the easiest subject", "C. That she was naturally good at math", "D. That confusion should be avoided at all costs"],
+      "optsCn": ["A. 不舒服的感覺代表這件事不適合她", "B. 統計是最簡單的科目", "C. 她天生就很會數學", "D. 應該不惜代價避免困惑"],
+      "ans": 0,
+      "expl": "I assumed that if something felt uncomfortable, it probably wasn't for me."
+    },
+    {
+      "q": "According to Anita, when did concepts usually \"click\" for her?",
+      "qCn": "根據Anita的說法，觀念通常是什麼時候「通了」？",
+      "opts": ["A. During the easiest moments", "B. Always after a period of confusion", "C. Only with her instructor's help", "D. Randomly, with no pattern"],
+      "optsCn": ["A. 在最輕鬆的時刻", "B. 總是在一段困惑之後", "C. 只有在老師幫忙時", "D. 隨機發生，沒有規律"],
+      "ans": 1,
+      "expl": "it was never during an easy moment; it was always after a period of confusion."
+    },
+    {
+      "q": "What question does Anita now ask herself when a task feels unfamiliar?",
+      "qCn": "當一項任務讓Anita覺得陌生時，她現在會問自己什麼問題？",
+      "opts": ["A. 'Am I bad at this?'", "B. 'What is this discomfort teaching me?'", "C. 'Should I give up now?'", "D. 'Who can do this for me?'"],
+      "optsCn": ["A. 「我是不是很不擅長這件事？」", "B. 「這種不舒服的感覺在教我什麼？」", "C. 「我現在該放棄嗎？」", "D. 「誰可以幫我做這件事？」"],
+      "ans": 1,
+      "expl": "Instead of asking, 'Am I bad at this?', I ask, 'What is this discomfort teaching me?'"
+    },
+    {
+      "q": "That assumption ___ over the past two months.",
+      "qCn": "這個假設在過去兩個月被挑戰了。（選出正確的動詞形式）",
+      "opts": ["A. challenges", "B. challenged", "C. has been challenged", "D. is challenging"],
+      "ans": 2,
+      "expl": "assumption是被挑戰的一方，強調『到目前為止』要用現在完成式的被動has been challenged。"
+    }
+  ]
+},
+{
   "id": "dl20260828a2",
   "date": "2026-08-28",
   "level": "A2",
