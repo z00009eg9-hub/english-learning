@@ -22,16 +22,16 @@ function side(ox,p){
   let s='<g transform="translate('+ox+',0)">'
    +'<rect x="'+(160-p.pw/2)+'" y="14" width="'+p.pw+'" height="32" rx="16" fill="#2b5f92"/>'
    +'<text x="160" y="36" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">'+p.title+'</text>'
-   +'<g transform="translate(0,-34)">'+p.draw+'</g>'
-   +'<text x="160" y="236" text-anchor="middle" font-size="15.5" font-weight="800" fill="#1c3d5a">'+p.en+'</text>'
-   +'<text x="160" y="258" text-anchor="middle" font-size="13" font-weight="700" fill="#4a5b68">'+p.cn+'</text>';
-  if(p.cn2) s+='<text x="160" y="276" text-anchor="middle" font-size="13" font-weight="700" fill="#4a5b68">'+p.cn2+'</text>';
+   +'<g transform="translate(0,-20)">'+p.draw+'</g>'
+   +'<text x="160" y="268" text-anchor="middle" font-size="15.5" font-weight="800" fill="#1c3d5a">'+p.en+'</text>'
+   +'<text x="160" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#4a5b68">'+p.cn+'</text>';
+  if(p.cn2) s+='<text x="160" y="308" text-anchor="middle" font-size="13" font-weight="700" fill="#4a5b68">'+p.cn2+'</text>';
   return s+'</g>';
 }
 function card(p1,p2,cap){
-  return {cap:cap, svg:'<svg viewBox="0 0 640 288" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif">'
-   +'<rect x="2" y="2" width="636" height="284" rx="18" fill="#eef6fc" stroke="#bcd8ec" stroke-width="2"/>'
-   +'<line x1="320" y1="18" x2="320" y2="272" stroke="#bcd8ec" stroke-width="2" stroke-dasharray="6 6"/>'
+  return {cap:cap, svg:'<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif">'
+   +'<rect x="2" y="2" width="636" height="316" rx="18" fill="#eef6fc" stroke="#bcd8ec" stroke-width="2"/>'
+   +'<line x1="320" y1="18" x2="320" y2="304" stroke="#bcd8ec" stroke-width="2" stroke-dasharray="6 6"/>'
    +side(0,p1)+side(320,p2)+'</svg>'};
 }
 
@@ -106,14 +106,14 @@ V.hbdHd=card(
    +'<rect x="80" y="154" width="130" height="26" rx="13" fill="#f0b04e" opacity=".6"/>'
    +'<path d="M80 146 L80 138 L210 138 L210 146" fill="none" stroke="#c9631f" stroke-width="2.5"/>'
    +'<text x="145" y="130" text-anchor="middle" font-size="13.5" font-weight="900" fill="#c9631f">for 3 hours 持續三小時</text>'
-   +em(50,100,34,'🖌️'),
+   +em(50,112,34,'🖌️'),
   en:'I have been painting for 3 hours.', cn:'重點是「持續了多久」，', cn2:'通常還在做或剛剛才停'},
  {pw:170,title:'have done',
   draw:tl(214)
    +em(140,150,52,'🖼️')
    +'<circle cx="196" cy="140" r="20" fill="#2f9e5f"/>'
    +'<text x="196" y="148" text-anchor="middle" font-size="22" font-weight="900" fill="#fff">✓</text>'
-   +'<text x="160" y="84" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1f8a4c">做完了！看得到結果</text>',
+   +'<text x="160" y="92" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1f8a4c">做完了！看得到結果</text>',
   en:'I have painted the wall.', cn:'重點是「完成的結果」，', cn2:'牆已經漆好了'},
  '完成進行式問「做多久了」（過程），完成式問「做完了沒」（結果）。How long → have been doing；How many/much → have done。');
 V.dg20260813=V.hbdHd;
@@ -177,9 +177,9 @@ V.ga02=card(
  {pw:170,title:'昨天發生了',
   draw:tl(214)
    +'<line x1="100" y1="152" x2="100" y2="184" stroke="#d9534f" stroke-width="4"/>'
-   +em(100,130,40,'🤒')
+   +em(100,142,40,'🤒')
    +'<text x="100" y="242" text-anchor="middle" font-size="13" font-weight="800" fill="#7c8b96">yesterday</text>'
-   +'<text x="160" y="76" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">事情發生「在過去」，已經結束</text>',
+   +'<text x="160" y="90" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">事情發生「在過去」，已經結束</text>',
   en:'I had a headache last night.', cn:'動詞變過去式：have → had'},
  {pw:190,title:'疑問與否定用 did',
   draw:bub(160,130,'Did you see the doctor?',252)
@@ -346,7 +346,7 @@ V.g13=card(
   draw:em(96,160,52,'🧑')
    +'<path d="M130 148 L200 148" stroke="#8aa8bf" stroke-width="3.5" stroke-linecap="round"/>'+head(210,148,0,'#8aa8bf')
    +'<text x="238" y="132" text-anchor="middle" font-size="13.5" font-weight="900" fill="#2b5f92">am → was</text>'
-   +'<text x="238" y="156" text-anchor="middle" font-size="26">⏪</text>'
+   +'<text x="238" y="164" text-anchor="middle" font-size="26">⏪</text>'
    +'<text x="160" y="220" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">時態往回退一格</text>',
   en:'She said she was tired.', cn:'轉述時 am→was、will→would'},
  '把別人的話轉述出去：時態退一格（am→was、do→did、will→would、can→could），人稱跟著改（I→she）。問句轉述要變回直述語序：He asked where I lived（不是 where did I live）。');
@@ -586,12 +586,12 @@ V.dg20260826a2=card(
 /* ---------- 2026-08-26 B1：過去簡單式 vs 現在完成式 ---------- */
 V.dg20260826b1=card(
  {pw:200,title:'Past Simple：已結束',
-  draw:em(160,130,54,'📅')
+  draw:em(160,155,54,'📅')
    +'<text x="160" y="92" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7c8b96">事情結束了、時間確定</text>'
    +'<text x="160" y="206" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">I paid the deposit last month.</text>',
   en:'I paid the deposit last month.', cn:'有明確時間 → 用過去簡單式'},
  {pw:230,title:'Present Perfect：連到現在',
-  draw:em(160,130,54,'🔗')
+  draw:em(160,155,54,'🔗')
    +'<text x="160" y="92" text-anchor="middle" font-size="12.5" font-weight="800" fill="#7c8b96">經驗／影響延續到此刻</text>'
    +'<text x="160" y="206" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">I have learned a lot from it.</text>',
   en:'I have learned a lot from it.', cn:'沒有講「什麼時候」，重點是到現在'},
