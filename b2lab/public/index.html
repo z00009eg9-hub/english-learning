@@ -680,6 +680,160 @@ tr:nth-child(even) td{background:#fdfbf8}
   .gvcmp{grid-template-columns:1fr}
   .gvcmp .vs{justify-self:center;padding:2px 0}
 }
+
+/* ============================================================
+   Visual Grammar System — Step 1 視覺化型別（2026-09-03）
+   ------------------------------------------------------------
+   硬規則：這些元件一律用 HTML + CSS 排版，文字絕不畫進 SVG。
+   SVG 只用來畫箭頭與軸線（無文字），所以：
+     · 天生 RWD，窄螢幕自動換行、改單欄
+     · 吃全站 --fs 字級設定
+     · 不會再出現「圖擋住文字」（SVG 內文字重疊）那類問題
+   型別：matrix / swap / merge / scale / branch / shift / cols / chain
+   ============================================================ */
+.gvv{background:#fdfaf6;border:1px solid #f0e3d2;border-radius:14px;padding:13px;box-shadow:var(--shadow)}
+.gvvcap{font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.8;margin-top:9px;padding-left:2px}
+.gvvcap b{color:var(--accent2)}
+/* 共用：句子裡的字塊（依語法角色上色） */
+.gvchip{display:inline-block;border-radius:8px;padding:3px 9px;font-size:calc(14.5px * var(--fs));
+  font-weight:700;line-height:1.5;border:1px solid transparent}
+.gvchip.subj{background:#e5efff;color:#1d4ed8;border-color:#c7dbff}
+.gvchip.verb{background:#fdead9;color:#c9631f;border-color:#f6d4b4}
+.gvchip.obj{background:#e6f6ec;color:#15803d;border-color:#c6e9d3}
+.gvchip.glue{background:#f3e8ff;color:#7c3aed;border-color:#e0ccff}
+.gvchip.plain{background:#fff;color:var(--ink);border-color:var(--line)}
+.gvchip.mute{background:#f4f1ec;color:var(--ink2);border-color:#e8e1d6}
+.gvsent{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.gvcn{font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.7;margin-top:5px}
+.gvtag{display:inline-block;font-size:calc(11px * var(--fs));font-weight:800;letter-spacing:.05em;
+  border-radius:999px;padding:2px 9px;background:var(--accent-soft);color:var(--accent2)}
+.gvtag.cool{background:#eef2f7;color:#475569}
+.gvtag.warn{background:#fef2f2;color:#b3261e}
+.gvtag.ok{background:#eefaf1;color:#14532d}
+/* 箭頭（純圖形，無文字） */
+.gvarr{display:block;margin:7px auto;color:var(--accent)}
+.gvarr.down{width:26px;height:20px}
+
+/* ---- matrix：座標表（時間 × 狀態） ---- */
+.gvmx{overflow-x:auto}
+.gvmx table{border-collapse:separate;border-spacing:4px;width:100%;min-width:520px}
+.gvmx th{background:none;border:0;font-size:calc(11.5px * var(--fs));font-weight:800;color:var(--accent2);
+  text-align:left;padding:4px 8px;white-space:nowrap}
+.gvmx th.rh{color:var(--ink2)}
+.gvmx td{background:#fff;border:1px solid var(--line);border-radius:9px;padding:7px 9px;vertical-align:top}
+.gvmx td .en{font-size:calc(13.5px * var(--fs));font-weight:700;color:#1f2937;line-height:1.5}
+.gvmx td .cn{font-size:calc(11.5px * var(--fs));color:var(--ink2);line-height:1.6;margin-top:2px}
+.gvmx td.hi{background:#fff8f1;border-color:#f0d9c2}
+/* 手機：表格改成一組一組的堆疊卡，不橫捲 */
+.gvmxs{display:none}
+.gvmxs .grp{border-top:1px dashed #eee4d8;padding:9px 0}
+.gvmxs .grp:first-child{border-top:0;padding-top:0}
+.gvmxs .grp>.h{font-size:calc(12.5px * var(--fs));font-weight:800;color:var(--accent2);margin-bottom:5px}
+.gvmxs .mxr{display:flex;gap:8px;align-items:baseline;padding:3px 0}
+.gvmxs .mxr .k{flex:0 0 82px;font-size:calc(11.5px * var(--fs));color:var(--ink2);font-weight:700}
+.gvmxs .mxr .en{font-size:calc(13.5px * var(--fs));font-weight:700;color:#1f2937}
+@media(max-width:640px){ .gvmx{display:none} .gvmxs{display:block} }
+
+/* ---- swap：主詞 ↔ 受詞交換（被動語態） ---- */
+.gvsw .lane{background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 11px}
+.gvsw .lane .hd{display:flex;align-items:center;gap:7px;margin-bottom:7px;flex-wrap:wrap}
+.gvsw .lane .hd .sub{font-size:calc(12px * var(--fs));color:var(--ink2)}
+.gvsw .cross{display:flex;align-items:center;justify-content:center;gap:9px;padding:7px 0;flex-wrap:wrap}
+.gvsw .cross svg{width:130px;height:48px;color:var(--accent);flex:0 0 auto}
+.gvsw .cross .lbl{font-size:calc(11.5px * var(--fs));font-weight:800;color:var(--accent2)}
+
+/* ---- merge：兩句合併成一句 ---- */
+.gvmg .in{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.gvmg .bx{background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 11px}
+.gvmg .bx .n{font-size:calc(11px * var(--fs));font-weight:800;color:var(--ink2);margin-bottom:4px}
+.gvmg .en{font-size:calc(14px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
+.gvmg .glue{text-align:center;margin:8px 0 4px}
+.gvmg .glue .g{display:inline-block;background:#f3e8ff;color:#6d28d9;border:1px solid #e0ccff;
+  border-radius:999px;padding:4px 12px;font-size:calc(13px * var(--fs));font-weight:800}
+.gvmg .glue .gc{font-size:calc(11.5px * var(--fs));color:var(--ink2);margin-top:4px;line-height:1.7}
+.gvmg .out{background:#fff8f1;border:1px solid #f0d9c2;border-radius:11px;padding:11px 12px}
+.gvmg .out .n{font-size:calc(11px * var(--fs));font-weight:800;color:var(--accent2);margin-bottom:5px}
+@media(max-width:640px){ .gvmg .in{grid-template-columns:1fr} }
+
+/* ---- scale：程度刻度 ---- */
+.gvsc .axis{position:relative;height:12px;border-radius:999px;margin:6px 6px 0;
+  background:linear-gradient(90deg,#dbeafe,#fdead9,#fde2e0)}
+.gvsc .axis .pin{position:absolute;top:-6px;width:2px;height:24px;background:#c9631f;border-radius:2px;transform:translateX(-1px)}
+.gvsc .ends{display:flex;justify-content:space-between;margin:8px 8px 0;
+  font-size:calc(11.5px * var(--fs));font-weight:800;color:var(--ink2)}
+.gvsc .stops{display:grid;gap:8px;margin-top:12px}
+.gvsc .stop{background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px 11px;
+  display:flex;gap:10px;align-items:flex-start}
+.gvsc .stop .pct{flex:0 0 48px;font-size:calc(11.5px * var(--fs));font-weight:800;color:var(--accent2);
+  background:var(--accent-soft);border-radius:8px;padding:3px 0;text-align:center}
+.gvsc .stop .lb{font-size:calc(13.5px * var(--fs));font-weight:800;color:var(--ink)}
+.gvsc .stop .lb small{display:block;font-weight:600;color:var(--ink2);font-size:calc(11.5px * var(--fs));margin-top:1px}
+.gvsc .stop .en{font-size:calc(14px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6;margin-top:3px}
+
+/* ---- branch：條件分支 ---- */
+.gvbr .cond{background:#fff;border:1px solid var(--line);border-left:4px solid #7c3aed;
+  border-radius:11px;padding:10px 12px}
+.gvbr .cond .en{font-size:calc(14.5px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
+.gvbr .fan{display:grid;gap:9px;margin-top:4px}
+@media(min-width:700px){ .gvbr .fan{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))} }
+.gvbr .br{background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 11px;border-top:4px solid #94a3b8}
+.gvbr .br.real{border-top-color:#15803d}
+.gvbr .br.unreal{border-top-color:#e8813a}
+.gvbr .br.impossible{border-top-color:#b3261e}
+.gvbr .br .pb{height:6px;border-radius:999px;background:#eee7dd;margin:6px 0 7px;overflow:hidden}
+.gvbr .br .pb i{display:block;height:100%;border-radius:999px;background:var(--accent)}
+.gvbr .br .en{font-size:calc(14px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
+
+/* ---- shift：往回退一格 ---- */
+.gvsh .r{display:grid;grid-template-columns:1fr 26px 1fr;gap:8px;align-items:center;
+  background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px 11px}
+.gvsh .r+.r{margin-top:7px}
+.gvsh .r .a,.gvsh .r .b{font-size:calc(14px * var(--fs));font-weight:700;line-height:1.5}
+.gvsh .r .a{color:var(--ink2)}
+.gvsh .r .b{color:#c9631f}
+.gvsh .r .ar{color:var(--accent);display:flex;justify-content:center}
+.gvsh .r .ar svg{width:20px;height:14px}
+.gvsh .r .nt{grid-column:1/-1;font-size:calc(12px * var(--fs));color:var(--ink2);line-height:1.7}
+@media(max-width:520px){
+  .gvsh .r{grid-template-columns:1fr}
+  .gvsh .r .ar{justify-content:flex-start}
+  .gvsh .r .ar svg{transform:rotate(90deg)}
+}
+
+/* ---- cols：2～3 欄對照 ---- */
+.gvcl{display:grid;gap:10px;grid-template-columns:1fr}
+@media(min-width:640px){ .gvcl.n2{grid-template-columns:repeat(2,1fr)} }
+@media(min-width:760px){ .gvcl.n3{grid-template-columns:repeat(3,1fr)} }
+.gvcl .col{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 12px;border-top:4px solid #cbd5e1}
+.gvcl .col.t1{border-top-color:var(--accent)}
+.gvcl .col.t2{border-top-color:#3b82f6}
+.gvcl .col.t3{border-top-color:#15803d}
+.gvcl .col>.hd{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:3px}
+.gvcl .col .hcn{font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.6;margin-bottom:7px}
+.gvcl .col .it{border-top:1px dashed #eee4d8;padding:7px 0}
+.gvcl .col .it:first-of-type{border-top:0}
+.gvcl .col .it .en{font-size:calc(14px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
+.gvcl .col .it .cn{font-size:calc(12px * var(--fs));color:var(--ink2);line-height:1.7}
+.gvcl .col .it .nt{font-size:calc(12px * var(--fs));color:var(--accent2);line-height:1.7;margin-top:2px}
+
+/* ---- chain：結構鏈 ---- */
+.gvch .links{display:flex;flex-wrap:wrap;gap:7px;align-items:flex-start;justify-content:center;
+  background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 10px}
+.gvch .links .ar{color:var(--accent);display:inline-flex;align-items:center;height:30px}
+.gvch .links .ar svg{width:18px;height:13px}
+.gvch .lkw{display:inline-flex;align-items:flex-start;gap:7px}
+.gvch .lk{text-align:center}
+.gvch .lk .t{display:block;border-radius:9px;padding:5px 11px;font-size:calc(14.5px * var(--fs));font-weight:800}
+.gvch .lk .c{display:block;font-size:calc(11px * var(--fs));color:var(--ink2);margin-top:3px;line-height:1.5}
+.gvch .eg{margin-top:9px;background:#fff8f1;border:1px solid #f0d9c2;border-radius:11px;padding:10px 12px}
+.gvch .eg .en{font-size:calc(14.5px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
+.gvch .vr{display:grid;gap:7px;margin-top:9px}
+@media(min-width:640px){ .gvch .vr{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))} }
+.gvch .vr .v{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.gvch .vr .v .k{font-size:calc(12px * var(--fs));font-weight:800;color:var(--accent2)}
+.gvch .vr .v .en{font-size:calc(13.5px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6;margin-top:2px}
+.gvch .vr .v .cn{font-size:calc(11.5px * var(--fs));color:var(--ink2);line-height:1.6}
+
 /* 內文重點字：橘色加粗＋上標編號 */
 w.tgt{color:#c0561a;font-weight:800}
 sup.tno{color:#c0392b;font-weight:900;font-size:.66em;padding-left:1px}
@@ -2664,12 +2818,24 @@ RENDER.gram=function(){
       +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(g.level)+'">'+esc(g.titleCn)+'</div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
       +'<div class="tc">'+esc(g.title)+'</div>'
       +'<div class="meta"><span>'+esc(g.summary)+'</span></div>'
-      +'<div class="meta">'+(g.vis?'<span>✨ 視覺化教學 · '+((g.scenarios||[]).length)+' 個情境圖 · 時間線 · 左右比較</span>'
+      +'<div class="meta">'+(g.vis?'<span>✨ 視覺化教學 · '+gvBadge(g)+'</span>'
           :(g.date?'<span>📅 '+esc(g.date)+' 新增'+(g.unitNo?' · Unit '+g.unitNo:'')+'</span>'
           :((g.srcDays||[]).length?'<span>📓 課堂：'+g.srcDays.join(' / ')+'</span>':'<span>➕ B2 補強單元</span>')))
       +'</div></div>';
     }).join('');
 };
+/* 列表卡的視覺化徽章：列出這個單元真正有的東西（沒有時間線就不要寫時間線） */
+function gvBadge(g){
+  const b=[];
+  const vt=g.visual&&GVVTTL[g.visual.type];
+  if(vt) b.push(vt.split('：')[0]);
+  else if(g.timeline) b.push('時間線');
+  if((g.scenarios||[]).length) b.push(g.scenarios.length+' 個情境圖');
+  if(g.comparison) b.push('左右比較');
+  if((g.mistakes||[]).length||(g.traps||[]).length) b.push('常錯提醒');
+  if((g.quiz||[]).length) b.push(g.quiz.length+' 題練習');
+  return b.join(' · ');
+}
 /* 文法圖文說明（來自 data-gramviz.js，兩格對照卡） */
 function gvizHTML(id){
   const v=(window.GRAMVIZ||{})[id];
@@ -2853,6 +3019,175 @@ function gvNextStep(btn){
   if(n>=total){ btn.parentNode.remove(); }
 }
 window.gvNextStep=gvNextStep;
+/* ============================================================
+   Step 1 · SEE 的視覺化型別（2026-09-03）
+   ------------------------------------------------------------
+   時間線只適用於時態；關係子句、被動、比較級這些沒有時間軸，
+   所以改成「一個文法點配一種型別」。資料寫在單元的 visual 欄位：
+
+     visual:{ type:'…', cap:'圖說', …型別各自的欄位 }
+
+   ⚠ 硬規則：這些元件全部用 HTML + CSS 排版，文字絕不畫進 SVG
+     （SVG 只畫箭頭與軸線）。這樣才吃 --fs 字級、會自動換行，
+     也不會重演「SVG 內文字被圖形擋住」的問題。
+
+   型別與欄位
+   ---------------------------------------------------------------
+   matrix  座標表（時間 × 狀態）
+           {cols:['簡單式',…], rows:[{h:'現在', cells:[{en,cn,hi}]}]}
+   swap    主詞 ↔ 受詞交換（被動語態）
+           {crossLabel, lanes:[{tag,tone,sub,parts:[{t,role}],cn}]}
+             role: subj / verb / obj / glue / plain / mute
+   merge   兩句合併成一句（關係子句、分詞構句、連接詞、間接問句）
+           {a:{n,en,cn}, b:{n,en,cn}, glue, glueCn, out:{n,parts:[…],cn}}
+   scale   程度刻度（比較級、情態動詞推測、頻率副詞）
+           {lo,hi, stops:[{at:0–100,label,labelCn,en,cn}]}
+   branch  條件分支（假設語氣）
+           {cond:{en,cn}, fan:[{tag,tone:'real|unreal|impossible',prob,en,cn}]}
+   shift   往回退一格（轉述句時態後移、used to）
+           {rows:[{a,b,nt}]}
+   cols    2～3 欄對照（狀態/動作動詞、-ed/-ing、對比/因果/讓步）
+           {cols:[{tag,tagCn,tone:1|2|3,items:[{en,cn,nt}]}]}
+   chain   結構鏈（使役動詞、被動的 be + Vpp）
+           {links:[{t,c,role}], eg:{en,cn}, variants:[{k,en,cn}]}
+   ============================================================ */
+/* 英文句：可點整句朗讀，與情境卡、時間線一致 */
+function gvEn(x){
+  if(!x) return '';
+  return '<span class="sent" data-t="'+esc(x)+'" onclick="saySent(this)">'+esc(x)+'</span> '+spk(x);
+}
+/* 純圖形箭頭（無文字，縮放不會壞） */
+const GVARROW={
+  down:'<svg class="gvarr down" viewBox="0 0 26 20" fill="none" aria-hidden="true"><path d="M13 2 V13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M7 12 l6 6 6 -6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  right:'<svg viewBox="0 0 18 13" fill="none" aria-hidden="true"><path d="M1 6.5 H12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10 2 l5 4.5 -5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  cross:'<svg viewBox="0 0 118 44" fill="none" aria-hidden="true">'+'<path d="M10 8 C50 8 68 36 108 36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>'+'<path d="M102 31 l6 5 -6 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>'+'<path d="M108 8 C68 8 50 36 10 36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="5 4"/>'+'<path d="M16 31 l-6 5 6 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+};
+/* parts:[{t,role}] → 上了語法角色顏色的句子 */
+function gvParts(parts){
+  return '<div class="gvsent">'+(parts||[]).map(p=>
+    '<span class="gvchip '+(p.role||'plain')+'">'+esc(p.t)+'</span>').join('')+'</div>';
+}
+function gvvCap(c){ return c?'<div class="gvvcap">'+mkText(c)+'</div>':''; }
+
+function gvMatrix(v){
+  const cols=v.cols||[], rows=v.rows||[];
+  let w='<div class="gvmx"><table><tr><th class="rh"></th>'
+    +cols.map(c=>'<th>'+esc(c)+'</th>').join('')+'</tr>'
+    +rows.map(r=>'<tr><th class="rh">'+esc(r.h)+'</th>'
+      +(r.cells||[]).map(c=>'<td'+(c.hi?' class="hi"':'')+'><div class="en">'+esc(c.en||'')+'</div>'
+        +(c.cn?'<div class="cn">'+esc(c.cn)+'</div>':'')+'</td>').join('')+'</tr>').join('')
+    +'</table></div>';
+  /* 手機：不橫捲，改成「現在／過去／未來」各一組 */
+  let n='<div class="gvmxs">'+rows.map(r=>'<div class="grp"><div class="h">'+esc(r.h)+'</div>'
+    +(r.cells||[]).map((c,i)=>'<div class="mxr"><span class="k">'+esc(cols[i]||'')+'</span>'
+      +'<span class="en">'+gvEn(c.en||'')+'</span></div>').join('')+'</div>').join('')+'</div>';
+  return '<div class="gvv gvmxw">'+w+n+'</div>'+gvvCap(v.cap);
+}
+
+function gvSwap(v){
+  const lane=(l)=>'<div class="lane"><div class="hd"><span class="gvtag'+(l.tone?' '+l.tone:'')+'">'+esc(l.tag||'')+'</span>'
+    +(l.sub?'<span class="sub">'+esc(l.sub)+'</span>':'')+'</div>'
+    +gvParts(l.parts)+(l.cn?'<div class="gvcn">'+esc(l.cn)+'</div>':'')+'</div>';
+  const lanes=v.lanes||[];
+  let h='<div class="gvv gvsw">'+lane(lanes[0]||{});
+  if(lanes[1]) h+='<div class="cross">'+GVARROW.cross
+    +(v.crossLabel?'<span class="lbl">'+esc(v.crossLabel)+'</span>':'')+'</div>'+lane(lanes[1]);
+  return h+'</div>'+gvvCap(v.cap);
+}
+
+function gvMerge(v){
+  const bx=(o)=>'<div class="bx"><div class="n">'+esc(o.n||'')+'</div>'
+    +'<div class="en">'+gvEn(o.en||'')+'</div>'+(o.cn?'<div class="gvcn">'+esc(o.cn)+'</div>':'')+'</div>';
+  const out=v.out||{};
+  return '<div class="gvv gvmg">'
+    +'<div class="in">'+bx(v.a||{})+bx(v.b||{})+'</div>'
+    +GVARROW.down
+    +(v.glue?'<div class="glue"><span class="g">'+esc(v.glue)+'</span>'
+      +(v.glueCn?'<div class="gc">'+mkText(v.glueCn)+'</div>':'')+'</div>':'')
+    +'<div class="out"><div class="n">'+esc(out.n||'合併後')+'</div>'
+    +(out.parts?gvParts(out.parts):'<div class="en">'+gvEn(out.en||'')+'</div>')
+    +(out.cn?'<div class="gvcn">'+esc(out.cn)+'</div>':'')+'</div>'
+    +'</div>'+gvvCap(v.cap);
+}
+
+function gvScale(v){
+  const stops=(v.stops||[]).slice().sort((a,b)=>(a.at||0)-(b.at||0));
+  return '<div class="gvv gvsc">'
+    +'<div class="axis">'+stops.map(s=>'<i class="pin" style="left:'+Math.max(0,Math.min(100,s.at||0))+'%"></i>').join('')+'</div>'
+    +'<div class="ends"><span>'+esc(v.lo||'')+'</span><span>'+esc(v.hi||'')+'</span></div>'
+    +'<div class="stops">'+stops.map(s=>'<div class="stop">'
+      +'<span class="pct">'+(s.at!=null?s.at+'%':'')+'</span><div>'
+      +'<div class="lb">'+esc(s.label||'')+(s.labelCn?'<small>'+esc(s.labelCn)+'</small>':'')+'</div>'
+      +(s.en?'<div class="en">'+gvEn(s.en)+'</div>':'')
+      +(s.cn?'<div class="gvcn">'+esc(s.cn)+'</div>':'')+'</div></div>').join('')+'</div>'
+    +'</div>'+gvvCap(v.cap);
+}
+
+function gvBranch(v){
+  const c=v.cond||{};
+  return '<div class="gvv gvbr">'
+    +'<div class="cond"><span class="gvtag">IF</span><div class="en" style="margin-top:5px">'+gvEn(c.en||'')+'</div>'
+    +(c.cn?'<div class="gvcn">'+esc(c.cn)+'</div>':'')+'</div>'
+    +GVARROW.down
+    +'<div class="fan">'+(v.fan||[]).map(b=>'<div class="br '+(b.tone||'')+'">'
+      +'<span class="gvtag'+(b.tone==='real'?' ok':b.tone==='impossible'?' warn':'')+'">'+esc(b.tag||'')+'</span>'
+      +(b.prob!=null?'<div class="pb"><i style="width:'+Math.max(2,Math.min(100,b.prob))+'%"></i></div>':'')
+      +'<div class="en">'+gvEn(b.en||'')+'</div>'
+      +(b.cn?'<div class="gvcn">'+esc(b.cn)+'</div>':'')+'</div>').join('')+'</div>'
+    +'</div>'+gvvCap(v.cap);
+}
+
+function gvShift(v){
+  return '<div class="gvv gvsh">'+(v.rows||[]).map(r=>'<div class="r">'
+    +'<div class="a">'+esc(r.a||'')+'</div>'
+    +'<div class="ar">'+GVARROW.right+'</div>'
+    +'<div class="b">'+esc(r.b||'')+'</div>'
+    +(r.nt?'<div class="nt">'+mkText(r.nt)+'</div>':'')+'</div>').join('')+'</div>'+gvvCap(v.cap);
+}
+
+function gvCols(v){
+  const cols=v.cols||[];
+  return '<div class="gvv"><div class="gvcl n'+cols.length+'">'+cols.map(c=>'<div class="col t'+(c.tone||1)+'">'
+    +'<div class="hd"><span class="gvtag">'+esc(c.tag||'')+'</span></div>'
+    +(c.tagCn?'<div class="hcn">'+mkText(c.tagCn)+'</div>':'')
+    +(c.items||[]).map(it=>'<div class="it"><div class="en">'+gvEn(it.en||'')+'</div>'
+      +(it.cn?'<div class="cn">'+esc(it.cn)+'</div>':'')
+      +(it.nt?'<div class="nt">→ '+mkText(it.nt)+'</div>':'')+'</div>').join('')
+    +'</div>').join('')+'</div></div>'+gvvCap(v.cap);
+}
+
+function gvChain(v){
+  const eg=v.eg||{};
+  return '<div class="gvv gvch">'
+    +'<div class="links">'+(v.links||[]).map((l,i)=>
+      '<span class="lkw">'+(i?'<span class="ar">'+GVARROW.right+'</span>':'')
+      +'<span class="lk"><span class="t gvchip '+(l.role||'plain')+'">'+esc(l.t)+'</span>'
+      +(l.c?'<span class="c">'+esc(l.c)+'</span>':'')+'</span></span>').join('')+'</div>'
+    +(eg.en?'<div class="eg"><div class="en">'+gvEn(eg.en)+'</div>'
+      +(eg.cn?'<div class="gvcn">'+esc(eg.cn)+'</div>':'')+'</div>':'')
+    +((v.variants||[]).length?'<div class="vr">'+v.variants.map(x=>'<div class="v">'
+      +'<div class="k">'+esc(x.k||'')+'</div><div class="en">'+gvEn(x.en||'')+'</div>'
+      +(x.cn?'<div class="cn">'+esc(x.cn)+'</div>':'')+'</div>').join('')+'</div>':'')
+    +'</div>'+gvvCap(v.cap);
+}
+
+const GVVIS={matrix:gvMatrix,swap:gvSwap,merge:gvMerge,scale:gvScale,
+             branch:gvBranch,shift:gvShift,cols:gvCols,chain:gvChain};
+/* Step 1 的總入口：visual 型別 → 時間線 → 舊的兩格對照卡，取第一個有內容的 */
+function gvVisual(g){
+  const v=g.visual;
+  if(v&&GVVIS[v.type]) return GVVIS[v.type](v);
+  if(g.timeline) return gvTimeline(g.timeline);
+  return gvizHTML(g.id);
+}
+/* Step 1 的標題跟著型別走，讀者才知道自己在看什麼 */
+const GVVTTL={matrix:'座標表：時間 × 動作狀態',swap:'主詞與受詞換位置',merge:'兩句合併成一句',
+  scale:'程度刻度：從弱到強',branch:'條件分支：這個 if 有多真',shift:'往回退一格',
+  cols:'分邊看：各自負責什麼',chain:'句型結構鏈'};
+function gvVisualTitle(g){
+  const t=g.visual&&GVVTTL[g.visual.type];
+  return t||(g.timeline?'時間線：這個時態站在哪裡':'圖解：先看懂整體關係');
+}
 /* 視覺化文法內頁：SEE → UNDERSTAND → READ → COMPARE → PRACTICE */
 function gvHTML(g){
   let h='<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
@@ -2861,22 +3196,31 @@ function gvHTML(g){
 
   h+='<div class="gvlead"><div class="l1">💡 '+mkText(g.oneLine||g.summary||'')+'</div>'+gvMap(g.map)+'</div>';
 
-  if(g.timeline) h+='<div class="card"><div class="gvh"><span class="step">Step 1 · SEE</span><h3>時間線：這個時態站在哪裡</h3></div>'
-    +gvTimeline(g.timeline)+'</div>';
+  /* 一段一張卡，沒有內容就整段跳過（步驟編號固定不重排） */
+  const card=(step,title,body,sub)=>body?'<div class="card"><div class="gvh"><span class="step">'+step+'</span><h3>'+title+'</h3></div>'
+    +(sub?'<div class="gvsub">'+sub+'</div>':'')+body+'</div>':'';
 
-  if((g.scenarios||[]).length) h+='<div class="card"><div class="gvh"><span class="step">Step 2 · UNDERSTAND</span><h3>什麼時候用？'+g.scenarios.length+' 個情境</h3></div>'
-    +'<div class="gvsub">每張卡只回答一個問題。先看圖和例句，想不通再點「為什麼？」。</div>'
-    +'<div class="gvgrid">'+g.scenarios.map(gvScenario).join('')+'</div></div>';
+  h+=card('Step 1 · SEE',gvVisualTitle(g),gvVisual(g));
 
-  if((g.steps||[]).length) h+='<div class="card"><div class="gvh"><span class="step">Step 3 · READ</span><h3>一步一步理解</h3></div>'
-    +'<div class="gvsub">從情境出發，最後才看到文法規則——不要一開始就背 have + Vpp。</div>'
-    +gvSteps(g.steps)+'</div>';
+  /* Step 2：情境卡 + 原有的 sections 規則（表格／條列不丟掉，2026-09-03 使用者指定） */
+  h+=card('Step 2 · UNDERSTAND',
+    (g.scenarios||[]).length?'什麼時候用？'+g.scenarios.length+' 個情境':'核心規則',
+    ((g.scenarios||[]).length?'<div class="gvgrid">'+g.scenarios.map(gvScenario).join('')+'</div>':'')
+    +gSecPart(g.sections,'rule'),
+    (g.scenarios||[]).length?'每張卡只回答一個問題。先看圖和例句，想不通再點「為什麼？」。':'');
 
-  if(g.comparison) h+='<div class="card"><div class="gvh"><span class="step">Step 4 · COMPARE</span><h3>'+esc(g.comparison.title||'左右比較')+'</h3></div>'
-    +gvComparison(g.comparison)+'</div>';
+  h+=card('Step 3 · READ','例句與逐步理解',
+    ((g.steps||[]).length?gvSteps(g.steps):'')+gSecPart(g.sections,'ex'),
+    (g.steps||[]).length?'從情境出發，最後才看到文法規則——不要一開始就背規則。':'');
 
-  if((g.mistakes||[]).length) h+='<div class="card"><div class="gvh"><span class="step">Step 5 · CHECK</span><h3>⚠️ 最容易錯的地方</h3></div>'
-    +'<div class="gvcols">'+g.mistakes.map(gvMistake).join('')+'</div></div>';
+  h+=card('Step 4 · COMPARE',(g.comparison&&g.comparison.title)||'對照',
+    (g.comparison?gvComparison(g.comparison):'')+gSecPart(g.sections,'table'));
+
+  /* mistakes 是視覺化格式的欄位，traps 是舊格式的；兩種都收，一起排在 Step 5 */
+  const mis=(g.mistakes||[]).map(gvMistake).join('')
+    +(g.traps||[]).map(t=>'<div class="trap"><div class="bad">✗ '+esc(t.bad)+'</div>'
+      +'<div class="good">✓ '+esc(t.good)+' '+spk(t.good)+'</div><div class="why">'+trapWhy(t.why)+'</div></div>').join('');
+  h+=card('Step 5 · CHECK','⚠️ 最容易錯的地方',mis?'<div class="gvcols">'+mis+'</div>':'');
 
   if((g.quiz||[]).length) h+='<div class="card"><div class="row" style="align-items:center;margin-bottom:8px">'
     +'<div class="gvh" style="margin:0;flex:1"><span class="step">Step 6 · PRACTICE</span><h3>✏️ Mini Practice</h3></div>'+qzBtnHTML('gram',g.quiz)+'</div>'
@@ -2886,6 +3230,27 @@ function gvHTML(g){
   return h;
 }
 
+/* section 拆解：舊版 15 課、每日文法與視覺化單元共用。
+   body / bullets → 規則（UNDERSTAND）；examples → 例句（READ）；table → 對照表（COMPARE）。
+   每日文法的資料有時把 body/bullets 寫成單一字串而不是陣列，這裡都收：
+   之前遇過字串直接 .map 拋錯，整個單元打不開。 */
+function gSecPart(sections,want){
+  const arr=v=>Array.isArray(v)?v:[v];
+  return (sections||[]).map(s=>{
+    let x='';
+    if(want==='rule'){
+      if(s.body) x+= arr(s.body).map(b=>'<div class="gline" style="font-size:calc(14.5px * var(--fs));margin-bottom:5px">'+mkTextSpk(b)+'</div>').join('');
+      if(s.bullets) x+='<ul>'+arr(s.bullets).map(b=>'<li class="gline">'+mkTextSpk(b)+'</li>').join('')+'</ul>';
+    } else if(want==='table' && s.table){
+      x+='<div class="tw"><table><tr>'+s.table.head.map(t=>'<th>'+esc(t)+'</th>').join('')+'</tr>'
+       + s.table.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</table></div>';
+    } else if(want==='ex' && s.examples){
+      x+='<div class="gvcols">'+ s.examples.map(e=>'<div class="ex"><div class="een">'+esc(e.en)+' '+spk(e.en)+'</div>'
+       +'<div class="ecn">'+esc(e.cn)+'</div>'+(e.note?'<div class="enote">→ '+mkText(e.note)+'</div>':'')+'</div>').join('')+'</div>';
+    }
+    return x?'<div class="gsec"><h3>'+esc(s.h)+'</h3>'+x+'</div>':'';
+  }).join('');
+}
 function gramHTML(g){
   if(g&&g.vis) return gvHTML(g);   /* 視覺化文法走新版面 */
   let h='<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
@@ -2901,24 +3266,7 @@ function gramHTML(g){
        table          → 對照表（COMPARE）
      section 標題會跟著各自的內容重複出現，讀者不會失去上下文；資料本身完全沒動。
      某一步沒有內容就整段跳過，步驟標籤固定不重新編號。 */
-  const SECS=g.sections||[];
-  /* 每日文法的資料有時把 body/bullets 寫成單一字串而不是陣列，這裡都收：
-     之前遇過字串直接 .map 拋錯，整個單元打不開 */
-  const arr=v=>Array.isArray(v)?v:[v];
-  const part=(want)=>SECS.map(s=>{
-    let x='';
-    if(want==='rule'){
-      if(s.body) x+= arr(s.body).map(b=>'<div class="gline" style="font-size:calc(14.5px * var(--fs));margin-bottom:5px">'+mkTextSpk(b)+'</div>').join('');
-      if(s.bullets) x+='<ul>'+arr(s.bullets).map(b=>'<li class="gline">'+mkTextSpk(b)+'</li>').join('')+'</ul>';
-    } else if(want==='table' && s.table){
-      x+='<div class="tw"><table><tr>'+s.table.head.map(t=>'<th>'+esc(t)+'</th>').join('')+'</tr>'
-       + s.table.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</table></div>';
-    } else if(want==='ex' && s.examples){
-      x+='<div class="gvcols">'+ s.examples.map(e=>'<div class="ex"><div class="een">'+esc(e.en)+' '+spk(e.en)+'</div>'
-       +'<div class="ecn">'+esc(e.cn)+'</div>'+(e.note?'<div class="enote">→ '+mkText(e.note)+'</div>':'')+'</div>').join('')+'</div>';
-    }
-    return x?'<div class="gsec"><h3>'+esc(s.h)+'</h3>'+x+'</div>':'';
-  }).join('');
+  const part=(want)=>gSecPart(g.sections,want);
   const stepCard=(step,title,body,sub)=>body?'<div class="card"><div class="gvh"><span class="step">'+step+'</span><h3>'+title+'</h3></div>'
     +(sub?'<div class="gvsub">'+sub+'</div>':'')+body+'</div>':'';
 
