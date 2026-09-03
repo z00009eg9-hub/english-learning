@@ -1400,6 +1400,7 @@ body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
 <script src="data-art.js"></script>
 <script src="data-gramviz.js"></script>
 <script src="data-gramvis.js"></script>
+<script src="data-gvplus.js"></script>
 <script src="data-listen.js"></script>
 <script src="data-daily.js"></script>
 <script src="data-book.js"></script>
@@ -1935,6 +1936,18 @@ const DAILY_GRAM=(((window.DAILY||{}).grammar)||[]).filter(g=>!g.date||g.date<=t
 /* 視覺化文法（data-gramvis.js）排在最前面，vis:true 會走 gvHTML 新版面 */
 const GRAM_VIS=(window.GRAMVIS||[]);
 const ALL_GRAM=GRAM_VIS.concat(DAILY_GRAM,A2_GRAM,GRAMMAR);
+/* 視覺化教材疊加層（data-gvplus.js）：以單元 id 為鍵，把 vis / oneLine / map /
+   visual / scenarios / steps / comparison 併進原本的單元物件。
+   為什麼分檔：data-daily.js 由 DAILY_TASK.md 自動產生、data-grammar.js 是課程骨幹，
+   視覺化欄位集中一處才好維護——與 data-gramviz.js（圖卡）同一個慣例。
+   單元自己已經寫了的欄位優先，疊加層不覆蓋。 */
+(function(){
+  const P=window.GVPLUS||{};
+  ALL_GRAM.forEach(g=>{ const p=P[g.id]; if(!p) return;
+    Object.keys(p).forEach(k=>{ if(k!=='quizMore'&&g[k]==null) g[k]=p[k]; });
+    /* quizMore：舊單元的 quiz 只有 3 題，補到 6 題才夠練。原題保留在前面 */
+    if((p.quizMore||[]).length) g.quiz=(g.quiz||[]).concat(p.quizMore); });
+})();
 const ALL_ARTS=DAILY_ARTS.concat(ORIG_ARTS,NOTE_ARTS);
 // 每日文章的重點字也要進字庫
 DAILY_ARTS.forEach(a=>(a.target||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:t.def,exEn:t.ex,exCn:t.exCn||'',src:'每日文章：'+a.title})));
@@ -2888,6 +2901,17 @@ const GVICON=(function(){
     bubble:'<path d="M10 14 h44 a5 5 0 0 1 5 5 v20 a5 5 0 0 1 -5 5 H30 l-12 10 v-10 h-8 a5 5 0 0 1 -5 -5 V19 a5 5 0 0 1 5 -5z" fill="#fff" stroke="'+D+'" stroke-width="4"/><g fill="'+A+'"><circle cx="23" cy="29" r="3.5"/><circle cx="32" cy="29" r="3.5"/><circle cx="41" cy="29" r="3.5"/></g>',
     check:'<circle cx="32" cy="32" r="23" fill="'+A+'" stroke="'+D+'" stroke-width="4"/><path d="M21 33 l8 8 15 -17" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>',
     cross:'<circle cx="32" cy="32" r="23" fill="#fff" stroke="'+D+'" stroke-width="4"/><path d="M23 23 L41 41 M41 23 L23 41" stroke="#d9534f" stroke-width="5.5" stroke-linecap="round"/>',
+    book:"<path d=\"M32 18 C24 12 14 12 8 15 V50 C14 47 24 47 32 52z\" fill=\"#fff\" stroke=\"#2b2118\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M32 18 C40 12 50 12 56 15 V50 C50 47 40 47 32 52z\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"4\" stroke-linejoin=\"round\"/>",
+    tool:"<path d=\"M38 10 a13 13 0 0 0 -13 20 L11 44 a5 5 0 0 0 7 7 l14 -14 a13 13 0 0 0 20 -13 l-8 8 -8 -2 -2 -8z\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"4\" stroke-linejoin=\"round\"/>",
+    pin:"<path d=\"M32 8 a16 16 0 0 1 16 16 c0 12 -16 32 -16 32 S16 36 16 24 A16 16 0 0 1 32 8z\" fill=\"#fff\" stroke=\"#2b2118\" stroke-width=\"4\" stroke-linejoin=\"round\"/><circle cx=\"32\" cy=\"24\" r=\"6.5\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"3.5\"/>",
+    star:"<path d=\"M32 8 l7.5 15.5 17 2.5 -12.5 12 3 17 -15 -8.5 -15 8.5 3 -17 -12.5 -12 17 -2.5z\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"4\" stroke-linejoin=\"round\"/>",
+    cycle:"<path d=\"M50 26 A20 20 0 1 0 32 52\" fill=\"none\" stroke=\"#2b2118\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><path d=\"M40 12 l12 12 -14 5\" fill=\"none\" stroke=\"#e8813a\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>",
+    balance:"<line x1=\"32\" y1=\"14\" x2=\"32\" y2=\"52\" stroke=\"#2b2118\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"12\" y1=\"20\" x2=\"52\" y2=\"20\" stroke=\"#2b2118\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M4 24 A8 8 0 0 0 20 24z\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"3.5\" stroke-linejoin=\"round\"/><path d=\"M44 24 A8 8 0 0 0 60 24z\" fill=\"#fff\" stroke=\"#2b2118\" stroke-width=\"3.5\" stroke-linejoin=\"round\"/><line x1=\"22\" y1=\"52\" x2=\"42\" y2=\"52\" stroke=\"#2b2118\" stroke-width=\"4\" stroke-linecap=\"round\"/>",
+    link:"<path d=\"M26 38 L38 26\" stroke=\"#2b2118\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><path d=\"M22 30 l-6 6 a9 9 0 0 0 13 13 l6 -6\" fill=\"none\" stroke=\"#e8813a\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><path d=\"M42 34 l6 -6 a9 9 0 0 0 -13 -13 l-6 6\" fill=\"none\" stroke=\"#e8813a\" stroke-width=\"4.5\" stroke-linecap=\"round\"/>",
+    fork:"<path d=\"M32 54 V34\" stroke=\"#2b2118\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><path d=\"M32 34 C32 20 18 22 18 12\" fill=\"none\" stroke=\"#e8813a\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><path d=\"M32 34 C32 20 46 22 46 12\" fill=\"none\" stroke=\"#2b2118\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-dasharray=\"6 5\"/>",
+    eye:"<path d=\"M6 32 C16 18 48 18 58 32 C48 46 16 46 6 32z\" fill=\"#fff\" stroke=\"#2b2118\" stroke-width=\"4\" stroke-linejoin=\"round\"/><circle cx=\"32\" cy=\"32\" r=\"8\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"3.5\"/>",
+    money:"<rect x=\"7\" y=\"18\" width=\"50\" height=\"30\" rx=\"5\" fill=\"#fff\" stroke=\"#2b2118\" stroke-width=\"4\"/><circle cx=\"32\" cy=\"33\" r=\"8.5\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><line x1=\"14\" y1=\"33\" x2=\"18\" y2=\"33\" stroke=\"#2b2118\" stroke-width=\"3.5\" stroke-linecap=\"round\"/><line x1=\"46\" y1=\"33\" x2=\"50\" y2=\"33\" stroke=\"#2b2118\" stroke-width=\"3.5\" stroke-linecap=\"round\"/>",
+    flag:"<line x1=\"16\" y1=\"10\" x2=\"16\" y2=\"56\" stroke=\"#2b2118\" stroke-width=\"4.5\" stroke-linecap=\"round\"/><path d=\"M16 13 h30 l-7 9 7 9 H16z\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"4\" stroke-linejoin=\"round\"/>",
     arrow:'<path d="M10 32 h38" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/><path d="M40 22 l12 10 -12 10" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
   };
 })();
@@ -3171,7 +3195,7 @@ function gvChain(v){
     +'</div>'+gvvCap(v.cap);
 }
 
-const GVVIS={matrix:gvMatrix,swap:gvSwap,merge:gvMerge,scale:gvScale,
+const GVVIS={timeline:gvTimeline,matrix:gvMatrix,swap:gvSwap,merge:gvMerge,scale:gvScale,
              branch:gvBranch,shift:gvShift,cols:gvCols,chain:gvChain};
 /* Step 1 的總入口：visual 型別 → 時間線 → 舊的兩格對照卡，取第一個有內容的 */
 function gvVisual(g){
@@ -3181,7 +3205,7 @@ function gvVisual(g){
   return gvizHTML(g.id);
 }
 /* Step 1 的標題跟著型別走，讀者才知道自己在看什麼 */
-const GVVTTL={matrix:'座標表：時間 × 動作狀態',swap:'主詞與受詞換位置',merge:'兩句合併成一句',
+const GVVTTL={timeline:'時間線：這個時態站在哪裡',matrix:'座標表：時間 × 動作狀態',swap:'主詞與受詞換位置',merge:'兩句合併成一句',
   scale:'程度刻度：從弱到強',branch:'條件分支：這個 if 有多真',shift:'往回退一格',
   cols:'分邊看：各自負責什麼',chain:'句型結構鏈'};
 function gvVisualTitle(g){
