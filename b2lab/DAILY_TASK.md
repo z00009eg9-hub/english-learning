@@ -172,25 +172,79 @@ A2 講最基本的 be+V-ing、B1 講 vs 現在簡單式、B1+ 講暫時狀態與
 | `summary` | 一句話講清楚這個文法點的核心 |
 | `sections` | 3–5 個 `{h, body?, bullets?, table?, examples?}`；`table` 是 `{head:[], rows:[[]]}`；`examples` 是 `{en, cn, note}`。至少要有一個對照表與 3 個例句 |
 | `traps` | 3–4 個 `{bad, good, why}`，針對**中文母語者**最容易犯的錯 |
-| `quiz` | 4 個 `{q, opts, ans, expl}`，格式同上，`expl` 用中文 |
+| `quiz` | 4 個 `{q, qCn, opts, ans, expl}`，格式同上，`expl` 用中文。另外 2 題寫在 `data-gvplus.js` 的 `quizMore`，加起來 6 題 |
 
 寫作風格要求：解說用中文、例句用英文＋中譯、語氣像家教在講重點，不要像文法書條列。
 一定要說明「為什麼會錯」，不要只說「這樣才對」。
 **A2 那份要最淺白、句子最短；B2 那份可以談語域、寫作效果與修辭選擇。**
 
-#### 每個文法單元都要有圖文說明（`public/data-gramviz.js`）
+#### 每個文法單元都要有視覺化教材（`public/data-gvplus.js`）
 
-網站每個文法單元上方會顯示一張「兩格對照卡」（左右各一格、上方藍色標題膠囊、
-中間插圖、下方例句與中文），資料在 `public/data-gramviz.js` 的 `window.GRAMVIZ[單元 id]`。
+> 2026-09-03 起全站 48 個文法單元一律走「視覺化教材」版面
+> （SEE → UNDERSTAND → READ → COMPARE → CHECK → PRACTICE 六段）。
+> 新增的每日文法也**必須**照這個規格寫，否則會跟其他單元長得不一樣。
 
-- **四個單元都要有**。做法二選一：
-  1. **同主題就共用**：檔案裡已有現成卡片（nowVsAlways、pastBg、goneBeen、hbdHd、
-     edIng、passive…），主題一樣直接 `V.dg20260821b1=V.nowVsAlways;` 指過去即可。
-  2. **新主題就新畫**：用檔案裡的 `card(p1,p2,cap)` 工具照既有風格寫一張，
-     左右兩格各放 title（膠囊標題）、draw（SVG 插圖，可用 emoji 與 tl() 時間軸）、
-     en（例句）、cn（中文說明），cap 是下方圖說。
-- 插圖要對應該單元真正教的對比（例：must be 90% vs might be 50%），不要放裝飾。
-- 收尾驗證會檢查今天四個單元是否都有 GRAMVIZ，缺了就不要 commit。
+上面第 3 節寫的 `sections` / `traps` / `quiz` **照舊要寫**（它們會排進 Step 2/3/4/5），
+另外要在 `public/data-gvplus.js` 的 `window.GVPLUS` 裡，以**單元 id 為鍵**再加一筆：
+
+```js
+dg20260904b1: {
+  vis: true,                                    // 固定 true，走視覺化版面
+  oneLine: '一句話講清楚這個文法點在做什麼（比 summary 更口語、更像家教開場）',
+  map: { when: '什麼時候用', why: '為什麼要有這個時態／句型', form: '公式' },
+  visual: { type: 'cols', cap: '圖說：告訴讀者怎麼看這張圖', /* …型別各自的欄位 */ },
+  scenarios: [ /* 4 張情境卡，見下 */ ],
+  steps: [ /* 5 步逐步理解 */ ],
+  comparison: { title:'…', left:{…}, right:{…}, note:'…' },
+  quizMore: [ /* 2 題，把練習從 4 題補到 6 題 */ ]
+}
+```
+
+**各欄位的寫法**
+
+| 欄位 | 要求 |
+|---|---|
+| `oneLine` | 一句話，用破折號或冒號點出關鍵對比。不要重複 `summary` 的字句 |
+| `map` | 三格各一句：`when`（什麼情境）、`why`（為什麼英文要分這個）、`form`（公式，可用 `|` 分隔兩種） |
+| `visual` | Step 1 · SEE 的圖解，**型別要挑對**，見下表 |
+| `scenarios` | **4 張**。每張 `{key, icon, title, titleCn, ask, en, cn, why}`：`ask` 是「這張圖回答哪個問題」（一定要是問句）、`why` 是點開才看到的解說，要說明「為什麼」而不只是「這樣才對」 |
+| `steps` | **5 步** `{label, text}`。從情境出發，最後才給規則；最後一步通常是「換個說法／對照錯誤版」 |
+| `comparison` | `left` / `right` 各 `{tag, tagCn, icon, head, headCn, en, cn, pts:[3 條]}`；`note` 給一句判斷口訣 |
+| `quizMore` | **2 題** `{q, opts, ans, expl}`（這裡不用 `qCn`）。跟 `quiz` 的 4 題加起來要有 6 題 |
+
+**`visual.type` 八種型別——按內容挑，不要隨便選**
+
+| type | 適用 | 資料欄位 |
+|---|---|---|
+| `timeline` | 時態對照（線有沒有碰到 NOW） | `{rows:[{kind:'span'\|'point'\|'range', label, tone:'accent'\|'ink', from, to, at, sub, subCn}]}` |
+| `matrix` | 座標表（時間 × 狀態、語域 × 效果） | `{cols:[…], rows:[{h, cells:[{en, cn, hi}]}]}` |
+| `cols` | 2～3 欄對照（A vs B、三種用法） | `{cols:[{tag, tagCn, tone:1\|2\|3, items:[{en, cn, nt}]}]}` |
+| `chain` | 句型結構拆塊（be + V-ing、have + Vpp） | `{links:[{t, c, role}], eg:{en,cn}, variants:[{k,en,cn}]}` |
+| `merge` | 兩句併一句（while/when、關係子句、分詞） | `{a:{n,en,cn}, b:{n,en,cn}, glue, glueCn, out:{n, parts:[{t,role}], cn}}` |
+| `shift` | 往回退一格（轉述句、現在→過去、加 -ing 後語意變化） | `{rows:[{a, b, nt}]}` |
+| `scale` | 光譜（不可能→確定、暫時→永久、正式→口語） | `{lo, hi, stops:[{at:0–100, label, labelCn, en, cn}]}` |
+| `swap` | 主詞與受詞換位（被動語態） | `{crossLabel, lanes:[{tag, tone, sub, parts:[{t,role}], cn}]}` |
+| `branch` | 條件分支（假設語氣） | `{cond:{en,cn}, fan:[{tag, tone:'real'\|'unreal'\|'impossible', prob, en, cn}]}` |
+
+`parts` / `links` 的 `role` 決定字塊顏色：`subj`（藍）、`verb`（橘）、`obj`（綠）、
+`glue`（紫）、`plain`（白）、`mute`（灰）。
+
+`icon` 只能用 index.html 裡 `GVICON` 的代號：
+`house plane key calendar clock person bubble check cross arrow book tool pin star cycle balance link fork eye money flag`。
+**同一天四個單元的情境卡不要一直用同幾個圖示。**
+
+**兩條硬規則**
+
+1. **文字欄位一律寫純文字，不要寫 HTML 標籤**——渲染時會被轉義，標籤會原封不動印出來。
+2. **不要把文字畫進 SVG。** 需要新的圖解樣式時，是在 index.html 加一種 `gv*` 元件
+   （HTML + CSS，SVG 只畫箭頭與軸線），不是在資料裡塞 SVG。
+   理由：SVG 內的文字不會換行、不吃 `--fs` 字級，手機上會被圖形擋住（2026-09-03 修過這個 bug）。
+
+#### 圖文說明（`public/data-gramviz.js`）現在是選配
+
+舊的「兩格對照卡」還在，但只在單元**沒有** `visual` 欄位時當 Step 1 的備援。
+既然新單元一律要寫 `visual`，就**不必**再新增 GRAMVIZ 卡片。
+（要共用現成卡片時仍可寫 `V.dg20260904b1=V.nowVsAlways;`，但不是必要工作。）
 
 #### 文法單元的 `quiz` 也要有中譯
 
@@ -457,8 +511,32 @@ grams.forEach(g=>{
   g.quiz.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw g.id+' 文法 ans 索引錯誤: '+q.q});
   if(!g.sections.length||!g.traps.length) throw g.id+' 文法單元不完整';
 });
-global.window=global.window||{};require('./data-gramviz.js');
-grams.forEach(g=>{ if(!(window.GRAMVIZ||{})[g.id]) throw g.id+' 沒有圖文說明（data-gramviz.js）'; });
+/* 視覺化教材（data-gvplus.js）：全站 48 個單元都走這個版面，新單元不能漏 */
+global.window=global.window||{};require('./data-gvplus.js');
+const GP=window.GVPLUS||{};
+const VT=['timeline','matrix','cols','chain','merge','shift','scale','swap','branch'];
+const ICONS='house plane key calendar clock person bubble check cross arrow book tool pin star cycle balance link fork eye money flag'.split(' ');
+grams.forEach(g=>{
+  const p=GP[g.id];
+  if(!p) throw g.id+' 沒有視覺化教材（data-gvplus.js）';
+  ['vis','oneLine','map','visual','scenarios','steps','comparison','quizMore'].forEach(k=>{
+    if(p[k]==null) throw g.id+' 視覺化教材缺 '+k;
+  });
+  if(!p.visual.type||VT.indexOf(p.visual.type)<0) throw g.id+' visual.type 不是支援的型別: '+p.visual.type;
+  if(!p.visual.cap) throw g.id+' visual 缺 cap 圖說';
+  if(p.scenarios.length<4) throw g.id+' 情境卡不足 4 張';
+  p.scenarios.forEach(x=>{
+    if(ICONS.indexOf(x.icon)<0) throw g.id+' 情境卡 icon 無效: '+x.icon;
+    if(!x.ask||x.ask.indexOf('？')<0) throw g.id+' 情境卡 ask 要寫成問句: '+x.title;
+    if(!x.why) throw g.id+' 情境卡缺 why 解說: '+x.title;
+  });
+  if(p.steps.length<5) throw g.id+' 逐步理解不足 5 步';
+  if(!p.comparison.left||!p.comparison.right||!p.comparison.note) throw g.id+' comparison 不完整';
+  if(p.quizMore.length<2) throw g.id+' quizMore 不足 2 題（quiz 4 + quizMore 2 = 6 題）';
+  p.quizMore.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw g.id+' quizMore ans 索引錯誤: '+q.q});
+  /* 資料裡不准出現 HTML 標籤與內嵌 SVG */
+  if(/<[a-zA-Z\/]/.test(JSON.stringify(p))) throw g.id+' 視覺化教材裡有 HTML 標籤或 SVG（一律寫純文字）';
+});
 const byLv=l=>todays.find(a=>a.level===l);
 console.log('OK 文章:', LV.map(l=>l+' '+byLv(l).id+' ('+byLv(l).words+'字)').join(' | '));
 console.log('OK 文法:', LV.map(l=>l+' '+grams.find(g=>g.level===l).titleCn).join(' | '));"
