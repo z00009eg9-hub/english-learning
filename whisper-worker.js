@@ -1,0 +1,3 @@
+import { pipeline } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.0';
+let transcriber;
+self.onmessage=async({data})=>{try{if(data.type==='load'){self.postMessage({type:'status',status:'loading'});transcriber=await pipeline('automatic-speech-recognition','onnx-community/whisper-tiny.en',{progress_callback:p=>self.postMessage({type:'progress',progress:p.progress||0})});self.postMessage({type:'status',status:'ready'});}else if(data.type==='transcribe'){const r=await transcriber(new Float32Array(data.audio));self.postMessage({type:'result',text:r.text||''});}}catch(e){self.postMessage({type:'error',message:e.message||'whisper-error'});}};
