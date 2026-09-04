@@ -96,7 +96,7 @@ body.home-active .hd-topic{display:none;}
 /* 手機活動卡的規則在檔案更後面（.act 基礎樣式之後才蓋得過去），見「手機：活動卡」區塊 */
 
 /* ═══ LAYOUT ═══ */
-.wrap{max-width:820px;margin:0 auto;padding:16px 15px 22px;}
+.wrap{max-width:920px;margin:0 auto;padding:16px 15px 22px;}
 .screen{display:none;animation:pop .32s cubic-bezier(.2,.7,.3,1);}
 .screen.on{display:block;}
 @keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
@@ -155,18 +155,27 @@ body.home-active .hd-topic{display:none;}
   -webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--bdr) transparent;}
 .day-rail::-webkit-scrollbar{height:6px;}
 .day-rail::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:100px;}
-.day-pill{flex:0 0 auto;scroll-snap-align:start;min-width:74px;max-width:150px;cursor:pointer;
+.day-switch{display:flex;align-items:center;gap:8px;}
+.day-rail{flex:1;cursor:grab;}
+.day-rail.dragging{cursor:grabbing;scroll-snap-type:none;user-select:none;}
+.day-arrow{width:38px;height:38px;flex:0 0 38px;border:1.5px solid var(--bdr2);border-radius:12px;
+  background:#fff;color:var(--teal);font:900 1.3rem/1 inherit;cursor:pointer;box-shadow:var(--sh-sm);}
+.day-arrow:hover{background:var(--teal-l);border-color:var(--teal);}
+.day-arrow:focus-visible,.day-rail:focus-visible{outline:3px solid rgba(21,154,166,.35);outline-offset:2px;}
+.day-pill{flex:0 0 auto;scroll-snap-align:start;min-width:112px;max-width:170px;cursor:pointer;
   background:#fff;border:2px solid var(--bdr2);border-radius:13px;padding:8px 12px;text-align:left;
   font-family:inherit;transition:transform .12s,border-color .15s,background .15s;}
 .day-pill:hover{border-color:var(--coral);transform:translateY(-1px);}
 .day-pill:active{transform:scale(.97);}
 .day-pill .dp-top{font-size:1.02rem;font-weight:900;color:var(--ink);letter-spacing:-.3px;line-height:1.1;}
-.day-pill .dp-wd{font-size:.72rem;font-weight:800;color:var(--coral-d);margin-top:2px;}
-.day-pill .dp-ttl{font-size:.72rem;font-weight:600;color:var(--sub);margin-top:3px;line-height:1.3;
+.day-pill .dp-wd{font-size:.72rem;font-weight:800;color:var(--coral-d);margin-left:4px;}
+.day-pill .dp-ttl{font-size:.76rem;font-weight:700;color:var(--sub);margin-top:5px;line-height:1.3;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.day-pill .dp-load{font-size:.68rem;font-weight:800;color:var(--faint);margin-top:5px;}
 .day-pill.sel{background:var(--coral);border-color:var(--coral);box-shadow:0 4px 12px rgba(21,154,166,.32);}
 .day-pill.sel .dp-top{color:#fff;}
 .day-pill.sel .dp-wd,.day-pill.sel .dp-ttl{color:rgba(255,255,255,.92);}
+.day-pill.sel .dp-load{color:rgba(255,255,255,.8);}
 .day-meta{font-size:.8rem;color:var(--sub);margin-top:9px;display:flex;flex-wrap:wrap;gap:5px 10px;line-height:1.4;}
 .day-meta{font-size:.8rem;color:var(--sub);margin-top:9px;display:flex;flex-wrap:wrap;gap:5px 10px;line-height:1.4;}
 .day-meta .chip{padding:2px 9px;border-radius:100px;font-weight:700;font-size:.74rem;background:var(--coral-l);color:var(--coral-d);}
@@ -192,6 +201,8 @@ body.home-active .hd-topic{display:none;}
 .act-h{font-size:1.28rem;font-weight:900;letter-spacing:-.2px;padding-right:66px;}
 .act-en{font-size:.82rem;font-weight:800;color:var(--sub);font-family:'Inter';margin-top:2px;padding-right:66px;}
 .act-d{font-size:.95rem;font-weight:600;color:var(--sub);margin-top:8px;line-height:1.5;}
+.act-result{display:inline-flex;align-items:center;margin-top:9px;border-radius:100px;padding:4px 9px;background:rgba(255,255,255,.7);color:var(--teal);font-size:.75rem;font-weight:900;}
+.acts-sub .act-result{display:block;margin-top:5px;padding:0;background:transparent;font-size:.7rem;}
 /* 卡片使用說明：一步一步告訴學習者怎麼玩 */
 .act-how{margin-top:10px;padding-top:9px;border-top:1px dashed var(--bdr2);
   font-size:.82rem;font-weight:600;color:var(--faint);line-height:1.65;}
@@ -250,6 +261,19 @@ body.home-active .hd-topic{display:none;}
   padding:7px 15px;border-radius:100px;box-shadow:0 3px 10px rgba(21,154,166,.3);
   transition:background .15s;}
 .acts-hero .act:hover .act-cta{background:var(--coral-d);}
+/* 首頁的單一路徑：先完成最有效的 8 分鐘開口練習，再依完成狀態引導下一步 */
+.today-start{display:flex;align-items:center;justify-content:space-between;gap:14px;
+  margin:14px 0 24px;padding:13px 16px 13px 18px;border:1.5px solid #BCEBED;
+  border-radius:16px;background:linear-gradient(100deg,#ECFBF7,#FFF9EA);box-shadow:var(--sh-sm);}
+.today-start-copy{min-width:0;}
+.today-start-copy b{display:block;color:var(--ink);font-size:1rem;}
+.today-start-copy span{display:block;margin-top:2px;color:var(--sub);font-size:.78rem;font-weight:650;}
+.today-start button{flex-shrink:0;border:0;border-radius:100px;background:var(--teal);color:#fff;
+  padding:10px 16px;font-family:inherit;font-size:.86rem;font-weight:900;cursor:pointer;
+  box-shadow:0 4px 12px rgba(21,154,166,.24);transition:transform .15s,background .15s;}
+.today-start button:hover{background:var(--teal-d);transform:translateY(-1px);}
+@media(max-width:560px){.today-start{align-items:flex-start;flex-direction:column;gap:9px;}.today-start button{width:100%;}}
+@media(max-width:560px){.day-arrow{display:none;}.day-rail{cursor:auto;}}
 /* 課前暖身快捷條（週二/四外師課當天顯示） */
 /* 暖身橫幅：拿掉硬框、改滿版柔和底色＋微陰影自然浮現，明確區隔「設定區」與「行動區」 */
 .warmup-bar{display:flex;align-items:center;gap:11px;width:100%;background:linear-gradient(135deg,#FFF3D6,#FFE1D2);border:1px solid rgba(224,123,57,.28);border-radius:16px;padding:13px 16px;margin-bottom:22px;cursor:pointer;font-family:inherit;text-align:left;box-shadow:0 6px 18px rgba(224,123,57,.18);transition:transform .16s,box-shadow .16s;}
@@ -473,7 +497,7 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
 /* iPad / 平板 / 電腦：字體與卡片一起放大，把版面填滿，不要一大片留白
    （2026-08-16 使用者回報 iPad 上空白太多） */
 @media(min-width:700px){
-  .wrap{max-width:940px;padding:18px 22px 26px;}
+  .wrap{max-width:1060px;padding:18px 22px 26px;}
   .para-en{font-size:1.34rem;line-height:1.95;}
   .para-cn{font-size:1.22rem;}
   .card{padding:22px;}
@@ -847,14 +871,23 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
     <div class="coach">
       <div class="coach-av">👩‍🏫</div>
       <div style="flex:1;min-width:0">
-        <div class="coach-txt" id="coach-msg">Hi Anita &amp; Tom，準備好開口了嗎？今天我們的目標是<b>把學過的字真的「說出來」</b>。選一天的課，然後挑一個活動開始吧！</div>
+        <div class="coach-txt" id="coach-msg">Hi Anita &amp; Tom，今天先花 8 分鐘，<b>把學過的字真的「說出來」</b>。不用完美，開口就對了！</div>
         <div class="coach-prog" id="coach-prog"><div class="cp-track"><i id="cp-fill"></i></div><span class="cp-lbl" id="cp-lbl"></span></div>
       </div>
     </div>
 
+    <div class="today-start" aria-label="今日建議練習">
+      <div class="today-start-copy"><b>🎯 今天先完成一個 8 分鐘挑戰</b><span>看中文開口說英文；完成後，再進入情境對話。</span></div>
+      <button type="button" onclick="startTodayPractice()">開始今日練習 →</button>
+    </div>
+
     <div class="card card-soft pick-card">
-      <div class="pick-lbl">📅 選一天的課堂內容<span style="font-weight:600;font-size:.8rem;color:var(--faint);margin-left:auto">← 左右滑動切換</span></div>
-      <div class="day-rail" id="day-rail"></div>
+      <div class="pick-lbl">📅 選擇今天想練的主題<span style="font-weight:600;font-size:.8rem;color:var(--faint);margin-left:auto">電腦按箭頭／拖曳 · 手機直接滑動</span></div>
+      <div class="day-switch">
+        <button class="day-arrow" type="button" onclick="scrollDayRail(-1)" aria-label="上一個課程">‹</button>
+        <div class="day-rail" id="day-rail" tabindex="0" role="region" aria-label="課程日期清單"></div>
+        <button class="day-arrow" type="button" onclick="scrollDayRail(1)" aria-label="下一個課程">›</button>
+      </div>
       <div class="day-meta" id="day-meta"></div>
     </div>
 
@@ -864,7 +897,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
       <span class="wu-go">開始暖身 →</span>
     </button>
 
-    <div class="grid-ttl">🚀 主力輸出訓練（先挑戰這兩個！）
+    <div class="grid-ttl">🚀 今日練習路徑（先說，再對話）
       <button class="help" id="help-btn" onclick="toggleHelp()">❓ 第一次使用？怎麼練口說 ▾</button>
     </div>
     <div class="card hide" id="help-card" style="margin-bottom:14px">
@@ -882,6 +915,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
         <div class="act-h">說出來</div>
         <div class="act-en">Say It Out Loud</div>
         <div class="act-d">看中文，開口說英文。麥克風幫你抓漏字、給分。</div>
+        <div class="act-result">完成後：能說出 5 句今天會用到的英文</div>
         <div class="act-meta"><span>⏱️ 8 mins</span><span class="m-hard">🔥 高強度輸出</span><span class="m-lv">B1→B2</span></div>
         <span class="act-cta">開始練習 ➔</span>
       </button>
@@ -890,6 +924,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
         <div class="act-h">情境對話</div>
         <div class="act-en">Talk Time</div>
         <div class="act-d">像聊天一樣一來一往，說錯馬上給你正確說法。</div>
+        <div class="act-result">完成後：能完成一段真實情境對話</div>
         <div class="act-meta"><span>⏱️ 10 mins</span><span class="m-hard">🔥 實戰對話</span><span class="m-lv">B1→B2</span></div>
         <span class="act-cta">開始練習 ➔</span>
       </button>
@@ -901,36 +936,42 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
         <div class="act-ico i-shadow">🔁</div>
         <div class="act-h">跟讀模仿</div>
         <div class="act-en">Shadowing</div>
+        <div class="act-result">修正節奏與發音</div>
         <div class="act-meta"><span>⏱️ 8 mins</span><span class="m-lv">B1 鞏固</span></div>
       </button>
       <button class="act act-listen" onclick="openAct('listen')" title="聽英文句子（可正常/慢速）：基礎用選擇題，進階打字聽寫"><span class="act-prog" id="ap-listen"></span>
         <div class="act-ico i-listen">🎧</div>
         <div class="act-h">聽力練習</div>
         <div class="act-en">Listening</div>
+        <div class="act-result">聽懂關鍵句與重點字</div>
         <div class="act-meta"><span>⏱️ 8 mins</span><span class="m-lv">基礎B1 / 進階B2</span></div>
       </button>
       <button class="act act-word" onclick="openAct('word')" title="看字卡念單字並造句，把生字變成能開口說的字"><span class="act-prog" id="ap-word"></span>
         <div class="act-ico i-word">🗣️</div>
         <div class="act-h">單字口說</div>
         <div class="act-en">Word Power</div>
+        <div class="act-result">把生字變成能說的句子</div>
         <div class="act-meta"><span>⏱️ 6 mins</span><span class="m-lv">B1 鞏固</span></div>
       </button>
       <button class="act act-read" onclick="openAct('read')" title="一段一段朗讀文章，說對的字會即時亮綠燈"><span class="act-prog" id="ap-read"></span>
         <div class="act-ico i-read">📖</div>
         <div class="act-h">朗讀文章</div>
         <div class="act-en">Read Aloud</div>
+        <div class="act-result">練習流暢朗讀與連音</div>
         <div class="act-meta"><span>⏱️ 10 mins</span><span class="m-lv">B1→B2</span></div>
       </button>
       <button class="act act-video" onclick="openAct('video')" title="邊看影片邊看雙語字幕，可暫停、單句復讀、循環、變速"><span class="act-prog" id="ap-video"></span>
         <div class="act-ico i-video">🎬</div>
         <div class="act-h">影片精聽</div>
         <div class="act-en">Watch &amp; Learn</div>
+        <div class="act-result">在真實影片中聽懂英文</div>
         <div class="act-meta"><span>⏱️ 15 mins</span><span class="m-hard">B2 挑戰</span></div>
       </button>
       <button class="act act-quiz" onclick="openAct('quiz')" title="選擇題測驗：綜合（單字文法）／聽力（用聽的選）／閱讀（讀短文回答）"><span class="act-prog" id="ap-quiz"></span>
         <div class="act-ico i-quiz">📝</div>
         <div class="act-h">快速檢查</div>
         <div class="act-en">Quick Check</div>
+        <div class="act-result">確認今天真正記住的內容</div>
         <div class="act-meta"><span>⏱️ 5 mins</span><span>共 10 題</span></div>
       </button>
     </div>
@@ -944,7 +985,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
           </svg>
           <div class="n"><span id="st-goal">0</span>/3</div>
         </div>
-        <div class="l">🎯 今日目標：完成 3 項任務（<span id="st-spoken">0</span> 句）</div>
+        <div class="l" id="st-goal-msg">先完成 1 項，建立今天的學習節奏（已說 <span id="st-spoken">0</span> 句）</div>
       </div>
       <div class="stat"><div class="n" id="st-acc">–</div><div class="l">平均分數</div></div>
       <div class="stat"><div class="n" id="st-total">0</div><div class="l">累計卡片</div></div>
@@ -6512,6 +6553,8 @@ function renderStats(){$('st-spoken').textContent=ST.spokenToday;$('st-total').t
   const cp=$('coach-prog'),cf=$('cp-fill'),cl=$('cp-lbl');
   if(cf)cf.style.width=Math.min(100,done/goal*100)+'%';
   if(cl)cl.textContent=done>=goal?('🎉 今日達標 · 已說 '+ST.spokenToday+' 句'):('今日 '+Math.min(done,goal)+'/'+goal+' 項 · 已說 '+ST.spokenToday+' 句');
+  const gm=$('st-goal-msg');
+  if(gm)gm.textContent=done>=goal?'🎉 今天的目標已完成，做得很棒！':(done?'再完成 '+(goal-done)+' 項，就完成今天目標':'先完成 1 項，建立今天的學習節奏');
   if(cp)cp.classList.toggle('done',done>=goal);
   cloudBadge(!!db);}
 
@@ -7083,11 +7126,12 @@ function dayPillParts(d){
   }
   return {top:'🟢',wd:'基礎',ttl:lessonTitle(d)};   /* Tom 的 A2 主題 */
 }
+function dayPracticeSummary(d){try{const n=sayItems(d).length;return n?n+' 句 · 約 8 分鐘':'開口練習';}catch(e){return '開口練習';}}
 function buildDayList(){const rail=$('day-rail');if(!rail)return;
-  rail.innerHTML=DDATES.map(d=>{const p=dayPillParts(d);
+  rail.innerHTML=DDATES.map(d=>{const p=dayPillParts(d),load=dayPracticeSummary(d);
     return '<button class="day-pill'+(d===DAY?' sel':'')+'" data-d="'+d+'" onclick="ddSelect(\''+d+'\')" title="'+esc(ddLabel(d))+'">'
-      +'<div class="dp-top">'+esc(p.top)+'</div><div class="dp-wd">'+esc(p.wd)+'</div>'
-      +'<div class="dp-ttl">'+esc(p.ttl)+'</div></button>';}).join('');
+      +'<div><span class="dp-top">'+esc(p.top)+'</span><span class="dp-wd">'+esc(p.wd)+'</span></div>'
+      +'<div class="dp-ttl">'+esc(p.ttl)+'</div><div class="dp-load">'+esc(load)+'</div></button>';}).join('');
   const sel=rail.querySelector('.day-pill.sel');
   /* 只捲動軌道本身（不用 scrollIntoView，避免連帶把整頁往下捲） */
   if(sel)rail.scrollLeft=sel.offsetLeft-rail.clientWidth/2+sel.clientWidth/2;}
@@ -7095,6 +7139,26 @@ function buildDayList(){const rail=$('day-rail');if(!rail)return;
 function ddToggle(e){if(e)e.stopPropagation();}
 function ddClose(){}
 function ddSelect(d){DAY=d;buildDayList();renderMeta();renderHdTopic();}
+function scrollDayRail(direction){const rail=$('day-rail');if(!rail)return;
+  const card=rail.querySelector('.day-pill');const distance=(card?card.offsetWidth+8:180)*direction;
+  rail.scrollBy({left:distance,behavior:'smooth'});
+}
+function initDayRailControls(){const rail=$('day-rail');if(!rail||rail.dataset.controlsReady)return;
+  rail.dataset.controlsReady='1';
+  rail.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();scrollDayRail(e.key==='ArrowRight'?1:-1);}});
+  rail.addEventListener('wheel',e=>{if(e.shiftKey&&Math.abs(e.deltaY)>Math.abs(e.deltaX)){e.preventDefault();rail.scrollBy({left:e.deltaY,behavior:'smooth'});}}, {passive:false});
+  if(matchMedia('(pointer:fine)').matches){let down=false,startX=0,startLeft=0;
+    rail.addEventListener('pointerdown',e=>{down=true;startX=e.clientX;startLeft=rail.scrollLeft;rail.classList.add('dragging');rail.setPointerCapture(e.pointerId);});
+    rail.addEventListener('pointermove',e=>{if(down)rail.scrollLeft=startLeft-(e.clientX-startX);});
+    rail.addEventListener('pointerup',()=>{down=false;rail.classList.remove('dragging');});
+    rail.addEventListener('pointercancel',()=>{down=false;rail.classList.remove('dragging');});
+  }
+}
+function startTodayPractice(){
+  /* 以目前選取的課堂為準，讓首頁只有一個不需思考的第一步。 */
+  WARMUP=false;
+  openAct('say');
+}
 /* 標題列顯示目前選到哪一篇主題，進入活動後也看得到 */
 function renderHdTopic(){const el=$('hd-topic');if(!el)return;
   if(DAY==='b2wb'){el.textContent='⭐ B2 生詞本';return;}
@@ -7109,7 +7173,7 @@ function refreshDD(){
   const b2=b2wbItems().length?['b2wb']:[];
   DDATES=allDates().concat(b2,['all']);
   if(DDATES.indexOf(DAY)<0)DAY=defaultDay();
-  buildDayList();
+  buildDayList();initDayRailControls();
 }
 function initHome(){
   document.body.classList.add('home-active');   /* 開站即在首頁，隱藏重複的頂部主題膠囊 */
@@ -7131,10 +7195,8 @@ function renderWarmup(){const bar=$('warmup-bar');if(!bar)return;
                                :'快上課了！5 句快速暖身，開口就進入狀況 💪';}}
 let WARMUP=false;
 function startWarmup(){WARMUP=true;openAct('say');}
-function renderMeta(){const d=DAY;const v=dayVocab(d).length,s=sayItems(d).length,a=dayArticles(d).length,q=quizFor(d),vd=vidMaterials(d).length;
-  /* 依回饋把多色膠囊改成安靜的 icon＋數字一行字，資訊在、不搶戲 */
-  $('day-meta').innerHTML='<span class="mi">🗣️ '+s+' 句</span><span class="mi">📇 '+v+' 字</span>'
-    +(a?'<span class="mi">📖 '+a+' 篇</span>':'')+(vd?'<span class="mi">🎬 '+vd+' 部</span>':'')+(q?'<span class="mi">📝 '+q.questions.length+' 題</span>':'');}
+function renderMeta(){const d=DAY;
+  $('day-meta').innerHTML='<span class="mi">🎯 本課：'+esc(dayPracticeSummary(d))+'</span>';}
 
 /* ═══════════════════════════════════════════════════════════
    1) SAY IT
