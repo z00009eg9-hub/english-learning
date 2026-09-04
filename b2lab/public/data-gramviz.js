@@ -655,5 +655,11 @@ V.dg20260902b1=V.havePastSimple;
 V.dg20260902b1p=V.havePastSimple;
 V.dg20260902b2=V.havePastSimple;
 
+/* ---------- 2026-09-04：Present Perfect 2（unit 8）共用既有的 gone to / been to 對照卡 ---------- */
+V.dg20260904a2=V.goneBeen;
+V.dg20260904b1=V.goneBeen;
+V.dg20260904b1p=V.goneBeen;
+V.dg20260904b2=V.goneBeen;
+
 return V;
 })();

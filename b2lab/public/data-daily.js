@@ -8,6 +8,305 @@ window.DAILY = {
 
 articles:[
 {
+  "id": "d20260904a2",
+  "date": "2026-09-04",
+  "level": "A2",
+  "topic": "天氣與衣服",
+  "words": 93,
+  "kind": "orig",
+  "title": "Tom Gets Ready for the Typhoon",
+  "titleCn": "Tom準備迎接颱風",
+  "focus": "will表示未來的打算；there is/are描述天氣狀況",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom聽說週末有颱風要來，開始準備雨具並待在家裡。全文只用現在簡單式、現在進行式、can/will和there is/are，讀的時候留意will怎麼講「等一下、之後」的打算。",
+  "paras": [
+    {
+      "en": "A big typhoon is coming to Taiwan this weekend. Tom checks the weather app every morning. There is heavy rain in the forecast.",
+      "cn": "這個週末有一個大颱風要來台灣。Tom每天早上都會看天氣App。預報顯示會有大雨。"
+    },
+    {
+      "en": "Tom looks in his closet for a raincoat. He also finds his rain boots and an umbrella. He will wear these things tomorrow.",
+      "cn": "Tom在衣櫃裡找雨衣。他也找到了雨鞋和一把傘。他明天會穿戴這些東西。"
+    },
+    {
+      "en": "Right now, the sky outside is dark and windy. Tom is closing all the windows in his room. His mother is filling bottles with water.",
+      "cn": "現在外面的天空又暗又有風。Tom正在把房間裡所有的窗戶關上。他媽媽正在把瓶子裝滿水。"
+    },
+    {
+      "en": "Tomorrow, Tom will stay home from school. He can watch movies and read comic books. The rain will probably stop by Sunday.",
+      "cn": "明天Tom不用去上學，會待在家裡。他可以看電影和看漫畫。雨大概週日就會停了。"
+    }
+  ],
+  "target": [
+    {"w": "typhoon", "ipa": "/taɪˈfuːn/", "pos": "n.", "cn": "颱風", "def": "A very strong storm with wind and rain.", "ex": "A big typhoon is coming to Taiwan this weekend.", "exCn": "這個週末有一個大颱風要來台灣。"},
+    {"w": "raincoat", "ipa": "/ˈreɪnkoʊt/", "pos": "n.", "cn": "雨衣", "def": "A coat you wear to stay dry in the rain.", "ex": "Tom looks in his closet for a raincoat.", "exCn": "Tom在衣櫃裡找雨衣。"},
+    {"w": "umbrella", "ipa": "/ʌmˈbrelə/", "pos": "n.", "cn": "雨傘", "def": "Something you hold over your head to stay dry.", "ex": "He also finds his rain boots and an umbrella.", "exCn": "他也找到了雨鞋和一把傘。"},
+    {"w": "windy", "ipa": "/ˈwɪndi/", "pos": "adj.", "cn": "有風的", "def": "Having a lot of wind.", "ex": "Right now, the sky outside is dark and windy.", "exCn": "現在外面的天空又暗又有風。"},
+    {"w": "fill", "ipa": "/fɪl/", "pos": "v.", "cn": "裝滿", "def": "To make something full.", "ex": "His mother is filling bottles with water.", "exCn": "他媽媽正在把瓶子裝滿水。"},
+    {"w": "forecast", "ipa": "/ˈfɔːrkæst/", "pos": "n.", "cn": "預報", "def": "A statement about what the weather will be.", "ex": "There is heavy rain in the forecast.", "exCn": "預報顯示會有大雨。"}
+  ],
+  "questions": [
+    {
+      "q": "What is coming to Taiwan this weekend?",
+      "qCn": "這個週末有什麼要來台灣？",
+      "opts": ["A. A big typhoon", "B. A cold wind", "C. A sunny day", "D. A school trip"],
+      "optsCn": ["A. 一個大颱風", "B. 一陣冷風", "C. 一個晴天", "D. 一趟校外教學"],
+      "ans": 0,
+      "expl": "A big typhoon is coming to Taiwan this weekend."
+    },
+    {
+      "q": "What is Tom's mother doing right now?",
+      "qCn": "Tom的媽媽現在正在做什麼？",
+      "opts": ["A. Cooking dinner", "B. Filling bottles with water", "C. Reading a book", "D. Washing the car"],
+      "optsCn": ["A. 煮晚餐", "B. 把瓶子裝滿水", "C. 看書", "D. 洗車"],
+      "ans": 1,
+      "expl": "His mother is filling bottles with water."
+    },
+    {
+      "q": "Tomorrow, Tom ___ stay home from school.",
+      "qCn": "明天Tom會待在家不用去上學。（選出正確的字）",
+      "opts": ["A. is", "B. was", "C. will", "D. does"],
+      "ans": 2,
+      "expl": "will表示未來的計畫：明天他會待在家。"
+    }
+  ],
+  "upgrade": [
+    {"b1": "Tom checks the weather app. He sees rain in the forecast.", "b2": "Tom checks the weather app and sees rain in the forecast.", "note": "用and連接兩個動作，不用重複主詞Tom，句子更順、更像B1的寫法。"},
+    {"b1": "The sky is dark. The sky is windy.", "b2": "The sky is dark and windy.", "note": "用and合併兩個形容詞，比兩個短句更自然，是B1常見的寫法。"}
+  ]
+},
+
+{
+  "id": "d20260904b1",
+  "date": "2026-09-04",
+  "level": "B1",
+  "topic": "天災與天氣",
+  "words": 123,
+  "kind": "orig",
+  "title": "Amy's Typhoon Day Off",
+  "titleCn": "Amy的颱風假",
+  "focus": "現在完成式基礎（has already prepared, has never experienced）vs 過去簡單式（announced, checked）；because/so連接原因與結果",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Amy的公司因為颱風宣布放假，她也開始準備應對這場暴風。文章用現在完成式的基礎用法（has already prepared, has never experienced）講「到目前為止」的準備，也留意because/so怎麼連接原因和結果。",
+  "paras": [
+    {
+      "en": "Yesterday evening, Amy's company announced a typhoon day off, because a strong storm approached the city. Amy has never experienced such a strong typhoon before, so she felt a little nervous.",
+      "cn": "昨天晚上，Amy的公司宣布放颱風假，因為一個強烈的暴風接近了這座城市。Amy從來沒經歷過這麼強的颱風，所以她覺得有點緊張。"
+    },
+    {
+      "en": "This morning, Amy checked the news and learned that the airline cancelled several flights. She has already prepared candles, water, and snacks for the storm. Her neighbor came over, and together they taped all the windows.",
+      "cn": "今天早上，Amy看新聞，得知航空公司取消了好幾班航班。她已經準備好蠟燭、水和一些零食來應付這場暴風。鄰居過來幫忙，他們一起把所有窗戶都貼上了膠帶。"
+    },
+    {
+      "en": "By noon, the wind became much louder than Amy expected, and the rain hit the windows hard. She has already texted her parents twice to check that they were safe.",
+      "cn": "到了中午，風變得比Amy預期的還要大聲很多，雨也重重地打在窗戶上。她已經傳訊息給爸媽兩次，確認他們平安。"
+    },
+    {
+      "en": "In the afternoon, the wind finally became calmer, so Amy relaxed a little. She has learned that preparing early always makes a storm easier to handle.",
+      "cn": "到了下午，風終於變得比較平靜，Amy也稍微鬆了一口氣。她體會到，提早做好準備總是能讓風暴更容易應付。"
+    }
+  ],
+  "target": [
+    {"w": "announce", "ipa": "/əˈnaʊns/", "pos": "v.", "cn": "宣布", "def": "To tell people something officially.", "ex": "Amy's company announced a typhoon day off.", "exCn": "Amy的公司宣布放颱風假。"},
+    {"w": "approach", "ipa": "/əˈproʊtʃ/", "pos": "v.", "cn": "接近", "def": "To come nearer to something.", "ex": "A strong storm approached the city.", "exCn": "一個強烈的暴風接近了這座城市。"},
+    {"w": "cancel", "ipa": "/ˈkænsl/", "pos": "v.", "cn": "取消", "def": "To stop something from happening.", "ex": "The airline cancelled several flights.", "exCn": "航空公司取消了好幾班航班。"},
+    {"w": "candle", "ipa": "/ˈkændl/", "pos": "n.", "cn": "蠟燭", "def": "A stick of wax with a string that burns for light.", "ex": "She has already prepared candles, water, and snacks for the storm.", "exCn": "她已經準備好蠟燭、水和一些零食來應付這場暴風。"},
+    {"w": "tape", "ipa": "/teɪp/", "pos": "v.", "cn": "用膠帶貼", "def": "To stick something using tape.", "ex": "Together they taped all the windows.", "exCn": "他們一起把所有窗戶都貼上了膠帶。"},
+    {"w": "calm", "ipa": "/kɑːm/", "pos": "adj.", "cn": "平靜的", "def": "Not moving much; quiet and still.", "ex": "The wind finally became calmer.", "exCn": "風終於變得比較平靜了。"}
+  ],
+  "questions": [
+    {
+      "q": "Why did Amy's company announce a typhoon day off?",
+      "qCn": "Amy的公司為什麼宣布颱風假？",
+      "opts": ["A. Because a strong storm approached the city", "B. Because the office was too cold", "C. Because Amy asked for a day off", "D. Because there was a public holiday"],
+      "optsCn": ["A. 因為一個強烈的暴風接近了這座城市", "B. 因為辦公室太冷", "C. 因為Amy要求放假", "D. 因為那天是國定假日"],
+      "ans": 0,
+      "expl": "a strong storm approached the city."
+    },
+    {
+      "q": "What did Amy's neighbor help her do?",
+      "qCn": "Amy的鄰居幫她做了什麼？",
+      "opts": ["A. Cook dinner", "B. Tape the windows", "C. Cancel her flight", "D. Buy candles"],
+      "optsCn": ["A. 煮晚餐", "B. 貼窗戶", "C. 取消她的航班", "D. 買蠟燭"],
+      "ans": 1,
+      "expl": "Her neighbor came over, and together they taped all the windows."
+    },
+    {
+      "q": "Amy ___ her parents twice to check that they were safe.",
+      "qCn": "Amy已經傳訊息給爸媽兩次，確認他們平安。（選出正確的動詞形式）",
+      "opts": ["A. texts", "B. texted", "C. has already texted", "D. is texting"],
+      "ans": 2,
+      "expl": "already常搭配現在完成式，表示到目前為止做了幾次：has already texted。"
+    }
+  ],
+  "upgrade": [
+    {"b1": "A strong storm approached the city, so the company announced a day off.", "b2": "A typhoon day off was announced after a strong storm was reported approaching the city.", "note": "用被動語態was announced，把重點放在『放假這件事』本身，不特別強調是誰宣布的，是B1+常見的寫法。"},
+    {"b1": "Her neighbor came over. Together they taped all the windows.", "b2": "Her neighbor, who lives just next door, came over so that they could tape all the windows together.", "note": "用who帶出的關係子句補充說明鄰居是誰，比兩個短句更精簡，也更像B1+的寫法。"}
+  ]
+},
+
+{
+  "id": "d20260904b1p",
+  "date": "2026-09-04",
+  "level": "B1+",
+  "topic": "天災與天氣",
+  "words": 217,
+  "kind": "orig",
+  "title": "A Shipment Delayed by the Storm",
+  "titleCn": "被暴風延誤的貨運",
+  "focus": "現在完成式＋被動語態（has been delayed, has been suggested）；which/who帶出的關係子句補充資訊",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "Anita在越南的工廠因為一場突然轉向的熱帶風暴，出貨時程被打亂。文章大量使用「現在完成式＋被動語態」（has been delayed, has been suggested, has been added）描述「到目前為止發生的事」，也留意which/who帶出的關係子句怎麼補充額外資訊。",
+  "paras": [
+    {
+      "en": "Anita's factory near Ho Chi Minh City has been preparing a large shipment that is due to leave for the port on Friday. Yesterday, a tropical storm, which had formed over the South China Sea days earlier, suddenly turned toward the coast. The delivery schedule, which had looked secure on Monday, was thrown into doubt within hours.",
+      "cn": "Anita在胡志明市附近的工廠，一直在準備一批預計週五要出貨到港口的大貨。昨天，一個原本在南海形成已經好幾天的熱帶風暴，突然轉向朝海岸而來。原本週一看起來還很穩的出貨時程，短短幾小時內就變得充滿不確定。"
+    },
+    {
+      "en": "By this morning, the access road to the factory had been flooded by heavy rain, and several delivery trucks were blocked outside the gate. The shipment has now been delayed by at least two days. Workers moved finished products to higher shelves, in case water entered the warehouse.",
+      "cn": "到了今天早上，通往工廠的聯外道路已經被大雨淹沒，好幾台送貨卡車被困在大門外面。這批貨現在已經被延誤至少兩天了。員工把已完成的產品搬到比較高的架子上，以防積水淹進倉庫。"
+    },
+    {
+      "en": "Anita, who is responsible for coordinating with overseas clients, has already emailed the customer to explain the delay. A backup route through a nearby town has been suggested by the transport company, although it will add several hours to the journey. Everyone at the factory has been told to prepare for a similarly wet week ahead.",
+      "cn": "負責和海外客戶協調的Anita，已經寫信告知客戶延誤的狀況。運輸公司建議走附近一個小鎮的替代路線，雖然這會讓路程多花好幾個小時。工廠裡的每個人都被告知，要為接下來同樣多雨的一週做好準備。"
+    },
+    {
+      "en": "This is not the first shipment that has been affected by weather changes this year, and Anita has learned that flexible planning matters as much as speed. A new backup procedure has since been added to the factory's shipping checklist. It has already been used twice this month, and each time, it has saved valuable time.",
+      "cn": "這已經不是今年第一批因為天氣變化而受影響的貨了，Anita體會到，靈活的應變計畫和速度一樣重要。工廠的出貨檢查清單後來加入了一項新的備援流程。這個月已經用過兩次，每一次都省下了寶貴的時間。"
+    }
+  ],
+  "target": [
+    {"w": "shipment", "ipa": "/ˈʃɪpmənt/", "pos": "n.", "cn": "貨運、一批貨", "def": "A load of goods that is sent somewhere.", "ex": "Anita's factory near Ho Chi Minh City has been preparing a large shipment that is due to leave for the port on Friday.", "exCn": "Anita在胡志明市附近的工廠，一直在準備一批預計週五要出貨到港口的大貨。"},
+    {"w": "turn", "ipa": "/tɜːrn/", "pos": "v.", "cn": "轉向", "def": "To change direction.", "ex": "Yesterday, a tropical storm, which had formed over the South China Sea days earlier, suddenly turned toward the coast.", "exCn": "昨天，一個原本在南海形成已經好幾天的熱帶風暴，突然轉向朝海岸而來。"},
+    {"w": "delay", "ipa": "/dɪˈleɪ/", "pos": "v./n.", "cn": "延誤", "def": "To make something happen later than planned.", "ex": "The shipment has now been delayed by at least two days.", "exCn": "這批貨現在已經被延誤至少兩天了。"},
+    {"w": "warehouse", "ipa": "/ˈwerhaʊs/", "pos": "n.", "cn": "倉庫", "def": "A large building where goods are stored.", "ex": "Workers moved finished products to higher shelves, in case water entered the warehouse.", "exCn": "員工把已完成的產品搬到比較高的架子上，以防積水淹進倉庫。"},
+    {"w": "coordinate", "ipa": "/koʊˈɔːrdɪneɪt/", "pos": "v.", "cn": "協調", "def": "To organize people or things to work together well.", "ex": "Anita, who is responsible for coordinating with overseas clients, has already emailed the customer to explain the delay.", "exCn": "負責和海外客戶協調的Anita，已經寫信告知客戶延誤的狀況。"},
+    {"w": "suggest", "ipa": "/səˈdʒest/", "pos": "v.", "cn": "建議", "def": "To offer an idea or a plan.", "ex": "A backup route through a nearby town has been suggested by the transport company, although it will add several hours to the journey.", "exCn": "運輸公司建議走附近一個小鎮的替代路線，雖然這會讓路程多花好幾個小時。"},
+    {"w": "affect", "ipa": "/əˈfekt/", "pos": "v.", "cn": "影響", "def": "To cause a change in something.", "ex": "This is not the first shipment that has been affected by weather changes this year.", "exCn": "這已經不是今年第一批因為天氣變化而受影響的貨了。"},
+    {"w": "checklist", "ipa": "/ˈtʃeklɪst/", "pos": "n.", "cn": "檢查清單", "def": "A list of things to check or do.", "ex": "A new backup procedure has since been added to the factory's shipping checklist.", "exCn": "工廠的出貨檢查清單後來加入了一項新的備援流程。"}
+  ],
+  "questions": [
+    {
+      "q": "Why did Anita's delivery schedule suddenly become uncertain?",
+      "qCn": "為什麼Anita的出貨時程突然變得不確定？",
+      "opts": ["A. A tropical storm suddenly turned toward the coast", "B. The client cancelled the order", "C. The factory ran out of materials", "D. The port workers went on strike"],
+      "optsCn": ["A. 一個熱帶風暴突然轉向朝海岸而來", "B. 客戶取消了訂單", "C. 工廠原料用完了", "D. 港口工人罷工"],
+      "ans": 0,
+      "expl": "a tropical storm, which had formed over the South China Sea days earlier, suddenly turned toward the coast."
+    },
+    {
+      "q": "What did workers do to protect the finished products?",
+      "qCn": "員工做了什麼來保護已完成的產品？",
+      "opts": ["A. They moved them to higher shelves", "B. They shipped them out early", "C. They covered them with plastic", "D. They moved them to another factory"],
+      "optsCn": ["A. 把產品搬到比較高的架子上", "B. 提早出貨", "C. 用塑膠布蓋住", "D. 搬到另一間工廠"],
+      "ans": 0,
+      "expl": "Workers moved finished products to higher shelves, in case water entered the warehouse."
+    },
+    {
+      "q": "What has Anita already done about the delay?",
+      "qCn": "關於延誤，Anita已經做了什麼？",
+      "opts": ["A. She has already emailed the customer to explain the delay", "B. She has ignored the problem", "C. She has cancelled the shipment completely", "D. She has asked for a full refund"],
+      "optsCn": ["A. 她已經寫信告知客戶延誤的狀況", "B. 她忽略了這個問題", "C. 她完全取消了這批貨", "D. 她要求全額退款"],
+      "ans": 0,
+      "expl": "Anita has already emailed the customer to explain the delay."
+    },
+    {
+      "q": "A backup route through a nearby town ___ by the transport company.",
+      "qCn": "運輸公司建議了一條經過附近小鎮的替代路線。（選出正確的動詞形式）",
+      "opts": ["A. suggests", "B. suggested", "C. has been suggested", "D. is suggesting"],
+      "ans": 2,
+      "expl": "route是被建議的一方，強調到目前為止的結果，用現在完成式的被動has been suggested。"
+    }
+  ],
+  "upgrade": [
+    {"b1": "A storm suddenly turned toward the coast, so the delivery schedule was thrown into doubt.", "b2": "Once a tropical storm had unexpectedly turned toward the coast, a delivery schedule that had looked secure only days earlier was abruptly thrown into doubt.", "note": "用had turned的過去完成式交代『先後順序』，並加上that帶出的關係子句補充schedule的背景，語氣更正式、更像B2的敘事寫法。"},
+    {"b1": "Anita has learned that flexible planning matters as much as speed.", "b2": "If this year has taught Anita anything, it is that flexible planning matters every bit as much as speed.", "note": "用If...has taught開頭的句型帶出結論，是B2常見的、更有文采的開場方式。"}
+  ]
+},
+
+{
+  "id": "d20260904b2",
+  "date": "2026-09-04",
+  "level": "B2",
+  "topic": "天災與天氣",
+  "words": 272,
+  "kind": "news",
+  "title": "Taiwan's Wettest Summer in Years",
+  "titleCn": "台灣近年來最潮濕的一個夏天",
+  "source": "改寫自Taipei Times報導（2026/09/02）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://www.taipeitimes.com/News/taiwan/archives/2026/09/02/2003863565",
+  "focus": "現在完成式表達「累積至今」的統計結果；被動語態與比較級用於氣象數據報導",
+  "intro": "這篇改寫自台灣中央氣象署公布的統計新聞，講今年七、八月破紀錄的颱風數量和雨量。留意文章怎麼用現在完成式（has confirmed, has recorded, have cautioned）表達「到目前為止累積的統計結果」，這是新聞報導常見的語域選擇。",
+  "paras": [
+    {
+      "en": "Taiwan's Central Weather Administration (CWA) has confirmed what many residents already suspected: this summer has been unusually wet. Fourteen tropical storms formed in July and August alone, matching the record for that two-month period, and the rainfall these storms brought was roughly one-fifth higher than the long-term average. For many people in the south, one storm seemed to follow another almost without a break.",
+      "cn": "台灣中央氣象署證實了許多居民早已猜到的事：這個夏天異常潮濕。光是七、八月就形成了十四個熱帶風暴，追平了同期紀錄，這些風暴帶來的雨量，比長期平均還要多出大約五分之一。對南部很多人來說，暴風一個接一個，幾乎沒有喘息的空檔。"
+    },
+    {
+      "en": "Across the wider western North Pacific, twenty-two typhoons had developed by the end of August, the third-highest count for the first eight months of any year since records began in 1958. Only 1965 and 1971, both more than half a century ago, produced more storms during the same stretch, according to the agency's data.",
+      "cn": "放眼整個西北太平洋，到八月底為止已經生成了二十二個颱風，是1958年開始統計以來，每年前八個月裡數量第三多的一次。根據氣象署的資料，只有1965年和1971年——都是超過半世紀以前的事了——同期生成的風暴數量比今年更多。"
+    },
+    {
+      "en": "The impact on individual cities has been striking. Tainan's weather station has recorded its highest July-to-August rainfall total on record, while Kaohsiung logged its wettest such period since its measuring station was relocated in 2022. Total rainfall across the two months reached 754.7 millimeters, more than twenty percent above what forecasters normally expect. The CWA also flagged an extreme rainfall event in the south on August 22 as part of the same unusually active stretch.",
+      "cn": "對各城市造成的影響相當顯著。台南測站記錄到史上七、八月雨量最高的一次，高雄則創下自2022年測站搬遷以來同期最潮濕的紀錄。這兩個月的總雨量達到754.7毫米，比預報員平常預期的還要多出超過兩成。氣象署也特別提到，8月22日南部發生的一次極端降雨事件，正是這波異常活躍降雨的一部分。"
+    },
+    {
+      "en": "Four typhoons were significant enough for the CWA to issue land or sea warnings this season: Bavi, Noul, Dolphin, and Saudel. Bavi, a moderate typhoon with a storm radius of roughly 380 kilometers, delivered particularly heavy rain to the north. For farmers and residents in low-lying areas, the repeated storms have meant standing water and, at times, disrupted travel. Forecasters have cautioned that, with typhoon season not yet over, this pattern of frequent, rain-heavy storms may continue into September.",
+      "cn": "這一季有四個颱風強度足以讓氣象署發布陸上或海上警報：巴威、紅霞、海豚和陶德。其中巴威是一個中度颱風，暴風半徑大約380公里，為北部帶來了特別大的雨量。對農民和低窪地區的居民來說，一波接一波的暴風意味著積水，有時候還會造成交通中斷。預報員提醒，颱風季還沒結束，這種頻繁又多雨的型態可能會持續到九月。"
+    }
+  ],
+  "target": [
+    {"w": "confirm", "ipa": "/kənˈfɜːrm/", "pos": "v.", "cn": "證實", "def": "To show that something is true.", "ex": "Taiwan's Central Weather Administration (CWA) has confirmed what many residents already suspected: this summer has been unusually wet.", "exCn": "台灣中央氣象署證實了許多居民早已猜到的事：這個夏天異常潮濕。"},
+    {"w": "unusually", "ipa": "/ʌnˈjuːʒuəli/", "pos": "adv.", "cn": "異常地", "def": "In a way that is different from what is normal.", "ex": "This summer has been unusually wet.", "exCn": "這個夏天異常潮濕。"},
+    {"w": "matching", "ipa": "/ˈmætʃɪŋ/", "pos": "v.", "cn": "與...相符、追平", "def": "Being the same as something else, such as a record.", "ex": "Fourteen tropical storms formed in July and August alone, matching the record for that two-month period.", "exCn": "光是七、八月就形成了十四個熱帶風暴，追平了同期紀錄。"},
+    {"w": "striking", "ipa": "/ˈstraɪkɪŋ/", "pos": "adj.", "cn": "顯著的、驚人的", "def": "Very noticeable or impressive.", "ex": "The impact on individual cities has been striking.", "exCn": "對各城市造成的影響相當顯著。"},
+    {"w": "relocate", "ipa": "/ˌriːloʊˈkeɪt/", "pos": "v.", "cn": "搬遷", "def": "To move to a new place.", "ex": "Kaohsiung logged its wettest such period since its measuring station was relocated in 2022.", "exCn": "高雄則創下自2022年測站搬遷以來同期最潮濕的紀錄。"},
+    {"w": "deliver", "ipa": "/dɪˈlɪvər/", "pos": "v.", "cn": "帶來", "def": "To bring or produce something, such as rain.", "ex": "Bavi, a moderate typhoon with a storm radius of roughly 380 kilometers, delivered particularly heavy rain to the north.", "exCn": "巴威是一個中度颱風，暴風半徑大約380公里，為北部帶來了特別大的雨量。"},
+    {"w": "caution", "ipa": "/ˈkɔːʃn/", "pos": "v.", "cn": "提醒、警告", "def": "To warn someone about something.", "ex": "Forecasters have cautioned that, with typhoon season not yet over, this pattern of frequent, rain-heavy storms may continue into September.", "exCn": "預報員提醒，颱風季還沒結束，這種頻繁又多雨的型態可能會持續到九月。"},
+    {"w": "forecaster", "ipa": "/ˈfɔːrkæstər/", "pos": "n.", "cn": "預報員", "def": "A person whose job is to say what the weather will be.", "ex": "Total rainfall across the two months reached 754.7 millimeters, more than twenty percent above what forecasters normally expect.", "exCn": "這兩個月的總雨量達到754.7毫米，比預報員平常預期的還要多出超過兩成。"}
+  ],
+  "questions": [
+    {
+      "q": "According to the CWA, how did this summer's rainfall compare to the long-term average?",
+      "qCn": "根據中央氣象署的說法，這個夏天的雨量跟長期平均相比如何？",
+      "opts": ["A. About twenty percent above average", "B. About the same as average", "C. Nearly fifty percent below average", "D. Data is not yet available"],
+      "optsCn": ["A. 大約高出平均兩成", "B. 跟平均差不多", "C. 比平均低了將近五成", "D. 目前還沒有數據"],
+      "ans": 0,
+      "expl": "the rainfall these storms brought was roughly one-fifth higher than the long-term average."
+    },
+    {
+      "q": "How does this year's number of Pacific typhoons compare historically?",
+      "qCn": "今年太平洋颱風的數量跟歷史紀錄相比如何？",
+      "opts": ["A. It is the third-highest count since 1958, behind only 1965 and 1971", "B. It is the lowest count in a decade", "C. It ties the all-time record", "D. It cannot be compared to past years"],
+      "optsCn": ["A. 是1958年以來第三多的一次，僅次於1965年和1971年", "B. 是十年來最少的一次", "C. 追平了史上最高紀錄", "D. 沒辦法跟過去的年份比較"],
+      "ans": 0,
+      "expl": "twenty-two typhoons had developed by the end of August, the third-highest count... since records began in 1958. Only 1965 and 1971 produced more storms."
+    },
+    {
+      "q": "What made Kaohsiung's rainfall record notable?",
+      "qCn": "高雄的雨量紀錄有什麼特別之處？",
+      "opts": ["A. It was the wettest such period since the measuring station moved in 2022", "B. It broke a hundred-year record", "C. It was the driest period on record", "D. The station had never recorded rain before"],
+      "optsCn": ["A. 是自2022年測站搬遷以來同期最潮濕的一段時間", "B. 打破了百年紀錄", "C. 是有紀錄以來最乾燥的一段時間", "D. 那個測站以前從來沒有記錄過雨量"],
+      "ans": 0,
+      "expl": "Kaohsiung logged its wettest such period since its measuring station was relocated in 2022."
+    },
+    {
+      "q": "Taiwan's Central Weather Administration ___ what many residents already suspected.",
+      "qCn": "台灣中央氣象署證實了許多居民早已猜到的事。（選出正確的動詞形式）",
+      "opts": ["A. confirms", "B. confirmed", "C. has confirmed", "D. is confirming"],
+      "ans": 2,
+      "expl": "新聞前導句常用現在完成式has confirmed，強調『到目前為止已經確認』的最新結果。"
+    }
+  ],
+  "upgrade": [
+    {"b1": "It rained a lot this summer.", "b2": "Fourteen tropical storms formed in July and August alone, matching the record for that two-month period.", "note": "用具體的數字取代籠統的『下很多雨』，是B2新聞式改寫常見的手法。"},
+    {"b1": "Kaohsiung recorded a lot of rain this year.", "b2": "Kaohsiung logged its wettest such period since its measuring station was relocated in 2022.", "note": "用since帶出的時間子句與被動was relocated，交代『比較基準』，語氣更精確、更像正式報導。"}
+  ]
+},
+{
   "id": "d20260902a2",
   "date": "2026-09-02",
   "level": "A2",
@@ -3319,6 +3618,225 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260904a2",
+  "date": "2026-09-04",
+  "unitNo": 8,
+  "level": "A2",
+  "title": "Present Perfect: A Result You Can See Now",
+  "titleCn": "現在完成式：現在看得到的結果",
+  "srcDays": [],
+  "summary": "have/has + 過去分詞除了說「已經做完」，很多時候是要強調「因為做完了，所以現在是這樣」的結果。沒有明確時間點的時候用現在完成式；有明確時間點（yesterday, at three）就要改用過去簡單式。",
+  "sections": [
+    {
+      "h": "have/has + 過去分詞：現在的結果",
+      "table": {
+        "head": ["例句", "現在的情況"],
+        "rows": [
+          ["The rain has stopped.", "現在外面沒有在下雨了"],
+          ["Tom has lost his key.", "Tom現在沒有鑰匙"]
+        ]
+      },
+      "examples": [
+        {"en": "The rain has stopped.", "cn": "雨已經停了。", "note": "現在外面沒有在下雨"},
+        {"en": "Tom has lost his key.", "cn": "Tom的鑰匙不見了。", "note": "現在他沒有鑰匙"}
+      ]
+    },
+    {
+      "h": "has stopped vs stopped：有沒有明確時間",
+      "table": {
+        "head": ["句子", "時態"],
+        "rows": [
+          ["The rain has stopped.（沒說時間）", "現在完成式"],
+          ["The rain stopped at three.（有明確時間）", "過去簡單式"]
+        ]
+      },
+      "bullets": [
+        "有時間點（yesterday, at three）用過去簡單式",
+        "沒有時間點、強調現在的狀態用現在完成式"
+      ]
+    },
+    {
+      "h": "肯定、否定、問句",
+      "table": {
+        "head": ["句型", "例句"],
+        "rows": [
+          ["肯定", "Tom has lost his key."],
+          ["否定", "Tom has not (hasn't) lost his key."],
+          ["問句", "Has Tom lost his key?"]
+        ]
+      }
+    }
+  ],
+  "traps": [
+    {"bad": "Tom loses his key.", "good": "Tom has lost his key.", "why": "要說『現在的結果』（鑰匙現在不見了）要用現在完成式has lost，不能用現在簡單式loses。"},
+    {"bad": "The rain has stopped at three.", "good": "The rain stopped at three.", "why": "句子裡有明確時間at three，要用過去簡單式stopped，不能用現在完成式。"},
+    {"bad": "I have lose my umbrella.", "good": "I have lost my umbrella.", "why": "have後面要接過去分詞lost，不能用原形lose。"},
+    {"bad": "She has broke her phone.", "good": "She has broken her phone.", "why": "break的過去分詞是broken，不是broke（那是過去簡單式）。"}
+  ],
+  "quiz": [
+    {"q": "Tom can't open the door. He ___ his key.", "qCn": "Tom打不開門，他的鑰匙不見了。", "opts": ["loses", "lost", "has lost", "is losing"], "ans": 2, "expl": "現在的結果（鑰匙現在不見了）用現在完成式has lost。"},
+    {"q": "The rain ___ at three o'clock.", "qCn": "雨在三點的時候停了。", "opts": ["has stopped", "stopped", "stops", "is stopping"], "ans": 1, "expl": "at three o'clock是明確時間，用過去簡單式stopped。"},
+    {"q": "I ___ my umbrella! Have you seen it?", "qCn": "我的傘不見了！你有看到嗎？", "opts": ["lose", "lost", "have lost", "am losing"], "ans": 2, "expl": "have後面要接過去分詞lost，強調現在的結果。"},
+    {"q": "She ___ her phone. Now she can't call anyone.", "qCn": "她的手機壞了，現在她沒辦法打給任何人。", "opts": ["breaks", "broke", "has broken", "is breaking"], "ans": 2, "expl": "現在的結果（手機現在壞了）用現在完成式has broken，過去分詞是broken不是broke。"}
+  ]
+},
+
+{
+  "id": "dg20260904b1",
+  "date": "2026-09-04",
+  "unitNo": 8,
+  "level": "B1",
+  "title": "Have Been To vs Have Gone To",
+  "titleCn": "have been to 跟 have gone to 不一樣：人到底在不在那裡",
+  "srcDays": [],
+  "summary": "have/has gone to某地＝去了、現在還在那裡，還沒回來；have/has been to某地＝去過、現在已經回來了，講的是經驗。這兩個字只差一個字，但意思差很多。",
+  "sections": [
+    {
+      "h": "gone to vs been to",
+      "table": {
+        "head": ["", "gone to", "been to"],
+        "rows": [
+          ["人現在在哪裡", "還在那個地方，還沒回來", "已經回來了"],
+          ["意思", "『去了』", "『去過』（經驗）"]
+        ]
+      },
+      "examples": [
+        {"en": "Anita has gone to the shelter.", "cn": "Anita去避難所了（現在還在那裡）。", "note": "還沒回來"},
+        {"en": "Anita has been to that shelter before.", "cn": "Anita以前去過那個避難所（現在已經回來了）。", "note": "講經驗，已經回來了"}
+      ]
+    },
+    {
+      "h": "跟颱風有關的常見情境",
+      "bullets": [
+        "『家人已經去避難所了』：The whole family has gone to a safer place.（人還在那裡）",
+        "『你有經歷過大颱風嗎？』：Have you ever been in a big typhoon?（問經驗）"
+      ]
+    },
+    {
+      "h": "為什麼中文母語者常搞混",
+      "bullets": [
+        "中文「去過」常常兩種都可以翻，但英文差很多，要看『人現在在不在那裡』來判斷用哪一個",
+        "go的過去分詞是gone，不是went；went是過去簡單式，不能接在have/has後面"
+      ]
+    }
+  ],
+  "traps": [
+    {"bad": "Anita has been to the shelter now, so she is safe there.", "good": "Anita has gone to the shelter now, so she is safe there.", "why": "她現在人還在避難所，還沒回來，要用gone to，不是been to。"},
+    {"bad": "Have you ever gone to a typhoon shelter before?", "good": "Have you ever been to a typhoon shelter before?", "why": "問『有沒有這樣的經驗』、而且人已經回來了，要用been to，不是gone to。"},
+    {"bad": "He has went to the airport to check on his flight.", "good": "He has gone to the airport to check on his flight.", "why": "go的過去分詞是gone，不是went（went是過去簡單式）。"},
+    {"bad": "They have gone to Da Nang three times before, but they live there now.", "good": "They have been to Da Nang three times before they moved there.", "why": "『去過三次』是經驗，人現在住在那裡了（不是還在路上），要用been to。"}
+  ],
+  "quiz": [
+    {"q": "Where is Anita? — She ___ to the shelter. She isn't home yet.", "qCn": "Anita在哪裡？她去避難所了，還沒回家。", "opts": ["has been", "has gone", "went", "goes"], "ans": 1, "expl": "她現在還沒回來，用has gone to。"},
+    {"q": "___ you ever ___ to a typhoon shelter?", "qCn": "你有去過颱風避難所嗎？", "opts": ["Did / go", "Have / been", "Have / gone", "Do / go"], "ans": 1, "expl": "問經驗、人已經回來了，用Have you ever been to...?"},
+    {"q": "He ___ to the airport to check on his flight.", "qCn": "他去機場查他的班機狀況了。", "opts": ["has went", "has gone", "goes", "go"], "ans": 1, "expl": "go的過去分詞是gone，不是went。"},
+    {"q": "My parents ___ to that beach town many times, but they have never lived there.", "qCn": "我爸媽去過那個海邊小鎮很多次，但從來沒住過那裡。", "opts": ["have gone", "have been", "have go", "are going"], "ans": 1, "expl": "『去過很多次』是經驗、人已經回來了，用have been to。"}
+  ]
+},
+
+{
+  "id": "dg20260904b1p",
+  "date": "2026-09-04",
+  "unitNo": 8,
+  "level": "B1+",
+  "title": "This Is the First Time...: Present Perfect After 'First Time' and Superlatives",
+  "titleCn": "『這是第幾次』的現在完成式：first/second time 與最高級搭配的固定用法",
+  "srcDays": [],
+  "summary": "中文說「這是我第一次...」、「這是最強的一次...」，英文常用「This is the first/second/third time + 現在完成式」或「最高級 + that + 現在完成式」的句型，這是中文母語者很少注意到的固定搭配，因為兩個句型都在算『到目前為止一共發生了幾次、有沒有比這更誇張的』。",
+  "sections": [
+    {
+      "h": "This is the first/second time + 現在完成式",
+      "table": {
+        "head": ["句型", "例句"],
+        "rows": [
+          ["This is the first time + 現在完成式", "This is the first time Anita has evacuated her apartment."],
+          ["This is the + 序數 + time + that + 現在完成式", "This is the third time this year that a typhoon has hit the same town."]
+        ]
+      },
+      "examples": [
+        {"en": "This is the first time Anita has evacuated her apartment.", "cn": "這是Anita第一次撤離她的公寓。", "note": "first time + 現在完成式，是固定搭配"},
+        {"en": "This is the third time this year that a typhoon has hit the same town.", "cn": "這是今年第三次有颱風侵襲同一個城鎮了。", "note": "third time + that + 現在完成式"}
+      ]
+    },
+    {
+      "h": "最高級 + that + 現在完成式：強調『至今的紀錄』",
+      "bullets": [
+        "中文「這是我遇過最強的颱風」，英文常用最高級the strongest + that + 現在完成式ever，強調『到目前為止的紀錄』"
+      ],
+      "examples": [
+        {"en": "This is the strongest typhoon that Anita has ever experienced.", "cn": "這是Anita遇過最強的颱風。", "note": "最高級 + that + 現在完成式ever，強調『至今的紀錄』"}
+      ]
+    },
+    {
+      "h": "already/yet/just跟這個句型不會疊在一起",
+      "bullets": [
+        "first time這個句型本身已經有『第一次』的意思，不需要再加already，兩個疊在一起會很奇怪",
+        "已經有明確次數（third time）時，不用再加ever，ever通常只跟最高級或first time搭配"
+      ]
+    }
+  ],
+  "traps": [
+    {"bad": "This is the first time I experienced such a strong storm.", "good": "This is the first time I have experienced such a strong storm.", "why": "This is the first time後面固定接現在完成式have experienced，不能用過去簡單式experienced。"},
+    {"bad": "This is the strongest typhoon I ever experience.", "good": "This is the strongest typhoon I have ever experienced.", "why": "最高級後面常接『that/which + have/has ever + 過去分詞』，強調『到目前為止』，不能只用現在簡單式。"},
+    {"bad": "This is the third time that the office closed early this month.", "good": "This is the third time that the office has closed early this month.", "why": "『第幾次』的句型固定用現在完成式has closed，因為在算『到目前為止一共發生了幾次』。"},
+    {"bad": "This is the first time she has already evacuated.", "good": "This is the first time she has evacuated.", "why": "first time這個句型本身已經有『第一次』的意思，不需要再加already，兩個疊在一起會很奇怪。"}
+  ],
+  "quiz": [
+    {"q": "This is the first time Anita ___ her apartment because of a storm.", "qCn": "這是Anita第一次因為暴風而撤離她的公寓。", "opts": ["evacuated", "has evacuated", "evacuates", "is evacuating"], "ans": 1, "expl": "this is the first time固定接現在完成式has evacuated。"},
+    {"q": "This is the strongest typhoon that Anita ___ ever experienced.", "qCn": "這是Anita遇過最強的颱風。", "opts": ["has", "did", "was", "is"], "ans": 0, "expl": "最高級+that+ever後面接現在完成式has experienced，強調至今的紀錄。"},
+    {"q": "This is the third time ___ the office has closed early this month.", "qCn": "這是這個月辦公室第三次提早關門了。", "opts": ["what", "that", "when", "which"], "ans": 1, "expl": "『第幾次』句型固定用that帶出子句：This is the third time that..."},
+    {"q": "Which sentence is correct?", "qCn": "哪一句是對的？", "opts": ["This is the first time I have already seen snow.", "This is the first time I have seen snow.", "This is the first time I already saw snow.", "This is the first time I am seeing snow."], "optsCn": ["這是我第一次已經看過雪。", "這是我第一次看到雪。", "這是我第一次已經看到了雪。", "這是我第一次正在看雪。"], "ans": 1, "expl": "first time句型不需要再加already，直接接現在完成式have seen即可。"}
+  ]
+},
+
+{
+  "id": "dg20260904b2",
+  "date": "2026-09-04",
+  "unitNo": 8,
+  "level": "B2",
+  "title": "Present Perfect in Weather Advisories and Record Claims",
+  "titleCn": "現在完成式在氣象警報與『破紀錄』宣稱中的語域效果",
+  "srcDays": [],
+  "summary": "正式的氣象警報和新聞常用現在完成式宣稱『這是有紀錄以來最...的一次』，藉此強調『這個結論到目前為止仍然成立』；敘事段落交代明確時間細節時則改用過去簡單式。這種轉換不是隨便的，而是一種語域訊號：現在完成式＝仍在生效的結論／紀錄，過去簡單式＝已經結束的具體事件。",
+  "sections": [
+    {
+      "h": "警報用語：has issued 強調『目前仍然有效』",
+      "examples": [
+        {"en": "The Central Weather Administration has issued warnings for four typhoons this season.", "cn": "中央氣象署這一季已經對四個颱風發布了警報。", "note": "正式宣稱『到目前為止累計』的紀錄，用現在完成式"},
+        {"en": "Typhoon Bavi brought heavy rain to the north on August 3.", "cn": "巴威颱風在8月3日為北部帶來了大雨。", "note": "敘事細節，交代明確時間，用過去簡單式"}
+      ]
+    },
+    {
+      "h": "『破紀錄』宣稱：最高級 + that + has ever",
+      "bullets": [
+        "新聞喜歡用『the wettest summer that Taiwan has seen in years』這種句型，把『累積至今』的統計意義用現在完成式包裝起來，比單純寫『today it rained a lot』更有說服力、更正式"
+      ],
+      "examples": [
+        {"en": "This has been one of the wettest summers Taiwan has recorded in years.", "cn": "這是台灣近年來記錄到最潮濕的夏天之一。", "note": "has been + has recorded，強調『統計至今』的結論"}
+      ]
+    },
+    {
+      "h": "為什麼不能全部都用過去簡單式",
+      "bullets": [
+        "如果把警報改成過去簡單式（The agency issued warnings...），聽起來像是『事情已經結束、跟現在沒關係』",
+        "但警報通常還在生效中，所以正式文件會刻意選用現在完成式來維持『目前仍然有效』的語感"
+      ]
+    }
+  ],
+  "traps": [
+    {"bad": "（氣象警報）The agency issued a warning for the affected counties.（聽起來像警報已經結束、失效了）", "good": "The agency has issued a warning for the affected counties, and it remains in effect.", "why": "警報通常『現在仍然有效』，用現在完成式has issued比過去簡單式issued更準確傳達這個語感。"},
+    {"bad": "This is one of the wettest summers Taiwan recorded in years.", "good": "This is one of the wettest summers Taiwan has recorded in years.", "why": "『破紀錄』宣稱要強調『到目前為止的累計統計』，習慣搭配現在完成式has recorded，不是過去簡單式。"},
+    {"bad": "新聞細節句：Rain has begun falling at 3pm and has continued through the evening.（明確時間卻用現在完成式）", "good": "Rain began falling at 3pm and continued through the evening.", "why": "3pm是明確的過去時間點，敘事細節句要用過去簡單式，不能用現在完成式，即使前面用了現在完成式當前導句。"},
+    {"bad": "堅持氣象局的正式警報只能用過去簡單式才『正確』。", "good": "氣象局正式警報常刻意用現在完成式，強調警報『目前仍然有效』，這是文類慣例，不是文法錯誤。", "why": "這是語域選擇：正式警報文類偏好現在完成式來維持『尚未結束』的語感，過去簡單式反而會讓讀者誤以為警報已經解除。"}
+  ],
+  "quiz": [
+    {"q": "（正式警報，強調目前仍生效）The CWA ___ warnings for four typhoons this season.", "qCn": "中央氣象署這一季已經對四個颱風發布了警報。", "opts": ["issued", "has issued", "issues", "was issuing"], "ans": 1, "expl": "正式警報強調『目前仍然有效』，用現在完成式has issued。"},
+    {"q": "This ___ one of the wettest summers Taiwan has recorded in years.", "qCn": "這是台灣近年來記錄到最潮濕的夏天之一。", "opts": ["was", "has been", "is being", "had been"], "ans": 1, "expl": "『破紀錄』宣稱搭配現在完成式has been，強調累積至今的統計結論。"},
+    {"q": "（敘事細節句，有明確時間）Rain ___ falling heavily at 3pm and continued through the evening.", "qCn": "雨在下午三點開始下得很大，並持續到傍晚。", "opts": ["has begun", "begun", "began", "has begin"], "ans": 2, "expl": "3pm是明確的過去時間點，敘事細節句用過去簡單式began，不是現在完成式。"},
+    {"q": "Which best explains why weather agencies often use the present perfect in warnings?", "qCn": "哪一個最能解釋氣象單位常常在警報中使用現在完成式的原因？", "opts": ["Because the past simple is grammatically incorrect in warnings", "Because the present perfect signals that the warning is still in effect", "Because warnings never mention any past events", "Because the present perfect is always more polite"], "optsCn": ["因為警報裡用過去簡單式是文法錯誤", "因為現在完成式表示警報目前仍然有效", "因為警報從來不會提到任何過去發生的事", "因為現在完成式永遠比較有禮貌"], "ans": 1, "expl": "現在完成式在警報中的功能是傳達『這個結論／狀態到目前為止依然成立』，不是文法對錯的問題。"}
+  ]
+},
 {
   "id": "dg20260902a2",
   "date": "2026-09-02",

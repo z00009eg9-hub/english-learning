@@ -15,6 +15,275 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週三／五更新） ========== */
 notes:[
 {
+  "id": "dl20260904a2",
+  "date": "2026-09-04",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Tom's Typhoon Day",
+  "titleCn": "Tom的颱風天",
+  "series": "本站自製聽力 · 天災與天氣主題",
+  "topic": "🌀 颱風天準備",
+  "focus": "過去簡單式描述已經做的準備；can表示現在能做的事",
+  "intro": "Tom跟Amy聊他昨天怎麼準備颱風天，還有放假的今天可以做什麼。這一課句子很短，重點是聽出過去式動詞（checked, found, closed）和can表示『現在可以做』的事。",
+  "tip": "先聽一次抓「Tom昨天準備了什麼」，再聽一次抓「他今天可以做什麼」。",
+  "pre": [
+    {"w": "typhoon", "ipa": "/taɪˈfuːn/", "cn": "颱風", "def": "A very strong storm with wind and rain."},
+    {"w": "raincoat", "ipa": "/ˈreɪnkoʊt/", "cn": "雨衣", "def": "A coat you wear to stay dry in the rain."},
+    {"w": "close", "ipa": "/kloʊz/", "cn": "關上", "def": "To shut something."},
+    {"w": "stay home", "ipa": "/steɪ hoʊm/", "cn": "待在家", "def": "To not leave the house."},
+    {"w": "comic book", "ipa": "/ˈkɑːmɪk bʊk/", "cn": "漫畫書", "def": "A book that tells a story with pictures."},
+    {"w": "storm", "ipa": "/stɔːrm/", "cn": "暴風雨", "def": "Very bad weather with strong wind and rain."}
+  ],
+  "script": [
+    {"sp": "Tom", "en": "Amy, did you hear? There's a big typhoon coming!", "cn": "Amy，你聽說了嗎？有一個大颱風要來了！"},
+    {"sp": "Amy", "en": "Yes! Is your family ready for it?", "cn": "有啊！你們家準備好了嗎？"},
+    {"sp": "Tom", "en": "I checked the weather app yesterday, and then I found my raincoat and boots.", "cn": "我昨天看了天氣App，然後找出了我的雨衣和雨鞋。"},
+    {"sp": "Amy", "en": "Good idea. Did you close the windows too?", "cn": "好主意。你也把窗戶關上了嗎？"},
+    {"sp": "Tom", "en": "Yes, I closed all the windows last night.", "cn": "對，我昨晚把所有窗戶都關上了。"},
+    {"sp": "Amy", "en": "What are you doing today? No school, right?", "cn": "你今天要做什麼？不用上學對吧？"},
+    {"sp": "Tom", "en": "Right! I can stay home all day. I can watch movies and read comic books.", "cn": "對啊！我可以整天待在家。我可以看電影和看漫畫書。"},
+    {"sp": "Amy", "en": "That sounds fun. Is the storm very strong?", "cn": "聽起來很有趣。這場暴風雨很強嗎？"},
+    {"sp": "Tom", "en": "Yes, it's quite strong. But I feel safe because we're ready.", "cn": "對，滿強的。但因為我們準備好了，我覺得很安全。"},
+    {"sp": "Amy", "en": "Great! Stay safe, Tom!", "cn": "太好了！Tom你要注意安全喔！"}
+  ],
+  "questions": [
+    {
+      "q": "What did Tom do yesterday?",
+      "qCn": "Tom昨天做了什麼？",
+      "opts": ["A. He checked the weather app and found his raincoat and boots", "B. He went to school", "C. He played basketball", "D. He visited his grandmother"],
+      "optsCn": ["A. 他看了天氣App，還找出了雨衣和雨鞋", "B. 他去上學", "C. 他打籃球", "D. 他去看奶奶"],
+      "ans": 0,
+      "expl": "I checked the weather app yesterday, and then I found my raincoat and boots."
+    },
+    {
+      "q": "Did Tom close the windows?",
+      "qCn": "Tom有把窗戶關上嗎？",
+      "opts": ["A. Yes, last night", "B. No, he forgot", "C. His mother did it", "D. He will do it tomorrow"],
+      "optsCn": ["A. 有，昨晚關的", "B. 沒有，他忘記了", "C. 他媽媽關的", "D. 他明天才要關"],
+      "ans": 0,
+      "expl": "Yes, I closed all the windows last night."
+    },
+    {
+      "q": "What can Tom do today?",
+      "qCn": "Tom今天可以做什麼？",
+      "opts": ["A. Watch movies and read comic books", "B. Go to school", "C. Go swimming", "D. Visit his friend's house"],
+      "optsCn": ["A. 看電影和看漫畫", "B. 去上學", "C. 去游泳", "D. 去朋友家"],
+      "ans": 0,
+      "expl": "I can stay home all day. I can watch movies and read comic books."
+    },
+    {
+      "q": "I ___ the weather app yesterday.",
+      "qCn": "我昨天看了天氣App。（選出正確的動詞形式）",
+      "opts": ["A. check", "B. checked", "C. have checked", "D. am checking"],
+      "ans": 1,
+      "expl": "yesterday是過去的時間，用過去簡單式checked。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260904b1",
+  "date": "2026-09-04",
+  "level": "B1",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Amy's Typhoon Prep Call",
+  "titleCn": "Amy的颱風準備通話",
+  "series": "本站自製聽力 · 天災與天氣主題",
+  "topic": "☎️ 颱風前的準備",
+  "focus": "現在完成式基礎（has already prepared, has never experienced）vs 過去簡單式（announced, cancelled）",
+  "intro": "Lily打電話問Amy颱風天有沒有準備好。這一課練習現在完成式（has already prepared, has never experienced）講『到目前為止』做了什麼，也留意過去簡單式（announced, cancelled）交代『那件事發生的細節』。",
+  "tip": "留意Amy什麼時候用has already prepared（到目前為止），什麼時候改用過去簡單式announced、cancelled（那件事的細節）。",
+  "pre": [
+    {"w": "announce", "ipa": "/əˈnaʊns/", "cn": "宣布", "def": "To tell people something officially."},
+    {"w": "cancel", "ipa": "/ˈkænsl/", "cn": "取消", "def": "To stop something from happening."},
+    {"w": "candle", "ipa": "/ˈkændl/", "cn": "蠟燭", "def": "A stick of wax with a string that burns for light."},
+    {"w": "prepare", "ipa": "/prɪˈper/", "cn": "準備", "def": "To get ready for something."},
+    {"w": "neighbor", "ipa": "/ˈneɪbər/", "cn": "鄰居", "def": "A person who lives near you."},
+    {"w": "nervous", "ipa": "/ˈnɜːrvəs/", "cn": "緊張的", "def": "Feeling worried or afraid."}
+  ],
+  "script": [
+    {"sp": "Lily", "en": "Amy, I heard your company announced a typhoon day off. Is that true?", "cn": "Amy，我聽說你們公司宣布放颱風假了，是真的嗎？"},
+    {"sp": "Amy", "en": "Yes, it's true! They announced it yesterday evening.", "cn": "對，是真的！他們昨天晚上宣布的。"},
+    {"sp": "Lily", "en": "Have you prepared everything you need?", "cn": "你需要的東西都準備好了嗎？"},
+    {"sp": "Amy", "en": "I have already prepared candles, water, and some snacks.", "cn": "我已經準備好蠟燭、水和一些零食了。"},
+    {"sp": "Lily", "en": "Smart! Did you hear the airline cancelled some flights too?", "cn": "聰明！你有聽說航空公司也取消了一些航班嗎？"},
+    {"sp": "Amy", "en": "Yes, I checked the news this morning. Several flights were cancelled.", "cn": "有，我今天早上看了新聞。好幾班航班被取消了。"},
+    {"sp": "Lily", "en": "Have you ever experienced such a strong typhoon before?", "cn": "你以前經歷過這麼強的颱風嗎？"},
+    {"sp": "Amy", "en": "No, I haven't. This is actually a bit scary for me.", "cn": "沒有，這對我來說其實有點可怕。"},
+    {"sp": "Lily", "en": "Don't worry, you've prepared well. You'll be fine.", "cn": "別擔心，你準備得很好，你會沒事的。"},
+    {"sp": "Amy", "en": "Thanks, Lily. I hope so!", "cn": "謝謝你，Lily。希望如此！"}
+  ],
+  "questions": [
+    {
+      "q": "When did Amy's company announce the typhoon day off?",
+      "qCn": "Amy的公司什麼時候宣布颱風假的？",
+      "opts": ["A. Yesterday evening", "B. This morning", "C. Last week", "D. Two days ago"],
+      "optsCn": ["A. 昨天晚上", "B. 今天早上", "C. 上禮拜", "D. 兩天前"],
+      "ans": 0,
+      "expl": "They announced it yesterday evening."
+    },
+    {
+      "q": "What has Amy already prepared?",
+      "qCn": "Amy已經準備了什麼？",
+      "opts": ["A. Candles, water, and some snacks", "B. A new umbrella", "C. Extra clothes for travel", "D. Nothing yet"],
+      "optsCn": ["A. 蠟燭、水和一些零食", "B. 一把新雨傘", "C. 旅行用的備用衣物", "D. 什麼都還沒準備"],
+      "ans": 0,
+      "expl": "I have already prepared candles, water, and some snacks."
+    },
+    {
+      "q": "Has Amy ever experienced such a strong typhoon before?",
+      "qCn": "Amy以前經歷過這麼強的颱風嗎？",
+      "opts": ["A. No, this is new for her", "B. Yes, many times", "C. Yes, once last year", "D. She doesn't remember"],
+      "optsCn": ["A. 沒有，這對她來說是新的經驗", "B. 有，很多次", "C. 有，去年一次", "D. 她不記得了"],
+      "ans": 0,
+      "expl": "Have you ever experienced such a strong typhoon before? — No, I haven't."
+    },
+    {
+      "q": "I ___ candles, water, and some snacks.",
+      "qCn": "我已經準備好蠟燭、水和一些零食了。（選出正確的動詞形式）",
+      "opts": ["A. prepare", "B. prepared", "C. have already prepared", "D. am preparing"],
+      "ans": 2,
+      "expl": "already常搭配現在完成式，表示到目前為止已經做好的準備：have already prepared。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260904b1p",
+  "date": "2026-09-04",
+  "level": "B1+",
+  "minutes": 3,
+  "kind": "note",
+  "title": "The Delayed Shipment",
+  "titleCn": "被延誤的貨運",
+  "series": "本站自製聽力 · 天災與天氣主題",
+  "topic": "📦 工廠出貨延誤",
+  "focus": "現在完成式＋被動語態描述『到目前為止、被動發生』的事",
+  "intro": "Mark問Anita工廠出貨延誤的狀況。這一課大量使用現在完成式加被動語態（has been delayed, has been suggested），描述『到目前為止已經發生、而且是被動發生』的事。",
+  "tip": "留意句子裡have/has been後面接的過去分詞，那些通常代表「被誰做了什麼」。",
+  "pre": [
+    {"w": "delay", "ipa": "/dɪˈleɪ/", "cn": "延誤", "def": "To make something happen later than planned."},
+    {"w": "flood", "ipa": "/flʌd/", "cn": "淹水", "def": "To cover a place with water."},
+    {"w": "backup", "ipa": "/ˈbækʌp/", "cn": "備援的", "def": "Used as an alternative if the main plan fails."},
+    {"w": "coordinate", "ipa": "/koʊˈɔːrdɪneɪt/", "cn": "協調", "def": "To organize people or things to work together."},
+    {"w": "warehouse", "ipa": "/ˈwerhaʊs/", "cn": "倉庫", "def": "A large building where goods are stored."},
+    {"w": "checklist", "ipa": "/ˈtʃeklɪst/", "cn": "檢查清單", "def": "A list of things to check or do."}
+  ],
+  "script": [
+    {"sp": "Mark", "en": "Anita, I heard the shipment has been delayed by the storm. Is that right?", "cn": "Anita，我聽說這批貨被暴風延誤了，是真的嗎？"},
+    {"sp": "Anita", "en": "Yes. The access road has been flooded, and trucks have been blocked outside the gate.", "cn": "對，聯外道路淹水了，卡車被困在大門外面。"},
+    {"sp": "Mark", "en": "That's rough. Has a new route been suggested?", "cn": "真慘。有人建議新的路線了嗎？"},
+    {"sp": "Anita", "en": "Yes, a backup route has been suggested by the transport company.", "cn": "有，運輸公司建議了一條替代路線。"},
+    {"sp": "Mark", "en": "Have you told the customer yet?", "cn": "你跟客戶說了嗎？"},
+    {"sp": "Anita", "en": "I have already emailed them to explain the delay.", "cn": "我已經寫信告知他們延誤的狀況了。"},
+    {"sp": "Mark", "en": "Has anything been done to protect the warehouse?", "cn": "有做什麼措施保護倉庫嗎？"},
+    {"sp": "Anita", "en": "Yes, the products have been moved to higher shelves already.", "cn": "有，產品已經被搬到比較高的架子上了。"},
+    {"sp": "Mark", "en": "Smart. Has this happened before?", "cn": "很聰明。這之前發生過嗎？"},
+    {"sp": "Anita", "en": "Actually, this isn't the first shipment that has been affected this year.", "cn": "其實，這已經不是今年第一批受影響的貨了。"}
+  ],
+  "questions": [
+    {
+      "q": "Why has the shipment been delayed?",
+      "qCn": "為什麼這批貨被延誤了？",
+      "opts": ["A. The access road has been flooded, and trucks have been blocked", "B. The factory ran out of materials", "C. The customer cancelled the order", "D. The workers went on strike"],
+      "optsCn": ["A. 聯外道路淹水，卡車被困住了", "B. 工廠原料用完了", "C. 客戶取消了訂單", "D. 員工罷工了"],
+      "ans": 0,
+      "expl": "The access road has been flooded, and trucks have been blocked outside the gate."
+    },
+    {
+      "q": "What has been suggested by the transport company?",
+      "qCn": "運輸公司建議了什麼？",
+      "opts": ["A. A backup route", "B. A full refund", "C. A new supplier", "D. A price increase"],
+      "optsCn": ["A. 一條替代路線", "B. 全額退款", "C. 一個新供應商", "D. 漲價"],
+      "ans": 0,
+      "expl": "A backup route has been suggested by the transport company."
+    },
+    {
+      "q": "What has been done to protect the products in the warehouse?",
+      "qCn": "倉庫裡的產品做了什麼保護措施？",
+      "opts": ["A. They have been moved to higher shelves", "B. They have been shipped out early", "C. They have been sold at a discount", "D. Nothing has been done"],
+      "optsCn": ["A. 被搬到比較高的架子上", "B. 被提早出貨了", "C. 被打折出售了", "D. 什麼都沒做"],
+      "ans": 0,
+      "expl": "The products have been moved to higher shelves already."
+    },
+    {
+      "q": "A backup route ___ by the transport company.",
+      "qCn": "運輸公司建議了一條替代路線。（選出正確的動詞形式）",
+      "opts": ["A. suggests", "B. suggested", "C. has been suggested", "D. is suggesting"],
+      "ans": 2,
+      "expl": "route是被建議的一方，用現在完成式的被動has been suggested。"
+    }
+  ]
+},
+
+{
+  "id": "dl20260904b2",
+  "date": "2026-09-04",
+  "level": "B2",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Reflections on a Record Typhoon Season",
+  "titleCn": "對破紀錄颱風季的省思",
+  "series": "本站自製聽力 · 天災與天氣主題",
+  "topic": "🌪️ 氣候與韌性",
+  "focus": "正式語域的獨白：現在完成式表達『累積至今』的統計結論",
+  "intro": "這是Anita錄的一段簡短獨白，反思這一季破紀錄的颱風數量對日常生活與工作的影響。語氣比對話更正式，句子也更長，留意她怎麼用現在完成式表達『到目前為止累積的結果』。",
+  "tip": "這是獨白不是對話，可以先聽整段抓大意，再逐句聽細節，留意她怎麼用has been/have had這種句型講『這一季至今』的整體印象。",
+  "pre": [
+    {"w": "unprecedented", "ipa": "/ʌnˈpresɪdentɪd/", "cn": "前所未有的", "def": "Never having happened before."},
+    {"w": "resilience", "ipa": "/rɪˈzɪliəns/", "cn": "韌性、應變能力", "def": "The ability to recover quickly from difficulties."},
+    {"w": "disruption", "ipa": "/dɪsˈrʌpʃn/", "cn": "干擾、中斷", "def": "Something that stops a process from continuing normally."},
+    {"w": "adapt", "ipa": "/əˈdæpt/", "cn": "調整、適應", "def": "To change in order to deal with a new situation."},
+    {"w": "backup", "ipa": "/ˈbækʌp/", "cn": "備援的", "def": "Used as an alternative if the main plan fails."},
+    {"w": "statistic", "ipa": "/stəˈtɪstɪk/", "cn": "統計數據", "def": "A number that shows information about something."}
+  ],
+  "script": [
+    {"sp": "Anita", "en": "Hi, this is Anita. I want to talk briefly about something that has shaped almost every week of my life this season: the weather.", "cn": "嗨，我是Anita。我想簡短談談這一季幾乎每個禮拜都影響著我生活的一件事：天氣。"},
+    {"sp": "Anita", "en": "This year has brought an unusually high number of storms, and the pattern has affected my work far more than I expected.", "cn": "今年帶來了異常多的暴風，這個型態影響我的工作，比我預期的還要多。"},
+    {"sp": "Anita", "en": "At the factory, we have had to delay shipments more than once, and each delay has forced us to think more carefully about backup plans.", "cn": "在工廠，我們已經不只一次延誤出貨了，每一次延誤都讓我們更認真思考備援計畫。"},
+    {"sp": "Anita", "en": "What has surprised me most is not any single storm, but how the disruptions have added up over time.", "cn": "最讓我意外的不是單一一場暴風，而是這些干擾隨著時間累積起來的程度。"},
+    {"sp": "Anita", "en": "I have learned that resilience is not about avoiding problems completely; it is about how quickly a team can adapt when something goes wrong.", "cn": "我體會到，韌性不是完全避開問題，而是團隊在出狀況時能多快調整應對。"},
+    {"sp": "Anita", "en": "Our backup checklist, which barely existed a year ago, has already been used several times this season.", "cn": "我們的備援檢查清單，一年前根本還沒成形，這一季已經被用過好幾次了。"},
+    {"sp": "Anita", "en": "I have also noticed that colleagues who once panicked during a warning now respond much more calmly.", "cn": "我也注意到，那些以前一聽到警報就慌張的同事，現在反應冷靜多了。"},
+    {"sp": "Anita", "en": "If this season has taught us anything, it is that preparation matters more than luck.", "cn": "如果說這一季教會了我們什麼，那就是準備比運氣更重要。"}
+  ],
+  "questions": [
+    {
+      "q": "According to Anita, what has this season's weather mainly affected?",
+      "qCn": "根據Anita的說法，這一季的天氣主要影響了什麼？",
+      "opts": ["A. Her work, more than she expected", "B. Only her personal travel plans", "C. Nothing important", "D. Only the factory's electricity bill"],
+      "optsCn": ["A. 她的工作，比她預期的還多", "B. 只有她的個人旅遊計畫", "C. 沒什麼重要的事", "D. 只有工廠的電費"],
+      "ans": 0,
+      "expl": "the pattern has affected my work far more than I expected."
+    },
+    {
+      "q": "What has surprised Anita the most?",
+      "qCn": "最讓Anita意外的是什麼？",
+      "opts": ["A. How the disruptions have added up over time", "B. How short this year's typhoon season was", "C. How her colleagues ignored every warning", "D. How the factory never had any problems"],
+      "optsCn": ["A. 這些干擾隨著時間累積起來的程度", "B. 今年颱風季有多短", "C. 同事完全無視每一次警報", "D. 工廠從來沒有出過問題"],
+      "ans": 0,
+      "expl": "What has surprised me most is not any single storm, but how the disruptions have added up over time."
+    },
+    {
+      "q": "How has the backup checklist been used this season?",
+      "qCn": "這一季的備援清單被使用的情況如何？",
+      "opts": ["A. It has already been used several times", "B. It has never been used", "C. It was thrown away", "D. It is still being written"],
+      "optsCn": ["A. 已經被用過好幾次了", "B. 從來沒被用過", "C. 被丟掉了", "D. 還在撰寫中"],
+      "ans": 0,
+      "expl": "Our backup checklist, which barely existed a year ago, has already been used several times this season."
+    },
+    {
+      "q": "The pattern ___ my work far more than I expected.",
+      "qCn": "這個型態影響我的工作，比我預期的還要多。（選出正確的動詞形式）",
+      "opts": ["A. affects", "B. affected", "C. has affected", "D. is affecting"],
+      "ans": 2,
+      "expl": "強調『到目前為止累積的影響』，用現在完成式has affected。"
+    }
+  ]
+},
+{
   "id": "dl20260902a2",
   "date": "2026-09-02",
   "level": "A2",
