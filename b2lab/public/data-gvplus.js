@@ -4157,6 +4157,353 @@ dg20260902b2: {
     { q: 'Which sentence implies the rule is still in force?', opts: ['The rule applied to all staff.', 'The rule has applied to all staff since April.', 'The rule was applying to all staff.', 'The rule applies yesterday.'], ans: 1,
       expl: 'since + 現在完成式表示至今仍然有效。' }
   ]
+},
+
+/* ============================================================
+   每日文法 · 2026-09-04（天災與天氣／現在完成式 unit 8）
+   ============================================================ */
+
+/* ---- A2 現在完成式：現在看得到的結果 ---- */
+dg20260904a2: {
+  vis: true,
+  oneLine: '現在完成式不只說「做完了」，更常是在說「因為做完了，所以現在是這樣」——重點在眼前看得到的結果。',
+  map: {
+    when: '事情做完了，而且現在還看得到它造成的結果；沒有講明確的時間點',
+    why: '講的是「現在怎麼樣」，不是「什麼時候發生的」',
+    form: 'have / has + 過去分詞（Vpp）'
+  },
+  visual: {
+    type: 'timeline',
+    cap: '看線有沒有碰到 NOW。沒說時間、結果還在 → 碰到 NOW，用現在完成式；有明確時間 → 停在過去那一點，用過去簡單式。',
+    rows: [
+      { kind: 'span', label: '現在完成式：結果還在', tone: 'accent',
+        from: '剛剛', to: 'NOW',
+        sub: 'The rain has stopped.',
+        subCn: '雨停了（所以現在可以出門）。' },
+      { kind: 'point', label: '過去簡單式：有明確時間', tone: 'ink',
+        at: 'at three',
+        sub: 'The rain stopped at three.',
+        subCn: '雨三點停了（在報告那個時間點的事）。' }
+    ]
+  },
+  scenarios: [
+    { key: 'result', icon: 'check',
+      title: 'The result now', titleCn: '重點是現在的結果',
+      ask: '現在的狀況變成怎樣？',
+      en: 'The typhoon has passed.',
+      cn: '颱風過去了。',
+      why: '你說這句話是因為「現在可以出門了」，不是因為想報告颱風幾點離開。這就是現在完成式最常見的用法：用過去的動作說明現在。' },
+    { key: 'notime', icon: 'cross',
+      title: 'No time word', titleCn: '不能配明確時間',
+      ask: '句子裡有講「什麼時候」嗎？',
+      en: 'The power has come back.',
+      cn: '電來了。',
+      why: '一旦加上 at three、yesterday、last night，就要換成過去簡單式：The power came back at three. 兩個不能放在同一句。' },
+    { key: 'form', icon: 'book',
+      title: 'have or has', titleCn: 'have 還是 has',
+      ask: '主詞是不是 he / she / it？',
+      en: 'The roads have reopened, but one bridge has closed.',
+      cn: '道路重新開放了，但有一座橋封閉。',
+      why: 'I / you / we / they 用 have；he / she / it（一個人、一個東西）用 has。後面的過去分詞永遠不變。' },
+    { key: 'nq', icon: 'key',
+      title: 'Negative & question', titleCn: '否定與問句',
+      ask: '還沒發生嗎？發生了嗎？',
+      en: "The rain hasn't stopped yet. Has it stopped?",
+      cn: '雨還沒停。停了嗎？',
+      why: '否定是 haven’t / hasn’t + 過去分詞，句尾常加 yet；問句把 Have / Has 移到主詞前面。' }
+  ],
+  steps: [
+    { label: '情境', text: '外面下了一整天的雨，你剛看窗外，雨停了。' },
+    { label: '想講的意思', text: '重點不是「幾點停的」，而是「現在不下了，可以出門」。' },
+    { label: '選時態', text: '沒說時間、強調現在的結果 → 現在完成式。' },
+    { label: '組出來', text: 'The rain has stopped.' },
+    { label: '如果要講時間', text: '就得換成過去簡單式：The rain stopped at three.（✗ has stopped at three.）' }
+  ],
+  comparison: {
+    title: '有沒有說時間',
+    left: {
+      tag: 'HAS STOPPED', tagCn: '現在完成式', icon: 'check',
+      head: 'the result now', headCn: '重點是現在的結果',
+      en: 'The rain has stopped.',
+      cn: '雨停了。',
+      pts: ['沒有講什麼時候', '聽的人會想到「現在可以出門」', '否定 hasn’t… yet']
+    },
+    right: {
+      tag: 'STOPPED', tagCn: '過去簡單式', icon: 'clock',
+      head: 'a past moment', headCn: '重點是那個時間點',
+      en: 'The rain stopped at three.',
+      cn: '雨三點停了。',
+      pts: ['有明確時間 at three', '只是在報告過去的事', '否定 didn’t stop']
+    },
+    note: '句子裡一出現明確時間，就不能用現在完成式。先找時間詞，再決定動詞。'
+  },
+  quizMore: [
+    { q: 'Be careful — the road ____ very wet.', opts: ['has become', 'became at noon', 'become', 'has became'], ans: 0,
+      expl: '沒說時間、強調現在的路況 → has become（過去分詞是 become）。' },
+    { q: 'Which sentence is WRONG?', opts: ['The wind has died down.', 'The wind has died down at five.', 'The wind died down at five.', "The wind hasn't died down yet."], ans: 1,
+      expl: 'at five 是明確時間，不能配現在完成式。' }
+  ]
+},
+
+/* ---- B1 have been to vs have gone to ---- */
+dg20260904b1: {
+  vis: true,
+  oneLine: '差一個字，人在不在那裡就不一樣：have gone to 是「去了還沒回來」，have been to 是「去過已經回來了」。',
+  map: {
+    when: '要講某人去過某地，或某人現在人不在這裡',
+    why: 'gone 講的是「還在路上／還在那裡」，been 講的是「來回一趟的經驗」',
+    form: 'have / has gone to + 地點　|　have / has been to + 地點'
+  },
+  visual: {
+    type: 'cols',
+    cap: '判斷方法只有一個問題：說話的當下，這個人在不在那裡？在 → gone；已經回來了 → been。',
+    cols: [
+      { tag: 'HAS GONE TO：人還在那裡', tone: 1,
+        tagCn: '去了、還沒回來——現在這裡找不到他',
+        items: [
+          { en: 'She has gone to the shelter.', cn: '她去避難所了。', nt: '她現在人在避難所' },
+          { en: 'My parents have gone to Hualien.', cn: '我爸媽去花蓮了。', nt: '還沒回來' },
+          { en: 'He is not here — he has gone to the office.', cn: '他不在，他去辦公室了。', nt: '常用來解釋「人不在」' }
+        ] },
+      { tag: 'HAS BEEN TO：人已經回來了', tone: 2,
+        tagCn: '去過、來回一趟——講的是經驗',
+        items: [
+          { en: 'She has been to the shelter twice.', cn: '她去過避難所兩次。', nt: '現在人在這裡' },
+          { en: 'My parents have been to Hualien.', cn: '我爸媽去過花蓮。', nt: '講經驗，人已回來' },
+          { en: 'Have you ever been to Japan?', cn: '你去過日本嗎？', nt: '問經驗固定用 been' }
+        ] }
+    ]
+  },
+  scenarios: [
+    { key: 'gone', icon: 'plane',
+      title: 'gone = still away', titleCn: 'gone：人還在那裡',
+      ask: '他現在人在哪裡？',
+      en: 'Dad has gone to buy batteries.',
+      cn: '爸爸去買電池了。',
+      why: 'gone 一定表示「人不在這裡」。所以不能說 I have gone to Japan——你人都在這裡講話了，要說 I have been to Japan。' },
+    { key: 'been', icon: 'check',
+      title: 'been = went and came back', titleCn: 'been：去過又回來了',
+      ask: '你要講的是經驗嗎？',
+      en: 'I have been to that shelter before.',
+      cn: '我以前去過那個避難所。',
+      why: '講「這輩子有沒有去過」一律用 been，常配 ever / never / twice / before。這是現在完成式講經驗的標準說法。' },
+    { key: 'context', icon: 'house',
+      title: 'In a typhoon', titleCn: '颱風情境的實際用法',
+      ask: '你在解釋「人不在」還是「有經驗」？',
+      en: 'The neighbours have gone to the shelter, but we have been there before and it is safe.',
+      cn: '鄰居去避難所了，我們以前去過，那裡很安全。',
+      why: '同一句裡兩個都用得上：前半解釋鄰居現在人不在（gone），後半講我們的經驗（been）。' },
+    { key: 'why', icon: 'cross',
+      title: 'Why Chinese speakers mix them', titleCn: '為什麼中文母語者常搞混',
+      ask: '中文的「去過」對應哪一個？',
+      en: 'I have been to Taitung. （✗ I have gone to Taitung.）',
+      cn: '我去過台東。',
+      why: '中文的「去了」和「去過」差別很小，都翻成「去」。英文卻用 gone / been 兩個字把「還在那裡」和「已經回來」分開——這是中文沒有的區別，所以要特別記。' }
+  ],
+  steps: [
+    { label: '情境', text: '有人打電話找你哥哥，但他不在家。' },
+    { label: '先問', text: '他現在人在哪裡？——不在家，在超市。' },
+    { label: '選字', text: '人還在那裡、還沒回來 → gone。' },
+    { label: '組出來', text: 'He has gone to the supermarket.' },
+    { label: '換個情境', text: '如果你要說「他去過那家超市」（人已經回來了），就換成 He has been to that supermarket.' }
+  ],
+  comparison: {
+    title: '人在不在那裡',
+    left: {
+      tag: 'HAS GONE TO', tagCn: '去了還沒回來', icon: 'plane',
+      head: 'still there', headCn: '現在人在那裡',
+      en: 'She has gone to Tainan.',
+      cn: '她去台南了。',
+      pts: ['解釋「他人不在」', '不能用第一人稱講自己（✗ I have gone to…）', '不配 ever / never']
+    },
+    right: {
+      tag: 'HAS BEEN TO', tagCn: '去過已經回來', icon: 'check',
+      head: 'came back', headCn: '現在人在這裡',
+      en: 'She has been to Tainan.',
+      cn: '她去過台南。',
+      pts: ['講經驗、講去過幾次', '常配 ever / never / twice / before', '主詞可以是自己']
+    },
+    note: '一句話分辨：講「他人不在」用 gone，講「有這個經驗」用 been。'
+  },
+  quizMore: [
+    { q: "Where is Amy? — She ____ to the post office.", opts: ['has been', 'has gone', 'went to be', 'has go'], ans: 1,
+      expl: '人還在郵局、還沒回來 → has gone to。' },
+    { q: 'I ____ to Kenting three times.', opts: ['have gone', 'have been', 'has been', 'am gone'], ans: 1,
+      expl: '講自己的經驗、人已經回來了 → have been to。' }
+  ]
+},
+
+/* ---- B1+ 「這是第幾次」的現在完成式 ---- */
+dg20260904b1p: {
+  vis: true,
+  oneLine: '中文說「這是我第一次…」「這是最強的一次…」，英文有兩個固定句型，而且後面一律接現在完成式。',
+  map: {
+    when: '要說「這是第幾次發生」或「這是至今最…的一次」',
+    why: '兩個句型都在算「到目前為止的累計」，所以只能配現在完成式',
+    form: 'This is the first / second time + 主詞 + have / has + Vpp　|　最高級 + that + 主詞 + have / has ever + Vpp'
+  },
+  visual: {
+    type: 'chain',
+    cap: '兩個句型的骨架長得不一樣，但後半段都一樣：現在完成式。記住這個「前面算次數、後面用完成式」的組合就不會錯。',
+    links: [
+      { t: 'This is the first time', role: 'subj', c: '算到目前為止第幾次' },
+      { t: '(that)', role: 'glue', c: 'that 可省略' },
+      { t: 'I have seen', role: 'verb', c: '一定用現在完成式' },
+      { t: 'a typhoon like this.', role: 'plain', c: '其餘照常' }
+    ],
+    eg: { en: 'This is the first time I have seen a typhoon like this.', cn: '這是我第一次看到這種颱風。' },
+    variants: [
+      { k: '第二次、第三次同樣用法', en: 'This is the second time the power has failed today.', cn: '這是今天第二次停電。' },
+      { k: '最高級 + that + have ever', en: 'This is the strongest storm that I have ever experienced.', cn: '這是我經歷過最強的暴風。' },
+      { k: '最高級也可省略 that', en: 'It is the worst flood we have had in ten years.', cn: '這是我們十年來最嚴重的水災。' },
+      { k: '✗ 不要用現在簡單式', en: 'This is the first time I see it. （✗）', cn: '要說 …I have seen it.' },
+      { k: '✗ 不要疊 already / yet / just', en: 'This is the first time I have already seen it. （✗）', cn: '這個句型本身已經在算次數了' }
+    ]
+  },
+  scenarios: [
+    { key: 'time', icon: 'cycle',
+      title: 'the first time', titleCn: '這是第幾次',
+      ask: '你要說這是第幾次嗎？',
+      en: 'This is the third time the alarm has gone off tonight.',
+      cn: '這是今晚第三次警報響。',
+      why: '這個句型在數「到現在為止一共幾次」，所以後面一定接現在完成式。中文說「第三次響了」，英文不能用簡單式 goes off。' },
+    { key: 'superlative', icon: 'star',
+      title: 'the +est … ever', titleCn: '最高級 + that + have ever',
+      ask: '你要說「至今最…的一次」嗎？',
+      en: 'That was the heaviest rain that I have ever seen.',
+      cn: '那是我看過最大的雨。',
+      why: '最高級加上 that + have ever + 過去分詞，意思是「到目前為止的紀錄」。ever 放在 have 和過去分詞中間，不能放句尾。' },
+    { key: 'that', icon: 'link',
+      title: 'that can be dropped', titleCn: 'that 可以省略',
+      ask: '一定要寫 that 嗎？',
+      en: 'This is the first time I have flown.',
+      cn: '這是我第一次搭飛機。',
+      why: '兩個句型的 that 都可以省略，口語幾乎都省。但如果句子很長、省了會難讀，就留著比較清楚。' },
+    { key: 'noStack', icon: 'cross',
+      title: 'No already / yet / just', titleCn: '不要疊 already / yet / just',
+      ask: '句型本身已經在算次數了嗎？',
+      en: 'This is the second time I have called. （✗ …I have already called.）',
+      cn: '這是我第二次打電話。',
+      why: 'first / second time 已經把「到目前為止」講完了，再加 already / yet / just 會重複，讀起來很怪。這是中文母語者常犯的疊加錯誤。' }
+  ],
+  steps: [
+    { label: '情境', text: '你想說「這是我遇過最強的颱風」。' },
+    { label: '選句型', text: '「最…的一次」→ 最高級 + that + have ever。' },
+    { label: '寫最高級', text: 'the strongest typhoon' },
+    { label: '接完成式', text: 'that I have ever experienced（ever 放在 have 和過去分詞中間）。' },
+    { label: '組出來', text: 'This is the strongest typhoon that I have ever experienced.' }
+  ],
+  comparison: {
+    title: '兩個句型，同一個時態',
+    left: {
+      tag: 'THE …TH TIME', tagCn: '這是第幾次', icon: 'cycle',
+      head: 'counting', headCn: '算次數',
+      en: 'This is the first time I have driven at night.',
+      cn: '這是我第一次在晚上開車。',
+      pts: ['first / second / third time', 'that 可省略', '後面一定接現在完成式']
+    },
+    right: {
+      tag: 'THE …EST … EVER', tagCn: '至今最…的一次', icon: 'star',
+      head: 'record so far', headCn: '目前為止的紀錄',
+      en: 'This is the best meal I have ever had.',
+      cn: '這是我吃過最好的一餐。',
+      pts: ['最高級 + that + have ever + Vpp', 'ever 放在 have 和過去分詞中間', '後面一定接現在完成式']
+    },
+    note: '兩個句型的共同點：都在算「到目前為止」，所以都不能用現在簡單式或過去簡單式。'
+  },
+  quizMore: [
+    { q: 'This is the second time the roof ____ this year.', opts: ['leaks', 'leaked', 'has leaked', 'is leaking'], ans: 2,
+      expl: '「第二次」句型後面接現在完成式。' },
+    { q: 'It was the coldest winter that we ____ experienced.', opts: ['have never', 'had ever', 'have ever', 'ever have'], ans: 2,
+      expl: '最高級 + that + have ever + 過去分詞；ever 放在 have 和 Vpp 中間。' }
+  ]
+},
+
+/* ---- B2 現在完成式在氣象警報與「破紀錄」宣稱中的語域效果 ---- */
+dg20260904b2: {
+  vis: true,
+  oneLine: '警報用 has issued 說「這個結論現在還有效」，敘事用 issued 說「這是已結束的事件」——時態的切換是語域訊號，不是隨便換的。',
+  map: {
+    when: '寫警報、寫新聞、寫「破紀錄」宣稱，要決定用完成式還是過去式',
+    why: '完成式＝仍在生效的結論或紀錄；過去簡單式＝已經結束的具體事件',
+    form: '仍然有效 → has / have + Vpp　|　已結束的細節 → did'
+  },
+  visual: {
+    type: 'matrix',
+    cap: '橫向讀：這個場合用哪個時態、為什麼、長什麼樣。三種場合的分工是固定的，混用會讓讀者誤判狀況是否解除。',
+    cols: ['用哪個時態', '傳達的訊息', '例句'],
+    rows: [
+      { h: '警報用語', cells: [
+        { en: 'has issued', cn: '現在完成式' },
+        { en: 'still in force', cn: '警報目前仍然有效', hi: 1 },
+        { en: 'The bureau has issued a sea warning.', cn: '氣象局已發布海上警報。' } ] },
+      { h: '破紀錄宣稱', cells: [
+        { en: 'has ever recorded', cn: '最高級 + have ever' },
+        { en: 'record still stands', cn: '這個紀錄至今仍成立', hi: 1 },
+        { en: 'It is the strongest storm the island has ever recorded.', cn: '這是該島有紀錄以來最強的風暴。' } ] },
+      { h: '敘事細節', cells: [
+        { en: 'made / began', cn: '過去簡單式' },
+        { en: 'a closed event', cn: '已結束的具體事件', hi: 1 },
+        { en: 'The typhoon made landfall at 4 a.m.', cn: '颱風於凌晨四點登陸。' } ] }
+    ]
+  },
+  scenarios: [
+    { key: 'inforce', icon: 'flag',
+      title: 'Still in force', titleCn: '警報：強調目前仍然有效',
+      ask: '這個狀態現在還在嗎？',
+      en: 'A land warning has been issued for the whole island.',
+      cn: '全島已發布陸上警報。',
+      why: '用完成式表示「警報現在還沒解除」。如果寫成 was issued，讀者會以為那是稍早的事、可能已經解除了——在防災資訊上這是很嚴重的誤導。' },
+    { key: 'record', icon: 'star',
+      title: 'Record claims', titleCn: '破紀錄：紀錄至今仍成立',
+      ask: '這個紀錄還沒被打破嗎？',
+      en: 'This is the heaviest rainfall the city has ever recorded.',
+      cn: '這是該市有紀錄以來最大的降雨量。',
+      why: '最高級 + that + have ever + 過去分詞。完成式在這裡的作用是「從有紀錄以來到現在」——換成過去式就變成在講某個已經結束的時期的紀錄。' },
+    { key: 'detail', icon: 'clock',
+      title: 'Narrative detail', titleCn: '敘事細節：改用過去簡單式',
+      ask: '你在補時間、地點、數字嗎？',
+      en: 'The storm made landfall at 4 a.m. and cut power to 30,000 homes.',
+      cn: '風暴於凌晨四點登陸，造成三萬戶停電。',
+      why: '一旦給了明確時間，就必須用過去簡單式。新聞的標準結構是：完成式的前導句先給結論，過去式的細節句再補資料。' },
+    { key: 'mix', icon: 'balance',
+      title: 'Why not all past', titleCn: '為什麼不能全部用過去式',
+      ask: '你想讓讀者以為結束了嗎？',
+      en: 'The warning remains in force. Three flights were cancelled this morning.',
+      cn: '警報持續生效。今早三班航班取消。',
+      why: '全部用過去式會讓整篇讀起來像「事情都過去了」。專業的氣象與新聞寫作靠時態切換告訴讀者：哪些還在發生、哪些已經結束。' }
+  ],
+  steps: [
+    { label: '你要寫的警報', text: '氣象局發布陸警，颱風凌晨兩點登陸，是十年來最強的一個。' },
+    { label: '第一句：警報仍有效', text: '完成式：The bureau has issued a land warning.' },
+    { label: '第二句：破紀錄宣稱', text: '最高級 + have ever：It is the strongest typhoon the country has recorded in a decade.' },
+    { label: '第三句：敘事細節', text: '有明確時間 → 過去式：The storm made landfall at 2 a.m.' },
+    { label: '關鍵', text: '三句三種時態，各自告訴讀者「這件事現在還算不算數」。不是修辭花招，是資訊正確性。' }
+  ],
+  comparison: {
+    title: '仍然有效 vs 已經結束',
+    left: {
+      tag: 'HAS ISSUED', tagCn: '現在完成式', icon: 'flag',
+      head: 'still in force', headCn: '現在仍然有效',
+      en: 'A warning has been issued.',
+      cn: '警報已發布（仍生效）。',
+      pts: ['不給明確時間', '讀者理解成「現在還要注意」', '警報、政策、紀錄']
+    },
+    right: {
+      tag: 'WAS ISSUED', tagCn: '過去簡單式', icon: 'clock',
+      head: 'a closed event', headCn: '已結束的事件',
+      en: 'A warning was issued on Tuesday.',
+      cn: '警報於週二發布。',
+      pts: ['有明確時間', '讀者可能理解成「已經解除」', '敘事細節、事後回顧']
+    },
+    note: '在防災與新聞寫作裡，選錯時態不只是文法問題——會讓讀者誤判狀況是否解除。'
+  },
+  quizMore: [
+    { q: 'Which sentence tells the reader the warning is STILL active?', opts: ['A typhoon warning was issued at noon.', 'A typhoon warning has been issued.', 'A typhoon warning issued at noon.', 'A typhoon warning was issuing.'], ans: 1,
+      expl: '完成式不給時間、強調「至今仍然有效」。' },
+    { q: 'It is the worst flood the region ____ in fifty years.', opts: ['saw', 'has seen', 'was seeing', 'sees'], ans: 1,
+      expl: '「五十年來最嚴重」是至今仍成立的紀錄 → 現在完成式。' }
+  ]
 }
 
 };

@@ -589,6 +589,7 @@ tr:nth-child(even) td{background:#fdfbf8}
 .gvmap .m.form .v{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:#1d4ed8}
 .gvsub{font-size:calc(13px * var(--fs));color:var(--ink2);margin:2px 0 9px;line-height:1.7}
 /* 時間線：桌機一張寬圖；手機逐列堆疊（文字用 HTML，不畫進 SVG，才不會縮到看不見） */
+.gvtl .gvtl-wide{max-width:660px;margin:0 auto}   /* 不要拉滿版：等比放大會讓整塊變很高 */
 .gvtl .gvtl-narrow{display:none}
 .gvtlrow{padding:10px 2px;border-top:1px dashed #eee4d8}
 .gvtlrow:first-child{border-top:0;padding-top:2px}
@@ -691,8 +692,8 @@ tr:nth-child(even) td{background:#fdfbf8}
      · 不會再出現「圖擋住文字」（SVG 內文字重疊）那類問題
    型別：matrix / swap / merge / scale / branch / shift / cols / chain
    ============================================================ */
-.gvv{background:#fdfaf6;border:1px solid #f0e3d2;border-radius:14px;padding:13px;box-shadow:var(--shadow)}
-.gvvcap{font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.8;margin-top:9px;padding-left:2px}
+.gvv{background:#fdfaf6;border:1px solid #f0e3d2;border-radius:14px;padding:10px;box-shadow:var(--shadow)}
+.gvvcap{font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.7;margin-top:7px;padding-left:2px}
 .gvvcap b{color:var(--accent2)}
 /* 共用：句子裡的字塊（依語法角色上色） */
 .gvchip{display:inline-block;border-radius:8px;padding:3px 9px;font-size:calc(14.5px * var(--fs));
@@ -712,15 +713,16 @@ tr:nth-child(even) td{background:#fdfbf8}
 .gvtag.ok{background:#eefaf1;color:#14532d}
 /* 箭頭（純圖形，無文字） */
 .gvarr{display:block;margin:7px auto;color:var(--accent)}
-.gvarr.down{width:26px;height:20px}
+.gvarr.down{width:24px;height:16px}
+.gvarr{margin:4px auto}
 
 /* ---- matrix：座標表（時間 × 狀態） ---- */
 .gvmx{overflow-x:auto}
-.gvmx table{border-collapse:separate;border-spacing:4px;width:100%;min-width:520px}
+.gvmx table{border-collapse:separate;border-spacing:3px;width:100%;min-width:520px}
 .gvmx th{background:none;border:0;font-size:calc(11.5px * var(--fs));font-weight:800;color:var(--accent2);
   text-align:left;padding:4px 8px;white-space:nowrap}
 .gvmx th.rh{color:var(--ink2)}
-.gvmx td{background:#fff;border:1px solid var(--line);border-radius:9px;padding:7px 9px;vertical-align:top}
+.gvmx td{background:#fff;border:1px solid var(--line);border-radius:9px;padding:6px 8px;vertical-align:top}
 .gvmx td .en{font-size:calc(13.5px * var(--fs));font-weight:700;color:#1f2937;line-height:1.5}
 .gvmx td .cn{font-size:calc(11.5px * var(--fs));color:var(--ink2);line-height:1.6;margin-top:2px}
 .gvmx td.hi{background:#fff8f1;border-color:#f0d9c2}
@@ -735,59 +737,60 @@ tr:nth-child(even) td{background:#fdfbf8}
 @media(max-width:640px){ .gvmx{display:none} .gvmxs{display:block} }
 
 /* ---- swap：主詞 ↔ 受詞交換（被動語態） ---- */
-.gvsw .lane{background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 11px}
+.gvsw .lane{background:#fff;border:1px solid var(--line);border-radius:11px;padding:8px 10px}
 .gvsw .lane .hd{display:flex;align-items:center;gap:7px;margin-bottom:7px;flex-wrap:wrap}
 .gvsw .lane .hd .sub{font-size:calc(12px * var(--fs));color:var(--ink2)}
-.gvsw .cross{display:flex;align-items:center;justify-content:center;gap:9px;padding:7px 0;flex-wrap:wrap}
-.gvsw .cross svg{width:130px;height:48px;color:var(--accent);flex:0 0 auto}
+.gvsw .cross{display:flex;align-items:center;justify-content:center;gap:9px;padding:3px 0;flex-wrap:wrap}
+.gvsw .cross svg{width:112px;height:40px;color:var(--accent);flex:0 0 auto}
 .gvsw .cross .lbl{font-size:calc(11.5px * var(--fs));font-weight:800;color:var(--accent2)}
 
 /* ---- merge：兩句合併成一句 ---- */
 .gvmg .in{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.gvmg .bx{background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 11px}
+.gvmg .bx{background:#fff;border:1px solid var(--line);border-radius:11px;padding:8px 10px}
 .gvmg .bx .n{font-size:calc(11px * var(--fs));font-weight:800;color:var(--ink2);margin-bottom:4px}
 .gvmg .en{font-size:calc(14px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
-.gvmg .glue{text-align:center;margin:8px 0 4px}
+.gvmg .glue{text-align:center;margin:5px 0 3px}
 .gvmg .glue .g{display:inline-block;background:#f3e8ff;color:#6d28d9;border:1px solid #e0ccff;
   border-radius:999px;padding:4px 12px;font-size:calc(13px * var(--fs));font-weight:800}
 .gvmg .glue .gc{font-size:calc(11.5px * var(--fs));color:var(--ink2);margin-top:4px;line-height:1.7}
-.gvmg .out{background:#fff8f1;border:1px solid #f0d9c2;border-radius:11px;padding:11px 12px}
+.gvmg .out{background:#fff8f1;border:1px solid #f0d9c2;border-radius:11px;padding:9px 11px}
 .gvmg .out .n{font-size:calc(11px * var(--fs));font-weight:800;color:var(--accent2);margin-bottom:5px}
 @media(max-width:640px){ .gvmg .in{grid-template-columns:1fr} }
 
 /* ---- scale：程度刻度 ---- */
-.gvsc .axis{position:relative;height:12px;border-radius:999px;margin:6px 6px 0;
+.gvsc .axis{position:relative;height:10px;border-radius:999px;margin:4px 4px 0;
   background:linear-gradient(90deg,#dbeafe,#fdead9,#fde2e0)}
-.gvsc .axis .pin{position:absolute;top:-6px;width:2px;height:24px;background:#c9631f;border-radius:2px;transform:translateX(-1px)}
-.gvsc .ends{display:flex;justify-content:space-between;margin:8px 8px 0;
+.gvsc .axis .pin{position:absolute;top:-5px;width:2px;height:20px;background:#c9631f;border-radius:2px;transform:translateX(-1px)}
+.gvsc .ends{display:flex;justify-content:space-between;margin:6px 6px 0;
   font-size:calc(11.5px * var(--fs));font-weight:800;color:var(--ink2)}
-.gvsc .stops{display:grid;gap:8px;margin-top:12px}
-.gvsc .stop{background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px 11px;
-  display:flex;gap:10px;align-items:flex-start}
-.gvsc .stop .pct{flex:0 0 48px;font-size:calc(11.5px * var(--fs));font-weight:800;color:var(--accent2);
-  background:var(--accent-soft);border-radius:8px;padding:3px 0;text-align:center}
+.gvsc .stops{display:grid;gap:7px;margin-top:9px}
+@media(min-width:640px){ .gvsc .stops{grid-template-columns:repeat(2,1fr)} }
+.gvsc .stop{background:#fff;border:1px solid var(--line);border-radius:11px;padding:7px 9px;
+  display:flex;gap:8px;align-items:flex-start}
+.gvsc .stop .pct{flex:0 0 42px;font-size:calc(11.5px * var(--fs));font-weight:800;color:var(--accent2);
+  background:var(--accent-soft);border-radius:8px;padding:2px 0;text-align:center}
 .gvsc .stop .lb{font-size:calc(13.5px * var(--fs));font-weight:800;color:var(--ink)}
 .gvsc .stop .lb small{display:block;font-weight:600;color:var(--ink2);font-size:calc(11.5px * var(--fs));margin-top:1px}
 .gvsc .stop .en{font-size:calc(14px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6;margin-top:3px}
 
 /* ---- branch：條件分支 ---- */
 .gvbr .cond{background:#fff;border:1px solid var(--line);border-left:4px solid #7c3aed;
-  border-radius:11px;padding:10px 12px}
+  border-radius:11px;padding:8px 11px}
 .gvbr .cond .en{font-size:calc(14.5px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
-.gvbr .fan{display:grid;gap:9px;margin-top:4px}
+.gvbr .fan{display:grid;gap:8px;margin-top:2px}
 @media(min-width:700px){ .gvbr .fan{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))} }
-.gvbr .br{background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 11px;border-top:4px solid #94a3b8}
+.gvbr .br{background:#fff;border:1px solid var(--line);border-radius:11px;padding:8px 10px;border-top:4px solid #94a3b8}
 .gvbr .br.real{border-top-color:#15803d}
 .gvbr .br.unreal{border-top-color:#e8813a}
 .gvbr .br.impossible{border-top-color:#b3261e}
-.gvbr .br .pb{height:6px;border-radius:999px;background:#eee7dd;margin:6px 0 7px;overflow:hidden}
+.gvbr .br .pb{height:5px;border-radius:999px;background:#eee7dd;margin:5px 0 6px;overflow:hidden}
 .gvbr .br .pb i{display:block;height:100%;border-radius:999px;background:var(--accent)}
 .gvbr .br .en{font-size:calc(14px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
 
 /* ---- shift：往回退一格 ---- */
 .gvsh .r{display:grid;grid-template-columns:1fr 26px 1fr;gap:8px;align-items:center;
-  background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px 11px}
-.gvsh .r+.r{margin-top:7px}
+  background:#fff;border:1px solid var(--line);border-radius:11px;padding:7px 10px}
+.gvsh .r+.r{margin-top:5px}
 .gvsh .r .a,.gvsh .r .b{font-size:calc(14px * var(--fs));font-weight:700;line-height:1.5}
 .gvsh .r .a{color:var(--ink2)}
 .gvsh .r .b{color:#c9631f}
@@ -801,16 +804,16 @@ tr:nth-child(even) td{background:#fdfbf8}
 }
 
 /* ---- cols：2～3 欄對照 ---- */
-.gvcl{display:grid;gap:10px;grid-template-columns:1fr}
+.gvcl{display:grid;gap:8px;grid-template-columns:1fr}
 @media(min-width:640px){ .gvcl.n2{grid-template-columns:repeat(2,1fr)} }
 @media(min-width:760px){ .gvcl.n3{grid-template-columns:repeat(3,1fr)} }
-.gvcl .col{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 12px;border-top:4px solid #cbd5e1}
+.gvcl .col{background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 11px;border-top:4px solid #cbd5e1}
 .gvcl .col.t1{border-top-color:var(--accent)}
 .gvcl .col.t2{border-top-color:#3b82f6}
 .gvcl .col.t3{border-top-color:#15803d}
 .gvcl .col>.hd{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:3px}
 .gvcl .col .hcn{font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.6;margin-bottom:7px}
-.gvcl .col .it{border-top:1px dashed #eee4d8;padding:7px 0}
+.gvcl .col .it{border-top:1px dashed #eee4d8;padding:6px 0}
 .gvcl .col .it:first-of-type{border-top:0}
 .gvcl .col .it .en{font-size:calc(14px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
 .gvcl .col .it .cn{font-size:calc(12px * var(--fs));color:var(--ink2);line-height:1.7}
@@ -818,16 +821,16 @@ tr:nth-child(even) td{background:#fdfbf8}
 
 /* ---- chain：結構鏈 ---- */
 .gvch .links{display:flex;flex-wrap:wrap;gap:7px;align-items:flex-start;justify-content:center;
-  background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 10px}
+  background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 9px}
 .gvch .links .ar{color:var(--accent);display:inline-flex;align-items:center;height:30px}
 .gvch .links .ar svg{width:18px;height:13px}
 .gvch .lkw{display:inline-flex;align-items:flex-start;gap:7px}
 .gvch .lk{text-align:center}
 .gvch .lk .t{display:block;border-radius:9px;padding:5px 11px;font-size:calc(14.5px * var(--fs));font-weight:800}
 .gvch .lk .c{display:block;font-size:calc(11px * var(--fs));color:var(--ink2);margin-top:3px;line-height:1.5}
-.gvch .eg{margin-top:9px;background:#fff8f1;border:1px solid #f0d9c2;border-radius:11px;padding:10px 12px}
+.gvch .eg{margin-top:7px;background:#fff8f1;border:1px solid #f0d9c2;border-radius:11px;padding:8px 11px}
 .gvch .eg .en{font-size:calc(14.5px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
-.gvch .vr{display:grid;gap:7px;margin-top:9px}
+.gvch .vr{display:grid;gap:6px;margin-top:7px}
 @media(min-width:640px){ .gvch .vr{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))} }
 .gvch .vr .v{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px}
 .gvch .vr .v .k{font-size:calc(12px * var(--fs));font-weight:800;color:var(--accent2)}
