@@ -89,7 +89,7 @@ header .hdlink{
 }
 header .hdlink:active{background:rgba(255,255,255,.34)}
 /* 外連站台是「離開本站」的次要動作：降為透明底細字，減少視覺干擾 */
-header a.hdlink.ext{background:none;border-color:transparent;font-weight:600;opacity:.85;text-decoration:none;padding:4px 6px}
+header a.hdlink.ext{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);font-weight:700;opacity:1;text-decoration:none;padding:4px 10px}
 header a.hdlink.ext:active{opacity:1;background:rgba(255,255,255,.2)}
 /* 頂部 B1/B1+/B2 標籤可以點：直接跳到「閱讀」並套用該程度篩選 */
 header button.lv{border:0;font-family:inherit;cursor:pointer;opacity:.92}
@@ -1904,6 +1904,7 @@ function applyCnAll(){
   document.body.classList.toggle('cnall',CNALL);
   const b=$('hd-cn');
   if(b){ b.textContent=CNALL?'🈶 中譯：開':'🈶 中譯：關'; b.classList.toggle('off',!CNALL); }
+  if(typeof showCn!=='undefined'){ showCn=CNALL; if(typeof applySubToggles==='function') applySubToggles(); }
 }
 function togGlobalCn(){
   /* 以畫面上方附近「切換後仍看得到的區塊」當錨點：切換後把它捲回原本位置，畫面不跳。
@@ -1926,11 +1927,13 @@ function togGlobalCn(){
     anchor=anchor ? (anchor.closest('.bkq,.bkex,.para,.wpitem,.wpbox,.focus,.upg,.bkbar,.card,.item,.magttl,section')||anchor) : null;
   }
   if(anchor&&prevTop!=null){
-    const r=anchor.getBoundingClientRect();
-    if(r.height>0){
-      const d=r.top-prevTop;
-      if(d) window.scrollBy({top:d,behavior:'instant'});
-    }
+    requestAnimationFrame(()=>{
+      const r=anchor.getBoundingClientRect();
+      if(r.height>0){
+        const d=r.top-prevTop;
+        if(Math.abs(d)>2) window.scrollBy({top:d,behavior:'instant'});
+      }
+    });
   }
 }
 window.togGlobalCn=togGlobalCn;
@@ -3830,6 +3833,11 @@ function bkTogHint(){
 }
 RENDER.book=function(){
   const v=$('v-book');
+  if(!bkOpen){
+    try{ const last=localStorage.getItem('b2lab_bkLast_'+PROFILE);
+      if(last){ const found=BOOK_LESSONS.find(x=>x.id===last); if(found){ bkOpen=found; sbAutoCollapse(); } }
+    }catch(e){}
+  }
   v.classList.toggle('bkopen',!!bkOpen);
   if(bkOpen){ v.innerHTML=bookHTML(bkOpen); return; }
   if(bkCalY==null){ const t=new Date(); bkCalY=t.getFullYear(); bkCalM=t.getMonth(); }
@@ -3906,7 +3914,7 @@ function bkDayPanel(){
     const prev=BOOK_LESSONS.filter(b=>(b.date||'')<ds).map(b=>b.date).sort().pop();
     h+='<div class="bkday-empty"><div>'+(ds===td?'今天沒有安排課程':'這天沒有安排課程')+'</div>'
      +'<div class="muted" style="margin-top:4px">點日曆上有藍點的日期查看課程</div>'
-     +(prev?'<button class="bkday-jump" onclick="bkSelDay(\''+prev+'\')">← 查看最近一堂（'+esc(prev.slice(5).replace('-','/'))+'）</button>':'')
+     +(prev?'<button class="bkday-jump" onclick="bkSelDay(\''+prev+'\')">查看最近一堂（'+esc(prev.slice(5).replace('-','/'))+'）</button>':'')
      +'</div>';
   }else{
     h+=ls.map(b=>{
@@ -3995,10 +4003,12 @@ function bkSearch(q){
   res.innerHTML='<div class="muted" style="margin:2px 0 8px">「'+esc(bkQuery.trim())+'」出現在 '+hits.length+' 課</div>'
     + hits.map(x=>bkItem(x.b,'<div class="meta" style="margin-top:4px"><span>🔍 出現在：'+x.where.map(esc).join('、')+'</span></div>')).join('');
 }
-function bkGo(id,sec){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; sbAutoCollapse(); RENDER.book();
+function bkGo(id,sec){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; sbAutoCollapse();
+  try{ if(bkOpen) localStorage.setItem('b2lab_bkLast_'+PROFILE, bkOpen.id); }catch(e){}
+  RENDER.book();
   if(sec){ const el=$('bksec-'+sec); if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); el.classList.add('bksec-flash'); setTimeout(()=>el.classList.remove('bksec-flash'),1200); return; } }
   window.scrollTo(0,0); }
-function bkClose(){ bkOpen=null; sbAutoExpand(); RENDER.book(); window.scrollTo(0,0); }
+function bkClose(){ bkOpen=null; try{ localStorage.removeItem('b2lab_bkLast_'+PROFILE); }catch(e){} sbAutoExpand(); RENDER.book(); window.scrollTo(0,0); }
 /* 課本朗讀（整段／全文共用）：一句一句念、念到哪句反黃到哪句；
    按下去的按鈕變紅色「⏹ 停止」，再按一次或點空白處就停。
    Web Speech 的 onend 在 iOS/Chrome 不一定會觸發，所以每句都有看門狗，時間到就自己往下念。 */
@@ -4806,7 +4816,7 @@ function lessonHTML(l){
   const hasScript=timed;
   const toggles='<div class="row" style="margin-top:9px">'
    +'<button class="spk" id="tg-en" onclick="tgEn()">'+(showEn?'👁 英文：顯示':'👁 英文：隱藏')+'</button>'
-   +'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button></div>';
+   +'</div>';
   /* 找出這課的角色清單，前兩位分配不同顏色（所有類型的逐字稿都適用） */
   const allLines=au||body||[];
   const speakers=[...new Set(allLines.map(k=>k.sp).filter(Boolean))];
@@ -5062,7 +5072,6 @@ function myVidHTML(v){
    + playerControls()
    +'<div class="row" style="margin-top:9px">'
    +'<button class="spk" id="tg-en" onclick="tgEn()">'+(showEn?'👁 英文：顯示':'👁 英文：隱藏')+'</button>'
-   +(hasCn?'<button class="spk" id="tg-cn" onclick="tgCn()">'+(showCn?'🈶 中譯：顯示':'🈶 中譯：隱藏')+'</button>':'')
    +'<button class="spk" onclick="jumpCur()">↕ 跳到目前這句</button></div></div>';
 
   h+='<div class="card"><h2 class="sec">📝 生字筆記</h2>'
