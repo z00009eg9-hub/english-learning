@@ -55,9 +55,25 @@ const isStr = (v) => typeof v === 'string' && v.trim() !== '';
 const hasCJK = (s) => /[\u4e00-\u9fff]/.test(s);
 const clean = (s) => String(s).replace(/\s+/g, ' ').trim();
 
-// 英文句子：有空格、夠長、沒有中文、有字母
+/* 英文「例句」的判斷。
+   兩邊網站的資料裡，詞彙表詞條（"sampling inspection"、"Supplier Quality"）與
+   教學註記（"encourage (v.) → encouragement (n.)"）跟真正的例句放在同一批物件裡，
+   只看「有空格而且夠長」會把它們一起收進例句池，卡片就會出現不是句子的東西。
+   這裡用結構特徵區分，不看任何關鍵字：
+     1. 要有句末標點（. ? !，允許後面有引號或括號）—— 詞條不會有
+     2. 至少 4 個字
+     3. 不含全形括號／箭頭／勾叉這些教學標記
+   長度上限放寬到 240，讓完整句子不會因為長就被丟掉（挑選時再用長度排序）。 */
+const TEACHING_MARK = /[（）→＝｜✅❌]/;
 const looksLikeSentence = (s) =>
-  isStr(s) && !hasCJK(s) && /[A-Za-z]/.test(s) && s.includes(' ') && s.length >= 15 && s.length <= 220;
+  isStr(s) &&
+  !hasCJK(s) &&
+  /[A-Za-z]/.test(s) &&
+  s.length >= 15 &&
+  s.length <= 240 &&
+  !TEACHING_MARK.test(s) &&
+  /[.?!]["')\]]?\s*$/.test(s.trim()) &&
+  s.trim().split(/\s+/).length >= 4;
 
 // 英文詞條：不含中文、長度合理（可以是片語）
 const looksLikeTerm = (s) =>
@@ -75,6 +91,12 @@ function walk(node, visit, inherited = {}) {
   let ctx = inherited;
   if (isStr(node.level) && /^[ABC][12]\+?$/.test(node.level.trim())) {
     ctx = { ...inherited, level: node.level.trim().replace('+', '') };
+  }
+  /* QA 站自己把主題分成 sys／inst／doc／test／tour 五個 domain，
+     其中 tour 是「帶客戶參觀工廠」的接待用語（動線、請戴安全眼鏡、小心腳步），
+     不是品保／工程工作情境。沿著樹往下標記，這個子樹的句子不進 QA 例句池。 */
+  if (isStr(node.domain) && node.domain.trim() === 'tour') {
+    ctx = { ...ctx, hospitality: true };
   }
   visit(node, ctx);
   for (const v of Object.values(node)) walk(v, visit, ctx);
@@ -94,6 +116,7 @@ function harvestSentences(globals, bucket) {
   const okZh = (s) => isStr(s) && hasCJK(s) && clean(s).length >= 8;
   for (const root of Object.values(globals)) {
     walk(root, (obj, ctx) => {
+      if (ctx.hospitality) return; // 客戶參訪接待語不當作工作例句
       let taken = false;
       for (const [ek, zk] of PAIRS) {
         const en = obj[ek];
@@ -316,6 +339,31 @@ for (const e of words.values()) {
     if (re.test(s.en)) pushEx(e.qa, s);
   }
   if (e.qa.length && e.source === 'general') e.source = 'both';
+
+  /* 首張卡只放一句，所以要挑最好的那句放在 [0]：
+     有中文翻譯 > 沒有；長度適中（一到三行）> 過長或過短。
+     「更多例句 / QA 例句」取前三句，順序一樣受惠。
+     排序穩定，同分維持原本的出現順序。 */
+  e.general = rankExamples(e.general);
+  e.qa = rankExamples(e.qa);
+}
+
+function rankExamples(list) {
+  return list
+    .map((ex, i) => ({ ex, i, score: exampleScore(ex) }))
+    .sort((a, b) => b.score - a.score || a.i - b.i)
+    .map((x) => x.ex);
+}
+
+function exampleScore(ex) {
+  let score = 0;
+  if (ex.zh) score += 100; // 沒有中文翻譯的句子在卡片上只有一半資訊
+  const len = ex.en.length;
+  if (len >= 40 && len <= 130) score += 20;
+  else if (len >= 25 && len <= 170) score += 10;
+  const wordCount = ex.en.split(/\s+/).length;
+  if (wordCount >= 6 && wordCount <= 24) score += 10;
+  return score;
 }
 
 /* 6) 相關單字：同一課的字 ＋ 同字根的字 */
