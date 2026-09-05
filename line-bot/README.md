@@ -180,19 +180,35 @@ http://localhost:8787/preview?a=rel&w=compensate
 回傳的 `messages[0].contents` 可以直接貼進
 [LINE Flex Message Simulator](https://developers.line.biz/flex-simulator/) 看實際排版。
 
-### ⚠️ Google Drive 資料夾的已知問題
+### ⚠️ Google Drive 資料夾的已知問題（node_modules 要從本機磁碟搬過來）
 
-這個 repo 放在 Google Drive 同步資料夾裡，`npm install` 常常因為 Drive 的檔案系統寫入失敗
-（`EBADF` / `TAR_ENTRY_ERROR`）。實測可行的做法：
+這個 repo 放在 Google Drive 同步資料夾裡，`npm install` **裝出來的 node_modules 是壞的**：
+過程會噴 `EBADF` / `TAR_ENTRY_ERROR`，裝完之後 `npx wrangler` 與 `npx vitest` 都是
+「沒有任何輸出、exit 0」，直接跑套件本體則會看到
+`Error: Invalid package config .../wrangler/package.json`（檔案被寫到一半就斷了）。
+
+**實測可行的安裝方式**：在本機磁碟裝一份乾淨的，再用 robocopy 整包搬過來。
 
 ```bash
-npm install --ignore-scripts --maxsockets=1
+# 1) 在本機磁碟建一個暫存資料夾，只放 package.json
+mkdir -p /d/tmp/line-bot-deps && cp package.json /d/tmp/line-bot-deps/
 ```
 
-`--ignore-scripts` 會略過 `workerd`（wrangler 的本機執行環境）的安裝腳本，
-所以 `wrangler dev` 可能跑不起來；要在本機跑 `wrangler dev` 時，把 `line-bot/`
-複製到本機磁碟（例如 `D:\`）再 `npm install` 一次即可。
-`npm test` 與 `npm run deploy` 不受影響。
+```bash
+# 2) 在那裡安裝（本機磁碟不會壞）
+cd /d/tmp/line-bot-deps && npm install
+```
+
+```powershell
+# 3) 用 robocopy 鏡射回 Drive（robocopy 對 Drive 的寫入比 npm 穩）
+robocopy "D:\tmp\line-bot-deps\node_modules" "G:\我的雲端硬碟\英文筆記\line-bot\node_modules" /MIR /R:2 /W:1 /NFL /NDL /NJH /NP
+```
+
+搬完之後在 Drive 資料夾裡 `npx wrangler`、`npm test`、`npm run typecheck`、
+`npx wrangler dev`（`workerd.exe` 也會一起搬過來）全都正常。
+`node_modules` 已被 `.gitignore` 排除，不會進版控。
+
+> robocopy 成功時的 exit code 是 **1**（代表「有複製檔案」），不是 0，這是正常的。
 
 ---
 
