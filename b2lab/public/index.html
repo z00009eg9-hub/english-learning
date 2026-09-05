@@ -1246,51 +1246,40 @@ body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
   text-underline-offset:3px;font-size:calc(12px * var(--fs));padding:2px 4px}
 /* 課本表頭：淺橘底＋深棕字，取代高彩度橘色滿版 */
 #v-book th{background:var(--accent-soft);color:#8a4a12;border:1px solid var(--line);border-bottom:2px solid #eeceaa}
-/* Vocabulary 以自身的實際寬度分成 Wide / Compact / Card 三種模式。
-   所有文字與按鈕 child 都能縮小和換行，學習內容永不裁切。 */
+/* Vocabulary 是一張 section card 裡的高密度字典清單；只有手機才用 item card。 */
 #v-book{container-type:inline-size;container-name:book;min-width:0;max-width:100%}
 #v-book .bkvd,#v-book .bkvm,#v-book .bkvtab,#v-book .bkvrow,#v-book .bkvcell,#v-book .bkvword,#v-book .bkvipa,#v-book .bkvpos,#v-book .bkvexample,#v-book .bkvtranslation,#v-book .bkvmeaning{min-width:0;max-width:100%}
 #v-book .bkvm{display:none}
-#v-book .bkvtab{display:grid;gap:0;width:100%;border:1px solid var(--line);border-radius:10px}
-#v-book .bkvhead,#v-book .bkvrow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.7fr) minmax(0,.35fr) minmax(0,2.4fr) minmax(0,1fr)}
-#v-book .bkvtab:not(.has-cn) .bkvhead,#v-book .bkvtab:not(.has-cn) .bkvrow{grid-template-columns:minmax(0,1.15fr) minmax(0,.72fr) minmax(0,.35fr) minmax(0,2.78fr)}
-#v-book .bkvhead{background:var(--accent-soft);color:#8a4a12;font-weight:700;font-size:calc(15px * var(--fs))}
-#v-book .bkvcell{padding:8px 10px;border-right:1px solid var(--line);white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;word-break:break-word;height:auto;max-height:none}
-#v-book .bkvhead .bkvcell{border-bottom:2px solid #eeceaa}
-#v-book .bkvrow:not(:last-child) .bkvcell{border-bottom:1px solid var(--line)}
-#v-book .bkvrow:nth-child(odd){background:#fdfbf8}
-#v-book .bkvhead .bkvcell:last-child,#v-book .bkvrow .bkvcell:last-child{border-right:0}
-#v-book .bkvword{font-weight:700}
-#v-book .bkvipa{font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs))}
-#v-book .bkvpos{text-align:center}
-#v-book .bkvtranslation{margin-top:4px;color:var(--ink2)}
-#v-book .bkvmeaning{color:var(--accent2);font-weight:700}
+#v-book .bkvtab{display:grid;width:100%;border:0}
+#v-book .bkvhead{display:none}
+#v-book .bkvrow{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) auto;grid-template-areas:"word ipa pos" "example example meaning";padding:8px 10px;column-gap:12px;row-gap:4px;background:transparent}
+#v-book .bkvrow:not(:last-child){border-bottom:1px solid var(--line)}
+#v-book .bkvrow:nth-child(even){background:#fdfbf8}
+#v-book .bkvcell{padding:0;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;word-break:break-word;height:auto;max-height:none}
+#v-book .bkvword{grid-area:word;font-weight:700;line-height:1.45}
+#v-book .bkvipa{grid-area:ipa;font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.45}
+#v-book .bkvpos{grid-area:pos;text-align:right;color:var(--ink2);font-size:calc(12px * var(--fs));font-weight:700;font-style:italic;line-height:1.45}
+#v-book .bkvexample{grid-area:example;line-height:1.55}
+#v-book .bkvtranslation{margin-top:2px;color:var(--ink2);font-size:calc(13.5px * var(--fs));line-height:1.5}
+#v-book .bkvmeaning{grid-area:meaning;color:var(--ink2);font-size:calc(13.5px * var(--fs));font-weight:600;line-height:1.5}
+#v-book .bkvmeaning-label{display:none}
 #v-book .wln{display:flex;align-items:center;gap:4px;flex-wrap:wrap;max-width:100%;min-width:0;overflow-wrap:anywhere}
-#v-book .bkvtab .wln .spk{padding:3px 6px;flex:0 0 auto}
-/* Compact：去掉傳統表頭，例句和中文改為垂直層級。 */
-@container book (max-width:1119px){
-  #v-book .bkvhead{display:none}
-  #v-book .bkvtab{gap:9px;border:0;background:transparent}
-  #v-book .bkvrow{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"word word" "ipa pos" "example example" "meaning meaning";border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:11px;background:#fff!important;overflow:visible}
-  #v-book .bkvcell{border:0!important;padding:5px 11px}
-  #v-book .bkvword{grid-area:word;padding-top:10px}
-  #v-book .bkvipa{grid-area:ipa;color:var(--ink2)}
-  #v-book .bkvpos{grid-area:pos;text-align:right;color:#2b7a78;font-weight:800;font-style:italic}
-  #v-book .bkvexample{grid-area:example;margin:4px 11px 0;padding:8px 10px;background:#fdfbf8;border:1px solid var(--line)!important;border-radius:8px}
-  #v-book .bkvmeaning{grid-area:meaning;padding:8px 11px 11px}
+#v-book .bkvtab .wln .spk{padding:2px 6px;flex:0 0 auto}
+/* Tablet portrait / 受 zoom 或大字級影響的中等容器：維持 list，只把中文移成第三行。 */
+@container book (max-width:899px){
+  #v-book .bkvrow{grid-template-areas:"word ipa pos" "example example example" "meaning meaning meaning";padding-block:9px;row-gap:5px}
+  #v-book .bkvmeaning{padding-top:1px}
 }
-/* Card：更窄的內容欄才換成完整卡片，和裝置種類無關。 */
-@container book (max-width:679px){
+/* 字級越大，較早採用三行 list；不會因此改成大型卡片。 */
+@container book (max-width:1019px){html.fs-large #v-book .bkvrow{grid-template-areas:"word ipa pos" "example example example" "meaning meaning meaning";padding-block:9px;row-gap:5px}}
+@container book (max-width:1149px){html.fs-larger #v-book .bkvrow{grid-template-areas:"word ipa pos" "example example example" "meaning meaning meaning";padding-block:9px;row-gap:5px}}
+@container book (max-width:1299px){html.fs-max #v-book .bkvrow{grid-template-areas:"word ipa pos" "example example example" "meaning meaning meaning";padding-block:9px;row-gap:5px}}
+/* Narrow mobile only：使用小型 card，避免把 item 卡片用到桌面與平板。 */
+@container book (max-width:519px){
   #v-book .bkvd{display:none}
   #v-book .bkvm{display:block;width:100%;max-width:100%;min-width:0}
+  #v-book .bkvcard{padding:12px 13px;margin-bottom:7px;border-left-width:3px;box-shadow:none}
 }
-/* 字級越大，越早由 Wide 轉 Compact / Card。 */
-@container book (max-width:1199px){html.fs-large #v-book .bkvhead{display:none}html.fs-large #v-book .bkvtab{gap:9px;border:0;background:transparent}html.fs-large #v-book .bkvrow{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"word word" "ipa pos" "example example" "meaning meaning";border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:11px;background:#fff!important}html.fs-large #v-book .bkvcell{border:0!important;padding:5px 11px}html.fs-large #v-book .bkvword{grid-area:word;padding-top:10px}html.fs-large #v-book .bkvipa{grid-area:ipa;color:var(--ink2)}html.fs-large #v-book .bkvpos{grid-area:pos;text-align:right;color:#2b7a78;font-weight:800;font-style:italic}html.fs-large #v-book .bkvexample{grid-area:example;margin:4px 11px 0;padding:8px 10px;background:#fdfbf8;border:1px solid var(--line)!important;border-radius:8px}html.fs-large #v-book .bkvmeaning{grid-area:meaning;padding:8px 11px 11px}}
-@container book (max-width:1319px){html.fs-larger #v-book .bkvhead{display:none}html.fs-larger #v-book .bkvtab{gap:9px;border:0;background:transparent}html.fs-larger #v-book .bkvrow{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"word word" "ipa pos" "example example" "meaning meaning";border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:11px;background:#fff!important}html.fs-larger #v-book .bkvcell{border:0!important;padding:5px 11px}html.fs-larger #v-book .bkvword{grid-area:word;padding-top:10px}html.fs-larger #v-book .bkvipa{grid-area:ipa;color:var(--ink2)}html.fs-larger #v-book .bkvpos{grid-area:pos;text-align:right;color:#2b7a78;font-weight:800;font-style:italic}html.fs-larger #v-book .bkvexample{grid-area:example;margin:4px 11px 0;padding:8px 10px;background:#fdfbf8;border:1px solid var(--line)!important;border-radius:8px}html.fs-larger #v-book .bkvmeaning{grid-area:meaning;padding:8px 11px 11px}}
-@container book (max-width:1459px){html.fs-max #v-book .bkvhead{display:none}html.fs-max #v-book .bkvtab{gap:9px;border:0;background:transparent}html.fs-max #v-book .bkvrow{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"word word" "ipa pos" "example example" "meaning meaning";border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:11px;background:#fff!important}html.fs-max #v-book .bkvcell{border:0!important;padding:5px 11px}html.fs-max #v-book .bkvword{grid-area:word;padding-top:10px}html.fs-max #v-book .bkvipa{grid-area:ipa;color:var(--ink2)}html.fs-max #v-book .bkvpos{grid-area:pos;text-align:right;color:#2b7a78;font-weight:800;font-style:italic}html.fs-max #v-book .bkvexample{grid-area:example;margin:4px 11px 0;padding:8px 10px;background:#fdfbf8;border:1px solid var(--line)!important;border-radius:8px}html.fs-max #v-book .bkvmeaning{grid-area:meaning;padding:8px 11px 11px}}
-@container book (max-width:739px){html.fs-large #v-book .bkvd{display:none}html.fs-large #v-book .bkvm{display:block;width:100%;max-width:100%;min-width:0}}
-@container book (max-width:819px){html.fs-larger #v-book .bkvd{display:none}html.fs-larger #v-book .bkvm{display:block;width:100%;max-width:100%;min-width:0}}
-@container book (max-width:959px){html.fs-max #v-book .bkvd{display:none}html.fs-max #v-book .bkvm{display:block;width:100%;max-width:100%;min-width:0}}
 /* 補充字彙表：類別20% 英文50% 中文30% */
 #v-book table.bkxv th:nth-child(1),#v-book table.bkxv td:nth-child(1){width:20%;white-space:normal}
 #v-book table.bkxv th:nth-child(2),#v-book table.bkxv td:nth-child(2){width:50%}
@@ -4137,7 +4126,7 @@ function bookHTML(b){
       +list.map(t=>'<div class="bkvrow" role="row"><div class="bkvcell bkvword" role="cell">'+word(t)+'</div>'
         +'<div class="bkvcell bkvipa" role="cell">'+esc(t.ipa)+'</div><div class="bkvcell bkvpos" role="cell">'+esc(t.pos)+'</div>'
         +'<div class="bkvcell bkvexample" role="cell"><span class="sent" data-t="'+esc(t.ex)+'" onclick="saySent(this)">'+bkHi(t.ex,t.w)+'</span> '+spk(t.ex)+(showChinese?'<div class="bkvtranslation">'+esc(t.exCn)+'</div>':'')+'</div>'
-        +(showChinese?'<div class="bkvcell bkvmeaning" role="cell">中文意思：<br>'+esc(t.cn)+'</div>':'')+'</div>').join('')
+        +(showChinese?'<div class="bkvcell bkvmeaning" role="cell"><span class="bkvmeaning-label">中文意思：</span>'+esc(t.cn)+'</div>':'')+'</div>').join('')
       +'</div></div>'
       +'<div class="bkvm">'+list.map(t=>'<div class="bkvcard">'
         +'<div class="w">'+word(t)+'</div>'
