@@ -1293,6 +1293,15 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
 
 ---
 
+## B2 Read 前端 UI 規則（2026-09-05 確立）
+
+修改 `b2lab/public/index.html` 時遵守：
+
+- **返回按鈕不要文字箭頭**：`.back` 按鈕已有 `::before` 的 SVG 橘色箭頭圖標，`<span class="back-label">` 裡只寫中文文字（如「返回閱讀」「返回課本」），不要加 `←` 或任何箭頭字元——在部分字型/系統會渲染成紅框 emoji。
+- **卡片底色用 `var(--card)`**：不要寫 `background:#fff`，統一用 CSS 變數，護眼模式才能整批換色。
+- **字級走 `--fs` 倍率**：內容區的 `font-size` 一律寫 `calc(Npx * var(--fs))`（header/nav 除外）。
+- **長篇文字欄寬**：課文 `.para` 已有 `max-width:var(--read-w)`（720px），新增的散文區塊也要套用，避免一行破百字元。
+
 ## 注意事項
 
 - 一次貼上的內容不要過大（建議單次一份課堂筆記或一個補充章節），避免渲染/複製失敗

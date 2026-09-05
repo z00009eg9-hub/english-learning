@@ -2321,7 +2321,7 @@ function readerHTML(a){
   const extras=extraWords(a,tgtSet);
 
   /* 標題卡只留標題＋基本標籤；導讀與文法重點收進可展開的提示區，資訊不再擠成一團 */
-  let h='<div class="magttl"><button class="back" onclick="rdClose()"><span class="back-label">← 返回閱讀</span></button>'
+  let h='<div class="magttl"><button class="back" onclick="rdClose()"><span class="back-label">返回閱讀</span></button>'
    +'<h2>'+esc(a.title)+'</h2>'
    +'<div class="cn">'+esc(a.titleCn)+'</div>'
    +'<div class="bar"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'
@@ -4147,7 +4147,7 @@ function bookHTML(b){
   let h='';
 
   /* 標題卡：雜誌風＋右側大圖示＋彩色徽章＋原始 Google 文件連結 */
-  h+='<div class="magttl"><button class="back" onclick="bkClose()"><span class="back-label">← 返回課本</span></button>'
+  h+='<div class="magttl"><button class="back" onclick="bkClose()"><span class="back-label">返回課本</span></button>'
    +'<div class="magico">'+(b.iconSvg||b.icon||'📕')+'</div>'
    +'<h2>'+esc(b.title)+' '+spk(b.title)+'</h2>'
    +'<div class="cn">'+esc(b.titleCn)+'</div>'
