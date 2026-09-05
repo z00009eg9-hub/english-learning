@@ -196,6 +196,7 @@ function entry(word) {
       source: '',
       lesson: '',
       bookId: '',
+      topicId: '',
       general: [],
       qa: [],
       related: [],
@@ -280,7 +281,17 @@ for (const t of qa.QA_TOPICS || []) {
   addQaTerm(t.term, t.zh, t.def && t.def.en);
   const e = words.get(norm(t.term || ''));
   if (e) {
+    e.topicId = t.id || '';
     for (const kt of t.keyTerms || []) if (looksLikeTerm(kt)) e.related.push(clean(kt));
+  }
+}
+
+/* 知識主題 id：讓 QA 站的「完整學習」直接開對應的主題頁，而不是只帶進搜尋框。
+   先用 term 直接對，對不到再看這個字有沒有出現在某個主題的 keyTerms 裡。 */
+for (const t of qa.QA_TOPICS || []) {
+  for (const kt of t.keyTerms || []) {
+    const hit = words.get(norm(kt));
+    if (hit && !hit.topicId) hit.topicId = t.id || '';
   }
 }
 for (const issue of qa.QA_ISSUES || []) {

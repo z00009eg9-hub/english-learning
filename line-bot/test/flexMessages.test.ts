@@ -29,6 +29,7 @@ const bare: WordEntry = {
   source: 'general',
   lesson: '',
   bookId: '',
+  topicId: '',
   general: [],
   qa: [],
   related: [],
@@ -176,5 +177,25 @@ describe('STEP 7 深連結：直接開課本那一課', () => {
   it('QA 的字不帶 lesson（課本是 B2 Lab 的東西）', () => {
     const e = { ...bare, word: 'tolerance', source: 'qa' as const, bookId: 'bk20260811' };
     expect(studyUrl(e, ENV)).not.toContain('lesson=');
+  });
+});
+
+describe('QA 深連結：直接開知識主題頁', () => {
+  it('對得到主題的 QA 詞條會帶 topic 參數', () => {
+    const e = findWord('tolerance')!;
+    expect(e.source).toBe('qa');
+    expect(e.topicId).toBe('drawing-spec');
+    expect(studyUrl(e, ENV)).toBe(
+      'https://rexon-qa-english.web.app/?w=tolerance&topic=drawing-spec',
+    );
+  });
+
+  it('對不到主題的 QA 詞條不帶 topic，退回帶入搜尋', () => {
+    const e = { ...bare, word: 'supplier', source: 'qa' as const };
+    expect(studyUrl(e, ENV)).toBe('https://rexon-qa-english.web.app/?w=supplier');
+  });
+
+  it('General 的字不會帶 topic', () => {
+    expect(studyUrl(findWord('compensate')!, ENV)).not.toContain('topic=');
   });
 });

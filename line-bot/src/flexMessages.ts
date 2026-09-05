@@ -46,8 +46,13 @@ export function studyUrl(e: WordEntry, env: { B2LAB_URL?: string; QA_URL?: strin
   const { b2lab, qa } = siteUrls(env);
   const base = e.source === 'qa' ? qa : b2lab;
   let url = `${base}${base.includes('?') ? '&' : '?'}w=${encodeURIComponent(e.word)}`;
-  // 知道是哪一堂課教的就一起帶上，B2 Lab 會直接開那一課的課本內容
-  if (e.source !== 'qa' && e.bookId) url += `&lesson=${encodeURIComponent(e.bookId)}`;
+  if (e.source === 'qa') {
+    // 對得到知識主題就直接開那一頁，對不到就退回帶入搜尋
+    if (e.topicId) url += `&topic=${encodeURIComponent(e.topicId)}`;
+  } else if (e.bookId) {
+    // 知道是哪一堂課教的就一起帶上，B2 Lab 會直接開那一課的課本內容
+    url += `&lesson=${encodeURIComponent(e.bookId)}`;
+  }
   return url;
 }
 

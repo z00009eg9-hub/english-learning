@@ -29,6 +29,8 @@ export interface WordEntry {
   lesson: string;
   /** 對應 B2 Lab 課本的課次 id（bk20260811），對不到就是空字串 */
   bookId: string;
+  /** 對應 QA English 知識主題的 id（drawing-spec），對不到就是空字串 */
+  topicId: string;
   general: Example[];
   qa: Example[];
   related: string[];
