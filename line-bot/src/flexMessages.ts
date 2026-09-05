@@ -58,8 +58,9 @@ export function studyUrl(e: WordEntry, env: { B2LAB_URL?: string; QA_URL?: strin
 
 /* ---------- 共用元件 ---------- */
 
+/** 單字下面那行小字：音標 · 詞性 · CEFR。三個都沒有時退回類別標籤。 */
 function badgeText(e: WordEntry): string {
-  const parts = [e.pos, e.level].map((x) => (x || '').trim()).filter(Boolean);
+  const parts = [e.ipa, e.pos, e.level].map((x) => (x || '').trim()).filter(Boolean);
   if (parts.length) return parts.join(' · ');
   return CAT_LABEL[e.category] || 'Vocabulary';
 }

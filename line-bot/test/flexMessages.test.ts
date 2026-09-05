@@ -199,3 +199,21 @@ describe('QA 深連結：直接開知識主題頁', () => {
     expect(studyUrl(findWord('compensate')!, ENV)).not.toContain('topic=');
   });
 });
+
+describe('單字卡的小字：音標 · 詞性 · CEFR', () => {
+  const badge = (msg: any) => msg.contents.body.contents[1].text;
+
+  it('有音標就顯示在最前面', () => {
+    expect(badge(buildWordFlexMessage(findWord('compensate')!, ENV))).toBe(
+      '/ˈkɑːmpənseɪt/ · v.',
+    );
+  });
+
+  it('沒有音標但有 CEFR 時只顯示 CEFR', () => {
+    expect(badge(buildWordFlexMessage(findWord('supplier')!, ENV))).toBe('B1');
+  });
+
+  it('三個都沒有時退回類別標籤，不會是空白', () => {
+    expect(badge(buildWordFlexMessage({ ...bare, category: 'qa' }, ENV))).toBe('QA 詞彙');
+  });
+});
