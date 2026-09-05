@@ -185,7 +185,7 @@ describe('STEP 4 / 5 / 6 postback', () => {
   it('更多例句', async () => {
     const body = JSON.stringify(postbackEvent('a=more&w=compensate'));
     await worker.fetch(post(body, await sign(body)), ENV as any);
-    expect(dump()).toContain('More Examples');
+    expect(dump()).toContain('MORE GENERAL EXAMPLES');
   });
 
   it('QA 例句（沒有時給提示，不報錯）', async () => {
@@ -197,7 +197,7 @@ describe('STEP 4 / 5 / 6 postback', () => {
   it('相關單字', async () => {
     const body = JSON.stringify(postbackEvent('a=rel&w=compensate'));
     await worker.fetch(post(body, await sign(body)), ENV as any);
-    expect(dump()).toContain('Related Words');
+    expect(dump()).toContain('RELATED WORDS');
   });
 
   it('點相關單字等同重新查那個字', async () => {
@@ -304,6 +304,6 @@ describe('開發用預覽', () => {
       new Request('https://bot.example.com/preview?a=qa&w=supplier'),
       ENV as any,
     );
-    expect(JSON.stringify(await res.json())).toContain('QA / Work');
+    expect(JSON.stringify(await res.json())).toContain('QA / WORK');
   });
 });

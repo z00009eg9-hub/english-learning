@@ -31,6 +31,8 @@ export interface WordEntry {
   bookId: string;
   /** 對應 QA English 知識主題的 id（drawing-spec），對不到就是空字串 */
   topicId: string;
+  /** 搭配詞。目前的建置產物還沒有這個欄位，有的話卡片底部才會顯示 Tip */
+  collocations?: string[];
   general: Example[];
   qa: Example[];
   related: string[];
