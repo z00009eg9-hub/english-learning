@@ -364,8 +364,24 @@ const list = [...words.values()]
   })
   .sort((a, b) => a.id.localeCompare(b.id));
 
+/* generatedAt 只在「單字內容真的變了」時才更新。
+   每次都寫新時間戳的話，git 會天天顯示這個檔案有改動，
+   自動同步排程的「沒變就不部署」判斷就永遠不會成立。 */
+const wordsJson = JSON.stringify(list);
+let generatedAt = new Date().toISOString();
+let unchanged = false;
+try {
+  const prev = JSON.parse(readFileSync(OUT, 'utf8'));
+  if (JSON.stringify(prev.words) === wordsJson) {
+    generatedAt = prev.generatedAt || generatedAt;
+    unchanged = true;
+  }
+} catch {
+  /* 第一次產生、或舊檔壞掉，就當作有變 */
+}
+
 const payload = {
-  generatedAt: new Date().toISOString(),
+  generatedAt,
   sources: {
     b2lab: B2LAB_DIR,
     qa: QA_DIR,
@@ -377,6 +393,7 @@ const payload = {
 writeFileSync(OUT, JSON.stringify(payload), 'utf8');
 
 const stats = {
+  changed: !unchanged,
   words: list.length,
   withQaExamples: list.filter((e) => e.qa.length).length,
   withGeneralExamples: list.filter((e) => e.general.length).length,
