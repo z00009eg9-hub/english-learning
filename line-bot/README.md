@@ -43,6 +43,21 @@ npm run build:data
 B2LAB_DIR=/path/to/b2lab/public QA_DIR=/path/to/rexon-qa-english/public npm run build:data
 ```
 
+### 自動同步（本機排程）
+
+已建立本機排程任務 **`line-bot-vocab-sync`**（每天 10:09，設定檔在
+`D:\ClaudeConfig\scheduled-tasks\line-bot-vocab-sync\SKILL.md`），會自動：
+重建索引 → 只有 `vocabulary.json` 真的有變才 `npm test` ＋ `wrangler deploy`
+＋ commit 這一個檔案並 push。
+
+安全閥：如果重建出來的詞條數 **低於 900**，代表某個資料夾沒讀到
+（Google Drive 沒同步好、或 QA 站資料夾搬家了），任務會還原檔案、
+**不部署**、只回報問題。
+
+限制：跟其他本機排程一樣，**電腦與 Claude Code 要開著才會跑**，
+錯過的話下次開啟時補跑。想手動跑就用上面那兩行指令。
+
+
 產生出來的每一筆長這樣（欄位缺了也不會壞，程式都有 fallback）：
 
 ```json
