@@ -556,16 +556,29 @@ export function buildNotFoundMessage(
   const { b2lab, qa } = siteUrls(env);
 
   if (suggestions.length) {
+    /* 查詢字本身就是某些詞條的一部分時（defect → major defect、functional defect），
+       說「找不到」語氣不對 —— 資料裡其實有，只是以片語形式存在。 */
+    const q = query.trim().toLowerCase();
+    const partOfTerm =
+      q.length >= 3 &&
+      suggestions.some((s) =>
+        new RegExp(`(^|[^a-z])${escRe(q)}([^a-z]|$)`, 'i').test(s.word.toLowerCase()),
+      );
+    const title = partOfTerm
+      ? `「${cut(query, 30)}」出現在這些詞條裡`
+      : `找不到「${cut(query, 30)}」`;
+    const hint = partOfTerm ? '點一下就直接查那個詞條' : '你是不是想找：';
+
     const body = [
       {
         type: 'text',
-        text: `找不到「${cut(query, 30)}」`,
+        text: title,
         size: 'md',
         weight: 'bold',
         color: INK,
         wrap: true,
       },
-      { type: 'text', text: '你是不是想找：', size: 'xs', color: SUB, margin: 'sm' },
+      { type: 'text', text: hint, size: 'xs', color: SUB, margin: 'sm' },
       ...suggestions.map((s, i) => wordRow(s, BLUE, i === 0)),
     ];
     const footer = [
@@ -582,7 +595,10 @@ export function buildNotFoundMessage(
         ],
       },
     ];
-    return flex(`找不到「${query}」，你是不是想找 ${suggestions[0].word}？`, bubble(body, footer));
+    const alt = partOfTerm
+      ? `「${query}」出現在這些詞條裡：${suggestions[0].word}`
+      : `找不到「${query}」，你是不是想找 ${suggestions[0].word}？`;
+    return flex(alt, bubble(body, footer));
   }
 
   /* STEP 10：完全查不到 —— 不生成任何答案，只給入口 */

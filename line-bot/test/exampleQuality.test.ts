@@ -153,12 +153,22 @@ describe('第九節指定的測試單字', () => {
     }
   });
 
-  it.each(['inspection', 'defect', 'quality'])(
-    '%s 本身不是詞條，但查得到相關詞條（走建議流程而不是空白）',
-    (word) => {
-      expect(findWord(word)).toBeNull();
-    },
-  );
+  /* 這三個核心品保字原本只以片語形式存在（major defect、sampling inspection），
+     直接輸入會落到「你是不是想找」。已在 QA 站自己的詞彙表
+     （data-phrases.js 的 PHRASE_GROUPS）補上單字詞條，例句由既有語料自動掛上。 */
+  it.each([
+    ['defect', '不良、缺點'],
+    ['inspection', '檢驗'],
+    ['quality', '品質'],
+  ])('%s 現在是獨立詞條，且帶有真實的 QA 例句', (word, zh) => {
+    const e = findWord(word);
+    expect(e, `${word} 應該查得到`).not.toBeNull();
+    expect(e!.translation).toBe(zh);
+    expect(getQaExamples(word, 3).length).toBeGreaterThan(0);
+    for (const ex of getQaExamples(word, 3)) {
+      expect(ex.en).toMatch(new RegExp(word.slice(0, 5), 'i'));
+    }
+  });
 
   it('資料量沒有異常掉落', () => {
     expect(stats().count).toBeGreaterThan(1000);
