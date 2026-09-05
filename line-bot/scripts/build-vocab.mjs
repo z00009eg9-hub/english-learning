@@ -351,6 +351,58 @@ for (const e of words.values()) {
   const m = /^(\d{8})/.exec(e.lesson || '');
   if (m && BOOK_IDS.has(`bk${m[1]}`)) e.bookId = `bk${m[1]}`;
 }
+
+/* 顯示格式正規化：QA 站的詞條多半是標題式大寫（Supplier、Control Plan），
+   放在單字卡上看起來像專有名詞。這裡不做硬性規則，改用語料當證據 ——
+   只有「同一個字真的有人在句子中間寫成小寫」時才轉小寫。
+   縮寫（AQL、CMM、8D、IPQC）與只在句首出現過的字一律保留原樣。 */
+const lowerEvidence = new Set();
+for (const s of [...genSentences, ...qaSentences]) {
+  const toks = s.en.split(/[^A-Za-z'-]+/).filter(Boolean);
+  // 從第二個字開始，句首大寫不算證據
+  for (let i = 1; i < toks.length; i++) {
+    if (/^[a-z][a-z'-]*$/.test(toks[i])) lowerEvidence.add(toks[i]);
+  }
+}
+
+/* 一個詞條要嘛整串轉小寫、要嘛完全不動 —— 避免出現
+   「CMM (Coordinate measuring machine)」這種半大寫半小寫的結果。
+   判斷方式：每個大寫開頭的字，要嘛是有語料佐證的普通字、要嘛是純縮寫（CMM、DFT、
+   ISO），只要出現任何一個「大寫開頭但兩者都不是」的字（例如 Cross-Hatch、
+   沒有佐證的 Coordinate），整串保留原樣。 */
+const isAcronym = (t) => /^[^a-z]*[A-Z]{2,}[^a-z]*$/.test(t);
+const plainCap = (t) => /^([^A-Za-z]*)([A-Z][a-z]+)([^A-Za-z]*)$/.exec(t);
+
+function displayForm(word) {
+  const toks = String(word ?? '').split(' ');
+  let changed = false;
+  const out = [];
+  for (const tok of toks) {
+    if (!/^[^A-Za-z]*[A-Z]/.test(tok)) {
+      out.push(tok); // 本來就小寫或數字開頭
+      continue;
+    }
+    if (isAcronym(tok)) {
+      out.push(tok); // 縮寫保留
+      continue;
+    }
+    const m = plainCap(tok);
+    if (!m || !lowerEvidence.has(m[2].toLowerCase())) return String(word ?? ''); // 有疑慮就整串不動
+    out.push(m[1] + m[2].toLowerCase() + m[3]);
+    changed = true;
+  }
+  return changed ? out.join(' ') : String(word ?? '');
+}
+
+let renamed = 0;
+for (const e of words.values()) {
+  const shown = displayForm(e.word);
+  if (shown !== e.word) renamed++;
+  e.word = shown;
+  e.related = (e.related || []).map(displayForm);
+}
+console.log(`[data] 詞條顯示格式正規化 ${renamed} 筆`);
+
 /* 7) 收尾 */
 const list = [...words.values()]
   .filter((e) => e.translation || e.definition || e.general.length || e.qa.length)

@@ -125,3 +125,27 @@ describe('STEP 11 中文查詢', () => {
     expect(findByChinese('compensate')).toEqual([]);
   });
 });
+
+describe('詞條顯示格式正規化（建置階段）', () => {
+  it('QA 站的標題式大寫會轉成小寫', () => {
+    expect(findWord('supplier')!.word).toBe('supplier');
+    expect(findWord('audit')!.word).toBe('audit');
+  });
+
+  it('縮寫與專有名詞保留原樣', () => {
+    const caps = stats();
+    expect(caps.count).toBeGreaterThan(500);
+    const acronymish = ['AQL (acceptance quality limit)', 'FMEA (failure mode and effects analysis)'];
+    for (const w of acronymish) {
+      const e = findWord(w);
+      expect(e, `${w} 應該查得到`).not.toBeNull();
+      expect(e!.word).toBe(w);
+    }
+  });
+
+  it('不會產生半大小寫混雜的詞條', () => {
+    // 例如 "CMM (Coordinate measuring machine)" 這種一半轉一半沒轉的結果
+    const e = findWord('cmm (coordinate measuring machine)');
+    expect(e!.word).toBe('CMM (Coordinate Measuring Machine)');
+  });
+})
