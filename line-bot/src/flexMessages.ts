@@ -14,8 +14,9 @@ import { buildPostback } from './line';
    按鈕另外兩個色只出現在淡背景上，不做實心高飽和色塊。 */
 const INK = '#17202A'; // 單字、例句英文
 const BODY = '#2B333B'; // 中文意思
-const MUTED = '#7A8189'; // 英文定義
-const SUB = '#8A8F98'; // 音標、中文翻譯、次要說明
+const MUTED = '#9AA0A6'; // 英文定義（輔助資訊，刻意比中文意思淡）
+const SUB = '#8A8F98'; // 音標、次要說明
+const SUB_SOFT = '#9AA0A6'; // 例句的中文翻譯
 const LINE_SOFT = '#EEF1F4'; // 唯一一條分隔線
 
 const BLUE = '#2E6FA7';
@@ -93,7 +94,7 @@ function wordPattern(word: string): RegExp | null {
 /** 回傳一個 text component：命中查詢字的片段用 span 加粗，其餘保持一般文字 */
 function sentenceText(sentence: string, word: string, accent: string) {
   const text = cut(sentence, 200);
-  const base = { type: 'text', size: 'sm', color: INK, wrap: true, margin: 'md' };
+  const base = { type: 'text', size: 'sm', color: INK, wrap: true, margin: 'sm' };
   const re = wordPattern(word);
   if (!re) return { ...base, text };
 
@@ -212,11 +213,11 @@ export function buildHeaderSection(e: WordEntry): any[] {
     out.push({
       type: 'text',
       text: cut(e.definition, 120),
-      size: 'sm',
+      size: 'xs',
       color: MUTED,
       wrap: true,
       maxLines: 2,
-      margin: 'sm',
+      margin: 'xs',
     });
   }
 
@@ -246,12 +247,12 @@ export function buildExampleSection(opts: {
       margin,
       backgroundColor: NEUTRAL_BG,
       cornerRadius: '10px',
-      paddingAll: '10px',
-      paddingStart: '14px',
-      paddingEnd: '14px',
+      paddingAll: '8px',
+      paddingStart: '10px',
+      paddingEnd: '10px',
       contents: [
         heading,
-        { type: 'text', text: emptyText, size: 'xs', color: SUB, wrap: true, margin: 'sm' },
+        { type: 'text', text: emptyText, size: 'xs', color: SUB, wrap: true, margin: 'xs' },
       ],
     };
   }
@@ -262,9 +263,9 @@ export function buildExampleSection(opts: {
       type: 'text',
       text: cut(example.zh, 120),
       size: 'xs',
-      color: SUB,
+      color: SUB_SOFT,
       wrap: true,
-      margin: 'sm',
+      margin: 'xs',
     });
   }
 
@@ -274,25 +275,35 @@ export function buildExampleSection(opts: {
     margin,
     backgroundColor: background,
     cornerRadius: '12px',
-    paddingAll: '14px',
+    paddingAll: '10px',
     contents,
   };
 }
 
 /** 淡色圓角底 + link 按鈕（button 本身不支援圓角，所以外面包一層 box） */
 function tile(text: string, color: string, bg: string, action: any) {
+  // 用可點的 box 而不是 button：button 元件沒有字級屬性，做不出「文字再小一點、
+  // 視覺重量比例句輕」的效果。box 的 action 一樣可點，四顆的 padding / 圓角 /
+  // 字級完全一致，橫向排列時預設等寬，內容只有一行所以也等高。
   return {
     type: 'box',
     layout: 'vertical',
     backgroundColor: bg,
     cornerRadius: '10px',
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    paddingStart: '8px',
+    paddingEnd: '8px',
+    action: { ...action, label: label(text) },
     contents: [
       {
-        type: 'button',
-        style: 'link',
-        height: 'sm',
+        type: 'text',
+        text: label(text),
+        size: 'sm',
+        weight: 'bold',
         color,
-        action: { ...action, label: label(text) },
+        align: 'center',
+        maxLines: 1,
       },
     ],
   };
@@ -300,10 +311,12 @@ function tile(text: string, color: string, bg: string, action: any) {
 
 /** 2 x 2 按鈕格。action 完全沿用原本的 postback / uri，不做任何更動。 */
 export function buildActionGrid(e: WordEntry, env: { B2LAB_URL?: string; QA_URL?: string }): any[] {
-  const row = (cells: any[]) => ({
+  // margin：分隔線 → 第一列 12px、第一列 → 第二列 8px；欄距一律 8px
+  const row = (cells: any[], margin: string) => ({
     type: 'box',
     layout: 'horizontal',
     spacing: 'md',
+    margin,
     contents: cells,
   });
   return [
@@ -318,7 +331,7 @@ export function buildActionGrid(e: WordEntry, env: { B2LAB_URL?: string; QA_URL?
         data: buildPostback('qa', e.word),
         displayText: `${e.word}｜QA 例句`,
       }),
-    ]),
+    ], 'lg'),
     row([
       tile('相關單字', GREEN, GREEN_BG, {
         type: 'postback',
@@ -326,7 +339,7 @@ export function buildActionGrid(e: WordEntry, env: { B2LAB_URL?: string; QA_URL?
         displayText: `${e.word}｜相關單字`,
       }),
       tile('完整學習', PURPLE, PURPLE_BG, { type: 'uri', uri: studyUrl(e, env) }),
-    ]),
+    ], 'md'),
   ];
 }
 
@@ -355,8 +368,8 @@ function bubble(body: any[], footer?: any[]) {
     body: {
       type: 'box',
       layout: 'vertical',
-      paddingTop: '20px',
-      paddingBottom: '16px',
+      paddingTop: '18px',
+      paddingBottom: '12px',
       paddingStart: '20px',
       paddingEnd: '20px',
       contents: body,
@@ -366,9 +379,8 @@ function bubble(body: any[], footer?: any[]) {
     msg.footer = {
       type: 'box',
       layout: 'vertical',
-      spacing: 'md',
-      paddingTop: '12px',
-      paddingBottom: '16px',
+      paddingTop: '0px',
+      paddingBottom: '8px',
       paddingStart: '16px',
       paddingEnd: '16px',
       contents: footer,
@@ -450,7 +462,7 @@ export function buildWordFlexMessage(e: WordEntry, env: { B2LAB_URL?: string; QA
       example: e.general[0],
       emptyText: '目前沒有一般例句。',
       word: e.word,
-      margin: 'xl',
+      margin: 'lg',
     }),
     buildExampleSection({
       title: 'QA / WORK EXAMPLE',
@@ -459,7 +471,7 @@ export function buildWordFlexMessage(e: WordEntry, env: { B2LAB_URL?: string; QA
       example: e.qa[0],
       emptyText: '目前沒有 QA 工作例句。',
       word: e.word,
-      margin: 'lg',
+      margin: 'md',
     }),
   ];
 

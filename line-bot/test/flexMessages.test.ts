@@ -26,7 +26,8 @@ function actionsIn(node: any, out: any[] = []): any[] {
     node.forEach((n) => actionsIn(n, out));
     return out;
   }
-  if (node.type === 'button' && node.action) out.push(node.action);
+  // 按鈕現在是可點的 box（button 沒有字級屬性），所以收集任何帶 action 的節點
+  if (node.action) out.push(node.action);
   if (node.contents) actionsIn(node.contents, out);
   return out;
 }
@@ -121,7 +122,7 @@ describe('STEP 3 第一張卡', () => {
     const qa = findNode(body, (n) => n.contents?.[0]?.text === 'QA / WORK EXAMPLE');
     expect(qa.contents).toHaveLength(2);
     expect(qa.contents[1].text).toBe('目前沒有 QA 工作例句。');
-    expect(qa.paddingAll).toBe('10px');
+    expect(qa.paddingAll).toBe('8px');
   });
 
   it('按鈕是 2 x 2 格，每顆都有淡色圓角底', () => {
@@ -133,8 +134,10 @@ describe('STEP 3 第一張卡', () => {
         expect(cell.type).toBe('box');
         expect(cell.cornerRadius).toBeTruthy();
         expect(cell.backgroundColor).toBeTruthy();
-        expect(cell.contents[0].type).toBe('button');
-        expect(cell.contents[0].style).toBe('link');
+        expect(cell.action).toBeTruthy();
+        expect(cell.contents[0].type).toBe('text');
+        expect(cell.contents[0].size).toBe('sm');
+        expect(cell.contents[0].align).toBe('center');
       }
     }
   });
@@ -165,7 +168,7 @@ describe('STEP 3 第一張卡', () => {
     const b = msg.contents.body;
     expect(b.paddingStart).toBe('20px');
     expect(b.paddingEnd).toBe('20px');
-    expect(b.paddingTop).toBe('20px');
+    expect(b.paddingTop).toBe('18px');
   });
 
   it('沒有 collocations 時不顯示 Tip', () => {
@@ -363,13 +366,13 @@ describe('LINE Flex schema 相容性', () => {
     }
   });
 
-  it('button label 不超過 20 字且一定有 action', () => {
+  it('每個 action 都合法，label 不超過 20 字', () => {
     for (const msg of samples) {
       walk((msg as any).contents, (n) => {
-        if (n.type === 'button') {
-          expect(n.action).toBeTruthy();
-          expect(n.action.label.length).toBeLessThanOrEqual(20);
-        }
+        if (!n.action) return;
+        expect(['postback', 'uri', 'message']).toContain(n.action.type);
+        if (n.action.label) expect(n.action.label.length).toBeLessThanOrEqual(20);
+        if (n.action.type === 'postback') expect(n.action.data.length).toBeLessThanOrEqual(300);
       });
     }
   });
