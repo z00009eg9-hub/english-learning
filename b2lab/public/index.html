@@ -117,7 +117,7 @@ nav button.on::after{content:'';position:absolute;bottom:1px;left:50%;transform:
 .dayico .d{flex:1 1 auto;display:flex;align-items:center;justify-content:center;
   font-size:10.5px;font-weight:800;line-height:10.5px;text-align:center;padding-bottom:1px}
 /* ---------- layout ---------- */
-main{max-width:min(1100px,calc(100vw - var(--sb-w,0px) - 28px));margin:0 auto;padding:16px 14px 20px;overflow-x:hidden}
+main{width:100%;max-width:min(1100px,calc(100vw - var(--sb-w,0px) - 28px));min-width:0;margin:0 auto;padding:16px 14px 20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;margin-bottom:14px}
 h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items:center;gap:7px}
 .muted{color:var(--ink2);font-size:calc(13px * var(--fs))}
@@ -1016,8 +1016,8 @@ body.cnall [id^="kc"]{display:block!important}
 .bkvm{display:none}
 @media(max-width:640px){ .bkvd{display:none} .bkvm{display:block} }
 .bkvcard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:11px;padding:11px 13px;margin-bottom:9px}
-.bkvcard .w{font-size:calc(17px * var(--fs));font-weight:800;display:flex;gap:8px;align-items:center;flex-wrap:nowrap;min-width:0}
-.bkvcard .ipa{font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2);white-space:nowrap}
+.bkvcard .w{font-size:calc(17px * var(--fs));font-weight:800;display:flex;gap:8px;align-items:center;flex-wrap:wrap;min-width:0}
+.bkvcard .ipa{font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs));color:var(--ink2);white-space:normal;overflow-wrap:anywhere}
 .bkvcard .pos{color:#2b7a78;font-weight:800;font-style:italic;font-size:calc(12.5px * var(--fs))}
 .bkvcard .cnw{color:var(--accent2);font-weight:700;font-size:calc(15px * var(--fs));margin-top:2px}
 /* 課本表格：表頭一律一行、音標與片語/中文欄不在奇怪的地方斷行（表格改用橫向捲動） */
@@ -1246,27 +1246,51 @@ body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
   text-underline-offset:3px;font-size:calc(12px * var(--fs));padding:2px 4px}
 /* 課本表頭：淺橘底＋深棕字，取代高彩度橘色滿版 */
 #v-book th{background:var(--accent-soft);color:#8a4a12;border:1px solid var(--line);border-bottom:2px solid #eeceaa}
-/* 單字表欄寬：單字15% 音標15% 詞性5% 例句50% 中文15%，例句有足夠空間流暢呈現 */
-/* fixed 版面才能真正壓住欄寬：詞性固定 70px 置中，省下的寬度讓給例句與中文 */
-#v-book table.bkvtab{table-layout:fixed;width:100%}
-#v-book table.bkvtab th:nth-child(1),#v-book table.bkvtab td:nth-child(1){width:19%}
-#v-book table.bkvtab th:nth-child(2),#v-book table.bkvtab td:nth-child(2){width:16%}
-#v-book table.bkvtab th:nth-child(3),#v-book table.bkvtab td:nth-child(3){width:64px;text-align:center}
-#v-book table.bkvtab th:nth-child(4),#v-book table.bkvtab td:nth-child(4){width:auto}
-#v-book table.bkvtab th:nth-child(5),#v-book table.bkvtab td:nth-child(5){width:15%}
-#v-book table.bkvtab td:nth-child(1){white-space:normal}
-/* 音標整段不斷字（不在符號中間折行）；字級略縮以容納長音標 */
-#v-book table.bkvtab td:nth-child(2){white-space:nowrap;overflow-wrap:normal;word-break:keep-all;font-size:calc(12.5px * var(--fs))}
-#v-book table.bkvtab td:nth-child(3){white-space:normal}
-/* 單字＋發音＋星號鎖在同一行，不因字長被擠到第二行 */
-#v-book .wln{display:inline-flex;align-items:center;gap:4px;flex-wrap:nowrap;white-space:nowrap;max-width:100%}
-#v-book table.bkvtab .wln .spk{padding:3px 6px}
-/* 平板（641–1024px）：單字欄變窄放不下長單字＋🔊＋★ 的 nowrap 群組，改允許換行避免按鈕溢出被音標欄蓋住 */
-@media(min-width:641px) and (max-width:1024px){
-  #v-book table.bkvtab th:nth-child(1),#v-book table.bkvtab td:nth-child(1){width:23%}
-  #v-book table.bkvtab th:nth-child(2),#v-book table.bkvtab td:nth-child(2){width:13%}
-  #v-book .wln{flex-wrap:wrap;white-space:normal;overflow-wrap:anywhere;row-gap:2px}
+/* Vocabulary 以自身的實際寬度分成 Wide / Compact / Card 三種模式。
+   所有文字與按鈕 child 都能縮小和換行，學習內容永不裁切。 */
+#v-book{container-type:inline-size;container-name:book;min-width:0;max-width:100%}
+#v-book .bkvd,#v-book .bkvm,#v-book .bkvtab,#v-book .bkvrow,#v-book .bkvcell,#v-book .bkvword,#v-book .bkvipa,#v-book .bkvpos,#v-book .bkvexample,#v-book .bkvtranslation,#v-book .bkvmeaning{min-width:0;max-width:100%}
+#v-book .bkvm{display:none}
+#v-book .bkvtab{display:grid;gap:0;width:100%;border:1px solid var(--line);border-radius:10px}
+#v-book .bkvhead,#v-book .bkvrow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.7fr) minmax(0,.35fr) minmax(0,2.4fr) minmax(0,1fr)}
+#v-book .bkvtab:not(.has-cn) .bkvhead,#v-book .bkvtab:not(.has-cn) .bkvrow{grid-template-columns:minmax(0,1.15fr) minmax(0,.72fr) minmax(0,.35fr) minmax(0,2.78fr)}
+#v-book .bkvhead{background:var(--accent-soft);color:#8a4a12;font-weight:700;font-size:calc(15px * var(--fs))}
+#v-book .bkvcell{padding:8px 10px;border-right:1px solid var(--line);white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;word-break:break-word;height:auto;max-height:none}
+#v-book .bkvhead .bkvcell{border-bottom:2px solid #eeceaa}
+#v-book .bkvrow:not(:last-child) .bkvcell{border-bottom:1px solid var(--line)}
+#v-book .bkvrow:nth-child(odd){background:#fdfbf8}
+#v-book .bkvhead .bkvcell:last-child,#v-book .bkvrow .bkvcell:last-child{border-right:0}
+#v-book .bkvword{font-weight:700}
+#v-book .bkvipa{font-family:ui-monospace,monospace;font-size:calc(12.5px * var(--fs))}
+#v-book .bkvpos{text-align:center}
+#v-book .bkvtranslation{margin-top:4px;color:var(--ink2)}
+#v-book .bkvmeaning{color:var(--accent2);font-weight:700}
+#v-book .wln{display:flex;align-items:center;gap:4px;flex-wrap:wrap;max-width:100%;min-width:0;overflow-wrap:anywhere}
+#v-book .bkvtab .wln .spk{padding:3px 6px;flex:0 0 auto}
+/* Compact：去掉傳統表頭，例句和中文改為垂直層級。 */
+@container book (max-width:1119px){
+  #v-book .bkvhead{display:none}
+  #v-book .bkvtab{gap:9px;border:0;background:transparent}
+  #v-book .bkvrow{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"word word" "ipa pos" "example example" "meaning meaning";border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:11px;background:#fff!important;overflow:visible}
+  #v-book .bkvcell{border:0!important;padding:5px 11px}
+  #v-book .bkvword{grid-area:word;padding-top:10px}
+  #v-book .bkvipa{grid-area:ipa;color:var(--ink2)}
+  #v-book .bkvpos{grid-area:pos;text-align:right;color:#2b7a78;font-weight:800;font-style:italic}
+  #v-book .bkvexample{grid-area:example;margin:4px 11px 0;padding:8px 10px;background:#fdfbf8;border:1px solid var(--line)!important;border-radius:8px}
+  #v-book .bkvmeaning{grid-area:meaning;padding:8px 11px 11px}
 }
+/* Card：更窄的內容欄才換成完整卡片，和裝置種類無關。 */
+@container book (max-width:679px){
+  #v-book .bkvd{display:none}
+  #v-book .bkvm{display:block;width:100%;max-width:100%;min-width:0}
+}
+/* 字級越大，越早由 Wide 轉 Compact / Card。 */
+@container book (max-width:1199px){html.fs-large #v-book .bkvhead{display:none}html.fs-large #v-book .bkvtab{gap:9px;border:0;background:transparent}html.fs-large #v-book .bkvrow{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"word word" "ipa pos" "example example" "meaning meaning";border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:11px;background:#fff!important}html.fs-large #v-book .bkvcell{border:0!important;padding:5px 11px}html.fs-large #v-book .bkvword{grid-area:word;padding-top:10px}html.fs-large #v-book .bkvipa{grid-area:ipa;color:var(--ink2)}html.fs-large #v-book .bkvpos{grid-area:pos;text-align:right;color:#2b7a78;font-weight:800;font-style:italic}html.fs-large #v-book .bkvexample{grid-area:example;margin:4px 11px 0;padding:8px 10px;background:#fdfbf8;border:1px solid var(--line)!important;border-radius:8px}html.fs-large #v-book .bkvmeaning{grid-area:meaning;padding:8px 11px 11px}}
+@container book (max-width:1319px){html.fs-larger #v-book .bkvhead{display:none}html.fs-larger #v-book .bkvtab{gap:9px;border:0;background:transparent}html.fs-larger #v-book .bkvrow{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"word word" "ipa pos" "example example" "meaning meaning";border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:11px;background:#fff!important}html.fs-larger #v-book .bkvcell{border:0!important;padding:5px 11px}html.fs-larger #v-book .bkvword{grid-area:word;padding-top:10px}html.fs-larger #v-book .bkvipa{grid-area:ipa;color:var(--ink2)}html.fs-larger #v-book .bkvpos{grid-area:pos;text-align:right;color:#2b7a78;font-weight:800;font-style:italic}html.fs-larger #v-book .bkvexample{grid-area:example;margin:4px 11px 0;padding:8px 10px;background:#fdfbf8;border:1px solid var(--line)!important;border-radius:8px}html.fs-larger #v-book .bkvmeaning{grid-area:meaning;padding:8px 11px 11px}}
+@container book (max-width:1459px){html.fs-max #v-book .bkvhead{display:none}html.fs-max #v-book .bkvtab{gap:9px;border:0;background:transparent}html.fs-max #v-book .bkvrow{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"word word" "ipa pos" "example example" "meaning meaning";border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:11px;background:#fff!important}html.fs-max #v-book .bkvcell{border:0!important;padding:5px 11px}html.fs-max #v-book .bkvword{grid-area:word;padding-top:10px}html.fs-max #v-book .bkvipa{grid-area:ipa;color:var(--ink2)}html.fs-max #v-book .bkvpos{grid-area:pos;text-align:right;color:#2b7a78;font-weight:800;font-style:italic}html.fs-max #v-book .bkvexample{grid-area:example;margin:4px 11px 0;padding:8px 10px;background:#fdfbf8;border:1px solid var(--line)!important;border-radius:8px}html.fs-max #v-book .bkvmeaning{grid-area:meaning;padding:8px 11px 11px}}
+@container book (max-width:739px){html.fs-large #v-book .bkvd{display:none}html.fs-large #v-book .bkvm{display:block;width:100%;max-width:100%;min-width:0}}
+@container book (max-width:819px){html.fs-larger #v-book .bkvd{display:none}html.fs-larger #v-book .bkvm{display:block;width:100%;max-width:100%;min-width:0}}
+@container book (max-width:959px){html.fs-max #v-book .bkvd{display:none}html.fs-max #v-book .bkvm{display:block;width:100%;max-width:100%;min-width:0}}
 /* 補充字彙表：類別20% 英文50% 中文30% */
 #v-book table.bkxv th:nth-child(1),#v-book table.bkxv td:nth-child(1){width:20%;white-space:normal}
 #v-book table.bkxv th:nth-child(2),#v-book table.bkxv td:nth-child(2){width:50%}
@@ -1901,6 +1925,12 @@ function togGlobalCn(){
   CNALL=!CNALL;
   try{ localStorage.setItem('b2lab_cnall',CNALL?'1':'0'); }catch(e){}
   applyCnAll();
+  /* 課本 Vocabulary 的中文節點是條件輸出；切換時重繪目前課程以實際增刪欄位。 */
+  if(TAB==='book' && bkOpen){
+    RENDER.book();
+    anchor=document.elementFromPoint(ax, ay);
+    anchor=anchor ? (anchor.closest('.bkq,.bkex,.para,.wpitem,.wpbox,.focus,.upg,.bkbar,.card,.item,.magttl,section')||anchor) : null;
+  }
   if(anchor&&prevTop!=null){
     const r=anchor.getBoundingClientRect();
     if(r.height>0){
@@ -3641,7 +3671,13 @@ RENDER.prog=function(){
    + installCard() + oldSiteCard();
 };
 function setRate(r){ ST.rate=r; save(); say('This is the reading speed.',r); go('prog'); }
-function applyFs(){ document.documentElement.style.setProperty('--fs', String(ST.fs||1.15)); }
+function applyFs(){
+  const fs=Number(ST.fs||1.15);
+  document.documentElement.style.setProperty('--fs', String(fs));
+  document.documentElement.classList.toggle('fs-large',fs>=1.15&&fs<1.3);
+  document.documentElement.classList.toggle('fs-larger',fs>=1.3&&fs<1.45);
+  document.documentElement.classList.toggle('fs-max',fs>=1.45);
+}
 /* 今日分頁圖示顯示今天的真實日期（月份縮寫＋日） */
 function updateDayIcon(){
   const now=new Date();
@@ -4092,20 +4128,24 @@ function bookHTML(b){
     +(e.tag?'<span class="bktag'+(e.tag==='非正式'?' inf':'')+'">'+esc(e.tag)+'</span> ':'')
     +'<span class="sent" data-t="'+esc(e.en)+'" onclick="saySent(this)">'+bkHi(e.en,e.hi)+'</span> '+spk(e.en)+'</div>'
     +(e.cn?'<div class="ecn cnx">'+esc(e.cn)+'</div>':'')+'</div>';
-  /* 單字表（桌機表格＋手機卡片共用；中文欄放最後、跟中譯開關） */
-  const vtable=list=>'<div class="bkvd card" style="padding:10px"><div class="tw" style="margin:0"><table class="bkvtab">'
-    +'<tr><th>單字</th><th>音標</th><th>詞性</th><th>例句</th><th class="cnx">中文</th></tr>'
-    + list.map(t=>'<tr><td style="font-weight:700"><span class="wln">'+(t.star?'<span class="starb" title="重點單字">⭐</span>':'<span class="starb ph" aria-hidden="true">⭐</span>')+'<span>'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'課本：'+b.titleCn)+'</span></td>'
-      +'<td class="nw" style="font-family:ui-monospace,monospace">'+esc(t.ipa)+'</td><td class="nw">'+esc(t.pos)+'</td>'
-      +'<td><span class="sent" data-t="'+esc(t.ex)+'" onclick="saySent(this)">'+bkHi(t.ex,t.w)+'</span> '+spk(t.ex)+'<div class="muted cnx">'+esc(t.exCn)+'</div></td>'
-      +'<td class="nw cnx">'+esc(t.cn)+'</td></tr>').join('')
-    +'</table></div></div>'
-    +'<div class="bkvm">'+list.map(t=>'<div class="bkvcard">'
-      +'<div class="w">'+(t.star?'<span class="starb" title="重點單字">⭐</span>':'<span class="starb ph" aria-hidden="true">⭐</span>')+esc(t.w)+' <span class="pos">'+esc(t.pos)+'</span>'+spk(t.w)+wbBtn(t.w,'課本：'+b.titleCn)+'</div>'
-      +'<div class="ipa">'+esc(t.ipa)+'</div>'
-      +'<div class="cnw cnx">'+esc(t.cn)+'</div>'
-      +'<div class="bkex" style="margin-bottom:0"><div class="een"><span class="sent" data-t="'+esc(t.ex)+'" onclick="saySent(this)">'+bkHi(t.ex,t.w)+'</span> '+spk(t.ex)+'</div><div class="ecn cnx">'+esc(t.exCn)+'</div></div>'
-      +'</div>').join('')+'</div>';
+  /* 中譯切換時重新 render：中文節點與第五欄真正加入／移除，而非保留空白欄。 */
+  const vtable=list=>{
+    const showChinese=CNALL;
+    const word=t=>'<span class="wln">'+(t.star?'<span class="starb" title="重點單字">⭐</span>':'<span class="starb ph" aria-hidden="true">⭐</span>')+'<span>'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'課本：'+b.titleCn)+'</span>';
+    return '<div class="bkvd card" style="padding:10px"><div class="bkvtab'+(showChinese?' has-cn':'')+'" role="table">'
+      +'<div class="bkvhead" role="row"><div class="bkvcell" role="columnheader">單字</div><div class="bkvcell" role="columnheader">音標</div><div class="bkvcell" role="columnheader">詞性</div><div class="bkvcell" role="columnheader">例句</div>'+(showChinese?'<div class="bkvcell" role="columnheader">中文意思</div>':'')+'</div>'
+      +list.map(t=>'<div class="bkvrow" role="row"><div class="bkvcell bkvword" role="cell">'+word(t)+'</div>'
+        +'<div class="bkvcell bkvipa" role="cell">'+esc(t.ipa)+'</div><div class="bkvcell bkvpos" role="cell">'+esc(t.pos)+'</div>'
+        +'<div class="bkvcell bkvexample" role="cell"><span class="sent" data-t="'+esc(t.ex)+'" onclick="saySent(this)">'+bkHi(t.ex,t.w)+'</span> '+spk(t.ex)+(showChinese?'<div class="bkvtranslation">'+esc(t.exCn)+'</div>':'')+'</div>'
+        +(showChinese?'<div class="bkvcell bkvmeaning" role="cell">中文意思：<br>'+esc(t.cn)+'</div>':'')+'</div>').join('')
+      +'</div></div>'
+      +'<div class="bkvm">'+list.map(t=>'<div class="bkvcard">'
+        +'<div class="w">'+word(t)+'</div>'
+        +'<div class="ipa">'+esc(t.ipa)+' <span class="pos">'+esc(t.pos)+'</span></div>'
+        +'<div class="bkex" style="margin-bottom:0"><div class="een"><span class="sent" data-t="'+esc(t.ex)+'" onclick="saySent(this)">'+bkHi(t.ex,t.w)+'</span> '+spk(t.ex)+'</div>'+(showChinese?'<div class="ecn">'+esc(t.exCn)+'</div>':'')+'</div>'
+        +(showChinese?'<div class="cnw">中文意思：<br>'+esc(t.cn)+'</div>':'')
+        +'</div>').join('')+'</div>';
+  };
   const subh=t=>'<h2 class="sec bksub" style="color:var(--accent2);margin:14px 0 8px">'+esc(t)+'</h2>';
   let h='';
 
