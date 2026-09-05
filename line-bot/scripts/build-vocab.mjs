@@ -195,6 +195,7 @@ function entry(word) {
       category: '',
       source: '',
       lesson: '',
+      bookId: '',
       general: [],
       qa: [],
       related: [],
@@ -330,6 +331,15 @@ for (const e of words.values()) {
   e.related = [...rel].filter((r) => norm(r) !== e.id).slice(0, 6);
 }
 
+
+/* 課本課次 id：讓 LINE 的「完整學習」可以直接跳到那一課，而不是只彈出字卡。
+   NOTES.sources 的值長得像「20260811 補償用語與效率詞彙」，BOOK 的 id 是 bk20260811。
+   對不到的就留空，深連結會退回原本只開字卡的行為。 */
+const BOOK_IDS = new Set((b2.BOOK?.lessons || []).map((l) => l.id));
+for (const e of words.values()) {
+  const m = /^(\d{8})/.exec(e.lesson || '');
+  if (m && BOOK_IDS.has(`bk${m[1]}`)) e.bookId = `bk${m[1]}`;
+}
 /* 7) 收尾 */
 const list = [...words.values()]
   .filter((e) => e.translation || e.definition || e.general.length || e.qa.length)

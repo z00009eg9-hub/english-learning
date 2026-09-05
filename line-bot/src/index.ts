@@ -182,7 +182,20 @@ export default {
         }
         const messages = messagesForEvent(event, env);
         if (!messages || !messages.length) continue;
-        await replyMessage(env.LINE_CHANNEL_ACCESS_TOKEN, event.replyToken!, messages);
+        const sent = await replyMessage(env.LINE_CHANNEL_ACCESS_TOKEN, event.replyToken!, messages);
+        /* Flex 被 LINE 退回時降級成純文字再送一次 —— replyToken 在第一次失敗時還沒被用掉，
+           所以可以重試。這樣至少使用者收得到內容，log 也能分辨是版面問題還是憑證問題。 */
+        if (!sent.ok && sent.status === 400) {
+          const alt = messages
+            .map((m) => (m as { altText?: string }).altText)
+            .filter(Boolean)
+            .join('\n');
+          console.error(`[worker] flex 被退回，payload=${JSON.stringify(messages).length} bytes，改送純文字`);
+          const retry = await replyMessage(env.LINE_CHANNEL_ACCESS_TOKEN, event.replyToken!, [
+            textMessage(alt || '查詢結果'),
+          ]);
+          console.error(`[worker] 純文字重試結果 ok=${retry.ok} status=${retry.status}`);
+        }
       } catch (err) {
         /* STEP 19：任何一個 event 出錯都不能讓 Worker 掛掉，
            也不要影響同一批的其他 event */

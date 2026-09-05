@@ -27,6 +27,8 @@ export interface WordEntry {
   /** general | qa | both —— 決定「完整學習」導向哪個網站 */
   source: 'general' | 'qa' | 'both';
   lesson: string;
+  /** 對應 B2 Lab 課本的課次 id（bk20260811），對不到就是空字串 */
+  bookId: string;
   general: Example[];
   qa: Example[];
   related: string[];

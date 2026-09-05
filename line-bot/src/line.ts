@@ -70,6 +70,14 @@ export async function verifySignature(
 const REPLY_URL = 'https://api.line.me/v2/bot/message/reply';
 
 /**
+ * 清掉 token 裡的控制字元與空白。
+ * 在 PowerShell 用 Ctrl+V 貼上時，主控台會把它當成 ^V 塞一個 0x16 進去，
+ * 結果 Authorization header 不合法，LINE 會回 400 而且沒有任何錯誤內容，非常難查。
+ * LINE 的 access token 只會用到 base64 字元，所以這樣過濾是安全的。
+ */
+const cleanToken = (t: string) => String(t ?? '').replace(/[\u0000-\u0020\u007f]/g, '');
+
+/**
  * 回覆訊息。失敗不丟例外 —— webhook 一定要回 200，
  * 否則 LINE 會重送，使用者反而會收到重複訊息。
  */
@@ -86,13 +94,13 @@ export async function replyMessage(
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        authorization: `Bearer ${accessToken}`,
+        authorization: `Bearer ${cleanToken(accessToken)}`,
       },
       body: JSON.stringify({ replyToken, messages: messages.slice(0, 5) }),
     });
     if (res.ok) return { ok: true, status: res.status };
     const body = await res.text().catch(() => '');
-    console.error('[line] reply failed', res.status, body.slice(0, 300));
+    console.error(`[line] reply failed ${res.status} body=${JSON.stringify(body)}`);
     return { ok: false, status: res.status, body };
   } catch (err) {
     console.error('[line] reply threw', err);

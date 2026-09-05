@@ -45,7 +45,10 @@ export function siteUrls(env: { B2LAB_URL?: string; QA_URL?: string }) {
 export function studyUrl(e: WordEntry, env: { B2LAB_URL?: string; QA_URL?: string }): string {
   const { b2lab, qa } = siteUrls(env);
   const base = e.source === 'qa' ? qa : b2lab;
-  return `${base}${base.includes('?') ? '&' : '?'}w=${encodeURIComponent(e.word)}`;
+  let url = `${base}${base.includes('?') ? '&' : '?'}w=${encodeURIComponent(e.word)}`;
+  // 知道是哪一堂課教的就一起帶上，B2 Lab 會直接開那一課的課本內容
+  if (e.source !== 'qa' && e.bookId) url += `&lesson=${encodeURIComponent(e.bookId)}`;
+  return url;
 }
 
 /* ---------- 共用元件 ---------- */

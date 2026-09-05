@@ -5322,11 +5322,21 @@ RENDER.daily();
 cloudPull(()=>{ touchStreak(); updateStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); vidSubscribe(); });
 
 /* ---------- LINE Bot 深連結 ---------- */
-/* LINE 單字卡的「完整學習」會帶 ?w=compensate 進來，這裡直接把那個字的字卡打開。
-   沒有帶參數就完全不影響原本的流程。 */
+/* LINE 單字卡的「完整學習」會帶 ?w=compensate&lesson=bk20260811 進來：
+   有 lesson 就直接開那一課的課本內容，再把該字的字卡疊在上面；
+   只有 w 就維持原本只彈字卡的行為。沒有帶參數則完全不影響原本流程。 */
 try{
-  const lineWord=new URLSearchParams(location.search).get("w");
-  if(lineWord) setTimeout(()=>{ try{ showGloss(lineWord.trim()); }catch(e){} },300);
+  const lineQ=new URLSearchParams(location.search);
+  const lineWord=(lineQ.get("w")||"").trim();
+  const lineLesson=(lineQ.get("lesson")||"").trim();
+  if(lineWord||lineLesson){
+    setTimeout(()=>{
+      try{
+        if(lineLesson && BOOK_LESSONS.some(x=>x.id===lineLesson)){ go('book'); bkGo(lineLesson); }
+        if(lineWord) showGloss(lineWord);
+      }catch(e){}
+    },300);
+  }
 }catch(e){}
 </script>
 </body>

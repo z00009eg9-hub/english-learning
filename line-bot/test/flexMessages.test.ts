@@ -28,6 +28,7 @@ const bare: WordEntry = {
   category: '',
   source: 'general',
   lesson: '',
+  bookId: '',
   general: [],
   qa: [],
   related: [],
@@ -89,7 +90,7 @@ describe('STEP 3 第一張卡', () => {
 describe('STEP 7 深連結', () => {
   it('general 的字導向 B2 Lab', () => {
     expect(studyUrl(findWord('compensate')!, ENV)).toBe(
-      'https://english-b2-lab.web.app/?w=compensate',
+      'https://english-b2-lab.web.app/?w=compensate&lesson=bk20260811',
     );
   });
 
@@ -158,5 +159,22 @@ describe('中文查詢結果', () => {
     const s = dump(buildChineseResultsMessage('退款', [findWord('refund')!]));
     expect(s).toContain('refund');
     expect(s).toContain('a=word&w=refund');
+  });
+});
+
+describe('STEP 7 深連結：直接開課本那一課', () => {
+  it('知道課次的字會帶 lesson 參數', () => {
+    const e = findWord('compensate')!;
+    expect(e.bookId).toBe('bk20260811');
+    expect(studyUrl(e, ENV)).toContain('&lesson=bk20260811');
+  });
+
+  it('對不到課次的字不帶 lesson，退回只開字卡', () => {
+    expect(studyUrl(bare, ENV)).toBe('https://english-b2-lab.web.app/?w=bare');
+  });
+
+  it('QA 的字不帶 lesson（課本是 B2 Lab 的東西）', () => {
+    const e = { ...bare, word: 'tolerance', source: 'qa' as const, bookId: 'bk20260811' };
+    expect(studyUrl(e, ENV)).not.toContain('lesson=');
   });
 });
