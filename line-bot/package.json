@@ -1,0 +1,20 @@
+{
+  "name": "line-vocabulary-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LINE Official Account 單字查詢 Bot（Cloudflare Worker），資料沿用 B2 Lab 與 QA English 兩個網站",
+  "type": "module",
+  "scripts": {
+    "build:data": "node scripts/build-vocab.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8",
+    "wrangler": "^3.90.0"
+  }
+}

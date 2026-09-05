@@ -1,0 +1,16 @@
+name = "line-vocabulary-bot"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# 非機密設定。真正的金鑰用 `npx wrangler secret put ...`，
+# 絕對不要寫在這個檔案裡（這個檔案會進版控）。
+[vars]
+B2LAB_URL = "https://english-b2-lab.web.app/"
+QA_URL = "https://rexon-qa-english.web.app/"
+
+# 需要的 secrets（在 Cloudflare 上設定，不在這裡）：
+#   LINE_CHANNEL_SECRET
+#   LINE_CHANNEL_ACCESS_TOKEN
+
+[observability]
+enabled = true

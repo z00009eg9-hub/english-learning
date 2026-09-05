@@ -1,0 +1,4 @@
+# 本機開發用。複製成 .dev.vars 再填自己的值（.dev.vars 已被 .gitignore 排除）。
+# 這裡的值只有本機 `wrangler dev` 會用到，部署到 Cloudflare 用的是 secret。
+LINE_CHANNEL_SECRET=your_channel_secret_here
+LINE_CHANNEL_ACCESS_TOKEN=your_channel_access_token_here

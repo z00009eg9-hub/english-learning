@@ -5320,6 +5320,14 @@ touchStreak();
 updateStreak();
 RENDER.daily();
 cloudPull(()=>{ touchStreak(); updateStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); vidSubscribe(); });
+
+/* ---------- LINE Bot 深連結 ---------- */
+/* LINE 單字卡的「完整學習」會帶 ?w=compensate 進來，這裡直接把那個字的字卡打開。
+   沒有帶參數就完全不影響原本的流程。 */
+try{
+  const lineWord=new URLSearchParams(location.search).get("w");
+  if(lineWord) setTimeout(()=>{ try{ showGloss(lineWord.trim()); }catch(e){} },300);
+}catch(e){}
 </script>
 </body>
 </html>
