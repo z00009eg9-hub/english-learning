@@ -18,8 +18,8 @@
   --accent:#e8813a; --accent2:#c9631f; --accent-soft:#fdf0e5;
   --a2:#d98324; --b1:#3f9e64; --b1p:#3b82c4; --b2:#8b5cf6;
   --ok:#2f9e5f; --bad:#d9534f;
-  --shadow:0 2px 10px rgba(60,45,30,.07);
-  --r:14px;
+  --shadow:0 1px 5px rgba(60,45,30,.06);
+  --r:12px;
   --fs:1;      /* 全站字級倍率，可在「進度 → 設定」調整（預設依螢幕寬度，見 DEFAULT_FS） */
   --read-w:720px;  /* 長篇文字最大欄寬：一行超過 ~80 字元會明顯增加閱讀疲勞 */
   --sb-w:0px;
@@ -97,20 +97,21 @@ header button.lv:active{transform:scale(.93)}
 /* ---------- tabs（同樣固定尺寸） ---------- */
 nav{
   position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--line);
-  display:flex;z-index:60;padding-bottom:env(safe-area-inset-bottom)
+  display:flex;z-index:60;padding-bottom:env(safe-area-inset-bottom);
+  box-shadow:0 -1px 4px rgba(60,45,30,.06)
 }
 nav button{
-  flex:1;border:0;background:none;padding:6px 2px 5px;font:inherit;font-size:11px;color:var(--ink2);
-  cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;line-height:1.35
+  flex:1;border:0;background:none;padding:5px 2px 4px;font:inherit;font-size:10.5px;color:var(--ink2);
+  cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.3
 }
-nav button i{font-style:normal;font-size:20px;line-height:1;transition:transform .18s ease}
-nav button.on{color:var(--accent2);font-weight:800;font-size:11.5px}
+nav button i{font-style:normal;font-size:18px;line-height:1;transition:transform .18s ease}
+nav button.on{color:var(--accent2);font-weight:800;font-size:11px}
 /* 未選取的分頁圖示稍微降飽和，讓目前所在的分頁一眼跳出來 */
 nav button:not(.on) i{filter:grayscale(.35) opacity(.75)}
 /* 目前所在分頁：圖示微放大＋柔和橢圓底盤（不用光暈，較精緻），文字橘色加粗也稍大 */
 nav button.on i{
-  transform:translateY(-1px) scale(1.12);
-  background:var(--accent-soft);border-radius:16px;padding:3px 13px
+  transform:translateY(-1px) scale(1.1);
+  background:var(--accent-soft);border-radius:14px;padding:2px 11px
 }
 /* 目前分頁再加一顆橘色指標點，狀態更醒目 */
 nav button{position:relative}
@@ -125,9 +126,9 @@ nav button.on::after{content:'';position:absolute;bottom:1px;left:50%;transform:
 .dayico .d{flex:1 1 auto;display:flex;align-items:center;justify-content:center;
   font-size:10.5px;font-weight:800;line-height:10.5px;text-align:center;padding-bottom:1px}
 /* ---------- layout ---------- */
-main{width:100%;max-width:min(1100px,calc(100vw - var(--sb-w,0px) - 28px));min-width:0;margin:0 auto;padding:16px 14px 20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;margin-bottom:14px}
-h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items:center;gap:7px}
+main{width:100%;max-width:min(1100px,calc(100vw - var(--sb-w,0px) - 28px));min-width:0;margin:0 auto;padding:16px 14px calc(56px + env(safe-area-inset-bottom) + 12px)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 1px 4px rgba(60,45,30,.05);padding:14px;margin-bottom:12px}
+h2.sec{font-size:calc(15px * var(--fs));margin:0 0 8px;display:flex;align-items:center;gap:6px}
 .muted{color:var(--ink2);font-size:calc(13px * var(--fs))}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
@@ -155,27 +156,27 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
 .spk:active{background:var(--accent-soft)}
 /* ---------- article / unit list ---------- */
 .item{
-  background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;
-  padding:12px 14px;margin-bottom:10px;cursor:pointer;box-shadow:var(--shadow);
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;
+  padding:10px 12px;margin-bottom:8px;cursor:pointer;box-shadow:0 1px 4px rgba(60,45,30,.05);
   position:relative;overflow:hidden
 }
 .item:active{background:var(--accent-soft)}
 /* 滑鼠滑過清單項目：浮起來的立體感（只在有滑鼠的裝置） */
 @media(hover:hover){
-  .item{transition:transform .18s ease,box-shadow .18s ease}
-  .item:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(60,45,30,.16);border-color:#dccfbe}
+  .item{transition:transform .15s ease,box-shadow .15s ease}
+  .item:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(60,45,30,.10);border-color:#dccfbe}
 }
 /* 已完成：右上角綠色打勾角標 */
 .item.fin::before{
-  content:"✓";position:absolute;top:0;right:0;width:36px;height:36px;
-  background:var(--ok);color:#fff;font-weight:900;font-size:20px;line-height:36px;
-  text-align:center;border-radius:0 11px 0 14px;box-shadow:-1px 1px 5px rgba(30,120,70,.3)
+  content:"✓";position:absolute;top:0;right:0;width:30px;height:30px;
+  background:var(--ok);color:#fff;font-weight:900;font-size:16px;line-height:30px;
+  text-align:center;border-radius:0 9px 0 12px;box-shadow:-1px 1px 4px rgba(30,120,70,.2)
 }
 @media(max-width:499px){
-  .item.fin::before{width:26px;height:26px;font-size:14px;line-height:26px;border-radius:0 11px 0 10px}
-  .item.fin>.row:first-child,.item.fin>.t:first-child{padding-right:24px}
+  .item.fin::before{width:24px;height:24px;font-size:12px;line-height:24px;border-radius:0 9px 0 10px}
+  .item.fin>.row:first-child,.item.fin>.t:first-child{padding-right:22px}
 }
-.item.fin>.row:first-child,.item.fin>.t:first-child{padding-right:34px}
+.item.fin>.row:first-child,.item.fin>.t:first-child{padding-right:28px}
 /* 已完成卡片整體降飽和變灰，視線掃過時自動聚焦在還沒讀的項目；綠色打勾角標維持原色 */
 .item.fin{background:#f7f4ee;border-left-color:#d9d0c3!important}
 .item.fin .t,.item.fin .tc,.item.fin .meta,.item.fin .lv{filter:saturate(.25) opacity(.6)}
@@ -192,23 +193,23 @@ h2.sec{font-size:calc(16px * var(--fs));margin:0 0 10px;display:flex;align-items
   box-shadow:0 1px 4px rgba(160,90,30,.12)
 }
 .item.new .t{padding-right:52px}
-.item .t{font-weight:800;font-size:calc(16.5px * var(--fs));margin-bottom:4px;line-height:1.45}
-.item .tc{font-size:calc(13px * var(--fs));color:var(--ink2)}
-.item .meta{font-size:calc(11.5px * var(--fs));color:#57504a;margin-top:7px;display:flex;gap:6px 15px;flex-wrap:wrap;align-items:center}
+.item .t{font-weight:800;font-size:calc(15.5px * var(--fs));margin-bottom:3px;line-height:1.4}
+.item .tc{font-size:calc(12.5px * var(--fs));color:var(--ink2)}
+.item .meta{font-size:calc(11px * var(--fs));color:#7a7168;margin-top:5px;display:flex;gap:4px 12px;flex-wrap:wrap;align-items:center}
 /* meta 靠右群組：字數＋預估時間靠右對齊，跟左側「難度＋類別」分開呈現 */
 .item .meta .mR{margin-left:auto;white-space:nowrap}
 /* 清單卡片右下的行動引導：實心膠囊按鈕，CTA 一目了然 */
-.item .goCta{text-align:right;margin-top:7px}
+.item .goCta{text-align:right;margin-top:5px}
 .item .goCta>i{display:inline-block;font-style:normal;background:var(--accent2);color:#fff;font-weight:800;
-  font-size:calc(12.5px * var(--fs));border-radius:999px;padding:4px 13px;line-height:1.5;
-  box-shadow:0 2px 5px rgba(60,45,30,.18)}
+  font-size:calc(11.5px * var(--fs));border-radius:999px;padding:3px 11px;line-height:1.5;
+  box-shadow:0 1px 3px rgba(60,45,30,.12)}
 .item.fin .goCta>i,.item .goCta.again>i{background:var(--card);color:var(--accent2);border:1.5px solid var(--accent2);box-shadow:none}
 @media(hover:hover){.item:hover .goCta>i{filter:brightness(1.08)}}
 /* 未開始／已完成狀態小標籤 */
 .stc{font-size:calc(10.5px * var(--fs));font-weight:800;border-radius:6px;padding:2px 7px;background:#f1ede6;color:#8a7f72;border:1px solid #e2dbd0;white-space:nowrap}
 /* 桌機 hover：整張卡片微上浮＋邊框亮起 */
 .item{transition:transform .13s,box-shadow .13s,border-color .13s}
-@media(hover:hover){.item:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(60,45,30,.14);border-color:var(--accent2)}}
+@media(hover:hover){.item:hover{transform:translateY(-1px);box-shadow:0 3px 10px rgba(60,45,30,.10);border-color:var(--accent2)}}
 .item .done{color:var(--ok);font-weight:700}
 /* ---------- reading view ---------- */
 .para{margin:0 0 16px;max-width:var(--read-w)}
@@ -292,11 +293,12 @@ tr:nth-child(even) td{background:#fdfbf8}
 .grade small{display:block;font-size:calc(10px * var(--fs));font-weight:400;opacity:.9}
 .pbwrap{background:#efeae3;border-radius:20px;height:9px;overflow:hidden;margin:8px 0}
 .pbfill{background:linear-gradient(90deg,#f0964f,#d9691f);height:100%;width:0;transition:width .3s}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:9px}
-.stat{background:#f9fafb;border:1px solid var(--line);border-radius:12px;padding:13px 8px;text-align:center}
-.stat b{display:block;font-size:calc(32px * var(--fs));color:var(--accent2);line-height:1.15;font-weight:900}
-.stat b i{font-style:normal;font-size:calc(11px * var(--fs));font-weight:600;color:var(--ink2);margin-left:2px;vertical-align:2px}
-.stat span{font-size:calc(11.5px * var(--fs));color:var(--ink2);word-break:keep-all}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media(max-width:499px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:#f9fafb;border:1px solid var(--line);border-radius:10px;padding:10px 8px;text-align:center}
+.stat b{display:block;font-size:calc(26px * var(--fs));color:var(--accent2);line-height:1.15;font-weight:900}
+.stat b i{font-style:normal;font-size:calc(10.5px * var(--fs));font-weight:600;color:var(--ink2);margin-left:2px;vertical-align:2px}
+.stat span{font-size:calc(10.5px * var(--fs));color:var(--ink2);word-break:keep-all}
 /* 可點擊的統計格（點了跳到對應清單） */
 .stat.tap{cursor:pointer;border-color:var(--accent)}
 .stat.tap:active{background:#fff7ee}
@@ -3406,11 +3408,11 @@ RENDER.daily=function(){
     h+='<div class="card"><div class="muted">還沒有新內容。新文章與文法在<b>每週三、五</b>早上更新，可以先到「閱讀」與「文法」分頁，或看今日聽力。</div></div>';
   }
   h+='<div class="card"><h2 class="sec">🎯 今天可以這樣安排</h2>'
-   +'<ol style="font-size:calc(15px * var(--fs));padding-left:22px;margin:4px 0">'
-   +'<li style="margin-bottom:7px">先讀今日文章，點不懂的字查中文（約 8 分鐘）</li>'
-   +'<li style="margin-bottom:7px">做完文章的理解測驗，再看「B1 → B2 句型升級」</li>'
-   +'<li style="margin-bottom:7px">讀今日文法單元並做練習題（約 10 分鐘）</li>'
-   +'<li style="margin-bottom:7px">看今日聽力影片，跟讀關鍵句、做理解測驗（約 8 分鐘）</li>'
+   +'<ol style="font-size:calc(13.5px * var(--fs));padding-left:20px;margin:2px 0;color:var(--ink2)">'
+   +'<li style="margin-bottom:4px">先讀今日文章，點不懂的字查中文（約 8 分鐘）</li>'
+   +'<li style="margin-bottom:4px">做完文章的理解測驗，再看「B1 → B2 句型升級」</li>'
+   +'<li style="margin-bottom:4px">讀今日文法單元並做練習題（約 10 分鐘）</li>'
+   +'<li style="margin-bottom:4px">看今日聽力影片，跟讀關鍵句、做理解測驗（約 8 分鐘）</li>'
    +'<li>最後去「單字卡」清掉今天到期的字</li></ol></div>';
 
   const todayIds=new Set([...artsToday,...gramsToday,...listensToday].map(x=>x.id));
