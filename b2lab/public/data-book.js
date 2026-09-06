@@ -330,21 +330,6 @@ window.BOOK = {
             { en: 'got very wet / walked along the beach / got ready to go back home / felt tired because… / really enjoyed', cn: '✨ 老師加的五個地方：狀態改變、沿著、準備好、補原因、加強語氣。敘述文中數字 20 老師寫成英文 twenty。', hi: 'really' }
           ]
         }
-      ],
-      summaryTitle: 'VIII. 快速總結 Quick Summary',
-      summary: [
-        { k: 'arrive', v: 'arrive at 小地點、arrive in 城市／國家、arrive home 不加介系詞；不接 to' },
-        { k: '序數行程', v: 'On the first / second / third day, + 過去式；不能只寫 First day' },
-        { k: '過去式一致', v: 'took（不是 taked）；整段敘述動詞都要用過去式' },
-        { k: 'get 的兩個用法', v: 'get + adj 變得……（got very wet）／ get ready to + V 準備好……' },
-        { k: '冠詞 the', v: 'take the elevator、to the second floor、the sand（特定的沙）' },
-        { k: 'make + O + V', v: 'make sb feel + adj，中間不加 to；feel like + 子句 表「感覺好像」' },
-        { k: '-ing vs -ed', v: '事情 relaxing／stressful；人 relaxed／stressed' },
-        { k: 'manage to + V', v: '設法做到；後面接 to + V，不接 V-ing' },
-        { k: '壓力四說法', v: 'be under a lot of stress／be very stressed／have a lot of stress／be under a lot of pressure' },
-        { k: 'under + N', v: "construction／pressure／control／someone's control／review" },
-        { k: '紓壓', v: 'relieve ＝ release stress；help sb + V ／ to + V 表目的 ／ V-ing 當主詞' },
-        { k: '❌ 中式英文', v: 'arrive to Hanoi ✗／First day ✗／my stress was full ✗／manage doing ✗／made me to feel ✗' }
       ]
     },
     {
