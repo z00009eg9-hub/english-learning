@@ -1953,7 +1953,9 @@ function dictPlay(raw, done, fallback){
   const fb=()=>{ if(fell) return; fell=true; fallback(); };
   if(!/^[a-z]+(?:[ -][a-z]+){0,2}$/.test(w)){ fb(); return; }
   const key=w.replace(/[ -]/g,'_');
-  const urls=['https://ssl.gstatic.com/dictionary/static/sounds/20200429/'+key+'--_us_1.mp3',
+  /* 自家 audio/ 是離線統一響度過的檔（loudnorm I=-16），優先用；沒有再試原站，最後退 TTS */
+  const urls=['audio/'+key+'.mp3',
+              'https://ssl.gstatic.com/dictionary/static/sounds/20200429/'+key+'--_us_1.mp3',
               'https://ssl.gstatic.com/dictionary/static/sounds/20200429/'+key+'_us_1.mp3'];
   let i=0;
   if(dictAu){ try{dictAu.pause()}catch(e){} }
