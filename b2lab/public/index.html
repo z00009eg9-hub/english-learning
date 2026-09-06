@@ -530,12 +530,8 @@ body.cnall #v-real span.cnx{display:inline!important}
 #v-real .magttl h2{text-transform:none}
 #v-real a.btn{text-decoration:none;display:inline-flex;align-items:center;gap:5px}
 .rwcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;
-  margin-bottom:10px;display:flex;gap:14px;align-items:flex-start}
-.rw-thumb{flex:0 0 auto;width:76px;height:76px;border-radius:10px;background:#f5f1ec;border:1px solid var(--line);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:var(--ink2)}
-.rw-thumb svg{width:22px;height:22px;opacity:.55}
-.rw-thumb .src{font-size:var(--font-meta);font-weight:600;color:var(--ink2)}
-.rw-main{flex:1;min-width:0}
+  margin-bottom:10px}
+.rw-main{min-width:0}
 .rw-t{font-weight:var(--fw-emph);font-size:var(--font-body);line-height:var(--lh-body);color:var(--ink)}
 .rw-meta{font-size:var(--font-secondary);color:var(--ink2);margin-top:2px}
 .rw-kv{font-size:var(--font-secondary);color:#6b5040;font-weight:600;margin-top:5px}
@@ -545,10 +541,6 @@ body.cnall #v-real span.cnx{display:inline!important}
 @media(hover:hover){.rw-acts a.ext:hover{color:var(--accent2)}}
 .rw-acts .go{border:0;background:none;color:var(--accent2);font:inherit;font-size:var(--font-secondary);
   font-weight:700;cursor:pointer;padding:0}
-@media(max-width:640px){
-  .rwcard{flex-direction:column;gap:8px}
-  .rw-thumb{width:100%;height:44px;flex-direction:row}
-}
 /* 實景 detail：核心單字沿用課本 bkvrow 版式（規則鏡射自 #v-book，不動原規則） */
 #v-real .bkvd{display:block;padding:0;box-shadow:none;overflow:hidden}
 #v-real .bkvtab{display:block;width:100%;border:0}
@@ -2260,11 +2252,9 @@ function rebalanceMag(){
   if(innerWidth<860) return;
   const L=mag.children[0].getBoundingClientRect().height;
   const R=R0;
-  if(R>L*1.2||R-L>250){                                // 右欄太長 → 全寬＋雙欄流排
-    mag.classList.add('stack');
-    const body=mag.children[1].querySelector('.wpbody');
-    if(body) body.classList.add('flow');
-  }else if(L>R*1.2){                                   // 內文太長 → 右欄跟著捲動
+  /* 2026-09-06 起固定雜誌版式：圖示帶＋內文在左、單字欄在右，
+     右欄較長時不再改成全寬雙欄（使用者要求所有文章版面一致） */
+  if(L>R*1.2){                                         // 內文太長 → 右欄跟著捲動
     mag.classList.add('pin');
   }
 }
@@ -2294,6 +2284,30 @@ const reEsc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
 /* 文章插圖／圖表（來自 data-art.js，全部是本站自己畫的 SVG）。
    圖說若是「A=… → B=… → C=…」的圖示對照鏈，改成編號步驟膠囊，比擠成一段好讀 */
+/* 每日文章「五圓圖示帶」：在五個圓之間補順序箭頭（配色維持各圖原本的調色盤，
+   箭頭自動取該圖裡最鮮豔的主色）。只處理「800×200 且恰好五個圓」的模板圖，
+   其他圖表（長條圖等）不動 */
+function artNormSVG(svg){
+  const s=String(svg||'');
+  if(!/viewBox="0 0 800 200"/.test(s)) return s;
+  if((s.match(/translate\(\d+,52\) scale\(1\.5\)/g)||[]).length!==5) return s;
+  /* 箭頭顏色＝圖裡「最常用的鮮豔主色」（飽和度×出現次數加權），跟該圖調色盤一致 */
+  let acc='#8a7a66', best=0;
+  const cnt={};
+  (s.match(/#[0-9a-fA-F]{6}\b/g)||[]).forEach(hex=>{ cnt[hex]=(cnt[hex]||0)+1; });
+  Object.keys(cnt).forEach(hex=>{
+    const r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+    const mx=Math.max(r,g,b), mn=Math.min(r,g,b);
+    const lum=(0.299*r+0.587*g+0.114*b)/255, sat=mx?(mx-mn)/mx:0;
+    const score=(lum>0.2&&lum<0.75&&sat>0.3)?sat*cnt[hex]:0;
+    if(score>best){ best=score; acc=hex; }
+  });
+  const arrows=[140,294,448,602].map(x0=>{
+    const x1=x0+12, x2=x0+46;
+    return '<path d="M'+x1+' 100 H'+x2+' M'+x2+' 100 l-9 -7 M'+x2+' 100 l-9 7"/>';
+  }).join('');
+  return s.replace('</svg>','<g fill="none" stroke="'+acc+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".8">'+arrows+'</g></svg>');
+}
 function artHTML(id){
   const a=(window.ART||{})[id];
   if(!a) return '';
@@ -2311,7 +2325,7 @@ function artHTML(id){
        +'</div>'+(rest?'<div style="margin-top:7px">'+esc(rest)+'</div>':'')+'</figcaption>';
     }else cap='<figcaption>'+esc(s)+'</figcaption>';
   }
-  return '<figure class="artbox flush" style="margin:0 0 14px">'+a.svg+cap+'</figure>';
+  return '<figure class="artbox flush" style="margin:0 0 14px">'+artNormSVG(a.svg)+cap+'</figure>';
 }
 
 /* 升級句 vs 原句：把 B2 句裡「B1 句沒有的字」上底色，一眼看出升級了哪裡。
@@ -4397,9 +4411,6 @@ function rwStat(id){
     : d&&d.k==='started'?{k:'started',label:'進行中'}
     : {k:'unread',label:'尚未開始'};
 }
-function rwSrcIcon(){
-  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8.5l-6 3.5 6 3.5z"/></svg>';
-}
 /* 解析「貼上分享內容」：只取可靠資訊（標題 / 來源 / 連結），不假裝理解影片內容 */
 function rwParseShare(txt){
   const url=(String(txt).match(/https?:\/\/[^\s，。」》)\]】]+/)||[''])[0];
@@ -4433,7 +4444,7 @@ function rwListHTML(){
   const usedCats=RW_CATS.filter(c=>all.some(l=>l.cat===c));
   const list=rwCat==='all'?all:all.filter(l=>l.cat===rwCat);
   let h='<div class="card"><h2 class="sec">🎬 實景英語</h2>'
-   +'<div class="hint">從真實生活影片學自然英文：貼上小紅書、YouTube 等分享內容建立教材，'
+   +'<div class="hint">從真實生活影片學自然英文：貼上影片分享內容建立教材，'
    +'整理核心單字與實境用法，收藏的字會進生詞本與 Speak Up 一起複習。</div>'
    +'<div class="muted">共 '+all.length+' 篇教材</div>'
    +'<div class="chips" style="margin-top:10px">'
@@ -4451,9 +4462,9 @@ function rwListHTML(){
 function rwCardHTML(l){
   const st=rwStat(l.id);
   const kv=(l.vocab||[]).map(v=>v.w).filter(Boolean).join(' · ');
-  const meta=[l.src,l.cat,l.level,l.min].filter(Boolean).join(' · ');
+  /* metadata 只放學習資訊（國家/分類/程度/時間），不顯示第三方平台名稱 */
+  const meta=[l.country,l.cat,l.level,l.min].filter(Boolean).join(' · ');
   return '<div class="rwcard">'
-   +'<div class="rw-thumb"><span style="font-size:22px;line-height:1">'+rwIcon(l)+'</span><span class="src">'+esc(l.src||'影片')+'</span></div>'
    +'<div class="rw-main">'
    +'<div class="rw-t">'+esc(l.ti)+'</div>'
    +'<div class="rw-meta">'+esc(meta)+(meta?'　':'')+'<span class="mrf-why st-'+st.k+'" style="margin:0">'+st.label+'</span></div>'
@@ -4486,14 +4497,14 @@ function rwDetailHTML(l){
   let h='<div class="magttl"><button class="back" onclick="rwBack()"><span class="back-label">返回實景</span></button>'
    +'<div class="magico">'+rwIcon(l)+'</div>'
    +'<h2>'+esc(l.ti)+'</h2>'
-   +'<div class="mr-time">'+esc([l.src,l.cat,l.level,l.min].filter(Boolean).join(' · '))+'</div>'
+   +'<div class="mr-time">'+esc([l.country,l.cat,l.level,l.min].filter(Boolean).join(' · '))+'</div>'
    +'<div class="bar"><span class="mrf-why st-'+st.k+'" style="margin:0">'+st.label+'</span>'
    +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button></div></div>';
-  /* 來源卡只顯示來源名稱與連結；簡體原始標題保留在資料裡供追溯，不顯示在 UI */
-  h+='<div class="mr-sec">原始影片</div><div class="card rw-srccard">'
-   +'<span class="srcname">'+esc(l.src||'外部來源')+'</span>'
-   +(l.url?'<a class="btn ghost" style="margin-left:auto" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>':'')
-   +'</div>';
+  /* 來源區不顯示任何平台品牌；sourceType / 原始標題保留在資料層供追溯 */
+  if(l.url)
+    h+='<div class="mr-sec">原始影片</div><div class="card rw-srccard">'
+     +'<a class="btn ghost" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>'
+     +'</div>';
   if(l.ctx) h+='<div class="mr-sec">情境 Context</div><div class="card">'+rwParas(l.ctx)+'</div>';
   if((l.vocab||[]).length)
     h+='<div class="mr-sec">核心單字（'+l.vocab.length+'）</div>'
@@ -4535,14 +4546,14 @@ function rwFormHTML(){
   return '<div class="card rw-form">'
    +'<h2 class="sec">'+(rwEditId?'編輯實景教材':'新增實景教材')+'</h2>'
    +(rwEditId?'':'<label>貼上分享內容</label>'
-     +'<textarea id="rwf-paste" placeholder="例如：&#10;美国马路上的corridor是指什么？&#10;国外实景学地道英语&#10;https://xhslink.cn/o/xxxx 複製後開啟小紅書查看筆記">'+esc(d.paste||'')+'</textarea>'
+     +'<textarea id="rwf-paste" placeholder="把影片 App 的分享文字整段貼進來（含標題與連結）">'+esc(d.paste||'')+'</textarea>'
      +'<div class="hint2">貼上後按「解析」，會自動帶出標題、來源與連結；其他欄位再自行補充。系統不會自動抓取影片內容。</div>'
      +'<div style="margin-top:8px"><button class="btn sm" onclick="rwParse()">解析分享內容</button></div>')
    +'<label>標題（繁體中文，網站顯示用）</label><input id="rwf-ti" value="'+esc(d.ti||'')+'" placeholder="例如：美國馬路上的 corridor 是指什麼？">'
-   +'<label>原始來源標題（保留原文，方便追溯）</label><input id="rwf-tisrc" value="'+esc(d.tiSrc||'')+'">'
-   +'<div class="row2"><div><label>來源</label><input id="rwf-src" value="'+esc(d.src||'')+'" placeholder="小紅書 / YouTube …"></div>'
-   +'<div><label>來源連結</label><input id="rwf-url" value="'+esc(d.url||'')+'" placeholder="https://…"></div></div>'
-   +'<div class="row2"><div><label>分類</label><select id="rwf-cat">'+catOpts+'</select></div>'
+   +'<label>原始標題（保留原文，方便追溯，不會顯示在教材頁）</label><input id="rwf-tisrc" value="'+esc(d.tiSrc||'')+'">'
+   +'<label>原始連結</label><input id="rwf-url" value="'+esc(d.url||'')+'" placeholder="https://…">'
+   +'<div class="row2"><div><label>國家／地區（選填）</label><input id="rwf-country" value="'+esc(d.country||'')+'" placeholder="美國"></div>'
+   +'<div><label>分類</label><select id="rwf-cat">'+catOpts+'</select></div>'
    +'<div><label>程度</label><input id="rwf-lv" value="'+esc(d.level||'B1–B2')+'"></div>'
    +'<div><label>預估時間</label><input id="rwf-min" value="'+esc(d.min||'約 3 分鐘')+'"></div></div>'
    +'<label>學習重點（一句話）</label><input id="rwf-point" value="'+esc(d.point||'')+'" placeholder="例如：從真實街景理解 corridor 在交通語境中的意思">'
@@ -4562,7 +4573,7 @@ function rwFormHTML(){
 function rwCapture(){
   const g=id=>{const el=document.getElementById(id);return el?el.value:'';};
   rwDraft=Object.assign({},rwDraft||{},{
-    paste:g('rwf-paste'), ti:g('rwf-ti'), tiSrc:g('rwf-tisrc'), src:g('rwf-src'), url:g('rwf-url'),
+    paste:g('rwf-paste'), ti:g('rwf-ti'), tiSrc:g('rwf-tisrc'), url:g('rwf-url'), country:g('rwf-country'),
     cat:g('rwf-cat'), level:g('rwf-lv'), min:g('rwf-min'), point:g('rwf-point'),
     vocabTxt:g('rwf-vocab'), quotesTxt:g('rwf-quotes'), ctx:g('rwf-ctx'), usage:g('rwf-usage'), cmpTxt:g('rwf-cmp'), spq:g('rwf-spq')
   });
@@ -4596,7 +4607,9 @@ function rwSave(){
   ST.rw=ST.rw||{};
   ST.rw[id]={ id, created:prev.created||Date.now(), t:Date.now(),
     videoType:prev.videoType||'external',
-    ti, tiSrc:(d.tiSrc||'').trim(), src:(d.src||'').trim(), url:(d.url||'').trim(),
+    ti, tiSrc:(d.tiSrc||'').trim(),
+    src:(d.src!=null&&d.src!==''?d.src:prev.src)||'',   /* sourceType 只留資料層，UI 不顯示 */
+    url:(d.url||'').trim(), country:(d.country||'').trim(),
     cat:d.cat||'生活', level:(d.level||'').trim(), min:(d.min||'').trim(),
     point:(d.point||'').trim(), ctx:(d.ctx||'').trim(), usage:(d.usage||'').trim(),
     cmp, quotes, spq:(d.spq||'').trim(), vocab };
