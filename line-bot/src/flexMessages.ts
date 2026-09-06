@@ -15,8 +15,9 @@ import { buildPostback } from './line';
 /* 文字：由深到淺就是閱讀優先順序 */
 const INK = '#111827'; // 1. 單字
 const BODY = '#1F2937'; // 2. 中文意思
-const TEXT = '#334155'; // 3. 例句英文
-const MUTED = '#98A2B3'; // 5/7. 英文定義、例句中文翻譯
+const TEXT = '#1F2937'; // 3. 例句英文（本輪加深，用對比補上沒有 medium 字重的缺口）
+const MUTED = '#98A2B3'; // 5. 英文定義（維持最輕）
+const TRANS = '#78859A'; // 7. 例句中文翻譯（比定義稍微清楚一點，仍明顯次於英文）
 const META = '#8A94A6'; // 6. 音標
 
 /* 區塊標籤：只是分類提示，比內容更弱 */
@@ -105,7 +106,7 @@ function wordPattern(word: string): RegExp | null {
 /** 回傳一個 text component：命中查詢字的片段用 span 加粗，其餘保持一般文字 */
 function sentenceText(sentence: string, word: string) {
   const text = cut(sentence, 200);
-  const base = { type: 'text', size: 'sm', color: TEXT, wrap: true, margin: 'sm' };
+  const base = { type: 'text', size: 'md', color: TEXT, wrap: true, margin: 'sm' };
   const re = wordPattern(word);
   if (!re) return { ...base, text };
 
@@ -274,7 +275,7 @@ export function buildExampleSection(opts: {
       type: 'text',
       text: cut(example.zh, 120),
       size: 'xs',
-      color: MUTED,
+      color: TRANS,
       wrap: true,
       margin: 'xs',
     });
@@ -311,6 +312,9 @@ function tile(text: string, color: string, bg: string, action: any) {
         type: 'text',
         text: label(text),
         size: 'sm',
+        // LINE 只有 regular / bold，這裡用 bold 當作規格要的 Medium：
+        // 14px 的短標籤加粗後仍遠輕於 29px 的單字與 22px 的中文，不會搶主視覺
+        weight: 'bold',
         color,
         align: 'center',
         maxLines: 1,

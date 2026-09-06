@@ -465,13 +465,34 @@ describe('顏色收斂：只有一個 accent', () => {
     expect(colorsIn(msg.contents).size).toBeLessThanOrEqual(12);
   });
 
-  it('字重層級：單字與中文粗體，例句、定義、音標、按鈕都是 regular', () => {
+  /* LINE Flex 的 text / span 只有 regular 與 bold 兩種 weight（沒有 medium），
+     所以層級是「字級 + 字重 + 顏色」一起做出來的：
+       單字 xxl bold ＞ 中文 xl bold ＞ 例句英文 md regular 深色
+       ＞ 按鈕 sm bold 淡色 ＞ 標籤/定義/音標 xxs–xs regular 淺灰 */
+  it('字重層級：單字、中文、查詢字、按鈕加粗；例句正文、定義、音標維持 regular', () => {
     const body = msg.contents.body.contents;
     expect(body[0].weight).toBe('bold'); // 單字
     expect(body.find((c: any) => c.size === 'xl').weight).toBe('bold'); // 中文意思
     expect(body.find((c: any) => c.text?.startsWith('/')).weight).toBeUndefined(); // 音標
     expect(body.find((c: any) => c.maxLines === 2).weight).toBeUndefined(); // 定義
+
+    // 例句正文 regular、其中只有查詢字 bold
+    const gen = findNode(body, (n) => n.contents?.[0]?.text === 'GENERAL EXAMPLE');
+    const sentence = gen.contents[1];
+    expect(sentence.weight).toBeUndefined();
+    expect(sentence.size).toBe('md');
+    expect(sentence.contents.filter((s: any) => s.weight === 'bold')).toHaveLength(1);
+
+    // 區塊標籤不能比例句更醒目
+    expect(gen.contents[0].weight).toBeUndefined();
+    expect(gen.contents[0].size).toBe('xxs');
+
+    // 按鈕加粗，但字級仍是最小的一級
     const rows = msg.contents.footer.contents.filter((c: any) => c.layout === 'horizontal');
-    for (const r of rows) for (const c of r.contents) expect(c.contents[0].weight).toBeUndefined();
+    for (const r of rows)
+      for (const c of r.contents) {
+        expect(c.contents[0].weight).toBe('bold');
+        expect(c.contents[0].size).toBe('sm');
+      }
   });
 });
