@@ -1278,9 +1278,20 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
 // VOCABULARY DATA  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
-// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260731, 20260804, 20260811, 20260813, 20260818, 20260821, 20260825, 20260827
+// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260731, 20260804, 20260811, 20260813, 20260818, 20260821, 20260825, 20260827, 20260903
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-08-29 count:678
+// ===SYNC:VOCAB_START=== sync_date:2026-09-06 count:688
+  // --- 20260903 辦公室難熬的一天與紓壓用語 ---
+  {w:"construction",ipa:"/kənˈstrʌkʃən/",pos:"n.",cn:"建造、施工",def:"The work of building something.",exEn:"The building was under construction.",exCn:"大樓正在施工。",cat:"workplace"},
+  {w:"entrance",ipa:"/ˈentrəns/",pos:"n.",cn:"入口（↔ exit 出口）",def:"The door or gate where you go into a place.",exEn:"We used a different entrance.",exCn:"我們走另一個入口。",cat:"workplace"},
+  {w:"elevator",ipa:"/ˈeləveɪtər/",pos:"n.",cn:"電梯",def:"A machine that carries people up and down in a building.",exEn:"I had to take the elevator several times.",exCn:"我得搭好幾次電梯。",cat:"workplace"},
+  {w:"technician",ipa:"/tekˈnɪʃən/",pos:"n.",cn:"技術人員、技師",def:"A person whose job is to repair or take care of machines.",exEn:"The technician said the problem would be fixed soon.",exCn:"技術人員說問題很快就會修好。",cat:"workplace"},
+  {w:"calmly",ipa:"/ˈkɑːmli/",pos:"adv.",cn:"冷靜地（adj. calm 平靜的）",def:"In a quiet way, without strong feelings.",exEn:"I explained the situation calmly.",exCn:"我冷靜地說明情況。",cat:"daily"},
+  {w:"eventually",ipa:"/ɪˈventʃuəli/",pos:"adv.",cn:"最終、最後",def:"After a long time, in the end.",exEn:"Eventually, he agreed to pay.",exCn:"最後，他同意付款。",cat:"daily"},
+  {w:"stressed",ipa:"/strest/",pos:"adj.",cn:"感到有壓力的（形容人）",def:"Feeling worried because of too much work or trouble.",exEn:"I started to feel stressed.",exCn:"我開始覺得有壓力。",cat:"health"},
+  {w:"overwhelmed",ipa:"/ˌoʊvərˈwelmd/",pos:"adj.",cn:"不知所措的、被壓垮的",def:"Feeling that something is too much to deal with.",exEn:"Working under pressure can make you feel overwhelmed.",exCn:"在壓力下工作會讓你覺得不知所措。",cat:"health"},
+  {w:"react",ipa:"/riˈækt/",pos:"v.",cn:"反應、回應（react to sth）",def:"To act in a certain way because of something that happens.",exEn:"I could still control how I reacted to difficult situations.",exCn:"我仍然可以控制自己面對困難情況時的反應。",cat:"daily"},
+  {w:"successfully",ipa:"/səkˈsesfəli/",pos:"adv.",cn:"成功地",def:"In a way that gets the result you want.",exEn:"I handled the problems successfully.",exCn:"我成功地處理了這些問題。",cat:"workplace"},
   // --- 20260827 動名詞與不定詞、默契用語 ---
   /* chemistry / rapport / manage / submit 已在 20260825 收錄，此處不重複登記（vocabSources 是單一對應，
      同一個字登記兩天會讓其中一天的 dayVocab 抓不到）。本日改收 Unit 53/54 動詞清單裡尚未收錄的字。 */
@@ -2025,8 +2036,12 @@ const vocab = [
 ];
 
 // 每個單字的筆記來源 (key = word, value = note title)
-// ===SYNC:SOURCES_START=== sync_date:2026-08-29
+// ===SYNC:SOURCES_START=== sync_date:2026-09-06
 const vocabSources = {
+  // --- 20260903 辦公室難熬的一天與紓壓用語 ---
+  "construction":"20260903 辦公室難熬的一天與紓壓用語","entrance":"20260903 辦公室難熬的一天與紓壓用語","elevator":"20260903 辦公室難熬的一天與紓壓用語","technician":"20260903 辦公室難熬的一天與紓壓用語","calmly":"20260903 辦公室難熬的一天與紓壓用語","eventually":"20260903 辦公室難熬的一天與紓壓用語","stressed":"20260903 辦公室難熬的一天與紓壓用語","overwhelmed":"20260903 辦公室難熬的一天與紓壓用語","react":"20260903 辦公室難熬的一天與紓壓用語","successfully":"20260903 辦公室難熬的一天與紓壓用語",
+  /* arrive / make 沒有進單字表，但有造句關鍵字（allKW），登記來源才能被 dayKW 抓到 */
+  "arrive at":"20260903 辦公室難熬的一天與紓壓用語","make":"20260903 辦公室難熬的一天與紓壓用語",
   // --- 20260827 動名詞與不定詞、默契用語 ---
   "convince":"20260827 動名詞與不定詞、默契用語","persuade":"20260827 動名詞與不定詞、默契用語","deny":"20260827 動名詞與不定詞、默契用語","admit":"20260827 動名詞與不定詞、默契用語","postpone":"20260827 動名詞與不定詞、默契用語","interrupt":"20260827 動名詞與不定詞、默契用語","unreliable":"20260827 動名詞與不定詞、默契用語","pretend":"20260827 動名詞與不定詞、默契用語","consider":"20260827 動名詞與不定詞、默契用語","recommend":"20260827 動名詞與不定詞、默契用語",
   /* keep / suggest / stop 沒有進單字表，但有造句關鍵字（allKW），登記來源才能被 dayKW 抓到 */
@@ -2519,8 +2534,19 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-08-29 count:293
+// ===SYNC:TRANS_START=== sync_date:2026-09-06 count:303
 const allTrans = [
+  // --- 20260903 辦公室難熬的一天與紓壓用語 cn-en ---
+  {p:"我壓力很大，所以到外面待了幾分鐘讓自己平靜下來。",a:"I was under a lot of stress, so I went outside for a few minutes to feel calm.",h:"be under a lot of stress, so 接結果, to + V 表目的",kw:["under a lot of stress"],src:"20260903 辦公室難熬的一天與紓壓用語"},
+  {p:"運動幫助我紓解壓力。",a:"Exercise helps me relieve stress.",h:"help + sb + 原形動詞（不加 to）",kw:["relieve stress"],src:"20260903 辦公室難熬的一天與紓壓用語"},
+  {p:"我聽音樂來紓解壓力。",a:"I listen to music to relieve stress.",h:"to + V 表目的",kw:["relieve stress"],src:"20260903 辦公室難熬的一天與紓壓用語"},
+  {p:"散步是紓解壓力的好方法。",a:"Taking a walk is a good way to relieve stress.",h:"V-ing 當主詞, a good way to + V",kw:["a good way to"],src:"20260903 辦公室難熬的一天與紓壓用語"},
+  {p:"第一天，我去了巴拿山，還搭了纜車。",a:"On the first day, I visited Ba Na Hills and took the cable car.",h:"On the + 序數 + day, 搭乘交通工具用 take",kw:["On the first day"],src:"20260903 辦公室難熬的一天與紓壓用語"},
+  {p:"當我到達山頂時，正下著小雨。",a:"When I arrived at the top, it was raining a little.",h:"arrive at + 小地點, 過去進行式 was raining",kw:["arrived at"],src:"20260903 辦公室難熬的一天與紓壓用語"},
+  {p:"我在黃金橋拍了很多照片，但我的頭髮弄得很濕。",a:"I took many photos at the Golden Bridge, but my hair got very wet.",h:"take – took（不規則）, get + adj 變得……",kw:["got very wet"],src:"20260903 辦公室難熬的一天與紓壓用語"},
+  {p:"海灘很乾淨，沙子很軟。",a:"The beach was clean and the sand was soft.",h:"特定的沙要加 the",kw:["the sand"],src:"20260903 辦公室難熬的一天與紓壓用語"},
+  {p:"第三天，我準備好要回家了。",a:"On the third day, I got ready to go back home.",h:"get ready to + V, go back home（home 前不加 to）",kw:["got ready to"],src:"20260903 辦公室難熬的一天與紓壓用語"},
+  {p:"海浪拍打著岸邊。",a:"The waves were crashing against the shore.",h:"crash against = 拍打、撞上",kw:["crashing against"],src:"20260903 辦公室難熬的一天與紓壓用語"},
   // --- 20260827 動名詞與不定詞、默契用語 cn-en ---
   {p:"我們團隊很有默契，所以能夠有效率地溝通。",a:"Our team has great chemistry, so we can communicate efficiently.",h:"chemistry = 默契（不可數）, efficiently = 有效率地",kw:["great chemistry"],src:"20260827 動名詞與不定詞、默契用語"},
   {p:"與客戶建立良好的融洽關係是很重要的。",a:"It's important to build good rapport with our clients.",h:"It is + 形容詞 + to V（虛主詞）, build rapport with sb",kw:["build good rapport"],src:"20260827 動名詞與不定詞、默契用語"},
@@ -2856,7 +2882,18 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-08-29 count:60
+// ===SYNC:KW_START=== sync_date:2026-09-06 count:62
+  // --- 20260903 辦公室難熬的一天與紓壓用語（例句全部取自筆記原文）---
+  {w:"arrive at",ipa:"/əˈraɪv æt/",tag:"到達＋介系詞（at 小地點／in 城市）· v.",exs:[
+    {en:"When I arrived at the top, it was raining a little.",cn:"當我到達山頂時，正下著小雨。"},
+    {en:"When I arrived at my department, I found out that the computer service was down.",cn:"當我到了部門，我發現電腦系統當機了。"},
+    {en:"When I arrived in Hanoi, I went straight to work without taking any rest.",cn:"我抵達河內時，沒休息就直接去上班。"},
+  ]},
+  {w:"make",ipa:"/meɪk/",tag:"使、讓（使役動詞）· v.",exs:[
+    {en:"It made me feel relaxed.",cn:"這讓我覺得很放鬆。"},
+    {en:"Working under pressure can make you feel overwhelmed.",cn:"在壓力下工作會讓你覺得不知所措。"},
+    {en:"Working under pressure can make you feel like you're under someone's control.",cn:"在壓力下工作會讓你覺得像是被別人控制。"},
+  ]},
   // --- 20260827 動名詞與不定詞、默契用語（例句全部取自筆記原文）---
   {w:"keep",ipa:"/kiːp/",tag:"一直、反覆做 · v.",exs:[
     {en:"You keep interrupting when I am talking.",cn:"我講話的時候你一直打斷我。"},
@@ -3168,7 +3205,51 @@ const allKW = [
 // READING ARTICLES  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 const articles = [
-// ===SYNC:ARTICLES_START=== sync_date:2026-08-16 count:34
+// ===SYNC:ARTICLES_START=== sync_date:2026-09-06 count:35
+  {
+    title:"A Difficult Day at the Office",
+    titleCn:"辦公室難熬的一天",
+    source:"Based on 20260903 lesson notes",
+    highlightWords:["under construction","entrance","unreliable","elevator","service was down","in charge of","technician","denied","interrupted","invoice","put off","persuade","rapport","calmly","eventually","stressed","imagine","under pressure","overwhelmed","under someone's control","reacted","back to normal","successfully"],
+    paras:[
+      {en:"Last Monday, I had a very busy day at work. Our office building was under construction, so we had to use a different entrance. The elevator was also unreliable, so I had to take the elevator several times and wait for a long time.",
+       cn:"上週一，我在公司度過了非常忙碌的一天。我們的辦公大樓正在施工，所以我們得走另一個入口。電梯也很不可靠，所以我得搭好幾次電梯，還等了很久。"},
+      {en:"When I arrived at my department, I found out that the computer service was down. I was in charge of contacting the IT department, but the technician denied that there was a serious problem. He said the problem would be fixed soon.",
+       cn:"當我到了部門，我發現電腦系統當機了。我負責聯絡資訊部門，但技術人員否認有嚴重的問題。他說問題很快就會修好。"},
+      {en:"While I was talking to him, my manager interrupted me and asked about an unpaid invoice. I explained that I had already contacted the customer, but they put off making the payment. My manager wasn't happy and asked me to persuade the customer to pay as soon as possible.",
+       cn:"我正在跟他講話時，主管打斷我，問起一張未付款的發票。我解釋說我已經聯絡過客戶，但他們把付款延後了。主管不太高興，要我說服客戶盡快付款。"},
+      {en:"Luckily, I managed to have a good rapport with the customer. I explained the situation calmly, and eventually, he agreed to pay the invoice.",
+       cn:"幸好，我設法和客戶維持了良好的關係。我冷靜地說明情況，最後他同意付款。"},
+      {en:"Later that afternoon, I started to feel stressed. I went outside for a few minutes to feel calm and clear my mind. I tried to imagine myself relaxing on a quiet beach instead of sitting in a busy office.",
+       cn:"那天下午稍晚，我開始覺得有壓力。我到外面待了幾分鐘讓自己平靜下來、理清思緒。我試著想像自己在安靜的海灘上放鬆，而不是坐在忙碌的辦公室裡。"},
+      {en:"Sometimes, working under pressure can make you feel like you're under someone's control, especially when your manager is in charge of everything you do. But I reminded myself that I could still control how I reacted to difficult situations.",
+       cn:"有時候，在壓力下工作會讓你覺得像是被別人控制，尤其當主管掌管你做的每件事時。但我提醒自己，我仍然可以控制自己面對困難情況時的反應。"},
+      {en:"By the end of the day, everything was finally back to normal. It had been a stressful and unreliable day, but I was proud that I had handled the problems successfully.",
+       cn:"到了一天結束時，一切終於恢復正常。這是充滿壓力、什麼都不可靠的一天，但我很自豪自己成功地處理了這些問題。"},
+    ],
+    questions:[
+      {q:"Why did the writer have to use a different entrance?",
+       opts:["A. The main entrance was closed for a holiday","B. The office building was under construction","C. The elevator was broken","D. The computer service was down"],
+       ans:1,
+       expl:"文章說 Our office building was under construction, so we had to use a different entrance，因為辦公大樓正在施工。"},
+      {q:"Who was in charge of contacting the IT department?",
+       opts:["A. The manager","B. The technician","C. The writer","D. The customer"],
+       ans:2,
+       expl:"文章說 I was in charge of contacting the IT department，負責的人是作者本人。be in charge of + N/V-ing ＝ 負責。"},
+      {q:"What did the manager ask about?",
+       opts:["A. An unpaid invoice","B. A new order","C. The construction work","D. The elevator"],
+       ans:0,
+       expl:"文章說 my manager interrupted me and asked about an unpaid invoice，主管問的是一張未付款的發票。"},
+      {q:"How did the writer calm down in the afternoon?",
+       opts:["A. He asked the manager for a day off","B. He went outside for a few minutes and imagined relaxing on a quiet beach","C. He went to the beach after work","D. He stopped talking to the customer"],
+       ans:1,
+       expl:"文章說 I went outside for a few minutes to feel calm and clear my mind. I tried to imagine myself relaxing on a quiet beach。"},
+      {q:"How did the writer feel at the end of the day?",
+       opts:["A. Angry with the technician","B. Still overwhelmed by the work","C. Proud, because the problems were handled successfully","D. Worried about the next day"],
+       ans:2,
+       expl:"文章最後說 I was proud that I had handled the problems successfully，作者很自豪成功處理了問題。"},
+    ],
+  },
   {
     title:"Turning a Failure into an Opportunity",
     titleCn:"轉危為機",
@@ -4151,7 +4232,65 @@ const articles = [
 // 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
 // ═══════════════════════════════════════════════
 const DAYQUIZ = {
-// ===SYNC:DAYQUIZ_START=== sync_date:2026-08-29 count:32
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-09-06 count:33
+  "20260903": {
+    title: "辦公室難熬的一天與紓壓用語",
+    subtitle: "A Difficult Day at the Office, Stress & Relieving Stress",
+    questions: [
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["When I arrived the top, it was raining a little.","When I arrived at the top, it was raining a little."],answer:1,
+        explain:"arrive 是不及物動詞，後面接地點一定要有介系詞：小地點、建築、山頂用 at，城市、國家用 in。"},
+      {type:"mc",tag:"改錯",q:"要說「第一天，我去了巴拿山」，哪一句正確？",
+        options:["First day, I visited Ba Na Hills and took the cable car.","On the first day, I visited Ba Na Hills and took the cable car."],answer:1,
+        explain:"中文「第一天」直接翻成 First day 少了介系詞與冠詞；描述行程要說 On the + 序數 + day。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["I taked many photos at the Golden Bridge but my hair was very wet.","I took many photos at the Golden Bridge, but my hair got very wet."],answer:1,
+        explain:"take 是不規則動詞，過去式是 took，不能寫 taked；but 連接兩個完整句子時前面要加逗號；get + adj 表「變得……」，比 was 更能表達「淋濕了」的過程。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["The beach was clean and sand was soft.","The beach was clean and the sand was soft."],answer:1,
+        explain:"sand 雖然是不可數名詞，但這裡指「那片海灘的沙」，是特定的東西，要加 the。"},
+      {type:"mc",tag:"改錯",q:"「第三天，我準備好要回家了」哪一句正確？",
+        options:["Third day, I prepared back to home.","On the third day, I got ready to go back home."],answer:1,
+        explain:"「準備好做某事」是 get ready to + 原形動詞；「回家」是 go back home，home 是副詞，前面不加 to。"},
+      {type:"mc",tag:"文法",q:"哪一句正確？",
+        options:["It made me to feel relaxed.","It made me feel relaxed."],answer:1,
+        explain:"make 是使役動詞，後面接原形動詞 feel，中間不加 to。"},
+      {type:"fill",tag:"介系詞",q:"When I arrived ___ Hanoi, I went straight to work without taking any rest.",
+        cn:"我抵達河內時，沒休息就直接去上班。",
+        answer:["in"],
+        explain:"Hanoi 是城市，用 arrive in；小地點、建築用 arrive at；home / here / there 前面不加介系詞。"},
+      {type:"fill",tag:"介系詞",q:"Our office building was ___ construction, so we had to use a different entrance.",
+        cn:"我們的辦公大樓正在施工，所以我們得走另一個入口。",
+        answer:["under"],
+        explain:"under + 名詞 表「處於……狀態」：under construction 施工中、under pressure 承受壓力、under control 在掌控中、under review 審查中。"},
+      {type:"fill",tag:"文法",q:"Taking a walk is a good way ___ stress.　(relieve)",
+        cn:"散步是紓解壓力的好方法。",
+        answer:["to relieve"],
+        explain:"a good way to + 原形動詞；relieve stress ＝ release stress（紓解壓力），不說 release full stress。"},
+      {type:"fill",tag:"句型",q:"She ___ finish the report on time, despite the interruptions.　(manage)",
+        cn:"儘管一再被打斷，她還是設法準時完成了報告。",
+        answer:["managed to"],
+        explain:"manage to + 原形動詞＝設法做到（中間有障礙要克服）；不能寫 manage doing。"},
+      {type:"mc",tag:"單字",q:"unreliable 的意思是什麼？",
+        options:["不可靠的","無法修理的","不方便的","不禮貌的"],answer:0,
+        explain:"unreliable /ˌʌnrɪˈlaɪəbl/ ＝ 不可靠的，相反詞是 reliable。課文：The elevator was unreliable."},
+      {type:"mc",tag:"單字",q:"「他否認有嚴重的問題」的 denied，相反詞是哪一個？",
+        options:["refuse","admit","persuade","interrupt"],answer:1,
+        explain:"deny 否認 ↔ admit 承認。課文：the technician denied that there was a serious problem."},
+      {type:"mc",tag:"片語",q:"They put off making the payment. 這句是什麼意思？",
+        options:["他們拒絕付款","他們把付款延後了","他們已經付款了","他們取消了訂單"],answer:1,
+        explain:"put off + V-ing ＝ 延後、拖延（＝ postpone / delay）。⚠ put out 才是「撲滅」。"},
+      {type:"mc",tag:"單字",q:"事情很有壓力、人覺得有壓力，正確的搭配是？",
+        options:["The interview is stressed. / I felt stressful.","The interview is stressful. / I felt stressed."],answer:1,
+        explain:"事情用 stressful、人用 stressed；同理 relaxing 形容事、relaxed 形容人的感受。"},
+      {type:"trans",tag:"翻譯",q:"我壓力很大，所以到外面待了幾分鐘讓自己平靜下來。",
+        answer:"I was under a lot of stress, so I went outside for a few minutes to feel calm.",
+        explain:"be under a lot of stress ＝ 壓力很大；so 接結果；to + 原形動詞表目的。"},
+      {type:"trans",tag:"翻譯",q:"我沿著海灘散步、欣賞美麗的海景。這讓我覺得很放鬆。",
+        answer:"I walked along the beach and enjoyed the beautiful sea view. It made me feel relaxed.",
+        explain:"walk along + 地點＝沿著……走；enjoy 後面接名詞或 V-ing；make + 受詞 + 原形動詞。"},
+    ]
+  },
   "20260827": {
     title: "動名詞與不定詞、默契用語",
     subtitle: "Verb + -ing / Verb + to, Team Chemistry and Workplace English",
@@ -5807,7 +5946,36 @@ const DAYQUIZ = {
 // 沒有腳本的日期會自動退回「教練只說引導語」的模式。
 // ═══════════════════════════════════════════════
 const DAYTALK = {
-// ===SYNC:DAYTALK_START=== sync_date:2026-08-29 count:6
+// ===SYNC:DAYTALK_START=== sync_date:2026-09-06 count:7
+  "20260903": {
+    title: "辦公室難熬的一天與紓壓用語",
+    turns: [
+      {q:"Your office building is being repaired. Why do you use another door?",qCn:"你的辦公大樓正在整修。為什麼你走另一個入口？",
+       en:"Our office building was under construction, so we had to use a different entrance.",cn:"我們的辦公大樓正在施工，所以我們得走另一個入口。",hint:"under construction / entrance"},
+      {q:"How was the elevator that morning?",qCn:"那天早上的電梯狀況如何？",
+       en:"The elevator was unreliable, so I had to take the elevator several times.",cn:"電梯很不可靠，所以我得搭好幾次電梯。",hint:"unreliable = 不可靠的"},
+      {q:"What did you find when you got to your department?",qCn:"你到部門的時候發現了什麼？",
+       en:"When I arrived at my department, I found out that the computer service was down.",cn:"當我到了部門，我發現電腦系統當機了。",hint:"arrive at / be down = 當機"},
+      {q:"What was your job in that situation?",qCn:"在那個情況下你負責什麼？",
+       en:"I was in charge of contacting the IT department.",cn:"我負責聯絡資訊部門。",hint:"be in charge of + V-ing"},
+      {q:"What did the customer do about the invoice?",qCn:"客戶對那張發票做了什麼？",
+       en:"They put off making the payment.",cn:"他們把付款延後了。",hint:"put off + V-ing = 延後"},
+      {q:"How did you get the customer to agree?",qCn:"你怎麼讓客戶同意的？",
+       en:"I explained the situation calmly, and eventually, he agreed to pay the invoice.",cn:"我冷靜地說明情況，最後他同意付款。",hint:"calmly / eventually"},
+      {q:"How did you feel later that afternoon?",qCn:"那天下午稍晚你的感覺如何？",
+       en:"I was under a lot of stress, so I went outside for a few minutes to feel calm.",cn:"我壓力很大，所以到外面待了幾分鐘讓自己平靜下來。",hint:"be under a lot of stress"},
+      {q:"What do you do to feel better when work is hard?",qCn:"工作很難熬時你會做什麼讓自己好一點？",
+       en:"Taking a walk is a good way to relieve stress.",cn:"散步是紓解壓力的好方法。",hint:"V-ing 當主詞 / relieve stress"},
+      {q:"Tell me about the first day of your trip to Da Nang.",qCn:"說說你峴港旅行的第一天。",
+       en:"On the first day, I visited Ba Na Hills and took the cable car.",cn:"第一天，我去了巴拿山，還搭了纜車。",hint:"On the first day"},
+      {q:"What was the weather like at the top?",qCn:"山頂的天氣怎麼樣？",
+       en:"When I arrived at the top, it was raining a little.",cn:"當我到達山頂時，正下著小雨。",hint:"arrive at + 小地點"},
+      {q:"What did you do at My Khe Beach?",qCn:"你在美溪海灘做了什麼？",
+       en:"I walked along the beach and enjoyed the beautiful sea view. It made me feel relaxed.",cn:"我沿著海灘散步、欣賞美麗的海景。這讓我覺得很放鬆。",hint:"walk along / make me feel"},
+      {q:"Describe the sea for me.",qCn:"幫我描述一下海邊的樣子。",
+       en:"The waves were crashing against the shore.",cn:"海浪拍打著岸邊。",hint:"crash against the shore"}
+    ]
+  },
   "20260827": {
     title: "動名詞與不定詞、默契用語",
     turns: [

@@ -5,6 +5,349 @@
 window.BOOK = {
   lessons: [
     {
+      id: 'bk20260903',
+      icon: '🏢',
+      date: '2026-09-03',
+      doc: 'https://docs.google.com/document/d/17MEHEOZAAv1kva4q03jCy_VAYZyQBvVagI9Cvu_uH1c/edit',
+      title: 'A Difficult Day at the Office · Stress & Relieving Stress · Travel Diary Review',
+      titleCn: '辦公室難熬的一天與紓壓用語',
+      topics: '峴港三日遊作業訂正｜arrive at / in / home｜不規則動詞與時態一致｜On the first day 序數行程｜定冠詞 the｜manage to + V｜make + O + 原形動詞｜壓力與紓壓四種說法｜under + 名詞｜辦公室與職場片語｜海邊描述｜閱讀文章 A Difficult Day at the Office',
+      hwTitle: 'I. ★ 09/03 作業複習 Homework Review（峴港三日遊 Da Nang Trip）',
+      hw: [
+        {
+          n: 1,
+          ok: 'Last week, I went to Da Nang for three days.',
+          cn: '上週，我去峴港三天。',
+          pat: '時間 + S + went to + 地點 + for + 時間長度',
+          note: 'go 的過去式是 went；for three days 表示「持續了三天」，for 後面接一段時間。'
+        },
+        {
+          n: 2,
+          wrong: 'First day, I visited Ba Na Hills and took the cable car.',
+          fix: 'On the first day, I visited Ba Na Hills and took the cable car.',
+          cn: '第一天，我去了巴拿山，還搭了纜車。',
+          pat: 'On the + 序數 + day, S + V-ed and V-ed',
+          note: '中文「第一天」直接翻成 First day 少了介系詞與冠詞，英文要說 On the first day（詳見 III-C）。took the cable car 正確——「搭乘」交通工具用 take。'
+        },
+        {
+          n: 3,
+          wrong: 'When I arrived the top, it was raining a little.',
+          fix: 'When I arrived at the top, it was raining a little.',
+          cn: '當我到達山頂時，正下著小雨。',
+          pat: 'When + S + arrived at + 地點, it was + V-ing',
+          note: 'arrive 是不及物動詞，後面接地點一定要有介系詞（詳見 III-A）。'
+        },
+        {
+          n: 4,
+          ok: 'The temperature was 20 degrees Celsius, so I felt cold.',
+          cn: '溫度是攝氏 20 度，所以我覺得冷。',
+          pat: 'S + was + 數字 + degrees Celsius, so + S + felt + adj',
+          note: 'degrees 用複數；so 連接「原因 → 結果」；feel 的過去式是 felt，後面接形容詞 cold。敘述文中數字也可寫成英文 twenty。'
+        },
+        {
+          n: 5,
+          wrong: 'I taked many photos at the Golden Bridge but my hair was very wet.',
+          fix: 'I took many photos at the Golden Bridge, but my hair got very wet.',
+          cn: '我在黃金橋拍了很多照片，但我的頭髮弄得很濕。',
+          pat: 'S + took + 受詞 + at + 地點, but + S + got + adj',
+          note: 'take 是不規則動詞，過去式是 took，不能加 -ed 變成 taked（詳見 III-B）。but 連接兩個完整句子時，前面要加逗號。老師把 was 改成 got：get / got + adj 表「變得……」（狀態改變），比 was 更能表達「淋濕了」的過程。'
+        },
+        {
+          n: 6,
+          wrong: 'Second day, I went to My Khe Beach.',
+          fix: 'On the second day, I went to My Khe Beach.',
+          cn: '第二天，我去了美溪海灘。',
+          pat: 'On the + 序數 + day, S + went to + 地點',
+          note: '同第 2 題：描述行程的「第幾天」要說 On the second day，不能只寫 Second day。'
+        },
+        {
+          n: 7,
+          wrong: 'The beach was clean and sand was soft.',
+          fix: 'The beach was clean and the sand was soft.',
+          cn: '海灘很乾淨，沙子很軟。',
+          pat: 'The + N + was + adj and the + N + was + adj',
+          note: 'sand 雖然是不可數名詞，但這裡指的是「那片海灘的沙」，是特定的東西，要加 the（詳見 III-D）。前後兩句對稱：The beach was… / the sand was…'
+        },
+        {
+          n: 8,
+          ok: 'I walked and enjoyed the beautiful sea view. It made me feel relaxed.',
+          fix: '✨ 潤飾：I walked along the beach and enjoyed the beautiful sea view. It made me feel relaxed.',
+          cn: '我沿著海灘散步、欣賞美麗的海景。這讓我覺得很放鬆。',
+          pat: 'S + walked along + 地點 and V-ed + 受詞 ／ It made me feel + adj',
+          note: '老師潤飾時補上 along the beach（沿著海灘），讓「走」有畫面。make + 受詞 + 原形動詞（feel），中間不加 to；與 It was relaxing. 的差別詳見 III-F。老師補充的海浪描述句請看「VI. 海邊描述」。'
+        },
+        {
+          n: 9,
+          wrong: 'Third day, I prepared back to home and I felt tired, but I enjoyed the trip and wanted to come back again.',
+          fix: 'On the third day, I got ready to go back home. I felt tired, but I enjoyed the trip and wanted to come back again.',
+          cn: '第三天，我準備好要回家了。我覺得很累，但我很享受這次旅行，還想再來一次。',
+          pat: 'On the third day, S + got ready to + V ／ go back home（home 前不加 to）',
+          note: '「準備回家」老師用 get ready to + 原形動詞（got ready to go）；「回家」是 go back home，home 是副詞，前面不加 to。原句太長，拆成兩句比較清楚。come back again 表「再回來」，用法正確。'
+        }
+      ],
+      vocabTitle: 'II. 單字 Vocabulary — A. 核心單字（課文 A Difficult Day at the Office）',
+      vocab: [
+        { w: 'construction', ipa: '/kənˈstrʌkʃən/', pos: 'n.', cn: '建造、施工',
+          ex: 'The building was under construction.', exCn: '大樓正在施工。' },
+        { w: 'entrance', ipa: '/ˈentrəns/', pos: 'n.', cn: '入口（↔ exit 出口）',
+          ex: 'We used a different entrance.', exCn: '我們走另一個入口。' },
+        { w: 'unreliable', star: true, ipa: '/ˌʌnrɪˈlaɪəbl/', pos: 'adj.', cn: '不可靠的（↔ reliable）',
+          ex: 'The elevator was unreliable.', exCn: '電梯很不可靠。' },
+        { w: 'elevator', ipa: '/ˈeləveɪtər/', pos: 'n.', cn: '電梯',
+          ex: 'I had to take the elevator several times.', exCn: '我得搭好幾次電梯。' },
+        { w: 'department', ipa: '/dɪˈpɑːrtmənt/', pos: 'n.', cn: '部門',
+          ex: 'I arrived at my department.', exCn: '我到了我的部門。' },
+        { w: 'technician', star: true, ipa: '/tekˈnɪʃən/', pos: 'n.', cn: '技術人員、技師',
+          ex: 'The technician said the problem would be fixed soon.', exCn: '技術人員說問題很快就會修好。' },
+        { w: 'deny', star: true, ipa: '/dɪˈnaɪ/', pos: 'v.', cn: '否認（deny + that 子句／V-ing；↔ admit 承認）',
+          ex: 'He denied that there was a serious problem.', exCn: '他否認有嚴重的問題。' },
+        { w: 'serious', ipa: '/ˈsɪriəs/', pos: 'adj.', cn: '嚴重的',
+          ex: 'a serious problem', exCn: '嚴重的問題' },
+        { w: 'interrupt', star: true, ipa: '/ˌɪntəˈrʌpt/', pos: 'v.', cn: '打斷、中斷（n. interruption）',
+          ex: "It's not polite to interrupt others when they are speaking.", exCn: '別人說話時打斷是不禮貌的。' },
+        { w: 'invoice', star: true, ipa: '/ˈɪnvɔɪs/', pos: 'n.', cn: '發票、請款單（unpaid 未付 ↔ paid 已付）',
+          ex: 'an unpaid invoice', exCn: '一張未付款的發票' },
+        { w: 'payment', ipa: '/ˈpeɪmənt/', pos: 'n.', cn: '付款',
+          ex: 'They put off making the payment.', exCn: '他們延後付款。' },
+        { w: 'persuade', star: true, ipa: '/pərˈsweɪd/', pos: 'v.', cn: '說服（＝ convince）',
+          ex: 'persuade the customer to pay', exCn: '說服客戶付款' },
+        { w: 'rapport', star: true, ipa: '/ræˈpɔːr/', pos: 'n.', cn: '良好關係、默契（字尾 t 不發音）',
+          ex: 'a good rapport with the customer', exCn: '和客戶的良好關係' },
+        { w: 'calmly', star: true, ipa: '/ˈkɑːmli/', pos: 'adv.', cn: '冷靜地（adj. calm 平靜的）',
+          ex: 'I explained the situation calmly.', exCn: '我冷靜地說明情況。' },
+        { w: 'eventually', star: true, ipa: '/ɪˈventʃuəli/', pos: 'adv.', cn: '最終、最後',
+          ex: 'Eventually, he agreed to pay.', exCn: '最後，他同意付款。' },
+        { w: 'stressed', ipa: '/strest/', pos: 'adj.', cn: '感到有壓力的（人）',
+          ex: 'I started to feel stressed.', exCn: '我開始覺得有壓力。' },
+        { w: 'imagine', ipa: '/ɪˈmædʒɪn/', pos: 'v.', cn: '想像',
+          ex: 'I tried to imagine myself on a quiet beach.', exCn: '我試著想像自己在安靜的海灘上。' },
+        { w: 'pressure', star: true, ipa: '/ˈpreʃər/', pos: 'n.', cn: '壓力',
+          ex: 'working under pressure', exCn: '在壓力下工作' },
+        { w: 'overwhelmed', star: true, ipa: '/ˌoʊvərˈwelmd/', pos: 'adj.', cn: '不知所措的、被壓垮的',
+          ex: 'Working under pressure can make you feel overwhelmed.', exCn: '在壓力下工作會讓你覺得不知所措。' },
+        { w: 'react', star: true, ipa: '/riˈækt/', pos: 'v.', cn: '反應、回應',
+          ex: 'how I reacted to difficult situations', exCn: '我如何回應困難的情況' },
+        { w: 'successfully', ipa: '/səkˈsesfəli/', pos: 'adv.', cn: '成功地',
+          ex: 'I handled the problems successfully.', exCn: '我成功地處理了問題。' },
+        { w: 'relieve', star: true, ipa: '/rɪˈliːv/', pos: 'v.', cn: '紓解、減輕（n. relief；＝ release）',
+          ex: 'relieve stress', exCn: '紓解壓力' }
+      ],
+      vocab2Title: 'B. 補充單字（作業與老師補充）',
+      vocab2: [
+        { w: 'cable car', ipa: '/ˈkeɪbl kɑːr/', pos: 'n.', cn: '纜車',
+          ex: 'I took the cable car.', exCn: '我搭了纜車。' },
+        { w: 'temperature', ipa: '/ˈtemprətʃər/', pos: 'n.', cn: '溫度（Celsius 攝氏）',
+          ex: 'The temperature was 20 degrees Celsius.', exCn: '溫度是攝氏 20 度。' },
+        { w: 'wave', ipa: '/weɪv/', pos: 'n.', cn: '海浪、波浪',
+          ex: 'The sea waves were very big.', exCn: '海浪很大。' },
+        { w: 'crash', star: true, ipa: '/kræʃ/', pos: 'v.', cn: '拍打、撞擊',
+          ex: 'crash against the shore', exCn: '拍打岸邊' },
+        { w: 'shore', ipa: '/ʃɔːr/', pos: 'n.', cn: '岸邊、海岸（此處 ＝ beach）',
+          ex: 'on the shore', exCn: '在岸邊' },
+        { w: 'sand', ipa: '/sænd/', pos: 'n.', cn: '沙',
+          ex: 'The sand was soft.', exCn: '沙子很軟。' },
+        { w: 'sunset', ipa: '/ˈsʌnset/', pos: 'n.', cn: '日落',
+          ex: 'enjoyed watching the sunset', exCn: '享受看日落' },
+        { w: 'straight', ipa: '/streɪt/', pos: 'adv.', cn: '直接地、一直',
+          ex: 'go straight to work', exCn: '直接去上班' },
+        { w: 'rest', ipa: '/rest/', pos: 'n.', cn: '休息',
+          ex: 'without taking any rest', exCn: '完全沒有休息' },
+        { w: 'order', ipa: '/ˈɔːrdər/', pos: 'n.', cn: '訂單',
+          ex: 'place an order', exCn: '下單' },
+        { w: 'convince', star: true, ipa: '/kənˈvɪns/', pos: 'v.', cn: '說服、使相信（＝ persuade）',
+          ex: 'She convinced him to pay.', exCn: '她說服他付款。' },
+        { w: 'admit', star: true, ipa: '/ədˈmɪt/', pos: 'v.', cn: '承認（↔ deny）',
+          ex: 'He denied the problem, but later admitted it.', exCn: '他否認有問題，但後來承認了。' }
+      ],
+      phrasesTitle: 'V. 辦公室與職場片語 Office & Workplace Phrases（單字字義與音標請查 II-A；本章只收「要整組記的片語搭配」）',
+      phrases: [
+        { p: 'be down', cn: '（系統、服務）當機、故障；恢復叫 be back up',
+          ex: 'The computer service was down.', exCn: '電腦系統當機了。' },
+        { p: 'find out (that) …', cn: '發現、得知一件事實（find 是「找到東西」）',
+          ex: 'I found out that the computer service was down.', exCn: '我發現電腦系統當機了。' },
+        { p: 'be back to normal', cn: '恢復正常',
+          ex: 'By the end of the day, everything was finally back to normal.', exCn: '到了一天結束時，一切終於恢復正常。' },
+        { p: 'be in charge of + N / V-ing', cn: '負責、掌管',
+          ex: 'I was in charge of contacting the IT department.', exCn: '我負責聯絡資訊部門。' },
+        { p: 'put off + V-ing', cn: '延後、拖延（＝ postpone / delay）',
+          ex: 'They put off making the payment.', exCn: '他們把付款延後了。' },
+        { p: 'persuade / convince sb to + V', cn: '說服某人做……（兩字同義，後面都接 to + 原形動詞）',
+          ex: 'My manager asked me to persuade the customer to pay as soon as possible.', exCn: '主管要我說服客戶盡快付款。' },
+        { p: 'have a good rapport with sb', cn: '與某人有良好關係、有默契',
+          ex: 'She has a good rapport with her clients.', exCn: '她和客戶關係很好。' },
+        { p: 'handle the problem', cn: '處理問題（＝ deal with ＝ solve the problem）',
+          ex: 'I was proud that I had handled the problems successfully.', exCn: '我很自豪自己成功地處理了這些問題。' },
+        { p: 'as soon as possible', cn: '盡快（縮寫 ASAP）',
+          ex: 'He asked me to persuade the customer to pay as soon as possible.', exCn: '他要我說服客戶盡快付款。' },
+        { p: 'place an order', cn: '下單（place 是動詞「提出、下訂單」；take an order 接單、cancel an order 取消訂單）' }
+      ],
+      grammarTitle: 'III. 句型與文法解說 Sentence Patterns & Grammar',
+      grammar: [
+        {
+          k: 'A', title: 'arrive at / arrive in / arrive home',
+          pat: 'arrive at + 小地點（建築、車站、山頂）／ arrive in + 大地點（城市、國家）／ arrive home（不加介系詞）',
+          pts: [
+            'arrive 是不及物動詞，後面接地點一定要有介系詞；作業第 3 題「arrived the top」就是少了 at。',
+            '老師示範：When I arrived in Hanoi, I went straight to work without taking any rest.（我抵達河內時，沒休息就直接去上班。）——Hanoi 是城市，用 in；go straight to 表「直接前往」；without + V-ing 表「沒有做……」。',
+            '⚠️ 避免中式英文：「arrive Taipei」「arrive the office」「arrive to Hanoi」都是錯的（arrive 不接 to）。但 home、here、there 是副詞，前面不加 at / in。'
+          ]
+        },
+        {
+          k: 'B', title: '不規則動詞與時態一致',
+          pat: 'S + 不規則動詞過去式 + 受詞',
+          pts: [
+            'take 的過去式是 took，不是 taked（作業第 5 題）。不規則動詞沒有 -ed，要個別記。',
+            '本次出現的不規則動詞：go – went – gone（去）、take – took – taken（拿、搭乘）、get – got – gotten（變得）、feel – felt – felt（感覺）、find – found – found（發現）、say – said – said（說）、sit – sat – sat（坐）、have – had – had（有）。',
+            '敘述過去的事，整段動詞都要維持過去式：I walked along the beach and enjoyed the view（不能 walked … and enjoy）。',
+            'get + adj 表「變得……」（狀態改變）：my hair got very wet；get ready to + V 表「準備好做……」：I got ready to go back home。'
+          ]
+        },
+        {
+          k: 'C', title: '用序數描述行程：On the first day, …',
+          pat: 'On the + 序數（first / second / third）+ day, + S + 過去式',
+          pts: [
+            '中文說「第一天……」，英文要加介系詞 On 和冠詞 the（作業第 2、6、9 題）。特定的「某一天」用 on。',
+            '也可以說 The next day, …（隔天）／ On the last day, …（最後一天）。',
+            '⚠️ 避免中式英文：First day, I went… ✗ → On the first day, I went… ✓'
+          ]
+        },
+        {
+          k: 'D', title: '定冠詞 the：take the elevator / the second floor / the sand',
+          pat: 'take the elevator / the stairs + to the + 序數 + floor',
+          pts: [
+            '老師速記「Take elevator to second floor」，完整句子要補冠詞：Take the elevator to the second floor.（搭電梯到二樓。）／ Take the stairs to the second floor.（走樓梯到二樓。）',
+            '序數（second、third…）前面一定要有 the。',
+            '不可數名詞若指「特定的那個」也要加 the：the sand was soft（作業第 7 題，指那片海灘的沙）。',
+            '使用情境：辦公大樓、飯店、百貨公司指路。'
+          ]
+        },
+        {
+          k: 'E', title: 'manage to + V：設法做到',
+          pat: 'S + managed to + 原形動詞',
+          pts: [
+            '意思是「設法做到、（花了力氣）成功做到」，暗示中間有障礙要克服。課文：managed to have a good rapport with the customer（詳見 VII 第 4 段）。',
+            '老師補充：She managed to finish the report on time, despite the interruptions.（儘管一再被打斷，她還是設法準時完成了報告。）——despite + 名詞 表「儘管」。',
+            '⚠️ 後面接 to + V，不是 V-ing：manage doing ✗ → manage to do ✓'
+          ]
+        },
+        {
+          k: 'F', title: 'make + 受詞 + 原形動詞 / feel like + 子句 / relaxing vs relaxed',
+          pat: 'make + O + V（原形）／ make + O + adj ／ feel like + S + V',
+          pts: [
+            'It made me feel relaxed.（作業第 8 題）：make 是使役動詞，後面接原形 feel，不能寫 to feel。⚠️ It made me to feel relaxed. ✗ → It made me feel relaxed. ✓',
+            "課文：working under pressure can make you feel like you're under someone's control——feel like 後面接完整子句，表示「感覺好像……」（詳見 VII 第 6 段）。",
+            'It was relaxing. vs It made me feel relaxed. 兩句都對，重點不同：It was relaxing. 形容「這件事本身」很放鬆；It made me feel relaxed. 說的是這件事「對我產生的效果」。-ing 形容事、-ed 形容人的感受。'
+          ]
+        }
+      ],
+      reading: [
+        {
+          bar: 'VII. 閱讀文章 Reading Article',
+          title: 'A Difficult Day at the Office',
+          titleCn: '辦公室難熬的一天',
+          paras: [
+            { en: 'Last Monday, I had a very busy day at work. Our office building was under construction, so we had to use a different entrance. The elevator was also unreliable, so I had to take the elevator several times and wait for a long time.',
+              cn: '上週一，我在公司度過了非常忙碌的一天。我們的辦公大樓正在施工，所以我們得走另一個入口。電梯也很不可靠，所以我得搭好幾次電梯，還等了很久。' },
+            { en: 'When I arrived at my department, I found out that the computer service was down. I was in charge of contacting the IT department, but the technician denied that there was a serious problem. He said the problem would be fixed soon.',
+              cn: '當我到了部門，我發現電腦系統當機了。我負責聯絡資訊部門，但技術人員否認有嚴重的問題。他說問題很快就會修好。' },
+            { en: 'While I was talking to him, my manager interrupted me and asked about an unpaid invoice. I explained that I had already contacted the customer, but they put off making the payment. My manager was not happy and asked me to persuade the customer to pay as soon as possible.',
+              cn: '我正在跟他講話時，主管打斷我，問起一張未付款的發票。我解釋說我已經聯絡過客戶，但他們把付款延後了。主管不太高興，要我說服客戶盡快付款。' },
+            { en: 'Luckily, I managed to have a good rapport with the customer. I explained the situation calmly, and eventually, he agreed to pay the invoice.',
+              cn: '幸好，我設法和客戶維持了良好的關係。我冷靜地說明情況，最後他同意付款。' },
+            { en: 'Later that afternoon, I started to feel stressed. I went outside for a few minutes to feel calm and clear my mind. I tried to imagine myself relaxing on a quiet beach instead of sitting in a busy office.',
+              cn: '那天下午稍晚，我開始覺得有壓力。我到外面待了幾分鐘讓自己平靜下來、理清思緒。我試著想像自己在安靜的海灘上放鬆，而不是坐在忙碌的辦公室裡。' },
+            { en: "Sometimes, working under pressure can make you feel like you're under someone's control, especially when your manager is in charge of everything you do. But I reminded myself that I could still control how I reacted to difficult situations.",
+              cn: '有時候，在壓力下工作會讓你覺得像是被別人控制，尤其當主管掌管你做的每件事時。但我提醒自己，我仍然可以控制自己面對困難情況時的反應。' },
+            { en: 'By the end of the day, everything was finally back to normal. It had been a stressful and unreliable day, but I was proud that I had handled the problems successfully.',
+              cn: '到了一天結束時，一切終於恢復正常。這是充滿壓力、什麼都不可靠的一天，但我很自豪自己成功地處理了這些問題。' }
+          ],
+          questions: [
+            { q: 'Why did the writer have to use a different entrance?', qCn: '為什麼作者得走另一個入口？',
+              a: 'Because the office building was under construction.', aCn: '因為辦公大樓正在施工。' },
+            { q: 'Who was in charge of contacting the IT department?', qCn: '誰負責聯絡資訊部門？',
+              a: 'The writer was.', aCn: '作者本人。' },
+            { q: 'What did the manager ask about?', qCn: '主管問了什麼事？',
+              a: 'An unpaid invoice.', aCn: '一張未付款的發票。' },
+            { q: 'How did the writer calm down in the afternoon?', qCn: '作者下午是怎麼讓自己平靜下來的？',
+              a: 'The writer went outside for a few minutes and imagined relaxing on a quiet beach.', aCn: '作者到外面待了幾分鐘，並想像自己在安靜的海灘上放鬆。' },
+            { q: 'How did the writer feel at the end of the day?', qCn: '一天結束時作者的感受如何？',
+              a: 'Proud, because the problems were handled successfully.', aCn: '很自豪，因為成功地處理了問題。' }
+          ]
+        }
+      ],
+      extraTitle: 'IV / VI. 壓力與紓壓用語、海邊描述與老師定稿版',
+      extra: [
+        {
+          title: 'A. 表達「壓力很大」與 stressful / stressed',
+          exs: [
+            { en: 'I was under a lot of stress.', cn: '我壓力很大。', hi: 'under a lot of stress' },
+            { en: 'I was very stressed.', cn: '我非常有壓力。', hi: 'stressed' },
+            { en: 'I had a lot of stress.', cn: '我有很多壓力。', hi: 'a lot of stress' },
+            { en: 'I was under a lot of pressure.', cn: '我承受很大的壓力。', hi: 'under a lot of pressure' },
+            { en: 'Having a job interview is stressful.', cn: '面試很有壓力。（事情用 stressful）', hi: 'stressful' },
+            { en: 'Working with my boss is stressful.', cn: '和我老闆一起工作很有壓力。', hi: 'stressful' },
+            { en: 'I felt stressed when I was working next to my boss.', cn: '坐在老闆旁邊工作時我覺得很有壓力。（人用 stressed；相反的感受是 calm 或 relaxed）', hi: 'stressed' },
+            { en: 'I was under a lot of stress, so I went outside for a few minutes to feel calm.', cn: '我壓力很大，所以到外面待了幾分鐘讓自己平靜下來。（接結果用 so）', hi: 'so' }
+          ]
+        },
+        {
+          title: 'B. under + 名詞（一次記全）＝ 處於……狀態',
+          exs: [
+            { en: 'Sometimes, working under pressure can make you feel overwhelmed.', cn: 'under stress／under pressure ＝ 承受壓力', hi: 'under pressure' },
+            { en: 'Our office building was under construction.', cn: 'under construction ＝ 施工中', hi: 'under construction' },
+            { en: 'The project is under my control.', cn: 'under control ＝ 在掌控中', hi: 'under control' },
+            { en: "You feel like you're under someone's control.", cn: "under someone's control ＝ 受某人控制", hi: "under someone's control" },
+            { en: 'The proposal is under review.', cn: 'under review ＝ 審查中', hi: 'under review' }
+          ]
+        },
+        {
+          title: 'C. 紓解壓力 relieve stress（三種句型）',
+          exs: [
+            { en: 'Exercise helps me relieve stress.', cn: '運動幫助我紓解壓力。（help + sb + 原形動詞）', hi: 'helps me relieve' },
+            { en: 'I listen to music to relieve stress.', cn: '我聽音樂來紓解壓力。（to + V 表目的）', hi: 'to relieve stress' },
+            { en: 'Taking a walk is a good way to relieve stress.', cn: '散步是紓解壓力的好方法。（V-ing 當主詞）', hi: 'Taking a walk' },
+            { en: 'I need to go outside to relieve my stress.', cn: '我需要到外面去紓解壓力。', hi: 'relieve my stress' },
+            { en: 'I went outside for a few minutes to feel calm and clear my mind.', cn: '課文裡的紓壓做法：到外面待幾分鐘讓自己平靜、理清思緒。⚠ relieve stress ＝ release stress，不是「release full stress」。', hi: 'clear my mind' }
+          ]
+        },
+        {
+          title: 'VI. 海邊描述 Describing the Beach',
+          exs: [
+            { en: 'The sea waves were very big.', cn: '海浪很大。', hi: 'waves' },
+            { en: 'The waves were crashing against the shore.', cn: '海浪拍打著岸邊。（過去進行式描述當時持續的畫面；crash against ＝ 拍打、撞上）', hi: 'crashing against the shore' },
+            { en: 'I sat on the beach and enjoyed watching the waves.', cn: '我坐在沙灘上，享受看海浪。（enjoy 後面一定接 V-ing）', hi: 'enjoyed watching' },
+            { en: 'I sat on the sand and enjoyed watching the sunset.', cn: '我坐在沙子上，享受看日落。', hi: 'enjoyed watching' },
+            { en: 'I walked along the beach.', cn: '我沿著海灘散步。（sit down 是「坐下」的動作；sit on 說明坐在哪個表面上，母語者日常多半直接說 I sat on the beach.）', hi: 'walked along' }
+          ]
+        },
+        {
+          title: '★ 老師定稿版 Final Polished Narrative（整段朗讀與仿寫用）',
+          exs: [
+            { en: 'Last week, I went to Da Nang for three days.', cn: '上週，我去峴港三天。', hi: 'went to' },
+            { en: 'On the first day, I visited Ba Na Hills and took the cable car. When I arrived at the top, it was raining a little. The temperature was twenty degrees Celsius, so I felt cold. I took many photos at the Golden Bridge, but my hair got very wet.', cn: '第一天，我去了巴拿山，還搭了纜車。到達山頂時正下著小雨。溫度是攝氏 20 度，所以我覺得冷。我在黃金橋拍了很多照片，但頭髮弄得很濕。', hi: 'got very wet' },
+            { en: 'On the second day, I went to My Khe Beach. The beach was clean and the sand was soft. I walked along the beach and enjoyed the beautiful sea view. It made me feel relaxed.', cn: '第二天，我去了美溪海灘。海灘很乾淨，沙子很軟。我沿著海灘散步、欣賞美麗的海景。這讓我覺得很放鬆。', hi: 'walked along the beach' },
+            { en: 'On the third day, I got ready to go back home. I felt tired because when I arrived in Hanoi, I went straight to work without taking any rest. But I really enjoyed the trip and wanted to come back again.', cn: '第三天，我準備好要回家了。我覺得很累，因為一抵達河內，我沒休息就直接去上班。但我真的很享受這次旅行，還想再來一次。', hi: 'got ready to' },
+            { en: 'got very wet / walked along the beach / got ready to go back home / felt tired because… / really enjoyed', cn: '✨ 老師加的五個地方：狀態改變、沿著、準備好、補原因、加強語氣。敘述文中數字 20 老師寫成英文 twenty。', hi: 'really' }
+          ]
+        }
+      ],
+      summaryTitle: 'VIII. 快速總結 Quick Summary',
+      summary: [
+        { k: 'arrive', v: 'arrive at 小地點、arrive in 城市／國家、arrive home 不加介系詞；不接 to' },
+        { k: '序數行程', v: 'On the first / second / third day, + 過去式；不能只寫 First day' },
+        { k: '過去式一致', v: 'took（不是 taked）；整段敘述動詞都要用過去式' },
+        { k: 'get 的兩個用法', v: 'get + adj 變得……（got very wet）／ get ready to + V 準備好……' },
+        { k: '冠詞 the', v: 'take the elevator、to the second floor、the sand（特定的沙）' },
+        { k: 'make + O + V', v: 'make sb feel + adj，中間不加 to；feel like + 子句 表「感覺好像」' },
+        { k: '-ing vs -ed', v: '事情 relaxing／stressful；人 relaxed／stressed' },
+        { k: 'manage to + V', v: '設法做到；後面接 to + V，不接 V-ing' },
+        { k: '壓力四說法', v: 'be under a lot of stress／be very stressed／have a lot of stress／be under a lot of pressure' },
+        { k: 'under + N', v: "construction／pressure／control／someone's control／review" },
+        { k: '紓壓', v: 'relieve ＝ release stress；help sb + V ／ to + V 表目的 ／ V-ing 當主詞' },
+        { k: '❌ 中式英文', v: 'arrive to Hanoi ✗／First day ✗／my stress was full ✗／manage doing ✗／made me to feel ✗' }
+      ]
+    },
+    {
       id: 'bk20260827',
       icon: '🤝',
       date: '2026-08-27',
@@ -10507,7 +10850,8 @@ window.BOOK = {
     bk20260630:[[['coin','plane','snow','flame','gift'],'如果我有一千美元：訂商務艙飛日本 → 第一站北海道 → 滑雪賞雪景、吃冰淇淋甜點 → 泡溫泉放鬆紓壓 → 買紀念品送台灣的朋友。']],
     bk20260707:[[['doc','plane','cloudRain','coin','check'],'飛行問題：出發前仔細查時刻表 → 訂了機票準時到機場 → 天氣不好班機延誤後取消 → 線上申請退款 → 改訂隔天班機並趕上火車。']],
     bk20260730:[[['star','warning','music','globe','smile'],'悲觀者飾演悲觀者：《怪醫豪斯》的主角豪斯醫生 → 演員 Hugh Laurie 本人也很悲觀 → 但他熱愛藍調、錄了專輯 → 他說悲觀是因為他是蘇格蘭人 → 路人常叫他「振作點」。']],
-    bk20260806:[[['target','warning','talk','check','star'],'成功之鑰：Emma 夢想在事業上成功 → 團隊溝通不良造成延遲 → 她召開會議請大家詳細說明 → 有效溝通迅速解決問題 → 保持樂觀成為成功的領導者。']]
+    bk20260806:[[['target','warning','talk','check','star'],'成功之鑰：Emma 夢想在事業上成功 → 團隊溝通不良造成延遲 → 她召開會議請大家詳細說明 → 有效溝通迅速解決問題 → 保持樂觀成為成功的領導者。']],
+    bk20260903:[[['building','warning','doc','talk','check'],'難熬的一天：大樓施工得走另一個入口 → 電腦系統當機 → 主管打斷追問未付發票 → 冷靜說服客戶付款 → 一切恢復正常並成功收尾。']]
   };
   ((window.BOOK||{}).lessons||[]).forEach(function(b){
     var specs=S[b.id]; if(!specs) return;
