@@ -4554,6 +4554,30 @@ function rwWordRow(t,l){
    +'</article>';
 }
 
+/* 實景 detail 三圓圖示帶：情境 → 核心單字 → 開口說。
+   沿用每日文章五圓圖示帶的視覺模板（白圓、波浪、箭頭），配色用全站暖橘調；
+   第一圓依分類換情境圖示（生活/交通/職場/旅行/其他），文字用膠囊列不畫進 SVG */
+function rwStripSVG(l){
+  const D='#2b2118', A='#e8813a', T='#f7e3c9';
+  const scene={
+    '生活':'<path d="M32 12 L54 30 v22 a3 3 0 0 1 -3 3 H13 a3 3 0 0 1 -3 -3 V30 z" fill="#fff" stroke="'+D+'" stroke-width="3"/><rect x="26" y="38" width="12" height="17" fill="'+A+'"/><rect x="16" y="34" width="8" height="7" fill="'+T+'"/>',
+    '交通':'<path d="M14 54 L28 12 M50 54 L36 12" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><path d="M32 16 v8 M32 32 v8 M32 48 v6" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>',
+    '職場':'<rect x="12" y="26" width="40" height="24" rx="4" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><path d="M24 26 v-4 a4 4 0 0 1 4 -4 h8 a4 4 0 0 1 4 4 v4" fill="none" stroke="'+D+'" stroke-width="3"/>',
+    '旅行':'<path d="M8 34 l48 -16 -10 16 10 16 -48 -16z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>',
+    '其他':'<rect x="12" y="20" width="40" height="30" rx="3" fill="#fff" stroke="'+D+'" stroke-width="3"/><path d="M28 28 l12 7 -12 7z" fill="'+A+'"/>'
+  };
+  const book='<path d="M12 16 q10 -4 20 2 q10 -6 20 -2 v32 q-10 -4 -20 2 q-10 -6 -20 -2 z" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M32 18 v32" stroke="'+D+'" stroke-width="2.5"/>';
+  const bubble='<path d="M12 18 h40 a4 4 0 0 1 4 4 v18 a4 4 0 0 1 -4 4 H30 l-10 10 v-10 h-4 a4 4 0 0 1 -4 -4 V22 a4 4 0 0 1 4 -4 z" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><circle cx="24" cy="31" r="2.5" fill="'+A+'"/><circle cx="32" cy="31" r="2.5" fill="'+A+'"/><circle cx="40" cy="31" r="2.5" fill="'+A+'"/>';
+  const circ=(x,inner)=>'<g transform="translate('+x+',52) scale(1.5)"><circle cx="32" cy="32" r="33" fill="#ffffff" stroke="'+T+'" stroke-width="2.5"/>'+inner+'</g>';
+  const arrow=x2=>'<path d="M'+(x2-34)+' 100 H'+x2+' M'+x2+' 100 l-9 -7 M'+x2+' 100 l-9 7"/>';
+  return '<figure class="artbox flush" style="margin:0 0 14px"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">'
+   +'<rect width="800" height="200" rx="14" fill="#fdf6ec"/>'
+   +'<path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="'+T+'" opacity=".75"/>'
+   +circ(104,scene[l.cat]||scene['其他'])+circ(352,book)+circ(600,bubble)
+   +'<g fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".8">'+arrow(293)+arrow(541)+'</g>'
+   +'</svg>'
+   +'<figcaption><div class="steps"><span class="stp">1. 情境</span><span class="sarr">➔</span><span class="stp">2. 核心單字</span><span class="sarr">➔</span><span class="stp">3. 開口說</span></div></figcaption></figure>';
+}
 function rwDetailHTML(l){
   const st=rwStat(l.id);
   /* Header：觀看原影片直接放在標題卡的 bar 裡，不再獨立一個「原始影片」區塊 */
@@ -4563,6 +4587,7 @@ function rwDetailHTML(l){
    +'<div class="bar">'
    +(l.url?'<a class="spk" style="text-decoration:none" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>':'')
    +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button></div></div>';
+  h+=rwStripSVG(l);
   if(l.ctx) h+='<div class="mr-sec">情境 Context</div><div class="card">'+rwParas(l.ctx)+'</div>';
   if((l.vocab||[]).length)
     h+='<div class="mr-sec">核心單字（'+l.vocab.length+'）</div>'
