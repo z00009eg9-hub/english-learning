@@ -41,10 +41,10 @@ articles:[
   upgrade:[
     {b1:"I get up at six thirty. I wash my face. I make coffee.",
      b2:"I get up at six thirty, wash my face, and then make coffee.",
-     note:"三個動作共用同一個主詞時，可以只寫一次 I，用逗號和 and 連起來，句子就不會一直重複。"},
+     note:"三個動作共用同一個主詞時，可以只寫一次 I，用逗號和 and 連起來，句子就不會一直重複。", "sp": "I'm up at six thirty, wash my face, and get the coffee going.", "spNote": "I'm up at...（我…就起床）、get the coffee going（把咖啡煮上）是晨間口語。"},
     {b1:"My morning is busy. I like it.",
      b2:"My morning is always busy, but I like it.",
-     note:"用 but 連接兩個相反的意思，比兩個短句自然得多。"}
+     note:"用 but 連接兩個相反的意思，比兩個短句自然得多。", "sp": "My mornings are crazy, but honestly, I love it.", "spNote": "crazy（忙翻）、honestly（老實說）是口語裡的情緒潤滑劑。"}
   ]
 },
 
@@ -81,10 +81,10 @@ articles:[
   upgrade:[
     {b1:"I wanted rice. They did not have rice.",
      b2:"I wanted some rice, but they did not have any.",
-     note:"用 but 連接，並用 any 代替重複的 rice，避免同一個字說兩次。"},
+     note:"用 but 連接，並用 any 代替重複的 rice，避免同一個字說兩次。", "sp": "I wanted rice, but they were all out.", "spNote": "be all out（賣完了）是點餐口語必備。"},
     {b1:"The eggs are cheap. The eggs taste good.",
      b2:"The eggs are cheap and they taste good.",
-     note:"第二次提到同一個東西時用代名詞 they，不要再重複名詞。"}
+     note:"第二次提到同一個東西時用代名詞 they，不要再重複名詞。", "sp": "The eggs are cheap and they taste great.", "spNote": "口語愛用 great 收尾，比 good 更有溫度。"}
   ]
 },
 
@@ -121,10 +121,10 @@ articles:[
   upgrade:[
     {b1:"It is raining. I want my umbrella. I cannot find it.",
      b2:"It is raining, so I am looking for my umbrella, but I cannot find it.",
-     note:"用 so 表結果、but 表轉折，把三句合成一句有邏輯的長句。"},
+     note:"用 so 表結果、but 表轉折，把三句合成一句有邏輯的長句。", "sp": "It's raining and I can't find my umbrella anywhere.", "spNote": "can't find ... anywhere（到處都找不到）是口語加強。"},
     {b1:"Today the wind is strong. The temperature is twenty degrees.",
      b2:"Today the wind is strong and the temperature is only twenty degrees.",
-     note:"only 加進去就多了「比平常低」的訊息，這是 B1 開始需要的細節。"}
+     note:"only 加進去就多了「比平常低」的訊息，這是 B1 開始需要的細節。", "sp": "It's super windy today and only twenty degrees out.", "spNote": "super（超）、句尾 out（外面）是美式天氣口語。"}
   ]
 },
 
@@ -162,10 +162,10 @@ articles:[
   upgrade:[
     {b1:"I was sick. I called my office.",
      b2:"Because I was sick, I called my office in the morning.",
-     note:"用 Because 開頭把原因說清楚，比兩個並列短句成熟。"},
+     note:"用 Because 開頭把原因說清楚，比兩個並列短句成熟。", "sp": "I was feeling sick, so I called in that morning.", "spNote": "call in（打電話請假）是職場口語，比 called my office 道地。"},
     {b1:"He gave me medicine. I slept. Now I am better.",
      b2:"After I took the medicine, I slept all afternoon and now I feel much better.",
-     note:"用 After 標出時間順序，讀者立刻知道哪件事先發生。"}
+     note:"用 After 標出時間順序，讀者立刻知道哪件事先發生。", "sp": "I took the medicine, slept all afternoon, and now I'm feeling way better.", "spNote": "way better（好多了）的 way 是口語加強詞。"}
   ]
 },
 
@@ -203,10 +203,10 @@ articles:[
   upgrade:[
     {b1:"The bus came at eight ten. It was very full.",
      b2:"When the bus finally came at eight ten, it was already full.",
-     note:"用 When 子句加上 finally、already，把「等很久」和「還是很滿」的無奈感表達出來。"},
+     note:"用 When 子句加上 finally、already，把「等很久」和「還是很滿」的無奈感表達出來。", "sp": "When the bus finally showed up at eight ten, it was already jam-packed.", "spNote": "show up（來了）、jam-packed（擠到爆）是通勤口語。"},
     {b1:"I was late. Next Monday I take an earlier bus.",
      b2:"Because I was late, I will take an earlier bus next Monday.",
-     note:"未來的計畫用 will，並用 Because 把原因和決定連起來。"}
+     note:"未來的計畫用 will，並用 Because 把原因和決定連起來。", "sp": "I was late, so next Monday I'm grabbing an earlier bus.", "spNote": "grab a bus（搭上一班車）與進行式表計畫是口語。"}
   ]
 },
 
@@ -244,10 +244,10 @@ articles:[
   upgrade:[
     {b1:"I washed the floor. I cleaned the bathroom.",
      b2:"I have already washed the floor and cleaned the bathroom.",
-     note:"兩個動作共用一個 have，第二個動詞直接用過去分詞就好。"},
+     note:"兩個動作共用一個 have，第二個動詞直接用過去分詞就好。", "sp": "I've already done the floor and the bathroom.", "spNote": "do the floor／the bathroom 的 do 是家事口語的萬用動詞。"},
     {b1:"My husband did not finish the kitchen.",
      b2:"My husband has not finished the kitchen yet.",
-     note:"加上 yet 表示「還沒，但預期會做」，語氣比單純的過去式精準。"}
+     note:"加上 yet 表示「還沒，但預期會做」，語氣比單純的過去式精準。", "sp": "My husband still hasn't gotten around to the kitchen.", "spNote": "get around to（一直沒空做）是抱怨家事的經典口語。"}
   ]
 },
 
@@ -285,10 +285,10 @@ articles:[
   upgrade:[
     {b1:"I want beef noodles. Please make it not spicy.",
      b2:"I would like beef noodles, and could you make it less spicy, please?",
-     note:"would like 與 could you 都是禮貌形式；less spicy 比 not spicy 自然。"},
+     note:"would like 與 could you 都是禮貌形式；less spicy 比 not spicy 自然。", "sp": "I'll do the beef noodles — can you go easy on the spice?", "spNote": "I'll do...（我要點…）、go easy on（少放點）是點餐口語二連發。"},
     {b1:"I did not finish. I asked for a box.",
      b2:"Since I could not finish the noodles, I asked for a box to take home.",
-     note:"用 Since 說明原因，並補上 to take home 讓目的更清楚。"}
+     note:"用 Since 說明原因，並補上 to take home 讓目的更清楚。", "sp": "I couldn't finish, so I asked for a to-go box.", "spNote": "to-go box（打包盒）是美式餐廳必備單字。"}
   ]
 },
 
@@ -326,10 +326,10 @@ articles:[
   upgrade:[
     {b1:"My daughter is sick. I cannot come to work today.",
      b2:"I am afraid I cannot come in today because my daughter is sick.",
-     note:"I am afraid 是英文裡表達壞消息的緩衝說法，職場信件與電話都很常用。"},
+     note:"I am afraid 是英文裡表達壞消息的緩衝說法，職場信件與電話都很常用。", "sp": "My daughter's sick, so I can't make it in today.", "spNote": "make it in（進得了公司）是請假口語的標準說法。"},
     {b1:"I will finish the report tonight. I will send it tomorrow.",
      b2:"I will finish the report tonight and send it to you before nine tomorrow morning.",
-     note:"兩個動作共用一個 will；加上具體時間讓承諾更可信。"}
+     note:"兩個動作共用一個 will；加上具體時間讓承諾更可信。", "sp": "I'll wrap up the report tonight and get it to you by nine tomorrow.", "spNote": "wrap up（收尾完成）、get it to you（給你）是辦公口語。"}
   ]
 }
 
