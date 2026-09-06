@@ -529,14 +529,19 @@ body.cnall #v-real .cnx{display:block!important}
 body.cnall #v-real span.cnx{display:inline!important}
 #v-real .magttl h2{text-transform:none}
 #v-real a.btn{text-decoration:none;display:inline-flex;align-items:center;gap:5px}
-.rwcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;
-  margin-bottom:10px}
-.rw-main{min-width:0}
+.rw-head{padding:12px 14px}
+.rw-head-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.rw-sub{font-size:var(--font-secondary);color:var(--ink2);margin-top:2px}
+.rw-filters{margin:10px 0 0}
+#v-real .rw-filters .chip{border-color:transparent;background:none;color:var(--ink2);padding:4px 10px}
+#v-real .rw-filters .chip.on{background:var(--accent-soft);color:var(--accent2);border-color:transparent;font-weight:700}
+.rwcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;
+  margin-bottom:8px;min-width:0}
 .rw-t{font-weight:var(--fw-emph);font-size:var(--font-body);line-height:var(--lh-body);color:var(--ink)}
 .rw-meta{font-size:var(--font-secondary);color:var(--ink2);margin-top:2px}
-.rw-kv{font-size:var(--font-secondary);color:#6b5040;font-weight:600;margin-top:5px}
-.rw-obj{font-size:var(--font-secondary);color:var(--ink2);margin-top:3px;line-height:1.5}
-.rw-acts{display:flex;gap:12px;align-items:center;margin-top:8px;flex-wrap:wrap}
+.rw-kv{font-size:var(--font-secondary);color:#6b5040;font-weight:600;margin-top:4px}
+.rw-obj{font-size:var(--font-secondary);color:var(--ink2);margin-top:4px;line-height:1.5}
+.rw-acts{display:flex;gap:12px;align-items:center;margin-top:6px;flex-wrap:wrap}
 .rw-acts a.ext{color:var(--ink2);font-size:var(--font-secondary);font-weight:600;text-decoration:none}
 @media(hover:hover){.rw-acts a.ext:hover{color:var(--accent2)}}
 .rw-acts .go{border:0;background:none;color:var(--accent2);font:inherit;font-size:var(--font-secondary);
@@ -4439,46 +4444,54 @@ RENDER.real=function(){
   v.innerHTML=rwListHTML();
 };
 
+/* 中英文交界補一個空白（顯示用，不改資料）：美國馬路上的corridor → 美國馬路上的 corridor */
+function rwPad(s){
+  return String(s||'')
+    .replace(/([一-鿿，。！？；：、」』])(?=[A-Za-z0-9])/g,'$1 ')
+    .replace(/([A-Za-z0-9%？?！!])(?=[一-鿿「『])/g,'$1 ');
+}
 function rwListHTML(){
   const all=rwAll();
   const usedCats=RW_CATS.filter(c=>all.some(l=>l.cat===c));
   const list=rwCat==='all'?all:all.filter(l=>l.cat===rwCat);
-  let h='<div class="card"><h2 class="sec">🎬 實景英語</h2>'
-   +'<div class="hint">從真實生活影片學自然英文：貼上影片分享內容建立教材，'
-   +'整理核心單字與實境用法，收藏的字會進生詞本與 Speak Up 一起複習。</div>'
-   +'<div class="muted">共 '+all.length+' 篇教材</div>'
-   +'<div class="chips" style="margin-top:10px">'
-   +'<button class="chip'+(rwCat==='all'?' on':'')+'" onclick="rwSetCat(\'all\')">全部 '+all.length+'</button>'
-   +usedCats.map(c=>'<button class="chip'+(rwCat===c?' on':'')+'" onclick="rwSetCat(\''+c+'\')">'+c+' '+all.filter(l=>l.cat===c).length+'</button>').join('')
-   +'<button class="chip" onclick="rwAddOpen()">＋ 新增實景教材</button>'
-   +'</div></div>'
+  let h='<div class="card rw-head">'
+   +'<div class="rw-head-top"><div>'
+   +'<h2 class="sec" style="margin:0">實景英語</h2>'
+   +'<div class="rw-sub">從真實生活影片學自然英文</div>'
+   +'</div>'
+   +'<button class="btn ghost sm" onclick="rwAddOpen()">＋ 新增教材</button></div>'
+   +(usedCats.length
+     ? '<div class="chips rw-filters">'
+       +'<button class="chip'+(rwCat==='all'?' on':'')+'" onclick="rwSetCat(\'all\')">全部</button>'
+       +usedCats.map(c=>'<button class="chip'+(rwCat===c?' on':'')+'" onclick="rwSetCat(\''+c+'\')">'+c+'</button>').join('')
+       +'</div>'
+     : '')
+   +'</div>'
    +(rwFormOn?rwFormHTML():'')
    +(list.length
      ? list.map(rwCardHTML).join('')
-     : (rwFormOn?'':'<div class="card"><div class="muted">還沒有實景教材。點上方「＋ 新增實景教材」，貼上影片分享內容就能開始。</div></div>'));
+     : (rwFormOn?'':'<div class="card"><div class="muted">還沒有教材。點右上「＋ 新增教材」，貼上影片分享內容就能開始。</div></div>'));
   return h;
 }
 
 function rwCardHTML(l){
-  const st=rwStat(l.id);
   const kv=(l.vocab||[]).map(v=>v.w).filter(Boolean).join(' · ');
-  /* metadata 只放學習資訊（國家/分類/程度/時間），不顯示第三方平台名稱 */
+  /* metadata 只放學習資訊（國家/分類/程度/時間），不顯示平台名稱、不顯示進度狀態 */
   const meta=[l.country,l.cat,l.level,l.min].filter(Boolean).join(' · ');
   return '<div class="rwcard">'
-   +'<div class="rw-main">'
-   +'<div class="rw-t">'+esc(l.ti)+'</div>'
-   +'<div class="rw-meta">'+esc(meta)+(meta?'　':'')+'<span class="mrf-why st-'+st.k+'" style="margin:0">'+st.label+'</span></div>'
+   +'<div class="rw-t">'+esc(rwPad(l.ti))+'</div>'
+   +(meta?'<div class="rw-meta">'+esc(meta)+'</div>':'')
+   +(l.point?'<div class="rw-obj">'+esc(rwPad(l.point))+'</div>':'')
    +(kv?'<div class="rw-kv">'+esc(kv)+'</div>':'')
-   +(l.point?'<div class="rw-obj">'+esc(l.point)+'</div>':'')
    +'<div class="rw-acts">'
    +'<button class="btn sm" onclick="rwGo(\''+l.id+'\')">開始學習 →</button>'
    +(l.url?'<a class="ext" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>':'')
-   +'</div></div></div>';
+   +'</div></div>';
 }
 
 function rwParas(s){
   return String(s||'').split(/\n+/).map(p=>p.trim()).filter(Boolean)
-    .map(p=>'<p style="margin:6px 0;line-height:var(--lh-body)">'+esc(p)+'</p>').join('');
+    .map(p=>'<p style="margin:6px 0;line-height:var(--lh-body)">'+esc(rwPad(p))+'</p>').join('');
 }
 function rwWordRow(t,l){
   return '<article class="bkvrow" role="listitem"><div class="bkvmeta">'
@@ -4496,9 +4509,9 @@ function rwDetailHTML(l){
   const st=rwStat(l.id);
   let h='<div class="magttl"><button class="back" onclick="rwBack()"><span class="back-label">返回實景</span></button>'
    +'<div class="magico">'+rwIcon(l)+'</div>'
-   +'<h2>'+esc(l.ti)+'</h2>'
+   +'<h2>'+esc(rwPad(l.ti))+'</h2>'
    +'<div class="mr-time">'+esc([l.country,l.cat,l.level,l.min].filter(Boolean).join(' · '))+'</div>'
-   +'<div class="bar"><span class="mrf-why st-'+st.k+'" style="margin:0">'+st.label+'</span>'
+   +'<div class="bar">'
    +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button></div></div>';
   /* 來源區不顯示任何平台品牌；sourceType / 原始標題保留在資料層供追溯 */
   if(l.url)
@@ -4519,7 +4532,7 @@ function rwDetailHTML(l){
   if(l.usage) h+='<div class="mr-sec">實境用法</div><div class="card rw-usage">'+rwParas(l.usage)+'</div>';
   if((l.cmp||[]).length)
     h+='<div class="mr-sec">比較</div><div class="card"><ul class="rw-cmp">'
-     +l.cmp.map(c=>'<li><b>'+esc(c.w)+'</b>'+esc(c.d)+'</li>').join('')+'</ul></div>';
+     +l.cmp.map(c=>'<li><b>'+esc(c.w)+'</b>'+esc(rwPad(c.d))+'</li>').join('')+'</ul></div>';
   if(l.spq)
     h+='<div class="mr-sec">Speak Up</div><div class="card">'
      +'<div style="font-weight:var(--fw-emph);font-size:var(--font-body)"><span class="sent" data-t="'+esc(l.spq)+'" onclick="saySent(this)">'+esc(l.spq)+'</span> '+spk(l.spq)+'</div>'
