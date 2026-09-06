@@ -4683,8 +4683,8 @@ function rwDetailHTML(l){
   }
   if(l.spq){
     let spqH=rwHiAll(l.spq,l.vocab);
-    h+='<div class="mr-sec">Speak Up</div>'
-     +'<div class="rwq" style="font-weight:var(--fw-emph);font-size:var(--font-body);color:#2e7d6f"><span class="sent" data-t="'+esc(l.spq)+'" onclick="saySent(this)">'+spqH+'</span> '+spk(l.spq)+'</div>'
+    h+='<div class="mr-sec" style="color:#2e7d6f">Speak Up</div>'
+     +'<div class="rwq" style="font-weight:var(--fw-emph);font-size:var(--font-body)"><span class="sent" data-t="'+esc(l.spq)+'" onclick="saySent(this)">'+spqH+'</span> '+spk(l.spq)+'</div>'
      +(l.spHint?'<details class="hint-toggle" style="margin-top:8px"><summary class="hint-sum">提示</summary><div class="hint">'+esc(rwPad(l.spHint))+'</div></details>':'')
      +'<div class="muted" style="margin-top:8px">先用自己的話回答，再到 <a href="https://learning-english-notes.web.app" target="_blank" rel="noopener">Speak Up ↗</a> 錄音練習。收藏（⭐）的單字會自動同步到 Speak Up 的「⭐ B2 生詞本」。</div>';
   }
