@@ -412,6 +412,10 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 ### Step 3 — 讀取並提取內容
 對每個新檔案用 `read_file_content` 讀取，提取以下資料：
 
+> ⚠ **長文件被截斷時，套用「流程 H 步驟 1」的截斷處理規則**：不可用資料夾裡的
+> `YYYYMMDD.html` 或稍早讀到的版本補齊；改用 Chrome MCP 開
+> `https://docs.google.com/document/d/<FILE_ID>/mobilebasic` 讀完整全文（2026-09-06 實測可行）。
+
 **A. 單字（vocab）**：從詞彙表格提取，格式：
 ```javascript
 {w:"word", ipa:"/aɪpɑː/", pos:"adj.", cn:"中文", def:"一句英文定義", exEn:"Example sentence.", exCn:"例句中文翻譯。", cat:"CATEGORY"}
@@ -1254,8 +1258,25 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
    - **已存在的課要更新時，讀完 Doc 先與 `data-book.js` 現況逐節比對**：
      Doc 有而課本沒有的補進去、**Doc 已刪掉的要從課本移除**，維持不增不減。
      只補不刪會讓課本停在舊版。
-   - `read_file_content` 對長文件會截斷。文件很長時，回報中要說明你確認到哪一節，
-     不要對沒讀到的段落做假設。
+   - ⚠⚠ **截斷處理規則（2026-09-06 新增，20260903 出過事，不可省略）**：
+     `read_file_content` 對長文件會截斷（20260903 每次都停在「VII 理解問題第 5 題」）。
+     **不可以用資料夾裡的 `YYYYMMDD.html`、`*.gs`、或對話稍早的內容補齊沒讀到的段落。**
+     那些檔案只是「當初用來生成 Doc 的快照」，Doc 之後被編輯過就不再相符——
+     20260903 就是這樣把使用者已經刪掉的「VIII. 快速總結」寫進課本，隔天才被抓到。
+     **✅ 正解：改用 `/mobilebasic` 讀全文**（2026-09-06 實測可行，一次拿到完整內容、不截斷）：
+     用 Chrome MCP（`claude-in-chrome`，帶著使用者的 Google 登入）開
+     `https://docs.google.com/document/d/<FILE_ID>/mobilebasic`，再 `get_page_text`。
+     這個網址是 Google Docs 的純 HTML 版，表格、章節、🔬 文法解說全都在 DOM 裡，
+     `read_file_content` 讀不到的尾段也會完整出現。
+     ⚠ 不要開一般的 `/edit` 網址：Docs 編輯器用 canvas 繪製，`get_page_text` 只會拿到工具列文字。
+     （步驟：`tabs_context_mcp{createIfEmpty:true}` → `navigate` 到 mobilebasic → `get_page_text`
+     → 用完 `tabs_close_mcp` 關掉分頁。）
+     退路（Chrome 真的不能用時）：**只同步已確實讀到的章節**，回報中明寫
+     「Doc 讀到 ⃝⃝ 節為止，之後未確認」，並直接問使用者「⃝⃝ 之後還有哪些章節？」拿到答案再補；
+     更新既有課時，未確認的章節**維持原狀**（不新增也不刪除），確認後再處理。
+   - **收尾章節對帳**：把 lesson 物件的章節標題（`hwTitle`/`vocabTitle`/`phrasesTitle`/
+     `grammarTitle`/`extraTitle`/`summaryTitle`…）列出來，與 Doc 的章節編號 I、II、III… 逐一對照。
+     課本有、Doc 沒有的一律刪掉；編號對不上就停下來問，不要自己補內容。
 2. **轉成 lesson 物件**：加進 `G:\我的雲端硬碟\英文筆記\b2lab\public\data-book.js` 的 `window.BOOK.lessons` 陣列（附加在陣列尾端即可，執行時會依 date 排序）。
    - **內容不增不減**，逐字取自 Doc；schema 參考檔內 `bk20260813`（最完整範例）。
    - 常用欄位：`id`（bk+YYYYMMDD，同日兩份加 a/b）、`icon`（貼題 emoji）、`date`、`doc`（Google Doc 連結）、`title`/`titleCn`/`topics`、`hwTitle`+`hw[]`（n/wrong/fix/ok/cn/pat/note）、`vocabTitle`+`vocab[]`（w/star/ipa/pos/cn/ex/exCn）、`vocab2`/`vocabReview`、`phrasesTitle`+`phrases[]`（p/cn/ex/exCn）、`colloc[]`（p/def/defCn/cn）、`grammarTitle`+`grammar[]`（k/title/pat|patLabel/pts[]/exs[{tag,en,cn}]）、`cmpTitle`+`cmp[]`+`cmpWarn`、`reading[]`（bar/title/titleCn/paras[{en,cn}]/questions[{q,qCn,a,aCn}]/sumEn[]/sumCn[]）、`extraTitle`+`extra[]`（title+exs）、`extraVocabTitle`+`extraVocab[]`（k/en/cn）、`discussionTitle`+`discussion[]`（q/qCn/a/aCn）、`summaryTitle`+`summary[]`（k/v）。
