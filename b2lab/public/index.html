@@ -4613,6 +4613,15 @@ function rwDetailHTML(l){
      +'<div style="margin-top:8px;display:flex;gap:8px">'
      +'<button class="btn sm" onclick="rwQASave(\''+l.id+'\')">儲存</button>'
      +'<button class="btn gray sm" onclick="rwQATog()">取消</button></div></div>';
+  /* 延伸例句：B2 Read 依情境補充的句子，與影片原句分開標示，避免混淆來源 */
+  if((l.exs||[]).length)
+    h+='<div class="mr-sec">延伸例句（'+l.exs.length+'）<span style="font-weight:400;font-size:var(--font-meta);color:var(--ink2);margin-left:8px">依情境補充，非影片原句</span></div>'
+     +l.exs.map((q,i)=>{
+       const hit=(l.vocab||[]).find(v=>v.w&&q.en.toLowerCase().includes(v.w.toLowerCase()));
+       return '<div class="rwq'+(i<l.exs.length-1?' rwq-div':'')+'"><span class="rwq-n">'+(i+1)+'.</span> '
+        +'<span class="sent" data-t="'+esc(q.en)+'" onclick="saySent(this)">'+(hit?bkHi(q.en,hit.w):esc(q.en))+'</span> '+spk(q.en)
+        +(q.cn?'<div class="cnx rwq-cn">'+esc(rwPad(q.cn))+'</div>':'')+'</div>';
+     }).join('');
   /* 用法比較：實境用法＋比較合併為一個區塊 */
   if(l.usage||(l.cmp||[]).length){
     h+='<div class="mr-sec">用法比較</div>'
@@ -4679,6 +4688,8 @@ function rwFormHTML(){
    +'<label>影片字幕或原句（選填，一行一句：英文 | 中文；只貼影片裡真的出現的句子）</label>'
    +'<textarea id="rwf-quotes" placeholder="This is a major transportation corridor. | 這是一條重要的交通廊道。">'+esc(d.quotesTxt!=null?d.quotesTxt:(e.quotes||[]).map(q=>q.en+' | '+q.cn).join('\n'))+'</textarea>'
    +'<div class="hint2">如果現在沒有字幕，可以留空；之後在教材頁用「補充影片原句」加上。</div>'
+   +'<label>延伸例句（選填，一行一句：英文 | 中文；依情境補充的句子，會與影片原句分開標示）</label>'
+   +'<textarea id="rwf-exs" placeholder="Cars are not allowed in the bus corridor during rush hour. | 尖峰時段汽車不能開進公車廊道。">'+esc(d.exsTxt!=null?d.exsTxt:(e.exs||[]).map(q=>q.en+' | '+q.cn).join('\n'))+'</textarea>'
    +'<label>情境說明（1–3 段短文字）</label><textarea id="rwf-ctx" placeholder="這支影片的場景是什麼？為什麼這個單字在這裡這樣用？">'+esc(d.ctx||'')+'</textarea>'
    +'<label>實境用法（可分行）</label><textarea id="rwf-usage" placeholder="corridor&#10;一般：走廊&#10;交通 / 都市規劃：交通廊道、沿線">'+esc(d.usage||'')+'</textarea>'
    +'<label>比較（選填，一行一組：詞 | 說明）</label><textarea id="rwf-cmp" placeholder="road | 道路本身&#10;route | 路線&#10;corridor | 重要交通廊道 / 沿線">'+esc(cmpTxt)+'</textarea>'
@@ -4694,7 +4705,7 @@ function rwCapture(){
   rwDraft=Object.assign({},rwDraft||{},{
     paste:g('rwf-paste'), ti:g('rwf-ti'), tiSrc:g('rwf-tisrc'), url:g('rwf-url'), country:g('rwf-country'),
     cat:g('rwf-cat'), level:g('rwf-lv'), min:g('rwf-min'), point:g('rwf-point'),
-    vocabTxt:g('rwf-vocab'), quotesTxt:g('rwf-quotes'), ctx:g('rwf-ctx'), usage:g('rwf-usage'), cmpTxt:g('rwf-cmp'), spq:g('rwf-spq'), spHint:g('rwf-sphint')
+    vocabTxt:g('rwf-vocab'), quotesTxt:g('rwf-quotes'), exsTxt:g('rwf-exs'), ctx:g('rwf-ctx'), usage:g('rwf-usage'), cmpTxt:g('rwf-cmp'), spq:g('rwf-spq'), spHint:g('rwf-sphint')
   });
 }
 function rwParse(){
@@ -4729,6 +4740,9 @@ function rwSave(){
   const quotes=(d.quotesTxt||'').split('\n').map(s=>s.trim()).filter(Boolean).map(line=>{
     const p=line.split(/\s*[|｜]\s*/); return {en:p[0]||'', cn:p[1]||'', src:'user'};
   }).filter(q=>q.en);
+  const exs=(d.exsTxt||'').split('\n').map(s=>s.trim()).filter(Boolean).map(line=>{
+    const p=line.split(/\s*[|｜]\s*/); return {en:p[0]||'', cn:p[1]||''};
+  }).filter(q=>q.en);
   ST.rw=ST.rw||{};
   ST.rw[id]={ id, created:prev.created||Date.now(), t:Date.now(),
     videoType:prev.videoType||'external',
@@ -4737,7 +4751,7 @@ function rwSave(){
     url:(d.url||'').trim(), country:(d.country||'').trim(),
     cat:d.cat||'生活', level:(d.level||'').trim(), min:(d.min||'').trim(),
     point:(d.point||'').trim(), ctx:(d.ctx||'').trim(), usage:(d.usage||'').trim(),
-    cmp, quotes, spq:(d.spq||'').trim(), spHint:(d.spHint||'').trim(), vocab };
+    cmp, quotes, exs, spq:(d.spq||'').trim(), spHint:(d.spHint||'').trim(), vocab };
   save();
   rwFormOn=false; rwDraft=null; rwEditId=null;
   rwOpen=id; sbAutoCollapse(); RENDER.real(); window.scrollTo(0,0);
