@@ -222,8 +222,8 @@ articles:[
     }
   ],
   "upgrade": [
-    {"b1": "A storm suddenly turned toward the coast, so the delivery schedule was thrown into doubt.", "b2": "Once a tropical storm had unexpectedly turned toward the coast, a delivery schedule that had looked secure only days earlier was abruptly thrown into doubt.", "note": "用had turned的過去完成式交代『先後順序』，並加上that帶出的關係子句補充schedule的背景，語氣更正式、更像B2的敘事寫法。"},
-    {"b1": "Anita has learned that flexible planning matters as much as speed.", "b2": "If this year has taught Anita anything, it is that flexible planning matters every bit as much as speed.", "note": "用If...has taught開頭的句型帶出結論，是B2常見的、更有文采的開場方式。"}
+    {"b1": "A storm suddenly turned toward the coast, so the delivery schedule was thrown into doubt.", "b2": "Once a tropical storm had unexpectedly turned toward the coast, a delivery schedule that had looked secure only days earlier was abruptly thrown into doubt.", "note": "用had turned的過去完成式交代『先後順序』，並加上that帶出的關係子句補充schedule的背景，語氣更正式、更像B2的敘事寫法。", "sp": "The storm took a turn toward the coast out of nowhere, and now the whole delivery schedule is up in the air.", "spNote": "美國人日常會說 out of nowhere（突然、毫無預警）和 up in the air（懸而未決、還不確定），比 suddenly／thrown into doubt 口語得多。"},
+    {"b1": "Anita has learned that flexible planning matters as much as speed.", "b2": "If this year has taught Anita anything, it is that flexible planning matters every bit as much as speed.", "note": "用If...has taught開頭的句型帶出結論，是B2常見的、更有文采的開場方式。", "sp": "One thing Anita's learned this year: being flexible matters just as much as being fast.", "spNote": "口語愛用 One thing I've learned... 開頭加冒號式停頓，being flexible／being fast 比抽象名詞更順口。"}
   ]
 },
 

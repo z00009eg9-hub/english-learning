@@ -675,6 +675,7 @@ body.cnall #v-real span.cnx{display:inline!important}
 .upg .u1{font-size:var(--font-body);color:#6b6259;font-weight:600}
 .upg .u2{font-size:var(--font-body);font-weight:800;margin-top:8px;display:flex;gap:8px;align-items:flex-start;line-height:var(--lh-body);color:#2b2438}
 .upg .un{font-size:var(--font-body);color:#5b4a86;margin-top:9px;font-weight:600;line-height:var(--lh-body);background:var(--card);border-radius:9px;padding:9px 11px}
+.upg .usp{font-size:var(--font-body);font-weight:700;margin-top:8px;color:#1f6b57;line-height:var(--lh-body)}
 /* 每組升級用不同顏色，方便一眼區分 */
 .upg.c0{background:#f4f0fb;border-color:#e0d6f5}         .upg.c0 .un{color:#5b4a86}
 .upg.c1{background:#e9f6f1;border-color:#cfe9df}         .upg.c1 .un{color:#1f6b57}
@@ -2670,7 +2671,9 @@ function readerHTML(a){
     h+='<div class="card"><h2 class="sec">⬆️ '+lo+' → '+hi+' 句型升級</h2>'
      + a.upgrade.map((u,i)=>'<div class="upg c'+(i%4)+'"><div class="u1">'+lo+'：'+esc(u.b1)+' '+spk(u.b1)+'</div>'
        +'<div class="u2">'+hi+'：<span>'+upDiff(u.b1,u.b2)+'</span> '+spk(u.b2)+'</div>'
-       +'<div class="un">💡 '+esc(u.note)+'</div></div>').join('')
+       /* 口語版（選填 sp）：美國人日常口頭會這樣說；spNote 說明場合怎麼選 */
+       +(u.sp?'<div class="usp">🗣 口語：<span class="sent" data-t="'+esc(u.sp)+'" onclick="saySent(this)">'+esc(u.sp)+'</span> '+spk(u.sp)+'</div>':'')
+       +'<div class="un">💡 '+esc(u.note)+(u.spNote?'<br>🗣 '+esc(u.spNote):'')+'</div></div>').join('')
      +'</div>';
   }
   if((a.questions||[]).length){
