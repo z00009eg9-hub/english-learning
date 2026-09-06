@@ -416,28 +416,32 @@ tr:nth-child(even) td{background:#fdfbf8}
 }
 .mrc-cta:active{transform:scale(.97)}
 /* ---------- 每月智慧複習：複習頁 ---------- */
+.magttl.mr-hdr{background:linear-gradient(135deg,#faf6f0,#f5ede2);border-color:#d8cfc2;
+  box-shadow:3px 3px 0 #d8cfc2}
+.mr-sec{font-size:calc(15px * var(--fs));font-weight:600;color:#3d3428;margin:18px 0 8px;
+  padding-bottom:6px;border-bottom:1px solid var(--line)}
 .mr-stats{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:4px;font-weight:600}
 .mr-time{font-size:calc(12px * var(--fs));color:var(--ink2);margin-top:2px}
 .mr-hint{font-size:calc(11.5px * var(--fs));color:var(--ink2);margin:10px 0 0;line-height:1.5}
-.mrfocus{background:var(--card);border:1px solid var(--line);border-left:3px solid #d9534f;
-  border-radius:10px;padding:10px 12px;margin-bottom:8px;box-shadow:0 1px 4px rgba(60,45,30,.05)}
+.mrfocus{background:var(--card);border:1px solid var(--line);
+  border-radius:10px;padding:10px 12px;margin-bottom:8px}
 .mrf-hd{display:flex;gap:8px;align-items:flex-start}
-.mrf-n{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#d9534f;color:#fff;
+.mrf-n{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#6b5e50;color:#fff;
   font-weight:900;font-size:calc(11px * var(--fs));line-height:20px;text-align:center}
-.mrf-t{font-weight:800;font-size:calc(14.5px * var(--fs));line-height:1.4}
+.mrf-t{font-weight:700;font-size:calc(14.5px * var(--fs));line-height:1.4;color:#2b2118}
 .mrf-tc{font-size:calc(12px * var(--fs));color:var(--ink2);margin-top:1px}
 .mrf-why{font-size:calc(11px * var(--fs));border-radius:6px;padding:2px 8px;margin:6px 0 0;display:inline-block}
-.mrf-why.st-unread{color:#a04a12;background:#fdf0e5}
-.mrf-why.st-started{color:#8a6d12;background:#fdf8e5}
+.mrf-why.st-unread{color:#8a5a2a;background:#f7ede2}
+.mrf-why.st-started{color:#7a6a22;background:#f5f0dc}
 .mrf-why.st-done{color:#5a6a5a;background:#f0f4f0}
 .mrf-sec{margin-top:7px}
 .mrf-sec>b{display:block;font-size:calc(11.5px * var(--fs));color:var(--ink2);margin-bottom:3px;font-weight:700;text-transform:uppercase;letter-spacing:.3px}
 .mrf-chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:2px}
 .mrf-chip{display:inline-flex;align-items:center;gap:3px;font-size:calc(13px * var(--fs));font-weight:700;
-  background:var(--accent-soft);border-radius:6px;padding:2px 7px}
+  background:#f5f1ec;border-radius:6px;padding:2px 7px}
 .mrf-chip .cnx{font-weight:400;font-size:calc(11.5px * var(--fs));color:var(--ink2);margin-left:2px}
 .mrf-g{font-size:calc(13px * var(--fs));font-weight:600;color:var(--ink);margin-bottom:4px}
-.mrf-pat{font-size:calc(12px * var(--fs));font-weight:600;color:var(--accent2);margin-top:1px}
+.mrf-pat{font-size:calc(12px * var(--fs));font-weight:600;color:#6b5040;margin-top:1px}
 .mrf-ex{font-size:calc(13px * var(--fs));font-weight:400;margin-top:3px;line-height:1.55;color:#4a4238}
 .mrf-excn{font-size:calc(12px * var(--fs));color:var(--ink2);margin-top:1px}
 .mrf-go{margin-top:6px;border:0;background:none;color:var(--accent2);
@@ -446,11 +450,11 @@ tr:nth-child(even) td{background:#fdfbf8}
 .mrgrambox{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .mrgram{padding:10px 12px}
 .mrgram:not(:last-child){border-bottom:1px solid var(--line)}
-.mrg-t{font-weight:800;font-size:calc(14px * var(--fs));display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.mrg-hit{font-size:calc(10.5px * var(--fs));font-weight:700;color:#2b6b69;background:#f2f7f7;
-  border:1px solid #d5e5e4;border-radius:12px;padding:1px 8px}
-.mrg-pat{font-size:calc(12.5px * var(--fs));font-weight:700;color:var(--accent2);margin-top:3px;
-  background:#fdf3e7;border-radius:4px;padding:2px 6px;display:inline-block}
+.mrg-t{font-weight:700;font-size:calc(14px * var(--fs));display:flex;gap:8px;align-items:center;flex-wrap:wrap;color:#2b2118}
+.mrg-hit{font-size:calc(10.5px * var(--fs));font-weight:700;color:#5a6a5a;background:#f2f4f2;
+  border:1px solid #dde5dd;border-radius:12px;padding:1px 8px}
+.mrg-pat{font-size:calc(12.5px * var(--fs));font-weight:600;color:#6b5040;margin-top:3px;
+  border-left:2px solid #d4b896;padding-left:6px;display:block}
 .mrg-pts{margin:4px 0 0;padding-left:0;font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.6;list-style:none}
 .mrg-exs{margin-top:5px}
 .mrg-ex{font-size:calc(13px * var(--fs));line-height:1.55;margin-bottom:3px}
@@ -468,7 +472,7 @@ tr:nth-child(even) td{background:#fdfbf8}
 /* ---------- V. 本月挑戰 Active Recall ---------- */
 .mrch{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;min-height:120px}
 .mrch-progress{font-size:calc(12px * var(--fs));color:var(--ink2);font-weight:700;margin-bottom:8px}
-.mrch-type{font-size:calc(11px * var(--fs));font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.3px;margin-bottom:6px}
+.mrch-type{font-size:calc(11px * var(--fs));font-weight:700;color:var(--ink2);text-transform:uppercase;letter-spacing:.3px;margin-bottom:6px}
 .mrch-q{font-size:calc(16px * var(--fs));font-weight:700;line-height:1.5;margin-bottom:10px}
 .mrch-q .sent{cursor:pointer}
 .mrch-opts{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
@@ -4327,8 +4331,8 @@ function mrPageHTML(ym){
 
   const chQs=mrBuildChallenge(r); _mrChQs=chQs; mrChIdx=0; mrChShow=false;
   const statBits=[(r.focus.length?r.focus.length+' 堂待補強':'重點回顧'),r.vocab.length+' 個重點單字',r.gram.length+' 個文法重點',chQs.length+' 題挑戰'];
-  let h='<div class="magttl"><button class="back" onclick="mrClose()"><span class="back-label">返回課本</span></button>'
-   +'<div class="magico">🔄</div>'
+  let h='<div class="magttl mr-hdr"><button class="back" onclick="mrClose()"><span class="back-label">返回課本</span></button>'
+   +'<div class="magico" style="opacity:.45">🔄</div>'
    +'<h2>'+mon+' 月重點複習</h2>'
    +'<div class="mr-time">根據你的 '+mon+' 月學習狀況整理　·　約 40 分鐘</div>'
    +'<div class="mr-stats">'+statBits.join(' · ')+'</div>'
@@ -4339,7 +4343,7 @@ function mrPageHTML(ym){
 
   /* I. 優先補強 */
   if(r.focus.length){
-    h+='<div class="bkbar">🔴 I. 優先補強</div>';
+    h+='<div class="mr-sec">I. 優先補強</div>';
     h+=r.focus.map((x,i)=>{
       const b=x.b, ws=mrCoreWords(b,3), g1=(b.grammar||[])[0];
       const stCls=x.st.k==='unread'?'st-unread':x.st.k==='started'?'st-started':'st-done';
@@ -4362,7 +4366,7 @@ function mrPageHTML(ym){
 
   /* II. 本月重要單字 */
   if(r.vocab.length){
-    h+='<div class="bkbar">🔤 II. 本月重要單字（'+r.vocab.length+'）</div>'
+    h+='<div class="mr-sec">II. 本月重要單字（'+r.vocab.length+'）</div>'
      +'<div class="bkvd card"><div class="bkvtab" role="list">'
      +r.vocab.map(e=>wordRow(e.t,e.src.titleCn)).join('')
      +'</div></div>';
@@ -4370,7 +4374,7 @@ function mrPageHTML(ym){
 
   /* III. 本月文法與句型（已去重） */
   if(r.gram.length){
-    h+='<div class="bkbar">📐 III. 本月文法與句型（'+r.gram.length+'）</div>';
+    h+='<div class="mr-sec">III. 本月文法與句型（'+r.gram.length+'）</div>';
     h+='<div class="mrgrambox">'+r.gram.map(e=>{
       const g=e.g, ex1=(g.exs||[])[0], pt1=(g.pts||[])[0];
       return '<div class="mrgram">'
@@ -4386,7 +4390,7 @@ function mrPageHTML(ym){
 
   /* IV. 快速回顧 */
   if(r.quick.length){
-    h+='<div class="bkbar" style="font-size:calc(15px * var(--fs));padding:7px 12px;margin-top:14px">🟢 IV. 快速回顧</div>'
+    h+='<div class="mr-sec">IV. 快速回顧</div>'
      +'<div class="mrquick">'+r.quick.map(x=>{
         const w=mrCoreWords(x.b,2);
         return '<button class="mrq" onclick="bkGo(\''+x.b.id+'\')">'
@@ -4398,7 +4402,7 @@ function mrPageHTML(ym){
 
   /* V. 本月挑戰 / Active Recall */
   if(chQs.length){
-    h+='<div class="bkbar" style="margin-top:14px">🧠 V. 本月挑戰</div>'
+    h+='<div class="mr-sec">V. 本月挑戰<span style="font-weight:400;font-size:calc(12px * var(--fs));color:var(--ink2);margin-left:8px">'+chQs.length+' 題 · 約 7 分鐘</span></div>'
      +'<div class="mrch" id="mrch-area">'+mrChHTML(chQs)+'</div>';
   }
   return h;
