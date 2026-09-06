@@ -1443,7 +1443,7 @@ body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .ex
 #v-book .bkvtab{display:block;width:100%;border:0}
 #v-book .bkvrow{display:block;padding:12px 16px;background:transparent}
 #v-book .bkvrow:not(:last-child){border-bottom:1px solid var(--line)}
-#v-book .bkvrow:hover{background:rgba(232,129,58,.035)}
+@media(hover:hover){#v-book .bkvrow:hover{background:rgba(232,129,58,.035)}}
 #v-book .bkvmeta{display:flex;align-items:center;flex-wrap:wrap;gap:5px 12px;min-width:0}
 #v-book .bkvcell{padding:0;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;word-break:break-word;height:auto;max-height:none}
 #v-book .bkvword{font-weight:var(--fw-emph);font-size:var(--font-body);line-height:var(--lh-body)}
@@ -1878,6 +1878,7 @@ function say(text,rate,onend,voice){
   let v=voiceAlive(voice||VOICE);
   if((voice||VOICE)&&!v){ pickVoice(); v=voiceAlive(voice)||VOICE; }
   const sents=t.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[t];
+  const us=[];
   if(sents.length<=1){
     const u=new SpeechSynthesisUtterance(t);
     u.lang='en-US';
@@ -1885,7 +1886,7 @@ function say(text,rate,onend,voice){
     u.pitch=isQ?1.08:isEx?1.02:0.97;
     if(v) u.voice=v;
     if(onend){u.onend=onend;u.onerror=onend;}
-    speechSynthesis.speak(u);
+    us.push(u);
   }else{
     sents.forEach((s,i)=>{
       const u=new SpeechSynthesisUtterance(s.trim());
@@ -1895,11 +1896,15 @@ function say(text,rate,onend,voice){
       u.pitch=sq?1.10:last?0.94:1.0+((i%3)-1)*0.05;
       if(v) u.voice=v;
       if(last&&onend){u.onend=onend;u.onerror=onend;}
-      speechSynthesis.speak(u);
+      us.push(u);
     });
   }
-  /* 引擎有時會卡在 paused 狀態（cancel 的時機不巧就會發生），推它一下 */
-  if(speechSynthesis.paused) speechSynthesis.resume();
+  /* iOS Safari：cancel() 後立刻 speak() 會靜默失敗，延遲一拍再唸；
+     引擎有時會卡在 paused 狀態（cancel 的時機不巧就會發生），推它一下 */
+  setTimeout(()=>{
+    us.forEach(u=>speechSynthesis.speak(u));
+    if(speechSynthesis.paused) speechSynthesis.resume();
+  },60);
   setTimeout(()=>{ if(speechSynthesis.paused) speechSynthesis.resume(); },150);
 }
 window.say=say;
@@ -1935,7 +1940,12 @@ window.spkGo=spkGo;
 function sayWord(el){
   document.querySelectorAll('.spkon').forEach(x=>x.classList.remove('spkon'));
   el.classList.add('spkon');
-  say(el.textContent, null, ()=>{ el.classList.remove('spkon'); });
+  /* 朗讀失敗時 onend 會立刻觸發，反黃至少停 0.7 秒才不會像沒反應 */
+  const t0=Date.now();
+  say(el.textContent, null, ()=>{
+    const wait=Math.max(0, 700-(Date.now()-t0));
+    setTimeout(()=>el.classList.remove('spkon'), wait);
+  });
 }
 window.sayWord=sayWord;
 function spk(text,label){
