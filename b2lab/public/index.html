@@ -1914,7 +1914,7 @@ window.saySent=saySent;
    反黃只貼著文字、到句子最後一個字／句點為止，不是整條區塊；
    做法：第一次點擊時把喇叭鈕之前的節點包進行內 span.spktxt，之後反黃這個 span。 */
 function spkGo(btn){
-  const box=btn.closest('.exs,.wpline,.u2,.good,.een,.qt,.opt,.kl,.ycd,.trans-line,.gline,li')||btn.parentElement;
+  const box=btn.closest('.exs,.wpline,.u2,.good,.een,.qt,.opt,.kl,.ycd,.trans-line,.gline,.bkvexample,.wln,li')||btn.parentElement;
   let t=null;
   if(box){
     t=box.querySelector(':scope > .spktxt');
