@@ -2643,7 +2643,7 @@ function readerHTML(a){
     h+='<div class="wpbox"><div class="wphead">▼ Words &amp; Phrases<span class="zh">單字片語</span></div><div class="wpbody">'
      + tg.map((t,i)=>{
        return '<div class="wpitem" id="wp-'+(i+1)+'">'
-       +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="showGloss(\''+esc(t.w).replace(/'/g,"\\'")+'\')">'+esc(t.w)+'</w> '
+       +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="sayWord(this)">'+esc(t.w)+'</w> '
        +spk(t.w)+wbBtn(t.w,'閱讀文章')+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
        +'<div class="zh">'+esc(t.cn)+'</div>'
        +(t.def?'<div class="def">'+esc(t.def)+'</div>':'')
@@ -4743,7 +4743,7 @@ function rwDetailHTML(l){
   if((l.vocab||[]).length){
     h+='<div class="wpbox"><div class="wphead">▼ Words &amp; Phrases<span class="zh">單字片語</span></div><div class="wpbody">'
      +l.vocab.map((t,i)=>'<div class="wpitem" id="rwp-'+(i+1)+'">'
-       +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="showGloss(\''+esc(t.w).replace(/'/g,"\\'")+'\')">'+esc(t.w)+'</w> '
+       +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="sayWord(this)">'+esc(t.w)+'</w> '
        +spk(t.w)+wbBtn(t.w,'實景：'+(l.ti||''))+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
        +(t.cn?'<div class="zh">'+esc(t.cn)+'</div>':'')
        +(t.ex?'<div class="exs">'+bkHi(t.ex,t.w)+' '+spk(t.ex)+(t.exCn?'<div class="excn">'+esc(t.exCn)+'</div>':'')+'</div>':'')
