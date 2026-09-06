@@ -72,8 +72,8 @@ articles:[
     }
   ],
   "upgrade": [
-    {"b1": "Tom checks the weather app. He sees rain in the forecast.", "b2": "Tom checks the weather app and sees rain in the forecast.", "note": "用and連接兩個動作，不用重複主詞Tom，句子更順、更像B1的寫法。", "sp": "Tom checks the weather app, and yep — rain's on the way.", "spNote": "口語常用 yep（對啊）和 on the way（要來了），比 sees rain in the forecast 更像日常對話。"},
-    {"b1": "The sky is dark. The sky is windy.", "b2": "The sky is dark and windy.", "note": "用and合併兩個形容詞，比兩個短句更自然，是B1常見的寫法。", "sp": "It's looking pretty dark and windy out there.", "spNote": "It's looking... out there 是美國人描述天氣的慣用開場；pretty 當「蠻、相當」用。"}
+    {"b1": "Tom checks the weather app. He sees rain in the forecast.", "b2": "Tom checks the weather app and sees rain in the forecast.", "note": "用and連接兩個動作，不用重複主詞Tom，句子更順、更像B1的寫法。", "sp": "Tom checks the weather app, and yep — rain's on the way.", "spNote": "口語常用 yep（對啊）和 on the way（要來了），比 sees rain in the forecast 更像日常對話。", "b1Cn": "Tom 查看天氣 App。他看到預報有雨。", "b2Cn": "Tom 查看天氣 App，看到預報有雨。", "spCn": "Tom 滑了一下天氣 App，果然——雨要來了。"},
+    {"b1": "The sky is dark. The sky is windy.", "b2": "The sky is dark and windy.", "note": "用and合併兩個形容詞，比兩個短句更自然，是B1常見的寫法。", "sp": "It's looking pretty dark and windy out there.", "spNote": "It's looking... out there 是美國人描述天氣的慣用開場；pretty 當「蠻、相當」用。", "b1Cn": "天空很暗。風很大。", "b2Cn": "天色又暗風又大。", "spCn": "外面看起來又暗風又大。"}
   ]
 },
 
@@ -142,8 +142,8 @@ articles:[
     }
   ],
   "upgrade": [
-    {"b1": "A strong storm approached the city, so the company announced a day off.", "b2": "A typhoon day off was announced after a strong storm was reported approaching the city.", "note": "用被動語態was announced，把重點放在『放假這件事』本身，不特別強調是誰宣布的，是B1+常見的寫法。", "sp": "They called a typhoon day off once word got out a big storm was headed our way.", "spNote": "word got out（消息傳開）、headed our way（朝我們來）都是道地口語。"},
-    {"b1": "Her neighbor came over. Together they taped all the windows.", "b2": "Her neighbor, who lives just next door, came over so that they could tape all the windows together.", "note": "用who帶出的關係子句補充說明鄰居是誰，比兩個短句更精簡，也更像B1+的寫法。", "sp": "Her next-door neighbor came over and they taped up all the windows together.", "spNote": "next-door neighbor 與 tape up 的 up 是口語加強完成感，比 who lives just next door 輕鬆。"}
+    {"b1": "A strong storm approached the city, so the company announced a day off.", "b2": "A typhoon day off was announced after a strong storm was reported approaching the city.", "note": "用被動語態was announced，把重點放在『放假這件事』本身，不特別強調是誰宣布的，是B1+常見的寫法。", "sp": "They called a typhoon day off once word got out a big storm was headed our way.", "spNote": "word got out（消息傳開）、headed our way（朝我們來）都是道地口語。", "b1Cn": "強烈風暴接近城市，所以公司宣布放假一天。", "b2Cn": "在強烈風暴被通報接近城市後，颱風假就宣布了。", "spCn": "消息一傳出有大風暴朝我們來，他們就宣布放颱風假了。"},
+    {"b1": "Her neighbor came over. Together they taped all the windows.", "b2": "Her neighbor, who lives just next door, came over so that they could tape all the windows together.", "note": "用who帶出的關係子句補充說明鄰居是誰，比兩個短句更精簡，也更像B1+的寫法。", "sp": "Her next-door neighbor came over and they taped up all the windows together.", "spNote": "next-door neighbor 與 tape up 的 up 是口語加強完成感，比 who lives just next door 輕鬆。", "b1Cn": "她的鄰居過來了。他們一起把所有窗戶貼上膠帶。", "b2Cn": "她住在隔壁的鄰居過來，跟她一起把所有窗戶貼好膠帶。", "spCn": "她隔壁鄰居過來，兩人一起把窗戶全貼上膠帶。"}
   ]
 },
 
@@ -222,8 +222,8 @@ articles:[
     }
   ],
   "upgrade": [
-    {"b1": "A storm suddenly turned toward the coast, so the delivery schedule was thrown into doubt.", "b2": "Once a tropical storm had unexpectedly turned toward the coast, a delivery schedule that had looked secure only days earlier was abruptly thrown into doubt.", "note": "用had turned的過去完成式交代『先後順序』，並加上that帶出的關係子句補充schedule的背景，語氣更正式、更像B2的敘事寫法。", "sp": "The storm took a turn toward the coast out of nowhere, and now the whole delivery schedule is up in the air.", "spNote": "美國人日常會說 out of nowhere（突然、毫無預警）和 up in the air（懸而未決、還不確定），比 suddenly／thrown into doubt 口語得多。"},
-    {"b1": "Anita has learned that flexible planning matters as much as speed.", "b2": "If this year has taught Anita anything, it is that flexible planning matters every bit as much as speed.", "note": "用If...has taught開頭的句型帶出結論，是B2常見的、更有文采的開場方式。", "sp": "One thing Anita's learned this year: being flexible matters just as much as being fast.", "spNote": "口語愛用 One thing I've learned... 開頭加冒號式停頓，being flexible／being fast 比抽象名詞更順口。"}
+    {"b1": "A storm suddenly turned toward the coast, so the delivery schedule was thrown into doubt.", "b2": "Once a tropical storm had unexpectedly turned toward the coast, a delivery schedule that had looked secure only days earlier was abruptly thrown into doubt.", "note": "用had turned的過去完成式交代『先後順序』，並加上that帶出的關係子句補充schedule的背景，語氣更正式、更像B2的敘事寫法。", "sp": "The storm took a turn toward the coast out of nowhere, and now the whole delivery schedule is up in the air.", "spNote": "美國人日常會說 out of nowhere（突然、毫無預警）和 up in the air（懸而未決、還不確定），比 suddenly／thrown into doubt 口語得多。", "b1Cn": "風暴突然轉向海岸，所以出貨時程變得不確定。", "b2Cn": "熱帶風暴一出乎意料地轉向海岸，幾天前還看似穩當的出貨時程就突然變得不確定了。", "spCn": "風暴毫無預警地轉向海岸，現在整個出貨時程都懸在半空中。"},
+    {"b1": "Anita has learned that flexible planning matters as much as speed.", "b2": "If this year has taught Anita anything, it is that flexible planning matters every bit as much as speed.", "note": "用If...has taught開頭的句型帶出結論，是B2常見的、更有文采的開場方式。", "sp": "One thing Anita's learned this year: being flexible matters just as much as being fast.", "spNote": "口語愛用 One thing I've learned... 開頭加冒號式停頓，being flexible／being fast 比抽象名詞更順口。", "b1Cn": "Anita 學到：彈性規劃跟速度一樣重要。", "b2Cn": "如果說今年教會了 Anita 什麼，那就是彈性規劃跟速度一樣重要。", "spCn": "Anita 今年學到一件事：保持彈性跟求快一樣重要。"}
   ]
 },
 
@@ -302,8 +302,8 @@ articles:[
     }
   ],
   "upgrade": [
-    {"b1": "It rained a lot this summer.", "b2": "Fourteen tropical storms formed in July and August alone, matching the record for that two-month period.", "note": "用具體的數字取代籠統的『下很多雨』，是B2新聞式改寫常見的手法。", "sp": "We got fourteen tropical storms in just July and August — that ties the record.", "spNote": "口語用 we got（我們碰上）、that ties the record（追平紀錄）取代正式的 matching the record。"},
-    {"b1": "Kaohsiung recorded a lot of rain this year.", "b2": "Kaohsiung logged its wettest such period since its measuring station was relocated in 2022.", "note": "用since帶出的時間子句與被動was relocated，交代『比較基準』，語氣更精確、更像正式報導。", "sp": "Kaohsiung just had its rainiest stretch since they moved the weather station back in 2022.", "spNote": "stretch（一段期間）、back in 2022（早在 2022 年）是口語常見說法。"}
+    {"b1": "It rained a lot this summer.", "b2": "Fourteen tropical storms formed in July and August alone, matching the record for that two-month period.", "note": "用具體的數字取代籠統的『下很多雨』，是B2新聞式改寫常見的手法。", "sp": "We got fourteen tropical storms in just July and August — that ties the record.", "spNote": "口語用 we got（我們碰上）、that ties the record（追平紀錄）取代正式的 matching the record。", "b1Cn": "今年夏天下了很多雨。", "b2Cn": "光是七、八月就形成了十四個熱帶風暴，追平該兩個月的紀錄。", "spCn": "我們光七、八月就碰上十四個熱帶風暴——追平紀錄了。"},
+    {"b1": "Kaohsiung recorded a lot of rain this year.", "b2": "Kaohsiung logged its wettest such period since its measuring station was relocated in 2022.", "note": "用since帶出的時間子句與被動was relocated，交代『比較基準』，語氣更精確、更像正式報導。", "sp": "Kaohsiung just had its rainiest stretch since they moved the weather station back in 2022.", "spNote": "stretch（一段期間）、back in 2022（早在 2022 年）是口語常見說法。", "b1Cn": "高雄今年降雨量很大。", "b2Cn": "高雄記錄到自 2022 年測站遷移以來最潮濕的同期。", "spCn": "高雄剛經歷了 2022 年測站搬遷以來最會下雨的一段日子。"}
   ]
 },
 {
@@ -448,12 +448,12 @@ articles:[
       "b1": "Tom went to the pool. He felt nervous. The class began.",
       "b2": "Tom felt nervous when the class began, but he still went to the pool.",
       "note": "用when連接兩個過去的動作，比三個短句更順，也交代了先後順序。"
-    , "sp": "Tom got nervous when class started, but he showed up at the pool anyway.", "spNote": "show up（現身）加句尾 anyway（還是去了）是美式口語標準組合。"},
+    , "sp": "Tom got nervous when class started, but he showed up at the pool anyway.", "spNote": "show up（現身）加句尾 anyway（還是去了）是美式口語標準組合。", "b1Cn": "Tom 去了游泳池。他很緊張。課開始了。", "b2Cn": "課開始時 Tom 很緊張，但他還是去了游泳池。", "spCn": "課一開始 Tom 就緊張了，但他還是照樣出現在游泳池。"},
     {
       "b1": "He was happy. He was proud. His classmates clapped.",
       "b2": "He was so happy and proud that his classmates clapped for him.",
       "note": "用so...that帶出結果子句，把三個短句合併成一句更自然的英文。"
-    , "sp": "He was so happy and proud — the whole class gave him a big hand.", "spNote": "give someone a big hand（熱烈鼓掌）是道地口語；破折號的停頓感也很口語。"}
+    , "sp": "He was so happy and proud — the whole class gave him a big hand.", "spNote": "give someone a big hand（熱烈鼓掌）是道地口語；破折號的停頓感也很口語。", "b1Cn": "他很開心。他很驕傲。同學為他鼓掌。", "b2Cn": "他開心又驕傲，同學都為他鼓掌。", "spCn": "他又開心又驕傲——全班為他熱烈鼓掌。"}
   ]
 },
 
@@ -599,12 +599,12 @@ articles:[
       "b1": "Amy has never baked bread before. She wanted to try it.",
       "b2": "Amy, who had never baked bread before, finally decided to give it a try.",
       "note": "用who帶出的關係子句補充說明Amy的背景，比兩個短句更精簡、更像B1+的寫法。"
-    , "sp": "Amy had never baked bread in her life, but she figured she'd give it a shot.", "spNote": "in her life 加強語氣、figure（心想）、give it a shot（試試看）都是美式口語。"},
+    , "sp": "Amy had never baked bread in her life, but she figured she'd give it a shot.", "spNote": "in her life 加強語氣、figure（心想）、give it a shot（試試看）都是美式口語。", "b1Cn": "Amy 從沒烤過麵包。她想試試看。", "b2Cn": "從沒烤過麵包的 Amy，終於決定試一試。", "spCn": "Amy 這輩子沒烤過麵包，但她心想不如試試看。"},
     {
       "b1": "Amy felt frustrated. She almost gave up.",
       "b2": "Amy felt so frustrated that she almost gave up twice while mixing the dough.",
       "note": "用so...that連接原因與結果，比兩個短句更緊湊，也交代了發生的情境。"
-    , "sp": "Amy got so frustrated mixing the dough she almost threw in the towel — twice.", "spNote": "throw in the towel（認輸放棄）源自拳擊，是超常用的口語慣用語。"}
+    , "sp": "Amy got so frustrated mixing the dough she almost threw in the towel — twice.", "spNote": "throw in the towel（認輸放棄）源自拳擊，是超常用的口語慣用語。", "b1Cn": "Amy 很挫折。她差點放棄。", "b2Cn": "Amy 挫折到揉麵團時差點放棄了兩次。", "spCn": "Amy 揉麵團揉到超挫折，差點就認輸——還兩次。"}
   ]
 },
 
@@ -786,12 +786,12 @@ articles:[
       "b1": "Anita's manager liked her solution, so she shared it with everyone.",
       "b2": "Anita's solution so impressed her manager that it was shared with the entire department.",
       "note": "用so...that帶出結果，並保留被動語態was shared，語氣更正式、更像書面報告的寫法。"
-    , "sp": "Anita's manager loved her fix so much he passed it around to the whole department.", "spNote": "fix（解決辦法）、pass around（傳給大家）比 was shared with 口語自然。"},
+    , "sp": "Anita's manager loved her fix so much he passed it around to the whole department.", "spNote": "fix（解決辦法）、pass around（傳給大家）比 was shared with 口語自然。", "b1Cn": "Anita 的主管喜歡她的解法，所以她分享給大家。", "b2Cn": "Anita 的解法讓主管印象深刻，因此被分享給整個部門。", "spCn": "Anita 的主管超愛她的解法，直接傳給整個部門看。"},
     {
       "b1": "Learning something new is hard, but it gets easier later.",
       "b2": "Discomfort is often simply the price one pays for acquiring a new skill.",
       "note": "one pays是正式英文常見的泛稱主詞，acquiring也比learning更書面，整體語域明顯提升。"
-    , "sp": "Feeling a little out of your depth? That's just part of picking up something new.", "spNote": "out of your depth（力不從心）、pick up（學會）是美國人談學習的常用口語。"}
+    , "sp": "Feeling a little out of your depth? That's just part of picking up something new.", "spNote": "out of your depth（力不從心）、pick up（學會）是美國人談學習的常用口語。", "b1Cn": "學新東西很難，但之後會變簡單。", "b2Cn": "不自在往往只是學會新技能要付的代價。", "spCn": "覺得有點力不從心？那只是學新東西的必經過程。"}
   ]
 },
 
@@ -977,12 +977,12 @@ articles:[
       "b1": "I didn't like numbers, but I decided to try the course anyway.",
       "b2": "I would have said that I was not a 'numbers person,' yet I signed up regardless of my doubts.",
       "note": "would have said帶出「過去對自己的假設」，regardless of比anyway語域更正式，是B2常見的讓步語。"
-    , "sp": "I never thought of myself as a numbers person, but I signed up anyway.", "spNote": "I never thought of myself as...（我從不覺得自己是…）是口語自述的慣用開場。"},
+    , "sp": "I never thought of myself as a numbers person, but I signed up anyway.", "spNote": "I never thought of myself as...（我從不覺得自己是…）是口語自述的慣用開場。", "b1Cn": "我不喜歡數字，但我還是決定試試這門課。", "b2Cn": "我本來會說自己不是「數字型的人」，但儘管有疑慮我還是報名了。", "spCn": "我從不覺得自己是數字型的人，但我還是報名了。"},
     {
       "b1": "The workplace problem was hard, but I learned a lot from doing it.",
       "b2": "Being forced to apply what I had barely learned, under a real deadline, built more confidence than any textbook practice could.",
       "note": "Being forced to...是分詞構句開頭的正式寫法，比直接的「主詞+動詞」更精簡、更書面。"
-    , "sp": "Having to use what I'd just learned, with a real deadline breathing down my neck, taught me way more than any textbook.", "spNote": "breathing down my neck（進度緊逼）、way more（多得多）是道地口語強調法。"}
+    , "sp": "Having to use what I'd just learned, with a real deadline breathing down my neck, taught me way more than any textbook.", "spNote": "breathing down my neck（進度緊逼）、way more（多得多）是道地口語強調法。", "b1Cn": "職場的問題很難，但我從做中學到很多。", "b2Cn": "在真實期限下被迫運用剛學會的東西，比任何課本練習更能累積信心。", "spCn": "在死線逼著跑的情況下硬用剛學的東西，教我的比任何課本都多。"}
   ]
 },
 {
@@ -1127,12 +1127,12 @@ articles:[
       "b1": "Tom cooked dinner. He talked on the phone. He forgot the stove.",
       "b2": "While Tom was talking on the phone, he forgot to turn off the stove.",
       "note": "用 while + 過去進行式（was talking）連接兩個同時發生的動作，比三個短句更順。"
-    , "sp": "Tom was on the phone and totally spaced on the stove.", "spNote": "space on something（一時忘記）是美式口語；totally 是常見加強詞。"},
+    , "sp": "Tom was on the phone and totally spaced on the stove.", "spNote": "space on something（一時忘記）是美式口語；totally 是常見加強詞。", "b1Cn": "Tom 煮晚餐。他講電話。他忘了爐子。", "b2Cn": "Tom 講電話時忘了關爐火。", "spCn": "Tom 講電話講到完全忘了爐子這回事。"},
     {
       "b1": "The soup was thick. Tom ate it. It tasted fine.",
       "b2": "Even though the soup was too thick, Tom still ate it and it tasted fine.",
       "note": "even though 帶出讓步子句，比三個短句更能表達「雖然…但…」的語氣。"
-    , "sp": "The soup came out pretty thick, but Tom ate it anyway — tasted fine.", "spNote": "come out（成品變成…）、句尾省略主詞的 tasted fine 都是輕鬆口語的特徵。"}
+    , "sp": "The soup came out pretty thick, but Tom ate it anyway — tasted fine.", "spNote": "come out（成品變成…）、句尾省略主詞的 tasted fine 都是輕鬆口語的特徵。", "b1Cn": "湯很濃稠。Tom 喝了。味道還可以。", "b2Cn": "雖然湯太濃稠，Tom 還是喝了，味道也還不錯。", "spCn": "湯煮得有點稠，但 Tom 照喝——味道還行。"}
   ]
 },
 
@@ -1278,12 +1278,12 @@ articles:[
       "b1": "The doorbell rang. Amy was chopping vegetables.",
       "b2": "The doorbell rang just as Amy was chopping vegetables for the salad.",
       "note": "just as 比單純用 while 更強調「恰好在那一刻」，是B1+常見的加強寫法。"
-    , "sp": "Amy was right in the middle of chopping veggies when the doorbell rang.", "spNote": "right in the middle of（正忙著）、veggies（蔬菜的暱稱）是日常口語。"},
+    , "sp": "Amy was right in the middle of chopping veggies when the doorbell rang.", "spNote": "right in the middle of（正忙著）、veggies（蔬菜的暱稱）是日常口語。", "b1Cn": "門鈴響了。Amy 正在切菜。", "b2Cn": "門鈴響起時，Amy 正在為沙拉切菜。", "spCn": "Amy 正切菜切到一半，門鈴就響了。"},
     {
       "b1": "The chicken was burnt. Nobody minded.",
       "b2": "Although the chicken ended up slightly burnt, nobody seemed to mind at all.",
       "note": "although 帶出讓步子句，seemed to 讓語氣更委婉、不那麼直接。"
-    , "sp": "The chicken got a little burnt, but nobody made a big deal out of it.", "spNote": "make a big deal out of it（小題大作）是超常用口語，比 seemed to mind 生動。"}
+    , "sp": "The chicken got a little burnt, but nobody made a big deal out of it.", "spNote": "make a big deal out of it（小題大作）是超常用口語，比 seemed to mind 生動。", "b1Cn": "雞肉燒焦了。沒有人介意。", "b2Cn": "雖然雞肉最後有點燒焦，但似乎沒人介意。", "spCn": "雞肉有點焦掉，但沒人小題大作。"}
   ]
 },
 
@@ -1465,12 +1465,12 @@ articles:[
       "b1": "The power went out. Anita's food was ruined.",
       "b2": "A sudden outage during the dinner rush left Anita's half-cooked meal beyond saving.",
       "note": "用「名詞化」（a sudden outage）取代 The power went out 的完整句子，是B2常見的精簡寫法，left...beyond saving 也比 was ruined 更生動。"
-    , "sp": "The power cut out right in the middle of dinner, and Anita's half-cooked food was a goner.", "spNote": "cut out（突然斷掉）、be a goner（救不回來了）是口語說法。"},
+    , "sp": "The power cut out right in the middle of dinner, and Anita's half-cooked food was a goner.", "spNote": "cut out（突然斷掉）、be a goner（救不回來了）是口語說法。", "b1Cn": "停電了。Anita 的食物毀了。", "b2Cn": "晚餐尖峰時的突然停電，讓 Anita 煮到一半的餐點救不回來了。", "spCn": "晚餐煮到一半電突然斷了，Anita 那鍋半熟的菜就這樣報銷了。"},
     {
       "b1": "She bought a gas stove so she would be ready next time.",
       "b2": "She has since invested in a small gas stove as a hedge against future outages.",
       "note": "invested in 比 bought 更強調「為了未來的保障而花錢」，as a hedge against 是財經／風險用語，語域更正式。"
-    , "sp": "She went out and got a little gas stove so she's covered next time the power goes out.", "spNote": "be covered（有備無患）、the power goes out（停電）是美式日常說法。"}
+    , "sp": "She went out and got a little gas stove so she's covered next time the power goes out.", "spNote": "be covered（有備無患）、the power goes out（停電）是美式日常說法。", "b1Cn": "她買了瓦斯爐，這樣下次就有準備。", "b2Cn": "她後來投資了一台小瓦斯爐，作為未來停電的備案。", "spCn": "她跑去買了台小瓦斯爐，下次停電就不怕了。"}
   ]
 },
 
@@ -1658,12 +1658,12 @@ articles:[
       "b1": "The company didn't tell people fast enough that its oil was bad.",
       "b2": "The company was fined for failing to report the contamination promptly, a delay regulators called the most serious violation in the case.",
       "note": "被動語態（was fined for failing to）加上同位語（a delay regulators called...）是新聞報導常見的精簡寫法，一句話交代處罰理由與嚴重性。"
-    , "sp": "The company got slapped with a fine for sitting on the contamination news way too long.", "spNote": "get slapped with a fine（吃上罰單）、sit on（壓著消息不處理）是新聞口語常見表達。"},
+    , "sp": "The company got slapped with a fine for sitting on the contamination news way too long.", "spNote": "get slapped with a fine（吃上罰單）、sit on（壓著消息不處理）是新聞口語常見表達。", "b1Cn": "公司沒有及時告訴大家油有問題。", "b2Cn": "公司因未及時通報污染而被罰款，監管機關稱這項延誤是本案最嚴重的違規。", "spCn": "公司把污染的消息壓了太久，結果吃上罰單。"},
     {
       "b1": "The problem happened because the company didn't check things well.",
       "b2": "Investigators attributed the contamination to systemic gaps in quality control rather than an isolated accident.",
       "note": "attributed...to 是正式報導動詞，systemic gaps 比「沒有做好」更精確地指出「制度性」的問題，語域明顯更正式。"
-    , "sp": "Investigators say it wasn't a one-off — the company's quality checks were full of holes.", "spNote": "one-off（單一事件）、full of holes（漏洞百出）比 systemic gaps 口語得多。"}
+    , "sp": "Investigators say it wasn't a one-off — the company's quality checks were full of holes.", "spNote": "one-off（單一事件）、full of holes（漏洞百出）比 systemic gaps 口語得多。", "b1Cn": "問題發生是因為公司沒有好好檢查。", "b2Cn": "調查人員把污染歸因於品質管制的系統性漏洞，而非單一意外。", "spCn": "調查人員說這不是單一事件——公司的品管根本漏洞百出。"}
   ]
 },
 
@@ -1800,12 +1800,12 @@ articles:[
       "b1": "He went to a shop. He bought a shelf.",
       "b2": "He went to a shop and bought a new shelf for his books.",
       "note": "用 and 連接兩個動作不必重複主詞，句子更流暢。"
-    , "sp": "He hit the store and picked up a new shelf for his books.", "spNote": "hit the store（跑一趟店）、pick up（順手買）是美式購物口語。"},
+    , "sp": "He hit the store and picked up a new shelf for his books.", "spNote": "hit the store（跑一趟店）、pick up（順手買）是美式購物口語。", "b1Cn": "他去了商店。他買了一個架子。", "b2Cn": "他去商店買了一個放書的新架子。", "spCn": "他跑了一趟店，順手買了個新書架。"},
     {
       "b1": "Amy helped him. The boxes were heavy.",
       "b2": "Amy helped him carry the heavy boxes.",
       "note": "把形容詞放在名詞前面（heavy boxes），不用另起一句解釋。"
-    , "sp": "Amy gave him a hand with the heavy boxes.", "spNote": "give someone a hand（幫個忙）是最常用的口語幫忙說法。"}
+    , "sp": "Amy gave him a hand with the heavy boxes.", "spNote": "give someone a hand（幫個忙）是最常用的口語幫忙說法。", "b1Cn": "Amy 幫了他。箱子很重。", "b2Cn": "Amy 幫他搬那些很重的箱子。", "spCn": "Amy 幫他搬了那些重箱子。"}
   ]
 },
 
@@ -1951,12 +1951,12 @@ articles:[
       "b1": "She stopped eating out because it cost a lot.",
       "b2": "She cut down on eating out, which had been taking up most of her food budget.",
       "note": "cut down on 比 stopped 更精準（減少、不是完全停），which 帶出的關係子句補充背景。"
-    , "sp": "She cut back on eating out — that's where most of her food money was going.", "spNote": "cut back on（減少開銷）、where the money was going（錢都花在哪）是理財話題口語。"},
+    , "sp": "She cut back on eating out — that's where most of her food money was going.", "spNote": "cut back on（減少開銷）、where the money was going（錢都花在哪）是理財話題口語。", "b1Cn": "她不再外食，因為花費太高。", "b2Cn": "她減少外食——那原本佔掉她大部分的伙食預算。", "spCn": "她砍掉外食——她的伙食費大多都花在那上面。"},
     {
       "b1": "She is excited because she has never had a balcony.",
       "b2": "For the first time in her life, she will have a place with its own balcony.",
       "note": "for the first time in her life 比 never 更有畫面感，its own 強調「屬於自己的」。"
-    , "sp": "She's never had her own balcony before, so she's pretty stoked.", "spNote": "stoked（超興奮）是美式口語；也常說 pumped、thrilled。"}
+    , "sp": "She's never had her own balcony before, so she's pretty stoked.", "spNote": "stoked（超興奮）是美式口語；也常說 pumped、thrilled。", "b1Cn": "她很興奮，因為她從來沒有過陽台。", "b2Cn": "她人生第一次擁有自己的陽台。", "spCn": "她從沒有過自己的陽台，所以現在超興奮。"}
   ]
 },
 
@@ -2129,12 +2129,12 @@ articles:[
       "b1": "Nearly half of her salary is spent on rent.",
       "b2": "Rent alone absorbs close to half of her monthly take-home pay.",
       "note": "absorb（吸收）比 spend 更生動，take-home pay 是薪資的道地說法，指實拿到手的錢。"
-    , "sp": "Rent eats up almost half of what she takes home every month.", "spNote": "eat up（吃掉、佔掉）講開銷超常用；take home 指實領薪水。"},
+    , "sp": "Rent eats up almost half of what she takes home every month.", "spNote": "eat up（吃掉、佔掉）講開銷超常用；take home 指實領薪水。", "b1Cn": "她將近一半的薪水花在房租上。", "b2Cn": "光房租就吃掉她每月實領薪水的近一半。", "spCn": "房租吃掉她每個月實領薪水的快一半。"},
     {
       "b1": "She has learned that housing costs must be planned for.",
       "b2": "The experience has underscored a principle she once overlooked: housing is a cost that demands forward planning.",
       "note": "underscore（強調）、principle（原則）、forward planning（事先規劃）讓語氣更正式精準。"
-    , "sp": "One thing she's learned the hard way: you've got to plan ahead for housing costs.", "spNote": "learn the hard way（吃過虧才懂）、you've got to（你得）是口語表達教訓的方式。"}
+    , "sp": "One thing she's learned the hard way: you've got to plan ahead for housing costs.", "spNote": "learn the hard way（吃過虧才懂）、you've got to（你得）是口語表達教訓的方式。", "b1Cn": "她學到：住房開銷必須事先規劃。", "b2Cn": "這段經歷凸顯了她曾忽略的原則：住房是需要提前規劃的成本。", "spCn": "她吃過虧才學到一件事：住房開銷一定要提前規劃。"}
   ]
 },
 
@@ -2323,12 +2323,12 @@ articles:[
       "b1": "The rent went up a lot.",
       "b2": "The share of income devoted to housing has risen from roughly a third to well over half.",
       "note": "用具體數據（a third → well over half）取代模糊的 a lot，並用 devoted to housing 精確指出是哪一塊支出。"
-    , "sp": "Housing used to take about a third of people's pay — now it's more than half.", "spNote": "used to... now...（以前…現在…）的對比是口語最自然的講法。"},
+    , "sp": "Housing used to take about a third of people's pay — now it's more than half.", "spNote": "used to... now...（以前…現在…）的對比是口語最自然的講法。", "b1Cn": "房租漲了很多。", "b2Cn": "收入中用於住房的比例，從大約三分之一升到超過一半。", "spCn": "以前住房大概花掉薪水的三分之一——現在超過一半了。"},
     {
       "b1": "Moving to a suburb did not always save money.",
       "b2": "Transport expenses, childcare fees, and the time lost in traffic ate into the savings.",
       "note": "ate into（侵蝕）是財經常見的搭配，列出三項具體支出比一個 did not save 更有說服力。"
-    , "sp": "The commute, the daycare bills, the hours stuck in traffic — it all ate into the savings.", "spNote": "三個名詞排比加 it all 收尾是口語列舉的節奏；stuck in traffic（塞在路上）超常用。"}
+    , "sp": "The commute, the daycare bills, the hours stuck in traffic — it all ate into the savings.", "spNote": "三個名詞排比加 it all 收尾是口語列舉的節奏；stuck in traffic（塞在路上）超常用。", "b1Cn": "搬到郊區不一定省錢。", "b2Cn": "交通費、托育費和塞在路上的時間，把省下的錢又吃掉了。", "spCn": "通勤、托育帳單、塞在路上的時間——全都把省下的錢吃回去了。"}
   ]
 },
 
@@ -2474,12 +2474,12 @@ articles:[
       "b1": "He likes coffee with milk.",
       "b2": "He prefers his coffee with milk rather than black.",
       "note": "prefer A rather than B 能說出「兩個裡面更喜歡哪一個」，比 like 更精確。"
-    , "sp": "He likes his coffee with milk, not black.", "spNote": "口語直接用 not black 收尾，比 rather than black 乾脆。"},
+    , "sp": "He likes his coffee with milk, not black.", "spNote": "口語直接用 not black 收尾，比 rather than black 乾脆。", "b1Cn": "他喜歡加牛奶的咖啡。", "b2Cn": "他偏好咖啡加牛奶，而不是黑咖啡。", "spCn": "他咖啡要加奶，不喝黑的。"},
     {
       "b1": "He knows his boss will ask many questions.",
       "b2": "He expects a lot of questions from his boss.",
       "note": "expect 一個字就表達「預期會發生」，句子更短、更自然。"
-    , "sp": "He knows his boss is gonna grill him with questions.", "spNote": "grill somebody（拷問、連環追問）是道地口語；gonna = going to。"}
+    , "sp": "He knows his boss is gonna grill him with questions.", "spNote": "grill somebody（拷問、連環追問）是道地口語；gonna = going to。", "b1Cn": "他知道老闆會問很多問題。", "b2Cn": "他預期老闆會有很多問題。", "spCn": "他知道老闆一定會連環拷問他。"}
   ]
 },
 
@@ -2625,12 +2625,12 @@ articles:[
       "b1": "She gets up at six, not seven.",
       "b2": "She has set her alarm an hour earlier.",
       "note": "調鬧鐘道地的動詞搭配是 set an alarm；用現在完成式 has set 點出「這個改變到現在還持續有效」，比只講事實多一層時間感。"
-    , "sp": "She's set her alarm a whole hour earlier.", "spNote": "a whole hour（整整一小時）的 whole 是口語加強詞。"},
+    , "sp": "She's set her alarm a whole hour earlier.", "spNote": "a whole hour（整整一小時）的 whole 是口語加強詞。", "b1Cn": "她六點起床，不是七點。", "b2Cn": "她把鬧鐘調早了一小時。", "spCn": "她把鬧鐘整整調早了一小時。"},
     {
       "b1": "The office is quiet when she arrives.",
       "b2": "By the time she arrives, hardly anyone is in yet.",
       "note": "by the time＋hardly anyone 讓句子更有畫面，也更接近母語者的口語。"
-    , "sp": "When she gets in, the office is basically empty.", "spNote": "get in（到公司）、basically（基本上）是辦公室日常口語。"}
+    , "sp": "When she gets in, the office is basically empty.", "spNote": "get in（到公司）、basically（基本上）是辦公室日常口語。", "b1Cn": "她到的時候辦公室很安靜。", "b2Cn": "她到的時候，幾乎還沒有人進來。", "spCn": "她進公司時，辦公室基本上是空的。"}
   ]
 },
 
@@ -2812,12 +2812,12 @@ articles:[
       "b1": "Now every application is reviewed by two people.",
       "b2": "Every application now goes through a two-person review.",
       "note": "把被動句改成以「流程」當主詞的說法（go through a review），是報告與簡報常見的高階寫法。"
-    , "sp": "Every application gets looked at by two people now.", "spNote": "get looked at 的 get 被動是口語最常見的被動講法。"},
+    , "sp": "Every application gets looked at by two people now.", "spNote": "get looked at 的 get 被動是口語最常見的被動講法。", "b1Cn": "現在每份申請都由兩個人審查。", "b2Cn": "每份申請現在都要經過兩人審查。", "spCn": "現在每份申請都會有兩個人過目。"},
     {
       "b1": "They are given a small task, which must be finished in thirty minutes.",
       "b2": "They are set a thirty-minute practical task.",
       "note": "set someone a task 是更道地的職場動詞搭配，把時間限制放進形容詞（thirty-minute）句子更精簡。"
-    , "sp": "They get a quick thirty-minute task to knock out.", "spNote": "knock out（快速搞定）是美式口語動詞片語。"}
+    , "sp": "They get a quick thirty-minute task to knock out.", "spNote": "knock out（快速搞定）是美式口語動詞片語。", "b1Cn": "他們被交付一個小任務，必須在三十分鐘內完成。", "b2Cn": "他們被指派一項三十分鐘的實作任務。", "spCn": "他們會拿到一個三十分鐘內要搞定的小任務。"}
   ]
 },
 
@@ -3008,12 +3008,12 @@ articles:[
       "b1": "Games can teach useful skills.",
       "b2": "The agency asked what their hobby had trained them to do.",
       "note": "把「學到技能」具體化成 what one's hobby had trained them to do 的名詞子句，論點立刻精準有力。"
-    , "sp": "The agency asked them what their hobby taught them to do.", "spNote": "口語直接用 taught，比 had trained them to do 簡單自然。"},
+    , "sp": "The agency asked them what their hobby taught them to do.", "spNote": "口語直接用 taught，比 had trained them to do 簡單自然。", "b1Cn": "遊戲可以教實用的技能。", "b2Cn": "仲介問他們的興趣訓練出了什麼能力。", "spCn": "仲介問他們：你的興趣教會了你做什麼？"},
     {
       "b1": "Companies should look at real work, not only diplomas.",
       "b2": "Employers should give more weight to work samples than to the name of a university.",
       "note": "give more weight to A than to B 是評論文章常用的比較句式，比 look at 更正式、更可量化。"
-    , "sp": "Companies should care more about what you can actually do than where you went to school.", "spNote": "what you can actually do／where you went to school 是口語談學歷 vs 實力的標準說法。"}
+    , "sp": "Companies should care more about what you can actually do than where you went to school.", "spNote": "what you can actually do／where you went to school 是口語談學歷 vs 實力的標準說法。", "b1Cn": "公司應該看實際作品，不是只看文憑。", "b2Cn": "雇主應該更重視作品，而非大學的名氣。", "spCn": "公司該在乎的是你實際會做什麼，而不是你唸哪間學校。"}
   ]
 },
 
@@ -3051,10 +3051,10 @@ articles:[
   upgrade:[
     {b1:"The bus is late. Tom feels worried.",
      b2:"The bus is late, so Tom feels worried.",
-     note:"用 so 連接原因和結果，比兩個短句更順，這是B1開始練習的連接詞用法。", "sp": "The bus is running late, and Tom's getting antsy.", "spNote": "running late（誤點）、antsy（坐立不安）是美式日常口語。"},
+     note:"用 so 連接原因和結果，比兩個短句更順，這是B1開始練習的連接詞用法。", "sp": "The bus is running late, and Tom's getting antsy.", "spNote": "running late（誤點）、antsy（坐立不安）是美式日常口語。", "b1Cn": "公車遲到了。Tom 很擔心。", "b2Cn": "公車遲到了，所以 Tom 很擔心。", "spCn": "公車誤點了，Tom 開始坐立不安。"},
     {b1:"Tom waits at the bus stop. He checks his phone for the time.",
      b2:"Tom waits at the bus stop and checks his phone for the time.",
-     note:"同一個主詞（Tom）做兩件事時，用 and 連起來、主詞只寫一次，句子更自然、不重複。", "sp": "Tom's hanging out at the bus stop, checking the time on his phone.", "spNote": "hang out（待著）加現在進行式連用，是口語描述當下的方式。"}
+     note:"同一個主詞（Tom）做兩件事時，用 and 連起來、主詞只寫一次，句子更自然、不重複。", "sp": "Tom's hanging out at the bus stop, checking the time on his phone.", "spNote": "hang out（待著）加現在進行式連用，是口語描述當下的方式。", "b1Cn": "Tom 在公車站等。他用手機看時間。", "b2Cn": "Tom 在公車站等車，用手機確認時間。", "spCn": "Tom 在公車站等著，一邊用手機看時間。"}
   ]
 },
 
@@ -3096,10 +3096,10 @@ articles:[
   upgrade:[
     {b1:"A signal problem made the trains slower.",
      b2:"Trains on the line were slowed down by a signal problem that was reported early in the morning.",
-     note:"用被動語態（were slowed down）與 that 引導的關係子句，把「發生了什麼事」和「什麼時候被通報」講得更完整，這是B1+才開始練習的句型。", "sp": "A signal glitch had the trains crawling all morning.", "spNote": "glitch（小故障）、crawl（龜速前進）是通勤族的口語用字。"},
+     note:"用被動語態（were slowed down）與 that 引導的關係子句，把「發生了什麼事」和「什麼時候被通報」講得更完整，這是B1+才開始練習的句型。", "sp": "A signal glitch had the trains crawling all morning.", "spNote": "glitch（小故障）、crawl（龜速前進）是通勤族的口語用字。", "b1Cn": "號誌問題讓火車變慢。", "b2Cn": "這條線的火車因一早通報的號誌問題而減速。", "spCn": "一個號誌小故障讓火車整個早上都在龜速前進。"},
     {b1:"Mia was worried about being late, so she sent a quick message to her manager.",
      b2:"Mia, who was worried about being late, sent a quick message to her manager.",
-     note:"用 who 引導的關係子句直接插入主詞後面補充資訊，比兩個分開的短句更精簡緊湊，是B1+開始練習的寫法。", "sp": "Mia was freaking out about being late, so she shot her manager a quick text.", "spNote": "freak out（緊張爆了）、shoot someone a text（傳個訊息）是美式手機口語。"}
+     note:"用 who 引導的關係子句直接插入主詞後面補充資訊，比兩個分開的短句更精簡緊湊，是B1+開始練習的寫法。", "sp": "Mia was freaking out about being late, so she shot her manager a quick text.", "spNote": "freak out（緊張爆了）、shoot someone a text（傳個訊息）是美式手機口語。", "b1Cn": "Mia 擔心遲到，所以傳了簡短訊息給主管。", "b2Cn": "擔心遲到的 Mia 傳了封簡短訊息給主管。", "spCn": "Mia 怕遲到怕得要命，趕緊傳了個訊息給主管。"}
   ]
 },
 
@@ -3146,10 +3146,10 @@ articles:[
   upgrade:[
     {b1:"A fault caused delays. The company will fix the system next year.",
      b2:"A fault that was reported early Monday morning caused delays lasting nearly two hours, and a replacement system is scheduled to be installed next year.",
-     note:"用 that 引導的關係子句補充細節、加上具體的時間長度，資訊密度更高，是B2程度常見的寫法。", "sp": "Monday morning's glitch backed things up for almost two hours — they're swapping in a new system next year.", "spNote": "back things up（造成大堵塞）、swap in（換上新的）是口語的系統維修講法。"},
+     note:"用 that 引導的關係子句補充細節、加上具體的時間長度，資訊密度更高，是B2程度常見的寫法。", "sp": "Monday morning's glitch backed things up for almost two hours — they're swapping in a new system next year.", "spNote": "back things up（造成大堵塞）、swap in（換上新的）是口語的系統維修講法。", "b1Cn": "故障造成延誤。公司明年會修系統。", "b2Cn": "週一清晨通報的故障造成近兩小時的延誤，替換系統預計明年安裝。", "spCn": "週一早上的故障讓一切大塞車近兩小時——他們明年要換新系統。"},
     {b1:"Riders should check the app before they leave home.",
      b2:"Riders are advised to check the transit app before leaving home, particularly during rush hour on lines with older equipment.",
-     note:"用被動語態（are advised）與更精確的條件描述，語氣更正式、更像官方公告的寫法。", "sp": "Best to check the app before you head out, especially at rush hour.", "spNote": "Best to...（最好…，省略 it is）、head out（出門）是口語建議句型。"}
+     note:"用被動語態（are advised）與更精確的條件描述，語氣更正式、更像官方公告的寫法。", "sp": "Best to check the app before you head out, especially at rush hour.", "spNote": "Best to...（最好…，省略 it is）、head out（出門）是口語建議句型。", "b1Cn": "乘客出門前應該查看 App。", "b2Cn": "建議乘客出門前查看交通 App，尤其是尖峰時段的老舊路線。", "spCn": "出門前最好先查一下 App，尤其是尖峰時段。"}
   ]
 },
 
@@ -3196,10 +3196,10 @@ articles:[
   upgrade:[
     {b1:"The flight was late because a machine needed to be checked.",
      b2:"The incoming aircraft had been held up by a mechanical inspection at its previous stop, and a new departure time had not yet been confirmed.",
-     note:"用過去完成式的被動（had been held up）交代「班機延誤之前，飛機已經發生了什麼事」，時間先後更精確，是B2敘事文常見的寫法。", "sp": "Our plane got held up for an inspection at the last stop, and they haven't given us a new time yet.", "spNote": "get held up（被耽擱）是乘客真正會說的話，比 had been held up 自然。"},
+     note:"用過去完成式的被動（had been held up）交代「班機延誤之前，飛機已經發生了什麼事」，時間先後更精確，是B2敘事文常見的寫法。", "sp": "Our plane got held up for an inspection at the last stop, and they haven't given us a new time yet.", "spNote": "get held up（被耽擱）是乘客真正會說的話，比 had been held up 自然。", "b1Cn": "班機誤點，因為有機器需要檢查。", "b2Cn": "前一站的機械檢查耽擱了來機，新的起飛時間尚未確認。", "spCn": "我們的飛機在上一站被檢查耽擱了，新時間他們還沒給。"},
     {b1:"Anita didn't panic. She kept working on her laptop.",
      b2:"Rather than panicking, Anita opened her laptop and began reviewing the presentation she would give the following day.",
-     note:"用 Rather than + V-ing 開頭取代兩個短句，語氣更流暢，是B2程度常見的句子開頭方式。", "sp": "Anita didn't lose her cool — she just pulled out her laptop and went over tomorrow's presentation.", "spNote": "lose your cool（慌了手腳）、go over（過一遍）是口語常用。"}
+     note:"用 Rather than + V-ing 開頭取代兩個短句，語氣更流暢，是B2程度常見的句子開頭方式。", "sp": "Anita didn't lose her cool — she just pulled out her laptop and went over tomorrow's presentation.", "spNote": "lose your cool（慌了手腳）、go over（過一遍）是口語常用。", "b1Cn": "Anita 沒有慌。她繼續用筆電工作。", "b2Cn": "Anita 沒有慌張，反而打開筆電開始檢視隔天要做的簡報。", "spCn": "Anita 沒亂了陣腳——她直接拿出筆電，把明天的簡報過了一遍。"}
   ]
 },
 
@@ -3236,10 +3236,10 @@ articles:[
   upgrade:[
     {b1:"Grandma felt tired. She had a headache.",
      b2:"Grandma felt tired and had a headache.",
-     note:"兩個動作同一個主詞時，用 and 連起來、主詞只寫一次，句子更順。", "sp": "Grandma was feeling wiped out and had a headache.", "spNote": "wiped out（累壞了）是美式口語，比 tired 更有畫面。"},
+     note:"兩個動作同一個主詞時，用 and 連起來、主詞只寫一次，句子更順。", "sp": "Grandma was feeling wiped out and had a headache.", "spNote": "wiped out（累壞了）是美式口語，比 tired 更有畫面。", "b1Cn": "奶奶覺得累。她頭痛。", "b2Cn": "奶奶覺得疲倦又頭痛。", "spCn": "奶奶整個人累壞了，還頭痛。"},
     {b1:"There were many people. The waiting room was full.",
      b2:"There were many people in the waiting room that morning.",
-     note:"把地點（in the waiting room）和時間（that morning）直接加進同一句，比分成兩句更自然。", "sp": "The waiting room was packed that morning.", "spNote": "packed（擠爆）講人多的場合幾乎都用它。"}
+     note:"把地點（in the waiting room）和時間（that morning）直接加進同一句，比分成兩句更自然。", "sp": "The waiting room was packed that morning.", "spNote": "packed（擠爆）講人多的場合幾乎都用它。", "b1Cn": "人很多。候診室滿了。", "b2Cn": "那天早上候診室裡人很多。", "spCn": "那天早上候診室整個擠爆。"}
   ]
 },
 
@@ -3280,10 +3280,10 @@ articles:[
   upgrade:[
     {b1:"Her mother said it was nothing serious.",
      b2:"Her mother's illness turned out not to be serious, which was a relief for the whole family.",
-     note:"用 turned out（結果證明）與 which 引導的補充子句，句子更像B1+程度的敘事寫法，不再只是簡單的直述句。", "sp": "Turns out it was nothing serious — the whole family could finally breathe again.", "spNote": "Turns out...（結果發現）開頭與 breathe again（鬆口氣）是口語敘事慣用。"},
+     note:"用 turned out（結果證明）與 which 引導的補充子句，句子更像B1+程度的敘事寫法，不再只是簡單的直述句。", "sp": "Turns out it was nothing serious — the whole family could finally breathe again.", "spNote": "Turns out...（結果發現）開頭與 breathe again（鬆口氣）是口語敘事慣用。", "b1Cn": "她媽媽說沒什麼嚴重的。", "b2Cn": "她母親的病結果並不嚴重，全家都鬆了一口氣。", "spCn": "結果發現沒什麼大礙——全家終於能喘口氣了。"},
     {b1:"Anita told her mother to see a doctor.",
      b2:"Anita's mother was persuaded to see a doctor, and the appointment was made the same afternoon.",
-     note:"用被動語態（was persuaded / was made）強調「被說服」與「被安排」的動作接受者，是B1+才開始練習的句型。", "sp": "They talked her mom into seeing a doctor and got her in that same afternoon.", "spNote": "talk someone into（說服）、get someone in（約到診）是美式口語。"}
+     note:"用被動語態（was persuaded / was made）強調「被說服」與「被安排」的動作接受者，是B1+才開始練習的句型。", "sp": "They talked her mom into seeing a doctor and got her in that same afternoon.", "spNote": "talk someone into（說服）、get someone in（約到診）是美式口語。", "b1Cn": "Anita 叫她媽媽去看醫生。", "b2Cn": "Anita 的母親被說服去看醫生，當天下午就掛了號。", "spCn": "他們說服媽媽去看醫生，當天下午就約到了。"}
   ]
 },
 
@@ -3331,10 +3331,10 @@ articles:[
   upgrade:[
     {b1:"More people got sick this year. Last year fewer people got sick.",
      b2:"More people have been affected by seasonal viruses this year than last year.",
-     note:"用現在完成式的被動（have been affected）把「過去到現在的比較」壓成一句，比兩個簡單句更精簡。", "sp": "A lot more people have come down with something this year than last.", "spNote": "come down with（染上小病）是講感冒生病的口語標準說法。"},
+     note:"用現在完成式的被動（have been affected）把「過去到現在的比較」壓成一句，比兩個簡單句更精簡。", "sp": "A lot more people have come down with something this year than last.", "spNote": "come down with（染上小病）是講感冒生病的口語標準說法。", "b1Cn": "今年比較多人生病。去年比較少。", "b2Cn": "今年受季節性病毒影響的人比去年多。", "spCn": "今年中鏢的人比去年多得多。"},
     {b1:"Some clinics stay open longer now.",
      b2:"Several clinics have extended their opening hours because hospitals have been receiving so many visits.",
-     note:"加上 because 子句與現在完成（進行）式，說明「延長時間」背後的原因，資訊更完整、更像B2程度的說明文。", "sp": "A bunch of clinics are staying open later because the hospitals are swamped.", "spNote": "a bunch of（一堆）、swamped（忙翻了）是口語高頻詞。"}
+     note:"加上 because 子句與現在完成（進行）式，說明「延長時間」背後的原因，資訊更完整、更像B2程度的說明文。", "sp": "A bunch of clinics are staying open later because the hospitals are swamped.", "spNote": "a bunch of（一堆）、swamped（忙翻了）是口語高頻詞。", "b1Cn": "有些診所現在開得比較晚。", "b2Cn": "由於醫院就診量太大，好幾家診所延長了看診時間。", "spCn": "一堆診所都開到比較晚，因為醫院忙翻了。"}
   ]
 },
 
@@ -3383,10 +3383,10 @@ articles:[
   upgrade:[
     {b1:"Cases went up a lot, so officials extended the free vaccine program.",
      b2:"As case numbers climbed sharply, health authorities extended the free vaccination program through the end of September.",
-     note:"加入 as 子句與明確的時間資訊（through the end of September），語氣更正式、更像新聞報導的寫法。", "sp": "Cases shot up, so they're keeping the free shots going through the end of September.", "spNote": "shoot up（暴增）、shots（疫苗針）、keep...going（延長）都是美式口語。"},
+     note:"加入 as 子句與明確的時間資訊（through the end of September），語氣更正式、更像新聞報導的寫法。", "sp": "Cases shot up, so they're keeping the free shots going through the end of September.", "spNote": "shoot up（暴增）、shots（疫苗針）、keep...going（延長）都是美式口語。", "b1Cn": "病例增加很多，所以官員延長免費疫苗計畫。", "b2Cn": "隨著病例數急遽攀升，衛生單位把免費接種計畫延長到九月底。", "spCn": "病例暴增，所以他們把免費疫苗一路打到九月底。"},
     {b1:"Most people who got very sick didn't have the vaccine.",
      b2:"More than ninety percent of people who developed severe symptoms this season had not received this year's updated vaccine.",
-     note:"用具體數字（ninety percent）與更精確的說法（developed severe symptoms／had not received）取代籠統的 got very sick／didn't have，是新聞報導追求精確的典型寫法。", "sp": "Over ninety percent of the people who got really sick hadn't gotten this year's shot.", "spNote": "get really sick／get the shot 的 get 是口語的萬用動詞。"}
+     note:"用具體數字（ninety percent）與更精確的說法（developed severe symptoms／had not received）取代籠統的 got very sick／didn't have，是新聞報導追求精確的典型寫法。", "sp": "Over ninety percent of the people who got really sick hadn't gotten this year's shot.", "spNote": "get really sick／get the shot 的 get 是口語的萬用動詞。", "b1Cn": "大部分病重的人沒有打疫苗。", "b2Cn": "這一季發展成重症的人超過九成沒接種今年的更新疫苗。", "spCn": "超過九成病得很重的人，都沒打今年的疫苗。"}
   ]
 },
 
@@ -3423,10 +3423,10 @@ articles:[
   upgrade:[
     {b1:"We ate fried chicken. We drank papaya milk.",
      b2:"We ate fried chicken and drank papaya milk.",
-     note:"兩個動作同一個主詞時，用 and 連起來、主詞只寫一次，句子馬上變順。", "sp": "We grabbed fried chicken and washed it down with papaya milk.", "spNote": "grab（買來吃）、wash it down with（配著喝下去）是美食口語。"},
+     note:"兩個動作同一個主詞時，用 and 連起來、主詞只寫一次，句子馬上變順。", "sp": "We grabbed fried chicken and washed it down with papaya milk.", "spNote": "grab（買來吃）、wash it down with（配著喝下去）是美食口語。", "b1Cn": "我們吃了鹹酥雞。我們喝了木瓜牛奶。", "b2Cn": "我們吃了鹹酥雞、喝了木瓜牛奶。", "spCn": "我們買了鹹酥雞，配木瓜牛奶一起下肚。"},
     {b1:"I saw a cheap camera. I did not buy it.",
      b2:"I saw a cheap camera, but I did not buy it.",
-     note:"前後意思相反（看到了→卻沒買），用 but 接起來最自然。", "sp": "I spotted a cheap camera but ended up passing on it.", "spNote": "spot（瞄到）、pass on（沒買）、end up（最後還是）是購物口語三件套。"}
+     note:"前後意思相反（看到了→卻沒買），用 but 接起來最自然。", "sp": "I spotted a cheap camera but ended up passing on it.", "spNote": "spot（瞄到）、pass on（沒買）、end up（最後還是）是購物口語三件套。", "b1Cn": "我看到一台便宜的相機。我沒有買。", "b2Cn": "我看到一台便宜的相機，但我沒買。", "spCn": "我瞄到一台便宜相機，最後還是沒下手。"}
   ]
 },
 
@@ -3460,10 +3460,10 @@ articles:[
   upgrade:[
     {b1:"The wind was strong. The rain was heavy.",
      b2:"The wind was very strong and the rain was heavy all morning.",
-     note:"用 and 把兩個描述合在一起，再加上 all morning 點出時間長度，資訊更完整。", "sp": "It was blowing like crazy and pouring all morning.", "spNote": "blowing like crazy（風超大）、pouring（下超大雨）是美式天氣口語。"},
+     note:"用 and 把兩個描述合在一起，再加上 all morning 點出時間長度，資訊更完整。", "sp": "It was blowing like crazy and pouring all morning.", "spNote": "blowing like crazy（風超大）、pouring（下超大雨）是美式天氣口語。", "b1Cn": "風很強。雨很大。", "b2Cn": "整個早上風很強、雨很大。", "spCn": "整個早上風超大、雨狂下。"},
     {b1:"My mother called me. She was worried.",
      b2:"My mother called me because she was worried about the flooding.",
-     note:"用 because 把原因接在後面，不用分兩句講，讀起來更流暢。", "sp": "My mom called because she was worried sick about the flooding.", "spNote": "worried sick（擔心得要命）是口語慣用強調。"}
+     note:"用 because 把原因接在後面，不用分兩句講，讀起來更流暢。", "sp": "My mom called because she was worried sick about the flooding.", "spNote": "worried sick（擔心得要命）是口語慣用強調。", "b1Cn": "我媽媽打給我。她很擔心。", "b2Cn": "我媽媽因為擔心淹水而打電話給我。", "spCn": "我媽打來，因為她擔心淹水擔心得要命。"}
   ]
 },
 
@@ -3504,10 +3504,10 @@ articles:[
   upgrade:[
     {b1:"They cancelled my trip. The typhoon is very bad.",
      b2:"My trip has been cancelled because of the typhoon.",
-     note:"重點是「我的行程」不是「誰取消的」，用被動把受影響的事放前面；because of 接名詞比分兩句簡潔。", "sp": "My trip got called off because of the typhoon.", "spNote": "call off（取消）在口語的使用頻率遠高於 cancel。"},
+     note:"重點是「我的行程」不是「誰取消的」，用被動把受影響的事放前面；because of 接名詞比分兩句簡潔。", "sp": "My trip got called off because of the typhoon.", "spNote": "call off（取消）在口語的使用頻率遠高於 cancel。", "b1Cn": "他們取消了我的行程。颱風很嚴重。", "b2Cn": "我的行程因為颱風被取消了。", "spCn": "我的行程因為颱風被取消了。"},
     {b1:"The rain started last night. It is still raining now.",
      b2:"More than 200 millimetres of rain has fallen overnight.",
-     note:"現在完成式把「過去到現在」壓成一句，加上具體數字讓描述更有力。", "sp": "We got over 200 millimeters of rain overnight.", "spNote": "口語用 we got 承接天氣數字，比被動句自然。"}
+     note:"現在完成式把「過去到現在」壓成一句，加上具體數字讓描述更有力。", "sp": "We got over 200 millimeters of rain overnight.", "spNote": "口語用 we got 承接天氣數字，比被動句自然。", "b1Cn": "雨昨晚開始下。現在還在下。", "b2Cn": "一夜之間降了超過 200 毫米的雨。", "spCn": "我們一個晚上就下了超過 200 毫米的雨。"}
   ]
 },
 
@@ -3555,10 +3555,10 @@ articles:[
   upgrade:[
     {b1:"The airline cancelled my flight because of the typhoon.",
      b2:"My flight was cancelled, and no explanation was given at first.",
-     note:"報告壞消息時，重點是「我的航班」而不是「誰取消的」，用被動把受影響的東西放到句首，語氣也更客觀。", "sp": "They scrapped my flight and didn't even tell us why at first.", "spNote": "scrap（砍掉、取消）、didn't even（甚至沒）是抱怨場景的口語。"},
+     note:"報告壞消息時，重點是「我的航班」而不是「誰取消的」，用被動把受影響的東西放到句首，語氣也更客觀。", "sp": "They scrapped my flight and didn't even tell us why at first.", "spNote": "scrap（砍掉、取消）、didn't even（甚至沒）是抱怨場景的口語。", "b1Cn": "航空公司因為颱風取消了我的班機。", "b2Cn": "我的班機被取消了，而且一開始沒有任何說明。", "spCn": "他們把我的班機砍了，一開始甚至沒說為什麼。"},
     {b1:"They told us to wait until they knew the storm's path.",
      b2:"We were told that nothing could be confirmed until the storm's path became clearer.",
-     note:"we were told that... 是轉述官方訊息的標準寫法，比模糊的 they told us 正式得多。", "sp": "They said they couldn't tell us anything for sure until they knew where the storm was headed.", "spNote": "for sure（確定）、where it's headed（往哪走）是口語表達不確定的方式。"}
+     note:"we were told that... 是轉述官方訊息的標準寫法，比模糊的 they told us 正式得多。", "sp": "They said they couldn't tell us anything for sure until they knew where the storm was headed.", "spNote": "for sure（確定）、where it's headed（往哪走）是口語表達不確定的方式。", "b1Cn": "他們叫我們等，直到他們知道風暴路徑。", "b2Cn": "我們被告知，在風暴路徑更明朗之前無法確認任何事。", "spCn": "他們說在搞清楚風暴往哪走之前，什麼都不能確定。"}
   ]
 },
 
@@ -3608,10 +3608,10 @@ articles:[
   upgrade:[
     {b1:"The storm moved west. It was slow.",
      b2:"The storm had been moving west at only 10 kilometres per hour.",
-     note:"had been + V-ing 表示「到那個時間點為止一直在進行」，是氣象與新聞報導的標準寫法。", "sp": "The storm was crawling west at just 10 kilometers an hour.", "spNote": "crawl（龜速移動）用在車流、颱風都很道地。"},
+     note:"had been + V-ing 表示「到那個時間點為止一直在進行」，是氣象與新聞報導的標準寫法。", "sp": "The storm was crawling west at just 10 kilometers an hour.", "spNote": "crawl（龜速移動）用在車流、颱風都很道地。", "b1Cn": "風暴往西移動。它很慢。", "b2Cn": "風暴一直以每小時僅 10 公里的速度向西移動。", "spCn": "風暴以一小時才 10 公里的速度往西龜速移動。"},
     {b1:"A typhoon can cause problems even if it does not land.",
      b2:"A typhoon does not have to land to cause problems.",
-     note:"用 does not have to + 原形 把讓步關係壓成一個簡潔的主句，比 even if 子句更有力。", "sp": "A typhoon doesn't even have to make landfall to mess things up.", "spNote": "mess things up（搞得一團糟）是萬用口語；make landfall（登陸）是氣象常用詞。"}
+     note:"用 does not have to + 原形 把讓步關係壓成一個簡潔的主句，比 even if 子句更有力。", "sp": "A typhoon doesn't even have to make landfall to mess things up.", "spNote": "mess things up（搞得一團糟）是萬用口語；make landfall（登陸）是氣象常用詞。", "b1Cn": "颱風就算不登陸也會造成問題。", "b2Cn": "颱風不必登陸就能造成問題。", "spCn": "颱風根本不用登陸就能把事情搞得一團糟。"}
   ]
 }
 

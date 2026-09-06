@@ -46,10 +46,10 @@ window.READING = [
   upgrade:[
     {b1:"He left his wallet. Then he realized it.",
      b2:"He was running to the station when he realized that he had left his wallet at home.",
-     note:"用 was V-ing ... when + 過去完成式，把三個時間層次（正在做／突然發現／更早發生）放進一句。", "sp": "He was halfway to the station when it hit him — he'd left his wallet at home.", "spNote": "it hit me（我猛然想到）是口語講「突然意識到」的經典說法。"},
+     note:"用 was V-ing ... when + 過去完成式，把三個時間層次（正在做／突然發現／更早發生）放進一句。", "sp": "He was halfway to the station when it hit him — he'd left his wallet at home.", "spNote": "it hit me（我猛然想到）是口語講「突然意識到」的經典說法。", "b1Cn": "他忘了皮夾。然後他才發現。", "b2Cn": "他跑向車站時，才發現皮夾忘在家裡。", "spCn": "他跑到半路才猛然想到——皮夾忘在家裡了。"},
     {b1:"He was late. He sent a message.",
      b2:"Realizing that he would be late, he sent his manager a short message.",
-     note:"分詞開頭（Realizing that...）取代 and 連接，句子更精簡，是 B2 常見寫法。", "sp": "He could tell he was gonna be late, so he shot his manager a quick message.", "spNote": "could tell（看得出來）、gonna、shoot a message 都是口語。"}
+     note:"分詞開頭（Realizing that...）取代 and 連接，句子更精簡，是 B2 常見寫法。", "sp": "He could tell he was gonna be late, so he shot his manager a quick message.", "spNote": "could tell（看得出來）、gonna、shoot a message 都是口語。", "b1Cn": "他遲到了。他傳了訊息。", "b2Cn": "他意識到自己會遲到，便傳了封簡短訊息給主管。", "spCn": "他看出自己要遲到了，趕緊傳了個訊息給主管。"}
   ]
 },
 
@@ -92,10 +92,10 @@ window.READING = [
   upgrade:[
     {b1:"She is tired every afternoon. She looks at the screen too much.",
      b2:"She feels tired every afternoon because she spends too much time in front of a screen.",
-     note:"用 because 把兩個短句合成因果關係，並用 spend time doing 這個 B1+ 搭配。", "sp": "She crashes every afternoon from staring at a screen all day.", "spNote": "crash（累癱）、stare at a screen（盯螢幕）是上班族口語。"},
+     note:"用 because 把兩個短句合成因果關係，並用 spend time doing 這個 B1+ 搭配。", "sp": "She crashes every afternoon from staring at a screen all day.", "spNote": "crash（累癱）、stare at a screen（盯螢幕）是上班族口語。", "b1Cn": "她每天下午都很累。她看螢幕看太久。", "b2Cn": "她每天下午都覺得累，因為花太多時間盯著螢幕。", "spCn": "她每天下午都累癱，因為整天盯著螢幕。"},
     {b1:"The change is small. The result is good.",
      b2:"Although the change is small, the result is surprisingly clear.",
-     note:"Although 讓步句 + surprisingly（程度副詞）是 B2 常見的評論方式。", "sp": "It's a tiny change, but it makes a surprisingly big difference.", "spNote": "make a big difference（效果差很多）是口語裡最常用的因果表達。"}
+     note:"Although 讓步句 + surprisingly（程度副詞）是 B2 常見的評論方式。", "sp": "It's a tiny change, but it makes a surprisingly big difference.", "spNote": "make a big difference（效果差很多）是口語裡最常用的因果表達。", "b1Cn": "改變很小。結果很好。", "b2Cn": "雖然改變很小，結果卻出乎意料地明顯。", "spCn": "只是個小改變，效果卻好得驚人。"}
   ]
 },
 
@@ -142,10 +142,10 @@ window.READING = [
   upgrade:[
     {b1:"People throw away a lot of food. This is a big problem.",
      b2:"A great deal of food is thrown away every year, which has become a serious problem.",
-     note:"改成被動語態把焦點放在「食物」上，再用 which 引導的關係子句做評論。", "sp": "We toss out a crazy amount of food every year, and it's become a real problem.", "spNote": "toss out（丟掉）、a crazy amount of（多到誇張）是口語量詞。"},
+     note:"改成被動語態把焦點放在「食物」上，再用 which 引導的關係子句做評論。", "sp": "We toss out a crazy amount of food every year, and it's become a real problem.", "spNote": "toss out（丟掉）、a crazy amount of（多到誇張）是口語量詞。", "b1Cn": "人們丟掉很多食物。這是個大問題。", "b2Cn": "每年有大量食物被丟棄，這已成為嚴重的問題。", "spCn": "我們每年丟掉的食物多到誇張，已經變成大問題了。"},
     {b1:"You should plan your meals. Then you will waste less.",
      b2:"Planning your meals before you shop can cut household waste by half.",
-     note:"動名詞當主詞（Planning...）＋ cut ... by half 的量化說法，比 you should 客觀許多。", "sp": "If you plan your meals before you hit the store, you can cut your waste in half.", "spNote": "hit the store（去採買）、cut...in half（砍半）是生活口語。"}
+     note:"動名詞當主詞（Planning...）＋ cut ... by half 的量化說法，比 you should 客觀許多。", "sp": "If you plan your meals before you hit the store, you can cut your waste in half.", "spNote": "hit the store（去採買）、cut...in half（砍半）是生活口語。", "b1Cn": "你應該規劃餐點。這樣浪費會變少。", "b2Cn": "購物前先規劃餐點，能讓家庭浪費減半。", "spCn": "去採買前先規劃好餐點，浪費能直接砍半。"}
   ]
 },
 
@@ -192,10 +192,10 @@ window.READING = [
   upgrade:[
     {b1:"Some people like working from home. Some managers do not like it.",
      b2:"While many employees welcome working from home, managers often take a different view.",
-     note:"用 While 開頭的讓步子句取代兩個獨立句，一句就呈現對比。", "sp": "Lots of folks love working from home — their managers, not so much.", "spNote": "not so much（就沒那麼…）的反差收尾是美式口語幽默的招牌。"},
+     note:"用 While 開頭的讓步子句取代兩個獨立句，一句就呈現對比。", "sp": "Lots of folks love working from home — their managers, not so much.", "spNote": "not so much（就沒那麼…）的反差收尾是美式口語幽默的招牌。", "b1Cn": "有些人喜歡在家工作。有些主管不喜歡。", "b2Cn": "雖然許多員工樂於在家工作，主管的看法往往不同。", "spCn": "很多人愛死在家工作了——他們的主管就沒那麼愛。"},
     {b1:"Workers save time. They do not take the bus.",
      b2:"By not commuting, workers save up to ninety minutes a day.",
-     note:"By + V-ing 表方法，加上具體數字（up to ninety minutes）讓論述更有力。", "sp": "Skipping the commute saves people up to an hour and a half a day.", "spNote": "skip（省掉）、an hour and a half 比 ninety minutes 更像美國人講時間的方式。"}
+     note:"By + V-ing 表方法，加上具體數字（up to ninety minutes）讓論述更有力。", "sp": "Skipping the commute saves people up to an hour and a half a day.", "spNote": "skip（省掉）、an hour and a half 比 ninety minutes 更像美國人講時間的方式。", "b1Cn": "員工節省時間。他們不搭公車。", "b2Cn": "不用通勤讓員工每天省下多達九十分鐘。", "spCn": "省掉通勤，每天最多能多出一個半小時。"}
   ]
 },
 
@@ -242,10 +242,10 @@ window.READING = [
   upgrade:[
     {b1:"Mr. Lin lives on the ground floor. He has lived here for thirty years.",
      b2:"Mr. Lin, whose flat is on the ground floor, has lived here for thirty years.",
-     note:"用 whose 引導的非限定關係子句，把補充資訊塞進主句中間，避免短句堆疊。", "sp": "Mr. Lin's got the ground-floor place — he's been there thirty years.", "spNote": "口語用 's got（有）、the place（那間房子），破折號帶出補充。"},
+     note:"用 whose 引導的非限定關係子句，把補充資訊塞進主句中間，避免短句堆疊。", "sp": "Mr. Lin's got the ground-floor place — he's been there thirty years.", "spNote": "口語用 's got（有）、the place（那間房子），破折號帶出補充。", "b1Cn": "林先生住一樓。他住在這裡三十年了。", "b2Cn": "住在一樓的林先生已在此住了三十年。", "spCn": "林先生住一樓那間——他在那住三十年了。"},
     {b1:"I asked a plumber. He repaired my pipe.",
      b2:"I had my pipe repaired by a plumber.",
-     note:"使役 have + 物 + p.p.，主詞是「請人做」的人，不是動手做的人。", "sp": "I got a plumber in to fix my pipe.", "spNote": "get someone in（請人來家裡處理）是居家修繕的道地口語。"}
+     note:"使役 have + 物 + p.p.，主詞是「請人做」的人，不是動手做的人。", "sp": "I got a plumber in to fix my pipe.", "spNote": "get someone in（請人來家裡處理）是居家修繕的道地口語。", "b1Cn": "我找了水電工。他修好我的水管。", "b2Cn": "我請水電工修好了水管。", "spCn": "我找了水電工來家裡修水管。"}
   ]
 },
 
@@ -292,10 +292,10 @@ window.READING = [
   upgrade:[
     {b1:"The wind came to the city. Before that, it broke a bridge.",
      b2:"By the time the wind reached the city, it had already destroyed part of a bridge.",
-     note:"By the time + 過去簡單式，主句用過去完成式（had + p.p.），清楚標出先後。", "sp": "By the time the wind hit the city, it had already taken out part of a bridge.", "spNote": "hit（襲擊）、take out（摧毀）是災害新聞的口語動詞。"},
+     note:"By the time + 過去簡單式，主句用過去完成式（had + p.p.），清楚標出先後。", "sp": "By the time the wind hit the city, it had already taken out part of a bridge.", "spNote": "hit（襲擊）、take out（摧毀）是災害新聞的口語動詞。", "b1Cn": "風來到城市。在那之前，它弄壞了一座橋。", "b2Cn": "風抵達城市時，已經摧毀了部分橋梁。", "spCn": "風掃到城裡之前，就已經先毀了半座橋。"},
     {b1:"When I was young, my mother bought candles every typhoon.",
      b2:"When I was young, my mother would buy candles before every typhoon.",
-     note:"would 表過去反覆習慣，語氣比過去簡單式更有「回憶感」。", "sp": "When I was a kid, my mom would stock up on candles before every typhoon.", "spNote": "when I was a kid、stock up on（囤貨）是回憶往事的口語標配。"}
+     note:"would 表過去反覆習慣，語氣比過去簡單式更有「回憶感」。", "sp": "When I was a kid, my mom would stock up on candles before every typhoon.", "spNote": "when I was a kid、stock up on（囤貨）是回憶往事的口語標配。", "b1Cn": "我小時候，我媽媽每次颱風都買蠟燭。", "b2Cn": "我小時候，媽媽每逢颱風前都會買蠟燭。", "spCn": "我小時候，我媽每次颱風前都會囤蠟燭。"}
   ]
 },
 
@@ -343,10 +343,10 @@ window.READING = [
   upgrade:[
     {b1:"She only looked at the money. So she nearly took the job.",
      b2:"If she had only compared the two salaries, she would probably have accepted the offer.",
-     note:"第三條件句：談「過去沒發生的假設」，if 子句用 had + p.p.，主句用 would have + p.p.。", "sp": "If she'd only looked at the paycheck, she probably would've taken the job.", "spNote": "paycheck（薪水）、would've 縮寫是口語假設句的樣子。"},
+     note:"第三條件句：談「過去沒發生的假設」，if 子句用 had + p.p.，主句用 would have + p.p.。", "sp": "If she'd only looked at the paycheck, she probably would've taken the job.", "spNote": "paycheck（薪水）、would've 縮寫是口語假設句的樣子。", "b1Cn": "她只看錢。所以她差點接受那份工作。", "b2Cn": "如果她只比較兩份薪水，大概就會接受那份工作了。", "spCn": "她要是只看薪水，八成就把那份工作接下來了。"},
     {b1:"He said: \"They were not the right fit.\"",
      b2:"He said that they had not been the right fit.",
-     note:"轉述句時態退一格：were → had been；並去掉引號、加 that。", "sp": "He said they just weren't the right fit.", "spNote": "just（就是）緩和語氣；not the right fit 本身已是口語慣用。"}
+     note:"轉述句時態退一格：were → had been；並去掉引號、加 that。", "sp": "He said they just weren't the right fit.", "spNote": "just（就是）緩和語氣；not the right fit 本身已是口語慣用。", "b1Cn": "他說：「他們不合適。」", "b2Cn": "他說他們當時並不合適。", "spCn": "他說他們就是不合適。"}
   ]
 },
 
@@ -395,10 +395,10 @@ window.READING = [
   upgrade:[
     {b1:"Some people think surgery is good. I do not agree completely.",
      b2:"Admittedly, surgery can restore confidence; the difficulty is that few decisions are made without pressure.",
-     note:"先讓步（Admittedly...）再轉折（the difficulty is that...），是 B2 議論文的標準節奏。", "sp": "Sure, surgery can give people their confidence back — the catch is, almost nobody decides this stuff without feeling pressured.", "spNote": "Sure,... 開頭讓步、the catch is（問題就在）是口語論證的常見骨架。"},
+     note:"先讓步（Admittedly...）再轉折（the difficulty is that...），是 B2 議論文的標準節奏。", "sp": "Sure, surgery can give people their confidence back — the catch is, almost nobody decides this stuff without feeling pressured.", "spNote": "Sure,... 開頭讓步、the catch is（問題就在）是口語論證的常見骨架。", "b1Cn": "有些人覺得手術好。我不完全同意。", "b2Cn": "誠然，手術能找回自信；難處在於很少有決定是在沒有壓力下做的。", "spCn": "手術確實能讓人找回自信——問題是，幾乎沒有人做這種決定時是毫無壓力的。"},
     {b1:"Clinics advertise a lot. Young people want surgery.",
      b2:"Clinics that advertise heavily to young people are not simply meeting demand; to some extent they are creating it.",
-     note:"用 that 關係子句壓縮資訊，並用 not simply A; to some extent B 的對比句型提高論述層次。", "sp": "These clinics aren't just meeting demand with all those ads — they're creating it.", "spNote": "aren't just... they're...（不只是…根本是…）是口語加強對比。"}
+     note:"用 that 關係子句壓縮資訊，並用 not simply A; to some extent B 的對比句型提高論述層次。", "sp": "These clinics aren't just meeting demand with all those ads — they're creating it.", "spNote": "aren't just... they're...（不只是…根本是…）是口語加強對比。", "b1Cn": "診所大量打廣告。年輕人想動手術。", "b2Cn": "向年輕人大量投放廣告的診所，不只是滿足需求；某種程度上是在創造需求。", "spCn": "這些猛打廣告的診所不只是滿足需求——他們根本是在製造需求。"}
   ]
 },
 
@@ -447,10 +447,10 @@ window.READING = [
   upgrade:[
     {b1:"They cancelled the flight. The insurance paid.",
      b2:"The policy covers the cancellation of a flight for any reason.",
-     note:"名詞化：cancel → the cancellation of...，讓句子更緊密、更書面。", "sp": "This policy's got you covered if your flight gets canceled — no matter the reason.", "spNote": "have you covered（保障你）是保險與客服的口語慣用。"},
+     note:"名詞化：cancel → the cancellation of...，讓句子更緊密、更書面。", "sp": "This policy's got you covered if your flight gets canceled — no matter the reason.", "spNote": "have you covered（保障你）是保險與客服的口語慣用。", "b1Cn": "他們取消了班機。保險理賠了。", "b2Cn": "這份保單涵蓋任何原因的班機取消。", "spCn": "只要班機被取消，不管什麼原因，這份保單都罩你。"},
     {b1:"This policy is cheap. But you must pay a lot first.",
      b2:"A policy with a very low premium often carries a deductible so high that small claims are pointless.",
-     note:"so + adj. + that 結果句 ＋ 長名詞片語（a policy with a very low premium），是 B2 的句子重量。", "sp": "A dirt-cheap policy usually comes with a deductible so high that small claims aren't worth the hassle.", "spNote": "dirt-cheap（便宜到不行）、not worth the hassle（不值得麻煩）是口語評價。"}
+     note:"so + adj. + that 結果句 ＋ 長名詞片語（a policy with a very low premium），是 B2 的句子重量。", "sp": "A dirt-cheap policy usually comes with a deductible so high that small claims aren't worth the hassle.", "spNote": "dirt-cheap（便宜到不行）、not worth the hassle（不值得麻煩）是口語評價。", "b1Cn": "這份保單便宜。但你要先付很多錢。", "b2Cn": "保費極低的保單，自負額往往高到讓小額理賠毫無意義。", "spCn": "便宜到不行的保單通常自負額高到爆，小額理賠根本不值得跑一趟。"}
   ]
 },
 
@@ -499,10 +499,10 @@ window.READING = [
   upgrade:[
     {b1:"The team tested drivers. Then they found slow reaction times.",
      b2:"Having tested drivers after five short nights, the team found much slower reaction times.",
-     note:"Having + p.p. 分詞構句表示「先做完的動作」，取代 After they had tested...。", "sp": "After five short nights, the drivers they tested were way slower to react.", "spNote": "way slower（慢超多）的 way 是美式口語的加強副詞。"},
+     note:"Having + p.p. 分詞構句表示「先做完的動作」，取代 After they had tested...。", "sp": "After five short nights, the drivers they tested were way slower to react.", "spNote": "way slower（慢超多）的 way 是美式口語的加強副詞。", "b1Cn": "團隊測試了駕駛。然後他們發現反應變慢。", "b2Cn": "在五個短眠夜後測試駕駛，團隊發現反應時間慢了許多。", "spCn": "連續五天睡不夠之後，受測駕駛的反應慢了一大截。"},
     {b1:"Your sleep must be regular. Then your memory works well.",
      b2:"Only when sleep becomes regular do these systems return to normal.",
-     note:"Only when 置句首要倒裝主句：do + 主詞 + 原形動詞。", "sp": "Your body doesn't get back to normal until your sleep does.", "spNote": "get back to normal（恢復正常）；句尾 until your sleep does 的替代省略乾淨又口語。"}
+     note:"Only when 置句首要倒裝主句：do + 主詞 + 原形動詞。", "sp": "Your body doesn't get back to normal until your sleep does.", "spNote": "get back to normal（恢復正常）；句尾 until your sleep does 的替代省略乾淨又口語。", "b1Cn": "你的睡眠必須規律。然後記憶力才會好。", "b2Cn": "唯有睡眠變得規律，這些系統才會恢復正常。", "spCn": "睡眠沒回到正軌，身體就不會回到正常。"}
   ]
 },
 
@@ -555,10 +555,10 @@ window.READING = [
   upgrade:[
     {b1:"Patients often forget to say what medicine they take.",
      b2:"Patients tend to leave out the medicines they are already taking.",
-     note:"tend to 比 often 更書面；leave out 是道地的片語動詞；they are already taking 是省略關係詞的關係子句。", "sp": "Patients tend to leave out the meds they're already on.", "spNote": "meds（藥的簡稱）、be on（正在服用）是就醫口語。"},
+     note:"tend to 比 often 更書面；leave out 是道地的片語動詞；they are already taking 是省略關係詞的關係子句。", "sp": "Patients tend to leave out the meds they're already on.", "spNote": "meds（藥的簡稱）、be on（正在服用）是就醫口語。", "b1Cn": "病人常常忘記說他們吃什麼藥。", "b2Cn": "病人往往漏掉他們已在服用的藥物。", "spCn": "病人常常漏講自己正在吃的藥。"},
     {b1:"Maybe the extra tablets made him dizzy.",
      b2:"The dizziness appears to have been caused by the extra dose.",
-     note:"appear to have been + p.p. 是 B2 的委婉推測：不下斷言，但語氣專業。", "sp": "Looks like the extra pills were what made him dizzy.", "spNote": "Looks like...（看起來是…）是口語推測的萬用開頭。"}
+     note:"appear to have been + p.p. 是 B2 的委婉推測：不下斷言，但語氣專業。", "sp": "Looks like the extra pills were what made him dizzy.", "spNote": "Looks like...（看起來是…）是口語推測的萬用開頭。", "b1Cn": "也許多吃的藥片讓他頭暈。", "b2Cn": "暈眩似乎是多出的劑量造成的。", "spCn": "看起來就是多吃的那幾顆藥讓他頭暈的。"}
   ]
 },
 
@@ -606,10 +606,10 @@ window.READING = [
   upgrade:[
     {b1:"The American bill is much more expensive.",
      b2:"The bill may arrive three weeks later and cost twenty times as much.",
-     note:"twenty times as much (as) 是精準的倍數比較，比 much more expensive 有力得多。", "sp": "The bill might not show up for three weeks — and it can run twenty times as much.", "spNote": "show up（寄來）、run（金額高達）是帳單話題的口語動詞。"},
+     note:"twenty times as much (as) 是精準的倍數比較，比 much more expensive 有力得多。", "sp": "The bill might not show up for three weeks — and it can run twenty times as much.", "spNote": "show up（寄來）、run（金額高達）是帳單話題的口語動詞。", "b1Cn": "美國的帳單貴很多。", "b2Cn": "帳單可能三週後才寄到，金額高出二十倍。", "spCn": "帳單可能三週後才出現——而且金額能高到二十倍。"},
     {b1:"Taiwan's system is cheap but the visits are short. America is the opposite.",
      b2:"The former buys access at the cost of time and depth; the latter buys time and choice at the cost of security.",
-     note:"the former / the latter + at the cost of，用一句話對稱地收束兩種制度的取捨。", "sp": "In Taiwan you get in fast but the visits fly by; in the States you get time and options, but you pay through the nose.", "spNote": "fly by（一下就結束）、pay through the nose（貴到流血）是口語對比講法。"}
+     note:"the former / the latter + at the cost of，用一句話對稱地收束兩種制度的取捨。", "sp": "In Taiwan you get in fast but the visits fly by; in the States you get time and options, but you pay through the nose.", "spNote": "fly by（一下就結束）、pay through the nose（貴到流血）是口語對比講法。", "b1Cn": "台灣的制度便宜但看診很短。美國相反。", "b2Cn": "前者用時間和深度換取可近性；後者用保障換取時間與選擇。", "spCn": "在台灣看病快但一下就結束；在美國有時間有選擇，但貴到流血。"}
   ]
 },
 
@@ -658,10 +658,10 @@ window.READING = [
   upgrade:[
     {b1:"He was very tired and it probably started months ago.",
      b2:"By the time it is obvious, the exhaustion may well have been developing for months.",
-     note:"名詞化 tired → exhaustion，加上 may well have been V-ing 表「很可能一直在…」。", "sp": "By the time you notice, you've probably been running on empty for months.", "spNote": "running on empty（油箱見底、身心透支）是講過勞的經典口語。"},
+     note:"名詞化 tired → exhaustion，加上 may well have been V-ing 表「很可能一直在…」。", "sp": "By the time you notice, you've probably been running on empty for months.", "spNote": "running on empty（油箱見底、身心透支）是講過勞的經典口語。", "b1Cn": "他很累，而且可能幾個月前就開始了。", "b2Cn": "等到明顯的時候，倦怠可能已經累積好幾個月了。", "spCn": "等你察覺的時候，八成已經透支好幾個月了。"},
     {b1:"You cannot recover if the work does not change.",
      b2:"Real recovery normally requires a change in what is expected, not only in what is endured.",
-     note:"recover → recovery（名詞化）＋ what 子句當受詞，句子更抽象也更精準。", "sp": "You can't really bounce back if the job stays exactly the same.", "spNote": "bounce back（恢復元氣）是口語；stays exactly the same 平實直接。"}
+     note:"recover → recovery（名詞化）＋ what 子句當受詞，句子更抽象也更精準。", "sp": "You can't really bounce back if the job stays exactly the same.", "spNote": "bounce back（恢復元氣）是口語；stays exactly the same 平實直接。", "b1Cn": "如果工作不改變，你無法恢復。", "b2Cn": "真正的復原通常需要改變被期待的事，而不只是改變忍受的方式。", "spCn": "工作要是完全不變，你根本好不起來。"}
   ]
 },
 
@@ -714,10 +714,10 @@ window.READING = [
   upgrade:[
     {b1:"We did not save the booking number. That was a mistake.",
      b2:"We should have kept digital copies of the booking references.",
-     note:"should have + p.p. 一句就同時表達「沒做」和「後悔」。", "sp": "We really should've saved digital copies of the booking numbers. Lesson learned.", "spNote": "should've 縮寫加 Lesson learned.（學到了）是口語自嘲收尾。"},
+     note:"should have + p.p. 一句就同時表達「沒做」和「後悔」。", "sp": "We really should've saved digital copies of the booking numbers. Lesson learned.", "spNote": "should've 縮寫加 Lesson learned.（學到了）是口語自嘲收尾。", "b1Cn": "我們沒有存訂位編號。那是個錯誤。", "b2Cn": "我們當時應該保存訂位編號的數位副本。", "spCn": "我們真該把訂位編號存成數位檔的。學到了。"},
     {b1:"If I had this habit before, that night would be cheaper.",
      b2:"Had I done that a year earlier, that evening would have cost me nothing.",
-     note:"Had I done... 是省略 if 的倒裝條件句，語氣正式且精煉。", "sp": "If I'd started that habit a year earlier, that night wouldn't have cost me a dime.", "spNote": "not cost a dime（一毛都不用花）是美式金錢口語。"}
+     note:"Had I done... 是省略 if 的倒裝條件句，語氣正式且精煉。", "sp": "If I'd started that habit a year earlier, that night wouldn't have cost me a dime.", "spNote": "not cost a dime（一毛都不用花）是美式金錢口語。", "b1Cn": "如果我以前有這個習慣，那晚會便宜一點。", "b2Cn": "要是我早一年那麼做，那晚就不用花錢了。", "spCn": "我要是早一年養成那習慣，那晚一毛錢都不用花。"}
   ]
 },
 
@@ -765,10 +765,10 @@ window.READING = [
   upgrade:[
     {b1:"He did not want to seem difficult. So he said nothing.",
      b2:"Not wanting to seem difficult, he never mentioned that he could not eat chilli.",
-     note:"否定分詞構句 Not wanting to...，取代 Because he did not want to...。", "sp": "He didn't want to come across as picky, so he never brought up the chilli thing.", "spNote": "come across as（給人…的感覺）、bring up（提起）、the ... thing（那件事）都是口語。"},
+     note:"否定分詞構句 Not wanting to...，取代 Because he did not want to...。", "sp": "He didn't want to come across as picky, so he never brought up the chilli thing.", "spNote": "come across as（給人…的感覺）、bring up（提起）、the ... thing（那件事）都是口語。", "b1Cn": "他不想顯得難搞。所以他什麼都沒說。", "b2Cn": "因為不想顯得難搞，他始終沒提自己不能吃辣。", "spCn": "他不想給人難搞的感覺，所以從沒提過吃辣那件事。"},
     {b1:"Our team thought people would say if there was a problem. So we misunderstood him.",
      b2:"Our team, having assumed that anyone with a problem would say so, had read his politeness as satisfaction.",
-     note:"Having assumed... 插在主詞後面補充背景，read A as B 是道地的搭配。", "sp": "We just figured anyone with an issue would speak up — so we read his politeness as him being happy.", "spNote": "figure（以為）、speak up（有話直說）是口語溝通用語。"}
+     note:"Having assumed... 插在主詞後面補充背景，read A as B 是道地的搭配。", "sp": "We just figured anyone with an issue would speak up — so we read his politeness as him being happy.", "spNote": "figure（以為）、speak up（有話直說）是口語溝通用語。", "b1Cn": "我們團隊以為有問題的人會說。所以我們誤會了他。", "b2Cn": "我們團隊假設有問題的人自然會說，因而把他的客氣讀成了滿意。", "spCn": "我們以為有問題的人自然會開口——結果把他的客氣當成了滿意。"}
   ]
 },
 
@@ -817,10 +817,10 @@ window.READING = [
   upgrade:[
     {b1:"Local people cannot afford the rent now, so they moved away.",
      b2:"Residents have been priced out of the streets they grew up on.",
-     note:"被動 have been priced out 讓「誰造成的」留白，焦點放在受影響的居民；後面接省略關係詞的子句。", "sp": "Locals can't afford their own neighborhoods anymore — they've been priced out.", "spNote": "priced out（被房價擠走）是口語新聞常用詞；their own neighborhoods 帶情感。"},
+     note:"被動 have been priced out 讓「誰造成的」留白，焦點放在受影響的居民；後面接省略關係詞的子句。", "sp": "Locals can't afford their own neighborhoods anymore — they've been priced out.", "spNote": "priced out（被房價擠走）是口語新聞常用詞；their own neighborhoods 帶情感。", "b1Cn": "當地人現在付不起房租，所以搬走了。", "b2Cn": "居民被房價擠出了自己從小長大的街區。", "spCn": "在地人再也住不起自己的社區——他們被房價擠走了。"},
     {b1:"Tourism is good in some ways. But there are problems too.",
      b2:"Granted, tourism pays for a great deal; the question is who decides how much a place can hold.",
-     note:"Granted, ... ; the question is ... 是 B2 議論文很乾淨的讓步＋聚焦結構。", "sp": "Yeah, tourism brings in a lot of money — but who gets to decide how much a place can take?", "spNote": "Yeah,...but 讓步反問、bring in（帶來收入）、get to decide（有權決定）是口語。"}
+     note:"Granted, ... ; the question is ... 是 B2 議論文很乾淨的讓步＋聚焦結構。", "sp": "Yeah, tourism brings in a lot of money — but who gets to decide how much a place can take?", "spNote": "Yeah,...but 讓步反問、bring in（帶來收入）、get to decide（有權決定）是口語。", "b1Cn": "觀光在某些方面很好。但也有問題。", "b2Cn": "誠然，觀光帶來大量收入；問題在於由誰決定一個地方能承載多少。", "spCn": "對啦，觀光確實帶進很多錢——但誰有權決定一個地方能塞多少人？"}
   ]
 },
 
@@ -873,10 +873,10 @@ window.READING = [
   upgrade:[
     {b1:"The landlord told her he kept half of the deposit.",
      b2:"She was informed that half of her deposit had been kept for \"general cleaning and wear\".",
-     note:"正式書面常用被動 was informed + 轉述子句（時態退一格 → had been kept）。", "sp": "The landlord told her he was keeping half her deposit for 'cleaning and wear and tear.'", "spNote": "wear and tear（正常耗損）是租屋口語必備詞。"},
+     note:"正式書面常用被動 was informed + 轉述子句（時態退一格 → had been kept）。", "sp": "The landlord told her he was keeping half her deposit for 'cleaning and wear and tear.'", "spNote": "wear and tear（正常耗損）是租屋口語必備詞。", "b1Cn": "房東告訴她，他扣了一半押金。", "b2Cn": "她被告知一半押金因「一般清潔與耗損」被扣留。", "spCn": "房東跟她說要扣一半押金，理由是「清潔跟正常耗損」。"},
     {b1:"If they do not give the money back, she will go to mediation.",
      b2:"If the deposit is not returned within fourteen days, the matter will be taken to mediation.",
-     note:"第一條件句 ＋ 兩個被動，語氣正式、不針對個人，正是爭議信件該有的分寸。", "sp": "If they don't give the deposit back in two weeks, she's taking it to mediation.", "spNote": "口語用現在進行式 she's taking 表達已決定的下一步。"}
+     note:"第一條件句 ＋ 兩個被動，語氣正式、不針對個人，正是爭議信件該有的分寸。", "sp": "If they don't give the deposit back in two weeks, she's taking it to mediation.", "spNote": "口語用現在進行式 she's taking 表達已決定的下一步。", "b1Cn": "如果他們不還錢，她會去調解。", "b2Cn": "若押金十四天內未歸還，此事將提交調解。", "spCn": "要是兩週內不把押金還來，她就要申請調解了。"}
   ]
 },
 
@@ -925,10 +925,10 @@ window.READING = [
   upgrade:[
     {b1:"Rents went up a lot. Wages did not go up so much.",
      b2:"Average rents rose considerably faster than average wages.",
-     note:"rise + 程度副詞 + faster than 是描述趨勢的標準句型，比 went up a lot 精準。", "sp": "Rents shot up way faster than paychecks did.", "spNote": "shoot up（飆漲）對比 paychecks（薪水）是口語經濟話題標配。"},
+     note:"rise + 程度副詞 + faster than 是描述趨勢的標準句型，比 went up a lot 精準。", "sp": "Rents shot up way faster than paychecks did.", "spNote": "shoot up（飆漲）對比 paychecks（薪水）是口語經濟話題標配。", "b1Cn": "房租漲很多。薪水沒漲那麼多。", "b2Cn": "平均房租的漲幅遠高於平均薪資。", "spCn": "房租飆漲的速度遠比薪水快。"},
     {b1:"If you do nothing, you slowly lose money.",
      b2:"Doing nothing is not a neutral choice; it is a slow decision to become poorer.",
-     note:"動名詞當主詞（Doing nothing）＋ 名詞化 decision，把行為變成可以被評價的東西。", "sp": "Sitting on your hands isn't neutral — it's just a slow way of getting poorer.", "spNote": "sit on your hands（什麼都不做）是口語慣用語。"}
+     note:"動名詞當主詞（Doing nothing）＋ 名詞化 decision，把行為變成可以被評價的東西。", "sp": "Sitting on your hands isn't neutral — it's just a slow way of getting poorer.", "spNote": "sit on your hands（什麼都不做）是口語慣用語。", "b1Cn": "如果你什麼都不做，你會慢慢損失錢。", "b2Cn": "什麼都不做並非中立的選擇；那是慢慢變窮的決定。", "spCn": "兩手一攤不是中立——那只是慢慢變窮的另一種方式。"}
   ]
 },
 
@@ -978,10 +978,10 @@ window.READING = [
   upgrade:[
     {b1:"There are enough buildings. The problem is the empty ones.",
      b2:"It is not a shortage of buildings that keeps rents high; it is the number of homes being held empty.",
-     note:"It is ... that ... 分裂句，用來明確否定一個原因並指出另一個。", "sp": "It's not that we're short on buildings — it's all the places sitting empty.", "spNote": "be short on（缺）、sit empty（空著）是房市口語。"},
+     note:"It is ... that ... 分裂句，用來明確否定一個原因並指出另一個。", "sp": "It's not that we're short on buildings — it's all the places sitting empty.", "spNote": "be short on（缺）、sit empty（空著）是房市口語。", "b1Cn": "建築物夠多。問題是空著的那些。", "b2Cn": "讓租金居高不下的不是房屋短缺，而是被空置的房子數量。", "spCn": "我們不是缺房子——是太多房子空在那裡。"},
     {b1:"The shops below suffer the most from this.",
      b2:"Nowhere is the cost of this more visible than in the shops below.",
-     note:"Nowhere is ... more ... than ... 是社論常見的強調倒裝，比 the most 更有份量。", "sp": "You can see the damage most clearly in the shops downstairs.", "spNote": "口語把 Nowhere is...more visible 的倒裝還原成 You can see...，最自然。"}
+     note:"Nowhere is ... more ... than ... 是社論常見的強調倒裝，比 the most 更有份量。", "sp": "You can see the damage most clearly in the shops downstairs.", "spNote": "口語把 Nowhere is...more visible 的倒裝還原成 You can see...，最自然。", "b1Cn": "樓下的商店受害最深。", "b2Cn": "這個代價在樓下的商店最清楚可見。", "spCn": "傷害最明顯的地方，就是樓下那排店面。"}
   ]
 }
 
