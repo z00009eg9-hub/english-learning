@@ -416,46 +416,54 @@ tr:nth-child(even) td{background:#fdfbf8}
 }
 .mrc-cta:active{transform:scale(.97)}
 /* ---------- 每月智慧複習：複習頁 ---------- */
+.mr-stats{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:4px;font-weight:600}
+.mr-time{font-size:calc(12px * var(--fs));color:var(--ink2);margin-top:2px}
+.mr-hint{font-size:calc(11.5px * var(--fs));color:var(--ink2);margin:10px 0 0;line-height:1.5}
 .mrfocus{background:var(--card);border:1px solid var(--line);border-left:3px solid #d9534f;
-  border-radius:10px;padding:12px 14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(60,45,30,.05)}
-.mrf-hd{display:flex;gap:9px;align-items:flex-start}
-.mrf-n{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:#d9534f;color:#fff;
-  font-weight:900;font-size:calc(12px * var(--fs));line-height:22px;text-align:center}
-.mrf-t{font-weight:800;font-size:calc(15px * var(--fs));line-height:1.4}
-.mrf-tc{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:1px}
-.mrf-why{font-size:calc(11.5px * var(--fs));color:#a04a12;background:#fdf0e5;border-radius:8px;
-  padding:4px 9px;margin:8px 0 0;display:inline-block}
-.mrf-sec{margin-top:9px}
-.mrf-sec>b{display:block;font-size:calc(12px * var(--fs));color:var(--accent2);margin-bottom:4px}
-.mrf-w{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:calc(13.5px * var(--fs));margin-bottom:3px}
-.mrf-ww{font-weight:800}
-.mrf-wc{color:var(--ink2);font-size:calc(12.5px * var(--fs))}
-.mrf-g{font-size:calc(13.5px * var(--fs));font-weight:700;margin-bottom:6px}
-.mrf-pat{font-size:calc(12.5px * var(--fs));font-weight:600;color:var(--accent2);margin-top:2px}
-.mrf-ex{font-size:calc(13.5px * var(--fs));font-weight:400;margin-top:4px;line-height:1.6}
-.mrf-excn{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:2px}
-.mrf-go{margin-top:10px;border:1.5px solid var(--accent2);background:var(--card);color:var(--accent2);
-  border-radius:999px;font:inherit;font-size:calc(11.5px * var(--fs));font-weight:800;padding:4px 13px;cursor:pointer}
+  border-radius:10px;padding:10px 12px;margin-bottom:8px;box-shadow:0 1px 4px rgba(60,45,30,.05)}
+.mrf-hd{display:flex;gap:8px;align-items:flex-start}
+.mrf-n{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#d9534f;color:#fff;
+  font-weight:900;font-size:calc(11px * var(--fs));line-height:20px;text-align:center}
+.mrf-t{font-weight:800;font-size:calc(14.5px * var(--fs));line-height:1.4}
+.mrf-tc{font-size:calc(12px * var(--fs));color:var(--ink2);margin-top:1px}
+.mrf-why{font-size:calc(11px * var(--fs));border-radius:6px;padding:2px 8px;margin:6px 0 0;display:inline-block}
+.mrf-why.st-unread{color:#a04a12;background:#fdf0e5}
+.mrf-why.st-started{color:#8a6d12;background:#fdf8e5}
+.mrf-why.st-done{color:#5a6a5a;background:#f0f4f0}
+.mrf-sec{margin-top:7px}
+.mrf-sec>b{display:block;font-size:calc(11.5px * var(--fs));color:var(--ink2);margin-bottom:3px;font-weight:700;text-transform:uppercase;letter-spacing:.3px}
+.mrf-chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:2px}
+.mrf-chip{display:inline-flex;align-items:center;gap:3px;font-size:calc(13px * var(--fs));font-weight:700;
+  background:var(--accent-soft);border-radius:6px;padding:2px 7px}
+.mrf-chip .cnx{font-weight:400;font-size:calc(11.5px * var(--fs));color:var(--ink2);margin-left:2px}
+.mrf-g{font-size:calc(13px * var(--fs));font-weight:600;color:var(--ink);margin-bottom:4px}
+.mrf-pat{font-size:calc(12px * var(--fs));font-weight:600;color:var(--accent2);margin-top:1px}
+.mrf-ex{font-size:calc(13px * var(--fs));font-weight:400;margin-top:3px;line-height:1.55;color:#4a4238}
+.mrf-excn{font-size:calc(12px * var(--fs));color:var(--ink2);margin-top:1px}
+.mrf-go{margin-top:8px;border:1.5px solid var(--accent2);background:var(--card);color:var(--accent2);
+  border-radius:999px;font:inherit;font-size:calc(11px * var(--fs));font-weight:800;padding:3px 12px;cursor:pointer}
 .mrf-go:active{background:var(--accent-soft)}
-.mrgram{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;
-  margin-bottom:10px;box-shadow:0 1px 4px rgba(60,45,30,.05)}
-.mrg-t{font-weight:800;font-size:calc(14.5px * var(--fs));display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.mrgram{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;
+  margin-bottom:8px;box-shadow:0 1px 4px rgba(60,45,30,.05)}
+.mrg-t{font-weight:800;font-size:calc(14px * var(--fs));display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .mrg-hit{font-size:calc(10.5px * var(--fs));font-weight:700;color:#2b6b69;background:#f2f7f7;
   border:1px solid #d5e5e4;border-radius:12px;padding:1px 8px}
-.mrg-pat{font-size:calc(13px * var(--fs));font-weight:700;color:var(--accent2);margin-top:5px}
-.mrg-pts{margin:7px 0 0;padding-left:19px;font-size:calc(13px * var(--fs));color:var(--ink2);line-height:1.75}
-.mrg-pts li{margin-bottom:3px}
-.mrg-exs{margin-top:8px;border-top:1px dashed var(--line);padding-top:7px}
-.mrg-ex{font-size:calc(13.5px * var(--fs));line-height:1.6;margin-bottom:5px}
-.mrg-excn{font-size:calc(12.5px * var(--fs));color:var(--ink2)}
-.mrg-src{font-size:calc(11px * var(--fs));color:var(--ink2);margin-top:8px}
-.mrquick{display:flex;flex-wrap:wrap;gap:8px}
-.mrq{flex:1 1 210px;min-width:0;text-align:left;border:1px solid var(--line);background:var(--card);
-  border-radius:10px;padding:9px 11px;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:2px}
+.mrg-pat{font-size:calc(12.5px * var(--fs));font-weight:700;color:var(--accent2);margin-top:4px}
+.mrg-pts{margin:5px 0 0;padding-left:19px;font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.65}
+.mrg-pts li{margin-bottom:2px}
+.mrg-exs{margin-top:6px;border-top:1px dashed var(--line);padding-top:6px}
+.mrg-ex{font-size:calc(13px * var(--fs));line-height:1.55;margin-bottom:4px}
+.mrg-excn{font-size:calc(12px * var(--fs));color:var(--ink2)}
+.mrg-src{font-size:calc(10.5px * var(--fs));color:var(--ink2);margin-top:6px}
+.mrquick{display:flex;flex-wrap:wrap;gap:6px}
+.mrq{flex:1 1 180px;min-width:0;text-align:left;border:1px solid var(--line);background:var(--card);
+  border-radius:8px;padding:7px 10px;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:1px;
+  box-shadow:none}
 .mrq:active{background:var(--accent-soft)}
 @media(hover:hover){.mrq:hover{border-color:var(--accent2)}}
-.mrq-t{font-weight:700;font-size:calc(13.5px * var(--fs));color:var(--ink)}
-.mrq-w{font-size:calc(11.5px * var(--fs));color:var(--ink2)}
+.mrq-t{font-weight:700;font-size:calc(13px * var(--fs));color:var(--ink)}
+.mrq-w{font-size:calc(11px * var(--fs));color:var(--ink2)}
+@media(max-width:499px){.mrquick{flex-direction:column}.mrq{flex-basis:auto}}
 .bkmon{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
 .bkmon-tog{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;background:none;
   padding:4px 2px;font:inherit;font-weight:700;font-size:calc(13px * var(--fs));color:var(--ink2);cursor:pointer}
@@ -4199,37 +4207,36 @@ function mrPageHTML(ym){
    +'</div><div class="bkvcell bkvexample"><span class="sent" data-t="'+esc(t.ex||'')+'" onclick="saySent(this)">'+bkHi(t.ex||'',t.w)+'</span> '+(t.ex?spk(t.ex):'')+'</div>'
    +'<div class="bkvtranslation cnx">'+esc(t.exCn||'')+'</div><div class="bkvcell bkvmeaning cnx">'+esc(t.cn||'')+'</div></article>';
 
+  const statBits=[(r.focus.length?r.focus.length+' 堂待補強':'重點回顧'),r.vocab.length+' 個重點單字',r.gram.length+' 個文法重點'];
   let h='<div class="magttl"><button class="back" onclick="mrClose()"><span class="back-label">返回課本</span></button>'
    +'<div class="magico">🔄</div>'
    +'<h2>'+mon+' 月重點複習</h2>'
-   +'<div class="cn">根據你的 '+mon+' 月學習狀況整理</div>'
-   +'<div class="bar"><span class="magbadge c1">📅 '+yr+' / '+mon+'</span>'
-   +'<span class="magbadge c2">📕 '+r.lessons.length+' 堂課</span>'
-   +(r.focus.length?'<span class="magbadge c3">🔴 '+r.focus.length+' 堂待補強</span>':'')
-   +'<span class="magbadge c2">🔤 '+r.vocab.length+' 個單字</span>'
-   +'<span class="magbadge c3">📐 '+r.gram.length+' 個文法主題</span>'
-   +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速" style="margin-left:auto">⏱ '+(Number(ST.rate)||1)+'x</button>'
-   +'</div></div>';
+   +'<div class="mr-time">根據你的 '+mon+' 月學習狀況整理　·　約 20 分鐘</div>'
+   +'<div class="mr-stats">'+statBits.join(' · ')+'</div>'
+   +'<div class="bar">'
+   +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button>'
+   +'</div></div>'
+   +'<div class="mr-hint">優先順序：未閱讀 → 未完成 → 收藏 / 重點內容 → 已完成快速回顧</div>';
 
   /* I. 優先補強 */
   if(r.focus.length){
     h+='<div class="bkbar">🔴 I. 優先補強</div>';
     h+=r.focus.map((x,i)=>{
-      const b=x.b, ws=mrCoreWords(b,3), gs=(b.grammar||[]).slice(0,2);
+      const b=x.b, ws=mrCoreWords(b,3), g1=(b.grammar||[])[0];
+      const stCls=x.st.k==='unread'?'st-unread':x.st.k==='started'?'st-started':'st-done';
       return '<div class="mrfocus">'
        +'<div class="mrf-hd"><span class="mrf-n">'+(i+1)+'</span>'
-       +'<div><div class="mrf-t">'+(b.icon||'📕')+' '+esc(b.titleCn)+'</div>'
-       +'<div class="mrf-tc">'+esc(b.title||'')+'</div></div></div>'
-       +'<div class="mrf-why">原因：'+esc(x.st.label)+'　·　'+bkDate(b.date)+'</div>'
+       +'<div><div class="mrf-t">'+(b.icon||'📕')+' '+esc(b.titleCn)+'</div></div></div>'
+       +'<span class="mrf-why '+stCls+'">'+esc(x.st.label)+'</span>'
        +(ws.length?'<div class="mrf-sec"><b>核心單字</b>'
-         +ws.map(t=>'<div class="mrf-w"><span class="mrf-ww">'+esc(t.w)+'</span> '+spk(t.w)
-           +'<span class="mrf-wc cnx">'+esc(t.cn||'')+'</span></div>').join('')+'</div>':'')
-       +(gs.length?'<div class="mrf-sec"><b>核心句型</b>'
-         +gs.map(g=>'<div class="mrf-g">'+esc(g.title)+(g.pat?'<div class="mrf-pat">'+esc(g.pat)+'</div>':'')
-           +((g.exs||[]).length?'<div class="mrf-ex"><span class="sent" data-t="'+esc(g.exs[0].en)+'" onclick="saySent(this)">'+bkHi(g.exs[0].en,g.exs[0].hi)+'</span> '+spk(g.exs[0].en)
-             +'<div class="mrf-excn cnx">'+esc(g.exs[0].cn||'')+'</div></div>':'')
-           +'</div>').join('')+'</div>':'')
-       +'<button class="mrf-go" onclick="bkGo(\''+b.id+'\')">開啟完整課程 →</button>'
+         +'<div class="mrf-chips">'+ws.map(t=>'<span class="mrf-chip">'+esc(t.w)+' '+spk(t.w)
+           +'<span class="cnx">'+esc(t.cn||'')+'</span></span>').join('')+'</div></div>':'')
+       +(g1?'<div class="mrf-sec"><b>核心句型</b>'
+         +'<div class="mrf-g">'+esc(g1.title)+(g1.pat?'<div class="mrf-pat">'+esc(g1.pat)+'</div>':'')
+         +((g1.exs||[]).length?'<div class="mrf-ex"><span class="sent" data-t="'+esc(g1.exs[0].en)+'" onclick="saySent(this)">'+bkHi(g1.exs[0].en,g1.exs[0].hi)+'</span> '+spk(g1.exs[0].en)
+           +'<div class="mrf-excn cnx">'+esc(g1.exs[0].cn||'')+'</div></div>':'')
+         +'</div></div>':'')
+       +'<button class="mrf-go" onclick="bkGo(\''+b.id+'\')">回原課程複習 →</button>'
        +'</div>';
     }).join('');
   }
@@ -4246,14 +4253,13 @@ function mrPageHTML(ym){
   if(r.gram.length){
     h+='<div class="bkbar">📐 III. 本月文法與句型（'+r.gram.length+'）</div>';
     h+=r.gram.map(e=>{
-      const g=e.g;
+      const g=e.g, ex1=(g.exs||[])[0], pt1=(g.pts||[])[0];
       return '<div class="mrgram">'
        +'<div class="mrg-t">'+esc(g.title)+(e.hits>1?'<span class="mrg-hit">'+e.hits+' 堂課出現</span>':'')+'</div>'
        +(g.pat?'<div class="mrg-pat">'+bkVars(g.pat)+'</div>':'')
-       +((g.pts||[]).length?'<ul class="mrg-pts">'+(g.pts||[]).slice(0,2).map(p=>'<li>'+bkMark(String(p))+'</li>').join('')+'</ul>':'')
-       +((g.exs||[]).length?'<div class="mrg-exs">'+(g.exs||[]).slice(0,2).map(x=>
-           '<div class="mrg-ex"><span class="sent" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+bkHi(x.en,x.hi)+'</span> '+spk(x.en)
-           +'<div class="mrg-excn cnx">'+esc(x.cn||'')+'</div></div>').join('')+'</div>':'')
+       +(pt1?'<div class="mrg-pts" style="list-style:none;padding-left:0;margin:4px 0 0">'+bkMark(String(pt1))+'</div>':'')
+       +(ex1?'<div class="mrg-exs"><div class="mrg-ex"><span class="sent" data-t="'+esc(ex1.en)+'" onclick="saySent(this)">'+bkHi(ex1.en,ex1.hi)+'</span> '+spk(ex1.en)
+         +'<div class="mrg-excn cnx">'+esc(ex1.cn||'')+'</div></div></div>':'')
        +'<div class="mrg-src">來自：'+esc(e.src.titleCn)+'</div>'
        +'</div>';
     }).join('');
@@ -4261,15 +4267,14 @@ function mrPageHTML(ym){
 
   /* IV. 快速回顧 */
   if(r.quick.length){
-    h+='<div class="bkbar">🟢 IV. 快速回顧</div>'
-     +'<div class="card"><div class="muted" style="margin-bottom:8px">這幾課已經有進度，這裡只列主題提醒，需要細看再點進去。</div>'
+    h+='<div class="bkbar" style="font-size:calc(15px * var(--fs));padding:7px 12px;margin-top:14px">🟢 IV. 快速回顧</div>'
      +'<div class="mrquick">'+r.quick.map(x=>{
         const w=mrCoreWords(x.b,2);
         return '<button class="mrq" onclick="bkGo(\''+x.b.id+'\')">'
          +'<span class="mrq-t">'+(x.b.icon||'📕')+' '+esc(x.b.titleCn)+'</span>'
          +(w.length?'<span class="mrq-w">'+w.map(t=>esc(t.w)).join(' · ')+'</span>':'')
          +'</button>';
-      }).join('')+'</div></div>';
+      }).join('')+'</div>';
   }
   return h;
 }
