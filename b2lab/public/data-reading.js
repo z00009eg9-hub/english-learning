@@ -12,6 +12,7 @@ window.READING = [
   titleCn:"錯過火車的男人",
   focus:"過去簡單式 vs. 過去進行式",
   intro:"用一個小故事練習「過去某個時間點正在做什麼」與「當時發生了什麼」的搭配。注意 while / when 後面接的時態。",
+  "spoken": [{"en":"Daniel had a big meeting in Taichung, but his morning totally fell apart.","cn":"Daniel 在台中有個重要會議，但他的早晨整個崩盤。"},{"en":"His manager called while he was making breakfast, and he completely lost track of time.","cn":"他做早餐時主管打來，他就完全忘了時間。"},{"en":"Then halfway to the station it hit him — his wallet was still on the kitchen table. He got there at 7:42. Train was gone.","cn":"跑到半路他才猛然想到——皮夾還在餐桌上。他 7:42 到月台，車已經走了。"},{"en":"Ever since, he's got one rule: never pick up the phone while you're getting ready to leave.","cn":"從那天起他就一條鐵則：出門前準備時絕不接電話。"}],
   paras:[
     {en:"Daniel had an important meeting in Taichung, so he booked a ticket for the 7:40 train. He usually arrives early, but that morning everything went wrong.",
      cn:"Daniel 在台中有一場重要的會議，所以他訂了 7 點 40 分的火車票。他平常都會提早到，但那天早上一切都出錯了。"},
@@ -60,6 +61,7 @@ window.READING = [
   titleCn:"早晨的一個小改變",
   focus:"現在簡單式 vs. 現在進行式；頻率副詞",
   intro:"描述「習慣」用現在簡單式，描述「最近正在改變的事」用現在進行式。注意頻率副詞的位置。",
+  "spoken": [{"en":"Mei stares at a screen nine hours a day and used to crash every afternoon.","cn":"Mei 每天盯螢幕九小時，以前每天下午都累癱。"},{"en":"Her doctor's advice sounded way too easy: drink some water and walk ten minutes before you touch your phone.","cn":"醫生的建議聽起來簡單過頭：碰手機前先喝杯水、走十分鐘。"},{"en":"She tried it anyway — now she's up earlier, drinking more water, and her phone stays away from the breakfast table.","cn":"她還是試了——現在起得更早、水喝得更多，手機也不上早餐桌了。"},{"en":"Tiny change, big difference. Like she says: 'I'm just starting the day in a different order.'","cn":"小改變，大不同。像她說的：「我只是用不同的順序開始一天。」"}],
   paras:[
     {en:"Mei works in an office and spends about nine hours a day in front of a screen. She often feels tired by three o'clock, and her eyes usually hurt at the end of the day.",
      cn:"Mei 在辦公室工作，每天大約有九個小時面對螢幕。她常常到三點就覺得累，眼睛通常在一天結束時會不舒服。"},
@@ -106,6 +108,7 @@ window.READING = [
   titleCn:"我們為什麼丟掉這麼多食物？",
   focus:"被動語態；數量詞 (much / a great deal of / a third of)",
   intro:"說明性文章。注意被動語態（is thrown away / are labelled）以及不可數名詞的數量表達。",
+  "spoken": [{"en":"Get this — about a third of all the food we produce never gets eaten.","cn":"你聽聽——全球生產的食物大概有三分之一根本沒被吃掉。"},{"en":"A big reason is the 'best before' label — it's about quality, not safety, but people toss perfectly good food anyway.","cn":"一大原因是「最佳賞味期限」——那是品質不是安全問題，但大家還是把好好的食物扔了。"},{"en":"And we all do it: shop hungry, buy too much, shove the veggies in the back of the fridge and forget them.","cn":"而且我們都幹過：餓著肚子採買、買太多、把菜塞到冰箱深處然後忘掉。"},{"en":"The fix is easy though — plan your meals, store stuff right, cook your leftovers. That alone can cut waste in half.","cn":"解法其實很簡單——規劃餐點、好好保存、把剩菜煮掉。光這樣就能少浪費一半。"}],
   paras:[
     {en:"Around the world, roughly a third of the food that is produced every year is never eaten. Some of it is lost on farms, some is damaged during transport, and a surprising amount is simply thrown away in ordinary kitchens.",
      cn:"在全世界，每年生產的食物大約有三分之一從未被吃掉。有些在農場就損失了，有些在運送過程中受損，而令人意外的是，還有相當多是在普通家庭的廚房裡被直接丟掉。"},
@@ -156,6 +159,7 @@ window.READING = [
   titleCn:"在家工作：故事的兩面",
   focus:"對比連接詞 however / whereas / on the other hand",
   intro:"對比型文章。B2 寫作很重視「兩面呈現」，請特別注意 whereas、however、on the other hand 的位置與標點。",
+  "spoken": [{"en":"Working from home went from weird to totally normal here in like five years.","cn":"在家工作在這裡大概五年內從稀奇變成常態。"},{"en":"The fans love it — no ninety-minute bus ride, and nobody's interrupting them every ten minutes.","cn":"喜歡的人愛死了——不用擠九十分鐘公車，也沒人每十分鐘打斷一次。"},{"en":"Managers see it differently — the little hallway chats that build trust just disappear, and new hires have no one to ask.","cn":"主管的看法就不同了——建立信任的走廊閒聊全沒了，新人也找不到人問。"},{"en":"So most companies landed in the middle: a few office days for the people stuff, home days for the focus stuff.","cn":"所以多數公司折衷：幾天進辦公室處理人的事，其他天在家專心做事。"}],
   paras:[
     {en:"Five years ago, working from home was unusual in Taiwan. Today it is a normal option in many companies, and employees have strong opinions about it on both sides.",
      cn:"五年前，在家工作在台灣還很少見。如今在許多公司這已是常見的選項，而員工對此的看法兩極。"},
@@ -206,6 +210,7 @@ window.READING = [
   titleCn:"什麼都會修的鄰居",
   focus:"關係子句 who / which / whose；使役 have / get something done",
   intro:"敘事＋人物描寫。重點是關係子句的連接，以及「請人做某事」的 have / get + 物 + p.p. 結構。",
+  "spoken": [{"en":"Mr. Lin downstairs used to be a plumber — the guy can fix anything.","cn":"樓下的林先生以前是水電工——什麼都會修。"},{"en":"When my kitchen pipe started leaking, the repair company said two days. Mr. Lin heard the drip and knocked on my door.","cn":"我廚房水管漏水，維修公司說要等兩天。林先生聽到滴水聲就來敲門了。"},{"en":"Fifteen minutes, a piece of rubber, a metal clip — leak stopped. And he wouldn't take a dime.","cn":"十五分鐘、一片橡膠、一個金屬夾——漏水止住了。他還一毛錢都不收。"},{"en":"That's when it hit me: a building isn't concrete and pipes. It's the people who notice when something's wrong.","cn":"那時我才明白：一棟樓不是水泥和管線，而是那些會注意到不對勁的人。"}],
   paras:[
     {en:"Mr. Lin, whose flat is on the ground floor, has lived in our building for thirty years. He was a plumber before he retired, and he keeps a wooden box of tools that is older than most of his neighbours.",
      cn:"林先生的公寓在一樓，他在我們這棟樓已經住了三十年。退休前他是水管工，他有一個木製工具箱，比大部分鄰居的年紀都大。"},
@@ -256,6 +261,7 @@ window.READING = [
   titleCn:"颱風停電的那一夜",
   focus:"過去完成式；used to / would 表過去習慣",
   intro:"敘事文。用過去完成式標示「更早發生的事」，並用 used to / would 描述已不存在的過去習慣。",
+  "spoken": [{"en":"As kids we thought typhoons were awesome — instant noodles, candles, watching the trees whip around from the window.","cn":"小時候我們覺得颱風超棒——泡麵、蠟燭、趴在窗邊看樹被吹得東倒西歪。"},{"en":"The 2023 one killed that feeling. Our power went out at nine and stayed out for two days.","cn":"2023 那次把這種感覺徹底毀了。晚上九點停電，一停就是兩天。"},{"en":"Everything in the fridge went bad, we couldn't flush the toilet, and grandma had to walk six blocks to keep her meds cold.","cn":"冰箱的東西全壞了、馬桶沖不了，奶奶還得走六條街去冰她的藥。"},{"en":"Now we keep a power bank, bottled water, and phone numbers on paper — 'cause a dead phone is just a piece of glass.","cn":"現在我們備著行動電源、瓶裝水和紙本電話清單——因為沒電的手機就只是塊玻璃。"}],
   paras:[
     {en:"We used to think that a typhoon meant a free day at home. When I was a child, my mother would buy instant noodles and candles, and my brother and I would sit by the window watching the trees bend. It felt like an adventure.",
      cn:"我們以前總覺得颱風就代表在家放一天假。我小時候，媽媽會去買泡麵和蠟燭，我和弟弟則會坐在窗邊看樹被吹彎。那感覺像一場冒險。"},
@@ -306,6 +312,7 @@ window.READING = [
   titleCn:"改變她想法的那場面試",
   focus:"假設語氣（if I were / would have）；轉述句",
   intro:"進入 B2：注意第二、第三條件句的動詞形式，以及轉述句中時態往後退一格的規則。",
+  "spoken": [{"en":"Claire was all set to take this job — better pay, ten minutes from home, fancy title.","cn":"Claire 本來鐵了心要接那份工作——薪水更高、離家十分鐘、頭銜好聽。"},{"en":"Then in the interview she found out four people had quit in eighteen months, and weekends were basically mandatory.","cn":"結果面試時她發現一年半內走了四個人，週末基本上都要上班。"},{"en":"When she asked why everyone left, the manager just said they 'weren't the right fit.' Huge red flag.","cn":"她問為什麼大家都離職，主管只說他們「不合適」。超大警訊。"},{"en":"She turned it down and never looked back. Her line: 'A salary is easy to measure. A manager who can't explain why people leave tells you way more.'","cn":"她婉拒了，也從沒後悔。她的名言：「薪水好衡量。一個說不清員工為何離開的主管，透露的訊息多得多。」"}],
   paras:[
     {en:"When Claire applied for the position, she was almost certain that she wanted it. The salary was higher than her current one, the office was ten minutes from her flat, and the job title sounded impressive on paper.",
      cn:"Claire 應徵那個職位時，幾乎確定自己想要這份工作。薪水比現在高，辦公室離她的公寓只要十分鐘，而職稱寫在紙上也很體面。"},
@@ -357,6 +364,7 @@ window.READING = [
   titleCn:"整形手術是個人選擇嗎？",
   focus:"讓步與情態動詞（admittedly / it may be true that / arguably）",
   intro:"議論文。B2 的核心能力是「先承認對方有理，再提出自己的立場」。注意 admittedly、arguably、to some extent 的用法。",
+  "spoken": [{"en":"Cosmetic surgery is one of those topics where everyone's got an opinion.","cn":"整形手術就是那種人人都有意見的話題。"},{"en":"Sure, it's your body, your call — and for accident patients it's basically medical treatment, not a luxury.","cn":"當然，你的身體你決定——對意外傷患來說那根本是治療，不是奢侈。"},{"en":"But here's the thing: when teens grow up on edited faces and the ads never stop, 'free choice' starts looking a lot like pressure.","cn":"但問題來了：當青少年看著修過的臉長大、廣告又轟炸不停，「自由選擇」看起來就很像壓力了。"},{"en":"So the middle ground makes sense — keep it legal, but be straight about the risks, set an age floor, and rein in the ads.","cn":"所以中間立場才合理——維持合法，但風險要說清楚、訂年齡下限、廣告要管緊。"}],
   paras:[
     {en:"Few subjects divide opinion as quickly as cosmetic surgery. Supporters argue that what a person does with their own body is nobody else's business, and that argument is difficult to dismiss.",
      cn:"很少有話題像整形手術一樣，能這麼快讓意見分裂。支持者主張，一個人如何對待自己的身體不干別人的事，而這個論點很難反駁。"},
@@ -409,6 +417,7 @@ window.READING = [
   titleCn:"便宜保險的真正代價",
   focus:"名詞化與複雜名詞片語；比較結構",
   intro:"說明／分析文。B2 寫作常把動作變成名詞（decide → decision, exclude → exclusion）讓句子更緊密。留意名詞片語有多長。",
+  "spoken": [{"en":"Cheap insurance looks great till you actually read the fine print.","cn":"便宜的保險看起來很香，直到你真的去讀那些小字。"},{"en":"One travel policy covers cancellation for any reason; the cheap one only pays if the airline cancels. Big difference when things go south.","cn":"一份旅平險任何原因取消都賠；便宜那份只有航空公司取消才賠。出事時差很大。"},{"en":"And watch the deductible — some are so high that small claims aren't even worth filing.","cn":"還要注意自負額——有些高到小額理賠根本不值得申請。"},{"en":"The right question isn't 'how much is it?' It's 'what exactly happens if I need it?'","cn":"該問的不是「多少錢？」，而是「真出事的時候到底會怎樣？」"}],
   paras:[
     {en:"The attraction of a cheap policy is obvious: a lower monthly payment. What most buyers never examine is the list of exclusions printed on the final pages, and it is there that the true price is hidden.",
      cn:"便宜保單的吸引力很明顯：月付金額較低。但大多數購買者從不細看的，是印在最後幾頁的除外條款清單，而真正的代價就藏在那裡。"},
@@ -461,6 +470,7 @@ window.READING = [
   titleCn:"睡眠負債：還不了的習慣",
   focus:"分詞構句；倒裝（Not only... / Only when...）",
   intro:"科普說明文。注意分詞開頭的句子（Having slept... / Lying in bed...）與倒裝句的動詞位置——這兩者是 B2 閱讀最常卡住的地方。",
+  "spoken": [{"en":"Losing an hour of sleep a night sounds like nothing — but stack up a week of it and your attention takes a real hit.","cn":"每晚少睡一小時聽起來沒什麼——但累積一週，專注力就真的垮了。"},{"en":"They tested drivers after five short nights, and their reactions looked like they'd been drinking — and they thought they were fine.","cn":"研究測了連續五天睡不夠的駕駛，反應跟喝了酒差不多——而他們還自以為沒事。"},{"en":"And no, sleeping in twelve hours on Saturday doesn't fix it. Memory needs deep sleep spread over several nights.","cn":"還有，週六補睡十二小時沒用。記憶需要的是連續好幾晚的深層睡眠。"},{"en":"The fix is boring: same wake-up time every day, even after a rough night. Bragging about four hours of sleep isn't toughness — it's debt.","cn":"解法很無聊：每天同一時間起床，睡爛了也一樣。炫耀只睡四小時不是強悍——是欠債。"}],
   paras:[
     {en:"Losing an hour of sleep sounds harmless. Repeated for a week, however, it produces a measurable drop in attention, and the person affected is usually the last to notice it. Researchers call this accumulated shortage \"sleep debt\".",
      cn:"少睡一個小時聽起來無傷大雅。然而，連續一週如此，就會造成注意力可測量的下降，而受影響的人通常是最後才察覺的。研究者把這種累積的不足稱為「睡眠負債」。"},
@@ -517,6 +527,7 @@ window.READING = [
   titleCn:"醫生沒時間問的那些事",
   focus:"轉述句；委婉推測語氣（seem / tend to / appear）",
   intro:"看診溝通。B2 的重點是把「我覺得可能是…」說得專業而不武斷：注意 seem to、tend to、appear to、it could be that 的用法，以及把醫生說的話轉述出來時的時態變化。",
+  "spoken": [{"en":"A clinic visit lasts under six minutes, so how you describe your symptoms really matters.","cn":"看診時間不到六分鐘，所以你怎麼描述症狀真的很重要。"},{"en":"Give the doctor four things: where it is, what it feels like, how long it's been going on, and what makes it better or worse.","cn":"給醫生四件事：哪裡不舒服、什麼感覺、持續多久、什麼會讓它變好或變糟。"},{"en":"And don't leave out the meds you're already on — my uncle's dizziness turned out to be from doubling his own blood-pressure pills.","cn":"還有別漏掉你正在吃的藥——我叔叔的頭暈後來發現是他自己把血壓藥加倍吃造成的。"},{"en":"Before you leave, ask: what's the most likely cause, what should bring me back, and should I stop taking anything?","cn":"離開前問三件事：最可能的原因是什麼、什麼狀況要回診、有沒有該停的藥？"}],
   paras:[
     {en:"The average consultation in a busy clinic lasts under six minutes. In that time a doctor must listen, examine, decide, and explain — which means the patient who describes symptoms clearly gets far better care than the patient who simply says \"I don't feel well.\"",
      cn:"在忙碌的診所裡，平均看診時間不到六分鐘。在這段時間內，醫生必須聆聽、檢查、判斷並解釋——這意味著能清楚描述症狀的病人，會得到比只說「我不舒服」的病人好得多的照顧。"},
@@ -569,6 +580,7 @@ window.READING = [
   titleCn:"兩種制度，兩間候診室",
   focus:"比較結構（twice as ... as / by contrast / whereas）",
   intro:"制度比較文。B2 寫作最常需要的就是「精準比較」：注意 twice as much as、far more likely to、by contrast、the former / the latter 這些工具。",
+  "spoken": [{"en":"Same illness, two cities: in Taipei you pay a small fixed fee; in Chicago the bill shows up three weeks later at twenty times the price.","cn":"同樣的病，兩個城市：在台北付少少的固定費用；在芝加哥帳單三週後才來，貴二十倍。"},{"en":"Taiwan's system covers basically everyone — visits are cheap and quick, so waiting rooms are packed but nobody skips the doctor over money.","cn":"台灣的制度幾乎涵蓋所有人——看病便宜又快，候診室雖擠，但沒人因為錢不敢看醫生。"},{"en":"In the States it runs on employer insurance — longer appointments, but switch jobs and you might lose your doctor, so people put off check-ups.","cn":"美國靠雇主保險運作——看診時間較長，但換工作可能連醫生都換掉，所以大家拖著不檢查。"},{"en":"Neither one wins. You're trading time and depth for access, or security for choice. The real price is never just the bill.","cn":"沒有哪邊完勝。你不是用時間深度換可近性，就是用保障換選擇。真正的代價從來不只是帳單。"}],
   paras:[
     {en:"A visit to a doctor in Taipei and a visit to a doctor in Chicago can produce almost the same medical advice and completely different pieces of paper. In the first case the patient usually pays a small fixed fee; in the second, the bill may arrive three weeks later and cost twenty times as much.",
      cn:"在台北看醫生和在芝加哥看醫生，可能得到幾乎相同的醫療建議，卻拿到完全不同的單據。前者病人通常付一筆小額固定費用；後者的帳單可能三週後才寄到，金額是前者的二十倍。"},
@@ -620,6 +632,7 @@ window.READING = [
   titleCn:"安靜的那種累",
   focus:"名詞化；情態動詞推測（may well / might have been）",
   intro:"心理健康主題。注意名詞化（exhaust → exhaustion, recover → recovery）如何讓句子更緊密，以及 may well、might have been 這類推測語氣。",
+  "spoken": [{"en":"There's regular tired, and then there's the kind sleep doesn't fix — everything works, nothing feels interesting.","cn":"有一種是普通的累，另一種是睡覺也治不好的累——身體還能動，但什麼都提不起勁。"},{"en":"That's burnout, and it sneaks up on you. By the time you notice, you've probably been running on empty for months.","cn":"那就是倦怠，而且它是悄悄逼近的。等你察覺，八成已經透支好幾個月了。"},{"en":"A vacation won't cut it either — you come back to the same workload and the whole thing starts over.","cn":"放假也沒用——你回到同樣的工作量，一切又重來一遍。"},{"en":"Start small: track which tasks drain you for two weeks. Usually it's not the amount of work — it's two or three specific things. Name them and you can finally talk about them.","cn":"從小處開始：花兩週記錄哪些工作最耗你。通常問題不在量，而在兩三個特定情境。把它們點名出來，才有辦法討論。"}],
   paras:[
     {en:"Everybody knows the tiredness that follows a long day. Fewer people recognise the other kind: the exhaustion that sleep does not fix, in which the body works but nothing feels interesting. It builds slowly, and by the time it is obvious, it may well have been developing for months.",
      cn:"每個人都熟悉忙了一整天之後的疲累。比較少人認得出另外一種：睡覺也解決不了的耗竭——身體還在運作，但什麼都提不起興趣。它慢慢累積，等到明顯的時候，可能已經發展了好幾個月。"},
@@ -676,6 +689,7 @@ window.READING = [
   titleCn:"當行程整個垮掉",
   focus:"混合條件句；should have + p.p. 的檢討語氣",
   intro:"旅遊危機處理。注意 should have done（早該做卻沒做）與混合條件句（過去的假設 → 現在的結果）的組合，這是 B2 敘事最有力的工具。",
+  "spoken": [{"en":"Our flight to Hanoi got scrapped forty minutes before boarding, and two hundred people jumped into the same line.","cn":"我們飛河內的班機登機前四十分鐘被取消，兩百個人瞬間排進同一條隊伍。"},{"en":"My colleague was smart — she skipped the line, called the airline's overseas number, and got rebooked in four minutes.","cn":"我同事很聰明——她不排隊，直接打航空公司的海外專線，四分鐘就改好票。"},{"en":"We should've saved digital copies of our bookings, and we didn't know they owed us meal vouchers after three hours — so we paid for dinner ourselves.","cn":"我們早該存好訂位資料的數位檔，也不知道延誤三小時他們就該給餐券——晚餐錢白花了。"},{"en":"Now before every flight I save the booking reference, both airline numbers, and a backup route offline. Learned that one the hard way.","cn":"現在每次飛行前我都會離線存好訂位編號、兩支航空公司電話和一條備案路線。這是吃過虧才學會的。"}],
   paras:[
     {en:"Our flight to Hanoi was cancelled forty minutes before boarding. The announcement gave no reason, and within a minute two hundred people were standing in the same queue. If we had joined that queue, we would still be waiting when the last hotel room in the area was taken.",
      cn:"我們飛河內的班機在登機前四十分鐘被取消。廣播沒有說原因，一分鐘內就有兩百人排在同一條隊伍裡。如果我們也去排那條隊，等到附近最後一間飯店房間被訂走時，我們還會站在那裡。"},
@@ -728,6 +742,7 @@ window.READING = [
   titleCn:"從不開口問的客人",
   focus:"分詞構句；關係子句壓縮資訊",
   intro:"跨文化溝通。注意 Not wanting to..., Having lived... 這類分詞開頭的句子，以及用關係子句把兩三個訊息塞進一句話。",
+  "spoken": [{"en":"This Japanese engineer at our Vietnam factory barely ate lunch for two weeks — turned out he couldn't eat chilli and never said a word.","cn":"我們越南廠的日本工程師兩週午餐幾乎沒吃——後來才知道他不能吃辣，卻一個字都沒提。"},{"en":"It wasn't shyness. Where he's from, a guest who states a preference makes work for the host — and that's worse than going hungry.","cn":"那不是害羞。在他的文化裡，客人提出偏好會給主人添麻煩——那比餓肚子還糟。"},{"en":"The fix cost nothing: we stopped asking 'Is everything OK?' and started asking 'Which of these three would you like?'","cn":"解法零成本：我們不再問「還好嗎？」，改問「這三個你想要哪個？」"},{"en":"Cross-cultural work isn't about memorizing customs — it's noticing which questions your habits make impossible to answer honestly.","cn":"跨文化工作不是背習俗清單——而是察覺你的習慣讓哪些問題根本無法誠實回答。"}],
   paras:[
     {en:"A Japanese engineer who had been sent to our Vietnam factory for three months spent his first two weeks eating almost nothing at lunch. Not wanting to seem difficult, he never mentioned that he could not eat chilli. We only discovered the problem when a colleague noticed how much food was left on his plate.",
      cn:"一位被派到我們越南廠三個月的日本工程師，前兩週午餐幾乎什麼都沒吃。因為不想顯得難相處，他從沒提過自己不能吃辣。我們是在一位同事注意到他盤子裡剩下多少食物後才發現問題。"},
@@ -779,6 +794,7 @@ window.READING = [
   titleCn:"風景的帳單誰來付？",
   focus:"被動語態的正式用法；讓步論述",
   intro:"議題型文章：過度旅遊。留意被動語態如何讓論述客觀（is blamed / has been priced out），以及 while / granted / that said 的讓步功能。",
+  "spoken": [{"en":"A village with four hundred visitors a day is a success story. The same village with four thousand? Whole different thing.","cn":"一天四百個遊客的村子是成功故事。同一個村子來四千個？完全是另一回事。"},{"en":"It's not really the tourists' fault — when a flat rents to visitors for triple what locals can pay, it stops being housing.","cn":"這其實不能怪遊客——當房子租給觀光客的價錢是在地人的三倍，它就不再是住房了。"},{"en":"Yeah, tourism pays for the ferries and festivals. The real question is who gets to decide how much a place can take.","cn":"對，觀光養活了渡輪和節慶。真正的問題是：誰有權決定一個地方能承載多少。"},{"en":"The places that got it right all did the same things: cap the short-term rentals, keep the visitor fees local, and ask the residents first.","cn":"處理得好的地方都做了同樣的事：限制短租、觀光費留在地方、先問過居民。"}],
   paras:[
     {en:"A fishing village that receives four hundred visitors a day is a success story. The same village receiving four thousand is something else. Across Asia and Europe, towns that were once promoted as hidden gems are now discussed in a different vocabulary: crowds, pressure, and residents who have been priced out of the streets they grew up on.",
      cn:"一個每天接待四百名遊客的漁村是成功故事。同一個漁村每天接待四千人，就是另一回事了。在亞洲與歐洲各地，曾被宣傳為「秘境」的小鎮，如今是用另一套詞彙被討論的：人潮、壓力，以及那些被高房價擠出自己成長街區的居民。"},
@@ -835,6 +851,7 @@ window.READING = [
   titleCn:"再也沒回來的押金",
   focus:"被動語態＋條件句；正式書面語氣",
   intro:"實用主題：租屋押金爭議。注意正式書信裡大量使用被動（was informed / has been deducted）與條件句（If the deposit is not returned...），語氣要堅定但不情緒化。",
+  "spoken": [{"en":"Yiting moved out, left the place spotless, photographed every room — and still got told they were keeping half her deposit for 'cleaning and wear.'","cn":"Yiting 搬走時房子乾乾淨淨，每個房間都拍了照——結果還是被告知要扣一半押金當「清潔與耗損」費。"},{"en":"But she had receipts: dated photos and the signed move-in inventory. Normal wear isn't damage — landlords just bet on you not knowing that.","cn":"但她有證據：有日期的照片和簽過的點交清單。正常耗損不是損壞——房東只是賭你不懂。"},{"en":"Her email was three calm sentences: here's the deduction, here's my evidence, send an itemized receipt or the money in fourteen days — or we go to mediation.","cn":"她的信就三句冷靜的話：扣了多少、我的證據在此、十四天內給明細或還錢——不然就調解見。"},{"en":"Full refund, nine days, no apology. Moral of the story: a deposit is protected by evidence, not fairness.","cn":"九天後全額退回，連個道歉都沒有。教訓是：押金靠的是證據，不是公道。"}],
   paras:[
     {en:"When Yiting moved out of her flat, the walls were clean, the floor was undamaged, and she had photographed every room. Six weeks later she was informed that half of her two-month deposit had been kept for \"general cleaning and wear\".",
      cn:"怡庭搬出公寓時，牆壁乾淨、地板沒有損壞，而且她把每個房間都拍了照。六週後她被告知，兩個月押金的一半已被扣下，理由是「一般清潔與損耗」。"},
@@ -887,6 +904,7 @@ window.READING = [
   titleCn:"為什麼存錢感覺不可能",
   focus:"數據描述與比較；名詞化",
   intro:"財經說明文。注意描述數字的語言（rise by / rise to、a fifth of、outpace）以及把動作變成名詞的寫法，這是讀懂財經文章的關鍵。",
+  "spoken": [{"en":"Ask anyone under forty why they can't save — it's not discipline. Rents shot up way faster than paychecks.","cn":"問任何四十歲以下的人為什麼存不了錢——不是不自律，是房租漲得遠比薪水快。"},{"en":"And inflation quietly makes it worse: money sitting in your account loses about a quarter of its value in ten years.","cn":"通膨還在偷偷加碼：錢放在帳戶裡不動，十年會蒸發大概四分之一的價值。"},{"en":"Skipping your daily coffee saves like two percent. Renegotiating rent or switching one insurance policy? Ten or fifteen.","cn":"戒掉每天那杯咖啡大概省 2%。重談房租或換一張保單？10% 到 15%。"},{"en":"The trick that actually works is boring: move a fixed amount out on payday, before you spend anything. Save first, spend what's left.","cn":"真正有效的方法很無聊：發薪日當天先轉走固定金額，再花剩下的。先存再花。"}],
   paras:[
     {en:"Ask anyone under forty why they cannot save, and the answer is rarely a lack of discipline. Between 2015 and 2025, average rents in most Asian cities rose considerably faster than average wages. When housing takes a third of your income instead of a fifth, the money that used to become savings simply disappears into somebody else's mortgage.",
      cn:"問任何四十歲以下的人為什麼存不了錢，答案很少是缺乏自制力。2015 到 2025 年間，多數亞洲城市的平均房租上漲速度遠快於平均薪資。當住房佔掉你收入的三分之一而不是五分之一時，原本會變成儲蓄的錢，就這樣消失進了別人的房貸裡。"},
@@ -939,6 +957,7 @@ window.READING = [
   titleCn:"店面樓上的空屋",
   focus:"倒裝與強調句（It is ... that / Nowhere is ... more visible）",
   intro:"都市議題。注意 It is X that ... 的分裂句（強調某個成分）與 Nowhere is / Rarely does 的倒裝，這兩種結構在社論裡出現頻率很高。",
+  "spoken": [{"en":"Walk down an old shopping street after nine and count the lit windows upstairs — in some districts it's less than half.","cn":"晚上九點後走過老商店街，數數樓上亮燈的窗戶——有些區連一半都不到。"},{"en":"Owners keep flats empty on purpose: a place sells for more without a tenant, and a bad tenancy can trap you for years.","cn":"屋主是故意空著的：沒有房客的房子賣相更好，碰上難搞的租約還可能被困好幾年。"},{"en":"But the shops downstairs pay the price — a street where nobody sleeps loses its bakeries, its clinics, its evening buses.","cn":"但代價由樓下的店面承擔——一條沒人過夜的街，會失去麵包店、診所和晚班公車。"},{"en":"Some cities tax empty homes now, and it's slowly working. A city isn't a pile of assets — it's a place people need to be able to sleep.","cn":"有些城市開始課空屋稅了，效果慢但真實。城市不是一堆資產——是人必須能睡覺的地方。"}],
   paras:[
     {en:"Walk down any older commercial street after nine in the evening and count the lit windows above the shops. In many districts fewer than half are lit. It is not a shortage of buildings that keeps rents high in these areas; it is the number of usable homes that are being held empty.",
      cn:"晚上九點過後走在任何一條較老的商業街上，數一數店面樓上亮著的窗戶。在許多區域，亮著的不到一半。讓這些地區房租居高不下的，不是建築物不夠，而是那些明明可以住、卻被空置的住宅數量。"},

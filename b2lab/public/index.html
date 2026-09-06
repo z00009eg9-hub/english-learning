@@ -676,9 +676,9 @@ body.cnall #v-real span.cnx{display:inline!important}
 .upg .u2{font-size:var(--font-body);font-weight:800;margin-top:8px;display:flex;gap:8px;align-items:flex-start;line-height:var(--lh-body);color:#2b2438}
 .upg .un{font-size:var(--font-body);color:#5b4a86;margin-top:9px;font-weight:600;line-height:var(--lh-body);background:var(--card);border-radius:9px;padding:9px 11px}
 .upg .usp{font-size:var(--font-body);font-weight:700;margin-top:8px;color:#1f6b57;line-height:var(--lh-body)}
-/* 句型升級三句的中譯：跟全站「中譯」開關（body.cnall）連動 */
-.upg .ucn{display:none;font-weight:400;color:var(--ink2);font-size:var(--font-secondary);margin-top:3px;line-height:var(--lh-body)}
-body.cnall .upg .ucn{display:block}
+/* 句型升級／口語重述的中譯：跟全站「中譯」開關（body.cnall）連動 */
+.ucn{display:none;font-weight:400;color:var(--ink2);font-size:var(--font-secondary);margin-top:3px;line-height:var(--lh-body)}
+body.cnall .ucn{display:block}
 /* 每組升級用不同顏色，方便一眼區分 */
 .upg.c0{background:#f4f0fb;border-color:#e0d6f5}         .upg.c0 .un{color:#5b4a86}
 .upg.c1{background:#e9f6f1;border-color:#cfe9df}         .upg.c1 .un{color:#1f6b57}
@@ -1405,7 +1405,7 @@ body.cnall #v-book span.cnx{display:inline!important}
 #v-real .magttl h2{padding-right:84px}
 @media(max-width:640px){ #v-book .magico,#v-real .magico{font-size:36px;right:12px;top:12px} #v-book .magico svg{width:56px;height:56px} #v-book .magttl h2,#v-real .magttl h2{padding-right:52px} }
 #v-book .sent{cursor:pointer;border-radius:4px;transition:background .15s}
-#v-book .sent.reading,#v-real .sent.reading{background:#fff2d9;box-shadow:0 0 0 2px #fff2d9}
+#v-book .sent.reading,#v-real .sent.reading,#v-read .sent.reading{background:#fff2d9;box-shadow:0 0 0 2px #fff2d9}
 /* 課本文章：標題加大 3pt；段落開頭不空格（與左邊界對齊） */
 #v-book .bkattl{font-size:var(--font-section-title);line-height:var(--lh-title);font-weight:var(--fw-title)}
 #v-book .para .en{text-indent:0}
@@ -2679,6 +2679,16 @@ function readerHTML(a){
        +(u.sp?'<div class="usp">🗣 口語：<span class="sent" data-t="'+esc(u.sp)+'" onclick="saySent(this)">'+esc(u.sp)+'</span> '+spk(u.sp)
          +(u.spCn?'<div class="cnx ucn">'+esc(u.spCn)+'</div>':'')+'</div>':'')
        +'<div class="un">💡 '+esc(u.note)+(u.spNote?'<br>🗣 '+esc(u.spNote):'')+'</div></div>').join('')
+     +'</div>';
+  }
+  /* 口語重述：讀完後用美國人聊天的方式把整篇講一遍（複述練習稿，銜接 Speak Up） */
+  if((a.spoken||[]).length){
+    h+='<div class="card"><h2 class="sec">🗣 這篇用說的</h2>'
+     +'<div class="muted" style="margin-bottom:8px">讀完後跟朋友聊起這件事，美國人會這樣講。先聽一遍，再自己開口說說看。</div>'
+     + a.spoken.map((l,i)=>'<div class="rwq'+(i<a.spoken.length-1?' rwq-div':'')+'">'
+        +'<span class="rwq-n">'+(i+1)+'.</span> '
+        +'<span class="sent" data-t="'+esc(l.en)+'" onclick="saySent(this)">'+esc(l.en)+'</span> '+spk(l.en)
+        +(l.cn?'<div class="ucn">'+esc(l.cn)+'</div>':'')+'</div>').join('')
      +'</div>';
   }
   if((a.questions||[]).length){

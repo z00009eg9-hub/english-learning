@@ -16,6 +16,7 @@ articles:[
   focus:"現在簡單式：第三人稱加 -s",
   upFrom:"A2", upTo:"B1",
   intro:"最基本的現在簡單式。注意主詞是 he / she / it 的時候，動詞要加 -s。",
+  "spoken": [{"en":"I'm up at six thirty — wash my face, get the coffee going.","cn":"我六點半起床——洗把臉，把咖啡煮上。"},{"en":"My husband skips breakfast at home and just grabs a sandwich near work.","cn":"我先生在家不吃早餐，都在公司附近隨手買個三明治。"},{"en":"I catch the bus at seven forty and read the whole ride.","cn":"我七點四十搭公車，一路都在看書。"},{"en":"Mornings are crazy, but honestly, I love them.","cn":"早晨忙翻了，但老實說，我很喜歡。"}],
   paras:[
     {en:"I get up at six thirty every morning. First I wash my face. Then I make coffee for me and my husband.",
      cn:"我每天早上六點半起床。我先洗臉，然後為我和我先生泡咖啡。"},
@@ -56,6 +57,7 @@ articles:[
   focus:"可數與不可數名詞；some / any",
   upFrom:"A2", upTo:"B1",
   intro:"注意哪些字可以加 s（bottles, eggs），哪些不行（milk, rice）。肯定句用 some，否定與疑問用 any。",
+  "spoken": [{"en":"There's a convenience store right next to my building — open twenty-four seven.","cn":"我家大樓旁邊就有間便利商店——二十四小時營業。"},{"en":"Last night I ran down for milk and water. Wanted rice too, but they were all out.","cn":"昨晚我下樓買牛奶和水。本來也想買飯，但賣完了。"},{"en":"I grab tea eggs there all the time — cheap and tasty.","cn":"我常在那買茶葉蛋——便宜又好吃。"},{"en":"The staff are super friendly. It's always 'Welcome!' the second you walk in.","cn":"店員超親切。你一進門就是一聲「歡迎光臨！」"}],
   paras:[
     {en:"There is a convenience store next to my building. It is open twenty-four hours a day.",
      cn:"我家大樓旁邊有一間便利商店。它一天二十四小時營業。"},
@@ -96,6 +98,7 @@ articles:[
   focus:"現在進行式 vs. 現在簡單式（A2 版）",
   upFrom:"A2", upTo:"B1",
   intro:"「現在正在下雨」用 is raining，「這裡常下雨」用 rains。看到 now、at the moment 就想到 -ing。",
+  "spoken": [{"en":"It's raining and I can't find my umbrella anywhere.","cn":"下雨了，我的傘怎麼找都找不到。"},{"en":"Taiwan summers are usually hot and sticky — T-shirt and shorts weather.","cn":"台灣的夏天通常又熱又黏——就是 T 恤短褲的天氣。"},{"en":"But today it's super windy and only twenty degrees out, so I've got a light jacket on.","cn":"但今天風超大、才二十度，所以我套了件薄外套。"},{"en":"My mom always says 'take a jacket with you' — well, today she's right.","cn":"我媽老是說「帶件外套」——嗯，今天被她說中了。"}],
   paras:[
     {en:"It is raining now, so I am looking for my umbrella. I cannot find it.",
      cn:"現在正在下雨，所以我在找我的雨傘。我找不到。"},
@@ -136,6 +139,7 @@ articles:[
   focus:"過去簡單式：was / were 與 -ed",
   upFrom:"A2", upTo:"B1",
   intro:"描述已經發生的事。be 動詞的過去式是 was / were，一般動詞多半加 -ed，但 have → had 是不規則的。",
+  "spoken": [{"en":"I felt awful yesterday — headache, sore throat, the whole deal.","cn":"我昨天超不舒服——頭痛、喉嚨痛，全套的。"},{"en":"I called in sick and my manager told me to go see a doctor.","cn":"我打電話請病假，主管叫我去看醫生。"},{"en":"Turns out I had a fever of 38. Got some medicine and slept all afternoon.","cn":"結果發燒到 38 度。拿了藥，睡了一整個下午。"},{"en":"Feeling way better today.","cn":"今天好多了。"}],
   paras:[
     {en:"Yesterday I was very tired. I had a headache and my throat hurt.",
      cn:"昨天我很累。我頭痛，喉嚨也很痛。"},
@@ -177,6 +181,7 @@ articles:[
   focus:"there is / there are；時間介系詞 at / in / on",
   upFrom:"A2", upTo:"B1",
   intro:"注意 there is（單數）和 there are（複數）的差別，以及時間怎麼配介系詞：at 7:15、in the morning、on Monday。",
+  "spoken": [{"en":"Monday I waited twenty minutes for the bus — everybody at the stop just staring at their phones.","cn":"週一我等了二十分鐘公車——站牌旁每個人都在滑手機。"},{"en":"It finally showed up at eight ten, jam-packed. I stood the whole way.","cn":"車八點十分才來，擠到爆。我一路站到公司。"},{"en":"Got in at eight forty — ten minutes late for my eight thirty meeting.","cn":"八點四十到——八點半的會遲到了十分鐘。"},{"en":"Next Monday I'm grabbing an earlier bus.","cn":"下週一我要改搭早一班的車。"}],
   paras:[
     {en:"There is a bus stop in front of my building. There are three buses to my office.",
      cn:"我家大樓前面有一個公車站。有三班公車可以到我的辦公室。"},
@@ -218,6 +223,7 @@ articles:[
   focus:"現在完成式入門：have / has + p.p.",
   upFrom:"A2", upTo:"B1",
   intro:"第一次接觸現在完成式。重點是「已經做完了」，常配 already 和 yet。",
+  "spoken": [{"en":"Saturday mornings are cleaning time at our place — nine till lunch.","cn":"週六早上是我們家的打掃時間——九點掃到中午。"},{"en":"I've done the floor and the bathroom, and my son took out the trash.","cn":"地板和浴室我弄好了，兒子把垃圾拿去倒了。"},{"en":"My husband still hasn't gotten around to the kitchen — there are dishes in the sink.","cn":"我先生還沒空弄廚房——水槽裡還有碗盤。"},{"en":"When we're done, we always sit down for tea. A clean home just feels calm.","cn":"掃完我們都會坐下來喝茶。乾淨的家就是讓人安心。"}],
   paras:[
     {en:"Every Saturday morning my family cleans the flat. We start at nine and finish before lunch.",
      cn:"每個星期六早上我家會打掃公寓。我們九點開始，午餐前結束。"},
@@ -259,6 +265,7 @@ articles:[
   focus:"would like 與 can 的禮貌用法",
   upFrom:"A2", upTo:"B1",
   intro:"點餐、請求時最實用的兩個句型：I would like... 和 Can I...? 比 I want 客氣很多。",
+  "spoken": [{"en":"There's a little noodle shop near my office — I'm there two or three times a week.","cn":"公司附近有間小麵店——我一週去個兩三次。"},{"en":"Yesterday I did the beef noodles and asked them to go easy on the spice. No problem at all.","cn":"昨天我點了牛肉麵，請他們辣放少一點。完全沒問題。"},{"en":"Hot soup, tender beef, 130 bucks — can't beat that for lunch.","cn":"熱湯、軟嫩的牛肉、130 元——午餐這樣無可挑剔。"},{"en":"Couldn't finish, so I got a to-go box and had the rest for dinner.","cn":"吃不完，我就要了打包盒，剩下的當晚餐。"}],
   paras:[
     {en:"There is a small noodle shop near my office. I go there two or three times a week.",
      cn:"我辦公室附近有一間小麵店。我一週去兩三次。"},
@@ -300,6 +307,7 @@ articles:[
   focus:"can / cannot 與簡單的未來式 will",
   upFrom:"A2", upTo:"B1",
   intro:"請假、約時間最常用的兩個助動詞。can 表能力或可能，will 表決定或承諾。",
+  "spoken": [{"en":"My daughter woke up with a fever, so I couldn't make it in today.","cn":"我女兒早上發燒，所以我今天進不了公司。"},{"en":"I called my manager at eight — he was really nice about it and asked if I could work from home this afternoon.","cn":"我八點打給主管——他人很好，問我下午能不能在家工作。"},{"en":"Totally doable. I'll wrap up the report tonight and get it to him by nine tomorrow.","cn":"完全沒問題。我今晚把報告收尾，明天九點前給他。"},{"en":"She's staying home one more day, just to be safe.","cn":"保險起見，女兒會再在家待一天。"}],
   paras:[
     {en:"This morning my daughter had a fever, so I could not go to work.",
      cn:"今天早上我女兒發燒，所以我不能去上班。"},

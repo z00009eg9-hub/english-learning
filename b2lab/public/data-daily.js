@@ -20,6 +20,7 @@ articles:[
   "upFrom": "A2",
   "upTo": "B1",
   "intro": "Tom聽說週末有颱風要來，開始準備雨具並待在家裡。全文只用現在簡單式、現在進行式、can/will和there is/are，讀的時候留意will怎麼講「等一下、之後」的打算。",
+  "spoken": [{"en":"So there's a big typhoon coming this weekend, and Tom's been glued to the weather app.","cn":"這週末有個大颱風要來，Tom 一直黏在天氣 App 上。"},{"en":"He dug out his raincoat, rain boots, and an umbrella — he's all set.","cn":"他把雨衣、雨鞋和傘都翻出來了——全都準備好了。"},{"en":"It's already dark and windy out, so he's closing up the windows while his mom fills up water bottles.","cn":"外面已經又暗風又大，他在關窗戶，媽媽在裝水。"},{"en":"No school tomorrow — he's just gonna kick back with movies and comics till the rain lets up.","cn":"明天不用上學——他就打算耍廢看電影看漫畫，等雨停。"}],
   "paras": [
     {
       "en": "A big typhoon is coming to Taiwan this weekend. Tom checks the weather app every morning. There is heavy rain in the forecast.",
@@ -90,6 +91,7 @@ articles:[
   "upFrom": "B1",
   "upTo": "B1+",
   "intro": "Amy的公司因為颱風宣布放假，她也開始準備應對這場暴風。文章用現在完成式的基礎用法（has already prepared, has never experienced）講「到目前為止」的準備，也留意because/so怎麼連接原因和結果。",
+  "spoken": [{"en":"Amy's company called a typhoon day off 'cause a big storm was rolling in.","cn":"因為大風暴要來，Amy 的公司宣布放颱風假。"},{"en":"She stocked up on candles, water, and snacks, and her neighbor came over to help tape up the windows.","cn":"她囤了蠟燭、水和零食，鄰居還過來幫忙把窗戶貼上膠帶。"},{"en":"By noon the wind got way louder than she expected, so she texted her folks a couple times to make sure they were okay.","cn":"到中午風聲比她預期的大得多，她傳了幾次訊息給爸媽確認他們平安。"},{"en":"Once things calmed down she could finally relax — turns out prepping early really does make a storm easier to deal with.","cn":"等風雨緩和她才終於放鬆——事實證明提早準備真的讓颱風好應付得多。"}],
   "paras": [
     {
       "en": "Yesterday evening, Amy's company announced a typhoon day off, because a strong storm approached the city. Amy has never experienced such a strong typhoon before, so she felt a little nervous.",
@@ -160,6 +162,7 @@ articles:[
   "upFrom": "B1+",
   "upTo": "B2",
   "intro": "Anita在越南的工廠因為一場突然轉向的熱帶風暴，出貨時程被打亂。文章大量使用「現在完成式＋被動語態」（has been delayed, has been suggested, has been added）描述「到目前為止發生的事」，也留意which/who帶出的關係子句怎麼補充額外資訊。",
+  "spoken": [{"en":"Anita's factory had a big shipment ready to go, and then this storm came out of nowhere and turned toward the coast.","cn":"Anita 的工廠有一大批貨準備出，結果風暴毫無預警地轉向海岸。"},{"en":"The road got flooded, trucks got stuck outside the gate, and now the whole thing's pushed back at least two days.","cn":"道路淹水、卡車被困在大門外，現在整批貨至少要延兩天。"},{"en":"She already gave the customer a heads-up, and the transport company found a workaround through a nearby town.","cn":"她已經先知會客戶，運輸公司也找了條繞經附近城鎮的替代路線。"},{"en":"This isn't their first weather mess this year — that new backup checklist has already saved them twice this month.","cn":"這不是他們今年第一次被天氣搞——新的備援清單這個月已經救了他們兩次。"}],
   "paras": [
     {
       "en": "Anita's factory near Ho Chi Minh City has been preparing a large shipment that is due to leave for the port on Friday. Yesterday, a tropical storm, which had formed over the South China Sea days earlier, suddenly turned toward the coast. The delivery schedule, which had looked secure on Monday, was thrown into doubt within hours.",
@@ -240,6 +243,7 @@ articles:[
   "sourceUrl": "https://www.taipeitimes.com/News/taiwan/archives/2026/09/02/2003863565",
   "focus": "現在完成式表達「累積至今」的統計結果；被動語態與比較級用於氣象數據報導",
   "intro": "這篇改寫自台灣中央氣象署公布的統計新聞，講今年七、八月破紀錄的颱風數量和雨量。留意文章怎麼用現在完成式（has confirmed, has recorded, have cautioned）表達「到目前為止累積的統計結果」，這是新聞報導常見的語域選擇。",
+  "spoken": [{"en":"So it's official — this summer was crazy wet. Fourteen tropical storms in just July and August, which ties the record.","cn":"官方證實了——今年夏天雨多到誇張。光七、八月就有十四個熱帶風暴，追平紀錄。"},{"en":"Tainan broke its all-time July-August rainfall record, and Kaohsiung had its wettest stretch in years.","cn":"台南打破七、八月歷來降雨紀錄，高雄也創下多年來最濕的一段。"},{"en":"Four typhoons were big enough for actual warnings — Bavi dumped a ton of rain on the north.","cn":"有四個颱風大到要發警報——Bavi 在北部倒了超多雨。"},{"en":"And heads up: typhoon season's not over yet, so this could keep going into September.","cn":"而且注意：颱風季還沒完，這種天氣可能會一路持續到九月。"}],
   "paras": [
     {
       "en": "Taiwan's Central Weather Administration (CWA) has confirmed what many residents already suspected: this summer has been unusually wet. Fourteen tropical storms formed in July and August alone, matching the record for that two-month period, and the rainfall these storms brought was roughly one-fifth higher than the long-term average. For many people in the south, one storm seemed to follow another almost without a break.",
@@ -319,6 +323,7 @@ articles:[
   "upFrom": "A2",
   "upTo": "B1",
   "intro": "Tom上週六去游泳池上了第一堂游泳課，一開始很緊張。文章全部用過去簡單式（went, felt, could, was）講「已經發生」的事，讀的時候留意這些動詞的過去式長什麼樣。",
+  "spoken": [{"en":"Tom had his first swim lesson on Saturday, and he was super nervous going in.","cn":"Tom 週六上了第一堂游泳課，一開始超緊張。"},{"en":"The teacher was really nice, but he still gulped down water a couple of times.","cn":"老師人很好，但他還是嗆了幾次水。"},{"en":"Half an hour in, he could float on his back — the whole class clapped for him.","cn":"三十分鐘後他就能仰漂了——全班都為他鼓掌。"},{"en":"Now he practices every weekend and can already do about ten meters without stopping.","cn":"現在他每週末都練，已經能不停地游十公尺左右了。"}],
   "paras": [
     {
       "en": "Last Saturday, Tom went to the pool for his first swimming lesson. He felt very nervous before the class began.",
@@ -470,6 +475,7 @@ articles:[
   "upFrom": "B1",
   "upTo": "B1+",
   "intro": "Amy第一次嘗試自己烤麵包，過程有點手忙腳亂但很有成就感。文章用現在完成式的基礎用法（has baked, has never tried）講「到目前為止」的經驗，也可以留意because/so怎麼連接原因和結果。",
+  "spoken": [{"en":"Amy finally tried baking her own bread — she found an easy recipe online and just went for it.","cn":"Amy 終於嘗試自己烤麵包——她在網路上找到簡單食譜就直接開工了。"},{"en":"The dough got all sticky and messy, and she almost threw in the towel twice.","cn":"麵團黏得一團糟，她差點放棄兩次。"},{"en":"The loaf came out smaller than the picture, but it smelled amazing and she was so proud of it.","cn":"成品比圖片小，但香得不得了，她超有成就感。"},{"en":"She's baked three times this month now, and her friends are already begging her to bake for their next party.","cn":"她這個月已經烤三次了，朋友已經在拜託她下次派對烤麵包來。"}],
   "paras": [
     {
       "en": "Amy has always wanted to bake her own bread, but she has never tried it before. Last Sunday, she finally decided to start, because she found a simple recipe online.",
@@ -621,6 +627,7 @@ articles:[
   "upFrom": "B1+",
   "upTo": "B2",
   "intro": "Anita被公司安排去上一門統計課程，一開始很挫折，後來靠著真實的職場專題慢慢建立信心。文章大量使用「現在完成式＋被動語態」（has been enrolled, has been given feedback, has been shared）描述「到目前為止發生的事」，也留意which/who帶出的關係子句怎麼補充額外資訊。",
+  "spoken": [{"en":"Anita signed up for this stats course mostly to push herself — math always freaked her out.","cn":"Anita 報名統計課主要是想挑戰自己——數學一直讓她發怵。"},{"en":"The first couple weeks were rough, but the instructor's feedback after every quiz slowly built her confidence up.","cn":"頭幾週很辛苦，但每次小考後講師的回饋慢慢幫她建立了信心。"},{"en":"Then she actually used one of the methods on a real problem at work — her manager was blown away and shared it with the whole department.","cn":"後來她真的用課堂方法解了工作上的問題——主管驚豔到分享給整個部門。"},{"en":"Five modules down, three to go. Her take: learning hard stuff feels awful right up until it pays off.","cn":"八個單元完成五個了。她的心得：學困難的東西在開花結果前都很難受。"}],
   "paras": [
     {
       "en": "Anita has recently been enrolled in an online course that teaches statistical methods for quality engineers. She has always felt nervous about math, so she signed up mostly to challenge herself. The course, which runs for eight weeks, has already covered three difficult modules.",
@@ -806,6 +813,7 @@ articles:[
   "titleCn": "苦讀統計八週教會我的事",
   "focus": "被動語態、分詞構句（Being forced to...）與正式語域：以第一人稱反思寫作呈現學習心理",
   "intro": "這篇是Anita以第一人稱寫的反思文章，回顧自己苦讀統計認證八週的心路歷程。留意文章怎麼用被動語態、分詞構句（Being forced to apply...）和正式的詞彙，呈現「學習的不舒服其實是進步的訊號」這個心理學角度的觀察。",
+  "spoken": [{"en":"I always said I wasn't a numbers person — I'd been dodging statistics since college.","cn":"我一直說自己不是數字型的人——從大學就開始躲統計。"},{"en":"The first few weeks were humbling. What wore me out wasn't the material, it was managing my own frustration.","cn":"頭幾週很受挫。累的不是教材本身，而是安撫自己的挫折感。"},{"en":"Everything clicked around week five when we got a real work problem — suddenly the formulas actually explained something.","cn":"第五週拿到真實工作問題時一切都通了——公式突然真的能解釋現象了。"},{"en":"I finished the course. Still not a 'numbers person' — but now I know the discomfort passes and the skill sticks.","cn":"課修完了。我還是不算數字型的人——但現在我知道，不適感會過去，技能會留下。"}],
   "paras": [
     {
       "en": "Six months ago, I would have said that I was not a 'numbers person.' I had avoided statistics since university, convinced my brain was simply not built for formulas. Then my manager suggested that everyone on the quality team complete a short certification in statistical process control. I signed up reluctantly, expecting to fail.",
@@ -998,6 +1006,7 @@ articles:[
   "upFrom": "A2",
   "upTo": "B1",
   "intro": "Tom昨晚在廚房煮麵，結果講電話忘記顧爐火。文章全部用過去簡單式（cooked, rang, forgot, tasted）講「已經做完」的事，讀的時候留意這些動詞的過去式長什麼樣。",
+  "spoken": [{"en":"Tom was making noodle soup last night when his mom called.","cn":"Tom 昨晚在煮麵，結果他媽打電話來。"},{"en":"They talked for ten minutes and he totally forgot about the stove.","cn":"他們聊了十分鐘，他把爐子的事忘得一乾二淨。"},{"en":"The soup got super thick and some noodles stuck to the pot, but he ate it anyway — it was fine.","cn":"湯變得超濃稠，有些麵還黏鍋了，但他照吃——味道還行。"},{"en":"Next time, stove off first, then pick up the phone.","cn":"下次記得：先關火，再接電話。"}],
   "paras": [
     {
       "en": "Tom cooked dinner in his small kitchen last night. He made a big bowl of hot noodle soup.",
@@ -1149,6 +1158,7 @@ articles:[
   "upFrom": "B1",
   "upTo": "B1+",
   "intro": "Amy在準備晚餐派對時，朋友Lily提早到訪，接著又發生了一場小意外。文章用while/when連接過去進行式（正在做的背景動作）和過去簡單式（突然發生的短動作），也可以留意because/so怎麼串起前後因果。",
+  "spoken": [{"en":"Amy was throwing a dinner party, and her friend Lily showed up half an hour early 'cause she got the time wrong.","cn":"Amy 辦晚餐聚會，朋友 Lily 記錯時間提早半小時就到了。"},{"en":"Lily pitched in, and while Amy was frying chicken the smoke alarm went off — they both cracked up.","cn":"Lily 跳下來幫忙，Amy 炸雞時煙霧警報器響了——兩人笑翻。"},{"en":"The chicken got a little burnt, but honestly, nobody cared.","cn":"雞肉有點焦，但說真的，沒人在意。"},{"en":"Amy's takeaway: a little chaos actually makes a party better.","cn":"Amy 的心得：一點小混亂反而讓派對更好玩。"}],
   "paras": [
     {
       "en": "Amy was planning a dinner party for six friends on Saturday evening. She wanted everything to be ready before seven o'clock, so she started cooking early in the afternoon.",
@@ -1300,6 +1310,7 @@ articles:[
   "upFrom": "B1+",
   "upTo": "B2",
   "intro": "Anita在胡志明市租的套房裡煮晚餐時遇上停電。注意文章用一連串被動語態描述停電的處境——had been cut、was sent、were being carried out——重點不是「誰做的」，而是「事情發生在她身上」。也留意 that 和 which 帶出的關係子句怎麼補充額外的資訊。",
+  "spoken": [{"en":"Anita was cooking dinner when the power went out in her whole building — turned out they were doing emergency repairs.","cn":"Anita 煮晚餐煮到一半整棟樓停電——原來是外面在做緊急維修。"},{"en":"She sat in the dark for almost two hours with half-cooked rice and veggies she couldn't finish.","cn":"她在黑暗中坐了快兩小時，守著半熟的飯和切好卻沒法煮的菜。"},{"en":"By the time the lights came back, the food was a lost cause, so she just ordered noodles.","cn":"等電來的時候食物已經救不回來了，她乾脆叫了麵。"},{"en":"Lesson learned — now she keeps a little gas stove in the cupboard and instant meals in the fridge, just in case.","cn":"學到了——現在她櫃子裡放著小瓦斯爐、冰箱裡備著即食餐，以防萬一。"}],
   "paras": [
     {
       "en": "Anita was cooking dinner in her rented studio in Ho Chi Minh City last Tuesday evening. She had just switched on the rice cooker and was chopping vegetables for a stir-fry that she planned to eat before an online meeting at seven.",
@@ -1487,6 +1498,7 @@ articles:[
   "titleCn": "芝麻油回收案，加入台灣持續擴大的食用油風暴",
   "focus": "被動語態陳述新聞事實（was found, was ordered, will be pulled）",
   "intro": "這篇報導改寫自嘉義芝麻油廠商自報檢驗未過關、遭勒令停產的新聞。文章大量使用被動語態（was found, was ordered, were being tested）陳述已確認的事實，也點出這起事件跟七月黃豆油風暴的關聯。",
+  "spoken": [{"en":"The cooking-oil scandal just got bigger — now a seventy-year-old sesame oil brand flagged its own product for a carcinogen.","cn":"食用油風暴又擴大了——一家七十年老牌的麻油廠自己驗出致癌物。"},{"en":"The black sesame oil tested way over the legal limit, so inspectors shut down production right away.","cn":"那款黑麻油檢驗值遠超法定上限，稽查員立刻勒令停產。"},{"en":"This all started in July with the soybean oil case — that recall hit over 400 products and ended in a record fine.","cn":"這一切從七月的大豆油案開始——那次回收波及超過四百項產品，罰款也創了紀錄。"},{"en":"Investigators say it's the same story every time: weak checks, poor oversight. Now they want every batch tested.","cn":"調查人員說每次都是同一套劇本：檢驗鬆散、監管不力。現在他們要求每批都要驗。"}],
   "paras": [
     {
       "en": "Taiwan's food safety authorities widened an ongoing cooking-oil investigation this week after Uni-Procurement Corp, a Chiayi-based brand with more than seventy years in business, reported that one of its own products had failed an internal carcinogen test. City health inspectors visited the factory on Monday, confirmed the result, and ordered the company to halt sesame oil production immediately.",
@@ -1680,6 +1692,7 @@ articles:[
   "upFrom": "A2",
   "upTo": "B1",
   "intro": "Tom搬進新公寓，文章用了很多過去簡單式（moved, cleaned, bought, came, made）告訴你「已經做完」的事。讀的時候注意這些動詞的過去式長什麼樣——有的加 -ed，有的整個字都變了。",
+  "spoken": [{"en":"Tom moved into a new place last weekend — way bigger than the old one.","cn":"Tom 上週末搬進新家——比舊的大多了。"},{"en":"He spent Saturday morning cleaning, and Amy came by to help with the heavy boxes.","cn":"他週六早上都在打掃，Amy 也過來幫忙搬重箱子。"},{"en":"That night he cooked in his new kitchen and just sat by the window looking at the city lights.","cn":"那天晚上他在新廚房煮了晚餐，坐在窗邊看城市的燈光。"},{"en":"He's really happy with the new place.","cn":"他對新家滿意得不得了。"}],
   "paras": [
     {
       "en": "Tom moved to a new apartment last weekend. The old place was very small and dark. The new one has two rooms and a small kitchen.",
@@ -1822,6 +1835,7 @@ articles:[
   "upFrom": "B1",
   "upTo": "B1+",
   "intro": "Amy住在太小的套房裡，花了六個月存錢，終於存夠了押金。注意文章用現在完成式（has saved、has wanted、has never had）講「到目前為止」的結果，跟過去簡單式（decided、stopped、started）講的「六個月前做的事」形成對比。",
+  "spoken": [{"en":"Amy's been stuck in a tiny studio for three years, so she started saving up for a bigger place.","cn":"Amy 在小套房窩了三年，所以開始存錢換大一點的房子。"},{"en":"She cut back on eating out and started bringing lunch to work — rough at first, but she got used to it.","cn":"她砍掉外食、開始帶便當上班——一開始很難熬，但後來就習慣了。"},{"en":"Now she's got enough for the deposit on a place near a park.","cn":"現在她存夠了公園附近那間的押金。"},{"en":"She's super excited — she's never had her own balcony before.","cn":"她超興奮——她從來沒有過自己的陽台。"}],
   "paras": [
     {
       "en": "Amy has lived in a small studio apartment for three years. The rent is cheap, but the room is so small that she cannot invite friends over. She has wanted a bigger place for a long time.",
@@ -1973,6 +1987,7 @@ articles:[
   "upFrom": "B1+",
   "upTo": "B2",
   "intro": "Anita在胡志明市租屋，房東突然調漲房租百分之二十。注意文章用一連串被動語態描述她的處境——was told、would be raised、is spent、are priced——在這些句子裡，重點不是「誰做的」，而是「事情發生在她身上」。也留意 that 和 which 帶出的關係子句怎麼補充額外的資訊。",
+  "spoken": [{"en":"Anita's landlord hit her with a twenty percent rent hike — said the building upgrades had to be paid for somehow.","cn":"Anita 的房東突然漲租兩成——說整修的錢總得有人出。"},{"en":"She ran the numbers: rent and bills already eat up almost half her paycheck.","cn":"她算了算：房租加帳單已經吃掉她快一半的薪水。"},{"en":"She called around, but everything else nearby costs even more.","cn":"她打了一圈電話，附近其他房子反而更貴。"},{"en":"So she's staying put and cooking at home more — saves her a couple hundred a month. Housing costs, you gotta plan for them.","cn":"所以她決定不搬，改多在家煮飯——每月省下兩百左右。住房開銷這種事，一定要提前規劃。"}],
   "paras": [
     {
       "en": "When Anita arrived in Ho Chi Minh City two years ago, she rented a small room near her factory. The monthly rent was reasonable, and the room came with basic furniture that she needed. She thought she had found a good deal.",
@@ -2149,6 +2164,7 @@ articles:[
   "titleCn": "城市生活的真正代價",
   "focus": "過去簡單式在論說文中的功能——用 rose / climbed / doubled 陳述已完成的事實，為論點鋪底",
   "intro": "這篇文章用一連串過去簡單式（rose、climbed、doubled、found、spent）陳述已經發生的事實——租金漲了多少、薪水差了多少、研究發現了什麼。注意論說文裡的過去簡單式功能不是「講故事」，而是用客觀完成的數據為接下來的觀點鋪底。",
+  "spoken": [{"en":"Rent in Taipei's gotten nuts — a studio that used to run twelve grand is now eighteen or twenty.","cn":"台北的房租誇張了——以前一萬二的套房現在要一萬八到兩萬。"},{"en":"And it's everywhere: rents in some Asian cities doubled while paychecks barely moved.","cn":"而且到處都一樣：亞洲有些城市房租翻倍，薪水卻幾乎沒動。"},{"en":"Here's the kicker — moving to the suburbs doesn't always save you money once you add up commuting, daycare, and all that time in traffic.","cn":"重點來了——搬去郊區不一定省錢，把通勤、托育和塞車時間加起來就知道。"},{"en":"Bottom line: the real cost of a place is never just the rent on the contract.","cn":"結論：一個家的真實成本，從來不只是合約上那個數字。"}],
   "paras": [
     {
       "en": "A decade ago a young engineer in Taipei could rent a decent studio near an MRT station for about twelve thousand dollars a month. That figure has since climbed to eighteen or even twenty thousand. The jump may not sound dramatic on paper, but for someone who earns a starting salary of thirty-five thousand, it means the share of income devoted to housing has risen from roughly a third to well over half.",
@@ -2345,6 +2361,7 @@ articles:[
   "upFrom": "A2",
   "upTo": "B1",
   "intro": "這篇文章裡有兩種動詞：like、want、know 講的是「感覺和想法」，永遠用原形；is making、is reading 講的是「現在正在做的動作」。讀的時候注意這兩種動詞長得不一樣。",
+  "spoken": [{"en":"Tom's up at six thirty every Monday — coffee with milk, that's his thing.","cn":"Tom 每週一六點半起床——咖啡加牛奶是他的固定習慣。"},{"en":"Today he's making eggs too, 'cause there's a long meeting and he wants a big breakfast.","cn":"今天他還煎了蛋，因為有個很長的會，他想吃頓豐盛的早餐。"},{"en":"He knows the boss is gonna grill him, so he's going over his notes at the table.","cn":"他知道老闆會連環拷問，所以在餐桌上先過一遍筆記。"},{"en":"Clear sky, cool air — Monday's not so bad after all.","cn":"天空晴朗、空氣涼爽——週一好像也沒那麼糟。"}],
   "paras": [
     {
       "en": "Tom gets up at six thirty every Monday. He washes his face and makes coffee. He likes coffee with milk.",
@@ -2496,6 +2513,7 @@ articles:[
   "upFrom": "B1",
   "upTo": "B1+",
   "intro": "Amy搬家之後改變了整套晨間作息。注意文章怎麼用現在完成式 has changed、has finished 講「已經改變、而且到現在都是這樣」，再用 because 和 so 把原因和結果串起來。",
+  "spoken": [{"en":"Amy's new place is thirty minutes from work, so she flipped her whole morning routine around.","cn":"Amy 的新家離公司三十分鐘，所以她把整個晨間作息都改了。"},{"en":"She's up at six now and gets everything ready the night before.","cn":"她現在六點起床，東西前一晚就先準備好。"},{"en":"The first two weeks were brutal — she was dragging all afternoon and living on coffee.","cn":"頭兩週很痛苦——她整個下午都很累，靠咖啡續命。"},{"en":"But now? She loves it. The office is dead quiet when she gets in, and she knocks out her hardest work before nine.","cn":"但現在呢？她愛死了。她進公司時辦公室超安靜，九點前就把最難的工作搞定了。"}],
   "paras": [
     {
       "en": "Amy moved to a new apartment last month. Her old place was near the office, but the new one is thirty minutes away. Now her mornings are busier than before.",
@@ -2647,6 +2665,7 @@ articles:[
   "upFrom": "B1+",
   "upTo": "B2",
   "intro": "敘述者第一次當面試官，用一連串被動語態介紹公司的徵才流程——注意「流程」當主角時，動作的執行者常常不重要，這正是被動語態最自然的使用場景。也留意 that / which 帶出的關係子句。",
+  "spoken": [{"en":"I got asked to help with interviews at the factory last week — first time on the other side of the table.","cn":"上週我被找去幫忙工廠面試——第一次坐到桌子的另一邊。"},{"en":"The process is totally different now: two people review every application, and the school names are hidden.","cn":"現在流程完全不同：每份申請兩個人審，學校名稱還被遮起來。"},{"en":"Candidates talk through a real problem they solved, knock out a thirty-minute task, then meet the team.","cn":"應徵者要講一個自己解過的真實問題、做完三十分鐘的實作，再跟團隊見面。"},{"en":"And get this — a quiet guy who almost got rejected last year is now one of our best inspectors.","cn":"你聽聽——去年差點被刷掉的一個安靜傢伙，現在是我們最強的檢驗員之一。"}],
   "paras": [
     {
       "en": "Last week I was invited to help with interviews at our factory. Two engineers will be hired for the quality team, and my manager wanted a second opinion. It was the first time I sat on the other side of the table.",
@@ -2834,6 +2853,7 @@ articles:[
   "source": "改寫自 Taipei Times 社論（2026/08/21）— 事實取自原文，英文由本站重寫",
   "sourceUrl": "https://www.taipeitimes.com/News/editorials/archives/2026/08/21/2003862851",
   "intro": "美國航管局把「打電動」當成正式的錄取條件之一，台灣的社論作者認為這正是徵才方式該有的轉變。讀的時候注意論說文裡的狀態動詞——demands、means、sounds、cares——全部用現在簡單式，因為它們講的是不隨時間改變的道理，不是正在發生的動作。",
+  "spoken": [{"en":"Would you put video games on your resume? The FAA just hired over two thousand gamers to train as air traffic controllers.","cn":"你敢把電玩寫進履歷嗎？美國聯邦航空總署剛招了兩千多名玩家去受訓當飛航管制員。"},{"en":"Makes sense when you think about it — fast calls, steady focus, staying cool under pressure. That's literally what gamers train for.","cn":"想想其實很合理——快速決斷、穩定專注、壓力下保持冷靜，這正是玩家練了幾千小時的東西。"},{"en":"There's a push for Taiwan to do the same: care less about diplomas, more about what people can actually build and solve.","cn":"也有聲音呼籲台灣跟進：少看文憑，多看一個人實際做得出、解得了什麼。"},{"en":"So your next interview might not care where you studied — just what you can show.","cn":"所以你的下一場面試可能不在乎你唸哪裡——只在乎你能端出什麼。"}],
   "paras": [
     {
       "en": "Would you put video games on your resume? In the United States, that idea has stopped sounding strange. The Federal Aviation Administration launched a recruitment program in April, and within months it had hired more than two thousand people who play video games to train as air traffic controllers. According to the Secretary of Transportation, the program has already reached more than ninety percent of its annual recruitment target.",
@@ -3025,6 +3045,7 @@ articles:[
   focus:"現在簡單式描述固定習慣，現在進行式描述現在正在發生的事",
   upFrom:"A2", upTo:"B1",
   intro:"這篇文章前半段用現在簡單式講Tom平常搭公車的習慣，後半段換成現在進行式講「現在正在發生」的事——公車遲到了。讀的時候注意兩種時態怎麼切換。",
+  "spoken": [{"en":"Tom's bus usually shows up at eight, but today — nothing.","cn":"Tom 的公車通常八點來，但今天——影子都沒有。"},{"en":"A lady at the stop said there's some problem on the road.","cn":"站牌旁一位女士說路上出了狀況。"},{"en":"Tom got antsy 'cause he had a nine o'clock meeting.","cn":"Tom 開始坐立不安，因為他九點有會。"},{"en":"The bus finally rolled in at eight fifteen — he made it on time after all.","cn":"公車終於在八點十五分晃進站——他最後還是準時趕上了。"}],
   paras:[
     {en:"Tom takes the bus to work every morning. The bus usually comes at eight o'clock. He waits at the bus stop near his apartment.",
      cn:"Tom每天早上都搭公車去上班。公車通常八點會來。他在自己公寓附近的公車站等車。"},
@@ -3065,6 +3086,7 @@ articles:[
   focus:"現在簡單式（習慣）vs 比較級；現在完成式（基礎，for + 一段時間）",
   upFrom:"B1", upTo:"B1+",
   intro:"這篇換成Mia的角度，她平常搭捷運上班，但今天遇到號誌問題。留意現在完成式 has taken / has never seen 怎麼講「到目前為止的經驗」，還有 more crowded than usual 這種比較級的用法。",
+  "spoken": [{"en":"Mia got to the station and boom — signal problem on the line, platform packed.","cn":"Mia 一到車站就碰上——路線號誌故障，月台擠滿人。"},{"en":"She waited like fifteen minutes for a train that crawled the whole way.","cn":"她等了大概十五分鐘，來的車還一路龜速。"},{"en":"She shot her manager a quick text — no big deal, two coworkers were late too.","cn":"她趕緊傳訊息給主管——還好沒事，另外兩個同事也遲到了。"},{"en":"Three years on this line and she's never seen it that crowded.","cn":"這條線她搭了三年，從沒看過月台擠成那樣。"}],
   paras:[
     {en:"Mia takes the MRT to work every day. The ride usually takes twenty-five minutes, and the platform is not too crowded in the morning. She likes reading on the train because it helps her relax before work.",
      cn:"Mia每天都搭捷運去上班。車程通常要二十五分鐘，早上月台也不會太擁擠。她喜歡在車上看書，因為這能幫助她在上班前放鬆。"},
@@ -3110,6 +3132,7 @@ articles:[
   focus:"被動語態、現在完成式＋被動、關係子句（who／that／which）",
   upFrom:"B1+", upTo:"B2",
   intro:"從Mia一個人的故事拉遠到整個捷運系統的號誌問題。注意被動語態（are slowed down、were held、have been asked）怎麼把焦點放在「發生了什麼事」而不是「誰做的」，還有 who／that／which 引導的關係子句怎麼補充資訊。",
+  "spoken": [{"en":"One little signal fault Monday morning and the whole Red Line was backed up for almost two hours.","cn":"週一早上一個小小的號誌故障，整條紅線大塞了快兩小時。"},{"en":"Trains got held at stations while engineers checked things out, and everyone running late just got madder.","cn":"列車被扣在站內等工程師檢查，趕時間的人越等越火。"},{"en":"Apparently it's mostly aging equipment — they're swapping in a new system next year.","cn":"據說主因是設備老化——明年會換新系統。"},{"en":"Till then? Check the app before you head out and give yourself extra time at rush hour.","cn":"在那之前呢？出門前先查 App，尖峰時段多留點時間。"}],
   paras:[
     {en:"Every few months, a signal problem somewhere on the MRT network causes delays that affect thousands of commuters. When a fault is detected, trains on that line are slowed down immediately, and platforms that are usually quiet within minutes become packed with waiting passengers.",
      cn:"每隔幾個月，捷運路網上某處的號誌問題就會造成延誤，影響數千名通勤族。一旦偵測到故障，那條線的列車會立刻被降速，原本安靜的月台幾分鐘內就會擠滿等車的乘客。"},
@@ -3159,6 +3182,7 @@ articles:[
   titleCn:"商務出差真正的本事",
   focus:"過去完成式（含被動）交代事件先後；tend to 緩和語氣的正式語域",
   intro:"完全原創的商務出差故事。注意過去完成式（had boarded、had been held up）怎麼交代「延誤發生前，還發生了什麼事」的時間先後，也留意 tend to 這種正式語域裡緩和武斷語氣的說法。",
+  "spoken": [{"en":"Anita's flight got delayed twenty minutes before departure — the plane was held up at its last stop.","cn":"Anita 的班機起飛前二十分鐘才宣布延誤——飛機在上一站被耽擱了。"},{"en":"Instead of freaking out, she just opened her laptop and ran through tomorrow's presentation.","cn":"她沒有慌，直接打開筆電把明天的簡報過了一遍。"},{"en":"Frequent flyers all have their little routines — backup charger, downloaded files, and a loose idea of what 'on time' even means.","cn":"常出差的人都有自己的小套路——備用充電器、下載好的檔案，還有對「準時」的彈性認知。"},{"en":"She landed after midnight, but the meeting still happened. The delay cost her a night's sleep — not the meeting. That's the real skill.","cn":"她半夜才落地，但會議照開。延誤讓她少睡一晚——但沒毀掉會議。這才是出差的真本事。"}],
   paras:[
     {en:"Anita had boarded her flight from Ho Chi Minh City to Taipei with plenty of time to spare before her quarterly review meeting the next morning. Twenty minutes before departure, however, the gate agent announced a delay: the incoming aircraft had been held up by a mechanical inspection at its previous stop, and a new departure time had not yet been confirmed.",
      cn:"Anita早早就登機了，從胡志明市飛往台北，離隔天早上的季度檢討會議還有充裕的時間。然而，起飛前二十分鐘，登機門地勤人員宣布班機延誤：機組的入境班機因為在前一站接受機械檢查而被耽擱，新的起飛時間也尚未確定。"},
@@ -3210,6 +3234,7 @@ articles:[
   focus:"現在簡單式描述習慣，過去簡單式描述上週六發生的特定事件",
   upFrom:"A2", upTo:"B1",
   intro:"這篇文章前半段用現在簡單式講Tom平常的習慣，後半段換成過去簡單式講「上週六」發生的一件特定的事。讀的時候注意兩種時態怎麼切換。",
+  "spoken": [{"en":"Tom swings by his grandma's every Saturday, and last week she looked really worn out.","cn":"Tom 每週六都會去奶奶家，上週她看起來很疲憊。"},{"en":"She had a headache, so he took her to the little clinic nearby — the waiting room was packed.","cn":"她頭痛，所以他帶她去附近的小診所——候診室擠滿了人。"},{"en":"The doctor checked her out, and now she's resting at home with warm tea.","cn":"醫生仔細檢查過了，現在她在家喝著溫茶休息。"},{"en":"She'll be fine soon, so Tom's not worried anymore.","cn":"她很快就會好，所以 Tom 不擔心了。"}],
   paras:[
     {en:"Tom visits his grandmother every Saturday afternoon after English class. She lives alone in a small house near the market.",
      cn:"Tom每個星期六下午上完英文課後都會去看奶奶。她一個人住在市場附近的一間小房子裡。"},
@@ -3250,6 +3275,7 @@ articles:[
   focus:"現在簡單式（習慣）vs 現在完成式（基礎）；who 引導的關係子句；比較級",
   upFrom:"B1", upTo:"B1+",
   intro:"這篇換成Anita的角度，講她每週打給台灣媽媽的越洋電話。留意 who 開頭的關係子句怎麼補充資訊，還有 harder / more tired than 這種比較級的用法。",
+  "spoken": [{"en":"Anita calls her mom in Taiwan every Sunday, and last weekend her mom sounded off — coughing and worn out.","cn":"Anita 每週日打給在台灣的媽媽，上週末媽媽聲音不對勁——咳嗽又疲憊。"},{"en":"Her mom kept saying it was nothing, but watching two grandkids every day is no joke.","cn":"媽媽一直說沒事，但每天帶兩個孫子可不是開玩笑的。"},{"en":"Anita talked her into seeing a doctor, and she's on some medicine now.","cn":"Anita 說服她去看醫生，現在已經在吃藥了。"},{"en":"She's feeling way better, and Anita can finally breathe again.","cn":"她好多了，Anita 也終於能鬆口氣。"}],
   paras:[
     {en:"Anita has worked in Vietnam for almost two years now. She calls her mother in Taiwan every Sunday evening, because video calls make the distance feel shorter. They talk about small things, like food, weather, and what happened during the week.",
      cn:"Anita在越南工作快兩年了。她每週日晚上都會打電話給在台灣的媽媽，因為視訊通話讓距離感覺變近了。他們會聊一些小事，像是食物、天氣，還有這一週發生了什麼事。"},
@@ -3294,6 +3320,7 @@ articles:[
   focus:"被動語態、現在完成式＋被動、關係子句（who / that）",
   upFrom:"B1+", upTo:"B2",
   intro:"完全原創，從「一個家庭的故事」拉遠到「一個普遍的現象」。注意被動語態（are filled、have been affected、have been asked）怎麼把焦點放在「發生了什麼事」而不是「誰做的」，還有 who / that 引導的關係子句怎麼補充資訊。",
+  "spoken": [{"en":"Every summer the clinics here get slammed — hot weather and crowded trains spread bugs fast.","cn":"每年夏天這裡的診所都被塞爆——炎熱天氣加擁擠的車廂讓病毒傳超快。"},{"en":"More people have come down with something this year, so a bunch of clinics are staying open later.","cn":"今年中鏢的人更多，所以一堆診所都延長看診時間。"},{"en":"Even then, you can show up at six a.m. and still wait over an hour. Some folks just do video calls with the doctor now.","cn":"就算這樣，你早上六點到還是可能等超過一小時。有些人乾脆改跟醫生視訊。"},{"en":"The boring advice works, though — wash your hands, get your sleep.","cn":"不過那些老掉牙的建議真的有用——勤洗手、睡飽。"}],
   paras:[
     {en:"Every summer, clinics across Taiwan are filled with more patients than usual. Hot weather, crowded transportation, and frequent travel all help spread seasonal illnesses quickly. In just a few weeks, waiting rooms that were once quiet can suddenly become packed.",
      cn:"每年夏天，台灣各地的診所都會擠滿比平常更多的病患。炎熱的天氣、擁擠的交通，加上頻繁的旅行，都讓季節性疾病快速傳播。短短幾週內，原本安靜的候診室可能突然變得人滿為患。"},
@@ -3346,6 +3373,7 @@ articles:[
   source:"改寫自 Focus Taiwan 報導（2026/07/25）— 事實取自原文，英文由本站重寫",
   sourceUrl:"https://focustaiwan.tw/society/202607250008",
   intro:"這是一篇真實新聞的改寫，講台灣疾管署延長免費疫苗接種計畫的決定。注意新聞報導怎麼引用官方數字（over ten thousand visits）、描述變異株（nicknamed \"Nimbus\"），以及用被動語態保持客觀、不特別強調是「誰」做的決定。",
+  "spoken": [{"en":"Taiwan just extended the free COVID shots through September — cases shot up way faster than expected.","cn":"台灣把免費疫苗延長到九月底——病例增加的速度遠超預期。"},{"en":"Weekly hospital visits more than doubled, mostly thanks to this new variant they're calling Nimbus.","cn":"每週就診數翻了一倍多，主要是這支叫 Nimbus 的新變異株害的。"},{"en":"Here's the scary stat: over ninety percent of the severe cases hadn't gotten this year's shot.","cn":"嚇人的數據來了：超過九成的重症病例都沒打今年的疫苗。"},{"en":"So the message is simple — a quick clinic visit now beats a long illness later.","cn":"所以訊息很簡單——現在跑一趟診所，勝過之後病一大場。"}],
   paras:[
     {en:"Taiwan's health authorities announced in late July that the country's free COVID-19 vaccination program, originally scheduled to end in July, would continue through the end of September. The decision came as case numbers climbed sharply across the island. Health officials said the extension was meant to give more time for people who have not yet received this year's shot.",
      cn:"台灣衛生主管機關在七月下旬宣布，原訂七月結束的全民免費COVID-19疫苗接種計畫將延長至九月底。這項決定是在全台病例數急遽攀升之際做出的。衛生官員表示，延長接種期是為了讓還沒打今年疫苗的人有更多時間。"},
@@ -3397,6 +3425,7 @@ articles:[
   focus:"過去簡單式：不規則動詞（went, took, ate, bought, saw）",
   upFrom:"A2", upTo:"B1",
   intro:"講「上週末做了什麼」一定會用到過去式，而最常用的動詞偏偏都是不規則變化：go→went、take→took、eat→ate、buy→bought、see→saw。讀的時候把這五個字圈出來。",
+  "spoken": [{"en":"I hit the night market with my friend last Saturday — we got there around seven.","cn":"上週六我跟朋友去逛夜市——七點左右到的。"},{"en":"We grabbed fried chicken and washed it down with papaya milk. So good.","cn":"我們買了鹹酥雞配木瓜牛奶。超好吃。"},{"en":"My friend picked up a jacket, and I spotted a cheap camera but passed on it.","cn":"朋友買了件外套，我瞄到一台便宜相機但沒下手。"},{"en":"Got home at ten thirty, totally beat — but what a fun night.","cn":"十點半到家，累翻了——但玩得超開心。"}],
   paras:[
     {en:"Last Saturday I went to the night market with my friend. We took the bus and got there at seven.",
      cn:"上週六我和朋友去逛夜市。我們搭公車，七點到那裡。"},
@@ -3437,6 +3466,7 @@ articles:[
   focus:"過去簡單式＋連接詞 because / so / when",
   upFrom:"B1", upTo:"B1+",
   intro:"颱風天不上班不上課，你在家做了什麼？讀的時候注意三個連接詞：because 說原因、so 說結果、when 說時間先後。",
+  "spoken": [{"en":"We got a typhoon day off Wednesday — crazy wind and rain all morning.","cn":"週三放颱風假——整個早上狂風暴雨。"},{"en":"My mom called, worried sick about the flooding near our place.","cn":"我媽打來，超擔心我們家附近淹水。"},{"en":"When it cleared up, I went out to check — some water on the street, and I helped my neighbor clear leaves out of the drain.","cn":"雨停後我出去看看——路上有點積水，我還幫鄰居清了排水孔的落葉。"},{"en":"By evening the sky was clear and we caught a gorgeous sunset. Not a bad day, honestly.","cn":"到了傍晚天空放晴，我們還看到超美的夕陽。老實說這天過得不賴。"}],
   paras:[
     {en:"Last Wednesday there was a typhoon, so we did not go to work. The wind was very strong and the rain was heavy all morning. My mother called me because she was worried about the flooding near our house.",
      cn:"上週三有颱風，所以我們沒有去上班。風很大，整個早上雨都下得很大。我媽打電話給我，因為她擔心我們家附近會淹水。"},
@@ -3474,6 +3504,7 @@ articles:[
   focus:"現在完成式 + 被動語態：描述「到目前為止」的天氣影響",
   upFrom:"B1+", upTo:"B2",
   intro:"同一個颱風，這次從「通勤族」的角度來看。注意現在完成式搭配被動的用法：have been cancelled、has been closed——事情已經發生了，而且影響還在。讀的時候找出哪些句子是「已經發生且仍在持續」的。",
+  "spoken": [{"en":"My Taipei trip got called off — the typhoon dumped over 200 millimeters of rain on the mountains overnight.","cn":"我的台北行取消了——颱風一夜之間在山區倒了超過 200 毫米的雨。"},{"en":"Highways are closed, east coast trains are down, and my colleague's neighborhood has been underwater since five a.m.","cn":"高速公路封了、東部火車停駛，我同事的社區從清晨五點就泡在水裡。"},{"en":"Good news is the storm's supposed to turn north tonight and clear out by tomorrow.","cn":"好消息是風暴今晚應該會轉向北邊，明天下午就遠離。"},{"en":"I already rebooked for Friday — for now I'm working from home and praying the power holds.","cn":"我已經改訂週五的票——現在就在家上班，祈禱不要停電。"}],
   paras:[
     {en:"I was supposed to take the train to Taipei this morning, but my trip has been cancelled because of the typhoon. The weather bureau issued a sea warning yesterday, and since then the situation has got worse. More than 200 millimetres of rain has fallen in the northern mountains overnight.",
      cn:"我今天早上本來要搭火車去台北，但因為颱風我的行程被取消了。氣象局昨天發布了海上警報，從那之後情況越來越糟。北部山區一個晚上降了超過 200 毫米的雨。"},
@@ -3517,6 +3548,7 @@ articles:[
   titleCn:"被風雨困在機場",
   focus:"被動語態：描述天氣造成的取消、延誤與官方安排",
   intro:"完全原創的機場情境文。注意「事情發生在我身上、但不是我做的」全部用被動：was cancelled、were grounded、were told、was rebooked。讀的時候把每個 be + 過去分詞畫出來，想一想動作的執行者是誰、為什麼不用說出來。",
+  "spoken": [{"en":"I got to the airport and the whole departure board was red — my flight got grounded 'cause of a typhoon heading for Taiwan.","cn":"我到機場一看，整個航班表都是紅的——颱風撲向台灣，我的班機被停飛了。"},{"en":"The terminal filled up fast. They handed out meal vouchers around noon, which calmed everybody down a bit.","cn":"航廈很快就擠滿人。中午他們發了餐券，大家才稍微冷靜下來。"},{"en":"Watching the flood videos from Taiwan on my phone, I got why the airline was playing it safe.","cn":"在手機上看到台灣的淹水影片，我就懂航空公司為什麼這麼謹慎了。"},{"en":"Two takeaways: never book a big meeting for the day you land, and the calmest person in line always gets helped first.","cn":"兩個心得：重要會議千萬別排在落地當天，還有排隊時最冷靜的人永遠最先被服務。"}],
   paras:[
     {en:"When I arrived at the airport on Tuesday morning, the departure board was covered in red. My flight to Taipei had been cancelled, and at first no explanation was given. Ten minutes later an announcement was made in three languages: a typhoon was approaching the north coast of Taiwan, and every morning flight to the island had been grounded until further notice.",
      cn:"週二早上我抵達機場時，出境看板一片紅字。我飛台北的航班被取消了，而且一開始沒有給任何說明。十分鐘後，機場用三種語言廣播：颱風正在接近台灣北部海岸，所有飛往台灣的早班機都被停飛，直到另行通知。"},
@@ -3571,6 +3603,7 @@ articles:[
   source:"改寫自 Taipei Times 報導（2026/08/08）— 事實取自原文，英文由本站重寫成 B1+ 程度",
   sourceUrl:"https://www.taipeitimes.com/News/front/archives/2026/08/08/2003862135",
   intro:"這是一篇真實新聞的改寫。注意氣象報導怎麼描述位置（680 km east-northeast of Taipei）、速度（moving west at 10 kph）與範圍（a storm radius of 280 km）——這三種說法幾乎每篇颱風新聞都會出現。",
+  "spoken": [{"en":"They put out a sea warning for Typhoon Dolphin last Saturday — it was crawling west at like 10 kilometers an hour.","cn":"上週六海豚颱風發布海上警報——它以一小時大概 10 公里的速度往西龜速移動。"},{"en":"It got closest over the weekend but was never gonna make landfall here — looked like it was headed for Zhejiang instead.","cn":"它週末最接近台灣，但從頭到尾都不會登陸——看起來是往浙江去了。"},{"en":"Didn't matter though — the north still got soaked, and the coasts had big swells through Monday.","cn":"但沒差——北部照樣濕透，海邊的長浪也一路持續到週一。"},{"en":"The advice was simple: stay off the coast and out of the water.","cn":"建議就一句話：離海岸遠一點，別碰水上活動。"}],
   paras:[
     {en:"Last Saturday the Central Weather Administration issued a sea warning for Typhoon Dolphin. At five in the afternoon the storm was about 680 kilometres east-northeast of Taipei and had been moving west at only 10 kilometres per hour — slow enough for forecasters to be confident about its path.",
      cn:"上週六，中央氣象署對颱風 Dolphin 發布了海上警報。下午五點時，這個風暴位於台北東北東方約 680 公里處，並且一直以每小時僅 10 公里的速度向西移動——慢得足以讓預報人員對它的路徑有信心。"},
