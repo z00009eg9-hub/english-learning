@@ -1418,8 +1418,8 @@ body.cnall #v-book span.cnx{display:inline!important}
   main:has(.rdopen),main:has(.bkopen){max-width:calc(100vw - var(--sb-w) - 28px)}
 }
 /* 閱讀的單字中文（詞義＋例句中譯）跟著全站中譯開關 */
-body:not(.cnall) #v-read .wpitem .zh{display:none}
-body:not(.cnall) #v-read .wpitem .exs .excn{display:none}
+body:not(.cnall) #v-read .wpitem .zh,body:not(.cnall) #v-real .wpitem .zh{display:none}
+body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .exs .excn{display:none}
 #v-book a.magbadge{background:#3b82c4}
 /* ---------- 課本頁 UX 優化（2026-08 回饋） ---------- */
 /* 標題不再全大寫（壓迫感重），維持原文大小寫 */
@@ -2263,8 +2263,8 @@ function rdQ(val){
   const f=$('rd-fill'); if(f) f.style.width=p.pct+'%';
 }
 /* 兩欄高度差太多就自動改版：內文全寬 + 單字片語雙欄流排 */
-function rebalanceMag(){
-  const mag=document.querySelector('#v-read .mag');
+function rebalanceMag(sel){
+  const mag=document.querySelector(sel||'#v-read .mag');
   if(!mag||!mag.children[1]) return;
   const R0=mag.children[1].getBoundingClientRect().height;
   if(R0<20){ mag.classList.add('solo'); return; }      // 右欄沒內容 → 不要留空欄
@@ -4487,7 +4487,7 @@ RENDER.real=function(){
   const v=$('v-real');
   if(rwOpen){
     const l=(ST.rw||{})[rwOpen];
-    if(l && !l.del){ v.innerHTML=rwDetailHTML(l); return; }
+    if(l && !l.del){ v.innerHTML=rwDetailHTML(l); rebalanceMag('#v-real .mag'); return; }
     rwOpen=null;
   }
   v.innerHTML=rwListHTML();
@@ -4587,13 +4587,12 @@ function rwDetailHTML(l){
    +'<div class="bar">'
    +(l.url?'<a class="spk" style="text-decoration:none" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>':'')
    +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button></div></div>';
+  /* 雜誌雙欄（同閱讀頁）：左欄 圖示帶＋情境＋原句＋用法比較＋Speak Up，右欄 Words & Phrases */
+  h+='<div class="mag"><div><div class="card">';
   h+=rwStripSVG(l);
-  if(l.ctx) h+='<div class="mr-sec">情境 Context</div><div class="card">'+rwParas(l.ctx)+'</div>';
-  if((l.vocab||[]).length)
-    h+='<div class="mr-sec">核心單字（'+l.vocab.length+'）</div>'
-     +'<div class="bkvd card"><div class="bkvtab" role="list">'+l.vocab.map(w=>rwWordRow(w,l)).join('')+'</div></div>';
-  /* 影片實景原句：只放有來源依據的句子（字幕 / 使用者提供），絕不由標題自行生成 */
-  h+='<div class="mr-sec">影片實景原句'+((l.quotes||[]).length?'（'+l.quotes.length+'）':'')+'</div><div class="card">';
+  if(l.ctx) h+='<div class="mr-sec" style="margin-top:0">情境 Context</div>'+rwParas(l.ctx);
+  /* 影片實景原句：只放有來源依據的句子（字幕 / 頁面文字 / 使用者提供），絕不由標題自行生成 */
+  h+='<div class="mr-sec">影片實景原句'+((l.quotes||[]).length?'（'+l.quotes.length+'）':'')+'</div>';
   if((l.quotes||[]).length){
     h+=l.quotes.map((q,i)=>{
       const hit=(l.vocab||[]).find(v=>v.w&&q.en.toLowerCase().includes(v.w.toLowerCase()));
@@ -4614,22 +4613,34 @@ function rwDetailHTML(l){
      +'<div style="margin-top:8px;display:flex;gap:8px">'
      +'<button class="btn sm" onclick="rwQASave(\''+l.id+'\')">儲存</button>'
      +'<button class="btn gray sm" onclick="rwQATog()">取消</button></div></div>';
-  h+='</div>';
   /* 用法比較：實境用法＋比較合併為一個區塊 */
   if(l.usage||(l.cmp||[]).length){
-    h+='<div class="mr-sec">用法比較</div><div class="card">'
+    h+='<div class="mr-sec">用法比較</div>'
      +(l.usage?'<div class="rw-usage">'+rwParas(l.usage)+'</div>':'')
      +((l.cmp||[]).length
        ?'<ul class="rw-cmp"'+(l.usage?' style="margin-top:8px;border-top:1px solid var(--line);padding-top:4px"':'')+'>'
         +l.cmp.map(c=>'<li><b>'+esc(c.w)+'</b>'+esc(rwPad(c.d))+'</li>').join('')+'</ul>'
-       :'')
-     +'</div>';
+       :'');
   }
   if(l.spq)
-    h+='<div class="mr-sec">Speak Up</div><div class="card">'
+    h+='<div class="mr-sec">Speak Up</div>'
      +'<div style="font-weight:var(--fw-emph);font-size:var(--font-body)"><span class="sent" data-t="'+esc(l.spq)+'" onclick="saySent(this)">'+esc(l.spq)+'</span> '+spk(l.spq)+'</div>'
      +(l.spHint?'<details class="hint-toggle" style="margin-top:8px"><summary class="hint-sum">提示</summary><div class="hint">'+esc(rwPad(l.spHint))+'</div></details>':'')
-     +'<div class="muted" style="margin-top:8px">先用自己的話回答，再到 <a href="https://learning-english-notes.web.app" target="_blank" rel="noopener">Speak Up ↗</a> 錄音練習。收藏（⭐）的單字會自動同步到 Speak Up 的「⭐ B2 生詞本」。</div></div>';
+     +'<div class="muted" style="margin-top:8px">先用自己的話回答，再到 <a href="https://learning-english-notes.web.app" target="_blank" rel="noopener">Speak Up ↗</a> 錄音練習。收藏（⭐）的單字會自動同步到 Speak Up 的「⭐ B2 生詞本」。</div>';
+  h+='</div></div>';
+  /* 右欄：Words & Phrases，與閱讀頁同一套 wpbox / wpitem 元件 */
+  h+='<div>';
+  if((l.vocab||[]).length){
+    h+='<div class="wpbox"><div class="wphead">▼ Words &amp; Phrases<span class="zh">單字片語</span></div><div class="wpbody">'
+     +l.vocab.map((t,i)=>'<div class="wpitem" id="rwp-'+(i+1)+'">'
+       +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="showGloss(\''+esc(t.w).replace(/'/g,"\\'")+'\')">'+esc(t.w)+'</w> '
+       +spk(t.w)+wbBtn(t.w,'實景：'+(l.ti||''))+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
+       +(t.cn?'<div class="zh">'+esc(t.cn)+'</div>':'')
+       +(t.ex?'<div class="exs">'+bkHi(t.ex,t.w)+' '+spk(t.ex)+(t.exCn?'<div class="excn">'+esc(t.exCn)+'</div>':'')+'</div>':'')
+       +'</div>').join('')
+     +'</div></div>';
+  }
+  h+='</div></div>';
   h+='<div class="card" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">'
    +(st.k==='done'
      ?'<span class="mrf-why st-done" style="margin:0">已完成 ✓</span>'
