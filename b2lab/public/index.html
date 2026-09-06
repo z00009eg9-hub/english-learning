@@ -416,8 +416,6 @@ tr:nth-child(even) td{background:#fdfbf8}
 }
 .mrc-cta:active{transform:scale(.97)}
 /* ---------- 每月智慧複習：複習頁 ---------- */
-.magttl.mr-hdr{background:linear-gradient(135deg,#faf6f0,#f5ede2);border-color:#d8cfc2;
-  box-shadow:3px 3px 0 #d8cfc2}
 .mr-sec{font-size:calc(15px * var(--fs));font-weight:600;color:#3d3428;margin:18px 0 8px;
   padding-bottom:6px;border-bottom:1px solid var(--line)}
 .mr-stats{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:4px;font-weight:600}
@@ -4331,8 +4329,8 @@ function mrPageHTML(ym){
 
   const chQs=mrBuildChallenge(r); _mrChQs=chQs; mrChIdx=0; mrChShow=false;
   const statBits=[(r.focus.length?r.focus.length+' 堂待補強':'重點回顧'),r.vocab.length+' 個重點單字',r.gram.length+' 個文法重點',chQs.length+' 題挑戰'];
-  let h='<div class="magttl mr-hdr"><button class="back" onclick="mrClose()"><span class="back-label">返回課本</span></button>'
-   +'<div class="magico" style="opacity:.45">🔄</div>'
+  let h='<div class="magttl"><button class="back" onclick="mrClose()"><span class="back-label">返回課本</span></button>'
+   +'<div class="magico">🔄</div>'
    +'<h2>'+mon+' 月重點複習</h2>'
    +'<div class="mr-time">根據你的 '+mon+' 月學習狀況整理　·　約 40 分鐘</div>'
    +'<div class="mr-stats">'+statBits.join(' · ')+'</div>'
