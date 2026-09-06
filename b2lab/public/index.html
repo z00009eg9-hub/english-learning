@@ -393,6 +393,69 @@ tr:nth-child(even) td{background:#fdfbf8}
   border-radius:16px;padding:6px 14px;font:inherit;font-weight:700;font-size:calc(12.5px * var(--fs));cursor:pointer}
 .bkday-jump:active{background:var(--accent-soft)}
 /* 本月課程摺疊清單（面板底部）：一行一堂，點列＝選取那天 */
+/* ---------- 每月智慧複習：入口卡（月曆右側面板最上方） ---------- */
+.mrcard{
+  margin-top:14px;background:linear-gradient(135deg,#fff6ec,#ffe9d4);
+  border:1px solid #f0c9a0;border-radius:12px;padding:12px 13px;cursor:pointer;
+  box-shadow:0 1px 4px rgba(60,45,30,.06);transition:transform .13s,box-shadow .13s
+}
+@media(hover:hover){.mrcard:hover{transform:translateY(-1px);box-shadow:0 3px 10px rgba(60,45,30,.12)}}
+.mrcard:active{transform:scale(.99)}
+.mrc-hd{display:flex;align-items:center;gap:7px}
+.mrc-ico{font-size:calc(17px * var(--fs));line-height:1}
+.mrc-t{font-weight:900;font-size:calc(15px * var(--fs));color:#8a4a12}
+.mrc-sub{font-size:calc(12px * var(--fs));color:var(--ink2);margin-top:2px}
+.mrc-stats{display:flex;flex-wrap:wrap;gap:4px 8px;margin-top:8px}
+.mrc-stats span{
+  font-size:calc(11px * var(--fs));font-weight:700;color:#8a4a12;
+  background:rgba(255,255,255,.75);border:1px solid #f0d5ba;border-radius:12px;padding:2px 9px
+}
+.mrc-cta{
+  display:block;margin:10px 0 0 auto;border:0;border-radius:999px;background:var(--accent2);color:#fff;
+  font:inherit;font-size:calc(11.5px * var(--fs));font-weight:800;padding:5px 14px;cursor:pointer
+}
+.mrc-cta:active{transform:scale(.97)}
+/* ---------- 每月智慧複習：複習頁 ---------- */
+.mrfocus{background:var(--card);border:1px solid var(--line);border-left:3px solid #d9534f;
+  border-radius:10px;padding:12px 14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(60,45,30,.05)}
+.mrf-hd{display:flex;gap:9px;align-items:flex-start}
+.mrf-n{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:#d9534f;color:#fff;
+  font-weight:900;font-size:calc(12px * var(--fs));line-height:22px;text-align:center}
+.mrf-t{font-weight:800;font-size:calc(15px * var(--fs));line-height:1.4}
+.mrf-tc{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:1px}
+.mrf-why{font-size:calc(11.5px * var(--fs));color:#a04a12;background:#fdf0e5;border-radius:8px;
+  padding:4px 9px;margin:8px 0 0;display:inline-block}
+.mrf-sec{margin-top:9px}
+.mrf-sec>b{display:block;font-size:calc(12px * var(--fs));color:var(--accent2);margin-bottom:4px}
+.mrf-w{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:calc(13.5px * var(--fs));margin-bottom:3px}
+.mrf-ww{font-weight:800}
+.mrf-wc{color:var(--ink2);font-size:calc(12.5px * var(--fs))}
+.mrf-g{font-size:calc(13.5px * var(--fs));font-weight:700;margin-bottom:6px}
+.mrf-pat{font-size:calc(12.5px * var(--fs));font-weight:600;color:var(--accent2);margin-top:2px}
+.mrf-ex{font-size:calc(13.5px * var(--fs));font-weight:400;margin-top:4px;line-height:1.6}
+.mrf-excn{font-size:calc(12.5px * var(--fs));color:var(--ink2);margin-top:2px}
+.mrf-go{margin-top:10px;border:1.5px solid var(--accent2);background:var(--card);color:var(--accent2);
+  border-radius:999px;font:inherit;font-size:calc(11.5px * var(--fs));font-weight:800;padding:4px 13px;cursor:pointer}
+.mrf-go:active{background:var(--accent-soft)}
+.mrgram{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;
+  margin-bottom:10px;box-shadow:0 1px 4px rgba(60,45,30,.05)}
+.mrg-t{font-weight:800;font-size:calc(14.5px * var(--fs));display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.mrg-hit{font-size:calc(10.5px * var(--fs));font-weight:700;color:#2b6b69;background:#f2f7f7;
+  border:1px solid #d5e5e4;border-radius:12px;padding:1px 8px}
+.mrg-pat{font-size:calc(13px * var(--fs));font-weight:700;color:var(--accent2);margin-top:5px}
+.mrg-pts{margin:7px 0 0;padding-left:19px;font-size:calc(13px * var(--fs));color:var(--ink2);line-height:1.75}
+.mrg-pts li{margin-bottom:3px}
+.mrg-exs{margin-top:8px;border-top:1px dashed var(--line);padding-top:7px}
+.mrg-ex{font-size:calc(13.5px * var(--fs));line-height:1.6;margin-bottom:5px}
+.mrg-excn{font-size:calc(12.5px * var(--fs));color:var(--ink2)}
+.mrg-src{font-size:calc(11px * var(--fs));color:var(--ink2);margin-top:8px}
+.mrquick{display:flex;flex-wrap:wrap;gap:8px}
+.mrq{flex:1 1 210px;min-width:0;text-align:left;border:1px solid var(--line);background:var(--card);
+  border-radius:10px;padding:9px 11px;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:2px}
+.mrq:active{background:var(--accent-soft)}
+@media(hover:hover){.mrq:hover{border-color:var(--accent2)}}
+.mrq-t{font-weight:700;font-size:calc(13.5px * var(--fs));color:var(--ink)}
+.mrq-w{font-size:calc(11.5px * var(--fs));color:var(--ink2)}
 .bkmon{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
 .bkmon-tog{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;background:none;
   padding:4px 2px;font:inherit;font-weight:700;font-size:calc(13px * var(--fs));color:var(--ink2);cursor:pointer}
@@ -1502,7 +1565,7 @@ const inBand = l => band().indexOf(l)>=0;
 let PROFILE=localStorage.getItem('b2lab_profile')||'anita';
 if(!PROFILES[PROFILE]) PROFILE='anita';
 const skey = () => 'b2lab.v1.'+PROFILE;
-const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:1, fs:null, fsSet:false, listenDone:{}, vnotes:{}, wb:{}, updatedAt:0});
+const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:1, fs:null, fsSet:false, listenDone:{}, vnotes:{}, wb:{}, bkSeen:{}, updatedAt:0});
 
 /* ---------- 本機儲存 ---------- */
 let ST=blank();
@@ -1583,6 +1646,11 @@ function mergeState(remote){
   out.dayNew=Object.assign({},remote.dayNew||{},ST.dayNew||{});
   out.listenDone=Object.assign({},remote.listenDone||{},ST.listenDone||{});
   out.vnotes=Object.assign({},remote.vnotes||{},ST.vnotes||{});
+  /* 課本開課紀錄（每月智慧複習判斷「讀過沒」）：同一課取較新的時間戳 */
+  out.bkSeen=Object.assign({},ST.bkSeen||{});
+  Object.keys(remote.bkSeen||{}).forEach(id=>{
+    out.bkSeen[id]=Math.max(Number((ST.bkSeen||{})[id])||0, Number(remote.bkSeen[id])||0);
+  });
   /* 生詞本逐字合併：取時間戳較新的那筆（含「移除」的墓碑紀錄，跨裝置移除才不會又跑回來） */
   out.wb=Object.assign({},ST.wb||{});
   Object.keys(remote.wb||{}).forEach(w=>{
@@ -3763,7 +3831,7 @@ document.addEventListener('click',e=>{
 const BOOK_LESSONS=((window.BOOK||{}).lessons||[]).slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
 // 課本單字也進字庫，全站點字都查得到
 BOOK_LESSONS.forEach(b=>(b.vocab||[]).concat(b.vocab2||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:'',exEn:t.ex,exCn:t.exCn,src:'課本：'+b.titleCn})));
-let bkOpen=null, bkCalY=null, bkCalM=null, bkQuery='';
+let bkOpen=null, bkCalY=null, bkCalM=null, bkQuery='', bkRevYM=null;
 /* 例句裡用到該單字／片語就加粗（compensate 也會對到 compensated；片語去掉 something/someone 佔位字再比對） */
 function bkHi(sent,w){
   let s=esc(sent);
@@ -3835,6 +3903,8 @@ function bkTogHint(){
 }
 RENDER.book=function(){
   const v=$('v-book');
+  /* 每月智慧複習頁優先於「記住上次讀到哪一課」，不然按了複習會被彈回課文 */
+  if(bkRevYM){ v.classList.add('bkopen'); v.innerHTML=mrPageHTML(bkRevYM); return; }
   if(!bkOpen){
     try{ const last=localStorage.getItem('b2lab_bkLast_'+PROFILE);
       if(last){ const found=BOOK_LESSONS.find(x=>x.id===last); if(found){ bkOpen=found; sbAutoCollapse(); } }
@@ -3937,6 +4007,7 @@ function bkDayPanel(){
   /* 本月課程摺疊清單：掃一眼整月主題；點一列＝選取那天（跟月曆同一套互動） */
   const ym=bkCalY+'-'+String(bkCalM+1).padStart(2,'0');
   const mm=BOOK_LESSONS.filter(b=>(b.date||'').indexOf(ym)===0).sort((a,b)=>a.date<b.date?-1:1);
+  h+=mrEntryHTML(ym);
   h+='<div class="bkmon">'
    +'<button class="bkmon-tog" onclick="bkMonTog()">📅 '+(bkCalM+1)+' 月課程（'+mm.length+'）'
    +'<span class="bkmon-arr">'+(bkMonOpen?'▲':'▼')+'</span></button>';
@@ -3968,6 +4039,239 @@ function bkCalShift(d){
   while(bkCalM<0){ bkCalM+=12; bkCalY--; }
   while(bkCalM>11){ bkCalM-=12; bkCalY++; }
   const c=$('bk-cal'); if(c) c.innerHTML=bkCalHTML();
+}
+
+/* ============================================================
+   每月智慧複習 Monthly Smart Review
+   - 完全 rule-based，不呼叫任何 AI／付費 API
+   - 只讀現有資料：BOOK_LESSONS（vocab/vocab2/grammar/hw/topics）
+     ＋ ST.bkSeen（開課紀錄）＋ ST.wb（生詞本收藏）＋ ST.srs（單字複習）
+   - 不寫回 Firebase、不新增 collection：每次進入即時計算（computed view）
+   ============================================================ */
+/* 每區上限（資料不足就自然少於上限，不硬湊） */
+const MR_CAP={ focus:4, vocab:20, vocabPer:5, gram:6, gramPer:2, quick:5 };
+const MR_W={ unread:100, started:80, favored:50, hasGram:40, starred:25, dueWord:15, done:20, recent:-30 };
+
+function mrLessons(ym){ return BOOK_LESSONS.filter(b=>(b.date||'').indexOf(ym)===0); }
+function mrVocabOf(b){ return (b.vocab||[]).concat(b.vocab2||[]); }
+function mrKey(s){ return String(s||'').toLowerCase().replace(/\s+/g,' ').trim(); }
+/* 文法主題正規化：去掉編號、標點與空白，讓「Unit 53 動名詞」與「動名詞」歸為同一題 */
+function mrGramKey(s){
+  return String(s||'').toLowerCase()
+    .replace(/unit\s*\d+/g,'').replace(/[（(].*?[)）]/g,'')
+    .replace(/[^a-z一-鿿]+/g,'').trim();
+}
+
+/* 一堂課的學習狀態：未閱讀 / 已開始未完成 / 已完成。
+   沒有專屬完成機制，改用「單字覆蓋率」推導：這課的字有多少已進生詞本或已排入單字卡複習。 */
+function mrStatus(b){
+  const seen=Number((ST.bkSeen||{})[b.id])||0;
+  const vs=mrVocabOf(b);
+  const touched=vs.filter(t=>wbOn(t.w)||((ST.srs||{})[wbKey(t.w)]||(ST.srs||{})[String(t.w||'').trim()])).length;
+  const cov=vs.length? touched/vs.length : (seen?1:0);
+  if(!seen) return {k:'unread', label:'尚未閱讀', seen:0, cov:cov};
+  if(cov<0.5) return {k:'started', label:'已開始，尚未完成', seen:seen, cov:cov};
+  return {k:'done', label:'已完成', seen:seen, cov:cov};
+}
+
+function mrScore(b){
+  const st=mrStatus(b), vs=mrVocabOf(b);
+  let s=0;
+  if(st.k==='unread') s+=MR_W.unread;
+  else if(st.k==='started') s+=MR_W.started;
+  else s+=MR_W.done;
+  if(vs.some(t=>wbOn(t.w))) s+=MR_W.favored;
+  if((b.grammar||[]).length) s+=MR_W.hasGram;
+  if(vs.some(t=>t.star)) s+=MR_W.starred;
+  const due=vs.filter(t=>isDue(t.w)).length;
+  if(due) s+=Math.min(MR_W.dueWord*due, 45);
+  /* 最近 7 天內開過就降權，把版面讓給比較久沒碰的課 */
+  if(st.seen && (Date.now()-st.seen) < 7*864e5) s+=MR_W.recent;
+  return {score:s, st:st};
+}
+
+/* 單字挑選：跨全月去重，依重要度排序後取 10–20 個 */
+function mrPickVocab(ls){
+  const seen={}, out=[];
+  ls.forEach(b=>{
+    const w=mrScore(b);
+    mrVocabOf(b).forEach(t=>{
+      const k=mrKey(t.w); if(!k) return;
+      if(seen[k]){ seen[k].hits++; return; }              // 重複出現：累計次數，不重複顯示
+      const e={t:t, src:b, hits:1, s:0};
+      if(wbOn(t.w)) e.s+=100;                             // 收藏過
+      if(isDue(t.w)) e.s+=60;                             // 單字卡今天到期
+      if(t.star) e.s+=50;                                 // 課程標記為重點
+      if(w.st.k==='unread') e.s+=20; else if(w.st.k==='started') e.s+=12;
+      seen[k]=e; out.push(e);
+    });
+  });
+  out.forEach(e=>{ if(e.hits>1) e.s+=30*(e.hits-1); });   // 多堂課重複出現＝本月核心字
+  out.sort((a,b)=>b.s-a.s);
+  return mrSpread(out, e=>e.src.id, MR_CAP.vocabPer, Math.min(out.length,MR_CAP.vocab));
+}
+
+/* 分散取樣：先讓每堂課最多貢獻 per 個，額滿再回頭補滿名額。
+   否則同分時排序會整批落在同一堂課，複習清單就變成「某一課的節錄」而不是整月重點。 */
+function mrSpread(sorted, keyOf, per, limit){
+  const cnt={}, first=[], rest=[];
+  sorted.forEach(e=>{
+    const k=keyOf(e); cnt[k]=(cnt[k]||0)+1;
+    (cnt[k]<=per?first:rest).push(e);
+  });
+  return first.concat(rest).slice(0,limit);
+}
+
+/* 文法／句型：跨全月依正規化標題去重，取 3–6 個 */
+function mrPickGram(ls){
+  const seen={}, out=[];
+  ls.forEach(b=>{
+    const w=mrScore(b);
+    (b.grammar||[]).forEach(g=>{
+      const k=mrGramKey(g.title); if(!k) return;
+      if(seen[k]){ seen[k].hits++; return; }
+      const e={g:g, src:b, hits:1, s:(w.st.k==='unread'?60:w.st.k==='started'?40:10)};
+      if((g.exs||[]).length) e.s+=10;
+      seen[k]=e; out.push(e);
+    });
+  });
+  out.forEach(e=>{ if(e.hits>1) e.s+=40*(e.hits-1); });
+  out.sort((a,b)=>b.s-a.s);
+  return mrSpread(out, e=>e.src.id, MR_CAP.gramPer, MR_CAP.gram);
+}
+
+/* 整份複習內容（純計算，不落地） */
+function mrBuild(ym){
+  const ls=mrLessons(ym);
+  if(!ls.length) return null;
+  const scored=ls.map(b=>{ const w=mrScore(b); return {b:b, score:w.score, st:w.st}; })
+                 .sort((a,b)=>b.score-a.score||((a.b.date||'')<(b.b.date||'')?-1:1));
+  /* 優先補強：只收未閱讀／未完成的課；全部已完成時退回收藏最多的幾課 */
+  let focus=scored.filter(x=>x.st.k!=='done').slice(0,MR_CAP.focus);
+  if(!focus.length) focus=scored.filter(x=>mrVocabOf(x.b).some(t=>wbOn(t.w))).slice(0,2);
+  const focusIds=new Set(focus.map(x=>x.b.id));
+  const quick=scored.filter(x=>!focusIds.has(x.b.id)).slice(0,MR_CAP.quick);
+  return {
+    ym:ym, lessons:ls, scored:scored, focus:focus, quick:quick,
+    vocab:mrPickVocab(ls), gram:mrPickGram(ls),
+    nUnread:scored.filter(x=>x.st.k==='unread').length,
+    nStarted:scored.filter(x=>x.st.k==='started').length
+  };
+}
+
+/* 每堂補強課只抽 2–3 個核心字，不展開整課單字表 */
+function mrCoreWords(b,n){
+  return mrVocabOf(b).map(t=>{
+    let s=0; if(wbOn(t.w)) s+=100; if(isDue(t.w)) s+=60; if(t.star) s+=50;
+    return {t:t,s:s};
+  }).sort((a,b)=>b.s-a.s).slice(0,n||3).map(x=>x.t);
+}
+
+/* 月曆右側面板的入口卡（本月沒課就不顯示，不留空卡） */
+function mrEntryHTML(ym){
+  const r=mrBuild(ym); if(!r) return '';
+  const mon=+ym.split('-')[1];
+  const nF=r.focus.length;
+  const bits=[(nF?nF+' 堂待補強':'重點回顧'), r.vocab.length+' 個重點單字', r.gram.length+' 個文法重點'];
+  return '<div class="mrcard" onclick="mrOpen(\''+ym+'\')">'
+   +'<div class="mrc-hd"><span class="mrc-ico">🔄</span><span class="mrc-t">'+mon+' 月重點複習</span></div>'
+   +'<div class="mrc-sub">根據本月學習狀況整理</div>'
+   +'<div class="mrc-stats">'+bits.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>'
+   +'<button class="mrc-cta" onclick="event.stopPropagation();mrOpen(\''+ym+'\')">開始複習 →</button>'
+   +'</div>';
+}
+
+function mrOpen(ym){ bkRevYM=ym; bkOpen=null; sbAutoCollapse(); RENDER.book(); window.scrollTo(0,0); }
+function mrClose(){ bkRevYM=null; sbAutoExpand(); RENDER.book(); window.scrollTo(0,0); }
+
+/* 複習頁：沿用課本頁的視覺語言（magttl / bkbar / card），不新增主色 */
+function mrPageHTML(ym){
+  const r=mrBuild(ym);
+  const mon=+ym.split('-')[1], yr=ym.split('-')[0];
+  if(!r) return '<div class="card"><button class="back" onclick="mrClose()"><span class="back-label">返回課本</span></button>'
+   +'<div class="muted" style="margin-top:10px">'+yr+' 年 '+mon+' 月沒有可複習的課程。</div></div>';
+
+  const wordRow=(t,src)=>'<article class="bkvrow" role="listitem"><div class="bkvmeta">'
+   +'<div class="bkvcell bkvword"><span class="wln">'
+   +(t.star?'<span class="starb" title="重點單字">⭐</span>':'<span class="starb ph" aria-hidden="true">⭐</span>')
+   +'<span>'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'課本：'+src)+'</span></div>'
+   +'<div class="bkvcell bkvipa">'+esc(t.ipa||'')+'</div><div class="bkvcell bkvpos">'+esc(t.pos||'')+'</div>'
+   +'</div><div class="bkvcell bkvexample"><span class="sent" data-t="'+esc(t.ex||'')+'" onclick="saySent(this)">'+bkHi(t.ex||'',t.w)+'</span> '+(t.ex?spk(t.ex):'')+'</div>'
+   +'<div class="bkvtranslation cnx">'+esc(t.exCn||'')+'</div><div class="bkvcell bkvmeaning cnx">'+esc(t.cn||'')+'</div></article>';
+
+  let h='<div class="magttl"><button class="back" onclick="mrClose()"><span class="back-label">返回課本</span></button>'
+   +'<div class="magico">🔄</div>'
+   +'<h2>'+mon+' 月重點複習</h2>'
+   +'<div class="cn">根據你的 '+mon+' 月學習狀況整理</div>'
+   +'<div class="bar"><span class="magbadge c1">📅 '+yr+' / '+mon+'</span>'
+   +'<span class="magbadge c2">📕 '+r.lessons.length+' 堂課</span>'
+   +(r.focus.length?'<span class="magbadge c3">🔴 '+r.focus.length+' 堂待補強</span>':'')
+   +'<span class="magbadge c2">🔤 '+r.vocab.length+' 個單字</span>'
+   +'<span class="magbadge c3">📐 '+r.gram.length+' 個文法主題</span>'
+   +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速" style="margin-left:auto">⏱ '+(Number(ST.rate)||1)+'x</button>'
+   +'</div></div>';
+
+  /* I. 優先補強 */
+  if(r.focus.length){
+    h+='<div class="bkbar">🔴 I. 優先補強</div>';
+    h+=r.focus.map((x,i)=>{
+      const b=x.b, ws=mrCoreWords(b,3), gs=(b.grammar||[]).slice(0,2);
+      return '<div class="mrfocus">'
+       +'<div class="mrf-hd"><span class="mrf-n">'+(i+1)+'</span>'
+       +'<div><div class="mrf-t">'+(b.icon||'📕')+' '+esc(b.titleCn)+'</div>'
+       +'<div class="mrf-tc">'+esc(b.title||'')+'</div></div></div>'
+       +'<div class="mrf-why">原因：'+esc(x.st.label)+'　·　'+bkDate(b.date)+'</div>'
+       +(ws.length?'<div class="mrf-sec"><b>核心單字</b>'
+         +ws.map(t=>'<div class="mrf-w"><span class="mrf-ww">'+esc(t.w)+'</span> '+spk(t.w)
+           +'<span class="mrf-wc cnx">'+esc(t.cn||'')+'</span></div>').join('')+'</div>':'')
+       +(gs.length?'<div class="mrf-sec"><b>核心句型</b>'
+         +gs.map(g=>'<div class="mrf-g">'+esc(g.title)+(g.pat?'<div class="mrf-pat">'+esc(g.pat)+'</div>':'')
+           +((g.exs||[]).length?'<div class="mrf-ex"><span class="sent" data-t="'+esc(g.exs[0].en)+'" onclick="saySent(this)">'+bkHi(g.exs[0].en,g.exs[0].hi)+'</span> '+spk(g.exs[0].en)
+             +'<div class="mrf-excn cnx">'+esc(g.exs[0].cn||'')+'</div></div>':'')
+           +'</div>').join('')+'</div>':'')
+       +'<button class="mrf-go" onclick="bkGo(\''+b.id+'\')">開啟完整課程 →</button>'
+       +'</div>';
+    }).join('');
+  }
+
+  /* II. 本月重要單字 */
+  if(r.vocab.length){
+    h+='<div class="bkbar">🔤 II. 本月重要單字（'+r.vocab.length+'）</div>'
+     +'<div class="bkvd card"><div class="bkvtab" role="list">'
+     +r.vocab.map(e=>wordRow(e.t,e.src.titleCn)).join('')
+     +'</div></div>';
+  }
+
+  /* III. 本月文法與句型（已去重） */
+  if(r.gram.length){
+    h+='<div class="bkbar">📐 III. 本月文法與句型（'+r.gram.length+'）</div>';
+    h+=r.gram.map(e=>{
+      const g=e.g;
+      return '<div class="mrgram">'
+       +'<div class="mrg-t">'+esc(g.title)+(e.hits>1?'<span class="mrg-hit">'+e.hits+' 堂課出現</span>':'')+'</div>'
+       +(g.pat?'<div class="mrg-pat">'+bkVars(g.pat)+'</div>':'')
+       +((g.pts||[]).length?'<ul class="mrg-pts">'+(g.pts||[]).slice(0,2).map(p=>'<li>'+bkMark(String(p))+'</li>').join('')+'</ul>':'')
+       +((g.exs||[]).length?'<div class="mrg-exs">'+(g.exs||[]).slice(0,2).map(x=>
+           '<div class="mrg-ex"><span class="sent" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+bkHi(x.en,x.hi)+'</span> '+spk(x.en)
+           +'<div class="mrg-excn cnx">'+esc(x.cn||'')+'</div></div>').join('')+'</div>':'')
+       +'<div class="mrg-src">來自：'+esc(e.src.titleCn)+'</div>'
+       +'</div>';
+    }).join('');
+  }
+
+  /* IV. 快速回顧 */
+  if(r.quick.length){
+    h+='<div class="bkbar">🟢 IV. 快速回顧</div>'
+     +'<div class="card"><div class="muted" style="margin-bottom:8px">這幾課已經有進度，這裡只列主題提醒，需要細看再點進去。</div>'
+     +'<div class="mrquick">'+r.quick.map(x=>{
+        const w=mrCoreWords(x.b,2);
+        return '<button class="mrq" onclick="bkGo(\''+x.b.id+'\')">'
+         +'<span class="mrq-t">'+(x.b.icon||'📕')+' '+esc(x.b.titleCn)+'</span>'
+         +(w.length?'<span class="mrq-w">'+w.map(t=>esc(t.w)).join(' · ')+'</span>':'')
+         +'</button>';
+      }).join('')+'</div></div>';
+  }
+  return h;
 }
 /* 搜尋：找出關鍵字出現在哪幾課的哪些段落 */
 function bkWhere(b,s){
@@ -4005,12 +4309,14 @@ function bkSearch(q){
   res.innerHTML='<div class="muted" style="margin:2px 0 8px">「'+esc(bkQuery.trim())+'」出現在 '+hits.length+' 課</div>'
     + hits.map(x=>bkItem(x.b,'<div class="meta" style="margin-top:4px"><span>🔍 出現在：'+x.where.map(esc).join('、')+'</span></div>')).join('');
 }
-function bkGo(id,sec){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; sbAutoCollapse();
+function bkGo(id,sec){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; bkRevYM=null; sbAutoCollapse();
   try{ if(bkOpen) localStorage.setItem('b2lab_bkLast_'+PROFILE, bkOpen.id); }catch(e){}
+  /* 開過課＝讀過（每月智慧複習用來分辨「未閱讀 / 已開始」；只記時間戳，不動原本完成狀態） */
+  if(bkOpen){ if(!ST.bkSeen) ST.bkSeen={}; ST.bkSeen[bkOpen.id]=Date.now(); save(); }
   RENDER.book();
   if(sec){ const el=$('bksec-'+sec); if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); el.classList.add('bksec-flash'); setTimeout(()=>el.classList.remove('bksec-flash'),1200); return; } }
   window.scrollTo(0,0); }
-function bkClose(){ bkOpen=null; try{ localStorage.removeItem('b2lab_bkLast_'+PROFILE); }catch(e){} sbAutoExpand(); RENDER.book(); window.scrollTo(0,0); }
+function bkClose(){ bkOpen=null; bkRevYM=null; try{ localStorage.removeItem('b2lab_bkLast_'+PROFILE); }catch(e){} sbAutoExpand(); RENDER.book(); window.scrollTo(0,0); }
 /* 課本朗讀（整段／全文共用）：一句一句念、念到哪句反黃到哪句；
    按下去的按鈕變紅色「⏹ 停止」，再按一次或點空白處就停。
    Web Speech 的 onend 在 iOS/Chrome 不一定會觸發，所以每句都有看門狗，時間到就自己往下念。 */
@@ -4076,6 +4382,7 @@ function bkTogAns(btn){
 window.bkGo=bkGo; window.bkClose=bkClose; window.bkCalShift=bkCalShift; window.bkSearch=bkSearch;
 window.bkTogHint=bkTogHint; window.bkReadPara=bkReadPara; window.bkTogAns=bkTogAns;
 window.bkReadAll=bkReadAll; window.togHintBox=togHintBox;
+window.mrOpen=mrOpen; window.mrClose=mrClose;
 
 /* 文法重點的 ✅／❌ 自動上色（到左括號或行尾為止） */
 function bkMark(s){
