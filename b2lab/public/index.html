@@ -440,21 +440,22 @@ tr:nth-child(even) td{background:#fdfbf8}
 .mrf-pat{font-size:calc(12px * var(--fs));font-weight:600;color:var(--accent2);margin-top:1px}
 .mrf-ex{font-size:calc(13px * var(--fs));font-weight:400;margin-top:3px;line-height:1.55;color:#4a4238}
 .mrf-excn{font-size:calc(12px * var(--fs));color:var(--ink2);margin-top:1px}
-.mrf-go{margin-top:8px;border:1.5px solid var(--accent2);background:var(--card);color:var(--accent2);
-  border-radius:999px;font:inherit;font-size:calc(11px * var(--fs));font-weight:800;padding:3px 12px;cursor:pointer}
-.mrf-go:active{background:var(--accent-soft)}
-.mrgram{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;
-  margin-bottom:8px;box-shadow:0 1px 4px rgba(60,45,30,.05)}
+.mrf-go{margin-top:6px;border:0;background:none;color:var(--accent2);
+  font:inherit;font-size:calc(11.5px * var(--fs));font-weight:700;padding:0;cursor:pointer;text-decoration:none}
+.mrf-go:hover{text-decoration:underline}
+.mrgrambox{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.mrgram{padding:10px 12px}
+.mrgram:not(:last-child){border-bottom:1px solid var(--line)}
 .mrg-t{font-weight:800;font-size:calc(14px * var(--fs));display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .mrg-hit{font-size:calc(10.5px * var(--fs));font-weight:700;color:#2b6b69;background:#f2f7f7;
   border:1px solid #d5e5e4;border-radius:12px;padding:1px 8px}
-.mrg-pat{font-size:calc(12.5px * var(--fs));font-weight:700;color:var(--accent2);margin-top:4px}
-.mrg-pts{margin:5px 0 0;padding-left:19px;font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.65}
-.mrg-pts li{margin-bottom:2px}
-.mrg-exs{margin-top:6px;border-top:1px dashed var(--line);padding-top:6px}
-.mrg-ex{font-size:calc(13px * var(--fs));line-height:1.55;margin-bottom:4px}
+.mrg-pat{font-size:calc(12.5px * var(--fs));font-weight:700;color:var(--accent2);margin-top:3px;
+  background:#fdf3e7;border-radius:4px;padding:2px 6px;display:inline-block}
+.mrg-pts{margin:4px 0 0;padding-left:0;font-size:calc(12.5px * var(--fs));color:var(--ink2);line-height:1.6;list-style:none}
+.mrg-exs{margin-top:5px}
+.mrg-ex{font-size:calc(13px * var(--fs));line-height:1.55;margin-bottom:3px}
 .mrg-excn{font-size:calc(12px * var(--fs));color:var(--ink2)}
-.mrg-src{font-size:calc(10.5px * var(--fs));color:var(--ink2);margin-top:6px}
+.mrg-src{font-size:calc(10.5px * var(--fs));color:var(--ink2);margin-top:4px}
 .mrquick{display:flex;flex-wrap:wrap;gap:6px}
 .mrq{flex:1 1 180px;min-width:0;text-align:left;border:1px solid var(--line);background:var(--card);
   border-radius:8px;padding:7px 10px;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:1px;
@@ -464,6 +465,32 @@ tr:nth-child(even) td{background:#fdfbf8}
 .mrq-t{font-weight:700;font-size:calc(13px * var(--fs));color:var(--ink)}
 .mrq-w{font-size:calc(11px * var(--fs));color:var(--ink2)}
 @media(max-width:499px){.mrquick{flex-direction:column}.mrq{flex-basis:auto}}
+/* ---------- V. 本月挑戰 Active Recall ---------- */
+.mrch{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;min-height:120px}
+.mrch-progress{font-size:calc(12px * var(--fs));color:var(--ink2);font-weight:700;margin-bottom:8px}
+.mrch-type{font-size:calc(11px * var(--fs));font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.3px;margin-bottom:6px}
+.mrch-q{font-size:calc(16px * var(--fs));font-weight:700;line-height:1.5;margin-bottom:10px}
+.mrch-q .sent{cursor:pointer}
+.mrch-opts{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
+.mrch-opt{border:1px solid var(--line);border-radius:8px;padding:7px 11px;background:var(--card);
+  font:inherit;font-size:calc(13.5px * var(--fs));text-align:left;cursor:pointer;transition:border-color .12s}
+@media(hover:hover){.mrch-opt:hover{border-color:var(--accent2)}}
+.mrch-opt.chosen{border-color:var(--accent2);background:var(--accent-soft)}
+.mrch-opt.correct{border-color:#2d8a4e;background:#f0f9f3}
+.mrch-opt.wrong{border-color:#d9534f;background:#fdf0ef}
+.mrch-reveal{border:1.5px solid var(--accent2);background:var(--card);color:var(--accent2);border-radius:999px;
+  font:inherit;font-size:calc(12px * var(--fs));font-weight:700;padding:6px 18px;cursor:pointer}
+.mrch-reveal:active{background:var(--accent-soft)}
+.mrch-ans{margin-top:10px;padding:10px 12px;background:#fdf3e7;border-radius:8px;font-size:calc(14px * var(--fs));line-height:1.6}
+.mrch-ans b{font-weight:800}
+.mrch-ans .cnx{color:var(--ink2);font-size:calc(12.5px * var(--fs))}
+.mrch-rule{font-size:calc(12px * var(--fs));color:var(--accent2);font-weight:600;margin-top:4px}
+.mrch-nav{display:flex;gap:10px;margin-top:12px;justify-content:flex-end}
+.mrch-btn{border:0;background:var(--accent2);color:#fff;border-radius:999px;font:inherit;
+  font-size:calc(12px * var(--fs));font-weight:700;padding:6px 16px;cursor:pointer}
+.mrch-btn:active{opacity:.85}
+.mrch-btn.sec{background:none;color:var(--accent2);border:1.5px solid var(--accent2)}
+.mrch-done{text-align:center;padding:18px 0;font-size:calc(15px * var(--fs));font-weight:700;color:var(--ink2)}
 .bkmon{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
 .bkmon-tog{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;background:none;
   padding:4px 2px;font:inherit;font-weight:700;font-size:calc(13px * var(--fs));color:var(--ink2);cursor:pointer}
@@ -3839,7 +3866,7 @@ document.addEventListener('click',e=>{
 const BOOK_LESSONS=((window.BOOK||{}).lessons||[]).slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
 // 課本單字也進字庫，全站點字都查得到
 BOOK_LESSONS.forEach(b=>(b.vocab||[]).concat(b.vocab2||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:'',exEn:t.ex,exCn:t.exCn,src:'課本：'+b.titleCn})));
-let bkOpen=null, bkCalY=null, bkCalM=null, bkQuery='', bkRevYM=null;
+let bkOpen=null, bkCalY=null, bkCalM=null, bkQuery='', bkRevYM=null, mrChIdx=0, mrChShow=false;
 /* 例句裡用到該單字／片語就加粗（compensate 也會對到 compensated；片語去掉 something/someone 佔位字再比對） */
 function bkHi(sent,w){
   let s=esc(sent);
@@ -4175,6 +4202,97 @@ function mrCoreWords(b,n){
   }).sort((a,b)=>b.s-a.s).slice(0,n||3).map(x=>x.t);
 }
 
+/* Active Recall：從本次 MR 已選內容產生 6 題，deterministic */
+function mrBuildChallenge(r){
+  const qs=[];
+  const v=r.vocab, g=r.gram;
+  const stableSort=(arr,key)=>arr.slice().sort((a,b)=>(key(a)<key(b)?-1:key(a)>key(b)?1:0));
+  const sv=stableSort(v, e=>e.t.w.toLowerCase());
+  const sg=stableSort(g, e=>e.g.title.toLowerCase());
+  // Q1: 中文→英文 (top priority vocab)
+  if(sv.length>=1){ const t=sv[0].t;
+    qs.push({type:'cn2en',prompt:t.cn||'',answer:t.w,audio:t.w,
+      rule:t.pos?(t.pos+' — '+t.w):t.w}); }
+  // Q2: 英文→中文
+  if(sv.length>=3){ const t=sv[2].t;
+    qs.push({type:'en2cn',prompt:t.w,answer:t.cn||'',audio:t.w,
+      rule:t.ex?t.ex:''}); }
+  // Q3: 選正確句子 (from grammar)
+  if(sg.length>=1){ const ge=sg[0], gx=ge.g;
+    const exs=gx.exs||[];
+    if(exs.length){ const ex=exs[0];
+      const wrong1=ex.en.replace(/\b(is|are|was|were|am)\s+/i,'').replace(/\bing\b/,'ed');
+      const wrong2=ex.en.replace(/\bto\s+(\w+)/,(m,v)=>'to '+v+'ing');
+      const opts=[ex.en, wrong1!==ex.en?wrong1:(ex.en+' always'), wrong2!==ex.en?wrong2:(ex.en.replace(/\./,'?'))];
+      qs.push({type:'pick',prompt:'Which sentence is correct?',opts:opts,correctIdx:0,
+        rule:gx.pat||gx.title, hi:ex.hi||''}); }
+    else qs.push({type:'recall',prompt:gx.title+'：'+(gx.pat||''),answer:gx.pat||gx.title,rule:gx.title}); }
+  // Q4: 填空 (vocab in sentence)
+  if(sv.length>=5){ const t=sv[4].t;
+    if(t.ex){ const blank=t.ex.replace(new RegExp(t.w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'ig'),'______');
+      if(blank!==t.ex) qs.push({type:'fill',prompt:blank,answer:t.w,audio:t.ex,
+        rule:t.cn||''}); } }
+  // Q5: 句型回想 (grammar)
+  if(sg.length>=2){ const ge=sg[1], gx=ge.g;
+    qs.push({type:'recall',prompt:gx.title+'？',answer:gx.pat||gx.title,
+      rule:(gx.exs||[])[0]?gx.exs[0].en:'',audio:(gx.exs||[])[0]?gx.exs[0].en:''}); }
+  // Q6: 英文→中文 (another vocab)
+  if(sv.length>=7){ const t=sv[6].t;
+    qs.push({type:'en2cn',prompt:t.w,answer:t.cn||'',audio:t.w,
+      rule:t.ex?t.ex:''}); }
+  // Fallbacks if < 6
+  if(qs.length<6 && sv.length>=2){ const t=sv[1].t;
+    qs.push({type:'cn2en',prompt:t.cn||'',answer:t.w,audio:t.w,rule:t.w}); }
+  return qs.slice(0,6);
+}
+function mrChHTML(qs){
+  if(mrChIdx>=qs.length) return '<div class="mrch-done">🎉 本月挑戰完成！</div>';
+  const q=qs[mrChIdx], n=mrChIdx+1, total=qs.length;
+  let h='<div class="mrch-progress">'+ n+' / '+total+'</div>';
+  const typeLabel={cn2en:'中文 → 英文',en2cn:'英文 → 中文',pick:'選正確句子',fill:'填空',recall:'句型回想'};
+  h+='<div class="mrch-type">'+(typeLabel[q.type]||q.type)+'</div>';
+  if(q.type==='pick'){
+    h+='<div class="mrch-q">'+esc(q.prompt)+'</div>';
+    if(!mrChShow){
+      h+='<div class="mrch-opts">'+q.opts.map((o,i)=>
+        '<button class="mrch-opt" onclick="mrChPick('+i+','+q.correctIdx+')">'+String.fromCharCode(65+i)+'. '+esc(o)+'</button>'
+      ).join('')+'</div>';
+    } else {
+      h+='<div class="mrch-opts">'+q.opts.map((o,i)=>{
+        const cls=i===q.correctIdx?'correct':'wrong';
+        return '<div class="mrch-opt '+cls+'">'+String.fromCharCode(65+i)+'. '+esc(o)+'</div>';
+      }).join('')+'</div>';
+      h+='<div class="mrch-ans"><div class="mrch-rule">'+esc(q.rule)+'</div></div>';
+    }
+  } else if(q.type==='fill'){
+    h+='<div class="mrch-q">'+esc(q.prompt)+'</div>';
+    if(!mrChShow) h+='<button class="mrch-reveal" onclick="mrChReveal()">顯示答案</button>';
+    else h+='<div class="mrch-ans"><b>'+esc(q.answer)+'</b>'+(q.audio?' '+spk(q.audio):'')
+      +'<div class="mrch-rule cnx">'+esc(q.rule)+'</div></div>';
+  } else if(q.type==='cn2en'){
+    h+='<div class="mrch-q">「'+esc(q.prompt)+'」<br>英文怎麼說？</div>';
+    if(!mrChShow) h+='<button class="mrch-reveal" onclick="mrChReveal()">顯示答案</button>';
+    else h+='<div class="mrch-ans"><b>'+esc(q.answer)+'</b>'+(q.audio?' '+spk(q.audio):'')+'</div>';
+  } else if(q.type==='en2cn'){
+    h+='<div class="mrch-q">'+esc(q.prompt)+(q.audio?' '+spk(q.audio):'')+'<br>你記得意思嗎？</div>';
+    if(!mrChShow) h+='<button class="mrch-reveal" onclick="mrChReveal()">顯示答案</button>';
+    else h+='<div class="mrch-ans"><b class="cnx">'+esc(q.answer)+'</b>'
+      +(q.rule?'<div class="mrch-rule">'+esc(q.rule)+'</div>':'')+'</div>';
+  } else {
+    h+='<div class="mrch-q">'+esc(q.prompt)+'</div>';
+    if(!mrChShow) h+='<button class="mrch-reveal" onclick="mrChReveal()">顯示答案</button>';
+    else h+='<div class="mrch-ans"><b>'+esc(q.answer)+'</b>'
+      +(q.rule?'<div class="mrch-rule">'+esc(q.rule)+'</div>':'')+'</div>';
+  }
+  if(mrChShow) h+='<div class="mrch-nav"><button class="mrch-btn" onclick="mrChNext()">下一題 →</button></div>';
+  return h;
+}
+let _mrChQs=null;
+function mrChReveal(){ mrChShow=true; const el=document.getElementById('mrch-area'); if(el) el.innerHTML=mrChHTML(_mrChQs); }
+function mrChNext(){ mrChIdx++; mrChShow=false; const el=document.getElementById('mrch-area'); if(el) el.innerHTML=mrChHTML(_mrChQs); }
+function mrChPick(i,correct){ mrChShow=true; const el=document.getElementById('mrch-area'); if(el) el.innerHTML=mrChHTML(_mrChQs); }
+window.mrChReveal=mrChReveal; window.mrChNext=mrChNext; window.mrChPick=mrChPick;
+
 /* 月曆右側面板的入口卡（本月沒課就不顯示，不留空卡） */
 function mrEntryHTML(ym){
   const r=mrBuild(ym); if(!r) return '';
@@ -4189,8 +4307,8 @@ function mrEntryHTML(ym){
    +'</div>';
 }
 
-function mrOpen(ym){ bkRevYM=ym; bkOpen=null; sbAutoCollapse(); RENDER.book(); window.scrollTo(0,0); }
-function mrClose(){ bkRevYM=null; sbAutoExpand(); RENDER.book(); window.scrollTo(0,0); }
+function mrOpen(ym){ bkRevYM=ym; bkOpen=null; mrChIdx=0; mrChShow=false; _mrChQs=null; sbAutoCollapse(); RENDER.book(); window.scrollTo(0,0); }
+function mrClose(){ bkRevYM=null; mrChIdx=0; mrChShow=false; _mrChQs=null; sbAutoExpand(); RENDER.book(); window.scrollTo(0,0); }
 
 /* 複習頁：沿用課本頁的視覺語言（magttl / bkbar / card），不新增主色 */
 function mrPageHTML(ym){
@@ -4207,11 +4325,12 @@ function mrPageHTML(ym){
    +'</div><div class="bkvcell bkvexample"><span class="sent" data-t="'+esc(t.ex||'')+'" onclick="saySent(this)">'+bkHi(t.ex||'',t.w)+'</span> '+(t.ex?spk(t.ex):'')+'</div>'
    +'<div class="bkvtranslation cnx">'+esc(t.exCn||'')+'</div><div class="bkvcell bkvmeaning cnx">'+esc(t.cn||'')+'</div></article>';
 
-  const statBits=[(r.focus.length?r.focus.length+' 堂待補強':'重點回顧'),r.vocab.length+' 個重點單字',r.gram.length+' 個文法重點'];
+  const chQs=mrBuildChallenge(r); _mrChQs=chQs; mrChIdx=0; mrChShow=false;
+  const statBits=[(r.focus.length?r.focus.length+' 堂待補強':'重點回顧'),r.vocab.length+' 個重點單字',r.gram.length+' 個文法重點',chQs.length+' 題挑戰'];
   let h='<div class="magttl"><button class="back" onclick="mrClose()"><span class="back-label">返回課本</span></button>'
    +'<div class="magico">🔄</div>'
    +'<h2>'+mon+' 月重點複習</h2>'
-   +'<div class="mr-time">根據你的 '+mon+' 月學習狀況整理　·　約 20 分鐘</div>'
+   +'<div class="mr-time">根據你的 '+mon+' 月學習狀況整理　·　約 40 分鐘</div>'
    +'<div class="mr-stats">'+statBits.join(' · ')+'</div>'
    +'<div class="bar">'
    +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button>'
@@ -4252,17 +4371,17 @@ function mrPageHTML(ym){
   /* III. 本月文法與句型（已去重） */
   if(r.gram.length){
     h+='<div class="bkbar">📐 III. 本月文法與句型（'+r.gram.length+'）</div>';
-    h+=r.gram.map(e=>{
+    h+='<div class="mrgrambox">'+r.gram.map(e=>{
       const g=e.g, ex1=(g.exs||[])[0], pt1=(g.pts||[])[0];
       return '<div class="mrgram">'
        +'<div class="mrg-t">'+esc(g.title)+(e.hits>1?'<span class="mrg-hit">'+e.hits+' 堂課出現</span>':'')+'</div>'
        +(g.pat?'<div class="mrg-pat">'+bkVars(g.pat)+'</div>':'')
-       +(pt1?'<div class="mrg-pts" style="list-style:none;padding-left:0;margin:4px 0 0">'+bkMark(String(pt1))+'</div>':'')
+       +(pt1?'<div class="mrg-pts">'+bkMark(String(pt1))+'</div>':'')
        +(ex1?'<div class="mrg-exs"><div class="mrg-ex"><span class="sent" data-t="'+esc(ex1.en)+'" onclick="saySent(this)">'+bkHi(ex1.en,ex1.hi)+'</span> '+spk(ex1.en)
          +'<div class="mrg-excn cnx">'+esc(ex1.cn||'')+'</div></div></div>':'')
        +'<div class="mrg-src">來自：'+esc(e.src.titleCn)+'</div>'
        +'</div>';
-    }).join('');
+    }).join('')+'</div>';
   }
 
   /* IV. 快速回顧 */
@@ -4275,6 +4394,12 @@ function mrPageHTML(ym){
          +(w.length?'<span class="mrq-w">'+w.map(t=>esc(t.w)).join(' · ')+'</span>':'')
          +'</button>';
       }).join('')+'</div>';
+  }
+
+  /* V. 本月挑戰 / Active Recall */
+  if(chQs.length){
+    h+='<div class="bkbar" style="margin-top:14px">🧠 V. 本月挑戰</div>'
+     +'<div class="mrch" id="mrch-area">'+mrChHTML(chQs)+'</div>';
   }
   return h;
 }
