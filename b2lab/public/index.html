@@ -306,11 +306,18 @@ tr:nth-child(even) td{background:#fdfbf8}
 .grade small{display:block;font-size:calc(10px * var(--fs));font-weight:400;opacity:.9}
 .pbwrap{background:#efeae3;border-radius:20px;height:9px;overflow:hidden;margin:8px 0}
 .pbfill{background:linear-gradient(90deg,#f0964f,#d9691f);height:100%;width:0;transition:width .3s}
+/* 首頁標題列：今日新內容＋右側小型「使用說明」入口 */
+.dh-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.dh-help{border:0;background:none;color:var(--ink2);font:inherit;font-size:var(--font-meta);
+  font-weight:600;cursor:pointer;padding:3px 8px;border-radius:8px;white-space:nowrap}
+@media(hover:hover){.dh-help:hover{color:var(--accent2);background:var(--accent-soft)}}
+.dh-sub{font-size:var(--font-secondary);margin:2px 0 10px;line-height:1.5}
+.dh-sub .mut{color:var(--ink2)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 @media(max-width:499px){.stats{grid-template-columns:repeat(2,1fr)}}
-.stat{background:#f9fafb;border:1px solid var(--line);border-radius:10px;padding:10px 8px;text-align:center}
-.stat b{display:block;font-size:calc(26px * var(--fs));color:var(--accent2);line-height:1.15;font-weight:900}
-.stat b i{font-style:normal;font-size:calc(10.5px * var(--fs));font-weight:600;color:var(--ink2);margin-left:2px;vertical-align:2px}
+.stat{background:#fdfcfa;border:1px solid var(--line);border-radius:10px;padding:7px 8px;text-align:center}
+.stat b{display:block;font-size:calc(26px * var(--fs));color:var(--ink);line-height:1.15;font-weight:800}
+.stat b i{font-style:normal;font-size:calc(10.5px * var(--fs));font-weight:500;color:var(--ink2);margin-left:4px;vertical-align:2px}
 .stat span{font-size:calc(10.5px * var(--fs));color:var(--ink2);word-break:keep-all}
 /* 可點擊的統計格（點了跳到對應清單） */
 .stat.tap{cursor:pointer;border-color:var(--accent)}
@@ -320,7 +327,7 @@ tr:nth-child(even) td{background:#fdfbf8}
 @media(hover:hover){.stat.go:hover,.stat.tap:hover{border-color:var(--accent2);background:#fffaf2;box-shadow:0 3px 10px rgba(60,45,30,.12);transform:translateY(-1px)}}
 .stat.go,.stat.tap{transition:background .12s,box-shadow .12s,transform .12s}
 /* 今日待複習 > 0：柔和橘色邊框＋暖底色 CTA */
-.stat.cta{background:#fff7ee;border-color:var(--accent);border-left:4px solid var(--accent)}
+.stat.cta{background:#fff7ee;border-color:#f0d9bd}
 .stat.cta b{color:var(--accent2)}
 .stat.cta span{color:var(--accent2);font-weight:700}
 .stat.cta:active{background:#ffecd4}
@@ -560,6 +567,13 @@ body.cnall #v-real span.cnx{display:inline!important}
 #v-real .bkvtranslation{margin-top:3px;color:var(--ink2);font-size:var(--font-body)}
 #v-real .bkvmeaning{margin-top:3px;color:#4a4238;font-size:var(--font-body);font-weight:var(--fw-emph)}
 #v-real .wln{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap}
+/* 實景 detail：section 間距比課本再收一點（規格：縮短 15–20%） */
+#v-real .mr-sec{margin:14px 0 6px}
+/* 影片實景原句：同一張卡內用細分隔線，不要每句一張卡 */
+.rwq{padding:7px 0;line-height:var(--lh-body);font-size:var(--font-body)}
+.rwq-div{border-bottom:1px solid var(--line)}
+.rwq-n{color:var(--ink2);font-weight:600;font-size:var(--font-secondary)}
+.rwq-cn{color:var(--ink2);font-size:var(--font-secondary);margin-top:2px}
 /* 實景 usage / compare */
 .rw-usage b{font-weight:var(--fw-emph)}
 .rw-cmp{margin:0;padding:0;list-style:none}
@@ -3552,6 +3566,9 @@ function gramHTML(g){
 /* ============================================================
    6.5 今日分頁（每日自動更新的文章與文法）
    ============================================================ */
+/* 首頁「使用說明」小按鈕：展開/收合原本的說明文字 */
+function dhHelpTog(){ const el=$('dh-hint'); if(el) el.hidden=!el.hidden; }
+window.dhHelpTog=dhHelpTog;
 RENDER.daily=function(){
   const t=today();
   const isToday=x=>x&&x.date===t;
@@ -3568,14 +3585,17 @@ RENDER.daily=function(){
   const artsToday=pickMines(DAILY_ARTS);
   const gramsToday=pickMines(DAILY_GRAM);
   const listensToday=pickMines(LESSONS);
+  const dLabel=(+t.slice(5,7))+' 月 '+(+t.slice(8,10))+' 日';
   let h=installCard()
-   +'<div class="card"><h2 class="sec">📅 今日新內容</h2>'
-   +'<div class="muted">'+t+'　'+(PROFILES[PROFILE]||'')+' · '+(GOALS[PROFILE]||'')+'</div>'
-   +'<details class="hint-toggle"><summary class="hint-sum">📌 使用說明</summary><div class="hint"><b>每週三、五</b>更新，每次都會依你的程度給<b>三份文章</b>、<b>三個文法單元</b>與<b>三課聽力</b>（由淺到深，可以先讀最簡單的再往上挑戰）。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力是<b>依你的課堂筆記單字自製的對話</b>，用語音朗讀跟讀練習。</div></details>'
-   +'<div class="stats"><div class="stat go" onclick="statGo(\'read\')" title="點一下看全部每日文章"><b>'+pool.length+'<i>篇</i></b><span>累積每日文章 ›</span></div>'
-   +'<div class="stat go" onclick="statGo(\'gram\')" title="點一下看全部文法單元"><b>'+DAILY_GRAM.length+'<i>單元</i></b><span>累積每日文法 ›</span></div>'
-   +'<div class="stat go" onclick="statGo(\'prog\')" title="點一下看打卡日曆與成就"><b><span style="font-size:.7em">🔥</span> '+(ST.streak||1)+'<i>天</i></b><span>連續學習天數 ›</span></div>'
-   +'<div class="stat tap'+(VOCAB.filter(x=>isDue(x.w)).length>0?' cta':'')+'" onclick="goReview()" title="點一下直接開始複習"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'<i>個</i></b><span>今日待複習單字 ›</span></div></div></div>';
+   +'<div class="card">'
+   +'<div class="dh-top"><h2 class="sec" style="margin:0">📅 今日新內容</h2>'
+   +'<button class="dh-help" onclick="dhHelpTog()">使用說明 ?</button></div>'
+   +'<div class="dh-sub"><span class="mut">'+dLabel+' · '+(PROFILES[PROFILE]||'')+'</span>　'+(GOALS[PROFILE]||'')+'</div>'
+   +'<div class="hint" id="dh-hint" hidden style="margin-bottom:10px"><b>每週三、五</b>更新，每次都會依你的程度給<b>三份文章</b>、<b>三個文法單元</b>與<b>三課聽力</b>（由淺到深，可以先讀最簡單的再往上挑戰）。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力是<b>依你的課堂筆記單字自製的對話</b>，用語音朗讀跟讀練習。</div>'
+   +'<div class="stats"><div class="stat go" onclick="statGo(\'read\')" title="點一下看全部每日文章"><b>'+pool.length+'<i>篇</i></b><span>累積文章 ›</span></div>'
+   +'<div class="stat go" onclick="statGo(\'gram\')" title="點一下看全部文法單元"><b>'+DAILY_GRAM.length+'<i>單元</i></b><span>累積文法 ›</span></div>'
+   +'<div class="stat go" onclick="statGo(\'prog\')" title="點一下看打卡日曆與成就"><b><span style="font-size:.7em">🔥</span> '+(ST.streak||1)+'<i>天</i></b><span>連續學習 ›</span></div>'
+   +'<div class="stat tap'+(VOCAB.filter(x=>isDue(x.w)).length>0?' cta':'')+'" onclick="goReview()" title="點一下直接開始複習"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'<i>個</i></b><span>今日待複習 ›</span></div></div></div>';
 
   artsToday.forEach(a=>{
     const d=ST.artDone[a.id];
@@ -4398,11 +4418,8 @@ window.mrChReveal=mrChReveal; window.mrChNext=mrChNext; window.mrChPick=mrChPick
    從真實生活影片（小紅書 / YouTube 等外部來源）建立學習教材。
    只保存 title / source / sourceUrl 與使用者自行整理的學習內容，
    不自動抓影片、不產生假的 transcript。資料存在 ST.rw（跟進度同一份雲端文件）。 */
-let rwOpen=null, rwCat='all', rwEditId=null, rwFormOn=false, rwDraft=null;
+let rwOpen=null, rwCat='all', rwEditId=null, rwFormOn=false, rwDraft=null, rwQAOn=false;
 const RW_CATS=['生活','交通','職場','旅行','其他'];
-/* 五個分類各自的圖示：detail 表頭與列表縮圖共用（跟課本表頭的大 emoji 同一套視覺） */
-const RW_ICONS={'生活':'🏠','交通':'🚗','職場':'💼','旅行':'✈️','其他':'🎬'};
-const rwIcon = l => RW_ICONS[l&&l.cat]||'🎬';
 /* 簡轉繁常用字對照（只用來產生「顯示標題」預設值；原始來源標題另存 tiSrc 不動） */
 const RW_MAP={};
 ('么麼 义義 乡鄉 边邊 万萬 与與 专專 业業 东東 丝絲 两兩 严嚴 个個 丰豐 临臨 为為 丽麗 举舉 义義 乌烏 乐樂 习習 乡鄉 书書 买買 乱亂 争爭 云雲 亚亞 产產 亲親 亿億 仅僅 从從 仓倉 仪儀 们們 价價 众眾 优優 会會 伟偉 传傳 伤傷 体體 侧側 倾傾 储儲 儿兒 党黨 兰蘭 关關 兴興 养養 兽獸 内內 册冊 写寫 军軍 农農 冲衝 决決 况況 冻凍 净淨 凉涼 减減 几幾 凤鳳 凭憑 凯凱 击擊 划劃 刘劉 则則 刚剛 创創 删刪 别別 剧劇 劝勸 办辦 务務 动動 励勵 劲勁 劳勞 势勢 区區 医醫 华華 协協 单單 卖賣 卫衛 厂廠 厅廳 历歷 厉厲 压壓 厌厭 县縣 参參 双雙 发發 变變 叶葉 号號 叹嘆 后後 吓嚇 吗嗎 听聽 启啟 员員 响響 唤喚 喷噴 团團 园園 围圍 国國 图圖 圆圓 圣聖 场場 坏壞 块塊 坚堅 垫墊 声聲 壳殼 壶壺 处處 备備 够夠 头頭 夸誇 夹夾 夺奪 奋奮 奖獎 妇婦 妈媽 娱娛 孙孫 学學 宁寧 宝寶 实實 宠寵 审審 宫宮 宽寬 宾賓 对對 寻尋 导導 寿壽 将將 尔爾 尘塵 尝嘗 尽盡 层層 届屆 属屬 岁歲 岂豈 岛島 岭嶺 币幣 帅帥 师師 帐帳 帘簾 带帶 帮幫 并並 广廣 庄莊 庆慶 库庫 应應 庙廟 废廢 开開 异異 弃棄 张張 弯彎 弹彈 强強 归歸 当當 录錄 彻徹 径徑 忆憶 忧憂 怀懷 态態 怜憐 总總 恋戀 恳懇 恶惡 恼惱 悦悅 悬懸 惊驚 惧懼 惨慘 惯慣 愿願 懒懶 戏戲 战戰 户戶 扑撲 执執 扩擴 扫掃 扬揚 扰擾 抚撫 抛拋 抢搶 护護 报報 担擔 拟擬 拥擁 拦攔 拧擰 拨撥 择擇 挂掛 挤擠 挥揮 捞撈 损損 捡撿 换換 据據 掷擲 揽攬 搁擱 搅攪 携攜 摄攝 摆擺 摇搖 摊攤 撑撐 敌敵 数數 斗鬥 斩斬 断斷 无無 旧舊 时時 昼晝 显顯 晒曬 晓曉 晕暈 暂暫 术術 朴樸 机機 杀殺 杂雜 权權 条條 来來 杨楊 杰傑 极極 构構 枪槍 枫楓 柜櫃 标標 栋棟 栏欄 树樹 样樣 桥橋 桩樁 梦夢 检檢 楼樓 横橫 樱櫻 橱櫥 欢歡 欧歐 残殘 毁毀 毕畢 气氣 汇匯 汉漢 污汙 汤湯 沟溝 没沒 沥瀝 沦淪 沧滄 泪淚 泻瀉 泼潑 泽澤 洁潔 洒灑 浅淺 浆漿 浇澆 浊濁 测測 济濟 浏瀏 浑渾 浓濃 涛濤 涨漲 涩澀 渐漸 渔漁 温溫 湾灣 湿濕 溃潰 溅濺 滚滾 滞滯 满滿 滤濾 滥濫 滨濱 滩灘 潜潛 灭滅 灯燈 灵靈 灾災 灿燦 炉爐 炖燉 点點 炼煉 烂爛 烛燭 烦煩 烧燒 烫燙 热熱 焕煥 爱愛 爷爺 牵牽 犹猶 独獨 狭狹 狮獅 狱獄 猎獵 猪豬 猫貓 献獻 玛瑪 环環 现現 琼瓊 电電 画畫 畅暢 疗療 疯瘋 痒癢 瘫癱 瘾癮 皱皺 盏盞 盐鹽 监監 盖蓋 盗盜 盘盤 着著 睁睜 矫矯 矿礦 码碼 砖磚 硕碩 确確 碍礙 碱鹼 礼禮 祷禱 祸禍 离離 秃禿 种種 积積 称稱 稳穩 穷窮 窃竊 窍竅 窜竄 窝窩 竖豎 竞競 笔筆 笋筍 笼籠 筛篩 筹籌 签簽 简簡 篮籃 篱籬 类類 粤粵 粮糧 红紅 纤纖 约約 级級 纪紀 纬緯 纯純 纱紗 纲綱 纳納 纵縱 纷紛 纸紙 纹紋 纺紡 线線 练練 组組 绅紳 细細 织織 终終 绍紹 经經 绑綁 绒絨 结結 绕繞 绘繪 给給 络絡 绝絕 绞絞 统統 绢絹 绣繡 继繼 绩績 绪緒 续續 绳繩 维維 绵綿 绷繃 绸綢 综綜 绿綠 缅緬 缆纜 缉緝 缎緞 缓緩 缔締 缕縷 编編 缘緣 缚縛 缝縫 缠纏 缩縮 缴繳 网網 罗羅 罚罰 罢罷 羡羨 翘翹 耸聳 耻恥 聋聾 职職 联聯 聪聰 肃肅 肠腸 肤膚 肾腎 肿腫 胀脹 胁脅 胆膽 胜勝 胶膠 脉脈 脏臟 脑腦 脓膿 脚腳 脱脫 脸臉 腊臘 腻膩 腾騰 舆輿 舰艦 舱艙 艰艱 艳豔 艺藝 节節 芦蘆 苍蒼 苏蘇 苹蘋 茎莖 荐薦 荡蕩 荣榮 荤葷 药藥 莱萊 莲蓮 获獲 萝蘿 萤螢 营營 萧蕭 萨薩 葱蔥 蓝藍 蕴蘊 虑慮 虚虛 虫蟲 虽雖 虾蝦 蚀蝕 蚁蟻 蚂螞 蚕蠶 蛮蠻 蜡蠟 蝇蠅 蝉蟬 补補 衬襯 袄襖 袜襪 袭襲 装裝 裤褲 见見 观觀 规規 觅覓 视視 览覽 觉覺 触觸 誉譽 计計 订訂 认認 讥譏 讨討 让讓 训訓 议議 讯訊 记記 讲講 讳諱 讶訝 许許 论論 讼訟 讽諷 设設 访訪 诀訣 证證 评評 识識 诈詐 诉訴 诊診 词詞 译譯 试試 诗詩 诚誠 话話 诞誕 询詢 该該 详詳 诧詫 诫誡 诬誣 语語 误誤 诱誘 诲誨 说說 诵誦 请請 诸諸 诺諾 读讀 诽誹 课課 谁誰 调調 谅諒 谈談 谊誼 谋謀 谍諜 谎謊 谐諧 谓謂 谜謎 谢謝 谣謠 谤謗 谦謙 谨謹 谬謬 谱譜 谴譴 贝貝 贞貞 负負 贡貢 财財 责責 贤賢 败敗 账賬 货貨 质質 贩販 贪貪 贫貧 贬貶 购購 贮貯 贯貫 贱賤 贴貼 贵貴 贷貸 贸貿 费費 贺賀 贼賊 贿賄 赁賃 资資 赋賦 赌賭 赎贖 赏賞 赐賜 赔賠 赖賴 赚賺 赛賽 赞讚 赠贈 赢贏 赵趙 赶趕 趋趨 跃躍 践踐 踪蹤 车車 轨軌 轩軒 转轉 轮輪 软軟 轰轟 轴軸 轻輕 载載 轿轎 较較 辅輔 辆輛 辈輩 辉輝 辐輻 辑輯 输輸 辖轄 辗輾 辞辭 辩辯 辫辮 边邊 辽遼 达達 迁遷 过過 迈邁 运運 还還 这這 进進 远遠 违違 连連 迟遲 迹跡 适適 选選 逊遜 递遞 逻邏 遗遺 遥遙 邓鄧 邮郵 邻鄰 郁鬱 郑鄭 酱醬 酿釀 释釋 鉴鑑 针針 钉釘 钓釣 钙鈣 钞鈔 钟鐘 钠鈉 钢鋼 钥鑰 钦欽 钩鉤 钮鈕 钱錢 钳鉗 钻鑽 铁鐵 铃鈴 铅鉛 铜銅 铝鋁 铭銘 铲鏟 银銀 铸鑄 铺鋪 链鏈 销銷 锁鎖 锅鍋 锈鏽 锋鋒 锐銳 错錯 锚錨 锡錫 锣鑼 锤錘 锥錐 锦錦 锭錠 键鍵 锯鋸 锻鍛 镇鎮 镜鏡 镰鐮 长長 门門 闪閃 闭閉 问問 闯闖 闲閒 间間 闷悶 闸閘 闹鬧 闺閨 闻聞 阀閥 阁閣 阅閱 阔闊 队隊 阳陽 阴陰 阵陣 阶階 际際 陆陸 陈陳 险險 随隨 隐隱 隶隸 难難 雏雛 雾霧 静靜 韩韓 页頁 顶頂 顷頃 项項 顺順 须須 顽頑 顾顧 顿頓 颁頒 颂頌 预預 领領 颇頗 颈頸 频頻 颖穎 颗顆 题題 颜顏 额額 颠顛 风風 飘飄 飞飛 饥飢 饭飯 饮飲 饰飾 饱飽 饲飼 饺餃 饼餅 饿餓 馆館 馒饅 马馬 驭馭 驰馳 驱驅 驳駁 驴驢 驶駛 驻駐 驼駝 驾駕 骂罵 骄驕 骆駱 验驗 骏駿 骑騎 骗騙 骚騷 骤驟 鱼魚 鲁魯 鲜鮮 鲤鯉 鲨鯊 鳄鱷 鸟鳥 鸡雞 鸣鳴 鸭鴨 鸽鴿 鹅鵝 鹰鷹 麦麥 黄黃 齐齊 齿齒 龄齡 龙龍 龟龜')
@@ -4433,6 +4450,38 @@ function rwParseShare(txt){
     .replace(/^【/,'').replace(/】$/,'');
   return {title, src, url};
 }
+/* 從貼上的文字裡找可靠的英文原句（字幕 / 分享內文附的句子）：
+   只做切句、去重、上限 5 句；含本課核心單字的句子優先。絕不憑標題生成句子。 */
+function rwExtractQuotes(txt,vocab){
+  const segs=String(txt||'').split(/[\r\n]+/)
+    .flatMap(line=>line.split(/(?<=[.!?…])\s+/))
+    .map(s=>s.trim());
+  const seen={}, out=[];
+  segs.forEach(s=>{
+    if(!s||/https?:\/\//.test(s)) return;
+    if((s.match(/[一-鿿]/g)||[]).length) return;             // 混中文的行不是英文原句
+    const words=s.match(/[A-Za-z][A-Za-z''-]*/g)||[];
+    if(words.length<3) return;                                // 太短（Yes / 語助詞）不收
+    const k=s.toLowerCase(); if(seen[k]) return; seen[k]=1;
+    out.push(s);
+  });
+  const hasV=s=>(vocab||[]).some(v=>v.w&&s.toLowerCase().includes(v.w.toLowerCase()));
+  return out.sort((a,b)=>(hasV(b)?1:0)-(hasV(a)?1:0)).slice(0,5);
+}
+/* detail 頁「補充影片原句」：無字幕時的 optional fallback，貼上後存進 videoQuotes（src:user） */
+function rwQATog(){ rwQAOn=!rwQAOn; RENDER.real();
+  if(rwQAOn) setTimeout(()=>{const el=document.getElementById('rwq-input'); if(el) el.focus();},50); }
+function rwQASave(id){
+  const el=document.getElementById('rwq-input');
+  const l=(ST.rw||{})[id]; if(!el||!l) return;
+  const qs=rwExtractQuotes(el.value, l.vocab);
+  if(!qs.length){ showToast('沒有可用的句子','請貼影片裡真的出現的英文句子（至少三個字）'); return; }
+  l.quotes=(l.quotes||[]).concat(qs.map(en=>({en, cn:'', src:'user'}))).slice(0,5);
+  l.t=Date.now(); save();
+  rwQAOn=false; RENDER.real();
+  showToast('已加入 '+qs.length+' 句','影片實景原句已更新；中文翻譯可用「編輯」補上');
+}
+window.rwQATog=rwQATog; window.rwQASave=rwQASave;
 
 RENDER.real=function(){
   const v=$('v-real');
@@ -4507,36 +4556,55 @@ function rwWordRow(t,l){
 
 function rwDetailHTML(l){
   const st=rwStat(l.id);
+  /* Header：觀看原影片直接放在標題卡的 bar 裡，不再獨立一個「原始影片」區塊 */
   let h='<div class="magttl"><button class="back" onclick="rwBack()"><span class="back-label">返回實景</span></button>'
-   +'<div class="magico">'+rwIcon(l)+'</div>'
    +'<h2>'+esc(rwPad(l.ti))+'</h2>'
    +'<div class="mr-time">'+esc([l.country,l.cat,l.level,l.min].filter(Boolean).join(' · '))+'</div>'
    +'<div class="bar">'
+   +(l.url?'<a class="spk" style="text-decoration:none" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>':'')
    +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button></div></div>';
-  /* 來源區不顯示任何平台品牌；sourceType / 原始標題保留在資料層供追溯 */
-  if(l.url)
-    h+='<div class="mr-sec">原始影片</div><div class="card rw-srccard">'
-     +'<a class="btn ghost" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>'
-     +'</div>';
   if(l.ctx) h+='<div class="mr-sec">情境 Context</div><div class="card">'+rwParas(l.ctx)+'</div>';
   if((l.vocab||[]).length)
     h+='<div class="mr-sec">核心單字（'+l.vocab.length+'）</div>'
      +'<div class="bkvd card"><div class="bkvtab" role="list">'+l.vocab.map(w=>rwWordRow(w,l)).join('')+'</div></div>';
-  if((l.quotes||[]).length)
-    h+='<div class="mr-sec">影片例句（'+l.quotes.length+'）</div><div class="card">'
-     +l.quotes.map(q=>'<div style="margin:8px 0;line-height:var(--lh-body)">'
-       +'<span class="sent" data-t="'+esc(q.en)+'" onclick="saySent(this)">'+esc(q.en)+'</span> '+spk(q.en)
-       +(q.cn?'<div class="cnx" style="color:var(--ink2);font-size:var(--font-secondary);margin-top:2px">'+esc(q.cn)+'</div>':'')
-       +'</div>').join('')
+  /* 影片實景原句：只放有來源依據的句子（字幕 / 使用者提供），絕不由標題自行生成 */
+  h+='<div class="mr-sec">影片實景原句'+((l.quotes||[]).length?'（'+l.quotes.length+'）':'')+'</div><div class="card">';
+  if((l.quotes||[]).length){
+    h+=l.quotes.map((q,i)=>{
+      const hit=(l.vocab||[]).find(v=>v.w&&q.en.toLowerCase().includes(v.w.toLowerCase()));
+      return '<div class="rwq'+(i<l.quotes.length-1?' rwq-div':'')+'">'
+       +'<span class="rwq-n">'+(i+1)+'.</span> '
+       +'<span class="sent" data-t="'+esc(q.en)+'" onclick="saySent(this)">'+(hit?bkHi(q.en,hit.w):esc(q.en))+'</span> '+spk(q.en)
+       +(q.cn?'<div class="cnx rwq-cn">'+esc(rwPad(q.cn))+'</div>':'')
+       +'</div>';
+    }).join('');
+  }else{
+    h+='<div class="muted">目前尚未取得影片字幕或原句。</div>'
+     +(rwQAOn?'':'<button class="btn ghost sm" style="margin-top:8px" onclick="rwQATog()">補充影片原句</button>');
+  }
+  if(rwQAOn)
+    h+='<div class="rw-form" style="margin-top:10px">'
+     +'<textarea id="rwq-input" placeholder="貼上影片字幕或原句（每行一句，也可以貼一整段）"></textarea>'
+     +'<div class="hint2">只貼影片裡真的出現的句子；系統會自動切句、去掉重複，最多保留 5 句。</div>'
+     +'<div style="margin-top:8px;display:flex;gap:8px">'
+     +'<button class="btn sm" onclick="rwQASave(\''+l.id+'\')">儲存</button>'
+     +'<button class="btn gray sm" onclick="rwQATog()">取消</button></div></div>';
+  h+='</div>';
+  /* 用法比較：實境用法＋比較合併為一個區塊 */
+  if(l.usage||(l.cmp||[]).length){
+    h+='<div class="mr-sec">用法比較</div><div class="card">'
+     +(l.usage?'<div class="rw-usage">'+rwParas(l.usage)+'</div>':'')
+     +((l.cmp||[]).length
+       ?'<ul class="rw-cmp"'+(l.usage?' style="margin-top:8px;border-top:1px solid var(--line);padding-top:4px"':'')+'>'
+        +l.cmp.map(c=>'<li><b>'+esc(c.w)+'</b>'+esc(rwPad(c.d))+'</li>').join('')+'</ul>'
+       :'')
      +'</div>';
-  if(l.usage) h+='<div class="mr-sec">實境用法</div><div class="card rw-usage">'+rwParas(l.usage)+'</div>';
-  if((l.cmp||[]).length)
-    h+='<div class="mr-sec">比較</div><div class="card"><ul class="rw-cmp">'
-     +l.cmp.map(c=>'<li><b>'+esc(c.w)+'</b>'+esc(rwPad(c.d))+'</li>').join('')+'</ul></div>';
+  }
   if(l.spq)
     h+='<div class="mr-sec">Speak Up</div><div class="card">'
      +'<div style="font-weight:var(--fw-emph);font-size:var(--font-body)"><span class="sent" data-t="'+esc(l.spq)+'" onclick="saySent(this)">'+esc(l.spq)+'</span> '+spk(l.spq)+'</div>'
-     +'<div class="muted" style="margin-top:8px">先用自己的話說說看，再到 <a href="https://learning-english-notes.web.app" target="_blank" rel="noopener">Speak Up ↗</a> 錄音練習。收藏（⭐）的單字會自動同步到 Speak Up 的「⭐ B2 生詞本」。</div></div>';
+     +(l.spHint?'<details class="hint-toggle" style="margin-top:8px"><summary class="hint-sum">提示</summary><div class="hint">'+esc(rwPad(l.spHint))+'</div></details>':'')
+     +'<div class="muted" style="margin-top:8px">先用自己的話回答，再到 <a href="https://learning-english-notes.web.app" target="_blank" rel="noopener">Speak Up ↗</a> 錄音練習。收藏（⭐）的單字會自動同步到 Speak Up 的「⭐ B2 生詞本」。</div></div>';
   h+='<div class="card" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">'
    +(st.k==='done'
      ?'<span class="mrf-why st-done" style="margin:0">已完成 ✓</span>'
@@ -4572,12 +4640,14 @@ function rwFormHTML(){
    +'<label>學習重點（一句話）</label><input id="rwf-point" value="'+esc(d.point||'')+'" placeholder="例如：從真實街景理解 corridor 在交通語境中的意思">'
    +'<label>核心單字（一行一個：單字 | 音標 | 詞性 | 中文 | 英文例句 | 例句中文；音標、詞性可留空）</label>'
    +'<textarea id="rwf-vocab" placeholder="corridor | /ˈkɔːrɪdɔːr/ | n. | 交通廊道 | This is a major transportation corridor. | 這是一條主要的交通廊道。">'+esc(vocabTxt)+'</textarea>'
-   +'<label>影片例句（選填，一行一句：英文 | 中文；只填影片裡真的出現的句子）</label>'
-   +'<textarea id="rwf-quotes" placeholder="This is a major transportation corridor. | 這是一條主要的交通廊道。">'+esc(d.quotesTxt!=null?d.quotesTxt:(e.quotes||[]).map(q=>q.en+' | '+q.cn).join('\n'))+'</textarea>'
+   +'<label>影片字幕或原句（選填，一行一句：英文 | 中文；只貼影片裡真的出現的句子）</label>'
+   +'<textarea id="rwf-quotes" placeholder="This is a major transportation corridor. | 這是一條重要的交通廊道。">'+esc(d.quotesTxt!=null?d.quotesTxt:(e.quotes||[]).map(q=>q.en+' | '+q.cn).join('\n'))+'</textarea>'
+   +'<div class="hint2">如果現在沒有字幕，可以留空；之後在教材頁用「補充影片原句」加上。</div>'
    +'<label>情境說明（1–3 段短文字）</label><textarea id="rwf-ctx" placeholder="這支影片的場景是什麼？為什麼這個單字在這裡這樣用？">'+esc(d.ctx||'')+'</textarea>'
    +'<label>實境用法（可分行）</label><textarea id="rwf-usage" placeholder="corridor&#10;一般：走廊&#10;交通 / 都市規劃：交通廊道、沿線">'+esc(d.usage||'')+'</textarea>'
    +'<label>比較（選填，一行一組：詞 | 說明）</label><textarea id="rwf-cmp" placeholder="road | 道路本身&#10;route | 路線&#10;corridor | 重要交通廊道 / 沿線">'+esc(cmpTxt)+'</textarea>'
    +'<label>Speak Up 口說問題（選填，英文）</label><input id="rwf-spq" value="'+esc(d.spq||'')+'" placeholder="What does &quot;corridor&quot; mean in this video?">'
+   +'<label>Speak Up 提示（選填，關鍵字或句型框架，不要直接給完整答案）</label><input id="rwf-sphint" value="'+esc(d.spHint||'')+'" placeholder="This corridor connects ______ and ______.">'
    +'<div style="margin-top:14px;display:flex;gap:10px"><button class="btn" onclick="rwSave()">儲存</button>'
    +'<button class="btn gray" onclick="rwCancel()">取消</button></div>'
    +'</div>';
@@ -4588,7 +4658,7 @@ function rwCapture(){
   rwDraft=Object.assign({},rwDraft||{},{
     paste:g('rwf-paste'), ti:g('rwf-ti'), tiSrc:g('rwf-tisrc'), url:g('rwf-url'), country:g('rwf-country'),
     cat:g('rwf-cat'), level:g('rwf-lv'), min:g('rwf-min'), point:g('rwf-point'),
-    vocabTxt:g('rwf-vocab'), quotesTxt:g('rwf-quotes'), ctx:g('rwf-ctx'), usage:g('rwf-usage'), cmpTxt:g('rwf-cmp'), spq:g('rwf-spq')
+    vocabTxt:g('rwf-vocab'), quotesTxt:g('rwf-quotes'), ctx:g('rwf-ctx'), usage:g('rwf-usage'), cmpTxt:g('rwf-cmp'), spq:g('rwf-spq'), spHint:g('rwf-sphint')
   });
 }
 function rwParse(){
@@ -4597,6 +4667,11 @@ function rwParse(){
   if(!txt.trim()){ showToast('請先貼上分享內容','貼上影片的分享文字再按解析'); return; }
   const p=rwParseShare(txt);
   rwDraft.tiSrc=p.title; rwDraft.ti=rwS2T(p.title); rwDraft.src=p.src; rwDraft.url=p.url;
+  /* 分享文字裡如果附了英文句子（字幕片段），順手帶進「影片字幕或原句」；沒有就留空 */
+  if(!rwDraft.quotesTxt){
+    const qs=rwExtractQuotes(txt);
+    if(qs.length) rwDraft.quotesTxt=qs.join('\n');
+  }
   RENDER.real();
   showToast('已解析','標題、來源與連結已帶入，其他欄位請自行補充');
 }
@@ -4614,8 +4689,9 @@ function rwSave(){
   const cmp=(d.cmpTxt||'').split('\n').map(s=>s.trim()).filter(Boolean).map(line=>{
     const p=line.split(/\s*[|｜]\s*/); return {w:p[0]||'', d:p[1]||''};
   }).filter(c=>c.w);
+  /* videoQuotes：一律標記為使用者提供（可驗證來源），與 vocab 的字典例句分開存放 */
   const quotes=(d.quotesTxt||'').split('\n').map(s=>s.trim()).filter(Boolean).map(line=>{
-    const p=line.split(/\s*[|｜]\s*/); return {en:p[0]||'', cn:p[1]||''};
+    const p=line.split(/\s*[|｜]\s*/); return {en:p[0]||'', cn:p[1]||'', src:'user'};
   }).filter(q=>q.en);
   ST.rw=ST.rw||{};
   ST.rw[id]={ id, created:prev.created||Date.now(), t:Date.now(),
@@ -4625,7 +4701,7 @@ function rwSave(){
     url:(d.url||'').trim(), country:(d.country||'').trim(),
     cat:d.cat||'生活', level:(d.level||'').trim(), min:(d.min||'').trim(),
     point:(d.point||'').trim(), ctx:(d.ctx||'').trim(), usage:(d.usage||'').trim(),
-    cmp, quotes, spq:(d.spq||'').trim(), vocab };
+    cmp, quotes, spq:(d.spq||'').trim(), spHint:(d.spHint||'').trim(), vocab };
   save();
   rwFormOn=false; rwDraft=null; rwEditId=null;
   rwOpen=id; sbAutoCollapse(); RENDER.real(); window.scrollTo(0,0);
@@ -4637,12 +4713,12 @@ function rwCancel(){ const back=rwEditId; rwFormOn=false; rwDraft=null; rwEditId
   if(back){ rwOpen=back; sbAutoCollapse(); } RENDER.real(); }
 function rwSetCat(c){ rwCat=c; RENDER.real(); }
 function rwGo(id){
-  rwOpen=id;
+  rwOpen=id; rwQAOn=false;
   ST.rwDone=ST.rwDone||{};
   if(!ST.rwDone[id]){ ST.rwDone[id]={k:'started',t:Date.now()}; save(); }
   sbAutoCollapse(); RENDER.real(); window.scrollTo(0,0);
 }
-function rwBack(){ rwOpen=null; sbAutoExpand(); RENDER.real(); window.scrollTo(0,0); }
+function rwBack(){ rwOpen=null; rwQAOn=false; sbAutoExpand(); RENDER.real(); window.scrollTo(0,0); }
 function rwDone(id){ ST.rwDone=ST.rwDone||{}; ST.rwDone[id]={k:'done',t:Date.now()}; save();
   RENDER.real(); showToast('已完成','這篇實景教材已標記完成'); }
 function rwEdit(id){ rwEditId=id; rwFormOn=true; rwDraft=null; rwOpen=null; sbAutoExpand();
