@@ -1447,6 +1447,7 @@ body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .ex
 #v-book .bkvmeta{display:flex;align-items:center;flex-wrap:wrap;gap:5px 12px;min-width:0}
 #v-book .bkvcell{padding:0;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;word-break:break-word;height:auto;max-height:none}
 #v-book .bkvword{font-weight:var(--fw-emph);font-size:var(--font-body);line-height:var(--lh-body)}
+.wt{cursor:pointer}
 #v-book .bkvipa{font-family:var(--font-stack);font-size:var(--font-secondary);color:var(--ink2);line-height:var(--lh-secondary)}
 #v-book .bkvpos{color:var(--ink2);font-size:var(--font-secondary);font-weight:var(--fw-body);font-style:italic;line-height:var(--lh-secondary)}
 #v-book .bkvexample{margin-top:5px;line-height:var(--lh-body);font-size:var(--font-body);color:#4a4238}
@@ -4545,7 +4546,7 @@ function rwParas(s){
 }
 function rwWordRow(t,l){
   return '<article class="bkvrow" role="listitem"><div class="bkvmeta">'
-   +'<div class="bkvcell bkvword"><span class="wln"><span>'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'實景：'+(l.ti||''))+'</span></div>'
+   +'<div class="bkvcell bkvword"><span class="wln"><span class="wt" onclick="spkGo(this.parentElement.querySelector(\'.spk\'))">'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'實景：'+(l.ti||''))+'</span></div>'
    +(t.ipa?'<div class="bkvcell bkvipa">'+esc(t.ipa)+'</div>':'')
    +(t.pos?'<div class="bkvcell bkvpos">'+esc(t.pos)+'</div>':'')
    +'</div>'
@@ -5129,7 +5130,7 @@ function bookHTML(b){
   /* 中譯切換時重新 render：中文節點與第五欄真正加入／移除，而非保留空白欄。 */
   const vtable=list=>{
     const showChinese=CNALL;
-    const word=t=>'<span class="wln">'+(t.star?'<span class="starb" title="重點單字">⭐</span>':'<span class="starb ph" aria-hidden="true">⭐</span>')+'<span>'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'課本：'+b.titleCn)+'</span>';
+    const word=t=>'<span class="wln">'+(t.star?'<span class="starb" title="重點單字">⭐</span>':'<span class="starb ph" aria-hidden="true">⭐</span>')+'<span class="wt" onclick="spkGo(this.parentElement.querySelector(\'.spk\'))">'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'課本：'+b.titleCn)+'</span>';
     return '<div class="bkvd card"><div class="bkvtab" role="list">'
       +list.map(t=>'<article class="bkvrow" role="listitem"><div class="bkvmeta">'
         +'<div class="bkvcell bkvword">'+word(t)+'</div>'
