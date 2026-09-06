@@ -1938,12 +1938,33 @@ function spkGo(btn){
   document.querySelectorAll('.spkon').forEach(x=>x.classList.remove('spkon'));
   if(hl) hl.classList.add('spkon');
   const spv=(btn.dataset.sp&&typeof auSpMap!=='undefined')?auSpMap[btn.dataset.sp]:null;
-  say(btn.dataset.t, null, ()=>{ if(hl) hl.classList.remove('spkon'); }, spv||undefined);
+  const cb=()=>{ if(hl) hl.classList.remove('spkon'); };
+  /* 聽力對話有角色配音（spv），維持 TTS；其餘單字／短片語先試真人發音 */
+  if(spv){ say(btn.dataset.t, null, cb, spv); }
+  else dictPlay(btn.dataset.t, cb, ()=>say(btn.dataset.t, null, cb));
 }
 window.spkGo=spkGo;
-/* 單字發音：優先播真人發音（Google Dictionary／牛津音源），拿不到再退回 TTS。
-   句子仍走 TTS（真人音檔只有單字）。 */
+/* 真人發音（Google Dictionary／牛津音源）：單字或 ≤3 個純字母的片語試音檔，
+   拿不到（404 等）呼叫 fallback 退回 TTS。句子沒有真人音檔，直接 fallback。 */
 let dictAu=null;
+function dictPlay(raw, done, fallback){
+  const w=String(raw||'').trim().toLowerCase();
+  let fell=false;
+  const fb=()=>{ if(fell) return; fell=true; fallback(); };
+  if(!/^[a-z]+(?:[ -][a-z]+){0,2}$/.test(w)){ fb(); return; }
+  const key=w.replace(/[ -]/g,'_');
+  const urls=['https://ssl.gstatic.com/dictionary/static/sounds/20200429/'+key+'--_us_1.mp3',
+              'https://ssl.gstatic.com/dictionary/static/sounds/20200429/'+key+'_us_1.mp3'];
+  let i=0;
+  if(dictAu){ try{dictAu.pause()}catch(e){} }
+  speechSynthesis.cancel();
+  const a=dictAu=new Audio();
+  a.playbackRate=Number(ST.rate)||1;
+  a.onended=done;
+  a.onerror=()=>{ if(++i<urls.length){ a.src=urls[i]; a.play().catch(fb); } else fb(); };
+  a.src=urls[0];
+  a.play().catch(()=>{ /* 404 交給 onerror 換下一個網址 */ });
+}
 function sayWord(el){
   document.querySelectorAll('.spkon').forEach(x=>x.classList.remove('spkon'));
   el.classList.add('spkon');
@@ -1953,25 +1974,8 @@ function sayWord(el){
     const wait=Math.max(0, 700-(Date.now()-t0));
     setTimeout(()=>el.classList.remove('spkon'), wait);
   };
-  const raw=el.textContent.trim(), w=raw.toLowerCase();
-  let fell=false;
-  const fallback=()=>{ if(fell) return; fell=true; say(raw, null, done); };
-  if(/^[a-z]+(?:[ -][a-z]+)*$/.test(w)){
-    const key=w.replace(/[ -]/g,'_');
-    const urls=['https://ssl.gstatic.com/dictionary/static/sounds/20200429/'+key+'--_us_1.mp3',
-                'https://ssl.gstatic.com/dictionary/static/sounds/20200429/'+key+'_us_1.mp3'];
-    let i=0;
-    if(dictAu){ try{dictAu.pause()}catch(e){} }
-    speechSynthesis.cancel();
-    const a=dictAu=new Audio();
-    a.playbackRate=Number(ST.rate)||1;
-    a.onended=done;
-    a.onerror=()=>{ if(++i<urls.length){ a.src=urls[i]; a.play().catch(fallback); } else fallback(); };
-    a.src=urls[0];
-    a.play().catch(()=>{ /* 404 交給 onerror 換下一個網址；其他失敗直接退 TTS */ });
-    return;
-  }
-  fallback();
+  const raw=el.textContent.trim();
+  dictPlay(raw, done, ()=>say(raw, null, done));
 }
 window.sayWord=sayWord;
 function spk(text,label){
