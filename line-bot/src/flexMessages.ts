@@ -12,22 +12,33 @@ import { buildPostback } from './line';
 /* ---------- 色票 ----------
    灰階為主，兩個學習情境（General / QA）各用一個低飽和輔色，
    按鈕另外兩個色只出現在淡背景上，不做實心高飽和色塊。 */
-const INK = '#17202A'; // 單字、例句英文
-const BODY = '#2B333B'; // 中文意思
-const MUTED = '#9AA0A6'; // 英文定義（輔助資訊，刻意比中文意思淡）
-const SUB = '#8A8F98'; // 音標、次要說明
-const SUB_SOFT = '#9AA0A6'; // 例句的中文翻譯
-const LINE_SOFT = '#EEF1F4'; // 唯一一條分隔線
+/* 文字：由深到淺就是閱讀優先順序 */
+const INK = '#111827'; // 1. 單字
+const BODY = '#1F2937'; // 2. 中文意思
+const TEXT = '#334155'; // 3. 例句英文
+const MUTED = '#98A2B3'; // 5/7. 英文定義、例句中文翻譯
+const META = '#8A94A6'; // 6. 音標
 
-const BLUE = '#2E6FA7';
-const BLUE_BG = '#F1F6FB';
-const AMBER = '#A8681B';
-const AMBER_BG = '#FBF5EC';
-const GREEN = '#3B7D57';
-const GREEN_BG = '#EDF5EF';
-const PURPLE = '#6B5AA6';
-const PURPLE_BG = '#F2EFF8';
-const NEUTRAL_BG = '#F7F9FB';
+/* 區塊標籤：只是分類提示，比內容更弱 */
+const LABEL_GEN = '#6B87A8'; // General（低彩度藍）
+const LABEL_QA = '#9C7B4E'; // QA（低彩度暖灰）
+const LABEL_OFF = '#8C93A1'; // 沒有例句時的標籤（純灰）
+
+/* 唯一的 accent：藍。只用在「查詢字 highlight」與「完整學習」 */
+const ACCENT = '#2E6FA7';
+const ACCENT_BG = '#EAF1F8';
+
+/* 中性底色 */
+const NEUTRAL_BG = '#F2F4F7'; // 按鈕、badge
+const NEUTRAL_TX = '#4A5568'; // 按鈕文字
+const GEN_BG = '#F5F7FA'; // General 例句卡（極淡藍灰）
+const QA_BG = '#FAF8F4'; // QA 例句卡（極淡暖灰）
+const EMPTY_BG = '#F7F8FA'; // 沒有例句時的區塊
+const BADGE_POS_BG = '#EEF2F7';
+const BADGE_POS_TX = '#5B6B80';
+const BADGE_LVL_BG = '#F2F4F7';
+const BADGE_LVL_TX = '#667085';
+const LINE_SOFT = '#F0F2F5'; // 唯一一條分隔線
 
 const CAT_LABEL: Record<string, string> = {
   qa: 'QA',
@@ -92,9 +103,9 @@ function wordPattern(word: string): RegExp | null {
 }
 
 /** 回傳一個 text component：命中查詢字的片段用 span 加粗，其餘保持一般文字 */
-function sentenceText(sentence: string, word: string, accent: string) {
+function sentenceText(sentence: string, word: string) {
   const text = cut(sentence, 200);
-  const base = { type: 'text', size: 'sm', color: INK, wrap: true, margin: 'sm' };
+  const base = { type: 'text', size: 'sm', color: TEXT, wrap: true, margin: 'sm' };
   const re = wordPattern(word);
   if (!re) return { ...base, text };
 
@@ -103,7 +114,7 @@ function sentenceText(sentence: string, word: string, accent: string) {
   for (const m of text.matchAll(re)) {
     const i = m.index ?? 0;
     if (i > last) spans.push({ type: 'span', text: text.slice(last, i) });
-    spans.push({ type: 'span', text: m[0], weight: 'bold', color: accent });
+    spans.push({ type: 'span', text: m[0], weight: 'bold', color: ACCENT });
     last = i + m[0].length;
   }
   if (!spans.length) return { ...base, text };
@@ -164,7 +175,7 @@ function badge(text: string, color: string, bg: string) {
     paddingAll: '4px',
     paddingStart: '10px',
     paddingEnd: '10px',
-    contents: [{ type: 'text', text: cut(text, 16), size: 'xxs', weight: 'bold', color }],
+    contents: [{ type: 'text', text: cut(text, 16), size: 'xxs', color }],
   };
 }
 
@@ -178,15 +189,15 @@ export function buildHeaderSection(e: WordEntry): any[] {
   ];
 
   if (e.ipa) {
-    out.push({ type: 'text', text: cut(e.ipa, 48), size: 'xs', color: SUB, margin: 'sm' });
+    out.push({ type: 'text', text: cut(e.ipa, 48), size: 'xs', color: META, margin: 'sm' });
   }
 
   const badges: any[] = [];
-  if (e.pos) badges.push(badge(posLabel(e.pos), BLUE, BLUE_BG));
-  if (e.level) badges.push(badge(e.level, GREEN, GREEN_BG));
+  if (e.pos) badges.push(badge(posLabel(e.pos), BADGE_POS_TX, BADGE_POS_BG));
+  if (e.level) badges.push(badge(e.level, BADGE_LVL_TX, BADGE_LVL_BG));
   // 詞性與程度都沒有時，用類別當作最低限度的標示，不留空
   if (!badges.length && CAT_LABEL[e.category]) {
-    badges.push(badge(CAT_LABEL[e.category], SUB, NEUTRAL_BG));
+    badges.push(badge(CAT_LABEL[e.category], BADGE_LVL_TX, BADGE_LVL_BG));
   }
   if (badges.length) {
     out.push({
@@ -201,11 +212,11 @@ export function buildHeaderSection(e: WordEntry): any[] {
   out.push({
     type: 'text',
     text: cut(e.translation || e.definition || '（這個字目前沒有中文翻譯）', 60),
-    size: 'lg',
+    size: 'xl',
     weight: 'bold',
     color: BODY,
     wrap: true,
-    margin: 'md',
+    margin: 'lg',
   });
 
   // 有中文翻譯時才另外顯示英文定義，避免同一句講兩次
@@ -238,32 +249,32 @@ export function buildExampleSection(opts: {
   margin: string;
 }): any {
   const { title, accent, background, example, emptyText, word, margin } = opts;
-  const heading = { type: 'text', text: title, size: 'xxs', weight: 'bold', color: accent };
+  const heading = { type: 'text', text: title, size: 'xxs', color: accent };
 
   if (!example || !example.en) {
     return {
       type: 'box',
       layout: 'vertical',
       margin,
-      backgroundColor: NEUTRAL_BG,
+      backgroundColor: EMPTY_BG,
       cornerRadius: '10px',
       paddingAll: '8px',
       paddingStart: '10px',
       paddingEnd: '10px',
       contents: [
-        heading,
-        { type: 'text', text: emptyText, size: 'xs', color: SUB, wrap: true, margin: 'xs' },
+        { ...heading, color: LABEL_OFF },
+        { type: 'text', text: emptyText, size: 'xs', color: MUTED, wrap: true, margin: 'xs' },
       ],
     };
   }
 
-  const contents: any[] = [heading, sentenceText(example.en, word, accent)];
+  const contents: any[] = [heading, sentenceText(example.en, word)];
   if (example.zh) {
     contents.push({
       type: 'text',
       text: cut(example.zh, 120),
       size: 'xs',
-      color: SUB_SOFT,
+      color: MUTED,
       wrap: true,
       margin: 'xs',
     });
@@ -290,8 +301,8 @@ function tile(text: string, color: string, bg: string, action: any) {
     layout: 'vertical',
     backgroundColor: bg,
     cornerRadius: '10px',
-    paddingTop: '10px',
-    paddingBottom: '10px',
+    paddingTop: '9px',
+    paddingBottom: '9px',
     paddingStart: '8px',
     paddingEnd: '8px',
     action: { ...action, label: label(text) },
@@ -300,7 +311,6 @@ function tile(text: string, color: string, bg: string, action: any) {
         type: 'text',
         text: label(text),
         size: 'sm',
-        weight: 'bold',
         color,
         align: 'center',
         maxLines: 1,
@@ -321,24 +331,24 @@ export function buildActionGrid(e: WordEntry, env: { B2LAB_URL?: string; QA_URL?
   });
   return [
     row([
-      tile('更多例句', BLUE, BLUE_BG, {
+      tile('更多例句', NEUTRAL_TX, NEUTRAL_BG, {
         type: 'postback',
         data: buildPostback('more', e.word),
         displayText: `${e.word}｜更多例句`,
       }),
-      tile('QA 例句', AMBER, AMBER_BG, {
+      tile('QA 例句', NEUTRAL_TX, NEUTRAL_BG, {
         type: 'postback',
         data: buildPostback('qa', e.word),
         displayText: `${e.word}｜QA 例句`,
       }),
     ], 'lg'),
     row([
-      tile('相關單字', GREEN, GREEN_BG, {
+      tile('相關單字', NEUTRAL_TX, NEUTRAL_BG, {
         type: 'postback',
         data: buildPostback('rel', e.word),
         displayText: `${e.word}｜相關單字`,
       }),
-      tile('完整學習', PURPLE, PURPLE_BG, { type: 'uri', uri: studyUrl(e, env) }),
+      tile('完整學習', ACCENT, ACCENT_BG, { type: 'uri', uri: studyUrl(e, env) }),
     ], 'md'),
   ];
 }
@@ -354,7 +364,7 @@ export function buildTipSection(e: WordEntry): any | null {
     type: 'text',
     text: cut(`Tip: ${cols.slice(0, 2).join('｜')}`, 80),
     size: 'xxs',
-    color: SUB,
+    color: META,
     wrap: true,
     margin: 'lg',
   };
@@ -411,9 +421,9 @@ function numberedExamples(list: Example[], word: string, accent: string) {
     margin: i === 0 ? 'lg' : 'xl',
     contents: [
       { type: 'text', text: String(i + 1), size: 'xxs', weight: 'bold', color: accent },
-      sentenceText(ex.en, word, accent),
+      sentenceText(ex.en, word),
       ...(ex.zh
-        ? [{ type: 'text', text: cut(ex.zh, 140), size: 'xs', color: SUB, wrap: true, margin: 'sm' }]
+        ? [{ type: 'text', text: cut(ex.zh, 140), size: 'xs', color: META, wrap: true, margin: 'sm' }]
         : []),
     ],
   }));
@@ -436,7 +446,7 @@ function wordRow(w: WordEntry, accent: string, first: boolean) {
         type: 'text',
         text: cut([w.pos, w.translation || w.definition].filter(Boolean).join(' '), 60) || '—',
         size: 'xs',
-        color: SUB,
+        color: META,
         wrap: true,
         margin: 'xs',
       },
@@ -447,7 +457,7 @@ function wordRow(w: WordEntry, accent: string, first: boolean) {
 const divider = { type: 'separator', color: LINE_SOFT };
 
 function emptyLine(text: string) {
-  return { type: 'text', text, size: 'sm', color: SUB, wrap: true, margin: 'lg' };
+  return { type: 'text', text, size: 'sm', color: META, wrap: true, margin: 'lg' };
 }
 
 /* ---------- STEP 3：第一張單字卡 ---------- */
@@ -457,8 +467,8 @@ export function buildWordFlexMessage(e: WordEntry, env: { B2LAB_URL?: string; QA
     ...buildHeaderSection(e),
     buildExampleSection({
       title: 'GENERAL EXAMPLE',
-      accent: BLUE,
-      background: BLUE_BG,
+      accent: LABEL_GEN,
+      background: GEN_BG,
       example: e.general[0],
       emptyText: '目前沒有一般例句。',
       word: e.word,
@@ -466,8 +476,8 @@ export function buildWordFlexMessage(e: WordEntry, env: { B2LAB_URL?: string; QA
     }),
     buildExampleSection({
       title: 'QA / WORK EXAMPLE',
-      accent: AMBER,
-      background: AMBER_BG,
+      accent: LABEL_QA,
+      background: QA_BG,
       example: e.qa[0],
       emptyText: '目前沒有 QA 工作例句。',
       word: e.word,
@@ -485,9 +495,9 @@ export function buildWordFlexMessage(e: WordEntry, env: { B2LAB_URL?: string; QA
 
 export function buildMoreExamplesMessage(e: WordEntry, list: Example[]) {
   const body = [
-    ...headerBox(`${e.word}`, 'MORE GENERAL EXAMPLES', BLUE),
+    ...headerBox(`${e.word}`, 'MORE GENERAL EXAMPLES', ACCENT),
     ...(list.length
-      ? numberedExamples(list, e.word, BLUE)
+      ? numberedExamples(list, e.word, ACCENT)
       : [emptyLine('目前沒有更多一般例句。')]),
   ];
   return flex(`${e.word}｜更多例句`, bubble(body, [divider, backRow(e.word)]));
@@ -497,8 +507,8 @@ export function buildMoreExamplesMessage(e: WordEntry, list: Example[]) {
 
 export function buildQaExamplesMessage(e: WordEntry, list: Example[], studyLink: string) {
   const body = [
-    ...headerBox(`${e.word}`, 'QA / WORK EXAMPLES', AMBER),
-    ...(list.length ? numberedExamples(list, e.word, AMBER) : [emptyLine('目前沒有 QA 工作例句。')]),
+    ...headerBox(`${e.word}`, 'QA / WORK EXAMPLES', LABEL_QA),
+    ...(list.length ? numberedExamples(list, e.word, LABEL_QA) : [emptyLine('目前沒有 QA 工作例句。')]),
   ];
   const footer = [
     divider,
@@ -507,12 +517,12 @@ export function buildQaExamplesMessage(e: WordEntry, list: Example[], studyLink:
       layout: 'horizontal',
       spacing: 'md',
       contents: [
-        tile('回到單字', BLUE, BLUE_BG, {
+        tile('回到單字', NEUTRAL_TX, NEUTRAL_BG, {
           type: 'postback',
           data: buildPostback('word', e.word),
           displayText: e.word,
         }),
-        tile('完整學習', PURPLE, PURPLE_BG, { type: 'uri', uri: studyLink }),
+        tile('完整學習', ACCENT, ACCENT_BG, { type: 'uri', uri: studyLink }),
       ],
     },
   ];
@@ -523,10 +533,10 @@ export function buildQaExamplesMessage(e: WordEntry, list: Example[], studyLink:
 
 export function buildRelatedWordsMessage(e: WordEntry, related: WordEntry[]) {
   const body = [
-    ...headerBox(`${e.word}`, 'RELATED WORDS', GREEN),
-    { type: 'text', text: '點一下就直接查那個字', size: 'xs', color: SUB, margin: 'sm' },
+    ...headerBox(`${e.word}`, 'RELATED WORDS', NEUTRAL_TX),
+    { type: 'text', text: '點一下就直接查那個字', size: 'xs', color: META, margin: 'sm' },
     ...(related.length
-      ? related.map((r, i) => wordRow(r, GREEN, i === 0))
+      ? related.map((r, i) => wordRow(r, NEUTRAL_TX, i === 0))
       : [emptyLine('目前沒有相關單字。')]),
   ];
   return flex(`${e.word}｜相關單字`, bubble(body, [divider, backRow(e.word)]));
@@ -537,7 +547,7 @@ function backRow(word: string) {
     type: 'box',
     layout: 'horizontal',
     contents: [
-      tile('回到單字', BLUE, BLUE_BG, {
+      tile('回到單字', NEUTRAL_TX, NEUTRAL_BG, {
         type: 'postback',
         data: buildPostback('word', word),
         displayText: word,
@@ -578,8 +588,8 @@ export function buildNotFoundMessage(
         color: INK,
         wrap: true,
       },
-      { type: 'text', text: hint, size: 'xs', color: SUB, margin: 'sm' },
-      ...suggestions.map((s, i) => wordRow(s, BLUE, i === 0)),
+      { type: 'text', text: hint, size: 'xs', color: META, margin: 'sm' },
+      ...suggestions.map((s, i) => wordRow(s, ACCENT, i === 0)),
     ];
     const footer = [
       divider,
@@ -587,7 +597,7 @@ export function buildNotFoundMessage(
         type: 'box',
         layout: 'horizontal',
         contents: [
-          tile(`查看 ${suggestions[0].word}`, BLUE, BLUE_BG, {
+          tile(`查看 ${suggestions[0].word}`, ACCENT, ACCENT_BG, {
             type: 'postback',
             data: buildPostback('word', suggestions[0].word),
             displayText: suggestions[0].word,
@@ -615,7 +625,7 @@ export function buildNotFoundMessage(
       type: 'text',
       text: '直接輸入一個英文單字就可以查，例如：compensate、supplier、tolerance。',
       size: 'xs',
-      color: SUB,
+      color: META,
       wrap: true,
       margin: 'md',
     },
@@ -627,8 +637,8 @@ export function buildNotFoundMessage(
       layout: 'horizontal',
       spacing: 'md',
       contents: [
-        tile('English B2 Lab', BLUE, BLUE_BG, { type: 'uri', uri: b2lab }),
-        tile('QA English', AMBER, AMBER_BG, { type: 'uri', uri: qa }),
+        tile('English B2 Lab', ACCENT, ACCENT_BG, { type: 'uri', uri: b2lab }),
+        tile('QA English', NEUTRAL_TX, NEUTRAL_BG, { type: 'uri', uri: qa }),
       ],
     },
   ];
@@ -639,9 +649,9 @@ export function buildNotFoundMessage(
 
 export function buildChineseResultsMessage(query: string, hits: WordEntry[]) {
   const body = [
-    ...headerBox(`「${cut(query, 20)}」`, 'CHINESE SEARCH', BLUE),
-    { type: 'text', text: '點一下就直接查那個字', size: 'xs', color: SUB, margin: 'sm' },
-    ...hits.map((s, i) => wordRow(s, BLUE, i === 0)),
+    ...headerBox(`「${cut(query, 20)}」`, 'CHINESE SEARCH', ACCENT),
+    { type: 'text', text: '點一下就直接查那個字', size: 'xs', color: META, margin: 'sm' },
+    ...hits.map((s, i) => wordRow(s, ACCENT, i === 0)),
   ];
   return flex(`「${query}」的英文`, bubble(body));
 }

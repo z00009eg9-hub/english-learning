@@ -82,7 +82,7 @@ describe('STEP 3 第一張卡', () => {
     expect(body[0].weight).toBe('bold');
 
     const zh = body.find((c: any) => c.text === '補償、彌補');
-    expect(zh.size).toBe('lg');
+    expect(zh.size).toBe('xl');
     expect(zh.weight).toBe('bold');
 
     const ipa = body.find((c: any) => c.text === '/ˈkɑːmpənseɪt/');
@@ -411,5 +411,67 @@ describe('詞性 badge 的可讀化', () => {
 
   it('認不得的寫法原樣顯示，不會變空白', () => {
     expect(badgeTextOf({ ...bare, pos: 'idk.' })).toBe('idk.');
+  });
+});
+
+describe('顏色收斂：只有一個 accent', () => {
+  const colorsIn = (node: any, out = new Set<string>()): Set<string> => {
+    if (!node || typeof node !== 'object') return out;
+    if (Array.isArray(node)) {
+      node.forEach((n) => colorsIn(n, out));
+      return out;
+    }
+    if (typeof node.color === 'string') out.add(node.color.toUpperCase());
+    if (typeof node.backgroundColor === 'string') out.add(node.backgroundColor.toUpperCase());
+    colorsIn(node.contents, out);
+    return out;
+  };
+
+  const msg = buildWordFlexMessage(findWord('adjust')!, ENV) as any;
+
+  it('查詢字的 highlight 在 General 與 QA 用同一個 accent 藍', () => {
+    const body = msg.contents.body.contents;
+    const spanColor = (label: string) => {
+      const block = findNode(body, (n) => n.contents?.[0]?.text === label);
+      return block.contents[1].contents.find((s: any) => s.weight === 'bold').color;
+    };
+    expect(spanColor('GENERAL EXAMPLE')).toBe(spanColor('QA / WORK EXAMPLE'));
+  });
+
+  it('四顆按鈕只有一顆帶 accent 底色，其餘中性', () => {
+    const rows = msg.contents.footer.contents.filter((c: any) => c.layout === 'horizontal');
+    const bgs = rows.flatMap((r: any) => r.contents.map((c: any) => c.backgroundColor));
+    const unique = [...new Set(bgs)];
+    expect(unique).toHaveLength(2); // 中性 + accent
+    expect(bgs.filter((b: string) => b === unique.find((u) => bgs.filter((x: string) => x === u).length === 1)))
+      .toHaveLength(1);
+  });
+
+  it('詞性與 CEFR badge 用同一套低彩度樣式（不再有綠色）', () => {
+    const body = msg.contents.body.contents;
+    const badgeRow = body.find((c: any) => c.layout === 'horizontal');
+    const badges = badgeRow.contents.filter((c: any) => c.type === 'box');
+    expect(badges).toHaveLength(2);
+    for (const b of badges) {
+      expect(b.cornerRadius).toBe(badges[0].cornerRadius);
+      expect(b.paddingAll).toBe(badges[0].paddingAll);
+      // 兩顆都不是高彩度色
+      expect(b.backgroundColor).toMatch(/^#(E|F)/i);
+      expect(b.contents[0].weight).toBeUndefined(); // regular，不加粗
+    }
+  });
+
+  it('整張卡的色彩數量收斂（含灰階與底色不超過 12 種）', () => {
+    expect(colorsIn(msg.contents).size).toBeLessThanOrEqual(12);
+  });
+
+  it('字重層級：單字與中文粗體，例句、定義、音標、按鈕都是 regular', () => {
+    const body = msg.contents.body.contents;
+    expect(body[0].weight).toBe('bold'); // 單字
+    expect(body.find((c: any) => c.size === 'xl').weight).toBe('bold'); // 中文意思
+    expect(body.find((c: any) => c.text?.startsWith('/')).weight).toBeUndefined(); // 音標
+    expect(body.find((c: any) => c.maxLines === 2).weight).toBeUndefined(); // 定義
+    const rows = msg.contents.footer.contents.filter((c: any) => c.layout === 'horizontal');
+    for (const r of rows) for (const c of r.contents) expect(c.contents[0].weight).toBeUndefined();
   });
 });
