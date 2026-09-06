@@ -104,7 +104,8 @@ describe('STEP 3 第一張卡', () => {
     expect(gen.cornerRadius).toBeTruthy();
     expect(gen.backgroundColor).toBeTruthy();
     expect(gen.layout).toBe(qa.layout);
-    expect(gen.contents[0].color).not.toBe(qa.contents[0].color);
+    // 兩區的差異只靠極淡的底色，不靠標籤顏色
+    expect(gen.backgroundColor).not.toBe(qa.backgroundColor);
   });
 
   it('例句裡的查詢字用 span 加粗，不是整句上色', () => {
@@ -494,5 +495,39 @@ describe('顏色收斂：只有一個 accent', () => {
         expect(c.contents[0].weight).toBe('bold');
         expect(c.contents[0].size).toBe('sm');
       }
+  });
+});
+
+describe('主卡定版：輔助資訊的可讀性層級', () => {
+  const msg = buildWordFlexMessage(findWord('adjust')!, ENV) as any;
+  const body = msg.contents.body.contents;
+  const block = (label: string) => findNode(body, (n) => n.contents?.[0]?.text === label);
+
+  /** 把 #RRGGBB 換算成相對亮度，數字越小＝顏色越深＝視覺越重 */
+  const luminance = (hex: string) => {
+    const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255);
+    const lin = (c: number) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4);
+    return 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
+  };
+
+  it('General 與 QA 的區塊標籤已統一成同一個顏色', () => {
+    expect(block('GENERAL EXAMPLE').contents[0].color).toBe(
+      block('QA / WORK EXAMPLE').contents[0].color,
+    );
+  });
+
+  it('層級：英文例句 深於 中文翻譯 深於 定義', () => {
+    const gen = block('GENERAL EXAMPLE');
+    const enColor = gen.contents[1].color;
+    const zhColor = gen.contents[2].color;
+    const defColor = body.find((c: any) => c.maxLines === 2).color;
+    expect(luminance(enColor)).toBeLessThan(luminance(zhColor));
+    expect(luminance(zhColor)).toBeLessThan(luminance(defColor));
+  });
+
+  it('中文翻譯與定義都沒有被改成粗體', () => {
+    const gen = block('GENERAL EXAMPLE');
+    expect(gen.contents[2].weight).toBeUndefined();
+    expect(body.find((c: any) => c.maxLines === 2).weight).toBeUndefined();
   });
 });

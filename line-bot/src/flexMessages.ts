@@ -16,13 +16,14 @@ import { buildPostback } from './line';
 const INK = '#111827'; // 1. 單字
 const BODY = '#1F2937'; // 2. 中文意思
 const TEXT = '#1F2937'; // 3. 例句英文（本輪加深，用對比補上沒有 medium 字重的缺口）
-const MUTED = '#98A2B3'; // 5. 英文定義（維持最輕）
-const TRANS = '#78859A'; // 7. 例句中文翻譯（比定義稍微清楚一點，仍明顯次於英文）
+const MUTED = '#8892A3'; // 5. 英文定義（只提高對比，仍是最輕的一層）
+const TRANS = '#67748A'; // 6. 例句中文翻譯（次於英文正文、優於定義與音標）
 const META = '#8A94A6'; // 6. 音標
 
 /* 區塊標籤：只是分類提示，比內容更弱 */
-const LABEL_GEN = '#6B87A8'; // General（低彩度藍）
-const LABEL_QA = '#9C7B4E'; // QA（低彩度暖灰）
+/* General 與 QA 的區塊標籤共用同一個 muted blue-gray：
+   兩區的差異由標籤文字本身表達，不再靠顏色分類 */
+const LABEL = '#7A899E';
 const LABEL_OFF = '#8C93A1'; // 沒有例句時的標籤（純灰）
 
 /* 唯一的 accent：藍。只用在「查詢字 highlight」與「完整學習」 */
@@ -471,7 +472,7 @@ export function buildWordFlexMessage(e: WordEntry, env: { B2LAB_URL?: string; QA
     ...buildHeaderSection(e),
     buildExampleSection({
       title: 'GENERAL EXAMPLE',
-      accent: LABEL_GEN,
+      accent: LABEL,
       background: GEN_BG,
       example: e.general[0],
       emptyText: '目前沒有一般例句。',
@@ -480,7 +481,7 @@ export function buildWordFlexMessage(e: WordEntry, env: { B2LAB_URL?: string; QA
     }),
     buildExampleSection({
       title: 'QA / WORK EXAMPLE',
-      accent: LABEL_QA,
+      accent: LABEL,
       background: QA_BG,
       example: e.qa[0],
       emptyText: '目前沒有 QA 工作例句。',
@@ -511,8 +512,8 @@ export function buildMoreExamplesMessage(e: WordEntry, list: Example[]) {
 
 export function buildQaExamplesMessage(e: WordEntry, list: Example[], studyLink: string) {
   const body = [
-    ...headerBox(`${e.word}`, 'QA / WORK EXAMPLES', LABEL_QA),
-    ...(list.length ? numberedExamples(list, e.word, LABEL_QA) : [emptyLine('目前沒有 QA 工作例句。')]),
+    ...headerBox(`${e.word}`, 'QA / WORK EXAMPLES', LABEL),
+    ...(list.length ? numberedExamples(list, e.word, LABEL) : [emptyLine('目前沒有 QA 工作例句。')]),
   ];
   const footer = [
     divider,
