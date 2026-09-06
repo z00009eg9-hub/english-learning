@@ -1932,6 +1932,12 @@ function spkGo(btn){
   say(btn.dataset.t, null, ()=>{ if(hl) hl.classList.remove('spkon'); }, spv||undefined);
 }
 window.spkGo=spkGo;
+function sayWord(el){
+  document.querySelectorAll('.spkon').forEach(x=>x.classList.remove('spkon'));
+  el.classList.add('spkon');
+  say(el.textContent, null, ()=>{ el.classList.remove('spkon'); });
+}
+window.sayWord=sayWord;
 function spk(text,label){
   return '<button class="spk" onclick="spkGo(this);event.stopPropagation()" data-t="'+esc(text)+'">🔊'+(label?' '+label:'')+'</button>';
 }
@@ -4546,7 +4552,7 @@ function rwParas(s){
 }
 function rwWordRow(t,l){
   return '<article class="bkvrow" role="listitem"><div class="bkvmeta">'
-   +'<div class="bkvcell bkvword"><span class="wln"><span class="wt" onclick="spkGo(this.parentElement.querySelector(\'.spk\'))">'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'實景：'+(l.ti||''))+'</span></div>'
+   +'<div class="bkvcell bkvword"><span class="wln"><span class="wt" onclick="sayWord(this)">'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'實景：'+(l.ti||''))+'</span></div>'
    +(t.ipa?'<div class="bkvcell bkvipa">'+esc(t.ipa)+'</div>':'')
    +(t.pos?'<div class="bkvcell bkvpos">'+esc(t.pos)+'</div>':'')
    +'</div>'
@@ -5130,7 +5136,7 @@ function bookHTML(b){
   /* 中譯切換時重新 render：中文節點與第五欄真正加入／移除，而非保留空白欄。 */
   const vtable=list=>{
     const showChinese=CNALL;
-    const word=t=>'<span class="wln">'+(t.star?'<span class="starb" title="重點單字">⭐</span>':'<span class="starb ph" aria-hidden="true">⭐</span>')+'<span class="wt" onclick="spkGo(this.parentElement.querySelector(\'.spk\'))">'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'課本：'+b.titleCn)+'</span>';
+    const word=t=>'<span class="wln">'+(t.star?'<span class="starb" title="重點單字">⭐</span>':'<span class="starb ph" aria-hidden="true">⭐</span>')+'<span class="wt" onclick="sayWord(this)">'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'課本：'+b.titleCn)+'</span>';
     return '<div class="bkvd card"><div class="bkvtab" role="list">'
       +list.map(t=>'<article class="bkvrow" role="listitem"><div class="bkvmeta">'
         +'<div class="bkvcell bkvword">'+word(t)+'</div>'
