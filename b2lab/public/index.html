@@ -574,6 +574,7 @@ body.cnall #v-real span.cnx{display:inline!important}
 .rwq-div{border-bottom:1px solid var(--line)}
 .rwq-n{color:var(--ink2);font-weight:600;font-size:var(--font-secondary)}
 .rwq-cn{color:var(--ink2);font-size:var(--font-secondary);margin-top:2px}
+.rwq .sent b{color:#c0581a;background:#fdf0e5;border-radius:4px;padding:0 3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 /* 實景 usage / compare */
 .rw-usage b{font-weight:var(--fw-emph)}
 .rw-cmp{margin:0;padding:0;list-style:none}
@@ -4611,6 +4612,22 @@ function RW_ICONLIB(D,A,T){
     bucket:'<path d="M14 24 h36 l-5 28 h-26z" fill="'+A+'" '+S+'/><path d="M16 24 a16 8 0 0 1 32 0" fill="none" '+S+'/>'
   };
 }
+function rwHiAll(sent,vocab){
+  let s=esc(sent);
+  (vocab||[]).forEach(v=>{
+    if(!v.w) return;
+    const core=String(v.w).replace(/\b(something|someone)\b/gi,' ').replace(/\s+/g,' ').trim();
+    if(!core) return;
+    const q=core.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    const re=new RegExp('\\b('+q+'[a-z]*)','gi');
+    if(re.test(s)){s=s.replace(new RegExp('\\b('+q+'[a-z]*)','gi'),'<b>$1</b>');return}
+    core.split(' ').filter(Boolean).forEach(p=>{
+      const pq=p.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      s=s.replace(new RegExp('\\b('+pq+'[a-z]*)\\b','i'),'<b>$1</b>');
+    });
+  });
+  return s;
+}
 function rwDetailHTML(l){
   const st=rwStat(l.id);
   /* Header：觀看原影片直接放在標題卡的 bar 裡，不再獨立一個「原始影片」區塊 */
@@ -4628,10 +4645,10 @@ function rwDetailHTML(l){
   h+='<div class="mr-sec">影片實景原句'+((l.quotes||[]).length?'（'+l.quotes.length+'）':'')+'</div>';
   if((l.quotes||[]).length){
     h+=l.quotes.map((q,i)=>{
-      const hit=(l.vocab||[]).find(v=>v.w&&q.en.toLowerCase().includes(v.w.toLowerCase()));
+      let s=rwHiAll(q.en,l.vocab);
       return '<div class="rwq'+(i<l.quotes.length-1?' rwq-div':'')+'">'
        +'<span class="rwq-n">'+(i+1)+'.</span> '
-       +'<span class="sent" data-t="'+esc(q.en)+'" onclick="saySent(this)">'+(hit?bkHi(q.en,hit.w):esc(q.en))+'</span> '+spk(q.en)
+       +'<span class="sent" data-t="'+esc(q.en)+'" onclick="saySent(this)">'+s+'</span> '+spk(q.en)
        +(q.cn?'<div class="cnx rwq-cn">'+esc(rwPad(q.cn))+'</div>':'')
        +'</div>';
     }).join('');
@@ -4650,9 +4667,9 @@ function rwDetailHTML(l){
   if((l.exs||[]).length)
     h+='<div class="mr-sec">延伸例句（'+l.exs.length+'）<span style="font-weight:400;font-size:var(--font-meta);color:var(--ink2);margin-left:8px">依情境補充，非影片原句</span></div>'
      +l.exs.map((q,i)=>{
-       const hit=(l.vocab||[]).find(v=>v.w&&q.en.toLowerCase().includes(v.w.toLowerCase()));
+       let s=rwHiAll(q.en,l.vocab);
        return '<div class="rwq'+(i<l.exs.length-1?' rwq-div':'')+'"><span class="rwq-n">'+(i+1)+'.</span> '
-        +'<span class="sent" data-t="'+esc(q.en)+'" onclick="saySent(this)">'+(hit?bkHi(q.en,hit.w):esc(q.en))+'</span> '+spk(q.en)
+        +'<span class="sent" data-t="'+esc(q.en)+'" onclick="saySent(this)">'+s+'</span> '+spk(q.en)
         +(q.cn?'<div class="cnx rwq-cn">'+esc(rwPad(q.cn))+'</div>':'')+'</div>';
      }).join('');
   /* 用法比較：實境用法＋比較合併為一個區塊 */
@@ -4664,11 +4681,13 @@ function rwDetailHTML(l){
         +l.cmp.map(c=>'<li><b>'+esc(c.w)+'</b>'+esc(rwPad(c.d))+'</li>').join('')+'</ul>'
        :'');
   }
-  if(l.spq)
+  if(l.spq){
+    let spqH=rwHiAll(l.spq,l.vocab);
     h+='<div class="mr-sec">Speak Up</div>'
-     +'<div style="font-weight:var(--fw-emph);font-size:var(--font-body)"><span class="sent" data-t="'+esc(l.spq)+'" onclick="saySent(this)">'+esc(l.spq)+'</span> '+spk(l.spq)+'</div>'
+     +'<div class="rwq" style="font-weight:var(--fw-emph);font-size:var(--font-body)"><span class="sent" data-t="'+esc(l.spq)+'" onclick="saySent(this)">'+spqH+'</span> '+spk(l.spq)+'</div>'
      +(l.spHint?'<details class="hint-toggle" style="margin-top:8px"><summary class="hint-sum">提示</summary><div class="hint">'+esc(rwPad(l.spHint))+'</div></details>':'')
      +'<div class="muted" style="margin-top:8px">先用自己的話回答，再到 <a href="https://learning-english-notes.web.app" target="_blank" rel="noopener">Speak Up ↗</a> 錄音練習。收藏（⭐）的單字會自動同步到 Speak Up 的「⭐ B2 生詞本」。</div>';
+  }
   h+='</div></div>';
   /* 右欄：Words & Phrases，與閱讀頁同一套 wpbox / wpitem 元件 */
   h+='<div>';
