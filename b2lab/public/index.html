@@ -1869,10 +1869,14 @@ function voiceAlive(v){
   const vs=speechSynthesis.getVoices();
   return vs.indexOf(v)>=0 ? v : (vs.find(x=>x.name===v.name&&x.lang===v.lang)||null);
 }
+/* TTS 發音修正表：引擎唸錯的字，朗讀前換成唸得對的拼法（只影響聲音，畫面照舊）。
+   之後發現唸錯的字就加一行。 */
+const TTS_FIX={mindset:'mind set'};
 function say(text,rate,onend,voice){
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
-  const t=String(text).replace(/\s+/g,' ').trim();
+  let t=String(text).replace(/\s+/g,' ').trim();
+  t=t.replace(/\b[A-Za-z]+\b/g,w=>TTS_FIX[w.toLowerCase()]||w);
   const base=rate||ST.rate||1;
   const isQ=/\?\s*$/.test(t), isEx=/!\s*$/.test(t);
   let v=voiceAlive(voice||VOICE);
