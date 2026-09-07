@@ -15,7 +15,7 @@ console.log('words:',words.length);
 
 const BASE='https://ssl.gstatic.com/dictionary/static/sounds/20200429/';
 async function dl(key){
-  for(const u of [BASE+key+'--_us_1.mp3', BASE+key+'_us_1.mp3']){
+  for(const u of [BASE+key+'--_us_1.mp3', BASE+key+'_us_1.mp3', BASE+key+'--_us_1_rr.mp3', BASE+key+'_us_1_rr.mp3', BASE+key+'--_us_2.mp3']){
     try{
       const r=await fetch(u);
       if(r.ok){ fs.writeFileSync(path.join(RAW,key+'.mp3'),Buffer.from(await r.arrayBuffer())); return true; }

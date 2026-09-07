@@ -1875,7 +1875,7 @@ function voiceAlive(v){
 }
 /* TTS 發音修正表：引擎唸錯的字，朗讀前換成唸得對的拼法（只影響聲音，畫面照舊）。
    之後發現唸錯的字就加一行。 */
-const TTS_FIX={mindset:'mind set'};
+const TTS_FIX={mindset:'mind set', rapport:'ruh pore'};
 function say(text,rate,onend,voice){
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
@@ -2174,9 +2174,16 @@ function togGlobalCn(){
   applyCnAll();
   /* 課本 Vocabulary 的中文節點是條件輸出；切換時重繪目前課程以實際增刪欄位。 */
   if(TAB==='book' && bkOpen){
+    /* iPad Safari：innerHTML 重繪瞬間文件高度縮短，捲動會被夾到頂端 →
+       重繪後先還原 scrollY，再用「同一個索引」找回原錨點做微調（抓畫面同點的元素會抓錯） */
+    const sel='.bkq,.bkex,.para,.wpitem,.wpbox,.focus,.upg,.bkbar,.card,.item,.magttl,section';
+    const all=[...document.querySelectorAll(sel)];
+    const key=anchor?all.indexOf(anchor):-1;
+    const sy=window.scrollY;
     RENDER.book();
-    anchor=document.elementFromPoint(ax, ay);
-    anchor=anchor ? (anchor.closest('.bkq,.bkex,.para,.wpitem,.wpbox,.focus,.upg,.bkbar,.card,.item,.magttl,section')||anchor) : null;
+    window.scrollTo(0,sy);
+    const all2=[...document.querySelectorAll(sel)];
+    anchor=key>=0?all2[key]:null;
   }
   if(anchor&&prevTop!=null){
     requestAnimationFrame(()=>{
@@ -4933,7 +4940,7 @@ function mrPageHTML(ym){
   const wordRow=(t,src)=>'<article class="bkvrow" role="listitem"><div class="bkvmeta">'
    +'<div class="bkvcell bkvword"><span class="wln">'
    +(t.star?'<span class="starb" title="重點單字">⭐</span>':'<span class="starb ph" aria-hidden="true">⭐</span>')
-   +'<span>'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'課本：'+src)+'</span></div>'
+   +'<span class="wt" onclick="sayWord(this)">'+esc(t.w)+'</span>'+spk(t.w)+wbBtn(t.w,'課本：'+src)+'</span></div>'
    +'<div class="bkvcell bkvipa">'+esc(t.ipa||'')+'</div><div class="bkvcell bkvpos">'+esc(t.pos||'')+'</div>'
    +'</div><div class="bkvcell bkvexample"><span class="sent" data-t="'+esc(t.ex||'')+'" onclick="saySent(this)">'+bkHi(t.ex||'',t.w)+'</span> '+(t.ex?spk(t.ex):'')+'</div>'
    +'<div class="bkvtranslation cnx">'+esc(t.exCn||'')+'</div><div class="bkvcell bkvmeaning cnx">'+esc(t.cn||'')+'</div></article>';
@@ -4961,7 +4968,7 @@ function mrPageHTML(ym){
        +'<div><div class="mrf-t">'+(b.icon||'📕')+' '+esc(b.titleCn)+'</div></div></div>'
        +'<span class="mrf-why '+stCls+'">'+esc(x.st.label)+'</span>'
        +(ws.length?'<div class="mrf-sec"><b>核心單字</b>'
-         +'<div class="mrf-chips">'+ws.map(t=>'<span class="mrf-chip">'+esc(t.w)+' '+spk(t.w)
+         +'<div class="mrf-chips">'+ws.map(t=>'<span class="mrf-chip"><span class="wt" onclick="sayWord(this)">'+esc(t.w)+'</span> '+spk(t.w)
            +'<span class="cnx">'+esc(t.cn||'')+'</span></span>').join('')+'</div></div>':'')
        +(g1?'<div class="mrf-sec"><b>核心句型</b>'
          +'<div class="mrf-g">'+esc(g1.title)+(g1.pat?'<div class="mrf-pat">'+esc(g1.pat)+'</div>':'')
