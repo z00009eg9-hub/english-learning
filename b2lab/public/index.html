@@ -2367,6 +2367,14 @@ const reEsc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 /* 每日文章「五圓圖示帶」：在五個圓之間補順序箭頭（配色維持各圖原本的調色盤，
    箭頭自動取該圖裡最鮮豔的主色）。只處理「800×200 且恰好五個圓」的模板圖，
    其他圖表（長條圖等）不動 */
+/* 五圓圖示帶瘦身：圓圈實際佔 y48–152、x42–758，viewBox 裁掉四周留白 →
+   顯示高度約 -24%，左右空白也收窄。只動 5 圓 800×200 的圖，其他 SVG 原樣。 */
+function stripSlim(svg){
+  const s=String(svg||'');
+  if(!/viewBox="0 0 800 200"/.test(s)) return s;
+  if((s.match(/translate\(\d+,52\) scale\(1\.5\)/g)||[]).length!==5) return s;
+  return s.replace('viewBox="0 0 800 200"','viewBox="30 38 740 140"');
+}
 function artNormSVG(svg){
   const s=String(svg||'');
   if(!/viewBox="0 0 800 200"/.test(s)) return s;
@@ -2386,7 +2394,7 @@ function artNormSVG(svg){
     const x1=x0+12, x2=x0+46;
     return '<path d="M'+x1+' 100 H'+x2+' M'+x2+' 100 l-9 -7 M'+x2+' 100 l-9 7"/>';
   }).join('');
-  return s.replace('</svg>','<g fill="none" stroke="'+acc+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".8">'+arrows+'</g></svg>');
+  return stripSlim(s.replace('</svg>','<g fill="none" stroke="'+acc+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".8">'+arrows+'</g></svg>'));
 }
 function artHTML(id){
   const a=(window.ART||{})[id];
@@ -3144,13 +3152,23 @@ function browseHTML(){
    6. 文法分頁
    ============================================================ */
 let CURG=null;
+let GLV='all';
+function gSetLv(lv){ GLV=lv; RENDER.gram(); }
+window.gSetLv=gSetLv;
 RENDER.gram=function(){
   const v=$('v-gram');
   if(CURG){ v.innerHTML=gramHTML(CURG); return; }
+  /* 等級篩選：只列資料裡實際存在的等級，保持簡單 */
+  const lvs=[...new Set(ALL_GRAM.map(g=>g.level).filter(Boolean))];
+  const order=['A2','B1','B1+','B2'];
+  lvs.sort((a,b)=>order.indexOf(a)-order.indexOf(b));
+  const list=GLV==='all'?ALL_GRAM:ALL_GRAM.filter(g=>g.level===GLV);
   v.innerHTML='<div class="card"><h2 class="sec">📐 文法系統教材</h2>'
     +'<div class="hint">單元順序就是建議的學習順序：先把 B1 的時態基礎穩住，再進 B2 的被動、關係子句、分詞與倒裝。每個單元都有 ⚠️ 常見錯誤與練習題。</div>'
-    +'<div class="muted">共 '+ALL_GRAM.length+' 個單元'+(DAILY_GRAM.length?'（其中 '+DAILY_GRAM.length+' 個是每週三、五自動新增）':'')+'</div></div>'
-    + ALL_GRAM.map(g=>{
+    +'<div class="muted">共 '+ALL_GRAM.length+' 個單元'+(DAILY_GRAM.length?'（其中 '+DAILY_GRAM.length+' 個是每週三、五自動新增）':'')+'</div>'
+    +'<div class="chips" style="margin-top:8px"><button class="chip'+(GLV==='all'?' on':'')+'" onclick="gSetLv(\'all\')">全部</button>'
+    + lvs.map(l=>'<button class="chip'+(GLV===l?' on':'')+'" onclick="gSetLv(\''+l+'\')">'+esc(l)+'</button>').join('')+'</div></div>'
+    + list.map(g=>{
       const d=ST.gramDone[g.id];
       return '<div class="item'+finCls(d)+'"'+finTitle(d,'練習')+' style="'+lvBar(g.level)+'" onclick="gOpen(\''+g.id+'\')">'
       +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(g.level)+'">'+esc(g.titleCn)+'</div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
@@ -4762,7 +4780,8 @@ function rwDetailHTML(l){
     let spqH=rwHiAll(l.spq,l.vocab);
     h+='<div class="mr-sec" style="color:#2e7d6f">Speak Up</div>'
      +'<div class="rwq" style="font-weight:var(--fw-emph);font-size:var(--font-body)"><span class="sent" data-t="'+esc(l.spq)+'" onclick="saySent(this)">'+spqH+'</span> '+spk(l.spq)+'</div>'
-     +(l.spHint?'<details class="hint-toggle" style="margin-top:8px"><summary class="hint-sum">提示</summary><div class="hint">'+esc(rwPad(l.spHint))+'</div></details>':'')
+     +(l.spHint?'<details class="hint-toggle" style="margin-top:8px"><summary class="hint-sum">提示</summary><div class="hint">'+esc(rwPad(l.spHint))
+       +(l.spHintCn?'<div class="cnx" style="color:var(--ink2);margin-top:4px">'+esc(rwPad(l.spHintCn))+'</div>':'')+'</div></details>':'')
      +'<div class="muted" style="margin-top:8px">先用自己的話回答，再到 <a href="https://learning-english-notes.web.app" target="_blank" rel="noopener">Speak Up ↗</a> 錄音練習。收藏（⭐）的單字會自動同步到 Speak Up 的「⭐ B2 生詞本」。</div>';
   }
   h+='</div></div>';
@@ -5322,7 +5341,7 @@ function bookHTML(b){
      +'<div class="hint" style="display:none;margin-top:8px">點<b>任何一句</b>就朗讀那一句並反黃；「🔊 朗讀全文」與「🔊 整段」會一句一句念、念到哪句亮到哪句，再點一下空白處可停止。</div>'
      +'<div class="muted cnx" style="font-weight:var(--fw-emph);margin:6px 0 8px">'+esc(r.titleCn)+'</div>'
      /* 文章插圖：五個大圓圖示，放在標題下方、與內文同寬（有才顯示） */
-     + (r.art?'<figure class="artbox flush" style="margin:0 0 14px">'+r.art+(r.artCap?bkStepCap(r.artCap):'')+'</figure>':'')
+     + (r.art?'<figure class="artbox flush" style="margin:0 0 14px">'+stripSlim(r.art)+(r.artCap?bkStepCap(r.artCap):'')+'</figure>':'')
      + (r.paras||[]).map(p=>'<div class="para"><div class="en">'+sentSpans(p.en)+'</div>'
        +'<div class="pbar"><button class="spk" onclick="bkReadPara(this)">🔊 整段</button></div>'
        +'<div class="ecn cnx" style="font-size:var(--font-body);color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:6px">'+esc(p.cn)+'</div></div>').join('')
