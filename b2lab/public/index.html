@@ -3156,9 +3156,12 @@ RENDER.gram=function(){
       +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(g.level)+'">'+esc(g.titleCn)+'</div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
       +'<div class="tc">'+esc(g.title)+'</div>'
       +'<div class="meta"><span>'+esc(g.summary)+'</span></div>'
-      +'<div class="meta">'+(g.vis?'<span>✨ 視覺化教學 · '+gvBadge(g)+'</span>'
-          :(g.date?'<span>📅 '+esc(g.date)+' 新增'+(g.unitNo?' · Unit '+g.unitNo:'')+'</span>'
-          :((g.srcDays||[]).length?'<span>📓 課堂：'+g.srcDays.join(' / ')+'</span>':'<span>➕ B2 補強單元</span>')))
+      /* 徽章不互斥：有視覺化照樣要標日期與 Unit，才分得出哪些是每日新增的 Grammar in Use 進度 */
+      +'<div class="meta">'
+      +(g.vis?'<span>✨ 視覺化教學 · '+gvBadge(g)+'</span>':'')
+      +(g.date?'<span>📅 '+esc(g.date)+' 新增'+(g.unitNo?' · Grammar in Use Unit '+g.unitNo:'')+'</span>'
+        :((g.srcDays||[]).length?'<span>📓 課堂：'+g.srcDays.join(' / ')+'</span>'
+        :(g.vis?'':'<span>➕ B2 補強單元</span>')))
       +'</div></div>';
     }).join('');
 };
