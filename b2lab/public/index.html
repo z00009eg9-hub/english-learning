@@ -1387,6 +1387,7 @@ body.cnall #v-book span.cnx{display:inline!important}
     width:auto;max-width:calc(100vw - var(--sb-w) - 44px);left:0;transform:none;margin-left:auto;margin-right:auto
   }
 }
+#v-book.bkopen .para{max-width:100%}
 /* 前次已學（無例句欄）：欄寬比照上方單字表 */
 #v-book table.bkrev td:nth-child(1),#v-book table.bkrev th:nth-child(1){width:24%}
 #v-book table.bkrev td:nth-child(2),#v-book table.bkrev th:nth-child(2){width:36%}
@@ -1613,6 +1614,7 @@ body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .ex
 <script src="data-listen.js"></script>
 <script src="data-daily.js"></script>
 <script src="data-book.js"></script>
+<script src="data-bookart.js"></script>
 <script>
 /* ============================================================
    0. 基礎工具
@@ -2356,7 +2358,7 @@ function rdHint(off){
   try{ localStorage.setItem('b2lab_rdhint',off?'1':'0'); }catch(e){}
   RENDER.read();
 }
-function rdOpenArt(id){ rdOpen=ALL_ARTS.find(a=>a.id===id); QSTATE={}; sbAutoCollapse(); RENDER.read(); }
+function rdOpenArt(id){ rdOpen=ALL_ARTS.find(a=>a.id===id); QSTATE={}; sbAutoCollapse(); RENDER.read(); window.scrollTo(0,0); }
 function rdClose(){ rdOpen=null; sbAutoExpand(); if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.read(); }
 window.rdSet=rdSet; window.rdOpenArt=rdOpenArt; window.rdClose=rdClose; window.rdGramTog=rdGramTog; window.rdHint=rdHint; window.rdQ=rdQ;
 
@@ -5330,8 +5332,12 @@ function bookHTML(b){
   }
 
   /* 閱讀文章（有才顯示）：逐句可點朗讀＋反黃、理解問題答案可隱藏、Simple Summary */
-  const sentSpans=t=>splitSentences(t).map(s=>'<span class="sent" data-t="'+esc(s)+'" onclick="saySent(this)">'+esc(s)+'</span>').join(' ');
-  (b.reading||[]).forEach(r=>{
+  const stripHtml=t=>String(t||'').replace(/<[^>]*>/g,'');
+  const sentSpans=t=>{const c=stripHtml(t);return splitSentences(c).map(s=>'<span class="sent" data-t="'+esc(s)+'" onclick="saySent(this)">'+esc(s)+'</span>').join(' ');};
+  (b.reading||[]).forEach((r,ri)=>{
+    const _ba=(window.BOOKART||{})[b.id+'#'+ri];
+    const _bart=r.art||(_ba?_ba.svg:'')||'';
+    const _bcap=r.artCap||(_ba?_ba.cap:'')||'';
     h+='<div class="bkbar">'+esc(r.bar)+'</div>'
      +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
      +'<h2 class="sec bkattl" style="color:var(--accent2);margin:0;flex:1">'+esc(r.title)+' '+spk(r.title)+'</h2>'
@@ -5340,8 +5346,8 @@ function bookHTML(b){
      +'<button class="spk" onclick="togHintBox(this)">💡 ▼</button></span></div>'
      +'<div class="hint" style="display:none;margin-top:8px">點<b>任何一句</b>就朗讀那一句並反黃；「🔊 朗讀全文」與「🔊 整段」會一句一句念、念到哪句亮到哪句，再點一下空白處可停止。</div>'
      +'<div class="muted cnx" style="font-weight:var(--fw-emph);margin:6px 0 8px">'+esc(r.titleCn)+'</div>'
-     /* 文章插圖：五個大圓圖示，放在標題下方、與內文同寬（有才顯示） */
-     + (r.art?'<figure class="artbox flush" style="margin:0 0 14px">'+stripSlim(r.art)+(r.artCap?bkStepCap(r.artCap):'')+'</figure>':'')
+     /* 文章插圖：五個大圓圖示，放在標題下方、與內文同寬（有才顯示）— 先查 r.art，再查 BOOKART */
+     + (_bart?'<figure class="artbox flush" style="margin:0 0 14px">'+stripSlim(_bart)+(_bcap?bkStepCap(_bcap):'')+'</figure>':'')
      + (r.paras||[]).map(p=>'<div class="para"><div class="en">'+sentSpans(p.en)+'</div>'
        +'<div class="pbar"><button class="spk" onclick="bkReadPara(this)">🔊 整段</button></div>'
        +'<div class="ecn cnx" style="font-size:var(--font-body);color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:6px">'+esc(p.cn)+'</div></div>').join('')
