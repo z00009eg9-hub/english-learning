@@ -2646,7 +2646,8 @@ function readerHTML(a){
    +'<div class="hint" style="display:none">💡 點<b>任何一句</b>就會<b>朗讀那一句</b>（那句會亮起來）；<b style="color:#c0561a">橘色加粗＋編號</b>的字對應右邊的單字片語；整段一起唸用各段下方「🔊 整段」。</div>'
    + artHTML(a.id)
    +'<div id="paras">'+a.paras.map((p,i)=>{
-      const enHtml=splitSentences(p.en).map(s=>
+      const _pen=String(p.en||'').replace(/<[^>]*>/g,'');
+      const enHtml=splitSentences(_pen).map(s=>
         '<span class="sent" title="點這句朗讀" onclick="saySent(this)" data-t="'+esc(s)+'">'+magTokenizeRead(s,tmap,used)+'</span>'
       ).join(' ');
       return '<div class="para" id="p'+i+'"><div class="en">'+enHtml+'</div>'
@@ -2657,7 +2658,7 @@ function readerHTML(a){
    +'</div></div>';
 
   /* 右欄：Words & Phrases + 補充詞彙 + You Can Do This */
-  const _artLow=a.paras.map(p=>p.en.toLowerCase()).join(' ');
+  const _artLow=a.paras.map(p=>String(p.en||'').replace(/<[^>]*>/g,'').toLowerCase()).join(' ');
   const _exInArt=ex=>{if(!ex)return false;const k=ex.toLowerCase().replace(/[.!?,;:"'']/g,'').trim();return k.length>15&&_artLow.includes(k.slice(0,40));};
   h+='<div>';
   if(tg.length){
