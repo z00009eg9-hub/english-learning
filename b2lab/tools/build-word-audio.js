@@ -35,16 +35,22 @@ async function dl(key){
   }
   console.log('\ndownloaded:',got,'missing:',miss.length);
   fs.writeFileSync(path.join(__dirname,'missing.txt'),miss.join('\n'));
-  // 正規化
+  // 正規化：短音檔（~1 秒）用 loudnorm 量不準，改成兩段式 —
+  // 先 volumedetect 量平均音量，再精準補增益到 -20 dB（含限幅防爆音）
+  const {spawnSync}=require('child_process');
   let norm=0, fail=0;
   for(const f of fs.readdirSync(RAW)){
+    const r=spawnSync(FF,['-i',path.join(RAW,f),'-af','volumedetect','-f','null','-'],{encoding:'utf8'});
+    const m=(r.stderr||'').match(/mean_volume:s*(-?[d.]+) dB/);
+    if(!m){ fail++; continue; }
+    const gain=(-20-parseFloat(m[1])).toFixed(2);
     try{
       execFileSync(FF,['-y','-loglevel','error','-i',path.join(RAW,f),
-        '-af','loudnorm=I=-16:TP=-1.5:LRA=11',
+        '-af','volume='+gain+'dB,alimiter=limit=0.89:level=false',
         '-ar','44100','-codec:a','libmp3lame','-q:a','5',
         path.join(OUT,f)]);
       norm++;
-    }catch(e){ fail++; console.error('ffmpeg fail:',f); }
+    }catch(e){ fail++; }
   }
   console.log('normalized:',norm,'failed:',fail);
 })();
