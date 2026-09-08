@@ -166,16 +166,22 @@ window.GRAMVIS = [
 
   quiz: [
     { q: 'I ____ my keys, so I can\'t get into my flat.', opts: ['lost', 'have lost', 'was losing', 'had lost'], ans: 1,
+      qCn: '我的鑰匙弄丟了，所以進不了家門。',
       expl: '重點是「現在進不去」——過去的動作留下現在的結果 → 現在完成式 have lost。' },
     { q: 'I ____ him yesterday.', opts: ['have seen', 'saw', 'have been seeing', 'was seen'], ans: 1,
+      qCn: '我昨天有看到他。',
       expl: 'yesterday 是已經結束的時間，不能配現在完成式 → 過去簡單式 saw。' },
     { q: '____ you ever ____ Vietnamese food?', opts: ['Did / eat', 'Have / eaten', 'Do / eat', 'Have / ate'], ans: 1,
+      qCn: '你有吃過越南菜嗎？',
       expl: '問「這輩子有沒有這個經驗」用 Have you ever + 過去分詞；eat 的過去分詞是 eaten。' },
     { q: 'I ____ three meetings this week, and it\'s only Wednesday.', opts: ['had', 'have had', 'was having', 'have been having'], ans: 1,
+      qCn: '我這禮拜已經開了三場會，而且才星期三而已。',
       expl: 'this week 還沒結束（才星期三），數字還可能增加 → 現在完成式 have had。' },
     { q: 'She ____ in London for two years, but she lives in Taipei now.', opts: ['has lived', 'lived', 'has been living', 'is living'], ans: 1,
+      qCn: '她在倫敦住過兩年，但她現在住台北。',
       expl: '「現在住台北」表示倫敦那段已經結束、跟現在切斷了 → 過去簡單式 lived。' },
     { q: 'I ____ in Taipei for three years and I\'m still here.', opts: ['live', 'lived', 'have lived', 'had lived'], ans: 2,
+      qCn: '我在台北住了三年，現在還在這裡。',
       expl: '三年前開始、到現在還住著 → 現在完成式 have lived（for + 一段時間）。' }
   ]
 }

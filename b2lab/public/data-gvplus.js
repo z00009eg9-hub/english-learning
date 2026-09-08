@@ -117,10 +117,13 @@ g01: {
   },
   quizMore: [
     { q: 'Look! It ____ outside. Take an umbrella.', opts: ['rains', 'is raining', 'has rained', 'rained'], ans: 1,
+      qCn: '你看！外面正在下雨。帶把傘。',
       expl: 'Look! 表示「此刻」，正在下 → 現在進行式 is raining。' },
     { q: 'I ____ my homework, so I can go out now.', opts: ['finish', 'finished', 'have finished', 'was finishing'], ans: 2,
+      qCn: '我做完功課了，所以現在可以出去。',
       expl: '過去的動作留下「現在可以出門」的結果 → 現在完成式 have finished。' },
     { q: 'She ____ for two hours when I finally arrived.', opts: ['waited', 'has waited', 'had been waiting', 'is waiting'], ans: 2,
+      qCn: '當我終於到的時候，她已經等了兩個小時。',
       expl: '到「我抵達」這個過去的點為止已經持續兩小時 → 過去完成進行式 had been waiting。' }
   ]
 },
@@ -207,10 +210,13 @@ g02: {
   },
   quizMore: [
     { q: 'My brother ____ in Kaohsiung, but he ____ with us this summer.', opts: ['lives / stays', 'is living / stays', 'lives / is staying', 'is living / is staying'], ans: 2,
+      qCn: '我哥住高雄，但他這個夏天暫時住我們家。',
       expl: '住高雄是常態 → lives；今年夏天暫時住我們家 → is staying。' },
     { q: 'These days more and more people ____ mobile payment instead of cash.', opts: ['use', 'are using', 'uses', 'have used'], ans: 1,
+      qCn: '最近越來越多人用行動支付取代現金。',
       expl: 'These days ＋「越來越多」是正在改變的趨勢 → 現在進行式 are using。' },
     { q: 'Which sentence is WRONG?', opts: ['I am wanting a coffee.', 'I want a coffee.', 'I am having lunch.', 'I have a car.'], ans: 0,
+      qCn: '哪一句是錯的？',
       expl: 'want 是狀態動詞，沒有進行式；have 當「吃」是動作，所以 am having lunch 是對的。' }
   ]
 },
@@ -290,10 +296,13 @@ g03: {
   },
   quizMore: [
     { q: 'While we ____ dinner, the lights went out.', opts: ['had', 'were having', 'have had', 'are having'], ans: 1,
+      qCn: '我們正在吃晚餐時，燈突然熄了。',
       expl: 'while 接長的那件事 → 過去進行式 were having。' },
     { q: 'She ____ her keys while she ____ for the bus.', opts: ['was losing / waited', 'lost / was waiting', 'lost / waited', 'was losing / was waiting'], ans: 1,
+      qCn: '她在等公車的時候掉了鑰匙。',
       expl: '弄丟是一瞬間 → 過去簡單式 lost；等公車是一段背景 → was waiting。' },
     { q: 'I ____ to work, ____ my coffee and ____ my emails.', opts: ['was driving / was drinking / was checking', 'drove / drank / checked', 'drove / was drinking / checked', 'was driving / drank / was checking'], ans: 1,
+      qCn: '我開車去上班、喝了咖啡、收了信。',
       expl: '照順序報告三件做完的事，沒有要強調「正在中間」→ 全部用過去簡單式。' }
   ]
 },
@@ -382,10 +391,13 @@ g04: {
   },
   quizMore: [
     { q: "I have known her ____ we were children.", opts: ['for', 'since', 'from', 'during'], ans: 1,
+      qCn: '我從我們小時候就認識她了。',
       expl: 'we were children 是一個起點（而且是一整句）→ 用 since。' },
     { q: 'Have you eaten ____?', opts: ['already', 'yet', 'still', 'ever since'], ans: 1,
+      qCn: '你吃了沒？',
       expl: '疑問句問「做了沒」，固定用句尾的 yet。' },
     { q: 'Which sentence is correct?', opts: ['I have finished already my work.', 'I have already finished my work.', 'I already have finished my work.', 'I have finished my work yet.'], ans: 1,
+      qCn: '哪一句是正確的？',
       expl: 'already 放在 have 和過去分詞中間；yet 不能用在肯定句。' }
   ]
 },
@@ -479,10 +491,13 @@ g05: {
   },
   quizMore: [
     { q: "I can't sleep — I'm not used to ____ in this bed.", opts: ['sleep', 'sleeping', 'slept', 'sleeps'], ans: 1,
+      qCn: '我睡不著——我不習慣睡這張床。',
       expl: 'be used to 後面接 V-ing → sleeping。' },
     { q: '____ you use to live in Taichung?', opts: ['Did', 'Do', 'Were', 'Have'], ans: 0,
+      qCn: '你以前住台中嗎？',
       expl: 'used to 的疑問句用 Did + use to（沒有 d）。' },
     { q: 'Which sentence is WRONG?', opts: ['We would go camping every summer.', 'I would live in Hualien.', 'I used to live in Hualien.', 'She would always help me.'], ans: 1,
+      qCn: '哪一句是錯的？',
       expl: 'would 不能講狀態（住），只能講反覆的動作 → 要用 used to live。' }
   ]
 },
@@ -567,10 +582,13 @@ g06: {
   },
   quizMore: [
     { q: 'My mother made me ____ my room.', opts: ['to clean', 'clean', 'cleaning', 'cleaned'], ans: 1,
+      qCn: '我媽叫我打掃房間。',
       expl: 'make + O + 原形，不加 to。' },
     { q: 'I finally got my son ____ his vegetables.', opts: ['eat', 'to eat', 'eating', 'ate'], ans: 1,
+      qCn: '我終於讓我兒子吃蔬菜了。',
       expl: 'get + O + to + 原形。' },
     { q: 'I need to have my suit ____ before the wedding.', opts: ['clean', 'to clean', 'cleaned', 'cleaning'], ans: 2,
+      qCn: '婚禮之前，我得把西裝送洗。',
       expl: 'have + 物 + 過去分詞＝找人把它弄好 → cleaned。' }
   ]
 },
@@ -657,10 +675,13 @@ g07: {
   },
   quizMore: [
     { q: 'The match was ____. We won in the last minute!', opts: ['excited', 'exciting', 'excite', 'excitement'], ans: 1,
+      qCn: '那場比賽好刺激，我們最後一分鐘才贏的！',
       expl: '比賽是造成興奮的來源 → exciting。' },
     { q: 'I was ____ in the film, but my friend was ____.', opts: ['interesting / bored', 'interested / boring', 'interested / bored', 'interesting / boring'], ans: 2,
+      qCn: '我對那部電影有興趣，但我朋友覺得無聊。',
       expl: '兩個主詞都是「感覺的人」→ 都用 -ed：interested / bored。' },
     { q: 'Which sentence means "he makes other people tired"?', opts: ['He is tired.', 'He is tiring.', 'He was tired of it.', 'He got tired.'], ans: 1,
+      qCn: '哪一句的意思是「他讓別人覺得累」？',
       expl: '「讓別人累」是來源 → tiring。' }
   ]
 },
@@ -746,10 +767,13 @@ g08: {
   },
   quizMore: [
     { q: 'If I ____ you, I would take the job.', opts: ['am', 'was', 'were', 'will be'], ans: 2,
+      qCn: '如果我是你，我會接那份工作。',
       expl: '第二類的固定說法 If I were you（虛擬語氣），不用 was。' },
     { q: 'If it ____ tomorrow, we will stay at home.', opts: ['will rain', 'rains', 'rained', 'would rain'], ans: 1,
+      qCn: '如果明天下雨，我們就待在家。',
       expl: '第一類：if 子句用現在式，if 後面永遠不放 will。' },
     { q: 'If they had left earlier, they ____ the train.', opts: ['would catch', 'would have caught', 'will catch', 'caught'], ans: 1,
+      qCn: '如果他們早點出門，就趕得上火車了。',
       expl: '第三類：if + had + Vpp 搭配 would have + Vpp。' }
   ]
 },
@@ -829,10 +853,13 @@ g09: {
   },
   quizMore: [
     { q: 'This bridge ____ in 1998.', opts: ['built', 'was built', 'was building', 'has built'], ans: 1,
+      qCn: '這座橋是一九九八年蓋的。',
       expl: '橋是被建的，過去式 → was built。' },
     { q: 'Careful — the floor ____ right now.', opts: ['is cleaning', 'is being cleaned', 'is cleaned', 'cleans'], ans: 1,
+      qCn: '小心——地板正在清潔中。',
       expl: '進行式的被動：is being + 過去分詞。' },
     { q: 'Which sentence is WRONG?', opts: ['The window was broken.', 'The accident was happened.', 'The letters were sent.', 'The road is being repaired.'], ans: 1,
+      qCn: '哪一句是錯的？',
       expl: 'happen 是不及物動詞，沒有被動 → The accident happened.' }
   ]
 },
@@ -912,10 +939,13 @@ g10: {
   },
   quizMore: [
     { q: 'The woman ____ car was stolen called the police.', opts: ['who', 'which', 'whose', 'whom'], ans: 2,
+      qCn: '車子被偷的那個女人報了警。',
       expl: '「她的車」→ whose + 名詞。' },
     { q: 'That is the café ____ we first met.', opts: ['which', 'where', 'that', 'when'], ans: 1,
+      qCn: '那就是我們第一次見面的咖啡廳。',
       expl: '共用的字是地點 → where（或 which we first met in）。' },
     { q: 'Which sentence is WRONG?', opts: ['My aunt, who lives in Hualien, is a nurse.', 'My aunt, that lives in Hualien, is a nurse.', 'The book I read was good.', 'The man who called me left a message.'], ans: 1,
+      qCn: '哪一句是錯的？',
       expl: '非限定用法（有逗號）不能用 that，要用 who。' }
   ]
 },
@@ -995,10 +1025,13 @@ g11: {
   },
   quizMore: [
     { q: '____ in 1889, the tower is still a symbol of the city.', opts: ['Building', 'Built', 'Having built', 'To build'], ans: 1,
+      qCn: '建於一八八九年，這座塔至今仍是這座城市的象徵。',
       expl: '塔是「被建」的 → 過去分詞 Built。' },
     { q: 'Never ____ such a beautiful sunset.', opts: ['I have seen', 'have I seen', 'I saw', 'did I saw'], ans: 1,
+      qCn: '我從沒看過這麼美的日落。',
       expl: 'Never 放句首要倒裝：助動詞 have + 主詞 I + 過去分詞。' },
     { q: 'Which sentence is WRONG?', opts: ['Having eaten, we left.', 'Having ate, we left.', 'Feeling tired, she rested.', 'Written by a teenager, the book sold well.'], ans: 1,
+      qCn: '哪一句是錯的？',
       expl: 'Having 後面接過去分詞 eaten，不是過去式 ate。' }
   ]
 },
@@ -1092,10 +1125,13 @@ g12: {
   },
   quizMore: [
     { q: '____ the heavy rain, the match continued.', opts: ['Although', 'Despite', 'However', 'Because'], ans: 1,
+      qCn: '儘管下大雨，比賽照常進行。',
       expl: 'the heavy rain 是名詞 → 用介系詞 Despite。' },
     { q: 'The project failed ____ poor planning.', opts: ['because', 'although', 'due to', 'however'], ans: 2,
+      qCn: '這個專案失敗是因為規劃不好。',
       expl: 'poor planning 是名詞 → due to（because 後面要接句子）。' },
     { q: 'Which is punctuated correctly?', opts: ['It was cold, however we swam.', 'It was cold. However, we swam.', 'It was cold however, we swam.', 'It was cold, although, we swam.'], ans: 1,
+      qCn: '哪一句的標點是正確的？',
       expl: 'however 是副詞，前面要用句號或分號斷開，後面加逗號。' }
   ]
 },
@@ -1174,10 +1210,13 @@ g13: {
   },
   quizMore: [
     { q: 'He said, "I can help you." → He said he ____ help me.', opts: ['can', 'could', 'will', 'may'], ans: 1,
+      qCn: '他說他可以幫我。',
       expl: 'can 退一格變 could。' },
     { q: 'She asked me ____.', opts: ['where do I work', 'where did I work', 'where I worked', 'where I did work'], ans: 2,
+      qCn: '她問我在哪裡工作。',
       expl: '轉述問句用直述語序：where + 主詞 + 動詞（退時態）。' },
     { q: 'Which sentence is correct?', opts: ['He told that he was busy.', 'He said me that he was busy.', 'He told me that he was busy.', 'He said to that he was busy.'], ans: 2,
+      qCn: '哪一句是正確的？',
       expl: 'tell 一定要接對象（tell me）；say 要接對象時得加 to。' }
   ]
 },
@@ -1260,10 +1299,13 @@ g14: {
   },
   quizMore: [
     { q: 'This laptop is ____ than mine.', opts: ['very light', 'much lighter', 'more light', 'lightest'], ans: 1,
+      qCn: '這台筆電比我的輕很多。',
       expl: '比較級前面用 much，不用 very；light 是單音節 → lighter。' },
     { q: 'Their new office is ____ as their old one.', opts: ['twice as big', 'twice bigger', 'two times bigger as', 'as twice big'], ans: 0,
+      qCn: '他們的新辦公室是舊的兩倍大。',
       expl: '倍數結構是「數字 + times / twice + as + 原級 + as」。' },
     { q: 'It was ____ film I have ever seen.', opts: ['the worse', 'the worst', 'worst', 'more worse'], ans: 1,
+      qCn: '那是我看過最爛的電影。',
       expl: '最高級 worst，而且前面要有 the。' }
   ]
 },
@@ -1348,10 +1390,13 @@ g15: {
   },
   quizMore: [
     { q: "You've been working all day — you ____ exhausted.", opts: ['must be', 'must have been', "can't be", 'should have been'], ans: 0,
+      qCn: '你工作了一整天——一定累壞了。',
       expl: '推測「現在」的狀態 → must + 原形 be。' },
     { q: "The office is empty. Everyone ____ home already.", opts: ['must go', 'must have gone', "mustn't go", 'must going'], ans: 1,
+      qCn: '辦公室空了，大家一定都回家了。',
       expl: '推測已經發生的事 → must have + 過去分詞。' },
     { q: 'That ____ be John — he is in Japan this week.', opts: ["mustn't", "can't", 'may not', 'should not'], ans: 1,
+      qCn: '那不可能是 John——他這禮拜在日本。',
       expl: '「不可能」用 can’t；mustn’t 是「禁止」。' }
   ]
 },
@@ -1438,10 +1483,13 @@ ga01: {
   },
   quizMore: [
     { q: 'My father ____ to work by bus.', opts: ['go', 'goes', 'going', 'is go'], ans: 1,
+      qCn: '我爸搭公車上班。',
       expl: 'My father ＝ he → 動詞加 es：goes。' },
     { q: '____ your brother play basketball?', opts: ['Do', 'Does', 'Is', 'Are'], ans: 1,
+      qCn: '你哥哥打籃球嗎？',
       expl: 'your brother ＝ he → 疑問句用 Does + 原形。' },
     { q: 'Which sentence is correct?', opts: ["He doesn't likes fish.", "He don't like fish.", "He doesn't like fish.", 'He not like fish.'], ans: 2,
+      qCn: '哪一句是正確的？',
       expl: 'doesn’t + 原形 like。' }
   ]
 },
@@ -1520,10 +1568,13 @@ ga02: {
   },
   quizMore: [
     { q: 'We ____ at the station at six.', opts: ['was', 'were', 'is', 'are'], ans: 1,
+      qCn: '我們六點在車站。',
       expl: 'We 是複數 → were。' },
     { q: '____ you see the film last night?', opts: ['Did', 'Do', 'Was', 'Were'], ans: 0,
+      qCn: '你昨晚看了那部電影嗎？',
       expl: 'last night 是過去 → 疑問句用 Did + 原形 see。' },
     { q: 'Which sentence is correct?', opts: ["She didn't came home.", "She didn't come home.", "She doesn't came home.", 'She not came home.'], ans: 1,
+      qCn: '哪一句是正確的？',
       expl: 'didn’t + 原形 come。' }
   ]
 },
@@ -1610,10 +1661,13 @@ ga03: {
   },
   quizMore: [
     { q: '____ a lot of people at the concert.', opts: ['There is', 'There are', 'There have', 'It has'], ans: 1,
+      qCn: '演唱會有很多人。',
       expl: 'people 是複數 → There are。' },
     { q: 'There ____ any bread in the kitchen.', opts: ['are not', 'is not', 'have not', 'do not'], ans: 1,
+      qCn: '廚房裡沒有麵包。',
       expl: 'bread 是不可數 → is；否定句用 any。' },
     { q: 'Would you like ____ coffee?', opts: ['any', 'some', 'a', 'many'], ans: 1,
+      qCn: '你要來杯咖啡嗎？',
       expl: '邀約、請求時用 some 比較客氣，即使是疑問句。' }
   ]
 },
@@ -1701,8 +1755,10 @@ dg20260814a2: {
   },
   quizMore: [
     { q: 'Listen! Someone ____ the piano.', opts: ['plays', 'is playing', 'play', 'playing'], ans: 1,
+      qCn: '你聽！有人在彈鋼琴。',
       expl: 'Listen! 表示此刻 → is playing。' },
     { q: 'Which sentence is correct?', opts: ['I am work now.', 'I working now.', 'I am working now.', 'I is working now.'], ans: 2,
+      qCn: '哪一句是正確的？',
       expl: 'be 動詞（am）＋ V-ing（working），兩塊都要，而且 I 配 am。' }
   ]
 },
@@ -1786,8 +1842,10 @@ dg20260819a2: {
   },
   quizMore: [
     { q: 'My mother ____ tea every afternoon.', opts: ['drink', 'drinks', 'is drinking', 'drinking'], ans: 1,
+      qCn: '我媽每天下午喝茶。',
       expl: 'My mother ＝ she → drinks。' },
     { q: '____ they live near you?', opts: ['Does', 'Do', 'Is', 'Are'], ans: 1,
+      qCn: '他們住你附近嗎？',
       expl: 'they 是複數 → Do。' }
   ]
 },
@@ -1874,8 +1932,10 @@ dg20260821a2: {
   },
   quizMore: [
     { q: 'My father ____ the newspaper every morning.', opts: ['is reading', 'reads', 'read', 'reading'], ans: 1,
+      qCn: '我爸每天早上看報紙。',
       expl: 'every morning → 現在簡單式，第三人稱加 s。' },
     { q: '____ you watching TV right now?', opts: ['Do', 'Does', 'Are', 'Is'], ans: 2,
+      qCn: '你現在在看電視嗎？',
       expl: '進行式的疑問句把 be 移到前面；主詞 you → Are。' }
   ]
 },
@@ -1962,8 +2022,10 @@ dg20260824a2: {
   },
   quizMore: [
     { q: 'I ____ what you mean.', opts: ['am knowing', 'know', 'knows', 'am know'], ans: 1,
+      qCn: '我知道你的意思。',
       expl: 'know 是狀態動詞，用現在簡單式；主詞 I 不加 s。' },
     { q: 'Which sentence is correct?', opts: ['She is wanting a new bag.', 'She wants a new bag.', 'She want a new bag.', 'She is want a new bag.'], ans: 1,
+      qCn: '哪一句是正確的？',
       expl: 'want 不加 -ing；She 是第三人稱單數 → wants。' }
   ]
 },
@@ -2042,8 +2104,10 @@ dg20260826a2: {
   },
   quizMore: [
     { q: 'They ____ to Tainan last weekend.', opts: ['go', 'went', 'goes', 'gone'], ans: 1,
+      qCn: '他們上禮拜去了台南。',
       expl: 'last weekend → 過去式；go 的過去式是 went。' },
     { q: "I ____ my keys this morning.", opts: ["didn't found", "didn't find", "don't find", 'not found'], ans: 1,
+      qCn: '我今天早上沒找到鑰匙。',
       expl: 'didn’t + 原形 find。' }
   ]
 },
@@ -2127,8 +2191,10 @@ dg20260828a2: {
   },
   quizMore: [
     { q: 'We ____ dinner when the lights went out.', opts: ['had', 'were having', 'have', 'are having'], ans: 1,
+      qCn: '我們正在吃晚餐時，燈突然熄了。',
       expl: '長的那件事（吃晚餐）用過去進行式 were having。' },
     { q: 'What ____ you doing at nine last night?', opts: ['was', 'were', 'did', 'do'], ans: 1,
+      qCn: '你昨晚九點在做什麼？',
       expl: '主詞 you → were。' }
   ]
 },
@@ -2212,8 +2278,10 @@ dg20260902a2: {
   },
   quizMore: [
     { q: 'She ____ her keys, so she can\'t get in.', opts: ['have lost', 'has lost', 'has lose', 'is losing'], ans: 1,
+      qCn: '她把鑰匙弄丟了，所以進不去。',
       expl: 'She → has；lose 的過去分詞是 lost。' },
     { q: 'Which sentence is correct?', opts: ['I have ate lunch.', 'I have eaten lunch.', 'I has eaten lunch.', 'I have eating lunch.'], ans: 1,
+      qCn: '哪一句是正確的？',
       expl: 'I → have，過去分詞是 eaten。' }
   ]
 },
@@ -2304,8 +2372,10 @@ dg20260814b1: {
   },
   quizMore: [
     { q: 'My sister ____ in London, but she ____ in Taipei at the moment.', opts: ['is living / lives', 'lives / is staying', 'live / stays', 'is living / is staying'], ans: 1,
+      qCn: '我姊住倫敦，但她目前暫時待在台北。',
       expl: '長住倫敦是常態 → lives；現在暫時在台北 → is staying。' },
     { q: 'Which sentence is WRONG?', opts: ['I am having a meeting now.', 'I am having a car.', 'I have a car.', 'I am having lunch.'], ans: 1,
+      qCn: '哪一句是錯的？',
       expl: 'have 表「擁有」不能用進行式。' }
   ]
 },
@@ -2387,8 +2457,10 @@ dg20260819b1: {
   },
   quizMore: [
     { q: 'She ____ hardly ever late.', opts: ['is', "isn't", 'does', 'is not'], ans: 0,
+      qCn: '她幾乎從不遲到。',
       expl: 'hardly ever 本身已含否定，不再加 not；頻率副詞放在 be 動詞後面。' },
     { q: 'Water ____ at 100°C, but the water in the pot ____ now.', opts: ['is boiling / boils', 'boils / is boiling', 'boil / boils', 'boils / boils'], ans: 1,
+      qCn: '水在攝氏一百度沸騰，但鍋裡的水現在正在滾。',
       expl: '科學事實 → boils；此刻正在滾 → is boiling。' }
   ]
 },
@@ -2471,8 +2543,10 @@ dg20260821b1: {
   },
   quizMore: [
     { q: 'I ____ this jacket belongs to you.', opts: ['am thinking', 'think', 'thinks', 'am think'], ans: 1,
+      qCn: '我覺得這件外套是你的。',
       expl: 'think 表「認為」是狀態動詞 → 用簡單式。（think about 表「思考」才可以用進行式。）' },
     { q: 'They ____ in a hotel until their flat is ready.', opts: ['stay', 'are staying', 'stays', 'have stayed'], ans: 1,
+      qCn: '他們暫時住飯店，等公寓準備好。',
       expl: '暫時住飯店 → 進行式 are staying。' }
   ]
 },
@@ -2559,8 +2633,10 @@ dg20260824b1: {
   },
   quizMore: [
     { q: "Can I call you back? I ____ dinner right now.", opts: ['have', 'am having', 'has', 'am have'], ans: 1,
+      qCn: '我等一下回你電話？我正在吃晚餐。',
       expl: 'have dinner 是動作，此刻正在做 → am having。' },
     { q: 'I ____ what you mean, but I still disagree.', opts: ['am seeing', 'see', 'sees', 'am see'], ans: 1,
+      qCn: '我明白你的意思，但我還是不同意。',
       expl: 'see 表「理解」是狀態 → 用簡單式。' }
   ]
 },
@@ -2645,8 +2721,10 @@ dg20260826b1: {
   },
   quizMore: [
     { q: 'I ____ my homework, so I can watch TV now.', opts: ['finished', 'have finished', 'was finishing', 'finish'], ans: 1,
+      qCn: '我做完功課了，所以現在可以看電視。',
       expl: '重點是「現在可以看電視」的結果 → 現在完成式。' },
     { q: 'She ____ to Japan last spring.', opts: ['has been', 'has gone', 'went', 'goes'], ans: 2,
+      qCn: '她去年春天去了日本。',
       expl: 'last spring 是明確的過去時間 → 過去簡單式 went。' }
   ]
 },
@@ -2726,8 +2804,10 @@ dg20260828b1: {
   },
   quizMore: [
     { q: 'While she ____ the bus, she ____ an old friend.', opts: ['waited / was meeting', 'was waiting / met', 'waited / met', 'was waiting / was meeting'], ans: 1,
+      qCn: '她等公車的時候遇到了一個老朋友。',
       expl: 'while 接長的（was waiting）；遇到朋友是一瞬間（met）。' },
     { q: 'I ____ my email when the computer ____ down.', opts: ['checked / was shutting', 'was checking / shut', 'checked / shut', 'was checking / was shutting'], ans: 1,
+      qCn: '我在收信的時候電腦突然關機了。',
       expl: '查信是背景（was checking），電腦關機是突發（shut）。' }
   ]
 },
@@ -2812,8 +2892,10 @@ dg20260902b1: {
   },
   quizMore: [
     { q: 'I ____ my keys yet. Can you help me look?', opts: ["didn't find", "haven't found", "don't find", "hasn't found"], ans: 1,
+      qCn: '我還沒找到鑰匙，你可以幫我找嗎？',
       expl: 'yet 配現在完成式，而且主詞 I → haven’t found。' },
     { q: 'She ____ her homework already.', opts: ['finished', 'has finished', 'have finished', 'is finishing'], ans: 1,
+      qCn: '她已經做完功課了。',
       expl: 'already 配現在完成式；She → has finished。' }
   ]
 },
@@ -2902,8 +2984,10 @@ dg20260813: {
   },
   quizMore: [
     { q: 'How long ____ you ____ for this company?', opts: ['have / worked', 'have / been working', 'did / work', 'are / working'], ans: 1,
+      qCn: '你在這家公司工作多久了？',
       expl: 'How long 問持續時間 → 完成進行式 have been working。' },
     { q: 'Which sentence is WRONG?', opts: ['I have been waiting for an hour.', 'I have been knowing her for years.', 'I have known her for years.', 'She has been living here since May.'], ans: 1,
+      qCn: '哪一句是錯的？',
       expl: 'know 是狀態動詞，沒有進行式。' }
   ]
 },
@@ -2997,8 +3081,10 @@ dg20260814: {
   },
   quizMore: [
     { q: "I can't come — I ____ my sister at the airport at six.", opts: ['meet', 'am meeting', 'will meet', 'have met'], ans: 1,
+      qCn: '我不能去——我六點要去機場接我姊。',
       expl: '已經約好的安排 → 現在進行式表未來。' },
     { q: 'You ____ your phone at home! That is the third time this week.', opts: ['always leave', 'are always leaving', 'always left', 'have always left'], ans: 1,
+      qCn: '你又把手機忘在家了！這禮拜已經第三次了。',
       expl: '帶抱怨語氣 → always + 進行式。' }
   ]
 },
@@ -3092,8 +3178,10 @@ dg20260819b1p: {
   },
   quizMore: [
     { q: 'I will text you when I ____ home.', opts: ['will get', 'get', 'am getting', 'got'], ans: 1,
+      qCn: '我到家的時候會傳訊息給你。',
       expl: 'when 子句用現在簡單式，will 只放在主句。' },
     { q: 'The museum ____ at 5 p.m. every day.', opts: ['is closing', 'closes', 'will close', 'close'], ans: 1,
+      qCn: '博物館每天下午五點關門。',
       expl: '固定的營業時間 → 現在簡單式。' }
   ]
 },
@@ -3180,8 +3268,10 @@ dg20260821b1p: {
   },
   quizMore: [
     { q: 'What time ____ the concert ____?', opts: ['is / starting', 'does / start', 'is / start', 'do / starts'], ans: 1,
+      qCn: '演唱會幾點開始？',
       expl: '節目時間是排定的 → 現在簡單式 does… start。' },
     { q: 'I can\'t make it — I ____ my parents to the airport that morning.', opts: ['take', 'am taking', 'will take', 'took'], ans: 1,
+      qCn: '我沒辦法去——那天早上我要送我爸媽去機場。',
       expl: '已經安排好的個人計畫 → 現在進行式。' }
   ]
 },
@@ -3259,8 +3349,10 @@ dg20260824b1p: {
   },
   quizMore: [
     { q: 'Why ____ so difficult today? You are normally easy-going.', opts: ['are you', 'are you being', 'do you be', 'you are'], ans: 1,
+      qCn: '你今天怎麼這麼難搞？你平常很好相處的。',
       expl: '講「今天特別如此」的行為 → are you being。' },
     { q: 'Which sentence is WRONG?', opts: ['This coffee tastes bitter.', 'I am tasting the coffee.', 'I am knowing the answer.', "I'm feeling better."], ans: 2,
+      qCn: '哪一句是錯的？',
       expl: 'know 沒有進行式。' }
   ]
 },
@@ -3340,8 +3432,10 @@ dg20260826b1p: {
   },
   quizMore: [
     { q: 'As soon as I ____ the news, I ____ my sister.', opts: ['heard / called', 'had heard / had called', 'hear / called', 'was hearing / called'], ans: 0,
+      qCn: '我一聽到消息就打給我姊了。',
       expl: 'as soon as 已標順序 → 兩邊都用過去簡單式。' },
     { q: 'She was upset because she ____ the train.', opts: ['missed', 'had missed', 'misses', 'was missing'], ans: 1,
+      qCn: '她很沮喪，因為她沒趕上火車。',
       expl: '沒有連接詞，要標「更早發生」→ 過去完成式 had missed。' }
   ]
 },
@@ -3435,8 +3529,10 @@ dg20260828b1p: {
   },
   quizMore: [
     { q: 'My grandmother ____ me sweets every time I visited.', opts: ['was giving', 'used to give', 'was always give', 'gave always'], ans: 1,
+      qCn: '小時候我每次去，奶奶都會給我糖果。',
       expl: '過去的習慣（每次都這樣）→ used to give。' },
     { q: 'The house ____ when we drove past.', opts: ['was painting', 'was being painted', 'painted', 'is being painted'], ans: 1,
+      qCn: '我們開車經過的時候，那棟房子正在被油漆。',
       expl: '過去進行式的被動：was being + 過去分詞。' }
   ]
 },
@@ -3521,8 +3617,10 @@ dg20260902b1p: {
   },
   quizMore: [
     { q: 'I ____ four emails so far today.', opts: ['sent', 'have sent', 'send', 'was sending'], ans: 1,
+      qCn: '我今天到目前為止寄了四封信。',
       expl: 'so far today 還沒結束 → 現在完成式。' },
     { q: 'She has lived here ____ 2019.', opts: ['for', 'since', 'from', 'during'], ans: 1,
+      qCn: '她從二〇一九年就住在這裡了。',
       expl: '2019 是起點 → since。' }
   ]
 },
@@ -3621,8 +3719,10 @@ dg20260814b2: {
   },
   quizMore: [
     { q: 'In an academic abstract, which is more appropriate?', opts: ['This paper is examining three models.', 'This paper examines three models.', 'This paper has been examining three models.', 'This paper examine three models.'], ans: 1,
+      qCn: '在學術摘要中，哪一句比較恰當？',
       expl: '學術寫作陳述論文內容用現在簡單式。' },
     { q: 'Which reads like a news headline?', opts: ['A storm has damaged the bridge.', 'Storm Damages Bridge', 'The storm was damaging the bridge.', 'A storm damaged the bridge.'], ans: 1,
+      qCn: '哪一句讀起來像新聞標題？',
       expl: '標題省略冠詞與助動詞，並用現在簡單式製造即時感。' }
   ]
 },
@@ -3716,8 +3816,10 @@ dg20260819b2: {
   },
   quizMore: [
     { q: 'In a formal report, which sentence is best?', opts: ['Everyone hates long meetings.', 'Long meetings tend to reduce engagement.', 'You always hate long meetings.', 'Long meetings are hating engagement.'], ans: 1,
+      qCn: '在正式報告中，哪一句最恰當？',
       expl: 'tend to 緩和了絕對語氣，適合正式寫作。' },
     { q: 'Which uses the historical present?', opts: ['Last week I went to the market.', 'So I go to the market and see this guy.', 'I have been to the market.', 'I was going to the market.'], ans: 1,
+      qCn: '哪一句用了歷史現在式？',
       expl: '講過去的事卻用現在式（go / see）＝歷史現在式。' }
   ]
 },
@@ -3807,8 +3909,10 @@ dg20260821b2: {
   },
   quizMore: [
     { q: 'Which sentence expresses irritation?', opts: ['The bus arrives late.', 'The bus is always arriving late.', 'The bus arrived late.', 'The bus has arrived late.'], ans: 1,
+      qCn: '哪一句表達不滿？',
       expl: 'always + 進行式帶抱怨語氣。' },
     { q: 'In a formal report, which is most appropriate?', opts: ['The server is always going down.', 'The server goes down about twice a month.', 'The server is going down!', 'The server always go down.'], ans: 1,
+      qCn: '在正式報告中，哪一句最恰當？',
       expl: '正式報告用簡單式加具體頻率，不帶情緒。' }
   ]
 },
@@ -3891,8 +3995,10 @@ dg20260824b2: {
   },
   quizMore: [
     { q: 'In a formal business email, which is best?', opts: ['I am wanting your feedback.', 'I would like your feedback.', "I'm loving your idea.", 'I am needing this today.'], ans: 1,
+      qCn: '在正式商務信件中，哪一句最恰當？',
       expl: '職場書信用 would like 軟化，不用狀態動詞的進行式。' },
     { q: 'Why does an advertisement write "I\'m loving it"?', opts: ['Because I love it is grammatically wrong.', 'To turn a stable feeling into a right-now experience.', 'Because love is an action verb.', 'To sound more formal.'], ans: 1,
+      qCn: '為什麼廣告要寫 "I\'m loving it"？',
       expl: '進行式把長期的感覺變成此刻的體驗，製造熱度與當下感。' }
   ]
 },
@@ -3979,8 +4085,10 @@ dg20260826b2: {
   },
   quizMore: [
     { q: 'In a methods section, which is correct?', opts: ['We collect data over six months.', 'We collected data over six months.', 'We have collected data over six months.', 'We are collecting data over six months.'], ans: 1,
+      qCn: '在研究方法段落中，哪一句是正確的？',
       expl: '研究方法描述已完成的動作 → 過去簡單式。' },
     { q: 'Which emphasises that the situation is still developing?', opts: ['Prices rose in 2022.', 'Prices have risen since 2022.', 'Prices were rising in 2022.', 'Prices rise in 2022.'], ans: 1,
+      qCn: '哪一句強調情況仍在發展中？',
       expl: 'since + 現在完成式表示延續到現在、尚未結束。' }
   ]
 },
@@ -4067,8 +4175,10 @@ dg20260828b2: {
   },
   quizMore: [
     { q: 'Which sentence creates a sense of being at the scene?', opts: ['The fire destroyed two shops.', 'Shoppers were leaving the building when the alarm sounded.', 'Two shops were destroyed.', 'The alarm sounded at 3 p.m.'], ans: 1,
+      qCn: '哪一句營造出身歷其境的感覺？',
       expl: '過去進行式鋪陳當時的畫面，讀者像在現場。' },
     { q: 'In a short news summary, which is most appropriate?', opts: ['Officials were confirming the numbers.', 'Officials confirmed 42 injuries.', 'Officials are confirming the numbers.', 'Officials have been confirming the numbers.'], ans: 1,
+      qCn: '在新聞簡報中，哪一句最恰當？',
       expl: '事實摘要用過去簡單式，簡潔客觀。' }
   ]
 },
@@ -4153,8 +4263,10 @@ dg20260902b2: {
   },
   quizMore: [
     { q: 'Which works best as a news lead?', opts: ['The mayor resigned at 4 p.m. yesterday.', 'The mayor has resigned.', 'The mayor was resigning.', 'The mayor has resigned at 4 p.m. yesterday.'], ans: 1,
+      qCn: '哪一句最適合當新聞導言？',
       expl: '前導句不給時間，用現在完成式強調結果；第四個選項把明確時間配完成式，是錯的。' },
     { q: 'Which sentence implies the rule is still in force?', opts: ['The rule applied to all staff.', 'The rule has applied to all staff since April.', 'The rule was applying to all staff.', 'The rule applies yesterday.'], ans: 1,
+      qCn: '哪一句暗示規定仍然有效？',
       expl: 'since + 現在完成式表示至今仍然有效。' }
   ]
 },
@@ -4239,8 +4351,10 @@ dg20260904a2: {
   },
   quizMore: [
     { q: 'Be careful — the road ____ very wet.', opts: ['has become', 'became at noon', 'become', 'has became'], ans: 0,
+      qCn: '小心——路變得很濕。',
       expl: '沒說時間、強調現在的路況 → has become（過去分詞是 become）。' },
     { q: 'Which sentence is WRONG?', opts: ['The wind has died down.', 'The wind has died down at five.', 'The wind died down at five.', "The wind hasn't died down yet."], ans: 1,
+      qCn: '哪一句是錯的？',
       expl: 'at five 是明確時間，不能配現在完成式。' }
   ]
 },
@@ -4327,8 +4441,10 @@ dg20260904b1: {
   },
   quizMore: [
     { q: "Where is Amy? — She ____ to the post office.", opts: ['has been', 'has gone', 'went to be', 'has go'], ans: 1,
+      qCn: 'Amy 在哪裡？——她去郵局了。',
       expl: '人還在郵局、還沒回來 → has gone to。' },
     { q: 'I ____ to Kenting three times.', opts: ['have gone', 'have been', 'has been', 'am gone'], ans: 1,
+      qCn: '我去過墾丁三次。',
       expl: '講自己的經驗、人已經回來了 → have been to。' }
   ]
 },
@@ -4413,8 +4529,10 @@ dg20260904b1p: {
   },
   quizMore: [
     { q: 'This is the second time the roof ____ this year.', opts: ['leaks', 'leaked', 'has leaked', 'is leaking'], ans: 2,
+      qCn: '這是今年屋頂第二次漏水了。',
       expl: '「第二次」句型後面接現在完成式。' },
     { q: 'It was the coldest winter that we ____ experienced.', opts: ['have never', 'had ever', 'have ever', 'ever have'], ans: 2,
+      qCn: '那是我們經歷過最冷的冬天。',
       expl: '最高級 + that + have ever + 過去分詞；ever 放在 have 和 Vpp 中間。' }
   ]
 },
@@ -4500,8 +4618,10 @@ dg20260904b2: {
   },
   quizMore: [
     { q: 'Which sentence tells the reader the warning is STILL active?', opts: ['A typhoon warning was issued at noon.', 'A typhoon warning has been issued.', 'A typhoon warning issued at noon.', 'A typhoon warning was issuing.'], ans: 1,
+      qCn: '哪一句讓讀者知道警報仍然生效？',
       expl: '完成式不給時間、強調「至今仍然有效」。' },
     { q: 'It is the worst flood the region ____ in fifty years.', opts: ['saw', 'has seen', 'was seeing', 'sees'], ans: 1,
+      qCn: '這是該地區五十年來最嚴重的洪水。',
       expl: '「五十年來最嚴重」是至今仍成立的紀錄 → 現在完成式。' }
   ]
 }

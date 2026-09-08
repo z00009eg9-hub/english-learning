@@ -35,9 +35,9 @@ window.GRAMMAR = [
     {bad:"I am knowing the answer.",good:"I know the answer.",why:"know / believe / want / like 等狀態動詞不用進行式。"}
   ],
   quiz:[
-    {q:"I ____ English for three years, and I still study every week.",opts:["study","studied","have studied","am studying"],ans:2,expl:"for three years + 到現在仍持續 → 現在完成式 have studied。"},
-    {q:"When the phone rang, I ____ dinner.",opts:["cook","cooked","was cooking","have cooked"],ans:2,expl:"電話響是一個點，當下「正在」煮 → 過去進行式。"},
-    {q:"By next June, she ____ here for ten years.",opts:["works","will work","will have worked","is working"],ans:2,expl:"到未來某時間點為止的累計 → 未來完成式。"}
+    {q:"I ____ English for three years, and I still study every week.",qCn:"我學英文三年了，而且每週還在學。",opts:["study","studied","have studied","am studying"],ans:2,expl:"for three years + 到現在仍持續 → 現在完成式 have studied。"},
+    {q:"When the phone rang, I ____ dinner.",qCn:"電話響的時候，我正在煮晚餐。",opts:["cook","cooked","was cooking","have cooked"],ans:2,expl:"電話響是一個點，當下「正在」煮 → 過去進行式。"},
+    {q:"By next June, she ____ here for ten years.",qCn:"到明年六月，她在這裡就工作滿十年了。",opts:["works","will work","will have worked","is working"],ans:2,expl:"到未來某時間點為止的累計 → 未來完成式。"}
   ]
 },
 
@@ -72,9 +72,9 @@ window.GRAMMAR = [
     {bad:"I am having a car.",good:"I have a car.",why:"have 表「擁有」不用進行式。"}
   ],
   quiz:[
-    {q:"Water ____ at 100°C.",opts:["is boiling","boils","boil","has boiled"],ans:1,expl:"科學事實 → 現在簡單式。"},
-    {q:"Be quiet! The baby ____.",opts:["sleeps","is sleeping","slept","has slept"],ans:1,expl:"此刻正在進行 → is sleeping。"},
-    {q:"Which sentence is correct?",opts:["I am understanding now.","I understand now.","I am understand now.","I understanding now."],ans:1,expl:"understand 是狀態動詞，用簡單式。"}
+    {q:"Water ____ at 100°C.",qCn:"水在攝氏一百度沸騰。",opts:["is boiling","boils","boil","has boiled"],ans:1,expl:"科學事實 → 現在簡單式。"},
+    {q:"Be quiet! The baby ____.",qCn:"安靜！寶寶在睡覺。",opts:["sleeps","is sleeping","slept","has slept"],ans:1,expl:"此刻正在進行 → is sleeping。"},
+    {q:"Which sentence is correct?",qCn:"哪一句是正確的？",opts:["I am understanding now.","I understand now.","I am understand now.","I understanding now."],ans:1,expl:"understand 是狀態動詞，用簡單式。"}
   ]
 },
 
@@ -103,9 +103,9 @@ window.GRAMMAR = [
     {bad:"When I was walking, I was seeing an accident.",good:"When I was walking, I saw an accident.",why:"突然發生、一瞬間完成的動作用過去簡單式。"}
   ],
   quiz:[
-    {q:"I ____ TV when the electricity went off.",opts:["watch","watched","was watching","have watched"],ans:2,expl:"停電是事件，看電視是背景 → 過去進行式。"},
-    {q:"____ she was studying, her brother was playing games.",opts:["During","While","For","When"],ans:1,expl:"後面接子句且兩件事同時進行 → While。"},
-    {q:"Choose the correct sentence.",opts:["While the meeting, my phone rang.","During the meeting, my phone rang.","While of the meeting, my phone rang.","During I was in the meeting, my phone rang."],ans:1,expl:"during + 名詞。"}
+    {q:"I ____ TV when the electricity went off.",qCn:"停電的時候我正在看電視。",opts:["watch","watched","was watching","have watched"],ans:2,expl:"停電是事件，看電視是背景 → 過去進行式。"},
+    {q:"____ she was studying, her brother was playing games.",qCn:"她在讀書的時候，她弟弟在打電動。",opts:["During","While","For","When"],ans:1,expl:"後面接子句且兩件事同時進行 → While。"},
+    {q:"Choose the correct sentence.",qCn:"選出正確的句子。",opts:["While the meeting, my phone rang.","During the meeting, my phone rang.","While of the meeting, my phone rang.","During I was in the meeting, my phone rang."],ans:1,expl:"during + 名詞。"}
   ]
 },
 
@@ -141,9 +141,9 @@ window.GRAMMAR = [
     {bad:"How long do you work here?",good:"How long have you worked here?",why:"問「持續多久到現在」要用現在完成式。"}
   ],
   quiz:[
-    {q:"I ____ my homework, so I can watch TV now.",opts:["finish","finished","have finished","was finishing"],ans:2,expl:"剛完成且影響現在 → 現在完成式。"},
-    {q:"We ____ in Taipei since 2019.",opts:["live","lived","have lived","are living"],ans:2,expl:"since + 起點，持續到現在。"},
-    {q:"Have you eaten lunch ____?",opts:["already","yet","since","ever"],ans:1,expl:"疑問句表「還沒／到目前」用 yet。"}
+    {q:"I ____ my homework, so I can watch TV now.",qCn:"我已經做完功課了，所以現在可以看電視。",opts:["finish","finished","have finished","was finishing"],ans:2,expl:"剛完成且影響現在 → 現在完成式。"},
+    {q:"We ____ in Taipei since 2019.",qCn:"我們從2019年就住在台北了。",opts:["live","lived","have lived","are living"],ans:2,expl:"since + 起點，持續到現在。"},
+    {q:"Have you eaten lunch ____?",qCn:"你吃過午餐了嗎？",opts:["already","yet","since","ever"],ans:1,expl:"疑問句表「還沒／到目前」用 yet。"}
   ]
 },
 
@@ -175,9 +175,9 @@ window.GRAMMAR = [
     {bad:"I would live in Tainan.",good:"I used to live in Tainan.",why:"過去的狀態不能用 would。"}
   ],
   quiz:[
-    {q:"She ____ afraid of dogs, but now she has two.",opts:["is used to be","used to be","would be","uses to be"],ans:1,expl:"過去的狀態 → used to be。"},
-    {q:"After six months in Vietnam, I ____ the traffic.",opts:["used to","am used to","would","use to"],ans:1,expl:"已經習慣現在的狀況 → be used to + 名詞。"},
-    {q:"Every summer we ____ to my grandmother's house in the mountains.",opts:["would go","are used to go","use to go","would going"],ans:0,expl:"過去反覆的動作 → would + 原形。"}
+    {q:"She ____ afraid of dogs, but now she has two.",qCn:"她以前怕狗，但她現在養了兩隻。",opts:["is used to be","used to be","would be","uses to be"],ans:1,expl:"過去的狀態 → used to be。"},
+    {q:"After six months in Vietnam, I ____ the traffic.",qCn:"在越南待了六個月之後，我已經習慣那裡的交通了。",opts:["used to","am used to","would","use to"],ans:1,expl:"已經習慣現在的狀況 → be used to + 名詞。"},
+    {q:"Every summer we ____ to my grandmother's house in the mountains.",qCn:"以前每年夏天我們都會去山上奶奶家。",opts:["would go","are used to go","use to go","would going"],ans:0,expl:"過去反覆的動作 → would + 原形。"}
   ]
 },
 
@@ -213,10 +213,10 @@ window.GRAMMAR = [
     {bad:"She let me to use her phone.",good:"She let me use her phone.",why:"let + 人 + 原形。"}
   ],
   quiz:[
-    {q:"The teacher made us ____ the whole passage again.",opts:["to read","read","reading","readed"],ans:1,expl:"make + 人 + 原形。"},
-    {q:"I need to ____ before the wedding.",opts:["have cut my hair","have my hair cut","have my hair cutting","cut my hair by someone"],ans:1,expl:"have + 物 + p.p.。"},
-    {q:"How did you ____ him to change his mind?",opts:["make","let","get","have"],ans:2,expl:"後面有 to V → get + 人 + to V。"},
-    {q:"He ____ to sign the contract against his will.",opts:["was made","was let","made","was had"],ans:0,expl:"make 的被動 be made to V。"}
+    {q:"The teacher made us ____ the whole passage again.",qCn:"老師叫我們把整篇文章再讀一遍。",opts:["to read","read","reading","readed"],ans:1,expl:"make + 人 + 原形。"},
+    {q:"I need to ____ before the wedding.",qCn:"婚禮前我需要去剪頭髮。",opts:["have cut my hair","have my hair cut","have my hair cutting","cut my hair by someone"],ans:1,expl:"have + 物 + p.p.。"},
+    {q:"How did you ____ him to change his mind?",qCn:"你怎麼說服他改變主意的？",opts:["make","let","get","have"],ans:2,expl:"後面有 to V → get + 人 + to V。"},
+    {q:"He ____ to sign the contract against his will.",qCn:"他被迫違背自己的意願簽了合約。",opts:["was made","was let","made","was had"],ans:0,expl:"make 的被動 be made to V。"}
   ]
 },
 
@@ -248,9 +248,9 @@ window.GRAMMAR = [
     {bad:"I am worry about my mother.",good:"I am worried about my mother.",why:"be 動詞後面要用形容詞 worried。"}
   ],
   quiz:[
-    {q:"The test results were ____. Nobody expected them.",opts:["surprised","surprising","surprise","surprisingly"],ans:1,expl:"結果是「令人」驚訝 → -ing。"},
-    {q:"She looked ____ when she heard the news.",opts:["shocking","shock","shocked","shocks"],ans:2,expl:"人感覺 → -ed。"},
-    {q:"Which is correct?",opts:["I'm interesting in history.","History is interested.","I'm interested in history.","I interest history."],ans:2,expl:"人 interested in + 領域。"}
+    {q:"The test results were ____. Nobody expected them.",qCn:"考試結果令人驚訝，沒有人預料到。",opts:["surprised","surprising","surprise","surprisingly"],ans:1,expl:"結果是「令人」驚訝 → -ing。"},
+    {q:"She looked ____ when she heard the news.",qCn:"她聽到那個消息時看起來很震驚。",opts:["shocking","shock","shocked","shocks"],ans:2,expl:"人感覺 → -ed。"},
+    {q:"Which is correct?",qCn:"哪一句是正確的？",opts:["I'm interesting in history.","History is interested.","I'm interested in history.","I interest history."],ans:2,expl:"人 interested in + 領域。"}
   ]
 },
 
@@ -287,10 +287,10 @@ window.GRAMMAR = [
     {bad:"If she studied, she would have passed.",good:"If she had studied, she would have passed.",why:"與過去事實相反 → if + had p.p.。"}
   ],
   quiz:[
-    {q:"If I ____ you, I wouldn't accept that job.",opts:["am","was","were","would be"],ans:2,expl:"第二條件句慣用 were。"},
-    {q:"If we ____ earlier, we wouldn't have missed the train.",opts:["left","had left","would leave","leave"],ans:1,expl:"與過去事實相反 → had left。"},
-    {q:"____ you book now, the price will go up.",opts:["Unless","If","When","While"],ans:0,expl:"Unless ＝ 如果不…，語意才通。"},
-    {q:"I wish I ____ more sleep last night.",opts:["have","had had","would have","having"],ans:1,expl:"對過去的遺憾 → wish + had p.p.。"}
+    {q:"If I ____ you, I wouldn't accept that job.",qCn:"如果我是你，我不會接受那份工作。",opts:["am","was","were","would be"],ans:2,expl:"第二條件句慣用 were。"},
+    {q:"If we ____ earlier, we wouldn't have missed the train.",qCn:"如果我們早一點出發，就不會錯過那班火車了。",opts:["left","had left","would leave","leave"],ans:1,expl:"與過去事實相反 → had left。"},
+    {q:"____ you book now, the price will go up.",qCn:"除非你現在訂，不然價格會上漲。",opts:["Unless","If","When","While"],ans:0,expl:"Unless ＝ 如果不…，語意才通。"},
+    {q:"I wish I ____ more sleep last night.",qCn:"我真希望昨晚多睡一點。",opts:["have","had had","would have","having"],ans:1,expl:"對過去的遺憾 → wish + had p.p.。"}
   ]
 },
 
@@ -328,10 +328,10 @@ window.GRAMMAR = [
     {bad:"The road is repairing now.",good:"The road is being repaired now.",why:"進行式被動 = is being + p.p.。"}
   ],
   quiz:[
-    {q:"The bridge ____ two years ago.",opts:["was built","built","is built","has built"],ans:0,expl:"過去被動 → was built。"},
-    {q:"This medicine ____ in a cool place.",opts:["must keep","must be kept","must keeping","must been kept"],ans:1,expl:"情態動詞 + be + p.p.。"},
-    {q:"Which sentence has NO passive form?",opts:["They repaired the pipe.","Someone stole my bike.","The accident happened at noon.","The company sent the letter."],ans:2,expl:"happen 不及物，無被動。"},
-    {q:"The office ____ at the moment, so we are working from home.",opts:["is painted","is being painted","paints","has painting"],ans:1,expl:"此刻正在被粉刷 → is being painted。"}
+    {q:"The bridge ____ two years ago.",qCn:"那座橋是兩年前蓋的。",opts:["was built","built","is built","has built"],ans:0,expl:"過去被動 → was built。"},
+    {q:"This medicine ____ in a cool place.",qCn:"這個藥必須保存在陰涼處。",opts:["must keep","must be kept","must keeping","must been kept"],ans:1,expl:"情態動詞 + be + p.p.。"},
+    {q:"Which sentence has NO passive form?",qCn:"哪一句沒有被動語態？",opts:["They repaired the pipe.","Someone stole my bike.","The accident happened at noon.","The company sent the letter."],ans:2,expl:"happen 不及物，無被動。"},
+    {q:"The office ____ at the moment, so we are working from home.",qCn:"辦公室目前正在粉刷，所以我們在家工作。",opts:["is painted","is being painted","paints","has painting"],ans:1,expl:"此刻正在被粉刷 → is being painted。"}
   ]
 },
 
@@ -369,10 +369,10 @@ window.GRAMMAR = [
     {bad:"This is the house which I live.",good:"This is the house where I live. / the house which I live in.",why:"缺少介系詞時要用 where，或把 in 補回句尾。"}
   ],
   quiz:[
-    {q:"The engineer ____ designed this system now works abroad.",opts:["which","whose","who","whom"],ans:2,expl:"先行詞是人且當主詞 → who。"},
-    {q:"Mr. Lin, ____ flat is on the ground floor, has lived here for 30 years.",opts:["who","whose","which","that"],ans:1,expl:"所有格 → whose。"},
-    {q:"Which sentence is correct?",opts:["The report, that I sent, was long.","The report which I sent it was long.","The report I sent was long.","The report who I sent was long."],ans:2,expl:"關係詞當受詞時可省略；非限定不用 that；不可留下多餘的 it。"},
-    {q:"That's the café ____ we first met.",opts:["which","where","that","who"],ans:1,expl:"地點且後面子句完整 → where。"}
+    {q:"The engineer ____ designed this system now works abroad.",qCn:"設計這個系統的工程師現在在國外工作。",opts:["which","whose","who","whom"],ans:2,expl:"先行詞是人且當主詞 → who。"},
+    {q:"Mr. Lin, ____ flat is on the ground floor, has lived here for 30 years.",qCn:"林先生的公寓在一樓，他在這裡住了三十年了。",opts:["who","whose","which","that"],ans:1,expl:"所有格 → whose。"},
+    {q:"Which sentence is correct?",qCn:"哪一句是正確的？",opts:["The report, that I sent, was long.","The report which I sent it was long.","The report I sent was long.","The report who I sent was long."],ans:2,expl:"關係詞當受詞時可省略；非限定不用 that；不可留下多餘的 it。"},
+    {q:"That's the café ____ we first met.",qCn:"那就是我們第一次見面的咖啡廳。",opts:["which","where","that","who"],ans:1,expl:"地點且後面子句完整 → where。"}
   ]
 },
 
@@ -406,10 +406,10 @@ window.GRAMMAR = [
     {bad:"Having ate dinner, we went out.",good:"Having eaten dinner, we went out.",why:"Having + 過去分詞（eaten）。"}
   ],
   quiz:[
-    {q:"____ the report, she emailed it to her manager.",opts:["Having finished","Have finished","Finish","Being finished"],ans:0,expl:"先完成的主動動作 → Having + p.p.。"},
-    {q:"Only after the meeting ____ what the real problem was.",opts:["I understood","did I understand","I did understand","understood I"],ans:1,expl:"Only after 置句首 → 主句倒裝 did I understand。"},
-    {q:"____ in 1890, the building is now a museum.",opts:["Building","Having built","Built","Build"],ans:2,expl:"建築物是「被建造」→ 過去分詞 Built。"},
-    {q:"Never ____ such a beautiful sunset.",opts:["I have seen","have I seen","I saw","did I saw"],ans:1,expl:"Never 置句首要倒裝 → have I seen。"}
+    {q:"____ the report, she emailed it to her manager.",qCn:"完成報告之後，她把它寄給了經理。",opts:["Having finished","Have finished","Finish","Being finished"],ans:0,expl:"先完成的主動動作 → Having + p.p.。"},
+    {q:"Only after the meeting ____ what the real problem was.",qCn:"開完會之後我才明白真正的問題是什麼。",opts:["I understood","did I understand","I did understand","understood I"],ans:1,expl:"Only after 置句首 → 主句倒裝 did I understand。"},
+    {q:"____ in 1890, the building is now a museum.",qCn:"這棟建築建於1890年，現在是一座博物館。",opts:["Building","Having built","Built","Build"],ans:2,expl:"建築物是「被建造」→ 過去分詞 Built。"},
+    {q:"Never ____ such a beautiful sunset.",qCn:"我從未見過這麼美的夕陽。",opts:["I have seen","have I seen","I saw","did I saw"],ans:1,expl:"Never 置句首要倒裝 → have I seen。"}
   ]
 },
 
@@ -449,10 +449,10 @@ window.GRAMMAR = [
     {bad:"The delay was because of the weather was bad.",good:"The delay was because the weather was bad. / due to bad weather.",why:"because of 後面只能接名詞片語。"}
   ],
   quiz:[
-    {q:"____ the high price, the policy covers very little.",opts:["Although","Despite","However","Because"],ans:1,expl:"後面是名詞片語 the high price → Despite。"},
-    {q:"Online meetings are efficient, ____ informal chats are hard to replace.",opts:["because","so","whereas","therefore"],ans:2,expl:"對比關係且接子句 → whereas。"},
-    {q:"She was exhausted. ____, she finished the report before midnight.",opts:["Although","Despite","However","Whereas"],ans:2,expl:"獨立句之後用副詞 However, 開頭。"},
-    {q:"Which phrase admits the other side of an argument?",opts:["Therefore","Admittedly","Because of","In addition"],ans:1,expl:"Admittedly ＝ 不可否認地，典型讓步標記。"}
+    {q:"____ the high price, the policy covers very little.",qCn:"儘管價格很高，這份保單的保障範圍卻很少。",opts:["Although","Despite","However","Because"],ans:1,expl:"後面是名詞片語 the high price → Despite。"},
+    {q:"Online meetings are efficient, ____ informal chats are hard to replace.",qCn:"線上會議很有效率，但非正式的聊天很難被取代。",opts:["because","so","whereas","therefore"],ans:2,expl:"對比關係且接子句 → whereas。"},
+    {q:"She was exhausted. ____, she finished the report before midnight.",qCn:"她已經精疲力盡了。不過，她還是在午夜前完成了報告。",opts:["Although","Despite","However","Whereas"],ans:2,expl:"獨立句之後用副詞 However, 開頭。"},
+    {q:"Which phrase admits the other side of an argument?",qCn:"哪個詞語用來承認對方的論點？",opts:["Therefore","Admittedly","Because of","In addition"],ans:1,expl:"Admittedly ＝ 不可否認地，典型讓步標記。"}
   ]
 },
 
@@ -506,10 +506,10 @@ window.GRAMMAR = [
     {bad:"He said me that it was fine.",good:"He said to me that it was fine.",why:"say 要接人時必須加 to。"}
   ],
   quiz:[
-    {q:"\"I have already sent the email.\" → She said that she ____ already sent the email.",opts:["has","had","have","was"],ans:1,expl:"have done → had done。"},
-    {q:"Choose the correct sentence.",opts:["He told that he would come.","He told me that he would come.","He said me that he would come.","He told to me he will come."],ans:1,expl:"tell + 人 + that；will → would。"},
-    {q:"\"Where are you going?\" → He asked me where ____.",opts:["was I going","am I going","I was going","did I go"],ans:2,expl:"轉述問句用陳述語序，時態退一格。"},
-    {q:"\"Don't touch it.\" → She told me ____ it.",opts:["not touch","don't touch","not to touch","to not touch"],ans:2,expl:"否定命令 → tell + 人 + not to V。"}
+    {q:"\"I have already sent the email.\" → She said that she ____ already sent the email.",qCn:"「我已經寄出信了。」→ 她說她已經寄出信了。",opts:["has","had","have","was"],ans:1,expl:"have done → had done。"},
+    {q:"Choose the correct sentence.",qCn:"選出正確的句子。",opts:["He told that he would come.","He told me that he would come.","He said me that he would come.","He told to me he will come."],ans:1,expl:"tell + 人 + that；will → would。"},
+    {q:"\"Where are you going?\" → He asked me where ____.",qCn:"「你要去哪裡？」→ 他問我要去哪裡。",opts:["was I going","am I going","I was going","did I go"],ans:2,expl:"轉述問句用陳述語序，時態退一格。"},
+    {q:"\"Don't touch it.\" → She told me ____ it.",qCn:"「不要碰它。」→ 她叫我不要碰它。",opts:["not touch","don't touch","not to touch","to not touch"],ans:2,expl:"否定命令 → tell + 人 + not to V。"}
   ]
 },
 
@@ -554,10 +554,10 @@ window.GRAMMAR = [
     {bad:"He is more taller than me.",good:"He is taller than me.",why:"不能同時用 more 和 -er。"}
   ],
   quiz:[
-    {q:"The new plan is ____ more expensive than the old one.",opts:["very","much","most","so"],ans:1,expl:"修飾比較級用 much / far。"},
-    {q:"My rent is ____ as high as hers.",opts:["twice","two times more","double more","twice more"],ans:0,expl:"twice as + 原級 + as。"},
-    {q:"Which sentence is correct?",opts:["Rents rose to 10% last year.","Rents rose by 10% last year.","Rents rose in 10% last year.","Rents rose of 10% last year."],ans:1,expl:"講漲幅用 rise by；rise to 是漲到某個數字。"},
-    {q:"Both options work; ____ is cheaper but slower.",opts:["the latter","the former","the last","the first one which"],ans:1,expl:"指前面先提到的那一個 → the former。"}
+    {q:"The new plan is ____ more expensive than the old one.",qCn:"新方案比舊方案貴很多。",opts:["very","much","most","so"],ans:1,expl:"修飾比較級用 much / far。"},
+    {q:"My rent is ____ as high as hers.",qCn:"我的房租是她的兩倍高。",opts:["twice","two times more","double more","twice more"],ans:0,expl:"twice as + 原級 + as。"},
+    {q:"Which sentence is correct?",qCn:"哪一句是正確的？",opts:["Rents rose to 10% last year.","Rents rose by 10% last year.","Rents rose in 10% last year.","Rents rose of 10% last year."],ans:1,expl:"講漲幅用 rise by；rise to 是漲到某個數字。"},
+    {q:"Both options work; ____ is cheaper but slower.",qCn:"兩個方案都行；前者比較便宜但比較慢。",opts:["the latter","the former","the last","the first one which"],ans:1,expl:"指前面先提到的那一個 → the former。"}
   ]
 },
 
@@ -602,10 +602,10 @@ window.GRAMMAR = [
     {bad:"It may well developing for months.",good:"It may well have been developing for months.",why:"情態動詞後面必須有完整的動詞結構。"}
   ],
   quiz:[
-    {q:"The office is dark. Everyone ____ home already.",opts:["must go","must have gone","must going","must be gone to"],ans:1,expl:"推測過去 → must have + p.p.。"},
-    {q:"She ____ be the manager — she looks far too young.",opts:["mustn't","can't","shouldn't","needn't"],ans:1,expl:"否定推測用 can't。"},
-    {q:"A holiday ____ helped in the first month, but not after a year.",opts:["might have","might","must","should"],ans:0,expl:"推測過去的可能性 → might have + p.p.。"},
-    {q:"Which sentence expresses regret, not deduction?",opts:["He must have forgotten.","He may well have forgotten.","He should have reminded me.","He can't have forgotten."],ans:2,expl:"should have + p.p. 是後悔／責備，不是推測。"}
+    {q:"The office is dark. Everyone ____ home already.",qCn:"辦公室是暗的，大家一定都已經回家了。",opts:["must go","must have gone","must going","must be gone to"],ans:1,expl:"推測過去 → must have + p.p.。"},
+    {q:"She ____ be the manager — she looks far too young.",qCn:"她不可能是經理——她看起來太年輕了。",opts:["mustn't","can't","shouldn't","needn't"],ans:1,expl:"否定推測用 can't。"},
+    {q:"A holiday ____ helped in the first month, but not after a year.",qCn:"在第一個月放個假或許有幫助，但一年之後就沒用了。",opts:["might have","might","must","should"],ans:0,expl:"推測過去的可能性 → might have + p.p.。"},
+    {q:"Which sentence expresses regret, not deduction?",qCn:"哪一句是表達後悔，而不是推測？",opts:["He must have forgotten.","He may well have forgotten.","He should have reminded me.","He can't have forgotten."],ans:2,expl:"should have + p.p. 是後悔／責備，不是推測。"}
   ]
 }
 
