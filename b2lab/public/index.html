@@ -649,8 +649,8 @@ body.cnall #v-real span.cnx{display:inline!important}
   .bk-day-col{margin-top:0}
 }
 /* ---------- grammar ---------- */
-.gsec{margin-bottom:16px}
-.gsec h3{font-size:var(--font-subhead);margin:0 0 7px;color:var(--accent2);border-left:3px solid var(--accent);padding-left:8px}
+.gsec{margin-bottom:14px}
+.gsec h3{font-size:calc(15px * var(--fs));margin:0 0 6px;color:var(--ink);font-weight:700;border-left:3px solid var(--line);padding-left:8px}
 .gsec ul{margin:6px 0;padding-left:20px;font-size:var(--font-body)}
 .gsec ul li{margin-bottom:4px}
 .ex{background:#fdfbf8;border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin:7px 0}
@@ -776,15 +776,15 @@ body.cnall .ucn{display:block}
    桌機：意義地圖三欄、情境卡自動分欄；手機：全部縱向單欄。
    ============================================================ */
 .gvlead{background:linear-gradient(180deg,#fff8f1,#fff);border:1px solid #f0d9c2;border-radius:14px;
-  padding:14px 16px;margin-bottom:14px;box-shadow:var(--shadow)}
-.gvlead .l1{font-size:calc(17px * var(--fs));font-weight:800;color:var(--ink);line-height:1.75}
+  padding:12px 16px;margin-bottom:12px;box-shadow:var(--shadow)}
+.gvlead .l1{font-size:calc(15.5px * var(--fs));font-weight:700;color:var(--ink);line-height:1.7}
 .gvlead .l1 em{font-style:normal;color:var(--accent2);border-bottom:2px solid #f4c79b}
-.gvmap{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
-.gvmap .m{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px 12px}
-.gvmap .m .k{font-size:var(--font-meta);font-weight:800;letter-spacing:.06em;color:var(--accent2);margin-bottom:4px}
-.gvmap .m .v{font-size:calc(13.5px * var(--fs));color:var(--ink);line-height:1.7}
+.gvmap{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.gvmap .m{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 11px}
+.gvmap .m .k{font-size:var(--font-meta);font-weight:700;letter-spacing:.04em;color:var(--ink2);margin-bottom:3px}
+.gvmap .m .v{font-size:calc(14px * var(--fs));color:var(--ink);line-height:1.65}
 .gvmap .m.form .v{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:#1d4ed8}
-.gvsub{font-size:calc(13px * var(--fs));color:var(--ink2);margin:2px 0 9px;line-height:1.7}
+.gvsub{font-size:calc(13px * var(--fs));color:var(--ink2);margin:2px 0 7px;line-height:1.7}
 /* 時間線：桌機一張寬圖；手機逐列堆疊（文字用 HTML，不畫進 SVG，才不會縮到看不見） */
 .gvtl .gvtl-wide{max-width:660px;margin:0 auto}   /* 不要拉滿版：等比放大會讓整塊變很高 */
 .gvtl .gvtl-narrow{display:none}
@@ -795,58 +795,52 @@ body.cnall .ucn{display:block}
 .gvtlrow .axl{display:flex;justify-content:space-between;max-width:320px;
   font-size:var(--font-meta);color:var(--ink2);margin:-2px 0 5px}
 .gvtlrow .axl .now{color:var(--accent2);font-weight:800}
-.gvtlrow .en{font-size:calc(14.5px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
-.gvtlrow .cn{font-size:var(--font-meta);color:var(--ink2);line-height:1.7}
+.gvtlrow .en{font-size:calc(15px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
+.gvtlrow .cn{font-size:calc(14px * var(--fs));color:var(--ink2);line-height:1.7}
 @media(max-width:640px){
   .gvtl .gvtl-wide{display:none}
   .gvtl .gvtl-narrow{display:block}
 }
-.gvh{display:flex;align-items:center;gap:8px;margin:0 0 9px}
-.gvh h3{font-size:calc(15.5px * var(--fs));margin:0;color:var(--accent2)}
+.gvh{display:flex;align-items:center;gap:8px;margin:0 0 8px}
+.gvh h3{font-size:calc(16px * var(--fs));margin:0;color:var(--ink);font-weight:700}
 .gvh .step{background:var(--accent-soft);color:var(--accent2);font-size:calc(11px * var(--fs));
-  font-weight:800;border-radius:999px;padding:2px 9px;white-space:nowrap}
+  font-weight:800;border-radius:999px;padding:2px 9px;white-space:nowrap;flex-shrink:0}
 
-/* 情境卡：圖 → 意義 → 例句，一張卡只回答一個問題 */
-/* 全站文法統一的欄數規則（2026-08-30 使用者指定）：
-   1 欄 → 560px 起 2 欄 → 1100px 起 3 欄，上限 3 欄。
-   不用 auto-fit：那在 1440px 會排到 4 欄，卡片被壓到 250px、例句被擠成多行。
-   .gvgrid = 視覺化文法的情境卡；.gvcols = 舊版文法的例句／常見錯誤等重複卡片區塊。 */
-.gvgrid,.gvcols{display:grid;grid-template-columns:1fr;gap:11px}
-@media(min-width:560px){ .gvgrid,.gvcols{grid-template-columns:repeat(2,1fr)} }
-@media(min-width:1100px){ .gvgrid,.gvcols{grid-template-columns:repeat(3,1fr)} }
-/* 進了格線就由 gap 控間距，卡片自己的 margin 要歸零，否則欄距不一致 */
+/* 情境卡 grid：2 欄上限（不再 3 欄，避免壓縮過小） */
+.gvgrid,.gvcols{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:600px){ .gvgrid,.gvcols{grid-template-columns:repeat(2,1fr)} }
 .gvcols > .ex,.gvcols > .trap,.gvcols > .gvmis{margin:0}
-.gvcard{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px;
-  box-shadow:var(--shadow);display:flex;flex-direction:column;gap:7px}
-.gvcard .ill{display:flex;align-items:center;justify-content:center;height:84px;border-radius:10px;
+.gvcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;
+  display:flex;flex-direction:column;gap:6px}
+.gvcard .ill{display:flex;align-items:center;justify-content:center;height:72px;border-radius:9px;
   background:linear-gradient(180deg,#fdf6ec,#fffdfa);border:1px solid #f4e6d4}
-.gvcard .ill svg{width:56px;height:56px;display:block}
-.gvcard .ask{font-size:var(--font-meta);color:var(--accent2);font-weight:700}
-.gvcard .ti{font-size:calc(14.5px * var(--fs));font-weight:800;color:var(--ink);line-height:1.5}
+.gvcard .ill svg{width:48px;height:48px;display:block}
+.gvcard .ask{font-size:var(--font-meta);color:var(--ink2);font-weight:700}
+.gvcard .ti{font-size:calc(15px * var(--fs));font-weight:700;color:var(--ink);line-height:1.5}
 .gvcard .ti small{display:block;font-size:var(--font-meta);font-weight:600;color:var(--ink2);margin-top:2px}
 .gvcard .en{font-size:calc(15px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
-.gvcard .cn{font-size:calc(13px * var(--fs));color:var(--ink2);line-height:1.7}
+.gvcard .cn{font-size:calc(14px * var(--fs));color:var(--ink2);line-height:1.7}
 .gvcard .whybtn{align-self:flex-start;background:var(--card);border:1px dashed #e3c9ac;color:var(--accent2);
-  border-radius:999px;padding:4px 11px;font-size:var(--font-meta);font-weight:700;cursor:pointer}
+  border-radius:999px;padding:3px 10px;font-size:var(--font-meta);font-weight:700;cursor:pointer}
 .gvcard .whybtn:hover{background:var(--accent-soft)}
-.gvcard .why{display:none;font-size:calc(13px * var(--fs));color:var(--ink);line-height:1.85;
-  background:#fdfbf8;border-left:3px solid var(--accent);border-radius:8px;padding:9px 11px}
+.gvcard .why{display:none;font-size:calc(14px * var(--fs));color:var(--ink);line-height:1.8;
+  background:#fdfbf8;border-left:3px solid var(--accent);border-radius:8px;padding:8px 10px}
 .gvcard.open .why{display:block}
 .gvcard.open .whybtn{background:var(--accent-soft)}
 
 /* 左右對照 */
 .gvcmp{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:stretch}
 .gvcmp .vs{align-self:center;font-weight:900;color:var(--ink2);font-size:calc(13px * var(--fs))}
-.gvcmp .side{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px;box-shadow:var(--shadow)}
-.gvcmp .side.past{border-top:4px solid #94a3b8}
-.gvcmp .side.perf{border-top:4px solid var(--accent)}
+.gvcmp .side{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.gvcmp .side.past{border-top:3px solid #94a3b8}
+.gvcmp .side.perf{border-top:3px solid var(--accent)}
 .gvcmp .side .tag{font-size:var(--font-meta);font-weight:800;letter-spacing:.05em;color:var(--ink2)}
 .gvcmp .side.perf .tag{color:var(--accent2)}
-.gvcmp .side .head{font-size:calc(14px * var(--fs));font-weight:800;margin:3px 0 8px}
+.gvcmp .side .head{font-size:calc(15px * var(--fs));font-weight:700;margin:3px 0 6px}
 .gvcmp .side .head small{display:block;font-weight:600;color:var(--ink2);font-size:var(--font-meta)}
 .gvcmp .side .en{font-size:calc(15px * var(--fs));font-weight:700;line-height:1.6}
-.gvcmp .side .cn{font-size:calc(13px * var(--fs));color:var(--ink2);margin-bottom:6px}
-.gvcmp .side ul{margin:0;padding-left:18px;font-size:calc(13px * var(--fs));line-height:1.8;color:var(--ink)}
+.gvcmp .side .cn{font-size:calc(14px * var(--fs));color:var(--ink2);margin-bottom:5px}
+.gvcmp .side ul{margin:0;padding-left:18px;font-size:calc(14px * var(--fs));line-height:1.8;color:var(--ink)}
 .gvnote{margin-top:10px;background:#fffdf6;border:1px solid #f0e2c0;border-left:4px solid #eab308;
   border-radius:10px;padding:10px 12px;font-size:calc(13.5px * var(--fs));line-height:1.8}
 
@@ -858,7 +852,7 @@ body.cnall .ucn{display:block}
   line-height:1.6;border-radius:9px;padding:7px 10px}
 .gvmis .bad{background:#fdf0ef;color:#b3261e;text-decoration:line-through;text-decoration-color:#e08b84;margin-bottom:5px}
 .gvmis .good{background:#eefaf1;color:#14532d;font-weight:700}
-.gvmis .why{font-size:calc(13px * var(--fs));color:var(--ink2);line-height:1.8;margin-top:7px;padding-left:2px}
+.gvmis .why{font-size:calc(14px * var(--fs));color:var(--ink2);line-height:1.8;margin-top:6px;padding-left:2px}
 
 /* 一步一步理解 */
 .gvsteps{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px;box-shadow:var(--shadow)}
@@ -878,6 +872,14 @@ body.cnall .ucn{display:block}
   .gvcmp{grid-template-columns:1fr}
   .gvcmp .vs{justify-self:center;padding:2px 0}
 }
+/* 快速整理：預設收合 */
+.gvref{margin-top:4px}
+.gvref summary{font-size:calc(15px * var(--fs));font-weight:700;color:var(--ink);cursor:pointer;
+  padding:6px 0;list-style:none;display:flex;align-items:center;gap:6px}
+.gvref summary::-webkit-details-marker{display:none}
+.gvref summary::before{content:'▸';font-size:calc(12px * var(--fs));color:var(--ink2);transition:transform .15s}
+.gvref[open] summary::before{content:'▾'}
+.gvref .gvref-body{padding-top:8px}
 
 /* ============================================================
    Visual Grammar System — Step 1 視覺化型別（2026-09-03）
@@ -3274,7 +3276,7 @@ function gvIcon(k,size){
 function gvMap(m){
   if(!m) return '';
   const cell=(k,v,cls)=>'<div class="m'+(cls?' '+cls:'')+'"><div class="k">'+k+'</div><div class="v">'+mkText(v||'')+'</div></div>';
-  return '<div class="gvmap">'+cell('WHEN?',m.when)+cell('WHY?',m.why)+cell('FORM',m.form,'form')+'</div>';
+  return '<div class="gvmap">'+cell('什麼時候用？',m.when)+cell('為什麼？',m.why)+cell('句型',m.form,'form')+'</div>';
 }
 /* 時間線：span 連到 NOW／point 過去一個結束的點／range 未完成的區間 */
 function gvTimeline(t){
@@ -3588,8 +3590,15 @@ function gvHTML(g){
     ((g.steps||[]).length?gvSteps(g.steps):'')+gSecPart(g.sections,'ex'),
     (g.steps||[]).length?'從情境出發，最後才看到文法規則——不要一開始就背規則。':'');
 
-  h+=card('Step 4 · COMPARE',(g.comparison&&g.comparison.title)||'對照',
-    (g.comparison?gvComparison(g.comparison):'')+gSecPart(g.sections,'table'));
+  const cmpBody=(g.comparison?gvComparison(g.comparison):'');
+  const tblBody=gSecPart(g.sections,'table');
+  if(cmpBody||tblBody){
+    let cmpH='<div class="card"><div class="gvh"><span class="step">Step 4 · COMPARE</span><h3>'+((g.comparison&&g.comparison.title)||'對照')+'</h3></div>';
+    if(cmpBody) cmpH+=cmpBody;
+    if(tblBody) cmpH+='<details class="gvref"><summary>快速整理</summary><div class="gvref-body">'+tblBody+'</div></details>';
+    cmpH+='</div>';
+    h+=cmpH;
+  }
 
   /* mistakes 是視覺化格式的欄位，traps 是舊格式的；兩種都收，一起排在 Step 5 */
   const mis=(g.mistakes||[]).map(gvMistake).join('')
@@ -3598,7 +3607,7 @@ function gvHTML(g){
   h+=card('Step 5 · CHECK','⚠️ 最容易錯的地方',mis?'<div class="gvcols">'+mis+'</div>':'');
 
   if((g.quiz||[]).length) h+='<div class="card"><div class="row" style="align-items:center;margin-bottom:8px">'
-    +'<div class="gvh" style="margin:0;flex:1"><span class="step">Step 6 · PRACTICE</span><h3>✏️ Mini Practice</h3></div>'+qzBtnHTML('gram',g.quiz)+'</div>'
+    +'<div class="gvh" style="margin:0;flex:1"><span class="step">Step 6 · PRACTICE</span><h3>✏️ 練習題</h3></div>'+qzBtnHTML('gram',g.quiz)+'</div>'
     +'<div>'+quizHTML(g.quiz,'gram')+'</div><div id="gquizScore"></div></div>';
 
   h+='<div class="card" style="text-align:center"><button class="btn" onclick="gClose()">完成，回列表</button></div>';
@@ -3649,7 +3658,9 @@ function gramHTML(g){
   h+=stepCard('Step 1 · SEE','圖解：先看懂整體關係',viz);
   h+=stepCard('Step 2 · UNDERSTAND','核心規則',part('rule'));
   h+=stepCard('Step 3 · READ','例句',part('ex'));
-  h+=stepCard('Step 4 · COMPARE','對照表',part('table'));
+  const tblPart=part('table');
+  if(tblPart) h+='<div class="card"><div class="gvh"><span class="step">Step 4 · COMPARE</span><h3>對照表</h3></div>'
+    +'<details class="gvref"><summary>快速整理</summary><div class="gvref-body">'+tblPart+'</div></details></div>';
 
   if((g.traps||[]).length){
     h+=stepCard('Step 5 · CHECK','⚠️ 最容易錯的地方',
