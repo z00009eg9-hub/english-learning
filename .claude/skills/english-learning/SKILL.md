@@ -1285,6 +1285,12 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
    - 圖示從既有圖示庫 `I` 挑（house/talk/warning/check/coin/plane/food/heart/star/chartUp…共 37 個）；缺的圖示才新增（64×64 線稿，深色 `#2b2118`、橘色 `#e8813a`，仿現有風格）。
    - 圖說描述文章的故事階段（「A → B → C → D → E。」格式），內容取自文章本身。
    - 新增圖示後要用 headless Chrome 截圖驗證（`chrome --headless=new --screenshot`，輸出到本機可寫目錄，G: 或 scratchpad 會存取被拒）。
+3b. **Build Relationships（關聯學習系統，2026-09-09 新增，每次新增／更新課都要跑）**：`cd b2lab && node tools/build-rel.js`
+   - 增量模式：只處理 `data-rel.js` 還沒收錄的課，跟「全部歷史課次＋本週剛加的課」比對，只新增／更新必要的關聯；**不會重掃全部**。
+   - 完全 rule-based（老師的比較表 cmp、詞庫 `tools/rel-lexicon.js`、字尾詞族規則、片語搭配、閱讀文章動詞順序），沒有 AI 呼叫、沒有隨機；同輸入必同輸出，重跑不會重複（canonical key）。
+   - 只整理「已學過」的字：成員必須出現在 vocab / vocab2 / phrases / colloc / cmp，沒學過的字不會被塞進去。
+   - 改過 `rel-lexicon.js` 或想重做全部：`node tools/build-rel.js --rebuild`；只看報告不寫檔：`--dry-run --verbose`。
+   - 輸出 `public/data-rel.js` 要一起 commit（CI 沒有建置步驟，sanity check 會載入它）。
 4. **驗證**：`node -e "global.window={}; require('./data-book.js'); ..."` 檢查語法與 lessons 數；本機 `bkGo(id)` 渲染不報錯。
 5. **sw.js 快取版本 +1**（`b2lab/public/sw.js` 的 `CACHE = 'b2lab-vNN'`）。
 6. **部署**：`cd b2lab && npx firebase-tools deploy --only hosting --project english-b2-lab`。

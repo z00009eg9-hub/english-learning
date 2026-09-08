@@ -22,7 +22,7 @@ jobs:
       - name: Sanity check data files
         run: |
           cd b2lab/public
-          for f in data-notes.js data-reading.js data-grammar.js data-focus.js data-daily.js; do
+          for f in data-notes.js data-reading.js data-grammar.js data-focus.js data-daily.js data-book.js data-rel.js; do
             node -e "global.window={};require('./$f');console.log('$f ok')"
           done
           node -e "

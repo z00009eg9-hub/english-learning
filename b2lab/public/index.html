@@ -761,6 +761,41 @@ body.cnall .ucn{display:block}
 .seq .seqar{flex:1 1 0;min-width:6px;display:flex;align-items:center;opacity:.5}
 .seq .seqar::before{content:"";flex:1;height:2px;background:currentColor;border-radius:2px}
 .artbox .seq .seqah{width:7px;height:11px;flex:0 0 auto;margin-left:-1px;border-radius:0}
+/* ---------- 關聯學習（本課串聯複習／單字卡「關聯」頁）：compact list，點開才展開 ----------
+   沿用既有 token（--font-*、--accent-soft、--line）；橘色只用在 chip active 與 Pattern 底色，列本身不加橘框。 */
+.rel .rel-hd{color:var(--ink);margin:4px 0 6px}
+.rel .rel-hd svg{color:var(--ink2);flex:0 0 auto}
+.rel-sub{font-size:var(--font-meta);color:var(--ink2);margin:0 0 10px}
+.rel-list{display:flex;flex-direction:column;gap:6px}
+.rel-row{border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.rel-row>summary{list-style:none;display:flex;align-items:center;gap:8px 10px;padding:8px 12px;cursor:pointer}
+.rel-row>summary::-webkit-details-marker{display:none}
+.rel-t{font-weight:var(--fw-emph);font-size:var(--font-body);line-height:var(--lh-secondary);color:var(--ink);flex:1 1 46%;min-width:0;overflow-wrap:anywhere}
+.rel-s{font-size:var(--font-meta);color:var(--ink2);flex:1 1 34%;min-width:0;overflow-wrap:anywhere}
+.rel-type{font-size:var(--font-meta);color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:1px 8px;white-space:nowrap}
+.rel-chev::before{content:"▸";color:var(--ink2);font-size:var(--font-meta)}
+.rel-row[open]>summary .rel-chev::before{content:"▾"}
+.rel-body{padding:2px 12px 12px;border-top:1px dashed var(--line);font-size:var(--font-body);line-height:var(--lh-body)}
+.rel-body .k{font-size:var(--font-meta);color:var(--ink2);margin-top:9px;font-weight:var(--fw-emph)}
+.rel-diff{margin:2px 0 0;padding:0;list-style:none}
+.rel-diff li{padding:2px 0}
+.rel-diff b{color:var(--accent2)}
+.rel-tip{margin-top:6px;color:var(--ink2)}
+.rel-ex{margin-top:6px}
+.rel-ex .en{font-weight:var(--fw-emph)}
+.rel-pat{display:inline-block;background:var(--accent-soft);border-radius:8px;padding:2px 8px;margin:4px 6px 0 0;font-size:var(--font-secondary)}
+.rel-src{font-size:var(--font-meta);color:var(--ink2);margin-top:10px}
+.rel-src a{color:var(--accent2)}
+.rel-more{margin-top:10px}
+/* 中譯跟隨全站「中譯：開／關」：課本頁已有 #v-book .cnx 規則；單字卡頁沒有，這裡只作用在 .rel 容器內 */
+.rel .cnx{display:none}
+body.cnall .rel div.cnx{display:block}
+body.cnall .rel span.cnx{display:inline}
+@media(max-width:640px){
+  .rel-row>summary{flex-wrap:wrap;gap:4px 8px}
+  .rel-t{flex-basis:calc(100% - 96px)}
+  .rel-s{flex-basis:100%;order:3}
+}
 /* 舊版大型 infographic 在手機上會縮到 ~300px 寬、圖內文字只剩 6px 左右（文字是畫進 SVG 的，
    不會跟著版面重排）。手機給一個「點圖放大」，用全螢幕檢視器以原始尺寸呈現。
    （2026-08-30 使用者指定：全部文法都要照 RWD 辦理） */
@@ -1632,6 +1667,7 @@ body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .ex
 <script src="data-listen.js"></script>
 <script src="data-daily.js"></script>
 <script src="data-book.js"></script>
+<script src="data-rel.js"></script>
 <script src="data-bookart.js"></script>
 <script>
 /* ============================================================
@@ -1708,7 +1744,7 @@ const inBand = l => band().indexOf(l)>=0;
 let PROFILE=localStorage.getItem('b2lab_profile')||'anita';
 if(!PROFILES[PROFILE]) PROFILE='anita';
 const skey = () => 'b2lab.v1.'+PROFILE;
-const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:1, fs:null, fsSet:false, listenDone:{}, vnotes:{}, wb:{}, bkSeen:{}, rw:{}, rwDone:{}, updatedAt:0});
+const blank = () => ({srs:{}, artDone:{}, gramDone:{}, newPerDay:12, dayNew:{}, streak:0, lastDay:null, rate:1, fs:null, fsSet:false, listenDone:{}, vnotes:{}, wb:{}, bkSeen:{}, rw:{}, rwDone:{}, relSeen:{}, updatedAt:0});
 
 /* ---------- 本機儲存 ---------- */
 let ST=blank();
@@ -1811,6 +1847,9 @@ function mergeState(remote){
     const a=(ST.rwDone||{})[id], b=remote.rwDone[id];
     out.rwDone[id] = (!a || (b.t||0)>=(a.t||0)) ? b : a;
   });
+  /* 關聯「看過」時間戳：同一組取較新的 */
+  out.relSeen=Object.assign({},ST.relSeen||{});
+  Object.keys(remote.relSeen||{}).forEach(k=>{ out.relSeen[k]=Math.max(Number((ST.relSeen||{})[k])||0, Number(remote.relSeen[k])||0); });
   out.streak=Math.max(ST.streak||0,remote.streak||0);
   return out;
 }
@@ -2961,7 +3000,7 @@ RENDER.vocab=function(){
     Object.keys(CATS).forEach(c=>counts[c]=VOCAB.filter(x=>x.cat===c).length);
     const learned=Object.keys(ST.srs).length;
     const dueN=VOCAB.filter(x=>isDue(x.w)).length;
-    v.innerHTML='<div class="card"><h2 class="sec">🔤 單字卡 · 間隔複習</h2>'
+    const mainHTML='<div class="card"><h2 class="sec">🔤 單字卡 · 間隔複習</h2>'
       +'<div class="hint">系統會根據你按的按鈕自動安排下次複習日：<b>忘記</b>當天再出現，<b>很簡單</b>會拉長到好幾天甚至幾週後。每天新字上限 '+(ST.newPerDay||12)+' 個。</div>'
       +'<div class="stats"><div class="stat"><b>'+VOCAB.length+'</b><span>課堂總單字</span></div>'
       +'<div class="stat"><b>'+learned+'</b><span>已開始學</span></div>'
@@ -2978,6 +3017,7 @@ RENDER.vocab=function(){
       +'</div>'
       + wbCard()
       + (vBrowseOn?browseHTML():'');
+    v.innerHTML=vModeBar()+(vMode==='rel'?relPageHTML():vMode==='fav'?wbCard():mainHTML);
     return;
   }
   // 卡片模式
@@ -4502,15 +4542,15 @@ function mrBuildChallenge(r){
   // Fallbacks if < 6
   if(qs.length<6 && sv.length>=2){ const t=sv[1].t;
     qs.push({type:'cn2en',prompt:t.cn||'',answer:t.w,audio:t.w,rule:t.w}); }
-  return qs.slice(0,6);
+  return qs.slice(0,6).concat(relQuestions(r));
 }
 function mrChHTML(qs){
   if(mrChIdx>=qs.length) return '<div class="mrch-done">🎉 本月挑戰完成！</div>';
   const q=qs[mrChIdx], n=mrChIdx+1, total=qs.length;
   let h='<div class="mrch-progress">'+ n+' / '+total+'</div>';
-  const typeLabel={cn2en:'中文 → 英文',en2cn:'英文 → 中文',pick:'選正確句子',fill:'填空',recall:'句型回想'};
+  const typeLabel={cn2en:'中文 → 英文',en2cn:'英文 → 中文',pick:'選正確句子',fill:'填空',recall:'句型回想',relpick:'關聯：選正確用法',relchain:'關聯：接下一步'};
   h+='<div class="mrch-type">'+(typeLabel[q.type]||q.type)+'</div>';
-  if(q.type==='pick'){
+  if(q.type==='pick'||q.type==='relpick'){
     h+='<div class="mrch-q">'+esc(q.prompt)+'</div>';
     if(!mrChShow){
       h+='<div class="mrch-opts">'+q.opts.map((o,i)=>
@@ -4551,6 +4591,126 @@ function mrChReveal(){ mrChShow=true; const el=document.getElementById('mrch-are
 function mrChNext(){ mrChIdx++; mrChShow=false; const el=document.getElementById('mrch-area'); if(el) el.innerHTML=mrChHTML(_mrChQs); }
 function mrChPick(i,correct){ mrChShow=true; const el=document.getElementById('mrch-area'); if(el) el.innerHTML=mrChHTML(_mrChQs); }
 window.mrChReveal=mrChReveal; window.mrChNext=mrChNext; window.mrChPick=mrChPick;
+
+/* ==================== 關聯學習（Relationship layer） ====================
+   目的：把新學的內容接回以前學過的（近義／易混、反義、詞族、搭配、情境），不是新增教材。
+   資料：data-rel.js —— 由 tools/build-rel.js 從 data-book.js 規則式建出的衍生索引（deterministic、無 AI、無隨機）。
+   頁面只讀索引、不掃課本。三個入口共用同一份：課本每課「本課串聯複習」、單字卡「關聯」頁、每月挑戰的關聯題。
+   看過的關聯記在 ST.relSeen[key]=時間戳，只用來讓「很久沒看」的優先，不是熟練度系統；不影響課本完成狀態。 */
+const REL_ITEMS=((window.REL||{}).items||[]).slice();
+const REL_BY={}; REL_ITEMS.forEach(o=>REL_BY[o.id]=o);
+const REL_TYPE={syn:'近義／易混',ant:'反義',fam:'詞族',pat:'搭配',flow:'情境'};
+(function(){
+  const R=window.REL; if(!R){ console.warn('[關聯] data-rel.js 未載入'); return; }
+  const missing=BOOK_LESSONS.filter(b=>(R.lessons||[]).indexOf(b.id)<0).map(b=>b.id);
+  console.info('[關聯] '+REL_ITEMS.length+' 組 · 建於 '+R.built+(missing.length?' · 尚未索引的課：'+missing.join(', ')+'（請跑 node tools/build-rel.js）':' · 全部課次已索引'));
+})();
+function relForLesson(id){ return ((((window.REL||{}).byLesson||{})[id])||[]).map(k=>REL_BY[k]).filter(Boolean); }
+function relMd(d){ return d?String(d).slice(5).replace('-','/'):''; }
+function relSub(o){ const p=(o.pats||[]).slice(0,2).join(' / '); const c=o.concept||o.members.map(m=>String(m.cn||'').split(/[「（(；;，,。／/]/)[0].slice(0,6)).filter(Boolean).slice(0,3).join(' / '); return c+(p&&o.type!=='pat'&&o.type!=='flow'?'｜'+p:''); }
+function relSeen(id){ try{ const o=REL_BY[id]; if(!o) return; ST.relSeen=ST.relSeen||{}; if(!ST.relSeen[o.key]||Date.now()-ST.relSeen[o.key]>6e4){ ST.relSeen[o.key]=Date.now(); save(); } }catch(e){} }
+function relRowHTML(o,ctx){
+  const cn=s=>s?' <span class="cnx">'+esc(s)+'</span>':'';
+  let body='';
+  if(o.type==='flow'){
+    body+='<div class="steps" style="margin:10px 0 0">'+o.members.map((m,i)=>'<span class="stp sent" data-t="'+esc(m.en)+'" onclick="saySent(this)">'+esc(m.en)+'</span>'+(i<o.members.length-1?'<span class="sarr">➔</span>':'')).join('')+'</div>';
+    if((o.pats||[]).length) body+='<div>'+o.pats.map(p=>'<span class="rel-pat">'+esc(p)+'</span>').join('')+'</div>';
+    if(o.tip) body+='<div class="cnx rel-tip">'+esc(o.tip)+'</div>';
+  } else {
+    if(o.concept) body+='<div class="k">共同概念</div><div class="cnx">'+esc(o.concept)+'</div>';
+    if((o.diff||[]).length) body+='<div class="k">快速記憶</div><ul class="rel-diff">'+o.diff.map(d=>'<li><b class="sent" data-t="'+esc(d.en)+'" onclick="saySent(this)">'+esc(d.en)+'</b>'+cn(d.cn)+'</li>').join('')+'</ul>';
+    if(o.tip) body+='<div class="cnx rel-tip">💡 '+esc(o.tip)+'</div>';
+    if((o.pats||[]).length) body+='<div class="k">Pattern</div><div>'+o.pats.slice(0,3).map(p=>'<span class="rel-pat">'+esc(p)+'</span>').join('')+'</div>';
+  }
+  if((o.exs||[]).length) body+='<div class="k">例句</div>'+o.exs.slice(0,2).map(x=>'<div class="rel-ex"><span class="sent en" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+esc(x.en)+'</span> '+spk(x.en)+(x.cn?'<div class="cnx">'+esc(x.cn)+'</div>':'')+'</div>').join('');
+  if((o.dates||[]).length){
+    const other=(o.lessonIds||[]).filter(x=>x!==ctx)[0];
+    body+='<div class="rel-src">來源：'+o.dates.map(relMd).join(' · ')+(other?'　<a href="#" onclick="event.preventDefault();bkGo(\''+other+'\')">查看來源課</a>':'')+'</div>';
+  }
+  return '<details class="rel-row" ontoggle="if(this.open)relSeen(\''+o.id+'\')"><summary>'
+    +'<span class="rel-t">'+esc(o.title)+'</span><span class="rel-s cnx">'+esc(relSub(o))+'</span>'
+    +'<span class="rel-type">'+(REL_TYPE[o.type]||o.type)+'</span><span class="rel-chev"></span></summary>'
+    +'<div class="rel-body">'+body+'</div></details>';
+}
+function relSectionHTML(title,sub,items,ctx){
+  const ICON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>';
+  return '<h2 class="sec rel-hd">'+ICON+esc(title)+'</h2>'+(sub?'<div class="rel-sub">'+esc(sub)+'</div>':'')
+    +'<div class="rel-list">'+items.map(o=>relRowHTML(o,ctx)).join('')+'</div>';
+}
+/* 本週關聯複習：本週的新課（週一起算；本週沒課就取最近兩課）相關的關聯，5–8 組。
+   排序：跨課 > 易混 > 本週最新那課 > 收藏 > 很久沒看（剛看過的往後排）。deterministic，沒有隨機。 */
+function relWeekLessons(){
+  const pad=n=>String(n).padStart(2,'0'), ymd=x=>x.getFullYear()+'-'+pad(x.getMonth()+1)+'-'+pad(x.getDate());
+  const d=new Date(); const mon=new Date(d); mon.setDate(d.getDate()-((d.getDay()+6)%7));
+  const from=ymd(mon), to=ymd(d);
+  let ls=BOOK_LESSONS.filter(b=>b.date>=from&&b.date<=to);
+  if(!ls.length) ls=BOOK_LESSONS.slice(0,2);   // BOOK_LESSONS 已依日期新→舊
+  return ls;
+}
+function relWeekly(){
+  const ls=relWeekLessons(); const ids=ls.map(b=>b.id); const latest=ids[0];
+  const seen=(ST.relSeen||{}); const now=Date.now();
+  const sc=o=>{ let s=o.score+(o.cross?15:0)+(o.type==='syn'?8:0);
+    if(o.lessonIds.indexOf(latest)>=0) s+=10;
+    if(o.members.some(m=>typeof wbOn==='function'&&wbOn(m.en))) s+=10;
+    const t=seen[o.key]; if(t){ const days=(now-t)/864e5; s+=days>14?8:(days<3?-25:0); } else s+=5;
+    return s; };
+  let cands=REL_ITEMS.filter(o=>o.lessonIds.some(id=>ids.indexOf(id)>=0));
+  if(cands.length<5) cands=cands.concat(REL_ITEMS.filter(o=>cands.indexOf(o)<0&&o.cross));
+  cands=cands.map(o=>({o,s:sc(o)})).sort((a,b)=>b.s-a.s||a.o.key.localeCompare(b.o.key)).map(x=>x.o);
+  const out=[],per={}; const ms=o=>o.members.map(m=>m.key).sort().join('|');
+  cands.forEach(o=>{ if(out.length>=8) return; if(out.some(p=>ms(p)===ms(o))) return; if((per[o.type]||0)>=3) return; out.push(o); per[o.type]=(per[o.type]||0)+1; });
+  return {items:out, lessons:ls};
+}
+let relAllOn=false;
+function relTogAll(){ relAllOn=!relAllOn; RENDER.vocab(); }
+function relPageHTML(){
+  const w=relWeekly();
+  const ln=w.lessons.map(b=>relMd(b.date)+' '+(b.titleCn||'')).join('、');
+  let h='<div class="card rel">'+relSectionHTML('本週關聯複習', w.items.length?('本週：'+ln+' · 把新學的接回以前學過的'):'', w.items)
+    +(w.items.length?'':'<div class="muted">還沒有可複習的關聯。</div>')
+    +'<div class="rel-more"><button class="btn ghost sm" onclick="relTogAll()">'+(relAllOn?'收合全部關聯':'查看全部關聯（'+REL_ITEMS.length+'）')+'</button></div></div>';
+  if(relAllOn){
+    const order=['syn','ant','fam','pat','flow'];
+    h+='<div class="card rel">'+order.map(t=>{
+      const its=REL_ITEMS.filter(o=>o.type===t).sort((a,b)=>b.score-a.score||a.key.localeCompare(b.key));
+      return its.length?relSectionHTML(REL_TYPE[t]+'（'+its.length+'）','',its):'';
+    }).join('')+'</div>';
+  }
+  return h;
+}
+/* 單字卡頁的模式列：全部（原本畫面，完全不變）／收藏（生詞本）／關聯 —— 沿用 .chips/.chip 樣式 */
+let vMode='all';
+function vSetMode(m){ vMode=m; vQueue=[]; RENDER.vocab(); window.scrollTo(0,0); }
+function vModeBar(){ const b=(k,l)=>'<button class="chip'+(vMode===k?' on':'')+'" onclick="vSetMode(\''+k+'\')">'+l+'</button>'; return '<div class="chips" style="margin-bottom:10px">'+b('all','全部')+b('fav','收藏')+b('rel','關聯')+'</div>'; }
+window.relSeen=relSeen; window.relTogAll=relTogAll; window.vSetMode=vSetMode;
+/* 每月挑戰的關聯題（最多 3 題，deterministic）：
+   選正確用法（persuade someone ___ do something）、二選一（例句挖空選 convince / persuade）、接下一步（pressure → stressed → ______） */
+function relQuestions(r){
+  const ids=(r.lessons||[]).map(b=>b.id); if(!ids.length) return [];
+  const pool=REL_ITEMS.filter(o=>o.lessonIds.some(id=>ids.indexOf(id)>=0)).sort((a,b)=>b.score-a.score||a.key.localeCompare(b.key));
+  const qs=[];
+  outer1: for(const o of pool){ if(o.type!=='syn'&&o.type!=='pat') continue;
+    for(const p of (o.pats||[])){
+      const m=/^([a-z]+) (sb|sth|someone|something) (to|that|from|of|about|with|for|on|in|at)\b(.*)$/i.exec(p); if(!m) continue;
+      const ans=m[3].toLowerCase(); const alts=['to','that','for','of','about','with','from','on'].filter(x=>x!==ans).slice(0,2);
+      const opts=[ans].concat(alts).sort();
+      const tail=m[4].trim().replace(/^V$/,'do something').replace(/^V-ing$/,'doing something').replace(/^…$/,'...');
+      qs.push({type:'relpick',prompt:(m[1]+' '+(m[2]==='sth'||m[2]==='something'?'something':'someone')+' ___ '+tail).replace(/\s+/g,' ').trim(),opts:opts,correctIdx:opts.indexOf(ans),rule:p+(o.concept?'（'+o.concept+'）':'')});
+      break outer1;
+    } }
+  for(const o of pool){ if(o.type!=='syn'||o.members.length<2||o.members.length>3) continue;
+    const x=(o.exs||[]).find(e=>e.of&&o.members.some(m=>m.en===e.of)); if(!x) continue;
+    const m=o.members.find(mm=>mm.en===x.of);
+    const re=new RegExp('\\b'+m.en.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(s|es|ed|d|ing)?\\b','i');
+    if(!re.test(x.en)) continue;
+    const opts=o.members.map(mm=>mm.en); const d=(o.diff||[]).find(dd=>dd.en===m.en);
+    qs.push({type:'relpick',prompt:x.en.replace(re,'______'),opts:opts,correctIdx:opts.indexOf(m.en),rule:m.en+(d&&d.cn?' — '+d.cn:'')}); break; }
+  for(const o of pool){ if(o.type!=='flow'||o.members.length<3) continue;
+    const i=Math.min(3,o.members.length-1); const en=o.members.map(m=>m.en);
+    qs.push({type:'relchain',prompt:en.map((e,k)=>k===i?'______':e).join(' → '),answer:en[i],rule:o.tip||o.concept||''}); break; }
+  return qs.slice(0,3);
+}
 
 /* ==================== 實景英語（Real-world lessons） ====================
    從真實生活影片（小紅書 / YouTube 等外部來源）建立學習教材。
@@ -5466,6 +5626,10 @@ function bookHTML(b){
    +'<tr><th>重點</th><th>說明</th></tr>'
    + b.summary.map(s=>'<tr><td style="font-weight:700">'+esc(s.k)+'</td><td>'+bkForms(sumTxt(s.v))+'</td></tr>').join('')
    +'</table></div></div>';
+
+  /* 本課串聯複習：把這一課的字接回以前學過的（資料來自 data-rel.js，每課最多 6 組；不改任何原教材） */
+  const rels=relForLesson(b.id);
+  if(rels.length) h+='<div class="card rel" id="bksec-rel">'+relSectionHTML('本課串聯複習','把這課學到的接回以前學過的 · 點一組展開',rels,b.id)+'</div>';
 
   h+='<div class="card" style="text-align:center"><button class="btn" onclick="bkClose()">完成，回列表</button></div>';
   return h;
