@@ -382,7 +382,7 @@ window.BOOK = {
       ],
       vocabTitle: 'II. 單字 Vocabulary',
       vocab: [
-        { w: 'chemistry', ipa: '/ˈkɛmɪstri/', pos: 'n.', cn: '默契、化學反應',
+        { w: 'chemistry', ipa: '/ˈkem.ə.stri/', pos: 'n.', cn: '默契、化學反應',
           ex: 'Our team has great chemistry.', exCn: '我們團隊很有默契。' },
         { w: 'rapport', star: true, ipa: '/ræˈpɔːr/', pos: 'n.', cn: '融洽的關係',
           ex: 'We build good rapport with our clients.', exCn: '我們與客戶建立良好的關係。' },
@@ -898,7 +898,7 @@ window.BOOK = {
           ex: 'We bought identical shirts.', exCn: '我們買了一模一樣的襯衫。' },
         { w: 'alike', ipa: '/əˈlaɪk/', pos: 'adv.', cn: '相似地；一樣地',
           ex: 'We always think alike.', exCn: '我們的想法總是很相似。' },
-        { w: 'chemistry', ipa: '/ˈkɛmɪstri/', pos: 'n.', cn: '默契；契合的感覺',
+        { w: 'chemistry', ipa: '/ˈkem.ə.stri/', pos: 'n.', cn: '默契；契合的感覺',
           ex: 'We have great chemistry.', exCn: '我們很有默契。' },
         { w: 'rapport', star: true, ipa: '/ræˈpɔːr/', pos: 'n.', cn: '融洽關係；默契',
           ex: 'We have a good rapport.', exCn: '我們相處融洽、溝通順暢。' },
