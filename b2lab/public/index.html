@@ -742,11 +742,25 @@ body.cnall .ucn{display:block}
   box-shadow:var(--shadow);padding:10px;overflow:hidden}
 .artbox svg{display:block;width:100%;height:auto;border-radius:9px}
 .artbox figcaption{
-  font-size:var(--font-secondary);color:var(--ink2);line-height:var(--lh-secondary);margin-top:6px;
+  font-size:var(--font-secondary);color:var(--ink2);line-height:var(--lh-secondary);margin-top:10px;
   padding:6px 10px;background:#fdfbf8;border-radius:8px;border-left:3px solid var(--accent)
 }
 .artbox .steps{margin:0;gap:4px}
 .artbox .steps .stp{font-size:var(--font-meta);padding:2px 9px}
+/* 五圓圖示帶（閱讀文章／課本文章共用）：五個小圖示改用 HTML flex 排版平均分布，
+   圓圈大小 = 共用 token --seqc（依容器寬度 clamp，手機有下限、大螢幕有上限），
+   高度由 padding 決定（height:auto，不設固定高），波浪底當背景。箭頭只是流程提示，線細、半透明。 */
+.seq{position:relative;isolation:isolate;display:flex;align-items:center;
+  --seqg:clamp(2px,.6vw,10px);gap:var(--seqg);padding:clamp(10px,1.4vw,19px) clamp(10px,2.6vw,36px);
+  border-radius:12px;overflow:hidden;
+  /* 圓圈大小：依容器寬度成長、桌機封頂 140px；再以「(容器寬 − 8 個 gap − 4 支最小箭頭 6px) ÷ 5」封頂，
+     窄螢幕保證五個圓＋箭頭剛好放滿一列、不可能溢出或裁切 */
+  --seqc:min(clamp(40px,7.5% + 38px,140px),calc((100% - var(--seqg)*8 - 24px)/5))}
+.artbox .seq .seqbg{position:absolute;inset:0;width:100%;height:100%;z-index:-1;border-radius:0}
+.artbox .seq .seqic{width:var(--seqc);height:auto;flex:0 0 auto;border-radius:0;cursor:default}
+.seq .seqar{flex:1 1 0;min-width:6px;display:flex;align-items:center;opacity:.5}
+.seq .seqar::before{content:"";flex:1;height:2px;background:currentColor;border-radius:2px}
+.artbox .seq .seqah{width:7px;height:11px;flex:0 0 auto;margin-left:-1px;border-radius:0}
 /* 舊版大型 infographic 在手機上會縮到 ~300px 寬、圖內文字只剩 6px 左右（文字是畫進 SVG 的，
    不會跟著版面重排）。手機給一個「點圖放大」，用全螢幕檢視器以原始尺寸呈現。
    （2026-08-30 使用者指定：全部文法都要照 RWD 辦理） */
@@ -2373,29 +2387,35 @@ const reEsc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 /* 每日文章「五圓圖示帶」：在五個圓之間補順序箭頭（配色維持各圖原本的調色盤，
    箭頭自動取該圖裡最鮮豔的主色）。只處理「800×200 且恰好五個圓」的模板圖，
    其他圖表（長條圖等）不動 */
-/* 五圓圖示帶：圓圈縮小 ~23%（scale 1.5→1.15）、viewBox 高度 200→160、
-   箭頭與波浪同步重算，讓圖示帶是「文章理解輔助」而非 Hero Banner。 */
-function stripSlim(svg){
-  const s=String(svg||'');
-  if(/viewBox="0 0 800 160"/.test(s)) return s.replace('viewBox="0 0 800 160"','viewBox="24 28 752 108"');
-  if(!/viewBox="0 0 800 200"/.test(s)) return s;
-  if((s.match(/translate\(\d+,52\) scale\(1\.5\)/g)||[]).length!==5) return s;
-  return s.replace('viewBox="0 0 800 200"','viewBox="30 38 740 140"');
-}
-function artNormSVG(svg){
+/* 五圓圖示帶（閱讀文章／課本文章共用）：把模板 SVG（800×200、恰好五個 translate(X,52) scale(1.5) 圓）
+   拆成 5 個獨立小圖示，改用 HTML flex 排版；圓圈大小交給 CSS token --seqc，高度由 padding 決定，
+   原本的波浪底改成容器背景。非模板 SVG（長條圖、時間軸等）原樣回傳。 */
+function artSeqHTML(svg){
   const s=String(svg||'');
   if(!/viewBox="0 0 800 200"/.test(s)) return s;
-  if((s.match(/translate\(\d+,52\) scale\(1\.5\)/g)||[]).length!==5) return s;
-  /* 縮小圓圈、降低容器高度 */
-  let c=s.replace('viewBox="0 0 800 200"','viewBox="0 0 800 160"')
-    .replace('<rect width="800" height="200"','<rect width="800" height="160"')
-    .replace('M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z',
-             'M0 160 L0 122 Q220 96 440 124 L800 80 L800 160z')
-    .replace(/translate\((\d+),52\) scale\(1\.5\)/g,'translate($1,38) scale(1.15)');
+  const re=/<g transform="translate\((\d+),52\) scale\(1\.5\)">/g;
+  const tagRe=/<\/?g\b[^>]*>/g;
+  const groups=[]; let m;
+  while((m=re.exec(s))){
+    let depth=1, end=-1, t;
+    tagRe.lastIndex=re.lastIndex;
+    while((t=tagRe.exec(s))){
+      if(t[0][1]==='/') depth--; else if(!/\/>$/.test(t[0])) depth++;
+      if(depth===0){ end=t.index; break; }
+    }
+    if(end<0) return s;
+    groups.push(s.slice(re.lastIndex,end));
+    re.lastIndex=tagRe.lastIndex;
+  }
+  if(groups.length!==5) return s;
+  /* 底色／波浪色取自原圖（沒有就用模板預設） */
+  const bgm=s.match(/<rect width="800" height="200"[^>]*fill="(#[0-9a-fA-F]{6})"/);
+  const wvm=s.match(/<path d="M0 200[^"]*" fill="(#[0-9a-fA-F]{6})"(?: opacity="([\d.]+)")?/);
+  const bg=bgm?bgm[1]:'#fdf6ec', wv=wvm?wvm[1]:'#f7e3c9', wo=(wvm&&wvm[2])||'.75';
   /* 箭頭顏色＝圖裡「最常用的鮮豔主色」（飽和度×出現次數加權），跟該圖調色盤一致 */
   let acc='#8a7a66', best=0;
   const cnt={};
-  (c.match(/#[0-9a-fA-F]{6}\b/g)||[]).forEach(hex=>{ cnt[hex]=(cnt[hex]||0)+1; });
+  (s.match(/#[0-9a-fA-F]{6}\b/g)||[]).forEach(hex=>{ cnt[hex]=(cnt[hex]||0)+1; });
   Object.keys(cnt).forEach(hex=>{
     const r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
     const mx=Math.max(r,g,b), mn=Math.min(r,g,b);
@@ -2403,11 +2423,10 @@ function artNormSVG(svg){
     const score=(lum>0.2&&lum<0.75&&sat>0.3)?sat*cnt[hex]:0;
     if(score>best){ best=score; acc=hex; }
   });
-  const arrows=[118,272,426,580].map(x0=>{
-    const x1=x0+12, x2=x0+66;
-    return '<path d="M'+x1+' 75 H'+x2+' M'+x2+' 75 l-8 -6 M'+x2+' 75 l-8 6"/>';
-  }).join('');
-  return stripSlim(c.replace('</svg>','<g fill="none" stroke="'+acc+'" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".8">'+arrows+'</g></svg>'));
+  const ic=g=>'<svg class="seqic" viewBox="-3 -3 70 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'+g+'</svg>';
+  const ar='<span class="seqar"><svg class="seqah" viewBox="0 0 8 12" aria-hidden="true"><path d="M1.5 1.5 L6.5 6 L1.5 10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
+  const bgsvg='<svg class="seqbg" viewBox="0 0 800 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 200 L0 150 Q220 118 440 152 L800 96 L800 200z" fill="'+wv+'" opacity="'+wo+'"/></svg>';
+  return '<div class="seq" style="background:'+bg+';color:'+acc+'">'+bgsvg+groups.map((g,i)=>ic(g)+(i<4?ar:'')).join('')+'</div>';
 }
 function artHTML(id){
   const a=(window.ART||{})[id];
@@ -2426,7 +2445,7 @@ function artHTML(id){
        +'</div>'+(rest?'<div style="margin-top:7px">'+esc(rest)+'</div>':'')+'</figcaption>';
     }else cap='<figcaption>'+esc(s)+'</figcaption>';
   }
-  return '<figure class="artbox flush" style="margin:0 0 14px">'+artNormSVG(a.svg)+cap+'</figure>';
+  return '<figure class="artbox flush" style="margin:14px 0 12px">'+artSeqHTML(a.svg)+cap+'</figure>';
 }
 
 /* 升級句 vs 原句：把 B2 句裡「B1 句沒有的字」上底色，一眼看出升級了哪裡。
@@ -5363,7 +5382,7 @@ function bookHTML(b){
     const _bart=r.art||(_ba?_ba.svg:'')||'';
     const _bcap=r.artCap||(_ba?_ba.cap:'')||'';
     h+='<div class="bkbar">'+esc(r.bar)+'</div>'
-     +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
+     +'<div class="card"><div class="row" style="justify-content:space-between;align-items:center">'
      +'<h2 class="sec bkattl" style="color:var(--accent2);margin:0;flex:1">'+esc(r.title)+' '+spk(r.title)+'</h2>'
      +'<span class="row" style="flex-wrap:nowrap;gap:6px">'
      +'<button class="spk" onclick="bkReadAll(this)">🔊 朗讀全文</button>'
@@ -5371,7 +5390,7 @@ function bookHTML(b){
      +'<div class="hint" style="display:none;margin-top:8px">點<b>任何一句</b>就朗讀那一句並反黃；「🔊 朗讀全文」與「🔊 整段」會一句一句念、念到哪句亮到哪句，再點一下空白處可停止。</div>'
      +'<div class="muted cnx" style="font-weight:var(--fw-emph);margin:6px 0 8px">'+esc(r.titleCn)+'</div>'
      /* 文章插圖：五個大圓圖示，放在標題下方、與內文同寬（有才顯示）— 先查 r.art，再查 BOOKART */
-     + (_bart?'<figure class="artbox flush" style="margin:0 0 14px">'+stripSlim(_bart)+(_bcap?bkStepCap(_bcap):'')+'</figure>':'')
+     + (_bart?'<figure class="artbox flush" style="margin:14px 0 12px">'+artSeqHTML(_bart)+(_bcap?bkStepCap(_bcap):'')+'</figure>':'')
      + (r.paras||[]).map(p=>'<div class="para"><div class="en">'+sentSpans(p.en)+'</div>'
        +'<div class="pbar"><button class="spk" onclick="bkReadPara(this)">🔊 整段</button></div>'
        +'<div class="ecn cnx" style="font-size:var(--font-body);color:var(--ink2);background:var(--accent-soft);border-radius:9px;padding:8px 11px;margin-top:6px">'+esc(p.cn)+'</div></div>').join('')
