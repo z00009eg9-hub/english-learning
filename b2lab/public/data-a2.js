@@ -113,7 +113,7 @@ articles:[
     {w:"umbrella",ipa:"/ʌmˈbrelə/",pos:"n.",cn:"雨傘",def:"A thing you hold over your head in the rain.",ex:"I am looking for my umbrella.",exCn:"我正在找我的雨傘。"},
     {w:"wet",ipa:"/wet/",pos:"adj.",cn:"潮濕的",def:"Covered with water; not dry.",ex:"The weather is hot and wet.",exCn:"天氣又熱又潮濕。"},
     {w:"wind",ipa:"/wɪnd/",pos:"n.",cn:"風",def:"Air that moves.",ex:"The wind is strong today.",exCn:"今天風很大。"},
-    {w:"temperature",ipa:"/ˈtemprətʃər/",pos:"n.",cn:"溫度",def:"How hot or cold something is.",ex:"The temperature is only twenty degrees.",exCn:"氣溫只有二十度。"},
+    {w:"temperature",ipa:"/ˈtemprətʃɚ/",pos:"n.",cn:"溫度",def:"How hot or cold something is.",ex:"The temperature is only twenty degrees.",exCn:"氣溫只有二十度。"},
     {w:"light jacket",ipa:"/laɪt ˈdʒækɪt/",pos:"n.",cn:"薄外套",def:"A thin coat.",ex:"I am wearing a light jacket.",exCn:"我穿著一件薄外套。"}
   ],
   questions:[
@@ -151,12 +151,12 @@ articles:[
      cn:"他給了我一些藥。我整個下午都在睡。今天我覺得好多了。"}
   ],
   target:[
-    {w:"tired",ipa:"/ˈtaɪərd/",pos:"adj.",cn:"疲累的",def:"Needing rest or sleep.",ex:"Yesterday I was very tired.",exCn:"我昨天很累。"},
+    {w:"tired",ipa:"/ˈtaɪrd/",pos:"adj.",cn:"疲累的",def:"Needing rest or sleep.",ex:"Yesterday I was very tired.",exCn:"我昨天很累。"},
     {w:"headache",ipa:"/ˈhedeɪk/",pos:"n.",cn:"頭痛",def:"A pain in your head.",ex:"I had a headache.",exCn:"我頭痛。"},
     {w:"throat",ipa:"/θroʊt/",pos:"n.",cn:"喉嚨",def:"The front part of your neck; the way food goes down.",ex:"My throat hurt.",exCn:"我喉嚨痛。"},
     {w:"clinic",ipa:"/ˈklɪnɪk/",pos:"n.",cn:"診所",def:"A small place where you see a doctor.",ex:"The clinic was near my home.",exCn:"那家診所離我家很近。"},
     {w:"medicine",ipa:"/ˈmedɪsn/",pos:"n.",cn:"藥",def:"Something you take when you are ill.",ex:"He gave me some medicine.",exCn:"他給了我一些藥。"},
-    {w:"much better",ipa:"/mʌtʃ ˈbetər/",pos:"phr.",cn:"好多了",def:"A lot better than before.",ex:"Today I feel much better.",exCn:"我今天覺得好多了。"}
+    {w:"much better",ipa:"/mʌtʃ ˈbetɚ/",pos:"phr.",cn:"好多了",def:"A lot better than before.",ex:"Today I feel much better.",exCn:"我今天覺得好多了。"}
   ],
   questions:[
     {q:"What was wrong with the writer?",qCn:"作者哪裡不舒服？",opts:["A. A broken arm","B. A headache and a sore throat","C. A toothache","D. A stomach ache"],optsCn:["A. 手臂骨折", "B. 頭痛和喉嚨痛", "C. 牙痛", "D. 胃痛"],ans:1,expl:"I had a headache and my throat hurt."},
@@ -279,7 +279,7 @@ articles:[
   target:[
     {w:"would like",ipa:"/wʊd laɪk/",pos:"phr.",cn:"想要（客氣）",def:"A polite way to say \"want\".",ex:"I would like beef noodles, please.",exCn:"我想要一碗牛肉麵，謝謝。"},
     {w:"spicy",ipa:"/ˈspaɪsi/",pos:"adj.",cn:"辣的",def:"With a hot, strong taste.",ex:"Can I have it less spicy?",exCn:"可以幫我做不要那麼辣嗎？"},
-    {w:"owner",ipa:"/ˈoʊnər/",pos:"n.",cn:"老闆、擁有者",def:"The person who owns a shop or thing.",ex:"The owner smiled.",exCn:"老闆微笑了。"},
+    {w:"owner",ipa:"/ˈoʊnɚ/",pos:"n.",cn:"老闆、擁有者",def:"The person who owns a shop or thing.",ex:"The owner smiled.",exCn:"老闆微笑了。"},
     {w:"soft",ipa:"/sɔːft/",pos:"adj.",cn:"軟的",def:"Easy to bite or press.",ex:"The beef was soft.",exCn:"牛肉很軟嫩。"},
     {w:"cost",ipa:"/kɔːst/",pos:"v.",cn:"花費",def:"To have a price.",ex:"It cost 130 dollars.",exCn:"它要一百三十元。"},
     {w:"the rest",ipa:"/ðə rest/",pos:"n.",cn:"剩下的部分",def:"The part that is left.",ex:"I ate the rest for dinner.",exCn:"剩下的我留到晚餐吃。"}
@@ -319,10 +319,10 @@ articles:[
      cn:"我今晚會完成報告，明天早上九點前寄出。我女兒會再待在家一天。"}
   ],
   target:[
-    {w:"fever",ipa:"/ˈfiːvər/",pos:"n.",cn:"發燒",def:"A body temperature that is too high.",ex:"My daughter had a fever.",exCn:"我女兒發燒了。"},
-    {w:"manager",ipa:"/ˈmænɪdʒər/",pos:"n.",cn:"主管",def:"A person who leads a team at work.",ex:"I called my manager.",exCn:"我打電話給我的主管。"},
+    {w:"fever",ipa:"/ˈfiː.vɚ/",pos:"n.",cn:"發燒",def:"A body temperature that is too high.",ex:"My daughter had a fever.",exCn:"我女兒發燒了。"},
+    {w:"manager",ipa:"/ˈmænɪdʒɚ/",pos:"n.",cn:"主管",def:"A person who leads a team at work.",ex:"I called my manager.",exCn:"我打電話給我的主管。"},
     {w:"kind",ipa:"/kaɪnd/",pos:"adj.",cn:"親切的",def:"Nice to other people.",ex:"My manager was kind.",exCn:"我的主管人很好。"},
-    {w:"work from home",ipa:"/wɜːrk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home, not at the office.",ex:"Can you work from home this afternoon?",exCn:"你今天下午可以在家工作嗎？"},
+    {w:"work from home",ipa:"/wɝːk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home, not at the office.",ex:"Can you work from home this afternoon?",exCn:"你今天下午可以在家工作嗎？"},
     {w:"report",ipa:"/rɪˈpɔːrt/",pos:"n.",cn:"報告",def:"A written piece of work about something.",ex:"I will finish the report tonight.",exCn:"我今天晚上會把報告完成。"},
     {w:"one more day",ipa:"/wʌn mɔːr deɪ/",pos:"phr.",cn:"再一天",def:"One extra day.",ex:"She will stay home for one more day.",exCn:"她會再在家待一天。"}
   ],
