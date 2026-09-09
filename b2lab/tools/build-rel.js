@@ -139,6 +139,7 @@ function buildIndex(lessons) {
     const k = norm(v.w); if (!k) return;
     const e = words[k] = words[k] || { en: String(v.w).trim(), cn: '', pos: new Set(), lessons: [], kind: 'w' };
     if (!e.cn && v.cn) e.cn = String(v.cn).replace(/（.*?）/g, '').replace(/\(.*?\)/g, '').trim();
+    if (!e.ipa && v.ipa && /^\//.test(String(v.ipa))) e.ipa = String(v.ipa).trim();
     if (v.pos) e.pos.add(String(v.pos));
     e.lessons.push({ id: b.id, date: b.date, ex: v.ex || '', exCn: v.exCn || '' });
   };
@@ -214,7 +215,10 @@ function addRel(o) {
 }
 function mkMember(idx, key, kind) {
   const e = (kind === 'p' ? idx.phrases : idx.words)[key];
-  return { key, kind, en: e ? e.en : key, cn: e ? e.cn : '' };
+  const m = { key, kind, en: e ? e.en : key, cn: e ? e.cn : '' };
+  if (e && e.ipa) m.ipa = e.ipa;
+  if (e && e.pos && e.pos.length) m.pos = e.pos[0];
+  return m;
 }
 function title(members, sep) { return members.map(m => m.en).join(sep); }
 
@@ -270,8 +274,10 @@ function fromCmp(lessons, idx) {
       const head = concept.match(/^[^A-Za-z(（]+/);
       if (head && head[0].trim().length >= 2) concept = head[0].trim().replace(/[：:、，]+$/, '');
       if (concept.length > 28) concept = '';   // 標題太長就不當概念名（UI 會改顯示成員中文）
+      // 兩三個字對比（標題有 vs）＝易混淆；三個以上、標題不是 vs 的（默契的四種說法、疾病與不適）＝相關概念
+      const type = (members.length >= 3 && !/\bvs\b/i.test(label)) ? 'rel' : 'syn';
       addRel({
-        key: 'syn:' + members.map(m => m.key).join('|'), type: 'syn',
+        key: 'syn:' + members.map(m => m.key).join('|'), type,
         title: title(members, ' ↔ '), members, concept: concept.slice(0, 40),
         diff: g.map(r => ({ en: r.u, cn: String(r.sc || r.cn || '').trim() })).filter(d => d.cn),
         tip: warn ? String(warn.title || '').replace(/^正確用法對照[（(]?/, '').replace(/[）)]$/, '') : (typeof b.cmpWarn === 'string' ? b.cmpWarn : ''),
@@ -360,7 +366,7 @@ function fromFamily(idx) {
     addRel({
       key: 'fam:' + members.map(m => m.key).join('|'), type: 'fam',
       title: title(members, ' → '), members, concept: members[0].cn || '',
-      diff: members.map(m => ({ en: m.en + (m.kind === 'w' && idx.words[m.key].pos.length ? ' (' + idx.words[m.key].pos[0] + ')' : ''), cn: m.cn })).filter(d => d.cn),
+      diff: members.map(m => ({ en: m.en, cn: m.cn })).filter(d => d.cn),
       tip: '', pats: [], exs, lessonIds: lessonsOf(idx, members), score: 85, src: 'family',
     }); n++;
   });
@@ -470,7 +476,7 @@ function fromChain(idx) {
     const members = ks.map(k => mkMember(idx, k, has(k)));
     const exs = []; members.forEach(m => { const x = findExample(idx, m.key, m.kind); if (x && exs.length < 2) exs.push({ ...x, of: m.en }); });
     addRel({
-      key: 'flow:' + members.map(m => m.key).join('>'), type: 'flow',
+      key: 'chain:' + members.map(m => m.key).join('>'), type: 'chain',
       title: members.map(m => m.en).join(' → '), members, concept: ch.concept || '',
       diff: members.map(m => ({ en: m.en, cn: m.cn })).filter(d => d.cn),
       tip: ch.cn || '', pats: ch.steps || [], exs, lessonIds: lessonsOf(idx, members), score: 90, src: 'chain',
@@ -480,7 +486,7 @@ function fromChain(idx) {
 }
 
 /* ---------- 每課挑 ≤6 組：分數 → 跨課優先 → 類型多樣 → key 穩定排序 ---------- */
-const TYPE_ORDER = { syn: 0, ant: 1, fam: 2, pat: 3, flow: 4 };
+const TYPE_ORDER = { syn: 0, rel: 1, ant: 2, chain: 3, fam: 4, pat: 5, flow: 6 };
 function pickForLesson(lessonId, items) {
   const cands = items.filter(o => o.lessonIds.includes(lessonId) && o.score >= PER_LESSON_MIN_SCORE)
     .map(o => ({ o, s: o.score + (o.cross ? 15 : 0) }))
@@ -545,8 +551,8 @@ function main() {
     });
   }
   // 子集合併：同類型且成員是另一組的子集合（blocked↔stuck ⊂ blocked↔clogged↔stuck、chemistry↔rapport ⊂ 默契四種說法）→ 併進大的那組
-  for (const t of ['syn', 'ant', 'fam']) {
-    const same = items.filter(o => o.type === t);
+  for (const t of ['synrel', 'ant', 'fam']) {   // 易混淆與相關概念視為同一家（chemistry↔rapport ⊂ 默契四種說法）
+    const same = items.filter(o => t === 'synrel' ? (o.type === 'syn' || o.type === 'rel') : o.type === t);
     same.forEach(a => {
       const ak = a.members.map(m => m.key);
       const big = same.find(b => b !== a && b.members.length > ak.length && ak.every(k => b.members.some(m => m.key === k)));

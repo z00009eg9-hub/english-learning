@@ -761,40 +761,55 @@ body.cnall .ucn{display:block}
 .seq .seqar{flex:1 1 0;min-width:6px;display:flex;align-items:center;opacity:.5}
 .seq .seqar::before{content:"";flex:1;height:2px;background:currentColor;border-radius:2px}
 .artbox .seq .seqah{width:7px;height:11px;flex:0 0 auto;margin-left:-1px;border-radius:0}
-/* ---------- 關聯學習（本課串聯複習／單字卡「關聯」頁）：compact list，點開才展開 ----------
-   沿用既有 token（--font-*、--accent-soft、--line）；橘色只用在 chip active 與 Pattern 底色，列本身不加橘框。 */
-.rel .rel-hd{color:var(--ink);margin:4px 0 6px}
+/* ---------- 關聯學習（本課串聯複習／單字卡「關聯」頁）：可擴充到 50+ 組的索引，不是卡片 feed ----------
+   外層一張 card；群組之間用細分隔線；緊湊 padding；橘色只給選取狀態與類型標籤；一般文字深灰。
+   不用固定高度／ellipsis／line-clamp／overflow:hidden 裁內容；所有可縮的 flex 子元素 min-width:0。 */
+.rel .rel-hd{color:var(--ink);margin:0 0 4px}
 .rel .rel-hd svg{color:var(--ink2);flex:0 0 auto}
-.rel-sub{font-size:var(--font-meta);color:var(--ink2);margin:0 0 10px}
-.rel-list{display:flex;flex-direction:column;gap:6px}
-.rel-row{border:1px solid var(--line);border-radius:10px;background:var(--card)}
-.rel-row>summary{list-style:none;display:flex;align-items:center;gap:8px 10px;padding:8px 12px;cursor:pointer}
-.rel-row>summary::-webkit-details-marker{display:none}
-.rel-t{font-weight:var(--fw-emph);font-size:var(--font-body);line-height:var(--lh-secondary);color:var(--ink);flex:1 1 46%;min-width:0;overflow-wrap:anywhere}
-.rel-s{font-size:var(--font-meta);color:var(--ink2);flex:1 1 34%;min-width:0;overflow-wrap:anywhere}
-.rel-type{font-size:var(--font-meta);color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:1px 8px;white-space:nowrap}
-.rel-chev::before{content:"▸";color:var(--ink2);font-size:var(--font-meta)}
-.rel-row[open]>summary .rel-chev::before{content:"▾"}
-.rel-body{padding:2px 12px 12px;border-top:1px dashed var(--line);font-size:var(--font-body);line-height:var(--lh-body)}
-.rel-body .k{font-size:var(--font-meta);color:var(--ink2);margin-top:9px;font-weight:var(--fw-emph)}
-.rel-diff{margin:2px 0 0;padding:0;list-style:none}
-.rel-diff li{padding:2px 0}
-.rel-diff b{color:var(--accent2)}
-.rel-tip{margin-top:6px;color:var(--ink2)}
-.rel-ex{margin-top:6px}
-.rel-ex .en{font-weight:var(--fw-emph)}
-.rel-pat{display:inline-block;background:var(--accent-soft);border-radius:8px;padding:2px 8px;margin:4px 6px 0 0;font-size:var(--font-secondary)}
-.rel-src{font-size:var(--font-meta);color:var(--ink2);margin-top:10px}
-.rel-src a{color:var(--accent2)}
+.rel-n{font-size:var(--font-meta);font-weight:var(--fw-body);color:var(--ink2);margin-left:4px}
+.rel-sub{font-size:var(--font-meta);color:var(--ink2);margin:0 0 8px;overflow-wrap:anywhere}
+.rel-tools{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin:6px 0 8px}
+.rel-q{flex:1 1 160px;min-width:0;max-width:260px;border:1px solid var(--line);border-radius:8px;padding:5px 9px;font:inherit;font-size:var(--font-meta);color:var(--ink);background:var(--card)}
+.rel-q:focus{outline:none;border-color:var(--accent2)}
+.rel-filters{display:flex;flex-wrap:wrap;gap:5px;min-width:0}
+.rel-filters .chip{padding:3px 9px}
+.rel-list{display:flex;flex-direction:column;min-width:0}
+.rel-empty{font-size:var(--font-secondary);color:var(--ink2);padding:8px 2px}
+.rel-g{border-top:1px solid var(--line);min-width:0}
+.rel-g:first-child{border-top:0}
+.rel-g>summary{list-style:none;cursor:pointer;padding:10px 4px;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;min-width:0}
+.rel-g>summary::-webkit-details-marker{display:none}
+.rel-t{font-weight:var(--fw-emph);font-size:var(--font-body);line-height:var(--lh-secondary);color:var(--ink);min-width:0;overflow-wrap:anywhere;flex:1 1 auto}
+.rel-tag{font-size:var(--font-meta);color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:0 8px;white-space:nowrap;flex:0 0 auto}
+.rel-chev{color:var(--ink2);font-size:var(--font-meta);flex:0 0 auto}
+.rel-chev::before{content:"▸"}
+.rel-g[open]>summary .rel-chev::before{content:"▾"}
+.rel-gist{flex:1 1 100%;min-width:0;font-size:var(--font-secondary);line-height:var(--lh-secondary);color:var(--ink2);overflow-wrap:anywhere}
+.rel-b{padding:0 4px 12px;font-size:var(--font-body);line-height:var(--lh-body);min-width:0}
+.rel-k{font-size:var(--font-meta);color:var(--ink2);margin:8px 0 2px;font-weight:var(--fw-emph)}
+.rel-m{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;padding:3px 0;min-width:0}
+.rel-m .w{color:var(--ink);font-weight:var(--fw-emph);cursor:pointer;min-width:0;overflow-wrap:anywhere}
+.rel-ipa{font-size:var(--font-secondary);color:var(--ink2);font-family:var(--font-stack)}
+.rel-pos{font-size:var(--font-meta);color:var(--ink2)}
+.rel-m .cnx{color:var(--ink2);font-size:var(--font-secondary);min-width:0;overflow-wrap:anywhere;flex:1 1 100%}
+.rel-tip{margin-top:6px;color:var(--ink2);font-size:var(--font-secondary);overflow-wrap:anywhere}
+.rel-pat{display:inline-block;background:var(--accent-soft);border-radius:6px;padding:1px 7px;margin:3px 6px 0 0;font-size:var(--font-secondary);color:var(--ink);overflow-wrap:anywhere}
+.rel-ex{margin-top:5px;min-width:0;overflow-wrap:anywhere}
+.rel-ex .en{color:var(--ink)}
+.rel-ex .cnx{color:var(--ink2);font-size:var(--font-secondary)}
+.rel-src{margin-top:8px;font-size:var(--font-meta);color:var(--ink2)}
+.rel-srcb{background:none;border:0;padding:0;font:inherit;font-size:var(--font-meta);color:var(--ink2);cursor:pointer;text-decoration:underline dotted}
+.rel-srcd{margin-top:3px;overflow-wrap:anywhere}
+.rel-srcd a{color:var(--accent2)}
 .rel-more{margin-top:10px}
-/* 中譯跟隨全站「中譯：開／關」：課本頁已有 #v-book .cnx 規則；單字卡頁沒有，這裡只作用在 .rel 容器內 */
+/* 中譯跟隨全站「中譯：開／關」：課本頁已有 #v-book .cnx；單字卡頁沒有，這裡只作用在 .rel 內。關閉時不佔位。 */
 .rel .cnx{display:none}
 body.cnall .rel div.cnx{display:block}
 body.cnall .rel span.cnx{display:inline}
 @media(max-width:640px){
-  .rel-row>summary{flex-wrap:wrap;gap:4px 8px}
-  .rel-t{flex-basis:calc(100% - 96px)}
-  .rel-s{flex-basis:100%;order:3}
+  .rel-g>summary{padding:8px 2px;gap:2px 8px}
+  .rel-b{padding:0 2px 10px}
+  .rel-q{max-width:none}
 }
 /* 舊版大型 infographic 在手機上會縮到 ~300px 寬、圖內文字只剩 6px 左右（文字是畫進 SVG 的，
    不會跟著版面重排）。手機給一個「點圖放大」，用全螢幕檢視器以原始尺寸呈現。
@@ -4593,13 +4608,16 @@ function mrChPick(i,correct){ mrChShow=true; const el=document.getElementById('m
 window.mrChReveal=mrChReveal; window.mrChNext=mrChNext; window.mrChPick=mrChPick;
 
 /* ==================== 關聯學習（Relationship layer） ====================
-   目的：把新學的內容接回以前學過的（近義／易混、反義、詞族、搭配、情境），不是新增教材。
+   目的：把新學的內容接回以前學過的（易混淆、相關概念、詞族、狀態演變、搭配詞、反義、情境），不是新增教材。
    資料：data-rel.js —— 由 tools/build-rel.js 從 data-book.js 規則式建出的衍生索引（deterministic、無 AI、無隨機）。
    頁面只讀索引、不掃課本。三個入口共用同一份：課本每課「本課串聯複習」、單字卡「關聯」頁、每月挑戰的關聯題。
+   UI 是「索引」不是卡片 feed：外層一張 card，群組可搜尋／依類型篩選，預設只展開前兩組，展開才看例句與來源。
    看過的關聯記在 ST.relSeen[key]=時間戳，只用來讓「很久沒看」的優先，不是熟練度系統；不影響課本完成狀態。 */
 const REL_ITEMS=((window.REL||{}).items||[]).slice();
 const REL_BY={}; REL_ITEMS.forEach(o=>REL_BY[o.id]=o);
-const REL_TYPE={syn:'近義／易混',ant:'反義',fam:'詞族',pat:'搭配',flow:'情境'};
+const REL_TYPE={syn:'易混淆',rel:'相關概念',fam:'詞族',chain:'狀態演變',pat:'搭配詞',ant:'反義',flow:'情境'};
+const REL_TYPES=['syn','rel','fam','chain','pat','ant','flow'];
+const REL_SEP={syn:' / ',rel:' / ',fam:' / ',ant:' ↔ ',chain:' → ',flow:' → ',pat:' → '};
 (function(){
   const R=window.REL; if(!R){ console.warn('[關聯] data-rel.js 未載入'); return; }
   const missing=BOOK_LESSONS.filter(b=>(R.lessons||[]).indexOf(b.id)<0).map(b=>b.id);
@@ -4607,35 +4625,67 @@ const REL_TYPE={syn:'近義／易混',ant:'反義',fam:'詞族',pat:'搭配',flo
 })();
 function relForLesson(id){ return ((((window.REL||{}).byLesson||{})[id])||[]).map(k=>REL_BY[k]).filter(Boolean); }
 function relMd(d){ return d?String(d).slice(5).replace('-','/'):''; }
-function relSub(o){ const p=(o.pats||[]).slice(0,2).join(' / '); const c=o.concept||o.members.map(m=>String(m.cn||'').split(/[「（(；;，,。／/]/)[0].slice(0,6)).filter(Boolean).slice(0,3).join(' / '); return c+(p&&o.type!=='pat'&&o.type!=='flow'?'｜'+p:''); }
+function relTitle(o){ return o.members.map(m=>m.en).join(REL_SEP[o.type]||' / '); }
+function relDiffCn(o,m){ const d=(o.diff||[]).find(x=>String(x.en).toLowerCase()===String(m.en).toLowerCase()); return (d&&d.cn)||m.cn||''; }
 function relSeen(id){ try{ const o=REL_BY[id]; if(!o) return; ST.relSeen=ST.relSeen||{}; if(!ST.relSeen[o.key]||Date.now()-ST.relSeen[o.key]>6e4){ ST.relSeen[o.key]=Date.now(); save(); } }catch(e){} }
-function relRowHTML(o,ctx){
-  const cn=s=>s?' <span class="cnx">'+esc(s)+'</span>':'';
-  let body='';
-  if(o.type==='flow'){
-    body+='<div class="steps" style="margin:10px 0 0">'+o.members.map((m,i)=>'<span class="stp sent" data-t="'+esc(m.en)+'" onclick="saySent(this)">'+esc(m.en)+'</span>'+(i<o.members.length-1?'<span class="sarr">➔</span>':'')).join('')+'</div>';
-    if((o.pats||[]).length) body+='<div>'+o.pats.map(p=>'<span class="rel-pat">'+esc(p)+'</span>').join('')+'</div>';
-    if(o.tip) body+='<div class="cnx rel-tip">'+esc(o.tip)+'</div>';
-  } else {
-    if(o.concept) body+='<div class="k">共同概念</div><div class="cnx">'+esc(o.concept)+'</div>';
-    if((o.diff||[]).length) body+='<div class="k">快速記憶</div><ul class="rel-diff">'+o.diff.map(d=>'<li><b class="sent" data-t="'+esc(d.en)+'" onclick="saySent(this)">'+esc(d.en)+'</b>'+cn(d.cn)+'</li>').join('')+'</ul>';
-    if(o.tip) body+='<div class="cnx rel-tip">💡 '+esc(o.tip)+'</div>';
-    if((o.pats||[]).length) body+='<div class="k">Pattern</div><div>'+o.pats.slice(0,3).map(p=>'<span class="rel-pat">'+esc(p)+'</span>').join('')+'</div>';
-  }
-  if((o.exs||[]).length) body+='<div class="k">例句</div>'+o.exs.slice(0,2).map(x=>'<div class="rel-ex"><span class="sent en" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+esc(x.en)+'</span> '+spk(x.en)+(x.cn?'<div class="cnx">'+esc(x.cn)+'</div>':'')+'</div>').join('');
+/* 一句核心差異／快速判斷（標題下、不用展開就看得到）。全是中文 → 整行 .cnx，中譯關閉時整行不 render。 */
+function relGist(o){
+  if(o.type==='chain'||o.type==='flow'){ const en=(o.pats||[]).join(' → '); return (en?'<span>'+esc(en)+'</span>':'')+(o.tip?'<span class="cnx">'+(en?'　':'')+esc(o.tip)+'</span>':''); }
+  if(o.type==='pat'){ const p=o.members.find(m=>m.kind==='p'); return p&&p.cn?'<span class="cnx">'+esc(p.cn)+'</span>':''; }
+  const parts=o.members.map(m=>{ const cn=relDiffCn(o,m); return cn?esc(m.en)+' → '+esc(cn):''; }).filter(Boolean);
+  return parts.length?'<span class="cnx">'+parts.join('；')+'</span>':'';
+}
+/* 展開後的內容：快速記憶（單字＋音標＋詞性＋☆＋中文）、口訣、Pattern、例句、來源。空的欄位連標題都不出現。 */
+function relBodyHTML(o,ctx){
+  let h='';
+  const mem=o.members.map(m=>{
+    const cn=relDiffCn(o,m);
+    return '<div class="rel-m"><span class="w sent" data-t="'+esc(m.en)+'" onclick="saySent(this)">'+esc(m.en)+'</span>'
+      +(m.ipa?'<span class="rel-ipa">'+esc(m.ipa)+'</span>':'')+(m.pos?'<span class="rel-pos">'+esc(m.pos)+'</span>':'')
+      +(m.kind==='w'&&typeof wbBtn==='function'?wbBtn(m.en,'關聯'):'')
+      +(cn?'<span class="cnx">'+esc(cn)+'</span>':'')+'</div>';
+  }).join('');
+  if(mem) h+='<div class="rel-k">快速記憶</div>'+mem;
+  if(o.tip&&o.type!=='chain'&&o.type!=='flow') h+='<div class="rel-tip cnx">💡 '+esc(o.tip)+'</div>';
+  if((o.pats||[]).length&&o.type!=='chain'&&o.type!=='flow') h+='<div class="rel-k">Pattern</div><div>'+o.pats.slice(0,3).map(p=>'<span class="rel-pat">'+esc(p)+'</span>').join('')+'</div>';
+  if((o.exs||[]).length) h+='<div class="rel-k">例句</div>'+o.exs.slice(0,2).map(x=>'<div class="rel-ex"><span class="sent en" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+esc(x.en)+'</span> '+spk(x.en)+(x.cn?'<div class="cnx">'+esc(x.cn)+'</div>':'')+'</div>').join('');
   if((o.dates||[]).length){
     const other=(o.lessonIds||[]).filter(x=>x!==ctx)[0];
-    body+='<div class="rel-src">來源：'+o.dates.map(relMd).join(' · ')+(other?'　<a href="#" onclick="event.preventDefault();bkGo(\''+other+'\')">查看來源課</a>':'')+'</div>';
+    h+='<div class="rel-src"><button class="rel-srcb" onclick="var d=this.nextElementSibling;d.hidden=!d.hidden">來源 '+o.dates.length+' 堂</button>'
+      +'<div class="rel-srcd" hidden>'+o.dates.map(relMd).join(' · ')+(other?'　<a href="#" onclick="event.preventDefault();bkGo(\''+other+'\')">查看來源課</a>':'')+'</div></div>';
   }
-  return '<details class="rel-row" ontoggle="if(this.open)relSeen(\''+o.id+'\')"><summary>'
-    +'<span class="rel-t">'+esc(o.title)+'</span><span class="rel-s cnx">'+esc(relSub(o))+'</span>'
-    +'<span class="rel-type">'+(REL_TYPE[o.type]||o.type)+'</span><span class="rel-chev"></span></summary>'
-    +'<div class="rel-body">'+body+'</div></details>';
+  return h;
 }
-function relSectionHTML(title,sub,items,ctx){
+function relRowHTML(o,ctx,open){
+  const gist=relGist(o);
+  return '<details class="rel-g"'+(open?' open':'')+' data-id="'+o.id+'" ontoggle="relTog(this)"><summary>'
+    +'<span class="rel-t">'+esc(relTitle(o))+'</span><span class="rel-tag">'+(REL_TYPE[o.type]||o.type)+'</span><span class="rel-chev"></span>'
+    +(gist?'<div class="rel-gist">'+gist+'</div>':'')+'</summary>'
+    +'<div class="rel-b">'+relBodyHTML(o,ctx)+'</div></details>';
+}
+/* 每個區塊自己的搜尋／篩選／展開狀態（記憶體內，不落地） */
+const REL_UI={};
+function relTog(el){ const list=el.closest('.rel-list'); if(!list) return; const st=REL_UI[list.id]; if(!st) return; if(el.open){ st.open.add(el.dataset.id); relSeen(el.dataset.id); } else st.open.delete(el.dataset.id); }
+function relQ(sid,v){ const st=REL_UI[sid]; if(!st) return; st.q=String(v||'').trim().toLowerCase(); relRender(sid); }
+function relFilter(sid,t){ const st=REL_UI[sid]; if(!st) return; st.t=t; relRender(sid); document.querySelectorAll('#'+sid+'-f .chip').forEach(c=>c.classList.toggle('on',c.dataset.t===t)); }
+function relRender(sid){
+  const st=REL_UI[sid], el=document.getElementById(sid); if(!st||!el) return;
+  let items=st.items;
+  if(st.t!=='all') items=items.filter(o=>o.type===st.t);
+  if(st.q) items=items.filter(o=>o.members.some(m=>m.en.toLowerCase().indexOf(st.q)>=0));
+  el.innerHTML=items.length?items.map(o=>relRowHTML(o,st.ctx,st.open.has(o.id))).join(''):'<div class="rel-empty">沒有符合的關聯。</div>';
+}
+/* 區塊：標題＋搜尋＋類型篩選＋清單。預設展開前 2 組（清單已依「本課／本週優先」排好），其餘收合。 */
+function relSectionHTML(sid,title,sub,items,ctx,opts){
+  opts=opts||{};
+  const st=REL_UI[sid]={items:items,ctx:ctx,q:'',t:'all',open:new Set(items.slice(0,opts.openN==null?2:opts.openN).map(o=>o.id))};
   const ICON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>';
-  return '<h2 class="sec rel-hd">'+ICON+esc(title)+'</h2>'+(sub?'<div class="rel-sub">'+esc(sub)+'</div>':'')
-    +'<div class="rel-list">'+items.map(o=>relRowHTML(o,ctx)).join('')+'</div>';
+  const types=REL_TYPES.filter(t=>items.some(o=>o.type===t));
+  const tools=(items.length>=4)?'<div class="rel-tools"><input class="rel-q" type="search" placeholder="搜尋英文單字" oninput="relQ(\''+sid+'\',this.value)">'
+    +'<div class="rel-filters" id="'+sid+'-f"><button class="chip on" data-t="all" onclick="relFilter(\''+sid+'\',\'all\')">全部</button>'
+    +types.map(t=>'<button class="chip" data-t="'+t+'" onclick="relFilter(\''+sid+'\',\''+t+'\')">'+REL_TYPE[t]+'</button>').join('')+'</div></div>':'';
+  return '<h2 class="sec rel-hd">'+ICON+esc(title)+'<span class="rel-n">'+items.length+' 組</span></h2>'+(sub?'<div class="rel-sub">'+esc(sub)+'</div>':'')+tools
+    +'<div class="rel-list" id="'+sid+'">'+items.map(o=>relRowHTML(o,ctx,st.open.has(o.id))).join('')+'</div>';
 }
 /* 本週關聯複習：本週的新課（週一起算；本週沒課就取最近兩課）相關的關聯，5–8 組。
    排序：跨課 > 易混 > 本週最新那課 > 收藏 > 很久沒看（剛看過的往後排）。deterministic，沒有隨機。 */
@@ -4644,7 +4694,7 @@ function relWeekLessons(){
   const d=new Date(); const mon=new Date(d); mon.setDate(d.getDate()-((d.getDay()+6)%7));
   const from=ymd(mon), to=ymd(d);
   let ls=BOOK_LESSONS.filter(b=>b.date>=from&&b.date<=to);
-  if(!ls.length) ls=BOOK_LESSONS.slice(0,2);   // BOOK_LESSONS 已依日期新→舊
+  if(!ls.length) ls=BOOK_LESSONS.slice(0,2);
   return ls;
 }
 function relWeekly(){
@@ -4667,15 +4717,11 @@ function relTogAll(){ relAllOn=!relAllOn; RENDER.vocab(); }
 function relPageHTML(){
   const w=relWeekly();
   const ln=w.lessons.map(b=>relMd(b.date)+' '+(b.titleCn||'')).join('、');
-  let h='<div class="card rel">'+relSectionHTML('本週關聯複習', w.items.length?('本週：'+ln+' · 把新學的接回以前學過的'):'', w.items)
-    +(w.items.length?'':'<div class="muted">還沒有可複習的關聯。</div>')
+  let h='<div class="card rel">'+relSectionHTML('rel-week','本週關聯複習', w.items.length?('本週：'+ln+' · 把新學的接回以前學過的'):'', w.items)
     +'<div class="rel-more"><button class="btn ghost sm" onclick="relTogAll()">'+(relAllOn?'收合全部關聯':'查看全部關聯（'+REL_ITEMS.length+'）')+'</button></div></div>';
   if(relAllOn){
-    const order=['syn','ant','fam','pat','flow'];
-    h+='<div class="card rel">'+order.map(t=>{
-      const its=REL_ITEMS.filter(o=>o.type===t).sort((a,b)=>b.score-a.score||a.key.localeCompare(b.key));
-      return its.length?relSectionHTML(REL_TYPE[t]+'（'+its.length+'）','',its):'';
-    }).join('')+'</div>';
+    const all=REL_ITEMS.slice().sort((a,b)=>REL_TYPES.indexOf(a.type)-REL_TYPES.indexOf(b.type)||b.score-a.score||a.key.localeCompare(b.key));
+    h+='<div class="card rel">'+relSectionHTML('rel-all','全部關聯','用上方搜尋或類型篩選找組；點標題展開',all,null,{openN:0})+'</div>';
   }
   return h;
 }
@@ -4683,14 +4729,14 @@ function relPageHTML(){
 let vMode='all';
 function vSetMode(m){ vMode=m; vQueue=[]; RENDER.vocab(); window.scrollTo(0,0); }
 function vModeBar(){ const b=(k,l)=>'<button class="chip'+(vMode===k?' on':'')+'" onclick="vSetMode(\''+k+'\')">'+l+'</button>'; return '<div class="chips" style="margin-bottom:10px">'+b('all','全部')+b('fav','收藏')+b('rel','關聯')+'</div>'; }
-window.relSeen=relSeen; window.relTogAll=relTogAll; window.vSetMode=vSetMode;
+window.relSeen=relSeen; window.relTogAll=relTogAll; window.vSetMode=vSetMode; window.relTog=relTog; window.relQ=relQ; window.relFilter=relFilter;
 /* 每月挑戰的關聯題（最多 3 題，deterministic）：
    選正確用法（persuade someone ___ do something）、二選一（例句挖空選 convince / persuade）、接下一步（pressure → stressed → ______） */
 function relQuestions(r){
   const ids=(r.lessons||[]).map(b=>b.id); if(!ids.length) return [];
   const pool=REL_ITEMS.filter(o=>o.lessonIds.some(id=>ids.indexOf(id)>=0)).sort((a,b)=>b.score-a.score||a.key.localeCompare(b.key));
   const qs=[];
-  outer1: for(const o of pool){ if(o.type!=='syn'&&o.type!=='pat') continue;
+  outer1: for(const o of pool){ if(o.type!=='syn'&&o.type!=='rel'&&o.type!=='pat') continue;
     for(const p of (o.pats||[])){
       const m=/^([a-z]+) (sb|sth|someone|something) (to|that|from|of|about|with|for|on|in|at)\b(.*)$/i.exec(p); if(!m) continue;
       const ans=m[3].toLowerCase(); const alts=['to','that','for','of','about','with','from','on'].filter(x=>x!==ans).slice(0,2);
@@ -4699,14 +4745,14 @@ function relQuestions(r){
       qs.push({type:'relpick',prompt:(m[1]+' '+(m[2]==='sth'||m[2]==='something'?'something':'someone')+' ___ '+tail).replace(/\s+/g,' ').trim(),opts:opts,correctIdx:opts.indexOf(ans),rule:p+(o.concept?'（'+o.concept+'）':'')});
       break outer1;
     } }
-  for(const o of pool){ if(o.type!=='syn'||o.members.length<2||o.members.length>3) continue;
+  for(const o of pool){ if((o.type!=='syn'&&o.type!=='rel')||o.members.length<2||o.members.length>3) continue;
     const x=(o.exs||[]).find(e=>e.of&&o.members.some(m=>m.en===e.of)); if(!x) continue;
     const m=o.members.find(mm=>mm.en===x.of);
     const re=new RegExp('\\b'+m.en.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(s|es|ed|d|ing)?\\b','i');
     if(!re.test(x.en)) continue;
     const opts=o.members.map(mm=>mm.en); const d=(o.diff||[]).find(dd=>dd.en===m.en);
     qs.push({type:'relpick',prompt:x.en.replace(re,'______'),opts:opts,correctIdx:opts.indexOf(m.en),rule:m.en+(d&&d.cn?' — '+d.cn:'')}); break; }
-  for(const o of pool){ if(o.type!=='flow'||o.members.length<3) continue;
+  for(const o of pool){ if((o.type!=='chain'&&o.type!=='flow')||o.members.length<3) continue;
     const i=Math.min(3,o.members.length-1); const en=o.members.map(m=>m.en);
     qs.push({type:'relchain',prompt:en.map((e,k)=>k===i?'______':e).join(' → '),answer:en[i],rule:o.tip||o.concept||''}); break; }
   return qs.slice(0,3);
@@ -5629,7 +5675,7 @@ function bookHTML(b){
 
   /* 本課串聯複習：把這一課的字接回以前學過的（資料來自 data-rel.js，每課最多 6 組；不改任何原教材） */
   const rels=relForLesson(b.id);
-  if(rels.length) h+='<div class="card rel" id="bksec-rel">'+relSectionHTML('本課串聯複習','把這課學到的接回以前學過的 · 點一組展開',rels,b.id)+'</div>';
+  if(rels.length) h+='<div class="card rel" id="bksec-rel">'+relSectionHTML('bksec-rel-list','本課串聯複習','把這課學到的接回以前學過的 · 點標題展開',rels,b.id)+'</div>';
 
   h+='<div class="card" style="text-align:center"><button class="btn" onclick="bkClose()">完成，回列表</button></div>';
   return h;
