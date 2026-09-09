@@ -24,3 +24,5 @@ node_modules/
 *.pem
 *.key
 *.p12
+# 瀏覽器檢查快取（純垃圾，數百 MB）
+.chrome-check/
