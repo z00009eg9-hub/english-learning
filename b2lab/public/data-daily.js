@@ -193,16 +193,16 @@ articles:[
   "topic": "健康與醫療",
   "words": 152,
   "kind": "orig",
-  "title": "Amy Finally Sees a Doctor",
-  "titleCn": "Amy終於去看醫生了",
+  "title": "Anita Finally Sees a Doctor",
+  "titleCn": "Anita終於去看醫生了",
   "focus": "現在完成式基礎（has felt, has learned, has already picked up）vs 過去簡單式（thought, decided, checked）；because/so/when連接原因與結果",
   "upFrom": "B1",
   "upTo": "B1+",
-  "intro": "Amy這禮拜身體不太舒服，拖了幾天才去看醫生。文章用現在完成式的基礎用法（has not felt well, has learned）講「到目前為止」的狀態與教訓，也留意because/so/when怎麼連接原因和結果。",
+  "intro": "Anita這禮拜身體不太舒服，拖了幾天才去看醫生。文章用現在完成式的基礎用法（has not felt well, has learned）講「到目前為止」的狀態與教訓，也留意because/so/when怎麼連接原因和結果。",
   "spoken": [
     {
-      "en": "Amy's been feeling off all week — sore throat, dizzy spells, the works.",
-      "cn": "Amy整個禮拜都怪怪的——喉嚨痛、頭暈，症狀一堆。"
+      "en": "Anita's been feeling off all week — sore throat, dizzy spells, the works.",
+      "cn": "Anita整個禮拜都怪怪的——喉嚨痛、頭暈，症狀一堆。"
     },
     {
       "en": "She finally dragged herself to the clinic yesterday, and the waiting room was packed.",
@@ -219,20 +219,20 @@ articles:[
   ],
   "paras": [
     {
-      "en": "This week, Amy has not felt well at all. Her throat feels sore, and she often gets dizzy at her desk. She thought it was just tiredness, so she kept going to work every day.",
-      "cn": "這禮拜Amy一直覺得不太好。她喉嚨痛，常常在座位上覺得頭暈。她以為只是累了，所以還是每天照常上班。"
+      "en": "This week, Anita has not felt well at all. Her throat feels sore, and she often gets dizzy at her desk. She thought it was just tiredness, so she kept going to work every day.",
+      "cn": "這禮拜Anita一直覺得不太好。她喉嚨痛，常常在座位上覺得頭暈。她以為只是累了，所以還是每天照常上班。"
     },
     {
-      "en": "Yesterday, because she felt worse than before, Amy finally decided to see a doctor. She has never liked hospitals, but her headache was too strong to ignore. When she arrived at the clinic, the waiting room was already full.",
-      "cn": "昨天，因為覺得比之前更不舒服，Amy終於決定去看醫生。她一直都不喜歡醫院，但頭痛痛到讓她受不了。她到診所的時候，候診室已經坐滿了人。"
+      "en": "Yesterday, because she felt worse than before, Anita finally decided to see a doctor. She has never liked hospitals, but her headache was too strong to ignore. When she arrived at the clinic, the waiting room was already full.",
+      "cn": "昨天，因為覺得比之前更不舒服，Anita終於決定去看醫生。她一直都不喜歡醫院，但頭痛痛到讓她受不了。她到診所的時候，候診室已經坐滿了人。"
     },
     {
-      "en": "Amy waited for almost two hours because so many people were sick that week. The doctor checked her throat and said it was just a bad cold, not the flu. Amy felt relieved, and she has already picked up her medicine.",
-      "cn": "Amy等了快兩個小時，因為那個禮拜生病的人特別多。醫生檢查了她的喉嚨，說只是一般感冒，不是流感。Amy鬆了一口氣，而且已經拿了藥。"
+      "en": "Anita waited for almost two hours because so many people were sick that week. The doctor checked her throat and said it was just a bad cold, not the flu. Anita felt relieved, and she has already picked up her medicine.",
+      "cn": "Anita等了快兩個小時，因為那個禮拜生病的人特別多。醫生檢查了她的喉嚨，說只是一般感冒，不是流感。Anita鬆了一口氣，而且已經拿了藥。"
     },
     {
-      "en": "Now Amy feels much better than yesterday, but she is still a little tired. She has learned that she should not ignore small symptoms. Next time, she will see a doctor sooner instead of waiting so long.",
-      "cn": "現在Amy覺得比昨天好多了，但還是有點累。她學到不應該忽視小症狀。下次她會早一點去看醫生，而不是拖這麼久。"
+      "en": "Now Anita feels much better than yesterday, but she is still a little tired. She has learned that she should not ignore small symptoms. Next time, she will see a doctor sooner instead of waiting so long.",
+      "cn": "現在Anita覺得比昨天好多了，但還是有點累。她學到不應該忽視小症狀。下次她會早一點去看醫生，而不是拖這麼久。"
     }
   ],
   "target": [
@@ -269,8 +269,8 @@ articles:[
       "pos": "adj.",
       "cn": "鬆了一口氣的",
       "def": "Feeling less worried after something stressful ends.",
-      "ex": "Amy felt relieved, and she has already picked up her medicine.",
-      "exCn": "Amy鬆了一口氣，而且已經拿了藥。"
+      "ex": "Anita felt relieved, and she has already picked up her medicine.",
+      "exCn": "Anita鬆了一口氣，而且已經拿了藥。"
     },
     {
       "w": "symptom",
@@ -293,8 +293,8 @@ articles:[
   ],
   "questions": [
     {
-      "q": "Why did Amy keep going to work every day?",
-      "qCn": "Amy為什麼還是每天照常上班？",
+      "q": "Why did Anita keep going to work every day?",
+      "qCn": "Anita為什麼還是每天照常上班？",
       "opts": [
         "A. Because she thought it was just tiredness",
         "B. Because the clinic was closed",
@@ -311,8 +311,8 @@ articles:[
       "expl": "She thought it was just tiredness, so she kept going to work every day."
     },
     {
-      "q": "What did the doctor say Amy had?",
-      "qCn": "醫生說Amy得了什麼？",
+      "q": "What did the doctor say Anita had?",
+      "qCn": "醫生說Anita得了什麼？",
       "opts": [
         "A. The flu",
         "B. A bad cold",
@@ -329,8 +329,8 @@ articles:[
       "expl": "The doctor checked her throat and said it was just a bad cold, not the flu."
     },
     {
-      "q": "Amy ___ that she should not ignore small symptoms.",
-      "qCn": "Amy學到不應該忽視小症狀。（選出正確的動詞形式）",
+      "q": "Anita ___ that she should not ignore small symptoms.",
+      "qCn": "Anita學到不應該忽視小症狀。（選出正確的動詞形式）",
       "opts": [
         "A. learns",
         "B. learned",
@@ -343,23 +343,23 @@ articles:[
   ],
   "upgrade": [
     {
-      "b1": "Amy waited for almost two hours because so many people were sick that week.",
-      "b2": "Amy, who had been waiting for almost two hours, was finally seen by the doctor.",
-      "note": "用who帶出的關係子句補充Amy的狀況，並用被動語態was seen，把重點放在『她被看診』這件事，是B1+常見的寫法。",
-      "sp": "Amy sat there for almost two hours before the doctor finally called her in.",
+      "b1": "Anita waited for almost two hours because so many people were sick that week.",
+      "b2": "Anita, who had been waiting for almost two hours, was finally seen by the doctor.",
+      "note": "用who帶出的關係子句補充Anita的狀況，並用被動語態was seen，把重點放在『她被看診』這件事，是B1+常見的寫法。",
+      "sp": "Anita sat there for almost two hours before the doctor finally called her in.",
       "spNote": "called her in（叫她進去）是口語常用的看診用語。",
-      "b1Cn": "Amy等了快兩個小時，因為那個禮拜生病的人特別多。",
-      "b2Cn": "已經等了快兩個小時的Amy，終於被醫生看診了。",
-      "spCn": "Amy在那坐了快兩小時，醫生才終於叫她進去。"
+      "b1Cn": "Anita等了快兩個小時，因為那個禮拜生病的人特別多。",
+      "b2Cn": "已經等了快兩個小時的Anita，終於被醫生看診了。",
+      "spCn": "Anita在那坐了快兩小時，醫生才終於叫她進去。"
     },
     {
       "b1": "The doctor checked her throat and said it was just a bad cold, not the flu.",
-      "b2": "After her throat had been checked, Amy was told that it was just a bad cold, not the flu.",
+      "b2": "After her throat had been checked, Anita was told that it was just a bad cold, not the flu.",
       "note": "用過去完成式被動had been checked交代先後順序，再用was told強調『她被告知的內容』，語氣更正式，是B1+常見寫法。",
       "sp": "The doc checked her throat and told her it was just a bad cold, not the flu.",
       "spNote": "doc是doctor的口語簡稱。",
       "b1Cn": "醫生檢查了她的喉嚨，說只是一般感冒，不是流感。",
-      "b2Cn": "喉嚨被檢查過後，Amy被告知只是一般感冒，不是流感。",
+      "b2Cn": "喉嚨被檢查過後，Anita被告知只是一般感冒，不是流感。",
       "spCn": "醫生看了她的喉嚨，跟她說只是一般感冒，不是流感。"
     }
   ]
@@ -590,11 +590,11 @@ articles:[
   "title": "The Checkup That Rewrote a Company Policy",
   "titleCn": "改寫公司政策的一次健康檢查",
   "focus": "現在完成式與過去完成式敘述事件先後順序；less...than...的對比句型；正式語域中議論性的用字選擇",
-  "intro": "這篇原創文章從Anita同事Minh的年度健檢意外發現談起，延伸討論企業為什麼開始重視員工健康促進。留意文章怎麼用過去完成式（had crept, had been）交代『先後順序』，並用less...than...的對比句型帶出議論性的結論，這是B2寫作常見的修辭選擇。",
+  "intro": "這篇原創文章從Anita同事Tom的年度健檢意外發現談起，延伸討論企業為什麼開始重視員工健康促進。留意文章怎麼用過去完成式（had crept, had been）交代『先後順序』，並用less...than...的對比句型帶出議論性的結論，這是B2寫作常見的修辭選擇。",
   "spoken": [
     {
-      "en": "So Minh's yearly checkup came back with blood pressure that's suddenly 'worth watching' — nothing in his routine had even changed.",
-      "cn": "Minh的年度健檢報告出來，血壓突然變成『值得留意』——他的日常生活根本沒什麼改變。"
+      "en": "So Tom's yearly checkup came back with blood pressure that's suddenly 'worth watching' — nothing in his routine had even changed.",
+      "cn": "Tom的年度健檢報告出來，血壓突然變成『值得留意』——他的日常生活根本沒什麼改變。"
     },
     {
       "en": "Instead of just filing the report, HR actually used his case to push through a whole wellness program — something that would've gotten shot down two years ago.",
@@ -605,26 +605,26 @@ articles:[
       "cn": "講白了——公司這麼做不是純粹佛心，病假和過勞也是要花錢的。"
     },
     {
-      "en": "Minh's just quietly walking on his lunch break now, low-key embarrassed that his blood pressure basically rewrote company policy.",
-      "cn": "Minh現在午休就默默去走走路，還有點不好意思自己的血壓居然改寫了公司政策。"
+      "en": "Tom's just quietly walking on his lunch break now, low-key embarrassed that his blood pressure basically rewrote company policy.",
+      "cn": "Tom現在午休就默默去走走路，還有點不好意思自己的血壓居然改寫了公司政策。"
     }
   ],
   "paras": [
     {
-      "en": "When Minh, one of Anita's colleagues in the quality department, received the results of his annual checkup last month, he was mildly surprised. His blood pressure, which had been perfectly normal for years, had suddenly crept into a range that the company doctor described as 'worth watching.' Nothing about his daily routine had obviously changed, so the finding felt almost accidental — the kind of thing that could easily have gone unnoticed for another year.",
-      "cn": "當Anita在品保部門的同事Minh，上個月收到年度健康檢查報告時，他有點驚訝。他多年來一直正常的血壓，突然升到公司醫師形容為『值得留意』的範圍。他日常生活似乎沒有明顯改變，所以這個結果讓人覺得幾乎是意外發現——這種事很可能就這樣被忽略一整年。"
+      "en": "When Tom, one of Anita's colleagues in the quality department, received the results of his annual checkup last month, he was mildly surprised. His blood pressure, which had been perfectly normal for years, had suddenly crept into a range that the company doctor described as 'worth watching.' Nothing about his daily routine had obviously changed, so the finding felt almost accidental — the kind of thing that could easily have gone unnoticed for another year.",
+      "cn": "當Anita在品保部門的同事Tom，上個月收到年度健康檢查報告時，他有點驚訝。他多年來一直正常的血壓，突然升到公司醫師形容為『值得留意』的範圍。他日常生活似乎沒有明顯改變，所以這個結果讓人覺得幾乎是意外發現——這種事很可能就這樣被忽略一整年。"
     },
     {
-      "en": "What happened next says as much about the company's culture as it does about Minh's health. Rather than simply filing the report and moving on, the human resources department used his case, with his permission, to argue for a broader wellness initiative. Two years earlier, such a suggestion might have been dismissed as an unnecessary expense; this time, it was approved within a week.",
-      "cn": "接下來發生的事，說明的與其說是Minh的健康，不如說是公司的文化。人資部門並沒有把報告歸檔了事，而是在取得他同意後，用他的案例來爭取一項更廣泛的健康促進方案。若是兩年前，這種提議可能會被當成一項不必要的支出而遭到否決；這一次，卻在一週內就獲得核准。"
+      "en": "What happened next says as much about the company's culture as it does about Tom's health. Rather than simply filing the report and moving on, the human resources department used his case, with his permission, to argue for a broader wellness initiative. Two years earlier, such a suggestion might have been dismissed as an unnecessary expense; this time, it was approved within a week.",
+      "cn": "接下來發生的事，說明的與其說是Tom的健康，不如說是公司的文化。人資部門並沒有把報告歸檔了事，而是在取得他同意後，用他的案例來爭取一項更廣泛的健康促進方案。若是兩年前，這種提議可能會被當成一項不必要的支出而遭到否決；這一次，卻在一週內就獲得核准。"
     },
     {
       "en": "The reasoning behind the shift is not purely compassionate. Executives have increasingly come to see employee health as a cost that shows up elsewhere on the balance sheet, whether through sick days, reduced concentration, or the slower, harder-to-measure toll of chronic stress. A quiet room, flexible lunch breaks, and subsidized checkups are, in this light, less an act of generosity than a form of risk management — one that happens to benefit everyone it touches.",
       "cn": "這樣的轉變，背後的原因並不單純出於人道考量。高層主管越來越認為員工健康是一種會反映在其他地方的成本，無論是病假、專注力下降，還是慢性壓力那種比較難量化、拖得比較久的代價。從這個角度來看，安靜室、彈性午休和補助健檢，與其說是一種善意，不如說是一種風險管理——只是剛好對每個受益的人都有好處。"
     },
     {
-      "en": "Minh himself is characteristically modest about the whole affair. He has started walking during his lunch break and insists, only half joking, that he never wanted to become 'the guy whose blood pressure changed company policy.' Yet his experience illustrates something easy to forget amid spreadsheets and quarterly targets: a single, unglamorous medical appointment can quietly reveal what a thousand performance reviews never will.",
-      "cn": "Minh本人對這整件事一貫地保持低調。他開始利用午休時間走路，也半開玩笑地強調自己從來不想成為『那個血壓改變公司政策的傢伙』。然而他的經歷點出一件在報表和季度目標之間容易被遺忘的事：一次不起眼的健康檢查，能悄悄揭露出一千份績效考核都揭露不了的事。"
+      "en": "Tom himself is characteristically modest about the whole affair. He has started walking during his lunch break and insists, only half joking, that he never wanted to become 'the guy whose blood pressure changed company policy.' Yet his experience illustrates something easy to forget amid spreadsheets and quarterly targets: a single, unglamorous medical appointment can quietly reveal what a thousand performance reviews never will.",
+      "cn": "Tom本人對這整件事一貫地保持低調。他開始利用午休時間走路，也半開玩笑地強調自己從來不想成為『那個血壓改變公司政策的傢伙』。然而他的經歷點出一件在報表和季度目標之間容易被遺忘的事：一次不起眼的健康檢查，能悄悄揭露出一千份績效考核都揭露不了的事。"
     }
   ],
   "target": [
@@ -634,8 +634,8 @@ articles:[
       "pos": "n.",
       "cn": "同事",
       "def": "A person you work with.",
-      "ex": "When Minh, one of Anita's colleagues in the quality department, received the results of his annual checkup last month, he was mildly surprised.",
-      "exCn": "當Anita在品保部門的同事Minh，上個月收到年度健康檢查報告時，他有點驚訝。"
+      "ex": "When Tom, one of Anita's colleagues in the quality department, received the results of his annual checkup last month, he was mildly surprised.",
+      "exCn": "當Anita在品保部門的同事Tom，上個月收到年度健康檢查報告時，他有點驚訝。"
     },
     {
       "w": "crept",
@@ -688,8 +688,8 @@ articles:[
       "pos": "adv.",
       "cn": "一如既往地、典型地",
       "def": "In a way that is typical of a particular person.",
-      "ex": "Minh himself is characteristically modest about the whole affair.",
-      "exCn": "Minh本人對這整件事一貫地保持低調。"
+      "ex": "Tom himself is characteristically modest about the whole affair.",
+      "exCn": "Tom本人對這整件事一貫地保持低調。"
     },
     {
       "w": "unglamorous",
@@ -703,8 +703,8 @@ articles:[
   ],
   "questions": [
     {
-      "q": "Why was Minh's checkup result surprising to him?",
-      "qCn": "為什麼Minh的健檢結果讓他感到驚訝？",
+      "q": "Why was Tom's checkup result surprising to him?",
+      "qCn": "為什麼Tom的健檢結果讓他感到驚訝？",
       "opts": [
         "A. His blood pressure had suddenly crept into a range worth watching",
         "B. He was diagnosed with a serious illness",
@@ -721,12 +721,12 @@ articles:[
       "expl": "His blood pressure, which had been perfectly normal for years, had suddenly crept into a range that the company doctor described as 'worth watching.'"
     },
     {
-      "q": "What did the human resources department do with Minh's case?",
-      "qCn": "人資部門怎麼運用Minh的案例？",
+      "q": "What did the human resources department do with Tom's case?",
+      "qCn": "人資部門怎麼運用Tom的案例？",
       "opts": [
         "A. They used it, with his permission, to argue for a broader wellness initiative",
         "B. They kept it completely confidential and did nothing",
-        "C. They fired Minh for poor health",
+        "C. They fired Tom for poor health",
         "D. They ignored the report entirely"
       ],
       "optsCn": [
@@ -777,12 +777,12 @@ articles:[
   ],
   "upgrade": [
     {
-      "b1": "Minh's blood pressure went up a little.",
+      "b1": "Tom's blood pressure went up a little.",
       "b2": "His blood pressure, which had been perfectly normal for years, had suddenly crept into a range that the company doctor described as 'worth watching.'",
       "note": "用which帶出的關係子句補充血壓的背景，並用crept這個動詞取代簡單的went up，畫面感更強，是B2新聞式改寫常見的手法。",
       "sp": "His blood pressure, which had always been totally normal, snuck up into what the doctor called a 'keep an eye on it' zone.",
       "spNote": "snuck up（悄悄爬升，sneak的口語過去式）、keep an eye on it（多留意一下）都是口語常見說法。",
-      "b1Cn": "Minh的血壓稍微升高了一點。",
+      "b1Cn": "Tom的血壓稍微升高了一點。",
       "b2Cn": "他多年來一直正常的血壓，突然升到公司醫師形容為『值得留意』的範圍。",
       "spCn": "他原本一直很正常的血壓，悄悄爬升到醫生說的『該多留意』的範圍。"
     },
