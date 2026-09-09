@@ -1275,7 +1275,14 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
 // ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260731, 20260804, 20260811, 20260813, 20260818, 20260821, 20260825, 20260827, 20260903
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-09-06 count:688
+// ===SYNC:VOCAB_START=== sync_date:2026-09-09 count:694
+  // --- 20260908 動名詞與不定詞、壓力用語與辦公室情境 ---
+  {w:"imagine",ipa:"/ɪˈmædʒɪn/",pos:"v.",cn:"想像（imagine + V-ing）",def:"To form a picture of something in your mind.",exEn:"I can't imagine living without my phone.",exCn:"我無法想像生活中沒有手機。",cat:"daily"},
+  {w:"contact",ipa:"/ˈkɑːntækt/",pos:"v.",cn:"聯絡（打電話、傳訊息或找到某人）",def:"To call, message, or reach someone.",exEn:"I was in charge of contacting the IT department.",exCn:"我負責聯絡資訊部門。",cat:"workplace"},
+  {w:"supplier",ipa:"/səˈplaɪɚ/",pos:"n.",cn:"供應商",def:"A company that sells parts or goods to another company.",exEn:"The supplier denied sending them.",exCn:"供應商否認寄出那些零件。",cat:"workplace"},
+  {w:"avoid",ipa:"/əˈvɔɪd/",pos:"v.",cn:"避免（avoid + V-ing）",def:"To stay away from something or stop it from happening.",exEn:"He tried to avoid answering my question.",exCn:"他試圖避開我的問題。",cat:"daily"},
+  {w:"fancy",ipa:"/ˈfænsi/",pos:"v.",cn:"想要、有興趣（口語，fancy + V-ing）",def:"To want to do or have something (British spoken English).",exEn:"I don't fancy going out this evening.",exCn:"我今晚不太想出門。",cat:"daily"},
+  {w:"risk",ipa:"/rɪsk/",pos:"v.",cn:"冒……的風險（risk + V-ing）",def:"To do something that may cause a bad result.",exEn:"If you gamble, you risk losing your money.",exCn:"如果你賭博，你就有輸錢的風險。",cat:"daily"},
   // --- 20260903 辦公室難熬的一天與紓壓用語 ---
   {w:"construction",ipa:"/kənˈstrʌkʃən/",pos:"n.",cn:"建造、施工",def:"The work of building something.",exEn:"The building was under construction.",exCn:"大樓正在施工。",cat:"workplace"},
   {w:"entrance",ipa:"/ˈentrəns/",pos:"n.",cn:"入口（↔ exit 出口）",def:"The door or gate where you go into a place.",exEn:"We used a different entrance.",exCn:"我們走另一個入口。",cat:"workplace"},
@@ -2031,8 +2038,10 @@ const vocab = [
 ];
 
 // 每個單字的筆記來源 (key = word, value = note title)
-// ===SYNC:SOURCES_START=== sync_date:2026-09-06
+// ===SYNC:SOURCES_START=== sync_date:2026-09-09
 const vocabSources = {
+  // --- 20260908 動名詞與不定詞、壓力用語與辦公室情境 ---
+  "imagine":"20260908 動名詞與不定詞、壓力用語與辦公室情境","contact":"20260908 動名詞與不定詞、壓力用語與辦公室情境","supplier":"20260908 動名詞與不定詞、壓力用語與辦公室情境","avoid":"20260908 動名詞與不定詞、壓力用語與辦公室情境","fancy":"20260908 動名詞與不定詞、壓力用語與辦公室情境","risk":"20260908 動名詞與不定詞、壓力用語與辦公室情境",
   // --- 20260903 辦公室難熬的一天與紓壓用語 ---
   "construction":"20260903 辦公室難熬的一天與紓壓用語","entrance":"20260903 辦公室難熬的一天與紓壓用語","elevator":"20260903 辦公室難熬的一天與紓壓用語","technician":"20260903 辦公室難熬的一天與紓壓用語","calmly":"20260903 辦公室難熬的一天與紓壓用語","eventually":"20260903 辦公室難熬的一天與紓壓用語","stressed":"20260903 辦公室難熬的一天與紓壓用語","overwhelmed":"20260903 辦公室難熬的一天與紓壓用語","react":"20260903 辦公室難熬的一天與紓壓用語","successfully":"20260903 辦公室難熬的一天與紓壓用語",
   /* arrive / make 沒有進單字表，但有造句關鍵字（allKW），登記來源才能被 dayKW 抓到 */
@@ -2529,8 +2538,19 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-09-06 count:303
+// ===SYNC:TRANS_START=== sync_date:2026-09-09 count:313
 const allTrans = [
+  // --- 20260908 動名詞與不定詞、壓力用語與辦公室情境 cn-en ---
+  {p:"客戶很生氣，但他冷靜地處理了這個狀況。",a:"The customer was angry, but he handled the situation calmly.",h:"but 連接兩個句子, 情狀副詞 calmly 放句尾",kw:["handled the situation calmly"],src:"20260908 動名詞與不定詞、壓力用語與辦公室情境"},
+  {p:"我無法想像生活中沒有手機，因為我每天都需要用它。",a:"I can't imagine living without my phone because I need to use it every day.",h:"imagine + V-ing",kw:["imagine living"],src:"20260908 動名詞與不定詞、壓力用語與辦公室情境"},
+  {p:"當我獨自向主管報告時，我覺得很有壓力。",a:"When I reported to my boss by myself, I felt stressed.",h:"by myself 比 alone 自然, When + 過去式, 過去式",kw:["by myself"],src:"20260908 動名詞與不定詞、壓力用語與辦公室情境"},
+  {p:"我們收到一件關於送錯零件的客訴，但供應商否認寄出那些零件。",a:"We received a complaint about the wrong parts, but the supplier denied sending them.",h:"the wrong parts 加定冠詞, deny + V-ing",kw:["denied sending"],src:"20260908 動名詞與不定詞、壓力用語與辦公室情境"},
+  {p:"因為我們的設備還沒準備好，我們必須延後測試。",a:"We need to put off testing because our equipment isn't ready.",h:"put off + V-ing",kw:["put off testing"],src:"20260908 動名詞與不定詞、壓力用語與辦公室情境"},
+  {p:"如果你賭博，你就有輸錢的風險。",a:"If you gamble, you risk losing your money.",h:"risk + V-ing",kw:["risk losing"],src:"20260908 動名詞與不定詞、壓力用語與辦公室情境"},
+  {p:"我今晚不太想出門。",a:"I don't fancy going out this evening.",h:"fancy + V-ing（口語「想要」）",kw:["fancy going out"],src:"20260908 動名詞與不定詞、壓力用語與辦公室情境"},
+  {p:"他試圖避開我的問題。",a:"He tried to avoid answering my question.",h:"avoid + V-ing",kw:["avoid answering"],src:"20260908 動名詞與不定詞、壓力用語與辦公室情境"},
+  {p:"路途很遠，所以我們決定搭計程車回家。",a:"It was a long way to walk, so we decided to take a taxi home.",h:"decide + to + 原形動詞",kw:["decided to take"],src:"20260908 動名詞與不定詞、壓力用語與辦公室情境"},
+  {p:"因為天氣，我們決定不出門。",a:"We decided not to go out because of the weather.",h:"否定放在 to 前面：not to + V",kw:["not to go out"],src:"20260908 動名詞與不定詞、壓力用語與辦公室情境"},
   // --- 20260903 辦公室難熬的一天與紓壓用語 cn-en ---
   {p:"我壓力很大，所以到外面待了幾分鐘讓自己平靜下來。",a:"I was under a lot of stress, so I went outside for a few minutes to feel calm.",h:"be under a lot of stress, so 接結果, to + V 表目的",kw:["under a lot of stress"],src:"20260903 辦公室難熬的一天與紓壓用語"},
   {p:"運動幫助我紓解壓力。",a:"Exercise helps me relieve stress.",h:"help + sb + 原形動詞（不加 to）",kw:["relieve stress"],src:"20260903 辦公室難熬的一天與紓壓用語"},
@@ -2877,7 +2897,17 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-09-06 count:62
+// ===SYNC:KW_START=== sync_date:2026-09-09 count:64
+  // --- 20260908 動名詞與不定詞、壓力用語與辦公室情境（例句全部取自筆記原文）---
+  {w:"imagine",ipa:"/ɪˈmædʒɪn/",tag:"想像（後面接 V-ing）· v.",exs:[
+    {en:"I can't imagine living without my phone because I need to use it every day.",cn:"我無法想像生活中沒有手機，因為我每天都需要用它。"},
+    {en:"Can you imagine anybody being so stupid?",cn:"你能想像有人那麼笨嗎？"},
+    {en:"I went outside to feel calm and clear my mind, imagining relaxing on a quiet beach.",cn:"我走到外面讓自己冷靜、清空思緒，想像著在一個安靜的海灘上放鬆。"},
+  ]},
+  {w:"avoid",ipa:"/əˈvɔɪd/",tag:"避免（後面接 V-ing）· v.",exs:[
+    {en:"He tried to avoid answering my question.",cn:"他試圖避開我的問題。"},
+    {en:"It's better to avoid traveling during the rush hour.",cn:"最好避免在尖峰時段出行。"},
+  ]},
   // --- 20260903 辦公室難熬的一天與紓壓用語（例句全部取自筆記原文）---
   {w:"arrive at",ipa:"/əˈraɪv æt/",tag:"到達＋介系詞（at 小地點／in 城市）· v.",exs:[
     {en:"When I arrived at the top, it was raining a little.",cn:"當我到達山頂時，正下著小雨。"},
@@ -4227,7 +4257,64 @@ const articles = [
 // 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
 // ═══════════════════════════════════════════════
 const DAYQUIZ = {
-// ===SYNC:DAYQUIZ_START=== sync_date:2026-09-06 count:33
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-09-09 count:34
+  "20260908": {
+    title: "動名詞與不定詞、壓力用語與辦公室情境",
+    subtitle: "Verbs with -ing and Infinitives, Stress Language & Office Scenario",
+    questions: [
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["I can't imagine live without my phone.","I can't imagine living without my phone."],answer:1,
+        explain:"imagine 後面要接動名詞（V-ing），不接原形動詞，所以是 imagine living。"},
+      {type:"mc",tag:"改錯",q:"要說「當我獨自向主管報告時」，職場上哪一句比較自然？",
+        options:["When I reported to my boss alone, I felt stressed.","When I reported to my boss by myself, I felt stressed."],answer:1,
+        explain:"職場情境表達「自己一個人完成某事」用 by myself 比較自然、專業；alone 常帶「孤單、沒人陪伴」的語氣。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",
+        options:["We received a complaint about wrong parts, but the supplier denied to send them.","We received a complaint about the wrong parts, but the supplier denied sending them."],answer:1,
+        explain:"指特定那批送錯的零件要加定冠詞 the；deny（否認）後面接動名詞，不接不定詞。"},
+      {type:"mc",tag:"壓力用語",q:"要說「我壓力很大」，哪一句是自然的英文？",
+        options:["I had a high stress.","I was full of stress.","I was under a lot of stress.","I have a big stress."],answer:2,
+        explain:"自然說法是 I was under a lot of stress. 或 I was very stressed.；I had a high stress / I was full of stress 是中式英文。"},
+      {type:"fill",tag:"文法",q:"He tried to avoid ___ (answer) my question.",
+        cn:"他試圖避開我的問題。",
+        answer:["answering"],
+        explain:"avoid 後面接動名詞（V-ing）。"},
+      {type:"fill",tag:"文法",q:"If you gamble, you risk ___ (lose) your money.",
+        cn:"如果你賭博，你就有輸錢的風險。",
+        answer:["losing"],
+        explain:"risk 後面接動名詞（V-ing）。"},
+      {type:"fill",tag:"文法",q:"We need to put off ___ (test) because our equipment isn't ready.",
+        cn:"因為我們的設備還沒準備好，我們必須延後測試。",
+        answer:["testing"],
+        explain:"片語動詞 put off（延後、拖延）後面接動名詞（V-ing）。"},
+      {type:"fill",tag:"文法",q:"It was a long way to walk, so we decided ___ (take) a taxi home.",
+        cn:"路途很遠，所以我們決定搭計程車回家。",
+        answer:["to take"],
+        explain:"decide 後面接 to + 原形動詞。"},
+      {type:"fill",tag:"文法",q:"We decided ___ ___ ___ out because of the weather.（因為天氣，我們決定不出門）",
+        cn:"否定要放在 to 前面。",
+        answer:["not to go"],
+        explain:"不定詞的否定是 not to + 原形動詞：decided not to go out。"},
+      {type:"mc",tag:"文法",q:"哪一句正確？",
+        options:["I enjoy to read.","I enjoy reading."],answer:1,
+        explain:"enjoy 之後一定接 -ing，不能接不定詞。"},
+      {type:"mc",tag:"文法",q:"「Dan 常常話太多。」哪一句正確？",
+        options:["Dan tends talking too much.","Dan tends to talk too much."],answer:1,
+        explain:"tend 屬於接不定詞的動詞：tend to + 原形動詞。"},
+      {type:"fill",tag:"閱讀",q:"The office building was ___ construction, so I had to use a different entrance.",
+        cn:"辦公大樓正在施工，所以我必須走另一個入口。",
+        answer:["under"],
+        explain:"under construction ＝ 施工中；under + 名詞表「處於……狀態」。"},
+      {type:"mc",tag:"閱讀",q:"According to the article, what was the writer in charge of?",
+        options:["Fixing the elevator.","Contacting the IT department.","Paying the invoice.","Building the new entrance."],answer:1,
+        explain:"課文：I was in charge of contacting the IT department.（我負責聯絡資訊部門。）"},
+      {type:"trans",tag:"翻譯",q:"客戶很生氣，但他冷靜地處理了這個狀況。",
+        answer:"The customer was angry, but he handled the situation calmly.",
+        explain:"情狀副詞 calmly 說明動作 handled「如何」進行，多由形容詞加 -ly 構成（calm → calmly）。"},
+      {type:"trans",tag:"翻譯",q:"運動幫助我紓解壓力。",
+        answer:"Exercise helps me relieve stress.",
+        explain:"help + 某人 + 原形動詞（不加 to）；relieve stress ＝ 紓解壓力。"}
+    ]
+  },
   "20260903": {
     title: "辦公室難熬的一天與紓壓用語",
     subtitle: "A Difficult Day at the Office, Stress & Relieving Stress",
@@ -5941,7 +6028,36 @@ const DAYQUIZ = {
 // 沒有腳本的日期會自動退回「教練只說引導語」的模式。
 // ═══════════════════════════════════════════════
 const DAYTALK = {
-// ===SYNC:DAYTALK_START=== sync_date:2026-09-06 count:7
+// ===SYNC:DAYTALK_START=== sync_date:2026-09-09 count:8
+  "20260908": {
+    title: "動名詞與不定詞、壓力用語與辦公室情境",
+    turns: [
+      {q:"A customer was shouting at your colleague. How did he deal with it?",qCn:"有位客戶對你同事大吼。他是怎麼處理的？",
+       en:"The customer was angry, but he handled the situation calmly.",cn:"客戶很生氣，但他冷靜地處理了這個狀況。",hint:"handle the situation / calmly"},
+      {q:"Could you live without your cell phone?",qCn:"你可以沒有手機過生活嗎？",
+       en:"I can't imagine living without my phone because I need to use it every day.",cn:"我無法想像生活中沒有手機，因為我每天都需要用它。",hint:"imagine + V-ing"},
+      {q:"How do you feel when you give a report to your boss on your own?",qCn:"你自己一個人向主管報告時感覺如何？",
+       en:"When I reported to my boss by myself, I felt stressed.",cn:"當我獨自向主管報告時，我覺得很有壓力。",hint:"by myself（不用 alone）"},
+      {q:"Your company got a complaint about the wrong parts. What did the supplier say?",qCn:"公司收到送錯零件的客訴。供應商怎麼說？",
+       en:"We received a complaint about the wrong parts, but the supplier denied sending them.",cn:"我們收到一件關於送錯零件的客訴，但供應商否認寄出那些零件。",hint:"deny + V-ing"},
+      {q:"The equipment is not ready yet. What do you need to do about the test?",qCn:"設備還沒準備好。測試要怎麼辦？",
+       en:"We need to put off testing because our equipment isn't ready.",cn:"因為我們的設備還沒準備好，我們必須延後測試。",hint:"put off + V-ing"},
+      {q:"Why is gambling dangerous?",qCn:"為什麼賭博很危險？",
+       en:"If you gamble, you risk losing your money.",cn:"如果你賭博，你就有輸錢的風險。",hint:"risk + V-ing"},
+      {q:"Would you like to go out tonight?",qCn:"你今晚想出門嗎？",
+       en:"I don't fancy going out this evening.",cn:"我今晚不太想出門。",hint:"fancy + V-ing（口語）"},
+      {q:"You asked him a direct question. What did he do?",qCn:"你直接問了他一個問題。他怎麼做？",
+       en:"He tried to avoid answering my question.",cn:"他試圖避開我的問題。",hint:"avoid + V-ing"},
+      {q:"It was too far to walk. What did you do?",qCn:"路太遠不能用走的。你們怎麼做？",
+       en:"It was a long way to walk, so we decided to take a taxi home.",cn:"路途很遠，所以我們決定搭計程車回家。",hint:"decide + to + V"},
+      {q:"The weather was terrible that evening. Did you go out?",qCn:"那天晚上天氣很糟。你們出門了嗎？",
+       en:"We decided not to go out because of the weather.",cn:"因為天氣，我們決定不出門。",hint:"not to + V（否定放在 to 前面）"},
+      {q:"What do you do to feel better when you are under a lot of stress?",qCn:"壓力很大時你會做什麼讓自己好一點？",
+       en:"Exercise helps me relieve stress.",cn:"運動幫助我紓解壓力。",hint:"help + sb + 原形動詞 / relieve stress"},
+      {q:"Your office building is being repaired. Why do you use another door?",qCn:"你的辦公大樓正在整修。為什麼你走另一個入口？",
+       en:"The office building was under construction, so I had to use a different entrance.",cn:"辦公大樓正在施工，所以我必須走另一個入口。",hint:"under construction"}
+    ]
+  },
   "20260903": {
     title: "辦公室難熬的一天與紓壓用語",
     turns: [

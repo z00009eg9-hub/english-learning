@@ -10730,6 +10730,384 @@ window.BOOK = {
           ]
         }
       ]
+    },
+    {
+      id: 'bk20260908',
+      icon: '📝',
+      date: '2026-09-08',
+      doc: 'https://docs.google.com/document/d/1X104L6BXfxrGtS5OmDI-3nFu5Z-ICUs2SflYQtzhFPo/edit',
+      title: 'Verbs with -ing and Infinitives, Stress Language & Office Scenario',
+      titleCn: '動名詞與不定詞、壓力用語與辦公室情境',
+      topics: '動詞 + -ing（Unit 53）｜動詞 + to 不定詞（Unit 54）｜情狀副詞｜壓力/紓壓自然說法｜職場報告與時態｜閱讀「辦公室難熬的一天」',
+      hwTitle: 'I. ★ 09/08 作業複習 Homework Review',
+      hw: [
+        {
+          n: 1,
+          ok: 'The customer was angry, but he handled the situation calmly.',
+          cn: '客戶很生氣，但他冷靜地處理了這個狀況。',
+          pat: '主詞 + 動詞 + 受詞 + 情狀副詞(-ly)',
+          note: 'calmly 是「情狀副詞（adverb of manner）」，說明動作 handled「如何」進行；多數這類副詞由形容詞加 -ly 構成（calm → calmly）。'
+        },
+        {
+          n: 2,
+          wrong: "I can't imagine live without using phone in my life because I need to use it every day.",
+          fix: "I can't imagine living without my phone because I need to use it every day.",
+          cn: '我無法想像生活中沒有手機，因為我每天都需要用它。',
+          pat: 'imagine + V-ing',
+          note: 'imagine 後面要接動名詞（V-ing），不接原形動詞，所以 live 要改成 living（詳見 IV）。原句「without using phone in my life」太累贅，口語直接說 without my phone 即可。若想用名詞表達也可以：I can\'t imagine my life without a cell phone.'
+        },
+        {
+          n: 3,
+          wrong: 'When I reported to my boss alone, I felt stressed.',
+          fix: 'When I reported to my boss by myself, I felt stressed.',
+          cn: '當我獨自向主管報告時，我覺得很有壓力。',
+          pat: 'When + 主詞 + 過去式, 主詞 + 過去式',
+          note: '職場情境表達「自己一個人完成某事」，用 by myself 比 alone 自然、專業；alone 常帶「孤單、沒人陪伴」的語氣。此句是過去單一事件，動詞用過去式 reported / felt。若指習慣性、每次都這樣，改用現在式：When I report to my boss by myself, I always feel stressed.（過去也可說 When I gave a report to my boss by myself, I felt stressed.）'
+        },
+        {
+          n: 4,
+          wrong: 'We received a complaint about wrong parts, but the supplier denied sending them.',
+          fix: 'We received a complaint about the wrong parts, but the supplier denied sending them.',
+          cn: '我們收到一件關於送錯零件的客訴，但供應商否認寄出那些零件。',
+          pat: 'deny + V-ing',
+          note: '指「特定、雙方都清楚的那批送錯的零件」時要加定冠詞 the（the wrong parts）。deny（否認）後面接動名詞（V-ing），不接不定詞，所以是 denied sending them，不是 denied to send。'
+        },
+        {
+          n: 5,
+          ok: "We need to put off testing because our equipment isn't ready.",
+          cn: '因為我們的設備還沒準備好，我們必須延後測試。',
+          pat: 'put off + V-ing',
+          note: '片語動詞 put off（延後、拖延）後面接動名詞（V-ing）。若想講清楚延後的是什麼，可補上受詞：put off testing the equipment。'
+        }
+      ],
+      vocabTitle: 'II. 單字 Vocabulary',
+      vocab: [
+        { w: 'calmly', ipa: '/ˈkɑːmli/', pos: 'adv.', cn: '冷靜地',
+          ex: 'He handled the situation calmly.', exCn: '他冷靜地處理了這個狀況。' },
+        { w: 'imagine', ipa: '/ɪˈmædʒɪn/', pos: 'v.', cn: '想像（重音在第二音節 i-MA-jin）',
+          ex: "I can't imagine living without my phone.", exCn: '我無法想像生活中沒有手機。' },
+        { w: 'relieve', star: true, ipa: '/rɪˈliːv/', pos: 'v.', cn: '減輕、緩解',
+          ex: 'Exercise helps me relieve stress.', exCn: '運動幫助我紓解壓力。' },
+        { w: 'stressed', ipa: '/strest/', pos: 'adj.', cn: '感到有壓力的',
+          ex: 'I was very stressed.', exCn: '我壓力很大。' },
+        { w: 'persuade', star: true, ipa: '/pɚˈsweɪd/', pos: 'v.', cn: '說服',
+          ex: 'I persuaded the customer to pay the invoices.', exCn: '我說服客戶付清請款單。' },
+        { w: 'convince', star: true, ipa: '/kənˈvɪns/', pos: 'v.', cn: '使信服（＝ persuade）',
+          ex: 'He convinced me to try again.', exCn: '他說服我再試一次。' },
+        { w: 'rapport', star: true, ipa: '/ræˈpɔːr/', pos: 'n.', cn: '融洽關係',
+          ex: 'I had a good rapport with the customer.', exCn: '我和客戶關係很融洽。' },
+        { w: 'contact', ipa: '/ˈkɑːntækt/', pos: 'v.', cn: '聯絡（打電話、傳訊息或找到某人）',
+          ex: 'I was in charge of contacting the IT department.', exCn: '我負責聯絡資訊部門。' },
+        { w: 'concentrate', ipa: '/ˈkɑːnsəntreɪt/', pos: 'v.', cn: '專注（＝ focus）',
+          ex: "I'm trying to concentrate. Please stop making noise.", exCn: '我正努力專心，請別再製造噪音。' },
+        { w: 'unreliable', star: true, ipa: '/ˌʌnrɪˈlaɪəbl/', pos: 'adj.', cn: '不可靠的',
+          ex: 'The elevator was unreliable.', exCn: '電梯很不可靠。' },
+        { w: 'invoice', star: true, ipa: '/ˈɪnvɔɪs/', pos: 'n.', cn: '發票、請款單',
+          ex: 'The customer had put off paying the invoice.', exCn: '客戶一直拖著沒付那張請款單。' },
+        { w: 'complaint', ipa: '/kəmˈpleɪnt/', pos: 'n.', cn: '客訴、抱怨',
+          ex: 'We received a complaint about the wrong parts.', exCn: '我們收到一件關於送錯零件的客訴。' },
+        { w: 'supplier', ipa: '/səˈplaɪɚ/', pos: 'n.', cn: '供應商',
+          ex: 'The supplier denied sending them.', exCn: '供應商否認寄出那些零件。' },
+        { w: 'deny', ipa: '/dɪˈnaɪ/', pos: 'v.', cn: '否認',
+          ex: 'He denied causing the accident.', exCn: '他否認造成了這場意外。' },
+        { w: 'avoid', ipa: '/əˈvɔɪd/', pos: 'v.', cn: '避免',
+          ex: 'He tried to avoid answering my question.', exCn: '他試圖避開我的問題。' },
+        { w: 'consider', ipa: '/kənˈsɪdɚ/', pos: 'v.', cn: '考慮',
+          ex: 'I considered applying for the job.', exCn: '我考慮過應徵這份工作。' },
+        { w: 'fancy', ipa: '/ˈfænsi/', pos: 'v.', cn: '想要、有興趣（口語）',
+          ex: "I don't fancy going out this evening.", exCn: '我今晚不太想出門。' },
+        { w: 'risk', ipa: '/rɪsk/', pos: 'v.', cn: '冒……的風險',
+          ex: 'If you gamble, you risk losing your money.', exCn: '如果你賭博，你就有輸錢的風險。' }
+      ],
+      phrasesTitle: 'III. 片語與搭配詞（索引表）Phrases & Collocations',
+      phrases: [
+        { p: 'handle the situation', cn: '處理狀況（詳見 I）' },
+        { p: 'put off (+ V-ing)', cn: '延後、拖延（詳見 IV-B）' },
+        { p: 'give up (+ V-ing)', cn: '放棄（詳見 IV-B）' },
+        { p: 'go on / carry on (+ V-ing)', cn: '繼續（詳見 IV-B）' },
+        { p: 'keep (on) (+ V-ing)', cn: '持續、一再（詳見 IV-B）' },
+        { p: 'decide against (+ V-ing)', cn: '決定不做（詳見 VIII）' },
+        { p: 'in charge of', cn: '負責（詳見 VII）' },
+        { p: 'under construction', cn: '施工中（詳見 VII）' },
+        { p: 'under a lot of stress', cn: '承受很大壓力（詳見 VI）' },
+        { p: 'relieve stress', cn: '紓解壓力（詳見 VI）' },
+        { p: 'by myself', cn: '獨自、靠自己（詳見 I）' },
+        { p: 'go straight to work', cn: '直接去上班（詳見 VIII）' }
+      ],
+      grammarTitle: 'IV–V. 文法：動詞 + -ing（Unit 53）／動詞 + to（Unit 54）',
+      grammar: [
+        {
+          k: 'IV-A', title: '這些動詞後面要接動名詞 V-ing（不接 to）',
+          pat: 'verb + V-ing',
+          pts: [
+            'enjoy / mind / suggest 之後一定接 -ing。',
+            '其他常見接 -ing 的動詞：stop, finish, avoid, admit, deny, imagine, consider, recommend, risk, fancy。',
+            '否定放在 -ing 前面：not + V-ing。',
+            '🔬 這些動詞（enjoy, mind, suggest, avoid, deny, imagine, consider, finish, stop…）後面若再接一個動詞，一律用動名詞（V-ing），不能用不定詞（to + V）。這也是作業第 2、4 題的重點（imagine living、denied sending）。'
+          ],
+          exs: [
+            { tag: 'enjoy', en: 'I enjoy reading.', cn: '我喜歡閱讀。（不是 I enjoy to read）' },
+            { tag: 'mind', en: 'Would you mind closing the door?', cn: '可以請你關門嗎？' },
+            { tag: 'suggest', en: 'Chris suggested going to the cinema.', cn: 'Chris 建議去看電影。' },
+            { tag: 'stop', en: 'Suddenly everybody stopped talking.', cn: '突然大家都停止交談。' },
+            { tag: 'deny', en: 'They denied doing anything wrong.', cn: '他們否認做錯任何事。' },
+            { tag: 'consider', en: 'Have you ever considered going to live in another country?', cn: '你曾考慮過搬到另一個國家住嗎？' },
+            { tag: 'not + V-ing', en: "When I'm on holiday, I enjoy not having to get up early.", cn: '放假時，我很享受不用早起。' }
+          ]
+        },
+        {
+          k: 'IV-B', title: '片語動詞後面也接 V-ing',
+          pat: '片語動詞 + V-ing',
+          pts: [
+            'give up（放棄 ＝ stop）、put off（延後 ＝ delay）、go on / carry on（繼續 ＝ continue）、keep / keep on（持續、一再）。'
+          ],
+          exs: [
+            { tag: 'give up', en: "I've given up buying newspapers.", cn: '我已經不再買報紙了。' },
+            { tag: 'put off', en: "You shouldn't put off telling him.", cn: '你不該拖著不告訴他。' },
+            { tag: 'go on', en: 'She wants to go on working.', cn: '她想繼續工作。' },
+            { tag: 'keep', en: "You keep interrupting when I'm talking.", cn: '我講話時你一直插嘴。' }
+          ]
+        },
+        {
+          k: 'IV-C', title: 'verb + 某人 + V-ing',
+          pat: '動詞 + 受詞 + V-ing',
+          pts: ['有些動詞可用「動詞 + 受詞 + V-ing」的結構。'],
+          exs: [
+            { tag: 'remember', en: "I don't remember her saying that.", cn: '我不記得她說過那句話。' },
+            { tag: 'mind', en: "I don't mind you driving my car.", cn: '我不介意你開我的車。' },
+            { tag: 'imagine', en: 'Can you imagine anybody being so stupid?', cn: '你能想像有人那麼笨嗎？' },
+            { tag: 'keep', en: 'Sorry to keep you waiting.', cn: '抱歉讓你久等了。' }
+          ]
+        },
+        {
+          k: 'V-A', title: '這些動詞後面要接 to + 原形動詞（不定詞）',
+          pat: 'verb + to + 原形動詞',
+          pts: [
+            '常見動詞：offer, agree, refuse, decide, plan, arrange, hope, forget, manage, promise, learn, afford, threaten, tend, deserve, fail。',
+            '否定放在 to 前面：not to + V。'
+          ],
+          exs: [
+            { tag: 'decide', en: 'It was a long way to walk, so we decided to take a taxi home.', cn: '路途很遠，所以我們決定搭計程車回家。' },
+            { tag: 'agree', en: 'Simon was in a difficult situation, so I agreed to help him.', cn: 'Simon 處境困難，所以我答應幫他。' },
+            { tag: 'learn', en: 'How old were you when you learnt to drive?', cn: '你幾歲學會開車的？' },
+            { tag: 'tend', en: 'Dan tends to talk too much.', cn: 'Dan 常常話太多。' },
+            { tag: 'not to + V', en: 'We decided not to go out because of the weather.', cn: '因為天氣，我們決定不出門。' },
+            { tag: 'not to + V', en: 'I promised not to be late.', cn: '我保證不會遲到。' }
+          ]
+        },
+        {
+          k: 'V-B', title: 'seem / appear / pretend / claim 也接 to',
+          pat: 'seem / appear / pretend / claim + to + V',
+          pts: ['這幾個動詞後面接不定詞，表示「看起來、假裝、聲稱」。'],
+          exs: [
+            { tag: 'seem', en: 'They seem to have plenty of money.', cn: '他們似乎很有錢。' },
+            { tag: 'pretend', en: 'Ann pretended not to see me.', cn: 'Ann 假裝沒看到我。' },
+            { tag: 'seem', en: 'I seem to have lost my keys.', cn: '我好像把鑰匙弄丟了。' }
+          ]
+        },
+        {
+          k: 'V-C', title: '疑問詞 + to（what / how / where … + to）',
+          pat: '疑問詞 + to + 原形動詞',
+          pts: ['what / how / where / whether 之後可以直接接 to + 原形動詞，等於一個名詞片語。'],
+          exs: [
+            { tag: 'how', en: 'We asked how to get to the station.', cn: '我們問怎麼去車站。' },
+            { tag: 'where', en: 'Have you decided where to go on holiday?', cn: '你決定好假期要去哪裡了嗎？' },
+            { tag: 'what', en: "I don't know what to do.", cn: '我不知道該怎麼辦。' },
+            { tag: 'how', en: 'Can somebody show me how to use this camera?', cn: '有人可以教我怎麼用這台相機嗎？' }
+          ]
+        },
+        {
+          k: 'V-D', title: '-ing vs to 選擇傾向（比較）',
+          pat: 'V-ing ＝ 一般活動、已經歷過的動作／to + V ＝ 意圖、計畫、決定',
+          pts: [
+            'V-ing 常指「一般性的活動、已經經驗過的動作」：enjoy listening, avoid traveling, consider applying。',
+            'to + V 常表「意圖、計畫、決定」：plan to apply, decide to leave, agree to pay。',
+            '⚠️ 這是幫助語感的傾向，不是硬性規則；哪些動詞接 -ing、哪些接 to 仍要靠 Unit 53 / 54 的動詞清單記憶。'
+          ]
+        }
+      ],
+      cmpTitle: 'VI. 壓力用語 Stress Language',
+      cmp: [
+        { u: '✅ 自然', sc: '「承受壓力」用 under a lot of stress',
+          ex: 'I was under a lot of stress.', exCn: '我承受很大的壓力。', cn: '我承受很大的壓力' },
+        { u: '✅ 自然', sc: '「我壓力很大」用形容詞 stressed 描述人',
+          ex: 'I was very stressed.', exCn: '我壓力很大。', cn: '我壓力很大' },
+        { u: '紓解壓力', sc: 'help + sb + 原形動詞',
+          ex: 'Exercise helps me relieve stress.', exCn: '運動幫助我紓解壓力。', cn: '紓解壓力' },
+        { u: '紓解壓力', sc: 'V-ing 當主詞 ＋ a good way to + V',
+          ex: 'Taking a walk is a good way to relieve stress.', exCn: '散步是紓解壓力的好方法。', cn: '紓解壓力' }
+      ],
+      cmpWarn: {
+        title: '⚠ 不自然的說法（中式英文，不要用）',
+        bad: 'I had a high stress. / I was full of stress.',
+        good: ['I was under a lot of stress.　我承受很大的壓力。', 'I was very stressed.　我壓力很大。']
+      },
+      reading: [
+        {
+          bar: 'VII. 閱讀 Reading：A Difficult Day at the Office',
+          title: 'A Difficult Day at the Office',
+          titleCn: '辦公室難熬的一天',
+          paras: [
+            { en: 'Last Monday, I had a very busy day at work. The office building was under construction, so I had to use a different entrance. The elevator was unreliable — I had to take it several times and wait a long time. When I finally arrived at my department, the computer service was down, and I was in charge of contacting the IT department.',
+              cn: '上週一，我在公司過了非常忙碌的一天。辦公大樓正在施工，所以我必須走另一個入口。電梯很不可靠——我搭了好幾次，還等了很久。當我終於抵達部門時，電腦系統當機了，而我負責聯絡資訊部門。' },
+            { en: 'The technician denied that there was a serious problem and said it would be fixed soon. While I was talking to IT, my manager interrupted me to ask about an unpaid invoice. The customer had put off making the payment. I managed to have a good rapport with the customer, explained the situation calmly, and in the end the customer agreed to pay the invoices.',
+              cn: '技術人員否認有嚴重的問題，並說很快就會修好。當我正在跟資訊部門講話時，主管打斷我，問起一張未付的請款單。那位客戶一直拖著沒有付款。我成功地和客戶建立了良好的關係，冷靜地說明了狀況，最後客戶同意付清款項。' },
+            { en: 'Later, I felt stressed, so I went outside to feel calm and clear my mind, imagining relaxing on a quiet beach. Even when I am working under pressure and being managed, I can still control how I react to difficult situations. By the end of the day, everything was back to normal. It had been stressful and unreliable, but I was proud that I had handled the problems successfully.',
+              cn: '後來我覺得壓力很大，於是走到外面讓自己冷靜、清空思緒，想像著在一個安靜的海灘上放鬆。即使在壓力下工作、又被管理，我仍然可以掌控自己面對困難的反應方式。到了一天結束時，一切都恢復正常。那天既有壓力又諸事不順，但我很自豪自己成功地處理了這些問題。' }
+          ],
+          questions: [
+            { q: 'Why did the speaker use a different entrance?', qCn: '說話者為什麼走另一個入口？',
+              a: 'Because the office building was under construction.', aCn: '因為辦公大樓正在施工。' },
+            { q: 'What was the problem when the speaker arrived?', qCn: '說話者抵達時遇到什麼問題？',
+              a: 'The elevator was unreliable and the computer service was down.', aCn: '電梯不可靠，而且電腦系統當機了。' },
+            { q: 'What was the speaker in charge of?', qCn: '說話者負責什麼？',
+              a: 'Contacting the IT department.', aCn: '聯絡資訊部門。' },
+            { q: 'Did the technician admit there was a serious problem?', qCn: '技術人員承認有嚴重的問題嗎？',
+              a: 'No (False). He denied that there was a serious problem.', aCn: '沒有；他否認有嚴重的問題。' },
+            { q: 'Who interrupted the speaker, and what did the manager want?', qCn: '誰打斷了說話者？主管想要什麼？',
+              a: 'The manager interrupted and asked the speaker to persuade the customer to pay the unpaid invoice.', aCn: '主管打斷他，要他說服客戶付清未付的請款單。' },
+            { q: 'Why did the speaker go outside?', qCn: '說話者為什麼走到外面？',
+              a: 'He felt stressed and wanted to feel calm and clear his mind, imagining a quiet beach.', aCn: '他覺得有壓力，想讓自己冷靜、清空思緒，想像一個安靜的海灘。' },
+            { q: 'By the end of the day, were the problems solved?', qCn: '到了一天結束時，問題解決了嗎？',
+              a: 'Yes, everything was back to normal.', aCn: '是的，一切都恢復正常了。' }
+          ],
+          sumEn: ['語言重點：contact = call, message, or reach someone；persuade = convince；rapport = good communication and relationship；under construction；unpaid invoice.'],
+          sumCn: ['contact ＝ 聯絡（打電話、傳訊息或找到某人）；persuade ＝ convince（說服）；rapport ＝ 融洽關係；under construction ＝ 施工中；unpaid invoice ＝ 未付的請款單。']
+        }
+      ],
+      extraTitle: 'VIII / X. 造句與情境練習、Unit 53 & 54 課本練習解答',
+      extra: [
+        {
+          title: 'VIII-A. 課堂 -ing 造句練習（Unit 53）',
+          exs: [
+            { en: 'I considered applying for the job, but in the end I decided against it.', cn: '我考慮過應徵這份工作，但最後決定不去。', hi: 'considered applying / decided against' },
+            { en: "I'm trying to concentrate. Please stop making so much noise.", cn: '我正努力專心，請別再製造那麼多噪音。', hi: 'stop making' },
+            { en: 'My memory is getting worse. I keep forgetting things.', cn: '我的記性越來越差，一直忘東忘西。', hi: 'keep forgetting' },
+            { en: "We can't go on living like this.", cn: '我們不能再這樣生活下去。', hi: 'go on living' },
+            { en: "It's better to avoid traveling during the rush hour.", cn: '最好避免在尖峰時段出行。', hi: 'avoid traveling' },
+            { en: 'Would you mind not interrupting me all the time? Let me speak.', cn: '可以請你別一直打斷我嗎？讓我把話說完。', hi: 'mind not interrupting' },
+            { en: "We can't stop it raining.", cn: '我們無法阻止下雨。（英式慣用；美式說 stop it from raining）', hi: 'stop it raining' }
+          ]
+        },
+        {
+          title: 'VIII-B. 峴港遊記口說訂正 Da Nang Trip',
+          exs: [
+            { en: 'Last week, I went to Da Nang for three days.', cn: '上週我去峴港三天。', hi: 'went to … for three days' },
+            { en: 'On the first day, I visited Ba Na Mountains and took the cable car.', cn: '第一天我去了巴拿山，搭了纜車。', hi: 'On the first day' },
+            { en: 'The temperature was twenty degrees.', cn: '溫度是二十度。（用複數 degrees，不是 degree）', hi: 'degrees' },
+            { en: 'When I arrived at the top, it was raining a little. My hair got wet.', cn: '我到山頂時下著小雨，頭髮濕了。', hi: 'arrived at the top' },
+            { en: 'I went to the beach and enjoyed the beautiful sea view. It made me feel relaxed.', cn: '我去了海灘，欣賞美麗的海景，讓我感到放鬆。', hi: 'made me feel relaxed' },
+            { en: 'When I arrived in Hanoi, I went straight to work without taking any rest.', cn: '我到河內時直接去上班，完全沒有休息。⚠️ went straight 要連著、流暢地唸，不要拆開。', hi: 'went straight to work' }
+          ]
+        },
+        {
+          title: 'X-A. 課本練習 53.1　依對話情境完成句子（用 -ing）',
+          exs: [
+            { en: 'She suggested going to the zoo.', cn: '1.「Shall we go to the zoo?」→ 她建議去動物園。', hi: 'suggested going' },
+            { en: "He didn't fancy playing tennis.", cn: '2.「Do you want to play tennis?」→ 他不想打網球。', hi: 'fancy playing' },
+            { en: 'She suggested going for a walk.', cn: "3.「Let's go for a walk.」→ 她建議去散步。", hi: 'suggested going' },
+            { en: 'He denied causing the accident.', cn: '4.「You caused the accident.」→ 他否認造成了這場意外。', hi: 'denied causing' },
+            { en: "They didn't mind waiting a few minutes.", cn: '5.「Can you wait a few minutes?」→ 他們不介意等幾分鐘。', hi: 'mind waiting' },
+            { en: 'She admitted not telling the truth.', cn: "6.「You didn't tell the truth.」→ 她承認沒有說實話。（或 lying）", hi: 'admitted not telling' }
+          ]
+        },
+        {
+          title: 'X-B. 課本練習 53.2　用括號動詞的 -ing 形式填空',
+          exs: [
+            { en: 'He tried to avoid answering my question.', cn: '1. 他試圖避開我的問題。', hi: 'answering' },
+            { en: 'Please stop making so much noise!', cn: '2. 請不要再製造這麼多噪音了！', hi: 'making' },
+            { en: 'I enjoy listening to music.', cn: '3. 我喜歡聽音樂。', hi: 'listening' },
+            { en: 'I considered applying for the job, but I decided against it.', cn: '4. 我考慮過應徵那份工作，但決定不去。', hi: 'applying' },
+            { en: 'Have you finished reading the newspaper yet?', cn: '5. 報紙你看完了嗎？', hi: 'reading' },
+            { en: "We can't go on living like this.", cn: '6. 我們不能再這樣過下去了。', hi: 'living' },
+            { en: "It's better to avoid travelling during the rush hour.", cn: '7. 最好避免在尖峰時間移動。', hi: 'travelling' },
+            { en: 'I keep forgetting things.', cn: '8. 我老是忘東忘西。', hi: 'forgetting' },
+            { en: "I've put off paying this bill so many times.", cn: '9. 這張帳單我已經拖了好多次沒付。', hi: 'paying' },
+            { en: "I've given up trying to learn Japanese.", cn: '10. 我放棄學日文了。', hi: 'trying' },
+            { en: 'If you gamble, you risk losing your money.', cn: '11. 如果你賭博，你就有輸錢的風險。', hi: 'losing' },
+            { en: 'Would you mind not interrupting me all the time?', cn: '12. 你可以不要一直打斷我嗎？', hi: 'not interrupting' }
+          ]
+        },
+        {
+          title: 'X-C. 課本練習 53.3　把括號內的字重組成正確句子',
+          exs: [
+            { en: "I don't remember her saying that.", cn: '1. 我不記得她說過那句話。', hi: 'remember her saying' },
+            { en: "I don't mind you driving it.", cn: '2. 我不介意你開它。', hi: 'mind you driving' },
+            { en: 'Can you imagine anybody being so stupid?', cn: '3. 你能想像有人這麼笨嗎？', hi: 'imagine anybody being' },
+            { en: "We can't stop it raining.", cn: '4. 我們無法阻止下雨。', hi: 'stop it raining' },
+            { en: "I don't want to keep you waiting.", cn: '5. 我不想讓你一直等。', hi: 'keep you waiting' }
+          ]
+        },
+        {
+          title: 'X-D. 課本練習 53.4　用自己的想法完成句子（開放式參考答案）',
+          exs: [
+            { en: "I'm not feeling well. I don't fancy going out.", cn: '2. 我不太舒服，不太想出門。', hi: 'going out' },
+            { en: "There aren't any chairs. I hope you don't mind sitting on the floor.", cn: '3. 沒有椅子了，希望你不介意坐地板。', hi: 'sitting on the floor' },
+            { en: 'It was a beautiful day, so I suggested having a picnic.', cn: '4. 那天天氣很好，所以我建議去野餐。', hi: 'having a picnic' },
+            { en: "The movie was very funny. I couldn't stop laughing.", cn: '5. 那部電影很好笑，我笑到停不下來。', hi: 'laughing' },
+            { en: 'My car is unreliable. It keeps breaking down.', cn: '6. 我的車不可靠，老是拋錨。', hi: 'breaking down' }
+          ]
+        },
+        {
+          title: 'X-E. 課本練習 54.1　依對話情境完成句子（用 to）',
+          exs: [
+            { en: 'They decided to get married.', cn: '1.「Shall we get married?」→ 他們決定結婚。', hi: 'to get married' },
+            { en: 'She agreed to help him.', cn: '2.「Please help me.」→ 她同意幫他。', hi: 'to help' },
+            { en: 'He offered to carry her bag for her.', cn: '3.「Can I carry your bag?」→ 他主動要幫她提包包。', hi: 'offered to carry' },
+            { en: "They arranged to meet at 8 o'clock.", cn: "4.「Let's meet at 8 o'clock.」→ 他們約好八點見。", hi: 'arranged to meet' },
+            { en: 'She refused to tell him her name.', cn: '5.「What\'s your name?」（拒答）→ 她拒絕告訴他名字。', hi: 'refused to tell' },
+            { en: 'She promised not to tell anyone.', cn: "6.「Please don't tell anyone.」→ 她保證不告訴任何人。", hi: 'promised not to tell' }
+          ]
+        },
+        {
+          title: 'X-F. 課本練習 54.2　填入合適動詞（to + 原形）',
+          exs: [
+            { en: "Don't forget to lock the door when you go out.", cn: '1. 出門別忘了鎖門。', hi: 'to lock' },
+            { en: 'There was a lot of traffic, but we managed to get to the airport in time.', cn: '2. 車很多，但我們設法及時趕到機場。', hi: 'to get' },
+            { en: "We couldn't afford to live in London.", cn: '3. 我們負擔不起住在倫敦。', hi: 'to live' },
+            { en: "I'd like to learn to play the guitar.", cn: '4. 我想學彈吉他。', hi: 'to play' },
+            { en: 'I decided not to tell him what happened.', cn: '5. 我決定不告訴他發生了什麼事。', hi: 'not to tell' },
+            { en: 'Nobody dared (to) say anything.', cn: '6. 沒有人敢說話。（dare 之後 to 可省略）', hi: '(to) say' }
+          ]
+        },
+        {
+          title: 'X-G. 課本練習 54.3　填 to … 或 -ing',
+          exs: [
+            { en: "When I'm tired, I enjoy watching TV.", cn: '1. 累的時候我喜歡看電視。', hi: 'watching' },
+            { en: "I've decided to look for another job.", cn: '2. 我決定找另一份工作。', hi: 'to look' },
+            { en: "I'm not going anywhere! I refuse to move.", cn: '3. 我哪裡都不去！我拒絕移動。', hi: 'to move' },
+            { en: "I'm not in a hurry. I don't mind waiting.", cn: '4. 我不趕時間，我不介意等。', hi: 'waiting' },
+            { en: 'Tina ran a marathon, but she failed to finish.', cn: '5. Tina 跑了馬拉松，但沒能跑完。', hi: 'to finish' },
+            { en: 'I wish that dog would stop barking.', cn: '6. 真希望那隻狗不要再叫了。', hi: 'barking' },
+            { en: 'I pretended to be asleep.', cn: '7. 我假裝睡著了。', hi: 'to be' },
+            { en: 'We were hungry, so I suggested having dinner early.', cn: '8. 我們餓了，所以我建議早點吃晚餐。', hi: 'having' },
+            { en: "Hurry up! I don't want to risk missing the train.", cn: '9. 快點！我不想冒錯過火車的風險。', hi: 'missing' },
+            { en: 'David is very quiet. He tends not to say much.', cn: '10. David 很安靜，他通常話不多。', hi: 'not to say' }
+          ]
+        },
+        {
+          title: 'X-H. 課本練習 54.4　用括號的動詞造新句（seem / appear / claim）',
+          exs: [
+            { en: 'Tom appears to be worried about something.', cn: '2. Tom 似乎在擔心某件事。', hi: 'appears to be' },
+            { en: 'You seem to know a lot of people.', cn: '3. 你似乎認識很多人。', hi: 'seem to know' },
+            { en: 'My English seems to be getting better.', cn: '4. 我的英文似乎在進步。', hi: 'seems to be getting' },
+            { en: 'That car appears to have broken down.', cn: '5. 那台車似乎拋錨了。', hi: 'appears to have' },
+            { en: 'Rachel seems to be enjoying her job.', cn: '6. Rachel 似乎很喜歡她的工作。', hi: 'seems to be enjoying' },
+            { en: 'They claim to have solved the problem.', cn: '7. 他們聲稱已經解決了問題。', hi: 'claim to have solved' }
+          ]
+        },
+        {
+          title: 'X-I. 課本練習 54.5　用 what / how / where / whether + to 完成句子',
+          exs: [
+            { en: 'Do you know how to get to the airport from here?', cn: '1. 你知道從這裡怎麼去機場嗎？', hi: 'how to get' },
+            { en: 'Would you know what to do if there was a fire in the building?', cn: '2. 如果大樓失火，你知道該怎麼做嗎？', hi: 'what to do' },
+            { en: "You'll never forget how to ride a bike once you've learnt.", cn: '3. 學會騎腳踏車就永遠不會忘。', hi: 'how to ride' },
+            { en: "I've been invited to the party, but I haven't decided whether to go or not.", cn: '4. 我被邀請去派對，但還沒決定要不要去。', hi: 'whether to go' },
+            { en: "My room is very untidy. I don't know where to put everything.", cn: '5. 我房間很亂，我不知道東西該放哪裡。', hi: 'where to put' },
+            { en: 'I have some clothes to wash. Can you show me how to use the washing machine?', cn: '6. 我有些衣服要洗，你能教我怎麼用洗衣機嗎？', hi: 'how to use' }
+          ]
+        }
+      ]
     }
   ]
 };
@@ -10836,7 +11214,8 @@ window.BOOK = {
     bk20260707:[[['doc','plane','cloudRain','coin','check'],'飛行問題：出發前仔細查時刻表 → 訂了機票準時到機場 → 天氣不好班機延誤後取消 → 線上申請退款 → 改訂隔天班機並趕上火車。']],
     bk20260730:[[['star','warning','music','globe','smile'],'悲觀者飾演悲觀者：《怪醫豪斯》的主角豪斯醫生 → 演員 Hugh Laurie 本人也很悲觀 → 但他熱愛藍調、錄了專輯 → 他說悲觀是因為他是蘇格蘭人 → 路人常叫他「振作點」。']],
     bk20260806:[[['target','warning','talk','check','star'],'成功之鑰：Emma 夢想在事業上成功 → 團隊溝通不良造成延遲 → 她召開會議請大家詳細說明 → 有效溝通迅速解決問題 → 保持樂觀成為成功的領導者。']],
-    bk20260903:[[['building','warning','doc','talk','check'],'難熬的一天：大樓施工得走另一個入口 → 電腦系統當機 → 主管打斷追問未付發票 → 冷靜說服客戶付款 → 一切恢復正常並成功收尾。']]
+    bk20260903:[[['building','warning','doc','talk','check'],'難熬的一天：大樓施工得走另一個入口 → 電腦系統當機 → 主管打斷追問未付發票 → 冷靜說服客戶付款 → 一切恢復正常並成功收尾。']],
+    bk20260908:[[['building','warning','doc','talk','check'],'辦公室難熬的一天：大樓施工改走另一個入口 → 電腦系統當機、電梯不可靠 → 主管打斷追問未付請款單 → 冷靜說服客戶付款 → 到外面紓壓、一切恢復正常。']]
   };
   ((window.BOOK||{}).lessons||[]).forEach(function(b){
     var specs=S[b.id]; if(!specs) return;
