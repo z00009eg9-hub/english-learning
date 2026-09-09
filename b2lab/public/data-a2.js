@@ -155,7 +155,7 @@ articles:[
     {w:"headache",ipa:"/ˈhedeɪk/",pos:"n.",cn:"頭痛",def:"A pain in your head.",ex:"I had a headache.",exCn:"我頭痛。"},
     {w:"throat",ipa:"/θroʊt/",pos:"n.",cn:"喉嚨",def:"The front part of your neck; the way food goes down.",ex:"My throat hurt.",exCn:"我喉嚨痛。"},
     {w:"clinic",ipa:"/ˈklɪnɪk/",pos:"n.",cn:"診所",def:"A small place where you see a doctor.",ex:"The clinic was near my home.",exCn:"那家診所離我家很近。"},
-    {w:"medicine",ipa:"/ˈmedɪsn/",pos:"n.",cn:"藥",def:"Something you take when you are ill.",ex:"He gave me some medicine.",exCn:"他給了我一些藥。"},
+    {w:"medicine",ipa:"/ˈmedɪsɪn/",pos:"n.",cn:"藥",def:"Something you take when you are ill.",ex:"He gave me some medicine.",exCn:"他給了我一些藥。"},
     {w:"much better",ipa:"/mʌtʃ ˈbetɚ/",pos:"phr.",cn:"好多了",def:"A lot better than before.",ex:"Today I feel much better.",exCn:"我今天覺得好多了。"}
   ],
   questions:[

@@ -5964,7 +5964,7 @@ window.BOOK = {
           ex: 'They rely on informal agreements.', exCn: '他們依賴非正式的協議。' },
         { w: 'agreement', ipa: '/əˈɡrimənt/', pos: 'n.', cn: '協議；同意',
           ex: 'They made an informal agreement.', exCn: '他們達成非正式協議。' },
-        { w: 'ignore', ipa: '/ɪɡˈnor/', pos: 'v.', cn: '忽視；不理會',
+        { w: 'ignore', ipa: '/ɪɡˈnɔːr/', pos: 'v.', cn: '忽視；不理會',
           ex: 'When chores are ignored, tension can build quickly.', exCn: '當家務被忽視時，緊張氣氛會迅速累積。' },
         { w: 'tension', ipa: '/ˈtenʃən/', pos: 'n.', cn: '緊張氣氛；張力',
           ex: 'Tension can build quickly.', exCn: '緊張氣氛會迅速累積。' },

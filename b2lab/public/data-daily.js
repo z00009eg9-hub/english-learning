@@ -59,7 +59,7 @@ articles:[
   "target": [
     {
       "w": "fever",
-      "ipa": "/ˈfiːvər/",
+      "ipa": "/ˈfiː.vɚ/",
       "pos": "n.",
       "cn": "發燒",
       "def": "A body temperature that is higher than normal.",
@@ -104,7 +104,7 @@ articles:[
     },
     {
       "w": "better",
-      "ipa": "/ˈbetər/",
+      "ipa": "/ˈbetɚ/",
       "pos": "adj.",
       "cn": "好一點的",
       "def": "Feeling less sick than before.",
@@ -247,7 +247,7 @@ articles:[
     },
     {
       "w": "dizzy",
-      "ipa": "/ˈdɪzi/",
+      "ipa": "/ˈdɪz.i/",
       "pos": "adj.",
       "cn": "頭暈的",
       "def": "Feeling like everything is spinning around you.",
@@ -274,7 +274,7 @@ articles:[
     },
     {
       "w": "symptom",
-      "ipa": "/ˈsɪmptəm/",
+      "ipa": "/ˈsɪmp.təm/",
       "pos": "n.",
       "cn": "症狀",
       "def": "A sign that shows you are sick.",
@@ -426,7 +426,7 @@ articles:[
     },
     {
       "w": "blood pressure",
-      "ipa": "/blʌd ˈpreʃər/",
+      "ipa": "/blʌd ˈpreʃɚ/",
       "pos": "n.",
       "cn": "血壓",
       "def": "The force of blood pushing against your blood vessels.",
@@ -453,7 +453,7 @@ articles:[
     },
     {
       "w": "postpone",
-      "ipa": "/poʊstˈpoʊn/",
+      "ipa": "/poʊˈspoʊn/",
       "pos": "v.",
       "cn": "延後",
       "def": "To move something to a later time.",
@@ -630,7 +630,7 @@ articles:[
   "target": [
     {
       "w": "colleague",
-      "ipa": "/ˈkɑːliːɡ/",
+      "ipa": "/ˈkɑː.liːɡ/",
       "pos": "n.",
       "cn": "同事",
       "def": "A person you work with.",
@@ -693,7 +693,7 @@ articles:[
     },
     {
       "w": "unglamorous",
-      "ipa": "/ʌnˈɡlæmərəs/",
+      "ipa": "/ʌnˈɡlæmɚəs/",
       "pos": "adj.",
       "cn": "不起眼的、平淡無奇的",
       "def": "Not exciting or impressive.",
