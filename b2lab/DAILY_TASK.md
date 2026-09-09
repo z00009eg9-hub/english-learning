@@ -138,6 +138,7 @@ date +%Y-%m-%d                # 今天日期（用 UTC 即可，排程在當地�
 | `focus` | 這篇的文法焦點（一句話） |
 | `intro` | 2–3 句中文導讀，說明要注意什麼結構 |
 | `paras` | 4 個 `{en, cn}`，每段都要有完整中譯 |
+| `ipa`（所有 target / pre 共用） | **音標一律美式、Cambridge 記法（2026-09-09 全站統一）**：ɑː 不用 ɒ、tuː 不用 tjuː、非重音 -er 寫 ɚ、bird 寫 ɝː、用 e 不用 ɛ、IPA 的 ɡ、一律 `/…/` 不用 `[…]`。同一個字若已出現在任何 `public/data-*.js`，**先 grep 並沿用完全相同的音標字串**，同字不能有兩種寫法。例：/kənˈvɪns/、/pɚˈsweɪd/、/ˈmɑː.nə.t̬ɚ/ |
 | `target` | A2/B1 篇 5–6 個、B1+/B2 篇 7–9 個 `{w, ipa, pos, cn, def, ex, exCn}`；`def` 用簡單英文，`ex` 取自本文，`exCn` 是 `ex` 的繁體中文翻譯（一定要有） |
 | `questions` | A2/B1 篇 3 題、B1+/B2 篇 4 題 `{q, qCn, opts, optsCn, ans, expl}`；`opts` 4 個選項且以 `"A. "`–`"D. "` 開頭，`ans` 是 0-based 索引，`expl` 用中文並引用原文依據 |
 | `qCn` / `optsCn` | **每題都要**：`qCn` 是題目的中文翻譯；內容理解題加 `optsCn`（四個選項的中文，一樣 A–D 開頭）。純文法填空題（選項是動詞變化）只要 `qCn` 寫出整句中文意思、不用 `optsCn`。網站的「顯示中譯」開關靠這兩個欄位 |

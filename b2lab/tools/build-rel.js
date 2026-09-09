@@ -202,9 +202,11 @@ function lessonsOf(idx, members) {
   return [...ids].sort();
 }
 function addRel(o) {
-  if (byKey[o.key]) { // 合併：已存在（例如 cmp 與詞庫同一組）→ 補齊缺的欄位
+  if (byKey[o.key]) { // 合併：已存在（例如 cmp 與詞庫同一組）→ 補齊缺的欄位；詞庫的一句差異較短，優先當「快速差異」，老師的長說明退到 note
     const t = byKey[o.key];
-    if (!t.diff.length && o.diff.length) t.diff = o.diff;
+    if (o.src === 'lexicon' && o.diff.length) { if (t.diff.length && !t.note) t.note = t.diff; t.diff = o.diff; }
+    else if (!t.diff.length && o.diff.length) t.diff = o.diff;
+    if (o.src === 'lexicon' && o.type === 'rel') t.type = 'rel';
     if (!t.tip && o.tip) t.tip = o.tip;
     o.pats.forEach(p => { if (!t.pats.includes(p)) t.pats.push(p); });
     if (!t.exs.length) t.exs = o.exs;
@@ -266,7 +268,14 @@ function fromCmp(lessons, idx) {
     if (!groups.length && rows.length >= 2) groups = [{ rows, label: rawTitle }];
     groups = groups.concat(vsGroups);
     const warn = b.cmpWarn && typeof b.cmpWarn === 'object' ? b.cmpWarn : null;
-    groups.forEach(({ rows: g, label }) => {
+    groups.forEach(({ rows: g0, label }) => {
+      // 品質門檻：4 個以上的比較表（默契的四種說法）太寬，只留詞庫裡有明確差異的那幾個（chemistry↔rapport）；留不到 2 個就整組不建
+      let g = g0;
+      if (g0.length >= 4) {
+        const sets = LEX.SYN.map(s => s.m.map(norm)).concat(LEX.ANT.map(p => p.map(norm)));
+        const keep = new Set(); sets.forEach(set => { const hit = g0.filter(r => set.includes(r.key)); if (hit.length >= 2) hit.forEach(r => keep.add(r.key)); });
+        g = g0.filter(r => keep.has(r.key)); if (g.length < 2) return;
+      }
       const members = g.map(r => { const kind = idx.words[r.key] ? 'w' : 'p'; const m = mkMember(idx, r.key, kind); if (r.cn) m.cn = r.cn; return m; })
         .sort((a, c) => a.key.localeCompare(c.key));
       // 概念名：標題的中文開頭（「默契的四種說法 chemistry / rapport…」→「默契的四種說法」）；沒有中文就用英文標題；都沒有就用成員中文
@@ -280,7 +289,8 @@ function fromCmp(lessons, idx) {
         key: 'syn:' + members.map(m => m.key).join('|'), type,
         title: title(members, ' ↔ '), members, concept: concept.slice(0, 40),
         diff: g.map(r => ({ en: r.u, cn: String(r.sc || r.cn || '').trim() })).filter(d => d.cn),
-        tip: warn ? String(warn.title || '').replace(/^正確用法對照[（(]?/, '').replace(/[）)]$/, '') : (typeof b.cmpWarn === 'string' ? b.cmpWarn : ''),
+        // 口訣只在「整張表就是這一組」時才帶（Tricky Pairs 拆成多組後，表尾的訂正提醒不屬於任何一組）；太長的不當口訣
+        tip: (groups.length === 1 && g.length === g0.length) ? (() => { const t = warn ? String(warn.title || '').replace(/^正確用法對照[（(]?/, '').replace(/[）)]$/, '') : (typeof b.cmpWarn === 'string' ? b.cmpWarn : ''); return t.length <= 60 ? t : ''; })() : '',
         pats: [], exs: g.filter(r => r.ex).slice(0, 2).map(r => ({ en: r.ex, cn: r.exCn || '', id: b.id })),
         lessonIds: lessonsOf(idx, members), score: 100, src: 'cmp',
       });
@@ -300,7 +310,7 @@ function fromLexicon(idx) {
     const members = learned.map(k => mkMember(idx, k, has(k))).sort((a, c) => a.key.localeCompare(c.key));
     const exs = []; members.forEach(m => { const x = findExample(idx, m.key, m.kind); if (x && exs.length < 2) exs.push({ ...x, of: m.en }); });
     addRel({
-      key: (set.ant ? 'ant:' : 'syn:') + members.map(m => m.key).join('|'), type: set.ant ? 'ant' : 'syn',
+      key: (set.ant ? 'ant:' : 'syn:') + members.map(m => m.key).join('|'), type: set.ant ? 'ant' : (set.rel ? 'rel' : 'syn'),
       title: title(members, ' ↔ '), members, concept: set.concept || '',
       diff: members.map(m => ({ en: m.en, cn: (set.d || {})[m.key] || (set.d || {})[m.en] || '' })).filter(d => d.cn),
       tip: set.tip || '', pats: members.map(m => (set.pat || {})[m.key] || (set.pat || {})[m.en]).filter(Boolean),
@@ -314,7 +324,7 @@ function fromLexicon(idx) {
     addRel({
       key: 'ant:' + members.map(m => m.key).join('|'), type: 'ant',
       title: title(members, ' ↔ '), members, concept: members.map(m => m.cn).filter(Boolean).join(' ↔ '),
-      diff: [], tip: '', pats: [], exs, lessonIds: lessonsOf(idx, members), score: 88, src: 'lexicon',
+      diff: members.map(m => ({ en: m.en, cn: (LEX.ANT_D || {})[m.key] || m.cn || '' })).filter(d => d.cn), tip: '', pats: [], exs, lessonIds: lessonsOf(idx, members), score: 88, src: 'lexicon',
     }); n++;
   });
   return n;
@@ -478,7 +488,7 @@ function fromChain(idx) {
     addRel({
       key: 'chain:' + members.map(m => m.key).join('>'), type: 'chain',
       title: members.map(m => m.en).join(' → '), members, concept: ch.concept || '',
-      diff: members.map(m => ({ en: m.en, cn: m.cn })).filter(d => d.cn),
+      diff: members.map(m => ({ en: m.en, cn: (ch.d || {})[m.key] || m.cn })).filter(d => d.cn),
       tip: ch.cn || '', pats: ch.steps || [], exs, lessonIds: lessonsOf(idx, members), score: 90, src: 'chain',
     }); n++;
   });
@@ -488,7 +498,9 @@ function fromChain(idx) {
 /* ---------- 每課挑 ≤6 組：分數 → 跨課優先 → 類型多樣 → key 穩定排序 ---------- */
 const TYPE_ORDER = { syn: 0, rel: 1, ant: 2, chain: 3, fam: 4, pat: 5, flow: 6 };
 function pickForLesson(lessonId, items) {
-  const cands = items.filter(o => o.lessonIds.includes(lessonId) && o.score >= PER_LESSON_MIN_SCORE)
+  // 品質規則：易混淆／相關概念一定要有每個字的一句差異，否則只是「同主題」，不顯示
+  const quality = o => !((o.type === 'syn' || o.type === 'rel') && (o.diff || []).length < Math.min(2, o.members.length));
+  const cands = items.filter(o => o.lessonIds.includes(lessonId) && o.score >= PER_LESSON_MIN_SCORE && quality(o))
     .map(o => ({ o, s: o.score + (o.cross ? 15 : 0) }))
     .sort((a, c) => c.s - a.s || TYPE_ORDER[a.o.type] - TYPE_ORDER[c.o.type] || a.o.key.localeCompare(c.o.key));
   const out = [], perType = {};

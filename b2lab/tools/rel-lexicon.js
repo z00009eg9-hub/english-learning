@@ -14,10 +14,6 @@
 
 /* 近義／易混淆：members 兩個以上；d = 各字的一句差異；tip = 快速記憶（可省略） */
 const SYN = [
-  { m:['persuade','convince'], concept:'說服',
-    d:{ persuade:'偏向說服某人去「做」某事 → persuade sb to V', convince:'偏向使某人「相信」某件事 → convince sb that…' },
-    pat:{ persuade:'persuade sb to V', convince:'convince sb that…' },
-    tip:'persuade 推人去行動；convince 讓人點頭相信。' },
   { m:['concentrate','focus'], concept:'專心',
     d:{ concentrate:'需要出力、排除干擾地專注 → concentrate on', focus:'把注意力放在某個重點上，最常用、較中性 → focus on' } },
   { m:['effective','efficient'], concept:'有效 vs 有效率',
@@ -80,9 +76,10 @@ const SYN = [
     d:{ comfortable:'（人或物）舒服的', comforting:'令人感到安慰的' } },
   { m:['aim','goal','target'], concept:'目標',
     d:{ aim:'想達成的方向（較抽象）', goal:'具體想達成的目標', target:'量化的目標數字或對象' } },
-  { m:['chemistry','rapport'], concept:'默契',
-    d:{ chemistry:'兩人之間自然的來電、合拍', rapport:'透過相處建立的信任與好關係 → build rapport with sb' },
-    pat:{ rapport:'build / have a good rapport with sb' } },
+  { m:['chemistry','rapport'], concept:'默契', rel:true,
+    d:{ chemistry:'「自然產生」的默契、合拍感', rapport:'「建立出來」的融洽關係' },
+    pat:{ chemistry:'have good chemistry', rapport:'build good rapport with someone' } },
+  { m:['persuade','convince'], concept:'說服', d:{ persuade:'說服某人「去做」某事', convince:'使某人「相信」某件事' }, pat:{ persuade:'persuade someone to V', convince:'convince someone that...' }, tip:'persuade 推人去行動；convince 讓人點頭相信。' },
   { m:['relieve','release'], concept:'解除／釋放',
     d:{ relieve:'減輕（痛苦、壓力）→ relieve stress', release:'釋放、發布 → release a product' },
     pat:{ relieve:'relieve stress / pain' } },
@@ -192,7 +189,10 @@ const SYN = [
     d:{ optimistic:'樂觀的 → be optimistic about', pessimistic:'悲觀的' } },
 ];
 
-/* 反義：兩兩一組（會自動配對 both-learned），d 可省略 */
+/* 反義：兩兩一組（會自動配對 both-learned）；ANT_D 是可選的一句差異 */
+const ANT_D = { deny:'「否認」，說沒有', admit:'「承認」，說有', accept:'「接受」', refuse:'「拒絕」（不肯做）', reject:'「拒絕」（不接受、退回）',
+  formal:'正式的', informal:'非正式的', arrival:'「抵達」', departure:'「出發」', failure:'失敗', success:'成功', optimist:'樂觀的人', pessimist:'悲觀的人',
+  landlord:'房東（出租的人）', tenant:'房客（承租的人）', borrow:'「借入」（我向別人借）', lend:'「借出」（我借給別人）' };
 const ANT = [
   ['deny','admit'], ['agree','disagree'], ['accept','refuse'], ['accept','reject'], ['increase','decrease'],
   ['arrive','depart'], ['arrive','leave'], ['remember','forget'], ['succeed','fail'], ['success','failure'],
@@ -255,11 +255,12 @@ const FAM = [
 /* 情境鏈：由輕到重／由前到後的一串說法（成員全部學過才成立）。steps 是每一步的常見搭配（可省略）。 */
 const CHAIN = [
   { m:['pressure','stressed','overwhelmed'], concept:'壓力由小到大',
-    steps:['work under pressure','feel stressed','feel overwhelmed'],
-    cn:'承受壓力 → 感到緊張 → 招架不住（難以應付）' },
-  { m:['tired','exhausted'], concept:'累的程度', steps:['feel tired','be exhausted'], cn:'累 → 累到不行' },
-  { m:['worried','anxious'], concept:'擔心的程度', steps:['be worried about','feel anxious'], cn:'擔心 → 焦慮' },
-  { m:['delay','cancel'], concept:'航班狀況', steps:['be delayed','be cancelled'], cn:'延誤 → 取消' },
+    d:{ pressure:'「外在」的壓力', stressed:'「感受到」壓力', overwhelmed:'壓力大到「難以應付」' },
+    steps:['under pressure','feel stressed','feel overwhelmed'],
+    cn:'承受壓力 → 感到緊張 → 招架不住' },
+  { m:['tired','exhausted'], concept:'累的程度', d:{ tired:'累', exhausted:'累到「不行」' }, steps:['feel tired','be exhausted'], cn:'累 → 累到不行' },
+  { m:['worried','anxious'], concept:'擔心的程度', d:{ worried:'擔心（有具體的事）', anxious:'「焦慮」，較強、較持續' }, steps:['be worried about','feel anxious'], cn:'擔心 → 焦慮' },
+  { m:['delay','cancel'], concept:'航班狀況', d:{ delay:'「延誤」，晚了但還有', cancel:'「取消」，沒了' }, steps:['be delayed','be cancelled'], cn:'延誤 → 取消' },
 ];
 
-module.exports = { SYN, ANT, FAM, CHAIN };
+module.exports = { SYN, ANT, ANT_D, FAM, CHAIN };
