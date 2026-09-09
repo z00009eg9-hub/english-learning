@@ -8,6 +8,798 @@ window.DAILY = {
 
 articles:[
 {
+  "id": "d20260909a2",
+  "date": "2026-09-09",
+  "level": "A2",
+  "topic": "健康",
+  "words": 90,
+  "kind": "orig",
+  "title": "Tom Catches a Cold",
+  "titleCn": "Tom感冒了",
+  "focus": "現在簡單式描述症狀與看病經過；will表示對未來的預測",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom今天早上感冒不舒服，媽媽帶他去診所看病。全文只用現在簡單式和will，讀的時候留意will怎麼講「明天、之後」的預測。",
+  "spoken": [
+    {
+      "en": "Tom woke up feeling awful this morning — pounding headache, runny nose, the whole deal.",
+      "cn": "Tom今天早上醒來超不舒服——頭痛欲裂、一直流鼻水，整套症狀都來了。"
+    },
+    {
+      "en": "His mom felt his forehead, realized he was burning up, and rushed him to the clinic.",
+      "cn": "他媽摸了他額頭，發現他在發燒，趕緊帶他去診所。"
+    },
+    {
+      "en": "The place was packed, but the doctor checked him out and handed over some cold medicine.",
+      "cn": "診所擠滿了人，不過醫生還是幫他看了，開了感冒藥。"
+    },
+    {
+      "en": "Tom's crashing on the couch now, but he should be back to normal — and back at school — by tomorrow.",
+      "cn": "Tom現在窩在沙發上休息，不過明天應該就會恢復正常，可以回學校了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom wakes up and feels bad this morning. His head hurts, and his nose is running.",
+      "cn": "Tom今天早上起床覺得不舒服。他的頭很痛，鼻水一直流。"
+    },
+    {
+      "en": "Tom's mother checks his forehead and says he has a fever. She will take him to the clinic today.",
+      "cn": "Tom的媽媽摸他的額頭，說他發燒了。她今天會帶他去診所。"
+    },
+    {
+      "en": "At the clinic today, many people are waiting. A doctor checks Tom's throat and listens to his chest. She gives him some medicine for his cold.",
+      "cn": "在診所裡，今天有很多人在等。醫生檢查Tom的喉嚨，聽他的胸口。她給他一些感冒藥。"
+    },
+    {
+      "en": "Tom takes the medicine and rests on the sofa. He watches a little TV and then falls asleep. Tomorrow, he will feel better and can go back to school.",
+      "cn": "Tom吃了藥，躺在沙發上休息。他看了一下電視，然後睡著了。明天他會好一點，可以回學校上課。"
+    }
+  ],
+  "target": [
+    {
+      "w": "fever",
+      "ipa": "/ˈfiːvər/",
+      "pos": "n.",
+      "cn": "發燒",
+      "def": "A body temperature that is higher than normal.",
+      "ex": "Tom's mother checks his forehead and says he has a fever.",
+      "exCn": "Tom的媽媽摸他的額頭，說他發燒了。"
+    },
+    {
+      "w": "clinic",
+      "ipa": "/ˈklɪnɪk/",
+      "pos": "n.",
+      "cn": "診所",
+      "def": "A small place where doctors see patients.",
+      "ex": "She will take him to the clinic today.",
+      "exCn": "她今天會帶他去診所。"
+    },
+    {
+      "w": "wait",
+      "ipa": "/weɪt/",
+      "pos": "v.",
+      "cn": "等待",
+      "def": "To stay in a place until something happens.",
+      "ex": "At the clinic today, many people are waiting.",
+      "exCn": "在診所裡，今天有很多人在等。"
+    },
+    {
+      "w": "medicine",
+      "ipa": "/ˈmedɪsɪn/",
+      "pos": "n.",
+      "cn": "藥",
+      "def": "Something you take to feel better when you are sick.",
+      "ex": "She gives him some medicine for his cold.",
+      "exCn": "她給他一些感冒藥。"
+    },
+    {
+      "w": "rest",
+      "ipa": "/rest/",
+      "pos": "v.",
+      "cn": "休息",
+      "def": "To relax and not be active.",
+      "ex": "Tom takes the medicine and rests on the sofa.",
+      "exCn": "Tom吃了藥，躺在沙發上休息。"
+    },
+    {
+      "w": "better",
+      "ipa": "/ˈbetər/",
+      "pos": "adj.",
+      "cn": "好一點的",
+      "def": "Feeling less sick than before.",
+      "ex": "Tomorrow, he will feel better and can go back to school.",
+      "exCn": "明天他會好一點，可以回學校上課。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How does Tom feel this morning?",
+      "qCn": "Tom今天早上覺得怎麼樣？",
+      "opts": [
+        "A. He feels great",
+        "B. He feels bad",
+        "C. He feels hungry",
+        "D. He feels sleepy"
+      ],
+      "optsCn": [
+        "A. 他覺得很棒",
+        "B. 他覺得不舒服",
+        "C. 他覺得餓",
+        "D. 他覺得想睡"
+      ],
+      "ans": 1,
+      "expl": "Tom wakes up and feels bad this morning."
+    },
+    {
+      "q": "Where does Tom's mother take him?",
+      "qCn": "Tom的媽媽帶他去哪裡？",
+      "opts": [
+        "A. To school",
+        "B. To the clinic",
+        "C. To a restaurant",
+        "D. To the park"
+      ],
+      "optsCn": [
+        "A. 學校",
+        "B. 診所",
+        "C. 餐廳",
+        "D. 公園"
+      ],
+      "ans": 1,
+      "expl": "She will take him to the clinic today."
+    },
+    {
+      "q": "Tomorrow, he ___ feel better and can go back to school.",
+      "qCn": "明天他會好一點，可以回學校上課。（選出正確的字）",
+      "opts": [
+        "A. is",
+        "B. was",
+        "C. will",
+        "D. does"
+      ],
+      "ans": 2,
+      "expl": "will表示對未來的預測：明天他會好一點。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Tom's mother checked his forehead. She saw that he had a fever.",
+      "b2": "Tom's mother checked his forehead and saw that he had a fever.",
+      "note": "用and連接兩個動作，避免重複主詞she，句子更順，是B1常見的寫法。",
+      "sp": "Tom's mom felt his forehead and could tell right away he was running a fever.",
+      "spNote": "running a fever（發燒中）比had a fever更口語，could tell right away是「馬上就看得出來」。",
+      "b1Cn": "Tom的媽媽摸了他的額頭。她發現他發燒了。",
+      "b2Cn": "Tom的媽媽摸了他的額頭，發現他發燒了。",
+      "spCn": "Tom的媽媽摸了他的額頭，馬上就知道他在發燒。"
+    },
+    {
+      "b1": "Many people were waiting at the clinic. The doctor checked Tom's throat.",
+      "b2": "Many people were waiting at the clinic when the doctor checked Tom's throat.",
+      "note": "用when連接兩個同時發生的動作，比兩個短句更緊湊，是B1常見的寫法。",
+      "sp": "The clinic was packed, and the doctor still took a good look at Tom's throat.",
+      "spNote": "packed（擠滿人）比many people were waiting更口語生動。",
+      "b1Cn": "很多人在診所等。醫生檢查了Tom的喉嚨。",
+      "b2Cn": "很多人在診所等的時候，醫生檢查了Tom的喉嚨。",
+      "spCn": "診所擠滿了人，醫生還是仔細看了Tom的喉嚨。"
+    }
+  ]
+},
+
+{
+  "id": "d20260909b1",
+  "date": "2026-09-09",
+  "level": "B1",
+  "topic": "健康與醫療",
+  "words": 152,
+  "kind": "orig",
+  "title": "Amy Finally Sees a Doctor",
+  "titleCn": "Amy終於去看醫生了",
+  "focus": "現在完成式基礎（has felt, has learned, has already picked up）vs 過去簡單式（thought, decided, checked）；because/so/when連接原因與結果",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Amy這禮拜身體不太舒服，拖了幾天才去看醫生。文章用現在完成式的基礎用法（has not felt well, has learned）講「到目前為止」的狀態與教訓，也留意because/so/when怎麼連接原因和結果。",
+  "spoken": [
+    {
+      "en": "Amy's been feeling off all week — sore throat, dizzy spells, the works.",
+      "cn": "Amy整個禮拜都怪怪的——喉嚨痛、頭暈，症狀一堆。"
+    },
+    {
+      "en": "She finally dragged herself to the clinic yesterday, and the waiting room was packed.",
+      "cn": "她昨天終於拖著自己去了診所，候診室擠滿了人。"
+    },
+    {
+      "en": "Turns out it's just a nasty cold, not the flu — she picked up some meds and headed home.",
+      "cn": "結果只是很嚴重的感冒，不是流感——她拿了藥就回家了。"
+    },
+    {
+      "en": "Lesson learned: next time she's not going to tough it out for a whole week before seeing a doctor.",
+      "cn": "學到教訓了：下次她不會硬撐一整個禮拜才去看醫生。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "This week, Amy has not felt well at all. Her throat feels sore, and she often gets dizzy at her desk. She thought it was just tiredness, so she kept going to work every day.",
+      "cn": "這禮拜Amy一直覺得不太好。她喉嚨痛，常常在座位上覺得頭暈。她以為只是累了，所以還是每天照常上班。"
+    },
+    {
+      "en": "Yesterday, because she felt worse than before, Amy finally decided to see a doctor. She has never liked hospitals, but her headache was too strong to ignore. When she arrived at the clinic, the waiting room was already full.",
+      "cn": "昨天，因為覺得比之前更不舒服，Amy終於決定去看醫生。她一直都不喜歡醫院，但頭痛痛到讓她受不了。她到診所的時候，候診室已經坐滿了人。"
+    },
+    {
+      "en": "Amy waited for almost two hours because so many people were sick that week. The doctor checked her throat and said it was just a bad cold, not the flu. Amy felt relieved, and she has already picked up her medicine.",
+      "cn": "Amy等了快兩個小時，因為那個禮拜生病的人特別多。醫生檢查了她的喉嚨，說只是一般感冒，不是流感。Amy鬆了一口氣，而且已經拿了藥。"
+    },
+    {
+      "en": "Now Amy feels much better than yesterday, but she is still a little tired. She has learned that she should not ignore small symptoms. Next time, she will see a doctor sooner instead of waiting so long.",
+      "cn": "現在Amy覺得比昨天好多了，但還是有點累。她學到不應該忽視小症狀。下次她會早一點去看醫生，而不是拖這麼久。"
+    }
+  ],
+  "target": [
+    {
+      "w": "sore",
+      "ipa": "/sɔːr/",
+      "pos": "adj.",
+      "cn": "痛的",
+      "def": "Painful, especially in a part of the body.",
+      "ex": "Her throat feels sore, and she often gets dizzy at her desk.",
+      "exCn": "她喉嚨痛，常常在座位上覺得頭暈。"
+    },
+    {
+      "w": "dizzy",
+      "ipa": "/ˈdɪzi/",
+      "pos": "adj.",
+      "cn": "頭暈的",
+      "def": "Feeling like everything is spinning around you.",
+      "ex": "Her throat feels sore, and she often gets dizzy at her desk.",
+      "exCn": "她喉嚨痛，常常在座位上覺得頭暈。"
+    },
+    {
+      "w": "waiting room",
+      "ipa": "/ˈweɪtɪŋ ruːm/",
+      "pos": "n.",
+      "cn": "候診室",
+      "def": "A room where people wait, for example at a clinic.",
+      "ex": "When she arrived at the clinic, the waiting room was already full.",
+      "exCn": "她到診所的時候，候診室已經坐滿了人。"
+    },
+    {
+      "w": "relieved",
+      "ipa": "/rɪˈliːvd/",
+      "pos": "adj.",
+      "cn": "鬆了一口氣的",
+      "def": "Feeling less worried after something stressful ends.",
+      "ex": "Amy felt relieved, and she has already picked up her medicine.",
+      "exCn": "Amy鬆了一口氣，而且已經拿了藥。"
+    },
+    {
+      "w": "symptom",
+      "ipa": "/ˈsɪmptəm/",
+      "pos": "n.",
+      "cn": "症狀",
+      "def": "A sign that shows you are sick.",
+      "ex": "She has learned that she should not ignore small symptoms.",
+      "exCn": "她學到不應該忽視小症狀。"
+    },
+    {
+      "w": "ignore",
+      "ipa": "/ɪɡˈnɔːr/",
+      "pos": "v.",
+      "cn": "忽視",
+      "def": "To not pay attention to something on purpose.",
+      "ex": "She has learned that she should not ignore small symptoms.",
+      "exCn": "她學到不應該忽視小症狀。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Amy keep going to work every day?",
+      "qCn": "Amy為什麼還是每天照常上班？",
+      "opts": [
+        "A. Because she thought it was just tiredness",
+        "B. Because the clinic was closed",
+        "C. Because her boss told her to",
+        "D. Because she felt great"
+      ],
+      "optsCn": [
+        "A. 因為她以為只是累了",
+        "B. 因為診所沒開",
+        "C. 因為老闆叫她去",
+        "D. 因為她覺得很好"
+      ],
+      "ans": 0,
+      "expl": "She thought it was just tiredness, so she kept going to work every day."
+    },
+    {
+      "q": "What did the doctor say Amy had?",
+      "qCn": "醫生說Amy得了什麼？",
+      "opts": [
+        "A. The flu",
+        "B. A bad cold",
+        "C. A stomach problem",
+        "D. Nothing at all"
+      ],
+      "optsCn": [
+        "A. 流感",
+        "B. 一般感冒",
+        "C. 腸胃問題",
+        "D. 什麼都沒有"
+      ],
+      "ans": 1,
+      "expl": "The doctor checked her throat and said it was just a bad cold, not the flu."
+    },
+    {
+      "q": "Amy ___ that she should not ignore small symptoms.",
+      "qCn": "Amy學到不應該忽視小症狀。（選出正確的動詞形式）",
+      "opts": [
+        "A. learns",
+        "B. learned",
+        "C. has learned",
+        "D. is learning"
+      ],
+      "ans": 2,
+      "expl": "has learned強調到目前為止學到的教訓，用現在完成式。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Amy waited for almost two hours because so many people were sick that week.",
+      "b2": "Amy, who had been waiting for almost two hours, was finally seen by the doctor.",
+      "note": "用who帶出的關係子句補充Amy的狀況，並用被動語態was seen，把重點放在『她被看診』這件事，是B1+常見的寫法。",
+      "sp": "Amy sat there for almost two hours before the doctor finally called her in.",
+      "spNote": "called her in（叫她進去）是口語常用的看診用語。",
+      "b1Cn": "Amy等了快兩個小時，因為那個禮拜生病的人特別多。",
+      "b2Cn": "已經等了快兩個小時的Amy，終於被醫生看診了。",
+      "spCn": "Amy在那坐了快兩小時，醫生才終於叫她進去。"
+    },
+    {
+      "b1": "The doctor checked her throat and said it was just a bad cold, not the flu.",
+      "b2": "After her throat had been checked, Amy was told that it was just a bad cold, not the flu.",
+      "note": "用過去完成式被動had been checked交代先後順序，再用was told強調『她被告知的內容』，語氣更正式，是B1+常見寫法。",
+      "sp": "The doc checked her throat and told her it was just a bad cold, not the flu.",
+      "spNote": "doc是doctor的口語簡稱。",
+      "b1Cn": "醫生檢查了她的喉嚨，說只是一般感冒，不是流感。",
+      "b2Cn": "喉嚨被檢查過後，Amy被告知只是一般感冒，不是流感。",
+      "spCn": "醫生看了她的喉嚨，跟她說只是一般感冒，不是流感。"
+    }
+  ]
+},
+
+{
+  "id": "d20260909b1p",
+  "date": "2026-09-09",
+  "level": "B1+",
+  "topic": "健康與醫療",
+  "words": 199,
+  "kind": "orig",
+  "title": "The Checkup Anita Couldn't Skip",
+  "titleCn": "Anita無法迴避的健康檢查",
+  "focus": "現在完成式＋被動語態（has been advised, has been postponed, has been introduced）；which/who帶出的關係子句補充資訊",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "Anita的公司要求每位員工做年度健康檢查，這次檢查意外發現她的血壓和膽固醇偏高。文章大量使用「現在完成式＋被動語態」（has been advised, has been postponed, has been introduced）描述「到目前為止發生的事」，也留意which/who帶出的關係子句怎麼補充額外資訊。",
+  "spoken": [
+    {
+      "en": "Anita's company now makes everyone get a yearly checkup, and this year hers got bumped up because of a work trip to Singapore.",
+      "cn": "Anita的公司現在規定大家每年都要做健康檢查，今年她的檢查因為去新加坡出差被提前了。"
+    },
+    {
+      "en": "Turns out her blood pressure and cholesterol were both a bit high, and the nurse said it's basically stress.",
+      "cn": "結果她的血壓和膽固醇都有點偏高，護理師說基本上就是壓力造成的。"
+    },
+    {
+      "en": "Her trip got pushed back a week so she could get a follow-up test, and the doctor told her to ease up on coffee.",
+      "cn": "她的行程被延後一週去做追蹤檢查，醫生也叫她少喝點咖啡。"
+    },
+    {
+      "en": "Honestly, the checkup she'd been dreading forever turned out to be exactly what she needed.",
+      "cn": "老實說，她一直很怕的那次健檢，結果正是她需要的。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Every employee at Anita's company is now required to complete an annual medical check before September. This year, the appointment that Anita had scheduled for months was moved up because of an upcoming business trip to Singapore. She has always assumed the results would be fine.",
+      "cn": "Anita的公司現在規定每位員工在九月前都要完成一次年度健康檢查。今年，Anita原本排了好幾個月的檢查時間被提前了，因為她即將有一趟去新加坡的出差。她一直認為結果應該會沒事。"
+    },
+    {
+      "en": "At the clinic, Anita's blood pressure was measured twice because the first reading seemed high. A blood test, which was taken later that morning, showed that her cholesterol had also risen. The nurse, who noticed her worried expression, explained that this was common among people under constant stress.",
+      "cn": "在診所，Anita的血壓被量了兩次，因為第一次的數值看起來偏高。稍後那天早上做的血液檢查顯示，她的膽固醇也升高了。注意到她擔心表情的護理師解釋說，這在長期承受壓力的人身上很常見。"
+    },
+    {
+      "en": "Since the appointment, Anita has been advised to cut down on caffeine and to exercise more. Her trip to Singapore has not been cancelled, but it has been postponed by one week for a follow-up test. Anita, who usually pushes through stress without complaint, has finally admitted that she needs to slow down.",
+      "cn": "從那次檢查之後，Anita被建議少喝咖啡、多運動。她去新加坡的行程並沒有取消，但為了安排追蹤檢查，被延後了一個禮拜。平常總是硬撐著壓力、不抱怨的Anita，終於承認自己需要放慢腳步。"
+    },
+    {
+      "en": "A new wellness policy has recently been introduced, offering a quiet room and flexible lunch breaks. Anita now uses the quiet room every afternoon, and her headaches, which used to appear almost daily, have become less frequent. The health check she once dreaded may have been her most useful appointment this year.",
+      "cn": "公司最近新推出了一項健康政策，設置了安靜室和彈性午休時間。Anita現在每天下午都會使用安靜室，而她那個以前幾乎每天都會發作的頭痛，也變得比較少了。她曾經很害怕的那次健康檢查，或許是她今年最有用的一次約診。"
+    }
+  ],
+  "target": [
+    {
+      "w": "annual",
+      "ipa": "/ˈænjuəl/",
+      "pos": "adj.",
+      "cn": "年度的",
+      "def": "Happening once every year.",
+      "ex": "Every employee at Anita's company is now required to complete an annual medical check before September.",
+      "exCn": "Anita的公司現在規定每位員工在九月前都要完成一次年度健康檢查。"
+    },
+    {
+      "w": "blood pressure",
+      "ipa": "/blʌd ˈpreʃər/",
+      "pos": "n.",
+      "cn": "血壓",
+      "def": "The force of blood pushing against your blood vessels.",
+      "ex": "At the clinic, Anita's blood pressure was measured twice because the first reading seemed high.",
+      "exCn": "在診所，Anita的血壓被量了兩次，因為第一次的數值看起來偏高。"
+    },
+    {
+      "w": "cholesterol",
+      "ipa": "/kəˈlestərɔːl/",
+      "pos": "n.",
+      "cn": "膽固醇",
+      "def": "A fat-like substance in your blood that can affect your heart.",
+      "ex": "A blood test, which was taken later that morning, showed that her cholesterol had also risen.",
+      "exCn": "稍後那天早上做的血液檢查顯示，她的膽固醇也升高了。"
+    },
+    {
+      "w": "advise",
+      "ipa": "/ədˈvaɪz/",
+      "pos": "v.",
+      "cn": "建議",
+      "def": "To tell someone what you think they should do.",
+      "ex": "Since the appointment, Anita has been advised to cut down on caffeine and to exercise more.",
+      "exCn": "從那次檢查之後，Anita被建議少喝咖啡、多運動。"
+    },
+    {
+      "w": "postpone",
+      "ipa": "/poʊstˈpoʊn/",
+      "pos": "v.",
+      "cn": "延後",
+      "def": "To move something to a later time.",
+      "ex": "Her trip to Singapore has not been cancelled, but it has been postponed by one week for a follow-up test.",
+      "exCn": "她去新加坡的行程並沒有取消，但為了安排追蹤檢查，被延後了一個禮拜。"
+    },
+    {
+      "w": "wellness",
+      "ipa": "/ˈwelnəs/",
+      "pos": "n.",
+      "cn": "健康促進",
+      "def": "The state of being healthy, especially as something a company actively supports.",
+      "ex": "A new wellness policy has recently been introduced, offering a quiet room and flexible lunch breaks.",
+      "exCn": "公司最近新推出了一項健康政策，設置了安靜室和彈性午休時間。"
+    },
+    {
+      "w": "headache",
+      "ipa": "/ˈhedeɪk/",
+      "pos": "n.",
+      "cn": "頭痛",
+      "def": "A pain inside your head.",
+      "ex": "Anita now uses the quiet room every afternoon, and her headaches, which used to appear almost daily, have become less frequent.",
+      "exCn": "Anita現在每天下午都會使用安靜室，而她那個以前幾乎每天都會發作的頭痛，也變得比較少了。"
+    },
+    {
+      "w": "dread",
+      "ipa": "/dred/",
+      "pos": "v.",
+      "cn": "害怕、畏懼",
+      "def": "To feel very worried about something that is going to happen.",
+      "ex": "The health check she once dreaded may have been her most useful appointment this year.",
+      "exCn": "她曾經很害怕的那次健康檢查，或許是她今年最有用的一次約診。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why was Anita's medical check moved up this year?",
+      "qCn": "今年Anita的健康檢查為什麼被提前了？",
+      "opts": [
+        "A. Because of an upcoming business trip to Singapore",
+        "B. Because the clinic was closing",
+        "C. Because she requested it",
+        "D. Because her company moved offices"
+      ],
+      "optsCn": [
+        "A. 因為她即將去新加坡出差",
+        "B. 因為診所要關門",
+        "C. 因為她自己要求",
+        "D. 因為公司搬辦公室"
+      ],
+      "ans": 0,
+      "expl": "the appointment that Anita had scheduled for months was moved up because of an upcoming business trip to Singapore."
+    },
+    {
+      "q": "What did the blood test show?",
+      "qCn": "血液檢查顯示了什麼？",
+      "opts": [
+        "A. That her cholesterol had also risen",
+        "B. That she had a fever",
+        "C. That she needed surgery",
+        "D. That her blood pressure was normal"
+      ],
+      "optsCn": [
+        "A. 她的膽固醇也升高了",
+        "B. 她發燒了",
+        "C. 她需要動手術",
+        "D. 她的血壓正常"
+      ],
+      "ans": 0,
+      "expl": "A blood test... showed that her cholesterol had also risen."
+    },
+    {
+      "q": "What has happened to Anita's trip to Singapore?",
+      "qCn": "Anita去新加坡的行程發生了什麼事？",
+      "opts": [
+        "A. It has been postponed by one week",
+        "B. It has been cancelled completely",
+        "C. It has not changed at all",
+        "D. It has been moved to another country"
+      ],
+      "optsCn": [
+        "A. 被延後了一個禮拜",
+        "B. 完全被取消了",
+        "C. 完全沒有改變",
+        "D. 被改到另一個國家"
+      ],
+      "ans": 0,
+      "expl": "it has been postponed by one week for a follow-up test."
+    },
+    {
+      "q": "A new wellness policy ___ recently at Anita's company.",
+      "qCn": "公司最近新推出了一項健康政策。（選出正確的動詞形式）",
+      "opts": [
+        "A. introduces",
+        "B. introduced",
+        "C. has been introduced",
+        "D. is introducing"
+      ],
+      "ans": 2,
+      "expl": "政策是『被推出』的一方，強調到目前為止的結果，用現在完成式的被動has been introduced。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Anita's blood pressure was measured twice because the first reading seemed high.",
+      "b2": "Because the first reading had seemed unusually high, Anita's blood pressure was measured a second time to confirm the result.",
+      "note": "用had seemed的過去完成式交代『先後順序』（先覺得偏高，才又量一次），並加上to confirm the result說明目的，語氣更正式、更像B2的敘事寫法。",
+      "sp": "Her blood pressure looked kind of high the first time, so they just checked it again to be sure.",
+      "spNote": "kind of（有點）、to be sure（為了保險起見）是口語常見的緩和語氣。",
+      "b1Cn": "Anita的血壓被量了兩次，因為第一次的數值看起來偏高。",
+      "b2Cn": "因為第一次的數值看起來異常偏高，Anita的血壓被再量了一次以確認結果。",
+      "spCn": "她第一次量的血壓有點高，所以他們又量了一次確認一下。"
+    },
+    {
+      "b1": "The health check she once dreaded may have been her most useful appointment this year.",
+      "b2": "If there is one appointment Anita has learned to be grateful for, it is the health check she once dreaded.",
+      "note": "用If there is one...it is...的句型帶出結論，是B2常見的、更有文采的開場方式，呼應前面文章談到的『感激』語氣。",
+      "sp": "Turns out the checkup she used to dread might've been the best thing that happened to her all year.",
+      "spNote": "Turns out（結果是）、might've been是口語常見的推測語氣。",
+      "b1Cn": "她曾經很害怕的那次健康檢查，或許是她今年最有用的一次約診。",
+      "b2Cn": "如果說有哪一次約診是Anita學會心懷感激的，那就是她曾經很害怕的那次健康檢查。",
+      "spCn": "結果那次她本來很怕的健康檢查，可能是她今年遇到最棒的一件事。"
+    }
+  ]
+},
+
+{
+  "id": "d20260909b2",
+  "date": "2026-09-09",
+  "level": "B2",
+  "topic": "健康與醫療",
+  "words": 278,
+  "kind": "original",
+  "title": "The Checkup That Rewrote a Company Policy",
+  "titleCn": "改寫公司政策的一次健康檢查",
+  "focus": "現在完成式與過去完成式敘述事件先後順序；less...than...的對比句型；正式語域中議論性的用字選擇",
+  "intro": "這篇原創文章從Anita同事Minh的年度健檢意外發現談起，延伸討論企業為什麼開始重視員工健康促進。留意文章怎麼用過去完成式（had crept, had been）交代『先後順序』，並用less...than...的對比句型帶出議論性的結論，這是B2寫作常見的修辭選擇。",
+  "spoken": [
+    {
+      "en": "So Minh's yearly checkup came back with blood pressure that's suddenly 'worth watching' — nothing in his routine had even changed.",
+      "cn": "Minh的年度健檢報告出來，血壓突然變成『值得留意』——他的日常生活根本沒什麼改變。"
+    },
+    {
+      "en": "Instead of just filing the report, HR actually used his case to push through a whole wellness program — something that would've gotten shot down two years ago.",
+      "cn": "人資沒有只是把報告歸檔，反而直接拿他的案例去推一整套健康促進方案——這種提案兩年前大概會被打回票。"
+    },
+    {
+      "en": "Let's be real — companies aren't doing this purely out of kindness. Sick days and burnout cost money too.",
+      "cn": "講白了——公司這麼做不是純粹佛心，病假和過勞也是要花錢的。"
+    },
+    {
+      "en": "Minh's just quietly walking on his lunch break now, low-key embarrassed that his blood pressure basically rewrote company policy.",
+      "cn": "Minh現在午休就默默去走走路，還有點不好意思自己的血壓居然改寫了公司政策。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "When Minh, one of Anita's colleagues in the quality department, received the results of his annual checkup last month, he was mildly surprised. His blood pressure, which had been perfectly normal for years, had suddenly crept into a range that the company doctor described as 'worth watching.' Nothing about his daily routine had obviously changed, so the finding felt almost accidental — the kind of thing that could easily have gone unnoticed for another year.",
+      "cn": "當Anita在品保部門的同事Minh，上個月收到年度健康檢查報告時，他有點驚訝。他多年來一直正常的血壓，突然升到公司醫師形容為『值得留意』的範圍。他日常生活似乎沒有明顯改變，所以這個結果讓人覺得幾乎是意外發現——這種事很可能就這樣被忽略一整年。"
+    },
+    {
+      "en": "What happened next says as much about the company's culture as it does about Minh's health. Rather than simply filing the report and moving on, the human resources department used his case, with his permission, to argue for a broader wellness initiative. Two years earlier, such a suggestion might have been dismissed as an unnecessary expense; this time, it was approved within a week.",
+      "cn": "接下來發生的事，說明的與其說是Minh的健康，不如說是公司的文化。人資部門並沒有把報告歸檔了事，而是在取得他同意後，用他的案例來爭取一項更廣泛的健康促進方案。若是兩年前，這種提議可能會被當成一項不必要的支出而遭到否決；這一次，卻在一週內就獲得核准。"
+    },
+    {
+      "en": "The reasoning behind the shift is not purely compassionate. Executives have increasingly come to see employee health as a cost that shows up elsewhere on the balance sheet, whether through sick days, reduced concentration, or the slower, harder-to-measure toll of chronic stress. A quiet room, flexible lunch breaks, and subsidized checkups are, in this light, less an act of generosity than a form of risk management — one that happens to benefit everyone it touches.",
+      "cn": "這樣的轉變，背後的原因並不單純出於人道考量。高層主管越來越認為員工健康是一種會反映在其他地方的成本，無論是病假、專注力下降，還是慢性壓力那種比較難量化、拖得比較久的代價。從這個角度來看，安靜室、彈性午休和補助健檢，與其說是一種善意，不如說是一種風險管理——只是剛好對每個受益的人都有好處。"
+    },
+    {
+      "en": "Minh himself is characteristically modest about the whole affair. He has started walking during his lunch break and insists, only half joking, that he never wanted to become 'the guy whose blood pressure changed company policy.' Yet his experience illustrates something easy to forget amid spreadsheets and quarterly targets: a single, unglamorous medical appointment can quietly reveal what a thousand performance reviews never will.",
+      "cn": "Minh本人對這整件事一貫地保持低調。他開始利用午休時間走路，也半開玩笑地強調自己從來不想成為『那個血壓改變公司政策的傢伙』。然而他的經歷點出一件在報表和季度目標之間容易被遺忘的事：一次不起眼的健康檢查，能悄悄揭露出一千份績效考核都揭露不了的事。"
+    }
+  ],
+  "target": [
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑːliːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person you work with.",
+      "ex": "When Minh, one of Anita's colleagues in the quality department, received the results of his annual checkup last month, he was mildly surprised.",
+      "exCn": "當Anita在品保部門的同事Minh，上個月收到年度健康檢查報告時，他有點驚訝。"
+    },
+    {
+      "w": "crept",
+      "ipa": "/krept/",
+      "pos": "v. (creep的過去式)",
+      "cn": "悄悄爬升",
+      "def": "Moved slowly and gradually, often without being noticed.",
+      "ex": "His blood pressure, which had been perfectly normal for years, had suddenly crept into a range that the company doctor described as 'worth watching.'",
+      "exCn": "他多年來一直正常的血壓，突然升到公司醫師形容為『值得留意』的範圍。"
+    },
+    {
+      "w": "unnoticed",
+      "ipa": "/ʌnˈnoʊtɪst/",
+      "pos": "adj.",
+      "cn": "未被注意到的",
+      "def": "Not seen or noticed by anyone.",
+      "ex": "Nothing about his daily routine had obviously changed, so the finding felt almost accidental — the kind of thing that could easily have gone unnoticed for another year.",
+      "exCn": "他日常生活似乎沒有明顯改變，所以這個結果讓人覺得幾乎是意外發現——這種事很可能就這樣被忽略一整年。"
+    },
+    {
+      "w": "initiative",
+      "ipa": "/ɪˈnɪʃətɪv/",
+      "pos": "n.",
+      "cn": "方案、倡議",
+      "def": "A new plan or process to achieve something.",
+      "ex": "the human resources department used his case, with his permission, to argue for a broader wellness initiative.",
+      "exCn": "人資部門在取得他同意後，用他的案例來爭取一項更廣泛的健康促進方案。"
+    },
+    {
+      "w": "dismiss",
+      "ipa": "/dɪsˈmɪs/",
+      "pos": "v.",
+      "cn": "駁回、否決",
+      "def": "To decide that something is not important or worth considering.",
+      "ex": "Two years earlier, such a suggestion might have been dismissed as an unnecessary expense; this time, it was approved within a week.",
+      "exCn": "若是兩年前，這種提議可能會被當成一項不必要的支出而遭到否決；這一次，卻在一週內就獲得核准。"
+    },
+    {
+      "w": "subsidize",
+      "ipa": "/ˈsʌbsɪdaɪz/",
+      "pos": "v.",
+      "cn": "補助",
+      "def": "To pay part of the cost of something for someone.",
+      "ex": "A quiet room, flexible lunch breaks, and subsidized checkups are, in this light, less an act of generosity than a form of risk management.",
+      "exCn": "安靜室、彈性午休和補助健檢，與其說是一種善意，不如說是一種風險管理。"
+    },
+    {
+      "w": "characteristically",
+      "ipa": "/ˌkærəktəˈrɪstɪkli/",
+      "pos": "adv.",
+      "cn": "一如既往地、典型地",
+      "def": "In a way that is typical of a particular person.",
+      "ex": "Minh himself is characteristically modest about the whole affair.",
+      "exCn": "Minh本人對這整件事一貫地保持低調。"
+    },
+    {
+      "w": "unglamorous",
+      "ipa": "/ʌnˈɡlæmərəs/",
+      "pos": "adj.",
+      "cn": "不起眼的、平淡無奇的",
+      "def": "Not exciting or impressive.",
+      "ex": "a single, unglamorous medical appointment can quietly reveal what a thousand performance reviews never will.",
+      "exCn": "一次不起眼的健康檢查，能悄悄揭露出一千份績效考核都揭露不了的事。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why was Minh's checkup result surprising to him?",
+      "qCn": "為什麼Minh的健檢結果讓他感到驚訝？",
+      "opts": [
+        "A. His blood pressure had suddenly crept into a range worth watching",
+        "B. He was diagnosed with a serious illness",
+        "C. He had never had a checkup before",
+        "D. His doctor refused to see him"
+      ],
+      "optsCn": [
+        "A. 他的血壓突然升到值得留意的範圍",
+        "B. 他被診斷出重大疾病",
+        "C. 他從來沒做過健檢",
+        "D. 醫生拒絕幫他看診"
+      ],
+      "ans": 0,
+      "expl": "His blood pressure, which had been perfectly normal for years, had suddenly crept into a range that the company doctor described as 'worth watching.'"
+    },
+    {
+      "q": "What did the human resources department do with Minh's case?",
+      "qCn": "人資部門怎麼運用Minh的案例？",
+      "opts": [
+        "A. They used it, with his permission, to argue for a broader wellness initiative",
+        "B. They kept it completely confidential and did nothing",
+        "C. They fired Minh for poor health",
+        "D. They ignored the report entirely"
+      ],
+      "optsCn": [
+        "A. 在取得他同意後，用來爭取更廣泛的健康促進方案",
+        "B. 完全保密，什麼都沒做",
+        "C. 因為他健康不佳而解雇他",
+        "D. 完全忽略這份報告"
+      ],
+      "ans": 0,
+      "expl": "the human resources department used his case, with his permission, to argue for a broader wellness initiative."
+    },
+    {
+      "q": "According to the article, why do executives increasingly support employee wellness programs?",
+      "qCn": "根據文章，為什麼高層主管越來越支持員工健康促進方案？",
+      "opts": [
+        "A. Because they see employee health as a cost that shows up elsewhere, such as sick days or reduced concentration",
+        "B. Because government regulations require it",
+        "C. Because employees threatened to quit",
+        "D. Because it is required by insurance companies"
+      ],
+      "optsCn": [
+        "A. 因為他們認為員工健康是一種會反映在其他地方的成本，例如病假或專注力下降",
+        "B. 因為政府法規要求",
+        "C. 因為員工威脅要離職",
+        "D. 因為保險公司要求"
+      ],
+      "ans": 0,
+      "expl": "Executives have increasingly come to see employee health as a cost that shows up elsewhere on the balance sheet, whether through sick days, reduced concentration, or the slower, harder-to-measure toll of chronic stress."
+    },
+    {
+      "q": "Why does the writer use the phrase 'less an act of generosity than a form of risk management'?",
+      "qCn": "作者為什麼用『與其說是一種善意，不如說是一種風險管理』這樣的說法？",
+      "opts": [
+        "A. To suggest that companies' wellness programs are mainly a practical, cost-driven decision, not pure kindness",
+        "B. To criticize companies for not caring about employees at all",
+        "C. To argue that risk management is more important than employee health",
+        "D. To explain a specific insurance policy in detail"
+      ],
+      "optsCn": [
+        "A. 暗示公司的健康促進方案主要是務實、成本考量的決定，而非純粹的善意",
+        "B. 批評公司完全不關心員工",
+        "C. 主張風險管理比員工健康更重要",
+        "D. 詳細解釋某個保險政策"
+      ],
+      "ans": 0,
+      "expl": "這是less...than...的對比句型，強調公司推動健康方案背後真正的動機是務實的風險管理考量，而不只是單純的善意，屬於B2常見的修辭語氣。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Minh's blood pressure went up a little.",
+      "b2": "His blood pressure, which had been perfectly normal for years, had suddenly crept into a range that the company doctor described as 'worth watching.'",
+      "note": "用which帶出的關係子句補充血壓的背景，並用crept這個動詞取代簡單的went up，畫面感更強，是B2新聞式改寫常見的手法。",
+      "sp": "His blood pressure, which had always been totally normal, snuck up into what the doctor called a 'keep an eye on it' zone.",
+      "spNote": "snuck up（悄悄爬升，sneak的口語過去式）、keep an eye on it（多留意一下）都是口語常見說法。",
+      "b1Cn": "Minh的血壓稍微升高了一點。",
+      "b2Cn": "他多年來一直正常的血壓，突然升到公司醫師形容為『值得留意』的範圍。",
+      "spCn": "他原本一直很正常的血壓，悄悄爬升到醫生說的『該多留意』的範圍。"
+    },
+    {
+      "b1": "Companies now spend money on employee health because it helps in the end.",
+      "b2": "A quiet room, flexible lunch breaks, and subsidized checkups are, in this light, less an act of generosity than a form of risk management.",
+      "note": "用less...than...的對比句型帶出更精準的論點，比籠統的『花錢在員工健康上有幫助』更有說服力，是B2議論式寫作常見的修辭手法。",
+      "sp": "Basically, companies aren't just being nice by paying for this stuff — they're covering their own risk.",
+      "spNote": "aren't just being nice（不只是佛心來著）、covering their own risk（規避自己的風險）是口語常見的直白說法。",
+      "b1Cn": "公司現在花錢在員工健康上，因為長遠來看有幫助。",
+      "b2Cn": "從這個角度來看，安靜室、彈性午休和補助健檢，與其說是一種善意，不如說是一種風險管理。",
+      "spCn": "說白了，公司花這筆錢不只是佛心，也是在規避自己的風險。"
+    }
+  ]
+},
+
+{
   "id": "d20260904a2",
   "date": "2026-09-04",
   "level": "A2",
@@ -3651,6 +4443,593 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260909a2",
+  "date": "2026-09-09",
+  "unitNo": 9,
+  "level": "A2",
+  "title": "I Have Been Doing: An Action Still Going On",
+  "titleCn": "have been + Ving：一直做到現在的動作",
+  "srcDays": [],
+  "summary": "have/has been + 動詞-ing，用來說「從過去某個時間點一直做某件事，做到現在」。它強調「這個動作持續了多久」，句子常常搭配for或since。",
+  "sections": [
+    {
+      "h": "基本形式：have/has been + V-ing",
+      "table": {
+        "head": [
+          "主詞",
+          "句子"
+        ],
+        "rows": [
+          [
+            "I / You / We / They",
+            "I have been waiting for ten minutes."
+          ],
+          [
+            "He / She / It",
+            "She has been sleeping since noon."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I have been waiting for ten minutes.",
+          "cn": "我已經等了十分鐘了。",
+          "note": "動作從十分鐘前開始，一直到現在"
+        },
+        {
+          "en": "She has been sleeping since noon.",
+          "cn": "她從中午就一直在睡覺。",
+          "note": "動作從中午開始，一直到現在"
+        }
+      ]
+    },
+    {
+      "h": "for跟since：說「多久」還是「從什麼時候」",
+      "bullets": [
+        "for + 一段時間（for ten minutes, for two hours）",
+        "since + 一個時間點（since noon, since Monday）"
+      ],
+      "examples": [
+        {
+          "en": "I have been reading for one hour.",
+          "cn": "我已經看書看了一個小時了。",
+          "note": "for+一段時間"
+        },
+        {
+          "en": "I have been reading since three o'clock.",
+          "cn": "我從三點就一直在看書。",
+          "note": "since+時間點"
+        }
+      ]
+    },
+    {
+      "h": "肯定、否定、問句",
+      "table": {
+        "head": [
+          "句型",
+          "例句"
+        ],
+        "rows": [
+          [
+            "肯定",
+            "I have been waiting."
+          ],
+          [
+            "否定",
+            "I have not (haven't) been waiting."
+          ],
+          [
+            "問句",
+            "Have you been waiting?"
+          ]
+        ]
+      }
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I am waiting for ten minutes.",
+      "good": "I have been waiting for ten minutes.",
+      "why": "要說「已經持續了多久」要用have been waiting，不能只用現在進行式am waiting，因為現在進行式沒有「從過去到現在」的意思。"
+    },
+    {
+      "bad": "I have been wait for ten minutes.",
+      "good": "I have been waiting for ten minutes.",
+      "why": "been後面要接動詞-ing（waiting），不能用原形wait。"
+    },
+    {
+      "bad": "She has been sleeping for noon.",
+      "good": "She has been sleeping since noon.",
+      "why": "noon是一個時間點，要用since，不能用for（for後面要接一段時間，像for two hours）。"
+    },
+    {
+      "bad": "I has been waiting for ten minutes.",
+      "good": "I have been waiting for ten minutes.",
+      "why": "主詞是I，助動詞要用have，不能用has（has只用在he/she/it）。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I ___ for ten minutes.",
+      "qCn": "我已經等了十分鐘了。",
+      "opts": [
+        "wait",
+        "am waiting",
+        "have been waiting",
+        "waited"
+      ],
+      "ans": 2,
+      "expl": "強調『已經持續了多久』用have been waiting。"
+    },
+    {
+      "q": "She ___ since noon.",
+      "qCn": "她從中午就一直在睡覺。",
+      "opts": [
+        "has been sleeping",
+        "is sleeping",
+        "sleeps",
+        "slept"
+      ],
+      "ans": 0,
+      "expl": "since noon是時間點，搭配has been sleeping。"
+    },
+    {
+      "q": "___ you been waiting long?",
+      "qCn": "你已經等很久了嗎？",
+      "opts": [
+        "Do",
+        "Are",
+        "Have",
+        "Did"
+      ],
+      "ans": 2,
+      "expl": "現在完成進行式的問句用Have/Has開頭：Have you been waiting?"
+    },
+    {
+      "q": "I ___ for two hours.",
+      "qCn": "我已經看書看了兩個小時了。（reading）",
+      "opts": [
+        "have been read",
+        "have been reading",
+        "am reading",
+        "have read"
+      ],
+      "ans": 1,
+      "expl": "have been後面接動詞-ing：have been reading。"
+    }
+  ]
+},
+
+{
+  "id": "dg20260909b1",
+  "date": "2026-09-09",
+  "unitNo": 9,
+  "level": "B1",
+  "title": "Have Been Doing vs Am Doing: Duration vs Right Now",
+  "titleCn": "have been doing 和 am doing 不一樣：強調「多久」還是「現在」",
+  "srcDays": [],
+  "summary": "現在進行式(am/is/are + Ving)講的是「現在正在做」，沒有「做了多久」的概念；現在完成進行式(have/has been + Ving)則是加上「從過去到現在，已經做了一段時間」的概念。中文「正在」和「已經...一段時間了」常常都用「在」，容易混在一起。",
+  "sections": [
+    {
+      "h": "am doing vs have been doing：差在有沒有「持續的時間」",
+      "table": {
+        "head": [
+          "句子",
+          "強調什麼"
+        ],
+        "rows": [
+          [
+            "I am reading a book.",
+            "現在這一刻正在做（沒有講多久）"
+          ],
+          [
+            "I have been reading this book for two hours.",
+            "從兩小時前到現在，一直在做（有講多久）"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I am reading a book.",
+          "cn": "我正在看一本書。",
+          "note": "只講『現在』，沒有講『多久』"
+        },
+        {
+          "en": "I have been reading this book for two hours.",
+          "cn": "我已經看這本書看了兩個小時了。",
+          "note": "從兩小時前到現在一直在做"
+        }
+      ]
+    },
+    {
+      "h": "常見混淆情境",
+      "bullets": [
+        "朋友問『你在幹嘛？』只需要回答I am doing，不用講多久",
+        "朋友問『你等多久了？』一定要用have been doing，因為問的是『持續的時間』"
+      ],
+      "examples": [
+        {
+          "en": "What are you doing? — I am cooking dinner.",
+          "cn": "你在幹嘛？——我在煮晚餐。",
+          "note": "單純問現在正在做什麼"
+        },
+        {
+          "en": "How long have you been cooking? — I have been cooking for an hour.",
+          "cn": "你煮多久了？——我已經煮了一個小時了。",
+          "note": "問持續的時間"
+        }
+      ]
+    },
+    {
+      "h": "為什麼中文母語者常搞混",
+      "bullets": [
+        "中文的『在』可以同時表示『現在正在』和『已經持續在』，但英文這兩個是不同的時態",
+        "看句子裡有沒有for/since或『多久』的問題，決定要不要加have been"
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I am waiting for you for twenty minutes.",
+      "good": "I have been waiting for you for twenty minutes.",
+      "why": "有for twenty minutes這種『多久』的資訊，要用have been waiting，不能只用現在進行式am waiting。"
+    },
+    {
+      "bad": "How long are you studying English?",
+      "good": "How long have you been studying English?",
+      "why": "問『多久』要用現在完成進行式have been studying，不能只用現在進行式。"
+    },
+    {
+      "bad": "What have you been doing right now?",
+      "good": "What are you doing right now?",
+      "why": "right now問的是『這一刻正在做什麼』，沒有『多久』的概念，要用現在進行式am/are doing，不能用have been doing。"
+    },
+    {
+      "bad": "I have been cook dinner.",
+      "good": "I have been cooking dinner.",
+      "why": "been後面要接動詞-ing（cooking），不能用原形cook。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I ___ for you for twenty minutes! Where were you?",
+      "qCn": "我已經等你二十分鐘了！你去哪了？",
+      "opts": [
+        "am waiting",
+        "wait",
+        "have been waiting",
+        "waited"
+      ],
+      "ans": 2,
+      "expl": "有for twenty minutes這個『多久』的資訊，用have been waiting。"
+    },
+    {
+      "q": "How long ___ English?",
+      "qCn": "你已經學英文學多久了？",
+      "opts": [
+        "are you studying",
+        "do you study",
+        "have you been studying",
+        "did you study"
+      ],
+      "ans": 2,
+      "expl": "問『多久』用現在完成進行式have you been studying。"
+    },
+    {
+      "q": "What ___ right now? — I ___ dinner.",
+      "qCn": "你現在在做什麼？——我在煮晚餐。",
+      "opts": [
+        "are you doing / am cooking",
+        "have you been doing / have been cooking",
+        "do you do / cook",
+        "were you doing / was cooking"
+      ],
+      "ans": 0,
+      "expl": "right now只問『這一刻』，用現在進行式am/are doing。"
+    },
+    {
+      "q": "She ___ soccer for two hours already.",
+      "qCn": "她已經踢足球踢了兩個小時了。",
+      "opts": [
+        "is playing",
+        "plays",
+        "has been playing",
+        "played"
+      ],
+      "ans": 2,
+      "expl": "for two hours already強調『持續的時間』，用has been playing。"
+    }
+  ]
+},
+
+{
+  "id": "dg20260909b1p",
+  "date": "2026-09-09",
+  "unitNo": 10,
+  "level": "B1+",
+  "title": "Have Been Doing vs Have Done: Process vs Result",
+  "titleCn": "have been doing 跟 have done 不一樣：強調「過程」還是「結果」",
+  "srcDays": [],
+  "summary": "have been + Ving強調「這段時間一直在做這件事的過程」，可能還沒做完；have + Vpp（過去分詞）強調「這件事已經完成、有具體結果或數量」。同一件事用哪一個，取決於你想讓聽者注意「過程」還是「結果」。",
+  "sections": [
+    {
+      "h": "過程 vs 結果：兩種現在完成式",
+      "table": {
+        "head": [
+          "句型",
+          "強調"
+        ],
+        "rows": [
+          [
+            "have been + Ving（過程）",
+            "I have been writing the report."
+          ],
+          [
+            "have + Vpp（結果／數量）",
+            "I have written three reports."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I have been writing the report all afternoon.",
+          "cn": "我整個下午都在寫這份報告。",
+          "note": "強調『一直在做』的過程，可能還沒寫完"
+        },
+        {
+          "en": "I have written three reports this week.",
+          "cn": "我這禮拜寫了三份報告了。",
+          "note": "強調『完成的數量』，是具體的結果"
+        }
+      ]
+    },
+    {
+      "h": "為什麼髒亂的房間要用have been doing，乾淨的手要用have done",
+      "bullets": [
+        "Why is the kitchen so messy? — I have been cooking.（強調過程留下的痕跡，不是重點在『煮好了幾道菜』）",
+        "I have cooked dinner.（強調『晚餐已經做好了』這個結果）"
+      ],
+      "examples": [
+        {
+          "en": "Why are your hands so dirty? — I have been fixing the car.",
+          "cn": "你的手怎麼這麼髒？——我一直在修車。",
+          "note": "用還沒做完的『過程』解釋現在的狀態"
+        },
+        {
+          "en": "I have fixed the car. It works now.",
+          "cn": "我把車修好了，現在可以開了。",
+          "note": "強調『修好了』這個結果"
+        }
+      ]
+    },
+    {
+      "h": "有數字或明確數量時，通常用have done",
+      "bullets": [
+        "how many/how much搭配的問題，習慣用have + Vpp：How many emails have you written?",
+        "強調『還在做、沒有要停』的語感，用have been + Ving：I have been answering emails all day."
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I have been writing three reports this week.",
+      "good": "I have written three reports this week.",
+      "why": "three reports是具體數量，強調『完成的結果』，要用have written，不是have been writing。"
+    },
+    {
+      "bad": "Why are your hands so dirty? — I have fixed the car.",
+      "good": "Why are your hands so dirty? — I have been fixing the car.",
+      "why": "這裡在解釋『現在手髒』這個正在進行的痕跡，強調過程，用have been fixing，不是have fixed（那聽起來像已經修好了、手應該乾淨了）。"
+    },
+    {
+      "bad": "How many emails have you been writing?",
+      "good": "How many emails have you written?",
+      "why": "how many問的是具體數量，習慣搭配have + Vpp（have written），不是have been writing。"
+    },
+    {
+      "bad": "I have be cooking all afternoon.",
+      "good": "I have been cooking all afternoon.",
+      "why": "have後面要接been，不能只接be；been是be的過去分詞。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I ___ three reports this week.",
+      "qCn": "我這禮拜寫了三份報告了。",
+      "opts": [
+        "have been writing",
+        "have written",
+        "am writing",
+        "write"
+      ],
+      "ans": 1,
+      "expl": "three reports是具體數量，強調完成的結果，用have written。"
+    },
+    {
+      "q": "Why are your hands so dirty? — I ___ the car.",
+      "qCn": "你的手怎麼這麼髒？——我一直在修車。",
+      "opts": [
+        "have fixed",
+        "fix",
+        "have been fixing",
+        "fixed"
+      ],
+      "ans": 2,
+      "expl": "強調『正在做、還沒做完』的過程留下的痕跡，用have been fixing。"
+    },
+    {
+      "q": "How many emails ___ today?",
+      "qCn": "你今天寫了幾封信了？",
+      "opts": [
+        "have you been writing",
+        "have you written",
+        "are you writing",
+        "do you write"
+      ],
+      "ans": 1,
+      "expl": "how many問具體數量，用have you written。"
+    },
+    {
+      "q": "I ___ all afternoon, but the kitchen is still a mess.",
+      "qCn": "我整個下午都在煮飯，但廚房還是一團亂。",
+      "opts": [
+        "have cooked",
+        "cook",
+        "have been cooking",
+        "cooked"
+      ],
+      "ans": 2,
+      "expl": "強調『一直在做』的過程，還沒做完（廚房還亂），用have been cooking。"
+    }
+  ]
+},
+
+{
+  "id": "dg20260909b2",
+  "date": "2026-09-09",
+  "unitNo": 10,
+  "level": "B2",
+  "title": "Register Choices: Have Been Doing vs Have Done in Professional Writing",
+  "titleCn": "have been doing 跟 have done 的語域選擇：專業寫作裡的用字策略",
+  "srcDays": [],
+  "summary": "在職場信件、報告、履歷這類正式文體裡，作者常常刻意選擇have been doing來塑造『投入、持續努力』的形象，或選擇have done來強調『具體成果、可量化的貢獻』。這不是文法對錯，而是一種修辭策略：你想讓讀者記住『過程』還是『結果』。",
+  "sections": [
+    {
+      "h": "履歷與報告裡的策略選擇",
+      "table": {
+        "head": [
+          "情境",
+          "建議用法"
+        ],
+        "rows": [
+          [
+            "目前仍在進行的職責",
+            "have been + Ving（如 have been leading）"
+          ],
+          [
+            "已完成、有具體數字的成果",
+            "have + Vpp（如 have led...that increased...by 12%）"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I have been leading a cross-team project on customer retention.",
+          "cn": "我一直在主導一項跨團隊的顧客留存專案。",
+          "note": "強調『持續投入、正在進行』的責任感，適合說明目前職責"
+        },
+        {
+          "en": "I have led three cross-team projects that increased customer retention by 12 percent.",
+          "cn": "我主導過三項跨團隊專案，讓顧客留存率提升了12%。",
+          "note": "強調具體成果與數字，適合履歷的『成就』段落"
+        }
+      ]
+    },
+    {
+      "h": "為什麼正式書信偏好其中一種",
+      "bullets": [
+        "說明『目前正在做、還沒有最終數字』的工作時，have been doing聽起來比較誠實、不誇大",
+        "要證明『能力』與『貢獻』時，have done配上具體數字更有說服力，因為讀者要的是可驗證的結果"
+      ]
+    },
+    {
+      "h": "混用兩者：一段裡先講過程再講結果",
+      "examples": [
+        {
+          "en": "I have been mentoring two new team members, and I have already reduced their onboarding time by a week.",
+          "cn": "我一直在指導兩位新進同事，而且已經把他們的到職適應時間縮短了一週。",
+          "note": "先用have been mentoring交代持續的投入，再用have already reduced帶出具體成果，兩種語氣搭配使用"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "（履歷成就段落）I have been increasing sales by 20 percent.",
+      "good": "I have increased sales by 20 percent.",
+      "why": "有具體數字20 percent，屬於『可驗證的成果』，正式文件習慣用have increased強調結果，而不是have been increasing。"
+    },
+    {
+      "bad": "（說明目前仍在進行的職責）I have led the weekly team meeting for years, and I am still doing it.",
+      "good": "I have been leading the weekly team meeting for years.",
+      "why": "這件事到現在都還在做，強調『持續進行中』的責任，用have been leading比have led更精準，也不需要再加一句and I am still doing it。"
+    },
+    {
+      "bad": "堅持正式寫作『只能』用have done，不能用have been doing。",
+      "good": "正式寫作兩種都會用：講『尚在進行的職責』用have been doing，講『具體可驗證的成果』用have done，這是修辭選擇，不是對錯問題。",
+      "why": "這是語域與修辭的判斷，不是文法規則——作者依照『想強調過程還是結果』來選擇，兩種都『正確』。"
+    },
+    {
+      "bad": "I have been mentor two new team members.",
+      "good": "I have been mentoring two new team members.",
+      "why": "been後面要接動詞-ing（mentoring），不能用原形mentor。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "（履歷成就段落，有具體數字）I ___ sales by 20 percent this year.",
+      "qCn": "我今年把業績提升了20%。",
+      "opts": [
+        "have been increasing",
+        "have increased",
+        "increase",
+        "am increasing"
+      ],
+      "ans": 1,
+      "expl": "20 percent是具體、可驗證的成果，正式文件習慣用have increased強調結果。"
+    },
+    {
+      "q": "（說明目前仍在進行的職責）I ___ the weekly team meeting for three years.",
+      "qCn": "我已經主持這個每週例會三年了（現在還在主持）。",
+      "opts": [
+        "led",
+        "have led",
+        "have been leading",
+        "lead"
+      ],
+      "ans": 2,
+      "expl": "這件事持續到現在還在做，強調『持續進行』的職責，用have been leading。"
+    },
+    {
+      "q": "Which sentence better fits a resume's 'Achievements' section?",
+      "qCn": "哪一句比較適合放在履歷的『成就』段落？",
+      "opts": [
+        "I have been improving the onboarding process.",
+        "I have improved the onboarding process, reducing new-hire training time by 30 percent.",
+        "I am improving the onboarding process.",
+        "I improve the onboarding process."
+      ],
+      "optsCn": [
+        "我一直在改善新人到職流程。",
+        "我改善了新人到職流程，把新人訓練時間縮短了30%。",
+        "我正在改善新人到職流程。",
+        "我改善新人到職流程。"
+      ],
+      "ans": 1,
+      "expl": "履歷成就段落要的是具體、可量化的結果，have improved搭配30 percent最有說服力。"
+    },
+    {
+      "q": "Why might a writer choose 'have been mentoring' instead of 'have mentored' when describing an ongoing responsibility?",
+      "qCn": "作者在描述『仍在進行中的職責』時，為什麼可能選擇have been mentoring而不是have mentored？",
+      "opts": [
+        "Because have mentored is grammatically incorrect",
+        "Because have been mentoring signals that the responsibility is still active and ongoing",
+        "Because mentoring cannot be used with have",
+        "Because have been mentoring always sounds more formal"
+      ],
+      "optsCn": [
+        "因為have mentored文法上是錯的",
+        "因為have been mentoring表示這項職責目前仍在持續進行",
+        "因為mentoring不能跟have一起用",
+        "因為have been mentoring聽起來永遠比較正式"
+      ],
+      "ans": 1,
+      "expl": "這是語域選擇：have been mentoring傳達『責任目前仍在進行中』的語感，不是文法對錯的問題。"
+    }
+  ]
+},
+
 {
   "id": "dg20260904a2",
   "date": "2026-09-04",

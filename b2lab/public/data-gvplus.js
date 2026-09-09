@@ -32,6 +32,686 @@
    ⚠ 文字欄位一律寫純文字，不要寫 HTML 標籤（渲染時會被轉義顯示出來）。
    ============================================================ */
 window.GVPLUS = {
+dg20260909a2: {
+  "vis": true,
+  "oneLine": "have been + Ving，不是說「做完了」，是說「這件事到現在都還在做」。",
+  "map": {
+    "when": "想強調一件事從過去某個時間點開始，一直持續做到現在",
+    "why": "中文的「已經...了」常常搞不清楚是「做完了」還是「還在做」，英文用have been+Ving專門講「還在做」",
+    "form": "have/has + been + Ving"
+  },
+  "visual": {
+    "type": "timeline",
+    "cap": "這條線從過去一直延伸到NOW，代表「到現在都還在做」；點狀的過去簡單式代表「已經結束的事」。",
+    "rows": [
+      {
+        "kind": "span",
+        "label": "have been + Ving",
+        "tone": "accent",
+        "from": "ten minutes ago",
+        "to": "NOW",
+        "sub": "I have been waiting for ten minutes.",
+        "subCn": "我已經等了十分鐘了（現在還在等）。"
+      },
+      {
+        "kind": "span",
+        "label": "has been + Ving（since）",
+        "tone": "accent",
+        "from": "since noon",
+        "to": "NOW",
+        "sub": "She has been sleeping since noon.",
+        "subCn": "她從中午就一直在睡覺（現在還在睡）。"
+      },
+      {
+        "kind": "point",
+        "label": "對照：過去簡單式",
+        "tone": "ink",
+        "at": "yesterday",
+        "sub": "I waited for ten minutes yesterday.",
+        "subCn": "我昨天等了十分鐘（已經結束了）。"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "for",
+      "icon": "clock",
+      "title": "have been + Ving + for",
+      "titleCn": "have been+Ving+for：做了多久",
+      "ask": "這個動作已經做多久了？",
+      "en": "I have been waiting for ten minutes.",
+      "cn": "我已經等了十分鐘了。",
+      "why": "for後面接一段時間長度（ten minutes），表示這個動作從那時候開始一直做到現在，還沒結束。"
+    },
+    {
+      "key": "since",
+      "icon": "pin",
+      "title": "have been + Ving + since",
+      "titleCn": "have been+Ving+since：從什麼時候開始",
+      "ask": "這個動作是從什麼時候開始的？",
+      "en": "She has been sleeping since noon.",
+      "cn": "她從中午就一直在睡覺。",
+      "why": "since後面接一個時間點（noon），表示動作從那個時間點開始，一直持續到現在。"
+    },
+    {
+      "key": "question",
+      "icon": "bubble",
+      "title": "問句：Have you been...?",
+      "titleCn": "問句怎麼問",
+      "ask": "要怎麼問別人做這件事多久了？",
+      "en": "Have you been waiting long?",
+      "cn": "你已經等很久了嗎？",
+      "why": "問句把Have/Has放到句首：Have you been waiting...? 不能說Do you been waiting...?"
+    },
+    {
+      "key": "contrast",
+      "icon": "cross",
+      "title": "不是現在簡單式",
+      "titleCn": "跟現在簡單式不一樣",
+      "ask": "為什麼不能只說I wait？",
+      "en": "I have been waiting, not \"I wait.\"",
+      "cn": "要說I have been waiting，不能只說I wait。",
+      "why": "I wait是習慣性動作（例如我每天都等公車），沒有「從過去到現在」的意思；要表示「已經持續做了一段時間」一定要用have been + Ving。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你已經在公車站等了十分鐘，公車還沒來。"
+    },
+    {
+      "label": "先確認",
+      "text": "這件事從十分鐘前開始，一直持續到現在，還沒結束。"
+    },
+    {
+      "label": "選字",
+      "text": "要強調「已經持續多久」，動詞要用have been + Ving，不是現在簡單式或現在進行式。"
+    },
+    {
+      "label": "組出來",
+      "text": "I have been waiting for ten minutes.（我已經等了十分鐘了。）"
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "不能說I am waiting for ten minutes（現在進行式沒有「已經多久」的意思），也不能說I wait for ten minutes（現在簡單式聽起來像習慣）。"
+    }
+  ],
+  "comparison": {
+    "title": "have been + Ving vs 過去簡單式",
+    "left": {
+      "tag": "PRESENT PERFECT CONTINUOUS",
+      "tagCn": "從過去到現在",
+      "icon": "clock",
+      "head": "still going on",
+      "headCn": "現在還在做",
+      "en": "I have been waiting for ten minutes.",
+      "cn": "我已經等了十分鐘了（還在等）。",
+      "pts": [
+        "動作還沒結束，現在還在繼續",
+        "常搭配for/since",
+        "強調「持續的時間」"
+      ]
+    },
+    "right": {
+      "tag": "PAST SIMPLE",
+      "tagCn": "已經結束",
+      "icon": "check",
+      "head": "already finished",
+      "headCn": "已經做完、結束了",
+      "en": "I waited for ten minutes yesterday.",
+      "cn": "我昨天等了十分鐘（已經結束了）。",
+      "pts": [
+        "動作已經結束，跟現在沒關係",
+        "常搭配明確的過去時間：yesterday",
+        "強調「發生過的事實」"
+      ]
+    },
+    "note": "記法：動作還在繼續、還沒講完的故事，用have been+Ving；已經結束、翻過去的一頁，用過去簡單式。"
+  },
+  "quizMore": [
+    {
+      "q": "I ___ for you for twenty minutes!",
+      "opts": [
+        "wait",
+        "waited",
+        "have been waiting",
+        "am wait"
+      ],
+      "ans": 2,
+      "expl": "強調『已經持續等了多久，現在還在等』用have been waiting。"
+    },
+    {
+      "q": "They ___ soccer since three o'clock.",
+      "opts": [
+        "play",
+        "played",
+        "have been playing",
+        "are play"
+      ],
+      "ans": 2,
+      "expl": "since three o'clock是起點，搭配have been playing。"
+    }
+  ]
+},
+
+dg20260909b1: {
+  "vis": true,
+  "oneLine": "am doing只是說「現在正在做」；have been doing多了一個「已經做了多久」的資訊。",
+  "map": {
+    "when": "有問「多久」(for/since/how long)時要用have been doing；只問「現在這一刻在做什麼」用am/is/are doing",
+    "why": "中文的「在」常常兩種情況都用，但英文要看有沒有「持續時間」的資訊來選時態",
+    "form": "am/is/are + Ving　|　have/has + been + Ving"
+  },
+  "visual": {
+    "type": "cols",
+    "cap": "看句子裡有沒有for/since或「多久」的線索：沒有就是現在進行式，有就是現在完成進行式。",
+    "cols": [
+      {
+        "tag": "PRESENT CONTINUOUS 現在進行式",
+        "tone": 2,
+        "tagCn": "只講「現在這一刻」",
+        "items": [
+          {
+            "en": "I am reading a book.",
+            "cn": "我正在看一本書。",
+            "nt": "沒有講多久，只說現在在做"
+          },
+          {
+            "en": "What are you doing? — I am cooking dinner.",
+            "cn": "你在幹嘛？——我在煮晚餐。",
+            "nt": "單純問現在正在做什麼"
+          }
+        ]
+      },
+      {
+        "tag": "PRESENT PERFECT CONTINUOUS 現在完成進行式",
+        "tone": 1,
+        "tagCn": "多了「已經做多久」",
+        "items": [
+          {
+            "en": "I have been reading this book for two hours.",
+            "cn": "我已經看這本書看了兩個小時了。",
+            "nt": "從兩小時前到現在，一直在做"
+          },
+          {
+            "en": "How long have you been cooking? — I have been cooking for an hour.",
+            "cn": "你煮多久了？——我已經煮了一個小時了。",
+            "nt": "問／答『持續的時間』"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "now",
+      "icon": "person",
+      "title": "Just Right Now",
+      "titleCn": "單純問現在在做什麼",
+      "ask": "現在這一刻在做什麼？",
+      "en": "What are you doing? — I am cooking dinner.",
+      "cn": "你在幹嘛？——我在煮晚餐。",
+      "why": "這句只問『這一刻』，沒有『多久』的資訊，用現在進行式am doing就好，不需要have been doing。"
+    },
+    {
+      "key": "duration",
+      "icon": "calendar",
+      "title": "How Long",
+      "titleCn": "問「已經做多久」",
+      "ask": "這件事已經做多久了？",
+      "en": "How long have you been cooking?",
+      "cn": "你已經煮多久了？",
+      "why": "how long問的是『持續的時間』，一定要用現在完成進行式have been cooking，不能只用現在進行式。"
+    },
+    {
+      "key": "signal",
+      "icon": "arrow",
+      "title": "for/since的信號",
+      "titleCn": "看到for/since就要小心",
+      "ask": "句子裡有for/since嗎？",
+      "en": "I have been waiting for you for twenty minutes.",
+      "cn": "我已經等你二十分鐘了。",
+      "why": "句子裡出現for twenty minutes這種時間長度，就是have been doing的信號，不能只用am waiting。"
+    },
+    {
+      "key": "wrong",
+      "icon": "check",
+      "title": "選對了才通順",
+      "titleCn": "選錯了聽起來會怪",
+      "ask": "哪一句聽起來才對？",
+      "en": "I have been waiting for twenty minutes, not \"I am waiting for twenty minutes.\"",
+      "cn": "要說I have been waiting for twenty minutes，不是I am waiting for twenty minutes。",
+      "why": "am waiting是現在進行式，沒有『已經多久』的意思；後面接了for twenty minutes就一定要換成have been waiting。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "朋友傳訊息問你「現在在幹嘛」。"
+    },
+    {
+      "label": "先確認",
+      "text": "他只是想知道你這一刻在做什麼，沒有問「做多久」。"
+    },
+    {
+      "label": "選字",
+      "text": "沒有for/since、沒有問多久，就用現在進行式：I am cooking dinner."
+    },
+    {
+      "label": "情境換一下",
+      "text": "如果他接著問「你煮多久了？」，這時候問的是『持續的時間』。"
+    },
+    {
+      "label": "換個說法",
+      "text": "這時候就要換成現在完成進行式：I have been cooking for an hour."
+    }
+  ],
+  "comparison": {
+    "title": "am doing vs have been doing",
+    "left": {
+      "tag": "PRESENT CONTINUOUS",
+      "tagCn": "現在這一刻",
+      "icon": "person",
+      "head": "right now",
+      "headCn": "沒有講多久",
+      "en": "I am reading a book.",
+      "cn": "我正在看一本書。",
+      "pts": [
+        "只講現在正在做的動作",
+        "沒有for/since等時間長度",
+        "回答What are you doing?"
+      ]
+    },
+    "right": {
+      "tag": "PRESENT PERFECT CONTINUOUS",
+      "tagCn": "已經持續多久",
+      "icon": "calendar",
+      "head": "how long",
+      "headCn": "加上持續的時間",
+      "en": "I have been reading for two hours.",
+      "cn": "我已經看了兩個小時了。",
+      "pts": [
+        "講『從過去到現在』做了多久",
+        "常搭配for/since",
+        "回答How long...?"
+      ]
+    },
+    "note": "看句子裡有沒有for/since，或問題是不是在問「多久」——有，就用have been doing；沒有，就用am doing。"
+  },
+  "quizMore": [
+    {
+      "q": "I ___ this song all morning — I love it!",
+      "opts": [
+        "am playing",
+        "have been playing",
+        "play",
+        "played"
+      ],
+      "ans": 1,
+      "expl": "all morning是持續的時間，用have been playing。"
+    },
+    {
+      "q": "Look! It ___ outside.",
+      "opts": [
+        "is raining",
+        "has been raining",
+        "rains",
+        "rained"
+      ],
+      "ans": 0,
+      "expl": "Look!是『這一刻』的信號，用現在進行式is raining，不用問『多久』。"
+    }
+  ]
+},
+
+dg20260909b1p: {
+  "vis": true,
+  "oneLine": "have been doing 在講『這段時間一直在做的過程』；have done 在講『已經完成、看得到的具體結果或數量』。",
+  "map": {
+    "when": "想強調『還在做、留下痕跡』用have been doing；想強調『做完了、有具體數字』用have done",
+    "why": "同一件事可以有兩種說法，取決於你想讓聽者注意過程還是結果",
+    "form": "have/has + been + Ving　|　have/has + Vpp"
+  },
+  "visual": {
+    "type": "matrix",
+    "cap": "左欄的have been+Ving在講『這段時間一直在做的過程』，右欄的have+Vpp在講『已經完成、看得到具體結果或數量』的事實。",
+    "cols": [
+      "have been + Ving（過程）",
+      "have + Vpp（結果／數量）"
+    ],
+    "rows": [
+      {
+        "h": "做家事",
+        "cells": [
+          {
+            "en": "I have been cleaning the kitchen.",
+            "cn": "我一直在打掃廚房（可能還沒打掃完）。",
+            "hi": 1
+          },
+          {
+            "en": "I have cleaned the kitchen.",
+            "cn": "我把廚房打掃好了（結果：現在很乾淨）。"
+          }
+        ]
+      },
+      {
+        "h": "寫報告",
+        "cells": [
+          {
+            "en": "I have been writing the report all afternoon.",
+            "cn": "我整個下午都在寫這份報告。",
+            "hi": 1
+          },
+          {
+            "en": "I have written three reports this week.",
+            "cn": "我這禮拜寫了三份報告了（具體數量）。"
+          }
+        ]
+      },
+      {
+        "h": "修東西",
+        "cells": [
+          {
+            "en": "I have been fixing the car.",
+            "cn": "我一直在修車（手才會這麼髒）。",
+            "hi": 1
+          },
+          {
+            "en": "I have fixed the car.",
+            "cn": "我把車修好了（結果：現在可以開了）。"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "process",
+      "icon": "book",
+      "title": "強調過程",
+      "titleCn": "還在做、留下痕跡",
+      "ask": "為什麼手還這麼髒？",
+      "en": "I have been fixing the car.",
+      "cn": "我一直在修車。",
+      "why": "用have been fixing解釋『現在手髒』這個正在進行中留下的痕跡，不強調車修好了沒。"
+    },
+    {
+      "key": "result",
+      "icon": "balance",
+      "title": "強調結果",
+      "titleCn": "已完成、有具體結果",
+      "ask": "車修好了嗎？",
+      "en": "I have fixed the car. It works now.",
+      "cn": "我把車修好了，現在可以開了。",
+      "why": "用have fixed強調『修好了』這個明確的結果，聽者馬上知道車現在能不能開。"
+    },
+    {
+      "key": "number",
+      "icon": "eye",
+      "title": "有數字就用have done",
+      "titleCn": "數量、次數配have done",
+      "ask": "這禮拜寫了幾份報告？",
+      "en": "I have written three reports this week.",
+      "cn": "我這禮拜寫了三份報告了。",
+      "why": "three reports是具體數量，回答how many的問題習慣用have + Vpp，不是have been + Ving。"
+    },
+    {
+      "key": "ongoing",
+      "icon": "star",
+      "title": "還沒做完就用have been doing",
+      "titleCn": "還在繼續、沒有要停",
+      "ask": "廚房怎麼還這麼亂？",
+      "en": "I have been cooking all afternoon.",
+      "cn": "我整個下午都在煮飯。",
+      "why": "廚房還亂表示還沒做完，強調『一直在做』的過程，用have been cooking，不是have cooked。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "同事看到你桌上一堆咖啡杯，問你在幹嘛。"
+    },
+    {
+      "label": "先確認",
+      "text": "你想讓他注意『你一直在忙的過程』，還是『你已經完成的具體結果』？"
+    },
+    {
+      "label": "如果是過程",
+      "text": "I have been writing this report all afternoon.（強調『一直在寫』，可能還沒寫完。）"
+    },
+    {
+      "label": "如果是結果",
+      "text": "I have written three reports today.（強調具體完成的數量。）"
+    },
+    {
+      "label": "判斷口訣",
+      "text": "句子裡如果有明確數字（three reports）習慣配have done；如果重點是『還在做、留下痕跡』就配have been doing。"
+    }
+  ],
+  "comparison": {
+    "title": "have been doing vs have done",
+    "left": {
+      "tag": "HAVE BEEN + VING",
+      "tagCn": "強調過程",
+      "icon": "book",
+      "head": "still in progress",
+      "headCn": "可能還沒做完",
+      "en": "I have been writing the report all afternoon.",
+      "cn": "我整個下午都在寫這份報告。",
+      "pts": [
+        "強調『一直在做』的過程",
+        "常用來解釋現在的狀態或痕跡",
+        "不一定強調做完了沒"
+      ]
+    },
+    "right": {
+      "tag": "HAVE + VPP",
+      "tagCn": "強調結果／數量",
+      "icon": "balance",
+      "head": "completed / countable",
+      "headCn": "已完成、有具體數字",
+      "en": "I have written three reports this week.",
+      "cn": "我這禮拜寫了三份報告了。",
+      "pts": [
+        "強調完成的事實或具體數量",
+        "常搭配how many/how much",
+        "聽者知道『做完了』這件事"
+      ]
+    },
+    "note": "看句子有沒有具體數字，或你想強調的是『過程』還是『結果』——過程用have been doing，結果或數量用have done。"
+  },
+  "quizMore": [
+    {
+      "q": "The kitchen is a mess because I ___ dinner.",
+      "opts": [
+        "have cooked",
+        "have been cooking",
+        "cook",
+        "cooked"
+      ],
+      "ans": 1,
+      "expl": "廚房還亂，表示還在做的過程，用have been cooking。"
+    },
+    {
+      "q": "She ___ five emails this morning.",
+      "opts": [
+        "has been writing",
+        "has written",
+        "writes",
+        "is writing"
+      ],
+      "ans": 1,
+      "expl": "five emails是具體數量，用has written。"
+    }
+  ]
+},
+
+dg20260909b2: {
+  "vis": true,
+  "oneLine": "have been doing 到 have done 是一條光譜：越靠『過程』端越強調投入與持續，越靠『結果』端越強調可驗證的成果。",
+  "map": {
+    "when": "在履歷、報告、自評這類正式文體裡，選擇強調『過程』還是『結果』",
+    "why": "讀者想快速判斷你的貢獻是否可驗證，作者則想控制語氣——謙虛務實還是強調成果",
+    "form": "have/has + been + Ving（過程端）　|　have/has + Vpp（結果端）"
+  },
+  "visual": {
+    "type": "scale",
+    "cap": "把have been doing到have done想成一條光譜：越靠左邊越強調『還在做的過程』，越靠右邊越強調『已完成、可驗證的結果』。正式寫作常常兩種都用，只是看這句話要強調哪一端。",
+    "lo": "強調過程",
+    "hi": "強調結果／數字",
+    "stops": [
+      {
+        "at": 10,
+        "label": "have been + Ving（純過程）",
+        "labelCn": "完全強調『一直在做』",
+        "en": "I have been leading a cross-team project on customer retention.",
+        "cn": "我一直在主導一項跨團隊的顧客留存專案。"
+      },
+      {
+        "at": 40,
+        "label": "have been + Ving + 初步成果",
+        "labelCn": "過程中帶一點初步成果",
+        "en": "I have been mentoring two new team members, and I have already reduced their onboarding time by a week.",
+        "cn": "我一直在指導兩位新進同事，而且已經把他們的到職適應時間縮短了一週。"
+      },
+      {
+        "at": 70,
+        "label": "have + Vpp + 數字",
+        "labelCn": "完成式配上具體數字",
+        "en": "I have led three cross-team projects that increased customer retention by 12 percent.",
+        "cn": "我主導過三項跨團隊專案，讓顧客留存率提升了12%。"
+      },
+      {
+        "at": 95,
+        "label": "have + Vpp（純結果）",
+        "labelCn": "完全強調『做完的成果』",
+        "en": "I have increased sales by 20 percent this year.",
+        "cn": "我今年把業績提升了20%。"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "ongoing-role",
+      "icon": "tool",
+      "title": "目前仍在進行的職責",
+      "titleCn": "責任還在持續中",
+      "ask": "這件事現在還在做嗎？",
+      "en": "I have been leading a cross-team project on customer retention.",
+      "cn": "我一直在主導一項跨團隊的顧客留存專案。",
+      "why": "用have been leading表示這項責任目前仍在持續進行，還沒有最終數字，聽起來比較誠實、不誇大。"
+    },
+    {
+      "key": "quantified",
+      "icon": "link",
+      "title": "可驗證的具體成果",
+      "titleCn": "數字最有說服力",
+      "ask": "有沒有具體的數字可以證明？",
+      "en": "I have led three cross-team projects that increased customer retention by 12 percent.",
+      "cn": "我主導過三項跨團隊專案，讓顧客留存率提升了12%。",
+      "why": "12 percent是讀者可以驗證的具體數字，履歷或報告的『成就』段落習慣用have done配上數字，說服力更強。"
+    },
+    {
+      "key": "mix",
+      "icon": "flag",
+      "title": "混用：先過程再成果",
+      "titleCn": "一段話裡兩種都用",
+      "ask": "可以在同一段話裡混用嗎？",
+      "en": "I have been mentoring two new team members, and I have already reduced their onboarding time by a week.",
+      "cn": "我一直在指導兩位新進同事，而且已經把他們的到職適應時間縮短了一週。",
+      "why": "先用have been mentoring交代持續的投入，再用have already reduced帶出具體成果，是專業寫作常見的搭配方式。"
+    },
+    {
+      "key": "not-wrong",
+      "icon": "cycle",
+      "title": "不是文法對錯，是修辭選擇",
+      "titleCn": "兩種都『正確』",
+      "ask": "哪一種寫法才『正確』？",
+      "en": "Both have been doing and have done are correct — the choice depends on what you want the reader to remember.",
+      "cn": "have been doing和have done都是正確的——選哪一個要看你想讓讀者記住什麼。",
+      "why": "這是語域與修辭層次的判斷，不是文法規則。想強調『投入與持續』選have been doing，想強調『具體成果』選have done。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你在寫年度自評，要形容你這一年做的一項專案。"
+    },
+    {
+      "label": "先問自己",
+      "text": "你想讓主管記住的是『你一直很努力投入』，還是『你做出了具體成果』？"
+    },
+    {
+      "label": "如果是投入",
+      "text": "I have been leading a cross-team project on customer retention.（強調持續進行的責任）"
+    },
+    {
+      "label": "如果是成果",
+      "text": "I have led three cross-team projects that increased customer retention by 12 percent.（強調具體、可驗證的數字）"
+    },
+    {
+      "label": "進階技巧",
+      "text": "很多專業寫作會兩種都用：先用have been doing交代投入的過程，再用have done帶出具體成果，一段話裡層次更豐富。"
+    }
+  ],
+  "comparison": {
+    "title": "職場寫作裡的have been doing vs have done",
+    "left": {
+      "tag": "HAVE BEEN + VING",
+      "tagCn": "強調投入與持續",
+      "icon": "tool",
+      "head": "ongoing commitment",
+      "headCn": "責任還在進行中",
+      "en": "I have been leading a cross-team project on customer retention.",
+      "cn": "我一直在主導一項跨團隊的顧客留存專案。",
+      "pts": [
+        "適合說明『目前仍在做』的職責",
+        "聽起來比較誠實，不誇大成果",
+        "沒有具體數字時的安全選擇"
+      ]
+    },
+    "right": {
+      "tag": "HAVE + VPP",
+      "tagCn": "強調具體成果",
+      "icon": "link",
+      "head": "verifiable result",
+      "headCn": "可量化、可驗證的貢獻",
+      "en": "I have led three cross-team projects that increased customer retention by 12 percent.",
+      "cn": "我主導過三項跨團隊專案，讓顧客留存率提升了12%。",
+      "pts": [
+        "適合履歷、報告的『成就』段落",
+        "常搭配具體數字或百分比",
+        "讓讀者一眼看到可驗證的貢獻"
+      ]
+    },
+    "note": "口訣：還在做、沒有最終數字，用have been doing；已經做完、有具體數字可以拿出來說，用have done。"
+  },
+  "quizMore": [
+    {
+      "q": "Which version fits better in a resume's 'Achievements' section?",
+      "opts": [
+        "I have been improving our onboarding process.",
+        "I have improved our onboarding process, cutting training time by 30 percent.",
+        "I am improving our onboarding process.",
+        "I improve our onboarding process."
+      ],
+      "ans": 1,
+      "expl": "履歷成就段落要的是具體、可量化的結果，第二句配上30 percent更有說服力。"
+    },
+    {
+      "q": "Why might a manager write 'I have been mentoring two junior staff' instead of 'I have mentored two junior staff'?",
+      "opts": [
+        "Because the second sentence is grammatically wrong",
+        "Because the first sentence signals the responsibility is still ongoing",
+        "Because mentoring cannot take the present perfect",
+        "Because the first sentence is always more formal"
+      ],
+      "ans": 1,
+      "expl": "have been mentoring傳達『這項責任目前仍在進行中』的語感，是修辭選擇，不是文法對錯。"
+    }
+  ]
+},
+
 
 /* ==================== g01 八大時態總覽（B1） ==================== */
 g01: {
