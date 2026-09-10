@@ -56,36 +56,16 @@ git fetch && git status
 
 ---
 
-## 2. 部署規則
+## 2. 部署規則（重要）
 
-### B2 Read（`b2lab/`）
-- **push 到 `main` 就是部署。** `.github/workflows/deploy-b2lab.yml` 會在
-  `b2lab/public/**`、`b2lab/firebase.json` 有變動時自動部署到 Firebase Hosting。
-- **不要自己在本機跑 `firebase deploy`** — 會被下一次 CI 覆寫，白做。
-- **改了 `b2lab/public/` 底下任何檔案，就要 bump 快取版號**：
-  `b2lab/public/sw.js` 的 `const CACHE = 'b2lab-vNN'` → `vNN+1`。
-  忘了 bump，使用者的 iPad／手機會一直吃到舊快取。
-- CI 有 sanity check：`data-*.js` 若 load 不起來或內容為空會**擋下部署**（這是保護，不要繞過）。
-- `b2lab/firestore.rules` **不在 CI 內自動部署**。改了規則要人工跑一次
-  `firebase deploy --only firestore:rules`（需要專案擁有者權限）。
+**不要自行部署。** 修改完成後只做 `git commit` + `git push`，部署由使用者在本機執行。
 
-### Speak Up（根目錄 `index.html`）
-**沒有 CI，用本機已登入的 Firebase CLI 直接部署**（跟 rexon-spec-vn 同一套做法）：
-```bash
-cp index.html public/index.html && npx firebase-tools deploy --only hosting --project learning-english-notes
-```
-- `public/` 是 gitignored 的部署產物，所以要先 `cp` 一份過去。
-- 沒有 service worker，不用 bump 版號（走 `firebase.json` 的 no-cache header）。
-- 部署前先 `git status` 確認工作區乾淨、要進版的都已 commit。
+原因：
+- Codex 的工作環境可能沒有正確的 Firebase 登入狀態
+- Codex 可能從不完整的檔案目錄部署，導致線上版本被舊版覆蓋
+- 使用者會在本機 `git pull` 確認版本正確後再部署
 
-> 2026-09-10 曾經加過 `deploy-speakup.yml` 走 CI，但那需要另外申請 Firebase
-> 服務帳戶金鑰、貼成 GitHub secret，對這個站來說沒有必要（改完就在本機部署即可），
-> 所以已經移除。**不要再幫它加回 CI**，除非之後真的出現「不在本機的自動化」需求。
-
-### 驗證上線
-```bash
-curl -s https://english-b2-lab.web.app/sw.js | grep CACHE     # 版號有跟上 = 部署完成
-```
+此規則同時適用 Speak Up（learning-english-notes）和 B2 Read（english-b2-lab）。
 
 ---
 
