@@ -14,7 +14,7 @@
 
 | 名稱 | 網址 | 原始碼 | 部署方式 |
 |---|---|---|---|
-| **Speak Up**（課堂筆記／口說／每日測驗） | https://learning-english-notes.web.app | 根目錄 `index.html` | **手動**（見 §2） |
+| **Speak Up**（課堂筆記／口說／每日測驗） | https://learning-english-notes.web.app | 根目錄 `index.html` | push 觸發 CI（**目前壞的**，見 §2） |
 | **B2 Read**（分級閱讀／課本／文法／實景） | https://english-b2-lab.web.app | `b2lab/public/index.html` | **push 到 main 自動部署**（見 §2） |
 | LINE 單字查詢 Bot | Cloudflare Worker | `line-bot/` | `npm run deploy`（wrangler） |
 
@@ -69,7 +69,17 @@ git fetch && git status
 - `b2lab/firestore.rules` **不在 CI 內自動部署**。改了規則要人工跑一次
   `firebase deploy --only firestore:rules`（需要專案擁有者權限）。
 
-### Speak Up（根目錄）
+### Speak Up（根目錄 `index.html`）
+2026-09-10 新增了 `.github/workflows/deploy-speakup.yml`（push `index.html` 或
+`firebase.json` 就部署到 learning-english-notes）。
+
+> ⚠️ **這個 workflow 目前是壞的**（run 34428268932 失敗在
+> `Sync index.html to public/` 這一步）：`public/` 是 gitignored、CI 全新 checkout
+> 裡並不存在，`cp index.html public/index.html` 會直接 No such file or directory。
+> 要修的話把那步改成 `mkdir -p public && cp index.html public/index.html`，
+> 並確認 repo secret `FIREBASE_SERVICE_ACCOUNT_LEARNING_ENGLISH_NOTES` 已經設好。
+
+**在修好之前，Speak Up 要手動部署：**
 ```bash
 cp index.html public/index.html          # public/ 是 gitignored 的部署產物
 npx firebase-tools deploy --only hosting --project learning-english-notes
