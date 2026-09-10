@@ -58,14 +58,16 @@ git fetch && git status
 
 ## 2. 部署規則（重要）
 
-**不要自行部署。** 修改完成後只做 `git commit` + `git push`，部署由使用者在本機執行。
+修改完成後，依以下順序操作：
 
-原因：
-- Codex 的工作環境可能沒有正確的 Firebase 登入狀態
-- Codex 可能從不完整的檔案目錄部署，導致線上版本被舊版覆蓋
-- 使用者會在本機 `git pull` 確認版本正確後再部署
+1. `git add` + `git commit` + `git push` — 先把改動推上 GitHub
+2. `git pull` — 部署前再拉一次，確保本地是 GitHub 上的最新版
+3. 部署指令（依子專案）：
+   - **Speak Up**：`cp index.html public/index.html && npx firebase-tools deploy --only hosting --project learning-english-notes`
+   - **B2 Read**：push 到 main 後 CI 自動部署（`.github/workflows/deploy-b2lab.yml`）
+4. 部署後打開網站確認版本正確（檢查改動是否生效）
 
-此規則同時適用 Speak Up（learning-english-notes）和 B2 Read（english-b2-lab）。
+**絕對不要跳過 git pull 直接部署** — 之前曾因此把舊版覆蓋到線上。
 
 ---
 
