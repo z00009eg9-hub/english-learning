@@ -139,7 +139,10 @@ nav button.on::after{content:'';position:absolute;bottom:1px;left:50%;transform:
 .dayico .d{flex:1 1 auto;display:flex;align-items:center;justify-content:center;
   font-size:10.5px;font-weight:800;line-height:10.5px;text-align:center;padding-bottom:1px}
 /* ---------- layout ---------- */
-main{width:100%;max-width:min(1100px,calc(100vw - var(--sb-w,0px) - 28px));min-width:0;margin:0 auto;padding:16px 14px calc(56px + env(safe-area-inset-bottom) + 12px)}
+/* Main 只吃「側邊欄以外的剩餘寬度」：不寫死寬度、不設 1100px 上限，
+   側邊欄展開/收合時由 margin-left 自動讓位，右側不再留大片空白。
+   左右內距隨螢幕縮放：手機 14px → 平板 15~18px → 桌機 24px。 */
+main{width:auto;max-width:none;min-width:0;margin:0;padding:16px clamp(14px,1.2vw + 6px,24px) calc(56px + env(safe-area-inset-bottom) + 12px)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 1px 4px rgba(60,45,30,.05);padding:14px;margin-bottom:12px}
 h2.sec{font-size:var(--font-subhead);line-height:var(--lh-title);font-weight:var(--fw-emph);margin:0 0 8px;display:flex;align-items:center;gap:6px}
 .muted{color:var(--ink2);font-size:var(--font-secondary);line-height:var(--lh-secondary)}
@@ -1453,7 +1456,7 @@ body.cnall #v-book span.cnx{display:inline!important}
 @media(min-width:920px) and (min-width:769px){
   #v-book.bkopen .bkbar,#v-book.bkopen .card,#v-book.bkopen .bkq,#v-book.bkopen .bkwarn,
   #v-book.bkopen .magttl,#v-book.bkopen .bkvm,#v-book.bkopen .bksub{
-    width:auto;max-width:calc(100vw - var(--sb-w) - 44px);left:0;transform:none;margin-left:auto;margin-right:auto
+    width:auto;max-width:100%;left:0;transform:none;margin-left:auto;margin-right:auto
   }
 }
 #v-book.bkopen .para{max-width:100%}
@@ -1486,12 +1489,9 @@ body.cnall #v-book span.cnx{display:inline!important}
   #v-read.rdopen>*{width:min(1120px,calc(100vw - 44px));position:relative;left:50%;transform:translateX(-50%)}
 }
 @media(min-width:920px) and (min-width:769px){
-  #v-read.rdopen>*{width:auto;max-width:calc(100vw - var(--sb-w) - 44px);left:0;transform:none;margin-left:auto;margin-right:auto}
+  #v-read.rdopen>*{width:auto;max-width:100%;left:0;transform:none;margin-left:auto;margin-right:auto}
 }
-/* 內文視圖：main 放寬，讓閱讀/課本內頁填滿 */
-@media(min-width:769px){
-  main:has(.rdopen),main:has(.bkopen){max-width:calc(100vw - var(--sb-w) - 28px)}
-}
+/* 內文視圖不再需要另外放寬 main：main 本來就填滿側邊欄以外的空間 */
 /* 閱讀的單字中文（詞義＋例句中譯）跟著全站中譯開關 */
 body:not(.cnall) #v-read .wpitem .zh,body:not(.cnall) #v-real .wpitem .zh{display:none}
 body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .exs .excn{display:none}
@@ -1891,6 +1891,27 @@ function cloudSubscribe(){
     ST=mergeState(r); saveLocal(); cloudBadge(true);
     if(!vQueue.length && !(TAB==='listen' && (lsOpen||myVid))) RENDER[TAB] && RENDER[TAB]();   // 單字卡複習中不打斷
   },()=>cloudBadge(false));
+}
+/* 實景教材是「共用教材」，不是個人進度：Anita 新增/修改的課，Tom 也要看得到。
+   存檔後把自己這份 ST.rw（含刪除墓碑）補寫進另一位學習者的文件，
+   只補「對方沒有、或對方那筆比較舊」的，才不會蓋掉對方剛做的修改。
+   rwDone（讀到哪、完成沒）仍然各自獨立。 */
+function rwShare(){
+  if(!db) return;
+  const mine=ST.rw||{};
+  if(!Object.keys(mine).length) return;
+  Object.keys(PROFILES).filter(p=>p!==PROFILE).forEach(p=>{
+    const d=db.collection('b2lab_progress').doc(p);
+    d.get().then(s=>{
+      const rem=((s.exists&&s.data())||{}).rw||{};
+      const patch={};
+      Object.keys(mine).forEach(id=>{
+        const a=mine[id]||{}, b=rem[id];
+        if(!b || (a.t||0)>(b.t||0)) patch[id]=a;
+      });
+      if(Object.keys(patch).length) d.set({rw:patch,updatedAt:Date.now()},{merge:true}).catch(()=>{});
+    }).catch(()=>{});
+  });
 }
 function setProfile(p){
   if(!PROFILES[p]||p===PROFILE) return;
@@ -5160,7 +5181,7 @@ function rwSave(){
     point:(d.point||'').trim(), ctx:(d.ctx||'').trim(), usage:(d.usage||'').trim(),
     cmp, quotes, exs, spq:(d.spq||'').trim(), spHint:(d.spHint||'').trim(), vocab,
     icons:(d.icons||[]).filter(k=>RW_ICON_KEYS.includes(k)).slice(0,3), steps:(d.steps||[]).slice(0,3) };
-  save();
+  save(); rwShare();
   rwFormOn=false; rwDraft=null; rwEditId=null;
   rwOpen=id; sbAutoCollapse(); RENDER.real(); window.scrollTo(0,0);
   showToast('已儲存','實景教材已更新');
@@ -5183,7 +5204,7 @@ function rwEdit(id){ rwEditId=id; rwFormOn=true; rwDraft=null; rwOpen=null; sbAu
   RENDER.real(); window.scrollTo(0,0); }
 function rwDel(id){
   if(!confirm('確定要刪除這篇實景教材嗎？')) return;
-  ST.rw=ST.rw||{}; ST.rw[id]={id, del:1, t:Date.now()}; save();
+  ST.rw=ST.rw||{}; ST.rw[id]={id, del:1, t:Date.now()}; save(); rwShare();
   rwOpen=null; sbAutoExpand(); RENDER.real(); showToast('已刪除','實景教材已移除');
 }
 window.rwAddOpen=rwAddOpen; window.rwCancel=rwCancel; window.rwSetCat=rwSetCat;
@@ -6666,7 +6687,7 @@ updateDayIcon();
 touchStreak();
 updateStreak();
 RENDER.daily();
-cloudPull(()=>{ touchStreak(); updateStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); vidSubscribe(); });
+cloudPull(()=>{ touchStreak(); updateStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); vidSubscribe(); rwShare(); });
 
 /* ---------- LINE Bot 深連結 ---------- */
 /* LINE 單字卡的「完整學習」會帶 ?w=compensate&lesson=bk20260811 進來：
