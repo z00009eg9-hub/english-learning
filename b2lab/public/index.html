@@ -1492,6 +1492,14 @@ body.cnall #v-book span.cnx{display:inline!important}
   #v-read.rdopen>*{width:auto;max-width:100%;left:0;transform:none;margin-left:auto;margin-right:auto}
 }
 /* 內文視圖不再需要另外放寬 main：main 本來就填滿側邊欄以外的空間 */
+/* 清單／內容頁在超寬桌機鎖一個閱讀舒適的內容寬度並置中，
+   卡片不會被拉成 1800px；1280px 以下（含 iPad、筆電）完全不生效。
+   例外：進度頁是 dashboard，維持 full-width；閱讀／課本內頁維持原本的放寬規則。 */
+@media(min-width:769px){
+  #v-daily,#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen,#v-real,#v-vocab,#v-gram{
+    max-width:1280px;margin-inline:auto
+  }
+}
 /* 閱讀的單字中文（詞義＋例句中譯）跟著全站中譯開關 */
 body:not(.cnall) #v-read .wpitem .zh,body:not(.cnall) #v-real .wpitem .zh{display:none}
 body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .exs .excn{display:none}
