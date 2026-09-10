@@ -20,7 +20,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Sync index.html to public/
-        run: cp index.html public/index.html
+        # public/ 是 gitignored 的部署產物，CI 全新 checkout 沒有這個目錄，要先建
+        run: mkdir -p public && cp index.html public/index.html
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
