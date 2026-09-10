@@ -18,9 +18,16 @@
 | **B2 Read**（分級閱讀／課本／文法／實景） | https://english-b2-lab.web.app | `b2lab/public/index.html` | **push 到 main 自動部署**（見 §2） |
 | LINE 單字查詢 Bot | Cloudflare Worker | `line-bot/` | `npm run deploy`（wrangler） |
 
-兩個網站都是**單一大 HTML 檔**（B2 Read 的 index.html 約 45 萬字元），
-沒有 build step、沒有框架、沒有打包。CSS 與 JS 都內嵌在同一個檔案裡，
-資料放在同目錄的 `data-*.js`（掛在 `window.XXX` 上）。
+兩個網站都是**單一大 HTML 檔**，沒有 build step、沒有框架、沒有打包，
+CSS 與 JS 全部內嵌在同一個檔案裡：
+
+- B2 Read：`b2lab/public/index.html` 約 45 萬字元，資料另外放同目錄的
+  `data-*.js`（掛在 `window.XXX` 上）。架構見 §6。
+- Speak Up：根目錄 `index.html` 約 100 萬字元，**課程資料也在同一個檔案裡**，
+  由 `/sync-notes` 用 `===SYNC:…===` 標記維護。架構見 §7。
+
+兩個站的版面規則完全不同（B2 Read 有側邊欄、內容吃滿寬度；Speak Up 沒有側邊欄、
+內容置中固定寬度），**不要把其中一邊的做法套到另一邊。**
 
 ---
 
@@ -118,7 +125,7 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
 
 ---
 
-## 6. B2 Read 的版面架構（改 CSS 前必讀）
+## 6. B2 Read（`b2lab/public/index.html`）架構
 
 2026-09 重整過，**不要退回舊寫法**：
 
@@ -140,7 +147,37 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
 
 ---
 
-## 7. 修改風格（使用者明確要求）
+## 7. Speak Up（根目錄 `index.html`）架構
+
+**跟 B2 Read 是兩套完全不同的版面，規則不可以互相套用。**
+
+- 單檔約 100 萬字元：`<header>` ＋ `.wrap` ＋ 十個 `<section class="screen">`
+  （`scr-home / say / shadow / word / read / talk / video / done / quiz / listen`），
+  靠 `.on` 切換畫面，不是路由；沒有 URL、沒有前進後退。
+- **沒有 sidebar。** `.wrap{max-width:920px;margin:0 auto}`，≥700px 放大到 1060px。
+  這個置中固定寬度是刻意的（口說練習一次只看一張卡，太寬反而難讀）——
+  **不要把 B2 Read 那套「main 吃滿剩餘寬度」搬過來。**
+- **沒有 service worker**，靠 `firebase.json` 的 `Cache-Control: no-cache` 更新，
+  所以不用 bump 版號；但也代表部署後立刻生效，沒有快取當緩衝。
+- **課程資料就在這個檔案裡**，由 `/sync-notes` 指令維護，用成對標記包住：
+  `// ===SYNC:VOCAB_START===` … `_END===`，同樣形式的還有
+  `SOURCES` / `TRANS` / `KW` / `ARTICLES` / `DAYQUIZ` / `DAYTALK`，
+  加上一行 `// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, …`。
+  手動編輯這些區塊時：
+  1. **標記行不可以動或刪掉**（動了下次同步會整段錯位）；
+  2. 更新內容要一併更新該標記上的 `sync_date:` 與 `count:`；
+  3. 新增一課要把日期加進 `PROCESSED_LESSONS`，否則會被重複處理。
+  資料格式：`{w, ipa, pos, cn, def, exEn, exCn, cat}`，音標規則同 §5。
+- Firestore（專案 `learning-english-notes`，跟 B2 Read 是**不同**專案）：
+  `progress/{anita|tom}`、`videos/{id}/parts/subs`、`shared/videos`。
+  `progress` 文件裡的 `b2wb` 欄位由 B2 Read 寫入，**推送前必須剔除**（見 §5）。
+- 本機偏好用 `speakup_*` 系列 localStorage 鍵（`speakup_profile`、`speakup_fs`、
+  `speakup_rec_mode`…）。
+- TTS 唸錯的字：加一行到 `TTS_FIX` 表即可，不要改朗讀邏輯。
+
+---
+
+## 8. 修改風格（使用者明確要求）
 
 - **最小範圍修改。** 不要順手重構、不要「順便優化」沒問到的地方。
 - **已經正常的頁面不要重新設計**：字級、行距、padding、gap、card 樣式、
@@ -153,7 +190,7 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
 
 ---
 
-## 8. 驗證（改完一定要自己看過，不要叫使用者去試）
+## 9. 驗證（改完一定要自己看過，不要叫使用者去試）
 
 本機起站：
 ```bash
@@ -161,15 +198,21 @@ npx http-server b2lab/public -p 8787 -c-1     # B2 Read
 npx http-server . -p 8789 -c-1                # Speak Up
 ```
 
-改版面至少要量過這幾種情況，且**都不能出現水平捲軸**：
-1920／1440（側邊欄展開＋收合各一次）、iPad 橫 1024、iPad 直 820、手機 390。
-八個分頁（今日／課本／閱讀／聽力／實景／單字卡／文法／進度）都要掃一遍。
+改版面至少要量過這幾種寬度，且**都不能出現水平捲軸**：
+1920／1440／iPad 橫 1024／iPad 直 820／手機 390。
+
+- **B2 Read**：每個寬度都要試「側邊欄展開」與「收合」兩種狀態，
+  八個分頁（今日／課本／閱讀／聽力／實景／單字卡／文法／進度）都掃一遍，
+  閱讀與實景還要各開一篇內頁看雙欄比例。
+- **Speak Up**：沒有側邊欄，但十個 `screen` 都要切過去看
+  （首頁／說出來／跟讀／單字／閱讀／對話／影片／完成／測驗／聽力）。
+  改到 `SYNC:` 區塊的話，另外確認頁面載入後單字數、題目數沒有變少。
 
 改 JS 要看 console 沒有新的錯誤。
 
 ---
 
-## 9. Commit
+## 10. Commit
 
 - 訊息用繁體中文，`type(scope): 摘要` 開頭（例：`fix(b2lab): …`、`feat(line-bot): …`），
   內文條列「改了什麼、為什麼」。
