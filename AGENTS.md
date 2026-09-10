@@ -7,7 +7,7 @@
 
 ## 0. 這個 repo 是什麼
 
-`G:\我的雲端硬碟\英文筆記` — 放在 **Google Drive 同步資料夾**裡的 git repo，
+`D:\english-learning` — 已從 Google Drive 搬到本機 D: 磁碟的 git repo，
 遠端 `z00009eg9-hub/english-learning`，主要分支 `main`。
 
 裡面有兩個上線中的英文學習網站，外加課堂筆記與工具：
