@@ -725,6 +725,24 @@ body.cnall .ucn{display:block}
   /* 內文比右欄長很多時，右欄跟著捲動，空白就變成「單字一直看得到」 */
   .mag.pin>div:last-child{position:sticky;top:58px}
 }
+/* 閱讀／實景的雙欄比例：左邊主內容（文章／情境）永遠明顯比右邊 Words & Phrases 寬。
+   判斷依據是「內容區實際可用寬度」而不是裝置寬度——側邊欄收合後多出來的空間，
+   會先讓左欄變寬（fr 比例愈往寬螢幕愈偏向左欄），右欄則維持適合看單字的寬度。
+   .stack / .solo（右欄空或需要流排）仍走上面的規則，優先權比這裡高。 */
+#v-read,#v-real{container-type:inline-size;container-name:mag}
+@container mag (max-width:839px){
+  .mag{grid-template-columns:1fr}                                  /* 空間不足 → 單欄：主內容 ↓ 單字 */
+}
+@container mag (min-width:840px){
+  .mag{grid-template-columns:minmax(0,1fr) minmax(300px,40%)}            /* 約 60 / 40 */
+}
+@container mag (min-width:1000px){
+  .mag{grid-template-columns:minmax(0,1fr) minmax(320px,38%)}            /* 約 62 / 38 */
+}
+@container mag (min-width:1200px){
+  /* 右欄最多 35%，而且不超過 600px：螢幕再寬，多出來的都給左邊主內容 */
+  .mag{grid-template-columns:minmax(0,1fr) minmax(340px,min(35%,600px))} /* 約 65 / 35 起 */
+}
 .magttl{
   background:linear-gradient(135deg,#fff4e2,#ffe3c2);border:2.5px solid #2b2118;border-radius:16px;
   padding:14px 16px;box-shadow:5px 5px 0 #2b2118;margin-bottom:14px
@@ -1496,7 +1514,7 @@ body.cnall #v-book span.cnx{display:inline!important}
    卡片不會被拉成 1800px；1280px 以下（含 iPad、筆電）完全不生效。
    例外：進度頁是 dashboard，維持 full-width；閱讀／課本內頁維持原本的放寬規則。 */
 @media(min-width:769px){
-  #v-daily,#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen,#v-real,#v-vocab,#v-gram{
+  #v-daily,#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen,#v-real:not(.rwopen),#v-vocab,#v-gram{
     max-width:1280px;margin-inline:auto
   }
 }
@@ -4867,9 +4885,11 @@ RENDER.real=function(){
   const v=$('v-real');
   if(rwOpen){
     const l=(ST.rw||{})[rwOpen];
-    if(l && !l.del){ v.innerHTML=rwDetailHTML(l); rebalanceMag('#v-real .mag'); return; }
+    /* rwopen＝正在看某篇教材：內頁跟閱讀內頁一樣吃滿可用寬度（清單頁才鎖 1280px） */
+    if(l && !l.del){ v.classList.add('rwopen'); v.innerHTML=rwDetailHTML(l); rebalanceMag('#v-real .mag'); return; }
     rwOpen=null;
   }
+  v.classList.remove('rwopen');
   v.innerHTML=rwListHTML();
 };
 
