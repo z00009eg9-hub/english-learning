@@ -8,6 +8,775 @@ window.DAILY = {
 
 articles:[
 {
+  "id": "d20260911a2",
+  "date": "2026-09-11",
+  "level": "A2",
+  "topic": "職場",
+  "words": 108,
+  "kind": "orig",
+  "title": "Tom's Bus to the Interview",
+  "titleCn": "Tom搭公車去面試",
+  "focus": "現在簡單式描述搭車過程；will表示對未來的預測",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom今天要去面試，搭公車的過程有點緊張。全文只用現在簡單式和will，留意will怎麼表達「對未來的預測」。",
+  "spoken": [
+    {
+      "en": "Tom's got a big interview today, and of course the bus decides to run late.",
+      "cn": "Tom今天有個大面試，結果公車偏偏這時候誤點。"
+    },
+    {
+      "en": "He's stuck waiting with a bunch of other people, checking his watch like every ten seconds.",
+      "cn": "他跟一堆人一起卡在那等車，每十秒就看一次手錶。"
+    },
+    {
+      "en": "Bus finally shows up, packed as usual, but he squeezes in and runs his answers one more time.",
+      "cn": "公車終於來了，一如既往地擠，但他還是擠上去，又把回答內容順了一遍。"
+    },
+    {
+      "en": "He rolls in five minutes early, flashes the manager a smile, and figures it's going to go fine.",
+      "cn": "他提早五分鐘到，對經理笑了一下，覺得應該會很順利。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom has an important job interview today. The interview starts at ten o'clock, and the office is far from his house. He checks the bus schedule and gets ready quickly.",
+      "cn": "Tom今天有一個很重要的面試。面試十點開始，辦公室離他家很遠。他查了公車時刻表，很快就準備好了。"
+    },
+    {
+      "en": "Tom waits at the bus stop, but the bus is late. There are many people waiting, and Tom feels nervous. He looks at his watch again and again.",
+      "cn": "Tom在公車站等車，但公車遲到了。有很多人在等車，Tom覺得很緊張。他一直看手錶，看了又看。"
+    },
+    {
+      "en": "Finally, the bus comes, and Tom gets on fast. The bus is very crowded, but he finds an empty seat. He quietly practices his answers on the bus.",
+      "cn": "終於，公車來了，Tom很快就上車。公車上非常擠，不過他找到一個空位。他在公車上小聲地練習回答問題。"
+    },
+    {
+      "en": "Tom arrives at the office five minutes early. He meets the manager and smiles politely. Tom thinks the interview will go well.",
+      "cn": "Tom提早五分鐘到辦公室。他見到經理，很有禮貌地微笑。Tom覺得這場面試應該會很順利。"
+    }
+  ],
+  "target": [
+    {
+      "w": "interview",
+      "ipa": "/ˈɪn.t̬ɚ.vjuː/",
+      "pos": "n.",
+      "cn": "面試",
+      "def": "A meeting where someone asks you questions, often for a job.",
+      "ex": "Tom has an important job interview today.",
+      "exCn": "Tom今天有一個很重要的面試。"
+    },
+    {
+      "w": "schedule",
+      "ipa": "/ˈskedʒuːl/",
+      "pos": "n.",
+      "cn": "時間表",
+      "def": "A list that shows times, such as bus times.",
+      "ex": "He checks the bus schedule and gets ready quickly.",
+      "exCn": "他查了公車時刻表，很快就準備好了。"
+    },
+    {
+      "w": "nervous",
+      "ipa": "/ˈnɜːrvəs/",
+      "pos": "adj.",
+      "cn": "緊張的",
+      "def": "Feeling worried or afraid about something.",
+      "ex": "There are many people waiting, and Tom feels nervous.",
+      "exCn": "有很多人在等車，Tom覺得很緊張。"
+    },
+    {
+      "w": "crowded",
+      "ipa": "/ˈkraʊdɪd/",
+      "pos": "adj.",
+      "cn": "擁擠的",
+      "def": "Full of people.",
+      "ex": "The bus is very crowded, but he finds an empty seat.",
+      "exCn": "公車上非常擠，不過他找到一個空位。"
+    },
+    {
+      "w": "practice",
+      "ipa": "/ˈpræktɪs/",
+      "pos": "v.",
+      "cn": "練習",
+      "def": "To do something again and again to get better at it.",
+      "ex": "He quietly practices his answers on the bus.",
+      "exCn": "他在公車上小聲地練習回答問題。"
+    },
+    {
+      "w": "manager",
+      "ipa": "/ˈmænɪdʒɚ/",
+      "pos": "n.",
+      "cn": "經理",
+      "def": "A person who is in charge of a business or office.",
+      "ex": "He meets the manager and smiles politely.",
+      "exCn": "他見到經理，很有禮貌地微笑。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why does Tom feel nervous at the bus stop?",
+      "qCn": "Tom在公車站為什麼覺得緊張？",
+      "opts": [
+        "A. Because he is hungry",
+        "B. Because the bus is late and he has an important interview",
+        "C. Because he forgot his bag",
+        "D. Because his phone is broken"
+      ],
+      "optsCn": [
+        "A. 因為他肚子餓",
+        "B. 因為公車遲到了，而且他有重要的面試",
+        "C. 因為他忘記帶包包",
+        "D. 因為他的手機壞了"
+      ],
+      "ans": 1,
+      "expl": "There are many people waiting, and Tom feels nervous——因為他今天有重要的面試，公車卻遲到了。"
+    },
+    {
+      "q": "What does Tom do on the bus?",
+      "qCn": "Tom在公車上做什麼？",
+      "opts": [
+        "A. He sleeps",
+        "B. He calls the manager",
+        "C. He quietly practices his answers",
+        "D. He reads a book"
+      ],
+      "optsCn": [
+        "A. 他睡覺",
+        "B. 他打電話給經理",
+        "C. 他小聲練習回答問題",
+        "D. 他看書"
+      ],
+      "ans": 2,
+      "expl": "He quietly practices his answers on the bus."
+    },
+    {
+      "q": "Tom thinks the interview ___ go well.",
+      "qCn": "Tom覺得這場面試應該會很順利。（選出正確的字）",
+      "opts": [
+        "A. is",
+        "B. was",
+        "C. will",
+        "D. does"
+      ],
+      "ans": 2,
+      "expl": "will用來表示對未來的預測：Tom覺得面試『將會』很順利。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The bus broke down, so Anita took a motorbike taxi instead.",
+      "b2": "Because the bus had broken down, Anita decided to take a motorbike taxi instead.",
+      "note": "用because開頭並改成had broken down（過去完成式），交代「先壞掉，才決定改搭車」的先後順序，是B1+常見的寫法。",
+      "sp": "The bus was out of commission, so Anita just hopped on a motorbike taxi instead.",
+      "spNote": "out of commission（故障、無法使用）、hopped on（迅速跳上）都是口語常見的說法。",
+      "b1Cn": "公車拋錨了，所以Anita改搭摩托車計程車。",
+      "b2Cn": "因為公車已經先拋錨了，Anita才決定改搭摩托車計程車。",
+      "spCn": "公車故障了，所以Anita就直接跳上摩托車計程車。"
+    },
+    {
+      "b1": "Tom arrived at the office early. He met the manager and smiled.",
+      "b2": "Tom arrived at the office early and met the manager with a polite smile.",
+      "note": "用and連接兩個動作，並把smiled改成with a polite smile的片語，句子更精簡，是B1常見的寫法。",
+      "sp": "Tom got to the office with time to spare and gave the manager a friendly smile.",
+      "spNote": "with time to spare（還有多餘時間，表示提早到）是口語常見的說法。",
+      "b1Cn": "Tom提早到辦公室。他見到經理，微笑了一下。",
+      "b2Cn": "Tom提早到辦公室，並帶著禮貌的微笑見到經理。",
+      "spCn": "Tom提早到辦公室，還有多餘時間，給了經理一個友善的微笑。"
+    }
+  ]
+},
+{
+  "id": "d20260911b1",
+  "date": "2026-09-11",
+  "level": "B1",
+  "topic": "交通",
+  "words": 155,
+  "kind": "orig",
+  "title": "Anita's Shuttle Bus Breaks Down",
+  "titleCn": "Anita的接駁車拋錨了",
+  "focus": "現在完成式基礎（has never been, has already sent, has learned）vs 過去簡單式（broke down, decided, arrived）；because/so/when連接原因與結果；比較級（faster, worse）",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Anita平常搭公司接駁車上班，這天車子卻拋錨了。文章用現在完成式的基礎用法講「從來沒有、已經做了」的狀態，也留意because/so/when怎麼連接原因和結果，還有faster、worse這些比較級。",
+  "spoken": [
+    {
+      "en": "So Anita's shuttle bus just dies on her this morning, right when she can't afford to be late.",
+      "cn": "Anita的接駁車今天早上偏偏就在她最不能遲到的時候壞掉。"
+    },
+    {
+      "en": "She jumps on a motorbike taxi instead, traffic's a nightmare, but she still texts her boss just in case.",
+      "cn": "她改跳上摩托車計程車，交通亂成一團，但她還是先傳訊息給主管保險一下。"
+    },
+    {
+      "en": "Driver knows a shortcut, so she only ends up ten minutes late — boss is cool about it once she explains.",
+      "cn": "司機知道抄近路，所以她只晚了十分鐘——解釋清楚後主管也沒意見。"
+    },
+    {
+      "en": "Now she's got a taxi app on standby at all times, because Vietnam traffic can flip on you instantly.",
+      "cn": "現在她手機隨時待命一個叫車App，因為越南的交通說變就變。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Every morning, Anita takes the company shuttle bus to her factory in Vietnam. This morning, when she arrived at the bus stop, the driver said the bus broke down. Anita has never been late for work, so she thought of another plan.",
+      "cn": "Anita每天早上都搭公司的接駁車去越南的工廠上班。今天早上，她到公車站的時候，司機說車子拋錨了。Anita上班從來沒有遲到過，所以她馬上想了另一個辦法。"
+    },
+    {
+      "en": "She decided to take a motorbike taxi instead, because it was faster than waiting for repairs. The traffic that morning was worse than usual, and cars filled every nearby street. Anita felt anxious, but she has already sent a message to her manager.",
+      "cn": "她決定改搭摩托車計程車，因為這樣比等維修還快。那天早上的交通比平常還糟，附近每條街都塞滿了車。Anita覺得很焦慮，不過她已經傳訊息給主管了。"
+    },
+    {
+      "en": "The motorbike driver knew a smaller road, so they avoided the worst traffic. Anita arrived only ten minutes after her usual time. Her manager understood because Anita explained the situation clearly.",
+      "cn": "摩托車司機知道一條比較小的路，所以他們避開了最塞的路段。Anita只比平常晚了十分鐘到。因為Anita把情況解釋得很清楚，主管也能理解。"
+    },
+    {
+      "en": "Now Anita always keeps a taxi app on her phone, just in case. She has learned that traffic in Vietnam can change very quickly. Next time the shuttle bus has a problem, she will already know what to do.",
+      "cn": "現在Anita手機裡一直放著一個叫車App，以防萬一。她學到越南的交通狀況變化非常快。下次接駁車再出問題，她就已經知道該怎麼辦了。"
+    }
+  ],
+  "target": [
+    {
+      "w": "shuttle bus",
+      "ipa": "/ˈʃʌt̬.əl bʌs/",
+      "pos": "n.",
+      "cn": "接駁車",
+      "def": "A bus that regularly carries people between two nearby places, such as home and work.",
+      "ex": "Every morning, Anita takes the company shuttle bus to her factory in Vietnam.",
+      "exCn": "Anita每天早上都搭公司的接駁車去越南的工廠上班。"
+    },
+    {
+      "w": "break down",
+      "ipa": "/breɪk daʊn/",
+      "pos": "phr. v.",
+      "cn": "（車輛）故障、拋錨",
+      "def": "To stop working because of a mechanical problem.",
+      "ex": "The driver said the bus broke down.",
+      "exCn": "司機說車子拋錨了。"
+    },
+    {
+      "w": "motorbike",
+      "ipa": "/ˈmoʊ.t̬ɚ.baɪk/",
+      "pos": "n.",
+      "cn": "摩托車",
+      "def": "A small vehicle with two wheels and an engine.",
+      "ex": "She decided to take a motorbike taxi instead.",
+      "exCn": "她決定改搭摩托車計程車。"
+    },
+    {
+      "w": "traffic",
+      "ipa": "/ˈtræfɪk/",
+      "pos": "n.",
+      "cn": "交通、車流",
+      "def": "The cars and other vehicles moving on a road.",
+      "ex": "The traffic that morning was worse than usual.",
+      "exCn": "那天早上的交通比平常還糟。"
+    },
+    {
+      "w": "anxious",
+      "ipa": "/ˈæŋk.ʃəs/",
+      "pos": "adj.",
+      "cn": "焦慮的",
+      "def": "Feeling nervous or worried about what might happen.",
+      "ex": "Anita felt anxious, but she has already sent a message to her manager.",
+      "exCn": "Anita覺得很焦慮，不過她已經傳訊息給主管了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Anita decide to take a motorbike taxi?",
+      "qCn": "Anita為什麼決定改搭摩托車計程車？",
+      "opts": [
+        "A. Because it was cheaper than the bus",
+        "B. Because it was faster than waiting for the bus to be repaired",
+        "C. Because she wanted to see the city",
+        "D. Because her manager told her to"
+      ],
+      "optsCn": [
+        "A. 因為比公車便宜",
+        "B. 因為比等公車修好還快",
+        "C. 因為她想看看城市",
+        "D. 因為主管叫她這麼做"
+      ],
+      "ans": 1,
+      "expl": "She decided to take a motorbike taxi instead, because it was faster than waiting for repairs."
+    },
+    {
+      "q": "How did Anita's manager react when she arrived late?",
+      "qCn": "Anita遲到時主管的反應如何？",
+      "opts": [
+        "A. He was very angry",
+        "B. He did not notice at all",
+        "C. He understood because she explained clearly",
+        "D. He asked her to work overtime"
+      ],
+      "optsCn": [
+        "A. 他非常生氣",
+        "B. 他完全沒注意到",
+        "C. 因為她解釋得很清楚，主管能理解",
+        "D. 他要求她加班"
+      ],
+      "ans": 2,
+      "expl": "Her manager understood because Anita explained the situation clearly."
+    },
+    {
+      "q": "She ___ already sent a message to her manager.",
+      "qCn": "她已經傳訊息給主管了。（選出正確的字）",
+      "opts": [
+        "A. has",
+        "B. have",
+        "C. had",
+        "D. is"
+      ],
+      "ans": 0,
+      "expl": "主詞是she，現在完成式用has + 過去分詞，表示「已經做了」的動作。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Anita's manager understood because she explained the situation clearly.",
+      "b2": "Anita's manager was understanding because the situation had been explained clearly.",
+      "note": "把explained改成被動語態had been explained，強調「情況本身被說明清楚」而不是誰做的動作，是B1+常見的寫法。",
+      "sp": "Her manager was totally chill about it once Anita laid out what happened.",
+      "spNote": "chill about it（不介意、很淡定）、laid out（說明清楚）是口語常見說法。",
+      "b1Cn": "因為Anita解釋得很清楚，主管能理解。",
+      "b2Cn": "因為情況已經被解釋得很清楚，主管也能諒解。",
+      "spCn": "Anita把事情講清楚之後，主管完全不介意。"
+    },
+    {
+      "b1": "The traffic was worse than usual, so Anita arrived a little late.",
+      "b2": "Because the traffic was significantly worse than usual, Anita ended up arriving a little later than planned.",
+      "note": "加入significantly（明顯地）強化比較級worse的程度，並用ended up arriving取代簡單的arrived，語氣更細緻，是B1+常見的寫法。",
+      "sp": "Traffic was way worse than normal, so she showed up a bit later than she wanted.",
+      "spNote": "way worse（超糟，way在口語中強調程度）、showed up（現身、抵達）是口語常見說法。",
+      "b1Cn": "交通比平常還糟，所以Anita晚了一點到。",
+      "b2Cn": "因為交通明顯比平常還糟，Anita最後比預定時間晚了一點抵達。",
+      "spCn": "交通比平常爛超多，所以她比原本想的晚了一點才到。"
+    }
+  ]
+},
+{
+  "id": "d20260911b1p",
+  "date": "2026-09-11",
+  "level": "B1+",
+  "topic": "旅遊與交通",
+  "words": 180,
+  "kind": "orig",
+  "title": "The Flight That Almost Cost Anita a Meeting",
+  "titleCn": "差點讓Anita錯過會議的那趟班機",
+  "focus": "被動語態與現在完成式＋被動（had been delayed, had been arranged, could be moved）；關係子句（which）補充資訊",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "Anita出差搭機到台北開會，班機卻臨時延誤。文章開始使用被動語態與現在完成式＋被動（had been delayed, had been arranged），也用which帶出的關係子句補充額外資訊，是B1+進階的句型重點。",
+  "spoken": [
+    {
+      "en": "Anita's about to fly to Taipei for a big client meeting, and her flight gets delayed like three hours because of a storm.",
+      "cn": "Anita正要飛去台北開重要的客戶會議，結果因為暴風雨，班機被delay了大概三小時。"
+    },
+    {
+      "en": "The gate area's already packed, and now her meeting's basically impossible to make on time.",
+      "cn": "候機區已經人擠人，她的會議現在幾乎不可能準時趕上了。"
+    },
+    {
+      "en": "Instead of losing it, she just calls her coworker and they switch the whole thing to a video call.",
+      "cn": "她沒有崩潰，直接打給同事，把整場會議改成視訊。"
+    },
+    {
+      "en": "By the time she lands, the meeting's been moved twice already, but honestly nobody at the office even cared.",
+      "cn": "等她降落，會議已經被改期兩次了，但辦公室裡根本沒人在意。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita was scheduled to fly from Ho Chi Minh City to Taipei for a two-day meeting with an important client. When she reached the airport early that morning, she was told that her flight had been delayed by almost three hours because of a tropical storm over the South China Sea.",
+      "cn": "Anita原本排定要從胡志明市飛往台北，跟一位重要客戶開兩天的會。那天早上她一到機場，就被告知因為南海有熱帶風暴，班機已經延誤了將近三個小時。"
+    },
+    {
+      "en": "The departure lounge, which was already crowded with tourists heading home, quickly filled with frustrated business travelers as well. Anita's meeting, which had been carefully arranged for that same afternoon, now looked almost impossible to reach on time, and she began checking her phone every few minutes.",
+      "cn": "候機室裡原本就擠滿了要回國的觀光客，很快又擠進一堆滿臉不耐的商務旅客。Anita那場精心安排在當天下午的會議，看起來幾乎不可能準時趕上，她開始每隔幾分鐘就看一次手機。"
+    },
+    {
+      "en": "Instead of panicking, Anita called her colleague in Taipei and asked whether the meeting could be moved online instead. Fortunately, a video call was quickly arranged within the hour, and the client was told politely about the unexpected delay.",
+      "cn": "Anita並沒有慌張，而是打電話給台北的同事，問對方會議能不能改成線上進行。所幸，一小時內就安排好了視訊會議，客戶也被禮貌地告知了這個意外的延誤。"
+    },
+    {
+      "en": "By the time Anita finally landed, the meeting had already been rescheduled twice, but nobody at the office seemed particularly upset about it. She has since learned that flexible planning matters just as much as punctuality when your job involves frequent business travel.",
+      "cn": "等到Anita終於降落時，那場會議已經被改期兩次了，但辦公室裡似乎沒有人特別在意。從那之後她體會到，當工作經常需要出差時，有彈性的規劃跟準時一樣重要。"
+    }
+  ],
+  "target": [
+    {
+      "w": "delayed",
+      "ipa": "/dɪˈleɪd/",
+      "pos": "adj.",
+      "cn": "被延誤的",
+      "def": "Made to happen later than planned.",
+      "ex": "She was told that her flight had been delayed by almost three hours.",
+      "exCn": "她被告知班機已經延誤了將近三個小時。"
+    },
+    {
+      "w": "departure lounge",
+      "ipa": "/dɪˈpɑːrtʃɚ laʊndʒ/",
+      "pos": "n.",
+      "cn": "候機室",
+      "def": "The area in an airport where passengers wait before boarding.",
+      "ex": "The departure lounge, which was already crowded with tourists heading home, quickly filled with frustrated business travelers.",
+      "exCn": "候機室裡原本就擠滿了要回國的觀光客，很快又擠進一堆滿臉不耐的商務旅客。"
+    },
+    {
+      "w": "frustrated",
+      "ipa": "/ˈfrʌstreɪtɪd/",
+      "pos": "adj.",
+      "cn": "感到挫折、不耐煩的",
+      "def": "Feeling annoyed because something is not going the way you want.",
+      "ex": "The departure lounge quickly filled with frustrated business travelers as well.",
+      "exCn": "候機室很快又擠進一堆滿臉不耐的商務旅客。"
+    },
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person you work with.",
+      "ex": "Anita called her colleague in Taipei and asked whether the meeting could be moved online.",
+      "exCn": "Anita打電話給台北的同事，問對方會議能不能改成線上進行。"
+    },
+    {
+      "w": "rescheduled",
+      "ipa": "/ˌriːˈskedʒ.uːld/",
+      "pos": "v. (過去分詞)",
+      "cn": "被改期的",
+      "def": "Changed to a different time.",
+      "ex": "The meeting had already been rescheduled twice.",
+      "exCn": "那場會議已經被改期兩次了。"
+    },
+    {
+      "w": "storm",
+      "ipa": "/stɔːrm/",
+      "pos": "n.",
+      "cn": "暴風雨",
+      "def": "Very bad weather with strong wind and rain.",
+      "ex": "Her flight had been delayed because of a tropical storm over the South China Sea.",
+      "exCn": "她的班機因為南海的熱帶風暴而延誤。"
+    },
+    {
+      "w": "flexible",
+      "ipa": "/ˈflek.sə.bəl/",
+      "pos": "adj.",
+      "cn": "有彈性的",
+      "def": "Able to change easily to fit new situations.",
+      "ex": "She has learned that flexible planning matters just as much as punctuality.",
+      "exCn": "她體會到，有彈性的規劃跟準時一樣重要。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why was Anita's flight delayed?",
+      "qCn": "Anita的班機為什麼延誤？",
+      "opts": [
+        "A. Because of a mechanical problem",
+        "B. Because of a tropical storm over the South China Sea",
+        "C. Because the airport was closed for a holiday",
+        "D. Because of a staff strike"
+      ],
+      "optsCn": [
+        "A. 因為機械故障",
+        "B. 因為南海有熱帶風暴",
+        "C. 因為機場因假日關閉",
+        "D. 因為員工罷工"
+      ],
+      "ans": 1,
+      "expl": "she was told that her flight had been delayed by almost three hours because of a tropical storm over the South China Sea."
+    },
+    {
+      "q": "What did Anita do instead of panicking?",
+      "qCn": "Anita沒有慌張，而是做了什麼？",
+      "opts": [
+        "A. She canceled the meeting completely",
+        "B. She called her colleague and asked to move the meeting online",
+        "C. She booked a different flight",
+        "D. She complained to the airline staff"
+      ],
+      "optsCn": [
+        "A. 她直接取消了會議",
+        "B. 她打電話給同事，問能不能把會議改成線上",
+        "C. 她訂了另一班飛機",
+        "D. 她向航空公司員工抱怨"
+      ],
+      "ans": 1,
+      "expl": "Anita called her colleague in Taipei and asked whether the meeting could be moved online instead."
+    },
+    {
+      "q": "According to the article, how many times was the meeting rescheduled?",
+      "qCn": "根據文章，這場會議總共被改期幾次？",
+      "opts": [
+        "A. Once",
+        "B. Twice",
+        "C. Three times",
+        "D. It was never rescheduled"
+      ],
+      "optsCn": [
+        "A. 一次",
+        "B. 兩次",
+        "C. 三次",
+        "D. 完全沒有改期"
+      ],
+      "ans": 1,
+      "expl": "the meeting had already been rescheduled twice, but nobody at the office seemed particularly upset about it."
+    },
+    {
+      "q": "What lesson did Anita learn from this experience?",
+      "qCn": "Anita從這次經驗中學到了什麼？",
+      "opts": [
+        "A. Flexible planning matters as much as punctuality when traveling for work",
+        "B. She should never fly to Taipei again",
+        "C. Video calls are always better than in-person meetings",
+        "D. She should arrive at the airport later next time"
+      ],
+      "optsCn": [
+        "A. 出差時，有彈性的規劃跟準時一樣重要",
+        "B. 她再也不應該飛台北了",
+        "C. 視訊會議永遠比實體會議好",
+        "D. 下次應該更晚到機場"
+      ],
+      "ans": 0,
+      "expl": "She has since learned that flexible planning matters just as much as punctuality when your job involves frequent business travel."
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Anita's flight was delayed because of a storm.",
+      "b2": "Anita's flight had been delayed by almost three hours because of a tropical storm over the South China Sea, throwing her entire schedule into question.",
+      "note": "加入具體時間almost three hours、精確地點the South China Sea，並用分詞構句throwing...into question帶出後續影響，是B2敘事寫作常見的手法。",
+      "sp": "Anita's flight got pushed back like three hours because of some storm out over the South China Sea.",
+      "spNote": "got pushed back（被延後）、like three hours（口語常用like表示大概）是口語說法。",
+      "b1Cn": "Anita的班機因為暴風雨而延誤了。",
+      "b2Cn": "Anita的班機因為南海的熱帶風暴而延誤了將近三個小時，讓她整個行程都受到影響。",
+      "spCn": "Anita的班機因為南海那邊的暴風雨，大概延誤了三個小時。"
+    },
+    {
+      "b1": "Anita called her colleague, and they moved the meeting online.",
+      "b2": "Rather than panicking, Anita called her colleague in Taipei to see whether the meeting could be moved online instead.",
+      "note": "用Rather than panicking的分詞片語開頭，帶出對比的語氣，比單純用and連接更有敘事感，是B2寫作常見的修辭選擇。",
+      "sp": "Instead of freaking out, Anita just called her colleague to see if they could switch the meeting to a video call.",
+      "spNote": "freaking out（慌張、崩潰）、switch...to（換成）是口語常見說法。",
+      "b1Cn": "Anita打電話給同事，他們把會議改成線上進行。",
+      "b2Cn": "Anita沒有慌張，而是打電話給台北的同事，看看會議能不能改成線上進行。",
+      "spCn": "Anita沒有崩潰，只是打給同事問能不能把會議換成視訊。"
+    }
+  ]
+},
+{
+  "id": "d20260911b2",
+  "date": "2026-09-11",
+  "level": "B2",
+  "topic": "旅遊與交通",
+  "words": 265,
+  "kind": "news",
+  "source": "改寫自 Focus Taiwan 報導（2026/08/15）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/business/202608150005",
+  "title": "A New Direct Route Links Hanoi and Tainan",
+  "titleCn": "河內與台南首度直航",
+  "focus": "被動語態描述新聞事實（will be launched, was suspended）；現在完成進行的擴張語氣（continues to expand, having added）；正式語域的新聞寫作用字",
+  "intro": "這篇是改寫自Focus Taiwan的真實新聞，講越南廉價航空VietJet即將開通河內到台南的新航線。留意文章怎麼用被動語態交代事實（was suspended, are scheduled），也留意having added這種分詞構句怎麼在正式新聞寫作裡補充背景資訊。",
+  "spoken": [
+    {
+      "en": "VietJet's throwing a brand-new Hanoi-Tainan route into the mix starting late October — first direct link ever between the two.",
+      "cn": "VietJet十月底要推出全新的河內—台南航線——兩地史上第一條直飛航線。"
+    },
+    {
+      "en": "Tainan's kind of the underrated pick here — everyone thinks Taipei, but Tainan's actually the oldest city on the island.",
+      "cn": "台南算是這裡的黑馬選擇——大家都只想到台北，但台南其實才是全島最老的城市。"
+    },
+    {
+      "en": "Funny thing is, VietJet already tried this from Ho Chi Minh City back in the day, and it fizzled out in 2023.",
+      "cn": "有趣的是，VietJet之前就從胡志明市試過這條路線，結果2023年就收掉了。"
+    },
+    {
+      "en": "Feels like VietJet's on a total expansion binge across Asia right now, and this route's just one more piece of that.",
+      "cn": "感覺VietJet現在整個在亞洲瘋狂擴張，這條航線只是其中一小塊而已。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Vietnamese budget carrier VietJet Air will begin a new nonstop route between Hanoi and Tainan starting on October 25, 2026, according to a report by Focus Taiwan. The service will operate four times a week, with flights scheduled for Mondays, Wednesdays, Fridays, and Sundays, giving travelers their first-ever direct link between Vietnam's capital and southern Taiwan.",
+      "cn": "根據Focus Taiwan報導，越南廉價航空VietJet Air將從2026年10月25日起，開通河內與台南之間的新直飛航線。這項服務每週營運四班，分別在星期一、三、五、日，讓旅客首度擁有連結越南首都與台灣南部的直航選擇。"
+    },
+    {
+      "en": "The new route will make Tainan VietJet's fourth scheduled destination in Taiwan, joining its existing services to Taipei, Taichung, and Kaohsiung. Unlike the capital, Tainan is often overlooked by international visitors, even though it is widely regarded as Taiwan's oldest city and a center of traditional temples, night markets, and local food. Industry watchers expect the new flights to appeal to both business travelers with ties to the region and tourists exploring southern Taiwan for the first time.",
+      "cn": "這條新航線將使台南成為VietJet在台灣的第四個定期航點，加入原本就有的台北、台中和高雄航班。與台北不同，台南雖然普遍被公認是台灣歷史最悠久的城市，也是傳統廟宇、夜市與在地美食的重鎮，卻常被國際旅客忽略。業界觀察人士預期，這項新航班將同時吸引與該地區有業務往來的商務旅客，以及第一次探索台灣南部的觀光客。"
+    },
+    {
+      "en": "This is not VietJet's first attempt at connecting Vietnam with Tainan. The airline previously flew a similar route out of Ho Chi Minh City, but that service was suspended in October 2023 after roughly three years of operation. The revived connection, launched this time from Hanoi rather than the south, suggests the airline now sees renewed demand along a different part of its growing Vietnamese network.",
+      "cn": "這並不是VietJet第一次嘗試連結越南與台南。該航空公司先前曾營運過從胡志明市出發的類似航線，但那項服務在營運約三年後，於2023年10月停飛。這次重新開通的航線改從河內出發，而非南部，顯示該航空公司認為，其日漸擴大的越南航網中，另一個區域出現了新的需求。"
+    },
+    {
+      "en": "The announcement comes as VietJet continues to expand aggressively across Asia, having added routes to destinations in Japan, South Korea, and the Philippines within just the past few months. For passengers, the new Hanoi-Tainan flights should mean fewer layovers and far more flexibility when planning trips between the two countries, at a time when tourism and business exchanges between Vietnam and Taiwan keep growing steadily.",
+      "cn": "這項宣布正值VietJet在亞洲積極擴張之際，該公司短短幾個月內已經新增了飛往日本、南韓與菲律賓等地的航線。對旅客而言，河內—台南新航班應該能減少轉機次數，讓規劃兩國之間的行程更有彈性，這正是越南與台灣之間觀光與商務往來持續穩定成長的時刻。"
+    }
+  ],
+  "target": [
+    {
+      "w": "nonstop",
+      "ipa": "/ˌnɑːnˈstɑːp/",
+      "pos": "adj.",
+      "cn": "直飛的、不停靠的",
+      "def": "Traveling directly to a place without stopping.",
+      "ex": "VietJet Air will begin a new nonstop route between Hanoi and Tainan.",
+      "exCn": "VietJet Air將開通河內與台南之間的新直飛航線。"
+    },
+    {
+      "w": "overlooked",
+      "ipa": "/ˌoʊ.vɚˈlʊkt/",
+      "pos": "adj.",
+      "cn": "被忽略的",
+      "def": "Not given enough attention.",
+      "ex": "Tainan is often overlooked by international visitors.",
+      "exCn": "台南常被國際旅客忽略。"
+    },
+    {
+      "w": "suspended",
+      "ipa": "/səˈspendɪd/",
+      "pos": "v. (過去分詞)",
+      "cn": "被暫停的",
+      "def": "Stopped for a period of time.",
+      "ex": "That service was suspended in October 2023 after roughly three years of operation.",
+      "exCn": "那項服務在營運約三年後，於2023年10月停飛。"
+    },
+    {
+      "w": "revived",
+      "ipa": "/rɪˈvaɪvd/",
+      "pos": "adj.",
+      "cn": "重新恢復的",
+      "def": "Brought back after stopping for a while.",
+      "ex": "The revived connection is launched this time from Hanoi rather than the south.",
+      "exCn": "這次重新開通的航線改從河內出發，而非南部。"
+    },
+    {
+      "w": "aggressively",
+      "ipa": "/əˈɡres.ɪv.li/",
+      "pos": "adv.",
+      "cn": "積極地、大力地",
+      "def": "In a very determined and forceful way.",
+      "ex": "VietJet continues to expand aggressively across Asia.",
+      "exCn": "VietJet在亞洲持續積極擴張。"
+    },
+    {
+      "w": "layover",
+      "ipa": "/ˈleɪ.oʊ.vɚ/",
+      "pos": "n.",
+      "cn": "轉機（停留）",
+      "def": "A stop between two flights on the same journey.",
+      "ex": "The new flights should mean fewer layovers.",
+      "exCn": "新航班應該能減少轉機次數。"
+    },
+    {
+      "w": "network",
+      "ipa": "/ˈnet.wɝːk/",
+      "pos": "n.",
+      "cn": "（航線）網絡",
+      "def": "A large system of connected routes or places.",
+      "ex": "The airline sees renewed demand along a different part of its growing Vietnamese network.",
+      "exCn": "該航空公司認為其日漸擴大的越南航網中出現了新的需求。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "When will VietJet's new Hanoi-Tainan route begin?",
+      "qCn": "VietJet的河內—台南新航線何時開始？",
+      "opts": [
+        "A. October 25, 2026",
+        "B. August 15, 2026",
+        "C. January 1, 2027",
+        "D. It has already begun"
+      ],
+      "optsCn": [
+        "A. 2026年10月25日",
+        "B. 2026年8月15日",
+        "C. 2027年1月1日",
+        "D. 已經開始了"
+      ],
+      "ans": 0,
+      "expl": "VietJet Air will begin a new nonstop route between Hanoi and Tainan starting on October 25, 2026."
+    },
+    {
+      "q": "Why is Tainan considered a notable choice for this new route?",
+      "qCn": "為什麼台南是這條新航線值得注意的選擇？",
+      "opts": [
+        "A. It is Taiwan's capital city",
+        "B. It is widely regarded as Taiwan's oldest city but often overlooked by international visitors",
+        "C. It has the busiest airport in Taiwan",
+        "D. It is the only city VietJet flies to in Taiwan"
+      ],
+      "optsCn": [
+        "A. 它是台灣的首都",
+        "B. 它被公認是台灣最古老的城市，卻常被國際旅客忽略",
+        "C. 它擁有台灣最繁忙的機場",
+        "D. 它是VietJet唯一飛航的台灣城市"
+      ],
+      "ans": 1,
+      "expl": "Tainan is often overlooked by international visitors, even though it is widely regarded as Taiwan's oldest city."
+    },
+    {
+      "q": "What happened to VietJet's earlier route connecting Vietnam and Tainan?",
+      "qCn": "VietJet之前連結越南與台南的航線後來怎麼了？",
+      "opts": [
+        "A. It is still operating today",
+        "B. It was suspended in October 2023 after about three years",
+        "C. It was upgraded to a larger aircraft",
+        "D. It never actually started"
+      ],
+      "optsCn": [
+        "A. 現在仍在營運",
+        "B. 在營運約三年後，於2023年10月停飛",
+        "C. 升級成更大的機型",
+        "D. 從來沒有真正開航過"
+      ],
+      "ans": 1,
+      "expl": "that service was suspended in October 2023 after roughly three years of operation."
+    },
+    {
+      "q": "What does the article suggest about VietJet's overall strategy in Asia?",
+      "qCn": "文章暗示VietJet在亞洲的整體策略是什麼？",
+      "opts": [
+        "A. It is reducing its number of international routes",
+        "B. It is expanding aggressively, adding routes to Japan, South Korea, and the Philippines",
+        "C. It is focusing only on domestic Vietnamese routes",
+        "D. It is merging with another airline"
+      ],
+      "optsCn": [
+        "A. 正在減少國際航線",
+        "B. 正在積極擴張，新增飛往日本、南韓與菲律賓的航線",
+        "C. 只專注於越南國內航線",
+        "D. 正在與另一家航空公司合併"
+      ],
+      "ans": 1,
+      "expl": "VietJet continues to expand aggressively across Asia, having added routes to destinations in Japan, South Korea, and the Philippines within just the past few months."
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "VietJet will start new flights between Hanoi and Tainan in October.",
+      "b2": "Vietnamese budget carrier VietJet Air will begin a new nonstop route between Hanoi and Tainan starting on October 25, 2026, giving travelers their first-ever direct link between the two cities.",
+      "note": "加入具體日期October 25, 2026與giving travelers...的分詞片語補充「這對旅客的意義」，比單純陳述事實更有新聞報導的完整度，是B2改寫新聞常見的手法。",
+      "sp": "VietJet's about to launch direct flights between Hanoi and Tainan starting October 25 — first time ever, apparently.",
+      "spNote": "about to（即將）、apparently（聽說、顯然）是口語常見的補充語氣詞。",
+      "b1Cn": "VietJet十月將開通河內和台南之間的新航班。",
+      "b2Cn": "越南廉價航空VietJet Air將從2026年10月25日起，開通河內與台南之間的新直飛航線，讓旅客首度享有連結兩地的直航選擇。",
+      "spCn": "VietJet十月25號要開河內到台南的直飛航班了——聽說是史上第一次。"
+    },
+    {
+      "b1": "VietJet stopped flying to Tainan in 2023, but now it is starting again.",
+      "b2": "The airline's earlier Tainan route was suspended in October 2023 after roughly three years of operation, and this revived connection now originates from Hanoi rather than the south.",
+      "note": "用was suspended的被動語態強調「航線被停飛」這個結果，並用after roughly three years of operation補充背景資訊，是B2新聞改寫常見的句型。",
+      "sp": "VietJet actually pulled out of Tainan back in 2023, and now they're coming back — just from Hanoi this time instead.",
+      "spNote": "pulled out of（退出、撤離）、coming back（回歸）是口語常見的說法。",
+      "b1Cn": "VietJet在2023年停飛台南航線，現在又要重新開始了。",
+      "b2Cn": "該航空公司先前的台南航線在營運約三年後，於2023年10月停飛，這次重新開通的航線則改從河內出發，而非南部。",
+      "spCn": "VietJet其實在2023年就退出台南了，現在要回歸——只是這次改從河內出發。"
+    }
+  ]
+},
+{
   "id": "d20260909a2",
   "date": "2026-09-09",
   "level": "A2",
@@ -4443,6 +5212,588 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260911a2",
+  "date": "2026-09-11",
+  "unitNo": 10,
+  "level": "A2",
+  "title": "Have Done vs Have Been Doing",
+  "titleCn": "have done 跟 have been doing的差別：做完了 vs 一直在做",
+  "srcDays": [],
+  "summary": "have + 過去分詞（have done）講的是「做完了、有結果」；have been + Ving（have been doing）講的是「這件事持續在做，可能剛做完或還沒做完」。",
+  "sections": [
+    {
+      "h": "兩種說法在講什麼",
+      "table": {
+        "head": [
+          "說法",
+          "在講什麼"
+        ],
+        "rows": [
+          [
+            "have + Vpp（have cleaned）",
+            "事情做完了，通常有具體結果"
+          ],
+          [
+            "have been + Ving（have been cleaning）",
+            "強調『一直在做』這個過程，可能剛做完或還沒做完"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I have cleaned my room.",
+          "cn": "我已經把房間打掃好了。",
+          "note": "重點是『打掃完成了』這個結果"
+        },
+        {
+          "en": "I have been cleaning my room all morning.",
+          "cn": "我整個早上都在打掃房間。",
+          "note": "重點是『一直在打掃』這個過程，可能還沒完全做完"
+        }
+      ]
+    },
+    {
+      "h": "為什麼要分這兩種",
+      "bullets": [
+        "想讓別人知道『事情做完了嗎』時，用have done",
+        "想強調『花了多少時間、一直在做』時，用have been doing"
+      ],
+      "examples": [
+        {
+          "en": "She has written three emails.",
+          "cn": "她已經寫了三封email。",
+          "note": "強調完成的數量"
+        }
+      ]
+    },
+    {
+      "h": "常見情境",
+      "examples": [
+        {
+          "en": "He has been waiting for the bus for twenty minutes.",
+          "cn": "他已經等公車等了二十分鐘了。",
+          "note": "強調『一直在等』的過程"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I have cleaning my room.",
+      "good": "I have been cleaning my room.",
+      "why": "have been後面才能接Ving，不能直接用have + Ving，一定要加been。"
+    },
+    {
+      "bad": "I have been clean my room this morning, so it's tidy now.",
+      "good": "I have cleaned my room this morning, so it's tidy now.",
+      "why": "已經有具體結果（房間乾淨了）時，要用have cleaned而不是have been cleaning，中文『打掃』沒有這種形式差異，容易搞混。"
+    },
+    {
+      "bad": "I have been knowing him for five years.",
+      "good": "I have known him for five years.",
+      "why": "know是狀態動詞（stative verb），不能用進行式，就算要講『持續』的意思，也只能用have known。"
+    },
+    {
+      "bad": "I have already been finished my homework.",
+      "good": "I have already finished my homework.",
+      "why": "finish本身已經是過去分詞，不需要再加been，have been finished是多餘且錯誤的形式。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I ___ my homework already.",
+      "qCn": "我已經寫完作業了。",
+      "opts": [
+        "have done",
+        "have been doing",
+        "am doing",
+        "do"
+      ],
+      "ans": 0,
+      "expl": "已經完成，且強調結果，用have done。"
+    },
+    {
+      "q": "She ___ for the bus for twenty minutes.",
+      "qCn": "她已經等公車等了二十分鐘了。",
+      "opts": [
+        "has waited",
+        "has been waiting",
+        "waits",
+        "is waiting"
+      ],
+      "ans": 1,
+      "expl": "強調『一直在等』這個持續的過程，用has been waiting。"
+    },
+    {
+      "q": "I ___ him since we were kids.",
+      "qCn": "我從小就認識他了。",
+      "opts": [
+        "have known",
+        "have been knowing",
+        "know",
+        "am knowing"
+      ],
+      "ans": 0,
+      "expl": "know是狀態動詞，不能用進行式，只能用have known。"
+    },
+    {
+      "q": "He ___ three emails this morning.",
+      "qCn": "他今天早上已經寫了三封email。",
+      "opts": [
+        "has written",
+        "has been writing",
+        "writes",
+        "is writing"
+      ],
+      "ans": 0,
+      "expl": "有具體數字three emails，強調完成的結果，用has written。"
+    }
+  ]
+},
+{
+  "id": "dg20260911b1",
+  "date": "2026-09-11",
+  "unitNo": 10,
+  "level": "B1",
+  "title": "Have Done vs Have Been Doing: Common Confusions",
+  "titleCn": "have done 跟 have been doing：更多容易搞混的地方",
+  "srcDays": [],
+  "summary": "延伸have done跟have been doing的基本區分：有具體數量用have done、暫時安排常用have been doing、狀態動詞（know, want, like）永遠不能加ing。",
+  "sections": [
+    {
+      "h": "有數字、有數量，用have done",
+      "table": {
+        "head": [
+          "情境",
+          "用哪種"
+        ],
+        "rows": [
+          [
+            "有具體數量（three emails, 100 pages）",
+            "have done"
+          ],
+          [
+            "沒有具體數量，只強調『一直在做』",
+            "have been doing"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I have read 100 pages of this book.",
+          "cn": "我已經讀了這本書的100頁。",
+          "note": "有具體數字，用have read"
+        },
+        {
+          "en": "I have been reading this book all week.",
+          "cn": "我這整個禮拜都在讀這本書。",
+          "note": "沒有數字，強調持續閱讀的過程"
+        }
+      ]
+    },
+    {
+      "h": "暫時 vs 長期的語感",
+      "bullets": [
+        "have been doing常常帶有『暫時、還在進行中』的語感",
+        "have done比較像『已經是既成事實』的語感"
+      ],
+      "examples": [
+        {
+          "en": "I have been living in Taipei for two months.",
+          "cn": "我在台北住兩個月了。",
+          "note": "暗示這是暫時的安排"
+        },
+        {
+          "en": "I have lived in Taipei my whole life.",
+          "cn": "我一輩子都住在台北。",
+          "note": "這是長期、既定的事實"
+        }
+      ]
+    },
+    {
+      "h": "狀態動詞（stative verbs）不能用continuous",
+      "bullets": [
+        "know, like, want, believe, own, understand這類狀態動詞不能加ing",
+        "就算要表達『持續』的意思，也只能用have + Vpp"
+      ],
+      "examples": [
+        {
+          "en": "I have wanted a bike like this for years.",
+          "cn": "我想要這種腳踏車已經好幾年了。",
+          "note": "want是狀態動詞，只能用have wanted"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I have been read 100 pages.",
+      "good": "I have read 100 pages.",
+      "why": "有具體數字100 pages，要用have read強調已完成的量，have been read混用了兩種結構，是錯誤的形式。"
+    },
+    {
+      "bad": "I have wanting this bike for years.",
+      "good": "I have wanted this bike for years.",
+      "why": "want是狀態動詞，不能加ing，只能用have wanted表示『持續想要』。"
+    },
+    {
+      "bad": "I have been living in Taipei my whole life.",
+      "good": "I have lived in Taipei my whole life.",
+      "why": "my whole life是『一輩子、既定事實』的語感，適合用have lived，而不是暗示『暫時』的have been living。"
+    },
+    {
+      "bad": "She has been finished her project.",
+      "good": "She has finished her project.",
+      "why": "finish是動作動詞，做完了直接用has finished，不需要多加been。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I ___ this book all week, and I'm almost done.",
+      "qCn": "我這整個禮拜都在讀這本書，快讀完了。",
+      "opts": [
+        "have read",
+        "have been reading",
+        "read",
+        "am reading"
+      ],
+      "ans": 1,
+      "expl": "強調『整個禮拜都在讀』的過程，用have been reading。"
+    },
+    {
+      "q": "I ___ 100 pages so far.",
+      "qCn": "我目前已經讀了100頁。",
+      "opts": [
+        "have read",
+        "have been reading",
+        "read",
+        "am reading"
+      ],
+      "ans": 0,
+      "expl": "有具體數字100 pages，強調完成的量，用have read。"
+    },
+    {
+      "q": "I ___ a bike like this for years.",
+      "qCn": "我想要這種腳踏車已經好幾年了。",
+      "opts": [
+        "have wanted",
+        "have been wanting",
+        "want",
+        "am wanting"
+      ],
+      "ans": 0,
+      "expl": "want是狀態動詞，不能加ing，只能用have wanted。"
+    },
+    {
+      "q": "I ___ in Taipei my whole life.",
+      "qCn": "我一輩子都住在台北。",
+      "opts": [
+        "have lived",
+        "have been living",
+        "live",
+        "am living"
+      ],
+      "ans": 0,
+      "expl": "my whole life是既定事實的語感，用have lived，而不是暗示暫時的have been living。"
+    }
+  ]
+},
+{
+  "id": "dg20260911b1p",
+  "date": "2026-09-11",
+  "unitNo": 11,
+  "level": "B1+",
+  "title": "How Long Have You...? Asking About Duration",
+  "titleCn": "How long have you...?：怎麼問「做多久了」",
+  "srcDays": [],
+  "summary": "問『做多久了』用How long have you + Vpp／been + Ving，回答時用for接時間長度、since接起點時間。",
+  "sections": [
+    {
+      "h": "問句的公式",
+      "table": {
+        "head": [
+          "問法",
+          "例句"
+        ],
+        "rows": [
+          [
+            "How long have you + Vpp...?",
+            "How long have you worked here?"
+          ],
+          [
+            "How long have you been + Ving...?",
+            "How long have you been waiting?"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "How long have you worked at this company?",
+          "cn": "你在這家公司做多久了？",
+          "note": "問『在職多久』，用have you worked"
+        },
+        {
+          "en": "How long have you been waiting for the bus?",
+          "cn": "你等公車等多久了？",
+          "note": "問『一直在做的動作』，用have you been waiting"
+        }
+      ]
+    },
+    {
+      "h": "for 跟 since 的差別",
+      "bullets": [
+        "for + 一段時間長度（for two years, for a week）",
+        "since + 起點時間（since 2020, since last Monday）"
+      ],
+      "examples": [
+        {
+          "en": "I have worked here for two years.",
+          "cn": "我在這裡工作兩年了。",
+          "note": "for後面接時間長度"
+        },
+        {
+          "en": "I have worked here since 2024.",
+          "cn": "我從2024年就在這裡工作了。",
+          "note": "since後面接起點"
+        }
+      ]
+    },
+    {
+      "h": "狀態動詞只能用have + Vpp，不能用continuous",
+      "bullets": [
+        "know, live, work這類動詞可以視情況用simple或continuous，但like, want, believe這種純狀態動詞只能用simple"
+      ],
+      "examples": [
+        {
+          "en": "How long have you known your best friend?",
+          "cn": "你認識你最好的朋友多久了？",
+          "note": "know是狀態動詞，只能用have known"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "How long do you work here?",
+      "good": "How long have you worked here?",
+      "why": "問『從過去到現在做了多久』要用現在完成式，不能用現在簡單式do you work（那是問『通常做什麼』，不是問時間長度）。"
+    },
+    {
+      "bad": "I work here since 2024.",
+      "good": "I have worked here since 2024.",
+      "why": "since要搭配現在完成式，不能直接用現在簡單式work。"
+    },
+    {
+      "bad": "I have been for two years working here.",
+      "good": "I have been working here for two years.",
+      "why": "for two years要放在句尾，不能插在have been跟working中間。"
+    },
+    {
+      "bad": "How long have you been knowing him?",
+      "good": "How long have you known him?",
+      "why": "know是狀態動詞，不能用進行式been knowing，只能用have known。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "How long ___ at this company?",
+      "qCn": "你在這家公司做多久了？",
+      "opts": [
+        "have you worked",
+        "do you work",
+        "are you working",
+        "did you work"
+      ],
+      "ans": 0,
+      "expl": "問『從過去到現在做了多久』要用現在完成式have you worked。"
+    },
+    {
+      "q": "I have lived here ___ 2020.",
+      "qCn": "我從2020年就住在這裡了。",
+      "opts": [
+        "for",
+        "since",
+        "from",
+        "in"
+      ],
+      "ans": 1,
+      "expl": "since後面接起點時間（2020），for才是接時間長度。"
+    },
+    {
+      "q": "How long ___ for the bus?",
+      "qCn": "你等公車等多久了？",
+      "opts": [
+        "have you been waiting",
+        "do you wait",
+        "are you waiting",
+        "did you wait"
+      ],
+      "ans": 0,
+      "expl": "問『一直在做的動作持續多久』，用have you been waiting。"
+    },
+    {
+      "q": "How long ___ your best friend?",
+      "qCn": "你認識你最好的朋友多久了？",
+      "opts": [
+        "have you known",
+        "have you been knowing",
+        "do you know",
+        "are you knowing"
+      ],
+      "ans": 0,
+      "expl": "know是狀態動詞，不能用進行式，只能用have known。"
+    }
+  ]
+},
+{
+  "id": "dg20260911b2",
+  "date": "2026-09-11",
+  "unitNo": 11,
+  "level": "B2",
+  "title": "It Has Been X Years Since...: Duration in Formal and Narrative Writing",
+  "titleCn": "It has been...since...：正式與敘事寫作裡的時間表達",
+  "srcDays": [],
+  "summary": "口語問句How long have you...?在正式寫作或新聞敘事裡常常改寫成It has been + 時間長度 + since子句，讓句子更客觀，也更能營造時間流逝的敘事張力。",
+  "sections": [
+    {
+      "h": "口語問句 vs 書面陳述句",
+      "table": {
+        "head": [
+          "語域",
+          "說法"
+        ],
+        "rows": [
+          [
+            "口語問句",
+            "How long has it been since X?"
+          ],
+          [
+            "正式／敘事陳述句",
+            "It has been + 時間 + since + 子句"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "How long has it been since the airline flew this route?",
+          "cn": "這家航空公司距離上次飛這條航線已經多久了？",
+          "note": "口語問法"
+        },
+        {
+          "en": "It has been almost three years since the airline last flew this route.",
+          "cn": "這家航空公司距離上次飛這條航線已經將近三年了。",
+          "note": "正式陳述句，常見於新聞報導"
+        }
+      ]
+    },
+    {
+      "h": "since也可以接完整子句，不只是時間點",
+      "bullets": [
+        "since不只能接年份，也能接一個完整的句子，例如since the route was suspended",
+        "這種用法在新聞或敘事寫作中特別常見，用來交代『距離某件事發生已經過了多久』"
+      ],
+      "examples": [
+        {
+          "en": "It has been two years since the company suspended the route.",
+          "cn": "該公司暫停這條航線已經兩年了。",
+          "note": "since後面接完整子句"
+        }
+      ]
+    },
+    {
+      "h": "修辭效果：用duration開頭營造敘事張力",
+      "bullets": [
+        "把It has been X years since...放在段落開頭，比直接說『事情發生了』更能營造『時間流逝』的敘事張力，常見於新聞特稿與故事開場"
+      ],
+      "examples": [
+        {
+          "en": "It has been almost three years since VietJet last flew to Tainan, and the route is finally returning.",
+          "cn": "VietJet距離上次飛台南已經將近三年了，這條航線終於要回歸。",
+          "note": "用時間長度開頭，製造『終於』的張力"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "It is three years since the airline flew this route.",
+      "good": "It has been three years since the airline flew this route.",
+      "why": "It has been...since...固定用現在完成式的has been，不能用is。"
+    },
+    {
+      "bad": "It has been three years the airline suspended the route.",
+      "good": "It has been three years since the airline suspended the route.",
+      "why": "忘記加since，since在這個句型裡不能省略。"
+    },
+    {
+      "bad": "How long has been since you last visited?",
+      "good": "How long has it been since you last visited?",
+      "why": "問句需要虛主詞it：How long has it been...，不能省略it。"
+    },
+    {
+      "bad": "It has been three years that the airline suspended the route.",
+      "good": "It has been three years since the airline suspended the route.",
+      "why": "這個句型固定用since，不能用that取代。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "It ___ almost three years since the airline suspended the route.",
+      "qCn": "這家航空公司暫停這條航線已經將近三年了。",
+      "opts": [
+        "has been",
+        "is",
+        "was",
+        "has"
+      ],
+      "ans": 0,
+      "expl": "It has been...since...固定用現在完成式has been。"
+    },
+    {
+      "q": "It has been two years ___ the company launched this service.",
+      "qCn": "該公司推出這項服務已經兩年了。",
+      "opts": [
+        "since",
+        "for",
+        "that",
+        "from"
+      ],
+      "ans": 0,
+      "expl": "since後面可以接完整子句，交代『距離某件事發生過了多久』。"
+    },
+    {
+      "q": "How long ___ since you last visited Tainan?",
+      "qCn": "你上次去台南是多久以前的事了？",
+      "opts": [
+        "has it been",
+        "is it",
+        "has been",
+        "was it"
+      ],
+      "ans": 0,
+      "expl": "問句需要虛主詞it，固定用How long has it been since...？"
+    },
+    {
+      "q": "Which sentence best fits a news article's opening line?",
+      "qCn": "哪一句最適合當作新聞文章的開場句？",
+      "opts": [
+        "The route was suspended three years ago.",
+        "It has been almost three years since the route was suspended, and it is finally returning.",
+        "Three years passed and the route came back.",
+        "The route is back after three years."
+      ],
+      "optsCn": [
+        "這條路線三年前停飛了。",
+        "距離這條路線停飛已經將近三年，如今終於要回歸了。",
+        "三年過去了，這條路線回來了。",
+        "三年後，這條路線回來了。"
+      ],
+      "ans": 1,
+      "expl": "用It has been...since...開頭最能營造『時間流逝、終於回歸』的敘事張力，是新聞特稿常見的開場手法。"
+    }
+  ]
+},
 {
   "id": "dg20260909a2",
   "date": "2026-09-09",

@@ -15,6 +15,684 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週三／五更新） ========== */
 notes:[
 {
+  "id": "dl20260911a2",
+  "date": "2026-09-11",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Have You Packed Your Bag?",
+  "titleCn": "你打包好了嗎？",
+  "series": "本站自製聽力 · 旅遊與交通主題",
+  "topic": "🎒 打包行李",
+  "focus": "have done（做完了）vs have been doing（一直在做）的基礎對比",
+  "intro": "Amy跟Tom週末要出去玩，Tom還在打包行李。這一課句子很簡單，重點是聽出have you packed（問有沒有做完）和have been packing（強調一直在做）的差別。",
+  "tip": "先聽一次抓「Tom打包完了沒」，再聽一次抓「他們幾點要出發」。",
+  "pre": [
+    {
+      "w": "pack",
+      "ipa": "/pæk/",
+      "cn": "打包",
+      "def": "To put things into a bag before a trip."
+    },
+    {
+      "w": "swimsuit",
+      "ipa": "/ˈswɪmsuːt/",
+      "cn": "泳衣",
+      "def": "Clothes you wear for swimming."
+    },
+    {
+      "w": "plenty",
+      "ipa": "/ˈplenti/",
+      "cn": "很多、充足",
+      "def": "A large amount, more than enough."
+    },
+    {
+      "w": "camera",
+      "ipa": "/ˈkæmərə/",
+      "cn": "相機",
+      "def": "A device used to take photos."
+    },
+    {
+      "w": "everywhere",
+      "ipa": "/ˈevriwer/",
+      "cn": "到處",
+      "def": "In every place."
+    },
+    {
+      "w": "trip",
+      "ipa": "/trɪp/",
+      "cn": "旅行",
+      "def": "A journey to a place and back."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Amy",
+      "en": "Tom, have you packed your bag for the trip?",
+      "cn": "Tom，你的旅行袋打包好了嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Not yet. I have been packing all afternoon, but I can't find my swimsuit.",
+      "cn": "還沒。我整個下午都在打包，但找不到我的泳衣。"
+    },
+    {
+      "sp": "Amy",
+      "en": "Have you looked everywhere?",
+      "cn": "你到處都找過了嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes, I have looked everywhere in my room!",
+      "cn": "有啊，我房間裡到處都找過了！"
+    },
+    {
+      "sp": "Amy",
+      "en": "Don't worry. We have plenty of time before the bus leaves.",
+      "cn": "別擔心。公車出發前我們還有很多時間。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Really? What time does the bus leave?",
+      "cn": "真的嗎？公車幾點出發？"
+    },
+    {
+      "sp": "Amy",
+      "en": "It leaves at six. We have three more hours.",
+      "cn": "六點出發。我們還有三個小時。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Okay, good. I have already packed my shoes and my camera.",
+      "cn": "好，太好了。我已經把鞋子和相機打包好了。"
+    },
+    {
+      "sp": "Amy",
+      "en": "Great! I have been waiting for this trip for weeks.",
+      "cn": "太棒了！我已經期待這趟旅行好幾個禮拜了。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Me too! Let's find that swimsuit.",
+      "cn": "我也是！我們來找那件泳衣吧。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Has Tom finished packing?",
+      "qCn": "Tom打包好了嗎？",
+      "opts": [
+        "A. Yes, he has finished everything",
+        "B. No, he is still looking for his swimsuit",
+        "C. No, he hasn't started yet",
+        "D. Yes, but he forgot his shoes"
+      ],
+      "optsCn": [
+        "A. 是的，他全部打包好了",
+        "B. 沒有，他還在找泳衣",
+        "C. 沒有，他還沒開始",
+        "D. 是的，但他忘了鞋子"
+      ],
+      "ans": 1,
+      "expl": "I have been packing all afternoon, but I can't find my swimsuit."
+    },
+    {
+      "q": "What time does the bus leave?",
+      "qCn": "公車幾點出發？",
+      "opts": [
+        "A. Three o'clock",
+        "B. Six o'clock",
+        "C. Nine o'clock",
+        "D. It has already left"
+      ],
+      "optsCn": [
+        "A. 三點",
+        "B. 六點",
+        "C. 九點",
+        "D. 已經開走了"
+      ],
+      "ans": 1,
+      "expl": "It leaves at six."
+    },
+    {
+      "q": "What has Tom already packed?",
+      "qCn": "Tom已經打包好了什麼？",
+      "opts": [
+        "A. His swimsuit and towel",
+        "B. His shoes and camera",
+        "C. His passport and wallet",
+        "D. Nothing at all"
+      ],
+      "optsCn": [
+        "A. 泳衣和毛巾",
+        "B. 鞋子和相機",
+        "C. 護照和錢包",
+        "D. 什麼都沒有"
+      ],
+      "ans": 1,
+      "expl": "I have already packed my shoes and my camera."
+    },
+    {
+      "q": "I ___ for this trip for weeks.",
+      "qCn": "我已經期待這趟旅行好幾個禮拜了。（選出正確的字）",
+      "opts": [
+        "A. wait",
+        "B. waited",
+        "C. have been waiting",
+        "D. am wait"
+      ],
+      "ans": 2,
+      "expl": "強調『一直在期待』的過程，用have been waiting。"
+    }
+  ]
+},
+{
+  "id": "dl20260911b1",
+  "date": "2026-09-11",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "How Many Countries Have You Visited?",
+  "titleCn": "你今年去過幾個國家了？",
+  "series": "本站自製聽力 · 旅遊與交通主題",
+  "topic": "✈️ 出差與旅行",
+  "focus": "have done（有具體數字）vs have been doing（強調過程）；狀態動詞的例外",
+  "intro": "Mark跟Anita在機場閘口聊天，Mark今年出差出得特別頻繁。留意他們怎麼用have visited（有具體數字）跟have been traveling（強調過程）這兩種現在完成式。",
+  "tip": "先聽一次抓「Mark今年去過幾個國家」，再聽一次抓「Anita建議他做什麼」。",
+  "pre": [
+    {
+      "w": "exhausting",
+      "ipa": "/ɪɡˈzɑːstɪŋ/",
+      "cn": "令人筋疲力盡的",
+      "def": "Making you very tired."
+    },
+    {
+      "w": "suitcase",
+      "ipa": "/ˈsuːtkeɪs/",
+      "cn": "行李箱",
+      "def": "A case used for carrying clothes when traveling."
+    },
+    {
+      "w": "nonstop",
+      "ipa": "/ˌnɑːnˈstɑːp/",
+      "cn": "不間斷地",
+      "def": "Without stopping."
+    },
+    {
+      "w": "deserve",
+      "ipa": "/dɪˈzɝːv/",
+      "cn": "值得、應得",
+      "def": "To have earned something because of your actions."
+    },
+    {
+      "w": "holiday",
+      "ipa": "/ˈhɑːlədeɪ/",
+      "cn": "假期",
+      "def": "A period of time when you do not work."
+    },
+    {
+      "w": "report",
+      "ipa": "/rɪˈpɔːrt/",
+      "cn": "報告",
+      "def": "A written document that gives information."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mark",
+      "en": "Wow, this is my third flight this month. I have been traveling for work since March.",
+      "cn": "哇，這是我這個月第三趟飛行了。我從三月開始就一直在出差。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Really? How many countries have you visited this year?",
+      "cn": "真的嗎？你今年去過幾個國家了？"
+    },
+    {
+      "sp": "Mark",
+      "en": "I have visited eight countries so far. It's exhausting.",
+      "cn": "我目前已經去過八個國家了。真的很累人。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Eight! I have only been to Taiwan and Japan this year.",
+      "cn": "八個！我今年只去過台灣和日本。"
+    },
+    {
+      "sp": "Mark",
+      "en": "Well, I have been living out of a suitcase for weeks.",
+      "cn": "嗯，我這幾個禮拜根本一直住在行李箱裡。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Have you finished your report yet?",
+      "cn": "你的報告寫完了嗎？"
+    },
+    {
+      "sp": "Mark",
+      "en": "Almost. I have written most of it, but I haven't checked the numbers.",
+      "cn": "快好了。我已經寫了大部分，但還沒檢查數字。"
+    },
+    {
+      "sp": "Anita",
+      "en": "You should rest. You have been working nonstop.",
+      "cn": "你應該休息一下。你一直不間斷地在工作。"
+    },
+    {
+      "sp": "Mark",
+      "en": "I know. I have already booked a short holiday next month.",
+      "cn": "我知道。我已經訂了下個月的短假期。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Good idea. You deserve it.",
+      "cn": "好主意。這是你應得的。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many countries has Mark visited this year?",
+      "qCn": "Mark今年去過幾個國家？",
+      "opts": [
+        "A. Three",
+        "B. Five",
+        "C. Eight",
+        "D. Ten"
+      ],
+      "optsCn": [
+        "A. 三個",
+        "B. 五個",
+        "C. 八個",
+        "D. 十個"
+      ],
+      "ans": 2,
+      "expl": "I have visited eight countries so far."
+    },
+    {
+      "q": "Why does Mark say he has been living out of a suitcase?",
+      "qCn": "Mark為什麼說自己「一直住在行李箱裡」？",
+      "opts": [
+        "A. Because he lost his apartment",
+        "B. Because he has been traveling constantly for weeks",
+        "C. Because his suitcase is very large",
+        "D. Because he prefers hotels to home"
+      ],
+      "optsCn": [
+        "A. 因為他失去了公寓",
+        "B. 因為他這幾個禮拜一直在到處出差",
+        "C. 因為他的行李箱很大",
+        "D. 因為他偏好住飯店勝過家裡"
+      ],
+      "ans": 1,
+      "expl": "I have been living out of a suitcase for weeks——比喻長期在外奔波、幾乎沒有安定下來。"
+    },
+    {
+      "q": "Has Mark finished his report?",
+      "qCn": "Mark的報告寫完了嗎？",
+      "opts": [
+        "A. Yes, completely",
+        "B. No, he hasn't started",
+        "C. Almost, but he hasn't checked the numbers",
+        "D. He gave up on it"
+      ],
+      "optsCn": [
+        "A. 是的，完全寫完了",
+        "B. 沒有，他還沒開始",
+        "C. 快好了，但還沒檢查數字",
+        "D. 他放棄了"
+      ],
+      "ans": 2,
+      "expl": "Almost. I have written most of it, but I haven't checked the numbers."
+    },
+    {
+      "q": "I ___ eight countries so far.",
+      "qCn": "我目前已經去過八個國家了。（選出正確的字）",
+      "opts": [
+        "A. visit",
+        "B. visited",
+        "C. have visited",
+        "D. am visiting"
+      ],
+      "ans": 2,
+      "expl": "有具體數字eight countries，強調完成的量，用have visited。"
+    }
+  ]
+},
+{
+  "id": "dl20260911b1p",
+  "date": "2026-09-11",
+  "level": "B1+",
+  "minutes": 3,
+  "kind": "note",
+  "title": "How Long Have You Worked Overseas?",
+  "titleCn": "你在海外工作多久了？",
+  "series": "本站自製聽力 · 旅遊與交通主題",
+  "topic": "🌏 海外工作多久了",
+  "focus": "How long have you...? 搭配for與since詢問並回答持續時間",
+  "intro": "這是一段訪談節目片段，主持人訪問長期在海外工作的Anita。留意她怎麼用for（時間長度）和since（起點）回答「做多久了」這個問題。",
+  "tip": "先聽一次抓「Anita在越南工作幾年了」，再聽一次抓「她認識現在主管多久了」。",
+  "pre": [
+    {
+      "w": "overseas",
+      "ipa": "/ˌoʊvɚˈsiːz/",
+      "cn": "海外地",
+      "def": "In or to a foreign country across the sea."
+    },
+    {
+      "w": "hometown",
+      "ipa": "/ˈhoʊmˌtaʊn/",
+      "cn": "家鄉",
+      "def": "The town or city where you were born or grew up."
+    },
+    {
+      "w": "honestly",
+      "ipa": "/ˈɑːnɪstli/",
+      "cn": "老實說",
+      "def": "Used to say that you are telling the truth."
+    },
+    {
+      "w": "hoping",
+      "ipa": "/ˈhoʊpɪŋ/",
+      "cn": "期望著",
+      "def": "Wanting something to happen."
+    },
+    {
+      "w": "direct",
+      "ipa": "/dəˈrekt/",
+      "cn": "直達的",
+      "def": "Going straight to a place without stopping."
+    },
+    {
+      "w": "manager",
+      "ipa": "/ˈmænɪdʒɚ/",
+      "cn": "主管",
+      "def": "A person who is in charge of a business or team."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Host",
+      "en": "So, how long have you worked overseas?",
+      "cn": "那麼，你在海外工作多久了？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I have worked in Vietnam since 2019, so about six years now.",
+      "cn": "我從2019年開始就在越南工作，所以大概六年了。"
+    },
+    {
+      "sp": "Host",
+      "en": "And how long have you been living away from your hometown?",
+      "cn": "那你離開家鄉在外生活多久了？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I have been living away from home for almost seven years, since right after university.",
+      "cn": "我離家在外生活將近七年了，從大學畢業後就開始了。"
+    },
+    {
+      "sp": "Host",
+      "en": "That's a long time. How long have you known your current manager?",
+      "cn": "那真的滿久的。你認識現在的主管多久了？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I have known him for three years. We met on a business trip to Bangkok, actually.",
+      "cn": "我認識他三年了。其實我們是在一趟去曼谷的出差中認識的。"
+    },
+    {
+      "sp": "Host",
+      "en": "How long have you been hoping for a direct flight route like the new one to Tainan?",
+      "cn": "你期待像新開的台南航線這種直飛航班多久了？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Honestly, I have been hoping for a route like that for at least two years.",
+      "cn": "老實說，我至少期待這種航線兩年了。"
+    },
+    {
+      "sp": "Host",
+      "en": "Well, it's finally here.",
+      "cn": "嗯，它終於來了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I know! I can't wait to try it.",
+      "cn": "我知道！我等不及要試試看了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How long has Anita worked in Vietnam?",
+      "qCn": "Anita在越南工作多久了？",
+      "opts": [
+        "A. About two years",
+        "B. About six years, since 2019",
+        "C. Since she was a child",
+        "D. Less than one year"
+      ],
+      "optsCn": [
+        "A. 大約兩年",
+        "B. 大約六年，從2019年開始",
+        "C. 從小時候開始",
+        "D. 不到一年"
+      ],
+      "ans": 1,
+      "expl": "I have worked in Vietnam since 2019, so about six years now."
+    },
+    {
+      "q": "How long has Anita been living away from her hometown?",
+      "qCn": "Anita離開家鄉在外生活多久了？",
+      "opts": [
+        "A. Almost seven years",
+        "B. Only a few months",
+        "C. Ten years",
+        "D. She still lives at home"
+      ],
+      "optsCn": [
+        "A. 將近七年",
+        "B. 只有幾個月",
+        "C. 十年",
+        "D. 她還住在家裡"
+      ],
+      "ans": 0,
+      "expl": "I have been living away from home for almost seven years, since right after university."
+    },
+    {
+      "q": "Where did Anita meet her current manager?",
+      "qCn": "Anita在哪裡認識現在的主管？",
+      "opts": [
+        "A. At a university reunion",
+        "B. On a business trip to Bangkok",
+        "C. At a wedding",
+        "D. On a flight to Taipei"
+      ],
+      "optsCn": [
+        "A. 大學同學會",
+        "B. 一趟去曼谷的出差",
+        "C. 一場婚禮",
+        "D. 一趟飛台北的班機上"
+      ],
+      "ans": 1,
+      "expl": "I have known him for three years. We met on a business trip to Bangkok, actually."
+    },
+    {
+      "q": "How long ___ for a direct flight route like this?",
+      "qCn": "你期待這樣的直飛航線多久了？（選出正確的字）",
+      "opts": [
+        "A. do you hope",
+        "B. have you hoped",
+        "C. have you been hoping",
+        "D. are you hoping"
+      ],
+      "ans": 2,
+      "expl": "問『一直在做的期待』持續多久，用現在完成進行式have you been hoping。"
+    }
+  ]
+},
+{
+  "id": "dl20260911b2",
+  "date": "2026-09-11",
+  "level": "B2",
+  "minutes": 3,
+  "kind": "note",
+  "title": "It Has Been Three Years Since My Last Direct Flight Home",
+  "titleCn": "距離上次直飛回家已經三年了",
+  "series": "本站自製聽力 · 旅遊與交通主題",
+  "topic": "⏳ 航線背後的等待",
+  "focus": "正式語域的獨白：It has been...since...表達累積至今的時間感",
+  "intro": "這是Anita錄的一段簡短獨白，反思這幾年沒有直飛航線對她出差的影響。語氣比對話更正式，留意她怎麼用It has been...since...這種句型講「距離某件事已經過了多久」。",
+  "tip": "這是獨白不是對話，可以先聽整段抓大意，再逐句聽細節，留意她怎麼用It has been...since...講時間長度。",
+  "pre": [
+    {
+      "w": "layover",
+      "ipa": "/ˈleɪ.oʊ.vɚ/",
+      "cn": "轉機（停留）",
+      "def": "A stop between two flights on the same journey."
+    },
+    {
+      "w": "inconvenience",
+      "ipa": "/ˌɪnkənˈviːniəns/",
+      "cn": "不便",
+      "def": "A situation that causes trouble or difficulty."
+    },
+    {
+      "w": "significant",
+      "ipa": "/sɪɡˈnɪfɪkənt/",
+      "cn": "重要的、意義重大的",
+      "def": "Important or noticeable."
+    },
+    {
+      "w": "catch up",
+      "ipa": "/kætʃ ʌp/",
+      "cn": "趕上",
+      "def": "To reach the same level or point as something else."
+    },
+    {
+      "w": "quietly",
+      "ipa": "/ˈkwaɪətli/",
+      "cn": "悄悄地",
+      "def": "In a quiet way, without being noticed."
+    },
+    {
+      "w": "schedule",
+      "ipa": "/ˈskedʒuːl/",
+      "cn": "時間表、行程",
+      "def": "A plan of times for doing things."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Anita",
+      "en": "Hi, this is Anita. I want to talk about something that has quietly shaped my work trips for the past few years: flight routes.",
+      "cn": "嗨，我是Anita。我想談談這幾年悄悄影響著我出差方式的一件事：航線。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It has been almost three years since an airline last offered a direct flight between my region and southern Taiwan, and in that time, every trip has meant at least one layover.",
+      "cn": "距離上次有航空公司提供我這個地區與台灣南部之間的直飛航班，已經將近三年了，這段時間裡，每趟旅程都至少要轉機一次。"
+    },
+    {
+      "sp": "Anita",
+      "en": "What has struck me most is not the extra hour or two in the air, but how much a single layover changes the shape of a whole trip.",
+      "cn": "最讓我印象深刻的不是空中多花的一兩個小時，而是一次轉機能改變整趟行程的樣貌。"
+    },
+    {
+      "sp": "Anita",
+      "en": "A short meeting that should take one day has often turned into two, simply because of how the flights are scheduled.",
+      "cn": "原本一天就能開完的簡短會議，常常因為班機時刻的關係變成兩天。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I have learned to plan around this so often that it barely feels like an inconvenience anymore, just a habit.",
+      "cn": "我已經太習慣要為此提前規劃，久到這幾乎不再讓我覺得不便，反而變成一種習慣。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is why the news of a new direct route felt strangely significant, even though nothing else about my job has changed.",
+      "cn": "這就是為什麼新直飛航線的消息，讓我感覺出乎意料地重要，即使我工作上其他的一切都沒有改變。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It has been a long wait, but it seems the routes are finally starting to catch up with how much people actually travel.",
+      "cn": "這是一段很長的等待，但看起來航線終於開始跟上人們實際的旅行需求了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "For once, the schedule might work in our favor instead of against it.",
+      "cn": "這一次，時刻表或許終於能對我們有利，而不是處處跟我們作對。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "According to Anita, what has shaped her work trips for the past few years?",
+      "qCn": "根據Anita的說法，這幾年是什麼一直影響著她的出差？",
+      "opts": [
+        "A. Flight routes",
+        "B. Hotel prices",
+        "C. Visa rules",
+        "D. Her manager's schedule"
+      ],
+      "optsCn": [
+        "A. 航線",
+        "B. 飯店價格",
+        "C. 簽證規定",
+        "D. 主管的行程"
+      ],
+      "ans": 0,
+      "expl": "something that has quietly shaped my work trips for the past few years: flight routes."
+    },
+    {
+      "q": "What has every trip meant, according to Anita?",
+      "qCn": "根據Anita的說法，每趟旅程都意味著什麼？",
+      "opts": [
+        "A. At least one layover",
+        "B. A free upgrade",
+        "C. A cancelled meeting",
+        "D. A shorter workday"
+      ],
+      "optsCn": [
+        "A. 至少一次轉機",
+        "B. 免費升等",
+        "C. 會議被取消",
+        "D. 更短的工作日"
+      ],
+      "ans": 0,
+      "expl": "every trip has meant at least one layover."
+    },
+    {
+      "q": "Why did the news of a new direct route feel significant to Anita?",
+      "qCn": "為什麼新直飛航線的消息對Anita來說感覺意義重大？",
+      "opts": [
+        "A. Because it means she can finally quit her job",
+        "B. Because it could finally shorten trips she has planned around for years",
+        "C. Because it lowers her salary",
+        "D. Because she has never flown before"
+      ],
+      "optsCn": [
+        "A. 因為這代表她終於可以辭職",
+        "B. 因為這可能終於能縮短她多年來一直得刻意安排的行程",
+        "C. 因為這會降低她的薪水",
+        "D. 因為她從來沒搭過飛機"
+      ],
+      "ans": 1,
+      "expl": "I have learned to plan around this so often that it barely feels like an inconvenience anymore...That is why the news of a new direct route felt strangely significant."
+    },
+    {
+      "q": "It ___ almost three years since an airline last offered a direct flight.",
+      "qCn": "距離上次有航空公司提供直飛航班已經將近三年了。（選出正確的字）",
+      "opts": [
+        "A. is",
+        "B. was",
+        "C. has been",
+        "D. has"
+      ],
+      "ans": 2,
+      "expl": "It has been...since...固定用現在完成式has been。"
+    }
+  ]
+},
+{
   "id": "dl20260904a2",
   "date": "2026-09-04",
   "level": "A2",

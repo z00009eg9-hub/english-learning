@@ -32,6 +32,689 @@
    ⚠ 文字欄位一律寫純文字，不要寫 HTML 標籤（渲染時會被轉義顯示出來）。
    ============================================================ */
 window.GVPLUS = {
+dg20260911a2: {
+  "vis": true,
+  "oneLine": "have done是「做完的結果」，have been doing是「一直在做的過程」——先問自己：要講結果還是過程？",
+  "map": {
+    "when": "要說『這件事做完了嗎』或『一直在做這件事』的時候",
+    "why": "中文『打掃』一個字沒有這種區分，但英文用兩種完成式把『結果』跟『過程』分開",
+    "form": "have/has + Vpp（結果）　|　have/has + been + Ving（過程）"
+  },
+  "visual": {
+    "type": "cols",
+    "cap": "左邊是「做完了、看結果」，右邊是「一直在做、看過程」——先問自己要強調哪一個。",
+    "cols": [
+      {
+        "tag": "HAVE + VPP",
+        "tagCn": "做完了、有結果",
+        "tone": 1,
+        "items": [
+          {
+            "en": "I have cleaned my room.",
+            "cn": "我已經把房間打掃好了。",
+            "nt": "重點是房間現在乾淨了"
+          },
+          {
+            "en": "She has written three emails.",
+            "cn": "她已經寫了三封email。",
+            "nt": "有具體數量"
+          }
+        ]
+      },
+      {
+        "tag": "HAVE BEEN + VING",
+        "tagCn": "一直在做、強調過程",
+        "tone": 2,
+        "items": [
+          {
+            "en": "I have been cleaning my room all morning.",
+            "cn": "我整個早上都在打掃房間。",
+            "nt": "強調『一直在打掃』這個過程"
+          },
+          {
+            "en": "He has been waiting for the bus.",
+            "cn": "他一直在等公車。",
+            "nt": "強調正在進行的動作"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "finished-room",
+      "icon": "house",
+      "title": "房間打掃完了嗎",
+      "titleCn": "問結果",
+      "ask": "房間現在乾淨了嗎？",
+      "en": "I have cleaned my room.",
+      "cn": "我已經把房間打掃好了。",
+      "why": "用have cleaned強調『打掃這件事已經做完，房間現在是乾淨的』這個結果。"
+    },
+    {
+      "key": "still-cleaning",
+      "icon": "clock",
+      "title": "還在打掃中",
+      "titleCn": "問過程",
+      "ask": "這件事現在還在做嗎？",
+      "en": "I have been cleaning my room all morning.",
+      "cn": "我整個早上都在打掃房間。",
+      "why": "用have been cleaning強調『一直在做』的過程，可能還沒完全打掃完。"
+    },
+    {
+      "key": "know-someone",
+      "icon": "person",
+      "title": "認識一個人多久了",
+      "titleCn": "狀態動詞不能用continuous",
+      "ask": "可以說have been knowing嗎？",
+      "en": "I have known him for five years.",
+      "cn": "我認識他五年了。",
+      "why": "know是狀態動詞，不能加ing，就算要表達『持續』的意思，也只能用have known。"
+    },
+    {
+      "key": "how-many",
+      "icon": "star",
+      "title": "寫了幾封email",
+      "titleCn": "有數字要用have done",
+      "ask": "有具體數字時要用哪一種？",
+      "en": "She has written three emails.",
+      "cn": "她已經寫了三封email。",
+      "why": "有具體數量three emails時，要用have written強調完成的結果，不能用have been writing。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你早上花了好幾個小時打掃房間，現在講給朋友聽。"
+    },
+    {
+      "label": "先問自己",
+      "text": "你想強調『打掃這件事做完了』，還是『你一直在打掃』這個過程？"
+    },
+    {
+      "label": "如果是結果",
+      "text": "I have cleaned my room.（房間現在乾淨了，重點是結果）"
+    },
+    {
+      "label": "如果是過程",
+      "text": "I have been cleaning my room all morning.（強調你整個早上都在做這件事）"
+    },
+    {
+      "label": "換個說法",
+      "text": "錯誤說法：I have cleaning my room.——一定要加been，寫成have been cleaning才對。"
+    }
+  ],
+  "comparison": {
+    "title": "have cleaned vs have been cleaning",
+    "left": {
+      "tag": "HAVE CLEANED",
+      "tagCn": "做完了，看結果",
+      "icon": "house",
+      "head": "result",
+      "headCn": "強調結果",
+      "en": "I have cleaned my room.",
+      "cn": "我已經把房間打掃好了。",
+      "pts": [
+        "房間現在是乾淨的",
+        "強調『事情做完了』",
+        "常搭配具體的完成感"
+      ]
+    },
+    "right": {
+      "tag": "HAVE BEEN CLEANING",
+      "tagCn": "一直在做，看過程",
+      "icon": "clock",
+      "head": "process",
+      "headCn": "強調過程",
+      "en": "I have been cleaning my room all morning.",
+      "cn": "我整個早上都在打掃房間。",
+      "pts": [
+        "強調『一直在做』的過程",
+        "可能還沒完全做完",
+        "常搭配all morning這種時間片語"
+      ]
+    },
+    "note": "口訣：講『做完了、有結果』用have done；講『一直在做、還在進行』用have been doing。"
+  },
+  "quizMore": [
+    {
+      "q": "He ___ for the bus for twenty minutes.",
+      "opts": [
+        "has waited",
+        "has been waiting",
+        "waits",
+        "is waiting"
+      ],
+      "ans": 1,
+      "expl": "強調『一直在等』的過程，用has been waiting。"
+    },
+    {
+      "q": "I ___ this book already.",
+      "opts": [
+        "have read",
+        "have been reading",
+        "read",
+        "am reading"
+      ],
+      "ans": 0,
+      "expl": "強調『讀完了』這個結果，用have read。"
+    }
+  ]
+},
+dg20260911b1: {
+  "vis": true,
+  "oneLine": "有具體數字用have done，沒有數字、只強調『一直在做』用have been doing——know、want這類狀態動詞永遠不能加ing。",
+  "map": {
+    "when": "要說清楚『做了多少』還是『做了多久、還在做』的時候",
+    "why": "英文要求你選邊站：講數量用簡單完成式，講過程用進行式完成式，中文這兩種語感常常混在一起，容易搞混",
+    "form": "有具體數字 + have done　|　沒有數字、強調過程 + have been doing"
+  },
+  "visual": {
+    "type": "matrix",
+    "cap": "橫向看每一列：有數字就走左欄、強調過程就走中欄，遇到know這種狀態動詞就只能走右欄，不能用進行式。",
+    "cols": [
+      "有數字/數量",
+      "沒有數字，強調過程",
+      "狀態動詞（不可加ing）"
+    ],
+    "rows": [
+      {
+        "h": "讀書",
+        "cells": [
+          {
+            "en": "I have read 100 pages.",
+            "cn": "我已經讀了100頁。",
+            "hi": true
+          },
+          {
+            "en": "I have been reading all week.",
+            "cn": "我這禮拜都在讀。"
+          },
+          {
+            "en": "—",
+            "cn": "—"
+          }
+        ]
+      },
+      {
+        "h": "住在某地",
+        "cells": [
+          {
+            "en": "I have lived here for 10 years.",
+            "cn": "我住這裡十年了。"
+          },
+          {
+            "en": "I have been living here temporarily.",
+            "cn": "我暫時住在這裡。"
+          },
+          {
+            "en": "—",
+            "cn": "—"
+          }
+        ]
+      },
+      {
+        "h": "認識某人（狀態動詞）",
+        "cells": [
+          {
+            "en": "—",
+            "cn": "—"
+          },
+          {
+            "en": "—",
+            "cn": "—"
+          },
+          {
+            "en": "I have known him for years.",
+            "cn": "我認識他好幾年了。",
+            "hi": true
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "has-number",
+      "icon": "book",
+      "title": "讀了具體頁數",
+      "titleCn": "有數字用have done",
+      "ask": "句子裡有沒有具體的數字？",
+      "en": "I have read 100 pages of this book.",
+      "cn": "我已經讀了這本書的100頁。",
+      "why": "有具體數字100 pages，強調『完成的量』，要用have read，不能用have been reading。"
+    },
+    {
+      "key": "no-number",
+      "icon": "arrow",
+      "title": "整個禮拜都在讀",
+      "titleCn": "沒有數字，強調過程",
+      "ask": "這句話有講到具體完成多少嗎？",
+      "en": "I have been reading this book all week.",
+      "cn": "我這整個禮拜都在讀這本書。",
+      "why": "沒有提到具體頁數，只是強調『一直在讀』的過程，所以用have been reading。"
+    },
+    {
+      "key": "temporary",
+      "icon": "calendar",
+      "title": "暫時住在這裡",
+      "titleCn": "暫時 vs 長期的語感",
+      "ask": "這個安排是暫時的還是長期的？",
+      "en": "I have been living in Taipei for two months.",
+      "cn": "我在台北住兩個月了。",
+      "why": "have been living帶有『這是暫時安排』的語感，如果是一輩子住在那裡，會用have lived而不是have been living。"
+    },
+    {
+      "key": "stative-know",
+      "icon": "check",
+      "title": "想要這台腳踏車好幾年了",
+      "titleCn": "狀態動詞的例外",
+      "ask": "want可以加ing變成have been wanting嗎？",
+      "en": "I have wanted this bike for years.",
+      "cn": "我想要這台腳踏車已經好幾年了。",
+      "why": "want是狀態動詞，不能加ing，就算要表達『持續』的意思，也只能用have wanted。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你這禮拜每天都在讀同一本書，朋友問你進度。"
+    },
+    {
+      "label": "先問",
+      "text": "你想講『讀了多少頁』，還是『一直在讀』這件事本身？"
+    },
+    {
+      "label": "有數字",
+      "text": "I have read 100 pages.（強調完成的量）"
+    },
+    {
+      "label": "沒有數字",
+      "text": "I have been reading this book all week.（強調『一直在讀』的過程）"
+    },
+    {
+      "label": "換個說法",
+      "text": "錯誤說法：I have been read 100 pages.——有數字時要用have read，不能混用have been + 過去分詞。"
+    }
+  ],
+  "comparison": {
+    "title": "have read 100 pages vs have been reading",
+    "left": {
+      "tag": "HAVE READ 100 PAGES",
+      "tagCn": "有數字，看結果",
+      "icon": "book",
+      "head": "quantified result",
+      "headCn": "具體的完成量",
+      "en": "I have read 100 pages.",
+      "cn": "我已經讀了100頁。",
+      "pts": [
+        "有具體數字100 pages",
+        "強調『完成了多少』",
+        "不能用have been reading取代"
+      ]
+    },
+    "right": {
+      "tag": "HAVE BEEN READING",
+      "tagCn": "沒數字，看過程",
+      "icon": "arrow",
+      "head": "ongoing process",
+      "headCn": "持續的過程",
+      "en": "I have been reading this book all week.",
+      "cn": "我這整個禮拜都在讀這本書。",
+      "pts": [
+        "沒有提到具體頁數",
+        "強調『一直在做』的過程",
+        "常搭配all week這類時間片語"
+      ]
+    },
+    "note": "口訣：句子裡有數字，用have done；沒數字、只強調過程，用have been doing；遇到know/want這種狀態動詞，永遠只能用have done。"
+  },
+  "quizMore": [
+    {
+      "q": "I ___ this bike for years.",
+      "opts": [
+        "have wanted",
+        "have been wanting",
+        "want",
+        "am wanting"
+      ],
+      "ans": 0,
+      "expl": "want是狀態動詞，不能加ing，只能用have wanted。"
+    },
+    {
+      "q": "I ___ in Taipei my whole life.",
+      "opts": [
+        "have lived",
+        "have been living",
+        "live",
+        "am living"
+      ],
+      "ans": 0,
+      "expl": "my whole life是既定事實的語感，用have lived，而不是暗示暫時的have been living。"
+    }
+  ]
+},
+dg20260911b1p: {
+  "vis": true,
+  "oneLine": "問『做多久了』，公式是How long have you + Vpp／been+Ving——for接時間長度，since接起點。",
+  "map": {
+    "when": "想知道某件事『已經持續多久』的時候",
+    "why": "中文的『多久了』沒有分for跟since，但英文一定要選：時間長度用for，起點用since",
+    "form": "How long have you + Vpp...?　|　How long have you been + Ving...?"
+  },
+  "visual": {
+    "type": "chain",
+    "cap": "把問句拆成四塊：How long（問多久）+ have you（助動詞＋主詞）+ worked（過去分詞）+ here?，回答時再選for或since。",
+    "links": [
+      {
+        "t": "How long",
+        "c": "",
+        "role": "plain"
+      },
+      {
+        "t": "have you",
+        "c": "",
+        "role": "subj"
+      },
+      {
+        "t": "worked",
+        "c": "",
+        "role": "verb"
+      },
+      {
+        "t": "here?",
+        "c": "",
+        "role": "plain"
+      }
+    ],
+    "eg": {
+      "en": "How long have you worked here?",
+      "cn": "你在這裡工作多久了？"
+    },
+    "variants": [
+      {
+        "k": "用been+Ving問過程",
+        "en": "How long have you been waiting?",
+        "cn": "你等多久了？"
+      },
+      {
+        "k": "用for回答時間長度",
+        "en": "I have worked here for two years.",
+        "cn": "我在這裡工作兩年了。"
+      },
+      {
+        "k": "用since回答起點",
+        "en": "I have worked here since 2024.",
+        "cn": "我從2024年就在這裡工作了。"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "ask-duration-work",
+      "icon": "plane",
+      "title": "問在職多久",
+      "titleCn": "how long have you worked",
+      "ask": "要怎麼問『你在這裡工作多久了』？",
+      "en": "How long have you worked at this company?",
+      "cn": "你在這家公司做多久了？",
+      "why": "問『從過去到現在做了多久』要用現在完成式How long have you worked，不能用現在簡單式How long do you work（那是問『通常做什麼』）。"
+    },
+    {
+      "key": "ask-duration-wait",
+      "icon": "pin",
+      "title": "問等了多久",
+      "titleCn": "how long have you been waiting",
+      "ask": "問『一直在做的動作』持續多久，要怎麼問？",
+      "en": "How long have you been waiting for the bus?",
+      "cn": "你等公車等多久了？",
+      "why": "waiting是強調『一直在做的動作』，所以用How long have you been waiting，加上been+Ving。"
+    },
+    {
+      "key": "for-length",
+      "icon": "key",
+      "title": "用for接時間長度",
+      "titleCn": "for + 時間長度",
+      "ask": "for後面要接時間長度還是起點？",
+      "en": "I have worked here for two years.",
+      "cn": "我在這裡工作兩年了。",
+      "why": "for後面接『多長的時間』，例如for two years，不能接一個確切的年份。"
+    },
+    {
+      "key": "since-point",
+      "icon": "bubble",
+      "title": "用since接起點",
+      "titleCn": "since + 起點",
+      "ask": "since後面要接時間長度還是起點？",
+      "en": "I have worked here since 2024.",
+      "cn": "我從2024年就在這裡工作了。",
+      "why": "since後面接『開始的那個時間點』，例如since 2024，不能接一段長度（不能說since two years）。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你想問同事『在這家公司做多久了』。"
+    },
+    {
+      "label": "先組問句",
+      "text": "How long（問多久）+ have you worked（現在完成式，助動詞在主詞前）+ here?"
+    },
+    {
+      "label": "回答用for",
+      "text": "I have worked here for two years.（for接時間長度）"
+    },
+    {
+      "label": "回答用since",
+      "text": "I have worked here since 2024.（since接起點時間）"
+    },
+    {
+      "label": "換個說法",
+      "text": "錯誤說法：I work here since 2024.——since一定要搭配現在完成式，不能用現在簡單式work。"
+    }
+  ],
+  "comparison": {
+    "title": "for vs since",
+    "left": {
+      "tag": "FOR",
+      "tagCn": "接時間長度",
+      "icon": "key",
+      "head": "duration",
+      "headCn": "多長的時間",
+      "en": "I have worked here for two years.",
+      "cn": "我在這裡工作兩年了。",
+      "pts": [
+        "後面接一段時間長度",
+        "例如for two years, for a week",
+        "不能接確切的時間點"
+      ]
+    },
+    "right": {
+      "tag": "SINCE",
+      "tagCn": "接起點時間",
+      "icon": "bubble",
+      "head": "starting point",
+      "headCn": "開始的時間點",
+      "en": "I have worked here since 2024.",
+      "cn": "我從2024年就在這裡工作了。",
+      "pts": [
+        "後面接一個確切的起點",
+        "例如since 2024, since Monday",
+        "不能接一段長度"
+      ]
+    },
+    "note": "口訣：for接『多長』，since接『從什麼時候開始』。"
+  },
+  "quizMore": [
+    {
+      "q": "How long ___ him?",
+      "opts": [
+        "have you known",
+        "have you been knowing",
+        "do you know",
+        "are you knowing"
+      ],
+      "ans": 0,
+      "expl": "know是狀態動詞，不能用進行式，只能用have known。"
+    },
+    {
+      "q": "I have lived here ___ 2020.",
+      "opts": [
+        "for",
+        "since",
+        "from",
+        "in"
+      ],
+      "ans": 1,
+      "expl": "since後面接起點時間（2020），for才是接時間長度。"
+    }
+  ]
+},
+dg20260911b2: {
+  "vis": true,
+  "oneLine": "口語問『How long has it been since...』，正式寫作改用陳述句『It has been + 時間 + since...』，營造時間流逝的敘事張力。",
+  "map": {
+    "when": "在新聞、報導、正式敘事裡要交代『距離某件事已經過了多久』的時候",
+    "why": "直接問句太口語，正式寫作偏好用陳述句把時間長度放在句首，製造懸念或張力",
+    "form": "It has been + 時間長度 + since + 子句"
+  },
+  "visual": {
+    "type": "shift",
+    "cap": "上面是口語問法，下面是改寫成正式陳述句的版本——主詞it不變，只是不再用問句形式，而是把時間長度放到句子最前面。",
+    "rows": [
+      {
+        "a": "How long has it been since the airline flew this route?",
+        "b": "It has been almost three years since the airline last flew this route.",
+        "nt": "口語問句改寫成書面陳述句，把重點放在『三年』這個時間長度上"
+      },
+      {
+        "a": "How long has it been since you visited?",
+        "b": "It has been two years since I last visited.",
+        "nt": "一樣的改寫模式：問句→陳述句"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "news-opening",
+      "icon": "flag",
+      "title": "新聞開場句",
+      "titleCn": "用時間長度開場",
+      "ask": "新聞特稿開頭想營造『終於』的感覺，要怎麼寫？",
+      "en": "It has been almost three years since VietJet last flew to Tainan, and the route is finally returning.",
+      "cn": "VietJet距離上次飛台南已經將近三年了，這條航線終於要回歸。",
+      "why": "把時間長度放在句首，比直接說『航線回來了』更能營造『時間流逝、終於等到』的敘事張力，是新聞特稿常見的開場手法。"
+    },
+    {
+      "key": "since-clause",
+      "icon": "cycle",
+      "title": "since接完整子句",
+      "titleCn": "since不只能接年份",
+      "ask": "since後面除了年份，還可以接什麼？",
+      "en": "It has been two years since the company suspended the route.",
+      "cn": "該公司暫停這條航線已經兩年了。",
+      "why": "since後面也可以接一個完整的子句（the company suspended the route），不是只能接年份或時間點。"
+    },
+    {
+      "key": "formal-vs-casual",
+      "icon": "eye",
+      "title": "正式 vs 口語的選擇",
+      "titleCn": "讀者會怎麼解讀",
+      "ask": "寫報告時該用問句還是陳述句？",
+      "en": "It has been almost three years since the airline suspended this route.",
+      "cn": "這家航空公司暫停這條航線已經將近三年了。",
+      "why": "正式寫作很少直接用問句How long has it been，而是用陳述句It has been...since...交代背景，讀起來更客觀、更像報導。"
+    },
+    {
+      "key": "missing-it",
+      "icon": "fork",
+      "title": "別漏掉虛主詞it",
+      "titleCn": "常見的漏字錯誤",
+      "ask": "這句話少了什麼字？",
+      "en": "How long has it been since you last visited?",
+      "cn": "你上次去是多久以前的事了？",
+      "why": "問句一定要有虛主詞it：How long has it been...，很多人會漏掉it，寫成How long has been since...是錯的。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你在寫一篇新聞特稿，要交代『這條航線已經停飛多久了』。"
+    },
+    {
+      "label": "口語問法",
+      "text": "How long has it been since the airline flew this route?（口語問句）"
+    },
+    {
+      "label": "改寫成陳述句",
+      "text": "It has been almost three years since the airline last flew this route.（正式陳述句）"
+    },
+    {
+      "label": "加上子句",
+      "text": "since後面可以接完整子句：since the company suspended the route。"
+    },
+    {
+      "label": "修辭效果",
+      "text": "把時間長度放在句首，比直接說『航線回來了』更有『終於等到』的敘事張力，適合新聞開場。"
+    }
+  ],
+  "comparison": {
+    "title": "口語問句 vs 正式陳述句",
+    "left": {
+      "tag": "口語問句",
+      "tagCn": "日常對話",
+      "icon": "eye",
+      "head": "casual question",
+      "headCn": "用問句",
+      "en": "How long has it been since you visited?",
+      "cn": "你多久沒來了？",
+      "pts": [
+        "用在日常對話",
+        "直接問對方",
+        "語氣比較隨性"
+      ]
+    },
+    "right": {
+      "tag": "正式陳述句",
+      "tagCn": "新聞／報導",
+      "icon": "flag",
+      "head": "formal statement",
+      "headCn": "用陳述句",
+      "en": "It has been two years since I last visited.",
+      "cn": "我已經兩年沒來了。",
+      "pts": [
+        "用在新聞、報告、正式寫作",
+        "把時間長度放在句首",
+        "營造時間流逝的敘事張力"
+      ]
+    },
+    "note": "口訣：日常對話可以直接問How long has it been；正式寫作改用It has been...since...的陳述句，更客觀也更有敘事感。"
+  },
+  "quizMore": [
+    {
+      "q": "It ___ two years since the company launched this service.",
+      "opts": [
+        "has been",
+        "is",
+        "was",
+        "has"
+      ],
+      "ans": 0,
+      "expl": "It has been...since...固定用現在完成式has been。"
+    },
+    {
+      "q": "Which is the correct question form?",
+      "opts": [
+        "How long has it been since you visited?",
+        "How long has been since you visited?",
+        "How long is it since you visited?",
+        "How long has visited since you?"
+      ],
+      "ans": 0,
+      "expl": "問句需要虛主詞it，正確形式是How long has it been since...？"
+    }
+  ]
+},
 dg20260909a2: {
   "vis": true,
   "oneLine": "have been + Ving，不是說「做完了」，是說「這件事到現在都還在做」。",
