@@ -737,11 +737,11 @@ body.cnall .ucn{display:block}
   .mag{grid-template-columns:minmax(0,1fr) minmax(300px,40%)}            /* 約 60 / 40 */
 }
 @container mag (min-width:1000px){
-  .mag{grid-template-columns:minmax(0,1fr) minmax(320px,38%)}            /* 約 62 / 38 */
+  .mag{grid-template-columns:minmax(0,1fr) minmax(320px,32%)}            /* 約 68 / 32 */
 }
 @container mag (min-width:1200px){
-  /* 右欄最多 35%，而且不超過 600px：螢幕再寬，多出來的都給左邊主內容 */
-  .mag{grid-template-columns:minmax(0,1fr) minmax(340px,min(35%,600px))} /* 約 65 / 35 起 */
+  /* 右欄維持可讀的下限與上限；側欄收合或螢幕變寬後，多出的空間優先給主內容。 */
+  .mag{grid-template-columns:minmax(0,1fr) minmax(340px,min(30%,480px))} /* 約 70 / 30 起 */
 }
 .magttl{
   background:linear-gradient(135deg,#fff4e2,#ffe3c2);border:2.5px solid #2b2118;border-radius:16px;
