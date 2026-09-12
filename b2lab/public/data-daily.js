@@ -241,8 +241,8 @@ articles:[
       "pos": "n.",
       "cn": "接駁車",
       "def": "A bus that regularly carries people between two nearby places, such as home and work.",
-      "ex": "Every morning, Anita takes the company shuttle bus to her factory in Vietnam.",
-      "exCn": "Anita每天早上都搭公司的接駁車去越南的工廠上班。"
+      "ex": "The hotel offers a free shuttle bus to the airport every hour.",
+      "exCn": "飯店每小時提供一班免費的機場接駁車。"
     },
     {
       "w": "break down",
@@ -250,8 +250,8 @@ articles:[
       "pos": "phr. v.",
       "cn": "（車輛）故障、拋錨",
       "def": "To stop working because of a mechanical problem.",
-      "ex": "The driver said the bus broke down.",
-      "exCn": "司機說車子拋錨了。"
+      "ex": "Our car broke down on the highway, so we had to call for help.",
+      "exCn": "我們的車在高速公路上拋錨了，只好打電話求救。"
     },
     {
       "w": "motorbike",
@@ -259,8 +259,8 @@ articles:[
       "pos": "n.",
       "cn": "摩托車",
       "def": "A small vehicle with two wheels and an engine.",
-      "ex": "She decided to take a motorbike taxi instead.",
-      "exCn": "她決定改搭摩托車計程車。"
+      "ex": "In Vietnam, many people ride a motorbike to work because it is faster in heavy traffic.",
+      "exCn": "在越南，很多人騎摩托車上班，因為塞車時比較快。"
     },
     {
       "w": "traffic",
@@ -268,8 +268,8 @@ articles:[
       "pos": "n.",
       "cn": "交通、車流",
       "def": "The cars and other vehicles moving on a road.",
-      "ex": "The traffic that morning was worse than usual.",
-      "exCn": "那天早上的交通比平常還糟。"
+      "ex": "There is always heavy traffic near the school at eight in the morning.",
+      "exCn": "早上八點學校附近的車流總是很大。"
     },
     {
       "w": "anxious",
@@ -277,8 +277,8 @@ articles:[
       "pos": "adj.",
       "cn": "焦慮的",
       "def": "Feeling nervous or worried about what might happen.",
-      "ex": "Anita felt anxious, but she has already sent a message to her manager.",
-      "exCn": "Anita覺得很焦慮，不過她已經傳訊息給主管了。"
+      "ex": "I always feel anxious before a job interview, but it usually goes well.",
+      "exCn": "面試前我總是很焦慮，但通常都會順利。"
     }
   ],
   "questions": [
