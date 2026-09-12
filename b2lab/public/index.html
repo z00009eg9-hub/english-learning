@@ -29,6 +29,7 @@
   --font-subhead: calc(17px * var(--fs));       /* 區塊內小標（文法標題等） */
   --font-body: calc(16px * var(--fs));          /* 正文：例句、中譯、解說、題目 */
   --font-secondary: calc(14px * var(--fs));     /* 音標、詞性、註記、來源、提示 */
+  --font-def: calc(15px * var(--fs));            /* 右欄定義：比正文小一級 */
   --font-meta: calc(12.5px * var(--fs));        /* 徽章 / chip / 日期 / 單元資訊 */
   --lh-title:1.3; --lh-body:1.6; --lh-secondary:1.45;
   /* 課文內容一律用同一組 font stack（英文與中文共用，避免同樣 16px 看起來不一樣大） */
@@ -1146,9 +1147,9 @@ sup.tno{color:#c0392b;font-weight:var(--fw-title);font-size:var(--font-meta);pad
 .wpline .ipa{font-family:var(--font-stack);font-size:var(--font-secondary);color:var(--ink2);font-weight:400}
 .wpline .pos{font-size:var(--font-secondary);color:#2b7a78;font-weight:var(--fw-body);font-style:italic}
 .wpitem .zh{font-size:var(--font-body);line-height:var(--lh-body);font-weight:var(--fw-emph);color:var(--accent2);margin-top:2px}
-.wpitem .def{font-size:var(--font-body);line-height:var(--lh-body);color:var(--ink2);margin-top:3px}
+.wpitem .def{font-size:var(--font-def);line-height:1.55;color:var(--ink2);margin-top:3px}
 .wpitem .exs{font-size:var(--font-body);line-height:var(--lh-body);color:#4a4238;margin-top:5px;background:#fdfbf8;border-radius:8px;padding:6px 8px}
-.wpitem .exs .excn{font-size:var(--font-body);line-height:var(--lh-body);color:var(--ink2);margin-top:4px}
+.wpitem .exs .excn{font-size:var(--font-def);line-height:1.55;color:var(--ink2);margin-top:4px}
 .extra{display:flex;flex-wrap:wrap;gap:6px}
 .extra span{
   font-size:var(--font-body);background:#f2f7f7;border:1px solid #cfe3e2;border-radius:20px;
