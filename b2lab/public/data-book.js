@@ -10732,6 +10732,246 @@ window.BOOK = {
       ]
     },
     {
+      id: 'bk20260910',
+      icon: '🎵',
+      date: '2026-09-10',
+      doc: 'https://docs.google.com/document/d/1hIf2qs_PCzhhuC74WEp_iE3k77jKVdJ3CgF9u-nIPBI/edit',
+      title: 'Gerunds & Infinitives, Musical Instruments & Audit English',
+      titleCn: '動名詞與不定詞、樂器與稽核英文',
+      topics: '動名詞 vs 不定詞（複習）｜樂器名稱（11 種）｜dare to + V｜be well prepared｜This is the first time + 現在完成式｜稽核英文',
+      hwTitle: 'I. ★ 09/10 作業複習 Homework Review',
+      hw: [
+        {
+          n: 1,
+          ok: 'Tom enjoys talking with his coworkers after lunch.',
+          cn: 'Tom 喜歡午餐後和同事聊天。',
+          pat: 'enjoy + V-ing',
+          note: 'enjoy 後面一定接動名詞（V-ing），不能接不定詞（to + V）。coworker（同事）也可寫成 co-worker。'
+        },
+        {
+          n: 2,
+          wrong: 'My manager suggested to take a break and go out the office when I felt stressed.',
+          fix: 'My manager suggested taking a break and going out of the office when I felt stressed.',
+          cn: '我覺得壓力大的時候，主管建議我休息一下、走出辦公室。',
+          pat: 'suggest + V-ing',
+          note: 'suggest 後面接動名詞（V-ing），不接 to + V，所以是 suggested taking，不是 suggested to take。「走出（某個地方）」用 go out of + 地點，不能省略介系詞 of。and 連接兩個對等的 V-ing：taking … and going …。'
+        },
+        {
+          n: 3,
+          wrong: 'I decided to change work because my boss made me angry.',
+          fix: 'I decided to change jobs because my boss made me angry.',
+          cn: '我決定換工作，因為我的老闆讓我很生氣。',
+          pat: 'decide + to V',
+          note: 'decide 後面接不定詞（to + V）。「換工作」英文慣用 change jobs（複數），不說 change work。work 是不可數名詞，指「工作」這件事；job 是可數名詞，指「一份職位」，換工作就是從一份 job 換到另一份，所以用複數 jobs。'
+        },
+        {
+          n: 4,
+          ok: "She avoided answering the client's question because she was nervous.",
+          cn: '她很緊張，所以避開了客戶的問題。',
+          pat: 'avoid + V-ing',
+          note: 'avoid 後面接動名詞（V-ing），不接不定詞。nervous（緊張的）是形容詞，描述人的感受。'
+        },
+        {
+          n: 5,
+          ok: 'We arranged to meet in the meeting room at 3 p.m.',
+          cn: '我們安排下午三點在會議室碰面。',
+          pat: 'arrange + to V',
+          note: 'arrange 後面接不定詞（to + V），表示「安排做某事」。注意 meeting room（會議室）裡的 meeting 是名詞當形容詞用。'
+        }
+      ],
+      vocabTitle: 'II. 單字 Vocabulary',
+      vocab: [
+        { w: 'piano', ipa: '/piˈæn.oʊ/', pos: 'n.', cn: '鋼琴',
+          ex: "I've been learning to play the piano since I was six.", exCn: '我從六歲就開始學鋼琴。' },
+        { w: 'guitar', ipa: '/ɡɪˈtɑːr/', pos: 'n.', cn: '吉他',
+          ex: "I'd like to learn to play the guitar.", exCn: '我想學彈吉他。' },
+        { w: 'violin', ipa: '/ˌvaɪ.əˈlɪn/', pos: 'n.', cn: '小提琴',
+          ex: 'She started playing the violin when she was five.', exCn: '她五歲就開始拉小提琴。' },
+        { w: 'cello', ipa: '/ˈtʃel.oʊ/', pos: 'n.', cn: '大提琴',
+          ex: 'The cello has a deep, warm sound.', exCn: '大提琴的聲音低沉溫暖。' },
+        { w: 'flute', ipa: '/fluːt/', pos: 'n.', cn: '長笛',
+          ex: 'She plays the flute in the school band.', exCn: '她在學校樂隊吹長笛。' },
+        { w: 'trumpet', ipa: '/ˈtrʌm.pɪt/', pos: 'n.', cn: '小號（喇叭）',
+          ex: 'He learned to play the trumpet in high school.', exCn: '他高中學會吹小號。' },
+        { w: 'saxophone', ipa: '/ˈsæk.sə.foʊn/', pos: 'n.', cn: '薩克斯風',
+          ex: 'Jazz musicians often play the saxophone.', exCn: '爵士樂手經常演奏薩克斯風。' },
+        { w: 'drums', ipa: '/drʌmz/', pos: 'n.', cn: '鼓（套鼓）',
+          ex: 'My neighbor plays the drums every evening.', exCn: '我的鄰居每天傍晚打鼓。' },
+        { w: 'keyboard', ipa: '/ˈkiː.bɔːrd/', pos: 'n.', cn: '電子琴；鍵盤',
+          ex: 'She bought an electronic keyboard to practice at home.', exCn: '她買了一台電子琴在家練習。' },
+        { w: 'harp', ipa: '/hɑːrp/', pos: 'n.', cn: '豎琴',
+          ex: 'The harp produces a beautiful, gentle sound.', exCn: '豎琴發出優美柔和的聲音。' },
+        { w: 'clarinet', ipa: '/ˌklær.əˈnet/', pos: 'n.', cn: '單簧管（黑管）',
+          ex: 'He plays the clarinet in the orchestra.', exCn: '他在管弦樂團吹單簧管。' },
+        { w: 'dare', ipa: '/der/', pos: 'v.', cn: '敢、膽敢',
+          ex: 'Nobody dared to say anything.', exCn: '沒有人敢說話。' },
+        { w: 'lie', ipa: '/laɪ/', pos: 'n.', cn: '謊言',
+          ex: "Don't tell a lie — tell the truth.", exCn: '不要說謊——說實話。' },
+        { w: 'coworker', ipa: '/ˈkoʊˌwɝː.kɚ/', pos: 'n.', cn: '同事（＝ colleague）',
+          ex: 'Tom enjoys talking with his coworkers after lunch.', exCn: 'Tom 喜歡午餐後和同事聊天。' },
+        { w: 'nervous', ipa: '/ˈnɝː.vəs/', pos: 'adj.', cn: '緊張的',
+          ex: 'She was nervous before the presentation.', exCn: '她上台報告前很緊張。' },
+        { w: 'unemployed', ipa: '/ˌʌn.ɪmˈplɔɪd/', pos: 'adj.', cn: '失業的',
+          ex: 'He has been unemployed for three months.', exCn: '他已經失業三個月了。' },
+        { w: 'marathon', ipa: '/ˈmer.ə.θɑːn/', pos: 'n.', cn: '馬拉松',
+          ex: 'She ran in a marathon last year.', exCn: '她去年參加了馬拉松。' },
+        { w: 'audit', star: true, ipa: '/ˈɑː.dɪt/', pos: 'n. / v.', cn: '稽核、審計',
+          ex: 'I should be well prepared before the audit.', exCn: '稽核前我應該做好充分準備。' },
+        { w: 'experience', ipa: '/ɪkˈspɪr.i.əns/', pos: 'n.', cn: '經驗',
+          ex: "We don't have much experience with audits.", exCn: '我們在稽核方面沒有太多經驗。' },
+        { w: 'factory', ipa: '/ˈfæk.tɚ.i/', pos: 'n.', cn: '工廠',
+          ex: 'This is the first time our factory has set up a painting room.', exCn: '這是我們工廠第一次設置塗裝室。' }
+      ],
+      phrasesTitle: 'III. 片語與搭配詞（索引表）Phrases & Collocations',
+      phrases: [
+        { p: 'be between jobs', cn: '待業中（委婉說法，詳見 VI-A）' },
+        { p: 'be in a hurry / in a rush', cn: '趕時間（詳見 VI-B）' },
+        { p: 'run in a marathon', cn: '參加馬拉松（詳見 VI-C）' },
+        { p: 'dare to + V', cn: '敢做某事（詳見 IV-B）' },
+        { p: 'tell a lie', cn: '說謊' },
+        { p: 'change jobs', cn: '換工作（詳見 I）' },
+        { p: 'go out of + 地點', cn: '走出（某個地方）（詳見 I）' },
+        { p: 'be well prepared', cn: '做好充分準備（詳見 IV-C）' },
+        { p: 'set up', cn: '建立、設置' },
+        { p: 'prepare an audit plan', cn: '準備稽核計畫（詳見 VII）' },
+        { p: 'reply to questions', cn: '回覆問題（詳見 VII）' }
+      ],
+      grammarTitle: 'IV–V. 文法：動名詞與不定詞（複習）、dare to、be well prepared、first time + 現在完成式',
+      grammar: [
+        {
+          k: 'IV-A', title: '動名詞 vs 不定詞速查表（複習 Unit 53 & 54）',
+          pat: 'V-ing 動詞 vs to-V 動詞',
+          pts: [
+            '接 V-ing 的動詞：enjoy, suggest, avoid, consider, fancy, imagine, admit, deny, recommend, put off, keep on, go on, mind, stop, finish, risk, give up。',
+            '接 to-V 的動詞：decide, arrange, agree, afford, offer, promise, threaten, learn, forget, manage, plan, hope, refuse, tend, fail, seem, pretend。',
+            '⚠️ 不可混用：enjoy talking ✓ / enjoy to talk ✗；decide to go ✓ / decide going ✗。',
+            '🔬 這些動詞在上一課（09/08）已詳細講解（Unit 53 & 54），這裡列出作為快速複習參考。'
+          ],
+          exs: [
+            { tag: 'enjoy', en: 'Tom enjoys talking with his coworkers.', cn: 'Tom 喜歡跟同事聊天。（enjoy + V-ing）' },
+            { tag: 'suggest', en: 'My manager suggested taking a break.', cn: '主管建議休息一下。（suggest + V-ing）' },
+            { tag: 'avoid', en: "She avoided answering the client's question.", cn: '她避開了客戶的問題。（avoid + V-ing）' },
+            { tag: 'decide', en: 'I decided to change jobs.', cn: '我決定換工作。（decide + to V）' },
+            { tag: 'arrange', en: 'We arranged to meet at 3 p.m.', cn: '我們約好下午三點見面。（arrange + to V）' }
+          ]
+        },
+        {
+          k: 'IV-B', title: 'dare to + V（敢做某事）',
+          pat: 'dare (to) + 原形動詞',
+          pts: [
+            'dare to + V 表示「敢做某事」，否定是 not dare to 或 dare not。',
+            'dare 比較特殊：在肯定句通常加 to（dared to say）；在否定和疑問句中，to 常省略（didn\'t dare say）。',
+            '口語中 dare 的過去式常用 dared：Nobody dared to say anything.（沒人敢說話。）'
+          ],
+          exs: [
+            { tag: 'dare to', en: 'Nobody dared to say anything.', cn: '沒有人敢說話。' },
+            { tag: 'dare to', en: 'She dared to tell the truth.', cn: '她敢說實話。' },
+            { tag: 'not dare', en: "I didn't dare (to) ask the manager.", cn: '我不敢問主管。' },
+            { tag: 'not dare', en: 'He dared not speak in front of the CEO.', cn: '他不敢在執行長面前說話。' }
+          ]
+        },
+        {
+          k: 'IV-C', title: 'be well prepared（做好充分準備）',
+          pat: 'be well prepared (for + 名詞 / to + V)',
+          pts: [
+            'well prepared 是「做好充分準備的」，well 修飾 prepared（過去分詞當形容詞）。',
+            '後面可接 for + 名詞（prepared for the audit）或 to + V（prepared to answer questions）。',
+            '相關搭配：prepare for（為……做準備）、preparation（準備工作，名詞）。'
+          ],
+          exs: [
+            { tag: 'be well prepared', en: 'I should be well prepared before the audit.', cn: '稽核前我應該做好充分準備。' },
+            { tag: 'prepare for', en: 'We need to prepare for the customer audit next week.', cn: '我們要為下週的客戶稽核做準備。' },
+            { tag: 'well prepared', en: 'The team was well prepared, so the audit went smoothly.', cn: '團隊準備充分，所以稽核進行得很順利。' }
+          ]
+        },
+        {
+          k: 'IV-D', title: 'This is the first time + 現在完成式',
+          pat: 'This is the first time + 主詞 + have/has + p.p.',
+          pts: [
+            '表示「這是第一次……」時，because it is happening now，主要子句用現在式（This is），後面的子句用現在完成式（have/has + p.p.）。',
+            '若改為過去式語境：It was the first time + 主詞 + had + p.p.（過去完成式）。',
+            '也適用於 the second time、the third time 等：This is the third time you\'ve been late this week.'
+          ],
+          exs: [
+            { tag: 'first time', en: "This is the first time our factory has set up a painting room, so we don't have much experience with audits.", cn: '這是我們工廠第一次設置塗裝室，所以我們在稽核方面沒有太多經驗。' },
+            { tag: 'first time', en: "This is the first time I've run in a marathon.", cn: '這是我第一次參加馬拉松。' },
+            { tag: 'second time', en: "This is the second time she's been late this week.", cn: '這是她這週第二次遲到了。' },
+            { tag: '過去式', en: 'It was the first time I had visited Japan.', cn: '那是我第一次去日本。（過去完成式）' }
+          ]
+        }
+      ],
+      cmpTitle: 'VI. 實用表達 Useful Expressions',
+      cmp: [
+        { u: '待業中', sc: 'be between jobs（委婉說法，比 unemployed 好聽）',
+          ex: "I'm between jobs at the moment.", exCn: '我目前待業中。', cn: '待業中（委婉）' },
+        { u: '待業中', sc: 'unemployed（直接說法，較正式或語氣較重）',
+          ex: 'He has been unemployed for three months.', exCn: '他已經失業三個月了。', cn: '失業的' },
+        { u: '趕時間', sc: 'be in a hurry / be in a rush',
+          ex: "Sorry, I can't talk now — I'm in a hurry.", exCn: '抱歉，我現在沒辦法聊——我在趕時間。', cn: '趕時間' },
+        { u: '趕時間', sc: '也可用 rush 當動詞：rush to + 地點',
+          ex: 'I rushed to the meeting room because I was late.', exCn: '我趕到會議室，因為我遲到了。', cn: '趕去某處' },
+        { u: '馬拉松', sc: 'run in a marathon（參加馬拉松）',
+          ex: 'She ran in a marathon last year.', exCn: '她去年參加了馬拉松。', cn: '參加馬拉松' },
+        { u: '馬拉松', sc: '⚠ 注意介系詞用 in，不是 run a marathon（跑完全程）',
+          ex: "This is the first time I've run in a marathon.", exCn: '這是我第一次參加馬拉松。', cn: '參加馬拉松（強調參與）' }
+      ],
+      cmpWarn: {
+        title: '⚠ 容易混淆的說法',
+        bad: "I'm between jobs. ≠ I'm not working.（between jobs 是禮貌說法，不代表永久不工作）",
+        good: ["I'm between jobs at the moment.　我目前待業中。（委婉、正面）", "I've been unemployed for a while.　我失業一陣子了。（直接、語氣較重）"]
+      },
+      extraTitle: 'VII–IX. 稽核英文、練習題',
+      extra: [
+        {
+          title: 'VII. 稽核英文 Work & Audit English',
+          exs: [
+            { en: 'I need to prepare some audit plan.', cn: '我需要準備一些稽核計畫。', hi: 'prepare … audit plan' },
+            { en: 'Reply to their questions.', cn: '回覆他們的問題。', hi: 'reply to' },
+            { en: 'I should be well prepared before the audit.', cn: '稽核前我應該做好充分準備。', hi: 'be well prepared' },
+            { en: "This is the first time our factory has set up a painting room, so we don't have much experience with audits.", cn: '這是我們工廠第一次設置塗裝室，所以我們在稽核方面沒有太多經驗。', hi: 'first time … has set up / experience with audits' }
+          ]
+        },
+        {
+          title: 'VIII. 選擇題：V-ing or to V?（20 題）',
+          exs: [
+            { en: '1. I enjoy ___ (listen) to music after work.', cn: '答案：listening（enjoy + V-ing）', hi: 'listening' },
+            { en: '2. She decided ___ (apply) for the new position.', cn: '答案：to apply（decide + to V）', hi: 'to apply' },
+            { en: '3. Would you mind ___ (open) the window?', cn: '答案：opening（mind + V-ing）', hi: 'opening' },
+            { en: '4. They agreed ___ (help) us with the project.', cn: '答案：to help（agree + to V）', hi: 'to help' },
+            { en: '5. I can\'t imagine ___ (live) in another country.', cn: '答案：living（imagine + V-ing）', hi: 'living' },
+            { en: '6. He promised ___ (finish) the report by Friday.', cn: '答案：to finish（promise + to V）', hi: 'to finish' },
+            { en: '7. She suggested ___ (go) to the new restaurant.', cn: '答案：going（suggest + V-ing）', hi: 'going' },
+            { en: '8. We can\'t afford ___ (buy) a new car right now.', cn: '答案：to buy（afford + to V）', hi: 'to buy' },
+            { en: '9. Please stop ___ (make) so much noise.', cn: '答案：making（stop + V-ing ＝ 停止做某事）', hi: 'making' },
+            { en: '10. I hope ___ (see) you again soon.', cn: '答案：to see（hope + to V）', hi: 'to see' },
+            { en: '11. He admitted ___ (steal) the money.', cn: '答案：stealing（admit + V-ing）', hi: 'stealing' },
+            { en: '12. She offered ___ (drive) me to the airport.', cn: '答案：to drive（offer + to V）', hi: 'to drive' },
+            { en: '13. I considered ___ (change) jobs, but decided to stay.', cn: '答案：changing（consider + V-ing）', hi: 'changing' },
+            { en: '14. He refused ___ (answer) the question.', cn: '答案：to answer（refuse + to V）', hi: 'to answer' },
+            { en: '15. We should avoid ___ (drive) during rush hour.', cn: '答案：driving（avoid + V-ing）', hi: 'driving' },
+            { en: '16. She learned ___ (play) the piano when she was young.', cn: '答案：to play（learn + to V）', hi: 'to play' },
+            { en: '17. He denied ___ (break) the vase.', cn: '答案：breaking（deny + V-ing）', hi: 'breaking' },
+            { en: '18. They arranged ___ (meet) at the coffee shop.', cn: '答案：to meet（arrange + to V）', hi: 'to meet' },
+            { en: '19. I don\'t fancy ___ (cook) tonight.', cn: '答案：cooking（fancy + V-ing）', hi: 'cooking' },
+            { en: '20. Nobody dared ___ (disagree) with the boss.', cn: '答案：to disagree（dare to + V）', hi: 'to disagree' }
+          ]
+        },
+        {
+          title: 'IX. 填空題（8 題）',
+          exs: [
+            { en: '1. Tom enjoys ___ (talk) with his coworkers after lunch.', cn: '答案：talking（enjoy + V-ing）', hi: 'talking' },
+            { en: '2. I decided ___ (change) jobs because my boss made me angry.', cn: '答案：to change（decide + to V）', hi: 'to change' },
+            { en: '3. My manager suggested ___ (take) a break.', cn: '答案：taking（suggest + V-ing）', hi: 'taking' },
+            { en: '4. We arranged ___ (meet) in the meeting room at 3 p.m.', cn: '答案：to meet（arrange + to V）', hi: 'to meet' },
+            { en: '5. She avoided ___ (answer) the client\'s question.', cn: '答案：answering（avoid + V-ing）', hi: 'answering' },
+            { en: '6. Nobody dared ___ (say) anything to the CEO.', cn: '答案：to say（dare to + V）', hi: 'to say' },
+            { en: '7. This is the first time our factory ___ (set up) a painting room.', cn: '答案：has set up（This is the first time + 現在完成式）', hi: 'has set up' },
+            { en: '8. I should be well ___ (prepare) before the audit.', cn: '答案：prepared（be well prepared）', hi: 'prepared' }
+          ]
+        }
+      ]
+    },
+    {
       id: 'bk20260908',
       icon: '📝',
       date: '2026-09-08',
@@ -11215,6 +11455,7 @@ window.BOOK = {
     bk20260730:[[['star','warning','music','globe','smile'],'悲觀者飾演悲觀者：《怪醫豪斯》的主角豪斯醫生 → 演員 Hugh Laurie 本人也很悲觀 → 但他熱愛藍調、錄了專輯 → 他說悲觀是因為他是蘇格蘭人 → 路人常叫他「振作點」。']],
     bk20260806:[[['target','warning','talk','check','star'],'成功之鑰：Emma 夢想在事業上成功 → 團隊溝通不良造成延遲 → 她召開會議請大家詳細說明 → 有效溝通迅速解決問題 → 保持樂觀成為成功的領導者。']],
     bk20260903:[[['building','warning','doc','talk','check'],'難熬的一天：大樓施工得走另一個入口 → 電腦系統當機 → 主管打斷追問未付發票 → 冷靜說服客戶付款 → 一切恢復正常並成功收尾。']],
+    bk20260910:[[['music','writing','talk','check','doc'],'動名詞與不定詞複習＋樂器名稱：enjoy/suggest/avoid + V-ing vs decide/arrange/agree + to V → dare to + V（敢做某事）→ be well prepared（做好準備）→ This is the first time + 現在完成式 → 稽核英文。']],
     bk20260908:[[['building','warning','doc','talk','check'],'辦公室難熬的一天：大樓施工改走另一個入口 → 電腦系統當機、電梯不可靠 → 主管打斷追問未付請款單 → 冷靜說服客戶付款 → 到外面紓壓、一切恢復正常。']]
   };
   ((window.BOOK||{}).lessons||[]).forEach(function(b){
