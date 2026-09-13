@@ -3565,6 +3565,7 @@ window.gvNextStep=gvNextStep;
 /* 英文句：可點整句朗讀，與情境卡、時間線一致 */
 function gvEn(x){
   if(!x) return '';
+  if(/^[—–\-]+$/.test(x.trim())) return '<span>'+esc(x)+'</span>';
   return '<span class="sent" data-t="'+esc(x)+'" onclick="saySent(this)">'+esc(x)+'</span> '+spk(x);
 }
 /* 純圖形箭頭（無文字，縮放不會壞） */
