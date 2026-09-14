@@ -1303,6 +1303,10 @@ body.cnall [id^="kc"]{display:block!important}
 .bknote{font-size:var(--font-body);line-height:var(--lh-body);background:#f6f2ec;border-radius:9px;padding:9px 11px}
 .bkfml{font-size:var(--font-body);font-weight:var(--fw-emph);background:var(--card);border:1.5px dashed var(--accent);border-radius:10px;
   padding:10px 13px;margin:9px 0;color:#8a3f08;line-height:var(--lh-body)}
+.grammar-pattern{display:grid;gap:6px;min-width:0}
+.pattern-group{display:flex;flex-wrap:wrap;align-items:baseline;gap:0.25em;min-width:0;white-space:normal}
+.pattern-concept{color:inherit;opacity:.85}
+.pattern-formula{white-space:nowrap;color:inherit}
 .bkul{margin:8px 0;padding-left:20px;font-size:var(--font-body);line-height:var(--lh-body)}
 .bkul li{margin-bottom:5px}
 .bkex{background:#fdfbf8;border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin:7px 0}
@@ -2862,7 +2866,7 @@ function focusHTML(id){
   const unit=f.unit ? ALL_GRAM.find(g=>g.id===f.unit) : null;
   let h='<div class="focus"><h3>📐 這篇的文法重點</h3>'
    +'<div style="font-size:var(--font-subhead);font-weight:800;color:#33291f">'+esc(f.title)+'</div>'
-   +'<div class="fml">'+bkVars(f.formula)+'</div>'
+   +'<div class="fml">'+fmlGroups(f.formula)+'</div>'
    +'<ol>'+f.points.map(p=>'<li>'+mkText(p)+'</li>').join('')+'</ol>';
   if((f.examples||[]).length){
     h+='<div class="sub">✏️ 再看三個例子</div>'
@@ -3412,7 +3416,8 @@ function gvIcon(k,size){
 function gvMap(m){
   if(!m) return '';
   const cell=(k,v,cls)=>'<div class="m'+(cls?' '+cls:'')+'"><div class="k">'+k+'</div><div class="v">'+mkText(v||'')+'</div></div>';
-  return '<div class="gvmap">'+cell('什麼時候用？',m.when)+cell('為什麼？',m.why)+cell('句型',m.form,'form')+'</div>';
+  const formCell='<div class="m form"><div class="k">句型</div><div class="v">'+fmlGroups(m.form||'')+'</div></div>';
+  return '<div class="gvmap">'+cell('什麼時候用？',m.when)+cell('為什麼？',m.why)+formCell+'</div>';
 }
 /* 時間線：span 連到 NOW／point 過去一個結束的點／range 未完成的區間 */
 function gvTimeline(t){
@@ -5327,7 +5332,7 @@ function mrPageHTML(ym){
       const g=e.g, ex1=(g.exs||[])[0], pt1=(g.pts||[])[0];
       return '<div class="mrgram">'
        +'<div class="mrg-t">'+esc(g.title)+(e.hits>1?'<span class="mrg-hit">'+e.hits+' 堂課出現</span>':'')+'</div>'
-       +(g.pat?'<div class="mrg-pat">'+bkVars(g.pat)+'</div>':'')
+       +(g.pat?'<div class="mrg-pat">'+fmlGroups(g.pat)+'</div>':'')
        +(pt1?'<div class="mrg-pts">'+bkMark(String(pt1))+'</div>':'')
        +(ex1?'<div class="mrg-exs"><div class="mrg-ex"><span class="sent" data-t="'+esc(ex1.en)+'" onclick="saySent(this)">'+bkHi(ex1.en,ex1.hi)+'</span> '+spk(ex1.en)
          +'<div class="mrg-excn cnx">'+esc(ex1.cn||'')+'</div></div></div>':'')
@@ -5466,11 +5471,13 @@ window.bkTogHint=bkTogHint; window.bkReadPara=bkReadPara; window.bkTogAns=bkTogA
 window.bkReadAll=bkReadAll; window.togHintBox=togHintBox;
 window.mrOpen=mrOpen; window.mrClose=mrClose;
 
-/* 文法重點的 ✅／❌ 自動上色（到左括號或行尾為止） */
+/* 文法重點的 ✅❌✓✗ 自動上色（❌✅ 在文字前面所以連帶後文；✓✗ 在文字後面只上色符號本身） */
 function bkMark(s){
   return esc(s)
     .replace(/❌\s*([^（(]*)/g,'<span class="wrong">❌ $1</span>')
-    .replace(/✅\s*([^（(]*)/g,'<span class="right">✅ $1</span>');
+    .replace(/✅\s*([^（(]*)/g,'<span class="right">✅ $1</span>')
+    .replace(/(✗|✘|×)/g,'<span class="wrong">$1</span>')
+    .replace(/(✓|✔)/g,'<span class="right">$1</span>');
 }
 /* 文法重點條列：英文例句後面的（中文翻譯…）跟著全站中譯開關隱藏／顯示 */
 function bkPt(p){
@@ -5509,6 +5516,12 @@ function bkForms(html){
 function bkVars(s){
   return esc(s).replace(/\b(something|someone|somebody|anything|anyone|sth|sb)\b/gi,'<span class="varb">$1</span>')
     .replace(/(人|事情|事|某人|某事)/g,'<span class="varb">$1</span>');
+}
+/* 句型公式卡：用 | 分組，每組獨立一行，英文公式 nowrap 不斷行 */
+function fmlGroups(s){
+  const parts=String(s).split(/\s*[|｜]\s*/);
+  if(parts.length<2) return bkVars(s);
+  return '<div class="grammar-pattern">'+parts.map(p=>'<div class="pattern-group">'+bkVars(p)+'</div>').join('')+'</div>';
 }
 /* 填空練習：把「答案：X」裡的答案字，在英文句子中換成可見的空格膠囊（答案仍留在中文欄）。
    只對 cn 以「答案：」開頭的項目生效，其他補充字彙表照舊顯示。 */
@@ -5578,7 +5591,7 @@ function bookHTML(b){
         +'<div class="bkline hwok"><b class="lb right">✅ 訂正：</b>'+spk(q.fix)+'<span class="sent" data-t="'+esc(q.fix)+'" onclick="saySent(this)">'+bkDiff(q.fix,q.wrong,'right')+'</span></div>';
       else x+='<div class="bkline hwok"><b class="lb right">✅ 原句：</b>'+spk(q.ok)+'<span class="sent" data-t="'+esc(q.ok)+'" onclick="saySent(this)">'+esc(q.ok)+'</span></div>';
       x+='<div class="bkcn cnx">中文：'+esc(q.cn)+'</div>'
-       +'<div class="bkpatline">結構：'+bkVars(q.pat)+'</div>'
+       +'<div class="bkpatline">結構：'+fmlGroups(q.pat)+'</div>'
        +'<div class="bknote"><b>💬 文法解説：</b>'+bkNote(q.note)+'</div></div>';
       return x;
     }).join('');
@@ -5619,8 +5632,8 @@ function bookHTML(b){
   if((b.grammar||[]).length) h+='<div class="bkbar" id="bksec-gram">'+esc(b.grammarTitle||'III. 句型與文法解説 Sentence Patterns & Grammar')+'</div>'
    + (b.grammar||[]).map(g=>{
       let x='<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(g.k)+'. '+esc(g.title)+'</h2>';
-      if(g.pat) x+='<div class="bkfml">📌 句型：'+bkVars(g.pat)+'</div>';
-      else if(g.patLabel) x+='<div class="bkfml">📌 '+bkVars(g.patLabel)+'</div>';
+      if(g.pat) x+='<div class="bkfml">📌 句型：'+fmlGroups(g.pat)+'</div>';
+      else if(g.patLabel) x+='<div class="bkfml">📌 '+fmlGroups(g.patLabel)+'</div>';
       x+='<ul class="bkul">'+(g.pts||[]).map(p=>'<li>'+bkPt(p)+'</li>').join('')+'</ul>'
        +(g.exs||[]).map(exRow).join('')+'</div>';
       return x;
@@ -5631,7 +5644,7 @@ function bookHTML(b){
     h+='<div class="bkbar">'+esc(b.cmpTitle||'IV. 比較表 Comparison Table')+'</div>'
      +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
      +'<tr><th>用法</th><th>適用場景</th><th>例句</th><th class="cnx">中文</th></tr>'
-     + b.cmp.map(c=>'<tr><td class="nw" style="font-weight:700">'+esc(c.u)+'<br>'+spk(c.u)+'</td><td>'+esc(c.sc)+'</td>'
+     + b.cmp.map(c=>'<tr><td class="nw" style="font-weight:700">'+esc(c.u)+(/[a-zA-Z]{2,}/.test(c.u)?'<br>'+spk(c.u):'')+'</td><td>'+esc(c.sc)+'</td>'
        +'<td><span class="sent" data-t="'+esc(c.ex)+'" onclick="saySent(this)">'+bkHi(c.ex,c.u)+'</span> '+spk(c.ex)+'<div class="muted cnx">'+esc(c.exCn)+'</div></td>'
        +'<td class="nw cnx">'+esc(c.cn)+'</td></tr>').join('')
      +'</table></div></div>';
