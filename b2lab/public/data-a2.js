@@ -28,11 +28,11 @@ articles:[
      cn:"我八點半開始工作。我的早上總是很忙，但我喜歡這樣。"}
   ],
   target:[
-    {w:"get up",ipa:"/ɡet ʌp/",pos:"phr.v.",cn:"起床",def:"To get out of bed.",ex:"I get up at six thirty.",exCn:"我六點半起床。"},
-    {w:"wash",ipa:"/wɑːʃ/",pos:"v.",cn:"洗",def:"To clean something with water.",ex:"First I wash my face.",exCn:"我先洗臉。"},
-    {w:"leave",ipa:"/liːv/",pos:"v.",cn:"離開",def:"To go away from a place.",ex:"I leave the house at seven forty.",exCn:"我七點四十分出門。"},
-    {w:"usually",ipa:"/ˈjuːʒuəli/",pos:"adv.",cn:"通常",def:"Most of the time.",ex:"I usually read on the bus.",exCn:"我通常在公車上看書。"},
-    {w:"busy",ipa:"/ˈbɪzi/",pos:"adj.",cn:"忙的",def:"Having a lot to do.",ex:"My morning is always busy.",exCn:"我的早上總是很忙。"}
+    {w:"get up",ipa:"/ɡet ʌp/",pos:"phr.v.",cn:"起床",def:"To get out of bed.",ex:"On Saturdays, my brother likes to get up late and watch cartoons.",exCn:"星期六我弟弟喜歡晚起床，然後看卡通。"},
+    {w:"wash",ipa:"/wɑːʃ/",pos:"v.",cn:"洗",def:"To clean something with water.",ex:"Can you help me wash the car in the yard this afternoon?",exCn:"今天下午你可以幫我在院子裡洗車嗎？"},
+    {w:"leave",ipa:"/liːv/",pos:"v.",cn:"離開",def:"To go away from a place.",ex:"The bus to the zoo leaves the station at nine o'clock.",exCn:"開往動物園的公車九點從車站出發。"},
+    {w:"usually",ipa:"/ˈjuːʒuəli/",pos:"adv.",cn:"通常",def:"Most of the time.",ex:"We usually eat pizza on Friday night and play board games.",exCn:"我們星期五晚上通常吃披薩、玩桌遊。"},
+    {w:"busy",ipa:"/ˈbɪzi/",pos:"adj.",cn:"忙的",def:"Having a lot to do.",ex:"The supermarket gets really busy on Sunday afternoons.",exCn:"超市在星期天下午人很多、非常忙碌。"}
   ],
   questions:[
     {q:"What time does the writer get up?",qCn:"作者幾點起床？",opts:["A. Six o'clock","B. Six thirty","C. Seven o'clock","D. Seven forty"],optsCn:["A. 六點", "B. 六點半", "C. 七點", "D. 七點四十"],ans:1,expl:"I get up at six thirty every morning."},
@@ -69,11 +69,11 @@ articles:[
      cn:"店員很友善。我開門時他們總是說「歡迎光臨！」"}
   ],
   target:[
-    {w:"convenience store",ipa:"/kənˈviːniəns stɔːr/",pos:"n.",cn:"便利商店",def:"A small shop that is open for many hours.",ex:"There is a convenience store next to my building.",exCn:"我住的大樓旁邊有一家便利商店。"},
-    {w:"bottle",ipa:"/ˈbɑːtl/",pos:"n.",cn:"瓶",def:"A container for liquid.",ex:"I needed two bottles of water.",exCn:"我需要兩瓶水。"},
-    {w:"cheap",ipa:"/tʃiːp/",pos:"adj.",cn:"便宜的",def:"Not expensive.",ex:"They are cheap and taste good.",exCn:"它們很便宜又好喝。"},
-    {w:"staff",ipa:"/stæf/",pos:"n.",cn:"員工（總稱）",def:"The people who work in a place.",ex:"The staff are friendly.",exCn:"店員很親切。"},
-    {w:"friendly",ipa:"/ˈfrendli/",pos:"adj.",cn:"友善的",def:"Kind and easy to talk to.",ex:"The staff are very friendly.",exCn:"店員非常親切。"}
+    {w:"convenience store",ipa:"/kənˈviːniəns stɔːr/",pos:"n.",cn:"便利商店",def:"A small shop that is open for many hours.",ex:"I pay my phone bill at the convenience store near my home.",exCn:"我在家附近的便利商店繳手機費。"},
+    {w:"bottle",ipa:"/ˈbɑːtl/",pos:"n.",cn:"瓶",def:"A container for liquid.",ex:"Please put a bottle of juice in my lunch bag.",exCn:"請在我的午餐袋裡放一瓶果汁。"},
+    {w:"cheap",ipa:"/tʃiːp/",pos:"adj.",cn:"便宜的",def:"Not expensive.",ex:"These shoes were cheap, but they are very comfortable.",exCn:"這雙鞋很便宜，但是穿起來很舒服。"},
+    {w:"staff",ipa:"/stæf/",pos:"n.",cn:"員工（總稱）",def:"The people who work in a place.",ex:"The hotel staff helped us carry our bags to the room.",exCn:"飯店員工幫我們把行李搬到房間。"},
+    {w:"friendly",ipa:"/ˈfrendli/",pos:"adj.",cn:"友善的",def:"Kind and easy to talk to.",ex:"Our new neighbor is very friendly and always says hello.",exCn:"我們的新鄰居很友善，總是跟我們打招呼。"}
   ],
   questions:[
     {q:"How long is the store open each day?",qCn:"這家店每天開多久？",opts:["A. Twelve hours","B. Sixteen hours","C. Twenty-four hours","D. Only at night"],optsCn:["A. 十二小時", "B. 十六小時", "C. 二十四小時", "D. 只有晚上開"],ans:2,expl:"It is open twenty-four hours a day."},
@@ -110,11 +110,11 @@ articles:[
      cn:"我媽媽總是說：「帶件外套。」今天她說對了。"}
   ],
   target:[
-    {w:"umbrella",ipa:"/ʌmˈbrelə/",pos:"n.",cn:"雨傘",def:"A thing you hold over your head in the rain.",ex:"I am looking for my umbrella.",exCn:"我正在找我的雨傘。"},
-    {w:"wet",ipa:"/wet/",pos:"adj.",cn:"潮濕的",def:"Covered with water; not dry.",ex:"The weather is hot and wet.",exCn:"天氣又熱又潮濕。"},
-    {w:"wind",ipa:"/wɪnd/",pos:"n.",cn:"風",def:"Air that moves.",ex:"The wind is strong today.",exCn:"今天風很大。"},
-    {w:"temperature",ipa:"/ˈtemprətʃɚ/",pos:"n.",cn:"溫度",def:"How hot or cold something is.",ex:"The temperature is only twenty degrees.",exCn:"氣溫只有二十度。"},
-    {w:"light jacket",ipa:"/laɪt ˈdʒækɪt/",pos:"n.",cn:"薄外套",def:"A thin coat.",ex:"I am wearing a light jacket.",exCn:"我穿著一件薄外套。"}
+    {w:"umbrella",ipa:"/ʌmˈbrelə/",pos:"n.",cn:"雨傘",def:"A thing you hold over your head in the rain.",ex:"Dad forgot his umbrella at the restaurant after lunch.",exCn:"爸爸午餐後把雨傘忘在餐廳了。"},
+    {w:"wet",ipa:"/wet/",pos:"adj.",cn:"潮濕的",def:"Covered with water; not dry.",ex:"Don't sit on that bench. The paint is still wet.",exCn:"別坐那張長椅，油漆還沒乾。"},
+    {w:"wind",ipa:"/wɪnd/",pos:"n.",cn:"風",def:"Air that moves.",ex:"The wind blew my homework papers all over the playground.",exCn:"風把我的作業紙吹得操場上到處都是。"},
+    {w:"temperature",ipa:"/ˈtemprətʃɚ/",pos:"n.",cn:"溫度",def:"How hot or cold something is.",ex:"The nurse took my temperature before I saw the doctor.",exCn:"看醫生之前，護理師先幫我量體溫。"},
+    {w:"light jacket",ipa:"/laɪt ˈdʒækɪt/",pos:"n.",cn:"薄外套",def:"A thin coat.",ex:"Bring your light jacket to the movie theater because the air conditioning is cold.",exCn:"去電影院要帶件薄外套，因為冷氣很冷。"}
   ],
   questions:[
     {q:"What is the weather like right now?",qCn:"現在天氣怎麼樣？",opts:["A. Hot and dry","B. Raining and windy","C. Snowing","D. Sunny"],optsCn:["A. 又熱又乾", "B. 下雨又颳風", "C. 下雪", "D. 晴天"],ans:1,expl:"It is raining now... The wind is strong."},
@@ -151,12 +151,12 @@ articles:[
      cn:"他給了我一些藥。我整個下午都在睡。今天我覺得好多了。"}
   ],
   target:[
-    {w:"tired",ipa:"/ˈtaɪrd/",pos:"adj.",cn:"疲累的",def:"Needing rest or sleep.",ex:"Yesterday I was very tired.",exCn:"我昨天很累。"},
-    {w:"headache",ipa:"/ˈhedeɪk/",pos:"n.",cn:"頭痛",def:"A pain in your head.",ex:"I had a headache.",exCn:"我頭痛。"},
-    {w:"throat",ipa:"/θroʊt/",pos:"n.",cn:"喉嚨",def:"The front part of your neck; the way food goes down.",ex:"My throat hurt.",exCn:"我喉嚨痛。"},
-    {w:"clinic",ipa:"/ˈklɪnɪk/",pos:"n.",cn:"診所",def:"A small place where you see a doctor.",ex:"The clinic was near my home.",exCn:"那家診所離我家很近。"},
-    {w:"medicine",ipa:"/ˈmedɪsɪn/",pos:"n.",cn:"藥",def:"Something you take when you are ill.",ex:"He gave me some medicine.",exCn:"他給了我一些藥。"},
-    {w:"much better",ipa:"/mʌtʃ ˈbetɚ/",pos:"phr.",cn:"好多了",def:"A lot better than before.",ex:"Today I feel much better.",exCn:"我今天覺得好多了。"}
+    {w:"tired",ipa:"/ˈtaɪrd/",pos:"adj.",cn:"疲累的",def:"Needing rest or sleep.",ex:"I am tired after my long bike ride.",exCn:"騎了很久的腳踏車之後，我好累。"},
+    {w:"headache",ipa:"/ˈhedeɪk/",pos:"n.",cn:"頭痛",def:"A pain in your head.",ex:"Loud music gives my grandma a headache.",exCn:"很吵的音樂會讓我奶奶頭痛。"},
+    {w:"throat",ipa:"/θroʊt/",pos:"n.",cn:"喉嚨",def:"The front part of your neck; the way food goes down.",ex:"A fish bone got stuck in his throat at dinner.",exCn:"晚餐時有根魚刺卡在他的喉嚨裡。"},
+    {w:"clinic",ipa:"/ˈklɪnɪk/",pos:"n.",cn:"診所",def:"A small place where you see a doctor.",ex:"The clinic near the park opens at nine every morning.",exCn:"公園附近的診所每天早上九點開門。"},
+    {w:"medicine",ipa:"/ˈmedɪsɪn/",pos:"n.",cn:"藥",def:"Something you take when you are ill.",ex:"Keep the medicine on a high shelf away from small children.",exCn:"把藥放在高一點的架子上，遠離小孩子。"},
+    {w:"much better",ipa:"/mʌtʃ ˈbetɚ/",pos:"phr.",cn:"好多了",def:"A lot better than before.",ex:"My new apartment is much better than my old one.",exCn:"我的新公寓比舊的好多了。"}
   ],
   questions:[
     {q:"What was wrong with the writer?",qCn:"作者哪裡不舒服？",opts:["A. A broken arm","B. A headache and a sore throat","C. A toothache","D. A stomach ache"],optsCn:["A. 手臂骨折", "B. 頭痛和喉嚨痛", "C. 牙痛", "D. 胃痛"],ans:1,expl:"I had a headache and my throat hurt."},
@@ -193,12 +193,12 @@ articles:[
      cn:"我八點四十到。我的會議八點半開始，所以我遲到了十分鐘。下週一我會搭早一點的公車。"}
   ],
   target:[
-    {w:"bus stop",ipa:"/bʌs stɑːp/",pos:"n.",cn:"公車站",def:"A place where a bus stops for people.",ex:"There is a bus stop in front of my building.",exCn:"我住的大樓前面有一個公車站。"},
-    {w:"in front of",ipa:"/ɪn frʌnt əv/",pos:"phr.",cn:"在…前面",def:"Directly before something.",ex:"The stop is in front of my building.",exCn:"那個站牌在我住的大樓前面。"},
-    {w:"wait",ipa:"/weɪt/",pos:"v.",cn:"等",def:"To stay in a place until something happens.",ex:"I waited for twenty minutes.",exCn:"我等了二十分鐘。"},
-    {w:"full",ipa:"/fʊl/",pos:"adj.",cn:"滿的",def:"With no more space inside.",ex:"The bus was very full.",exCn:"公車上非常擠。"},
-    {w:"arrive",ipa:"/əˈraɪv/",pos:"v.",cn:"抵達",def:"To get to a place.",ex:"I arrived at eight forty.",exCn:"我八點四十分到。"},
-    {w:"late",ipa:"/leɪt/",pos:"adj.",cn:"遲到的",def:"After the right time.",ex:"I was ten minutes late.",exCn:"我遲到了十分鐘。"}
+    {w:"bus stop",ipa:"/bʌs stɑːp/",pos:"n.",cn:"公車站",def:"A place where a bus stops for people.",ex:"My school has its own bus stop next to the gate.",exCn:"我的學校在校門旁邊有自己的公車站。"},
+    {w:"in front of",ipa:"/ɪn frʌnt əv/",pos:"phr.",cn:"在…前面",def:"Directly before something.",ex:"My mom parked the car in front of the bakery.",exCn:"我媽媽把車停在麵包店前面。"},
+    {w:"wait",ipa:"/weɪt/",pos:"v.",cn:"等",def:"To stay in a place until something happens.",ex:"Please wait here while I buy the movie tickets.",exCn:"我去買電影票的時候，請在這裡等。"},
+    {w:"full",ipa:"/fʊl/",pos:"adj.",cn:"滿的",def:"With no more space inside.",ex:"My cup is full, so I can't add any more milk.",exCn:"我的杯子滿了，所以不能再加牛奶了。"},
+    {w:"arrive",ipa:"/əˈraɪv/",pos:"v.",cn:"抵達",def:"To get to a place.",ex:"Our train will arrive in Tainan at three o'clock.",exCn:"我們的火車會在三點抵達台南。"},
+    {w:"late",ipa:"/leɪt/",pos:"adj.",cn:"遲到的",def:"After the right time.",ex:"Sorry I'm late; I couldn't find my keys this morning.",exCn:"抱歉我遲到了，今天早上我找不到鑰匙。"}
   ],
   questions:[
     {q:"How long did the writer wait?",qCn:"作者等了多久？",opts:["A. Ten minutes","B. Twenty minutes","C. Thirty minutes","D. Forty minutes"],optsCn:["A. 十分鐘", "B. 二十分鐘", "C. 三十分鐘", "D. 四十分鐘"],ans:1,expl:"I waited at the bus stop for twenty minutes."},
@@ -235,12 +235,12 @@ articles:[
      cn:"我們做完之後總是一起喝茶。乾淨的家讓我覺得平靜。"}
   ],
   target:[
-    {w:"flat",ipa:"/flæt/",pos:"n.",cn:"公寓",def:"A home on one floor of a building.",ex:"My family cleans the flat.",exCn:"我家人一起打掃公寓。"},
-    {w:"floor",ipa:"/flɔːr/",pos:"n.",cn:"地板",def:"The surface you walk on inside.",ex:"I have already washed the floor.",exCn:"我已經拖過地板了。"},
-    {w:"rubbish",ipa:"/ˈrʌbɪʃ/",pos:"n.",cn:"垃圾",def:"Things you throw away.",ex:"My son has taken out the rubbish.",exCn:"我兒子已經把垃圾拿出去了。"},
-    {w:"sink",ipa:"/sɪŋk/",pos:"n.",cn:"水槽",def:"The bowl in a kitchen where you wash dishes.",ex:"There are dishes in the sink.",exCn:"水槽裡有碗盤。"},
-    {w:"already",ipa:"/ɔːlˈredi/",pos:"adv.",cn:"已經",def:"Before now.",ex:"I have already washed the floor.",exCn:"我已經拖過地板了。"},
-    {w:"calm",ipa:"/kɑːm/",pos:"adj.",cn:"平靜的",def:"Quiet and relaxed.",ex:"A clean home makes me feel calm.",exCn:"乾淨的家讓我感到平靜。"}
+    {w:"flat",ipa:"/flæt/",pos:"n.",cn:"公寓",def:"A home on one floor of a building.",ex:"Sam lives in a small flat near the park with his two cats.",exCn:"山姆和他的兩隻貓住在公園附近的一間小公寓裡。"},
+    {w:"floor",ipa:"/flɔːr/",pos:"n.",cn:"地板",def:"The surface you walk on inside.",ex:"The baby dropped her cereal all over the floor at breakfast.",exCn:"寶寶吃早餐時把麥片灑得滿地都是。"},
+    {w:"rubbish",ipa:"/ˈrʌbɪʃ/",pos:"n.",cn:"垃圾",def:"Things you throw away.",ex:"After the picnic, we put all our rubbish in a bag and took it home.",exCn:"野餐結束後，我們把所有垃圾裝進袋子帶回家。"},
+    {w:"sink",ipa:"/sɪŋk/",pos:"n.",cn:"水槽",def:"The bowl in a kitchen where you wash dishes.",ex:"My dad fixed the leaking pipe under the sink yesterday.",exCn:"我爸爸昨天修好了水槽下面漏水的水管。"},
+    {w:"already",ipa:"/ɔːlˈredi/",pos:"adv.",cn:"已經",def:"Before now.",ex:"Mom, my homework is already done, so can I watch a movie now?",exCn:"媽，我的作業已經寫完了，現在可以看電影嗎？"},
+    {w:"calm",ipa:"/kɑːm/",pos:"adj.",cn:"平靜的",def:"Quiet and relaxed.",ex:"The sea was calm this morning, so we went out in a small boat.",exCn:"今天早上海面很平靜，所以我們搭小船出海。"}
   ],
   questions:[
     {q:"What has the son done?",qCn:"兒子已經做了什麼？",opts:["A. Washed the floor","B. Cleaned the bathroom","C. Taken out the rubbish","D. Washed the dishes"],optsCn:["A. 拖了地板", "B. 打掃了浴室", "C. 倒了垃圾", "D. 洗了碗"],ans:2,expl:"My son has taken out the rubbish."},
@@ -277,12 +277,12 @@ articles:[
      cn:"我沒吃完麵，所以我要了一個盒子。剩下的我當晚餐吃了。"}
   ],
   target:[
-    {w:"would like",ipa:"/wʊd laɪk/",pos:"phr.",cn:"想要（客氣）",def:"A polite way to say \"want\".",ex:"I would like beef noodles, please.",exCn:"我想要一碗牛肉麵，謝謝。"},
-    {w:"spicy",ipa:"/ˈspaɪsi/",pos:"adj.",cn:"辣的",def:"With a hot, strong taste.",ex:"Can I have it less spicy?",exCn:"可以幫我做不要那麼辣嗎？"},
-    {w:"owner",ipa:"/ˈoʊnɚ/",pos:"n.",cn:"老闆、擁有者",def:"The person who owns a shop or thing.",ex:"The owner smiled.",exCn:"老闆微笑了。"},
-    {w:"soft",ipa:"/sɔːft/",pos:"adj.",cn:"軟的",def:"Easy to bite or press.",ex:"The beef was soft.",exCn:"牛肉很軟嫩。"},
-    {w:"cost",ipa:"/kɔːst/",pos:"v.",cn:"花費",def:"To have a price.",ex:"It cost 130 dollars.",exCn:"它要一百三十元。"},
-    {w:"the rest",ipa:"/ðə rest/",pos:"n.",cn:"剩下的部分",def:"The part that is left.",ex:"I ate the rest for dinner.",exCn:"剩下的我留到晚餐吃。"}
+    {w:"would like",ipa:"/wʊd laɪk/",pos:"phr.",cn:"想要（客氣）",def:"A polite way to say \"want\".",ex:"I would like a window seat on the train, please.",exCn:"火車上我想要靠窗的座位，謝謝。"},
+    {w:"spicy",ipa:"/ˈspaɪsi/",pos:"adj.",cn:"辣的",def:"With a hot, strong taste.",ex:"My little brother can't eat spicy food, so we order mild curry.",exCn:"我弟弟不能吃辣，所以我們點小辣的咖哩。"},
+    {w:"owner",ipa:"/ˈoʊnɚ/",pos:"n.",cn:"老闆、擁有者",def:"The person who owns a shop or thing.",ex:"The owner of the lost dog put up signs all over town.",exCn:"那隻走失的狗的主人在鎮上到處貼了告示。"},
+    {w:"soft",ipa:"/sɔːft/",pos:"adj.",cn:"軟的",def:"Easy to bite or press.",ex:"This new pillow is so soft that I fell asleep right away.",exCn:"這個新枕頭好軟，我馬上就睡著了。"},
+    {w:"cost",ipa:"/kɔːst/",pos:"v.",cn:"花費",def:"To have a price.",ex:"How much does it cost to take a taxi to the airport?",exCn:"搭計程車到機場要花多少錢？"},
+    {w:"the rest",ipa:"/ðə rest/",pos:"n.",cn:"剩下的部分",def:"The part that is left.",ex:"I read half the book today and will finish the rest tomorrow.",exCn:"我今天讀了半本書，剩下的部分明天會讀完。"}
   ],
   questions:[
     {q:"How often does the writer go to the noodle shop?",qCn:"作者多久去一次麵店？",opts:["A. Every day","B. Two or three times a week","C. Once a month","D. Only on Sundays"],optsCn:["A. 每天", "B. 一週兩三次", "C. 一個月一次", "D. 只有星期天"],ans:1,expl:"I go there two or three times a week."},
@@ -319,12 +319,12 @@ articles:[
      cn:"我今晚會完成報告，明天早上九點前寄出。我女兒會再待在家一天。"}
   ],
   target:[
-    {w:"fever",ipa:"/ˈfiː.vɚ/",pos:"n.",cn:"發燒",def:"A body temperature that is too high.",ex:"My daughter had a fever.",exCn:"我女兒發燒了。"},
-    {w:"manager",ipa:"/ˈmænɪdʒɚ/",pos:"n.",cn:"主管",def:"A person who leads a team at work.",ex:"I called my manager.",exCn:"我打電話給我的主管。"},
-    {w:"kind",ipa:"/kaɪnd/",pos:"adj.",cn:"親切的",def:"Nice to other people.",ex:"My manager was kind.",exCn:"我的主管人很好。"},
-    {w:"work from home",ipa:"/wɝːk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home, not at the office.",ex:"Can you work from home this afternoon?",exCn:"你今天下午可以在家工作嗎？"},
-    {w:"report",ipa:"/rɪˈpɔːrt/",pos:"n.",cn:"報告",def:"A written piece of work about something.",ex:"I will finish the report tonight.",exCn:"我今天晚上會把報告完成。"},
-    {w:"one more day",ipa:"/wʌn mɔːr deɪ/",pos:"phr.",cn:"再一天",def:"One extra day.",ex:"She will stay home for one more day.",exCn:"她會再在家待一天。"}
+    {w:"fever",ipa:"/ˈfiː.vɚ/",pos:"n.",cn:"發燒",def:"A body temperature that is too high.",ex:"My little brother has a high fever and is staying in bed.",exCn:"我弟弟發高燒，正躺在床上休息。"},
+    {w:"manager",ipa:"/ˈmænɪdʒɚ/",pos:"n.",cn:"主管",def:"A person who leads a team at work.",ex:"Our store manager lets us leave early on holidays.",exCn:"我們店的主管在節日會讓我們早點下班。"},
+    {w:"kind",ipa:"/kaɪnd/",pos:"adj.",cn:"親切的",def:"Nice to other people.",ex:"The bus driver was kind and helped the old woman with her bags.",exCn:"公車司機很親切，幫那位老太太提袋子。"},
+    {w:"work from home",ipa:"/wɝːk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home, not at the office.",ex:"When it snows, my mom can work from home and watch us.",exCn:"下雪的時候，我媽媽可以在家工作，順便照顧我們。"},
+    {w:"report",ipa:"/rɪˈpɔːrt/",pos:"n.",cn:"報告",def:"A written piece of work about something.",ex:"I wrote a short report about frogs for science class.",exCn:"我為自然課寫了一篇關於青蛙的短報告。"},
+    {w:"one more day",ipa:"/wʌn mɔːr deɪ/",pos:"phr.",cn:"再一天",def:"One extra day.",ex:"Can we stay at the beach one more day, please?",exCn:"我們可以在海邊多待一天嗎？拜託。"}
   ],
   questions:[
     {q:"Why could the writer not go to work?",qCn:"作者為什麼不能去上班？",opts:["A. She was sick","B. Her daughter had a fever","C. The bus was late","D. She had no work"],optsCn:["A. 她生病了", "B. 她女兒發燒", "C. 公車誤點", "D. 她沒有工作"],ans:1,expl:"my daughter had a fever, so I could not go to work."},

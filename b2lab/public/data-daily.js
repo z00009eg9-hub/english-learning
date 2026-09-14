@@ -63,8 +63,8 @@ articles:[
       "pos": "n.",
       "cn": "面試",
       "def": "A meeting where someone asks you questions, often for a job.",
-      "ex": "Tom has an important job interview today.",
-      "exCn": "Tom今天有一個很重要的面試。"
+      "ex": "My sister has an interview at a bank tomorrow morning.",
+      "exCn": "我姊姊明天早上在一家銀行有面試。"
     },
     {
       "w": "schedule",
@@ -72,8 +72,8 @@ articles:[
       "pos": "n.",
       "cn": "時間表",
       "def": "A list that shows times, such as bus times.",
-      "ex": "He checks the bus schedule and gets ready quickly.",
-      "exCn": "他查了公車時刻表，很快就準備好了。"
+      "ex": "Our class schedule changes every semester.",
+      "exCn": "我們的課表每學期都會改變。"
     },
     {
       "w": "nervous",
@@ -81,8 +81,8 @@ articles:[
       "pos": "adj.",
       "cn": "緊張的",
       "def": "Feeling worried or afraid about something.",
-      "ex": "There are many people waiting, and Tom feels nervous.",
-      "exCn": "有很多人在等車，Tom覺得很緊張。"
+      "ex": "I always feel nervous before I sing in front of people.",
+      "exCn": "我在別人面前唱歌之前總是很緊張。"
     },
     {
       "w": "crowded",
@@ -90,8 +90,8 @@ articles:[
       "pos": "adj.",
       "cn": "擁擠的",
       "def": "Full of people.",
-      "ex": "The bus is very crowded, but he finds an empty seat.",
-      "exCn": "公車上非常擠，不過他找到一個空位。"
+      "ex": "The night market gets really crowded on Saturday evenings.",
+      "exCn": "夜市在星期六晚上非常擁擠。"
     },
     {
       "w": "practice",
@@ -99,8 +99,8 @@ articles:[
       "pos": "v.",
       "cn": "練習",
       "def": "To do something again and again to get better at it.",
-      "ex": "He quietly practices his answers on the bus.",
-      "exCn": "他在公車上小聲地練習回答問題。"
+      "ex": "She practices the piano for thirty minutes after dinner.",
+      "exCn": "她晚餐後會練習鋼琴三十分鐘。"
     },
     {
       "w": "manager",
@@ -108,8 +108,8 @@ articles:[
       "pos": "n.",
       "cn": "經理",
       "def": "A person who is in charge of a business or office.",
-      "ex": "He meets the manager and smiles politely.",
-      "exCn": "他見到經理，很有禮貌地微笑。"
+      "ex": "The hotel manager gave us a free breakfast.",
+      "exCn": "飯店經理送我們一份免費早餐。"
     }
   ],
   "questions": [
@@ -259,8 +259,8 @@ articles:[
       "pos": "n.",
       "cn": "摩托車",
       "def": "A small vehicle with two wheels and an engine.",
-      "ex": "In Vietnam, many people ride a motorbike to work because it is faster in heavy traffic.",
-      "exCn": "在越南，很多人騎摩托車上班，因為塞車時比較快。"
+      "ex": "My cousin rides his motorbike along the coast every Sunday when the weather is nice.",
+      "exCn": "天氣好的時候，我表哥每個星期天都會騎摩托車沿著海岸兜風。"
     },
     {
       "w": "traffic",
@@ -410,8 +410,8 @@ articles:[
       "pos": "adj.",
       "cn": "被延誤的",
       "def": "Made to happen later than planned.",
-      "ex": "She was told that her flight had been delayed by almost three hours.",
-      "exCn": "她被告知班機已經延誤了將近三個小時。"
+      "ex": "Our pizza delivery was delayed because the driver got lost in the heavy traffic downtown.",
+      "exCn": "我們的披薩外送被延誤了，因為司機在市中心的車陣中迷路。"
     },
     {
       "w": "departure lounge",
@@ -419,8 +419,8 @@ articles:[
       "pos": "n.",
       "cn": "候機室",
       "def": "The area in an airport where passengers wait before boarding.",
-      "ex": "The departure lounge, which was already crowded with tourists heading home, quickly filled with frustrated business travelers.",
-      "exCn": "候機室裡原本就擠滿了要回國的觀光客，很快又擠進一堆滿臉不耐的商務旅客。"
+      "ex": "The kids played card games in the departure lounge while we waited to board.",
+      "exCn": "我們等著登機時，孩子們在候機室裡玩紙牌遊戲。"
     },
     {
       "w": "frustrated",
@@ -428,8 +428,8 @@ articles:[
       "pos": "adj.",
       "cn": "感到挫折、不耐煩的",
       "def": "Feeling annoyed because something is not going the way you want.",
-      "ex": "The departure lounge quickly filled with frustrated business travelers as well.",
-      "exCn": "候機室很快又擠進一堆滿臉不耐的商務旅客。"
+      "ex": "Kevin felt frustrated when his laptop crashed twice before he could save his homework.",
+      "exCn": "凱文的筆電在他存檔作業之前當機了兩次，讓他感到很挫折。"
     },
     {
       "w": "colleague",
@@ -437,8 +437,8 @@ articles:[
       "pos": "n.",
       "cn": "同事",
       "def": "A person you work with.",
-      "ex": "Anita called her colleague in Taipei and asked whether the meeting could be moved online.",
-      "exCn": "Anita打電話給台北的同事，問對方會議能不能改成線上進行。"
+      "ex": "My colleague gave me a ride home when it suddenly started pouring.",
+      "exCn": "突然下起大雨時，我的同事開車載我回家。"
     },
     {
       "w": "rescheduled",
@@ -446,8 +446,8 @@ articles:[
       "pos": "v. (過去分詞)",
       "cn": "被改期的",
       "def": "Changed to a different time.",
-      "ex": "The meeting had already been rescheduled twice.",
-      "exCn": "那場會議已經被改期兩次了。"
+      "ex": "My dentist appointment was rescheduled to Friday because the doctor had a family emergency.",
+      "exCn": "我的牙醫預約被改到星期五，因為醫生家裡有急事。"
     },
     {
       "w": "storm",
@@ -455,8 +455,8 @@ articles:[
       "pos": "n.",
       "cn": "暴風雨",
       "def": "Very bad weather with strong wind and rain.",
-      "ex": "Her flight had been delayed because of a tropical storm over the South China Sea.",
-      "exCn": "她的班機因為南海的熱帶風暴而延誤。"
+      "ex": "The soccer game was canceled after a sudden storm knocked down several trees near the field.",
+      "exCn": "一場突如其來的暴風雨吹倒了球場附近好幾棵樹，足球賽因此取消。"
     },
     {
       "w": "flexible",
@@ -464,8 +464,8 @@ articles:[
       "pos": "adj.",
       "cn": "有彈性的",
       "def": "Able to change easily to fit new situations.",
-      "ex": "She has learned that flexible planning matters just as much as punctuality.",
-      "exCn": "她體會到，有彈性的規劃跟準時一樣重要。"
+      "ex": "I like this gym because its class times are flexible for people who work night shifts.",
+      "exCn": "我喜歡這間健身房，因為它的課程時間對上夜班的人來說很有彈性。"
     }
   ],
   "questions": [
@@ -621,8 +621,8 @@ articles:[
       "pos": "adj.",
       "cn": "直飛的、不停靠的",
       "def": "Traveling directly to a place without stopping.",
-      "ex": "VietJet Air will begin a new nonstop route between Hanoi and Tainan.",
-      "exCn": "VietJet Air將開通河內與台南之間的新直飛航線。"
+      "ex": "My sister booked a nonstop train to the capital so she could sleep the whole way.",
+      "exCn": "我姊姊訂了一班直達首都的火車，好讓她能一路睡到底。"
     },
     {
       "w": "overlooked",
@@ -630,8 +630,8 @@ articles:[
       "pos": "adj.",
       "cn": "被忽略的",
       "def": "Not given enough attention.",
-      "ex": "Tainan is often overlooked by international visitors.",
-      "exCn": "台南常被國際旅客忽略。"
+      "ex": "Good sleep is an overlooked part of staying healthy, especially for busy students.",
+      "exCn": "充足的睡眠是保持健康中常被忽略的一環，對忙碌的學生來說尤其如此。"
     },
     {
       "w": "suspended",
@@ -639,8 +639,8 @@ articles:[
       "pos": "v. (過去分詞)",
       "cn": "被暫停的",
       "def": "Stopped for a period of time.",
-      "ex": "That service was suspended in October 2023 after roughly three years of operation.",
-      "exCn": "那項服務在營運約三年後，於2023年10月停飛。"
+      "ex": "The swimming lessons were suspended for two weeks while the pool was being repaired.",
+      "exCn": "游泳池維修期間，游泳課暫停了兩個星期。"
     },
     {
       "w": "revived",
@@ -648,8 +648,8 @@ articles:[
       "pos": "adj.",
       "cn": "重新恢復的",
       "def": "Brought back after stopping for a while.",
-      "ex": "The revived connection is launched this time from Hanoi rather than the south.",
-      "exCn": "這次重新開通的航線改從河內出發，而非南部。"
+      "ex": "The revived night market now attracts young families who had never visited before.",
+      "exCn": "重新恢復營業的夜市，現在吸引了許多從未來過的年輕家庭。"
     },
     {
       "w": "aggressively",
@@ -657,8 +657,8 @@ articles:[
       "pos": "adv.",
       "cn": "積極地、大力地",
       "def": "In a very determined and forceful way.",
-      "ex": "VietJet continues to expand aggressively across Asia.",
-      "exCn": "VietJet在亞洲持續積極擴張。"
+      "ex": "The new phone brand has been advertising aggressively on social media to win teenage buyers.",
+      "exCn": "這個新手機品牌一直在社群媒體上大力打廣告，想贏得青少年買家。"
     },
     {
       "w": "layover",
@@ -666,8 +666,8 @@ articles:[
       "pos": "n.",
       "cn": "轉機（停留）",
       "def": "A stop between two flights on the same journey.",
-      "ex": "The new flights should mean fewer layovers.",
-      "exCn": "新航班應該能減少轉機次數。"
+      "ex": "During our six-hour layover in Singapore, we took a quick nap at the airport lounge.",
+      "exCn": "我們在新加坡轉機停留六小時期間，在機場貴賓室小睡了一下。"
     },
     {
       "w": "network",
@@ -675,8 +675,8 @@ articles:[
       "pos": "n.",
       "cn": "（航線）網絡",
       "def": "A large system of connected routes or places.",
-      "ex": "The airline sees renewed demand along a different part of its growing Vietnamese network.",
-      "exCn": "該航空公司認為其日漸擴大的越南航網中出現了新的需求。"
+      "ex": "The city plans to expand its bike lane network so cyclists can reach every district safely.",
+      "exCn": "市政府計畫擴大自行車道網絡，讓騎士能安全地到達每個區域。"
     }
   ],
   "questions": [
@@ -832,8 +832,8 @@ articles:[
       "pos": "n.",
       "cn": "發燒",
       "def": "A body temperature that is higher than normal.",
-      "ex": "Tom's mother checks his forehead and says he has a fever.",
-      "exCn": "Tom的媽媽摸他的額頭，說他發燒了。"
+      "ex": "My little sister had a fever last night, so she stayed home from school.",
+      "exCn": "我妹妹昨晚發燒，所以她今天請假沒去上學。"
     },
     {
       "w": "clinic",
@@ -841,8 +841,8 @@ articles:[
       "pos": "n.",
       "cn": "診所",
       "def": "A small place where doctors see patients.",
-      "ex": "She will take him to the clinic today.",
-      "exCn": "她今天會帶他去診所。"
+      "ex": "The clinic near my office closes at nine on weekdays.",
+      "exCn": "我公司附近的診所平日九點關門。"
     },
     {
       "w": "wait",
@@ -850,8 +850,8 @@ articles:[
       "pos": "v.",
       "cn": "等待",
       "def": "To stay in a place until something happens.",
-      "ex": "At the clinic today, many people are waiting.",
-      "exCn": "在診所裡，今天有很多人在等。"
+      "ex": "Please wait here while I buy two movie tickets.",
+      "exCn": "我去買兩張電影票，請你在這裡等一下。"
     },
     {
       "w": "medicine",
@@ -859,8 +859,8 @@ articles:[
       "pos": "n.",
       "cn": "藥",
       "def": "Something you take to feel better when you are sick.",
-      "ex": "She gives him some medicine for his cold.",
-      "exCn": "她給他一些感冒藥。"
+      "ex": "Grandpa keeps his medicine in a small box on the kitchen table.",
+      "exCn": "爺爺把他的藥放在廚房餐桌上的小盒子裡。"
     },
     {
       "w": "rest",
@@ -868,8 +868,8 @@ articles:[
       "pos": "v.",
       "cn": "休息",
       "def": "To relax and not be active.",
-      "ex": "Tom takes the medicine and rests on the sofa.",
-      "exCn": "Tom吃了藥，躺在沙發上休息。"
+      "ex": "After the long hike, we sat under a tree to rest for a while.",
+      "exCn": "走完長長的登山步道後，我們坐在樹下休息了一會兒。"
     },
     {
       "w": "better",
@@ -877,8 +877,8 @@ articles:[
       "pos": "adj.",
       "cn": "好一點的",
       "def": "Feeling less sick than before.",
-      "ex": "Tomorrow, he will feel better and can go back to school.",
-      "exCn": "明天他會好一點，可以回學校上課。"
+      "ex": "I had a bad stomachache yesterday, but I feel better now.",
+      "exCn": "我昨天肚子很痛，但現在覺得好一點了。"
     }
   ],
   "questions": [
@@ -1011,8 +1011,8 @@ articles:[
       "pos": "adj.",
       "cn": "痛的",
       "def": "Painful, especially in a part of the body.",
-      "ex": "Her throat feels sore, and she often gets dizzy at her desk.",
-      "exCn": "她喉嚨痛，常常在座位上覺得頭暈。"
+      "ex": "My legs were sore for two days after the long hike up the mountain.",
+      "exCn": "爬完那段很長的山路後，我的腿痠痛了兩天。"
     },
     {
       "w": "dizzy",
@@ -1020,8 +1020,8 @@ articles:[
       "pos": "adj.",
       "cn": "頭暈的",
       "def": "Feeling like everything is spinning around you.",
-      "ex": "Her throat feels sore, and she often gets dizzy at her desk.",
-      "exCn": "她喉嚨痛，常常在座位上覺得頭暈。"
+      "ex": "The kids got dizzy after spinning around on the playground for ten minutes.",
+      "exCn": "孩子們在遊樂場轉圈轉了十分鐘後頭暈了。"
     },
     {
       "w": "waiting room",
@@ -1029,8 +1029,8 @@ articles:[
       "pos": "n.",
       "cn": "候診室",
       "def": "A room where people wait, for example at a clinic.",
-      "ex": "When she arrived at the clinic, the waiting room was already full.",
-      "exCn": "她到診所的時候，候診室已經坐滿了人。"
+      "ex": "The dentist's waiting room had a fish tank and a pile of old magazines.",
+      "exCn": "牙醫診所的候診室裡有一個魚缸和一疊舊雜誌。"
     },
     {
       "w": "relieved",
@@ -1038,8 +1038,8 @@ articles:[
       "pos": "adj.",
       "cn": "鬆了一口氣的",
       "def": "Feeling less worried after something stressful ends.",
-      "ex": "Anita felt relieved, and she has already picked up her medicine.",
-      "exCn": "Anita鬆了一口氣，而且已經拿了藥。"
+      "ex": "Kevin was relieved when he found his lost wallet under the car seat.",
+      "exCn": "凱文在汽車座椅下找到遺失的皮夾時，鬆了一口氣。"
     },
     {
       "w": "symptom",
@@ -1047,8 +1047,8 @@ articles:[
       "pos": "n.",
       "cn": "症狀",
       "def": "A sign that shows you are sick.",
-      "ex": "She has learned that she should not ignore small symptoms.",
-      "exCn": "她學到不應該忽視小症狀。"
+      "ex": "A runny nose is a common symptom of a cold in winter.",
+      "exCn": "流鼻水是冬天感冒常見的症狀。"
     },
     {
       "w": "ignore",
@@ -1056,8 +1056,8 @@ articles:[
       "pos": "v.",
       "cn": "忽視",
       "def": "To not pay attention to something on purpose.",
-      "ex": "She has learned that she should not ignore small symptoms.",
-      "exCn": "她學到不應該忽視小症狀。"
+      "ex": "Please don't ignore the warning light on your car's dashboard.",
+      "exCn": "請不要忽視汽車儀表板上的警示燈。"
     }
   ],
   "questions": [
@@ -1190,8 +1190,8 @@ articles:[
       "pos": "adj.",
       "cn": "年度的",
       "def": "Happening once every year.",
-      "ex": "Every employee at Anita's company is now required to complete an annual medical check before September.",
-      "exCn": "Anita的公司現在規定每位員工在九月前都要完成一次年度健康檢查。"
+      "ex": "Our neighborhood holds an annual night market that draws crowds from all over the city.",
+      "exCn": "我們社區每年舉辦一次夜市，吸引全市各地的人潮。"
     },
     {
       "w": "blood pressure",
@@ -1199,8 +1199,8 @@ articles:[
       "pos": "n.",
       "cn": "血壓",
       "def": "The force of blood pushing against your blood vessels.",
-      "ex": "At the clinic, Anita's blood pressure was measured twice because the first reading seemed high.",
-      "exCn": "在診所，Anita的血壓被量了兩次，因為第一次的數值看起來偏高。"
+      "ex": "The pharmacist suggested my grandfather measure his blood pressure every morning before breakfast.",
+      "exCn": "藥師建議我爺爺每天早餐前量一次血壓。"
     },
     {
       "w": "cholesterol",
@@ -1208,8 +1208,8 @@ articles:[
       "pos": "n.",
       "cn": "膽固醇",
       "def": "A fat-like substance in your blood that can affect your heart.",
-      "ex": "A blood test, which was taken later that morning, showed that her cholesterol had also risen.",
-      "exCn": "稍後那天早上做的血液檢查顯示，她的膽固醇也升高了。"
+      "ex": "Eating fried chicken almost every night eventually pushed my uncle's cholesterol to a worrying level.",
+      "exCn": "幾乎每晚都吃炸雞，最後讓我叔叔的膽固醇升高到令人擔心的程度。"
     },
     {
       "w": "advise",
@@ -1217,8 +1217,8 @@ articles:[
       "pos": "v.",
       "cn": "建議",
       "def": "To tell someone what you think they should do.",
-      "ex": "Since the appointment, Anita has been advised to cut down on caffeine and to exercise more.",
-      "exCn": "從那次檢查之後，Anita被建議少喝咖啡、多運動。"
+      "ex": "The travel agent advised us to book our flights to Tokyo at least two months in advance.",
+      "exCn": "旅行社人員建議我們至少提前兩個月訂去東京的機票。"
     },
     {
       "w": "postpone",
@@ -1226,8 +1226,8 @@ articles:[
       "pos": "v.",
       "cn": "延後",
       "def": "To move something to a later time.",
-      "ex": "Her trip to Singapore has not been cancelled, but it has been postponed by one week for a follow-up test.",
-      "exCn": "她去新加坡的行程並沒有取消，但為了安排追蹤檢查，被延後了一個禮拜。"
+      "ex": "The school decided to postpone the sports festival because heavy rain was expected all weekend.",
+      "exCn": "因為預計整個週末都會下大雨，學校決定把運動會延期。"
     },
     {
       "w": "wellness",
@@ -1235,8 +1235,8 @@ articles:[
       "pos": "n.",
       "cn": "健康促進",
       "def": "The state of being healthy, especially as something a company actively supports.",
-      "ex": "A new wellness policy has recently been introduced, offering a quiet room and flexible lunch breaks.",
-      "exCn": "公司最近新推出了一項健康政策，設置了安靜室和彈性午休時間。"
+      "ex": "The gym near my apartment offers free wellness classes on sleep, stress and healthy eating.",
+      "exCn": "我公寓附近的健身房提供免費的健康課程，主題包括睡眠、壓力和健康飲食。"
     },
     {
       "w": "headache",
@@ -1244,8 +1244,8 @@ articles:[
       "pos": "n.",
       "cn": "頭痛",
       "def": "A pain inside your head.",
-      "ex": "Anita now uses the quiet room every afternoon, and her headaches, which used to appear almost daily, have become less frequent.",
-      "exCn": "Anita現在每天下午都會使用安靜室，而她那個以前幾乎每天都會發作的頭痛，也變得比較少了。"
+      "ex": "Staring at my phone screen for hours on the train gave me a terrible headache.",
+      "exCn": "在火車上盯著手機螢幕好幾個小時，讓我頭痛得很厲害。"
     },
     {
       "w": "dread",
@@ -1253,8 +1253,8 @@ articles:[
       "pos": "v.",
       "cn": "害怕、畏懼",
       "def": "To feel very worried about something that is going to happen.",
-      "ex": "The health check she once dreaded may have been her most useful appointment this year.",
-      "exCn": "她曾經很害怕的那次健康檢查，或許是她今年最有用的一次約診。"
+      "ex": "Many students dread giving speeches in front of the whole class, even if they prepare well.",
+      "exCn": "很多學生都害怕在全班面前演講，即使他們準備得很充分。"
     }
   ],
   "questions": [
@@ -1403,8 +1403,8 @@ articles:[
       "pos": "n.",
       "cn": "同事",
       "def": "A person you work with.",
-      "ex": "When Tom, one of Anita's colleagues in the quality department, received the results of his annual checkup last month, he was mildly surprised.",
-      "exCn": "當Anita在品保部門的同事Tom，上個月收到年度健康檢查報告時，他有點驚訝。"
+      "ex": "A colleague from accounting offered to cover my shift while I attended my cousin's wedding.",
+      "exCn": "會計部的一位同事主動說要在我參加表妹婚禮時幫我代班。"
     },
     {
       "w": "crept",
@@ -1412,8 +1412,8 @@ articles:[
       "pos": "v. (creep的過去式)",
       "cn": "悄悄爬升",
       "def": "Moved slowly and gradually, often without being noticed.",
-      "ex": "His blood pressure, which had been perfectly normal for years, had suddenly crept into a range that the company doctor described as 'worth watching.'",
-      "exCn": "他多年來一直正常的血壓，突然升到公司醫師形容為『值得留意』的範圍。"
+      "ex": "Grocery prices crept up all year until our weekly food bill had nearly doubled.",
+      "exCn": "食品雜貨價格一整年悄悄上漲，直到我們每週的伙食費幾乎翻倍。"
     },
     {
       "w": "unnoticed",
@@ -1421,8 +1421,8 @@ articles:[
       "pos": "adj.",
       "cn": "未被注意到的",
       "def": "Not seen or noticed by anyone.",
-      "ex": "Nothing about his daily routine had obviously changed, so the finding felt almost accidental — the kind of thing that could easily have gone unnoticed for another year.",
-      "exCn": "他日常生活似乎沒有明顯改變，所以這個結果讓人覺得幾乎是意外發現——這種事很可能就這樣被忽略一整年。"
+      "ex": "A small leak under the kitchen sink went unnoticed for months and ruined the cabinet.",
+      "exCn": "廚房流理台下方的小漏水好幾個月都沒被發現，結果把櫃子泡壞了。"
     },
     {
       "w": "initiative",
@@ -1430,8 +1430,8 @@ articles:[
       "pos": "n.",
       "cn": "方案、倡議",
       "def": "A new plan or process to achieve something.",
-      "ex": "the human resources department used his case, with his permission, to argue for a broader wellness initiative.",
-      "exCn": "人資部門在取得他同意後，用他的案例來爭取一項更廣泛的健康促進方案。"
+      "ex": "The school launched a recycling initiative that cut cafeteria waste by nearly half.",
+      "exCn": "學校推動了一項回收方案，讓餐廳的垃圾減少了將近一半。"
     },
     {
       "w": "dismiss",
@@ -1439,8 +1439,8 @@ articles:[
       "pos": "v.",
       "cn": "駁回、否決",
       "def": "To decide that something is not important or worth considering.",
-      "ex": "Two years earlier, such a suggestion might have been dismissed as an unnecessary expense; this time, it was approved within a week.",
-      "exCn": "若是兩年前，這種提議可能會被當成一項不必要的支出而遭到否決；這一次，卻在一週內就獲得核准。"
+      "ex": "Don't dismiss your friend's travel advice just because she's younger than you.",
+      "exCn": "不要只因為朋友比你年輕，就不把她的旅遊建議當一回事。"
     },
     {
       "w": "subsidize",
@@ -1448,8 +1448,8 @@ articles:[
       "pos": "v.",
       "cn": "補助",
       "def": "To pay part of the cost of something for someone.",
-      "ex": "A quiet room, flexible lunch breaks, and subsidized checkups are, in this light, less an act of generosity than a form of risk management.",
-      "exCn": "安靜室、彈性午休和補助健檢，與其說是一種善意，不如說是一種風險管理。"
+      "ex": "Many cities subsidize bus passes for students so that getting to class is more affordable.",
+      "exCn": "許多城市會補助學生的公車月票，讓上學的交通費更負擔得起。"
     },
     {
       "w": "characteristically",
@@ -1457,8 +1457,8 @@ articles:[
       "pos": "adv.",
       "cn": "一如既往地、典型地",
       "def": "In a way that is typical of a particular person.",
-      "ex": "Tom himself is characteristically modest about the whole affair.",
-      "exCn": "Tom本人對這整件事一貫地保持低調。"
+      "ex": "My uncle, characteristically calm, simply laughed when his flight was delayed six hours.",
+      "exCn": "我叔叔一如往常地冷靜，班機延誤六小時時他只是笑了笑。"
     },
     {
       "w": "unglamorous",
@@ -1466,8 +1466,8 @@ articles:[
       "pos": "adj.",
       "cn": "不起眼的、平淡無奇的",
       "def": "Not exciting or impressive.",
-      "ex": "a single, unglamorous medical appointment can quietly reveal what a thousand performance reviews never will.",
-      "exCn": "一次不起眼的健康檢查，能悄悄揭露出一千份績效考核都揭露不了的事。"
+      "ex": "Cleaning the fish tank is an unglamorous chore, but the fish stay healthier for it.",
+      "exCn": "清魚缸是件不起眼的家務，但魚會因此更健康。"
     }
   ],
   "questions": [
@@ -1601,12 +1601,12 @@ articles:[
     }
   ],
   "target": [
-    {"w": "typhoon", "ipa": "/taɪˈfuːn/", "pos": "n.", "cn": "颱風", "def": "A very strong storm with wind and rain.", "ex": "A big typhoon is coming to Taiwan this weekend.", "exCn": "這個週末有一個大颱風要來台灣。"},
-    {"w": "raincoat", "ipa": "/ˈreɪnkoʊt/", "pos": "n.", "cn": "雨衣", "def": "A coat you wear to stay dry in the rain.", "ex": "Tom looks in his closet for a raincoat.", "exCn": "Tom在衣櫃裡找雨衣。"},
-    {"w": "umbrella", "ipa": "/ʌmˈbrelə/", "pos": "n.", "cn": "雨傘", "def": "Something you hold over your head to stay dry.", "ex": "He also finds his rain boots and an umbrella.", "exCn": "他也找到了雨鞋和一把傘。"},
-    {"w": "windy", "ipa": "/ˈwɪndi/", "pos": "adj.", "cn": "有風的", "def": "Having a lot of wind.", "ex": "Right now, the sky outside is dark and windy.", "exCn": "現在外面的天空又暗又有風。"},
-    {"w": "fill", "ipa": "/fɪl/", "pos": "v.", "cn": "裝滿", "def": "To make something full.", "ex": "His mother is filling bottles with water.", "exCn": "他媽媽正在把瓶子裝滿水。"},
-    {"w": "forecast", "ipa": "/ˈfɔːrkæst/", "pos": "n.", "cn": "預報", "def": "A statement about what the weather will be.", "ex": "There is heavy rain in the forecast.", "exCn": "預報顯示會有大雨。"}
+    {"w": "typhoon", "ipa": "/taɪˈfuːn/", "pos": "n.", "cn": "颱風", "def": "A very strong storm with wind and rain.", "ex": "Our flight to Tokyo was canceled because of a typhoon.", "exCn": "我們飛往東京的班機因為颱風取消了。"},
+    {"w": "raincoat", "ipa": "/ˈreɪnkoʊt/", "pos": "n.", "cn": "雨衣", "def": "A coat you wear to stay dry in the rain.", "ex": "The delivery driver put on a yellow raincoat before getting on his scooter.", "exCn": "外送員騎上機車前先穿上黃色雨衣。"},
+    {"w": "umbrella", "ipa": "/ʌmˈbrelə/", "pos": "n.", "cn": "雨傘", "def": "Something you hold over your head to stay dry.", "ex": "Can I borrow your umbrella? I left mine on the MRT.", "exCn": "可以借我你的雨傘嗎？我把我的忘在捷運上了。"},
+    {"w": "windy", "ipa": "/ˈwɪndi/", "pos": "adj.", "cn": "有風的", "def": "Having a lot of wind.", "ex": "It was so windy at the beach that our kite flew very high.", "exCn": "海邊風好大，我們的風箏飛得非常高。"},
+    {"w": "fill", "ipa": "/fɪl/", "pos": "v.", "cn": "裝滿", "def": "To make something full.", "ex": "Can you fill this glass with cold water for me, please?", "exCn": "可以幫我把這個杯子裝滿冷水嗎？"},
+    {"w": "forecast", "ipa": "/ˈfɔːrkæst/", "pos": "n.", "cn": "預報", "def": "A statement about what the weather will be.", "ex": "The forecast says it will be sunny for our picnic on Sunday.", "exCn": "預報說我們星期天野餐那天會是晴天。"}
   ],
   "questions": [
     {
@@ -1672,12 +1672,12 @@ articles:[
     }
   ],
   "target": [
-    {"w": "announce", "ipa": "/əˈnaʊns/", "pos": "v.", "cn": "宣布", "def": "To tell people something officially.", "ex": "Amy's company announced a typhoon day off.", "exCn": "Amy的公司宣布放颱風假。"},
-    {"w": "approach", "ipa": "/əˈproʊtʃ/", "pos": "v.", "cn": "接近", "def": "To come nearer to something.", "ex": "A strong storm approached the city.", "exCn": "一個強烈的暴風接近了這座城市。"},
-    {"w": "cancel", "ipa": "/ˈkænsl/", "pos": "v.", "cn": "取消", "def": "To stop something from happening.", "ex": "The airline cancelled several flights.", "exCn": "航空公司取消了好幾班航班。"},
-    {"w": "candle", "ipa": "/ˈkændl/", "pos": "n.", "cn": "蠟燭", "def": "A stick of wax with a string that burns for light.", "ex": "She has already prepared candles, water, and snacks for the storm.", "exCn": "她已經準備好蠟燭、水和一些零食來應付這場暴風。"},
-    {"w": "tape", "ipa": "/teɪp/", "pos": "v.", "cn": "用膠帶貼", "def": "To stick something using tape.", "ex": "Together they taped all the windows.", "exCn": "他們一起把所有窗戶都貼上了膠帶。"},
-    {"w": "calm", "ipa": "/kɑːm/", "pos": "adj.", "cn": "平靜的", "def": "Not moving much; quiet and still.", "ex": "The wind finally became calmer.", "exCn": "風終於變得比較平靜了。"}
+    {"w": "announce", "ipa": "/əˈnaʊns/", "pos": "v.", "cn": "宣布", "def": "To tell people something officially.", "ex": "The school will announce the winners of the art contest on Friday morning.", "exCn": "學校會在星期五早上宣布美術比賽的得獎者。"},
+    {"w": "approach", "ipa": "/əˈproʊtʃ/", "pos": "v.", "cn": "接近", "def": "To come nearer to something.", "ex": "The cat slowly approached the new toy and gave it a careful sniff.", "exCn": "那隻貓慢慢接近新玩具，小心地聞了一下。"},
+    {"w": "cancel", "ipa": "/ˈkænsl/", "pos": "v.", "cn": "取消", "def": "To stop something from happening.", "ex": "I had to cancel my haircut because I caught a bad cold.", "exCn": "我得了重感冒，只好取消剪頭髮的預約。"},
+    {"w": "candle", "ipa": "/ˈkændl/", "pos": "n.", "cn": "蠟燭", "def": "A stick of wax with a string that burns for light.", "ex": "She put twelve candles on the birthday cake for her son.", "exCn": "她在兒子的生日蛋糕上插了十二根蠟燭。"},
+    {"w": "tape", "ipa": "/teɪp/", "pos": "v.", "cn": "用膠帶貼", "def": "To stick something using tape.", "ex": "He taped a thank-you note to his roommate's bedroom door.", "exCn": "他把一張感謝紙條用膠帶貼在室友的房門上。"},
+    {"w": "calm", "ipa": "/kɑːm/", "pos": "adj.", "cn": "平靜的", "def": "Not moving much; quiet and still.", "ex": "The lake was so calm this morning that it looked like a mirror.", "exCn": "今天早上湖面非常平靜，看起來像一面鏡子。"}
   ],
   "questions": [
     {
@@ -1743,14 +1743,14 @@ articles:[
     }
   ],
   "target": [
-    {"w": "shipment", "ipa": "/ˈʃɪpmənt/", "pos": "n.", "cn": "貨運、一批貨", "def": "A load of goods that is sent somewhere.", "ex": "Anita's factory near Ho Chi Minh City has been preparing a large shipment that is due to leave for the port on Friday.", "exCn": "Anita在胡志明市附近的工廠，一直在準備一批預計週五要出貨到港口的大貨。"},
-    {"w": "turn", "ipa": "/tɝːn/", "pos": "v.", "cn": "轉向", "def": "To change direction.", "ex": "Yesterday, a tropical storm, which had formed over the South China Sea days earlier, suddenly turned toward the coast.", "exCn": "昨天，一個原本在南海形成已經好幾天的熱帶風暴，突然轉向朝海岸而來。"},
-    {"w": "delay", "ipa": "/dɪˈleɪ/", "pos": "v./n.", "cn": "延誤", "def": "To make something happen later than planned.", "ex": "The shipment has now been delayed by at least two days.", "exCn": "這批貨現在已經被延誤至少兩天了。"},
-    {"w": "warehouse", "ipa": "/ˈwerhaʊs/", "pos": "n.", "cn": "倉庫", "def": "A large building where goods are stored.", "ex": "Workers moved finished products to higher shelves, in case water entered the warehouse.", "exCn": "員工把已完成的產品搬到比較高的架子上，以防積水淹進倉庫。"},
-    {"w": "coordinate", "ipa": "/koʊˈɔːrdɪneɪt/", "pos": "v.", "cn": "協調", "def": "To organize people or things to work together well.", "ex": "Anita, who is responsible for coordinating with overseas clients, has already emailed the customer to explain the delay.", "exCn": "負責和海外客戶協調的Anita，已經寫信告知客戶延誤的狀況。"},
-    {"w": "suggest", "ipa": "/səˈdʒest/", "pos": "v.", "cn": "建議", "def": "To offer an idea or a plan.", "ex": "A backup route through a nearby town has been suggested by the transport company, although it will add several hours to the journey.", "exCn": "運輸公司建議走附近一個小鎮的替代路線，雖然這會讓路程多花好幾個小時。"},
-    {"w": "affect", "ipa": "/əˈfekt/", "pos": "v.", "cn": "影響", "def": "To cause a change in something.", "ex": "This is not the first shipment that has been affected by weather changes this year.", "exCn": "這已經不是今年第一批因為天氣變化而受影響的貨了。"},
-    {"w": "checklist", "ipa": "/ˈtʃeklɪst/", "pos": "n.", "cn": "檢查清單", "def": "A list of things to check or do.", "ex": "A new backup procedure has since been added to the factory's shipping checklist.", "exCn": "工廠的出貨檢查清單後來加入了一項新的備援流程。"}
+    {"w": "shipment", "ipa": "/ˈʃɪpmənt/", "pos": "n.", "cn": "貨運、一批貨", "def": "A load of goods that is sent somewhere.", "ex": "The bookstore is waiting for a new shipment of comic books to arrive next Tuesday.", "exCn": "這家書店正在等一批新的漫畫書下週二送到。"},
+    {"w": "turn", "ipa": "/tɝːn/", "pos": "v.", "cn": "轉向", "def": "To change direction.", "ex": "When you see the red post office, turn left and my apartment is the second building.", "exCn": "看到紅色的郵局時左轉，我的公寓就是第二棟大樓。"},
+    {"w": "delay", "ipa": "/dɪˈleɪ/", "pos": "v./n.", "cn": "延誤", "def": "To make something happen later than planned.", "ex": "A broken signal on the MRT line will delay trains by about fifteen minutes this morning.", "exCn": "捷運線上的號誌故障，今天早上會讓列車延誤大約十五分鐘。"},
+    {"w": "warehouse", "ipa": "/ˈwerhaʊs/", "pos": "n.", "cn": "倉庫", "def": "A large building where goods are stored.", "ex": "My cousin works at a furniture warehouse, where he drives a forklift all day.", "exCn": "我表哥在一間家具倉庫工作，整天都在開堆高機。"},
+    {"w": "coordinate", "ipa": "/koʊˈɔːrdɪneɪt/", "pos": "v.", "cn": "協調", "def": "To organize people or things to work together well.", "ex": "Lisa volunteered to coordinate rides so everyone could get to the wedding on time.", "exCn": "莉莎自願協調大家的共乘，讓每個人都能準時到婚禮現場。"},
+    {"w": "suggest", "ipa": "/səˈdʒest/", "pos": "v.", "cn": "建議", "def": "To offer an idea or a plan.", "ex": "Could you suggest a good place for a quiet birthday dinner with my parents?", "exCn": "你可以建議一個適合和我爸媽安靜吃生日晚餐的好地方嗎？"},
+    {"w": "affect", "ipa": "/əˈfekt/", "pos": "v.", "cn": "影響", "def": "To cause a change in something.", "ex": "Staying up late every night can affect your mood and your ability to focus in class.", "exCn": "每晚熬夜會影響你的心情，以及上課時專心的能力。"},
+    {"w": "checklist", "ipa": "/ˈtʃeklɪst/", "pos": "n.", "cn": "檢查清單", "def": "A list of things to check or do.", "ex": "Before our camping trip, Dad made a checklist so we would not forget the tent or flashlights.", "exCn": "露營之前，爸爸做了一張檢查清單，這樣我們就不會忘了帶帳篷或手電筒。"}
   ],
   "questions": [
     {
@@ -1824,14 +1824,14 @@ articles:[
     }
   ],
   "target": [
-    {"w": "confirm", "ipa": "/kənˈfɝːm/", "pos": "v.", "cn": "證實", "def": "To show that something is true.", "ex": "Taiwan's Central Weather Administration (CWA) has confirmed what many residents already suspected: this summer has been unusually wet.", "exCn": "台灣中央氣象署證實了許多居民早已猜到的事：這個夏天異常潮濕。"},
-    {"w": "unusually", "ipa": "/ʌnˈjuːʒuəli/", "pos": "adv.", "cn": "異常地", "def": "In a way that is different from what is normal.", "ex": "This summer has been unusually wet.", "exCn": "這個夏天異常潮濕。"},
-    {"w": "matching", "ipa": "/ˈmætʃɪŋ/", "pos": "v.", "cn": "與...相符、追平", "def": "Being the same as something else, such as a record.", "ex": "Fourteen tropical storms formed in July and August alone, matching the record for that two-month period.", "exCn": "光是七、八月就形成了十四個熱帶風暴，追平了同期紀錄。"},
-    {"w": "striking", "ipa": "/ˈstraɪkɪŋ/", "pos": "adj.", "cn": "顯著的、驚人的", "def": "Very noticeable or impressive.", "ex": "The impact on individual cities has been striking.", "exCn": "對各城市造成的影響相當顯著。"},
-    {"w": "relocate", "ipa": "/ˌriːloʊˈkeɪt/", "pos": "v.", "cn": "搬遷", "def": "To move to a new place.", "ex": "Kaohsiung logged its wettest such period since its measuring station was relocated in 2022.", "exCn": "高雄則創下自2022年測站搬遷以來同期最潮濕的紀錄。"},
-    {"w": "deliver", "ipa": "/dɪˈlɪvɚ/", "pos": "v.", "cn": "帶來", "def": "To bring or produce something, such as rain.", "ex": "Bavi, a moderate typhoon with a storm radius of roughly 380 kilometers, delivered particularly heavy rain to the north.", "exCn": "巴威是一個中度颱風，暴風半徑大約380公里，為北部帶來了特別大的雨量。"},
-    {"w": "caution", "ipa": "/ˈkɔːʃn/", "pos": "v.", "cn": "提醒、警告", "def": "To warn someone about something.", "ex": "Forecasters have cautioned that, with typhoon season not yet over, this pattern of frequent, rain-heavy storms may continue into September.", "exCn": "預報員提醒，颱風季還沒結束，這種頻繁又多雨的型態可能會持續到九月。"},
-    {"w": "forecaster", "ipa": "/ˈfɔːrkæstɚ/", "pos": "n.", "cn": "預報員", "def": "A person whose job is to say what the weather will be.", "ex": "Total rainfall across the two months reached 754.7 millimeters, more than twenty percent above what forecasters normally expect.", "exCn": "這兩個月的總雨量達到754.7毫米，比預報員平常預期的還要多出超過兩成。"}
+    {"w": "confirm", "ipa": "/kənˈfɝːm/", "pos": "v.", "cn": "證實", "def": "To show that something is true.", "ex": "Could you confirm that the hotel room includes free breakfast before I pay?", "exCn": "在我付款之前，可以請你確認飯店房間有含免費早餐嗎？"},
+    {"w": "unusually", "ipa": "/ʌnˈjuːʒuəli/", "pos": "adv.", "cn": "異常地", "def": "In a way that is different from what is normal.", "ex": "The office was unusually quiet on Friday because half the team had taken the day off.", "exCn": "星期五辦公室異常安靜，因為團隊有一半的人請假了。"},
+    {"w": "matching", "ipa": "/ˈmætʃɪŋ/", "pos": "v.", "cn": "與...相符、追平", "def": "Being the same as something else, such as a record.", "ex": "The young runner finished in 10.2 seconds, matching the school record set twenty years earlier.", "exCn": "這位年輕跑者跑出十點二秒，追平了二十年前創下的校內紀錄。"},
+    {"w": "striking", "ipa": "/ˈstraɪkɪŋ/", "pos": "adj.", "cn": "顯著的、驚人的", "def": "Very noticeable or impressive.", "ex": "There is a striking difference between the photos of the park before and after the cleanup.", "exCn": "公園清理前後的照片有著驚人的差異。"},
+    {"w": "relocate", "ipa": "/ˌriːloʊˈkeɪt/", "pos": "v.", "cn": "搬遷", "def": "To move to a new place.", "ex": "The bakery had to relocate to a bigger shop after its bread became popular online.", "exCn": "這家麵包店的麵包在網路上爆紅後，不得不搬到更大的店面。"},
+    {"w": "deliver", "ipa": "/dɪˈlɪvɚ/", "pos": "v.", "cn": "帶來", "def": "To bring or produce something, such as rain.", "ex": "The cold front is expected to deliver snow to the mountains by Sunday night.", "exCn": "這波冷鋒預計在星期日晚上以前為山區帶來降雪。"},
+    {"w": "caution", "ipa": "/ˈkɔːʃn/", "pos": "v.", "cn": "提醒、警告", "def": "To warn someone about something.", "ex": "Doctors caution parents against giving adult medicine to young children.", "exCn": "醫生提醒家長不要給幼童服用成人藥物。"},
+    {"w": "forecaster", "ipa": "/ˈfɔːrkæstɚ/", "pos": "n.", "cn": "預報員", "def": "A person whose job is to say what the weather will be.", "ex": "The forecaster on the morning news said we should bring a jacket this weekend.", "exCn": "晨間新聞的氣象預報員說，這個週末我們應該帶件外套。"}
   ],
   "questions": [
     {
@@ -1910,8 +1910,8 @@ articles:[
       "pos": "adj.",
       "cn": "緊張的",
       "def": "Feeling worried or afraid about something.",
-      "ex": "He felt very nervous before the class began.",
-      "exCn": "在課程開始前，他覺得非常緊張。"
+      "ex": "Lily felt nervous before her piano recital, so she took a few deep breaths.",
+      "exCn": "莉莉在鋼琴發表會前很緊張，所以她深呼吸了幾次。"
     },
     {
       "w": "friendly",
@@ -1919,8 +1919,8 @@ articles:[
       "pos": "adj.",
       "cn": "友善的",
       "def": "Kind and pleasant to other people.",
-      "ex": "The teacher was very friendly and kind to him.",
-      "exCn": "老師對他非常友善又親切。"
+      "ex": "The new bakery owner is so friendly that she always remembers my name.",
+      "exCn": "新麵包店的老闆很友善，總是記得我的名字。"
     },
     {
       "w": "kick",
@@ -1928,8 +1928,8 @@ articles:[
       "pos": "v.",
       "cn": "踢",
       "def": "To hit or move something with your foot.",
-      "ex": "She showed him how to kick his legs in the water.",
-      "exCn": "她示範給他看怎麼在水裡踢腿。"
+      "ex": "The little boy kicked the red ball across the park to his dad.",
+      "exCn": "小男孩把紅色的球踢過公園，傳給他爸爸。"
     },
     {
       "w": "float",
@@ -1937,8 +1937,8 @@ articles:[
       "pos": "v.",
       "cn": "漂浮",
       "def": "To stay on top of water without sinking.",
-      "ex": "After thirty minutes, Tom could float on his back.",
-      "exCn": "三十分鐘後，Tom可以仰漂了。"
+      "ex": "We watched the paper boats float slowly down the small river.",
+      "exCn": "我們看著紙船慢慢地順著小河漂下去。"
     },
     {
       "w": "proud",
@@ -1946,8 +1946,8 @@ articles:[
       "pos": "adj.",
       "cn": "驕傲的、以...為榮",
       "def": "Feeling very pleased about something you did.",
-      "ex": "He was so happy and proud of himself.",
-      "exCn": "他覺得非常開心又以自己為榮。"
+      "ex": "My mom was proud of me when I cooked dinner for the family by myself.",
+      "exCn": "我自己為全家煮晚餐時，媽媽為我感到驕傲。"
     },
     {
       "w": "competition",
@@ -1955,8 +1955,8 @@ articles:[
       "pos": "n.",
       "cn": "比賽",
       "def": "An event where people try to win.",
-      "ex": "There is a swimming competition for beginners in October.",
-      "exCn": "十月有一場給初學者的游泳比賽。"
+      "ex": "Our school art competition has a prize for the most colorful painting.",
+      "exCn": "我們學校的美術比賽有一個獎項頒給色彩最豐富的畫。"
     }
   ],
   "questions": [
@@ -2062,8 +2062,8 @@ articles:[
       "pos": "n.",
       "cn": "食材、原料",
       "def": "One of the foods used to make a dish.",
-      "ex": "She has already bought all the ingredients: flour, yeast, salt, and sugar.",
-      "exCn": "她已經買齊了所有食材：麵粉、酵母、鹽和糖。"
+      "ex": "Before cooking dinner, check that you have every ingredient for the curry.",
+      "exCn": "煮晚餐之前，先確認咖哩需要的每樣食材你都有。"
     },
     {
       "w": "dough",
@@ -2071,8 +2071,8 @@ articles:[
       "pos": "n.",
       "cn": "麵團",
       "def": "A soft mixture of flour and water used for making bread.",
-      "ex": "When she began mixing the dough, her hands got sticky and messy.",
-      "exCn": "當她開始揉麵團時，她的手變得又黏又髒。"
+      "ex": "My grandmother rolled the dough flat and cut it into thin noodles.",
+      "exCn": "我奶奶把麵團擀平，再切成細麵條。"
     },
     {
       "w": "frustrated",
@@ -2080,8 +2080,8 @@ articles:[
       "pos": "adj.",
       "cn": "感到挫折的",
       "def": "Feeling annoyed because something is difficult.",
-      "ex": "She felt a little frustrated, so she almost gave up twice.",
-      "exCn": "她覺得有點挫折，所以差點放棄了兩次。"
+      "ex": "He got frustrated when his computer crashed twice during the online exam.",
+      "exCn": "線上考試時電腦當機兩次，讓他很有挫折感。"
     },
     {
       "w": "recipe",
@@ -2089,8 +2089,8 @@ articles:[
       "pos": "n.",
       "cn": "食譜",
       "def": "A set of instructions for cooking a dish.",
-      "ex": "It looked smaller than the picture in the recipe.",
-      "exCn": "它看起來比食譜上的照片小。"
+      "ex": "My roommate shared her mom's recipe for beef noodle soup with me.",
+      "exCn": "我室友把她媽媽的牛肉麵食譜分享給我。"
     },
     {
       "w": "attempt",
@@ -2098,8 +2098,8 @@ articles:[
       "pos": "n.",
       "cn": "嘗試",
       "def": "An act of trying to do something.",
-      "ex": "Amy still gets nervous before every attempt.",
-      "exCn": "Amy在每次嘗試前還是會緊張。"
+      "ex": "On his third attempt, Kevin finally passed his driving test.",
+      "exCn": "Kevin 第三次嘗試時終於考過了駕照。"
     },
     {
       "w": "loaf",
@@ -2107,8 +2107,8 @@ articles:[
       "pos": "n.",
       "cn": "一條（麵包）",
       "def": "A shaped piece of baked bread.",
-      "ex": "Each loaf is better than the last one.",
-      "exCn": "每一條麵包都比上一條做得更好。"
+      "ex": "Could you pick up a loaf of whole wheat bread on your way home?",
+      "exCn": "你回家路上可以順便買一條全麥麵包嗎？"
     }
   ],
   "questions": [
@@ -2214,8 +2214,8 @@ articles:[
       "pos": "v.",
       "cn": "使註冊、使加入",
       "def": "To officially arrange for someone to join a course or program.",
-      "ex": "Anita has recently been enrolled in an online course that teaches statistical methods for quality engineers.",
-      "exCn": "Anita最近被安排參加了一門教品管工程師統計方法的線上課程。"
+      "ex": "My parents enrolled me in a summer swimming class when I was eight.",
+      "exCn": "我八歲時，爸媽幫我報名了暑期游泳班。"
     },
     {
       "w": "formula",
@@ -2223,8 +2223,8 @@ articles:[
       "pos": "n.",
       "cn": "公式",
       "def": "A fixed mathematical rule for calculating something.",
-      "ex": "Anita struggled with the assignments and was often confused by the formulas.",
-      "exCn": "Anita在寫作業時很吃力，也常常被公式搞混。"
+      "ex": "Our math teacher showed us an easy formula for finding the area of a circle.",
+      "exCn": "我們的數學老師教我們一個計算圓面積的簡單公式。"
     },
     {
       "w": "feedback",
@@ -2232,8 +2232,8 @@ articles:[
       "pos": "n.",
       "cn": "回饋意見",
       "def": "Comments about how well someone is doing.",
-      "ex": "She has been given detailed feedback by her instructor after every quiz.",
-      "exCn": "她每次小考後都會收到老師詳細的回饋意見。"
+      "ex": "The chef asked customers for honest feedback on the new dessert menu.",
+      "exCn": "主廚請客人對新的甜點菜單提供誠實的回饋意見。"
     },
     {
       "w": "confidence",
@@ -2241,8 +2241,8 @@ articles:[
       "pos": "n.",
       "cn": "信心",
       "def": "A feeling of trust in your own ability.",
-      "ex": "The feedback has slowly built her confidence.",
-      "exCn": "這些回饋漸漸建立了她的信心。"
+      "ex": "Singing in the school choir gave my shy sister a lot more confidence.",
+      "exCn": "參加學校合唱團讓我害羞的妹妹多了很多信心。"
     },
     {
       "w": "workplace",
@@ -2250,8 +2250,8 @@ articles:[
       "pos": "n.",
       "cn": "職場",
       "def": "The place where people work.",
-      "ex": "Last week, a real workplace problem was solved using a method Anita had just learned in class.",
-      "exCn": "上週，一個真實的職場問題用Anita剛在課堂上學到的方法解決了。"
+      "ex": "A friendly workplace can make even a stressful job feel easier to handle.",
+      "exCn": "友善的職場能讓壓力大的工作也感覺比較容易應付。"
     },
     {
       "w": "impressed",
@@ -2259,8 +2259,8 @@ articles:[
       "pos": "adj.",
       "cn": "印象深刻的",
       "def": "Feeling admiration because something is very good.",
-      "ex": "Her manager was impressed, and her solution has since been shared with the whole department.",
-      "exCn": "她的主管印象深刻，她的解決方案後來也被分享給了整個部門。"
+      "ex": "The judges were impressed by the young pianist's performance at the concert.",
+      "exCn": "評審對那位年輕鋼琴家在音樂會上的表現印象深刻。"
     },
     {
       "w": "department",
@@ -2268,8 +2268,8 @@ articles:[
       "pos": "n.",
       "cn": "部門",
       "def": "A section of a company or organization.",
-      "ex": "Her solution has since been shared with the whole department.",
-      "exCn": "她的解決方案後來也被分享給了整個部門。"
+      "ex": "If you have a billing question, please call our customer service department.",
+      "exCn": "如果您有帳單方面的問題，請致電我們的客服部門。"
     },
     {
       "w": "capable",
@@ -2277,8 +2277,8 @@ articles:[
       "pos": "adj.",
       "cn": "有能力的",
       "def": "Able to do something well.",
-      "ex": "Anita, who once doubted her own ability, finally felt like a capable learner.",
-      "exCn": "Anita曾經懷疑自己的能力，最後終於覺得自己是個有能力的學習者。"
+      "ex": "My grandmother is still capable of riding her bike to the market every day.",
+      "exCn": "我奶奶到現在還有能力每天騎腳踏車去市場。"
     }
   ],
   "questions": [
@@ -2400,8 +2400,8 @@ articles:[
       "pos": "adj.",
       "cn": "令人謙卑的",
       "def": "Making you feel less proud or confident, often in a useful way.",
-      "ex": "The first few weeks were humbling.",
-      "exCn": "頭幾週的經驗讓我學會謙卑。"
+      "ex": "Losing to a ten-year-old at chess was a humbling moment for my brother.",
+      "exCn": "下西洋棋輸給一個十歲小孩，對我哥來說是令人謙卑的一刻。"
     },
     {
       "w": "avoidance",
@@ -2409,8 +2409,8 @@ articles:[
       "pos": "n.",
       "cn": "逃避",
       "def": "The act of staying away from something.",
-      "ex": "I found myself avoiding study sessions on discouraging days, a pattern psychologists call avoidance behavior.",
-      "exCn": "我發現自己會在心情特別低落的那幾天故意不去唸書，這正是心理學家所說的「逃避行為」。"
+      "ex": "His avoidance of the dentist turned a small cavity into a painful root canal.",
+      "exCn": "他一直逃避看牙醫，讓一個小蛀牙變成了痛苦的根管治療。"
     },
     {
       "w": "genuine",
@@ -2418,8 +2418,8 @@ articles:[
       "pos": "adj.",
       "cn": "真實的、真正的",
       "def": "Real, not fake or invented.",
-      "ex": "Something shifted around week five, when a genuine workplace problem was assigned as a group project.",
-      "exCn": "大概到了第五週，事情有了轉變——課堂指派了一個真實的職場問題當作小組專題。"
+      "ex": "The shop owner showed us a certificate proving the leather bag was genuine.",
+      "exCn": "店主給我們看一張證書，證明那個皮包是真皮的。"
     },
     {
       "w": "textbook",
@@ -2427,8 +2427,8 @@ articles:[
       "pos": "n.",
       "cn": "教科書",
       "def": "A book used for studying a subject.",
-      "ex": "Being forced to apply what I had barely learned built more confidence than any textbook practice could.",
-      "exCn": "被迫運用自己才剛學會的東西，反而比任何課本練習都更能建立信心。"
+      "ex": "Used textbooks sold online can save college students hundreds of dollars each term.",
+      "exCn": "網路上賣的二手教科書每學期可以幫大學生省下好幾百美元。"
     },
     {
       "w": "discomfort",
@@ -2436,8 +2436,8 @@ articles:[
       "pos": "n.",
       "cn": "不舒服的感覺",
       "def": "A feeling of being uneasy or slightly upset.",
-      "ex": "I began to notice that discomfort was often a sign that real learning was happening, not a sign to quit.",
-      "exCn": "我開始注意到：不舒服的感覺，往往不是要我放棄的訊號，而是代表真正的學習正在發生。"
+      "ex": "New hiking boots often cause some discomfort until they soften after a few walks.",
+      "exCn": "新的登山鞋常常會讓人不太舒服，要走幾次變軟之後才會好。"
     },
     {
       "w": "reluctantly",
@@ -2445,8 +2445,8 @@ articles:[
       "pos": "adv.",
       "cn": "不情願地",
       "def": "Done without wanting to.",
-      "ex": "I signed up reluctantly, expecting to fail.",
-      "exCn": "我心不甘情不願地報了名，心裡想著大概會被當掉。"
+      "ex": "The kids reluctantly turned off the video game when their mom called them for dinner.",
+      "exCn": "媽媽叫孩子們吃晚餐時，他們不情願地關掉了電玩。"
     },
     {
       "w": "unsuited",
@@ -2454,8 +2454,8 @@ articles:[
       "pos": "adj.",
       "cn": "不適合的",
       "def": "Not right or suitable for something.",
-      "ex": "I no longer assume struggle means I am unsuited to a subject.",
-      "exCn": "我不再認為卡關代表自己不適合某個領域。"
+      "ex": "Our tiny apartment is unsuited to a husky or any other large, energetic dog.",
+      "exCn": "我們的小公寓不適合養哈士奇或其他體型大又好動的狗。"
     },
     {
       "w": "certification",
@@ -2463,8 +2463,8 @@ articles:[
       "pos": "n.",
       "cn": "認證",
       "def": "An official qualification showing you have completed training.",
-      "ex": "My manager suggested that everyone on the quality team complete a short certification in statistical process control.",
-      "exCn": "我的主管建議品管團隊的每個人都去修一個統計製程管制的短期認證。"
+      "ex": "Swimming instructors at the community pool need a lifeguard certification before they start.",
+      "exCn": "社區泳池的游泳教練開始上課前需要取得救生員認證。"
     }
   ],
   "questions": [
@@ -2593,8 +2593,8 @@ articles:[
       "pos": "n.",
       "cn": "廚房",
       "def": "A room where you cook food.",
-      "ex": "Tom cooked dinner in his small kitchen last night.",
-      "exCn": "Tom昨晚在他的小廚房煮晚餐。"
+      "ex": "My sister and I cleaned the kitchen together after the birthday party.",
+      "exCn": "生日派對結束後，我和姊姊一起打掃廚房。"
     },
     {
       "w": "noodle",
@@ -2602,8 +2602,8 @@ articles:[
       "pos": "n.",
       "cn": "麵條",
       "def": "A long thin piece of food made from flour.",
-      "ex": "He made a big bowl of hot noodle soup.",
-      "exCn": "他煮了一大碗熱騰騰的麵湯。"
+      "ex": "This small shop near the station sells beef noodle soup for a good price.",
+      "exCn": "車站附近這家小店賣的牛肉麵湯價格很實惠。"
     },
     {
       "w": "stove",
@@ -2611,8 +2611,8 @@ articles:[
       "pos": "n.",
       "cn": "瓦斯爐",
       "def": "A machine in the kitchen used for cooking food.",
-      "ex": "He completely forgot to turn off the stove.",
-      "exCn": "他完全忘記關瓦斯爐。"
+      "ex": "Grandma keeps a kettle of hot water on the stove all winter.",
+      "exCn": "整個冬天，奶奶都在瓦斯爐上放著一壺熱水。"
     },
     {
       "w": "forget",
@@ -2620,8 +2620,8 @@ articles:[
       "pos": "v.",
       "cn": "忘記",
       "def": "To not remember to do something.",
-      "ex": "He completely forgot to turn off the stove.",
-      "exCn": "他完全忘記關瓦斯爐。"
+      "ex": "Please don't forget to bring your umbrella because it may rain later today.",
+      "exCn": "請別忘了帶雨傘，因為今天晚一點可能會下雨。"
     },
     {
       "w": "thick",
@@ -2629,8 +2629,8 @@ articles:[
       "pos": "adj.",
       "cn": "濃稠的；厚的",
       "def": "Not thin; having a large distance between opposite sides.",
-      "ex": "When he came back, the soup was too thick.",
-      "exCn": "他回來的時候，湯已經太濃稠了。"
+      "ex": "I wore a thick sweater on the mountain because the air was very cold.",
+      "exCn": "山上空氣很冷，所以我穿了一件厚毛衣。"
     },
     {
       "w": "stick",
@@ -2638,8 +2638,8 @@ articles:[
       "pos": "v.",
       "cn": "黏住",
       "def": "To become attached to something and not move easily.",
-      "ex": "Some noodles stuck to the bottom of the pot.",
-      "exCn": "有些麵黏在鍋底。"
+      "ex": "Wet leaves often stick to my shoes when I walk to school in autumn.",
+      "exCn": "秋天走路上學時，濕葉子常常黏在我的鞋子上。"
     }
   ],
   "questions": [
@@ -2745,8 +2745,8 @@ articles:[
       "pos": "n.",
       "cn": "晚餐派對",
       "def": "A social event where people eat a meal together.",
-      "ex": "Amy was planning a dinner party for six friends.",
-      "exCn": "Amy正在為六位朋友籌劃一場晚餐派對。"
+      "ex": "We invited six neighbors to a small dinner party to celebrate moving into our new house.",
+      "exCn": "我們邀請了六位鄰居來參加小型晚餐派對，慶祝搬進新家。"
     },
     {
       "w": "chop",
@@ -2754,8 +2754,8 @@ articles:[
       "pos": "v.",
       "cn": "切、剁",
       "def": "To cut something into small pieces with a knife.",
-      "ex": "She was chopping vegetables for the salad.",
-      "exCn": "她正在切沙拉用的蔬菜。"
+      "ex": "Please chop the carrots into small cubes before you add them to the soup.",
+      "exCn": "把紅蘿蔔加進湯裡之前，請先切成小丁。"
     },
     {
       "w": "doorbell",
@@ -2763,8 +2763,8 @@ articles:[
       "pos": "n.",
       "cn": "門鈴",
       "def": "A button by a door that makes a sound when pressed.",
-      "ex": "The doorbell rang while she was chopping vegetables.",
-      "exCn": "她正在切菜的時候門鈴響了。"
+      "ex": "The dog barks loudly every time the doorbell rings, even when it is just the mail carrier.",
+      "exCn": "每次門鈴一響，那隻狗就大聲吠叫，就算只是郵差也一樣。"
     },
     {
       "w": "arrive",
@@ -2772,8 +2772,8 @@ articles:[
       "pos": "v.",
       "cn": "到達",
       "def": "To reach a place.",
-      "ex": "Her friend Lily arrived thirty minutes early.",
-      "exCn": "她的朋友Lily提早了三十分鐘到。"
+      "ex": "If the train is on time, we should arrive in Tainan just before noon.",
+      "exCn": "如果火車準時，我們應該會在中午前抵達台南。"
     },
     {
       "w": "smoke alarm",
@@ -2781,8 +2781,8 @@ articles:[
       "pos": "n.",
       "cn": "煙霧警報器",
       "def": "A device that makes a loud sound when it senses smoke.",
-      "ex": "The smoke alarm suddenly went off.",
-      "exCn": "煙霧警報器突然響了。"
+      "ex": "Remember to test your bedroom smoke alarm and change its battery once a year.",
+      "exCn": "記得測試你臥室的煙霧警報器，並且每年換一次電池。"
     },
     {
       "w": "burnt",
@@ -2790,8 +2790,8 @@ articles:[
       "pos": "adj.",
       "cn": "燒焦的",
       "def": "Damaged or darkened by too much heat.",
-      "ex": "The chicken was a little more burnt than usual.",
-      "exCn": "雞肉比平常燒焦了一點。"
+      "ex": "I forgot about the toast while checking my phone, so breakfast was a plate of burnt bread.",
+      "exCn": "我看手機時忘了烤吐司，結果早餐變成一盤燒焦的麵包。"
     }
   ],
   "questions": [
@@ -2897,8 +2897,8 @@ articles:[
       "pos": "n.",
       "cn": "快炒菜",
       "def": "A dish made by quickly cooking small pieces of food in a hot pan.",
-      "ex": "She was chopping vegetables for a stir-fry.",
-      "exCn": "她正在切炒菜要用的蔬菜。"
+      "ex": "My roommate makes a quick beef stir-fry whenever she gets home late from the gym.",
+      "exCn": "我室友從健身房晚歸時，總會做一道快速的炒牛肉。"
     },
     {
       "w": "tenant",
@@ -2906,8 +2906,8 @@ articles:[
       "pos": "n.",
       "cn": "房客",
       "def": "A person who pays to live in a building owned by someone else.",
-      "ex": "A message was later sent to every tenant.",
-      "exCn": "後來有一則訊息發給每位房客。"
+      "ex": "The new tenant upstairs asked whether pets were allowed in the apartment.",
+      "exCn": "樓上的新房客詢問公寓裡是否可以養寵物。"
     },
     {
       "w": "transformer",
@@ -2915,8 +2915,8 @@ articles:[
       "pos": "n.",
       "cn": "變壓器",
       "def": "A device that changes electricity to a form buildings can use.",
-      "ex": "Emergency repairs were being carried out on the transformer outside.",
-      "exCn": "外面的變壓器正在進行緊急維修。"
+      "ex": "Workers replaced an old transformer on our street to make the power supply more stable.",
+      "exCn": "工人更換了我們街上一台老舊的變壓器，讓供電更穩定。"
     },
     {
       "w": "outage",
@@ -2924,8 +2924,8 @@ articles:[
       "pos": "n.",
       "cn": "停電",
       "def": "A period when the electricity supply stops working.",
-      "ex": "Her phone could not tell her how long the outage would last.",
-      "exCn": "她的手機沒辦法查到停電還要多久。"
+      "ex": "The hospital switched to its generators during a short outage last Tuesday.",
+      "exCn": "上週二短暫停電時，醫院改用了發電機。"
     },
     {
       "w": "restore",
@@ -2933,8 +2933,8 @@ articles:[
       "pos": "v.",
       "cn": "恢復",
       "def": "To bring something back to its normal condition.",
-      "ex": "When the electricity was finally restored, the rice had gone cold.",
-      "exCn": "電終於恢復的時候，飯已經冷了。"
+      "ex": "It took the technician an hour to restore the internet connection at our school.",
+      "exCn": "技術人員花了一個小時才恢復我們學校的網路連線。"
     },
     {
       "w": "wilt",
@@ -2942,8 +2942,8 @@ articles:[
       "pos": "v.",
       "cn": "枯萎、蔫掉",
       "def": "To become weak and droop, especially because of heat or lack of water.",
-      "ex": "The vegetables had wilted.",
-      "exCn": "蔬菜也蔫了。"
+      "ex": "If you forget to water the basil for a few days, it will quickly wilt.",
+      "exCn": "如果你忘了幫羅勒澆水幾天，它很快就會枯萎。"
     },
     {
       "w": "backup",
@@ -2951,8 +2951,8 @@ articles:[
       "pos": "n.",
       "cn": "備用（的）",
       "def": "Something kept ready in case the usual thing fails.",
-      "ex": "A backup plan is needed for evenings when the power cannot be relied on.",
-      "exCn": "需要有備用方案，來應付電力不可靠的晚上。"
+      "ex": "I always keep a backup charger in my bag in case my phone dies while traveling.",
+      "exCn": "我總是在包包裡放一個備用充電器，以防旅行時手機沒電。"
     },
     {
       "w": "instant",
@@ -2960,8 +2960,8 @@ articles:[
       "pos": "adj.",
       "cn": "即食的、速食的",
       "def": "Able to be prepared very quickly, usually just by adding water or heat.",
-      "ex": "She now keeps a few instant meals in the fridge.",
-      "exCn": "她現在冰箱裡也常備幾份即食餐。"
+      "ex": "On busy exam weeks, many students live on instant oatmeal and coffee.",
+      "exCn": "在忙碌的考試週，許多學生靠即食燕麥片和咖啡度日。"
     }
   ],
   "questions": [
@@ -3085,8 +3085,8 @@ articles:[
       "pos": "n.",
       "cn": "致癌物",
       "def": "A substance that can cause cancer.",
-      "ex": "One of its own products had failed an internal carcinogen test.",
-      "exCn": "公司一項產品未通過內部的致癌物檢測。"
+      "ex": "Scientists have long classified tobacco smoke as a known carcinogen that damages the lungs.",
+      "exCn": "科學家早就將菸草煙霧列為已知會傷害肺部的致癌物。"
     },
     {
       "w": "ceiling",
@@ -3094,8 +3094,8 @@ articles:[
       "pos": "n.",
       "cn": "（數量、價格的）上限",
       "def": "The highest legal or acceptable level allowed for something.",
-      "ex": "Testing found a concentration well above the legal ceiling of 2 micrograms.",
-      "exCn": "檢測發現濃度遠超過每公斤2微克的法定上限。"
+      "ex": "The city council placed a ceiling on how much landlords can raise rent each year.",
+      "exCn": "市議會對房東每年可調漲的租金設了上限。"
     },
     {
       "w": "batch",
@@ -3103,8 +3103,8 @@ articles:[
       "pos": "n.",
       "cn": "一批（產品）",
       "def": "A group of products made or tested together at one time.",
-      "ex": "Inspectors collected samples to check whether other batches were affected.",
-      "exCn": "稽查人員採樣確認其他批次是否也受影響。"
+      "ex": "The bakery threw out an entire batch of cookies after noticing they were undercooked.",
+      "exCn": "麵包店發現那一批餅乾沒烤熟，就整批丟掉了。"
     },
     {
       "w": "recall",
@@ -3112,8 +3112,8 @@ articles:[
       "pos": "n./v.",
       "cn": "（產品）回收",
       "def": "An order for a company to take a product back because it is unsafe.",
-      "ex": "The recall eventually covered more than 400 downstream products.",
-      "exCn": "回收範圍最終擴及四百多項下游產品。"
+      "ex": "The carmaker announced a recall of thousands of SUVs because of faulty brakes.",
+      "exCn": "那家車廠因煞車有瑕疵，宣布回收數千輛休旅車。"
     },
     {
       "w": "downstream",
@@ -3121,8 +3121,8 @@ articles:[
       "pos": "adj.",
       "cn": "下游的",
       "def": "Later in a supply chain, closer to the final customer.",
-      "ex": "The recall covered more than 400 downstream products.",
-      "exCn": "回收範圍擴及四百多項下游產品。"
+      "ex": "A shortage of computer chips quickly hurt downstream manufacturers that build phones and laptops.",
+      "exCn": "電腦晶片短缺很快就衝擊到生產手機和筆電的下游製造商。"
     },
     {
       "w": "penalty",
@@ -3130,8 +3130,8 @@ articles:[
       "pos": "n.",
       "cn": "罰款、處罰",
       "def": "A punishment, often a fine, for breaking a rule or law.",
-      "ex": "Central Union was fined NT$165.2 million, the largest such penalty in Taiwanese food safety history.",
-      "exCn": "Central Union被裁罰新台幣1億6,520萬元，是台灣食安史上金額最高的一筆罰款。"
+      "ex": "Drivers who use their phones while driving now face a much heavier penalty.",
+      "exCn": "開車時使用手機的駕駛現在會面臨重得多的罰款。"
     },
     {
       "w": "oversight",
@@ -3139,8 +3139,8 @@ articles:[
       "pos": "n.",
       "cn": "監督",
       "def": "The act of watching and checking a process to make sure it is done correctly.",
-      "ex": "Investigators blamed weak oversight of production.",
-      "exCn": "調查人員歸咎於生產流程的監督不夠嚴謹。"
+      "ex": "Critics argue that the new hospital project needs stronger oversight to prevent wasted funds.",
+      "exCn": "批評者認為這個新醫院計畫需要更嚴格的監督，以免浪費經費。"
     },
     {
       "w": "spot check",
@@ -3148,8 +3148,8 @@ articles:[
       "pos": "n.",
       "cn": "抽驗",
       "def": "A test done on a small, randomly chosen sample instead of on everything.",
-      "ex": "Manufacturers should test every batch rather than rely on occasional spot checks.",
-      "exCn": "廠商應該每一批都檢驗，而不是只靠偶爾的抽驗。"
+      "ex": "Airport staff carried out a spot check on several suitcases before the flight boarded.",
+      "exCn": "登機前，機場人員對幾個行李箱進行了抽驗。"
     }
   ],
   "questions": [
@@ -3279,8 +3279,8 @@ articles:[
       "pos": "n.",
       "cn": "公寓",
       "def": "A set of rooms in a building where someone lives.",
-      "ex": "Tom moved to a new apartment last weekend.",
-      "exCn": "Tom上個週末搬進了新公寓。"
+      "ex": "My aunt lives in a small apartment near the train station.",
+      "exCn": "我阿姨住在火車站附近的一間小公寓。"
     },
     {
       "w": "shelf",
@@ -3288,8 +3288,8 @@ articles:[
       "pos": "n.",
       "cn": "架子、層板",
       "def": "A flat board on a wall or in furniture for putting things on.",
-      "ex": "He put all his books on a new shelf.",
-      "exCn": "他把所有的書放到新書架上。"
+      "ex": "The cookies are on the top shelf in the kitchen.",
+      "exCn": "餅乾放在廚房最上層的架子上。"
     },
     {
       "w": "carry",
@@ -3297,8 +3297,8 @@ articles:[
       "pos": "v.",
       "cn": "搬、提",
       "def": "To hold something and take it somewhere.",
-      "ex": "His friend Amy helped him carry the heavy boxes.",
-      "exCn": "他的朋友Amy幫他搬那些沉重的箱子。"
+      "ex": "Can you help me carry these bags to the car?",
+      "exCn": "你可以幫我把這些袋子提到車上嗎？"
     },
     {
       "w": "heavy",
@@ -3306,8 +3306,8 @@ articles:[
       "pos": "adj.",
       "cn": "重的",
       "def": "Weighing a lot; hard to move.",
-      "ex": "His friend helped him carry the heavy boxes.",
-      "exCn": "他的朋友幫他搬那些沉重的箱子。"
+      "ex": "This suitcase is too heavy for my little brother.",
+      "exCn": "這個行李箱對我弟弟來說太重了。"
     },
     {
       "w": "cook",
@@ -3315,8 +3315,8 @@ articles:[
       "pos": "v.",
       "cn": "煮菜、做飯",
       "def": "To make food ready by using heat.",
-      "ex": "That night Tom cooked dinner in his new kitchen.",
-      "exCn": "那天晚上Tom在新廚房裡煮了晚餐。"
+      "ex": "My dad likes to cook fried rice on Sunday nights.",
+      "exCn": "我爸爸喜歡在星期天晚上煮炒飯。"
     }
   ],
   "questions": [
@@ -3422,8 +3422,8 @@ articles:[
       "pos": "v.",
       "cn": "存（錢）；節省",
       "def": "To keep money for later use instead of spending it.",
-      "ex": "Now Amy has saved enough for the deposit.",
-      "exCn": "現在Amy已經存夠了押金。"
+      "ex": "Ben is saving part of his allowance each week to buy a new skateboard.",
+      "exCn": "班每週存下一部分零用錢，想買一塊新滑板。"
     },
     {
       "w": "rent",
@@ -3431,8 +3431,8 @@ articles:[
       "pos": "n.",
       "cn": "房租",
       "def": "Money you pay every month to use someone else's house or room.",
-      "ex": "The rent is cheap, but the room is too small.",
-      "exCn": "房租很便宜，但房間太小。"
+      "ex": "Living near a university usually means paying higher rent for a smaller room.",
+      "exCn": "住在大學附近通常代表要為較小的房間付更高的房租。"
     },
     {
       "w": "deposit",
@@ -3440,8 +3440,8 @@ articles:[
       "pos": "n.",
       "cn": "押金、訂金",
       "def": "Money you pay before you move in to show you are serious.",
-      "ex": "She has saved enough for the deposit on a bigger apartment.",
-      "exCn": "她已經存夠了大一點公寓的押金。"
+      "ex": "The hotel asked for a small deposit when we booked the room for our trip.",
+      "exCn": "我們為旅行訂房時，飯店要求先付一筆小額訂金。"
     },
     {
       "w": "instead of",
@@ -3449,8 +3449,8 @@ articles:[
       "pos": "phr.",
       "cn": "而不是",
       "def": "In place of something else.",
-      "ex": "She started bringing lunch instead of buying it.",
-      "exCn": "她開始帶午餐而不是外面買。"
+      "ex": "Let's take the MRT instead of a taxi, since traffic is terrible at this hour.",
+      "exCn": "這個時間塞車很嚴重，我們搭捷運，不要搭計程車吧。"
     },
     {
       "w": "balcony",
@@ -3458,8 +3458,8 @@ articles:[
       "pos": "n.",
       "cn": "陽台",
       "def": "A small area outside a window where you can stand or sit.",
-      "ex": "She has never had her own balcony before.",
-      "exCn": "她從來沒有自己的陽台。"
+      "ex": "My neighbor grows tomatoes and basil in pots on her sunny balcony.",
+      "exCn": "我鄰居在她陽光充足的陽台上用盆栽種番茄和九層塔。"
     },
     {
       "w": "excited",
@@ -3467,8 +3467,8 @@ articles:[
       "pos": "adj.",
       "cn": "興奮的",
       "def": "Very happy and looking forward to something.",
-      "ex": "She is excited because she has never had her own balcony.",
-      "exCn": "她很興奮，因為她從來沒有自己的陽台。"
+      "ex": "The kids were excited to see snow for the first time on their winter trip.",
+      "exCn": "孩子們在冬季旅行中第一次看到雪，興奮極了。"
     }
   ],
   "questions": [
@@ -3574,8 +3574,8 @@ articles:[
       "pos": "v.",
       "cn": "提高、調漲",
       "def": "To increase the amount of something, especially a price.",
-      "ex": "The rent would be raised by twenty percent.",
-      "exCn": "房租要調漲百分之二十。"
+      "ex": "The coffee shop near my school plans to raise the price of lattes next month.",
+      "exCn": "我學校附近的咖啡店打算下個月調漲拿鐵的價格。"
     },
     {
       "w": "renovate",
@@ -3583,8 +3583,8 @@ articles:[
       "pos": "v.",
       "cn": "整修、翻新",
       "def": "To make a building look new again by repairing and improving it.",
-      "ex": "The building has been renovated recently.",
-      "exCn": "整棟大樓最近剛整修過。"
+      "ex": "The city will renovate the old library, adding a reading garden and faster Wi-Fi.",
+      "exCn": "市政府將整修舊圖書館，增設閱讀花園和更快的無線網路。"
     },
     {
       "w": "security camera",
@@ -3592,8 +3592,8 @@ articles:[
       "pos": "n.",
       "cn": "監視器",
       "def": "A camera that records what happens in a building for safety.",
-      "ex": "A security camera was installed at the entrance.",
-      "exCn": "入口處裝了一台監視器。"
+      "ex": "Footage from one security camera at the bike shop showed who had taken the red bicycle.",
+      "exCn": "腳踏車行一支監視器拍到的畫面，顯示了是誰牽走那台紅色腳踏車。"
     },
     {
       "w": "improvement",
@@ -3601,8 +3601,8 @@ articles:[
       "pos": "n.",
       "cn": "改善、改良",
       "def": "A change that makes something better.",
-      "ex": "These improvements had to be paid for by the tenants.",
-      "exCn": "這些改善的費用必須由房客來分攤。"
+      "ex": "My English teacher noticed a big improvement in my pronunciation after I started shadowing podcasts.",
+      "exCn": "我開始跟讀 Podcast 之後，英文老師注意到我的發音有很大的改善。"
     },
     {
       "w": "budget",
@@ -3610,8 +3610,8 @@ articles:[
       "pos": "n.",
       "cn": "預算",
       "def": "A plan for how you will spend your money.",
-      "ex": "Anita looked at her budget carefully.",
-      "exCn": "Anita仔細看了自己的預算。"
+      "ex": "Our family set a travel budget of thirty thousand dollars for the summer vacation in Japan.",
+      "exCn": "我們家為暑假去日本旅行設定了三萬元的預算。"
     },
     {
       "w": "salary",
@@ -3619,8 +3619,8 @@ articles:[
       "pos": "n.",
       "cn": "薪水",
       "def": "The money you receive for your work, usually every month.",
-      "ex": "Nearly half of her salary is already spent on rent and bills.",
-      "exCn": "她薪水的將近一半已經花在房租和帳單上了。"
+      "ex": "After finishing her nursing degree, Grace found a hospital job with a much higher salary.",
+      "exCn": "葛蕾絲拿到護理學位後，找到了一份薪水高很多的醫院工作。"
     },
     {
       "w": "adjust",
@@ -3628,8 +3628,8 @@ articles:[
       "pos": "v.",
       "cn": "調整",
       "def": "To change something a little to make it better or more suitable.",
-      "ex": "She decided to stay and adjust her spending.",
-      "exCn": "她決定留下來，調整自己的開銷。"
+      "ex": "You can adjust the seat height so your feet touch the ground comfortably.",
+      "exCn": "你可以調整座椅高度，讓雙腳舒服地踩到地面。"
     }
   ],
   "questions": [
@@ -3751,8 +3751,8 @@ articles:[
       "pos": "adj.",
       "cn": "不錯的、像樣的",
       "def": "Good enough in quality; acceptable.",
-      "ex": "A young engineer could rent a decent studio near an MRT station.",
-      "exCn": "一個年輕工程師可以在捷運站附近租到一間不錯的套房。"
+      "ex": "The café near the station isn't fancy, but it serves decent coffee at fair prices.",
+      "exCn": "車站附近那家咖啡館不算高級，但咖啡還不錯，價格也合理。"
     },
     {
       "w": "figure",
@@ -3760,8 +3760,8 @@ articles:[
       "pos": "n.",
       "cn": "數字、金額",
       "def": "A number, especially in official data.",
-      "ex": "That figure has since climbed to eighteen or even twenty thousand.",
-      "exCn": "那個數字後來漲到一萬八、甚至兩萬。"
+      "ex": "The museum released visitor figures showing a sharp rise after the new exhibit opened.",
+      "exCn": "博物館公布的參觀人數顯示，新展覽開幕後人數大幅增加。"
     },
     {
       "w": "devoted",
@@ -3769,8 +3769,8 @@ articles:[
       "pos": "adj.",
       "cn": "投入的、用於…的",
       "def": "Given or used for a particular purpose.",
-      "ex": "The share of income devoted to housing has risen.",
-      "exCn": "投入在居住上的收入比例已經上升。"
+      "ex": "The last page of the magazine is devoted to reader photos and short letters.",
+      "exCn": "雜誌的最後一頁專門用來刊登讀者照片和短信。"
     },
     {
       "w": "district",
@@ -3778,8 +3778,8 @@ articles:[
       "pos": "n.",
       "cn": "區域、行政區",
       "def": "A part of a city or country with clear borders.",
-      "ex": "Rental prices doubled in certain districts between 2020 and 2025.",
-      "exCn": "特定區域在 2020 到 2025 年間租金翻了一倍。"
+      "ex": "The old theater district comes alive at night with street performers and food stalls.",
+      "exCn": "老戲院區一到晚上就熱鬧起來，有街頭藝人和小吃攤。"
     },
     {
       "w": "commute",
@@ -3787,8 +3787,8 @@ articles:[
       "pos": "n.",
       "cn": "通勤",
       "def": "The regular trip between your home and your workplace.",
-      "ex": "Workers had to choose between a longer commute and a tighter budget.",
-      "exCn": "工作者必須在更長的通勤和更緊的預算之間做選擇。"
+      "ex": "Listening to podcasts makes my forty-minute commute feel much shorter.",
+      "exCn": "聽 Podcast 讓我四十分鐘的通勤感覺短了很多。"
     },
     {
       "w": "relocate",
@@ -3796,8 +3796,8 @@ articles:[
       "pos": "v.",
       "cn": "搬遷、遷居",
       "def": "To move to a different place, usually for work or cost reasons.",
-      "ex": "A household relocating twenty kilometres from the city centre spent more on commuting.",
-      "exCn": "搬離市中心二十公里的家庭在通勤上花了更多錢。"
+      "ex": "After retiring, my parents decided to relocate to a quiet town by the coast.",
+      "exCn": "退休後，我爸媽決定搬到海邊一個安靜的小鎮。"
     },
     {
       "w": "utility",
@@ -3805,8 +3805,8 @@ articles:[
       "pos": "n.",
       "cn": "公共事業費（水電瓦斯）",
       "def": "Services such as water, electricity, and gas supplied to a building.",
-      "ex": "Renters now calculate not only the rent but also utility bills.",
-      "exCn": "租屋族現在不只算月租，還會算水電帳單。"
+      "ex": "In winter our utility bills jump because the heater runs almost all day.",
+      "exCn": "冬天因為暖氣幾乎整天開著，我們的水電瓦斯費會暴增。"
     },
     {
       "w": "lease",
@@ -3814,8 +3814,8 @@ articles:[
       "pos": "n.",
       "cn": "租約",
       "def": "A legal agreement to rent a building or land for a set period.",
-      "ex": "Before signing a lease, experienced renters calculate every hidden cost.",
-      "exCn": "在簽約之前，有經驗的租屋族會把每一項隱性成本都算進去。"
+      "ex": "The bakery signed a five-year lease on a small shop across from the park.",
+      "exCn": "那家麵包店在公園對面的小店面簽了五年租約。"
     },
     {
       "w": "opportunity cost",
@@ -3823,8 +3823,8 @@ articles:[
       "pos": "n.",
       "cn": "機會成本",
       "def": "The benefit you lose by choosing one option instead of another.",
-      "ex": "They also consider the opportunity cost of living far from their workplace.",
-      "exCn": "他們也會考慮住得離工作地點太遠的機會成本。"
+      "ex": "Binge-watching a series all weekend had a real opportunity cost: I missed my friend's birthday hike.",
+      "exCn": "整個週末狂追劇是有機會成本的：我錯過了朋友的生日健行。"
     }
   ],
   "questions": [
@@ -3957,8 +3957,8 @@ articles:[
       "pos": "n.",
       "cn": "早餐",
       "def": "The first meal of the day, in the morning.",
-      "ex": "He wants a big breakfast today.",
-      "exCn": "他今天想吃一頓豐盛的早餐。"
+      "ex": "We eat eggs and toast for breakfast on Sunday.",
+      "exCn": "我們星期天早餐吃蛋和吐司。"
     },
     {
       "w": "meeting",
@@ -3966,8 +3966,8 @@ articles:[
       "pos": "n.",
       "cn": "會議",
       "def": "A time when people talk about work together.",
-      "ex": "There is a long meeting at work.",
-      "exCn": "公司有一場很長的會議。"
+      "ex": "My mom has a meeting with my teacher after school today.",
+      "exCn": "我媽媽今天放學後要和我的老師開會。"
     },
     {
       "w": "notes",
@@ -3975,8 +3975,8 @@ articles:[
       "pos": "n.",
       "cn": "筆記",
       "def": "Short things you write down to help you remember.",
-      "ex": "He is reading his notes at the table.",
-      "exCn": "他正在餐桌邊看筆記。"
+      "ex": "Can I borrow your notes from the science class?",
+      "exCn": "我可以借你的自然課筆記嗎？"
     },
     {
       "w": "ready",
@@ -3984,8 +3984,8 @@ articles:[
       "pos": "adj.",
       "cn": "準備好的",
       "def": "Prepared and able to do something.",
-      "ex": "He feels ready now.",
-      "exCn": "他現在覺得準備好了。"
+      "ex": "Are you ready to go to the beach with us?",
+      "exCn": "你準備好跟我們一起去海邊了嗎？"
     },
     {
       "w": "clear",
@@ -3993,8 +3993,8 @@ articles:[
       "pos": "adj.",
       "cn": "晴朗的、清楚的",
       "def": "With no clouds; easy to see through.",
-      "ex": "The sky is clear and the air is cool.",
-      "exCn": "天空晴朗，空氣涼爽。"
+      "ex": "The night sky was clear, so we could see many stars.",
+      "exCn": "夜空很晴朗，所以我們可以看到很多星星。"
     }
   ],
   "questions": [
@@ -4100,8 +4100,8 @@ articles:[
       "pos": "n.",
       "cn": "例行作息、固定流程",
       "def": "The things you do in the same order every day.",
-      "ex": "She has changed her routine because of the longer trip.",
-      "exCn": "因為通勤變長，她改變了作息。"
+      "ex": "Walking the dog after dinner is part of our family's evening routine.",
+      "exCn": "晚餐後遛狗是我們家晚上的固定流程之一。"
     },
     {
       "w": "prepare",
@@ -4109,8 +4109,8 @@ articles:[
       "pos": "v.",
       "cn": "準備",
       "def": "To make something ready before you need it.",
-      "ex": "She prepares her clothes and her bag the night before.",
-      "exCn": "她前一天晚上就把衣服和包包準備好。"
+      "ex": "The students stayed at the library late to prepare for their history exam.",
+      "exCn": "學生們在圖書館待到很晚，準備歷史考試。"
     },
     {
       "w": "schedule",
@@ -4118,8 +4118,8 @@ articles:[
       "pos": "n.",
       "cn": "時間表、行程",
       "def": "A plan of times for doing things.",
-      "ex": "Her body got used to the new schedule.",
-      "exCn": "她的身體習慣了新的時間表。"
+      "ex": "The tour guide gave everyone a printed schedule for the three-day trip.",
+      "exCn": "導遊發給每個人一份三天旅程的紙本行程表。"
     },
     {
       "w": "get used to",
@@ -4127,8 +4127,8 @@ articles:[
       "pos": "phr.",
       "cn": "習慣（某事）",
       "def": "To become comfortable with something new.",
-      "ex": "After two weeks, her body got used to the new schedule.",
-      "exCn": "兩個星期之後，身體就習慣了新的時間表。"
+      "ex": "It took me a few weeks to get used to driving on the left in Japan.",
+      "exCn": "我花了幾個星期才習慣在日本靠左開車。"
     },
     {
       "w": "quiet",
@@ -4136,8 +4136,8 @@ articles:[
       "pos": "adj.",
       "cn": "安靜的",
       "def": "With little or no noise.",
-      "ex": "The office is quiet when she arrives.",
-      "exCn": "她到公司時辦公室很安靜。"
+      "ex": "Please keep your voice down because the library is a quiet place.",
+      "exCn": "請降低音量，因為圖書館是需要安靜的地方。"
     },
     {
       "w": "already",
@@ -4145,8 +4145,8 @@ articles:[
       "pos": "adv.",
       "cn": "已經",
       "def": "Before now, or earlier than expected.",
-      "ex": "She has already finished today's report.",
-      "exCn": "她已經寫完今天的報告了。"
+      "ex": "By the time we got to the theater, the movie had already started.",
+      "exCn": "我們到電影院的時候，電影已經開始了。"
     }
   ],
   "questions": [
@@ -4252,8 +4252,8 @@ articles:[
       "pos": "n.",
       "cn": "應徵者、候選人",
       "def": "A person who applies for a job or position.",
-      "ex": "In the past, candidates were chosen mainly by their diplomas.",
-      "exCn": "以前，應徵者主要是看文憑來挑選的。"
+      "ex": "Each candidate for class president gave a short speech in front of the whole school.",
+      "exCn": "每位班長候選人都在全校面前發表了簡短演說。"
     },
     {
       "w": "hire",
@@ -4261,8 +4261,8 @@ articles:[
       "pos": "v.",
       "cn": "聘用、僱用",
       "def": "To give someone a job.",
-      "ex": "Two engineers will be hired for the quality team.",
-      "exCn": "品保團隊要招聘兩位工程師。"
+      "ex": "The coffee shop plans to hire three part-time workers before the holiday season.",
+      "exCn": "這家咖啡店打算在假期旺季前聘用三名兼職人員。"
     },
     {
       "w": "review",
@@ -4270,8 +4270,8 @@ articles:[
       "pos": "v.",
       "cn": "審查、檢視",
       "def": "To look at something carefully and judge it.",
-      "ex": "Now every application is reviewed by two people.",
-      "exCn": "現在每一份履歷都由兩個人審查。"
+      "ex": "My teacher will review my essay and send me her comments by Friday.",
+      "exCn": "老師會審閱我的論文，並在星期五前把意見寄給我。"
     },
     {
       "w": "hidden",
@@ -4279,8 +4279,8 @@ articles:[
       "pos": "adj.",
       "cn": "被隱藏的、被遮住的",
       "def": "Kept out of sight so that people cannot see it.",
-      "ex": "The names of the schools are hidden.",
-      "exCn": "學校名稱會被遮住。"
+      "ex": "The kids found a hidden key under a flowerpot in the backyard.",
+      "exCn": "孩子們在後院的花盆底下找到一把藏起來的鑰匙。"
     },
     {
       "w": "task",
@@ -4288,8 +4288,8 @@ articles:[
       "pos": "n.",
       "cn": "任務、工作項目",
       "def": "A piece of work that must be done.",
-      "ex": "They are given a small task, which must be finished in thirty minutes.",
-      "exCn": "他們會拿到一個小任務，必須在三十分鐘內完成。"
+      "ex": "Cleaning the bathroom is the task nobody in our apartment wants to do.",
+      "exCn": "打掃浴室是我們公寓裡沒人想做的工作。"
     },
     {
       "w": "reject",
@@ -4297,8 +4297,8 @@ articles:[
       "pos": "v.",
       "cn": "拒絕、刷掉",
       "def": "To say no to someone or something; not to accept.",
-      "ex": "A quiet candidate who was almost rejected last year is now one of our best inspectors.",
-      "exCn": "去年一位差點被刷掉的安靜應徵者，現在是我們最優秀的檢驗員之一。"
+      "ex": "The bank rejected her credit card application because her income was too low.",
+      "exCn": "銀行因為她收入太低，拒絕了她的信用卡申請。"
     },
     {
       "w": "inspector",
@@ -4306,8 +4306,8 @@ articles:[
       "pos": "n.",
       "cn": "檢驗員",
       "def": "A person whose job is to check that things are correct or good enough.",
-      "ex": "She is now one of our best inspectors.",
-      "exCn": "她現在是我們最優秀的檢驗員之一。"
+      "ex": "A health inspector visited the restaurant and checked how the kitchen stored raw meat.",
+      "exCn": "一位衛生檢驗員到餐廳檢查廚房如何存放生肉。"
     },
     {
       "w": "judge",
@@ -4315,8 +4315,8 @@ articles:[
       "pos": "v.",
       "cn": "評斷、判斷",
       "def": "To form an opinion about someone or something after thinking carefully.",
-      "ex": "When people are judged by what they can do, the company finds better workers.",
-      "exCn": "當人是用「能做什麼」來評斷時，公司就能找到更好的人才。"
+      "ex": "You shouldn't judge a new neighbor just by the way they dress.",
+      "exCn": "你不該只憑穿著來評斷新鄰居。"
     }
   ],
   "questions": [
@@ -4440,8 +4440,8 @@ articles:[
       "pos": "n.",
       "cn": "履歷",
       "def": "A short written record of your education and work experience, used when applying for jobs.",
-      "ex": "Would you put video games on your resume?",
-      "exCn": "你會把電動遊戲寫進履歷嗎？"
+      "ex": "Before applying for the nursing job, Grace asked a friend to proofread her resume for spelling mistakes.",
+      "exCn": "葛蕾絲在應徵護理工作之前，請朋友幫她校對履歷上的拼字錯誤。"
     },
     {
       "w": "recruitment",
@@ -4449,8 +4449,8 @@ articles:[
       "pos": "n.",
       "cn": "徵才、招募",
       "def": "The process of finding new people to join a company or organization.",
-      "ex": "The Federal Aviation Administration launched a recruitment program in April.",
-      "exCn": "美國聯邦航空總署四月啟動了一項徵才計畫。"
+      "ex": "The hospital launched a nationwide recruitment drive after struggling to fill night-shift positions.",
+      "exCn": "那家醫院的夜班職缺一直補不滿，於是在全國展開徵才活動。"
     },
     {
       "w": "target",
@@ -4458,8 +4458,8 @@ articles:[
       "pos": "n.",
       "cn": "目標",
       "def": "A result that you try to achieve.",
-      "ex": "The program has already reached more than ninety percent of its annual recruitment target.",
-      "exCn": "這項計畫已達成年度徵才目標的九成以上。"
+      "ex": "Our running club set a target of completing a half marathon by the end of spring.",
+      "exCn": "我們跑步社設定的目標是在春天結束前完成一場半程馬拉松。"
     },
     {
       "w": "steady",
@@ -4467,8 +4467,8 @@ articles:[
       "pos": "adj.",
       "cn": "穩定的",
       "def": "Not changing; staying at the same level.",
-      "ex": "Air traffic control demands fast decisions and steady attention.",
-      "exCn": "飛航管制需要快速決策和穩定的專注力。"
+      "ex": "After years of freelancing, she finally found a steady income teaching online yoga classes.",
+      "exCn": "當了多年自由工作者後，她終於靠教線上瑜伽課有了穩定的收入。"
     },
     {
       "w": "under pressure",
@@ -4476,8 +4476,8 @@ articles:[
       "pos": "phr.",
       "cn": "在壓力下",
       "def": "In a situation where you must act quickly or carefully while feeling stress.",
-      "ex": "The job demands calm thinking under pressure.",
-      "exCn": "這份工作需要高壓下的冷靜思考。"
+      "ex": "Emergency room nurses have to make quick decisions under pressure without losing their focus.",
+      "exCn": "急診室護理師必須在壓力下迅速做出決定，而且不能分心。"
     },
     {
       "w": "competency",
@@ -4485,8 +4485,8 @@ articles:[
       "pos": "n.",
       "cn": "能力項目、職能",
       "def": "A skill that you need to do a job well.",
-      "ex": "The ministry added new competencies such as AI governance literacy.",
-      "exCn": "數位發展部新增了「AI治理素養」等能力項目。"
+      "ex": "Clear communication is a core competency for anyone who wants to manage a restaurant.",
+      "exCn": "清楚的溝通是任何想經營餐廳的人都必須具備的核心能力。"
     },
     {
       "w": "certificate",
@@ -4503,8 +4503,8 @@ articles:[
       "pos": "n.",
       "cn": "作品集",
       "def": "A collection of your work that shows what you can do.",
-      "ex": "Employers should give more weight to work samples and digital portfolios.",
-      "exCn": "雇主應該把更多權重放在工作實例與數位作品集上。"
+      "ex": "The photographer brought a portfolio of wedding and travel photos to show potential clients.",
+      "exCn": "那位攝影師帶了一本婚禮和旅遊照片的作品集，給潛在客戶看。"
     },
     {
       "w": "diploma",
@@ -4512,8 +4512,8 @@ articles:[
       "pos": "n.",
       "cn": "文憑",
       "def": "An official paper showing that you have finished a school or university program.",
-      "ex": "What a person has built often means more than the field printed on a diploma.",
-      "exCn": "一個人實際做出過什麼，往往比文憑上印的科系更有意義。"
+      "ex": "My grandmother framed her high school diploma, which she earned at the age of sixty-five.",
+      "exCn": "我奶奶把她六十五歲才拿到的高中文憑裱框起來。"
     }
   ],
   "questions": [
@@ -4620,9 +4620,9 @@ articles:[
   target:[
     {w:"apartment",ipa:"/əˈpɑːrtmənt/",pos:"n.",cn:"公寓",def:"A place where someone lives, usually inside a larger building.",ex:"My apartment is small, but it is close to the park.",exCn:"我的公寓很小，但離公園很近。"},
     {w:"late",ipa:"/leɪt/",pos:"adj.",cn:"遲到的、晚的",def:"Arriving or happening after the expected time.",ex:"Sorry, I am late. The bus did not come.",exCn:"抱歉我遲到了，公車沒有來。"},
-    {w:"problem",ipa:"/ˈprɑːbləm/",pos:"n.",cn:"問題、狀況",def:"Something that is not working correctly or causes trouble.",ex:"There is a problem with my phone. It does not turn on.",exCn:"我的手機有問題，它開不了機。"},
+    {w:"problem",ipa:"/ˈprɑːbləm/",pos:"n.",cn:"問題、狀況",def:"Something that is not working correctly or causes trouble.",ex:"My phone has a big problem. It will not turn on.",exCn:"我的手機有個大問題，開不了機。"},
     {w:"worried",ipa:"/ˈwɝːid/",pos:"adj.",cn:"擔心的",def:"Feeling nervous or unhappy about something.",ex:"She is worried about her English test tomorrow.",exCn:"她很擔心明天的英文考試。"},
-    {w:"finally",ipa:"/ˈfaɪnəli/",pos:"adv.",cn:"終於",def:"After a long time or wait.",ex:"Finally, the bus arrives at eight fifteen.",exCn:"終於，公車在八點十五分抵達。"},
+    {w:"finally",ipa:"/ˈfaɪnəli/",pos:"adv.",cn:"終於",def:"After a long time or wait.",ex:"After two hours of cooking, dinner was finally ready.",exCn:"煮了兩個小時之後，晚餐終於好了。"},
     {w:"quickly",ipa:"/ˈkwɪkli/",pos:"adv.",cn:"快速地",def:"In a fast way, not slowly.",ex:"Please finish your lunch quickly. The movie starts at one.",exCn:"請快點吃完午餐，電影一點開始。"}
   ],
   questions:[
@@ -4705,14 +4705,14 @@ articles:[
      cn:"通勤族被要求在尖峰時段多預留一些時間，尤其是還在使用老舊設備的路線。對像Mia這樣每天仰賴捷運的上班族來說，就算只是小小的延誤，也可能讓平靜的早晨變成趕著進辦公室的壓力時刻。"}
   ],
   target:[
-    {w:"fault",ipa:"/fɔːlt/",pos:"n.",cn:"故障",def:"A problem that stops something from working correctly.",ex:"When a fault is detected, trains on that line are slowed down immediately.",exCn:"一旦偵測到故障，那條線的列車會立刻被降速。"},
+    {w:"fault",ipa:"/fɔːlt/",pos:"n.",cn:"故障",def:"A problem that stops something from working correctly.",ex:"The washing machine stopped halfway because of an electrical fault.",exCn:"洗衣機因為電路故障，洗到一半就停了。"},
     {w:"packed",ipa:"/pækt/",pos:"adj.",cn:"擠滿的",def:"Extremely full of people.",ex:"The concert hall was packed an hour before the show began.",exCn:"演出開始前一小時，音樂廳就已經擠滿了人。"},
     {w:"frustrated",ipa:"/ˈfrʌstreɪtɪd/",pos:"adj.",cn:"感到不耐煩、沮喪的",def:"Feeling annoyed because something is not going the way you want.",ex:"I get frustrated when the website keeps logging me out.",exCn:"網站一直把我登出，讓我很不耐煩。"},
-    {w:"transit authority",ipa:"/ˈtræn.zɪt əˈθɔːr.ə.t̬i/",pos:"n.",cn:"捷運局、運輸主管機關",def:"The organization in charge of running public transportation.",ex:"According to the transit authority, most signal problems are caused by aging equipment that has not yet been replaced.",exCn:"根據捷運局的說法，大部分的號誌問題都是老舊、還沒被更換的設備所造成的。"},
+    {w:"transit authority",ipa:"/ˈtræn.zɪt əˈθɔːr.ə.t̬i/",pos:"n.",cn:"捷運局、運輸主管機關",def:"The organization in charge of running public transportation.",ex:"The transit authority announced that buses will run later during the New Year holiday.",exCn:"運輸主管機關宣布，新年假期期間公車將延長營運時間。"},
     {w:"aging",ipa:"/ˈeɪdʒɪŋ/",pos:"adj.",cn:"老舊的",def:"Old and often close to needing replacement.",ex:"The city is replacing its aging water pipes one street at a time.",exCn:"市政府正一條街一條街地更換老舊的水管。"},
-    {w:"significantly",ipa:"/sɪɡˈnɪfɪkəntli/",pos:"adv.",cn:"顯著地、大幅地",def:"By a large or noticeable amount.",ex:"A new system... should reduce these delays significantly.",exCn:"一套新系統...應該能大幅減少這類延誤。"},
+    {w:"significantly",ipa:"/sɪɡˈnɪfɪkəntli/",pos:"adv.",cn:"顯著地、大幅地",def:"By a large or noticeable amount.",ex:"My English improved significantly after I started watching videos without subtitles.",exCn:"我開始看沒有字幕的影片之後，英文進步了很多。"},
     {w:"rush hour",ipa:"/ˈrʌʃ aʊr/",pos:"n.",cn:"尖峰時段",def:"The time of day when traffic and public transportation are the busiest.",ex:"Try to avoid driving downtown during rush hour.",exCn:"尖峰時段盡量不要開車進市區。"},
-    {w:"rely on",ipa:"/rɪˈlaɪ ɑn/",pos:"phr.v.",cn:"仰賴、依靠",def:"To depend on someone or something regularly.",ex:"For workers like Mia, who rely on the MRT every day, even a short delay can turn a calm morning into a stressful rush to the office.",exCn:"對像Mia這樣每天仰賴捷運的上班族來說，就算只是小小的延誤，也可能讓平靜的早晨變成趕著進辦公室的壓力時刻。"}
+    {w:"rely on",ipa:"/rɪˈlaɪ ɑn/",pos:"phr.v.",cn:"仰賴、依靠",def:"To depend on someone or something regularly.",ex:"Many elderly people rely on their neighbors to help them buy groceries.",exCn:"許多年長者仰賴鄰居幫忙買日用品。"}
   ],
   questions:[
     {q:"Why did the Red Line have delays this week?",qCn:"這週紅線為什麼會延誤？",
@@ -4757,12 +4757,12 @@ articles:[
   target:[
     {w:"boarded",ipa:"/bɔːrdɪd/",pos:"v.",cn:"登機、上（交通工具）",def:"Got onto a plane, train, or ship.",ex:"We boarded the ferry just minutes before it left the harbor.",exCn:"我們在渡輪離港前幾分鐘才上船。"},
     {w:"mechanical inspection",ipa:"/məˈkænɪkl ɪnˈspekʃn/",pos:"n.",cn:"機械檢查",def:"A check to make sure a machine, such as an aircraft, is working safely.",ex:"Every taxi must pass a mechanical inspection once a year.",exCn:"每輛計程車每年都必須通過一次機械檢查。"},
-    {w:"resigning themselves to",ipa:"/rɪˈzaɪnɪŋ ðəmˈselvz tuː/",pos:"phr.",cn:"認命接受、無奈接受",def:"Accepting something unpleasant because you cannot change it.",ex:"Resigning themselves to a long wait, the passengers sat down on the floor.",exCn:"乘客們認命接受要等很久的事實，就在地板上坐了下來。"},
+    {w:"resigning themselves to",ipa:"/rɪˈzaɪnɪŋ ðəmˈselvz tuː/",pos:"phr.",cn:"認命接受、無奈接受",def:"Accepting something unpleasant because you cannot change it.",ex:"With the highway closed for repairs, many commuters are resigning themselves to an extra hour on the road.",exCn:"由於高速公路封閉維修，許多通勤族只好認命接受每天多花一小時在路上。"},
     {w:"absorb",ipa:"/əbˈzɔːrb/",pos:"v.",cn:"承受、消化（衝擊）",def:"To deal with something difficult without being badly affected by it.",ex:"Small shops cannot absorb a sudden rise in rent the way big chains can.",exCn:"小店沒辦法像大型連鎖店那樣承受租金突然上漲。"},
-    {w:"backup",ipa:"/ˈbækʌp/",pos:"adj.",cn:"備用的",def:"Kept ready to use if the main one fails.",ex:"a backup charger, a downloaded document, a flexible mindset about what \"on time\" really means.",exCn:"備用充電器、事先下載好的文件、對「準時」這件事保有彈性的心態。"},
-    {w:"productively",ipa:"/prəˈdʌktɪvli/",pos:"adv.",cn:"有效率地、有生產力地",def:"In a way that produces good, useful results.",ex:"What mattered more... was whether the traveler could keep working productively while waiting.",exCn:"更重要的是旅客能不能在等待的同時仍然有效率地工作。"},
-    {w:"scheduled",ipa:"/ˈskedʒuːld/",pos:"adj.",cn:"表定的、預定的",def:"Planned to happen at a particular time.",ex:"Three hours later than scheduled, the flight finally took off.",exCn:"比表定時間晚了三小時，班機終於起飛。"},
-    {w:"protecting",ipa:"/prəˈtektɪŋ/",pos:"v.",cn:"保護、守住",def:"Keeping something safe from being lost or damaged.",ex:"That, she said, was the real skill of business travel: protecting what actually mattered.",exCn:"她說，這才是商務出差真正的本事：守住真正重要的事。"}
+    {w:"backup",ipa:"/ˈbækʌp/",pos:"adj.",cn:"備用的",def:"Kept ready to use if the main one fails.",ex:"Photographers at weddings always bring a backup camera in case the main one stops working.",exCn:"婚禮攝影師總會帶一台備用相機，以防主相機故障。"},
+    {w:"productively",ipa:"/prəˈdʌktɪvli/",pos:"adv.",cn:"有效率地、有生產力地",def:"In a way that produces good, useful results.",ex:"During her recovery from knee surgery, Rachel spent her time productively by learning to code online.",exCn:"瑞秋膝蓋手術後休養期間，很有效率地利用時間上網學寫程式。"},
+    {w:"scheduled",ipa:"/ˈskedʒuːld/",pos:"adj.",cn:"表定的、預定的",def:"Planned to happen at a particular time.",ex:"The scheduled maintenance of the banking app means users cannot log in until 6 a.m.",exCn:"銀行 App 的預定維護作業，代表使用者要到早上六點才能登入。"},
+    {w:"protecting",ipa:"/prəˈtektɪŋ/",pos:"v.",cn:"保護、守住",def:"Keeping something safe from being lost or damaged.",ex:"Parents are increasingly focused on protecting their children's privacy when posting family photos online.",exCn:"家長在網路上發布家庭照片時，越來越重視保護孩子的隱私。"}
   ],
   questions:[
     {q:"Why was Anita's flight delayed?",qCn:"Anita的班機為什麼延誤？",
@@ -4807,11 +4807,11 @@ articles:[
      cn:"現在奶奶在家休息，喝著溫茶。她很快就會好轉，所以Tom現在不擔心了。Tom這個週末可以再去看她，關心她的狀況。"}
   ],
   target:[
-    {w:"alone",ipa:"/əˈloʊn/",pos:"adj.",cn:"單獨的、獨自",def:"Without other people with you.",ex:"My grandmother lives alone, so I call her every evening.",exCn:"我奶奶一個人住，所以我每天晚上都打電話給她。"},
-    {w:"tired",ipa:"/ˈtaɪrd/",pos:"adj.",cn:"疲累的",def:"Feeling like you need to rest.",ex:"Last Saturday, Tom saw that grandma looked very tired.",exCn:"上週六，Tom發現奶奶看起來很累。"},
+    {w:"alone",ipa:"/əˈloʊn/",pos:"adj.",cn:"單獨的、獨自",def:"Without other people with you.",ex:"My cat does not like to stay home alone.",exCn:"我的貓不喜歡單獨待在家裡。"},
+    {w:"tired",ipa:"/ˈtaɪrd/",pos:"adj.",cn:"疲累的",def:"Feeling like you need to rest.",ex:"After the soccer game, the boys were hungry and tired.",exCn:"足球比賽結束後，男孩們又餓又累。"},
     {w:"headache",ipa:"/ˈhedeɪk/",pos:"n.",cn:"頭痛",def:"A pain inside your head.",ex:"I have a headache, so I am going to bed early tonight.",exCn:"我頭痛，所以今晚要早點睡。"},
     {w:"clinic",ipa:"/ˈklɪnɪk/",pos:"n.",cn:"診所",def:"A small place where doctors see patients.",ex:"The clinic near my office opens at nine in the morning.",exCn:"我辦公室附近的診所早上九點開門。"},
-    {w:"worried",ipa:"/ˈwɝːid/",pos:"adj.",cn:"擔心的",def:"Feeling nervous about something.",ex:"She will feel better soon, so Tom isn't worried now.",exCn:"她很快就會好轉，所以Tom現在不擔心了。"},
+    {w:"worried",ipa:"/ˈwɝːid/",pos:"adj.",cn:"擔心的",def:"Feeling nervous about something.",ex:"Dad is worried because it is raining and my brother has no umbrella.",exCn:"爸爸很擔心，因為在下雨而我弟弟沒帶傘。"},
     {w:"check on",ipa:"/tʃek ɑːn/",pos:"phr.",cn:"去看看（某人）、關心狀況",def:"To visit someone to see if they are okay.",ex:"Can you check on the baby? I think she is crying.",exCn:"你可以去看看寶寶嗎？我覺得她在哭。"}
   ],
   questions:[
@@ -4849,11 +4849,11 @@ articles:[
   ],
   target:[
     {w:"distance",ipa:"/ˈdɪstəns/",pos:"n.",cn:"距離",def:"The amount of space between two places.",ex:"The distance between the two stations is only two kilometers.",exCn:"這兩站之間的距離只有兩公里。"},
-    {w:"cough",ipa:"/kɔːf/",pos:"n.",cn:"咳嗽",def:"A sudden noise made when air is pushed out of the lungs.",ex:"She had a cough and felt very tired, but she said it was nothing serious.",exCn:"她有點咳嗽，也覺得很累，但她說沒什麼大礙。"},
-    {w:"serious",ipa:"/ˈsɪriəs/",pos:"adj.",cn:"嚴重的",def:"Important or dangerous, not small.",ex:"She had a cough and felt very tired, but she said it was nothing serious.",exCn:"她有點咳嗽，也覺得很累，但她說沒什麼大礙。"},
-    {w:"grandchildren",ipa:"/ˈɡrænˌtʃɪldrən/",pos:"n.",cn:"孫子孫女",def:"The children of your son or daughter.",ex:"Anita knew her mother, who takes care of two grandchildren every day, was more tired than usual.",exCn:"Anita知道媽媽每天要照顧兩個孫子，比平常更累。"},
+    {w:"cough",ipa:"/kɔːf/",pos:"n.",cn:"咳嗽",def:"A sudden noise made when air is pushed out of the lungs.",ex:"The singer had a bad cough, so she canceled her show that weekend.",exCn:"那位歌手咳嗽得很厲害，所以取消了那個週末的演出。"},
+    {w:"serious",ipa:"/ˈsɪriəs/",pos:"adj.",cn:"嚴重的",def:"Important or dangerous, not small.",ex:"Luckily, the car accident on the highway was not serious, and nobody was hurt.",exCn:"幸好高速公路上的車禍並不嚴重，沒有人受傷。"},
+    {w:"grandchildren",ipa:"/ˈɡrænˌtʃɪldrən/",pos:"n.",cn:"孫子孫女",def:"The children of your son or daughter.",ex:"My neighbor bakes cookies every Saturday when her grandchildren come to visit.",exCn:"我的鄰居每個星期六孫子孫女來訪時都會烤餅乾。"},
     {w:"harder",ipa:"/ˈhɑːrdɚ/",pos:"adj.",cn:"比較辛苦的（hard的比較級）",def:"Needing more effort; the comparative form of hard.",ex:"The second test was much harder than the first one.",exCn:"第二次考試比第一次難多了。"},
-    {w:"relieved",ipa:"/rɪˈliːvd/",pos:"adj.",cn:"鬆了一口氣的",def:"Feeling less worried after a problem is solved.",ex:"Now she feels much better, and Anita feels relieved and happy.",exCn:"現在她感覺好多了，Anita也鬆了一口氣、很開心。"}
+    {w:"relieved",ipa:"/rɪˈliːvd/",pos:"adj.",cn:"鬆了一口氣的",def:"Feeling less worried after a problem is solved.",ex:"The students felt relieved when the teacher said the quiz was postponed.",exCn:"老師說小考延期時，學生們都鬆了一口氣。"}
   ],
   questions:[
     {q:"Why did Anita feel worried about her mother during the phone call?",qCn:"Anita在通話中為什麼會擔心媽媽？",
@@ -4893,13 +4893,13 @@ articles:[
      cn:"健康專家提醒大家，微小的習慣真的會帶來不同的結果。常洗手、睡眠充足可以降低感染的風險。對像Anita這樣在外地工作的人來說，保持健康也代表讓媽媽少一件事情擔心。"}
   ],
   target:[
-    {w:"filled",ipa:"/fɪld/",pos:"adj.",cn:"擠滿的",def:"Completely full of something.",ex:"Every summer, clinics across Taiwan are filled with more patients than usual.",exCn:"每年夏天，台灣各地的診所都會擠滿比平常更多的病患。"},
-    {w:"affected",ipa:"/əˈfektɪd/",pos:"adj.",cn:"受影響的",def:"Influenced or changed by something, often in a bad way.",ex:"Thousands of affected families are still waiting for help after the flood.",exCn:"水災過後，數千個受影響的家庭仍在等待援助。"},
+    {w:"filled",ipa:"/fɪld/",pos:"adj.",cn:"擠滿的",def:"Completely full of something.",ex:"The small café was filled with the smell of fresh coffee and cinnamon rolls.",exCn:"這間小咖啡館裡充滿了現煮咖啡和肉桂捲的香味。"},
+    {w:"affected",ipa:"/əˈfektɪd/",pos:"adj.",cn:"受影響的",def:"Influenced or changed by something, often in a bad way.",ex:"Farmers in the affected areas lost most of their crops after the typhoon.",exCn:"颱風過後，受影響地區的農民損失了大部分作物。"},
     {w:"extended",ipa:"/ɪkˈstendɪd/",pos:"v.",cn:"延長了",def:"Made something longer in time.",ex:"The library has extended its opening hours during the exam period.",exCn:"圖書館在考試期間延長了開放時間。"},
-    {w:"telemedicine",ipa:"/ˌtelɪˈmedɪsɪn/",pos:"n.",cn:"遠距醫療",def:"Medical care given through a video call instead of an in-person visit.",ex:"Some people now choose telemedicine, a video call with a doctor from home.",exCn:"有些人現在選擇遠距醫療，也就是在家透過視訊看診。"},
+    {w:"telemedicine",ipa:"/ˌtelɪˈmedɪsɪn/",pos:"n.",cn:"遠距醫療",def:"Medical care given through a video call instead of an in-person visit.",ex:"My grandfather uses telemedicine to talk with his doctor without leaving his village.",exCn:"我爺爺透過遠距醫療和醫生看診，不必離開村子。"},
     {w:"consulted",ipa:"/kənˈsʌltɪd/",pos:"v.",cn:"（被）看診、諮詢",def:"Given professional advice, such as by a doctor.",ex:"Before taking the medicine, she consulted a pharmacist.",exCn:"吃藥之前，她先諮詢了藥師。"},
     {w:"infection",ipa:"/ɪnˈfekʃn/",pos:"n.",cn:"感染",def:"An illness caused by germs entering the body.",ex:"Wash the cut carefully to prevent an infection.",exCn:"仔細清洗傷口，以免感染。"},
-    {w:"pressure",ipa:"/ˈpreʃɚ/",pos:"n.",cn:"壓力、負擔",def:"A difficult situation that needs a lot of effort to deal with.",ex:"To ease the pressure, some people now choose telemedicine, a video call with a doctor from home.",exCn:"為了減輕負擔，有些人現在選擇遠距醫療，也就是在家透過視訊看診。"},
+    {w:"pressure",ipa:"/ˈpreʃɚ/",pos:"n.",cn:"壓力、負擔",def:"A difficult situation that needs a lot of effort to deal with.",ex:"The sudden rise in orders put a lot of pressure on the small delivery team.",exCn:"訂單突然暴增，給這個小小的外送團隊帶來很大的壓力。"},
     {w:"habits",ipa:"/ˈhæbɪts/",pos:"n.",cn:"習慣",def:"Things you regularly do, often without thinking.",ex:"Good sleep habits make a big difference to your energy level.",exCn:"良好的睡眠習慣對你的精力影響很大。"}
   ],
   questions:[
@@ -4946,11 +4946,11 @@ articles:[
      cn:"透過延長接種期，疾管署希望更多人，尤其是高風險族群，能在高峰來臨前完成接種。免費疫苗目前仍可在全國各醫院、診所與許多社區健康站施打。對於像Tom一家這樣的居民，以及像Anita這樣旅居海外的台灣人來說，訊息是一樣的：現在到診所走一趟，可能就能避免之後更長、更嚴重的一場病。"}
   ],
   target:[
-    {w:"authorities",ipa:"/əˈθɔːr.ə.t̬iz/",pos:"n.",cn:"當局、主管機關",def:"The government or officials in charge of something.",ex:"Taiwan's health authorities announced in late July that the country's free COVID-19 vaccination program, originally scheduled to end in July, would continue through the end of September.",exCn:"台灣衛生主管機關在七月下旬宣布，原訂七月結束的全民免費COVID-19疫苗接種計畫將延長至九月底。"},
+    {w:"authorities",ipa:"/əˈθɔːr.ə.t̬iz/",pos:"n.",cn:"當局、主管機關",def:"The government or officials in charge of something.",ex:"Local authorities closed the mountain trail after heavy rain caused several small landslides.",exCn:"地方主管機關在豪雨引發數起小規模土石崩落後封閉了登山步道。"},
     {w:"extension",ipa:"/ɪkˈstenʃn/",pos:"n.",cn:"延長",def:"A longer period of time given for something.",ex:"The company asked for a two-week extension on the project deadline.",exCn:"公司要求把專案期限延長兩週。"},
     {w:"variant",ipa:"/ˈveriənt/",pos:"n.",cn:"（病毒）變異株",def:"A slightly different form of a virus.",ex:"Scientists are studying a new variant of the flu virus.",exCn:"科學家正在研究一種新的流感病毒變異株。"},
     {w:"peak",ipa:"/piːk/",pos:"n./v.",cn:"高峰、達到高峰",def:"The highest point of something.",ex:"Ticket prices usually peak during the summer holidays.",exCn:"票價通常在暑假期間達到高峰。"},
-    {w:"severe",ipa:"/sɪˈvɪr/",pos:"adj.",cn:"嚴重的",def:"Very bad or serious.",ex:"They also pointed to a worrying pattern: more than ninety percent of people who developed severe symptoms this season had not received this year's updated vaccine.",exCn:"他們也指出一個令人擔憂的現象：這一季出現重症症狀的人當中，超過九成都還沒接種今年更新版的疫苗。"},
+    {w:"severe",ipa:"/sɪˈvɪr/",pos:"adj.",cn:"嚴重的",def:"Very bad or serious.",ex:"The farmers faced severe losses when an early frost destroyed most of the strawberry crop.",exCn:"早來的霜害摧毀了大部分草莓，農民蒙受嚴重損失。"},
     {w:"chronic",ipa:"/ˈkrɑː.nɪk/",pos:"adj.",cn:"慢性的",def:"Lasting a long time, often used for illnesses.",ex:"He has suffered from chronic back pain for years.",exCn:"他多年來一直受慢性背痛所苦。"},
     {w:"vaccinated",ipa:"/ˈvæksɪneɪtɪd/",pos:"adj.",cn:"接種疫苗的",def:"Having received a vaccine.",ex:"Only vaccinated travelers were allowed to enter the country.",exCn:"只有接種過疫苗的旅客才獲准入境。"},
     {w:"available",ipa:"/əˈveɪləbl/",pos:"adj.",cn:"可取得的",def:"Able to be used or obtained.",ex:"The new model will be available in stores next month.",exCn:"新款下個月就會在店裡買得到。"}
@@ -4998,12 +4998,12 @@ articles:[
      cn:"我們十點半回到家。我很累，但玩得很開心。"}
   ],
   target:[
-    {w:"night market",ipa:"/naɪt ˈmɑːrkɪt/",pos:"n.",cn:"夜市",def:"A street market that opens at night.",ex:"We eat at the night market every Saturday.",exCn:"我們每週六都去夜市吃東西。"},
+    {w:"night market",ipa:"/naɪt ˈmɑːrkɪt/",pos:"n.",cn:"夜市",def:"A street market that opens at night.",ex:"Visitors love trying stinky tofu at a busy night market in Taipei.",exCn:"遊客很喜歡在台北熱鬧的夜市嚐臭豆腐。"},
     {w:"take the bus",ipa:"/teɪk ðə bʌs/",pos:"phr.",cn:"搭公車",def:"To travel by bus.",ex:"I take the bus to school because it is cheap.",exCn:"我搭公車上學，因為很便宜。"},
     {w:"buy",ipa:"/baɪ/",pos:"v.",cn:"買（過去式 bought）",def:"To get something with money.",ex:"She bought a new umbrella because it was raining.",exCn:"因為在下雨，她買了一把新雨傘。"},
     {w:"cheap",ipa:"/tʃiːp/",pos:"adj.",cn:"便宜的",def:"Not costing a lot of money.",ex:"This shirt was very cheap. It was only two hundred dollars.",exCn:"這件襯衫很便宜，只要兩百元。"},
-    {w:"tired",ipa:"/ˈtaɪrd/",pos:"adj.",cn:"累的",def:"Needing rest or sleep.",ex:"I was tired, but I had a great time.",exCn:"我很累，但玩得很開心。"},
-    {w:"have a great time",ipa:"/hæv ə ɡreɪt taɪm/",pos:"phr.",cn:"玩得很開心",def:"To enjoy yourself very much.",ex:"We had a great time at the beach last weekend.",exCn:"我們上週末在海邊玩得很開心。"}
+    {w:"tired",ipa:"/ˈtaɪrd/",pos:"adj.",cn:"累的",def:"Needing rest or sleep.",ex:"She was too tired to cook after work, so she ordered pizza.",exCn:"她下班後太累不想煮飯，所以叫了披薩。"},
+    {w:"have a great time",ipa:"/hæv ə ɡreɪt taɪm/",pos:"phr.",cn:"玩得很開心",def:"To enjoy yourself very much.",ex:"I hope you have a great time on your ski trip to Hokkaido next week.",exCn:"祝你下週去北海道滑雪玩得很開心。"}
   ],
   questions:[
     {q:"How did the writer go to the night market?",qCn:"作者是怎麼去夜市的？",opts:["A. By car","B. By bus","C. By train","D. On foot"],optsCn:["A. 開車", "B. 搭公車", "C. 搭火車", "D. 走路"],ans:1,expl:"We took the bus and got there at seven."},
@@ -5040,7 +5040,7 @@ articles:[
     {w:"typhoon",ipa:"/taɪˈfuːn/",pos:"n.",cn:"颱風",def:"A very strong storm with heavy rain and wind.",ex:"Schools were closed for two days because of the typhoon.",exCn:"因為颱風，學校停課了兩天。"},
     {w:"flooding",ipa:"/ˈflʌdɪŋ/",pos:"n.",cn:"淹水、水災",def:"When water covers an area that is usually dry.",ex:"Heavy rain caused flooding in several parts of the city.",exCn:"大雨造成市區好幾個地方淹水。"},
     {w:"fall down",ipa:"/fɔːl daʊn/",pos:"phr.v.",cn:"倒下、掉下來",def:"To drop from a standing position to the ground.",ex:"Be careful, the old fence might fall down in the strong wind.",exCn:"小心，那道舊圍籬可能會被強風吹倒。"},
-    {w:"drain",ipa:"/dreɪn/",pos:"n.",cn:"排水溝",def:"A pipe or channel that carries water away.",ex:"The drain outside our house was full of leaves.",exCn:"我們家外面的排水溝塞滿了落葉。"},
+    {w:"drain",ipa:"/dreɪn/",pos:"n.",cn:"排水溝",def:"A pipe or channel that carries water away.",ex:"Hair and soap had blocked the shower drain, so water covered the bathroom floor.",exCn:"頭髮和肥皂堵住了淋浴間的排水口，結果水淹滿了浴室地板。"},
     {w:"sunset",ipa:"/ˈsʌnset/",pos:"n.",cn:"日落、夕陽",def:"The time when the sun goes down and the sky turns red or orange.",ex:"We watched the sunset from the top of the hill.",exCn:"我們在山頂上看日落。"}
   ],
   questions:[
@@ -5075,10 +5075,10 @@ articles:[
      cn:"好消息是颱風預計今晚會轉向北方，明天下午就會離開台灣。我已經把火車票改訂到週五了。現在我先在家工作，希望不要停電。"}
   ],
   target:[
-    {w:"weather bureau",ipa:"/ˈweðɚ ˈbjʊroʊ/",pos:"n.",cn:"氣象局",def:"A government office that studies and reports the weather.",ex:"The weather bureau says the rain will stop by Friday.",exCn:"氣象局說雨到週五就會停。"},
+    {w:"weather bureau",ipa:"/ˈweðɚ ˈbjʊroʊ/",pos:"n.",cn:"氣象局",def:"A government office that studies and reports the weather.",ex:"According to Taiwan's weather bureau, next weekend will be sunny, so it is a good time for hiking.",exCn:"根據台灣氣象局的預報，下週末會是晴天，所以是去爬山的好時機。"},
     {w:"sea warning",ipa:"/siː ˈwɔːrnɪŋ/",pos:"n.",cn:"海上警報",def:"An official notice about dangerous weather near the coast.",ex:"Fishing boats returned to port after the sea warning was issued.",exCn:"海上警報發布後，漁船都回港了。"},
-    {w:"suspend",ipa:"/səˈspend/",pos:"v.",cn:"暫停",def:"To stop something for a period of time.",ex:"Train services have been suspended.",exCn:"火車停駛了。"},
-    {w:"higher ground",ipa:"/ˈhaɪr ɡraʊnd/",pos:"n.",cn:"高處、地勢較高的地方",def:"Land that is above the level that floods reach.",ex:"She moved to her parents' house on higher ground.",exCn:"她搬去住在高處的爸媽家。"},
+    {w:"suspend",ipa:"/səˈspend/",pos:"v.",cn:"暫停",def:"To stop something for a period of time.",ex:"The school decided to suspend swimming lessons until the broken pool heater is repaired.",exCn:"學校決定暫停游泳課，直到壞掉的泳池加熱器修好為止。"},
+    {w:"higher ground",ipa:"/ˈhaɪr ɡraʊnd/",pos:"n.",cn:"高處、地勢較高的地方",def:"Land that is above the level that floods reach.",ex:"When the river started rising, the farmers moved their cows to higher ground.",exCn:"河水開始上漲時，農夫們把牛群趕到地勢較高的地方。"},
     {w:"rebook",ipa:"/ˌriːˈbʊk/",pos:"v.",cn:"改訂、重新訂位",def:"To book a ticket again for a different time.",ex:"I had to rebook my flight for the following morning.",exCn:"我必須把航班改訂到隔天早上。"},
     {w:"work from home",ipa:"/wɝːk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home instead of going to the office.",ex:"Many people still work from home two days a week.",exCn:"很多人現在仍然每週在家工作兩天。"}
   ],
@@ -5123,13 +5123,13 @@ articles:[
   target:[
     {w:"departure board",ipa:"/dɪˈpɑːrtʃɚ bɔːrd/",pos:"n.",cn:"出境航班看板",def:"A screen at an airport that shows which flights are leaving.",ex:"I kept checking the departure board, but my gate had not been announced yet.",exCn:"我一直看著出境航班看板，但我的登機門還沒公布。"},
     {w:"ground (a flight)",ipa:"/ɡraʊnd/",pos:"v.",cn:"（航班）停飛",def:"To stop a plane from flying.",ex:"Thick fog grounded dozens of flights at the airport this morning.",exCn:"今天早上濃霧讓機場數十班航班停飛。"},
-    {w:"until further notice",ipa:"/ənˈtɪl ˈfɝːðɚ ˈnoʊtɪs/",pos:"phr.",cn:"直到另行通知",def:"From now until an official change is announced.",ex:"Flights had been grounded until further notice.",exCn:"航班被停飛，直到另行通知。"},
+    {w:"until further notice",ipa:"/ənˈtɪl ˈfɝːðɚ ˈnoʊtɪs/",pos:"phr.",cn:"直到另行通知",def:"From now until an official change is announced.",ex:"The swimming pool at our gym will remain closed for repairs until further notice.",exCn:"我們健身房的游泳池因維修將關閉，直到另行通知。"},
     {w:"voucher",ipa:"/ˈvaʊtʃɚ/",pos:"n.",cn:"券、兌換券",def:"A piece of paper you can use instead of money.",ex:"The hotel gave us a breakfast voucher to apologize for the noise.",exCn:"飯店給了我們一張早餐券，為噪音致歉。"},
-    {w:"waiting list",ipa:"/ˈweɪtɪŋ lɪst/",pos:"n.",cn:"候補名單",def:"A list of people waiting for something to become available.",ex:"The course is full, but you can put your name on the waiting list.",exCn:"這門課已經額滿，但你可以把名字登記在候補名單上。"},
+    {w:"waiting list",ipa:"/ˈweɪtɪŋ lɪst/",pos:"n.",cn:"候補名單",def:"A list of people waiting for something to become available.",ex:"The cooking class was full, so the studio put my name on a waiting list.",exCn:"烹飪課已經額滿，所以教室把我的名字列入候補名單。"},
     {w:"suspend",ipa:"/səˈspend/",pos:"v.",cn:"暫停、停駛",def:"To stop a service for a period of time.",ex:"The city will suspend bus services if the typhoon gets stronger.",exCn:"如果颱風增強，市府將暫停公車服務。"},
-    {w:"low-lying",ipa:"/ˌloʊ ˈlaɪɪŋ/",pos:"adj.",cn:"低窪的",def:"Close to sea level and easy to flood.",ex:"Residents of low-lying villages were moved to higher ground.",exCn:"低窪村落的居民被移往地勢較高的地方。"},
-    {w:"rebook",ipa:"/ˌriːˈbʊk/",pos:"v.",cn:"改訂、重新訂位",def:"To book a ticket again for a different time.",ex:"I was rebooked on Thursday's evening flight.",exCn:"我被改訂到週四晚上的航班。"},
-    {w:"out of your control",ipa:"/aʊt əv jɚ kənˈtroʊl/",pos:"phr.",cn:"不在你的掌控之中",def:"Something you cannot change or decide.",ex:"When everything is out of your control, stay calm.",exCn:"當一切都不在你的掌控中時，保持冷靜。"}
+    {w:"low-lying",ipa:"/ˌloʊ ˈlaɪɪŋ/",pos:"adj.",cn:"低窪的",def:"Close to sea level and easy to flood.",ex:"Farmers in low-lying fields often plant rice because the soil stays wet.",exCn:"低窪田地的農民常種稻米，因為土壤一直保持濕潤。"},
+    {w:"rebook",ipa:"/ˌriːˈbʊk/",pos:"v.",cn:"改訂、重新訂位",def:"To book a ticket again for a different time.",ex:"After my daughter got sick, I called the campsite to rebook our camping weekend for next month.",exCn:"女兒生病後，我打電話給露營區，把我們的露營週末改訂到下個月。"},
+    {w:"out of your control",ipa:"/aʊt əv jɚ kənˈtroʊl/",pos:"phr.",cn:"不在你的掌控之中",def:"Something you cannot change or decide.",ex:"Don't blame yourself for the bad reviews; the delivery delays were out of your control.",exCn:"別因為那些負評責怪自己，送貨延誤不在你的掌控之中。"}
   ],
   questions:[
     {q:"Why was the writer's flight cancelled?",qCn:"作者的班機為什麼被取消？",
@@ -5176,13 +5176,13 @@ articles:[
      cn:"官方建議很簡單：遠離海岸線，避免所有水域活動。風暴過後，西南風為西南部帶來零星陣雨，而全島大部分地區則維持炎熱晴朗，北部與中部午後有雷雨。"}
   ],
   target:[
-    {w:"issue a warning",ipa:"/ˈɪʃuː ə ˈwɔːrnɪŋ/",pos:"phr.",cn:"發布警報",def:"To officially tell the public about a danger.",ex:"The agency issued a sea warning.",exCn:"氣象單位發布了海上警報。"},
-    {w:"sustained winds",ipa:"/səˈsteɪnd wɪndz/",pos:"n.",cn:"持續風速",def:"Wind speed measured over a period of time, not a single gust.",ex:"Maximum sustained winds of 144 kph.",exCn:"最大持續風速為每小時 144 公里。"},
+    {w:"issue a warning",ipa:"/ˈɪʃuː ə ˈwɔːrnɪŋ/",pos:"phr.",cn:"發布警報",def:"To officially tell the public about a danger.",ex:"The park rangers had to issue a warning after bears were spotted near the campsite.",exCn:"營地附近發現熊的蹤跡後，公園管理員必須發布警告。"},
+    {w:"sustained winds",ipa:"/səˈsteɪnd wɪndz/",pos:"n.",cn:"持續風速",def:"Wind speed measured over a period of time, not a single gust.",ex:"Ferries stop running when sustained winds on the lake stay too strong for safe travel.",exCn:"當湖面的持續風速一直太強、無法安全航行時，渡輪就會停駛。"},
     {w:"storm radius",ipa:"/stɔːrm ˈreɪdiəs/",pos:"n.",cn:"暴風半徑",def:"The distance from the centre of a storm to its outer edge.",ex:"The storm radius is so wide that the whole island will feel strong winds.",exCn:"暴風半徑非常大，全島都會感受到強風。"},
-    {w:"make landfall",ipa:"/meɪk ˈlændfɔːl/",pos:"phr.",cn:"登陸",def:"When a storm reaches land from the sea.",ex:"It was not expected to make landfall in Taiwan.",exCn:"預計不會在台灣登陸。"},
-    {w:"forecaster",ipa:"/ˈfɔːrkæstɚ/",pos:"n.",cn:"預報人員",def:"A person whose job is to say what the weather will be.",ex:"Forecasters were confident about its path.",exCn:"預報人員對它的路徑很有把握。"},
-    {w:"alert",ipa:"/əˈlɝːt/",pos:"n.",cn:"警戒（等級）",def:"An official warning about a possible danger.",ex:"The area was placed under the highest rainfall alert.",exCn:"該地區被列入最高等級的降雨警報。"},
-    {w:"swell",ipa:"/swel/",pos:"n.",cn:"長浪、湧浪",def:"Long, slow waves far from where the wind is blowing.",ex:"Long swells were expected along the east coast.",exCn:"東岸預計會有長浪。"},
+    {w:"make landfall",ipa:"/meɪk ˈlændfɔːl/",pos:"phr.",cn:"登陸",def:"When a storm reaches land from the sea.",ex:"Residents boarded up their windows in case the hurricane would make landfall overnight.",exCn:"居民用木板封住窗戶，以防颶風在夜裡登陸。"},
+    {w:"forecaster",ipa:"/ˈfɔːrkæstɚ/",pos:"n.",cn:"預報人員",def:"A person whose job is to say what the weather will be.",ex:"The TV forecaster promised clear skies, so we packed a picnic for the beach.",exCn:"電視上的氣象預報員說會是晴天，所以我們準備了野餐去海邊。"},
+    {w:"alert",ipa:"/əˈlɝːt/",pos:"n.",cn:"警戒（等級）",def:"An official warning about a possible danger.",ex:"The city raised its heat alert, urging older people to stay indoors during the afternoon.",exCn:"市政府提高了高溫警戒，呼籲長者下午待在室內。"},
+    {w:"swell",ipa:"/swel/",pos:"n.",cn:"長浪、湧浪",def:"Long, slow waves far from where the wind is blowing.",ex:"Surfers drove to the north shore early, hoping to catch the big swell before noon.",exCn:"衝浪客一早開車到北岸，希望在中午前趕上大湧浪。"},
     {w:"scattered showers",ipa:"/ˈskætɚd ˈʃaʊrz/",pos:"n.",cn:"零星陣雨",def:"Short periods of rain in some places but not others.",ex:"Expect scattered showers in the afternoon, so bring an umbrella.",exCn:"下午會有零星陣雨，記得帶傘。"}
   ],
   questions:[
