@@ -145,7 +145,10 @@ describe('詞條顯示格式正規化（建置階段）', () => {
 
   it('不會產生半大小寫混雜的詞條', () => {
     // 例如 "CMM (Coordinate measuring machine)" 這種一半轉一半沒轉的結果
+    // 全小寫（跟 AQL 一致）或全標題式都可以，只擋一半一半；拼法會隨 QA 站資料變動
     const e = findWord('cmm (coordinate measuring machine)');
-    expect(e!.word).toBe('CMM (Coordinate Measuring Machine)');
+    const toks = e!.word.replace(/[()]/g, '').split(' ').filter((t) => t && !/^[A-Z]{2,}$/.test(t));
+    const caps = toks.filter((t) => /^[A-Z]/.test(t)).length;
+    expect(caps === 0 || caps === toks.length, e!.word).toBe(true);
   });
 })

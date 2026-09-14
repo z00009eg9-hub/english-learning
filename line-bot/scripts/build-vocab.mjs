@@ -149,7 +149,7 @@ function harvestSentences(globals, bucket) {
 }
 
 /* ---------- 詞形變化：讓 compensate 對得到 compensated / compensating ---------- */
-function variants(word) {
+function variants(word, { agent = true } = {}) {
   const w = norm(word);
   const out = new Set([w]);
   if (/[^aeiou]y$/.test(w)) out.add(w.slice(0, -1) + 'ies');
@@ -159,7 +159,8 @@ function variants(word) {
     out.add(w + 'd');
     out.add(w.slice(0, -1) + 'ing');
     out.add(w.slice(0, -1) + 'ion');
-    out.add(w.slice(0, -1) + 'or');
+    // -or 是另一個名詞（contribute → contributor），QA 例句要求一定含原字，只給 General 用
+    if (agent) out.add(w.slice(0, -1) + 'or');
   } else {
     out.add(w + 'ed');
     out.add(w + 'ing');
@@ -169,8 +170,8 @@ function variants(word) {
 
 const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-function matcherFor(word) {
-  const vs = variants(word).sort((a, b) => b.length - a.length).map(escRe);
+function matcherFor(word, opts) {
+  const vs = variants(word, opts).sort((a, b) => b.length - a.length).map(escRe);
   return new RegExp(`(^|[^a-z])(${vs.join('|')})([^a-z]|$)`, 'i');
 }
 
@@ -325,6 +326,7 @@ for (const issue of qa.QA_ISSUES || []) {
 const MAX_EX = 6;
 for (const e of words.values()) {
   const re = matcherFor(e.word);
+  const reQa = matcherFor(e.word, { agent: false });
   if (e.general.length < MAX_EX) {
     for (const s of genSentences) {
       if (e.general.length >= MAX_EX) break;
@@ -336,7 +338,7 @@ for (const e of words.values()) {
   }
   for (const s of qaSentences) {
     if (e.qa.length >= MAX_EX) break;
-    if (re.test(s.en)) pushEx(e.qa, s);
+    if (reQa.test(s.en)) pushEx(e.qa, s);
   }
   if (e.qa.length && e.source === 'general') e.source = 'both';
 
