@@ -1288,9 +1288,9 @@ dg20260911b2: {
       "title": "新聞開場句",
       "titleCn": "用時間長度開場",
       "ask": "新聞特稿開頭想營造『終於』的感覺，要怎麼寫？",
-      "en": "It has been almost three years since VietJet last flew to Tainan, and the route is finally returning.",
-      "cn": "VietJet距離上次飛台南已經將近三年了，這條航線終於要回歸。",
-      "why": "把時間長度放在句首，比直接說『航線回來了』更能營造『時間流逝、終於等到』的敘事張力，是新聞特稿常見的開場手法。"
+      "en": "It has been ten years since the old theater closed, and it is finally reopening this winter.",
+      "cn": "那間老戲院已經關了十年，今年冬天終於要重新開幕。",
+      "why": "把時間長度放在句首，比直接說『戲院要重開了』更能營造『時間流逝、終於等到』的敘事張力，是新聞特稿常見的開場手法。"
     },
     {
       "key": "since-clause",
@@ -1298,9 +1298,9 @@ dg20260911b2: {
       "title": "since接完整子句",
       "titleCn": "since不只能接年份",
       "ask": "since後面除了年份，還可以接什麼？",
-      "en": "It has been two years since the company suspended the route.",
-      "cn": "該公司暫停這條航線已經兩年了。",
-      "why": "since後面也可以接一個完整的子句（the company suspended the route），不是只能接年份或時間點。"
+      "en": "It has been six months since our team changed the inspection process.",
+      "cn": "我們團隊改變檢驗流程已經六個月了。",
+      "why": "since後面也可以接一個完整的子句（our team changed the inspection process），不是只能接年份或時間點。"
     },
     {
       "key": "formal-vs-casual",
@@ -1308,8 +1308,8 @@ dg20260911b2: {
       "title": "正式 vs 口語的選擇",
       "titleCn": "讀者會怎麼解讀",
       "ask": "寫報告時該用問句還是陳述句？",
-      "en": "It has been almost three years since the airline suspended this route.",
-      "cn": "這家航空公司暫停這條航線已經將近三年了。",
+      "en": "It has been a year since we last updated the safety manual.",
+      "cn": "我們上次更新安全手冊已經是一年前的事了。",
       "why": "正式寫作很少直接用問句How long has it been，而是用陳述句It has been...since...交代背景，讀起來更客觀、更像報導。"
     },
     {
@@ -1318,31 +1318,31 @@ dg20260911b2: {
       "title": "別漏掉虛主詞it",
       "titleCn": "常見的漏字錯誤",
       "ask": "這句話少了什麼字？",
-      "en": "How long has it been since you last visited?",
-      "cn": "你上次去是多久以前的事了？",
+      "en": "How long has it been since you last exercised?",
+      "cn": "你上次運動是多久以前的事了？",
       "why": "問句一定要有虛主詞it：How long has it been...，很多人會漏掉it，寫成How long has been since...是錯的。"
     }
   ],
   "steps": [
     {
       "label": "情境",
-      "text": "你在寫一篇新聞特稿，要交代『這條航線已經停飛多久了』。"
+      "text": "你在寫一份給主管的報告，要交代『公司已經多久沒跟這家供應商合作了』。"
     },
     {
       "label": "口語問法",
-      "text": "How long has it been since the airline flew this route?（口語問句）"
+      "text": "How long has it been since the company used this supplier?（口語問句）"
     },
     {
       "label": "改寫成陳述句",
-      "text": "It has been almost three years since the airline last flew this route.（正式陳述句）"
+      "text": "It has been three years since the company last used this supplier.（正式陳述句）"
     },
     {
       "label": "加上子句",
-      "text": "since後面可以接完整子句：since the company suspended the route。"
+      "text": "since後面接完整子句，句尾還能補上現況：It has been three years since the company last used this supplier, and we are now considering working with them again."
     },
     {
       "label": "修辭效果",
-      "text": "把時間長度放在句首，比直接說『航線回來了』更有『終於等到』的敘事張力，適合新聞開場。"
+      "text": "把時間長度放在句首，先讓讀者感受到『已經隔很久了』，再帶出『現在考慮重新合作』的轉折，報告更有重點。"
     }
   ],
   "comparison": {
@@ -1353,8 +1353,8 @@ dg20260911b2: {
       "icon": "eye",
       "head": "casual question",
       "headCn": "用問句",
-      "en": "How long has it been since you visited?",
-      "cn": "你多久沒來了？",
+      "en": "How long has it been since you last saw your cousins?",
+      "cn": "你多久沒見到表兄弟姊妹了？",
       "pts": [
         "用在日常對話",
         "直接問對方",
@@ -1367,8 +1367,8 @@ dg20260911b2: {
       "icon": "flag",
       "head": "formal statement",
       "headCn": "用陳述句",
-      "en": "It has been two years since I last visited.",
-      "cn": "我已經兩年沒來了。",
+      "en": "It has been five years since I last saw my cousins.",
+      "cn": "我已經五年沒見到表兄弟姊妹了。",
       "pts": [
         "用在新聞、報告、正式寫作",
         "把時間長度放在句首",
@@ -1379,7 +1379,7 @@ dg20260911b2: {
   },
   "quizMore": [
     {
-      "q": "It ___ two years since the company launched this service.",
+      "q": "It ___ a week since I last called my parents.",
       "opts": [
         "has been",
         "is",
@@ -1392,10 +1392,10 @@ dg20260911b2: {
     {
       "q": "Which is the correct question form?",
       "opts": [
-        "How long has it been since you visited?",
-        "How long has been since you visited?",
-        "How long is it since you visited?",
-        "How long has visited since you?"
+        "How long has it been since you called me?",
+        "How long has been since you called me?",
+        "How long is it since you called me?",
+        "How long has called since you?"
       ],
       "ans": 0,
       "expl": "問句需要虛主詞it，正確形式是How long has it been since...？"

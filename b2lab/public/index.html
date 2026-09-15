@@ -1199,6 +1199,9 @@ sup.tno{color:#c0392b;font-weight:var(--fw-title);font-size:var(--font-meta);pad
 .ssp{font-size:var(--font-secondary);font-weight:800;color:var(--accent2);margin-bottom:2px}
 #sublist.noen .sen{visibility:hidden}
 #sublist.nocn .scn{display:none}
+/* 聽前單字的中文翻譯跟全站「中譯」開關連動 */
+#v-listen .precn{display:none}
+body.cnall #v-listen .precn{display:block}
 /* ---------- 文法重點深入說明 ---------- */
 .focus{background:#fff8f1;border:1.5px solid #f2d3b3;border-radius:14px;padding:16px;margin-bottom:14px}
 .focus h3{margin:0 0 4px;font-size:var(--font-section-title);font-weight:800;color:var(--accent2);letter-spacing:.2px}
@@ -1765,6 +1768,8 @@ function boldEnSpk(html){
     return seg.replace(/[A-Za-z][A-Za-z0-9''\-]*(?:[ ,]+[A-Za-z0-9''\-]+){2,}[.!?]*/g,(m,off,str)=>{
       const before=str.slice(Math.max(0,off-14),off);
       if(/不能說|不說|不能寫成|不可說|不可寫|別說|[✗✘×]/.test(before)) return '<b class="wrong">'+m+'</b>';
+      const after=str.slice(off+m.length,off+m.length+3);
+      if(/\.\.\.|…/.test(m)||/^\s*[+＋]/.test(after)||/[+＋]\s*$/.test(before)) return '<b>'+m+'</b>';
       return '<b>'+m+'</b>'+spk(m);
     });
   }).join('');
@@ -6313,8 +6318,8 @@ function lessonHTML(l){
   if((l.pre||[]).length){
     h+='<div class="card"><h2 class="sec">🔤 聽前先看這些字 ('+l.pre.length+')</h2>'
      + l.pre.map(t=>'<div class="ex"><div class="een" style="font-size:var(--font-body);font-weight:700">'+esc(t.w)+' '+spk(t.w)+'</div>'
-       +'<div style="font-family:ui-monospace,monospace;font-size:var(--font-meta);color:var(--ink2)">'+esc(t.ipa||'')+'</div>'
-       +'<div style="color:var(--accent2);font-weight:700;font-size:var(--font-body)">'+esc(t.cn)+'</div>'
+       +'<div style="font-family:ui-monospace,monospace;font-size:var(--font-meta);color:var(--ink2)">'+esc(t.ipa||'')+(t.pos?' <i style="font-family:inherit;color:var(--accent2)">'+esc(t.pos)+'</i>':'')+'</div>'
+       +'<div class="precn" style="color:var(--accent2);font-weight:700;font-size:var(--font-body)">'+esc(t.cn)+'</div>'
        +'<div class="ecn">'+esc(t.def||'')+'</div></div>').join('')+'</div>';
   }
   if(!klSc && (l.keyLines||[]).length){

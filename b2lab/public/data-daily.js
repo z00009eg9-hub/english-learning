@@ -7091,27 +7091,27 @@ grammar:[
       },
       "examples": [
         {
-          "en": "How long has it been since the airline flew this route?",
-          "cn": "這家航空公司距離上次飛這條航線已經多久了？",
+          "en": "How long has it been since you changed jobs?",
+          "cn": "你換工作多久了？",
           "note": "口語問法"
         },
         {
-          "en": "It has been almost three years since the airline last flew this route.",
-          "cn": "這家航空公司距離上次飛這條航線已經將近三年了。",
-          "note": "正式陳述句，常見於新聞報導"
+          "en": "It has been two years since I changed jobs.",
+          "cn": "我換工作已經兩年了。",
+          "note": "正式陳述句，把時間長度放在句首"
         }
       ]
     },
     {
       "h": "since也可以接完整子句，不只是時間點",
       "bullets": [
-        "since不只能接年份，也能接一個完整的句子，例如since the route was suspended",
+        "since不只能接年份，也能接一個完整的句子，例如since my family moved to Taichung",
         "這種用法在新聞或敘事寫作中特別常見，用來交代『距離某件事發生已經過了多久』"
       ],
       "examples": [
         {
-          "en": "It has been two years since the company suspended the route.",
-          "cn": "該公司暫停這條航線已經兩年了。",
+          "en": "It has been two years since my family moved to Taichung.",
+          "cn": "我們家搬到台中已經兩年了。",
           "note": "since後面接完整子句"
         }
       ]
@@ -7119,26 +7119,26 @@ grammar:[
     {
       "h": "修辭效果：用duration開頭營造敘事張力",
       "bullets": [
-        "把It has been X years since...放在段落開頭，比直接說『事情發生了』更能營造『時間流逝』的敘事張力，常見於新聞特稿與故事開場"
+        "把It has been + 時間 + since...放在段落開頭，比直接說『事情發生了』更能營造『時間流逝』的敘事張力，常見於新聞特稿與故事開場"
       ],
       "examples": [
         {
-          "en": "It has been almost three years since VietJet last flew to Tainan, and the route is finally returning.",
-          "cn": "VietJet距離上次飛台南已經將近三年了，這條航線終於要回歸。",
-          "note": "用時間長度開頭，製造『終於』的張力"
+          "en": "It has been twenty years since the band last played in Taipei, and tickets sold out in minutes.",
+          "cn": "這個樂團已經二十年沒在台北演出了，門票幾分鐘就賣光。",
+          "note": "先交代隔了多久，再帶出『秒殺』的張力"
         }
       ]
     }
   ],
   "traps": [
     {
-      "bad": "It is three years since the airline flew this route.",
-      "good": "It has been three years since the airline flew this route.",
+      "bad": "It is six months since I joined this team.",
+      "good": "It has been six months since I joined this team.",
       "why": "It has been...since...固定用現在完成式的has been，不能用is。"
     },
     {
-      "bad": "It has been three years the airline suspended the route.",
-      "good": "It has been three years since the airline suspended the route.",
+      "bad": "It has been three weeks I last exercised.",
+      "good": "It has been three weeks since I last exercised.",
       "why": "忘記加since，since在這個句型裡不能省略。"
     },
     {
@@ -7147,15 +7147,15 @@ grammar:[
       "why": "問句需要虛主詞it：How long has it been...，不能省略it。"
     },
     {
-      "bad": "It has been three years that the airline suspended the route.",
-      "good": "It has been three years since the airline suspended the route.",
+      "bad": "It has been a year that my sister moved to Canada.",
+      "good": "It has been a year since my sister moved to Canada.",
       "why": "這個句型固定用since，不能用that取代。"
     }
   ],
   "quiz": [
     {
-      "q": "It ___ almost three years since the airline suspended the route.",
-      "qCn": "這家航空公司暫停這條航線已經將近三年了。",
+      "q": "It ___ almost a year since our factory changed the packaging.",
+      "qCn": "我們工廠更換包裝已經將近一年了。",
       "opts": [
         "has been",
         "is",
