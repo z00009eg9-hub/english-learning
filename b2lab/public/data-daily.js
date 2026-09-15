@@ -367,204 +367,224 @@ articles:[
   "id": "d20260915b1p",
   "date": "2026-09-15",
   "level": "B1+",
-  "topic": "職場與面試",
-  "words": 157,
-  "kind": "orig",
-  "title": "The Questions Anita Learned to Ask",
-  "titleCn": "Anita學會該問的問題",
-  "focus": "被動語態與現在完成式＋被動（had been prepared, has been trusted, were sent out）；關係子句（which）補充資訊；for/since講持續時間",
+  "topic": "新聞·職場",
+  "words": 220,
+  "kind": "news",
+  "title": "Hiring for Impact, Not for Scale",
+  "titleCn": "為影響力招募，不再為規模招募",
+  "source": "改寫自 天下雜誌（CommonWealth Magazine）英文版報導（2026/01/29）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://english.cw.com.tw/article/article.action?id=4592",
+  "focus": "現在完成式講持續時間，for 與 since 的對比（have hired for..., has changed since..., has stayed for..., have been focusing since...）；並穿插被動語態、現在完成式＋被動與關係子句。",
   "upFrom": "B1+",
   "upTo": "B2",
-  "intro": "當了五年品質工程師之後，Anita第一次坐到面試官的位子上。文章開始使用被動語態與現在完成式＋被動（had been prepared, has been trusted），也用which帶出的關係子句補充資訊，是B1+進階的句型重點。",
+  "intro": "這是一篇改寫自天下雜誌英文版報導的新聞短文，談台灣2026年的就業市場。閱讀時特別留意for與since怎麼搭配現在完成式來表達『持續多久』與『從何時開始』，這正是今天B1+文法單元的重點；也注意文章如何用被動語態（will be raised、have been affected）與關係子句（which…）鋪陳資訊。",
   "spoken": [
     {
-      "en": "So after five years as an engineer, Anita suddenly gets pulled in to help interview new hires.",
-      "cn": "當了五年工程師之後，Anita突然被找去幫忙面試新人。"
+      "en": "So the whole vibe in Taiwan's job market has flipped — it's not about hiring tons of people anymore.",
+      "cn": "所以台灣就業市場整個氛圍都翻轉了——重點不再是狂徵一大堆人。"
     },
     {
-      "en": "Weird part is, she's spent her whole career on the other side of that table, answering the questions.",
-      "cn": "詭異的地方在於，她整個職涯都坐在桌子的另一邊，是回答問題的那個人。"
+      "en": "Companies would rather grab a few people who really move the needle than fill a room with headcount.",
+      "cn": "公司寧可搶幾個真的能帶來改變的人，也不想只是把位子塞滿。"
     },
     {
-      "en": "She figures out fast that the confident talkers aren't always the ones who actually fit the team.",
-      "cn": "她很快就發現，很會講、很有自信的人不見得就是真的適合團隊的人。"
+      "en": "If you're into AI or chips right now, you can basically name your price — raises of like 30% are a thing.",
+      "cn": "如果你現在是搞AI或半導體的，基本上薪水你說了算——三成的加薪是真的有在發生。"
     },
     {
-      "en": "Her trick ends up being simple — just ask how long they've actually done the thing, and listen.",
-      "cn": "她的訣竅最後其實很簡單——就問他們這件事到底做了多久，然後好好聽。"
+      "en": "And nobody cares how long your job title sounds anymore; they care what you can actually do.",
+      "cn": "而且現在沒人管你的職稱聽起來多厲害，他們在乎的是你實際上會做什麼。"
     }
   ],
   "paras": [
     {
-      "en": "After five years as a quality engineer in Vietnam, Anita was recently asked to help interview new staff. She had always sat on the other side of the table, so the change felt strange at first.",
-      "cn": "在越南當了五年品質工程師之後，Anita最近被找去幫忙面試新進人員。她過去一直坐在桌子的另一邊，所以這個轉變一開始讓她覺得很陌生。"
+      "en": "For several years, companies in Taiwan have hired workers in large numbers. Since early 2026, that approach has changed. A new salary survey has found that firms are now hiring for impact rather than for scale — a strategy some call \"precision planning.\" Employers compete hard for the few people who can make a real difference.",
+      "cn": "好幾年來，台灣的公司都大量招募員工來快速擴張。從2026年初開始，這套做法改變了。一份新的薪資調查發現，企業現在招募看重的是『影響力』而不是『規模』——有些人把這種策略稱為『精準規劃』。企業是為了少數幾個真正能帶來改變的人才而激烈競爭。"
     },
     {
-      "en": "The candidates she met had been prepared in very different ways. Some had been coached by friends; others had practiced alone for weeks. Anita noticed that the most confident ones were not always the best fit for the team.",
-      "cn": "她面試到的應徵者，準備的方式非常不同。有些人是被朋友特訓過的；有些人則是自己一個人練習了好幾個禮拜。Anita注意到，最有自信的那些人，不見得就是最適合團隊的人。"
+      "en": "The new mood is cautious. About 40% of employers plan to hire more, while 44% will keep their teams the same size. Pay is expected to rise: 90% of companies say salaries will be raised in 2026, most by 3% to 6%. Specialists in AI and semiconductors are valued highly, and some may be offered raises of up to 30%.",
+      "cn": "這股新氛圍很謹慎。約有40%的雇主打算增聘人手，44%則會維持團隊原本的規模。薪水普遍預期會上漲：90%的公司表示2026年會調升薪資，多數漲幅落在3%到6%之間。AI與半導體領域的專才特別搶手，其中有些人可能拿到高達三成的加薪。"
     },
     {
-      "en": "She learned to ask how long each person had done certain tasks, since a clear timeline often revealed real experience. \"How long have you worked with this software?\" she would ask, and the honest answers were easy to spot.",
-      "cn": "她學會去問每個人某些工作『做了多久』，因為一條清楚的時間線常常能顯露出真正的經驗。「你用這套軟體多久了？」她會這樣問，而誠實的回答一聽就聽得出來。"
+      "en": "Employers have also changed what they reward. Skills that are scarce now count for more than job titles or years of service. Geopolitics matters too: 94% of technology firms say they have been affected by rising tension and US trade policy, which has forced them to rethink their supply chains and hiring.",
+      "cn": "雇主看重的東西也變了。稀缺的技能，如今比職稱或年資更有份量。地緣政治也是原因之一：有94%的科技公司表示，他們已經受到升高的緊張情勢與美國貿易政策的影響，這迫使他們重新思考自己的供應鏈與招募方式。"
     },
     {
-      "en": "By the end of the week, three people had been chosen, and offer letters were quickly sent out. Anita realized that good interviewing is a skill which must be practiced, just like the work itself. She has been trusted with it ever since.",
-      "cn": "到了週末，已經選出三個人，錄取通知也很快就寄了出去。Anita體會到，好的面試本身就是一種必須練習的技能，就跟工作一樣。從那之後，這件事就一直交由她負責。"
+      "en": "Because unemployment has stayed near 3% to 4% for a long time, skilled workers still have room to choose. Companies say they have been focusing on fairness, flexible working, and stronger leadership since the pandemic reshaped the office. For jobseekers, the market has not shrunk, but it has grown far more selective.",
+      "cn": "由於失業率長期以來一直維持在3%到4%左右，有技術的工作者仍有選擇的空間。企業表示，自從疫情重塑了辦公室之後，他們一直把重心放在公平、彈性工作，以及更強的領導力上。對求職者而言，市場並沒有縮小，只是變得挑剔多了。"
     }
   ],
   "target": [
     {
-      "w": "candidate",
-      "ipa": "/ˈkændɪdət/",
+      "w": "scale",
+      "ipa": "/skeɪl/",
       "pos": "n.",
-      "cn": "應徵者、候選人",
-      "def": "A person who is being considered for a job or position.",
-      "ex": "The candidates she met had been prepared in very different ways.",
-      "exCn": "她面試到的應徵者，準備的方式非常不同。"
+      "cn": "規模",
+      "def": "The size or amount of something, especially when it is large.",
+      "ex": "Firms are now hiring for impact rather than for scale.",
+      "exCn": "企業現在招募看重的是影響力而不是規模。"
     },
     {
-      "w": "coach",
-      "ipa": "/koʊtʃ/",
-      "pos": "v.",
-      "cn": "特訓、指導",
-      "def": "To train or teach someone to do something better.",
-      "ex": "Some had been coached by friends.",
-      "exCn": "有些人是被朋友特訓過的。"
-    },
-    {
-      "w": "confident",
-      "ipa": "/ˈkɑːn.fə.dənt/",
-      "pos": "adj.",
-      "cn": "有自信的",
-      "def": "Sure that you can do things well.",
-      "ex": "The most confident ones were not always the best fit.",
-      "exCn": "最有自信的那些人不見得就是最適合的人。"
-    },
-    {
-      "w": "timeline",
-      "ipa": "/ˈtaɪmlaɪn/",
+      "w": "impact",
+      "ipa": "/ˈɪmpækt/",
       "pos": "n.",
-      "cn": "時間線、時間軸",
-      "def": "The order in which a series of events happened over time.",
-      "ex": "A clear timeline often revealed real experience.",
-      "exCn": "一條清楚的時間線常常能顯露出真正的經驗。"
+      "cn": "影響、影響力",
+      "def": "A strong effect that something has on a situation or person.",
+      "ex": "Firms are now hiring for impact rather than for scale.",
+      "exCn": "企業現在招募看重的是影響力而不是規模。"
     },
     {
-      "w": "reveal",
-      "ipa": "/rɪˈviːl/",
+      "w": "strategy",
+      "ipa": "/ˈstrætədʒi/",
+      "pos": "n.",
+      "cn": "策略",
+      "def": "A plan for reaching a goal over a period of time.",
+      "ex": "Firms are hiring for impact — a strategy some call \"precision planning.\"",
+      "exCn": "企業以影響力為招募重點——有些人把這種策略稱為『精準規劃』。"
+    },
+    {
+      "w": "compete",
+      "ipa": "/kəmˈpiːt/",
       "pos": "v.",
-      "cn": "顯露、透露",
-      "def": "To make something known that was hidden.",
-      "ex": "A clear timeline often revealed real experience.",
-      "exCn": "一條清楚的時間線常常能顯露出真正的經驗。"
+      "cn": "競爭",
+      "def": "To try hard to win or get something that others also want.",
+      "ex": "Employers compete hard for the few people who can make a real difference.",
+      "exCn": "企業為了少數幾個真正能帶來改變的人才而激烈競爭。"
     },
     {
-      "w": "honest",
-      "ipa": "/ˈɑːnɪst/",
+      "w": "specialist",
+      "ipa": "/ˈspeʃəlɪst/",
+      "pos": "n.",
+      "cn": "專才、專家",
+      "def": "A person with deep skill or knowledge in one area.",
+      "ex": "Specialists in AI and semiconductors are valued highly.",
+      "exCn": "AI與半導體領域的專才特別搶手。"
+    },
+    {
+      "w": "scarce",
+      "ipa": "/skers/",
       "pos": "adj.",
-      "cn": "誠實的",
-      "def": "Telling the truth and not hiding facts.",
-      "ex": "The honest answers were easy to spot.",
-      "exCn": "誠實的回答一聽就聽得出來。"
+      "cn": "稀少的、稀缺的",
+      "def": "Hard to find because there is not enough of it.",
+      "ex": "Skills that are scarce now count for more than job titles.",
+      "exCn": "稀缺的技能如今比職稱更有份量。"
     },
     {
-      "w": "trust",
-      "ipa": "/trʌst/",
-      "pos": "v.",
-      "cn": "信任、託付",
-      "def": "To believe that someone is good and will do things well.",
-      "ex": "She has been trusted with it ever since.",
-      "exCn": "從那之後，這件事就一直交由她負責。"
+      "w": "tension",
+      "ipa": "/ˈtenʃən/",
+      "pos": "n.",
+      "cn": "緊張、緊張情勢",
+      "def": "A situation in which people or countries do not trust each other and may fight.",
+      "ex": "They have been affected by rising tension and US trade policy.",
+      "exCn": "他們已經受到升高的緊張情勢與美國貿易政策的影響。"
+    },
+    {
+      "w": "flexible",
+      "ipa": "/ˈflek.sə.bəl/",
+      "pos": "adj.",
+      "cn": "有彈性的",
+      "def": "Able to change easily to fit new conditions.",
+      "ex": "Companies have been focusing on fairness, flexible working, and stronger leadership.",
+      "exCn": "企業一直把重心放在公平、彈性工作與更強的領導力上。"
+    },
+    {
+      "w": "selective",
+      "ipa": "/səˈlektɪv/",
+      "pos": "adj.",
+      "cn": "挑剔的、精挑細選的",
+      "def": "Careful about choosing only the best or the right one.",
+      "ex": "The market has not shrunk, but it has grown far more selective.",
+      "exCn": "市場並沒有縮小，只是變得挑剔多了。"
     }
   ],
   "questions": [
     {
-      "q": "Why did the new role feel strange to Anita at first?",
-      "qCn": "為什麼這個新角色一開始讓Anita覺得陌生？",
+      "q": "What is the main change in Taiwan's 2026 job market?",
+      "qCn": "台灣2026年就業市場最主要的改變是什麼？",
       "opts": [
-        "A. She had never worked in Vietnam before",
-        "B. She had always been the one being interviewed, not the interviewer",
-        "C. She did not speak the language",
-        "D. She had just been hired herself"
+        "A. Companies are hiring for impact rather than for scale",
+        "B. Companies are hiring far more people than before",
+        "C. Companies have stopped hiring completely",
+        "D. Companies now care only about job titles"
       ],
       "optsCn": [
-        "A. 她以前從沒在越南工作過",
-        "B. 她過去一直是被面試的人，而不是面試官",
-        "C. 她不會說當地語言",
-        "D. 她自己才剛被錄取"
-      ],
-      "ans": 1,
-      "expl": "She had always sat on the other side of the table, so the change felt strange at first.——她一直是被面試的那一方。"
-    },
-    {
-      "q": "What did Anita notice about the most confident candidates?",
-      "qCn": "關於最有自信的應徵者，Anita注意到什麼？",
-      "opts": [
-        "A. They were always the best choice",
-        "B. They were not always the best fit for the team",
-        "C. They never answered honestly",
-        "D. They had no real experience"
-      ],
-      "optsCn": [
-        "A. 他們總是最好的選擇",
-        "B. 他們不見得是最適合團隊的人",
-        "C. 他們從不誠實回答",
-        "D. 他們毫無真正的經驗"
-      ],
-      "ans": 1,
-      "expl": "the most confident ones were not always the best fit for the team."
-    },
-    {
-      "q": "Why did Anita ask how long people had done certain tasks?",
-      "qCn": "Anita為什麼要問別人某些工作做了多久？",
-      "opts": [
-        "A. Because a clear timeline often revealed real experience",
-        "B. Because she wanted to end the interview quickly",
-        "C. Because the company required it",
-        "D. Because she liked round numbers"
-      ],
-      "optsCn": [
-        "A. 因為清楚的時間線常常能顯露真正的經驗",
-        "B. 因為她想快點結束面試",
-        "C. 因為公司規定要問",
-        "D. 因為她喜歡整數"
+        "A. 企業招募看重的是影響力而不是規模",
+        "B. 企業比以前招募更多的人",
+        "C. 企業已經完全停止招募",
+        "D. 企業現在只在乎職稱"
       ],
       "ans": 0,
-      "expl": "since a clear timeline often revealed real experience."
+      "expl": "firms are now hiring for impact rather than for scale——重點從『數量』轉為『影響力』，也就是文中所說的『精準規劃』。"
     },
     {
-      "q": "By the end of the week, three people ___ chosen.",
-      "qCn": "到了週末，已經有三個人被選上了。（選出正確的形式）",
+      "q": "What does the survey say about pay in 2026?",
+      "qCn": "這份調查對2026年的薪資怎麼說？",
       "opts": [
-        "A. had been",
-        "B. have",
-        "C. were being",
-        "D. are"
+        "A. Almost no company will raise salaries",
+        "B. 90% of companies say salaries will be raised, most by 3% to 6%",
+        "C. Every worker will get a 30% raise",
+        "D. Salaries will be cut across the market"
+      ],
+      "optsCn": [
+        "A. 幾乎沒有公司會調薪",
+        "B. 90%的公司表示會調薪，多數漲幅在3%到6%",
+        "C. 每個員工都會加薪三成",
+        "D. 全市場的薪水都會被砍"
+      ],
+      "ans": 1,
+      "expl": "90% of companies say salaries will be raised in 2026, and most increases will fall between 3% and 6%.——只有AI／半導體專才才可能拿到高達30%的加薪。"
+    },
+    {
+      "q": "How has geopolitics affected technology firms?",
+      "qCn": "地緣政治對科技公司造成了什麼影響？",
+      "opts": [
+        "A. 94% say they have been affected and are rethinking supply chains and hiring",
+        "B. It has had no effect on them at all",
+        "C. It made all of them move abroad",
+        "D. It only affected their advertising"
+      ],
+      "optsCn": [
+        "A. 94%表示已受到影響，正在重新思考供應鏈與招募",
+        "B. 對他們完全沒有影響",
+        "C. 讓他們全都搬到國外",
+        "D. 只影響了他們的廣告"
       ],
       "ans": 0,
-      "expl": "現在完成式＋被動的過去版（過去完成被動）had been chosen，強調『到那個時間點為止，人已經被選好了』。"
+      "expl": "94% of technology firms say they have been affected by rising tension and US trade policy, which has forced them to rethink their supply chains and hiring."
+    },
+    {
+      "q": "Companies have been focusing on flexible working ___ the pandemic reshaped the office.",
+      "qCn": "自從疫情重塑辦公室之後，企業就一直把重心放在彈性工作上。（選出正確的字）",
+      "opts": [
+        "A. since",
+        "B. for",
+        "C. during",
+        "D. from"
+      ],
+      "ans": 0,
+      "expl": "since 後面接『起點時間或事件』（the pandemic reshaped the office），搭配現在完成進行式 have been focusing 表示『從那時起一直到現在』；for 後面接的是『一段時間長度』（for a long time），兩者用法不同。"
     }
   ],
   "upgrade": [
     {
-      "b1": "Some candidates were coached by friends.",
-      "b2": "Some candidates had clearly been coached by friends, and it showed in their polished but similar answers.",
-      "note": "把was/were coached升級成過去完成被動had been coached，並用and it showed in...補上結果，敘事層次更豐富，是B2寫作常見的手法。",
-      "sp": "You could tell some of them had been coached by friends — their answers all sounded kind of the same.",
-      "spNote": "You could tell（一看就知道）、sounded kind of the same（聽起來都差不多）是口語常見說法。",
-      "b1Cn": "有些應徵者是被朋友特訓過的。",
-      "b2Cn": "有些應徵者顯然是被朋友特訓過的，這一點從他們雖然流暢卻大同小異的回答就看得出來。",
-      "spCn": "看得出來有些人是被朋友特訓過的——他們的回答聽起來都差不多。"
+      "b1": "AI specialists are valued a lot. They can get big raises.",
+      "b2": "AI specialists, who are valued especially highly, may be offered raises of up to 30%.",
+      "note": "用who帶出的關係子句把『很受重視』塞進主詞後面，再用被動may be offered，兩句合成一句，資訊更密、更像正式報導的寫法。",
+      "sp": "AI people are basically gold right now — some of them are getting like 30% more.",
+      "spNote": "basically gold（簡直是黃金／超搶手）、like 30% more（大概多個三成）是口語常見說法。",
+      "b1Cn": "AI專才很受重視，他們可以拿到很高的加薪。",
+      "b2Cn": "AI專才由於特別受到重視，可能會拿到高達三成的加薪。",
+      "spCn": "搞AI的現在根本是搶手貨——有些人加薪加了大概三成。"
     },
     {
-      "b1": "Good interviewing is a skill. You must practice it.",
-      "b2": "Good interviewing is a skill which must be practiced, just like the work itself.",
-      "note": "用which帶出的關係子句把兩句合併，並用被動must be practiced，句子更緊湊，是B1+進階的合併技巧。",
-      "sp": "Interviewing people well is a skill too — you've got to practice it like anything else.",
-      "spNote": "you've got to（你必須）、like anything else（就跟其他事情一樣）是口語常見說法。",
-      "b1Cn": "好的面試是一種技能。你必須練習它。",
-      "b2Cn": "好的面試是一種必須練習的技能，就跟工作本身一樣。",
-      "spCn": "把人面試好也是一種技能——你得像練其他東西一樣練它。"
+      "b1": "Unemployment is low. This has been true for a long time.",
+      "b2": "Unemployment has stayed near 3% to 4% for a long time, so skilled workers still have room to choose.",
+      "note": "用現在完成式has stayed＋for a long time表達『一個狀態從過去持續到現在』，再用so帶出結果，比兩個簡單句更能顯出時間的延續感——這正是for搭配現在完成式的核心用法。",
+      "sp": "Unemployment's been super low for ages, so good people can still pick and choose.",
+      "spNote": "for ages（很久了）、pick and choose（挑三揀四、慢慢挑）是口語常見說法。",
+      "b1Cn": "失業率很低，而且這種情況已經持續很久了。",
+      "b2Cn": "失業率長期以來一直維持在3%到4%左右，所以有技術的工作者仍有選擇的空間。",
+      "spCn": "失業率已經超低超久了，所以優秀的人還是可以慢慢挑。"
     }
   ]
 },
