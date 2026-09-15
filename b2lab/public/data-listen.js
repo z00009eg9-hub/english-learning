@@ -15,6 +15,723 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週三／五更新） ========== */
 notes:[
 {
+  "id": "dl20260915a2",
+  "date": "2026-09-15",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "How Long Have You Studied English?",
+  "titleCn": "你英文學多久了？",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "💼 面試前的練習",
+  "focus": "How long have you...? 的基礎問答；for（長度）vs since（起點）",
+  "intro": "Ben在幫朋友Tom練習面試。這一課句子很簡單，重點是聽出 How long have you...? 這個問法，以及回答時 for 跟 since 的差別。",
+  "tip": "先聽一次抓「Tom英文學了幾年」，再聽一次抓「Ben給了什麼建議」。",
+  "pre": [
+    {
+      "w": "interview",
+      "ipa": "/ˈɪn.t̬ɚ.vjuː/",
+      "cn": "面試",
+      "def": "A meeting where someone asks you questions for a job."
+    },
+    {
+      "w": "ready",
+      "ipa": "/ˈredi/",
+      "cn": "準備好的",
+      "def": "Prepared and able to do something now."
+    },
+    {
+      "w": "practice",
+      "ipa": "/ˈpræktɪs/",
+      "cn": "練習",
+      "def": "To do something again and again to get better."
+    },
+    {
+      "w": "nervous",
+      "ipa": "/ˈnɜːrvəs/",
+      "cn": "緊張的",
+      "def": "Feeling worried or afraid about something."
+    },
+    {
+      "w": "since",
+      "ipa": "/sɪns/",
+      "cn": "自從",
+      "def": "From a time in the past until now."
+    },
+    {
+      "w": "smile",
+      "ipa": "/smaɪl/",
+      "cn": "微笑",
+      "def": "To make a happy face with your mouth."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Ben",
+      "en": "Are you ready for your interview, Tom?",
+      "cn": "Tom，你面試準備好了嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Not really. I'm a little nervous.",
+      "cn": "還沒完全好。我有點緊張。"
+    },
+    {
+      "sp": "Ben",
+      "en": "Let's practice. How long have you studied English?",
+      "cn": "我們來練習。你英文學多久了？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I have studied English for six years.",
+      "cn": "我英文學了六年了。"
+    },
+    {
+      "sp": "Ben",
+      "en": "Good! And how long have you worked with computers?",
+      "cn": "很好！那你用電腦工作多久了？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I have used computers since high school.",
+      "cn": "我從高中就開始用電腦了。"
+    },
+    {
+      "sp": "Ben",
+      "en": "Nice answer. Remember to speak slowly and smile.",
+      "cn": "答得好。記得講慢一點，還要微笑。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Okay. Speak slowly and smile. I can do that.",
+      "cn": "好。講慢一點、微笑。我做得到。"
+    },
+    {
+      "sp": "Ben",
+      "en": "You are ready, Tom. Good luck tomorrow!",
+      "cn": "你準備好了，Tom。明天加油！"
+    },
+    {
+      "sp": "Tom",
+      "en": "Thanks, Ben. I feel better now.",
+      "cn": "謝謝你，Ben。我現在覺得好多了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How does Tom feel at the start?",
+      "qCn": "一開始Tom覺得怎麼樣？",
+      "opts": [
+        "A. Happy and calm",
+        "B. A little nervous",
+        "C. Very hungry",
+        "D. Angry"
+      ],
+      "optsCn": [
+        "A. 開心又平靜",
+        "B. 有點緊張",
+        "C. 非常餓",
+        "D. 生氣"
+      ],
+      "ans": 1,
+      "expl": "Tom說 I'm a little nervous.——他有點緊張。"
+    },
+    {
+      "q": "How long has Tom studied English?",
+      "qCn": "Tom英文學了多久？",
+      "opts": [
+        "A. For six years",
+        "B. Since high school",
+        "C. For two months",
+        "D. Since yesterday"
+      ],
+      "optsCn": [
+        "A. 六年了",
+        "B. 從高中開始",
+        "C. 兩個月",
+        "D. 從昨天開始"
+      ],
+      "ans": 0,
+      "expl": "I have studied English for six years."
+    },
+    {
+      "q": "What advice does Ben give Tom?",
+      "qCn": "Ben給Tom什麼建議？",
+      "opts": [
+        "A. Speak fast",
+        "B. Speak slowly and smile",
+        "C. Bring a computer",
+        "D. Arrive late"
+      ],
+      "optsCn": [
+        "A. 講快一點",
+        "B. 講慢一點並微笑",
+        "C. 帶一台電腦",
+        "D. 晚點到"
+      ],
+      "ans": 1,
+      "expl": "Remember to speak slowly and smile."
+    },
+    {
+      "q": "I have used computers ___ high school.",
+      "qCn": "我從高中就開始用電腦了。（選出正確的字）",
+      "opts": [
+        "A. for",
+        "B. since",
+        "C. at",
+        "D. in"
+      ],
+      "ans": 1,
+      "expl": "high school 是『開始的時間點』，用 since。"
+    }
+  ]
+},
+{
+  "id": "dl20260915b1",
+  "date": "2026-09-15",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "The Interview Question",
+  "titleCn": "面試現場的那道題",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "🗣️ 面試問答",
+  "focus": "How long have you...? 搭配 for/since；have been doing 強調持續的動作",
+  "intro": "Tom正在面試，經理問他一連串「多久了」的問題。留意他怎麼用 have + 過去分詞回答時間長度，以及 have been doing 強調『一直在做』的動作。",
+  "tip": "先聽一次抓「Tom用哪套軟體最久」，再聽一次抓「經理最後說什麼」。",
+  "pre": [
+    {
+      "w": "manager",
+      "ipa": "/ˈmænɪdʒɚ/",
+      "cn": "經理",
+      "def": "A person who is in charge of a business or office."
+    },
+    {
+      "w": "software",
+      "ipa": "/ˈsɔːftwer/",
+      "cn": "軟體",
+      "def": "The programs that run on a computer."
+    },
+    {
+      "w": "quality",
+      "ipa": "/ˈkwɑːləti/",
+      "cn": "品質",
+      "def": "How good or bad something is."
+    },
+    {
+      "w": "skill",
+      "ipa": "/skɪl/",
+      "cn": "技能",
+      "def": "The ability to do something well."
+    },
+    {
+      "w": "relieved",
+      "ipa": "/rɪˈliːvd/",
+      "cn": "鬆一口氣的",
+      "def": "Feeling happy because a worry has ended."
+    },
+    {
+      "w": "position",
+      "ipa": "/pəˈzɪʃən/",
+      "cn": "職位",
+      "def": "A job in a company."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Manager",
+      "en": "Thanks for coming in, Tom. How long have you worked in this field?",
+      "cn": "Tom，謝謝你來。你在這個領域工作多久了？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I have worked in customer service for three years.",
+      "cn": "我在客服領域做了三年。"
+    },
+    {
+      "sp": "Manager",
+      "en": "And how long have you been using our type of software?",
+      "cn": "那你使用我們這類軟體多久了？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I have been using it since last summer, so about a year now.",
+      "cn": "我從去年夏天開始用，所以到現在大概一年了。"
+    },
+    {
+      "sp": "Manager",
+      "en": "Good. Why are you interested in this position?",
+      "cn": "很好。你為什麼對這個職位有興趣？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I want to learn more about quality, and I like working with a team.",
+      "cn": "我想多了解品質這方面，而且我喜歡跟團隊一起工作。"
+    },
+    {
+      "sp": "Manager",
+      "en": "Which skill are you most proud of?",
+      "cn": "你最引以為傲的技能是什麼？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I stay calm with difficult customers. I have practiced that for years.",
+      "cn": "面對難搞的客戶我能保持冷靜。這一點我練習好幾年了。"
+    },
+    {
+      "sp": "Manager",
+      "en": "That's a great answer. We'll call you next week.",
+      "cn": "這回答很棒。我們下週會打電話給你。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Thank you so much. I feel relieved it's over!",
+      "cn": "非常謝謝您。結束了，我鬆了一口氣！"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How long has Tom worked in customer service?",
+      "qCn": "Tom在客服領域做了多久？",
+      "opts": [
+        "A. For three years",
+        "B. Since last summer",
+        "C. For one week",
+        "D. Since high school"
+      ],
+      "optsCn": [
+        "A. 三年",
+        "B. 從去年夏天",
+        "C. 一個星期",
+        "D. 從高中開始"
+      ],
+      "ans": 0,
+      "expl": "I have worked in customer service for three years."
+    },
+    {
+      "q": "How long has Tom been using the company's type of software?",
+      "qCn": "Tom使用公司這類軟體多久了？",
+      "opts": [
+        "A. For three years",
+        "B. Since last summer, about a year",
+        "C. Since high school",
+        "D. He has never used it"
+      ],
+      "optsCn": [
+        "A. 三年",
+        "B. 從去年夏天，大約一年",
+        "C. 從高中開始",
+        "D. 他從沒用過"
+      ],
+      "ans": 1,
+      "expl": "I have been using it since last summer, so about a year now."
+    },
+    {
+      "q": "Which skill is Tom most proud of?",
+      "qCn": "Tom最引以為傲的技能是什麼？",
+      "opts": [
+        "A. Typing fast",
+        "B. Staying calm with difficult customers",
+        "C. Fixing computers",
+        "D. Speaking three languages"
+      ],
+      "optsCn": [
+        "A. 打字很快",
+        "B. 面對難搞的客戶能保持冷靜",
+        "C. 修電腦",
+        "D. 會說三種語言"
+      ],
+      "ans": 1,
+      "expl": "I stay calm with difficult customers. I have practiced that for years."
+    },
+    {
+      "q": "What will the manager do next week?",
+      "qCn": "經理下週會做什麼？",
+      "opts": [
+        "A. Send an email",
+        "B. Call Tom",
+        "C. Visit Tom's home",
+        "D. Nothing"
+      ],
+      "optsCn": [
+        "A. 寄email",
+        "B. 打電話給Tom",
+        "C. 去Tom家拜訪",
+        "D. 什麼都不做"
+      ],
+      "ans": 1,
+      "expl": "We'll call you next week."
+    }
+  ]
+},
+{
+  "id": "dl20260915b1p",
+  "date": "2026-09-15",
+  "level": "B1+",
+  "minutes": 3,
+  "kind": "note",
+  "title": "On the Other Side of the Desk",
+  "titleCn": "坐到桌子的另一邊",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "🧑‍💼 當面試官",
+  "focus": "for/since 的分工；When...? 配過去式 vs How long...? 配完成式；been doing",
+  "intro": "Anita第一次當面試官，跟資深同事Minh討論怎麼問問題。留意他們怎麼分辨 When（問時間點）和 How long（問持續多久），以及 for 和 since 的用法。",
+  "tip": "先聽一次抓「Anita原本習慣坐哪一邊」，再聽一次抓「Minh建議多問哪一種問題」。",
+  "pre": [
+    {
+      "w": "candidate",
+      "ipa": "/ˈkændɪdət/",
+      "cn": "應徵者",
+      "def": "A person being considered for a job."
+    },
+    {
+      "w": "experience",
+      "ipa": "/ɪkˈspɪr.i.əns/",
+      "cn": "經驗",
+      "def": "Knowledge or skill you get from doing something."
+    },
+    {
+      "w": "confident",
+      "ipa": "/ˈkɑːn.fə.dənt/",
+      "cn": "有自信的",
+      "def": "Sure that you can do things well."
+    },
+    {
+      "w": "honest",
+      "ipa": "/ˈɑːnɪst/",
+      "cn": "誠實的",
+      "def": "Telling the truth and not hiding facts."
+    },
+    {
+      "w": "timeline",
+      "ipa": "/ˈtaɪmlaɪn/",
+      "cn": "時間線",
+      "def": "The order in which events happened over time."
+    },
+    {
+      "w": "reveal",
+      "ipa": "/rɪˈviːl/",
+      "cn": "顯露",
+      "def": "To make something known that was hidden."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Anita",
+      "en": "This is strange, Minh. For years I have been the candidate. Now I'm the interviewer.",
+      "cn": "感覺好怪，Minh。這麼多年來我一直是應徵者，現在換我當面試官了。"
+    },
+    {
+      "sp": "Minh",
+      "en": "You'll be fine. When did you join the company yourself?",
+      "cn": "你會做得很好的。你自己是什麼時候進公司的？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I joined in 2021, so I have worked here for about five years.",
+      "cn": "我2021年進來的，所以我在這裡工作大概五年了。"
+    },
+    {
+      "sp": "Minh",
+      "en": "Exactly. So ask candidates how long they have done things, not just when.",
+      "cn": "沒錯。所以要問應徵者某件事『做了多久』，不只是『什麼時候』。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Why does the length matter more?",
+      "cn": "為什麼時間長度比較重要？"
+    },
+    {
+      "sp": "Minh",
+      "en": "A clear timeline reveals real experience. Anyone can sound confident for five minutes.",
+      "cn": "清楚的時間線能顯露出真正的經驗。任何人都能裝自信五分鐘。"
+    },
+    {
+      "sp": "Anita",
+      "en": "So I should ask, 'How long have you worked with this software?'",
+      "cn": "所以我應該問：『你用這套軟體多久了？』"
+    },
+    {
+      "sp": "Minh",
+      "en": "Right. And listen for honest answers, not perfect ones.",
+      "cn": "對。而且要聽的是誠實的回答，不是完美的回答。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Got it. Since when have you been interviewing people?",
+      "cn": "懂了。那你又是從什麼時候開始面試別人的？"
+    },
+    {
+      "sp": "Minh",
+      "en": "Since my second year here. You learn a lot by doing it.",
+      "cn": "從我來的第二年開始。做久了就會學到很多。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why does the new role feel strange to Anita?",
+      "qCn": "為什麼這個新角色讓Anita覺得怪？",
+      "opts": [
+        "A. She has never worked here",
+        "B. For years she has been the candidate, not the interviewer",
+        "C. She does not like Minh",
+        "D. She wants a different job"
+      ],
+      "optsCn": [
+        "A. 她從沒在這裡工作過",
+        "B. 這麼多年來她一直是應徵者，不是面試官",
+        "C. 她不喜歡Minh",
+        "D. 她想要別的工作"
+      ],
+      "ans": 1,
+      "expl": "For years I have been the candidate. Now I'm the interviewer."
+    },
+    {
+      "q": "According to Minh, why does the length of experience matter?",
+      "qCn": "根據Minh，為什麼經驗的長度很重要？",
+      "opts": [
+        "A. A clear timeline reveals real experience",
+        "B. Longer is always better",
+        "C. It makes interviews shorter",
+        "D. The company requires it"
+      ],
+      "optsCn": [
+        "A. 清楚的時間線能顯露真正的經驗",
+        "B. 越長一定越好",
+        "C. 這樣面試比較短",
+        "D. 公司規定要問"
+      ],
+      "ans": 0,
+      "expl": "A clear timeline reveals real experience. Anyone can sound confident for five minutes."
+    },
+    {
+      "q": "What kind of answers does Minh tell Anita to listen for?",
+      "qCn": "Minh要Anita聽哪一種回答？",
+      "opts": [
+        "A. Perfect answers",
+        "B. Honest answers",
+        "C. Long answers",
+        "D. Funny answers"
+      ],
+      "optsCn": [
+        "A. 完美的回答",
+        "B. 誠實的回答",
+        "C. 冗長的回答",
+        "D. 好笑的回答"
+      ],
+      "ans": 1,
+      "expl": "And listen for honest answers, not perfect ones."
+    },
+    {
+      "q": "Since when has Minh been interviewing people?",
+      "qCn": "Minh從什麼時候開始面試別人？",
+      "opts": [
+        "A. Since his first day",
+        "B. Since his second year at the company",
+        "C. Since 2021",
+        "D. He has never done it"
+      ],
+      "optsCn": [
+        "A. 從他第一天開始",
+        "B. 從他來公司的第二年開始",
+        "C. 從2021年開始",
+        "D. 他從沒做過"
+      ],
+      "ans": 1,
+      "expl": "Since my second year here."
+    }
+  ]
+},
+{
+  "id": "dl20260915b2",
+  "date": "2026-09-15",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "For Ages or Since 2019?",
+  "titleCn": "「好久了」還是「從2019年」？",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "🎧 面試語感",
+  "focus": "for/since 的語域選擇；口語誇飾 vs 正式精準；把時間長度變成故事",
+  "intro": "資深主管Grace在幫Anita的下屬Kevin做模擬面試回饋。這一課談的是語域：同樣講資歷，for ages 和 since 2019 給人的印象天差地遠。留意他們怎麼把乾巴巴的時間變成有說服力的答案。",
+  "tip": "先聽一次抓「Grace為什麼不喜歡 forever 這個字」，再聽一次抓「她建議Kevin怎麼改」。",
+  "pre": [
+    {
+      "w": "register",
+      "ipa": "/ˈredʒɪstɚ/",
+      "cn": "語域",
+      "def": "The level of formality used in speaking or writing."
+    },
+    {
+      "w": "vague",
+      "ipa": "/veɪɡ/",
+      "cn": "含糊的",
+      "def": "Not clear or exact."
+    },
+    {
+      "w": "precise",
+      "ipa": "/prɪˈsaɪs/",
+      "cn": "精準的",
+      "def": "Exact and clear."
+    },
+    {
+      "w": "genuine",
+      "ipa": "/ˈdʒenjuɪn/",
+      "cn": "真誠的",
+      "def": "Real and sincere, not fake."
+    },
+    {
+      "w": "commitment",
+      "ipa": "/kəˈmɪtmənt/",
+      "cn": "投入",
+      "def": "The willingness to give time and energy to something."
+    },
+    {
+      "w": "impression",
+      "ipa": "/ɪmˈpreʃən/",
+      "cn": "印象",
+      "def": "The way something seems to other people."
+    },
+    {
+      "w": "duration",
+      "ipa": "/dəˈreɪʃən/",
+      "cn": "持續時間",
+      "def": "The length of time something continues."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Grace",
+      "en": "Kevin, your answers were solid, but one phrase made me pause. You said you'd been doing data work 'forever.'",
+      "cn": "Kevin，你的回答很扎實，但有一句讓我停頓了一下。你說你做資料工作『做超久了』。"
+    },
+    {
+      "sp": "Kevin",
+      "en": "Is that bad? I just meant a long time.",
+      "cn": "這樣不好嗎？我只是想說『很久』的意思。"
+    },
+    {
+      "sp": "Grace",
+      "en": "In casual talk it's fine. In an interview, 'forever' sounds vague, almost like you've never thought about it.",
+      "cn": "在閒聊裡沒問題。但在面試裡，『forever』聽起來很含糊，好像你從沒認真想過。"
+    },
+    {
+      "sp": "Kevin",
+      "en": "So what should I have said instead?",
+      "cn": "那我當時應該怎麼說？"
+    },
+    {
+      "sp": "Grace",
+      "en": "Something precise. 'I have worked with data since 2019,' or 'for just over five years.'",
+      "cn": "說得精準一點。『我從2019年就開始做資料』，或是『五年多一點』。"
+    },
+    {
+      "sp": "Kevin",
+      "en": "I see. The exact number sounds more professional.",
+      "cn": "我懂了。確切的數字聽起來比較專業。"
+    },
+    {
+      "sp": "Grace",
+      "en": "Exactly. A precise timeline shows genuine commitment. It's a matter of register.",
+      "cn": "沒錯。精準的時間線能顯示出真誠的投入。這是語域的問題。"
+    },
+    {
+      "sp": "Kevin",
+      "en": "But isn't longer always better? I wanted to sound experienced.",
+      "cn": "但難道不是越久越好嗎？我想讓自己聽起來很有經驗。"
+    },
+    {
+      "sp": "Grace",
+      "en": "Not at all. Two focused years can beat ten years of drifting. It's how you used the duration that matters.",
+      "cn": "完全不是。認真投入的兩年，可以勝過混了十年。重點是你怎麼運用那段時間。"
+    },
+    {
+      "sp": "Kevin",
+      "en": "So I should turn the number into a short story about what I actually did.",
+      "cn": "所以我應該把數字變成一個小故事，講我實際做了什麼。"
+    },
+    {
+      "sp": "Grace",
+      "en": "Now you've got it. That's the answer people remember after you leave the room.",
+      "cn": "你抓到重點了。那才是你離開房間後，別人還會記得的回答。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did the word \"forever\" make Grace pause?",
+      "qCn": "為什麼「forever」這個字讓Grace停頓？",
+      "opts": [
+        "A. It was grammatically wrong",
+        "B. In an interview it sounds vague, as if he had never thought about it",
+        "C. It was too formal",
+        "D. It was too short"
+      ],
+      "optsCn": [
+        "A. 它文法錯誤",
+        "B. 在面試裡它聽起來含糊，好像他從沒認真想過",
+        "C. 它太正式了",
+        "D. 它太短了"
+      ],
+      "ans": 1,
+      "expl": "In an interview, 'forever' sounds vague, almost like you've never thought about it."
+    },
+    {
+      "q": "What does Grace suggest Kevin say instead?",
+      "qCn": "Grace建議Kevin改說什麼？",
+      "opts": [
+        "A. Something vaguer",
+        "B. Something precise, like 'since 2019' or 'for just over five years'",
+        "C. Nothing about time",
+        "D. Only the word 'experienced'"
+      ],
+      "optsCn": [
+        "A. 更含糊的說法",
+        "B. 精準的說法，例如『從2019年』或『五年多一點』",
+        "C. 完全不提時間",
+        "D. 只說『有經驗』這個字"
+      ],
+      "ans": 1,
+      "expl": "'I have worked with data since 2019,' or 'for just over five years.'"
+    },
+    {
+      "q": "What does Grace say about the length of experience?",
+      "qCn": "關於經驗的長度，Grace怎麼說？",
+      "opts": [
+        "A. Longer is always better",
+        "B. Two focused years can beat ten years of drifting",
+        "C. Only ten years counts",
+        "D. Length does not matter at all"
+      ],
+      "optsCn": [
+        "A. 越長一定越好",
+        "B. 認真投入的兩年可以勝過混了十年",
+        "C. 只有十年才算數",
+        "D. 長度完全不重要"
+      ],
+      "ans": 1,
+      "expl": "Two focused years can beat ten years of drifting. It's how you used the duration that matters."
+    },
+    {
+      "q": "According to Grace, what makes an answer memorable?",
+      "qCn": "根據Grace，什麼樣的回答讓人記得住？",
+      "opts": [
+        "A. Turning the number into a short story about what you actually did",
+        "B. Using the biggest number possible",
+        "C. Speaking as fast as you can",
+        "D. Repeating the word 'forever'"
+      ],
+      "optsCn": [
+        "A. 把數字變成一個講你實際做了什麼的小故事",
+        "B. 用最大的數字",
+        "C. 講得越快越好",
+        "D. 一直重複『forever』這個字"
+      ],
+      "ans": 0,
+      "expl": "So I should turn the number into a short story... That's the answer people remember after you leave the room."
+    }
+  ]
+},
+{
   "id": "dl20260911a2",
   "date": "2026-09-11",
   "level": "A2",

@@ -32,6 +32,693 @@
    ⚠ 文字欄位一律寫純文字，不要寫 HTML 標籤（渲染時會被轉義顯示出來）。
    ============================================================ */
 window.GVPLUS = {
+"dg20260915a2": {
+  "vis": true,
+  "oneLine": "想問『做多久了』，公式就是 How long + have you + 過去分詞——回答時 for 接長度、since 接起點。",
+  "map": {
+    "when": "想知道一件事從過去到現在『持續了多久』的時候",
+    "why": "這件事還沒結束、一直延續到現在，所以要用現在完成式，不能用現在簡單式",
+    "form": "How long have you + 過去分詞...?　|　回答：for + 長度　/　since + 起點"
+  },
+  "visual": {
+    "type": "chain",
+    "cap": "把問句拆成四塊：How long（問多久）+ have you（助動詞＋主詞）+ studied（過去分詞）+ English?，回答時再選 for 或 since。",
+    "links": [
+      {
+        "t": "How long",
+        "c": "",
+        "role": "plain"
+      },
+      {
+        "t": "have you",
+        "c": "",
+        "role": "subj"
+      },
+      {
+        "t": "studied",
+        "c": "",
+        "role": "verb"
+      },
+      {
+        "t": "English?",
+        "c": "",
+        "role": "obj"
+      }
+    ],
+    "eg": {
+      "en": "How long have you studied English?",
+      "cn": "你英文學多久了？"
+    },
+    "variants": [
+      {
+        "k": "回答用 for 接長度",
+        "en": "I have studied English for six years.",
+        "cn": "我英文學了六年了。"
+      },
+      {
+        "k": "回答用 since 接起點",
+        "en": "I have studied English since 2020.",
+        "cn": "我從2020年就開始學英文了。"
+      },
+      {
+        "k": "換個動詞",
+        "en": "How long have you lived here?",
+        "cn": "你在這裡住多久了？"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "ask-study",
+      "icon": "book",
+      "title": "問學多久",
+      "titleCn": "how long have you studied",
+      "ask": "要怎麼問『你英文學多久了』？",
+      "en": "How long have you studied English?",
+      "cn": "你英文學多久了？",
+      "why": "問『從過去到現在做了多久』要用現在完成式 How long have you studied，不能用現在簡單式 do you study。"
+    },
+    {
+      "key": "answer-for",
+      "icon": "clock",
+      "title": "用 for 回答",
+      "titleCn": "for + 長度",
+      "ask": "for 後面要接長度還是起點？",
+      "en": "I have studied English for six years.",
+      "cn": "我英文學了六年了。",
+      "why": "for 後面接『一段時間長度』，例如 for six years，不能接一個確切的年份。"
+    },
+    {
+      "key": "answer-since",
+      "icon": "calendar",
+      "title": "用 since 回答",
+      "titleCn": "since + 起點",
+      "ask": "since 後面要接長度還是起點？",
+      "en": "I have studied English since 2020.",
+      "cn": "我從2020年就開始學英文了。",
+      "why": "since 後面接『開始的那個時間點』，例如 since 2020，不能接一段長度。"
+    },
+    {
+      "key": "word-order",
+      "icon": "arrow",
+      "title": "助動詞放前面",
+      "titleCn": "have 要移到主詞前",
+      "ask": "疑問句裡 have 要放哪裡？",
+      "en": "How long have you worked here?",
+      "cn": "你在這裡工作多久了？",
+      "why": "疑問句要把助動詞 have 移到主詞 you 前面，寫成 have you，不能照中文語序寫成 How long you have。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你想問新同事『在這家公司做多久了』。"
+    },
+    {
+      "label": "先組問句",
+      "text": "How long（問多久）+ have you worked（現在完成式，have 在主詞前）+ here?"
+    },
+    {
+      "label": "回答用 for",
+      "text": "I have worked here for two years.（for 接時間長度）"
+    },
+    {
+      "label": "回答用 since",
+      "text": "I have worked here since 2024.（since 接起點時間）"
+    },
+    {
+      "label": "換個說法",
+      "text": "錯誤說法：How long do you work here?——那是在問『你通常幾點上班』，答不出『多久了』。"
+    }
+  ],
+  "comparison": {
+    "title": "for vs since 回答 how long",
+    "left": {
+      "tag": "FOR",
+      "tagCn": "接時間長度",
+      "icon": "clock",
+      "head": "duration",
+      "headCn": "多長的時間",
+      "en": "I have studied English for six years.",
+      "cn": "我英文學了六年了。",
+      "pts": [
+        "後面接一段長度",
+        "例如 for six years, for a week",
+        "不能接確切的時間點"
+      ]
+    },
+    "right": {
+      "tag": "SINCE",
+      "tagCn": "接起點時間",
+      "icon": "calendar",
+      "head": "starting point",
+      "headCn": "開始的時間點",
+      "en": "I have studied English since 2020.",
+      "cn": "我從2020年就開始學英文了。",
+      "pts": [
+        "後面接一個確切起點",
+        "例如 since 2020, since Monday",
+        "不能接一段長度"
+      ]
+    },
+    "note": "口訣：for 接『多長』，since 接『從什麼時候開始』。"
+  },
+  "quizMore": [
+    {
+      "q": "How long ___ you lived here?",
+      "opts": [
+        "have",
+        "do",
+        "are",
+        "did"
+      ],
+      "ans": 0,
+      "expl": "問到現在為止住了多久，用現在完成式 How long have you...?。"
+    },
+    {
+      "q": "I have worked here ___ last summer.",
+      "opts": [
+        "for",
+        "since",
+        "during",
+        "in"
+      ],
+      "ans": 1,
+      "expl": "last summer 是起點時間，用 since。"
+    }
+  ]
+},
+"dg20260915b1": {
+  "vis": true,
+  "oneLine": "問時間長度用 have you + Vpp，強調『一直在做的動作』用 have you been + Ving——但 know、want 這種狀態動詞永遠不能加 ing。",
+  "map": {
+    "when": "要問『到現在為止做了多久』、又想分清楚『結果』還是『持續的動作』時",
+    "why": "英文用有沒有 been + Ving 來區分『單純時間長度』和『一直在進行的動作』，中文常常混在一起",
+    "form": "How long have you + Vpp...?　|　How long have you been + Ving...?（狀態動詞例外）"
+  },
+  "visual": {
+    "type": "cols",
+    "cap": "左欄問單純的時間長度，中欄強調『一直在做的動作』，右欄提醒你：遇到 know 這種狀態動詞只能用 have known。",
+    "cols": [
+      {
+        "tag": "HAVE + VPP",
+        "tagCn": "問時間長度",
+        "tone": 1,
+        "items": [
+          {
+            "en": "How long have you worked here?",
+            "cn": "你在這裡工作多久了？",
+            "nt": "問在職的長度"
+          },
+          {
+            "en": "I have worked here for two years.",
+            "cn": "我在這裡工作兩年了。",
+            "nt": "回答用 for"
+          }
+        ]
+      },
+      {
+        "tag": "HAVE BEEN + VING",
+        "tagCn": "強調持續的動作",
+        "tone": 2,
+        "items": [
+          {
+            "en": "How long have you been waiting?",
+            "cn": "你等多久了？",
+            "nt": "強調『一直在等』"
+          },
+          {
+            "en": "I have been waiting for twenty minutes.",
+            "cn": "我已經等二十分鐘了。",
+            "nt": "動作還在進行"
+          }
+        ]
+      },
+      {
+        "tag": "狀態動詞",
+        "tagCn": "只能用 have + Vpp",
+        "tone": 3,
+        "items": [
+          {
+            "en": "How long have you known her?",
+            "cn": "你認識她多久了？",
+            "nt": "know 不能加 ing"
+          },
+          {
+            "en": "I have known her since we were kids.",
+            "cn": "我從小就認識她了。",
+            "nt": "since 接子句"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "duration-work",
+      "icon": "clock",
+      "title": "問在職多久",
+      "titleCn": "have you worked",
+      "ask": "問單純的時間長度要怎麼問？",
+      "en": "How long have you worked here?",
+      "cn": "你在這裡工作多久了？",
+      "why": "只是問『在職多久』的時間長度，用 How long have you worked，不需要加 been。"
+    },
+    {
+      "key": "ongoing-wait",
+      "icon": "pin",
+      "title": "問等了多久",
+      "titleCn": "have you been waiting",
+      "ask": "要強調『一直在做的動作』時，問句怎麼變？",
+      "en": "How long have you been waiting?",
+      "cn": "你等多久了？",
+      "why": "waiting 強調『一直在進行的動作』，所以用 have you been waiting，加上 been + Ving。"
+    },
+    {
+      "key": "stative-know",
+      "icon": "person",
+      "title": "認識多久",
+      "titleCn": "狀態動詞的例外",
+      "ask": "know 可以說 have been knowing 嗎？",
+      "en": "How long have you known her?",
+      "cn": "你認識她多久了？",
+      "why": "know 是狀態動詞，不能加 ing，就算要表達『持續』也只能用 have known。"
+    },
+    {
+      "key": "since-clause",
+      "icon": "link",
+      "title": "since 接子句",
+      "titleCn": "since + 過去式子句",
+      "ask": "since 後面只能接一個名詞嗎？",
+      "en": "I have known her since we worked together.",
+      "cn": "從我們一起共事之後，我就認識她了。",
+      "why": "since 後面可以接一個過去式子句當起點，主句用現在完成式、子句用過去簡單式。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你在公車站遇到同事，他好像已經等很久了。"
+    },
+    {
+      "label": "先問自己",
+      "text": "你想問『單純多久』，還是強調『他一直站在那裡等』這個動作？"
+    },
+    {
+      "label": "問長度",
+      "text": "How long have you waited?（單純問時間）"
+    },
+    {
+      "label": "強調動作",
+      "text": "How long have you been waiting?（強調一直在等，更自然）"
+    },
+    {
+      "label": "換個說法",
+      "text": "錯誤說法：How long have you been knowing him?——know 是狀態動詞，只能用 have you known him。"
+    }
+  ],
+  "comparison": {
+    "title": "have worked vs have been working",
+    "left": {
+      "tag": "HAVE WORKED",
+      "tagCn": "問／講時間長度",
+      "icon": "check",
+      "head": "duration",
+      "headCn": "單純的長度",
+      "en": "I have worked here for two years.",
+      "cn": "我在這裡工作兩年了。",
+      "pts": [
+        "重點在時間長度本身",
+        "狀態動詞只能用這種",
+        "常配 for / since"
+      ]
+    },
+    "right": {
+      "tag": "HAVE BEEN WORKING",
+      "tagCn": "強調持續的動作",
+      "icon": "cycle",
+      "head": "ongoing action",
+      "headCn": "一直在進行",
+      "en": "I have been working here for two years.",
+      "cn": "我在這裡（一直）工作兩年了。",
+      "pts": [
+        "強調動作一直在進行",
+        "帶有『還在持續』的語感",
+        "狀態動詞不能用這種"
+      ]
+    },
+    "note": "口訣：講長度、遇到狀態動詞用 have done；想強調『一直在做的動作』用 have been doing。"
+  },
+  "quizMore": [
+    {
+      "q": "How long have you ___ him?",
+      "opts": [
+        "been knowing",
+        "known",
+        "know",
+        "knowing"
+      ],
+      "ans": 1,
+      "expl": "know 是狀態動詞，不能加 ing，只能用 have known。"
+    },
+    {
+      "q": "I have been studying here ___ I moved to Taipei.",
+      "opts": [
+        "for",
+        "since",
+        "during",
+        "from"
+      ],
+      "ans": 1,
+      "expl": "since 後面接一個過去式子句（I moved to Taipei）當起點。"
+    }
+  ]
+},
+"dg20260915b1p": {
+  "vis": true,
+  "oneLine": "for 是『一段長度』，since 是『從起點到現在』——問哪一天發生用 When（配過去式），問持續多久用 How long（配完成式）。",
+  "map": {
+    "when": "要精準回答『多久』或『從何時開始』，並分清楚 When 和 How long 兩種問法時",
+    "why": "for 量的是長度、since 標的是起點；When 問的是時間點、How long 問的是持續時間，各配不同時態",
+    "form": "for + 長度　|　since + 起點　||　When did you...?（過去式）　/　How long have you...?（完成式）"
+  },
+  "visual": {
+    "type": "timeline",
+    "cap": "一條時間線：since 標的是線的『起點』（2021），for 量的是從起點到 NOW 的『整段長度』（five years），兩者講的是同一段時間的不同面向。",
+    "rows": [
+      {
+        "kind": "point",
+        "label": "since 2021",
+        "tone": "accent",
+        "at": "起點",
+        "sub": "since marks the starting point",
+        "subCn": "since 標出開始的那個時間點"
+      },
+      {
+        "kind": "span",
+        "label": "for five years",
+        "tone": "ink",
+        "from": "2021",
+        "to": "NOW",
+        "sub": "for measures the whole length",
+        "subCn": "for 量出從起點到現在的整段長度"
+      },
+      {
+        "kind": "point",
+        "label": "NOW",
+        "tone": "accent",
+        "at": "現在",
+        "sub": "still true today",
+        "subCn": "到現在都還成立，所以用現在完成式"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "for-length",
+      "icon": "balance",
+      "title": "for 量長度",
+      "titleCn": "for + 一段長度",
+      "ask": "for 後面該接長度還是起點？",
+      "en": "She has lived in Hanoi for five years.",
+      "cn": "她在河內住了五年了。",
+      "why": "for 量的是『整段時間有多長』（five years），所以後面接長度，不能接一個確切年份。"
+    },
+    {
+      "key": "since-start",
+      "icon": "flag",
+      "title": "since 標起點",
+      "titleCn": "since + 起點",
+      "ask": "since 後面該接長度還是起點？",
+      "en": "She has lived in Hanoi since 2021.",
+      "cn": "她從2021年就住在河內了。",
+      "why": "since 標的是『開始的那個時間點』（2021），for five years 和 since 2021 可能是同一件事的兩種講法。"
+    },
+    {
+      "key": "when-past",
+      "icon": "calendar",
+      "title": "When 問時間點",
+      "titleCn": "When + 過去式",
+      "ask": "問『哪一天開始』要用什麼時態？",
+      "en": "When did you start this job?",
+      "cn": "你什麼時候開始這份工作的？",
+      "why": "When 問確切的時間點，配過去簡單式 did start，不跟現在完成式連用。"
+    },
+    {
+      "key": "howlong-perfect",
+      "icon": "clock",
+      "title": "How long 問持續",
+      "titleCn": "How long + 完成式",
+      "ask": "問『到現在做多久了』要用什麼時態？",
+      "en": "How long have you had this job?",
+      "cn": "你做這份工作多久了？",
+      "why": "How long 問的是持續到現在的時間，配現在完成式 have had，因為這件事還沒結束。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你想了解一位同事在公司的資歷。"
+    },
+    {
+      "label": "問哪一天開始",
+      "text": "When did you join?（用 When + 過去式，答 In March）"
+    },
+    {
+      "label": "問持續多久",
+      "text": "How long have you worked here?（用 How long + 完成式）"
+    },
+    {
+      "label": "回答",
+      "text": "For three years. / Since 2022.（for 接長度、since 接起點）"
+    },
+    {
+      "label": "換個說法",
+      "text": "錯誤說法：How long did you work here?——你若還在職，要用 have worked，用 did work 會像是『你已經離職了』。"
+    }
+  ],
+  "comparison": {
+    "title": "When...? vs How long...?",
+    "left": {
+      "tag": "WHEN...?",
+      "tagCn": "問時間點",
+      "icon": "flag",
+      "head": "past simple",
+      "headCn": "配過去簡單式",
+      "en": "When did you start this job?",
+      "cn": "你什麼時候開始這份工作的？",
+      "pts": [
+        "問『哪一天／什麼時候』",
+        "配過去簡單式 did",
+        "回答用 in/on/at + 時間點"
+      ]
+    },
+    "right": {
+      "tag": "HOW LONG...?",
+      "tagCn": "問持續多久",
+      "icon": "clock",
+      "head": "present perfect",
+      "headCn": "配現在完成式",
+      "en": "How long have you had this job?",
+      "cn": "你做這份工作多久了？",
+      "pts": [
+        "問『到現在持續多久』",
+        "配現在完成式 have + Vpp",
+        "回答用 for / since"
+      ]
+    },
+    "note": "口訣：問時間點用 When＋過去式，問持續多久用 How long＋完成式；回答 for 接長度、since 接起點。"
+  },
+  "quizMore": [
+    {
+      "q": "___ did you move to Hanoi?",
+      "opts": [
+        "How long",
+        "When",
+        "For how long have",
+        "Since"
+      ],
+      "ans": 1,
+      "expl": "問確切的時間點用 When，配過去式 did move。"
+    },
+    {
+      "q": "I have known her ___ we worked together.",
+      "opts": [
+        "for",
+        "since",
+        "during",
+        "when"
+      ],
+      "ans": 1,
+      "expl": "since 後面接一個過去式子句（we worked together）當起點。"
+    }
+  ]
+},
+"dg20260915b2": {
+  "vis": true,
+  "oneLine": "同一段資歷，for ages 顯得含糊、since 2019 顯得專業——for/since 的選擇，其實是語域與可信度的選擇。",
+  "map": {
+    "when": "在面試、報告、正式書面裡要交代『做了多久』又想顯得專業可信的時候",
+    "why": "口語的 forever／for ages 誇飾又模糊，正式場合偏好精準、可查證的長度或起點",
+    "form": "口語：for ages / forever　→　正式：for over eight years / since 2019"
+  },
+  "visual": {
+    "type": "scale",
+    "cap": "一條從『隨意口語』滑到『正式專業』的光譜：越往右，時間說法越精準、越可查證，給面試官的專業印象也越強。",
+    "lo": "隨意口語",
+    "hi": "正式專業",
+    "stops": [
+      {
+        "at": 8,
+        "label": "誇飾",
+        "labelCn": "最模糊",
+        "en": "I've been doing this forever.",
+        "cn": "我做這個做超久了。"
+      },
+      {
+        "at": 35,
+        "label": "口語",
+        "labelCn": "仍含糊",
+        "en": "I've been at it for ages.",
+        "cn": "我搞這個搞好久了。"
+      },
+      {
+        "at": 70,
+        "label": "中性",
+        "labelCn": "較清楚",
+        "en": "I've worked in this area for a few years.",
+        "cn": "我在這個領域做了幾年。"
+      },
+      {
+        "at": 95,
+        "label": "正式",
+        "labelCn": "最精準",
+        "en": "I have specialized in quality control since 2019.",
+        "cn": "我從2019年就專精於品質管理。"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "vague-forever",
+      "icon": "cross",
+      "title": "forever 太誇飾",
+      "titleCn": "口語誇飾",
+      "ask": "面試時說 I've been doing this forever 好嗎？",
+      "en": "I've been doing this forever.",
+      "cn": "我做這個做超久了。",
+      "why": "forever 是口語誇飾，在正式面試裡顯得含糊，讓人覺得你沒認真想過自己的資歷。"
+    },
+    {
+      "key": "precise-since",
+      "icon": "check",
+      "title": "since 2019 顯專業",
+      "titleCn": "精準起點",
+      "ask": "怎麼講才顯得專業可查證？",
+      "en": "I have specialized in quality control since 2019.",
+      "cn": "我從2019年就專精於品質管理。",
+      "why": "精準的 since 2019 可查證、有分寸，展現自我認識，是面試官更看重的特質。"
+    },
+    {
+      "key": "front-time",
+      "icon": "book",
+      "title": "資歷前置",
+      "titleCn": "Having + Vpp 開頭",
+      "ask": "怎麼把資歷放句首製造張力？",
+      "en": "Having worked in the field for a decade, she saw the problem at once.",
+      "cn": "在這個領域做了十年之後，她一眼就看出問題。",
+      "why": "完成式分詞構句 Having worked... 把資歷濃縮到句首，凸顯後面的判斷力，是正式敘事的修辭手法。"
+    },
+    {
+      "key": "it-has-been",
+      "icon": "eye",
+      "title": "時間前置句",
+      "titleCn": "It has been + 時間 + since",
+      "ask": "新聞怎麼強調『已經過了多久』？",
+      "en": "It had been three years since the company last hired an engineer.",
+      "cn": "公司上一次聘工程師，已經是三年前的事了。",
+      "why": "It has/had been + 時間 + since 把時間長度前置，製造時間流逝的張力，是正式敘事偏好的句型。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "面試官問你：你在這個領域多久了？"
+    },
+    {
+      "label": "口語版",
+      "text": "I've been at it for ages.（聊天可以，面試顯得含糊）"
+    },
+    {
+      "label": "升級用詞",
+      "text": "把 for ages 換成精準的長度或起點：for over eight years / since 2019。"
+    },
+    {
+      "label": "再升級句構",
+      "text": "Having worked in QA for eight years, I've seen most of these issues before.（資歷前置，帶出判斷力）"
+    },
+    {
+      "label": "換個說法",
+      "text": "書面正式版：It has been eight years since I first joined the field.（時間前置，語氣沉穩）"
+    }
+  ],
+  "comparison": {
+    "title": "for ages vs since 2019",
+    "left": {
+      "tag": "FOR AGES / FOREVER",
+      "tagCn": "口語、含糊",
+      "icon": "bubble",
+      "head": "casual register",
+      "headCn": "隨意語域",
+      "en": "I've been doing this for ages.",
+      "cn": "我搞這個搞好久了。",
+      "pts": [
+        "誇飾、不精準",
+        "聊天很自然",
+        "正式面試顯得沒想清楚"
+      ]
+    },
+    "right": {
+      "tag": "SINCE 2019",
+      "tagCn": "正式、精準",
+      "icon": "star",
+      "head": "formal register",
+      "headCn": "正式語域",
+      "en": "I have worked in this field since 2019.",
+      "cn": "我從2019年就在這個領域工作了。",
+      "pts": [
+        "精準、可查證",
+        "展現自我認識",
+        "面試官更看重"
+      ]
+    },
+    "note": "口訣：聊天可以誇飾，正式場合請把時間講精準——精準本身就是一種專業。"
+  },
+  "quizMore": [
+    {
+      "q": "Which is best for a formal cover letter?",
+      "opts": [
+        "I've been in sales forever.",
+        "I have worked in sales since 2018.",
+        "I've been at sales for ages.",
+        "I do sales a long time."
+      ],
+      "ans": 1,
+      "expl": "正式書面偏好精準、可查證的說法 since 2018，避免 forever／for ages 這類口語誇飾。"
+    },
+    {
+      "q": "___ managed the team for two years, she knew exactly what to change.",
+      "opts": [
+        "Having",
+        "Since",
+        "For",
+        "When"
+      ],
+      "ans": 0,
+      "expl": "完成式分詞構句 Having managed... 把資歷前置，帶出後面的判斷。"
+    }
+  ]
+},
 dg20260911a2: {
   "vis": true,
   "oneLine": "have done是「做完的結果」，have been doing是「一直在做的過程」——先問自己：要講結果還是過程？",

@@ -8,6 +8,785 @@ window.DAILY = {
 
 articles:[
 {
+  "id": "d20260915a2",
+  "date": "2026-09-15",
+  "level": "A2",
+  "topic": "家人與朋友",
+  "words": 81,
+  "kind": "orig",
+  "title": "A Friend Helps Tom Prepare",
+  "titleCn": "朋友幫Tom做準備",
+  "focus": "現在簡單式與can描述準備過程；will表達對面試的鼓勵與預測",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom星期五有一場面試，他的好朋友Ben來家裡幫他練習。全文只用現在簡單式、過去簡單式、can和will，留意will怎麼表達「鼓勵、對未來的預測」。",
+  "spoken": [
+    {
+      "en": "So Tom's got this big interview Friday, and his buddy Ben just shows up to help him prep.",
+      "cn": "Tom星期五有個大面試，他麻吉Ben就直接跑來幫他練習。"
+    },
+    {
+      "en": "Ben's been through a ton of interviews, so he throws practice questions at Tom one after another.",
+      "cn": "Ben面試經驗超多，所以他一題接一題丟練習題給Tom。"
+    },
+    {
+      "en": "Tom's a bundle of nerves, but Ben keeps it simple: speak clearly, smile, take your time.",
+      "cn": "Tom緊張得要命，但Ben就講重點：講清楚、微笑、慢慢來。"
+    },
+    {
+      "en": "By the end Tom actually feels ready, and honestly it's going to go just fine.",
+      "cn": "到最後Tom其實覺得準備好了，老實說應該會很順利。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom has a job interview this Friday. His friend Ben comes to help him get ready. Ben had many interviews before, so he knows a lot.",
+      "cn": "Tom這個星期五有一場工作面試。他的朋友Ben來幫他做準備。Ben以前面試過很多次，所以他懂很多。"
+    },
+    {
+      "en": "First, they practice some easy questions. Ben asks, and Tom answers slowly. Tom is nervous, but he can do it.",
+      "cn": "首先，他們練習一些簡單的問題。Ben問，Tom慢慢回答。Tom很緊張，但他做得到。"
+    },
+    {
+      "en": "Ben gives Tom some good advice. He says, \"Speak clearly and smile.\" Tom writes the tips in his notebook.",
+      "cn": "Ben給Tom一些好建議。他說：「講清楚，還有記得微笑。」Tom把這些小訣竅寫進筆記本裡。"
+    },
+    {
+      "en": "Now Tom feels ready. He thanks his friend Ben. Tom thinks the interview will go well.",
+      "cn": "現在Tom覺得準備好了。他謝謝朋友Ben。Tom覺得這場面試應該會很順利。"
+    }
+  ],
+  "target": [
+    {
+      "w": "interview",
+      "ipa": "/ˈɪn.t̬ɚ.vjuː/",
+      "pos": "n.",
+      "cn": "面試",
+      "def": "A meeting where someone asks you questions, often for a job.",
+      "ex": "Tom has a job interview this Friday.",
+      "exCn": "Tom這個星期五有一場工作面試。"
+    },
+    {
+      "w": "practice",
+      "ipa": "/ˈpræktɪs/",
+      "pos": "v.",
+      "cn": "練習",
+      "def": "To do something again and again to get better at it.",
+      "ex": "First, they practice some easy questions.",
+      "exCn": "首先，他們練習一些簡單的問題。"
+    },
+    {
+      "w": "nervous",
+      "ipa": "/ˈnɜːrvəs/",
+      "pos": "adj.",
+      "cn": "緊張的",
+      "def": "Feeling worried or afraid about something.",
+      "ex": "Tom is nervous, but he can do it.",
+      "exCn": "Tom很緊張，但他做得到。"
+    },
+    {
+      "w": "advice",
+      "ipa": "/ədˈvaɪs/",
+      "pos": "n.",
+      "cn": "建議",
+      "def": "Words that tell someone what is a good thing to do.",
+      "ex": "Ben gives Tom some good advice.",
+      "exCn": "Ben給Tom一些好建議。"
+    },
+    {
+      "w": "smile",
+      "ipa": "/smaɪl/",
+      "pos": "v.",
+      "cn": "微笑",
+      "def": "To make a happy face with your mouth.",
+      "ex": "Speak clearly and smile.",
+      "exCn": "講清楚，還有記得微笑。"
+    },
+    {
+      "w": "ready",
+      "ipa": "/ˈredi/",
+      "pos": "adj.",
+      "cn": "準備好的",
+      "def": "Prepared and able to do something now.",
+      "ex": "Now Tom feels ready.",
+      "exCn": "現在Tom覺得準備好了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why does Ben come to Tom's house?",
+      "qCn": "Ben為什麼來Tom家？",
+      "opts": [
+        "A. To eat dinner",
+        "B. To help Tom get ready for the interview",
+        "C. To watch TV",
+        "D. To borrow a book"
+      ],
+      "optsCn": [
+        "A. 來吃晚餐",
+        "B. 來幫Tom準備面試",
+        "C. 來看電視",
+        "D. 來借一本書"
+      ],
+      "ans": 1,
+      "expl": "His friend Ben comes to help him get ready.——Ben是來幫Tom準備面試的。"
+    },
+    {
+      "q": "What advice does Ben give Tom?",
+      "qCn": "Ben給Tom什麼建議？",
+      "opts": [
+        "A. Speak clearly and smile",
+        "B. Run to the office",
+        "C. Wear a red hat",
+        "D. Bring a friend"
+      ],
+      "optsCn": [
+        "A. 講清楚並且微笑",
+        "B. 用跑的去辦公室",
+        "C. 戴一頂紅帽子",
+        "D. 帶一個朋友去"
+      ],
+      "ans": 0,
+      "expl": "He says, \"Speak clearly and smile.\""
+    },
+    {
+      "q": "Tom thinks the interview ___ go well.",
+      "qCn": "Tom覺得這場面試應該會很順利。（選出正確的字）",
+      "opts": [
+        "A. is",
+        "B. was",
+        "C. will",
+        "D. does"
+      ],
+      "ans": 2,
+      "expl": "will用來表示對未來的預測：Tom覺得面試『將會』很順利。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Ben had many interviews before, so he knows a lot.",
+      "b2": "Because Ben has been to many interviews, he knows exactly what to say.",
+      "note": "把過去簡單式had改成現在完成式has been to，強調『到現在為止累積的經驗』，是B1常見的升級寫法。",
+      "sp": "Ben's sat through a ton of interviews, so he totally knows the drill.",
+      "spNote": "a ton of（很多）、knows the drill（很懂流程、駕輕就熟）都是口語常見說法。",
+      "b1Cn": "Ben以前面試過很多次，所以他懂很多。",
+      "b2Cn": "因為Ben參加過很多次面試，他很清楚該說什麼。",
+      "spCn": "Ben參加過超多面試，所以他超熟這一套。"
+    },
+    {
+      "b1": "Tom is nervous, but he can do it.",
+      "b2": "Although Tom feels nervous, he is confident that he can handle it.",
+      "note": "用Although開頭的讓步子句取代but，並把can do it升級成is confident that he can handle it，語氣更完整，是B1常見的寫法。",
+      "sp": "Tom's kind of freaking out, but deep down he knows he's got this.",
+      "spNote": "freaking out（緊張、慌）、he's got this（他沒問題、搞得定）是口語常見說法。",
+      "b1Cn": "Tom很緊張，但他做得到。",
+      "b2Cn": "雖然Tom覺得緊張，但他有信心自己能應付。",
+      "spCn": "Tom有點緊張，但他心裡知道自己搞得定。"
+    }
+  ]
+},
+{
+  "id": "d20260915b1",
+  "date": "2026-09-15",
+  "level": "B1",
+  "topic": "職場與面試",
+  "words": 135,
+  "kind": "orig",
+  "title": "Tom Answers the Big Question",
+  "titleCn": "Tom回答那個關鍵問題",
+  "focus": "現在完成式（have studied, has learned, has waited）搭配for/since講『多久』；because/but/when連接原因與轉折；比較級（calmer, clearer）",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "星期五Tom終於去面試了。文章用現在完成式的基礎用法搭配for與since講「做這件事多久了」，也留意because、but、when怎麼連接原因和轉折，還有calmer、clearer這些比較級。",
+  "spoken": [
+    {
+      "en": "So Friday finally rolls around and Tom walks into the interview way calmer than he thought he'd be.",
+      "cn": "星期五終於到了，Tom走進面試現場，比他想像中還鎮定很多。"
+    },
+    {
+      "en": "The manager hits him with the classic \"how long have you studied English?\" and Tom's totally ready for it.",
+      "cn": "經理丟出那個經典的「你英文學多久了？」，而Tom完全有備而來。"
+    },
+    {
+      "en": "He keeps it honest — six years of study, been using it at work since last summer — no fluff.",
+      "cn": "他老實回答——學了六年、去年夏天開始在工作上用——不灌水。"
+    },
+    {
+      "en": "Walks out feeling like a weight's off his shoulders, and now he just waits for the callback.",
+      "cn": "他走出來覺得如釋重負，現在就等對方回電了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "On Friday, Tom finally had his interview. The manager was friendly, and the office felt calmer than Tom expected. After a few easy questions, the manager asked something Tom was ready for.",
+      "cn": "星期五，Tom終於去面試了。經理很和善，辦公室的氣氛也比Tom預期的還平靜。問了幾個簡單的問題之後，經理問了一個Tom早有準備的問題。"
+    },
+    {
+      "en": "\"How long have you studied English?\" she asked. Tom smiled, because he knew this one. \"I have studied English for six years,\" he said, \"and I have used it at work since last summer.\"",
+      "cn": "「你英文學多久了？」她問。Tom笑了，因為這題他會。「我英文學了六年，」他說，「而且從去年夏天開始就在工作上用了。」"
+    },
+    {
+      "en": "The manager nodded and asked more questions. Tom talked about his old job and the skills he has learned there. He spoke slowly, but his answers were clearer than in his practice at home.",
+      "cn": "經理點點頭，又問了更多問題。Tom聊到他以前的工作，還有他在那裡學到的技能。他講得很慢，但他的回答比在家練習時還清楚。"
+    },
+    {
+      "en": "When the interview ended, Tom felt relieved. The manager said the team would call him next week. Tom has waited a long time for a chance like this, and now he feels ready for it.",
+      "cn": "面試結束時，Tom鬆了一口氣。經理說團隊下週會打電話給他。Tom等這樣的機會已經等了很久，現在他覺得自己準備好了。"
+    }
+  ],
+  "target": [
+    {
+      "w": "manager",
+      "ipa": "/ˈmænɪdʒɚ/",
+      "pos": "n.",
+      "cn": "經理",
+      "def": "A person who is in charge of a business or office.",
+      "ex": "The manager was friendly.",
+      "exCn": "經理很和善。"
+    },
+    {
+      "w": "relieved",
+      "ipa": "/rɪˈliːvd/",
+      "pos": "adj.",
+      "cn": "鬆一口氣的、放心的",
+      "def": "Feeling happy because a worry has ended.",
+      "ex": "When the interview ended, Tom felt relieved.",
+      "exCn": "面試結束時，Tom鬆了一口氣。"
+    },
+    {
+      "w": "skill",
+      "ipa": "/skɪl/",
+      "pos": "n.",
+      "cn": "技能、本領",
+      "def": "The ability to do something well because you have learned it.",
+      "ex": "Tom talked about the skills he has learned there.",
+      "exCn": "Tom聊到他在那裡學到的技能。"
+    },
+    {
+      "w": "chance",
+      "ipa": "/tʃæns/",
+      "pos": "n.",
+      "cn": "機會",
+      "def": "A time when it is possible to do something you want.",
+      "ex": "Tom has waited a long time for a chance like this.",
+      "exCn": "Tom等這樣的機會已經等了很久。"
+    },
+    {
+      "w": "nod",
+      "ipa": "/nɑːd/",
+      "pos": "v.",
+      "cn": "點頭",
+      "def": "To move your head down and up to show you agree.",
+      "ex": "The manager nodded and asked more questions.",
+      "exCn": "經理點點頭，又問了更多問題。"
+    },
+    {
+      "w": "calm",
+      "ipa": "/kɑːm/",
+      "pos": "adj.",
+      "cn": "平靜的、鎮定的",
+      "def": "Quiet and relaxed, without strong feelings.",
+      "ex": "The office felt calmer than Tom expected.",
+      "exCn": "辦公室的氣氛比Tom預期的還平靜。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How did the office feel to Tom?",
+      "qCn": "辦公室給Tom的感覺如何？",
+      "opts": [
+        "A. Louder than he expected",
+        "B. Calmer than he expected",
+        "C. Colder than he expected",
+        "D. Darker than he expected"
+      ],
+      "optsCn": [
+        "A. 比他預期的還吵",
+        "B. 比他預期的還平靜",
+        "C. 比他預期的還冷",
+        "D. 比他預期的還暗"
+      ],
+      "ans": 1,
+      "expl": "the office felt calmer than Tom expected.——用比較級calmer說明比預期還平靜。"
+    },
+    {
+      "q": "Why did Tom smile when the manager asked her question?",
+      "qCn": "經理問問題時，Tom為什麼笑了？",
+      "opts": [
+        "A. Because the question was funny",
+        "B. Because he knew the answer well",
+        "C. Because he wanted to leave",
+        "D. Because he did not understand"
+      ],
+      "optsCn": [
+        "A. 因為問題很好笑",
+        "B. 因為這題他很會答",
+        "C. 因為他想離開",
+        "D. 因為他聽不懂"
+      ],
+      "ans": 1,
+      "expl": "Tom smiled, because he knew this one.——他笑是因為這題他早有準備、答得出來。"
+    },
+    {
+      "q": "\"I have studied English ___ six years.\"",
+      "qCn": "「我英文學了六年。」（選出正確的字）",
+      "opts": [
+        "A. since",
+        "B. for",
+        "C. at",
+        "D. in"
+      ],
+      "ans": 1,
+      "expl": "講『一段時間長度』（six years）要用for；since後面接的是起點時間。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "I have used English at work since last summer.",
+      "b2": "English has been part of my daily work since last summer.",
+      "note": "把主動的I have used改寫成has been part of的說法，讓句子從『我做了什麼』轉為描述『這件事一直存在』，語氣更成熟，是B1+常見的寫法。",
+      "sp": "I've been using English on the job since last summer, so it's second nature now.",
+      "spNote": "on the job（在工作上）、second nature（變成本能、駕輕就熟）是口語常見說法。",
+      "b1Cn": "我從去年夏天開始就在工作上用英文了。",
+      "b2Cn": "從去年夏天開始，英文就一直是我日常工作的一部分。",
+      "spCn": "我從去年夏天就一直在工作上用英文，現在已經像本能一樣。"
+    },
+    {
+      "b1": "The manager said the team would call him next week.",
+      "b2": "The manager told him that the team would be in touch the following week.",
+      "note": "把call改成more正式的be in touch，並用the following week取代next week，符合轉述職場對話時較正式的語域，是B1+常見的寫法。",
+      "sp": "The manager said they'd get back to him sometime next week.",
+      "spNote": "get back to someone（回覆某人）是口語裡最常用的『之後聯絡你』的說法。",
+      "b1Cn": "經理說團隊下週會打電話給他。",
+      "b2Cn": "經理告訴他，團隊會在下一週跟他聯絡。",
+      "spCn": "經理說他們下禮拜找個時間回覆他。"
+    }
+  ]
+},
+{
+  "id": "d20260915b1p",
+  "date": "2026-09-15",
+  "level": "B1+",
+  "topic": "職場與面試",
+  "words": 157,
+  "kind": "orig",
+  "title": "The Questions Anita Learned to Ask",
+  "titleCn": "Anita學會該問的問題",
+  "focus": "被動語態與現在完成式＋被動（had been prepared, has been trusted, were sent out）；關係子句（which）補充資訊；for/since講持續時間",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "當了五年品質工程師之後，Anita第一次坐到面試官的位子上。文章開始使用被動語態與現在完成式＋被動（had been prepared, has been trusted），也用which帶出的關係子句補充資訊，是B1+進階的句型重點。",
+  "spoken": [
+    {
+      "en": "So after five years as an engineer, Anita suddenly gets pulled in to help interview new hires.",
+      "cn": "當了五年工程師之後，Anita突然被找去幫忙面試新人。"
+    },
+    {
+      "en": "Weird part is, she's spent her whole career on the other side of that table, answering the questions.",
+      "cn": "詭異的地方在於，她整個職涯都坐在桌子的另一邊，是回答問題的那個人。"
+    },
+    {
+      "en": "She figures out fast that the confident talkers aren't always the ones who actually fit the team.",
+      "cn": "她很快就發現，很會講、很有自信的人不見得就是真的適合團隊的人。"
+    },
+    {
+      "en": "Her trick ends up being simple — just ask how long they've actually done the thing, and listen.",
+      "cn": "她的訣竅最後其實很簡單——就問他們這件事到底做了多久，然後好好聽。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "After five years as a quality engineer in Vietnam, Anita was recently asked to help interview new staff. She had always sat on the other side of the table, so the change felt strange at first.",
+      "cn": "在越南當了五年品質工程師之後，Anita最近被找去幫忙面試新進人員。她過去一直坐在桌子的另一邊，所以這個轉變一開始讓她覺得很陌生。"
+    },
+    {
+      "en": "The candidates she met had been prepared in very different ways. Some had been coached by friends; others had practiced alone for weeks. Anita noticed that the most confident ones were not always the best fit for the team.",
+      "cn": "她面試到的應徵者，準備的方式非常不同。有些人是被朋友特訓過的；有些人則是自己一個人練習了好幾個禮拜。Anita注意到，最有自信的那些人，不見得就是最適合團隊的人。"
+    },
+    {
+      "en": "She learned to ask how long each person had done certain tasks, since a clear timeline often revealed real experience. \"How long have you worked with this software?\" she would ask, and the honest answers were easy to spot.",
+      "cn": "她學會去問每個人某些工作『做了多久』，因為一條清楚的時間線常常能顯露出真正的經驗。「你用這套軟體多久了？」她會這樣問，而誠實的回答一聽就聽得出來。"
+    },
+    {
+      "en": "By the end of the week, three people had been chosen, and offer letters were quickly sent out. Anita realized that good interviewing is a skill which must be practiced, just like the work itself. She has been trusted with it ever since.",
+      "cn": "到了週末，已經選出三個人，錄取通知也很快就寄了出去。Anita體會到，好的面試本身就是一種必須練習的技能，就跟工作一樣。從那之後，這件事就一直交由她負責。"
+    }
+  ],
+  "target": [
+    {
+      "w": "candidate",
+      "ipa": "/ˈkændɪdət/",
+      "pos": "n.",
+      "cn": "應徵者、候選人",
+      "def": "A person who is being considered for a job or position.",
+      "ex": "The candidates she met had been prepared in very different ways.",
+      "exCn": "她面試到的應徵者，準備的方式非常不同。"
+    },
+    {
+      "w": "coach",
+      "ipa": "/koʊtʃ/",
+      "pos": "v.",
+      "cn": "特訓、指導",
+      "def": "To train or teach someone to do something better.",
+      "ex": "Some had been coached by friends.",
+      "exCn": "有些人是被朋友特訓過的。"
+    },
+    {
+      "w": "confident",
+      "ipa": "/ˈkɑːn.fə.dənt/",
+      "pos": "adj.",
+      "cn": "有自信的",
+      "def": "Sure that you can do things well.",
+      "ex": "The most confident ones were not always the best fit.",
+      "exCn": "最有自信的那些人不見得就是最適合的人。"
+    },
+    {
+      "w": "timeline",
+      "ipa": "/ˈtaɪmlaɪn/",
+      "pos": "n.",
+      "cn": "時間線、時間軸",
+      "def": "The order in which a series of events happened over time.",
+      "ex": "A clear timeline often revealed real experience.",
+      "exCn": "一條清楚的時間線常常能顯露出真正的經驗。"
+    },
+    {
+      "w": "reveal",
+      "ipa": "/rɪˈviːl/",
+      "pos": "v.",
+      "cn": "顯露、透露",
+      "def": "To make something known that was hidden.",
+      "ex": "A clear timeline often revealed real experience.",
+      "exCn": "一條清楚的時間線常常能顯露出真正的經驗。"
+    },
+    {
+      "w": "honest",
+      "ipa": "/ˈɑːnɪst/",
+      "pos": "adj.",
+      "cn": "誠實的",
+      "def": "Telling the truth and not hiding facts.",
+      "ex": "The honest answers were easy to spot.",
+      "exCn": "誠實的回答一聽就聽得出來。"
+    },
+    {
+      "w": "trust",
+      "ipa": "/trʌst/",
+      "pos": "v.",
+      "cn": "信任、託付",
+      "def": "To believe that someone is good and will do things well.",
+      "ex": "She has been trusted with it ever since.",
+      "exCn": "從那之後，這件事就一直交由她負責。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did the new role feel strange to Anita at first?",
+      "qCn": "為什麼這個新角色一開始讓Anita覺得陌生？",
+      "opts": [
+        "A. She had never worked in Vietnam before",
+        "B. She had always been the one being interviewed, not the interviewer",
+        "C. She did not speak the language",
+        "D. She had just been hired herself"
+      ],
+      "optsCn": [
+        "A. 她以前從沒在越南工作過",
+        "B. 她過去一直是被面試的人，而不是面試官",
+        "C. 她不會說當地語言",
+        "D. 她自己才剛被錄取"
+      ],
+      "ans": 1,
+      "expl": "She had always sat on the other side of the table, so the change felt strange at first.——她一直是被面試的那一方。"
+    },
+    {
+      "q": "What did Anita notice about the most confident candidates?",
+      "qCn": "關於最有自信的應徵者，Anita注意到什麼？",
+      "opts": [
+        "A. They were always the best choice",
+        "B. They were not always the best fit for the team",
+        "C. They never answered honestly",
+        "D. They had no real experience"
+      ],
+      "optsCn": [
+        "A. 他們總是最好的選擇",
+        "B. 他們不見得是最適合團隊的人",
+        "C. 他們從不誠實回答",
+        "D. 他們毫無真正的經驗"
+      ],
+      "ans": 1,
+      "expl": "the most confident ones were not always the best fit for the team."
+    },
+    {
+      "q": "Why did Anita ask how long people had done certain tasks?",
+      "qCn": "Anita為什麼要問別人某些工作做了多久？",
+      "opts": [
+        "A. Because a clear timeline often revealed real experience",
+        "B. Because she wanted to end the interview quickly",
+        "C. Because the company required it",
+        "D. Because she liked round numbers"
+      ],
+      "optsCn": [
+        "A. 因為清楚的時間線常常能顯露真正的經驗",
+        "B. 因為她想快點結束面試",
+        "C. 因為公司規定要問",
+        "D. 因為她喜歡整數"
+      ],
+      "ans": 0,
+      "expl": "since a clear timeline often revealed real experience."
+    },
+    {
+      "q": "By the end of the week, three people ___ chosen.",
+      "qCn": "到了週末，已經有三個人被選上了。（選出正確的形式）",
+      "opts": [
+        "A. had been",
+        "B. have",
+        "C. were being",
+        "D. are"
+      ],
+      "ans": 0,
+      "expl": "現在完成式＋被動的過去版（過去完成被動）had been chosen，強調『到那個時間點為止，人已經被選好了』。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Some candidates were coached by friends.",
+      "b2": "Some candidates had clearly been coached by friends, and it showed in their polished but similar answers.",
+      "note": "把was/were coached升級成過去完成被動had been coached，並用and it showed in...補上結果，敘事層次更豐富，是B2寫作常見的手法。",
+      "sp": "You could tell some of them had been coached by friends — their answers all sounded kind of the same.",
+      "spNote": "You could tell（一看就知道）、sounded kind of the same（聽起來都差不多）是口語常見說法。",
+      "b1Cn": "有些應徵者是被朋友特訓過的。",
+      "b2Cn": "有些應徵者顯然是被朋友特訓過的，這一點從他們雖然流暢卻大同小異的回答就看得出來。",
+      "spCn": "看得出來有些人是被朋友特訓過的——他們的回答聽起來都差不多。"
+    },
+    {
+      "b1": "Good interviewing is a skill. You must practice it.",
+      "b2": "Good interviewing is a skill which must be practiced, just like the work itself.",
+      "note": "用which帶出的關係子句把兩句合併，並用被動must be practiced，句子更緊湊，是B1+進階的合併技巧。",
+      "sp": "Interviewing people well is a skill too — you've got to practice it like anything else.",
+      "spNote": "you've got to（你必須）、like anything else（就跟其他事情一樣）是口語常見說法。",
+      "b1Cn": "好的面試是一種技能。你必須練習它。",
+      "b2Cn": "好的面試是一種必須練習的技能，就跟工作本身一樣。",
+      "spCn": "把人面試好也是一種技能——你得像練其他東西一樣練它。"
+    }
+  ]
+},
+{
+  "id": "d20260915b2",
+  "date": "2026-09-15",
+  "level": "B2",
+  "topic": "職場與面試",
+  "words": 288,
+  "kind": "original",
+  "title": "What Interviewers Are Really Asking",
+  "titleCn": "面試官真正想問的是什麼",
+  "focus": "for/since在敘事與論述中的用法；現在完成式＋完成進行式（has worked, has been learning）；語域對比（口語 vs 正式）與修辭選擇",
+  "intro": "這是一篇原創的B2論述文，談面試中『多久』這個問題背後真正的意義。留意文章怎麼用for與since、現在完成式與完成進行式鋪陳時間感，也留意作者如何刻意對比口語與正式語域（forever／for ages vs since 2019），示範正式寫作的修辭選擇。",
+  "spoken": [
+    {
+      "en": "Honestly, every interview has that one question that actually matters, and it's never the one they say out loud.",
+      "cn": "老實說，每場面試都有那麼一題是真正關鍵的，而且從來不是他們嘴上問出來的那一題。"
+    },
+    {
+      "en": "It's basically: do you actually care about this stuff, and have you cared for a while — or did you just fake it this morning?",
+      "cn": "說穿了就是：你是真的在乎這個領域嗎，而且在乎很久了嗎——還是你今天早上才臨時演出來的？"
+    },
+    {
+      "en": "That's why saying \"since 2019\" lands so much better than \"oh, I've been doing this forever.\"",
+      "cn": "這就是為什麼講「從2019年開始」比「喔，我做這個做超久了」聽起來有力多了。"
+    },
+    {
+      "en": "And more time isn't automatically better — two focused years can crush a decade of just coasting.",
+      "cn": "而且時間長不代表比較好——認真投入的兩年可以電爆混了十年的人。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Every job interview contains one question that matters more than the rest, though it is rarely asked so directly: how long have you truly cared about this kind of work? On the surface, interviewers ask about experience, skills, and salary expectations. Underneath, they are listening for evidence that a candidate's interest is genuine and has lasted, rather than something invented for the occasion.",
+      "cn": "每一場工作面試裡都藏著一個比其他問題都重要的問題，只是它很少被這麼直接地問出來：你對這一行的在乎，究竟持續了多久？表面上，面試官問的是經驗、技能和薪資期待。骨子裡，他們是在聽有沒有證據能證明，一個應徵者的興趣是真實的、而且已經持續了一段時間，而不是為了這個場合臨時捏造出來的。"
+    },
+    {
+      "en": "This is why the small words \"for\" and \"since\" carry so much weight in an interview. When a candidate says she has worked in quality control for eight years, or that she has been learning data analysis since her last promotion, she is not merely reciting a timeline. She is quietly demonstrating commitment, steady growth, and the kind of patient effort that no single clever answer can fake.",
+      "cn": "這就是為什麼for和since這兩個小小的字，在面試裡份量這麼重。當一個應徵者說她在品管領域做了八年，或者說她從上一次升遷之後就一直在學資料分析，她並不只是在背一條時間線。她是在不動聲色地展現出投入、穩定的成長，以及那種任何一句聰明話都假裝不來的耐心付出。"
+    },
+    {
+      "en": "Register matters here as well. In casual conversation, people happily say things like \"I've been doing this forever\" or \"I've been at it for ages.\" In a formal interview, such vague expressions can suggest that a candidate has never reflected carefully on their own path. A precise \"since 2019\" or \"for just over three years\" sounds measured, honest, and self-aware — qualities that experienced interviewers value far more than confidence alone.",
+      "cn": "語域在這裡也很關鍵。在輕鬆的對話裡，人們很自在地說「我做這個做超久了」或「我搞這個搞好久了」之類的話。但在正式的面試裡，這種含糊的說法，可能會讓人覺得這個應徵者從來沒有認真回顧過自己的來時路。一句精準的「從2019年開始」或「就三年多一點」，聽起來有分寸、誠實、又有自知之明——這些特質，是經驗豐富的面試官遠比單純的自信更看重的。"
+    },
+    {
+      "en": "None of this means that longer is always better. A thoughtful applicant who has spent two focused years in a field can easily outshine someone who has drifted through a decade without curiosity. What interviewers are really asking, then, is not simply how much time has passed, but how that time has been used. The best answers turn a plain duration into a short, convincing story — and that, far more than any rehearsed line, is what tends to be remembered after the room has emptied.",
+      "cn": "這一切並不代表時間越長就一定越好。一個用心的應徵者，若在一個領域裡認真投入了兩年，很可能輕鬆勝過那種混了十年卻毫無好奇心的人。所以，面試官真正想問的，並不只是過了多少時間，而是這些時間被怎麼運用。最好的回答，會把一段乾巴巴的時間長度，變成一個簡短而有說服力的故事——而這一點，遠比任何背好的台詞，更容易在人都離開房間之後仍被記住。"
+    }
+  ],
+  "target": [
+    {
+      "w": "genuine",
+      "ipa": "/ˈdʒenjuɪn/",
+      "pos": "adj.",
+      "cn": "真實的、真誠的",
+      "def": "Real and sincere, not fake.",
+      "ex": "They listen for evidence that a candidate's interest is genuine.",
+      "exCn": "他們在聽有沒有證據證明應徵者的興趣是真實的。"
+    },
+    {
+      "w": "commitment",
+      "ipa": "/kəˈmɪtmənt/",
+      "pos": "n.",
+      "cn": "投入、承諾",
+      "def": "The willingness to give your time and energy to something.",
+      "ex": "She is quietly demonstrating commitment and steady growth.",
+      "exCn": "她在不動聲色地展現出投入與穩定的成長。"
+    },
+    {
+      "w": "register",
+      "ipa": "/ˈredʒɪstɚ/",
+      "pos": "n.",
+      "cn": "語域（語言的正式程度）",
+      "def": "The level of formality used in speaking or writing.",
+      "ex": "Register matters here as well.",
+      "exCn": "語域在這裡也很關鍵。"
+    },
+    {
+      "w": "vague",
+      "ipa": "/veɪɡ/",
+      "pos": "adj.",
+      "cn": "含糊的、模糊的",
+      "def": "Not clear or exact.",
+      "ex": "Such vague expressions can suggest a lack of reflection.",
+      "exCn": "這種含糊的說法可能顯示缺乏反思。"
+    },
+    {
+      "w": "precise",
+      "ipa": "/prɪˈsaɪs/",
+      "pos": "adj.",
+      "cn": "精準的",
+      "def": "Exact and clear.",
+      "ex": "A precise \"since 2019\" sounds measured and honest.",
+      "exCn": "一句精準的『從2019年開始』聽起來有分寸又誠實。"
+    },
+    {
+      "w": "measured",
+      "ipa": "/ˈmeʒɚd/",
+      "pos": "adj.",
+      "cn": "有分寸的、慎重的",
+      "def": "Careful and controlled, not rushed or emotional.",
+      "ex": "A precise date sounds measured, honest, and self-aware.",
+      "exCn": "一個精準的日期聽起來有分寸、誠實又有自知之明。"
+    },
+    {
+      "w": "applicant",
+      "ipa": "/ˈæplɪkənt/",
+      "pos": "n.",
+      "cn": "申請者、應徵者",
+      "def": "A person who formally asks for a job or place.",
+      "ex": "A thoughtful applicant who has spent two focused years can outshine others.",
+      "exCn": "一個用心、認真投入兩年的應徵者能勝過其他人。"
+    },
+    {
+      "w": "duration",
+      "ipa": "/dəˈreɪʃən/",
+      "pos": "n.",
+      "cn": "持續時間、時間長度",
+      "def": "The length of time something continues.",
+      "ex": "The best answers turn a plain duration into a short story.",
+      "exCn": "最好的回答會把乾巴巴的時間長度變成一個簡短的故事。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "According to the article, what is the real question behind most interviews?",
+      "qCn": "根據文章，大多數面試背後真正的問題是什麼？",
+      "opts": [
+        "A. How much salary a candidate wants",
+        "B. How long and how genuinely a candidate has cared about the work",
+        "C. Which school a candidate went to",
+        "D. Whether a candidate can start immediately"
+      ],
+      "optsCn": [
+        "A. 應徵者想要多少薪水",
+        "B. 應徵者對這份工作在乎得多久、多真誠",
+        "C. 應徵者念哪一所學校",
+        "D. 應徵者能不能馬上上工"
+      ],
+      "ans": 1,
+      "expl": "how long have you truly cared about this kind of work?——面試官真正在聽的是興趣是否genuine且has lasted。"
+    },
+    {
+      "q": "Why do \"for\" and \"since\" carry so much weight, according to the writer?",
+      "qCn": "根據作者，for和since為什麼份量這麼重？",
+      "opts": [
+        "A. They are difficult grammar points",
+        "B. They quietly show commitment and steady growth that clever answers cannot fake",
+        "C. They make sentences longer",
+        "D. They are only used in interviews"
+      ],
+      "optsCn": [
+        "A. 它們是很難的文法點",
+        "B. 它們能不動聲色地展現出聰明話假裝不來的投入與穩定成長",
+        "C. 它們讓句子變長",
+        "D. 它們只在面試時使用"
+      ],
+      "ans": 1,
+      "expl": "She is quietly demonstrating commitment, steady growth, and the kind of patient effort that no single clever answer can fake."
+    },
+    {
+      "q": "What does the writer say about vague expressions like \"I've been doing this forever\"?",
+      "qCn": "作者對於「我做這個做超久了」這類含糊說法有什麼看法？",
+      "opts": [
+        "A. They sound measured and self-aware",
+        "B. They are perfect for formal interviews",
+        "C. In a formal interview they can suggest a lack of careful reflection",
+        "D. They always impress experienced interviewers"
+      ],
+      "optsCn": [
+        "A. 它們聽起來有分寸又有自知之明",
+        "B. 它們非常適合正式面試",
+        "C. 在正式面試裡，它們可能顯示缺乏認真的反思",
+        "D. 它們總是能打動經驗豐富的面試官"
+      ],
+      "ans": 2,
+      "expl": "such vague expressions can suggest that a candidate has never reflected carefully on their own path."
+    },
+    {
+      "q": "What is the writer's main point about the length of experience?",
+      "qCn": "關於經驗的長短，作者的主要論點是什麼？",
+      "opts": [
+        "A. Longer experience is always better",
+        "B. It matters not simply how much time has passed, but how that time has been used",
+        "C. Only beginners are worth hiring",
+        "D. Time spent in a job never matters"
+      ],
+      "optsCn": [
+        "A. 經驗越長一定越好",
+        "B. 重點不只是過了多少時間，而是這些時間被怎麼運用",
+        "C. 只有新手值得錄用",
+        "D. 花在工作上的時間從來都不重要"
+      ],
+      "ans": 1,
+      "expl": "What interviewers are really asking, then, is not simply how much time has passed, but how that time has been used."
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "She has worked in quality control for eight years.",
+      "b2": "Having worked in quality control for eight years, she spoke about the field with quiet authority.",
+      "note": "用Having worked...的完成式分詞構句開頭，把『工作八年』這個背景濃縮到句首，帶出後面的結果，是B2敘事寫作常見的手法。",
+      "sp": "She's been in quality control for like eight years, so she really knows her stuff.",
+      "spNote": "for like eight years（大概八年，like表示約略）、knows her stuff（很懂、很內行）是口語常見說法。",
+      "b1Cn": "她在品管領域做了八年。",
+      "b2Cn": "在品管領域做了八年之後，她談起這個領域時帶著一種沉穩的權威感。",
+      "spCn": "她在品管做了大概八年，所以她真的很內行。"
+    },
+    {
+      "b1": "The best answers are like a short story. People remember them.",
+      "b2": "The best answers turn a plain duration into a short, convincing story — the kind that tends to be remembered long after the room has emptied.",
+      "note": "用破折號延伸出the kind that...的關係子句，並以被動tends to be remembered收尾，讓句子帶有餘韻與節奏，是B2修辭上的講究。",
+      "sp": "The best answers basically turn a boring timeline into a little story people actually remember.",
+      "spNote": "basically（其實、說穿了）、a little story people actually remember（人們真的會記住的小故事）是口語常見說法。",
+      "b1Cn": "最好的回答就像一個小故事，人們會記得。",
+      "b2Cn": "最好的回答會把乾巴巴的時間長度變成一個簡短而有說服力的故事——那種在人都離開房間許久之後仍會被記住的故事。",
+      "spCn": "最好的回答基本上就是把無聊的時間線變成一個人們真的會記住的小故事。"
+    }
+  ]
+},
+{
   "id": "d20260911a2",
   "date": "2026-09-11",
   "level": "A2",
@@ -5212,6 +5991,622 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260915a2",
+  "date": "2026-09-15",
+  "unitNo": 11,
+  "level": "A2",
+  "title": "How Long Have You ...?",
+  "titleCn": "How long have you ...？問『做多久了』",
+  "srcDays": [],
+  "summary": "想問一件事『從過去到現在做了多久』，用 How long have you + 過去分詞...?；回答時，for 接一段時間長度，since 接開始的那個時間點。",
+  "sections": [
+    {
+      "h": "問句怎麼組",
+      "table": {
+        "head": [
+          "部件",
+          "例子"
+        ],
+        "rows": [
+          [
+            "How long",
+            "問『多久』"
+          ],
+          [
+            "have you",
+            "助動詞 + 主詞"
+          ],
+          [
+            "+ 過去分詞",
+            "worked / studied / lived"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "How long have you studied English?",
+          "cn": "你英文學多久了？",
+          "note": "have + studied（過去分詞）"
+        },
+        {
+          "en": "How long have you worked here?",
+          "cn": "你在這裡工作多久了？",
+          "note": "問從以前到現在的時間長度"
+        }
+      ]
+    },
+    {
+      "h": "回答：for 還是 since",
+      "bullets": [
+        "for + 一段時間長度：for six years、for two months",
+        "since + 開始的時間點：since 2019、since last summer"
+      ],
+      "examples": [
+        {
+          "en": "I have studied English for six years.",
+          "cn": "我英文學了六年了。",
+          "note": "for 接『多長』"
+        },
+        {
+          "en": "I have worked here since last summer.",
+          "cn": "我從去年夏天開始就在這裡工作了。",
+          "note": "since 接『從什麼時候開始』"
+        }
+      ]
+    },
+    {
+      "h": "為什麼用現在完成式",
+      "bullets": [
+        "這件事從過去開始，一直到現在都還在（還沒結束）",
+        "所以不能用現在簡單式 How long do you...?（那是問『通常』）"
+      ],
+      "examples": [
+        {
+          "en": "How long have you lived in Taipei?",
+          "cn": "你在台北住多久了？",
+          "note": "現在還住在那裡，用現在完成式"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "How long do you work here?",
+      "good": "How long have you worked here?",
+      "why": "問『到現在為止做了多久』要用現在完成式 have worked，用現在簡單式 do you work 會變成問『你通常都幾點上班』的意思，中文的『多久了』沒有這個差別，很容易搞錯。"
+    },
+    {
+      "bad": "I have studied English since six years.",
+      "good": "I have studied English for six years.",
+      "why": "six years 是『一段長度』，要用 for；since 後面只能接『起點』（例如 since 2019），中文都翻成『從…』所以容易混。"
+    },
+    {
+      "bad": "I have worked here for last summer.",
+      "good": "I have worked here since last summer.",
+      "why": "last summer 是『開始的時間點』，要用 since；for 後面接的是時間長度，不能接一個時間點。"
+    },
+    {
+      "bad": "How long you have worked here?",
+      "good": "How long have you worked here?",
+      "why": "疑問句裡助動詞 have 要放到主詞 you 前面，寫成 have you，不能照中文語序把主詞放前面。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "How long ___ you studied English?",
+      "qCn": "你英文學多久了？",
+      "opts": [
+        "have",
+        "do",
+        "are",
+        "did"
+      ],
+      "ans": 0,
+      "expl": "問『到現在做了多久』用現在完成式，How long have you...?。"
+    },
+    {
+      "q": "I have lived here ___ three years.",
+      "qCn": "我在這裡住三年了。",
+      "opts": [
+        "since",
+        "for",
+        "at",
+        "in"
+      ],
+      "ans": 1,
+      "expl": "three years 是一段時間長度，用 for。"
+    },
+    {
+      "q": "I have worked here ___ 2020.",
+      "qCn": "我從2020年就在這裡工作了。",
+      "opts": [
+        "for",
+        "since",
+        "from",
+        "in"
+      ],
+      "ans": 1,
+      "expl": "2020 是起點時間，用 since。"
+    },
+    {
+      "q": "How long ___ here?",
+      "qCn": "你在這裡工作多久了？",
+      "opts": [
+        "have you worked",
+        "you have worked",
+        "do you work",
+        "you work"
+      ],
+      "ans": 0,
+      "expl": "疑問句要把 have 放到主詞前面：have you worked。"
+    }
+  ]
+},
+{
+  "id": "dg20260915b1",
+  "date": "2026-09-15",
+  "unitNo": 11,
+  "level": "B1",
+  "title": "How Long Have You ...? — Common Confusions",
+  "titleCn": "How long have you...？更多容易搞混的地方",
+  "srcDays": [],
+  "summary": "延伸 how long 問句：強調『一直在做的動作』用 have you been + Ving；狀態動詞（know, have, like）永遠不能加 ing；回答時 for 接長度、since 接起點，兩者不能互換。",
+  "sections": [
+    {
+      "h": "問『動作持續多久』：加 been + Ving",
+      "table": {
+        "head": [
+          "想問什麼",
+          "用哪種"
+        ],
+        "rows": [
+          [
+            "單純問時間長度",
+            "How long have you + Vpp...?"
+          ],
+          [
+            "強調『一直在做的動作』",
+            "How long have you been + Ving...?"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "How long have you worked here?",
+          "cn": "你在這裡工作多久了？",
+          "note": "問在職的時間長度"
+        },
+        {
+          "en": "How long have you been waiting?",
+          "cn": "你等多久了？",
+          "note": "強調『一直在等』這個動作"
+        }
+      ]
+    },
+    {
+      "h": "狀態動詞不能加 ing",
+      "bullets": [
+        "know, have, like, want 這類狀態動詞不能用進行式",
+        "就算要表達『持續』，也只能用 have + 過去分詞"
+      ],
+      "examples": [
+        {
+          "en": "How long have you known him?",
+          "cn": "你認識他多久了？",
+          "note": "know 是狀態動詞，只能用 have known，不能說 have been knowing"
+        }
+      ]
+    },
+    {
+      "h": "for 與 since 不能互換",
+      "bullets": [
+        "for + 一段長度（for ten minutes, for years）",
+        "since + 起點（since Monday, since I moved here）",
+        "since 後面甚至可以接一個完整的子句"
+      ],
+      "examples": [
+        {
+          "en": "I have been waiting for twenty minutes.",
+          "cn": "我已經等二十分鐘了。",
+          "note": "for 接長度"
+        },
+        {
+          "en": "I have known her since we were kids.",
+          "cn": "我從小就認識她了。",
+          "note": "since 接一個子句當起點"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "How long have you been knowing him?",
+      "good": "How long have you known him?",
+      "why": "know 是狀態動詞，不能用進行式 been knowing，只能用 have known，中文『認識』沒有這種形式差別，最容易犯錯。"
+    },
+    {
+      "bad": "I have been waiting since twenty minutes.",
+      "good": "I have been waiting for twenty minutes.",
+      "why": "twenty minutes 是長度，要用 for；since 後面只能接起點。"
+    },
+    {
+      "bad": "How long are you working here?",
+      "good": "How long have you been working here?",
+      "why": "問『到現在為止一直做多久』要用現在完成進行式 have been working，用現在進行式 are working 只講『現在正在做』，答不出『多久了』。"
+    },
+    {
+      "bad": "I know him for five years.",
+      "good": "I have known him for five years.",
+      "why": "從過去持續到現在的狀態要用現在完成式 have known，用現在簡單式 know 就少了『持續到現在』的意思。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "How long have you ___ for the bus?",
+      "qCn": "你等公車等多久了？",
+      "opts": [
+        "been waiting",
+        "waited",
+        "wait",
+        "waiting"
+      ],
+      "ans": 0,
+      "expl": "強調『一直在等』這個動作，用 have been waiting。"
+    },
+    {
+      "q": "How long have you ___ her?",
+      "qCn": "你認識她多久了？",
+      "opts": [
+        "been knowing",
+        "known",
+        "know",
+        "knowing"
+      ],
+      "ans": 1,
+      "expl": "know 是狀態動詞，不能加 ing，只能用 have known。"
+    },
+    {
+      "q": "I have been living here ___ I got the job.",
+      "qCn": "我從得到這份工作之後就一直住在這裡。",
+      "opts": [
+        "for",
+        "since",
+        "during",
+        "from"
+      ],
+      "ans": 1,
+      "expl": "since 後面可以接一個子句（I got the job）當起點。"
+    },
+    {
+      "q": "I have studied here ___ two years.",
+      "qCn": "我在這裡念書兩年了。",
+      "opts": [
+        "since",
+        "for",
+        "at",
+        "by"
+      ],
+      "ans": 1,
+      "expl": "two years 是一段時間長度，用 for。"
+    }
+  ]
+},
+{
+  "id": "dg20260915b1p",
+  "date": "2026-09-15",
+  "unitNo": 12,
+  "level": "B1+",
+  "title": "For and Since; When ...? and How Long ...?",
+  "titleCn": "for 與 since；when...? 和 how long...? 的分工",
+  "srcDays": [],
+  "summary": "for 講『一段長度』、since 講『從某個起點到現在』；問句上，When...? 問『哪一天發生』（配過去簡單式），How long...? 問『持續多久』（配現在完成式），兩組不能混用。",
+  "sections": [
+    {
+      "h": "for vs since 的核心差別",
+      "table": {
+        "head": [
+          "",
+          "for",
+          "since"
+        ],
+        "rows": [
+          [
+            "後面接",
+            "一段長度",
+            "一個起點"
+          ],
+          [
+            "例子",
+            "for three days",
+            "since Monday"
+          ],
+          [
+            "問題",
+            "How long...?",
+            "How long...?"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "She has lived in Hanoi for five years.",
+          "cn": "她在河內住了五年了。",
+          "note": "for + 長度"
+        },
+        {
+          "en": "She has lived in Hanoi since 2021.",
+          "cn": "她從2021年就住在河內了。",
+          "note": "since + 起點；for five years 跟 since 2021 可能是同一件事的兩種講法"
+        }
+      ]
+    },
+    {
+      "h": "When...? 配過去式，How long...? 配完成式",
+      "bullets": [
+        "When did you start...? 問『哪一天／什麼時候發生』，用過去簡單式",
+        "How long have you...? 問『到現在持續多久』，用現在完成式",
+        "回答 When 用 in/on/at + 時間點；回答 How long 用 for/since"
+      ],
+      "examples": [
+        {
+          "en": "When did you start this job? — In March.",
+          "cn": "你什麼時候開始這份工作的？——三月。",
+          "note": "When 問確切時間點，用過去式 did start"
+        },
+        {
+          "en": "How long have you had this job? — Since March.",
+          "cn": "你做這份工作多久了？——從三月到現在。",
+          "note": "How long 問持續時間，用現在完成式 have had"
+        }
+      ]
+    },
+    {
+      "h": "since 也可以接子句",
+      "bullets": [
+        "since 後面可以接一個時間點（since 2021），也可以接一個過去式子句（since I moved here）",
+        "主句用現在完成式，since 的子句用過去簡單式"
+      ],
+      "examples": [
+        {
+          "en": "I have known her since we worked together.",
+          "cn": "從我們一起共事之後，我就認識她了。",
+          "note": "主句 have known（完成式）+ since 子句 worked（過去式）"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I have worked here since three years.",
+      "good": "I have worked here for three years.",
+      "why": "three years 是長度，要用 for；since 只能接起點。中文『三年了』和『從三年前』界線模糊，所以最容易錯。"
+    },
+    {
+      "bad": "How long did you work here?",
+      "good": "How long have you worked here?",
+      "why": "如果你還在這裡工作，要用現在完成式 have worked 才對；用過去簡單式 did work 會暗示你『已經離職了』。"
+    },
+    {
+      "bad": "When have you started this job?",
+      "good": "When did you start this job?",
+      "why": "When 問確切的時間點，要配過去簡單式 did start；現在完成式不跟 when（確切時間點）連用。"
+    },
+    {
+      "bad": "I have known her since three years ago.",
+      "good": "I have known her for three years. / ...since three years ago.",
+      "why": "three years ago 本身已是起點，勉強可搭 since，但最自然的講『長度』方式是 for three years；學習者常把 for 和 since ... ago 混在一起用錯。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "She has been a manager ___ 2022.",
+      "qCn": "她從2022年開始就是經理了。",
+      "opts": [
+        "for",
+        "since",
+        "during",
+        "in"
+      ],
+      "ans": 1,
+      "expl": "2022 是起點時間，用 since。"
+    },
+    {
+      "q": "___ did you move to Hanoi?",
+      "qCn": "你什麼時候搬到河內的？",
+      "opts": [
+        "How long",
+        "When",
+        "Since when have",
+        "For how long"
+      ],
+      "ans": 1,
+      "expl": "問確切的時間點用 When（配過去式 did move）。"
+    },
+    {
+      "q": "How long ___ this software?",
+      "qCn": "你用這套軟體多久了？",
+      "opts": [
+        "did you use",
+        "have you used",
+        "do you use",
+        "are you using"
+      ],
+      "ans": 1,
+      "expl": "問到現在為止用了多久，用現在完成式 have you used。"
+    },
+    {
+      "q": "I have worked here ___ I graduated.",
+      "qCn": "我從畢業之後就在這裡工作了。",
+      "opts": [
+        "for",
+        "since",
+        "during",
+        "when"
+      ],
+      "ans": 1,
+      "expl": "since 後面接一個過去式子句（I graduated）當起點。"
+    }
+  ]
+},
+{
+  "id": "dg20260915b2",
+  "date": "2026-09-15",
+  "unitNo": 12,
+  "level": "B2",
+  "title": "For and Since in Register and Rhetoric",
+  "titleCn": "for 與 since 的語域與修辭運用",
+  "srcDays": [],
+  "summary": "for/since 不只是文法：在正式寫作與面試裡，一個精準的 since 2019 比含糊的 for ages 更顯專業；把時間長度放句首（分詞構句、倒裝）還能製造敘事張力。",
+  "sections": [
+    {
+      "h": "口語 vs 正式：同一件事的兩種語域",
+      "table": {
+        "head": [
+          "語域",
+          "說法",
+          "給人的印象"
+        ],
+        "rows": [
+          [
+            "口語、隨意",
+            "I've been doing this for ages.",
+            "親切，但顯得含糊"
+          ],
+          [
+            "正式、專業",
+            "I have worked in this field since 2019.",
+            "有分寸、可查證、專業"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I've been at it forever, honestly.",
+          "cn": "老實說，我搞這個搞超久了。",
+          "note": "口語裡 forever／for ages 誇飾又模糊，適合聊天"
+        },
+        {
+          "en": "I have specialized in quality control for just over eight years.",
+          "cn": "我專精品管領域已經八年多一點了。",
+          "note": "正式場合用精準的長度，展現自我認識"
+        }
+      ]
+    },
+    {
+      "h": "把時間放句首：製造敘事張力",
+      "bullets": [
+        "完成式分詞構句 Having + Vpp 可以把『做了多久』濃縮到句首，帶出後果",
+        "It has been + 時間 + since... 是新聞與正式敘事偏好的句型，把時間長度前置以製造懸念"
+      ],
+      "examples": [
+        {
+          "en": "Having worked in the field for a decade, she saw the problem at once.",
+          "cn": "在這個領域做了十年之後，她一眼就看出問題所在。",
+          "note": "Having worked... 把資歷前置，凸顯後面的判斷力"
+        },
+        {
+          "en": "It had been three years since the company last hired an engineer.",
+          "cn": "公司上一次聘工程師，已經是三年前的事了。",
+          "note": "It has/had been + 時間 + since... 製造時間流逝的張力"
+        }
+      ]
+    },
+    {
+      "h": "for/since 搭配的時態選擇",
+      "bullets": [
+        "強調『持續到現在的結果』用現在完成式：have worked for...",
+        "強調『這段期間一直在進行的過程』用現在完成進行式：have been working for...",
+        "正式書面常保留完成式的精準，避免口語的誇飾詞（forever, ages, a million years）"
+      ],
+      "examples": [
+        {
+          "en": "The policy has been in place since the last audit.",
+          "cn": "這項政策從上一次稽核之後就一直沿用至今。",
+          "note": "被動 + 現在完成式 + since，典型的正式書面語域"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "In my interview I said I'd been doing QA for ages.",
+      "good": "In my interview I said I had worked in QA for over seven years.",
+      "why": "for ages 在正式面試裡顯得含糊又不專業，改用精準的長度（over seven years）才能傳達可查證的資歷，這是語域選擇的問題，不只是文法。"
+    },
+    {
+      "bad": "It has been three years that I graduated.",
+      "good": "It has been three years since I graduated.",
+      "why": "It has been + 時間 這個句型後面要接 since 子句，不能用 that；這是中文母語者把『自從』誤接成『that』的常見錯誤。"
+    },
+    {
+      "bad": "Having worked here since three years, I know the team well.",
+      "good": "Having worked here for three years, I know the team well.",
+      "why": "分詞構句裡一樣要分 for（長度）與 since（起點）；three years 是長度，用 for。"
+    },
+    {
+      "bad": "The rule is in place since the last audit.",
+      "good": "The rule has been in place since the last audit.",
+      "why": "since 表示『從過去持續到現在』，主句一定要用完成式 has been，用現在簡單式 is 就失去了『一直持續』的語意。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Which sounds most appropriate in a formal interview?",
+      "qCn": "在正式面試裡，哪一句最合適？",
+      "opts": [
+        "I've been doing this forever.",
+        "I have worked in this field for over eight years.",
+        "I've been at it for ages.",
+        "I do this a long time."
+      ],
+      "optsCn": [
+        "我做這個做超久了。",
+        "我在這個領域工作八年多了。",
+        "我搞這個搞好久了。",
+        "我做這個很久。"
+      ],
+      "ans": 1,
+      "expl": "正式場合偏好精準、可查證的長度說法，避免 forever／for ages 這類口語誇飾。"
+    },
+    {
+      "q": "It has been five years ___ the factory last upgraded its line.",
+      "qCn": "工廠上一次升級產線，已經是五年前的事了。",
+      "opts": [
+        "that",
+        "since",
+        "for",
+        "when"
+      ],
+      "ans": 1,
+      "expl": "It has been + 時間 後面接 since 子句，不能用 that。"
+    },
+    {
+      "q": "___ worked in the field for a decade, she recognized the fault immediately.",
+      "qCn": "在這個領域做了十年之後，她立刻認出了那個故障。",
+      "opts": [
+        "Having",
+        "Since",
+        "For",
+        "Have"
+      ],
+      "ans": 0,
+      "expl": "完成式分詞構句 Having worked... 把資歷前置，帶出後面的判斷。"
+    },
+    {
+      "q": "The safety rule ___ in place since the last inspection.",
+      "qCn": "這項安全規定從上一次檢查之後就一直沿用至今。",
+      "opts": [
+        "is",
+        "has been",
+        "was",
+        "will be"
+      ],
+      "ans": 1,
+      "expl": "since 要搭配現在完成式 has been，才有『從過去持續到現在』的意思。"
+    }
+  ]
+},
 {
   "id": "dg20260911a2",
   "date": "2026-09-11",
