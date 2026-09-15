@@ -135,6 +135,11 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
   **左欄一定要明顯比右欄寬，不可以變成 1fr 1fr。**
 - 課本頁單字表用 `@container book`（`#v-book` 自己是 container），桌機雙欄，別動。
 - 文章正文行寬上限 `--read-w: 720px` 是刻意的可讀性設定，不要為了填滿畫面拿掉。
+- **卡片式清單頁共用 Card Design System**（今日、文法列表、課本、閱讀／聽力／實景列表、單字卡、進度）：
+  token 在 `:root` 的 `--cd-*`（圓角、padding、間距、邊框、陰影、字級）、`--bd-*`（Badge）、`--act-*`（行動按鈕），
+  只在清單狀態生效（打開單篇的 `.rdopen/.bkopen/.lsopen/.rwopen/.gopen` 與單字卡複習中的 `.vsession` 不套用）。
+  密度分 Feature／Standard／Compact 三級；新增清單卡片請用這些 token，**不要各頁自己寫 px、圓角或按鈕高度**。
+  只統一視覺，不要為了統一而改卡片欄位或強制同高。
 - **文法內頁字級只用 5 個共用層級**（`#v-gram.gopen` 底下的 `--gt-title / --gt-step / --gt-ex / --gt-body / --gt-help`）：
   頁面標題 > Step／段落標題 > 英文例句 > 中文解說 > 輔助資訊。新增或修改文法元件時把文字歸到其中一組，
   **不要在元件裡寫 px 或 800／900 字重**；平板、手機的縮小值也在同一處設定。

@@ -1470,6 +1470,82 @@ body.cnall #v-book span.cnx{display:inline!important}
 .tag-chip.gram{background:#fdf0e5;border-color:#ecd3bb;color:#8a4a12}
 @media(max-width:1024px){ .tag-chip.gram{white-space:normal;overflow-wrap:anywhere;line-height:1.5;max-width:100%} }
 .tag-chip.topic{background:#f0ecfb;border-color:#d6cef0;color:#5b4a86}
+/* ============================================================
+   卡片式清單頁共用 Design System（2026-09-15）
+   今日／文法列表／課本／閱讀列表／聽力列表／實景列表／單字卡／進度 共用同一套視覺規則：
+   圓角、padding、間距、邊框、陰影、標題與內文字級、Badge、行動按鈕。
+   只統一視覺，不統一內容欄位；打開單篇（.rdopen/.bkopen/.lsopen/.rwopen/.gopen）與單字卡複習中（.vsession）不套用。
+   密度三級：Feature（頁首、儀表板卡 .card）/ Standard（文章、文法、課程卡）/ Compact（統計格、清單列）。
+   新的清單卡片請直接用這些 token，不要各頁自己寫 px。
+   ============================================================ */
+:root{
+  --cd-radius:14px;
+  --cd-pad-feature:22px; --cd-pad-std:16px 18px; --cd-pad-compact:10px 14px;
+  --cd-gap:14px;
+  --cd-border:var(--line); --cd-border-hover:#dccfbe;
+  --cd-shadow:0 1px 3px rgba(60,45,30,.06); --cd-shadow-hover:0 4px 12px rgba(60,45,30,.10);
+  --cd-title-lg:calc(20px * var(--fs)); --cd-title:calc(18px * var(--fs));
+  --cd-body:calc(16px * var(--fs)); --cd-sec:calc(14px * var(--fs)); --cd-meta:calc(13px * var(--fs));
+  --bd-font:calc(12.5px * var(--fs)); --bd-h:calc(22px * var(--fs)); --bd-radius:8px;
+  --act-h:calc(36px * var(--fs)); --act-font:calc(13.5px * var(--fs)); --act-radius:999px;
+}
+@media(max-width:1024px){ :root{ --cd-pad-feature:18px; --cd-pad-std:14px 16px; --cd-gap:12px; } }
+@media(max-width:640px){ :root{ --cd-pad-feature:16px; --cd-pad-std:14px; --cd-pad-compact:10px 12px; --cd-gap:10px; --act-h:calc(40px * var(--fs)); } }
+
+/* Feature：頁首與儀表板卡 */
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .card{border-radius:var(--cd-radius);padding:var(--cd-pad-feature);margin-bottom:var(--cd-gap);
+  border:1px solid var(--cd-border);box-shadow:var(--cd-shadow)}
+/* Standard：文章、文法、聽力、課程、實景卡 */
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.item,.rwcard,.bkday-card,.mrcard){border-radius:var(--cd-radius);padding:var(--cd-pad-std);
+  margin-bottom:var(--cd-gap);box-shadow:var(--cd-shadow)}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .item.arw{padding-right:40px}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .mrcard{margin-bottom:0}
+/* Compact：統計格、進度清單列、本週舊內容 */
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .item.compact{padding:var(--cd-pad-compact)}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.stat,.ring,.bstat,.pgrow,.pggrp){border-radius:var(--cd-radius)}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.pgrow,.pggrp){padding:var(--cd-pad-compact)}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.stat,.bstat){padding:10px 8px}
+/* 已完成角標、NEW 章跟著新圓角與 Badge 尺寸 */
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .item.fin::before{border-radius:0 13px 0 12px}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .item.new::after{font-size:var(--bd-font);font-weight:600;letter-spacing:.5px;line-height:var(--bd-h);
+  padding:0 8px;border-radius:var(--bd-radius);top:12px;right:12px}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .item.new .t{padding-right:60px}
+/* Hover：只做很輕的上浮＋陰影＋邊框加深（觸控裝置不依賴 hover） */
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.item,.bkday-card,.mrcard,.pgrow,.ring,.bstat){transition:transform .13s,box-shadow .13s,border-color .13s,background .13s}
+@media(hover:hover){
+  :is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.item,.bkday-card,.mrcard,.pgrow,.ring,.bstat):hover{transform:translateY(-1px);
+    box-shadow:var(--cd-shadow-hover);border-color:var(--cd-border-hover)}
+}
+
+/* 字級：頁首標題 20 > 卡片標題 18 > 內文 16 > 次要 14 > metadata 13 */
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) h2.sec{font-size:var(--cd-title-lg);line-height:1.35;font-weight:700}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.item .t,.item .t.bkbig,.rw-t,.bkday-t,.mrc-t){font-size:var(--cd-title);line-height:1.4;font-weight:700}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .item.compact .t{font-size:var(--cd-body);line-height:1.45;font-weight:600}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .pgrow .pgt{font-size:var(--cd-body);line-height:1.5;font-weight:400}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .pggrp{font-size:var(--cd-body);font-weight:700}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.muted,.hint,.hint-sum,.dh-sub,.rw-sub,.item .tc,.item .tc.bksub,.bkday-tc,.rw-meta,.rw-obj,.mrc-sub,.bkday-sub,.bkday-empty){
+  font-size:var(--cd-sec);line-height:1.55}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .rw-kv{font-size:var(--cd-sec);line-height:1.55;font-weight:600}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.item .meta,.bkday-meta,.bkdate,.bkday-wd,.rdprog span,.stat span,.bstat span,.ring .sub,.ring .lb,.stat b i){
+  font-size:var(--cd-meta);line-height:1.45}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.item .meta,.bkday-meta,.ring .sub){font-weight:500}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.bkdate,.bkday-wd,.rdprog span,.bstat span,.ring .lb){font-weight:600}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.stat b,.bstat b){font-size:calc(26px * var(--fs));font-weight:700}
+
+/* Badge／Tag：同一套高度、字級、圓角、左右 padding；顏色照各自語意 */
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.lv,.stc,.tag-chip,.pgtag,.bkday-today,.mrc-stats span){display:inline-flex;align-items:center;
+  box-sizing:border-box;min-height:var(--bd-h);padding:2px 8px;border-radius:var(--bd-radius);
+  font-size:var(--bd-font);font-weight:600;line-height:1.3;vertical-align:middle}
+
+/* 行動按鈕：開始閱讀／開始練習／開始學習／繼續…共用高度、圓角、字級、字重、圖示間距 */
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.item .goCta>i,.bkday-cta,.bkday-jump,.mrc-cta,.pgo,.btn,.bkstart){display:inline-flex;align-items:center;
+  justify-content:center;gap:6px;box-sizing:border-box;min-height:var(--act-h);padding:0 14px;
+  border-radius:var(--act-radius);font-size:var(--act-font);font-weight:600;line-height:1.2}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .bkstart{display:flex;width:100%}
+/* 文法焦點 tag 常常很長：不論寬度都在卡片內換行，不再被卡片裁掉（原本只有 ≤1024px 會換行） */
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .tag-chip.gram{white-space:normal;overflow-wrap:anywhere;max-width:100%}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .mrc-cta{display:flex;width:fit-content;margin:10px 0 0 auto}
+
 /* status badge on cards */
 .status-badge{position:absolute;top:8px;right:10px;font-size:var(--font-meta);font-weight:var(--fw-title);
   border-radius:10px;padding:2px 8px;white-space:nowrap}
@@ -3125,6 +3201,7 @@ function grade(w,g){
 let vCat='all', vQueue=[], vIdx=0, vFlip=false, vSession={done:0,again:0};
 RENDER.vocab=function(){
   const v=$('v-vocab');
+  v.classList.toggle('vsession',!!vQueue.length);
   if(!vQueue.length){
     const q=buildQueue(vCat);
     const counts={};
@@ -3938,9 +4015,9 @@ RENDER.daily=function(){
     +LESSONS.filter(l=>inBand(l.level)&&!todayIds.has(l.id)&&l.date&&l.date<ws).length;
   if(pastArts.length||pastGram.length||pastListen.length||olderN){
     h+='<div class="card"><h2 class="sec">🗂 本週的每日內容</h2>'
-     + pastArts.map(a=>'<div class="item" onclick="dailyArt(\''+a.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📖 '+esc(a.title)+'</div><div class="meta"><span>📅 '+esc(a.date||'')+'</span><span>'+esc(a.titleCn)+'</span></div></div>').join('')
-     + pastListen.map(l=>'<div class="item" onclick="dailyListen(\''+l.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">🎧 '+esc(l.title)+'</div><div class="meta"><span>📅 '+esc(l.date||'')+'</span><span>'+esc(l.titleCn)+'</span></div></div>').join('')
-     + pastGram.map(g=>'<div class="item" onclick="dailyGram(\''+g.id+'\')"><div class="t" style="font-size:calc(14.5px * var(--fs))">📐 '+esc(g.titleCn)+'</div><div class="meta"><span>📅 '+esc(g.date||'')+'</span><span>'+esc(g.title)+'</span></div></div>').join('')
+     + pastArts.map(a=>'<div class="item compact" onclick="dailyArt(\''+a.id+'\')"><div class="t">📖 '+esc(a.title)+'</div><div class="meta"><span>📅 '+esc(a.date||'')+'</span><span>'+esc(a.titleCn)+'</span></div></div>').join('')
+     + pastListen.map(l=>'<div class="item compact" onclick="dailyListen(\''+l.id+'\')"><div class="t">🎧 '+esc(l.title)+'</div><div class="meta"><span>📅 '+esc(l.date||'')+'</span><span>'+esc(l.titleCn)+'</span></div></div>').join('')
+     + pastGram.map(g=>'<div class="item compact" onclick="dailyGram(\''+g.id+'\')"><div class="t">📐 '+esc(g.titleCn)+'</div><div class="meta"><span>📅 '+esc(g.date||'')+'</span><span>'+esc(g.title)+'</span></div></div>').join('')
      +(olderN?'<div class="hint" style="margin-top:8px">更早的 '+olderN+' 份內容已依分類回歸 <b>閱讀</b>、<b>聽力</b>、<b>文法</b> 分頁，都排在各分頁最上方（日期新的在前）。</div>':'')
      +'</div>';
   }
@@ -6099,6 +6176,7 @@ function audioControls(){
 
 RENDER.listen=function(){
   const v=$('v-listen');
+  v.classList.toggle('lsopen',!!lsOpen);
   if(lsOpen){
     v.innerHTML=lessonHTML(lsOpen);
     if(!lsOpen.yt && (lsOpen.script||[]).length){
