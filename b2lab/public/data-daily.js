@@ -63,8 +63,8 @@ articles:[
       "pos": "n.",
       "cn": "面試",
       "def": "A meeting where someone asks you questions, often for a job.",
-      "ex": "Tom has a job interview this Friday.",
-      "exCn": "Tom這個星期五有一場工作面試。"
+      "ex": "The famous singer gave a short interview on the radio.",
+      "exCn": "那位知名歌手在廣播上接受了簡短的訪問。"
     },
     {
       "w": "practice",
@@ -81,8 +81,8 @@ articles:[
       "pos": "adj.",
       "cn": "緊張的",
       "def": "Feeling worried or afraid about something.",
-      "ex": "Tom is nervous, but he can do it.",
-      "exCn": "Tom很緊張，但他做得到。"
+      "ex": "The little boy was nervous on his first day at the swimming pool.",
+      "exCn": "小男孩第一天去游泳池時很緊張。"
     },
     {
       "w": "advice",
@@ -90,8 +90,8 @@ articles:[
       "pos": "n.",
       "cn": "建議",
       "def": "Words that tell someone what is a good thing to do.",
-      "ex": "Ben gives Tom some good advice.",
-      "exCn": "Ben給Tom一些好建議。"
+      "ex": "The doctor gave my grandpa some advice about eating less salt.",
+      "exCn": "醫生給我爺爺一些少吃鹽的建議。"
     },
     {
       "w": "smile",
@@ -250,8 +250,8 @@ articles:[
       "pos": "adj.",
       "cn": "鬆一口氣的、放心的",
       "def": "Feeling happy because a worry has ended.",
-      "ex": "When the interview ended, Tom felt relieved.",
-      "exCn": "面試結束時，Tom鬆了一口氣。"
+      "ex": "We were relieved when the lost dog finally came home.",
+      "exCn": "走失的狗終於回家時，我們都鬆了一口氣。"
     },
     {
       "w": "skill",
@@ -259,8 +259,8 @@ articles:[
       "pos": "n.",
       "cn": "技能、本領",
       "def": "The ability to do something well because you have learned it.",
-      "ex": "Tom talked about the skills he has learned there.",
-      "exCn": "Tom聊到他在那裡學到的技能。"
+      "ex": "Cooking is a useful skill that you can learn at any age.",
+      "exCn": "烹飪是一項任何年紀都能學的實用技能。"
     },
     {
       "w": "chance",
@@ -268,8 +268,8 @@ articles:[
       "pos": "n.",
       "cn": "機會",
       "def": "A time when it is possible to do something you want.",
-      "ex": "Tom has waited a long time for a chance like this.",
-      "exCn": "Tom等這樣的機會已經等了很久。"
+      "ex": "If you get the chance, try the beef noodles near the station.",
+      "exCn": "如果有機會，去吃吃看車站附近的牛肉麵。"
     },
     {
       "w": "nod",
@@ -277,8 +277,8 @@ articles:[
       "pos": "v.",
       "cn": "點頭",
       "def": "To move your head down and up to show you agree.",
-      "ex": "The manager nodded and asked more questions.",
-      "exCn": "經理點點頭，又問了更多問題。"
+      "ex": "My grandmother nodded when I asked if she wanted more tea.",
+      "exCn": "我問奶奶要不要再喝點茶時，她點了點頭。"
     },
     {
       "w": "calm",
@@ -421,8 +421,8 @@ articles:[
       "pos": "n.",
       "cn": "規模",
       "def": "The size or amount of something, especially when it is large.",
-      "ex": "Firms are now hiring for impact rather than for scale.",
-      "exCn": "企業現在招募看重的是影響力而不是規模。"
+      "ex": "The city is planning a music festival on a much bigger scale this year.",
+      "exCn": "市政府今年打算舉辦規模大得多的音樂節。"
     },
     {
       "w": "impact",
@@ -430,8 +430,8 @@ articles:[
       "pos": "n.",
       "cn": "影響、影響力",
       "def": "A strong effect that something has on a situation or person.",
-      "ex": "Firms are now hiring for impact rather than for scale.",
-      "exCn": "企業現在招募看重的是影響力而不是規模。"
+      "ex": "The new bike lanes have had a clear impact on traffic downtown.",
+      "exCn": "新的自行車道對市中心的交通產生了明顯的影響。"
     },
     {
       "w": "strategy",
@@ -439,8 +439,8 @@ articles:[
       "pos": "n.",
       "cn": "策略",
       "def": "A plan for reaching a goal over a period of time.",
-      "ex": "Firms are hiring for impact — a strategy some call \"precision planning.\"",
-      "exCn": "企業以影響力為招募重點——有些人把這種策略稱為『精準規劃』。"
+      "ex": "Our study group came up with a strategy to finish the textbook before the exam.",
+      "exCn": "我們讀書小組想出一個在考試前讀完課本的策略。"
     },
     {
       "w": "compete",
@@ -448,8 +448,8 @@ articles:[
       "pos": "v.",
       "cn": "競爭",
       "def": "To try hard to win or get something that others also want.",
-      "ex": "Employers compete hard for the few people who can make a real difference.",
-      "exCn": "企業為了少數幾個真正能帶來改變的人才而激烈競爭。"
+      "ex": "Dozens of food stalls compete for customers at the night market every weekend.",
+      "exCn": "每個週末，夜市裡幾十個小吃攤都在搶客人。"
     },
     {
       "w": "specialist",
@@ -457,8 +457,8 @@ articles:[
       "pos": "n.",
       "cn": "專才、專家",
       "def": "A person with deep skill or knowledge in one area.",
-      "ex": "Specialists in AI and semiconductors are valued highly.",
-      "exCn": "AI與半導體領域的專才特別搶手。"
+      "ex": "My doctor sent me to a skin specialist for a second opinion.",
+      "exCn": "我的醫生讓我去看皮膚科專科醫師，聽聽另一個意見。"
     },
     {
       "w": "scarce",
@@ -466,8 +466,8 @@ articles:[
       "pos": "adj.",
       "cn": "稀少的、稀缺的",
       "def": "Hard to find because there is not enough of it.",
-      "ex": "Skills that are scarce now count for more than job titles.",
-      "exCn": "稀缺的技能如今比職稱更有份量。"
+      "ex": "Fresh water becomes scarce on the island during the dry season.",
+      "exCn": "乾季時，島上的淡水變得很稀少。"
     },
     {
       "w": "tension",
@@ -475,8 +475,8 @@ articles:[
       "pos": "n.",
       "cn": "緊張、緊張情勢",
       "def": "A situation in which people or countries do not trust each other and may fight.",
-      "ex": "They have been affected by rising tension and US trade policy.",
-      "exCn": "他們已經受到升高的緊張情勢與美國貿易政策的影響。"
+      "ex": "There was some tension between the two neighbors after the argument about parking.",
+      "exCn": "為了停車吵過一架後，那兩位鄰居之間有些緊張。"
     },
     {
       "w": "flexible",
@@ -484,8 +484,8 @@ articles:[
       "pos": "adj.",
       "cn": "有彈性的",
       "def": "Able to change easily to fit new conditions.",
-      "ex": "Companies have been focusing on fairness, flexible working, and stronger leadership.",
-      "exCn": "企業一直把重心放在公平、彈性工作與更強的領導力上。"
+      "ex": "Our travel plans are flexible, so we can stay an extra day if it rains.",
+      "exCn": "我們的旅行計畫很有彈性，如果下雨可以多待一天。"
     },
     {
       "w": "selective",
@@ -493,8 +493,8 @@ articles:[
       "pos": "adj.",
       "cn": "挑剔的、精挑細選的",
       "def": "Careful about choosing only the best or the right one.",
-      "ex": "The market has not shrunk, but it has grown far more selective.",
-      "exCn": "市場並沒有縮小，只是變得挑剔多了。"
+      "ex": "My cat is very selective about which food she will eat.",
+      "exCn": "我的貓對吃什麼食物非常挑剔。"
     }
   ],
   "questions": [
@@ -642,8 +642,8 @@ articles:[
       "pos": "adj.",
       "cn": "真實的、真誠的",
       "def": "Real and sincere, not fake.",
-      "ex": "They listen for evidence that a candidate's interest is genuine.",
-      "exCn": "他們在聽有沒有證據證明應徵者的興趣是真實的。"
+      "ex": "The volunteers showed genuine concern for the families who lost their homes in the flood.",
+      "exCn": "志工們真心關懷那些在水災中失去家園的家庭。"
     },
     {
       "w": "commitment",
@@ -651,8 +651,8 @@ articles:[
       "pos": "n.",
       "cn": "投入、承諾",
       "def": "The willingness to give your time and energy to something.",
-      "ex": "She is quietly demonstrating commitment and steady growth.",
-      "exCn": "她在不動聲色地展現出投入與穩定的成長。"
+      "ex": "Training for a marathon takes months of commitment, even on cold, rainy mornings.",
+      "exCn": "準備馬拉松需要好幾個月的投入，就算是又冷又下雨的早晨也一樣。"
     },
     {
       "w": "register",
@@ -660,8 +660,8 @@ articles:[
       "pos": "n.",
       "cn": "語域（語言的正式程度）",
       "def": "The level of formality used in speaking or writing.",
-      "ex": "Register matters here as well.",
-      "exCn": "語域在這裡也很關鍵。"
+      "ex": "A text message to a close friend uses a much more casual register than a letter to a landlord.",
+      "exCn": "傳給好朋友的訊息，語域比寫給房東的信隨性得多。"
     },
     {
       "w": "vague",
@@ -687,8 +687,8 @@ articles:[
       "pos": "adj.",
       "cn": "有分寸的、慎重的",
       "def": "Careful and controlled, not rushed or emotional.",
-      "ex": "A precise date sounds measured, honest, and self-aware.",
-      "exCn": "一個精準的日期聽起來有分寸、誠實又有自知之明。"
+      "ex": "The mayor gave a measured response to the angry questions from reporters.",
+      "exCn": "市長對記者憤怒的提問做出了有分寸的回應。"
     },
     {
       "w": "applicant",
@@ -696,8 +696,8 @@ articles:[
       "pos": "n.",
       "cn": "申請者、應徵者",
       "def": "A person who formally asks for a job or place.",
-      "ex": "A thoughtful applicant who has spent two focused years can outshine others.",
-      "exCn": "一個用心、認真投入兩年的應徵者能勝過其他人。"
+      "ex": "Each applicant for the scholarship must submit two letters of recommendation.",
+      "exCn": "每位獎學金申請者都必須繳交兩封推薦信。"
     },
     {
       "w": "duration",
@@ -705,8 +705,8 @@ articles:[
       "pos": "n.",
       "cn": "持續時間、時間長度",
       "def": "The length of time something continues.",
-      "ex": "The best answers turn a plain duration into a short story.",
-      "exCn": "最好的回答會把乾巴巴的時間長度變成一個簡短的故事。"
+      "ex": "Please remain seated for the duration of the flight.",
+      "exCn": "飛行全程請留在座位上。"
     }
   ],
   "questions": [
