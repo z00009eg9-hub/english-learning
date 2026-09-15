@@ -135,6 +135,9 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
   **左欄一定要明顯比右欄寬，不可以變成 1fr 1fr。**
 - 課本頁單字表用 `@container book`（`#v-book` 自己是 container），桌機雙欄，別動。
 - 文章正文行寬上限 `--read-w: 720px` 是刻意的可讀性設定，不要為了填滿畫面拿掉。
+- **文法內頁字級只用 5 個共用層級**（`#v-gram.gopen` 底下的 `--gt-title / --gt-step / --gt-ex / --gt-body / --gt-help`）：
+  頁面標題 > Step／段落標題 > 英文例句 > 中文解說 > 輔助資訊。新增或修改文法元件時把文字歸到其中一組，
+  **不要在元件裡寫 px 或 800／900 字重**；平板、手機的縮小值也在同一處設定。
 
 ---
 

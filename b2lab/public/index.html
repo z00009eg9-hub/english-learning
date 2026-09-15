@@ -1129,6 +1129,57 @@ body.cnall .rel span.cnx{display:inline}
 .gvch .vr .v .en{font-size:calc(15px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6;margin-top:2px}
 .gvch .vr .v .cn{font-size:var(--font-meta);color:var(--ink2);line-height:1.6}
 
+/* ---------- 文法內頁共用字級（2026-09-15）----------
+   64 個文法單元都走 gvHTML，這裡把每一種文字角色對到 5 個層級，所有單元（含之後新增的）自動一致。
+   新元件請歸到下面其中一組，不要自己寫 px。
+   只在 #v-gram.gopen（打開某個單元）生效：.q / .opt / .ex / .trap 也是閱讀、課本在用的 class。
+   T1 頁面標題 > T2 Step／段落標題 > T3 英文例句 > T4 中文解說 > T5 輔助資訊；
+   顏色只表達狀態（對錯、句型），不再同時加大加粗。按鈕（.btn / .spk / 為什麼？）不動，避免高度改變。 */
+#v-gram.gopen{
+  --gt-title:calc(23px * var(--fs)); --gt-step:calc(18px * var(--fs)); --gt-ex:calc(17px * var(--fs));
+  --gt-body:calc(16px * var(--fs)); --gt-help:calc(14px * var(--fs));
+  --gt-lh-title:1.4; --gt-lh-ex:1.55; --gt-lh-body:1.6; --gt-lh-help:1.5;
+}
+@media(max-width:1024px){ #v-gram.gopen{
+  --gt-title:calc(22px * var(--fs)); --gt-step:calc(17px * var(--fs)); --gt-ex:calc(16px * var(--fs));
+  --gt-body:calc(15px * var(--fs)); --gt-help:calc(13.5px * var(--fs)); } }
+@media(max-width:640px){ #v-gram.gopen{
+  --gt-title:calc(20px * var(--fs)); --gt-step:calc(17px * var(--fs)); --gt-ex:calc(16px * var(--fs));
+  --gt-body:calc(15px * var(--fs)); --gt-help:calc(13px * var(--fs)); } }
+/* T1 頁面標題 */
+#v-gram.gopen .card h2.sec{font-size:var(--gt-title);line-height:var(--gt-lh-title);font-weight:700}
+/* T2 Step／段落標題 */
+#v-gram.gopen :is(.gvh h3,.gsec h3){font-size:var(--gt-step);line-height:var(--gt-lh-title);font-weight:700}
+/* T3 英文例句／句型／題目 */
+#v-gram.gopen :is(.gvtlrow .en,.gvcard .en,.gvcmp .side .en,.gvmis .good,.trap .good,.ex .een,.q .qt,
+  .gvmx td .en,.gvmxs .mxr .en,.gvmg .en,.gvsc .stop .en,.gvbr .cond .en,.gvbr .br .en,.gvsh .r .a,.gvsh .r .b,
+  .gvcl .col .it .en,.gvch .eg .en,.gvch .vr .v .en,.gvchip,.gvch .lk .t,.gvmap .m.form .v)
+  {font-size:var(--gt-ex);line-height:var(--gt-lh-ex);font-weight:600}
+/* 錯句（劃線）與選項維持一般字重，選對的選項照舊加粗 */
+#v-gram.gopen :is(.gvmis .bad,.trap .bad,.opt){font-size:var(--gt-ex);line-height:var(--gt-lh-ex);font-weight:400}
+#v-gram.gopen .opt.right{font-weight:600}
+/* T4 中文解說、翻譯、補充說明 */
+#v-gram.gopen :is(.gvmap .m .v,.gvtlrow .cn,.gvcard .cn,.gvcard .why,.gvcmp .side .cn,.gvcmp .side ul,.gvnote,
+  .gvmis .why,.trap,.trap .why,.gsec ul,.gline,.gvsteps .st .tx,.ex .ecn,.q .qcn,.opt .ocn,.expl,.gvref td,
+  .gvmx td .cn,.gvcn,.gvcl .col .it .cn,.gvch .vr .v .cn)
+  {font-size:var(--gt-body);line-height:var(--gt-lh-body);font-weight:400}
+#v-gram.gopen .gvlead .l1{font-size:var(--gt-body);line-height:var(--gt-lh-body);font-weight:600}
+/* 句型公式屬於 T3；上面 T4 的 .gvmap .m .v 同樣會選到它，要在 T4 之後再指定一次 */
+#v-gram.gopen .gvmap .m.form .v{font-size:var(--gt-ex);line-height:var(--gt-lh-ex);font-weight:600}
+#v-gram.gopen :is(.gvcard .ti,.gvcmp .side .head,.gvref summary){font-size:var(--gt-body);line-height:var(--gt-lh-body);font-weight:700}
+#v-gram.gopen .gvref th{font-size:var(--gt-body);line-height:var(--gt-lh-body);font-weight:600}
+/* T5 輔助資訊：一般小字 400、標籤類 600 */
+#v-gram.gopen :is(.card .muted,.gvsub,.gvvcap,.gvtl figcaption,.gvcl .col .hcn,.gvcl .col .it .nt,.gvsh .r .nt,
+  .gvmg .glue .gc,.ex .enote,.gvcard .ti small,.gvcmp .side .head small,.gvsc .stop .lb small,.gvch .lk .c,
+  .gvtlrow .axl,.gvsw .lane .hd .sub)
+  {font-size:var(--gt-help);line-height:var(--gt-lh-help);font-weight:400}
+#v-gram.gopen :is(.lv,.gvh .step,.gvmap .m .k,.gvcard .ask,.gvsteps .st .lb,.gvcmp .side .tag,.gvcmp .vs,.gvmis .tag,
+  .cnTrap,.gvtag,.gvtlrow .lb,.gvtlrow .axl .now,.gvmx th,.gvmxs .grp>.h,.gvmxs .mxr .k,.gvsw .cross .lbl,
+  .gvmg .bx .n,.gvmg .out .n,.gvmg .glue .g,.gvsc .ends,.gvsc .stop .pct,.gvsc .stop .lb,.gvch .vr .v .k)
+  {font-size:var(--gt-help);line-height:var(--gt-lh-help);font-weight:600}
+/* 內文裡自動加粗的英文只加重、不改字級（預設 bolder 會疊到 800） */
+#v-gram.gopen :is(b,strong){font-weight:600;font-size:inherit;line-height:inherit}
+
 /* 內文重點字：橘色加粗＋上標編號 */
 w.tgt{color:#c0561a;font-weight:800}
 sup.tno{color:#c0392b;font-weight:var(--fw-title);font-size:var(--font-meta);padding-left:1px}
@@ -3309,6 +3360,7 @@ function gSetLv(lv){ GLV=lv; RENDER.gram(); }
 window.gSetLv=gSetLv;
 RENDER.gram=function(){
   const v=$('v-gram');
+  v.classList.toggle('gopen',!!CURG);   /* 文法內頁共用字級（#v-gram.gopen）只在打開單元時生效，列表頁不受影響 */
   if(CURG){ v.innerHTML=gramHTML(CURG); return; }
   /* 等級篩選：只列資料裡實際存在的等級，保持簡單 */
   const lvs=[...new Set(ALL_GRAM.map(g=>g.level).filter(Boolean))];
@@ -3770,7 +3822,7 @@ function gSecPart(sections,want){
   return (sections||[]).map(s=>{
     let x='';
     if(want==='rule'){
-      if(s.body) x+= arr(s.body).map(b=>'<div class="gline" style="font-size:var(--font-body);margin-bottom:5px">'+mkTextSpk(b)+'</div>').join('');
+      if(s.body) x+= arr(s.body).map(b=>'<div class="gline" style="margin-bottom:5px">'+mkTextSpk(b)+'</div>').join('');
       if(s.bullets) x+='<ul>'+arr(s.bullets).map(b=>'<li class="gline">'+mkTextSpk(b)+'</li>').join('')+'</ul>';
     } else if(want==='table' && s.table){
       x+='<div class="tw"><table><tr>'+s.table.head.map(t=>'<th>'+esc(t)+'</th>').join('')+'</tr>'
