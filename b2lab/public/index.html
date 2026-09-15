@@ -879,8 +879,10 @@ body.cnall .rel span.cnx{display:inline}
 .gvmap .m.form .v{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;color:#1d4ed8}
 .gvsub{font-size:calc(14px * var(--fs));color:var(--ink2);margin:2px 0 7px;line-height:1.7}
 /* 時間線：桌機一張寬圖；手機逐列堆疊（文字用 HTML，不畫進 SVG，才不會縮到看不見） */
-.gvtl .gvtl-wide{max-width:660px;margin:0 auto}   /* 不要拉滿版：等比放大會讓整塊變很高 */
-.gvtl .gvtl-narrow{display:none}
+/* 時間線：每列 .vis（標籤＋軸線＋時間）＋ .txt（例句＋中文）。桌機左右兩欄，手機上下堆疊 */
+@media(min-width:641px){
+  .gvtlrow{display:grid;grid-template-columns:minmax(220px,320px) minmax(0,1fr);column-gap:20px;align-items:center}
+}
 .gvtlrow{padding:10px 2px;border-top:1px dashed #eee4d8}
 .gvtlrow:first-child{border-top:0;padding-top:2px}
 .gvtlrow .lb{font-size:var(--font-meta);font-weight:800;color:#3d332a;margin-bottom:4px}
@@ -890,10 +892,6 @@ body.cnall .rel span.cnx{display:inline}
 .gvtlrow .axl .now{color:var(--accent2);font-weight:800}
 .gvtlrow .en{font-size:calc(16px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
 .gvtlrow .cn{font-size:calc(15px * var(--fs));color:var(--ink2);line-height:1.7}
-@media(max-width:640px){
-  .gvtl .gvtl-wide{display:none}
-  .gvtl .gvtl-narrow{display:block}
-}
 .gvh{display:flex;align-items:center;gap:8px;margin:0 0 8px}
 .gvh h3{font-size:calc(17px * var(--fs));margin:0;color:var(--ink);font-weight:700}
 .gvh .step{background:var(--accent-soft);color:var(--accent2);font-size:var(--font-micro);
@@ -1202,9 +1200,12 @@ sup.tno{color:#c0392b;font-weight:var(--fw-title);font-size:var(--font-meta);pad
 .wpline .ipa{font-family:var(--font-stack);font-size:var(--font-secondary);color:var(--ink2);font-weight:400}
 .wpline .pos{font-size:var(--font-secondary);color:#2b7a78;font-weight:var(--fw-body);font-style:italic}
 .wpitem .zh{font-size:var(--font-body);line-height:var(--lh-body);font-weight:var(--fw-emph);color:var(--accent2);margin-top:2px}
-.wpitem .def{font-size:var(--font-secondary);line-height:var(--lh-secondary);color:var(--ink2);margin-top:3px}
-.wpitem .exs{font-size:var(--font-def);line-height:var(--lh-body);color:#4a4238;margin-top:4px;background:#fdfbf8;border-radius:8px;padding:6px 8px}
-.wpitem .exs .excn{font-size:var(--font-secondary);line-height:var(--lh-secondary);color:var(--ink2);margin-top:3px}
+/* Words & Phrases 層級（閱讀、實景共用）：單字 > 中文意思 > 英文例句 > 英文定義（斜體、小一級）> 中文例句 > 音標詞性。
+   斜體只給定義本身；例句維持正體，因為那才是學生主要讀的內容 */
+.wpitem .def{font-size:var(--font-def);line-height:1.55;font-weight:var(--fw-body);font-style:italic;color:var(--ink2);margin-top:3px;overflow-wrap:anywhere}
+.wpitem .exs{font-size:var(--font-body);line-height:var(--lh-body);font-weight:var(--fw-body);font-style:normal;color:#4a4238;margin-top:4px;background:#fdfbf8;border-radius:8px;padding:6px 8px}
+.wpitem .def + .exs{margin-top:11px}
+.wpitem .exs .excn{font-size:var(--font-def);line-height:var(--lh-body);font-weight:var(--fw-body);color:var(--ink2);margin-top:3px}
 .extra{display:flex;flex-wrap:wrap;gap:6px}
 .extra span{
   font-size:var(--font-body);background:#f2f7f7;border:1px solid #cfe3e2;border-radius:20px;
@@ -3479,35 +3480,10 @@ function gvMap(m){
 /* 時間線：span 連到 NOW／point 過去一個結束的點／range 未完成的區間 */
 function gvTimeline(t){
   if(!t||!(t.rows||[]).length) return '';
-  const rows=t.rows, RH=86, top=34, W=640, H=top+rows.length*RH+16;
-  const X0=150, X1=600, NOW=506;
-  let s='<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Noto Sans TC,PingFang TC,sans-serif">';
-  s+='<rect width="'+W+'" height="'+H+'" rx="12" fill="#fdf9f4"/>';
-  s+='<text x="'+X0+'" y="20" font-size="12" font-weight="700" fill="#9a8b7a">PAST</text>';
-  s+='<text x="'+NOW+'" y="20" font-size="12" font-weight="800" fill="#c9631f" text-anchor="middle">NOW</text>';
-  s+='<line x1="'+NOW+'" y1="26" x2="'+NOW+'" y2="'+(H-10)+'" stroke="#e8813a" stroke-width="2" stroke-dasharray="5 4"/>';
-  rows.forEach(function(r,i){
-    const y=top+i*RH+26, col=r.tone==='accent'?'#e8813a':'#8a7d6d';
-    s+='<text x="12" y="'+(y+4)+'" font-size="13" font-weight="800" fill="#3d332a">'+esc(r.label||'')+'</text>';
-    s+='<line x1="'+X0+'" y1="'+y+'" x2="'+X1+'" y2="'+y+'" stroke="#e6dccf" stroke-width="2"/>';
-    if(r.kind==='span'){
-      s+='<line x1="190" y1="'+y+'" x2="'+NOW+'" y2="'+y+'" stroke="'+col+'" stroke-width="6" stroke-linecap="round"/>'
-       + '<circle cx="190" cy="'+y+'" r="7" fill="#fff" stroke="'+col+'" stroke-width="4"/>'
-       + '<path d="M'+(NOW-2)+' '+(y-8)+' l10 8 -10 8" fill="none" stroke="'+col+'" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>';
-      s+='<text x="190" y="'+(y+22)+'" font-size="11.5" fill="#8a7d6d" text-anchor="middle">'+esc(r.from||'')+'</text>';
-    } else if(r.kind==='range'){
-      s+='<rect x="300" y="'+(y-13)+'" width="'+(NOW-300)+'" height="26" rx="7" fill="#fdead9" stroke="'+col+'" stroke-width="3"/>'
-       + '<text x="'+((300+NOW)/2)+'" y="'+(y+5)+'" font-size="12" font-weight="700" fill="#c9631f" text-anchor="middle">'+esc((r.from||'')+' → '+(r.to||'NOW'))+'</text>';
-    } else {
-      s+='<circle cx="270" cy="'+y+'" r="9" fill="'+col+'" stroke="#fff" stroke-width="3"/>'
-       + '<text x="270" y="'+(y+24)+'" font-size="11.5" fill="#8a7d6d" text-anchor="middle">'+esc(r.at||'')+'</text>';
-    }
-    if(r.sub) s+='<text x="'+X0+'" y="'+(y+44)+'" font-size="13" font-weight="700" fill="#1f2937">'+esc(r.sub)+'</text>';
-    if(r.subCn) s+='<text x="'+X0+'" y="'+(y+62)+'" font-size="12" fill="#8a7d6d">'+esc(r.subCn)+'</text>';
-  });
-  s+='</svg>';
-  /* 手機版：不縮那張 640 寬的圖（文字會小到 5px 讀不了），改成逐列堆疊——
-     每列一條小軸線（圖裡不放文字）＋句子用 HTML 排版，字級跟著全站 --fs 走、也會自動換行。 */
+  const rows=t.rows;
+  /* 每列 = 一條小軸線（SVG 只畫線與點，不放文字）＋ 標籤、時間、句子用 HTML 排版。
+     文字才會吃文法內頁共用字級（--gt-*）、自動換行；桌機是左軸線右句子兩欄，手機上下堆疊。
+     （2026-09-15 起桌機也不再用整張含文字的 640 寬 SVG） */
   const NB=(function(){
     const bw=280, bx0=12, bx1=268, bnow=228;
     return rows.map(function(r){
@@ -3527,16 +3503,16 @@ function gvTimeline(t){
       b+='</svg>';
       const axl=r.kind==='point' ? esc(r.at||'') : esc((r.from||'')+(r.kind==='range'?' → ':' ')+'');
       return '<div class="gvtlrow">'
-        +'<div class="lb">'+esc(r.label||'')+'</div>'+b
-        +'<div class="axl"><span>'+axl+'</span><span class="now">NOW</span></div>'
+        +'<div class="vis"><div class="lb">'+esc(r.label||'')+'</div>'+b
+        +'<div class="axl"><span>'+axl+'</span><span class="now">NOW</span></div></div>'
+        +'<div class="txt">'
         +(r.sub?'<div class="en"><span class="sent" data-t="'+esc(r.sub)+'" onclick="saySent(this)">'+esc(r.sub)+'</span> '+spk(r.sub)+'</div>':'')
         +(r.subCn?'<div class="cn cnx">'+esc(r.subCn)+'</div>':'')
-        +'</div>';
+        +'</div></div>';
     }).join('');
   })();
   return '<figure class="artbox gvtl">'
-    +'<div class="gvtl-wide">'+s+'</div>'
-    +'<div class="gvtl-narrow">'+NB+'</div>'
+    +'<div class="gvtl-rows">'+NB+'</div>'
     +(t.cap?'<figcaption>'+esc(t.cap)+'</figcaption>':'')+'</figure>';
 }
 /* 情境卡：圖 → 意義 → 例句；「為什麼？」點了才展開（漸進揭露） */
