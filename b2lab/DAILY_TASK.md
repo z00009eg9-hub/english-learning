@@ -164,7 +164,7 @@ B1+ 篇固定是新聞改寫，需要對外連新聞站。排程環境的「網�
 | `intro` | 2–3 句中文導讀，說明要注意什麼結構 |
 | `paras` | 4 個 `{en, cn}`，每段都要有完整中譯 |
 | `ipa`（所有 target / pre 共用） | **音標一律美式、Cambridge 記法（2026-09-09 全站統一）**：ɑː 不用 ɒ、tuː 不用 tjuː、非重音 -er 寫 ɚ、bird 寫 ɝː、用 e 不用 ɛ、IPA 的 ɡ、一律 `/…/` 不用 `[…]`。同一個字若已出現在任何 `public/data-*.js`，**先 grep 並沿用完全相同的音標字串**，同字不能有兩種寫法。例：/kənˈvɪns/、/pɚˈsweɪd/、/ˈmɑː.nə.t̬ɚ/ |
-| `target` | A2/B1 篇 5–6 個、B1+/B2 篇 7–9 個 `{w, ipa, pos, cn, def, ex, exCn}`；`def` 用簡單英文，`ex` 取自本文，`exCn` 是 `ex` 的繁體中文翻譯（一定要有） |
+| `target` | A2/B1 篇 5–6 個、B1+/B2 篇 7–9 個 `{w, ipa, pos, cn, def, ex, exCn}`；`def` 用簡單英文（網站顯示為斜體、比例句小一級）；**`ex` 必須原創、換一個跟本文不同的情境**——不可照抄或改寫本文句子，不沿用本文的人物、地點、公司、事件、數字，程度對應這一篇（2026-09-14 使用者指定，第 5 步驗證會擋「與本文連續 4 字相同」）；`exCn` 是 `ex` 的繁體中文翻譯（一定要有） |
 | `questions` | A2/B1 篇 3 題、B1+/B2 篇 4 題 `{q, qCn, opts, optsCn, ans, expl}`；`opts` 4 個選項且以 `"A. "`–`"D. "` 開頭，`ans` 是 0-based 索引，`expl` 用中文並引用原文依據 |
 | `qCn` / `optsCn` | **每題都要**：`qCn` 是題目的中文翻譯；內容理解題加 `optsCn`（四個選項的中文，一樣 A–D 開頭）。純文法填空題（選項是動詞變化）只要 `qCn` 寫出整句中文意思、不用 `optsCn`。網站的「顯示中譯」開關靠這兩個欄位 |
 | `upgrade` | 2 個 `{b1, b2, note}`：同一個意思的低階說法 vs. 高階說法，`note` 解釋為什麼升級了 |
@@ -540,6 +540,14 @@ todays.forEach(a=>{
   a.questions.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw a.id+' ans 索引錯誤: '+q.q});
   if(a.target.length<5) throw a.id+' 重點字不足';
   a.target.forEach(t=>{if(t.ex&&!t.exCn) throw a.id+' 重點字缺 exCn 中譯: '+t.w});
+  /* 重點字例句不可照抄或改寫本文（2026-09-14 使用者指定）：例句跟本文不能有連續 4 個字相同（重點字本身不算） */
+  const _nm=s=>s.toLowerCase().replace(/[^a-z' ]/g,' ').replace(/ +/g,' ').trim();
+  const _bw=_nm(a.paras.map(p=>p.en).join(' ')).split(' '); const _g4=new Set();
+  for(let i=0;i+4<=_bw.length;i++) _g4.add(_bw.slice(i,i+4).join(' '));
+  a.target.forEach(t=>{ if(!t.ex) return;
+    const skip=new Set(_nm(t.w).split(' ').map(x=>x.slice(0,4)));
+    const ew=_nm(t.ex).split(' ').filter(x=>!skip.has(x.slice(0,4)));
+    for(let k=0;k+4<=ew.length;k++){ if(_g4.has(ew.slice(k,k+4).join(' '))) throw a.id+' 重點字例句跟本文重複，要換情境原創: '+t.w+' → '+t.ex; } });
   if(a.upgrade.length<2) throw a.id+' 升級句不足';
 });
 const grams=d.grammar.filter(x=>x.date===TODAY);
