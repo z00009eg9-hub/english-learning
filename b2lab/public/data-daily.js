@@ -6045,13 +6045,13 @@ grammar:[
       },
       "examples": [
         {
-          "en": "How long have you studied English?",
-          "cn": "你英文學多久了？",
-          "note": "have + studied（過去分詞）"
+          "en": "How long have you known Amy?",
+          "cn": "你認識 Amy 多久了？",
+          "note": "have + known（過去分詞）"
         },
         {
-          "en": "How long have you worked here?",
-          "cn": "你在這裡工作多久了？",
+          "en": "How long have you been a nurse?",
+          "cn": "你當護理師多久了？",
           "note": "問從以前到現在的時間長度"
         }
       ]
@@ -6064,8 +6064,8 @@ grammar:[
       ],
       "examples": [
         {
-          "en": "I have studied English for six years.",
-          "cn": "我英文學了六年了。",
+          "en": "We have had our dog for three years.",
+          "cn": "我們養這隻狗三年了。",
           "note": "for 接『多長』"
         },
         {
@@ -6107,8 +6107,8 @@ grammar:[
       "why": "last summer 是『開始的時間點』，要用 since；for 後面接的是時間長度，不能接一個時間點。"
     },
     {
-      "bad": "How long you have worked here?",
-      "good": "How long have you worked here?",
+      "bad": "How long you have taught at this school?",
+      "good": "How long have you taught at this school?",
       "why": "疑問句裡助動詞 have 要放到主詞 you 前面，寫成 have you，不能照中文語序把主詞放前面。"
     }
   ],
@@ -6193,14 +6193,14 @@ grammar:[
       },
       "examples": [
         {
-          "en": "How long have you worked here?",
-          "cn": "你在這裡工作多久了？",
-          "note": "問在職的時間長度"
+          "en": "How long have you lived in this city?",
+          "cn": "你住在這個城市多久了？",
+          "note": "單純問住了多久"
         },
         {
-          "en": "How long have you been waiting?",
-          "cn": "你等多久了？",
-          "note": "強調『一直在等』這個動作"
+          "en": "How long have you been studying for the exam?",
+          "cn": "你準備考試準備多久了？",
+          "note": "強調『一直在讀書』這個動作"
         }
       ]
     },
@@ -6227,8 +6227,8 @@ grammar:[
       ],
       "examples": [
         {
-          "en": "I have been waiting for twenty minutes.",
-          "cn": "我已經等二十分鐘了。",
+          "en": "I have been working on this report for three hours.",
+          "cn": "這份報告我已經做了三個小時。",
           "note": "for 接長度"
         },
         {
@@ -6575,15 +6575,15 @@ grammar:[
       "q": "Which sounds most appropriate in a formal interview?",
       "qCn": "在正式面試裡，哪一句最合適？",
       "opts": [
-        "I've been doing this forever.",
+        "I've been in this line of work forever.",
         "I have worked in this field for over eight years.",
-        "I've been at it for ages.",
+        "I've been doing this kind of job for ages.",
         "I do this a long time."
       ],
       "optsCn": [
-        "我做這個做超久了。",
+        "我做這行做超久了。",
         "我在這個領域工作八年多了。",
-        "我搞這個搞好久了。",
+        "我做這種工作做好久了。",
         "我做這個很久。"
       ],
       "ans": 1,
@@ -6657,14 +6657,14 @@ grammar:[
       },
       "examples": [
         {
-          "en": "I have cleaned my room.",
-          "cn": "我已經把房間打掃好了。",
-          "note": "重點是『打掃完成了』這個結果"
+          "en": "I have washed the car.",
+          "cn": "我已經把車洗好了。",
+          "note": "重點是『洗好了』這個結果"
         },
         {
-          "en": "I have been cleaning my room all morning.",
-          "cn": "我整個早上都在打掃房間。",
-          "note": "重點是『一直在打掃』這個過程，可能還沒完全做完"
+          "en": "I have been washing the car for an hour.",
+          "cn": "我已經洗車洗了一個小時了。",
+          "note": "重點是『一直在洗』這個過程，可能還沒完全洗完"
         }
       ]
     },
@@ -6676,8 +6676,8 @@ grammar:[
       ],
       "examples": [
         {
-          "en": "She has written three emails.",
-          "cn": "她已經寫了三封email。",
+          "en": "Tom has answered ten customer calls today.",
+          "cn": "Tom 今天已經接了十通客人的電話。",
           "note": "強調完成的數量"
         }
       ]
@@ -6934,7 +6934,7 @@ grammar:[
         "rows": [
           [
             "How long have you + Vpp...?",
-            "How long have you worked here?"
+            "How long have you lived in this city?"
           ],
           [
             "How long have you been + Ving...?",
@@ -6963,13 +6963,13 @@ grammar:[
       ],
       "examples": [
         {
-          "en": "I have worked here for two years.",
-          "cn": "我在這裡工作兩年了。",
+          "en": "She has taught English for ten years.",
+          "cn": "她教英文教了十年了。",
           "note": "for後面接時間長度"
         },
         {
-          "en": "I have worked here since 2024.",
-          "cn": "我從2024年就在這裡工作了。",
+          "en": "She has taught English since 2016.",
+          "cn": "她從2016年就開始教英文了。",
           "note": "since後面接起點"
         }
       ]
@@ -6990,14 +6990,14 @@ grammar:[
   ],
   "traps": [
     {
-      "bad": "How long do you work here?",
-      "good": "How long have you worked here?",
-      "why": "問『從過去到現在做了多久』要用現在完成式，不能用現在簡單式do you work（那是問『通常做什麼』，不是問時間長度）。"
+      "bad": "How long do you play tennis?",
+      "good": "How long have you played tennis?",
+      "why": "問『從過去到現在做了多久』要用現在完成式，不能用現在簡單式do you play（那是問『每次通常打多久』，不是問從以前到現在打了多久）。"
     },
     {
-      "bad": "I work here since 2024.",
-      "good": "I have worked here since 2024.",
-      "why": "since要搭配現在完成式，不能直接用現在簡單式work。"
+      "bad": "I live in Taichung since 2020.",
+      "good": "I have lived in Taichung since 2020.",
+      "why": "since要搭配現在完成式，不能直接用現在簡單式live。"
     },
     {
       "bad": "I have been for two years working here.",
@@ -7229,19 +7229,19 @@ grammar:[
         "rows": [
           [
             "I / You / We / They",
-            "I have been waiting for ten minutes."
+            "They have been talking for an hour."
           ],
           [
             "He / She / It",
-            "She has been sleeping since noon."
+            "It has been raining since Monday."
           ]
         ]
       },
       "examples": [
         {
-          "en": "I have been waiting for ten minutes.",
-          "cn": "我已經等了十分鐘了。",
-          "note": "動作從十分鐘前開始，一直到現在"
+          "en": "We have been driving for three hours.",
+          "cn": "我們已經開車開了三個小時了。",
+          "note": "動作從三小時前開始，一直到現在"
         },
         {
           "en": "She has been sleeping since noon.",
@@ -7295,23 +7295,23 @@ grammar:[
   ],
   "traps": [
     {
-      "bad": "I am waiting for ten minutes.",
-      "good": "I have been waiting for ten minutes.",
-      "why": "要說「已經持續了多久」要用have been waiting，不能只用現在進行式am waiting，因為現在進行式沒有「從過去到現在」的意思。"
+      "bad": "I am working here for two years.",
+      "good": "I have been working here for two years.",
+      "why": "要說「已經持續了多久」要用have been working，不能只用現在進行式am working，因為現在進行式沒有「從過去到現在」的意思。"
     },
     {
-      "bad": "I have been wait for ten minutes.",
-      "good": "I have been waiting for ten minutes.",
-      "why": "been後面要接動詞-ing（waiting），不能用原形wait。"
+      "bad": "My dad has been cook dinner for an hour.",
+      "good": "My dad has been cooking dinner for an hour.",
+      "why": "been後面要接動詞-ing（cooking），不能用原形cook。"
     },
     {
-      "bad": "She has been sleeping for noon.",
-      "good": "She has been sleeping since noon.",
-      "why": "noon是一個時間點，要用since，不能用for（for後面要接一段時間，像for two hours）。"
+      "bad": "The baby has been crying for six o'clock.",
+      "good": "The baby has been crying since six o'clock.",
+      "why": "six o'clock是一個時間點，要用since，不能用for（for後面要接一段時間，像for two hours）。"
     },
     {
-      "bad": "I has been waiting for ten minutes.",
-      "good": "I have been waiting for ten minutes.",
+      "bad": "I has been living here for five years.",
+      "good": "I have been living here for five years.",
       "why": "主詞是I，助動詞要用have，不能用has（has只用在he/she/it）。"
     }
   ],
@@ -7397,14 +7397,14 @@ grammar:[
       },
       "examples": [
         {
-          "en": "I am reading a book.",
-          "cn": "我正在看一本書。",
+          "en": "Tom is fixing the printer.",
+          "cn": "Tom 正在修印表機。",
           "note": "只講『現在』，沒有講『多久』"
         },
         {
-          "en": "I have been reading this book for two hours.",
-          "cn": "我已經看這本書看了兩個小時了。",
-          "note": "從兩小時前到現在一直在做"
+          "en": "Tom has been fixing the printer since lunch.",
+          "cn": "Tom 從午餐後就一直在修印表機。",
+          "note": "從午餐後到現在一直在做"
         }
       ]
     },
@@ -7421,8 +7421,8 @@ grammar:[
           "note": "單純問現在正在做什麼"
         },
         {
-          "en": "How long have you been cooking? — I have been cooking for an hour.",
-          "cn": "你煮多久了？——我已經煮了一個小時了。",
+          "en": "How long have you been driving? — I have been driving for three hours.",
+          "cn": "你開車開多久了？——我已經開了三個小時了。",
           "note": "問持續的時間"
         }
       ]
@@ -7544,8 +7544,8 @@ grammar:[
           "note": "強調『一直在做』的過程，可能還沒寫完"
         },
         {
-          "en": "I have written three reports this week.",
-          "cn": "我這禮拜寫了三份報告了。",
+          "en": "I have made four phone calls since lunch.",
+          "cn": "午餐後我已經打了四通電話。",
           "note": "強調『完成的數量』，是具體的結果"
         }
       ]
@@ -7558,14 +7558,14 @@ grammar:[
       ],
       "examples": [
         {
-          "en": "Why are your hands so dirty? — I have been fixing the car.",
-          "cn": "你的手怎麼這麼髒？——我一直在修車。",
+          "en": "Why are your eyes so red? — I have been staring at the screen all day.",
+          "cn": "你的眼睛怎麼這麼紅？——我一整天都一直盯著螢幕。",
           "note": "用還沒做完的『過程』解釋現在的狀態"
         },
         {
-          "en": "I have fixed the car. It works now.",
-          "cn": "我把車修好了，現在可以開了。",
-          "note": "強調『修好了』這個結果"
+          "en": "I have painted the bedroom. It looks great now.",
+          "cn": "我把臥室油漆好了，現在看起來很棒。",
+          "note": "強調『油漆好了』這個結果"
         }
       ]
     },
@@ -7613,8 +7613,8 @@ grammar:[
       "expl": "three reports是具體數量，強調完成的結果，用have written。"
     },
     {
-      "q": "Why are your hands so dirty? — I ___ the car.",
-      "qCn": "你的手怎麼這麼髒？——我一直在修車。",
+      "q": "Why is your shirt so greasy? — I ___ my bike.",
+      "qCn": "你的上衣怎麼都是油污？——我一直在修腳踏車。",
       "opts": [
         "have fixed",
         "fix",
@@ -7681,13 +7681,13 @@ grammar:[
       },
       "examples": [
         {
-          "en": "I have been leading a cross-team project on customer retention.",
-          "cn": "我一直在主導一項跨團隊的顧客留存專案。",
+          "en": "I have been managing our company's social media accounts since January.",
+          "cn": "我從一月起一直在管理公司的社群媒體帳號。",
           "note": "強調『持續投入、正在進行』的責任感，適合說明目前職責"
         },
         {
-          "en": "I have led three cross-team projects that increased customer retention by 12 percent.",
-          "cn": "我主導過三項跨團隊專案，讓顧客留存率提升了12%。",
+          "en": "I have doubled our online followers and increased website traffic by 35 percent.",
+          "cn": "我讓公司的社群追蹤人數翻倍，網站流量也提升了35%。",
           "note": "強調具體成果與數字，適合履歷的『成就』段落"
         }
       ]
@@ -7812,7 +7812,7 @@ grammar:[
         "head": ["例句", "現在的情況"],
         "rows": [
           ["The rain has stopped.", "現在外面沒有在下雨了"],
-          ["Tom has lost his key.", "Tom現在沒有鑰匙"]
+          ["Dad has washed the car.", "車子現在很乾淨"]
         ]
       },
       "examples": [
@@ -7821,12 +7821,12 @@ grammar:[
       ]
     },
     {
-      "h": "has stopped vs stopped：有沒有明確時間",
+      "h": "has left vs left：有沒有明確時間",
       "table": {
         "head": ["句子", "時態"],
         "rows": [
-          ["The rain has stopped.（沒說時間）", "現在完成式"],
-          ["The rain stopped at three.（有明確時間）", "過去簡單式"]
+          ["The bus has left.（沒說時間）", "現在完成式"],
+          ["The bus left at eight.（有明確時間）", "過去簡單式"]
         ]
       },
       "bullets": [
@@ -7847,8 +7847,8 @@ grammar:[
     }
   ],
   "traps": [
-    {"bad": "Tom loses his key.", "good": "Tom has lost his key.", "why": "要說『現在的結果』（鑰匙現在不見了）要用現在完成式has lost，不能用現在簡單式loses。"},
-    {"bad": "The rain has stopped at three.", "good": "The rain stopped at three.", "why": "句子裡有明確時間at three，要用過去簡單式stopped，不能用現在完成式。"},
+    {"bad": "Lisa finishes her homework.", "good": "Lisa has finished her homework.", "why": "要說『現在的結果』（功課現在做完了，可以去玩）要用現在完成式has finished，不能用現在簡單式finishes。"},
+    {"bad": "The movie has started at seven.", "good": "The movie started at seven.", "why": "句子裡有明確時間at seven，要用過去簡單式started，不能用現在完成式。"},
     {"bad": "I have lose my umbrella.", "good": "I have lost my umbrella.", "why": "have後面要接過去分詞lost，不能用原形lose。"},
     {"bad": "She has broke her phone.", "good": "She has broken her phone.", "why": "break的過去分詞是broken，不是broke（那是過去簡單式）。"}
   ],
@@ -8035,7 +8035,7 @@ grammar:[
         ]
       },
       "examples": [
-        {"en": "I have finished my homework.", "cn": "我已經寫完功課了。", "note": "have + finished"},
+        {"en": "I have finished the safety check.", "cn": "我已經做完安全檢查了。", "note": "have + finished"},
         {"en": "She has eaten lunch already.", "cn": "她已經吃過午餐了。", "note": "has + eaten"},
         {"en": "They have cleaned the room.", "cn": "他們已經打掃過房間了。", "note": "have + cleaned"}
       ]
@@ -8265,7 +8265,7 @@ grammar:[
   ],
   "traps": [
     {"bad": "（正式報告）The policy changed since 2020 and is still the same.", "good": "The policy has remained unchanged since 2020.", "why": "強調「政策至今仍然有效」要用現在完成式，過去簡單式changed聽起來像「已經結束、跟現在無關」。"},
-    {"bad": "堅持'I just finished the report.'一定是錯的文法，必須改成'I have just finished.'", "good": "美式口語的'I just finished the report.'是可以接受的用法，只是語域比較口語，不是文法錯誤。", "why": "這是語域和地區差異，不是文法錯誤——正式寫作與英式英語傾向用現在完成式，但美式口語常用過去簡單式表達「剛發生」。"},
+    {"bad": "堅持'I just sent the email.'一定是錯的文法，必須改成'I have just sent it.'", "good": "美式口語的'I just sent the email.'是可以接受的用法，只是語域比較口語，不是文法錯誤。", "why": "這是語域和地區差異，不是文法錯誤——正式寫作與英式英語傾向用現在完成式，但美式口語常用過去簡單式表達「剛發生」。"},
     {"bad": "新聞第一句：Inspectors confirmed the contamination and ordered a recall.（前導句和細節句混在一起）", "good": "Regulators have ordered a recall. Inspectors confirmed the contamination on Monday.", "why": "前導句適合用現在完成式先給結果，細節句再用過去簡單式交代明確時間，兩者分工不同，混在一起會讓語氣不夠俐落。"},
     {"bad": "The company maintained the same safety standard for a decade, but nobody knows if it still applies.", "good": "The company has maintained the same safety standard for a decade.", "why": "如果要表達「這個狀態到現在都還成立」，用現在完成式has maintained，過去簡單式maintained會讓人以為「已經結束了」。"}
   ],
@@ -8381,7 +8381,7 @@ grammar:[
     }
   ],
   "traps": [
-    {"bad": "While she chopped vegetables, the doorbell rang.", "good": "While she was chopping vegetables, the doorbell rang.", "why": "while後面通常接「正在進行的背景動作」，要用過去進行式was chopping，不是過去簡單式chopped。"},
+    {"bad": "While I waited for the train, my phone died.", "good": "While I was waiting for the train, my phone died.", "why": "while後面通常接「正在進行的背景動作」，要用過去進行式was waiting，不是過去簡單式waited。"},
     {"bad": "Amy was frying the chicken when the smoke alarm was going off.", "good": "Amy was frying the chicken when the smoke alarm went off.", "why": "突然發生的短動作（警報器響）用過去簡單式went off，不是過去進行式。"},
     {"bad": "When I was cooking dinner, my friend was arriving.", "good": "When I was cooking dinner, my friend arrived.", "why": "到達（arrive）是瞬間發生的短動作，用過去簡單式arrived，不是過去進行式。"},
     {"bad": "While I was watch TV, she called me.", "good": "While I was watching TV, she called me.", "why": "was後面要加V-ing：watching，不能用原形watch。"}
@@ -8890,8 +8890,8 @@ grammar:[
       "why": "兩邊都是過去的事，主句也要用過去式 showed。"
     },
     {
-      "bad": "After she signed the lease, she is moving in.",
-      "good": "After she signed the lease, she moved in.",
+      "bad": "After we checked in, we are walking to the beach.",
+      "good": "After we checked in, we walked to the beach.",
       "why": "故事講的是過去已經發生的事，不能混進現在進行式。"
     },
     {
@@ -9885,7 +9885,7 @@ grammar:[
     {bad:"The Red Line has signal problems sometimes, I'm so tired of it!",good:"The Red Line is always having signal problems, I'm so tired of it!",why:"想表達「抱怨、受不了了」的語氣，要用 always/constantly + 現在進行式，單純的現在簡單式聽起來太中性、沒有情緒。"},
     {bad:"（新聞標題）A Fault Delayed Thousands This Morning",good:"（新聞標題）Signal Fault Delays Thousands",why:"新聞標題習慣用現在簡單式製造「即時感」，就算事情已經發生了；但內文報導本身還是要用過去式。"},
     {bad:"Ridership falls this month compared to last month, we don't know why yet.",good:"Ridership is falling this month compared to last month, we don't know why yet.",why:"講「正在變化中、還沒結束」的趨勢，要用現在進行式；現在簡單式聽起來像是已經確定、固定的模式。"},
-    {bad:"Aging infrastructure is tending to cause more frequent delays.（正式報告）",good:"Aging infrastructure tends to cause more frequent delays.",why:"tend to 本身已經表達「傾向、通常」的意思，是狀態動詞用法，正式寫作中不需要、也不該再加 -ing。"}
+    {bad:"Customer complaints are tending to rise in the summer months.（正式報告）",good:"Customer complaints tend to rise in the summer months.",why:"tend to 本身已經表達「傾向、通常」的意思，是狀態動詞用法，正式寫作中不需要、也不該再加 -ing。"}
   ],
   quiz:[
     {q:"Which sentence best expresses a complaint?",qCn:"哪一句最能表達「抱怨」的語氣？",opts:["The Red Line has signal problems sometimes.","The Red Line is always having signal problems.","The Red Line had a signal problem yesterday.","The Red Line will have a signal problem."],ans:1,expl:"always + 現在進行式是表達不滿、抱怨的固定用法。"},
@@ -10054,7 +10054,7 @@ grammar:[
     ]}
   ],
   traps:[
-    {bad:"Vaccines prevent severe illness. (寫學術報告時想強調嚴謹)",good:"Vaccines tend to reduce the risk of severe illness.",why:"學術寫作習慣用 tend to / can 這類詞留餘地，直接斷言 prevent 反而顯得不夠嚴謹、容易被挑戰。"},
+    {bad:"Night shifts increase the defect rate. (寫品質報告時想強調嚴謹)",good:"Night shifts tend to increase the defect rate.",why:"正式報告習慣用 tend to / can 這類詞留餘地，直接斷言 increase 反而顯得不夠嚴謹、容易被挑戰。"},
     {bad:"In the report, I walk into the clinic and see the empty waiting room. (正式報告)",good:"In the report, I walked into the clinic and saw the empty waiting room.",why:"正式報告要用過去式維持客觀敘述的距離；歷史現在式只適合口語或非正式的敘事文體。"},
     {bad:"Take your temperature. If it is high, you call the clinic. (指示文混用祈使句與泛稱you，語氣不一致)",good:"You take your temperature, and if it's high, you call the clinic.",why:"同一段說明步驟時，泛稱 you 和祈使句最好不要混用，選一種維持一致的語氣。"}
   ],
@@ -10182,7 +10182,7 @@ grammar:[
       ["住","I live in Taoyuan.（家在這）","I'm living in Hanoi.（外派暫住）"],
       ["工作","She works in QA.（職業）","She's working on an audit this week.（手上這件事）"],
       ["未來","The flight leaves at 9:00.（時刻表）","I'm leaving on Thursday.（個人安排）"],
-      ["always","He always loses his keys.（中性）","He's always losing his keys.（抱怨）"]
+      ["always","My boss always changes the plan.（中性）","My boss is always changing the plan.（抱怨）"]
     ]}, examples:[
       {en:"I'm renting a room near the factory until my contract ends.",cn:"合約結束前我先在工廠附近租個房間。",note:"until 點出「暫時」，所以用進行式"},
       {en:"We're meeting the supplier at 2 p.m. tomorrow.",cn:"我們明天下午兩點要見供應商。",note:"敲定的安排，比 will meet 自然"},
@@ -10196,7 +10196,7 @@ grammar:[
   ],
   traps:[
     {bad:"I will fly to Taipei on Thursday. (機票早就訂好)",good:"I'm flying to Taipei on Thursday.",why:"已敲定的安排用進行式；will 聽起來像剛剛才決定。中文都是「我週四飛台北」，但英文靠時態區分「早就訂好」跟「臨時決定」。"},
-    {bad:"He always is losing his keys.",good:"He is always losing his keys.",why:"always 要放在 be 動詞後面、V-ing 前面，位置錯了整句就垮。"},
+    {bad:"The printer always is breaking down.",good:"The printer is always breaking down.",why:"always 要放在 be 動詞後面、V-ing 前面，位置錯了整句就垮。"},
     {bad:"I'm living in Taoyuan all my life.",good:"I have lived in Taoyuan all my life.",why:"all my life 是「一輩子」，不是暫時狀態；進行式只能配暫時的期間（this year / these days）。"},
     {bad:"She is knowing the new process very well.",good:"She knows the new process very well.",why:"know 是狀態動詞，再進階的用法也救不了它——狀態動詞就是不用進行式。"}
   ],

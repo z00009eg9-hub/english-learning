@@ -31,7 +31,7 @@ window.GRAMMAR = [
     ]}
   ],
   traps:[
-    {bad:"I have worked here since six years.",good:"I have worked here for six years.",why:"for + 一段時間；since + 起點時間（since 2020 / since Monday）。"},
+    {bad:"She has lived in Taipei since ten years.",good:"She has lived in Taipei for ten years.",why:"for + 一段時間；since + 起點時間（since 2020 / since Monday）。"},
     {bad:"I am knowing the answer.",good:"I know the answer.",why:"know / believe / want / like 等狀態動詞不用進行式。"}
   ],
   quiz:[
@@ -155,7 +155,7 @@ window.GRAMMAR = [
   sections:[
     {h:"三者對照", table:{head:["結構","意思","後接","例句"],rows:[
       ["used to + V原形","以前常做，現在不做了","原形","I used to smoke."],
-      ["be used to + V-ing / N","已經習慣了（現在的狀態）","V-ing 或名詞","I am used to working late."],
+      ["be used to + V-ing / N","已經習慣了（現在的狀態）","V-ing 或名詞","I am used to eating spicy food."],
       ["would + V原形","過去反覆的習慣（帶回憶感）","原形","My mother would buy candles before every typhoon."]
     ]}},
     {h:"used to 與 would 的差別", bullets:[
@@ -191,7 +191,7 @@ window.GRAMMAR = [
       ["make","make + 人 + V原形","強迫、造成","The film made me cry."],
       ["have","have + 人 + V原形","指派、安排","I had the plumber check the pipe."],
       ["let","let + 人 + V原形","允許","She let me borrow her car."],
-      ["get","get + 人 + to V","說服、設法讓","I got my brother to help me."],
+      ["get","get + 人 + to V","說服、設法讓","I got my coworker to cover my shift."],
       ["cause","cause + 人 + to V","導致（較正式）","The noise caused her to wake up."]
     ]}},
     {h:"事被做（被動）", body:[
@@ -264,7 +264,7 @@ window.GRAMMAR = [
       ["零條件句","現在簡單式","現在簡單式","科學事實：If you heat ice, it melts."],
       ["第一條件句","現在簡單式","will + V","可能發生：If it rains, I will stay home."],
       ["第二條件句","過去簡單式","would + V","不太可能／假想：If I had more time, I would travel."],
-      ["第三條件句","had + p.p.","would have + p.p.","與過去事實相反：If she had studied, she would have passed."]
+      ["第三條件句","had + p.p.","would have + p.p.","與過去事實相反：If we had left earlier, we would have caught the train."]
     ]}},
     {h:"重要細節", bullets:[
       "if 子句裡不用 will：✗ If it will rain... ✓ If it rains...",

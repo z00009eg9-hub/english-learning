@@ -6738,8 +6738,24 @@ updateHd();
 updateDayIcon();
 touchStreak();
 updateStreak();
-RENDER.daily();
-cloudPull(()=>{ touchStreak(); updateStreak(); RENDER[TAB] && RENDER[TAB](); cloudSubscribe(); vidSubscribe(); rwShare(); });
+/* 暫時離開（切 app、iPad 把分頁收掉重載）30 分鐘內回來：回到原本的分頁；
+   課本內頁另外記得捲到哪裡（上次那一課本來就會自動打開）。
+   今日與聽力不還原：今日本來就是首頁，聽力要重建播放器 */
+const RESUME_MS=30*60*1000;
+function saveResume(){
+  try{ localStorage.setItem('b2lab_resume_'+PROFILE, JSON.stringify({tab:TAB, y:Math.round(window.scrollY), t:Date.now()})); }catch(e){}
+}
+window.addEventListener('pagehide',saveResume);
+document.addEventListener('visibilitychange',()=>{ if(document.hidden) saveResume(); });
+const RESUME=(()=>{
+  try{
+    const r=JSON.parse(localStorage.getItem('b2lab_resume_'+PROFILE)||'null');
+    return (r && Date.now()-r.t<RESUME_MS && r.tab!=='daily' && r.tab!=='listen' && RENDER[r.tab]) ? r : null;
+  }catch(e){ return null; }
+})();
+const resumeScroll=()=>{ if(RESUME && !RESUME.done && TAB==='book' && bkOpen){ RESUME.done=true; window.scrollTo(0,RESUME.y||0); } };
+if(RESUME){ go(RESUME.tab); requestAnimationFrame(resumeScroll); } else RENDER.daily();
+cloudPull(()=>{ touchStreak(); updateStreak(); RENDER[TAB] && RENDER[TAB](); resumeScroll(); cloudSubscribe(); vidSubscribe(); rwShare(); });
 
 /* ---------- LINE Bot 深連結 ---------- */
 /* LINE 單字卡的「完整學習」會帶 ?w=compensate&lesson=bk20260811 進來：

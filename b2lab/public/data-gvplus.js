@@ -91,12 +91,12 @@ window.GVPLUS = {
     {
       "key": "ask-study",
       "icon": "book",
-      "title": "問學多久",
-      "titleCn": "how long have you studied",
-      "ask": "要怎麼問『你英文學多久了』？",
-      "en": "How long have you studied English?",
-      "cn": "你英文學多久了？",
-      "why": "問『從過去到現在做了多久』要用現在完成式 How long have you studied，不能用現在簡單式 do you study。"
+      "title": "問彈多久",
+      "titleCn": "how long have you played",
+      "ask": "要怎麼問『你鋼琴彈多久了』？",
+      "en": "How long have you played the piano?",
+      "cn": "你彈鋼琴彈多久了？",
+      "why": "問『從過去到現在做了多久』要用現在完成式 How long have you played，不能用現在簡單式 do you play。"
     },
     {
       "key": "answer-for",
@@ -104,9 +104,9 @@ window.GVPLUS = {
       "title": "用 for 回答",
       "titleCn": "for + 長度",
       "ask": "for 後面要接長度還是起點？",
-      "en": "I have studied English for six years.",
-      "cn": "我英文學了六年了。",
-      "why": "for 後面接『一段時間長度』，例如 for six years，不能接一個確切的年份。"
+      "en": "She has worked at the hotel for two months.",
+      "cn": "她在飯店工作兩個月了。",
+      "why": "for 後面接『一段時間長度』，例如 for two months，不能接一個確切的年份。"
     },
     {
       "key": "answer-since",
@@ -159,8 +159,8 @@ window.GVPLUS = {
       "icon": "clock",
       "head": "duration",
       "headCn": "多長的時間",
-      "en": "I have studied English for six years.",
-      "cn": "我英文學了六年了。",
+      "en": "I have played the guitar for ten years.",
+      "cn": "我彈吉他彈了十年了。",
       "pts": [
         "後面接一段長度",
         "例如 for six years, for a week",
@@ -173,11 +173,11 @@ window.GVPLUS = {
       "icon": "calendar",
       "head": "starting point",
       "headCn": "開始的時間點",
-      "en": "I have studied English since 2020.",
-      "cn": "我從2020年就開始學英文了。",
+      "en": "I have played the guitar since 2016.",
+      "cn": "我從2016年就開始彈吉他了。",
       "pts": [
         "後面接一個確切起點",
-        "例如 since 2020, since Monday",
+        "例如 since 2016, since Monday",
         "不能接一段長度"
       ]
     },
@@ -318,23 +318,23 @@ window.GVPLUS = {
   "steps": [
     {
       "label": "情境",
-      "text": "你在公車站遇到同事，他好像已經等很久了。"
+      "text": "你走進實驗室，同事還在測試一批樣品，看起來已經忙很久了。"
     },
     {
       "label": "先問自己",
-      "text": "你想問『單純多久』，還是強調『他一直站在那裡等』這個動作？"
+      "text": "你想問『單純多久』，還是強調『他一直在測試』這個動作？"
     },
     {
       "label": "問長度",
-      "text": "How long have you waited?（單純問時間）"
+      "text": "How long have you worked on these samples?（單純問時間）"
     },
     {
       "label": "強調動作",
-      "text": "How long have you been waiting?（強調一直在等，更自然）"
+      "text": "How long have you been testing these samples?（強調一直在測，更自然）"
     },
     {
       "label": "換個說法",
-      "text": "錯誤說法：How long have you been knowing him?——know 是狀態動詞，只能用 have you known him。"
+      "text": "錯誤說法：How long have you been knowing the lab manager?——know 是狀態動詞，只能用 have you known the lab manager。"
     }
   ],
   "comparison": {
@@ -460,9 +460,9 @@ window.GVPLUS = {
       "title": "When 問時間點",
       "titleCn": "When + 過去式",
       "ask": "問『哪一天開始』要用什麼時態？",
-      "en": "When did you start this job?",
-      "cn": "你什麼時候開始這份工作的？",
-      "why": "When 問確切的時間點，配過去簡單式 did start，不跟現在完成式連用。"
+      "en": "When did you buy your car?",
+      "cn": "你什麼時候買車的？",
+      "why": "When 問確切的時間點，配過去簡單式 did buy，不跟現在完成式連用。"
     },
     {
       "key": "howlong-perfect",
@@ -470,8 +470,8 @@ window.GVPLUS = {
       "title": "How long 問持續",
       "titleCn": "How long + 完成式",
       "ask": "問『到現在做多久了』要用什麼時態？",
-      "en": "How long have you had this job?",
-      "cn": "你做這份工作多久了？",
+      "en": "How long have you had your car?",
+      "cn": "你這台車開多久了？",
       "why": "How long 問的是持續到現在的時間，配現在完成式 have had，因為這件事還沒結束。"
     }
   ],
@@ -505,8 +505,8 @@ window.GVPLUS = {
       "icon": "flag",
       "head": "past simple",
       "headCn": "配過去簡單式",
-      "en": "When did you start this job?",
-      "cn": "你什麼時候開始這份工作的？",
+      "en": "When did you move to Taipei?",
+      "cn": "你什麼時候搬到台北的？",
       "pts": [
         "問『哪一天／什麼時候』",
         "配過去簡單式 did",
@@ -519,8 +519,8 @@ window.GVPLUS = {
       "icon": "clock",
       "head": "present perfect",
       "headCn": "配現在完成式",
-      "en": "How long have you had this job?",
-      "cn": "你做這份工作多久了？",
+      "en": "How long have you lived in Taipei?",
+      "cn": "你住在台北多久了？",
       "pts": [
         "問『到現在持續多久』",
         "配現在完成式 have + Vpp",
@@ -643,23 +643,23 @@ window.GVPLUS = {
   "steps": [
     {
       "label": "情境",
-      "text": "面試官問你：你在這個領域多久了？"
+      "text": "客戶開會時問你：你們工廠做這個零件多久了？"
     },
     {
       "label": "口語版",
-      "text": "I've been at it for ages.（聊天可以，面試顯得含糊）"
+      "text": "We've been making these for ages.（聊天可以，對客戶顯得含糊）"
     },
     {
       "label": "升級用詞",
-      "text": "把 for ages 換成精準的長度或起點：for over eight years / since 2019。"
+      "text": "把 for ages 換成精準的長度或起點：for over twelve years / since 2014。"
     },
     {
       "label": "再升級句構",
-      "text": "Having worked in QA for eight years, I've seen most of these issues before.（資歷前置，帶出判斷力）"
+      "text": "Having produced this part for twelve years, we know its common defects well.（資歷前置，帶出判斷力）"
     },
     {
       "label": "換個說法",
-      "text": "書面正式版：It has been eight years since I first joined the field.（時間前置，語氣沉穩）"
+      "text": "書面正式版：It has been twelve years since we first produced this part.（時間前置，語氣沉穩）"
     }
   ],
   "comparison": {
@@ -771,22 +771,22 @@ dg20260911a2: {
     {
       "key": "finished-room",
       "icon": "house",
-      "title": "房間打掃完了嗎",
+      "title": "洗衣機修好了嗎",
       "titleCn": "問結果",
-      "ask": "房間現在乾淨了嗎？",
-      "en": "I have cleaned my room.",
-      "cn": "我已經把房間打掃好了。",
-      "why": "用have cleaned強調『打掃這件事已經做完，房間現在是乾淨的』這個結果。"
+      "ask": "洗衣機現在能用了嗎？",
+      "en": "Dad has fixed the washing machine.",
+      "cn": "爸爸已經把洗衣機修好了。",
+      "why": "用has fixed強調『修理這件事已經做完，洗衣機現在能用了』這個結果。"
     },
     {
       "key": "still-cleaning",
       "icon": "clock",
-      "title": "還在打掃中",
+      "title": "還在油漆中",
       "titleCn": "問過程",
       "ask": "這件事現在還在做嗎？",
-      "en": "I have been cleaning my room all morning.",
-      "cn": "我整個早上都在打掃房間。",
-      "why": "用have been cleaning強調『一直在做』的過程，可能還沒完全打掃完。"
+      "en": "We have been painting the kitchen since nine.",
+      "cn": "我們從九點就一直在油漆廚房。",
+      "why": "用have been painting強調『一直在做』的過程，可能還沒全部刷完。"
     },
     {
       "key": "know-someone",
@@ -801,34 +801,34 @@ dg20260911a2: {
     {
       "key": "how-many",
       "icon": "star",
-      "title": "寫了幾封email",
+      "title": "參觀了幾間",
       "titleCn": "有數字要用have done",
       "ask": "有具體數字時要用哪一種？",
-      "en": "She has written three emails.",
-      "cn": "她已經寫了三封email。",
-      "why": "有具體數量three emails時，要用have written強調完成的結果，不能用have been writing。"
+      "en": "I have visited four museums this week.",
+      "cn": "我這週已經參觀了四間博物館。",
+      "why": "有具體數量four museums時，要用have visited強調完成的結果，不能用have been visiting。"
     }
   ],
   "steps": [
     {
       "label": "情境",
-      "text": "你早上花了好幾個小時打掃房間，現在講給朋友聽。"
+      "text": "你整個下午都在寫報告，主管問你進度。"
     },
     {
       "label": "先問自己",
-      "text": "你想強調『打掃這件事做完了』，還是『你一直在打掃』這個過程？"
+      "text": "你想強調『報告寫完了』，還是『你一直在寫』這個過程？"
     },
     {
       "label": "如果是結果",
-      "text": "I have cleaned my room.（房間現在乾淨了，重點是結果）"
+      "text": "I have finished the report.（報告現在寫好了，重點是結果）"
     },
     {
       "label": "如果是過程",
-      "text": "I have been cleaning my room all morning.（強調你整個早上都在做這件事）"
+      "text": "I have been writing the report all afternoon.（強調你整個下午都在做這件事）"
     },
     {
       "label": "換個說法",
-      "text": "錯誤說法：I have cleaning my room.——一定要加been，寫成have been cleaning才對。"
+      "text": "錯誤說法：I have writing the report.——一定要加been，寫成have been writing才對。"
     }
   ],
   "comparison": {
@@ -1005,53 +1005,53 @@ dg20260911b1: {
   "steps": [
     {
       "label": "情境",
-      "text": "你這禮拜每天都在讀同一本書，朋友問你進度。"
+      "text": "你這禮拜每天都在工廠檢驗同一批螺絲，主管問你進度。"
     },
     {
       "label": "先問",
-      "text": "你想講『讀了多少頁』，還是『一直在讀』這件事本身？"
+      "text": "你想講『檢查了多少個』，還是『一直在檢查』這件事本身？"
     },
     {
       "label": "有數字",
-      "text": "I have read 100 pages.（強調完成的量）"
+      "text": "I have checked 500 screws.（強調完成的量）"
     },
     {
       "label": "沒有數字",
-      "text": "I have been reading this book all week.（強調『一直在讀』的過程）"
+      "text": "I have been checking screws all week.（強調『一直在檢查』的過程）"
     },
     {
       "label": "換個說法",
-      "text": "錯誤說法：I have been read 100 pages.——有數字時要用have read，不能混用have been + 過去分詞。"
+      "text": "錯誤說法：I have been checked 500 screws.——有數字時要用have checked，不能混用have been + 過去分詞。"
     }
   ],
   "comparison": {
-    "title": "have read 100 pages vs have been reading",
+    "title": "have answered 30 emails vs have been answering",
     "left": {
-      "tag": "HAVE READ 100 PAGES",
+      "tag": "HAVE ANSWERED 30 EMAILS",
       "tagCn": "有數字，看結果",
       "icon": "book",
       "head": "quantified result",
       "headCn": "具體的完成量",
-      "en": "I have read 100 pages.",
-      "cn": "我已經讀了100頁。",
+      "en": "I have answered 30 emails today.",
+      "cn": "我今天已經回了30封信。",
       "pts": [
-        "有具體數字100 pages",
+        "有具體數字30 emails",
         "強調『完成了多少』",
-        "不能用have been reading取代"
+        "不能用have been answering取代"
       ]
     },
     "right": {
-      "tag": "HAVE BEEN READING",
+      "tag": "HAVE BEEN ANSWERING",
       "tagCn": "沒數字，看過程",
       "icon": "arrow",
       "head": "ongoing process",
       "headCn": "持續的過程",
-      "en": "I have been reading this book all week.",
-      "cn": "我這整個禮拜都在讀這本書。",
+      "en": "I have been answering emails all day.",
+      "cn": "我今天一整天都在回信。",
       "pts": [
-        "沒有提到具體頁數",
+        "沒有提到具體封數",
         "強調『一直在做』的過程",
-        "常搭配all week這類時間片語"
+        "常搭配all day這類時間片語"
       ]
     },
     "note": "口訣：句子裡有數字，用have done；沒數字、只強調過程，用have been doing；遇到know/want這種狀態動詞，永遠只能用have done。"
@@ -1163,9 +1163,9 @@ dg20260911b1p: {
       "title": "用for接時間長度",
       "titleCn": "for + 時間長度",
       "ask": "for後面要接時間長度還是起點？",
-      "en": "I have worked here for two years.",
-      "cn": "我在這裡工作兩年了。",
-      "why": "for後面接『多長的時間』，例如for two years，不能接一個確切的年份。"
+      "en": "My parents have been married for thirty years.",
+      "cn": "我爸媽結婚三十年了。",
+      "why": "for後面接『多長的時間』，例如for thirty years，不能接一個確切的年份。"
     },
     {
       "key": "since-point",
@@ -1173,31 +1173,31 @@ dg20260911b1p: {
       "title": "用since接起點",
       "titleCn": "since + 起點",
       "ask": "since後面要接時間長度還是起點？",
-      "en": "I have worked here since 2024.",
-      "cn": "我從2024年就在這裡工作了。",
-      "why": "since後面接『開始的那個時間點』，例如since 2024，不能接一段長度（不能說since two years）。"
+      "en": "The factory has used this machine since 2019.",
+      "cn": "工廠從2019年就開始用這台機器了。",
+      "why": "since後面接『開始的那個時間點』，例如since 2019，不能接一段長度（不能說since six years）。"
     }
   ],
   "steps": [
     {
       "label": "情境",
-      "text": "你想問同事『在這家公司做多久了』。"
+      "text": "你想問一位客戶『用我們的產品多久了』。"
     },
     {
       "label": "先組問句",
-      "text": "How long（問多久）+ have you worked（現在完成式，助動詞在主詞前）+ here?"
+      "text": "How long（問多久）+ have you used（現在完成式，助動詞在主詞前）+ our product?"
     },
     {
       "label": "回答用for",
-      "text": "I have worked here for two years.（for接時間長度）"
+      "text": "We have used it for three years.（for接時間長度）"
     },
     {
       "label": "回答用since",
-      "text": "I have worked here since 2024.（since接起點時間）"
+      "text": "We have used it since 2023.（since接起點時間）"
     },
     {
       "label": "換個說法",
-      "text": "錯誤說法：I work here since 2024.——since一定要搭配現在完成式，不能用現在簡單式work。"
+      "text": "錯誤說法：We use it since 2023.——since一定要搭配現在完成式，不能用現在簡單式use。"
     }
   ],
   "comparison": {
@@ -1449,9 +1449,9 @@ dg20260909a2: {
       "title": "have been + Ving + for",
       "titleCn": "have been+Ving+for：做了多久",
       "ask": "這個動作已經做多久了？",
-      "en": "I have been waiting for ten minutes.",
-      "cn": "我已經等了十分鐘了。",
-      "why": "for後面接一段時間長度（ten minutes），表示這個動作從那時候開始一直做到現在，還沒結束。"
+      "en": "He has been running for thirty minutes.",
+      "cn": "他已經跑了三十分鐘了。",
+      "why": "for後面接一段時間長度（thirty minutes），表示這個動作從那時候開始一直做到現在，還沒結束。"
     },
     {
       "key": "since",
@@ -1459,9 +1459,9 @@ dg20260909a2: {
       "title": "have been + Ving + since",
       "titleCn": "have been+Ving+since：從什麼時候開始",
       "ask": "這個動作是從什麼時候開始的？",
-      "en": "She has been sleeping since noon.",
-      "cn": "她從中午就一直在睡覺。",
-      "why": "since後面接一個時間點（noon），表示動作從那個時間點開始，一直持續到現在。"
+      "en": "Dad has been working since seven o'clock.",
+      "cn": "爸爸從七點就一直在工作。",
+      "why": "since後面接一個時間點（seven o'clock），表示動作從那個時間點開始，一直持續到現在。"
     },
     {
       "key": "question",
@@ -1487,11 +1487,11 @@ dg20260909a2: {
   "steps": [
     {
       "label": "情境",
-      "text": "你已經在公車站等了十分鐘，公車還沒來。"
+      "text": "你已經打掃房間打掃了一個小時，現在還沒掃完。"
     },
     {
       "label": "先確認",
-      "text": "這件事從十分鐘前開始，一直持續到現在，還沒結束。"
+      "text": "這件事從一個小時前開始，一直持續到現在，還沒結束。"
     },
     {
       "label": "選字",
@@ -1499,11 +1499,11 @@ dg20260909a2: {
     },
     {
       "label": "組出來",
-      "text": "I have been waiting for ten minutes.（我已經等了十分鐘了。）"
+      "text": "I have been cleaning my room for an hour.（我已經打掃房間打掃了一個小時了。）"
     },
     {
       "label": "換個說法／對照錯誤版",
-      "text": "不能說I am waiting for ten minutes（現在進行式沒有「已經多久」的意思），也不能說I wait for ten minutes（現在簡單式聽起來像習慣）。"
+      "text": "不能說I am cleaning my room for an hour（現在進行式沒有「已經多久」的意思），也不能說I clean my room for an hour（現在簡單式聽起來像習慣）。"
     }
   ],
   "comparison": {
@@ -1657,7 +1657,7 @@ dg20260909b1: {
   "steps": [
     {
       "label": "情境",
-      "text": "朋友傳訊息問你「現在在幹嘛」。"
+      "text": "同事打電話問你「現在在幹嘛」。"
     },
     {
       "label": "先確認",
@@ -1665,15 +1665,15 @@ dg20260909b1: {
     },
     {
       "label": "選字",
-      "text": "沒有for/since、沒有問多久，就用現在進行式：I am cooking dinner."
+      "text": "沒有for/since、沒有問多久，就用現在進行式：I am checking the samples."
     },
     {
       "label": "情境換一下",
-      "text": "如果他接著問「你煮多久了？」，這時候問的是『持續的時間』。"
+      "text": "如果他接著問「你檢查多久了？」，這時候問的是『持續的時間』。"
     },
     {
       "label": "換個說法",
-      "text": "這時候就要換成現在完成進行式：I have been cooking for an hour."
+      "text": "這時候就要換成現在完成進行式：I have been checking them since ten."
     }
   ],
   "comparison": {
@@ -1684,8 +1684,8 @@ dg20260909b1: {
       "icon": "person",
       "head": "right now",
       "headCn": "沒有講多久",
-      "en": "I am reading a book.",
-      "cn": "我正在看一本書。",
+      "en": "She is talking to a customer.",
+      "cn": "她正在跟客人講話。",
       "pts": [
         "只講現在正在做的動作",
         "沒有for/since等時間長度",
@@ -1698,8 +1698,8 @@ dg20260909b1: {
       "icon": "calendar",
       "head": "how long",
       "headCn": "加上持續的時間",
-      "en": "I have been reading for two hours.",
-      "cn": "我已經看了兩個小時了。",
+      "en": "She has been talking to him for forty minutes.",
+      "cn": "她已經跟他講了四十分鐘了。",
       "pts": [
         "講『從過去到現在』做了多久",
         "常搭配for/since",
@@ -1800,30 +1800,30 @@ dg20260909b1p: {
       "icon": "book",
       "title": "強調過程",
       "titleCn": "還在做、留下痕跡",
-      "ask": "為什麼手還這麼髒？",
-      "en": "I have been fixing the car.",
-      "cn": "我一直在修車。",
-      "why": "用have been fixing解釋『現在手髒』這個正在進行中留下的痕跡，不強調車修好了沒。"
+      "ask": "你怎麼滿身是汗？",
+      "en": "I have been moving boxes.",
+      "cn": "我一直在搬箱子。",
+      "why": "用have been moving解釋『現在滿身是汗』這個進行中留下的痕跡，不強調箱子搬完了沒。"
     },
     {
       "key": "result",
       "icon": "balance",
       "title": "強調結果",
       "titleCn": "已完成、有具體結果",
-      "ask": "車修好了嗎？",
-      "en": "I have fixed the car. It works now.",
-      "cn": "我把車修好了，現在可以開了。",
-      "why": "用have fixed強調『修好了』這個明確的結果，聽者馬上知道車現在能不能開。"
+      "ask": "印表機修好了嗎？",
+      "en": "I have fixed the printer. It works again.",
+      "cn": "我把印表機修好了，又可以用了。",
+      "why": "用have fixed強調『修好了』這個明確的結果，聽者馬上知道印表機現在能不能用。"
     },
     {
       "key": "number",
       "icon": "eye",
       "title": "有數字就用have done",
       "titleCn": "數量、次數配have done",
-      "ask": "這禮拜寫了幾份報告？",
-      "en": "I have written three reports this week.",
-      "cn": "我這禮拜寫了三份報告了。",
-      "why": "three reports是具體數量，回答how many的問題習慣用have + Vpp，不是have been + Ving。"
+      "ask": "這個月去拜訪了客戶幾次？",
+      "en": "We have visited that customer three times this month.",
+      "cn": "我們這個月已經去拜訪那位客戶三次了。",
+      "why": "three times是具體次數，回答how many的問題習慣用have + Vpp，不是have been + Ving。"
     },
     {
       "key": "ongoing",
@@ -1839,7 +1839,7 @@ dg20260909b1p: {
   "steps": [
     {
       "label": "情境",
-      "text": "同事看到你桌上一堆咖啡杯，問你在幹嘛。"
+      "text": "媽媽打電話來，問你今天下午在家忙什麼。"
     },
     {
       "label": "先確認",
@@ -1847,15 +1847,15 @@ dg20260909b1p: {
     },
     {
       "label": "如果是過程",
-      "text": "I have been writing this report all afternoon.（強調『一直在寫』，可能還沒寫完。）"
+      "text": "I have been baking cookies all afternoon.（強調『一直在烤』，可能還沒烤完。）"
     },
     {
       "label": "如果是結果",
-      "text": "I have written three reports today.（強調具體完成的數量。）"
+      "text": "I have baked three batches of cookies.（強調具體完成的數量。）"
     },
     {
       "label": "判斷口訣",
-      "text": "句子裡如果有明確數字（three reports）習慣配have done；如果重點是『還在做、留下痕跡』就配have been doing。"
+      "text": "句子裡如果有明確數字（three batches）習慣配have done；如果重點是『還在做、留下痕跡』就配have been doing。"
     }
   ],
   "comparison": {
@@ -1866,8 +1866,8 @@ dg20260909b1p: {
       "icon": "book",
       "head": "still in progress",
       "headCn": "可能還沒做完",
-      "en": "I have been writing the report all afternoon.",
-      "cn": "我整個下午都在寫這份報告。",
+      "en": "We have been testing the new machine all morning.",
+      "cn": "我們整個早上都在測試新機台。",
       "pts": [
         "強調『一直在做』的過程",
         "常用來解釋現在的狀態或痕跡",
@@ -1880,8 +1880,8 @@ dg20260909b1p: {
       "icon": "balance",
       "head": "completed / countable",
       "headCn": "已完成、有具體數字",
-      "en": "I have written three reports this week.",
-      "cn": "我這禮拜寫了三份報告了。",
+      "en": "We have tested 20 samples so far.",
+      "cn": "我們到目前為止已經測了20個樣品。",
       "pts": [
         "強調完成的事實或具體數量",
         "常搭配how many/how much",
@@ -1967,9 +1967,9 @@ dg20260909b2: {
       "title": "目前仍在進行的職責",
       "titleCn": "責任還在持續中",
       "ask": "這件事現在還在做嗎？",
-      "en": "I have been leading a cross-team project on customer retention.",
-      "cn": "我一直在主導一項跨團隊的顧客留存專案。",
-      "why": "用have been leading表示這項責任目前仍在持續進行，還沒有最終數字，聽起來比較誠實、不誇大。"
+      "en": "I have been coordinating our company's move to a new ERP system.",
+      "cn": "我一直在協調公司導入新的ERP系統。",
+      "why": "用have been coordinating表示這項責任目前仍在持續進行，還沒有最終數字，聽起來比較誠實、不誇大。"
     },
     {
       "key": "quantified",
@@ -1977,9 +1977,9 @@ dg20260909b2: {
       "title": "可驗證的具體成果",
       "titleCn": "數字最有說服力",
       "ask": "有沒有具體的數字可以證明？",
-      "en": "I have led three cross-team projects that increased customer retention by 12 percent.",
-      "cn": "我主導過三項跨團隊專案，讓顧客留存率提升了12%。",
-      "why": "12 percent是讀者可以驗證的具體數字，履歷或報告的『成就』段落習慣用have done配上數字，說服力更強。"
+      "en": "Since joining the company, I have trained 60 new staff and reduced customer complaints by 25 percent.",
+      "cn": "到職以來，我已培訓60名新員工，並讓客訴減少了25%。",
+      "why": "25 percent是讀者可以驗證的具體數字，履歷或報告的『成就』段落習慣用have done配上數字，說服力更強。"
     },
     {
       "key": "mix",
@@ -1987,9 +1987,9 @@ dg20260909b2: {
       "title": "混用：先過程再成果",
       "titleCn": "一段話裡兩種都用",
       "ask": "可以在同一段話裡混用嗎？",
-      "en": "I have been mentoring two new team members, and I have already reduced their onboarding time by a week.",
-      "cn": "我一直在指導兩位新進同事，而且已經把他們的到職適應時間縮短了一週。",
-      "why": "先用have been mentoring交代持續的投入，再用have already reduced帶出具體成果，是專業寫作常見的搭配方式。"
+      "en": "I have been reviewing our shipping costs, and I have already saved the company 8,000 dollars.",
+      "cn": "我一直在檢視公司的運費，而且已經幫公司省下8,000美元。",
+      "why": "先用have been reviewing交代持續的投入，再用have already saved帶出具體成果，是專業寫作常見的搭配方式。"
     },
     {
       "key": "not-wrong",
@@ -2005,7 +2005,7 @@ dg20260909b2: {
   "steps": [
     {
       "label": "情境",
-      "text": "你在寫年度自評，要形容你這一年做的一項專案。"
+      "text": "你在寫年度自評，要形容你這一年負責的產線品質改善工作。"
     },
     {
       "label": "先問自己",
@@ -2013,11 +2013,11 @@ dg20260909b2: {
     },
     {
       "label": "如果是投入",
-      "text": "I have been leading a cross-team project on customer retention.（強調持續進行的責任）"
+      "text": "I have been leading a quality improvement program on our assembly line.（強調持續進行的責任）"
     },
     {
       "label": "如果是成果",
-      "text": "I have led three cross-team projects that increased customer retention by 12 percent.（強調具體、可驗證的數字）"
+      "text": "I have led two quality programs that lowered our defect rate by 15 percent.（強調具體、可驗證的數字）"
     },
     {
       "label": "進階技巧",
@@ -2130,8 +2130,8 @@ g01: {
     { key: 'perf', icon: 'link',
       title: 'Perfect', titleCn: '完成式：連到另一個時間點',
       ask: '這件事跟「另一個時間點」有關係嗎？',
-      en: 'I have worked here for six years.',
-      cn: '我在這裡工作六年了。',
+      en: 'Our factory has made this part for twenty years.',
+      cn: '我們工廠做這個零件已經二十年了。',
       why: '完成式永遠有兩個時間：動作發生的時間，和你要把它連到的那個點。have worked 連到「現在」，had worked 連到「過去某一點」，will have worked 連到「未來某一點」。' },
     { key: 'perfcont', icon: 'cycle',
       title: 'Perfect Continuous', titleCn: '完成進行式：強調持續了多久',
@@ -3053,7 +3053,7 @@ g11: {
     { label: '檢查主詞', text: '兩句主詞都是 She——可以壓縮。' },
     { label: '砍掉', text: '刪掉次要那句的主詞和 be 動詞：She was tired → tired… 但形容詞前面要留 Being。' },
     { label: '組出來', text: 'Being tired, she went to bed early.（口語也常直接說 Tired, she went to bed early.）' },
-    { label: '主詞不同就不能壓', text: 'Walking home, the rain started.（✗）——雨不會走路。要改成 Walking home, I felt the rain start.' }
+    { label: '主詞不同就不能壓', text: 'Being tired, the bed looked soft.（✗）——累的是她，不是床。主詞要一致：Being tired, she went to bed early.' }
   ],
   comparison: {
     title: '分詞構句 vs 倒裝：兩種「升級」方向',
@@ -4064,8 +4064,8 @@ dg20260824a2: {
     right: {
       tag: 'DYNAMIC', tagCn: '動作動詞', icon: 'tool',
       head: 'can pause', headCn: '可以暫停再繼續',
-      en: 'He is making eggs now.',
-      cn: '他現在在煎蛋。',
+      en: 'Mom is washing the dishes now.',
+      cn: '媽媽現在在洗碗。',
       pts: ['看得見的動作', '正在做的時候用進行式', '可以加 -ing']
     },
     note: '一句話記住：能暫停的可以加 -ing，不能暫停的不可以。'
@@ -4893,9 +4893,9 @@ dg20260902b1: {
     { key: 'ever', icon: 'plane',
       title: 'ever / never', titleCn: 'ever / never：這輩子的經驗',
       ask: '你在問「有沒有過」嗎？',
-      en: 'Have you ever eaten pho?',
-      cn: '你吃過河粉嗎？',
-      why: 'ever 用在疑問句，never 用在肯定句，兩個都放在 have 和過去分詞中間。Did you ever eat pho? 語法沒錯，但意思會變成在問某個特定的過去時期。' },
+      en: 'Have you ever flown business class?',
+      cn: '你搭過商務艙嗎？',
+      why: 'ever 用在疑問句，never 用在肯定句，兩個都放在 have 和過去分詞中間。Did you ever fly business class? 語法沒錯，但意思會變成在問某個特定的過去時期。' },
     { key: 'already', icon: 'check',
       title: 'already / just', titleCn: 'already / just：已經、剛剛',
       ask: '已經做了嗎？剛做完嗎？',
@@ -5003,9 +5003,9 @@ dg20260813: {
     { key: 'stative', icon: 'cross',
       title: 'Stative verbs', titleCn: '狀態動詞沒有這個時態',
       ask: '這個動詞能不能加 -ing？',
-      en: 'I have known her for years.',
-      cn: '我認識她很多年了。',
-      why: 'know、believe、understand、own、belong 沒有進行式，所以只能用完成式 have known。✗ have been knowing。live / work / study 兩種都可以，意思差不多。' }
+      en: 'He has owned this shop since 2015.',
+      cn: '這家店從 2015 年起就是他的。',
+      why: 'know、believe、understand、own、belong 沒有進行式，所以只能用完成式 has owned。✗ has been owning。live / work / study 兩種都可以，意思差不多。' }
   ],
   steps: [
     { label: '情境', text: '同事問你這份報告寫多久了。' },
@@ -5019,16 +5019,16 @@ dg20260813: {
     left: {
       tag: 'HAVE BEEN DOING', tagCn: '完成進行式', icon: 'cycle',
       head: 'the process', headCn: '持續的過程、多久',
-      en: 'I have been reading this book.',
-      cn: '我一直在讀這本書。',
-      pts: ['還在讀，讀了一段時間', '常配 for / since / all day / How long', '沒說讀完沒']
+      en: 'I have been painting the living room.',
+      cn: '我一直在油漆客廳。',
+      pts: ['還在油漆，刷了一段時間', '常配 for / since / all day / How long', '沒說刷完沒']
     },
     right: {
       tag: 'HAVE DONE', tagCn: '完成式', icon: 'check',
       head: 'the result', headCn: '完成的結果、幾次',
-      en: 'I have read this book.',
-      cn: '我讀完這本書了。',
-      pts: ['已經讀完了', '常配 already / yet / just / three times', '常配 How many']
+      en: 'I have painted the living room.',
+      cn: '我把客廳油漆好了。',
+      pts: ['已經刷完了', '常配 already / yet / just / three times', '常配 How many']
     },
     note: 'How long → have been doing；How many / How much → have done。問句就決定了時態。'
   },
@@ -6375,11 +6375,11 @@ dg20260904a2: {
       why: '否定是 haven’t / hasn’t + 過去分詞，句尾常加 yet；問句把 Have / Has 移到主詞前面。' }
   ],
   steps: [
-    { label: '情境', text: '外面下了一整天的雨，你剛看窗外，雨停了。' },
-    { label: '想講的意思', text: '重點不是「幾點停的」，而是「現在不下了，可以出門」。' },
+    { label: '情境', text: '你跑到月台，發現火車已經開走了。' },
+    { label: '想講的意思', text: '重點不是「幾點開走的」，而是「現在搭不到車，要等下一班」。' },
     { label: '選時態', text: '沒說時間、強調現在的結果 → 現在完成式。' },
-    { label: '組出來', text: 'The rain has stopped.' },
-    { label: '如果要講時間', text: '就得換成過去簡單式：The rain stopped at three.（✗ has stopped at three.）' }
+    { label: '組出來', text: 'The train has left.' },
+    { label: '如果要講時間', text: '就得換成過去簡單式：The train left at 7:15.（✗ has left at 7:15.）' }
   ],
   comparison: {
     title: '有沒有說時間',

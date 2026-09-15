@@ -447,7 +447,7 @@ grammar:[
   summary:"描述「某個地方有什麼」。單數用 there is，複數用 there are；不可數名詞一律用 there is。",
   sections:[
     {h:"單數還是複數，看後面那個名詞", table:{head:["","例句"],rows:[
-      ["單數","There is a bus stop near my house."],
+      ["單數","There is a hotel near the station."],
       ["複數","There are three buses to my office."],
       ["不可數","There is some milk in the fridge."],
       ["過去單數","There was a lot of rain last night."],
@@ -476,7 +476,7 @@ grammar:[
   ],
   traps:[
     {bad:"There is three buses.",good:"There are three buses.",why:"後面是複數 buses，要用 there are。"},
-    {bad:"There have a bus stop near my house.",good:"There is a bus stop near my house.",why:"中文說「有」，英文的「某處有」要用 there is / there are，不是 have。"},
+    {bad:"There have a pharmacy next to the school.",good:"There is a pharmacy next to the school.",why:"中文說「有」，英文的「某處有」要用 there is / there are，不是 have。"},
     {bad:"I need two milks.",good:"I need two bottles of milk.",why:"milk 不可數，要借單位。"},
     {bad:"Do you have some questions?",good:"Do you have any questions?",why:"疑問句一般用 any。"}
   ],

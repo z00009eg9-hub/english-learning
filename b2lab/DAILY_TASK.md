@@ -190,6 +190,20 @@ A2 講最基本的 be+V-ing、B1 講 vs 現在簡單式、B1+ 講暫時狀態與
 一定要說明「為什麼會錯」，不要只說「這樣才對」。
 **A2 那份要最淺白、句子最短；B2 那份可以談語域、寫作效果與修辭選擇。**
 
+**⭐ 例句規則：重複文法，不重複句子（2026-09-15 使用者指定）**
+
+整個文法頁（Step 1 SEE → 2 UNDERSTAND → 3 READ → 4 COMPARE → 5 CHECK → 6 PRACTICE）
+會把 `sections` / `traps` / `quiz` 和 `data-gvplus.js` 的欄位排在同一頁。
+句型公式（例如 It has been + 時間 + since…）可以反覆出現，但**同一句完整例句整頁最多出現 2 次**：
+
+- `visual`（Step 1）放 1–2 組核心主例句，這是唯一「主例句」。
+- `scenarios` 4 張各換一個情境（生活／工作／旅行／QA・工廠／客戶／家庭），仍示範該卡的文法點；每張只 1 個主例句。
+- `steps` 5 步保留結構，但要用**新的完整情境**，不要再抄 Step 1 的句子。
+- `comparison`、`sections.examples`、`traps`、`quiz` / `quizMore` 用新的 mini example，不複製 Step 1。
+- 例句數量照原本規格，不為了換情境加長；程度 A2–B2，工作／QA 英文可以用但不要太專業。
+- 條列裡寫句型公式時用「+ 時間 +」或「…」，**不要用大寫 X 當佔位字**（網站會把 X 當成 ✗ 標紅）。
+- 第 5 步驗證會自動數重複句，超過 2 次就不能 commit。
+
 #### 每個文法單元都要有視覺化教材（`public/data-gvplus.js`）
 
 > 2026-09-03 起全站 48 個文法單元一律走「視覺化教材」版面
@@ -548,6 +562,14 @@ grams.forEach(g=>{
   p.quizMore.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw g.id+' quizMore ans 索引錯誤: '+q.q});
   /* 資料裡不准出現 HTML 標籤與內嵌 SVG */
   if(/<[a-zA-Z\/]/.test(JSON.stringify(p))) throw g.id+' 視覺化教材裡有 HTML 標籤或 SVG（一律寫純文字）';
+  /* 重複文法、不重複句子：同一句完整英文例句（5 字以上）整頁最多 2 次；練習題選項只算一次 */
+  const cnt={};
+  const key=s=>s.toLowerCase().replace(/[^a-z ]/g,'').replace(/ +/g,' ').trim();
+  const grab=(o,fn)=>{ if(typeof o==='string'){ (o.match(/[A-Z][^.?!。？！]*[.?!]/g)||[]).forEach(fn); } else if(o&&typeof o==='object'){ Object.values(o).forEach(x=>grab(x,fn)); } };
+  grab([Object.assign({},g,{quiz:null}),Object.assign({},p,{quizMore:null})],s=>{ const k=key(s); if(k.split(' ').length>=5) cnt[k]=(cnt[k]||0)+1; });
+  const qs=new Set(); grab([g.quiz||[],p.quizMore||[]],s=>qs.add(key(s)));
+  qs.forEach(k=>{ if(k.split(' ').length>=5) cnt[k]=(cnt[k]||0)+1; });
+  Object.keys(cnt).forEach(k=>{ if(cnt[k]>2) throw g.id+' 同一句例句出現 '+cnt[k]+' 次（重複文法、不重複句子）: '+k; });
 });
 const byLv=l=>todays.find(a=>a.level===l);
 console.log('OK 文章:', LV.map(l=>l+' '+byLv(l).id+' ('+byLv(l).words+'字)').join(' | '));
