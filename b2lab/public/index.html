@@ -2141,7 +2141,7 @@ function voiceAlive(v){
 }
 /* TTS 發音修正表：引擎唸錯的字，朗讀前換成唸得對的拼法（只影響聲音，畫面照舊）。
    之後發現唸錯的字就加一行。 */
-const TTS_FIX={mindset:'mind set', rapport:'ruh pore', accessories:'uck-sess-uh-reez', accessory:'uck-sess-uh-ree'};
+const TTS_FIX={mindset:'mind set', rapport:'ruh pore'};
 function say(text,rate,onend,voice){
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();

@@ -6702,8 +6702,6 @@ const SLOW_RATE=0.5;
 const TTS_FIX=[
   [/\bmindset\b/gi,'mind-set'],
   [/\bmindsets\b/gi,'mind-sets'],
-  [/\baccessories\b/gi,'uck-sess-uh-reez'],
-  [/\baccessory\b/gi,'uck-sess-uh-ree'],
 ];
 function ttsFix(t){let s=String(t);TTS_FIX.forEach(f=>{s=s.replace(f[0],f[1]);});return s;}
 /* iOS 的合成引擎在 cancel() 之後常卡在 paused 狀態，之後怎麼 speak 都沒聲音
