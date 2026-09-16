@@ -10732,6 +10732,254 @@ window.BOOK = {
       ]
     },
     {
+      id: 'bk20260915',
+      icon: '🏭',
+      date: '2026-09-15',
+      doc: 'https://docs.google.com/document/d/1ZJYkRNHrQy4W9I-Nbeqt-gAUVX2dFAC8ABlZi6VPlSg/edit',
+      title: 'Factory Audit & Assembly Line Process',
+      titleCn: '工廠稽核與組裝線流程',
+      topics: '工廠稽核準備｜組裝線五個工站｜品質控管詞彙｜包裝出貨｜稽核問答',
+      hwTitle: 'I. ★ 09/15 作業複習 Homework Review',
+      hw: [
+        {
+          n: 1,
+          wrong: 'This Wednesday, our customer will arrange someone to audit factory.',
+          fix: 'This Wednesday, our customer will arrange for someone to audit our factory.',
+          cn: '這個星期三，我們的客戶會安排人來稽核我們的工廠。',
+          pat: 'arrange for + 人 + to + V',
+          note: '「audit factory」缺少限定詞，工廠是特定的（我們的工廠），需要加上 our。arrange for someone to do something 才是自然的搭配，加上 for 更道地。'
+        },
+        {
+          n: 2,
+          wrong: 'This is the first time audit in Vietnam, so I need to prepare carefully.',
+          fix: 'This is the first time we have had an audit in Vietnam, so I need to prepare carefully.',
+          cn: '這是我們在越南第一次接受稽核，所以我需要仔細準備。',
+          pat: 'This is the first time + 主詞 + have/has + p.p.',
+          note: '「This is the first time」後面必須接現在完成式（have/has + 過去分詞），表示「這是第一次做某事」。不能直接接名詞。'
+        },
+        {
+          n: 3,
+          wrong: 'I need to make sure our unit are ready.',
+          fix: 'I need to make sure our units are ready.',
+          cn: '我需要確保我們的產品都準備好了。',
+          pat: 'make sure + 主詞 + 動詞（主詞動詞一致）',
+          note: '工廠裡的產品通常不只一台，所以 unit 要用複數 units。複數名詞搭配 are（不是 is）。make sure 後面接子句，用陳述語序。'
+        },
+        {
+          n: 4,
+          wrong: 'During the audit, they may ask me how to control the quality and I may explain it.',
+          fix: 'During the audit, they may ask me how we control the quality, and I may need to explain our procedures.',
+          cn: '稽核期間，他們可能會問我們如何控管品質，而我可能需要解釋我們的程序。',
+          pat: 'ask + 人 + 間接問句（how + 主詞 + 動詞）',
+          note: '間接問句用「how we control」（疑問詞 + 主詞 + 動詞），不用「how to control」。「how to V」暗示在詢問建議，但這裡是在描述既有做法。「explain it」太模糊，改成 explain our procedures 更具體。'
+        },
+        {
+          n: 5,
+          wrong: 'Because this is my first time about the audit, I feel a little stressed.',
+          fix: 'Because this is my first time handling an audit, I feel a little stressed.',
+          cn: '因為這是我第一次處理稽核，我感到有些緊張。',
+          pat: 'my first time + V-ing',
+          note: '「my first time」後面接動名詞（V-ing），不用介系詞 about。handle 是「處理、應對」的意思，比 about 自然且專業。'
+        },
+        {
+          n: 6,
+          wrong: 'I also worried about my express is not clear.',
+          fix: 'I am also worried that my explanations may not be clear enough.',
+          cn: '我也擔心我的表達可能不夠清楚。',
+          pat: 'be worried that + 子句',
+          note: 'worried 是形容詞，前面要加 be 動詞（I am worried），不能直接「I worried」。後面用 that 子句連接。express 是動詞，名詞要用 expression 或 explanation。'
+        },
+        {
+          n: 7,
+          wrong: 'I hope everything will fine and we can pass this audit.',
+          fix: 'I hope everything goes well and that we can pass the audit successfully.',
+          cn: '我希望一切順利，而且我們能順利通過這次稽核。',
+          pat: 'I hope + 現在式子句',
+          note: 'hope 後面的子句用現在式（goes）表達對未來的期望，不要加 will。fine 是形容詞，不能直接放在 will 後面。表達「順利」用 goes well。'
+        }
+      ],
+      vocabTitle: 'II. 單字 Vocabulary',
+      vocab: [
+        { w: 'assembly line', star: true, ipa: '/əˈsem.bli laɪn/', pos: 'n.', cn: '組裝線',
+          ex: 'Our assembly line runs from 8 a.m. to 5 p.m.', exCn: '我們的組裝線從早上八點運作到下午五點。' },
+        { w: 'frame', ipa: '/freɪm/', pos: 'n.', cn: '車架；框架',
+          ex: 'We inspect every frame before it goes on the line.', exCn: '每個車架上線前我們都會檢查。' },
+        { w: 'controller', ipa: '/kənˈtroʊ.lɚ/', pos: 'n.', cn: '控制器',
+          ex: 'The controller manages the speed of the motor.', exCn: '控制器管理馬達的轉速。' },
+        { w: 'belt pulley', star: true, ipa: '/belt ˈpʊl.i/', pos: 'n.', cn: '皮帶輪',
+          ex: 'Replace the belt pulley if it shows any wear.', exCn: '如果皮帶輪有磨損就要更換。' },
+        { w: 'cable tie', ipa: '/ˈkeɪ.bəl taɪ/', pos: 'n.', cn: '束帶',
+          ex: 'We use cable ties to keep the wiring neat.', exCn: '我們用束帶讓配線保持整齊。' },
+        { w: 'trim', ipa: '/trɪm/', pos: 'v.', cn: '修剪；裁切',
+          ex: 'After tightening, trim the extra length.', exCn: '綁緊之後，剪掉多餘的長度。' },
+        { w: 'excess', star: true, ipa: '/ɪkˈses/', pos: 'n./adj.', cn: '多餘（的部分）',
+          ex: 'Remove any excess material from the joint.', exCn: '移除接合處多餘的材料。' },
+        { w: 'disassemble', star: true, ipa: '/ˌdɪs.əˈsem.bəl/', pos: 'v.', cn: '拆解',
+          ex: 'We had to disassemble the motor to check the wiring.', exCn: '我們必須拆解馬達來檢查配線。' },
+        { w: 'identify', star: true, ipa: '/aɪˈden.t̬ə.faɪ/', pos: 'v.', cn: '辨識；找出',
+          ex: 'The technician identified a loose connection.', exCn: '技術員找出了一個鬆脫的接頭。' },
+        { w: 'defect', star: true, ipa: '/ˈdiː.fekt/', pos: 'n.', cn: '瑕疵；缺陷',
+          ex: 'Report any defect you find on the line.', exCn: '在產線上發現任何瑕疵都要回報。' },
+        { w: 'inspection', star: true, ipa: '/ɪnˈspek.ʃən/', pos: 'n.', cn: '檢驗',
+          ex: 'The unit passed inspection on the first try.', exCn: '該產品第一次就通過檢驗了。' },
+        { w: 'packaging', ipa: '/ˈpæk.ɪ.dʒɪŋ/', pos: 'n.', cn: '包裝',
+          ex: 'Good packaging protects the product during shipping.', exCn: '好的包裝可以在運送過程中保護產品。' },
+        { w: 'accessories', ipa: '/əkˈses.ɚ.iz/', pos: 'n.', cn: '配件',
+          ex: 'Check that all accessories are in the box before sealing.', exCn: '封箱前確認所有配件都在盒子裡。' },
+        { w: 'moisture absorber', ipa: '/ˈmɔɪs.tʃɚ əbˈzɔːr.bɚ/', pos: 'n.', cn: '乾燥劑',
+          ex: 'Always include a moisture absorber to prevent rust.', exCn: '一定要放乾燥劑以防生鏽。' },
+        { w: 'scratch', ipa: '/skrætʃ/', pos: 'n.', cn: '刮痕',
+          ex: 'Even a small scratch can lead to a customer complaint.', exCn: '即使是小刮痕也可能導致客訴。' },
+        { w: 'dent', star: true, ipa: '/dent/', pos: 'n.', cn: '凹痕',
+          ex: 'This dent happened during transport.', exCn: '這個凹痕是運送過程中造成的。' },
+        { w: 'corrective action', star: true, ipa: '/kəˈrek.tɪv ˈæk.ʃən/', pos: 'n.', cn: '矯正措施',
+          ex: 'We filed a corrective action report after the incident.', exCn: '事件發生後我們提了一份矯正措施報告。' },
+        { w: 'procedure', star: true, ipa: '/prəˈsiː.dʒɚ/', pos: 'n.', cn: '程序；流程',
+          ex: 'Follow the standard procedure for each step.', exCn: '每個步驟都要按照標準程序。' },
+        { w: 'desiccant', star: true, ipa: '/ˈdes.ɪ.kənt/', pos: 'n.', cn: '乾燥劑（正式用語）',
+          ex: 'The desiccant keeps the electronics dry.', exCn: '乾燥劑讓電子零件保持乾燥。' },
+        { w: 'visible', ipa: '/ˈvɪz.ə.bəl/', pos: 'adj.', cn: '可見的',
+          ex: 'No visible damage was found on the surface.', exCn: '表面沒有發現可見的損壞。' },
+        { w: 'warehouse', ipa: '/ˈwer.haʊs/', pos: 'n.', cn: '倉庫',
+          ex: 'The warehouse is next to the shipping area.', exCn: '倉庫就在出貨區旁邊。' },
+        { w: 'work instruction', ipa: '/wɝːk ɪnˈstrʌk.ʃən/', pos: 'n.', cn: '作業指導書',
+          ex: 'Update the work instruction whenever the process changes.', exCn: '每次製程變更都要更新作業指導書。' }
+      ],
+      phrasesTitle: 'III. 片語與搭配詞（索引表）Phrases & Collocations',
+      phrases: [
+        { p: 'arrange for someone to + V', cn: '安排某人去做……（詳見 I）' },
+        { p: 'handle an audit', cn: '處理稽核（詳見 I、IV）' },
+        { p: 'explain our procedures', cn: '解釋我們的程序（詳見 I）' },
+        { p: 'place...on the assembly line', cn: '放上組裝線（詳見 V）' },
+        { p: 'check the appearance', cn: '檢查外觀（詳見 V）' },
+        { p: 'install...onto...', cn: '安裝……到……（詳見 V）' },
+        { p: 'secure...with cable ties', cn: '用束帶固定……（詳見 V）' },
+        { p: 'tighten the cable ties', cn: '綁緊束帶（詳見 V）' },
+        { p: 'trim off the excess', cn: '剪掉多餘部分（詳見 V）' },
+        { p: 'perform a functional test', cn: '進行功能測試（詳見 V）' },
+        { p: 'move...to the next station', cn: '移到下一個工站（詳見 V）' },
+        { p: 'disassemble the unit', cn: '拆解產品（詳見 V）' },
+        { p: 'identify the problem', cn: '找出問題（詳見 V）' },
+        { p: 'pass the inspection', cn: '通過檢驗（詳見 V）' },
+        { p: 'take corrective action', cn: '採取矯正措施（詳見 VI）' },
+        { p: 'take someone to + 地點', cn: '帶某人到……（詳見 IV-E）' },
+        { p: 'visually inspect', cn: '目視檢查（詳見 VI）' },
+        { p: 'separate the defective unit', cn: '隔離有瑕疵的產品（詳見 VI）' },
+        { p: 'follow the work instruction', cn: '按照作業指導書（詳見 VI）' },
+        { p: 'wait for shipping', cn: '等待出貨（詳見 V）' }
+      ],
+      grammarTitle: 'IV. 句型與文法解說 Sentence Patterns & Grammar',
+      grammar: [
+        {
+          k: 'IV-A', title: 'This is the first time + 現在完成式',
+          pat: 'This is the first time + 主詞 + have/has + p.p.',
+          pts: [
+            '「這是第一次……」後面的子句用現在完成式（have/has + p.p.），因為是從過去到現在都沒有發生過的事。',
+            '❌ This is the first time audit（不能直接接名詞）。',
+            '❌ This is the first time we had...（不能用過去式，除非整句在過去時間框架：It was the first time we had had...）。',
+            '⚠️ 常見錯誤：省略主詞和 have，直接把名詞放在 first time 後面。'
+          ],
+          exs: [
+            { tag: 'first time', en: 'This is the first time we have had an audit in Vietnam.', cn: '這是我們在越南第一次接受稽核。' },
+            { tag: 'first time', en: 'This is the first time I have visited this factory.', cn: '這是我第一次參觀這間工廠。' },
+            { tag: '過去式', en: 'It was the first time we had received a customer complaint.', cn: '那是我們第一次收到客訴。（過去完成式）' }
+          ]
+        },
+        {
+          k: 'IV-B', title: '間接問句 Indirect Questions',
+          pat: 'ask + 人 + 疑問詞 + 主詞 + 動詞（陳述語序）',
+          pts: [
+            '間接問句的語序和陳述句相同：how we control（✓），不是 how do we control。',
+            '「how to V」語意不同：暗示「該怎麼做」（徵求建議），不適合描述既有流程。',
+            '回答稽核問題時，用 how we control（我們如何控管）表達公司的既有做法。'
+          ],
+          exs: [
+            { tag: '間接問句', en: 'They asked me how we control the quality.', cn: '他們問我們如何控管品質。' },
+            { tag: '間接問句', en: 'The auditor asked how we handle defective units.', cn: '稽核員問我們如何處理有瑕疵的產品。' },
+            { tag: 'how to V', en: 'Can you tell me how to get to the warehouse?', cn: '你能告訴我怎麼到倉庫嗎？（這裡是徵求指引，用 how to V 正確）' }
+          ]
+        },
+        {
+          k: 'IV-C', title: 'be worried that + 子句',
+          pat: '主詞 + be worried that + 主詞 + 動詞',
+          pts: [
+            'worried 是形容詞，前面必須有 be 動詞（I am worried），不能寫成「I worried」。',
+            '後面接 that 子句（完整的主詞 + 動詞），不用 about + 名詞 + is... 的混合結構。',
+            '比較：be worried about + 名詞 vs be worried that + 子句。'
+          ],
+          exs: [
+            { tag: 'worried that', en: 'I am worried that my explanations may not be clear enough.', cn: '我擔心我的表達可能不夠清楚。' },
+            { tag: 'worried about', en: 'I am worried about the inspection result.', cn: '我擔心檢驗結果。' },
+            { tag: 'worried that', en: 'She is worried that the shipment will be delayed.', cn: '她擔心出貨會延遲。' }
+          ]
+        },
+        {
+          k: 'IV-D', title: 'If..., If not... 條件句',
+          pat: 'If + 條件, 主詞 + can/will + V. If not, 主詞 + need to + V.',
+          pts: [
+            '用於描述品質控管的判斷流程：功能 OK → 下一站；不 OK → 拆解找問題。',
+            'If not = If the condition is not met（省略重複的條件子句）。',
+            '這種「If OK... If not...」的結構在工廠 SOP 描述中非常常用。'
+          ],
+          exs: [
+            { tag: 'If / If not', en: 'If the function is OK, we can move the unit to the next station. If not, we need to disassemble the unit.', cn: '如果功能正常，就移到下一站。如果不正常，就需要拆解產品。' },
+            { tag: 'If / If not', en: 'If it passes inspection, we pack it. If not, we send it back for rework.', cn: '如果通過檢驗就包裝。如果沒有，就退回返工。' }
+          ]
+        },
+        {
+          k: 'IV-E', title: 'take vs bring 帶去 vs 帶來',
+          pat: 'take + 人/物 + to + 地點（離開說話者的方向）',
+          pts: [
+            '當說話者要陪同某人前往另一個地方時，用 take，不用 bring。',
+            'bring 是「帶來」（朝向說話者的位置），take 是「帶去」（離開說話者的位置）。',
+            '在工廠導覽中，帶稽核員到組裝線、測試室等地方，用 take。',
+            '⚠️ 常見錯誤：受中文「帶」影響，不分方向一律用 bring。'
+          ],
+          exs: [
+            { tag: 'take', en: 'I will take them to the assembly line.', cn: '我會帶他們到組裝線。' },
+            { tag: 'take', en: 'Let me take you to the testing room.', cn: '讓我帶你到測試室。' },
+            { tag: 'bring', en: 'Please bring the samples to my office.', cn: '請把樣品帶到我辦公室來。（朝向說話者）' }
+          ]
+        }
+      ],
+      cmpTitle: 'V. 組裝線流程描述 Assembly Line Process',
+      cmp: [
+        { u: '工廠導覽', sc: 'Let me introduce the different parts of our factory.',
+          ex: 'Let me introduce the different parts of our factory.', exCn: '讓我介紹工廠的各個區域。', cn: '導覽開場' },
+        { u: '工廠導覽', sc: 'Here is our + 區域名稱',
+          ex: 'Here is our assembly line.', exCn: '這是我們的組裝線。', cn: '指引各區域' },
+        { u: '工站說明', sc: 'There are five stations... two workers are assigned to each station.',
+          ex: 'There are five stations on the assembly line, and two workers are assigned to each station.', exCn: '組裝線有五個工站，每個工站配有兩位作業員。', cn: '工站配置' },
+        { u: 'Station 1', sc: '車架上線 + 外觀檢查',
+          ex: 'Place the bike frame on the assembly line and check the appearance of the frame.', exCn: '將車架放上組裝線並檢查車架外觀。', cn: '車架上線' },
+        { u: 'Station 2', sc: '安裝零件',
+          ex: 'At this station, the worker installs the controller and belt pulley onto the bike.', exCn: '在這個工站，作業員將控制器和皮帶輪安裝到自行車上。', cn: '安裝零件' },
+        { u: 'Station 3', sc: '電子線 + 束帶固定 + 剪多餘',
+          ex: 'Install the electronic cables and secure them with cable ties. Then, we trim off the excess.', exCn: '安裝電子線並用束帶固定。然後剪掉多餘的部分。', cn: '電子線安裝' },
+        { u: 'Station 4', sc: '功能測試 → 合格 / 不合格分流',
+          ex: 'If the function is OK, we can move the unit to the next station. If not, we need to disassemble the unit to identify and fix the problem.', exCn: '如果功能正常，就移到下一個工站。如果不正常，就需要拆解產品，找出並解決問題。', cn: '功能測試' },
+        { u: 'Station 5', sc: '包裝 + 乾燥劑 + 倉儲',
+          ex: 'After packaging, we move the finished units to our warehouse to wait for shipping.', exCn: '包裝完成後，我們將成品搬到倉庫等待出貨。', cn: '包裝出貨' }
+      ],
+      extraTitle: 'VI. 稽核常見問答 Common Audit Q&A',
+      extra: [
+        {
+          title: 'VI-A. 工站 1 — 車架與外觀檢查 Q&A',
+          exs: [
+            { en: 'Q: What is the purpose of this station?\nA: The purpose of this station is to prepare the bike frame for the assembly process and make sure there are no visible defects.', cn: '問：這個工站的目的是什麼？\n答：這個工站的目的是為組裝流程準備車架，並確保沒有可見的瑕疵。', hi: 'purpose, visible defects' },
+            { en: 'Q: How do you check the appearance of the frame?\nA: We visually inspect the frame and check for scratches, dents, damage, or other visible defects.', cn: '問：你們如何檢查車架外觀？\n答：我們目視檢查車架，查看是否有刮痕、凹痕、損壞或其他可見瑕疵。', hi: 'visually inspect, scratches, dents' },
+            { en: 'Q: What do you do if you find a defect?\nA: If we find a defect, we stop the process and separate the defective unit. Then, we identify the problem and take corrective action.', cn: '問：如果發現瑕疵怎麼辦？\n答：如果發現瑕疵，我們會停止流程並隔離有缺陷的產品。然後找出問題並採取矯正措施。', hi: 'separate, corrective action' }
+          ]
+        },
+        {
+          title: 'VI-B. 作業指導書回答模式 Work Instruction Answer Pattern',
+          exs: [
+            { en: 'Q: How do you make sure the bike frame is installed correctly?\nA: Each station has a work instruction, and the workers have to follow it. For example, the instruction describes how to check the appearance of the frame and how to confirm whether it is acceptable or not.', cn: '問：你們如何確保車架安裝正確？\n答：每個工站都有作業指導書，作業員必須遵照執行。例如，指導書會描述如何檢查車架外觀，以及如何判定是否合格。', hi: 'work instruction, follow it' }
+          ]
+        }
+      ]
+    },
+    {
       id: 'bk20260910',
       icon: '🎵',
       date: '2026-09-10',
@@ -11455,6 +11703,7 @@ window.BOOK = {
     bk20260730:[[['star','warning','music','globe','smile'],'悲觀者飾演悲觀者：《怪醫豪斯》的主角豪斯醫生 → 演員 Hugh Laurie 本人也很悲觀 → 但他熱愛藍調、錄了專輯 → 他說悲觀是因為他是蘇格蘭人 → 路人常叫他「振作點」。']],
     bk20260806:[[['target','warning','talk','check','star'],'成功之鑰：Emma 夢想在事業上成功 → 團隊溝通不良造成延遲 → 她召開會議請大家詳細說明 → 有效溝通迅速解決問題 → 保持樂觀成為成功的領導者。']],
     bk20260903:[[['building','warning','doc','talk','check'],'難熬的一天：大樓施工得走另一個入口 → 電腦系統當機 → 主管打斷追問未付發票 → 冷靜說服客戶付款 → 一切恢復正常並成功收尾。']],
+    bk20260915:[[['building','check','doc','talk','box'],'工廠稽核與組裝線流程：arrange for someone to audit → 五個工站（車架上線、安裝零件、電子線束帶、功能測試、包裝出貨）→ 間接問句 how we control → be worried that → If OK... If not... → take vs bring → 稽核問答。']],
     bk20260910:[[['music','writing','talk','check','doc'],'動名詞與不定詞複習＋樂器名稱：enjoy/suggest/avoid + V-ing vs decide/arrange/agree + to V → dare to + V（敢做某事）→ be well prepared（做好準備）→ This is the first time + 現在完成式 → 稽核英文。']],
     bk20260908:[[['building','warning','doc','talk','check'],'辦公室難熬的一天：大樓施工改走另一個入口 → 電腦系統當機、電梯不可靠 → 主管打斷追問未付請款單 → 冷靜說服客戶付款 → 到外面紓壓、一切恢復正常。']]
   };
