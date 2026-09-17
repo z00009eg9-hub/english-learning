@@ -10844,7 +10844,7 @@ window.BOOK = {
         { p: 'fix the noise problem', cn: '解決噪音問題（詳見 IV-D）' },
         { p: 'trim off (the sharp edges)', cn: '修掉(尖銳的邊緣)（詳見 IV-E）' },
         { p: 'affect the appearance', cn: '影響外觀（詳見 IV-E）' },
-        { p: 'It takes ages.', cn: '要花很久的時間（詳見 VI）' },
+        { p: 'It takes ages.', cn: '要花很久的時間' },
         { p: 'be missing', cn: '不見了、缺少（詳見 IV-F）' },
         { p: 'attach a label containing / showing / including …', cn: '貼上標有……的標籤（詳見 IV-G）' },
         { p: 'model number / production date / serial number', cn: '型號／生產日期／流水號（詳見 IV-G）' },
