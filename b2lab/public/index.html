@@ -652,9 +652,9 @@ body.cnall #v-real span.cnx{display:inline!important}
 .bk-split{display:block}
 .bk-day-col{margin-top:16px}
 @media(min-width:860px){
-  .bk-split{display:grid;grid-template-columns:45fr 55fr;gap:24px;align-items:start}
-  .bk-split .bk-cal-col{position:sticky;top:64px}
-  .bk-day-col{margin-top:0}
+  .bk-split{display:grid;grid-template-columns:minmax(0,45fr) minmax(0,55fr);gap:24px;align-items:start}
+  .bk-split .bk-cal-col{position:sticky;top:64px;min-width:0}
+  .bk-day-col{margin-top:0;min-width:0}
 }
 /* ---------- grammar ---------- */
 .gsec{margin-bottom:14px}
