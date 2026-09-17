@@ -10732,6 +10732,281 @@ window.BOOK = {
       ]
     },
     {
+      id: 'bk20260917',
+      icon: '🦺',
+      date: '2026-09-17',
+      doc: 'https://docs.google.com/document/d/1a94G9M4-WGOW8edfm-bpWffXns0eUXba1h6vwY1IBw4/edit',
+      title: 'Security vs Safety & Packaging',
+      titleCn: '工廠安全與包裝出貨',
+      topics: 'Audit Preparation, Secure vs Security vs Safety, Labeling & Packaging Procedures',
+      hwTitle: 'I. ★ 09/17 作業複習 Homework Review',
+      hw: [
+        {
+          n: 1,
+          ok: 'The operator installs the running belt before testing the treadmill.',
+          cn: '作業員在測試跑步機之前，先安裝跑步帶。',
+          pat: 'S + V(s) + O + before + V-ing + O',
+          note: '描述固定作業流程(SOP)用現在簡單式，主詞第三人稱單數，動詞加 s。before 後面接動名詞 testing，清楚交代「先裝跑步帶、再測試」的順序。在產線技術情境裡，operator(作業員，操作設備或負責某個工站的人)比 worker 更專業。'
+        },
+        {
+          n: 2,
+          ok: 'He forgot to secure the cable inside the machine.',
+          cn: '他忘了把機器內部的線材固定好。',
+          pat: 'S + forgot + to + V + O + 地點',
+          note: 'forget to + V 是「忘了去做(所以沒做)」；forget + V-ing 是「忘記做過某事」。secure 在這裡是動詞「固定」(詳見 IV-A)。'
+        },
+        {
+          n: 3,
+          wrong: 'Our technician tightened the loose screw so the noise was fixed.',
+          fix: 'Our technician tightened the loose screw, which fixed the noise problem.',
+          cn: '我們的技術人員把鬆動的螺絲鎖緊，解決了噪音問題。',
+          pat: 'S + V-ed + O, which + V-ed + O',
+          note: '英文是 fix a problem，不說 fix the noise，所以 the noise was fixed 不自然。「, which + 動詞」指前面整件事(鎖緊螺絲)。'
+        },
+        {
+          n: 4,
+          wrong: 'We need to trim off sharp edges because it may hurt the appearance.',
+          fix: 'We need to trim off the sharp edges because they may affect the appearance.',
+          cn: '我們需要把尖銳的邊緣修掉，因為它們可能會影響外觀。',
+          pat: 'S + need to + V + O + because + S + may + V + O',
+          note: 'edges 是複數，代名詞用 they；指產品上特定的邊緣，加 the。hurt 多用於身體或情緒的痛，「影響外觀」要用 affect(詳見 IV-E)。'
+        },
+        {
+          n: 5,
+          wrong: "The customer couldn't assemble the elliptical because the accessories were missed.",
+          fix: "The customer couldn't assemble the elliptical because some accessories were missing.",
+          cn: '客戶無法組裝滑步機，因為少了一些配件。',
+          pat: "S + couldn't + V + O + because + some + N + were missing",
+          note: '配件「不在、找不到」用形容詞 missing，missed 是「錯過、沒注意到」(詳見 IV-F)。只缺部分配件，用 some。'
+        }
+      ],
+      vocabTitle: 'II. 單字 Vocabulary — A. 稽核與安全 Audit, Safety & Security',
+      vocab: [
+        { w: 'audit', star: true, ipa: '/ˈɑːdɪt/', pos: 'n.', cn: '稽核(auditor 稽核員)', ex: 'the next formal audit', exCn: '下一次正式稽核' },
+        { w: 'operator', ipa: '/ˈɑːpəreɪtɚ/', pos: 'n.', cn: '作業員、操作員', ex: 'the operator at this station', exCn: '這個工站的作業員' },
+        { w: 'station', ipa: '/ˈsteɪʃən/', pos: 'n.', cn: '工站', ex: 'the packaging station', exCn: '包裝站' },
+        { w: 'security', star: true, ipa: '/səˈkjʊrəti/', pos: 'n.', cn: '保全、安全(防入侵、防盜)', ex: 'a security guard', exCn: '警衛' },
+        { w: 'safety', ipa: '/ˈseɪfti/', pos: 'n.', cn: '安全(防受傷、防事故)', ex: 'safety training', exCn: '安全訓練' },
+        { w: 'measure', star: true, ipa: '/ˈmeʒɚ/', pos: 'n.', cn: '措施(常用複數)', ex: 'security measures', exCn: '安全措施' },
+        { w: 'machinery', star: true, ipa: '/məˈʃiːnɚi/', pos: 'n.', cn: '機械(不可數)', ex: 'heavy machinery', exCn: '重型機械' },
+        { w: 'priority', star: true, ipa: '/praɪˈɔːrəti/', pos: 'n.', cn: '優先事項', ex: 'our top priority', exCn: '我們最優先的事' },
+        { w: 'procedure', star: true, ipa: '/prəˈsiːdʒɚ/', pos: 'n.', cn: '程序、步驟', ex: 'a safety procedure', exCn: '安全程序' },
+        { w: 'regulation', star: true, ipa: '/ˌreɡjəˈleɪʃən/', pos: 'n.', cn: '規定、法規', ex: 'a safety regulation', exCn: '安全規定' },
+        { w: 'equipment', ipa: '/ɪˈkwɪpmənt/', pos: 'n.', cn: '設備(不可數)', ex: 'wear safety equipment', exCn: '穿戴安全防護設備' },
+        { w: 'glove', ipa: '/ɡlʌv/', pos: 'n.', cn: '手套', ex: 'safety gloves', exCn: '安全手套' },
+        { w: 'goggles', ipa: '/ˈɡɑːɡəlz/', pos: 'n.', cn: '護目鏡(包覆式，恆用複數)', ex: 'safety goggles', exCn: '防護眼鏡' },
+        { w: 'helmet', ipa: '/ˈhelmət/', pos: 'n.', cn: '頭盔、安全帽', ex: 'a safety helmet', exCn: '安全帽' },
+        { w: 'vest', ipa: '/vest/', pos: 'n.', cn: '背心', ex: 'a safety vest', exCn: '反光背心' }
+      ],
+      vocab2Title: 'B. 組裝與包裝 Assembly & Packaging',
+      vocab2: [
+        { w: 'treadmill', ipa: '/ˈtredmɪl/', pos: 'n.', cn: '跑步機(running belt 跑步帶)', ex: 'test the treadmill', exCn: '測試跑步機' },
+        { w: 'elliptical', star: true, ipa: '/ɪˈlɪptɪkəl/', pos: 'n.', cn: '滑步機', ex: 'an elliptical machine', exCn: '滑步機' },
+        { w: 'secure', star: true, ipa: '/səˈkjʊr/', pos: 'v.', cn: '固定、綁牢', ex: 'secure the machine parts', exCn: '固定機器零件' },
+        { w: 'cable', ipa: '/ˈkeɪbəl/', pos: 'n.', cn: '電線、線材', ex: 'a loose cable', exCn: '鬆脫的線' },
+        { w: 'tighten', ipa: '/ˈtaɪtən/', pos: 'v.', cn: '鎖緊(↔ loosen 鬆開)', ex: 'tighten a screw', exCn: '鎖緊螺絲' },
+        { w: 'loose', ipa: '/luːs/', pos: 'adj.', cn: '鬆的(≠ lose /luːz/ 遺失)', ex: 'a loose screw', exCn: '鬆動的螺絲' },
+        { w: 'screw', ipa: '/skruː/', pos: 'n.', cn: '螺絲', ex: 'a missing screw', exCn: '少了的螺絲' },
+        { w: 'edge', ipa: '/edʒ/', pos: 'n.', cn: '邊緣', ex: 'Trim off the edges.', exCn: '把邊緣修掉。' },
+        { w: 'appearance', star: true, ipa: '/əˈpɪrəns/', pos: 'n.', cn: '外觀', ex: "the product's appearance", exCn: '產品外觀' },
+        { w: 'eyesore', star: true, ipa: '/ˈaɪsɔːr/', pos: 'n.', cn: '難看、礙眼的東西(口語，正式場合用 affect the appearance)', ex: 'an eyesore', exCn: '礙眼的東西' },
+        { w: 'assemble', star: true, ipa: '/əˈsembəl/', pos: 'v.', cn: '組裝(n. assembly)', ex: 'assemble the machine', exCn: '組裝機器' },
+        { w: 'accessory', star: true, ipa: '/əkˈsesɚi/', pos: 'n.', cn: '配件(隨產品附上的零件、工具、說明書等)', ex: 'small parts, tools and manuals as accessories', exCn: '小零件、工具和說明書等配件' },
+        { w: 'defect', star: true, ipa: '/ˈdiːfekt/', pos: 'n.', cn: '瑕疵、缺陷', ex: 'The inspector missed the defect.', exCn: '檢驗員漏看了那個瑕疵。' },
+        { w: 'label', ipa: '/ˈleɪbəl/', pos: 'n.', cn: '標籤(載有產品資訊)', ex: 'a product label', exCn: '產品標籤' },
+        { w: 'sticker', ipa: '/ˈstɪkɚ/', pos: 'n.', cn: '貼紙(泛指可黏貼的東西)', ex: 'a sticker on the box', exCn: '箱子上的貼紙' },
+        { w: 'serial number', star: true, ipa: '/ˈsɪriəl ˌnʌmbɚ/', pos: 'n.', cn: '序號、流水號', ex: 'a unique serial number', exCn: '獨一無二的序號' },
+        { w: 'cardboard', ipa: '/ˈkɑːrdbɔːrd/', pos: 'n.', cn: '紙板、瓦楞紙(cardboard box 紙箱)', ex: 'The boxes are made of cardboard.', exCn: '箱子是紙板做的。' },
+        { w: 'tape', ipa: '/teɪp/', pos: 'n.', cn: '膠帶', ex: 'seal the box with tape', exCn: '用膠帶封箱' },
+        { w: 'seal', ipa: '/siːl/', pos: 'v.', cn: '密封、封起來', ex: 'seal a box', exCn: '封箱' },
+        { w: 'staple gun', ipa: '/ˈsteɪpəl ɡʌn/', pos: 'n.', cn: '釘槍(把釘書針打進紙板、木頭)', ex: 'use a staple gun', exCn: '使用釘槍' },
+        { w: 'moisture absorber', star: true, ipa: '/ˈmɔɪstʃɚ əbˈzɔːrbɚ/', pos: 'n.', cn: '吸濕劑(一般說法，好懂)', ex: 'check the moisture absorber', exCn: '檢查吸濕劑' },
+        { w: 'desiccant', star: true, ipa: '/ˈdesɪkənt/', pos: 'n.', cn: '乾燥劑(較專業，發音較難)', ex: 'a desiccant pack', exCn: '一包乾燥劑' },
+        { w: 'humidity', star: true, ipa: '/hjuːˈmɪdəti/', pos: 'n.', cn: '濕氣、濕度', ex: 'absorb humidity', exCn: '吸收濕氣' },
+        { w: 'effective', ipa: '/ɪˈfektɪv/', pos: 'adj.', cn: '有效的', ex: 'no longer effective', exCn: '已經失效' },
+        { w: 'expired', ipa: '/ɪkˈspaɪɚd/', pos: 'adj.', cn: '過期的', ex: 'an expired desiccant', exCn: '過期的乾燥劑' }
+      ],
+      phrasesTitle: 'III. 片語與搭配詞 Phrases & Collocations',
+      phrases: [
+        { p: 'stick to the plan', cn: '照原計畫繼續做下去（詳見 V）' },
+        { p: 'as you can see', cn: '如您所見(向客戶／稽核員介紹時)（詳見 V）' },
+        { p: 'secure the cable / cardboard / machine parts', cn: '固定線材／紙板／機器零件（詳見 IV-A）' },
+        { p: 'security system / measures / features', cn: '保全系統／安全措施／安全功能（詳見 IV-B）' },
+        { p: 'machine security；the security of the machine', cn: '機器安全性（詳見 IV-B）' },
+        { p: 'security guard', cn: '警衛（詳見 IV-B）' },
+        { p: 'safety issue / procedure / regulation / equipment / features / training', cn: '安全問題／程序／規定／設備／功能／訓練（詳見 IV-B）' },
+        { p: 'workplace safety', cn: '工作場所安全（詳見 IV-B）' },
+        { p: 'for safety reasons', cn: '基於安全考量（詳見 IV-B）' },
+        { p: 'ensure / improve safety', cn: '確保安全／改善安全性（詳見 IV-B）' },
+        { p: 'top priority', cn: '最優先的事（詳見 IV-B）' },
+        { p: 'safety gloves / glasses / goggles / helmet / shoes / vest', cn: '安全手套／護目鏡／防護眼鏡／安全帽／安全鞋／反光背心（詳見 IV-C）' },
+        { p: 'at work', cn: '在工作時(不說 in work)（詳見 IV-C）' },
+        { p: 'fix the noise problem', cn: '解決噪音問題（詳見 IV-D）' },
+        { p: 'trim off (the sharp edges)', cn: '修掉(尖銳的邊緣)（詳見 IV-E）' },
+        { p: 'affect the appearance', cn: '影響外觀（詳見 IV-E）' },
+        { p: 'It takes ages.', cn: '要花很久的時間（詳見 VI）' },
+        { p: 'be missing', cn: '不見了、缺少（詳見 IV-F）' },
+        { p: 'attach a label containing / showing / including …', cn: '貼上標有……的標籤（詳見 IV-G）' },
+        { p: 'model number / production date / serial number', cn: '型號／生產日期／流水號（詳見 IV-G）' },
+        { p: 'be made of cardboard', cn: '用紙板做的（詳見 IV-H）' },
+        { p: 'seal the box with tape', cn: '用膠帶封箱（詳見 IV-H）' },
+        { p: 'secure the cardboard for shipping', cn: '固定紙箱以便出貨（詳見 IV-H）' },
+        { p: 'turn red', cn: '變紅（詳見 IV-H）' },
+        { p: 'no longer effective', cn: '已經失效、不再有作用（詳見 IV-H）' }
+      ],
+      grammarTitle: 'IV. 句型與文法解說 Sentence Patterns & Grammar',
+      grammar: [
+        {
+          k: 'IV-A', title: 'secure(動詞)vs security(名詞)',
+          pat: 'secure + 受詞(動作) ／ security 當主詞或名詞片語(保護的狀態、措施、系統)',
+          pts: [
+            'secure 是動詞：固定、綁牢、讓東西穩固不鬆動 —— secure the cable、secure the cardboard、secure the machine parts。',
+            'security 是名詞：受到保護的狀態，或保護人、場所、機器、資料的措施與系統。',
+            '⚠️ 不要把 security 當動詞用：「固定線材」是 secure the cable，不是 security the cable。'
+          ]
+        },
+        {
+          k: 'IV-B', title: 'security vs safety：差別與搭配',
+          pat: 'security ＝ 防入侵、防盜、保護建築／機器／系統 ／ safety ＝ 防危險、防受傷、防事故',
+          pts: [
+            '擔心「有人闖入、東西被偷、未經授權操作」→ security。',
+            '擔心「有人受傷、發生意外」→ safety(安全帽、手套、護目鏡、安全訓練都屬於 safety)。兩者有時意思相近，但習慣用法不同。',
+            '被動 vs 主動：句子裡沒有明確的「人」當主詞時，英文常用被動 Something + must be + p.p.，強調規定本身；有人當主詞時用主動，強調「誰要遵守」。',
+            'security guard ＝ 保護建築、看守入口、留意進出人員的人(名詞片語，指人)。',
+            '⚠️ 依上面的區分，「操作重型機械時的安全」講的是防受傷，用 safety 最貼切；下表第一句是課堂原句，留作對照。'
+          ],
+          exs: [
+            { tag: 'security 當主詞', en: 'Security is important when operating heavy machinery.', cn: '操作重型機械時，安全很重要。' },
+            { tag: 'the security of + N', en: 'We need to improve the security of the machine.', cn: '我們需要提高這台機器的安全性。' },
+            { tag: '被動(強調規定)', en: 'Security measures must be followed during testing.', cn: '測試期間必須遵守安全措施。' },
+            { tag: '主動(強調人)', en: 'Operators / We must follow the security measures during testing.', cn: '作業員／我們在測試期間必須遵守安全措施。' },
+            { tag: 'security guard', en: 'There are some security guards in the building.', cn: '大樓裡有一些警衛。' },
+            { tag: '定義句', en: 'A security guard is a person who takes care of and protects a place.', cn: '警衛是負責照看並保護某個地方的人。' },
+            { tag: 'top priority', en: 'Safety is our top priority.', cn: '安全是我們最優先考量的事情。' },
+            { tag: 'improve + N', en: 'We need to improve workplace safety.', cn: '我們需要改善工作場所的安全。' },
+            { tag: 'provide A for B', en: 'The company provides safety training for new employees.', cn: '公司為新員工提供安全訓練。' }
+          ]
+        },
+        {
+          k: 'IV-C', title: '安全防護裝備與 must',
+          pat: 'S + must + wear + safety + 裝備(規定) ／ S + need to + V(需要、建議)',
+          pts: [
+            '「戴、穿」裝備一律用 wear。equipment 不可數，不加 s。',
+            'safety glasses vs safety goggles：兩者都保護眼睛；goggles 緊貼眼睛周圍、防護較強，glasses 外觀較像一般眼鏡。職場對話中常依設備互相通用。',
+            'must vs need to：工廠規定不是建議，用 must 語氣最強、最恰當；need to 也可以，但沒有「規定」的強度。',
+            '「在工作時」說 at work，不說 in work。'
+          ],
+          exs: [
+            { en: 'All workers must wear safety gloves and safety glasses.', cn: '所有員工都必須戴安全手套和護目鏡。' },
+            { en: 'You need to wear a safety helmet in this area. → You must wear a safety helmet in this area.', cn: '在這個區域，你需要戴安全帽。→(正式規定)你必須戴安全帽。' },
+            { en: 'Make sure you have the proper safety equipment before starting work.', cn: '開始工作前，請確認你有適當的安全防護設備。' }
+          ]
+        },
+        {
+          k: 'IV-D', title: '「做了 A → 結果 B」的說法(作業第 3 題延伸)',
+          pat: 'to + V(目的) ／ After + S + V-ed, … ／ V-ing 當主詞 ／ 結果 + after + 子句',
+          pts: [
+            '修好的是 problem：fix the noise problem，不說 fix the noise。',
+            'disappear(消失)、stop(停止)在這裡是不及物動詞，後面不接受詞；也可說 the noise was gone(噪音不見了)。',
+            'After + V-ing 句型很適合描述作業順序，但省略的主詞必須和逗號後的主詞是同一人：After testing the product, the operator attaches a label.(測試的人＝貼標的人)。'
+          ],
+          exs: [
+            { tag: 'to + V 表目的', en: 'The technician tightened the loose screw to fix the noise problem.', cn: '技術人員把鬆動的螺絲鎖緊，以解決噪音問題。' },
+            { tag: 'After + 子句, 結果', en: 'After we tightened the loose screw, the noise disappeared.', cn: '把鬆動的螺絲鎖緊後，噪音就消失了。' },
+            { tag: 'V-ing 當主詞', en: 'Tightening the loose screw fixed the noise problem.', cn: '把鬆動的螺絲鎖緊解決了噪音問題。' },
+            { tag: '結果 + after + 子句', en: 'The noise stopped after we tightened the loose screw.', cn: '我們把鬆動的螺絲鎖緊後，噪音就停止了。' }
+          ]
+        },
+        {
+          k: 'IV-E', title: '代名詞一致、affect 與 eyesore(作業第 4 題延伸)',
+          pat: '複數名詞 → they ／ affect + the appearance',
+          pts: [
+            '前面是 edges(複數)，代名詞就用 they；單數才用 it。',
+            'trim off ＝ 把多出來的部分修掉，受詞可放中間或後面：trim off the edges ／ trim the edges off。',
+            'hurt 多指身體或情緒的痛；說外觀受影響用 affect(動詞)。affect 是動詞、effect 是名詞。',
+            '老師補充 eyesore(礙眼、難看的東西)，但在技術說明裡 affect the appearance 更專業。'
+          ]
+        },
+        {
+          k: 'IV-F', title: 'missing vs missed(作業第 5 題延伸)',
+          pat: 'S + be + missing ＝ 不在、找不到 ／ S + missed + O ＝ 錯過、沒注意到、沒出席',
+          pts: [
+            '⚠️ 避免中式英文：「配件漏掉了」不要直翻成 were missed，要說 were missing。'
+          ],
+          exs: [
+            { tag: 'missing(東西不見)', en: 'My pen is missing.', cn: '我的筆不見了。' },
+            { tag: 'missing(東西不見)', en: 'My glasses are missing.', cn: '我的眼鏡不見了。' },
+            { tag: 'missed(錯過)', en: 'I missed the bus.', cn: '我錯過了公車。' },
+            { tag: 'missed(沒出席)', en: 'I missed the meeting.', cn: '我錯過了會議。' }
+          ]
+        },
+        {
+          k: 'IV-G', title: '測試後貼標籤：label containing / showing / including',
+          pat: 'After + V-ing, S + should / must + attach a label + containing / showing / including + A, B, and C',
+          pts: [
+            'sticker vs label：sticker 泛指可黏貼的貼紙；label 是載有產品資訊的標籤，講產品資訊時用 label 較專業。',
+            'containing、showing、including 三個都可以用，直接接在 label 後面修飾它。',
+            '關係子句減化：a label that contains …(完整)→ a label containing …(減化)。',
+            '這句把三個想法合成一句：測試產品 → 貼標籤 → 標籤上有型號、生產日期、流水號；比分成三個短句更專業。',
+            '列舉三樣以上：A, B, and C。should 是「應該」，must 是「必須」，寫進 SOP 用 must 語氣更強。'
+          ],
+          exs: [
+            { tag: 'should … containing', en: 'After testing the product, the operator should attach a label containing the model number, production date, and serial number.', cn: '產品測試完後，作業員應貼上標有型號、生產日期和流水號的標籤。' },
+            { tag: 'must … showing', en: 'After testing, the operator must attach a label showing the model number, production date, and serial number.', cn: '測試完後，作業員必須貼上顯示型號、生產日期和流水號的標籤。' }
+          ]
+        },
+        {
+          k: 'IV-H', title: '包裝站：紙箱、膠帶、釘槍與乾燥劑',
+          pat: 'S + puts + O + into + 容器 + and seals + O + with tape ／ S + uses + 工具 + to + V ／ If + S + turns red, it means …',
+          pts: [
+            '包裝箱是 cardboard box(紙板／瓦楞紙箱)，不說 paper box —— paper 是很薄的紙。',
+            '膠帶 vs 釘槍：小箱子通常用膠帶封(seal … with tape)；膠帶不夠牢時，紙箱本體用 staple gun 固定。',
+            'moisture absorber vs desiccant：都是放進包裝裡吸濕、保護產品的東西；moisture absorber 是一般好懂的說法，desiccant 較專業、發音較難。',
+            'turns red vs has turned red：turns red(現在簡單式)講一般規則「一變紅就……」；has turned red(現在完成式)強調「已經變紅了」。失效可說 no longer effective 或 expired。'
+          ],
+          exs: [
+            { tag: '材質', en: 'We use cardboard boxes for packaging.', cn: '我們用紙箱包裝。' },
+            { tag: '放配件＋封箱', en: 'The operator puts the accessories into a small cardboard box and seals the box with tape.', cn: '作業員先把配件放進小紙箱，並用膠帶封箱。' },
+            { tag: '被動：放入大箱', en: 'The small accessory box is placed inside the larger product box.', cn: '小配件盒被放進較大的產品箱裡。' },
+            { tag: '釘槍固定', en: 'The operator uses a staple gun to secure the cardboard box.', cn: '作業員使用釘槍固定紙箱。' },
+            { tag: '檢查乾燥劑', en: 'We should check the desiccant before placing it in the packaging box. If the desiccant has turned red, it means it is no longer effective and should not be used.', cn: '放進包裝箱之前應該先檢查乾燥劑。如果乾燥劑已經變紅，表示它已經失效，不應該使用。' },
+            { tag: 'expired 版', en: 'If the desiccant turns red, it means it is expired and should not be used.', cn: '如果乾燥劑變紅，表示它已經過期，不應該使用。' }
+          ]
+        }
+      ],
+      extraTitle: 'V. 稽核準備與口說範本 Audit Preparation',
+      extra: [
+        {
+          title: 'V-B. 包裝站介紹範本(向客戶／稽核員說明)',
+          exs: [
+            { tag: '簡短開場', en: 'As you can see, this is the packaging station. After testing and labeling, the operator prepares the accessories and the product for packaging.', cn: '如您所見，這裡是包裝站。測試和貼標完成後，作業員會準備配件和產品進行包裝。' },
+            { tag: '口語版流程', en: 'We prepare the accessory box first. Then we prepare the product box. After that, we put the accessory box inside the product box, and finally we seal the box.', cn: '我們先準備配件盒，再準備產品箱，接著把配件盒放進產品箱裡，最後封箱。' },
+            { tag: '完整範本', en: 'The last station is the packaging station. After testing the product, the operator attaches a label showing the model number, production date, and serial number. Then the operator prepares the accessories and places them into a small cardboard box. Before packaging, the operator checks the moisture absorber. If the moisture absorber turns red, it means it is no longer effective and should not be used. After that, the operator places the moisture absorber and the accessory box into the larger product box. Finally, the operator seals the box and uses a staple gun to secure the cardboard for shipping.', cn: '最後一站是包裝站。產品測試完後，作業員會貼上顯示型號、生產日期和流水號的標籤。接著作業員準備配件，把它們放進小紙箱。包裝前，作業員會檢查吸濕劑；如果吸濕劑變紅，表示已經失效，不能使用。之後，作業員把吸濕劑和配件盒放進較大的產品箱。最後，作業員封箱，並用釘槍固定紙箱以便出貨。👉 連接詞串起順序：First → Then → Before packaging → After that → Finally。' }
+          ]
+        }
+      ],
+      extraVocabTitle: 'V-C. 稽核常用專業動詞',
+      extraVocab: [
+        { k: '測試完成後', en: 'attach a label', cn: '貼標籤' },
+        { k: '組裝時', en: 'secure a cable', cn: '固定線材' },
+        { k: '維修、組裝時', en: 'tighten a screw', cn: '鎖緊螺絲' },
+        { k: '外觀處理', en: 'trim off sharp edges', cn: '修掉尖銳邊緣' },
+        { k: '包裝時', en: 'seal a box', cn: '封箱' },
+        { k: '包裝前', en: 'check the moisture absorber', cn: '檢查吸濕劑' },
+        { k: '包裝時', en: 'place accessories into a box', cn: '把配件放進箱子' },
+        { k: '測試期間', en: 'follow security measures', cn: '遵守安全措施' },
+        { k: '進入產線時', en: 'wear safety equipment', cn: '穿戴安全防護設備' }
+      ],
+      summaryTitle: 'V-A. 準備策略',
+      summary: [
+        { k: '上次的結果', v: '上次稽核(或面談練習)的結果很成功：大約 80% 的問題都和之前練習過的問題很接近，表示準備方向有用、也貼近實際。' },
+        { k: '下次稽核', v: '下一次正式稽核排在 10 月 19 日。老師建議在那之前 stick to the plan(照原計畫繼續做下去；stick to ＝ 持續用同一個方法、不改變做法)。' },
+        { k: '上課方式', v: '每堂課帶一段要說明的內容 —— 稽核流程、生產流程，或要向客戶／稽核員解釋的事情。老師不在工廠現場，所以要盡量提供真實資訊，老師再幫忙整理成清楚、自然、正確的英文回答。' },
+        { k: '稽核重點', v: '稽核時最重要的是一步一步描述作業流程。技術本身通常不是問題，難的是「從哪裡開始講、怎麼組織、每個動作怎麼用英文說清楚」。' },
+        { k: '反覆出現的原則', v: '很多英文問題只要先找清楚主詞、動詞、受詞就能解決 —— 沒有「人」當主詞時用被動，有人當主詞時用主動(見 IV-B)。' }
+      ]
+    },
+    {
       id: 'bk20260915',
       icon: '🏭',
       date: '2026-09-15',
