@@ -931,7 +931,7 @@ notes:[
     },
     {
       "w": "nervous",
-      "ipa": "/ˈnɜːrvəs/",
+      "ipa": "/ˈnɝːvəs/",
       "pos": "adj.",
       "cn": "緊張的",
       "def": "Feeling worried or afraid about something."
@@ -2424,8 +2424,8 @@ notes:[
     {"w": "cancel", "ipa": "/ˈkænsl/", "pos": "v.", "cn": "取消", "def": "To stop something from happening."},
     {"w": "candle", "ipa": "/ˈkændl/", "pos": "n.", "cn": "蠟燭", "def": "A stick of wax with a string that burns for light."},
     {"w": "prepare", "ipa": "/prɪˈper/", "pos": "v.", "cn": "準備", "def": "To get ready for something."},
-    {"w": "neighbor", "ipa": "/ˈneɪbər/", "pos": "n.", "cn": "鄰居", "def": "A person who lives near you."},
-    {"w": "nervous", "ipa": "/ˈnɜːrvəs/", "pos": "adj.", "cn": "緊張的", "def": "Feeling worried or afraid."}
+    {"w": "neighbor", "ipa": "/ˈneɪbɚ/", "pos": "n.", "cn": "鄰居", "def": "A person who lives near you."},
+    {"w": "nervous", "ipa": "/ˈnɝːvəs/", "pos": "adj.", "cn": "緊張的", "def": "Feeling worried or afraid."}
   ],
   "script": [
     {"sp": "Lily", "en": "Amy, I heard your company announced a typhoon day off. Is that true?", "cn": "Amy，我聽說你們公司宣布放颱風假了，是真的嗎？"},
@@ -2624,8 +2624,8 @@ notes:[
     {"w": "roller-skate", "ipa": "/ˈroʊlər skeɪt/", "pos": "v.", "cn": "溜直排輪", "def": "To move around on skates with small wheels."},
     {"w": "fall down", "ipa": "/fɔːl daʊn/", "pos": "phr.v.", "cn": "跌倒", "def": "To drop suddenly to the ground."},
     {"w": "difficult", "ipa": "/ˈdɪfɪkəlt/", "pos": "adj.", "cn": "困難的", "def": "Not easy to do."},
-    {"w": "hurt", "ipa": "/hɜːrt/", "pos": "v.", "cn": "疼痛、受傷", "def": "To feel pain in a part of your body."},
-    {"w": "turn", "ipa": "/tɜːrn/", "pos": "v.", "cn": "轉彎", "def": "To change direction."},
+    {"w": "hurt", "ipa": "/hɝːt/", "pos": "v.", "cn": "疼痛、受傷", "def": "To feel pain in a part of your body."},
+    {"w": "turn", "ipa": "/tɝːn/", "pos": "v.", "cn": "轉彎", "def": "To change direction."},
     {"w": "practice", "ipa": "/ˈpræktɪs/", "pos": "v.", "cn": "練習", "def": "To do something again and again to get better."}
   ],
   "script": [
@@ -2690,10 +2690,10 @@ notes:[
   "tip": "留意Amy什麼時候用have baked（到目前為止），什麼時候改用過去簡單式burned、tasted（那一次的細節）。",
   "pre": [
     {"w": "loaf", "ipa": "/loʊf/", "pos": "n.", "cn": "一條（麵包）", "def": "A shaped piece of baked bread."},
-    {"w": "disaster", "ipa": "/dɪˈzæstər/", "pos": "n.", "cn": "大失敗、災難", "def": "A complete failure or a very bad event."},
-    {"w": "burn", "ipa": "/bɜːrn/", "pos": "v.", "cn": "燒焦", "def": "To damage food by cooking it too long."},
-    {"w": "temperature", "ipa": "/ˈtemprətʃər/", "pos": "n.", "cn": "溫度", "def": "How hot or cold something is."},
-    {"w": "herb", "ipa": "/ɜːrb/", "pos": "n.", "cn": "香草", "def": "A plant used to add flavor to food."},
+    {"w": "disaster", "ipa": "/dɪˈzæs.tɚ/", "pos": "n.", "cn": "大失敗、災難", "def": "A complete failure or a very bad event."},
+    {"w": "burn", "ipa": "/bɝːn/", "pos": "v.", "cn": "燒焦", "def": "To damage food by cooking it too long."},
+    {"w": "temperature", "ipa": "/ˈtemprətʃɚ/", "pos": "n.", "cn": "溫度", "def": "How hot or cold something is."},
+    {"w": "herb", "ipa": "/ɝːb/", "pos": "n.", "cn": "香草", "def": "A plant used to add flavor to food."},
     {"w": "rosemary", "ipa": "/ˈroʊzməri/", "pos": "n.", "cn": "迷迭香", "def": "A type of herb with a strong smell, often used in cooking."}
   ],
   "script": [
@@ -2761,7 +2761,7 @@ notes:[
     {"w": "challenging", "ipa": "/ˈtʃælɪndʒɪŋ/", "pos": "adj.", "cn": "有挑戰性的", "def": "Difficult in a way that tests your skill."},
     {"w": "defect rate", "ipa": "/ˈdiːfekt reɪt/", "pos": "n.", "cn": "不良率", "def": "The percentage of products that are faulty."},
     {"w": "impressive", "ipa": "/ɪmˈpresɪv/", "pos": "adj.", "cn": "令人印象深刻的", "def": "Causing admiration because of quality or skill."},
-    {"w": "worth", "ipa": "/wɜːrθ/", "pos": "adj.", "cn": "值得的", "def": "Deserving the time or effort spent."},
+    {"w": "worth", "ipa": "/wɝːθ/", "pos": "adj.", "cn": "值得的", "def": "Deserving the time or effort spent."},
     {"w": "registration", "ipa": "/ˌredʒɪˈstreɪʃn/", "pos": "n.", "cn": "報名、註冊", "def": "The process of signing up for something."}
   ],
   "script": [
@@ -2962,7 +2962,7 @@ notes:[
   "tip": "先聽抓「Ryan正在做什麼」，再聽抓「發生了什麼突然的事」。",
   "pre": [
     {"w": "stove", "ipa": "/stoʊv/", "pos": "n.", "cn": "瓦斯爐", "def": "A machine used for cooking food."},
-    {"w": "burn", "ipa": "/bɜːrn/", "pos": "v.", "cn": "燒焦", "def": "To damage something with too much heat."},
+    {"w": "burn", "ipa": "/bɝːn/", "pos": "v.", "cn": "燒焦", "def": "To damage something with too much heat."},
     {"w": "smoke", "ipa": "/smoʊk/", "pos": "n.", "cn": "煙", "def": "The grey cloud that rises when something burns."},
     {"w": "alarm", "ipa": "/əˈlɑːrm/", "pos": "n.", "cn": "警報器", "def": "A device that makes a loud sound to warn people."},
     {"w": "distract", "ipa": "/dɪˈstrækt/", "pos": "v.", "cn": "分散注意力", "def": "To take someone's attention away from what they are doing."},
@@ -3107,10 +3107,10 @@ notes:[
   "tip": "這是獨白不是對話，句子比較長，可以先聽整段抓大意，再逐句聽細節。",
   "pre": [
     {"w": "systemic", "ipa": "/sɪˈstemɪk/", "pos": "adj.", "cn": "系統性的、制度性的", "def": "Affecting an entire system, not just one part."},
-    {"w": "isolated", "ipa": "/ˈaɪsəleɪtɪd/", "pos": "adj.", "cn": "單一的、孤立的", "def": "Happening alone, not connected to a wider pattern."},
+    {"w": "isolated", "ipa": "/ˈaɪ.sə.leɪ.tɪd/", "pos": "adj.", "cn": "單一的、孤立的", "def": "Happening alone, not connected to a wider pattern."},
     {"w": "root cause", "ipa": "/ruːt kɔːz/", "pos": "n.", "cn": "根本原因", "def": "The real reason something happened, not just the surface reason."},
     {"w": "batch", "ipa": "/bætʃ/", "pos": "n.", "cn": "一批（產品）", "def": "A group of products made at one time."},
-    {"w": "oversight", "ipa": "/ˈoʊvərsaɪt/", "pos": "n.", "cn": "監督", "def": "The process of checking that something is being done correctly."},
+    {"w": "oversight", "ipa": "/ˈoʊvɚsaɪt/", "pos": "n.", "cn": "監督", "def": "The process of checking that something is being done correctly."},
     {"w": "prevent", "ipa": "/prɪˈvent/", "pos": "v.", "cn": "預防", "def": "To stop something from happening."},
     {"w": "punish", "ipa": "/ˈpʌnɪʃ/", "pos": "v.", "cn": "處罰", "def": "To make someone suffer a penalty for doing something wrong."}
   ],
@@ -3371,7 +3371,7 @@ notes:[
     },
     {
       "w": "landlord",
-      "ipa": "/ˈlændlɔːrd/",
+      "ipa": "/ˈlændˌlɔːrd/",
       "pos": "n.",
       "cn": "房東",
       "def": "The person who owns the place you rent."
@@ -3560,7 +3560,7 @@ notes:[
     },
     {
       "w": "burst",
-      "ipa": "/bɜːrst/",
+      "ipa": "/bɝːst/",
       "pos": "v.",
       "cn": "爆裂",
       "def": "To break open suddenly with force."
@@ -3574,7 +3574,7 @@ notes:[
     },
     {
       "w": "plumber",
-      "ipa": "/ˈplʌmər/",
+      "ipa": "/ˈplʌmɚ/",
       "pos": "n.",
       "cn": "水電工",
       "def": "A person who fixes water pipes."
@@ -3781,7 +3781,7 @@ notes:[
     },
     {
       "w": "trade-off",
-      "ipa": "/ˈtreɪd ɒf/",
+      "ipa": "/ˈtreɪd ɑːf/",
       "pos": "n.",
       "cn": "取捨",
       "def": "Giving up one thing to gain another."
@@ -4002,7 +4002,7 @@ notes:[
     },
     {
       "w": "early",
-      "ipa": "/ˈɜːrli/",
+      "ipa": "/ˈɝːli/",
       "pos": "adj.",
       "cn": "早的、提早",
       "def": "Before the usual time."
@@ -4179,7 +4179,7 @@ notes:[
     },
     {
       "w": "at first",
-      "ipa": "/æt fɜːrst/",
+      "ipa": "/æt fɝːst/",
       "pos": "phr.",
       "cn": "起初",
       "def": "In the beginning, before things changed."
@@ -4393,7 +4393,7 @@ notes:[
     },
     {
       "w": "nervous",
-      "ipa": "/ˈnɜːrvəs/",
+      "ipa": "/ˈnɝːvəs/",
       "pos": "adj.",
       "cn": "緊張的",
       "def": "Worried and a little afraid."
@@ -4600,7 +4600,7 @@ notes:[
     },
     {
       "w": "work sample",
-      "ipa": "/wɜːrk ˈsæmpl/",
+      "ipa": "/wɝːk ˈsæmpəl/",
       "pos": "n.",
       "cn": "工作實例",
       "def": "A real piece of work that shows your ability."
@@ -4785,7 +4785,7 @@ notes:[
   tip:"第一次聽先抓「今天早上發生了什麼事」，第二次再聽Tom最後有沒有遲到。",
   pre:[
     {w:"late",ipa:"/leɪt/",pos:"adj.",cn:"遲到的、晚的",def:"Arriving after the expected time."},
-    {w:"stressful",ipa:"/ˈstresfl/",pos:"adj.",cn:"有壓力的",def:"Making you feel worried or nervous."},
+    {w:"stressful",ipa:"/ˈstresfəl/",pos:"adj.",cn:"有壓力的",def:"Making you feel worried or nervous."},
     {w:"meeting",ipa:"/ˈmiːtɪŋ/",pos:"n.",cn:"會議",def:"A time when people talk about work together."},
     {w:"problem",ipa:"/ˈprɑːbləm/",pos:"n.",cn:"問題、狀況",def:"Something that is not working correctly."},
     {w:"wait",ipa:"/weɪt/",pos:"v.",cn:"等",def:"To stay in a place until something happens."},
@@ -4830,7 +4830,7 @@ notes:[
     {w:"crowded",ipa:"/ˈkraʊdɪd/",pos:"adj.",cn:"擁擠的",def:"Full of people."},
     {w:"delayed",ipa:"/dɪˈleɪd/",pos:"adj.",cn:"被延誤的",def:"Made to happen later than planned."},
     {w:"exhausted",ipa:"/ɪɡˈzɔːstɪd/",pos:"adj.",cn:"筋疲力盡的",def:"Extremely tired."},
-    {w:"coworkers",ipa:"/ˈkoʊˌwɜːrkərz/",pos:"n.",cn:"同事",def:"People you work with."},
+    {w:"coworkers",ipa:"/ˈkoʊˌwɝːkɚz/",pos:"n.",cn:"同事",def:"People you work with."},
     {w:"fixed",ipa:"/fɪkst/",pos:"adj.",cn:"修好的",def:"Repaired so it works correctly again."}
   ],
   script:[
@@ -4870,9 +4870,9 @@ notes:[
   pre:[
     {w:"fault",ipa:"/fɔːlt/",pos:"n.",cn:"故障",def:"A problem that stops something from working correctly."},
     {w:"aging",ipa:"/ˈeɪdʒɪŋ/",pos:"adj.",cn:"老舊的",def:"Old and often close to needing replacement."},
-    {w:"transit authority",ipa:"/ˈtrænzɪt əˈθɒrəti/",pos:"n.",cn:"捷運局、運輸主管機關",def:"The organization in charge of running public transportation."},
+    {w:"transit authority",ipa:"/ˈtræn.zɪt əˈθɔːr.ə.t̬i/",pos:"n.",cn:"捷運局、運輸主管機關",def:"The organization in charge of running public transportation."},
     {w:"replaced",ipa:"/rɪˈpleɪst/",pos:"adj.",cn:"被更換的",def:"Had a new one put in the place of the old one."},
-    {w:"rush hour",ipa:"/rʌʃ ˈaʊər/",pos:"n.",cn:"尖峰時段",def:"The time of day when traffic and public transportation are the busiest."},
+    {w:"rush hour",ipa:"/ˈrʌʃ aʊr/",pos:"n.",cn:"尖峰時段",def:"The time of day when traffic and public transportation are the busiest."},
     {w:"advised",ipa:"/ədˈvaɪzd/",pos:"adj.",cn:"被建議的",def:"Told what would be a good thing to do."},
     {w:"equipment",ipa:"/ɪˈkwɪpmənt/",pos:"n.",cn:"設備",def:"The machines or tools needed for a particular job."}
   ],
@@ -4912,7 +4912,7 @@ notes:[
     {w:"frequent",ipa:"/ˈfriːkwənt/",pos:"adj.",cn:"頻繁的",def:"Happening often."},
     {w:"routine",ipa:"/ruːˈtiːn/",pos:"n.",cn:"固定的習慣、常規",def:"A regular way of doing things."},
     {w:"backup",ipa:"/ˈbækʌp/",pos:"adj.",cn:"備用的",def:"Kept ready to use if the main one fails."},
-    {w:"mindset",ipa:"/ˈmaɪndset/",pos:"n.",cn:"心態",def:"A person's usual way of thinking about things."},
+    {w:"mindset",ipa:"/ˈmaɪnd.set/",pos:"n.",cn:"心態",def:"A person's usual way of thinking about things."},
     {w:"buffer",ipa:"/ˈbʌfər/",pos:"n.",cn:"緩衝時間",def:"Extra time or space kept in case something goes wrong."},
     {w:"crisis",ipa:"/ˈkraɪsɪs/",pos:"n.",cn:"危機",def:"A time of great difficulty or danger."},
     {w:"productive",ipa:"/prəˈdʌktɪv/",pos:"adj.",cn:"有生產力的、有效率的",def:"Producing good, useful results."}
@@ -4950,7 +4950,7 @@ notes:[
   tip:"第一次聽先抓「奶奶現在好不好」，第二次再聽「她昨天做了什麼」。聽到 did 就是在問過去的事。",
   pre:[
     {w:"feel",ipa:"/fiːl/",pos:"v.",cn:"覺得",def:"To have a certain feeling in your body or mind."},
-    {w:"medicine",ipa:"/ˈmedɪsn/",pos:"n.",cn:"藥",def:"Something you take to help you feel better when you are sick."},
+    {w:"medicine",ipa:"/ˈmedɪsɪn/",pos:"n.",cn:"藥",def:"Something you take to help you feel better when you are sick."},
     {w:"headache",ipa:"/ˈhedeɪk/",pos:"n.",cn:"頭痛",def:"A pain inside your head."},
     {w:"rest",ipa:"/rest/",pos:"v.",cn:"休息",def:"To relax your body and stop working."},
     {w:"visit",ipa:"/ˈvɪzɪt/",pos:"v.",cn:"拜訪",def:"To go and see a person or place."},
@@ -4993,7 +4993,7 @@ notes:[
   pre:[
     {w:"distracted",ipa:"/dɪˈstræktɪd/",pos:"adj.",cn:"分心的",def:"Not able to focus because you are thinking about something else."},
     {w:"cough",ipa:"/kɔːf/",pos:"v.",cn:"咳嗽",def:"A sudden noise made when air is pushed out of the lungs."},
-    {w:"tired",ipa:"/ˈtaɪərd/",pos:"adj.",cn:"疲累的",def:"Feeling like you need to rest."},
+    {w:"tired",ipa:"/ˈtaɪrd/",pos:"adj.",cn:"疲累的",def:"Feeling like you need to rest."},
     {w:"appointment",ipa:"/əˈpɔɪntmənt/",pos:"n.",cn:"預約（門診）",def:"A time you plan to see the doctor."},
     {w:"take care of",ipa:"/teɪk keər ʌv/",pos:"phr.v.",cn:"照顧",def:"To look after someone."},
     {w:"suggest",ipa:"/səˈdʒest/",pos:"v.",cn:"建議",def:"To give an idea about what someone should do."}
@@ -5037,7 +5037,7 @@ notes:[
     {w:"waiting room",ipa:"/ˈweɪtɪŋ ruːm/",pos:"n.",cn:"候診室",def:"A room where people wait to see a doctor."},
     {w:"telemedicine",ipa:"/ˌtelɪˈmedɪsɪn/",pos:"n.",cn:"遠距醫療",def:"Medical care given through a video call instead of an in-person visit."},
     {w:"consulted",ipa:"/kənˈsʌltɪd/",pos:"v.",cn:"被看診、諮詢",def:"Given professional advice, such as by a doctor."},
-    {w:"in person",ipa:"/ɪn ˈpɜːrsn/",pos:"phr.",cn:"親自、面對面",def:"Physically present, not by phone or video."},
+    {w:"in person",ipa:"/ɪn ˈpɝːsən/",pos:"phr.",cn:"親自、面對面",def:"Physically present, not by phone or video."},
     {w:"serious",ipa:"/ˈsɪriəs/",pos:"adj.",cn:"嚴重的",def:"Important or dangerous, not small."}
   ],
   script:[
@@ -5074,10 +5074,10 @@ notes:[
   intro:"一段模擬的健康時事訪談：主持人訪問Lin醫生，討論台灣延長免費疫苗接種計畫的決定。留意訪談裡比較正式、留有餘地的說法，例如 tend to be more vulnerable，而不是直接斷言。",
   tip:"第一次聽抓住「為什麼延長」和「誰風險比較高」；第二次再注意Lin醫生怎麼用 tend to、can 這類詞讓陳述聽起來更嚴謹、不武斷。",
   pre:[
-    {w:"variant",ipa:"/ˈveəriənt/",pos:"n.",cn:"（病毒）變異株",def:"A slightly different form of a virus."},
+    {w:"variant",ipa:"/ˈveriənt/",pos:"n.",cn:"（病毒）變異株",def:"A slightly different form of a virus."},
     {w:"outpatient",ipa:"/ˈaʊtpeɪʃnt/",pos:"n.",cn:"門診病患",def:"A patient who visits a hospital or clinic but does not stay overnight."},
     {w:"vulnerable",ipa:"/ˈvʌlnərəbl/",pos:"adj.",cn:"容易受傷害的",def:"More likely to be harmed or affected by something."},
-    {w:"chronic",ipa:"/ˈkrɒnɪk/",pos:"adj.",cn:"慢性的",def:"Lasting a long time, often used for illnesses."},
+    {w:"chronic",ipa:"/ˈkrɑː.nɪk/",pos:"adj.",cn:"慢性的",def:"Lasting a long time, often used for illnesses."},
     {w:"extension",ipa:"/ɪkˈstenʃn/",pos:"n.",cn:"延長",def:"A longer period of time given for something."},
     {w:"available",ipa:"/əˈveɪləbl/",pos:"adj.",cn:"可取得的",def:"Able to be used or obtained."}
   ],
@@ -5118,10 +5118,10 @@ notes:[
   tip:"第一次聽先抓 Emma 給的三個行動：道歉、換貨、不推責。第二次再注意她為什麼說 transparent 比 perfect 更重要。",
   pre:[
     {w:"damaged",ipa:"/ˈdæmɪdʒd/",pos:"adj.",cn:"損壞的",def:"Broken or harmed."},
-    {w:"go viral",ipa:"/goʊ ˈvaɪrəl/",pos:"phr.",cn:"爆紅、瘋傳",def:"To spread very quickly on the internet."},
+    {w:"go viral",ipa:"/ɡoʊ ˈvaɪrəl/",pos:"phr.",cn:"爆紅、瘋傳",def:"To spread very quickly on the internet."},
     {w:"escalate",ipa:"/ˈeskəleɪt/",pos:"v.",cn:"（問題）擴大、惡化",def:"To become bigger or more serious."},
-    {w:"exposure",ipa:"/ɪkˈspoʊʒər/",pos:"n.",cn:"曝光度",def:"Being seen or noticed by many people."},
-    {w:"apologize",ipa:"/əˈpɒlədʒaɪz/",pos:"v.",cn:"道歉",def:"to say that you are sorry for something you have done wrong"},
+    {w:"exposure",ipa:"/ɪkˈspoʊʒɚ/",pos:"n.",cn:"曝光度",def:"Being seen or noticed by many people."},
+    {w:"apologize",ipa:"/əˈpɑːlədʒaɪz/",pos:"v.",cn:"道歉",def:"to say that you are sorry for something you have done wrong"},
     {w:"transparent",ipa:"/trænsˈpærənt/",pos:"adj.",cn:"透明的、公開清楚的",def:"Open and easy for people to understand."},
     {w:"accountability",ipa:"/əˌkaʊntəˈbɪləti/",pos:"n.",cn:"當責、負起責任",def:"Being willing to accept responsibility for what you do."},
     {w:"proactive",ipa:"/proʊˈæktɪv/",pos:"adj.",cn:"主動積極的",def:"Acting before a problem happens instead of waiting."}
@@ -5170,14 +5170,14 @@ notes:[
   intro:"老師 Mia 用一個經典問題開場：如果你明天中了樂透，你會先做什麼？Anna 想馬上辭職，Ben 想搬去風景好的地方。兩個人在回答的同時，剛好把第二條件句整組句型示範了一遍。這一課要聽的不是內容有多誇張，而是「過去式」在這裡其實不是過去，而是「離現實有距離」。",
   tip:"第一次聽只抓 If 後面用什麼時態、主要子句用 will 還是 would。第二次再回頭比較 If it rains 和 If it rained 這兩句，感覺一下真實與想像的差別。",
   pre:[
-    {w:"lottery",ipa:"/ˈlɑː.tər.i/",pos:"n.",cn:"抽獎、彩券",def:"a game where people buy tickets with numbers, hoping to win a large amount of money"},
+    {w:"lottery",ipa:"/ˈlɑː.tɚ.i/",pos:"n.",cn:"抽獎、彩券",def:"a game where people buy tickets with numbers, hoping to win a large amount of money"},
     {w:"daydream",ipa:"/ˈdeɪ.driːm/",pos:"v.",cn:"做白日夢",def:"to let your mind wander and imagine pleasant things instead of focusing on what you should be doing"},
-    {w:"scenery",ipa:"/ˈsiːnəri/",pos:"n.",cn:"風景、景色",def:"the natural features of an area such as mountains and fields."},
+    {w:"scenery",ipa:"/ˈsiː.nɚ.i/",pos:"n.",cn:"風景、景色",def:"the natural features of an area such as mountains and fields."},
     {w:"conditional",ipa:"/kənˈdɪʃ.ən.əl/",pos:"n.",cn:"條件的；條件句（文法用語）",def:"a grammar term for a sentence that describes what happens if something else happens first"},
     {w:"imaginary",ipa:"/ɪˈmædʒ.ə.ner.i/",pos:"adj.",cn:"想像中的、虛構的",def:"existing only in your mind, not real"},
     {w:"possibility",ipa:"/ˌpɑː.səˈbɪl.ə.ti/",pos:"n.",cn:"可能性",def:"a chance that something may happen or be true"},
     {w:"fluently",ipa:"/ˈfluː.ənt.li/",pos:"adv.",cn:"流利地",def:"in a smooth way, without stopping or making mistakes, when speaking a language"},
-    {w:"effort",ipa:"/ˈef.ərt/",pos:"n.",cn:"努力",def:"the physical or mental energy that you use to do something"}
+    {w:"effort",ipa:"/ˈef.ɚt/",pos:"n.",cn:"努力",def:"the physical or mental energy that you use to do something"}
   ],
   script:[
     {sp:"Mia",en:"Okay, quick warm-up before we start. If you won the lottery tomorrow, what would you do first?",cn:"好，開始上課前先來個暖身。如果你明天中了樂透，你會先做什麼？"},
@@ -5225,7 +5225,7 @@ notes:[
     {w:"go off",ipa:"/ɡoʊ ɔːf/",pos:"phr.v.",cn:"（鬧鐘）響起",def:"When an alarm makes a sound to wake you."},
     {w:"wake up",ipa:"/weɪk ʌp/",pos:"phr.v.",cn:"醒來（張開眼睛）",def:"To stop sleeping."},
     {w:"get up",ipa:"/ɡet ʌp/",pos:"phr.v.",cn:"起床（離開床）",def:"To get out of bed."},
-    {w:"turn off",ipa:"/tɜːrn ɔːf/",pos:"phr.v.",cn:"關掉",def:"To stop a machine, light, or alarm."},
+    {w:"turn off",ipa:"/tɝːn ɔːf/",pos:"phr.v.",cn:"關掉",def:"To stop a machine, light, or alarm."},
     {w:"get dressed",ipa:"/ɡet drest/",pos:"phr.",cn:"穿衣服",def:"To put your clothes on."},
     {w:"brush your teeth",ipa:"/brʌʃ jɔːr tiːθ/",pos:"phr.",cn:"刷牙",def:"To clean your teeth with a toothbrush."},
     {w:"have breakfast",ipa:"/hæv ˈbrekfəst/",pos:"phr.",cn:"吃早餐",def:"To eat the first meal of the day."},
@@ -5265,14 +5265,14 @@ notes:[
   intro:"David 去應徵品質工程師，面試官 Karen 問的都是實務問題：你最常遇到什麼問題？怎麼判斷嚴不嚴重？出事之後你怎麼做？這段對話幾乎就是一份英文面試講稿範本，每個回答都是「先講原則、再舉一個例子」。",
   tip:"聽的時候注意 David 每次都不是只回答 yes/no，而是多補一句例子或原因。這是英文面試最重要的節奏。",
   pre:[
-    {w:"quality engineer",ipa:"/ˈkwɑːləti ˌɛndʒɪˈnɪr/",pos:"n.",cn:"品質工程師",def:"someone whose job is to make sure products meet certain standards before they are sold"},
-    {w:"identify",ipa:"/aɪˈdɛntɪfaɪ/",pos:"v.",cn:"辨認/確認/找出",def:"to recognize and name what something is"},
-    {w:"dimensional issues",ipa:"/daɪˈmɛnʃənl ˈɪʃuːz/",pos:"n.",cn:"尺寸問題",def:"problems related to the size or measurements of a product"},
-    {w:"cosmetic",ipa:"/kɒzˈmet.ɪk/",pos:"adj.",cn:"外觀的、表面的",def:"relating to the way something looks on the outside, not how it works."},
+    {w:"quality engineer",ipa:"/ˈkwɑːləti ˌendʒɪˈnɪr/",pos:"n.",cn:"品質工程師",def:"someone whose job is to make sure products meet certain standards before they are sold"},
+    {w:"identify",ipa:"/aɪˈdentəˌfaɪ/",pos:"v.",cn:"辨認/確認/找出",def:"to recognize and name what something is"},
+    {w:"dimensional issues",ipa:"/daɪˈmenʃənl ˈɪʃuːz/",pos:"n.",cn:"尺寸問題",def:"problems related to the size or measurements of a product"},
+    {w:"cosmetic",ipa:"/kɑːzˈmet̬.ɪk/",pos:"adj.",cn:"外觀的、表面的",def:"relating to the way something looks on the outside, not how it works."},
     {w:"functional defect",ipa:"/ˈfʌŋk.ʃən.əl ˈdiː.fekt/",pos:"n.",cn:"功能性缺陷",def:"a fault that stops a product from working the way it should."},
-    {w:"investigate",ipa:"/ɪnˈvɛstɪɡeɪt/",pos:"v.",cn:"調查/深入研究",def:"to look into something carefully in order to find out the truth"},
+    {w:"investigate",ipa:"/ɪnˈvestɪɡeɪt/",pos:"v.",cn:"調查/深入研究",def:"to look into something carefully in order to find out the truth"},
     {w:"root cause",ipa:"/ruːt kɔːz/",pos:"n.",cn:"根本原因",def:"the real reason something bad or unexpected happens, not just a surface-level reason."},
-    {w:"cross-functional",ipa:"/ˌkrɒs ˈfʌŋk.ʃən.əl/",pos:"adj.",cn:"跨部門的、跨職能的",def:"involving people from different teams or departments working together."}
+    {w:"cross-functional",ipa:"/ˌkrɔːs ˈfʌŋk.ʃən.əl/",pos:"adj.",cn:"跨部門的、跨職能的",def:"involving people from different teams or departments working together."}
   ],
   script:[
     {sp:"Karen",en:"Thanks for coming in, David. Can you tell me what you actually do as a quality engineer?",cn:"謝謝你今天過來，David。可以說說你身為品質工程師實際上在做什麼嗎？"},
@@ -5324,7 +5324,7 @@ notes:[
     {w:"dizzy",ipa:"/ˈdɪz.i/",pos:"adj.",cn:"頭暈的",def:"feeling like everything is turning around you."},
     {w:"stomach pain",ipa:"/ˈstʌm.ək peɪn/",pos:"n.",cn:"胃痛、肚子痛",def:"a pain in the area of your stomach."},
     {w:"food poisoning",ipa:"/ˈfuːd ˌpɔɪ.zən.ɪŋ/",pos:"n.",cn:"食物中毒",def:"an illness caused by eating food that contains harmful bacteria."},
-    {w:"painkiller",ipa:"/ˈpeɪnˌkɪlər/",pos:"n.",cn:"止痛藥",def:"a medicine that reduces or stops pain in your body"},
+    {w:"painkiller",ipa:"/ˈpeɪnˌkɪlɚ/",pos:"n.",cn:"止痛藥",def:"a medicine that reduces or stops pain in your body"},
     {w:"relieve",ipa:"/rɪˈliːv/",pos:"v.",cn:"緩解、減輕",def:"to make an unpleasant feeling or situation less severe"}
   ],
   script:[
@@ -5414,10 +5414,10 @@ notes:[
   tip:"聽到數字時（重量、班機號碼、登機門、時間）先在心裡默念一次再往下聽。機場英文的關鍵訊息幾乎都藏在數字和地點名稱裡。",
   pre:[
     {w:"boarding pass",ipa:"/ˈbɔːrdɪŋ pæs/",pos:"n.",cn:"登機證",def:"A card that lets you get on a plane."},
-    {w:"departure gate",ipa:"/dɪˈpɑːtʃər ɡeɪt/",pos:"n.",cn:"登機門",def:"The door where you board your plane."},
+    {w:"departure gate",ipa:"/dɪˈpɑːtʃɚ ɡeɪt/",pos:"n.",cn:"登機門",def:"The door where you board your plane."},
     {w:"excess baggage fee",ipa:"/ɪkˈses ˈbæɡɪdʒ fiː/",pos:"n.",cn:"超重行李費",def:"Extra money you pay when your bag is too heavy."},
-    {w:"carry-on bag",ipa:"/ˈkæri ɒn bæɡ/",pos:"n.",cn:"隨身行李",def:"A small bag you take onto the plane with you."},
-    {w:"overhead compartment",ipa:"/ˌoʊvərˈhɛd kəmˈpɑːrtmənt/",pos:"n.",cn:"頭頂置物櫃",def:"The storage space above your seat on a plane."},
+    {w:"carry-on bag",ipa:"/ˈker.i.ɑːn bæɡ/",pos:"n.",cn:"隨身行李",def:"A small bag you take onto the plane with you."},
+    {w:"overhead compartment",ipa:"/ˌoʊvɚˈhed kəmˈpɑːrtmənt/",pos:"n.",cn:"頭頂置物櫃",def:"The storage space above your seat on a plane."},
     {w:"aisle seat",ipa:"/aɪl siːt/",pos:"n.",cn:"靠走道座位",def:"A seat next to the aisle on a plane."},
     {w:"tray table",ipa:"/treɪ ˈteɪbl/",pos:"n.",cn:"小桌板",def:"The small folding table on the back of the seat in front of you."},
     {w:"fasten",ipa:"/ˈfæsən/",pos:"v.",cn:"繫緊、扣上",def:"To close or attach something firmly."}
@@ -5466,10 +5466,10 @@ notes:[
   intro:"Kai 走到車站的售票櫃檯，想買一張去慕尼黑的票，但他還不確定什麼時候回來。站務員 Mia 幫他比較單程票和來回票，也說明取消和改票要付多少錢。整段對話都是真的在車站會用到的句子，而且大量出現 would 和 if。",
   tip:"第一次聽只要抓三個數字：幾點的車、加價多少、幾號月台。第二次再注意 Mia 每次給建議時是不是都用了 would 或 if。",
   pre:[
-    {w:"ticket counter",ipa:"/ˈtɪkɪt ˈkaʊntər/",pos:"n.",cn:"售票櫃檯",def:"The place at a station or airport where you buy tickets."},
+    {w:"ticket counter",ipa:"/ˈtɪkɪt ˈkaʊntɚ/",pos:"n.",cn:"售票櫃檯",def:"The place at a station or airport where you buy tickets."},
     {w:"timetable",ipa:"/ˈtaɪmˌteɪbl/",pos:"n.",cn:"時刻表",def:"A list showing when trains, buses, or planes arrive and leave."},
     {w:"one-way ticket",ipa:"/wʌn weɪ ˈtɪkɪt/",pos:"n.",cn:"單程票",def:"A ticket for a trip to a place without coming back."},
-    {w:"return ticket",ipa:"/rɪˈtɜːrn ˈtɪkɪt/",pos:"n.",cn:"來回票",def:"A ticket for a trip to a place and back again."},
+    {w:"return ticket",ipa:"/rɪˈtɝːn ˈtɪkɪt/",pos:"n.",cn:"來回票",def:"A ticket for a trip to a place and back again."},
     {w:"cancellation fee",ipa:"/ˌkænsəˈleɪʃn fiː/",pos:"n.",cn:"取消手續費",def:"Money you must pay if you cancel a booking."},
     {w:"penalty",ipa:"/ˈpenəlti/",pos:"n.",cn:"罰款、處罰",def:"Money you must pay as a punishment for breaking a rule."},
     {w:"business class",ipa:"/ˈbɪznəs klæs/",pos:"n.",cn:"商務艙",def:"A more expensive and comfortable class of travel on a plane, train, etc."},
@@ -5518,7 +5518,7 @@ notes:[
   intro:"把一天從早到晚的動作用完整句子講出來，每一句都是「時間副詞 + 動詞片語」。重點不是背單字，而是把整個語塊一起記住，開口時句子才會自然跑出來。",
   tip:"刻意模仿句子的長度，不要只講一個單字。練到不用想就能說出 In the afternoon, I… 這種完整句子就成功了。",
   pre:[
-    {w:"curtains",ipa:"/ˈkɜːrtnz/",pos:"n.",cn:"窗簾",def:"Cloth that covers a window."},
+    {w:"curtains",ipa:"/ˈkɝːtənz/",pos:"n.",cn:"窗簾",def:"Cloth that covers a window."},
     {w:"take the dog for a walk",ipa:"/teɪk ðə dɔːɡ fɔːr ə wɔːk/",pos:"phr.",cn:"帶狗去散步",def:"To walk outside with your dog."},
     {w:"feed",ipa:"/fiːd/",pos:"v.",cn:"餵（食）",def:"To give food to a person or animal."},
     {w:"chores",ipa:"/tʃɔːrz/",pos:"n.",cn:"家事、雜務",def:"Small jobs you have to do at home."},
@@ -5563,12 +5563,12 @@ notes:[
   tip:"先抓住三個關鍵：星期幾、天氣狀況、他們的決定。聽到 due to 時，後面接的就是「原因」，可以直接記下來。",
   pre:[
     {w:"forecast",ipa:"/ˈfɔːrkæst/",pos:"n.",cn:"預報",def:"對未來天氣等狀況的預測說明"},
-    {w:"thunderstorm",ipa:"/ˈθʌndərstɔːrm/",pos:"n.",cn:"雷雨、雷暴",def:"伴隨雷電的強烈暴風雨"},
+    {w:"thunderstorm",ipa:"/ˈθʌndɚstɔːrm/",pos:"n.",cn:"雷雨、雷暴",def:"伴隨雷電的強烈暴風雨"},
     {w:"pour",ipa:"/pɔːr/",pos:"v.",cn:"傾盆大雨；（雨）下得很大",def:"to rain heavily; 'it is pouring' = it is raining very hard"},
     {w:"humid",ipa:"/ˈhjuːmɪd/",pos:"adj.",cn:"潮濕的",def:"containing a lot of water in the air; warm and wet"},
     {w:"changeable",ipa:"/ˈtʃeɪndʒəbl/",pos:"adj.",cn:"多變的（天氣）",def:"likely to change frequently; = unpredictable (for weather)"},
     {w:"landslide",ipa:"/ˈlændslaɪd/",pos:"n.",cn:"山崩、土石流",def:"a mass of earth or rock sliding down a mountain slope"},
-    {w:"get stuck",ipa:"/ɡɛt stʌk/",pos:"phr.",cn:"卡住、動彈不得",def:"to be unable to move or progress"},
+    {w:"get stuck",ipa:"/ɡet stʌk/",pos:"phr.",cn:"卡住、動彈不得",def:"to be unable to move or progress"},
     {w:"due to",ipa:"/duː tu/",pos:"prep.",cn:"由於、因為",def:"用於說明原因，後面接名詞，相當於 because of"}
   ],
   script:[
@@ -5613,9 +5613,9 @@ notes:[
   intro:"Lily 和 Ben 聊到影集《怪醫豪斯》的主角，順便聊起演員 Hugh Laurie 本人。House 醫生是有名的悲觀者，但演他的人其實既有才華又充滿熱忱。兩個人最後談到一個很實際的問題：你一定要樂觀，才能持續做下去嗎？",
   tip:"先聽出誰說自己是 optimist、誰比較像 pessimist。第二次再注意 constantly 和 passionate about 各出現在什麼句子裡。",
   pre:[
-    {w:"optimist",ipa:"/ˈɒptɪmɪst/",pos:"n.",cn:"樂觀者、樂天派",def:"A person who always expects good things to happen."},
+    {w:"optimist",ipa:"/ˈɑːptɪmɪst/",pos:"n.",cn:"樂觀者、樂天派",def:"A person who always expects good things to happen."},
     {w:"pessimist",ipa:"/ˈpesɪmɪst/",pos:"n.",cn:"悲觀者",def:"A person who expects bad things to happen."},
-    {w:"main character",ipa:"/meɪn ˈkærəktər/",pos:"n.",cn:"主角",def:"The most important person in a story, film or TV series."},
+    {w:"main character",ipa:"/meɪn ˈkærəktɚ/",pos:"n.",cn:"主角",def:"The most important person in a story, film or TV series."},
     {w:"constantly",ipa:"/ˈkɑːnstəntli/",pos:"adv.",cn:"持續地、不斷地",def:"Happening again and again without stopping."},
     {w:"talented",ipa:"/ˈtæləntɪd/",pos:"adj.",cn:"有才華的",def:"Very good at doing something."},
     {w:"album",ipa:"/ˈælbəm/",pos:"n.",cn:"專輯",def:"A collection of songs on a CD or online."},
@@ -5667,10 +5667,10 @@ notes:[
   pre:[
     {w:"routine",ipa:"/ruːˈtiːn/",pos:"n.",cn:"例行公事、固定作息",def:"The things you normally do every day."},
     {w:"usually",ipa:"/ˈjuːʒuəli/",pos:"adv.",cn:"通常",def:"Most of the time."},
-    {w:"hardly ever",ipa:"/ˈhɑːrdli ˈevər/",pos:"phr.",cn:"幾乎不",def:"Almost never."},
+    {w:"hardly ever",ipa:"/ˈhɑːrdli ˈevɚ/",pos:"phr.",cn:"幾乎不",def:"Almost never."},
     {w:"sleep in",ipa:"/sliːp ɪn/",pos:"phr.v.",cn:"睡晚一點、賴床",def:"To sleep later than usual, often on weekends."},
     {w:"take it easy",ipa:"/teɪk ɪt ˈiːzi/",pos:"phr.",cn:"放輕鬆、不趕",def:"To relax and not work hard."},
-    {w:"work from home",ipa:"/wɜːrk frʌm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home instead of an office."},
+    {w:"work from home",ipa:"/wɝːk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home instead of an office."},
     {w:"How about you?",ipa:"/haʊ əˈbaʊt juː/",pos:"phr.",cn:"那你呢？",def:"A way to ask the same question back."}
   ],
   script:[
@@ -5713,7 +5713,7 @@ notes:[
     {w:"evil",ipa:"/ˈiː.vəl/",pos:"n.",cn:"邪惡；壞事",def:"morally very bad, or something morally very bad"},
     {w:"greed",ipa:"/ɡriːd/",pos:"n.",cn:"貪婪",def:"a strong desire to have more money or things than you need"},
     {w:"corruption",ipa:"/kəˈrʌp.ʃən/",pos:"n.",cn:"貪污；腐敗",def:"dishonest or illegal behavior by people in power, especially for money"},
-    {w:"slave labour",ipa:"/sleɪv ˈleɪ.bər/",pos:"n.",cn:"奴工；強迫勞動",def:"work that people are forced to do for little or no pay"},
+    {w:"slave labour",ipa:"/sleɪv ˈleɪ.bɚ/",pos:"n.",cn:"奴工；強迫勞動",def:"work that people are forced to do for little or no pay"},
     {w:"loads of",ipa:"/loʊdz əv/",pos:"phr.",cn:"許多的（口語）",def:"a large amount or number of something, used in informal speech"},
     {w:"share out",ipa:"/ʃer aʊt/",pos:"phr.v.",cn:"分配；分享",def:"to divide something among a group of people so everyone gets a part"}
   ],
@@ -5760,12 +5760,12 @@ notes:[
   intro:"David 是剛來台灣工作的外國同事，他看到薪資單上有一筆看不懂的扣款。同事 Lisa 用簡單的英文向他解釋全民健保是什麼、怎麼收費、又給付哪些項目。",
   tip:"這種「解釋制度」的對話會有很多數字和專有名詞。聽的時候先分清楚「誰付錢」和「付什麼」兩件事，數字可以第二次再補。",
   pre:[
-    {w:"National Health Insurance (NHI)",ipa:"/ˈnæʃənəl hɛlθ ɪnˈʃʊrəns/",pos:"n.",cn:"全民健康保險",def:"Taiwan's government program that helps everyone pay for medical care."},
-    {w:"government program",ipa:"/ˈgʌvərnmənt ˈproʊˌgræm/",pos:"n.",cn:"政府計畫",def:"a system or plan that is organized and run by the government."},
+    {w:"National Health Insurance (NHI)",ipa:"/ˈnæʃənəl helθ ɪnˈʃʊrəns/",pos:"n.",cn:"全民健康保險",def:"Taiwan's government program that helps everyone pay for medical care."},
+    {w:"government program",ipa:"/ˈɡʌvɚnmənt ˈproʊˌɡræm/",pos:"n.",cn:"政府計畫",def:"a system or plan that is organized and run by the government."},
     {w:"monthly fee",ipa:"/ˈmʌnθli fi/",pos:"n.",cn:"每月費用",def:"an amount of money that you have to pay every month."},
-    {w:"employer",ipa:"/ɪmˈplɔɪər/",pos:"n.",cn:"雇主",def:"the person or company that you work for and that pays your salary."},
-    {w:"covered by insurance",ipa:"/ˈkʌvərd baɪ ɪnˈʃʊrəns/",pos:"phr.",cn:"由保險支付",def:"paid for by an insurance plan instead of by yourself."},
-    {w:"medical expenses",ipa:"/ˈmɛdɪkəl ɪkˈspɛnsɪz/",pos:"n.",cn:"醫療費用／醫療開銷",def:"the total money spent on healthcare, doctors, and medicine, often emphasizing the cost or spending."},
+    {w:"employer",ipa:"/ɪmˈplɔɪɚ/",pos:"n.",cn:"雇主",def:"the person or company that you work for and that pays your salary."},
+    {w:"covered by insurance",ipa:"/ˈkʌvɚd baɪ ɪnˈʃʊrəns/",pos:"phr.",cn:"由保險支付",def:"paid for by an insurance plan instead of by yourself."},
+    {w:"medical expenses",ipa:"/ˈmedɪkəl ɪkˈspensɪz/",pos:"n.",cn:"醫療費用／醫療開銷",def:"the total money spent on healthcare, doctors, and medicine, often emphasizing the cost or spending."},
     {w:"private insurance",ipa:"/ˈpraɪvɪt ɪnˈʃʊrəns/",pos:"n.",cn:"私人保險",def:"an insurance plan that a person buys themselves rather than getting from the government."},
     {w:"affordable",ipa:"/əˈfɔːrdəbl/",pos:"adj.",cn:"負擔得起的／便宜的",def:"not too expensive, so that ordinary people can pay for it."}
   ],
@@ -5812,12 +5812,12 @@ notes:[
   tip:"第一次聽先抓「Grace 最後有沒有答應、她提出什麼條件」。第二次再注意那些 -ship、-ility、-ment 結尾的名詞，聽聽看它們各出現在什麼情境。",
   pre:[
     {w:"community",ipa:"/kəˈmjuː.nə.ti/",pos:"n.",cn:"社區",def:"A group of people who live in the same area or share something in common."},
-    {w:"opportunity",ipa:"/ˌɑː.pɚˈtuː.nə.t̬i/",pos:"n.",cn:"機會、機遇",def:"a chance to do something."},
+    {w:"opportunity",ipa:"/ˌɑːpɚˈtuːnəti/",pos:"n.",cn:"機會、機遇",def:"a chance to do something."},
     {w:"leadership",ipa:"/ˈliː.də.ʃɪp/",pos:"n.",cn:"領導力",def:"The ability to guide or direct a group of people."},
-    {w:"responsibility",ipa:"/rɪˌspɒn.sɪˈbɪl.ə.ti/",pos:"n.",cn:"責任感",def:"A duty or job that you are expected to do."},
-    {w:"nervous",ipa:"/ˈnɜː.vəs/",pos:"adj.",cn:"緊張的",def:"Feeling worried or afraid about something that is going to happen."},
+    {w:"responsibility",ipa:"/rɪˌspɑːnsəˈbɪləti/",pos:"n.",cn:"責任感",def:"A duty or job that you are expected to do."},
+    {w:"nervous",ipa:"/ˈnɝːvəs/",pos:"adj.",cn:"緊張的",def:"Feeling worried or afraid about something that is going to happen."},
     {w:"audience",ipa:"/ˈɔː.di.əns/",pos:"n.",cn:"觀眾",def:"A group of people who watch or listen to a show or speech."},
-    {w:"confidence",ipa:"/ˈkɒn.fɪ.dəns/",pos:"n.",cn:"自信",def:"A feeling of trust in your own abilities."},
+    {w:"confidence",ipa:"/ˈkɑːnfɪdəns/",pos:"n.",cn:"自信",def:"A feeling of trust in your own abilities."},
     {w:"achievement",ipa:"/əˈtʃiːv.mənt/",pos:"n.",cn:"成就",def:"Something good that you succeed in doing through effort."}
   ],
   script:[
@@ -5866,8 +5866,8 @@ notes:[
   pre:[
     {w:"landlord",ipa:"/ˈlændˌlɔːrd/",pos:"n.",cn:"房東",def:"A person who owns a property and rents it to other people."},
     {w:"tenant",ipa:"/ˈtenənt/",pos:"n.",cn:"房客、租客",def:"A person who pays rent to live in a building owned by someone else."},
-    {w:"plumber",ipa:"/ˈplʌmər/",pos:"n.",cn:"水管工人",def:"A person who fixes water pipes, toilets, and bathrooms."},
-    {w:"faulty",ipa:"/ˈfɔlti/",pos:"adj.",cn:"故障的、有缺陷的",def:"Not working correctly because of a problem or defect."},
+    {w:"plumber",ipa:"/ˈplʌmɚ/",pos:"n.",cn:"水管工人",def:"A person who fixes water pipes, toilets, and bathrooms."},
+    {w:"faulty",ipa:"/ˈfɔːlti/",pos:"adj.",cn:"故障的、有缺陷的",def:"Not working correctly because of a problem or defect."},
     {w:"socket",ipa:"/ˈsɑkɪt/",pos:"n.",cn:"插座",def:"A device on a wall that you plug an electrical device into."},
     {w:"ceiling",ipa:"/ˈsiːlɪŋ/",pos:"n.",cn:"天花板",def:"The surface that forms the top of the inside of a room."},
     {w:"dampness",ipa:"/ˈdæmpnəs/",pos:"n.",cn:"潮濕、濕氣",def:"The condition of being slightly wet, often inside a building."},
@@ -5923,7 +5923,7 @@ notes:[
     {w:"make a toast",ipa:"/meɪk ə toʊst/",pos:"phr.",cn:"敬酒",def:"to raise your glass and say something nice before drinking, to celebrate someone or something"},
     {w:"dress code",ipa:"/dres koʊd/",pos:"n.",cn:"服裝規定",def:"a set of rules about what kind of clothes you should wear to an event"},
     {w:"lucky draw",ipa:"/ˈlʌki drɔː/",pos:"n.",cn:"抽獎",def:"a game where winners are chosen randomly to receive prizes"},
-    {w:"gift voucher",ipa:"/ɡɪft ˈvaʊtʃər/",pos:"n.",cn:"禮券",def:"a piece of paper or card that can be used like money to buy things at a certain store"},
+    {w:"gift voucher",ipa:"/ɡɪft ˈvaʊtʃɚ/",pos:"n.",cn:"禮券",def:"a piece of paper or card that can be used like money to buy things at a certain store"},
     {w:"red envelope",ipa:"/red ˈɑːn.və.loʊp/",pos:"n.",cn:"紅包",def:"a red paper packet containing money, given as a gift especially during Chinese New Year."}
   ],
   script:[
@@ -5975,7 +5975,7 @@ scenes:[
     {w:"stomachache",ipa:"/ˈstʌməkeɪk/",pos:"n.",cn:"肚子痛",def:"A pain in your stomach."},
     {w:"sore throat",ipa:"/sɔːr θroʊt/",pos:"n.",cn:"喉嚨痛",def:"When your throat hurts, often from a cold."},
     {w:"cough",ipa:"/kɔːf/",pos:"v.",cn:"咳嗽",def:"To push air out of your lungs noisily."},
-    {w:"fever",ipa:"/ˈfiːvər/",pos:"n.",cn:"發燒",def:"A body temperature that is higher than normal."},
+    {w:"fever",ipa:"/ˈfiː.vɚ/",pos:"n.",cn:"發燒",def:"A body temperature that is higher than normal."},
     {w:"appointment",ipa:"/əˈpɔɪntmənt/",pos:"n.",cn:"預約（門診）",def:"A time you plan to see the doctor."},
     {w:"take medicine",ipa:"/teɪk ˈmedɪsn/",pos:"phr.",cn:"吃藥",def:"To use pills or liquid to get better."}
   ],
@@ -6014,7 +6014,7 @@ scenes:[
   intro:"Anna 要去圖書館、郵局、銀行和商店，Marsha 告訴她這些地方在社區的哪裡。這一課的句型在旅行中超常用——不管是在國外找超市還是找地鐵站，開口第一句幾乎都是 Where is the…?",
   tip:"注意方位詞怎麼搭配使用：near（附近）、next to（旁邊）、across from（對面）、between A and B（在 A 和 B 之間）。跟讀時試著邊說邊用手比方向，身體記憶比只用腦袋記有效。",
   pre:[
-    {w:"neighborhood",ipa:"/ˈneɪbərhʊd/",pos:"n.",cn:"社區、街坊",def:"The area around where you live."},
+    {w:"neighborhood",ipa:"/ˈneɪbɚˌhʊd/",pos:"n.",cn:"社區、街坊",def:"The area around where you live."},
     {w:"library",ipa:"/ˈlaɪbreri/",pos:"n.",cn:"圖書館",def:"A place where you borrow books."},
     {w:"post office",ipa:"/poʊst ˈɔːfɪs/",pos:"n.",cn:"郵局",def:"A place where you send letters and packages."},
     {w:"across from",ipa:"/əˈkrɔːs frʌm/",pos:"prep.",cn:"在…對面",def:"On the other side of the street."},

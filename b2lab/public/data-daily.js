@@ -863,7 +863,7 @@ articles:[
     },
     {
       "w": "nervous",
-      "ipa": "/ˈnɜːrvəs/",
+      "ipa": "/ˈnɝːvəs/",
       "pos": "adj.",
       "cn": "緊張的",
       "def": "Feeling worried or afraid about something.",
@@ -1662,7 +1662,7 @@ articles:[
     },
     {
       "w": "nervous",
-      "ipa": "/ˈnɜːrvəs/",
+      "ipa": "/ˈnɝːvəs/",
       "pos": "adj.",
       "cn": "緊張的",
       "def": "Feeling worried or afraid about something.",
