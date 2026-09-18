@@ -1180,7 +1180,7 @@ window.NOTES = {
     {en:"The airline company offered a free ticket to compensate for the flight delay.",cn:"航空公司提供免費機票來補償航班延誤。"},
     {en:"He compensated his wife for forgetting her birthday by taking her on a special trip.",cn:"他因為忘記太太的生日，而帶她去特別旅行作為補償。"},
   ]},
-  {w:"make up for",ipa:"",tag:"彌補某事 · phr.",exs:[
+  {w:"make up for",ipa:"/ˌmeɪk ˈʌp fɚ/",tag:"彌補某事 · phr.",exs:[
     {en:"He bought his wife flowers to make up for forgetting her birthday.",cn:"他買花來彌補忘記太太生日的錯誤。"},
     {en:"The company gave customers a discount to make up for the delay.",cn:"公司給顧客折扣來補償延誤。"},
     {en:"Nothing can make up for losing a loved one.",cn:"沒有任何東西可以彌補失去親人的痛苦。"},
