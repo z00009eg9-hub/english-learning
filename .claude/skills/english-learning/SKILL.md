@@ -405,15 +405,21 @@ create_file(
 當使用者說「同步筆記」、「同步進網頁」或執行 `/sync-notes` 時觸發。
 
 ### Step 1 — 讀取同步狀態
-讀取記憶檔案 `C:\Users\anita.chen\.claude\projects\G-------------\memory\sync_state.md`，
-取得 `last_sync_date`、`processed_file_ids`、`html_file`（目前固定為 `D:\english-learning\index.html`；G: 雲端那份是停用的舊副本，不要改它）。
+同步狀態**就記在 `index.html` 裡**（2026-09-18 起；舊版寫的 `sync_state.md` 記憶檔從來不存在，不要去找）。
+`html_file` 固定為 `D:\english-learning\index.html`（G: 雲端那份是停用的舊副本，不要改它）：
+```bash
+cd "D:/english-learning"
+grep -o "===SYNC:PROCESSED_LESSONS===.*" index.html        # 已同步過的課（YYYYMMDD 清單）
+grep -o "VOCAB_START=== sync_date:[0-9-]*" index.html       # 上次同步日 = LAST_SYNC_DATE
+```
 
 ### Step 2 — 搜尋新筆記
 用 `search_files` 搜尋：
 ```
 mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_DATE'
 ```
-排除 `processed_file_ids` 中已處理的檔案 ID。
+從文件標題取出課程日期 `YYYYMMDD`，**已在 `PROCESSED_LESSONS` 清單裡的課跳過**。
+（已同步過、但 Doc 在同步後又被修改的課，列出來問使用者要不要重新同步，不要自己決定。）
 
 ### Step 3 — 讀取並提取內容
 對每個新檔案用 `read_file_content` 讀取，提取以下資料：
@@ -490,11 +496,11 @@ cd "D:/english-learning" && cp index.html public/index.html && firebase deploy -
 ```
 線上網址 https://learning-english-notes.web.app 隨即更新（詳見下方「流程 G」）。
 
-### Step 6 — 更新同步狀態記憶
-更新 `sync_state.md`：
-- `last_sync_date`：今天的日期
-- `processed_file_ids`：加入這次處理的檔案 ID
-- 同步摘要段落：簡短說明這次新增了什麼
+### Step 6 — 更新同步狀態（寫在 index.html 裡：**實際上在 Step 4 改 index.html 時就一起做**，才會隨 Step 5 一起 commit、隨 Step 5.5 上線）
+- `// ===SYNC:PROCESSED_LESSONS===` 那一行：尾端加上這次同步的課程日期（`, YYYYMMDD`），**漏加下次會被重複處理**
+- 每個有改到的 `===SYNC:XXX_START===` 標記：更新 `sync_date:`（今天）與 `count:`
+- 標記行本身不可以刪或移位（見 AGENTS.md §7）
+- 回報時簡短說明這次新增了什麼
 
 ### 重要規則
 1. **不刪除現有內容**，只新增
