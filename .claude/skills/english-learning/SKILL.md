@@ -34,7 +34,7 @@ description: 英文課堂筆記的完整自動化工作流程 — 自動建立�
 
 **A-1　先 fetch 對一次遠端狀態，看清楚再動作**（2026-08-29 使用者指定，不可跳過）：
 ```bash
-cd "G:/我的雲端硬碟/英文筆記" && git fetch origin && git status -sb --untracked-files=no && git log --oneline HEAD..origin/main && git log --oneline origin/main..HEAD
+cd "D:/english-learning" && git fetch origin && git status -sb --untracked-files=no && git log --oneline HEAD..origin/main && git log --oneline origin/main..HEAD
 ```
 - 先 `fetch` 而不是直接 `pull --rebase`：要先**知道**本地與遠端各差哪些 commit，再決定怎麼併。
   這個 repo 除了雲端 routine，還可能有**其他 Claude Code session 併行在動同一條 `main`**
@@ -43,7 +43,7 @@ cd "G:/我的雲端硬碟/英文筆記" && git fetch origin && git status -sb --
 
 **A-2　工作區乾淨時再 rebase**：
 ```bash
-cd "G:/我的雲端硬碟/英文筆記" && git status --porcelain && git pull --rebase origin main
+cd "D:/english-learning" && git status --porcelain && git pull --rebase origin main
 ```
 - **如果 rebase 出現衝突**：解完衝突走 `git rebase --continue`。
   **不要**用 `git rebase --abort` 就當作沒事——abort 會讓本地 commit 停在原地脫離 `main`。
@@ -61,7 +61,7 @@ cd "G:/我的雲端硬碟/英文筆記" && git status --porcelain && git pull --
 
 ### C. 收尾檢查：有沒有東西落單
 ```bash
-cd "G:/我的雲端硬碟/英文筆記" && git log --oneline origin/main..main && git branch --no-merged main
+cd "D:/english-learning" && git log --oneline origin/main..main && git branch --no-merged main
 ```
 - 第一個指令要**空的**（表示本地沒有沒 push 的 commit）。
 - 第二個指令列出來的分支，都是**還沒併回 `main`** 的——逐一確認裡面的東西是不是該併回來。
@@ -71,6 +71,11 @@ cd "G:/我的雲端硬碟/英文筆記" && git log --oneline origin/main..main &
 ---
 
 ## 流程 0：自動建立/尋找當天日期資料夾（2026-06-11 新增）
+
+> **兩個位置分工（2026-09-18 確立）**：
+> - **當天日期資料夾、.gs 腳本、上課圖片音檔** → 留在雲端硬碟 `G:\我的雲端硬碟\英文筆記\YYYYMMDD-主題\`（資料夾用 Drive API 建，不受對話從哪裡開啟影響）
+> - **git、index.html、b2lab 資料、部署** → 一律在 `D:\english-learning`
+> - `G:\我的雲端硬碟\英文筆記` 裡的 git repo 是停用的舊副本，**不要在那裡跑 git**（會讓雲端冒出大量雜湊檔名的物件檔）
 
 情境 1（建立全新 Google 文件）執行前，**先自動處理目標資料夾**，使用者不需手動建立：
 
@@ -401,7 +406,7 @@ create_file(
 
 ### Step 1 — 讀取同步狀態
 讀取記憶檔案 `C:\Users\anita.chen\.claude\projects\G-------------\memory\sync_state.md`，
-取得 `last_sync_date`、`processed_file_ids`、`html_file`（目前固定為 `G:\我的雲端硬碟\英文筆記\index.html`）。
+取得 `last_sync_date`、`processed_file_ids`、`html_file`（目前固定為 `D:\english-learning\index.html`；G: 雲端那份是停用的舊副本，不要改它）。
 
 ### Step 2 — 搜尋新筆記
 用 `search_files` 搜尋：
@@ -481,7 +486,7 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 ### Step 5.5 — 部署到 Firebase Hosting（更新線上網站）
 push GitHub 後，**接著執行「流程 G」** 把最新 `index.html` 部署上線：
 ```bash
-cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && firebase deploy --only hosting
+cd "D:/english-learning" && cp index.html public/index.html && firebase deploy --only hosting
 ```
 線上網址 https://learning-english-notes.web.app 隨即更新（詳見下方「流程 G」）。
 
@@ -623,7 +628,7 @@ cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && fi
    跑完 push 記得做「流程 00-C」收尾檢查（`git log --oneline origin/main..main` 要空的、`git branch --no-merged main` 沒有落單分支）。
 6. **接著執行「流程 G」部署到 Firebase**，讓線上網站 https://learning-english-notes.web.app 同步更新（若本次是併在流程 C 一起跑，流程 C Step 5.5 已部署，這裡就不必重複）：
    ```bash
-   cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && firebase deploy --only hosting
+   cd "D:/english-learning" && cp index.html public/index.html && firebase deploy --only hosting
    ```
 
 ---
@@ -699,7 +704,7 @@ cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && fi
 
 ### 部署指令（一行完成：複製最新 index.html → 部署）
 ```bash
-cd "G:/我的雲端硬碟/英文筆記" && cp index.html public/index.html && firebase deploy --only hosting
+cd "D:/english-learning" && cp index.html public/index.html && firebase deploy --only hosting
 ```
 - 部署設定檔已存在：`firebase.json`（public 目錄 `public/`、index.html 設 no-cache）、`.firebaserc`（default = `learning-english-notes`）。
 - `public/index.html` 只是部署用複本，來源永遠是根目錄的 `index.html`，故每次先 `cp` 覆蓋再 deploy。
@@ -1278,7 +1283,7 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
    - **收尾章節對帳**：把 lesson 物件的章節標題（`hwTitle`/`vocabTitle`/`phrasesTitle`/
      `grammarTitle`/`extraTitle`/`summaryTitle`…）列出來，與 Doc 的章節編號 I、II、III… 逐一對照。
      課本有、Doc 沒有的一律刪掉；編號對不上就停下來問，不要自己補內容。
-2. **轉成 lesson 物件**：加進 `G:\我的雲端硬碟\英文筆記\b2lab\public\data-book.js` 的 `window.BOOK.lessons` 陣列（附加在陣列尾端即可，執行時會依 date 排序）。
+2. **轉成 lesson 物件**：加進 `D:\english-learning\b2lab\public\data-book.js` 的 `window.BOOK.lessons` 陣列（附加在陣列尾端即可，執行時會依 date 排序）。
    - **內容不增不減**，逐字取自 Doc；schema 參考檔內 `bk20260813`（最完整範例）。
    - 常用欄位：`id`（bk+YYYYMMDD，同日兩份加 a/b）、`icon`（貼題 emoji）、`date`、`doc`（Google Doc 連結）、`title`/`titleCn`/`topics`、`hwTitle`+`hw[]`（n/wrong/fix/ok/cn/pat/note）、`vocabTitle`+`vocab[]`（w/star/ipa/pos/cn/ex/exCn）、`vocab2`/`vocabReview`、`phrasesTitle`+`phrases[]`（p/cn/ex/exCn）、`colloc[]`（p/def/defCn/cn）、`grammarTitle`+`grammar[]`（k/title/pat|patLabel/pts[]/exs[{tag,en,cn}]）、`cmpTitle`+`cmp[]`+`cmpWarn`、`reading[]`（bar/title/titleCn/paras[{en,cn}]/questions[{q,qCn,a,aCn}]/sumEn[]/sumCn[]）、`extraTitle`+`extra[]`（title+exs）、`extraVocabTitle`+`extraVocab[]`（k/en/cn）、`discussionTitle`+`discussion[]`（q/qCn/a/aCn）、`summaryTitle`+`summary[]`（k/v）。
    - 渲染器沒有的區塊會自動跳過，不必硬湊；區塊順序固定為 hw→vocab→phrases→grammar→cmp→reading→extra→extraVocab→discussion→summary，對不上 Doc 順序沒關係，標題可自訂。
