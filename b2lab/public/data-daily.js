@@ -8,6 +8,792 @@ window.DAILY = {
 
 articles:[
 {
+  "id": "d20260918a2",
+  "date": "2026-09-18",
+  "level": "A2",
+  "topic": "購物",
+  "words": 91,
+  "kind": "orig",
+  "title": "Tom Buys a Winter Jacket",
+  "titleCn": "Tom買冬天的外套",
+  "focus": "現在簡單式描述購物過程；can表示「省得下來」，will表示明天的打算",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "天氣冷了，Tom要去買一件外套。全文只用現在簡單式、there are、can和will，留意can怎麼講「省得下三百塊」，will怎麼講「明天要做的事」。",
+  "spoken": [
+    {
+      "en": "So it's getting cold and Tom really needs a jacket.",
+      "cn": "天氣轉冷了，Tom真的很需要一件外套。"
+    },
+    {
+      "en": "He pops into a little shop down the street and everything's on sale.",
+      "cn": "他晃進街上一家小店，裡面東西都在特價。"
+    },
+    {
+      "en": "There's a blue one he loves, but nine hundred? No way.",
+      "cn": "有一件藍的他很喜歡，但九百塊？免談。"
+    },
+    {
+      "en": "He grabs a grey one for six hundred instead, and that's lunch money sorted.",
+      "cn": "他改拿一件六百的灰色外套，午餐錢就這樣省出來了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom needs a warm jacket for the winter. He goes to a small shop near his home. There are many jackets on sale this week.",
+      "cn": "Tom冬天需要一件溫暖的外套。他去他家附近的一間小店。這個星期有很多外套在特價。"
+    },
+    {
+      "en": "Tom likes a blue jacket by the window. The price is nine hundred dollars. That is too much money for him now.",
+      "cn": "Tom喜歡窗邊那件藍色外套。價格是九百元。那對他來說現在太貴了。"
+    },
+    {
+      "en": "Then he finds a grey jacket for six hundred dollars. It is warm, and it fits him very well. Tom can save three hundred dollars today.",
+      "cn": "然後他找到一件六百元的灰色外套。它很溫暖，而且很合身。Tom今天可以省下三百元。"
+    },
+    {
+      "en": "He pays at the counter and walks home slowly. Tomorrow he will buy lunch with the extra money.",
+      "cn": "他在櫃檯結帳，然後慢慢走回家。明天他要用多出來的錢買午餐。"
+    }
+  ],
+  "target": [
+    {
+      "w": "jacket",
+      "ipa": "/ˈdʒækɪt/",
+      "pos": "n.",
+      "cn": "外套",
+      "def": "A short coat that you wear outside.",
+      "ex": "My little sister wears a red jacket to school every day.",
+      "exCn": "我妹妹每天穿一件紅色外套去上學。"
+    },
+    {
+      "w": "price",
+      "ipa": "/praɪs/",
+      "pos": "n.",
+      "cn": "價格",
+      "def": "The money you must pay for something.",
+      "ex": "The price of train tickets went up last month.",
+      "exCn": "火車票的價格上個月漲了。"
+    },
+    {
+      "w": "save",
+      "ipa": "/seɪv/",
+      "pos": "v.",
+      "cn": "省下、存下",
+      "def": "To keep money and not spend it.",
+      "ex": "My mother tries to save water when she washes the dishes.",
+      "exCn": "我媽媽洗碗時會盡量省水。"
+    },
+    {
+      "w": "fit",
+      "ipa": "/fɪt/",
+      "pos": "v.",
+      "cn": "合身",
+      "def": "To be the right size for someone.",
+      "ex": "These old shoes do not fit my brother anymore.",
+      "exCn": "這些舊鞋子我弟弟已經穿不下了。"
+    },
+    {
+      "w": "counter",
+      "ipa": "/ˈkaʊn.t̬ɚ/",
+      "pos": "n.",
+      "cn": "櫃檯",
+      "def": "The long table in a shop where you pay.",
+      "ex": "The nurse left a small box on the counter in the clinic.",
+      "exCn": "護理師在診所的櫃檯上留了一個小盒子。"
+    },
+    {
+      "w": "extra",
+      "ipa": "/ˈekstrə/",
+      "pos": "adj.",
+      "cn": "多出來的",
+      "def": "More than you need or more than usual.",
+      "ex": "We ordered an extra plate of noodles for our guest.",
+      "exCn": "我們為客人多點了一盤麵。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why does Tom go to the small shop?",
+      "qCn": "Tom為什麼去那間小店？",
+      "opts": [
+        "A. To meet a friend",
+        "B. To buy a warm jacket",
+        "C. To eat lunch",
+        "D. To find a new job"
+      ],
+      "optsCn": [
+        "A. 去見朋友",
+        "B. 去買一件溫暖的外套",
+        "C. 去吃午餐",
+        "D. 去找新工作"
+      ],
+      "ans": 1,
+      "expl": "Tom needs a warm jacket for the winter.——他是為了買冬天的外套才去小店的。"
+    },
+    {
+      "q": "How much is the grey jacket?",
+      "qCn": "灰色外套多少錢？",
+      "opts": [
+        "A. Nine hundred dollars",
+        "B. Three hundred dollars",
+        "C. Six hundred dollars",
+        "D. One hundred dollars"
+      ],
+      "optsCn": [
+        "A. 九百元",
+        "B. 三百元",
+        "C. 六百元",
+        "D. 一百元"
+      ],
+      "ans": 2,
+      "expl": "Then he finds a grey jacket for six hundred dollars."
+    },
+    {
+      "q": "Tomorrow he ___ buy lunch with the extra money.",
+      "qCn": "明天他要用多出來的錢買午餐。（選出正確的字）",
+      "opts": [
+        "A. is",
+        "B. will",
+        "C. was",
+        "D. does"
+      ],
+      "ans": 1,
+      "expl": "Tomorrow 是未來的時間，講「明天打算做的事」要用 will + 原形動詞。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "That is too much money for him now.",
+      "b2": "He cannot afford it at the moment, so he keeps looking.",
+      "note": "把 too much money for him 換成動詞 afford（負擔得起），再用 so 接下一步，句子從「說感覺」變成「說結果」，這是 B1 很常見的升級。",
+      "sp": "That's way out of his price range, so he keeps browsing.",
+      "spNote": "way out of his price range（超出他的預算太多）、browsing（隨意逛逛）是口語常說的講法。",
+      "b1Cn": "那對他來說現在太貴了。",
+      "b2Cn": "他現在負擔不起，所以他繼續看下去。",
+      "spCn": "那超出他預算太多了，所以他繼續逛。"
+    },
+    {
+      "b1": "Tom can save three hundred dollars today.",
+      "b2": "By choosing the grey one, Tom saves three hundred dollars today.",
+      "note": "用 By + V-ing 把「怎麼做到的」放進句首，比單純的 can save 更清楚說出原因，是 B1 寫作常用的結構。",
+      "sp": "Going with the grey one puts three hundred back in his pocket.",
+      "spNote": "go with（選擇某一個）、puts money back in his pocket（省下錢）都是口語表達。",
+      "b1Cn": "Tom今天可以省下三百元。",
+      "b2Cn": "選了灰色那件，Tom今天省下三百元。",
+      "spCn": "選灰色那件，他口袋就多了三百塊。"
+    }
+  ]
+},
+{
+  "id": "d20260918b1",
+  "date": "2026-09-18",
+  "level": "B1",
+  "topic": "金錢與居住",
+  "words": 137,
+  "kind": "orig",
+  "title": "Amy Shops With a Budget",
+  "titleCn": "Amy抓著預算買菜",
+  "focus": "現在完成式（has lived / has been / has saved）搭配 for 與 since 講持續多久；when 帶出過去的時間點；closer、cheaper、bigger、better 等比較級",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "房租漲了，Amy不想搬家，決定從買菜開始省。留意 for three years 和 since July 這兩種講「持續多久」的方式，以及 when 怎麼把過去的某一刻帶進句子裡。",
+  "spoken": [
+    {
+      "en": "Amy's been in that tiny apartment for ages, and then the rent jumped in July.",
+      "cn": "Amy在那間小公寓住超久了，結果七月房租就跳上去。"
+    },
+    {
+      "en": "Instead of packing up and moving, she decided to fix her grocery bill.",
+      "cn": "她沒有收一收就搬走，而是決定從菜錢下手。"
+    },
+    {
+      "en": "Turns out the little market by the park beats the supermarket by a mile.",
+      "cn": "結果公園旁邊的小市場比超市便宜一大截。"
+    },
+    {
+      "en": "A month later she'd already covered the whole rent increase. Not bad at all.",
+      "cn": "一個月後她已經把整個漲幅賺回來了。真的不賴。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Amy has lived in the same small apartment for three years. Since July, her rent has been two thousand dollars higher every month. She was upset at first, but she decided to change her shopping habits instead of moving out.",
+      "cn": "Amy在同一間小公寓住了三年。從七月開始，她的房租每個月多了兩千元。她一開始很不高興，但她決定改變買東西的習慣，而不是搬走。"
+    },
+    {
+      "en": "Last Saturday she visited two places. The big supermarket next to the station was closer, but the market by the park was cheaper. She wrote down the price of rice, eggs, and milk in both shops.",
+      "cn": "上個星期六她去了兩個地方。車站旁邊的大超市比較近，但公園旁邊的市場比較便宜。她把米、蛋和牛奶的價格在兩家店都記了下來。"
+    },
+    {
+      "en": "The difference surprised her. At the market, the same basket cost almost two hundred dollars less. When she counted a whole month, the saving was bigger than she expected.",
+      "cn": "那個差距讓她很驚訝。在市場，同樣一籃東西便宜了將近兩百元。當她算了一整個月，省下的金額比她想像的還多。"
+    },
+    {
+      "en": "Now Amy buys her food at the market every week. She has already saved enough to cover one month of the higher rent. Small choices, she says, work better than big worries.",
+      "cn": "現在Amy每個星期都在市場買菜。她已經存到足夠的錢，可以付一個月漲上去的房租。她說，小小的選擇比大大的煩惱更有用。"
+    }
+  ],
+  "target": [
+    {
+      "w": "rent",
+      "ipa": "/rent/",
+      "pos": "n.",
+      "cn": "房租",
+      "def": "The money you pay each month to live in a place.",
+      "ex": "The company pays the rent for its workers in Hanoi.",
+      "exCn": "公司幫在河內的員工付房租。"
+    },
+    {
+      "w": "habit",
+      "ipa": "/ˈhæbɪt/",
+      "pos": "n.",
+      "cn": "習慣",
+      "def": "Something you do often, almost without thinking.",
+      "ex": "Reading before bed has become a good habit for my son.",
+      "exCn": "睡前閱讀已經變成我兒子的好習慣。"
+    },
+    {
+      "w": "difference",
+      "ipa": "/ˈdɪfɚəns/",
+      "pos": "n.",
+      "cn": "差別、差距",
+      "def": "The way two things are not the same.",
+      "ex": "There is a big difference between the two phone plans.",
+      "exCn": "那兩個手機方案之間有很大的差別。"
+    },
+    {
+      "w": "surprise",
+      "ipa": "/sɚˈpraɪz/",
+      "pos": "v.",
+      "cn": "使驚訝",
+      "def": "To make someone feel something they did not expect.",
+      "ex": "The sudden phone call surprised my grandmother.",
+      "exCn": "那通突然打來的電話讓我奶奶嚇了一跳。"
+    },
+    {
+      "w": "enough",
+      "ipa": "/ɪˈnʌf/",
+      "pos": "adj.",
+      "cn": "足夠的",
+      "def": "As much as you need.",
+      "ex": "There were not enough chairs for everyone at the meeting.",
+      "exCn": "會議上椅子不夠每個人坐。"
+    },
+    {
+      "w": "budget",
+      "ipa": "/ˈbʌdʒɪt/",
+      "pos": "n.",
+      "cn": "預算",
+      "def": "A plan for how much money you can spend.",
+      "ex": "Our team keeps a monthly budget for office supplies.",
+      "exCn": "我們團隊有一份辦公用品的月預算。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Amy change her shopping habits?",
+      "qCn": "Amy為什麼改變買東西的習慣？",
+      "opts": [
+        "A. Because her rent went up",
+        "B. Because she moved to a new city",
+        "C. Because the market closed",
+        "D. Because she lost her job"
+      ],
+      "optsCn": [
+        "A. 因為她的房租漲了",
+        "B. 因為她搬到新城市",
+        "C. 因為市場關門了",
+        "D. 因為她失業了"
+      ],
+      "ans": 0,
+      "expl": "Since July, her rent has been two thousand dollars higher every month.——房租漲了，她才決定改變買東西的方式。"
+    },
+    {
+      "q": "What did Amy find at the market by the park?",
+      "qCn": "Amy在公園旁邊的市場發現什麼？",
+      "opts": [
+        "A. The same basket cost more",
+        "B. The same basket cost about two hundred dollars less",
+        "C. There was no rice or milk",
+        "D. The shop was closed on Saturday"
+      ],
+      "optsCn": [
+        "A. 同樣一籃東西比較貴",
+        "B. 同樣一籃東西便宜了大約兩百元",
+        "C. 那裡沒有米也沒有牛奶",
+        "D. 那家店星期六沒開"
+      ],
+      "ans": 1,
+      "expl": "At the market, the same basket cost almost two hundred dollars less."
+    },
+    {
+      "q": "Amy has lived in the same apartment ___ three years.",
+      "qCn": "Amy在同一間公寓住了三年。（選出正確的字）",
+      "opts": [
+        "A. since",
+        "B. for",
+        "C. when",
+        "D. from"
+      ],
+      "ans": 1,
+      "expl": "three years 是「一段時間長度」，要用 for；since 後面只能接開始的那個時間點（例如 since July）。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "She was upset at first, but she decided to change her shopping habits.",
+      "b2": "Although she was upset at first, she chose to change her shopping habits rather than move out.",
+      "note": "用 Although 開頭的讓步子句取代 but，再用 rather than 點出「不選另一條路」，訊息量一次變多，是 B1+ 的寫法。",
+      "sp": "She was pretty annoyed at first, but she figured she'd fix the grocery bill instead of packing up.",
+      "spNote": "pretty annoyed（滿火大的）、figured（覺得、打算）、packing up（打包搬家）都是口語說法。",
+      "b1Cn": "她一開始很不高興，但她決定改變買東西的習慣。",
+      "b2Cn": "雖然她一開始很不高興，但她選擇改變買東西的習慣，而不是搬走。",
+      "spCn": "她一開始滿火大的，但她想說與其打包搬家，不如先把菜錢搞定。"
+    },
+    {
+      "b1": "The difference surprised her.",
+      "b2": "She was surprised by how wide the difference turned out to be.",
+      "note": "改成被動的 was surprised by，再用 how wide... 的名詞子句把「差多少」講清楚，比單一個名詞 the difference 具體得多。",
+      "sp": "She couldn't believe how big the gap was.",
+      "spNote": "couldn't believe（不敢相信）是口語裡表達驚訝最常用的開頭。",
+      "b1Cn": "那個差距讓她很驚訝。",
+      "b2Cn": "差距之大讓她很驚訝。",
+      "spCn": "她不敢相信差這麼多。"
+    }
+  ]
+},
+{
+  "id": "d20260918b1p",
+  "date": "2026-09-18",
+  "level": "B1+",
+  "topic": "新聞·金錢與居住",
+  "words": 189,
+  "kind": "news",
+  "title": "Rates Stay Put, Home Loan Rules Ease",
+  "titleCn": "利率按兵不動，房貸規定放寬",
+  "source": "改寫自 中央社 Focus Taiwan 報導（2026/09/17）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/business/202609170021",
+  "focus": "被動語態（was made / have been loosened / were introduced / was reduced）與現在完成式（has been held / has pushed up）搭配使用",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "新聞英文最愛用被動語態，因為「誰做的」常常不重要，重要的是「什麼被決定了」。這篇留意 was made、have been loosened、were introduced 這些被動形式，還有 has been held 這種「現在完成式＋被動」。",
+  "spoken": [
+    {
+      "en": "So the central bank basically sat on its hands again this quarter.",
+      "cn": "所以央行這一季基本上又是按兵不動。"
+    },
+    {
+      "en": "Rates stay where they are, because nobody wants to rock the boat right now.",
+      "cn": "利率維持原狀，因為現在沒人想搞出波瀾。"
+    },
+    {
+      "en": "The real news is the housing side — second-home buyers get a bit more room.",
+      "cn": "真正的重點在房市這邊，買第二間房的人空間變大了一點。"
+    },
+    {
+      "en": "Seventy percent instead of sixty. Still tight, but not as tight as before.",
+      "cn": "從六成變七成。還是緊，但沒有以前那麼緊。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Taiwan's central bank decided on Wednesday to leave its key interest rates where they are. It was the tenth quarter in a row without a change. The discount rate has been held at 2 percent, the highest level in fifteen years.",
+      "cn": "台灣的中央銀行在星期三決定讓主要利率維持原狀。這已經是連續第十季沒有調整。重貼現率一直維持在2%，是十五年來的最高水準。"
+    },
+    {
+      "en": "The bank said the decision was made to keep the economy steady while the world stays uncertain. Conflict in the Middle East has pushed up some prices, and officials do not want to add more pressure at home. Consumer prices are now expected to rise by about 2 percent this year, and to slow down again next year.",
+      "cn": "央行表示，這個決定是為了在國際情勢不明朗時穩住經濟。中東的衝突已經推高了部分物價，官員不希望在國內再增加壓力。消費者物價今年預計上漲約2%，明年則會再放緩。"
+    },
+    {
+      "en": "At the same time, the rules for home loans have been loosened. From Friday, a family buying a second home can borrow up to 70 percent of the price, instead of 60 percent. Buyers of land are also no longer told to start building within a fixed period.",
+      "cn": "同時，房貸的規定也放寬了。從星期五開始，買第二間房的家庭可以貸到房價的七成，而不是原本的六成。買土地的人也不再被要求要在固定期限內動工。"
+    },
+    {
+      "en": "These limits were introduced two years ago. According to the bank, they have worked: lending to the property market was reduced, speculation cooled, and banks became more careful about risk. The looser rules do not mean the door is fully open again.",
+      "cn": "這些限制是兩年前推出的。央行認為它們發揮了作用：流向房市的放款減少了、炒作降溫了，銀行對風險也變得更謹慎。規定放寬並不代表大門又完全打開了。"
+    }
+  ],
+  "target": [
+    {
+      "w": "interest",
+      "ipa": "/ˈɪntrəst/",
+      "pos": "n.",
+      "cn": "利息",
+      "def": "Extra money you pay a bank for borrowing, or the bank pays you for saving.",
+      "ex": "The bank charges very little interest on student loans.",
+      "exCn": "這家銀行對學生貸款只收很少的利息。"
+    },
+    {
+      "w": "steady",
+      "ipa": "/ˈstedi/",
+      "pos": "adj.",
+      "cn": "穩定的",
+      "def": "Not changing suddenly; staying at the same level.",
+      "ex": "Her voice stayed steady even during the difficult meeting.",
+      "exCn": "即使在那場艱難的會議上，她的聲音依然很穩。"
+    },
+    {
+      "w": "uncertain",
+      "ipa": "/ʌnˈsɝː.t̬ən/",
+      "pos": "adj.",
+      "cn": "不確定的",
+      "def": "Not known or not decided yet.",
+      "ex": "The date of the trip is still uncertain for us.",
+      "exCn": "旅行的日期對我們來說還不確定。"
+    },
+    {
+      "w": "pressure",
+      "ipa": "/ˈpreʃɚ/",
+      "pos": "n.",
+      "cn": "壓力",
+      "def": "A strong force or worry that pushes you to act.",
+      "ex": "Parents often feel pressure when their children take exams.",
+      "exCn": "孩子考試時，父母常常會感到壓力。"
+    },
+    {
+      "w": "loosen",
+      "ipa": "/ˈluːsən/",
+      "pos": "v.",
+      "cn": "放寬、鬆開",
+      "def": "To make a rule or a grip less tight.",
+      "ex": "He loosened his tie as soon as he sat down.",
+      "exCn": "他一坐下就把領帶鬆開。"
+    },
+    {
+      "w": "borrow",
+      "ipa": "/ˈbɑːroʊ/",
+      "pos": "v.",
+      "cn": "借入",
+      "def": "To take money or a thing and give it back later.",
+      "ex": "She borrowed a bicycle from her neighbour last weekend.",
+      "exCn": "她上週末跟鄰居借了一台腳踏車。"
+    },
+    {
+      "w": "speculation",
+      "ipa": "/ˌspekjəˈleɪʃən/",
+      "pos": "n.",
+      "cn": "炒作、投機",
+      "def": "Buying something only to sell it later at a higher price.",
+      "ex": "There was a lot of speculation about who would win.",
+      "exCn": "關於誰會贏，外界有很多揣測。"
+    },
+    {
+      "w": "careful",
+      "ipa": "/ˈkerfəl/",
+      "pos": "adj.",
+      "cn": "謹慎的",
+      "def": "Thinking about what could go wrong before you act.",
+      "ex": "Be careful with that glass bowl, because it breaks easily.",
+      "exCn": "小心那個玻璃碗，它很容易破。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many quarters in a row has the bank left rates unchanged?",
+      "qCn": "央行已經連續幾季沒有調整利率？",
+      "opts": [
+        "A. Two",
+        "B. Five",
+        "C. Ten",
+        "D. Fifteen"
+      ],
+      "optsCn": [
+        "A. 兩季",
+        "B. 五季",
+        "C. 十季",
+        "D. 十五季"
+      ],
+      "ans": 2,
+      "expl": "It was the tenth quarter in a row without a change.——fifteen 是「十五年來最高」的年數，不是季數，不要看錯。"
+    },
+    {
+      "q": "What changes for people buying a second home?",
+      "qCn": "買第二間房的人有什麼改變？",
+      "opts": [
+        "A. They can borrow 70 percent instead of 60 percent",
+        "B. They must start building within one year",
+        "C. They cannot borrow from banks anymore",
+        "D. They pay no interest for two years"
+      ],
+      "optsCn": [
+        "A. 可以貸七成，而不是六成",
+        "B. 必須在一年內動工",
+        "C. 不能再跟銀行貸款",
+        "D. 兩年內不用付利息"
+      ],
+      "ans": 0,
+      "expl": "a family buying a second home can borrow up to 70 percent of the price, instead of 60 percent."
+    },
+    {
+      "q": "According to the bank, what did the older limits do?",
+      "qCn": "央行認為原本的限制帶來什麼效果？",
+      "opts": [
+        "A. They raised the price of every house",
+        "B. They reduced property lending and cooled speculation",
+        "C. They stopped banks from lending at all",
+        "D. They had no effect at all"
+      ],
+      "optsCn": [
+        "A. 讓每一間房子都漲價",
+        "B. 減少房市放款並讓炒作降溫",
+        "C. 讓銀行完全不能放款",
+        "D. 完全沒有效果"
+      ],
+      "ans": 1,
+      "expl": "lending to the property market was reduced, speculation cooled, and banks became more careful about risk."
+    },
+    {
+      "q": "The rules for home loans ___ this week.",
+      "qCn": "房貸的規定這個星期被放寬了。（選出正確的被動形式）",
+      "opts": [
+        "A. have loosened",
+        "B. have been loosened",
+        "C. are loosening",
+        "D. loosened"
+      ],
+      "ans": 1,
+      "expl": "規定是「被」放寬的，主詞 rules 是承受動作的一方，所以要用現在完成式的被動 have been + 過去分詞。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The bank said the decision was made to keep the economy steady.",
+      "b2": "The bank framed the decision as a way of keeping the economy steady while global risks remain unresolved.",
+      "note": "把 said 換成更精準的 framed...as（把某事定調為），再用 while 子句補上背景，這是 B2 新聞寫作常見的密度。",
+      "sp": "The bank basically said they're holding steady until things calm down out there.",
+      "spNote": "holding steady（維持不變）、calm down out there（外面情勢冷靜下來）是口語講法。",
+      "b1Cn": "央行表示，這個決定是為了穩住經濟。",
+      "b2Cn": "央行把這個決定定調為在全球風險未解時穩住經濟的做法。",
+      "spCn": "央行基本上就是說，他們要維持現狀，等外面情勢冷靜下來。"
+    },
+    {
+      "b1": "These limits were introduced two years ago.",
+      "b2": "These limits had been in place for two years before the bank decided to relax them.",
+      "note": "用過去完成式 had been in place 把「在放寬之前就已經存在兩年」的先後順序講清楚，比單純的過去被動更精確。",
+      "sp": "Those caps had been sitting there for a couple of years before the bank eased off.",
+      "spNote": "caps（上限）、sitting there（一直擺在那裡）、eased off（放鬆一點）都是口語用法。",
+      "b1Cn": "這些限制是兩年前推出的。",
+      "b2Cn": "這些限制已經實施兩年，之後央行才決定放寬。",
+      "spCn": "那些上限已經擺了兩年，央行才鬆手。"
+    }
+  ]
+},
+{
+  "id": "d20260918b2",
+  "date": "2026-09-18",
+  "level": "B2",
+  "topic": "新聞·金錢與居住",
+  "words": 258,
+  "kind": "news",
+  "title": "Doing Nothing, Carefully",
+  "titleCn": "小心翼翼地「什麼都不做」",
+  "source": "改寫自 中央社 Focus Taiwan 報導（2026/09/17）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/business/202609170021",
+  "focus": "現在完成式（has chosen / has been raised / has not closed）與過去簡單式（left, kept, was made）在新聞敘事裡的分工；被動語態承載政策動作",
+  "intro": "同一則新聞，這次換成分析的角度。留意記者怎麼用現在完成式開場（has chosen、has been raised）來強調「到現在為止的結果」，又在描述細節時切回過去簡單式（left、kept、was made）。",
+  "spoken": [
+    {
+      "en": "Ten quarters of sitting still — at some point that becomes a statement in itself.",
+      "cn": "連續十季按兵不動，到某個程度，這本身就是一種表態。"
+    },
+    {
+      "en": "Growth came in better than they thought in June, but prices are still a bit warm.",
+      "cn": "成長比他們六月預期的好，但物價還是有點熱。"
+    },
+    {
+      "en": "The quiet part is the property rules — second homes went from sixty to seventy percent.",
+      "cn": "低調的部分在房市規定，第二間房從六成變七成。"
+    },
+    {
+      "en": "If you're still renting and saving for a first place, honestly, nothing changed for you.",
+      "cn": "如果你還在租房、還在存第一間房的頭期款，老實說什麼都沒變。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "For the tenth quarter in a row, Taiwan's central bank has chosen to do nothing. At its meeting on 17 September, the board left the discount rate at 2 percent, a level last seen fifteen years ago, and kept its two lending rates unchanged as well. Doing nothing, however, is not the same as having no opinion.",
+      "cn": "台灣中央銀行已經連續第十季選擇按兵不動。在九月十七日的會議上，理事會把重貼現率維持在2%，這個水準上一次出現是十五年前，兩項擔保與無擔保放款利率也同樣不變。不過，「什麼都不做」並不等於「沒有意見」。"
+    },
+    {
+      "en": "The bank explained the decision in terms of balance. Growth at home has been stronger than the bank predicted in June, and its forecast has been raised accordingly. Conflict in the Middle East, however, continues to feed into shipping and energy costs, and consumer prices are now expected to climb slightly faster this year than earlier estimates suggested, before easing back below 2 percent in 2027.",
+      "cn": "央行用「平衡」來解釋這個決定。國內成長比央行六月預測的更強勁，成長預估因此被上調。然而中東的衝突持續反映在航運與能源成本上，消費者物價今年預計會比先前估計上漲得稍快一些，之後在2027年回落到2%以下。"
+    },
+    {
+      "en": "The more interesting move was made quietly, in the rules that govern property lending. From 19 September, a household buying a second home may borrow up to 70 percent of the purchase price rather than 60 percent, and buyers of land are no longer required to begin construction within a fixed period. Both limits had been introduced two years earlier, when prices were climbing and housing was widely treated as an investment.",
+      "cn": "比較值得玩味的動作是悄悄做出來的——在規範房市放款的規定上。從九月十九日起，買第二間房的家庭可以貸到購屋價格的七成，而不是六成；買土地的人也不再被要求在固定期限內動工。這兩項限制是兩年前推出的，當時房價正在上漲，房子被普遍當成一種投資。"
+    },
+    {
+      "en": "The bank argues that those years of pressure worked. Lending to the property sector was cut back, speculative buying cooled, and banks tightened their own controls on risk. Loosening a rule after it has done its job is not the same as abandoning it, and for anyone still saving for a first home, the gap between rent and a mortgage has not closed.",
+      "cn": "央行主張，那幾年的壓力確實有效。流向房地產部門的放款被縮減、投機性買盤降溫，銀行也收緊了自己的風險控管。一條規定在發揮作用之後被放寬，並不等於被放棄；而對還在為第一間房存錢的人來說，房租與房貸之間的差距並沒有縮小。"
+    }
+  ],
+  "target": [
+    {
+      "w": "quarter",
+      "ipa": "/ˈkwɔːr.t̬ɚ/",
+      "pos": "n.",
+      "cn": "季（三個月）",
+      "def": "One of the four three-month periods of a business year.",
+      "ex": "Sales of the new model rose during the final quarter.",
+      "exCn": "新款的銷售在最後一季成長了。"
+    },
+    {
+      "w": "forecast",
+      "ipa": "/ˈfɔːrkæst/",
+      "pos": "n.",
+      "cn": "預測",
+      "def": "A statement about what is likely to happen later.",
+      "ex": "The weather forecast warned of heavy rain on Sunday.",
+      "exCn": "氣象預報警告星期日會有大雨。"
+    },
+    {
+      "w": "purchase",
+      "ipa": "/ˈpɝːtʃəs/",
+      "pos": "n.",
+      "cn": "購買（的東西）",
+      "def": "Something you buy, or the act of buying it.",
+      "ex": "Keep the receipt in case you return the purchase.",
+      "exCn": "收據留著，以免你要退貨。"
+    },
+    {
+      "w": "require",
+      "ipa": "/rɪˈkwaɪɚ/",
+      "pos": "v.",
+      "cn": "要求、規定",
+      "def": "To say officially that someone must do something.",
+      "ex": "Most airlines require passengers to check in an hour early.",
+      "exCn": "大多數航空公司要求旅客提早一小時報到。"
+    },
+    {
+      "w": "tighten",
+      "ipa": "/ˈtaɪtən/",
+      "pos": "v.",
+      "cn": "收緊",
+      "def": "To make something stricter or less loose.",
+      "ex": "The coach tightened the training schedule before the final.",
+      "exCn": "教練在決賽前把訓練行程收得更緊。"
+    },
+    {
+      "w": "abandon",
+      "ipa": "/əˈbændən/",
+      "pos": "v.",
+      "cn": "放棄",
+      "def": "To stop doing or supporting something completely.",
+      "ex": "They had to abandon the picnic when the rain started.",
+      "exCn": "雨一下起來，他們只好放棄野餐。"
+    },
+    {
+      "w": "gap",
+      "ipa": "/ɡæp/",
+      "pos": "n.",
+      "cn": "落差",
+      "def": "A big difference between two amounts or groups.",
+      "ex": "There is a wide gap between the two teams in the table.",
+      "exCn": "積分榜上那兩支隊伍之間有很大的落差。"
+    },
+    {
+      "w": "estimate",
+      "ipa": "/ˈestəmət/",
+      "pos": "n.",
+      "cn": "估計值",
+      "def": "A guess about a number, based on the information you have.",
+      "ex": "Our first estimate of the cost was far too low.",
+      "exCn": "我們對成本的第一次估算實在太低了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What does the writer mean by \"Doing nothing, however, is not the same as having no opinion\"?",
+      "qCn": "作者說「什麼都不做並不等於沒有意見」是什麼意思？",
+      "opts": [
+        "A. The bank did not attend the meeting",
+        "B. Holding rates steady is itself a deliberate choice",
+        "C. The bank has no forecast for next year",
+        "D. The board members disagreed with each other"
+      ],
+      "optsCn": [
+        "A. 央行沒有出席會議",
+        "B. 維持利率不變本身就是一個刻意的選擇",
+        "C. 央行對明年沒有任何預測",
+        "D. 理事之間意見不合"
+      ],
+      "ans": 1,
+      "expl": "第一段結尾這句話是要帶出第二段：The bank explained the decision in terms of balance.——不動利率是經過權衡的決定，不是沒有想法。"
+    },
+    {
+      "q": "Why are consumer prices expected to rise a little faster this year?",
+      "qCn": "為什麼今年消費者物價預計會漲得快一點？",
+      "opts": [
+        "A. Because wages rose sharply",
+        "B. Because the discount rate was cut",
+        "C. Because conflict abroad keeps feeding into shipping and energy costs",
+        "D. Because property lending increased"
+      ],
+      "optsCn": [
+        "A. 因為薪資大幅上漲",
+        "B. 因為重貼現率被調降",
+        "C. 因為國外的衝突持續反映在航運與能源成本上",
+        "D. 因為房市放款增加"
+      ],
+      "ans": 2,
+      "expl": "Conflict in the Middle East, however, continues to feed into shipping and energy costs."
+    },
+    {
+      "q": "What is the writer's point in the last paragraph?",
+      "qCn": "作者在最後一段想表達什麼？",
+      "opts": [
+        "A. The limits failed and had to be cancelled",
+        "B. Relaxing a rule that worked is not the same as giving it up, and first-time buyers are no better off",
+        "C. Rent has become cheaper than a mortgage",
+        "D. Banks have stopped controlling risk"
+      ],
+      "optsCn": [
+        "A. 那些限制失敗了，所以必須取消",
+        "B. 放寬一條有效的規定不等於放棄它，而首購族的處境並沒有變好",
+        "C. 房租已經變得比房貸便宜",
+        "D. 銀行已經不再控管風險"
+      ],
+      "ans": 1,
+      "expl": "Loosening a rule after it has done its job is not the same as abandoning it, and... the gap between rent and a mortgage has not closed."
+    },
+    {
+      "q": "Its forecast ___ because growth was stronger than the bank predicted in June.",
+      "qCn": "因為成長比央行六月預測的更強勁，成長預估被上調了。（選出正確的形式）",
+      "opts": [
+        "A. has been raised",
+        "B. has raised",
+        "C. was raising",
+        "D. is raising"
+      ],
+      "ans": 0,
+      "expl": "forecast 是「被」上調的，且結果延續到現在，所以用現在完成式的被動 has been + 過去分詞。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The bank did not change the rates again.",
+      "b2": "For the tenth quarter in a row, the bank has chosen to do nothing.",
+      "note": "用 For the tenth quarter in a row 這種「累計」開場搭配現在完成式 has chosen，讀者立刻知道這不是單一事件，而是一段持續的紀錄。",
+      "sp": "That's ten quarters straight of the bank just sitting tight.",
+      "spNote": "ten quarters straight（連續十季）、sitting tight（按兵不動）是口語說法。",
+      "b1Cn": "央行又沒有調整利率。",
+      "b2Cn": "央行已經連續第十季選擇按兵不動。",
+      "spCn": "央行已經連十季就這樣按兵不動。"
+    },
+    {
+      "b1": "The rule worked, so now they have made it looser.",
+      "b2": "Loosening a rule after it has done its job is not the same as abandoning it.",
+      "note": "把兩個子句壓縮成一個 V-ing 當主詞的句子（Loosening a rule...），再用 is not the same as 做出判斷，這是評論文章常見的收尾句型。",
+      "sp": "Easing off once a rule has done its thing isn't the same as scrapping it.",
+      "spNote": "easing off（放鬆一點）、done its thing（發揮完作用）、scrapping（丟掉、廢除）都是口語表達。",
+      "b1Cn": "這條規定有用，所以現在他們把它放寬了。",
+      "b2Cn": "一條規定在發揮作用之後被放寬，並不等於被放棄。",
+      "spCn": "規定發揮完作用之後放鬆一點，跟直接廢掉是兩回事。"
+    }
+  ]
+},
+{
   "id": "d20260915a2",
   "date": "2026-09-15",
   "level": "A2",
@@ -6011,6 +6797,718 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260918a2",
+  "date": "2026-09-18",
+  "unitNo": 12,
+  "level": "A2",
+  "title": "For and Since; When...? and How Long...?",
+  "titleCn": "for 跟 since；When...? 問哪一天、How long...? 問多久",
+  "srcDays": [],
+  "summary": "for 後面接一段長度、since 後面接一個起點；問句也分兩種：When...? 問「哪一天開始的」要配過去簡單式，How long...? 問「到現在多久了」要配現在完成式。",
+  "sections": [
+    {
+      "h": "for 和 since 後面接的東西不一樣",
+      "table": {
+        "head": [
+          "用哪個",
+          "後面接什麼",
+          "例子"
+        ],
+        "rows": [
+          [
+            "for",
+            "一段長度",
+            "for two weeks / for ten years"
+          ],
+          [
+            "since",
+            "一個起點",
+            "since Monday / since 2021"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "They have owned this shop for ten years.",
+          "cn": "他們開這家店十年了。",
+          "note": "ten years 是長度，所以用 for"
+        },
+        {
+          "en": "She has taught at this school since 2021.",
+          "cn": "她從2021年就在這所學校教書了。",
+          "note": "2021 是起點，所以用 since"
+        }
+      ]
+    },
+    {
+      "h": "When...? 問哪一刻，How long...? 問多久",
+      "table": {
+        "head": [
+          "問句",
+          "問的是",
+          "要用的時態"
+        ],
+        "rows": [
+          [
+            "When ...?",
+            "開始的那一刻",
+            "過去簡單式（did + 原形）"
+          ],
+          [
+            "How long ...?",
+            "到現在為止的長度",
+            "現在完成式（have + 過去分詞）"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "When did your brother move to Kaohsiung?",
+          "cn": "你哥哥什麼時候搬到高雄的？",
+          "note": "問那一刻，用過去式 did move"
+        },
+        {
+          "en": "How long has your brother lived in Kaohsiung?",
+          "cn": "你哥哥在高雄住多久了？",
+          "note": "問長度，用現在完成式 has lived"
+        }
+      ]
+    },
+    {
+      "h": "為什麼時態會不一樣",
+      "bullets": [
+        "When...? 問的是已經結束的那一刻，所以配過去式",
+        "How long...? 問的是從那一刻到現在，事情還沒結束，所以配現在完成式",
+        "中文兩種都可以說「什麼時候」，英文卻要分兩邊，這是最容易漏掉的地方"
+      ],
+      "examples": [
+        {
+          "en": "I bought this bike last April.",
+          "cn": "我去年四月買了這台腳踏車。",
+          "note": "買的動作結束了，用過去式"
+        },
+        {
+          "en": "I have had this bike since last April.",
+          "cn": "我從去年四月就有這台腳踏車了。",
+          "note": "車子現在還在，用現在完成式"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I have worked here since three months.",
+      "good": "I have worked here for three months.",
+      "why": "three months 是一段長度，要用 for。中文說「從三個月前」很自然，但英文的 since 後面只能接一個起點，不能接長度。"
+    },
+    {
+      "bad": "How long did you live in Tainan?",
+      "good": "How long have you lived in Tainan?",
+      "why": "如果你現在還住在台南，這件事就還沒結束，要用現在完成式。用過去式 did live 會讓對方以為你早就搬走了。"
+    },
+    {
+      "bad": "When have you moved to this city?",
+      "good": "When did you move to this city?",
+      "why": "When 問的是已經過去的那一刻，要用過去式。現在完成式不能跟明確的過去時間點一起出現，所以 When have you...? 是錯的。"
+    },
+    {
+      "bad": "She has been a nurse for 2019.",
+      "good": "She has been a nurse since 2019.",
+      "why": "2019 是一個起點，要用 since。for 後面永遠接「多長」，例如 for six years，不能接年份。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "We have lived in this town ___ 2019.",
+      "qCn": "我們從2019年就住在這個小鎮了。",
+      "opts": [
+        "for",
+        "since",
+        "at",
+        "in"
+      ],
+      "ans": 1,
+      "expl": "2019 是開始的時間點，用 since。"
+    },
+    {
+      "q": "He has played the guitar ___ six months.",
+      "qCn": "他彈吉他六個月了。",
+      "opts": [
+        "since",
+        "for",
+        "from",
+        "at"
+      ],
+      "ans": 1,
+      "expl": "six months 是一段長度，用 for。"
+    },
+    {
+      "q": "___ did you buy this phone?",
+      "qCn": "你這支手機是什麼時候買的？",
+      "opts": [
+        "How long",
+        "When",
+        "Where",
+        "Which"
+      ],
+      "ans": 1,
+      "expl": "問「哪一刻買的」用 When，後面配過去式 did buy。"
+    },
+    {
+      "q": "How long ___ you had that bike?",
+      "qCn": "那台腳踏車你有多久了？",
+      "opts": [
+        "have",
+        "did",
+        "do",
+        "are"
+      ],
+      "ans": 0,
+      "expl": "How long 問到現在為止的長度，用現在完成式 have had。"
+    }
+  ]
+},
+{
+  "id": "dg20260918b1",
+  "date": "2026-09-18",
+  "unitNo": 12,
+  "level": "B1",
+  "title": "When...? and How Long...? — Two Different Questions",
+  "titleCn": "When...? 和 How long...? 的分工：ago、for、since 怎麼配時態",
+  "srcDays": [],
+  "summary": "同一件事有兩種問法：問「哪一刻」用過去簡單式配 ago，問「到現在多久」用現在完成式配 for 或 since；時間訊號一換，時態就得跟著換。",
+  "sections": [
+    {
+      "h": "同一件事，兩種問法",
+      "table": {
+        "head": [
+          "問句",
+          "時態",
+          "典型回答"
+        ],
+        "rows": [
+          [
+            "When ...?",
+            "過去簡單式",
+            "In 2022. / Two years ago."
+          ],
+          [
+            "How long ...?",
+            "現在完成式",
+            "For two years. / Since 2022."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "When did Anita join the Hanoi office?",
+          "cn": "Anita 什麼時候到河內辦公室的？",
+          "note": "問那一刻，用過去式"
+        },
+        {
+          "en": "How long has Anita worked in Hanoi?",
+          "cn": "Anita 在河內工作多久了？",
+          "note": "問到現在的長度，用現在完成式"
+        }
+      ]
+    },
+    {
+      "h": "ago 和 for 最常被搞混",
+      "bullets": [
+        "ago 配過去簡單式，從現在往回數：two years ago",
+        "for 配現在完成式，量的是從過去到現在的整段：for two years",
+        "同一件事兩種說法都可以，但時間訊號和時態不能混著用"
+      ],
+      "examples": [
+        {
+          "en": "She moved to Hanoi two years ago.",
+          "cn": "她兩年前搬到河內。",
+          "note": "ago 搭配過去簡單式 moved"
+        },
+        {
+          "en": "She has lived in Hanoi for two years.",
+          "cn": "她在河內住兩年了。",
+          "note": "for 搭配現在完成式 has lived"
+        }
+      ]
+    },
+    {
+      "h": "since 後面也可以接一整個句子",
+      "bullets": [
+        "since + 時間點：since Monday, since 2022",
+        "since + 一個過去簡單式的子句：since she moved to Hanoi",
+        "子句裡用過去式，主句仍然用現在完成式"
+      ],
+      "examples": [
+        {
+          "en": "We have not met since she moved to Hanoi.",
+          "cn": "自從她搬到河內，我們就沒見過面了。",
+          "note": "主句現在完成式，since 子句用過去式"
+        },
+        {
+          "en": "It has rained every day since the typhoon passed.",
+          "cn": "自從颱風過去之後，每天都在下雨。",
+          "note": "一樣的搭配方式"
+        }
+      ]
+    },
+    {
+      "h": "問句的語序不要照中文排",
+      "bullets": [
+        "How long have you...? 助動詞 have 要放在主詞前面",
+        "When did you...? 助動詞 did 一樣放主詞前面，後面的動詞回原形",
+        "中文說「你什麼時候搬來的」主詞在前，英文要把助動詞提前"
+      ],
+      "examples": [
+        {
+          "en": "How long have they been married?",
+          "cn": "他們結婚多久了？",
+          "note": "have 放在 they 前面"
+        },
+        {
+          "en": "When did they get married?",
+          "cn": "他們什麼時候結婚的？",
+          "note": "did 放在 they 前面，動詞回原形 get"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "How long do you work at this factory?",
+      "good": "How long have you worked at this factory?",
+      "why": "現在簡單式問的是「你平常的工作方式」，問不出累積的年資。要問「到現在做了多久」，一定要用現在完成式。"
+    },
+    {
+      "bad": "I have started this job two months ago.",
+      "good": "I started this job two months ago.",
+      "why": "two months ago 是一個明確的過去時間點，只能配過去簡單式。現在完成式跟 ago 天生不相容，這是中文母語者很常踩的地雷。"
+    },
+    {
+      "bad": "We have not seen each other since two years.",
+      "good": "We have not seen each other for two years.",
+      "why": "two years 是長度要用 for；since 後面必須是起點，例如 since 2024。中文都翻成「兩年沒見」，所以特別容易選錯。"
+    },
+    {
+      "bad": "When have you moved into this apartment?",
+      "good": "When did you move into this apartment?",
+      "why": "When 就是在問一個已經過去的時刻，要用過去式。把 have 換成 did、動詞回原形 move，句子才成立。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "___ did you move to Taichung?",
+      "qCn": "你什麼時候搬到台中的？",
+      "opts": [
+        "How long",
+        "When",
+        "Since",
+        "For"
+      ],
+      "ans": 1,
+      "expl": "後面是過去式 did move，問那一刻要用 When。"
+    },
+    {
+      "q": "I have studied Vietnamese ___ I arrived in Hanoi.",
+      "qCn": "自從我到河內以後就開始學越南語了。",
+      "opts": [
+        "for",
+        "since",
+        "ago",
+        "when"
+      ],
+      "ans": 1,
+      "expl": "since 後面可以接一個過去簡單式的子句，表示「從那件事之後」。"
+    },
+    {
+      "q": "They got the keys three weeks ___.",
+      "qCn": "他們三個星期前拿到鑰匙。",
+      "opts": [
+        "for",
+        "since",
+        "ago",
+        "before"
+      ],
+      "ans": 2,
+      "expl": "ago 從現在往回數，搭配過去簡單式 got。"
+    },
+    {
+      "q": "How long ___ your parents lived in that house?",
+      "qCn": "你爸媽在那間房子住多久了？",
+      "opts": [
+        "did",
+        "do",
+        "have",
+        "are"
+      ],
+      "ans": 2,
+      "expl": "問到現在為止住多久，用現在完成式 have lived。"
+    }
+  ]
+},
+{
+  "id": "dg20260918b1p",
+  "date": "2026-09-18",
+  "unitNo": 13,
+  "level": "B1+",
+  "title": "Present Perfect and Past Simple (1)",
+  "titleCn": "現在完成式 vs 過去簡單式（一）：那段時間結束了沒",
+  "srcDays": [],
+  "summary": "判斷的關鍵不是「多久以前」，而是「那個時間框關上了沒」：yesterday、last week、in 2020、ago 都已經關上，用過去簡單式；today、this week、since、so far 還開著，或者根本沒說時間，就用現在完成式。",
+  "sections": [
+    {
+      "h": "關鍵是「那段時間結束了沒」",
+      "table": {
+        "head": [
+          "時間框",
+          "結束了沒",
+          "時態",
+          "例子"
+        ],
+        "rows": [
+          [
+            "yesterday / last week / in 2020 / two hours ago",
+            "已經關上",
+            "過去簡單式",
+            "I sent the report yesterday."
+          ],
+          [
+            "today / this week / this year",
+            "還開著",
+            "現在完成式",
+            "I have sent three reports this week."
+          ],
+          [
+            "沒說時間",
+            "不重要，只看結果",
+            "現在完成式",
+            "I have sent the report."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The factory closed the old line in 2023.",
+          "cn": "那家工廠在2023年關掉了舊生產線。",
+          "note": "in 2023 已經關上，用過去式"
+        },
+        {
+          "en": "The factory has closed two lines this year.",
+          "cn": "那家工廠今年已經關掉兩條生產線。",
+          "note": "this year 還沒過完，用現在完成式"
+        },
+        {
+          "en": "The factory has closed the old line.",
+          "cn": "那家工廠已經把舊生產線關掉了。",
+          "note": "沒說時間，重點是現在的結果"
+        }
+      ]
+    },
+    {
+      "h": "現在完成式講的是「現在的結果」",
+      "bullets": [
+        "I have lost my badge. 的重點是：我現在進不去",
+        "I lost my badge on Monday. 的重點是：星期一發生的那件事",
+        "只要補上明確的過去時間，就必須切回過去簡單式"
+      ],
+      "examples": [
+        {
+          "en": "Anita has just sent the revised drawing.",
+          "cn": "Anita 剛剛把修改過的圖面寄出去了。",
+          "note": "just 強調現在的結果"
+        },
+        {
+          "en": "Anita sent the revised drawing on Tuesday.",
+          "cn": "Anita 星期二把修改過的圖面寄出去了。",
+          "note": "有 on Tuesday，切回過去式"
+        }
+      ]
+    },
+    {
+      "h": "第一次、到目前為止：ever / never / so far",
+      "bullets": [
+        "Have you ever...? 問的是「到目前為止有沒有過」，用現在完成式",
+        "This is the first time I have... 也是現在完成式的固定搭配",
+        "so far、up to now、until now 都是「到現在為止」的訊號"
+      ],
+      "examples": [
+        {
+          "en": "Have you ever worked on a night shift?",
+          "cn": "你上過夜班嗎？",
+          "note": "ever 是「到目前為止」的訊號"
+        },
+        {
+          "en": "We have not received the samples so far.",
+          "cn": "到目前為止我們還沒收到樣品。",
+          "note": "so far 搭配現在完成式"
+        }
+      ]
+    },
+    {
+      "h": "新聞最常見的組合：先完成式，再過去式",
+      "body": "英文新聞的第一句通常用現在完成式宣布「發生了什麼、現在怎麼樣」，因為讀者最在意結果；接下來講細節時，只要出現明確時間就自動切回過去簡單式。",
+      "examples": [
+        {
+          "en": "The central bank has left interest rates unchanged.",
+          "cn": "中央銀行維持利率不變。",
+          "note": "開場：強調現在的狀態"
+        },
+        {
+          "en": "The board met on Wednesday afternoon.",
+          "cn": "理事會在星期三下午開了會。",
+          "note": "細節：有明確時間，用過去式"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I have finished the audit last Friday.",
+      "good": "I finished the audit last Friday.",
+      "why": "last Friday 是已經關上的時間框，必須用過去簡單式。中文的「已經」在兩種情況下都能用，所以我們很容易把它直接對應成完成式。"
+    },
+    {
+      "bad": "When have you sent the invoice?",
+      "good": "When did you send the invoice?",
+      "why": "When 本身就是在問一個已經過去的時刻，跟現在完成式互相排斥，所以要用 did send。"
+    },
+    {
+      "bad": "I worked here since 2022.",
+      "good": "I have worked here since 2022.",
+      "why": "since 2022 代表從那年到現在都還成立，這段時間還沒關上，要用現在完成式。用過去式會讓人以為你已經離職了。"
+    },
+    {
+      "bad": "Did you ever visit the Hanoi plant?",
+      "good": "Have you ever visited the Hanoi plant?",
+      "why": "ever 問的是「到目前為止的經驗」，這段時間還沒結束，正式場合要用現在完成式。美式口語偶爾會說 Did you ever...，但寫進信件或報告仍以完成式為準。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "We ___ to a new supplier last month.",
+      "qCn": "我們上個月換到新的供應商。",
+      "opts": [
+        "have moved",
+        "moved",
+        "have been moving",
+        "move"
+      ],
+      "ans": 1,
+      "expl": "last month 是已經關上的時間框，用過去簡單式。"
+    },
+    {
+      "q": "She ___ three reports this week.",
+      "qCn": "她這個星期已經寫了三份報告。",
+      "opts": [
+        "wrote",
+        "has written",
+        "was writing",
+        "writes"
+      ],
+      "ans": 1,
+      "expl": "this week 還沒過完，時間框還開著，用現在完成式。"
+    },
+    {
+      "q": "___ you ever been to the Kaohsiung plant?",
+      "qCn": "你去過高雄廠嗎？",
+      "opts": [
+        "Did",
+        "Have",
+        "Were",
+        "Do"
+      ],
+      "ans": 1,
+      "expl": "ever 問到目前為止的經驗，用 Have you ever + 過去分詞。"
+    },
+    {
+      "q": "The line ___ down since Tuesday morning.",
+      "qCn": "產線從星期二早上就停到現在。",
+      "opts": [
+        "was",
+        "has been",
+        "is",
+        "were"
+      ],
+      "ans": 1,
+      "expl": "since Tuesday morning 一路延伸到現在，用現在完成式 has been。"
+    }
+  ]
+},
+{
+  "id": "dg20260918b2",
+  "date": "2026-09-18",
+  "unitNo": 13,
+  "level": "B2",
+  "title": "Present Perfect and Past Simple in Formal Writing",
+  "titleCn": "現在完成式與過去簡單式：新聞與正式寫作裡的時間視角",
+  "srcDays": [],
+  "summary": "同一件事可以用兩種時態寫：現在完成式把讀者的視線拉到「現在的結果」，過去簡單式把事件釘回「當時那一刻」。新聞與報告常常先用前者開場，再用後者補細節。",
+  "sections": [
+    {
+      "h": "新聞的標準結構：先完成式，再過去式",
+      "body": "英文新聞的第一句幾乎都用現在完成式宣布「現在的狀況是什麼」，因為讀者最在意結果；第二句以後只要出現具體時間，就自動切回過去簡單式。這不是風格喜好，而是時間框的邏輯。",
+      "examples": [
+        {
+          "en": "Regulators have eased the limits on second mortgages.",
+          "cn": "主管機關放寬了第二戶房貸的限制。",
+          "note": "開場：讀者看到的是現在的狀態"
+        },
+        {
+          "en": "The board approved the change at its September meeting.",
+          "cn": "理事會在九月的會議上通過了這項改變。",
+          "note": "細節：有時間，改用過去式"
+        }
+      ]
+    },
+    {
+      "h": "完成式讓事情「還沒結案」，過去式讓事情「已經翻頁」",
+      "table": {
+        "head": [
+          "寫法",
+          "讀者的感覺",
+          "適合用在"
+        ],
+        "rows": [
+          [
+            "Sales have fallen for three quarters.",
+            "問題還在，還沒結案",
+            "現況分析、示警"
+          ],
+          [
+            "Sales fell in the third quarter.",
+            "那一季的事，已經翻頁",
+            "數據回顧、財報敘述"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Rents have risen faster than wages since 2021.",
+          "cn": "自2021年以來，房租漲得比薪資快。",
+          "note": "問題延續到現在"
+        },
+        {
+          "en": "Rents rose sharply in the second half of 2021.",
+          "cn": "房租在2021年下半年大幅上漲。",
+          "note": "回顧一段已經結束的期間"
+        }
+      ]
+    },
+    {
+      "h": "正式與口語的落差",
+      "bullets": [
+        "正式書面偏好 Have you ever...? 與 It has been decided that...",
+        "美式口語常把 Did you ever...? 或 I already ate. 當成完成式在用",
+        "寫報告、寫信給客戶時，回到完成式比較安全也比較中性"
+      ],
+      "examples": [
+        {
+          "en": "It has been agreed that the audit will be repeated.",
+          "cn": "各方已同意重做一次稽核。",
+          "note": "正式書面愛用的完成式被動，不點名是誰決定的"
+        },
+        {
+          "en": "We agreed to repeat the audit on 3 September.",
+          "cn": "我們在九月三日同意重做稽核。",
+          "note": "一旦寫出日期，就要改成過去式"
+        }
+      ]
+    },
+    {
+      "h": "修辭效果：用時態決定讀者站在哪裡",
+      "bullets": [
+        "想讓讀者覺得「這件事跟你現在有關」，就用現在完成式",
+        "想讓讀者把它當成背景、當成歷史，就用過去簡單式",
+        "評論文章常在結尾切回完成式，把話題拉回當下"
+      ],
+      "examples": [
+        {
+          "en": "The gap between rent and mortgage has not closed.",
+          "cn": "房租與房貸之間的差距並沒有縮小。",
+          "note": "結尾拉回現在，讀者會覺得問題還在"
+        },
+        {
+          "en": "The two-year freeze on second mortgages ended this month.",
+          "cn": "為期兩年的第二戶房貸凍結在本月結束。",
+          "note": "當成一個已經翻頁的事件來敘述"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "The company has published its annual report last March.",
+      "good": "The company published its annual report last March.",
+      "why": "last March 是關上的時間框，完成式不能跟它並存。很多人以為「年報現在還在、所以要用完成式」，但決定時態的是時間副詞，不是結果還在不在。"
+    },
+    {
+      "bad": "Since the new policy, prices increased steadily.",
+      "good": "Since the new policy took effect, prices have increased steadily.",
+      "why": "since 引導的期間延伸到現在，主句要用現在完成式；同時 since 後面接子句時，子句本身要用過去式，兩邊時態不一樣才是正確的。"
+    },
+    {
+      "bad": "In 2024, the bank has tightened the rules.",
+      "good": "In 2024, the bank tightened the rules.",
+      "why": "In 2024 把事件釘在那一年，時間框已經關上，即使影響延續到今天，時態仍然是過去簡單式。中文的「已經」會把我們誤導到完成式。"
+    },
+    {
+      "bad": "We work with this supplier since 2019.",
+      "good": "We have worked with this supplier since 2019.",
+      "why": "現在簡單式只描述習慣，講不出「已經合作多久」。since 2019 需要一個從過去延伸到現在的時態，也就是現在完成式。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The central bank ___ its key rates unchanged for ten quarters.",
+      "qCn": "央行已經連續十季維持主要利率不變。",
+      "opts": [
+        "kept",
+        "has kept",
+        "was keeping",
+        "keeps"
+      ],
+      "ans": 1,
+      "expl": "for ten quarters 一路延伸到現在，用現在完成式 has kept。"
+    },
+    {
+      "q": "The earlier limits ___ into force two years ago.",
+      "qCn": "先前的限制在兩年前生效。",
+      "opts": [
+        "have come",
+        "came",
+        "have been coming",
+        "come"
+      ],
+      "ans": 1,
+      "expl": "ago 是明確而且已經關上的時間點，只能用過去簡單式。"
+    },
+    {
+      "q": "It ___ agreed that the review will be repeated next quarter.",
+      "qCn": "各方已同意下一季重做一次審查。",
+      "opts": [
+        "was been",
+        "has been",
+        "have been",
+        "is been"
+      ],
+      "ans": 1,
+      "expl": "正式書面常用完成式被動 It has been agreed that...；主詞 It 是單數，所以用 has。"
+    },
+    {
+      "q": "Rents ___ faster than wages since 2021.",
+      "qCn": "自2021年以來，房租漲得比薪資快。",
+      "opts": [
+        "rose",
+        "have risen",
+        "were rising",
+        "rise"
+      ],
+      "ans": 1,
+      "expl": "since 2021 延伸到現在，用現在完成式 have risen。"
+    }
+  ]
+},
 {
   "id": "dg20260915a2",
   "date": "2026-09-15",

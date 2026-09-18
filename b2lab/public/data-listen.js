@@ -15,6 +15,886 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週二／五更新） ========== */
 notes:[
 {
+  "id": "dl20260918a2",
+  "date": "2026-09-18",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "How Much Is This Jacket?",
+  "titleCn": "這件外套多少錢？",
+  "series": "本站自製聽力 · 購物與金錢主題",
+  "topic": "🛍️ 在店裡挑外套",
+  "focus": "購物常用句；for 與 since 的基礎分別；How long have you...? 的簡單問答",
+  "intro": "Tom在小店裡挑冬天的外套，店員跟他聊起價格和特價。句子都很短，重點是聽出價格數字，還有 for 跟 since 的差別。",
+  "tip": "先聽一次抓「兩件外套各多少錢」，再聽一次抓「特價到什麼時候」。",
+  "pre": [
+    {
+      "w": "jacket",
+      "ipa": "/ˈdʒækɪt/",
+      "pos": "n.",
+      "cn": "外套",
+      "def": "A short coat that you wear outside."
+    },
+    {
+      "w": "price",
+      "ipa": "/praɪs/",
+      "pos": "n.",
+      "cn": "價格",
+      "def": "The money you must pay for something."
+    },
+    {
+      "w": "sale",
+      "ipa": "/seɪl/",
+      "pos": "n.",
+      "cn": "特價",
+      "def": "A time when a shop sells things more cheaply."
+    },
+    {
+      "w": "save",
+      "ipa": "/seɪv/",
+      "pos": "v.",
+      "cn": "省下",
+      "def": "To keep money and not spend it."
+    },
+    {
+      "w": "fit",
+      "ipa": "/fɪt/",
+      "pos": "v.",
+      "cn": "合身",
+      "def": "To be the right size for someone."
+    },
+    {
+      "w": "counter",
+      "ipa": "/ˈkaʊn.t̬ɚ/",
+      "pos": "n.",
+      "cn": "櫃檯",
+      "def": "The long table in a shop where you pay."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Clerk",
+      "en": "Good afternoon. Can I help you?",
+      "cn": "午安。需要幫忙嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes, please. I need a warm jacket.",
+      "cn": "好，麻煩你。我需要一件溫暖的外套。"
+    },
+    {
+      "sp": "Clerk",
+      "en": "This blue one is very popular.",
+      "cn": "這件藍色的很受歡迎。"
+    },
+    {
+      "sp": "Tom",
+      "en": "What is the price?",
+      "cn": "價格是多少？"
+    },
+    {
+      "sp": "Clerk",
+      "en": "Nine hundred dollars.",
+      "cn": "九百元。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That is too much for me. Do you have a cheaper one?",
+      "cn": "那對我來說太貴了。有比較便宜的嗎？"
+    },
+    {
+      "sp": "Clerk",
+      "en": "Yes. This grey jacket is six hundred dollars.",
+      "cn": "有。這件灰色外套六百元。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Good. Can I try it?",
+      "cn": "很好。我可以試穿嗎？"
+    },
+    {
+      "sp": "Clerk",
+      "en": "Of course. It fits you very well.",
+      "cn": "當然。這件你穿很合身。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How long have you had this sale?",
+      "cn": "這個特價你們做多久了？"
+    },
+    {
+      "sp": "Clerk",
+      "en": "We have had it since Monday. It ends on Sunday.",
+      "cn": "我們從星期一開始做。到星期日結束。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Then I will take the grey one. I can save three hundred dollars.",
+      "cn": "那我就買灰色這件。我可以省下三百元。"
+    },
+    {
+      "sp": "Clerk",
+      "en": "Great. Please pay at the counter.",
+      "cn": "太好了。請到櫃檯結帳。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Thank you very much.",
+      "cn": "非常謝謝你。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What does Tom want to buy?",
+      "qCn": "Tom想買什麼？",
+      "opts": [
+        "A. A warm jacket",
+        "B. A pair of shoes",
+        "C. A blue bag",
+        "D. A cup of coffee"
+      ],
+      "optsCn": [
+        "A. 一件溫暖的外套",
+        "B. 一雙鞋子",
+        "C. 一個藍色包包",
+        "D. 一杯咖啡"
+      ],
+      "ans": 0,
+      "expl": "Tom說 I need a warm jacket.——他要買溫暖的外套。"
+    },
+    {
+      "q": "How much is the grey jacket?",
+      "qCn": "灰色外套多少錢？",
+      "opts": [
+        "A. Nine hundred dollars",
+        "B. Six hundred dollars",
+        "C. Three hundred dollars",
+        "D. One hundred dollars"
+      ],
+      "optsCn": [
+        "A. 九百元",
+        "B. 六百元",
+        "C. 三百元",
+        "D. 一百元"
+      ],
+      "ans": 1,
+      "expl": "This grey jacket is six hundred dollars."
+    },
+    {
+      "q": "When did the sale start?",
+      "qCn": "特價從什麼時候開始？",
+      "opts": [
+        "A. On Sunday",
+        "B. On Friday",
+        "C. On Monday",
+        "D. Last month"
+      ],
+      "optsCn": [
+        "A. 星期日",
+        "B. 星期五",
+        "C. 星期一",
+        "D. 上個月"
+      ],
+      "ans": 2,
+      "expl": "We have had it since Monday.——since Monday 就是「從星期一開始」。"
+    },
+    {
+      "q": "We have had this sale ___ Monday.",
+      "qCn": "這個特價我們從星期一做到現在。（選出正確的字）",
+      "opts": [
+        "A. for",
+        "B. since",
+        "C. at",
+        "D. in"
+      ],
+      "ans": 1,
+      "expl": "Monday 是開始的那一天，是一個起點，所以用 since。"
+    }
+  ]
+},
+{
+  "id": "dl20260918b1",
+  "date": "2026-09-18",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "The Rent Went Up",
+  "titleCn": "房租漲了",
+  "series": "本站自製聽力 · 金錢與居住主題",
+  "topic": "🏠 房租漲了怎麼辦",
+  "focus": "for / since 講持續多久；ago 講從現在往回數；when 帶出過去的時間點",
+  "intro": "Amy的房租七月漲了，她跟同事May聊起自己怎麼省下這筆錢。留意 for three years、since July、two months ago 這三種時間說法各自搭配什麼時態。",
+  "tip": "第一次聽抓「房租漲了多少」，第二次聽抓「Amy用什麼方法補回來」。",
+  "pre": [
+    {
+      "w": "rent",
+      "ipa": "/rent/",
+      "pos": "n.",
+      "cn": "房租",
+      "def": "The money you pay each month to live in a place."
+    },
+    {
+      "w": "landlord",
+      "ipa": "/ˈlændˌlɔːrd/",
+      "pos": "n.",
+      "cn": "房東",
+      "def": "The person who owns the place you rent."
+    },
+    {
+      "w": "budget",
+      "ipa": "/ˈbʌdʒɪt/",
+      "pos": "n.",
+      "cn": "預算",
+      "def": "A plan for how much money you can spend."
+    },
+    {
+      "w": "compare",
+      "ipa": "/kəmˈper/",
+      "pos": "v.",
+      "cn": "比較",
+      "def": "To look at two things and see how they are different."
+    },
+    {
+      "w": "difference",
+      "ipa": "/ˈdɪfɚəns/",
+      "pos": "n.",
+      "cn": "差別",
+      "def": "The way two things are not the same."
+    },
+    {
+      "w": "afford",
+      "ipa": "/əˈfɔːrd/",
+      "pos": "v.",
+      "cn": "負擔得起",
+      "def": "To have enough money to pay for something."
+    }
+  ],
+  "script": [
+    {
+      "sp": "May",
+      "en": "You look tired today. Is everything okay?",
+      "cn": "你今天看起來很累。都還好嗎？"
+    },
+    {
+      "sp": "Amy",
+      "en": "My rent went up in July. Two thousand dollars a month.",
+      "cn": "我的房租七月漲了。一個月多兩千塊。"
+    },
+    {
+      "sp": "May",
+      "en": "That is a lot. How long have you lived there?",
+      "cn": "那滿多的。你在那裡住多久了？"
+    },
+    {
+      "sp": "Amy",
+      "en": "For three years. I really do not want to move.",
+      "cn": "三年了。我真的不想搬。"
+    },
+    {
+      "sp": "May",
+      "en": "Did you talk to your landlord?",
+      "cn": "你跟房東談過嗎？"
+    },
+    {
+      "sp": "Amy",
+      "en": "I called him two months ago, but he said no.",
+      "cn": "我兩個月前打給他，但他說不行。"
+    },
+    {
+      "sp": "May",
+      "en": "So what will you do?",
+      "cn": "那你打算怎麼辦？"
+    },
+    {
+      "sp": "Amy",
+      "en": "I have changed the way I shop. I compare prices now.",
+      "cn": "我改變了買東西的方式。我現在會比價。"
+    },
+    {
+      "sp": "May",
+      "en": "Does that really make a difference?",
+      "cn": "這樣真的有差嗎？"
+    },
+    {
+      "sp": "Amy",
+      "en": "Yes. The market by the park is much cheaper than the supermarket.",
+      "cn": "有。公園旁邊的市場比超市便宜很多。"
+    },
+    {
+      "sp": "May",
+      "en": "How much have you saved since July?",
+      "cn": "從七月到現在你省了多少？"
+    },
+    {
+      "sp": "Amy",
+      "en": "Almost two thousand dollars. That covers one month of the increase.",
+      "cn": "快兩千元。剛好可以補一個月的漲幅。"
+    },
+    {
+      "sp": "May",
+      "en": "That is smart. I should make a budget too.",
+      "cn": "這很聰明。我也應該做個預算。"
+    },
+    {
+      "sp": "Amy",
+      "en": "Start with one week. You will be surprised.",
+      "cn": "先從一個星期開始。你會很驚訝。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why is Amy worried?",
+      "qCn": "Amy為什麼在煩惱？",
+      "opts": [
+        "A. Her landlord moved away",
+        "B. Her rent went up in July",
+        "C. She lost her job",
+        "D. The market closed"
+      ],
+      "optsCn": [
+        "A. 她的房東搬走了",
+        "B. 她的房租七月漲了",
+        "C. 她失業了",
+        "D. 市場關門了"
+      ],
+      "ans": 1,
+      "expl": "My rent went up in July. Two thousand dollars a month."
+    },
+    {
+      "q": "How long has Amy lived in that place?",
+      "qCn": "Amy在那個地方住多久了？",
+      "opts": [
+        "A. For three years",
+        "B. Since July",
+        "C. For two months",
+        "D. Since last week"
+      ],
+      "optsCn": [
+        "A. 三年了",
+        "B. 從七月開始",
+        "C. 兩個月",
+        "D. 從上星期開始"
+      ],
+      "ans": 0,
+      "expl": "Amy說 For three years.——for 後面接的是時間長度。"
+    },
+    {
+      "q": "What did Amy do two months ago?",
+      "qCn": "Amy兩個月前做了什麼？",
+      "opts": [
+        "A. She moved to a new flat",
+        "B. She called her landlord",
+        "C. She changed jobs",
+        "D. She bought a jacket"
+      ],
+      "optsCn": [
+        "A. 她搬到新公寓",
+        "B. 她打電話給房東",
+        "C. 她換工作",
+        "D. 她買了一件外套"
+      ],
+      "ans": 1,
+      "expl": "I called him two months ago, but he said no.——ago 搭配過去簡單式 called。"
+    },
+    {
+      "q": "How does Amy save money now?",
+      "qCn": "Amy現在怎麼省錢？",
+      "opts": [
+        "A. She stopped eating breakfast",
+        "B. She walks to work",
+        "C. She compares prices and shops at the market",
+        "D. She shares the flat with a friend"
+      ],
+      "optsCn": [
+        "A. 她不吃早餐了",
+        "B. 她走路上班",
+        "C. 她比價，並且到市場買東西",
+        "D. 她跟朋友合租"
+      ],
+      "ans": 2,
+      "expl": "I compare prices now. 加上 The market by the park is much cheaper than the supermarket."
+    },
+    {
+      "q": "How much have you saved ___ July?",
+      "qCn": "從七月到現在你省了多少？（選出正確的字）",
+      "opts": [
+        "A. for",
+        "B. since",
+        "C. ago",
+        "D. when"
+      ],
+      "ans": 1,
+      "expl": "July 是開始的時間點，配現在完成式 have saved，所以用 since。"
+    }
+  ]
+},
+{
+  "id": "dl20260918b1p",
+  "date": "2026-09-18",
+  "level": "B1+",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Seventy Percent Instead of Sixty",
+  "titleCn": "從六成變七成",
+  "series": "本站自製聽力 · 新聞·金錢與居住主題",
+  "topic": "🏦 央行放寬房貸規定",
+  "focus": "被動語態（has been held、have been loosened、were introduced）在新聞對話裡的用法",
+  "intro": "兩位同事在午休時間聊央行剛公布的決定。這一課的重點是聽出被動語態：誰做的不重要，重要的是「什麼被決定了」。",
+  "tip": "第一次聽抓「利率有沒有變」，第二次專心聽 has been、have been、were 這些被動的訊號。",
+  "pre": [
+    {
+      "w": "interest",
+      "ipa": "/ˈɪntrəst/",
+      "pos": "n.",
+      "cn": "利息",
+      "def": "Extra money you pay a bank for borrowing."
+    },
+    {
+      "w": "rate",
+      "ipa": "/reɪt/",
+      "pos": "n.",
+      "cn": "利率、比率",
+      "def": "A level or amount measured against something else."
+    },
+    {
+      "w": "borrow",
+      "ipa": "/ˈbɑːroʊ/",
+      "pos": "v.",
+      "cn": "借入",
+      "def": "To take money and give it back later."
+    },
+    {
+      "w": "loosen",
+      "ipa": "/ˈluːsən/",
+      "pos": "v.",
+      "cn": "放寬",
+      "def": "To make a rule less strict."
+    },
+    {
+      "w": "mortgage",
+      "ipa": "/ˈmɔːrɡɪdʒ/",
+      "pos": "n.",
+      "cn": "房貸",
+      "def": "A long loan from a bank to buy a home."
+    },
+    {
+      "w": "speculation",
+      "ipa": "/ˌspekjəˈleɪʃən/",
+      "pos": "n.",
+      "cn": "炒作",
+      "def": "Buying something only to sell it later at a higher price."
+    },
+    {
+      "w": "steady",
+      "ipa": "/ˈstedi/",
+      "pos": "adj.",
+      "cn": "穩定的",
+      "def": "Not changing suddenly."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Wei",
+      "en": "Did you see the news from the central bank yesterday?",
+      "cn": "你看到昨天央行的新聞了嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Not yet. Were the rates changed again?",
+      "cn": "還沒。利率又調整了嗎？"
+    },
+    {
+      "sp": "Wei",
+      "en": "No. The discount rate has been held at two percent.",
+      "cn": "沒有。重貼現率維持在2%。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Again? How long has it stayed there?",
+      "cn": "又這樣？維持在那裡多久了？"
+    },
+    {
+      "sp": "Wei",
+      "en": "This is the tenth quarter in a row.",
+      "cn": "這已經是連續第十季了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "So why did they keep it steady?",
+      "cn": "那他們為什麼要維持不變？"
+    },
+    {
+      "sp": "Wei",
+      "en": "The decision was made to keep the economy stable while prices are still uncertain.",
+      "cn": "這個決定是為了在物價還不確定的時候穩住經濟。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Fair enough. Was anything else announced?",
+      "cn": "有道理。還有公布別的嗎？"
+    },
+    {
+      "sp": "Wei",
+      "en": "Yes. The rules for home loans have been loosened.",
+      "cn": "有。房貸的規定放寬了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "In what way?",
+      "cn": "怎麼放寬？"
+    },
+    {
+      "sp": "Wei",
+      "en": "A family buying a second home can now borrow seventy percent instead of sixty.",
+      "cn": "買第二間房的家庭現在可以貸七成，而不是六成。"
+    },
+    {
+      "sp": "Anita",
+      "en": "When were those limits introduced?",
+      "cn": "那些限制是什麼時候推出的？"
+    },
+    {
+      "sp": "Wei",
+      "en": "Two years ago, when speculation was a real problem.",
+      "cn": "兩年前，那時候炒作是個很實際的問題。"
+    },
+    {
+      "sp": "Anita",
+      "en": "And did they work?",
+      "cn": "那有用嗎？"
+    },
+    {
+      "sp": "Wei",
+      "en": "The bank says lending was reduced and banks became more careful.",
+      "cn": "央行說放款減少了，銀行也變得更謹慎。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Good. But for first-time buyers like me, nothing has really changed.",
+      "cn": "很好。但對我這種首購族來說，其實什麼都沒變。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did the central bank decide about interest rates?",
+      "qCn": "央行對利率做了什麼決定？",
+      "opts": [
+        "A. It raised them",
+        "B. It cut them",
+        "C. It kept them unchanged",
+        "D. It removed them"
+      ],
+      "optsCn": [
+        "A. 調升",
+        "B. 調降",
+        "C. 維持不變",
+        "D. 取消"
+      ],
+      "ans": 2,
+      "expl": "The discount rate has been held at two percent.——被動的 has been held 就是「一直被維持在」。"
+    },
+    {
+      "q": "How many quarters in a row has the rate stayed the same?",
+      "qCn": "利率已經連續幾季維持不變？",
+      "opts": [
+        "A. Two",
+        "B. Ten",
+        "C. Sixty",
+        "D. Seventy"
+      ],
+      "optsCn": [
+        "A. 兩季",
+        "B. 十季",
+        "C. 六十季",
+        "D. 七十季"
+      ],
+      "ans": 1,
+      "expl": "This is the tenth quarter in a row."
+    },
+    {
+      "q": "What changed for people buying a second home?",
+      "qCn": "買第二間房的人有什麼改變？",
+      "opts": [
+        "A. They can borrow seventy percent instead of sixty",
+        "B. They must pay the whole price in cash",
+        "C. They can borrow sixty percent instead of seventy",
+        "D. They cannot buy a second home"
+      ],
+      "optsCn": [
+        "A. 可以貸七成，而不是六成",
+        "B. 必須全額付現",
+        "C. 可以貸六成，而不是七成",
+        "D. 不能買第二間房"
+      ],
+      "ans": 0,
+      "expl": "A family buying a second home can now borrow seventy percent instead of sixty."
+    },
+    {
+      "q": "Why were the limits introduced two years ago?",
+      "qCn": "那些限制為什麼在兩年前推出？",
+      "opts": [
+        "A. Because interest rates were too low",
+        "B. Because speculation was a real problem",
+        "C. Because banks had no money",
+        "D. Because rents were falling"
+      ],
+      "optsCn": [
+        "A. 因為利率太低",
+        "B. 因為炒作是個很實際的問題",
+        "C. 因為銀行沒錢",
+        "D. 因為房租在跌"
+      ],
+      "ans": 1,
+      "expl": "Two years ago, when speculation was a real problem."
+    },
+    {
+      "q": "The rules for home loans ___ this week.",
+      "qCn": "房貸的規定這個星期被放寬了。（選出正確的被動形式）",
+      "opts": [
+        "A. have loosened",
+        "B. have been loosened",
+        "C. are loosening",
+        "D. loosened"
+      ],
+      "ans": 1,
+      "expl": "規定是「被」放寬的，主詞 rules 承受動作，所以用 have been + 過去分詞。"
+    }
+  ]
+},
+{
+  "id": "dl20260918b2",
+  "date": "2026-09-18",
+  "level": "B2",
+  "minutes": 5,
+  "kind": "note",
+  "title": "Rent, Mortgage, and the Gap Between",
+  "titleCn": "房租、房貸，還有中間那道落差",
+  "series": "本站自製聽力 · 新聞·金錢與居住主題",
+  "topic": "💬 政策鬆綁之後的午餐對話",
+  "focus": "現在完成式與過去簡單式在同一段話裡的切換；完成式帶出的言外之意",
+  "intro": "同一則央行新聞，換成兩位資深同事的深入討論。留意他們怎麼在 has kept、have risen 這種完成式和 introduced、cut back 這種過去式之間切換，以及完成式怎麼暗示「問題還沒解決」。",
+  "tip": "聽的時候記下每一個時間詞（since 2024、two years ago、this year），再回頭檢查說話者用了哪個時態。",
+  "pre": [
+    {
+      "w": "quarter",
+      "ipa": "/ˈkwɔːr.t̬ɚ/",
+      "pos": "n.",
+      "cn": "季（三個月）",
+      "def": "One of the four three-month periods of a business year."
+    },
+    {
+      "w": "forecast",
+      "ipa": "/ˈfɔːrkæst/",
+      "pos": "n.",
+      "cn": "預測",
+      "def": "A statement about what is likely to happen later."
+    },
+    {
+      "w": "tighten",
+      "ipa": "/ˈtaɪtən/",
+      "pos": "v.",
+      "cn": "收緊",
+      "def": "To make something stricter or less loose."
+    },
+    {
+      "w": "gap",
+      "ipa": "/ɡæp/",
+      "pos": "n.",
+      "cn": "落差",
+      "def": "A big difference between two amounts or groups."
+    },
+    {
+      "w": "require",
+      "ipa": "/rɪˈkwaɪɚ/",
+      "pos": "v.",
+      "cn": "要求、規定",
+      "def": "To say officially that someone must do something."
+    },
+    {
+      "w": "abandon",
+      "ipa": "/əˈbændən/",
+      "pos": "v.",
+      "cn": "放棄",
+      "def": "To stop doing or supporting something completely."
+    },
+    {
+      "w": "purchase",
+      "ipa": "/ˈpɝːtʃəs/",
+      "pos": "n.",
+      "cn": "購買",
+      "def": "Something you buy, or the act of buying it."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Chen",
+      "en": "Ten quarters without a move. At some point that becomes a message in itself.",
+      "cn": "連續十季沒有動作。到某個程度，這本身就是一種訊息。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It is not really inaction, though. They have kept the rate steady on purpose.",
+      "cn": "不過這其實不算什麼都沒做。他們是刻意維持利率不變的。"
+    },
+    {
+      "sp": "Chen",
+      "en": "True. And growth came in stronger than they predicted in June.",
+      "cn": "沒錯。而且成長也比他們六月預測的更強。"
+    },
+    {
+      "sp": "Anita",
+      "en": "So the forecast has been raised, but prices are still climbing a little faster.",
+      "cn": "所以預測被上調了，但物價還是漲得稍微快一點。"
+    },
+    {
+      "sp": "Chen",
+      "en": "That is the balance they keep talking about. Nothing dramatic either way.",
+      "cn": "這就是他們一直在講的平衡。兩邊都不做激烈動作。"
+    },
+    {
+      "sp": "Anita",
+      "en": "The quieter change is on the housing side, isn't it?",
+      "cn": "比較低調的改變是在房市這邊，對吧？"
+    },
+    {
+      "sp": "Chen",
+      "en": "Yes. Second-home buyers may now borrow up to seventy percent of the purchase price.",
+      "cn": "對。買第二間房的人現在可以貸到購屋價格的七成。"
+    },
+    {
+      "sp": "Anita",
+      "en": "And land buyers are no longer required to start building within a fixed period.",
+      "cn": "買土地的人也不再被要求在固定期限內動工。"
+    },
+    {
+      "sp": "Chen",
+      "en": "Both limits were introduced two years ago, when housing was treated as an investment.",
+      "cn": "這兩項限制都是兩年前推出的，那時候房子被當成一種投資。"
+    },
+    {
+      "sp": "Anita",
+      "en": "The bank argues they worked. Lending was cut back and speculative buying cooled.",
+      "cn": "央行主張它們有效。放款被縮減，投機性買盤也降溫了。"
+    },
+    {
+      "sp": "Chen",
+      "en": "Banks have also tightened their own controls since then.",
+      "cn": "從那之後，銀行也收緊了自己的控管。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Loosening a rule after it has done its job is not the same as abandoning it.",
+      "cn": "一條規定發揮作用之後被放寬，並不等於被放棄。"
+    },
+    {
+      "sp": "Chen",
+      "en": "Agreed. But who actually benefits from this week's change?",
+      "cn": "同意。但這個星期的改變到底誰受惠？"
+    },
+    {
+      "sp": "Anita",
+      "en": "People who already own one home. Not the ones still renting.",
+      "cn": "已經有一間房的人。不是還在租房的人。"
+    },
+    {
+      "sp": "Chen",
+      "en": "Rents have risen faster than wages since 2021. That part has not changed.",
+      "cn": "自2021年以來房租漲得比薪資快。那部分並沒有改變。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Exactly. The gap between rent and a mortgage has not closed at all.",
+      "cn": "正是如此。房租和房貸之間的落差完全沒有縮小。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What does Anita mean by \"It is not really inaction\"?",
+      "qCn": "Anita說「這其實不算什麼都沒做」是什麼意思？",
+      "opts": [
+        "A. The bank forgot to meet",
+        "B. Holding the rate steady was a deliberate choice",
+        "C. The bank raised rates quietly",
+        "D. The decision was made by the government"
+      ],
+      "optsCn": [
+        "A. 央行忘了開會",
+        "B. 維持利率不變是刻意的選擇",
+        "C. 央行悄悄升息了",
+        "D. 這個決定是政府做的"
+      ],
+      "ans": 1,
+      "expl": "They have kept the rate steady on purpose.——on purpose 就是「刻意的」。"
+    },
+    {
+      "q": "What happened to the growth forecast?",
+      "qCn": "成長預測發生了什麼事？",
+      "opts": [
+        "A. It was lowered",
+        "B. It was cancelled",
+        "C. It was raised",
+        "D. It stayed exactly the same"
+      ],
+      "optsCn": [
+        "A. 被下修",
+        "B. 被取消",
+        "C. 被上調",
+        "D. 完全沒變"
+      ],
+      "ans": 2,
+      "expl": "So the forecast has been raised, but prices are still climbing a little faster."
+    },
+    {
+      "q": "Why were the two limits introduced two years ago?",
+      "qCn": "那兩項限制為什麼在兩年前推出？",
+      "opts": [
+        "A. Because wages were falling",
+        "B. Because housing was treated as an investment",
+        "C. Because banks refused to lend",
+        "D. Because rents were too low"
+      ],
+      "optsCn": [
+        "A. 因為薪資在下跌",
+        "B. 因為房子被當成一種投資",
+        "C. 因為銀行拒絕放款",
+        "D. 因為房租太低"
+      ],
+      "ans": 1,
+      "expl": "Both limits were introduced two years ago, when housing was treated as an investment."
+    },
+    {
+      "q": "Who does Anita say benefits from this week's change?",
+      "qCn": "Anita認為這個星期的改變誰受惠？",
+      "opts": [
+        "A. People who are still renting",
+        "B. First-time buyers",
+        "C. People who already own one home",
+        "D. Bank employees"
+      ],
+      "optsCn": [
+        "A. 還在租房的人",
+        "B. 首購族",
+        "C. 已經有一間房的人",
+        "D. 銀行員工"
+      ],
+      "ans": 2,
+      "expl": "People who already own one home. Not the ones still renting."
+    },
+    {
+      "q": "Rents ___ faster than wages since 2021.",
+      "qCn": "自2021年以來，房租漲得比薪資快。（選出正確的形式）",
+      "opts": [
+        "A. rose",
+        "B. have risen",
+        "C. were rising",
+        "D. rise"
+      ],
+      "ans": 1,
+      "expl": "since 2021 一路延伸到現在，所以要用現在完成式 have risen。"
+    }
+  ]
+},
+{
   "id": "dl20260915a2",
   "date": "2026-09-15",
   "level": "A2",

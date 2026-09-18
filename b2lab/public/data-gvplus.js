@@ -32,6 +32,695 @@
    ⚠ 文字欄位一律寫純文字，不要寫 HTML 標籤（渲染時會被轉義顯示出來）。
    ============================================================ */
 window.GVPLUS = {
+"dg20260918a2": {
+  "vis": true,
+  "oneLine": "for 量的是「多長」、since 標的是「從哪一刻」；問句也分兩邊——When...? 問那一刻，How long...? 問到現在的長度。",
+  "map": {
+    "when": "想講一件事持續了多久，或想問別人做了多久的時候",
+    "why": "英文要分清楚「已經結束的那一刻」和「延伸到現在的整段」，中文的「什麼時候」兩種都能用，所以特別容易混",
+    "form": "for + 一段長度　|　since + 一個起點　/　When did...?（過去式）　|　How long have...?（現在完成式）"
+  },
+  "visual": {
+    "type": "timeline",
+    "cap": "一條線上兩個重點：since 指的是最左邊那個點（last April），for 量的是從那個點一路到 NOW 的整段長度。When...? 問的是左邊的點，How long...? 問的是整條線。",
+    "rows": [
+      {
+        "kind": "point",
+        "label": "since last April",
+        "tone": "accent",
+        "at": "起點",
+        "sub": "the month it started",
+        "subCn": "When...? 問的就是這個點，回答用過去式"
+      },
+      {
+        "kind": "span",
+        "label": "for five months",
+        "tone": "ink",
+        "from": "last April",
+        "to": "NOW",
+        "sub": "How long has it been?",
+        "subCn": "How long...? 問的是這整段，回答用現在完成式"
+      },
+      {
+        "kind": "point",
+        "label": "NOW",
+        "tone": "accent",
+        "at": "現在",
+        "sub": "still true today",
+        "subCn": "到現在都還成立，所以不能用過去式"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "since-point",
+      "icon": "calendar",
+      "title": "since 接起點",
+      "titleCn": "since + 那一個月",
+      "ask": "since 後面要接哪一種時間？",
+      "en": "My cousin has driven a taxi since March.",
+      "cn": "我表哥從三月就開始開計程車了。",
+      "why": "March 是「開始的那一個月」，是一個點，所以用 since。寫成 for March 就變成「開了三月這麼長」，講不通。"
+    },
+    {
+      "key": "for-length",
+      "icon": "clock",
+      "title": "for 接長度",
+      "titleCn": "for + 多長",
+      "ask": "for 後面要接哪一種時間？",
+      "en": "My cousin has driven a taxi for six months.",
+      "cn": "我表哥開計程車六個月了。",
+      "why": "six months 是一段長度，所以用 for。同一件事可以用 for 或 since 講，差別只在你要說「多長」還是「從哪天開始」。"
+    },
+    {
+      "key": "when-past",
+      "icon": "house",
+      "title": "When 問那一刻",
+      "titleCn": "When + 過去式",
+      "ask": "When...? 後面要配哪一個時態？",
+      "en": "When did your family move into this flat?",
+      "cn": "你家什麼時候搬進這間公寓的？",
+      "why": "搬家這個動作已經結束了，所以 When 要配過去式 did move。寫成 When have you moved 是錯的，因為現在完成式不能跟明確的過去時間點一起用。"
+    },
+    {
+      "key": "howlong-perfect",
+      "icon": "book",
+      "title": "How long 問長度",
+      "titleCn": "How long + 現在完成式",
+      "ask": "How long...? 後面要配哪一個時態？",
+      "en": "How long has your family lived in this flat?",
+      "cn": "你家在這間公寓住多久了？",
+      "why": "住到現在還沒結束，所以要用現在完成式 has lived。用過去式 did live 會讓人以為你們已經搬走了。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "新同事提到他養了一隻狗，你想多問一點。"
+    },
+    {
+      "label": "先問那一刻",
+      "text": "When did you get the dog?——問「哪一天開始養的」，動作已經結束，用過去式。"
+    },
+    {
+      "label": "再問長度",
+      "text": "How long have you had the dog?——問「養到現在多久了」，還在養，用現在完成式。"
+    },
+    {
+      "label": "兩種回答都行",
+      "text": "I got him in May. 是講那一刻；I have had him since May. 是講從那一刻到現在。"
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "錯誤版：I have had him for May.——May 是起點不是長度，要改成 since May，或者改成 for four months。"
+    }
+  ],
+  "comparison": {
+    "title": "When...? vs How long...?",
+    "left": {
+      "tag": "WHEN",
+      "tagCn": "問開始的那一刻",
+      "icon": "calendar",
+      "head": "a point in the past",
+      "headCn": "過去的一個點",
+      "en": "When did they open the bakery?",
+      "cn": "他們什麼時候開這家麵包店的？",
+      "pts": [
+        "動作已經結束",
+        "搭配過去簡單式 did + 原形",
+        "回答會是 in 2020、last April 這種點"
+      ]
+    },
+    "right": {
+      "tag": "HOW LONG",
+      "tagCn": "問到現在的長度",
+      "icon": "clock",
+      "head": "a length up to now",
+      "headCn": "到現在為止的長度",
+      "en": "How long have they run the bakery?",
+      "cn": "他們經營這家麵包店多久了？",
+      "pts": [
+        "事情還沒結束",
+        "搭配現在完成式 have + 過去分詞",
+        "回答會是 for six years 或 since 2020"
+      ]
+    },
+    "note": "口訣：問「哪一天」用過去式，問「多久了」用現在完成式。"
+  },
+  "quizMore": [
+    {
+      "q": "She has worked at the bakery ___ last winter.",
+      "opts": [
+        "for",
+        "since",
+        "in",
+        "at"
+      ],
+      "ans": 1,
+      "expl": "last winter 是開始的時間點，用 since。"
+    },
+    {
+      "q": "___ have you waited at this stop?",
+      "opts": [
+        "When",
+        "How long",
+        "What",
+        "Who"
+      ],
+      "ans": 1,
+      "expl": "配現在完成式 have waited 的疑問詞是 How long，問到現在等了多久。"
+    }
+  ]
+},
+"dg20260918b1": {
+  "vis": true,
+  "oneLine": "句子裡出現 ago 就別用 have；出現 for 或 since 而且講到現在，就別用過去式——時間訊號決定時態。",
+  "map": {
+    "when": "談年資、租期、交情、貨物卡多久，任何「從某一刻到現在」的事情",
+    "why": "英文用時態標示「這件事關上了沒」，中文靠「了」和上下文，所以中文母語者常常兩種混用",
+    "form": "When did + 主詞 + 原形...?　|　How long have + 主詞 + 過去分詞...?　/　ago（過去式）vs for/since（現在完成式）"
+  },
+  "visual": {
+    "type": "matrix",
+    "cap": "橫向看每一列：左欄是「問哪一刻」的說法，中欄是「問到現在多久」的說法，右欄是把兩邊混在一起的常見錯誤。",
+    "cols": [
+      "問那一刻（過去簡單式）",
+      "問到現在的長度（現在完成式）",
+      "常見錯誤"
+    ],
+    "rows": [
+      {
+        "h": "搬到河內",
+        "cells": [
+          {
+            "en": "When did she move to Hanoi?",
+            "cn": "她什麼時候搬到河內的？",
+            "hi": true
+          },
+          {
+            "en": "How long has she lived there?",
+            "cn": "她在那裡住多久了？"
+          },
+          {
+            "en": "When has she moved?",
+            "cn": "（錯）When 不能配完成式"
+          }
+        ]
+      },
+      {
+        "h": "開始這份工作",
+        "cells": [
+          {
+            "en": "When did you start this job?",
+            "cn": "你什麼時候開始這份工作的？"
+          },
+          {
+            "en": "How long have you had this job?",
+            "cn": "這份工作你做多久了？",
+            "hi": true
+          },
+          {
+            "en": "I have started it last month.",
+            "cn": "（錯）ago 與明確過去時間不配完成式"
+          }
+        ]
+      },
+      {
+        "h": "認識這位客戶",
+        "cells": [
+          {
+            "en": "When did you meet this client?",
+            "cn": "你什麼時候認識這位客戶的？"
+          },
+          {
+            "en": "How long have you known him?",
+            "cn": "你認識他多久了？"
+          },
+          {
+            "en": "How long do you know him?",
+            "cn": "（錯）現在簡單式問不出累積時間"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "ago-past",
+      "icon": "arrow",
+      "title": "ago 往回數",
+      "titleCn": "ago + 過去式",
+      "ask": "句尾有 ago 時要配哪一個時態？",
+      "en": "The shipment left the port three days ago.",
+      "cn": "那批貨三天前離開港口。",
+      "why": "ago 是從現在往回數的「那一刻」，所以只能配過去簡單式 left。寫成 has left ... ago 是錯的，因為現在完成式不接明確的過去時間點。"
+    },
+    {
+      "key": "for-span",
+      "icon": "star",
+      "title": "for 量整段",
+      "titleCn": "for + 現在完成式",
+      "ask": "同一件事要怎麼改成「到現在多久」？",
+      "en": "The shipment has been at the port for three days.",
+      "cn": "那批貨在港口已經放了三天。",
+      "why": "換個角度講同一件事：不講「哪一天離開」，改講「到現在為止卡了多久」，所以要用現在完成式加 for。"
+    },
+    {
+      "key": "since-clause",
+      "icon": "bubble",
+      "title": "since 接子句",
+      "titleCn": "since + 過去式子句",
+      "ask": "since 後面可以接一整句話嗎？",
+      "en": "Prices have gone up since the new rule took effect.",
+      "cn": "自從新規定上路，物價就漲上去了。",
+      "why": "since 後面可以接一個過去簡單式的子句，表示「從那件事發生之後」；主句仍然用現在完成式，因為影響延續到現在。"
+    },
+    {
+      "key": "word-order",
+      "icon": "person",
+      "title": "助動詞提前",
+      "titleCn": "have / did 放主詞前",
+      "ask": "疑問句裡助動詞要放在哪裡？",
+      "en": "How long have your parents run the shop?",
+      "cn": "你爸媽經營這家店多久了？",
+      "why": "英文疑問句要把助動詞 have 移到主詞 your parents 前面；照中文語序寫成 How long your parents have run 就不對了。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "面試官看著你的履歷，想弄清楚你在上一家公司待了多久。"
+    },
+    {
+      "label": "先問哪一刻",
+      "text": "When did you join your last company?——問加入的那一天，用過去式。"
+    },
+    {
+      "label": "已經離職就整段都關上",
+      "text": "How long were you there?——你已經離開，那段時間結束了，用過去式。"
+    },
+    {
+      "label": "還在職就換時態",
+      "text": "How long have you been with your current team?——還在職，用現在完成式。"
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "錯誤版：How long are you with this team?——現在簡單式問不出累積多久，要改成 have you been。"
+    }
+  ],
+  "comparison": {
+    "title": "ago vs for／since",
+    "left": {
+      "tag": "AGO",
+      "tagCn": "從現在往回數",
+      "icon": "arrow",
+      "head": "a point in the past",
+      "headCn": "過去的一個時刻",
+      "en": "They signed the lease six months ago.",
+      "cn": "他們六個月前簽了租約。",
+      "pts": [
+        "搭配過去簡單式",
+        "ago 放在句尾",
+        "不能和現在完成式同時出現"
+      ]
+    },
+    "right": {
+      "tag": "FOR / SINCE",
+      "tagCn": "延續到現在",
+      "icon": "cycle",
+      "head": "a span reaching now",
+      "headCn": "延伸到現在的一整段",
+      "en": "They have rented the flat for six months.",
+      "cn": "他們租這間公寓六個月了。",
+      "pts": [
+        "搭配現在完成式",
+        "for 接長度、since 接起點",
+        "強調現在還在繼續"
+      ]
+    },
+    "note": "口訣：看到 ago 就別用 have；看到 for 或 since 講到現在，就別用過去式。"
+  },
+  "quizMore": [
+    {
+      "q": "We have known the landlord ___ 2023.",
+      "opts": [
+        "for",
+        "since",
+        "ago",
+        "when"
+      ],
+      "ans": 1,
+      "expl": "2023 是起點，用 since。"
+    },
+    {
+      "q": "The lease ended two weeks ___.",
+      "opts": [
+        "for",
+        "since",
+        "ago",
+        "before"
+      ],
+      "ans": 2,
+      "expl": "ago 從現在往回數，搭配過去簡單式 ended。"
+    }
+  ]
+},
+"dg20260918b1p": {
+  "vis": true,
+  "oneLine": "動手前先問一句：那個時間框關上了沒？關上了就過去式，還開著或根本沒提時間就現在完成式。",
+  "map": {
+    "when": "報進度、寫信、講經驗，任何需要決定「要不要提時間」的場合",
+    "why": "英文用時態把「已經翻頁的事件」和「還在影響現在的結果」分開，中文全都可以說「已經」，所以要靠時間訊號判斷",
+    "form": "過去式：V-ed + yesterday / last week / in 2020 / ago　|　現在完成式：have + Vpp（+ today / this week / since / so far）"
+  },
+  "visual": {
+    "type": "cols",
+    "cap": "三欄各代表一種時間框：左欄的框已經關上（用過去式），中欄的框還開著（用現在完成式），右欄根本沒說時間、只在乎現在的結果（也用現在完成式）。",
+    "cols": [
+      {
+        "tag": "PAST SIMPLE",
+        "tagCn": "時間框已經關上",
+        "tone": 1,
+        "items": [
+          {
+            "en": "We shipped the order on Monday.",
+            "cn": "我們星期一出了那批貨。",
+            "nt": "on Monday 已經過去"
+          },
+          {
+            "en": "The audit ended last Friday.",
+            "cn": "稽核上星期五結束。",
+            "nt": "last Friday 已經結束"
+          }
+        ]
+      },
+      {
+        "tag": "PRESENT PERFECT",
+        "tagCn": "時間框還開著",
+        "tone": 2,
+        "items": [
+          {
+            "en": "We have shipped four orders this week.",
+            "cn": "我們這個星期已經出了四批貨。",
+            "nt": "this week 還沒過完"
+          },
+          {
+            "en": "The team has finished two audits this month.",
+            "cn": "團隊這個月已經做完兩次稽核。",
+            "nt": "this month 還沒過完"
+          }
+        ]
+      },
+      {
+        "tag": "NO TIME GIVEN",
+        "tagCn": "不提時間，只講結果",
+        "tone": 3,
+        "items": [
+          {
+            "en": "The customer has approved the drawing.",
+            "cn": "客戶已經核准圖面了。",
+            "nt": "重點是現在可以動工"
+          },
+          {
+            "en": "I have lost the access card.",
+            "cn": "我把門禁卡弄丟了。",
+            "nt": "重點是現在進不去"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "closed-frame",
+      "icon": "key",
+      "title": "時間框關上了",
+      "titleCn": "過去簡單式",
+      "ask": "句子裡有 last night，要用哪一個時態？",
+      "en": "The security team changed the door codes last night.",
+      "cn": "保全組昨晚換了門禁密碼。",
+      "why": "last night 是一段已經結束的時間，英文只能用過去簡單式。就算影響延續到今天，時間框一旦關上，時態就得跟著走。"
+    },
+    {
+      "key": "open-frame",
+      "icon": "cycle",
+      "title": "時間框還開著",
+      "titleCn": "現在完成式",
+      "ask": "現在還是早上，句子裡有 this morning，要用哪一個時態？",
+      "en": "The security team has changed two codes this morning.",
+      "cn": "保全組今天早上已經換了兩組密碼。",
+      "why": "講話的當下還是早上，this morning 這個框還沒關上，就用現在完成式；等到下午再講同一件事，就要改成 changed。"
+    },
+    {
+      "key": "result-now",
+      "icon": "check",
+      "title": "只在乎現在的結果",
+      "titleCn": "不說時間",
+      "ask": "不想強調何時發生，只想說現在的狀態，要怎麼講？",
+      "en": "The client has approved our quotation.",
+      "cn": "客戶已經核准我們的報價了。",
+      "why": "句子裡沒有提時間，重點是「現在報價過了，可以往下走」。這種句子一旦加上 yesterday，就必須改成 approved。"
+    },
+    {
+      "key": "since-now",
+      "icon": "money",
+      "title": "since 延伸到現在",
+      "titleCn": "still true now",
+      "ask": "since 2024 為什麼不能配過去式？",
+      "en": "The company has paid the same rent since 2024.",
+      "cn": "這家公司從2024年開始就一直付一樣的租金。",
+      "why": "since 2024 表示從那年到現在都成立，這段時間還沒關上，所以要用現在完成式；用 paid 會讓人以為後來改過了。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "星期五下午，你要跟主管交代這一週的進度。"
+    },
+    {
+      "label": "本週的成果",
+      "text": "I have closed six tickets this week.——this week 還沒過完，用現在完成式。"
+    },
+    {
+      "label": "某一天的細節",
+      "text": "I closed the biggest one on Wednesday.——有明確的星期三，切回過去簡單式。"
+    },
+    {
+      "label": "不提時間的結果",
+      "text": "I have already updated the shared file.——不提時間，重點是檔案現在是最新的。"
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "錯誤版：I have updated it yesterday.——加了 yesterday 就必須改寫成 I updated it yesterday."
+    }
+  ],
+  "comparison": {
+    "title": "那段時間關上了嗎？",
+    "left": {
+      "tag": "CLOSED",
+      "tagCn": "時間已經結束",
+      "icon": "cross",
+      "head": "past simple",
+      "headCn": "過去簡單式",
+      "en": "The supplier raised its price in June.",
+      "cn": "供應商在六月調漲了價格。",
+      "pts": [
+        "有 yesterday、last week、in 2023、ago 這類訊號",
+        "動作留在過去那個框裡",
+        "就算影響還在，時態也不改"
+      ]
+    },
+    "right": {
+      "tag": "OPEN",
+      "tagCn": "時間還沒結束",
+      "icon": "check",
+      "head": "present perfect",
+      "headCn": "現在完成式",
+      "en": "The supplier has raised its price twice this year.",
+      "cn": "供應商今年已經調漲兩次價格。",
+      "pts": [
+        "有 today、this week、so far、since 這類訊號",
+        "或者根本不說時間",
+        "重點放在現在的結果"
+      ]
+    },
+    "note": "下筆前先問自己一句：那段時間關上了嗎？關上了用過去式，還開著用現在完成式。"
+  },
+  "quizMore": [
+    {
+      "q": "The plant ___ two new lines so far this year.",
+      "opts": [
+        "opened",
+        "has opened",
+        "was opening",
+        "opens"
+      ],
+      "ans": 1,
+      "expl": "so far this year 表示時間框還開著，用現在完成式。"
+    },
+    {
+      "q": "They ___ the contract in March.",
+      "opts": [
+        "have signed",
+        "signed",
+        "have been signing",
+        "sign"
+      ],
+      "ans": 1,
+      "expl": "in March 是已經關上的時間框，用過去簡單式。"
+    }
+  ]
+},
+"dg20260918b2": {
+  "vis": true,
+  "oneLine": "時態不只是文法，更是鏡頭位置——完成式把鏡頭推到現在，過去式把鏡頭留在事發當時。",
+  "map": {
+    "when": "寫新聞、寫報告、寫給客戶的正式信件，需要決定讀者站在哪個時間點的時候",
+    "why": "同一組事實用不同時態寫，讀者會讀成「還沒結案的現況」或「已經翻頁的歷史」，語感差很多",
+    "form": "開場：have/has + Vpp（不提時間）　|　補細節：V-ed + 明確時間　|　收尾拉回現在：has not + Vpp"
+  },
+  "visual": {
+    "type": "shift",
+    "cap": "上面是把事件釘在過去的寫法，下面是把同一件事拉到現在的寫法——只換時態與時間副詞，讀者的視角就從「那時候」移到「現在」。",
+    "rows": [
+      {
+        "a": "The bank tightened property lending rules in 2024.",
+        "b": "The bank has tightened property lending rules since 2024.",
+        "nt": "in 2024 把事件釘在那一年；改成 since 2024 就變成「一路緊到現在」"
+      },
+      {
+        "a": "Rents rose sharply last year.",
+        "b": "Rents have risen sharply over the past year.",
+        "nt": "last year 是回顧；over the past year 把期間拉到現在，讀者會覺得問題還在"
+      },
+      {
+        "a": "The committee agreed on the wording on 3 March.",
+        "b": "The committee has agreed on the wording.",
+        "nt": "拿掉日期就只剩結果，適合寫在信件或摘要的開頭"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "lead-sentence",
+      "icon": "flag",
+      "title": "新聞開場",
+      "titleCn": "先講現在的狀態",
+      "ask": "新聞的第一句為什麼常用現在完成式？",
+      "en": "Taiwan has kept its benchmark rate at 2 percent.",
+      "cn": "台灣把基準利率維持在2%。",
+      "why": "讀者最想知道「現在是什麼狀況」，完成式正好把焦點放在結果上。如果第一句就寫 kept on Wednesday，讀者會覺得那只是週三的一則舊消息。"
+    },
+    {
+      "key": "detail-past",
+      "icon": "pin",
+      "title": "補細節",
+      "titleCn": "切回過去式",
+      "ask": "第二句加了日期，時態要怎麼變？",
+      "en": "The board reached that decision on Wednesday evening.",
+      "cn": "理事會在星期三晚上做出這項決定。",
+      "why": "只要寫出 on Wednesday evening 這種明確時間，就必須用過去簡單式，因為那個時間框已經關上了。這是新聞英文最穩定的節奏。"
+    },
+    {
+      "key": "still-open",
+      "icon": "balance",
+      "title": "問題還沒結案",
+      "titleCn": "完成式的言外之意",
+      "ask": "為什麼用完成式讀起來像在提出警訊？",
+      "en": "Wages have not kept up with housing costs.",
+      "cn": "薪資並沒有跟上居住成本。",
+      "why": "完成式代表這個狀態延續到現在、還沒翻頁，讀者會自動把它讀成「現在的問題」；改成 did not keep up 就變成單純的歷史敘述，力道整個不見。"
+    },
+    {
+      "key": "register",
+      "icon": "eye",
+      "title": "正式與口語",
+      "titleCn": "寫給客戶時的選擇",
+      "ask": "寫正式信件時該用哪一種？",
+      "en": "It has been decided that the deadline will move.",
+      "cn": "已決定延後截止日。",
+      "why": "完成式被動不點名是誰決定的，語氣中性又正式；口語會直接說 They decided to push it back，但寫給客戶時前者比較合適。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要寫一封進度信給越南廠的客戶，說明這個月的狀況。"
+    },
+    {
+      "label": "開場講現在",
+      "text": "We have completed the first round of testing.——不提日期，讓客戶直接看到現在的進度。"
+    },
+    {
+      "label": "補上時間就換時態",
+      "text": "The samples arrived at our lab on 2 September.——一寫出日期，就要用過去簡單式。"
+    },
+    {
+      "label": "未結案的部分用完成式",
+      "text": "We have not received your feedback on the second batch.——完成式暗示「還在等」，比 did not receive 更禮貌也更準確。"
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "錯誤版：We have received your feedback last Friday.——有 last Friday 就必須改寫成 We received your feedback last Friday."
+    }
+  ],
+  "comparison": {
+    "title": "同一件事，兩種視角",
+    "left": {
+      "tag": "PAST SIMPLE",
+      "tagCn": "釘在那一刻",
+      "icon": "pin",
+      "head": "a closed record",
+      "headCn": "已經翻頁的紀錄",
+      "en": "The government introduced the cap in 2024.",
+      "cn": "政府在2024年推出這項上限。",
+      "pts": [
+        "帶明確時間：in 2024、last March、on Monday",
+        "讀起來像背景或歷史",
+        "適合數據回顧與事件敘述"
+      ]
+    },
+    "right": {
+      "tag": "PRESENT PERFECT",
+      "tagCn": "拉到現在",
+      "icon": "eye",
+      "head": "an open situation",
+      "headCn": "還沒結案的現況",
+      "en": "The government has kept the cap in place.",
+      "cn": "政府一直維持著這項上限。",
+      "pts": [
+        "不帶明確時間，或帶 since、so far",
+        "讀起來像現在的問題或成果",
+        "適合開場句與評論收尾"
+      ]
+    },
+    "note": "下筆前先決定：你要讀者看「當時發生了什麼」，還是「現在變成怎樣」。"
+  },
+  "quizMore": [
+    {
+      "q": "The ministry ___ the subsidy scheme three times since 2022.",
+      "opts": [
+        "extended",
+        "has extended",
+        "was extending",
+        "extends"
+      ],
+      "ans": 1,
+      "expl": "since 2022 一路延伸到現在，用現在完成式。"
+    },
+    {
+      "q": "The scheme ___ for the first time in April 2022.",
+      "opts": [
+        "has launched",
+        "launched",
+        "has been launching",
+        "launches"
+      ],
+      "ans": 1,
+      "expl": "in April 2022 是已經關上的時間框，用過去簡單式。"
+    }
+  ]
+},
 "dg20260915a2": {
   "vis": true,
   "oneLine": "想問『做多久了』，公式就是 How long + have you + 過去分詞——回答時 for 接長度、since 接起點。",

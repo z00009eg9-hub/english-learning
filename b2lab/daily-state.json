@@ -1,7 +1,7 @@
 {
   "_note": "內容排程狀態檔（每週二、五各跑一次）。每次執行讓兩位學習者各拿到一整份：四個程度（A2/B1/B1+/B2）的文章、文法、聽力。usedUnits = Anita 那條線（B1+/B2）已教過的文法單元編號；usedUnitsTom = Tom 那條線（A2/B1）已教過的文法單元編號（各自從 syllabus.json 依序走、互不影響）；usedSources = 已改寫過的新聞網址；usedVoa = 已加入聽力庫的 VOA／YouTube 素材代號（2026-08-19 起聽力改為本站原創 TTS 對話，未使用外部影片，故此欄位本次未異動）；lastRun = 最後一次成功產生的日期。",
-  "lastRun": "2026-09-15",
-  "nextKind": "news",
+  "lastRun": "2026-09-18",
+  "nextKind": "original",
   "usedVoa": [
     "L1-1",
     "L1-7",
@@ -22,7 +22,8 @@
     8,
     10,
     11,
-    12
+    12,
+    13
   ],
   "usedUnitsTom": [
     1,
@@ -35,7 +36,8 @@
     8,
     9,
     10,
-    11
+    11,
+    12
   ],
   "usedSources": [
     "https://www.taipeitimes.com/News/front/archives/2026/08/08/2003862135",
@@ -44,7 +46,8 @@
     "https://focustaiwan.tw/society/202608260024",
     "https://www.taipeitimes.com/News/taiwan/archives/2026/09/02/2003863565",
     "https://focustaiwan.tw/business/202608150005",
-    "https://english.cw.com.tw/article/article.action?id=4592"
+    "https://english.cw.com.tw/article/article.action?id=4592",
+    "https://focustaiwan.tw/business/202609170021"
   ],
   "usedTitles": [
     "A Sea Warning, but No Landfall",
@@ -89,16 +92,20 @@
     "A Friend Helps Tom Prepare",
     "Tom Answers the Big Question",
     "What Interviewers Are Really Asking",
-    "Hiring for Impact, Not for Scale"
+    "Hiring for Impact, Not for Scale",
+    "Tom Buys a Winter Jacket",
+    "Amy Shops With a Budget",
+    "Rates Stay Put, Home Loan Rules Ease",
+    "Doing Nothing, Carefully"
   ],
   "topicRotation": [
-    "金錢與居住",
     "食物與生活",
     "學習與心理",
     "天災與天氣",
     "健康與醫療",
     "旅遊與交通",
-    "職場與面試"
+    "職場與面試",
+    "金錢與居住"
   ],
   "dualLevel": {
     "tom": "A2",
@@ -116,15 +123,5 @@
     "週末活動",
     "家人與朋友"
   ],
-  "usedA2Topics": [
-    "交通",
-    "日常作息",
-    "居家",
-    "飲食",
-    "週末活動",
-    "天氣與衣服",
-    "健康",
-    "職場",
-    "家人與朋友"
-  ]
+  "usedA2Topics": []
 }
