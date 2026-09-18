@@ -60,14 +60,19 @@ GitHub 是唯一的同步來源；D: 只存在本機、不會自動備份，**�
 | 網站、Bot 程式碼、b2lab 資料 | GitHub | `git clone` |
 | 課堂筆記資料夾（`20250709-…` 這類日期資料夾） | 只在 Google 雲端硬碟（不進 git） | 裝 Google 雲端硬碟 |
 | rexon-qa-english（LINE Bot 會讀它的資料） | 只在 Google 雲端硬碟（**不在 GitHub**） | 裝 Google 雲端硬碟，磁碟代號要是 G: |
-| 排程任務（每日 LINE Bot 同步等） | 本機 `D:\ClaudeConfig\scheduled-tasks\` | 要重建（見下方步驟 6） |
+| **Claude 記憶**（TTS 修正、音標規則、文法對齊等約定） | 本機 `D:\ClaudeConfig\projects\D--english-learning\memory\`（**不在 GitHub、也不在雲端**） | 從舊電腦複製（見下方步驟 6） |
+| 排程任務（每日 LINE Bot 同步等） | 本機 `D:\ClaudeConfig\scheduled-tasks\` | 從舊電腦複製後重建（見下方步驟 7） |
+| Claude 全域設定 | 本機 `D:\ClaudeConfig\settings.json`（使用者環境變數 `CLAUDE_CONFIG_DIR=D:\ClaudeConfig` 指過去） | 從舊電腦複製，並設定同一個環境變數 |
 | Firebase / Cloudflare 登入 | 本機 | 重新登入 |
 
 ### 舊電腦（換之前）
 
 1. `cd /d/english-learning && git status` — 有未提交的改動就 commit + push
 2. `git log origin/main..HEAD` 應該是空的（代表全部推上去了）
-3. 把 `D:\ClaudeConfig\scheduled-tasks\` 整個資料夾複製到雲端硬碟或隨身碟（排程的任務書在裡面）
+3. 把下面三樣從 `D:\ClaudeConfig\` 複製到隨身碟（整個 `D:\ClaudeConfig` 也行，但 `vm_bundles`、`cache`、`npm-cache` 很大又不需要，可以略過）：
+   - `projects\D--english-learning\memory\`（記憶）
+   - `scheduled-tasks\`（排程任務書）
+   - `settings.json`（全域設定）
 
 ### 新電腦
 
@@ -87,8 +92,12 @@ GitHub 是唯一的同步來源；D: 只存在本機、不會自動備份，**�
    git checkout -- src/data/vocabulary.json
    ```
 5. 登入部署工具：`npx firebase-tools login`（Speak Up）、`npx wrangler login`（LINE Bot）。B2 Read 是 push 自動部署，不用登入
-6. 重建排程：在 Claude 桌面版把舊電腦複製出來的任務書（`scheduled-tasks\<任務名>\SKILL.md`）逐一建回去，路徑一律用 `D:\english-learning`
-7. 之後開 Claude Code / Codex 都從 `D:\english-learning` 開，不要從雲端硬碟的 `英文筆記` 資料夾開
+6. 還原 Claude 設定與記憶（**先做這步再開 Claude**）：
+   - 設使用者環境變數 `CLAUDE_CONFIG_DIR=D:\ClaudeConfig`（Windows 設定 → 編輯帳戶的環境變數），設完重開 Claude
+   - 把 `settings.json` 放回 `D:\ClaudeConfig\`，記憶放回 `D:\ClaudeConfig\projects\D--english-learning\memory\`
+   - ⚠ 記憶資料夾名稱 `D--english-learning` 是由 repo 路徑 `D:\english-learning` 換算來的；repo 放別的路徑就讀不到，所以步驟 3 的路徑不要改
+7. 重建排程：把任務書放回 `D:\ClaudeConfig\scheduled-tasks\`，在 Claude 桌面版逐一建回去，路徑一律用 `D:\english-learning`
+8. 之後開 Claude Code / Codex 都從 `D:\english-learning` 開，不要從雲端硬碟的 `英文筆記` 資料夾開（從那裡開，App 會在 G: 自動 git fetch，雲端又會冒出一堆雜湊檔名的物件檔）
 
 ## 技術備註
 
