@@ -51,8 +51,10 @@ git fetch && git status
    ```bash
    find .git -iname desktop.ini -delete
    ```
-4. **不要在這個資料夾裡跑 `npm install`**（Drive 上會 EBADF 失敗）。
-   需要跑測試就先複製到本機磁碟（例如 `D:\`）再裝。
+4. **不要在 `G:\我的雲端硬碟\英文筆記` 跑 git 或 `npm install`。** 那是雲端硬碟上的舊副本，
+   已停用：在那裡跑 git 會讓雲端冒出大量雜湊檔名的物件檔，`npm install` 會 EBADF 失敗，
+   資料也是舊的。一律在 `D:\english-learning` 做事。
+5. 換電腦時的設定步驟見 `CLAUDE.md` 的「換電腦設定步驟」。
 
 ---
 
