@@ -99,6 +99,21 @@ GitHub 是唯一的同步來源；D: 只存在本機、不會自動備份，**�
 7. 重建排程：把任務書放回 `D:\ClaudeConfig\scheduled-tasks\`，在 Claude 桌面版逐一建回去，路徑一律用 `D:\english-learning`
 8. 之後開 Claude Code / Codex 都從 `D:\english-learning` 開，不要從雲端硬碟的 `英文筆記` 資料夾開（從那裡開，App 會在 G: 自動 git fetch，雲端又會冒出一堆雜湊檔名的物件檔）
 
+### 雲端硬碟冒出雜湊檔名的檔案時
+
+在雲端硬碟「近期存取」看到一堆像 `d58f91edbd7f2c3bca9e…` 這種 38 個字的亂碼檔名，那是 `G:\我的雲端硬碟\英文筆記\.git\objects\` 裡的 git 物件檔（有人從 G: 開了對話或跑了 git）。
+
+- **不要在雲端硬碟網頁上手動刪**：當下有些是 repo 正在用的物件，直接刪會把 G: 的 repo 弄壞
+- 正確清法：在 G: 那份把它們打包，雲端硬碟幾分鐘內會自己把雲端的刪掉
+  ```bash
+  cd "G:/我的雲端硬碟/英文筆記"
+  find .git -iname desktop.ini -delete
+  git gc --prune=now
+  git count-objects -v   # count 要是 0；.git/objects 底下只剩 info、pack 兩個資料夾
+  ```
+- `.git` 裡的 `pack`、`info` 資料夾、`packed-refs`、`refs` 是必要檔案，任何時候都不要刪
+- 根本解法：英文學習一律從 `D:\english-learning` 開對話（上面第 8 步）
+
 ## 技術備註
 
 - 兩個網站都是單一大 HTML 檔，CSS/JS 內嵌，無 build step

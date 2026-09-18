@@ -54,7 +54,8 @@ git fetch && git status
 4. **不要在 `G:\我的雲端硬碟\英文筆記` 跑 git 或 `npm install`。** 那是雲端硬碟上的舊副本，
    已停用：在那裡跑 git 會讓雲端冒出大量雜湊檔名的物件檔，`npm install` 會 EBADF 失敗，
    資料也是舊的。一律在 `D:\english-learning` 做事。
-5. 換電腦時的設定步驟見 `CLAUDE.md` 的「換電腦設定步驟」。
+5. 換電腦時的設定步驟見 `CLAUDE.md` 的「換電腦設定步驟」；雲端冒出雜湊檔名檔案的清法
+   （G: 跑 `git gc --prune=now`，不要在雲端手動刪）也在同一節。
 
 ---
 
