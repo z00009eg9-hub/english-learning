@@ -59,7 +59,7 @@ GitHub 是唯一的同步來源；D: 只存在本機、不會自動備份，**�
 |---|---|---|
 | 網站、Bot 程式碼、b2lab 資料 | GitHub | `git clone` |
 | 課堂筆記資料夾（`20250709-…` 這類日期資料夾） | 只在 Google 雲端硬碟（不進 git） | 裝 Google 雲端硬碟 |
-| rexon-qa-english（LINE Bot 會讀它的資料） | 只在 Google 雲端硬碟（**不在 GitHub**） | 裝 Google 雲端硬碟，磁碟代號要是 G: |
+| rexon-qa-english（LINE Bot 會讀它的資料） | GitHub `z00009eg9-hub/rexon-qa-english`（本機 `D:\rexon-qa-english`）；LINE Bot 建置目前讀的是雲端硬碟那份 `G:\我的雲端硬碟\越南\品保課\儀器\rexon-qa-english` | `git clone` 到 `D:\rexon-qa-english`；並裝 Google 雲端硬碟（G:），否則 LINE Bot 讀不到 QA 資料 |
 | **Claude 記憶**（TTS 修正、音標規則、文法對齊等約定） | 本機 `D:\ClaudeConfig\projects\D--english-learning\memory\`（**不在 GitHub、也不在雲端**） | 從舊電腦複製（見下方步驟 6） |
 | 排程任務（每日 LINE Bot 同步等） | 本機 `D:\ClaudeConfig\scheduled-tasks\` | 從舊電腦複製後重建（見下方步驟 7） |
 | Claude 全域設定 | 本機 `D:\ClaudeConfig\settings.json`（使用者環境變數 `CLAUDE_CONFIG_DIR=D:\ClaudeConfig` 指過去） | 從舊電腦複製，並設定同一個環境變數 |
