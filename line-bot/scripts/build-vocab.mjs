@@ -322,6 +322,34 @@ for (const issue of qa.QA_ISSUES || []) {
   for (const v of issue.vocab || []) addQaTerm(v.en || v.term, v.zh, v.def);
 }
 
+/* 3b) B2 Lab — window.BOOK.lessons[].vocab / vocab2 / vocabReview（課本單字表）
+   NOTES 只收到 0813 那課，之後的新課單字只寫進 BOOK；不收這裡的話，
+   新課的字（moisture absorber、goggles…）在 LINE 上一律查不到。
+   放在 NOTES 與 QA 之後，只補空白欄位，不蓋掉既有的翻譯。 */
+for (const l of b2.BOOK?.lessons || []) {
+  const lesson =
+    isStr(l.date) && isStr(l.titleCn) ? `${l.date.replace(/-/g, '')} ${clean(l.titleCn)}` : '';
+  for (const list of [l.vocab, l.vocab2, l.vocabReview]) {
+    for (const v of list || []) {
+      if (!isStr(v.w)) continue;
+      const e = entry(v.w);
+      e.pos ||= isStr(v.pos) ? clean(v.pos) : '';
+      e.ipa ||= isStr(v.ipa) ? clean(v.ipa) : '';
+      e.translation ||= isStr(v.cn) ? clean(v.cn) : '';
+      e.source = e.source === 'qa' ? 'both' : e.source || 'general';
+      e.bookId ||= isStr(l.id) ? l.id : '';
+      // BOOK 的 ex 偶爾放的是英文釋義（"To stay away from."），要真的含這個字才算例句
+      if (isStr(v.ex) && matcherFor(v.w).test(v.ex)) pushEx(e.general, { en: v.ex, zh: v.exCn });
+      if (lesson) {
+        e.lesson ||= lesson;
+        if (!lessonGroups.has(lesson)) lessonGroups.set(lesson, []);
+        const g = lessonGroups.get(lesson);
+        if (!g.includes(e.id)) g.push(e.id);
+      }
+    }
+  }
+}
+
 /* 5) 補上例句：把兩邊的句子池掃過一遍，替每個單字找例句 */
 const MAX_EX = 6;
 for (const e of words.values()) {
