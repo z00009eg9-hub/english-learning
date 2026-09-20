@@ -2142,6 +2142,21 @@ function voiceAlive(v){
 /* TTS 發音修正表：引擎唸錯的字，朗讀前換成唸得對的拼法（只影響聲音，畫面照舊）。
    之後發現唸錯的字就加一行。 */
 const TTS_FIX={mindset:'mind set', rapport:'ruh pore', accessories:'ucksessories', accessory:'ucksessory'};
+/* iOS Safari 的朗讀引擎唸長句時，偶爾會整個吃掉句子中段的一個字
+   （09/17 筆記「…the sharp edges because they may…」的 edges 就唸不出來）。
+   所以在 iOS 上把長句從子句處（逗號、because/but/so…）再切成幾段唸：
+   被吃掉的字變成那一段的結尾，就會唸得完整，段落之間只多一個很短的停頓。
+   其他平台不受影響，維持原本一口氣唸完。 */
+const IS_IOS=/iPad|iPhone|iPod/.test(navigator.userAgent)
+  || (navigator.platform==='MacIntel' && navigator.maxTouchPoints>1);   // iPadOS 會自稱 Mac
+/* 用控制字元當切點，不用 lookbehind（舊版 Safari 不支援，會讓整份 script 掛掉） */
+const CLAUSE_RE=new RegExp('\\s+(?=(?:because|but|so|and then|which|who|when|while|if|although|though|after|before|until|unless)\\b)','gi');
+function ttsChunks(s){
+  const x=String(s).trim();
+  if(!IS_IOS || x.split(/\s+/).length<8) return [x];
+  return x.replace(/([,;:])\s+/g,'$1').replace(CLAUSE_RE,'')
+          .split('').map(y=>y.trim()).filter(Boolean);
+}
 function say(text,rate,onend,voice){
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
@@ -2153,24 +2168,24 @@ function say(text,rate,onend,voice){
   if((voice||VOICE)&&!v){ pickVoice(); v=voiceAlive(voice)||VOICE; }
   const sents=t.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[t];
   const us=[];
+  /* 一句可能再切成幾段（見 ttsChunks），語速語調同一句共用，onend 只掛最後一段 */
+  const add=(txt,r,p,last)=>{
+    const parts=ttsChunks(txt);
+    parts.forEach((part,k)=>{
+      const u=new SpeechSynthesisUtterance(part);
+      u.lang='en-US'; u.rate=r; u.pitch=p;
+      if(v) u.voice=v;
+      if(last && k===parts.length-1 && onend){ u.onend=onend; u.onerror=onend; }
+      us.push(u);
+    });
+  };
   if(sents.length<=1){
-    const u=new SpeechSynthesisUtterance(t);
-    u.lang='en-US';
-    u.rate=isQ?base*1.02:base*0.96;
-    u.pitch=isQ?1.08:isEx?1.02:0.97;
-    if(v) u.voice=v;
-    if(onend){u.onend=onend;u.onerror=onend;}
-    us.push(u);
+    add(t, isQ?base*1.02:base*0.96, isQ?1.08:isEx?1.02:0.97, true);
   }else{
     sents.forEach((s,i)=>{
-      const u=new SpeechSynthesisUtterance(s.trim());
-      u.lang='en-US';
-      const sq=/\?$/.test(s.trim()), last=i===sents.length-1;
-      u.rate=last?base*0.93:sq?base*1.02:base*(0.96+i%2*0.04);
-      u.pitch=sq?1.10:last?0.94:1.0+((i%3)-1)*0.05;
-      if(v) u.voice=v;
-      if(last&&onend){u.onend=onend;u.onerror=onend;}
-      us.push(u);
+      const str=s.trim(), sq=/\?$/.test(str), last=i===sents.length-1;
+      add(str, last?base*0.93:sq?base*1.02:base*(0.96+i%2*0.04),
+               sq?1.10:last?0.94:1.0+((i%3)-1)*0.05, last);
     });
   }
   /* iOS Safari：cancel() 後立刻 speak() 會靜默失敗，延遲一拍再唸；
