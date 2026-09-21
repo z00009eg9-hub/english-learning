@@ -22,7 +22,7 @@ const ROOT = resolve(HERE, '..');
 const B2LAB_DIR = process.env.B2LAB_DIR || resolve(ROOT, '..', 'b2lab', 'public');
 const QA_DIR =
   process.env.QA_DIR ||
-  'G:/我的雲端硬碟/越南/品保課/儀器/rexon-qa-english/public';
+  'D:/rexon-qa-english/public';
 
 const OUT = join(ROOT, 'src', 'data', 'vocabulary.json');
 
