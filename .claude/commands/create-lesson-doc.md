@@ -24,7 +24,18 @@
 
 #### A. 單字清單
 - 每個單字：英文、音標（IPA）、詞性、中文意思、例句
-  - **音標一律美式（Cambridge 記法，2026-09-09 全站統一）**：ɑː 不用 ɒ、tuː 不用 tjuː、非重音 -er 寫 ɚ、bird 寫 ɝː、用 e 不用 ɛ、一律 `/…/` 不用 `[…]`；同一個字在所有課要同一寫法（例：/kənˈvɪns/、/pɚˈsweɪd/、/ˈmɑː.nə.t̬ɚ/）。B2 Read 網站的單字卡、課本與關聯頁共用同一套音標，寫法不一致學習者會當成兩種讀音。
+  - **音標一律美式（Cambridge US 記法，2026-09-09 全站統一，2026-09-21 補強捲舌規則）**
+    - 符號：`ɑː` 不用 `ɒ`、`oʊ` 不用 `əʊ`、`e` 不用 `ɛ`、`tuː` 不用 `tjuː`、`ɪr`/`er`/`ʊr` 不用 `ɪə`/`eə`/`ʊə`；一律 `/…/` 不用 `[…]`
+    - ⭐ **捲舌 r 最常漏，是 2026-09-21 全站盤點抓到的主因**：美式沒有不發音的 r，拼字裡每個母音後的 r 都要標出來
+      - 非重音的 -er/-or/-ar → `ɚ`：leadership `/ˈliː.dɚ.ʃɪp/`、government `/ˈɡʌv.ɚn.mənt/`、manager `/ˈmæn.ə.dʒɚ/`
+      - 重音的 bird 類 → `ɝː`：courage `/ˈkɝː.ɪdʒ/`、surgery `/ˈsɝː.dʒɚ.i/`、civil servant `/ˈsɪv.əl ˈsɝː.vənt/`
+      - 其餘位置直接留 `r`：cargo hold `/ˈkɑːr.ɡoʊ hoʊld/`、performance `/pɚˈfɔːr.məns/`、tarmac `/ˈtɑːr.mæk/`、support `/səˈpɔːrt/`
+      - ⚠ `aɪə`／`aʊə`／`ɔɪə` 後面接 r 不可比照 `ɪər→ɪr` 壓縮成一個音節：power `/ˈpaʊ.ɚ/`、employer `/ɪmˈplɔɪ.ɚ/`、supplier `/səˈplaɪ.ɚ/`
+    - **產出前自我檢查（每個單字都要做）**：數「拼字裡有幾個 r」對上「音標裡有幾個 r／ɚ／ɝ」，前者多就是漏了捲舌
+      （雙寫 r 的 arrive `/əˈraɪv/`、borrow `/ˈbɑːroʊ/` 是正常例外）
+    - 同一個字在所有課要同一寫法（例：`/kənˈvɪns/`、`/pɚˈsweɪd/`、`/ˈmɑː.nə.t̬ɚ/`）。B2 Read 的單字卡、課本、關聯頁與雲端 Google 文件共用同一套音標，寫法不一致學習者會當成兩種讀音
+    - **既有筆記要批次改**：對照表在 `b2lab/public/us-ipa-map.json`（線上 <https://english-b2-lab.web.app/us-ipa-map.json>）；Apps Script 專案「英文筆記-音標統一美式」的 `pass2()` 會掃過雲端全部課堂筆記，只替換「斜線包起來且含音標符號」的字串，不動表格結構。新加的例外字寫進這個 json 再 push 即可
+    - 🔊 **發音也只用美式**：B2 Read 的 `pickVoice()` 先過濾 `en-US`，沒有美式語音才退回其他 en —— 英式 premium／enhanced 的分數會贏過美式，manager 就會被唸成無捲舌的 /ˈmænɪdʒə/
 - B2+ 單字加 ⭐ 標記
 - 片語（phrasal verbs、固定搭配）獨立列出
 
