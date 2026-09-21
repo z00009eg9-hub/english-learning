@@ -5504,6 +5504,8 @@ function bkWhere(b,s){
         .concat(r.sumEn||[],r.sumCn||[]))) w.push(r.bar||('閱讀文章：'+r.title));
   });
   if(has((b.cmp||[]).flatMap(c=>[c.u,c.cn,c.sc,c.ex,c.exCn]))) w.push('比較表');
+  if(b.pair && has([b.pair.a,b.pair.b,b.pair.aCn,b.pair.bCn,b.pair.note]
+      .concat((b.pair.rows||[]).flatMap(r=>[r.k,r.a,r.b])))) w.push(b.pairTitle||'易混淆比較');
   if(has((b.extra||[]).flatMap(x=>[x.title].concat((x.exs||[]).flatMap(e=>[e.en,e.cn]))))) w.push('補充例句');
   if(has((b.extraVocab||[]).flatMap(x=>[x.k,x.en,x.cn]))) w.push('補充字彙與句型');
   if(has((b.discussion||[]).flatMap(d=>[d.q,d.qCn,d.a,d.aCn]))) w.push('課堂討論');
@@ -5778,6 +5780,22 @@ function bookHTML(b){
        +'<div class="wrong">❌ '+esc(b.cmpWarn.bad)+'</div>'
        +(b.cmpWarn.good||[]).map(g=>'<div class="right">✅ '+esc(g)+'</div>').join('')+'</div>';
     }
+  }
+
+  /* 兩個詞的對照表（有才顯示）：左欄是比較項目，另兩欄是兩個詞各自的說明。
+     跟 cmp（用法／場景／例句／中文）不同，這張表用在「A 和 B 差在哪」的逐項比較。 */
+  if(b.pair && (b.pair.rows||[]).length){
+    const p=b.pair;
+    h+='<div class="bkbar">'+esc(b.pairTitle||'易混淆比較 Compare')+'</div>'
+     +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+     +'<tr><th>比較</th>'
+     +'<th>'+esc(p.a)+(p.aCn?'<div class="muted cnx" style="font-weight:400">'+esc(p.aCn)+'</div>':'')+(/[a-zA-Z]{2,}/.test(p.a)?' '+spk(p.a):'')+'</th>'
+     +'<th>'+esc(p.b)+(p.bCn?'<div class="muted cnx" style="font-weight:400">'+esc(p.bCn)+'</div>':'')+(/[a-zA-Z]{2,}/.test(p.b)?' '+spk(p.b):'')+'</th></tr>'
+     + p.rows.map(r=>'<tr><td class="nw" style="font-weight:700">'+esc(r.k)+'</td>'
+       +'<td>'+esc(r.a)+'</td><td>'+esc(r.b)+'</td></tr>').join('')
+     +'</table></div>'
+     +(p.note?'<div class="muted" style="margin-top:8px">'+esc(p.note)+'</div>':'')
+     +'</div>';
   }
 
   /* 閱讀文章（有才顯示）：逐句可點朗讀＋反黃、理解問題答案可隱藏、Simple Summary */

@@ -10974,6 +10974,23 @@ window.BOOK = {
           ]
         }
       ],
+      pairTitle: 'IV-I. 易混淆比較：moisture absorber vs desiccant（兩者差在哪？）',
+      pair: {
+        a: 'Moisture absorber', aCn: '吸濕劑、除濕劑',
+        b: 'Desiccant', bCn: '乾燥劑',
+        rows: [
+          { k: '中文常見翻譯', a: '吸濕劑、除濕劑', b: '乾燥劑' },
+          { k: '意思', a: '泛指「把環境中的水氣吸走」的產品', b: '專門用來維持包裝內乾燥的物質' },
+          { k: '常見材料', a: 'Calcium Chloride (CaCl₂) 氯化鈣', b: 'Silica Gel 矽膠、Clay 等' },
+          { k: '常見外觀', a: '除濕盒、吊掛式吸濕袋', b: '小包乾燥劑' },
+          { k: '吸水後', a: 'CaCl₂ 常會形成液體／凝膠', b: 'Silica gel 通常仍維持固體' },
+          { k: '吸濕能力', a: 'CaCl₂ 通常非常強', b: 'Silica gel 較低但穩定' },
+          { k: '適合範圍', a: '貨櫃、衣櫃、大空間、高濕環境', b: '紙箱、零件袋、電子產品、小型密閉包裝' },
+          { k: '漏液風險', a: '⚠ CaCl₂ 型需要注意', b: 'Silica gel 很低' },
+          { k: 'QA 包裝規格常用詞', a: '視產品而定', b: 'Desiccant 最常見' }
+        ],
+        note: '兩個字課堂上都用過：向客戶／稽核員口說介紹包裝站時，moisture absorber 最好懂；寫 QA 包裝規格或 SOP 時，desiccant 最常見（詳見 IV-H）。'
+      },
       extraTitle: 'V. 稽核準備與口說範本 Audit Preparation',
       extra: [
         {
