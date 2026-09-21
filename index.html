@@ -7568,11 +7568,13 @@ function initDayRailControls(){const rail=$('day-rail');if(!rail||rail.dataset.c
   rail.dataset.controlsReady='1';
   rail.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();scrollDayRail(e.key==='ArrowRight'?1:-1);}});
   rail.addEventListener('wheel',e=>{if(e.shiftKey&&Math.abs(e.deltaY)>Math.abs(e.deltaX)){e.preventDefault();rail.scrollBy({left:e.deltaY,behavior:'smooth'});}}, {passive:false});
-  if(matchMedia('(pointer:fine)').matches){let down=false,startX=0,startLeft=0;
-    rail.addEventListener('pointerdown',e=>{down=true;startX=e.clientX;startLeft=rail.scrollLeft;rail.classList.add('dragging');rail.setPointerCapture(e.pointerId);});
-    rail.addEventListener('pointermove',e=>{if(down)rail.scrollLeft=startLeft-(e.clientX-startX);});
-    rail.addEventListener('pointerup',()=>{down=false;rail.classList.remove('dragging');});
-    rail.addEventListener('pointercancel',()=>{down=false;rail.classList.remove('dragging');});
+  if(matchMedia('(pointer:fine)').matches){let down=false,dragging=false,startX=0,startLeft=0,pid=0;
+    rail.addEventListener('pointerdown',e=>{down=true;dragging=false;startX=e.clientX;startLeft=rail.scrollLeft;pid=e.pointerId;});
+    rail.addEventListener('pointermove',e=>{if(!down)return;
+      if(!dragging&&Math.abs(e.clientX-startX)>5){dragging=true;rail.classList.add('dragging');rail.setPointerCapture(pid);}
+      if(dragging)rail.scrollLeft=startLeft-(e.clientX-startX);});
+    rail.addEventListener('pointerup',e=>{if(dragging)e.stopPropagation();down=false;dragging=false;rail.classList.remove('dragging');});
+    rail.addEventListener('pointercancel',()=>{down=false;dragging=false;rail.classList.remove('dragging');});
   }
 }
 function startTodayPractice(){
