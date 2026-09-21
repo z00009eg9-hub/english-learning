@@ -1088,7 +1088,7 @@ notes:[
   "pre": [
     {
       "w": "manager",
-      "ipa": "/ˈmænɪdʒɚ/",
+      "ipa": "/ˈmæn.ə.dʒɚ/",
       "pos": "n.",
       "cn": "經理",
       "def": "A person who is in charge of a business or office."
@@ -2043,7 +2043,7 @@ notes:[
     },
     {
       "w": "manager",
-      "ipa": "/ˈmænɪdʒɚ/",
+      "ipa": "/ˈmæn.ə.dʒɚ/",
       "pos": "n.",
       "cn": "主管",
       "def": "A person who is in charge of a business or team."
@@ -4995,7 +4995,7 @@ notes:[
     {w:"cough",ipa:"/kɔːf/",pos:"v.",cn:"咳嗽",def:"A sudden noise made when air is pushed out of the lungs."},
     {w:"tired",ipa:"/ˈtaɪrd/",pos:"adj.",cn:"疲累的",def:"Feeling like you need to rest."},
     {w:"appointment",ipa:"/əˈpɔɪntmənt/",pos:"n.",cn:"預約（門診）",def:"A time you plan to see the doctor."},
-    {w:"take care of",ipa:"/teɪk keər ʌv/",pos:"phr.v.",cn:"照顧",def:"To look after someone."},
+    {w:"take care of",ipa:"/teɪk ker ʌv/",pos:"phr.v.",cn:"照顧",def:"To look after someone."},
     {w:"suggest",ipa:"/səˈdʒest/",pos:"v.",cn:"建議",def:"To give an idea about what someone should do."}
   ],
   script:[

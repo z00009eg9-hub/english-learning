@@ -6169,7 +6169,7 @@ window.BOOK = {
           ex: 'She works effectively.', exCn: '副詞放在動詞後面，修飾動作做得如何。' },
         { w: 'accurately', ipa:'/ˈækjɚətli/', pos: 'adv.', cn: '準確地、精確地',
           ex: 'I want to express my basic ideas accurately.', exCn: '我想準確地表達我的基本想法。' },
-        { w: 'express basic idea', ipa: '/ɪkˈspres ˈbesɪk aɪˈdiə/', pos: 'v. phr.', cn: '表達基本想法',
+        { w: 'express basic idea', ipa: '/ɪkˈspres ˈbeɪsɪk aɪˈdiə/', pos: 'v. phr.', cn: '表達基本想法',
           ex: 'I can express basic ideas in English.', exCn: '我能用英文表達基本想法。' },
         { w: 'make progress', ipa: '/meɪk ˈprɑː.ɡres/', pos: 'v. phr.', cn: '取得進步',
           ex: 'I want to make progress.', exCn: '我想取得進步。' },

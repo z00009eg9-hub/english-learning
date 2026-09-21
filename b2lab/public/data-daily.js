@@ -1023,7 +1023,7 @@ articles:[
   "target": [
     {
       "w": "manager",
-      "ipa": "/ˈmænɪdʒɚ/",
+      "ipa": "/ˈmæn.ə.dʒɚ/",
       "pos": "n.",
       "cn": "經理",
       "def": "A person who is in charge of a business or office.",
@@ -1689,7 +1689,7 @@ articles:[
     },
     {
       "w": "manager",
-      "ipa": "/ˈmænɪdʒɚ/",
+      "ipa": "/ˈmæn.ə.dʒɚ/",
       "pos": "n.",
       "cn": "經理",
       "def": "A person who is in charge of a business or office.",

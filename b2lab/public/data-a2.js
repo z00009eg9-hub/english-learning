@@ -320,7 +320,7 @@ articles:[
   ],
   target:[
     {w:"fever",ipa:"/ˈfiː.vɚ/",pos:"n.",cn:"發燒",def:"A body temperature that is too high.",ex:"My little brother has a high fever and is staying in bed.",exCn:"我弟弟發高燒，正躺在床上休息。"},
-    {w:"manager",ipa:"/ˈmænɪdʒɚ/",pos:"n.",cn:"主管",def:"A person who leads a team at work.",ex:"Our store manager lets us leave early on holidays.",exCn:"我們店的主管在節日會讓我們早點下班。"},
+    {w:"manager",ipa:"/ˈmæn.ə.dʒɚ/",pos:"n.",cn:"主管",def:"A person who leads a team at work.",ex:"Our store manager lets us leave early on holidays.",exCn:"我們店的主管在節日會讓我們早點下班。"},
     {w:"kind",ipa:"/kaɪnd/",pos:"adj.",cn:"親切的",def:"Nice to other people.",ex:"The bus driver was kind and helped the old woman with her bags.",exCn:"公車司機很親切，幫那位老太太提袋子。"},
     {w:"work from home",ipa:"/wɝːk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home, not at the office.",ex:"When it snows, my mom can work from home and watch us.",exCn:"下雪的時候，我媽媽可以在家工作，順便照顧我們。"},
     {w:"report",ipa:"/rɪˈpɔːrt/",pos:"n.",cn:"報告",def:"A written piece of work about something.",ex:"I wrote a short report about frogs for science class.",exCn:"我為自然課寫了一篇關於青蛙的短報告。"},

@@ -2106,7 +2106,11 @@ window.setProfile=setProfile;
 /* ---------- 語音朗讀 (TTS) ---------- */
 let VOICE=null, VOICE2=null;
 function pickVoice(){
-  const vs=speechSynthesis.getVoices().filter(v=>/^en(-|_)/i.test(v.lang));
+  /* 音標一律用 US，語音也只用美式：有 en-US 就只從 en-US 裡挑，
+     否則高分的英式 premium／enhanced 會贏過美式（manager 被唸成 /ˈmænɪdʒə/ 沒有捲舌）。 */
+  const all=speechSynthesis.getVoices().filter(v=>/^en(-|_)/i.test(v.lang));
+  const us=all.filter(v=>/^en(-|_)us$/i.test(v.lang));
+  const vs=us.length?us:all;
   if(!vs.length) return;
   const score=v=>{
     const n=(v.name||'').toLowerCase();
