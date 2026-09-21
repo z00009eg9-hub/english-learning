@@ -6706,11 +6706,9 @@ function micInterrupted(){
   const cfg=micCfg;hardResetMic();
   if(cfg&&cfg.lbl){const l=$(cfg.lbl);if(l)l.textContent='錄音已中斷，按一下重新開始 '+(cfg.icon||'🎤');}}
 document.addEventListener('visibilitychange',()=>{
-  /* 離開時收乾淨；回到前景時再收一次 —— 有些手機（iOS）離開時不會通知，
-     按鈕會留在 ⏹ 的錄音狀態，怎麼按都沒反應 */
-  micInterrupted();});
+  if(document.hidden){micInterrupted();}
+  else{setTimeout(()=>{if(micActive&&!micRec)micInterrupted();},600);}});
 window.addEventListener('pagehide',()=>{micInterrupted();});
-window.addEventListener('pageshow',()=>{micInterrupted();});
 /* 除錯用：把瀏覽器聽到的候選列出來，一眼看出是收音沒收到還是評分太嚴 */
 function altLine(alts,chosen){
   const u=[];(alts||[]).forEach(a=>{const t=(a||'').trim();if(t&&u.indexOf(t)<0)u.push(t);});
