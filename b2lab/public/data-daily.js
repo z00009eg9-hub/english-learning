@@ -2789,7 +2789,7 @@ articles:[
     },
     {
       "w": "cholesterol",
-      "ipa": "/kəˈlestərɔːl/",
+      "ipa": "/kəˈles.tə.rɑːl/",
       "pos": "n.",
       "cn": "膽固醇",
       "def": "A fat-like substance in your blood that can affect your heart.",

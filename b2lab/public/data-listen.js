@@ -2621,7 +2621,7 @@ notes:[
   "intro": "Tom跟Amy分享他第一次玩直排輪的經驗，跌倒了好幾次但還是學到了一些技巧。這一課句子很短，重點是聽出過去式的動詞（tried, fell, hurt）和can表示『現在做得到』的能力。",
   "tip": "先聽一次抓「Tom跌倒了幾次」，再聽一次抓「他現在會不會轉彎」。",
   "pre": [
-    {"w": "roller-skate", "ipa": "/ˈroʊlər skeɪt/", "pos": "v.", "cn": "溜直排輪", "def": "To move around on skates with small wheels."},
+    {"w": "roller-skate", "ipa": "/ˈroʊlɚ skeɪt/", "pos": "v.", "cn": "溜直排輪", "def": "To move around on skates with small wheels."},
     {"w": "fall down", "ipa": "/fɔːl daʊn/", "pos": "phr.v.", "cn": "跌倒", "def": "To drop suddenly to the ground."},
     {"w": "difficult", "ipa": "/ˈdɪfɪkəlt/", "pos": "adj.", "cn": "困難的", "def": "Not easy to do."},
     {"w": "hurt", "ipa": "/hɝːt/", "pos": "v.", "cn": "疼痛、受傷", "def": "To feel pain in a part of your body."},
@@ -2830,7 +2830,7 @@ notes:[
     {"w": "challenge", "ipa": "/ˈtʃælɪndʒ/", "pos": "v.", "cn": "挑戰、質疑", "def": "To question whether something is true or right."},
     {"w": "evidence", "ipa": "/ˈevɪdəns/", "pos": "n.", "cn": "證據", "def": "Facts that show something is true."},
     {"w": "confusion", "ipa": "/kənˈfjuːʒn/", "pos": "n.", "cn": "困惑", "def": "A state of not understanding something clearly."},
-    {"w": "unfamiliar", "ipa": "/ˌʌnfəˈmɪliər/", "pos": "adj.", "cn": "不熟悉的", "def": "Not known or recognized."}
+    {"w": "unfamiliar", "ipa": "/ˌʌn.fəˈmɪl.jɚ/", "pos": "adj.", "cn": "不熟悉的", "def": "Not known or recognized."}
   ],
   "script": [
     {"sp": "Anita", "en": "Hi, this is Anita again. I want to talk briefly about something I've learned from an unlikely source: a statistics course.", "cn": "嗨，我是Anita。我想簡短談談我從一個意想不到的來源學到的事：一門統計課程。"},
@@ -4572,7 +4572,7 @@ notes:[
   "pre": [
     {
       "w": "air traffic controller",
-      "ipa": "/er ˈtræfɪk kənˈtroʊlər/",
+      "ipa": "/er ˈtræf.ɪk kənˈtroʊ.lɚ/",
       "pos": "n.",
       "cn": "飛航管制員",
       "def": "A person who guides planes safely from the ground."
@@ -4913,7 +4913,7 @@ notes:[
     {w:"routine",ipa:"/ruːˈtiːn/",pos:"n.",cn:"固定的習慣、常規",def:"A regular way of doing things."},
     {w:"backup",ipa:"/ˈbækʌp/",pos:"adj.",cn:"備用的",def:"Kept ready to use if the main one fails."},
     {w:"mindset",ipa:"/ˈmaɪnd.set/",pos:"n.",cn:"心態",def:"A person's usual way of thinking about things."},
-    {w:"buffer",ipa:"/ˈbʌfər/",pos:"n.",cn:"緩衝時間",def:"Extra time or space kept in case something goes wrong."},
+    {w:"buffer",ipa:"/ˈbʌfɚ/",pos:"n.",cn:"緩衝時間",def:"Extra time or space kept in case something goes wrong."},
     {w:"crisis",ipa:"/ˈkraɪsɪs/",pos:"n.",cn:"危機",def:"A time of great difficulty or danger."},
     {w:"productive",ipa:"/prəˈdʌktɪv/",pos:"adj.",cn:"有生產力的、有效率的",def:"Producing good, useful results."}
   ],
@@ -5370,7 +5370,7 @@ notes:[
   pre:[
     {w:"plan",ipa:"/plæn/",pos:"n.",cn:"計畫、打算",def:"Something you have decided to do."},
     {w:"be going to",ipa:"/bi ˈɡoʊɪŋ tuː/",pos:"phr.",cn:"打算要…",def:"Used for something you have already decided to do."},
-    {w:"look forward to",ipa:"/lʊk ˈfɔːrwərd tuː/",pos:"phr.v.",cn:"期待",def:"To feel happy about something that will happen."},
+    {w:"look forward to",ipa:"/lʊk ˈfɔːr.wɚd tuː/",pos:"phr.v.",cn:"期待",def:"To feel happy about something that will happen."},
     {w:"book a table",ipa:"/bʊk ə ˈteɪbl/",pos:"phr.",cn:"訂位",def:"To reserve a place at a restaurant."},
     {w:"make up my mind",ipa:"/meɪk ʌp maɪ maɪnd/",pos:"phr.",cn:"下定決心、決定好",def:"To decide something."},
     {w:"probably",ipa:"/ˈprɑːbəbli/",pos:"adv.",cn:"大概、可能",def:"Likely, but not certain."},
@@ -5414,7 +5414,7 @@ notes:[
   tip:"聽到數字時（重量、班機號碼、登機門、時間）先在心裡默念一次再往下聽。機場英文的關鍵訊息幾乎都藏在數字和地點名稱裡。",
   pre:[
     {w:"boarding pass",ipa:"/ˈbɔːrdɪŋ pæs/",pos:"n.",cn:"登機證",def:"A card that lets you get on a plane."},
-    {w:"departure gate",ipa:"/dɪˈpɑːtʃɚ ɡeɪt/",pos:"n.",cn:"登機門",def:"The door where you board your plane."},
+    {w:"departure gate",ipa:"/dɪˈpɑːr.tʃɚ ɡeɪt/",pos:"n.",cn:"登機門",def:"The door where you board your plane."},
     {w:"excess baggage fee",ipa:"/ɪkˈses ˈbæɡɪdʒ fiː/",pos:"n.",cn:"超重行李費",def:"Extra money you pay when your bag is too heavy."},
     {w:"carry-on bag",ipa:"/ˈker.i.ɑːn bæɡ/",pos:"n.",cn:"隨身行李",def:"A small bag you take onto the plane with you."},
     {w:"overhead compartment",ipa:"/ˌoʊvɚˈhed kəmˈpɑːrtmənt/",pos:"n.",cn:"頭頂置物櫃",def:"The storage space above your seat on a plane."},
@@ -5813,7 +5813,7 @@ notes:[
   pre:[
     {w:"community",ipa:"/kəˈmjuː.nə.ti/",pos:"n.",cn:"社區",def:"A group of people who live in the same area or share something in common."},
     {w:"opportunity",ipa:"/ˌɑːpɚˈtuːnəti/",pos:"n.",cn:"機會、機遇",def:"a chance to do something."},
-    {w:"leadership",ipa:"/ˈliː.də.ʃɪp/",pos:"n.",cn:"領導力",def:"The ability to guide or direct a group of people."},
+    {w:"leadership",ipa:"/ˈliː.dɚ.ʃɪp/",pos:"n.",cn:"領導力",def:"The ability to guide or direct a group of people."},
     {w:"responsibility",ipa:"/rɪˌspɑːnsəˈbɪləti/",pos:"n.",cn:"責任感",def:"A duty or job that you are expected to do."},
     {w:"nervous",ipa:"/ˈnɝːvəs/",pos:"adj.",cn:"緊張的",def:"Feeling worried or afraid about something that is going to happen."},
     {w:"audience",ipa:"/ˈɔː.di.əns/",pos:"n.",cn:"觀眾",def:"A group of people who watch or listen to a show or speech."},
