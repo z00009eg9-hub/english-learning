@@ -18,6 +18,8 @@
      3. 非美式寫法：ɒ（該寫 ɑː）、ɛ（該寫 e）、ɜː(r)（該寫 ɝː）、
         一般字母 g（該用 IPA 的 ɡ）、tjuː（該寫 tuː）
      4. 沒有用 /…/ 包起來（含誤用方括號 […]）
+     5. 漏掉捲舌 r（2026-09-21 新增）：拼字裡的 r 比音標裡的 r/ɚ/ɝ 還多，
+        例如 /ˈkɑːɡəʊ həʊld/、/pəˈfɔːməns/、/ˈliːdəʃɪp/ 這種英式非捲舌寫法
 
    掃描範圍：public/data-*.js 裡所有「w 後面緊接著 ipa」的詞條，
      以及 data-rel.js 的關聯成員（那個檔用 en 當鍵，是 build-rel.js 的衍生檔）。
@@ -96,6 +98,9 @@ const RULES = [
   ['ɜː / ɜːr（應寫 ɝː）', /ɜː/],
   ['一般字母 g（應用 IPA 的 ɡ）', /g/],
   ['tjuː（應寫 tuː）', /tjuː/],
+  ['əʊ（英式，應寫 oʊ）', /əʊ/],
+  ['ɪə / eə / ʊə（英式，應寫 ɪr / er / ʊr）', /(?<![aɔ])ɪə|eə|(?<!a)ʊə/],
+  ['ə(r)（英式選擇性 r，應寫 ɚ）', /ə\(r\)/],
   ['方括號 […]（應一律 /…/）', /[[\]]/],
   ['沒有用 /…/ 包起來', /^(?!\/)|(?<!\/)$/],
 ];
@@ -115,6 +120,31 @@ RULES.forEach(([label, re]) => {
     fix: '照 DAILY_TASK.md 的音標規則改寫（ɑː 不用 ɒ、用 e 不用 ɛ、bird 類寫 ɝː、IPA 的 ɡ、一律 /…/）',
   });
 });
+
+/* --- 5. 漏掉捲舌 r（2026-09-21 新增）---
+   美式沒有不發音的 r：拼字裡每一段 r（rr 算一段）都要在音標裡有對應的 r / ɚ / ɝ。
+   2026-09-21 全站盤點時，錯最多的不是符號而是這個，例如
+   cargo hold 寫成 /ˈkɑːɡəʊ həʊld/、performance 寫成 /pəˈfɔːməns/。 */
+const rGroups = w => (String(w).toLowerCase().match(/r+/g) || []).length;
+const rSounds = i => (String(i).match(/[rɚɝ]/g) || []).length;
+/* 只看第一個寫法（"drizzle / drizzling" 這種欄位會列兩個變化型），
+   而且只在音標確實涵蓋整個片語時才比（"be responsible for" 只標了 responsible）。 */
+const firstForm = w => String(w).split('/')[0].trim();
+const tokens = t => String(t).replace(/^\/|\/$/g, '').trim().split(/\s+/).filter(Boolean).length;
+const noR = uniq.filter(r => {
+  const w = firstForm(r.w);
+  if (tokens(r.ipa) < tokens(w)) return false;
+  return rGroups(w) > rSounds(r.ipa);
+});
+if (noR.length) {
+  problems.push({
+    title: '漏掉捲舌 r（拼字裡的 r 比音標裡的 r/ɚ/ɝ 多）',
+    n: noR.length,
+    lines: noR.map(r => '  ' + r.w + '  ' + r.ipa + '  [' + src(r) + ']'),
+    fix: '非重音 -er/-or/-ar 寫 ɚ、重音 bird 類寫 ɝː、其餘位置直接留 r；' +
+         '真的不發音的字加進檔案上方的 ALLOW 例外表',
+  });
+}
 
 /* --- 報告 --- */
 const words = new Set(rows.map(r => r.w)).size;
