@@ -32,6 +32,686 @@
    ⚠ 文字欄位一律寫純文字，不要寫 HTML 標籤（渲染時會被轉義顯示出來）。
    ============================================================ */
 window.GVPLUS = {
+"dg20260922a2": {
+  "vis": true,
+  "oneLine": "have / has + 過去分詞說的是「到現在為止」；只要句子裡冒出 yesterday 這種時間詞，就得整個換回過去式。",
+  "map": {
+    "when": "想說「做過了、已經好了」，而且不打算指出是什麼時候",
+    "why": "英文靠動詞形狀標示「這件事跟現在還有沒有關係」，中文靠「了」和上下文，所以中文母語者常常兩種混用",
+    "form": "主詞 + have / has + 過去分詞　|　主詞 + 動詞過去式 + 過去時間詞"
+  },
+  "visual": {
+    "type": "chain",
+    "cap": "從左到右把現在完成式拆成四塊：主詞 + has + 過去分詞 + 受詞；右邊三個變化版分別是否定、疑問，以及「一旦說出時間就換過去式」的樣子。",
+    "links": [
+      {
+        "t": "She",
+        "c": "主詞",
+        "role": "subj"
+      },
+      {
+        "t": "has",
+        "c": "助動詞",
+        "role": "glue"
+      },
+      {
+        "t": "packed",
+        "c": "過去分詞",
+        "role": "verb"
+      },
+      {
+        "t": "the boxes",
+        "c": "受詞",
+        "role": "obj"
+      }
+    ],
+    "eg": {
+      "en": "She has packed the boxes.",
+      "cn": "她把箱子裝好了。"
+    },
+    "variants": [
+      {
+        "k": "否定：not 插在中間",
+        "en": "She has not packed the boxes.",
+        "cn": "她還沒把箱子裝好。"
+      },
+      {
+        "k": "疑問：has 提到最前面",
+        "en": "Has she packed the boxes?",
+        "cn": "她把箱子裝好了嗎？"
+      },
+      {
+        "k": "說出時間就換過去式",
+        "en": "She packed the boxes on Sunday.",
+        "cn": "她星期天把箱子裝好了。"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "result-now",
+      "icon": "check",
+      "title": "現在的結果",
+      "titleCn": "have + 過去分詞",
+      "ask": "想說「事情做完了，現在可以了」要用哪一種？",
+      "en": "I have washed the plates.",
+      "cn": "我把盤子洗好了。",
+      "why": "重點不是什麼時候洗的，而是「現在盤子是乾淨的」。這種到現在為止的結果就用現在完成式，不必也不用講時間。"
+    },
+    {
+      "key": "time-said",
+      "icon": "clock",
+      "title": "說出時間",
+      "titleCn": "換回過去式",
+      "ask": "句子裡出現 after dinner 的時候要用哪一個時態？",
+      "en": "I washed the plates after dinner.",
+      "cn": "我晚餐後把盤子洗了。",
+      "why": "after dinner 指出了那一刻，時間一旦被說出來就等於關上了，只能用過去簡單式，不能再用 have。"
+    },
+    {
+      "key": "never",
+      "icon": "cross",
+      "title": "從來沒有",
+      "titleCn": "have never + 過去分詞",
+      "ask": "想說「這輩子沒做過」該怎麼講？",
+      "en": "My brother has never cooked rice.",
+      "cn": "我弟弟從來沒煮過飯。",
+      "why": "never 講的是從出生到現在的整段時間，這段時間還沒結束，所以用現在完成式；never 要放在 has 和動詞中間，不要放句尾。"
+    },
+    {
+      "key": "asking",
+      "icon": "bubble",
+      "title": "問人做了沒",
+      "titleCn": "Have you...?",
+      "ask": "要問對方「你吃了沒」該用哪一個助動詞？",
+      "en": "Have you eaten yet?",
+      "cn": "你吃了沒？",
+      "why": "問到現在為止有沒有，用 Have you 加過去分詞，yet 放句尾。如果你真正想問的是某一餐，例如中午那一餐，就要改成 Did you eat at noon 這種過去式問法。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "媽媽打電話來，想知道你晚餐吃了沒。"
+    },
+    {
+      "label": "先看有沒有說出時間",
+      "text": "她沒有指定哪一刻，只想知道到現在為止吃了沒。"
+    },
+    {
+      "label": "選形狀",
+      "text": "沒有時間詞，就用 have 加過去分詞：Have you eaten?"
+    },
+    {
+      "label": "回答",
+      "text": "Yes, I have. 或 No, not yet. 回答時只要重複助動詞，不用整句重講。"
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "錯誤版：Have you eaten at six? 一旦說出 at six，整句就要改成 Did you eat at six?"
+    }
+  ],
+  "comparison": {
+    "title": "have + 過去分詞 vs 動詞過去式",
+    "left": {
+      "tag": "HAVE DONE",
+      "tagCn": "到現在為止",
+      "icon": "check",
+      "head": "no time word",
+      "headCn": "沒有說什麼時候",
+      "en": "They have opened a second shop.",
+      "cn": "他們開了第二家店。",
+      "pts": [
+        "重點落在現在的結果",
+        "常配 already / never / yet",
+        "不能加 yesterday 或 last week"
+      ]
+    },
+    "right": {
+      "tag": "DID",
+      "tagCn": "過去的某一刻",
+      "icon": "clock",
+      "head": "with a time word",
+      "headCn": "有說什麼時候",
+      "en": "They opened a second shop in June.",
+      "cn": "他們六月開了第二家店。",
+      "pts": [
+        "重點落在那一刻發生的事",
+        "常配 yesterday / ago / in 2024",
+        "動詞用過去式"
+      ]
+    },
+    "note": "口訣：句子裡說出「什麼時候」了嗎？有就用過去式，沒有就用 have 加過去分詞。"
+  },
+  "quizMore": [
+    {
+      "q": "Look! Someone ___ the window.",
+      "opts": [
+        "break",
+        "broke",
+        "has broken",
+        "have broken"
+      ],
+      "ans": 2,
+      "expl": "窗戶現在是破的，講到現在的結果用 has broken；someone 是單數，所以不是 have。"
+    },
+    {
+      "q": "They ___ the new bakery last Friday.",
+      "opts": [
+        "have opened",
+        "has opened",
+        "opened",
+        "open"
+      ],
+      "ans": 2,
+      "expl": "last Friday 是關上的時間，要用過去簡單式 opened。"
+    }
+  ]
+},
+"dg20260922b1": {
+  "vis": true,
+  "oneLine": "Have you...? 問的是「到現在為止有沒有」，Did you...? 問的是「那個已經散場的時候發生了什麼」——中文都是「你⋯了嗎」，英文卻是兩個世界。",
+  "map": {
+    "when": "想確認事情辦了沒、想問對方的經驗，或在信件與對話裡追進度",
+    "why": "英文用助動詞區分「機會還在」和「機會已經過去」，這個訊息中文不靠動詞而靠上下文傳達",
+    "form": "Have / Has + 主詞 + 過去分詞?　|　Did + 主詞 + 原形動詞?"
+  },
+  "visual": {
+    "type": "timeline",
+    "cap": "同一條時間線上看兩種問法：Did you...? 指向左邊那個已經關上的點，Have you...? 量的是從那個點一路延伸到 NOW 的整段，所以機會還在。",
+    "rows": [
+      {
+        "kind": "point",
+        "label": "Did you...?",
+        "tone": "ink",
+        "at": "已經關上的場合",
+        "sub": "the meeting on Friday",
+        "subCn": "問的是那一天、那一場，現在已經散了"
+      },
+      {
+        "kind": "span",
+        "label": "Have you...?",
+        "tone": "accent",
+        "from": "那件事發生後",
+        "to": "NOW",
+        "sub": "any time up to now",
+        "subCn": "到現在為止都算數，所以對方現在還能去做"
+      },
+      {
+        "kind": "point",
+        "label": "NOW",
+        "tone": "accent",
+        "at": "說話的這一刻",
+        "sub": "the answer still matters",
+        "subCn": "答案影響的是現在，因此用完成式"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "chase",
+      "icon": "person",
+      "title": "追進度",
+      "titleCn": "Have you + 過去分詞",
+      "ask": "想確認同事把報價單寄出去了沒，要用哪一種問法？",
+      "en": "Have you sent the quotation?",
+      "cn": "你把報價單寄出去了嗎？",
+      "why": "你在意的是「現在這件事辦好了沒」，不是他哪一天寄的。用 Have you 還有一個好處：如果還沒寄，對方知道你希望他現在就去寄。"
+    },
+    {
+      "key": "closed",
+      "icon": "calendar",
+      "title": "問已經結束的場合",
+      "titleCn": "Did you + 原形",
+      "ask": "那場會議昨天就開完了，要怎麼問？",
+      "en": "Did you raise the delivery issue yesterday?",
+      "cn": "你昨天有提到交期的問題嗎？",
+      "why": "yesterday 把場合關上了，機會已經過去，所以用 Did you。用 Have you raised 會讓對方以為現在補提還來得及。"
+    },
+    {
+      "key": "experience",
+      "icon": "eye",
+      "title": "問人生經驗",
+      "titleCn": "Have you ever...?",
+      "ask": "想問對方有沒有做過某件事，時間完全不限，要怎麼問？",
+      "en": "Have you ever worked a night shift?",
+      "cn": "你做過大夜班嗎？",
+      "why": "ever 涵蓋從出生到現在的整段時間，這段時間還沒結束，所以用現在完成式。如果對方回答了，接下來補細節時才換成過去式。"
+    },
+    {
+      "key": "answer",
+      "icon": "fork",
+      "title": "簡答要對齊",
+      "titleCn": "have 對 have、did 對 did",
+      "ask": "被問 Have you booked it? 的時候該怎麼簡答？",
+      "en": "Yes, I have. I booked it this morning.",
+      "cn": "訂了。我今天早上訂的。",
+      "why": "簡答要重複問句裡的助動詞，所以是 Yes, I have，不是 Yes, I did。但下一句補上 this morning 這種細節時，時態就自然掉回過去式了。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你等著一份合約，想問法務同事處理到哪裡了。"
+    },
+    {
+      "label": "先問自己：機會關上了嗎",
+      "text": "合約還在他桌上，他現在就能簽，所以機會還開著。"
+    },
+    {
+      "label": "選助動詞",
+      "text": "機會還開著就用 Have you signed the contract?"
+    },
+    {
+      "label": "他回答之後補細節",
+      "text": "他說 Yes, I have，接著補一句 I signed it before lunch，時態自然換成過去式。"
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "錯誤版：Did you sign it yet? yet 屬於完成式的世界，要改成 Have you signed it yet?"
+    }
+  ],
+  "comparison": {
+    "title": "Have you...? vs Did you...?",
+    "left": {
+      "tag": "HAVE YOU",
+      "tagCn": "機會還在",
+      "icon": "cycle",
+      "head": "still open",
+      "headCn": "現在還能做",
+      "en": "Have you replied to the customer?",
+      "cn": "你回覆客戶了嗎？",
+      "pts": [
+        "沒有指定哪一刻",
+        "常配 yet / already / ever",
+        "簡答用 Yes, I have"
+      ]
+    },
+    "right": {
+      "tag": "DID YOU",
+      "tagCn": "機會過去了",
+      "icon": "cross",
+      "head": "already closed",
+      "headCn": "那個場合結束了",
+      "en": "Did you reply during the call?",
+      "cn": "你在通話中回覆了嗎？",
+      "pts": [
+        "指定了某個場合或時間",
+        "常配 yesterday / last night / then",
+        "簡答用 Yes, I did"
+      ]
+    },
+    "note": "判斷口訣：如果對方現在還能補做這件事，就用 Have you；如果補做已經沒有意義，就用 Did you。"
+  },
+  "quizMore": [
+    {
+      "q": "___ you ever eaten stinky tofu?",
+      "opts": [
+        "Did",
+        "Have",
+        "Do",
+        "Were"
+      ],
+      "ans": 1,
+      "expl": "ever 問的是到現在為止的經驗，用 Have you ever 加過去分詞。"
+    },
+    {
+      "q": "A: Did you speak to him at the party? B: Yes, I ___.",
+      "opts": [
+        "have",
+        "did",
+        "do",
+        "was"
+      ],
+      "ans": 1,
+      "expl": "問句用 Did，簡答就要用 did；at the party 是已經結束的場合。"
+    }
+  ]
+},
+"dg20260922b1p": {
+  "vis": true,
+  "oneLine": "決定時態的不是 today 或 this morning 這幾個字，而是你講這句話的時候那段時間跑完了沒。",
+  "map": {
+    "when": "談今天、這週、這個月的累積，或談一個人、一個活動、一家公司的狀態",
+    "why": "英文要求說話者先判斷「這段時間關上了沒」，這個判斷中文完全不必做，所以很容易漏掉",
+    "form": "時段還開著：have / has + 過去分詞　|　時段已關上：動詞過去式"
+  },
+  "visual": {
+    "type": "matrix",
+    "cap": "橫向看每一列：同一個時間詞，左欄是那段時間還開著時的寫法，中欄是那段時間已經關上時的寫法，右欄是把兩邊混在一起的典型錯誤。",
+    "cols": [
+      "時段還開著（現在完成式）",
+      "時段已關上（過去簡單式）",
+      "常見錯誤"
+    ],
+    "rows": [
+      {
+        "h": "this morning",
+        "cells": [
+          {
+            "en": "I have answered forty emails this morning.",
+            "cn": "今天早上我已經回了四十封信。（上午十點說的）",
+            "hi": true
+          },
+          {
+            "en": "I answered forty emails this morning.",
+            "cn": "今天早上我回了四十封信。（晚上說的）"
+          },
+          {
+            "en": "I have answered forty emails yesterday morning.",
+            "cn": "（錯）yesterday morning 已關上，不能配完成式"
+          }
+        ]
+      },
+      {
+        "h": "this year",
+        "cells": [
+          {
+            "en": "Our team has hired six engineers this year.",
+            "cn": "我們團隊今年已經聘了六位工程師。"
+          },
+          {
+            "en": "Our team hired six engineers last year.",
+            "cn": "我們團隊去年聘了六位工程師。",
+            "hi": true
+          },
+          {
+            "en": "Our team has hired six engineers in 2024.",
+            "cn": "（錯）in 2024 是關上的年份"
+          }
+        ]
+      },
+      {
+        "h": "一個人的一生",
+        "cells": [
+          {
+            "en": "My aunt has written four cookbooks.",
+            "cn": "我阿姨寫過四本食譜。（她還在寫）"
+          },
+          {
+            "en": "Her teacher wrote four cookbooks.",
+            "cn": "她的老師寫過四本食譜。（老師已過世）"
+          },
+          {
+            "en": "Her teacher has written four cookbooks.",
+            "cn": "（錯）人已過世，那段時間關上了",
+            "hi": true
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "clock-open",
+      "icon": "house",
+      "title": "時段還在跑",
+      "titleCn": "today 還沒過完",
+      "ask": "下午三點要怎麼講今天的產量？",
+      "en": "The line has produced two thousand units today.",
+      "cn": "產線今天已經生產了兩千件。",
+      "why": "下午三點的時候 today 還沒結束，數字還可能往上加，所以用現在完成式。這個句子如果在隔天早上的晨會講，就要改成過去式。"
+    },
+    {
+      "key": "clock-closed",
+      "icon": "money",
+      "title": "時段結束了",
+      "titleCn": "回顧昨天",
+      "ask": "隔天早上回顧同一件事要換成什麼時態？",
+      "en": "The line produced three thousand units yesterday.",
+      "cn": "產線昨天生產了三千件。",
+      "why": "yesterday 是關上的時段，數字已經定案不會再變，所以用過去簡單式。判斷依據是時段結束了沒，不是數字大不大。"
+    },
+    {
+      "key": "person",
+      "icon": "star",
+      "title": "人還在不在",
+      "titleCn": "在職 vs 已離職",
+      "ask": "為什麼談離職的前輩要換時態？",
+      "en": "Our first supervisor trained over sixty operators.",
+      "cn": "我們第一任領班訓練過六十多位作業員。",
+      "why": "那位領班已經離開，他在這間公司的那段時間關上了，數字不會再增加，所以用過去式。如果他還在職，就要寫 has trained。"
+    },
+    {
+      "key": "event",
+      "icon": "tool",
+      "title": "活動還辦不辦",
+      "titleCn": "展期內 vs 已撤展",
+      "ask": "問對方去過某個展覽沒有，要先確認什麼？",
+      "en": "Have you visited the food festival at the pier?",
+      "cn": "你去過碼頭那個美食節了嗎？",
+      "why": "先確認展覽還在不在。還在展期內就用 Have you visited，對方現在還趕得上；已經撤攤就要改成 Did you visit，否則等於給了對方錯誤訊息。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "主管在星期三下午問你：這週的不良品統計出來了沒。"
+    },
+    {
+      "label": "先定位說話的時刻",
+      "text": "今天是星期三，this week 這段時間還在跑。"
+    },
+    {
+      "label": "時段還開著就用完成式",
+      "text": "We have logged nine defects this week. 數字之後還可能再加。"
+    },
+    {
+      "label": "換一個時段就換時態",
+      "text": "同一份報告談上週要寫 We logged fourteen defects last week，因為上週已經定案。"
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "錯誤版：We have logged fourteen defects last week. last week 已關上，不能配完成式。"
+    }
+  ],
+  "comparison": {
+    "title": "時段還開著 vs 時段已關上",
+    "left": {
+      "tag": "STILL OPEN",
+      "tagCn": "還在跑",
+      "icon": "cycle",
+      "head": "the period continues",
+      "headCn": "這段時間還沒結束",
+      "en": "It has rained a lot this month.",
+      "cn": "這個月雨下得很多。",
+      "pts": [
+        "today / this week / this month 都可能還開著",
+        "數字或結果還可能改變",
+        "用 have / has 加過去分詞"
+      ]
+    },
+    "right": {
+      "tag": "CLOSED",
+      "tagCn": "已經關上",
+      "icon": "flag",
+      "head": "the period is finished",
+      "headCn": "這段時間已經過完",
+      "en": "It rained a lot last month.",
+      "cn": "上個月雨下得很多。",
+      "pts": [
+        "yesterday / last month / in 2024 一定關上",
+        "結果已經定案",
+        "用動詞過去式"
+      ]
+    },
+    "note": "判斷口訣：先問自己「我說這句話的當下，那段時間還在跑嗎」，答案是「在」就用完成式。"
+  },
+  "quizMore": [
+    {
+      "q": "It is Wednesday. How many shifts ___ you covered this week?",
+      "opts": [
+        "did",
+        "have",
+        "do",
+        "were"
+      ],
+      "ans": 1,
+      "expl": "星期三，this week 還沒跑完，用現在完成式 have covered。"
+    },
+    {
+      "q": "The warehouse ___ twice in 2019 before the new roof went on.",
+      "opts": [
+        "has flooded",
+        "flooded",
+        "floods",
+        "has been flooding"
+      ],
+      "ans": 1,
+      "expl": "in 2019 是關上的年份，用過去簡單式 flooded。"
+    }
+  ]
+},
+"dg20260922b2": {
+  "vis": true,
+  "oneLine": "在新聞和工作報告裡，時態是一種分工：完成式負責宣布，過去式負責交代——選錯的代價不是文法錯，而是讀者搞錯這件事結案了沒。",
+  "map": {
+    "when": "寫新聞稿、會議摘要、稽核報告、給主管的進度更新",
+    "why": "英文靠時態暗示「這件事還在燒還是已經歸檔」，中文得另外寫一句話才能傳達同樣的訊息",
+    "form": "導語：have / has + 過去分詞　|　細節：動詞過去式 + 明確時間"
+  },
+  "visual": {
+    "type": "shift",
+    "cap": "上面那句把事件釘在過去，下面那句把同一件事拉到現在——只換時態與時間副詞，讀者就從「原來如此」變成「這件事還沒完」。",
+    "rows": [
+      {
+        "a": "The supplier recalled two batches on 3 August.",
+        "b": "The supplier has recalled two batches.",
+        "nt": "拿掉日期只剩結果，讀者會覺得後續還有動作；適合放在通知信的第一句"
+      },
+      {
+        "a": "Complaints rose sharply last quarter.",
+        "b": "Complaints have risen sharply since April.",
+        "nt": "last quarter 是回顧，since April 把期間一路拉到現在，暗示問題還在"
+      },
+      {
+        "a": "We closed all three findings during the audit.",
+        "b": "We have closed all three findings.",
+        "nt": "細節版適合寫在報告內文，結果版適合寫在給主管的摘要開頭"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "lead",
+      "icon": "book",
+      "title": "導語用完成式",
+      "titleCn": "先宣布結果",
+      "ask": "一篇通知的第一句該用哪個時態？",
+      "en": "Two suppliers have been removed from the approved list.",
+      "cn": "兩家供應商已被移出合格名單。",
+      "why": "第一句的任務是讓讀者立刻知道「現在的狀況是什麼」，完成式把重點壓在現在，也暗示後續還有處理動作。"
+    },
+    {
+      "key": "detail",
+      "icon": "flag",
+      "title": "細節用過去式",
+      "titleCn": "再交代經過",
+      "ask": "第二句開始補時間和數字時要換成什麼？",
+      "en": "Auditors visited both sites in the first week of September.",
+      "cn": "稽核人員在九月第一週走訪了兩個廠區。",
+      "why": "細節一定帶著明確時間，而明確時間會把事件關上，所以換成過去簡單式。整段都用完成式會讓讀者失去先後感。"
+    },
+    {
+      "key": "closed",
+      "icon": "balance",
+      "title": "結案報告全用過去式",
+      "titleCn": "刻意關上",
+      "ask": "為什麼結案報告不該用完成式？",
+      "en": "The team ran the trial for eleven weeks and stopped it in June.",
+      "cn": "團隊試行了十一週，並在六月停止。",
+      "why": "結案報告要傳達的就是「這件事已經結束、不必再追」。完成式會不斷把讀者拉回現在，讓人以為還有後續，語氣就不對了。"
+    },
+    {
+      "key": "register",
+      "icon": "link",
+      "title": "口語會鬆動界線",
+      "titleCn": "美式口語的例外",
+      "ask": "聽到 Did you send it yet 是不是對方講錯？",
+      "en": "I already sent it over this morning.",
+      "cn": "我今天早上已經傳過去了。",
+      "why": "美式口語很常用過去簡單式搭配 already、yet、just，聽到不要以為是錯的。但書面與正式場合仍然建議寫 I have already sent it，才不會顯得隨便。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要寫一封信告訴客戶：出貨延誤的問題處理完了。"
+    },
+    {
+      "label": "第一句先宣布",
+      "text": "We have resolved the delay on your order. 讀者一眼看到現在的狀態。"
+    },
+    {
+      "label": "第二句起交代經過",
+      "text": "The carrier rerouted the container on Monday and cleared customs the next day."
+    },
+    {
+      "label": "結尾給展望",
+      "text": "Delivery is expected before Friday. 用未來式把讀者推向下一步。"
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "錯誤版：把第二句也寫成 The carrier has rerouted the container on Monday——明確日期配完成式，讀起來像機器翻譯。"
+    }
+  ],
+  "comparison": {
+    "title": "宣布 vs 交代",
+    "left": {
+      "tag": "LEAD",
+      "tagCn": "導語・完成式",
+      "icon": "star",
+      "head": "what is true now",
+      "headCn": "現在的狀態是什麼",
+      "en": "Production has restarted at the Hanoi plant.",
+      "cn": "河內廠已經復工。",
+      "pts": [
+        "不帶明確日期",
+        "讀者覺得還有後續",
+        "適合信件與摘要的第一句"
+      ]
+    },
+    "right": {
+      "tag": "DETAIL",
+      "tagCn": "細節・過去式",
+      "icon": "clock",
+      "head": "what happened when",
+      "headCn": "什麼時候發生什麼",
+      "en": "The line stopped for six days after the storm.",
+      "cn": "產線在風災後停了六天。",
+      "pts": [
+        "一定帶時間或數字",
+        "讀者得到先後順序",
+        "適合內文與結案報告"
+      ]
+    },
+    "note": "寫作口訣：第一句問「現在怎樣」，第二句起問「當時發生什麼」——時態跟著這兩個問題走就不會亂。"
+  },
+  "quizMore": [
+    {
+      "q": "Memo opening: The audit team ___ its review of the Tainan warehouse.",
+      "opts": [
+        "completed",
+        "has completed",
+        "was completing",
+        "completes"
+      ],
+      "ans": 1,
+      "expl": "備忘錄第一句要宣布到現在為止的結果，用現在完成式 has completed。"
+    },
+    {
+      "q": "Next line of the memo: They ___ forty pallets on 12 September.",
+      "opts": [
+        "have sampled",
+        "sample",
+        "sampled",
+        "have been sampling"
+      ],
+      "ans": 2,
+      "expl": "on 12 September 是明確日期，細節句要用過去簡單式 sampled。"
+    }
+  ]
+},
 "dg20260918a2": {
   "vis": true,
   "oneLine": "for 量的是「多長」、since 標的是「從哪一刻」；問句也分兩邊——When...? 問那一刻，How long...? 問到現在的長度。",

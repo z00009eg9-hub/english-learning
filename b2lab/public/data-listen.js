@@ -15,6 +15,890 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週二／五更新） ========== */
 notes:[
 {
+  "id": "dl20260922a2",
+  "date": "2026-09-22",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Have You Tried Mooncakes?",
+  "titleCn": "你吃過月餅嗎？",
+  "series": "本站自製聽力 · 食物與生活主題",
+  "topic": "🥮 在麵包店買月餅",
+  "focus": "Have you tried...? 問經驗；I bought / I waited 講昨天發生的事",
+  "intro": "Tom在麵包店遇到同事Lisa，兩個人聊起月餅。請注意兩種說法：Have you tried 問的是「吃過沒有」，I bought yesterday 講的是昨天那一刻。",
+  "tip": "第一次聽抓「Tom買了幾個、什麼口味」，第二次聽專心聽 have 和過去式動詞各出現在哪裡。",
+  "pre": [
+    {
+      "w": "festival",
+      "ipa": "/ˈfes.tɪ.vəl/",
+      "pos": "n.",
+      "cn": "節日",
+      "def": "A special day when people celebrate."
+    },
+    {
+      "w": "bakery",
+      "ipa": "/ˈbeɪ.kɚ.i/",
+      "pos": "n.",
+      "cn": "麵包店",
+      "def": "A shop that makes and sells bread and cakes."
+    },
+    {
+      "w": "box",
+      "ipa": "/bɑːks/",
+      "pos": "n.",
+      "cn": "盒子",
+      "def": "A container you put things in."
+    },
+    {
+      "w": "sweet",
+      "ipa": "/swiːt/",
+      "pos": "adj.",
+      "cn": "甜的",
+      "def": "Tasting like sugar."
+    },
+    {
+      "w": "taste",
+      "ipa": "/teɪst/",
+      "pos": "v.",
+      "cn": "嚐；嚐起來",
+      "def": "To try a small amount of food."
+    },
+    {
+      "w": "shelf",
+      "ipa": "/ʃelf/",
+      "pos": "n.",
+      "cn": "架子",
+      "def": "A flat board on a wall for putting things on."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "Tom! I did not know you come to this bakery.",
+      "cn": "Tom！我不知道你會來這間麵包店。"
+    },
+    {
+      "sp": "Tom",
+      "en": "It is close to my office. Have you tried their mooncakes?",
+      "cn": "它離我辦公室很近。你吃過他們家的月餅嗎？"
+    },
+    {
+      "sp": "Lisa",
+      "en": "No, I have never tried them. Are they good?",
+      "cn": "沒有，我從來沒吃過。好吃嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Very good. I bought a box yesterday.",
+      "cn": "很好吃。我昨天買了一盒。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "How many did you get?",
+      "cn": "你買了幾個？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Six. They are for my parents.",
+      "cn": "六個。是要給我爸媽的。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Which one is best?",
+      "cn": "哪一種最好吃？"
+    },
+    {
+      "sp": "Tom",
+      "en": "The red bean one. My mother loves it.",
+      "cn": "紅豆的。我媽媽很愛。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Is it very sweet?",
+      "cn": "很甜嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "A little. You can taste one here. Look at that shelf.",
+      "cn": "有一點。你可以在這裡試吃一個。看那個架子。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Oh, nice. Was the shop busy yesterday?",
+      "cn": "喔，不錯。昨天店裡忙嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes. I waited in line for twenty minutes.",
+      "cn": "忙。我排隊等了二十分鐘。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Twenty minutes! Then I will come early next time.",
+      "cn": "二十分鐘！那我下次要早點來。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Good idea. The festival is next week, so it will be busier.",
+      "cn": "好主意。節日就在下星期，所以會更忙。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Has Lisa eaten these mooncakes before?",
+      "qCn": "Lisa以前吃過這種月餅嗎？",
+      "opts": [
+        "A. Yes, many times",
+        "B. No, never",
+        "C. Yes, yesterday",
+        "D. Only the red bean one"
+      ],
+      "optsCn": [
+        "A. 有，很多次",
+        "B. 沒有，從來沒有",
+        "C. 有，昨天吃的",
+        "D. 只吃過紅豆的"
+      ],
+      "ans": 1,
+      "expl": "No, I have never tried them.——have never tried 就是「從來沒吃過」。"
+    },
+    {
+      "q": "How many mooncakes did Tom buy?",
+      "qCn": "Tom買了幾個月餅？",
+      "opts": [
+        "A. Two",
+        "B. Six",
+        "C. Twenty",
+        "D. A whole shelf"
+      ],
+      "optsCn": [
+        "A. 兩個",
+        "B. 六個",
+        "C. 二十個",
+        "D. 一整個架子"
+      ],
+      "ans": 1,
+      "expl": "Six. They are for my parents.——twenty 是他排隊的分鐘數。"
+    },
+    {
+      "q": "Why does Tom come to this bakery?",
+      "qCn": "Tom為什麼來這間麵包店？",
+      "opts": [
+        "A. His friend works there",
+        "B. It is close to his office",
+        "C. It is the cheapest",
+        "D. His mother asked him to"
+      ],
+      "optsCn": [
+        "A. 他朋友在那裡工作",
+        "B. 它離他辦公室很近",
+        "C. 它最便宜",
+        "D. 他媽媽叫他來的"
+      ],
+      "ans": 1,
+      "expl": "It is close to my office.——他自己說的理由就是近。"
+    },
+    {
+      "q": "What will Lisa do next time?",
+      "qCn": "Lisa下次打算怎麼做？",
+      "opts": [
+        "A. Come early",
+        "B. Buy twenty boxes",
+        "C. Bring her parents",
+        "D. Make mooncakes at home"
+      ],
+      "optsCn": [
+        "A. 早點來",
+        "B. 買二十盒",
+        "C. 帶她爸媽來",
+        "D. 在家自己做月餅"
+      ],
+      "ans": 0,
+      "expl": "Then I will come early next time.——她聽到要排二十分鐘才這樣說。"
+    }
+  ]
+},
+{
+  "id": "dl20260922b1",
+  "date": "2026-09-22",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "My First Batch",
+  "titleCn": "我的第一盤",
+  "series": "本站自製聽力 · 食物與生活主題",
+  "topic": "🍞 第一次在家烤月餅",
+  "focus": "現在完成式（have never made / has kept）與過去簡單式（burned / turned）在同一段對話裡交替",
+  "intro": "Amy跟同事May聊起週末自己做月餅的經過。請特別注意：講「這輩子做過沒有」時她用 have never made，講「星期六那天發生什麼」時立刻換成過去式。",
+  "tip": "第一次聽抓「第一盤出了什麼問題」，第二次聽數一數 have／has 出現幾次、各自在講什麼。",
+  "pre": [
+    {
+      "w": "recipe",
+      "ipa": "/ˈresəpi/",
+      "pos": "n.",
+      "cn": "食譜",
+      "def": "Instructions for cooking a dish."
+    },
+    {
+      "w": "dough",
+      "ipa": "/doʊ/",
+      "pos": "n.",
+      "cn": "麵團",
+      "def": "A soft mixture of flour and water before baking."
+    },
+    {
+      "w": "tray",
+      "ipa": "/treɪ/",
+      "pos": "n.",
+      "cn": "烤盤",
+      "def": "A flat object you bake food on."
+    },
+    {
+      "w": "burn",
+      "ipa": "/bɝːn/",
+      "pos": "v.",
+      "cn": "燒焦",
+      "def": "To damage food by cooking it too long."
+    },
+    {
+      "w": "smell",
+      "ipa": "/smel/",
+      "pos": "v.",
+      "cn": "聞起來",
+      "def": "To have a particular quality that you notice with your nose."
+    },
+    {
+      "w": "proud",
+      "ipa": "/praʊd/",
+      "pos": "adj.",
+      "cn": "驕傲的",
+      "def": "Feeling pleased about something you did well."
+    }
+  ],
+  "script": [
+    {
+      "sp": "May",
+      "en": "You look tired. What did you do at the weekend?",
+      "cn": "你看起來很累。週末做了什麼？"
+    },
+    {
+      "sp": "Amy",
+      "en": "I made mooncakes. I have never made them before.",
+      "cn": "我做了月餅。我以前從來沒做過。"
+    },
+    {
+      "sp": "May",
+      "en": "Really? Where did you get the recipe?",
+      "cn": "真的？食譜哪裡來的？"
+    },
+    {
+      "sp": "Amy",
+      "en": "My mother sent it to me. It looked simple.",
+      "cn": "我媽媽傳給我的。看起來很簡單。"
+    },
+    {
+      "sp": "May",
+      "en": "And was it?",
+      "cn": "結果呢？"
+    },
+    {
+      "sp": "Amy",
+      "en": "No. The dough was much harder than I expected.",
+      "cn": "不簡單。麵團比我想的難處理多了。"
+    },
+    {
+      "sp": "May",
+      "en": "What happened to the first tray?",
+      "cn": "第一盤怎麼了？"
+    },
+    {
+      "sp": "Amy",
+      "en": "I burned two of them. The oven was too hot.",
+      "cn": "我烤焦了兩個。烤箱太熱了。"
+    },
+    {
+      "sp": "May",
+      "en": "So did you give up?",
+      "cn": "所以你放棄了嗎？"
+    },
+    {
+      "sp": "Amy",
+      "en": "No, I turned the heat down and tried again.",
+      "cn": "沒有，我把火轉小然後再試一次。"
+    },
+    {
+      "sp": "May",
+      "en": "And the second tray?",
+      "cn": "第二盤呢？"
+    },
+    {
+      "sp": "Amy",
+      "en": "Much better. The whole flat smelled wonderful.",
+      "cn": "好很多。整間公寓香得不得了。"
+    },
+    {
+      "sp": "May",
+      "en": "Did you tell your mother?",
+      "cn": "你跟你媽說了嗎？"
+    },
+    {
+      "sp": "Amy",
+      "en": "I sent her a photo. She has kept it on her phone since Sunday.",
+      "cn": "我傳了照片給她。她從星期天到現在都還留在手機裡。"
+    },
+    {
+      "sp": "May",
+      "en": "She must be proud. Will you make them again?",
+      "cn": "她一定很驕傲。你還會再做嗎？"
+    },
+    {
+      "sp": "Amy",
+      "en": "I have already promised her another batch next year.",
+      "cn": "我已經答應她明年再做一盤了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What was new for Amy this weekend?",
+      "qCn": "這個週末對Amy來說有什麼是新的？",
+      "opts": [
+        "A. She bought mooncakes",
+        "B. She made mooncakes for the first time",
+        "C. She got a new oven",
+        "D. She visited her mother"
+      ],
+      "optsCn": [
+        "A. 她買了月餅",
+        "B. 她第一次做月餅",
+        "C. 她買了新烤箱",
+        "D. 她去看了媽媽"
+      ],
+      "ans": 1,
+      "expl": "I have never made them before.——have never made 表示這是第一次。"
+    },
+    {
+      "q": "What went wrong with the first tray?",
+      "qCn": "第一盤出了什麼問題？",
+      "opts": [
+        "A. The dough was too soft",
+        "B. She forgot the filling",
+        "C. Two of them burned",
+        "D. She dropped the tray"
+      ],
+      "optsCn": [
+        "A. 麵團太軟",
+        "B. 她忘了放內餡",
+        "C. 有兩個烤焦了",
+        "D. 她把烤盤摔了"
+      ],
+      "ans": 2,
+      "expl": "I burned two of them. The oven was too hot."
+    },
+    {
+      "q": "How did she fix the problem?",
+      "qCn": "她怎麼解決問題？",
+      "opts": [
+        "A. She turned the heat down",
+        "B. She used a bigger tray",
+        "C. She asked her mother to come",
+        "D. She bought new dough"
+      ],
+      "optsCn": [
+        "A. 她把火轉小",
+        "B. 她換大一點的烤盤",
+        "C. 她請媽媽過來",
+        "D. 她買了新麵團"
+      ],
+      "ans": 0,
+      "expl": "I turned the heat down and tried again."
+    },
+    {
+      "q": "Why does Amy use 'has kept' about the photo?",
+      "qCn": "Amy講那張照片時為什麼用 has kept？",
+      "opts": [
+        "A. The photo was deleted",
+        "B. It is still on her mother's phone now",
+        "C. It happened long ago",
+        "D. She is guessing"
+      ],
+      "optsCn": [
+        "A. 照片被刪掉了",
+        "B. 到現在照片還在她媽媽手機裡",
+        "C. 那是很久以前的事",
+        "D. 她只是在猜"
+      ],
+      "ans": 1,
+      "expl": "She has kept it on her phone since Sunday.——since Sunday 一路到現在，所以用現在完成式。"
+    }
+  ]
+},
+{
+  "id": "dl20260922b1p",
+  "date": "2026-09-22",
+  "level": "B1+",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Sold Out Before the Festival",
+  "titleCn": "節前就賣光了",
+  "series": "本站自製聽力 · 食物與生活主題",
+  "topic": "📰 看守所裡的烘焙坊",
+  "focus": "被動語態（are baked / was posted / has been ordered）在談新聞時怎麼用",
+  "intro": "兩位同事在茶水間聊今天看到的新聞。新聞英文常用被動語態，因為重點不是「誰做的」而是「什麼被做了」，請注意 are baked、was posted、has been ordered 這幾個地方。",
+  "tip": "第一次聽抓三個數字（幾位收容人、幾台烤箱、幾個糕點），第二次聽專心找被動語態。",
+  "pre": [
+    {
+      "w": "inmate",
+      "ipa": "/ˈɪn.meɪt/",
+      "pos": "n.",
+      "cn": "收容人",
+      "def": "A person who is kept in a prison."
+    },
+    {
+      "w": "pastry",
+      "ipa": "/ˈpeɪ.stri/",
+      "pos": "n.",
+      "cn": "酥皮點心",
+      "def": "A sweet baked food made from flour and fat."
+    },
+    {
+      "w": "order",
+      "ipa": "/ˈɔːrdɚ/",
+      "pos": "n.",
+      "cn": "訂單",
+      "def": "A request asking a shop to supply goods."
+    },
+    {
+      "w": "confidence",
+      "ipa": "/ˈkɑːnfɪdəns/",
+      "pos": "n.",
+      "cn": "自信",
+      "def": "The feeling that you can do something well."
+    },
+    {
+      "w": "skill",
+      "ipa": "/skɪl/",
+      "pos": "n.",
+      "cn": "技能",
+      "def": "The ability to do something well."
+    },
+    {
+      "w": "trade",
+      "ipa": "/treɪd/",
+      "pos": "n.",
+      "cn": "手藝",
+      "def": "A job that needs special skill with your hands."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Ken",
+      "en": "Did you see the story about the bakery in Keelung?",
+      "cn": "你看到基隆那間烘焙坊的新聞了嗎？"
+    },
+    {
+      "sp": "Ping",
+      "en": "The one inside the detention center? Everyone has shared it.",
+      "cn": "看守所裡面那間嗎？大家都在轉發。"
+    },
+    {
+      "sp": "Ken",
+      "en": "The pastries are baked by inmates. Only two of them.",
+      "cn": "那些糕點是收容人烤的。只有兩位。"
+    },
+    {
+      "sp": "Ping",
+      "en": "Two people? In how big a kitchen?",
+      "cn": "兩個人？廚房多大？"
+    },
+    {
+      "sp": "Ken",
+      "en": "About ten square meters, with three ovens.",
+      "cn": "大約十平方公尺，三台烤箱。"
+    },
+    {
+      "sp": "Ping",
+      "en": "That is tiny. How did it become so popular?",
+      "cn": "那超小的。它怎麼會變得這麼紅？"
+    },
+    {
+      "sp": "Ken",
+      "en": "A photo was posted on Threads. It got fifteen thousand likes in two days.",
+      "cn": "有人把照片貼上Threads。兩天內就有一萬五千個讚。"
+    },
+    {
+      "sp": "Ping",
+      "en": "So can we still order a box?",
+      "cn": "所以我們還訂得到一盒嗎？"
+    },
+    {
+      "sp": "Ken",
+      "en": "No. Every cake has already been ordered.",
+      "cn": "訂不到。每一個都已經被訂走了。"
+    },
+    {
+      "sp": "Ping",
+      "en": "How many are they making?",
+      "cn": "他們要做幾個？"
+    },
+    {
+      "sp": "Ken",
+      "en": "About ten thousand before the holiday.",
+      "cn": "節前大約一萬個。"
+    },
+    {
+      "sp": "Ping",
+      "en": "That is a lot for two people and three ovens.",
+      "cn": "以兩個人三台烤箱來說很多了。"
+    },
+    {
+      "sp": "Ken",
+      "en": "Each batch takes half an hour and has to be turned twice.",
+      "cn": "每一爐要半小時，而且必須翻面兩次。"
+    },
+    {
+      "sp": "Ping",
+      "en": "Is the point the money?",
+      "cn": "重點是賺錢嗎？"
+    },
+    {
+      "sp": "Ken",
+      "en": "Officials say no. The two bakers are learning a trade.",
+      "cn": "官方說不是。那兩位烘焙師是在學一門手藝。"
+    },
+    {
+      "sp": "Ping",
+      "en": "That makes sense. A real skill is worth more than one good month.",
+      "cn": "有道理。一門真本事比一個好月份值錢多了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Who bakes the pastries?",
+      "qCn": "是誰在烤這些糕點？",
+      "opts": [
+        "A. Officials at the center",
+        "B. Two inmates",
+        "C. A bakery in Taipei",
+        "D. Volunteers"
+      ],
+      "optsCn": [
+        "A. 看守所的官員",
+        "B. 兩位收容人",
+        "C. 台北的一間麵包店",
+        "D. 志工"
+      ],
+      "ans": 1,
+      "expl": "The pastries are baked by inmates. Only two of them."
+    },
+    {
+      "q": "Why did the bakery become popular?",
+      "qCn": "這間烘焙坊為什麼會紅起來？",
+      "opts": [
+        "A. A TV programme visited it",
+        "B. A photo was posted on Threads",
+        "C. It lowered its prices",
+        "D. It opened a second shop"
+      ],
+      "optsCn": [
+        "A. 有電視節目去採訪",
+        "B. 有人把照片貼上Threads",
+        "C. 它降價了",
+        "D. 它開了第二家店"
+      ],
+      "ans": 1,
+      "expl": "A photo was posted on Threads. It got fifteen thousand likes in two days."
+    },
+    {
+      "q": "Can Ping order a box now?",
+      "qCn": "Ping現在訂得到一盒嗎？",
+      "opts": [
+        "A. Yes, if she calls today",
+        "B. Yes, but only six-piece boxes",
+        "C. No, everything is already ordered",
+        "D. No, the bakery has closed"
+      ],
+      "optsCn": [
+        "A. 可以，只要今天打電話",
+        "B. 可以，但只剩六入的",
+        "C. 不行，全部都被訂走了",
+        "D. 不行，烘焙坊關了"
+      ],
+      "ans": 2,
+      "expl": "Every cake has already been ordered.——已經被訂走，用的是現在完成式的被動。"
+    },
+    {
+      "q": "According to officials, what is the real goal?",
+      "qCn": "根據官方說法，真正的目的是什麼？",
+      "opts": [
+        "A. Making money for the center",
+        "B. Helping the two bakers learn a trade",
+        "C. Getting more followers online",
+        "D. Competing with city bakeries"
+      ],
+      "optsCn": [
+        "A. 幫看守所賺錢",
+        "B. 幫那兩位烘焙師學一門手藝",
+        "C. 在網路上獲得更多追蹤",
+        "D. 跟市區麵包店競爭"
+      ],
+      "ans": 1,
+      "expl": "Officials say no. The two bakers are learning a trade."
+    }
+  ]
+},
+{
+  "id": "dl20260922b2",
+  "date": "2026-09-22",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "The Month I Cooked Every Night",
+  "titleCn": "我天天下廚的那一個月",
+  "series": "本站自製聽力 · 食物與生活主題",
+  "topic": "🍲 一個月不叫外送",
+  "focus": "現在完成式交代「到現在的結果」，過去簡單式交代那一個月的細節，兩者在敘事中的分工",
+  "intro": "Anita跟同事Mai聊她八月給自己訂的規矩。請注意她怎麼切換：講八月那段期間用過去式，講「到今天為止變成怎樣」就換成完成式，最後一段尤其明顯。",
+  "tip": "第一次聽抓「她為什麼開始、後來有沒有堅持下去」，第二次聽找出每一個 have／has 句，想想為什麼那裡不能用過去式。",
+  "pre": [
+    {
+      "w": "delivery",
+      "ipa": "/dɪˈlɪv.ɚ.i/",
+      "pos": "n.",
+      "cn": "外送",
+      "def": "The act of bringing goods to someone's address."
+    },
+    {
+      "w": "habit",
+      "ipa": "/ˈhæbɪt/",
+      "pos": "n.",
+      "cn": "習慣",
+      "def": "Something you do regularly without thinking."
+    },
+    {
+      "w": "afford",
+      "ipa": "/əˈfɔːrd/",
+      "pos": "v.",
+      "cn": "負擔得起",
+      "def": "To have enough money to pay for something."
+    },
+    {
+      "w": "exception",
+      "ipa": "/ɪkˈsep.ʃən/",
+      "pos": "n.",
+      "cn": "例外",
+      "def": "Something that does not follow the usual rule."
+    },
+    {
+      "w": "market",
+      "ipa": "/ˈmɑːrkɪt/",
+      "pos": "n.",
+      "cn": "市場",
+      "def": "A place where people sell food and goods."
+    },
+    {
+      "w": "worth",
+      "ipa": "/wɝːθ/",
+      "pos": "adj.",
+      "cn": "值得的",
+      "def": "Good enough to deserve the time or money spent."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "You have brought lunch from home again. That is three weeks running.",
+      "cn": "你又自己帶午餐了。這是連續第三個星期。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It started as a rule for August. No delivery app for thirty days.",
+      "cn": "一開始是八月給自己的規矩。三十天不開外送App。"
+    },
+    {
+      "sp": "Mai",
+      "en": "What made you do that?",
+      "cn": "什麼事讓你這麼做？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The bank summary for July. I could not believe the number.",
+      "cn": "七月的銀行對帳單。我不敢相信那個數字。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Was it really that bad?",
+      "cn": "有那麼誇張嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I spent more on delivery in one month than I could afford to.",
+      "cn": "我一個月花在外送上的錢超過我負擔得起的範圍。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So how did the first week go?",
+      "cn": "那第一個星期怎麼樣？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Badly. I burned a pan of garlic and cut my thumb.",
+      "cn": "很慘。我燒焦了一鍋蒜頭，還割到拇指。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And you kept going?",
+      "cn": "你還是繼續下去了？"
+    },
+    {
+      "sp": "Anita",
+      "en": "By the second week I had found three dishes I could cook without thinking.",
+      "cn": "到第二個星期，我已經找到三道不用想就能煮的菜。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Including my fish soup, I hope.",
+      "cn": "希望包括我教你的魚湯。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That one has been on my table almost every week since.",
+      "cn": "那道菜從那之後幾乎每個星期都出現在我的餐桌上。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So have you deleted the app?",
+      "cn": "所以你把App刪掉了嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "No. I still use it when a meeting runs late.",
+      "cn": "沒有。開會拖太晚的時候我還是會用。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Then what has actually changed?",
+      "cn": "那到底改變了什麼？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The default. Cooking is the normal evening now, and delivery is the exception.",
+      "cn": "預設值。現在煮飯才是平常的晚上，外送變成例外。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And the money?",
+      "cn": "那錢呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I have saved more than I expected, but that is not really the point.",
+      "cn": "我省下的比我預期的多，但那其實不是重點。"
+    },
+    {
+      "sp": "Mai",
+      "en": "What is?",
+      "cn": "那重點是什麼？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I have learned what my own kitchen is for. That was worth a difficult month.",
+      "cn": "我弄懂了自己的廚房是用來做什麼的。那讓那個難熬的月份變得值得。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What made Anita start the rule?",
+      "qCn": "是什麼讓Anita開始這條規矩？",
+      "opts": [
+        "A. A colleague challenged her",
+        "B. The July bank summary",
+        "C. Her doctor's advice",
+        "D. The app raised its fees"
+      ],
+      "optsCn": [
+        "A. 同事跟她打賭",
+        "B. 七月的銀行對帳單",
+        "C. 醫生的建議",
+        "D. App漲價了"
+      ],
+      "ans": 1,
+      "expl": "The bank summary for July. I could not believe the number."
+    },
+    {
+      "q": "How does she describe the first week?",
+      "qCn": "她怎麼形容第一個星期？",
+      "opts": [
+        "A. Surprisingly easy",
+        "B. Badly, with small accidents",
+        "C. Expensive but fun",
+        "D. Exactly the same as before"
+      ],
+      "optsCn": [
+        "A. 出乎意料地輕鬆",
+        "B. 很慘，出了些小意外",
+        "C. 很貴但很有趣",
+        "D. 跟以前完全一樣"
+      ],
+      "ans": 1,
+      "expl": "Badly. I burned a pan of garlic and cut my thumb."
+    },
+    {
+      "q": "Has she deleted the delivery app?",
+      "qCn": "她把外送App刪掉了嗎？",
+      "opts": [
+        "A. Yes, on the first day of August",
+        "B. Yes, after the month ended",
+        "C. No, she still uses it sometimes",
+        "D. No, she uses it every night"
+      ],
+      "optsCn": [
+        "A. 有，八月第一天就刪了",
+        "B. 有，那個月結束後刪的",
+        "C. 沒有，她偶爾還是會用",
+        "D. 沒有，她每晚都用"
+      ],
+      "ans": 2,
+      "expl": "No. I still use it when a meeting runs late.——她明確說沒有刪。"
+    },
+    {
+      "q": "Why does she say 'I have learned' instead of 'I learned'?",
+      "qCn": "她為什麼說 I have learned 而不是 I learned？",
+      "opts": [
+        "A. Because it happened long ago",
+        "B. Because the result still shapes how she lives now",
+        "C. Because she is not sure it is true",
+        "D. Because it is more polite"
+      ],
+      "optsCn": [
+        "A. 因為那是很久以前的事",
+        "B. 因為那個結果到現在還在影響她的生活",
+        "C. 因為她不確定是不是真的",
+        "D. 因為比較禮貌"
+      ],
+      "ans": 1,
+      "expl": "整段結尾在講「到今天為止變成怎樣」，重點落在現在的結果，所以用現在完成式；用 I learned 會把這件事關進八月。"
+    },
+    {
+      "q": "What does she say has really changed?",
+      "qCn": "她說真正改變的是什麼？",
+      "opts": [
+        "A. The amount of money she earns",
+        "B. Which choice is now her default",
+        "C. The size of her kitchen",
+        "D. Her working hours"
+      ],
+      "optsCn": [
+        "A. 她賺的錢變多了",
+        "B. 哪一個選項現在變成她的預設值",
+        "C. 她廚房的大小",
+        "D. 她的工作時間"
+      ],
+      "ans": 1,
+      "expl": "The default. Cooking is the normal evening now, and delivery is the exception."
+    }
+  ]
+},
+{
   "id": "dl20260918a2",
   "date": "2026-09-18",
   "level": "A2",

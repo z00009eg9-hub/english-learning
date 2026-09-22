@@ -8,6 +8,790 @@ window.DAILY = {
 
 articles:[
 {
+  "id": "d20260922a2",
+  "date": "2026-09-22",
+  "level": "A2",
+  "topic": "飲食",
+  "words": 88,
+  "kind": "orig",
+  "title": "Tom Buys Mooncakes",
+  "titleCn": "Tom買月餅",
+  "focus": "過去簡單式講昨天做過的事；there were 講當時架上有什麼",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "中秋節快到了，Tom昨天去麵包店買月餅。全文只用現在簡單式、過去簡單式和will，請特別注意 went、wanted、bought、waited 這些過去式動詞，還有 there were 怎麼講「當時有很多」。",
+  "spoken": [
+    {
+      "en": "So the Moon Festival's coming up and Tom needed mooncakes.",
+      "cn": "中秋節快到了，Tom得去買月餅。"
+    },
+    {
+      "en": "He popped into this little bakery by the station yesterday.",
+      "cn": "他昨天晃進車站旁邊那間小麵包店。"
+    },
+    {
+      "en": "Red bean ones for his mum — six of them, no hesitation.",
+      "cn": "紅豆口味的給他媽媽，直接六個，毫不猶豫。"
+    },
+    {
+      "en": "Twenty minutes in line, but hey, he's set for Friday.",
+      "cn": "排了二十分鐘，不過沒差，星期五就搞定了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "The Moon Festival is next week. Yesterday Tom went to a small bakery near the station. There were many boxes of mooncakes on the shelf.",
+      "cn": "中秋節就在下個星期。昨天Tom去了車站附近一間小麵包店。架上有很多盒月餅。"
+    },
+    {
+      "en": "Tom wanted a nice box for his parents. The red bean ones were his mother's favorite. He bought six of them.",
+      "cn": "Tom想買一盒好的給他爸媽。紅豆口味的是他媽媽的最愛。他買了六個。"
+    },
+    {
+      "en": "The shop was very busy in the afternoon. Tom waited in line for twenty minutes. He talked to an old man about the weather.",
+      "cn": "那間店下午非常忙。Tom排隊等了二十分鐘。他跟一位老先生聊了天氣。"
+    },
+    {
+      "en": "Now the box is on his kitchen table. On Friday he will take it home to his family.",
+      "cn": "現在那個盒子放在他的廚房桌上。星期五他會把它帶回家給家人。"
+    }
+  ],
+  "target": [
+    {
+      "w": "festival",
+      "ipa": "/ˈfes.tɪ.vəl/",
+      "pos": "n.",
+      "cn": "節日",
+      "def": "A special day or time when people celebrate.",
+      "ex": "Our town holds a music festival every summer.",
+      "exCn": "我們鎮上每年夏天都會辦一場音樂節。"
+    },
+    {
+      "w": "bakery",
+      "ipa": "/ˈbeɪ.kɚ.i/",
+      "pos": "n.",
+      "cn": "麵包店",
+      "def": "A shop that makes and sells bread and cakes.",
+      "ex": "A new bakery opened next to my office last month.",
+      "exCn": "上個月我辦公室隔壁開了一間新的麵包店。"
+    },
+    {
+      "w": "box",
+      "ipa": "/bɑːks/",
+      "pos": "n.",
+      "cn": "盒子",
+      "def": "A container with straight sides that you put things in.",
+      "ex": "She keeps her old photos in a wooden box.",
+      "exCn": "她把舊照片收在一個木盒子裡。"
+    },
+    {
+      "w": "busy",
+      "ipa": "/ˈbɪzi/",
+      "pos": "adj.",
+      "cn": "忙碌的",
+      "def": "Having a lot of people or a lot of work.",
+      "ex": "The airport is always busy on Sunday evenings.",
+      "exCn": "機場在星期天晚上總是很忙。"
+    },
+    {
+      "w": "wait",
+      "ipa": "/weɪt/",
+      "pos": "v.",
+      "cn": "等待",
+      "def": "To stay in one place until something happens.",
+      "ex": "Please wait here until the doctor calls your name.",
+      "exCn": "請在這裡等到醫生叫你的名字。"
+    },
+    {
+      "w": "shelf",
+      "ipa": "/ʃelf/",
+      "pos": "n.",
+      "cn": "架子",
+      "def": "A flat board on a wall where you put things.",
+      "ex": "My brother put the rice cooker on the top shelf.",
+      "exCn": "我哥哥把電鍋放在最上層的架子上。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Where did Tom go yesterday?",
+      "qCn": "Tom昨天去了哪裡？",
+      "opts": [
+        "A. To a small bakery",
+        "B. To his parents' house",
+        "C. To the train station",
+        "D. To a restaurant"
+      ],
+      "optsCn": [
+        "A. 一間小麵包店",
+        "B. 他爸媽家",
+        "C. 火車站",
+        "D. 一間餐廳"
+      ],
+      "ans": 0,
+      "expl": "Yesterday Tom went to a small bakery near the station.——他去的是車站附近的小麵包店，station 只是用來說位置。"
+    },
+    {
+      "q": "How many mooncakes did Tom buy?",
+      "qCn": "Tom買了幾個月餅？",
+      "opts": [
+        "A. Two",
+        "B. Six",
+        "C. Twenty",
+        "D. One box of ten"
+      ],
+      "optsCn": [
+        "A. 兩個",
+        "B. 六個",
+        "C. 二十個",
+        "D. 一盒十個"
+      ],
+      "ans": 1,
+      "expl": "He bought six of them.——twenty 是他排隊的分鐘數，不要看錯。"
+    },
+    {
+      "q": "Yesterday Tom ___ to a small bakery near the station.",
+      "qCn": "昨天Tom去了車站附近一間小麵包店。（選出正確的動詞形式）",
+      "opts": [
+        "A. go",
+        "B. goes",
+        "C. went",
+        "D. is going"
+      ],
+      "ans": 2,
+      "expl": "Yesterday 是已經過去的時間，動詞要用過去簡單式 went，不能用現在式 go/goes，也不能用現在進行式。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The shop was very busy in the afternoon.",
+      "b2": "The shop was packed all afternoon, so everyone had to wait.",
+      "note": "把 very busy 換成 packed（擠滿人），再用 so 帶出結果，句子就從「描述狀態」升級成「描述狀態＋後果」，這是 B1 寫作最常見的一步。",
+      "sp": "The place was heaving that afternoon — total chaos.",
+      "spNote": "heaving（擠爆了）、total chaos（一團亂）是口語形容人多的說法。",
+      "b1Cn": "那間店下午非常忙。",
+      "b2Cn": "那間店整個下午都擠滿人，所以每個人都得等。",
+      "spCn": "那個地方那天下午擠爆了，一團亂。"
+    },
+    {
+      "b1": "Tom waited in line for twenty minutes.",
+      "b2": "Tom spent twenty minutes in line before he reached the counter.",
+      "note": "用 spend + 時間 + 地點 取代 wait for + 時間，再加 before 子句說明「等到什麼時候為止」，資訊量比原句多。",
+      "sp": "Tom was stuck in the queue for a good twenty minutes.",
+      "spNote": "be stuck in the queue（卡在隊伍裡）、a good twenty minutes（足足二十分鐘）都是口語常用。",
+      "b1Cn": "Tom排隊等了二十分鐘。",
+      "b2Cn": "Tom在隊伍裡花了二十分鐘才走到櫃檯。",
+      "spCn": "Tom在隊伍裡卡了足足二十分鐘。"
+    }
+  ]
+},
+{
+  "id": "d20260922b1",
+  "date": "2026-09-22",
+  "level": "B1",
+  "topic": "飲食",
+  "words": 122,
+  "kind": "orig",
+  "title": "Amy Has Never Made Mooncakes",
+  "titleCn": "Amy從來沒做過月餅",
+  "focus": "現在完成式（has bought / has never made / has already promised）講「到現在為止」，過去簡單式（started / threw / turned）講星期六那天的細節",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "同樣是月餅，這次換Amy自己動手做。請比較兩種時態：講「這輩子做過沒有」用 has never made，講「星期六那天發生什麼」用 started、threw、turned。兩者在同一篇裡交替出現，正是這一課的重點。",
+  "spoken": [
+    {
+      "en": "Amy's bought mooncakes forever, but she'd never actually made them.",
+      "cn": "Amy一直都是用買的，但她從來沒真的做過。"
+    },
+    {
+      "en": "Her mum sent over a recipe, so Saturday she gave it a shot.",
+      "cn": "她媽媽傳了食譜過來，所以星期六她試了一下。"
+    },
+    {
+      "en": "First tray came out way too dark — straight in the bin.",
+      "cn": "第一盤烤得太焦，直接丟。"
+    },
+    {
+      "en": "Second one though? Her mum's still got the photo on her phone.",
+      "cn": "不過第二盤呢？她媽媽到現在手機裡還留著那張照片。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Amy has bought mooncakes every year, but she has never made them at home. This year her mother sent her a recipe, so she decided to try.",
+      "cn": "Amy每年都買月餅，但她從來沒有在家做過。今年她媽媽傳了一份食譜給她，所以她決定試試看。"
+    },
+    {
+      "en": "She started on Saturday morning. The dough was harder than she expected, and her first tray came out too dark. She threw two away and started again.",
+      "cn": "她星期六早上開始做。麵團比她想的還難處理，而且她第一盤烤得太焦。她丟掉了兩個，重新再來。"
+    },
+    {
+      "en": "By four o'clock the kitchen smelled wonderful. Her second tray was much better because she turned the heat down. The smell of red bean and butter filled the whole apartment.",
+      "cn": "到了四點，廚房香得不得了。她第二盤好很多，因為她把火轉小了。紅豆和奶油的香味瀰漫了整間公寓。"
+    },
+    {
+      "en": "Her mother has kept that photo on her phone since Sunday. Amy has already promised to make another batch next year. She still buys a box from the shop, but now she knows how much work it is.",
+      "cn": "從星期天到現在，她媽媽一直把那張照片留在手機裡。Amy已經答應明年會再做一盤。她還是會去店裡買一盒，但現在她知道這有多費工。"
+    }
+  ],
+  "target": [
+    {
+      "w": "recipe",
+      "ipa": "/ˈresəpi/",
+      "pos": "n.",
+      "cn": "食譜",
+      "def": "A set of instructions for cooking something.",
+      "ex": "This soup recipe only needs four ingredients.",
+      "exCn": "這道湯的食譜只需要四種材料。"
+    },
+    {
+      "w": "dough",
+      "ipa": "/doʊ/",
+      "pos": "n.",
+      "cn": "麵團",
+      "def": "A soft mixture of flour and water before you bake it.",
+      "ex": "Leave the dough in a warm place for an hour.",
+      "exCn": "把麵團放在溫暖的地方一個小時。"
+    },
+    {
+      "w": "tray",
+      "ipa": "/treɪ/",
+      "pos": "n.",
+      "cn": "烤盤；托盤",
+      "def": "A flat object used to carry or bake food on.",
+      "ex": "The waiter carried six glasses on one tray.",
+      "exCn": "服務生用一個托盤端了六個杯子。"
+    },
+    {
+      "w": "expect",
+      "ipa": "/ɪkˈspekt/",
+      "pos": "v.",
+      "cn": "預期",
+      "def": "To think that something will happen.",
+      "ex": "We expect about thirty guests at the wedding.",
+      "exCn": "我們預計婚禮大約會有三十位客人。"
+    },
+    {
+      "w": "promise",
+      "ipa": "/ˈprɑː.mɪs/",
+      "pos": "v.",
+      "cn": "答應",
+      "def": "To say that you will certainly do something.",
+      "ex": "He promised to call his sister after the meeting.",
+      "exCn": "他答應開完會之後打給他姊姊。"
+    },
+    {
+      "w": "batch",
+      "ipa": "/bætʃ/",
+      "pos": "n.",
+      "cn": "一批；一爐",
+      "def": "An amount of food made or baked at one time.",
+      "ex": "The first batch of bread sells out before noon.",
+      "exCn": "第一批麵包在中午前就賣完了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is new for Amy this year?",
+      "qCn": "今年對Amy來說有什麼是新的？",
+      "opts": [
+        "A. She bought mooncakes for the first time",
+        "B. She made mooncakes at home for the first time",
+        "C. She moved into a new apartment",
+        "D. She opened a bakery"
+      ],
+      "optsCn": [
+        "A. 她第一次買月餅",
+        "B. 她第一次在家做月餅",
+        "C. 她搬進新公寓",
+        "D. 她開了一間麵包店"
+      ],
+      "ans": 1,
+      "expl": "she has never made them at home 加上 she decided to try——買月餅她年年都做，今年新的是自己動手。"
+    },
+    {
+      "q": "Why was her second tray better?",
+      "qCn": "為什麼她第二盤比較好？",
+      "opts": [
+        "A. She used a bigger tray",
+        "B. Her mother helped her",
+        "C. She turned the heat down",
+        "D. She bought new dough"
+      ],
+      "optsCn": [
+        "A. 她用了比較大的烤盤",
+        "B. 她媽媽幫了她",
+        "C. 她把火轉小了",
+        "D. 她買了新的麵團"
+      ],
+      "ans": 2,
+      "expl": "Her second tray was much better because she turned the heat down.——because 後面就是原因。"
+    },
+    {
+      "q": "Amy ___ mooncakes at home before this year.",
+      "qCn": "今年以前Amy從來沒有在家做過月餅。（選出正確的動詞形式）",
+      "opts": [
+        "A. never made",
+        "B. has never made",
+        "C. never makes",
+        "D. was never making"
+      ],
+      "ans": 1,
+      "expl": "「到今年為止的人生經驗」用現在完成式 has never made；如果句子裡出現明確的過去時間點，才改用過去簡單式。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The dough was harder than she expected.",
+      "b2": "The dough turned out to be much harder than she had expected.",
+      "note": "turn out to be 表示「結果發現」，比單純的 was 多了「和預期不同」的味道；much 也讓比較級更有力。",
+      "sp": "The dough was way trickier than she'd bargained for.",
+      "spNote": "way trickier（麻煩太多了）、than she'd bargained for（超出她的預期）是很道地的口語比較說法。",
+      "b1Cn": "麵團比她想的還難處理。",
+      "b2Cn": "結果麵團比她原本預期的難處理得多。",
+      "spCn": "那個麵團比她預期的麻煩太多了。"
+    },
+    {
+      "b1": "She threw two away and started again.",
+      "b2": "After throwing two away, she started the whole thing again.",
+      "note": "把第一個動作改成 After + V-ing 放句首，句子就有了先後順序感，讀起來比兩個 and 連在一起成熟。",
+      "sp": "She binned two of them and just started over.",
+      "spNote": "bin（丟掉）、start over（重來一次）是日常口語，比 throw away、start again 更輕鬆。",
+      "b1Cn": "她丟掉了兩個，重新再來。",
+      "b2Cn": "丟掉兩個之後，她整個重新來過。",
+      "spCn": "她丟了兩個，然後乾脆重來。"
+    }
+  ]
+},
+{
+  "id": "d20260922b1p",
+  "date": "2026-09-22",
+  "level": "B1+",
+  "topic": "新聞·食物與生活",
+  "words": 206,
+  "kind": "news",
+  "title": "The Bakery Inside Keelung Detention Center",
+  "titleCn": "基隆看守所裡的那間烘焙坊",
+  "source": "改寫自 中央社 Focus Taiwan 報導（2026/09/21）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202609210011",
+  "focus": "被動語態（are baked / is used / was posted / are expected）搭配現在完成式（has become / has already been ordered）與過去簡單式（had collected）",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "新聞英文常把「誰做的」藏起來，只講「什麼被做了」，所以被動語態特別多。這篇請注意 are baked、is used、was posted、are expected 這些被動形式，也比較一下 has become（到現在的結果）和 had collected（兩天之內累積的過程）在時態上的分工。",
+  "spoken": [
+    {
+      "en": "So there's this bakery everyone's talking about, and you literally can't go in.",
+      "cn": "有一間大家都在討論的烘焙坊，而且你根本進不去。"
+    },
+    {
+      "en": "It's inside a detention center — two inmates, three ovens, tiny kitchen.",
+      "cn": "它開在看守所裡面，兩個收容人、三台烤箱、超小的廚房。"
+    },
+    {
+      "en": "One photo on Threads and boom, the whole lot sold out.",
+      "cn": "Threads上一張照片，然後砰，整批就賣光了。"
+    },
+    {
+      "en": "The real idea is the skill, though — something to walk out with.",
+      "cn": "不過真正的用意是那門手藝，出去以後帶得走的東西。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "A small bakery has become one of the most talked-about shops in northern Taiwan this month, and almost nobody can walk into it. It is run inside Keelung Detention Center, where the pastries are baked by inmates and sold under the name Hou Chiang Bakery.",
+      "cn": "一間小烘焙坊成了這個月北台灣最多人討論的店家之一，而且幾乎沒有人走得進去。它開在基隆看守所裡面，糕點由收容人烘焙，以「鱟江烘焙坊」的名義販售。"
+    },
+    {
+      "en": "The kitchen is tiny, about ten square meters, and only three ovens are used. Two inmates do the baking, and one of them already had experience before he arrived. Each batch needs twenty-five to thirty minutes and has to be turned twice so that the pastry browns evenly.",
+      "cn": "廚房很小，大約十平方公尺，而且只用三台烤箱。烘焙工作由兩位收容人負責，其中一位入所前就有經驗。每一爐需要二十五到三十分鐘，而且必須翻面兩次，糕點才會上色均勻。"
+    },
+    {
+      "en": "Interest exploded after a photo was posted on Threads. Within two days the post had collected more than fifteen thousand likes. A box of twelve sells for NT$480 and a box of six for NT$250. About ten thousand cakes are expected to leave the center before the holiday, and every one of them has already been ordered.",
+      "cn": "一張照片被貼上Threads之後，關注度就爆開了。兩天之內，那則貼文累積了超過一萬五千個讚。一盒十二入賣新台幣四百八十元，一盒六入賣兩百五十元。預計節前約有一萬個糕點會送出看守所，而且每一個都已經被訂走了。"
+    },
+    {
+      "en": "Officials say the money is not the point. The two bakers are learning a trade, and the confidence they build here is meant to follow them out of the gate. Whether the ovens keep running after the festival has not been decided yet. That will depend on how many orders arrive once the holiday is over.",
+      "cn": "官方表示重點不在錢。這兩位烘焙師正在學一門手藝，他們在這裡建立起來的自信，是要跟著他們走出大門的。節慶過後烤箱還會不會繼續運轉，目前還沒決定。那要看假期結束之後會進來多少訂單。"
+    }
+  ],
+  "target": [
+    {
+      "w": "inmate",
+      "ipa": "/ˈɪn.meɪt/",
+      "pos": "n.",
+      "cn": "收容人；受刑人",
+      "def": "A person who is being kept in a prison.",
+      "ex": "Each inmate spends two hours a day in the library.",
+      "exCn": "每位收容人每天在圖書館待兩個小時。"
+    },
+    {
+      "w": "detention",
+      "ipa": "/dɪˈten.ʃən/",
+      "pos": "n.",
+      "cn": "拘留；羈押",
+      "def": "The state of being officially kept somewhere and not allowed to leave.",
+      "ex": "He was held in detention for six weeks before the trial.",
+      "exCn": "他在審判前被羈押了六個星期。"
+    },
+    {
+      "w": "pastry",
+      "ipa": "/ˈpeɪ.stri/",
+      "pos": "n.",
+      "cn": "酥皮點心",
+      "def": "A sweet baked food made from flour, fat and water.",
+      "ex": "She had a coffee and a warm pastry before her train.",
+      "exCn": "她在搭火車前喝了杯咖啡、吃了個熱的酥皮點心。"
+    },
+    {
+      "w": "oven",
+      "ipa": "/ˈʌvən/",
+      "pos": "n.",
+      "cn": "烤箱",
+      "def": "A closed box that you heat to cook food inside.",
+      "ex": "Our new oven heats up in under five minutes.",
+      "exCn": "我們的新烤箱不用五分鐘就熱好了。"
+    },
+    {
+      "w": "evenly",
+      "ipa": "/ˈiː.vən.li/",
+      "pos": "adv.",
+      "cn": "均勻地",
+      "def": "In a way that is the same in every part.",
+      "ex": "Spread the sauce evenly across the whole pan.",
+      "exCn": "把醬汁均勻抹滿整個鍋子。"
+    },
+    {
+      "w": "order",
+      "ipa": "/ˈɔːrdɚ/",
+      "pos": "n.",
+      "cn": "訂單",
+      "def": "A request asking a shop to supply goods.",
+      "ex": "The restaurant took forty orders in the first hour.",
+      "exCn": "那間餐廳第一個小時就接了四十張訂單。"
+    },
+    {
+      "w": "confidence",
+      "ipa": "/ˈkɑːnfɪdəns/",
+      "pos": "n.",
+      "cn": "自信",
+      "def": "The feeling that you can do something well.",
+      "ex": "Speaking in front of the class gave her real confidence.",
+      "exCn": "在全班面前說話讓她真的有了自信。"
+    },
+    {
+      "w": "trade",
+      "ipa": "/treɪd/",
+      "pos": "n.",
+      "cn": "手藝；技術行業",
+      "def": "A job that needs special skill with your hands.",
+      "ex": "His father taught him the trade when he was sixteen.",
+      "exCn": "他十六歲時父親教他這門手藝。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Who bakes the pastries?",
+      "qCn": "是誰在烘焙這些糕點？",
+      "opts": [
+        "A. Officials at the center",
+        "B. Two inmates",
+        "C. A bakery in Keelung city",
+        "D. Volunteers from a local temple"
+      ],
+      "optsCn": [
+        "A. 看守所的官員",
+        "B. 兩位收容人",
+        "C. 基隆市區的一間麵包店",
+        "D. 當地廟宇的志工"
+      ],
+      "ans": 1,
+      "expl": "Two inmates do the baking——糕點是由兩位收容人烘焙的，官員只負責說明計畫。"
+    },
+    {
+      "q": "Why does each batch have to be turned twice?",
+      "qCn": "為什麼每一爐都必須翻面兩次？",
+      "opts": [
+        "A. To make the pastry cook evenly",
+        "B. To save electricity",
+        "C. Because the ovens are broken",
+        "D. To fit more cakes inside"
+      ],
+      "optsCn": [
+        "A. 讓糕點烤得均勻",
+        "B. 為了省電",
+        "C. 因為烤箱壞了",
+        "D. 為了多放一些糕點"
+      ],
+      "ans": 0,
+      "expl": "has to be turned twice so that the pastry browns evenly——so that 後面就是目的：上色均勻。"
+    },
+    {
+      "q": "How many cakes are expected to leave the center before the holiday?",
+      "qCn": "預計節前有多少糕點會送出看守所？",
+      "opts": [
+        "A. About 480",
+        "B. About 250",
+        "C. About 10,000",
+        "D. About 15,000"
+      ],
+      "optsCn": [
+        "A. 大約480個",
+        "B. 大約250個",
+        "C. 大約一萬個",
+        "D. 大約一萬五千個"
+      ],
+      "ans": 2,
+      "expl": "About ten thousand cakes are expected to leave the center——480 和 250 是價格，15,000 是按讚數，三個數字都不是產量。"
+    },
+    {
+      "q": "The pastries ___ by inmates and sold under the name Hou Chiang Bakery.",
+      "qCn": "這些糕點由收容人烘焙，以「鱟江烘焙坊」的名義販售。（選出正確的動詞形式）",
+      "opts": [
+        "A. bake",
+        "B. are baked",
+        "C. have baked",
+        "D. baking"
+      ],
+      "ans": 1,
+      "expl": "主詞 the pastries 是「被烤」的一方，要用被動語態 are baked；後面的 sold 也是被動，兩個被動動詞共用同一個 are。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Interest exploded after a photo was posted on Threads.",
+      "b2": "Demand took off the moment a photo of the pastries appeared on Threads.",
+      "note": "take off（起飛、急速成長）比 explode 更常用在需求上，the moment 當連接詞等於 as soon as，比 after 更精準地指出「一...就...」。",
+      "sp": "One photo went up on Threads and the whole thing just blew up.",
+      "spNote": "go up（貼上去）、blow up（爆紅）是社群語境最常見的口語動詞片語。",
+      "b1Cn": "一張照片被貼上Threads之後，關注度就爆開了。",
+      "b2Cn": "糕點的照片一出現在Threads上，需求就急速上升。",
+      "spCn": "一張照片貼上Threads，整件事就爆了。"
+    },
+    {
+      "b1": "Officials say the money is not the point.",
+      "b2": "According to officials, revenue was never the main goal of the programme.",
+      "note": "According to + 消息來源 是新聞寫作標準的引述方式；revenue（營收）比 money 精確，never the main goal 也比 not the point 正式。",
+      "sp": "The people running it say it was never really about the cash.",
+      "spNote": "it was never really about the cash（重點從來就不是錢）是很自然的口語否定強調。",
+      "b1Cn": "官方表示重點不在錢。",
+      "b2Cn": "根據官方說法，營收從來就不是這個計畫的主要目標。",
+      "spCn": "負責的人說，這件事從來就不是為了錢。"
+    }
+  ]
+},
+{
+  "id": "d20260922b2",
+  "date": "2026-09-22",
+  "level": "B2",
+  "topic": "食物與生活",
+  "words": 269,
+  "kind": "original",
+  "title": "The Month Anita Stopped Ordering In",
+  "titleCn": "Anita不再叫外送的那一個月",
+  "focus": "現在完成式交代「到現在為止的結果」（has lived / has saved / has learned），過去簡單式交代八月那段期間的具體細節（burned / cut / gave）",
+  "intro": "這篇是一段回顧：有些句子在講「那一個月裡發生了什麼」，有些句子在講「到今天為止變成怎樣」。讀的時候請把兩種時態分開看，特別注意最後一段如何用完成式收尾，把整件事拉回現在。",
+  "spoken": [
+    {
+      "en": "Anita used to get dinner delivered basically every single night.",
+      "cn": "Anita以前幾乎每天晚上都叫外送。"
+    },
+    {
+      "en": "Then the July bank summary landed and she nearly fell off her chair.",
+      "cn": "然後七月的銀行對帳單寄來，她差點從椅子上摔下來。"
+    },
+    {
+      "en": "So August was a no-app month. Burnt garlic, cut thumb, the lot.",
+      "cn": "所以八月整個月不碰App。燒焦的蒜頭、割到的拇指，通通來一遍。"
+    },
+    {
+      "en": "She's kept it up, more or less. Delivery's the exception now, not the rule.",
+      "cn": "她大致上維持下來了。現在外送是例外，不是常態。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita has lived in Hanoi for three years, and for most of that time her dinner arrived at the door in a plastic bag. It was easy. After a long day at the factory she opened an app, chose something, and ate in front of her laptop. She never thought of it as a problem until her bank sent the summary for July.",
+      "cn": "Anita在河內住了三年，而這段時間裡大部分的晚餐都是裝在塑膠袋裡送到門口的。這很輕鬆。在工廠忙了一整天之後，她打開App、選一樣東西，然後在筆電前面吃完。她從來不覺得這有什麼問題，直到銀行寄來七月的對帳單。"
+    },
+    {
+      "en": "The number at the bottom surprised her. She had spent more on delivery in one month than on a whole season of the bus pass she never used. So in August she made a rule: no app for thirty days. She wrote a short list, walked to the wet market near her building on the first Saturday, and came home with vegetables, tofu and a bag of rice.",
+      "cn": "最下面那個數字嚇到她了。她一個月花在外送上的錢，比她那張從來沒用過的整季公車票還多。所以八月她給自己定了一條規矩：三十天不開App。她寫了一張簡短的清單，第一個星期六走去住處附近的傳統市場，帶著蔬菜、豆腐和一袋米回家。"
+    },
+    {
+      "en": "The first week was clumsy. She burned a pan of garlic, cut her thumb, and twice ended up eating instant noodles at ten at night. By the second week, though, she had found three dishes she could cook without thinking, and the kitchen stopped feeling like someone else's. Her colleague Mai gave her a recipe for a simple fish soup, and that dish has appeared on her table almost every week since.",
+      "cn": "第一個星期很笨拙。她燒焦了一鍋蒜頭、割到拇指，還有兩次在晚上十點吃泡麵收場。不過到了第二個星期，她已經找到三道不用想就能煮的菜，廚房也不再像是別人家的了。她的同事Mai給了她一份簡單魚湯的食譜，從那之後那道菜幾乎每個星期都會出現在她的餐桌上。"
+    },
+    {
+      "en": "The month is over now, and Anita has not deleted the app. She still uses it when a meeting runs late. What has changed is the default: cooking is the normal evening now, and delivery is the exception. She has saved a surprising amount of money, but that is not really the point. The point is that she has learned what her own kitchen is for.",
+      "cn": "那個月已經結束了，而Anita並沒有把App刪掉。開會拖太晚的時候她還是會用。改變的是「預設值」：現在煮飯才是平常的晚上，外送變成例外。她省下的錢多得讓她驚訝，但那其實不是重點。重點是她弄懂了自己的廚房到底是用來做什麼的。"
+    }
+  ],
+  "target": [
+    {
+      "w": "delivery",
+      "ipa": "/dɪˈlɪv.ɚ.i/",
+      "pos": "n.",
+      "cn": "外送；送貨",
+      "def": "The act of bringing goods to someone's address.",
+      "ex": "Free delivery applies to orders over three hundred dollars.",
+      "exCn": "訂單滿三百元就免運費。"
+    },
+    {
+      "w": "summary",
+      "ipa": "/ˈsʌm.ɚ.i/",
+      "pos": "n.",
+      "cn": "摘要；對帳單",
+      "def": "A short account that gives only the main facts.",
+      "ex": "Please send me a one-page summary before Friday.",
+      "exCn": "請在星期五之前給我一頁的摘要。"
+    },
+    {
+      "w": "clumsy",
+      "ipa": "/ˈklʌm.zi/",
+      "pos": "adj.",
+      "cn": "笨拙的",
+      "def": "Moving or doing things in an awkward way.",
+      "ex": "My first attempts at chopsticks were extremely clumsy.",
+      "exCn": "我剛開始用筷子的時候笨拙得不得了。"
+    },
+    {
+      "w": "garlic",
+      "ipa": "/ˈɡɑːr.lɪk/",
+      "pos": "n.",
+      "cn": "蒜頭",
+      "def": "A strong-tasting plant used in cooking.",
+      "ex": "Add the garlic last so it does not turn bitter.",
+      "exCn": "蒜頭最後再放，才不會變苦。"
+    },
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person who works with you.",
+      "ex": "A colleague of mine studied engineering in Osaka.",
+      "exCn": "我的一位同事在大阪唸工程。"
+    },
+    {
+      "w": "default",
+      "ipa": "/dɪˈfɔːlt/",
+      "pos": "n.",
+      "cn": "預設值；慣常做法",
+      "def": "What happens automatically if you do not choose something else.",
+      "ex": "Silence is his default when he disagrees with someone.",
+      "exCn": "不同意別人的時候，他的慣常反應就是沉默。"
+    },
+    {
+      "w": "exception",
+      "ipa": "/ɪkˈsep.ʃən/",
+      "pos": "n.",
+      "cn": "例外",
+      "def": "Something that does not follow the usual rule.",
+      "ex": "Everyone pays the same fee, with one small exception.",
+      "exCn": "每個人都付一樣的費用，只有一個小小的例外。"
+    },
+    {
+      "w": "deposit",
+      "ipa": "/dɪˈpɑːzɪt/",
+      "pos": "n.",
+      "cn": "押金",
+      "def": "Money paid in advance and returned later.",
+      "ex": "The landlord returned the deposit within two weeks.",
+      "exCn": "房東在兩個星期內退還了押金。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What made Anita change her habit?",
+      "qCn": "是什麼讓Anita改變了習慣？",
+      "opts": [
+        "A. Her doctor told her to cook",
+        "B. The July bank summary",
+        "C. Her colleague Mai complained",
+        "D. The delivery app closed down"
+      ],
+      "optsCn": [
+        "A. 醫生叫她自己煮",
+        "B. 七月的銀行對帳單",
+        "C. 同事Mai抱怨了",
+        "D. 外送App收掉了"
+      ],
+      "ans": 1,
+      "expl": "She never thought of it as a problem until her bank sent the summary for July.——until 之後出現的那件事就是轉捩點。"
+    },
+    {
+      "q": "How does the writer describe the first week?",
+      "qCn": "作者怎麼形容第一個星期？",
+      "opts": [
+        "A. Surprisingly smooth",
+        "B. Cheap but boring",
+        "C. Clumsy, with several small failures",
+        "D. Exactly like ordering in"
+      ],
+      "optsCn": [
+        "A. 出乎意料地順利",
+        "B. 便宜但無聊",
+        "C. 笨拙，出了幾個小狀況",
+        "D. 跟叫外送一模一樣"
+      ],
+      "ans": 2,
+      "expl": "The first week was clumsy. She burned a pan of garlic, cut her thumb...——燒焦、割到手、吃泡麵都是小失敗。"
+    },
+    {
+      "q": "What is the main point of the last paragraph?",
+      "qCn": "最後一段的重點是什麼？",
+      "opts": [
+        "A. She saved money, and that was the goal",
+        "B. She deleted the app for good",
+        "C. What changed was which choice is now normal",
+        "D. She now refuses all delivery food"
+      ],
+      "optsCn": [
+        "A. 她省了錢，而那就是目標",
+        "B. 她把App永久刪掉了",
+        "C. 改變的是「哪一個選項現在才是常態」",
+        "D. 她現在完全拒絕外送食物"
+      ],
+      "ans": 2,
+      "expl": "What has changed is the default——她明講省錢不是重點，重點是預設值換了；App也沒有刪掉。"
+    },
+    {
+      "q": "She ___ a surprising amount of money, but that is not really the point.",
+      "qCn": "她省下的錢多得讓她驚訝，但那其實不是重點。（選出正確的動詞形式）",
+      "opts": [
+        "A. saved",
+        "B. was saving",
+        "C. has saved",
+        "D. had saved"
+      ],
+      "ans": 2,
+      "expl": "這句在講「到現在為止累積的結果」，而且後半句用現在式 is，所以要用現在完成式 has saved；過去簡單式 saved 會把這件事關在過去，跟後半句對不起來。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The first week was clumsy.",
+      "b2": "The first week was a series of small disasters.",
+      "note": "a series of small disasters 用具體的名詞組取代單一形容詞，把「笨拙」說成一連串事件，讀者更有畫面，也預告後面要舉的例子。",
+      "sp": "Week one was a bit of a car crash, honestly.",
+      "spNote": "a bit of a car crash（有點慘烈）是英美口語誇飾失敗的常見說法。",
+      "b1Cn": "第一個星期很笨拙。",
+      "b2Cn": "第一個星期就是一連串的小災難。",
+      "spCn": "老實說第一個星期有點慘烈。"
+    },
+    {
+      "b1": "She still uses it when a meeting runs late.",
+      "b2": "She falls back on it whenever a meeting overruns.",
+      "note": "fall back on（退而求其次、不得已才用）比 still use 更精準地說出「這不是首選」；whenever 比 when 更強調每一次都成立；overrun 是會議超時的專用動詞。",
+      "sp": "She'll cave and order in if a meeting drags on.",
+      "spNote": "cave（投降、破戒）、drag on（拖拖拉拉沒完）都是口語，語氣比正式版輕鬆。",
+      "b1Cn": "開會拖太晚的時候她還是會用。",
+      "b2Cn": "只要會議超時，她就會退而求其次用它。",
+      "spCn": "會議拖太久的話，她就會破戒叫外送。"
+    }
+  ]
+},
+{
   "id": "d20260918a2",
   "date": "2026-09-18",
   "level": "A2",
@@ -6797,6 +7581,762 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260922a2",
+  "date": "2026-09-22",
+  "unitNo": 13,
+  "level": "A2",
+  "title": "I Have Done and I Did — First Steps",
+  "titleCn": "「做過了」和「昨天做了」：兩種形狀先分清楚",
+  "srcDays": [],
+  "summary": "想講「到現在為止做過沒有」用 have / has + 過去分詞；只要句子裡說出昨天、上星期這種已經關上的時間，就得換成過去簡單式。",
+  "sections": [
+    {
+      "h": "兩個形狀先記起來",
+      "table": {
+        "head": [
+          "想表達的意思",
+          "公式",
+          "例子"
+        ],
+        "rows": [
+          [
+            "做過了、已經好了（沒說什麼時候）",
+            "have / has + 過去分詞",
+            "I have made a cake."
+          ],
+          [
+            "某個過去時間做了什麼",
+            "動詞過去式",
+            "I made a cake on Sunday."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I have tried mooncakes.",
+          "cn": "我吃過月餅。",
+          "note": "只講經驗，沒說是什麼時候"
+        },
+        {
+          "en": "I tried mooncakes last year.",
+          "cn": "我去年吃過月餅。",
+          "note": "說出 last year，就換成過去式"
+        },
+        {
+          "en": "She has washed the cups.",
+          "cn": "她把杯子洗好了。",
+          "note": "重點是「現在杯子是乾淨的」"
+        }
+      ]
+    },
+    {
+      "h": "have 還是 has？",
+      "bullets": [
+        "I / you / we / they 配 have",
+        "he / she / it 配 has",
+        "後面的動詞一律是過去分詞，不會跟著主詞變形"
+      ],
+      "examples": [
+        {
+          "en": "We have paid the bill.",
+          "cn": "我們把帳單付掉了。",
+          "note": "we 配 have"
+        },
+        {
+          "en": "He has paid the bill.",
+          "cn": "他把帳單付掉了。",
+          "note": "he 配 has，paid 完全不變"
+        }
+      ]
+    },
+    {
+      "h": "說出時間，就要用過去式",
+      "bullets": [
+        "yesterday、last week、two days ago、in 2024 都是「已經關上的時間」",
+        "這些字一出現，動詞就只能用過去簡單式",
+        "中文說「我昨天已經買了」有個「已經」，英文千萬不要因此用 have"
+      ],
+      "examples": [
+        {
+          "en": "Tom bought a box yesterday.",
+          "cn": "Tom昨天買了一盒。",
+          "note": "yesterday 配過去式 bought"
+        },
+        {
+          "en": "Tom has bought a box.",
+          "cn": "Tom買了一盒。",
+          "note": "沒說時間，用 has bought"
+        }
+      ]
+    },
+    {
+      "h": "already、never、yet 最愛跟完成式一起出現",
+      "table": {
+        "head": [
+          "字",
+          "放哪裡",
+          "例子"
+        ],
+        "rows": [
+          [
+            "already 已經",
+            "放在 have 和動詞中間",
+            "She has already left."
+          ],
+          [
+            "never 從來沒有",
+            "放在 have 和動詞中間",
+            "They have never seen snow."
+          ],
+          [
+            "yet 還沒／了沒",
+            "放在句子最後面",
+            "Have you finished yet?"
+          ]
+        ]
+      }
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I have seen him yesterday.",
+      "good": "I saw him yesterday.",
+      "why": "yesterday 是一個已經關上的時間點，英文規定完成式不能跟這種時間點同時出現。中文的「我昨天已經看到他了」有個「已經」，很容易讓人想用 have，但英文只看時間詞。"
+    },
+    {
+      "bad": "She have finished her homework.",
+      "good": "She has finished her homework.",
+      "why": "第三人稱單數 she 要用 has。中文動詞不隨人稱變化，所以這個 s 是中文母語者最常漏的一個字母。"
+    },
+    {
+      "bad": "I have ate lunch.",
+      "good": "I have eaten lunch.",
+      "why": "have 後面要接過去分詞 eaten，不是過去式 ate。eat 的三態是 eat / ate / eaten，背的時候要三個一起背，不要只背前兩個。"
+    },
+    {
+      "bad": "Have already you called her?",
+      "good": "Have you already called her?",
+      "why": "already 要放在主詞後面、動詞前面。疑問句的順序是 Have + 主詞 + already + 過去分詞，副詞插在中間而不是擠到主詞前面。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I ___ my keys. I cannot open the door.",
+      "qCn": "我把鑰匙弄丟了，我打不開門。",
+      "opts": [
+        "lost",
+        "have lost",
+        "am losing",
+        "will lose"
+      ],
+      "ans": 1,
+      "expl": "重點是「現在打不開門」這個結果，沒有說什麼時候弄丟的，所以用現在完成式 have lost。"
+    },
+    {
+      "q": "We ___ dinner at seven last night.",
+      "qCn": "我們昨晚七點吃了晚餐。",
+      "opts": [
+        "have eaten",
+        "has eaten",
+        "ate",
+        "eat"
+      ],
+      "ans": 2,
+      "expl": "last night 是關上的時間，只能用過去簡單式 ate。"
+    },
+    {
+      "q": "She ___ never been to Tainan.",
+      "qCn": "她從來沒去過台南。",
+      "opts": [
+        "have",
+        "has",
+        "did",
+        "was"
+      ],
+      "ans": 1,
+      "expl": "主詞 she 是第三人稱單數，要用 has；never been 是「從出生到現在都沒有」。"
+    },
+    {
+      "q": "Tom ___ a new bike two weeks ago.",
+      "qCn": "Tom兩個星期前買了一台新腳踏車。",
+      "opts": [
+        "has bought",
+        "buys",
+        "bought",
+        "has buy"
+      ],
+      "ans": 2,
+      "expl": "two weeks ago 從現在往回數到一個明確的點，配過去簡單式 bought。"
+    }
+  ]
+},
+{
+  "id": "dg20260922b1",
+  "date": "2026-09-22",
+  "unitNo": 13,
+  "level": "B1",
+  "title": "Have You Seen It? or Did You See It?",
+  "titleCn": "Have you...? 還是 Did you...？：同一件事的兩種問法",
+  "srcDays": [],
+  "summary": "同一件事有兩種問法：在意「到現在為止有沒有」用 Have you + 過去分詞，在意「那個已經結束的場合發生了什麼」用 Did you + 原形；中文都翻成「你⋯了嗎」，所以只能靠情境分辨。",
+  "sections": [
+    {
+      "h": "兩種問法，背後的假設不一樣",
+      "table": {
+        "head": [
+          "問句",
+          "說話者心裡假設什麼",
+          "適合的場合"
+        ],
+        "rows": [
+          [
+            "Have you read my message?",
+            "訊息還在，你現在還能去讀",
+            "事情還沒關上"
+          ],
+          [
+            "Did you read my message?",
+            "那個時段已經過去了",
+            "例如昨天的會議已經散了"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Have you booked the table?",
+          "cn": "你訂位了嗎？",
+          "note": "還沒訂就現在去訂，事情還開著"
+        },
+        {
+          "en": "Did you book the table on Friday?",
+          "cn": "你星期五訂位了嗎？",
+          "note": "指定了星期五，時間關上了"
+        },
+        {
+          "en": "Have you ever worked night shifts?",
+          "cn": "你做過大夜班嗎？",
+          "note": "ever 問的是整段人生經驗"
+        }
+      ]
+    },
+    {
+      "h": "回答的時態要跟著問句走",
+      "bullets": [
+        "被問 Have you...? 就用 Yes, I have. / No, I haven't. 回答",
+        "被問 Did you...? 就用 Yes, I did. / No, I didn't. 回答",
+        "常見的自然流程是：先用完成式開頭，接著補細節時自動換成過去式"
+      ],
+      "examples": [
+        {
+          "en": "Have you sent the invoice? Yes, I have.",
+          "cn": "你把發票寄出去了嗎？寄了。",
+          "note": "助動詞要對齊"
+        },
+        {
+          "en": "I have sent it. I emailed it on Monday morning.",
+          "cn": "我寄出去了。我星期一早上用電子郵件寄的。",
+          "note": "第二句補時間，時態就掉回過去式"
+        }
+      ]
+    },
+    {
+      "h": "哪些時間訊號會逼你換時態",
+      "bullets": [
+        "逼你用過去簡單式：yesterday、last night、in 2023、three days ago、when I was a student",
+        "偏好現在完成式：just、already、yet、ever、never、so far、recently",
+        "兩邊都可以的：today、this week、this month（要看那段時間結束了沒，這是 B1+ 的重點）"
+      ],
+      "examples": [
+        {
+          "en": "I have just finished the report.",
+          "cn": "我剛把報告做完。",
+          "note": "just 配完成式"
+        },
+        {
+          "en": "I finished the report before lunch.",
+          "cn": "我午餐前把報告做完了。",
+          "note": "before lunch 指出時段，用過去式"
+        }
+      ]
+    },
+    {
+      "h": "同一件事，兩種說法都對",
+      "bullets": [
+        "選哪一種不是對錯問題，而是你想讓對方注意什麼",
+        "想強調「現在的狀態」就用完成式",
+        "想強調「當時的經過」就用過去式"
+      ],
+      "examples": [
+        {
+          "en": "The shop has closed.",
+          "cn": "那家店收掉了。",
+          "note": "重點：現在去也沒用"
+        },
+        {
+          "en": "The shop closed in March.",
+          "cn": "那家店三月收掉的。",
+          "note": "重點：發生在三月"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "Did you finish yet?",
+      "good": "Have you finished yet?",
+      "why": "yet 表示「到現在為止還在等這件事」，屬於現在完成式的世界。用 Did 會讓句子變成在問某個已經結束的場合，跟 yet 互相打架。"
+    },
+    {
+      "bad": "I have met your brother last summer.",
+      "good": "I met your brother last summer.",
+      "why": "last summer 把事情釘在一個關上的季節。中文「我去年夏天有見過你哥」的「有」常被直譯成 have，但英文只要出現明確過去時間，就得用過去簡單式。"
+    },
+    {
+      "bad": "Have you gone to the new night market yesterday?",
+      "good": "Did you go to the new night market yesterday?",
+      "why": "同樣是 yesterday 的問題，而且 have gone 還有「人已經去了、現在不在這裡」的意思，用在這裡語意也不對。"
+    },
+    {
+      "bad": "A: Have you eaten? B: Yes, I did.",
+      "good": "A: Have you eaten? B: Yes, I have.",
+      "why": "簡答要重複問句裡的助動詞。問句用 Have，回答就用 have；問句用 Did，回答才用 did。這是台灣學習者口說時最常出現的不一致。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "___ you ever tried durian?",
+      "qCn": "你吃過榴槤嗎？",
+      "opts": [
+        "Did",
+        "Have",
+        "Do",
+        "Were"
+      ],
+      "ans": 1,
+      "expl": "ever 問的是「到現在為止的人生經驗」，要用 Have you ever + 過去分詞。"
+    },
+    {
+      "q": "A: Have you called the supplier? B: Yes, I ___.",
+      "qCn": "A：你打給供應商了嗎？B：打了。",
+      "opts": [
+        "did",
+        "have",
+        "do",
+        "am"
+      ],
+      "ans": 1,
+      "expl": "簡答要用問句裡的助動詞 have；如果問句是 Did you call...? 才回答 Yes, I did."
+    },
+    {
+      "q": "She ___ her laptop when she moved house.",
+      "qCn": "她搬家的時候把筆電弄壞了。",
+      "opts": [
+        "has broken",
+        "have broken",
+        "broke",
+        "breaks"
+      ],
+      "ans": 2,
+      "expl": "when she moved house 是一個已經結束的場合，主句要用過去簡單式 broke。"
+    },
+    {
+      "q": "The lift ___ down again, so we should take the stairs.",
+      "qCn": "電梯又壞了，所以我們應該走樓梯。",
+      "opts": [
+        "broke",
+        "has broken",
+        "breaks",
+        "was breaking"
+      ],
+      "ans": 1,
+      "expl": "後半句用現在式 should take，表示問題現在還在，所以前半句要用現在完成式 has broken。"
+    }
+  ]
+},
+{
+  "id": "dg20260922b1p",
+  "date": "2026-09-22",
+  "unitNo": 14,
+  "level": "B1+",
+  "title": "Finished Time or Unfinished Time",
+  "titleCn": "這段時間關了沒：today、this morning、this year 決定時態",
+  "srcDays": [],
+  "summary": "this morning、today、this year 這類時間詞本身不決定時態；決定時態的是你說話的那一刻——那段時間還在跑就用現在完成式，已經跑完就用過去簡單式。",
+  "sections": [
+    {
+      "h": "同一個時間詞，兩種時態都可能對",
+      "table": {
+        "head": [
+          "你說話的時刻",
+          "該用的句子",
+          "原因"
+        ],
+        "rows": [
+          [
+            "上午十點，早上還沒過完",
+            "I have drunk three coffees this morning.",
+            "this morning 這段時間還開著"
+          ],
+          [
+            "晚上八點，早上早就過完",
+            "I drank three coffees this morning.",
+            "this morning 已經關上了"
+          ],
+          [
+            "十二月三十一日晚上",
+            "We opened nine stores this year.",
+            "今年實際上已經結束"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The team has shipped four orders today.",
+          "cn": "團隊今天已經出了四張訂單。",
+          "note": "還在上班，today 沒結束"
+        },
+        {
+          "en": "The team shipped four orders today.",
+          "cn": "團隊今天出了四張訂單。",
+          "note": "下班後回顧，today 那段已經收尾"
+        },
+        {
+          "en": "It has rained a lot this month.",
+          "cn": "這個月雨下得很多。",
+          "note": "月份還沒過完，用完成式"
+        }
+      ]
+    },
+    {
+      "h": "人還在不在，也會改變時態",
+      "bullets": [
+        "談還活著、還在職的人，他的人生或任期還開著，用現在完成式",
+        "談已過世、已離職的人，那段時間關上了，用過去簡單式",
+        "同一句話換一個主角，時態就得跟著換，這一點中文完全看不出來"
+      ],
+      "examples": [
+        {
+          "en": "My aunt has published three cookbooks.",
+          "cn": "我阿姨出過三本食譜。",
+          "note": "她還在寫，數字可能再增加"
+        },
+        {
+          "en": "Her teacher published three cookbooks.",
+          "cn": "她的老師出過三本食譜。",
+          "note": "老師已過世，數字不會再變"
+        }
+      ]
+    },
+    {
+      "h": "展覽、活動、公司也有「關上」的問題",
+      "bullets": [
+        "活動還在辦：Have you seen the exhibition? 對方現在還來得及去",
+        "活動已結束：Did you see the exhibition? 你問的是一個關掉的機會",
+        "用錯的後果不是文法怪，而是訊息錯誤——對方會以為還趕得上"
+      ],
+      "examples": [
+        {
+          "en": "Have you visited the food festival at the pier?",
+          "cn": "你去過碼頭那個美食節了嗎？",
+          "note": "還在展期內"
+        },
+        {
+          "en": "Did you visit the food festival at the pier?",
+          "cn": "你有去碼頭那個美食節嗎？",
+          "note": "已經撤攤了"
+        }
+      ]
+    },
+    {
+      "h": "先宣布，再交代細節",
+      "bullets": [
+        "開頭那句常用現在完成式，因為它要說的是「到現在為止的結果」",
+        "接著補上時間、地點、數字時，句子自然掉回過去簡單式",
+        "整段都用完成式會讀起來像一串沒有先後的公告"
+      ],
+      "examples": [
+        {
+          "en": "Production has restarted at the Hanoi plant.",
+          "cn": "河內廠已經復工。",
+          "note": "導語：講到現在的狀態"
+        },
+        {
+          "en": "The line stopped for six days after the storm.",
+          "cn": "產線在風災後停了六天。",
+          "note": "細節：講那一段已經結束的時間"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I have finished the audit this morning, and now I am tired.",
+      "good": "I finished the audit this morning, and now I am tired.",
+      "why": "如果你是下午或晚上講這句話，this morning 已經是關上的時段，要用過去簡單式。只有在上午還沒過完的時候，have finished 才成立。判斷依據是「你現在幾點」，不是這個詞看起來像不像現在。"
+    },
+    {
+      "bad": "Our founder has started the company in 1998 and has died last year.",
+      "good": "Our founder started the company in 1998 and died last year.",
+      "why": "in 1998 和 last year 都是關上的時間點，而且創辦人已過世，他的人生這段時間也關上了。兩個理由都指向過去簡單式。"
+    },
+    {
+      "bad": "How many reports did you write this week?",
+      "good": "How many reports have you written this week?",
+      "why": "如果現在還是星期三，這個星期還沒過完，要用現在完成式；用過去式會暗示這一週已經結束。只有在星期日深夜回顧整週時，did you write 才自然。"
+    },
+    {
+      "bad": "The typhoon has hit the east coast on Tuesday night.",
+      "good": "The typhoon hit the east coast on Tuesday night.",
+      "why": "on Tuesday night 指出一個明確的時刻，完成式不接這種時間。若想強調影響還在，可以改成 The typhoon has left thousands without power，把重點放在到現在的結果。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "It is only eleven in the morning, and she ___ four customers already.",
+      "qCn": "現在才早上十一點，她已經見了四位客戶。",
+      "opts": [
+        "saw",
+        "has seen",
+        "sees",
+        "was seeing"
+      ],
+      "ans": 1,
+      "expl": "早上還沒過完，這段時間還開著，用現在完成式 has seen，配 already 更自然。"
+    },
+    {
+      "q": "Our first manager ___ the night shift system in 2009.",
+      "qCn": "我們第一任經理在2009年建立了大夜班制度。",
+      "opts": [
+        "has designed",
+        "designs",
+        "designed",
+        "has been designing"
+      ],
+      "ans": 2,
+      "expl": "in 2009 是關上的年份，只能用過去簡單式 designed。"
+    },
+    {
+      "q": "___ you read this week's safety notice?",
+      "qCn": "這個星期的安全公告你讀了嗎？",
+      "opts": [
+        "Did",
+        "Have",
+        "Do",
+        "Were"
+      ],
+      "ans": 1,
+      "expl": "this week 還沒結束，公告現在還能去讀，所以用 Have you read。"
+    },
+    {
+      "q": "The exhibition closed on Sunday. ___ you go in the end?",
+      "qCn": "展覽星期天結束了。你最後有去嗎？",
+      "opts": [
+        "Have",
+        "Has",
+        "Did",
+        "Do"
+      ],
+      "ans": 2,
+      "expl": "展覽已經結束，機會關上了，要用 Did you go；用 Have you gone 會暗示對方現在還趕得上。"
+    }
+  ]
+},
+{
+  "id": "dg20260922b2",
+  "date": "2026-09-22",
+  "unitNo": 14,
+  "level": "B2",
+  "title": "The Lead and the Detail",
+  "titleCn": "先完成式、後過去式：新聞與工作報告裡的時態分工",
+  "srcDays": [],
+  "summary": "在新聞導語、會議摘要、稽核報告裡，時態被拿來分工：第一句用現在完成式宣布「到現在為止的結果」，後面的句子一換成過去簡單式就開始交代經過——選哪個時態，決定讀者覺得這件事是「還在燒」還是「已經結案」。",
+  "sections": [
+    {
+      "h": "一段正式文字的標準節奏",
+      "table": {
+        "head": [
+          "位置",
+          "時態",
+          "它在做什麼"
+        ],
+        "rows": [
+          [
+            "第一句（導語）",
+            "現在完成式",
+            "宣布結果，把事情拉到讀者眼前"
+          ],
+          [
+            "第二句起（細節）",
+            "過去簡單式",
+            "交代時間、數字、經過"
+          ],
+          [
+            "結尾（展望）",
+            "will / is expected to",
+            "把讀者推向接下來會怎樣"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Regulators have suspended imports of the affected brand.",
+          "cn": "主管機關已暫停該品牌的進口。",
+          "note": "導語：到現在的結果"
+        },
+        {
+          "en": "Inspectors took samples from twelve warehouses in August.",
+          "cn": "稽查人員八月從十二座倉庫取樣。",
+          "note": "細節：關上的時間"
+        },
+        {
+          "en": "A full report is expected before the end of the quarter.",
+          "cn": "完整報告預計在本季結束前出爐。",
+          "note": "展望"
+        }
+      ]
+    },
+    {
+      "h": "完成式讓事情看起來還沒結案",
+      "bullets": [
+        "現在完成式的重點永遠落在「現在」，所以讀者會覺得後續還有發展",
+        "同樣一件事改用過去簡單式，讀起來就像已經蓋章歸檔",
+        "寫給主管的更新報告偏好完成式，寫結案報告偏好過去式"
+      ],
+      "examples": [
+        {
+          "en": "Three suppliers have failed the new moisture test.",
+          "cn": "三家供應商沒有通過新的含水率測試。",
+          "note": "暗示還要處理"
+        },
+        {
+          "en": "Three suppliers failed the new moisture test.",
+          "cn": "三家供應商當時沒有通過新的含水率測試。",
+          "note": "像在陳述一段歷史"
+        }
+      ]
+    },
+    {
+      "h": "刻意選過去簡單式的四種場合",
+      "bullets": [
+        "事後檢討：整件事已經落幕，用過去式才不會讓人以為還在進行",
+        "歷史敘述與人物生平：那段時間已經關上",
+        "法律與稽核紀錄：要把事件釘死在特定日期，完成式反而模糊",
+        "說故事：連續的過去式能製造推進感，完成式會不斷把讀者拉回現在"
+      ],
+      "examples": [
+        {
+          "en": "The line ran without a single stoppage for eleven weeks.",
+          "cn": "產線連續十一週沒有停過一次。",
+          "note": "檢討報告的口吻"
+        },
+        {
+          "en": "She joined the company as a summer intern in 2014.",
+          "cn": "她2014年以暑期實習生的身分進公司。",
+          "note": "生平敘述，時間釘死"
+        }
+      ]
+    },
+    {
+      "h": "美式口語會鬆動這條界線",
+      "bullets": [
+        "美式口語常用過去簡單式取代完成式，尤其配 just、already、yet",
+        "書面與正式場合仍然建議維持完成式，才不會顯得隨便",
+        "聽力裡聽到 Did you eat yet? 不要以為對方講錯，那是常見的美式說法"
+      ],
+      "examples": [
+        {
+          "en": "I already sent it over.",
+          "cn": "我已經傳過去了。",
+          "note": "美式口語，書面會寫 I have already sent it"
+        },
+        {
+          "en": "The committee has already approved the budget.",
+          "cn": "委員會已經核准了預算。",
+          "note": "正式文件維持完成式"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "Our factory has reduced defects by twelve percent in the second quarter.",
+      "good": "Our factory reduced defects by twelve percent in the second quarter.",
+      "why": "in the second quarter 是一個關上的區間，完成式不接這種明確期間。若想強調成效延續到現在，要改寫成 Defects have fallen by twelve percent since April，把時間詞換成 since。"
+    },
+    {
+      "bad": "We have completed the audit. We have found three minor issues and we have closed them all.",
+      "good": "We have completed the audit. We found three minor issues and closed them all.",
+      "why": "第一句用完成式宣布結果是對的，但後面兩個動作是稽核過程中的細節，全部用完成式會讓整段變成沒有先後的清單，讀起來像機器產生的。細節一律退回過去簡單式。"
+    },
+    {
+      "bad": "Sales have dropped since three years.",
+      "good": "Sales have dropped over the past three years.",
+      "why": "since 後面要接起點（since 2023、since the recall），three years 是長度。正式寫作更常用 over the past three years，同時保留完成式的「延續到現在」語感。"
+    },
+    {
+      "bad": "The company was founded in 1998 and has been the market leader until 2015.",
+      "good": "The company was founded in 1998 and was the market leader until 2015.",
+      "why": "until 2015 明確地把那段領先期關上了，完成式的核心是「延續到現在」，兩者互相矛盾。只有在還沒結束時才能寫 has been the market leader since 1998。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Press release opening: Taiwan ___ a record volume of pomelos this season.",
+      "qCn": "新聞稿開頭：台灣本季出口了創紀錄的柚子數量。",
+      "opts": [
+        "exported",
+        "has exported",
+        "was exporting",
+        "had exported"
+      ],
+      "ans": 1,
+      "expl": "導語要宣布「到現在為止的結果」，而且 this season 還沒結束，用現在完成式 has exported 最合適。"
+    },
+    {
+      "q": "Second sentence of the same release: Shipments ___ in early September.",
+      "qCn": "同一篇新聞稿的第二句：出貨在九月初開始。",
+      "opts": [
+        "have begun",
+        "begin",
+        "began",
+        "have been beginning"
+      ],
+      "ans": 2,
+      "expl": "導語之後交代細節，而且 in early September 是關上的時間點，換成過去簡單式 began。"
+    },
+    {
+      "q": "Closing report: The project ___ eight months and finished under budget.",
+      "qCn": "結案報告：這個專案歷時八個月，而且低於預算完成。",
+      "opts": [
+        "has taken",
+        "took",
+        "takes",
+        "has been taking"
+      ],
+      "ans": 1,
+      "expl": "結案報告整件事已經落幕，而且後半句用了過去式 finished，前後要一致，所以用 took。"
+    },
+    {
+      "q": "Which sounds more like an unfinished situation?",
+      "qCn": "哪一句聽起來比較像事情還沒結束？",
+      "opts": [
+        "Two lines stopped on Monday.",
+        "Two lines have stopped.",
+        "Two lines stopped last month.",
+        "Two lines stopped during the audit."
+      ],
+      "optsCn": [
+        "兩條產線星期一停了。",
+        "兩條產線停了。",
+        "兩條產線上個月停了。",
+        "兩條產線在稽核期間停了。"
+      ],
+      "ans": 1,
+      "expl": "只有 have stopped 沒有把事件釘在關上的時間點，重點落在現在的狀態，因此讀起來像還沒處理完。"
+    }
+  ]
+},
 {
   "id": "dg20260918a2",
   "date": "2026-09-18",
