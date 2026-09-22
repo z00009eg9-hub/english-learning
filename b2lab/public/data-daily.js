@@ -192,16 +192,16 @@ articles:[
   "topic": "飲食",
   "words": 122,
   "kind": "orig",
-  "title": "Amy Has Never Made Mooncakes",
-  "titleCn": "Amy從來沒做過月餅",
+  "title": "Anita Has Never Made Mooncakes",
+  "titleCn": "Anita從來沒做過月餅",
   "focus": "現在完成式（has bought / has never made / has already promised）講「到現在為止」，過去簡單式（started / threw / turned）講星期六那天的細節",
   "upFrom": "B1",
   "upTo": "B1+",
-  "intro": "同樣是月餅，這次換Amy自己動手做。請比較兩種時態：講「這輩子做過沒有」用 has never made，講「星期六那天發生什麼」用 started、threw、turned。兩者在同一篇裡交替出現，正是這一課的重點。",
+  "intro": "同樣是月餅，這次換Anita自己動手做。請比較兩種時態：講「這輩子做過沒有」用 has never made，講「星期六那天發生什麼」用 started、threw、turned。兩者在同一篇裡交替出現，正是這一課的重點。",
   "spoken": [
     {
-      "en": "Amy's bought mooncakes forever, but she'd never actually made them.",
-      "cn": "Amy一直都是用買的，但她從來沒真的做過。"
+      "en": "Anita's bought mooncakes forever, but she'd never actually made them.",
+      "cn": "Anita一直都是用買的，但她從來沒真的做過。"
     },
     {
       "en": "Her mum sent over a recipe, so Saturday she gave it a shot.",
@@ -218,8 +218,8 @@ articles:[
   ],
   "paras": [
     {
-      "en": "Amy has bought mooncakes every year, but she has never made them at home. This year her mother sent her a recipe, so she decided to try.",
-      "cn": "Amy每年都買月餅，但她從來沒有在家做過。今年她媽媽傳了一份食譜給她，所以她決定試試看。"
+      "en": "Anita has bought mooncakes every year, but she has never made them at home. This year her mother sent her a recipe, so she decided to try.",
+      "cn": "Anita每年都買月餅，但她從來沒有在家做過。今年她媽媽傳了一份食譜給她，所以她決定試試看。"
     },
     {
       "en": "She started on Saturday morning. The dough was harder than she expected, and her first tray came out too dark. She threw two away and started again.",
@@ -230,8 +230,8 @@ articles:[
       "cn": "到了四點，廚房香得不得了。她第二盤好很多，因為她把火轉小了。紅豆和奶油的香味瀰漫了整間公寓。"
     },
     {
-      "en": "Her mother has kept that photo on her phone since Sunday. Amy has already promised to make another batch next year. She still buys a box from the shop, but now she knows how much work it is.",
-      "cn": "從星期天到現在，她媽媽一直把那張照片留在手機裡。Amy已經答應明年會再做一盤。她還是會去店裡買一盒，但現在她知道這有多費工。"
+      "en": "Her mother has kept that photo on her phone since Sunday. Anita has already promised to make another batch next year. She still buys a box from the shop, but now she knows how much work it is.",
+      "cn": "從星期天到現在，她媽媽一直把那張照片留在手機裡。Anita已經答應明年會再做一盤。她還是會去店裡買一盒，但現在她知道這有多費工。"
     }
   ],
   "target": [
@@ -292,8 +292,8 @@ articles:[
   ],
   "questions": [
     {
-      "q": "What is new for Amy this year?",
-      "qCn": "今年對Amy來說有什麼是新的？",
+      "q": "What is new for Anita this year?",
+      "qCn": "今年對Anita來說有什麼是新的？",
       "opts": [
         "A. She bought mooncakes for the first time",
         "B. She made mooncakes at home for the first time",
@@ -328,8 +328,8 @@ articles:[
       "expl": "Her second tray was much better because she turned the heat down.——because 後面就是原因。"
     },
     {
-      "q": "Amy ___ mooncakes at home before this year.",
-      "qCn": "今年以前Amy從來沒有在家做過月餅。（選出正確的動詞形式）",
+      "q": "Anita ___ mooncakes at home before this year.",
+      "qCn": "今年以前Anita從來沒有在家做過月餅。（選出正確的動詞形式）",
       "opts": [
         "A. never made",
         "B. has never made",

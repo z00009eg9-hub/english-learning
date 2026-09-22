@@ -229,7 +229,7 @@ notes:[
   "series": "本站自製聽力 · 食物與生活主題",
   "topic": "🍞 第一次在家烤月餅",
   "focus": "現在完成式（have never made / has kept）與過去簡單式（burned / turned）在同一段對話裡交替",
-  "intro": "Amy跟同事May聊起週末自己做月餅的經過。請特別注意：講「這輩子做過沒有」時她用 have never made，講「星期六那天發生什麼」時立刻換成過去式。",
+  "intro": "Anita跟同事Mai聊起週末自己做月餅的經過。請特別注意：講「這輩子做過沒有」時她用 have never made，講「星期六那天發生什麼」時立刻換成過去式。",
   "tip": "第一次聽抓「第一盤出了什麼問題」，第二次聽數一數 have／has 出現幾次、各自在講什麼。",
   "pre": [
     {
@@ -277,90 +277,90 @@ notes:[
   ],
   "script": [
     {
-      "sp": "May",
+      "sp": "Mai",
       "en": "You look tired. What did you do at the weekend?",
       "cn": "你看起來很累。週末做了什麼？"
     },
     {
-      "sp": "Amy",
+      "sp": "Anita",
       "en": "I made mooncakes. I have never made them before.",
       "cn": "我做了月餅。我以前從來沒做過。"
     },
     {
-      "sp": "May",
+      "sp": "Mai",
       "en": "Really? Where did you get the recipe?",
       "cn": "真的？食譜哪裡來的？"
     },
     {
-      "sp": "Amy",
+      "sp": "Anita",
       "en": "My mother sent it to me. It looked simple.",
       "cn": "我媽媽傳給我的。看起來很簡單。"
     },
     {
-      "sp": "May",
+      "sp": "Mai",
       "en": "And was it?",
       "cn": "結果呢？"
     },
     {
-      "sp": "Amy",
+      "sp": "Anita",
       "en": "No. The dough was much harder than I expected.",
       "cn": "不簡單。麵團比我想的難處理多了。"
     },
     {
-      "sp": "May",
+      "sp": "Mai",
       "en": "What happened to the first tray?",
       "cn": "第一盤怎麼了？"
     },
     {
-      "sp": "Amy",
+      "sp": "Anita",
       "en": "I burned two of them. The oven was too hot.",
       "cn": "我烤焦了兩個。烤箱太熱了。"
     },
     {
-      "sp": "May",
+      "sp": "Mai",
       "en": "So did you give up?",
       "cn": "所以你放棄了嗎？"
     },
     {
-      "sp": "Amy",
+      "sp": "Anita",
       "en": "No, I turned the heat down and tried again.",
       "cn": "沒有，我把火轉小然後再試一次。"
     },
     {
-      "sp": "May",
+      "sp": "Mai",
       "en": "And the second tray?",
       "cn": "第二盤呢？"
     },
     {
-      "sp": "Amy",
+      "sp": "Anita",
       "en": "Much better. The whole flat smelled wonderful.",
       "cn": "好很多。整間公寓香得不得了。"
     },
     {
-      "sp": "May",
+      "sp": "Mai",
       "en": "Did you tell your mother?",
       "cn": "你跟你媽說了嗎？"
     },
     {
-      "sp": "Amy",
+      "sp": "Anita",
       "en": "I sent her a photo. She has kept it on her phone since Sunday.",
       "cn": "我傳了照片給她。她從星期天到現在都還留在手機裡。"
     },
     {
-      "sp": "May",
+      "sp": "Mai",
       "en": "She must be proud. Will you make them again?",
       "cn": "她一定很驕傲。你還會再做嗎？"
     },
     {
-      "sp": "Amy",
+      "sp": "Anita",
       "en": "I have already promised her another batch next year.",
       "cn": "我已經答應她明年再做一盤了。"
     }
   ],
   "questions": [
     {
-      "q": "What was new for Amy this weekend?",
-      "qCn": "這個週末對Amy來說有什麼是新的？",
+      "q": "What was new for Anita this weekend?",
+      "qCn": "這個週末對Anita來說有什麼是新的？",
       "opts": [
         "A. She bought mooncakes",
         "B. She made mooncakes for the first time",
@@ -413,8 +413,8 @@ notes:[
       "expl": "I turned the heat down and tried again."
     },
     {
-      "q": "Why does Amy use 'has kept' about the photo?",
-      "qCn": "Amy講那張照片時為什麼用 has kept？",
+      "q": "Why does Anita use 'has kept' about the photo?",
+      "qCn": "Anita講那張照片時為什麼用 has kept？",
       "opts": [
         "A. The photo was deleted",
         "B. It is still on her mother's phone now",
