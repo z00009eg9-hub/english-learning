@@ -15,6 +15,857 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週二／五更新） ========== */
 notes:[
 {
+  "id": "dl20260925a2",
+  "date": "2026-09-25",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Twenty Minutes Is Enough",
+  "titleCn": "二十分鐘就夠了",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "📓 每天晚上的二十分鐘",
+  "focus": "Last night / two weeks ago 這類時間詞一出現，動詞就用過去式；講習慣則用現在簡單式",
+  "intro": "Tom和同事Lisa在茶水間聊讀英文的方法。請注意兩種時態的分工：studies、sits 講的是每天的習慣，opened、wrote、bought 後面都跟著已經過去的時間。",
+  "tip": "第一次聽抓三個數字（幾分鐘、幾個單字、唸幾遍），第二次聽專心找 last night 和 ago 後面接的動詞。",
+  "pre": [
+    {
+      "w": "notebook",
+      "ipa": "/ˈnoʊt.bʊk/",
+      "pos": "n.",
+      "cn": "筆記本",
+      "def": "A book of empty pages for writing in."
+    },
+    {
+      "w": "practice",
+      "ipa": "/ˈpræktɪs/",
+      "pos": "n.",
+      "cn": "練習",
+      "def": "Doing something again and again to get better."
+    },
+    {
+      "w": "remember",
+      "ipa": "/rɪˈmem.bɚ/",
+      "pos": "v.",
+      "cn": "記得",
+      "def": "To keep something in your mind and not forget it."
+    },
+    {
+      "w": "page",
+      "ipa": "/peɪdʒ/",
+      "pos": "n.",
+      "cn": "頁",
+      "def": "One side of a sheet of paper in a book."
+    },
+    {
+      "w": "loud",
+      "ipa": "/laʊd/",
+      "pos": "adj.",
+      "cn": "大聲的",
+      "def": "Making a lot of noise."
+    },
+    {
+      "w": "skip",
+      "ipa": "/skɪp/",
+      "pos": "v.",
+      "cn": "略過；不做",
+      "def": "To not do something that you usually do."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "Your English is getting better. How much do you study?",
+      "cn": "你的英文變好了。你都讀多久？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Twenty minutes. Every evening, after dinner.",
+      "cn": "二十分鐘。每天晚上，晚餐之後。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Only twenty? That is not very long.",
+      "cn": "只有二十分鐘？那不長啊。"
+    },
+    {
+      "sp": "Tom",
+      "en": "It is short, but I never skip a day.",
+      "cn": "是很短，但我從來不會漏掉哪一天。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "What did you do last night?",
+      "cn": "你昨天晚上做了什麼？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I opened my notebook at eight and wrote ten new words.",
+      "cn": "我八點打開筆記本，寫了十個新單字。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Ten words on one page?",
+      "cn": "十個字寫在同一頁？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes. Then I read them out loud three times.",
+      "cn": "對。然後我大聲唸了三遍。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Does that really help?",
+      "cn": "那樣真的有用嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Two weeks ago I could not remember any of them.",
+      "cn": "兩個星期前，我一個都記不起來。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "And now?",
+      "cn": "那現在呢？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Now I remember most of them without looking.",
+      "cn": "現在我不用看就記得大部分了。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Maybe I should try that.",
+      "cn": "也許我該試試看。"
+    },
+    {
+      "sp": "Tom",
+      "en": "My notebook is almost full. I will buy a new one on Saturday.",
+      "cn": "我的筆記本快寫滿了。星期六我要去買一本新的。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Buy two. I want one as well.",
+      "cn": "買兩本吧。我也要一本。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How long does Tom study each evening?",
+      "qCn": "Tom每天晚上讀多久？",
+      "opts": [
+        "A. Ten minutes",
+        "B. Twenty minutes",
+        "C. Thirty minutes",
+        "D. One hour"
+      ],
+      "optsCn": [
+        "A. 十分鐘",
+        "B. 二十分鐘",
+        "C. 三十分鐘",
+        "D. 一小時"
+      ],
+      "ans": 1,
+      "expl": "Twenty minutes. Every evening, after dinner."
+    },
+    {
+      "q": "What did Tom do at eight o'clock last night?",
+      "qCn": "Tom昨天晚上八點做了什麼？",
+      "opts": [
+        "A. He bought a new notebook",
+        "B. He opened his notebook and wrote ten words",
+        "C. He read a whole book",
+        "D. He called Lisa"
+      ],
+      "optsCn": [
+        "A. 他買了一本新筆記本",
+        "B. 他打開筆記本，寫了十個單字",
+        "C. 他讀完一整本書",
+        "D. 他打電話給Lisa"
+      ],
+      "ans": 1,
+      "expl": "I opened my notebook at eight and wrote ten new words.——last night 是講明的過去時間，所以用 opened、wrote。"
+    },
+    {
+      "q": "How many times did Tom read the words out loud?",
+      "qCn": "Tom把那些單字大聲唸了幾遍？",
+      "opts": [
+        "A. Once",
+        "B. Twice",
+        "C. Three times",
+        "D. Ten times"
+      ],
+      "optsCn": [
+        "A. 一遍",
+        "B. 兩遍",
+        "C. 三遍",
+        "D. 十遍"
+      ],
+      "ans": 2,
+      "expl": "Then I read them out loud three times.——ten 是單字數，不是次數。"
+    },
+    {
+      "q": "What will Tom do on Saturday?",
+      "qCn": "Tom星期六要做什麼？",
+      "opts": [
+        "A. Buy a new notebook",
+        "B. Study for one hour",
+        "C. Meet Lisa for dinner",
+        "D. Stop studying English"
+      ],
+      "optsCn": [
+        "A. 買一本新的筆記本",
+        "B. 讀一個小時",
+        "C. 跟Lisa吃晚餐",
+        "D. 不再讀英文"
+      ],
+      "ans": 0,
+      "expl": "My notebook is almost full. I will buy a new one on Saturday."
+    }
+  ]
+},
+{
+  "id": "dl20260925b1",
+  "date": "2026-09-25",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "When Did You Start?",
+  "titleCn": "你是什麼時候開始的？",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "🗣️ 學一個語言學了多久",
+  "focus": "When did you...? 問過去那個起點，How long have you...? 問到現在為止的整段",
+  "intro": "Anita和越南同事Mai在午休時聊學語言。這段對話裡兩種問法輪流出現，請注意 When did 後面一定接動詞原形，How long have 後面一定接過去分詞。",
+  "tip": "第一次聽抓兩個數字（幾個月、幾個字），第二次聽專心分辨每個問句是在問「哪一天」還是「多久」。",
+  "pre": [
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person you work with."
+    },
+    {
+      "w": "freeze",
+      "ipa": "/friːz/",
+      "pos": "v.",
+      "cn": "緊張到說不出話",
+      "def": "To suddenly stop and be unable to speak."
+    },
+    {
+      "w": "diary",
+      "ipa": "/ˈdaɪ.ɚ.i/",
+      "pos": "n.",
+      "cn": "日記",
+      "def": "A book where you write what happens each day."
+    },
+    {
+      "w": "habit",
+      "ipa": "/ˈhæbɪt/",
+      "pos": "n.",
+      "cn": "習慣",
+      "def": "Something you do often and almost without thinking."
+    },
+    {
+      "w": "sentence",
+      "ipa": "/ˈsen.təns/",
+      "pos": "n.",
+      "cn": "句子",
+      "def": "A group of words that makes a complete idea."
+    },
+    {
+      "w": "surprise",
+      "ipa": "/sɚˈpraɪz/",
+      "pos": "v.",
+      "cn": "使驚訝",
+      "def": "To make someone feel something they did not expect."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "Your Vietnamese is much better than last year. When did you start?",
+      "cn": "你的越南語比去年好太多了。你是什麼時候開始學的？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Give me a second. I have to count.",
+      "cn": "等我一下，我得算一下。"
+    },
+    {
+      "sp": "Mai",
+      "en": "That is always a good sign.",
+      "cn": "那通常是好現象。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Last November. So I have studied for eleven months.",
+      "cn": "去年十一月。所以我學了十一個月了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Eleven months, and you can already hold a conversation.",
+      "cn": "十一個月，你就能對話了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Only with you. In meetings I still freeze.",
+      "cn": "只有跟你才行。開會的時候我還是會卡住。"
+    },
+    {
+      "sp": "Mai",
+      "en": "How many words do you think you know now?",
+      "cn": "你覺得你現在會多少個字？"
+    },
+    {
+      "sp": "Anita",
+      "en": "About six hundred. Eleven months ago I knew two.",
+      "cn": "大概六百個。十一個月前我只會兩個。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Which two?",
+      "cn": "哪兩個？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Hello and thank you. That was the whole list.",
+      "cn": "你好和謝謝。整張清單就這樣。"
+    },
+    {
+      "sp": "Mai",
+      "en": "The freezing part takes the longest. It is normal.",
+      "cn": "卡住這件事是最花時間才會好的。這很正常。"
+    },
+    {
+      "sp": "Anita",
+      "en": "How long have you spoken English, then?",
+      "cn": "那你說英文多久了？"
+    },
+    {
+      "sp": "Mai",
+      "en": "Since primary school. But I froze in meetings for years.",
+      "cn": "從小學開始。但我也在會議上卡了好多年。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That actually surprises me.",
+      "cn": "這真的讓我滿驚訝的。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Keep a diary. Three sentences a night, nothing more.",
+      "cn": "寫日記吧。一晚三句，不用更多。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I started that habit two weeks ago.",
+      "cn": "這個習慣我兩個星期前就開始了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How long has Anita studied Vietnamese?",
+      "qCn": "Anita學越南語多久了？",
+      "opts": [
+        "A. Two weeks",
+        "B. Eleven months",
+        "C. Two years",
+        "D. Since primary school"
+      ],
+      "optsCn": [
+        "A. 兩個星期",
+        "B. 十一個月",
+        "C. 兩年",
+        "D. 從小學開始"
+      ],
+      "ans": 1,
+      "expl": "Last November. So I have studied for eleven months.——two weeks 是寫日記的習慣，since primary school 是Mai學英文的時間。"
+    },
+    {
+      "q": "What two words did Anita know eleven months ago?",
+      "qCn": "十一個月前Anita只會哪兩個字？",
+      "opts": [
+        "A. Yes and no",
+        "B. Hello and thank you",
+        "C. Please and sorry",
+        "D. Good and bad"
+      ],
+      "optsCn": [
+        "A. 是和不是",
+        "B. 你好和謝謝",
+        "C. 請和抱歉",
+        "D. 好和壞"
+      ],
+      "ans": 1,
+      "expl": "Hello and thank you. That was the whole list."
+    },
+    {
+      "q": "Why is Anita surprised by what Mai says?",
+      "qCn": "Mai說的哪件事讓Anita驚訝？",
+      "opts": [
+        "A. Mai has only studied English for a year",
+        "B. Mai also froze in meetings for years",
+        "C. Mai never writes a diary",
+        "D. Mai knows six hundred Vietnamese words"
+      ],
+      "optsCn": [
+        "A. Mai學英文才一年",
+        "B. Mai也在會議上卡了好多年",
+        "C. Mai從來不寫日記",
+        "D. Mai會六百個越南字"
+      ],
+      "ans": 1,
+      "expl": "Since primary school. But I froze in meetings for years.——Anita以為Mai從小學英文就不會卡住。"
+    },
+    {
+      "q": "What does Mai suggest Anita should do?",
+      "qCn": "Mai建議Anita做什麼？",
+      "opts": [
+        "A. Take a second course",
+        "B. Write three sentences a night",
+        "C. Stop going to meetings",
+        "D. Learn six hundred more words"
+      ],
+      "optsCn": [
+        "A. 再上第二門課",
+        "B. 每天晚上寫三個句子",
+        "C. 不要再去開會",
+        "D. 再學六百個字"
+      ],
+      "ans": 1,
+      "expl": "Keep a diary. Three sentences a night, nothing more."
+    }
+  ]
+},
+{
+  "id": "dl20260925b1p",
+  "date": "2026-09-25",
+  "level": "B1+",
+  "minutes": 3,
+  "kind": "note",
+  "title": "The Hours Nobody Counted",
+  "titleCn": "沒有人算過的時數",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "📰 台灣與馬菲兩國的英語課時數",
+  "focus": "過去完成式（had met、had seen）交代更早發生的事，搭配被動語態（are given、were shared）",
+  "intro": "Tom和同事Lisa在午餐時聊到國教院那份比較報告。請注意兩組結構：被動語態 are given、were shared，以及過去完成式 had met、had seen，後者用來標出「在那之前就已經發生的事」。",
+  "tip": "第一次聽抓三組倍數（課時數、單字量、共通字彙數），第二次聽專心找 had 後面接的動詞。",
+  "pre": [
+    {
+      "w": "report",
+      "ipa": "/rɪˈpɔːrt/",
+      "pos": "n.",
+      "cn": "報告",
+      "def": "A written piece that gives facts about something studied."
+    },
+    {
+      "w": "pupil",
+      "ipa": "/ˈpjuː.pəl/",
+      "pos": "n.",
+      "cn": "學童",
+      "def": "A child who is being taught at school."
+    },
+    {
+      "w": "vocabulary",
+      "ipa": "/voʊˈkæb.jə.ler.i/",
+      "pos": "n.",
+      "cn": "字彙量",
+      "def": "All the words a person knows or a book teaches."
+    },
+    {
+      "w": "curriculum",
+      "ipa": "/kəˈrɪk.jə.ləm/",
+      "pos": "n.",
+      "cn": "課綱",
+      "def": "The set of subjects that a school plans to teach."
+    },
+    {
+      "w": "peer",
+      "ipa": "/pɪr/",
+      "pos": "n.",
+      "cn": "同儕",
+      "def": "Someone of the same age or level as you."
+    },
+    {
+      "w": "gap",
+      "ipa": "/ɡæp/",
+      "pos": "n.",
+      "cn": "差距",
+      "def": "A space or difference between two things."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "Did you see the report from the education academy?",
+      "cn": "你看到國教院那份報告了嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "The one about English hours? My sister sent it to me.",
+      "cn": "英語時數那份嗎？我姐傳給我的。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Children in Malaysia and the Philippines are given far more class time.",
+      "cn": "馬來西亞和菲律賓的學童拿到的課堂時數多很多。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How much more, exactly?",
+      "cn": "到底多多少？"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Between two and a half and five times more.",
+      "cn": "多兩倍半到五倍。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That is not a gap. That is a different subject.",
+      "cn": "那不叫差距，那根本是另一個科目了。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "And both countries start at the age of six.",
+      "cn": "而且兩個國家都從六歲開始。"
+    },
+    {
+      "sp": "Tom",
+      "en": "What about the textbooks?",
+      "cn": "那課本呢？"
+    },
+    {
+      "sp": "Lisa",
+      "en": "By the upper grades their pupils had met far more vocabulary than ours had seen.",
+      "cn": "到高年級的時候，他們的學童接觸過的單字量早就遠多於我們的學生看過的。"
+    },
+    {
+      "sp": "Tom",
+      "en": "So their peers are simply further ahead.",
+      "cn": "所以他們的同儕就是走在前面。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Two and a half to four times the words. Ninety-three key items were shared, though.",
+      "cn": "單字量是兩倍半到四倍。不過有九十三個核心字彙是共通的。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Does the report ask for more lessons?",
+      "cn": "報告有要求增加課堂時數嗎？"
+    },
+    {
+      "sp": "Lisa",
+      "en": "No. It asks for a clearer job for each language.",
+      "cn": "沒有。它要求讓每一種語言有更明確的角色。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That sounds harder than adding hours.",
+      "cn": "那聽起來比加時數難多了。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "It also wants the curriculum lined up with CEFR levels.",
+      "cn": "它也希望課綱能跟CEFR等級對齊。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Honestly, that part makes more sense to me.",
+      "cn": "老實說，那一部分我比較聽得懂。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How much more English class time do the two countries give?",
+      "qCn": "那兩個國家給的英語課時數多多少？",
+      "opts": [
+        "A. Two and a half to four times more",
+        "B. Two and a half to five times more",
+        "C. Exactly ninety-three hours more",
+        "D. Twice as much"
+      ],
+      "optsCn": [
+        "A. 多兩倍半到四倍",
+        "B. 多兩倍半到五倍",
+        "C. 剛好多九十三小時",
+        "D. 兩倍"
+      ],
+      "ans": 1,
+      "expl": "Between two and a half and five times more.——兩倍半到四倍講的是課本單字量，不要混在一起。"
+    },
+    {
+      "q": "What were the ninety-three items?",
+      "qCn": "那九十三個項目是什麼？",
+      "opts": [
+        "A. Schools in the study",
+        "B. Key words shared by the textbooks",
+        "C. Hours taught each year",
+        "D. Questions in the report"
+      ],
+      "optsCn": [
+        "A. 研究裡的學校",
+        "B. 課本共通的核心字彙",
+        "C. 每年教的時數",
+        "D. 報告裡的問題"
+      ],
+      "ans": 1,
+      "expl": "Ninety-three key items were shared, though.——這裡用的是被動語態 were shared。"
+    },
+    {
+      "q": "What does the report actually ask for?",
+      "qCn": "報告真正要求的是什麼？",
+      "opts": [
+        "A. More lessons every week",
+        "B. A clearer job for each language",
+        "C. Starting English at the age of three",
+        "D. Fewer words in the textbooks"
+      ],
+      "optsCn": [
+        "A. 每週增加課堂數",
+        "B. 讓每一種語言有更明確的角色",
+        "C. 從三歲開始學英語",
+        "D. 課本裡少放一些單字"
+      ],
+      "ans": 1,
+      "expl": "No. It asks for a clearer job for each language."
+    },
+    {
+      "q": "At what age do children in both countries start English?",
+      "qCn": "那兩個國家的孩子幾歲開始學英語？",
+      "opts": [
+        "A. Three",
+        "B. Four",
+        "C. Six",
+        "D. Nine"
+      ],
+      "optsCn": [
+        "A. 三歲",
+        "B. 四歲",
+        "C. 六歲",
+        "D. 九歲"
+      ],
+      "ans": 2,
+      "expl": "And both countries start at the age of six."
+    }
+  ]
+},
+{
+  "id": "dl20260925b2",
+  "date": "2026-09-25",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "A Ranking Can Rise While Learning Falls",
+  "titleCn": "排名往上，學習往下",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "📰 PISA 2025 的數字怎麼讀",
+  "focus": "過去完成式（had slipped、had gained、had been）在解釋排名變動時扮演的角色",
+  "intro": "Anita和同事Mai在通勤路上聊PISA結果。這段對話的重點不是分數本身，而是「名次上升、分數下降」這個矛盾要怎麼解釋。請注意每次出現 had 加過去分詞的地方，通常就是在交代更早發生、而且才是真正原因的那件事。",
+  "tip": "第一次聽先抓名次與分數的配對，第二次聽專心找 had 開頭的句子，那些就是解釋。",
+  "pre": [
+    {
+      "w": "resilience",
+      "ipa": "/rɪˈzɪliəns/",
+      "pos": "n.",
+      "cn": "韌性",
+      "def": "The ability to stay strong when things go badly."
+    },
+    {
+      "w": "ranking",
+      "ipa": "/ˈræŋ.kɪŋ/",
+      "pos": "n.",
+      "cn": "排名",
+      "def": "A position on a list that puts things in order."
+    },
+    {
+      "w": "absolute",
+      "ipa": "/ˈæb.sə.luːt/",
+      "pos": "adj.",
+      "cn": "絕對的",
+      "def": "Measured on its own, not against something else."
+    },
+    {
+      "w": "slip",
+      "ipa": "/slɪp/",
+      "pos": "v.",
+      "cn": "滑落",
+      "def": "To move down a little, often without anyone noticing."
+    },
+    {
+      "w": "figure",
+      "ipa": "/ˈfɪɡjɚ/",
+      "pos": "n.",
+      "cn": "數字",
+      "def": "A number that is given as information."
+    },
+    {
+      "w": "pattern",
+      "ipa": "/ˈpæt̬.ɚn/",
+      "pos": "n.",
+      "cn": "走勢",
+      "def": "A way things repeat that you can notice."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "Taiwan came third in reading. That is the best result ever, isn't it?",
+      "cn": "台灣閱讀拿第三。那是史上最好的成績，對吧？"
+    },
+    {
+      "sp": "Anita",
+      "en": "It is. But look at the actual figure before you celebrate.",
+      "cn": "是。不過先看實際的數字再慶祝。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Five hundred and eight. What was it in 2022?",
+      "cn": "五百零八。2022年是多少？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Seven points higher. The score went down, not up.",
+      "cn": "高七分。分數是往下，不是往上。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Then how did the ranking improve?",
+      "cn": "那名次怎麼會進步？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Because everyone else had slipped further by then.",
+      "cn": "因為到那時候其他國家都掉得更多了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So nothing had improved in absolute terms.",
+      "cn": "所以以絕對分數來說根本沒有進步。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Across the OECD group, reading fell by sixteen points on average.",
+      "cn": "在OECD那一組國家裡，閱讀平均掉了十六分。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And the pattern after the pandemic had been the same almost everywhere.",
+      "cn": "而且疫情之後幾乎每個地方的走勢都一樣。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is why the professor used the word resilience.",
+      "cn": "所以那位教授才用了韌性這個詞。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Which is a very careful word.",
+      "cn": "那是個非常小心的用詞。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Look at mathematics. One point lost, one place lost.",
+      "cn": "你看數學。掉一分，掉一個名次。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Because the others had gained ground.",
+      "cn": "因為其他人往前追上來了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Exactly. A ranking can rise while learning falls.",
+      "cn": "沒錯。排名可以往上，學習卻同時往下。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So what should we actually be asking?",
+      "cn": "那我們真正該問的是什麼？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Whether those seven points are a one-off or the start of a line.",
+      "cn": "那七分究竟是一次意外，還是一條趨勢線的開頭。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Taiwan's reading ranking improve?",
+      "qCn": "台灣的閱讀名次為什麼會進步？",
+      "opts": [
+        "A. Its score rose by seven points",
+        "B. Other countries had slipped further",
+        "C. Fewer countries took part",
+        "D. The reading test was shortened"
+      ],
+      "optsCn": [
+        "A. 分數上升了七分",
+        "B. 其他國家掉得更多",
+        "C. 參加的國家變少了",
+        "D. 閱讀測驗變短了"
+      ],
+      "ans": 1,
+      "expl": "Because everyone else had slipped further by then.——用過去完成式 had slipped 交代更早發生、而且才是真正原因的那件事。"
+    },
+    {
+      "q": "What happened to Taiwan's reading score?",
+      "qCn": "台灣的閱讀分數發生了什麼事？",
+      "opts": [
+        "A. It rose by seven points",
+        "B. It fell by seven points",
+        "C. It fell by sixteen points",
+        "D. It stayed the same"
+      ],
+      "optsCn": [
+        "A. 上升七分",
+        "B. 下降七分",
+        "C. 下降十六分",
+        "D. 沒有變化"
+      ],
+      "ans": 1,
+      "expl": "Seven points higher. The score went down, not up.——十六分是OECD那一組的平均跌幅。"
+    },
+    {
+      "q": "Why does Mai call resilience a careful word?",
+      "qCn": "Mai為什麼說韌性是個小心的用詞？",
+      "opts": [
+        "A. Because it means Taiwan clearly improved",
+        "B. Because it claims less than it seems to",
+        "C. Because professors rarely use it",
+        "D. Because it only applies to mathematics"
+      ],
+      "optsCn": [
+        "A. 因為它代表台灣明顯進步了",
+        "B. 因為它主張的比看起來少",
+        "C. 因為教授很少用這個詞",
+        "D. 因為它只適用於數學"
+      ],
+      "ans": 1,
+      "expl": "分數其實下降，只是掉得比別人少，所以只能說「撐住了」而不是「變好了」，這就是 resilience 這個詞小心的地方。"
+    },
+    {
+      "q": "According to Anita, what is the question worth asking?",
+      "qCn": "Anita認為真正值得問的是什麼？",
+      "opts": [
+        "A. Which country came first",
+        "B. Whether the seven points are a one-off or a trend",
+        "C. How many students sat the test",
+        "D. Why mathematics lost a place"
+      ],
+      "optsCn": [
+        "A. 哪個國家拿第一",
+        "B. 那七分是一次意外還是一個趨勢",
+        "C. 有多少學生受測",
+        "D. 數學為什麼掉了一個名次"
+      ],
+      "ans": 1,
+      "expl": "Whether those seven points are a one-off or the start of a line."
+    }
+  ]
+},
+{
   "id": "dl20260922a2",
   "date": "2026-09-22",
   "level": "A2",

@@ -32,6 +32,677 @@
    ⚠ 文字欄位一律寫純文字，不要寫 HTML 標籤（渲染時會被轉義顯示出來）。
    ============================================================ */
 window.GVPLUS = {
+
+/* ---------- 2026-09-25 每日文法（過去完成式與過去時間詞） ---------- */
+"dg20260925a2": {
+  "vis": true,
+  "oneLine": "句子裡一出現 yesterday、last night、ago，動詞就沒有選擇了——只能是過去式。",
+  "map": {
+    "when": "講昨天、上星期、幾年前做過的事，或任何已經講明時間的過去動作",
+    "why": "英文要求動詞自己把「已經過去」標出來，中文只用一個「了」，所以中文母語者常常忘記換形",
+    "form": "時間講明了：動詞過去式　|　沒講時間、只講結果：have / has + 過去分詞"
+  },
+  "visual": {
+    "type": "timeline",
+    "cap": "這條線上左邊三個點都是已經關上的時間，上面配的都是過去式動詞；右邊那一段沒有標時間，一路連到 NOW，才是 have done 的地盤。看一個句子屬於哪一段，動詞就怎麼寫。",
+    "rows": [
+      {
+        "kind": "point",
+        "label": "two weeks ago",
+        "tone": "ink",
+        "at": "兩星期前的某一天",
+        "sub": "He moved to Tainan.",
+        "subCn": "ago 把時間釘死在過去，只能用 moved"
+      },
+      {
+        "kind": "point",
+        "label": "last night",
+        "tone": "ink",
+        "at": "昨天晚上",
+        "sub": "We ate noodles.",
+        "subCn": "昨晚已經結束，只能用 ate"
+      },
+      {
+        "kind": "point",
+        "label": "yesterday",
+        "tone": "ink",
+        "at": "昨天一整天",
+        "sub": "I called my mother.",
+        "subCn": "昨天整天都過完了，只能用 called"
+      },
+      {
+        "kind": "span",
+        "label": "沒有講時間",
+        "tone": "accent",
+        "from": "不知道哪一天",
+        "to": "NOW",
+        "sub": "I have washed all the cups.",
+        "subCn": "不提時間、只講現在的結果，這時才輪到 have done"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "yesterday",
+      "icon": "calendar",
+      "title": "昨天做的事",
+      "titleCn": "yesterday",
+      "ask": "為什麼 yesterday 不能配 have done？",
+      "en": "I paid the electricity bill yesterday.",
+      "cn": "我昨天繳了電費。",
+      "why": "yesterday 指的是一整段已經過完的時間。英文規定只要時間講明了，動詞就得自己標成過去式，所以是 paid 不是 have paid。中文的「我昨天繳了」那個「了」很容易讓人想用完成式，但英文不看「了」，只看時間詞。"
+    },
+    {
+      "key": "clock",
+      "icon": "clock",
+      "title": "幾點發生的",
+      "titleCn": "at + 時刻",
+      "ask": "講出幾點鐘算不算「講明時間」？",
+      "en": "The delivery came at seven this morning.",
+      "cn": "貨是今天早上七點到的。",
+      "why": "算。at seven 就是一個講明的時刻，跟 yesterday 一樣會把動詞鎖成過去式。判斷方法很簡單：只要讀者能指著時間軸說「就是這裡」，動詞就要用過去式。"
+    },
+    {
+      "key": "ago",
+      "icon": "book",
+      "title": "幾年前的事",
+      "titleCn": "ago",
+      "ask": "ago 和 for 有什麼不一樣？",
+      "en": "They closed that branch four years ago.",
+      "cn": "他們四年前把那間分店收掉了。",
+      "why": "ago 是從現在往回數，指到過去的某一個點，所以配過去式。for 量的是一段長度，常常配 have done。兩個字中文都可能翻成「幾年」，但在英文裡指的東西完全不同。"
+    },
+    {
+      "key": "result",
+      "icon": "house",
+      "title": "只想講結果",
+      "titleCn": "不提時間",
+      "ask": "什麼時候才輪到 have done 上場？",
+      "en": "I have lost my umbrella again.",
+      "cn": "我又把傘弄丟了。",
+      "why": "當你完全不想講「什麼時候」，只想說「現在的情況是這樣」，才用 have done。這句的重點是現在沒傘可用，不是哪一天弄丟的。一旦你補上 on Tuesday，整句就得改成 I lost my umbrella on Tuesday。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要在群組裡回報：房租已經處理好了。"
+    },
+    {
+      "label": "先問有沒有講時間",
+      "text": "如果你想寫「上星期五」，那就是講明時間了。"
+    },
+    {
+      "label": "有時間就換過去式",
+      "text": "I transferred the rent last Friday. 動詞用 transferred。"
+    },
+    {
+      "label": "不提時間就換完成式",
+      "text": "如果你只想說「已經處理好了」，寫 I have transferred the rent. 不要加日期。"
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "錯誤版：I have transferred the rent last Friday. 時間和完成式不能同時出現。"
+    }
+  ],
+  "comparison": {
+    "title": "講明時間 vs 不講時間",
+    "left": {
+      "tag": "PAST SIMPLE",
+      "tagCn": "時間講明了",
+      "icon": "pin",
+      "head": "the time is named",
+      "headCn": "句子裡有 yesterday、ago、at seven 這種字",
+      "en": "She sent the form on Monday.",
+      "cn": "她星期一寄出表格。",
+      "pts": [
+        "yesterday / last night / ago / in 2019 / at seven",
+        "讀者能指出是哪一刻",
+        "動詞一律用過去式"
+      ]
+    },
+    "right": {
+      "tag": "PRESENT PERFECT",
+      "tagCn": "不講時間",
+      "icon": "check",
+      "head": "only the result matters",
+      "headCn": "只想說「已經好了」",
+      "en": "She has sent the form.",
+      "cn": "她已經把表格寄出去了。",
+      "pts": [
+        "句子裡沒有明確的過去時間詞",
+        "重點是現在的狀態",
+        "用 have / has 加過去分詞"
+      ]
+    },
+    "note": "判斷口訣：先找時間詞。找得到就用過去式，找不到才考慮 have done。"
+  },
+  "quizMore": [
+    {
+      "q": "My sister ___ her phone in the taxi last Saturday.",
+      "opts": [
+        "has left",
+        "leaves",
+        "left",
+        "is leaving"
+      ],
+      "ans": 2,
+      "expl": "last Saturday 把時間講明了，動詞只能用過去式 left。"
+    },
+    {
+      "q": "Do not worry about dinner. I ___ the rice already.",
+      "opts": [
+        "cooked yesterday",
+        "have cooked",
+        "cook",
+        "was cooking"
+      ],
+      "ans": 1,
+      "expl": "沒有講什麼時候煮的，重點是現在有飯可以吃，用 have cooked。"
+    }
+  ]
+},
+"dg20260925b1": {
+  "vis": true,
+  "oneLine": "先決定你要的答案是「哪一天」還是「多久」——答案的形狀一決定，問句的時態就跟著定了。",
+  "map": {
+    "when": "問別人何時開始做某件事，或問一件事到現在做了多久",
+    "why": "中文兩種問法都用「多久」和「什麼時候」，不必換動詞；英文卻要在過去式和完成式之間選邊站",
+    "form": "要日期：When did you + 原形　|　要長度：How long have you + 過去分詞"
+  },
+  "visual": {
+    "type": "cols",
+    "cap": "左欄問的是過去那一個點，答案是日期；中欄問的是從那個點到現在的整段，答案是長度；右欄是把兩邊零件拼錯的組合，英文不說這種句子。比對三欄就知道問句該怎麼開頭。",
+    "cols": [
+      {
+        "tag": "WHEN DID...?",
+        "tagCn": "要一個日期",
+        "tone": 1,
+        "items": [
+          {
+            "en": "When did you join this team?",
+            "cn": "你什麼時候加入這個團隊的？",
+            "nt": "答案：In March."
+          },
+          {
+            "en": "What time did the delivery arrive?",
+            "cn": "貨是幾點到的？",
+            "nt": "答案：At seven."
+          }
+        ]
+      },
+      {
+        "tag": "HOW LONG HAVE...?",
+        "tagCn": "要一段長度",
+        "tone": 2,
+        "items": [
+          {
+            "en": "How long have you been on this team?",
+            "cn": "你在這個團隊多久了？",
+            "nt": "答案：For eight months."
+          },
+          {
+            "en": "How long have you had that laptop?",
+            "cn": "那台筆電你用多久了？",
+            "nt": "答案：Since I started university."
+          }
+        ]
+      },
+      {
+        "tag": "NOT ENGLISH",
+        "tagCn": "拼錯的組合",
+        "tone": 3,
+        "items": [
+          {
+            "en": "When have you joined this team?",
+            "cn": "（錯）When 不接完成式"
+          },
+          {
+            "en": "How long did you work here?",
+            "cn": "（語意不同）暗示你已經離職了"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "date",
+      "icon": "bubble",
+      "title": "問起點",
+      "titleCn": "要一個日期",
+      "ask": "想知道對方哪一年開始做這行，要怎麼問？",
+      "en": "When did you get into quality work?",
+      "cn": "你是什麼時候進到品管這一行的？",
+      "why": "你要的答案是一個時間點，而那個時間點已經過去了，所以用 When did。對方會回你一個年份或月份。如果你問 When have you got into，英文母語者會聽不懂你到底要日期還是要年資。"
+    },
+    {
+      "key": "length",
+      "icon": "person",
+      "title": "問年資",
+      "titleCn": "要一段長度",
+      "ask": "同一個人，想知道他做了幾年要怎麼問？",
+      "en": "How long have you worked in quality?",
+      "cn": "你在品管做多久了？",
+      "why": "這裡要的是從起點到現在的整段時間，而且他現在還在做，所以用 How long have you worked。對方會回 For six years 或 Since 2020，兩種答案都是長度或起點，不是一個單獨的時刻。"
+    },
+    {
+      "key": "leftjob",
+      "icon": "star",
+      "title": "他已經離職了",
+      "titleCn": "整段都關上",
+      "ask": "如果那份工作已經結束，問法要改嗎？",
+      "en": "How long did you work in quality?",
+      "cn": "你當時在品管做了多久？",
+      "why": "要改。他已經不做了，那段時間整個關上，所以改用 did。同樣是 How long，換一個助動詞就等於告訴對方「我知道你已經離開了」，用錯會讓人以為你搞不清楚狀況。"
+    },
+    {
+      "key": "experience",
+      "icon": "check",
+      "title": "問有沒有經驗",
+      "titleCn": "不問時刻",
+      "ask": "只想知道對方做過沒有，該用哪一種？",
+      "en": "Have you ever run an internal audit?",
+      "cn": "你做過內部稽核嗎？",
+      "why": "這種問題不在乎哪一天，只在乎「有沒有這個經驗」，所以用 Have you ever。要注意 ever 只能配完成式；想問細節再補一句 When did you do it，這時才換回過去式。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "面試時你想了解對方的越南語程度。"
+    },
+    {
+      "label": "先想你要哪一種答案",
+      "text": "要日期就問起點，要年資就問長度，兩件事不要擠在同一句。"
+    },
+    {
+      "label": "問起點用過去式",
+      "text": "When did you start studying Vietnamese? 對方回你一個年份。"
+    },
+    {
+      "label": "問長度用完成式",
+      "text": "How long have you been studying it? 對方回你 For about a year."
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "錯誤版：When have you started studying Vietnamese? 英文沒有這種問法。"
+    }
+  ],
+  "comparison": {
+    "title": "問一個點 vs 問一整段",
+    "left": {
+      "tag": "A POINT",
+      "tagCn": "過去的一個點",
+      "icon": "pin",
+      "head": "when did it begin",
+      "headCn": "問開始的那一刻",
+      "en": "When did she take over the shop?",
+      "cn": "她是什麼時候接下那間店的？",
+      "pts": [
+        "When / What time 開頭",
+        "助動詞用 did，動詞回原形",
+        "答案是日期或時刻"
+      ]
+    },
+    "right": {
+      "tag": "A STRETCH",
+      "tagCn": "到現在的一整段",
+      "icon": "cycle",
+      "head": "how long up to now",
+      "headCn": "問到現在為止多久",
+      "en": "How long has she run the shop?",
+      "cn": "她經營那間店多久了？",
+      "pts": [
+        "How long 開頭",
+        "助動詞用 have / has，動詞用過去分詞",
+        "答案是 for 加長度或 since 加起點"
+      ]
+    },
+    "note": "判斷口訣：想像對方的回答。回答是日期就用 did，回答是「幾年」就用 have。"
+  },
+  "quizMore": [
+    {
+      "q": "___ have they lived next door to you?",
+      "opts": [
+        "When",
+        "What time",
+        "How long",
+        "Since when did"
+      ],
+      "ans": 2,
+      "expl": "後面是 have lived，問的是到現在為止的整段，只能用 How long。"
+    },
+    {
+      "q": "A: How long have you played the violin? B: ___",
+      "opts": [
+        "A. In 2016.",
+        "B. Since I was nine.",
+        "C. Last summer.",
+        "D. At the music school."
+      ],
+      "ans": 1,
+      "expl": "How long have 要的是長度或起點，Since I was nine 正好是起點；In 2016 和 Last summer 是回答 When did 的說法。"
+    }
+  ]
+},
+"dg20260925b1p": {
+  "vis": true,
+  "oneLine": "過去完成式不是「更久以前」，而是「比我正在講的那一刻更早」——先找出主時間點，才知道誰該退一格。",
+  "map": {
+    "when": "故事已經在過去，而其中一件事比另一件更早發生，需要把先後講清楚的時候",
+    "why": "中文靠「已經」「先」這些副詞排順序，英文則是直接把更早的那個動詞換形，不換就等於沒排",
+    "form": "先發生：had + 過去分詞　|　後發生：動詞過去式"
+  },
+  "visual": {
+    "type": "merge",
+    "cap": "兩件都在過去的事，先判斷哪一件更早。更早的那一句換成 had 加過去分詞，晚的那一句留在過去簡單式，中間用 when 或 by the time 接起來，順序就固定住了。",
+    "a": {
+      "n": "更早發生（要退一格）",
+      "en": "The plane left.",
+      "cn": "飛機起飛了。"
+    },
+    "b": {
+      "n": "主時間點（留在過去式）",
+      "en": "I arrived at the gate.",
+      "cn": "我到了登機門。"
+    },
+    "glue": "when",
+    "glueCn": "when 接的是主時間點那一句。也可以換成 by the time，語氣更強調「等到……的時候，事情早就……」。",
+    "out": {
+      "n": "合併後",
+      "parts": [
+        {
+          "t": "The plane",
+          "role": "subj"
+        },
+        {
+          "t": "had left",
+          "role": "verb"
+        },
+        {
+          "t": "when",
+          "role": "glue"
+        },
+        {
+          "t": "I arrived at the gate.",
+          "role": "plain"
+        }
+      ],
+      "cn": "我到登機門的時候，飛機已經起飛了。"
+    }
+  },
+  "scenarios": [
+    {
+      "key": "missed",
+      "icon": "plane",
+      "title": "趕不上",
+      "titleCn": "退一格交代先後",
+      "ask": "為什麼不能兩個動詞都用過去式？",
+      "en": "The gate had closed by the time she cleared security.",
+      "cn": "她過完安檢時，登機門已經關了。",
+      "why": "兩個動詞都用過去式的話，讀者會以為關門和過安檢差不多同時發生，也就看不出她到底有沒有趕上。把更早的那件事退成 had closed，先後就寫死了，不必再多解釋一句。"
+    },
+    {
+      "key": "reason",
+      "icon": "key",
+      "title": "解釋原因",
+      "titleCn": "because 後面退一格",
+      "ask": "為什麼原因子句常常要退一格？",
+      "en": "He could not get in because he had left his card at home.",
+      "cn": "他進不去，因為他把門禁卡留在家裡了。",
+      "why": "原因通常發生在結果之前，所以原因那一句要退一格。主句 could not get in 是主時間點，留在過去簡單式；忘記帶卡比進不去更早，用 had left。這是過去完成式最常出現的位置。"
+    },
+    {
+      "key": "notneeded",
+      "icon": "cross",
+      "title": "不必退格的時候",
+      "titleCn": "照順序講",
+      "ask": "什麼情況其實不用 had done？",
+      "en": "She locked the office and walked to the station.",
+      "cn": "她鎖上辦公室，然後走去車站。",
+      "why": "兩件事本來就照時間順序寫下來，讀者自然知道誰先誰後，不需要退格。過去完成式是用來打破順序的工具；沒有要打破順序還硬用，反而讓讀者找不到主時間點在哪裡。"
+    },
+    {
+      "key": "passive",
+      "icon": "arrow",
+      "title": "被動退一格",
+      "titleCn": "had been + 過去分詞",
+      "ask": "更早那件事不想講是誰做的，怎麼寫？",
+      "en": "The samples had been removed before the inspection started.",
+      "cn": "查核開始前，樣品已經被移走了。",
+      "why": "用 had been 加過去分詞。誰移走的不重要，或是刻意不寫出來，這在報告和新聞裡非常常見。要小心中間那個過去分詞不能漏掉，寫成 had been remove 是最常見的打字錯誤。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要在事故報告裡寫：我們到現場時，水已經退了。"
+    },
+    {
+      "label": "先標出主時間點",
+      "text": "主時間點是「我們到現場」，那一句留在過去簡單式。"
+    },
+    {
+      "label": "把更早的那件事退一格",
+      "text": "水退比我們抵達更早，所以寫 the water had gone down。"
+    },
+    {
+      "label": "接起來",
+      "text": "The water had gone down by the time we reached the site."
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "錯誤版：The water had gone down by the time we had reached the site. 兩邊都退格就沒有基準點了。"
+    }
+  ],
+  "comparison": {
+    "title": "退一格 vs 留在過去式",
+    "left": {
+      "tag": "HAD DONE",
+      "tagCn": "更早的那件事",
+      "icon": "arrow",
+      "head": "before the main moment",
+      "headCn": "比主時間點更早",
+      "en": "They had sold the last ticket.",
+      "cn": "他們已經把最後一張票賣掉了。",
+      "pts": [
+        "常配 already / never / just / by the time",
+        "用來解釋主句為什麼會那樣",
+        "形式是 had 加過去分詞，人稱不變"
+      ]
+    },
+    "right": {
+      "tag": "DID",
+      "tagCn": "主時間點",
+      "icon": "pin",
+      "head": "the moment you are telling",
+      "headCn": "你正在講的那一刻",
+      "en": "We queued for an hour.",
+      "cn": "我們排了一小時的隊。",
+      "pts": [
+        "整段故事的基準點",
+        "一段話裡通常只有這一條主線",
+        "動詞用過去式就好"
+      ]
+    },
+    "note": "判斷口訣：一段話先找出主時間點，只有比它更早的才退一格，其他一律留在過去簡單式。"
+  },
+  "quizMore": [
+    {
+      "q": "The shelves were bare because shoppers ___ everything that morning.",
+      "opts": [
+        "have taken",
+        "had taken",
+        "take",
+        "were taking"
+      ],
+      "ans": 1,
+      "expl": "拿光發生在「架上空了」之前，整段又都在過去，所以退一格用 had taken。"
+    },
+    {
+      "q": "Which sentence does not need the past perfect?",
+      "opts": [
+        "A. He had eaten before the film started.",
+        "B. She stood up and walked out.",
+        "C. The bus had gone when we got there.",
+        "D. They had booked the room before the price rose."
+      ],
+      "ans": 1,
+      "expl": "B的兩個動作照順序發生，讀者自然知道先後，不必退格。"
+    }
+  ]
+},
+"dg20260925b2": {
+  "vis": true,
+  "oneLine": "退一格買到的不是時間，而是語序的自由——你可以先寫結論，再回頭補原因，讀者照樣跟得上。",
+  "map": {
+    "when": "寫報告、新聞、事故說明或任何需要先給結論再補背景的段落",
+    "why": "少了這個時態，你只能照事情發生的順序寫，最重要的那句永遠被塞在最後",
+    "form": "背景（更早）：had + 過去分詞　|　主線：動詞過去式　|　現況：現在式或現在完成式"
+  },
+  "visual": {
+    "type": "shift",
+    "cap": "上排是照順序的寫法，下排是把同一組事實倒過來寫。內容完全沒變，只是把更早的那一句退一格，讀者第一眼看到的東西就從「原因」換成了「結果」。",
+    "rows": [
+      {
+        "a": "Demand fell for months and the plant cut a shift.",
+        "b": "The plant cut a shift; demand had fallen for months.",
+        "nt": "上排適合寫在內文的推演段落，下排適合當公告或新聞的第一句"
+      },
+      {
+        "a": "The valve failed twice and then the line shut down.",
+        "b": "The line shut down; the valve had failed twice that week.",
+        "nt": "退一格之後，讀者先知道最嚴重的後果，再拿到原因"
+      },
+      {
+        "a": "Profits dropped for five quarters, so the board acted.",
+        "b": "The board replaced the chief executive after profits had dropped for five quarters.",
+        "nt": "after 加退格可以把整段背景壓縮成一個子句，主句留給決定本身"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "lead",
+      "icon": "eye",
+      "title": "先給結論",
+      "titleCn": "倒敘開場",
+      "ask": "為什麼新聞第一句幾乎不寫原因？",
+      "en": "The museum raised its ticket price; running costs had climbed for two years.",
+      "cn": "博物館調漲了票價；營運成本已經上升兩年。",
+      "why": "讀者只會看前一兩句就決定要不要讀下去，所以最重要的事實要排在最前面。退一格的 had climbed 讓背景可以安全地放在後面，順序不會被誤讀成「先漲價才漲成本」。"
+    },
+    {
+      "key": "quote",
+      "icon": "money",
+      "title": "轉述別人說的話",
+      "titleCn": "退一格是責任問題",
+      "ask": "轉述時寫 has 和寫 had 差在哪裡？",
+      "en": "The supplier said the shipment had cleared customs on Tuesday.",
+      "cn": "供應商表示那批貨星期二已經通關。",
+      "why": "寫 had 是單純轉述對方說過的話，真假由對方負責；改成 has 就變成作者自己出面保證這件事現在依然成立。在商業信件和報告裡，這一格的差別會直接影響誰要承擔後果。"
+    },
+    {
+      "key": "register",
+      "icon": "balance",
+      "title": "口語會省略",
+      "titleCn": "語域差別",
+      "ask": "為什麼講話時很少聽到 had done？",
+      "en": "In speech people just say the shop shut before I got there.",
+      "cn": "講話的時候大家就直接說店在我到之前就關了。",
+      "why": "說話時有語氣、停頓和即時追問，順序講不清楚可以馬上補。書面讀者沒有這些工具，所以正式文件傾向把順序寫死。這不是對錯問題，而是兩種場合的資訊風險不同。"
+    },
+    {
+      "key": "overuse",
+      "icon": "flag",
+      "title": "用太多會壞掉",
+      "titleCn": "一段一個基準",
+      "ask": "連續幾句都退格會發生什麼事？",
+      "en": "Sales rose in 2023, peaked in 2024, and fell in 2025.",
+      "cn": "業績在2023年上升，2024年達到高峰，2025年下滑。",
+      "why": "這三件事本來就照順序排好，全部退格反而讓讀者找不到主時間點。過去完成式的力量來自對比：一段裡只有少數幾句退格，那幾句才顯得是背景。每句都退，就等於沒有退。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要寫一段稽核說明：產線停了兩天，原因是三月就換過一次供應商。"
+    },
+    {
+      "label": "先決定讀者該先看到什麼",
+      "text": "主管要先知道停線，換供應商是背景。"
+    },
+    {
+      "label": "主線留在過去簡單式",
+      "text": "The line stopped for two days in June. 這是整段的基準點。"
+    },
+    {
+      "label": "背景退一格接上去",
+      "text": "The team had switched suppliers in March. 這一句解釋前一句。"
+    },
+    {
+      "label": "最後拉回現在",
+      "text": "Both suppliers are now on the approved list. 用現在式收尾，讀者知道現況。"
+    }
+  ],
+  "comparison": {
+    "title": "照順序寫 vs 倒敘寫",
+    "left": {
+      "tag": "CHRONOLOGICAL",
+      "tagCn": "照順序",
+      "icon": "cycle",
+      "head": "cause first, result last",
+      "headCn": "先原因、後結果",
+      "en": "Costs climbed and the club raised its fees.",
+      "cn": "成本上升，於是俱樂部調高了會費。",
+      "pts": [
+        "全部用過去簡單式就夠",
+        "適合敘述過程、說故事",
+        "缺點是重點被壓在句尾"
+      ]
+    },
+    "right": {
+      "tag": "INVERTED",
+      "tagCn": "倒敘",
+      "icon": "flag",
+      "head": "result first, cause after",
+      "headCn": "先結果、後原因",
+      "en": "The club raised its fees; costs had climbed all year.",
+      "cn": "俱樂部調高了會費；成本已經漲了一整年。",
+      "pts": [
+        "背景那一句退一格用 had done",
+        "適合公告、新聞、摘要",
+        "讀者第一眼就拿到重點"
+      ]
+    },
+    "note": "判斷口訣：想清楚讀者最該先看到哪一句，把它放前面，其餘更早的事用 had done 收在後面。"
+  },
+  "quizMore": [
+    {
+      "q": "The committee cancelled the trip because two members ___ their passports.",
+      "opts": [
+        "have lost",
+        "had lost",
+        "lose",
+        "were losing"
+      ],
+      "ans": 1,
+      "expl": "遺失護照發生在取消行程之前，整段又在過去，所以退一格用 had lost。"
+    },
+    {
+      "q": "Which opening sentence is written for a news report rather than a diary?",
+      "opts": [
+        "A. It rained all week and then the road gave way.",
+        "B. The road gave way on Sunday; rain had fallen for six days.",
+        "C. First it rained, and after that the road gave way.",
+        "D. The rain came, the road went."
+      ],
+      "ans": 1,
+      "expl": "B把最重要的事實放在最前面，再用退格的 had fallen 補背景，正是新聞的標準開場。"
+    }
+  ]
+},
 "dg20260922a2": {
   "vis": true,
   "oneLine": "have / has + 過去分詞說的是「到現在為止」；只要句子裡冒出 yesterday 這種時間詞，就得整個換回過去式。",

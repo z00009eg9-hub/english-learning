@@ -8,6 +8,798 @@ window.DAILY = {
 
 articles:[
 {
+  "id": "d20260925a2",
+  "date": "2026-09-25",
+  "level": "A2",
+  "topic": "日常作息",
+  "words": 104,
+  "kind": "orig",
+  "title": "Twenty Minutes Before Bed",
+  "titleCn": "睡前的二十分鐘",
+  "focus": "有明確時間（last night、two weeks ago）就用過去簡單式；講每天的習慣用現在簡單式",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom每天晚上只讀二十分鐘英文，但他從不中斷。請注意兩種時態怎麼分工：studies、sits、remembers 講的是每天的習慣，opened、wrote、read 後面都跟著 last night 這種已經過去的時間。",
+  "spoken": [
+    {
+      "en": "Twenty minutes a night, that's it — but he never skips it.",
+      "cn": "一晚二十分鐘，就這樣，但他從來沒斷過。"
+    },
+    {
+      "en": "Last night it was ten new words, read out loud three times.",
+      "cn": "昨天晚上是十個新單字，大聲唸三遍。"
+    },
+    {
+      "en": "Two weeks back he couldn't say any of them. Now? Most of them.",
+      "cn": "兩個星期前他一個都講不出來。現在呢？大部分都會了。"
+    },
+    {
+      "en": "The notebook's nearly full, so there's a new one coming Saturday.",
+      "cn": "筆記本快寫滿了，星期六要去買新的。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom studies English after dinner every evening. He sits at the small desk by the window. He only studies for twenty minutes, but he never skips a day.",
+      "cn": "Tom每天晚餐後都會讀英文。他坐在窗邊那張小書桌前。他只讀二十分鐘，但他從來不會漏掉哪一天。"
+    },
+    {
+      "en": "Last night he opened his notebook at eight o'clock. He wrote ten new words on a clean page. Then he read them out loud three times.",
+      "cn": "昨天晚上他八點打開筆記本。他在一張乾淨的頁面上寫了十個新單字。然後他大聲唸了三遍。"
+    },
+    {
+      "en": "Two weeks ago Tom could not remember any of these words. Now he remembers most of them without looking. Short practice every day really helps him.",
+      "cn": "兩個星期前，Tom這些單字一個都記不起來。現在他不用看就記得大部分了。每天一點點練習真的很有幫助。"
+    },
+    {
+      "en": "Tonight he will learn ten more words about food. His notebook is almost full now. He will buy a new one on Saturday morning.",
+      "cn": "今天晚上他要再學十個跟食物有關的單字。他的筆記本現在快寫滿了。星期六早上他會去買一本新的。"
+    }
+  ],
+  "target": [
+    {
+      "w": "notebook",
+      "ipa": "/ˈnoʊt.bʊk/",
+      "pos": "n.",
+      "cn": "筆記本",
+      "def": "A book of empty pages for writing in.",
+      "ex": "Her notebook fell out of the bag on the train.",
+      "exCn": "她的筆記本在火車上從包包裡掉了出來。"
+    },
+    {
+      "w": "practice",
+      "ipa": "/ˈpræktɪs/",
+      "pos": "n.",
+      "cn": "練習",
+      "def": "Doing something again and again to get better.",
+      "ex": "Ten minutes of piano practice before school is enough for her.",
+      "exCn": "上學前十分鐘的鋼琴時間對她來說就夠了。"
+    },
+    {
+      "w": "remember",
+      "ipa": "/rɪˈmem.bɚ/",
+      "pos": "v.",
+      "cn": "記得",
+      "def": "To keep something in your mind and not forget it.",
+      "ex": "I cannot remember the name of that little restaurant.",
+      "exCn": "我想不起來那間小餐廳的名字。"
+    },
+    {
+      "w": "page",
+      "ipa": "/peɪdʒ/",
+      "pos": "n.",
+      "cn": "頁；一頁",
+      "def": "One side of a sheet of paper in a book.",
+      "ex": "The first page of the contract lists all the prices.",
+      "exCn": "合約的第一頁列出了所有價格。"
+    },
+    {
+      "w": "loud",
+      "ipa": "/laʊd/",
+      "pos": "adj.",
+      "cn": "大聲的",
+      "def": "Making a lot of noise.",
+      "ex": "The music in that café was too loud to talk.",
+      "exCn": "那間咖啡店的音樂太大聲了，沒辦法講話。"
+    },
+    {
+      "w": "skip",
+      "ipa": "/skɪp/",
+      "pos": "v.",
+      "cn": "略過；不做",
+      "def": "To not do something that you usually do.",
+      "ex": "Do not skip breakfast before a long hike.",
+      "exCn": "長途健行前不要不吃早餐。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What time did Tom open his notebook last night?",
+      "qCn": "Tom昨天晚上幾點打開筆記本？",
+      "opts": [
+        "A. At six o'clock",
+        "B. At seven o'clock",
+        "C. At eight o'clock",
+        "D. At nine o'clock"
+      ],
+      "optsCn": [
+        "A. 六點",
+        "B. 七點",
+        "C. 八點",
+        "D. 九點"
+      ],
+      "ans": 2,
+      "expl": "Last night he opened his notebook at eight o'clock.——文章寫得很清楚是八點。"
+    },
+    {
+      "q": "How long does Tom study each evening?",
+      "qCn": "Tom每天晚上讀多久？",
+      "opts": [
+        "A. Ten minutes",
+        "B. Twenty minutes",
+        "C. One hour",
+        "D. Three hours"
+      ],
+      "optsCn": [
+        "A. 十分鐘",
+        "B. 二十分鐘",
+        "C. 一小時",
+        "D. 三小時"
+      ],
+      "ans": 1,
+      "expl": "He only studies for twenty minutes——ten 是他昨晚寫的單字數，three 是他唸的次數，不要看錯。"
+    },
+    {
+      "q": "Last night he ___ ten new words on a clean page.",
+      "qCn": "昨天晚上他在一張乾淨的頁面上寫了十個新單字。（選出正確的動詞形式）",
+      "opts": [
+        "A. writes",
+        "B. wrote",
+        "C. has written",
+        "D. is writing"
+      ],
+      "ans": 1,
+      "expl": "Last night 是已經過完的時間，要用過去簡單式 wrote。現在式 writes 是講每天的習慣，has written 不能跟 last night 這種講明的過去時間一起用。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "He only studies for twenty minutes.",
+      "b2": "He gives English twenty minutes a night, and that is all it takes.",
+      "note": "把 only 這個字拿掉，改用 give + 對象 + 時間 的句型，再用 and that is all it takes 補一句評論。同樣是二十分鐘，後者聽起來是「刻意的安排」而不是「讀得很少」。",
+      "sp": "Twenty minutes a night and he's done — that's the whole system.",
+      "spNote": "and he's done（就收工了）、that's the whole system（整套方法就這樣）是很口語的說法。",
+      "b1Cn": "他只讀二十分鐘。",
+      "b2Cn": "他每晚給英文二十分鐘，而這樣就夠了。",
+      "spCn": "一晚二十分鐘就收工，整套方法就這樣。"
+    },
+    {
+      "b1": "Short practice every day really helps him.",
+      "b2": "A little every day works better for him than one long weekend session.",
+      "note": "原句只說「有幫助」，升級版用 works better ... than ... 做比較，把「跟什麼比」講出來。B1 寫作很常需要這種比較句，資訊量比單純說 helps 多。",
+      "sp": "A bit every day beats cramming the whole lot on Sunday.",
+      "spNote": "beat（勝過）、cram（臨時抱佛腳猛塞）、the whole lot（全部）都是口語常見字。",
+      "b1Cn": "每天一點點練習真的很有幫助。",
+      "b2Cn": "對他來說，每天一點點比週末一次讀很久更有效。",
+      "spCn": "每天讀一點，比星期天一次猛塞好多了。"
+    }
+  ]
+},
+{
+  "id": "d20260925b1",
+  "date": "2026-09-25",
+  "level": "B1",
+  "topic": "學習與心理",
+  "words": 134,
+  "kind": "orig",
+  "title": "Eleven Months of Vietnamese",
+  "titleCn": "學越南語的第十一個月",
+  "focus": "When did you start...? 問的是過去那個起點（過去簡單式）；How long have you...? 問的是到現在為止（現在完成式）",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Anita在河內工作，學越南語快滿一年了。這篇請特別注意兩種問法的分工：When did you start 用過去式，因為「開始」是過去某一刻的事；has studied for eleven months 用現在完成式，因為這件事一路延續到現在還沒結束。",
+  "spoken": [
+    {
+      "en": "Eleven months in, and someone finally asked her when she'd started.",
+      "cn": "學了十一個月，終於有人問她是什麼時候開始的。"
+    },
+    {
+      "en": "She had to stop and count. That's how you know it's been a while.",
+      "cn": "她得停下來算一下。這就知道真的有一段時間了。"
+    },
+    {
+      "en": "Six hundred words in the bag, and she still freezes in meetings.",
+      "cn": "六百個字都學起來了，開會還是會卡住。"
+    },
+    {
+      "en": "Three lines in a diary every night. Short, wrong, but still going.",
+      "cn": "每天晚上日記寫三句。很短、常常寫錯，但還在寫。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita has studied Vietnamese for eleven months now. She started in a small classroom near her office in Hanoi. Her teacher gave the class twenty minutes of speaking practice every week.",
+      "cn": "Anita學越南語已經十一個月了。她是在河內辦公室附近的一間小教室開始學的。她的老師每星期給全班二十分鐘的口說練習時間。"
+    },
+    {
+      "en": "Last Monday her colleague Mai asked her a simple question. \"When did you start?\" Anita had to think for a moment. She answered with a date, and then she felt surprised by her own answer.",
+      "cn": "上星期一，她的同事Mai問了她一個很簡單的問題：「你是什麼時候開始學的？」Anita想了一下才答得出來。她說了一個日期，然後被自己的答案嚇了一跳。"
+    },
+    {
+      "en": "Eleven months ago she could only say hello and thank you. She has learned about six hundred words since then, but she still freezes in meetings. Mai told her that the freezing part takes the longest.",
+      "cn": "十一個月前，她只會說你好和謝謝。從那之後她學了大約六百個字，但開會的時候還是會卡住。Mai跟她說，卡住這件事是最花時間才會好的。"
+    },
+    {
+      "en": "Anita has decided to keep a small diary in Vietnamese. She writes three sentences every night before bed. The sentences are short and often wrong, but the habit has not stopped yet.",
+      "cn": "Anita決定開始用越南語寫一本小日記。她每天晚上睡前寫三個句子。句子都很短，而且常常寫錯，但這個習慣到現在還沒中斷。"
+    }
+  ],
+  "target": [
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person you work with.",
+      "ex": "Two colleagues from the Taipei branch joined the call.",
+      "exCn": "台北分公司有兩位同事加入了這通會議。"
+    },
+    {
+      "w": "freeze",
+      "ipa": "/friːz/",
+      "pos": "v.",
+      "cn": "（緊張到）僵住、說不出話",
+      "def": "To suddenly stop and be unable to speak or move.",
+      "ex": "He froze halfway through the wedding speech.",
+      "exCn": "他在婚禮致詞講到一半突然僵住了。"
+    },
+    {
+      "w": "diary",
+      "ipa": "/ˈdaɪ.ɚ.i/",
+      "pos": "n.",
+      "cn": "日記",
+      "def": "A book where you write what happens each day.",
+      "ex": "My grandmother kept a diary for forty years.",
+      "exCn": "我祖母寫了四十年的日記。"
+    },
+    {
+      "w": "habit",
+      "ipa": "/ˈhæbɪt/",
+      "pos": "n.",
+      "cn": "習慣",
+      "def": "Something you do often and almost without thinking.",
+      "ex": "Checking his phone at red lights became a bad habit.",
+      "exCn": "等紅燈就看手機變成了他的壞習慣。"
+    },
+    {
+      "w": "sentence",
+      "ipa": "/ˈsen.təns/",
+      "pos": "n.",
+      "cn": "句子",
+      "def": "A group of words that makes a complete idea.",
+      "ex": "Try to keep every sentence under fifteen words.",
+      "exCn": "盡量讓每個句子都不超過十五個字。"
+    },
+    {
+      "w": "surprise",
+      "ipa": "/sɚˈpraɪz/",
+      "pos": "v.",
+      "cn": "使驚訝",
+      "def": "To make someone feel something they did not expect.",
+      "ex": "The size of the bill surprised everyone at the table.",
+      "exCn": "帳單的金額讓桌上每個人都很驚訝。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why was Anita surprised by her own answer?",
+      "qCn": "Anita為什麼被自己的答案嚇了一跳？",
+      "opts": [
+        "A. She had forgotten the Vietnamese word for the date",
+        "B. She had not realised how long it had been",
+        "C. Mai gave her the wrong information",
+        "D. Her teacher had told her a different date"
+      ],
+      "optsCn": [
+        "A. 她忘了日期的越南語怎麼說",
+        "B. 她沒發現自己已經學了這麼久",
+        "C. Mai給了她錯的資訊",
+        "D. 她的老師跟她說過另一個日期"
+      ],
+      "ans": 1,
+      "expl": "Anita had to think for a moment. She answered with a date, and then she felt surprised——她得算一下才說得出日期，說出口才發現時間過得這麼久。"
+    },
+    {
+      "q": "What does Mai say about freezing in meetings?",
+      "qCn": "關於開會時卡住這件事，Mai說了什麼？",
+      "opts": [
+        "A. It means you should change teacher",
+        "B. It goes away after six hundred words",
+        "C. It is the part that takes the longest to fix",
+        "D. It never happens to people who write diaries"
+      ],
+      "optsCn": [
+        "A. 那代表你應該換老師",
+        "B. 學滿六百個字就不會了",
+        "C. 那是最花時間才會好的部分",
+        "D. 有寫日記的人不會這樣"
+      ],
+      "ans": 2,
+      "expl": "Mai told her that the freezing part takes the longest.——takes the longest 就是「最花時間」。"
+    },
+    {
+      "q": "\"___ you start?\" Mai asked, and Anita gave her a date.",
+      "qCn": "「你是什麼時候開始的？」Mai問，然後Anita給了她一個日期。（選出正確的問句開頭）",
+      "opts": [
+        "A. How long have",
+        "B. When did",
+        "C. How long did",
+        "D. When have"
+      ],
+      "ans": 1,
+      "expl": "答案是一個日期，問的是過去那個起點，所以用 When did you start。How long have you studied 問的是「到現在多久」，答案會是 eleven months；When have 這種組合英文不說。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "She has learned about six hundred words since then.",
+      "b2": "She has picked up around six hundred words since that first lesson.",
+      "note": "learn 換成 pick up（在生活中自然學會），about 換成 around，再把 since then 講清楚成 since that first lesson。同樣的意思，後者讀起來更像母語者在講自己的學習歷程。",
+      "sp": "She's got maybe six hundred words under her belt now.",
+      "spNote": "have something under your belt（已經學到手、已經拿下）是很常用的口語說法。",
+      "b1Cn": "從那之後她學了大約六百個字。",
+      "b2Cn": "從第一堂課到現在，她大概學會了六百個字。",
+      "spCn": "她現在大概有六百個字是真的學到手了。"
+    },
+    {
+      "b1": "The sentences are short and often wrong, but the habit has not stopped yet.",
+      "b2": "The sentences are short and often wrong; what matters is that she has not missed a night yet.",
+      "note": "用分號接上 what matters is that...（重點在於……）把作者的評價講明白，比 but 更能帶出「哪一件事才重要」。has not missed a night 也比 has not stopped 具體。",
+      "sp": "They're short and full of mistakes, but hey, she hasn't missed a night.",
+      "spNote": "but hey（不過話說回來）用來帶出「這樣也不錯」的語氣，full of mistakes 比 often wrong 口語。",
+      "b1Cn": "句子都很短，而且常常寫錯，但這個習慣到現在還沒中斷。",
+      "b2Cn": "句子很短，也常常寫錯；重點是她到現在一個晚上都沒漏掉。",
+      "spCn": "又短又一堆錯，不過話說回來，她一個晚上都沒漏掉。"
+    }
+  ]
+},
+{
+  "id": "d20260925b1p",
+  "date": "2026-09-25",
+  "level": "B1+",
+  "topic": "新聞·學習與心理",
+  "words": 217,
+  "kind": "news",
+  "title": "The Gap Nobody Had Measured",
+  "titleCn": "沒有人量過的那段差距",
+  "source": "改寫自 台北時報 Taipei Times 報導（2026/09/15）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://www.taipeitimes.com/News/taiwan/archives/2026/09/15/2003864297",
+  "focus": "過去完成式（had only felt / had already met / had seen）交代「更早發生的事」，搭配被動語態（are given / were shared / has been allowed）",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "這則新聞在比較台灣、馬來西亞與菲律賓的英語課時數。請注意兩組結構：一是被動語態 are given、were shared、has been allowed，新聞不想點名誰做的時候就用它；二是過去完成式 had already met、had seen，用來把「更早就發生的事」跟後面的時間點分開。",
+  "spoken": [
+    {
+      "en": "Turns out the feeling was right — the hours really aren't the same.",
+      "cn": "結果那個感覺是對的，時數真的不一樣。"
+    },
+    {
+      "en": "Two and a half to five times more English class. Starting at six.",
+      "cn": "英文課多兩倍半到五倍。六歲就開始。"
+    },
+    {
+      "en": "And the textbooks? Up to four times the vocabulary.",
+      "cn": "那課本呢？單字量最多到四倍。"
+    },
+    {
+      "en": "The fix isn't more hours, apparently. It's giving each language a job.",
+      "cn": "看起來解法不是加時數，而是讓每個語言各有各的位置。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "A report from Taiwan's National Academy for Educational Research has put a number on something many parents had only felt. Children in Malaysia and the Philippines are given between two and a half and five times more English class time than children in Taiwan, and in both countries the lessons begin at the age of six.",
+      "cn": "國家教育研究院的一份報告，替許多家長原本只是「感覺到」的事情給出了數字。馬來西亞和菲律賓的學童拿到的英語課時數，是台灣學童的兩倍半到五倍，而且兩個國家的課程都從六歲開始上。"
+    },
+    {
+      "en": "The gap widens with time. By the time pupils reach the upper grades, researchers found, they had already met far more vocabulary than their peers in Taiwan had seen. Textbooks in the two countries carry two and a half to four times as many words, although ninety-three key items at CEFR A1 and A2 level were shared by all of the sets.",
+      "cn": "這段差距會隨時間拉大。研究人員發現，等到學生升上高年級時，他們接觸過的單字量早就遠多於台灣同齡學生看過的。這兩個國家的課本所收的單字量是台灣的兩倍半到四倍，不過有九十三個CEFR A1與A2等級的核心字彙是所有版本共通的。"
+    },
+    {
+      "en": "Order matters as much as hours. Malaysian schools teach Malay first and then add English and a third language, and English has been allowed as a medium of instruction since preschool. In the Philippines children begin in their home language, move to Tagalog, and study subjects in English from grade four.",
+      "cn": "順序和時數一樣重要。馬來西亞的學校先教馬來語，再加上英語和第三種語言，而且從幼兒園階段起就允許用英語當教學語言。在菲律賓，孩子先用自己的母語學習，接著轉到他加祿語，再從四年級開始用英語上各科。"
+    },
+    {
+      "en": "Li Shih-min, the associate researcher behind the report, did not ask for more test hours. The recommendations were quieter than that: give each language a clear job in the school day, line the curriculum up with CEFR levels, and teach vocabulary with methods that have actually been tested.",
+      "cn": "撰寫這份報告的副研究員李世敏並沒有要求增加考試時數。他的建議比那安靜得多：讓每一種語言在課表裡各有明確的角色、讓課程與CEFR等級對齊，並且用真正經過驗證的方法來教單字。"
+    }
+  ],
+  "target": [
+    {
+      "w": "report",
+      "ipa": "/rɪˈpɔːrt/",
+      "pos": "n.",
+      "cn": "報告",
+      "def": "A written piece that gives facts about something studied.",
+      "ex": "The safety report reached the plant manager on Friday.",
+      "exCn": "那份安全報告星期五送到了廠長手上。"
+    },
+    {
+      "w": "pupil",
+      "ipa": "/ˈpjuː.pəl/",
+      "pos": "n.",
+      "cn": "學童；小學生",
+      "def": "A child who is being taught at school.",
+      "ex": "Each pupil gets a short reading test in October.",
+      "exCn": "每個學童十月都要做一次簡短的閱讀測驗。"
+    },
+    {
+      "w": "vocabulary",
+      "ipa": "/voʊˈkæb.jə.ler.i/",
+      "pos": "n.",
+      "cn": "字彙量；詞彙",
+      "def": "All the words a person knows or a book teaches.",
+      "ex": "She builds her vocabulary by reading one comic a week.",
+      "exCn": "她靠每週讀一本漫畫來累積字彙量。"
+    },
+    {
+      "w": "curriculum",
+      "ipa": "/kəˈrɪk.jə.ləm/",
+      "pos": "n.",
+      "cn": "課程；課綱",
+      "def": "The set of subjects that a school plans to teach.",
+      "ex": "The new curriculum drops two chapters on ancient history.",
+      "exCn": "新課綱刪掉了古代史的兩個章節。"
+    },
+    {
+      "w": "medium",
+      "ipa": "/ˈmiː.di.əm/",
+      "pos": "n.",
+      "cn": "媒介；（教學）語言工具",
+      "def": "The thing you use to carry a message or an idea.",
+      "ex": "Oil paint is still her favourite medium.",
+      "exCn": "油畫顏料仍然是她最喜歡的創作媒材。"
+    },
+    {
+      "w": "peer",
+      "ipa": "/pɪr/",
+      "pos": "n.",
+      "cn": "同儕",
+      "def": "Someone of the same age or level as you.",
+      "ex": "His peers voted him the calmest person on the ward.",
+      "exCn": "他的同儕票選他是病房裡最冷靜的人。"
+    },
+    {
+      "w": "recommendation",
+      "ipa": "/ˌrek.ə.menˈdeɪ.ʃən/",
+      "pos": "n.",
+      "cn": "建議",
+      "def": "An idea you offer about what someone should do.",
+      "ex": "The committee sent one recommendation back for rewriting.",
+      "exCn": "委員會把其中一項建議退回去重寫。"
+    },
+    {
+      "w": "gap",
+      "ipa": "/ɡæp/",
+      "pos": "n.",
+      "cn": "差距；空檔",
+      "def": "A space or difference between two things.",
+      "ex": "There is a two-hour gap between the two flights.",
+      "exCn": "兩班飛機之間有兩個小時的空檔。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How much more English class time do children in Malaysia and the Philippines get?",
+      "qCn": "馬來西亞和菲律賓的學童拿到多少英語課時數？",
+      "opts": [
+        "A. Between two and a half and five times more",
+        "B. Exactly twice as much",
+        "C. Between two and a half and four times more",
+        "D. Ninety-three hours more a year"
+      ],
+      "optsCn": [
+        "A. 多兩倍半到五倍",
+        "B. 剛好兩倍",
+        "C. 多兩倍半到四倍",
+        "D. 一年多九十三小時"
+      ],
+      "ans": 0,
+      "expl": "are given between two and a half and five times more English class time——兩倍半到四倍講的是課本單字量，九十三是共通字彙數，不要混在一起。"
+    },
+    {
+      "q": "What were the ninety-three items mentioned in the article?",
+      "qCn": "文中提到的九十三個項目是什麼？",
+      "opts": [
+        "A. Schools that joined the study",
+        "B. Key A1 and A2 words shared by all the textbook sets",
+        "C. Hours of English taught each year",
+        "D. Questions in the CEFR test"
+      ],
+      "optsCn": [
+        "A. 參加研究的學校",
+        "B. 所有課本版本共通的A1與A2核心字彙",
+        "C. 每年教的英語時數",
+        "D. CEFR測驗裡的題目"
+      ],
+      "ans": 1,
+      "expl": "ninety-three key items at CEFR A1 and A2 level were shared by all of the sets——這裡用被動語態 were shared，重點是「被所有版本共用」，而不是誰挑的。"
+    },
+    {
+      "q": "In the Philippines, when do children start studying subjects in English?",
+      "qCn": "在菲律賓，孩子從什麼時候開始用英語上各科？",
+      "opts": [
+        "A. From preschool",
+        "B. From the age of six",
+        "C. From grade four",
+        "D. Only in high school"
+      ],
+      "optsCn": [
+        "A. 從幼兒園",
+        "B. 從六歲",
+        "C. 從四年級",
+        "D. 只有高中才開始"
+      ],
+      "ans": 2,
+      "expl": "study subjects in English from grade four——幼兒園那個是馬來西亞的做法，六歲是兩國英語課開始的年紀，不是用英語上各科的年紀。"
+    },
+    {
+      "q": "By the time pupils reach the upper grades, they ___ far more vocabulary than their peers in Taiwan.",
+      "qCn": "等到學生升上高年級時，他們接觸過的單字量早已遠多於台灣的同儕。（選出正確的動詞形式）",
+      "opts": [
+        "A. have already met",
+        "B. had already met",
+        "C. already met",
+        "D. were already meeting"
+      ],
+      "ans": 1,
+      "expl": "整段是在講研究人員「當時」發現的事，主要時間點已經在過去；這件事又比那個時間點更早完成，所以要再退一格用過去完成式 had already met。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The gap widens with time.",
+      "b2": "The gap does not stay where it starts; it widens year by year.",
+      "note": "先用 does not stay where it starts 否定掉一個讀者可能有的假設，再用分號接上真正的動作。比單純說 widens 多了一層「你以為的不是這樣」的語氣，新聞和評論很常這樣寫。",
+      "sp": "And it doesn't stay that size either — it just keeps growing.",
+      "spNote": "either（也不）接在否定句後面、it just keeps -ing（就一直……下去）都是口語常見的加強說法。",
+      "b1Cn": "這段差距會隨時間拉大。",
+      "b2Cn": "這段差距不會停在起點，而是一年一年拉大。",
+      "spCn": "而且它也不會停在那個大小，就一直長下去。"
+    },
+    {
+      "b1": "Li Shih-min did not ask for more test hours.",
+      "b2": "Rather than calling for more test hours, Li Shih-min pointed somewhere else entirely.",
+      "note": "用 Rather than + V-ing 把「不是做A」提到句首，後半再講「而是做B」。這種對比句型在B2寫作裡很吃香，因為它一句話就交代了立場，不必寫成兩句。",
+      "sp": "He wasn't asking for more exams — he was pointing at something else.",
+      "spNote": "wasn't asking for（不是在要求）配上破折號再補一句，是口語裡很自然的「澄清」節奏。",
+      "b1Cn": "李世敏並沒有要求增加考試時數。",
+      "b2Cn": "李世敏沒有呼籲增加考試時數，而是把矛頭指向完全不同的地方。",
+      "spCn": "他不是在要求多考試，他指的是別的東西。"
+    }
+  ]
+},
+{
+  "id": "d20260925b2",
+  "date": "2026-09-25",
+  "level": "B2",
+  "topic": "新聞·學習與心理",
+  "words": 255,
+  "kind": "news",
+  "title": "Third Place, Seven Points Lower",
+  "titleCn": "排名升到第三，分數卻掉了七分",
+  "source": "改寫自 中央社 Focus Taiwan 報導（2026/09/08）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/culture/202609080028",
+  "focus": "過去完成式在報導裡的兩種工作：交代「更早的背景」（had never measured、had been the same）與解釋「排名為何變動」（had slipped、had gained）",
+  "intro": "PISA 2025結果出爐，台灣閱讀拿到歷來最好的第三名，分數卻比2022年低。這篇請注意過去完成式怎麼被用來解釋這個矛盾：主要時間軸是2025年的結果（過去簡單式），而 had improved、had slipped、had gained 這些句子交代的是「在那之前已經發生的事」，正是排名上升的真正原因。",
+  "spoken": [
+    {
+      "en": "Third in reading — best ever. And the score actually went down.",
+      "cn": "閱讀第三名，史上最好。然後分數其實是掉的。"
+    },
+    {
+      "en": "Everyone else just dropped harder, that's the whole story.",
+      "cn": "就是別人掉得更兇而已，故事就這樣。"
+    },
+    {
+      "en": "Maths lost one point and still slid from third to fourth.",
+      "cn": "數學只掉一分，名次還是從第三滑到第四。"
+    },
+    {
+      "en": "So \"resilience\" is doing a lot of quiet work in that sentence.",
+      "cn": "所以「韌性」這個詞在那句話裡承擔了不少沒說出口的東西。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Taiwan's fifteen-year-olds came fourth in the world in science in the 2025 round of PISA, with an average of 540 points. They were fourth in mathematics on 546 and fifth in computational problem solving on 551, a subject the survey had never measured before. The headline, though, belonged to reading: third place, the island's best result so far.",
+      "cn": "在2025年這一輪PISA測驗中，台灣十五歲學生的科學排名世界第四，平均540分。數學546分排第四，運算思維解題551分排第五，而後者是這項調查以前從未測過的科目。不過真正的頭條是閱讀：第三名，台灣歷來最好的成績。"
+    },
+    {
+      "en": "The reading figure rewards a second look. Taiwan's score actually fell by seven points from 2022, down to 508, and yet the country climbed from fifth to third. Nothing had improved in absolute terms; the rest of the field had simply slipped further. Across the twenty-three OECD countries that sat both rounds, average reading scores dropped sixteen points, with mathematics down eleven and science down five.",
+      "cn": "閱讀這個數字值得再看第二眼。台灣的分數其實比2022年掉了七分，降到508分，但名次卻從第五升到第三。以絕對分數來說沒有任何進步，只是其他國家掉得更多。在兩輪都參加的二十三個OECD國家裡，閱讀平均掉了十六分，數學掉十一分，科學掉五分。"
+    },
+    {
+      "en": "That is the context in which Tsai Chin-chung, a chair professor involved in the study, described the system as showing greater resilience than most. More than 760,000 students from ninety-one countries and economies took part, and almost everywhere the pattern after the pandemic years had been the same: scores sliding, and sliding fastest in reading.",
+      "cn": "這就是講座教授蔡今中說台灣教育體系「比多數國家更有韌性」時的背景。這次有超過七十六萬名學生、來自九十一個國家與經濟體參加，而疫情年之後幾乎每個地方的走勢都一樣：分數往下滑，而且閱讀滑得最快。"
+    },
+    {
+      "en": "Resilience, however, is a modest word, and it is worth reading it as such. Taiwan's mathematics score slipped a single point and the country still lost a place, from third to fourth, because others had gained ground. A ranking can rise while learning falls. The more useful question for students and teachers is not where the island finished, but whether those seven reading points turn out to be a one-off or the start of a line.",
+      "cn": "不過「韌性」是一個很含蓄的字，也應該照這樣讀。台灣數學只掉了一分，名次還是從第三掉到第四，因為別人往前追上來了。排名可以往上，學習卻同時往下。對學生和老師來說，更有用的問題不是台灣最後排第幾，而是閱讀掉的那七分究竟只是一次意外，還是一條線的開頭。"
+    }
+  ],
+  "target": [
+    {
+      "w": "resilience",
+      "ipa": "/rɪˈzɪliəns/",
+      "pos": "n.",
+      "cn": "韌性；回復力",
+      "def": "The ability to stay strong when things go badly.",
+      "ex": "The old bridge showed surprising resilience during the quake.",
+      "exCn": "那座舊橋在地震中展現了出人意料的韌性。"
+    },
+    {
+      "w": "absolute",
+      "ipa": "/ˈæb.sə.luːt/",
+      "pos": "adj.",
+      "cn": "絕對的（不與他者相比的）",
+      "def": "Measured on its own, not against something else.",
+      "ex": "In absolute numbers the city lost fewer jobs than expected.",
+      "exCn": "以絕對數字來看，這座城市流失的工作機會比預期少。"
+    },
+    {
+      "w": "modest",
+      "ipa": "/ˈmɑːdɪst/",
+      "pos": "adj.",
+      "cn": "含蓄的；不誇大的",
+      "def": "Not large, and not claiming very much.",
+      "ex": "He gave a modest answer and changed the subject.",
+      "exCn": "他給了一個很含蓄的答案，然後就轉移了話題。"
+    },
+    {
+      "w": "slip",
+      "ipa": "/slɪp/",
+      "pos": "v.",
+      "cn": "（數字、名次）滑落",
+      "def": "To move down a little, often without anyone noticing.",
+      "ex": "Prices slipped again on Tuesday after the announcement.",
+      "exCn": "消息公布後，價格在星期二又往下滑了一些。"
+    },
+    {
+      "w": "ranking",
+      "ipa": "/ˈræŋ.kɪŋ/",
+      "pos": "n.",
+      "cn": "排名",
+      "def": "A position on a list that puts things in order.",
+      "ex": "The hotel lost its five-star ranking last winter.",
+      "exCn": "那間飯店去年冬天丟掉了五星級的評等。"
+    },
+    {
+      "w": "context",
+      "ipa": "/ˈkɑntekst/",
+      "pos": "n.",
+      "cn": "脈絡；背景",
+      "def": "The situation around something that helps explain it.",
+      "ex": "Without context that sentence sounds much ruder than it is.",
+      "exCn": "沒有前後脈絡的話，那句話聽起來會比實際上無禮很多。"
+    },
+    {
+      "w": "pattern",
+      "ipa": "/ˈpæt̬.ɚn/",
+      "pos": "n.",
+      "cn": "模式；走勢",
+      "def": "A way things repeat that you can notice.",
+      "ex": "The same pattern shows up in every weekend shift.",
+      "exCn": "每個週末班都會出現同樣的模式。"
+    },
+    {
+      "w": "figure",
+      "ipa": "/ˈfɪɡjɚ/",
+      "pos": "n.",
+      "cn": "數字；數據",
+      "def": "A number that is given as information.",
+      "ex": "Check the figure in the third column before you sign.",
+      "exCn": "簽名前先核對第三欄的那個數字。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Taiwan's reading ranking rise while its reading score fell?",
+      "qCn": "為什麼台灣閱讀的名次上升，分數卻下降？",
+      "opts": [
+        "A. More countries joined the 2025 round",
+        "B. Other countries' scores fell by more",
+        "C. The test was made easier in 2025",
+        "D. Reading was scored on a new scale"
+      ],
+      "optsCn": [
+        "A. 2025那一輪有更多國家參加",
+        "B. 其他國家的分數掉得更多",
+        "C. 2025年的測驗變簡單了",
+        "D. 閱讀改用新的計分方式"
+      ],
+      "ans": 1,
+      "expl": "Nothing had improved in absolute terms; the rest of the field had simply slipped further.——用過去完成式 had slipped 交代「在那之前就已經發生的事」，那才是名次上升的原因。"
+    },
+    {
+      "q": "Which subject had never been measured in PISA before 2025?",
+      "qCn": "哪一個科目是2025年以前PISA從未測過的？",
+      "opts": [
+        "A. Science",
+        "B. Reading",
+        "C. Mathematics",
+        "D. Computational problem solving"
+      ],
+      "optsCn": [
+        "A. 科學",
+        "B. 閱讀",
+        "C. 數學",
+        "D. 運算思維解題"
+      ],
+      "ans": 3,
+      "expl": "fifth in computational problem solving on 551, a subject the survey had never measured before——had never measured 把「在2025之前」這一段時間標了出來。"
+    },
+    {
+      "q": "What happened to Taiwan's position in mathematics?",
+      "qCn": "台灣在數學的名次發生了什麼事？",
+      "opts": [
+        "A. It rose from fourth to third",
+        "B. It stayed at third",
+        "C. It fell from third to fourth",
+        "D. It fell from third to fifth"
+      ],
+      "optsCn": [
+        "A. 從第四升到第三",
+        "B. 維持第三",
+        "C. 從第三掉到第四",
+        "D. 從第三掉到第五"
+      ],
+      "ans": 2,
+      "expl": "Taiwan's mathematics score slipped a single point and the country still lost a place, from third to fourth——只掉一分卻掉一個名次，because others had gained ground。"
+    },
+    {
+      "q": "What does the writer suggest readers should ask instead of asking about the ranking?",
+      "qCn": "作者認為，比起問名次，讀者更該問什麼？",
+      "opts": [
+        "A. Whether Taiwan should leave the PISA survey",
+        "B. Whether the seven lost reading points are a one-off or a trend",
+        "C. How many students took the test in each country",
+        "D. Why computational problem solving was added"
+      ],
+      "optsCn": [
+        "A. 台灣該不該退出PISA調查",
+        "B. 閱讀掉的那七分是一次意外還是一個趨勢",
+        "C. 每個國家有多少學生受測",
+        "D. 為什麼要加考運算思維解題"
+      ],
+      "ans": 1,
+      "expl": "whether those seven reading points turn out to be a one-off or the start of a line——a one-off 是「只此一次」，the start of a line 是「一條趨勢線的開頭」。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Taiwan's score fell by seven points, but the ranking went up.",
+      "b2": "Taiwan's score fell by seven points and the ranking still went up, which tells you more about the field than about Taiwan.",
+      "note": "把 but 換成 and ... still，再用 which 子句加一句解讀。這種「事實＋作者判斷」的結構是新聞評論的標準寫法，比單純並列兩個事實更有分析感。",
+      "sp": "The score dropped and the ranking went up anyway — that says more about everyone else.",
+      "spNote": "anyway（還是照樣）、that says more about...（那更能說明……）都是口語裡很自然的評論方式。",
+      "b1Cn": "台灣的分數掉了七分，但名次上升了。",
+      "b2Cn": "台灣的分數掉了七分，名次卻還是上升，而這件事說明的是整個場上的狀況，不是台灣的狀況。",
+      "spCn": "分數掉了名次還往上，那更能說明其他人的狀況。"
+    },
+    {
+      "b1": "Resilience is a modest word.",
+      "b2": "Resilience is a deliberately modest word, and it repays being read as one.",
+      "note": "加上 deliberately（刻意地）指出用字是經過選擇的，再用 repays being read as one（值得照它字面的分量去讀）把作者的提醒說完整。B2寫作常需要這種「談別人怎麼用字」的句子。",
+      "sp": "\"Resilience\" is a careful word, and it's chosen on purpose.",
+      "spNote": "a careful word（小心挑過的字）、on purpose（刻意的）是口語裡談用字的說法。",
+      "b1Cn": "韌性是一個含蓄的字。",
+      "b2Cn": "韌性是一個刻意含蓄的字，而且值得照它字面的分量去讀。",
+      "spCn": "「韌性」是個小心挑過的字，而且是刻意挑的。"
+    }
+  ]
+},
+{
   "id": "d20260922a2",
   "date": "2026-09-22",
   "level": "A2",
@@ -7581,6 +8373,813 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260925a2",
+  "date": "2026-09-25",
+  "unitNo": 14,
+  "level": "A2",
+  "title": "Finished Time Needs the Past Simple",
+  "titleCn": "說到昨天，動詞就要變過去式",
+  "srcDays": [],
+  "summary": "句子裡只要出現 yesterday、last night、two weeks ago、in 2019 這種已經過完的時間，動詞就一定用過去式，不可以用 have done。",
+  "sections": [
+    {
+      "h": "三種最常見的過去時間詞",
+      "body": "這三種字一出現，動詞就沒有選擇。看到它們，先把動詞改成過去式，再看句子其他地方。",
+      "table": {
+        "head": [
+          "時間詞",
+          "例句",
+          "為什麼"
+        ],
+        "rows": [
+          [
+            "yesterday",
+            "I called my mother yesterday.",
+            "昨天一整天都過完了"
+          ],
+          [
+            "last night",
+            "We ate noodles last night.",
+            "昨天晚上已經結束"
+          ],
+          [
+            "ago",
+            "He moved to Tainan two weeks ago.",
+            "ago 一定指過去的某一刻"
+          ],
+          [
+            "in + 年份",
+            "They opened the second shop in 2019.",
+            "年份是關上的時間"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "She bought the tickets last Friday.",
+          "cn": "她上星期五買了票。",
+          "note": "last Friday 已經過完，用 bought"
+        },
+        {
+          "en": "I saw that film three days ago.",
+          "cn": "我三天前看了那部電影。",
+          "note": "ago 永遠配過去式"
+        },
+        {
+          "en": "My brother started work in May.",
+          "cn": "我哥哥五月開始上班。",
+          "note": "in May 指的是已經過去的那個月"
+        }
+      ]
+    },
+    {
+      "h": "沒有講時間的時候，才輪到 have done",
+      "bullets": [
+        "有講明時間（yesterday、last night、ago、in 2019）就一定用過去式",
+        "沒講明時間、只想說「這件事做完了」，才可以用 have done",
+        "順序是先看有沒有時間詞，再決定動詞，不要反過來"
+      ],
+      "examples": [
+        {
+          "en": "I have washed all the cups.",
+          "cn": "杯子我都洗好了。",
+          "note": "沒說什麼時候洗，重點是現在杯子乾淨了"
+        },
+        {
+          "en": "I washed all the cups after lunch.",
+          "cn": "我午餐後把杯子都洗好了。",
+          "note": "加了 after lunch，就得換成過去式"
+        }
+      ]
+    },
+    {
+      "h": "中文看不出差別，所以最容易錯",
+      "bullets": [
+        "中文的「我昨天吃了」和「我吃過了」都用一個「了」，英文卻是兩種句子",
+        "英文這條規則很機械：時間講明了就換過去式，沒有例外",
+        "寫完一句先掃一眼有沒有時間詞，有就回頭把動詞改掉"
+      ],
+      "examples": [
+        {
+          "en": "Tom finished his homework at nine.",
+          "cn": "Tom九點寫完功課。",
+          "note": "at nine 也是講明的時間點"
+        },
+        {
+          "en": "Tom has finished his homework.",
+          "cn": "Tom功課寫完了。",
+          "note": "不提時間，只說現在可以出去玩了"
+        }
+      ]
+    },
+    {
+      "h": "動詞怎麼變成過去式",
+      "table": {
+        "head": [
+          "原形",
+          "過去式",
+          "要注意的地方"
+        ],
+        "rows": [
+          [
+            "study",
+            "studied",
+            "子音加 y 要改成 ied"
+          ],
+          [
+            "stop",
+            "stopped",
+            "短母音加單子音要雙寫"
+          ],
+          [
+            "write",
+            "wrote",
+            "不規則，只能背"
+          ],
+          [
+            "read",
+            "read",
+            "拼法一樣，但發音變成 /red/"
+          ]
+        ]
+      }
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I have opened my notebook last night.",
+      "good": "I opened my notebook last night.",
+      "why": "last night 是講明的過去時間，英文規定這種時候不可以用 have done。中文說「我昨晚打開了筆記本」，那個「了」會讓人想用完成式，但英文只看時間詞。"
+    },
+    {
+      "bad": "She has moved to Hanoi two years ago.",
+      "good": "She moved to Hanoi two years ago.",
+      "why": "只要句子裡有 ago，動詞一定是過去式。ago 的意思就是「從現在往回算幾年」，它本身已經把時間釘死在過去了。"
+    },
+    {
+      "bad": "He buy a new bike last month.",
+      "good": "He bought a new bike last month.",
+      "why": "這是另一種錯法：時態選對了，但動詞忘記變形。中文動詞不會變，所以中文母語者很容易漏掉這一步，寫完要回頭檢查每個動詞。"
+    },
+    {
+      "bad": "Did you ate breakfast today?",
+      "good": "Did you eat breakfast today?",
+      "why": "已經用了 Did，後面的動詞就要回到原形。過去式只能出現一次，不可以 Did 和 ate 同時用。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Last night I ___ ten new words in my notebook.",
+      "qCn": "昨天晚上我在筆記本裡寫了十個新單字。",
+      "opts": [
+        "write",
+        "wrote",
+        "have written",
+        "am writing"
+      ],
+      "ans": 1,
+      "expl": "Last night 是已經過完的時間，要用過去式 wrote。have written 不能跟講明的過去時間一起用。"
+    },
+    {
+      "q": "She ___ to Kaohsiung three days ago.",
+      "qCn": "她三天前去了高雄。",
+      "opts": [
+        "has gone",
+        "goes",
+        "went",
+        "is going"
+      ],
+      "ans": 2,
+      "expl": "有 ago 就一定用過去式 went。"
+    },
+    {
+      "q": "___ you finish the report yesterday?",
+      "qCn": "那份報告你昨天做完了嗎？",
+      "opts": [
+        "Have",
+        "Did",
+        "Do",
+        "Are"
+      ],
+      "ans": 1,
+      "expl": "yesterday 把時間講明了，問句要用 Did you finish。用 Have you finished 就不能加 yesterday。"
+    },
+    {
+      "q": "I cannot find my keys. I ___ them.",
+      "qCn": "我找不到鑰匙。我把鑰匙弄丟了。",
+      "opts": [
+        "lost yesterday",
+        "have lost",
+        "am losing",
+        "was lose"
+      ],
+      "ans": 1,
+      "expl": "這裡沒有講什麼時候弄丟的，重點是「現在找不到」，所以用 have lost。"
+    }
+  ]
+},
+{
+  "id": "dg20260925b1",
+  "date": "2026-09-25",
+  "unitNo": 14,
+  "level": "B1",
+  "title": "When Did You...? and How Long Have You...?",
+  "titleCn": "When 問過去那一刻，How long 問到現在為止",
+  "srcDays": [],
+  "summary": "同一件事可以用兩種問法：When did you start 問的是過去那個起點，答案是一個日期；How long have you studied 問的是從那一刻到現在的整段，答案是一段長度。",
+  "sections": [
+    {
+      "h": "兩種問法，兩種答案",
+      "body": "決定用哪一種，先想你要的答案是「哪一天」還是「多久」。答案的形狀不一樣，問句的時態就不一樣。",
+      "table": {
+        "head": [
+          "你想知道的",
+          "問句",
+          "對方會怎麼答"
+        ],
+        "rows": [
+          [
+            "哪一天開始的",
+            "When did you join this team?",
+            "In March. / Last year."
+          ],
+          [
+            "到現在多久了",
+            "How long have you been on this team?",
+            "For eight months."
+          ],
+          [
+            "哪一天買的",
+            "When did you get that laptop?",
+            "Two summers ago."
+          ],
+          [
+            "用多久了",
+            "How long have you had that laptop?",
+            "Since I started university."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "When did you meet your business partner?",
+          "cn": "你什麼時候認識你的合夥人的？",
+          "note": "meet 是過去某一刻發生的，用過去式"
+        },
+        {
+          "en": "How long have you known your business partner?",
+          "cn": "你認識你的合夥人多久了？",
+          "note": "know 是一路延續到現在的狀態，用完成式"
+        }
+      ]
+    },
+    {
+      "h": "When 和 What time 永遠配過去式",
+      "bullets": [
+        "問 When...? 或 What time...? 就是在指一個已經過去的時刻，所以動詞一定是過去式",
+        "英文沒有 When have you...? 這種問法，這是中文母語者最常自創的句型之一",
+        "想用完成式提問的話，要換成 How long have you...? 或 Have you ever...?"
+      ],
+      "examples": [
+        {
+          "en": "What time did the delivery arrive this morning?",
+          "cn": "今天早上貨是幾點到的？",
+          "note": "問一個時刻，用 did"
+        },
+        {
+          "en": "Have you ever driven a truck that size?",
+          "cn": "你開過那麼大的卡車嗎？",
+          "note": "問經驗、不問時刻，才用完成式"
+        }
+      ]
+    },
+    {
+      "h": "for 和 since 都接在完成式後面",
+      "bullets": [
+        "for 接一段長度：for three weeks、for ten years、for a while",
+        "since 接一個起點：since April、since I moved here、since that meeting",
+        "兩個都是回答 How long 的說法，配的都是 have done，不能配過去式"
+      ],
+      "examples": [
+        {
+          "en": "They have rented the same flat for six years.",
+          "cn": "他們租同一間公寓租了六年。",
+          "note": "for 加長度"
+        },
+        {
+          "en": "He has worked nights since the factory expanded.",
+          "cn": "自從工廠擴廠以後他就上大夜班。",
+          "note": "since 加起點"
+        }
+      ]
+    },
+    {
+      "h": "一問一答常常兩種時態都會出現",
+      "body": "真實對話裡很常先用完成式開場，再用過去式補細節。這不是矛盾，而是一段話裡兩個不同的焦點。",
+      "examples": [
+        {
+          "en": "I have taught here for nine years, and I started in the old building.",
+          "cn": "我在這裡教了九年，一開始是在舊大樓那邊。",
+          "note": "前半講到現在的整段，後半講那個起點"
+        },
+        {
+          "en": "She has lived abroad twice, and the second time lasted four years.",
+          "cn": "她在國外住過兩次，第二次住了四年。",
+          "note": "先講經驗總數，再講其中一次的細節"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "When have you started learning Vietnamese?",
+      "good": "When did you start learning Vietnamese?",
+      "why": "When 問的是一個已經過去的時刻，英文不接完成式。如果你真正想問的是「學多久了」，那要整句換成 How long have you been learning Vietnamese?，而不是把 did 換成 have。"
+    },
+    {
+      "bad": "How long do you work in this company?",
+      "good": "How long have you worked in this company?",
+      "why": "現在簡單式問的是習慣（例如一天工作幾小時），不是累積的年資。要問「到現在做多久了」一定用 have worked。"
+    },
+    {
+      "bad": "I have started this job since March.",
+      "good": "I have had this job since March.",
+      "why": "start 是一瞬間完成的動作，不能用 since 去量它的長度。since 後面要配一個能延續的動詞，像 have、work、live。"
+    },
+    {
+      "bad": "I know her since we were classmates.",
+      "good": "I have known her since we were classmates.",
+      "why": "中文說「我從同學時就認識她」用現在式，英文必須用完成式，因為這段認識一路延續到現在。since 子句本身則維持過去式。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "___ did you move into this apartment?",
+      "qCn": "你是什麼時候搬進這間公寓的？",
+      "opts": [
+        "How long",
+        "When",
+        "Since when have",
+        "How long have"
+      ],
+      "ans": 1,
+      "expl": "後面是 did，問的是一個過去的時刻，所以用 When did you move。How long 要配 have。"
+    },
+    {
+      "q": "How long ___ she played in the orchestra?",
+      "qCn": "她在樂團裡拉多久了？",
+      "opts": [
+        "did",
+        "has",
+        "does",
+        "was"
+      ],
+      "ans": 1,
+      "expl": "How long 問的是到現在為止的整段，要用 has played。"
+    },
+    {
+      "q": "We ___ in this office since the company moved downtown.",
+      "qCn": "自從公司搬到市中心以後，我們就在這間辦公室了。",
+      "opts": [
+        "are",
+        "were",
+        "have been",
+        "had been"
+      ],
+      "ans": 2,
+      "expl": "since 帶出的起點一路延續到現在，主句要用 have been。"
+    },
+    {
+      "q": "A: When did the class finish? B: ___",
+      "qCn": "甲：課幾點結束的？乙：（選出合理的回答）",
+      "opts": [
+        "A. For two hours.",
+        "B. Since four o'clock.",
+        "C. At half past four.",
+        "D. It has finished."
+      ],
+      "optsCn": [
+        "A. 兩個小時。",
+        "B. 從四點開始。",
+        "C. 四點半。",
+        "D. 它已經結束了。"
+      ],
+      "ans": 2,
+      "expl": "When did 問的是一個時刻，答案要是時刻；for 和 since 是回答 How long 的說法。"
+    }
+  ]
+},
+{
+  "id": "dg20260925b1p",
+  "date": "2026-09-25",
+  "unitNo": 15,
+  "level": "B1+",
+  "title": "Past Perfect: the Past Before the Past",
+  "titleCn": "過去的過去：had done 幫兩件舊事排先後",
+  "srcDays": [],
+  "summary": "當你講的故事已經在過去，而其中一件事比另一件更早發生，那件更早的就再往回退一格，用 had 加過去分詞。",
+  "sections": [
+    {
+      "h": "一條時間線上有兩個點",
+      "body": "過去完成式不是「更久以前」的意思，而是「比我正在講的那一刻更早」。所以要先問自己：這段話的主要時間點在哪裡。",
+      "table": {
+        "head": [
+          "先發生（退一格）",
+          "後發生（主時間點）",
+          "整句"
+        ],
+        "rows": [
+          [
+            "the train left",
+            "we got to the platform",
+            "The train had left before we got to the platform."
+          ],
+          [
+            "she read the file",
+            "the meeting began",
+            "She had read the file before the meeting began."
+          ],
+          [
+            "someone cancelled it",
+            "I called the hotel",
+            "Someone had cancelled it when I called the hotel."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "By the time the guests arrived, he had cleaned every room.",
+          "cn": "客人到的時候，他已經把每個房間都打掃好了。",
+          "note": "打掃在前，客人到在後"
+        },
+        {
+          "en": "I did not recognise the street because it had changed so much.",
+          "cn": "我認不出那條街，因為它變太多了。",
+          "note": "改變發生在「我認不出」之前"
+        },
+        {
+          "en": "She was tired because she had driven all night.",
+          "cn": "她很累，因為她開了一整夜的車。",
+          "note": "開車在前，累在後"
+        }
+      ]
+    },
+    {
+      "h": "什麼時候其實不必用",
+      "bullets": [
+        "已經用 before 或 after 把順序講清楚時，兩個動詞都用過去式也可以",
+        "照時間順序一件一件講下來時，不需要退一格，全部用過去簡單式就好",
+        "用了過去完成式卻沒有第二個時間點，讀起來會像句子還沒講完"
+      ],
+      "examples": [
+        {
+          "en": "After she signed the form, she left the building.",
+          "cn": "她簽完表格之後就離開大樓了。",
+          "note": "after 已經說了順序，不必退格"
+        },
+        {
+          "en": "He opened the box, looked inside, and closed it again.",
+          "cn": "他打開盒子，看了一眼，又把它關上。",
+          "note": "照順序敘述，一路用過去式"
+        }
+      ]
+    },
+    {
+      "h": "最常和過去完成式一起出現的字",
+      "table": {
+        "head": [
+          "字",
+          "位置",
+          "例句"
+        ],
+        "rows": [
+          [
+            "already",
+            "had 和分詞中間",
+            "The shop had already closed."
+          ],
+          [
+            "never / ever",
+            "had 和分詞中間",
+            "I had never seen snow before that trip."
+          ],
+          [
+            "by the time",
+            "句首的子句",
+            "By the time we voted, he had withdrawn."
+          ],
+          [
+            "just",
+            "had 和分詞中間",
+            "They had just sat down when the alarm rang."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The shelves were empty because shoppers had already taken everything.",
+          "cn": "架上空了，因為客人早就把東西都拿光了。",
+          "note": "already 放在 had 和分詞中間"
+        }
+      ]
+    },
+    {
+      "h": "過去完成式也有被動",
+      "bullets": [
+        "形式是 had been 加過去分詞，用在「那件更早的事不想點名是誰做的」",
+        "新聞和報告特別常用，因為執行者往往不重要或不方便寫出來",
+        "注意不要寫成 had been 加原形，中間那個分詞不能漏"
+      ],
+      "examples": [
+        {
+          "en": "The road had been closed for two days before anyone told us.",
+          "cn": "那條路已經封了兩天，才有人通知我們。",
+          "note": "被動加退一格，誰封的不重要"
+        },
+        {
+          "en": "Most of the files had been deleted by the time the auditor arrived.",
+          "cn": "稽核員到的時候，大部分檔案都已經被刪掉了。",
+          "note": "by the time 配過去完成被動"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "When I arrived at the gate, the plane already left.",
+      "good": "When I arrived at the gate, the plane had already left.",
+      "why": "兩件事都在過去，而飛機起飛比「我到登機門」更早，那一件就要退一格用 had left。只寫 left 會讓兩件事看起來同時發生，讀者就搞不清楚你到底有沒有趕上。"
+    },
+    {
+      "bad": "I had eaten lunch and then I had gone back to work.",
+      "good": "I ate lunch and then I went back to work.",
+      "why": "照順序講下來的兩件事不需要退格，整段都用過去式就好。過去完成式是用來打破順序的工具，每句都用反而讓讀者找不到主時間點在哪。"
+    },
+    {
+      "bad": "She had been very tired because she had worked late.",
+      "good": "She was very tired because she had worked late.",
+      "why": "主時間點（她很累）就用過去簡單式，只有更早的那件事（加班）才退一格。兩句都退格等於沒有基準點。"
+    },
+    {
+      "bad": "By the time we finished, the storm has already passed.",
+      "good": "By the time we finished, the storm had already passed.",
+      "why": "整段故事在過去，不能用現在完成式 has passed 去接。has done 的基準點是現在，had done 的基準點是過去的那一刻，兩者不可混用。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "When we reached the counter, the last bus ___.",
+      "qCn": "我們走到櫃台的時候，最後一班公車已經開走了。",
+      "opts": [
+        "leaves",
+        "has left",
+        "had left",
+        "was leaving"
+      ],
+      "ans": 2,
+      "expl": "兩件事都在過去，公車開走比我們到櫃台更早，所以退一格用 had left。"
+    },
+    {
+      "q": "He failed the test because he ___ for it.",
+      "qCn": "他考壞了，因為他沒有為考試準備。",
+      "opts": [
+        "had not prepared",
+        "has not prepared",
+        "does not prepare",
+        "was not preparing"
+      ],
+      "ans": 0,
+      "expl": "沒準備發生在考壞之前，用過去完成式的否定 had not prepared。"
+    },
+    {
+      "q": "The room was cold because someone ___ the window open.",
+      "qCn": "房間很冷，因為有人把窗戶開著沒關。",
+      "opts": [
+        "leaves",
+        "has left",
+        "had left",
+        "leaving"
+      ],
+      "ans": 2,
+      "expl": "開窗在「房間很冷」之前發生，退一格用 had left。"
+    },
+    {
+      "q": "By the time the inspector came, the samples ___ away.",
+      "qCn": "稽核員來的時候，樣品已經被收走了。",
+      "opts": [
+        "had been put",
+        "have been put",
+        "had put",
+        "were putting"
+      ],
+      "ans": 0,
+      "expl": "樣品是被收走的，而且比稽核員抵達更早，所以用過去完成式的被動 had been put。"
+    }
+  ]
+},
+{
+  "id": "dg20260925b2",
+  "date": "2026-09-25",
+  "unitNo": 15,
+  "level": "B2",
+  "title": "Past Perfect as a Narrative Tool",
+  "titleCn": "倒敘與交代背景：報導和報告裡的 had done",
+  "srcDays": [],
+  "summary": "過去完成式在寫作裡的真正功能不是標記時間，而是控制順序：它讓你先講結果、再回頭補原因，而且讀者不會迷路。",
+  "sections": [
+    {
+      "h": "它買到的是語序的自由",
+      "body": "沒有這個時態，你只能照事情發生的順序寫。有了它，你可以把最重要的那句放在最前面，把原因往後挪，句子依然清楚。",
+      "table": {
+        "head": [
+          "寫法",
+          "句子",
+          "讀者先看到什麼"
+        ],
+        "rows": [
+          [
+            "照順序",
+            "Demand fell and the plant cut a shift.",
+            "原因"
+          ],
+          [
+            "倒敘",
+            "The plant cut a shift; demand had fallen for months.",
+            "結果"
+          ],
+          [
+            "照順序",
+            "The supplier missed two deadlines, so we changed vendor.",
+            "過程"
+          ],
+          [
+            "倒敘",
+            "We changed vendor because the supplier had missed two deadlines.",
+            "決定"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The board replaced the chief executive; profits had dropped for five quarters.",
+          "cn": "董事會換掉了執行長；獲利已經連續五季下滑。",
+          "note": "先給新聞點，再給背景"
+        },
+        {
+          "en": "The bridge reopened in April, four years after the flood had washed away its northern span.",
+          "cn": "那座橋四月重新開放，而洪水沖走它北段已是四年前的事。",
+          "note": "主句在後、背景在前都能成立"
+        }
+      ]
+    },
+    {
+      "h": "在報導裡，它常常是在保護句子的可信度",
+      "bullets": [
+        "研究或調查的發現寫成 researchers found that ... had done，表示那件事在調查之前就已經成立",
+        "如果改寫成現在完成式，就變成作者自己在替現況背書，語氣和責任都不一樣",
+        "引述別人的話時也一樣：說話那一刻是過去，說話內容裡更早的事就退一格"
+      ],
+      "examples": [
+        {
+          "en": "Inspectors reported that the valve had failed twice before the shutdown.",
+          "cn": "稽查員報告指出，那個閥門在停機前已經故障過兩次。",
+          "note": "故障在報告之前，責任歸給稽查員"
+        },
+        {
+          "en": "The minister said the programme had already reached its target.",
+          "cn": "部長表示該計畫已經達標。",
+          "note": "轉述時把 has 退成 had"
+        }
+      ]
+    },
+    {
+      "h": "語域：它偏書面，但不是越多越好",
+      "bullets": [
+        "正式書面語（報告、新聞、學術）用得最多，因為讀者沒辦法當場發問",
+        "口語裡常被省略，因為說話時可以靠語氣和上下文補足順序",
+        "一段話裡連續三四句都用 had done，讀者會失去時間基準，反而更難讀"
+      ],
+      "examples": [
+        {
+          "en": "In conversation people simply say the shop closed before I got there.",
+          "cn": "講話的時候大家就直接說店在我到之前關了。",
+          "note": "口語常省略退格"
+        },
+        {
+          "en": "A report would write that the shop had closed before the inspection began.",
+          "cn": "報告則會寫成店在查核開始前已經關閉。",
+          "note": "書面語傾向寫清楚"
+        }
+      ]
+    },
+    {
+      "h": "一段話的標準節奏",
+      "body": "成熟的寫法通常是：退一格交代背景、回到過去簡單式推進主線、最後視需要拉回現在。時態在一段裡的分工，本身就是一種結構。",
+      "examples": [
+        {
+          "en": "The company had trimmed its research budget three times.",
+          "cn": "這家公司先前已經三度刪減研究預算。",
+          "note": "第一步：背景"
+        },
+        {
+          "en": "In March it announced a fourth round of cuts.",
+          "cn": "三月它宣布第四輪刪減。",
+          "note": "第二步：主線"
+        },
+        {
+          "en": "Two of its three laboratories are now closed.",
+          "cn": "它三座實驗室中已有兩座關閉。",
+          "note": "第三步：拉回現在"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "The audit found that the line had been running smoothly ever since.",
+      "good": "The audit found that the line had been running smoothly until that week.",
+      "why": "ever since 的基準點是現在，跟 had done 的過去基準點互相打架。退一格的句子只能搭配同樣指向過去的時間說法，例如 until that week、by then、up to that point。"
+    },
+    {
+      "bad": "Sales had risen in 2023, had peaked in 2024, and had fallen in 2025.",
+      "good": "Sales rose in 2023, peaked in 2024, and fell in 2025.",
+      "why": "三件事本來就照順序排好，全部退格反而讓讀者找不到主時間點。過去完成式是打破順序用的，沒有要打破順序就不要用。"
+    },
+    {
+      "bad": "He explained that the supplier has missed the deadline twice.",
+      "good": "He explained that the supplier had missed the deadline twice.",
+      "why": "explained 把整段話釘在過去，轉述的內容就要跟著退一格。寫成 has missed 等於作者自己出面保證這件事現在依然成立，而不是單純轉述對方說過的話。"
+    },
+    {
+      "bad": "After the committee had voted, the chair had announced the result.",
+      "good": "After the committee had voted, the chair announced the result.",
+      "why": "一個句子裡只需要一個退格：先發生的那件事退，後發生的留在過去簡單式。兩邊都退格就沒有基準，讀者無法判斷哪一件在前。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The editor cut the article because it ___ twice the agreed length.",
+      "qCn": "編輯把那篇文章砍短，因為它已經超出約定長度一倍。",
+      "opts": [
+        "has run to",
+        "had run to",
+        "runs to",
+        "was running to"
+      ],
+      "ans": 1,
+      "expl": "超長發生在編輯動手之前，整段又都在過去，所以退一格用 had run to。"
+    },
+    {
+      "q": "Which version puts the news first and the background second?",
+      "qCn": "哪一個版本把新聞點放在前面、背景放在後面？",
+      "opts": [
+        "A. Costs had climbed, so the museum raised its ticket price.",
+        "B. The museum raised its ticket price; costs had climbed for two years.",
+        "C. Costs climbed and the museum raised its ticket price.",
+        "D. The museum was raising its ticket price as costs climbed."
+      ],
+      "optsCn": [
+        "A. 成本先前一路上升，所以博物館調漲票價。",
+        "B. 博物館調漲票價；成本已經上升兩年。",
+        "C. 成本上升，博物館調漲票價。",
+        "D. 成本上升的同時，博物館正在調漲票價。"
+      ],
+      "ans": 1,
+      "expl": "B把主句（調漲票價）放在最前面，再用退格的 had climbed 補背景，正是倒敘的標準寫法。"
+    },
+    {
+      "q": "The spokesperson confirmed that the two sides ___ an agreement the previous night.",
+      "qCn": "發言人證實雙方在前一晚已經達成協議。",
+      "opts": [
+        "reach",
+        "have reached",
+        "had reached",
+        "are reaching"
+      ],
+      "ans": 2,
+      "expl": "confirmed 把時間釘在過去，協議又發生在前一晚，轉述時要退一格用 had reached。"
+    },
+    {
+      "q": "Which sentence uses the past perfect unnecessarily?",
+      "qCn": "哪一句用了不必要的過去完成式？",
+      "opts": [
+        "A. She had finished the draft before the deadline moved.",
+        "B. We had waited an hour when the notice finally appeared.",
+        "C. He had opened the door and had walked into the hall.",
+        "D. They knew the price because they had checked it that morning."
+      ],
+      "optsCn": [
+        "A. 期限更動前她已經寫完草稿。",
+        "B. 我們等了一小時，公告才終於出現。",
+        "C. 他打開門，然後走進大廳。",
+        "D. 他們知道價格，因為那天早上查過了。"
+      ],
+      "ans": 2,
+      "expl": "C的兩個動作本來就照順序發生，不需要退格，寫成 He opened the door and walked into the hall 才自然。"
+    }
+  ]
+},
 {
   "id": "dg20260922a2",
   "date": "2026-09-22",
