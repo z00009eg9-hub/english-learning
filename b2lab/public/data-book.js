@@ -11941,6 +11941,8 @@ window.BOOK = {
     snow:'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round"><line x1="32" y1="15" x2="32" y2="49"/><line x1="17" y1="23.5" x2="47" y2="40.5"/><line x1="47" y1="23.5" x2="17" y2="40.5"/></g><circle cx="32" cy="32" r="4" fill="'+A+'"/>',
     music:'<path d="M26 44 V20 l17 -4.5 V38" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="44" r="5.5" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><circle cx="38" cy="38" r="5.5" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>'
   };
+  /* 影片版（data-video.js）的解說卡也用這套圖示，風格才一致 */
+  window.BOOK_ICONS=I;
   function art(keys){
     var xs=[44,198,352,506,660];
     return '<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">'
