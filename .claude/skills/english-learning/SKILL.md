@@ -1315,6 +1315,40 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
    - 只整理「已學過」的字：成員必須出現在 vocab / vocab2 / phrases / colloc / cmp，沒學過的字不會被塞進去。
    - 改過 `rel-lexicon.js` 或想重做全部：`node tools/build-rel.js --rebuild`；只看報告不寫檔：`--dry-run --verbose`。
    - 輸出 `public/data-rel.js` 要一起 commit（CI 沒有建置步驟，sanity check 會載入它）。
+3c. **產生影片版（2026-09-27 使用者指定：每次同步課本都要一起做）**
+   每堂課一支約 3–5 分鐘的「影片」：B2 Read 網頁即時產生畫面、用裝置的美式語音朗讀，
+   右側雙語字幕逐句同步、重點表達變彩色標籤、下方重點表達卡可跟讀／再聽／收藏。
+   播放器已做好（`index.html` 的 `vd*` 函式），**每課只要寫腳本**。範本：`data-video.js` 的 `bk20260917`。
+   - **放哪裡**：`b2lab/public/data-video.js` 加一筆 `window.VIDEO.<lessonId> = {…}`；
+     `data-book.js` 該課加 `video: true`（課程頁頂端才會出現「▶ 影片版」按鈕）。
+     分享網址：`https://english-b2-lab.web.app/?video=<lessonId>`。
+   - **結構（約 35–40 句、400–600 個英文字）**：
+     | 章節 ch | 內容 | vis.type |
+     |---|---|---|
+     | 0 開場 | 旁白 2 句：今天的情境＋要注意聽什麼 | `title` |
+     | 1 情境 | **新寫**一段兩人對話（15–20 句），把這課的單字、句型自然串起來 | `scene` |
+     | 2 重點表達 | 4–6 張解說卡：大字＋美式音標＋英文定義＋中文＋一行易錯提醒；易混淆用對照卡 | `slide`／`vs` |
+     | 3 作業訂正 | 挑 2–3 題作業：❌ 原句（錯處 `bad[]`）→ ✅ 訂正（改對處 `good[]`）＋一句為什麼 | `fix` |
+     | 4 小測驗 | 3 題填空：題目句（`say` 把 ___ 唸成 blank、`pause: 4000` 倒數）＋答案句（`show: true`）；最後一句 `end` | `quiz`／`end` |
+   - **腳本可以新寫**（使用者同意），但用字、句型要來自這一課的筆記，程度對應該課（B1/B1+）。
+     人物只用 **Anita（女聲 `voice:'f'`）與 Tom（男聲 `voice:'m'`）**，旁白 `N`（`voice:'n'`），跟每週二五文章的人物規則一致。
+   - **中文只當字幕、不朗讀**：每句 `cn` 必填；影片長度只算英文字數。
+   - **重點表達**：每句最多 2 個 `hi`（片段要逐字出現在 `en` 裡），`k` 指向 `expr`；`expr` 的 `ex` 要換一個跟對話不同的情境。
+     解說卡、作業訂正、答案句也要配 `hi`，不然下方表達卡會停在前面對話的片語、跟畫面對不上。
+   - **音標**：解說卡寫成 `w:"…", ipa:"…"` 相鄰，`tools/check-ipa.js` 會一起檢查；**同字要跟 `data-book.js` 同一個寫法**（先 grep 沿用）。
+   - **驗證**（都過了才 commit）：
+     ```bash
+     cd b2lab && node -e '
+     global.window={};require("./public/data-video.js");const d=window.VIDEO["<lessonId>"];
+     const w=d.lines.reduce((s,l)=>s+(l.say||l.en).split(/\s+/).length,0);
+     const sec=w/2.4+d.lines.length*0.5+d.lines.reduce((s,l)=>s+(l.pause||0),0)/1000;
+     console.log("句數",d.lines.length,"字數",w,"約",Math.floor(sec/60)+"分"+Math.round(sec%60)+"秒");
+     d.lines.forEach((l,i)=>(l.hi||[]).forEach(h=>{if(l.en.indexOf(h.t)<0)console.log("標籤不在句子裡",i,h.t);if(!d.expr[h.k])console.log("缺 expr",h.k)}));'
+     node tools/check-ipa.js
+     ```
+     長度要落在 3–5 分鐘；本機 `?video=<lessonId>` 打開、各種畫面切一遍、主控台沒有錯誤，手機寬度也看一次。
+   - **在 Google 筆記頂端加連結**：標題下方加一行「▶ 影片版（約 N 分鐘）」連到分享網址（DocumentApp：`body.insertParagraph(2, …)` 後 `setLinkUrl`；先檢查文件裡是否已有 `?video=<lessonId>`，有就跳過）。
+     用 Chrome MCP 開 Apps Script 專案「英文筆記-音標統一美式」執行；⚠ 函式下拉選單會選錯，要把目標函式放檔案第一個、存檔重新載入後再按執行。
 4. **驗證**：`node -e "global.window={}; require('./data-book.js'); ..."` 檢查語法與 lessons 數；本機 `bkGo(id)` 渲染不報錯。
 5. **sw.js 快取版本 +1**（`b2lab/public/sw.js` 的 `CACHE = 'b2lab-vNN'`）。
 6. **部署**：`cd b2lab && npx firebase-tools deploy --only hosting --project english-b2-lab`。
