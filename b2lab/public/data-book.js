@@ -12212,7 +12212,7 @@ window.BOOK = {
           "titleCn": "我生病了",
           "paras": [
             {
-              "en": "Hi, I'm Tom. Today I have to stay at home. I'm not feeling very well. I've got a headache, a running nose and a cough. I think I also have a fever. As it could be Covid-19, I got tested, but until the results are ready, I have to stay isolated in my room.",
+              "en": "Hi, I'm Tom. Today have to stay at home. I'm not feeling very well. I've got a headache, a running nose and a cough. I think I have also a fever. As it could be Covid-19, I got tested, but until the results are ready, I have to stay isolated in my room.",
               "cn": "嗨，我是 Tom。今天我必須待在家裡。我覺得很不舒服。我頭痛、流鼻水，還會咳嗽。我想我也發燒了。因為有可能是新冠肺炎，我去做了檢測，但在結果出來之前，我必須待在房間裡隔離。"
             },
             {
@@ -12318,9 +12318,9 @@ window.BOOK = {
               "hi": "can't play with"
             },
             {
-              "en": "I love playing computer games. → Jessica",
-              "cn": "7. 我很愛玩電腦遊戲。→ Jessica（love 後面接 V-ing）",
-              "hi": "love playing"
+              "en": "I love play computer games. → Jessica",
+              "cn": "7. 我很愛玩電腦遊戲。→ Jessica（原文寫 love play，正確應為 love playing：love 後面接 V-ing）",
+              "hi": "love play"
             },
             {
               "en": "I take an aspirin. → Tom",
@@ -12442,6 +12442,10 @@ window.BOOK = {
       ],
       "summaryTitle": "VI. 快速總結 Quick Summary",
       "summary": [
+        {
+          "k": "⚠ 原文的三處小錯",
+          "v": "課文 Today have to stay at home. 少了主詞，應為 Today I have to stay at home.；I have also a fever. 語序不對，應為 I also have a fever.；練習第 7 題 I love play computer games. 應為 I love playing computer games."
+        },
         {
           "k": "描述症狀",
           "v": "I've got a headache / a fever / a cough / a running nose"
@@ -17514,26 +17518,12 @@ window.BOOK = {
           "cn": "房仲與租約"
         },
         {
-          "u": "faulty",
-          "sc": "壞掉三兄弟之一",
+          "u": "faulty vs defective vs damaged",
+          "sc": "三者差別見下方快速總結（原文只列用法、未給例句）",
           "ex": "An electrician came to fix a faulty electrical wire.",
           "exCn": "一位電工前來修理有問題的電線。",
-          "cn": "功能異常"
+          "cn": "壞掉三兄弟"
         },
-        {
-          "u": "defective",
-          "sc": "壞掉三兄弟之一",
-          "ex": "The supplier replaced the defective parts.",
-          "exCn": "供應商更換了有瑕疵的零件。",
-          "cn": "製造瑕疵"
-        },
-        {
-          "u": "damaged",
-          "sc": "壞掉三兄弟之一",
-          "ex": "The damaged ceiling tile was replaced.",
-          "exCn": "受損的天花板磁磚被更換了。",
-          "cn": "外力損壞"
-        }
       ],
       "cmpWarn": {
         "title": "⚠ 不自然／錯誤的說法（不要用）",
@@ -17840,7 +17830,11 @@ window.BOOK = {
         {
           "k": "低水壓原因",
           "v": "The shower head is clogged（clogged ＝ 堵塞）"
-        }
+        },
+        {
+          "k": "faulty / defective / damaged",
+          "v": "faulty ＝ 功能異常（電線、插座壞了）；defective ＝ 製造瑕疵（出廠就有問題）；damaged ＝ 外力損壞（撞到、泡水）"
+        },
       ]
     },
     /* ---- bk20251226a Stress and Conditionals ---- */
