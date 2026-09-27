@@ -5112,7 +5112,7 @@ articles:[
     },
     {
       "w": "competition",
-      "ipa": "/ˌkɑːmpəˈtɪʃn/",
+      "ipa": "/ˌkɑːmpəˈtɪʃən/",
       "pos": "n.",
       "cn": "比賽",
       "def": "An event where people try to win.",

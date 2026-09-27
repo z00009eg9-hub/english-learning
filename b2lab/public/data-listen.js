@@ -6912,7 +6912,7 @@ notes:[
     {w:"imaginary",ipa:"/ɪˈmædʒ.ə.ner.i/",pos:"adj.",cn:"想像中的、虛構的",def:"existing only in your mind, not real"},
     {w:"possibility",ipa:"/ˌpɑː.səˈbɪl.ə.ti/",pos:"n.",cn:"可能性",def:"a chance that something may happen or be true"},
     {w:"fluently",ipa:"/ˈfluː.ənt.li/",pos:"adv.",cn:"流利地",def:"in a smooth way, without stopping or making mistakes, when speaking a language"},
-    {w:"effort",ipa:"/ˈef.ɚt/",pos:"n.",cn:"努力",def:"the physical or mental energy that you use to do something"}
+    {w:"effort",ipa:"/ˈefɚt/",pos:"n.",cn:"努力",def:"the physical or mental energy that you use to do something"}
   ],
   script:[
     {sp:"Mia",en:"Okay, quick warm-up before we start. If you won the lottery tomorrow, what would you do first?",cn:"好，開始上課前先來個暖身。如果你明天中了樂透，你會先做什麼？"},
@@ -7603,7 +7603,7 @@ notes:[
     {w:"tenant",ipa:"/ˈtenənt/",pos:"n.",cn:"房客、租客",def:"A person who pays rent to live in a building owned by someone else."},
     {w:"plumber",ipa:"/ˈplʌmɚ/",pos:"n.",cn:"水管工人",def:"A person who fixes water pipes, toilets, and bathrooms."},
     {w:"faulty",ipa:"/ˈfɔːlti/",pos:"adj.",cn:"故障的、有缺陷的",def:"Not working correctly because of a problem or defect."},
-    {w:"socket",ipa:"/ˈsɑkɪt/",pos:"n.",cn:"插座",def:"A device on a wall that you plug an electrical device into."},
+    {w:"socket",ipa:"/ˈsɑːkɪt/",pos:"n.",cn:"插座",def:"A device on a wall that you plug an electrical device into."},
     {w:"ceiling",ipa:"/ˈsiːlɪŋ/",pos:"n.",cn:"天花板",def:"The surface that forms the top of the inside of a room."},
     {w:"dampness",ipa:"/ˈdæmpnəs/",pos:"n.",cn:"潮濕、濕氣",def:"The condition of being slightly wet, often inside a building."},
     {w:"arrange",ipa:"/əˈreɪndʒ/",pos:"v.",cn:"安排",def:"To plan or organize something so it can happen."}

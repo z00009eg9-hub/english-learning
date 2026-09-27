@@ -5363,13 +5363,13 @@ window.BOOK = {
           ex: 'Use formal language in your report.', exCn: '在報告中使用正式語言。（serious or official language）' },
         { w: 'informal', ipa: '/ɪnˈfɔrməl/', pos: 'adj.', cn: '非正式的',
           ex: 'We use informal English when chatting with friends.', exCn: '和朋友聊天時我們用非正式英文。（friendly or casual language）' },
-        { w: 'conversation', ipa: '/ˌkɑnvɚˈseɪʃən/', pos: 'n.', cn: '對話',
+        { w: 'conversation', ipa: '/ˌkɑːnvɚˈseɪʃən/', pos: 'n.', cn: '對話',
           ex: 'We had an English conversation in class today.', exCn: '我們今天在課堂上用英文對話。（talking between two or more people）' },
         { w: 'chat', ipa: '/tʃæt/', pos: 'v. / n.', cn: '閒聊',
           ex: 'We had a chat about our learning goals.', exCn: '我們閒聊了學習目標。（a friendly informal conversation）' },
         { w: 'discussion', ipa: '/dɪˈskʌʃən/', pos: 'n.', cn: '討論',
           ex: 'We had a discussion about English study methods.', exCn: '我們討論了英文學習方法。（a serious talk about a topic）' },
-        { w: 'repeat', ipa: '/rɪˈpit/', pos: 'v.', cn: '重複',
+        { w: 'repeat', ipa: '/rɪˈpiːt/', pos: 'v.', cn: '重複',
           ex: 'To learn new words, you must repeat them often.', exCn: '要學新單字，你必須經常重複。（to say or do again）' },
         { w: 'explain', ipa: '/ɪkˈspleɪn/', pos: 'v.', cn: '解釋',
           ex: 'Please explain what this word means.', exCn: '請解釋這個字的意思。（to make something clear）' },
@@ -5465,7 +5465,7 @@ window.BOOK = {
         { w: 'after a while', ipa: '/ˈæftɚ ə waɪl/', pos: 'phr.', cn: '過了一陣子',
           ex: "I didn't worry about my mistakes after a while.", exCn: '過了一段時間後，我不再擔心我的錯誤了。' },
         { w: 'improve', ipa: '/ɪmˈpruːv/', pos: 'v.', cn: '進步',
-          ex: 'I think my English is improving.', exCn: '我覺得我的英文正在進步。（名詞：improvement /ɪmˈpruːvmənt/ 改善）' },
+          ex: 'I think my English is improving.', exCn: '我覺得我的英文正在進步。（名詞：improvement /ɪmˈpruːv.mənt/ 改善）' },
         { w: 'express', ipa: '/ɪkˈspres/', pos: 'v.', cn: '表達',
           ex: 'I can express most of the things I need to.', exCn: '我能表達大部分我需要說的事情。' },
         { w: 'effectively', ipa: '/ɪˈfektɪvli/', pos: 'adv.', cn: '有效地',
@@ -11952,6 +11952,6563 @@ window.BOOK = {
             { en: "My room is very untidy. I don't know where to put everything.", cn: '5. 我房間很亂，我不知道東西該放哪裡。', hi: 'where to put' },
             { en: 'I have some clothes to wash. Can you show me how to use the washing machine?', cn: '6. 我有些衣服要洗，你能教我怎麼用洗衣機嗎？', hi: 'how to use' }
           ]
+        }
+      ]
+    },
+    /* ---- bk20250709 I am Sick: Symptoms, Seeing a Doctor & Giving Advice ---- */
+    {
+      "id": "bk20250709",
+      "icon": "📗",
+      "date": "2025-07-09",
+      "doc": "https://docs.google.com/document/d/1jh6g1FccdTTgll6kn1WksohMauebd1A_5mBJkwL8FWk/edit",
+      "title": "I am Sick: Symptoms, Seeing a Doctor & Giving Advice",
+      "titleCn": "生病與症狀：看醫生與給建議",
+      "topics": "生病症狀單字、閱讀「Tom 與 Jessica 生病了」、should／shouldn't 建議句型、看醫生對話、角色扮演",
+      "vocabTitle": "I. 單字 Vocabulary",
+      "vocab": [
+        {
+          "w": "headache",
+          "ipa": "/ˈhedeɪk/",
+          "pos": "n.",
+          "cn": "頭痛",
+          "ex": "I've got a headache.",
+          "exCn": "我頭痛。"
+        },
+        {
+          "w": "cough",
+          "ipa": "/kɔːf/",
+          "pos": "n. / v.",
+          "cn": "咳嗽",
+          "ex": "I also take a syrup for my cough.",
+          "exCn": "我也吃糖漿治咳嗽。"
+        },
+        {
+          "w": "fever",
+          "ipa": "/ˈfiː.vɚ/",
+          "pos": "n.",
+          "cn": "發燒",
+          "ex": "I think I also have a fever.",
+          "exCn": "我想我也發燒了。"
+        },
+        {
+          "w": "isolated",
+          "star": true,
+          "ipa": "/ˈaɪ.sə.leɪ.t̬ɪd/",
+          "pos": "adj.",
+          "cn": "被隔離的",
+          "ex": "I have to stay isolated in my room.",
+          "exCn": "我必須待在房間裡隔離。"
+        },
+        {
+          "w": "aspirin",
+          "ipa": "/ˈæs.pɚ.ɪn/",
+          "pos": "n.",
+          "cn": "阿斯匹靈（止痛退燒藥）",
+          "ex": "Mom gives me an aspirin every four hours.",
+          "exCn": "媽媽每四小時給我一顆阿斯匹靈。"
+        },
+        {
+          "w": "syrup",
+          "ipa": "/ˈsɪr.əp/",
+          "pos": "n.",
+          "cn": "糖漿（藥水）",
+          "ex": "I take a syrup three times a day.",
+          "exCn": "我一天吃三次糖漿。"
+        },
+        {
+          "w": "negative",
+          "ipa": "/ˈneɡ.ə.t̬ɪv/",
+          "pos": "adj.",
+          "cn": "陰性的（檢測結果）",
+          "ex": "I hope the test will be negative!",
+          "exCn": "我希望檢測結果是陰性的！"
+        },
+        {
+          "w": "spots",
+          "ipa": "/spɑːts/",
+          "pos": "n.",
+          "cn": "疹子、斑點",
+          "ex": "I am red with spots.",
+          "exCn": "我全身紅疹。"
+        },
+        {
+          "w": "measles",
+          "star": true,
+          "ipa": "/ˈmiː.zəlz/",
+          "pos": "n.",
+          "cn": "麻疹",
+          "ex": "The doctor said that I had the measles.",
+          "exCn": "醫生說我得了麻疹。"
+        },
+        {
+          "w": "infect",
+          "star": true,
+          "ipa": "/ɪnˈfekt/",
+          "pos": "v.",
+          "cn": "傳染、感染（他人）",
+          "ex": "I could infect my mates.",
+          "exCn": "我可能會傳染給同學。"
+        }
+      ],
+      "phrasesTitle": "II. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "I've got / I have + 症狀",
+          "cn": "描述生病症狀（詳見 III-A）"
+        },
+        {
+          "p": "a running nose",
+          "cn": "流鼻水（詳見 IV）"
+        },
+        {
+          "p": "get tested",
+          "cn": "去做檢測（詳見 IV）"
+        },
+        {
+          "p": "stay isolated",
+          "cn": "待著隔離（詳見 IV）"
+        },
+        {
+          "p": "stay away from",
+          "cn": "遠離、避開（詳見 IV）"
+        },
+        {
+          "p": "in the meantime",
+          "cn": "在這期間（詳見 IV）"
+        },
+        {
+          "p": "What's the matter?",
+          "cn": "怎麼了？哪裡不舒服？（詳見 III-C）"
+        },
+        {
+          "p": "Since when …?",
+          "cn": "從什麼時候開始……？（詳見 III-D）"
+        },
+        {
+          "p": "go to the doctor",
+          "cn": "去看醫生（詳見 V）"
+        }
+      ],
+      "grammarTitle": "III. 句型與文法 Grammar",
+      "grammar": [
+        {
+          "k": "III-A",
+          "title": "I've got / I have + 症狀（描述生病）",
+          "pat": "I have / I've got + a + 症狀名詞",
+          "pts": [
+            "🔬 結構：I have / I've got + a + 症狀名詞。",
+            "🔬 中文解析：描述症狀最基本的句型，have got 是口語說法，等同 have。headache、fever、cough 都是可數名詞，要加 a。",
+            "🔬 ⚠ 避免中式英文：不可說 I am headache，症狀一律用 have。",
+            "🔬 使用情境：看醫生、請假、跟朋友說自己不舒服。"
+          ],
+          "exs": [
+            {
+              "tag": "I've got",
+              "en": "I've got a headache, a running nose and a cough.",
+              "cn": "我頭痛、流鼻水，還會咳嗽。"
+            },
+            {
+              "tag": "I have",
+              "en": "I think I also have a fever.",
+              "cn": "我想我也發燒了。"
+            }
+          ]
+        },
+        {
+          "k": "III-B",
+          "title": "should / shouldn't + 原形動詞（給建議）",
+          "pat": "主詞 + should / shouldn't + 原形動詞",
+          "pts": [
+            "🔬 結構：主詞 + should / shouldn't + 原形動詞。",
+            "🔬 中文解析：should 用來給建議，語氣比 must 溫和；後面一定接原形動詞，不加 to。",
+            "🔬 ⚠ 避免中式英文：不可寫成 You should to go 或 You should going。",
+            "🔬 使用情境：關心別人、給健康建議。"
+          ],
+          "exs": [
+            {
+              "tag": "should / shouldn't",
+              "en": "Tom, you should stay isolated, but you shouldn't meet your friends.",
+              "cn": "Tom，你應該隔離，但不應該去見朋友。"
+            },
+            {
+              "tag": "should",
+              "en": "You should go to the doctor.",
+              "cn": "你應該去看醫生。"
+            }
+          ]
+        },
+        {
+          "k": "III-C",
+          "title": "What's the matter (with…)?（怎麼了？）",
+          "pat": "What's the matter + with + 人？",
+          "pts": [
+            "🔬 結構：What's the matter (with + 人)？",
+            "🔬 中文解析：詢問別人哪裡不舒服或發生什麼事，比 What happened 更關心對方的狀態。同義句：What's wrong (with you)?",
+            "🔬 使用情境：看到別人臉色不好、看醫生時醫生的第一句話。"
+          ],
+          "exs": [
+            {
+              "tag": "What's the matter?",
+              "en": "Oh, what's the matter?",
+              "cn": "喔，怎麼了？"
+            },
+            {
+              "tag": "with + 人",
+              "en": "What's the matter with Jessica?",
+              "cn": "Jessica 怎麼了？"
+            }
+          ]
+        },
+        {
+          "k": "III-D",
+          "title": "Since when …? / since + 時間點",
+          "pat": "since + 時間點／for + 時間長度",
+          "pts": [
+            "🔬 結構：since + 時間「點」（Sunday、yesterday、2020）；for + 時間「長度」（two days、a week）。",
+            "🔬 ⚠ 避免中式英文：不可說 since three days，要說 for three days。",
+            "🔬 使用情境：醫生問診、描述症狀持續多久。"
+          ],
+          "exs": [
+            {
+              "tag": "Since when",
+              "en": "Since when do you feel the pain?",
+              "cn": "你從什麼時候開始痛的？"
+            },
+            {
+              "tag": "Since + 時間點",
+              "en": "Since Sunday.",
+              "cn": "從星期天開始。"
+            }
+          ]
+        },
+        {
+          "k": "III-E",
+          "title": "could + 原形動詞（表示可能性）",
+          "pat": "主詞 + could + 原形動詞",
+          "pts": [
+            "🔬 結構：主詞 + could + 原形動詞。",
+            "🔬 中文解析：這裡的 could 不是「過去能夠」，而是表示「有可能」，語氣比 will 不確定。",
+            "🔬 補充：句首的 As ＝ Because（因為），是較書面的說法。"
+          ],
+          "exs": [
+            {
+              "tag": "could be",
+              "en": "As it could be Covid-19, I got tested.",
+              "cn": "因為有可能是新冠肺炎，我去做了檢測。"
+            },
+            {
+              "tag": "could + V",
+              "en": "I could infect my mates.",
+              "cn": "我可能會傳染給同學。"
+            }
+          ]
+        }
+      ],
+      "reading": [
+        {
+          "bar": "IV. 閱讀 Reading：I'm Sick",
+          "title": "I'm Sick",
+          "titleCn": "我生病了",
+          "paras": [
+            {
+              "en": "Hi, I'm Tom. Today I have to stay at home. I'm not feeling very well. I've got a headache, a running nose and a cough. I think I also have a fever. As it could be Covid-19, I got tested, but until the results are ready, I have to stay isolated in my room.",
+              "cn": "嗨，我是 Tom。今天我必須待在家裡。我覺得很不舒服。我頭痛、流鼻水，還會咳嗽。我想我也發燒了。因為有可能是新冠肺炎，我去做了檢測，但在結果出來之前，我必須待在房間裡隔離。"
+            },
+            {
+              "en": "Mom gives me fresh orange juice, and an aspirin every four hours. I also take a syrup for my cough. I hate it when I'm sick because I can't meet my friends, I can't go to school and I can't play football. I hope the test will be negative!",
+              "cn": "媽媽給我新鮮柳橙汁，每四小時給我一顆阿斯匹靈。我也吃糖漿治咳嗽。我討厭生病，因為我不能見朋友、不能上學、也不能踢足球。我希望檢測結果是陰性的！"
+            },
+            {
+              "en": "Hi, my name is Jessica. I feel really sick today. I am red with spots. I also have a fever. The doctor came and said that I had the measles. I can't go to school for ten days because I could infect my mates.",
+              "cn": "嗨，我叫 Jessica。我今天真的很不舒服。我全身長紅疹，也發燒了。醫生來看診，說我得了麻疹。我十天不能去上學，因為我可能會傳染給同學。"
+            },
+            {
+              "en": "I also have to stay away from the sun. I have to stay in my room and, most of the time, in bed. The good thing is, I won't be able to do my math test tomorrow. I wasn't prepared anyway. In the meantime, I'm going to read and play computer games.",
+              "cn": "我還必須避開陽光。我得待在房間裡，而且大部分時間要臥床。好處是，我明天不用考數學了。反正我也沒準備。在這期間，我打算看書和玩電腦遊戲。"
+            }
+          ],
+          "questions": [
+            {
+              "q": "Does Tom go to the doctor?",
+              "qCn": "Tom 有去看醫生嗎？",
+              "a": "No, he doesn't. He got tested and stays isolated at home.",
+              "aCn": "沒有。他去做了檢測，並待在家裡隔離。"
+            },
+            {
+              "q": "What does Tom drink?",
+              "qCn": "Tom 喝什麼？",
+              "a": "He drinks fresh orange juice.",
+              "aCn": "他喝新鮮柳橙汁。"
+            },
+            {
+              "q": "What does he take?",
+              "qCn": "他吃什麼藥？",
+              "a": "He takes an aspirin every four hours and a syrup for his cough.",
+              "aCn": "他每四小時吃一顆阿斯匹靈，還吃糖漿治咳嗽。"
+            },
+            {
+              "q": "What results does he expect?",
+              "qCn": "他期待什麼結果？",
+              "a": "He hopes the test will be negative.",
+              "aCn": "他希望檢測結果是陰性的。"
+            },
+            {
+              "q": "What's the matter with Jessica?",
+              "qCn": "Jessica 怎麼了？",
+              "a": "She is red with spots and has a fever.",
+              "aCn": "她全身長紅疹並且發燒。"
+            },
+            {
+              "q": "What does the doctor say?",
+              "qCn": "醫生怎麼說？",
+              "a": "The doctor said that she had the measles.",
+              "aCn": "醫生說她得了麻疹。"
+            },
+            {
+              "q": "Who plays computer games?",
+              "qCn": "誰玩電腦遊戲？",
+              "a": "Jessica does.",
+              "aCn": "Jessica。"
+            }
+          ],
+          "sumEn": [
+            "Symptoms: a headache, a running nose, a cough, a fever, red with spots.",
+            "Key actions: get tested, stay isolated, stay away from the sun, take an aspirin / a syrup."
+          ],
+          "sumCn": [
+            "症狀：頭痛、流鼻水、咳嗽、發燒、長紅疹。",
+            "重要動作：去做檢測、待著隔離、避開陽光、吃阿斯匹靈／糖漿。"
+          ]
+        }
+      ],
+      "extraTitle": "V. 課堂練習與情境活動 Class Practice",
+      "extra": [
+        {
+          "title": "V-A. 誰說的？Who says that — Tom, Jessica or both?",
+          "exs": [
+            {
+              "en": "I might have Covid. → Tom",
+              "cn": "1. 我可能得了新冠肺炎。→ Tom",
+              "hi": "might have"
+            },
+            {
+              "en": "I can't stay in the sun. → Jessica",
+              "cn": "2. 我不能待在太陽下。→ Jessica",
+              "hi": "can't stay in the sun"
+            },
+            {
+              "en": "I have a fever. → Both",
+              "cn": "3. 我發燒了。→ 兩人都有發燒",
+              "hi": "have a fever"
+            },
+            {
+              "en": "My nose is running. → Tom",
+              "cn": "4. 我流鼻水。→ Tom",
+              "hi": "nose is running"
+            },
+            {
+              "en": "I am red. → Jessica",
+              "cn": "5. 我全身發紅。→ Jessica",
+              "hi": "am red"
+            },
+            {
+              "en": "I can't play with my friends. → Tom",
+              "cn": "6. 我不能跟朋友玩。→ Tom",
+              "hi": "can't play with"
+            },
+            {
+              "en": "I love playing computer games. → Jessica",
+              "cn": "7. 我很愛玩電腦遊戲。→ Jessica（love 後面接 V-ing）",
+              "hi": "love playing"
+            },
+            {
+              "en": "I take an aspirin. → Tom",
+              "cn": "8. 我吃阿斯匹靈。→ Tom",
+              "hi": "take an aspirin"
+            },
+            {
+              "en": "I don't like being sick. → Tom",
+              "cn": "9. 我不喜歡生病。→ Tom",
+              "hi": "being sick"
+            },
+            {
+              "en": "I got tested. → Tom",
+              "cn": "10. 我去做了檢測。→ Tom",
+              "hi": "got tested"
+            }
+          ]
+        },
+        {
+          "title": "V-B. 給建議 Give Them Some Advice",
+          "exs": [
+            {
+              "en": "Tom, you should stay isolated and drink a lot of water, but you shouldn't meet your friends before the result is ready.",
+              "cn": "Tom，你應該隔離並多喝水，但在結果出來前不應該去見朋友。",
+              "hi": "should … but you shouldn't"
+            },
+            {
+              "en": "Jessica, you should stay in bed and stay away from the sun, but you shouldn't go to school for ten days.",
+              "cn": "Jessica，你應該臥床休息、避開陽光，但十天內不應該去上學。",
+              "hi": "stay away from the sun"
+            }
+          ]
+        },
+        {
+          "title": "V-C. 配對練習 Match the Questions to the Right Answer（Denis and Anna）",
+          "exs": [
+            {
+              "en": "Hello Denis, how are you? — c) I don't feel well.",
+              "cn": "1. 嗨 Denis，你好嗎？——我不太舒服。",
+              "hi": "don't feel well"
+            },
+            {
+              "en": "Oh, what's the matter? — a) I have got a headache.",
+              "cn": "2. 喔，怎麼了？——我頭痛。",
+              "hi": "have got a headache"
+            },
+            {
+              "en": "Since when do you feel the pain? — d) Since Sunday.",
+              "cn": "3. 你從什麼時候開始痛的？——從星期天開始。",
+              "hi": "Since Sunday"
+            },
+            {
+              "en": "You should go to the doctor. — b) Yeah, you are right. I'll go tomorrow.",
+              "cn": "4. 你應該去看醫生。——對，你說得對，我明天去。",
+              "hi": "should go to the doctor"
+            }
+          ]
+        },
+        {
+          "title": "V-D. 對話填空 Complete the Dialogue（Satia and Elise）",
+          "exs": [
+            {
+              "en": "S: Hi, how are you?",
+              "cn": "嗨，你好嗎？",
+              "hi": "how are you"
+            },
+            {
+              "en": "E: I'm not well.",
+              "cn": "我不太舒服。",
+              "hi": "not well"
+            },
+            {
+              "en": "S: Oh, what's the matter?",
+              "cn": "喔，怎麼了？",
+              "hi": "what's the matter"
+            },
+            {
+              "en": "E: I have a terrible headache.",
+              "cn": "我頭痛得很厲害。",
+              "hi": "terrible headache"
+            },
+            {
+              "en": "S: Since when do you feel the pain?",
+              "cn": "你從什麼時候開始痛的？",
+              "hi": "Since when"
+            },
+            {
+              "en": "E: Since yesterday.",
+              "cn": "從昨天開始。",
+              "hi": "Since yesterday"
+            },
+            {
+              "en": "S: You should go to the doctor.",
+              "cn": "你應該去看醫生。",
+              "hi": "should go"
+            },
+            {
+              "en": "E: You are right. Thank you.",
+              "cn": "你說得對，謝謝。",
+              "hi": "You are right"
+            }
+          ]
+        },
+        {
+          "title": "V-E. 角色扮演 Role Play",
+          "exs": [
+            {
+              "en": "Student A: You have a health problem and you are at the doctor. You describe your symptoms. Ask the doctor at least 5 questions.",
+              "cn": "學生 A：你身體不舒服，正在看醫生。描述你的症狀，並至少問醫生 5 個問題。",
+              "hi": "describe your symptoms"
+            },
+            {
+              "en": "Student B: You are the doctor and your patient is describing his (her) problem. Make a diagnosis and give advice what he (she) should do or should not do.",
+              "cn": "學生 B：你是醫生，病人正在描述他／她的問題。做出診斷，並給出應該做與不應該做的建議。",
+              "hi": "Make a diagnosis and give advice"
+            }
+          ]
+        }
+      ],
+      "summaryTitle": "VI. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "描述症狀",
+          "v": "I've got a headache / a fever / a cough / a running nose"
+        },
+        {
+          "k": "問候不舒服的人",
+          "v": "What's the matter?／How do you feel?"
+        },
+        {
+          "k": "給建議",
+          "v": "You should …, but you shouldn't …（後接原形動詞）"
+        },
+        {
+          "k": "時間",
+          "v": "since + 時間點（since Sunday）／for + 時間長度（for three days）"
+        },
+        {
+          "k": "可能性",
+          "v": "It could be …（可能是……）；傳染給別人用 infect"
+        }
+      ]
+    },
+    /* ---- bk20250717 Always Together, Best Friends Forever ---- */
+    {
+      "id": "bk20250717",
+      "icon": "📗",
+      "date": "2025-07-17",
+      "doc": "https://docs.google.com/document/d/10E0Vla90n6lTPWKOiqmABDd3-cnsNQMoSeB7G-zcPSE/edit",
+      "title": "Always Together, Best Friends Forever",
+      "titleCn": "永遠的好朋友",
+      "topics": "好友日常閱讀、生病症狀用語、How often 頻率問句、How long does it take 時間問句、通勤方式、比較級與城市描述",
+      "vocabTitle": "I. 單字 Vocabulary",
+      "vocab": [
+        {
+          "w": "headache",
+          "ipa": "/ˈhedeɪk/",
+          "pos": "n.",
+          "cn": "頭痛",
+          "ex": "I have a headache.",
+          "exCn": "我頭痛。"
+        },
+        {
+          "w": "negative",
+          "ipa": "/ˈneɡ.ə.t̬ɪv/",
+          "pos": "adj.",
+          "cn": "陰性的（檢測結果）",
+          "ex": "The test is negative.",
+          "exCn": "檢測結果為陰性。"
+        },
+        {
+          "w": "test",
+          "ipa": "/test/",
+          "pos": "n. / v.",
+          "cn": "檢測、測試（也可用在工作上）",
+          "ex": "I should test the product.",
+          "exCn": "我應該測試產品。"
+        },
+        {
+          "w": "prepared",
+          "ipa": "/prɪˈperd/",
+          "pos": "adj.",
+          "cn": "準備好的",
+          "ex": "I am not prepared.",
+          "exCn": "我還沒準備好。"
+        },
+        {
+          "w": "message",
+          "ipa": "/ˈmes.ɪdʒ/",
+          "pos": "v. / n.",
+          "cn": "傳訊息（給某人）",
+          "ex": "They message each other.",
+          "exCn": "她們互傳訊息。"
+        },
+        {
+          "w": "swap",
+          "star": true,
+          "ipa": "/swɑːp/",
+          "pos": "v.",
+          "cn": "交換",
+          "ex": "Sometimes they swap clothes.",
+          "exCn": "有時她們會交換衣服穿。"
+        },
+        {
+          "w": "chill",
+          "star": true,
+          "ipa": "/tʃɪl/",
+          "pos": "v.",
+          "cn": "放鬆、悠閒地待著（口語）",
+          "ex": "Sometimes they just chill in the park beside the church.",
+          "exCn": "有時她們就在教堂旁的公園裡放鬆。"
+        },
+        {
+          "w": "argue",
+          "ipa": "/ˈɑːr.ɡjuː/",
+          "pos": "v.",
+          "cn": "吵架、爭論",
+          "ex": "They never argue!",
+          "exCn": "她們從不吵架！"
+        },
+        {
+          "w": "bestie",
+          "star": true,
+          "ipa": "/ˈbes.ti/",
+          "pos": "n.",
+          "cn": "閨蜜、最要好的朋友（口語）",
+          "ex": "They are very good besties.",
+          "exCn": "她們是非常要好的閨蜜。"
+        },
+        {
+          "w": "jumper",
+          "ipa": "/ˈdʒʌm.pɚ/",
+          "pos": "n.",
+          "cn": "毛衣",
+          "ex": "They both like jeans and T-shirts or jumpers.",
+          "exCn": "兩人都喜歡牛仔褲配 T 恤或毛衣。"
+        },
+        {
+          "w": "commute",
+          "ipa": "/kəˈmjuːt/",
+          "pos": "v. / n.",
+          "cn": "通勤",
+          "ex": "I commute by scooter.",
+          "exCn": "我騎摩托車上下班。"
+        },
+        {
+          "w": "crowded",
+          "ipa": "/ˈkraʊdɪd/",
+          "pos": "adj.",
+          "cn": "擁擠的",
+          "ex": "Taichung is not crowded.",
+          "exCn": "台中並不擁擠。"
+        },
+        {
+          "w": "wide",
+          "ipa": "/waɪd/",
+          "pos": "adj.",
+          "cn": "寬的（比較級 wider）",
+          "ex": "Streets are wider than Taipei's streets.",
+          "exCn": "街道比台北的街道更寬。"
+        },
+        {
+          "w": "responsible",
+          "star": true,
+          "ipa": "/rɪˈspɑːnsəbl/",
+          "pos": "adj.",
+          "cn": "負責的",
+          "ex": "Teachers are responsible for learners' improvement.",
+          "exCn": "教師負責學生的進步。"
+        },
+        {
+          "w": "seldom",
+          "star": true,
+          "ipa": "/ˈsel.dəm/",
+          "pos": "adv.",
+          "cn": "很少、難得",
+          "ex": "I seldom get sick.",
+          "exCn": "我很少生病。"
+        }
+      ],
+      "phrasesTitle": "II. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "spend time together",
+          "cn": "一起相處、花時間在一起（詳見 IV）"
+        },
+        {
+          "p": "sit beside each other",
+          "cn": "坐在彼此旁邊（詳見 IV）"
+        },
+        {
+          "p": "meet up",
+          "cn": "碰面、會合（詳見 IV）"
+        },
+        {
+          "p": "go into town",
+          "cn": "進城（詳見 IV）"
+        },
+        {
+          "p": "do a bit of shopping",
+          "cn": "逛街買點東西（詳見 IV）"
+        },
+        {
+          "p": "an only child",
+          "cn": "獨生子女（詳見 V-A）"
+        },
+        {
+          "p": "running nose",
+          "cn": "流鼻水（生病症狀）"
+        },
+        {
+          "p": "cough / cough syrup",
+          "cn": "咳嗽／止咳糖漿（生病症狀）"
+        },
+        {
+          "p": "take medicine",
+          "cn": "吃藥（生病症狀）"
+        },
+        {
+          "p": "get tested",
+          "cn": "接受檢測（生病症狀）"
+        },
+        {
+          "p": "stay isolated",
+          "cn": "保持隔離（生病症狀）"
+        },
+        {
+          "p": "feel sick",
+          "cn": "感覺不舒服（生病症狀）"
+        },
+        {
+          "p": "red spot",
+          "cn": "紅點、紅疹（生病症狀）"
+        },
+        {
+          "p": "have a fever",
+          "cn": "發燒（生病症狀）"
+        },
+        {
+          "p": "have measles",
+          "cn": "患有麻疹（生病症狀）"
+        },
+        {
+          "p": "infect",
+          "cn": "感染、傳染（生病症狀）"
+        },
+        {
+          "p": "stay away from",
+          "cn": "遠離（生病症狀）"
+        },
+        {
+          "p": "work for + 公司",
+          "cn": "受雇於某公司（詳見 III-E）"
+        },
+        {
+          "p": "be responsible for",
+          "cn": "負責某事（詳見 III-E）"
+        },
+        {
+          "p": "in the meantime",
+          "cn": "在這期間、同時（詳見 III-F）"
+        }
+      ],
+      "grammarTitle": "III. 句型與文法 Grammar",
+      "grammar": [
+        {
+          "k": "III-A",
+          "title": "How often …?（頻率問句）",
+          "pat": "How often + do / does + 主詞 + 原形動詞？",
+          "pts": [
+            "🔬 結構：How often + do / does + 主詞 + 原形動詞？",
+            "🔬 中文解析：問「多久一次」，回答用頻率副詞（always、often、sometimes、seldom、never）或具體時間（on the weekend、twice a week）。",
+            "🔬 使用情境：問生活習慣，口說考試常見開場題。"
+          ],
+          "exs": [
+            {
+              "tag": "Q",
+              "en": "How often do you get sick?",
+              "cn": "你多久生病一次？"
+            },
+            {
+              "tag": "A",
+              "en": "I seldom get sick.",
+              "cn": "我很少生病。"
+            },
+            {
+              "tag": "Q",
+              "en": "How often do you visit your family?",
+              "cn": "你多久回家一次？"
+            },
+            {
+              "tag": "A",
+              "en": "I visit my family on the weekend. / I often visit my family.",
+              "cn": "我週末回家。／我經常回家。"
+            }
+          ]
+        },
+        {
+          "k": "III-B",
+          "title": "How long does it take to …?（做某事要多久）",
+          "pat": "How long does it take (+ 人) to + 原形動詞？→ It takes (+ 人) + 時間 + to + 原形動詞.",
+          "pts": [
+            "🔬 結構：How long does it take (+ 人) to + 原形動詞？→ It takes (+ 人) + 時間 + to + 原形動詞。",
+            "🔬 中文解析：it 是虛主詞，真正的內容在 to + 原形動詞；要指明是誰，就在 takes 後面加人（It takes me 15 minutes）。",
+            "🔬 ⚠ 避免中式英文：不要直譯成 I take 15 minutes to go to work，慣用說法是 It takes me…。"
+          ],
+          "exs": [
+            {
+              "tag": "Q",
+              "en": "How long does it take to practice English?",
+              "cn": "練習英語需要多久時間？"
+            },
+            {
+              "tag": "A",
+              "en": "It takes an hour to practice English.",
+              "cn": "練習英語需要一個小時。"
+            },
+            {
+              "tag": "Q",
+              "en": "How long does it take to get to your work?",
+              "cn": "去上班需要多久？"
+            },
+            {
+              "tag": "A",
+              "en": "It takes me 15 minutes to get to work.",
+              "cn": "我上班需要 15 分鐘。"
+            }
+          ]
+        },
+        {
+          "k": "III-C",
+          "title": "How do you commute?（通勤方式）",
+          "pat": "by + 交通工具（不加冠詞）／ride / drive / take + 交通工具",
+          "pts": [
+            "🔬 結構：by + 交通工具（不加冠詞）：by scooter / by bus / by MRT；或用動詞 ride / drive / take：I ride my scooter. / I take the bus.",
+            "🔬 ⚠ 避免中式英文：不可說 by a scooter；by 後面的交通工具不加 a/the。",
+            "🔬 單字：commute（通勤，可當動詞或名詞）。"
+          ],
+          "exs": [
+            {
+              "tag": "Q",
+              "en": "How do you commute?",
+              "cn": "你如何上下班（通勤）？"
+            },
+            {
+              "tag": "by + 交通工具",
+              "en": "I commute by scooter.",
+              "cn": "我騎摩托車上下班。"
+            },
+            {
+              "tag": "ride",
+              "en": "I ride my scooter.",
+              "cn": "我騎摩托車。"
+            }
+          ]
+        },
+        {
+          "k": "III-D",
+          "title": "比較級 + than（城市描述）",
+          "pat": "形容詞 + -er + than（短音節）／more + 形容詞 + than（長音節）",
+          "pts": [
+            "🔬 結構：形容詞 + -er + than（短音節）／more + 形容詞 + than（長音節）。",
+            "🔬 中文解析：wide → wider（去掉 e 加 -er）。比較對象要對等：streets 比 Taipei's streets（不是比 Taipei 這座城市）。",
+            "🔬 使用情境：介紹自己的城市、比較兩地差異。"
+          ],
+          "exs": [
+            {
+              "tag": "not + 形容詞",
+              "en": "Taichung is not crowded.",
+              "cn": "台中並不擁擠。"
+            },
+            {
+              "tag": "比較級",
+              "en": "Streets are wider than Taipei's streets.",
+              "cn": "街道比台北的街道更寬。"
+            },
+            {
+              "tag": "時間表達",
+              "en": "MRT started to run in Taichung two years ago.",
+              "cn": "兩年前捷運開始在台中營運。"
+            }
+          ]
+        },
+        {
+          "k": "III-E",
+          "title": "work for + 公司（在哪裡工作）",
+          "pat": "work for + 公司／be responsible for + 名詞 或 V-ing",
+          "pts": [
+            "🔬 結構：work for + 公司（受雇於某公司）；be responsible for + 名詞／V-ing（負責某事）。",
+            "🔬 ⚠ 避免中式英文：不要用 I work in a fitness equipment company 表示受雇關係；work in 後面通常接部門或地點（work in the QA department）。"
+          ],
+          "exs": [
+            {
+              "tag": "Q",
+              "en": "What company do you work for?",
+              "cn": "你在哪家公司工作？"
+            },
+            {
+              "tag": "work for",
+              "en": "I work for a fitness equipment company.",
+              "cn": "我在健身器材公司工作。"
+            },
+            {
+              "tag": "responsible for",
+              "en": "Teachers are responsible for learners' improvement.",
+              "cn": "教師負責學生的進步。"
+            }
+          ]
+        },
+        {
+          "k": "III-F",
+          "title": "The good thing is … / in the meantime（實用連接語）",
+          "pat": "The good thing about + 名詞 + is that + 子句",
+          "pts": [
+            "🔬 結構：The good thing about + 名詞 + is that + 子句（……的好處是……）。",
+            "🔬 in the meantime ＝ 在這期間、同時，用來連接兩件同時進行的事。",
+            "🔬 使用情境：介紹工作優點、描述同時進行的活動。"
+          ],
+          "exs": [
+            {
+              "tag": "The good thing",
+              "en": "The good thing about my work is that I can communicate with many people.",
+              "cn": "我工作的好處是我可以和很多人交流。"
+            },
+            {
+              "tag": "in the meantime",
+              "en": "I study reading; in the meantime, I practice speaking.",
+              "cn": "我學習閱讀，同時也練習口說。"
+            },
+            {
+              "tag": "習慣動作",
+              "en": "I stay at home every weekend.",
+              "cn": "我每個週末都待在家裡。"
+            }
+          ]
+        }
+      ],
+      "reading": [
+        {
+          "bar": "IV. 閱讀 Reading：Always Together, Best Friends Forever!",
+          "title": "Always Together, Best Friends Forever!",
+          "titleCn": "永遠在一起，永遠的好朋友！",
+          "paras": [
+            {
+              "en": "Sammy-Jo and Chelsea are best friends. They spend a lot of time together. They are in the same class at school and they live in the same street. At school, they sit beside each other but sometimes they talk. Their teacher, Miss Smithson, does not like this. She always tells them to stop talking, but they never listen!",
+              "cn": "Sammy-Jo 和 Chelsea 是最要好的朋友。她們花很多時間在一起。她們在學校同班，也住在同一條街上。在學校，她們坐在彼此旁邊，但有時會聊天。她們的老師 Smithson 小姐不喜歡這樣。她總是叫她們別再講話，但她們從來不聽！"
+            },
+            {
+              "en": "Happily, they love school and they work hard. They help each other. Sometimes, they do their homework together. Usually, Sammy-Jo goes to Chelsea's house because Chelsea has no brothers and sisters. Sammy-Jo has two sisters and a brother and they have to share computers.",
+              "cn": "令人開心的是，她們喜歡上學而且很用功。她們互相幫助。有時候她們一起寫作業。通常是 Sammy-Jo 去 Chelsea 家，因為 Chelsea 沒有兄弟姊妹。Sammy-Jo 有兩個姊妹和一個兄弟，他們必須共用電腦。"
+            },
+            {
+              "en": "When they are not together, they talk on their phones or they message each other. On Saturdays, they usually go into town. They meet up at the end of their street and walk to town. If it rains, they take the bus. In the morning, they look at the shops and do a bit of shopping. In the afternoon, sometimes they go to the cinema or sometimes they just chill in the park beside the church.",
+              "cn": "當她們沒有在一起時，會用電話聊天或互傳訊息。星期六她們通常會進城。她們在街尾碰面，然後走路去城裡。如果下雨，她們就搭公車。早上她們逛商店、買點東西。下午有時去看電影，有時就在教堂旁的公園裡放鬆。"
+            },
+            {
+              "en": "They see each other on Sundays and they maybe watch a film together in Chelsea's bedroom or play their computer games. They dress the same: they both like jeans and T-shirts or jumpers. Sometimes they swap clothes. They like the same food. Pizza is their favourite dish. They have one difference: Chelsea loves dogs but Sammy-Jo loves cats. They are very good besties and they never argue!",
+              "cn": "星期天她們也會見面，可能一起在 Chelsea 的房間看電影，或玩電腦遊戲。她們穿著相似：兩人都喜歡牛仔褲配 T 恤或毛衣。有時她們會交換衣服穿。她們喜歡一樣的食物，披薩是她們最愛的餐點。她們只有一個不同點：Chelsea 喜歡狗，但 Sammy-Jo 喜歡貓。她們是非常要好的閨蜜，而且從不吵架！"
+            }
+          ],
+          "questions": [
+            {
+              "q": "Are Sammy-Jo and Chelsea sisters?",
+              "qCn": "Sammy-Jo 和 Chelsea 是姊妹嗎？",
+              "a": "No, they aren't. They are best friends.",
+              "aCn": "不是，她們是最要好的朋友。"
+            },
+            {
+              "q": "Do they live near to each other?",
+              "qCn": "她們住得近嗎？",
+              "a": "Yes, they do. They live in the same street.",
+              "aCn": "是的，她們住在同一條街上。"
+            },
+            {
+              "q": "At school, where do they sit?",
+              "qCn": "在學校她們坐在哪裡？",
+              "a": "They sit beside each other.",
+              "aCn": "她們坐在彼此旁邊。"
+            },
+            {
+              "q": "Do they like school?",
+              "qCn": "她們喜歡上學嗎？",
+              "a": "Yes, they do. They love school and they work hard.",
+              "aCn": "是的，她們喜歡上學而且很用功。"
+            },
+            {
+              "q": "Where do they do their homework?",
+              "qCn": "她們在哪裡寫作業？",
+              "a": "They usually do their homework at Chelsea's house.",
+              "aCn": "她們通常在 Chelsea 家寫作業。"
+            },
+            {
+              "q": "How many brothers and sisters has Sammy-Jo got?",
+              "qCn": "Sammy-Jo 有幾個兄弟姊妹？",
+              "a": "She has two sisters and a brother.",
+              "aCn": "她有兩個姊妹和一個兄弟。"
+            },
+            {
+              "q": "When they are not together, how do they contact each other?",
+              "qCn": "她們沒在一起時怎麼聯絡？",
+              "a": "They talk on their phones or they message each other.",
+              "aCn": "她們用電話聊天或互傳訊息。"
+            },
+            {
+              "q": "What do they usually do on Saturdays?",
+              "qCn": "她們星期六通常做什麼？",
+              "a": "They usually go into town, do a bit of shopping, and go to the cinema or chill in the park.",
+              "aCn": "她們通常進城、逛街買點東西，然後去看電影或在公園放鬆。"
+            },
+            {
+              "q": "What do they do on Sundays?",
+              "qCn": "她們星期天做什麼？",
+              "a": "They watch a film together in Chelsea's bedroom or play computer games.",
+              "aCn": "她們在 Chelsea 的房間一起看電影或玩電腦遊戲。"
+            },
+            {
+              "q": "How do they dress?",
+              "qCn": "她們怎麼穿著？",
+              "a": "They dress the same. They both like jeans and T-shirts or jumpers.",
+              "aCn": "她們穿著相似，都喜歡牛仔褲配 T 恤或毛衣。"
+            },
+            {
+              "q": "What is their favourite food?",
+              "qCn": "她們最愛的食物是什麼？",
+              "a": "Pizza is their favourite dish.",
+              "aCn": "披薩是她們最愛的餐點。"
+            }
+          ],
+          "sumEn": [
+            "Frequency words in the passage: always, usually, sometimes, never.",
+            "Friendship verbs: spend time together, help each other, meet up, message each other, swap clothes, argue."
+          ],
+          "sumCn": [
+            "文章裡的頻率副詞：always（總是）、usually（通常）、sometimes（有時）、never（從不）。",
+            "友情相關動詞：一起相處、互相幫助、碰面、互傳訊息、交換衣服、吵架。"
+          ]
+        }
+      ],
+      "extraTitle": "V. 課堂練習 Class Practice",
+      "extra": [
+        {
+          "title": "V-A. 是非題 True or False",
+          "exs": [
+            {
+              "en": "Sammy-Jo and Chelsea are best friends. → True",
+              "cn": "1. 她們是最要好的朋友。→ 對",
+              "hi": "best friends"
+            },
+            {
+              "en": "They never spend time together. → False (They spend a lot of time together.)",
+              "cn": "2. 她們從不一起相處。→ 錯（她們花很多時間在一起。）",
+              "hi": "never"
+            },
+            {
+              "en": "They live in the same street. → True",
+              "cn": "3. 她們住在同一條街上。→ 對",
+              "hi": "same street"
+            },
+            {
+              "en": "At school, they are in different classes. → False (They are in the same class.)",
+              "cn": "4. 她們在學校不同班。→ 錯（她們同班。）",
+              "hi": "different classes"
+            },
+            {
+              "en": "They never chat in class. → False (Sometimes they talk.)",
+              "cn": "5. 她們上課從不聊天。→ 錯（有時會聊天。）",
+              "hi": "never chat"
+            },
+            {
+              "en": "Their teacher is called Miss Smithson. → True",
+              "cn": "6. 她們的老師叫 Smithson 小姐。→ 對",
+              "hi": "Miss Smithson"
+            },
+            {
+              "en": "Their teacher never tells them to stop talking. → False (She always tells them to stop talking.)",
+              "cn": "7. 老師從不叫她們別講話。→ 錯（老師總是叫她們別再講話。）",
+              "hi": "stop talking"
+            },
+            {
+              "en": "They always do their homework together. → False (Sometimes, not always.)",
+              "cn": "8. 她們總是一起寫作業。→ 錯（是 sometimes，不是 always。）",
+              "hi": "always"
+            },
+            {
+              "en": "Chelsea is an only child. → True (Chelsea has no brothers and sisters.)",
+              "cn": "9. Chelsea 是獨生女。→ 對（她沒有兄弟姊妹。）",
+              "hi": "an only child"
+            },
+            {
+              "en": "Sammy-Jo has two sisters and a brother. → True",
+              "cn": "10. Sammy-Jo 有兩個姊妹和一個兄弟。→ 對",
+              "hi": "two sisters and a brother"
+            },
+            {
+              "en": "On Saturdays, they usually go to their grandparents' house. → False (They usually go into town.)",
+              "cn": "11. 星期六她們通常去祖父母家。→ 錯（她們通常進城。）",
+              "hi": "go into town"
+            },
+            {
+              "en": "When they go to town, they meet up at the end of their street. → True",
+              "cn": "12. 她們進城時在街尾碰面。→ 對",
+              "hi": "meet up"
+            },
+            {
+              "en": "On Saturday mornings, they usually do a bit of shopping. → True",
+              "cn": "13. 星期六早上她們通常逛街買點東西。→ 對",
+              "hi": "do a bit of shopping"
+            },
+            {
+              "en": "They never meet up on Sundays. → False (They see each other on Sundays.)",
+              "cn": "14. 她們星期天從不碰面。→ 錯（星期天她們也會見面。）",
+              "hi": "never meet up"
+            },
+            {
+              "en": "They both like skirts and hats. → False (They like jeans and T-shirts or jumpers.)",
+              "cn": "15. 兩人都喜歡裙子和帽子。→ 錯（她們喜歡牛仔褲配 T 恤或毛衣。）",
+              "hi": "skirts and hats"
+            },
+            {
+              "en": "They love pizza. → True",
+              "cn": "16. 她們很愛披薩。→ 對",
+              "hi": "pizza"
+            },
+            {
+              "en": "Chelsea loves cats and Sammy-Jo loves dogs. → False (It is the opposite.)",
+              "cn": "17. Chelsea 喜歡貓、Sammy-Jo 喜歡狗。→ 錯（剛好相反。）",
+              "hi": "the opposite"
+            },
+            {
+              "en": "They never argue. → True",
+              "cn": "18. 她們從不吵架。→ 對",
+              "hi": "never argue"
+            }
+          ]
+        }
+      ],
+      "summaryTitle": "VI. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "頻率問句",
+          "v": "How often do you …? → I seldom / often / usually …"
+        },
+        {
+          "k": "時間問句",
+          "v": "How long does it take to …? → It takes me + 時間 + to + 原形動詞"
+        },
+        {
+          "k": "通勤",
+          "v": "commute by scooter（by + 交通工具不加冠詞）"
+        },
+        {
+          "k": "比較級",
+          "v": "Streets are wider than Taipei's streets（比較對象要對等）"
+        },
+        {
+          "k": "工作",
+          "v": "work for + 公司；be responsible for + 事情"
+        },
+        {
+          "k": "好處與同時",
+          "v": "The good thing is that …／in the meantime"
+        }
+      ]
+    },
+    /* ---- bk20250722 My Best Friend: Friendship Phrases & That's why / That's what ---- */
+    {
+      "id": "bk20250722",
+      "icon": "📗",
+      "date": "2025-07-22",
+      "doc": "https://docs.google.com/document/d/18CQH6p0jBi9xAfPHV1lzx1A_Pj99nqYVxqLNnEdkg7w/edit",
+      "title": "My Best Friend: Friendship Phrases & That's why / That's what",
+      "titleCn": "我最好的朋友：友誼片語與 That's why／That's what 句型",
+      "topics": "生活動作片語作業複習、友誼片語、閱讀「My Best Friend」、That's why 與 That's what、現在完成式 have been friends for、分離式片語動詞",
+      "hwTitle": "I. ★ 07/22 作業複習 Homework Review",
+      "hw": [
+        {
+          "n": 1,
+          "wrong": "Tom stays in job he doesn't love just to pay the pills.",
+          "fix": "Tom stays in a job he doesn't love just to pay the bills.",
+          "cn": "Tom 待在一份他並不喜歡的工作裡，只為了付帳單。",
+          "pat": "pay the bills",
+          "note": "pills 是「藥丸」，bills 才是「帳單」，拼字只差一個字母但意思完全不同。另外 job 是可數名詞，第一次提到要加冠詞 a（stays in a job）。"
+        },
+        {
+          "n": 2,
+          "ok": "She gets her haircut every month.",
+          "cn": "她每個月剪一次頭髮。",
+          "pat": "get a haircut",
+          "note": "get a haircut ＝ 去剪頭髮（讓別人剪）。說「自己的頭髮」時也可以用 get her hair cut。"
+        },
+        {
+          "n": 3,
+          "ok": "I set an alarm to get up on time.",
+          "cn": "我設鬧鐘以便準時起床。",
+          "pat": "set an alarm",
+          "note": "set an alarm（設鬧鐘）；on time ＝ 準時（in time 是「及時、來得及」，兩者不同）。"
+        },
+        {
+          "n": 4,
+          "ok": "The train was delayed for 15 minutes, so Tom was running late.",
+          "cn": "火車誤點 15 分鐘，所以 Tom 快要遲到了。",
+          "pat": "run late",
+          "note": "run late ＝ 進度落後、快要遲到，常用進行式 be running late。be delayed ＝ 被延誤。"
+        },
+        {
+          "n": 5,
+          "ok": "I help my mom set the table.",
+          "cn": "我幫媽媽擺餐具。",
+          "pat": "set the table",
+          "note": "set the table ＝ 擺放碗筷餐具（飯前準備）。help + 人 + 原形動詞，中間不加 to。"
+        },
+        {
+          "n": 6,
+          "ok": "Kelly booked a flight to see her son next week.",
+          "cn": "Kelly 訂了機票，下週要去看她兒子。",
+          "pat": "book a flight",
+          "note": "book 當動詞是「預訂」；book a flight ＝ 訂機票。"
+        },
+        {
+          "n": 7,
+          "ok": "I need to exchange money before I can pay.",
+          "cn": "我需要先換錢才能付款。",
+          "pat": "exchange money",
+          "note": "exchange money ＝ 換錢、兌換外幣。"
+        },
+        {
+          "n": 8,
+          "wrong": "After meeting, they went to sightseeing the city.",
+          "fix": "After the meeting, they went sightseeing in the city.",
+          "cn": "會議結束後，他們去城裡觀光。",
+          "pat": "go sightseeing",
+          "note": "go sightseeing 中間不加 to（同 go shopping、go swimming）。地點要用介系詞：sightseeing in the city。指「那場會議」時要加 the（after the meeting）。"
+        },
+        {
+          "n": 9,
+          "wrong": "I usually run an errands on Sunday.",
+          "fix": "I usually run errands on Sunday.",
+          "cn": "我通常在星期天跑腿辦事。",
+          "pat": "run errands",
+          "note": "run errands 慣用複數且不加冠詞；要講一件事才說 run an errand。"
+        },
+        {
+          "n": 10,
+          "ok": "I charged my phone before I slept.",
+          "cn": "我睡前把手機充電了。",
+          "pat": "charge my phone",
+          "note": "charge ＝ 充電。也可說 before I went to sleep（注意是 sleep，不是 slept）。"
+        },
+        {
+          "n": 11,
+          "ok": "I am boarding the plane at Gate 5.",
+          "cn": "我正在 5 號登機門登機。",
+          "pat": "board the plane",
+          "note": "board 當動詞是「登上（飛機、船、車）」，後面直接接受詞，不加 on。"
+        },
+        {
+          "n": 12,
+          "ok": "We usually split the bill when we go out together.",
+          "cn": "我們一起出去時通常會分攤帳單。",
+          "pat": "split the bill",
+          "note": "split the bill ＝ 平分帳單（各付一半）；各付自己的則說 go Dutch 或 pay separately。"
+        },
+        {
+          "n": 13,
+          "ok": "Can I take a day off this Friday?",
+          "cn": "這週五我可以請一天假嗎？",
+          "pat": "take a day off",
+          "note": "take a day off ＝ 請一天假；請兩天說 take two days off。"
+        },
+        {
+          "n": 14,
+          "wrong": "Kelly blocks Sara's number because they are argued.",
+          "fix": "Kelly blocked Sarah's number because they had an argument.",
+          "cn": "Kelly 封鎖了 Sarah 的電話號碼，因為他們吵了一架。",
+          "pat": "block someone's number；have an argument",
+          "note": "argue 是不及物動詞，不能用被動 are argued；要說 they argued 或 they had an argument（吵架）。這是已發生的事，動詞用過去式 blocked。"
+        }
+      ],
+      "vocabTitle": "II. 單字 Vocabulary",
+      "vocab": [
+        {
+          "w": "solve",
+          "ipa": "/sɑːlv/",
+          "pos": "v.",
+          "cn": "解決；思索",
+          "ex": "We need to solve the problem together.",
+          "exCn": "我們需要一起解決這個問題。"
+        },
+        {
+          "w": "fluently",
+          "star": true,
+          "ipa": "/ˈfluː.ənt.li/",
+          "pos": "adv.",
+          "cn": "流利地",
+          "ex": "Read fluently.",
+          "exCn": "流利地朗讀。"
+        },
+        {
+          "w": "sociable",
+          "star": true,
+          "ipa": "/ˈsoʊ.ʃə.bəl/",
+          "pos": "adj.",
+          "cn": "好交際的；善於社交的；合群的",
+          "ex": "His communication skills are very good. He is a sociable person.",
+          "exCn": "他的溝通能力很好。他是個善於交際的人。"
+        },
+        {
+          "w": "appreciate",
+          "star": true,
+          "ipa": "/əˈpriː.ʃi.eɪt/",
+          "pos": "v.",
+          "cn": "欣賞；賞識；重視；感謝",
+          "ex": "I appreciate your help.",
+          "exCn": "我很感謝你的幫助。"
+        },
+        {
+          "w": "communication",
+          "ipa": "/kəˌmjunəˈkeʃən/",
+          "pos": "n.",
+          "cn": "溝通",
+          "ex": "We have great communication.",
+          "exCn": "我們溝通良好。"
+        },
+        {
+          "w": "infect",
+          "star": true,
+          "ipa": "/ɪnˈfekt/",
+          "pos": "v.",
+          "cn": "感染、傳染",
+          "ex": "I am infected. / You will be infected.",
+          "exCn": "我被感染了。／你會被感染的。"
+        }
+      ],
+      "phrasesTitle": "III. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "be always there for someone",
+          "cn": "總是在某人身邊支持他（詳見 V）"
+        },
+        {
+          "p": "whenever I have a problem",
+          "cn": "每當我遇到問題（詳見 IV-B）"
+        },
+        {
+          "p": "never judge someone ⭐",
+          "cn": "從不評斷某人（詳見 V）"
+        },
+        {
+          "p": "have someone's back ⭐",
+          "cn": "支持某人、挺某人（詳見 V）"
+        },
+        {
+          "p": "caring",
+          "cn": "有愛心的、關心人的（詳見 V）"
+        },
+        {
+          "p": "look out for someone",
+          "cn": "照顧某人、留意某人（詳見 V）"
+        },
+        {
+          "p": "text someone",
+          "cn": "傳訊息給某人（詳見 V）"
+        },
+        {
+          "p": "cheer someone up ⭐",
+          "cn": "讓某人開心起來（詳見 IV-D）"
+        },
+        {
+          "p": "be honest with someone",
+          "cn": "對某人誠實（詳見 VI-A）"
+        },
+        {
+          "p": "do something wrong",
+          "cn": "做錯事（詳見 V）"
+        },
+        {
+          "p": "hear the truth",
+          "cn": "聽真話（詳見 V）"
+        },
+        {
+          "p": "have ups and downs ⭐",
+          "cn": "有起有落（詳見 VI-A）"
+        },
+        {
+          "p": "talk things out ⭐",
+          "cn": "把事情說開（詳見 V）"
+        },
+        {
+          "p": "be on the same page ⭐",
+          "cn": "想法一致、有共識（詳見 V）"
+        },
+        {
+          "p": "work through our problems",
+          "cn": "解決我們的問題（詳見 V）"
+        },
+        {
+          "p": "make friendship strong",
+          "cn": "使友誼牢固（詳見 IV-A）"
+        },
+        {
+          "p": "last a lifetime",
+          "cn": "持續一生（詳見 V）"
+        },
+        {
+          "p": "pay the bills",
+          "cn": "付帳單（詳見 I-1）"
+        },
+        {
+          "p": "get a haircut",
+          "cn": "剪頭髮（詳見 I-2）"
+        },
+        {
+          "p": "set an alarm",
+          "cn": "設鬧鐘（詳見 I-3）"
+        },
+        {
+          "p": "run late",
+          "cn": "遲到、來不及（詳見 I-4）"
+        },
+        {
+          "p": "set the table",
+          "cn": "擺餐具（詳見 I-5）"
+        },
+        {
+          "p": "book a flight",
+          "cn": "訂機票（詳見 I-6）"
+        },
+        {
+          "p": "exchange money",
+          "cn": "換錢（詳見 I-7）"
+        },
+        {
+          "p": "go sightseeing",
+          "cn": "去觀光（不加 to，詳見 I-8）"
+        },
+        {
+          "p": "run errands",
+          "cn": "跑腿辦事（複數，詳見 I-9）"
+        },
+        {
+          "p": "charge my phone",
+          "cn": "手機充電（詳見 I-10）"
+        },
+        {
+          "p": "board the plane",
+          "cn": "登機（詳見 I-11）"
+        },
+        {
+          "p": "split the bill",
+          "cn": "分攤帳單（詳見 I-12）"
+        },
+        {
+          "p": "take a day off",
+          "cn": "請一天假（詳見 I-13）"
+        },
+        {
+          "p": "block someone's number",
+          "cn": "封鎖某人的號碼（詳見 I-14）"
+        },
+        {
+          "p": "have an argument",
+          "cn": "吵架（詳見 I-14）"
+        },
+        {
+          "p": "be lucky to + V",
+          "cn": "很幸運能……（詳見 VI-C）"
+        }
+      ],
+      "grammarTitle": "IV. 句型與文法 Grammar",
+      "grammar": [
+        {
+          "k": "IV-A",
+          "title": "That's why … vs. That's what …（重點句型）",
+          "pat": "That's why + 主詞 + 動詞／That's what + 動詞（不加主詞）",
+          "pts": [
+            "🔬 結構：That's why + 完整子句（後面有主詞＋動詞）／That's what + 動詞（what 本身就是主詞，後面直接接動詞）。",
+            "🔬 中文解析：why 引導「原因」，後面要有完整的主詞和動詞；what 當關係代名詞，本身就是後面動詞的主詞，所以不能再加主詞。",
+            "🔬 ⚠ 避免中式英文：不可寫成 That's what she made her my bestie.（多了主詞 she）。",
+            "🔬 使用情境：說明理由、下結論，口說與寫作都很加分。"
+          ],
+          "exs": [
+            {
+              "tag": "That's why（強調現在的關係／結果）",
+              "en": "That's why she is my bestie.",
+              "cn": "那就是她成為我最好的朋友的原因。"
+            },
+            {
+              "tag": "That's what（強調過去的事件）",
+              "en": "That's what made her my bestie.",
+              "cn": "那就是讓她成為我最好的朋友的原因。"
+            },
+            {
+              "tag": "That's what",
+              "en": "That's what makes our friendship so strong.",
+              "cn": "那就是讓我們友誼如此堅固的原因。"
+            }
+          ]
+        },
+        {
+          "k": "IV-B",
+          "title": "Whenever + 子句（每當……）",
+          "pat": "Whenever + 主詞 + 現在式動詞, 主要子句",
+          "pts": [
+            "🔬 結構：Whenever + 主詞 + 現在式動詞, 主要子句。",
+            "🔬 中文解析：whenever ＝ every time（每當、無論何時），描述反覆發生的情況，時態用現在簡單式。",
+            "🔬 使用情境：描述習慣性、規律性的互動。"
+          ],
+          "exs": [
+            {
+              "tag": "Whenever",
+              "en": "Whenever I have a problem, I know that I can talk to her.",
+              "cn": "每當我遇到問題，我知道我可以跟她說。"
+            }
+          ]
+        },
+        {
+          "k": "IV-C",
+          "title": "現在完成式：have been friends for + 時間",
+          "pat": "主詞 + have / has + 過去分詞 + for + 時間長度",
+          "pts": [
+            "🔬 結構：主詞 + have / has + 過去分詞 + for + 時間長度。",
+            "🔬 中文解析：表示「從過去持續到現在，而且還在繼續」。for 後面接時間長度（a long time、two years）；若接時間點要用 since。",
+            "🔬 ⚠ 避免中式英文：不可說 We are friends for a long time.（現在式無法表達持續）。"
+          ],
+          "exs": [
+            {
+              "tag": "have been … for",
+              "en": "Sarah and I have been friends for a long time now.",
+              "cn": "Sarah 和我已經是很久的朋友了。"
+            },
+            {
+              "tag": "has always been there",
+              "en": "She's always been there for me when I needed her.",
+              "cn": "當我需要她時，她總是在我身邊。"
+            }
+          ]
+        },
+        {
+          "k": "IV-D",
+          "title": "分離式片語動詞：cheer someone up",
+          "pat": "cheer + 受詞 + up（受詞是代名詞時必須放中間）",
+          "pts": [
+            "🔬 結構：cheer + 受詞 + up（受詞是代名詞時必須放中間）。",
+            "🔬 ⚠ 避免中式英文：不可寫成 cheer up me；但受詞是名詞時兩種都可以（cheer up my friend / cheer my friend up）。",
+            "🔬 同類片語：look out for someone（照顧某人）、talk things out（把事情說開）。"
+          ],
+          "exs": [
+            {
+              "tag": "cheer sb up",
+              "en": "She knows just how to cheer me up.",
+              "cn": "她很知道怎麼讓我開心起來。"
+            }
+          ]
+        }
+      ],
+      "reading": [
+        {
+          "bar": "V. 閱讀 Reading：My Best Friend",
+          "title": "My Best Friend",
+          "titleCn": "我最好的朋友",
+          "paras": [
+            {
+              "en": "Hi, my name is Kelly, and I want to talk about my best friend, Sarah. She's always been there for me when I needed her. Whenever I have a problem, I know that I can talk to her and she'll listen. She never judges me, and she always has my back.",
+              "cn": "嗨，我叫 Kelly，我想談談我最好的朋友 Sarah。當我需要她時，她總是在我身邊。每當我遇到問題，我知道我可以跟她說，她會傾聽。她從不評斷我，而且總是支持我。"
+            },
+            {
+              "en": "Sarah is a good friend because she's kind and caring. She's always looking out for me and making sure that I'm okay. She'll call me or text me just to see how I'm doing. And if I'm having a bad day, she knows just how to cheer me up.",
+              "cn": "Sarah 是個好朋友，因為她善良又有愛心。她總是照顧我，確認我一切都好。她會打電話或傳訊息給我，只是想看看我過得如何。如果我心情不好，她很知道該怎麼讓我開心起來。"
+            },
+            {
+              "en": "One thing that I really appreciate about Sarah is that she's honest with me. If she thinks that I'm doing something wrong or if I need to hear the truth about something, she'll tell me. I might not always like what she has to say, but I know that she's looking out for me.",
+              "cn": "我特別欣賞 Sarah 的一點是，她對我很誠實。如果她覺得我做錯了什麼，或是我需要聽到實話，她會直說。我不一定總是喜歡她說的話，但我知道她是為我著想。"
+            },
+            {
+              "en": "Sarah and I have been friends for a long time now, and we've had our ups and downs. But no matter what, we always work through our problems. We talk things out and make sure that we're on the same page. That's what makes our friendship so strong.",
+              "cn": "Sarah 和我已經是很久的朋友了，我們也有過起起落落。但無論如何，我們總是一起解決問題。我們把話說開，確保彼此想法一致。這就是讓我們友誼如此堅固的原因。"
+            },
+            {
+              "en": "Sarah is a great friend because she's always there for me, she's kind and caring, she's honest, and we have great communication. I'm lucky to have her as my friend, and I know that our friendship will last a lifetime.",
+              "cn": "Sarah 是個很棒的朋友，因為她總是在我身邊、善良有愛心、誠實，而且我們溝通良好。我很幸運有她這個朋友，我也知道我們的友誼會持續一輩子。"
+            }
+          ],
+          "questions": [
+            {
+              "q": "What is their friendship like?",
+              "qCn": "他們的友誼是什麼樣子？",
+              "a": "Sarah is a kind, caring, and honest friend. She always supports Kelly, listens to her, and checks in to make sure she's okay. Even when they have problems, they work through them together. Sarah is a loyal friend, and their friendship is strong and lasting.",
+              "aCn": "Sarah 是個善良、有愛心又誠實的朋友。她總是支持 Kelly、傾聽她，並確認她一切安好。即使遇到問題，他們也會一起解決。Sarah 是個忠實的朋友，他們的友誼堅固而長久。"
+            },
+            {
+              "q": "What is Sarah like?",
+              "qCn": "Sarah 是什麼樣的人？",
+              "a": "She is kind, caring and honest.",
+              "aCn": "她善良、有愛心又誠實。"
+            }
+          ],
+          "sumEn": [
+            "Four sentences to describe a best friend: She is always there for me / She never judges me / She always has my back / She knows how to cheer me up.",
+            "The friendship process: have ups and downs → work through our problems → talk things out → be on the same page → last a lifetime."
+          ],
+          "sumCn": [
+            "描述好朋友的四句話：她總是在我身邊／她從不評斷我／她總是支持我／她知道怎麼讓我開心起來。",
+            "友誼歷程：有起有落 → 一起解決問題 → 把事情說開 → 想法一致 → 持續一生。"
+          ]
+        }
+      ],
+      "extraTitle": "VI. 生活實用句與造句練習 Useful Sentences & Practice",
+      "extra": [
+        {
+          "title": "VI-A. 生活實用句 Useful Sentences",
+          "exs": [
+            {
+              "en": "My bestie Karen knows my favorite drink is milk tea. When I'm unhappy, she just sits beside me, reminding me I'm not alone. That's why she is my bestie.",
+              "cn": "我最好的朋友 Karen 知道我最喜歡的飲料是奶茶。當我不開心時，她會坐在我身邊，提醒我我不是孤單的。這就是她成為我最好的朋友的原因。",
+              "hi": "That's why she is my bestie"
+            },
+            {
+              "en": "Tom goes to church on one Sunday every month.",
+              "cn": "Tom 每個月有一個星期天會去教堂。",
+              "hi": "on one Sunday every month"
+            },
+            {
+              "en": "I shared my computer with Tom because he forgot to bring his.",
+              "cn": "我把電腦借給了 Tom，因為他忘了帶自己的。",
+              "hi": "shared … with"
+            },
+            {
+              "en": "It's really bad that Tom oversleeps.",
+              "cn": "Tom 總是睡過頭，這真的不好。",
+              "hi": "It's really bad that"
+            },
+            {
+              "en": "I appreciate your help. / Thanks for your help.",
+              "cn": "我很感謝你的幫助。／謝謝你的幫忙。",
+              "hi": "appreciate your help"
+            },
+            {
+              "en": "Please be honest with me.",
+              "cn": "請對我誠實。",
+              "hi": "be honest with"
+            },
+            {
+              "en": "Everyone has ups and downs in their lives.",
+              "cn": "每個人一生中都有起起落落。",
+              "hi": "ups and downs"
+            },
+            {
+              "en": "I have never had a good friendship with anyone.",
+              "cn": "我從來沒有和任何人建立過一段好的友誼。",
+              "hi": "have never had"
+            },
+            {
+              "en": "I am infected. Please stay away from me. You will be infected.",
+              "cn": "我被感染了。請離我遠一點。你會被感染的。",
+              "hi": "stay away from"
+            }
+          ]
+        },
+        {
+          "title": "VI-B. 第二次作業：片語整合造句（訂正後版本）",
+          "exs": [
+            {
+              "en": "Before I get a haircut, I need to pay the bills.",
+              "cn": "1. 在我去剪頭髮之前，我需要先付帳單。",
+              "hi": "get a haircut / pay the bills"
+            },
+            {
+              "en": "Tom forgot to set an alarm, so he's running late.",
+              "cn": "2. Tom 忘記設鬧鐘，所以他要遲到了。",
+              "hi": "set an alarm / running late"
+            },
+            {
+              "en": "Today, I need to set the table, do the laundry and mop the floor.",
+              "cn": "3. 今天我需要擺餐具、洗衣服和拖地。",
+              "hi": "set the table / do the laundry / mop the floor"
+            },
+            {
+              "en": "I went to book a flight to Japan and go sightseeing there.",
+              "cn": "4. 我去訂了飛日本的機票，並打算去那裡觀光。",
+              "hi": "book a flight / go sightseeing"
+            },
+            {
+              "en": "I need to run errands and exchange money before my trip.",
+              "cn": "5. 旅行前我需要跑腿辦事和換錢。",
+              "hi": "run errands / exchange money"
+            },
+            {
+              "en": "I charged my phone before I went to sleep.",
+              "cn": "6. 我睡前把手機充電了。（⚠ 原句寫 went to slept，go to sleep 的 sleep 是原形名詞／動詞，不能用過去式）",
+              "hi": "went to sleep"
+            },
+            {
+              "en": "Kelly blocked Sarah's phone number because they had an argument.",
+              "cn": "7. Kelly 封鎖了 Sarah 的電話號碼，因為他們吵架了。",
+              "hi": "had an argument"
+            }
+          ]
+        },
+        {
+          "title": "VI-C. 短文作業訂正 My Best Friend",
+          "exs": [
+            {
+              "en": "My best friend is Tom. He is kind, smart and always makes me laugh.",
+              "cn": "我最好的朋友是 Tom。他善良、聰明，而且總是讓我笑。（⚠ 原句寫 a kindly：kindly 是副詞「親切地」，形容人要用形容詞 kind，而且形容詞前不加 a）",
+              "hi": "kind"
+            },
+            {
+              "en": "He is also a good listener. Whenever I have a problem, he always tries to help me.",
+              "cn": "他也是個好的傾聽者。每當我遇到問題，他總是試著幫我。（⚠ 原句兩個獨立句只用逗號相連＝逗號黏合，要改句號或用 Whenever 連接；全篇時態要一致，前面是現在式，所以用 tries 不是 tried）",
+              "hi": "Whenever … tries"
+            },
+            {
+              "en": "I am really lucky to have Tom as my best friend.",
+              "cn": "我真的很幸運有 Tom 這個好朋友。（⚠ 原句 I am really have Tom 缺了形容詞；I am lucky to have … 是固定句型，課文結尾也用了 I'm lucky to have her as my friend）",
+              "hi": "lucky to have"
+            },
+            {
+              "en": "I hope we can stay friends for a long time.",
+              "cn": "我希望我們可以長久做朋友。",
+              "hi": "stay friends for a long time"
+            }
+          ]
+        }
+      ],
+      "summaryTitle": "VII. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "描述好朋友四大句",
+          "v": "She is always there for me／She never judges me／She always has my back／She knows how to cheer me up"
+        },
+        {
+          "k": "兩個重點句型",
+          "v": "That's why + 主詞 + 動詞（強調現在）／That's what + 動詞（強調過去事件）"
+        },
+        {
+          "k": "友誼歷程",
+          "v": "have ups and downs → talk things out → be on the same page → last a lifetime"
+        },
+        {
+          "k": "現在完成式",
+          "v": "We have been friends for a long time."
+        },
+        {
+          "k": "常錯",
+          "v": "kindly ✗ → kind ✓；run an errands ✗ → run errands ✓；go to sightseeing ✗ → go sightseeing ✓"
+        }
+      ]
+    },
+    /* ---- bk20250724 Does Phone Separation Anxiety Really Exist? ---- */
+    {
+      "id": "bk20250724",
+      "icon": "📗",
+      "date": "2025-07-24",
+      "doc": "https://docs.google.com/document/d/1gHsdxn6ETzrr986cu7lAGAOacU6agV35RTl83Hv53_k/edit",
+      "title": "Does Phone Separation Anxiety Really Exist?",
+      "titleCn": "手機分離焦慮真的存在嗎？",
+      "topics": "手機焦慮字彙、Nomophobia 閱讀、as if 句型、-ed 與 -ing 形容詞、It is … that 強調句、友誼片語複習、句子升級改寫",
+      "vocabTitle": "I. 單字 Vocabulary",
+      "vocab": [
+        {
+          "w": "separation",
+          "star": true,
+          "ipa": "/ˌsep.əˈreɪ.ʃən/",
+          "pos": "n.",
+          "cn": "分離（手機分離 phone separation）",
+          "ex": "Smartphone separation can lead to an increase in heart rate and blood pressure.",
+          "exCn": "與智慧型手機分離會導致心率和血壓上升。"
+        },
+        {
+          "w": "anxiety",
+          "star": true,
+          "ipa": "/æŋˈzaɪ.ə.t̬i/",
+          "pos": "n.",
+          "cn": "焦慮",
+          "ex": "People experience feelings of anxiety and unpleasantness when separated from their phones.",
+          "exCn": "當人們與手機分開時，會經歷焦慮與不適的感受。"
+        },
+        {
+          "w": "anxious",
+          "ipa": "/ˈæŋk.ʃəs/",
+          "pos": "adj.",
+          "cn": "感到焦慮的（feel anxious）",
+          "ex": "You have left your phone at home and feel anxious.",
+          "exCn": "你把手機忘在家裡，然後感到焦慮。"
+        },
+        {
+          "w": "exist",
+          "ipa": "/ɪɡˈzɪst/",
+          "pos": "v.",
+          "cn": "存在",
+          "ex": "Does phone separation anxiety really exist?",
+          "exCn": "手機分離焦慮真的存在嗎？"
+        },
+        {
+          "w": "nomophobia",
+          "star": true,
+          "ipa": "/ˌnoʊ.məˈfoʊ.bi.ə/",
+          "pos": "n.",
+          "cn": "手機依賴症、無手機恐懼症（no-mobile phobia 的縮寫）",
+          "ex": "\"Nomophobia\" (short for no-mobile phobia) affects teenagers and adults alike.",
+          "exCn": "「無手機恐懼症」（no-mobile phobia 的縮寫）同樣影響著青少年和成人。"
+        },
+        {
+          "w": "affect",
+          "ipa": "/əˈfekt/",
+          "pos": "v.",
+          "cn": "影響",
+          "ex": "It affects teenagers and adults alike.",
+          "exCn": "它同樣影響青少年和成人。"
+        },
+        {
+          "w": "teenager",
+          "ipa": "/ˈtiːnˌeɪ.dʒɚ/",
+          "pos": "n.",
+          "cn": "青少年",
+          "ex": "You would have to surgically remove a phone from a teenager.",
+          "exCn": "你大概得動手術才能把手機從青少年手上拿走。"
+        },
+        {
+          "w": "adult",
+          "ipa": "/əˈdʌlt/",
+          "pos": "n.",
+          "cn": "成人",
+          "ex": "Nomophobia affects both teenagers and adults.",
+          "exCn": "無手機恐懼症同時影響青少年和成人。"
+        },
+        {
+          "w": "researcher",
+          "ipa": "/ˈriː.sɝː.tʃɚ/",
+          "pos": "n.",
+          "cn": "研究員",
+          "ex": "Researchers from Hong Kong warned that nomophobia is infecting everyone.",
+          "exCn": "香港的研究人員警告，無手機恐懼症正在感染每一個人。"
+        },
+        {
+          "w": "warn",
+          "ipa": "/wɔːrn/",
+          "pos": "v.",
+          "cn": "警告（＝ alert）",
+          "ex": "Griffiths warns that phone use can compromise relationships or work.",
+          "exCn": "Griffiths 警告手機使用可能會損害人際關係或工作。"
+        },
+        {
+          "w": "access",
+          "star": true,
+          "ipa": "/ˈækses/",
+          "pos": "v. / n.",
+          "cn": "存取、取得（access to personal memories）",
+          "ex": "People who use their phones to store, share and access personal memories suffer most.",
+          "exCn": "用手機儲存、分享與存取個人回憶的人受影響最深。"
+        },
+        {
+          "w": "describe",
+          "ipa": "/dɪˈskraɪb/",
+          "pos": "v.",
+          "cn": "描述",
+          "ex": "Users were asked to describe how they felt about their phones.",
+          "exCn": "使用者被要求描述他們對手機的感受。"
+        },
+        {
+          "w": "predict",
+          "star": true,
+          "ipa": "/prɪˈdɪkt/",
+          "pos": "v.",
+          "cn": "預測、預示",
+          "ex": "Words such as \"hurt\" and \"alone\" predicted higher levels of nomophobia.",
+          "exCn": "「受傷」和「孤單」這類字眼預示著更高程度的無手機恐懼症。"
+        },
+        {
+          "w": "ingrained",
+          "star": true,
+          "ipa": "/ɪnˈɡreɪnd/",
+          "pos": "adj.",
+          "cn": "根深蒂固的（＝ deep-rooted）",
+          "ex": "Their whole life is ingrained in this device.",
+          "exCn": "他們的整個生活都根植在這個裝置裡。"
+        },
+        {
+          "w": "deliberately",
+          "star": true,
+          "ipa": "/dɪˈlɪb.ɚ.ət.li/",
+          "pos": "adv.",
+          "cn": "刻意地",
+          "ex": "Deliberately separating from your phone can reduce dependency and anxiety.",
+          "exCn": "刻意讓自己與手機分開可以降低依賴與焦慮。"
+        },
+        {
+          "w": "compromise",
+          "star": true,
+          "ipa": "/ˈkɑːm.prə.maɪz/",
+          "pos": "v.",
+          "cn": "損害、危及",
+          "ex": "Your phone-use also needs to compromise relationships or work.",
+          "exCn": "你的手機使用還必須損害人際關係或工作。"
+        },
+        {
+          "w": "provoke",
+          "star": true,
+          "ipa": "/prəˈvoʊk/",
+          "pos": "v.",
+          "cn": "引發、激起",
+          "ex": "Phone addiction can provoke inner conflict.",
+          "exCn": "手機成癮會引發內在衝突。"
+        },
+        {
+          "w": "criteria",
+          "star": true,
+          "ipa": "/kraɪˈtɪr.i.ə/",
+          "pos": "n.",
+          "cn": "判準、標準（criterion 的複數）",
+          "ex": "Few people fulfill these criteria.",
+          "exCn": "很少有人完全符合這些判準。"
+        }
+      ],
+      "vocab2Title": "I-B. 補充單字 Extra Vocabulary",
+      "vocab2": [
+        {
+          "w": "symptom",
+          "ipa": "/ˈsɪmp.təm/",
+          "pos": "n.",
+          "cn": "症狀（＝ signs）",
+          "ex": "The criteria for phone addiction include withdrawal symptoms.",
+          "exCn": "手機成癮的判準包括出現戒斷症狀。"
+        },
+        {
+          "w": "challenging",
+          "ipa": "/ˈtʃælɪndʒɪŋ/",
+          "pos": "adj.",
+          "cn": "具挑戰性的（比 hard 更正式、更正面）",
+          "ex": "Today was very challenging.",
+          "exCn": "今天非常具有挑戰性。"
+        },
+        {
+          "w": "caring",
+          "ipa": "/ˈker.ɪŋ/",
+          "pos": "adj.",
+          "cn": "有愛心的、關心人的",
+          "ex": "We always remember you as a caring person.",
+          "exCn": "我們永遠記得你是一位有愛心的人。"
+        }
+      ],
+      "phrasesTitle": "II. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "phone separation ⭐",
+          "cn": "手機分離（詳見 V）"
+        },
+        {
+          "p": "feel anxious",
+          "cn": "感到焦慮（詳見 V）"
+        },
+        {
+          "p": "lose connection to the world",
+          "cn": "失去與世界的聯繫（詳見 V）"
+        },
+        {
+          "p": "store personal memories",
+          "cn": "儲存個人記憶（詳見 V）"
+        },
+        {
+          "p": "access to personal memories",
+          "cn": "存取個人記憶（詳見 V）"
+        },
+        {
+          "p": "get attached to",
+          "cn": "對……產生依附（詳見 V）"
+        },
+        {
+          "p": "neck pain",
+          "cn": "頸部疼痛（詳見 V）"
+        },
+        {
+          "p": "higher level",
+          "cn": "更高等級、更高程度（詳見 V）"
+        },
+        {
+          "p": "as if",
+          "cn": "彷彿（詳見 III-A）"
+        },
+        {
+          "p": "withdrawal symptoms",
+          "cn": "戒斷症狀（詳見 V）"
+        },
+        {
+          "p": "reduce dependency",
+          "cn": "降低依賴（詳見 V）"
+        },
+        {
+          "p": "FOMO = fear of missing out",
+          "cn": "錯失恐懼症（詳見 V）"
+        },
+        {
+          "p": "talk things out",
+          "cn": "把事情說開（詳見 VI-C）"
+        },
+        {
+          "p": "have someone's back",
+          "cn": "支持某人（詳見 VI-C）"
+        },
+        {
+          "p": "be always there for someone",
+          "cn": "總是在某人身邊支持他（詳見 VI-C）"
+        },
+        {
+          "p": "cheer someone up",
+          "cn": "讓某人開心起來（詳見 VI-C）"
+        },
+        {
+          "p": "have ups and downs",
+          "cn": "有起有落（詳見 VI-C）"
+        },
+        {
+          "p": "be on the same page",
+          "cn": "想法一致、有共識（詳見 VI-D）"
+        },
+        {
+          "p": "last a lifetime",
+          "cn": "持續一輩子（詳見 VI-C）"
+        },
+        {
+          "p": "Go Dutch",
+          "cn": "各付各的（帳）（詳見 IV）"
+        }
+      ],
+      "grammarTitle": "III. 句型與文法 Grammar",
+      "grammar": [
+        {
+          "k": "III-A",
+          "title": "as if + 子句（彷彿……）",
+          "pat": "主要子句 + as if + 主詞 + 動詞",
+          "pts": [
+            "🔬 結構：主要子句 + as if + 主詞 + 動詞。",
+            "🔬 中文解析：as if 用來描述「感覺好像……」，後面接完整子句。",
+            "🔬 使用情境：描述感受、比喻。"
+          ],
+          "exs": [
+            {
+              "tag": "as if",
+              "en": "You have left your phone at home and feel anxious, as if you have lost your connection to the world.",
+              "cn": "你把手機忘在家裡，然後感到焦慮，彷彿失去了與世界的連結。"
+            }
+          ]
+        },
+        {
+          "k": "III-B",
+          "title": "-ed vs. -ing 形容詞（重點易混淆）",
+          "pat": "-ed 形容「人」的感受／-ing 形容「事物」給人的感覺",
+          "pts": [
+            "🔬 結構：-ed 形容「人」的感受；-ing 形容「事物」給人的感覺。",
+            "🔬 中文解析：I am bored.（我覺得無聊）vs. The movie is boring.（這電影很無聊）。",
+            "🔬 ⚠ 避免中式英文：說 I am boring 等於「我這個人很無趣」，意思完全不同。",
+            "🔬 使用情境：描述心情與評論事物。"
+          ],
+          "exs": [
+            {
+              "tag": "bored /bɔːrd/ ↔ boring /ˈbɔː.rɪŋ/",
+              "en": "I am bored. / The movie is boring.",
+              "cn": "我覺得無聊。／這部電影很乏味。"
+            },
+            {
+              "tag": "interested /ˈɪn.trɪ.stɪd/ ↔ interesting /ˈɪn.trɪ.stɪŋ/",
+              "en": "I am interested in this topic. / This topic is interesting.",
+              "cn": "我對這個主題有興趣。／這個主題很有趣。"
+            },
+            {
+              "tag": "tired /taɪrd/ ↔ tiring /ˈtaɪ.rɪŋ/",
+              "en": "I am tired. / The work is tiring.",
+              "cn": "我很疲倦。／這份工作很累人。"
+            }
+          ]
+        },
+        {
+          "k": "III-C",
+          "title": "強調句：It is … that …",
+          "pat": "It is + 強調的部分 + that + 其餘部分",
+          "pts": [
+            "🔬 結構：It is + 強調的部分 + that + 其餘部分。",
+            "🔬 中文解析：把想強調的資訊放在 It is 之後，其餘放在 that 之後。這裡強調的是「手機裡的內容」而不是手機本身。count 在這裡是「重要、有意義」的意思。",
+            "🔬 使用情境：寫作與口說中強調重點。"
+          ],
+          "exs": [
+            {
+              "tag": "It is … that counts",
+              "en": "Griffiths says it is what is on the phone that counts.",
+              "cn": "Griffiths 說，真正重要的是手機裡的內容。"
+            }
+          ]
+        }
+      ],
+      "cmpTitle": "IV. 易混淆對照 Confusing Words",
+      "cmp": [
+        {
+          "u": "solve（動詞 verb）",
+          "sc": "/sɑːlv/　解決問題用動詞",
+          "ex": "Solve the problem.",
+          "exCn": "解決問題。",
+          "cn": "解決"
+        },
+        {
+          "u": "solution（名詞 noun）",
+          "sc": "/səˈluː.ʃən/　解決方案用名詞",
+          "ex": "Find a solution.",
+          "exCn": "尋找解決方案。",
+          "cn": "解決方案"
+        },
+        {
+          "u": "talk things out",
+          "sc": "把問題或計畫完整討論清楚，以找到解決方案或共識",
+          "ex": "If you two don't talk out the differences between you, it'll be hard for you to continue working together.",
+          "exCn": "如果你們兩個不把彼此的分歧說開，之後要繼續合作會很困難。",
+          "cn": "把事情說開"
+        },
+        {
+          "u": "colleague",
+          "sc": "/ˈkɑː.liːɡ/　同事",
+          "ex": "My colleague and I are on the same page about this problem.",
+          "exCn": "我和同事對這個問題有共識。",
+          "cn": "同事"
+        },
+        {
+          "u": "college",
+          "sc": "/ˈkɑː.lɪdʒ/　大學（＝ university）",
+          "ex": "college = university",
+          "exCn": "大學；拼字與 colleague 相近，容易混淆。",
+          "cn": "大學"
+        },
+        {
+          "u": "Go Dutch",
+          "sc": "/dʌtʃ/　Dutch ＝ 荷蘭的、荷蘭人的、荷蘭語的",
+          "ex": "Go Dutch.",
+          "exCn": "各付各的（帳）。",
+          "cn": "各付各的"
+        }
+      ],
+      "reading": [
+        {
+          "bar": "V. 閱讀 Reading：Does Phone Separation Anxiety Really Exist?（The Guardian, 2017/08/28）",
+          "title": "Does Phone Separation Anxiety Really Exist?",
+          "titleCn": "手機分離焦慮真的存在嗎？",
+          "paras": [
+            {
+              "en": "You know the feeling – you have left your phone at home and feel anxious, as if you have lost your connection to the world. \"Nomophobia\" (short for no-mobile phobia) affects teenagers and adults alike. You can even do an online test to see if you have it.",
+              "cn": "你知道那種感覺——你把手機忘在家裡，然後感到焦慮，彷彿失去了與世界的連結。「無手機恐懼症」（nomophobia，no-mobile phobia 的縮寫）同樣影響著青少年和成人。你甚至可以做線上測驗，看看自己有沒有這個問題。"
+            },
+            {
+              "en": "Last week, researchers from Hong Kong warned that nomophobia is infecting everyone. Their study found that people who use their phones to store, share and access personal memories suffer most. When users were asked to describe how they felt about their phones, words such as \"hurt\" (neck pain was often reported) and \"alone\" predicted higher levels of nomophobia.",
+              "cn": "上週，香港的研究人員警告，無手機恐懼症正在感染每一個人。他們的研究發現，使用手機來儲存、分享與存取個人回憶的人受影響最深。當使用者被要求描述他們對手機的感受時，「受傷」（常見的是頸部疼痛）和「孤單」這類字眼，預示著更高程度的無手機恐懼症。"
+            },
+            {
+              "en": "\"The findings of our study suggest that users perceive smartphones as their extended selves and get attached to the devices,\" said Dr Kim Ki Joon. \"People experience feelings of anxiety and unpleasantness when separated from their phones.\" Meanwhile, an American study shows that smartphone separation can lead to an increase in heart rate and blood pressure.",
+              "cn": "「我們的研究結果顯示，使用者把智慧型手機視為自我的延伸，並對這些裝置產生依附。」Kim Ki Joon 博士說。「當人們與手機分開時，會經歷焦慮與不適的感受。」同時，一項美國研究顯示，與智慧型手機分離會導致心率和血壓上升。"
+            },
+            {
+              "en": "So can being without your phone really give you separation anxiety? Professor Mark Griffiths, chartered psychologist and director of the International Gaming Research Unit at Nottingham Trent University, says it is what is on the phone that counts – the social networking that creates Fomo (fear of missing out).",
+              "cn": "那麼，沒有手機真的會讓你產生分離焦慮嗎？諾丁漢特倫特大學國際遊戲研究中心主任、特許心理學家 Mark Griffiths 教授說，真正重要的是手機裡的內容——那些製造出 FOMO（錯失恐懼症）的社群網路。"
+            },
+            {
+              "en": "\"People don't use their phones to talk to other people – we are talking about an internet-connected device that allows people to deal with lots of aspects of their lives,\" says Griffiths. \"You would have to surgically remove a phone from a teenager because their whole life is ingrained in this device.\"",
+              "cn": "「人們並不是用手機來跟別人講話——我們談的是一個連網裝置，讓人們處理生活中的許多面向。」Griffiths 說。「你大概得動手術才能把手機從青少年手上拿走，因為他們的整個生活都根植在這個裝置裡。」"
+            },
+            {
+              "en": "Griffiths thinks attachment theory, where we develop emotional dependency on the phone because it holds details of our lives, is a small part of nomophobia. For \"screenagers\", it is Fomo that creates the most separation anxiety. If they can't see what's happening on Snapchat or Instagram, they become panic-stricken about not knowing what's going on socially. \"But they adapt very quickly if you take them on holiday and there's no internet,\" says Griffiths.",
+              "cn": "Griffiths 認為，依附理論——我們因為手機儲存了生活細節而對它產生情感依賴——只是無手機恐懼症的一小部分。對「螢幕世代」來說，造成最大分離焦慮的是 FOMO。如果他們看不到 Snapchat 或 Instagram 上發生的事，就會因為不知道社交圈的動態而陷入恐慌。「但如果你帶他們去度假、那裡沒有網路，他們很快就會適應。」Griffiths 說。"
+            },
+            {
+              "en": "Deliberately separating from your phone by turning it off or leaving it at home can reduce dependency and anxiety. Griffiths says the criteria for phone addiction include it being the most important thing in your life, building up the time you spend on it, withdrawal symptoms, using it to de-stress or to get excited. Your phone-use also needs to compromise relationships or work and provoke inner conflict – you know you should cut down, but can't. Few people, Griffiths says, fulfill these criteria. But surely many of us experience some of them.",
+              "cn": "刻意讓自己與手機分開——關機或把它留在家裡——可以降低依賴與焦慮。Griffiths 說，手機成癮的判準包括：它成為你生命中最重要的事、花在上面的時間不斷增加、出現戒斷症狀、用它來紓壓或尋求刺激。你的手機使用還必須損害人際關係或工作，並引發內在衝突——你知道自己應該減少使用，卻做不到。Griffiths 說，很少有人完全符合這些判準。但我們許多人肯定都經歷過其中一部分。"
+            }
+          ],
+          "questions": [
+            {
+              "q": "What is \"nomophobia\"?",
+              "qCn": "什麼是「無手機恐懼症」？",
+              "a": "It is short for \"no-mobile phobia\" – the anxiety people feel when they are without their phone.",
+              "aCn": "它是 no-mobile phobia 的縮寫，指人們沒有手機時感到的焦慮。"
+            },
+            {
+              "q": "Who does nomophobia affect?",
+              "qCn": "無手機恐懼症影響誰？",
+              "a": "It affects teenagers and adults alike.",
+              "aCn": "它同樣影響青少年和成人。"
+            },
+            {
+              "q": "Which users are most affected?",
+              "qCn": "哪些使用者受影響最深？",
+              "a": "People who use their phones to store, share and access personal memories suffer most.",
+              "aCn": "用手機儲存、分享與存取個人回憶的人受影響最深。"
+            },
+            {
+              "q": "What feelings do users have when deprived of their mobiles?",
+              "qCn": "使用者失去手機時有什麼感受？",
+              "a": "They experience feelings of anxiety and unpleasantness, and their heart rate and blood pressure can increase.",
+              "aCn": "他們會感到焦慮與不適，心率和血壓也可能上升。"
+            },
+            {
+              "q": "What is FOMO?",
+              "qCn": "什麼是 FOMO？",
+              "a": "FOMO is the \"fear of missing out\", created by social networking.",
+              "aCn": "FOMO 是「錯失恐懼症」，由社群網路造成。"
+            },
+            {
+              "q": "What can people do to reduce phone dependency?",
+              "qCn": "人們可以做什麼來降低手機依賴？",
+              "a": "They can deliberately separate from the phone by turning it off or leaving it at home.",
+              "aCn": "他們可以刻意與手機分開，例如關機或把手機留在家裡。"
+            }
+          ],
+          "sumEn": [
+            "nomophobia = no-mobile phobia; FOMO = fear of missing out.",
+            "Symptoms: feel anxious, lose connection to the world, higher heart rate and blood pressure, neck pain, withdrawal symptoms."
+          ],
+          "sumCn": [
+            "nomophobia ＝ 無手機恐懼症；FOMO ＝ 錯失恐懼症。",
+            "徵狀：感到焦慮、失去與世界的聯繫、心率與血壓上升、頸部疼痛、戒斷症狀。"
+          ]
+        }
+      ],
+      "extraTitle": "VI. 課堂練習 Class Practice",
+      "extra": [
+        {
+          "title": "VI-A. 是非題 True or False",
+          "exs": [
+            {
+              "en": "Nowadays, people can test their phone dependency online. → True",
+              "cn": "a. 現在人們可以在線上測試自己的手機依賴程度。→ 對（文章提到 You can even do an online test.）",
+              "hi": "online test"
+            },
+            {
+              "en": "Only teenagers are affected by nomophobia. → False (It affects teenagers and adults alike.)",
+              "cn": "b. 只有青少年會受無手機恐懼症影響。→ 錯（青少年和成人都會受影響。）",
+              "hi": "Only teenagers"
+            },
+            {
+              "en": "Users consider their smartphones as parts of themselves. → True (users perceive smartphones as their extended selves)",
+              "cn": "c. 使用者把智慧型手機視為自己的一部分。→ 對",
+              "hi": "extended selves"
+            },
+            {
+              "en": "Being apart from our smartphone causes a feeling of relief. → False (It causes anxiety and unpleasantness.)",
+              "cn": "d. 與手機分開會讓人感到放鬆。→ 錯（會造成焦慮與不適，不是放鬆。）",
+              "hi": "a feeling of relief"
+            },
+            {
+              "en": "People use their smartphones mostly to chat with their relatives and friends. → False (People don't use their phones to talk to other people.)",
+              "cn": "e. 人們主要用手機和親友聊天。→ 錯（人們並不是用手機來跟別人講話。）",
+              "hi": "to talk to other people"
+            }
+          ]
+        },
+        {
+          "title": "VI-B. 同義字練習 Find Words with the Same Meaning",
+          "exs": [
+            {
+              "en": "alerted → warned",
+              "cn": "a. 提醒、警告 → warned（警告）",
+              "hi": "warned"
+            },
+            {
+              "en": "discovered → found",
+              "cn": "b. 發現 → found（發現）",
+              "hi": "found"
+            },
+            {
+              "en": "keep → store",
+              "cn": "c. 保存 → store（儲存）",
+              "hi": "store"
+            },
+            {
+              "en": "uneasiness → unpleasantness / anxiety",
+              "cn": "d. 不安 → unpleasantness／anxiety（不適／焦慮）",
+              "hi": "unpleasantness / anxiety"
+            },
+            {
+              "en": "deep-rooted → ingrained",
+              "cn": "e. 根深蒂固的 → ingrained（根深蒂固的）",
+              "hi": "ingrained"
+            },
+            {
+              "en": "signs → symptoms",
+              "cn": "f. 徵象 → symptoms（症狀）",
+              "hi": "symptoms"
+            }
+          ]
+        },
+        {
+          "title": "VI-C. 友誼片語複習 Friendship Phrases Review",
+          "exs": [
+            {
+              "en": "He always has my back.",
+              "cn": "他總是支持我。",
+              "hi": "has my back"
+            },
+            {
+              "en": "He is kind.",
+              "cn": "他很善良。",
+              "hi": "kind"
+            },
+            {
+              "en": "He always cheers me up. /tʃɪrz/",
+              "cn": "他總是讓我振作／逗我開心。",
+              "hi": "cheers me up"
+            },
+            {
+              "en": "He is always there for me.",
+              "cn": "他總是在我身邊支持我。",
+              "hi": "always there for me"
+            },
+            {
+              "en": "Everyone has ups and downs in their life.",
+              "cn": "每個人一生中都有起起落落。",
+              "hi": "ups and downs"
+            },
+            {
+              "en": "We have the same idea.",
+              "cn": "我們有相同的想法／我們想法一致。",
+              "hi": "the same idea"
+            },
+            {
+              "en": "It makes friendship stronger and last a lifetime.",
+              "cn": "它讓友誼更堅固並持續一輩子。",
+              "hi": "last a lifetime"
+            },
+            {
+              "en": "I hope our friendship lasts a lifetime.",
+              "cn": "我希望我們的友誼能持續一輩子。",
+              "hi": "lasts a lifetime"
+            },
+            {
+              "en": "I appreciate your help. / I thank you for your help.",
+              "cn": "我感謝你的幫助。",
+              "hi": "appreciate"
+            },
+            {
+              "en": "People can't live without their phone.",
+              "cn": "人們無法沒有手機生活。",
+              "hi": "can't live without"
+            },
+            {
+              "en": "He was blocked. / They had an argument.",
+              "cn": "他被封鎖了。／他們吵架了。",
+              "hi": "blocked / had an argument"
+            }
+          ]
+        },
+        {
+          "title": "VI-D. 句子升級改寫 Sentence Upgrades",
+          "exs": [
+            {
+              "en": "He always helps me. → He always has my back. / He is always there for me.",
+              "cn": "他總是支持我／他總是在我身邊。",
+              "hi": "has my back / always there for me"
+            },
+            {
+              "en": "If I make a mistake, please remind me. → If I do something wrong, please remind me.",
+              "cn": "如果我做錯了什麼，請提醒我。",
+              "hi": "do something wrong"
+            },
+            {
+              "en": "My colleague and I agree about this problem. → My colleague and I are on the same page about this problem.",
+              "cn": "我和同事對這個問題有共識。",
+              "hi": "on the same page"
+            },
+            {
+              "en": "I hope our partnership will continue for a long time. → I hope our partnership will last for a long time / last a lifetime.",
+              "cn": "我希望我們的合作能持續很久／持續一輩子。",
+              "hi": "last a lifetime"
+            },
+            {
+              "en": "If there is any problem you should discuss it with me. → If there is any problem, we should talk things out together.",
+              "cn": "如果有問題，我們應該一起好好談談。",
+              "hi": "talk things out"
+            },
+            {
+              "en": "He quit his job because he had a lot of problems at home. → He quit his job because he had a lot of ups and downs at home.",
+              "cn": "他辭去了工作，因為他在家裡經歷了很多坎坷。",
+              "hi": "ups and downs"
+            },
+            {
+              "en": "We always remember you as a nice and kind person. → We always remember you as a caring person.",
+              "cn": "我們永遠記得你是一位有愛心的人。",
+              "hi": "a caring person"
+            },
+            {
+              "en": "Today was very hard. → Today was very challenging.",
+              "cn": "今天非常具有挑戰性。",
+              "hi": "challenging"
+            }
+          ]
+        }
+      ],
+      "summaryTitle": "VII. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "兩個縮寫",
+          "v": "nomophobia ＝ no-mobile phobia（無手機恐懼症）；FOMO ＝ fear of missing out（錯失恐懼症）"
+        },
+        {
+          "k": "手機焦慮三徵狀",
+          "v": "feel anxious／lose connection to the world／心率血壓上升"
+        },
+        {
+          "k": "降低依賴",
+          "v": "deliberately separate from your phone（關機或留在家）"
+        },
+        {
+          "k": "-ed 與 -ing",
+          "v": "-ed 形容人（I am tired）／-ing 形容事物（The work is tiring）"
+        },
+        {
+          "k": "強調句",
+          "v": "It is … that counts.（真正重要的是……）"
+        },
+        {
+          "k": "易混淆",
+          "v": "solve（動詞）↔ solution（名詞）；colleague（同事）≠ college（大學）"
+        }
+      ]
+    },
+    /* ---- bk20250729 Make and Do Collocations ---- */
+    {
+      "id": "bk20250729",
+      "icon": "📗",
+      "date": "2025-07-29",
+      "doc": "https://docs.google.com/document/d/1IBDaXgwUv_cXRZJVNqTOOl_t3Mu3Nv1GuTF-8TOtyQk/edit",
+      "title": "Make and Do Collocations",
+      "titleCn": "Make 與 Do 搭配詞",
+      "topics": "Do 搭配詞、Make 搭配詞、同義片語替換、生活動作句子彙整、焦慮與爭論字彙",
+      "vocabTitle": "I. 單字 Vocabulary",
+      "vocab": [
+        {
+          "w": "collocation",
+          "star": true,
+          "ipa": "/ˌkɑː.ləˈkeɪ.ʃən/",
+          "pos": "n.",
+          "cn": "搭配（詞）",
+          "ex": "We'll do some exercises practising these collocations tomorrow.",
+          "exCn": "我們明天會做一些練習，來練習這些搭配詞。"
+        },
+        {
+          "w": "anxious",
+          "star": true,
+          "ipa": "/ˈæŋk.ʃəs/",
+          "pos": "adj.",
+          "cn": "焦慮的、擔心的",
+          "ex": "He is anxious about his health.",
+          "exCn": "他對自己的健康感到焦慮。"
+        },
+        {
+          "w": "terribly",
+          "ipa": "/ˈter.ə.bli/",
+          "pos": "adv.",
+          "cn": "非常地、極度地（加強語氣）",
+          "ex": "They argued terribly in the meeting.",
+          "exCn": "他們在會議上爭論得很激烈。"
+        },
+        {
+          "w": "argument",
+          "ipa": "/ˈɑːrɡ.jə.mənt/",
+          "pos": "n.",
+          "cn": "爭論、爭吵",
+          "ex": "They had a terrible argument in the meeting.",
+          "exCn": "他們在會議上發生了激烈的爭論。"
+        },
+        {
+          "w": "attend",
+          "ipa": "/əˈtend/",
+          "pos": "v.",
+          "cn": "參加、出席",
+          "ex": "Did you attend the election?",
+          "exCn": "你參加選舉了嗎？"
+        },
+        {
+          "w": "election",
+          "ipa": "/iˈlek.ʃən/",
+          "pos": "n.",
+          "cn": "選舉",
+          "ex": "People vote to their favorite party in the election.",
+          "exCn": "人們在選舉中投票給自己喜歡的政黨。"
+        },
+        {
+          "w": "exist",
+          "ipa": "/ɪɡˈzɪst/",
+          "pos": "v.",
+          "cn": "存在",
+          "ex": "Few animals only exist in the world.",
+          "exCn": "世界上只有少數動物存在。"
+        }
+      ],
+      "phrasesTitle": "II. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "do your best",
+          "cn": "盡最大的努力（詳見 IV）"
+        },
+        {
+          "p": "do damage",
+          "cn": "造成損害（詳見 IV）"
+        },
+        {
+          "p": "do an experiment",
+          "cn": "做實驗（詳見 IV）"
+        },
+        {
+          "p": "do exercises",
+          "cn": "做體操、做練習題（詳見 IV）"
+        },
+        {
+          "p": "do someone a favour / do someone a good turn",
+          "cn": "幫某人一個忙（詳見 IV）"
+        },
+        {
+          "p": "do harm",
+          "cn": "造成傷害（詳見 IV）"
+        },
+        {
+          "p": "do your hair",
+          "cn": "整理頭髮（詳見 IV）"
+        },
+        {
+          "p": "do your homework",
+          "cn": "寫功課（詳見 IV）"
+        },
+        {
+          "p": "do the ironing / shopping / washing",
+          "cn": "燙衣服／購物／洗衣服（詳見 IV）"
+        },
+        {
+          "p": "do some work",
+          "cn": "做一些工作（詳見 IV）"
+        },
+        {
+          "p": "make arrangements for",
+          "cn": "為某事做安排（詳見 IV）"
+        },
+        {
+          "p": "make a change / changes",
+          "cn": "做出改變（詳見 IV）"
+        },
+        {
+          "p": "make a choice",
+          "cn": "做出選擇（詳見 IV）"
+        },
+        {
+          "p": "make a comment / comments",
+          "cn": "發表評論（詳見 IV）"
+        },
+        {
+          "p": "make a contribution to",
+          "cn": "對……做出貢獻（詳見 IV）"
+        },
+        {
+          "p": "make a decision",
+          "cn": "做出決定（詳見 IV）"
+        },
+        {
+          "p": "make an effort",
+          "cn": "付出努力（詳見 IV）"
+        },
+        {
+          "p": "make an excuse",
+          "cn": "找藉口（詳見 IV）"
+        },
+        {
+          "p": "make friends",
+          "cn": "交朋友（詳見 IV）"
+        },
+        {
+          "p": "make an improvement",
+          "cn": "做出改進（詳見 IV）"
+        },
+        {
+          "p": "make a mistake",
+          "cn": "犯錯（詳見 IV）"
+        },
+        {
+          "p": "make a phone call",
+          "cn": "打電話（詳見 IV）"
+        },
+        {
+          "p": "make progress",
+          "cn": "取得進展（詳見 IV）"
+        },
+        {
+          "p": "place an order",
+          "cn": "下訂單、點餐（詳見 III-E）"
+        },
+        {
+          "p": "fill out a form",
+          "cn": "填寫表格（詳見 III-D）"
+        },
+        {
+          "p": "hang the clothes",
+          "cn": "晾衣服（詳見 III-C）"
+        },
+        {
+          "p": "take out the trash",
+          "cn": "倒垃圾（詳見 V-A）"
+        },
+        {
+          "p": "heat up the leftovers",
+          "cn": "加熱剩菜（詳見 V-A）"
+        },
+        {
+          "p": "call a ride",
+          "cn": "叫車（詳見 V-A）"
+        },
+        {
+          "p": "feed the dog",
+          "cn": "餵狗（詳見 III-B）"
+        }
+      ],
+      "grammarTitle": "III. 句型與文法 Grammar",
+      "grammar": [
+        {
+          "k": "III-A",
+          "title": "核心觀念：Do 與 Make 的差別",
+          "pat": "do ＝ 執行、完成某件事／make ＝ 產生、創造出某個結果",
+          "pts": [
+            "collocation（搭配詞）指英文中某些動詞和名詞習慣搭在一起用，沒有道理可循，只能整組記。",
+            "Do 偏向「執行、完成某件事」：工作、家事、練習、實驗。",
+            "Make 偏向「產生、創造出某個結果」：決定、改變、進步、錯誤。",
+            "⚠ 中文都翻成「做」，但英文不能互換，要整組背下來。",
+            "🔬 記憶訣竅：家事、練習、實驗用 do；決定、改變、進步、錯誤用 make。完整清單見 IV 的對照表。"
+          ]
+        },
+        {
+          "k": "III-B",
+          "title": "過去進行式 ＋ 過去進行式（兩件事同時發生）",
+          "pat": "When + 主詞 + was / were + V-ing, 主詞 + was / were + V-ing",
+          "pts": [
+            "🔬 結構：When + 主詞 + was / were + V-ing, 主詞 + was / were + V-ing。",
+            "中文解析：兩件事在過去同時進行，所以兩邊都用過去進行式。",
+            "使用情境：描述過去同一時間發生的兩件事。"
+          ],
+          "exs": [
+            {
+              "tag": "同時發生",
+              "en": "When I was feeding the dog, Anita was talking to me on the phone.",
+              "cn": "當我在餵狗時，Anita 正在打電話給我。"
+            }
+          ]
+        },
+        {
+          "k": "III-C",
+          "title": "How long does it take to + 原形動詞？（做某事要多久）",
+          "pat": "How long does it take (someone) to + 原形動詞？",
+          "pts": [
+            "🔬 結構：How long does it take (someone) to + 原形動詞？",
+            "中文解析：it 是虛主詞，真正的內容在 to + 原形動詞。",
+            "使用情境：詢問所需時間。"
+          ],
+          "exs": [
+            {
+              "tag": "問時間",
+              "en": "How long does it take to hang the clothes?",
+              "cn": "晾衣服需要多久？"
+            }
+          ]
+        },
+        {
+          "k": "III-D",
+          "title": "require someone to + 原形動詞（要求某人做某事）",
+          "pat": "require + 人 + to + 原形動詞（不可省略 to）",
+          "pts": [
+            "🔬 結構：require + 人 + to + 原形動詞，to 不可省略。",
+            "⚠ 避免中式英文：require 不是使役動詞（不像 make / let 可以直接接原形動詞），一定要加 to。",
+            "使用情境：正式場合說明規定或要求。"
+          ],
+          "exs": [
+            {
+              "tag": "❌ 原句",
+              "en": "The teacher requires me fill out a form.",
+              "cn": "（錯：require 後面漏了 to）"
+            },
+            {
+              "tag": "✅ 訂正",
+              "en": "The teacher requires me to fill out a form.",
+              "cn": "老師要求我填寫一張表格。"
+            }
+          ]
+        },
+        {
+          "k": "III-E",
+          "title": "place an order 與 order（下訂單／點餐）",
+          "pat": "place an order for + 人（正式）／order for + 人（口語）",
+          "pts": [
+            "🔬 中文解析：place an order 是商務／正式用法（下訂單）；日常點餐直接用動詞 order 更自然。",
+            "這也是 make / do / place 這類「輕動詞 + 名詞」搭配的典型例子。",
+            "兩句實際例句見 V-A 第 4、5 句。"
+          ]
+        }
+      ],
+      "cmpTitle": "IV. Do 與 Make 搭配詞對照 Do & Make Collocations",
+      "cmp": [
+        {
+          "u": "do your best",
+          "sc": "give it your all",
+          "ex": "All that matters in the exam is do your best.",
+          "exCn": "在考試中，最重要的是盡你最大的努力。",
+          "cn": "盡你最大的努力"
+        },
+        {
+          "u": "do damage /ˈdæm.ɪdʒ/",
+          "sc": "cause damage",
+          "ex": "The storm did some damage to our roof.",
+          "exCn": "暴風雨對我們的屋頂造成了一些損害。",
+          "cn": "造成損害、傷害"
+        },
+        {
+          "u": "do an experiment /ɪkˈsper.ə.mənt/ ⭐",
+          "sc": "carry out an experiment",
+          "ex": "We are doing an experiment to test how the metal reacts with water.",
+          "exCn": "我們正在做一個實驗，來測試金屬與水的反應。（react /riˈækt/ 反應；作出回應）",
+          "cn": "做、進行實驗"
+        },
+        {
+          "u": "do exercises /ˈek.sɚ.saɪz/",
+          "sc": "work out",
+          "ex": "We'll do some exercises practising these collocations tomorrow.",
+          "exCn": "我們明天會做一些練習，來練習這些搭配詞。",
+          "cn": "做體操、健身運動；做練習題"
+        },
+        {
+          "u": "do someone a favour /ˈfeɪ.vɚ/ ⭐",
+          "sc": "lend someone a hand / give someone a hand",
+          "ex": "Could you do me a favour and pick me up some milk from the supermarket?",
+          "exCn": "你能幫我個忙，從超市買些牛奶回來嗎？",
+          "cn": "幫某人一個忙"
+        },
+        {
+          "u": "do someone a good turn",
+          "sc": "give someone a hand",
+          "ex": "Jess did me a good turn by lending me her car while mine was in the garage.",
+          "exCn": "當我的車在修理廠時，Jess 幫了我一個大忙，借給我她的車。（garage /ɡəˈrɑːʒ/ 車庫）",
+          "cn": "對某人施以援手"
+        },
+        {
+          "u": "do harm /hɑːrm/",
+          "sc": "cause harm",
+          "ex": "Changing the rules may do more harm than good.",
+          "exCn": "改變規則可能弊大於利。",
+          "cn": "造成傷害、帶來危害"
+        },
+        {
+          "u": "do your hair",
+          "sc": "style your hair",
+          "ex": "No, I'm not ready. I haven't done my hair yet.",
+          "exCn": "不，我還沒準備好。我還沒整理頭髮呢。",
+          "cn": "整理頭髮、做頭髮造型"
+        },
+        {
+          "u": "do your homework",
+          "sc": "complete your homework",
+          "ex": "My son has to do his homework straight after school.",
+          "exCn": "我兒子放學後馬上得做功課。（straight /streɪt/ 直接地）",
+          "cn": "做作業、寫功課"
+        },
+        {
+          "u": "do the ironing / shopping / washing, etc.",
+          "sc": "take care of the ironing / shopping / washing",
+          "ex": "I'll do the washing if you do the ironing.",
+          "exCn": "如果你負責燙衣服，我來洗衣服。",
+          "cn": "燙衣服／買菜購物／洗衣服"
+        },
+        {
+          "u": "do some work",
+          "sc": "get some work done",
+          "ex": "We'll do some work on our project and then we'll go to the cinema.",
+          "exCn": "我們會先在專案上做一些工作，然後再去看電影。",
+          "cn": "做一些工作、完成一些任務"
+        },
+        {
+          "u": "make arrangements for /əˈreɪndʒ.mənt/ ⭐",
+          "sc": "set things up for",
+          "ex": "The school can make arrangements for pupils with special needs.",
+          "exCn": "學校可以為有特殊需求的學生做安排。（pupil /ˈpjuː.pəl/ 學生，尤指小學生）",
+          "cn": "為某事做安排、準備"
+        },
+        {
+          "u": "make a change / changes",
+          "sc": "introduce a change / changes",
+          "ex": "The new manager is planning to make some changes.",
+          "exCn": "新經理正計劃做出一些改變。",
+          "cn": "做出改變"
+        },
+        {
+          "u": "make a choice",
+          "sc": "come to a decision",
+          "ex": "Amelia had to make a choice between her career and her family.",
+          "exCn": "Amelia 必須在事業和家庭之間做出選擇。",
+          "cn": "做出選擇"
+        },
+        {
+          "u": "make a comment / comments /ˈkɑː.ment/",
+          "sc": "offer a remark / remarks",
+          "ex": "Would anyone like to make any comments on the talk?",
+          "exCn": "有沒有人想對這場演講發表意見？",
+          "cn": "發表評論或意見"
+        },
+        {
+          "u": "make a contribution to /ˌkɑːn.trɪˈbjuː.ʃən/ ⭐",
+          "sc": "play a part in",
+          "ex": "She made a useful contribution to the discussion.",
+          "exCn": "她對討論做出了有用的貢獻。",
+          "cn": "對……做出貢獻、投入"
+        },
+        {
+          "u": "make a decision /dɪˈsɪʒən/",
+          "sc": "reach a decision",
+          "ex": "I'm glad it's you who has to make the decision, not me.",
+          "exCn": "我很高興必須做決定的是你，而不是我。",
+          "cn": "做出決定"
+        },
+        {
+          "u": "make an effort /ˈefɚt/",
+          "sc": "try hard",
+          "ex": "Michael is really making an effort with his maths this term.",
+          "exCn": "Michael 這學期在數學上真的很努力。",
+          "cn": "努力嘗試、付出努力"
+        },
+        {
+          "u": "make an excuse /ɪkˈskjuːz/",
+          "sc": "give an excuse",
+          "ex": "I'm too tired to go out together. Let's make an excuse and stay at home.",
+          "exCn": "我太累了，不想一起出去。咱們找個藉口待在家吧。",
+          "cn": "找藉口、找理由推託"
+        },
+        {
+          "u": "make friends",
+          "sc": "build friendships",
+          "ex": "Caroline is very good at making friends.",
+          "exCn": "Caroline 很擅長交朋友。",
+          "cn": "交朋友、結交朋友"
+        },
+        {
+          "u": "make an improvement /ɪmˈpruːv.mənt/",
+          "sc": "bring about an improvement",
+          "ex": "Repainting the room has really made an improvement.",
+          "exCn": "重新粉刷房間真的讓房間有了很大的改善。",
+          "cn": "取得進步、做出改進"
+        },
+        {
+          "u": "make a mistake",
+          "sc": "commit an error",
+          "ex": "They've made a mistake in our bill.",
+          "exCn": "他們在我們的帳單上出錯了。",
+          "cn": "犯錯誤"
+        },
+        {
+          "u": "make a phone call",
+          "sc": "place a call",
+          "ex": "I've got to make some phone calls before dinner.",
+          "exCn": "我得在晚餐前打幾個電話。",
+          "cn": "打電話"
+        },
+        {
+          "u": "make progress /ˈprɑːɡres/ ⭐",
+          "sc": "move forward",
+          "ex": "Holly is making progress with all her schoolwork.",
+          "exCn": "Holly 在所有學校作業上都有進步。",
+          "cn": "取得進展、有進步"
+        }
+      ],
+      "extraTitle": "V. 補充句子與字彙 Additional Sentences & Vocabulary",
+      "extra": [
+        {
+          "title": "V-A. 生活動作句子彙整 Daily Action Sentences",
+          "exs": [
+            {
+              "en": "How long does it take to hang the clothes?",
+              "cn": "1. 晾衣服需要多久？",
+              "hi": "hang the clothes"
+            },
+            {
+              "en": "The teacher requires me to fill out a form.",
+              "cn": "2. 老師要求我填寫一張表格。（原句漏了 to，詳見 III-D）",
+              "hi": "requires me to fill out"
+            },
+            {
+              "en": "When I was feeding the dog, Anita was talking to me on the phone.",
+              "cn": "3. 當我在餵狗時，Anita 正在打電話給我。",
+              "hi": "was feeding"
+            },
+            {
+              "en": "My son placed an order for me at McDonald's.",
+              "cn": "4. 我兒子在麥當勞幫我點了餐。（較正式）",
+              "hi": "placed an order"
+            },
+            {
+              "en": "My son ordered for me at McDonald's.",
+              "cn": "5. 我兒子在麥當勞幫我點了餐。（較常用說法）",
+              "hi": "ordered for me"
+            },
+            {
+              "en": "Tom takes out the trash at 3pm every Wednesday.",
+              "cn": "6. Tom 每週三下午三點倒垃圾。",
+              "hi": "takes out the trash"
+            },
+            {
+              "en": "At noon, Mary helps to heat up the leftovers.",
+              "cn": "7. 中午時，Mary 幫忙加熱剩菜。",
+              "hi": "heat up the leftovers"
+            },
+            {
+              "en": "She called a ride at Taichung Train Station after she arrived.",
+              "cn": "8. 她到達台中火車站後叫了車。",
+              "hi": "called a ride"
+            },
+            {
+              "en": "She took a taxi at Taichung Train Station after she arrived.",
+              "cn": "9. 她到達台中火車站後搭了計程車。",
+              "hi": "took a taxi"
+            },
+            {
+              "en": "When I lost my phone, I felt anxious.",
+              "cn": "10. 當我丟失手機時，我感到焦慮。",
+              "hi": "felt anxious"
+            }
+          ]
+        },
+        {
+          "title": "V-B. 焦慮的加強說法 Adding Emphasis",
+          "exs": [
+            {
+              "en": "When I lost my phone, I felt terribly anxious.",
+              "cn": "當我丟失手機時，我感到非常焦慮。（加 terribly 加強語氣）",
+              "hi": "terribly anxious"
+            }
+          ]
+        },
+        {
+          "title": "V-C. 補充字彙（字義與音標）Related Vocabulary",
+          "exs": [
+            {
+              "en": "decide /dɪˈsaɪd/",
+              "cn": "（尤指仔細考慮後）決定、決斷、確定",
+              "hi": "decide"
+            },
+            {
+              "en": "semester /səˈmes.tɚ/",
+              "cn": "學期",
+              "hi": "semester"
+            },
+            {
+              "en": "practice /ˈpræk.tɪs/",
+              "cn": "實施、實踐",
+              "hi": "practice"
+            },
+            {
+              "en": "career",
+              "cn": "職涯（＝ job）",
+              "hi": "career"
+            },
+            {
+              "en": "try hard",
+              "cn": "努力（＝ make an effort）",
+              "hi": "try hard"
+            },
+            {
+              "en": "terrible /ˈter.ə.bəl/",
+              "cn": "糟糕的、嚴重的、激烈的",
+              "hi": "terrible"
+            }
+          ]
+        }
+      ],
+      "summaryTitle": "VI. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "Do ＝ 執行、完成",
+          "v": "do your best／do the washing／do your homework／do an experiment／do someone a favour"
+        },
+        {
+          "k": "Make ＝ 產生、創造",
+          "v": "make a decision／make progress／make a mistake／make friends／make an effort"
+        },
+        {
+          "k": "記憶訣竅",
+          "v": "家事、練習、實驗用 do；決定、改變、進步、錯誤用 make"
+        },
+        {
+          "k": "同義替換",
+          "v": "do someone a favour ＝ give someone a hand；make an effort ＝ try hard；make progress ＝ move forward"
+        },
+        {
+          "k": "文法重點",
+          "v": "require someone to + V（不可省略 to）；When I was V-ing, … was V-ing（同時發生）"
+        }
+      ]
+    },
+    /* ---- bk20250805 Opportunity and Coping ---- */
+    {
+      "id": "bk20250805",
+      "icon": "📗",
+      "date": "2025-08-05",
+      "doc": "https://docs.google.com/document/d/1CNYT3wFGbLSUv8BSJaZFZ-A5EKjKCsNafQCGfOJSqIc/edit",
+      "title": "Opportunity and Coping",
+      "titleCn": "學習機會與應對困難",
+      "topics": "機會與自信、學英文的方法、cope with 與 deal with、溝通與解釋、過去進行式",
+      "vocabTitle": "I. 單字 Vocabulary",
+      "vocab": [
+        {
+          "w": "opportunity",
+          "star": true,
+          "ipa": "/ˌɑːpɚˈtuːnəti/",
+          "pos": "n.",
+          "cn": "機會；機遇；可能性",
+          "ex": "I was never given the opportunity of going to England.",
+          "exCn": "我從來沒有得到去英國的機會。"
+        },
+        {
+          "w": "attend",
+          "ipa": "/əˈtend/",
+          "pos": "v.",
+          "cn": "出席、參加、到場",
+          "ex": "Tom gave me the opportunity to attend this party tonight.",
+          "exCn": "Tom 給了我機會參加今晚的派對。"
+        },
+        {
+          "w": "confident",
+          "star": true,
+          "ipa": "/ˈkɑːn.fə.dənt/",
+          "pos": "adj.",
+          "cn": "自信的；有信心的；有把握的",
+          "ex": "Anita has become more confident after attending the conversation classes.",
+          "exCn": "Anita 上完會話課後變得更有自信了。"
+        },
+        {
+          "w": "communicate",
+          "ipa": "/kəˈmjuːnɪkeɪt/",
+          "pos": "v.",
+          "cn": "交流、溝通（資訊）",
+          "ex": "Tedy cannot communicate with us because he does not accept our opinions.",
+          "exCn": "Tedy 無法與我們溝通，因為他不接受我們的意見。"
+        },
+        {
+          "w": "explain",
+          "ipa": "/ɪkˈspleɪn/",
+          "pos": "v.",
+          "cn": "解釋",
+          "ex": "I made a mistake, so I tried to explain it to her.",
+          "exCn": "我犯了一個錯，所以我試著向她解釋。"
+        },
+        {
+          "w": "expression",
+          "star": true,
+          "ipa": "/ɪkˈspreʃ.ən/",
+          "pos": "n.",
+          "cn": "詞語、措詞；表達",
+          "ex": "Coper and Anita learn new words and expressions every day.",
+          "exCn": "Coper 和 Anita 每天學習新的單字和片語。"
+        },
+        {
+          "w": "native",
+          "star": true,
+          "ipa": "/ˈneɪ.t̬ɪv/",
+          "pos": "adj.",
+          "cn": "出生地的、土生土長的（native speaker 母語人士）",
+          "ex": "Tom listens to native speakers and repeats what they say.",
+          "exCn": "Tom 聆聽母語人士說話，並重複他們說的內容。"
+        },
+        {
+          "w": "repeat",
+          "ipa": "/rɪˈpiːt/",
+          "pos": "v.",
+          "cn": "重複",
+          "ex": "Sorry! I don't understand what you said. Could you please repeat it?",
+          "exCn": "對不起！我沒聽懂你說的話，可以請你再重複一次嗎？"
+        },
+        {
+          "w": "cope with",
+          "star": true,
+          "ipa": "/koʊp/",
+          "pos": "phr. v.",
+          "cn": "（成功地）對付、應付、處理",
+          "ex": "She can't cope with the heavy load because she's just a kid.",
+          "exCn": "她無法應付沉重的負擔，因為她還只是個孩子。"
+        },
+        {
+          "w": "understand",
+          "ipa": "/ˌʌn.dɚˈstænd/",
+          "pos": "v.",
+          "cn": "理解、明白、懂得",
+          "ex": "Do you understand my decision?",
+          "exCn": "你理解我的決定嗎？"
+        },
+        {
+          "w": "predict",
+          "ipa": "/prɪˈdɪkt/",
+          "pos": "v.",
+          "cn": "預言、預料、預計",
+          "ex": "It didn't come true.",
+          "exCn": "它沒有實現。"
+        },
+        {
+          "w": "earthquake",
+          "ipa": "/ˈɝːθkweɪk/",
+          "pos": "n.",
+          "cn": "地震",
+          "ex": "Predict an earthquake.",
+          "exCn": "預測地震。"
+        },
+        {
+          "w": "virus",
+          "ipa": "/ˈvaɪ.rəs/",
+          "pos": "n.",
+          "cn": "病毒",
+          "ex": "I was infected with a new virus.",
+          "exCn": "我感染了一種新病毒。"
+        },
+        {
+          "w": "comprehension",
+          "ipa": "/ˌkɑːm.prəˈhen.ʃən/",
+          "pos": "n.",
+          "cn": "理解力、領悟能力",
+          "ex": "Reading comprehension",
+          "exCn": "閱讀理解"
+        },
+        {
+          "w": "centre",
+          "ipa": "/ˈsen.t̬ɚ/",
+          "pos": "n.",
+          "cn": "中心點、中心（美式拼法 center）",
+          "ex": "job centre",
+          "exCn": "就業中心"
+        },
+        {
+          "w": "strongly",
+          "ipa": "/ˈstrɑːŋ.li/",
+          "pos": "adv.",
+          "cn": "強烈地、堅決地",
+          "ex": "I strongly disagree.",
+          "exCn": "我強烈反對。"
+        },
+        {
+          "w": "disagree",
+          "ipa": "/ˌdɪs.əˈɡriː/",
+          "pos": "v.",
+          "cn": "不同意、持異議、反對",
+          "ex": "They strongly disagreed with the plan.",
+          "exCn": "他們強烈反對這個計畫。"
+        },
+        {
+          "w": "hundred",
+          "ipa": "/ˈhʌn.drəd/",
+          "pos": "n.",
+          "cn": "（數字）100",
+          "ex": "a hundred students",
+          "exCn": "一百位學生"
+        },
+        {
+          "w": "earn",
+          "ipa": "/ɝːn/",
+          "pos": "v.",
+          "cn": "賺（錢）、掙得",
+          "ex": "earning good money",
+          "exCn": "賺很多錢"
+        }
+      ],
+      "phrasesTitle": "II. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "cope with",
+          "cn": "（撐得住地）應付、承受（詳見 IV）"
+        },
+        {
+          "p": "deal with",
+          "cn": "著手處理某個問題（詳見 IV）"
+        },
+        {
+          "p": "give someone the opportunity to + V",
+          "cn": "給某人做某事的機會（詳見 III-A）"
+        },
+        {
+          "p": "the opportunity of + V-ing",
+          "cn": "做某事的機會（較正式，詳見 III-A）"
+        },
+        {
+          "p": "look for an opportunity to + V",
+          "cn": "尋找做某事的機會（詳見 V-A）"
+        },
+        {
+          "p": "job opportunity",
+          "cn": "工作機會（詳見 V-A）"
+        },
+        {
+          "p": "job centre",
+          "cn": "就業中心（詳見 I）"
+        },
+        {
+          "p": "come true",
+          "cn": "實現、成真（詳見 I）"
+        },
+        {
+          "p": "be infected with",
+          "cn": "感染（疾病、病毒）（詳見 I）"
+        },
+        {
+          "p": "become more confident",
+          "cn": "變得更有自信（詳見 III-C）"
+        },
+        {
+          "p": "native speaker",
+          "cn": "母語人士（詳見 V-B）"
+        },
+        {
+          "p": "reading comprehension",
+          "cn": "閱讀理解（詳見 I）"
+        },
+        {
+          "p": "explain something to someone",
+          "cn": "向某人解釋某事（詳見 III-E）"
+        },
+        {
+          "p": "strongly disagree with",
+          "cn": "強烈反對（詳見 I）"
+        }
+      ],
+      "grammarTitle": "III. 句型與文法 Grammar",
+      "grammar": [
+        {
+          "k": "III-A",
+          "title": "give someone the opportunity to + 原形動詞（給某人機會）",
+          "pat": "give + 人 + the opportunity to + 原形動詞（也可用 the opportunity of + V-ing）",
+          "pts": [
+            "🔬 結構：give + 人 + the opportunity to + 原形動詞；也可以用 the opportunity of + V-ing。",
+            "中文解析：兩種都對，to V 較常用、of V-ing 較正式。",
+            "被動語態 was given the opportunity 表示「被給予機會」。",
+            "使用情境：談機會、感謝別人給機會。"
+          ],
+          "exs": [
+            {
+              "tag": "to + V",
+              "en": "Tom gave me the opportunity to attend this party tonight.",
+              "cn": "Tom 給了我機會參加今晚的派對。"
+            },
+            {
+              "tag": "of + V-ing（被動）",
+              "en": "I was never given the opportunity of going to England.",
+              "cn": "我從來沒有得到去英國的機會。"
+            }
+          ]
+        },
+        {
+          "k": "III-B",
+          "title": "過去進行式 Past Continuous",
+          "pat": "主詞 + was / were + V-ing",
+          "pts": [
+            "🔬 結構：主詞 + was / were + V-ing。",
+            "中文解析：描述過去某個時間點「正在進行」的動作。複數主詞（Anita and Tom）用 were。",
+            "使用情境：描述過去的場景、背景。"
+          ],
+          "exs": [
+            {
+              "tag": "場景描述",
+              "en": "Anita and Tom were at the shopping mall. They were shopping.",
+              "cn": "Anita 和 Tom 在購物中心，他們正在購物。"
+            }
+          ]
+        },
+        {
+          "k": "III-C",
+          "title": "become + 比較級（變得更……）",
+          "pat": "become / get + 比較級形容詞",
+          "pts": [
+            "🔬 結構：become / get + 比較級形容詞；confident 是三音節，比較級用 more confident。",
+            "補充：after + V-ing（after attending）表示「在……之後」，介系詞後面接動名詞。",
+            "使用情境：描述學習成效、個人成長。（例句見 I 的 confident）"
+          ]
+        },
+        {
+          "k": "III-D",
+          "title": "名詞子句 what + 子句",
+          "pat": "動詞 + what + 主詞 + 動詞（名詞子句當受詞）",
+          "pts": [
+            "🔬 結構：動詞 + what + 主詞 + 動詞，整個 what 子句當受詞。",
+            "⚠ 避免中式英文：a word what they are saying 是多餘的，what 已經包含「所說的話」，不需要再加 a word。",
+            "補充：也可以用 how to + 原形動詞當受詞。"
+          ],
+          "exs": [
+            {
+              "tag": "❌ 口語原句",
+              "en": "She never understands a word what they are saying.",
+              "cn": "（錯：a word 與 what 重複）"
+            },
+            {
+              "tag": "✅ 標準寫法",
+              "en": "She never understands what they are saying.",
+              "cn": "她根本聽不懂他們在說什麼。"
+            },
+            {
+              "tag": "how to + V",
+              "en": "A monkey can never understand how to drive a car.",
+              "cn": "猴子永遠學不會怎麼開車。"
+            }
+          ]
+        },
+        {
+          "k": "III-E",
+          "title": "道歉與解釋 explain … to someone",
+          "pat": "explain + 事情 + to + 人（不可寫成 explain me something）",
+          "pts": [
+            "🔬 結構：explain + 事情 + to + 人。",
+            "⚠ 避免中式英文：❌ explain me the reason → ✅ explain the reason to me。",
+            "使用情境：職場說明、道歉。"
+          ],
+          "exs": [
+            {
+              "tag": "explain to + 人",
+              "en": "I explained to her why I was late, but she didn't accept my apology.",
+              "cn": "我向她解釋為什麼我遲到了，但她沒有接受我的道歉。"
+            }
+          ]
+        }
+      ],
+      "cmpTitle": "IV. cope with 與 deal with 對照 Cope with vs. Deal with",
+      "cmp": [
+        {
+          "u": "cope with",
+          "sc": "強調「有能力承受、撐得住」，常用在壓力、困難、負擔",
+          "ex": "She can't cope with the heavy load because she's just a kid.",
+          "exCn": "她無法應付沉重的負擔，因為她還只是個孩子。",
+          "cn": "（成功地）應付、承受"
+        },
+        {
+          "u": "deal with",
+          "sc": "強調「著手處理某個問題」",
+          "ex": "Tom needs to deal with this problem because it happens frequently.",
+          "exCn": "Tom 需要處理這個問題，因為它經常發生。",
+          "cn": "處理"
+        }
+      ],
+      "cmpWarn": {
+        "title": "⚠ cope with / deal with 的 with 不可省略",
+        "bad": "I can't cope this situation.",
+        "good": [
+          "I can't cope with this situation.　我無法應付這種情況。",
+          "I need to cope with this situation.　我需要應對這種情況。"
+        ]
+      },
+      "extraTitle": "V. 補充句子 Additional Sentences",
+      "extra": [
+        {
+          "title": "V-A. 機會與人生 Opportunity & Life",
+          "exs": [
+            {
+              "en": "Anita is my best friend in this company.",
+              "cn": "Anita 是我在這家公司最好的朋友。",
+              "hi": "best friend"
+            },
+            {
+              "en": "I work hard because I want to give my family a better life.",
+              "cn": "我努力工作，因為我想給家人更好的生活。",
+              "hi": "a better life"
+            },
+            {
+              "en": "I got the new job from the job centre.",
+              "cn": "我從就業中心找到了一份新工作。",
+              "hi": "job centre"
+            },
+            {
+              "en": "I'm looking for an opportunity to practice my Chinese speaking.",
+              "cn": "我正在尋找練習中文口說的機會。",
+              "hi": "an opportunity to practice"
+            },
+            {
+              "en": "I'm looking for a better job opportunity.",
+              "cn": "我正在尋找更好的工作機會。",
+              "hi": "job opportunity"
+            },
+            {
+              "en": "Living in a foreign country is a good opportunity to practice their language.",
+              "cn": "住在國外是一個練習當地語言的好機會。",
+              "hi": "a good opportunity to practice"
+            }
+          ]
+        },
+        {
+          "title": "V-B. 學英文的方法 Ways to Improve English",
+          "exs": [
+            {
+              "en": "I listen to an English radio program every day, and it helps me improve my English skills.",
+              "cn": "我每天聽英文廣播，這幫助我提升英文能力。",
+              "hi": "helps me improve"
+            },
+            {
+              "en": "I read an English grammar book to improve my English skills.",
+              "cn": "我讀了一本英文文法書，來提升我的英文能力。",
+              "hi": "to improve my English skills"
+            },
+            {
+              "en": "Coper and Anita learn new words and expressions every day.",
+              "cn": "Coper 和 Anita 每天學習新的單字和片語。",
+              "hi": "new words and expressions"
+            },
+            {
+              "en": "Tom listens to native speakers and repeats what they say.",
+              "cn": "Tom 聆聽母語人士說話，並重複他們說的內容。",
+              "hi": "native speakers"
+            },
+            {
+              "en": "Sorry! I don't understand what you said. Could you please repeat it?",
+              "cn": "對不起！我沒聽懂你說的話，可以請你再重複一次嗎？",
+              "hi": "Could you please repeat it"
+            },
+            {
+              "en": "Anita has become more confident after attending the conversation classes.",
+              "cn": "Anita 上完會話課後變得更有自信了。",
+              "hi": "become more confident"
+            }
+          ]
+        },
+        {
+          "title": "V-C. cope with 補充例句 More Examples",
+          "exs": [
+            {
+              "en": "After her illness, she couldn't cope with the stress of work.",
+              "cn": "她生病之後，無法承受工作的壓力。",
+              "hi": "couldn't cope with"
+            },
+            {
+              "en": "It must be really hard to cope with three young children and a job.",
+              "cn": "要同時照顧三個年幼的孩子和一份工作，一定非常辛苦。",
+              "hi": "cope with"
+            }
+          ]
+        }
+      ],
+      "summaryTitle": "VI. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "機會",
+          "v": "give someone the opportunity to + V／I'm looking for an opportunity to …"
+        },
+        {
+          "k": "應付困難",
+          "v": "cope with（撐得住、承受）vs. deal with（著手處理）—— 兩者都不可省略 with"
+        },
+        {
+          "k": "解釋",
+          "v": "explain 事情 to 人（❌ explain me something）"
+        },
+        {
+          "k": "學英文四招",
+          "v": "聽英語廣播、讀文法書、學 new words and expressions、聽 native speakers 並 repeat"
+        },
+        {
+          "k": "成長",
+          "v": "become more confident after attending classes（介系詞後接 V-ing）"
+        }
+      ]
+    },
+    /* ---- bk20250807 Continuous Tenses ---- */
+    {
+      "id": "bk20250807",
+      "icon": "📗",
+      "date": "2025-08-07",
+      "doc": "https://docs.google.com/document/d/1xi60xmphXHKxbqwIfpUpr8IpvY3q-lr4jBR6tQ3AQxw/edit",
+      "title": "Continuous Tenses",
+      "titleCn": "現在進行式與過去進行式",
+      "topics": "現在完成式、現在進行式、過去進行式、hate／enjoy + V-ing、發音與鼓勵用語",
+      "vocabTitle": "I. 單字 Vocabulary",
+      "vocab": [
+        {
+          "w": "opportunity",
+          "ipa": "/ˌɑːpɚˈtuːnəti/",
+          "pos": "n.",
+          "cn": "機會",
+          "ex": "I have never had the opportunity to go to England.",
+          "exCn": "我從來沒有去英國的機會。"
+        },
+        {
+          "w": "difficulties",
+          "ipa": "/ˈdɪ.fə.kəl.tiz/",
+          "pos": "n.",
+          "cn": "困難（複數）",
+          "ex": "I can't cope with my job difficulties.",
+          "exCn": "我無法應付工作上的困難。"
+        },
+        {
+          "w": "pronounce",
+          "star": true,
+          "ipa": "/prəˈnaʊns/",
+          "pos": "v.",
+          "cn": "發（音）、讀（音）",
+          "ex": "Pronounce clearly.",
+          "exCn": "發音清晰。"
+        },
+        {
+          "w": "clearly",
+          "ipa": "/ˈklɪr.li/",
+          "pos": "adv.",
+          "cn": "清楚地",
+          "ex": "Please pronounce the word clearly.",
+          "exCn": "請把這個字念清楚。"
+        },
+        {
+          "w": "encourage",
+          "star": true,
+          "ipa": "/ɪnˈkɝː.ɪdʒ/",
+          "pos": "v.（及物）",
+          "cn": "鼓勵",
+          "ex": "My teacher encourages me to speak more.",
+          "exCn": "我的老師鼓勵我多開口說。"
+        },
+        {
+          "w": "skip",
+          "star": true,
+          "ipa": "/skɪp/",
+          "pos": "v.",
+          "cn": "跳過、翹（課）；跳躍",
+          "ex": "Don't skip your class at the last minute.",
+          "exCn": "不要在最後一刻翹課。"
+        },
+        {
+          "w": "present",
+          "ipa": "/ˈprez.ənt/",
+          "pos": "n.",
+          "cn": "現在、目前",
+          "ex": "present continuous",
+          "exCn": "現在進行式"
+        }
+      ],
+      "phrasesTitle": "II. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "at the last minute",
+          "cn": "在最後一刻（minute /ˈmɪn.ɪt/，詳見 I 的 skip）"
+        },
+        {
+          "p": "have never had the opportunity to + V",
+          "cn": "從來沒有做某事的機會（詳見 III-A）"
+        },
+        {
+          "p": "cope with",
+          "cn": "應付、承受（＋ 困難／壓力，不可省略 with，詳見 V）"
+        },
+        {
+          "p": "make a decision to + V",
+          "cn": "做出決定要做某事（＝ decide to + V，詳見 III-E）"
+        },
+        {
+          "p": "hate + V-ing",
+          "cn": "討厭做某事（詳見 III-D）"
+        },
+        {
+          "p": "enjoy + V-ing",
+          "cn": "喜歡做某事（詳見 III-D）"
+        },
+        {
+          "p": "pronounce clearly",
+          "cn": "發音清晰（詳見 I）"
+        },
+        {
+          "p": "encourage someone to + V",
+          "cn": "鼓勵某人做某事（詳見 I）"
+        },
+        {
+          "p": "wait in line",
+          "cn": "排隊等待（詳見 III-D）"
+        }
+      ],
+      "grammarTitle": "III. 句型與文法 Grammar",
+      "grammar": [
+        {
+          "k": "III-A",
+          "title": "現在完成式：have never had",
+          "pat": "主詞 + have / has + 過去分詞",
+          "pts": [
+            "🔬 結構：主詞 + have / has + 過去分詞。",
+            "中文解析：have never had 是現在完成式，表示「從過去到現在從未有過」。第一個 have 是助動詞，第二個 had 是 have 的過去分詞。",
+            "使用情境：談人生經驗（never、ever、before 常一起出現）。"
+          ],
+          "exs": [
+            {
+              "tag": "have never had",
+              "en": "I have never had the opportunity to go to England.",
+              "cn": "我從來沒有去英國的機會。"
+            }
+          ]
+        },
+        {
+          "k": "III-B",
+          "title": "過去進行式 Past Continuous",
+          "pat": "was / were + V-ing",
+          "pts": [
+            "🔬 結構：was / were + V-ing。",
+            "中文解析：描述過去某個時間點「正在進行」的動作。單數主詞用 was，複數主詞或 you 用 were。",
+            "使用情境：描述過去場景，或搭配 when 說明兩件事同時發生。（例句見 IV）"
+          ]
+        },
+        {
+          "k": "III-C",
+          "title": "現在進行式 Present Continuous",
+          "pat": "am / is / are + V-ing",
+          "pts": [
+            "🔬 結構：am / is / are + V-ing。",
+            "中文解析：描述「現在正在進行」的動作。I 用 am，he / she / it 用 is，you / we / they 用 are。",
+            "使用情境：說明當下在做什麼。（例句見 IV）"
+          ]
+        },
+        {
+          "k": "III-D",
+          "title": "動詞後接 V-ing：hate / enjoy",
+          "pat": "hate / enjoy + 動名詞（V-ing）",
+          "pts": [
+            "🔬 結構：hate / enjoy + 動名詞（V-ing）。",
+            "⚠ 避免中式英文：enjoy 後面不可接不定詞，不能說 enjoy to learn，一定是 enjoy learning。",
+            "使用情境：說明喜好與厭惡。"
+          ],
+          "exs": [
+            {
+              "tag": "hate",
+              "en": "I hate waiting in line.",
+              "cn": "我討厭排隊等待。"
+            },
+            {
+              "tag": "enjoy",
+              "en": "I enjoy learning new words.",
+              "cn": "我喜歡學新單字。"
+            }
+          ]
+        },
+        {
+          "k": "III-E",
+          "title": "make a decision to + 原形動詞（做出決定）",
+          "pat": "make a decision to + 原形動詞 ＝ decide to + 原形動詞",
+          "pts": [
+            "🔬 結構：make a decision to + 原形動詞，意思等於 decide to + 原形動詞。",
+            "⚠ decision 是名詞，動詞要用 make，不可用 do。"
+          ],
+          "exs": [
+            {
+              "tag": "make a decision",
+              "en": "So I made a decision to quit my job.",
+              "cn": "所以我決定辭職。"
+            }
+          ]
+        }
+      ],
+      "cmpTitle": "IV. 三個時態總整理 Three Tenses",
+      "cmp": [
+        {
+          "u": "現在完成式 Present Perfect",
+          "sc": "have / has + 過去分詞",
+          "ex": "I have never had the opportunity to go to England.",
+          "exCn": "我從來沒有去英國的機會。",
+          "cn": "從過去到現在的經驗或狀態"
+        },
+        {
+          "u": "現在進行式 Present Continuous",
+          "sc": "am / is / are + V-ing",
+          "ex": "I am practicing English now.",
+          "exCn": "我現在正在練習英文。",
+          "cn": "現在正在進行的動作"
+        },
+        {
+          "u": "過去進行式 Past Continuous",
+          "sc": "was / were + V-ing",
+          "ex": "They were shopping at the mall.",
+          "exCn": "他們當時正在購物中心購物。",
+          "cn": "過去某時間點正在進行的動作"
+        }
+      ],
+      "extraTitle": "V. 實用句 Useful Sentences",
+      "extra": [
+        {
+          "title": "V-A. 課堂實用句 Useful Sentences",
+          "exs": [
+            {
+              "en": "I can't cope with my job difficulties.",
+              "cn": "我無法應付工作上的困難。（cope with 不可省略 with）",
+              "hi": "cope with"
+            },
+            {
+              "en": "So I made a decision to quit my job.",
+              "cn": "所以我決定辭職。",
+              "hi": "made a decision to quit"
+            },
+            {
+              "en": "Pronounce clearly.",
+              "cn": "發音清晰。",
+              "hi": "Pronounce clearly"
+            },
+            {
+              "en": "Don't skip your class at the last minute.",
+              "cn": "不要在最後一刻翹課。",
+              "hi": "at the last minute"
+            }
+          ]
+        }
+      ],
+      "summaryTitle": "VI. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "現在完成式",
+          "v": "have / has + 過去分詞：I have never had …（從過去到現在從未）"
+        },
+        {
+          "k": "進行式",
+          "v": "現在進行式 am / is / are + V-ing；過去進行式 was / were + V-ing"
+        },
+        {
+          "k": "hate / enjoy",
+          "v": "後面一律接 V-ing，不可接 to V"
+        },
+        {
+          "k": "固定搭配",
+          "v": "cope with + 困難（不可省略 with）；make a decision to + V ＝ 決定做某事"
+        },
+        {
+          "k": "實用字",
+          "v": "pronounce clearly（發音清晰）、encourage（鼓勵）、skip（翹課）、at the last minute（最後一刻）"
+        }
+      ]
+    },
+    /* ---- bk20251016 A Community of Growth and Friendship ---- */
+    {
+      "id": "bk20251016",
+      "icon": "📗",
+      "date": "2025-10-16",
+      "doc": "https://docs.google.com/document/d/1x_MB6AOgxWSNPijj4kqQ0H-LDJM95kC7B5lkTiLNM-Q/edit",
+      "title": "A Community of Growth and Friendship",
+      "titleCn": "社區成長與友誼",
+      "topics": "社區教育專案閱讀、抽象名詞、名詞字尾記憶法、make a decision to + V、help + 人 + 原形動詞",
+      "vocabTitle": "I. 單字 Vocabulary（核心名詞 Key Nouns）",
+      "vocab": [
+        {
+          "w": "community",
+          "ipa": "/kəˈmjuː.nə.ti/",
+          "pos": "n.",
+          "cn": "社區",
+          "ex": "We live in a safe community.",
+          "exCn": "我們住在一個安全的社區。"
+        },
+        {
+          "w": "government",
+          "ipa": "/ˈɡʌv.ɚn.mənt/",
+          "pos": "n.",
+          "cn": "政府",
+          "ex": "The government plans to lower taxes.",
+          "exCn": "政府計畫減稅。"
+        },
+        {
+          "w": "benefit",
+          "ipa": "/ˈbenɪfɪt/",
+          "pos": "n.",
+          "cn": "好處；利益",
+          "ex": "Yoga brings many health benefits.",
+          "exCn": "瑜珈帶來許多健康益處。"
+        },
+        {
+          "w": "decision",
+          "ipa": "/dɪˈsɪʒən/",
+          "pos": "n.",
+          "cn": "決定",
+          "ex": "It was a difficult decision to make.",
+          "exCn": "這是一個很難做的決定。"
+        },
+        {
+          "w": "achievement",
+          "star": true,
+          "ipa": "/əˈtʃiːvmənt/",
+          "pos": "n.",
+          "cn": "成就",
+          "ex": "Winning the game was a great achievement.",
+          "exCn": "贏得比賽是個巨大的成就。"
+        },
+        {
+          "w": "leadership",
+          "star": true,
+          "ipa": "/ˈliː.dɚ.ʃɪp/",
+          "pos": "n.",
+          "cn": "領導力",
+          "ex": "Good leadership is important for a team.",
+          "exCn": "好的領導力對團隊很重要。"
+        },
+        {
+          "w": "responsibility",
+          "ipa": "/rɪˌspɑːnsəˈbɪləti/",
+          "pos": "n.",
+          "cn": "責任感",
+          "ex": "It is your responsibility to finish the work.",
+          "exCn": "完成工作是你的責任。"
+        },
+        {
+          "w": "confidence",
+          "ipa": "/ˈkɑːnfɪdəns/",
+          "pos": "n.",
+          "cn": "自信",
+          "ex": "She has a lot of confidence in herself.",
+          "exCn": "她對自己很有自信。"
+        },
+        {
+          "w": "competition",
+          "ipa": "/ˌkɑːmpəˈtɪʃən/",
+          "pos": "n.",
+          "cn": "比賽；競爭",
+          "ex": "There is a lot of competition in the market.",
+          "exCn": "市場競爭很激烈。"
+        },
+        {
+          "w": "performance",
+          "ipa": "/pɚˈfɔːr.məns/",
+          "pos": "n.",
+          "cn": "表現；表演",
+          "ex": "The band gave an amazing performance.",
+          "exCn": "樂團帶來了精彩的演出。"
+        },
+        {
+          "w": "audience",
+          "ipa": "/ˈɔː.di.əns/",
+          "pos": "n.",
+          "cn": "觀眾",
+          "ex": "The audience clapped loudly.",
+          "exCn": "觀眾大聲鼓掌。"
+        },
+        {
+          "w": "environment",
+          "ipa": "/ɪnˈvaɪrənmənt/",
+          "pos": "n.",
+          "cn": "環境",
+          "ex": "We must protect the environment.",
+          "exCn": "我們必須保護環境。"
+        },
+        {
+          "w": "tradition",
+          "ipa": "/trəˈdɪʃ.ən/",
+          "pos": "n.",
+          "cn": "傳統",
+          "ex": "It is a family tradition to eat together on Sundays.",
+          "exCn": "週日一起吃飯是家裡的傳統。"
+        },
+        {
+          "w": "improvement",
+          "ipa": "/ɪmˈpruːv.mənt/",
+          "pos": "n.",
+          "cn": "改善；進步",
+          "ex": "I see a big improvement in your English.",
+          "exCn": "我看見你的英文有很大的進步。"
+        },
+        {
+          "w": "attitude",
+          "ipa": "/ˈæt̬.ə.tuːd/",
+          "pos": "n.",
+          "cn": "態度",
+          "ex": "He has a positive attitude towards life.",
+          "exCn": "他對生活抱持積極的態度。"
+        },
+        {
+          "w": "friendship",
+          "ipa": "/ˈfrendʃɪp/",
+          "pos": "n.",
+          "cn": "友誼",
+          "ex": "Their friendship lasted for 20 years.",
+          "exCn": "他們的友誼持續了 20 年。"
+        },
+        {
+          "w": "development",
+          "star": true,
+          "ipa": "/dɪˈveləpmənt/",
+          "pos": "n.",
+          "cn": "發展",
+          "ex": "Education is key to a child's development.",
+          "exCn": "教育是孩子發展的關鍵。"
+        },
+        {
+          "w": "conversation",
+          "ipa": "/ˌkɑːnvɚˈseɪʃən/",
+          "pos": "n.",
+          "cn": "交談；對話",
+          "ex": "We had a long conversation about the future.",
+          "exCn": "我們針對未來長談了一番。"
+        },
+        {
+          "w": "opportunity",
+          "ipa": "/ˌɑːpɚˈtuːnəti/",
+          "pos": "n.",
+          "cn": "機會",
+          "ex": "Thank you for this opportunity.",
+          "exCn": "謝謝你給我這個機會。"
+        },
+        {
+          "w": "connection",
+          "ipa": "/kəˈnekʃən/",
+          "pos": "n.",
+          "cn": "連結；關聯",
+          "ex": "Is there a connection between the two events?",
+          "exCn": "這兩件事有關聯嗎？"
+        }
+      ],
+      "vocab2Title": "補充單字：動詞與形容詞 Verbs & Adjectives",
+      "vocab2": [
+        {
+          "w": "gain",
+          "ipa": "/ɡeɪn/",
+          "pos": "v.",
+          "cn": "獲得",
+          "ex": "He wants to gain more experience.",
+          "exCn": "他想獲得更多經驗。"
+        },
+        {
+          "w": "support",
+          "ipa": "/səˈpɔːrt/",
+          "pos": "v.",
+          "cn": "支持",
+          "ex": "My family always supports me.",
+          "exCn": "我的家人總是支持我。"
+        },
+        {
+          "w": "nervous",
+          "ipa": "/ˈnɝːvəs/",
+          "pos": "adj.",
+          "cn": "緊張的",
+          "ex": "I felt nervous before the test.",
+          "exCn": "考試前我覺得很緊張。"
+        },
+        {
+          "w": "courage",
+          "star": true,
+          "ipa": "/ˈkɝː.ɪdʒ/",
+          "pos": "n.",
+          "cn": "勇氣",
+          "ex": "You need courage to face your fears.",
+          "exCn": "你需要勇氣面對恐懼。"
+        },
+        {
+          "w": "celebrated",
+          "ipa": "/ˈsel.ɪ.breɪ.t̬ɪd/",
+          "pos": "v.（過去式）",
+          "cn": "慶祝",
+          "ex": "We celebrated her birthday yesterday.",
+          "exCn": "我們昨天慶祝了她的生日。"
+        },
+        {
+          "w": "united",
+          "star": true,
+          "ipa": "/juːˈnaɪt̬ɪd/",
+          "pos": "adj.",
+          "cn": "團結的",
+          "ex": "A united team can achieve anything.",
+          "exCn": "團結的隊伍可以達成任何事。"
+        }
+      ],
+      "phrasesTitle": "II. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "make a decision to + V",
+          "cn": "做出決定要做某事（＝ decide to + V，詳見 III-A）"
+        },
+        {
+          "p": "help + 人 + 原形動詞",
+          "cn": "幫助某人做某事（詳見 III-B）"
+        },
+        {
+          "p": "比較級 + than ever",
+          "cn": "比以往任何時候更……（詳見 III-C）"
+        },
+        {
+          "p": "gain knowledge and experience",
+          "cn": "獲得知識和經驗（詳見 IV）"
+        },
+        {
+          "p": "bring benefits to society",
+          "cn": "給社會帶來好處（詳見 IV）"
+        },
+        {
+          "p": "show leadership and responsibility",
+          "cn": "展現領導力與責任感（詳見 IV）"
+        },
+        {
+          "p": "find the courage to + V",
+          "cn": "找到做某事的勇氣（詳見 IV）"
+        },
+        {
+          "p": "in front of the audience",
+          "cn": "在觀眾面前（詳見 IV）"
+        },
+        {
+          "p": "care for nature",
+          "cn": "關心自然（詳見 IV）"
+        },
+        {
+          "p": "respect culture",
+          "cn": "尊重文化（詳見 IV）"
+        },
+        {
+          "p": "have a long conversation with",
+          "cn": "與某人長談（詳見 IV）"
+        },
+        {
+          "p": "a positive attitude towards",
+          "cn": "對……抱持積極的態度（詳見 I）"
+        },
+        {
+          "p": "have confidence in",
+          "cn": "對……有自信（詳見 I）"
+        }
+      ],
+      "grammarTitle": "III. 句型與文法 Grammar",
+      "grammar": [
+        {
+          "k": "III-A",
+          "title": "make a decision to + 原形動詞（做出決定）",
+          "pat": "make a decision to + 原形動詞（＝ decide to + 原形動詞）",
+          "pts": [
+            "🔬 結構：make a decision to + 原形動詞，意思等於 decide to + 原形動詞。",
+            "中文解析：decision 是名詞，動詞要用 make（做決定），不是 do。要接「決定做什麼」時用不定詞 to V。",
+            "⚠ 避免中式英文：不可說 do a decision。",
+            "使用情境：敘述團體討論後的結論。"
+          ],
+          "exs": [
+            {
+              "tag": "make a decision to",
+              "en": "Finally, we made a decision to open a free weekend school.",
+              "cn": "最後我們做出了決定，開設一所免費的週末學校。"
+            }
+          ]
+        },
+        {
+          "k": "III-B",
+          "title": "help + 人 + 原形動詞（幫助某人做某事）",
+          "pat": "help + 人 + 原形動詞（也可寫成 help + 人 + to + 原形動詞）",
+          "pts": [
+            "🔬 結構：help + 人 + 原形動詞；寫成 help + 人 + to + 原形動詞也對，但省略 to 更常見。",
+            "中文解析：help 是少數可以接原形動詞的動詞，用法接近使役動詞。",
+            "使用情境：說明某件事對別人的幫助。"
+          ],
+          "exs": [
+            {
+              "tag": "help + 人 + V",
+              "en": "A new education project to help young people gain knowledge and experience.",
+              "cn": "一個幫助年輕人獲得知識和經驗的新教育專案。"
+            },
+            {
+              "tag": "helping + 人 + V",
+              "en": "helping students improve their skills and confidence",
+              "cn": "幫助學生提高技能和自信"
+            }
+          ]
+        },
+        {
+          "k": "III-C",
+          "title": "比較級 + than ever（比以往任何時候更……）",
+          "pat": "比較級 + than ever（than ever ＝ than ever before）",
+          "pts": [
+            "🔬 結構：比較級 + than ever，than ever 等於 than ever before。",
+            "中文解析：這是強調「現在達到前所未有的程度」的常見表達，很適合放在文章結尾當總結句。",
+            "使用情境：作文或口說的收尾句。"
+          ],
+          "exs": [
+            {
+              "tag": "more … than ever",
+              "en": "Now, our community is more united than ever, full of hope, effort, and tradition.",
+              "cn": "如今，我們的社區比以往任何時候都更加團結，充滿希望、努力和傳統。"
+            }
+          ]
+        },
+        {
+          "k": "III-D",
+          "title": "學習小撇步：名詞字尾記憶法 Suffixes",
+          "pat": "-ment ／ -tion / -sion / -ion ／ -ship",
+          "pts": [
+            "重點：這篇文章用了大量的抽象名詞（描述概念、情感、狀態的字），這是提升英文程度的關鍵。可以把單字按照字尾分類來背。",
+            "🔬 -ment ＝ 表示行為或結果：government（政府）、achievement（成就）、environment（環境）、improvement（改善）、development（發展）。",
+            "🔬 -tion / -sion / -ion ＝ 表示動作或狀態：opinion（意見）、decision（決定）、competition（比賽）、tradition（傳統）、celebration（慶祝）、conversation（交談）、connection（連結）。",
+            "🔬 -ship ＝ 表示身份或關係：leadership（領導力）、friendship（友誼）、relationship（關係）。"
+          ]
+        }
+      ],
+      "reading": [
+        {
+          "bar": "IV. 閱讀 Reading：A Community of Growth and Friendship",
+          "title": "A Community of Growth and Friendship",
+          "titleCn": "社區的成長與友誼",
+          "paras": [
+            {
+              "en": "Last year, our community started a new education project to help young people gain knowledge and experience. The government supported this idea because it brings many benefits to society. Everyone had a different opinion, but finally, we made a decision to open a free weekend school.",
+              "cn": "去年，我們的社區啟動了一個新的教育專案，幫助年輕人獲得知識和經驗。政府支持這個想法，因為它給社會帶來了許多好處。每個人都有不同的看法，但最後我們做出了決定，開設一所免費的週末學校。"
+            },
+            {
+              "en": "Our achievement was clear when more than a hundred students joined. Teachers showed great leadership and responsibility, helping students improve their skills and confidence. There was a friendly competition every month where students could show their performance. Some students felt nervous, but they found the courage to speak in front of the audience.",
+              "cn": "當一百多名學生參加時，我們的成就顯而易見。老師們展現了極強的領導力和責任感，幫助學生提高技能和自信。每個月都有一次友好的比賽，學生們可以展示他們的表現。一些學生感到緊張，但他們找到了在觀眾面前發言的勇氣。"
+            },
+            {
+              "en": "We also talked about environment and tradition, teaching them to care for nature and respect culture. After a few months, we noticed a big improvement in their behavior and attitude. Students built strong friendship and relationship with each other through teamwork.",
+              "cn": "我們還談論了環境和傳統，教他們關心自然、尊重文化。幾個月後，我們注意到他們的行為和態度有了很大改善。學生們通過團隊合作建立了深厚的友誼和關係。"
+            },
+            {
+              "en": "We celebrated every small achievement because even small steps lead to big development. In our final celebration, parents joined the event and had a long conversation with teachers. They thanked us for giving their children the opportunity to learn and the freedom to dream. The project showed a strong connection between care, education, and success. Now, our community is more united than ever, full of hope, effort, and tradition.",
+              "cn": "我們慶祝每一個小小的成就，因為小步伐也能帶來巨大的發展。在最後的慶祝活動中，家長們參加了活動，並與老師進行了長時間的交談。他們感謝我們給孩子們學習的機會和追夢的自由。這個專案展示了關愛、教育與成功之間的緊密聯繫。如今，我們的社區比以往任何時候都更加團結，充滿希望、努力和傳統。"
+            }
+          ],
+          "sumCn": [
+            "文章主線：專案啟動 → 成就與比賽 → 環境與傳統 → 慶祝與未來。"
+          ]
+        }
+      ],
+      "summaryTitle": "V. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "這課主軸是抽象名詞",
+          "v": "用字尾 -ment / -tion / -ship 分類記憶最有效率"
+        },
+        {
+          "k": "做決定",
+          "v": "make a decision to + V（不是 do a decision）"
+        },
+        {
+          "k": "幫助某人",
+          "v": "help + 人 + 原形動詞"
+        },
+        {
+          "k": "收尾金句",
+          "v": "more united than ever（比以往更團結）"
+        },
+        {
+          "k": "文章主線",
+          "v": "專案啟動 → 成就與比賽 → 環境與傳統 → 慶祝與未來"
+        }
+      ]
+    },
+    /* ---- bk20251202 Thanksgiving ---- */
+    {
+      "id": "bk20251202",
+      "icon": "📗",
+      "date": "2025-12-02",
+      "doc": "https://docs.google.com/document/d/169SxlT-0mMiqQKJyyRi8yFPW9WNoZoGoYeNVBj0symY/edit",
+      "title": "Thanksgiving",
+      "titleCn": "感恩節",
+      "topics": "感恩節閱讀（美國 vs 加拿大）、B1 感恩節字彙、B2 感恩與社區搭配詞、被動語態介紹節慶、Although／not only … but also",
+      "vocabTitle": "I. 單字 Vocabulary（B1）",
+      "vocab": [
+        {
+          "w": "gratitude",
+          "ipa": "/ˈɡræt̬.ə.tuːd/",
+          "pos": "n.",
+          "cn": "感激、感恩",
+          "ex": "People show gratitude by thanking their family and friends.",
+          "exCn": "人們透過感謝家人和朋友來表達感恩。"
+        },
+        {
+          "w": "celebrate",
+          "ipa": "/ˈsel.ɪ.breɪt/",
+          "pos": "v.",
+          "cn": "慶祝",
+          "ex": "Most families celebrate Thanksgiving with a big dinner.",
+          "exCn": "大多數家庭會用豐盛的晚餐來慶祝感恩節。"
+        },
+        {
+          "w": "tradition",
+          "ipa": "/trəˈdɪʃ.ən/",
+          "pos": "n.",
+          "cn": "傳統",
+          "ex": "Eating turkey is a tradition on this holiday.",
+          "exCn": "吃火雞是這個節日的傳統。"
+        },
+        {
+          "w": "harvest",
+          "ipa": "/ˈhɑːr.vɪst/",
+          "pos": "n.",
+          "cn": "收成、豐收",
+          "ex": "Farmers are happy when the harvest is successful.",
+          "exCn": "農夫在豐收時會很開心。"
+        },
+        {
+          "w": "parade",
+          "ipa": "/pəˈreɪd/",
+          "pos": "n.",
+          "cn": "遊行",
+          "ex": "We watched the parade on TV in the morning.",
+          "exCn": "我們早上在電視上看遊行。"
+        },
+        {
+          "w": "volunteer",
+          "ipa": "/ˌvɑː.lənˈtɪr/",
+          "pos": "v.",
+          "cn": "當志工",
+          "ex": "Some students volunteer to help the elderly.",
+          "exCn": "有些學生會去當志工幫助老人。"
+        },
+        {
+          "w": "travel long distances",
+          "ipa": "/ˈtræv.əl lɔːŋ ˈdɪs.tən.sɪz/",
+          "pos": "phr.",
+          "cn": "長途旅行",
+          "ex": "Many people travel long distances to visit their families.",
+          "exCn": "許多人會長途旅行回家探親。"
+        },
+        {
+          "w": "prepare a big meal",
+          "ipa": "/prɪˈper ə bɪɡ miːl/",
+          "pos": "phr.",
+          "cn": "準備一頓豐盛餐點",
+          "ex": "My mom prepares a big meal every Thanksgiving.",
+          "exCn": "我媽媽每年感恩節都會準備一頓豐盛的餐點。"
+        },
+        {
+          "w": "share stories",
+          "ipa": "/ʃer ˈstɔːr.iz/",
+          "pos": "phr.",
+          "cn": "分享故事",
+          "ex": "After dinner, we share stories with each other.",
+          "exCn": "晚餐後，我們互相分享故事。"
+        },
+        {
+          "w": "help people in need",
+          "ipa": "/help ˈpiː.pəl ɪn niːd/",
+          "pos": "phr.",
+          "cn": "幫助需要幫助的人",
+          "ex": "It feels good to help people in need during the holidays.",
+          "exCn": "在節日期間幫助需要幫助的人會讓人感覺很好。"
+        }
+      ],
+      "vocab2Title": "II. 補充單字 Vocabulary（B2）",
+      "vocab2": [
+        {
+          "w": "express gratitude",
+          "star": true,
+          "ipa": "/ɪkˈspres ˈɡræt̬.ə.tuːd/",
+          "pos": "phr.",
+          "cn": "表達感恩",
+          "ex": "Thanksgiving encourages people to express gratitude for the positive things in their lives.",
+          "exCn": "感恩節鼓勵人們對生活中的美好事物表達感恩。"
+        },
+        {
+          "w": "meaningful celebration",
+          "ipa": "/ˈmiː.nɪŋ.fəl ˌsel.ɪˈbreɪ.ʃən/",
+          "pos": "phr.",
+          "cn": "有意義的慶祝",
+          "ex": "Volunteering makes the holiday feel like a meaningful celebration.",
+          "exCn": "做志工讓節日變得更有意義。"
+        },
+        {
+          "w": "significant cultural event",
+          "star": true,
+          "ipa": "/sɪɡˈnɪf.ə.kənt ˈkʌl.tʃɚ.əl ɪˈvent/",
+          "pos": "phr.",
+          "cn": "重要的文化活動",
+          "ex": "For many Americans, Thanksgiving is a significant cultural event that brings people together.",
+          "exCn": "對許多美國人來說，感恩節是一個能讓人們團聚的重要文化活動。"
+        },
+        {
+          "w": "strengthen family bonds",
+          "ipa": "/ˈstreŋ.θən ˈfæm.əl.i bɑːndz/",
+          "pos": "phr.",
+          "cn": "強化家庭關係",
+          "ex": "Spending time together helps strengthen family bonds.",
+          "exCn": "一起相處有助於增進家庭關係。"
+        },
+        {
+          "w": "reflect on what you are thankful for",
+          "star": true,
+          "ipa": "/rɪˈflekt ɑːn wʌt juː ɑːr ˈθæŋk.fəl fɔːr/",
+          "pos": "phr.",
+          "cn": "反思你感激的事物",
+          "ex": "Many people use the holiday to reflect on what they are thankful for.",
+          "exCn": "許多人利用這個假期反思他們感激的事物。"
+        },
+        {
+          "w": "seasonal changes",
+          "ipa": "/ˈsiː.zən.əl ˈtʃeɪn.dʒɪz/",
+          "pos": "phr.",
+          "cn": "季節變化",
+          "ex": "The festival is closely connected to seasonal changes in North America.",
+          "exCn": "這個節日與北美的季節變化密切相關。"
+        },
+        {
+          "w": "mark the end of the harvest season",
+          "ipa": "/mɑːrk ði end əv ðə ˈhɑːr.vɪst ˈsiː.zən/",
+          "pos": "phr.",
+          "cn": "豐收季結束的象徵",
+          "ex": "The holiday marks the end of the harvest season.",
+          "exCn": "這個節日象徵著豐收季節的結束。"
+        },
+        {
+          "w": "participate in community service",
+          "star": true,
+          "ipa": "/pɑːrˈtɪs.ə.peɪt ɪn kəˈmjuː.nə.ti ˈsɝː.vɪs/",
+          "pos": "phr.",
+          "cn": "參加社區服務",
+          "ex": "More people participate in community service during Thanksgiving.",
+          "exCn": "越來越多人會在感恩節參與社區服務。"
+        },
+        {
+          "w": "spend quality time",
+          "ipa": "/spend ˈkwɑː.lə.ti taɪm/",
+          "pos": "phr.",
+          "cn": "共度高品質時光",
+          "ex": "Families try to spend quality time without distractions.",
+          "exCn": "家庭成員會試著一起度過高品質的時光，不受干擾。"
+        },
+        {
+          "w": "cultural significance",
+          "star": true,
+          "ipa": "/ˈkʌl.tʃɚ.əl sɪɡˈnɪf.ə.kəns/",
+          "pos": "phr.",
+          "cn": "文化意義",
+          "ex": "Thanksgiving has deep cultural significance in both the U.S. and Canada.",
+          "exCn": "感恩節在美國和加拿大具有深厚的文化意義。"
+        }
+      ],
+      "phrasesTitle": "III. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "national holiday",
+          "cn": "國定假日 /ˈnæʃ.ən.əl ˈhɑː.lə.deɪ/（詳見 IV-A、V）"
+        },
+        {
+          "p": "return home",
+          "cn": "回家 /rɪˈtɝːn hoʊm/（詳見 V）"
+        },
+        {
+          "p": "spend time with family",
+          "cn": "和家人共度時光 /spend taɪm wɪð ˈfæm.əl.i/（詳見 V）"
+        },
+        {
+          "p": "traditional dishes",
+          "cn": "傳統菜餚 /trəˈdɪʃ.ən.əl ˈdɪʃ.ɪz/（詳見 V）"
+        },
+        {
+          "p": "enjoy each other's company",
+          "cn": "享受彼此的陪伴 /ɪnˈdʒɔɪ iːtʃ ˈʌð.ɚz ˈkʌm.pə.ni/（詳見 V）"
+        },
+        {
+          "p": "give back to the community",
+          "cn": "回饋社區 /ɡɪv bæk tuː ðə kəˈmjuː.nə.ti/（詳見 IV-C、V）"
+        },
+        {
+          "p": "appreciate one's company",
+          "cn": "珍惜某人的陪伴 /əˈpriː.ʃi.eɪt wʌnz ˈkʌm.pə.ni/（詳見 V）"
+        },
+        {
+          "p": "long-standing tradition",
+          "cn": "長久的傳統 /ˌlɔːŋˈstæn.dɪŋ trəˈdɪʃ.ən/"
+        },
+        {
+          "p": "appreciate meaningful moments",
+          "cn": "珍惜有意義的時刻 /əˈpriː.ʃi.eɪt ˈmiː.nɪŋ.fəl ˈmoʊ.mənts/"
+        },
+        {
+          "p": "gather for a meal",
+          "cn": "聚在一起吃飯 /ˈɡæð.ɚ fɔːr ə miːl/（詳見 V）"
+        },
+        {
+          "p": "express gratitude",
+          "cn": "表達感恩（詳見 II）"
+        },
+        {
+          "p": "spend quality time",
+          "cn": "共度高品質時光（詳見 II、V）"
+        },
+        {
+          "p": "participate in community service",
+          "cn": "參加社區服務（詳見 II）"
+        },
+        {
+          "p": "mark the end of the harvest season",
+          "cn": "豐收季結束的象徵（詳見 II）"
+        }
+      ],
+      "grammarTitle": "IV. 句型與文法 Grammar",
+      "grammar": [
+        {
+          "k": "IV-A",
+          "title": "被動語態：be + 過去分詞（表示「被慶祝」）",
+          "pat": "主詞 + be 動詞 + 過去分詞",
+          "pts": [
+            "🔬 結構：主詞 + be 動詞 + 過去分詞。",
+            "🔬 中文解析：節日是「被人們慶祝」，重點在節日本身而不是誰在慶祝，所以用被動語態。文中 is celebrated on the fourth Thursday 也是同樣用法。",
+            "🔬 使用情境：介紹節慶、習俗、制度時最常用。"
+          ],
+          "exs": [
+            {
+              "tag": "is celebrated",
+              "en": "Thanksgiving is celebrated mainly in the United States and Canada.",
+              "cn": "感恩節主要在美國和加拿大慶祝。"
+            }
+          ]
+        },
+        {
+          "k": "IV-B",
+          "title": "Although …, …（雖然……，但……）",
+          "pat": "Although + 子句, 主要子句",
+          "pts": [
+            "🔬 結構：Although + 子句, 主要子句。",
+            "🔬 ⚠ 避免中式英文：中文說「雖然……但是……」，英文用了 although 之後不能再加 but，兩者只能擇一。",
+            "🔬 使用情境：比較兩件事的異同。"
+          ],
+          "exs": [
+            {
+              "tag": "Although",
+              "en": "Although the two countries celebrate on different dates, the meaning of the holiday is quite similar.",
+              "cn": "雖然兩個國家在不同日期慶祝，但節日的意義非常相似。"
+            }
+          ]
+        },
+        {
+          "k": "IV-C",
+          "title": "not only … but also …（不僅……也……）",
+          "pat": "not only + A + but also + B",
+          "pts": [
+            "🔬 結構：not only + A + but also + B（A、B 詞性要對稱，這裡都是 about + 名詞）。",
+            "🔬 中文解析：這是強調「兩者都有」的加分句型，很適合寫文章結論。",
+            "🔬 使用情境：總結、強調一件事的多重意義。"
+          ],
+          "exs": [
+            {
+              "tag": "not only … but also",
+              "en": "Thanksgiving is not only about eating, but also about kindness and giving back to the community.",
+              "cn": "感恩節不僅是吃大餐，也是關於善良和回饋社區。"
+            }
+          ]
+        }
+      ],
+      "reading": [
+        {
+          "bar": "V. 閱讀 Reading：Thanksgiving",
+          "title": "Thanksgiving",
+          "titleCn": "感恩節（B1/B2）",
+          "paras": [
+            {
+              "en": "Thanksgiving is a national holiday celebrated mainly in the United States and Canada. It is a special day for people to show gratitude for the good things in their lives. Although the two countries celebrate on different dates, the meaning of the holiday is quite similar.",
+              "cn": "感恩節是一個主要在美國和加拿大慶祝的國家節日。這一天特別讓人們對生活中的美好事物表達感激。雖然兩個國家在不同日期慶祝，但節日的意義非常相似。"
+            },
+            {
+              "en": "Thanksgiving in the United States: In the United States, Thanksgiving is celebrated on the fourth Thursday of November. Many people travel long distances to return home and spend time with their families.",
+              "cn": "美國的感恩節：在美國，感恩節是在十一月的第四個星期四。許多人會長途旅行回家與家人團聚。"
+            },
+            {
+              "en": "The day usually begins with preparing a big meal, which often includes turkey, mashed potatoes, pumpkin pie, and other traditional dishes. Families enjoy eating together, sharing stories, and appreciating each other's company.",
+              "cn": "這一天通常從準備一頓豐盛的大餐開始，餐點常包含火雞、馬鈴薯泥、南瓜派和其他傳統料理。家人會一起用餐、分享故事，並珍惜彼此的陪伴。"
+            },
+            {
+              "en": "Another common tradition is watching the Thanksgiving Day Parade or American football games on TV. Some families also volunteer at community centers to help people who are in need. This reminds everyone that Thanksgiving is not only about eating, but also about kindness and giving back to the community.",
+              "cn": "另一個常見的傳統是觀看感恩節大遊行與美式足球比賽。有些家庭也會到社區中心做志工，幫助需要幫助的人。這提醒大家，感恩節不僅是吃大餐，也是關於善良和回饋社區。"
+            },
+            {
+              "en": "Thanksgiving in Canada: In Canada, Thanksgiving is celebrated earlier—on the second Monday of October. The weather is usually cooler, and many Canadians celebrate the end of the harvest season. They also enjoy large family meals and spend time outdoors, enjoying the beauty of autumn.",
+              "cn": "加拿大的感恩節：在加拿大，感恩節較早慶祝，在十月的第二個星期一。天氣通常較涼，加拿大人常在這時慶祝豐收季節的結束。他們也會享用家庭大餐，並在戶外活動，欣賞秋天的美景。"
+            },
+            {
+              "en": "Overall Meaning: Overall, Thanksgiving is a holiday that encourages people to slow down, think about what they are thankful for, and spend quality time with their loved ones.",
+              "cn": "整體意義：總而言之，感恩節是一個鼓勵人們放慢腳步、反思自己感激的事物，並與親人共享高品質時光的節日。"
+            }
+          ],
+          "sumEn": [
+            "U.S.: the fourth Thursday of November. Canada: the second Monday of October.",
+            "Core ideas: express gratitude, spend quality time, give back to the community."
+          ],
+          "sumCn": [
+            "美國：十一月第四個星期四；加拿大：十月第二個星期一。",
+            "核心精神：express gratitude（表達感恩）、spend quality time（共度美好時光）、give back to the community（回饋社區）。"
+          ]
+        }
+      ],
+      "summaryTitle": "VI. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "感恩節時間",
+          "v": "美國十一月第四個星期四／加拿大十月第二個星期一"
+        },
+        {
+          "k": "核心精神",
+          "v": "express gratitude（表達感恩）、spend quality time（共度美好時光）、give back to the community（回饋社區）"
+        },
+        {
+          "k": "介紹節慶用被動",
+          "v": "Thanksgiving is celebrated …（be + 過去分詞，詳見 IV-A）"
+        },
+        {
+          "k": "對比句型",
+          "v": "Although …, …（用了 although 就不可再加 but，詳見 IV-B）"
+        },
+        {
+          "k": "加分結尾",
+          "v": "not only … but also …（A、B 詞性要對稱，詳見 IV-C）"
+        }
+      ]
+    },
+    /* ---- bk20251209 A Pleasant Place to Spend Quality Time ---- */
+    {
+      "id": "bk20251209",
+      "icon": "📗",
+      "date": "2025-12-09",
+      "doc": "https://docs.google.com/document/d/1BDrHoM_thTkJyExJHlp8ZddFZ4jl2XLe92ytuhBVWbk/edit",
+      "title": "A Pleasant Place to Spend Quality Time",
+      "titleCn": "度過美好時光的好地方",
+      "topics": "家鄉描述閱讀、地方與氣氛詞彙、be famous for、used to、分詞構句 making it …",
+      "vocabTitle": "I. 單字 Vocabulary",
+      "vocab": [
+        {
+          "w": "pleasant",
+          "ipa": "/ˈplez.ənt/",
+          "pos": "adj.",
+          "cn": "舒適的；令人愉悅的",
+          "ex": "It is a pleasant day.",
+          "exCn": "今天天氣很舒適。"
+        },
+        {
+          "w": "delicacy",
+          "star": true,
+          "ipa": "/ˈdel.ɪ.kə.si/",
+          "pos": "n.",
+          "cn": "美食",
+          "ex": "Stinky tofu is a delicacy.",
+          "exCn": "臭豆腐是一道美食。"
+        },
+        {
+          "w": "atmosphere",
+          "ipa": "/ˈæt.mə.sfɪr/",
+          "pos": "n.",
+          "cn": "氣氛",
+          "ex": "I like the atmosphere here.",
+          "exCn": "我喜歡這裡的氣氛。"
+        },
+        {
+          "w": "hospitable",
+          "star": true,
+          "ipa": "/hɑːˈspɪt̬.ə.bəl/",
+          "pos": "adj.",
+          "cn": "好客的",
+          "ex": "Taiwanese are hospitable.",
+          "exCn": "台灣人很好客。"
+        },
+        {
+          "w": "strengthen",
+          "ipa": "/ˈstreŋ.θən/",
+          "pos": "v.",
+          "cn": "加強",
+          "ex": "Milk can strengthen bones.",
+          "exCn": "牛奶能強化骨骼。"
+        },
+        {
+          "w": "bond",
+          "ipa": "/bɑːnd/",
+          "pos": "n.",
+          "cn": "連結；感情",
+          "ex": "We have a strong bond.",
+          "exCn": "我們有很深的感情。"
+        },
+        {
+          "w": "catch up",
+          "ipa": "/kætʃ ʌp/",
+          "pos": "phr. v.",
+          "cn": "敘舊",
+          "ex": "Let's catch up tomorrow!",
+          "exCn": "我們明天敘敘舊吧！"
+        },
+        {
+          "w": "attraction",
+          "ipa": "/əˈtræk.ʃən/",
+          "pos": "n.",
+          "cn": "景點",
+          "ex": "This is a famous attraction.",
+          "exCn": "這是一個著名的景點。"
+        },
+        {
+          "w": "disaster",
+          "ipa": "/dɪˈzæs.tɚ/",
+          "pos": "n.",
+          "cn": "災難",
+          "ex": "A typhoon is a disaster.",
+          "exCn": "颱風是一場災難。"
+        },
+        {
+          "w": "bustling",
+          "star": true,
+          "ipa": "/ˈbʌs.lɪŋ/",
+          "pos": "adj.",
+          "cn": "繁忙熱鬧的",
+          "ex": "The street is bustling.",
+          "exCn": "這條街很熱鬧。"
+        }
+      ],
+      "phrasesTitle": "II. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "a pleasant day",
+          "cn": "愉快的一天（詳見 I）"
+        },
+        {
+          "p": "local delicacy",
+          "cn": "當地美食（詳見 I、IV）"
+        },
+        {
+          "p": "warm atmosphere",
+          "cn": "溫馨氣氛（詳見 I、IV）"
+        },
+        {
+          "p": "hospitable people",
+          "cn": "好客的人（詳見 I、IV）"
+        },
+        {
+          "p": "strengthen our body",
+          "cn": "強健體魄（詳見 I）"
+        },
+        {
+          "p": "strengthen family bonds",
+          "cn": "加強家庭感情（詳見 IV、V）"
+        },
+        {
+          "p": "catch up with you",
+          "cn": "和你敘舊（詳見 I、IV）"
+        },
+        {
+          "p": "tourist attraction",
+          "cn": "觀光景點（詳見 I、IV）"
+        },
+        {
+          "p": "natural disaster",
+          "cn": "自然災害（詳見 I、III-B、IV）"
+        },
+        {
+          "p": "bustling market",
+          "cn": "熱鬧的市場（詳見 I、IV）"
+        },
+        {
+          "p": "be famous for",
+          "cn": "以……聞名（詳見 III-A）"
+        },
+        {
+          "p": "be located in / be based in",
+          "cn": "位於、設在（詳見 IV）"
+        },
+        {
+          "p": "popular among",
+          "cn": "受……喜愛（詳見 IV）"
+        },
+        {
+          "p": "spend quality time",
+          "cn": "共度美好時光（詳見 IV、V）"
+        },
+        {
+          "p": "suffer from",
+          "cn": "遭受……之苦（詳見 III-B、IV）"
+        },
+        {
+          "p": "at peace",
+          "cn": "平安無事（詳見 IV）"
+        },
+        {
+          "p": "return to normal",
+          "cn": "恢復正常（詳見 IV）"
+        },
+        {
+          "p": "feel connected to",
+          "cn": "感到與……有連結（詳見 IV）"
+        }
+      ],
+      "grammarTitle": "III. 句型與文法 Grammar",
+      "grammar": [
+        {
+          "k": "III-A",
+          "title": "… be famous for …（以……聞名）",
+          "pat": "主詞 + be famous for + 名詞／動名詞",
+          "pts": [
+            "用法：當你想介紹某個地方或某人很有名的時候使用。課文原句就是用這個句型介紹家鄉的當地美食（詳見 IV 第 1 段）。",
+            "🔬 結構：主詞 + be famous for + 名詞／動名詞。",
+            "🔬 ⚠ 避免中式英文：for 後面不能接完整句子，要接名詞或 V-ing。",
+            "🔬 使用情境：介紹家鄉、名人、特產。"
+          ],
+          "exs": [
+            {
+              "tag": "地方",
+              "en": "Taiwan is famous for bubble tea.",
+              "cn": "台灣以珍珠奶茶聞名。"
+            },
+            {
+              "tag": "人",
+              "en": "He is famous for his singing.",
+              "cn": "他以唱歌好聽聞名。"
+            }
+          ]
+        },
+        {
+          "k": "III-B",
+          "title": "… used to …（過去曾經……）",
+          "pat": "used to + 原形動詞",
+          "pts": [
+            "用法：表示「以前常做某事，或以前是某種狀態（但現在不是了）」，後面要加原形動詞。課文用 used to suffer from a natural disaster 描述小鎮的過去（詳見 IV 第 3 段）。",
+            "🔬 結構：used to + 原形動詞。",
+            "🔬 中文解析：這個句型自帶「但現在已經不是了」的言外之意，所以課文後面才接 but now everything is at peace。",
+            "🔬 ⚠ 避免中式英文：不可寫成 used to living（那是 be used to + V-ing「習慣於」，意思完全不同）。",
+            "🔬 使用情境：對比過去與現在。"
+          ],
+          "exs": [
+            {
+              "tag": "狀態",
+              "en": "I used to live in Taipei.",
+              "cn": "我以前住在台北。"
+            },
+            {
+              "tag": "習慣",
+              "en": "She used to play tennis.",
+              "cn": "她以前常打網球。"
+            }
+          ]
+        },
+        {
+          "k": "III-C",
+          "title": "分詞構句 making it a great place to …",
+          "pat": "主要子句 + , making + 受詞 + 補語",
+          "pts": [
+            "課文原句用 …, making it a great place to spend quality time with your family 收尾（詳見 IV 第 1 段）。",
+            "🔬 結構：主要子句 + , making + 受詞 + 補語（現在分詞構句，表示「因而造成的結果」）。",
+            "🔬 中文解析：這是把兩句合併的高階寫法，等於 …and this makes it a great place…。",
+            "🔬 使用情境：描述某個事實帶來的結果，是寫作加分句型。"
+          ]
+        }
+      ],
+      "reading": [
+        {
+          "bar": "IV. 閱讀 Reading：A Pleasant Place to Spend Quality Time",
+          "title": "A Pleasant Place to Spend Quality Time",
+          "titleCn": "一個度過美好時光的好地方",
+          "paras": [
+            {
+              "en": "My hometown is a pleasant city that is famous for its local delicacy. The best restaurants are located in the old street, and it is popular among both locals and travelers. Many cafés are based in this area too, making it a great place to spend quality time with your family.",
+              "cn": "我的家鄉是一個令人愉悅的城市，以當地的美食聞名。最好的餐廳都位於老街，深受當地人和遊客的喜愛。許多咖啡館也設在此區，使這裡成為與家人共度美好時光的好地方。"
+            },
+            {
+              "en": "The environment is clean, and the atmosphere is warm and welcoming. People here are very hospitable, always ready to help visitors. Families often come here on weekends to strengthen family bonds. They walk around, taste snacks, and catch up on each other's lives.",
+              "cn": "這裡的環境乾淨，氣氛溫馨受歡迎。這裡的人們非常熱情好客，隨時準備幫助遊客。家庭常在週末來到這裡以加強家族情感。他們四處走走、品嚐小吃，並互相分享近況（敘舊）。"
+            },
+            {
+              "en": "There are also several tourist attractions, such as a riverside park and a small museum. The town used to suffer from a natural disaster, but now everything is at peace, and life has returned to normal.",
+              "cn": "這裡還有幾個觀光景點，例如河濱公園和一座小型博物館。這座小鎮過去曾遭受自然災害之苦，但現在一切都平安無事，生活已恢復正常。"
+            },
+            {
+              "en": "At night, the market becomes bustling and lively. Though it can get crowded, many people still enjoy visiting because it makes them feel connected to their community.",
+              "cn": "夜晚時，市場變得繁忙且熱鬧。雖然可能會變得很擁擠，許多人仍然喜歡造訪，因為這讓他們感到與社區有所連結。"
+            }
+          ],
+          "sumEn": [
+            "Describing a place: be famous for → atmosphere → attractions.",
+            "Useful collocations: be located in / be based in, popular among, suffer from, at peace, return to normal, feel connected to."
+          ],
+          "sumCn": [
+            "介紹地方的順序：be famous for（以什麼聞名）→ atmosphere（氣氛）→ attractions（景點）。",
+            "好用搭配：be located in / be based in（位於）、popular among（受……喜愛）、suffer from（遭受）、at peace（平安無事）、return to normal（恢復正常）、feel connected to（感到與……有連結）。"
+          ]
+        }
+      ],
+      "summaryTitle": "V. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "介紹地方三步驟",
+          "v": "be famous for（以什麼聞名）→ 描述 atmosphere（氣氛）→ 描述 attractions（景點）"
+        },
+        {
+          "k": "對比過去與現在",
+          "v": "used to + 原形動詞（自帶「現在已經不是了」的意思，詳見 III-B）"
+        },
+        {
+          "k": "形容人與夜市",
+          "v": "形容人親切用 hospitable；形容夜市用 bustling and lively"
+        },
+        {
+          "k": "家人相處",
+          "v": "spend quality time（共度美好時光）、strengthen family bonds（加強家庭感情）、catch up（敘舊）"
+        },
+        {
+          "k": "寫作加分句型",
+          "v": "主要子句 + , making it a great place to + V（分詞構句表結果，詳見 III-C）"
+        },
+        {
+          "k": "學習小訣竅",
+          "v": "初學者可以先看「中文解釋」和「實用片語」，把幾個字連在一起記會比較容易。"
+        }
+      ]
+    },
+    /* ---- bk20251216 A Busy Day of Repairs and Services ---- */
+    {
+      "id": "bk20251216",
+      "icon": "📗",
+      "date": "2025-12-16",
+      "doc": "https://docs.google.com/document/d/1MzEp2I1i3KP6eOcnjoOkISDp3lgzip-KlLcDQtkODvw/edit",
+      "title": "A Busy Day of Repairs and Services",
+      "titleCn": "修繕與職業",
+      "topics": "居家修繕閱讀、職業詞彙與英文定義、修繕實用片語、have + 物 + 過去分詞、how important it is to + V、被動語態描述修繕結果",
+      "vocabTitle": "I. 單字 Vocabulary（職業 Occupations）",
+      "vocab": [
+        {
+          "w": "plumber",
+          "ipa": "/ˈplʌmɚ/",
+          "pos": "n.",
+          "cn": "水管工人",
+          "ex": "A person who fixes water pipes, toilets, and bathrooms.",
+          "exCn": "修理水管、馬桶和浴室的人。"
+        },
+        {
+          "w": "mechanic",
+          "ipa": "/məˈkænɪk/",
+          "pos": "n.",
+          "cn": "技工；技師",
+          "ex": "A person who repairs machines, especially cars and motorcycles.",
+          "exCn": "修理機器，特別是汽車和機車的人。"
+        },
+        {
+          "w": "electrician",
+          "ipa": "/ɪˌlekˈtrɪʃən/",
+          "pos": "n.",
+          "cn": "電工",
+          "ex": "A person who installs or fixes electrical wires, lights, and power systems.",
+          "exCn": "安裝或修理電線、電燈和電力系統的人。"
+        },
+        {
+          "w": "carpenter",
+          "ipa": "/ˈkɑːr.pən.tɚ/",
+          "pos": "n.",
+          "cn": "木匠",
+          "ex": "A person who builds or repairs things made of wood, such as doors or furniture.",
+          "exCn": "建造或修理木製品，例如門或家具的人。"
+        },
+        {
+          "w": "nanny",
+          "ipa": "/ˈnæni/",
+          "pos": "n.",
+          "cn": "保母",
+          "ex": "A person who takes care of children, usually in the family's home.",
+          "exCn": "通常在家庭中照顧小孩的人。"
+        },
+        {
+          "w": "travel agent",
+          "ipa": "/ˈtrævəl ˈeɪdʒənt/",
+          "pos": "n.",
+          "cn": "旅行社代辦",
+          "ex": "A person who helps people plan trips and buy tickets for travel.",
+          "exCn": "幫助人們計畫旅行和購買旅遊票券的人。"
+        },
+        {
+          "w": "estate agent",
+          "star": true,
+          "ipa": "/ɪˈsteɪt ˈeɪdʒənt/",
+          "pos": "n.",
+          "cn": "房地產仲介",
+          "ex": "A person who helps people buy, sell, or rent houses and apartments.",
+          "exCn": "幫助人們買賣或租賃房屋和公寓的人。"
+        },
+        {
+          "w": "importer",
+          "ipa": "/ɪmˈpɔːrtɚ/",
+          "pos": "n.",
+          "cn": "進口商",
+          "ex": "A person or company that brings products into a country to sell.",
+          "exCn": "將產品引進一個國家進行銷售的人或公司。"
+        },
+        {
+          "w": "civil servant",
+          "star": true,
+          "ipa": "/ˈsɪvəl ˈsɝːvənt/",
+          "pos": "n.",
+          "cn": "公務員",
+          "ex": "People who work for the government and help run public services.",
+          "exCn": "為政府機關工作並協助運作公共服務的人。"
+        },
+        {
+          "w": "representative",
+          "star": true,
+          "ipa": "/ˌreprɪˈzentətɪv/",
+          "pos": "n.",
+          "cn": "代表；業務",
+          "ex": "A person who speaks or acts for someone else or for a company.",
+          "exCn": "代表他人或公司發言或行事的人。"
+        }
+      ],
+      "vocab2Title": "II. 補充單字 Vocabulary（修繕相關）",
+      "vocab2": [
+        {
+          "w": "pressure",
+          "ipa": "/ˈpreʃɚ/",
+          "pos": "n.",
+          "cn": "壓力（此指水壓 water pressure）",
+          "ex": "The shower head has low water pressure.",
+          "exCn": "蓮蓬頭的水壓很低。"
+        },
+        {
+          "w": "sink",
+          "ipa": "/sɪŋk/",
+          "pos": "n.",
+          "cn": "水槽；洗手台",
+          "ex": "The sink fell off the wall because the glue wasn't applied properly.",
+          "exCn": "水槽因為黏膠沒塗好而從牆上掉下來。"
+        },
+        {
+          "w": "glue",
+          "ipa": "/ɡluː/",
+          "pos": "n.",
+          "cn": "黏膠；膠水",
+          "ex": "The glue wasn't applied properly.",
+          "exCn": "黏膠沒有塗好。"
+        },
+        {
+          "w": "inspect",
+          "star": true,
+          "ipa": "/ɪnˈspekt/",
+          "pos": "v.",
+          "cn": "檢查；審查",
+          "ex": "The plumber promised to inspect everything carefully.",
+          "exCn": "水管工人承諾會仔細檢查所有東西。"
+        },
+        {
+          "w": "neighborhood",
+          "ipa": "/ˈneɪbɚˌhʊd/",
+          "pos": "n.",
+          "cn": "社區；鄰近地區",
+          "ex": "The agent advised on good neighborhoods.",
+          "exCn": "仲介針對優質的社區提供了建議。"
+        },
+        {
+          "w": "faulty",
+          "star": true,
+          "ipa": "/ˈfɔːlti/",
+          "pos": "adj.",
+          "cn": "故障的；有缺陷的",
+          "ex": "An electrician came to fix a faulty electrical wire.",
+          "exCn": "一位電工來修理故障的電線。"
+        },
+        {
+          "w": "socket",
+          "ipa": "/ˈsɑːkɪt/",
+          "pos": "n.",
+          "cn": "插座",
+          "ex": "Ensuring that all the lights and sockets were safe.",
+          "exCn": "確保所有的燈和插座都是安全的。"
+        },
+        {
+          "w": "efficiently",
+          "star": true,
+          "ipa": "/ɪˈfɪʃəntli/",
+          "pos": "adv.",
+          "cn": "有效率地",
+          "ex": "They help solve problems efficiently.",
+          "exCn": "他們幫助有效率地解決問題。"
+        },
+        {
+          "w": "relieved",
+          "star": true,
+          "ipa": "/rɪˈliːvd/",
+          "pos": "adj.",
+          "cn": "感到寬慰的",
+          "ex": "I felt relieved and thanked all the professionals.",
+          "exCn": "我感到如釋重負，並感謝所有專業人員。"
+        }
+      ],
+      "phrasesTitle": "III. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "flush properly",
+          "cn": "正常沖水（詳見 VI）"
+        },
+        {
+          "p": "get stuck",
+          "cn": "卡住（詳見 VI、VII）"
+        },
+        {
+          "p": "fall off",
+          "cn": "掉落；脫落（詳見 VI、VII）"
+        },
+        {
+          "p": "come off",
+          "cn": "脫落；掉下（詳見 VI、VII）"
+        },
+        {
+          "p": "skilled professionals",
+          "cn": "熟練的專業人員（詳見 VI、V）"
+        },
+        {
+          "p": "make life much easier",
+          "cn": "讓生活輕鬆許多（詳見 VI、V）"
+        },
+        {
+          "p": "low water pressure",
+          "cn": "水壓很低（詳見 II、V）"
+        },
+        {
+          "p": "apply glue properly",
+          "cn": "把黏膠塗好（詳見 II、V）"
+        },
+        {
+          "p": "a faulty electrical wire",
+          "cn": "故障的電線（詳見 II、V）"
+        },
+        {
+          "p": "advise on good neighborhoods",
+          "cn": "針對優質社區提供建議（詳見 II、V）"
+        },
+        {
+          "p": "have + 物 + 過去分詞",
+          "cn": "請人代勞把某事做好（詳見 IV-A）"
+        },
+        {
+          "p": "solve problems efficiently",
+          "cn": "有效率地解決問題（詳見 II、V）"
+        },
+        {
+          "p": "feel relieved",
+          "cn": "感到如釋重負（詳見 II、VII）"
+        }
+      ],
+      "grammarTitle": "IV. 句型與文法 Grammar",
+      "grammar": [
+        {
+          "k": "IV-A",
+          "title": "have + 物 + 過去分詞（請別人做某事）",
+          "pat": "have + 受詞（物）+ 過去分詞（＋ by + 執行者）",
+          "pts": [
+            "課文用 had some minor repairs done by a carpenter 表示「請木匠來做修繕」（詳見 V 第 5 段）。",
+            "🔬 結構：have + 受詞（物）+ 過去分詞（＋ by + 執行者）。",
+            "🔬 中文解析：這是「使役被動」用法，重點在「事情被完成」，而不是自己動手做。與 have + 人 + 原形動詞（請某人做）方向不同。",
+            "🔬 ⚠ 避免中式英文：不可寫成 I had a carpenter repaired…；請人做要用 had a carpenter repair…（原形），請事情被完成要用 had … repaired（過去分詞）。",
+            "🔬 使用情境：修繕、剪髮、送修等「請人代勞」的情境。"
+          ]
+        },
+        {
+          "k": "IV-B",
+          "title": "how important it is to + 原形動詞（……有多重要）",
+          "pat": "how + 形容詞 + it is to + 原形動詞",
+          "pts": [
+            "課文用 I realized how important it is to have skilled professionals 表達心得（詳見 V 第 6 段）。",
+            "🔬 結構：how + 形容詞 + it is to + 原形動詞（it 是虛主詞，真主詞是後面的不定詞）。",
+            "🔬 中文解析：這是名詞子句的用法，放在 realize / know / understand 之後，語序是肯定句順序，不是疑問句。",
+            "🔬 ⚠ 避免中式英文：不可寫成 how important is it to have…（那是疑問句語序）。",
+            "🔬 使用情境：作文中表達體悟、心得。"
+          ]
+        },
+        {
+          "k": "IV-C",
+          "title": "被動語態描述修繕結果",
+          "pat": "主詞 + be 動詞 + 過去分詞",
+          "pts": [
+            "課文最後一段用 were replaced / was reattached 交代修繕結果（詳見 V 第 7 段）。",
+            "🔬 結構：主詞 + be 動詞 + 過去分詞。",
+            "🔬 中文解析：修繕情境中「誰修的」不重要，重點是「東西被修好了」，所以用被動語態最自然。文中 the glue wasn't applied properly 也是同樣道理。",
+            "🔬 使用情境：報告結果、驗收、客訴回覆。"
+          ]
+        }
+      ],
+      "reading": [
+        {
+          "bar": "V. 閱讀 Reading：A Busy Day of Repairs and Services",
+          "title": "A Busy Day of Repairs and Services",
+          "titleCn": "忙碌的修繕與服務之日",
+          "paras": [
+            {
+              "en": "Yesterday was a busy day at my apartment. First, I noticed that the toilet wasn't flushing properly. The handle sometimes gets stuck, and it doesn't empty the water completely. I immediately called a plumber to fix it. While talking to the plumber, I also mentioned that the shower head has low water pressure, making it hard to take a proper shower.",
+              "cn": "昨天在我的公寓裡度過了忙碌的一天。首先，我注意到馬桶無法正常沖水。把手有時候會卡住，而且無法將水完全排空。我立刻打電話叫水管工人來修理。在和水管工人交談時，我也提到蓮蓬頭的水壓很低，讓人很難好好洗個澡。"
+            },
+            {
+              "en": "Next, I checked the kitchen and bathroom and saw that the sink fell off the wall because the glue wasn't applied properly. I also noticed that one of the bathroom tiles was broken and that a ceiling tile came off, while part of the wood panel was loose. The plumber promised to inspect everything carefully and repair all the issues.",
+              "cn": "接著，我檢查了廚房和浴室，發現水槽從牆上掉下來了，因為黏膠沒有塗好。我也注意到其中一塊浴室磁磚破了，還有一塊天花板的磁磚掉落，同時部分木板也鬆動了。水管工人承諾會仔細檢查所有東西並修復所有問題。"
+            },
+            {
+              "en": "Later, I received a call from a travel agent who was helping me plan a short holiday. She explained the flight options and hotel bookings clearly. I also spoke with an estate agent because I am considering renting a new apartment. The agent showed me several options and advised on good neighborhoods.",
+              "cn": "晚些時候，我接到了旅行社代辦的電話，她正在幫我計畫一個短暫的假期。她清楚地解釋了航班選擇和飯店預訂。我也和一位房地產仲介談過，因為我正在考慮租一間新公寓。仲介向我展示了幾個選擇，並針對優質的社區提供了建議。"
+            },
+            {
+              "en": "In the afternoon, I met a civil servant at the local government office to ask about my official documents. She was very helpful and polite, explaining all the steps clearly. Meanwhile, my nanny played with my little brother and made sure he ate his lunch.",
+              "cn": "下午，我在當地政府辦公室見了一位公務員，詢問關於我的官方文件。她非常樂於助人且有禮貌，清楚地解釋了所有步驟。同時，我的保母陪我弟弟玩，並確保他吃了午餐。"
+            },
+            {
+              "en": "I also had some minor repairs done by a carpenter, who repaired a broken door and installed new shelves. An electrician came to fix a faulty electrical wire, ensuring that all the lights and sockets were safe.",
+              "cn": "我也請木匠做了一些小型修繕，他修理了一扇破掉的門並安裝了新的層架。一位電工來修理故障的電線，確保所有的燈和插座都是安全的。"
+            },
+            {
+              "en": "It was a long day, but I realized how important it is to have skilled professionals like plumbers, electricians, carpenters, and civil servants. They help solve problems efficiently and make life much easier.",
+              "cn": "這是漫長的一天，但我意識到擁有像水管工人、電工、木匠和公務員等熟練的專業人員有多麼重要。他們幫助有效率地解決問題，讓生活變得更輕鬆。"
+            },
+            {
+              "en": "By the evening, everything was fixed. The tiles were replaced, the sink was reattached, and the ceiling was safe again. I felt relieved and thanked all the professionals for their hard work.",
+              "cn": "到了傍晚，所有東西都修好了。磁磚被換新了，水槽被重新固定，天花板也再次變得安全。我感到如釋重負，並感謝所有專業人員的辛勤工作。"
+            }
+          ],
+          "sumEn": [
+            "Occupation suffixes: -er / -or (plumber, carpenter, importer); -ian / -ic (electrician, mechanic).",
+            "Three \"broken\" phrases: get stuck, fall off, come off."
+          ],
+          "sumCn": [
+            "職業字尾：-er / -or（plumber、carpenter、importer）；-ian / -ic（electrician、mechanic）。",
+            "壞掉三兄弟：get stuck（卡住）、fall off（掉落）、come off（脫落）。"
+          ]
+        }
+      ],
+      "extraTitle": "VI. 實用片語例句 Useful Phrases in Context",
+      "extra": [
+        {
+          "title": "VI-A. 修繕與職場實用片語",
+          "exs": [
+            {
+              "en": "The toilet in the guest bathroom doesn't flush properly, so I need to call a plumber.",
+              "cn": "客用浴室的馬桶無法正常沖水，所以我需要叫水管工人來。（flush properly ＝ 正常沖水）",
+              "hi": "flush properly"
+            },
+            {
+              "en": "The printer paper always gets stuck when I try to print double-sided documents.",
+              "cn": "當我嘗試列印雙面文件時，印表機的紙總是會卡住。（get stuck ＝ 卡住）",
+              "hi": "gets stuck"
+            },
+            {
+              "en": "The button fell off my shirt during the meeting, which was a bit embarrassing.",
+              "cn": "開會時我襯衫的扣子掉落了，這有點尷尬。（fall off ＝ 掉落、脫落）",
+              "hi": "fell off"
+            },
+            {
+              "en": "The label on this package came off during shipping, so we don't know who it belongs to.",
+              "cn": "這個包裹上的標籤在運送過程中脫落了，所以我們不知道它是誰的。（come off ＝ 脫落、掉下）",
+              "hi": "came off"
+            },
+            {
+              "en": "We need to hire skilled professionals to ensure the quality and safety of our new products.",
+              "cn": "我們需要聘請熟練的專業人員，以確保我們新產品的品質與安全。（skilled professionals ＝ 熟練的專業人員）",
+              "hi": "skilled professionals"
+            },
+            {
+              "en": "Using a good tracking tool for our projects can make life much easier for the whole team.",
+              "cn": "為我們的專案使用一個良好的追蹤工具，可以讓整個團隊的工作（生活）輕鬆許多。（make life much easier ＝ 讓生活輕鬆許多）",
+              "hi": "make life much easier"
+            }
+          ]
+        }
+      ],
+      "summaryTitle": "VII. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "職業字尾",
+          "v": "-er / -or（plumber、carpenter、importer）、-ian / -ic（electrician、mechanic）"
+        },
+        {
+          "k": "壞掉三兄弟",
+          "v": "get stuck（卡住）、fall off（掉落）、come off（脫落）"
+        },
+        {
+          "k": "請人代勞",
+          "v": "have + 物 + 過去分詞（詳見 IV-A）"
+        },
+        {
+          "k": "表達體悟",
+          "v": "I realized how important it is to + V（肯定句語序，詳見 IV-B）"
+        },
+        {
+          "k": "修好了用被動",
+          "v": "The sink was reattached.（be + 過去分詞，詳見 IV-C）→ 最後心情：I felt relieved."
+        }
+      ]
+    },
+    /* ---- bk20251218 A Busy Day of Repairs and Services ---- */
+    {
+      "id": "bk20251218",
+      "icon": "📗",
+      "date": "2025-12-18",
+      "doc": "https://docs.google.com/document/d/1UlR9LdXJ-zpqLJOHTzjHvVeWZLBMW6tTjmjWVX7rNqM/edit",
+      "title": "A Busy Day of Repairs and Services",
+      "titleCn": "居家修繕與服務",
+      "topics": "居家修繕閱讀文章、職業與人物、報修單字與句型、中翻英練習、報修情境訂正、單字深入（radiator／rental／grease／burst）",
+      "vocabTitle": "I. 單字 Vocabulary（職業與人物、家中問題、修理動作、感受描述）",
+      "vocab": [
+        {
+          "w": "plumber",
+          "ipa": "/ˈplʌmɚ/",
+          "pos": "n.",
+          "cn": "水電工（b 不發音）",
+          "ex": "I called a plumber to fix it.",
+          "exCn": "我叫了水電工來修。"
+        },
+        {
+          "w": "electrician",
+          "ipa": "/ɪˌlekˈtrɪʃən/",
+          "pos": "n.",
+          "cn": "電工",
+          "ex": "An electrician fixed the wire.",
+          "exCn": "電工修理了電線。"
+        },
+        {
+          "w": "carpenter",
+          "ipa": "/ˈkɑːr.pən.tɚ/",
+          "pos": "n.",
+          "cn": "木工",
+          "ex": "The carpenter repaired the door.",
+          "exCn": "木工修好了門。"
+        },
+        {
+          "w": "travel agent",
+          "ipa": "/ˈtrævəl ˈeɪdʒənt/",
+          "pos": "n.",
+          "cn": "旅行社人員",
+          "ex": "The travel agent explained the options.",
+          "exCn": "旅行社人員解說選項。"
+        },
+        {
+          "w": "estate agent",
+          "star": true,
+          "ipa": "/ɪˈsteɪt ˈeɪdʒənt/",
+          "pos": "n.",
+          "cn": "房仲（前面要加 the）",
+          "ex": "The estate agent showed me apartments.",
+          "exCn": "房仲帶我看房。"
+        },
+        {
+          "w": "civil servant",
+          "star": true,
+          "ipa": "/ˈsɪvəl ˈsɝːvənt/",
+          "pos": "n.",
+          "cn": "公務員",
+          "ex": "I met a civil servant at the office.",
+          "exCn": "我在辦公室遇到公務員。"
+        },
+        {
+          "w": "nanny",
+          "ipa": "/ˈnæni/",
+          "pos": "n.",
+          "cn": "保母",
+          "ex": "The nanny took care of my brother.",
+          "exCn": "保母照顧我弟弟。"
+        },
+        {
+          "w": "flush",
+          "ipa": "/flʌʃ/",
+          "pos": "v. / n.",
+          "cn": "沖水（可當動詞或名詞）",
+          "ex": "The toilet doesn't flush properly.",
+          "exCn": "馬桶無法正常沖水。"
+        },
+        {
+          "w": "handle",
+          "ipa": "/ˈhændl/",
+          "pos": "n.",
+          "cn": "把手",
+          "ex": "The handle gets stuck sometimes.",
+          "exCn": "把手有時會卡住。"
+        },
+        {
+          "w": "stuck",
+          "ipa": "/stʌk/",
+          "pos": "adj.",
+          "cn": "卡住的",
+          "ex": "The door is stuck.",
+          "exCn": "門卡住了。"
+        },
+        {
+          "w": "low water pressure",
+          "ipa": "/loʊ ˈwɑːt̬ɚ ˈpreʃɚ/",
+          "pos": "n.",
+          "cn": "水壓低",
+          "ex": "The shower has low water pressure.",
+          "exCn": "蓮蓬頭水壓很低。"
+        },
+        {
+          "w": "sink",
+          "ipa": "/sɪŋk/",
+          "pos": "n.",
+          "cn": "洗手台、水槽",
+          "ex": "The sink fell off the wall.",
+          "exCn": "洗手台從牆上掉下來。"
+        },
+        {
+          "w": "tile",
+          "ipa": "/taɪl/",
+          "pos": "n.",
+          "cn": "磁磚",
+          "ex": "One of the tiles was broken.",
+          "exCn": "有一片磁磚破掉。"
+        },
+        {
+          "w": "ceiling",
+          "ipa": "/ˈsiːlɪŋ/",
+          "pos": "n.",
+          "cn": "天花板",
+          "ex": "A ceiling tile came off.",
+          "exCn": "一片天花板掉下來。"
+        },
+        {
+          "w": "loose",
+          "ipa": "/luːs/",
+          "pos": "adj.",
+          "cn": "鬆的",
+          "ex": "The wood panel is loose.",
+          "exCn": "木板是鬆的。"
+        },
+        {
+          "w": "repair",
+          "ipa": "/rɪˈper/",
+          "pos": "v.",
+          "cn": "修理",
+          "ex": "The plumber repaired the toilet.",
+          "exCn": "水電工修理了馬桶。"
+        },
+        {
+          "w": "fix",
+          "ipa": "/fɪks/",
+          "pos": "v.",
+          "cn": "修好",
+          "ex": "An electrician fixed the wire.",
+          "exCn": "電工修好了電線。"
+        },
+        {
+          "w": "inspect",
+          "star": true,
+          "ipa": "/ɪnˈspekt/",
+          "pos": "v.",
+          "cn": "檢查",
+          "ex": "He promised to inspect everything.",
+          "exCn": "他答應檢查所有東西。"
+        },
+        {
+          "w": "install",
+          "ipa": "/ɪnˈstɑːl/",
+          "pos": "v.",
+          "cn": "安裝",
+          "ex": "The carpenter installed new shelves.",
+          "exCn": "木工安裝了新層架。"
+        },
+        {
+          "w": "replace",
+          "ipa": "/rɪˈpleɪs/",
+          "pos": "v.",
+          "cn": "更換",
+          "ex": "The tiles were replaced.",
+          "exCn": "磁磚被更換。"
+        },
+        {
+          "w": "reattach",
+          "star": true,
+          "ipa": "/ˌriːəˈtætʃ/",
+          "pos": "v.",
+          "cn": "重新固定",
+          "ex": "The sink was reattached.",
+          "exCn": "洗手台被重新固定。"
+        },
+        {
+          "w": "ensure",
+          "star": true,
+          "ipa": "/ɪnˈʃʊr/",
+          "pos": "v.",
+          "cn": "確保",
+          "ex": "He ensured everything was safe.",
+          "exCn": "他確保一切安全。"
+        },
+        {
+          "w": "helpful",
+          "ipa": "/ˈhelpfəl/",
+          "pos": "adj.",
+          "cn": "樂於助人的",
+          "ex": "She was very helpful.",
+          "exCn": "她非常樂於幫忙。"
+        },
+        {
+          "w": "polite",
+          "ipa": "/pəˈlaɪt/",
+          "pos": "adj.",
+          "cn": "有禮貌的",
+          "ex": "The staff was polite.",
+          "exCn": "工作人員很有禮貌。"
+        },
+        {
+          "w": "skilled",
+          "star": true,
+          "ipa": "/skɪld/",
+          "pos": "adj.",
+          "cn": "技術熟練的",
+          "ex": "He is a skilled worker.",
+          "exCn": "他是技術熟練的工人。"
+        },
+        {
+          "w": "efficient",
+          "ipa": "/ɪˈfɪʃənt/",
+          "pos": "adj.",
+          "cn": "有效率的",
+          "ex": "They work efficiently.",
+          "exCn": "他們工作很有效率。"
+        },
+        {
+          "w": "relieved",
+          "star": true,
+          "ipa": "/rɪˈliːvd/",
+          "pos": "adj.",
+          "cn": "如釋重負的",
+          "ex": "I felt relieved.",
+          "exCn": "我感到放心。"
+        }
+      ],
+      "vocab2Title": "I-B. 補充單字：單字深入 Vocabulary Deep-Dive",
+      "vocab2": [
+        {
+          "w": "radiator",
+          "star": true,
+          "ipa": "/ˈreɪ.di.eɪ.t̬ɚ/",
+          "pos": "n.",
+          "cn": "散熱器；暖氣片；汽車水箱（常見拼錯：❌ raditor／radator／radiater）",
+          "ex": "The radiator helps reduce the machine temperature.",
+          "exCn": "散熱器幫助降低機台溫度。"
+        },
+        {
+          "w": "rental",
+          "star": true,
+          "ipa": "/ˈren.t̬əl/",
+          "pos": "adj. / n.",
+          "cn": "租賃的（adj.）；租金（n.）",
+          "ex": "We rented a rental car for our trip.",
+          "exCn": "我們為旅行租了一輛車。"
+        },
+        {
+          "w": "grease",
+          "star": true,
+          "ipa": "/ɡriːs/",
+          "pos": "n. / v.",
+          "cn": "油脂、潤滑脂（n.）；上油（v.）",
+          "ex": "There is grease on the floor. Be careful.",
+          "exCn": "地板上有油，小心。"
+        },
+        {
+          "w": "burst",
+          "star": true,
+          "ipa": "/bɝːst/",
+          "pos": "v.",
+          "cn": "爆裂、破裂（三態同形 burst / burst / burst）",
+          "ex": "The water pipe burst last night.",
+          "exCn": "昨晚水管爆裂。"
+        }
+      ],
+      "phrasesTitle": "II. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "get stuck",
+          "cn": "卡住（詳見 I）"
+        },
+        {
+          "p": "low water pressure",
+          "cn": "水壓低（詳見 I、IV）"
+        },
+        {
+          "p": "take a proper shower",
+          "cn": "好好洗個澡（詳見 V）"
+        },
+        {
+          "p": "fall off (the wall)",
+          "cn": "（東西）從上面掉下來（詳見 IV）"
+        },
+        {
+          "p": "fall down",
+          "cn": "（人）跌倒（詳見 IV）"
+        },
+        {
+          "p": "come off",
+          "cn": "脫落、掉下來（詳見 V）"
+        },
+        {
+          "p": "be clogged with",
+          "cn": "被……堵住（詳見 IV）"
+        },
+        {
+          "p": "lose air",
+          "cn": "（輪胎）漏氣（詳見 IV）"
+        },
+        {
+          "p": "mop the floor",
+          "cn": "拖地（詳見 VII-E 浴室常用字）"
+        },
+        {
+          "p": "burst into + 情緒／名詞",
+          "cn": "突然……（burst into tears／applause，詳見 VII-D）"
+        },
+        {
+          "p": "burst out + V-ing",
+          "cn": "突然大笑／大哭（burst out laughing／crying，詳見 VII-D）"
+        },
+        {
+          "p": "rental car",
+          "cn": "租來的車（不說 rent car，詳見 I-B、VIII）"
+        },
+        {
+          "p": "apply glue properly",
+          "cn": "正確塗膠（詳見 V）"
+        },
+        {
+          "p": "be relieved",
+          "cn": "如釋重負（詳見 I、V）"
+        }
+      ],
+      "grammarTitle": "III. 句型與文法 Grammar & Sentence Patterns",
+      "grammar": [
+        {
+          "k": "III-A",
+          "title": "過去式 Past Simple",
+          "pat": "主詞 + 動詞過去式",
+          "pts": [
+            "用來描述已經發生的事情。",
+            "🔬 文法解說：整篇文章都是回顧「昨天」，所以主線動詞全部用過去式（noticed、called、checked、fixed…）。"
+          ],
+          "exs": [
+            {
+              "tag": "was",
+              "en": "Yesterday was a busy day.",
+              "cn": "昨天是很忙的一天。"
+            }
+          ]
+        },
+        {
+          "k": "III-B",
+          "title": "被動語態 Passive Voice ⭐",
+          "pat": "主詞 + be 動詞 + 過去分詞",
+          "pts": [
+            "結構：主詞 + be 動詞 + 過去分詞。",
+            "🔬 文法解說：修繕情境的重點在「事情被完成」，不是誰做的，所以用被動語態最自然。文中 the glue wasn't applied properly 也是同樣道理。"
+          ],
+          "exs": [
+            {
+              "tag": "were + p.p.",
+              "en": "The tiles were replaced.",
+              "cn": "磁磚被更換。"
+            },
+            {
+              "tag": "was + p.p.",
+              "en": "The sink was reattached.",
+              "cn": "洗手台被重新固定。"
+            }
+          ]
+        },
+        {
+          "k": "III-C",
+          "title": "超實用句型（直接背 ⭐）",
+          "pat": "I noticed that… → I called a … to fix it → By the evening, everything was fixed",
+          "pts": [
+            "I noticed that + something wasn't working properly.（我注意到某個東西不太正常。）",
+            "I called + a person + to fix the problem.（我叫某人來修問題。）",
+            "By the evening, everything was fixed.（到了晚上，一切都修好了。）",
+            "I realized how important it is to have skilled professionals.（我意識到擁有專業人員有多重要。）"
+          ]
+        }
+      ],
+      "cmpTitle": "IV. 報修情境常用句與訂正 Repair Scenario & Corrections",
+      "cmp": [
+        {
+          "u": "Toilet Flush",
+          "sc": "flush 可當名詞或動詞",
+          "ex": "The toilet isn't flushing properly. / The toilet won't flush. / The flush handle is stuck and doesn't work.",
+          "exCn": "馬桶沖水不正常。／馬桶沖不下去。／沖水把手卡住，沒辦法用。",
+          "cn": "馬桶沖水"
+        },
+        {
+          "u": "Shower Head",
+          "sc": "clogged ＝ 堵塞，是低水壓的常見原因",
+          "ex": "The shower head is clogged, causing low water pressure.",
+          "exCn": "蓮蓬頭堵住了，造成水壓低。",
+          "cn": "蓮蓬頭"
+        },
+        {
+          "u": "Tiles / Fall",
+          "sc": "fall off ＝ 東西掉下來；fall down ＝ 人跌倒",
+          "ex": "The wall tile fell off. / He fell down the stairs.",
+          "exCn": "牆磚掉下來了。／他從樓梯上跌下去。",
+          "cn": "磁磚掉落與跌倒"
+        },
+        {
+          "u": "fell off vs fell down",
+          "sc": "從「上面」掉下來用 fell off；在地上跌倒用 fell down",
+          "ex": "The picture fell off the wall. / He slipped and fell down in the bathroom.",
+          "exCn": "圖畫從牆上掉下來。／他在浴室滑倒。",
+          "cn": "易混淆：掉下來 vs 跌倒"
+        },
+        {
+          "u": "Drain / Pipe",
+          "sc": "burst ＝ 爆裂（三態同形）",
+          "ex": "Our bathroom was flooded. / The drain was clogged with hair and grease. / The water pipe burst.",
+          "exCn": "我們的浴室淹水了。／排水孔被頭髮和油脂堵住。／水管爆裂了。",
+          "cn": "排水與水管"
+        },
+        {
+          "u": "Motorcycle / Tire",
+          "sc": "leak 比較像「液體漏出」；輪胎更自然說 lose air",
+          "ex": "The tire on my motorcycle is losing air because the pressure is too low.",
+          "exCn": "我機車的輪胎在漏氣，因為胎壓太低。",
+          "cn": "輪胎漏氣"
+        },
+        {
+          "u": "Estate Agent",
+          "sc": "estate agent 前要加 the；contract（合約）≠ contact（聯絡方式）",
+          "ex": "I asked the estate agent to send me a copy of the rental contract.",
+          "exCn": "我請房仲寄一份租約影本給我。",
+          "cn": "房仲與租約"
+        },
+        {
+          "u": "faulty",
+          "sc": "壞掉三兄弟之一",
+          "ex": "An electrician came to fix a faulty electrical wire.",
+          "exCn": "一位電工前來修理有問題的電線。",
+          "cn": "功能異常"
+        },
+        {
+          "u": "defective",
+          "sc": "壞掉三兄弟之一",
+          "ex": "The supplier replaced the defective parts.",
+          "exCn": "供應商更換了有瑕疵的零件。",
+          "cn": "製造瑕疵"
+        },
+        {
+          "u": "damaged",
+          "sc": "壞掉三兄弟之一",
+          "ex": "The damaged ceiling tile was replaced.",
+          "exCn": "受損的天花板磁磚被更換了。",
+          "cn": "外力損壞"
+        }
+      ],
+      "cmpWarn": {
+        "title": "⚠ 不自然／錯誤的說法（不要用）",
+        "bad": "My motorcycle tire pressure is too low, so it's leaking. / I asked estate agent to send me a copy of our rental apartment's contact.",
+        "good": [
+          "The tire on my motorcycle is losing air because the pressure is too low.　輪胎漏氣說 lose air，不說 leak。",
+          "I asked the estate agent to send me a copy of the rental contract.　estate agent 前加 the；要的是 contract（合約），不是 contact（聯絡方式）。"
+        ]
+      },
+      "reading": [
+        {
+          "bar": "V. 閱讀 Reading：A Busy Day of Repairs and Services",
+          "title": "A Busy Day of Repairs and Services",
+          "titleCn": "修理與各種服務的忙碌一天",
+          "paras": [
+            {
+              "en": "Yesterday was a very busy day at my apartment. First, I noticed that the toilet wasn't flushing properly. The handle sometimes got stuck, and the water didn't empty completely. I immediately called a plumber to fix the problem. While talking to him, I also mentioned that the shower head had low water pressure, which made it difficult to take a proper shower.",
+              "cn": "昨天在我的公寓裡是非常忙碌的一天。首先，我注意到馬桶無法正常沖水。把手有時會卡住，水也無法完全排空。我立刻打電話請水電工來修理這個問題。在和他交談的時候，我也提到蓮蓬頭的水壓很低，讓人很難好好洗個澡。"
+            },
+            {
+              "en": "Next, I checked the kitchen and bathroom and found more issues. The sink had fallen off the wall because the glue wasn't applied properly. I also noticed that one of the bathroom tiles was broken and that a ceiling tile had come off. In addition, part of the wood panel was loose. The plumber promised to inspect everything carefully and repair all the issues.",
+              "cn": "接著，我檢查了廚房和浴室，發現了更多問題。由於膠沒有正確塗抹，洗手台從牆上掉了下來。我也注意到浴室裡有一片磁磚破掉了，而且有一塊天花板磁磚掉落。另外，部分木板也有鬆動的情況。水電工答應會仔細檢查所有地方，並修復所有問題。"
+            },
+            {
+              "en": "Later, I received a call from a travel agent who was helping me plan a short holiday. She explained the flight options and hotel bookings clearly. I also spoke with an estate agent because I was considering renting a new apartment. The agent showed me several options and advised me on good neighborhoods.",
+              "cn": "後來，我接到一通來自旅行社人員的電話，她正在幫我規劃一趟短期假期。她清楚地說明了航班選項和飯店預訂的內容。我也和一位房仲談過，因為我正在考慮租一間新的公寓。房仲向我展示了幾個選項，並建議了一些不錯的社區。"
+            },
+            {
+              "en": "In the afternoon, I went to the local government office to ask about my official documents and met a civil servant. She was very helpful and polite, explaining all the steps clearly. Meanwhile, my nanny played with my little brother and made sure he ate his lunch.",
+              "cn": "下午，我到當地的政府機關詢問官方文件的相關事宜，並遇到了一位公務員。她非常有禮貌且樂於助人，清楚地向我解釋了所有流程。與此同時，我的保母陪著我的弟弟玩，並確保他有吃午餐。"
+            },
+            {
+              "en": "I also had some minor repairs done by a carpenter, who repaired a broken door and installed new shelves. An electrician came to fix a faulty electrical wire and ensured that all the lights and sockets were safe.",
+              "cn": "我也請了一位木工來進行一些小修繕，他修好了壞掉的門，並安裝了新的層架。另外，一位電工前來修理有問題的電線，並確保所有的燈具和插座都是安全的。"
+            },
+            {
+              "en": "It was a long day, but I realized how important it is to have skilled professionals such as plumbers, electricians, carpenters, and civil servants. They help solve problems efficiently and make life much easier.",
+              "cn": "這真是漫長的一天，但我也意識到，像水電工、電工、木工以及公務員這樣的專業人士是多麼重要。他們能有效率地解決問題，讓生活變得更加輕鬆。"
+            },
+            {
+              "en": "By the evening, everything was fixed. The tiles were replaced, the sink was reattached, and the ceiling was safe again. I felt relieved and thanked all the professionals for their hard work.",
+              "cn": "到了晚上，所有事情都修好了。磁磚被更換，洗手台重新固定，天花板也再次變得安全。我感到如釋重負，並感謝所有專業人士的辛勤付出。"
+            }
+          ],
+          "sumEn": [
+            "語言重點：noticed / called / checked / fixed 全篇用過去式回顧昨天；修好的結果用被動語態（were replaced, was reattached）；東西掉下來用 fall off，人跌倒用 fall down。"
+          ],
+          "sumCn": [
+            "過去式敘述「昨天」發生的事；結果句用被動語態表示「事情被完成」；fall off ＝ 東西掉落，fall down ＝ 人跌倒。"
+          ]
+        }
+      ],
+      "extraTitle": "VI–VII. 事件順序、中翻英練習與補充",
+      "extra": [
+        {
+          "title": "VI. 事件時間順序 Sequence of Events",
+          "exs": [
+            {
+              "en": "Morning – Problems Found: The toilet wasn't flushing properly. The handle got stuck. The shower head had low water pressure.",
+              "cn": "早上：發現問題 —— 馬桶無法正常沖水；把手卡住；蓮蓬頭水壓低。",
+              "hi": "wasn't flushing properly"
+            },
+            {
+              "en": "Home Damage: The sink fell off the wall. One bathroom tile was broken. A ceiling tile came off. Part of the wood panel was loose.",
+              "cn": "家中損壞 —— 洗手台從牆上掉下來；一片浴室磁磚破掉；天花板磁磚掉落；部分木板鬆動。",
+              "hi": "fell off the wall"
+            },
+            {
+              "en": "Afternoon – Other Tasks: Planned a short holiday with a travel agent. Considered renting a new apartment with an estate agent. Asked about official documents at a government office.",
+              "cn": "下午：其他事務 —— 與旅行社規劃短期假期；與房仲討論租新公寓；到政府機關詢問文件。",
+              "hi": "Considered renting"
+            },
+            {
+              "en": "Repairs Done: A carpenter repaired a broken door and installed shelves. An electrician fixed a faulty electrical wire.",
+              "cn": "修理完成 —— 木工修好壞掉的門並安裝層架；電工修理故障電線。",
+              "hi": "faulty electrical wire"
+            },
+            {
+              "en": "Evening – Results & Feelings: Everything was fixed. The tiles were replaced. The sink was reattached. The ceiling was safe again. I felt relieved.",
+              "cn": "晚上：結果與感受 —— 所有問題都修好了；磁磚被更換；洗手台重新固定；天花板恢復安全；我感到如釋重負。",
+              "hi": "was fixed / were replaced"
+            }
+          ]
+        },
+        {
+          "title": "VII-A. 中翻英練習 Part A｜基礎練習（B1）",
+          "exs": [
+            {
+              "en": "The toilet wasn't flushing properly.",
+              "cn": "1. 馬桶無法正常沖水。",
+              "hi": "wasn't flushing"
+            },
+            {
+              "en": "The handle sometimes got stuck.",
+              "cn": "2. 把手有時候會卡住。",
+              "hi": "got stuck"
+            },
+            {
+              "en": "I immediately called a plumber to fix it.",
+              "cn": "3. 我立刻打電話給水電工來修理。（也可：to fix the problem）",
+              "hi": "called a plumber to fix"
+            },
+            {
+              "en": "The shower head had low water pressure, so it was difficult to take a proper shower.",
+              "cn": "4. 蓮蓬頭水壓很低，很難好好洗澡。",
+              "hi": "low water pressure"
+            },
+            {
+              "en": "The sink fell off the wall.",
+              "cn": "5. 洗手台從牆上掉下來了。",
+              "hi": "fell off"
+            }
+          ]
+        },
+        {
+          "title": "VII-B. 中翻英練習 Part B｜句型練習（B1+）",
+          "exs": [
+            {
+              "en": "I noticed that one of the bathroom tiles was broken.",
+              "cn": "6. 我注意到有一片浴室磁磚破掉了。",
+              "hi": "noticed that"
+            },
+            {
+              "en": "The plumber promised to inspect everything carefully.",
+              "cn": "7. 水電工答應會仔細檢查所有東西。",
+              "hi": "promised to inspect"
+            },
+            {
+              "en": "I am considering renting a new apartment.",
+              "cn": "8. 我正在考慮租一間新的公寓。",
+              "hi": "considering renting"
+            },
+            {
+              "en": "The estate agent showed me several options.",
+              "cn": "9. 房仲帶我看了幾個選項。",
+              "hi": "The estate agent"
+            },
+            {
+              "en": "The civil servant was very polite and helpful.",
+              "cn": "10. 那位公務員非常有禮貌而且樂於幫忙。",
+              "hi": "polite and helpful"
+            }
+          ]
+        },
+        {
+          "title": "VII-C. 中翻英練習 Part C｜進階練習（B2｜被動語態＋完整句）",
+          "exs": [
+            {
+              "en": "The carpenter repaired the broken door and installed new shelves.",
+              "cn": "11. 那位木工修好了壞掉的門，並安裝了新的層架。",
+              "hi": "repaired … and installed"
+            },
+            {
+              "en": "The electrician fixed a faulty electrical wire and ensured that all the lights and sockets were safe.",
+              "cn": "12. 電工修理了有問題的電線，確保所有燈和插座都很安全。",
+              "hi": "ensured that"
+            },
+            {
+              "en": "By the evening, everything was fixed.",
+              "cn": "13. 到了晚上，所有問題都修好了。",
+              "hi": "was fixed"
+            },
+            {
+              "en": "The tiles were replaced, and the sink was reattached.",
+              "cn": "14. 磁磚被更換，洗手台重新固定。",
+              "hi": "were replaced / was reattached"
+            },
+            {
+              "en": "I felt relieved and thanked all the professionals for their hard work.",
+              "cn": "15. 我感到如釋重負，並感謝所有專業人士的辛苦工作。",
+              "hi": "felt relieved"
+            },
+            {
+              "en": "It was a long day, but I realized how important skilled professionals are in making life easier. ⭐",
+              "cn": "16. 這是漫長的一天，但我意識到專業人士對生活有多重要。",
+              "hi": "how important … are"
+            }
+          ]
+        },
+        {
+          "title": "VII-D. 單字深入補充例句 Vocabulary Deep-Dive",
+          "exs": [
+            {
+              "en": "We need to check the radiator before shipment.",
+              "cn": "出貨前需要檢查散熱器。",
+              "hi": "radiator"
+            },
+            {
+              "en": "The car overheated because the radiator was blocked.",
+              "cn": "車子過熱是因為散熱器堵住了。",
+              "hi": "the radiator was blocked"
+            },
+            {
+              "en": "The monthly rental is affordable.",
+              "cn": "每月租金很負擔得起。",
+              "hi": "rental"
+            },
+            {
+              "en": "The company provides rental equipment for short-term projects.",
+              "cn": "這家公司為短期專案提供租賃設備。",
+              "hi": "rental equipment"
+            },
+            {
+              "en": "The technician applied grease to the bearings to reduce friction.",
+              "cn": "技術員在軸承上塗潤滑脂以降低摩擦。",
+              "hi": "applied grease"
+            },
+            {
+              "en": "We noticed grease leakage near the motor and stopped the machine for inspection.",
+              "cn": "我們發現馬達附近有油脂滲漏，並停機檢查。",
+              "hi": "grease leakage"
+            },
+            {
+              "en": "The pipe burst due to high pressure, causing water damage.",
+              "cn": "水管因高壓而爆裂，造成水損。",
+              "hi": "burst due to high pressure"
+            },
+            {
+              "en": "She burst into tears when she heard the bad news.",
+              "cn": "她聽到壞消息後瞬間哭了出來。",
+              "hi": "burst into tears"
+            }
+          ]
+        },
+        {
+          "title": "VII-E. 浴室常用字 Bathroom Vocabulary",
+          "exs": [
+            {
+              "en": "bathtub",
+              "cn": "浴缸",
+              "hi": "bathtub"
+            },
+            {
+              "en": "shower / shower head",
+              "cn": "淋浴／蓮蓬頭",
+              "hi": "shower head"
+            },
+            {
+              "en": "water tap / faucet",
+              "cn": "水龍頭",
+              "hi": "faucet"
+            },
+            {
+              "en": "mop the floor",
+              "cn": "拖地",
+              "hi": "mop"
+            },
+            {
+              "en": "grout",
+              "cn": "磁磚縫",
+              "hi": "grout"
+            },
+            {
+              "en": "hook",
+              "cn": "掛鉤",
+              "hi": "hook"
+            },
+            {
+              "en": "drain",
+              "cn": "排水孔",
+              "hi": "drain"
+            }
+          ]
+        }
+      ],
+      "summaryTitle": "VIII. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "報修三步",
+          "v": "I noticed that…（發現問題）→ I called a … to fix it（叫人來修）→ By the evening, everything was fixed（修好了）"
+        },
+        {
+          "k": "修好結果用被動",
+          "v": "The tiles were replaced, the sink was reattached（be 動詞 + 過去分詞）"
+        },
+        {
+          "k": "掉下來 vs 跌倒",
+          "v": "東西掉 ＝ fell off；人跌倒 ＝ fell down"
+        },
+        {
+          "k": "壞掉三兄弟",
+          "v": "faulty（功能異常）／defective（製造瑕疵）／damaged（外力損壞）"
+        },
+        {
+          "k": "易錯字",
+          "v": "contract（合約）≠ contact（聯絡）；rental car（不是 rent car）；burst 三態同形"
+        },
+        {
+          "k": "rent vs rental",
+          "v": "rent（動詞／名詞）to rent a car、pay the rent；rental（名詞／形容詞）rental car、equipment rental；❌ rentaling → ✅ renting"
+        },
+        {
+          "k": "oil vs grease",
+          "v": "oil 是液體、一般潤滑、流動性高；grease 是膏狀、用於高壓重負載、流動性低"
+        },
+        {
+          "k": "burst 搭配",
+          "v": "burst into + 情緒／名詞（tears／applause）；burst out + laughing／crying"
+        },
+        {
+          "k": "輪胎漏氣",
+          "v": "lose air（不用 leak，leak 多指液體漏出）"
+        },
+        {
+          "k": "低水壓原因",
+          "v": "The shower head is clogged（clogged ＝ 堵塞）"
+        }
+      ]
+    },
+    /* ---- bk20251226a Stress and Conditionals ---- */
+    {
+      "id": "bk20251226a",
+      "icon": "📗",
+      "date": "2025-12-26",
+      "doc": "https://docs.google.com/document/d/1butLMCdPbRjI9RhqcKnpal9KdqN6vRzsqANrcQdJhlM/edit",
+      "title": "Stress and Conditionals",
+      "titleCn": "壓力管理與假設語氣",
+      "topics": "生活詞彙、Relieve vs. Release vs. Get rid of、居家修繕突發狀況、第二條件句、情境口說",
+      "vocabTitle": "I. 單字 Vocabulary（日常休閒保健、居家修繕與突發狀況）",
+      "vocab": [
+        {
+          "w": "Zootopia",
+          "ipa": "/zuːˈtoʊpiə/",
+          "pos": "n.",
+          "cn": "《動物方城市》",
+          "ex": "Zootopia is a popular animated movie by Disney.",
+          "exCn": "《動物方城市》是一部很受歡迎的迪士尼動畫。"
+        },
+        {
+          "w": "painkiller",
+          "ipa": "/ˈpeɪnˌkɪlɚ/",
+          "pos": "n.",
+          "cn": "止痛藥（較口語日常）",
+          "ex": "I took a painkiller to relieve the headache.",
+          "exCn": "我吃了止痛藥來緩解頭痛。"
+        },
+        {
+          "w": "pain reliever",
+          "ipa": "/peɪn rɪˈliːvɚ/",
+          "pos": "n.",
+          "cn": "止痛藥（較中性、正式，常見於藥品包裝）",
+          "ex": "The label says it is a pain reliever.",
+          "exCn": "標籤上寫著這是止痛藥。"
+        },
+        {
+          "w": "relieve",
+          "star": true,
+          "ipa": "/rɪˈliːv/",
+          "pos": "v.",
+          "cn": "緩解、減輕（Calm it down —— 讓緊繃的情緒平靜下來）",
+          "ex": "I drink tea to relieve stress after work.",
+          "exCn": "下班後我喝茶來緩解壓力。"
+        },
+        {
+          "w": "release",
+          "star": true,
+          "ipa": "/rɪˈliːs/",
+          "pos": "v.",
+          "cn": "釋放、發洩（Let it out —— 把體內的壓力丟出來）；也指發布、釋放",
+          "ex": "He hits the punching bag to release stress.",
+          "exCn": "他打沙包來發洩壓力。"
+        },
+        {
+          "w": "tap",
+          "ipa": "/tæp/",
+          "pos": "n.",
+          "cn": "水龍頭（英式多用 tap）",
+          "ex": "The tap is stuck and won't turn on.",
+          "exCn": "水龍頭卡住了，轉不開。"
+        },
+        {
+          "w": "faucet",
+          "ipa": "/ˈfɑː.sɪt/",
+          "pos": "n.",
+          "cn": "水龍頭（美式多用 faucet）",
+          "ex": "The faucet won't turn.",
+          "exCn": "水龍頭轉不動。"
+        },
+        {
+          "w": "stuck",
+          "ipa": "/stʌk/",
+          "pos": "adj.",
+          "cn": "卡住的；動彈不得的（也可指想法卡關）",
+          "ex": "I am stuck.",
+          "exCn": "我被困住了／我（的想法）卡關了。"
+        },
+        {
+          "w": "ceiling tile",
+          "ipa": "/ˈsiːlɪŋ taɪl/",
+          "pos": "n.",
+          "cn": "天花板磁磚／輕鋼架天花板",
+          "ex": "A ceiling tile fell off.",
+          "exCn": "一塊天花板磁磚掉了下來。"
+        }
+      ],
+      "vocab2Title": "I-B. 補充單字（例句中出現的實用字）Extra Vocabulary",
+      "vocab2": [
+        {
+          "w": "bathtub",
+          "ipa": "/ˈbæθ.tʌb/",
+          "pos": "n.",
+          "cn": "浴缸",
+          "ex": "I like to relax in a bathtub filled with hot water.",
+          "exCn": "我喜歡在裝滿熱水的浴缸裡放鬆。"
+        },
+        {
+          "w": "punching bag",
+          "ipa": "/ˈpʌn.tʃɪŋ bæɡ/",
+          "pos": "n.",
+          "cn": "沙包",
+          "ex": "He hits the punching bag.",
+          "exCn": "他打沙包。"
+        },
+        {
+          "w": "fitness equipment",
+          "ipa": "/ˈfɪtnəs ɪˈkwɪpmənt/",
+          "pos": "n.",
+          "cn": "健身器材",
+          "ex": "Working out on fitness equipment is a great way to release stress.",
+          "exCn": "使用健身器材運動是釋放壓力的好方法。"
+        },
+        {
+          "w": "troubleshoot",
+          "star": true,
+          "ipa": "/ˈtrʌb.əl.ʃuːt/",
+          "pos": "v.",
+          "cn": "排除故障、解決技術問題",
+          "ex": "I'm used to troubleshooting technical problems at work.",
+          "exCn": "我平常工作都在解決技術問題。"
+        },
+        {
+          "w": "prioritize",
+          "star": true,
+          "ipa": "/praɪˈɔːr.ə.taɪz/",
+          "pos": "v.",
+          "cn": "排定優先順序",
+          "ex": "How would you prioritize them?",
+          "exCn": "你會如何排定它們的優先順序？"
+        },
+        {
+          "w": "urgent",
+          "star": true,
+          "ipa": "/ˈɝː.dʒənt/",
+          "pos": "adj.",
+          "cn": "緊急的",
+          "ex": "I would fix the most urgent problems first.",
+          "exCn": "我會先處理最緊急的問題。"
+        }
+      ],
+      "phrasesTitle": "II. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "relieve stress",
+          "cn": "緩解壓力（靜態、放鬆療癒型，詳見 IV）"
+        },
+        {
+          "p": "release stress",
+          "cn": "釋放壓力（動態、運動發洩型，詳見 IV）"
+        },
+        {
+          "p": "get rid of stress",
+          "cn": "擺脫壓力（通用，詳見 IV）"
+        },
+        {
+          "p": "stay warm",
+          "cn": "注意保暖（詳見 II）"
+        },
+        {
+          "p": "fall off",
+          "cn": "掉落、脫落（詳見 I）"
+        },
+        {
+          "p": "be stuck",
+          "cn": "卡住、動彈不得（詳見 I）"
+        },
+        {
+          "p": "work out on fitness equipment",
+          "cn": "用健身器材運動（詳見 I-B、IV）"
+        },
+        {
+          "p": "be used to + V-ing",
+          "cn": "習慣於做某事（詳見 III-B）"
+        },
+        {
+          "p": "even though + 完整子句",
+          "cn": "雖然……（口說加分轉折，詳見 III-B）"
+        },
+        {
+          "p": "be good at + V-ing",
+          "cn": "擅長做某事（詳見 V）"
+        },
+        {
+          "p": "be released from prison",
+          "cn": "被釋放出獄（詳見 IV 延伸補充）"
+        }
+      ],
+      "grammarTitle": "III. 句型與文法 Grammar & Sentence Patterns",
+      "grammar": [
+        {
+          "k": "III-A",
+          "title": "第二條件句 Second Conditional（文法實戰）",
+          "pat": "If + 主詞 + 過去式動詞, 主詞 + would + 原形動詞",
+          "pts": [
+            "使用時機：描述現在或未來不真實、純屬想像的情況。",
+            "⚠ 必考：在正式英文中，If 子句裡的 be 動詞，不論主詞是誰，一律使用 were。",
+            "🔬 文法解說：If 子句用過去式並不是在講過去，而是表示「與現在事實相反」的假設；主句一定搭配 would + 原形動詞，講出「那我就會……」的想像結果。"
+          ],
+          "exs": [
+            {
+              "tag": "正確",
+              "en": "If I were in Taiwan, I would meet my learners.",
+              "cn": "如果我在台灣，我就會去見我的學生。（言外之意：事實上我不在台灣。）"
+            },
+            {
+              "tag": "正確",
+              "en": "If I had a lot of money, I would travel around the world.",
+              "cn": "如果我有很多錢，我就會環遊世界。（言外之意：事實上現在資金有限。）"
+            },
+            {
+              "tag": "正確",
+              "en": "If Tom were a rich man, I would marry him.",
+              "cn": "如果 Tom 是有錢人，我就會嫁給他。"
+            },
+            {
+              "tag": "提問用法",
+              "en": "What would you do if a ceiling tile fell off at your home?",
+              "cn": "如果你家的天花板掉下來，你會怎麼做？"
+            }
+          ]
+        },
+        {
+          "k": "III-B",
+          "title": "even though 與 be used to + V-ing（口說加分）",
+          "pat": "even though + 完整子句；be used to + V-ing",
+          "pts": [
+            "結構：even though + 完整子句（雖然……）。",
+            "中文解析：回答裡用 even though 補上「即使我工作都在解決技術問題」，讓答案有轉折、更有層次，是口說加分寫法。",
+            "補充：be used to + V-ing（習慣於做某事）與 used to（過去曾經）長得像但意思完全不同。",
+            "使用情境：回答假設性問題時，先給結論，再補理由與轉折。"
+          ],
+          "exs": [
+            {
+              "tag": "even though",
+              "en": "I would call a plumber because I'm not good at fixing plumbing issues, even though I'm used to troubleshooting technical problems at work.",
+              "cn": "我會叫水電工，因為我不太擅長修理管線問題，即使我平常工作都在解決技術問題。"
+            }
+          ]
+        }
+      ],
+      "cmpTitle": "IV. 核心觀念：壓力管理 Stress Management（重點必考）",
+      "cmp": [
+        {
+          "u": "relieve stress",
+          "sc": "Calm it down（緩解、減輕）｜靜態、放鬆、療癒型活動",
+          "ex": "I like to relax in a bathtub filled with hot water because it helps me relieve stress.",
+          "exCn": "我喜歡在裝滿熱水的浴缸裡放鬆，因為這有助於我緩解壓力。",
+          "cn": "讓緊繃的情緒平靜下來、讓壓力變小"
+        },
+        {
+          "u": "release stress",
+          "sc": "Let it out（釋放、發洩）｜動態、運動、發洩型活動",
+          "ex": "Working out on fitness equipment is a great way to release stress.",
+          "exCn": "使用健身器材運動是釋放壓力的好方法。",
+          "cn": "透過外力或動作，把體內的壓力「丟出來」"
+        },
+        {
+          "u": "get rid of stress",
+          "sc": "Remove it（擺脫、消除）｜通用",
+          "ex": "Exercise helps me get rid of stress.",
+          "exCn": "運動幫助我擺脫壓力。",
+          "cn": "完全趕走壓力"
+        },
+        {
+          "u": "release（延伸用法）",
+          "sc": "產品「發布」",
+          "ex": "The new product was released last week.",
+          "exCn": "新產品上週發布了。",
+          "cn": "發布、上市"
+        },
+        {
+          "u": "release（延伸用法）",
+          "sc": "人被「釋放」",
+          "ex": "He was released from prison.",
+          "exCn": "他被釋放出獄。",
+          "cn": "釋放、放出"
+        }
+      ],
+      "cmpWarn": {
+        "title": "⚠ 必考錯誤：第二條件句的 be 動詞不可用 was",
+        "bad": "If Tom was a rich man, I would marry him.",
+        "good": [
+          "If Tom were a rich man, I would marry him.　如果 Tom 是有錢人，我就會嫁給他。（正式英文中，If 子句的 be 動詞一律用 were）"
+        ]
+      },
+      "extraTitle": "V. 情境口說實戰 Speaking Practice",
+      "extra": [
+        {
+          "title": "V-A. 結合「居家問題」與「第二條件句」的口說演練",
+          "exs": [
+            {
+              "en": "Q1: If your shower had low water pressure, would you try to fix it yourself or call a plumber?",
+              "cn": "如果你的淋浴間水壓很低，你會自己試著修理還是叫水電工？",
+              "hi": "If … had …, would you"
+            },
+            {
+              "en": "A1: I would call a plumber because I'm not good at fixing plumbing issues, even though I'm used to troubleshooting technical problems at work.",
+              "cn": "我會叫水電工，因為我不太擅長修理管線問題，即使我平常工作都在解決技術問題。",
+              "hi": "even though I'm used to"
+            },
+            {
+              "en": "Q2: Imagine your apartment had multiple problems at the same time. How would you prioritize them?",
+              "cn": "想像你的公寓同時出現多個問題。你會如何排定優先順序？",
+              "hi": "How would you prioritize"
+            },
+            {
+              "en": "A2: I would fix the most urgent and dangerous problems first, just like prioritizing tasks on a project schedule.",
+              "cn": "我會先處理最緊急和最危險的問題，就像在專案時程上排定任務優先順序一樣。",
+              "hi": "just like prioritizing"
+            }
+          ]
+        }
+      ],
+      "summaryTitle": "VI. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "紓壓三動詞",
+          "v": "relieve（靜態緩解）／release（動態發洩）／get rid of（完全擺脫）"
+        },
+        {
+          "k": "release 其他用法",
+          "v": "也可指「產品發布」與「釋放出獄」"
+        },
+        {
+          "k": "卡住與掉落",
+          "v": "卡住 ＝ stuck（The tap is stuck.）；掉落 ＝ fall off"
+        },
+        {
+          "k": "水龍頭",
+          "v": "英式 tap／美式 faucet"
+        },
+        {
+          "k": "第二條件句",
+          "v": "If + 過去式, would + 原形動詞；be 動詞一律用 were"
+        },
+        {
+          "k": "口說加分",
+          "v": "先講結論 → because 給理由 → even though 補轉折"
+        },
+        {
+          "k": "止痛藥",
+          "v": "painkiller 較口語；pain reliever 較正式（藥品包裝常見）"
+        }
+      ]
+    },
+    /* ---- bk20251226b Dreams and Decisions ---- */
+    {
+      "id": "bk20251226b",
+      "icon": "📗",
+      "date": "2025-12-26",
+      "doc": "https://docs.google.com/document/d/1U_eA5_whXCg0dP9BipR3AFHWt-wZuwaCjRrVaszA5hw/edit",
+      "title": "Dreams and Decisions",
+      "titleCn": "條件句文法解析",
+      "topics": "Dreams and Decisions 閱讀文章、第一條件句 vs. 第二條件句、理解與文法問答、B1–B2 單字",
+      "vocabTitle": "I. 重點單字 Vocabulary",
+      "vocab": [
+        {
+          "w": "affect",
+          "ipa": "/əˈfekt/",
+          "pos": "v.",
+          "cn": "影響",
+          "ex": "Her choices today will affect her tomorrow.",
+          "exCn": "她今天的選擇將會影響她的明天。"
+        },
+        {
+          "w": "conditional",
+          "star": true,
+          "ipa": "/kənˈdɪʃənəl/",
+          "pos": "adj. / n.",
+          "cn": "條件的；條件句（文法用語）",
+          "ex": "This lesson is about the first and second conditionals.",
+          "exCn": "這堂課是關於第一與第二條件句。"
+        },
+        {
+          "w": "possibility",
+          "ipa": "/ˌpɑː.səˈbɪl.ə.ti/",
+          "pos": "n.",
+          "cn": "可能性",
+          "ex": "The first conditional talks about real possibilities.",
+          "exCn": "第一條件句討論的是真實的可能性。"
+        },
+        {
+          "w": "fluently",
+          "ipa": "/ˈfluː.ənt.li/",
+          "pos": "adv.",
+          "cn": "流利地",
+          "ex": "She will speak it fluently soon.",
+          "exCn": "她很快就會說得很流利。"
+        },
+        {
+          "w": "imaginary",
+          "star": true,
+          "ipa": "/ɪˈmædʒəneri/",
+          "pos": "adj.",
+          "cn": "想像中的；虛構的",
+          "ex": "The second conditional is used for imaginary situations.",
+          "exCn": "第二條件句用於想像的情況。"
+        },
+        {
+          "w": "daydream",
+          "star": true,
+          "ipa": "/ˈdeɪdriːm/",
+          "pos": "v. / n.",
+          "cn": "做白日夢",
+          "ex": "Sometimes Mia daydreams about the future.",
+          "exCn": "有時候 Mia 會對未來做白日夢。"
+        },
+        {
+          "w": "lottery",
+          "ipa": "/ˈlɑː.tɚ.i/",
+          "pos": "n.",
+          "cn": "抽獎；彩券",
+          "ex": "If she won the lottery, she would buy a big house.",
+          "exCn": "如果她中了彩券，她會買一棟大房子。"
+        },
+        {
+          "w": "scenery",
+          "star": true,
+          "ipa": "/ˈsiː.nɚ.i/",
+          "pos": "n.",
+          "cn": "風景；景色",
+          "ex": "She loves the food and the scenery in Italy.",
+          "exCn": "她喜歡義大利的美食和風景。"
+        },
+        {
+          "w": "effort",
+          "ipa": "/ˈefɚt/",
+          "pos": "n.",
+          "cn": "努力",
+          "ex": "She believes that with effort, anything is possible.",
+          "exCn": "她相信只要努力，任何事都是可能的。"
+        },
+        {
+          "w": "imagination",
+          "star": true,
+          "ipa": "/ɪˌmædʒəˈneɪʃən/",
+          "pos": "n.",
+          "cn": "想像力",
+          "ex": "You need a little imagination to write a good story.",
+          "exCn": "寫出好故事需要一點想像力。"
+        }
+      ],
+      "phrasesTitle": "II. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "get into a good university",
+          "cn": "進入一所好大學（詳見 IV）"
+        },
+        {
+          "p": "be able to + V",
+          "cn": "能夠做某事（第一條件句結果句常用，詳見 III-A）"
+        },
+        {
+          "p": "daydream about + N",
+          "cn": "對……做白日夢（詳見 I、IV）"
+        },
+        {
+          "p": "win the lottery",
+          "cn": "中彩券（詳見 III-B）"
+        },
+        {
+          "p": "live anywhere in the world",
+          "cn": "住在世界上任何地方（詳見 IV）"
+        },
+        {
+          "p": "fly around the world",
+          "cn": "飛遍全世界（詳見 III-C）"
+        },
+        {
+          "p": "product inspection",
+          "cn": "產品檢驗（職場情境，詳見 III-A）"
+        },
+        {
+          "p": "double-check",
+          "cn": "再次確認（職場情境，詳見 III-B）"
+        },
+        {
+          "p": "quality standards",
+          "cn": "品質標準（詳見 III-B）"
+        },
+        {
+          "p": "with effort and a little imagination",
+          "cn": "只要努力加上一點想像力（詳見 VI 收尾金句）"
+        }
+      ],
+      "grammarTitle": "III. 文法焦點：條件句解析 Grammar Focus",
+      "grammar": [
+        {
+          "k": "III-A",
+          "title": "第一條件句 First Conditional：真實的可能性",
+          "pat": "If + 主詞 + 現在簡單式（條件）, 主詞 + will / can / may + 原形動詞（結果）",
+          "pts": [
+            "一句話先懂：英文用條件句（Conditionals）表達「如果……就……」，第一與第二條件句最大的差異在於「發生的可能性」。",
+            "使用時機：表達在現在或未來「很有可能發生」或「符合現實」的情況。",
+            "重點提醒：雖然 If 子句表達的是未來會發生的事，但必須使用「現在簡單式」來代替未來式。",
+            "🔬 文法解說：條件句的可能性高低，是靠 If 子句的時態表現出來的 —— 用現在簡單式，就代表說話者認為這件事真的可能發生。"
+          ],
+          "exs": [
+            {
+              "tag": "文章例句",
+              "en": "If Mia studies hard, she will pass her exams.",
+              "cn": "如果 Mia 認真讀書，她將會通過考試。（只要她這麼做，這很有可能發生。）"
+            },
+            {
+              "tag": "職場情境",
+              "en": "If we finish the product inspection today, we will send the report tomorrow.",
+              "cn": "如果我們今天完成產品檢驗，我們明天就會寄出報告。（這是符合現實的工作排程。）"
+            }
+          ]
+        },
+        {
+          "k": "III-B",
+          "title": "第二條件句 Second Conditional：想像或與現在事實相反",
+          "pat": "If + 主詞 + 過去簡單式（條件）, 主詞 + would / could / might + 原形動詞（結果）",
+          "pts": [
+            "使用時機：表達「與現在事實相反」、「純屬想像」或「發生機率極低」的情況。",
+            "重點提醒：雖然講的是現在或未來的情況，但為了表達「與現實的距離感」，If 子句必須退一步使用「過去簡單式」。",
+            "若動詞為 be 動詞，在正式英文中通常一律使用 were（即使主詞是 I, he, she, it）。",
+            "🔬 文法解說：這裡的過去式不是在講過去，而是製造「距離感」，讓聽者知道這只是假設；主句用 would / could / might 講出想像的結果。"
+          ],
+          "exs": [
+            {
+              "tag": "文章例句",
+              "en": "If she won the lottery, she would buy a big house.",
+              "cn": "如果她中了彩券，她會買一棟大房子。（事實上她現在沒中彩券，純屬想像。）"
+            },
+            {
+              "tag": "職場情境",
+              "en": "If I had more time, I would double-check the quality standards.",
+              "cn": "如果我有更多時間，我會再次確認品質標準。（言下之意：我現在時間不夠，所以無法確認。）"
+            }
+          ]
+        },
+        {
+          "k": "III-C",
+          "title": "比較表 First vs. Second Conditional",
+          "pat": "First：現在簡單式 + will／Second：過去簡單式 + would",
+          "pts": [
+            "可能性：First ＝ 真實、很有可能發生；Second ＝ 想像、與現在事實相反、機率極低。",
+            "If 子句時態：First ＝ 現在簡單式；Second ＝ 過去簡單式（be 動詞用 were）。",
+            "主要子句：First ＝ will / can / may + 原形動詞；Second ＝ would / could / might + 原形動詞。",
+            "🔬 判斷關鍵：看 If 子句的時態，就知道說話者覺得這件事有沒有可能。"
+          ],
+          "exs": [
+            {
+              "tag": "First",
+              "en": "If she saves money now, she will be able to travel next year.",
+              "cn": "如果她現在存錢，她明年就能去旅行。"
+            },
+            {
+              "tag": "Second",
+              "en": "If she had a superpower, she would fly around the world.",
+              "cn": "如果她有超能力，她會飛遍全世界。"
+            }
+          ]
+        }
+      ],
+      "reading": [
+        {
+          "bar": "IV. 閱讀 Reading：Dreams and Decisions",
+          "title": "Dreams and Decisions",
+          "titleCn": "夢想與決定",
+          "paras": [
+            {
+              "en": "Every day, Mia thinks about her future. She knows that her choices today will affect her tomorrow.",
+              "cn": "每一天，Mia 都會思考她的未來。她知道她今天的選擇將會影響她的明天。"
+            },
+            {
+              "en": "First conditional (real possibilities): If Mia studies hard, she will pass her exams and get into a good university. If she saves money now, she will be able to travel next year. She also knows that if she practices her English every day, she will speak it fluently soon.",
+              "cn": "第一條件句（真實的可能性）：如果 Mia 認真讀書，她將會通過考試並進入一所好大學。如果她現在存錢，她明年就能夠去旅行。她也知道，如果她每天練習英文，她很快就會說得很流利。"
+            },
+            {
+              "en": "Second conditional (imaginary situations): Sometimes Mia daydreams. If she won the lottery, she would buy a big house for her family. If she could live anywhere in the world, she would choose Italy because she loves the food and the scenery. If she had a superpower, she would fly around the world and see all the famous places.",
+              "cn": "第二條件句（想像的情況）：有時候 Mia 會做白日夢。如果她中了彩券，她會買一棟大房子給她的家人。如果她能住在世界上任何地方，她會選擇義大利，因為她喜歡那裡的美食和風景。如果她有超能力，她會飛遍全世界，看看所有著名的地方。"
+            },
+            {
+              "en": "Mia likes to plan her life, but she also enjoys imagining what could happen in a perfect world. She believes that with effort and a little imagination, anything is possible.",
+              "cn": "Mia 喜歡規劃她的生活，但她也喜歡想像在一個完美的世界裡可能會發生什麼事。她相信，只要努力加上一點想像力，任何事情都是可能的。"
+            }
+          ],
+          "questions": [
+            {
+              "q": "What will happen if Mia studies hard?",
+              "qCn": "如果 Mia 認真讀書，會發生什麼事？",
+              "a": "If Mia studies hard, she will pass her exams and get into a good university.",
+              "aCn": "如果她認真讀書，她將會通過考試並進入一所好大學。"
+            },
+            {
+              "q": "What will happen if Mia saves money now?",
+              "qCn": "如果 Mia 現在存錢，會發生什麼事？",
+              "a": "If she saves money now, she will be able to travel next year.",
+              "aCn": "如果她現在存錢，她明年就能夠去旅行。"
+            },
+            {
+              "q": "If Mia won the lottery, what would she buy first?",
+              "qCn": "如果 Mia 中了彩券，她會買什麼？",
+              "a": "If she won the lottery, she would buy a big house for her family.",
+              "aCn": "如果她中了彩券，她會買一棟大房子給她的家人。"
+            },
+            {
+              "q": "Where would Mia live if she could live anywhere?",
+              "qCn": "如果 Mia 能住在任何地方，她會住在哪裡？",
+              "a": "She would choose to live in Italy because she loves the food and the scenery.",
+              "aCn": "她會選擇住在義大利，因為她喜歡那裡的美食和風景。"
+            }
+          ],
+          "sumEn": [
+            "語言重點：第一條件句用 If + 現在簡單式, will + 原形動詞（真實可能）；第二條件句用 If + 過去簡單式, would + 原形動詞（純屬想像）。"
+          ],
+          "sumCn": [
+            "文章刻意把 Mia 的「規劃」寫成第一條件句、「白日夢」寫成第二條件句，時態就是可能性的訊號。"
+          ]
+        }
+      ],
+      "extraTitle": "V. 文法辨識練習 Identify the Conditionals",
+      "extra": [
+        {
+          "title": "V-A. 哪些句子是第一條件句？First Conditional",
+          "exs": [
+            {
+              "en": "If Mia studies hard, she will pass her exams and get into a good university.",
+              "cn": "第一條件句：If ＋ 現在簡單式 studies，主句 will pass。",
+              "hi": "studies … will pass"
+            },
+            {
+              "en": "If she saves money now, she will be able to travel next year.",
+              "cn": "第一條件句：If ＋ 現在簡單式 saves，主句 will be able to。",
+              "hi": "saves … will be able to"
+            },
+            {
+              "en": "…if she practices her English every day, she will speak it fluently soon.",
+              "cn": "第一條件句：If ＋ 現在簡單式 practices，主句 will speak。",
+              "hi": "practices … will speak"
+            }
+          ]
+        },
+        {
+          "title": "V-B. 哪些句子是第二條件句？Second Conditional",
+          "exs": [
+            {
+              "en": "If she won the lottery, she would buy a big house for her family.",
+              "cn": "第二條件句：If ＋ 過去簡單式 won，主句 would buy。",
+              "hi": "won … would buy"
+            },
+            {
+              "en": "If she could live anywhere in the world, she would choose Italy…",
+              "cn": "第二條件句：If ＋ could，主句 would choose。",
+              "hi": "could live … would choose"
+            },
+            {
+              "en": "If she had a superpower, she would fly around the world…",
+              "cn": "第二條件句：If ＋ 過去簡單式 had，主句 would fly。",
+              "hi": "had … would fly"
+            }
+          ]
+        }
+      ],
+      "summaryTitle": "VI. 快速總結 Quick Summary",
+      "summary": [
+        {
+          "k": "第一條件句＝真的有可能",
+          "v": "If + 現在簡單式, will + 原形動詞"
+        },
+        {
+          "k": "第二條件句＝純屬想像",
+          "v": "If + 過去簡單式, would + 原形動詞（be 動詞一律 were）"
+        },
+        {
+          "k": "判斷關鍵",
+          "v": "看 If 子句的時態，就知道說話者覺得這件事有沒有可能"
+        },
+        {
+          "k": "Mia 的兩種思考",
+          "v": "plan her life（規劃人生，用第一條件句）↔ daydream（做白日夢，用第二條件句）"
+        },
+        {
+          "k": "收尾金句",
+          "v": "With effort and a little imagination, anything is possible."
         }
       ]
     }
