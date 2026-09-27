@@ -84,6 +84,56 @@ window.VIDEO_ART = window.VIDEO_ART || {};
       '<rect x="26" y="22" width="148" height="106" rx="9" fill="#fff" '+st+'/><rect x="26" y="22" width="148" height="20" rx="9" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>'
      +'<g font-family="sans-serif" font-size="11.5" fill="'+D+'"><text x="40" y="60">MODEL   T-900</text><text x="40" y="78">DATE    2026-09-17</text><text x="40" y="96">S/N     A1234567</text></g>'
      +'<g fill="'+D+'"><rect x="40" y="104" width="3" height="16"/><rect x="46" y="104" width="1.5" height="16"/><rect x="50" y="104" width="4" height="16"/><rect x="57" y="104" width="1.5" height="16"/><rect x="61" y="104" width="3" height="16"/><rect x="67" y="104" width="1.5" height="16"/><rect x="71" y="104" width="4" height="16"/><rect x="78" y="104" width="2" height="16"/><rect x="83" y="104" width="1.5" height="16"/><rect x="87" y="104" width="3" height="16"/><rect x="93" y="104" width="1.5" height="16"/><rect x="97" y="104" width="4" height="16"/><rect x="104" y="104" width="2" height="16"/></g>'),
+    /* 護目鏡＋安全手套 */
+    goggles: svg(
+      '<rect x="18" y="34" width="72" height="34" rx="14" fill="#fff" '+st+'/><rect x="110" y="34" width="72" height="34" rx="14" fill="#fff" '+st+'/>'
+     +'<path d="M90 50 h20 M18 46 l-8 -6 M182 46 l8 -6" fill="none" '+st+'/>'
+     +'<path d="M32 44 l14 -4 M124 44 l14 -4" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M112 142 V98 a7 7 0 0 1 14 0 V86 a7 7 0 0 1 14 0 v12 a7 7 0 0 1 14 0 v4 a7 7 0 0 1 14 0 v30 q0 10 -10 10 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M112 120 l-13 -9 a6 6 0 0 1 8 -9 l5 4" fill="'+A+'" '+st+'/>'
+     +'<rect x="108" y="130" width="64" height="12" rx="3" fill="#fff" '+st+'/>'),
+    /* 大門警衛：崗亭＋柵欄＋識別證 */
+    gate: svg(
+      '<line x1="8" y1="130" x2="192" y2="130" '+st+'/>'
+     +'<rect x="20" y="50" width="56" height="80" rx="4" fill="'+L+'" '+st+'/><path d="M14 50 h68" '+st+'/>'
+     +'<rect x="30" y="62" width="36" height="28" fill="#fff" '+st+'/>'
+     +'<circle cx="48" cy="74" r="7" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/><path d="M38 90 a10 10 0 0 1 20 0" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M39 70 h18 l-2 -5 h-14 z" fill="'+D+'"/>'
+     +'<rect x="84" y="96" width="14" height="34" rx="2" fill="'+D+'"/>'
+     +'<path d="M91 100 L186 70" stroke="'+D+'" stroke-width="11" stroke-linecap="round"/>'
+     +'<path d="M104 96 L120 91 M136 86 L152 81 M168 76 L180 72" stroke="'+A+'" stroke-width="9"/>'
+     +'<rect x="146" y="102" width="36" height="24" rx="3" fill="#fff" '+st+'/><circle cx="156" cy="114" r="4" fill="'+B+'"/><path d="M164 110 h12 M164 118 h10" stroke="'+D+'" stroke-width="2"/>'),
+    /* 跑步機＋測試通過 */
+    treadmill: svg(
+      '<path d="M20 120 L156 120 L176 108 L40 108 z" fill="'+D+'"/>'
+     +'<rect x="24" y="108" width="132" height="14" rx="7" fill="#fff" '+st+'/>'
+     +'<path d="M42 115 h8 M62 115 h8 M82 115 h8 M102 115 h8 M122 115 h8" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M150 108 L166 42" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<rect x="140" y="30" width="46" height="22" rx="5" fill="'+A+'" '+st+'/><rect x="150" y="36" width="26" height="10" rx="2" fill="#fff"/>'
+     +'<path d="M104 62 L152 46 M104 62 L114 108" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<circle cx="52" cy="62" r="20" fill="'+C+'" '+st+'/><path d="M41 62 l8 8 l15 -16" fill="none" stroke="'+B+'" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>'),
+    /* 封好的箱子：膠帶＋釘書針＋膠帶捲 */
+    sealedBox: svg(
+      '<rect x="36" y="52" width="120" height="76" rx="3" fill="#fff" '+st+'/><path d="M36 52 L52 34 H140 L156 52" fill="'+L+'" '+st+'/>'
+     +'<rect x="86" y="34" width="20" height="94" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M48 64 v-6 h8 v6 M136 64 v-6 h8 v6 M48 124 v-6 h8 v6 M136 124 v-6 h8 v6" fill="none" stroke="'+D+'" stroke-width="3"/>'
+     +'<circle cx="172" cy="116" r="16" fill="'+A+'" '+st+'/><circle cx="172" cy="116" r="6" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'),
+    /* 乾燥劑變紅：失效（打叉）→ 換一包新的 */
+    desiccantRed: svg(
+      '<rect x="22" y="34" width="58" height="80" rx="9" fill="#fde8e6" '+st+'/>'
+     +'<g fill="'+R+'"><circle cx="38" cy="58" r="5"/><circle cx="54" cy="54" r="5"/><circle cx="64" cy="70" r="5"/><circle cx="42" cy="78" r="5"/><circle cx="58" cy="92" r="5"/></g>'
+     +'<path d="M30 42 L72 106 M72 42 L30 106" stroke="'+R+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M90 74 H112 M104 66 L112 74 L104 82" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="122" y="34" width="58" height="80" rx="9" fill="#fff" '+st+'/>'
+     +'<g fill="'+B+'"><circle cx="138" cy="58" r="5"/><circle cx="154" cy="54" r="5"/><circle cx="164" cy="70" r="5"/><circle cx="142" cy="78" r="5"/><circle cx="158" cy="92" r="5"/></g>'
+     +'<rect x="150" y="20" width="42" height="18" rx="9" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/><text x="171" y="33" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#fff">NEW</text>'),
+    /* 稽核員的寫字板：檢查表＋筆 */
+    clipboard: svg(
+      '<rect x="50" y="24" width="100" height="112" rx="8" fill="'+L+'" '+st+'/><rect x="60" y="38" width="80" height="88" rx="4" fill="#fff" '+st+'/>'
+     +'<rect x="82" y="16" width="36" height="16" rx="5" fill="'+A+'" '+st+'/>'
+     +'<g fill="none" stroke="'+D+'" stroke-width="2.5"><rect x="68" y="50" width="10" height="10" rx="2"/><rect x="68" y="72" width="10" height="10" rx="2"/><rect x="68" y="94" width="10" height="10" rx="2"/><path d="M86 55 h40 M86 77 h40 M86 99 h30"/></g>'
+     +'<path d="M69 55 l3 3 l6 -7 M69 77 l3 3 l6 -7" fill="none" stroke="'+B+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M150 112 l24 -36" stroke="'+A+'" stroke-width="8" stroke-linecap="round"/><path d="M150 112 l-5 9 l9 -2 z" fill="'+D+'"/>'),
     /* 稽核常用動詞：工具箱 */
     tools: svg(
       '<rect x="30" y="60" width="140" height="62" rx="8" fill="'+A+'" '+st+'/><path d="M78 60 v-14 h44 v14" fill="none" '+st+'/>'
@@ -182,29 +232,29 @@ window.VIDEO.bk20260917 = {
       cn: "注意聽 Anita 怎麼向稽核員 Tom 說明每一個步驟。" },
 
     /* ---------- 1 情境對話 ---------- */
-    { ch: 1, sp: "T", vis: { type: "scene" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "clipboard" },
       en: "Good morning, Anita. Before next month's audit, I'd like to see your packaging station.",
       cn: "早安，Anita。下個月稽核之前，我想先看看你們的包裝站。" },
-    { ch: 1, sp: "A", vis: { type: "scene" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "station" },
       en: "Sure. As you can see, this is the last station on the line.",
       cn: "沒問題。如您所見，這是產線的最後一站。",
       hi: [{ t: "As you can see", cn: "如您所見", k: "asyousee", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "goggles" },
       en: "What do visitors need to wear here?",
       cn: "訪客在這裡需要穿戴什麼？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "helmet" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "goggles" },
       en: "Everyone must wear safety glasses and gloves. It's a rule, not a suggestion.",
       cn: "每個人都必須戴護目鏡和手套。這是規定，不是建議。",
       hi: [{ t: "must wear", cn: "必須穿戴", k: "must", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "lock" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "gate" },
       en: "Good. Safety is always our top priority. And who can come into this area?",
       cn: "很好。安全永遠是我們最優先的事。那誰可以進入這個區域？",
       hi: [{ t: "top priority", cn: "最優先的事", k: "priority", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "lock" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "gate" },
       en: "Only trained operators. A security guard checks every visitor at the gate.",
       cn: "只有受過訓練的作業員。警衛會在大門口檢查每一位訪客。",
       hi: [{ t: "security guard", cn: "警衛", k: "security", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "treadmill" },
       en: "So what happens to a treadmill after testing?",
       cn: "那跑步機測試完之後會怎麼處理？" },
     { ch: 1, sp: "A", vis: { type: "scene", art: "label" },
@@ -218,19 +268,19 @@ window.VIDEO.bk20260917 = {
       en: "It's a desiccant. It keeps the box dry, because high humidity can damage the machine.",
       cn: "那是乾燥劑。它讓箱子保持乾燥，因為濕度太高可能會損壞機器。",
       hi: [{ t: "high humidity", cn: "高濕度", k: "humidity", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "desiccant" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "desiccantRed" },
       en: "How do you know it still works?",
       cn: "你們怎麼知道它還有效？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "desiccant" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "desiccantRed" },
       en: "If it has turned red, it's no longer effective, so we replace it.",
       cn: "如果它已經變紅，就表示失效了，我們會換一包新的。",
       hi: [{ t: "no longer effective", cn: "已經失效", k: "effective", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "tools" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "sealedBox" },
       en: "Finally, we seal the box with tape and use a staple gun to secure the cardboard.",
       cn: "最後，我們用膠帶封箱，再用釘槍把紙箱固定好。",
       hi: [{ t: "seal the box with tape", cn: "用膠帶封箱", k: "seal", c: 3 },
            { t: "secure the cardboard", cn: "固定紙箱", k: "secure", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "clipboard" },
       en: "That's very clear. Thank you, Anita.",
       cn: "非常清楚。謝謝你，Anita。" },
 

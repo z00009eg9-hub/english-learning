@@ -2186,6 +2186,78 @@ body.vd-lock{overflow:hidden}
   #vd .vd-av .n{font-size:clamp(14px,4cqw,16px)}
   #vd .vd-av .r{font-size:clamp(12px,3.4cqw,14px)}
 }
+
+/* ---- 2026-09-27 情境畫面：插圖為主角（填滿地點列與字幕之間的高度）、人物縮小到右上角 ---- */
+#vd .vd-bg.t-scene ~ .vd-scn{position:absolute;left:5cqw;right:5cqw;top:8.5cqw;bottom:max(19cqw,calc(var(--vd-sub-h,0px) + 4cqw + 8px));padding:0;display:flex;align-items:center;justify-content:center}
+#vd .vd-sceneart{width:auto;height:100%;max-width:64cqw;display:flex;align-items:center;justify-content:center}
+#vd .vd-sceneart svg{height:100%;width:auto;max-width:100%;filter:drop-shadow(0 4px 10px rgba(60,45,30,.10))}
+#vd .vd-bg.t-scene ~ .vd-cast{position:absolute;right:3.5cqw;top:3.2cqw;display:flex;gap:2.2cqw;margin:0;z-index:2;justify-content:flex-end}
+#vd .vd-bg.t-scene ~ .vd-cast .vd-av{flex-direction:row;align-items:center;gap:.9cqw;opacity:.5}
+#vd .vd-bg.t-scene ~ .vd-cast .vd-av .c{width:5.6cqw;height:5.6cqw;font-size:2.6cqw;box-shadow:none}
+#vd .vd-bg.t-scene ~ .vd-cast .vd-av .n{font-size:clamp(11px,1.6cqw,15px);font-weight:600}
+#vd .vd-bg.t-scene ~ .vd-cast .vd-av.on{opacity:1;transform:none}
+#vd .vd-bg.t-scene ~ .vd-cast .vd-av.on .c{box-shadow:0 0 0 .5cqw rgba(232,129,58,.28)}
+#vd .vd-bg.t-scene ~ .vd-cast .vd-av.on .n{font-weight:800;color:var(--ink)}
+@container (max-width:560px){
+  /* 手機 4:3 畫面：地點（截斷）與人物同一列，只有正在說話的人顯示名字；字幕三、四行也不會壓到插圖 */
+  #vd .vd-bg.t-scene ~ .vd-loc{max-width:50cqw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #vd .vd-bg.t-scene ~ .vd-cast{top:3.2cqw;gap:2cqw}
+  #vd .vd-bg.t-scene ~ .vd-cast .vd-av .c{width:7.5cqw;height:7.5cqw;font-size:3.6cqw}
+  #vd .vd-bg.t-scene ~ .vd-cast .vd-av .n{font-size:clamp(12px,3.4cqw,14px)}
+  #vd .vd-bg.t-scene ~ .vd-cast .vd-av:not(.on) .n{display:none}
+  #vd .vd-bg.t-scene ~ .vd-scn{top:12cqw;bottom:max(26cqw,calc(var(--vd-sub-h,0px) + 4cqw + 8px));left:6cqw;right:6cqw}
+  #vd .vd-sceneart{max-width:70cqw}
+}
+/* ---- 進度列的句數（只在直向／手機顯示，標題列改成一行） ---- */
+#vd .vd-cnt2{display:none}
+/* ---- 字幕｜重點句 切換（只在直向／手機顯示） ---- */
+#vd .vd-pane{display:none;gap:4px;padding:3px;border:1px solid var(--line);border-radius:10px;background:var(--card);flex:none;align-self:center;width:min(100%,320px)}
+#vd .vd-pane button{flex:1;border:0;background:none;border-radius:8px;padding:6px 10px;font-size:calc(14px * var(--fs));font-weight:600;color:var(--ink2);cursor:pointer}
+#vd .vd-pane button.on{background:var(--accent-soft);color:var(--accent2)}
+/* ---- 直向平板、手機：整頁固定不捲；影片＋控制列在上，下面只有一個會捲的區塊（字幕或重點句） ---- */
+@media (max-width:999px), (max-aspect-ratio:5/4){
+  #vd{display:flex;flex-direction:column;overflow:hidden}
+  #vd .vd-top{position:static;flex:none}
+  #vd .vd-main{flex:1;min-height:0;display:flex;flex-direction:column;gap:10px}
+  #vd .vd-left{flex:none}
+  #vd .vd-rightcol{flex:1;min-height:0;display:flex;flex-direction:column;gap:8px}
+  #vd .vd-pane{display:flex}
+  #vd .vd-right{flex:1;min-height:0;max-height:none;overflow-y:auto}
+  #vd .vd-cardwrap{flex:1;min-height:0;overflow-y:auto}
+  #vd.p-list .vd-cardwrap{display:none}
+  #vd.p-card .vd-right{display:none}
+  #vd .vd-cnt2{display:inline;margin-left:2px}
+  #vd .vd-meta{display:none}
+  #vd .vd-ttl{display:block}
+  #vd .vd-ttl b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;font-size:calc(17px * var(--fs))}
+}
+@media (max-width:599px){
+  #vd .vd-top{padding:8px 12px}
+  #vd .vd-main{padding:8px 10px 10px;gap:8px}
+  #vd .vd-ttl b{font-size:calc(16px * var(--fs))}
+  #vd .vd-prog{margin:8px 2px 2px}
+  #vd .vd-play{width:42px;height:42px}
+  /* 手機的字幕列：片語只上色、不加框、不顯示中文小字（整句中譯就在下一行），句子才不會被撐斷 */
+  #vd .vd-row.cur .vd-chip{display:inline;padding:0;margin:0;border:0;background:none;vertical-align:baseline;font-weight:700}
+  #vd .vd-row.cur .vd-chip small{display:none}
+  #vd .vd-row{padding:8px 10px 8px 8px;margin:2px 4px}
+  #vd .vd-row .en{font-size:calc(17px * var(--fs))}
+  #vd .vd-row .cn{font-size:calc(14px * var(--fs))}
+}
+/* ---- 手機底部導覽：更多面板 ---- */
+#moresheet{position:fixed;inset:0;z-index:70}
+#moresheet .ms-bg{position:absolute;inset:0;background:rgba(43,33,24,.35)}
+#moresheet .ms-panel{position:absolute;left:0;right:0;bottom:0;background:var(--card);border-radius:18px 18px 0 0;padding:8px 14px calc(14px + env(safe-area-inset-bottom));box-shadow:0 -6px 24px rgba(60,45,30,.18);animation:msUp .22s ease both}
+@keyframes msUp{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+#moresheet .ms-grip{width:36px;height:4px;border-radius:2px;background:var(--line);margin:2px auto 12px}
+#moresheet .ms-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#moresheet .ms-grid button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:12px 14px;font:inherit;color:var(--ink);cursor:pointer;text-align:left}
+#moresheet .ms-grid button i{font-style:normal;font-size:24px;line-height:1;margin-bottom:4px}
+#moresheet .ms-grid button b{font-size:calc(16px * var(--fs))}
+#moresheet .ms-grid button span{font-size:calc(12.5px * var(--fs));color:var(--ink2)}
+#moresheet .ms-grid button.on{border-color:var(--accent);background:var(--accent-soft)}
+#moresheet .ms-grid button.on b{color:var(--accent2)}
+nav button{font-size:11px}
 </style>
 </head>
 <body>
@@ -2251,12 +2323,22 @@ body.vd-lock{overflow:hidden}
   <button id="t-daily" class="on" onclick="go('daily')"><i class="dayico"><span class="m" id="dayico-m">—</span><span class="d" id="dayico-d">—</span></i>今日</button>
   <button id="t-book" onclick="go('book')"><i>📕</i>課本</button>
   <button id="t-read" onclick="go('read')"><i>📖</i>閱讀</button>
-  <button id="t-listen" onclick="go('listen')"><i>🎧</i>聽力</button>
-  <button id="t-real" onclick="go('real')"><i>🎬</i>實景</button>
   <button id="t-prac" onclick="go('vocab')"><i>🎯</i>單字卡</button>
-  <button id="t-gram" onclick="go('gram')"><i>📐</i>文法</button>
-  <button id="t-prog" onclick="go('prog')"><i>📊</i>進度</button>
+  <button id="t-more" onclick="moreTog()" aria-expanded="false"><i>☰</i>更多</button>
 </nav>
+<!-- 手機「更多」：聽力／實景／文法／進度改放這裡，底部只留 5 個（2026-09-27 使用者指定；電腦版側欄不變） -->
+<div id="moresheet" hidden>
+  <div class="ms-bg" onclick="moreTog(false)"></div>
+  <div class="ms-panel" role="dialog" aria-label="更多功能">
+    <div class="ms-grip"></div>
+    <div class="ms-grid">
+      <button id="m-listen" onclick="moreGo('listen')"><i>🎧</i><b>聽力</b><span>影片＋逐字稿跟讀</span></button>
+      <button id="m-real" onclick="moreGo('real')"><i>🎬</i><b>實景</b><span>真實語速的影片</span></button>
+      <button id="m-gram" onclick="moreGo('gram')"><i>📐</i><b>文法</b><span>單元、常見錯誤與練習</span></button>
+      <button id="m-prog" onclick="moreGo('prog')"><i>📊</i><b>進度</b><span>打卡、統計與設定</span></button>
+    </div>
+  </div>
+</div>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
@@ -2804,7 +2886,10 @@ function go(t,visualTab){
   ['daily','read','book','listen','real','prac','gram','prog'].forEach(k=>{
     const b=$('t-'+k); if(b) b.classList.toggle('on', k===vt);
     const sb=$('sb-'+k); if(sb) sb.classList.toggle('on', k===vt);
+    const mb=$('m-'+k); if(mb) mb.classList.toggle('on', k===vt);
   });
+  /* 手機底部的「更多」：目前分頁收在它裡面時，它亮起 */
+  const mo=$('t-more'); if(mo) mo.classList.toggle('on', ['listen','real','gram','prog'].includes(vt));
   if(t!=='listen') destroyPlayer();
   if(t!=='listen'&&typeof recFinish==='function') recFinish();   // 換分頁就停止錄音、釋放麥克風
   hideGloss();
@@ -2815,6 +2900,10 @@ function go(t,visualTab){
   updateHd();
 }
 window.go=go;
+function moreTog(on){ const m=$('moresheet'), b=$('t-more'); if(!m) return;
+  const show=on===undefined?m.hidden:!!on; m.hidden=!show; if(b) b.setAttribute('aria-expanded',show?'true':'false'); document.body.classList.toggle('ms-open',show); }
+function moreGo(t){ moreTog(false); go(t); }
+window.moreTog=moreTog; window.moreGo=moreGo;
 function updateStreak(){
   const s=ST.streak||1;
   const hs=$('hd-streak'); if(hs) hs.textContent='🔥 '+s+' 天';
@@ -7413,13 +7502,14 @@ function vdStageHTML(l){
      +'<div class="vd-big">'+esc(d.title)+'</div><div class="vd-bigcn">'+esc(d.titleCn)+'</div>'
      +'<div class="vd-ticons">'+(d.titleArt||[]).map(k=>'<span>'+vdArt(k)+'</span>').join('')+'</div></div>'+sub;
   }else if(v.type==='scene'){
-    const av=k=>{ const c=cast[k]||{}; return '<div class="vd-av '+(c.voice||'')+(l.sp===k?' on':'')+'"><div class="c">'+esc((c.name||k).charAt(0))
+    /* 人物只是「誰在說話」的指示：小頭像＋名字放角落，職稱不顯示；插圖佔畫面中央當主角（2026-09-27 使用者指定） */
+    const av=k=>{ const c=cast[k]||{}; return '<div class="vd-av '+(c.voice||'')+(l.sp===k?' on':'')+'" title="'+esc(c.cn||'')+'"><div class="c">'+esc((c.name||k).charAt(0))
       +(l.sp===k&&VD.on?'<span class="vd-wave"><i></i><i></i><i></i><i></i></span>':'')+'</div>'
-      +'<div class="n">'+esc(c.name||k)+'</div><div class="r">'+esc((c.cn||'').replace(/^[^・]*・/,''))+'</div></div>'; };
+      +'<div class="n">'+esc(c.name||k)+'</div></div>'; };
     const who=Object.keys(cast).filter(k=>k!=='N');
     h='<div class="vd-loc">📍 '+esc(d.scene||'')+'</div>'
-     +'<div class="vd-scn"><div class="vd-scene"><div class="vd-cast">'+who.map(av).join('')+'</div>'
-     +((v.art||d.sceneArt)?'<div class="vd-sceneart">'+vdArt(v.art||d.sceneArt)+'</div>':'')+'</div></div>'+sub;   /* 每句可用 vis.art 換圖（2026-09-27） */
+     +'<div class="vd-cast">'+who.map(av).join('')+'</div>'
+     +'<div class="vd-scn"><div class="vd-sceneart">'+vdArt(v.art||d.sceneArt||'station')+'</div></div>'+sub;   /* 每句可用 vis.art 換圖，沒指定用場景圖 */
   }else if(v.type==='slide'){
     h='<div class="vd-scn"><div class="vd-split"><div>'
      +'<div class="vd-big">'+esc(v.phrase||v.w)+'</div>'
@@ -7521,7 +7611,7 @@ const VD_MODES=['dual','en','cn'], VD_MODE_LAB={dual:'雙語',en:'英文',cn:'�
 function vdRender(){
   const d=VD.d; let el=$('vd');
   if(!el){ el=document.createElement('div'); el.id='vd'; el.setAttribute('role','dialog'); el.setAttribute('aria-modal','true'); document.body.appendChild(el); }
-  el.className='m-'+VD.mode;
+  el.className='m-'+VD.mode+' p-'+(VD.pane||'list');
   const vs=vdVoiceList();
   const sel=(kind,lab)=>{ const cur=vdVoiceFor(Object.keys(d.cast).find(k=>d.cast[k].voice===kind)||'N');
     return '<label>'+esc(lab)+'<select onchange="vdSetVoice(\''+kind+'\',this.value)">'+(vs.length?vs.map(v=>'<option value="'+esc(v.name)+'"'+(cur&&cur.name===v.name?' selected':'')+'>'+esc(v.name.replace(/^Microsoft |^Google /,''))+'</option>').join(''):'<option>（此裝置沒有英文語音）</option>')+'</select></label>'; };
@@ -7535,7 +7625,7 @@ function vdRender(){
    /* 左欄只有影片；電腦版控制列疊在影片底部（.vd-ctrlwrap 由 CSS 決定疊上去或排在下面） */
    +'<div class="vd-left"><div class="vd-stagewrap"><div class="vd-stage" id="vd-stage"></div></div>'
    +'<div class="vd-ctrlwrap" id="vd-ctrlwrap">'
-   +'<div class="vd-prog"><span id="vd-now">0:00</span><div class="vd-bar" id="vd-bar" onclick="vdSeek(event)"><i id="vd-fill"></i>'+ticks+'</div><span>'+vdTime(VD.total)+'</span></div>'
+   +'<div class="vd-prog"><span id="vd-now">0:00</span><div class="vd-bar" id="vd-bar" onclick="vdSeek(event)"><i id="vd-fill"></i>'+ticks+'</div><span>'+vdTime(VD.total)+'</span><span class="vd-cnt2" id="vd-cnt2"></span></div>'
    /* 控制列第一層只放五個：播放／上一句／下一句／速度／字幕；其他收在「更多」 */
    +'<div class="vd-ctrl"><button class="vd-play" id="vd-play" onclick="vdToggle()" aria-label="播放／暫停">▶</button>'
    +'<button class="vd-cb" onclick="vdStep(-1)" title="上一句（←）"><span class="ic">⏮ </span>上一句</button>'
@@ -7551,7 +7641,10 @@ function vdRender(){
    +(vs.length<=1?'<br>這台裝置只有 '+vs.length+' 個美式語音，三個角色靠音調高低區分。用 Edge 開同一個網址會多出十幾個微軟語音；或在 Windows「時間與語言 → 語言」新增 English (United States) 並勾選「語音」。':'')+'</div></div>'
    +'</div></div>'
    /* 右欄：字幕（填滿、自己捲）＋ 重點卡釘在底部 */
-   +'<div class="vd-rightcol"><div class="vd-right" id="vd-right"><div id="vd-list">'+vdListHTML()+'</div></div>'
+   +'<div class="vd-rightcol">'
+   /* 直向／手機：字幕與重點句二選一（電腦版兩個都顯示，這列隱藏） */
+   +'<div class="vd-pane" id="vd-pane"><button class="'+(VD.pane!=='card'?'on':'')+'" onclick="vdPane(\'list\')">字幕</button><button class="'+(VD.pane==='card'?'on':'')+'" onclick="vdPane(\'card\')">重點句</button></div>'
+   +'<div class="vd-right" id="vd-right"><div id="vd-list">'+vdListHTML()+'</div></div>'
    +'<div class="vd-cardwrap" id="vd-card"></div></div>'
    +'</div>';
   vdPaint(false); vdMeasure(); requestAnimationFrame(vdMeasure);
@@ -7562,7 +7655,9 @@ function vdSetTog(){
 }
 function vdPaint(scroll){
   const l=VD.lines[VD.i]; if(!l) return;
-  const st=$('vd-stage'); if(st) st.innerHTML=vdStageHTML(l);
+  const st=$('vd-stage'); if(st){ st.innerHTML=vdStageHTML(l);
+    /* 字幕條實際高度寫進變數：情境插圖的可用區域到字幕條上緣為止，長句（三、四行）也不會被壓到 */
+    const sb=st.querySelector('.vd-sub'); st.style.setProperty('--vd-sub-h', sb?Math.ceil(sb.getBoundingClientRect().height)+'px':'0px'); }
   /* 重點表達卡：這句有標籤就換成這句的；沒有就沿用往前最近的一個（跳句時卡片也不會空白） */
   const prev=VD.expr; VD.expr=null;
   for(let k=VD.i;k>=0;k--){ const h=(VD.lines[k].hi||[])[0]; if(h&&h.k){ VD.expr=h.k; VD.exprColor=h.c||1; break; } }
@@ -7582,6 +7677,7 @@ function vdPaint(scroll){
         VD.scrollFix=setTimeout(()=>{ if(Math.abs(box.scrollTop-top)>4) box.scrollTop=top; },500); } } }
   const cnt='第 '+(VD.i+1)+' / '+VD.lines.length+' 句';
   const ce=$('vd-cnt'); if(ce) ce.textContent=cnt;
+  const c2=$('vd-cnt2'); if(c2) c2.textContent=(VD.i+1)+'/'+VD.lines.length;
   const now=$('vd-now'); if(now) now.textContent=vdTime(VD.times[VD.i]);
   /* 進度條：先跳到這句開頭，播放中再用 transition 平滑走到這句結尾 */
   const f=$('vd-fill');
@@ -7661,7 +7757,9 @@ function vdRateTog(){
   vdCalc(); const on=VD.on; VD.on=false; vdClear(); vdRender(); if(on) vdPlay();
 }
 function vdMode(m){ VD.mode=m; try{ localStorage.setItem('b2lab_vdmode',m); }catch(e){}
-  const el=$('vd'); if(el) el.className='m-'+m; vdBtns(); }
+  const el=$('vd'); if(el) el.className='m-'+m+' p-'+(VD.pane||'list'); vdBtns(); }
+function vdPane(p){ VD.pane=p; const el=$('vd'); if(!el) return; el.classList.toggle('p-card',p==='card'); el.classList.toggle('p-list',p!=='card');
+  document.querySelectorAll('#vd-pane button').forEach((b,i)=>b.classList.toggle('on',(i===1)===(p==='card'))); if(p!=='card') vdPaint(); }
 function vdModeNext(){ vdMode(VD_MODES[(VD_MODES.indexOf(VD.mode)+1)%VD_MODES.length]); }
 function vdSeek(ev){
   const bar=$('vd-bar'); if(!bar) return;
@@ -7707,7 +7805,7 @@ function vdClose(){
   document.removeEventListener('keydown',vdKey);
   try{ const u=new URL(location.href); u.searchParams.delete('video'); history.replaceState(null,'',u.toString()); }catch(e){}
 }
-Object.assign(window,{vdOpen,vdClose,vdToggle,vdGo,vdStep,vdReplay,vdLoopTog,vdShadowTog,vdRateTog,vdMode,vdModeNext,vdSeek,vdPause,vdFollow,vdMoreTog,vdSetTog,VD});
+Object.assign(window,{vdOpen,vdClose,vdToggle,vdPane,vdGo,vdStep,vdReplay,vdLoopTog,vdShadowTog,vdRateTog,vdMode,vdModeNext,vdSeek,vdPause,vdFollow,vdMoreTog,vdSetTog,VD});
 
 /* ---------- LINE Bot 深連結 ---------- */
 /* LINE 單字卡的「完整學習」會帶 ?w=compensate&lesson=bk20260811 進來：
