@@ -6,6 +6,7 @@ window.BOOK = {
   lessons: [
     {
       id: 'bk20260903',
+      video: true,   // 有影片版（data-video.js）
       icon: '🏢',
       date: '2026-09-03',
       doc: 'https://docs.google.com/document/d/17MEHEOZAAv1kva4q03jCy_VAYZyQBvVagI9Cvu_uH1c/edit',
@@ -334,6 +335,7 @@ window.BOOK = {
     },
     {
       id: 'bk20260827',
+      video: true,   // 有影片版（data-video.js）
       icon: '🤝',
       date: '2026-08-27',
       doc: 'https://docs.google.com/document/d/1Tc_GtWYY4j3snp1lN2F4sIEEpyaHzYPNth7sw9nGCMM/edit',
@@ -825,6 +827,7 @@ window.BOOK = {
     },
     {
       id: 'bk20260825',
+      video: true,   // 有影片版（data-video.js）
       icon: '🕐',
       iconSvg: '<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><circle cx="48" cy="48" r="45" fill="#fff" stroke="#f0c9a0" stroke-width="3"/><circle cx="48" cy="48" r="26" fill="#fff" stroke="#2b2118" stroke-width="3.5"/><path d="M22 48 h52" stroke="#e8913a" stroke-width="3" stroke-dasharray="4 4"/><path d="M48 30 v18 l13 8" fill="none" stroke="#c9631f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="48" cy="48" r="3.5" fill="#2b2118"/></svg>',
       date: '2026-08-25',
@@ -1171,6 +1174,7 @@ window.BOOK = {
     },
     {
       id: 'bk20260821',
+      video: true,   // 有影片版（data-video.js）
       icon: '💻',
       iconSvg: '<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><circle cx="48" cy="48" r="45" fill="#fff" stroke="#f0c9a0" stroke-width="3"/><rect x="28" y="28" width="40" height="28" rx="3" fill="#fff" stroke="#2b2118" stroke-width="3.5"/><rect x="33" y="33" width="30" height="18" fill="#e8913a"/><path d="M21 62 h54 l-5 9 H26 z" fill="#c9631f" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><rect x="42" y="64" width="12" height="3.5" rx="1.5" fill="#fff"/></svg>',
       date: '2026-08-21',
@@ -1465,6 +1469,7 @@ window.BOOK = {
     },
     {
       id: 'bk20260813',
+      video: true,   // 有影片版（data-video.js）
       icon: '📣',
       iconSvg: '<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><circle cx="48" cy="48" r="45" fill="#fff" stroke="#f0c9a0" stroke-width="3"/><path d="M26 40 h14 l24 -14 v44 l-24 -14 h-14 z" fill="#e8913a" stroke="#2b2118" stroke-width="3.5" stroke-linejoin="round"/><rect x="34" y="58" width="11" height="15" rx="3" fill="#c9631f" stroke="#2b2118" stroke-width="3"/><g stroke="#d9691f" stroke-width="3.5" stroke-linecap="round" fill="none"><line x1="72" y1="34" x2="79" y2="29"/><line x1="74" y1="48" x2="83" y2="48"/><line x1="72" y1="62" x2="79" y2="67"/></g></svg>',
       date: '2026-08-13',
@@ -1806,6 +1811,7 @@ window.BOOK = {
     },
     {
       id: 'bk20260811',
+      video: true,   // 有影片版（data-video.js）
       icon: '🎁',
       iconSvg: '<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><circle cx="48" cy="48" r="45" fill="#fff" stroke="#f0c9a0" stroke-width="3"/><rect x="26" y="44" width="44" height="28" rx="4" fill="#e86a6a" stroke="#2b2118" stroke-width="3.5"/><rect x="23" y="34" width="50" height="12" rx="3" fill="#f08080" stroke="#2b2118" stroke-width="3.5"/><rect x="43" y="34" width="10" height="38" fill="#f5c04e" stroke="#2b2118" stroke-width="3"/><path d="M48 33 c-3 -8 -14 -10 -15 -4 c-1 5 8 6 15 4z" fill="#f5c04e" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><path d="M48 33 c3 -8 14 -10 15 -4 c1 5 -8 6 -15 4z" fill="#f5c04e" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/></svg>',
       date: '2026-08-11',
@@ -8864,6 +8870,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260707',
+      video: true,   // 有影片版（data-video.js）
       icon: '✈️',
       date: '2026-07-07',
       doc: 'https://docs.google.com/document/d/1hnWt0RjsaQ2WIGi88a3TkCx4O-Vl-R5oEDIDFxCTbdA/edit',
@@ -9026,6 +9033,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260709',
+      video: true,   // 有影片版（data-video.js）
       icon: '🛂',
       date: '2026-07-09',
       doc: 'https://docs.google.com/document/d/1U1A2XIjnyy40M-rg4y3GyeIX5u98t0QWhGBWmdVFZgU/edit',
@@ -9257,6 +9265,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260714',
+      video: true,   // 有影片版（data-video.js）
       icon: '🛫',
       date: '2026-07-14',
       doc: 'https://docs.google.com/document/d/1XapC_1JseCIvEqEgDjleqattb0p4c2KiFWLd33hNv5M/edit',
@@ -9486,6 +9495,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260716',
+      video: true,   // 有影片版（data-video.js）
       icon: '💺',
       date: '2026-07-16',
       doc: 'https://docs.google.com/document/d/1WUvfvENl5VXzC5V9HInaUCRF0O0PF9F8TYsbF-OsipM/edit',
@@ -9711,6 +9721,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260721',
+      video: true,   // 有影片版（data-video.js）
       icon: '🧳',
       date: '2026-07-21',
       doc: 'https://docs.google.com/document/d/1SWvVGdg70sEXO2gn28lzf6DB0CHzRHZoMA0TQ5JkWr8/edit',
@@ -9854,6 +9865,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260728',
+      video: true,   // 有影片版（data-video.js）
       icon: '🛶',
       date: '2026-07-28',
       doc: 'https://docs.google.com/document/d/11gOmlt6aNWW7Hhw6VP872xNp5U2myjxws3O8uCI-570/edit',
@@ -10004,6 +10016,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260730',
+      video: true,   // 有影片版（data-video.js）
       icon: '🎭',
       date: '2026-07-30',
       doc: 'https://docs.google.com/document/d/1Q_jPPHq5AmZVSDKS_J7GIu1WUdgVEsyDaYlGmn90k9I/edit',
@@ -10207,6 +10220,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260804',
+      video: true,   // 有影片版（data-video.js）
       icon: '🌞',
       date: '2026-08-04',
       doc: 'https://docs.google.com/document/d/1r3JvXGHBw4HzkXZEvU_YvyGQA_l1k-APHu7WvuGy3YE/edit',
@@ -10394,6 +10408,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260806',
+      video: true,   // 有影片版（data-video.js）
       icon: '🔑',
       date: '2026-08-06',
       doc: 'https://docs.google.com/document/d/1f0lej0hVLJ47yqeq0KDr3nG71C2iU1jpdI6qO6qkP5M/edit',
@@ -10569,6 +10584,7 @@ window.BOOK = {
     },
     {
       id: 'bk20260818',
+      video: true,   // 有影片版（data-video.js）
       icon: '🤝',
       date: '2026-08-18',
       doc: 'https://docs.google.com/document/d/1rKkl4yemKQDVgW7zQNU87mEJC7hrcjQanXhawG-ak-M/edit',
@@ -11026,6 +11042,7 @@ window.BOOK = {
     },
     {
       id: 'bk20260915',
+      video: true,   // 有影片版（data-video.js）
       icon: '🏭',
       date: '2026-09-15',
       doc: 'https://docs.google.com/document/d/1ZJYkRNHrQy4W9I-Nbeqt-gAUVX2dFAC8ABlZi6VPlSg/edit',
@@ -11274,6 +11291,7 @@ window.BOOK = {
     },
     {
       id: 'bk20260910',
+      video: true,   // 有影片版（data-video.js）
       icon: '🎵',
       date: '2026-09-10',
       doc: 'https://docs.google.com/document/d/1hIf2qs_PCzhhuC74WEp_iE3k77jKVdJ3CgF9u-nIPBI/edit',
@@ -11514,6 +11532,7 @@ window.BOOK = {
     },
     {
       id: 'bk20260908',
+      video: true,   // 有影片版（data-video.js）
       icon: '📝',
       date: '2026-09-08',
       doc: 'https://docs.google.com/document/d/1X104L6BXfxrGtS5OmDI-3nFu5Z-ICUs2SflYQtzhFPo/edit',
