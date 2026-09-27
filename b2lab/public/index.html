@@ -1941,15 +1941,17 @@ body.vd-lock{overflow:hidden}
 #vd .vd-row .sp.A{color:var(--accent2)} #vd .vd-row .sp.T{color:var(--b1p)} #vd .vd-row .sp.N{color:var(--vd-dim)}
 #vd .vd-row .en{font-size:var(--font-secondary);line-height:1.9;color:var(--ink)}
 #vd .vd-row .cn{font-size:var(--font-meta);color:var(--ink2);margin-top:2px;line-height:1.5}
-#vd.m-en .cn,#vd.m-en .vd-sub .cn{display:none}
-#vd.m-cn .vd-row .en,#vd.m-cn .vd-sub .en{display:none}
+/* 字幕鈕只管影片內的 CC（英文→雙語→中文→關）；右欄逐字稿永遠雙語（2026-09-27） */
+#vd.m-en .vd-sub .cn{display:none}
+#vd.m-cn .vd-sub .en{display:none}
+#vd.m-off .vd-sub{display:none}
+#vd.m-off .vd-bg.t-scene ~ .vd-scn{bottom:6cqw}   /* 字幕關掉時插圖用滿高度 */
 #vd .vd-chip{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.15;margin:0 2px;padding:2px 7px 1px;border-radius:7px;border:1.5px solid;font-weight:700}
 #vd .vd-chip small{font-size:.66em;font-weight:500;opacity:.9;margin-top:1px}
 #vd .vd-chip.k1{color:var(--vd-k1);border-color:var(--vd-k1l);background:var(--vd-k1b)}
 #vd .vd-chip.k2{color:var(--vd-k2);border-color:var(--vd-k2l);background:var(--vd-k2b)}
 #vd .vd-chip.k3{color:var(--vd-k3);border-color:var(--vd-k3l);background:var(--vd-k3b)}
 #vd .vd-chip.k4{color:var(--vd-k4);border-color:var(--vd-k4l);background:var(--vd-k4b)}
-#vd.m-en .vd-chip small{display:none}
 #vd .vd-racts{display:none;gap:4px;margin-top:6px;flex-wrap:wrap}
 #vd .vd-row.cur .vd-racts{display:flex}
 #vd .vd-racts button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:3px 9px;font-size:var(--font-micro);cursor:pointer}
@@ -7607,7 +7609,9 @@ function vdListHTML(){
   });
   return h;
 }
-const VD_MODES=['dual','en','cn'], VD_MODE_LAB={dual:'雙語',en:'英文',cn:'中文'};
+const VD_MODES=['en','dual','cn','off'], VD_MODE_LAB={en:'英文',dual:'雙語',cn:'中文',off:'關'};
+/* 預設：電腦版影片內只顯示英文（中文在右欄目前句）；手機逐字稿離影片較遠，預設雙語 */
+function vdDefaultMode(){ return matchMedia('(min-width:1000px) and (min-aspect-ratio:5/4)').matches?'en':'dual'; }
 function vdRender(){
   const d=VD.d; let el=$('vd');
   if(!el){ el=document.createElement('div'); el.id='vd'; el.setAttribute('role','dialog'); el.setAttribute('aria-modal','true'); document.body.appendChild(el); }
@@ -7631,7 +7635,7 @@ function vdRender(){
    +'<button class="vd-cb" onclick="vdStep(-1)" title="上一句（←）"><span class="ic">⏮ </span>上一句</button>'
    +'<button class="vd-cb" onclick="vdStep(1)" title="下一句（→）">下一句<span class="ic"> ⏭</span></button>'
    +'<button class="vd-cb" id="vd-rate" onclick="vdRateTog()" title="語速">'+VD.rate+'x</button>'
-   +'<button class="vd-cb" id="vd-sub" onclick="vdModeNext()" title="字幕：雙語／英文／中文">字幕 '+VD_MODE_LAB[VD.mode]+'</button>'
+   +'<button class="vd-cb" id="vd-sub" onclick="vdModeNext()" title="影片內字幕：英文／雙語／中文／關">字幕 '+VD_MODE_LAB[VD.mode]+'</button>'
    +'<button class="vd-cb vd-morec" id="vd-more" onclick="vdSetTog()" aria-expanded="false" title="更多設定">⋯</button></div>'
    +'<div class="vd-set" id="vd-set">'
    +'<div class="vd-toggles"><button class="vd-cb" id="vd-loop" onclick="vdLoopTog()">🔁 單句循環</button>'
@@ -7756,7 +7760,7 @@ function vdRateTog(){
   const rs=[0.8,1,1.2]; VD.rate=rs[(rs.indexOf(VD.rate)+1)%rs.length];
   vdCalc(); const on=VD.on; VD.on=false; vdClear(); vdRender(); if(on) vdPlay();
 }
-function vdMode(m){ VD.mode=m; try{ localStorage.setItem('b2lab_vdmode',m); }catch(e){}
+function vdMode(m){ VD.mode=m; try{ localStorage.setItem('b2lab_vdsub',m); }catch(e){}
   const el=$('vd'); if(el) el.className='m-'+m+' p-'+(VD.pane||'list'); vdBtns(); }
 function vdPane(p){ VD.pane=p; const el=$('vd'); if(!el) return; el.classList.toggle('p-card',p==='card'); el.classList.toggle('p-list',p!=='card');
   document.querySelectorAll('#vd-pane button').forEach((b,i)=>b.classList.toggle('on',(i===1)===(p==='card'))); if(p!=='card') vdPaint(); }
@@ -7782,7 +7786,7 @@ function vdOpen(id){
     if(typeof auStop==='function') auStop();
     if('speechSynthesis' in window) speechSynthesis.cancel();
     Object.assign(VD,{id:id,d:d,lines:d.lines||[],i:0,on:false,loop:false,shadow:false,expr:null,more:false});
-    try{ VD.mode=localStorage.getItem('b2lab_vdmode')||'dual'; }catch(e){}
+    VD.mode=vdDefaultMode(); try{ const m=localStorage.getItem('b2lab_vdsub'); if(VD_MODES.includes(m)) VD.mode=m; }catch(e){}
     vdCalc(); vdRender();
     document.body.classList.add('vd-lock');
     document.addEventListener('keydown',vdKey);
