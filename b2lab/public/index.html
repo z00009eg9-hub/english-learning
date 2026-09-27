@@ -2330,7 +2330,7 @@ nav button{font-size:11px}
   <button id="t-daily" class="on" onclick="go('daily')"><i class="dayico"><span class="m" id="dayico-m">—</span><span class="d" id="dayico-d">—</span></i>今日</button>
   <button id="t-book" onclick="go('book')"><i>📕</i>課本</button>
   <button id="t-read" onclick="go('read')"><i>📖</i>閱讀</button>
-  <button id="t-prac" onclick="go('vocab')"><i>🎯</i>單字卡</button>
+  <button id="t-gram" onclick="go('gram')"><i>📐</i>文法</button>
   <button id="t-more" onclick="moreTog()" aria-expanded="false"><i>☰</i>更多</button>
 </nav>
 <!-- 手機「更多」：聽力／實景／文法／進度改放這裡，底部只留 5 個（2026-09-27 使用者指定；電腦版側欄不變） -->
@@ -2341,7 +2341,7 @@ nav button{font-size:11px}
     <div class="ms-grid">
       <button id="m-listen" onclick="moreGo('listen')"><i>🎧</i><b>聽力</b><span>影片＋逐字稿跟讀</span></button>
       <button id="m-real" onclick="moreGo('real')"><i>🎬</i><b>實景</b><span>真實語速的影片</span></button>
-      <button id="m-gram" onclick="moreGo('gram')"><i>📐</i><b>文法</b><span>單元、常見錯誤與練習</span></button>
+      <button id="m-prac" onclick="moreGo('vocab')"><i>🎯</i><b>單字卡</b><span>間隔複習與收藏字</span></button>
       <button id="m-prog" onclick="moreGo('prog')"><i>📊</i><b>進度</b><span>打卡、統計與設定</span></button>
     </div>
   </div>
@@ -2896,7 +2896,7 @@ function go(t,visualTab){
     const mb=$('m-'+k); if(mb) mb.classList.toggle('on', k===vt);
   });
   /* 手機底部的「更多」：目前分頁收在它裡面時，它亮起 */
-  const mo=$('t-more'); if(mo) mo.classList.toggle('on', ['listen','real','gram','prog'].includes(vt));
+  const mo=$('t-more'); if(mo) mo.classList.toggle('on', ['listen','real','prac','prog'].includes(vt));
   if(t!=='listen') destroyPlayer();
   if(t!=='listen'&&typeof recFinish==='function') recFinish();   // 換分頁就停止錄音、釋放麥克風
   hideGloss();
