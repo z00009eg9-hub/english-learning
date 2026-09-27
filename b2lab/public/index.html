@@ -2099,12 +2099,15 @@ body.vd-lock{overflow:hidden}
 /* ---- 重點卡：重點英文＋中文、1 個情境例句，下面一排：跟讀、收藏、查看解析 ---- */
 #vd .vd-cardwrap{min-width:0}
 #vd .vd-card{margin-top:0;grid-template-columns:1fr;gap:5px;padding:8px 12px 10px}
-#vd .vd-kx{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+#vd .vd-kx{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:6px 10px}
+#vd .vd-kt{min-width:0}
+#vd .vd-kt .ph,#vd .vd-kt .phcn{display:inline}
+#vd .vd-kt .phcn{white-space:nowrap}
 #vd .vd-kx .ph{line-height:1.15}
 #vd .vd-kx .phcn{margin-top:0}
 #vd .vd-kx .vd-acts{margin-left:auto;gap:6px}
 #vd .vd-card .ex{padding:6px 10px;line-height:1.45}
-#vd .vd-card .ex .c{display:inline;margin-left:6px}
+#vd .vd-card .ex .c{display:inline-block;margin-left:6px}
 #vd .vd-note2{font-size:calc(13px * var(--fs));line-height:1.45;color:var(--ink);background:#fff8e6;border:1px solid #f3dca4;border-radius:10px;padding:6px 10px}
 #vd .vd-row .en{line-height:1.55}
 #vd .vd-row{padding:8px 14px 8px 10px}
@@ -2170,6 +2173,8 @@ body.vd-lock{overflow:hidden}
   #vd .vd-ttl b{font-size:calc(18px * var(--fs))}
   #vd .vd-meta{white-space:normal}
   #vd .vd-card .ph{font-size:calc(18px * var(--fs))}
+  #vd .vd-kx{grid-template-columns:minmax(0,1fr)}
+  #vd .vd-kx .vd-acts{justify-self:end}
 }
 /* 手機的小畫面：字幕與人物的字級下限也跟著調大，但仍要塞得進 4:3 畫面 */
 @container (max-width:560px){
@@ -2577,7 +2582,8 @@ function ttsChunks(s){
   return x.replace(/([,;:])\s+/g,'$1').replace(CLAUSE_RE,'')
           .split('').map(y=>y.trim()).filter(Boolean);
 }
-function say(text,rate,onend,voice){
+function say(text,rate,onend,voice,pitchMul){
+  const pm=Number(pitchMul)||1;   /* 影片版：女聲 1.15、男聲 0.85（同一個語音也能分出誰在說話） */
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
   let t=String(text).replace(/\s+/g,' ').trim();
@@ -2593,7 +2599,7 @@ function say(text,rate,onend,voice){
     const parts=ttsChunks(txt);
     parts.forEach((part,k)=>{
       const u=new SpeechSynthesisUtterance(part);
-      u.lang='en-US'; u.rate=r; u.pitch=p;
+      u.lang='en-US'; u.rate=r; u.pitch=Math.max(0.5,Math.min(2,p*pm));
       if(v) u.voice=v;
       if(last && k===parts.length-1 && onend){ u.onend=onend; u.onerror=onend; }
       us.push(u);
@@ -7364,11 +7370,13 @@ function vdVoiceFor(sp){
   if(kind==='m') return vs.find(v=>VD_M.test(v.name))||VOICE2||VOICE;
   return VOICE;
 }
+/* 同一個語音時靠音調分角色：女聲拉高、男聲壓低、旁白不變（2026-09-27 使用者選 A） */
+function vdPitchFor(sp){ const k=((VD.d&&VD.d.cast&&VD.d.cast[sp])||{}).voice||'n'; return k==='f'?1.15:k==='m'?0.85:1; }
 function vdSetVoice(kind,name){
   try{ localStorage.setItem('b2_vd_voice_'+kind,name); }catch(e){}
   const sp=Object.keys(VD.d.cast).find(k=>VD.d.cast[k].voice===kind)||'N';
   const l=VD.lines.find(x=>x.sp===sp);
-  vdPause(); say(l?l.en:'Hello, this is my voice.', VD.rate, null, vdVoiceFor(sp));
+  vdPause(); say(l?l.en:'Hello, this is my voice.', VD.rate, null, vdVoiceFor(sp), vdPitchFor(sp));
 }
 window.vdSetVoice=vdSetVoice;
 /* ---- 文字：重點片語變標籤（字幕區）或變色（畫面上的字幕） ---- */
@@ -7466,7 +7474,7 @@ function vdCardHTML(){
   const id=VD_FOLLOW+Object.keys(VD.d.expr).indexOf(k);
   /* 三行：重點英文＋中文＋按鈕｜例句｜解析（常駐、不用點開；2026-09-27 使用者指定） */
   return '<div class="vd-card">'
-   +'<div class="vd-kx"><span class="ph k'+(VD.exprColor||1)+'">'+esc(e.t)+'</span><span class="phcn">'+esc(e.cn)+'</span>'
+   +'<div class="vd-kx"><div class="vd-kt"><span class="ph k'+(VD.exprColor||1)+'">'+esc(e.t)+'</span> <span class="phcn">'+esc(e.cn)+'</span></div>'
    +'<span class="vd-acts">'
    +'<button class="vd-follow" id="vd-follow" onclick="vdFollow('+id+')">🗣 跟讀</button>'
    +'<button class="recp" id="recp-'+id+'" onclick="recPlay('+id+',event)" style="display:'+(recUrls[id]?'':'none')+'" title="聽我的錄音">▶ 我的錄音</button>'
@@ -7539,7 +7547,8 @@ function vdRender(){
    +'<div class="vd-toggles"><button class="vd-cb" id="vd-loop" onclick="vdLoopTog()">🔁 單句循環</button>'
    +'<button class="vd-cb" id="vd-shadow" onclick="vdShadowTog()">⏸ 每句停頓跟念</button></div>'
    +sel('n','旁白')+sel('f',(d.cast.A||{}).name||'女聲')+sel('m',(d.cast.T||{}).name||'男聲')
-   +'<div class="hint">聲音用這台裝置內建的美式語音，換裝置音色會不同；選擇只記在這台裝置上。</div></div>'
+   +'<div class="hint">聲音用這台裝置內建的美式語音，換裝置音色會不同；選擇只記在這台裝置上。'
+   +(vs.length<=1?'<br>這台裝置只有 '+vs.length+' 個美式語音，三個角色靠音調高低區分。用 Edge 開同一個網址會多出十幾個微軟語音；或在 Windows「時間與語言 → 語言」新增 English (United States) 並勾選「語音」。':'')+'</div></div>'
    +'</div></div>'
    /* 右欄：字幕（填滿、自己捲）＋ 重點卡釘在底部 */
    +'<div class="vd-rightcol"><div class="vd-right" id="vd-right"><div id="vd-list">'+vdListHTML()+'</div></div>'
@@ -7608,7 +7617,7 @@ function vdSpeak(){
       else { VD.on=false; vdClear(); if(VD.keep){ clearInterval(VD.keep); VD.keep=null; } vdPaint(); }
     }, gap);
   };
-  say(l.say||l.en, VD.rate, step, vdVoiceFor(l.sp));
+  say(l.say||l.en, VD.rate, step, vdVoiceFor(l.sp), vdPitchFor(l.sp));
   VD.watch=setTimeout(step, Math.max(1800, words*430/VD.rate)+2600);
 }
 /* 小測驗的倒數圈：停頓期間讓學習者自己想答案 */
