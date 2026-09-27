@@ -6906,7 +6906,7 @@ notes:[
   tip:"第一次聽只抓 If 後面用什麼時態、主要子句用 will 還是 would。第二次再回頭比較 If it rains 和 If it rained 這兩句，感覺一下真實與想像的差別。",
   pre:[
     {w:"lottery",ipa:"/ˈlɑː.tɚ.i/",pos:"n.",cn:"抽獎、彩券",def:"a game where people buy tickets with numbers, hoping to win a large amount of money"},
-    {w:"daydream",ipa:"/ˈdeɪ.driːm/",pos:"v.",cn:"做白日夢",def:"to let your mind wander and imagine pleasant things instead of focusing on what you should be doing"},
+    {w:"daydream",ipa:"/ˈdeɪdriːm/",pos:"v.",cn:"做白日夢",def:"to let your mind wander and imagine pleasant things instead of focusing on what you should be doing"},
     {w:"scenery",ipa:"/ˈsiː.nɚ.i/",pos:"n.",cn:"風景、景色",def:"the natural features of an area such as mountains and fields."},
     {w:"conditional",ipa:"/kənˈdɪʃ.ən.əl/",pos:"n.",cn:"條件的；條件句（文法用語）",def:"a grammar term for a sentence that describes what happens if something else happens first"},
     {w:"imaginary",ipa:"/ɪˈmædʒ.ə.ner.i/",pos:"adj.",cn:"想像中的、虛構的",def:"existing only in your mind, not real"},

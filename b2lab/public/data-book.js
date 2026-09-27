@@ -11958,6 +11958,7 @@ window.BOOK = {
     /* ---- bk20250709 I am Sick: Symptoms, Seeing a Doctor & Giving Advice ---- */
     {
       "id": "bk20250709",
+      "video": true,
       "icon": "📗",
       "date": "2025-07-09",
       "doc": "https://docs.google.com/document/d/1jh6g1FccdTTgll6kn1WksohMauebd1A_5mBJkwL8FWk/edit",
@@ -11993,7 +11994,7 @@ window.BOOK = {
         {
           "w": "isolated",
           "star": true,
-          "ipa": "/ˈaɪ.sə.leɪ.t̬ɪd/",
+          "ipa": "/ˈaɪ.sə.leɪ.tɪd/",
           "pos": "adj.",
           "cn": "被隔離的",
           "ex": "I have to stay isolated in my room.",
@@ -12466,6 +12467,7 @@ window.BOOK = {
     /* ---- bk20250717 Always Together, Best Friends Forever ---- */
     {
       "id": "bk20250717",
+      "video": true,
       "icon": "📗",
       "date": "2025-07-17",
       "doc": "https://docs.google.com/document/d/10E0Vla90n6lTPWKOiqmABDd3-cnsNQMoSeB7G-zcPSE/edit",
@@ -13087,6 +13089,7 @@ window.BOOK = {
     /* ---- bk20250722 My Best Friend: Friendship Phrases & That's why / That's what ---- */
     {
       "id": "bk20250722",
+      "video": true,
       "icon": "📗",
       "date": "2025-07-22",
       "doc": "https://docs.google.com/document/d/18CQH6p0jBi9xAfPHV1lzx1A_Pj99nqYVxqLNnEdkg7w/edit",
@@ -13671,6 +13674,7 @@ window.BOOK = {
     /* ---- bk20250724 Does Phone Separation Anxiety Really Exist? ---- */
     {
       "id": "bk20250724",
+      "video": true,
       "icon": "📗",
       "date": "2025-07-24",
       "doc": "https://docs.google.com/document/d/1gHsdxn6ETzrr986cu7lAGAOacU6agV35RTl83Hv53_k/edit",
@@ -13985,7 +13989,7 @@ window.BOOK = {
               "cn": "我對這個主題有興趣。／這個主題很有趣。"
             },
             {
-              "tag": "tired /taɪrd/ ↔ tiring /ˈtaɪ.rɪŋ/",
+              "tag": "tired /ˈtaɪrd/ ↔ tiring /ˈtaɪrɪŋ/",
               "en": "I am tired. / The work is tiring.",
               "cn": "我很疲倦。／這份工作很累人。"
             }
@@ -14341,6 +14345,7 @@ window.BOOK = {
     /* ---- bk20250729 Make and Do Collocations ---- */
     {
       "id": "bk20250729",
+      "video": true,
       "icon": "📗",
       "date": "2025-07-29",
       "doc": "https://docs.google.com/document/d/1IBDaXgwUv_cXRZJVNqTOOl_t3Mu3Nv1GuTF-8TOtyQk/edit",
@@ -14913,6 +14918,7 @@ window.BOOK = {
     /* ---- bk20250805 Opportunity and Coping ---- */
     {
       "id": "bk20250805",
+      "video": true,
       "icon": "📗",
       "date": "2025-08-05",
       "doc": "https://docs.google.com/document/d/1CNYT3wFGbLSUv8BSJaZFZ-A5EKjKCsNafQCGfOJSqIc/edit",
@@ -15375,6 +15381,7 @@ window.BOOK = {
     /* ---- bk20250807 Continuous Tenses ---- */
     {
       "id": "bk20250807",
+      "video": true,
       "icon": "📗",
       "date": "2025-08-07",
       "doc": "https://docs.google.com/document/d/1xi60xmphXHKxbqwIfpUpr8IpvY3q-lr4jBR6tQ3AQxw/edit",
@@ -15639,6 +15646,7 @@ window.BOOK = {
     /* ---- bk20251016 A Community of Growth and Friendship ---- */
     {
       "id": "bk20251016",
+      "video": true,
       "icon": "📗",
       "date": "2025-10-16",
       "doc": "https://docs.google.com/document/d/1x_MB6AOgxWSNPijj4kqQ0H-LDJM95kC7B5lkTiLNM-Q/edit",
@@ -15682,7 +15690,7 @@ window.BOOK = {
         {
           "w": "achievement",
           "star": true,
-          "ipa": "/əˈtʃiːvmənt/",
+          "ipa": "/əˈtʃiːv.mənt/",
           "pos": "n.",
           "cn": "成就",
           "ex": "Winning the game was a great achievement.",
@@ -16045,6 +16053,7 @@ window.BOOK = {
     /* ---- bk20251202 Thanksgiving ---- */
     {
       "id": "bk20251202",
+      "video": true,
       "icon": "📗",
       "date": "2025-12-02",
       "doc": "https://docs.google.com/document/d/169SxlT-0mMiqQKJyyRi8yFPW9WNoZoGoYeNVBj0symY/edit",
@@ -16403,6 +16412,7 @@ window.BOOK = {
     /* ---- bk20251209 A Pleasant Place to Spend Quality Time ---- */
     {
       "id": "bk20251209",
+      "video": true,
       "icon": "📗",
       "date": "2025-12-09",
       "doc": "https://docs.google.com/document/d/1BDrHoM_thTkJyExJHlp8ZddFZ4jl2XLe92ytuhBVWbk/edit",
@@ -16695,6 +16705,7 @@ window.BOOK = {
     /* ---- bk20251216 A Busy Day of Repairs and Services ---- */
     {
       "id": "bk20251216",
+      "video": true,
       "icon": "📗",
       "date": "2025-12-16",
       "doc": "https://docs.google.com/document/d/1MzEp2I1i3KP6eOcnjoOkISDp3lgzip-KlLcDQtkODvw/edit",
@@ -17069,6 +17080,7 @@ window.BOOK = {
     /* ---- bk20251218 A Busy Day of Repairs and Services ---- */
     {
       "id": "bk20251218",
+      "video": true,
       "icon": "📗",
       "date": "2025-12-18",
       "doc": "https://docs.google.com/document/d/1UlR9LdXJ-zpqLJOHTzjHvVeWZLBMW6tTjmjWVX7rNqM/edit",
@@ -17834,6 +17846,7 @@ window.BOOK = {
     /* ---- bk20251226a Stress and Conditionals ---- */
     {
       "id": "bk20251226a",
+      "video": true,
       "icon": "📗",
       "date": "2025-12-26",
       "doc": "https://docs.google.com/document/d/1butLMCdPbRjI9RhqcKnpal9KdqN6vRzsqANrcQdJhlM/edit",
@@ -17955,7 +17968,7 @@ window.BOOK = {
         {
           "w": "prioritize",
           "star": true,
-          "ipa": "/praɪˈɔːr.ə.taɪz/",
+          "ipa": "/praɪˈɔːrɪtaɪz/",
           "pos": "v.",
           "cn": "排定優先順序",
           "ex": "How would you prioritize them?",
@@ -18179,6 +18192,7 @@ window.BOOK = {
     /* ---- bk20251226b Dreams and Decisions ---- */
     {
       "id": "bk20251226b",
+      "video": true,
       "icon": "📗",
       "date": "2025-12-26",
       "doc": "https://docs.google.com/document/d/1U_eA5_whXCg0dP9BipR3AFHWt-wZuwaCjRrVaszA5hw/edit",
@@ -18223,7 +18237,7 @@ window.BOOK = {
         {
           "w": "imaginary",
           "star": true,
-          "ipa": "/ɪˈmædʒəneri/",
+          "ipa": "/ɪˈmædʒ.ə.ner.i/",
           "pos": "adj.",
           "cn": "想像中的；虛構的",
           "ex": "The second conditional is used for imaginary situations.",

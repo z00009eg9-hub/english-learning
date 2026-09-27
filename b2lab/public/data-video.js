@@ -22440,3 +22440,4862 @@ window.VIDEO.bk20260630 = {
       cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
   ]
 };
+
+
+/* ===================== bk20250709 ===================== */
+/* bk20250709 I am Sick: Symptoms, Seeing a Doctor & Giving Advice */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* get tested：快篩試劑卡（C 線一條＝陰性）＋採檢棉棒 */
+    covidTestKit: svg(
+      '<rect x="20" y="46" width="124" height="58" rx="10" fill="#fff" '+st+'/>'
+     +'<rect x="34" y="60" width="20" height="30" rx="5" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="66" y="56" width="62" height="38" rx="4" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g font-family="sans-serif" font-size="11" font-weight="700" fill="'+D+'"><text x="72" y="72">C</text><text x="72" y="88">T</text></g>'
+     +'<rect x="86" y="63" width="34" height="5" rx="2.5" fill="'+R+'"/>'
+     +'<path d="M86 85 h34" stroke="'+D+'" stroke-width="1.5" stroke-dasharray="3 4"/>'
+     +'<path d="M152 96 L182 34" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<ellipse cx="185" cy="26" rx="9" ry="12" fill="#fff" '+st+'/>'
+     +'<circle cx="44" cy="120" r="12" fill="'+C+'" '+st+'/><path d="M38 120 l5 5 l9 -10" fill="none" stroke="'+B+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<text x="64" y="126" font-family="sans-serif" font-size="12" font-weight="700" fill="'+D+'">NEGATIVE</text>'),
+    /* stay isolated：房門關上掛 ISOLATED 牌子、病人躺在房裡的床上 */
+    isolationRoom: svg(
+      '<rect x="12" y="20" width="176" height="112" rx="9" fill="'+C+'" '+st+'/>'
+     +'<rect x="26" y="88" width="94" height="30" rx="4" fill="#fff" '+st+'/>'
+     +'<rect x="20" y="62" width="12" height="56" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="36" y="76" width="28" height="16" rx="7" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="50" cy="84" r="9" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M66 94 h54 v18 a6 6 0 0 1 -6 6 H66 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="134" y="38" width="44" height="94" rx="4" fill="'+L+'" '+st+'/>'
+     +'<circle cx="142" cy="88" r="4" fill="'+D+'"/>'
+     +'<rect x="128" y="52" width="56" height="20" rx="5" fill="'+R+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<text x="156" y="66" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#fff">ISOLATED</text>'),
+    /* measles / red with spots：臉上長滿紅疹、眉頭皺起 */
+    spottedFace: svg(
+      '<circle cx="96" cy="74" r="46" fill="'+C+'" '+st+'/>'
+     +'<path d="M76 58 l14 6 M116 58 l-14 6" '+st+'/>'
+     +'<circle cx="82" cy="72" r="3.5" fill="'+D+'"/><circle cx="110" cy="72" r="3.5" fill="'+D+'"/>'
+     +'<path d="M84 98 a12 8 0 0 1 24 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<g fill="'+R+'"><circle cx="68" cy="52" r="4"/><circle cx="120" cy="48" r="4"/><circle cx="62" cy="88" r="4"/><circle cx="128" cy="86" r="4"/><circle cx="96" cy="46" r="4"/><circle cx="96" cy="84" r="4"/><circle cx="74" cy="108" r="4"/><circle cx="118" cy="108" r="4"/><circle cx="106" cy="60" r="3.5"/><circle cx="86" cy="60" r="3.5"/></g>'
+     +'<rect x="140" y="30" width="48" height="22" rx="11" fill="'+R+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<text x="164" y="46" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#fff">10 DAYS</text>'),
+    /* take a syrup：咳嗽藥水瓶＋量匙 */
+    syrupSpoon: svg(
+      '<rect x="34" y="46" width="60" height="82" rx="9" fill="#fff" '+st+'/>'
+     +'<rect x="50" y="32" width="28" height="16" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="46" y="18" width="36" height="16" rx="4" fill="'+A+'" '+st+'/>'
+     +'<path d="M38 92 h52 v27 a5 5 0 0 1 -5 5 H43 a5 5 0 0 1 -5 -5 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="42" y="58" width="44" height="26" rx="3" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+D+'" stroke-width="2"><line x1="48" y1="67" x2="80" y2="67"/><line x1="48" y1="75" x2="72" y2="75"/></g>'
+     +'<ellipse cx="146" cy="72" rx="24" ry="14" fill="#fff" '+st+'/>'
+     +'<ellipse cx="146" cy="72" rx="16" ry="8" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M164 80 L186 122" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20250709 = {
+  title: "I am Sick: Symptoms, Seeing a Doctor & Giving Advice",
+  titleCn: "生病與症狀：看醫生與給建議",
+  date: "2025-07-09",
+  level: "B1",
+  scene: "A Phone Call · Tom Is Home Sick",
+  sceneCn: "電話裡・Tom 在家生病",
+  sceneArt: "isolationRoom",
+  titleArt: ["heart", "warning", "check"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・同班同學", voice: "f" },
+    T: { name: "Tom", cn: "Tom・在家生病", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "Calling a Sick Classmate", cn: "情境：打電話給生病的同學" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    whatsmatter: { t: "What's the matter", cn: "怎麼了？哪裡不舒服？", tag: ["關心", "問症狀"],
+      note: "What's the matter (with you)? 問對方哪裡不舒服，比 What happened? 更關心人的狀態；同義句 What's wrong?",
+      ex: "You look pale. What's the matter?", exCn: "你臉色好白。怎麼了？" },
+    gotheadache: { t: "I've got a headache", cn: "我頭痛", tag: ["症狀", "have got"],
+      note: "症狀一律用 have／have got，不能說 I am headache；headache 可數，要加 a。",
+      ex: "I've got a sore throat, so I'll skip choir practice.", exCn: "我喉嚨痛，所以合唱練習就不去了。" },
+    runningnose: { t: "a running nose", cn: "流鼻水", tag: ["症狀", "搭配詞"],
+      note: "流鼻水是 a running nose（也寫 a runny nose）；動詞說法是 My nose is running.",
+      ex: "A running nose usually means a cold, not the flu.", exCn: "流鼻水通常是感冒，不是流感。" },
+    havefever: { t: "have a fever", cn: "發燒", tag: ["症狀"],
+      note: "發燒用 have a fever；燒得很高說 have a high fever。不要說 I am fever.",
+      ex: "The baby had a fever all night, so we called the clinic.", exCn: "寶寶整晚發燒，所以我們打電話去診所。" },
+    sincewhen: { t: "Since when", cn: "從什麼時候開始", tag: ["問診", "疑問句"],
+      note: "Since when + 現在式／現在完成式，問症狀從哪一天開始；回答用 since + 時間點。",
+      ex: "Since when have you been coughing like that?", exCn: "你這樣咳是從什麼時候開始的？" },
+    sinceFor: { t: "for three days", cn: "持續三天（時間長度）", tag: ["since vs for", "易錯"],
+      note: "since 接時間「點」（since Sunday）、for 接時間「長度」（for three days）。不可說 since three days。",
+      ex: "She has had the flu for a week.", exCn: "她流感已經一個星期了。" },
+    couldbe: { t: "could be", cn: "可能是", tag: ["could + V", "可能性"],
+      note: "這裡的 could 不是「過去能夠」，而是「有可能」，語氣比 will 保留；後面接原形動詞。",
+      ex: "That rash could be an allergy, so don't scratch it.", exCn: "那個疹子可能是過敏，不要抓。" },
+    gettested: { t: "got tested", cn: "去做了檢測", tag: ["get + 過去分詞"],
+      note: "get tested ＝ 去接受檢測（讓別人替你做）；同類說法 get vaccinated、get checked。",
+      ex: "Everyone in the office got tested before the trip.", exCn: "出差前辦公室每個人都去做了檢測。" },
+    negative: { t: "be negative", cn: "（檢測）結果是陰性", tag: ["檢測結果"],
+      note: "陰性 negative、陽性 positive；講檢測結果時這兩個字跟「好壞」無關，陰性才是好消息。",
+      ex: "Her second test came back negative.", exCn: "她第二次檢測結果是陰性。" },
+    stayisolated: { t: "stay isolated", cn: "待著隔離", tag: ["stay + 形容詞"],
+      note: "stay + 形容詞＝保持某種狀態：stay isolated／stay calm／stay home。isolated 是形容詞，不加 -ing。",
+      ex: "He stayed isolated in the guest room for five days.", exCn: "他在客房隔離了五天。" },
+    stayaway: { t: "stay away from", cn: "遠離、避開", tag: ["片語動詞"],
+      note: "stay away from + 名詞＝離某樣東西遠一點；也可用在人：Stay away from him when he's angry.",
+      ex: "Stay away from cold drinks until your throat feels better.", exCn: "喉嚨好一點之前先別喝冷飲。" },
+    aspirin: { t: "an aspirin", cn: "一顆阿斯匹靈", tag: ["藥", "take + 藥"],
+      note: "吃藥的動詞是 take，不是 eat；一顆藥丸用 an aspirin，頻率用 every four hours。",
+      ex: "Take an aspirin now and rest for an hour.", exCn: "現在吃一顆阿斯匹靈，休息一小時。" },
+    syrup: { t: "a syrup for my cough", cn: "治咳嗽的糖漿", tag: ["藥", "for + 症狀"],
+      note: "藥治哪個症狀用 for：a syrup for my cough／a pill for the pain。",
+      ex: "The doctor gave me a syrup for my sore throat.", exCn: "醫生開了治喉嚨痛的藥水給我。" },
+    spots: { t: "red with spots", cn: "紅紅的長滿疹子", tag: ["症狀", "描述外觀"],
+      note: "red with spots 字面是「紅，上面有斑點」；spots 常用複數，指一顆一顆的疹子。",
+      ex: "His arms were red with spots after the picnic.", exCn: "野餐之後他手臂上紅紅一片長了疹子。" },
+    measles: { t: "had the measles", cn: "得了麻疹", tag: ["疾病名"],
+      note: "measles 字尾有 s 但當單數用，而且前面加 the：have the measles（＝得麻疹）。",
+      ex: "My little brother had the measles when he was five.", exCn: "我弟弟五歲時得過麻疹。" },
+    should: { t: "you should stay", cn: "你應該……", tag: ["給建議"],
+      note: "should + 原形動詞給建議，語氣比 must 溫和。不可寫 should to stay 或 should staying。",
+      ex: "You should drink more water when you have a fever.", exCn: "發燒的時候應該多喝水。" },
+    shouldnt: { t: "shouldn't come", cn: "不應該……", tag: ["給建議", "否定"],
+      note: "shouldn't 後面同樣接原形動詞：shouldn't come／shouldn't meet。不要寫 shouldn't meeting。",
+      ex: "You shouldn't go swimming with a cough.", exCn: "咳嗽的時候不該去游泳。" },
+    infect: { t: "infect her mates", cn: "傳染給同學", tag: ["動詞", "傳染"],
+      note: "infect 的受詞是「人」：infect my mates。自己被傳染要說 get infected／catch it。",
+      ex: "Wear a mask so you don't infect your coworkers.", exCn: "戴口罩，免得傳染給同事。" },
+    meantime: { t: "In the meantime", cn: "在這期間", tag: ["時間連接語"],
+      note: "In the meantime 放句首＋逗號，指「等某件事發生前的這段時間」。",
+      ex: "The results come on Friday. In the meantime, just rest.", exCn: "結果週五出來。在這期間就好好休息。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today, Anita calls Tom, who is at home sick.",
+      cn: "歡迎回來。今天 Anita 打電話給在家生病的 Tom。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for how they describe symptoms, ask about them, and give advice.",
+      cn: "注意聽他們怎麼描述症狀、怎麼問，還有怎麼給建議。" },
+
+    /* ---------- 1 情境對話 ---------- */
+    { ch: 1, sp: "A", vis: { type: "scene", art: "phone" },
+      en: "Hi, Tom. You weren't at school today. What's the matter?",
+      cn: "嗨，Tom。你今天沒來學校。怎麼了？",
+      hi: [{ t: "What's the matter", cn: "怎麼了", k: "whatsmatter", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "sneezeTissueFlu" },
+      en: "I'm not feeling very well. I've got a headache, a running nose and a cough.",
+      cn: "我覺得很不舒服。我頭痛、流鼻水，還會咳嗽。",
+      hi: [{ t: "I've got a headache", cn: "我頭痛", k: "gotheadache", c: 1 },
+           { t: "a running nose", cn: "流鼻水", k: "runningnose", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "feverThermometer" },
+      en: "That sounds bad. Do you have a fever, too?",
+      cn: "聽起來很糟。你也發燒嗎？",
+      hi: [{ t: "have a fever", cn: "發燒", k: "havefever", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "feverThermometer" },
+      en: "Yes, I think I also have a fever. It was thirty-eight degrees this morning.",
+      cn: "對，我想我也發燒了。今天早上三十八度。" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "clock" },
+      en: "Since when do you feel the pain?",
+      cn: "你從什麼時候開始痛的？",
+      hi: [{ t: "Since when", cn: "從什麼時候開始", k: "sincewhen", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "calendar" },
+      en: "Since Sunday. I have felt terrible for three days.",
+      cn: "從星期天開始。我已經難受三天了。",
+      hi: [{ t: "for three days", cn: "持續三天", k: "sinceFor", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "illnessVsDisease" },
+      en: "Did you go to the doctor?",
+      cn: "你去看醫生了嗎？" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "covidTestKit" },
+      en: "Not yet. As it could be Covid-19, I got tested yesterday.",
+      cn: "還沒。因為有可能是新冠肺炎，我昨天去做了檢測。",
+      hi: [{ t: "could be", cn: "可能是", k: "couldbe", c: 4 },
+           { t: "got tested", cn: "去做了檢測", k: "gettested", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "covidTestKit" },
+      en: "I hope the test will be negative!",
+      cn: "希望檢測結果是陰性的！",
+      hi: [{ t: "be negative", cn: "結果是陰性", k: "negative", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "isolationRoom" },
+      en: "Me too. Until the results are ready, I have to stay isolated in my room.",
+      cn: "我也希望。在結果出來之前，我必須待在房間裡隔離。",
+      hi: [{ t: "stay isolated", cn: "待著隔離", k: "stayisolated", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "medicineBottle" },
+      en: "What do you take for the headache?",
+      cn: "你頭痛吃什麼藥？" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "syrupSpoon" },
+      en: "Mom gives me an aspirin every four hours, and I take a syrup for my cough.",
+      cn: "媽媽每四小時給我一顆阿斯匹靈，我還吃糖漿治咳嗽。",
+      hi: [{ t: "an aspirin", cn: "一顆阿斯匹靈", k: "aspirin", c: 2 },
+           { t: "a syrup for my cough", cn: "治咳嗽的糖漿", k: "syrup", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "spottedFace" },
+      en: "By the way, Jessica is red with spots. The doctor said that she had the measles.",
+      cn: "對了，Jessica 全身紅紅長疹子。醫生說她得了麻疹。",
+      hi: [{ t: "red with spots", cn: "長滿紅疹", k: "spots", c: 1 },
+           { t: "had the measles", cn: "得了麻疹", k: "measles", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "people" },
+      en: "Really? Then she shouldn't come to school, because she could infect her mates.",
+      cn: "真的嗎？那她不該來學校，因為她可能會傳染給同學。",
+      hi: [{ t: "shouldn't come", cn: "不應該來", k: "shouldnt", c: 2 },
+           { t: "infect her mates", cn: "傳染給同學", k: "infect", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "sunscreenSun" },
+      en: "And she should stay away from the sun for ten days.",
+      cn: "而且她十天內應該避開陽光。",
+      hi: [{ t: "stay away from", cn: "遠離、避開", k: "stayaway", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "check" },
+      en: "Anyway, you should stay in bed and drink a lot of water. In the meantime, just rest.",
+      cn: "總之，你應該臥床休息、多喝水。在這期間就好好休息。",
+      hi: [{ t: "you should stay", cn: "你應該……", k: "should", c: 1 },
+           { t: "In the meantime", cn: "在這期間", k: "meantime", c: 2 }] },
+
+    /* ---------- 2 重點表達（解說卡） ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "isolated", ipa: "/ˈaɪ.sə.leɪ.tɪd/", pos: "adj.", phrase: "stay isolated", art: "isolationRoom",
+        def: "Kept apart from other people so an illness can't spread.",
+        cn: "被隔離的，為了不把病傳給別人而跟人分開。",
+        note: "stay isolated 是 stay + 形容詞；不要說 stay isolating." },
+      en: "Isolated. Stay isolated means stay apart from other people until you are well.",
+      cn: "Isolated（被隔離的）。stay isolated 就是跟別人分開，直到康復。",
+      hi: [{ t: "Stay isolated", cn: "待著隔離", k: "stayisolated", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "aspirin", ipa: "/ˈæs.pɚ.ɪn/", cn: "阿斯匹靈（藥丸）", def: "A pill for pain and fever. You take one every few hours.", art: "medicineBottle" },
+        b: { w: "syrup", ipa: "/ˈsɪr.əp/", cn: "糖漿（藥水）", def: "A thick sweet liquid medicine, often for a cough.", art: "syrupSpoon" } },
+      en: "An aspirin is a pill. A syrup is a liquid. You take both with the verb take.",
+      cn: "Aspirin 是藥丸，syrup 是藥水；兩個都用動詞 take。",
+      hi: [{ t: "An aspirin", cn: "一顆阿斯匹靈", k: "aspirin", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "measles", ipa: "/ˈmiː.zəlz/", pos: "n.", phrase: "have the measles", art: "spottedFace",
+        def: "An illness that gives you a fever and red spots on your skin.",
+        cn: "麻疹：會發燒、皮膚長紅疹的疾病。",
+        note: "measles 有 s 卻當單數，而且要加 the：have the measles." },
+      en: "Measles. It looks plural, but we say she had the measles, with the.",
+      cn: "Measles（麻疹）。它看起來是複數，但我們說 had the measles，前面要加 the。",
+      hi: [{ t: "had the measles", cn: "得了麻疹", k: "measles", c: 3 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "infect", ipa: "/ɪnˈfekt/", pos: "v.", phrase: "infect your mates", art: "people",
+        def: "To pass your illness to another person.",
+        cn: "把自己的病傳染給別人。",
+        note: "受詞是人：infect my mates；自己被傳染說 get infected." },
+      en: "Infect. She could infect her mates, so she stays home.",
+      cn: "Infect（傳染）。她可能會傳染給同學，所以待在家裡。",
+      hi: [{ t: "infect her mates", cn: "傳染給同學", k: "infect", c: 4 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "I've got a …", coreCn: "我有……（症狀）", art: "sneezeTissueFlu",
+        items: [{ t: "headache", cn: "頭痛" }, { t: "cough", cn: "咳嗽" }, { t: "fever", cn: "發燒" }, { t: "running nose", cn: "流鼻水" }] },
+      en: "I've got a headache, a cough, a fever, or a running nose.",
+      cn: "我頭痛、咳嗽、發燒，或者流鼻水。",
+      hi: [{ t: "I've got a headache", cn: "我頭痛", k: "gotheadache", c: 1 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "stay", coreCn: "stay ＋狀態／地點", art: "isolationRoom",
+        items: [{ t: "isolated", cn: "隔離著" }, { t: "in bed", cn: "臥床" }, { t: "at home", cn: "待在家" }, { t: "away from the sun", cn: "避開陽光" }] },
+      en: "Stay isolated, stay in bed, stay at home, and stay away from the sun.",
+      cn: "待著隔離、臥床休息、待在家、避開陽光。",
+      hi: [{ t: "stay away from the sun", cn: "避開陽光", k: "stayaway", c: 3 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "take", coreCn: "take ＋藥", art: "medicineBottle",
+        items: [{ t: "an aspirin", cn: "一顆阿斯匹靈" }, { t: "a syrup", cn: "藥水" }, { t: "some medicine", cn: "一些藥" }, { t: "your temperature", cn: "量體溫" }] },
+      en: "Take an aspirin, take a syrup, take some medicine, and take your temperature.",
+      cn: "吃阿斯匹靈、吃藥水、吃藥、量體溫。",
+      hi: [{ t: "Take an aspirin", cn: "吃一顆阿斯匹靈", k: "aspirin", c: 2 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "I have / I've got + a + 症狀", art: "haveFeelBe",
+        rows: [
+          { lab: "正確", blocks: [{ t: "I", k: "s" }, { t: "have got", k: "v" }, { t: "a headache", k: "o" }] },
+          { lab: "錯誤", blocks: [{ t: "I", k: "s" }, { t: "am", k: "x" }, { t: "headache", k: "o" }] }
+        ],
+        note: "症狀是名詞，要用 have／have got，不能用 be；可數症狀記得加 a。" },
+      en: "I have got a headache. Never say I am headache.",
+      cn: "要說 I have got a headache，絕對不要說 I am headache。",
+      hi: [{ t: "I have got a headache", cn: "我頭痛", k: "gotheadache", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "should / shouldn't + 原形動詞", art: "check",
+        rows: [
+          { lab: "建議做", blocks: [{ t: "You", k: "s" }, { t: "should", k: "n" }, { t: "stay", k: "v" }, { t: "in bed", k: "o" }] }
+        ],
+        note: "should 後面一定接原形動詞，不加 to、不加 -ing。" },
+      en: "You should stay in bed. The verb after should has no to and no -ing.",
+      cn: "You should stay in bed。should 後面的動詞不加 to、也不加 -ing。",
+      hi: [{ t: "You should stay", cn: "你應該……", k: "should", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "should / shouldn't + 原形動詞", art: "warning",
+        rows: [
+          { lab: "建議不做", blocks: [{ t: "You", k: "s" }, { t: "shouldn't", k: "n", add: true }, { t: "meet", k: "v" }, { t: "your friends", k: "o" }] }
+        ],
+        note: "shouldn't meet 不是 shouldn't meeting；否定只改助動詞，動詞還是原形。" },
+      en: "You shouldn't meet your friends yet. Not shouldn't meeting.",
+      cn: "You shouldn't meet your friends（還不該見朋友），不是 shouldn't meeting。",
+      hi: [{ t: "shouldn't meet", cn: "不應該見", k: "shouldnt", c: 2 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "since ＋時間點 vs for ＋時間長度", art: "calendar",
+        rows: [
+          { lab: "時間點", blocks: [{ t: "I've felt sick", k: "s" }, { t: "since", k: "n" }, { t: "Sunday", k: "o" }] },
+          { lab: "時間長度", blocks: [{ t: "I've felt sick", k: "s" }, { t: "for", k: "n", add: true }, { t: "three days", k: "o" }] }
+        ],
+        note: "since Sunday（哪一天開始）／for three days（多久）。不可說 since three days。" },
+      en: "Since Sunday tells the starting day. For three days tells the length.",
+      cn: "since Sunday 說從哪天開始；for three days 說持續多久。",
+      hi: [{ t: "For three days", cn: "持續三天", k: "sinceFor", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "could + 原形動詞（可能性）", art: "covidTestKit",
+        rows: [
+          { lab: "句型", blocks: [{ t: "It", k: "s" }, { t: "could", k: "n" }, { t: "be", k: "v" }, { t: "Covid-19", k: "o" }] }
+        ],
+        note: "could 這裡不是「過去能夠」，而是「有可能」；後面接原形動詞。" },
+      en: "It could be Covid-19, so I got tested. Could here means maybe.",
+      cn: "It could be Covid-19（有可能是新冠），所以我去做了檢測。這裡的 could 是「可能」。",
+      hi: [{ t: "could be", cn: "可能是", k: "couldbe", c: 4 },
+           { t: "got tested", cn: "去做了檢測", k: "gettested", c: 2 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "I am headache since three days.", bad: ["am headache", "since three days"],
+        fix: "I've had a headache for three days.", good: ["I've had a headache", "for three days"],
+        why: "Symptoms use have, not be. Use for with a length of time." },
+      en: "I've had a headache for three days.",
+      cn: "我頭痛已經三天了。",
+      hi: [{ t: "for three days", cn: "持續三天", k: "sinceFor", c: 1 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "You should to go to the doctor and you shouldn't meeting your friends.", bad: ["should to go", "shouldn't meeting"],
+        fix: "You should go to the doctor, and you shouldn't meet your friends.", good: ["should go", "shouldn't meet"],
+        why: "After should and shouldn't, use the base verb: go, meet." },
+      en: "You should go to the doctor, and you shouldn't meet your friends.",
+      cn: "你應該去看醫生，而且不應該去見朋友。",
+      hi: [{ t: "shouldn't meet", cn: "不應該見", k: "shouldnt", c: 2 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I've got a headache and a ___ nose.", a: "running", n: 1 },
+      en: "I've got a headache and a ___ nose.", say: "I've got a headache and a, blank, nose.",
+      cn: "我頭痛，還＿＿鼻水。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I've got a headache and a ___ nose.", a: "running", n: 1, show: true },
+      en: "I've got a headache and a running nose.",
+      cn: "我頭痛，還流鼻水。",
+      hi: [{ t: "a running nose", cn: "流鼻水", k: "runningnose", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I have felt sick ___ three days.", a: "for", n: 2 },
+      en: "I have felt sick ___ three days.", say: "I have felt sick, blank, three days.",
+      cn: "我已經不舒服＿＿三天了。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I have felt sick ___ three days.", a: "for", n: 2, show: true },
+      en: "I have felt sick for three days.",
+      cn: "我已經不舒服三天了。（since Sunday 才用 since）",
+      hi: [{ t: "for three days", cn: "持續三天", k: "sinceFor", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "You ___ meet your friends before the result is ready.", a: "shouldn't", n: 3 },
+      en: "You ___ meet your friends before the result is ready.", say: "You, blank, meet your friends before the result is ready.",
+      cn: "結果出來之前，你＿＿去見朋友。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "You ___ meet your friends before the result is ready.", a: "shouldn't", n: 3, show: true },
+      en: "You shouldn't meet your friends before the result is ready.",
+      cn: "結果出來之前，你不應該去見朋友。",
+      hi: [{ t: "shouldn't meet", cn: "不應該見", k: "shouldnt", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20250717 ===================== */
+/* bk20250717 Always Together, Best Friends Forever */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* message each other：兩支手機互傳訊息，對話泡泡一左一右 */
+    messageBubbles: svg(
+      '<rect x="10" y="40" width="54" height="96" rx="10" fill="#fff" '+st+'/>'
+     +'<rect x="18" y="52" width="38" height="70" rx="3" fill="'+C+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="37" cy="129" r="3.5" fill="'+D+'"/>'
+     +'<rect x="136" y="40" width="54" height="96" rx="10" fill="#fff" '+st+'/>'
+     +'<rect x="144" y="52" width="38" height="70" rx="3" fill="'+C+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="163" cy="129" r="3.5" fill="'+D+'"/>'
+     +'<path d="M70 16 h60 a6 6 0 0 1 6 6 v20 a6 6 0 0 1 -6 6 H86 l-10 10 v-10 h-6 a6 6 0 0 1 -6 -6 V22 a6 6 0 0 1 6 -6 z" fill="'+A+'" '+st+'/>'
+     +'<g fill="#fff"><circle cx="86" cy="32" r="3.5"/><circle cx="100" cy="32" r="3.5"/><circle cx="114" cy="32" r="3.5"/></g>'
+     +'<path d="M76 72 h56 a6 6 0 0 1 6 6 v20 a6 6 0 0 1 -6 6 h-6 v10 l-10 -10 H76 a6 6 0 0 1 -6 -6 V78 a6 6 0 0 1 6 -6 z" fill="'+L+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"><line x1="82" y1="84" x2="126" y2="84"/><line x1="82" y1="94" x2="112" y2="94"/></g>'),
+    /* 頻率副詞刻度：never → seldom → usually → always（長條由低到高） */
+    frequencyScale: svg(
+      '<line x1="12" y1="112" x2="190" y2="112" '+st+'/>'
+     +'<rect x="20" y="106" width="30" height="6" rx="2" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="62" y="84" width="30" height="28" rx="2" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="104" y="56" width="30" height="56" rx="2" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="146" y="28" width="30" height="84" rx="2" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g font-family="sans-serif" font-size="11" fill="'+D+'" text-anchor="middle"><text x="35" y="128">never</text><text x="77" y="128">seldom</text><text x="119" y="128">usually</text><text x="161" y="128">always</text></g>'
+     +'<text x="20" y="22" font-family="sans-serif" font-size="11" font-weight="700" fill="'+D+'">How often?</text>'),
+    /* 比較級 wider：窄街道 vs 寬街道，中間箭頭標出寬度 */
+    widerStreet: svg(
+      '<rect x="14" y="24" width="72" height="104" rx="4" fill="'+C+'" '+st+'/>'
+     +'<rect x="40" y="24" width="20" height="104" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M50 40 v10 M50 62 v10 M50 84 v10 M50 106 v10" stroke="'+A+'" stroke-width="3"/>'
+     +'<path d="M40 136 h20 M44 132 l-4 4 l4 4 M56 132 l4 4 l-4 4" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="100" y="24" width="86" height="104" rx="4" fill="'+C+'" '+st+'/>'
+     +'<rect x="116" y="24" width="54" height="104" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M143 40 v12 M143 66 v12 M143 92 v12" stroke="'+A+'" stroke-width="4"/>'
+     +'<path d="M116 136 h54 M120 132 l-4 4 l4 4 M166 132 l4 4 l-4 4" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="108" y="6" width="72" height="18" rx="9" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<text x="144" y="20" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#fff">WIDER</text>'),
+    /* swap clothes：兩件衣服掛在衣架上，中間交叉箭頭代表交換 */
+    swapClothes: svg(
+      '<path d="M40 30 a6 6 0 1 1 6 6 v6" fill="none" '+st+'/>'
+     +'<path d="M20 58 L46 44 L72 58" fill="none" '+st+'/>'
+     +'<path d="M30 60 l16 -8 l16 8 l8 12 l-8 6 l-4 -4 v34 H34 V74 l-4 4 l-8 -6 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M148 30 a6 6 0 1 1 6 6 v6" fill="none" '+st+'/>'
+     +'<path d="M128 58 L154 44 L180 58" fill="none" '+st+'/>'
+     +'<path d="M138 60 l16 -8 l16 8 l8 12 l-8 6 l-4 -4 v34 h-24 V74 l-4 4 l-8 -6 z" fill="'+B+'" '+st+'/>'
+     +'<path d="M78 120 C100 104 100 104 120 120" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M120 120 l-2 -9 M120 120 l-9 1" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M120 136 C98 120 98 120 78 136" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M78 136 l2 -9 M78 136 l9 1" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20250717 = {
+  title: "Always Together, Best Friends Forever",
+  titleCn: "永遠的好朋友",
+  date: "2025-07-17",
+  level: "B1",
+  scene: "Coffee Break · Besties, Commutes and Cities",
+  sceneCn: "午休閒聊・閨蜜、通勤與城市",
+  sceneArt: "coffeeBreak",
+  titleArt: ["heart", "clock", "scooter"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・行銷部同事", voice: "f" },
+    T: { name: "Tom", cn: "Tom・剛報到的同事", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "Coffee Break Chat", cn: "情境：午休閒聊" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    howoften: { t: "How often", cn: "多久一次", tag: ["頻率問句"],
+      note: "How often + do/does + 主詞 + 原形動詞？回答用頻率副詞或具體次數（twice a week）。",
+      ex: "How often do you go to the gym?", exCn: "你多久去健身房一次？" },
+    bestie: { t: "my bestie", cn: "我的閨蜜", tag: ["口語", "名詞"],
+      note: "bestie 是 best friend 的口語說法，用在朋友之間，正式寫作還是用 best friend。",
+      ex: "She has been my bestie since kindergarten.", exCn: "她從幼稚園就是我的閨蜜。" },
+    spendtime: { t: "spend a lot of time together", cn: "花很多時間在一起", tag: ["搭配詞"],
+      note: "spend + 時間 + together／on something／V-ing：spend time together、spend an hour reading。",
+      ex: "The team spends a lot of time together before a show.", exCn: "表演前團員會花很多時間相處。" },
+    sitbeside: { t: "sat beside each other", cn: "坐在彼此旁邊", tag: ["each other"],
+      note: "beside 是「在旁邊」，besides 是「除此之外」，不要混用。each other 指兩人互相。",
+      ex: "The twins always sit beside each other on the bus.", exCn: "那對雙胞胎在公車上總是坐在一起。" },
+    message: { t: "message each other", cn: "互傳訊息", tag: ["動詞", "each other"],
+      note: "message 可以直接當動詞，後面接人：message me、message each other，不用加 to。",
+      ex: "Just message me when you land.", exCn: "你下飛機傳個訊息給我就好。" },
+    meetup: { t: "meet up", cn: "碰面、會合", tag: ["片語動詞"],
+      note: "meet up 指事先約好碰面；meet 也可以是第一次認識某人。地點用 at：meet up at the station。",
+      ex: "Let's meet up at the north exit at seven.", exCn: "我們七點在北出口碰面吧。" },
+    shopping: { t: "do a bit of shopping", cn: "逛街買點東西", tag: ["do + 名詞"],
+      note: "a bit of ＝ 一點點，用在不可數名詞前；shopping 是不可數，動詞用 do。",
+      ex: "We did a bit of shopping before dinner.", exCn: "我們吃晚餐前逛街買了點東西。" },
+    chill: { t: "just chill", cn: "就放鬆待著", tag: ["口語動詞"],
+      note: "chill 是很口語的「放鬆、什麼都不做」；chill in the park、chill at home。",
+      ex: "On Sundays I just chill at home with a book.", exCn: "星期天我就在家看書放鬆。" },
+    seldom: { t: "We seldom argue", cn: "我們很少吵架", tag: ["頻率副詞"],
+      note: "seldom ＝ 很少，放在一般動詞前面、be 動詞後面；本身已有否定意味，不再加 not。",
+      ex: "He seldom checks his email after work.", exCn: "他下班後很少看信。" },
+    swap: { t: "swap clothes", cn: "交換衣服穿", tag: ["動詞"],
+      note: "swap ＝ 互相交換：swap clothes／swap seats／swap phone numbers。",
+      ex: "Can we swap seats? I can't see the screen.", exCn: "可以跟你換位子嗎？我看不到螢幕。" },
+    commute: { t: "commute to work", cn: "通勤上班", tag: ["動詞／名詞"],
+      note: "commute 當動詞是通勤、當名詞是通勤路程：My commute is short.",
+      ex: "She commutes to work by train every day.", exCn: "她每天搭火車通勤上班。" },
+    byscooter: { t: "by scooter", cn: "騎機車（交通方式）", tag: ["by + 交通工具", "易錯"],
+      note: "by + 交通工具不加 a／the：by scooter／by bus／by MRT。走路是 on foot。",
+      ex: "I get to the office by bus when it rains.", exCn: "下雨的時候我搭公車去辦公室。" },
+    ittakes: { t: "It takes me fifteen minutes", cn: "我要花十五分鐘", tag: ["虛主詞 it", "易錯"],
+      note: "慣用說法是 It takes + 人 + 時間 + to V，不要說 I take fifteen minutes to …。",
+      ex: "It takes her an hour to finish the report.", exCn: "她要花一小時寫完報告。" },
+    wider: { t: "wider than", cn: "比……更寬", tag: ["比較級"],
+      note: "短音節形容詞加 -er：wide → wider（字尾 e 直接加 r）。比較的對象要對等。",
+      ex: "This road is wider than the old one.", exCn: "這條路比舊那條寬。" },
+    crowded: { t: "not crowded", cn: "不擁擠", tag: ["形容詞"],
+      note: "crowded 形容地方人多車多；主詞是地方，不是人：The station is crowded.",
+      ex: "The night market is crowded on Fridays.", exCn: "夜市星期五很擠。" },
+    workfor: { t: "work for", cn: "受雇於（某公司）", tag: ["易錯", "work for vs work in"],
+      note: "work for + 公司（受雇關係）；work in + 部門或地點（work in the QA department）。",
+      ex: "He works for a shipping company in Kaohsiung.", exCn: "他在高雄一家船運公司工作。" },
+    responsible: { t: "responsible for", cn: "負責……", tag: ["be + adj. + for"],
+      note: "be responsible for + 名詞或 V-ing，介系詞一定是 for，不是 of。",
+      ex: "I'm responsible for checking the samples.", exCn: "我負責檢查樣品。" },
+    goodthing: { t: "The good thing about", cn: "……的好處是", tag: ["連接語"],
+      note: "The good thing about + 名詞 + is that + 子句；that 後面要接完整句子。",
+      ex: "The good thing about this app is that it works offline.", exCn: "這個 app 的好處是離線也能用。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today, Tom is new in the office, and Anita tells him about her best friend.",
+      cn: "歡迎回來。今天 Tom 是辦公室的新人，Anita 跟他聊起自己最好的朋友。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for frequency questions, time questions, and how they compare two cities.",
+      cn: "注意聽頻率問句、時間問句，還有他們怎麼比較兩座城市。" },
+
+    /* ---------- 1 情境對話 ---------- */
+    { ch: 1, sp: "T", vis: { type: "scene", art: "coffeeBreak" },
+      en: "Anita, how often do you see your best friend?",
+      cn: "Anita，你多久跟你最好的朋友見一次面？",
+      hi: [{ t: "how often", cn: "多久一次", k: "howoften", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "smile" },
+      en: "Almost every day. Kelly is my bestie, and we spend a lot of time together.",
+      cn: "幾乎每天。Kelly 是我的閨蜜，我們花很多時間在一起。",
+      hi: [{ t: "my bestie", cn: "我的閨蜜", k: "bestie", c: 1 },
+           { t: "spend a lot of time together", cn: "花很多時間在一起", k: "spendtime", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "moveOverBench" },
+      en: "Nice. How did the two of you meet?",
+      cn: "真好。你們兩個是怎麼認識的？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "moveOverBench" },
+      en: "We were in the same class and we sat beside each other for three years.",
+      cn: "我們同班，而且坐在彼此旁邊坐了三年。",
+      hi: [{ t: "sat beside each other", cn: "坐在彼此旁邊", k: "sitbeside", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "messageBubbles" },
+      en: "And when you are not together?",
+      cn: "那你們沒在一起的時候呢？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "messageBubbles" },
+      en: "We message each other all day. She seldom leaves me on read.",
+      cn: "我們整天互傳訊息。她很少已讀不回。",
+      hi: [{ t: "message each other", cn: "互傳訊息", k: "message", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "clothesShop" },
+      en: "What do you usually do on Saturdays?",
+      cn: "你們星期六通常做什麼？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "clothesShop" },
+      en: "We meet up at the station, go into town, and do a bit of shopping.",
+      cn: "我們在車站碰面，進城，然後逛街買點東西。",
+      hi: [{ t: "meet up", cn: "碰面", k: "meetup", c: 3 },
+           { t: "do a bit of shopping", cn: "逛街買點東西", k: "shopping", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "quietBeach" },
+      en: "In the afternoon, we often just chill in the park beside the church.",
+      cn: "下午我們常常就在教堂旁的公園放鬆。",
+      hi: [{ t: "just chill", cn: "就放鬆待著", k: "chill", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "swapClothes" },
+      en: "Do you ever argue about anything?",
+      cn: "你們有為什麼事吵架過嗎？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "swapClothes" },
+      en: "We seldom argue. We even swap clothes sometimes.",
+      cn: "我們很少吵架。我們有時候還會交換衣服穿。",
+      hi: [{ t: "We seldom argue", cn: "我們很少吵架", k: "seldom", c: 1 },
+           { t: "swap clothes", cn: "交換衣服穿", k: "swap", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "scooter" },
+      en: "By the way, how do you commute to work?",
+      cn: "對了，你怎麼通勤上班？",
+      hi: [{ t: "commute to work", cn: "通勤上班", k: "commute", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "scooter" },
+      en: "I commute by scooter. It takes me fifteen minutes to get to work.",
+      cn: "我騎機車通勤。我上班要花十五分鐘。",
+      hi: [{ t: "by scooter", cn: "騎機車", k: "byscooter", c: 1 },
+           { t: "It takes me fifteen minutes", cn: "我要花十五分鐘", k: "ittakes", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "rushHourJam" },
+      en: "That is fast. In Taipei, my commute took a whole hour.",
+      cn: "好快。在台北，我通勤要整整一小時。" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "widerStreet" },
+      en: "Taichung is not crowded, and the streets are wider than Taipei's streets.",
+      cn: "台中不擁擠，而且街道比台北的街道更寬。",
+      hi: [{ t: "not crowded", cn: "不擁擠", k: "crowded", c: 2 },
+           { t: "wider than", cn: "比……更寬", k: "wider", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "briefcase" },
+      en: "I work for a fitness equipment company, and I am responsible for the quality reports.",
+      cn: "我在一家健身器材公司工作，負責品質報告。",
+      hi: [{ t: "work for", cn: "受雇於", k: "workfor", c: 1 },
+           { t: "responsible for", cn: "負責", k: "responsible", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "heart" },
+      en: "The good thing about your week is that you always have time for your bestie.",
+      cn: "你這樣安排的好處是，你總是有時間陪閨蜜。",
+      hi: [{ t: "The good thing about", cn: "……的好處是", k: "goodthing", c: 2 }] },
+
+    /* ---------- 2 重點表達（解說卡） ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "bestie", ipa: "/ˈbes.ti/", pos: "n.", phrase: "my bestie", art: "smile",
+        def: "A very informal word for your closest friend.",
+        cn: "閨蜜、最要好的朋友（很口語）。",
+        note: "聊天用 bestie，寫報告、email 還是寫 best friend." },
+      en: "Bestie. It is a friendly, casual word for your closest friend.",
+      cn: "Bestie（閨蜜）。這是很親近、很口語的說法，指最要好的朋友。",
+      hi: [{ t: "Bestie", cn: "閨蜜", k: "bestie", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "swap", ipa: "/swɑːp/", pos: "v.", phrase: "swap clothes", art: "swapClothes",
+        def: "To give something to someone and get their thing in return.",
+        cn: "交換：我給你我的，你給我你的。",
+        note: "swap clothes／swap seats／swap shifts，換班也用 swap." },
+      en: "Swap. You give yours, and you get mine. Swap clothes, swap seats, swap shifts.",
+      cn: "Swap（交換）。你給我你的、我給你我的。交換衣服、換位子、換班。",
+      hi: [{ t: "Swap clothes", cn: "交換衣服穿", k: "swap", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "seldom", ipa: "/ˈsel.dəm/", pos: "adv.", phrase: "We seldom argue", art: "frequencyScale",
+        def: "Almost never; only a few times.",
+        cn: "很少、難得，幾乎不。",
+        note: "seldom 已經帶否定意味，不要再加 not：不說 don't seldom." },
+      en: "Seldom means almost never. We seldom argue is stronger than we don't often argue.",
+      cn: "Seldom 是「幾乎不」。We seldom argue 比 we don't often argue 更強調很少。",
+      hi: [{ t: "We seldom argue", cn: "我們很少吵架", k: "seldom", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "crowded", ipa: "/ˈkraʊdɪd/", cn: "擁擠的", def: "Full of people or traffic, with little space.", art: "crowdedAisle" },
+        b: { w: "wide", ipa: "/waɪd/", cn: "寬的", def: "Measuring a lot from one side to the other. Comparative: wider.", art: "widerStreet" } },
+      en: "Taichung is not crowded, and its streets are wider than Taipei's streets.",
+      cn: "台中不擁擠，街道也比台北的街道更寬。",
+      hi: [{ t: "not crowded", cn: "不擁擠", k: "crowded", c: 2 },
+           { t: "wider than", cn: "比……更寬", k: "wider", c: 3 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "each other", coreCn: "彼此、互相", art: "messageBubbles",
+        items: [{ t: "message each other", cn: "互傳訊息" }, { t: "help each other", cn: "互相幫助" }, { t: "sit beside each other", cn: "坐在彼此旁邊" }, { t: "see each other", cn: "見面" }] },
+      en: "Message each other, help each other, sit beside each other, and see each other.",
+      cn: "互傳訊息、互相幫助、坐在彼此旁邊、見面。",
+      hi: [{ t: "Message each other", cn: "互傳訊息", k: "message", c: 1 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "commute by …", coreCn: "通勤方式", art: "scooter",
+        items: [{ t: "by scooter", cn: "騎機車" }, { t: "by bus", cn: "搭公車" }, { t: "by MRT", cn: "搭捷運" }, { t: "on foot", cn: "走路" }] },
+      en: "Commute by scooter, by bus, or by MRT. Walking is on foot.",
+      cn: "騎機車、搭公車、搭捷運通勤；走路是 on foot。",
+      hi: [{ t: "by scooter", cn: "騎機車", k: "byscooter", c: 3 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "weekend plans", coreCn: "週末跟朋友做的事", art: "clothesShop",
+        items: [{ t: "meet up at the station", cn: "在車站碰面" }, { t: "go into town", cn: "進城" }, { t: "do a bit of shopping", cn: "逛街買點東西" }, { t: "chill in the park", cn: "在公園放鬆" }] },
+      en: "Meet up at the station, go into town, do a bit of shopping, and chill in the park.",
+      cn: "在車站碰面、進城、逛街買點東西、在公園放鬆。",
+      hi: [{ t: "do a bit of shopping", cn: "逛街買點東西", k: "shopping", c: 2 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "How often …?（頻率問句）", art: "frequencyScale",
+        rows: [
+          { lab: "問句", blocks: [{ t: "How often", k: "n" }, { t: "do", k: "v" }, { t: "you", k: "s" }, { t: "get sick", k: "o" }] }
+        ],
+        note: "How often + do／does + 主詞 + 原形動詞？動詞不加 s、不加 -ing。" },
+      en: "How often do you get sick? The verb after do stays in the base form.",
+      cn: "How often do you get sick？do 後面的動詞保持原形。",
+      hi: [{ t: "How often", cn: "多久一次", k: "howoften", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "How often …?（回答）", art: "frequencyScale",
+        rows: [
+          { lab: "回答", blocks: [{ t: "I", k: "s" }, { t: "seldom", k: "n", add: true }, { t: "get", k: "v" }, { t: "sick", k: "o" }] }
+        ],
+        note: "頻率副詞放在一般動詞前面：always／usually／sometimes／seldom／never。" },
+      en: "I seldom get sick. The frequency word goes before the main verb.",
+      cn: "I seldom get sick。頻率副詞放在主要動詞前面。",
+      hi: [{ t: "I seldom get sick", cn: "我很少生病", k: "seldom", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "How long does it take to …?", art: "clock",
+        rows: [
+          { lab: "問句", blocks: [{ t: "How long", k: "n" }, { t: "does it take", k: "v" }, { t: "to get to work", k: "o" }] }
+        ],
+        note: "it 是虛主詞，真正的內容在 to + 原形動詞後面。" },
+      en: "How long does it take to get to work? It is an empty subject here.",
+      cn: "How long does it take to get to work？這裡的 it 是虛主詞。",
+      hi: [{ t: "does it take", cn: "花多久時間", k: "ittakes", c: 4 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "It takes + 人 + 時間 + to V", art: "clock",
+        rows: [
+          { lab: "正確", blocks: [{ t: "It takes", k: "v" }, { t: "me", k: "n", add: true }, { t: "15 minutes", k: "o" }, { t: "to get to work", k: "o" }] },
+          { lab: "錯誤", blocks: [{ t: "I take", k: "x" }, { t: "15 minutes", k: "o" }, { t: "to get to work", k: "o" }] }
+        ],
+        note: "要指明是誰，人放在 takes 後面；不要說 I take 15 minutes。" },
+      en: "It takes me fifteen minutes to get to work. Never say I take fifteen minutes.",
+      cn: "It takes me fifteen minutes to get to work，不要說 I take fifteen minutes。",
+      hi: [{ t: "It takes me fifteen minutes", cn: "我要花十五分鐘", k: "ittakes", c: 4 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "比較級 + than（比較對象要對等）", art: "widerStreet",
+        rows: [
+          { lab: "正確", blocks: [{ t: "Streets here", k: "s" }, { t: "are", k: "v" }, { t: "wider than", k: "n", add: true }, { t: "Taipei's streets", k: "o" }] },
+          { lab: "不對等", blocks: [{ t: "Streets here", k: "s" }, { t: "are wider than", k: "n" }, { t: "Taipei", k: "x" }] }
+        ],
+        note: "wide → wider（字尾 e 加 r）。街道要跟街道比，不能跟城市比。" },
+      en: "Streets here are wider than Taipei's streets, not wider than Taipei.",
+      cn: "要說 wider than Taipei's streets（街道比街道），不是 wider than Taipei。",
+      hi: [{ t: "wider than", cn: "比……更寬", k: "wider", c: 3 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "I take 15 minutes to go to work by a scooter.", bad: ["I take 15 minutes", "by a scooter"],
+        fix: "It takes me 15 minutes to get to work by scooter.", good: ["It takes me 15 minutes", "by scooter"],
+        why: "Use It takes + person + time. After by, the vehicle takes no a or the." },
+      en: "It takes me 15 minutes to get to work by scooter.",
+      cn: "我騎機車上班要花十五分鐘。",
+      hi: [{ t: "by scooter", cn: "騎機車", k: "byscooter", c: 1 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "I work in a fitness equipment company and I am responsible of quality reports.", bad: ["work in", "responsible of"],
+        fix: "I work for a fitness equipment company, and I am responsible for the quality reports.", good: ["work for", "responsible for"],
+        why: "Work for a company; work in a department. Responsible takes for, never of." },
+      en: "I work for a fitness equipment company, and I am responsible for the quality reports.",
+      cn: "我在一家健身器材公司工作，負責品質報告。",
+      hi: [{ t: "work for", cn: "受雇於", k: "workfor", c: 2 },
+           { t: "responsible for", cn: "負責", k: "responsible", c: 4 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "How ___ do you see your best friend?", a: "often", n: 1 },
+      en: "How ___ do you see your best friend?", say: "How, blank, do you see your best friend?",
+      cn: "你多＿＿見你最好的朋友一次？", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "How ___ do you see your best friend?", a: "often", n: 1, show: true },
+      en: "How often do you see your best friend?",
+      cn: "你多久見你最好的朋友一次？",
+      hi: [{ t: "How often", cn: "多久一次", k: "howoften", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "It ___ me fifteen minutes to get to work.", a: "takes", n: 2 },
+      en: "It ___ me fifteen minutes to get to work.", say: "It, blank, me fifteen minutes to get to work.",
+      cn: "我上班＿＿花十五分鐘。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "It ___ me fifteen minutes to get to work.", a: "takes", n: 2, show: true },
+      en: "It takes me fifteen minutes to get to work.",
+      cn: "我上班要花十五分鐘。",
+      hi: [{ t: "It takes me fifteen minutes", cn: "我要花十五分鐘", k: "ittakes", c: 4 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The streets here are ___ than Taipei's streets.", a: "wider", n: 3 },
+      en: "The streets here are ___ than Taipei's streets.", say: "The streets here are, blank, than Taipei's streets.",
+      cn: "這裡的街道比台北的街道更＿＿。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The streets here are ___ than Taipei's streets.", a: "wider", n: 3, show: true },
+      en: "The streets here are wider than Taipei's streets.",
+      cn: "這裡的街道比台北的街道更寬。",
+      hi: [{ t: "wider than", cn: "比……更寬", k: "wider", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20250722 ===================== */
+/* bk20250722 My Best Friend: Friendship Phrases & That's why / That's what */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* have my back：朋友站在身後，手搭在肩上，後面還有一面盾牌（支持、挺你） */
+    haveYourBack: svg(
+      '<circle cx="128" cy="58" r="16" fill="'+L+'" '+st+'/>'
+     +'<path d="M100 132 a28 28 0 0 1 56 0 z" fill="'+L+'" '+st+'/>'
+     +'<circle cx="70" cy="56" r="19" fill="'+C+'" '+st+'/>'
+     +'<path d="M38 132 a32 32 0 0 1 64 0 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M118 92 C104 84 96 82 88 86" fill="none" '+st+'/>'
+     +'<path d="M168 24 l20 7 v18 c0 14 -10 21 -20 26 c-10 -5 -20 -12 -20 -26 V31 z" fill="'+B+'" '+st+'/>'
+     +'<path d="M159 48 l6 7 l12 -14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'),
+    /* cheer someone up：難過的臉 → 箭頭 → 開心的臉（心情被拉起來） */
+    cheerUp: svg(
+      '<circle cx="46" cy="82" r="28" fill="'+C+'" '+st+'/>'
+     +'<circle cx="37" cy="76" r="3.5" fill="'+D+'"/><circle cx="55" cy="76" r="3.5" fill="'+D+'"/>'
+     +'<path d="M36 96 a12 8 0 0 1 20 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M84 80 h26 M104 72 l8 8 l-8 8" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<circle cx="152" cy="74" r="31" fill="'+A+'" '+st+'/>'
+     +'<circle cx="142" cy="66" r="4" fill="#fff"/><circle cx="162" cy="66" r="4" fill="#fff"/>'
+     +'<path d="M138 84 a16 12 0 0 0 28 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M152 32 v-16 M145 23 l7 -7 l7 7" fill="none" '+st+'/>'),
+    /* ups and downs：友誼的起起落落折線圖，高峰與低谷各標一次 */
+    upsAndDowns: svg(
+      '<line x1="10" y1="126" x2="192" y2="126" '+st+'/>'
+     +'<path d="M16 104 L52 56 L88 108 L124 48 L158 98 L188 40" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<g fill="#fff" stroke="'+D+'" stroke-width="2.5"><circle cx="52" cy="56" r="5"/><circle cx="88" cy="108" r="5"/><circle cx="124" cy="48" r="5"/><circle cx="158" cy="98" r="5"/></g>'
+     +'<text x="52" y="42" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="'+D+'">ups</text>'
+     +'<text x="88" y="124" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="'+R+'">downs</text>'),
+    /* be on the same page：兩個人一起看同一頁，頁上打勾（想法一致） */
+    samePage: svg(
+      '<rect x="58" y="24" width="84" height="106" rx="5" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"><line x1="70" y1="46" x2="130" y2="46"/><line x1="70" y1="60" x2="130" y2="60"/><line x1="70" y1="74" x2="112" y2="74"/></g>'
+     +'<circle cx="100" cy="102" r="15" fill="'+C+'" '+st+'/>'
+     +'<path d="M92 102 l6 7 l11 -13" fill="none" stroke="'+B+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<circle cx="22" cy="58" r="14" fill="'+L+'" '+st+'/><path d="M2 130 a20 20 0 0 1 40 0 z" fill="'+A+'" '+st+'/><path d="M36 86 L58 70" '+st+'/>'
+     +'<circle cx="178" cy="58" r="14" fill="'+L+'" '+st+'/><path d="M158 130 a20 20 0 0 1 40 0 z" fill="'+A+'" '+st+'/><path d="M164 86 L142 70" '+st+'/>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20250722 = {
+  title: "My Best Friend: Friendship Phrases & That's why / That's what",
+  titleCn: "我最好的朋友：友誼片語與 That's why／That's what 句型",
+  date: "2025-07-22",
+  level: "B1",
+  scene: "Lunch Break · Talking About a Best Friend",
+  sceneCn: "午休閒聊・談最好的朋友",
+  sceneArt: "coffeeBreak",
+  titleArt: ["heart", "people", "talk"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・同事", voice: "f" },
+    T: { name: "Tom", cn: "Tom・同事", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "Talking About Sarah", cn: "情境：聊起 Sarah" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    text: { t: "texted me", cn: "傳訊息給我", tag: ["動詞", "口語"],
+      note: "text 可以直接當動詞，後面接人：text me、text her。不要說 text to me。",
+      ex: "Text me when you get home.", exCn: "你到家傳個訊息給我。" },
+    havebeen: { t: "have been friends for", cn: "已經當朋友……（多久）", tag: ["現在完成式"],
+      note: "從過去持續到現在而且還在繼續，用 have been + for + 時間長度；不可說 We are friends for a long time.",
+      ex: "They have been neighbors for ten years.", exCn: "他們當了十年鄰居。" },
+    judge: { t: "never judges me", cn: "從不評斷我", tag: ["動詞"],
+      note: "judge 當動詞是「評斷、挑剔」，帶負面意味；judge someone，不加 about。",
+      ex: "A good coach never judges a beginner.", exCn: "好教練從不挑剔新手。" },
+    haveback: { t: "has my back", cn: "挺我、支持我", tag: ["口語片語"],
+      note: "have someone's back ＝ 在背後支持、幫忙頂著，用所有格：has my back／has your back。",
+      ex: "Don't worry about the meeting. I have your back.", exCn: "別擔心開會，我會挺你。" },
+    truth: { t: "the truth", cn: "實話", tag: ["名詞", "搭配詞"],
+      note: "tell someone the truth／hear the truth，truth 前面固定加 the。",
+      ex: "Sometimes it is hard to hear the truth.", exCn: "有時候實話很難聽進去。" },
+    honestwith: { t: "honest with me", cn: "對我誠實", tag: ["be + adj. + with"],
+      note: "對某人誠實用 honest with someone（不是 honest to）；honest about something 才是對某事誠實。",
+      ex: "Please be honest with me about the schedule.", exCn: "關於進度請對我誠實。" },
+    cheerup: { t: "cheer me up", cn: "讓我開心起來", tag: ["分離式片語動詞", "易錯"],
+      note: "受詞是代名詞時一定放中間：cheer me up ✓／cheer up me ✗。受詞是名詞則兩種都行。",
+      ex: "A funny video always cheers her up.", exCn: "搞笑影片總能讓她開心起來。" },
+    upsdowns: { t: "ups and downs", cn: "起起落落", tag: ["固定片語"],
+      note: "ups and downs 固定複數、順序不能顛倒；常說 have ups and downs。",
+      ex: "Every long project has its ups and downs.", exCn: "每個長期專案都有起有落。" },
+    solve: { t: "work through our problems", cn: "一起把問題解決掉", tag: ["片語動詞"],
+      note: "work through ＝ 一步一步處理完；solve 是解決、也可以說 solve the problem。",
+      ex: "We worked through the list one item at a time.", exCn: "我們一項一項把清單處理完。" },
+    talkout: { t: "talk things out", cn: "把事情說開", tag: ["分離式片語動詞"],
+      note: "talk things out ＝ 講清楚、把心裡的話說開；things 習慣放中間。",
+      ex: "Let's sit down and talk things out tonight.", exCn: "我們今晚坐下來把事情說開。" },
+    samepage: { t: "on the same page", cn: "想法一致", tag: ["慣用語"],
+      note: "be on the same page ＝ 彼此理解一致；介系詞是 on，page 用單數。",
+      ex: "Let's check the plan so we are on the same page.", exCn: "我們核一下計畫，確認想法一致。" },
+    thatswhy: { t: "That's why", cn: "那就是……的原因", tag: ["句型", "why + 完整子句"],
+      note: "That's why 後面要接完整子句（主詞＋動詞）：That's why she is my bestie.",
+      ex: "The road was closed. That's why I was late.", exCn: "那條路封了，所以我才遲到。" },
+    thatswhat: { t: "That's what", cn: "那就是……的事", tag: ["句型", "what 當主詞"],
+      note: "That's what 後面直接接動詞，what 本身就是主詞，不能再加主詞：That's what makes … ✓。",
+      ex: "That's what makes this team special.", exCn: "那就是讓這支團隊特別的原因。" },
+    appreciate: { t: "appreciate", cn: "欣賞、感謝", tag: ["動詞"],
+      note: "appreciate 後面直接接名詞或 V-ing，不接 that 子句加人：I appreciate your help ✓／I appreciate you to help ✗。",
+      ex: "I really appreciate your patience today.", exCn: "今天很感謝你的耐心。" },
+    whenever: { t: "Whenever I have a problem", cn: "每當我遇到問題", tag: ["連接詞"],
+      note: "Whenever ＝ every time，後面用現在簡單式，句尾要有逗號再接主要子句。",
+      ex: "Whenever it rains, the traffic gets worse.", exCn: "每次下雨，交通就變更糟。" },
+    lucky: { t: "lucky to have", cn: "很幸運能有", tag: ["be lucky to + V"],
+      note: "be lucky to + 原形動詞；不要說 I am lucky have 或 I am really have。",
+      ex: "We are lucky to have such a patient teacher.", exCn: "我們很幸運有這麼有耐心的老師。" },
+    lastlifetime: { t: "last a lifetime", cn: "持續一輩子", tag: ["搭配詞"],
+      note: "last 當動詞是「持續」，後面直接接時間長度，不加 for：last a lifetime／last two hours。",
+      ex: "A habit like that can last a lifetime.", exCn: "那樣的習慣可以維持一輩子。" },
+    paybills: { t: "pay the bills", cn: "付帳單", tag: ["作業第 1 題", "易錯"],
+      note: "bills 是帳單、pills 是藥丸，只差一個字母；job 是可數名詞，第一次提到要加 a。",
+      ex: "This part-time job helps me pay the bills.", exCn: "這份兼差幫我付帳單。" },
+    argument: { t: "had an argument", cn: "吵了一架", tag: ["作業第 14 題", "易錯"],
+      note: "argue 是不及物動詞，沒有被動 are argued；要說 they argued 或 they had an argument。",
+      ex: "They had an argument about the schedule.", exCn: "他們為了時程吵了一架。" },
+    sociable: { t: "sociable", cn: "善於社交的", tag: ["形容詞"],
+      note: "sociable 指喜歡跟人相處、好相處；social 是「社會的、社交的」，用法不同。",
+      ex: "She is sociable, so she makes friends fast.", exCn: "她很善於社交，所以交朋友很快。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today, Anita tells Tom why Sarah is her best friend.",
+      cn: "歡迎回來。今天 Anita 要告訴 Tom，為什麼 Sarah 是她最好的朋友。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for friendship phrases, and for the difference between that's why and that's what.",
+      cn: "注意聽友誼片語，以及 that's why 和 that's what 的差別。" },
+
+    /* ---------- 1 情境對話 ---------- */
+    { ch: 1, sp: "T", vis: { type: "scene", art: "phone" },
+      en: "Anita, you texted me at midnight. Is everything okay?",
+      cn: "Anita，你半夜傳訊息給我。一切都好嗎？",
+      hi: [{ t: "texted me", cn: "傳訊息給我", k: "text", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "heart" },
+      en: "Yes, sorry. Sarah and I have been friends for a long time, and she needed me last night.",
+      cn: "嗯，抱歉。Sarah 和我已經是很久的朋友了，她昨晚需要我。",
+      hi: [{ t: "have been friends for", cn: "已經當朋友多久", k: "havebeen", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "people" },
+      en: "What is Sarah like?",
+      cn: "Sarah 是個怎麼樣的人？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "haveYourBack" },
+      en: "She never judges me, and she always has my back.",
+      cn: "她從不評斷我，而且總是挺我。",
+      hi: [{ t: "never judges me", cn: "從不評斷我", k: "judge", c: 2 },
+           { t: "has my back", cn: "挺我", k: "haveback", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "feedbackNote" },
+      en: "Does she always tell you the truth?",
+      cn: "她總是跟你說實話嗎？",
+      hi: [{ t: "the truth", cn: "實話", k: "truth", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "feedbackNote" },
+      en: "Always. If I am doing something wrong, she is honest with me.",
+      cn: "一直都是。如果我做錯了什麼，她會對我誠實。",
+      hi: [{ t: "honest with me", cn: "對我誠實", k: "honestwith", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "cheerUp" },
+      en: "And when you are having a bad day?",
+      cn: "那你心情不好的時候呢？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "cheerUp" },
+      en: "She knows just how to cheer me up. Last week she brought me milk tea.",
+      cn: "她很知道怎麼讓我開心起來。上週她帶了奶茶來給我。",
+      hi: [{ t: "cheer me up", cn: "讓我開心起來", k: "cheerup", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "upsAndDowns" },
+      en: "Every long friendship has ups and downs, though.",
+      cn: "不過每段長久的友誼都有起起落落。",
+      hi: [{ t: "ups and downs", cn: "起起落落", k: "upsdowns", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "puzzleFit" },
+      en: "True. But we always work through our problems.",
+      cn: "沒錯。但我們總是一起把問題解決掉。",
+      hi: [{ t: "work through our problems", cn: "一起把問題解決掉", k: "solve", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "samePage" },
+      en: "We talk things out until we are on the same page.",
+      cn: "我們把事情說開，直到彼此想法一致。",
+      hi: [{ t: "talk things out", cn: "把事情說開", k: "talkout", c: 3 },
+           { t: "on the same page", cn: "想法一致", k: "samepage", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "verbFork" },
+      en: "That's why she is your bestie.",
+      cn: "那就是她成為你最好的朋友的原因。",
+      hi: [{ t: "That's why", cn: "那就是……的原因", k: "thatswhy", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "verbFork" },
+      en: "Exactly. And that's what makes our friendship so strong.",
+      cn: "正是。而那就是讓我們友誼如此堅固的原因。",
+      hi: [{ t: "that's what", cn: "那就是……的事", k: "thatswhat", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "gift" },
+      en: "I really appreciate friends like that. My roommate is sociable but not honest.",
+      cn: "我真的很欣賞這樣的朋友。我室友很會社交，但不誠實。",
+      hi: [{ t: "appreciate", cn: "欣賞、感謝", k: "appreciate", c: 2 },
+           { t: "sociable", cn: "善於社交的", k: "sociable", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "clock" },
+      en: "Whenever I have a problem, I know I can talk to her. I'm lucky to have her.",
+      cn: "每當我遇到問題，我知道我可以跟她說。我很幸運有她。",
+      hi: [{ t: "Whenever I have a problem", cn: "每當我遇到問題", k: "whenever", c: 1 },
+           { t: "lucky to have", cn: "很幸運能有", k: "lucky", c: 4 }] },
+
+    /* ---------- 2 重點表達（解說卡） ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "appreciate", ipa: "/əˈpriː.ʃi.eɪt/", pos: "v.", phrase: "I appreciate your help", art: "gift",
+        def: "To value something, or to be grateful for it.",
+        cn: "欣賞、重視，也可以表示感謝。",
+        note: "appreciate 後面接名詞或 V-ing，不接「人 + to + V」。" },
+      en: "Appreciate. I appreciate your help is a polite way to say thank you.",
+      cn: "Appreciate（感謝、欣賞）。I appreciate your help 是很有禮貌的道謝方式。",
+      hi: [{ t: "appreciate", cn: "欣賞、感謝", k: "appreciate", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "sociable", ipa: "/ˈsoʊ.ʃə.bəl/", pos: "adj.", phrase: "a sociable person", art: "people",
+        def: "Friendly and happy to spend time with other people.",
+        cn: "好交際的、合群的，喜歡跟人相處。",
+        note: "sociable 形容人的個性；social 是「社會的、社交的」，不要混用。" },
+      en: "Sociable. A sociable person enjoys people and makes friends easily.",
+      cn: "Sociable（善於社交的）。善於社交的人喜歡跟人相處，也很容易交朋友。",
+      hi: [{ t: "Sociable", cn: "善於社交的", k: "sociable", c: 3 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "solve", ipa: "/sɑːlv/", pos: "v.", phrase: "work through our problems", art: "puzzleFit",
+        def: "To find an answer to a problem, step by step.",
+        cn: "解決問題；work through 是一步一步處理完。",
+        note: "solve the problem ✓；problem 搭配 solve 或 fix，不搭配 answer。" },
+      en: "Solve. We solve a problem, or we work through our problems together.",
+      cn: "Solve（解決）。我們 solve a problem，或者一起 work through our problems。",
+      hi: [{ t: "work through our problems", cn: "一起把問題解決掉", k: "solve", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "cheer", ipa: "/tʃɪr/", cn: "讓人開心", def: "Cheer someone up: make a sad person feel better.", art: "cheerUp" },
+        b: { w: "judge", ipa: "/dʒʌdʒ/", cn: "評斷、挑剔", def: "To form a critical opinion about someone.", art: "feedbackNote" } },
+      en: "A good friend will cheer me up. A good friend never judges me.",
+      cn: "好朋友會讓我開心起來，好朋友從不評斷我。",
+      hi: [{ t: "cheer me up", cn: "讓我開心起來", k: "cheerup", c: 2 },
+           { t: "never judges me", cn: "從不評斷我", k: "judge", c: 3 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "a good friend …", coreCn: "描述好朋友四句話", art: "haveYourBack",
+        items: [{ t: "is always there for me", cn: "總是在我身邊" }, { t: "never judges me", cn: "從不評斷我" }, { t: "always has my back", cn: "總是挺我" }, { t: "knows how to cheer me up", cn: "知道怎麼讓我開心" }] },
+      en: "She is always there for me, never judges me, has my back, and knows how to cheer me up.",
+      cn: "她總是在我身邊、從不評斷我、總是挺我，也知道怎麼讓我開心。",
+      hi: [{ t: "has my back", cn: "挺我", k: "haveback", c: 4 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "friendship steps", coreCn: "友誼歷程", art: "upsAndDowns",
+        items: [{ t: "have ups and downs", cn: "有起有落" }, { t: "talk things out", cn: "把事情說開" }, { t: "be on the same page", cn: "想法一致" }, { t: "last a lifetime", cn: "持續一輩子" }] },
+      en: "Have ups and downs, talk things out, get on the same page, and last a lifetime.",
+      cn: "有起有落、把事情說開、想法一致，然後持續一輩子。",
+      hi: [{ t: "last a lifetime", cn: "持續一輩子", k: "lastlifetime", c: 1 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "daily tasks", coreCn: "作業裡的生活片語", art: "clipboard",
+        items: [{ t: "pay the bills", cn: "付帳單" }, { t: "get a haircut", cn: "剪頭髮" }, { t: "set an alarm", cn: "設鬧鐘" }, { t: "run errands", cn: "跑腿辦事" }, { t: "go sightseeing", cn: "去觀光" }] },
+      en: "Pay the bills, get a haircut, set an alarm, run errands, and go sightseeing.",
+      cn: "付帳單、剪頭髮、設鬧鐘、跑腿辦事、去觀光。",
+      hi: [{ t: "Pay the bills", cn: "付帳單", k: "paybills", c: 2 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "That's why + 完整子句", art: "verbFork",
+        rows: [
+          { lab: "why", blocks: [{ t: "That's why", k: "n" }, { t: "she", k: "s" }, { t: "is", k: "v" }, { t: "my bestie", k: "o" }] }
+        ],
+        note: "why 後面必須有主詞＋動詞，講的是「原因造成的結果」。" },
+      en: "That's why she is my bestie. After why, you need a subject and a verb.",
+      cn: "That's why she is my bestie。why 後面要有主詞和動詞。",
+      hi: [{ t: "That's why", cn: "那就是……的原因", k: "thatswhy", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "That's what + 動詞（what 就是主詞）", art: "verbFork",
+        rows: [
+          { lab: "正確", blocks: [{ t: "That's what", k: "n" }, { t: "makes", k: "v", add: true }, { t: "our friendship so strong", k: "o" }] },
+          { lab: "錯誤", blocks: [{ t: "That's what", k: "n" }, { t: "she", k: "x" }, { t: "makes", k: "v" }, { t: "her my bestie", k: "o" }] }
+        ],
+        note: "what 本身就是主詞，後面直接接動詞，不可以再加 she。" },
+      en: "That's what makes our friendship so strong. Do not add another subject after what.",
+      cn: "That's what makes our friendship so strong。what 後面不可以再加主詞。",
+      hi: [{ t: "That's what", cn: "那就是……的事", k: "thatswhat", c: 4 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "have been friends for + 時間長度", art: "calendar",
+        rows: [
+          { lab: "正確", blocks: [{ t: "We", k: "s" }, { t: "have been", k: "v", add: true }, { t: "friends", k: "o" }, { t: "for a long time", k: "n" }] },
+          { lab: "錯誤", blocks: [{ t: "We", k: "s" }, { t: "are", k: "x" }, { t: "friends", k: "o" }, { t: "for a long time", k: "n" }] }
+        ],
+        note: "從過去持續到現在用現在完成式；for 接長度、since 接時間點。" },
+      en: "We have been friends for a long time. The simple present cannot show that.",
+      cn: "要說 We have been friends for a long time；現在簡單式表達不出「持續到現在」。",
+      hi: [{ t: "have been friends for", cn: "已經當朋友多久", k: "havebeen", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "分離式片語動詞：cheer someone up", art: "cheerUp",
+        rows: [
+          { lab: "代名詞", blocks: [{ t: "She knows how to cheer", k: "v" }, { t: "me", k: "s", add: true }, { t: "up", k: "n" }] },
+          { lab: "錯誤", blocks: [{ t: "cheer", k: "v" }, { t: "up", k: "n" }, { t: "me", k: "x" }] }
+        ],
+        note: "代名詞一定放中間：cheer me up ✓／cheer up me ✗；名詞則兩種都行。" },
+      en: "She knows how to cheer me up. Never say cheer up me.",
+      cn: "She knows how to cheer me up，絕對不要說 cheer up me。",
+      hi: [{ t: "cheer me up", cn: "讓我開心起來", k: "cheerup", c: 2 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "Tom stays in job he doesn't love just to pay the pills.", bad: ["in job", "pay the pills"],
+        fix: "Tom stays in a job he doesn't love just to pay the bills.", good: ["in a job", "pay the bills"],
+        why: "Pills are medicine; bills are what you pay. Job is countable, so add a." },
+      en: "Tom stays in a job he doesn't love just to pay the bills.",
+      cn: "Tom 待在一份他並不喜歡的工作裡，只為了付帳單。",
+      hi: [{ t: "pay the bills", cn: "付帳單", k: "paybills", c: 2 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 14,
+        wrong: "Kelly blocks Sara's number because they are argued.", bad: ["blocks", "are argued"],
+        fix: "Kelly blocked Sarah's number because they had an argument.", good: ["blocked", "had an argument"],
+        why: "Argue has no passive form. Say they argued or they had an argument, in the past." },
+      en: "Kelly blocked Sarah's number because they had an argument.",
+      cn: "Kelly 封鎖了 Sarah 的電話號碼，因為他們吵了一架。",
+      hi: [{ t: "had an argument", cn: "吵了一架", k: "argument", c: 3 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "That's ___ makes our friendship so strong.", a: "what", n: 1 },
+      en: "That's ___ makes our friendship so strong.", say: "That's, blank, makes our friendship so strong.",
+      cn: "那就是＿＿讓我們友誼如此堅固的原因。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "That's ___ makes our friendship so strong.", a: "what", n: 1, show: true },
+      en: "That's what makes our friendship so strong.",
+      cn: "那就是讓我們友誼如此堅固的原因。（後面直接接動詞 makes）",
+      hi: [{ t: "That's what", cn: "那就是……的事", k: "thatswhat", c: 4 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Sarah and I have been friends ___ a long time.", a: "for", n: 2 },
+      en: "Sarah and I have been friends ___ a long time.", say: "Sarah and I have been friends, blank, a long time.",
+      cn: "Sarah 和我已經當了＿＿很長一段時間的朋友。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Sarah and I have been friends ___ a long time.", a: "for", n: 2, show: true },
+      en: "Sarah and I have been friends for a long time.",
+      cn: "Sarah 和我已經是很久的朋友了。",
+      hi: [{ t: "have been friends for", cn: "已經當朋友多久", k: "havebeen", c: 1 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "When I feel sad, she knows how to cheer me ___.", a: "up", n: 3 },
+      en: "When I feel sad, she knows how to cheer me ___.", say: "When I feel sad, she knows how to cheer me, blank.",
+      cn: "當我難過時，她知道怎麼讓我＿＿起來。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "When I feel sad, she knows how to cheer me ___.", a: "up", n: 3, show: true },
+      en: "When I feel sad, she knows how to cheer me up.",
+      cn: "當我難過時，她知道怎麼讓我開心起來。",
+      hi: [{ t: "cheer me up", cn: "讓我開心起來", k: "cheerup", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20250724 ===================== */
+/* bk20250724 Does Phone Separation Anxiety Really Exist? */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* 心率與血壓上升：心電圖螢幕＋血壓讀數往上的箭頭 */
+    heartRateUp: svg(
+      '<rect x="12" y="22" width="176" height="74" rx="8" fill="#fff" '+st+'/>'
+     +'<path d="M24 62 h18 l7 -20 l9 40 l8 -28 l7 8 h20 l7 -18 l9 34 l8 -24 l7 8 h22" fill="none" stroke="'+R+'" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>'
+     +'<rect x="22" y="106" width="72" height="30" rx="6" fill="'+L+'" '+st+'/>'
+     +'<text x="58" y="127" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="'+D+'">BP 140</text>'
+     +'<path d="M124 136 V108 M113 119 l11 -11 l11 11" fill="none" stroke="'+A+'" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M162 112 a9 9 0 0 1 16 0 a9 9 0 0 1 -16 18 a9 9 0 0 1 -16 -18 a9 9 0 0 1 16 0 z" fill="'+R+'" stroke="'+D+'" stroke-width="2.5"/>'),
+    /* FOMO：手機上跳出一堆未讀通知，旁邊的人怕錯過而不安 */
+    fomoFeed: svg(
+      '<rect x="18" y="12" width="86" height="126" rx="12" fill="#fff" '+st+'/>'
+     +'<g fill="'+L+'" stroke="'+D+'" stroke-width="2.5"><rect x="28" y="30" width="66" height="24" rx="4"/><rect x="28" y="62" width="66" height="24" rx="4"/><rect x="28" y="94" width="66" height="24" rx="4"/></g>'
+     +'<g fill="'+A+'"><circle cx="40" cy="42" r="6"/><circle cx="40" cy="74" r="6"/><circle cx="40" cy="106" r="6"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2"><line x1="54" y1="40" x2="86" y2="40"/><line x1="54" y1="46" x2="76" y2="46"/><line x1="54" y1="72" x2="86" y2="72"/><line x1="54" y1="78" x2="76" y2="78"/><line x1="54" y1="104" x2="86" y2="104"/><line x1="54" y1="110" x2="76" y2="110"/></g>'
+     +'<circle cx="102" cy="18" r="13" fill="'+R+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<text x="102" y="24" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#fff">99</text>'
+     +'<circle cx="156" cy="78" r="27" fill="'+C+'" '+st+'/>'
+     +'<circle cx="147" cy="72" r="3.5" fill="'+D+'"/><circle cx="165" cy="72" r="3.5" fill="'+D+'"/>'
+     +'<path d="M146 94 a11 8 0 0 1 20 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<text x="156" y="128" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="'+R+'">FOMO</text>'),
+    /* deliberately separate：把手機關機收進抽屜裡 */
+    phoneOffDrawer: svg(
+      '<rect x="66" y="10" width="60" height="62" rx="9" fill="#fff" '+st+'/>'
+     +'<rect x="74" y="20" width="44" height="40" rx="3" fill="'+D+'"/>'
+     +'<text x="96" y="46" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="'+C+'">OFF</text>'
+     +'<path d="M96 84 v-8 M88 78 l8 8 l8 -8" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="16" y="92" width="168" height="46" rx="6" fill="'+L+'" '+st+'/>'
+     +'<path d="M16 106 H184" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="80" y="116" width="40" height="9" rx="4.5" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'),
+    /* neck pain：低頭看手機的側面人像，頸部紅色疼痛線 */
+    neckPain: svg(
+      '<circle cx="74" cy="42" r="21" fill="'+C+'" '+st+'/>'
+     +'<path d="M84 58 C92 74 96 86 96 100" fill="none" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M60 108 a36 36 0 0 1 72 0 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M104 92 L132 104" fill="none" '+st+'/>'
+     +'<rect x="128" y="96" width="30" height="44" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="134" y="104" width="18" height="28" rx="2" fill="'+L+'"/>'
+     +'<g stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"><path d="M96 62 l12 -8"/><path d="M100 74 l14 -5"/><path d="M100 86 l14 0"/></g>'
+     +'<path d="M46 20 l-6 -10 M30 40 h-12 M40 62 l-9 8" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20250724 = {
+  title: "Does Phone Separation Anxiety Really Exist?",
+  titleCn: "手機分離焦慮真的存在嗎？",
+  date: "2025-07-24",
+  level: "B1",
+  scene: "Lunch Table · Reading an Article About Phones",
+  sceneCn: "午餐桌上・讀一篇手機焦慮的報導",
+  sceneArt: "phoneLeft",
+  titleArt: ["phone", "warning", "chartUp"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・同事", voice: "f" },
+    T: { name: "Tom", cn: "Tom・同事", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "No Phone All Day", cn: "情境：一整天沒有手機" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    feelanxious: { t: "felt anxious", cn: "感到焦慮", tag: ["情緒", "-ous 形容詞"],
+      note: "anxious 是形容詞、形容人的感受：feel anxious／be anxious about something。名詞是 anxiety。",
+      ex: "I feel anxious before every presentation.", exCn: "每次上台前我都很焦慮。" },
+    asif: { t: "as if", cn: "彷彿、好像", tag: ["句型", "as if + 子句"],
+      note: "as if 後面接完整子句（主詞＋動詞）：as if you have lost your connection。不能只接名詞。",
+      ex: "He talks as if he knows everyone here.", exCn: "他講話的樣子好像認識這裡每個人。" },
+    separation: { t: "phone separation anxiety", cn: "手機分離焦慮", tag: ["名詞片語"],
+      note: "separation 是名詞（動詞是 separate）；phone separation anxiety 三個名詞連用，重音在最後一個字上。",
+      ex: "Smartphone separation raises your heart rate.", exCn: "與手機分離會讓心率上升。" },
+    nomophobia: { t: "nomophobia", cn: "無手機恐懼症", tag: ["縮寫字"],
+      note: "nomophobia ＝ no-mobile phobia 的縮寫；phobia 是「恐懼症」，重音在 pho。",
+      ex: "Nomophobia is not an official medical term yet.", exCn: "無手機恐懼症目前還不是正式的醫學名稱。" },
+    affect: { t: "affects teenagers and adults alike", cn: "青少年和成人都一樣受影響", tag: ["動詞", "affect vs effect"],
+      note: "affect 是動詞「影響」、effect 是名詞「影響、效果」。alike 放句尾表示「兩者一樣」。",
+      ex: "The new rule affects new and old members alike.", exCn: "新規定對新舊會員一樣有影響。" },
+    heartrate: { t: "an increase in heart rate", cn: "心率上升", tag: ["搭配詞", "an increase in"],
+      note: "an increase in + 名詞（不是 of）：an increase in heart rate／in sales。lead to ＝ 導致。",
+      ex: "The report shows an increase in online orders.", exCn: "報告顯示線上訂單增加。" },
+    neckpain: { t: "neck pain", cn: "頸部疼痛", tag: ["身體症狀"],
+      note: "身體部位 + pain＝某處疼痛：neck pain／back pain。pain 這樣用時不可數，不加 s。",
+      ex: "Looking down at your phone all day causes neck pain.", exCn: "整天低頭看手機會造成頸部疼痛。" },
+    ingrained: { t: "ingrained in this device", cn: "深植在這台裝置裡", tag: ["形容詞", "＝ deep-rooted"],
+      note: "ingrained ＝ 根深蒂固的，介系詞用 in：ingrained in the culture／in this device。",
+      ex: "That habit is ingrained in the whole team.", exCn: "那個習慣在整個團隊裡根深蒂固。" },
+    itisthat: { t: "it is what is on the phone that counts", cn: "真正重要的是手機裡的內容", tag: ["強調句", "It is … that"],
+      note: "強調句 It is + 強調的部分 + that + 其餘部分；count 這裡是「重要、有意義」。",
+      ex: "It is the service that counts, not the price.", exCn: "真正重要的是服務，不是價格。" },
+    fomo: { t: "FOMO", cn: "錯失恐懼症", tag: ["縮寫字"],
+      note: "FOMO ＝ fear of missing out（怕漏掉別人在做的事）；唸成 /ˈfoʊ.moʊ/ 或逐字母唸。",
+      ex: "Turning off notifications really helps with FOMO.", exCn: "關掉通知真的能改善錯失恐懼。" },
+    criteria: { t: "the criteria", cn: "判準、標準", tag: ["單複數", "易錯"],
+      note: "criteria 是複數，單數是 criterion：These criteria are strict.（動詞用複數）",
+      ex: "Few products meet all three criteria.", exCn: "很少產品同時符合這三項標準。" },
+    withdrawal: { t: "withdrawal symptoms", cn: "戒斷症狀", tag: ["名詞片語"],
+      note: "withdrawal symptoms 指戒掉某樣東西時身心的不適；symptom ＝ 症狀（＝ sign）。",
+      ex: "He had withdrawal symptoms after quitting coffee.", exCn: "他戒咖啡後出現戒斷症狀。" },
+    compromise: { t: "compromise relationships or work", cn: "損害人際關係或工作", tag: ["動詞"],
+      note: "compromise 當動詞是「損害、危及」，不是「妥協」的那個意思；後面直接接受詞。",
+      ex: "Skipping tests can compromise product quality.", exCn: "省略測試會危及產品品質。" },
+    provoke: { t: "provoke inner conflict", cn: "引發內在衝突", tag: ["動詞"],
+      note: "provoke ＝ 引發（多半是負面的反應）：provoke conflict／provoke anger。",
+      ex: "That email provoked a long argument.", exCn: "那封信引發了一場長長的爭論。" },
+    deliberately: { t: "deliberately turn my phone off", cn: "刻意把手機關掉", tag: ["副詞"],
+      note: "deliberately ＝ 刻意、故意（中性到負面都可用）；turn off 是分離式片語，代名詞放中間：turn it off。",
+      ex: "She deliberately left her laptop at the office.", exCn: "她刻意把筆電留在辦公室。" },
+    reduce: { t: "reduce dependency", cn: "降低依賴", tag: ["搭配詞"],
+      note: "reduce + 名詞：reduce dependency／reduce anxiety／reduce costs；cut down 是口語說法。",
+      ex: "Short walks reduce stress after lunch.", exCn: "午餐後散步一下可以減輕壓力。" },
+    tiring: { t: "is tiring", cn: "（事物）令人疲倦", tag: ["-ed vs -ing", "易錯"],
+      note: "-ing 形容事物給人的感覺（The work is tiring）；-ed 形容人的感受（I am tired）。",
+      ex: "That flight was long and tiring.", exCn: "那趟飛行又長又累人。" },
+    samepage: { t: "on the same page", cn: "想法一致", tag: ["句子升級"],
+      note: "把 We agree 升級成 We are on the same page；介系詞是 on，page 用單數。",
+      ex: "Let's confirm the plan so we are on the same page.", exCn: "我們確認一下計畫，好讓想法一致。" },
+    challenging: { t: "challenging", cn: "具挑戰性的", tag: ["句子升級"],
+      note: "challenging 比 hard 正式、也比較正面（難但值得做）；用來形容工作、任務。",
+      ex: "The new project is challenging but interesting.", exCn: "新專案很有挑戰性，但很有趣。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today, Tom forgot his phone at home, and Anita explains what researchers say.",
+      cn: "歡迎回來。今天 Tom 把手機忘在家裡，Anita 說明研究人員的看法。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for the as if pattern, the -ed and -ing adjectives, and the emphasis pattern.",
+      cn: "注意聽 as if 句型、-ed 與 -ing 形容詞，還有強調句。" },
+
+    /* ---------- 1 情境對話 ---------- */
+    { ch: 1, sp: "T", vis: { type: "scene", art: "phoneLeft" },
+      en: "Anita, I left my phone at home this morning, and I felt anxious all day.",
+      cn: "Anita，我今天早上把手機忘在家裡，一整天都感到焦慮。",
+      hi: [{ t: "felt anxious", cn: "感到焦慮", k: "feelanxious", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "worriedFace" },
+      en: "As if you had lost your connection to the world?",
+      cn: "彷彿失去了跟世界的連結那樣嗎？",
+      hi: [{ t: "As if", cn: "彷彿", k: "asif", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "worriedFace" },
+      en: "Exactly. Does phone separation anxiety really exist?",
+      cn: "正是。手機分離焦慮真的存在嗎？",
+      hi: [{ t: "phone separation anxiety", cn: "手機分離焦慮", k: "separation", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "doc" },
+      en: "It does. Researchers call it nomophobia, short for no-mobile phobia.",
+      cn: "確實存在。研究人員叫它 nomophobia，是 no-mobile phobia 的縮寫。",
+      hi: [{ t: "nomophobia", cn: "無手機恐懼症", k: "nomophobia", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "people" },
+      en: "That is only a teenager problem, right?",
+      cn: "那只是青少年的問題吧？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "people" },
+      en: "No. It affects teenagers and adults alike.",
+      cn: "不是。它對青少年和成人一樣有影響。",
+      hi: [{ t: "affects teenagers and adults alike", cn: "青少年和成人都受影響", k: "affect", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "heartRateUp" },
+      en: "One American study found an increase in heart rate and blood pressure after separation.",
+      cn: "一項美國研究發現，分離後心率和血壓都會上升。",
+      hi: [{ t: "an increase in heart rate", cn: "心率上升", k: "heartrate", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "neckPain" },
+      en: "The article also mentioned neck pain and words like hurt and alone.",
+      cn: "那篇報導也提到頸部疼痛，還有 hurt、alone 這些字。",
+      hi: [{ t: "neck pain", cn: "頸部疼痛", k: "neckpain", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "rootCause" },
+      en: "Professor Griffiths says a teenager's whole life is ingrained in this device.",
+      cn: "Griffiths 教授說，青少年的整個生活都深植在這台裝置裡。",
+      hi: [{ t: "ingrained in this device", cn: "深植在這台裝置裡", k: "ingrained", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "fomoFeed" },
+      en: "So is it the phone itself, or something else?",
+      cn: "所以問題是手機本身，還是別的東西？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "fomoFeed" },
+      en: "He says it is what is on the phone that counts: the social networking that creates FOMO.",
+      cn: "他說真正重要的是手機裡的內容：製造錯失恐懼的社群網路。",
+      hi: [{ t: "it is what is on the phone that counts", cn: "真正重要的是手機裡的內容", k: "itisthat", c: 1 },
+           { t: "FOMO", cn: "錯失恐懼症", k: "fomo", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "frustratedFace" },
+      en: "I do open Instagram to de-stress. Is that an addiction?",
+      cn: "我確實會開 Instagram 來放鬆。這算成癮嗎？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "clipboard" },
+      en: "Not yet. The criteria also include withdrawal symptoms and building up your screen time.",
+      cn: "還不算。判準還包括戒斷症狀，以及使用時間越來越長。",
+      hi: [{ t: "The criteria", cn: "判準", k: "criteria", c: 2 },
+           { t: "withdrawal symptoms", cn: "戒斷症狀", k: "withdrawal", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "warning" },
+      en: "Your phone use also has to compromise relationships or work and provoke inner conflict.",
+      cn: "而且你的手機使用還必須損害人際關係或工作，並引發內在衝突。",
+      hi: [{ t: "compromise relationships or work", cn: "損害人際關係或工作", k: "compromise", c: 1 },
+           { t: "provoke inner conflict", cn: "引發內在衝突", k: "provoke", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "phoneOffDrawer" },
+      en: "Then I will deliberately turn my phone off after dinner to reduce dependency.",
+      cn: "那我晚餐後要刻意把手機關掉，降低依賴。",
+      hi: [{ t: "deliberately turn my phone off", cn: "刻意把手機關掉", k: "deliberately", c: 2 },
+           { t: "reduce dependency", cn: "降低依賴", k: "reduce", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "check" },
+      en: "Good plan. People adapt very quickly when there is no internet.",
+      cn: "好計畫。沒有網路的時候，人適應得很快。" },
+
+    /* ---------- 2 重點表達（解說卡） ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "anxiety", ipa: "/æŋˈzaɪ.ə.t̬i/", pos: "n.", phrase: "separation anxiety", art: "worriedFace",
+        def: "A worried, uncomfortable feeling about something that might happen.",
+        cn: "焦慮：對可能發生的事感到擔心不安。",
+        note: "名詞 anxiety、形容詞 anxious：feel anxious ✓／feel anxiety about ✓。" },
+      en: "Anxiety is the noun. Anxious is the adjective, as in I felt anxious.",
+      cn: "Anxiety 是名詞，anxious 是形容詞，例如 I felt anxious。",
+      hi: [{ t: "felt anxious", cn: "感到焦慮", k: "feelanxious", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "nomophobia", ipa: "/ˌnoʊ.məˈfoʊ.bi.ə/", pos: "n.", phrase: "no-mobile phobia", art: "phoneLeft",
+        def: "The fear of being without your mobile phone.",
+        cn: "無手機恐懼症：害怕身邊沒有手機。",
+        note: "重音在 pho：no-mo-PHO-bi-a；FOMO 是另一個縮寫，意思不同。" },
+      en: "Nomophobia is short for no-mobile phobia, the fear of having no phone.",
+      cn: "Nomophobia 是 no-mobile phobia 的縮寫，也就是害怕沒有手機。",
+      hi: [{ t: "Nomophobia", cn: "無手機恐懼症", k: "nomophobia", c: 4 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "ingrained", ipa: "/ɪnˈɡreɪnd/", pos: "adj.", phrase: "ingrained in this device", art: "rootCause",
+        def: "Fixed so deeply that it is very hard to change.",
+        cn: "根深蒂固的，深到很難改變。",
+        note: "同義字 deep-rooted；介系詞用 in，不是 on。" },
+      en: "Ingrained means deep-rooted. Their whole life is ingrained in this device.",
+      cn: "Ingrained 就是 deep-rooted（根深蒂固）。他們的整個生活都深植在這台裝置裡。",
+      hi: [{ t: "ingrained in this device", cn: "深植在這台裝置裡", k: "ingrained", c: 3 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "tired", ipa: "/ˈtaɪrd/", cn: "（人）覺得累", def: "How the person feels. I am tired.", art: "edIngPeopleThing" },
+        b: { w: "tiring", ipa: "/ˈtaɪrɪŋ/", cn: "（事物）令人累", def: "What the thing does to you. The work is tiring.", art: "ingEdPair" } },
+      en: "I am tired describes me. The work is tiring describes the work.",
+      cn: "I am tired 形容我；The work is tiring 形容那份工作。",
+      hi: [{ t: "is tiring", cn: "令人疲倦", k: "tiring", c: 2 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "symptoms", coreCn: "手機焦慮的徵狀", art: "heartRateUp",
+        items: [{ t: "feel anxious", cn: "感到焦慮" }, { t: "lose connection to the world", cn: "失去與世界的聯繫" }, { t: "an increase in heart rate", cn: "心率上升" }, { t: "neck pain", cn: "頸部疼痛" }] },
+      en: "Feel anxious, lose connection to the world, an increase in heart rate, and neck pain.",
+      cn: "感到焦慮、失去與世界的聯繫、心率上升、頸部疼痛。",
+      hi: [{ t: "neck pain", cn: "頸部疼痛", k: "neckpain", c: 2 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "the criteria include …", coreCn: "成癮判準", art: "clipboard",
+        items: [{ t: "withdrawal symptoms", cn: "戒斷症狀" }, { t: "compromise relationships or work", cn: "損害關係或工作" }, { t: "provoke inner conflict", cn: "引發內在衝突" }, { t: "use it to de-stress", cn: "用它來解壓" }] },
+      en: "Withdrawal symptoms, compromise relationships or work, and provoke inner conflict.",
+      cn: "戒斷症狀、損害人際關係或工作、引發內在衝突。",
+      hi: [{ t: "Withdrawal symptoms", cn: "戒斷症狀", k: "withdrawal", c: 4 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "reduce dependency", coreCn: "降低依賴的做法", art: "phoneOffDrawer",
+        items: [{ t: "turn it off", cn: "關機" }, { t: "leave it at home", cn: "留在家裡" }, { t: "separate deliberately", cn: "刻意分開" }, { t: "cut down screen time", cn: "減少螢幕時間" }] },
+      en: "Turn it off, leave it at home, separate deliberately, and cut down screen time to reduce dependency.",
+      cn: "關機、留在家裡、刻意分開、減少螢幕時間，來降低依賴。",
+      hi: [{ t: "reduce dependency", cn: "降低依賴", k: "reduce", c: 1 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "as if + 完整子句（彷彿……）", art: "worriedFace",
+        rows: [
+          { lab: "句型", blocks: [{ t: "I feel anxious", k: "s" }, { t: "as if", k: "n", add: true }, { t: "I have lost", k: "v" }, { t: "my connection", k: "o" }] }
+        ],
+        note: "as if 後面要有主詞＋動詞；只接名詞是錯的。" },
+      en: "I feel anxious as if I have lost my connection to the world.",
+      cn: "我感到焦慮，彷彿失去了跟世界的連結。",
+      hi: [{ t: "as if", cn: "彷彿", k: "asif", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "-ed 形容人 / -ing 形容事物", art: "edIngPeopleThing",
+        rows: [
+          { lab: "人的感受", blocks: [{ t: "I", k: "s" }, { t: "am", k: "v" }, { t: "tired", k: "o", add: true }] },
+          { lab: "事物本身", blocks: [{ t: "The work", k: "s" }, { t: "is", k: "v" }, { t: "tiring", k: "o", add: true }] }
+        ],
+        note: "-ed 給人、-ing 給事物：bored／boring、interested／interesting、tired／tiring。" },
+      en: "I am tired, and the work is tiring. The -ed form is for people.",
+      cn: "I am tired（我累了）、The work is tiring（工作累人）。-ed 給人用。",
+      hi: [{ t: "is tiring", cn: "令人疲倦", k: "tiring", c: 2 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "-ed / -ing 用錯就變意思", art: "ingEdPair",
+        rows: [
+          { lab: "正確", blocks: [{ t: "I", k: "s" }, { t: "am bored", k: "v" }, { t: "in this meeting", k: "o" }] },
+          { lab: "意思變了", blocks: [{ t: "I", k: "s" }, { t: "am boring", k: "x" }, { t: "（我這個人很無趣）", k: "n" }] }
+        ],
+        note: "I am boring 是說「我這個人很無趣」，不是「我覺得無聊」。" },
+      en: "I am bored means I feel it. I am boring means I am a dull person.",
+      cn: "I am bored 是我覺得無聊；I am boring 是說我這個人很無趣。",
+      hi: [{ t: "am bored", cn: "覺得無聊", k: "tiring", c: 2 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "強調句：It is … that …", art: "sentenceSlots",
+        rows: [
+          { lab: "原句", blocks: [{ t: "What is on the phone", k: "s" }, { t: "counts", k: "v" }] },
+          { lab: "強調", blocks: [{ t: "It is", k: "n", add: true }, { t: "what is on the phone", k: "s" }, { t: "that", k: "n" }, { t: "counts", k: "v" }] }
+        ],
+        note: "想強調的部分放在 It is 之後，其餘放在 that 之後；count ＝ 重要。" },
+      en: "It is what is on the phone that counts, not the phone itself.",
+      cn: "真正重要的是手機裡的內容，不是手機本身。",
+      hi: [{ t: "It is what is on the phone that counts", cn: "真正重要的是手機裡的內容", k: "itisthat", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "It is … that counts（換一個強調對象）", art: "sentenceSlots",
+        rows: [
+          { lab: "強調服務", blocks: [{ t: "It is", k: "n" }, { t: "the service", k: "s", add: true }, { t: "that", k: "n" }, { t: "counts", k: "v" }] }
+        ],
+        note: "只要換掉 It is 後面的部分，就能強調不同的資訊。" },
+      en: "It is the service that counts. Change the part after it is to change the focus.",
+      cn: "It is the service that counts（重要的是服務）。換掉 It is 後面的部分就換了重點。",
+      hi: [{ t: "It is the service that counts", cn: "重要的是服務", k: "itisthat", c: 1 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "I am boring in this meeting because the topic is bored.", bad: ["am boring", "is bored"],
+        fix: "I am bored in this meeting because the topic is boring.", good: ["am bored", "is boring"],
+        why: "The -ed form describes the person; the -ing form describes the thing." },
+      en: "I am bored in this meeting because the topic is boring.",
+      cn: "我在這場會議裡覺得無聊，因為這個主題很乏味。",
+      hi: [{ t: "is boring", cn: "令人無聊", k: "tiring", c: 2 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "My colleague and I agree about this problem, and today was very hard.", bad: ["agree about this problem", "very hard"],
+        fix: "My colleague and I are on the same page about this problem, and today was very challenging.", good: ["are on the same page", "very challenging"],
+        why: "Upgrade: be on the same page sounds natural, and challenging is more professional than hard." },
+      en: "My colleague and I are on the same page about this problem, and today was very challenging.",
+      cn: "我和同事對這個問題有共識，而今天非常具有挑戰性。",
+      hi: [{ t: "on the same page", cn: "想法一致", k: "samepage", c: 3 },
+           { t: "challenging", cn: "具挑戰性的", k: "challenging", c: 4 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I felt anxious, ___ if I had lost my connection to the world.", a: "as", n: 1 },
+      en: "I felt anxious, ___ if I had lost my connection to the world.", say: "I felt anxious, blank, if I had lost my connection to the world.",
+      cn: "我感到焦慮，＿＿彿失去了跟世界的連結。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I felt anxious, ___ if I had lost my connection to the world.", a: "as", n: 1, show: true },
+      en: "I felt anxious, as if I had lost my connection to the world.",
+      cn: "我感到焦慮，彷彿失去了跟世界的連結。",
+      hi: [{ t: "as if", cn: "彷彿", k: "asif", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The work is ___, so I am tired.", a: "tiring", n: 2 },
+      en: "The work is ___, so I am tired.", say: "The work is, blank, so I am tired.",
+      cn: "這份工作很＿＿，所以我很疲倦。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The work is ___, so I am tired.", a: "tiring", n: 2, show: true },
+      en: "The work is tiring, so I am tired.",
+      cn: "這份工作很累人，所以我很疲倦。",
+      hi: [{ t: "is tiring", cn: "令人疲倦", k: "tiring", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "It is what is on the phone ___ counts.", a: "that", n: 3 },
+      en: "It is what is on the phone ___ counts.", say: "It is what is on the phone, blank, counts.",
+      cn: "真正重要的＿＿手機裡的內容。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "It is what is on the phone ___ counts.", a: "that", n: 3, show: true },
+      en: "It is what is on the phone that counts.",
+      cn: "真正重要的是手機裡的內容。",
+      hi: [{ t: "It is what is on the phone that counts", cn: "真正重要的是手機裡的內容", k: "itisthat", c: 1 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20250729 ===================== */
+/* bk20250729 Make and Do Collocations */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* do vs make：一條路分成兩邊，DO ＝ 執行的事、MAKE ＝ 產生的結果 */
+    doMakeSplit: svg(
+      '<path d="M100 142 V104" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M100 104 C100 78 62 80 56 62" fill="none" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M100 104 C100 78 138 80 144 62" fill="none" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<rect x="12" y="18" width="80" height="40" rx="9" fill="'+A+'" '+st+'/>'
+     +'<text x="52" y="45" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="700" fill="#fff">DO</text>'
+     +'<rect x="108" y="18" width="80" height="40" rx="9" fill="'+B+'" '+st+'/>'
+     +'<text x="148" y="45" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#fff">MAKE</text>'
+     +'<text x="52" y="80" text-anchor="middle" font-family="sans-serif" font-size="12" fill="'+D+'">tasks</text>'
+     +'<text x="148" y="80" text-anchor="middle" font-family="sans-serif" font-size="12" fill="'+D+'">results</text>'
+     +'<circle cx="100" cy="122" r="9" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'),
+    /* do an experiment：錐形瓶＋試管，瓶口有氣泡 */
+    labExperiment: svg(
+      '<path d="M74 22 h28 v30 l28 62 a9 9 0 0 1 -8 13 H54 a9 9 0 0 1 -8 -13 l28 -62 z" fill="#fff" '+st+'/>'
+     +'<path d="M60 96 h56 l10 22 a6 6 0 0 1 -5 9 H55 a6 6 0 0 1 -5 -9 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M70 22 h36" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<g fill="none" stroke="'+B+'" stroke-width="2.5"><circle cx="84" cy="74" r="5"/><circle cx="98" cy="60" r="4"/><circle cx="90" cy="46" r="3"/></g>'
+     +'<rect x="150" y="34" width="24" height="80" rx="12" fill="#fff" '+st+'/>'
+     +'<path d="M152 84 h20 v18 a10 10 0 0 1 -20 0 z" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M146 30 h32" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<line x1="14" y1="134" x2="186" y2="134" '+st+'/>'),
+    /* do someone a favour：一隻手把牛奶遞給另一隻手（give someone a hand） */
+    lendAHand: svg(
+      '<path d="M84 44 L100 30 L116 44 v52 H84 z" fill="#fff" '+st+'/>'
+     +'<path d="M84 60 h32" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<text x="100" y="82" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="'+A+'">MILK</text>'
+     +'<path d="M44 66 h30 v42 H44 a12 12 0 0 1 0 -42 z" fill="'+C+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2"><line x1="52" y1="78" x2="70" y2="78"/><line x1="52" y1="88" x2="70" y2="88"/><line x1="52" y1="98" x2="70" y2="98"/></g>'
+     +'<path d="M14 74 h30 v26 H14 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M156 66 h-30 v42 h30 a12 12 0 0 0 0 -42 z" fill="'+C+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2"><line x1="148" y1="78" x2="130" y2="78"/><line x1="148" y1="88" x2="130" y2="88"/><line x1="148" y1="98" x2="130" y2="98"/></g>'
+     +'<path d="M186 74 h-30 v26 h30 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M78 24 C92 12 108 12 122 24 M122 24 l-9 -2 M122 24 l-1 -9" fill="none" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'),
+    /* fill out a form：表格上打勾、填欄位，右邊一支筆 */
+    fillOutForm: svg(
+      '<rect x="30" y="12" width="110" height="126" rx="7" fill="#fff" '+st+'/>'
+     +'<rect x="30" y="12" width="110" height="22" rx="7" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>'
+     +'<text x="85" y="29" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#fff">FORM</text>'
+     +'<g fill="none" stroke="'+D+'" stroke-width="2.5"><rect x="42" y="46" width="12" height="12" rx="2"/><rect x="42" y="72" width="12" height="12" rx="2"/><rect x="42" y="98" width="12" height="12" rx="2"/>'
+     +'<path d="M62 52 h64 M62 78 h64 M62 104 h48"/></g>'
+     +'<path d="M43 52 l4 4 l7 -8 M43 78 l4 4 l7 -8" fill="none" stroke="'+B+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M150 116 L182 44" stroke="'+A+'" stroke-width="9" stroke-linecap="round"/>'
+     +'<path d="M150 116 l-4 11 l11 -3 z" fill="'+D+'"/>'
+     +'<path d="M176 50 l8 4" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20250729 = {
+  title: "Make and Do Collocations",
+  titleCn: "Make 與 Do 搭配詞",
+  date: "2025-07-29",
+  level: "B1",
+  scene: "Evening at Home · Chores, Work and Decisions",
+  sceneCn: "晚上的家裡・家事、工作與決定",
+  sceneArt: "choreChart",
+  titleArt: ["check", "gear", "star"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・室友", voice: "f" },
+    T: { name: "Tom", cn: "Tom・室友", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "Sharing the Evening Jobs", cn: "情境：分配晚上的事" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    dochores: { t: "do the washing", cn: "洗衣服", tag: ["do + 家事"],
+      note: "家事一律用 do：do the washing／the ironing／the shopping／the dishes，名詞前面要有 the。",
+      ex: "I'll do the dishes if you cook.", exCn: "你煮飯的話我洗碗。" },
+    takeouttrash: { t: "take out the trash", cn: "倒垃圾", tag: ["片語動詞"],
+      note: "take out the trash（美式）／take out the rubbish（英式）；名詞受詞可以放中間：take the trash out。",
+      ex: "Tom takes out the trash every Wednesday.", exCn: "Tom 每週三倒垃圾。" },
+    feeddog: { t: "feed the dog", cn: "餵狗", tag: ["搭配詞"],
+      note: "餵動物用 feed，直接接受詞，不加 to：feed the dog ✓／feed to the dog ✗。",
+      ex: "Please feed the cat before you leave.", exCn: "你走之前請餵一下貓。" },
+    dohomework: { t: "do his homework", cn: "寫功課", tag: ["do + 名詞", "易錯"],
+      note: "功課一定是 do your homework，不能說 make your homework；homework 不可數，不加 s。",
+      ex: "She does her homework straight after school.", exCn: "她放學後馬上寫功課。" },
+    whenwasving: { t: "When I was feeding the dog", cn: "當我在餵狗的時候", tag: ["過去進行式"],
+      note: "兩件事在過去同時進行，兩邊都用 was／were + V-ing，中間用逗號分開。",
+      ex: "When I was cooking, the phone was ringing.", exCn: "我在煮飯的時候，電話一直在響。" },
+    makecall: { t: "make a phone call", cn: "打電話", tag: ["make + 名詞"],
+      note: "打電話是 make a phone call（不是 do a phone call）；也可直接說 call someone。",
+      ex: "I need to make a quick phone call.", exCn: "我需要快點打個電話。" },
+    makedecision: { t: "make a decision", cn: "做決定", tag: ["make + 名詞", "易錯"],
+      note: "決定用 make：make a decision／make a choice。不可說 do a decision。",
+      ex: "We have to make a decision before Friday.", exCn: "我們必須在週五前做決定。" },
+    dofavour: { t: "do me a favour", cn: "幫我一個忙", tag: ["do + 人 + 名詞"],
+      note: "do someone a favour ＝ give someone a hand（幫忙）；人放在中間。",
+      ex: "Could you do me a favour and print this?", exCn: "可以幫我一個忙，把這個印出來嗎？" },
+    doexperiment: { t: "do the experiment", cn: "做實驗", tag: ["do + 名詞"],
+      note: "實驗用 do 或 carry out：do an experiment／carry out an experiment。不可說 make an experiment。",
+      ex: "We did an experiment to test the metal.", exCn: "我們做了一個實驗來測試那個金屬。" },
+    makeprogress: { t: "made progress", cn: "有了進展", tag: ["make + 不可數名詞"],
+      note: "progress 不可數，不加 a／s：make progress ✓／make a progress ✗。同義說法 move forward。",
+      ex: "The team made real progress this month.", exCn: "團隊這個月真的有進展。" },
+    makechanges: { t: "make a few changes", cn: "做一些改動", tag: ["make + 名詞"],
+      note: "改變用 make：make a change／make changes；introduce a change 是較正式的說法。",
+      ex: "The new manager plans to make some changes.", exCn: "新經理打算做一些改變。" },
+    makemistake: { t: "made a mistake", cn: "犯了一個錯", tag: ["make + 名詞", "易錯"],
+      note: "犯錯一律 make a mistake，不能說 do a mistake；複數是 make mistakes。",
+      ex: "Everyone makes mistakes on the first day.", exCn: "第一天每個人都會犯錯。" },
+    makeexcuse: { t: "made an excuse", cn: "找了藉口", tag: ["make + 名詞"],
+      note: "make an excuse ＝ 找藉口；道歉是 make an apology，兩者都用 make。",
+      ex: "He made an excuse and left early.", exCn: "他找了個藉口就提早走了。" },
+    require: { t: "requires me to", cn: "要求我……", tag: ["require + 人 + to V", "易錯"],
+      note: "require 不是使役動詞，後面的 to 不可以省略：requires me to fill out ✓／requires me fill out ✗。",
+      ex: "The company requires us to wear a badge.", exCn: "公司要求我們戴識別證。" },
+    filloutform: { t: "fill out a form", cn: "填表格", tag: ["片語動詞"],
+      note: "fill out a form（美式）／fill in a form（英式）；受詞是代名詞時放中間：fill it out。",
+      ex: "Please fill out this form at the counter.", exCn: "請在櫃檯填好這張表格。" },
+    placeorder: { t: "placed an order", cn: "下了訂單、點了餐", tag: ["正式用法"],
+      note: "place an order 是商務或正式說法；日常點餐直接用動詞 order 更自然。",
+      ex: "We placed an order for fifty units.", exCn: "我們下了五十台的訂單。" },
+    terribly: { t: "terribly anxious", cn: "非常焦慮", tag: ["副詞加強語氣"],
+      note: "terribly 放在形容詞前面加強語氣（＝ very）：terribly anxious／terribly sorry。",
+      ex: "I'm terribly sorry about the delay.", exCn: "非常抱歉造成延誤。" },
+    anxious: { t: "felt anxious", cn: "感到焦慮", tag: ["形容詞"],
+      note: "anxious 形容人的感受；擔心某事用 anxious about：anxious about his health。",
+      ex: "He is anxious about the test results.", exCn: "他很擔心檢查結果。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Tonight, Anita and Tom share the jobs at home and talk about work.",
+      cn: "歡迎回來。今晚 Anita 和 Tom 分配家裡的事，也聊到工作。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for every do and make collocation, because you must learn them as whole sets.",
+      cn: "注意聽每一組 do 和 make 的搭配詞，這些只能整組記下來。" },
+
+    /* ---------- 1 情境對話 ---------- */
+    { ch: 1, sp: "A", vis: { type: "scene", art: "choreChart" },
+      en: "Tom, I'll do the washing tonight if you do the ironing.",
+      cn: "Tom，今晚我洗衣服，你燙衣服好嗎？",
+      hi: [{ t: "do the washing", cn: "洗衣服", k: "dochores", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "trash" },
+      en: "Deal. I also have to take out the trash and feed the dog.",
+      cn: "成交。我還得倒垃圾和餵狗。",
+      hi: [{ t: "take out the trash", cn: "倒垃圾", k: "takeouttrash", c: 2 },
+           { t: "feed the dog", cn: "餵狗", k: "feeddog", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "wordNotebook" },
+      en: "And your son still has to do his homework.",
+      cn: "而且你兒子還得寫功課。",
+      hi: [{ t: "do his homework", cn: "寫功課", k: "dohomework", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "whileFourWays" },
+      en: "When I was feeding the dog, my sister was talking to me on the phone.",
+      cn: "我在餵狗的時候，我妹正在跟我通電話。",
+      hi: [{ t: "When I was feeding the dog", cn: "當我在餵狗的時候", k: "whenwasving", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "phone" },
+      en: "Speaking of that, you should make a phone call to the landlord.",
+      cn: "說到這個，你應該打個電話給房東。",
+      hi: [{ t: "make a phone call", cn: "打電話", k: "makecall", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "twoMinds" },
+      en: "I know. I still have to make a decision about the new lease.",
+      cn: "我知道。新租約的事我還得做個決定。",
+      hi: [{ t: "make a decision", cn: "做決定", k: "makedecision", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "lendAHand" },
+      en: "Could you do me a favour and pick up some milk on the way home?",
+      cn: "你可以幫我一個忙，回家路上買點牛奶嗎？",
+      hi: [{ t: "do me a favour", cn: "幫我一個忙", k: "dofavour", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "lendAHand" },
+      en: "Of course. Consider it done.",
+      cn: "當然。就當它辦好了。" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "labExperiment" },
+      en: "Thanks. By the way, how was work? Did you do the experiment?",
+      cn: "謝啦。對了，工作怎麼樣？你們做實驗了嗎？",
+      hi: [{ t: "do the experiment", cn: "做實驗", k: "doexperiment", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "progressSteps" },
+      en: "Yes, and we made progress. We only need to make a few changes.",
+      cn: "做了，而且有了進展。我們只需要做一些改動。",
+      hi: [{ t: "made progress", cn: "有了進展", k: "makeprogress", c: 1 },
+           { t: "make a few changes", cn: "做一些改動", k: "makechanges", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "redPenMistakes" },
+      en: "Nice. Last month you made a mistake in the report, right?",
+      cn: "不錯。上個月你在報告裡犯了一個錯，對吧？",
+      hi: [{ t: "made a mistake", cn: "犯了一個錯", k: "makemistake", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "feedbackNote" },
+      en: "Don't remind me. I made an excuse, and my boss was not happy.",
+      cn: "別提了。我找了藉口，我老闆不太高興。",
+      hi: [{ t: "made an excuse", cn: "找了藉口", k: "makeexcuse", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "fillOutForm" },
+      en: "By the way, the school requires me to fill out a form for the trip.",
+      cn: "對了，學校要求我為這次旅行填一張表格。",
+      hi: [{ t: "requires me to", cn: "要求我", k: "require", c: 1 },
+           { t: "fill out a form", cn: "填表格", k: "filloutform", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "restaurantCheck" },
+      en: "Okay. And your son placed an order for us at McDonald's.",
+      cn: "好。還有，你兒子在麥當勞幫我們點了餐。",
+      hi: [{ t: "placed an order", cn: "下了訂單、點了餐", k: "placeorder", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "worriedFace" },
+      en: "Good. When I lost my phone last week, I felt terribly anxious about all of this.",
+      cn: "很好。上週我手機丟了的時候，我對這一切感到非常焦慮。",
+      hi: [{ t: "terribly anxious", cn: "非常焦慮", k: "terribly", c: 1 },
+           { t: "felt terribly anxious", cn: "感到焦慮", k: "anxious", c: 3 }] },
+
+    /* ---------- 2 重點表達（解說卡） ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "do", ipa: "/duː/", cn: "執行、完成", def: "For tasks you carry out: chores, work, exercises, experiments.", art: "choreChart" },
+        b: { w: "make", ipa: "/meɪk/", cn: "產生、創造", def: "For results you create: decisions, changes, progress, mistakes.", art: "doMakeSplit" } },
+      en: "Do the washing, but make a decision. Do is for tasks; make is for results.",
+      cn: "洗衣服用 do，做決定用 make。Do 是執行的事，make 是產生的結果。",
+      hi: [{ t: "make a decision", cn: "做決定", k: "makedecision", c: 4 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "collocation", ipa: "/ˌkɑː.ləˈkeɪ.ʃən/", pos: "n.", phrase: "do and make collocations", art: "wordNotebook",
+        def: "Words that native speakers habitually use together.",
+        cn: "搭配詞：母語者習慣放在一起用的組合。",
+        note: "搭配詞沒有道理可循，要整組記，不要一個字一個字翻。" },
+      en: "A collocation is a set of words that go together, like do your homework. Learn the whole set.",
+      cn: "搭配詞是習慣放在一起的詞組，例如 do your homework。要整組記下來。",
+      hi: [{ t: "do your homework", cn: "寫功課", k: "dohomework", c: 3 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "experiment", ipa: "/ɪkˈsper.ə.mənt/", pos: "n.", phrase: "do an experiment", art: "labExperiment",
+        def: "A test you run to find out what happens.",
+        cn: "實驗：為了看結果而做的測試。",
+        note: "do an experiment 或 carry out an experiment，不說 make an experiment。" },
+      en: "We do an experiment, or we carry out an experiment. We never make one.",
+      cn: "實驗要說 do an experiment 或 carry out an experiment，不能用 make。",
+      hi: [{ t: "do an experiment", cn: "做實驗", k: "doexperiment", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "anxious", ipa: "/ˈæŋk.ʃəs/", pos: "adj.", phrase: "terribly anxious", art: "worriedFace",
+        def: "Worried and uncomfortable about something.",
+        cn: "焦慮的、擔心的。",
+        note: "加強語氣用 terribly、really：terribly anxious；擔心某事用 anxious about。" },
+      en: "Anxious means worried. Add terribly to make it stronger: terribly anxious.",
+      cn: "Anxious 是焦慮、擔心。加 terribly 語氣更強：terribly anxious。",
+      hi: [{ t: "terribly anxious", cn: "非常焦慮", k: "terribly", c: 2 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "do", coreCn: "do ＋ 家事、練習、實驗", art: "choreChart",
+        items: [{ t: "do the washing", cn: "洗衣服" }, { t: "do the ironing", cn: "燙衣服" }, { t: "do your homework", cn: "寫功課" }, { t: "do an experiment", cn: "做實驗" }, { t: "do someone a favour", cn: "幫某人一個忙" }] },
+      en: "Do the washing, do the ironing, do your homework, do an experiment, do someone a favour.",
+      cn: "洗衣服、燙衣服、寫功課、做實驗、幫某人一個忙。",
+      hi: [{ t: "do someone a favour", cn: "幫某人一個忙", k: "dofavour", c: 1 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "make", coreCn: "make ＋ 決定、結果", art: "doMakeSplit",
+        items: [{ t: "make a decision", cn: "做決定" }, { t: "make progress", cn: "取得進展" }, { t: "make a mistake", cn: "犯錯" }, { t: "make friends", cn: "交朋友" }, { t: "make an effort", cn: "付出努力" }] },
+      en: "Make a decision, make progress, make a mistake, make friends, make an effort.",
+      cn: "做決定、取得進展、犯錯、交朋友、付出努力。",
+      hi: [{ t: "make progress", cn: "取得進展", k: "makeprogress", c: 2 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "same meaning", coreCn: "同義替換說法", art: "lendAHand",
+        items: [{ t: "do someone a favour = give someone a hand", cn: "幫忙" }, { t: "make an effort = try hard", cn: "努力" }, { t: "make progress = move forward", cn: "進展" }, { t: "do damage = cause damage", cn: "造成損害" }] },
+      en: "Do someone a favour equals give someone a hand. Make an effort equals try hard.",
+      cn: "do someone a favour ＝ give someone a hand；make an effort ＝ try hard。",
+      hi: [{ t: "Do someone a favour", cn: "幫某人一個忙", k: "dofavour", c: 3 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "do ＝ 執行某件事", art: "choreChart",
+        rows: [
+          { lab: "正確", blocks: [{ t: "I", k: "s" }, { t: "do", k: "v", add: true }, { t: "the washing", k: "o" }] },
+          { lab: "錯誤", blocks: [{ t: "I", k: "s" }, { t: "make", k: "x" }, { t: "the washing", k: "o" }] }
+        ],
+        note: "家事、練習、實驗、工作都用 do；名詞前面通常有 the 或所有格。" },
+      en: "I do the washing. Chores, exercises and experiments all go with do.",
+      cn: "I do the washing。家事、練習、實驗都用 do。",
+      hi: [{ t: "do the washing", cn: "洗衣服", k: "dochores", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "make ＝ 產生一個結果", art: "doMakeSplit",
+        rows: [
+          { lab: "正確", blocks: [{ t: "We", k: "s" }, { t: "made", k: "v", add: true }, { t: "progress", k: "o" }] },
+          { lab: "錯誤", blocks: [{ t: "We", k: "s" }, { t: "did", k: "x" }, { t: "progress", k: "o" }] }
+        ],
+        note: "決定、改變、進步、錯誤都用 make；progress 不可數，不加 a。" },
+      en: "We made progress. Decisions, changes, progress and mistakes all go with make.",
+      cn: "We made progress。決定、改變、進展、錯誤都用 make。",
+      hi: [{ t: "made progress", cn: "有了進展", k: "makeprogress", c: 2 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "When + was V-ing, … was V-ing（同時發生）", art: "whileFourWays",
+        rows: [
+          { lab: "句型", blocks: [{ t: "When I", k: "n" }, { t: "was feeding", k: "v" }, { t: "the dog,", k: "o" }, { t: "Anita was talking", k: "v", add: true }, { t: "to me", k: "o" }] }
+        ],
+        note: "兩件事在過去同時進行，兩邊都用 was／were + V-ing。" },
+      en: "When I was feeding the dog, Anita was talking to me on the phone.",
+      cn: "當我在餵狗時，Anita 正在打電話給我。",
+      hi: [{ t: "When I was feeding the dog", cn: "當我在餵狗的時候", k: "whenwasving", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "require + 人 + to + 原形動詞", art: "fillOutForm",
+        rows: [
+          { lab: "正確", blocks: [{ t: "The teacher", k: "s" }, { t: "requires", k: "v" }, { t: "me", k: "n" }, { t: "to fill out", k: "v", add: true }, { t: "a form", k: "o" }] },
+          { lab: "錯誤", blocks: [{ t: "The teacher", k: "s" }, { t: "requires", k: "v" }, { t: "me", k: "n" }, { t: "fill out", k: "x" }, { t: "a form", k: "o" }] }
+        ],
+        note: "require 不是使役動詞，to 不可以省略；make／let 才可以直接接原形動詞。" },
+      en: "The teacher requires me to fill out a form. Keep the to after require.",
+      cn: "The teacher requires me to fill out a form。require 後面的 to 不能省略。",
+      hi: [{ t: "requires me to", cn: "要求我", k: "require", c: 3 },
+           { t: "fill out a form", cn: "填表格", k: "filloutform", c: 2 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "The teacher requires me fill out a form.", bad: ["requires me fill out"],
+        fix: "The teacher requires me to fill out a form.", good: ["requires me to fill out"],
+        why: "Require is not a causative verb, so the to cannot be dropped." },
+      en: "The teacher requires me to fill out a form.",
+      cn: "老師要求我填寫一張表格。",
+      hi: [{ t: "requires me to", cn: "要求我", k: "require", c: 1 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "I have to make my homework and do a decision tonight.", bad: ["make my homework", "do a decision"],
+        fix: "I have to do my homework and make a decision tonight.", good: ["do my homework", "make a decision"],
+        why: "Homework goes with do; a decision goes with make. These pairs are fixed." },
+      en: "I have to do my homework and make a decision tonight.",
+      cn: "今晚我得寫功課，還要做一個決定。",
+      hi: [{ t: "do my homework", cn: "寫功課", k: "dohomework", c: 3 },
+           { t: "make a decision", cn: "做決定", k: "makedecision", c: 4 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I'll ___ the washing if you do the ironing.", a: "do", n: 1 },
+      en: "I'll ___ the washing if you do the ironing.", say: "I'll, blank, the washing if you do the ironing.",
+      cn: "如果你燙衣服，我就＿＿洗衣服。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I'll ___ the washing if you do the ironing.", a: "do", n: 1, show: true },
+      en: "I'll do the washing if you do the ironing.",
+      cn: "如果你燙衣服，我就洗衣服。",
+      hi: [{ t: "do the washing", cn: "洗衣服", k: "dochores", c: 1 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "We ___ good progress on the project this week.", a: "made", n: 2 },
+      en: "We ___ good progress on the project this week.", say: "We, blank, good progress on the project this week.",
+      cn: "我們這週在專案上＿＿了不少進展。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "We ___ good progress on the project this week.", a: "made", n: 2, show: true },
+      en: "We made good progress on the project this week.",
+      cn: "我們這週在專案上有了不少進展。",
+      hi: [{ t: "made good progress", cn: "有了進展", k: "makeprogress", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The teacher requires me ___ fill out a form.", a: "to", n: 3 },
+      en: "The teacher requires me ___ fill out a form.", say: "The teacher requires me, blank, fill out a form.",
+      cn: "老師要求我＿＿填一張表格。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The teacher requires me ___ fill out a form.", a: "to", n: 3, show: true },
+      en: "The teacher requires me to fill out a form.",
+      cn: "老師要求我填寫一張表格。",
+      hi: [{ t: "requires me to", cn: "要求我", k: "require", c: 3 },
+           { t: "fill out a form", cn: "填表格", k: "filloutform", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20250805 ===================== */
+/* bk20250805 Opportunity and Coping */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* opportunity：機會＝一扇打開的門，箭頭往外走出去 */
+    openDoorChance: svg(
+      '<line x1="8" y1="132" x2="192" y2="132" '+st+'/>'
+     +'<rect x="30" y="20" width="78" height="112" rx="3" fill="'+C+'" '+st+'/>'
+     +'<rect x="40" y="30" width="58" height="102" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M108 20 L150 38 V124 L108 132 Z" fill="'+A+'" '+st+'/>'
+     +'<circle cx="118" cy="78" r="5" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M54 78 h30 M76 68 l10 10 l-10 10" fill="none" stroke="'+B+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<g stroke="'+A+'" stroke-width="3" stroke-linecap="round"><line x1="162" y1="34" x2="178" y2="26"/><line x1="166" y1="58" x2="184" y2="56"/><line x1="162" y1="82" x2="178" y2="90"/></g>'),
+    /* cope with：一個人撐著一個很重的箱子（撐得住、承受） */
+    heavyLoadCarry: svg(
+      '<line x1="8" y1="134" x2="192" y2="134" '+st+'/>'
+     +'<rect x="52" y="16" width="96" height="48" rx="4" fill="'+L+'" '+st+'/>'
+     +'<path d="M52 40 H148" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<text x="100" y="35" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="'+D+'">HEAVY</text>'
+     +'<circle cx="100" cy="84" r="14" fill="'+C+'" '+st+'/>'
+     +'<path d="M92 82 l7 5 M101 87 l7 -5" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M100 98 v18 M100 102 L76 68 M100 102 L124 68 M100 116 L82 134 M100 116 L118 134" fill="none" '+st+'/>'
+     +'<g fill="'+B+'"><circle cx="70" cy="90" r="4"/><circle cx="132" cy="94" r="4"/></g>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20250805 = {
+  title: "Opportunity and Coping",
+  titleCn: "學習機會與應對困難",
+  date: "2025-08-05",
+  level: "B1",
+  scene: "Office Break Room · A Chance to Study Abroad",
+  sceneCn: "辦公室休息室・爭取進修機會",
+  sceneArt: "coffeeBreak",
+  titleArt: ["star", "talk", "book"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・剛拿到進修機會的同事", voice: "f" },
+    T: { name: "Tom", cn: "Tom・資深同事", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "A Chance to Study Abroad", cn: "情境：爭取進修機會" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    giveopp: { t: "give someone the opportunity to + V", cn: "給某人做某事的機會", tag: ["機會", "III-A"],
+      note: "give + 人 + the opportunity to + 原形動詞。opportunity 前面幾乎都加 the，不要說 give me opportunity。",
+      ex: "The company gave Tom the opportunity to lead the new team.", exCn: "公司給了 Tom 帶領新團隊的機會。" },
+    oppofving: { t: "the opportunity of + V-ing", cn: "做某事的機會（較正式）", tag: ["機會", "被動"],
+      note: "of 後面一定要接動名詞 V-ing；被動 was given the opportunity 表示「被給予機會」。",
+      ex: "She was given the opportunity of working in Japan for a year.", exCn: "她得到了去日本工作一年的機會。" },
+    lookfor: { t: "look for an opportunity to + V", cn: "尋找做某事的機會", tag: ["機會", "V-A"],
+      note: "look for 是「尋找」，後面接名詞；an opportunity to + 原形動詞說明要做什麼。",
+      ex: "I'm looking for an opportunity to practice my Chinese speaking.", exCn: "我正在尋找練習中文口說的機會。" },
+    jobopp: { t: "job opportunity", cn: "工作機會", tag: ["搭配詞"],
+      note: "job opportunity 是工作機會；找工作的地方叫 job centre（美式拼法 center）。",
+      ex: "I got this job opportunity from the job centre near my house.", exCn: "我從家附近的就業中心得到這個工作機會。" },
+    attend: { t: "attend", cn: "出席、參加", tag: ["單字"],
+      note: "attend 是及物動詞，後面直接接活動，不加 in：attend a meeting（❌ attend in a meeting）。",
+      ex: "Almost fifty people attended the wedding.", exCn: "將近五十個人參加了婚禮。" },
+    copewith: { t: "cope with", cn: "（撐得住地）應付、承受", tag: ["IV", "不可省略 with"],
+      note: "cope with 強調「有能力撐住」壓力、困難、負擔；with 絕對不能省略。",
+      ex: "It must be really hard to cope with three young children and a job.", exCn: "要同時照顧三個年幼的孩子和一份工作，一定非常辛苦。" },
+    dealwith: { t: "deal with", cn: "著手處理（問題）", tag: ["IV", "不可省略 with"],
+      note: "deal with 強調「動手處理某個問題」，重點在採取行動；with 同樣不能省略。",
+      ex: "Tom needs to deal with this problem because it happens frequently.", exCn: "Tom 需要處理這個問題，因為它經常發生。" },
+    pressure: { t: "cope with the pressure", cn: "承受壓力", tag: ["搭配詞"],
+      note: "cope with 後面最常接 pressure、stress、difficulties、a heavy load 這類「重擔」。",
+      ex: "After her illness, she couldn't cope with the stress of work.", exCn: "她生病之後，無法承受工作的壓力。" },
+    confident: { t: "become more confident", cn: "變得更有自信", tag: ["III-C"],
+      note: "confident 是三音節，比較級要用 more confident，不能說 confidenter。become／get 都可以。",
+      ex: "My son has become more confident since he joined the swimming team.", exCn: "我兒子加入游泳隊後變得更有自信了。" },
+    native: { t: "native speakers", cn: "母語人士", tag: ["V-B", "搭配詞"],
+      note: "native speaker ＝ 以某語言為母語的人。native 當形容詞，注意不要寫成 native speaking people。",
+      ex: "This podcast is recorded by two native speakers from Boston.", exCn: "這個播客是兩位波士頓的母語人士錄的。" },
+    repeat: { t: "repeat", cn: "重複（說一次）", tag: ["V-B"],
+      note: "請人再說一次：Could you please repeat it? 後面要有受詞 it，不要只說 Could you repeat?",
+      ex: "Sorry, the line is bad. Could you please repeat the address?", exCn: "抱歉，訊號不好，可以請你把地址再說一次嗎？" },
+    expressions: { t: "new words and expressions", cn: "新的單字和片語", tag: ["V-B"],
+      note: "expression 在這裡不是「表情」，而是「詞語、措詞」；單字和片語一起說就用 words and expressions。",
+      ex: "I write down five new words and expressions in my notebook every night.", exCn: "我每天晚上在筆記本寫下五個新的單字和片語。" },
+    explain: { t: "explain something to someone", cn: "向某人解釋某事", tag: ["III-E", "易錯"],
+      note: "explain 後面先接「事情」，人要用 to 帶出來：❌ explain me the reason → ✅ explain the reason to me。",
+      ex: "The nurse explained the medicine to my grandmother very slowly.", exCn: "護士非常慢地向我奶奶說明這個藥。" },
+    understandwhat: { t: "understand what they are saying", cn: "聽懂他們在說什麼", tag: ["III-D", "名詞子句"],
+      note: "what 本身就等於「所說的話」，前面不用再加 a word；整個 what 子句當 understand 的受詞。",
+      ex: "I can't understand what the driver is shouting.", exCn: "我聽不懂那個司機在喊什麼。" },
+    pastcont: { t: "was / were + V-ing", cn: "過去進行式", tag: ["III-B"],
+      note: "描述過去某個時間點「正在進行」的動作；單數主詞用 was，複數主詞和 you 用 were。",
+      ex: "At eight last night, my parents were watching the news.", exCn: "昨晚八點，我父母正在看新聞。" },
+    predict: { t: "predict", cn: "預測、預料", tag: ["單字"],
+      note: "predict 是說出「還沒發生的事」；成真了就說 It came true.（❌ It became true.）",
+      ex: "No one can predict when the next earthquake will happen.", exCn: "沒有人能預測下一次地震什麼時候發生。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today, Anita gets a chance to study English abroad, but she is worried.",
+      cn: "歡迎回來。今天 Anita 得到一個出國學英文的機會，但她很擔心。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for how Tom talks about opportunity, and how to cope with pressure.",
+      cn: "注意聽 Tom 怎麼談機會，以及怎麼應付壓力。" },
+
+    /* ---------- 1 情境對話（14 句） ---------- */
+    { ch: 1, sp: "T", vis: { type: "scene", art: "coffeeBreak" },
+      en: "Hi, Anita. You look excited today. What happened?",
+      cn: "嗨，Anita。你今天看起來很興奮。發生什麼事了？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "openDoorChance" },
+      en: "My manager gave me the opportunity to attend an English training program in Singapore.",
+      cn: "我的主管給了我機會去新加坡參加英文訓練課程。",
+      hi: [{ t: "gave me the opportunity to attend", cn: "給了我機會參加", k: "giveopp", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "starSteps" },
+      en: "That's great news! I was reading about that program last week.",
+      cn: "這是好消息！我上週正在看那個課程的資料。",
+      hi: [{ t: "was reading", cn: "當時正在讀（過去進行式）", k: "pastcont", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "frustratedFace" },
+      en: "I'm happy, but I'm not confident. I can't cope with so much English at once.",
+      cn: "我很開心，但我沒有自信。我沒辦法一次應付這麼多英文。",
+      hi: [{ t: "cope with", cn: "應付、承受", k: "copewith", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "puzzleFit" },
+      en: "Then let's deal with the problem step by step. What is the hardest part for you?",
+      cn: "那我們就一步一步處理這個問題。對你來說最難的部分是什麼？",
+      hi: [{ t: "deal with the problem", cn: "處理這個問題", k: "dealwith", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "speakWave" },
+      en: "When native speakers talk fast, I never understand what they are saying.",
+      cn: "當母語人士講得很快，我完全聽不懂他們在說什麼。",
+      hi: [{ t: "native speakers", cn: "母語人士", k: "native", c: 3 },
+           { t: "understand what they are saying", cn: "聽懂他們在說什麼", k: "understandwhat", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "tonguePronounce" },
+      en: "Try this. Listen to a native speaker and repeat every sentence out loud.",
+      cn: "試試這個方法。聽母語人士說話，然後大聲重複每一句。",
+      hi: [{ t: "repeat", cn: "重複", k: "repeat", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "wordNotebook" },
+      en: "I also want to learn new words and expressions every day.",
+      cn: "我也想每天學新的單字和片語。",
+      hi: [{ t: "new words and expressions", cn: "新的單字和片語", k: "expressions", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "dictionaryLookup" },
+      en: "Good. Then explain each new word to a friend in English.",
+      cn: "很好。然後用英文把每個新字解釋給朋友聽。",
+      hi: [{ t: "explain each new word to a friend", cn: "把每個新字解釋給朋友", k: "explain", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "interviewDesk" },
+      en: "That sounds useful. I was practicing alone last night, and it was really boring.",
+      cn: "聽起來很有用。我昨晚一個人練習，真的很無聊。",
+      hi: [{ t: "was practicing", cn: "當時正在練習", k: "pastcont", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "progressSteps" },
+      en: "Practice with people. Anita, you have become more confident this year.",
+      cn: "要跟人一起練。Anita，你今年已經變得更有自信了。",
+      hi: [{ t: "become more confident", cn: "變得更有自信", k: "confident", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "tightDeadline" },
+      en: "Thank you. But can I cope with the pressure of living in a new city?",
+      cn: "謝謝你。但我承受得住住在一個新城市的壓力嗎？",
+      hi: [{ t: "cope with the pressure", cn: "承受壓力", k: "pressure", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "careerSteps" },
+      en: "Nobody can predict the future. Take the opportunity, and you will learn fast.",
+      cn: "沒有人能預測未來。抓住這個機會，你會學得很快。",
+      hi: [{ t: "predict", cn: "預測", k: "predict", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "openDoorChance" },
+      en: "You're right. I will look for every opportunity to speak English there.",
+      cn: "你說得對。我會在那裡尋找每一個說英文的機會。",
+      hi: [{ t: "look for every opportunity to speak", cn: "尋找每一個說話的機會", k: "lookfor", c: 1 }] },
+
+    /* ---------- 2 重點表達 ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "opportunity", ipa: "/ˌɑːpɚˈtuːnəti/", pos: "n.", phrase: "give someone the opportunity to + V", art: "openDoorChance",
+        def: "A chance to do something that you want to do.",
+        cn: "機會；可以做某事的時機。",
+        note: "Say give me the opportunity, not give me opportunity." },
+      en: "Opportunity. We say: give someone the opportunity to do something.",
+      cn: "Opportunity（機會）。我們說 give someone the opportunity to do something。",
+      hi: [{ t: "give someone the opportunity to", cn: "給某人做某事的機會", k: "giveopp", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "cope with", ipa: "/koʊp/", cn: "撐得住、承受", def: "To carry pressure or difficulty without breaking down.", art: "heavyLoadCarry" },
+        b: { w: "deal with", ipa: "/diːl/", cn: "著手處理", def: "To take action on a problem so it goes away.", art: "puzzleFit" } },
+      en: "Cope with is about carrying pressure. Deal with is about taking action on a problem.",
+      cn: "Cope with 講的是撐住壓力；deal with 講的是動手處理問題。",
+      hi: [{ t: "Cope with", cn: "承受", k: "copewith", c: 2 },
+           { t: "Deal with", cn: "處理", k: "dealwith", c: 4 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "confident", ipa: "/ˈkɑːn.fə.dənt/", pos: "adj.", phrase: "become more confident", art: "progressSteps",
+        def: "Sure that you can do something well.",
+        cn: "有自信的、有把握的。",
+        note: "Three syllables, so use more confident, never confidenter." },
+      en: "Confident. After a few conversation classes, you become more confident.",
+      cn: "Confident（有自信的）。上過幾次會話課之後，你會變得更有自信。",
+      hi: [{ t: "become more confident", cn: "變得更有自信", k: "confident", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "explain", ipa: "/ɪkˈspleɪn/", pos: "v.", phrase: "explain something to someone", art: "talk",
+        def: "To make something clear so another person can understand it.",
+        cn: "解釋、說明，讓別人聽懂。",
+        note: "Never say explain me the reason. Say explain the reason to me." },
+      en: "Explain. We explain something to someone. The person always comes after to.",
+      cn: "Explain（解釋）。我們說 explain something to someone，人一定放在 to 後面。",
+      hi: [{ t: "explain something to someone", cn: "向某人解釋某事", k: "explain", c: 1 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "opportunity", coreCn: "機會＋常用搭配", art: "openDoorChance",
+        items: [{ t: "give someone the opportunity to", cn: "給某人機會做" }, { t: "look for an opportunity to", cn: "尋找機會做" }, { t: "a job opportunity", cn: "工作機會" }, { t: "the job centre", cn: "就業中心" }] },
+      en: "Look for an opportunity to practice. Find a better job opportunity at the job centre.",
+      cn: "尋找練習的機會。在就業中心找到更好的工作機會。",
+      hi: [{ t: "Look for an opportunity to practice", cn: "尋找練習的機會", k: "lookfor", c: 1 },
+           { t: "job opportunity", cn: "工作機會", k: "jobopp", c: 3 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "cope / deal", coreCn: "應付與處理（後面都要 with）", art: "heavyLoadCarry",
+        items: [{ t: "cope with difficulties", cn: "應付困難" }, { t: "cope with the pressure", cn: "承受壓力" }, { t: "deal with a problem", cn: "處理問題" }, { t: "deal with a complaint", cn: "處理客訴" }] },
+      en: "Cope with difficulties, cope with the pressure, deal with a problem, and deal with a complaint.",
+      cn: "應付困難、承受壓力、處理問題、處理客訴。",
+      hi: [{ t: "Cope with difficulties", cn: "應付困難", k: "copewith", c: 2 },
+           { t: "deal with a problem", cn: "處理問題", k: "dealwith", c: 4 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "improve English", coreCn: "學英文四招", art: "speakWave",
+        items: [{ t: "listen to native speakers", cn: "聽母語人士說話" }, { t: "repeat what they say", cn: "重複他們說的話" }, { t: "learn new words and expressions", cn: "學新單字和片語" }, { t: "become more confident", cn: "變得更有自信" }] },
+      en: "Listen to native speakers, repeat what they say, and learn new words and expressions.",
+      cn: "聽母語人士說話、重複他們說的話、學新的單字和片語。",
+      hi: [{ t: "repeat what they say", cn: "重複他們說的話", k: "repeat", c: 2 },
+           { t: "new words and expressions", cn: "新的單字和片語", k: "expressions", c: 4 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "give + 人 + the opportunity to + 原形動詞", art: "openDoorChance",
+        rows: [
+          { lab: "主動", blocks: [{ t: "Tom", k: "s" }, { t: "gave", k: "v" }, { t: "me", k: "n" }, { t: "the opportunity to attend", k: "o" }] },
+          { lab: "被動", blocks: [{ t: "I", k: "s" }, { t: "was never given", k: "v", add: true }, { t: "the opportunity of going", k: "o" }] }
+        ],
+        note: "to + 原形動詞較常用；the opportunity of + V-ing 較正式。被動 was given the opportunity ＝ 被給予機會。" },
+      en: "Tom gave me the opportunity to attend the party tonight.",
+      cn: "Tom 給了我機會參加今晚的派對。",
+      hi: [{ t: "gave me the opportunity to attend", cn: "給了我機會參加", k: "giveopp", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "give + 人 + the opportunity to + 原形動詞", art: "openDoorChance",
+        rows: [
+          { lab: "主動", blocks: [{ t: "Tom", k: "s" }, { t: "gave", k: "v" }, { t: "me", k: "n" }, { t: "the opportunity to attend", k: "o" }] },
+          { lab: "被動", blocks: [{ t: "I", k: "s" }, { t: "was never given", k: "v", add: true }, { t: "the opportunity of going", k: "o" }] }
+        ],
+        note: "of 後面一定接 V-ing，不可寫成 the opportunity of go。" },
+      en: "I was never given the opportunity of going to England.",
+      cn: "我從來沒有得到去英國的機會。",
+      hi: [{ t: "the opportunity of going", cn: "去……的機會", k: "oppofving", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "過去進行式 was / were + V-ing", art: "pastTimeline",
+        rows: [
+          { lab: "單數", blocks: [{ t: "Anita", k: "s" }, { t: "was shopping", k: "v", add: true }, { t: "at the mall", k: "o" }] },
+          { lab: "複數", blocks: [{ t: "Anita and Tom", k: "s" }, { t: "were shopping", k: "v", add: true }, { t: "at the mall", k: "o" }] }
+        ],
+        note: "描述過去某個時間點正在進行的動作；單數用 was、複數用 were。" },
+      en: "Anita and Tom were at the shopping mall. They were shopping.",
+      cn: "Anita 和 Tom 在購物中心，他們正在購物。",
+      hi: [{ t: "were shopping", cn: "當時正在購物", k: "pastcont", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "過去進行式 was / were + V-ing", art: "pastTimeline",
+        rows: [
+          { lab: "背景", blocks: [{ t: "I", k: "s" }, { t: "was reading", k: "v", add: true }, { t: "an English book", k: "o" }] },
+          { lab: "插入", blocks: [{ t: "when", k: "n" }, { t: "my phone", k: "s" }, { t: "rang", k: "v" }] }
+        ],
+        note: "長的背景動作用過去進行式，突然發生的短動作用過去簡單式。" },
+      en: "I was reading an English book when my phone rang.",
+      cn: "我正在讀一本英文書，這時我的手機響了。",
+      hi: [{ t: "was reading", cn: "當時正在讀", k: "pastcont", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "understand what + 主詞 + 動詞", art: "sentenceSlots",
+        rows: [
+          { lab: "口語錯句", blocks: [{ t: "She understands", k: "s" }, { t: "a word", k: "x" }, { t: "what they are saying", k: "o" }] },
+          { lab: "標準寫法", blocks: [{ t: "She understands", k: "s" }, { t: "what they are saying", k: "o", add: true }] }
+        ],
+        note: "what 已經包含「所說的話」，前面不用再加 a word。" },
+      en: "She never understands what they are saying, so she asks them to repeat it.",
+      cn: "她根本聽不懂他們在說什麼，所以她請他們再說一次。",
+      hi: [{ t: "understands what they are saying", cn: "聽懂他們在說什麼", k: "understandwhat", c: 1 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "I can't cope this situation.", bad: ["cope this situation"],
+        fix: "I can't cope with this situation.", good: ["cope with this situation"],
+        why: "Cope and deal always need with." },
+      en: "I can't cope with this situation, so I need help from my team.",
+      cn: "我無法應付這種情況，所以我需要團隊幫忙。",
+      hi: [{ t: "cope with this situation", cn: "應付這種情況", k: "copewith", c: 2 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "Please explain me the reason.", bad: ["explain me the reason"],
+        fix: "Please explain the reason to me.", good: ["explain the reason to me"],
+        why: "Explain needs to before the person." },
+      en: "Please explain the reason to me, because I really don't understand it.",
+      cn: "請把原因解釋給我聽，因為我真的不懂。",
+      hi: [{ t: "explain the reason to me", cn: "把原因解釋給我", k: "explain", c: 1 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "My manager gave me the ___ to attend the training program.", a: "opportunity", n: 1 },
+      en: "My manager gave me the ___ to attend the training program.", say: "My manager gave me the, blank, to attend the training program.",
+      cn: "我的主管給了我＿＿參加訓練課程。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "My manager gave me the ___ to attend the training program.", a: "opportunity", n: 1, show: true },
+      en: "My manager gave me the opportunity to attend the training program.",
+      cn: "我的主管給了我機會參加訓練課程。",
+      hi: [{ t: "gave me the opportunity", cn: "給了我機會", k: "giveopp", c: 1 },
+           { t: "attend the training program", cn: "參加訓練課程", k: "attend", c: 4 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I can't ___ with so much pressure at work.", a: "cope", n: 2 },
+      en: "I can't ___ with so much pressure at work.", say: "I can't, blank, with so much pressure at work.",
+      cn: "我無法＿＿工作上這麼大的壓力。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I can't ___ with so much pressure at work.", a: "cope", n: 2, show: true },
+      en: "I can't cope with so much pressure at work.",
+      cn: "我無法承受工作上這麼大的壓力。（deal with 也可以，但 cope 更強調撐不住）",
+      hi: [{ t: "cope with", cn: "承受", k: "copewith", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Anita and Tom ___ shopping at the mall last night.", a: "were", n: 3 },
+      en: "Anita and Tom ___ shopping at the mall last night.", say: "Anita and Tom, blank, shopping at the mall last night.",
+      cn: "Anita 和 Tom 昨晚＿＿在購物中心購物。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Anita and Tom ___ shopping at the mall last night.", a: "were", n: 3, show: true },
+      en: "Anita and Tom were shopping at the mall last night.",
+      cn: "Anita 和 Tom 昨晚正在購物中心購物。（複數主詞用 were）",
+      hi: [{ t: "were shopping", cn: "當時正在購物", k: "pastcont", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20250807 ===================== */
+/* bk20250807 Continuous Tenses */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* wait in line：四個人在櫃檯前排隊，最後一個人看著時鐘等不下去 */
+    waitInLine: svg(
+      '<line x1="8" y1="134" x2="192" y2="134" '+st+'/>'
+     +'<rect x="140" y="28" width="48" height="106" rx="4" fill="'+L+'" '+st+'/>'
+     +'<rect x="150" y="42" width="28" height="26" rx="3" fill="#fff" '+st+'/>'
+     +'<rect x="146" y="86" width="36" height="10" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M150 108 h28 M150 118 h20" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M106 134 V98 a12 12 0 0 1 24 0 V134 Z" fill="'+A+'" '+st+'/><circle cx="118" cy="82" r="11" fill="'+C+'" '+st+'/>'
+     +'<path d="M76 134 V98 a12 12 0 0 1 24 0 V134 Z" fill="'+C+'" '+st+'/><circle cx="88" cy="82" r="11" fill="'+C+'" '+st+'/>'
+     +'<path d="M46 134 V98 a12 12 0 0 1 24 0 V134 Z" fill="'+C+'" '+st+'/><circle cx="58" cy="82" r="11" fill="'+C+'" '+st+'/>'
+     +'<path d="M16 134 V98 a12 12 0 0 1 24 0 V134 Z" fill="'+C+'" '+st+'/><circle cx="28" cy="82" r="11" fill="'+C+'" '+st+'/>'
+     +'<circle cx="28" cy="34" r="17" fill="#fff" stroke="'+R+'" stroke-width="3"/>'
+     +'<path d="M28 23 v11 h8" fill="none" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'),
+    /* skip class：教室裡的空桌空椅＋紅色打叉＋時鐘（最後一刻翹課） */
+    emptyDeskSkip: svg(
+      '<line x1="8" y1="136" x2="192" y2="136" '+st+'/>'
+     +'<rect x="24" y="64" width="98" height="12" rx="3" fill="'+L+'" '+st+'/>'
+     +'<path d="M36 76 v60 M110 76 v60" '+st+'/>'
+     +'<rect x="44" y="52" width="44" height="12" rx="2" fill="#fff" '+st+'/>'
+     +'<rect x="128" y="88" width="46" height="10" rx="3" fill="'+L+'" '+st+'/>'
+     +'<path d="M134 98 v38 M168 98 v38 M170 88 V58" '+st+'/>'
+     +'<rect x="160" y="52" width="22" height="10" rx="3" fill="'+L+'" '+st+'/>'
+     +'<path d="M132 12 L172 46 M172 12 L132 46" stroke="'+R+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<circle cx="60" cy="26" r="17" fill="#fff" '+st+'/>'
+     +'<path d="M60 15 v11 h8" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20250807 = {
+  title: "Continuous Tenses",
+  titleCn: "現在進行式與過去進行式",
+  date: "2025-08-07",
+  level: "B1",
+  scene: "Language School Corridor · Before Class",
+  sceneCn: "語言學校走廊・上課前",
+  sceneArt: "waitInLine",
+  titleArt: ["clock", "talk", "book"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・英文班學員", voice: "f" },
+    T: { name: "Tom", cn: "Tom・同班同學", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "Before Class", cn: "情境：上課前的走廊" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    hatewaiting: { t: "hate + V-ing", cn: "討厭做某事", tag: ["III-D"],
+      note: "hate 後面接動名詞 V-ing；hate to + V 也存在，但講「一直討厭」的習慣一律用 V-ing。",
+      ex: "My brother hates getting up early on Sundays.", exCn: "我弟弟討厭週日早起。" },
+    waitinline: { t: "wait in line", cn: "排隊等待", tag: ["搭配詞"],
+      note: "美式用 wait in line，英式用 wait in a queue；不要說 wait the line。",
+      ex: "We waited in line for forty minutes to buy the tickets.", exCn: "我們排了四十分鐘的隊才買到票。" },
+    enjoyving: { t: "enjoy + V-ing", cn: "喜歡做某事", tag: ["III-D", "易錯"],
+      note: "enjoy 後面絕對不能接不定詞：❌ enjoy to learn → ✅ enjoy learning。",
+      ex: "She enjoys cooking for her family on weekends.", exCn: "她喜歡週末為家人做菜。" },
+    skipclass: { t: "skip class", cn: "翹課、跳過一堂課", tag: ["單字"],
+      note: "skip 也可以指「跳過」某一頁、某一餐：skip breakfast（不吃早餐）。",
+      ex: "He skipped breakfast because he woke up late.", exCn: "他因為睡晚了所以沒吃早餐。" },
+    lastminute: { t: "at the last minute", cn: "在最後一刻", tag: ["搭配詞"],
+      note: "minute 這裡唸 /ˈmɪn.ɪt/；當形容詞用要加連字號：a last-minute change。",
+      ex: "They cancelled the meeting at the last minute.", exCn: "他們在最後一刻取消了會議。" },
+    prescont: { t: "am / is / are + V-ing", cn: "現在進行式", tag: ["III-C"],
+      note: "現在正在進行的動作。I 用 am，he／she／it 用 is，you／we／they 用 are。",
+      ex: "Be quiet. The baby is sleeping in the next room.", exCn: "安靜點，寶寶正在隔壁房間睡覺。" },
+    pastcont: { t: "was / were + V-ing", cn: "過去進行式", tag: ["III-B"],
+      note: "過去某個時間點正在進行的動作；單數用 was、複數和 you 用 were。",
+      ex: "At nine last night, I was washing the dishes.", exCn: "昨晚九點，我正在洗碗。" },
+    presentperf: { t: "have never had the opportunity to + V", cn: "從來沒有機會做某事", tag: ["III-A"],
+      note: "現在完成式 have + 過去分詞：第一個 have 是助動詞，had 才是 have 的過去分詞。",
+      ex: "I have never had the opportunity to visit Europe.", exCn: "我從來沒有機會去歐洲。" },
+    copediff: { t: "cope with difficulties", cn: "應付困難", tag: ["V-A", "不可省略 with"],
+      note: "cope 後面一定要 with：❌ cope my difficulties → ✅ cope with my difficulties。",
+      ex: "New parents have to cope with a lot of difficulties in the first year.", exCn: "新手父母第一年必須應付很多困難。" },
+    difficulties: { t: "job difficulties", cn: "工作上的困難", tag: ["單字"],
+      note: "difficulty 當「困難的事情」時可以數，常用複數 difficulties；當「困難的程度」時不可數。",
+      ex: "She talked to her boss about her job difficulties.", exCn: "她跟主管談了她工作上的困難。" },
+    decision: { t: "make a decision to + V", cn: "做出決定要做某事", tag: ["III-E", "易錯"],
+      note: "decision 是名詞，動詞用 make，不可用 do；make a decision to + V ＝ decide to + V。",
+      ex: "After two years, they made a decision to move to Tainan.", exCn: "兩年後，他們決定搬到台南。" },
+    quitjob: { t: "quit one's job", cn: "辭職", tag: ["搭配詞"],
+      note: "quit 的過去式和過去分詞都是 quit；離職也可以說 leave the company。",
+      ex: "He quit his job and started a small coffee shop.", exCn: "他辭掉工作，開了一家小咖啡店。" },
+    pronounce: { t: "pronounce clearly", cn: "發音清晰", tag: ["I"],
+      note: "動詞是 pronounce，名詞是 pronunciation（拼法不一樣，很容易寫錯）。",
+      ex: "Please pronounce your family name slowly for me.", exCn: "請幫我慢慢地把你的姓唸一次。" },
+    clearly: { t: "clearly", cn: "清楚地", tag: ["副詞"],
+      note: "clearly 修飾動詞，放在動詞後面：speak clearly、write clearly、see clearly。",
+      ex: "I could see the road clearly after the rain stopped.", exCn: "雨停之後我可以清楚看見路面。" },
+    encourage: { t: "encourage someone to + V", cn: "鼓勵某人做某事", tag: ["I"],
+      note: "encourage 後面接「人 + to + 原形動詞」，不可接 V-ing：❌ encourage me speaking。",
+      ex: "My coach encouraged me to join the swimming team.", exCn: "教練鼓勵我加入游泳隊。" },
+    mistakes: { t: "make mistakes", cn: "犯錯", tag: ["搭配詞"],
+      note: "犯錯用 make a mistake，不用 do a mistake；學語言時 make mistakes 是正常的。",
+      ex: "Don't worry if you make mistakes when you speak.", exCn: "說話時犯錯不用擔心。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today we meet Anita and Tom in the corridor before their English class.",
+      cn: "歡迎回來。今天我們在英文課前的走廊遇到 Anita 和 Tom。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for three tenses: am doing, was doing, and have never had.",
+      cn: "注意聽三種時態：am doing、was doing 和 have never had。" },
+
+    /* ---------- 1 情境對話（14 句） ---------- */
+    { ch: 1, sp: "T", vis: { type: "scene", art: "waitInLine" },
+      en: "Hi, Anita! Sorry I'm late. I hate waiting in line at the coffee shop.",
+      cn: "嗨，Anita！抱歉我遲到了。我討厭在咖啡店排隊。",
+      hi: [{ t: "hate waiting in line", cn: "討厭排隊", k: "hatewaiting", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "emptyDeskSkip" },
+      en: "No problem. Two students skipped the class at the last minute today.",
+      cn: "沒關係。今天有兩個同學在最後一刻翹課了。",
+      hi: [{ t: "skipped the class", cn: "翹課", k: "skipclass", c: 2 },
+           { t: "at the last minute", cn: "在最後一刻", k: "lastminute", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "dictionaryLookup" },
+      en: "What are you reading? You look really busy.",
+      cn: "你在讀什麼？你看起來很忙。",
+      hi: [{ t: "are you reading", cn: "你正在讀（現在進行式）", k: "prescont", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "wordNotebook" },
+      en: "I'm writing down new words. I enjoy learning five new words every day.",
+      cn: "我在抄新單字。我喜歡每天學五個新字。",
+      hi: [{ t: "enjoy learning", cn: "喜歡學", k: "enjoyving", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "tightDeadline" },
+      en: "By the way, how is the new job? Last month you looked so tired.",
+      cn: "順便問一下，新工作怎麼樣？上個月你看起來很累。" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "frustratedFace" },
+      en: "I couldn't cope with my job difficulties, so I made a decision to quit my job.",
+      cn: "我無法應付工作上的困難，所以我決定辭職。",
+      hi: [{ t: "cope with my job difficulties", cn: "應付工作困難", k: "copediff", c: 2 },
+           { t: "made a decision to quit", cn: "決定要辭", k: "decision", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "twoMinds" },
+      en: "That was a big decision. What were you doing before you decided?",
+      cn: "那是一個很大的決定。你決定之前在做什麼？",
+      hi: [{ t: "were you doing", cn: "你當時正在做", k: "pastcont", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "interviewDesk" },
+      en: "I was working twelve hours a day, and the job difficulties never stopped.",
+      cn: "我一天工作十二個小時，工作上的困難也沒停過。",
+      hi: [{ t: "was working", cn: "當時正在工作", k: "pastcont", c: 3 },
+           { t: "job difficulties", cn: "工作上的困難", k: "difficulties", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "careerSteps" },
+      en: "I have never had the opportunity to study full-time. You are lucky.",
+      cn: "我從來沒有機會全職學習。你很幸運。",
+      hi: [{ t: "have never had the opportunity to study", cn: "從來沒有機會學習", k: "presentperf", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "vocabNotebookTicks" },
+      en: "Right now I'm taking two classes, and I'm reading one short story a week.",
+      cn: "我現在上兩門課，每週還讀一篇短篇故事。",
+      hi: [{ t: "I'm taking", cn: "我正在上（課）", k: "prescont", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "tonguePronounce" },
+      en: "Great. My teacher always tells me to pronounce every word clearly.",
+      cn: "很棒。我的老師總是叫我把每個字唸清楚。",
+      hi: [{ t: "pronounce every word clearly", cn: "把每個字唸清楚", k: "pronounce", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "speakWave" },
+      en: "Mine encourages me to speak more, even when I make mistakes.",
+      cn: "我的老師鼓勵我多開口說，就算我會犯錯。",
+      hi: [{ t: "encourages me to speak", cn: "鼓勵我開口說", k: "encourage", c: 1 },
+           { t: "make mistakes", cn: "犯錯", k: "mistakes", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "verbFork" },
+      en: "One more thing. We say enjoy learning, never enjoy to learn.",
+      cn: "還有一件事。我們說 enjoy learning，絕對不說 enjoy to learn。",
+      hi: [{ t: "enjoy learning", cn: "喜歡學", k: "enjoyving", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "progressSteps" },
+      en: "I'll remember that. Let's go in. The teacher is waiting for us.",
+      cn: "我會記住。我們進去吧，老師正在等我們。",
+      hi: [{ t: "is waiting", cn: "正在等", k: "prescont", c: 4 }] },
+
+    /* ---------- 2 重點表達 ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "pronounce", ipa: "/prəˈnaʊns/", pos: "v.", phrase: "pronounce clearly", art: "tonguePronounce",
+        def: "To say a word or a sound in a certain way.",
+        cn: "發音、把字唸出來。",
+        note: "The noun is pronunciation, spelled without the o-u-n-c-e." },
+      en: "Pronounce. Your teacher wants you to say every word clearly.",
+      cn: "Pronounce（發音）。老師希望你把每個字唸清楚。",
+      hi: [{ t: "Pronounce", cn: "發音", k: "pronounce", c: 2 },
+           { t: "clearly", cn: "清楚地", k: "clearly", c: 3 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "encourage", ipa: "/ɪnˈkɝː.ɪdʒ/", pos: "v.", phrase: "encourage someone to + V", art: "feedbackNote",
+        def: "To give someone courage or hope so they keep trying.",
+        cn: "鼓勵某人繼續努力。",
+        note: "Always encourage someone to do something, never to doing." },
+      en: "Encourage. A good teacher encourages you to speak, even with mistakes.",
+      cn: "Encourage（鼓勵）。好老師會鼓勵你開口說，就算會犯錯。",
+      hi: [{ t: "encourages you to speak", cn: "鼓勵你開口說", k: "encourage", c: 1 },
+           { t: "mistakes", cn: "錯誤", k: "mistakes", c: 3 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "skip", ipa: "/skɪp/", pos: "v.", phrase: "skip class at the last minute", art: "emptyDeskSkip",
+        def: "To not go to something, or to jump over a part of something.",
+        cn: "翹（課）、跳過（某一部分）。",
+        note: "You can also skip breakfast or skip a page." },
+      en: "Skip. Don't skip class at the last minute, because you will miss a lot.",
+      cn: "Skip（翹課、跳過）。不要在最後一刻翹課，因為你會漏掉很多內容。",
+      hi: [{ t: "skip class", cn: "翹課", k: "skipclass", c: 2 },
+           { t: "at the last minute", cn: "在最後一刻", k: "lastminute", c: 3 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "hate", ipa: "/heɪt/", cn: "討厭", def: "To dislike something very much.", art: "waitInLine" },
+        b: { w: "enjoy", ipa: "/ɪnˈdʒɔɪ/", cn: "喜歡", def: "To get pleasure from something.", art: "wordNotebook" } },
+      en: "Hate and enjoy both take V-ing: I hate waiting, and I enjoy learning.",
+      cn: "hate 和 enjoy 後面都接 V-ing：I hate waiting、I enjoy learning。",
+      hi: [{ t: "hate waiting", cn: "討厭等待", k: "hatewaiting", c: 1 },
+           { t: "enjoy learning", cn: "喜歡學習", k: "enjoyving", c: 4 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "make a decision", coreCn: "做決定（用 make，不用 do）", art: "twoMinds",
+        items: [{ t: "to quit your job", cn: "辭職" }, { t: "to move abroad", cn: "搬到國外" }, { t: "to study at night", cn: "晚上讀書" }, { t: "a quick decision", cn: "快速的決定" }] },
+      en: "She made a decision to study at night, and he decided to quit his job.",
+      cn: "她決定晚上讀書，而他決定辭職。",
+      hi: [{ t: "made a decision to study", cn: "決定要讀書", k: "decision", c: 1 },
+           { t: "quit his job", cn: "辭掉工作", k: "quitjob", c: 3 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "+ V-ing", coreCn: "後面只接 V-ing 的動詞", art: "verbFork",
+        items: [{ t: "hate waiting in line", cn: "討厭排隊" }, { t: "enjoy learning new words", cn: "喜歡學新單字" }, { t: "hate getting up early", cn: "討厭早起" }, { t: "enjoy reading at night", cn: "喜歡晚上閱讀" }] },
+      en: "I hate waiting in line, but I enjoy learning new words while I wait.",
+      cn: "我討厭排隊，但我喜歡在等的時候學新單字。",
+      hi: [{ t: "waiting in line", cn: "排隊等待", k: "waitinline", c: 1 },
+           { t: "enjoy learning new words", cn: "喜歡學新單字", k: "enjoyving", c: 4 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "in class", coreCn: "課堂常用搭配", art: "tonguePronounce",
+        items: [{ t: "pronounce clearly", cn: "發音清晰" }, { t: "encourage someone to speak", cn: "鼓勵某人開口" }, { t: "cope with difficulties", cn: "應付困難" }, { t: "at the last minute", cn: "在最後一刻" }] },
+      en: "Pronounce clearly, encourage your classmates to speak, and cope with difficulties together.",
+      cn: "發音清晰、鼓勵同學開口說，一起應付困難。",
+      hi: [{ t: "Pronounce clearly", cn: "發音清晰", k: "pronounce", c: 2 },
+           { t: "cope with difficulties", cn: "應付困難", k: "copediff", c: 3 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "現在完成式 have / has + 過去分詞", art: "goneVsBeen",
+        rows: [
+          { lab: "經驗", blocks: [{ t: "I", k: "s" }, { t: "have never had", k: "v", add: true }, { t: "the opportunity", k: "o" }, { t: "to go to England", k: "n" }] }
+        ],
+        note: "第一個 have 是助動詞，had 才是 have 的過去分詞；never、ever、before 常一起出現。" },
+      en: "I have never had the opportunity to go to England.",
+      cn: "我從來沒有去英國的機會。",
+      hi: [{ t: "have never had the opportunity", cn: "從來沒有機會", k: "presentperf", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "現在進行式 am / is / are + V-ing", art: "habitVsNow",
+        rows: [
+          { lab: "I", blocks: [{ t: "I", k: "s" }, { t: "am practicing", k: "v", add: true }, { t: "English now", k: "o" }] },
+          { lab: "he / she", blocks: [{ t: "She", k: "s" }, { t: "is reading", k: "v", add: true }, { t: "a short story", k: "o" }] }
+        ],
+        note: "現在正在進行的動作；I 用 am，he／she／it 用 is，you／we／they 用 are。" },
+      en: "I am practicing English now, and she is reading a short story.",
+      cn: "我現在正在練英文，她正在讀一篇短篇故事。",
+      hi: [{ t: "am practicing", cn: "正在練習", k: "prescont", c: 4 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "過去進行式 was / were + V-ing", art: "pastTimeline",
+        rows: [
+          { lab: "單數", blocks: [{ t: "I", k: "s" }, { t: "was working", k: "v", add: true }, { t: "twelve hours a day", k: "o" }] },
+          { lab: "複數", blocks: [{ t: "They", k: "s" }, { t: "were shopping", k: "v", add: true }, { t: "at the mall", k: "o" }] }
+        ],
+        note: "過去某個時間點正在進行；單數用 was、複數和 you 用 were。" },
+      en: "They were shopping at the mall when I was working at the office.",
+      cn: "我在辦公室工作的時候，他們正在購物中心購物。",
+      hi: [{ t: "were shopping", cn: "當時正在購物", k: "pastcont", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "hate / enjoy + V-ing", art: "ingVsTo",
+        rows: [
+          { lab: "錯", blocks: [{ t: "I enjoy", k: "s" }, { t: "to learn", k: "x" }, { t: "new words", k: "o" }] },
+          { lab: "對", blocks: [{ t: "I enjoy", k: "s" }, { t: "learning", k: "v", add: true }, { t: "new words", k: "o" }] }
+        ],
+        note: "enjoy、hate、finish、mind 後面一律接 V-ing，不可接 to + 原形動詞。" },
+      en: "I enjoy learning new words, and I hate waiting in line.",
+      cn: "我喜歡學新單字，我討厭排隊。",
+      hi: [{ t: "enjoy learning new words", cn: "喜歡學新單字", k: "enjoyving", c: 4 },
+           { t: "hate waiting in line", cn: "討厭排隊", k: "hatewaiting", c: 1 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "I can't cope my job difficulties.", bad: ["cope my job difficulties"],
+        fix: "I can't cope with my job difficulties.", good: ["cope with my job difficulties"],
+        why: "Cope always needs with before the problem." },
+      en: "I can't cope with my job difficulties, so I talked to my manager.",
+      cn: "我無法應付工作上的困難，所以我找主管談了。",
+      hi: [{ t: "cope with my job difficulties", cn: "應付工作困難", k: "copediff", c: 2 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "I enjoy to learn new words, and I made a decision to do it every day.", bad: ["to learn", "do a decision"],
+        fix: "I enjoy learning new words, and I made a decision to review them every day.", good: ["learning", "made a decision"],
+        why: "Enjoy takes V-ing, and we make a decision, not do one." },
+      en: "I enjoy learning new words, and I made a decision to review them every day.",
+      cn: "我喜歡學新單字，而且我決定每天複習它們。",
+      hi: [{ t: "enjoy learning", cn: "喜歡學", k: "enjoyving", c: 4 },
+           { t: "made a decision to review", cn: "決定要複習", k: "decision", c: 1 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I hate ___ in line at the bank.", a: "waiting", n: 1 },
+      en: "I hate ___ in line at the bank.", say: "I hate, blank, in line at the bank.",
+      cn: "我討厭在銀行＿＿隊。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "I hate ___ in line at the bank.", a: "waiting", n: 1, show: true },
+      en: "I hate waiting in line at the bank.",
+      cn: "我討厭在銀行排隊。（hate 後面接 V-ing）",
+      hi: [{ t: "hate", cn: "討厭", k: "hatewaiting", c: 1 },
+           { t: "waiting in line", cn: "排隊等待", k: "waitinline", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "So I made a ___ to quit my job.", a: "decision", n: 2 },
+      en: "So I made a ___ to quit my job.", say: "So I made a, blank, to quit my job.",
+      cn: "所以我做出＿＿要辭職。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "So I made a ___ to quit my job.", a: "decision", n: 2, show: true },
+      en: "So I made a decision to quit my job.",
+      cn: "所以我決定辭職。（make a decision，不是 do a decision）",
+      hi: [{ t: "made a decision", cn: "做出決定", k: "decision", c: 1 },
+           { t: "quit my job", cn: "辭職", k: "quitjob", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "They ___ shopping when the rain started.", a: "were", n: 3 },
+      en: "They ___ shopping when the rain started.", say: "They, blank, shopping when the rain started.",
+      cn: "下雨的時候他們＿＿在購物。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "They ___ shopping when the rain started.", a: "were", n: 3, show: true },
+      en: "They were shopping when the rain started.",
+      cn: "下雨的時候他們正在購物。（複數主詞用 were）",
+      hi: [{ t: "were shopping", cn: "當時正在購物", k: "pastcont", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20251016 ===================== */
+/* bk20251016 A Community of Growth and Friendship */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* 社區的免費週末學校：校舍＋FREE SCHOOL 招牌＋旗子 */
+    freeSchoolBoard: svg(
+      '<line x1="8" y1="136" x2="192" y2="136" '+st+'/>'
+     +'<rect x="34" y="52" width="132" height="84" rx="4" fill="#fff" '+st+'/>'
+     +'<path d="M26 52 L100 20 L174 52 Z" fill="'+L+'" '+st+'/>'
+     +'<path d="M100 20 V6 h22 v10 h-22" fill="'+A+'" '+st+'/>'
+     +'<rect x="84" y="92" width="32" height="44" rx="2" fill="'+A+'" '+st+'/>'
+     +'<circle cx="110" cy="114" r="3" fill="#fff"/>'
+     +'<rect x="46" y="68" width="28" height="22" rx="3" fill="'+C+'" '+st+'/>'
+     +'<rect x="126" y="68" width="28" height="22" rx="3" fill="'+C+'" '+st+'/>'
+     +'<rect x="40" y="104" width="36" height="19" rx="4" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<text x="58" y="118" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#fff">FREE</text>'
+     +'<rect x="124" y="104" width="38" height="19" rx="4" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<text x="143" y="118" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#fff">SCHOOL</text>'),
+    /* 名詞字尾記憶法：三張卡 -MENT／-TION／-SHIP */
+    suffixCards: svg(
+      '<rect x="8" y="30" width="56" height="88" rx="8" fill="#fff" '+st+'/>'
+     +'<path d="M8 50 V38 a8 8 0 0 1 8 -8 h40 a8 8 0 0 1 8 8 v12 z" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>'
+     +'<text x="36" y="46" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#fff">-MENT</text>'
+     +'<g font-family="sans-serif" font-size="9" fill="'+D+'"><text x="36" y="70" text-anchor="middle">achieve-</text><text x="36" y="86" text-anchor="middle">govern-</text><text x="36" y="102" text-anchor="middle">develop-</text></g>'
+     +'<rect x="72" y="30" width="56" height="88" rx="8" fill="#fff" '+st+'/>'
+     +'<path d="M72 50 V38 a8 8 0 0 1 8 -8 h40 a8 8 0 0 1 8 8 v12 z" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>'
+     +'<text x="100" y="46" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#fff">-TION</text>'
+     +'<g font-family="sans-serif" font-size="9" fill="'+D+'"><text x="100" y="70" text-anchor="middle">tradi-</text><text x="100" y="86" text-anchor="middle">competi-</text><text x="100" y="102" text-anchor="middle">connec-</text></g>'
+     +'<rect x="136" y="30" width="56" height="88" rx="8" fill="#fff" '+st+'/>'
+     +'<path d="M136 50 V38 a8 8 0 0 1 8 -8 h40 a8 8 0 0 1 8 8 v12 z" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>'
+     +'<text x="164" y="46" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#fff">-SHIP</text>'
+     +'<g font-family="sans-serif" font-size="9" fill="'+D+'"><text x="164" y="70" text-anchor="middle">leader-</text><text x="164" y="86" text-anchor="middle">friend-</text><text x="164" y="102" text-anchor="middle">relation-</text></g>'
+     +'<path d="M8 128 H192" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'),
+    /* 在觀眾面前表演／發言：舞台上的人＋麥克風＋台下觀眾 */
+    stagePerformance: svg(
+      '<rect x="14" y="16" width="172" height="66" rx="6" fill="'+C+'" '+st+'/>'
+     +'<rect x="14" y="82" width="172" height="12" rx="3" fill="'+L+'" '+st+'/>'
+     +'<circle cx="96" cy="40" r="12" fill="#fff" '+st+'/>'
+     +'<path d="M80 82 V60 a16 16 0 0 1 32 0 V82 Z" fill="'+A+'" '+st+'/>'
+     +'<path d="M112 64 L130 52" '+st+'/>'
+     +'<circle cx="134" cy="48" r="7" fill="'+D+'"/><path d="M134 55 v14" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M34 28 L52 46 M40 22 L58 40" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<g fill="'+L+'" '+st+'><circle cx="30" cy="124" r="13"/><circle cx="76" cy="130" r="13"/><circle cx="124" cy="130" r="13"/><circle cx="170" cy="124" r="13"/></g>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20251016 = {
+  title: "A Community of Growth and Friendship",
+  titleCn: "社區成長與友誼",
+  date: "2025-10-16",
+  level: "B1",
+  scene: "Free Weekend School · Open House Night",
+  sceneCn: "社區免費週末學校・成果發表夜",
+  sceneArt: "freeSchoolBoard",
+  titleArt: ["people", "building", "star"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・週末學校志工老師", voice: "f" },
+    T: { name: "Tom", cn: "Tom・學生家長", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "Open House Night", cn: "情境：成果發表夜" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    decision: { t: "make a decision to + V", cn: "做出決定要做某事", tag: ["III-A", "易錯"],
+      note: "decision 是名詞，動詞一定用 make，不可說 do a decision；to 後面接原形動詞。",
+      ex: "The team made a decision to start the project in March.", exCn: "團隊決定三月開始這個專案。" },
+    helpv: { t: "help + 人 + 原形動詞", cn: "幫助某人做某事", tag: ["III-B"],
+      note: "help 後面的動詞不加 to 更常見：help him carry the box；加 to 也對，但不能用 V-ing。",
+      ex: "Can you help me carry these chairs upstairs?", exCn: "你可以幫我把這些椅子搬上樓嗎？" },
+    thanever: { t: "比較級 + than ever", cn: "比以往任何時候更……", tag: ["III-C", "收尾句"],
+      note: "than ever ＝ than ever before，很適合放在文章或演講的最後一句。",
+      ex: "After the training, our team works faster than ever.", exCn: "受訓之後，我們的團隊比以往任何時候都更快。" },
+    support: { t: "support the idea", cn: "支持這個想法", tag: ["單字"],
+      note: "support 當動詞後面直接接受詞，不加介系詞：❌ support to the plan。",
+      ex: "Most parents supported the idea of a longer lunch break.", exCn: "大多數家長支持延長午休的想法。" },
+    benefits: { t: "bring benefits to society", cn: "給社會帶來好處", tag: ["搭配詞"],
+      note: "benefit 當名詞常用複數 benefits；bring benefits to + 對象。",
+      ex: "Exercise brings many benefits to your heart.", exCn: "運動給你的心臟帶來許多好處。" },
+    gainknow: { t: "gain knowledge and experience", cn: "獲得知識和經驗", tag: ["搭配詞"],
+      note: "gain 是「慢慢累積而得到」，常搭配 knowledge、experience、weight、confidence。",
+      ex: "He gained a lot of experience during his first year.", exCn: "他在第一年累積了很多經驗。" },
+    leadership: { t: "show leadership and responsibility", cn: "展現領導力與責任感", tag: ["搭配詞", "-ship"],
+      note: "leadership、friendship、relationship 都是 -ship 字尾的抽象名詞，不可數。",
+      ex: "The captain showed great leadership during the storm.", exCn: "船長在暴風中展現了極強的領導力。" },
+    competition: { t: "a friendly competition", cn: "友好的比賽", tag: ["-tion"],
+      note: "competition 既是「比賽」也是「競爭」；參加比賽說 enter／join a competition。",
+      ex: "Our class entered a friendly cooking competition.", exCn: "我們班參加了一場友好的烹飪比賽。" },
+    performance: { t: "performance", cn: "表現、表演", tag: ["單字"],
+      note: "performance 可以指舞台表演，也可以指工作或考試的表現：job performance。",
+      ex: "The band gave an amazing performance last night.", exCn: "樂團昨晚帶來了精彩的演出。" },
+    audience: { t: "in front of the audience", cn: "在觀眾面前", tag: ["搭配詞"],
+      note: "audience 是一群觀眾，當一個整體時動詞用單數：The audience was quiet.",
+      ex: "She sang in front of a huge audience for the first time.", exCn: "她第一次在大批觀眾面前唱歌。" },
+    nervous: { t: "feel nervous", cn: "感到緊張", tag: ["形容詞"],
+      note: "nervous 是「緊張」，不是「神經的」；緊張到手抖說 My hands were shaking.",
+      ex: "I always feel nervous before a job interview.", exCn: "我面試前總是很緊張。" },
+    courage: { t: "find the courage to + V", cn: "找到做某事的勇氣", tag: ["搭配詞"],
+      note: "courage 是不可數名詞，前面不加 a；勇敢的形容詞是 brave。",
+      ex: "He finally found the courage to tell the truth.", exCn: "他終於找到勇氣說出真相。" },
+    achievement: { t: "a great achievement", cn: "一個巨大的成就", tag: ["-ment"],
+      note: "achievement 是可數名詞，可以說 a small achievement、many achievements。",
+      ex: "Finishing the marathon was a great achievement for her.", exCn: "跑完馬拉松對她來說是個巨大的成就。" },
+    confidence: { t: "skills and confidence", cn: "技能與自信", tag: ["-ence"],
+      note: "confidence 是名詞（不可數），confident 是形容詞：have confidence in yourself。",
+      ex: "Speaking practice builds skills and confidence at the same time.", exCn: "口說練習同時建立技能與自信。" },
+    improvement: { t: "a big improvement", cn: "很大的進步", tag: ["-ment"],
+      note: "improvement 講「變好」，development 講「成長、發展」，兩個不一樣。",
+      ex: "There is a big improvement in his handwriting this term.", exCn: "他這學期的字跡有很大的進步。" },
+    nature: { t: "care for nature and respect culture", cn: "關心自然、尊重文化", tag: ["搭配詞"],
+      note: "care for ＝ 照顧、珍惜；nature 和 culture 在這裡都不加 the。",
+      ex: "The camp teaches children to care for nature.", exCn: "這個營隊教孩子們關心自然。" },
+    conversation: { t: "have a long conversation with", cn: "與某人長談", tag: ["搭配詞"],
+      note: "conversation 前面用 have，不用 do 或 make；對象用 with 帶出來。",
+      ex: "I had a long conversation with my sister about her new job.", exCn: "我和妹妹針對她的新工作長談了一番。" },
+    suffixes: { t: "-ment / -tion / -ship", cn: "名詞字尾記憶法", tag: ["III-D", "學習法"],
+      note: "-ment 是行為或結果、-tion 是動作或狀態、-ship 是身分或關係；按字尾分類背最省力。",
+      ex: "Government, competition, and friendship are all abstract nouns.", exCn: "government、competition、friendship 都是抽象名詞。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Tonight, a community school shows what its students have done this year.",
+      cn: "歡迎回來。今晚，一所社區學校要展示學生們這一年的成果。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for the abstract nouns: achievement, leadership, confidence, and friendship.",
+      cn: "注意聽這些抽象名詞：achievement、leadership、confidence 和 friendship。" },
+
+    /* ---------- 1 情境對話（14 句） ---------- */
+    { ch: 1, sp: "T", vis: { type: "scene", art: "freeSchoolBoard" },
+      en: "Good evening, Anita. Is this the free weekend school our community started last year?",
+      cn: "晚安，Anita。這就是我們社區去年辦的免費週末學校嗎？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "freeSchoolBoard" },
+      en: "Yes. Last year we made a decision to open it for young people.",
+      cn: "是的。去年我們決定為年輕人開辦這所學校。",
+      hi: [{ t: "made a decision to open", cn: "決定要開辦", k: "decision", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "building" },
+      en: "That's a big project. Did the government support the idea?",
+      cn: "這是個大專案。政府支持這個想法嗎？",
+      hi: [{ t: "support the idea", cn: "支持這個想法", k: "support", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "chartUp" },
+      en: "It did, because everyone agreed the school brings many benefits to society.",
+      cn: "支持，因為大家都同意這所學校給社會帶來許多好處。",
+      hi: [{ t: "brings many benefits to society", cn: "給社會帶來許多好處", k: "benefits", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "marathonRunner" },
+      en: "I heard there is a friendly competition every month.",
+      cn: "我聽說每個月都有一場友好的比賽。",
+      hi: [{ t: "a friendly competition", cn: "友好的比賽", k: "competition", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "stagePerformance" },
+      en: "Right. Every month students show their performance in front of the audience and their parents.",
+      cn: "對。每個月學生們都在觀眾和家長面前展示他們的表現。",
+      hi: [{ t: "performance", cn: "表現、表演", k: "performance", c: 1 },
+           { t: "in front of the audience", cn: "在觀眾面前", k: "audience", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "worriedFace" },
+      en: "My daughter always feels nervous. She hates speaking to a crowd.",
+      cn: "我女兒總是很緊張。她討厭在一群人面前說話。",
+      hi: [{ t: "feels nervous", cn: "感到緊張", k: "nervous", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "flame" },
+      en: "Last month she finally found the courage to speak for three whole minutes.",
+      cn: "上個月她終於找到勇氣，整整說了三分鐘。",
+      hi: [{ t: "found the courage to speak", cn: "找到勇氣開口說", k: "courage", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "starSteps" },
+      en: "Really? That is a great achievement for her.",
+      cn: "真的嗎？對她來說這是個巨大的成就。",
+      hi: [{ t: "a great achievement", cn: "巨大的成就", k: "achievement", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "feedbackNote" },
+      en: "Our teachers help students improve their skills and confidence.",
+      cn: "我們的老師幫助學生提升技能和自信。",
+      hi: [{ t: "help students improve", cn: "幫助學生提升", k: "helpv", c: 1 },
+           { t: "skills and confidence", cn: "技能與自信", k: "confidence", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "progressSteps" },
+      en: "I have noticed a big improvement in her attitude at home too.",
+      cn: "我也注意到她在家裡的態度有很大的進步。",
+      hi: [{ t: "a big improvement", cn: "很大的進步", k: "improvement", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "leaf" },
+      en: "We also teach them to care for nature and respect culture.",
+      cn: "我們也教他們關心自然、尊重文化。",
+      hi: [{ t: "care for nature and respect culture", cn: "關心自然、尊重文化", k: "nature", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "roundTable" },
+      en: "Thank you. I would like to have a long conversation with her teacher.",
+      cn: "謝謝你。我想和她的老師好好長談一次。",
+      hi: [{ t: "have a long conversation with", cn: "與某人長談", k: "conversation", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "toastGlasses" },
+      en: "Please join our celebration. Our community is more united than ever.",
+      cn: "歡迎來參加我們的慶祝活動。我們的社區比以往任何時候都更團結。",
+      hi: [{ t: "more united than ever", cn: "比以往更團結", k: "thanever", c: 2 }] },
+
+    /* ---------- 2 重點表達 ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "achievement", ipa: "/əˈtʃiːv.mənt/", pos: "n.", phrase: "a great achievement", art: "starSteps",
+        def: "Something good that you finish after a lot of effort.",
+        cn: "努力之後完成的好事，也就是成就。",
+        note: "The -ment ending turns a verb into a noun: achieve to achievement." },
+      en: "Achievement. Finishing the whole course was a great achievement for the class.",
+      cn: "Achievement（成就）。上完整門課對這個班來說是巨大的成就。",
+      hi: [{ t: "a great achievement", cn: "巨大的成就", k: "achievement", c: 4 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "leadership", ipa: "/ˈliː.dɚ.ʃɪp/", pos: "n.", phrase: "show leadership and responsibility", art: "feedbackNote",
+        def: "The ability to guide a group of people well.",
+        cn: "帶領一群人的能力，也就是領導力。",
+        note: "The -ship ending means a role or a relationship, so it has no plural." },
+      en: "Leadership. Our teachers show leadership and responsibility every weekend.",
+      cn: "Leadership（領導力）。我們的老師每個週末都展現領導力與責任感。",
+      hi: [{ t: "show leadership and responsibility", cn: "展現領導力與責任感", k: "leadership", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "courage", ipa: "/ˈkɝː.ɪdʒ/", pos: "n.", phrase: "find the courage to + V", art: "flame",
+        def: "The feeling that lets you do something even when you are afraid.",
+        cn: "害怕時仍然去做的那股勇氣。",
+        note: "Courage is uncountable, so never say a courage." },
+      en: "Courage. She found the courage to speak in front of the audience.",
+      cn: "Courage（勇氣）。她找到勇氣，在觀眾面前開口說話。",
+      hi: [{ t: "found the courage to speak", cn: "找到勇氣開口說", k: "courage", c: 1 },
+           { t: "in front of the audience", cn: "在觀眾面前", k: "audience", c: 3 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "improvement", ipa: "/ɪmˈpruːv.mənt/", cn: "進步、改善", def: "A change that makes something better than before.", art: "progressSteps" },
+        b: { w: "development", ipa: "/dɪˈveləpmənt/", cn: "發展、成長", def: "The process of growing bigger or becoming more complete.", art: "careerSteps" } },
+      en: "Improvement means something got better. Development means something grew bigger.",
+      cn: "Improvement 是「變好」；development 是「長大、發展」。",
+      hi: [{ t: "Improvement", cn: "進步、改善", k: "improvement", c: 2 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "abstract nouns", coreCn: "抽象名詞常用搭配", art: "chartUp",
+        items: [{ t: "gain knowledge and experience", cn: "獲得知識和經驗" }, { t: "bring benefits to society", cn: "給社會帶來好處" }, { t: "show leadership and responsibility", cn: "展現領導力與責任感" }, { t: "have confidence in yourself", cn: "對自己有自信" }] },
+      en: "Bring benefits to society, and show leadership and responsibility in your team.",
+      cn: "給社會帶來好處，並在團隊裡展現領導力與責任感。",
+      hi: [{ t: "Bring benefits to society", cn: "給社會帶來好處", k: "benefits", c: 2 },
+           { t: "show leadership and responsibility", cn: "展現領導力與責任感", k: "leadership", c: 4 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "on stage", coreCn: "上台表現常用搭配", art: "stagePerformance",
+        items: [{ t: "show your performance", cn: "展示你的表現" }, { t: "in front of the audience", cn: "在觀眾面前" }, { t: "a friendly competition", cn: "友好的比賽" }, { t: "find the courage to speak", cn: "找到勇氣開口" }] },
+      en: "Show your performance in front of the audience at the friendly competition.",
+      cn: "在友好的比賽中，於觀眾面前展示你的表現。",
+      hi: [{ t: "performance", cn: "表現、表演", k: "performance", c: 1 },
+           { t: "in front of the audience", cn: "在觀眾面前", k: "audience", c: 3 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "noun suffixes", coreCn: "名詞字尾記憶法", art: "suffixCards",
+        items: [{ t: "-ment: achievement", cn: "行為或結果" }, { t: "-tion: competition", cn: "動作或狀態" }, { t: "-ship: friendship", cn: "身分或關係" }, { t: "-ence: confidence", cn: "狀態或性質" }] },
+      en: "Achievement ends in -ment, competition ends in -tion, and friendship ends in -ship.",
+      cn: "achievement 是 -ment 結尾、competition 是 -tion 結尾、friendship 是 -ship 結尾。",
+      hi: [{ t: "-ment", cn: "行為或結果", k: "suffixes", c: 1 },
+           { t: "-ship", cn: "身分或關係", k: "suffixes", c: 3 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "make a decision to + 原形動詞", art: "twoMinds",
+        rows: [
+          { lab: "錯", blocks: [{ t: "We", k: "s" }, { t: "did a decision", k: "x" }, { t: "to open a school", k: "o" }] },
+          { lab: "對", blocks: [{ t: "We", k: "s" }, { t: "made a decision", k: "v", add: true }, { t: "to open a school", k: "o" }] }
+        ],
+        note: "decision 的動詞一定是 make；make a decision to + V ＝ decide to + V。" },
+      en: "Finally, we made a decision to open a free weekend school.",
+      cn: "最後我們做出了決定，開設一所免費的週末學校。",
+      hi: [{ t: "made a decision to open", cn: "決定要開辦", k: "decision", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "help + 人 + 原形動詞", art: "feedbackNote",
+        rows: [
+          { lab: "句型", blocks: [{ t: "The project", k: "s" }, { t: "helps", k: "v" }, { t: "young people", k: "n" }, { t: "gain experience", k: "o", add: true }] }
+        ],
+        note: "help 後面的動詞不加 to 最常見；加 to 也對，但不可用 V-ing。" },
+      en: "The project helps young people gain knowledge and experience.",
+      cn: "這個專案幫助年輕人獲得知識和經驗。",
+      hi: [{ t: "helps young people", cn: "幫助年輕人", k: "helpv", c: 1 },
+           { t: "gain knowledge and experience", cn: "獲得知識和經驗", k: "gainknow", c: 4 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "help + 人 + 原形動詞", art: "feedbackNote",
+        rows: [
+          { lab: "V-ing 形", blocks: [{ t: "helping", k: "v" }, { t: "students", k: "n" }, { t: "improve their skills", k: "o", add: true }] }
+        ],
+        note: "分詞構句 helping + 人 + 原形動詞，可以接在主要子句後面補充說明。" },
+      en: "Teachers showed great leadership, helping students improve their skills and confidence.",
+      cn: "老師們展現了極強的領導力，幫助學生提升技能和自信。",
+      hi: [{ t: "helping students improve", cn: "幫助學生提升", k: "helpv", c: 1 },
+           { t: "skills and confidence", cn: "技能與自信", k: "confidence", c: 4 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "比較級 + than ever", art: "toastGlasses",
+        rows: [
+          { lab: "收尾句", blocks: [{ t: "Our community", k: "s" }, { t: "is", k: "v" }, { t: "more united", k: "o" }, { t: "than ever", k: "n", add: true }] }
+        ],
+        note: "than ever ＝ than ever before，強調現在達到前所未有的程度。" },
+      en: "Now, our community is more united than ever, full of hope and tradition.",
+      cn: "如今，我們的社區比以往任何時候都更團結，充滿希望與傳統。",
+      hi: [{ t: "more united than ever", cn: "比以往更團結", k: "thanever", c: 2 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "Finally, we did a decision to open a free weekend school.", bad: ["did a decision"],
+        fix: "Finally, we made a decision to open a free weekend school.", good: ["made a decision"],
+        why: "We make a decision. We never do one." },
+      en: "Finally, we made a decision to open a free weekend school for the community.",
+      cn: "最後我們做出了決定，為社區開設一所免費的週末學校。",
+      hi: [{ t: "made a decision to open", cn: "決定要開辦", k: "decision", c: 1 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "The project helps young people to gaining knowledge.", bad: ["to gaining"],
+        fix: "The project helps young people gain knowledge and experience.", good: ["gain"],
+        why: "After help plus a person, use the base verb." },
+      en: "The project helps young people gain knowledge and experience every weekend.",
+      cn: "這個專案每個週末都幫助年輕人獲得知識和經驗。",
+      hi: [{ t: "helps young people", cn: "幫助年輕人", k: "helpv", c: 1 },
+           { t: "gain knowledge and experience", cn: "獲得知識和經驗", k: "gainknow", c: 4 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "We made a ___ to open a free weekend school.", a: "decision", n: 1 },
+      en: "We made a ___ to open a free weekend school.", say: "We made a, blank, to open a free weekend school.",
+      cn: "我們做出＿＿要開設一所免費的週末學校。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "We made a ___ to open a free weekend school.", a: "decision", n: 1, show: true },
+      en: "We made a decision to open a free weekend school.",
+      cn: "我們決定開設一所免費的週末學校。",
+      hi: [{ t: "made a decision to open", cn: "決定要開辦", k: "decision", c: 1 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The project helps young people ___ knowledge and experience.", a: "gain", n: 2 },
+      en: "The project helps young people ___ knowledge and experience.", say: "The project helps young people, blank, knowledge and experience.",
+      cn: "這個專案幫助年輕人＿＿知識和經驗。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The project helps young people ___ knowledge and experience.", a: "gain", n: 2, show: true },
+      en: "The project helps young people gain knowledge and experience.",
+      cn: "這個專案幫助年輕人獲得知識和經驗。（help 後面用原形動詞）",
+      hi: [{ t: "helps young people", cn: "幫助年輕人", k: "helpv", c: 1 },
+           { t: "gain knowledge and experience", cn: "獲得知識和經驗", k: "gainknow", c: 4 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Our community is more united than ___.", a: "ever", n: 3 },
+      en: "Our community is more united than ___.", say: "Our community is more united than, blank.",
+      cn: "我們的社區比＿＿都更團結。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Our community is more united than ___.", a: "ever", n: 3, show: true },
+      en: "Our community is more united than ever.",
+      cn: "我們的社區比以往任何時候都更團結。",
+      hi: [{ t: "more united than ever", cn: "比以往更團結", k: "thanever", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20251202 ===================== */
+/* bk20251202 Thanksgiving */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* 感恩節大餐：烤火雞放在盤子上＋一片南瓜派 */
+    turkeyDinner: svg(
+      '<ellipse cx="80" cy="112" rx="64" ry="15" fill="#fff" '+st+'/>'
+     +'<path d="M34 106 C32 66 54 46 80 46 C106 46 128 66 126 106 Z" fill="'+A+'" '+st+'/>'
+     +'<path d="M52 62 q10 -14 22 -6 M108 62 q-10 -14 -22 -6" fill="none" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M34 98 l-16 -10 a7 7 0 0 1 9 -11 l9 6" fill="'+L+'" '+st+'/>'
+     +'<path d="M126 98 l16 -10 a7 7 0 0 0 -9 -11 l-9 6" fill="'+L+'" '+st+'/>'
+     +'<path d="M156 134 L196 134 L182 102 Z" fill="'+L+'" '+st+'/>'
+     +'<path d="M162 120 H190" stroke="'+D+'" stroke-width="2.5"/>'),
+    /* 感恩節大遊行：花車＋大氣球＋旗子 */
+    paradeFloat: svg(
+      '<line x1="8" y1="136" x2="192" y2="136" '+st+'/>'
+     +'<rect x="26" y="92" width="118" height="30" rx="5" fill="'+A+'" '+st+'/>'
+     +'<circle cx="52" cy="128" r="10" fill="'+D+'"/><circle cx="118" cy="128" r="10" fill="'+D+'"/>'
+     +'<circle cx="86" cy="50" r="33" fill="'+L+'" '+st+'/>'
+     +'<circle cx="75" cy="44" r="4" fill="'+D+'"/><circle cx="98" cy="44" r="4" fill="'+D+'"/>'
+     +'<path d="M74 60 q12 10 24 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M66 80 L56 92 M106 80 L116 92" '+st+'/>'
+     +'<path d="M162 124 V58" '+st+'/>'
+     +'<path d="M162 58 h26 v18 h-26 z" fill="'+R+'" '+st+'/>'
+     +'<path d="M16 62 l12 -8 M14 82 l14 -5" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'),
+    /* 當志工回饋社區：志工在社區中心發熱湯，圍裙上有愛心 */
+    volunteerSoupKitchen: svg(
+      '<rect x="12" y="98" width="176" height="14" rx="4" fill="'+L+'" '+st+'/>'
+     +'<path d="M28 112 v24 M172 112 v24" '+st+'/>'
+     +'<rect x="34" y="74" width="48" height="24" rx="4" fill="#fff" '+st+'/>'
+     +'<path d="M34 80 H82" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M48 68 q7 -10 0 -18 M68 68 q7 -10 0 -18" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<circle cx="134" cy="50" r="14" fill="'+C+'" '+st+'/>'
+     +'<path d="M114 98 V70 a20 20 0 0 1 40 0 V98 Z" fill="'+A+'" '+st+'/>'
+     +'<rect x="124" y="74" width="20" height="18" rx="2" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M134 90 l-6 -7 a4.5 4.5 0 0 1 6 -5.5 a4.5 4.5 0 0 1 6 5.5 z" fill="'+R+'"/>'
+     +'<path d="M114 86 L94 92" '+st+'/>'),
+    /* 豐收季：籃子裡的南瓜、蘋果與麥穗，旁邊一片落葉 */
+    harvestBasket: svg(
+      '<path d="M40 76 H160 L146 130 H54 Z" fill="'+L+'" '+st+'/>'
+     +'<path d="M40 76 H160" stroke="'+D+'" stroke-width="3"/>'
+     +'<path d="M64 88 v34 M82 88 v34 M100 88 v34 M118 88 v34 M136 88 v34" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="76" cy="60" r="16" fill="'+A+'" '+st+'/><path d="M76 44 v-8" '+st+'/>'
+     +'<circle cx="110" cy="62" r="12" fill="'+R+'" '+st+'/><path d="M110 50 q7 -8 13 -6" fill="none" '+st+'/>'
+     +'<path d="M140 70 V22" '+st+'/>'
+     +'<path d="M140 28 l-10 8 M140 28 l10 8 M140 42 l-10 8 M140 42 l10 8 M140 56 l-10 8 M140 56 l10 8" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M18 36 q11 -11 22 0 q-11 11 -22 0" fill="'+A+'" '+st+'/>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20251202 = {
+  title: "Thanksgiving",
+  titleCn: "感恩節",
+  date: "2025-12-02",
+  level: "B1",
+  scene: "Office Kitchen · Talking About Thanksgiving",
+  sceneCn: "辦公室茶水間・聊感恩節",
+  sceneArt: "turkeyDinner",
+  titleArt: ["food", "heart", "calendar"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・好奇的台灣同事", voice: "f" },
+    T: { name: "Tom", cn: "Tom・美國同事", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "Talking About Thanksgiving", cn: "情境：聊感恩節" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    passive: { t: "is celebrated", cn: "（節日）被慶祝", tag: ["IV-A", "被動語態"],
+      note: "介紹節慶、習俗、制度一律用被動 be + 過去分詞，重點放在節日本身，不是誰在慶祝。",
+      ex: "The Lantern Festival is celebrated fifteen days after Chinese New Year.", exCn: "元宵節在農曆新年後十五天慶祝。" },
+    nationalholiday: { t: "a national holiday", cn: "國定假日", tag: ["搭配詞"],
+      note: "national holiday 是全國放假的日子；公司自己的假叫 company holiday。",
+      ex: "Banks are closed because tomorrow is a national holiday.", exCn: "銀行不開，因為明天是國定假日。" },
+    traveldist: { t: "travel long distances", cn: "長途旅行", tag: ["搭配詞"],
+      note: "distance 用複數 distances 表示「一段又一段的路程」；長途也可以說 a long way。",
+      ex: "Some workers travel long distances to get home for the New Year.", exCn: "有些工人為了回家過年要長途跋涉。" },
+    bigmeal: { t: "prepare a big meal", cn: "準備一頓豐盛餐點", tag: ["搭配詞"],
+      note: "prepare a meal 比 make a meal 正式一點；煮一道菜用 cook a dish。",
+      ex: "My aunt prepares a big meal for the whole family every winter.", exCn: "我阿姨每年冬天都為全家準備一頓豐盛的餐點。" },
+    dishes: { t: "traditional dishes", cn: "傳統菜餚", tag: ["搭配詞"],
+      note: "dish 在這裡是「一道菜」，不是盤子；洗碗才是 do the dishes。",
+      ex: "The night market sells many traditional dishes from the south.", exCn: "這個夜市賣很多南部的傳統菜餚。" },
+    sharestories: { t: "share stories", cn: "分享故事", tag: ["搭配詞"],
+      note: "share 後面直接接受詞；跟誰分享用 with：share stories with your cousins。",
+      ex: "Grandpa likes to share stories about his childhood.", exCn: "爺爺喜歡分享他童年的故事。" },
+    gratitude: { t: "express gratitude", cn: "表達感恩", tag: ["II", "B2 搭配詞"],
+      note: "gratitude 是不可數名詞；show gratitude、express gratitude 都可以，但不說 a gratitude。",
+      ex: "She wrote a card to express gratitude to her teacher.", exCn: "她寫了一張卡片向老師表達感恩。" },
+    parade: { t: "the Thanksgiving Day Parade", cn: "感恩節大遊行", tag: ["單字"],
+      note: "看遊行用 watch a parade；parade 的重音在後面 /pəˈreɪd/。",
+      ex: "Thousands of people watched the parade from the sidewalk.", exCn: "數千人在人行道上看遊行。" },
+    volunteer: { t: "volunteer at a community center", cn: "在社區中心當志工", tag: ["單字"],
+      note: "volunteer 既是動詞（當志工）也是名詞（志工）；volunteer to + 原形動詞。",
+      ex: "My sister volunteers at an animal shelter every Saturday.", exCn: "我姐姐每週六在動物收容所當志工。" },
+    inneed: { t: "help people in need", cn: "幫助需要幫助的人", tag: ["搭配詞"],
+      note: "in need 放在名詞後面當形容詞用：families in need、children in need。",
+      ex: "This charity collects winter coats for families in need.", exCn: "這個慈善機構為需要幫助的家庭募集冬衣。" },
+    harvest: { t: "mark the end of the harvest season", cn: "象徵豐收季的結束", tag: ["II"],
+      note: "mark 在這裡是「標誌、象徵」；harvest 當名詞是收成，當動詞是收割。",
+      ex: "This festival marks the end of the rainy season.", exCn: "這個節慶象徵雨季的結束。" },
+    although: { t: "Although …, …", cn: "雖然……，（但）……", tag: ["IV-B", "易錯"],
+      note: "用了 although 就不可以再加 but，中文的「雖然……但是……」在英文只能留一個。",
+      ex: "Although it was raining, the parade went on.", exCn: "雖然下著雨，遊行還是照舉行。" },
+    notonly: { t: "not only … but also …", cn: "不僅……也……", tag: ["IV-C", "加分句型"],
+      note: "not only 和 but also 後面的詞性要對稱，這裡兩邊都是 about + 名詞。",
+      ex: "The course is not only useful, but also fun.", exCn: "這門課不僅有用，也很有趣。" },
+    qualitytime: { t: "spend quality time", cn: "共度高品質時光", tag: ["II"],
+      note: "quality time 指「專心相處、不被打擾」的時間，後面常接 with + 人。",
+      ex: "We turn off our phones to spend quality time together.", exCn: "我們關掉手機，好好地相處。" },
+    bonds: { t: "strengthen family bonds", cn: "強化家庭關係", tag: ["II"],
+      note: "bond 是「感情連結」，常用複數 bonds；動詞用 strengthen 或 build。",
+      ex: "Cooking together strengthens family bonds.", exCn: "一起做菜能強化家庭關係。" },
+    giveback: { t: "give back to the community", cn: "回饋社區", tag: ["IV-C"],
+      note: "give back 是「把得到的回饋出去」，後面用 to 帶出對象。",
+      ex: "After he succeeded, he wanted to give back to his hometown.", exCn: "成功之後，他想回饋自己的家鄉。" },
+    tradition: { t: "tradition", cn: "傳統（名詞）", tag: ["-tion"],
+      note: "tradition 是名詞、traditional 是形容詞：a family tradition／traditional food。",
+      ex: "Eating dumplings on New Year's Eve is a family tradition.", exCn: "除夕吃餃子是家裡的傳統。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today, Anita asks Tom how Americans and Canadians celebrate Thanksgiving.",
+      cn: "歡迎回來。今天 Anita 問 Tom，美國人和加拿大人怎麼過感恩節。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for the passive voice, and for two useful patterns: although, and not only but also.",
+      cn: "注意聽被動語態，以及兩個好用句型：although 和 not only … but also。" },
+
+    /* ---------- 1 情境對話（14 句） ---------- */
+    { ch: 1, sp: "A", vis: { type: "scene", art: "calendar" },
+      en: "Tom, I read that Thanksgiving is celebrated on the fourth Thursday of November.",
+      cn: "Tom，我讀到感恩節是在十一月的第四個星期四慶祝。",
+      hi: [{ t: "is celebrated", cn: "（節日）被慶祝", k: "passive", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "globe" },
+      en: "That's right. It is a national holiday in the United States and in Canada.",
+      cn: "沒錯。它在美國和加拿大都是國定假日。",
+      hi: [{ t: "a national holiday", cn: "國定假日", k: "nationalholiday", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "plane" },
+      en: "Do many people travel long distances to return home for the holiday?",
+      cn: "很多人會為了這個假期長途旅行回家嗎？",
+      hi: [{ t: "travel long distances", cn: "長途旅行", k: "traveldist", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "turkeyDinner" },
+      en: "Yes. Then the whole family helps prepare a big meal with turkey and pumpkin pie.",
+      cn: "會。然後全家人一起準備一頓有火雞和南瓜派的大餐。",
+      hi: [{ t: "prepare a big meal", cn: "準備一頓豐盛餐點", k: "bigmeal", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "setMenu" },
+      en: "What other traditional dishes do people eat on that day?",
+      cn: "那天大家還吃什麼傳統菜餚？",
+      hi: [{ t: "traditional dishes", cn: "傳統菜餚", k: "dishes", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "roundTable" },
+      en: "Mashed potatoes and corn. After dinner we share stories around the table.",
+      cn: "馬鈴薯泥和玉米。晚餐後我們會圍著桌子分享故事。",
+      hi: [{ t: "share stories", cn: "分享故事", k: "sharestories", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "heart" },
+      en: "That sounds like a warm way to express gratitude to your family.",
+      cn: "聽起來是一個很溫馨的方式，向家人表達感恩。",
+      hi: [{ t: "express gratitude", cn: "表達感恩", k: "gratitude", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "paradeFloat" },
+      en: "It is. In the morning we also watch the Thanksgiving Day Parade on TV.",
+      cn: "是的。早上我們也會在電視上看感恩節大遊行。",
+      hi: [{ t: "the Thanksgiving Day Parade", cn: "感恩節大遊行", k: "parade", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "shareOut" },
+      en: "Does anyone give back to the community during the holiday?",
+      cn: "假期期間有人會回饋社區嗎？",
+      hi: [{ t: "give back to the community", cn: "回饋社區", k: "giveback", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "volunteerSoupKitchen" },
+      en: "Many families volunteer at community centers to help people in need.",
+      cn: "很多家庭會去社區中心當志工，幫助需要幫助的人。",
+      hi: [{ t: "volunteer at community centers", cn: "在社區中心當志工", k: "volunteer", c: 1 },
+           { t: "help people in need", cn: "幫助需要幫助的人", k: "inneed", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "harvestBasket" },
+      en: "I also read that Canadians mark the end of the harvest season in October.",
+      cn: "我也讀到加拿大人在十月慶祝豐收季的結束。",
+      hi: [{ t: "mark the end of the harvest season", cn: "象徵豐收季的結束", k: "harvest", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "seasonsThenNow" },
+      en: "Although the two countries celebrate on different dates, the meaning is quite similar.",
+      cn: "雖然兩個國家在不同日期慶祝，但節日的意義非常相似。",
+      hi: [{ t: "Although the two countries celebrate", cn: "雖然兩個國家慶祝", k: "although", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "toastGlasses" },
+      en: "So it is not only about eating, but also about kindness.",
+      cn: "所以它不僅是吃大餐，也是關於善良。",
+      hi: [{ t: "not only about eating, but also about kindness", cn: "不僅是吃，也是關於善良", k: "notonly", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "banquetHall" },
+      en: "Exactly. It helps us spend quality time and strengthen family bonds.",
+      cn: "完全正確。它幫助我們共度美好時光，強化家庭關係。",
+      hi: [{ t: "spend quality time", cn: "共度高品質時光", k: "qualitytime", c: 4 },
+           { t: "strengthen family bonds", cn: "強化家庭關係", k: "bonds", c: 3 }] },
+
+    /* ---------- 2 重點表達 ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "gratitude", ipa: "/ˈɡræt̬.ə.tuːd/", pos: "n.", phrase: "express gratitude", art: "heart",
+        def: "The warm feeling you have when you thank someone.",
+        cn: "感謝別人時心裡那份溫暖的感覺，也就是感恩。",
+        note: "Gratitude is uncountable, so never say a gratitude." },
+      en: "Gratitude. People express gratitude by thanking their family and friends.",
+      cn: "Gratitude（感恩）。人們透過感謝家人和朋友來表達感恩。",
+      hi: [{ t: "express gratitude", cn: "表達感恩", k: "gratitude", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "harvest", ipa: "/ˈhɑːr.vɪst/", pos: "n.", phrase: "mark the end of the harvest season", art: "harvestBasket",
+        def: "The time when farmers collect the crops from the fields.",
+        cn: "農夫把作物收進來的時節，也就是收成、豐收。",
+        note: "Harvest is also a verb: farmers harvest rice in October." },
+      en: "Harvest. In Canada, the holiday marks the end of the harvest season.",
+      cn: "Harvest（豐收）。在加拿大，這個節日象徵豐收季的結束。",
+      hi: [{ t: "marks the end of the harvest season", cn: "象徵豐收季的結束", k: "harvest", c: 3 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "volunteer", ipa: "/ˌvɑː.lənˈtɪr/", pos: "v.", phrase: "volunteer at a community center", art: "volunteerSoupKitchen",
+        def: "To offer to do work for free because you want to help.",
+        cn: "自願不收錢去幫忙，也就是當志工。",
+        note: "Volunteer to plus a base verb: they volunteer to serve meals." },
+      en: "Volunteer. Some students volunteer at a community center to help people in need.",
+      cn: "Volunteer（當志工）。有些學生到社區中心當志工，幫助需要幫助的人。",
+      hi: [{ t: "volunteer at a community center", cn: "在社區中心當志工", k: "volunteer", c: 1 },
+           { t: "help people in need", cn: "幫助需要幫助的人", k: "inneed", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "tradition", ipa: "/trəˈdɪʃ.ən/", cn: "傳統（名詞）", def: "A custom that a family or country keeps for many years.", art: "lanternRow" },
+        b: { w: "traditional", ipa: "/trəˈdɪʃ.ən.əl/", cn: "傳統的（形容詞）", def: "Following an old custom, used before a noun.", art: "setMenu" } },
+      en: "Eating turkey is a tradition, and turkey is one of the traditional dishes.",
+      cn: "吃火雞是一個傳統（tradition）；火雞是傳統菜餚（traditional dishes）之一。",
+      hi: [{ t: "a tradition", cn: "一個傳統", k: "tradition", c: 4 },
+           { t: "traditional dishes", cn: "傳統菜餚", k: "dishes", c: 2 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "holiday traditions", coreCn: "節日習俗常用搭配", art: "turkeyDinner",
+        items: [{ t: "prepare a big meal", cn: "準備豐盛餐點" }, { t: "travel long distances", cn: "長途旅行" }, { t: "share stories", cn: "分享故事" }, { t: "watch the parade", cn: "看遊行" }] },
+      en: "Travel long distances, prepare a big meal, and share stories after dinner.",
+      cn: "長途旅行回家、準備一頓大餐，晚餐後分享故事。",
+      hi: [{ t: "Travel long distances", cn: "長途旅行", k: "traveldist", c: 2 },
+           { t: "prepare a big meal", cn: "準備豐盛餐點", k: "bigmeal", c: 1 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "family time", coreCn: "家人相處常用搭配", art: "banquetHall",
+        items: [{ t: "spend quality time", cn: "共度美好時光" }, { t: "strengthen family bonds", cn: "強化家庭關係" }, { t: "express gratitude", cn: "表達感恩" }, { t: "appreciate each other's company", cn: "珍惜彼此的陪伴" }] },
+      en: "Spend quality time with your family, and strengthen family bonds every year.",
+      cn: "和家人共度美好時光，每年強化家庭關係。",
+      hi: [{ t: "Spend quality time", cn: "共度美好時光", k: "qualitytime", c: 4 },
+           { t: "strengthen family bonds", cn: "強化家庭關係", k: "bonds", c: 3 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "give back", coreCn: "回饋社區常用搭配", art: "volunteerSoupKitchen",
+        items: [{ t: "give back to the community", cn: "回饋社區" }, { t: "help people in need", cn: "幫助需要的人" }, { t: "participate in community service", cn: "參加社區服務" }, { t: "a meaningful celebration", cn: "有意義的慶祝" }] },
+      en: "Give back to the community, and help people in need during the holidays.",
+      cn: "回饋社區，在節日期間幫助需要幫助的人。",
+      hi: [{ t: "Give back to the community", cn: "回饋社區", k: "giveback", c: 4 },
+           { t: "help people in need", cn: "幫助需要的人", k: "inneed", c: 2 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "被動語態 be + 過去分詞", art: "activePassive",
+        rows: [
+          { lab: "主動", blocks: [{ t: "People", k: "s" }, { t: "celebrate", k: "v" }, { t: "Thanksgiving", k: "o" }] },
+          { lab: "被動", blocks: [{ t: "Thanksgiving", k: "s" }, { t: "is celebrated", k: "v", add: true }, { t: "in November", k: "n" }] }
+        ],
+        note: "介紹節慶時重點在節日本身，所以用被動 be + 過去分詞。" },
+      en: "Thanksgiving is celebrated mainly in the United States and Canada.",
+      cn: "感恩節主要在美國和加拿大慶祝。",
+      hi: [{ t: "is celebrated", cn: "被慶祝", k: "passive", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "被動語態 be + 過去分詞", art: "activePassive",
+        rows: [
+          { lab: "錯", blocks: [{ t: "Thanksgiving", k: "s" }, { t: "celebrates", k: "x" }, { t: "on Thursday", k: "n" }] },
+          { lab: "對", blocks: [{ t: "Thanksgiving", k: "s" }, { t: "is celebrated", k: "v", add: true }, { t: "on Thursday", k: "n" }] }
+        ],
+        note: "節日不會自己慶祝，所以不能用主動 celebrates。" },
+      en: "It is celebrated on the fourth Thursday of November every year.",
+      cn: "它每年在十一月的第四個星期四被慶祝。",
+      hi: [{ t: "is celebrated", cn: "被慶祝", k: "passive", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "Although …, …（雖然……）", art: "seasonsThenNow",
+        rows: [
+          { lab: "錯", blocks: [{ t: "Although the dates differ", k: "n" }, { t: "but", k: "x" }, { t: "the meaning is similar", k: "s" }] },
+          { lab: "對", blocks: [{ t: "Although the dates differ", k: "n" }, { t: "the meaning is similar", k: "s", add: true }] }
+        ],
+        note: "用了 although 就不可以再加 but；兩個只能留一個。" },
+      en: "Although the two countries celebrate on different dates, the meaning of the holiday is similar.",
+      cn: "雖然兩個國家在不同日期慶祝，但節日的意義很相似。",
+      hi: [{ t: "Although the two countries celebrate", cn: "雖然兩個國家慶祝", k: "although", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "not only … but also …", art: "toastGlasses",
+        rows: [
+          { lab: "句型", blocks: [{ t: "Thanksgiving is", k: "s" }, { t: "not only", k: "n" }, { t: "about eating", k: "o" }, { t: "but also about kindness", k: "o", add: true }] }
+        ],
+        note: "not only 和 but also 後面的詞性要對稱，這裡兩邊都是 about + 名詞。" },
+      en: "Thanksgiving is not only about eating, but also about giving back to the community.",
+      cn: "感恩節不僅是吃大餐，也是關於回饋社區。",
+      hi: [{ t: "not only about eating", cn: "不僅是吃", k: "notonly", c: 2 },
+           { t: "giving back to the community", cn: "回饋社區", k: "giveback", c: 4 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "Although the two countries celebrate on different dates, but the meaning is similar.", bad: ["but"],
+        fix: "Although the two countries celebrate on different dates, the meaning is similar.", good: ["the meaning is similar"],
+        why: "Although and but cannot stay in the same sentence." },
+      en: "Although the two countries celebrate on different dates, the meaning is similar.",
+      cn: "雖然兩個國家在不同日期慶祝，意義卻很相似。",
+      hi: [{ t: "Although the two countries celebrate", cn: "雖然兩個國家慶祝", k: "although", c: 1 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "Thanksgiving celebrates on the fourth Thursday of November.", bad: ["celebrates"],
+        fix: "Thanksgiving is celebrated on the fourth Thursday of November.", good: ["is celebrated"],
+        why: "The holiday is celebrated by people, so use the passive." },
+      en: "Thanksgiving is celebrated on the fourth Thursday of November, and it is a national holiday.",
+      cn: "感恩節在十一月的第四個星期四慶祝，而且是國定假日。",
+      hi: [{ t: "is celebrated", cn: "被慶祝", k: "passive", c: 3 },
+           { t: "a national holiday", cn: "國定假日", k: "nationalholiday", c: 1 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Thanksgiving ___ celebrated on the fourth Thursday of November.", a: "is", n: 1 },
+      en: "Thanksgiving ___ celebrated on the fourth Thursday of November.", say: "Thanksgiving, blank, celebrated on the fourth Thursday of November.",
+      cn: "感恩節＿＿在十一月的第四個星期四慶祝。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Thanksgiving ___ celebrated on the fourth Thursday of November.", a: "is", n: 1, show: true },
+      en: "Thanksgiving is celebrated on the fourth Thursday of November.",
+      cn: "感恩節在十一月的第四個星期四慶祝。（被動語態）",
+      hi: [{ t: "is celebrated", cn: "被慶祝", k: "passive", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "___ the dates are different, the meaning is similar.", a: "Although", n: 2 },
+      en: "___ the dates are different, the meaning is similar.", say: "Blank, the dates are different, the meaning is similar.",
+      cn: "＿＿日期不同，意義卻很相似。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "___ the dates are different, the meaning is similar.", a: "Although", n: 2, show: true },
+      en: "Although the dates are different, the meaning is similar.",
+      cn: "雖然日期不同，意義卻很相似。（後面不可以再加 but）",
+      hi: [{ t: "Although the dates are different", cn: "雖然日期不同", k: "although", c: 1 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "It is not only about eating, but ___ about kindness.", a: "also", n: 3 },
+      en: "It is not only about eating, but ___ about kindness.", say: "It is not only about eating, but, blank, about kindness.",
+      cn: "它不僅是吃大餐，＿＿是關於善良。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "It is not only about eating, but ___ about kindness.", a: "also", n: 3, show: true },
+      en: "It is not only about eating, but also about kindness.",
+      cn: "它不僅是吃大餐，也是關於善良。",
+      hi: [{ t: "not only about eating, but also about kindness", cn: "不僅是吃，也是關於善良", k: "notonly", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20251209 ===================== */
+/* bk20251209 A Pleasant Place to Spend Quality Time */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* bustling market：熱鬧的夜市攤位＋掛燈＋逛街人群 */
+    nightMarketStalls: svg(
+      '<line x1="8" y1="134" x2="192" y2="134" '+st+'/>'
+     +'<path d="M14 14 Q100 32 186 14" fill="none" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="46" cy="27" r="6" fill="'+A+'" '+st+'/><circle cx="100" cy="32" r="6" fill="'+A+'" '+st+'/><circle cx="154" cy="27" r="6" fill="'+A+'" '+st+'/>'
+     +'<path d="M16 62 h74 l-6 -16 h-62 z" fill="'+A+'" '+st+'/>'
+     +'<rect x="22" y="62" width="62" height="14" rx="3" fill="#fff" '+st+'/>'
+     +'<path d="M26 76 v34 M80 76 v34" '+st+'/>'
+     +'<path d="M104 62 h80 l-6 -16 h-68 z" fill="'+A+'" '+st+'/>'
+     +'<rect x="110" y="62" width="68" height="14" rx="3" fill="#fff" '+st+'/>'
+     +'<path d="M114 76 v34 M172 76 v34" '+st+'/>'
+     +'<g fill="'+L+'" '+st+'><path d="M42 134 V116 a12 12 0 0 1 24 0 V134 Z"/><path d="M84 134 V122 a12 12 0 0 1 24 0 V134 Z"/><path d="M128 134 V116 a12 12 0 0 1 24 0 V134 Z"/></g>'
+     +'<g fill="'+C+'" '+st+'><circle cx="54" cy="104" r="11"/><circle cx="96" cy="110" r="11"/><circle cx="140" cy="104" r="11"/></g>'),
+    /* tourist attraction：小型博物館的正面（三角楣、柱子、台階、一幅畫） */
+    museumFacade: svg(
+      '<line x1="8" y1="138" x2="192" y2="138" '+st+'/>'
+     +'<path d="M22 54 L100 16 L178 54 Z" fill="'+L+'" '+st+'/>'
+     +'<rect x="86" y="30" width="28" height="16" rx="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M92 38 h16" stroke="'+D+'" stroke-width="2"/>'
+     +'<rect x="26" y="54" width="148" height="10" rx="2" fill="'+A+'" '+st+'/>'
+     +'<rect x="36" y="64" width="18" height="52" fill="#fff" '+st+'/>'
+     +'<rect x="70" y="64" width="18" height="52" fill="#fff" '+st+'/>'
+     +'<rect x="112" y="64" width="18" height="52" fill="#fff" '+st+'/>'
+     +'<rect x="146" y="64" width="18" height="52" fill="#fff" '+st+'/>'
+     +'<rect x="92" y="76" width="16" height="22" rx="2" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="26" y="116" width="148" height="10" rx="2" fill="'+L+'" '+st+'/>'
+     +'<rect x="16" y="126" width="168" height="12" rx="2" fill="'+L+'" '+st+'/>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20251209 = {
+  title: "A Pleasant Place to Spend Quality Time",
+  titleCn: "度過美好時光的好地方",
+  date: "2025-12-09",
+  level: "B1",
+  scene: "Old Street · Showing a Friend Around",
+  sceneCn: "老街・帶朋友逛家鄉",
+  sceneArt: "nightMarketStalls",
+  titleArt: ["house", "food", "star"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・在地人", voice: "f" },
+    T: { name: "Tom", cn: "Tom・第一次來的朋友", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "Showing a Friend Around", cn: "情境：帶朋友逛老街" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    pleasant: { t: "a pleasant day", cn: "舒適愉快的一天", tag: ["I"],
+      note: "pleasant 形容「舒服、讓人愉快」的天氣、地方或經驗；形容人親切也可以說 a pleasant person。",
+      ex: "We had a pleasant walk along the river after dinner.", exCn: "晚餐後我們沿著河邊舒服地散了步。" },
+    famousfor: { t: "be famous for", cn: "以……聞名", tag: ["III-A"],
+      note: "for 後面只能接名詞或 V-ing，不能接完整句子：❌ famous for it has bubble tea。",
+      ex: "Tainan is famous for its street food.", exCn: "台南以小吃聞名。" },
+    delicacy: { t: "local delicacy", cn: "當地美食", tag: ["I"],
+      note: "delicacy 指「當地特別好吃、有名的食物」，可數：a local delicacy／many delicacies。",
+      ex: "Stinky tofu is a local delicacy that visitors always try.", exCn: "臭豆腐是遊客一定會嘗的當地美食。" },
+    located: { t: "be located in / be based in", cn: "位於、設在", tag: ["IV", "搭配詞"],
+      note: "be located in 講「地點在哪」；be based in 講「以某地為據點」，公司、咖啡館都常用。",
+      ex: "Their head office is located in Taichung.", exCn: "他們的總公司位於台中。" },
+    popularamong: { t: "popular among", cn: "受……喜愛", tag: ["搭配詞"],
+      note: "受某群人喜愛用 popular among／with + 人；不要用 popular to。",
+      ex: "This app is very popular among high school students.", exCn: "這個 App 在高中生之間很受歡迎。" },
+    atmosphere: { t: "warm atmosphere", cn: "溫馨的氣氛", tag: ["I"],
+      note: "atmosphere 指一個地方給人的感覺；也可以說 a relaxed／lively atmosphere。",
+      ex: "The little bookstore has a very relaxed atmosphere.", exCn: "這家小書店的氣氛很放鬆。" },
+    hospitable: { t: "hospitable people", cn: "好客的人", tag: ["I"],
+      note: "hospitable 是「熱情招待客人」的好客，重音在第二音節；名詞是 hospitality。",
+      ex: "The village families were extremely hospitable to us.", exCn: "村裡的人家對我們非常好客。" },
+    bonds: { t: "strengthen family bonds", cn: "加強家庭感情", tag: ["IV"],
+      note: "bond 是感情連結，常用複數 bonds；strengthen 也可以接 muscles、friendship。",
+      ex: "Weekend trips strengthen family bonds.", exCn: "週末旅行能加強家庭感情。" },
+    catchup: { t: "catch up with", cn: "和某人敘舊", tag: ["I"],
+      note: "catch up with 是「跟久沒見的人聊近況」；追上進度也用它：catch up with the class。",
+      ex: "Let's have coffee and catch up with each other soon.", exCn: "我們找時間喝咖啡敘敘舊。" },
+    attraction: { t: "tourist attraction", cn: "觀光景點", tag: ["I"],
+      note: "attraction 是吸引人去看的地方；動詞是 attract，形容詞是 attractive。",
+      ex: "The old fort is the biggest tourist attraction in town.", exCn: "那座舊砲台是鎮上最大的觀光景點。" },
+    usedto: { t: "used to + 原形動詞", cn: "過去曾經（現在不是了）", tag: ["III-B", "易錯"],
+      note: "used to + 原形動詞自帶「現在已經不是了」的意思；be used to + V-ing 才是「習慣於」，意思完全不同。",
+      ex: "I used to live in Taipei, but now I live in Yilan.", exCn: "我以前住台北，現在住宜蘭。" },
+    disaster: { t: "suffer from a natural disaster", cn: "遭受自然災害之苦", tag: ["I", "IV"],
+      note: "suffer from 後面接疾病、災害、問題；不要說 suffer a natural disaster from。",
+      ex: "The island suffers from typhoons every August.", exCn: "這座島每年八月都受颱風之苦。" },
+    atpeace: { t: "at peace", cn: "平安無事", tag: ["IV"],
+      note: "at peace 是「平靜、沒事」的狀態；和 in peace（不被打擾地）不一樣。",
+      ex: "After the storm passed, the whole village was at peace.", exCn: "暴風過去之後，整個村子都平安無事。" },
+    normal: { t: "return to normal", cn: "恢復正常", tag: ["IV"],
+      note: "normal 在這裡是名詞，前面不加 the：❌ return to the normal。",
+      ex: "Traffic returned to normal two hours after the accident.", exCn: "事故後兩小時交通恢復正常。" },
+    bustling: { t: "bustling and lively", cn: "繁忙又熱鬧", tag: ["I"],
+      note: "bustling 形容人來人往、很有活力的地方，是正面的「熱鬧」，不是「吵」。",
+      ex: "The train station is bustling and lively every morning.", exCn: "火車站每天早上都很繁忙熱鬧。" },
+    connected: { t: "feel connected to", cn: "感到與……有連結", tag: ["IV"],
+      note: "connected 後面用 to 帶出對象：feel connected to your family／your community。",
+      ex: "Cooking my grandma's recipes makes me feel connected to her.", exCn: "做奶奶的菜讓我感覺和她有連結。" },
+    makingit: { t: ", making it a great place to + V", cn: "……因而成為做某事的好地方", tag: ["III-C", "加分句型"],
+      note: "分詞構句表「因而造成的結果」，等於 and this makes it …；逗號不能省略。",
+      ex: "The park is quiet at night, making it a great place to read.", exCn: "這座公園晚上很安靜，因而成為閱讀的好地方。" },
+    qualitytime: { t: "spend quality time", cn: "共度美好時光", tag: ["IV"],
+      note: "quality time 指「專心相處、不被打擾」的時間，後面常接 with + 人。",
+      ex: "We spend quality time together every Sunday morning.", exCn: "我們每個週日早上都好好相處。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today, Anita shows Tom around the old street in her hometown.",
+      cn: "歡迎回來。今天 Anita 帶 Tom 逛她家鄉的老街。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for how she describes a place: famous for, located in, and used to.",
+      cn: "注意聽她怎麼介紹一個地方：famous for、located in 和 used to。" },
+
+    /* ---------- 1 情境對話（14 句） ---------- */
+    { ch: 1, sp: "T", vis: { type: "scene", art: "peacefulHouse" },
+      en: "Anita, what a pleasant day. Your hometown looks really lovely.",
+      cn: "Anita，今天天氣真舒服。你的家鄉看起來真棒。",
+      hi: [{ t: "a pleasant day", cn: "舒適愉快的一天", k: "pleasant", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "springRoll" },
+      en: "Thank you. My city is famous for its local delicacy.",
+      cn: "謝謝。我的城市以當地美食聞名。",
+      hi: [{ t: "is famous for", cn: "以……聞名", k: "famousfor", c: 2 },
+           { t: "local delicacy", cn: "當地美食", k: "delicacy", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "clothesShop" },
+      en: "Where can we find the best restaurants and cafés?",
+      cn: "最好的餐廳和咖啡館在哪裡？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "coffeeBreak" },
+      en: "They are located in the old street, and many cafés are based in this area too.",
+      cn: "它們都位於老街，很多咖啡館也設在這一區。",
+      hi: [{ t: "located in the old street", cn: "位於老街", k: "located", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "smile" },
+      en: "The atmosphere here is so warm. Are people always this hospitable?",
+      cn: "這裡的氣氛好溫馨。這裡的人一直都這麼好客嗎？",
+      hi: [{ t: "atmosphere", cn: "氣氛", k: "atmosphere", c: 2 },
+           { t: "hospitable", cn: "好客的", k: "hospitable", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "roundTable" },
+      en: "Yes. Families come here on weekends to strengthen family bonds.",
+      cn: "是的。家庭常在週末來這裡加強家族情感。",
+      hi: [{ t: "strengthen family bonds", cn: "加強家庭感情", k: "bonds", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "talk" },
+      en: "It is also a great place to catch up with old friends.",
+      cn: "這裡也是和老朋友敘舊的好地方。",
+      hi: [{ t: "catch up with", cn: "和某人敘舊", k: "catchup", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "cherryTemple" },
+      en: "We have several tourist attractions, such as a riverside park.",
+      cn: "我們有幾個觀光景點，例如一座河濱公園。",
+      hi: [{ t: "tourist attractions", cn: "觀光景點", k: "attraction", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "museumFacade" },
+      en: "Is the small museum popular among travelers as well?",
+      cn: "那座小型博物館也受遊客喜愛嗎？",
+      hi: [{ t: "popular among", cn: "受……喜愛", k: "popularamong", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "typhoonDamage" },
+      en: "It is. The town used to suffer from a natural disaster every summer.",
+      cn: "是的。這座小鎮過去每年夏天都遭受自然災害之苦。",
+      hi: [{ t: "used to suffer from", cn: "過去曾遭受", k: "usedto", c: 1 },
+           { t: "a natural disaster", cn: "自然災害", k: "disaster", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "worriedFace" },
+      en: "That sounds difficult. Is the town safe now?",
+      cn: "聽起來很辛苦。現在小鎮安全了嗎？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "peacefulHouse" },
+      en: "Now everything is at peace, and life has returned to normal.",
+      cn: "現在一切都平安無事，生活也恢復正常了。",
+      hi: [{ t: "at peace", cn: "平安無事", k: "atpeace", c: 4 },
+           { t: "returned to normal", cn: "恢復正常", k: "normal", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "nightMarketStalls" },
+      en: "Look, the market is getting bustling and lively already.",
+      cn: "你看，市場已經開始變得繁忙又熱鬧了。",
+      hi: [{ t: "bustling and lively", cn: "繁忙又熱鬧", k: "bustling", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "crowdedAisle" },
+      en: "It gets crowded, but it makes people feel connected to their community.",
+      cn: "這裡會變得很擁擠，但這讓人感到與社區有連結。",
+      hi: [{ t: "feel connected to", cn: "感到與……有連結", k: "connected", c: 3 }] },
+
+    /* ---------- 2 重點表達 ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "delicacy", ipa: "/ˈdel.ɪ.kə.si/", pos: "n.", phrase: "local delicacy", art: "springRoll",
+        def: "A special local food that people think is very good.",
+        cn: "當地特別有名、好吃的食物。",
+        note: "Countable: a local delicacy, many local delicacies." },
+      en: "Delicacy. My city is famous for its local delicacy, stinky tofu.",
+      cn: "Delicacy（美食）。我的城市以當地美食臭豆腐聞名。",
+      hi: [{ t: "is famous for", cn: "以……聞名", k: "famousfor", c: 2 },
+           { t: "local delicacy", cn: "當地美食", k: "delicacy", c: 4 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "hospitable", ipa: "/hɑːˈspɪt̬.ə.bəl/", pos: "adj.", phrase: "hospitable people", art: "smile",
+        def: "Friendly and generous to visitors and guests.",
+        cn: "對訪客熱情又大方，也就是好客的。",
+        note: "The noun is hospitality, as in the hospitality industry." },
+      en: "Hospitable. The people here are very hospitable, always ready to help visitors.",
+      cn: "Hospitable（好客的）。這裡的人非常好客，隨時準備幫助遊客。",
+      hi: [{ t: "hospitable", cn: "好客的", k: "hospitable", c: 3 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "atmosphere", ipa: "/ˈæt.mə.sfɪr/", pos: "n.", phrase: "warm atmosphere", art: "coffeeBreak",
+        def: "The feeling that a place gives to the people in it.",
+        cn: "一個地方給人的感覺，也就是氣氛。",
+        note: "Also say a relaxed atmosphere or a lively atmosphere." },
+      en: "Atmosphere. These cafés have a warm atmosphere, so families stay for hours.",
+      cn: "Atmosphere（氣氛）。這些咖啡館氣氛溫馨，所以家庭會待上好幾個小時。",
+      hi: [{ t: "warm atmosphere", cn: "溫馨的氣氛", k: "atmosphere", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "bustling", ipa: "/ˈbʌs.lɪŋ/", cn: "繁忙熱鬧的", def: "Full of people, noise, and energy, in a good way.", art: "nightMarketStalls" },
+        b: { w: "pleasant", ipa: "/ˈplez.ənt/", cn: "舒適愉悅的", def: "Nice, comfortable, and often calm.", art: "peacefulHouse" } },
+      en: "A bustling market is full of energy. A pleasant day is calm and comfortable.",
+      cn: "bustling market 是充滿活力的熱鬧市場；a pleasant day 是舒服平靜的一天。",
+      hi: [{ t: "bustling market", cn: "熱鬧的市場", k: "bustling", c: 1 },
+           { t: "A pleasant day", cn: "舒適愉快的一天", k: "pleasant", c: 4 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "describe a place", coreCn: "介紹地方常用搭配", art: "clothesShop",
+        items: [{ t: "be famous for", cn: "以……聞名" }, { t: "be located in", cn: "位於" }, { t: "be based in", cn: "以……為據點" }, { t: "popular among", cn: "受……喜愛" }] },
+      en: "The restaurants are located in the old street, and they are popular among travelers.",
+      cn: "這些餐廳位於老街，而且深受遊客喜愛。",
+      hi: [{ t: "located in the old street", cn: "位於老街", k: "located", c: 1 },
+           { t: "popular among", cn: "受……喜愛", k: "popularamong", c: 2 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "atmosphere and people", coreCn: "氣氛與人的搭配", art: "springRoll",
+        items: [{ t: "a warm atmosphere", cn: "溫馨的氣氛" }, { t: "hospitable people", cn: "好客的人" }, { t: "a local delicacy", cn: "當地美食" }, { t: "spend quality time", cn: "共度美好時光" }] },
+      en: "Enjoy the warm atmosphere, taste a local delicacy, and spend quality time with your family.",
+      cn: "享受溫馨的氣氛、品嚐當地美食，和家人共度美好時光。",
+      hi: [{ t: "warm atmosphere", cn: "溫馨的氣氛", k: "atmosphere", c: 2 },
+           { t: "spend quality time", cn: "共度美好時光", k: "qualitytime", c: 4 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "after a disaster", coreCn: "災後常用搭配", art: "typhoonDamage",
+        items: [{ t: "suffer from a natural disaster", cn: "遭受自然災害" }, { t: "at peace", cn: "平安無事" }, { t: "return to normal", cn: "恢復正常" }, { t: "feel connected to", cn: "感到有連結" }] },
+      en: "The town used to suffer from a natural disaster, but now people feel connected to each other.",
+      cn: "這座小鎮過去曾遭受自然災害，但現在人們彼此感到有連結。",
+      hi: [{ t: "suffer from a natural disaster", cn: "遭受自然災害", k: "disaster", c: 3 },
+           { t: "feel connected to", cn: "感到有連結", k: "connected", c: 1 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "be famous for + 名詞／V-ing", art: "springRoll",
+        rows: [
+          { lab: "錯", blocks: [{ t: "Taiwan is famous for", k: "s" }, { t: "it has bubble tea", k: "x" }] },
+          { lab: "對", blocks: [{ t: "Taiwan is famous for", k: "s" }, { t: "bubble tea", k: "o", add: true }] }
+        ],
+        note: "for 後面只能接名詞或 V-ing，不能接完整的句子。" },
+      en: "Taiwan is famous for bubble tea, and he is famous for his singing.",
+      cn: "台灣以珍珠奶茶聞名；他以唱歌好聽聞名。",
+      hi: [{ t: "is famous for bubble tea", cn: "以珍奶聞名", k: "famousfor", c: 2 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "used to + 原形動詞", art: "pastTimeline",
+        rows: [
+          { lab: "過去", blocks: [{ t: "The town", k: "s" }, { t: "used to suffer from", k: "v", add: true }, { t: "a natural disaster", k: "o" }] },
+          { lab: "現在", blocks: [{ t: "but now", k: "n" }, { t: "everything is at peace", k: "o", add: true }] }
+        ],
+        note: "used to 自帶「現在已經不是了」的意思，所以後面常接 but now …。" },
+      en: "The town used to suffer from a natural disaster, but now everything is at peace.",
+      cn: "這座小鎮過去曾遭受自然災害之苦，但現在一切都平安無事。",
+      hi: [{ t: "used to suffer from", cn: "過去曾遭受", k: "usedto", c: 1 },
+           { t: "at peace", cn: "平安無事", k: "atpeace", c: 4 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "used to + V vs be used to + V-ing", art: "seasonsThenNow",
+        rows: [
+          { lab: "過去曾經", blocks: [{ t: "I", k: "s" }, { t: "used to live", k: "v" }, { t: "in Taipei", k: "n" }] },
+          { lab: "習慣於", blocks: [{ t: "I", k: "s" }, { t: "am used to living", k: "v", add: true }, { t: "in Taipei", k: "n" }] }
+        ],
+        note: "used to + 原形動詞＝以前曾經；be used to + V-ing ＝ 已經習慣。兩個意思完全不同。" },
+      en: "I used to live in Taipei, so now I am used to living in a big city.",
+      cn: "我以前住在台北，所以現在我很習慣住在大城市。",
+      hi: [{ t: "used to live", cn: "以前住", k: "usedto", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "分詞構句 , making it a great place to + V", art: "coffeeBreak",
+        rows: [
+          { lab: "主要子句", blocks: [{ t: "Many cafés", k: "s" }, { t: "are based", k: "v" }, { t: "in this area", k: "n" }] },
+          { lab: "結果", blocks: [{ t: ", making it", k: "n", add: true }, { t: "a great place to spend quality time", k: "o" }] }
+        ],
+        note: "分詞構句表「因而造成的結果」，等於 and this makes it …；逗號不能省略。" },
+      en: "Many cafés are based in this area, making it a great place to spend quality time.",
+      cn: "許多咖啡館設在這一區，使這裡成為共度美好時光的好地方。",
+      hi: [{ t: "making it a great place to spend quality time", cn: "使這裡成為共度美好時光的好地方", k: "makingit", c: 1 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "Taiwan is famous for it has bubble tea.", bad: ["it has bubble tea"],
+        fix: "Taiwan is famous for bubble tea.", good: ["bubble tea"],
+        why: "After for, use a noun or V-ing, not a clause." },
+      en: "Taiwan is famous for bubble tea, and my city is famous for its local delicacy.",
+      cn: "台灣以珍珠奶茶聞名，我的城市以當地美食聞名。",
+      hi: [{ t: "is famous for bubble tea", cn: "以珍奶聞名", k: "famousfor", c: 2 },
+           { t: "local delicacy", cn: "當地美食", k: "delicacy", c: 4 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "The town used to suffering from a natural disaster.", bad: ["to suffering"],
+        fix: "The town used to suffer from a natural disaster.", good: ["to suffer"],
+        why: "Used to takes the base verb, not V-ing." },
+      en: "The town used to suffer from a natural disaster, but life has returned to normal.",
+      cn: "這座小鎮過去曾遭受自然災害之苦，但生活已恢復正常。",
+      hi: [{ t: "used to suffer from", cn: "過去曾遭受", k: "usedto", c: 1 },
+           { t: "returned to normal", cn: "恢復正常", k: "normal", c: 2 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Taiwan is famous ___ bubble tea.", a: "for", n: 1 },
+      en: "Taiwan is famous ___ bubble tea.", say: "Taiwan is famous, blank, bubble tea.",
+      cn: "台灣＿＿珍珠奶茶聞名。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Taiwan is famous ___ bubble tea.", a: "for", n: 1, show: true },
+      en: "Taiwan is famous for bubble tea.",
+      cn: "台灣以珍珠奶茶聞名。（for 後面接名詞）",
+      hi: [{ t: "is famous for bubble tea", cn: "以珍奶聞名", k: "famousfor", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The town used to ___ from a natural disaster.", a: "suffer", n: 2 },
+      en: "The town used to ___ from a natural disaster.", say: "The town used to, blank, from a natural disaster.",
+      cn: "這座小鎮過去＿＿自然災害之苦。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The town used to ___ from a natural disaster.", a: "suffer", n: 2, show: true },
+      en: "The town used to suffer from a natural disaster.",
+      cn: "這座小鎮過去曾遭受自然災害之苦。（used to 後面用原形動詞）",
+      hi: [{ t: "used to suffer from", cn: "過去曾遭受", k: "usedto", c: 1 },
+           { t: "a natural disaster", cn: "自然災害", k: "disaster", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Many cafés are based here, ___ it a great place to relax.", a: "making", n: 3 },
+      en: "Many cafés are based here, ___ it a great place to relax.", say: "Many cafés are based here, blank, it a great place to relax.",
+      cn: "許多咖啡館設在這裡，＿＿這裡成為放鬆的好地方。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Many cafés are based here, ___ it a great place to relax.", a: "making", n: 3, show: true },
+      en: "Many cafés are based here, making it a great place to relax.",
+      cn: "許多咖啡館設在這裡，使這裡成為放鬆的好地方。",
+      hi: [{ t: "making it a great place to", cn: "使它成為……的好地方", k: "makingit", c: 1 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20251216 ===================== */
+/* bk20251216 A Busy Day of Repairs and Services */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* faulty electrical wire：牆上插座裂開、電線外露冒火花＋警告標誌（電工／faulty／socket） */
+    faultySocket: svg(
+      '<rect x="14" y="20" width="118" height="110" rx="8" fill="'+C+'" '+st+'/>'
+     +'<rect x="34" y="40" width="78" height="70" rx="8" fill="#fff" '+st+'/>'
+     +'<g fill="'+D+'"><rect x="54" y="58" width="7" height="20" rx="2"/><rect x="85" y="58" width="7" height="20" rx="2"/></g>'
+     +'<circle cx="73" cy="94" r="5" fill="none" stroke="'+D+'" stroke-width="3"/>'
+     +'<path d="M34 40 L60 66 M112 46 L86 72" stroke="'+R+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M112 75 C132 75 130 58 146 58" fill="none" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M146 58 l10 -6 l-4 10 l12 -2" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M120 92 l22 0 l-22 34 z" fill="'+R+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<path d="M162 128 L146 96 L130 128 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M146 108 v8" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="146" cy="122" r="2" fill="#fff"/>'),
+    /* apply glue properly：膠水管把膠擠在壁掛支架上（沾黏、水槽固定） */
+    glueTube: svg(
+      '<line x1="12" y1="18" x2="12" y2="140" '+st+'/>'
+     +'<path d="M12 96 h56 v26 h-56" fill="'+L+'" '+st+'/>'
+     +'<path d="M12 96 L52 68 h18 v28" fill="#fff" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="6" stroke-linecap="round"><path d="M20 90 h40"/></g>'
+     +'<path d="M96 40 h64 a10 10 0 0 1 10 10 v26 a10 10 0 0 1 -10 10 h-64 z" fill="#fff" '+st+'/>'
+     +'<path d="M96 50 L74 58 v10 L96 76 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M74 66 C62 74 58 80 52 86" fill="none" stroke="'+A+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5"><path d="M118 52 h36 M118 62 h24"/></g>'
+     +'<circle cx="152" cy="112" r="17" fill="'+C+'" '+st+'/>'
+     +'<path d="M143 112 l7 7 l13 -14" fill="none" stroke="'+B+'" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'),
+    /* carpenter：手鋸＋新裝好的木層架（木匠修門裝層架） */
+    carpenterShelf: svg(
+      '<line x1="18" y1="16" x2="18" y2="142" '+st+'/>'
+     +'<path d="M18 52 h92 M18 100 h92" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'
+     +'<path d="M30 52 v12 M96 52 v12 M30 100 v12 M96 100 v12" stroke="'+D+'" stroke-width="3"/>'
+     +'<rect x="38" y="30" width="20" height="22" rx="2" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="66" y="34" width="26" height="18" rx="2" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="44" y="80" width="40" height="20" rx="2" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M128 30 L182 30 L140 82 z" fill="#fff" '+st+'/>'
+     +'<path d="M132 36 l46 0" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M140 82 l-10 12 a9 9 0 0 0 14 10 l10 -12 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M134 112 h44" stroke="'+D+'" stroke-width="3" stroke-dasharray="6 5"/>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20251216 = {
+  title: "A Busy Day of Repairs and Services",
+  titleCn: "修繕與職業",
+  date: "2025-12-16",
+  level: "B1",
+  scene: "Apartment Walkthrough · Calling In the Pros",
+  sceneCn: "公寓巡一圈・叫專業的來",
+  sceneArt: "leakingPipe",
+  titleArt: ["house", "gear", "check"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・公寓住戶", voice: "f" },
+    T: { name: "Tom", cn: "Tom・水管工人", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "Showing the Plumber Around", cn: "情境：帶水管工人看問題" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    plumber: { t: "plumber", cn: "水管工人", tag: ["職業"],
+      note: "plumber 的 b 不發音，唸 /ˈplʌmɚ/；修水管、馬桶、浴室的人。叫人來修說 call a plumber。",
+      ex: "Our office called a plumber after the pantry sink stopped draining.", exCn: "茶水間水槽不排水後，辦公室叫了水管工人來。" },
+    suffix: { t: "electrician / mechanic", cn: "電工／技工（字尾 -ian、-ic）", tag: ["職業字尾"],
+      note: "職業字尾兩大家族：-er／-or（plumber、carpenter、importer）和 -ian／-ic（electrician、mechanic）。不要說 electricianer。",
+      ex: "The mechanic said my scooter needs a new belt.", exCn: "技工說我的機車要換一條新皮帶。" },
+    flushproperly: { t: "flush properly", cn: "正常沖水", tag: ["報修用語"],
+      note: "報修時最常說 It doesn't flush properly.（沖不乾淨）；flush 當動詞是沖水，properly 是「該有的樣子」。",
+      ex: "The toilet on the second floor still doesn't flush properly.", exCn: "二樓的馬桶還是沒辦法正常沖水。" },
+    getstuck: { t: "gets stuck", cn: "卡住", tag: ["壞掉三兄弟"],
+      note: "get stuck 是「卡住、動不了」，主詞是東西也可以是人；過去式 got stuck。",
+      ex: "The printer paper gets stuck every time we print double-sided.", exCn: "我們每次列印雙面，印表機的紙就會卡住。" },
+    lowpressure: { t: "low water pressure", cn: "水壓很低", tag: ["搭配詞"],
+      note: "pressure 是不可數名詞，水壓說 low／high water pressure，不說 the water is small。",
+      ex: "The whole building has low water pressure in the morning.", exCn: "整棟樓早上水壓都很低。" },
+    falloff: { t: "fell off", cn: "（東西）掉落、脫落", tag: ["壞掉三兄弟"],
+      note: "東西從上面掉下來用 fall off；人跌倒是 fall down，兩個不要混。",
+      ex: "A button fell off my shirt right before the meeting.", exCn: "開會前我襯衫的扣子掉了。" },
+    comeoff: { t: "came off", cn: "脫落、掉下來", tag: ["壞掉三兄弟"],
+      note: "come off 強調「本來黏著／裝著，現在脫開了」，例如標籤、把手、磁磚。",
+      ex: "The label came off the package during shipping.", exCn: "包裹上的標籤在運送途中脫落了。" },
+    glue: { t: "wasn't applied properly", cn: "沒有塗好（被動）", tag: ["apply glue"],
+      note: "塗膠、上漆的動詞是 apply；「沒塗好」責任不明時用被動：the glue wasn't applied properly。",
+      ex: "The paint wasn't applied properly, so it peeled in a week.", exCn: "漆沒有上好，所以一週就剝落了。" },
+    inspect: { t: "inspect everything carefully", cn: "仔細檢查所有東西", tag: ["inspect"],
+      note: "inspect 比 look at 正式，指「有目的地逐項檢查」，報告、驗收常用；名詞是 inspection。",
+      ex: "Please inspect every carton carefully before we load the truck.", exCn: "裝車前請仔細檢查每一箱。" },
+    faulty: { t: "faulty electrical wire", cn: "故障的電線", tag: ["faulty"],
+      note: "faulty 指「功能異常」；製造瑕疵用 defective，外力損壞用 damaged。",
+      ex: "We stopped the line because of a faulty temperature sensor.", exCn: "我們因為一個故障的溫度感測器停線。" },
+    socket: { t: "lights and sockets", cn: "電燈和插座", tag: ["名詞片語"],
+      note: "socket 是牆上的插座，插頭是 plug、延長線是 power strip；三個常一起出現。",
+      ex: "Don't plug three heaters into one socket.", exCn: "不要把三台暖氣插在同一個插座上。" },
+    havedone: { t: "had the door repaired", cn: "請人把門修好", tag: ["have + 物 + p.p."],
+      note: "have + 物 + 過去分詞 ＝ 請人代勞、重點在「事情被完成」；請某人做則是 have + 人 + 原形動詞。",
+      ex: "I had my laptop cleaned before the trade show.", exCn: "展覽前我把筆電送去清理了。" },
+    howimportant: { t: "how important it is to have", cn: "擁有……有多重要", tag: ["名詞子句"],
+      note: "how + 形容詞 + it is to + 原形動詞，是名詞子句、用肯定句語序；不要寫成 how important is it to have。",
+      ex: "Now I know how important it is to back up my files.", exCn: "現在我知道備份檔案有多重要了。" },
+    passive: { t: "were replaced", cn: "被更換（被動語態）", tag: ["被動語態"],
+      note: "修繕結果重點在「東西被修好」，誰修的不重要，所以用 be 動詞 + 過去分詞。",
+      ex: "All the broken handles were replaced this morning.", exCn: "所有壞掉的把手今天早上都換掉了。" },
+    skilled: { t: "Skilled professionals", cn: "熟練的專業人員", tag: ["搭配詞"],
+      note: "skilled 形容「受過訓練、技術熟練」；professional 當名詞就是「專業人員」，複數要加 s。",
+      ex: "We need skilled professionals to install the new line.", exCn: "我們需要熟練的專業人員來安裝新產線。" },
+    efficiently: { t: "solve problems efficiently", cn: "有效率地解決問題", tag: ["副詞搭配"],
+      note: "efficiently 是「不浪費時間、資源」；effectively 是「真的有效果」，兩個常被寫錯。",
+      ex: "A clear checklist helps the team solve problems efficiently.", exCn: "一份清楚的檢查表能幫團隊有效率地解決問題。" },
+    easier: { t: "make life much easier", cn: "讓生活輕鬆許多", tag: ["口語搭配"],
+      note: "make life much easier 前面用 much／a lot 加強比較級，不用 very easier。",
+      ex: "This tracking tool makes life much easier for the whole team.", exCn: "這個追蹤工具讓整個團隊輕鬆許多。" },
+    relieved: { t: "relieved", cn: "如釋重負的", tag: ["感受"],
+      note: "relieved 是人「鬆一口氣」的感受，常用 feel／be relieved；relieve 是動詞「緩解」。",
+      ex: "I was relieved when the audit report came back clean.", exCn: "稽核報告沒有缺失，我鬆了一口氣。" },
+    advise: { t: "advised on good neighborhoods", cn: "針對優質社區提供建議", tag: ["advise on"],
+      note: "advise 後面接建議的主題用 on；advise 是動詞、advice 是不可數名詞。",
+      ex: "The engineer advised on the safest layout for the workshop.", exCn: "工程師針對工作區最安全的配置提供建議。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today we spend one very busy day fixing an apartment.",
+      cn: "歡迎回來。今天我們要度過修公寓的忙碌一天。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for the job names, the three broken phrases, and how Anita asks for help.",
+      cn: "注意聽職業名稱、壞掉三兄弟片語，以及 Anita 怎麼請人幫忙。" },
+
+    /* ---------- 1 情境對話 ---------- */
+    { ch: 1, sp: "A", vis: { type: "scene", art: "frustratedPhone" },
+      en: "Thanks for coming, Tom. It has been a busy day of repairs here.",
+      cn: "謝謝你來，Tom。這裡今天是修東西的忙碌一天。" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "tools" },
+      en: "No problem. Tell me what you noticed first.",
+      cn: "沒問題。先跟我說你最先發現什麼。" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "toiletBroken" },
+      en: "The toilet doesn't flush properly, and the handle sometimes gets stuck.",
+      cn: "馬桶無法正常沖水，而且把手有時候會卡住。",
+      hi: [{ t: "flush properly", cn: "正常沖水", k: "flushproperly", c: 1 },
+           { t: "gets stuck", cn: "卡住", k: "getstuck", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "toiletBroken" },
+      en: "I see. Does the water empty completely when you press it?",
+      cn: "我知道了。按下去的時候，水會完全排空嗎？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "showerDrip" },
+      en: "No, it doesn't. The shower head also has low water pressure.",
+      cn: "不會。蓮蓬頭的水壓也很低。",
+      hi: [{ t: "low water pressure", cn: "水壓很低", k: "lowpressure", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "sinkFellOff" },
+      en: "And what happened to the sink? It is sitting on the floor.",
+      cn: "那水槽怎麼了？它就擺在地板上。" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "glueTube" },
+      en: "It fell off the wall because the glue wasn't applied properly.",
+      cn: "它從牆上掉下來了，因為黏膠沒有塗好。",
+      hi: [{ t: "fell off", cn: "掉落", k: "falloff", c: 1 },
+           { t: "wasn't applied properly", cn: "沒有塗好", k: "glue", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "ceilingTileFall" },
+      en: "A ceiling tile came off too, and part of the wood panel is loose.",
+      cn: "還有一塊天花板磁磚掉落，部分木板也鬆了。",
+      hi: [{ t: "came off", cn: "脫落", k: "comeoff", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "clipboard" },
+      en: "I will inspect everything carefully and repair all the issues today.",
+      cn: "我會仔細檢查所有東西，今天把所有問題都修好。",
+      hi: [{ t: "inspect everything carefully", cn: "仔細檢查所有東西", k: "inspect", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "faultySocket" },
+      en: "Good. An electrician is also coming to fix a faulty electrical wire.",
+      cn: "太好了。也有一位電工要來修一條故障的電線。",
+      hi: [{ t: "electrician", cn: "電工", k: "suffix", c: 4 },
+           { t: "faulty electrical wire", cn: "故障的電線", k: "faulty", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "faultySocket" },
+      en: "Wise. He can make sure all the lights and sockets are safe.",
+      cn: "很明智。他可以確認所有電燈和插座都是安全的。",
+      hi: [{ t: "lights and sockets", cn: "電燈和插座", k: "socket", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "carpenterShelf" },
+      en: "This morning I also had the door repaired by a carpenter.",
+      cn: "今天早上我也請木匠把門修好了。",
+      hi: [{ t: "had the door repaired", cn: "請人把門修好", k: "havedone", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "clipboard" },
+      en: "You have had a long day. Skilled professionals solve problems efficiently.",
+      cn: "你今天真是漫長的一天。熟練的專業人員能有效率地解決問題。",
+      hi: [{ t: "Skilled professionals", cn: "熟練的專業人員", k: "skilled", c: 4 },
+           { t: "solve problems efficiently", cn: "有效率地解決問題", k: "efficiently", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "peacefulHouse" },
+      en: "Exactly. People like you make life much easier, and now I feel relieved.",
+      cn: "沒錯。像你們這樣的人讓生活輕鬆許多，現在我覺得如釋重負。",
+      hi: [{ t: "make life much easier", cn: "讓生活輕鬆許多", k: "easier", c: 2 },
+           { t: "relieved", cn: "如釋重負的", k: "relieved", c: 3 }] },
+
+    /* ---------- 2 重點表達 ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "plumber", ipa: "/ˈplʌmɚ/", pos: "n.", art: "leakingPipe",
+        def: "A person who fixes water pipes, toilets, and bathrooms.",
+        cn: "修理水管、馬桶和浴室的人。",
+        note: "The b is silent: /ˈplʌmɚ/. We say call a plumber." },
+      en: "A plumber fixes water pipes, toilets, and bathrooms. The letter b is silent.",
+      cn: "plumber（水管工人）修水管、馬桶和浴室，字母 b 不發音。",
+      hi: [{ t: "plumber", cn: "水管工人", k: "plumber", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "electrician", ipa: "/ɪˌlekˈtrɪʃən/", cn: "電工（-ian）", def: "A person who fixes wires, lights, and power systems.", art: "faultySocket" },
+        b: { w: "mechanic", ipa: "/məˈkænɪk/", cn: "技工（-ic）", def: "A person who repairs machines, especially cars and motorcycles.", art: "gear" } },
+      en: "Electrician ends in -ian; mechanic ends in -ic. Plumber and carpenter end in -er.",
+      cn: "electrician 字尾是 -ian，mechanic 是 -ic；plumber 和 carpenter 是 -er。",
+      hi: [{ t: "Electrician", cn: "電工", k: "suffix", c: 4 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "faulty", ipa: "/ˈfɔːlti/", pos: "adj.", phrase: "a faulty electrical wire", art: "faultySocket",
+        def: "Not working the way it should.",
+        cn: "故障的、功能不正常的。",
+        note: "faulty = not working; defective = badly made; damaged = broken by force." },
+      en: "Faulty means it does not work the way it should, like a faulty electrical wire.",
+      cn: "faulty 是「功能不正常」，例如 a faulty electrical wire（故障的電線）。",
+      hi: [{ t: "faulty electrical wire", cn: "故障的電線", k: "faulty", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "relieved", ipa: "/rɪˈliːvd/", pos: "adj.", art: "peacefulHouse",
+        def: "Happy because a worry or a problem is gone.",
+        cn: "問題解決後鬆一口氣、如釋重負。",
+        note: "People feel relieved. A hot bath relieves stress (verb)." },
+      en: "When every problem is fixed, you feel relieved. People are relieved, not relieving.",
+      cn: "問題都修好時，你會覺得 relieved（如釋重負）；人是 relieved，不是 relieving。",
+      hi: [{ t: "relieved", cn: "如釋重負的", k: "relieved", c: 3 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "broken things", coreCn: "壞掉三兄弟", art: "warning",
+        items: [{ t: "get stuck", cn: "卡住" }, { t: "fall off", cn: "（東西）掉落" }, { t: "come off", cn: "脫落" }, { t: "fall down", cn: "（人）跌倒" }] },
+      en: "Handles get stuck, tiles fall off, labels come off, but people fall down.",
+      cn: "把手會卡住、磁磚會掉落、標籤會脫落，但人是跌倒（fall down）。",
+      hi: [{ t: "fall off", cn: "掉落", k: "falloff", c: 1 },
+           { t: "come off", cn: "脫落", k: "comeoff", c: 2 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "occupations", coreCn: "職業家族", art: "briefcase",
+        items: [{ t: "travel agent", cn: "旅行社代辦" }, { t: "estate agent", cn: "房地產仲介" }, { t: "civil servant", cn: "公務員" }, { t: "nanny", cn: "保母" }] },
+      en: "A travel agent plans trips, and an estate agent advised on good neighborhoods.",
+      cn: "旅行社代辦規劃行程，房地產仲介針對優質社區提供建議。",
+      hi: [{ t: "advised on good neighborhoods", cn: "針對優質社區提供建議", k: "advise", c: 4 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "professionals", coreCn: "專業人員搭配詞", art: "tools",
+        items: [{ t: "skilled professionals", cn: "熟練的專業人員" }, { t: "inspect everything", cn: "檢查所有東西" }, { t: "solve problems efficiently", cn: "有效率地解決問題" }, { t: "make life much easier", cn: "讓生活輕鬆許多" }] },
+      en: "Skilled professionals inspect everything and make life much easier.",
+      cn: "熟練的專業人員會檢查所有東西，讓生活輕鬆許多。",
+      hi: [{ t: "Skilled professionals", cn: "熟練的專業人員", k: "skilled", c: 4 },
+           { t: "make life much easier", cn: "讓生活輕鬆許多", k: "easier", c: 2 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "have + 物 + 過去分詞（請人代勞）", art: "carpenterShelf",
+        rows: [
+          { lab: "句型", blocks: [{ t: "I had", k: "n" }, { t: "the door", k: "o" }, { t: "repaired", k: "v", add: true }, { t: "by a carpenter", k: "n" }] }
+        ],
+        note: "重點在「門被修好了」，不是自己動手；by + 執行者可以省略。" },
+      en: "I had the door repaired by a carpenter. The carpenter did the work, not me.",
+      cn: "我請木匠把門修好了。是木匠做的，不是我自己做。",
+      hi: [{ t: "had the door repaired", cn: "請人把門修好", k: "havedone", c: 2 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "have + 人 + 原形 vs have + 物 + p.p.", art: "tools",
+        rows: [
+          { lab: "請某人做", blocks: [{ t: "have", k: "n" }, { t: "a carpenter", k: "s" }, { t: "repair", k: "v", add: true }, { t: "the door", k: "o" }] },
+          { lab: "請人代勞", blocks: [{ t: "have", k: "n" }, { t: "the door", k: "o" }, { t: "repaired", k: "v", add: true }] }
+        ],
+        note: "❌ had a carpenter repaired the door；人後面接原形，物後面接過去分詞。" },
+      en: "Say have a carpenter repair the door, or have the door repaired. Never mix them.",
+      cn: "要說 have a carpenter repair the door 或 have the door repaired，不要混用。",
+      hi: [{ t: "have the door repaired", cn: "請人把門修好", k: "havedone", c: 2 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "how important it is to + 原形", art: "star",
+        rows: [
+          { lab: "名詞子句", blocks: [{ t: "I realized", k: "s" }, { t: "how important", k: "n" }, { t: "it is to have", k: "v", add: true }, { t: "skilled professionals", k: "o" }] },
+          { lab: "疑問句語序", blocks: [{ t: "how important", k: "n" }, { t: "is it", k: "x" }, { t: "to have", k: "v" }] }
+        ],
+        note: "放在 realize／know／understand 後面，用肯定句語序，it 是虛主詞。" },
+      en: "I realized how important it is to have skilled professionals in one building.",
+      cn: "我意識到一棟大樓裡有熟練的專業人員有多重要。",
+      hi: [{ t: "how important it is to have", cn: "擁有……有多重要", k: "howimportant", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "被動語態描述修繕結果", art: "sinkFellOff",
+        rows: [
+          { lab: "結果句", blocks: [{ t: "The tiles", k: "s" }, { t: "were replaced", k: "v", add: true }, { t: "by the evening", k: "n" }] }
+        ],
+        note: "be 動詞 + 過去分詞：誰修的不重要，重點是東西被修好了。" },
+      en: "By the evening the tiles were replaced and the ceiling was safe again.",
+      cn: "到了傍晚，磁磚被換新了，天花板也再次變得安全。",
+      hi: [{ t: "were replaced", cn: "被更換", k: "passive", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "被動語態描述修繕結果", art: "sinkFellOff",
+        rows: [
+          { lab: "結果句", blocks: [{ t: "The sink", k: "s" }, { t: "was reattached", k: "v", add: true }] },
+          { lab: "原因句", blocks: [{ t: "the glue", k: "s" }, { t: "wasn't applied", k: "v", add: true }, { t: "properly", k: "n" }] }
+        ],
+        note: "原因句也常用被動：the glue wasn't applied properly（膠沒塗好）。" },
+      en: "The sink was reattached, and we never say who applied the glue.",
+      cn: "水槽被重新固定，而我們從來沒說是誰塗的膠。",
+      hi: [{ t: "was reattached", cn: "被重新固定", k: "passive", c: 3 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "I had a carpenter repaired the broken door.", bad: ["a carpenter repaired"],
+        fix: "I had a carpenter repair the broken door.", good: ["a carpenter repair"],
+        why: "Have + person + base verb. Use the past participle only with a thing." },
+      en: "I had a carpenter repair the broken door, and I had the shelves installed too.",
+      cn: "我請木匠修好壞掉的門，也請人把層架裝好了。",
+      hi: [{ t: "had the shelves installed", cn: "請人把層架裝好", k: "havedone", c: 2 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "Now I know how important is it to have skilled professionals.", bad: ["how important is it"],
+        fix: "Now I know how important it is to have skilled professionals.", good: ["how important it is"],
+        why: "This is a noun clause, so keep statement word order: it is." },
+      en: "Now I know how important it is to have skilled professionals nearby.",
+      cn: "現在我知道身邊有熟練的專業人員有多重要。",
+      hi: [{ t: "how important it is to have", cn: "擁有……有多重要", k: "howimportant", c: 1 },
+           { t: "skilled professionals", cn: "熟練的專業人員", k: "skilled", c: 4 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The handle sometimes ___ stuck, so the toilet won't flush.", a: "gets", n: 1 },
+      en: "The handle sometimes ___ stuck, so the toilet won't flush.", say: "The handle sometimes, blank, stuck, so the toilet won't flush.",
+      cn: "把手有時候會＿＿住，所以馬桶沖不下去。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The handle sometimes ___ stuck, so the toilet won't flush.", a: "gets", n: 1, show: true },
+      en: "The handle sometimes gets stuck, so the toilet won't flush properly.",
+      cn: "把手有時候會卡住，所以馬桶無法正常沖水。",
+      hi: [{ t: "gets stuck", cn: "卡住", k: "getstuck", c: 2 },
+           { t: "flush properly", cn: "正常沖水", k: "flushproperly", c: 1 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The sink ___ off the wall because the glue was bad.", a: "fell", n: 2 },
+      en: "The sink ___ off the wall because the glue was bad.", say: "The sink, blank, off the wall because the glue was bad.",
+      cn: "水槽從牆上＿＿下來，因為膠不好。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The sink ___ off the wall because the glue was bad.", a: "fell", n: 2, show: true },
+      en: "The sink fell off the wall because the glue wasn't applied properly.",
+      cn: "水槽從牆上掉下來，因為黏膠沒有塗好。",
+      hi: [{ t: "fell off", cn: "掉落", k: "falloff", c: 1 },
+           { t: "wasn't applied properly", cn: "沒有塗好", k: "glue", c: 4 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "By the evening, the tiles ___ replaced.", a: "were", n: 3 },
+      en: "By the evening, the tiles ___ replaced.", say: "By the evening, the tiles, blank, replaced.",
+      cn: "到了傍晚，磁磚＿＿更換了。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "By the evening, the tiles ___ replaced.", a: "were", n: 3, show: true },
+      en: "By the evening, the tiles were replaced and everyone felt relieved.",
+      cn: "到了傍晚，磁磚被更換了，每個人都鬆了一口氣。",
+      hi: [{ t: "were replaced", cn: "被更換", k: "passive", c: 3 },
+           { t: "relieved", cn: "如釋重負的", k: "relieved", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20251218 ===================== */
+/* bk20251218 A Busy Day of Repairs and Services（居家修繕與服務） */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* lose air：機車輪胎漏氣，胎壓表指針偏低＋漏出的氣流 */
+    tireLosingAir: svg(
+      '<circle cx="74" cy="78" r="52" fill="none" stroke="'+D+'" stroke-width="12"/>'
+     +'<circle cx="74" cy="78" r="26" fill="'+L+'" '+st+'/>'
+     +'<circle cx="74" cy="78" r="7" fill="'+D+'"/>'
+     +'<g stroke="'+D+'" stroke-width="3"><path d="M74 52 v-8 M74 104 v8 M48 78 h-8 M100 78 h8 M56 60 l-6 -6 M92 96 l6 6 M92 60 l6 -6 M56 96 l-6 6"/></g>'
+     +'<rect x="66" y="20" width="16" height="12" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+B+'" stroke-width="4" fill="none" stroke-linecap="round">'
+     +'<path d="M92 24 C108 14 120 20 130 12"/><path d="M100 36 C118 30 128 36 142 30"/><path d="M104 48 C122 46 132 54 146 50"/></g>'
+     +'<circle cx="158" cy="98" r="28" fill="#fff" '+st+'/>'
+     +'<path d="M140 98 a18 18 0 0 1 36 0" fill="none" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M158 98 L142 88" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/><circle cx="158" cy="98" r="4" fill="'+D+'"/>'
+     +'<text x="158" y="124" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="'+R+'">LOW</text>'),
+    /* radiator：散熱鰭片＋風扇＋散熱的熱氣（機台降溫、汽車水箱） */
+    radiatorFins: svg(
+      '<rect x="20" y="34" width="96" height="86" rx="8" fill="'+C+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="3"><path d="M36 34 v86 M52 34 v86 M68 34 v86 M84 34 v86 M100 34 v86"/></g>'
+     +'<path d="M20 56 H116 M20 98 H116" stroke="'+D+'" stroke-width="3"/>'
+     +'<path d="M12 44 h8 M12 78 h8 M12 112 h8" '+st+'/>'
+     +'<circle cx="156" cy="76" r="30" fill="#fff" '+st+'/>'
+     +'<path d="M156 76 C156 56 172 58 170 70 C186 68 184 84 172 82 C178 96 162 100 158 88 C148 100 138 88 148 82 C134 82 136 64 150 70 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="156" cy="76" r="5" fill="'+D+'"/>'
+     +'<g stroke="'+R+'" stroke-width="3.5" fill="none" stroke-linecap="round">'
+     +'<path d="M40 26 C46 18 34 14 40 6"/><path d="M68 26 C74 18 62 14 68 6"/><path d="M96 26 C102 18 90 14 96 6"/></g>'),
+    /* grease：黃油槍把潤滑脂打進軸承（grease 是膏狀、用在高負載） */
+    greaseBearing: svg(
+      '<circle cx="66" cy="84" r="46" fill="#fff" '+st+'/>'
+     +'<circle cx="66" cy="84" r="22" fill="'+L+'" '+st+'/>'
+     +'<g fill="'+A+'" stroke="'+D+'" stroke-width="2.5">'
+     +'<circle cx="66" cy="50" r="8"/><circle cx="90" cy="60" r="8"/><circle cx="100" cy="84" r="8"/><circle cx="90" cy="108" r="8"/><circle cx="66" cy="118" r="8"/><circle cx="42" cy="108" r="8"/><circle cx="32" cy="84" r="8"/><circle cx="42" cy="60" r="8"/></g>'
+     +'<rect x="132" y="28" width="46" height="62" rx="8" fill="'+D+'"/>'
+     +'<rect x="140" y="38" width="30" height="40" rx="4" fill="'+A+'"/>'
+     +'<path d="M132 58 L112 70 L108 84" fill="none" stroke="'+D+'" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="142" y="90" width="26" height="30" rx="5" fill="'+L+'" '+st+'/>'
+     +'<path d="M108 86 c-6 6 -2 12 4 10" fill="none" stroke="'+A+'" stroke-width="6" stroke-linecap="round"/>'),
+    /* contract vs contact：左邊租約（簽名、打勾）右邊聯絡卡（打叉）＝易錯字對照 */
+    contractVsContact: svg(
+      '<rect x="12" y="20" width="80" height="108" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="12" y="20" width="80" height="18" rx="6" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>'
+     +'<text x="52" y="34" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#fff">CONTRACT</text>'
+     +'<g stroke="'+D+'" stroke-width="2.5"><path d="M24 54 h56 M24 66 h56 M24 78 h40"/></g>'
+     +'<path d="M26 104 c8 -12 14 8 22 -4 c6 -8 10 6 18 0" fill="none" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M24 114 h54" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="86" cy="118" r="14" fill="'+C+'" '+st+'/><path d="M79 118 l6 6 l10 -12" fill="none" stroke="'+B+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="108" y="44" width="80" height="58" rx="6" fill="'+L+'" '+st+'/>'
+     +'<text x="148" y="62" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="'+D+'">CONTACT</text>'
+     +'<path d="M120 76 a7 7 0 0 1 14 0 v4 h-14 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5"><path d="M142 74 h34 M142 84 h24"/></g>'
+     +'<path d="M112 40 L184 106 M184 40 L112 106" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20251218 = {
+  title: "A Busy Day of Repairs and Services",
+  titleCn: "居家修繕與服務",
+  date: "2025-12-18",
+  level: "B1",
+  scene: "Reporting Damage to the Landlord",
+  sceneCn: "向房東報修",
+  sceneArt: "cloggedDrain",
+  titleArt: ["phone", "warning", "doc"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・租客", voice: "f" },
+    T: { name: "Tom", cn: "Tom・房東", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "A Report to the Landlord", cn: "情境：向房東報修" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    noticed: { t: "I noticed that", cn: "我注意到……", tag: ["報修三步", "背起來"],
+      note: "報修第一步：I noticed that + 完整句子。that 後面要放主詞＋動詞，不能只放名詞。",
+      ex: "I noticed that the office printer makes a strange noise.", exCn: "我注意到辦公室的印表機發出怪聲。" },
+    burst: { t: "burst", cn: "爆裂（三態同形）", tag: ["burst", "易錯"],
+      note: "burst 的三態全部一樣：burst／burst／burst，所以過去式不要寫成 bursted。",
+      ex: "The tire burst on the highway, so we stopped on the shoulder.", exCn: "輪胎在高速公路上爆裂，我們停到路肩。" },
+    clogged: { t: "clogged with hair and grease", cn: "被頭髮和油脂堵住", tag: ["be clogged with"],
+      note: "be clogged with + 堵住的東西。蓮蓬頭水壓低最常見的原因就是 clogged。",
+      ex: "The kitchen filter is clogged with oil, so we clean it weekly.", exCn: "廚房濾網被油堵住，所以我們每週清一次。" },
+    inspect: { t: "inspect everything", cn: "檢查所有東西", tag: ["inspect"],
+      note: "inspect 是「逐項檢查」，比 look at 正式；promise to inspect 是承諾會去檢查。",
+      ex: "The supplier promised to inspect every batch before shipping.", exCn: "供應商承諾出貨前會檢查每一批。" },
+    takeshower: { t: "take a proper shower", cn: "好好洗個澡", tag: ["搭配詞"],
+      note: "洗澡的動詞是 take a shower（不是 wash a shower）；proper 在這裡是「好好地、該有的樣子」。",
+      ex: "After the hike we finally took a proper shower at the hotel.", exCn: "健行結束後我們終於在飯店好好洗了個澡。" },
+    radiator: { t: "radiator", cn: "散熱器；暖氣片", tag: ["常見拼錯"],
+      note: "常見拼錯 ❌ raditor／radiater；正確是 radiator，唸 /ˈreɪ.di.eɪ.t̬ɚ/。",
+      ex: "The car overheated because the radiator was blocked.", exCn: "車子過熱，因為散熱器堵住了。" },
+    gotstuck: { t: "got stuck", cn: "卡住了（過去式）", tag: ["過去式"],
+      note: "get stuck 的過去式是 got stuck；整篇報修都在講昨天，所以動詞全用過去式。",
+      ex: "The elevator door got stuck for ten minutes yesterday.", exCn: "昨天電梯門卡了十分鐘。" },
+    grease: { t: "grease", cn: "潤滑脂（膏狀）", tag: ["oil vs grease"],
+      note: "oil 是液體、流動性高；grease 是膏狀、用在高壓重負載。動詞 grease 是「上油」。",
+      ex: "The technician applied grease to the bearings to reduce friction.", exCn: "技術員在軸承上塗潤滑脂以降低摩擦。" },
+    loseair: { t: "losing air", cn: "（輪胎）漏氣", tag: ["lose air vs leak"],
+      note: "輪胎漏氣說 lose air；leak 多指液體漏出來，說 the tire is leaking 不自然。",
+      ex: "My front tire keeps losing air, so I check the pressure every week.", exCn: "我的前輪一直漏氣，所以我每週量胎壓。" },
+    thecontract: { t: "the rental contract", cn: "租約", tag: ["contract vs contact"],
+      note: "contract 是合約，contact 是聯絡方式，差一個 r 意思完全不同；租來的車是 rental car，不是 rent car。",
+      ex: "Please sign the rental contract before you pick up the keys.", exCn: "拿鑰匙之前請先簽租約。" },
+    wasfixed: { t: "everything was fixed", cn: "所有東西都修好了", tag: ["報修三步", "被動語態"],
+      note: "報修第三步的收尾句：By the evening, everything was fixed. 用被動強調「被修好」。",
+      ex: "By Friday, every complaint from the customer was fixed.", exCn: "到了週五，客戶所有的抱怨都處理好了。" },
+    rental: { t: "rental car", cn: "租來的車", tag: ["rent vs rental"],
+      note: "rent 是動詞／租金（to rent a car、pay the rent）；rental 是名詞／形容詞（rental car、equipment rental）。❌ rentaling。",
+      ex: "We picked up the rental car at the airport at midnight.", exCn: "我們半夜在機場取了租來的車。" },
+    burstinto: { t: "burst into tears", cn: "突然哭了出來", tag: ["burst 搭配"],
+      note: "burst into + 名詞（tears／applause）；burst out + V-ing（laughing／crying）。兩個介系詞不要互換。",
+      ex: "The whole room burst into applause when the numbers came up.", exCn: "數字一公布，全場突然鼓起掌來。" },
+    replace: { t: "were replaced", cn: "被更換", tag: ["被動語態"],
+      note: "replace 是「換掉舊的、放上新的」，換的東西當受詞：replace the tiles，不是 replace to new tiles。",
+      ex: "All the damaged ceiling tiles were replaced last weekend.", exCn: "所有受損的天花板磁磚上週末都換掉了。" },
+    reattach: { t: "was reattached", cn: "被重新固定", tag: ["re- 字首"],
+      note: "re- 是「再一次」：reattach 重新裝上、reinstall 重新安裝、rework 重工。",
+      ex: "The handle came off and was reattached with stronger screws.", exCn: "把手掉了，後來用更牢的螺絲重新裝上。" },
+    theestate: { t: "the estate agent", cn: "那位房仲", tag: ["冠詞"],
+      note: "estate agent 指特定的那一位，前面要加 the；第一次泛指才用 an estate agent。",
+      ex: "I called the estate agent again about the deposit.", exCn: "我為了押金的事又打電話給那位房仲。" },
+    relieved: { t: "relieved", cn: "如釋重負的", tag: ["感受"],
+      note: "問題解決後鬆一口氣用 relieved；relieve 是動詞「緩解」，relief 是名詞。",
+      ex: "I was relieved when the landlord agreed to pay for the repairs.", exCn: "房東答應負擔修繕費用，我鬆了一口氣。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today Anita calls her landlord about a very bad night.",
+      cn: "歡迎回來。今天 Anita 要打電話向房東說一個很糟的夜晚。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for the three report steps, past tense verbs, and two easy spelling traps.",
+      cn: "注意聽報修三步、過去式動詞，還有兩個容易拼錯的字。" },
+
+    /* ---------- 1 情境對話 ---------- */
+    { ch: 1, sp: "A", vis: { type: "scene", art: "frustratedPhone" },
+      en: "Hi Tom. I noticed that our bathroom was flooded this morning.",
+      cn: "嗨 Tom。我注意到我們的浴室今天早上淹水了。",
+      hi: [{ t: "I noticed that", cn: "我注意到……", k: "noticed", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "leakingPipe" },
+      en: "Flooded? Tell me exactly what happened last night.",
+      cn: "淹水？告訴我昨晚到底發生什麼事。" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "leakingPipe" },
+      en: "The water pipe burst while we were sleeping, and nobody heard it.",
+      cn: "水管在我們睡覺的時候爆裂了，沒有人聽到。",
+      hi: [{ t: "burst", cn: "爆裂", k: "burst", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "cloggedDrain" },
+      en: "Did the water go down the drain at all?",
+      cn: "水有從排水孔流下去嗎？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "cloggedDrain" },
+      en: "No. The drain was clogged with hair and grease, so we had to mop the floor.",
+      cn: "沒有。排水孔被頭髮和油脂堵住，我們只好拖地。",
+      hi: [{ t: "clogged with hair and grease", cn: "被頭髮和油脂堵住", k: "clogged", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "tools" },
+      en: "I am sorry. I will send a plumber to inspect everything this afternoon.",
+      cn: "很抱歉。我今天下午會派水電工來檢查所有東西。",
+      hi: [{ t: "inspect everything", cn: "檢查所有東西", k: "inspect", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "showerDrip" },
+      en: "Please ask him about the shower head. I can't take a proper shower.",
+      cn: "請也問他蓮蓬頭的事。我沒辦法好好洗個澡。",
+      hi: [{ t: "take a proper shower", cn: "好好洗個澡", k: "takeshower", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "radiatorFins" },
+      en: "Noted. And is the radiator in the living room still working?",
+      cn: "記下了。那客廳的暖氣片還能用嗎？",
+      hi: [{ t: "radiator", cn: "散熱器；暖氣片", k: "radiator", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "radiatorFins" },
+      en: "The knob got stuck on low heat, so the room never gets warm.",
+      cn: "旋鈕卡在小火，所以房間一直暖不起來。",
+      hi: [{ t: "got stuck", cn: "卡住了", k: "gotstuck", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "greaseBearing" },
+      en: "The old fan probably needs grease. I will have that checked too.",
+      cn: "舊風扇可能需要上潤滑脂。我也會請人檢查那個。",
+      hi: [{ t: "grease", cn: "潤滑脂", k: "grease", c: 4 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "tireLosingAir" },
+      en: "One more thing. The tire on my motorcycle is losing air in the parking area.",
+      cn: "還有一件事。我停在停車區的機車輪胎在漏氣。",
+      hi: [{ t: "losing air", cn: "漏氣", k: "loseair", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "tireLosingAir" },
+      en: "I can lend you a pump. The pressure is probably too low.",
+      cn: "我可以借你打氣筒。胎壓可能太低了。" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "contractVsContact" },
+      en: "Thank you. Could you also send me a copy of the rental contract?",
+      cn: "謝謝你。你可以也寄一份租約影本給我嗎？",
+      hi: [{ t: "the rental contract", cn: "租約", k: "thecontract", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "peacefulHouse" },
+      en: "Of course. I will email it today. Last time everything was fixed by Friday.",
+      cn: "當然。我今天會寄電子郵件。上次到週五所有東西都修好了。",
+      hi: [{ t: "everything was fixed", cn: "所有東西都修好了", k: "wasfixed", c: 3 }] },
+
+    /* ---------- 2 重點表達 ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "burst", ipa: "/bɝːst/", pos: "v.", art: "leakingPipe",
+        def: "To break open suddenly because of pressure inside.",
+        cn: "因為內部壓力而突然爆裂。",
+        note: "Three forms are the same: burst / burst / burst. Never bursted." },
+      en: "Burst means to break open suddenly. All three forms are burst.",
+      cn: "burst 是「突然爆裂」，三態同形，都是 burst。",
+      hi: [{ t: "Burst", cn: "爆裂", k: "burst", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "replace", ipa: "/rɪˈpleɪs/", cn: "更換（換新的）", def: "To put a new thing in the place of an old one.", art: "applianceShelf" },
+        b: { w: "reattach", ipa: "/ˌriːəˈtætʃ/", cn: "重新固定（裝回去）", def: "To fix the same thing back onto its place.", art: "sinkFellOff" } },
+      en: "The tiles were replaced with new ones, and the old sink was reattached.",
+      cn: "磁磚換成新的（replaced），舊水槽則是被重新裝回去（reattached）。",
+      hi: [{ t: "were replaced", cn: "被更換", k: "replace", c: 1 },
+           { t: "was reattached", cn: "被重新固定", k: "reattach", c: 4 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "grease", ipa: "/ɡriːs/", pos: "n. / v.", art: "greaseBearing",
+        def: "A thick, sticky substance used to make parts move smoothly.",
+        cn: "膏狀的潤滑脂，讓零件順暢轉動。",
+        note: "Oil is thin and runs; grease is thick and stays." },
+      en: "Grease is thick and stays in place, so we use it for heavy machine parts.",
+      cn: "grease 是膏狀、會留在原處，所以用在重負載的機器零件上。",
+      hi: [{ t: "Grease", cn: "潤滑脂", k: "grease", c: 4 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "radiator", ipa: "/ˈreɪ.di.eɪ.t̬ɚ/", pos: "n.", art: "radiatorFins",
+        def: "A metal part that takes heat away from a machine or warms a room.",
+        cn: "散熱器、暖氣片，也指汽車水箱。",
+        note: "Spelling trap: radiator, not raditor or radiater." },
+      en: "A radiator takes heat away from a machine. Watch the spelling carefully.",
+      cn: "radiator 幫機器散熱，拼字要特別小心。",
+      hi: [{ t: "radiator", cn: "散熱器", k: "radiator", c: 2 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "rental", coreCn: "rental 搭配詞", art: "rentNotice",
+        items: [{ t: "rental car", cn: "租來的車" }, { t: "rental contract", cn: "租約" }, { t: "monthly rental", cn: "每月租金" }, { t: "rental equipment", cn: "租賃設備" }] },
+      en: "A rental car, a rental contract, the monthly rental, and rental equipment.",
+      cn: "租來的車、租約、每月租金、租賃設備。",
+      hi: [{ t: "rental car", cn: "租來的車", k: "rental", c: 1 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "things going wrong", coreCn: "出問題的片語", art: "cloggedDrain",
+        items: [{ t: "be clogged with", cn: "被……堵住" }, { t: "lose air", cn: "（輪胎）漏氣" }, { t: "get stuck", cn: "卡住" }, { t: "mop the floor", cn: "拖地" }] },
+      en: "A drain gets clogged, a tire can lose air, and a knob may get stuck.",
+      cn: "排水孔會堵住、輪胎會漏氣、旋鈕可能卡住。",
+      hi: [{ t: "clogged", cn: "堵住", k: "clogged", c: 3 },
+           { t: "lose air", cn: "漏氣", k: "loseair", c: 1 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "burst", coreCn: "burst 的兩種搭配", art: "warning",
+        items: [{ t: "burst into tears", cn: "突然哭出來" }, { t: "burst into applause", cn: "突然鼓掌" }, { t: "burst out laughing", cn: "突然大笑" }, { t: "the pipe burst", cn: "水管爆裂" }] },
+      en: "She burst into tears, the room burst into applause, and he burst out laughing.",
+      cn: "她突然哭出來、全場突然鼓掌、他突然大笑。",
+      hi: [{ t: "burst into tears", cn: "突然哭出來", k: "burstinto", c: 2 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "過去式：回顧昨天發生的事", art: "pastTimeline",
+        rows: [
+          { lab: "報修第一步", blocks: [{ t: "I", k: "s" }, { t: "noticed", k: "v", add: true }, { t: "that", k: "n" }, { t: "the pipe burst", k: "o" }] }
+        ],
+        note: "整段回顧昨天，主線動詞全部過去式：noticed、called、checked、fixed。" },
+      en: "I noticed that the pipe burst. Notice becomes noticed because it is yesterday.",
+      cn: "我注意到水管爆裂了。因為講的是昨天，notice 要變 noticed。",
+      hi: [{ t: "I noticed that", cn: "我注意到……", k: "noticed", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "過去式：回顧昨天發生的事", art: "pastTimeline",
+        rows: [
+          { lab: "狀態也用過去式", blocks: [{ t: "The knob", k: "s" }, { t: "got stuck", k: "v", add: true }, { t: "on low heat", k: "n" }] }
+        ],
+        note: "get 的過去式是 got；burst 的過去式還是 burst，不要寫 bursted。" },
+      en: "The knob got stuck on low heat, so the living room stayed cold all night.",
+      cn: "旋鈕卡在小火，所以客廳整晚都是冷的。",
+      hi: [{ t: "got stuck", cn: "卡住了", k: "gotstuck", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "被動語態：重點在事情被完成", art: "activePassive",
+        rows: [
+          { lab: "主動", blocks: [{ t: "The plumber", k: "s" }, { t: "replaced", k: "v" }, { t: "the tiles", k: "o" }] },
+          { lab: "被動", blocks: [{ t: "The tiles", k: "s" }, { t: "were replaced", k: "v", add: true }] }
+        ],
+        note: "be 動詞 + 過去分詞；誰做的不重要時，把 by the plumber 省略。" },
+      en: "The tiles were replaced, and the sink was reattached the same afternoon.",
+      cn: "磁磚被更換，水槽也在同一個下午被重新固定。",
+      hi: [{ t: "were replaced", cn: "被更換", k: "replace", c: 1 },
+           { t: "was reattached", cn: "被重新固定", k: "reattach", c: 4 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "被動語態：重點在事情被完成", art: "activePassive",
+        rows: [
+          { lab: "收尾句", blocks: [{ t: "By the evening", k: "n" }, { t: "everything", k: "s" }, { t: "was fixed", k: "v", add: true }] }
+        ],
+        note: "everything 是單數，所以用 was，不是 were。" },
+      en: "By the evening, everything was fixed and the ceiling was safe again.",
+      cn: "到了晚上，所有東西都修好了，天花板也再次安全。",
+      hi: [{ t: "everything was fixed", cn: "所有東西都修好了", k: "wasfixed", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "報修三步（直接背）", art: "clipboard",
+        rows: [
+          { lab: "1 發現", blocks: [{ t: "I noticed that", k: "n" }, { t: "the drain was clogged", k: "o" }] },
+          { lab: "2 叫人", blocks: [{ t: "I called", k: "v" }, { t: "a plumber", k: "s" }, { t: "to fix it", k: "o" }] },
+          { lab: "3 修好", blocks: [{ t: "By the evening", k: "n" }, { t: "everything was fixed", k: "v", add: true }] }
+        ],
+        note: "三句一組，報修信、客訴回覆都能直接套用。" },
+      en: "I noticed that the drain was clogged, I called a plumber, and everything was fixed.",
+      cn: "我注意到排水孔堵住，我叫了水電工，最後所有東西都修好了。",
+      hi: [{ t: "I noticed that", cn: "我注意到……", k: "noticed", c: 1 },
+           { t: "everything was fixed", cn: "所有東西都修好了", k: "wasfixed", c: 3 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "My motorcycle tire pressure is too low, so it's leaking.", bad: ["it's leaking"],
+        fix: "The tire on my motorcycle is losing air because the pressure is too low.", good: ["is losing air"],
+        why: "Tires lose air. Leak is for liquids like water or oil." },
+      en: "The tire on my motorcycle is losing air because the pressure is too low.",
+      cn: "我機車的輪胎在漏氣，因為胎壓太低。",
+      hi: [{ t: "losing air", cn: "漏氣", k: "loseair", c: 1 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "I asked estate agent to send me a copy of our apartment's contact.", bad: ["estate agent", "contact"],
+        fix: "I asked the estate agent to send me a copy of the rental contract.", good: ["the estate agent", "contract"],
+        why: "Add the before estate agent. A contract is a document; a contact is a phone number." },
+      en: "I asked the estate agent to send me a copy of the rental contract.",
+      cn: "我請那位房仲寄一份租約影本給我。",
+      hi: [{ t: "the estate agent", cn: "那位房仲", k: "theestate", c: 2 },
+           { t: "the rental contract", cn: "租約", k: "thecontract", c: 4 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The drain was ___ with hair and grease.", a: "clogged", n: 1 },
+      en: "The drain was ___ with hair and grease.", say: "The drain was, blank, with hair and grease.",
+      cn: "排水孔被頭髮和油脂＿＿住了。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The drain was ___ with hair and grease.", a: "clogged", n: 1, show: true },
+      en: "The drain was clogged with hair and grease, so the water stayed.",
+      cn: "排水孔被頭髮和油脂堵住，所以水積在那裡。",
+      hi: [{ t: "clogged with hair and grease", cn: "被頭髮和油脂堵住", k: "clogged", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The water pipe ___ last night, not bursted.", a: "burst", n: 2 },
+      en: "The water pipe ___ last night, not bursted.", say: "The water pipe, blank, last night, not bursted.",
+      cn: "水管昨晚＿＿了（不是 bursted）。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The water pipe ___ last night, not bursted.", a: "burst", n: 2, show: true },
+      en: "The water pipe burst last night, because all three forms are the same.",
+      cn: "水管昨晚爆裂了，因為 burst 三態同形。",
+      hi: [{ t: "burst", cn: "爆裂", k: "burst", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "By the evening, everything ___ fixed.", a: "was", n: 3 },
+      en: "By the evening, everything ___ fixed.", say: "By the evening, everything, blank, fixed.",
+      cn: "到了晚上，所有東西都＿＿修好了。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "By the evening, everything ___ fixed.", a: "was", n: 3, show: true },
+      en: "By the evening, everything was fixed, and Anita felt relieved.",
+      cn: "到了晚上，所有東西都修好了，Anita 感到如釋重負。",
+      hi: [{ t: "everything was fixed", cn: "所有東西都修好了", k: "wasfixed", c: 3 },
+           { t: "relieved", cn: "如釋重負的", k: "relieved", c: 1 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20251226a ===================== */
+/* bk20251226a Stress and Conditionals（壓力管理與假設語氣） */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* relieve stress：泡在裝滿熱水的浴缸裡（靜態、放鬆療癒） */
+    hotBathRelax: svg(
+      '<path d="M22 66 h156 v26 a30 30 0 0 1 -30 30 H52 a30 30 0 0 1 -30 -30 z" fill="'+B+'" '+st+'/>'
+     +'<path d="M22 78 C46 70 64 86 88 78 C112 70 132 86 156 78 C166 74 172 78 178 76" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M40 122 v14 M160 122 v14" '+st+'/>'
+     +'<circle cx="62" cy="58" r="14" fill="'+C+'" '+st+'/>'
+     +'<path d="M118 70 a12 12 0 0 1 24 0" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M170 66 v-18 h-22" fill="none" '+st+'/><path d="M148 44 h-12 v10 h12 z" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+R+'" stroke-width="3.5" fill="none" stroke-linecap="round">'
+     +'<path d="M78 46 C84 38 72 32 78 22"/><path d="M104 46 C110 38 98 32 104 22"/><path d="M130 40 C136 32 124 26 130 16"/></g>'),
+    /* release stress：吊起的沙包＋拳套擊出（動態、發洩） */
+    punchingBag: svg(
+      '<line x1="18" y1="14" x2="182" y2="14" '+st+'/>'
+     +'<path d="M116 14 v14" '+st+'/>'
+     +'<path d="M104 28 h24 l4 10 h-32 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M98 38 h36 v58 a18 18 0 0 1 -18 18 a18 18 0 0 1 -18 -18 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M98 58 h36 M98 82 h36" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M62 74 a16 16 0 0 1 16 -16 h10 a10 10 0 0 1 0 20 h-2 a10 10 0 0 1 0 20 h-8 a16 16 0 0 1 -16 -16 z" fill="'+C+'" '+st+'/>'
+     +'<rect x="44" y="66" width="20" height="26" rx="5" fill="'+B+'" '+st+'/>'
+     +'<g stroke="'+R+'" stroke-width="4" stroke-linecap="round"><path d="M90 50 l-8 -10 M92 66 l-12 -2 M90 88 l-10 10"/></g>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round"><path d="M148 52 l10 -8 M150 70 l14 0 M148 88 l10 8"/></g>'),
+    /* the tap is stuck：水龍頭轉不動，旋轉箭頭被畫上紅叉 */
+    stuckFaucet: svg(
+      '<rect x="20" y="104" width="160" height="30" rx="6" fill="'+L+'" '+st+'/>'
+     +'<path d="M84 104 v-34 h44" fill="none" stroke="'+D+'" stroke-width="9" stroke-linecap="round"/>'
+     +'<path d="M128 70 h10 v14 h-14 z" fill="'+A+'" '+st+'/>'
+     +'<rect x="70" y="46" width="28" height="12" rx="4" fill="'+A+'" '+st+'/>'
+     +'<path d="M84 58 v12" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'
+     +'<path d="M36 118 h128" stroke="#fff" stroke-width="4"/>'
+     +'<path d="M112 34 a30 30 0 1 1 -56 12" fill="none" stroke="'+B+'" stroke-width="4.5" stroke-linecap="round"/>'
+     +'<path d="M104 26 l10 8 l-11 7" fill="none" stroke="'+B+'" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M46 14 L118 62 M118 14 L46 62" stroke="'+R+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<circle cx="158" cy="60" r="20" fill="'+C+'" '+st+'/>'
+     +'<text x="158" y="68" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700" fill="'+R+'">!</text>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20251226a = {
+  title: "Stress and Conditionals",
+  titleCn: "壓力管理與假設語氣",
+  date: "2025-12-26",
+  level: "B1",
+  scene: "Break Room · A Very Long Week",
+  sceneCn: "休息區・非常漫長的一週",
+  sceneArt: "coffeeBreak",
+  titleArt: ["heart", "clock", "bolt"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・專案工程師", voice: "f" },
+    T: { name: "Tom", cn: "Tom・同組同事", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "A Very Long Week", cn: "情境：漫長的一週" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    relieve: { t: "relieve stress", cn: "緩解壓力（Calm it down）", tag: ["靜態放鬆"],
+      note: "relieve ＝ 讓緊繃的情緒平靜下來，配靜態、療癒的活動：泡澡、喝茶、聽音樂。",
+      ex: "A short walk after lunch helps me relieve stress.", exCn: "午餐後散個步能幫我緩解壓力。" },
+    release: { t: "release stress", cn: "釋放壓力（Let it out）", tag: ["動態發洩"],
+      note: "release ＝ 把體內的壓力「丟出去」，配動態、運動、發洩型活動：打球、跑步、打沙包。",
+      ex: "Cycling on the weekend is how he releases stress.", exCn: "週末騎車是他釋放壓力的方式。" },
+    getrid: { t: "get rid of stress", cn: "擺脫壓力（Remove it）", tag: ["通用"],
+      note: "get rid of 是「完全趕走」，通用說法；後面接名詞，不要接 to + V。",
+      ex: "A good sleep helps me get rid of stress before a big meeting.", exCn: "大型會議前，睡個好覺能幫我擺脫壓力。" },
+    painkiller: { t: "painkiller", cn: "止痛藥（口語）", tag: ["用字選擇"],
+      note: "painkiller 較口語日常；pain reliever 較中性正式，藥品包裝上常見。",
+      ex: "She keeps a painkiller in her bag for sudden headaches.", exCn: "她包裡放了止痛藥，以防突然頭痛。" },
+    bathtub: { t: "bathtub", cn: "浴缸", tag: ["名詞"],
+      note: "泡澡說 relax in a bathtub filled with hot water；淋浴間才是 shower。",
+      ex: "Our new apartment has no bathtub, only a shower.", exCn: "我們的新公寓沒有浴缸，只有淋浴間。" },
+    workout: { t: "work out on fitness equipment", cn: "用健身器材運動", tag: ["搭配詞"],
+      note: "work out 是動詞片語「運動、健身」；equipment 不可數，不要加 s。",
+      ex: "He works out on fitness equipment three nights a week.", exCn: "他每週有三個晚上用健身器材運動。" },
+    faucet: { t: "faucet", cn: "水龍頭（美式）", tag: ["美式 vs 英式"],
+      note: "美式多說 faucet，英式多說 tap；兩個都指同一個水龍頭。",
+      ex: "Turn off the faucet tightly or it will drip all night.", exCn: "水龍頭要關緊，不然會滴一整晚。" },
+    stuck: { t: "stuck", cn: "卡住的；動彈不得的", tag: ["形容詞"],
+      note: "東西轉不動、人被困住、想法卡關都能用 be stuck；I'm stuck. ＝ 我卡住了。",
+      ex: "I'm stuck on question three and can't move on.", exCn: "我卡在第三題，沒辦法往下做。" },
+    falloff: { t: "fell off", cn: "掉落、脫落", tag: ["fall off"],
+      note: "東西從上面掉下來用 fall off；人跌倒用 fall down，不要混用。",
+      ex: "A picture fell off the wall during the earthquake.", exCn: "地震時一幅畫從牆上掉了下來。" },
+    troubleshoot: { t: "troubleshooting", cn: "排除故障", tag: ["職場動詞"],
+      note: "troubleshoot 是「找出並排除技術問題」，介系詞後面要用 V-ing：used to troubleshooting。",
+      ex: "Most of my day is spent troubleshooting machine alarms.", exCn: "我一天大部分時間都在排除機台警報。" },
+    prioritize: { t: "prioritize", cn: "排定優先順序", tag: ["職場動詞"],
+      note: "prioritize 後面直接接受詞，不加 of：prioritize the tasks。名詞是 priority。",
+      ex: "Let's prioritize the tasks before the schedule slips.", exCn: "在時程落後之前，我們先排定任務優先順序。" },
+    urgent: { t: "the most urgent", cn: "最緊急的", tag: ["形容詞"],
+      note: "urgent 指「時間上急迫」；important 指「重要」，兩者不一定相同。",
+      ex: "Answer the most urgent emails first, then the rest.", exCn: "先回最緊急的信，其他之後再處理。" },
+    secondcond: { t: "would you do if", cn: "如果……你會怎麼做？", tag: ["第二條件句"],
+      note: "問假設問題：What would you do if + 過去式？回答也要用 would + 原形動詞。",
+      ex: "What would you do if the power went out during a test?", exCn: "如果測試中停電了，你會怎麼做？" },
+    were: { t: "were", cn: "假設句的 be 動詞", tag: ["必考"],
+      note: "第二條件句的 If 子句，不論主詞是誰，正式英文一律用 were，不用 was。",
+      ex: "If I were you, I would talk to the landlord today.", exCn: "如果我是你，我今天就會去找房東談。" },
+    eventhough: { t: "even though", cn: "雖然……（轉折）", tag: ["口說加分"],
+      note: "even though 後面接完整子句（主詞＋動詞）；even 單獨用不能當「雖然」。",
+      ex: "She finished the report even though she had a headache.", exCn: "她雖然頭痛，還是把報告完成了。" },
+    usedto: { t: "I'm used to", cn: "我習慣於……", tag: ["易混淆"],
+      note: "be used to + V-ing ＝ 現在習慣了；used to + 原形動詞 ＝ 過去曾經。兩個長得像意思完全不同。",
+      ex: "I'm used to working with two screens now.", exCn: "我現在習慣用兩個螢幕工作了。" },
+    goodat: { t: "good at fixing", cn: "擅長修理", tag: ["be good at + V-ing"],
+      note: "at 是介系詞，後面一定接 V-ing：good at fixing、good at speaking。",
+      ex: "He is good at fixing old bicycles in his free time.", exCn: "他很擅長在空閒時間修舊自行車。" },
+    releaseother: { t: "was released", cn: "被發布／被釋放", tag: ["release 延伸"],
+      note: "release 也能講產品「發布」和人被「釋放」：The product was released.／He was released from prison.",
+      ex: "The new model was released two weeks earlier than planned.", exCn: "新機型比計畫提早兩週發布。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today we talk about stress, and about things that are not real.",
+      cn: "歡迎回來。今天我們要談壓力，也要談不是真實的假設。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for three stress verbs and the second conditional with would.",
+      cn: "注意聽三個紓壓動詞，以及用 would 的第二條件句。" },
+
+    /* ---------- 1 情境對話 ---------- */
+    { ch: 1, sp: "T", vis: { type: "scene", art: "tightDeadline" },
+      en: "You look tired, Anita. Was it another long day?",
+      cn: "你看起來很累，Anita。今天又是漫長的一天嗎？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "frustratedPhone" },
+      en: "Yes. My apartment and my project both went wrong this week.",
+      cn: "是啊。我的公寓和我的專案這週都出問題了。" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "stuckFaucet" },
+      en: "What happened at home?",
+      cn: "家裡發生什麼事了？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "stuckFaucet" },
+      en: "The faucet is stuck, and a ceiling tile fell off in the bathroom.",
+      cn: "水龍頭卡住了，浴室還有一塊天花板磁磚掉下來。",
+      hi: [{ t: "stuck", cn: "卡住的", k: "stuck", c: 2 },
+           { t: "fell off", cn: "掉落", k: "falloff", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "ceilingTileFall" },
+      en: "That sounds dangerous. What would you do if it fell off again?",
+      cn: "聽起來很危險。如果它又掉下來，你會怎麼做？",
+      hi: [{ t: "would you do if", cn: "你會怎麼做", k: "secondcond", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "tools" },
+      en: "I would call a plumber, even though I'm used to troubleshooting problems at work.",
+      cn: "我會叫水電工，即使我在工作上習慣排除各種問題。",
+      hi: [{ t: "even though", cn: "雖然", k: "eventhough", c: 4 },
+           { t: "I'm used to", cn: "我習慣於", k: "usedto", c: 2 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "priorityStack" },
+      en: "Fair enough. If everything broke at once, how would you prioritize the jobs?",
+      cn: "有道理。如果所有東西同時壞掉，你會怎麼排定優先順序？",
+      hi: [{ t: "prioritize", cn: "排定優先順序", k: "prioritize", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "priorityStack" },
+      en: "I would fix the most urgent and dangerous problems first.",
+      cn: "我會先處理最緊急、最危險的問題。",
+      hi: [{ t: "the most urgent", cn: "最緊急的", k: "urgent", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "migrainePill" },
+      en: "Smart. Did all of this give you a headache?",
+      cn: "很聰明。這些事讓你頭痛嗎？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "medicineBottle" },
+      en: "It did. I took a painkiller last night and went to bed early.",
+      cn: "有。我昨晚吃了止痛藥，很早就睡了。",
+      hi: [{ t: "painkiller", cn: "止痛藥", k: "painkiller", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "hotBathRelax" },
+      en: "You need to slow down. What helps you relieve stress?",
+      cn: "你需要放慢一點。什麼能幫你緩解壓力？",
+      hi: [{ t: "relieve stress", cn: "緩解壓力", k: "relieve", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "hotBathRelax" },
+      en: "A bathtub filled with hot water. It calms everything down.",
+      cn: "一個裝滿熱水的浴缸。它讓一切都平靜下來。",
+      hi: [{ t: "bathtub", cn: "浴缸", k: "bathtub", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "punchingBag" },
+      en: "I prefer to release stress. I hit the punching bag at the gym.",
+      cn: "我比較喜歡釋放壓力。我在健身房打沙包。",
+      hi: [{ t: "release stress", cn: "釋放壓力", k: "release", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "marathonRunner" },
+      en: "Then let's work out on fitness equipment tomorrow and get rid of stress together.",
+      cn: "那我們明天一起用健身器材運動，一起擺脫壓力吧。",
+      hi: [{ t: "work out on fitness equipment", cn: "用健身器材運動", k: "workout", c: 3 },
+           { t: "get rid of stress", cn: "擺脫壓力", k: "getrid", c: 2 }] },
+
+    /* ---------- 2 重點表達 ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "relieve", ipa: "/rɪˈliːv/", cn: "緩解（Calm it down）", def: "To make a bad feeling smaller and calmer.", art: "hotBathRelax" },
+        b: { w: "release", ipa: "/rɪˈliːs/", cn: "釋放（Let it out）", def: "To let something out of your body or out into the world.", art: "punchingBag" } },
+      en: "A hot bath helps you relieve stress; a punching bag helps you release stress.",
+      cn: "泡熱水澡是 relieve stress（緩解）；打沙包是 release stress（釋放）。",
+      hi: [{ t: "relieve stress", cn: "緩解壓力", k: "relieve", c: 2 },
+           { t: "release stress", cn: "釋放壓力", k: "release", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "faucet", ipa: "/ˈfɑː.sɪt/", pos: "n.", art: "stuckFaucet",
+        def: "The part you turn to get water from a pipe.",
+        cn: "水龍頭（美式用 faucet，英式用 tap）。",
+        note: "American faucet, British tap. If it won't turn, it is stuck." },
+      en: "Americans say faucet and British speakers say tap. If it won't turn, it is stuck.",
+      cn: "美式說 faucet、英式說 tap；轉不動就是 stuck。",
+      hi: [{ t: "faucet", cn: "水龍頭", k: "faucet", c: 3 },
+           { t: "stuck", cn: "卡住的", k: "stuck", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "troubleshoot", ipa: "/ˈtrʌb.əl.ʃuːt/", pos: "v.", art: "tools",
+        def: "To find the cause of a technical problem and fix it.",
+        cn: "排除故障、找出技術問題的原因並解決。",
+        note: "After be used to, use the -ing form: used to troubleshooting." },
+      en: "To troubleshoot is to find the cause and fix it. After be used to, add -ing.",
+      cn: "troubleshoot 是找原因並解決；接在 be used to 後面要加 -ing。",
+      hi: [{ t: "troubleshoot", cn: "排除故障", k: "troubleshoot", c: 4 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "prioritize", ipa: "/praɪˈɔːrɪtaɪz/", pos: "v.", art: "priorityStack",
+        def: "To decide which jobs must be done first.",
+        cn: "排定優先順序，決定哪件事要先做。",
+        note: "Prioritize the tasks. The noun is priority." },
+      en: "When five things break, you prioritize the most urgent one first.",
+      cn: "五樣東西一起壞掉時，就先處理最緊急的那一個。",
+      hi: [{ t: "prioritize", cn: "排定優先順序", k: "prioritize", c: 1 },
+           { t: "the most urgent", cn: "最緊急的", k: "urgent", c: 3 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "stress", coreCn: "紓壓三動詞", art: "trash",
+        items: [{ t: "relieve stress", cn: "緩解（靜態）" }, { t: "release stress", cn: "釋放（動態）" }, { t: "get rid of stress", cn: "擺脫（通用）" }] },
+      en: "Relieve stress, release stress, or get rid of stress completely.",
+      cn: "緩解壓力、釋放壓力，或是完全擺脫壓力。",
+      hi: [{ t: "get rid of stress", cn: "擺脫壓力", k: "getrid", c: 2 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "release", coreCn: "release 的其他用法", art: "box",
+        items: [{ t: "release a new product", cn: "發布新產品" }, { t: "be released from prison", cn: "被釋放出獄" }, { t: "release the pressure", cn: "洩壓" }] },
+      en: "The new product was released last week, and he was released from prison in May.",
+      cn: "新產品上週發布了，他五月被釋放出獄。",
+      hi: [{ t: "was released", cn: "被發布", k: "releaseother", c: 4 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "speaking boosters", coreCn: "口說加分句型", art: "mic",
+        items: [{ t: "be good at + V-ing", cn: "擅長做某事" }, { t: "be used to + V-ing", cn: "習慣於做某事" }, { t: "even though + 子句", cn: "雖然……" }, { t: "just like + V-ing", cn: "就像……一樣" }] },
+      en: "I'm not good at fixing pipes, just like prioritizing tasks is not easy for everyone.",
+      cn: "我不擅長修水管，就像排定任務優先順序對每個人來說都不容易。",
+      hi: [{ t: "good at fixing", cn: "擅長修理", k: "goodat", c: 1 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "第二條件句 Second Conditional", art: "ifNotFlow",
+        rows: [
+          { lab: "條件", blocks: [{ t: "If", k: "n" }, { t: "I", k: "s" }, { t: "had", k: "v", add: true }, { t: "a lot of money", k: "o" }] },
+          { lab: "結果", blocks: [{ t: "I", k: "s" }, { t: "would travel", k: "v", add: true }, { t: "around the world", k: "o" }] }
+        ],
+        note: "If 子句用過去式不是講過去，而是「與現在事實相反」；主句一定是 would + 原形。" },
+      en: "If I had a lot of money, I would travel around the world. In fact, I don't.",
+      cn: "如果我有很多錢，我就會環遊世界。事實上我沒有。",
+      hi: [{ t: "would travel", cn: "就會去（想像結果）", k: "secondcond", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "必考：be 動詞一律用 were", art: "sentenceSlots",
+        rows: [
+          { lab: "正確", blocks: [{ t: "If Tom", k: "s" }, { t: "were", k: "v", add: true }, { t: "a rich man", k: "o" }] },
+          { lab: "錯誤", blocks: [{ t: "If Tom", k: "s" }, { t: "was", k: "x" }, { t: "a rich man", k: "o" }] }
+        ],
+        note: "正式英文裡，第二條件句的 If 子句不論主詞是誰都用 were。" },
+      en: "In formal English we say: If Tom were a rich man, I would marry him.",
+      cn: "正式英文要說 If Tom were a rich man, I would marry him.",
+      hi: [{ t: "were", cn: "假設句的 be 動詞", k: "were", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "問假設問題", art: "ifNotFlow",
+        rows: [
+          { lab: "提問", blocks: [{ t: "What would you do", k: "v" }, { t: "if", k: "n" }, { t: "a ceiling tile", k: "s" }, { t: "fell off", k: "v", add: true }] }
+        ],
+        note: "問句也用過去式：fell off，不是 falls off；回答用 I would …。" },
+      en: "What would you do if a ceiling tile fell off at your home tonight?",
+      cn: "如果今晚你家的天花板磁磚掉下來，你會怎麼做？",
+      hi: [{ t: "would you do if", cn: "你會怎麼做", k: "secondcond", c: 3 },
+           { t: "fell off", cn: "掉落", k: "falloff", c: 2 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "口說加分：結論 → 理由 → 轉折", art: "mic",
+        rows: [
+          { lab: "結論", blocks: [{ t: "I would call a plumber", k: "v" }] },
+          { lab: "理由", blocks: [{ t: "because", k: "n" }, { t: "I'm not good at fixing pipes", k: "o" }] },
+          { lab: "轉折", blocks: [{ t: "even though", k: "n", add: true }, { t: "I'm used to troubleshooting", k: "o" }] }
+        ],
+        note: "先給結論，再用 because 給理由，最後用 even though 補轉折，答案立刻有層次。" },
+      en: "I would call a plumber because I'm not good at fixing pipes.",
+      cn: "我會叫水電工，因為我不擅長修水管。",
+      hi: [{ t: "good at fixing", cn: "擅長修理", k: "goodat", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "be used to + V-ing vs used to + 原形", art: "twoMinds",
+        rows: [
+          { lab: "現在習慣", blocks: [{ t: "I'm used to", k: "n" }, { t: "troubleshooting", k: "v", add: true }, { t: "technical problems", k: "o" }] },
+          { lab: "過去曾經", blocks: [{ t: "I used to", k: "n" }, { t: "work", k: "v", add: true }, { t: "night shifts", k: "o" }] }
+        ],
+        note: "be used to 後面接 V-ing（現在習慣了）；used to 後面接原形（過去曾經，現在沒有了）。" },
+      en: "I'm used to troubleshooting technical problems, but I used to work night shifts.",
+      cn: "我習慣排除技術問題，但我以前是上夜班的。",
+      hi: [{ t: "I'm used to", cn: "我習慣於", k: "usedto", c: 2 },
+           { t: "troubleshooting", cn: "排除故障", k: "troubleshoot", c: 4 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "If Tom was a rich man, I would marry him.", bad: ["was"],
+        fix: "If Tom were a rich man, I would marry him.", good: ["were"],
+        why: "In a second conditional, the be verb is always were in formal English." },
+      en: "If Tom were a rich man, I would marry him.",
+      cn: "如果 Tom 是有錢人，我就會嫁給他。",
+      hi: [{ t: "were", cn: "假設句的 be 動詞", k: "were", c: 1 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "I'm not good at fix pipes, even though I'm used to troubleshoot problems.", bad: ["fix", "troubleshoot"],
+        fix: "I'm not good at fixing pipes, even though I'm used to troubleshooting problems.", good: ["fixing", "troubleshooting"],
+        why: "At and to are prepositions here, so both verbs need -ing." },
+      en: "I'm not good at fixing pipes, even though I'm used to troubleshooting problems.",
+      cn: "我不擅長修水管，即使我習慣排除各種問題。",
+      hi: [{ t: "good at fixing", cn: "擅長修理", k: "goodat", c: 1 },
+           { t: "I'm used to", cn: "我習慣於", k: "usedto", c: 2 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "If I ___ more time, I would double-check every report.", a: "had", n: 1 },
+      en: "If I ___ more time, I would double-check every report.", say: "If I, blank, more time, I would double-check every report.",
+      cn: "如果我＿＿更多時間，我會再確認每一份報告。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "If I ___ more time, I would double-check every report.", a: "had", n: 1, show: true },
+      en: "If I had more time, I would double-check every report before Friday.",
+      cn: "如果我有更多時間，我會在週五前再確認每一份報告。",
+      hi: [{ t: "would double-check", cn: "就會再確認", k: "secondcond", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Formal English: If Tom ___ a rich man, I would marry him.", a: "were", n: 2 },
+      en: "Formal English: If Tom ___ a rich man, I would marry him.", say: "Formal English: If Tom, blank, a rich man, I would marry him.",
+      cn: "正式英文：如果 Tom ＿＿有錢人，我就會嫁給他。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Formal English: If Tom ___ a rich man, I would marry him.", a: "were", n: 2, show: true },
+      en: "If Tom were a rich man, I would marry him. Never use was here.",
+      cn: "If Tom were a rich man, I would marry him.（這裡不能用 was）",
+      hi: [{ t: "were", cn: "假設句的 be 動詞", k: "were", c: 1 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Hitting a punching bag is a great way to ___ stress.", a: "release", n: 3 },
+      en: "Hitting a punching bag is a great way to ___ stress.", say: "Hitting a punching bag is a great way to, blank, stress.",
+      cn: "打沙包是＿＿壓力的好方法。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Hitting a punching bag is a great way to ___ stress.", a: "release", n: 3, show: true },
+      en: "Hitting a punching bag is a great way to release stress, not relieve stress.",
+      cn: "打沙包是釋放壓力（release）的好方法，不是緩解（relieve）。",
+      hi: [{ t: "release stress", cn: "釋放壓力", k: "release", c: 1 },
+           { t: "relieve stress", cn: "緩解壓力", k: "relieve", c: 2 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};
+
+
+/* ===================== bk20251226b ===================== */
+/* bk20251226b Dreams and Decisions（條件句文法解析） */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* daydream：側臉＋思考泡泡裡的星星與大房子（想像、第二條件句） */
+    daydreamCloud: svg(
+      '<path d="M18 138 v-30 a26 26 0 0 1 26 -26 h6 a22 22 0 0 1 0 -44 a22 22 0 0 1 22 22 v20 a28 28 0 0 1 -14 24 v34" fill="'+C+'" '+st+'/>'
+     +'<circle cx="46" cy="60" r="3.5" fill="'+D+'"/>'
+     +'<path d="M30 74 a10 8 0 0 0 16 0" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<circle cx="86" cy="96" r="5" fill="#fff" '+st+'/><circle cx="98" cy="84" r="7" fill="#fff" '+st+'/>'
+     +'<path d="M116 40 a18 18 0 0 1 8 -34 a20 20 0 0 1 38 4 a16 16 0 0 1 4 30 a18 18 0 0 1 -30 10 a16 16 0 0 1 -20 -10 z" fill="#fff" '+st+'/>'
+     +'<path d="M128 46 h34 v-16 l-17 -13 l-17 13 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<rect x="140" y="34" width="10" height="12" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M112 62 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 z" fill="'+A+'" stroke="'+D+'" stroke-width="1.5"/>'
+     +'<path d="M176 56 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 l6 -2 z" fill="'+A+'" stroke="'+D+'" stroke-width="1.5"/>'),
+    /* scenery：義大利的丘陵風景＋柏樹＋太陽＋一盤義大利麵（食物與風景） */
+    italyScenery: svg(
+      '<circle cx="162" cy="30" r="16" fill="'+A+'" '+st+'/>'
+     +'<path d="M8 90 C40 62 68 96 100 78 C130 62 158 86 192 72" fill="none" '+st+'/>'
+     +'<path d="M8 90 C40 62 68 96 100 78 C130 62 158 86 192 72 V112 H8 z" fill="'+L+'"/>'
+     +'<path d="M8 112 H192" '+st+'/>'
+     +'<path d="M36 86 c-7 0 -9 -12 -2 -14 c-4 -10 8 -16 12 -8 c8 -4 12 8 5 12 c5 6 -2 12 -7 10 z" fill="none" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M62 78 c-8 -2 -6 -20 4 -22 c2 -12 16 -10 16 2 c8 2 6 18 -3 20 z" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M72 78 v14" stroke="'+D+'" stroke-width="3"/>'
+     +'<path d="M112 90 a26 26 0 0 0 52 0 z" fill="#fff" '+st+'/>'
+     +'<path d="M104 90 h68" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="3" fill="none" stroke-linecap="round"><path d="M124 86 c6 -8 14 0 20 -6"/><path d="M126 80 c8 -6 16 2 24 -4"/></g>'
+     +'<circle cx="138" cy="76" r="5" fill="'+R+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M108 118 h56" stroke="'+D+'" stroke-width="3" stroke-dasharray="6 5"/>'),
+    /* superpower：披風小人飛過地球（第二條件句的純想像） */
+    superheroFly: svg(
+      '<circle cx="66" cy="94" r="42" fill="'+C+'" '+st+'/>'
+     +'<path d="M24 94 h84" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M66 52 a34 56 0 0 1 0 84 a34 56 0 0 1 0 -84" fill="none" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M38 72 c12 6 8 16 20 14 c10 -2 8 10 20 8" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M112 62 l-24 6 l16 14 l-6 16 z" fill="'+R+'" '+st+'/>'
+     +'<circle cx="132" cy="54" r="13" fill="'+L+'" '+st+'/>'
+     +'<path d="M122 48 a13 13 0 0 1 20 0" fill="'+D+'"/>'
+     +'<path d="M120 68 h26 l-4 26 h-18 z" fill="'+B+'" '+st+'/>'
+     +'<path d="M146 72 l24 -14" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'
+     +'<path d="M124 94 l-4 26 M140 94 l6 26" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'
+     +'<g stroke="'+A+'" stroke-width="3.5" fill="none" stroke-linecap="round"><path d="M158 40 h26 M164 28 h22 M162 52 h18"/></g>'
+     +'<path d="M180 100 l2 7 l7 2 l-7 2 l-2 7 l-2 -7 l-7 -2 l7 -2 z" fill="'+A+'" stroke="'+D+'" stroke-width="1.5"/>')
+  });
+})();
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20251226b = {
+  title: "Dreams and Decisions",
+  titleCn: "條件句文法解析",
+  date: "2025-12-26",
+  level: "B1",
+  scene: "Reading Class · Mia's Two Kinds of Sentences",
+  sceneCn: "閱讀課・Mia 的兩種句子",
+  sceneArt: "wordNotebook",
+  titleArt: ["star", "globe", "book"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・英文老師", voice: "f" },
+    T: { name: "Tom", cn: "Tom・學生", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "Reading Mia's Story", cn: "情境：讀 Mia 的故事" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    conditional: { t: "conditionals", cn: "條件句", tag: ["文法用語"],
+      note: "conditional 當名詞就是「條件句」：the first conditional、the second conditional。當形容詞是「有條件的」。",
+      ex: "Today's lesson covers the first and second conditionals.", exCn: "今天這堂課要上第一和第二條件句。" },
+    affect: { t: "will affect", cn: "將會影響", tag: ["affect vs effect"],
+      note: "affect 是動詞「影響」，effect 是名詞「效果」。A affects B，不要說 A effects B。",
+      ex: "The new rule will affect every supplier next quarter.", exCn: "新規定下一季會影響每一家供應商。" },
+    ifpresent: { t: "if Mia studies hard", cn: "如果 Mia 認真讀書", tag: ["第一條件句", "必考"],
+      note: "第一條件句的 If 子句講未來，但動詞要用現在簡單式，不可以寫 If she will study。",
+      ex: "If the machine stops again, we will call the supplier.", exCn: "如果機器又停了，我們就會聯絡供應商。" },
+    getinto: { t: "get into a good university", cn: "進入一所好大學", tag: ["搭配詞"],
+      note: "考進學校用 get into，不是 enter into；enter a university 也可以但比較正式生硬。",
+      ex: "He studied all summer to get into a good university.", exCn: "他整個夏天都在讀書，為了考進一所好大學。" },
+    beableto: { t: "will be able to", cn: "將會能夠", tag: ["第一條件句結果句"],
+      note: "will 後面不能接 can，要說 will be able to；過去式是 was／were able to。",
+      ex: "If we finish early, we will be able to leave before the rain.", exCn: "如果我們提早做完，就能在下雨前離開。" },
+    fluently: { t: "fluently", cn: "流利地", tag: ["副詞"],
+      note: "fluently 修飾說話的動詞：speak English fluently；形容詞是 fluent（a fluent speaker）。",
+      ex: "After two years abroad she speaks Spanish fluently.", exCn: "在國外待兩年後，她西班牙文說得很流利。" },
+    daydream: { t: "daydreams", cn: "做白日夢", tag: ["動詞／名詞"],
+      note: "daydream 可當動詞也可當名詞；講內容用 daydream about + 名詞。",
+      ex: "He daydreams about opening his own coffee shop.", exCn: "他做著開自己咖啡店的白日夢。" },
+    lottery: { t: "won the lottery", cn: "中了彩券", tag: ["搭配詞"],
+      note: "中彩券用 win the lottery（不是 get the lottery）；買彩券是 buy a lottery ticket。",
+      ex: "If he won the lottery, he would still keep his job.", exCn: "就算中了彩券，他還是會保住他的工作。" },
+    secondcond: { t: "would buy", cn: "就會買（想像結果）", tag: ["第二條件句"],
+      note: "第二條件句的主句是 would／could／might + 原形動詞，講的是想像中的結果。",
+      ex: "If I lived closer, I would walk to the office every day.", exCn: "如果我住近一點，我每天就會走路上班。" },
+    liveanywhere: { t: "could live anywhere in the world", cn: "能住在世界上任何地方", tag: ["could + 原形"],
+      note: "could 在第二條件句的 If 子句裡表示「假如有可能」，後面接原形動詞。",
+      ex: "If I could work anywhere in the world, I would pick a small island.", exCn: "如果我能在世界任何地方工作，我會選一座小島。" },
+    scenery: { t: "the scenery", cn: "風景、景色", tag: ["不可數"],
+      note: "scenery 是不可數名詞，沒有複數、不加 a；一個景點是 a view 或 a sight。",
+      ex: "The scenery along the east coast is worth the long drive.", exCn: "東海岸的風景值得開那麼久的車。" },
+    imaginary: { t: "imaginary", cn: "想像中的、虛構的", tag: ["易混淆"],
+      note: "imaginary 是「虛構的」（不存在）；imaginative 是「有想像力的」（形容人）。",
+      ex: "The story happens in an imaginary city by the sea.", exCn: "這個故事發生在一座海邊的虛構城市。" },
+    flyaround: { t: "fly around the world", cn: "飛遍全世界", tag: ["搭配詞"],
+      note: "fly／travel around the world ＝ 繞著世界飛／旅行；around 不要換成 in。",
+      ex: "With that budget you could fly around the world twice.", exCn: "用那筆預算你可以飛遍世界兩次。" },
+    imagination: { t: "imagination", cn: "想像力", tag: ["不可數"],
+      note: "imagination 是不可數名詞：use your imagination、a little imagination。",
+      ex: "Writing a good case study takes a little imagination.", exCn: "寫一份好的案例研究需要一點想像力。" },
+    effort: { t: "With effort", cn: "只要努力", tag: ["收尾金句"],
+      note: "effort 通常不可數（with effort）；「努力做某事」是 make an effort to + 原形動詞。",
+      ex: "With effort, even a difficult report becomes readable.", exCn: "只要努力，再難的報告也能寫得好讀。" },
+    possibility: { t: "real possibilities", cn: "真實的可能性", tag: ["名詞"],
+      note: "possibility 可數：a possibility、real possibilities；「有可能」也可說 It is possible that …。",
+      ex: "We should discuss both possibilities before we decide.", exCn: "在決定之前，我們該討論兩種可能性。" },
+    firstcond: { t: "she will pass", cn: "她將會通過（真實結果）", tag: ["第一條件句"],
+      note: "第一條件句的主句用 will／can／may + 原形動詞，表示這件事真的可能發生。",
+      ex: "If you send it today, the client will receive it tomorrow.", exCn: "如果你今天寄出，客戶明天就會收到。" },
+    doublecheck: { t: "double-check", cn: "再次確認", tag: ["職場動詞"],
+      note: "double-check 中間要有連字號，是「再確認一次」；名詞形也一樣寫。",
+      ex: "Please double-check the quantity before you close the order.", exCn: "結案前請再確認一次數量。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today we read about Mia, a girl with plans and daydreams.",
+      cn: "歡迎回來。今天我們要讀 Mia 的故事，一個有計畫也有白日夢的女孩。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for one small signal: the tense inside the if clause.",
+      cn: "注意聽一個小訊號：if 子句裡的時態。" },
+
+    /* ---------- 1 情境對話 ---------- */
+    { ch: 1, sp: "T", vis: { type: "scene", art: "wordNotebook" },
+      en: "Anita, I read the story about Mia, but the conditionals still confuse me.",
+      cn: "Anita，我讀了 Mia 的故事，但條件句還是讓我很困惑。",
+      hi: [{ t: "conditionals", cn: "條件句", k: "conditional", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "ifNotFlow" },
+      en: "Let's start from the first line. Mia knows her choices today will affect her tomorrow.",
+      cn: "我們從第一句開始。Mia 知道她今天的選擇將會影響她的明天。",
+      hi: [{ t: "will affect", cn: "將會影響", k: "affect", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "aimGoalTarget" },
+      en: "The next line says if Mia studies hard, she will pass her exams.",
+      cn: "下一句說，如果 Mia 認真讀書，她將會通過考試。",
+      hi: [{ t: "if Mia studies hard", cn: "如果 Mia 認真讀書", k: "ifpresent", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "careerSteps" },
+      en: "Right. She will also get into a good university. That is a real plan.",
+      cn: "沒錯。她也會進入一所好大學。那是一個真實的計畫。",
+      hi: [{ t: "get into a good university", cn: "進入一所好大學", k: "getinto", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "moneyWorld" },
+      en: "And if she saves money now, she will be able to travel next year?",
+      cn: "那如果她現在存錢，她明年就能去旅行嗎？",
+      hi: [{ t: "will be able to", cn: "將會能夠", k: "beableto", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "speakWave" },
+      en: "Exactly. And if she practices every day, she will speak English fluently soon.",
+      cn: "正是。而且如果她每天練習，她很快就能流利地說英文。",
+      hi: [{ t: "fluently", cn: "流利地", k: "fluently", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "daydreamCloud" },
+      en: "But some sentences feel different. Sometimes Mia just daydreams.",
+      cn: "但有些句子感覺不一樣。有時候 Mia 只是在做白日夢。",
+      hi: [{ t: "daydreams", cn: "做白日夢", k: "daydream", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "luckyDraw" },
+      en: "Yes. If she won the lottery, she would buy a big house for her family.",
+      cn: "對。如果她中了彩券，她會買一棟大房子給她的家人。",
+      hi: [{ t: "won the lottery", cn: "中了彩券", k: "lottery", c: 4 },
+           { t: "would buy", cn: "就會買", k: "secondcond", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "italyScenery" },
+      en: "So why does she choose Italy in the next sentence?",
+      cn: "那她下一句為什麼選義大利？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "italyScenery" },
+      en: "If she could live anywhere in the world, she would pick Italy for the food and the scenery.",
+      cn: "如果她能住在世界上任何地方，她會為了美食和風景選義大利。",
+      hi: [{ t: "could live anywhere in the world", cn: "能住在世界任何地方", k: "liveanywhere", c: 2 },
+           { t: "the scenery", cn: "風景", k: "scenery", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "superheroFly" },
+      en: "And the superpower sentence is imaginary too, right?",
+      cn: "那超能力那句也是想像的，對嗎？",
+      hi: [{ t: "imaginary", cn: "想像中的", k: "imaginary", c: 1 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "superheroFly" },
+      en: "Correct. If she had a superpower, she would fly around the world.",
+      cn: "正確。如果她有超能力，她會飛遍全世界。",
+      hi: [{ t: "fly around the world", cn: "飛遍全世界", k: "flyaround", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "verbFork" },
+      en: "So the past tense inside if is the signal for imagination.",
+      cn: "所以 if 裡面的過去式就是想像的訊號。",
+      hi: [{ t: "imagination", cn: "想像力", k: "imagination", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "starSteps" },
+      en: "You got it. With effort and a little imagination, anything is possible.",
+      cn: "你懂了。只要努力加上一點想像力，任何事都是可能的。",
+      hi: [{ t: "With effort", cn: "只要努力", k: "effort", c: 1 }] },
+
+    /* ---------- 2 重點表達 ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "possibility", ipa: "/ˌpɑː.səˈbɪl.ə.ti/", cn: "可能性（真的會發生）", def: "Something that can really happen.", art: "onTrackRail" },
+        b: { w: "imagination", ipa: "/ɪˌmædʒəˈneɪʃən/", cn: "想像力（只在腦中）", def: "Pictures and stories you make in your mind.", art: "daydreamCloud" } },
+      en: "The first conditional talks about real possibilities; the second one uses imagination.",
+      cn: "第一條件句講真實的可能性；第二條件句用的是想像力。",
+      hi: [{ t: "real possibilities", cn: "真實的可能性", k: "possibility", c: 3 },
+           { t: "imagination", cn: "想像力", k: "imagination", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "imaginary", ipa: "/ɪˈmædʒ.ə.ner.i/", pos: "adj.", art: "superheroFly",
+        def: "Not real; existing only in your mind.",
+        cn: "想像中的、虛構的，只存在腦中。",
+        note: "Imaginary = not real. Imaginative = full of good ideas." },
+      en: "A superpower is imaginary, so the sentence needs the second conditional.",
+      cn: "超能力是想像的，所以那句要用第二條件句。",
+      hi: [{ t: "imaginary", cn: "想像中的", k: "imaginary", c: 1 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "daydream", ipa: "/ˈdeɪdriːm/", pos: "v. / n.", art: "daydreamCloud",
+        def: "To think about pleasant things instead of what is around you.",
+        cn: "做白日夢，想著美好的事情。",
+        note: "Say daydream about the future, with about." },
+      en: "When Mia daydreams, she thinks about a perfect world, not about her homework.",
+      cn: "當 Mia 做白日夢時，她想的是完美的世界，不是她的功課。",
+      hi: [{ t: "daydreams", cn: "做白日夢", k: "daydream", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "scenery", ipa: "/ˈsiː.nɚ.i/", pos: "n.", art: "italyScenery",
+        def: "The natural things you see in a place, like hills and trees.",
+        cn: "風景、景色（自然景觀）。",
+        note: "Uncountable: the scenery. One view is a view." },
+      en: "She loves the food and the scenery, and scenery never takes an s.",
+      cn: "她喜歡那裡的美食和風景；scenery 永遠不加 s。",
+      hi: [{ t: "the scenery", cn: "風景", k: "scenery", c: 3 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "real plans", coreCn: "第一條件句結果句", art: "aimGoalTarget",
+        items: [{ t: "will pass her exams", cn: "將會通過考試" }, { t: "get into a good university", cn: "進入一所好大學" }, { t: "will be able to travel", cn: "將能夠旅行" }, { t: "will speak it fluently", cn: "將能說得流利" }] },
+      en: "If Mia studies hard, she will pass her exams and travel next year.",
+      cn: "如果 Mia 認真讀書，她將會通過考試，明年還能去旅行。",
+      hi: [{ t: "she will pass", cn: "她將會通過", k: "firstcond", c: 1 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "daydream", coreCn: "白日夢搭配詞", art: "daydreamCloud",
+        items: [{ t: "daydream about the future", cn: "對未來做白日夢" }, { t: "win the lottery", cn: "中彩券" }, { t: "live anywhere in the world", cn: "住在世界任何地方" }, { t: "fly around the world", cn: "飛遍全世界" }] },
+      en: "Daydream about the future, win the lottery, or fly around the world.",
+      cn: "對未來做白日夢、中彩券，或飛遍全世界。",
+      hi: [{ t: "fly around the world", cn: "飛遍全世界", k: "flyaround", c: 4 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "at work", coreCn: "職場條件句搭配詞", art: "clipboard",
+        items: [{ t: "product inspection", cn: "產品檢驗" }, { t: "double-check", cn: "再次確認" }, { t: "quality standards", cn: "品質標準" }, { t: "send the report", cn: "寄出報告" }] },
+      en: "If I had more time, I would double-check the quality standards myself.",
+      cn: "如果我有更多時間，我會自己再確認一次品質標準。",
+      hi: [{ t: "double-check", cn: "再次確認", k: "doublecheck", c: 2 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "第一條件句 First Conditional", art: "onTrackRail",
+        rows: [
+          { lab: "條件", blocks: [{ t: "If", k: "n" }, { t: "Mia", k: "s" }, { t: "studies", k: "v", add: true }, { t: "hard", k: "o" }] },
+          { lab: "結果", blocks: [{ t: "she", k: "s" }, { t: "will pass", k: "v", add: true }, { t: "her exams", k: "o" }] }
+        ],
+        note: "If 子句講未來卻用現在簡單式；結果句用 will／can／may + 原形動詞。" },
+      en: "If Mia studies hard, she will pass her exams. This can really happen.",
+      cn: "如果 Mia 認真讀書，她將會通過考試。這是真的可能發生的。",
+      hi: [{ t: "If Mia studies hard", cn: "如果 Mia 認真讀書", k: "ifpresent", c: 2 },
+           { t: "she will pass", cn: "她將會通過", k: "firstcond", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "第一條件句：If 子句不放 will", art: "sentenceSlots",
+        rows: [
+          { lab: "正確", blocks: [{ t: "If we", k: "s" }, { t: "finish", k: "v", add: true }, { t: "the inspection today", k: "o" }] },
+          { lab: "錯誤", blocks: [{ t: "If we", k: "s" }, { t: "will finish", k: "x" }, { t: "the inspection today", k: "o" }] }
+        ],
+        note: "will 只出現在結果句：If we finish the inspection today, we will send the report tomorrow." },
+      en: "If we finish the product inspection today, we will send the report tomorrow.",
+      cn: "如果我們今天完成產品檢驗，明天就會寄出報告。",
+      hi: [{ t: "we will send", cn: "我們就會寄出", k: "firstcond", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "第二條件句 Second Conditional", art: "luckyDraw",
+        rows: [
+          { lab: "條件", blocks: [{ t: "If", k: "n" }, { t: "she", k: "s" }, { t: "won", k: "v", add: true }, { t: "the lottery", k: "o" }] },
+          { lab: "結果", blocks: [{ t: "she", k: "s" }, { t: "would buy", k: "v", add: true }, { t: "a big house", k: "o" }] }
+        ],
+        note: "過去式不是講過去，而是製造「與現實的距離」；結果句用 would／could／might。" },
+      en: "If she won the lottery, she would buy a big house. In fact she has not won.",
+      cn: "如果她中了彩券，她會買一棟大房子。事實上她並沒有中。",
+      hi: [{ t: "won the lottery", cn: "中了彩券", k: "lottery", c: 4 },
+           { t: "would buy", cn: "就會買", k: "secondcond", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "第二條件句：could 也可以放在 If 裡", art: "superheroFly",
+        rows: [
+          { lab: "條件", blocks: [{ t: "If she", k: "s" }, { t: "could live", k: "v", add: true }, { t: "anywhere in the world", k: "o" }] },
+          { lab: "結果", blocks: [{ t: "she", k: "s" }, { t: "would choose", k: "v", add: true }, { t: "Italy", k: "o" }] }
+        ],
+        note: "If 子句可以用 could + 原形；had a superpower 也是同一組（過去式）。" },
+      en: "If she could live anywhere in the world, she would choose Italy.",
+      cn: "如果她能住在世界上任何地方，她會選擇義大利。",
+      hi: [{ t: "could live anywhere in the world", cn: "能住在世界任何地方", k: "liveanywhere", c: 2 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "比較表：看 If 子句的時態", art: "verbFork",
+        rows: [
+          { lab: "First", blocks: [{ t: "If + 現在簡單式", k: "n" }, { t: "will + 原形", k: "v", add: true }, { t: "真的可能", k: "o" }] },
+          { lab: "Second", blocks: [{ t: "If + 過去簡單式", k: "n" }, { t: "would + 原形", k: "v", add: true }, { t: "純屬想像", k: "o" }] }
+        ],
+        note: "判斷關鍵只有一個：If 子句用現在式就是真實，用過去式就是想像。" },
+      en: "Present tense means real possibilities; past tense means imagination.",
+      cn: "現在式代表真實的可能性；過去式代表想像。",
+      hi: [{ t: "real possibilities", cn: "真實的可能性", k: "possibility", c: 3 },
+           { t: "imagination", cn: "想像力", k: "imagination", c: 2 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 1,
+        wrong: "If Mia will study hard, she will pass her exams.", bad: ["will study"],
+        fix: "If Mia studies hard, she will pass her exams.", good: ["studies"],
+        why: "The if clause uses the present simple. Will stays in the result clause." },
+      en: "If Mia studies hard, she will pass her exams and get into a good university.",
+      cn: "如果 Mia 認真讀書，她將會通過考試並進入一所好大學。",
+      hi: [{ t: "If Mia studies hard", cn: "如果 Mia 認真讀書", k: "ifpresent", c: 2 },
+           { t: "get into a good university", cn: "進入一所好大學", k: "getinto", c: 4 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 2,
+        wrong: "If she won the lottery, she will buy a big house.", bad: ["will buy"],
+        fix: "If she won the lottery, she would buy a big house.", good: ["would buy"],
+        why: "Past tense in the if clause means imagination, so the result needs would." },
+      en: "If she won the lottery, she would buy a big house for her family.",
+      cn: "如果她中了彩券，她會買一棟大房子給她的家人。",
+      hi: [{ t: "won the lottery", cn: "中了彩券", k: "lottery", c: 4 },
+           { t: "would buy", cn: "就會買", k: "secondcond", c: 1 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "If we ___ the inspection today, we will send the report tomorrow.", a: "finish", n: 1 },
+      en: "If we ___ the inspection today, we will send the report tomorrow.", say: "If we, blank, the inspection today, we will send the report tomorrow.",
+      cn: "如果我們今天＿＿檢驗，明天就會寄出報告。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "If we ___ the inspection today, we will send the report tomorrow.", a: "finish", n: 1, show: true },
+      en: "If we finish the inspection today, we will send the report tomorrow.",
+      cn: "如果我們今天完成檢驗，明天就會寄出報告。",
+      hi: [{ t: "we will send", cn: "我們就會寄出", k: "firstcond", c: 1 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "If she won the lottery, she ___ buy a big house.", a: "would", n: 2 },
+      en: "If she won the lottery, she ___ buy a big house.", say: "If she won the lottery, she, blank, buy a big house.",
+      cn: "如果她中了彩券，她＿＿買一棟大房子。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "If she won the lottery, she ___ buy a big house.", a: "would", n: 2, show: true },
+      en: "If she won the lottery, she would buy a big house, because this is imaginary.",
+      cn: "如果她中了彩券，她會買一棟大房子，因為這是想像的。",
+      hi: [{ t: "would buy", cn: "就會買", k: "secondcond", c: 1 },
+           { t: "imaginary", cn: "想像中的", k: "imaginary", c: 3 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "If she had a superpower, she would ___ around the world.", a: "fly", n: 3 },
+      en: "If she had a superpower, she would ___ around the world.", say: "If she had a superpower, she would, blank, around the world.",
+      cn: "如果她有超能力，她會＿＿遍全世界。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "If she had a superpower, she would ___ around the world.", a: "fly", n: 3, show: true },
+      en: "If she had a superpower, she would fly around the world and see everything.",
+      cn: "如果她有超能力，她會飛遍全世界，看遍所有地方。",
+      hi: [{ t: "fly around the world", cn: "飛遍全世界", k: "flyaround", c: 4 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};

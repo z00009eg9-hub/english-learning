@@ -1333,7 +1333,7 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
      | 5 作業訂正 | 挑 2 題作業：❌ 原句（錯處 `bad[]`）→ ✅ 訂正（改對處 `good[]`）＋一句為什麼 | `fix` |
      | 6 小測驗 | 3 題填空：題目句（`say` 把 ___ 唸成 blank、`pause: 4000` 倒數）＋答案句（`show: true`）；最後一句 `end` | `quiz`／`end` |
      超過 5 分鐘時優先刪情境對話的句子，其次解說卡、作業訂正；片語和文法章節保留。
-   - **插圖（使用者選 A＋B）**：`art` 先找 `VIDEO_ART`（data-video.js 檔頭的專屬插圖，是**跨課共用的線稿庫**，2026-09-27 起已有 263 張（2026 全年 66 課累積，key 見各課區塊註解）；先用 `node -e "global.window={};require('./public/data-video.js');console.log(Object.keys(window.VIDEO_ART).join(' '))"` 列出全部；新課先 grep `VIDEO_ART` 現有 key 重用，缺的才新畫並加進去，一課最多新畫 4 張），找不到再用課本線稿圖示庫 `BOOK_ICONS`
+   - **插圖（使用者選 A＋B）**：`art` 先找 `VIDEO_ART`（data-video.js 檔頭的專屬插圖，是**跨課共用的線稿庫**，2026-09-27 起已有 309 張（2025–2026 全部 80 課累積，key 見各課區塊註解）；先用 `node -e "global.window={};require('./public/data-video.js');console.log(Object.keys(window.VIDEO_ART).join(' '))"` 列出全部；新課先 grep `VIDEO_ART` 現有 key 重用，缺的才新畫並加進去，一課最多新畫 4 張），找不到再用課本線稿圖示庫 `BOOK_ICONS`
      （data-book.js 的 37 個：box、check、warning、gear、doc…）。專屬插圖用同一套線稿風格：
      `viewBox="0 0 200 150"`、線條 `#2b2118` 粗 3、主色 `#e8813a`、底色 `#fdf6ec`／`#f7e3c9`，需要時用紅 `#d9534f`、藍 `#3b82c4`。
      畫**有教學意義的具體東西**（乾燥劑變紅、標籤上的型號／流水號、配件盒缺一格），抽象概念直接用 BOOK_ICONS。
