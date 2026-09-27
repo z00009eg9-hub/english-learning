@@ -2004,6 +2004,64 @@ body.vd-lock{overflow:hidden}
   #vd .vd-chap{display:none}
 }
 @media (prefers-reduced-motion:reduce){ #vd .vd-bg,#vd .vd-wave i,#vd .vd-scn,#vd .vd-fam div,#vd .vd-blk{animation:none;opacity:1} }
+/* ---- 2026-09-27 簡化：看情境 → 聽英文 → 看字幕 → 學一句 → 跟讀
+   一次只讓一個東西搶焦點：畫面＋目前這句最醒目，其他字幕淡一階，重點卡預設只露五樣 ---- */
+#vd .vd-meta{font-size:var(--font-micro);color:var(--ink2);margin-top:2px}
+#vd .vd-main{grid-template-areas:"left right" "card right";align-items:start}
+#vd .vd-left{grid-area:left}
+#vd .vd-right{grid-area:right}
+#vd .vd-cardwrap{grid-area:card;min-width:0}
+#vd .vd-cardwrap .vd-card{margin-top:0}
+/* 電腦：畫面寬度跟著視窗高度走，矮螢幕（1366×768 筆電）也能一眼看到畫面＋控制列＋重點卡 */
+@media (min-width:1101px){ #vd .vd-left,#vd .vd-cardwrap{max-width:calc((100vh - 360px) * 1.778);min-width:min(100%,560px)} }
+/* 控制列：五個主要按鈕＋更多 */
+#vd .vd-ctrl{gap:4px}
+#vd .vd-morec{margin-left:auto;font-size:20px;line-height:1;padding:4px 12px}
+#vd .vd-set{margin-top:8px;padding:10px 12px;gap:8px}
+#vd .vd-set .vd-toggles{display:flex;gap:6px;flex-wrap:wrap}
+#vd .vd-set .vd-toggles .vd-cb{border-color:var(--line);background:#fff}
+#vd .vd-set .vd-toggles .vd-cb.on{background:var(--accent-soft);border-color:#f0c9a0;color:var(--accent2)}
+#vd .vd-set .hint{color:var(--vd-dim);font-size:var(--font-micro)}
+/* 字幕：時間碼＋英文＋中文；目前這句上色，其他句子淡一階、標籤變回一般文字 */
+#vd .vd-chh{color:var(--vd-dim);font-weight:600;letter-spacing:.04em;text-transform:none;padding:12px 16px 2px}
+#vd .vd-row{opacity:.55;transition:opacity .2s}
+#vd .vd-row:hover{opacity:.85;background:none}
+#vd .vd-row.cur{opacity:1}
+#vd .vd-row .sp{color:var(--vd-dim);font-weight:600;margin-right:2px}
+#vd .vd-row:not(.cur) .vd-chip{border-color:transparent;background:none;padding:0;margin:0;color:inherit;font-weight:inherit;display:inline;vertical-align:baseline}
+#vd .vd-row:not(.cur) .vd-chip small{display:none}
+/* 重點卡：重點英文＋中文 ｜ 1 個情境例句，下面一排：跟讀、收藏、查看解析 */
+#vd .vd-card{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:10px 16px;align-items:center}
+#vd .vd-card .ex{cursor:pointer}
+#vd .vd-card .ex:hover{border-color:#f0c9a0}
+#vd .vd-acts{grid-column:1/-1;margin-top:0;align-items:center}
+#vd .vd-acts button,#vd .vd-acts .wbb{flex:0 0 auto;min-width:0}
+#vd .vd-acts .vd-follow{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600;padding:8px 16px}
+#vd .vd-acts .vd-follow:hover{background:var(--accent2);color:#fff}
+#vd .vd-acts .vd-follow.recording{background:var(--bad);border-color:var(--bad)}
+#vd .vd-acts .recp{border:0;background:none;color:var(--accent2);padding:6px 4px;text-decoration:underline}
+#vd .vd-acts .vd-morebtn{margin-left:auto;border:0;background:none;color:var(--ink2);padding:6px 4px}
+#vd .vd-acts .vd-morebtn:hover{color:var(--accent2)}
+#vd .vd-more{grid-column:1/-1;border-top:1px dashed var(--line);padding-top:10px;font-size:var(--font-secondary);color:var(--ink)}
+#vd .vd-more p{margin:6px 0;line-height:1.6}
+#vd .vd-more .src{cursor:pointer}
+#vd .vd-more .src span{color:var(--ink2);font-size:var(--font-meta)}
+/* 平板、手機：影片在上、字幕在下（字幕框自己捲動，目前這句停在框中間），重點卡在最後 */
+@media (max-width:1100px){
+  #vd .vd-main{grid-template-columns:minmax(0,1fr);grid-template-areas:"left" "right" "card";gap:12px;padding:12px}
+  #vd .vd-stage{aspect-ratio:16/9}
+  #vd .vd-right{position:static;max-height:34vh;min-height:150px}
+  #vd .vd-card{grid-template-columns:1fr}
+  /* 平板橫放（1024×768）這種矮螢幕：畫面限制在視窗高度約 46%，字幕才看得到 */
+  #vd .vd-left{width:100%;max-width:calc(46vh * 1.778);justify-self:center}
+}
+@media (max-width:599px){
+  #vd .vd-stage{aspect-ratio:4/3}
+  #vd .vd-main{padding:8px 10px;gap:10px}
+  #vd .vd-right{max-height:30vh}
+  #vd .vd-cb{padding:7px 8px}
+  #vd .vd-left{max-width:calc(46vh * 1.333)}
+}
 </style>
 </head>
 <body>
@@ -7280,93 +7338,124 @@ function vdStageHTML(l){
   }
   return '<div class="vd-bg t-'+esc(v.type)+'"></div>'+h;
 }
-/* ---- 重點表達卡 ---- */
+/* ---- 重點表達卡（2026-09-27 簡化）：預設只有重點英文、中文、1 個情境例句、跟讀、收藏；
+   標籤、補充說明、影片中的原句收在「查看解析」裡，展開才顯示 ---- */
+const VD_FOLLOW=8000;   /* 跟讀錄音用的編號（recTog / recPlay 共用 recUrls） */
 function vdCardHTML(){
   const k=VD.expr, e=k&&VD.d.expr&&VD.d.expr[k];
-  if(!e) return '<div class="vd-card empty">🔖 重點表達會在這裡出現：播放時遇到彩色標籤，就會跳出用法和另一個例句。</div>';
-  const ki=Object.keys(VD.d.expr).indexOf(k);
-  return '<div class="vd-card"><div><div class="lab">KEY EXPRESSION 重點表達</div>'
-   +'<div class="vd-tags">'+(e.tag||[]).map(t=>'<span>'+esc(t)+'</span>').join('')+'</div>'
-   +'<div class="ph">'+esc(e.t)+'</div><div class="phcn">'+esc(e.cn)+'</div></div>'
-   +'<div><div class="lab">換個情境再用一次</div><div class="ex"><div class="e">'+esc(e.ex)+'</div><div class="c">'+esc(e.exCn||'')+'</div></div>'
-   +'<div class="vd-acts"><button onclick="vdPause();say(VD.d.expr[VD.expr].ex,VD.rate)">🔊 再聽</button>'
-   +'<button class="recb" id="rec-'+(8000+ki)+'" onclick="vdPause();recTog('+(8000+ki)+',event)" title="錄下自己的發音，跟原音比對">🎙️ 跟讀</button>'
-   +'<button class="recp" id="recp-'+(8000+ki)+'" onclick="recPlay('+(8000+ki)+',event)" style="display:'+(recUrls[8000+ki]?'':'none')+'">▶️ 我的錄音</button>'
-   +wbBtn(e.t,'影片：'+VD.d.titleCn)+'</div></div></div>';
+  if(!e) return '<div class="vd-card empty">播放到重點句時，這裡會出現要學的那一句。</div>';
+  const id=VD_FOLLOW+Object.keys(VD.d.expr).indexOf(k);
+  const src=VD.lines.find(l=>(l.hi||[]).some(h=>h.k===k));
+  const more=VD.more
+    ? '<div class="vd-more">'
+      +((e.tag||[]).length?'<div class="vd-tags">'+e.tag.map(t=>'<span>'+esc(t)+'</span>').join('')+'</div>':'')
+      +(e.note?'<p>'+esc(e.note)+'</p>':'')
+      +(src?'<div class="lab">影片中的句子</div><p class="src" onclick="vdPause();say(this.dataset.t,VD.rate)" data-t="'+esc(src.en)+'">'+esc(src.en)+'<br><span>'+esc(src.cn||'')+'</span></p>':'')
+      +'</div>' : '';
+  return '<div class="vd-card">'
+   +'<div class="vd-kx"><div class="ph">'+esc(e.t)+'</div><div class="phcn">'+esc(e.cn)+'</div></div>'
+   +'<div class="ex" onclick="vdPause();say(VD.d.expr[VD.expr].ex,VD.rate)" title="點一下聽這句"><div class="e">🔊 '+esc(e.ex)+'</div><div class="c">'+esc(e.exCn||'')+'</div></div>'
+   +'<div class="vd-acts">'
+   +'<button class="vd-follow" id="vd-follow" onclick="vdFollow('+id+')">🗣 跟讀</button>'
+   +'<button class="recp" id="recp-'+id+'" onclick="recPlay('+id+',event)" style="display:'+(recUrls[id]?'':'none')+'">▶ 聽我的錄音</button>'
+   +wbBtn(e.t,'影片：'+VD.d.titleCn)
+   +'<button class="vd-morebtn" onclick="vdMoreTog()">'+(VD.more?'收起解析 ▴':'查看解析 ▾')+'</button>'
+   +'</div>'+more+'</div>';
 }
-/* ---- 右側字幕 ---- */
+/* 跟讀：先唸一次例句，唸完自動開始錄音；再按一次＝停止並存檔，之後可以「聽我的錄音」比對 */
+let vdFollowWatch=null;
+function vdFollowLabel(){
+  const b=$('vd-follow'); if(!b) return;
+  const rec=(typeof recIdx!=='undefined'&&recIdx!=null&&recIdx>=VD_FOLLOW&&recIdx<VD_FOLLOW+1000);
+  b.textContent=rec?'⏹ 完成錄音':'🗣 跟讀';
+  b.classList.toggle('recording',rec);
+  if(!rec&&vdFollowWatch){ clearInterval(vdFollowWatch); vdFollowWatch=null; }
+}
+function vdFollow(id){
+  if(recIdx===id){ recTog(id); setTimeout(vdFollowLabel,300); return; }
+  vdPause();
+  const e=VD.d.expr[VD.expr]; if(!e) return;
+  const b=$('vd-follow'); if(b) b.textContent='👂 先聽一次…';
+  say(e.ex, VD.rate, ()=>{
+    recTog(id);
+    if(vdFollowWatch) clearInterval(vdFollowWatch);
+    vdFollowWatch=setInterval(vdFollowLabel,300);
+  });
+}
+function vdMoreTog(){ VD.more=!VD.more; const cd=$('vd-card'); if(cd) cd.innerHTML=vdCardHTML(); }
+/* ---- 字幕列：只留時間碼、英文、中文，目前這句才上色；其他句子淡一階，不搶焦點 ---- */
 function vdListHTML(){
   const d=VD.d; let h='', ch=-1;
   VD.lines.forEach((l,i)=>{
-    if(l.ch!==ch){ ch=l.ch; const c=d.chapters[ch]||{}; h+='<div class="vd-chh">'+esc(c.en||'')+' · '+esc(c.cn||'')+'</div>'; }
+    if(l.ch!==ch){ ch=l.ch; const c=d.chapters[ch]||{}; h+='<div class="vd-chh">'+esc(c.cn||c.en||'')+'</div>'; }
     const c=d.cast[l.sp]||{};
     h+='<div class="vd-row'+(i===VD.i?' cur':'')+'" id="vd-r'+i+'" onclick="vdGo('+i+',true)">'
      +'<div class="tm">'+vdTime(VD.times[i])+'</div><div>'
-     +'<div class="en"><span class="sp '+esc(l.sp)+'">'+esc(l.sp==='N'?'旁白':c.name)+'</span>'+vdHi(l.en,l.hi,true)+'</div>'
-     +'<div class="cn">'+esc(l.cn||'')+'</div>'
-     +'<div class="vd-racts" onclick="event.stopPropagation()">'
-     +'<button onclick="vdReplay()">↺ 再聽</button>'
-     +'<button onclick="vdLoopTog()">'+(VD.loop?'🔁 取消循環':'🔁 循環這句')+'</button>'
-     +'<button class="recb" id="rec-'+(9000+i)+'" onclick="vdPause();recTog('+(9000+i)+',event)">🎙️ 錄音</button>'
-     +'<button class="recp" id="recp-'+(9000+i)+'" onclick="recPlay('+(9000+i)+',event)" style="display:'+(recUrls[9000+i]?'':'none')+'">▶️ 我的錄音</button>'
-     +'</div></div></div>';
+     +'<div class="en">'+(l.sp!=='N'?'<span class="sp">'+esc(c.name)+'：</span>':'')+vdHi(l.en,l.hi,true)+'</div>'
+     +'<div class="cn">'+esc(l.cn||'')+'</div></div></div>';
   });
   return h;
 }
+const VD_MODES=['dual','en','cn'], VD_MODE_LAB={dual:'雙語',en:'英文',cn:'中文'};
 function vdRender(){
   const d=VD.d; let el=$('vd');
   if(!el){ el=document.createElement('div'); el.id='vd'; el.setAttribute('role','dialog'); el.setAttribute('aria-modal','true'); document.body.appendChild(el); }
   el.className='m-'+VD.mode;
-  const seg=(k,lab)=>'<button class="'+(VD.mode===k?'on':'')+'" onclick="vdMode(\''+k+'\')">'+lab+'</button>';
   const vs=vdVoiceList();
-  const sel=kind=>{ const cur=vdVoiceFor(Object.keys(d.cast).find(k=>d.cast[k].voice===kind)||'N');
-    return '<select onchange="vdSetVoice(\''+kind+'\',this.value)">'+(vs.length?vs.map(v=>'<option value="'+esc(v.name)+'"'+(cur&&cur.name===v.name?' selected':'')+'>'+esc(v.name.replace(/^Microsoft |^Google /,''))+'</option>').join(''):'<option>（此裝置沒有英文語音）</option>')+'</select>'; };
+  const sel=(kind,lab)=>{ const cur=vdVoiceFor(Object.keys(d.cast).find(k=>d.cast[k].voice===kind)||'N');
+    return '<label>'+esc(lab)+'<select onchange="vdSetVoice(\''+kind+'\',this.value)">'+(vs.length?vs.map(v=>'<option value="'+esc(v.name)+'"'+(cur&&cur.name===v.name?' selected':'')+'>'+esc(v.name.replace(/^Microsoft |^Google /,''))+'</option>').join(''):'<option>（此裝置沒有英文語音）</option>')+'</select></label>'; };
   const ticks=d.chapters.map((c,k)=>{ const i=VD.lines.findIndex(l=>l.ch===k); return i>0?'<b style="left:'+(VD.times[i]/VD.total*100)+'%"></b>':''; }).join('');
   el.innerHTML=
-    '<div class="vd-top"><div class="vd-ttl"><b>▶ '+esc(d.title)+'｜'+esc(d.titleCn)+'</b>'
-   +'<div class="vd-meta"><span class="vd-pill">課本 '+esc(bkDate(d.date))+'</span><span class="vd-pill lv">'+esc(d.level||'')+'</span>'
-   +'<span class="vd-pill" id="vd-cnt"></span><span class="vd-pill">約 '+Math.round(VD.total/60)+' 分鐘</span></div></div>'
-   +'<div class="vd-seg mode">'+seg('dual','雙語')+seg('en','英')+seg('cn','中')+'</div>'
+    '<div class="vd-top"><div class="vd-ttl"><b>'+esc(d.title)+'｜'+esc(d.titleCn)+'</b>'
+   +'<div class="vd-meta"><span id="vd-cnt"></span> · 約 '+Math.round(VD.total/60)+' 分鐘</div></div>'
    +'<button class="vd-x" onclick="vdClose()" aria-label="關閉影片" title="關閉（Esc）">×</button></div>'
-   +'<div class="vd-main"><div class="vd-left"><div class="vd-sticky">'
-   +'<div class="vd-stage" id="vd-stage"></div>'
+   +'<div class="vd-main">'
+   +'<div class="vd-left"><div class="vd-stage" id="vd-stage"></div>'
    +'<div class="vd-prog"><span id="vd-now">0:00</span><div class="vd-bar" id="vd-bar" onclick="vdSeek(event)"><i id="vd-fill"></i>'+ticks+'</div><span>'+vdTime(VD.total)+'</span></div>'
+   /* 控制列第一層只放五個：播放／上一句／下一句／速度／字幕；其他收在「更多」 */
    +'<div class="vd-ctrl"><button class="vd-play" id="vd-play" onclick="vdToggle()" aria-label="播放／暫停">▶</button>'
-   +'<button class="vd-cb" onclick="vdStep(-1)" title="上一句（←）">⏮ 上句</button>'
-   +'<button class="vd-cb" onclick="vdStep(1)" title="下一句（→）">下句 ⏭</button>'
-   +'<button class="vd-cb" id="vd-loop" onclick="vdLoopTog()" title="單句循環">🔁 循環</button>'
-   +'<button class="vd-cb" id="vd-shadow" onclick="vdShadowTog()" title="每句唸完停一下，讓你跟著念">🗣 跟讀</button>'
+   +'<button class="vd-cb" onclick="vdStep(-1)" title="上一句（←）">⏮ 上一句</button>'
+   +'<button class="vd-cb" onclick="vdStep(1)" title="下一句（→）">下一句 ⏭</button>'
    +'<button class="vd-cb" id="vd-rate" onclick="vdRateTog()" title="語速">'+VD.rate+'x</button>'
-   +'<button class="vd-cb" onclick="$(\'vd-set\').classList.toggle(\'on\')" title="選擇語音">⚙️ 語音</button>'
-   +'<span class="vd-chap" id="vd-chap"></span></div>'
-   +'<div class="vd-set" id="vd-set"><label>旁白</label>'+sel('n')+'<label>'+esc((d.cast.A||{}).name||'女聲')+'</label>'+sel('f')
-   +'<label>'+esc((d.cast.T||{}).name||'男聲')+'</label>'+sel('m')
-   +'<div style="grid-column:1/-1;color:var(--vd-dim)">聲音用的是這台裝置內建的美式語音，換電腦或手機音色會不同；選擇只記在這台裝置上。</div></div>'
-   +'</div><div id="vd-card"></div></div>'
-   +'<div class="vd-right" id="vd-right"><div class="vd-rhd">📜 字幕 <span id="vd-cnt2" style="margin-left:auto"></span>'
-   +'<div class="vd-seg" style="margin-left:8px">'+seg('dual','雙')+seg('en','英')+seg('cn','中')+'</div></div>'
-   +'<div id="vd-list">'+vdListHTML()+'</div></div></div>';
-  /* ⚙️ 裡的 label 要跟 select 成對排版 */
-  el.querySelectorAll('#vd-set > select').forEach(s=>{ const lb=s.previousElementSibling; if(lb&&lb.tagName==='LABEL'){ lb.appendChild(s); } });
+   +'<button class="vd-cb" id="vd-sub" onclick="vdModeNext()" title="字幕：雙語／英文／中文">字幕 '+VD_MODE_LAB[VD.mode]+'</button>'
+   +'<button class="vd-cb vd-morec" id="vd-more" onclick="vdSetTog()" aria-expanded="false" title="更多設定">⋯</button></div>'
+   +'<div class="vd-set" id="vd-set">'
+   +'<div class="vd-toggles"><button class="vd-cb" id="vd-loop" onclick="vdLoopTog()">🔁 單句循環</button>'
+   +'<button class="vd-cb" id="vd-shadow" onclick="vdShadowTog()">⏸ 每句停頓跟念</button></div>'
+   +sel('n','旁白')+sel('f',(d.cast.A||{}).name||'女聲')+sel('m',(d.cast.T||{}).name||'男聲')
+   +'<div class="hint">聲音用這台裝置內建的美式語音，換裝置音色會不同；選擇只記在這台裝置上。</div></div>'
+   +'</div>'
+   +'<div class="vd-right" id="vd-right"><div id="vd-list">'+vdListHTML()+'</div></div>'
+   +'<div class="vd-cardwrap" id="vd-card"></div>'
+   +'</div>';
   vdPaint(false);
+}
+function vdSetTog(){
+  const s=$('vd-set'), b=$('vd-more'); if(!s) return;
+  const on=s.classList.toggle('on'); if(b){ b.classList.toggle('on',on); b.setAttribute('aria-expanded',on?'true':'false'); }
 }
 function vdPaint(scroll){
   const l=VD.lines[VD.i]; if(!l) return;
   const st=$('vd-stage'); if(st) st.innerHTML=vdStageHTML(l);
   /* 重點表達卡：這句有標籤就換成這句的；沒有就沿用往前最近的一個（跳句時卡片也不會空白） */
-  VD.expr=null;
+  const prev=VD.expr; VD.expr=null;
   for(let k=VD.i;k>=0;k--){ const h=(VD.lines[k].hi||[])[0]; if(h&&h.k){ VD.expr=h.k; break; } }
-  const cd=$('vd-card'); if(cd) cd.innerHTML=vdCardHTML();
+  if(VD.expr!==prev) VD.more=false;
+  const cd=$('vd-card'); if(cd&&(VD.expr!==prev||!cd.innerHTML)) cd.innerHTML=vdCardHTML();
   document.querySelectorAll('#vd .vd-row.cur').forEach(r=>r.classList.remove('cur'));
   const row=$('vd-r'+VD.i);
   if(row){ row.classList.add('cur');
-    const btn=row.querySelector('.vd-racts button:nth-child(2)'); if(btn) btn.textContent=VD.loop?'🔁 取消循環':'🔁 循環這句';
-    if(scroll!==false){ const box=$('vd-right'); const wide=window.matchMedia('(min-width:901px)').matches;
-      if(wide&&box) box.scrollTo({top:row.offsetTop-box.clientHeight/2+row.clientHeight/2,behavior:'smooth'}); } }
-  const c=VD.d.chapters[l.ch]||{};
-  const cnt='句 '+(VD.i+1)+' / '+VD.lines.length;
-  ['vd-cnt','vd-cnt2'].forEach(id=>{ const e=$(id); if(e) e.textContent=cnt; });
-  const ch=$('vd-chap'); if(ch) ch.textContent=(c.cn||'');
+    /* 字幕框自己捲動，讓目前這句停在框的中間（電腦、平板、手機都一樣，不捲整頁） */
+    if(scroll!==false){ const box=$('vd-right');
+      /* 用畫面上的相對位置算，不用 offsetTop：平板／手機版字幕框不是定位元素，offsetTop 會對到別的祖先 */
+      if(box){ const y=box.scrollTop+row.getBoundingClientRect().top-box.getBoundingClientRect().top;
+        const top=Math.max(0,Math.round(y-box.clientHeight/2+row.clientHeight/2));
+        box.scrollTo({top:top,behavior:'smooth'});
+        /* 有些瀏覽器（省電模式、減少動態效果、部分平板）平滑捲動不會動：半秒後沒到位就直接跳過去 */
+        clearTimeout(VD.scrollFix);
+        VD.scrollFix=setTimeout(()=>{ if(Math.abs(box.scrollTop-top)>4) box.scrollTop=top; },500); } } }
+  const cnt='第 '+(VD.i+1)+' / '+VD.lines.length+' 句';
+  const ce=$('vd-cnt'); if(ce) ce.textContent=cnt;
   const now=$('vd-now'); if(now) now.textContent=vdTime(VD.times[VD.i]);
   /* 進度條：先跳到這句開頭，播放中再用 transition 平滑走到這句結尾 */
   const f=$('vd-fill');
@@ -7380,6 +7469,7 @@ function vdBtns(){
   const lp=$('vd-loop'); if(lp) lp.classList.toggle('on',VD.loop);
   const sh=$('vd-shadow'); if(sh) sh.classList.toggle('on',VD.shadow);
   const rt=$('vd-rate'); if(rt) rt.textContent=VD.rate+'x';
+  const sb=$('vd-sub'); if(sb) sb.textContent='字幕 '+VD_MODE_LAB[VD.mode];
 }
 function vdClear(){
   ['timer','watch','cd'].forEach(k=>{ if(VD[k]){ clearTimeout(VD[k]); clearInterval(VD[k]); VD[k]=null; } });
@@ -7445,7 +7535,8 @@ function vdRateTog(){
   vdCalc(); const on=VD.on; VD.on=false; vdClear(); vdRender(); if(on) vdPlay();
 }
 function vdMode(m){ VD.mode=m; try{ localStorage.setItem('b2lab_vdmode',m); }catch(e){}
-  const el=$('vd'); if(el){ el.className='m-'+m; el.querySelectorAll('.vd-seg button').forEach(b=>b.classList.toggle('on',b.getAttribute('onclick')==="vdMode('"+m+"')")); } }
+  const el=$('vd'); if(el) el.className='m-'+m; vdBtns(); }
+function vdModeNext(){ vdMode(VD_MODES[(VD_MODES.indexOf(VD.mode)+1)%VD_MODES.length]); }
 function vdSeek(ev){
   const bar=$('vd-bar'); if(!bar) return;
   const r=bar.getBoundingClientRect(), t=(ev.clientX-r.left)/r.width*VD.total;
@@ -7466,7 +7557,7 @@ function vdOpen(id){
     if(!d){ alert('這一課還沒有影片版。'); return; }
     if(typeof auStop==='function') auStop();
     if('speechSynthesis' in window) speechSynthesis.cancel();
-    Object.assign(VD,{id:id,d:d,lines:d.lines||[],i:0,on:false,loop:false,shadow:false,expr:null});
+    Object.assign(VD,{id:id,d:d,lines:d.lines||[],i:0,on:false,loop:false,shadow:false,expr:null,more:false});
     try{ VD.mode=localStorage.getItem('b2lab_vdmode')||'dual'; }catch(e){}
     vdCalc(); vdRender();
     document.body.classList.add('vd-lock');
@@ -7482,7 +7573,7 @@ function vdClose(){
   document.removeEventListener('keydown',vdKey);
   try{ const u=new URL(location.href); u.searchParams.delete('video'); history.replaceState(null,'',u.toString()); }catch(e){}
 }
-Object.assign(window,{vdOpen,vdClose,vdToggle,vdGo,vdStep,vdReplay,vdLoopTog,vdShadowTog,vdRateTog,vdMode,vdSeek,vdPause,VD});
+Object.assign(window,{vdOpen,vdClose,vdToggle,vdGo,vdStep,vdReplay,vdLoopTog,vdShadowTog,vdRateTog,vdMode,vdModeNext,vdSeek,vdPause,vdFollow,vdMoreTog,vdSetTog,VD});
 
 /* ---------- LINE Bot 深連結 ---------- */
 /* LINE 單字卡的「完整學習」會帶 ?w=compensate&lesson=bk20260811 進來：
