@@ -2012,7 +2012,7 @@ body.vd-lock{overflow:hidden}
    版面原則（同日第三版，使用者實際可用空間約 1280×560）：
    影片寬度只看視窗寬度（60%，560–1000px），永遠不因高度縮小；
    電腦版控制列疊在影片底部、重點卡釘在字幕欄底部，左欄高度＝影片高度，任何螢幕都不用捲。 ---- */
-#vd{--vd-ctrl-h:66px}   /* 電腦版控制列（進度條＋按鈕）實際高度，用來算影片能多高 */
+#vd{--vd-ctrl-h:66px;--vd-top-h:48px}   /* 電腦版控制列、標題列高度的預設值；開影片後 vdMeasure() 會用實測值蓋掉 */
 /* ---- 標題列：一行 ---- */
 #vd .vd-top{padding:8px 16px;gap:12px}
 #vd .vd-ttl{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
@@ -2134,13 +2134,13 @@ body.vd-lock{overflow:hidden}
   #vd{display:flex;flex-direction:column;overflow:hidden}
   #vd .vd-top{position:static;flex:none}
   #vd .vd-main{flex:1;min-height:0;width:100%;max-width:none;align-items:stretch;padding:14px 16px 16px;gap:16px;
-    grid-template-columns:min(clamp(560px,60%,1200px),calc((100vh - 48px - 30px - var(--vd-ctrl-h)) * 16 / 9)) minmax(0,1fr);grid-template-areas:none}
+    grid-template-columns:min(clamp(560px,60%,1200px),calc((100vh - var(--vd-top-h,48px) - 30px - var(--vd-ctrl-h)) * 16 / 9)) minmax(0,1fr);grid-template-areas:none}
   #vd .vd-left{min-width:0;display:flex;flex-direction:column;justify-content:center}   /* 很高的螢幕影片以寬度封頂，多出的高度上下平分 */
   #vd .vd-stagewrap{flex:none}
   #vd .vd-stage{width:100%}
   #vd .vd-ctrlwrap{position:static;flex:none;padding:0 2px}
-  #vd .vd-ctrlwrap .vd-prog{margin:8px 2px 4px}
-  #vd .vd-play{width:44px;height:44px;font-size:18px}
+  #vd .vd-ctrlwrap .vd-prog{margin:6px 2px 4px}
+  #vd .vd-play{width:40px;height:40px;font-size:17px}
   /* ⋯ 設定變成控制列上方的浮動面板 */
   #vd .vd-ctrlwrap{position:relative}
   #vd .vd-set.on{position:absolute;left:0;right:0;bottom:calc(100% + 4px);margin:0;box-shadow:0 8px 24px rgba(60,45,30,.18);z-index:3}
@@ -7419,7 +7419,7 @@ function vdStageHTML(l){
     const who=Object.keys(cast).filter(k=>k!=='N');
     h='<div class="vd-loc">📍 '+esc(d.scene||'')+'</div>'
      +'<div class="vd-scn"><div class="vd-scene"><div class="vd-cast">'+who.map(av).join('')+'</div>'
-     +(d.sceneArt?'<div class="vd-sceneart">'+vdArt(d.sceneArt)+'</div>':'')+'</div></div>'+sub;
+     +((v.art||d.sceneArt)?'<div class="vd-sceneart">'+vdArt(v.art||d.sceneArt)+'</div>':'')+'</div></div>'+sub;   /* 每句可用 vis.art 換圖（2026-09-27） */
   }else if(v.type==='slide'){
     h='<div class="vd-scn"><div class="vd-split"><div>'
      +'<div class="vd-big">'+esc(v.phrase||v.w)+'</div>'
@@ -7554,7 +7554,7 @@ function vdRender(){
    +'<div class="vd-rightcol"><div class="vd-right" id="vd-right"><div id="vd-list">'+vdListHTML()+'</div></div>'
    +'<div class="vd-cardwrap" id="vd-card"></div></div>'
    +'</div>';
-  vdPaint(false);
+  vdPaint(false); vdMeasure(); requestAnimationFrame(vdMeasure);
 }
 function vdSetTog(){
   const s=$('vd-set'), b=$('vd-more'); if(!s) return;
@@ -7692,6 +7692,14 @@ function vdOpen(id){
     try{ VD.prevUrl=location.href; const u=new URL(location.href); u.searchParams.delete('lesson'); u.searchParams.delete('w'); u.searchParams.set('video',id); history.replaceState(null,'',u.toString()); }catch(e){}
   });
 }
+/* 實測標題列與控制列高度寫進 CSS 變數（不同縮放比例、字型下常數會猜錯，播放鍵就被切掉；2026-09-27） */
+function vdMeasure(){
+  const el=$('vd'); if(!el) return;
+  const t=el.querySelector('.vd-top'), c=el.querySelector('.vd-ctrlwrap');
+  if(t) el.style.setProperty('--vd-top-h', Math.ceil(t.getBoundingClientRect().height)+'px');
+  if(c) el.style.setProperty('--vd-ctrl-h', (Math.ceil(c.getBoundingClientRect().height)+6)+'px');   /* +6 安全邊距 */
+}
+window.addEventListener('resize',vdMeasure);
 function vdClose(){
   vdPause(); if(typeof recFinish==='function') recFinish();
   const el=$('vd'); if(el) el.remove();
