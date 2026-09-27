@@ -1770,9 +1770,9 @@ body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .ex
    課堂影片版（2026-09-27）：全螢幕覆蓋層。配色一律沿用全站變數（--bg／--card／--accent…），
    所以護眼模式、字級設定都會自動套用；資料在 data-video.js，程式在 vd* 函式。
    ============================================================ */
-.magbadge.vdbtn{cursor:pointer;border:0;background:var(--accent);color:#fff;
-  font-weight:var(--fw-emph);box-shadow:0 2px 8px rgba(232,129,58,.35)}
-.magbadge.vdbtn:hover{background:var(--accent2)}
+.magbadge.vdbtn{cursor:pointer;border:0;background:var(--b1p);color:#fff;
+  font-weight:var(--fw-emph);box-shadow:0 2px 8px rgba(59,130,196,.35)}
+.magbadge.vdbtn:hover{background:#2f6fae}
 body.vd-lock{overflow:hidden}
 #vd{--vd-dim:#9a8e82;
   --vd-k1:#a86a12;--vd-k1b:#fff3d9;--vd-k1l:#efc36a;
@@ -1831,9 +1831,10 @@ body.vd-lock{overflow:hidden}
 #vd .vd-sub .cn{font-size:clamp(11px,1.9cqw,18px);color:var(--ink2);margin-top:.3em}
 #vd .vd-sub .k1{color:var(--vd-k1)} #vd .vd-sub .k2{color:var(--vd-k2)} #vd .vd-sub .k3{color:var(--vd-k3)} #vd .vd-sub .k4{color:var(--vd-k4)}
 #vd .vd-loc{position:absolute;left:3.5cqw;top:3.5cqw;font-size:clamp(10px,1.6cqw,14px);padding:.35em .8em;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink2)}
-#vd .vd-sceneart{position:absolute;right:4cqw;top:5cqw;width:30cqw;opacity:.9}
+#vd .vd-scene{display:flex;align-items:center;justify-content:center;gap:7cqw;width:100%}
+#vd .vd-sceneart{width:32cqw;flex:none}
 #vd .vd-sceneart svg{width:100%;height:auto}
-#vd .vd-cast{display:flex;justify-content:flex-start;gap:9cqw;margin:-12cqw 0 0 4cqw}
+#vd .vd-cast{display:flex;justify-content:center;gap:7cqw;margin:0}
 #vd .vd-av{display:flex;flex-direction:column;align-items:center;gap:1cqw;transition:transform .35s,opacity .35s;opacity:.55}
 #vd .vd-av .c{width:12cqw;height:12cqw;border-radius:50%;display:grid;place-items:center;font-size:5cqw;font-weight:800;color:#fff;
   background:#b8aa9b;border:3px solid #fff;box-shadow:0 3px 10px rgba(60,45,30,.15);position:relative}
@@ -1913,7 +1914,8 @@ body.vd-lock{overflow:hidden}
 #vd .vd-card .lab{font-size:var(--font-micro);color:var(--vd-dim);letter-spacing:.08em;margin-bottom:6px}
 #vd .vd-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px}
 #vd .vd-tags span{font-size:var(--font-micro);padding:1px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent2)}
-#vd .vd-card .ph{font-size:calc(22px * var(--fs));font-weight:800;color:var(--accent2);line-height:1.2}
+#vd .vd-card .ph{font-size:calc(22px * var(--fs));font-weight:800;color:var(--ink);line-height:1.2}
+#vd .vd-card .ph.k1{color:var(--vd-k1)} #vd .vd-card .ph.k2{color:var(--vd-k2)} #vd .vd-card .ph.k3{color:var(--vd-k3)} #vd .vd-card .ph.k4{color:var(--vd-k4)}
 #vd .vd-card .phcn{font-size:var(--font-secondary);color:var(--ink2);margin-top:3px}
 #vd .vd-card .ex{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 #vd .vd-card .ex .e{font-size:var(--font-secondary);line-height:1.5}
@@ -1988,8 +1990,9 @@ body.vd-lock{overflow:hidden}
   #vd .vd-why{font-size:clamp(11px,3.3cqw,14px)}
   #vd .vd-q{font-size:clamp(15px,5cqw,22px)}
   #vd .vd-cd{width:16cqw;height:16cqw} #vd .vd-cd b{font-size:6cqw}
-  #vd .vd-sceneart{width:34cqw;top:12cqw;opacity:.8}
-  #vd .vd-cast{margin:-20cqw 0 0 2cqw;gap:8cqw}
+  #vd .vd-sceneart{width:26cqw}
+  #vd .vd-scene{gap:5cqw}
+  #vd .vd-cast{gap:6cqw}
   #vd .vd-av .c{width:15cqw;height:15cqw;font-size:6.5cqw}
   #vd .vd-ticons span{width:12cqw;height:12cqw}
 }
@@ -2024,11 +2027,11 @@ body.vd-lock{overflow:hidden}
 #vd .vd-row .tm{font-size:calc(13px * var(--fs));padding-top:5px}
 #vd .vd-row .sp{font-size:calc(14px * var(--fs))}
 #vd .vd-chh{font-size:calc(13px * var(--fs))}
-#vd .vd-card .ph{font-size:calc(22px * var(--fs))}
-#vd .vd-card .phcn{font-size:calc(15px * var(--fs))}
-#vd .vd-card .ex .e{font-size:calc(16px * var(--fs))}
-#vd .vd-card .ex .c{font-size:calc(14px * var(--fs))}
-#vd .vd-acts button,#vd .vd-acts .wbb{font-size:calc(15px * var(--fs))}
+#vd .vd-card .ph{font-size:calc(18px * var(--fs))}
+#vd .vd-card .phcn{font-size:calc(14px * var(--fs))}
+#vd .vd-card .ex .e{font-size:calc(15px * var(--fs))}
+#vd .vd-card .ex .c{font-size:calc(13px * var(--fs))}
+#vd .vd-acts button,#vd .vd-acts .wbb{font-size:calc(14px * var(--fs))}
 #vd .vd-more{font-size:calc(16px * var(--fs))}
 #vd .vd-more .src span{font-size:calc(15px * var(--fs))}
 #vd .vd-set,#vd .vd-set select{font-size:calc(15px * var(--fs))}
@@ -2042,11 +2045,13 @@ body.vd-lock{overflow:hidden}
 #vd .vd-note,#vd .vd-why,#vd .vd-pnote{font-size:clamp(13px,1.8cqw,18px)}
 /* ---- 畫面內部：有字幕的畫面（開場、情境）上下分區，內容只用上面、字幕條固定佔下面，不再重疊 ---- */
 #vd .vd-scn{padding:5cqw 6cqw}
-#vd .vd-bg.t-title ~ .vd-scn,#vd .vd-bg.t-scene ~ .vd-scn{justify-content:flex-start;padding-bottom:22cqw}
+#vd .vd-bg.t-title ~ .vd-scn,#vd .vd-bg.t-scene ~ .vd-scn{padding-bottom:22cqw}
+#vd .vd-bg.t-title ~ .vd-scn{justify-content:flex-start;align-items:center;text-align:center}
+#vd .vd-bg.t-scene ~ .vd-scn{justify-content:safe center}
 #vd .vd-bg.t-title ~ .vd-scn{padding-top:5cqw}
-#vd .vd-bg.t-scene ~ .vd-scn{padding-top:11cqw}
+#vd .vd-bg.t-scene ~ .vd-scn{padding-top:12cqw}
 #vd .vd-big{font-size:clamp(24px,6cqw,60px);margin:.2em 0 .1em}
-#vd .vd-ticons{margin-top:2cqw}
+#vd .vd-ticons{margin-top:2cqw;justify-content:center}
 #vd .vd-ticons span{width:7.5cqw;height:7.5cqw}
 #vd .vd-bg.t-title ~ .vd-scn .vd-big{font-size:clamp(22px,5cqw,52px)}
 /* 畫面太矮（控制列疊上去後）就收起開場的三個圖示，標題不會擠到字幕 */
@@ -2063,7 +2068,7 @@ body.vd-lock{overflow:hidden}
   #vd .vd-vsc{padding:2cqw 2.4cqw} #vd .vd-vsc .w{font-size:clamp(18px,4.2cqw,40px)}
   #vd .vd-fx{font-size:clamp(12px,2.3cqw,22px);margin:.25em 0}
 }
-#vd .vd-cast{margin:0 0 0 3cqw}
+#vd .vd-scene{gap:6cqw}
 #vd .vd-sub{bottom:3cqw}
 /* ---- 控制列：五個主要按鈕＋更多 ---- */
 #vd .vd-ctrl{gap:4px}
@@ -2108,9 +2113,9 @@ body.vd-lock{overflow:hidden}
 #vd .vd-card .ex:hover{border-color:#f0c9a0}
 #vd .vd-acts{display:flex;align-items:center;margin-top:0}
 #vd .vd-acts button,#vd .vd-acts .wbb{flex:0 0 auto;min-width:0}
-#vd .vd-acts .vd-follow{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600;padding:5px 12px}
-#vd .vd-acts .vd-follow:hover{background:var(--accent2);color:#fff}
-#vd .vd-acts .vd-follow.recording{background:var(--bad);border-color:var(--bad)}
+#vd .vd-acts .vd-follow{background:#fff;border:1px solid var(--line);color:var(--ink);font-weight:600;padding:5px 12px}
+#vd .vd-acts .vd-follow:hover{border-color:var(--accent);color:var(--accent2);background:#fff}
+#vd .vd-acts .vd-follow.recording{background:var(--bad);border-color:var(--bad);color:#fff}
 #vd .vd-acts .recp{border:0;background:none;color:var(--accent2);padding:6px 4px;text-decoration:underline}
 #vd .vd-acts .vd-morebtn{margin-left:auto;border:0;background:none;color:var(--ink2);padding:6px 4px}
 #vd .vd-acts .vd-morebtn:hover{color:var(--accent2)}
@@ -2164,13 +2169,12 @@ body.vd-lock{overflow:hidden}
   #vd .vd-left{max-width:calc(46vh * 1.333)}
   #vd .vd-ttl b{font-size:calc(18px * var(--fs))}
   #vd .vd-meta{white-space:normal}
-  #vd .vd-card .ph{font-size:calc(22px * var(--fs))}
+  #vd .vd-card .ph{font-size:calc(18px * var(--fs))}
 }
 /* 手機的小畫面：字幕與人物的字級下限也跟著調大，但仍要塞得進 4:3 畫面 */
 @container (max-width:560px){
   #vd .vd-bg.t-title ~ .vd-scn,#vd .vd-bg.t-scene ~ .vd-scn{padding-bottom:26cqw}
   #vd .vd-bg.t-scene ~ .vd-scn{padding-top:13cqw}
-  #vd .vd-cast{margin:0 0 0 2cqw}
   #vd .vd-sub .en{font-size:clamp(14px,4.2cqw,18px)}
   #vd .vd-sub .cn{font-size:clamp(13px,3.5cqw,15px)}
   #vd .vd-loc{font-size:clamp(12px,3.4cqw,14px)}
@@ -7406,8 +7410,8 @@ function vdStageHTML(l){
       +'<div class="n">'+esc(c.name||k)+'</div><div class="r">'+esc((c.cn||'').replace(/^[^・]*・/,''))+'</div></div>'; };
     const who=Object.keys(cast).filter(k=>k!=='N');
     h='<div class="vd-loc">📍 '+esc(d.scene||'')+'</div>'
-     +(d.sceneArt?'<div class="vd-sceneart">'+vdArt(d.sceneArt)+'</div>':'')
-     +'<div class="vd-scn"><div class="vd-cast">'+who.map(av).join('')+'</div></div>'+sub;
+     +'<div class="vd-scn"><div class="vd-scene"><div class="vd-cast">'+who.map(av).join('')+'</div>'
+     +(d.sceneArt?'<div class="vd-sceneart">'+vdArt(d.sceneArt)+'</div>':'')+'</div></div>'+sub;
   }else if(v.type==='slide'){
     h='<div class="vd-scn"><div class="vd-split"><div>'
      +'<div class="vd-big">'+esc(v.phrase||v.w)+'</div>'
@@ -7462,7 +7466,7 @@ function vdCardHTML(){
   const id=VD_FOLLOW+Object.keys(VD.d.expr).indexOf(k);
   /* 三行：重點英文＋中文＋按鈕｜例句｜解析（常駐、不用點開；2026-09-27 使用者指定） */
   return '<div class="vd-card">'
-   +'<div class="vd-kx"><span class="ph">'+esc(e.t)+'</span><span class="phcn">'+esc(e.cn)+'</span>'
+   +'<div class="vd-kx"><span class="ph k'+(VD.exprColor||1)+'">'+esc(e.t)+'</span><span class="phcn">'+esc(e.cn)+'</span>'
    +'<span class="vd-acts">'
    +'<button class="vd-follow" id="vd-follow" onclick="vdFollow('+id+')">🗣 跟讀</button>'
    +'<button class="recp" id="recp-'+id+'" onclick="recPlay('+id+',event)" style="display:'+(recUrls[id]?'':'none')+'" title="聽我的錄音">▶ 我的錄音</button>'
@@ -7552,7 +7556,7 @@ function vdPaint(scroll){
   const st=$('vd-stage'); if(st) st.innerHTML=vdStageHTML(l);
   /* 重點表達卡：這句有標籤就換成這句的；沒有就沿用往前最近的一個（跳句時卡片也不會空白） */
   const prev=VD.expr; VD.expr=null;
-  for(let k=VD.i;k>=0;k--){ const h=(VD.lines[k].hi||[])[0]; if(h&&h.k){ VD.expr=h.k; break; } }
+  for(let k=VD.i;k>=0;k--){ const h=(VD.lines[k].hi||[])[0]; if(h&&h.k){ VD.expr=h.k; VD.exprColor=h.c||1; break; } }
   if(VD.expr!==prev) VD.more=false;
   const cd=$('vd-card'); if(cd&&(VD.expr!==prev||!cd.innerHTML)) cd.innerHTML=vdCardHTML();
   document.querySelectorAll('#vd .vd-row.cur').forEach(r=>r.classList.remove('cur'));
