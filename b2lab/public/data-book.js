@@ -2020,6 +2020,7 @@ window.BOOK = {
     },
     {
       id: 'bk20260106a',
+      video: true,   // 有影片版（data-video.js）
       icon: '🏠',
       date: '2026-01-06',
       doc: 'https://docs.google.com/document/d/1tWi_JV1pWPm357tYf6AXto7S2z5VguRAbVBvzjWHk98/edit',
@@ -2182,6 +2183,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260106b',
+      video: true,   // 有影片版（data-video.js）
       icon: '🔧',
       date: '2026-01-06',
       doc: 'https://docs.google.com/document/d/1UFkFDs8J45yYGRmJUAFc__tpbBgYhDFAOGQaOGt6X_k/edit',
@@ -2306,6 +2308,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260108',
+      video: true,   // 有影片版（data-video.js）
       icon: '🚶',
       date: '2026-01-08',
       doc: 'https://docs.google.com/document/d/10XnHQvPrIO8oJ5v0VDxo4fvwAf02DcZhIBknWlJmni0/edit',
@@ -2488,6 +2491,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260113',
+      video: true,   // 有影片版（data-video.js）
       icon: '🎯',
       date: '2026-01-13',
       doc: 'https://docs.google.com/document/d/1oGNJZOz172LErpatMuKzWS2u4psfU7uyvgiTNz6iZqQ/edit',
@@ -2679,6 +2683,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260120a',
+      video: true,   // 有影片版（data-video.js）
       icon: '💉',
       date: '2026-01-20',
       doc: 'https://docs.google.com/document/d/1y-yPv7tyMzaehigNBketCqamifUuKP4YcBOUQLPKiB4/edit',
@@ -2838,6 +2843,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260120b',
+      video: true,   // 有影片版（data-video.js）
       icon: '🧾',
       date: '2026-01-20',
       doc: 'https://docs.google.com/document/d/1FpMM8jo358yOY4nSVYG-1vY3vGqgQwdTOfONURJNucA/edit',
@@ -2998,6 +3004,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260122',
+      video: true,   // 有影片版（data-video.js）
       icon: '💰',
       date: '2026-01-22',
       doc: 'https://docs.google.com/document/d/15XgZ9CDCxINd4xAOYB0NFiZsW6SP-luQa2uMhkOcuzs/edit',
@@ -3170,6 +3177,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260127',
+      video: true,   // 有影片版（data-video.js）
       icon: '😴',
       date: '2026-01-27',
       doc: 'https://docs.google.com/document/d/1LCwmjw0FGwM8DG-8oslxMBvug91_1GAHVUGLpWbiUcU/edit',
@@ -3290,6 +3298,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260129a',
+      video: true,   // 有影片版（data-video.js）
       icon: '🎉',
       date: '2026-01-29',
       doc: 'https://docs.google.com/document/d/1DrqvG6E994lcQxcL4TUDF4NBmro4QKnMjNLsd_-wAbY/edit',
@@ -3445,6 +3454,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260129b',
+      video: true,   // 有影片版（data-video.js）
       icon: '🏢',
       date: '2026-01-29',
       doc: 'https://docs.google.com/document/d/1zDUJX_1vpmTt2P-GhuJO20RYBWX-i28JR_7idNY1eRY/edit',
@@ -3571,6 +3581,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260203a',
+      video: true,   // 有影片版（data-video.js）
       icon: '🤝',
       date: '2026-02-03',
       doc: 'https://docs.google.com/document/d/1ytoMO9lMMXNCZ_BGxGm2gHeHIDEstpaw4S3Tpw0S_RY/edit',
@@ -3756,6 +3767,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260203b',
+      video: true,   // 有影片版（data-video.js）
       icon: '⭐',
       date: '2026-02-03',
       doc: 'https://docs.google.com/document/d/1-JSXJJj2zGaTcQdmFJqmmDYHwMDHaBhq3kEFfcUs9tU/edit',
@@ -3851,6 +3863,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260210',
+      video: true,   // 有影片版（data-video.js）
       icon: '🔍',
       date: '2026-02-10',
       doc: 'https://docs.google.com/document/d/1GkPCHkQgX6PSqxtmWJU_z62PrVIYFIIHy3CsN_9nX9s/edit',
@@ -3905,6 +3918,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260212',
+      video: true,   // 有影片版（data-video.js）
       icon: '🧧',
       date: '2026-02-12',
       doc: 'https://docs.google.com/document/d/1JuvuhJgdtHPlLjs7FcFvPdxulOI69DB7gPcdCKlHVlk/edit',
@@ -3990,6 +4004,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260224',
+      video: true,   // 有影片版（data-video.js）
       icon: '🎯',
       date: '2026-02-24',
       doc: 'https://docs.google.com/document/d/1G9Sc-QXCt_yGnYcLccnFcZGEYwtAanzNiobqSzc6ve0/edit',
@@ -4054,6 +4069,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260226a',
+      video: true,   // 有影片版（data-video.js）
       icon: '🏥',
       date: '2026-02-26',
       doc: 'https://docs.google.com/document/d/1UwYqvLi4U9XiFGNekzBs1PjJkQaB6-bbreGQUFrzRjI/edit',
@@ -4129,6 +4145,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260226b',
+      video: true,   // 有影片版（data-video.js）
       icon: '💼',
       date: '2026-02-26',
       doc: 'https://docs.google.com/document/d/1-YEYC6_CWrFhds6bRU_o2-39KFLcH0Ot8orwvjuN8OY/edit',
@@ -4179,6 +4196,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260305',
+      video: true,   // 有影片版（data-video.js）
       icon: '🩺',
       date: '2026-03-05',
       doc: 'https://docs.google.com/document/d/1Xsfnhhe7TdOlrJhVe6ofWPJP8iTX0ywhALFRgf4hO6o/edit',
@@ -4317,6 +4335,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260310',
+      video: true,   // 有影片版（data-video.js）
       icon: '⏰',
       date: '2026-03-10',
       doc: 'https://docs.google.com/document/d/1-9a9g9MIWQ347pA1tl7mfoEqgosCRG75lD8KZGrLdxo/edit',
@@ -4601,6 +4620,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260312',
+      video: true,   // 有影片版（data-video.js）
       icon: '🕐',
       date: '2026-03-12',
       doc: 'https://docs.google.com/document/d/1APEhSDCtqxcmaRT_I-kh-rO8LGDszecxCeTde_istAs/edit',
@@ -4822,6 +4842,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260317',
+      video: true,   // 有影片版（data-video.js）
       icon: '📊',
       date: '2026-03-17',
       doc: 'https://docs.google.com/document/d/1EbwOboWgHkbR57143UP6krEhDdy31IRKlwvVauuyDrA/edit',
@@ -5034,6 +5055,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260319',
+      video: true,   // 有影片版（data-video.js）
       icon: '🎯',
       date: '2026-03-19',
       doc: 'https://docs.google.com/document/d/1GLolr2Ghg7Cglz5yWEAOLFA3agMZUMBHLgOLPq3UGUE/edit',
@@ -5183,6 +5205,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260324',
+      video: true,   // 有影片版（data-video.js）
       icon: '🔀',
       date: '2026-03-24',
       doc: 'https://docs.google.com/document/d/1M4-YJLSdOEpGjZqhcVLP3aPerpJS7prS21iaV1t36QU/edit',
@@ -5367,6 +5390,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260326',
+      video: true,   // 有影片版（data-video.js）
       icon: '📈',
       date: '2026-03-26',
       doc: 'https://docs.google.com/document/d/1YLp1HPVJ7n_fdVVZNiEDVvN568cMC5pca04phCnFnq4/edit',
@@ -5489,6 +5513,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260331',
+      video: true,   // 有影片版（data-video.js）
       icon: '🚀',
       date: '2026-03-31',
       doc: 'https://docs.google.com/document/d/1LKjdPW-wdGmPsZGDo8BAPokKYbpZx8gGZQd782a96c0/edit',
@@ -5657,6 +5682,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260402',
+      video: true,   // 有影片版（data-video.js）
       icon: '🌿',
       date: '2026-04-02',
       doc: 'https://docs.google.com/document/d/1m415SC66SbaWAUZOGnNvSUV7MvGstXVWs0BIF0t1RJ8/edit',
@@ -5840,6 +5866,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260407',
+      video: true,   // 有影片版（data-video.js）
       icon: '🏘️',
       date: '2026-04-07',
       doc: 'https://docs.google.com/document/d/1REPbbCz8ELb0_uD1yrafSBIDzOod4ErhTdaL9prvois/edit',
@@ -5989,6 +6016,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260409',
+      video: true,   // 有影片版（data-video.js）
       icon: '🧺',
       date: '2026-04-09',
       doc: 'https://docs.google.com/document/d/1zjsmRS1nlbDxKANKy-OLDOUIa8Rh6tW9e5cdmxYq_8M/edit',
@@ -6100,6 +6128,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260421',
+      video: true,   // 有影片版（data-video.js）
       icon: '🤒',
       date: '2026-04-21',
       doc: 'https://docs.google.com/document/d/1c5YYnt7coidow2AUe0MRnchHva0dPgTxzM2D5MqPnSs/edit',
@@ -6213,6 +6242,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260423',
+      video: true,   // 有影片版（data-video.js）
       icon: '🐴',
       date: '2026-04-23',
       doc: 'https://docs.google.com/document/d/1cKO4T9-5D1gYfomVKxp0Im5deyYipmzwoahf9Q2JZ1U/edit',
@@ -6361,6 +6391,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260507',
+      video: true,   // 有影片版（data-video.js）
       icon: '🗣️',
       date: '2026-05-07',
       doc: 'https://docs.google.com/document/d/1BuQsm16p-rHijLBZ7D1u79XydW50gx_XISfs3GU1ZGM/edit',
@@ -6442,6 +6473,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260512',
+      video: true,   // 有影片版（data-video.js）
       icon: '📶',
       date: '2026-05-12',
       doc: 'https://docs.google.com/document/d/1NOX6huyC6lfuXvSSpVeGUdzH3yaYkjuttapyWE7HK48/edit',
@@ -6650,6 +6682,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260514',
+      video: true,   // 有影片版（data-video.js）
       icon: '💭',
       date: '2026-05-14',
       doc: 'https://docs.google.com/document/d/1km2DxwpZXoEFdpDst3C1B6DDQJmI6KHfe1km2xe2gBA/edit',
@@ -6820,6 +6853,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260519',
+      video: true,   // 有影片版（data-video.js）
       icon: '🚧',
       date: '2026-05-19',
       doc: 'https://docs.google.com/document/d/1C-EOOCK6zRtCJUHJmNvewwPnQ0mTsIkDPKbLVDp_6KE/edit',
@@ -6943,6 +6977,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260521',
+      video: true,   // 有影片版（data-video.js）
       icon: '🍱',
       date: '2026-05-21',
       doc: 'https://docs.google.com/document/d/1RCYreG4sW488mB3_EAOLvv7RIPuNWkNUiqizjlNIjpo/edit',
@@ -7074,6 +7109,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260526',
+      video: true,   // 有影片版（data-video.js）
       icon: '🦠',
       date: '2026-05-26',
       doc: 'https://docs.google.com/document/d/1Kxs5__7z4J_PHi8wAJyTk50ZfNS0NdgcuW2wT_2rTXs/edit',
@@ -7201,6 +7237,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260528',
+      video: true,   // 有影片版（data-video.js）
       icon: '💧',
       date: '2026-05-28',
       doc: 'https://docs.google.com/document/d/1ttknmoekdxpt3y_I-eXvWRRmSVDTMGidlIIHC7tpRHg/edit',
@@ -7289,6 +7326,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260602',
+      video: true,   // 有影片版（data-video.js）
       icon: '🌩️',
       date: '2026-06-02',
       doc: 'https://docs.google.com/document/d/1hw3jniVQLMJMjPWCxpIAI8wd4MuKWmsPHuHPx2zZVG8/edit',
@@ -7403,6 +7441,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260604',
+      video: true,   // 有影片版（data-video.js）
       icon: '🌪️',
       date: '2026-06-04',
       doc: 'https://docs.google.com/document/d/1vL5sc3ZSwRZv3DIbNb_bzS2I2v56ATN-qEz1DYrCvHM/edit',
@@ -7573,6 +7612,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260609',
+      video: true,   // 有影片版（data-video.js）
       icon: '🖼️',
       date: '2026-06-09',
       doc: 'https://docs.google.com/document/d/1XQre5kA4BrsX-nLU-1UQ7wbq4vKbqzGllF3UVzy5mcE/edit',
@@ -7852,6 +7892,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260611',
+      video: true,   // 有影片版（data-video.js）
       icon: '💈',
       date: '2026-06-11',
       doc: 'https://docs.google.com/document/d/1UexzKd2f0YWaPD_It7aPG-jviUGNhes-kENA2G_vF_M/edit',
@@ -7962,6 +8003,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260616',
+      video: true,   // 有影片版（data-video.js）
       icon: '💨',
       date: '2026-06-16',
       doc: 'https://docs.google.com/document/d/1neXE3UgDmc-LMwKY6DCMYz_Z6phIRtpyStDj9wvePSI/edit',
@@ -8105,6 +8147,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260618',
+      video: true,   // 有影片版（data-video.js）
       icon: '🌋',
       date: '2026-06-18',
       doc: 'https://docs.google.com/document/d/1IvY_9oVECMI6jmkXXmd_lwFqHyXjfHuGXVW2b1zVEZs/edit',
@@ -8321,6 +8364,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260623',
+      video: true,   // 有影片版（data-video.js）
       icon: '🕰️',
       date: '2026-06-23',
       doc: 'https://docs.google.com/document/d/16KKYdJfKyOae8rk7V85Ro8QdQpUb9eiQQDFh0XS5l8Y/edit',
@@ -8455,6 +8499,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260625',
+      video: true,   // 有影片版（data-video.js）
       icon: '🌸',
       date: '2026-06-25',
       doc: 'https://docs.google.com/document/d/1uf8cbkb7UGPsMC7fxUNiopdULKFipArw2xFE5QPHZ8E/edit',
@@ -8669,6 +8714,7 @@ window.BOOK = {
 ,
     {
       id: 'bk20260630',
+      video: true,   // 有影片版（data-video.js）
       icon: '🚄',
       date: '2026-06-30',
       doc: 'https://docs.google.com/document/d/1JMzidQEW8kEcvTs3Yw9c6iCDdd1_yDUFPAOHq5b_0Rs/edit',

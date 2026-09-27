@@ -1283,7 +1283,7 @@ window.NOTES = {
     {en:"She felt grateful when her friends helped her move.",cn:"朋友幫她搬家時，她感到非常感激。"},
     {en:"We are grateful for the support from the rescue team.",cn:"我們非常感謝救援團隊的支持。"},
   ]},
-  {w:"used to",ipa:"/ˈjuːst tə/",tag:"以前習慣 · aux.",exs:[
+  {w:"used to",ipa:"/ˈjuːst tuː/",tag:"以前習慣 · aux.",exs:[
     {en:"I used to live in Taiwan.",cn:"我以前住在台灣。"},
     {en:"I used to stay up late often, but I don't anymore.",cn:"我以前常常熬夜，但現在不再了。"},
     {en:"There used to be four distinct seasons in Taiwan.",cn:"台灣以前有四季之分。"},
