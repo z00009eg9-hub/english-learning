@@ -115,7 +115,7 @@ cd "D:/english-learning" && git log --oneline origin/main..main && git branch --
   - **產出前自我檢查（每個單字都要做）**：數「拼字裡有幾個 r」對上「音標裡有幾個 r／ɚ／ɝ」，前者多就是漏了捲舌
     （雙寫 r 的 arrive `/əˈraɪv/`、borrow `/ˈbɑːroʊ/` 是正常例外）
   - 同一個字在所有課要同一寫法（例：`/kənˈvɪns/`、`/pɚˈsweɪd/`、`/ˈmɑː.nə.t̬ɚ/`）。B2 Read 的單字卡、課本、關聯頁與雲端 Google 文件共用同一套音標，寫法不一致學習者會當成兩種讀音
-  - **既有筆記要批次改**：對照表在 `b2lab/public/us-ipa-map.json`（線上 <https://english-b2-lab.web.app/us-ipa-map.json>）；Apps Script 專案「英文筆記-音標統一美式」的 `pass2()` 會掃過雲端全部課堂筆記，只替換「斜線包起來且含音標符號」的字串，不動表格結構。新加的例外字寫進這個 json 再 push 即可
+  - **既有筆記要批次改**：對照表在 `b2lab/public/us-ipa-map.json`（線上 <https://english-b2-lab.web.app/us-ipa-map.json>）；批次腳本正本在 `b2lab/tools/us-ipa-pass2.gs`（`pass2()` 會掃過雲端全部課堂筆記，只替換「斜線包起來且含音標符號」的字串，不動表格結構；用法寫在檔頭）。要跑時貼到 Apps Script 專案「英文筆記-音標統一美式」執行——那個專案的程式碼會被其他工作覆蓋，**以 repo 這份為準**。新加的例外字寫進 json 再 push 即可
   - 🔊 **發音也只用美式**：B2 Read 的 `pickVoice()` 先過濾 `en-US`，沒有美式語音才退回其他 en —— 英式 premium／enhanced 的分數會贏過美式，manager 就會被唸成無捲舌的 /ˈmænɪdʒə/
 - B1 以上單字、句型、片語**全部收錄**，不省略（但同一句例句全文件只出現一次，見「⭐ 內容去重原則」）
 - B2+ 單字加 ⭐ 標記
@@ -1322,14 +1322,24 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
    - **放哪裡**：`b2lab/public/data-video.js` 加一筆 `window.VIDEO.<lessonId> = {…}`；
      `data-book.js` 該課加 `video: true`（課程頁頂端才會出現「▶ 影片版」按鈕）。
      分享網址：`https://english-b2-lab.web.app/?video=<lessonId>`。
-   - **結構（約 35–40 句、400–600 個英文字）**：
+   - **結構（2026-09-27 定版：7 章、約 35–40 句、400–550 個英文字，總長一定壓在 5 分鐘內）**：
      | 章節 ch | 內容 | vis.type |
      |---|---|---|
-     | 0 開場 | 旁白 2 句：今天的情境＋要注意聽什麼 | `title` |
-     | 1 情境 | **新寫**一段兩人對話（15–20 句），把這課的單字、句型自然串起來 | `scene` |
-     | 2 重點表達 | 4–6 張解說卡：大字＋美式音標＋英文定義＋中文＋一行易錯提醒；易混淆用對照卡 | `slide`／`vs` |
-     | 3 作業訂正 | 挑 2–3 題作業：❌ 原句（錯處 `bad[]`）→ ✅ 訂正（改對處 `good[]`）＋一句為什麼 | `fix` |
-     | 4 小測驗 | 3 題填空：題目句（`say` 把 ___ 唸成 blank、`pause: 4000` 倒數）＋答案句（`show: true`）；最後一句 `end` | `quiz`／`end` |
+     | 0 開場 | 旁白 2 句：今天的情境＋要注意聽什麼；`titleArt` 放 3 個 BOOK_ICONS | `title` |
+     | 1 情境 | **新寫**一段兩人對話（約 14 句），把這課的單字、句型自然串起來；`sceneArt` 放場景插圖 | `scene` |
+     | 2 重點表達 | 4 張解說卡：大字＋美式音標＋英文定義＋中文＋一行易錯提醒；易混淆用對照卡 | `slide`／`vs` |
+     | 3 片語搭配 | 3 張「搭配詞家族卡」：核心字＋3–4 個搭配詞依序亮起（取自筆記的片語表） | `family` |
+     | 4 文法 | 2–3 個句型，每個 1–2 張「公式卡」：色塊 `s` 主詞／`v` 動詞／`o` 受詞或其他／`n` 功能詞，`x` 劃掉、`add` 新出現；底下一行 💡 重點 | `pattern` |
+     | 5 作業訂正 | 挑 2 題作業：❌ 原句（錯處 `bad[]`）→ ✅ 訂正（改對處 `good[]`）＋一句為什麼 | `fix` |
+     | 6 小測驗 | 3 題填空：題目句（`say` 把 ___ 唸成 blank、`pause: 4000` 倒數）＋答案句（`show: true`）；最後一句 `end` | `quiz`／`end` |
+     超過 5 分鐘時優先刪情境對話的句子，其次解說卡、作業訂正；片語和文法章節保留。
+   - **插圖（使用者選 A＋B）**：`art` 先找 `VIDEO_ART`（data-video.js 檔頭的專屬插圖），找不到再用課本線稿圖示庫 `BOOK_ICONS`
+     （data-book.js 的 37 個：box、check、warning、gear、doc…）。專屬插圖用同一套線稿風格：
+     `viewBox="0 0 200 150"`、線條 `#2b2118` 粗 3、主色 `#e8813a`、底色 `#fdf6ec`／`#f7e3c9`，需要時用紅 `#d9534f`、藍 `#3b82c4`。
+     畫**有教學意義的具體東西**（乾燥劑變紅、標籤上的型號／流水號、配件盒缺一格），抽象概念直接用 BOOK_ICONS。
+     `VIDEO_ART` 是全站共用的，新課能沿用就沿用，新畫的放進去並在註解寫用途。
+     ⚠ 不用真實照片、不放工廠實拍（B2 Read 是公開網站）。
+   - **配色**：影片頁一律沿用網站變數（`--bg`／`--card`／`--accent`…），**不做深色／劇院模式**（使用者 2026-09-27 指定）。
    - **腳本可以新寫**（使用者同意），但用字、句型要來自這一課的筆記，程度對應該課（B1/B1+）。
      人物只用 **Anita（女聲 `voice:'f'`）與 Tom（男聲 `voice:'m'`）**，旁白 `N`（`voice:'n'`），跟每週二五文章的人物規則一致。
    - **中文只當字幕、不朗讀**：每句 `cn` 必填；影片長度只算英文字數。
@@ -1347,8 +1357,11 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
      node tools/check-ipa.js
      ```
      長度要落在 3–5 分鐘；本機 `?video=<lessonId>` 打開、各種畫面切一遍、主控台沒有錯誤，手機寬度也看一次。
-   - **在 Google 筆記頂端加連結**：標題下方加一行「▶ 影片版（約 N 分鐘）」連到分享網址（DocumentApp：`body.insertParagraph(2, …)` 後 `setLinkUrl`；先檢查文件裡是否已有 `?video=<lessonId>`，有就跳過）。
-     用 Chrome MCP 開 Apps Script 專案「英文筆記-音標統一美式」執行；⚠ 函式下拉選單會選錯，要把目標函式放檔案第一個、存檔重新載入後再按執行。
+   - **在 Google 筆記頂端加連結**：副標題（Topics 那一行）下方插一段「**▶ 影片版（約 N 分鐘）**：雙語字幕同步、重點表達卡、跟讀練習 ↗」，
+     整段 `setLinkUrl` 到分享網址、字色 `#c9631f`、前段粗體、12pt、對齊方式跟副標題一樣。
+     先 `body.findText("影片版（約")`，已經有就跳過（可重跑）。09/17 用的函式是 `addVideoLink0917()`，照著改 DOC／URL／副標題比對字串即可。
+     用 Chrome MCP 開 Apps Script 專案「英文筆記-音標統一美式」執行：**只在檔案最上方新增函式，不要刪掉專案裡別人的函式**；
+     ⚠ 函式下拉選單會選錯，要把目標函式放檔案第一個、點進編輯器後 Ctrl+S（焦點不在編輯器時存不了），重新載入確認下拉選單預設是它，再按執行。
 4. **驗證**：`node -e "global.window={}; require('./data-book.js'); ..."` 檢查語法與 lessons 數；本機 `bkGo(id)` 渲染不報錯。
 5. **sw.js 快取版本 +1**（`b2lab/public/sw.js` 的 `CACHE = 'b2lab-vNN'`）。
 6. **部署**：`cd b2lab && npx firebase-tools deploy --only hosting --project english-b2-lab`。
