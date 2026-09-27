@@ -1636,8 +1636,22 @@ body.cnall #v-book span.cnx{display:inline!important}
 #v-real .magttl h2{padding-right:84px}
 @media(max-width:640px){
   /* 手機標題卡精簡（2026-09-27）：Topics 一行橫向滑動、單字／句型數量徽章不顯示（內文各節都有） */
-  #v-book .magttl .set{white-space:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-top:6px;padding-bottom:2px}
-  #v-book .magttl .set::-webkit-scrollbar{display:none}
+  /* 英文標題最多 2 行，其餘用 …（點一下展開全文）；中文副標完整顯示 */
+  #v-book .magttl h2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  #v-book .magttl.ttlopen h2{-webkit-line-clamp:unset;overflow:visible}
+  #v-book .magttl{padding:10px 12px;margin-bottom:10px}
+  #v-book .magttl h2{line-height:1.15;letter-spacing:0}
+  #v-book .magttl .back{margin-bottom:2px}
+  #v-book .magttl .cn{margin-top:2px;line-height:1.35}
+  #v-book .magttl .set{margin-top:5px}
+  #v-book .magttl .bar{margin-top:7px}
+  #v-book .magttl .set .xtra{display:none}
+  #v-book .magttl .set.open .xtra{display:inline-block}
+  #v-book .magttl .set.open .topicmore{display:none}
+  /* 底部徽章一行：文件連結只留圖示 */
+  #v-book .magttl .bar{flex-wrap:nowrap;overflow:hidden;gap:6px}
+  #v-book .magttl .bar .doclink .dl-tx{display:none}
+  #v-book .magttl .bar .doclink{padding:2px 9px}
   #v-book .magttl .bar .magbadge.c2,#v-book .magttl .bar .magbadge.c3{display:none}
   #v-book .magico,#v-real .magico{font-size:36px;right:12px;top:12px} #v-book .magico svg{width:56px;height:56px} #v-book .magttl h2,#v-real .magttl h2{padding-right:52px} }
 #v-book .sent{cursor:pointer;border-radius:4px;transition:background .15s}
@@ -1671,6 +1685,8 @@ body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .ex
 /* 標題不再全大寫（壓迫感重），維持原文大小寫 */
 #v-book .magttl h2{text-transform:none}
 /* Topics 改為膠囊標籤，可點查字義／發音 */
+.topicmore{line-height:1.4;display:none;border:1px dashed #d8bf9d;background:transparent;color:var(--accent2);border-radius:16px;padding:2px 10px;font:inherit;font-size:var(--font-meta);font-weight:700;cursor:pointer;margin-left:2px}
+@media(max-width:640px){ .topicmore{display:inline-block} }
 .topicpill{line-height:1.4;display:inline-block;background:var(--card);border:1px solid #e2d2bd;border-radius:16px;
   padding:2px 11px;margin:3px 5px 0 0;font-size:var(--font-meta);font-weight:700;color:#8a4a12;
   cursor:pointer;font-style:normal}
@@ -6052,6 +6068,10 @@ function bkGo(id,sec){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; bkRevYM=nul
   RENDER.book();
   if(sec){ const el=$('bksec-'+sec); if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); el.classList.add('bksec-flash'); setTimeout(()=>el.classList.remove('bksec-flash'),1200); return; } }
   window.scrollTo(0,0); }
+/* 手機標題卡：標題預設兩行，點一下展開／收合；Topics 的「＋N」按一下顯示其餘標籤（2026-09-27） */
+function bkTtlTog(el){ const c=el.closest(".magttl"); if(c) c.classList.toggle("ttlopen"); }
+function bkTopicsOpen(el){ const s=el.closest(".set"); if(s) s.classList.add("open"); el.remove(); }
+window.bkTtlTog=bkTtlTog; window.bkTopicsOpen=bkTopicsOpen;
 function bkClose(){ bkOpen=null; bkRevYM=null; try{ localStorage.removeItem('b2lab_bkLast_'+PROFILE); }catch(e){} sbAutoExpand(); RENDER.book(); window.scrollTo(0,0); }
 /* 課本朗讀（整段／全文共用）：一句一句念、念到哪句反黃到哪句；
    按下去的按鈕變紅色「⏹ 停止」，再按一次或點空白處就停。
@@ -6215,22 +6235,23 @@ function bookHTML(b){
   /* 標題卡：雜誌風＋右側大圖示＋彩色徽章＋原始 Google 文件連結 */
   h+='<div class="magttl"><button class="back" onclick="bkClose()"><span class="back-label">返回課本</span></button>'
    +'<div class="magico">'+(b.iconSvg||b.icon||'📕')+'</div>'
-   +'<h2>'+esc(b.title)+' '+spk(b.title)+'</h2>'
+   +'<h2 onclick="bkTtlTog(this)" title="點一下展開／收合完整標題">'+esc(b.title)+' '+spk(b.title)+'</h2>'
    +'<div class="cn">'+esc(b.titleCn)+'</div>'
    /* Topics 改膠囊標籤：點一下查字義＋發音 */
-   +'<div class="set" style="font-style:normal">Topics：'
-   + String(b.topics||'').split(/[,，、]/).map(t=>t.trim()).filter(Boolean)
-      .map(t=>{
-        /* 核心動詞用綠色系與一般詞彙區分，標籤多的時候比較有層次 */
-        const g=lookup(t), isV=g&&/^(v|phr)/.test(String(g.pos||''));
-        return '<span class="topicpill'+(isV?' vb':'')+'" onclick="showGloss(this.textContent)">'+esc(t)+'</span>';
-      }).join('')+'</div>'
+   +(function(){
+      const ts=String(b.topics||'').split(/[,，、｜|]/).map(t=>t.trim()).filter(Boolean);
+      /* 核心動詞用綠色系與一般詞彙區分，標籤多的時候比較有層次 */
+      const pill=(t,i)=>{ const g=lookup(t), isV=g&&/^(v|phr)/.test(String(g.pos||''));
+        return '<span class="topicpill'+(isV?' vb':'')+(i>=2?' xtra':'')+'" onclick="showGloss(this.textContent)">'+esc(t)+'</span>'; };
+      const more=ts.length>2?'<button class="topicmore" onclick="bkTopicsOpen(this)">＋'+(ts.length-2)+'</button>':'';
+      return '<div class="set" style="font-style:normal">Topics：'+ts.map(pill).join('')+more+'</div>';
+    })()
    +'<div class="bar">'+(b.video?'<button class="magbadge vdbtn" onclick="vdOpen(\''+esc(b.id)+'\')" title="約 3–5 分鐘的影片版：雙語字幕同步、重點表達卡、跟讀">▶ 影片版</button>':'')
    +'<span class="magbadge c1">📅 '+bkDate(b.date)+'</span>'
    +'<span class="magbadge c2">🔤 '+((b.vocab||[]).length+(b.vocab2||[]).length)+' 個單字</span>'
    +'<span class="magbadge c3">📐 '+(b.grammar||[]).length+' 個句型</span>'
    +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速（0.8x 慢速／1x 正常／1.2x 快速）" style="margin-left:auto">⏱ '+(Number(ST.rate)||1)+'x</button>'
-   +(b.doc?'<a class="doclink" href="'+esc(b.doc)+'" target="_blank" rel="noopener">📄 原始 Google 文件 ↗</a>':'')
+   +(b.doc?'<a class="doclink" href="'+esc(b.doc)+'" target="_blank" rel="noopener" title="原始 Google 文件"><span class="dl-ic">📄</span><span class="dl-tx"> 原始 Google 文件 ↗</span></a>':'')
    +'</div></div>';
 
   /* ★ 作業複習（原句錯的字反紅、訂正改對的字反綠；沒有作業就整節跳過） */
