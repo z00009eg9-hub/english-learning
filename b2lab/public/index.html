@@ -1634,7 +1634,12 @@ body.cnall #v-book span.cnx{display:inline!important}
 #v-book .magico svg{width:96px;height:96px;display:block}
 #v-real .magttl{position:relative}
 #v-real .magttl h2{padding-right:84px}
-@media(max-width:640px){ #v-book .magico,#v-real .magico{font-size:36px;right:12px;top:12px} #v-book .magico svg{width:56px;height:56px} #v-book .magttl h2,#v-real .magttl h2{padding-right:52px} }
+@media(max-width:640px){
+  /* 手機標題卡精簡（2026-09-27）：Topics 一行橫向滑動、單字／句型數量徽章不顯示（內文各節都有） */
+  #v-book .magttl .set{white-space:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-top:6px;padding-bottom:2px}
+  #v-book .magttl .set::-webkit-scrollbar{display:none}
+  #v-book .magttl .bar .magbadge.c2,#v-book .magttl .bar .magbadge.c3{display:none}
+  #v-book .magico,#v-real .magico{font-size:36px;right:12px;top:12px} #v-book .magico svg{width:56px;height:56px} #v-book .magttl h2,#v-real .magttl h2{padding-right:52px} }
 #v-book .sent{cursor:pointer;border-radius:4px;transition:background .15s}
 #v-book .sent.reading,#v-real .sent.reading,#v-read .sent.reading{background:#fff2d9;box-shadow:0 0 0 2px #fff2d9}
 /* 課本文章：標題加大 3pt；段落開頭不空格（與左邊界對齊） */
@@ -2191,8 +2196,8 @@ body.vd-lock{overflow:hidden}
 
 /* ---- 2026-09-27 情境畫面：插圖為主角（填滿地點列與字幕之間的高度）、人物縮小到右上角 ---- */
 #vd .vd-bg.t-scene ~ .vd-scn{position:absolute;left:5cqw;right:5cqw;top:8.5cqw;bottom:max(19cqw,calc(var(--vd-sub-h,0px) + 4cqw + 8px));padding:0;display:flex;align-items:center;justify-content:center}
-#vd .vd-sceneart{width:auto;height:100%;max-width:64cqw;display:flex;align-items:center;justify-content:center}
-#vd .vd-sceneart svg{height:100%;width:auto;max-width:100%;filter:drop-shadow(0 4px 10px rgba(60,45,30,.10))}
+#vd .vd-sceneart{position:absolute;inset:0;width:100%;height:100%;margin:auto;max-width:64cqw}   /* 絕對定位＋明確寬高（left/right 0 但 width auto 會變 shrink-to-fit），iOS Safari 才畫得出來 */
+#vd .vd-sceneart svg{display:block;width:100%;height:100%;filter:drop-shadow(0 4px 10px rgba(60,45,30,.10))}   /* viewBox 等比縮放、置中 */
 #vd .vd-bg.t-scene ~ .vd-cast{position:absolute;right:3.5cqw;top:3.2cqw;display:flex;gap:2.2cqw;margin:0;z-index:2;justify-content:flex-end}
 #vd .vd-bg.t-scene ~ .vd-cast .vd-av{flex-direction:row;align-items:center;gap:.9cqw;opacity:.5}
 #vd .vd-bg.t-scene ~ .vd-cast .vd-av .c{width:5.6cqw;height:5.6cqw;font-size:2.6cqw;box-shadow:none}
