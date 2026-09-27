@@ -10734,6 +10734,7 @@ window.BOOK = {
     {
       id: 'bk20260917',
       icon: '🦺',
+      video: true,   // 有影片版（data-video.js），課程頁頂端會出現「▶ 影片版」
       date: '2026-09-17',
       doc: 'https://docs.google.com/document/d/1a94G9M4-WGOW8edfm-bpWffXns0eUXba1h6vwY1IBw4/edit',
       title: 'Security vs Safety & Packaging',
