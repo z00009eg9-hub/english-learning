@@ -1798,7 +1798,7 @@ body.vd-lock{overflow:hidden}
 #vd .vd-left{min-width:0}
 #vd .vd-sticky{position:sticky;top:64px;z-index:3;background:var(--bg);padding-bottom:6px}
 /* ---- 畫面 ---- */
-#vd .vd-stage{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;container-type:inline-size;
+#vd .vd-stage{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;container-type:size;
   background:var(--card);border:1px solid var(--line);box-shadow:0 6px 22px rgba(60,45,30,.10);isolation:isolate}
 #vd .vd-bg{position:absolute;inset:-6%;z-index:-2;transition:background 1s ease;animation:vdDrift 22s ease-in-out infinite alternate}
 @keyframes vdDrift{from{transform:scale(1) translate(0,0)}to{transform:scale(1.06) translate(-1.2%,.8%)}}
@@ -2005,15 +2005,18 @@ body.vd-lock{overflow:hidden}
 }
 @media (prefers-reduced-motion:reduce){ #vd .vd-bg,#vd .vd-wave i,#vd .vd-scn,#vd .vd-fam div,#vd .vd-blk{animation:none;opacity:1} }
 /* ---- 2026-09-27 簡化：看情境 → 聽英文 → 看字幕 → 學一句 → 跟讀
-   一次只讓一個東西搶焦點：畫面＋目前這句最醒目，其他字幕淡一階，重點卡預設只露五樣 ---- */
-#vd .vd-main{grid-template-areas:"left right" "card right";align-items:start}
-#vd .vd-left{grid-area:left;min-width:0}
-#vd .vd-right{grid-area:right}
-#vd .vd-cardwrap{grid-area:card;min-width:0}
-#vd .vd-cardwrap .vd-card{margin-top:0}
-/* ---- 字級（2026-09-27 使用者反映太小，整體調大一級；都乘上網站的字級倍率 --fs） ---- */
-#vd .vd-ttl b{font-size:calc(20px * var(--fs))}
-#vd .vd-meta{font-size:calc(14px * var(--fs));color:var(--ink2);margin-top:2px}
+   一次只讓一個東西搶焦點：畫面＋目前這句最醒目，其他字幕淡一階，重點卡預設只露五樣。
+   版面原則（同日第三版，使用者實際可用空間約 1280×560）：
+   影片寬度只看視窗寬度（60%，560–1000px），永遠不因高度縮小；
+   電腦版控制列疊在影片底部、重點卡釘在字幕欄底部，左欄高度＝影片高度，任何螢幕都不用捲。 ---- */
+#vd{--vd-ctrl-h:88px}
+/* ---- 標題列：一行 ---- */
+#vd .vd-top{padding:8px 16px;gap:12px}
+#vd .vd-ttl{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+#vd .vd-ttl b{font-size:calc(20px * var(--fs));white-space:normal}
+#vd .vd-meta{font-size:calc(14px * var(--fs));color:var(--ink2);white-space:nowrap}
+#vd .vd-x{width:34px;height:34px;font-size:18px}
+/* ---- 字級（使用者反映太小，整體調大一級；都乘上網站的字級倍率 --fs） ---- */
 #vd .vd-prog{font-size:calc(13px * var(--fs))}
 #vd .vd-cb{font-size:calc(15px * var(--fs))}
 #vd .vd-row .en{font-size:calc(18px * var(--fs));line-height:1.75}
@@ -2021,8 +2024,8 @@ body.vd-lock{overflow:hidden}
 #vd .vd-row .tm{font-size:calc(13px * var(--fs));padding-top:5px}
 #vd .vd-row .sp{font-size:calc(14px * var(--fs))}
 #vd .vd-chh{font-size:calc(13px * var(--fs))}
-#vd .vd-card .ph{font-size:calc(26px * var(--fs))}
-#vd .vd-card .phcn{font-size:calc(17px * var(--fs))}
+#vd .vd-card .ph{font-size:calc(24px * var(--fs))}
+#vd .vd-card .phcn{font-size:calc(16px * var(--fs))}
 #vd .vd-card .ex .e{font-size:calc(17px * var(--fs))}
 #vd .vd-card .ex .c{font-size:calc(15px * var(--fs))}
 #vd .vd-acts button,#vd .vd-acts .wbb{font-size:calc(15px * var(--fs))}
@@ -2030,16 +2033,38 @@ body.vd-lock{overflow:hidden}
 #vd .vd-more .src span{font-size:calc(15px * var(--fs))}
 #vd .vd-set,#vd .vd-set select{font-size:calc(15px * var(--fs))}
 #vd .vd-set .hint{font-size:calc(13px * var(--fs))}
-/* 畫面裡的小字（地點標籤、姓名、職稱、字幕）設下限，不會小到看不清楚 */
+/* 畫面裡的小字設下限 */
 #vd .vd-loc{font-size:clamp(14px,1.7cqw,17px)}
 #vd .vd-av .n{font-size:clamp(15px,2cqw,20px)}
 #vd .vd-av .r{font-size:clamp(13px,1.6cqw,16px)}
-#vd .vd-sub .en{font-size:clamp(16px,2.7cqw,27px)}
-#vd .vd-sub .cn{font-size:clamp(14px,1.95cqw,19px)}
+#vd .vd-sub .en{font-size:clamp(16px,2.6cqw,26px)}
+#vd .vd-sub .cn{font-size:clamp(14px,1.9cqw,18px)}
 #vd .vd-note,#vd .vd-why,#vd .vd-pnote{font-size:clamp(13px,1.8cqw,18px)}
-/* 情境畫面：頭像放在地點標籤下方，不再往上拉而蓋住標籤 */
-#vd .vd-bg.t-scene ~ .vd-scn{justify-content:flex-start;padding-top:12cqw}
-#vd .vd-cast{margin:0 0 0 4cqw}
+/* ---- 畫面內部：有字幕的畫面（開場、情境）上下分區，內容只用上面、字幕條固定佔下面，不再重疊 ---- */
+#vd .vd-scn{padding:5cqw 6cqw}
+#vd .vd-bg.t-title ~ .vd-scn,#vd .vd-bg.t-scene ~ .vd-scn{justify-content:flex-start;padding-bottom:22cqw}
+#vd .vd-bg.t-title ~ .vd-scn{padding-top:5cqw}
+#vd .vd-bg.t-scene ~ .vd-scn{padding-top:11cqw}
+#vd .vd-big{font-size:clamp(24px,6cqw,60px);margin:.2em 0 .1em}
+#vd .vd-ticons{margin-top:2cqw}
+#vd .vd-ticons span{width:7.5cqw;height:7.5cqw}
+#vd .vd-bg.t-title ~ .vd-scn .vd-big{font-size:clamp(22px,5cqw,52px)}
+/* 畫面太矮（控制列疊上去後）就收起開場的三個圖示，標題不會擠到字幕 */
+/* 內容比畫面高時從頂端排（safe center），不會上下同時溢出而壓到字幕條或控制列 */
+#vd .vd-scn{justify-content:safe center}
+/* 畫面偏矮（電腦版控制列疊上去後常見）：收起開場圖示與解說卡旁的插圖、縮小片語／文法色塊，文字用滿寬度就不會擠到控制列 */
+@container (max-height:470px){
+  #vd .vd-ticons{display:none} #vd .vd-bg.t-title ~ .vd-scn{padding-top:3cqw}
+  #vd .vd-split{grid-template-columns:1fr} #vd .vd-art{display:none}
+  #vd .vd-core{font-size:clamp(20px,5cqw,44px)} #vd .vd-corecn{margin:.1em 0 .5em}
+  #vd .vd-fam{gap:.8cqw} #vd .vd-fam div{font-size:clamp(12px,2.4cqw,20px);padding:.3em .7em}
+  #vd .vd-prow{margin:.6cqw 0} #vd .vd-blk{font-size:clamp(12px,2.3cqw,20px);padding:.25em .5em}
+  #vd .vd-pnote{margin-top:.8cqw;padding:.35em .6em}
+  #vd .vd-vsc{padding:2cqw 2.4cqw} #vd .vd-vsc .w{font-size:clamp(18px,4.2cqw,40px)}
+  #vd .vd-fx{font-size:clamp(12px,2.3cqw,22px);margin:.25em 0}
+}
+#vd .vd-cast{margin:0 0 0 3cqw}
+#vd .vd-sub{bottom:3cqw}
 /* ---- 控制列：五個主要按鈕＋更多 ---- */
 #vd .vd-ctrl{gap:4px}
 #vd .vd-morec{margin-left:auto;font-size:22px;line-height:1;padding:4px 12px}
@@ -2049,6 +2074,9 @@ body.vd-lock{overflow:hidden}
 #vd .vd-set .vd-toggles .vd-cb.on{background:var(--accent-soft);border-color:#f0c9a0;color:var(--accent2)}
 #vd .vd-set .hint{color:var(--vd-dim)}
 /* ---- 字幕：時間碼＋英文＋中文；目前這句上色，其他句子淡一階、標籤變回一般文字 ---- */
+#vd .vd-rightcol{min-width:0;display:flex;flex-direction:column;gap:12px}
+#vd .vd-right{position:static;max-height:none}
+#vd #vd-list{padding:6px 0 10px}
 #vd .vd-chh{color:var(--vd-dim);font-weight:600;letter-spacing:.04em;text-transform:none;padding:12px 16px 2px}
 #vd .vd-row{opacity:.55;transition:opacity .2s}
 #vd .vd-row:hover{opacity:.85;background:none}
@@ -2063,8 +2091,9 @@ body.vd-lock{overflow:hidden}
 #vd .vd-right::-webkit-scrollbar-track{background:transparent}
 #vd .vd-right::-webkit-scrollbar-thumb{background:transparent;border-radius:3px}
 #vd .vd-right:hover::-webkit-scrollbar-thumb{background:#d9c8b4}
-/* ---- 重點卡：重點英文＋中文 ｜ 1 個情境例句，下面一排：跟讀、收藏、查看解析 ---- */
-#vd .vd-card{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:10px 16px;align-items:center}
+/* ---- 重點卡：重點英文＋中文、1 個情境例句，下面一排：跟讀、收藏、查看解析 ---- */
+#vd .vd-cardwrap{min-width:0}
+#vd .vd-card{margin-top:0;grid-template-columns:1fr;gap:8px;padding:12px 14px}
 #vd .vd-card .ex{cursor:pointer}
 #vd .vd-card .ex:hover{border-color:#f0c9a0}
 #vd .vd-acts{grid-column:1/-1;margin-top:0;align-items:center}
@@ -2075,32 +2104,52 @@ body.vd-lock{overflow:hidden}
 #vd .vd-acts .recp{border:0;background:none;color:var(--accent2);padding:6px 4px;text-decoration:underline}
 #vd .vd-acts .vd-morebtn{margin-left:auto;border:0;background:none;color:var(--ink2);padding:6px 4px}
 #vd .vd-acts .vd-morebtn:hover{color:var(--accent2)}
-#vd .vd-more{grid-column:1/-1;border-top:1px dashed var(--line);padding-top:10px;color:var(--ink);max-height:24vh;overflow-y:auto}
+#vd .vd-more{grid-column:1/-1;border-top:1px dashed var(--line);padding-top:10px;color:var(--ink);max-height:22vh;overflow-y:auto}
 #vd .vd-more p{margin:6px 0;line-height:1.6}
 #vd .vd-more .src{cursor:pointer}
 #vd .vd-more .src span{color:var(--ink2)}
-/* ---- 電腦、平板橫放：整頁固定在一個螢幕內，不捲動；只有字幕框自己捲 ----
-   左欄寬度＝依可用高度算出的 16:9 畫面寬度（最多 64%），右欄字幕拿剩下的寬度，中間不留空白。
-   420px ≈ 標題列＋控制列＋重點卡＋間距的高度；估大一點，畫面只會略窄、不會超出螢幕。 */
-@media (min-width:1000px) and (min-height:620px) and (min-aspect-ratio:5/4){
+/* ---- 電腦、平板橫放（橫向、寬 ≥ 1000）：整頁固定不捲 ----
+   左欄＝影片（寬度只看視窗寬度：60%，560–1000px）＋疊在底部的控制列；
+   右欄＝字幕填滿剩下的寬度與高度，只有字幕框自己捲；重點卡釘在右欄底部。 */
+@media (min-width:1000px) and (min-aspect-ratio:5/4){
   #vd{display:flex;flex-direction:column;overflow:hidden}
   #vd .vd-top{position:static;flex:none}
-  #vd .vd-main{flex:1;min-height:0;width:100%;align-items:stretch;
-    grid-template-columns:minmax(0,min(64%,calc((100vh - 420px) * 1.778))) minmax(300px,1fr);
-    grid-template-rows:minmax(0,1fr) auto}
-  #vd .vd-left{display:flex;flex-direction:column;min-height:0}
-  #vd .vd-stagewrap{flex:1;min-height:180px;container-type:size;display:flex;align-items:center;justify-content:center}
-  #vd .vd-stage{width:min(100cqw,calc(100cqh * 16 / 9));height:auto;aspect-ratio:16/9;flex:none}
-  #vd .vd-prog,#vd .vd-ctrl,#vd .vd-set{flex:none}
-  #vd .vd-right{position:static;max-height:none;min-height:0;grid-row:1 / span 2;align-self:stretch}
-  #vd .vd-cardwrap{align-self:end}
+  #vd .vd-main{flex:1;min-height:0;width:100%;max-width:none;align-items:start;padding:14px 16px 16px;gap:16px;
+    grid-template-columns:clamp(560px,60%,1000px) minmax(0,1fr);grid-template-areas:none}
+  #vd .vd-left{min-width:0}
+  #vd .vd-stagewrap{position:relative}
+  #vd .vd-stage{width:100%}
+  /* 控制列疊在影片底部：半透明底、進度條在上、按鈕在下 */
+  #vd .vd-ctrlwrap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:4px 12px 8px;
+    background:rgba(255,253,250,.92);border-top:1px solid var(--line);border-radius:0 0 14px 14px;backdrop-filter:blur(6px)}
+  #vd .vd-ctrlwrap .vd-prog{margin:4px 2px}
+  #vd .vd-play{width:42px;height:42px;font-size:18px}
+  /* ⋯ 設定變成控制列上方的浮動面板 */
+  #vd .vd-set.on{position:absolute;left:12px;right:12px;bottom:calc(100% + 6px);margin:0;box-shadow:0 8px 24px rgba(60,45,30,.18);z-index:3}
+  /* 畫面內容避開控制列：字幕條往上移、內容區留出高度 */
+  #vd .vd-scn{padding-bottom:calc(var(--vd-ctrl-h) + 2cqw)}
+  #vd .vd-bg.t-title ~ .vd-scn,#vd .vd-bg.t-scene ~ .vd-scn{padding-bottom:calc(var(--vd-ctrl-h) + 20cqw)}
+  #vd .vd-sub{bottom:calc(var(--vd-ctrl-h) + 2cqw)}
+  #vd .vd-bg.t-scene ~ .vd-scn{padding-top:9cqw}
+  #vd .vd-bg.t-title ~ .vd-scn{padding-top:4cqw}
+  #vd .vd-cast{margin-left:2cqw}
+  #vd .vd-av .c{width:10cqw;height:10cqw;font-size:4.2cqw}
+  #vd .vd-sceneart{width:26cqw;top:4cqw}
+  #vd .vd-endbtns{margin-top:2cqw}
+  /* 右欄填滿高度：字幕捲、重點卡釘底 */
+  #vd .vd-rightcol{height:100%;min-height:0}
+  #vd .vd-right{flex:1;min-height:120px;overflow-y:auto}
+  /* 重點卡最多佔右欄扣掉字幕最小高度；展開的解析在卡片內自己捲，卡片不會被推出螢幕 */
+  #vd .vd-cardwrap{flex:none;max-height:calc(100% - 132px);display:flex;flex-direction:column;min-height:0}
+  #vd .vd-card{display:flex;flex-direction:column;min-height:0;overflow:hidden}
+  #vd .vd-more{flex:1;min-height:56px;max-height:none;overflow-y:auto}
 }
-/* ---- 平板直向、手機：影片在上、字幕框在下（自己捲動，目前這句停在框中間），重點卡最後；整頁可往下捲 ---- */
-@media (max-width:999px), (max-width:1100px) and (max-aspect-ratio:5/4), (max-width:1100px) and (max-height:619px){
-  #vd .vd-main{grid-template-columns:minmax(0,1fr);grid-template-areas:"left" "right" "card";gap:12px;padding:12px}
+/* ---- 平板直向、手機：影片在上、字幕框在下（自己捲動，目前這句停在框中間）、重點卡最後；整頁可往下捲 ---- */
+@media (max-width:999px), (max-aspect-ratio:5/4){
+  #vd .vd-main{grid-template-columns:minmax(0,1fr);grid-template-areas:none;gap:12px;padding:12px}
   #vd .vd-stage{aspect-ratio:16/9}
-  #vd .vd-right{position:static;max-height:36vh;min-height:160px}
-  #vd .vd-card{grid-template-columns:1fr}
+  #vd .vd-ctrlwrap{position:static;margin-top:4px}
+  #vd .vd-right{max-height:36vh;min-height:160px;overflow-y:auto}
   #vd .vd-left{width:100%;max-width:calc(46vh * 1.778);justify-self:center}
 }
 @media (max-width:599px){
@@ -2114,10 +2163,12 @@ body.vd-lock{overflow:hidden}
   #vd .vd-play{width:46px;height:46px}
   #vd .vd-left{max-width:calc(46vh * 1.333)}
   #vd .vd-ttl b{font-size:calc(18px * var(--fs))}
-  #vd .vd-card .ph{font-size:calc(24px * var(--fs))}
+  #vd .vd-meta{white-space:normal}
+  #vd .vd-card .ph{font-size:calc(22px * var(--fs))}
 }
 /* 手機的小畫面：字幕與人物的字級下限也跟著調大，但仍要塞得進 4:3 畫面 */
 @container (max-width:560px){
+  #vd .vd-bg.t-title ~ .vd-scn,#vd .vd-bg.t-scene ~ .vd-scn{padding-bottom:26cqw}
   #vd .vd-bg.t-scene ~ .vd-scn{padding-top:13cqw}
   #vd .vd-cast{margin:0 0 0 2cqw}
   #vd .vd-sub .en{font-size:clamp(14px,4.2cqw,18px)}
@@ -7446,7 +7497,7 @@ function vdFollow(id){
     vdFollowWatch=setInterval(vdFollowLabel,300);
   });
 }
-function vdMoreTog(){ VD.more=!VD.more; const cd=$('vd-card'); if(cd) cd.innerHTML=vdCardHTML(); }
+function vdMoreTog(){ VD.more=!VD.more; const cd=$('vd-card'); if(cd) cd.innerHTML=vdCardHTML(); vdPaint(); /* 卡片高度變了，字幕框跟著重新把目前這句捲回框內 */ }
 /* ---- 字幕列：只留時間碼、英文、中文，目前這句才上色；其他句子淡一階，不搶焦點 ---- */
 function vdListHTML(){
   const d=VD.d; let h='', ch=-1;
@@ -7470,11 +7521,14 @@ function vdRender(){
     return '<label>'+esc(lab)+'<select onchange="vdSetVoice(\''+kind+'\',this.value)">'+(vs.length?vs.map(v=>'<option value="'+esc(v.name)+'"'+(cur&&cur.name===v.name?' selected':'')+'>'+esc(v.name.replace(/^Microsoft |^Google /,''))+'</option>').join(''):'<option>（此裝置沒有英文語音）</option>')+'</select></label>'; };
   const ticks=d.chapters.map((c,k)=>{ const i=VD.lines.findIndex(l=>l.ch===k); return i>0?'<b style="left:'+(VD.times[i]/VD.total*100)+'%"></b>':''; }).join('');
   el.innerHTML=
+    /* 標題列一行：標題｜中文 · 第 N 句 · 長度 · 關閉 */
     '<div class="vd-top"><div class="vd-ttl"><b>'+esc(d.title)+'｜'+esc(d.titleCn)+'</b>'
-   +'<div class="vd-meta"><span id="vd-cnt"></span> · 約 '+Math.round(VD.total/60)+' 分鐘</div></div>'
+   +'<span class="vd-meta"><span id="vd-cnt"></span> · 約 '+Math.round(VD.total/60)+' 分鐘</span></div>'
    +'<button class="vd-x" onclick="vdClose()" aria-label="關閉影片" title="關閉（Esc）">×</button></div>'
    +'<div class="vd-main">'
-   +'<div class="vd-left"><div class="vd-stagewrap"><div class="vd-stage" id="vd-stage"></div></div>'
+   /* 左欄只有影片；電腦版控制列疊在影片底部（.vd-ctrlwrap 由 CSS 決定疊上去或排在下面） */
+   +'<div class="vd-left"><div class="vd-stagewrap"><div class="vd-stage" id="vd-stage"></div>'
+   +'<div class="vd-ctrlwrap" id="vd-ctrlwrap">'
    +'<div class="vd-prog"><span id="vd-now">0:00</span><div class="vd-bar" id="vd-bar" onclick="vdSeek(event)"><i id="vd-fill"></i>'+ticks+'</div><span>'+vdTime(VD.total)+'</span></div>'
    /* 控制列第一層只放五個：播放／上一句／下一句／速度／字幕；其他收在「更多」 */
    +'<div class="vd-ctrl"><button class="vd-play" id="vd-play" onclick="vdToggle()" aria-label="播放／暫停">▶</button>'
@@ -7488,9 +7542,10 @@ function vdRender(){
    +'<button class="vd-cb" id="vd-shadow" onclick="vdShadowTog()">⏸ 每句停頓跟念</button></div>'
    +sel('n','旁白')+sel('f',(d.cast.A||{}).name||'女聲')+sel('m',(d.cast.T||{}).name||'男聲')
    +'<div class="hint">聲音用這台裝置內建的美式語音，換裝置音色會不同；選擇只記在這台裝置上。</div></div>'
-   +'</div>'
-   +'<div class="vd-right" id="vd-right"><div id="vd-list">'+vdListHTML()+'</div></div>'
-   +'<div class="vd-cardwrap" id="vd-card"></div>'
+   +'</div></div></div>'
+   /* 右欄：字幕（填滿、自己捲）＋ 重點卡釘在底部 */
+   +'<div class="vd-rightcol"><div class="vd-right" id="vd-right"><div id="vd-list">'+vdListHTML()+'</div></div>'
+   +'<div class="vd-cardwrap" id="vd-card"></div></div>'
    +'</div>';
   vdPaint(false);
 }
