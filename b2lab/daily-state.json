@@ -1,7 +1,7 @@
 {
   "_note": "內容排程狀態檔（每週二、五各跑一次）。每次執行讓兩位學習者各拿到一整份：四個程度（A2/B1/B1+/B2）的文章、文法、聽力。usedUnits = Anita 那條線（B1+/B2）已教過的文法單元編號；usedUnitsTom = Tom 那條線（A2/B1）已教過的文法單元編號（各自從 syllabus.json 依序走、互不影響）；usedSources = 已改寫過的新聞網址；usedVoa = 已加入聽力庫的 VOA／YouTube 素材代號（2026-08-19 起聽力改為本站原創 TTS 對話，未使用外部影片，故此欄位本次未異動）；lastRun = 最後一次成功產生的日期。",
-  "lastRun": "2026-09-25",
-  "nextKind": "original",
+  "lastRun": "2026-09-29",
+  "nextKind": "news",
   "usedVoa": [
     "L1-1",
     "L1-7",
@@ -25,7 +25,8 @@
     12,
     13,
     14,
-    15
+    15,
+    16
   ],
   "usedUnitsTom": [
     1,
@@ -41,7 +42,8 @@
     11,
     12,
     13,
-    14
+    14,
+    15
   ],
   "usedSources": [
     "https://www.taipeitimes.com/News/front/archives/2026/08/08/2003862135",
@@ -54,7 +56,8 @@
     "https://focustaiwan.tw/business/202609170021",
     "https://focustaiwan.tw/society/202609210011",
     "https://www.taipeitimes.com/News/taiwan/archives/2026/09/15/2003864297",
-    "https://focustaiwan.tw/culture/202609080028"
+    "https://focustaiwan.tw/culture/202609080028",
+    "https://focustaiwan.tw/society/202609280004"
   ],
   "usedTitles": [
     "A Sea Warning, but No Landfall",
@@ -111,16 +114,20 @@
     "Twenty Minutes Before Bed",
     "Eleven Months of Vietnamese",
     "The Gap Nobody Had Measured",
-    "Third Place, Seven Points Lower"
+    "Third Place, Seven Points Lower",
+    "Tom Picks the Wrong Shirt",
+    "Anita Packs for Two Seasons",
+    "Eight Cities Warned as Summer Refuses to Leave",
+    "What the Heat Costs a Factory"
   ],
   "topicRotation": [
-    "天災與天氣",
     "健康與醫療",
     "旅遊與交通",
     "職場與面試",
     "金錢與居住",
     "食物與生活",
-    "學習與心理"
+    "學習與心理",
+    "天災與天氣"
   ],
   "dualLevel": {
     "tom": "A2",
@@ -140,6 +147,7 @@
   ],
   "usedA2Topics": [
     "飲食",
-    "日常作息"
+    "日常作息",
+    "天氣與衣服"
   ]
 }

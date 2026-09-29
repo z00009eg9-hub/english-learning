@@ -15,6 +15,867 @@ window.LISTEN = {
 /* ========== 依課堂筆記自製（每週二／五更新） ========== */
 notes:[
 {
+  "id": "dl20260929a2",
+  "date": "2026-09-29",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Wrong Shirt, Wrong Day",
+  "titleCn": "穿錯衣服的一天",
+  "series": "本站自製聽力 · 天氣與衣服主題",
+  "topic": "🌡️ 公車站前的三十五度",
+  "focus": "講習慣用現在簡單式，講昨天用過去簡單式，講星期四用 will",
+  "intro": "Tom和同事Lisa在公車站等車，兩個人聊起今天的高溫和昨天帶錯的外套。請注意三組動詞的分工：checks、is waiting 講的是習慣與此刻，wore、was 後面接的是昨天，will come、will need 講的是還沒到的星期四。",
+  "tip": "第一次聽抓三個數字（今天幾度、公車幾號、星期幾變天），第二次聽專心分辨動詞是現在式還是過去式。",
+  "pre": [
+    {
+      "w": "weather",
+      "ipa": "/ˈwe.ðɚ/",
+      "pos": "n.",
+      "cn": "天氣",
+      "def": "What the sky and the air are like outside."
+    },
+    {
+      "w": "degree",
+      "ipa": "/dɪˈɡriː/",
+      "pos": "n.",
+      "cn": "度",
+      "def": "A unit for measuring how hot or cold something is."
+    },
+    {
+      "w": "shade",
+      "ipa": "/ʃeɪd/",
+      "pos": "n.",
+      "cn": "陰涼處",
+      "def": "A cool dark place out of the sun."
+    },
+    {
+      "w": "jacket",
+      "ipa": "/ˈdʒækɪt/",
+      "pos": "n.",
+      "cn": "外套",
+      "def": "A short coat you wear over other clothes."
+    },
+    {
+      "w": "wind",
+      "ipa": "/wɪnd/",
+      "pos": "n.",
+      "cn": "風",
+      "def": "Air that moves outside."
+    },
+    {
+      "w": "cool",
+      "ipa": "/kuːl/",
+      "pos": "adj.",
+      "cn": "涼的",
+      "def": "A little cold, but not too cold."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "You look hot. How many degrees is it now?",
+      "cn": "你看起來很熱，現在幾度啊？"
+    },
+    {
+      "sp": "Tom",
+      "en": "My phone says thirty-five. I check the weather every morning.",
+      "cn": "我手機說三十五度。我每天早上都會查天氣。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "There is no shade at this stop.",
+      "cn": "這個站牌沒有陰涼的地方。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I know. I am drinking my third bottle of water.",
+      "cn": "我知道，我正在喝第三瓶水了。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Did you bring a jacket yesterday?",
+      "cn": "你昨天有帶外套嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes. I wore it to the office and it was a mistake.",
+      "cn": "有，我穿去辦公室，結果是個錯誤。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "The morning was cool, wasn't it?",
+      "cn": "早上很涼，對吧？"
+    },
+    {
+      "sp": "Tom",
+      "en": "It was. Then the afternoon was very hot.",
+      "cn": "是啊，然後下午就非常熱。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Today you chose a thin shirt. Good.",
+      "cn": "今天你選了薄襯衫，不錯。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Thin shirt, light trousers, no jacket.",
+      "cn": "薄襯衫、輕便長褲，不帶外套。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "But a cold wind will come on Thursday.",
+      "cn": "不過星期四會有冷風。"
+    },
+    {
+      "sp": "Tom",
+      "en": "From the north? Then I will need that jacket again.",
+      "cn": "從北邊來的嗎？那我又會需要那件外套了。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "You can leave it at your desk until then.",
+      "cn": "在那之前你可以把它放在辦公桌那裡。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That is a good idea. Here comes the bus.",
+      "cn": "這是個好主意。公車來了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many degrees does Tom's phone say?",
+      "qCn": "Tom的手機顯示幾度？",
+      "opts": [
+        "A. Twenty-five",
+        "B. Thirty",
+        "C. Thirty-five",
+        "D. Forty"
+      ],
+      "optsCn": [
+        "A. 二十五度",
+        "B. 三十度",
+        "C. 三十五度",
+        "D. 四十度"
+      ],
+      "ans": 2,
+      "expl": "My phone says thirty-five.——Tom第二句就講出來了。"
+    },
+    {
+      "q": "What did Tom do yesterday?",
+      "qCn": "Tom昨天做了什麼？",
+      "opts": [
+        "A. He wore a jacket to the office",
+        "B. He stayed at home",
+        "C. He bought a thin shirt",
+        "D. He took a taxi"
+      ],
+      "optsCn": [
+        "A. 他穿外套去辦公室",
+        "B. 他待在家裡",
+        "C. 他買了一件薄襯衫",
+        "D. 他搭了計程車"
+      ],
+      "ans": 0,
+      "expl": "I wore it to the office and it was a mistake.——wore 是過去式，講的就是昨天。"
+    },
+    {
+      "q": "What will happen on Thursday?",
+      "qCn": "星期四會發生什麼事？",
+      "opts": [
+        "A. The bus will be late",
+        "B. A cold wind will come",
+        "C. Tom will buy a jacket",
+        "D. It will be hotter"
+      ],
+      "optsCn": [
+        "A. 公車會誤點",
+        "B. 會有冷風來",
+        "C. Tom會買一件外套",
+        "D. 會更熱"
+      ],
+      "ans": 1,
+      "expl": "But a cold wind will come on Thursday.——Lisa說的，will 表示還沒發生。"
+    },
+    {
+      "q": "What does Lisa suggest Tom do with the jacket?",
+      "qCn": "Lisa建議Tom怎麼處理那件外套？",
+      "opts": [
+        "A. Give it away",
+        "B. Wash it tonight",
+        "C. Leave it at his desk",
+        "D. Take it home every day"
+      ],
+      "optsCn": [
+        "A. 送給別人",
+        "B. 今晚洗一洗",
+        "C. 放在他的辦公桌那裡",
+        "D. 每天帶回家"
+      ],
+      "ans": 2,
+      "expl": "You can leave it at your desk until then.——can 在這裡是給建議。"
+    }
+  ]
+},
+{
+  "id": "dl20260929b1",
+  "date": "2026-09-29",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Packing for Two Halves of a Week",
+  "titleCn": "為一週的兩半打包",
+  "series": "本站自製聽力 · 天氣與衣服主題",
+  "topic": "🧳 出差前一晚的行李",
+  "focus": "現在完成式（has packed、have never）講到現在為止，過去簡單式（checked、chose）講已經結束的那一刻，比較級做對比",
+  "intro": "Anita要飛台北出差，她的越南同事Mai在旁邊看她打包。請注意兩種時態怎麼分工：checked、chose、booked 都綁在星期日、星期一那些已經過完的時刻；has packed、have never been 講的是「到現在為止」。另外聽出三個比較級。",
+  "tip": "第一次聽抓三個時間（她星期幾飛、稽核做到星期幾、哪一天變天），第二次聽專心分辨 has done 和 did。",
+  "pre": [
+    {
+      "w": "forecast",
+      "ipa": "/ˈfɔːrkæst/",
+      "pos": "n.",
+      "cn": "預報",
+      "def": "What experts say the weather will be like."
+    },
+    {
+      "w": "autumn",
+      "ipa": "/ˈɑː.t̬əm/",
+      "pos": "n.",
+      "cn": "秋天",
+      "def": "The season between summer and winter."
+    },
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person who works with you."
+    },
+    {
+      "w": "heat",
+      "ipa": "/hiːt/",
+      "pos": "n.",
+      "cn": "高溫",
+      "def": "Hot air or hot weather."
+    },
+    {
+      "w": "pack",
+      "ipa": "/pæk/",
+      "pos": "v.",
+      "cn": "打包",
+      "def": "To put things into a bag before a trip."
+    },
+    {
+      "w": "trust",
+      "ipa": "/trʌst/",
+      "pos": "v.",
+      "cn": "相信",
+      "def": "To believe that something is right or true."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "Is that bag open again? I thought you finished last night.",
+      "cn": "行李又打開了？我以為你昨晚就弄好了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I have packed it twice now. The forecast changed on me.",
+      "cn": "我已經打包兩次了，預報跟我作對。"
+    },
+    {
+      "sp": "Mai",
+      "en": "What did it say on Sunday?",
+      "cn": "星期日的預報怎麼說？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Thirty-five degrees. So I chose thin shirts and nothing else.",
+      "cn": "三十五度，所以我只挑了薄襯衫，別的都沒帶。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And then?",
+      "cn": "然後呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "On Monday I checked again and found a completely different week.",
+      "cn": "星期一我再查一次，看到的是完全不一樣的一週。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So the heat does not last?",
+      "cn": "所以高溫不會持續？"
+    },
+    {
+      "sp": "Anita",
+      "en": "It stays until Wednesday. Then a cold wind arrives from the north.",
+      "cn": "會持續到星期三，然後有一股冷風從北邊過來。"
+    },
+    {
+      "sp": "Mai",
+      "en": "When does your audit finish?",
+      "cn": "你的稽核什麼時候結束？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Friday afternoon. So I need clothes for both halves of the week.",
+      "cn": "星期五下午，所以我這一週的前半和後半都要有衣服穿。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Taipei in autumn is colder than here, isn't it?",
+      "cn": "台北的秋天比這裡冷吧？"
+    },
+    {
+      "sp": "Anita",
+      "en": "A little. I have worked here for six years and I still forget that.",
+      "cn": "冷一點。我在這裡工作六年了，還是常常忘記這件事。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Your jacket looks very thin for a cold morning.",
+      "cn": "你的外套看起來對冷的早上來說太薄了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It is thinner than the one my colleagues wear, but it folds smaller.",
+      "cn": "它比同事們穿的薄，但可以折得比較小。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Then take both. A heavy bag is better than a cold morning.",
+      "cn": "那兩件都帶吧，行李重一點比早上挨凍好。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is exactly what I decided. I have learned to trust two forecasts.",
+      "cn": "我就是這樣決定的。我學會了要看兩次預報。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why has Anita packed her bag twice?",
+      "qCn": "Anita為什麼打包了兩次？",
+      "opts": [
+        "A. Her bag was too small",
+        "B. The forecast changed",
+        "C. Mai told her to",
+        "D. Her audit was moved"
+      ],
+      "optsCn": [
+        "A. 她的行李太小",
+        "B. 預報變了",
+        "C. Mai叫她重打包",
+        "D. 她的稽核改期"
+      ],
+      "ans": 1,
+      "expl": "I have packed it twice now. The forecast changed on me.——她自己第一句就講了原因。"
+    },
+    {
+      "q": "When does the cold wind arrive?",
+      "qCn": "冷風什麼時候到？",
+      "opts": [
+        "A. On Sunday",
+        "B. On Wednesday",
+        "C. On Thursday",
+        "D. On Friday"
+      ],
+      "optsCn": [
+        "A. 星期日",
+        "B. 星期三",
+        "C. 星期四",
+        "D. 星期五"
+      ],
+      "ans": 2,
+      "expl": "It stays until Wednesday. Then a cold wind arrives from the north.——高溫到星期三，所以冷風是星期四來的。"
+    },
+    {
+      "q": "How long has Anita worked in Vietnam?",
+      "qCn": "Anita在越南工作多久了？",
+      "opts": [
+        "A. Two years",
+        "B. Four years",
+        "C. Six years",
+        "D. Nine years"
+      ],
+      "optsCn": [
+        "A. 兩年",
+        "B. 四年",
+        "C. 六年",
+        "D. 九年"
+      ],
+      "ans": 2,
+      "expl": "I have worked here for six years——用現在完成式，表示她現在還在這裡工作。"
+    },
+    {
+      "q": "What is the advantage of Anita's old jacket?",
+      "qCn": "Anita那件舊外套的優點是什麼？",
+      "opts": [
+        "A. It is warmer than the others",
+        "B. It folds smaller",
+        "C. It was cheaper",
+        "D. It is waterproof"
+      ],
+      "optsCn": [
+        "A. 比其他的暖",
+        "B. 可以折得比較小",
+        "C. 比較便宜",
+        "D. 防水"
+      ],
+      "ans": 1,
+      "expl": "It is thinner than the one my colleagues wear, but it folds smaller.——薄是缺點，折得小才是優點。"
+    }
+  ]
+},
+{
+  "id": "dl20260929b1p",
+  "date": "2026-09-29",
+  "level": "B1+",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Eight Counties on the List",
+  "titleCn": "名單上的八個縣市",
+  "series": "本站自製聽力 · 新聞·天災與天氣主題",
+  "topic": "📰 九月底的高溫警示",
+  "focus": "被動語態（were issued、are advised、will be brought）把焦點放在事情本身，搭配 which 與 where 引導的關係子句",
+  "intro": "Tom和同事Lisa在午休時聊起中央氣象署的高溫警示。請注意兩組結構：被動語態 were issued、are advised、will be brought，句子的主詞都是「事情」而不是機關；以及 which、where 引導的關係子句在補充什麼。",
+  "tip": "第一次聽抓三組數字（幾個縣市、最高幾度、哪一天變天），第二次聽專心找 be 動詞後面接的過去分詞。",
+  "pre": [
+    {
+      "w": "advisory",
+      "ipa": "/ədˈvaɪ.zɚ.i/",
+      "pos": "n.",
+      "cn": "警示",
+      "def": "An official notice that warns people about something."
+    },
+    {
+      "w": "exceed",
+      "ipa": "/ɪkˈsiːd/",
+      "pos": "v.",
+      "cn": "超過",
+      "def": "To go above a limit or a number."
+    },
+    {
+      "w": "range",
+      "ipa": "/reɪndʒ/",
+      "pos": "n.",
+      "cn": "區間",
+      "def": "The distance between the lowest and the highest number."
+    },
+    {
+      "w": "resident",
+      "ipa": "/ˈrezɪdənt/",
+      "pos": "n.",
+      "cn": "居民",
+      "def": "A person who lives in a place."
+    },
+    {
+      "w": "seasonal",
+      "ipa": "/ˈsiː.zən.əl/",
+      "pos": "adj.",
+      "cn": "季節性的",
+      "def": "Happening at one particular time of the year."
+    },
+    {
+      "w": "relief",
+      "ipa": "/rɪˈliːf/",
+      "pos": "n.",
+      "cn": "舒緩",
+      "def": "The good feeling when something difficult stops."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "Did you see how many counties were on the heat list this morning?",
+      "cn": "你有看到今天早上高溫名單上有幾個縣市嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Eight. Advisories were issued for eight cities and counties.",
+      "cn": "八個。有八個縣市被發布了高溫警示。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "At the end of September? That is late.",
+      "cn": "九月底耶？這很晚了。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Readings were expected to exceed thirty-six degrees around noon.",
+      "cn": "預計中午前後氣溫會超過三十六度。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Which part of the island had the highest number?",
+      "cn": "全島哪一區的數字最高？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Central Taiwan, where the range ran from twenty-four to thirty-six.",
+      "cn": "中部，那裡的區間是二十四到三十六度。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "And the east?",
+      "cn": "那東部呢？"
+    },
+    {
+      "sp": "Tom",
+      "en": "A little cooler. Twenty-five to thirty-two.",
+      "cn": "涼一點，二十五到三十二度。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "What are residents advised to do?",
+      "cn": "民眾被建議要做什麼？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Cut outdoor activity, use sunscreen, and drink water often.",
+      "cn": "減少戶外活動、擦防曬、常補充水分。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "The early signs of heat illness are easy to miss at work.",
+      "cn": "中暑的早期徵兆在上班的時候很容易被忽略。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That is why they should be watched for carefully.",
+      "cn": "所以才要特別留意。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Is there any relief coming?",
+      "cn": "有沒有什麼舒緩要來了？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Seasonal northeasterly winds are expected to strengthen from Thursday.",
+      "cn": "東北季風預計從星期四開始增強。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "So rain?",
+      "cn": "所以會下雨？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Rain will be brought to the north, the east coast and the mountains through Sunday.",
+      "cn": "北部、東半部和山區到星期日都會下雨。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "A week that opens with sunscreen and closes with an umbrella.",
+      "cn": "以防曬乳開場、以雨傘收尾的一週。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many cities and counties were on the advisory list?",
+      "qCn": "警示名單上有幾個縣市？",
+      "opts": [
+        "A. Four",
+        "B. Six",
+        "C. Eight",
+        "D. Twelve"
+      ],
+      "optsCn": [
+        "A. 四個",
+        "B. 六個",
+        "C. 八個",
+        "D. 十二個"
+      ],
+      "ans": 2,
+      "expl": "Advisories were issued for eight cities and counties.——Tom的第一句回答就是八個。"
+    },
+    {
+      "q": "Which region had the highest temperature range?",
+      "qCn": "哪一區的溫度區間最高？",
+      "opts": [
+        "A. Northern Taiwan",
+        "B. Central Taiwan",
+        "C. Southern Taiwan",
+        "D. Eastern Taiwan"
+      ],
+      "optsCn": [
+        "A. 北部",
+        "B. 中部",
+        "C. 南部",
+        "D. 東部"
+      ],
+      "ans": 1,
+      "expl": "Central Taiwan, where the range ran from twenty-four to thirty-six.——三十六度是最高的，關係子句 where 也直接說明了。"
+    },
+    {
+      "q": "What are residents NOT advised to do?",
+      "qCn": "民眾「沒有」被建議做哪一件事？",
+      "opts": [
+        "A. Use sunscreen",
+        "B. Drink water often",
+        "C. Stay indoors all week",
+        "D. Cut outdoor activity"
+      ],
+      "optsCn": [
+        "A. 擦防曬",
+        "B. 常補充水分",
+        "C. 整週都待在室內",
+        "D. 減少戶外活動"
+      ],
+      "ans": 2,
+      "expl": "對話只提到 Cut outdoor activity, use sunscreen, and drink water often，沒有要求整週都不出門。"
+    },
+    {
+      "q": "What is expected from Thursday?",
+      "qCn": "從星期四開始預計會有什麼？",
+      "opts": [
+        "A. Higher temperatures",
+        "B. Stronger northeasterly winds and rain",
+        "C. More advisories",
+        "D. A typhoon warning"
+      ],
+      "optsCn": [
+        "A. 更高的氣溫",
+        "B. 更強的東北季風和降雨",
+        "C. 更多警示",
+        "D. 颱風警報"
+      ],
+      "ans": 1,
+      "expl": "Seasonal northeasterly winds are expected to strengthen from Thursday——接著Tom說 Rain will be brought to the north...，兩件事都在星期四之後。"
+    }
+  ]
+},
+{
+  "id": "dl20260929b2",
+  "date": "2026-09-29",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "The Number on the Wall",
+  "titleCn": "牆上的那個數字",
+  "series": "本站自製聽力 · 天災與天氣主題",
+  "topic": "🏭 高溫與下午班的不良率",
+  "focus": "過去完成進行式（had been sitting、had been climbing）講持續，過去完成式（had fallen、had flagged）講結果，兩者在同一段對話裡交替出現",
+  "intro": "Anita向廠長Mai報告她在下午班發現的事。請注意兩種退格的分工：had been climbing、had been losing 強調「一直在發生」，had fallen、had nobody flagged 只講結果。聽的時候試著把它們互換，感覺一下語氣差在哪裡。",
+  "tip": "第一次聽抓三組數字（儀表幾度、每週損失幾小時、幾週後改善），第二次聽專心找 had been 後面接的 V-ing。",
+  "pre": [
+    {
+      "w": "gauge",
+      "ipa": "/ɡeɪdʒ/",
+      "pos": "n.",
+      "cn": "儀表",
+      "def": "An instrument that shows a measurement such as heat or pressure."
+    },
+    {
+      "w": "shift",
+      "ipa": "/ʃɪft/",
+      "pos": "n.",
+      "cn": "班次",
+      "def": "A set period of work, such as eight hours."
+    },
+    {
+      "w": "defect",
+      "ipa": "/ˈdiː.fekt/",
+      "pos": "n.",
+      "cn": "不良品",
+      "def": "A fault that makes a product wrong or unusable."
+    },
+    {
+      "w": "ventilation",
+      "ipa": "/ˌven.t̬əˈleɪ.ʃən/",
+      "pos": "n.",
+      "cn": "通風",
+      "def": "The movement of fresh air into and out of a room."
+    },
+    {
+      "w": "rotation",
+      "ipa": "/roʊˈteɪ.ʃən/",
+      "pos": "n.",
+      "cn": "輪班",
+      "def": "A system where people take turns doing different jobs."
+    },
+    {
+      "w": "rework",
+      "ipa": "/ˈriː.wɝːk/",
+      "pos": "n.",
+      "cn": "重工",
+      "def": "Work done again to fix something made wrong the first time."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "You wanted to show me something from the afternoon shift.",
+      "cn": "你說有下午班的東西要給我看。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Last Tuesday the gauge above the packing bench had been sitting at thirty-four for three hours.",
+      "cn": "上星期二，包裝台上方那個儀表已經停在三十四度三個小時了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Nobody said anything?",
+      "cn": "沒有人講話？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Nobody had complained. September heat is treated as normal here.",
+      "cn": "沒有人抱怨。九月的高溫在這裡被當成正常的事。"
+    },
+    {
+      "sp": "Mai",
+      "en": "But the temperature is not really your point.",
+      "cn": "不過溫度並不是你真正的重點。"
+    },
+    {
+      "sp": "Anita",
+      "en": "No. Defect reports had been climbing since the middle of August.",
+      "cn": "不是。不良品報告從八月中就一路往上爬。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Why did no weekly summary pick that up?",
+      "cn": "為什麼沒有一份週報抓到？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Because they rose slowly. No single week looked wrong.",
+      "cn": "因為它們上升得很慢，沒有哪一週看起來不對勁。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And when you put the two sets of numbers side by side?",
+      "cn": "那你把兩組數字並排放的時候呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The two lines rose together. The morning shift showed nothing at all.",
+      "cn": "兩條線一起上升。早班則完全沒有異常。"
+    },
+    {
+      "sp": "Mai",
+      "en": "What are you asking for? Air conditioning?",
+      "cn": "你想要什麼？冷氣嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "No. Two ventilation units, a fifteen-minute rotation after two, and water stations somebody refills.",
+      "cn": "不是。兩台通風設備、兩點過後每小時十五分鐘的輪班，還有真的有人去補水的冷水站。"
+    },
+    {
+      "sp": "Mai",
+      "en": "That is a small list.",
+      "cn": "這份清單很小。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Deliberately. I know what air conditioning would cost and what the answer would be.",
+      "cn": "刻意的。我知道冷氣要花多少錢，也知道答案會是什麼。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And six weeks later?",
+      "cn": "那六週之後呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The afternoon defect rate had fallen back to the morning's level.",
+      "cn": "下午班的不良率已經掉回早班的水準。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So the fans paid for themselves.",
+      "cn": "所以那些風扇是划算的。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Several times over. The downtime we had been losing to rework was the real cost.",
+      "cn": "好幾倍。我們一直因為重工而損失的停機時間，才是真正的成本。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What had the gauge been showing before Anita arrived?",
+      "qCn": "在Anita抵達之前，那個儀表顯示的是什麼？",
+      "opts": [
+        "A. Thirty-two degrees for one hour",
+        "B. Thirty-four degrees for three hours",
+        "C. Thirty-six degrees all day",
+        "D. Nothing, it was broken"
+      ],
+      "optsCn": [
+        "A. 三十二度，持續一小時",
+        "B. 三十四度，持續三小時",
+        "C. 三十六度，一整天",
+        "D. 什麼都沒有，它壞了"
+      ],
+      "ans": 1,
+      "expl": "had been sitting at thirty-four for three hours——had been sitting 強調那三小時一直如此。"
+    },
+    {
+      "q": "Why had no weekly summary noticed the defect trend?",
+      "qCn": "為什麼沒有任何一份週報發現不良品的趨勢？",
+      "opts": [
+        "A. The reports were missing",
+        "B. The numbers rose slowly",
+        "C. The morning shift hid them",
+        "D. Nobody wrote summaries"
+      ],
+      "optsCn": [
+        "A. 報告不見了",
+        "B. 數字上升得很慢",
+        "C. 早班把它們藏起來",
+        "D. 沒有人寫週報"
+      ],
+      "ans": 1,
+      "expl": "Because they rose slowly. No single week looked wrong.——關鍵在上升得慢，不是有人隱瞞。"
+    },
+    {
+      "q": "Why did Anita not ask for air conditioning?",
+      "qCn": "Anita為什麼沒有要求裝冷氣？",
+      "opts": [
+        "A. The plant already had it",
+        "B. Fans work better",
+        "C. She knew the cost and the likely answer",
+        "D. Mai had refused it before"
+      ],
+      "optsCn": [
+        "A. 廠裡已經有了",
+        "B. 風扇效果比較好",
+        "C. 她知道價錢，也知道可能的答案",
+        "D. Mai之前拒絕過"
+      ],
+      "ans": 2,
+      "expl": "I know what air conditioning would cost and what the answer would be.——所以她刻意把清單做小。"
+    },
+    {
+      "q": "According to Anita, what was the real cost?",
+      "qCn": "根據Anita的說法，真正的成本是什麼？",
+      "opts": [
+        "A. The two ventilation units",
+        "B. The water stations",
+        "C. The downtime lost to rework",
+        "D. The fifteen-minute rotation"
+      ],
+      "optsCn": [
+        "A. 兩台通風設備",
+        "B. 冷水站",
+        "C. 因為重工而損失的停機時間",
+        "D. 十五分鐘的輪班"
+      ],
+      "ans": 2,
+      "expl": "The downtime we had been losing to rework was the real cost.——最後一句直接點名，而且用 had been losing 強調那是持續累積的損失。"
+    }
+  ]
+},
+{
   "id": "dl20260925a2",
   "date": "2026-09-25",
   "level": "A2",

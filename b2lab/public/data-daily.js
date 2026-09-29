@@ -8,6 +8,790 @@ window.DAILY = {
 
 articles:[
 {
+  "id": "d20260929a2",
+  "date": "2026-09-29",
+  "level": "A2",
+  "topic": "天氣與衣服",
+  "words": 98,
+  "kind": "orig",
+  "title": "Tom Picks the Wrong Shirt",
+  "titleCn": "Tom挑錯了衣服",
+  "focus": "講習慣和此刻用現在簡單式與現在進行式，講昨天用過去簡單式，講還沒到的星期四用 will",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom每天早上看手機查天氣，今天很熱，星期四卻要變冷。請注意三組動詞的分工：checks、puts 講的是每天的習慣；wore、was 後面接的是昨天；will come、will need 講的是還沒發生的星期四。第三段還有 is waiting、is drinking 這種「此刻正在做」的現在進行式。",
+  "spoken": [
+    {
+      "en": "Thirty-five today? Thin shirt, no question.",
+      "cn": "今天三十五度？那當然穿薄的。"
+    },
+    {
+      "en": "I took a jacket yesterday and roasted all afternoon.",
+      "cn": "我昨天帶了外套，整個下午熱到不行。"
+    },
+    {
+      "en": "This stop has zero shade. I'm just standing here melting.",
+      "cn": "這個站牌一點陰影都沒有，我就站在這裡融化。"
+    },
+    {
+      "en": "Cold wind Thursday, they say. Jacket's coming back out.",
+      "cn": "他們說星期四會有冷風，外套又要拿出來了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom checks the weather on his phone every morning. Today the app says thirty-five degrees at noon. He puts on a thin shirt and light trousers.",
+      "cn": "Tom每天早上都用手機查天氣。今天App說中午三十五度。他穿上一件薄襯衫和輕便的長褲。"
+    },
+    {
+      "en": "Yesterday Tom wore a jacket to the office. The morning was cool, but the afternoon was very hot.",
+      "cn": "昨天Tom穿了外套去辦公室。早上很涼，但下午非常熱。"
+    },
+    {
+      "en": "Right now Tom is waiting for the bus outside. There is no shade at this bus stop. He is drinking cold water and standing very still.",
+      "cn": "現在Tom正在外面等公車。這個公車站沒有陰涼的地方。他正在喝冰水，站著一動也不動。"
+    },
+    {
+      "en": "On Thursday a cold wind will come from the north. Tom will need his jacket again in the morning. He can leave it at his desk until then.",
+      "cn": "星期四會有一股冷風從北邊來。Tom早上又會需要他的外套。在那之前他可以把外套放在辦公桌那裡。"
+    }
+  ],
+  "target": [
+    {
+      "w": "weather",
+      "ipa": "/ˈwe.ðɚ/",
+      "pos": "n.",
+      "cn": "天氣",
+      "def": "What the sky and the air are like outside.",
+      "ex": "The weather in Hanoi changes fast in October.",
+      "exCn": "十月的河內天氣變得很快。"
+    },
+    {
+      "w": "degree",
+      "ipa": "/dɪˈɡriː/",
+      "pos": "n.",
+      "cn": "度（溫度單位）",
+      "def": "A unit for measuring how hot or cold something is.",
+      "ex": "Water boils at one hundred degrees.",
+      "exCn": "水在一百度時沸騰。"
+    },
+    {
+      "w": "shade",
+      "ipa": "/ʃeɪd/",
+      "pos": "n.",
+      "cn": "陰涼處",
+      "def": "A cool dark place out of the sun.",
+      "ex": "We ate lunch in the shade of a big tree.",
+      "exCn": "我們在一棵大樹的陰影下吃午餐。"
+    },
+    {
+      "w": "jacket",
+      "ipa": "/ˈdʒækɪt/",
+      "pos": "n.",
+      "cn": "外套",
+      "def": "A short coat you wear over other clothes.",
+      "ex": "He left his jacket on the back of the chair.",
+      "exCn": "他把外套留在椅背上。"
+    },
+    {
+      "w": "wind",
+      "ipa": "/wɪnd/",
+      "pos": "n.",
+      "cn": "風",
+      "def": "Air that moves outside.",
+      "ex": "The wind blew our umbrella into the river.",
+      "exCn": "風把我們的傘吹進河裡。"
+    },
+    {
+      "w": "cool",
+      "ipa": "/kuːl/",
+      "pos": "adj.",
+      "cn": "涼的",
+      "def": "A little cold, but not too cold.",
+      "ex": "Evenings here are cool, so take a thin sweater.",
+      "exCn": "這裡的晚上很涼，所以帶一件薄毛衣。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is the weather like today in the story?",
+      "qCn": "故事裡今天的天氣如何？",
+      "opts": [
+        "A. Cold and windy",
+        "B. Very hot",
+        "C. Rainy all day",
+        "D. Cloudy and cool"
+      ],
+      "optsCn": [
+        "A. 又冷又有風",
+        "B. 非常熱",
+        "C. 下了一整天雨",
+        "D. 多雲而且涼"
+      ],
+      "ans": 1,
+      "expl": "Today the app says thirty-five degrees at noon.——三十五度是很熱的天氣，所以他才穿薄襯衫。"
+    },
+    {
+      "q": "What will happen on Thursday?",
+      "qCn": "星期四會發生什麼事？",
+      "opts": [
+        "A. A cold wind will come from the north",
+        "B. The buses will stop running",
+        "C. Tom will buy a new shirt",
+        "D. The sun will be even hotter"
+      ],
+      "optsCn": [
+        "A. 會有一股冷風從北邊來",
+        "B. 公車會停駛",
+        "C. Tom會買一件新襯衫",
+        "D. 太陽會更熱"
+      ],
+      "ans": 0,
+      "expl": "On Thursday a cold wind will come from the north.——文章直接寫出來了，其他三個選項文章都沒提到。"
+    },
+    {
+      "q": "Yesterday Tom ___ a jacket to the office.",
+      "qCn": "昨天Tom穿了一件外套去辦公室。（選出正確的動詞形式）",
+      "opts": [
+        "A. wear",
+        "B. wears",
+        "C. wore",
+        "D. wearing"
+      ],
+      "ans": 2,
+      "expl": "Yesterday 是已經過完的時間，動詞要用過去式 wore。wears 是講每天的習慣，wearing 前面少了be動詞。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The morning was cool, but the afternoon was very hot.",
+      "b2": "It started out cool, and by two o'clock it was too hot to sit outside.",
+      "note": "原句只把早上和下午擺在一起比。升級版用 start out（一開始是）點出變化的起點，再用 by two o'clock 給一個明確時刻，最後用 too ... to ... 說出後果。同樣是一句話，讀者多知道了「什麼時候變的」和「熱到什麼程度」。",
+      "sp": "Fine in the morning, then an oven by two.",
+      "spNote": "an oven（烤箱）是口語誇飾，講「熱到像烤箱」；中間省掉動詞，聽起來更輕快。",
+      "b1Cn": "早上很涼，但下午非常熱。",
+      "b2Cn": "一開始很涼，到了兩點就熱到沒辦法坐在外面。",
+      "spCn": "早上還好好的，兩點就變烤箱了。"
+    },
+    {
+      "b1": "Tom will need his jacket again in the morning.",
+      "b2": "Tom is going to want that jacket back on Thursday morning.",
+      "note": "will 是單純講未來；be going to 用在「現在就已經看得出來會這樣」。既然冷風的預報已經出來了，用 be going to 更貼近英文母語者的語感。另外把 need 換成 want ... back，語氣從「需要」變成「會想把它拿回來」，多了一點畫面。",
+      "sp": "He'll be digging that jacket out again Thursday.",
+      "spNote": "dig something out（把東西翻出來）是很常用的口語片語，比 need 生動。",
+      "b1Cn": "Tom早上又會需要他的外套。",
+      "b2Cn": "Tom星期四早上會想把那件外套拿回來穿。",
+      "spCn": "他星期四又要把那件外套翻出來了。"
+    }
+  ]
+},
+{
+  "id": "d20260929b1",
+  "date": "2026-09-29",
+  "level": "B1",
+  "topic": "天氣與衣服",
+  "words": 136,
+  "kind": "orig",
+  "title": "Anita Packs for Two Seasons",
+  "titleCn": "Anita為兩種季節打包",
+  "focus": "現在完成式（has packed、has never enjoyed）講到現在為止的經驗，過去簡單式（checked、chose）講已經結束的那一刻，比較級 warmer/thinner/better 做對比",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Anita要從越南飛台北出差，偏偏這一週前半熱、後半冷。請注意兩種時態怎麼分工：checked、chose、packed 都綁在星期日、星期一那些已經過完的時刻；has packed、has worked、has never enjoyed 講的是「到現在為止」。另外找出三個比較級，看看她拿什麼跟什麼比。",
+  "spoken": [
+    {
+      "en": "I've packed this bag twice and I'm still not happy.",
+      "cn": "這個包我打包兩次了，還是不滿意。"
+    },
+    {
+      "en": "Sunday said thirty-five. Monday said bring a coat.",
+      "cn": "星期日說三十五度，星期一說帶件大衣。"
+    },
+    {
+      "en": "My jacket's thinner than theirs, but it squashes down to nothing.",
+      "cn": "我的外套比他們的薄，但可以壓到幾乎沒體積。"
+    },
+    {
+      "en": "A heavy bag beats a freezing morning. Both are going in.",
+      "cn": "行李重總比早上凍死好，兩件都帶。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita flies to Taipei on Wednesday, and she has already packed twice. She checked the forecast on Sunday and saw thirty-five degrees, so she chose thin shirts. Then she checked again on Monday and found a completely different week.",
+      "cn": "Anita星期三要飛台北，而她已經打包過兩次了。她星期日查了預報，看到三十五度，所以她挑了薄襯衫。然後她星期一再查一次，看到的卻是完全不一樣的一週。"
+    },
+    {
+      "en": "The heat will stay until Wednesday, but a cold wind arrives from the north on Thursday. Her audit runs until Friday afternoon, so she needs clothes for both halves of the week.",
+      "cn": "高溫會持續到星期三，但星期四會有一股冷風從北邊過來。她的稽核要做到星期五下午，所以她這一週的前半段和後半段都要有衣服穿。"
+    },
+    {
+      "en": "She has worked in Vietnam for six years, and the weather there is warmer than Taipei in autumn. Her old jacket is thinner than the one her colleagues wear, but it folds smaller.",
+      "cn": "她在越南工作六年了，那裡的秋天比台北暖。她那件舊外套比同事們穿的薄，但可以折得比較小。"
+    },
+    {
+      "en": "In the end she packed both, because a heavy bag is better than a cold morning. Anita has never enjoyed packing, but she has learned to trust two forecasts instead of one.",
+      "cn": "最後她兩件都帶了，因為行李重一點總比早上挨凍好。Anita從來都不喜歡打包，但她學會了不要只看一次預報。"
+    }
+  ],
+  "target": [
+    {
+      "w": "forecast",
+      "ipa": "/ˈfɔːrkæst/",
+      "pos": "n.",
+      "cn": "預報",
+      "def": "What experts say the weather will be like.",
+      "ex": "The forecast was wrong, and the match was called off.",
+      "exCn": "預報出錯了，那場比賽被取消。"
+    },
+    {
+      "w": "autumn",
+      "ipa": "/ˈɑː.t̬əm/",
+      "pos": "n.",
+      "cn": "秋天",
+      "def": "The season between summer and winter.",
+      "ex": "In autumn the trees along that street turn red.",
+      "exCn": "秋天的時候，那條街上的樹會變紅。"
+    },
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person who works with you.",
+      "ex": "Two colleagues drove me to the airport before dawn.",
+      "exCn": "兩位同事天亮前開車送我去機場。"
+    },
+    {
+      "w": "heat",
+      "ipa": "/hiːt/",
+      "pos": "n.",
+      "cn": "高溫；熱",
+      "def": "Hot air or hot weather.",
+      "ex": "The heat in that kitchen made everyone quiet.",
+      "exCn": "那間廚房裡的高溫讓大家都安靜了下來。"
+    },
+    {
+      "w": "pack",
+      "ipa": "/pæk/",
+      "pos": "v.",
+      "cn": "打包",
+      "def": "To put things into a bag before a trip.",
+      "ex": "He packs one small bag and nothing else.",
+      "exCn": "他只裝一個小包包，別的都不帶。"
+    },
+    {
+      "w": "trust",
+      "ipa": "/trʌst/",
+      "pos": "v.",
+      "cn": "相信；信任",
+      "def": "To believe that something is right or true.",
+      "ex": "I do not trust that old map at all.",
+      "exCn": "那張舊地圖我一點都不信。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Anita pack a second time?",
+      "qCn": "Anita為什麼打包了第二次？",
+      "opts": [
+        "A. Her first bag was too heavy",
+        "B. The forecast changed between Sunday and Monday",
+        "C. Her audit was moved to Friday",
+        "D. Her colleagues told her to"
+      ],
+      "optsCn": [
+        "A. 她第一個包太重了",
+        "B. 預報在星期日到星期一之間變了",
+        "C. 她的稽核改到星期五",
+        "D. 同事們叫她這樣做"
+      ],
+      "ans": 1,
+      "expl": "文章寫 She checked the forecast on Sunday ... Then she checked again on Monday and found a completely different week.——是預報變了，不是行李太重。"
+    },
+    {
+      "q": "How is her old jacket different from her colleagues' jackets?",
+      "qCn": "她那件舊外套和同事們的外套有什麼不同？",
+      "opts": [
+        "A. It is warmer but heavier",
+        "B. It is newer and cheaper",
+        "C. It is thinner but folds smaller",
+        "D. It is longer and darker"
+      ],
+      "optsCn": [
+        "A. 比較暖但比較重",
+        "B. 比較新也比較便宜",
+        "C. 比較薄，但可以折得比較小",
+        "D. 比較長也比較深色"
+      ],
+      "ans": 2,
+      "expl": "Her old jacket is thinner than the one her colleagues wear, but it folds smaller.——thinner 和 folds smaller 兩個對比都在同一句裡。"
+    },
+    {
+      "q": "Anita ___ in Vietnam for six years.",
+      "qCn": "Anita在越南工作六年了。（選出正確的動詞形式）",
+      "opts": [
+        "A. works",
+        "B. has worked",
+        "C. worked",
+        "D. is working"
+      ],
+      "ans": 1,
+      "expl": "for six years 是「從過去到現在的一段時間」，要用現在完成式 has worked。worked 會讓人以為她已經不在越南了。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "She checked the forecast on Sunday and saw thirty-five degrees.",
+      "b2": "When she checked the forecast on Sunday, it promised thirty-five degrees.",
+      "note": "原句用 and 把兩個動作接起來，兩件事變得一樣重要。升級版把前半改成 When 子句，主角就變成後半的 it promised。動詞也從中性的 saw 換成 promise（承諾），暗示預報後來沒兌現，替第一段的轉折先鋪好路。",
+      "sp": "Sunday's forecast promised thirty-five, and I fell for it.",
+      "spNote": "fall for something（信了、上當了）是很口語的說法，帶一點自嘲。",
+      "b1Cn": "她星期日查了預報，看到三十五度。",
+      "b2Cn": "她星期日查預報的時候，預報保證會有三十五度。",
+      "spCn": "星期日的預報說三十五度，我就信了。"
+    },
+    {
+      "b1": "A heavy bag is better than a cold morning.",
+      "b2": "Carrying an extra kilo beats standing at a bus stop with bare arms.",
+      "note": "原句拿兩個名詞直接比。升級版把兩邊都換成動名詞（Carrying...、standing...），比較的就從「東西」變成「兩種處境」，畫面清楚很多。beat 在這裡是「勝過」的意思，比 is better than 更精簡、更口語。",
+      "sp": "One extra kilo now, or frozen arms on Thursday. Easy call.",
+      "spNote": "Easy call（這很好選）是口語常見的收尾說法，等於「根本不用想」。",
+      "b1Cn": "行李重一點比早上挨凍好。",
+      "b2Cn": "多背一公斤，也好過光著手臂站在公車站。",
+      "spCn": "現在多一公斤，還是星期四手臂凍僵？很好選吧。"
+    }
+  ]
+},
+{
+  "id": "d20260929b1p",
+  "date": "2026-09-29",
+  "level": "B1+",
+  "topic": "新聞·天災與天氣",
+  "words": 192,
+  "kind": "news",
+  "title": "Eight Cities Warned as Summer Refuses to Leave",
+  "titleCn": "夏天還不肯走：八個縣市同時發布高溫警示",
+  "source": "改寫自 中央社 Focus Taiwan 報導（2026/09/28）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202609280004",
+  "focus": "被動語態（were issued、are advised、will be brought）把焦點放在事情本身，搭配關係子句 which / where 補充說明",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "這是九月底台灣的高溫警示新聞，事實取自中央社報導，英文由本站重寫。請特別注意被動語態：were issued、has been split、are advised、will be brought，句子的主詞都是「事情」而不是「氣象署」。另外找出 which 和 where 引導的關係子句，看看它們各自在補充什麼。",
+  "spoken": [
+    {
+      "en": "Eight counties on the heat list at the end of September. That's late.",
+      "cn": "九月底還有八個縣市上高溫名單，這很晚了。"
+    },
+    {
+      "en": "Thirty-six around noon in the middle of the island.",
+      "cn": "中部中午前後三十六度。"
+    },
+    {
+      "en": "Sunscreen, water, and stay out of the sun if you can.",
+      "cn": "防曬、喝水，能不曬太陽就不要曬。"
+    },
+    {
+      "en": "The northeasterlies kick in Thursday, so the umbrella goes back in the bag.",
+      "cn": "東北季風星期四開始發威，傘又要放回包包了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Heat advisories were issued for eight cities and counties on Monday by Taiwan's Central Weather Administration, which expected readings to climb past thirty-six degrees around noon. The warning covered Taipei, New Taipei, Tainan, Changhua, Nantou, Yunlin, Pingtung and Hualien, a spread that reached almost every corner of the island.",
+      "cn": "中央氣象署星期一針對八個縣市發布高溫警示，該署預期中午前後氣溫會爬升到超過攝氏三十六度。警示範圍涵蓋台北、新北、台南、彰化、南投、雲林、屏東與花蓮，幾乎全島每個角落都被掃到。"
+    },
+    {
+      "en": "The forecast for Monday to Wednesday has been split by region. Northern Taiwan was given a range of twenty-three to thirty-five degrees, while central Taiwan, where the highest figure was recorded, ran from twenty-four to thirty-six. Southern areas sat between twenty-five and thirty-five, and the east stayed a little cooler at twenty-five to thirty-two.",
+      "cn": "星期一到星期三的預報是分區列出的。北部給的區間是二十三到三十五度，而最高值出現的中部則是二十四到三十六度。南部落在二十五到三十五度之間，東部則稍微涼一點，是二十五到三十二度。"
+    },
+    {
+      "en": "Residents are advised to cut outdoor activity and hard exercise, to use sunscreen, and to drink water often. The early signs of heat illness, which are easy to miss on a busy working day, should be watched for carefully.",
+      "cn": "民眾被建議減少戶外活動與劇烈運動、擦防曬、並且經常補充水分。中暑的早期徵兆在忙碌的工作日裡很容易被忽略，因此要特別留意。"
+    },
+    {
+      "en": "Relief is on the way. Seasonal northeasterly winds are expected to strengthen from Thursday, and rain will be brought to districts north of Taoyuan, to the east coast, to the Hengchun Peninsula and to mountain areas through Sunday. A week that opened with sunscreen may well close with an umbrella.",
+      "cn": "舒緩即將到來。東北季風預計從星期四開始增強，桃園以北、東半部、恆春半島與山區到星期日都會下雨。以防曬乳開場的一週，很可能會以雨傘收尾。"
+    }
+  ],
+  "target": [
+    {
+      "w": "advisory",
+      "ipa": "/ədˈvaɪ.zɚ.i/",
+      "pos": "n.",
+      "cn": "警示；告示",
+      "def": "An official notice that warns people about something.",
+      "ex": "A flood advisory kept the riverside park closed all weekend.",
+      "exCn": "一則洪水警示讓河濱公園整個週末都關閉。"
+    },
+    {
+      "w": "exceed",
+      "ipa": "/ɪkˈsiːd/",
+      "pos": "v.",
+      "cn": "超過",
+      "def": "To go above a limit or a number.",
+      "ex": "Repair costs exceeded the original quote by half.",
+      "exCn": "維修費用比原本的報價多了一半。"
+    },
+    {
+      "w": "range",
+      "ipa": "/reɪndʒ/",
+      "pos": "n.",
+      "cn": "區間；範圍",
+      "def": "The distance between the lowest and the highest number.",
+      "ex": "Salaries in that range are rare for a first job.",
+      "exCn": "第一份工作很少有落在那個區間的薪水。"
+    },
+    {
+      "w": "resident",
+      "ipa": "/ˈrezɪdənt/",
+      "pos": "n.",
+      "cn": "居民",
+      "def": "A person who lives in a place.",
+      "ex": "Residents of the old block share one water meter.",
+      "exCn": "那棟老公寓的住戶共用一個水表。"
+    },
+    {
+      "w": "sunscreen",
+      "ipa": "/ˈsʌnskriːn/",
+      "pos": "n.",
+      "cn": "防曬乳",
+      "def": "A cream that protects your skin from the sun.",
+      "ex": "She keeps a small bottle of sunscreen in the car.",
+      "exCn": "她在車上放了一小瓶防曬乳。"
+    },
+    {
+      "w": "seasonal",
+      "ipa": "/ˈsiː.zən.əl/",
+      "pos": "adj.",
+      "cn": "季節性的",
+      "def": "Happening at one particular time of the year.",
+      "ex": "The hotel hires seasonal staff every summer.",
+      "exCn": "那家飯店每年夏天都會雇用季節性員工。"
+    },
+    {
+      "w": "relief",
+      "ipa": "/rɪˈliːf/",
+      "pos": "n.",
+      "cn": "舒緩；解脫",
+      "def": "The good feeling when something difficult stops.",
+      "ex": "A cold shower was the only relief she got that day.",
+      "exCn": "沖個冷水澡是她那天唯一的舒緩。"
+    },
+    {
+      "w": "district",
+      "ipa": "/ˈdɪstrɪkt/",
+      "pos": "n.",
+      "cn": "區；地區",
+      "def": "One part of a city or a country.",
+      "ex": "Two districts lost power for six hours.",
+      "exCn": "有兩個區停電六小時。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many cities and counties were covered by Monday's heat advisories?",
+      "qCn": "星期一的高溫警示涵蓋了幾個縣市？",
+      "opts": [
+        "A. Four",
+        "B. Six",
+        "C. Eight",
+        "D. Eleven"
+      ],
+      "optsCn": [
+        "A. 四個",
+        "B. 六個",
+        "C. 八個",
+        "D. 十一個"
+      ],
+      "ans": 2,
+      "expl": "Heat advisories were issued for eight cities and counties on Monday——第一段就寫了八個，第二句還把八個名字列出來。"
+    },
+    {
+      "q": "Which region was given the highest temperature figure?",
+      "qCn": "哪一區的氣溫最高值最高？",
+      "opts": [
+        "A. Northern Taiwan",
+        "B. Central Taiwan",
+        "C. Southern Taiwan",
+        "D. Eastern Taiwan"
+      ],
+      "optsCn": [
+        "A. 北部",
+        "B. 中部",
+        "C. 南部",
+        "D. 東部"
+      ],
+      "ans": 1,
+      "expl": "central Taiwan, where the highest figure was recorded, ran from twenty-four to thirty-six——三十六度是四區裡最高的，關係子句 where ... 也直接點明了。"
+    },
+    {
+      "q": "What is expected to change from Thursday?",
+      "qCn": "從星期四開始預計會有什麼變化？",
+      "opts": [
+        "A. The advisories will be extended to more counties",
+        "B. Northeasterly winds will strengthen and bring rain",
+        "C. Temperatures will rise above forty degrees",
+        "D. Outdoor exercise will be banned"
+      ],
+      "optsCn": [
+        "A. 警示會擴大到更多縣市",
+        "B. 東北季風會增強並帶來降雨",
+        "C. 氣溫會升到四十度以上",
+        "D. 戶外運動會被禁止"
+      ],
+      "ans": 1,
+      "expl": "Seasonal northeasterly winds are expected to strengthen from Thursday, and rain will be brought to districts north of Taoyuan——最後一段講得很清楚，其他三個選項文章都沒有。"
+    },
+    {
+      "q": "Residents ___ to cut outdoor activity and hard exercise.",
+      "qCn": "民眾被建議減少戶外活動和劇烈運動。（選出正確的被動語態）",
+      "opts": [
+        "A. advise",
+        "B. are advising",
+        "C. are advised",
+        "D. have advising"
+      ],
+      "ans": 2,
+      "expl": "民眾是「被建議」的一方，所以要用 be 動詞加過去分詞的被動語態 are advised。are advising 是主動，意思會變成民眾在建議別人。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The weather agency told people to drink water often.",
+      "b2": "Residents are advised to drink water often.",
+      "note": "主動句一定要先講出「誰說的」，但新聞的重點其實是「大家該做什麼」。改成被動之後，句子開頭直接是 Residents，動作的發出者不寫也不影響理解。這就是為什麼公告、報導、作業指導書大量使用被動語態。",
+      "sp": "They're telling everyone to keep drinking water.",
+      "spNote": "口語會直接用 they 代替機關名稱，keep -ing 表示「持續做」，比 often 更自然。",
+      "b1Cn": "氣象單位叫民眾要常喝水。",
+      "b2Cn": "民眾被建議要經常補充水分。",
+      "spCn": "他們叫大家要一直喝水。"
+    },
+    {
+      "b1": "Central Taiwan had the highest number. It ran from twenty-four to thirty-six.",
+      "b2": "Central Taiwan, where the highest figure was recorded, ran from twenty-four to thirty-six.",
+      "note": "原本是兩句，第二句的 It 還要讀者回頭找指的是誰。用 where 引導的關係子句把補充說明塞進主詞後面，主線 Central Taiwan ... ran from ... 就不會被打斷。地點用 where、人用 who、物用 which，是B2寫作最省字的工具之一。",
+      "sp": "Central Taiwan topped it — twenty-four to thirty-six.",
+      "spNote": "top it（居冠）是口語說法；後面直接丟數字，不用完整句子。",
+      "b1Cn": "中部的數字最高，範圍是二十四到三十六度。",
+      "b2Cn": "最高值出現的中部，範圍是二十四到三十六度。",
+      "spCn": "中部最高，二十四到三十六度。"
+    }
+  ]
+},
+{
+  "id": "d20260929b2",
+  "date": "2026-09-29",
+  "level": "B2",
+  "topic": "天災與天氣",
+  "words": 247,
+  "kind": "original",
+  "title": "What the Heat Costs a Factory",
+  "titleCn": "熱，讓工廠付出什麼代價",
+  "focus": "過去完成進行式（had been sitting、had been climbing、had been losing）交代「在那一刻之前已經持續多久」，並與 had done 的結果式對照",
+  "intro": "Anita在越南廠區發現的不是溫度，而是報表。請注意兩種退一格的寫法：had been climbing、had been sitting 強調「一直持續」，had fallen、had not complained 則只講結果。文章刻意讓兩種形式緊鄰出現，讀的時候可以試著把它們互換，感覺一下語氣差在哪裡。",
+  "spoken": [
+    {
+      "en": "Thirty-four on the wall gauge, and nobody had said a word.",
+      "cn": "牆上的儀表三十四度，沒有人講過一句話。"
+    },
+    {
+      "en": "The afternoon numbers had been creeping up since August.",
+      "cn": "下午班的數字從八月就一直在往上爬。"
+    },
+    {
+      "en": "Two fans and a rota. That was the whole proposal.",
+      "cn": "兩台風扇加一張輪班表，整份提案就這樣。"
+    },
+    {
+      "en": "The data was on the wall the whole time. Nobody read it next to anything.",
+      "cn": "資料一直都在牆上，只是沒有人把它跟別的擺在一起看。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "By the time Anita walked onto the line last Tuesday, the gauge above the packing bench had been sitting at thirty-four degrees for three hours. Nobody had complained. The plant outside Bien Hoa runs two shifts through the dry season, and the people there treat September heat as a fact of working life rather than a problem worth a meeting.",
+      "cn": "上星期二Anita走進產線的時候，包裝台上方那個儀表已經停在三十四度三個小時了。沒有人抱怨。位於邊和市外的這座廠在乾季走兩班制，廠裡的人把九月的高溫當成工作生活的一部分，而不是值得開會討論的問題。"
+    },
+    {
+      "en": "What caught her attention was not the temperature but the paperwork. Defect reports from the afternoon shift had been climbing since the middle of August, slowly enough that no weekly summary had flagged them. When she laid the figures beside the plant's own temperature log, the two lines rose together almost exactly. The morning shift showed nothing unusual at all.",
+      "cn": "吸引她注意的不是溫度，而是那疊報表。下午班的不良品報告從八月中開始就一路往上爬，爬得夠慢，慢到沒有任何一份週報把它標出來。當她把這些數字和廠裡自己的溫度紀錄並排放時，兩條線幾乎完全同步上升。早班則完全看不出異常。"
+    },
+    {
+      "en": "Her proposal was deliberately small. Two extra ventilation units above the packing bench, a fifteen-minute rotation away from the sealing machines every hour after two o'clock, and cold water stations that somebody was actually responsible for refilling. She did not ask for air conditioning, because she knew what that request would cost and what the answer would be.",
+      "cn": "她的提案刻意做得很小：包裝台上方加兩台通風設備；兩點過後每小時安排十五分鐘，把人從封口機那邊輪開；再加上真的有人負責補水的冷水站。她沒有要求裝冷氣，因為她知道那個要求要花多少錢，也知道答案會是什麼。"
+    },
+    {
+      "en": "Six weeks later the afternoon defect rate had fallen back to the morning's level, and the downtime the line had been losing to rework paid for the fans several times over. Anita is careful about how she tells this story. The heat had not been hiding from anyone. It had been sitting on a wall gauge in plain sight, waiting for somebody to read it next to something else.",
+      "cn": "六週後，下午班的不良率已經掉回早班的水準，而產線原本一直因為重工而損失的停機時間，價值是那幾台風扇的好幾倍。Anita講這個故事的時候很小心。高溫並沒有躲著誰，它一直就掛在牆上的儀表上、明明白白，只是在等有人把它跟別的東西擺在一起看。"
+    }
+  ],
+  "target": [
+    {
+      "w": "gauge",
+      "ipa": "/ɡeɪdʒ/",
+      "pos": "n.",
+      "cn": "量表；儀表",
+      "def": "An instrument that shows a measurement such as heat or pressure.",
+      "ex": "The fuel gauge had been stuck on half for months.",
+      "exCn": "油量表卡在一半已經好幾個月了。"
+    },
+    {
+      "w": "shift",
+      "ipa": "/ʃɪft/",
+      "pos": "n.",
+      "cn": "班次",
+      "def": "A set period of work, such as eight hours.",
+      "ex": "He asked to swap his night shift with a colleague.",
+      "exCn": "他要求跟同事換掉他的夜班。"
+    },
+    {
+      "w": "defect",
+      "ipa": "/ˈdiː.fekt/",
+      "pos": "n.",
+      "cn": "瑕疵；不良品",
+      "def": "A fault that makes a product wrong or unusable.",
+      "ex": "One defect in a hundred boxes is still a customer complaint.",
+      "exCn": "一百箱裡有一個瑕疵，還是會變成客訴。"
+    },
+    {
+      "w": "ventilation",
+      "ipa": "/ˌven.t̬əˈleɪ.ʃən/",
+      "pos": "n.",
+      "cn": "通風",
+      "def": "The movement of fresh air into and out of a room.",
+      "ex": "The basement office had no ventilation and smelled of paint.",
+      "exCn": "地下室的辦公室沒有通風，聞起來都是油漆味。"
+    },
+    {
+      "w": "rotation",
+      "ipa": "/roʊˈteɪ.ʃən/",
+      "pos": "n.",
+      "cn": "輪調；輪班",
+      "def": "A system where people take turns doing different jobs.",
+      "ex": "A weekend rotation keeps one engineer on call.",
+      "exCn": "週末輪班制度讓總是有一位工程師待命。"
+    },
+    {
+      "w": "downtime",
+      "ipa": "/ˈdaʊn.taɪm/",
+      "pos": "n.",
+      "cn": "停機時間",
+      "def": "Time when a machine or a line is not working.",
+      "ex": "Ten minutes of downtime costs more than the part itself.",
+      "exCn": "十分鐘的停機損失比那個零件本身還貴。"
+    },
+    {
+      "w": "rework",
+      "ipa": "/ˈriː.wɝːk/",
+      "pos": "n.",
+      "cn": "重工；返工",
+      "def": "Work done again to fix something made wrong the first time.",
+      "ex": "Rework on that order ate the whole margin.",
+      "exCn": "那張訂單的重工把利潤全吃掉了。"
+    },
+    {
+      "w": "flag",
+      "ipa": "/flæɡ/",
+      "pos": "v.",
+      "cn": "標示出來；提出示警",
+      "def": "To mark something so that other people notice it.",
+      "ex": "Please flag any invoice above ten thousand dollars.",
+      "exCn": "任何超過一萬元的發票請標示出來。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What first made Anita look more closely at the situation?",
+      "qCn": "是什麼讓Anita開始仔細看這件事？",
+      "opts": [
+        "A. A complaint from the afternoon shift",
+        "B. The reading on the wall gauge",
+        "C. The defect reports on paper",
+        "D. A customer return"
+      ],
+      "optsCn": [
+        "A. 下午班的抱怨",
+        "B. 牆上儀表的讀數",
+        "C. 紙本的不良品報告",
+        "D. 客戶退貨"
+      ],
+      "ans": 2,
+      "expl": "What caught her attention was not the temperature but the paperwork.——文章直接否定了溫度，點名是報表；而且第一段還說 Nobody had complained，所以A也不對。"
+    },
+    {
+      "q": "Why had no weekly summary noticed the problem?",
+      "qCn": "為什麼沒有任何一份週報發現這個問題？",
+      "opts": [
+        "A. The reports were written in another language",
+        "B. The numbers rose slowly over several weeks",
+        "C. The morning shift hid the figures",
+        "D. The temperature log had been lost"
+      ],
+      "optsCn": [
+        "A. 報告是用別的語言寫的",
+        "B. 數字是在好幾週裡慢慢上升的",
+        "C. 早班把數字藏起來了",
+        "D. 溫度紀錄不見了"
+      ],
+      "ans": 1,
+      "expl": "had been climbing since the middle of August, slowly enough that no weekly summary had flagged them——關鍵在 slowly enough（慢到……），不是有人隱瞞。"
+    },
+    {
+      "q": "Why did Anita leave air conditioning out of her proposal?",
+      "qCn": "Anita為什麼沒有把冷氣寫進提案？",
+      "opts": [
+        "A. The plant already had air conditioning",
+        "B. The fans worked better than air conditioning",
+        "C. She expected the cost to get the request refused",
+        "D. The dry season was nearly over"
+      ],
+      "optsCn": [
+        "A. 廠裡已經有冷氣了",
+        "B. 風扇的效果比冷氣好",
+        "C. 她預期那個價錢會讓提案被駁回",
+        "D. 乾季快結束了"
+      ],
+      "ans": 2,
+      "expl": "she knew what that request would cost and what the answer would be——她知道價錢，也知道答案，所以刻意把提案做小（deliberately small）。"
+    },
+    {
+      "q": "The gauge ___ at thirty-four degrees for three hours before she arrived.",
+      "qCn": "在她抵達之前，那個儀表已經停在三十四度三個小時了。（選出正確的動詞形式）",
+      "opts": [
+        "A. has been sitting",
+        "B. had been sitting",
+        "C. was sitting",
+        "D. had sat"
+      ],
+      "ans": 1,
+      "expl": "整段故事都在過去，而且要強調「在她到達那一刻之前已經持續三小時」，所以用過去完成進行式 had been sitting。has been sitting 會把基準點拉到現在。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The numbers went up from the middle of August, and nobody saw it.",
+      "b2": "The figures had been climbing since the middle of August, slowly enough that no weekly summary flagged them.",
+      "note": "原句用兩個過去簡單式並排，讀起來像兩件獨立的事。升級版把前半退成過去完成進行式 had been climbing，立刻說明「在Anita發現之前就一直在爬」；後半用 slowly enough that ...（慢到……）把原因接進同一句，不必再多寫一句解釋。",
+      "sp": "They'd been creeping up since August and nobody clocked it.",
+      "spNote": "creep up（悄悄往上爬）和 clock something（注意到）都是口語常用字，比 go up、see 有畫面。",
+      "b1Cn": "數字從八月中開始往上，沒有人看見。",
+      "b2Cn": "數字從八月中就一直在爬，爬得慢到沒有任何一份週報把它標出來。",
+      "spCn": "從八月就一直悄悄往上爬，沒人注意到。"
+    },
+    {
+      "b1": "She did not ask for air conditioning. She knew it was expensive and they would say no.",
+      "b2": "She did not ask for air conditioning, because she knew what that request would cost and what the answer would be.",
+      "note": "原本三個短句，資訊零散。升級版用 because 接起來，再用兩個平行的 what 子句（what ... would cost / what ... would be）取代 it was expensive、they would say no。平行結構讓兩個理由看起來份量相同，也讓句子不必把 they 這種指涉不明的主詞寫出來。",
+      "sp": "She left air con out — she knew the price tag and she knew the answer.",
+      "spNote": "air con 是 air conditioning 的口語縮寫；price tag（價錢）比 cost 更口語，破折號讓後半像補充說明。",
+      "b1Cn": "她沒有要求裝冷氣。她知道那很貴，而且他們會拒絕。",
+      "b2Cn": "她沒有要求裝冷氣，因為她知道那個要求要花多少錢，也知道答案會是什麼。",
+      "spCn": "她沒把冷氣寫進去，價錢她清楚，答案她也清楚。"
+    }
+  ]
+},
+{
   "id": "d20260925a2",
   "date": "2026-09-25",
   "level": "A2",
@@ -8373,6 +9157,854 @@ articles:[
 ],
 
 grammar:[
+{
+  "id": "dg20260929a2",
+  "date": "2026-09-29",
+  "unitNo": 15,
+  "level": "A2",
+  "title": "Past Perfect: What Happened First",
+  "titleCn": "先發生的那件事：had 加過去分詞",
+  "srcDays": [],
+  "summary": "兩件事都在過去，先發生的那一件用 had 加過去分詞，後發生的那一件用過去式，讀者不用猜就知道順序。",
+  "sections": [
+    {
+      "h": "兩件事，誰先誰後",
+      "body": "中文說「我到的時候公車已經走了」，那個「已經」靠的是一個副詞。英文不靠副詞，而是直接把先發生的動詞換一個形狀：had 加過去分詞。換了，順序就講清楚；不換，兩件事看起來就一樣早。",
+      "table": {
+        "head": [
+          "先發生 → had + 過去分詞",
+          "後發生 → 過去式",
+          "整句"
+        ],
+        "rows": [
+          [
+            "the bus left",
+            "I arrived",
+            "The bus had left when I arrived."
+          ],
+          [
+            "she finished lunch",
+            "we called her",
+            "She had finished lunch when we called her."
+          ],
+          [
+            "it rained",
+            "we went out",
+            "It had rained before we went out."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The bakery had closed when I got there.",
+          "cn": "我到的時候麵包店已經關了。",
+          "note": "關店在前，我到在後"
+        },
+        {
+          "en": "He had eaten dinner before the film started.",
+          "cn": "電影開始前他已經吃過晚餐了。",
+          "note": "吃飯在前，電影開始在後"
+        },
+        {
+          "en": "They had gone home when I called.",
+          "cn": "我打電話的時候他們已經回家了。",
+          "note": "回家在前，打電話在後"
+        }
+      ]
+    },
+    {
+      "h": "had 後面一定是過去分詞",
+      "bullets": [
+        "主詞是 I、he 還是 they，通通用 had，形式不用改",
+        "had 後面接的是過去分詞，不是過去式：說 had gone，不要說 had went",
+        "規則動詞的過去式和過去分詞長得一樣（worked、closed），不規則動詞就要背起來"
+      ],
+      "table": {
+        "head": [
+          "原形",
+          "過去式",
+          "過去分詞"
+        ],
+        "rows": [
+          [
+            "go",
+            "went",
+            "gone"
+          ],
+          [
+            "eat",
+            "ate",
+            "eaten"
+          ],
+          [
+            "see",
+            "saw",
+            "seen"
+          ],
+          [
+            "close",
+            "closed",
+            "closed"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I had seen that film twice.",
+          "cn": "那部電影我已經看過兩次了。",
+          "note": "see 的過去分詞是 seen，不是 saw"
+        },
+        {
+          "en": "We had closed the windows before the storm.",
+          "cn": "暴風雨來之前我們已經把窗戶關好了。",
+          "note": "close 是規則動詞，過去式和過去分詞都是 closed"
+        }
+      ]
+    },
+    {
+      "h": "already、never、just 放在中間",
+      "body": "這三個字都夾在 had 和過去分詞中間，不要放句尾。它們只是加強語氣，真正表示「先發生」的還是 had 加過去分詞這個形狀。",
+      "table": {
+        "head": [
+          "字",
+          "中文",
+          "例句"
+        ],
+        "rows": [
+          [
+            "already",
+            "已經",
+            "The shop had already opened."
+          ],
+          [
+            "never",
+            "從來沒有",
+            "I had never tried mango before that day."
+          ],
+          [
+            "just",
+            "剛剛才",
+            "We had just sat down when the rain started."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "My sister had already washed the cups.",
+          "cn": "我姐姐已經把杯子洗好了。",
+          "note": "already 夾在 had 和分詞中間"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I had went home early.",
+      "good": "I had gone home early.",
+      "why": "中文沒有「過去式」和「過去分詞」的分別，所以很容易把 went 直接塞進去。had 後面永遠接過去分詞，go 的過去分詞是 gone。一個好記的判斷法：had 後面那個字不能單獨當句子的動詞用。"
+    },
+    {
+      "bad": "When I arrived, the bus already left.",
+      "good": "When I arrived, the bus had already left.",
+      "why": "中文只要一個「已經」就夠了，所以學生常常加完 already 就停手。英文的 already 只是副詞，真正表示順序的是 had left 這個形狀。少了 had，兩件事會被讀成同時發生。"
+    },
+    {
+      "bad": "Yesterday the library had closed.",
+      "good": "The library had closed before I finished work.",
+      "why": "過去完成式一定要有第二個時間點當對照，只講一句會讓人覺得話沒說完。如果只是想說「圖書館昨天關門」，那就用過去式 closed 就好，不必退格。"
+    },
+    {
+      "bad": "After I had finished my homework, I had watched TV.",
+      "good": "After I had finished my homework, I watched TV.",
+      "why": "只有更早的那件事需要退一格。後發生的那一件是整段話的基準點，留在過去式。兩邊都寫 had，讀者就找不到基準點，句子讀起來像沒有結尾。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The train ___ when we reached the platform.",
+      "qCn": "我們到月台的時候，火車已經開走了。",
+      "opts": [
+        "A. leaves",
+        "B. had left",
+        "C. has left",
+        "D. leaving"
+      ],
+      "ans": 1,
+      "expl": "火車開走比我們到月台更早，整段又都在過去，所以退一格用 had left。has left 會把基準點拉到現在。"
+    },
+    {
+      "q": "She had ___ her keys at home, so she could not get in.",
+      "qCn": "她把鑰匙留在家裡了，所以她進不去。",
+      "opts": [
+        "A. leave",
+        "B. left",
+        "C. leaved",
+        "D. leaving"
+      ],
+      "ans": 1,
+      "expl": "leave 是不規則動詞，過去分詞是 left；leaved 這個字不存在。忘記帶鑰匙比進不去更早，所以用 had left。"
+    },
+    {
+      "q": "Which sentence is correct?",
+      "qCn": "哪一句是正確的？（意思都是：他已經去看過醫生了。）",
+      "opts": [
+        "A. He had went to the doctor.",
+        "B. He had gone to the doctor.",
+        "C. He had go to the doctor.",
+        "D. He have gone to the doctor."
+      ],
+      "ans": 1,
+      "expl": "had 後面要接過去分詞 gone。A用了過去式 went，C用了原形 go，D的 have 配不上過去的基準點。"
+    },
+    {
+      "q": "We ___ just sat down when the phone rang.",
+      "qCn": "我們剛坐下，電話就響了。",
+      "opts": [
+        "A. have",
+        "B. had",
+        "C. has",
+        "D. was"
+      ],
+      "ans": 1,
+      "expl": "電話響是主時間點，坐下比它更早，而且整段都在過去，所以用 had。just 要夾在 had 和 sat 中間。"
+    }
+  ]
+},
+{
+  "id": "dg20260929b1",
+  "date": "2026-09-29",
+  "unitNo": 15,
+  "level": "B1",
+  "title": "Past Perfect or Past Simple? Find the Main Moment",
+  "titleCn": "had done 還是 did？先找出主時間點",
+  "srcDays": [],
+  "summary": "一段過去的故事裡先挑出「主時間點」，只有比它更早的事才退一格用 had done，其餘一律留在過去簡單式。",
+  "sections": [
+    {
+      "h": "先找主時間點，再決定誰退格",
+      "body": "過去完成式不是「更久以前」的意思，而是「比我正在講的那一刻更早」。所以順序是：先問自己這段話的主時間點在哪裡，再看有沒有東西比它更早。沒有主時間點，退格就沒有意義。",
+      "table": {
+        "head": [
+          "主時間點（過去式）",
+          "更早的事（had + 過去分詞）",
+          "為什麼退格"
+        ],
+        "rows": [
+          [
+            "I opened the email.",
+            "She had sent it on Friday.",
+            "寄信比我打開更早"
+          ],
+          [
+            "The meeting started at nine.",
+            "Two people had already left.",
+            "離開比開會更早"
+          ],
+          [
+            "He apologised.",
+            "He had forgotten her birthday.",
+            "忘記比道歉更早"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The room was empty because the class had ended twenty minutes earlier.",
+          "cn": "教室是空的，因為那堂課二十分鐘前就下課了。",
+          "note": "主時間點是「教室是空的」，下課比它更早"
+        },
+        {
+          "en": "She did not recognise the building, because the owners had painted it grey.",
+          "cn": "她認不出那棟樓，因為屋主把它漆成灰色了。",
+          "note": "漆牆比認不出更早"
+        },
+        {
+          "en": "By the time the bus came, everyone had put their umbrellas away.",
+          "cn": "公車來的時候，大家都已經把傘收起來了。",
+          "note": "by the time 後面那一句就是主時間點"
+        }
+      ]
+    },
+    {
+      "h": "before 和 after 會讓退格變成可有可無",
+      "bullets": [
+        "before 和 after 本身已經把順序講清楚了，這時兩個動詞都用過去式也完全正確",
+        "沒有 before、after 這種字的時候，退格就是你唯一的工具，不能省",
+        "退格加上 before 或 after，語氣會更強調「早就」，寫作時可以自己選"
+      ],
+      "examples": [
+        {
+          "en": "After she signed the contract, she took a long holiday.",
+          "cn": "簽完合約之後，她放了一個長假。",
+          "note": "after 已經說了順序，兩邊都用過去式也可以"
+        },
+        {
+          "en": "She took a long holiday; she had signed the contract that morning.",
+          "cn": "她放了一個長假；合約是那天早上簽的。",
+          "note": "沒有 after 了，只能靠 had signed 交代順序"
+        }
+      ]
+    },
+    {
+      "h": "退格最常出現的三個位置",
+      "table": {
+        "head": [
+          "位置",
+          "作用",
+          "例句"
+        ],
+        "rows": [
+          [
+            "because 子句",
+            "解釋主句為什麼會那樣",
+            "The road was flooded because it had rained all night."
+          ],
+          [
+            "by the time 子句",
+            "強調「等到那時候，事情早就」",
+            "By the time we voted, he had withdrawn."
+          ],
+          [
+            "關係子句",
+            "補充某個名詞更早的背景",
+            "The manager who had signed the order was on leave."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The shelves were bare because shoppers had cleared them before lunch.",
+          "cn": "架上空空的，因為顧客午餐前就把東西掃光了。",
+          "note": "原因通常比結果更早，所以 because 後面很常退格"
+        }
+      ]
+    },
+    {
+      "h": "退格也有被動：had been 加過去分詞",
+      "bullets": [
+        "形式是 had been 加過去分詞，用在「更早那件事不想點名是誰做的」",
+        "新聞、稽核報告特別常用，因為執行者往往不重要或不方便寫出來",
+        "中間那個過去分詞不能漏，寫成 had been remove 是最常見的打字錯誤"
+      ],
+      "examples": [
+        {
+          "en": "The samples had been moved before the auditor reached the shelf.",
+          "cn": "稽核員走到架子前，樣品就已經被移走了。",
+          "note": "誰移走的不重要，所以用被動"
+        },
+        {
+          "en": "Nobody could explain why the file had been deleted.",
+          "cn": "沒有人能解釋那個檔案為什麼被刪掉了。",
+          "note": "刪檔比「沒人能解釋」更早，而且不知道是誰刪的"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I already ate when she invited me.",
+      "good": "I had already eaten when she invited me.",
+      "why": "中文的「我已經吃過了」只需要一個「已經」，所以學生常常把 already 加上去就交差。英文的 already 只是副詞，順序是靠 had eaten 這個形狀寫死的。這一句沒有 before 或 after 幫忙，退格就不能省。"
+    },
+    {
+      "bad": "When I had opened the door, the dog had run out.",
+      "good": "When I opened the door, the dog ran out.",
+      "why": "這兩件事是接連發生的，讀者本來就知道先開門才有狗跑出來，不需要任何退格。過去完成式是用來「打破時間順序」的工具；沒有要打破順序卻硬用，句子會變得很奇怪。"
+    },
+    {
+      "bad": "She had worked here for six years and she still works here.",
+      "good": "She has worked here for six years.",
+      "why": "had done 的基準點在過去，have done 的基準點在現在。既然她現在還在這裡工作，就要用 has worked。把 had 和「到現在為止」放在同一句，是中文母語者最常見的時態混用。"
+    },
+    {
+      "bad": "The report had been finish before the deadline.",
+      "good": "The report had been finished before the deadline.",
+      "why": "被動的退格是 had been 加過去分詞，三個零件缺一不可。中文的「被完成」只有一個字，英文卻要 had、been、finished 三塊，所以中間或最後那塊最容易掉。寫完唸一次，聽到 been 後面沒有 -ed 或不規則分詞就是漏了。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The street looked different because the city ___ new trees along it.",
+      "qCn": "那條街看起來不一樣了，因為市政府沿街種了新的樹。",
+      "opts": [
+        "A. plants",
+        "B. has planted",
+        "C. had planted",
+        "D. was planting"
+      ],
+      "ans": 2,
+      "expl": "主時間點是「街看起來不一樣」（過去式 looked），種樹比它更早，所以退一格用 had planted。has planted 的基準點在現在，跟 looked 對不上。"
+    },
+    {
+      "q": "Which sentence does not need the past perfect?",
+      "qCn": "哪一句其實不需要用過去完成式？",
+      "opts": [
+        "A. He was late because the alarm had failed.",
+        "B. She picked up her bag and walked out.",
+        "C. The flight had boarded when we got to the gate.",
+        "D. They had booked the room before the price rose."
+      ],
+      "ans": 1,
+      "expl": "B的兩個動作照時間順序寫下來，讀者自然知道先後，不必退格。其他三句都需要交代「更早發生」的那一件。"
+    },
+    {
+      "q": "By the time the inspector arrived, the line ___ for two hours.",
+      "qCn": "稽核員到的時候，那條產線已經停了兩個小時。",
+      "opts": [
+        "A. has stopped",
+        "B. had been stopped",
+        "C. is stopped",
+        "D. stops"
+      ],
+      "ans": 1,
+      "expl": "停線比稽核員抵達更早，而且不點名是誰停的，所以用被動的退格 had been stopped。had been 後面一定要有過去分詞。"
+    },
+    {
+      "q": "She ___ in this office since March, and she is still here.",
+      "qCn": "她從三月就在這間辦公室，而且現在還在。",
+      "opts": [
+        "A. had worked",
+        "B. has worked",
+        "C. worked",
+        "D. had been working"
+      ],
+      "ans": 1,
+      "expl": "句子最後說她現在還在，基準點就是現在，要用 has worked。had 系列的基準點都在過去，會讓人以為她早就離開了。"
+    }
+  ]
+},
+{
+  "id": "dg20260929b1p",
+  "date": "2026-09-29",
+  "unitNo": 16,
+  "level": "B1+",
+  "title": "Past Perfect Continuous: How Long It Had Been Going On",
+  "titleCn": "had been doing：那一刻之前已經持續了多久",
+  "srcDays": [],
+  "summary": "had been 加 V-ing 講的是「在過去某一個時間點之前，這件事已經進行了一段時間」，重點在持續的長度與留下的痕跡，不在完成。",
+  "sections": [
+    {
+      "h": "三塊零件：had + been + V-ing",
+      "body": "這個時態的形狀固定，缺一塊都不行。had 負責把基準點退到過去，been 負責接進行式，V-ing 負責說明那段時間在做什麼。主詞是誰都不影響，had 和 been 永遠不變。",
+      "table": {
+        "head": [
+          "原形",
+          "had done（只講結果）",
+          "had been doing（講持續）"
+        ],
+        "rows": [
+          [
+            "wait",
+            "had waited",
+            "had been waiting"
+          ],
+          [
+            "rain",
+            "had rained",
+            "had been raining"
+          ],
+          [
+            "test",
+            "had tested",
+            "had been testing"
+          ],
+          [
+            "work",
+            "had worked",
+            "had been working"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The pump had been running since eight when the alarm went off.",
+          "cn": "警報響的時候，那台泵已經從八點開始一直運轉了。",
+          "note": "since 給起點，had been running 給整段過程"
+        },
+        {
+          "en": "He was out of breath because he had been running up the stairs.",
+          "cn": "他喘不過氣，因為他一路跑上樓梯。",
+          "note": "喘氣是「一直跑」留下的痕跡"
+        },
+        {
+          "en": "They had been arguing about the schedule for twenty minutes before anyone opened a file.",
+          "cn": "在有人打開檔案之前，他們已經為了時程吵了二十分鐘。",
+          "note": "for 加長度，是這個時態最常見的搭配"
+        }
+      ]
+    },
+    {
+      "h": "什麼時候選它，什麼時候選 had done",
+      "bullets": [
+        "看得見的痕跡（喘氣、濕掉的地面、寫滿的白板）是「一直在做」留下來的，這時用 had been doing",
+        "只想說「那件事做完了」或「做過幾次」，用 had done，次數和完成都不需要進行式",
+        "句子裡出現時間長度（for two hours、all morning、since six），had been doing 幾乎一定比較自然",
+        "兩者都合理的時候，問自己讀者需要的是「過程」還是「成果」，再決定"
+      ],
+      "examples": [
+        {
+          "en": "The whiteboard was full because they had been planning all afternoon.",
+          "cn": "白板寫滿了，因為他們整個下午都在規劃。",
+          "note": "白板的狀態是過程的痕跡"
+        },
+        {
+          "en": "The whiteboard was clean because someone had wiped it.",
+          "cn": "白板很乾淨，因為有人擦過了。",
+          "note": "這裡要的是成果，不是過程"
+        }
+      ]
+    },
+    {
+      "h": "最常搭配的三種時間說法",
+      "table": {
+        "head": [
+          "說法",
+          "例句",
+          "重點"
+        ],
+        "rows": [
+          [
+            "for + 長度",
+            "She had been queueing for an hour.",
+            "講的是長度，不是次數"
+          ],
+          [
+            "since + 起點",
+            "We had been waiting since six.",
+            "起點更早，一路持續到主時間點"
+          ],
+          [
+            "all + 時段",
+            "It had been raining all morning.",
+            "整段時間都在進行"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The path was soft because it had been raining all morning.",
+          "cn": "步道很鬆軟，因為整個早上都在下雨。",
+          "note": "all morning 這種說法幾乎只配進行式"
+        }
+      ]
+    },
+    {
+      "h": "有些動詞沒有進行式",
+      "bullets": [
+        "know、own、belong、understand 這類狀態動詞沒有進行式，只能寫 had known、had owned",
+        "所以「他在那之前已經認識她十年了」是 He had known her for ten years，不是 had been knowing",
+        "live、work、study 兩種都可以，had lived 和 had been living 意思差別很小，只是後者更強調過程",
+        "want、need、hate 也一樣：用 had wanted、had needed，不要加 -ing"
+      ],
+      "examples": [
+        {
+          "en": "She had owned the shop for nine years before she sold it.",
+          "cn": "她賣掉那家店之前，已經擁有它九年了。",
+          "note": "own 是狀態動詞，不能寫 had been owning"
+        },
+        {
+          "en": "They had been living in Hanoi for three years when the office moved.",
+          "cn": "辦公室搬遷的時候，他們已經在河內住了三年。",
+          "note": "live 兩種都可以，這裡用進行式強調那段生活"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "He had been knowing her for ten years.",
+      "good": "He had known her for ten years.",
+      "why": "中文的「一直認識」聽起來很自然，所以學生會直覺加 -ing。但 know 是狀態動詞，英文認為「知道」本身就是持續的狀態，不需要再用進行式標一次。同一類的還有 own、belong、understand、want。"
+    },
+    {
+      "bad": "She had been finishing the report before the meeting.",
+      "good": "She had finished the report before the meeting.",
+      "why": "finish 是一瞬間完成的動作，加上進行式會變成「一直在完成」，語意打架。凡是 finish、arrive、start、break 這種一次結束的動詞，通常都用 had done。想強調過程就換動詞，例如 had been writing the report。"
+    },
+    {
+      "bad": "I have been waiting for an hour when the doctor called me in.",
+      "good": "I had been waiting for an hour when the doctor called me in.",
+      "why": "have been doing 的基準點在現在，但後半的 called 已經把整段話釘在過去了，兩個基準點會打架。只要句子裡有一個過去的主時間點，前面那段就要退成 had been doing。"
+    },
+    {
+      "bad": "The road was wet because it had been rain.",
+      "good": "The road was wet because it had been raining.",
+      "why": "三塊零件裡最容易掉的是最後那個 -ing。been 後面如果接原形或名詞，句子就散了。寫完唸一次，聽到 been 後面沒有 -ing，就知道漏了一塊。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The kitchen smelled wonderful because she ___ bread all morning.",
+      "qCn": "廚房聞起來很香，因為她整個早上都在烤麵包。",
+      "opts": [
+        "A. baked",
+        "B. had baked",
+        "C. had been baking",
+        "D. has been baking"
+      ],
+      "ans": 2,
+      "expl": "香味是「一直烤」留下的痕跡，而且有 all morning 這種長度說法，所以用 had been baking。has been baking 的基準點在現在，跟 smelled 對不上。"
+    },
+    {
+      "q": "By the time the inspector left, the team ___ the same valve four times.",
+      "qCn": "稽核員離開的時候，那個團隊已經測過同一顆閥四次了。",
+      "opts": [
+        "A. had tested",
+        "B. had been testing",
+        "C. has tested",
+        "D. was testing"
+      ],
+      "ans": 0,
+      "expl": "four times 講的是次數，不是長度，次數要用 had tested。had been testing 會變成強調他們一直在測，卻說不出測了幾次。"
+    },
+    {
+      "q": "Which sentence is wrong?",
+      "qCn": "哪一句是錯的？",
+      "opts": [
+        "A. They had been waiting since noon.",
+        "B. He had been owning that car for years.",
+        "C. It had been snowing all night.",
+        "D. She had been studying in Tainan."
+      ],
+      "ans": 1,
+      "expl": "own 是狀態動詞，沒有進行式，要寫 had owned that car for years。其他三句的動詞都可以用進行式。"
+    },
+    {
+      "q": "We ___ for the shuttle for forty minutes when the driver finally called.",
+      "qCn": "司機終於打來的時候，我們已經等接駁車等了四十分鐘。",
+      "opts": [
+        "A. have been waiting",
+        "B. had been waiting",
+        "C. were waiting",
+        "D. had waited"
+      ],
+      "ans": 1,
+      "expl": "called 把主時間點定在過去，而 for forty minutes 是長度，所以用 had been waiting。were waiting 只說當下在等，講不出從更早就開始等。"
+    }
+  ]
+},
+{
+  "id": "dg20260929b2",
+  "date": "2026-09-29",
+  "unitNo": 16,
+  "level": "B2",
+  "title": "had been doing vs had done: Cause, Duration and Tone",
+  "titleCn": "had been doing 與 had done：原因、時長與語氣怎麼選",
+  "srcDays": [],
+  "summary": "同一組事實，選 had been doing 是把讀者的注意力放在「持續了多久、因此累積出什麼」，選 had done 是放在結果本身；在報告、新聞與敘事裡，這個選擇會直接改變責任與因果讀起來的味道。",
+  "sections": [
+    {
+      "h": "同一組事實，兩種寫法",
+      "body": "到了這個階段，兩種形式通常都沒有文法錯誤，差別在你要讀者看見什麼。把同一件事寫成兩句擺在一起，差異會很明顯：一邊是一段時間，一邊是一個句點。",
+      "table": {
+        "head": [
+          "had been doing（過程）",
+          "had done（結果）",
+          "讀起來的差別"
+        ],
+        "rows": [
+          [
+            "Costs had been rising for three quarters.",
+            "Costs had risen by nine percent.",
+            "左邊給趨勢，右邊給數字"
+          ],
+          [
+            "The valve had been leaking since August.",
+            "The valve had failed twice.",
+            "左邊暗示早該發現，右邊只是紀錄"
+          ],
+          [
+            "She had been asking for more staff.",
+            "She had asked for more staff.",
+            "左邊有反覆與未被回應的意味"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Complaints had been arriving all quarter, but the summary showed only the final total.",
+          "cn": "整季都陸續有客訴進來，但摘要上只看得到最後的總數。",
+          "note": "前半用過程點出「一直在發生」，後半用名詞收成結果"
+        },
+        {
+          "en": "The supplier had missed two deliveries, and nobody connected the two dates.",
+          "cn": "那家供應商漏送過兩次，卻沒有人把兩個日期連起來看。",
+          "note": "次數用 had done，因為重點是事件，不是時長"
+        },
+        {
+          "en": "Temperatures had been climbing since the middle of August, which no weekly summary flagged.",
+          "cn": "氣溫從八月中就一路往上爬，而這件事沒有任何一份週報標示出來。",
+          "note": "since 加過程，最適合寫「累積型」的原因"
+        }
+      ]
+    },
+    {
+      "h": "為什麼調查報告偏好 had been doing",
+      "bullets": [
+        "它把一個時間長度攤在讀者眼前，長度本身就是論點：問題不是突然發生的",
+        "因此它常帶有隱含的責備——有人本來有時間發現卻沒有發現",
+        "如果不想暗示責任，就改用 had done 只寫結果，或把長度改寫成中性的名詞片語",
+        "寫給客戶或上級時，這個選擇要刻意做，不要憑手感"
+      ],
+      "examples": [
+        {
+          "en": "The line had been losing four hours a week to rework before anyone raised it.",
+          "cn": "在有人提出來之前，那條產線每週已經因為重工損失四小時。",
+          "note": "before anyone raised it 讓那段長度變成一句無聲的批評"
+        },
+        {
+          "en": "Four hours a week had been lost to rework over the same period.",
+          "cn": "同一段期間內，每週有四小時因為重工而損失。",
+          "note": "改成被動、拿掉 before 子句，責備的味道就淡了"
+        }
+      ]
+    },
+    {
+      "h": "語域：什麼時候該收斂",
+      "table": {
+        "head": [
+          "場合",
+          "偏好",
+          "理由"
+        ],
+        "rows": [
+          [
+            "事故調查、稽核發現",
+            "had been doing",
+            "要讓時間長度本身說話"
+          ],
+          [
+            "對外新聞稿、客戶信",
+            "had done 或被動",
+            "只交代結果，不暗示誰失職"
+          ],
+          [
+            "小說與敘事",
+            "兩者交替",
+            "過程鋪氣氛，結果收句點"
+          ],
+          [
+            "會議紀錄",
+            "had done",
+            "紀錄要短，過程留給討論"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Water had been seeping under the door for weeks before the floor buckled.",
+          "cn": "地板拱起來之前，水已經從門下滲進來好幾個星期了。",
+          "note": "敘事用過程鋪陳，讀者會預期後面有代價"
+        },
+        {
+          "en": "Repairs had been completed before the inspection began.",
+          "cn": "查核開始之前，修繕已經完成了。",
+          "note": "對外文件用被動加 had done，乾淨俐落"
+        }
+      ]
+    },
+    {
+      "h": "兩種形式在同一段落裡的節奏",
+      "bullets": [
+        "常見的寫法是：先用 had been doing 鋪一段時間，再用 had done 給一個句點，最後回到過去簡單式講主線",
+        "整段都用進行式會讓讀者失去落點，整段都用結果式又讀不出因果",
+        "同一段裡不要超過兩個退格結構，太多會讓主時間點消失",
+        "寫完檢查一次：這一段的主時間點還找得到嗎"
+      ],
+      "examples": [
+        {
+          "en": "Pressure had been building for months; two seals had already gone; the shift supervisor shut the line at dawn.",
+          "cn": "壓力累積了好幾個月；兩個密封件已經壞掉；領班在天亮時停了線。",
+          "note": "過程、結果、主線各一句，節奏最穩"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "The customer had been receiving the wrong part, so we apologised in the press release.",
+      "good": "The customer had received the wrong part, so we apologised in the press release.",
+      "why": "文法上兩句都對，但對外文件用 had been receiving 等於昭告「這件事持續了一段時間」，等於自己遞出一段可以被追問的期間。對外只交代結果，過程留在內部報告裡。這是語域判斷，不是對錯判斷。"
+    },
+    {
+      "bad": "Sales had been dropping by twelve percent.",
+      "good": "Sales had dropped by twelve percent.",
+      "why": "by twelve percent 是一個完成的數字，配上強調持續的進行式會互相打架。要講趨勢就寫 Sales had been dropping for three quarters，要講幅度就寫 had dropped by twelve percent，不要把長度和幅度塞進同一個動詞。"
+    },
+    {
+      "bad": "The plant had been operating since 2019 and it operates today.",
+      "good": "The plant has been operating since 2019.",
+      "why": "had 系列的基準點一定在過去。既然這句話要講「到今天為止」，基準點就在現在，要用 has been operating。中文的「從2019年營運到現在」沒有形狀上的提示，所以這個錯誤在中文母語者身上特別頑固。"
+    },
+    {
+      "bad": "Costs had been rising, staff had been leaving, deliveries had been slipping, and morale had been falling.",
+      "good": "Costs had been rising and staff had been leaving; deliveries slipped and morale fell with them.",
+      "why": "四個退格的進行式連在一起，讀者會找不到主時間點，整段像懸在半空。挑最重要的一兩件退格，其餘拉回過去簡單式，段落才有落點。這是節奏問題，考試不會扣分，但讀者會讀得很累。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "An internal audit report would most likely say: the seal ___ for six weeks before the leak was reported.",
+      "qCn": "一份內部稽核報告最可能這樣寫：那個密封件在漏液被通報之前，已經滲漏六週了。",
+      "opts": [
+        "A. had been leaking",
+        "B. had leaked",
+        "C. has been leaking",
+        "D. was leaking"
+      ],
+      "ans": 0,
+      "expl": "稽核報告要讓「六週」這個長度說話，所以用 had been leaking。had leaked 只給結果，反而弱化了報告的重點；has been leaking 的基準點在現在，跟 was reported 對不上。"
+    },
+    {
+      "q": "Which version is better for a press release?",
+      "qCn": "哪一個版本比較適合用在新聞稿？",
+      "opts": [
+        "A. Customers had been receiving incorrect statements for months.",
+        "B. Incorrect statements had been issued and have now been corrected.",
+        "C. We had been failing to check the statements.",
+        "D. Nobody had been reading the statements."
+      ],
+      "optsCn": [
+        "A. 客戶好幾個月以來一直收到錯誤的對帳單。",
+        "B. 先前曾發出錯誤的對帳單，目前皆已更正。",
+        "C. 我們一直沒有去檢查那些對帳單。",
+        "D. 沒有人一直在看那些對帳單。"
+      ],
+      "ans": 1,
+      "expl": "B用被動加結果式，交代事實也交代補救，不主動遞出一段可以被追問的期間。A和C都把持續的時間或失職寫進去，D則把責任推給客戶。"
+    },
+    {
+      "q": "Profits ___ by nine percent, which the board had not expected.",
+      "qCn": "獲利下滑了百分之九，這是董事會沒有預料到的。",
+      "opts": [
+        "A. had been falling",
+        "B. had fallen",
+        "C. have fallen",
+        "D. had been fallen"
+      ],
+      "ans": 1,
+      "expl": "by nine percent 是完成的幅度，要配 had fallen。had been falling 適合講趨勢而不是幅度；had been fallen 把不及物動詞硬做成被動，不成立。"
+    },
+    {
+      "q": "In a novel, which sentence best builds tension before something breaks?",
+      "qCn": "在小說裡，哪一句最適合在東西壞掉之前鋪陳張力？",
+      "opts": [
+        "A. The roof had leaked.",
+        "B. Water had been finding its way in all winter.",
+        "C. The roof was old.",
+        "D. Someone had fixed the roof."
+      ],
+      "optsCn": [
+        "A. 屋頂漏過水。",
+        "B. 整個冬天，水一直在找路滲進來。",
+        "C. 屋頂很舊。",
+        "D. 有人修過屋頂。"
+      ],
+      "ans": 1,
+      "expl": "B用 had been finding 把一整個冬天攤開，讀者會預期後面有代價。A只給一個結果，C是靜態描述，D的方向完全相反。"
+    }
+  ]
+},
 {
   "id": "dg20260925a2",
   "date": "2026-09-25",

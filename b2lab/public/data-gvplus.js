@@ -33,6 +33,692 @@
    ============================================================ */
 window.GVPLUS = {
 
+/* ---------- 2026-09-29 每日文法（過去完成式與過去完成進行式） ---------- */
+"dg20260929a2": {
+  "vis": true,
+  "oneLine": "兩件事都在過去，先發生的那一件要換個形狀——had 加過去分詞，順序就不必再用嘴巴解釋。",
+  "map": {
+    "when": "講一段過去的事，而其中一件比另一件更早發生的時候",
+    "why": "中文靠「已經」「先」這種副詞排順序，英文是直接換動詞的形狀，不換就等於沒排",
+    "form": "先發生：had + 過去分詞　|　後發生：動詞過去式"
+  },
+  "visual": {
+    "type": "chain",
+    "cap": "從左到右四塊：主詞、永遠不變的 had、過去分詞，最後接上後發生的那一件事。中間兩塊合起來就是「更早」的記號，右邊三個變化版分別是否定、already 的位置，以及後半句為什麼不用退格。",
+    "links": [
+      {
+        "t": "The film",
+        "c": "主詞",
+        "role": "subj"
+      },
+      {
+        "t": "had",
+        "c": "助動詞，永遠不變",
+        "role": "glue"
+      },
+      {
+        "t": "started",
+        "c": "過去分詞",
+        "role": "verb"
+      },
+      {
+        "t": "when we found our seats",
+        "c": "後發生的那件事",
+        "role": "plain"
+      }
+    ],
+    "eg": {
+      "en": "The film had started when we found our seats.",
+      "cn": "我們找到座位的時候，電影已經開始了。"
+    },
+    "variants": [
+      {
+        "k": "否定：not 插在 had 後面",
+        "en": "The film had not started yet.",
+        "cn": "電影還沒開始。"
+      },
+      {
+        "k": "already 也放在中間",
+        "en": "The film had already started.",
+        "cn": "電影已經開始了。"
+      },
+      {
+        "k": "後發生的那一句不退格",
+        "en": "We found our seats and sat down.",
+        "cn": "我們找到座位就坐下了。"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "home",
+      "icon": "house",
+      "title": "回到家",
+      "titleCn": "先發生的加 had",
+      "ask": "為什麼「我到家」和「他去睡」不能都用過去式？",
+      "en": "My brother had gone to bed when I got home.",
+      "cn": "我到家的時候，我弟已經去睡了。",
+      "why": "兩個動詞都用過去式的話，聽起來像我一進門他正好走去睡。把更早的那件事換成 had gone，順序就固定住了：他先睡，我後到。英文靠動詞的形狀排順序，不靠副詞。"
+    },
+    {
+      "key": "late",
+      "icon": "clock",
+      "title": "遲到",
+      "titleCn": "already 放中間",
+      "ask": "already 應該放在句子的哪個位置？",
+      "en": "The class had already begun when he opened the door.",
+      "cn": "他開門的時候，課已經開始了。",
+      "why": "already 夾在 had 和過去分詞中間，不要放句尾。放中間是英文的習慣位置，放句尾雖然聽得懂，但在寫作裡會被當成不自然。真正表示「先發生」的還是 had begun 這個形狀，already 只是加強語氣。"
+    },
+    {
+      "key": "read",
+      "icon": "book",
+      "title": "讀過了",
+      "titleCn": "never 也放中間",
+      "ask": "「在那之前從來沒有」要怎麼講？",
+      "en": "I had never tried mango before that trip.",
+      "cn": "在那趟旅行之前，我從來沒吃過芒果。",
+      "why": "before that trip 把基準點放在過去的某一趟旅行，never 講的是「在那之前」。如果講的是「到現在為止從來沒有」，就要改成 I have never tried mango。差別只在 had 和 have，基準點卻完全不同。"
+    },
+    {
+      "key": "both",
+      "icon": "cross",
+      "title": "不要兩邊都退",
+      "titleCn": "一句只退一格",
+      "ask": "為什麼不能兩個動詞都用 had？",
+      "en": "After she had washed the dishes, she watched TV.",
+      "cn": "她洗完碗之後就去看電視了。",
+      "why": "只有更早的那件事需要退一格。後發生的那一件是整段話的基準點，留在過去式就好。兩邊都寫 had，讀者會找不到基準點在哪裡，句子讀起來就像沒有結尾。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你想說：我到公車站的時候，公車已經走了。"
+    },
+    {
+      "label": "先找後發生的那一件",
+      "text": "「我到公車站」是後發生的，這一句留在過去式：I got to the bus stop."
+    },
+    {
+      "label": "再找先發生的那一件",
+      "text": "「公車走了」比較早，所以退一格：the bus had gone."
+    },
+    {
+      "label": "接起來",
+      "text": "The bus had gone when I got to the bus stop."
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "錯誤版：The bus had gone when I had got to the bus stop. 後半不需要退格，退了就沒有基準點。"
+    }
+  ],
+  "comparison": {
+    "title": "退一格 vs 留在過去式",
+    "left": {
+      "tag": "HAD DONE",
+      "tagCn": "先發生",
+      "icon": "arrow",
+      "head": "the earlier action",
+      "headCn": "比較早的那一件",
+      "en": "The rain had stopped.",
+      "cn": "雨已經停了。",
+      "pts": [
+        "形式是 had 加過去分詞",
+        "主詞是誰都用 had，不用改",
+        "already、never、just 夾在中間"
+      ]
+    },
+    "right": {
+      "tag": "DID",
+      "tagCn": "後發生",
+      "icon": "pin",
+      "head": "the moment you are telling",
+      "headCn": "你正在講的那一刻",
+      "en": "We walked to school.",
+      "cn": "我們走路去學校。",
+      "pts": [
+        "用一般過去式就好",
+        "是整段話的基準點",
+        "不要跟著退格，退了就沒基準"
+      ]
+    },
+    "note": "口訣：先發生的加 had，後發生的不加；一個句子裡通常只有一個 had。"
+  },
+  "quizMore": [
+    {
+      "q": "We ___ the tickets before the show sold out.",
+      "opts": [
+        "have bought",
+        "had bought",
+        "buy",
+        "buying"
+      ],
+      "ans": 1,
+      "expl": "買票比賣完更早，整段又都在過去，所以退一格用 had bought。"
+    },
+    {
+      "q": "Which sentence does not need had?",
+      "opts": [
+        "A. He had eaten before we arrived.",
+        "B. She opened the box and looked inside.",
+        "C. The shop had shut when we came.",
+        "D. They had paid before the price went up."
+      ],
+      "ans": 1,
+      "expl": "B的兩個動作照順序發生，讀者自然知道先後，不必退格。"
+    }
+  ]
+},
+
+"dg20260929b1": {
+  "vis": true,
+  "oneLine": "退格不是為了表示「很久以前」，而是為了打破順序——先釘住主時間點，才知道誰有資格退。",
+  "map": {
+    "when": "一段過去的敘述裡，你想先講結果、後補原因，或是想把背景塞進子句的時候",
+    "why": "英文沒有語助詞可以標順序，一旦不照時間先後寫，就得靠 had done 把「更早」寫死",
+    "form": "主時間點：動詞過去式　|　更早的事：had + 過去分詞"
+  },
+  "visual": {
+    "type": "shift",
+    "cap": "上排是照時間順序寫的版本，下排是把同一組事實倒過來寫。內容完全沒變，只是把更早的那一句退一格，讀者第一眼看到的東西就從「原因」換成了「結果」。",
+    "rows": [
+      {
+        "a": "It rained all night and the road flooded.",
+        "b": "The road was flooded; it had rained all night.",
+        "nt": "上排像記流水帳，下排先給讀者最重要的畫面"
+      },
+      {
+        "a": "She sent the file on Friday and I opened it on Monday.",
+        "b": "I opened the file on Monday; she had sent it on Friday.",
+        "nt": "退格之後，主角從寄件者換成我"
+      },
+      {
+        "a": "He forgot her birthday, so he apologised.",
+        "b": "He apologised because he had forgotten her birthday.",
+        "nt": "原因塞進 because 子句，主句留給道歉本身"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "why",
+      "icon": "key",
+      "title": "解釋原因",
+      "titleCn": "because 後面退一格",
+      "ask": "為什麼原因子句那麼常退格？",
+      "en": "The tap water tasted odd because the building had changed its filter.",
+      "cn": "自來水味道怪怪的，因為那棟樓換過濾芯了。",
+      "why": "原因幾乎一定發生在結果之前。主句 tasted odd 是主時間點，留在過去式；換濾芯更早，所以退格。中文的因果不用改動詞，英文卻靠這個形狀把時間差寫死，省下一整句解釋。"
+    },
+    {
+      "key": "deadline",
+      "icon": "calendar",
+      "title": "等到那時候",
+      "titleCn": "by the time 的固定搭配",
+      "ask": "by the time 後面該用哪一種時態？",
+      "en": "By the time the shuttle arrived, half the group had taken a taxi.",
+      "cn": "接駁車到的時候，一半的人已經去搭計程車了。",
+      "why": "by the time 引導的那一句就是主時間點，用過去式；主句才是更早發生的事，要退格。很多人把兩邊搞反，寫成 By the time the shuttle had arrived，順序就被寫顛倒了。"
+    },
+    {
+      "key": "who",
+      "icon": "person",
+      "title": "補充背景",
+      "titleCn": "關係子句裡的退格",
+      "ask": "怎麼把一個人更早的事塞進句子裡？",
+      "en": "The engineer who had signed the order was on leave that week.",
+      "cn": "簽那張單的工程師那一週請假。",
+      "why": "簽單比請假更早，所以關係子句裡退格。這樣可以不必另外寫一句 He signed the order earlier，主線 The engineer was on leave 也不會被打斷。B2 寫作很吃這種把背景折疊起來的能力。"
+    },
+    {
+      "key": "noneed",
+      "icon": "check",
+      "title": "不必退的時候",
+      "titleCn": "照順序就好",
+      "ask": "什麼情況下其實不用 had done？",
+      "en": "She locked the office, walked to the station and caught the last train.",
+      "cn": "她鎖上辦公室、走去車站，趕上了最後一班車。",
+      "why": "三件事本來就照時間順序寫下來，讀者自然知道先後，全部用過去式最乾淨。過去完成式是用來打破順序的工具；沒有要打破順序還硬用，反而讓讀者一直在找那個不存在的主時間點。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要在信裡寫：我回信的時候，那份報價單早就過期了。"
+    },
+    {
+      "label": "釘住主時間點",
+      "text": "「我回信」是你正在講的那一刻，留在過去式：I replied."
+    },
+    {
+      "label": "找出更早的那件事",
+      "text": "報價過期比回信更早，所以退一格：the quotation had expired."
+    },
+    {
+      "label": "接起來並選連接詞",
+      "text": "The quotation had expired by the time I replied."
+    },
+    {
+      "label": "換個說法",
+      "text": "也可以寫成 I replied late, and by then the quotation had expired. 兩句都對，只是第二種把責任講得更明白。"
+    }
+  ],
+  "comparison": {
+    "title": "主時間點 vs 更早的事",
+    "left": {
+      "tag": "DID",
+      "tagCn": "主時間點",
+      "icon": "pin",
+      "head": "the moment you are telling",
+      "headCn": "你正在講的那一刻",
+      "en": "The manager called at four.",
+      "cn": "經理四點打了電話。",
+      "pts": [
+        "整段敘述的基準點",
+        "一段話裡通常只有一條主線",
+        "用過去簡單式就好"
+      ]
+    },
+    "right": {
+      "tag": "HAD DONE",
+      "tagCn": "更早的事",
+      "icon": "arrow",
+      "head": "before that moment",
+      "headCn": "比那一刻更早",
+      "en": "The team had left for lunch.",
+      "cn": "團隊已經去吃午餐了。",
+      "pts": [
+        "常配 already、never、just、by the time",
+        "用來解釋主句為什麼會那樣",
+        "被動是 had been 加過去分詞"
+      ]
+    },
+    "note": "判斷口訣：先找主時間點，只有比它更早的才退一格，其他一律留在過去簡單式。"
+  },
+  "quizMore": [
+    {
+      "q": "The office was silent because everyone ___ to the fire drill.",
+      "opts": [
+        "goes",
+        "had gone",
+        "has gone",
+        "was going"
+      ],
+      "ans": 1,
+      "expl": "去演練比「辦公室很安靜」更早，整段又都在過去，所以退一格用 had gone。"
+    },
+    {
+      "q": "By the time the audit ___, the paperwork had been filed.",
+      "opts": [
+        "had started",
+        "started",
+        "starts",
+        "has started"
+      ],
+      "ans": 1,
+      "expl": "by the time 那一句是主時間點，用過去式 started；退格的是主句的 had been filed。"
+    }
+  ]
+},
+
+"dg20260929b1p": {
+  "vis": true,
+  "oneLine": "had done 給你一個句點，had been doing 給你一段長度——問問自己讀者需要看到哪一個。",
+  "map": {
+    "when": "過去某一刻之前，有件事已經持續了一段時間，而那段時間留下了看得見的痕跡",
+    "why": "英文用動詞的形狀區分「做完了」和「一直在做」，中文兩者都說「已經」，所以要特別練",
+    "form": "had + been + V-ing　|　常配 for + 長度、since + 起點、all + 時段"
+  },
+  "visual": {
+    "type": "timeline",
+    "cap": "線上有兩種東西：一段一段的是持續，用 had been doing；單獨的點是完成，用 had done。兩者都往回連到中間那個主時間點，而不是連到 NOW。看一個句子要畫成段還是畫成點，動詞就怎麼寫。",
+    "rows": [
+      {
+        "kind": "span",
+        "label": "08:00 → 11:00",
+        "tone": "accent",
+        "from": "早上八點",
+        "to": "主時間點",
+        "sub": "The fan had been running for three hours.",
+        "subCn": "整整三小時都在進行，一路接到主時間點，所以畫成一段"
+      },
+      {
+        "kind": "point",
+        "label": "09:30",
+        "tone": "ink",
+        "at": "九點半",
+        "sub": "They had finished the morning check.",
+        "subCn": "只講做完了、不講多久，所以畫成一個點"
+      },
+      {
+        "kind": "point",
+        "label": "11:00 主時間點",
+        "tone": "accent",
+        "at": "她走進辦公室的那一刻",
+        "sub": "She walked in.",
+        "subCn": "整段故事的基準點，留在過去簡單式"
+      },
+      {
+        "kind": "span",
+        "label": "現在",
+        "tone": "ink",
+        "from": "主時間點之後",
+        "to": "NOW",
+        "sub": "The report is on her desk.",
+        "subCn": "現在的狀態，跟退格無關，不要跟著改形狀"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "trace",
+      "icon": "eye",
+      "title": "看得見的痕跡",
+      "titleCn": "過程留下的狀態",
+      "ask": "為什麼這裡不能只寫 had baked？",
+      "en": "The kitchen was warm because she had been baking since six.",
+      "cn": "廚房很暖，因為她從六點就一直在烤東西。",
+      "why": "廚房變暖是「一直烤」累積出來的結果，不是「烤完一次」造成的。had baked 只說她烤完了，讀者接不上溫度這件事。看到喘氣、濕地板、寫滿的白板這種痕跡，先想 had been doing。"
+    },
+    {
+      "key": "count",
+      "icon": "tool",
+      "title": "次數不用進行式",
+      "titleCn": "幾次就用 had done",
+      "ask": "講「測了四次」要用哪一種？",
+      "en": "The team had tested the same valve four times before lunch.",
+      "cn": "午餐前那個團隊已經測過同一顆閥四次了。",
+      "why": "four times 是次數，不是長度。進行式沒辦法同時表示「一直在做」和「做了幾次」，所以次數一律用 had done。反過來，for two hours 這種長度就交給 had been testing。"
+    },
+    {
+      "key": "state",
+      "icon": "money",
+      "title": "狀態動詞沒有進行式",
+      "titleCn": "know、own 不加 -ing",
+      "ask": "哪些動詞就算想強調持續也不能加 -ing？",
+      "en": "She had owned the shop for nine years before she sold it.",
+      "cn": "她賣掉那家店之前，已經擁有它九年了。",
+      "why": "own、know、belong、understand 這些字本身就表示一種持續的狀態，英文認為不必再用進行式標一次。中文的「一直擁有」很自然，所以這一類錯誤特別頑固。判斷法：這個動詞描述的是動作還是狀態。"
+    },
+    {
+      "key": "loop",
+      "icon": "cycle",
+      "title": "反覆發生",
+      "titleCn": "一直在、卻還沒完",
+      "ask": "怎麼表達「講了很多次卻沒人理」？",
+      "en": "He had been asking for a second inspector since March.",
+      "cn": "他從三月就一直在要求增派第二位稽核員。",
+      "why": "had asked 只是紀錄他提過，had been asking 則帶出反覆與未被回應的意味。這是進行式很微妙的一個功能：形式上講持續，語氣上講「一直沒有下文」。寫投訴信或稽核發現時特別好用。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要說：醫生叫到我的時候，我已經等了四十分鐘。"
+    },
+    {
+      "label": "釘住主時間點",
+      "text": "「醫生叫我」是基準點，用過去簡單式：the doctor called me in."
+    },
+    {
+      "label": "判斷是長度還是結果",
+      "text": "四十分鐘是長度，而且我還在等，所以要用進行式而不是 had waited。"
+    },
+    {
+      "label": "組三塊零件",
+      "text": "had + been + waiting，再把長度接上去：I had been waiting for forty minutes."
+    },
+    {
+      "label": "換個說法",
+      "text": "如果只想說「我等到不耐煩就走了」，那就變成結果，改寫成 I had waited long enough and left. 形狀一換，重點也換了。"
+    }
+  ],
+  "comparison": {
+    "title": "一段長度 vs 一個句點",
+    "left": {
+      "tag": "HAD BEEN DOING",
+      "tagCn": "強調持續",
+      "icon": "cycle",
+      "head": "how long it went on",
+      "headCn": "進行了多久",
+      "en": "It had been snowing all night.",
+      "cn": "整個晚上都在下雪。",
+      "pts": [
+        "常配 for、since、all morning 這種長度說法",
+        "解釋眼前看到的痕跡或狀態",
+        "狀態動詞不能用這一種"
+      ]
+    },
+    "right": {
+      "tag": "HAD DONE",
+      "tagCn": "強調結果",
+      "icon": "check",
+      "head": "what was finished",
+      "headCn": "完成了什麼",
+      "en": "The gate had closed.",
+      "cn": "登機門已經關了。",
+      "pts": [
+        "常配 already、never、twice 這種次數與完成",
+        "只交代成果，不交代過程",
+        "一次性動詞幾乎都走這一種"
+      ]
+    },
+    "note": "判斷口訣：句子裡出現長度就用進行式，出現次數或幅度就用結果式；兩個都沒有，就看讀者需要過程還是成果。"
+  },
+  "quizMore": [
+    {
+      "q": "His shirt was soaked because he ___ in the rain.",
+      "opts": [
+        "had cycled",
+        "had been cycling",
+        "has been cycling",
+        "cycles"
+      ],
+      "ans": 1,
+      "expl": "衣服濕透是「一路騎」累積出來的狀態，而且整段在過去，所以用 had been cycling。"
+    },
+    {
+      "q": "Which sentence is wrong?",
+      "opts": [
+        "A. They had been queueing since dawn.",
+        "B. She had been belonging to that club for years.",
+        "C. It had been blowing hard all afternoon.",
+        "D. We had been driving for six hours."
+      ],
+      "ans": 1,
+      "expl": "belong 是狀態動詞，沒有進行式，要寫 had belonged to that club for years。"
+    }
+  ]
+},
+
+"dg20260929b2": {
+  "vis": true,
+  "oneLine": "到了這一級，兩種形式通常都沒有文法錯誤——你選的是讀者要看見一段時間，還是一個結論。",
+  "map": {
+    "when": "寫報告、新聞稿或敘事，需要決定要不要把「持續了多久」攤在讀者面前的時候",
+    "why": "長度本身就是論點：寫出來等於暗示有人本來有時間發現，寫成結果就只是紀錄",
+    "form": "過程：had been + V-ing　|　結果：had + 過去分詞　|　中性：had been + 過去分詞（被動）"
+  },
+  "visual": {
+    "type": "cols",
+    "cap": "左欄把時間長度攤開，讀者會自動問「那為什麼沒人處理」；中欄只給結果，語氣乾淨；右欄用被動把執行者拿掉，是對外文件最安全的位置。同一組事實，三種寫法，責任的味道差很多。",
+    "cols": [
+      {
+        "tag": "HAD BEEN DOING",
+        "tagCn": "攤開過程",
+        "tone": 1,
+        "items": [
+          {
+            "en": "Costs had been rising for three quarters.",
+            "cn": "成本已經連續三季上升。",
+            "nt": "適合稽核發現、事故調查"
+          },
+          {
+            "en": "Complaints had been arriving every week since June.",
+            "cn": "六月以來每週都有客訴進來。",
+            "nt": "長度本身就是一句無聲的批評"
+          }
+        ]
+      },
+      {
+        "tag": "HAD DONE",
+        "tagCn": "只給結果",
+        "tone": 2,
+        "items": [
+          {
+            "en": "Costs had risen by nine percent.",
+            "cn": "成本上升了百分之九。",
+            "nt": "適合會議紀錄、摘要"
+          },
+          {
+            "en": "The supplier had missed two deliveries.",
+            "cn": "那家供應商漏送過兩次。",
+            "nt": "次數與幅度都走這一欄"
+          }
+        ]
+      },
+      {
+        "tag": "HAD BEEN DONE",
+        "tagCn": "被動、拿掉主角",
+        "tone": 3,
+        "items": [
+          {
+            "en": "The shortfall had been identified in June.",
+            "cn": "缺口在六月就已經被發現。",
+            "nt": "對外文件常用，不點名是誰"
+          },
+          {
+            "en": "Corrections had been issued before the deadline.",
+            "cn": "更正在期限前就已經發出。",
+            "nt": "交代補救，語氣最收斂"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "blame",
+      "icon": "balance",
+      "title": "責任的重量",
+      "titleCn": "長度＝暗示失職",
+      "ask": "為什麼稽核報告偏愛 had been doing？",
+      "en": "The seal had been leaking for six weeks before anyone filed a report.",
+      "cn": "在有人提報之前，那個密封件已經滲漏六週了。",
+      "why": "六週這個長度一旦寫出來，讀者立刻會問「那六週裡沒有人看嗎」。換成 had leaked，句子只剩下一個事實，追問的空間就沒了。稽核報告要的正是那個追問，所以刻意選進行式。"
+    },
+    {
+      "key": "pr",
+      "icon": "flag",
+      "title": "對外的措辭",
+      "titleCn": "結果式＋被動",
+      "ask": "新聞稿為什麼不寫過程？",
+      "en": "Incorrect statements had been issued and have since been corrected.",
+      "cn": "先前曾發出錯誤的對帳單，之後均已更正。",
+      "why": "被動加結果式交代了事實也交代了補救，卻沒有遞出一段可以被追問的期間。如果寫成 Customers had been receiving incorrect statements for months，等於自己把「好幾個月」這個把柄放上桌。這是語域判斷，不是對錯判斷。"
+    },
+    {
+      "key": "story",
+      "icon": "star",
+      "title": "小說的鋪陳",
+      "titleCn": "過程養張力",
+      "ask": "怎麼讓讀者預感到東西要壞了？",
+      "en": "Water had been finding its way under the door all winter.",
+      "cn": "整個冬天，水一直在找路從門下滲進來。",
+      "why": "進行式把一整個冬天攤開，讀者會自動預期後面有代價，張力就出來了。換成 Water had come in，資訊一樣，但那股「慢慢逼近」的感覺消失了。敘事常用過程鋪陳、用結果收句點。"
+    },
+    {
+      "key": "rhythm",
+      "icon": "link",
+      "title": "一段話的節奏",
+      "titleCn": "兩種形式輪流用",
+      "ask": "整段都用退格會怎麼樣？",
+      "en": "Pressure had been building for months; two seals had already gone; the supervisor shut the line at dawn.",
+      "cn": "壓力累積了好幾個月；兩個密封件已經壞掉；領班在天亮時停了線。",
+      "why": "過程、結果、主線各一句，讀者有地方落腳。四個退格連在一起會讓主時間點消失，整段像懸在半空；完全不退格又讀不出因果。挑最重要的一兩件退格，其餘拉回過去簡單式。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要把同一件事分別寫進內部稽核報告和給客戶的說明信。"
+    },
+    {
+      "label": "先寫事實",
+      "text": "事實是：產線每週因為重工損失四小時，持續了兩個月，最近已經改善。"
+    },
+    {
+      "label": "內部版：攤開長度",
+      "text": "內部報告寫 The line had been losing four hours a week for two months，長度就是論點。"
+    },
+    {
+      "label": "對外版：收成結果",
+      "text": "給客戶的信寫 The loss had been identified and corrective action has been completed，被動加結果，乾淨收尾。"
+    },
+    {
+      "label": "檢查主時間點",
+      "text": "兩個版本寫完都回頭問一次：這一段的基準點還找得到嗎。找不到就是退格用太多了。"
+    }
+  ],
+  "comparison": {
+    "title": "調查報告 vs 對外說明",
+    "left": {
+      "tag": "INTERNAL",
+      "tagCn": "內部調查",
+      "icon": "eye",
+      "head": "make the duration visible",
+      "headCn": "讓時間長度被看見",
+      "en": "Defect rates had been climbing since August.",
+      "cn": "不良率從八月就一路往上爬。",
+      "pts": [
+        "長度本身就是論點",
+        "隱含「本來有時間發現」",
+        "常配 before anyone 這種子句"
+      ]
+    },
+    "right": {
+      "tag": "EXTERNAL",
+      "tagCn": "對外說明",
+      "icon": "flag",
+      "head": "state the outcome only",
+      "headCn": "只交代結果",
+      "en": "The issue had been resolved before shipment.",
+      "cn": "問題在出貨前就已經解決。",
+      "pts": [
+        "被動拿掉執行者",
+        "不寫期間，不遞把柄",
+        "搭配補救措施一起寫"
+      ]
+    },
+    "note": "判斷口訣：想讓人追問就攤開長度，不想讓人追問就只給結果；這是語氣的選擇，兩邊文法都對。"
+  },
+  "quizMore": [
+    {
+      "q": "In a customer-facing letter, which is the safest wording?",
+      "opts": [
+        "A. We had been shipping the wrong grade for two months.",
+        "B. An incorrect grade had been shipped and has now been replaced.",
+        "C. Nobody had been checking the grade.",
+        "D. Our team had been ignoring the spec."
+      ],
+      "ans": 1,
+      "expl": "B用被動加結果式，交代事實也交代補救，不寫出期間也不點名責任；其他三個都把長度或失職寫給客戶看。"
+    },
+    {
+      "q": "Output ___ by fourteen percent that year, which nobody had predicted.",
+      "opts": [
+        "had been falling",
+        "had fallen",
+        "has fallen",
+        "had been fallen"
+      ],
+      "ans": 1,
+      "expl": "by fourteen percent 是完成的幅度，要配結果式 had fallen；進行式適合講趨勢，而 fall 是不及物動詞，不能做被動。"
+    }
+  ]
+},
+
 /* ---------- 2026-09-25 每日文法（過去完成式與過去時間詞） ---------- */
 "dg20260925a2": {
   "vis": true,
