@@ -1814,7 +1814,9 @@ body.vd-lock{overflow:hidden}
 #vd .vd-seg button{border:0;background:none;padding:5px 10px;border-radius:8px;font-size:var(--font-meta);color:var(--ink2);cursor:pointer}
 #vd .vd-seg button.on{background:var(--accent);color:#fff}
 #vd .vd-x{border:1px solid var(--line);background:var(--card);width:38px;height:38px;border-radius:50%;font-size:20px;line-height:1;cursor:pointer;flex:none;color:var(--ink2)}
-#vd .vd-x:hover{background:var(--accent-soft);color:var(--accent2)}
+/* 關閉鈕平常中性灰褐，hover／focus 才給很淡的橘色背景（橘色留給播放與學習狀態） */
+#vd .vd-x:hover{background:var(--accent-soft);color:var(--ink)}
+#vd .vd-x:focus-visible{outline:2px solid #f0c9a0;outline-offset:2px;background:var(--accent-soft)}
 #vd .vd-main{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:18px;padding:16px;max-width:1500px;margin:0 auto}
 #vd .vd-left{min-width:0}
 #vd .vd-sticky{position:sticky;top:64px;z-index:3;background:var(--bg);padding-bottom:6px}
@@ -1919,14 +1921,18 @@ body.vd-lock{overflow:hidden}
 /* ---- 進度與控制列 ---- */
 #vd .vd-prog{display:flex;align-items:center;gap:10px;margin:12px 2px 4px;font-size:var(--font-micro);color:var(--ink2);font-variant-numeric:tabular-nums}
 #vd .vd-bar{flex:1;height:6px;border-radius:3px;background:#efe6da;position:relative;cursor:pointer}
-#vd .vd-bar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:3px;transition-property:width;transition-timing-function:linear}
+#vd .vd-bar i{position:absolute;left:0;top:0;bottom:0;background:#f0a56a;border-radius:3px;transition-property:width;transition-timing-function:linear}   /* 已播放＝較柔和的橘，高飽和橘留給播放鍵 */
 #vd .vd-bar b{position:absolute;top:-3px;width:2px;height:12px;background:var(--bg)}
 #vd .vd-ctrl{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 #vd .vd-play{width:50px;height:50px;border-radius:50%;border:0;background:var(--accent);color:#fff !important;font-size:20px;cursor:pointer;box-shadow:0 0 0 4px rgba(232,129,58,.2)}
 #vd .vd-play.on{background:var(--accent2)}
 #vd .vd-cb{border:1px solid transparent;background:none;padding:7px 10px;border-radius:10px;font-size:var(--font-meta);color:var(--ink2);cursor:pointer;white-space:nowrap}
 #vd .vd-cb:hover{background:var(--card);border-color:var(--line);color:var(--ink)}
-#vd .vd-cb.on{background:var(--accent-soft);border-color:#f0c9a0;color:var(--accent2)}
+#vd .vd-cb.on{background:var(--accent-soft);border-color:#f0c9a0;color:var(--accent2);font-weight:600}
+/* 速度／字幕是「帶目前值」的控制：常駐框線，看得出可點也看得出目前狀態 */
+#vd .vd-cb.vd-val{border-color:var(--line);background:#fff;color:var(--ink)}
+#vd .vd-cb.vd-val:hover{border-color:#d9c8b4}
+#vd .vd-cb.vd-val.off{color:var(--vd-dim)}
 #vd .vd-chap{margin-left:auto;font-size:var(--font-meta);color:var(--vd-dim);white-space:nowrap}
 /* ---- 重點表達卡 ---- */
 #vd .vd-card{margin-top:14px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:14px;padding:14px 16px;
@@ -1957,7 +1963,9 @@ body.vd-lock{overflow:hidden}
 #vd .vd-row:hover{background:#fdf8f2}
 #vd .vd-row.cur{background:var(--accent-soft);border-left-color:var(--accent)}
 #vd .vd-row .tm{font-size:var(--font-micro);color:var(--vd-dim);font-variant-numeric:tabular-nums;padding-top:4px}
-#vd .vd-row.cur .tm{color:var(--accent2)}
+/* 目前句層級：英文最明顯 > 片語標籤 > 中文 > 時間／說話者（時間不再上橘色） */
+#vd .vd-row.cur .en{font-weight:600}
+#vd .vd-row.cur .vd-chip{border-width:1px;font-weight:600;font-size:.95em;padding:1px 6px 0}
 #vd .vd-row .sp{font-size:var(--font-micro);font-weight:700;margin-right:6px}
 #vd .vd-row .sp.A{color:var(--accent2)} #vd .vd-row .sp.T{color:var(--b1p)} #vd .vd-row .sp.N{color:var(--vd-dim)}
 #vd .vd-row .en{font-size:var(--font-secondary);line-height:1.9;color:var(--ink)}
@@ -2106,8 +2114,8 @@ body.vd-lock{overflow:hidden}
 #vd .vd-right{position:static;max-height:none}
 #vd #vd-list{padding:6px 0 10px}
 #vd .vd-chh{color:var(--vd-dim);font-weight:600;letter-spacing:.04em;text-transform:none;padding:12px 16px 2px}
-#vd .vd-row{opacity:.55;transition:opacity .2s}
-#vd .vd-row:hover{opacity:.85;background:none}
+#vd .vd-row{opacity:.75;transition:opacity .2s}   /* 非目前句仍可閱讀，只淡一階（2026-10-01 使用者指定） */
+#vd .vd-row:hover{opacity:.95;background:none}
 #vd .vd-row.cur{opacity:1}
 #vd .vd-row .sp{color:var(--vd-dim);font-weight:600;margin-right:2px}
 #vd .vd-row:not(.cur) .vd-chip{border-color:transparent;background:none;padding:0;margin:0;color:inherit;font-weight:inherit;display:inline;vertical-align:baseline}
@@ -2189,6 +2197,7 @@ body.vd-lock{overflow:hidden}
   #vd .vd-right{max-height:32vh}
   #vd .vd-cb{padding:7px 6px;font-size:calc(15px * var(--fs))}
   #vd .vd-cb .ic{display:none}
+  #vd .vd-cb .pfx,#vd .vd-cb .car{display:none}   /* 手機控制列窄：省略「速度：」與 ▾，不換行 */
   #vd .vd-ctrl{gap:2px}
   #vd .vd-morec{padding:4px 8px}
   #vd .vd-play{width:46px;height:46px}
@@ -2252,7 +2261,10 @@ body.vd-lock{overflow:hidden}
   #vd .vd-cnt2{display:inline;margin-left:2px}
   #vd .vd-meta{display:none}
   #vd .vd-ttl{display:block}
+  /* 平板／手機：英文主標＋中文副標各一行，長標題不再擠壓進度資訊 */
   #vd .vd-ttl b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;font-size:calc(17px * var(--fs))}
+  #vd .vd-ttl .ttsep{display:none}
+  #vd .vd-ttl .ttc{display:block;font-size:calc(13px * var(--fs));font-weight:500;color:var(--ink2);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 }
 @media (max-width:599px){
   #vd .vd-top{padding:8px 12px}
@@ -7648,7 +7660,7 @@ function vdRender(){
   const ticks=d.chapters.map((c,k)=>{ const i=VD.lines.findIndex(l=>l.ch===k); return i>0?'<b style="left:'+(VD.times[i]/VD.total*100)+'%"></b>':''; }).join('');
   el.innerHTML=
     /* 標題列一行：標題｜中文 · 第 N 句 · 長度 · 關閉 */
-    '<div class="vd-top"><div class="vd-ttl"><b>'+esc(d.title)+'｜'+esc(d.titleCn)+'</b>'
+    '<div class="vd-top"><div class="vd-ttl"><b>'+esc(d.title)+'<span class="ttc"><span class="ttsep">｜</span>'+esc(d.titleCn)+'</span></b>'
    +'<span class="vd-meta"><span id="vd-cnt"></span> · 約 '+Math.round(VD.total/60)+' 分鐘</span></div>'
    +'<button class="vd-x" onclick="vdClose()" aria-label="關閉影片" title="關閉（Esc）">×</button></div>'
    +'<div class="vd-main">'
@@ -7660,8 +7672,8 @@ function vdRender(){
    +'<div class="vd-ctrl"><button class="vd-play" id="vd-play" onclick="vdToggle()" aria-label="播放／暫停">▶</button>'
    +'<button class="vd-cb" onclick="vdStep(-1)" title="上一句（←）"><span class="ic">⏮ </span>上一句</button>'
    +'<button class="vd-cb" onclick="vdStep(1)" title="下一句（→）">下一句<span class="ic"> ⏭</span></button>'
-   +'<button class="vd-cb" id="vd-rate" onclick="vdRateTog()" title="語速">'+VD.rate+'x</button>'
-   +'<button class="vd-cb" id="vd-sub" onclick="vdModeNext()" title="影片內字幕：英文／雙語／中文／關">字幕 '+VD_MODE_LAB[VD.mode]+'</button>'
+   +'<button class="vd-cb vd-val" id="vd-rate" onclick="vdRateTog()" title="語速"><span class="pfx">速度：</span>'+VD.rate+'x</button>'
+   +'<button class="vd-cb vd-val'+(VD.mode==='off'?' off':'')+'" id="vd-sub" onclick="vdModeNext()" title="影片內字幕：英文／雙語／中文／關">字幕：'+VD_MODE_LAB[VD.mode]+'<span class="car"> ▾</span></button>'
    +'<button class="vd-cb vd-morec" id="vd-more" onclick="vdSetTog()" aria-expanded="false" title="更多設定">⋯</button></div>'
    +'<div class="vd-set" id="vd-set">'
    +'<div class="vd-toggles"><button class="vd-cb" id="vd-loop" onclick="vdLoopTog()">🔁 單句循環</button>'
@@ -7720,8 +7732,8 @@ function vdBtns(){
   const p=$('vd-play'); if(p){ p.textContent=VD.on?'⏸':'▶'; p.classList.toggle('on',VD.on); }
   const lp=$('vd-loop'); if(lp) lp.classList.toggle('on',VD.loop);
   const sh=$('vd-shadow'); if(sh) sh.classList.toggle('on',VD.shadow);
-  const rt=$('vd-rate'); if(rt) rt.textContent=VD.rate+'x';
-  const sb=$('vd-sub'); if(sb) sb.textContent='字幕 '+VD_MODE_LAB[VD.mode];
+  const rt=$('vd-rate'); if(rt) rt.innerHTML='<span class="pfx">速度：</span>'+VD.rate+'x';
+  const sb=$('vd-sub'); if(sb){ sb.innerHTML='字幕：'+VD_MODE_LAB[VD.mode]+'<span class="car"> ▾</span>'; sb.classList.toggle('off',VD.mode==='off'); }
 }
 function vdClear(){
   ['timer','watch','cd'].forEach(k=>{ if(VD[k]){ clearTimeout(VD[k]); clearInterval(VD[k]); VD[k]=null; } });
