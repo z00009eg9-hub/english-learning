@@ -1371,7 +1371,7 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
        檢查：電腦／平板橫放整頁不捲動、重點卡完整可見、畫面與字幕之間沒有大空白；所有尺寸沒有橫向溢出、畫面內容塞得下、地點標籤不被頭像蓋住、目前這句一定在字幕框內、手機控制列一行排得下。
    - **腳本可以新寫**（使用者同意），但用字、句型要來自這一課的筆記，程度對應該課（B1/B1+）。
    - **情境對話要像美國母語者在講話（2026-10-01 使用者指定，取代「一句一個示範句」的寫法）**：
-     1. 句長 5–12 字為主，長句拆兩句；每 3–4 句插一句短回應（Got it. / Makes sense. / Right. / Oh, nice. / Really?），可以併進下一句開頭。
+     1. **越短越像母語者，不要刻意加長**：改寫後總字數不可比原本多。長句拆短、能省的省（主詞、冠詞、「Today I’d like to…」這類鋪陳都拿掉）；短回應（Got it. / Makes sense.）只在自然時併進下一句開頭，不另加句子，也不要為了口語硬塞 Honestly / Actually / you know。
      2. 一律縮寫（I'd、we've、that's、don't、it'll）；句首可用口語連接詞（So、Okay、Right、Actually、Well、Yeah）。
      3. 問句與回答可以是片段：「And visitors?」「Glasses and gloves. Every time.」
      4. 多用片語動詞與日常字（check out、figure out、make sure、swap it out）；**這課要教的術語照用**（take corrective action、visually inspect 在工廠本來就是母語者會講的），只是前後用自然語氣包起來。
@@ -1380,7 +1380,7 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
      7. **不用 um / uh**（TTS 會逐字唸出來），停頓用「Well,」「Hmm,」「Let's see…」或破折號「—」；逗號、問號、破折號是唯一能影響 TTS 語氣的工具，多用。
      8. 一句最多放 1 個教學片語（`hi`），不要一句塞兩個；`hi.t` 仍要逐字出現在 `en` 裡（含大小寫）。
      9. 角色聲線固定：Tom（稽核員／客戶）正式但友善；Anita（主人翁）輕鬆一點。旁白維持清楚簡潔，可以正式。
-     10. 「自然但乾淨」：目標像 VOA Learning English 的對話，不是影集。gonna / kind of 可以，ain't、俚語不行；B1 學習者要看得懂。
+     10. 「自然但乾淨」：目標像美國同事在工廠聊天，不是影集。gonna / yep / that kind of thing 可以，ain’t、俚語不行；B1 學習者要看得懂。
      範本：`bk20260917`、`bk20260922` 的第 1 章（2026-10-01 依此規則重寫）。
      人物只用 **Anita（女聲 `voice:'f'`）與 Tom（男聲 `voice:'m'`）**，旁白 `N`（`voice:'n'`），跟每週二五文章的人物規則一致。
      裝置只有一個美式語音時（Chrome 常見），`vdPitchFor()` 用音調分角色：f ×1.15、m ×0.85、n 不變（2026-09-27 使用者選 A）；⋯ 面板會提示用 Edge 或到 Windows 語言設定加英文語音（C，由使用者自己裝）。
