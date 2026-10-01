@@ -1923,8 +1923,9 @@ body.vd-lock{overflow:hidden}
 #vd .vd-bar{flex:1;height:6px;border-radius:3px;background:#efe6da;position:relative;cursor:pointer}
 #vd .vd-bar i{position:absolute;left:0;top:0;bottom:0;background:#f0a56a;border-radius:3px;transition-property:width;transition-timing-function:linear}   /* 已播放＝較柔和的橘，高飽和橘留給播放鍵 */
 #vd .vd-bar b{position:absolute;top:-3px;width:2px;height:12px;background:var(--bg)}
-#vd .vd-ctrl{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-#vd .vd-play{width:50px;height:50px;border-radius:50%;border:0;background:var(--accent);color:#fff !important;font-size:20px;font-weight:700;cursor:pointer;box-shadow:0 0 0 4px rgba(232,129,58,.2);display:grid;place-items:center;line-height:1;transform:translateY(-2px)}
+/* 上下留白：播放鍵是整列最高的元素，外圈光暈還要再多 4px，沒留白就會貼著面板下緣像掉出去 */
+#vd .vd-ctrl{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:5px 0}
+#vd .vd-play{width:50px;height:50px;border-radius:50%;border:0;background:var(--accent);color:#fff !important;font-size:20px;font-weight:700;cursor:pointer;box-shadow:0 0 0 4px rgba(232,129,58,.2);display:grid;place-items:center;line-height:1}
 #vd .vd-play.on{background:var(--accent2)}
 #vd .vd-cb{border:1px solid transparent;background:none;padding:7px 10px;border-radius:10px;font-size:var(--font-meta);color:var(--ink2);cursor:pointer;white-space:nowrap}
 #vd .vd-cb:hover{background:var(--card);border-color:var(--line);color:var(--ink)}
