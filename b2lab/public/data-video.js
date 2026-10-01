@@ -27299,3 +27299,350 @@ window.VIDEO.bk20251226b = {
       cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
   ]
 };
+
+
+/* ===================== bk20260922 ===================== */
+/* bk20260922 Workplace Safety, Stress Relief & Useful Expressions */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* 四件安全裝備：安全帽、安全眼鏡、安全背心、安全鞋 */
+    safetyGearSet: svg(
+      '<path d="M18 62 a26 26 0 0 1 52 0 z" fill="'+A+'" '+st+'/><rect x="10" y="62" width="68" height="10" rx="5" fill="'+L+'" '+st+'/>'
+     +'<rect x="114" y="36" width="70" height="26" rx="13" fill="#cfe4f5" '+st+'/><path d="M149 36 v26" stroke="'+D+'" stroke-width="3"/>'
+     +'<path d="M106 44 h8 M184 44 h8" '+st+'/>'
+     +'<path d="M30 94 h36 l10 14 v34 h-56 v-34 z" fill="'+A+'" '+st+'/><path d="M48 94 v48" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="34" y="112" width="28" height="9" rx="2" fill="#fff" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M110 142 h76 v-11 l-28 -9 v-12 h-22 v14 l-26 7 z" fill="'+L+'" '+st+'/><path d="M136 120 h24" stroke="'+D+'" stroke-width="2.5"/>'),
+    /* 控制器與皮帶輪安裝到車架：onto（表面）＋ 線纜 through（穿過） */
+    beltPulleyInstall: svg(
+      '<path d="M24 120 L94 62 L176 98" fill="none" stroke="'+D+'" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="58" y="14" width="46" height="26" rx="4" fill="'+A+'" '+st+'/>'
+     +'<path d="M68 23 h26 M68 32 h16" stroke="#fff" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M81 44 v12 M73 50 l8 8 l8 -8" fill="none" stroke="'+B+'" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<text x="146" y="30" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="'+D+'">onto</text>'
+     +'<circle cx="150" cy="112" r="20" fill="'+C+'" '+st+'/><circle cx="150" cy="112" r="7" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M26 136 q40 -12 62 2 q24 12 56 -4" fill="none" stroke="'+B+'" stroke-width="4" stroke-linecap="round"/>'),
+    /* 測試室裡做功能測試：螢幕打勾、PASS 標籤 */
+    functionalTestPass: svg(
+      '<rect x="16" y="24" width="168" height="108" rx="8" fill="'+C+'" '+st+'/>'
+     +'<path d="M16 46 H184" stroke="'+D+'" stroke-width="3"/>'
+     +'<text x="100" y="40" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="'+D+'">TEST ROOM</text>'
+     +'<rect x="32" y="62" width="64" height="50" rx="5" fill="#fff" '+st+'/><path d="M42 78 h44" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<circle cx="50" cy="104" r="7" fill="'+D+'"/><circle cx="80" cy="104" r="7" fill="'+D+'"/>'
+     +'<rect x="112" y="60" width="58" height="40" rx="4" fill="#fff" '+st+'/>'
+     +'<path d="M124 82 l9 9 l19 -21" fill="none" stroke="'+B+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="112" y="106" width="58" height="17" rx="8" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<text x="141" y="119" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#fff">PASS</text>'),
+    /* 潮濕讓膠帶脫落：水滴＋翹起來的膠帶 */
+    tapeComeLoose: svg(
+      '<rect x="38" y="56" width="116" height="78" rx="3" fill="#fff" '+st+'/><path d="M38 56 L54 36 H138 L154 56" fill="'+L+'" '+st+'/>'
+     +'<rect x="86" y="56" width="22" height="42" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M97 98 q6 20 -16 26 q-12 3 -16 -8" fill="none" stroke="'+A+'" stroke-width="9" stroke-linecap="round"/>'
+     +'<g fill="#9ecbee" stroke="'+D+'" stroke-width="2"><path d="M30 16 q7 12 0 17 q-7 -5 0 -17"/><path d="M102 10 q7 12 0 17 q-7 -5 0 -17"/><path d="M172 20 q7 12 0 17 q-7 -5 0 -17"/></g>'
+     +'<path d="M164 104 q7 12 0 17 q-7 -5 0 -17" fill="#9ecbee" stroke="'+D+'" stroke-width="2"/>')
+  });
+})();
+
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.bk20260922 = {
+  title: "Workplace Safety, Stress Relief & Useful Expressions",
+  titleCn: "職場安全與紓壓英文",
+  date: "2026-09-22",
+  level: "B1+",
+  scene: "E-bike Assembly Line · Customer Audit Walkthrough",
+  sceneCn: "e-bike 組裝線・客戶稽核導覽",
+  sceneArt: "assemblyLine",
+  titleArt: ["warning", "gear", "check"],
+  cast: {
+    N: { name: "Narrator", cn: "旁白", voice: "n" },
+    A: { name: "Anita", cn: "Anita・產線組長", voice: "f" },
+    T: { name: "Tom", cn: "Tom・客戶稽核員", voice: "m" }
+  },
+  chapters: [
+    { en: "Intro", cn: "開場" },
+    { en: "On the Assembly Line", cn: "情境：組裝線導覽" },
+    { en: "Key Expressions", cn: "重點表達" },
+    { en: "Phrases & Collocations", cn: "片語搭配" },
+    { en: "Grammar", cn: "文法" },
+    { en: "Homework Fixes", cn: "作業訂正" },
+    { en: "Quick Quiz", cn: "小測驗" }
+  ],
+  expr: {
+    mustwear: { t: "must wear", cn: "必須穿戴（規定）", tag: ["安全裝備", "規定"],
+      note: "穿、戴裝備一律用 wear；工廠規定用 must 語氣最強，need to 只是「需要」。",
+      ex: "All operators need to wear safety shoes, safety glasses, helmets, and safety vests.", exCn: "所有操作員都需要穿安全鞋、戴安全眼鏡、安全帽和安全背心。" },
+    allowedto: { t: "be (not) allowed to", cn: "被（不）允許做某事", tag: ["被動語態", "作業第 3、4 題"],
+      note: "被動語態的固定用法，to 不可省略（allowed take ✗）；動名詞當主詞視為單數，用 is not allowed。",
+      ex: "You are allowed to enter.", exCn: "你被允許進入。" },
+    inahurry: { t: "in a hurry", cn: "趕時間", tag: ["口語", "in a rush"],
+      note: "in a hurry 和 in a rush 意思相同；in a rush 較口語，in a hurry 較常見。",
+      ex: "I'm in a hurry. I have to leave now.", exCn: "我趕時間，我必須現在離開。" },
+    inspect: { t: "visually inspect", cn: "目視檢查", tag: ["品檢", "+ for"],
+      note: "visually inspect + N + for + 瑕疵名稱：for 表示「要找的目標」，後面接 scratches、dents、damage 等並列名詞。",
+      ex: "We visually inspect the frame for scratches, dents, damage, and other visible defects.", exCn: "我們目視檢查車架有無刮痕、凹痕、損壞及其他可見的瑕疵。" },
+    secure: { t: "secure", cn: "固定、繫牢", tag: ["動詞", "工廠用語"],
+      note: "secure 當動詞是「固定、繫牢」，比 fasten 更正式，工廠常用；不要誤用名詞 security。",
+      ex: "The operator uses a staple gun to secure the cardboard box.", exCn: "操作員用釘槍固定紙箱。" },
+    trimoff: { t: "trim off the excess", cn: "修剪掉多餘的部分", tag: ["片語動詞", "excess 當名詞"],
+      note: "trim off ＝ 把多出來的修掉；excess 在這裡當名詞用（the excess ＝ 多餘的那截）。",
+      ex: "We need to trim off the sharp edges because they may affect the appearance.", exCn: "我們需要修掉毛邊，因為它們可能會影響外觀。" },
+    makesure: { t: "make sure", cn: "確保", tag: ["+ 子句", "that 可省略"],
+      note: "make sure (that) + 子句 ＝ 確保⋯，that 可以省略：They must make sure the cable ties are tight enough.",
+      ex: "Make sure you have the proper safety equipment before starting work.", exCn: "開工前請確認你有穿戴適當的安全設備。" },
+    according: { t: "according to", cn: "根據、按照", tag: ["介系詞片語"],
+      note: "according to + 名詞（規格、指示、計畫），不接子句；specifications 常簡稱 specs。",
+      ex: "The frame is installed according to the specifications.", exCn: "車架按照規格安裝。" },
+    functional: { t: "functional test", cn: "功能測試", tag: ["perform a ~", "品管"],
+      note: "進行功能測試說 perform a functional test，比 do a test 更正式精確；通過說 pass the test，沒通過說 fail the test。",
+      ex: "We perform a functional test at the fourth station.", exCn: "我們在第四站進行功能測試。" },
+    disassemble: { t: "disassemble", cn: "拆解、拆開", tag: ["dis- + assemble"],
+      note: "dis-（相反動作）+ assemble（組裝）＝ disassemble 拆解；/ˌdɪs.əˈsem.bəl/。",
+      ex: "If there is a problem, will you disassemble the product?", exCn: "如果有問題，你們會把產品拆開嗎？" },
+    corrective: { t: "take corrective action", cn: "採取矯正措施", tag: ["品管常用語"],
+      note: "工廠品管四步：stop the process → separate the defective unit → identify the problem → take corrective action。",
+      ex: "Take corrective action before the unit moves forward.", exCn: "在產品進入下一站前採取矯正措施。" },
+    defective: { t: "defective", cn: "有缺陷的", tag: ["defect 的形容詞"],
+      note: "defect 是名詞「瑕疵」，defective 是形容詞「有缺陷的」：a defect in the unit → a defective unit。",
+      ex: "Separate the defective unit.", exCn: "將有缺陷的產品隔離。" },
+    comeloose: { t: "come loose", cn: "變鬆、脫落", tag: ["作業第 6 題", "loose vs loosen"],
+      note: "become / come + 形容詞 loose（鬆的），不要用動詞 loosen；原因用 because of + 名詞（dampness／humidity／moisture）。",
+      ex: "The dampness caused the tape to come loose.", exCn: "潮濕導致膠帶脫落。" },
+    understress: { t: "under a lot of stress", cn: "壓力很大", tag: ["stress vs stressed"],
+      note: "stress 是名詞（壓力本身）、stressed 是形容詞（人的感受）：I was under a lot of stress. ＝ I was very stressed.",
+      ex: "I was under a lot of pressure.", exCn: "我承受很大的壓力。" },
+    relieve: { t: "relieve stress", cn: "紓解壓力", tag: ["動詞 + 名詞"],
+      note: "relieve 是動詞、stress 是名詞；to relieve stress 放句尾是「不定詞表目的」。",
+      ex: "Exercise helps me relieve stress.", exCn: "運動幫助我紓解壓力。" },
+    goodway: { t: "is a good way to", cn: "是⋯的好方法", tag: ["V-ing 當主詞"],
+      note: "「V-ing is a good way to + 原形動詞」：動名詞當主詞視為單數，所以用 is。",
+      ex: "Taking a walk is a good way to relieve stress.", exCn: "散步是紓解壓力的好方法。" },
+    stickto: { t: "stick to", cn: "遵守、堅持", tag: ["+ 名詞", "過去式 stuck to"],
+      note: "stick to 後面接名詞（plan／schedule／rules／budget），過去式是 stuck to。",
+      ex: "We need to stick to the schedule.", exCn: "我們需要遵守時程表。" },
+    dareto: { t: "dare to", cn: "敢做某事", tag: ["一般動詞", "否定 don't"],
+      note: "dare 當一般動詞，否定加 don't／doesn't；tell a lie 的 lie 要加 a，或用複數 tell lies。",
+      ex: "She doesn't dare to tell a lie.", exCn: "她不敢說謊。" },
+    betweenjobs: { t: "between jobs", cn: "待業中", tag: ["委婉說法", "vs unemployed"],
+      note: "I'm between jobs. 委婉、正面，暗示有在找工作；I'm unemployed. 直接、較正式。社交場合建議用 between jobs。",
+      ex: "I'm between jobs right now, so I have more free time.", exCn: "我目前待業中，所以比較有空。" }
+  },
+  lines: [
+    /* ---------- 0 開場 ---------- */
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Welcome back. Today we walk an e-bike assembly line with a customer auditor.",
+      cn: "歡迎回來。今天我們跟著客戶稽核員走一趟 e-bike 組裝線。" },
+    { ch: 0, sp: "N", vis: { type: "title" },
+      en: "Listen for the safety rules, the five stations, and two ways to talk about stress.",
+      cn: "注意聽安全規定、五個工站，以及兩種談壓力的說法。" },
+
+    /* ---------- 1 情境對話 ---------- */
+    { ch: 1, sp: "T", vis: { type: "scene", art: "assemblyLine" },
+      en: "Good morning, Anita. Today I'd like to walk through your e-bike assembly line.",
+      cn: "早安，Anita。今天我想走一遍你們的 e-bike 組裝線。" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "safetyGearSet" },
+      en: "Welcome, Tom. All visitors must wear a safety helmet, safety glasses, and a safety vest.",
+      cn: "歡迎，Tom。所有訪客都必須戴安全帽、安全眼鏡，並穿安全背心。",
+      hi: [{ t: "must wear", cn: "必須穿戴", k: "mustwear", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "gate" },
+      en: "Of course. I'm in a hurry today, so let's start right away.",
+      cn: "當然。我今天趕時間，我們馬上開始吧。",
+      hi: [{ t: "in a hurry", cn: "趕時間", k: "inahurry", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "gate" },
+      en: "One more thing: visitors are not allowed to take photos, based on our security measures.",
+      cn: "還有一件事：根據我們的安全規定，訪客不允許拍照。",
+      hi: [{ t: "are not allowed to", cn: "不被允許", k: "allowedto", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "bikeFrame" },
+      en: "Understood. What happens at the first station?",
+      cn: "了解。第一站是做什麼的？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "scratch" },
+      en: "The operators place the frame on the assembly line and visually inspect it for scratches and dents.",
+      cn: "操作員把車架放上組裝線，並目視檢查有沒有刮痕和凹痕。",
+      hi: [{ t: "visually inspect", cn: "目視檢查", k: "inspect", c: 3 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "beltPulleyInstall" },
+      en: "And the second station?",
+      cn: "那第二站呢？" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "beltPulleyInstall" },
+      en: "They install the controller and the belt pulley onto the frame, and put the cable through it.",
+      cn: "他們把控制器和皮帶輪安裝到車架上，再把線纜穿過車架。" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "cableTie" },
+      en: "At the third station we secure the cables with cable ties, and then we trim off the excess.",
+      cn: "在第三站，我們用束線帶固定線纜，然後修剪掉多餘的部分。",
+      hi: [{ t: "secure", cn: "固定", k: "secure", c: 2 },
+           { t: "trim off the excess", cn: "修剪掉多餘的部分", k: "trimoff", c: 4 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "clipboard" },
+      en: "How do you make sure the bike frame is installed correctly?",
+      cn: "你們怎麼確保腳踏車車架安裝正確？",
+      hi: [{ t: "make sure", cn: "確保", k: "makesure", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "clipboard" },
+      en: "We follow the work instructions and check that the frame is installed according to the specifications.",
+      cn: "我們遵照作業指導書，並確認車架是依照規格安裝的。",
+      hi: [{ t: "according to", cn: "按照", k: "according", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "functionalTestPass" },
+      en: "And what if a unit fails the functional test?",
+      cn: "那如果產品沒通過功能測試呢？",
+      hi: [{ t: "functional test", cn: "功能測試", k: "functional", c: 3 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "warning" },
+      en: "We disassemble it, separate the defective unit, and take corrective action.",
+      cn: "我們會拆解它、隔離不良品，並採取矯正措施。",
+      hi: [{ t: "disassemble", cn: "拆解", k: "disassemble", c: 4 },
+           { t: "take corrective action", cn: "採取矯正措施", k: "corrective", c: 1 }] },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "tapeComeLoose" },
+      en: "Good. One last question: last month the tape on some boxes came loose.",
+      cn: "很好。最後一個問題：上個月有些箱子上的膠帶脫落了。",
+      hi: [{ t: "came loose", cn: "脫落了", k: "comeloose", c: 2 }] },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "music" },
+      en: "That was the humidity. I was under a lot of stress, so I listen to music to relieve stress.",
+      cn: "那是濕度造成的。我當時壓力很大，所以我聽音樂來紓解壓力。",
+      hi: [{ t: "under a lot of stress", cn: "壓力很大", k: "understress", c: 2 },
+           { t: "to relieve stress", cn: "來紓解壓力", k: "relieve", c: 4 }] },
+
+    /* ---------- 2 重點表達（解說卡） ---------- */
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "secure", ipa: "/səˈkjʊr/", pos: "v.", art: "cableTie",
+        def: "To fasten something firmly so it cannot move or come loose.",
+        cn: "固定、繫牢，讓東西不會移動或鬆脫。",
+        note: "Secure is a verb. Security is the noun — never say \"security the cable.\"" },
+      en: "Secure. As a verb it means to fasten cables or a box firmly with ties or a staple gun.",
+      cn: "Secure。當動詞是「固定」，用束線帶或釘槍把線纜或箱子固定牢。",
+      hi: [{ t: "Secure", cn: "固定", k: "secure", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "damp", ipa: "/dæmp/", cn: "潮濕的（微濕）", def: "Adjective: slightly wet, used for walls, clothes, or boxes.", art: "moldyShirt" },
+        b: { w: "humidity", ipa: "/hjuːˈmɪdɪti/", cn: "濕度", def: "Noun: how much moisture there is in the air.", art: "dehumidifierTank" } },
+      en: "Damp is an adjective for a wet box. High humidity in the air can make tape come loose.",
+      cn: "damp 是形容詞，形容箱子微濕；空氣中的高濕度會讓膠帶脫落。",
+      hi: [{ t: "come loose", cn: "脫落", k: "comeloose", c: 2 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "vs",
+        a: { w: "defect", ipa: "/ˈdiː.fekt/", cn: "瑕疵（名詞）", def: "Noun: the problem itself, such as a scratch or a dent.", art: "scratch" },
+        b: { w: "defective", ipa: "/dɪˈfek.tɪv/", cn: "有缺陷的（形容詞）", def: "Adjective: describing the unit that has the problem.", art: "warning" } },
+      en: "If we find a defect, we separate the defective unit before it moves to the next station.",
+      cn: "如果發現瑕疵，我們會在產品進入下一站前把不良品隔離。",
+      hi: [{ t: "defective", cn: "有缺陷的", k: "defective", c: 3 }] },
+    { ch: 2, sp: "N",
+      vis: { type: "slide", w: "relieve", ipa: "/rɪˈliːv/", pos: "v.", phrase: "relieve stress", art: "music",
+        def: "To make a bad feeling such as stress or pain smaller.",
+        cn: "紓解、減輕（壓力、疼痛）。",
+        note: "stress is the noun; stressed is the adjective for how a person feels." },
+      en: "Relieve stress. Exercise, music, or a short walk can all relieve stress.",
+      cn: "Relieve stress（紓解壓力）。運動、音樂或散步都可以紓解壓力。",
+      hi: [{ t: "relieve stress", cn: "紓解壓力", k: "relieve", c: 4 }] },
+
+    /* ---------- 3 片語搭配 ---------- */
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "stick to", coreCn: "遵守、堅持（+ 名詞）", art: "priorityStack",
+        items: [{ t: "the plan", cn: "原計劃" }, { t: "the schedule", cn: "時程表" }, { t: "the rules", cn: "規定" }, { t: "the budget", cn: "預算" }] },
+      en: "Stick to the plan, stick to the schedule, stick to the rules, and stick to the budget.",
+      cn: "堅持原計劃、遵守時程表、遵守規定、守住預算。",
+      hi: [{ t: "Stick to the plan", cn: "堅持原計劃", k: "stickto", c: 1 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "safety", coreCn: "安全＋裝備", art: "safetyGearSet",
+        items: [{ t: "helmet", cn: "安全帽" }, { t: "glasses", cn: "安全眼鏡" }, { t: "shoes", cn: "安全鞋" }, { t: "vest", cn: "安全背心" }] },
+      en: "All operators must wear safety shoes, safety glasses, helmets, and safety vests.",
+      cn: "所有操作員都必須穿安全鞋、戴安全眼鏡、安全帽和安全背心。",
+      hi: [{ t: "must wear", cn: "必須穿戴", k: "mustwear", c: 1 }] },
+    { ch: 3, sp: "N",
+      vis: { type: "family", core: "QA verbs", coreCn: "品管常用動作", art: "tools",
+        items: [{ t: "secure the cables", cn: "固定線纜" }, { t: "trim off the excess", cn: "修掉多餘的" }, { t: "perform a functional test", cn: "進行功能測試" }, { t: "take corrective action", cn: "採取矯正措施" }] },
+      en: "Secure the cables, trim off the excess, perform a functional test, and take corrective action.",
+      cn: "固定線纜、修掉多餘的部分、進行功能測試、採取矯正措施。",
+      hi: [{ t: "trim off the excess", cn: "修掉多餘的部分", k: "trimoff", c: 4 },
+           { t: "take corrective action", cn: "採取矯正措施", k: "corrective", c: 1 }] },
+
+    /* ---------- 4 文法 ---------- */
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "be (not) allowed to + V", art: "gate",
+        rows: [
+          { lab: "肯定", blocks: [{ t: "You", k: "s" }, { t: "are allowed to", k: "v" }, { t: "enter", k: "o" }] },
+          { lab: "否定", blocks: [{ t: "Visitors", k: "s" }, { t: "are not allowed to", k: "v", add: true }, { t: "take photos", k: "o" }] }
+        ],
+        note: "被動語態的固定用法，to 不可省略：allowed take ✗ → allowed to take ✓。" },
+      en: "You are allowed to enter, but visitors are not allowed to take photos.",
+      cn: "你被允許進入，但訪客不允許拍照。",
+      hi: [{ t: "are not allowed to", cn: "不被允許", k: "allowedto", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "be (not) allowed to + V", art: "warning",
+        rows: [
+          { lab: "V-ing 當主詞", blocks: [{ t: "Smoking", k: "s" }, { t: "is not allowed", k: "v", add: true }, { t: "in the workplace", k: "o" }] }
+        ],
+        note: "動名詞當主詞視為單數，用 is 不用 are；a fire 是可數名詞，要加冠詞 a。" },
+      en: "Smoking is not allowed in the workplace, because it may cause a fire.",
+      cn: "工作場所禁止吸菸，因為可能引起火災。",
+      hi: [{ t: "is not allowed", cn: "不被允許", k: "allowedto", c: 1 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "dare (not) to + V", art: "frustratedFace",
+        rows: [
+          { lab: "否定", blocks: [{ t: "I", k: "s" }, { t: "don't dare to", k: "v", add: true }, { t: "talk loudly with my boss", k: "o" }] },
+          { lab: "第三人稱", blocks: [{ t: "She", k: "s" }, { t: "doesn't dare to", k: "v" }, { t: "tell a lie", k: "o" }] }
+        ],
+        note: "dare 當一般動詞，否定加 don't／doesn't；tell a lie 的 lie 要加 a。" },
+      en: "I don't dare to talk loudly with my boss, and she doesn't dare to tell a lie.",
+      cn: "我不敢大聲跟老闆說話，而她不敢說謊。",
+      hi: [{ t: "don't dare to", cn: "不敢", k: "dareto", c: 3 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "不定詞表目的 to + V", art: "music",
+        rows: [
+          { lab: "目的", blocks: [{ t: "I", k: "s" }, { t: "listen to music", k: "v" }, { t: "to relieve stress", k: "o", add: true }] }
+        ],
+        note: "to relieve stress 放句尾回答「為了什麼」，這是不定詞表目的。" },
+      en: "I listen to music to relieve stress. The to-infinitive at the end shows the purpose.",
+      cn: "我聽音樂來紓解壓力。句尾的不定詞是在表示目的。",
+      hi: [{ t: "to relieve stress", cn: "來紓解壓力", k: "relieve", c: 4 }] },
+    { ch: 4, sp: "N",
+      vis: { type: "pattern", kick: "V-ing is a good way to + V", art: "coffeeBreak",
+        rows: [
+          { lab: "句型", blocks: [{ t: "Taking a walk", k: "s" }, { t: "is a good way to", k: "v", add: true }, { t: "relieve stress", k: "o" }] }
+        ],
+        note: "動名詞當主詞視為單數，所以用 is；way to 後面接原形動詞。" },
+      en: "Taking a walk is a good way to relieve stress.",
+      cn: "散步是紓解壓力的好方法。",
+      hi: [{ t: "is a good way to", cn: "是⋯的好方法", k: "goodway", c: 3 }] },
+
+    /* ---------- 5 作業訂正 ---------- */
+    { ch: 5, sp: "N", vis: { type: "fix", n: 4,
+        wrong: "Smoking are not allow in the workplace because it may cause fire.", bad: ["are", "not allow", "cause fire"],
+        fix: "Smoking is not allowed in the workplace because it may cause a fire.", good: ["is", "not allowed", "cause a fire"],
+        why: "Smoking is a gerund subject, so use is. Allowed needs -ed, and fire needs a." },
+      en: "Smoking is not allowed in the workplace because it may cause a fire.",
+      cn: "工作場所禁止吸菸，因為可能引起火災。",
+      hi: [{ t: "is not allowed", cn: "不被允許", k: "allowedto", c: 1 }] },
+    { ch: 5, sp: "N", vis: { type: "fix", n: 6,
+        wrong: "The tape on the box became loosen because of the several rainy day.", bad: ["loosen", "the several rainy day"],
+        fix: "The tape on the box became loose because of several rainy days.", good: ["loose", "several rainy days"],
+        why: "Became takes the adjective loose, not the verb loosen. Several needs no the, and day is plural." },
+      en: "The tape on the box became loose because of several rainy days.",
+      cn: "箱子上的膠帶因為連日下雨變鬆了。",
+      hi: [{ t: "became loose", cn: "變鬆了", k: "comeloose", c: 2 }] },
+
+    /* ---------- 6 小測驗 ---------- */
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Visitors are not ___ to take photos.", a: "allowed", n: 1 },
+      en: "Visitors are not ___ to take photos.", say: "Visitors are not, blank, to take photos.",
+      cn: "訪客不＿＿拍照。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Visitors are not ___ to take photos.", a: "allowed", n: 1, show: true },
+      en: "Visitors are not allowed to take photos.",
+      cn: "訪客不允許拍照。",
+      hi: [{ t: "are not allowed to", cn: "不被允許", k: "allowedto", c: 1 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Taking a walk is a good way to ___ stress.", a: "relieve", n: 2 },
+      en: "Taking a walk is a good way to ___ stress.", say: "Taking a walk is a good way to, blank, stress.",
+      cn: "散步是＿＿壓力的好方法。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "Taking a walk is a good way to ___ stress.", a: "relieve", n: 2, show: true },
+      en: "Taking a walk is a good way to relieve stress.",
+      cn: "散步是紓解壓力的好方法。",
+      hi: [{ t: "relieve stress", cn: "紓解壓力", k: "relieve", c: 4 }] },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "We ___ the cables with cable ties and trim off the excess.", a: "secure", n: 3 },
+      en: "We ___ the cables with cable ties and trim off the excess.", say: "We, blank, the cables with cable ties and trim off the excess.",
+      cn: "我們用束線帶＿＿線纜，再修掉多餘的部分。", pause: 4000 },
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "We ___ the cables with cable ties and trim off the excess.", a: "secure", n: 3, show: true },
+      en: "We secure the cables with cable ties and trim off the excess.",
+      cn: "我們用束線帶固定線纜，再修掉多餘的部分。",
+      hi: [{ t: "secure", cn: "固定", k: "secure", c: 2 },
+           { t: "trim off the excess", cn: "修掉多餘的部分", k: "trimoff", c: 4 }] },
+    { ch: 6, sp: "N", vis: { type: "end" },
+      en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+      cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+  ]
+};

@@ -6191,7 +6191,7 @@ articles:[
     },
     {
       "w": "workplace",
-      "ipa": "/ˈwɝːkpleɪs/",
+      "ipa": "/ˈwɝːk.pleɪs/",
       "pos": "n.",
       "cn": "職場",
       "def": "The place where people work.",

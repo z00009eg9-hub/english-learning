@@ -18519,6 +18519,1027 @@ window.BOOK = {
           "v": "With effort and a little imagination, anything is possible."
         }
       ]
+    },
+    /* ---- bk20260922 Workplace Safety, Stress Relief & Useful Expressions ---- */
+    {
+      "id": "bk20260922",
+      "icon": "🦺",
+      "video": true,
+      "date": "2026-09-22",
+      "doc": "https://docs.google.com/document/d/1QDNtrVANxfzdi72icWXWI52K9j7B6FgyWrPHVOZ2T5c/edit",
+      "title": "Workplace Safety, Stress Relief & Useful Expressions",
+      "titleCn": "職場安全與紓壓英文",
+      "topics": "被動語態與時態一致、潮濕相關詞彙、紓解壓力的說法、dare to 與 between jobs、品質檢查對話、組裝線流程與安全設備",
+      "hwTitle": "I. ★ 09/22 作業複習 Homework Review",
+      "hw": [
+        {
+          "n": 1,
+          "ok": "Our customer changed the test requirements, so we couldn't stick to the plan.",
+          "cn": "我們的客戶更改了測試要求，所以我們無法堅持原計劃。",
+          "pat": "主詞 + changed + N, so + 主詞 + couldn't + V",
+          "note": "stick to 是「堅持、遵守」的意思，後面接名詞。couldn't 是 could not 的縮寫，表示過去無法做某事。so 連接因果關係。"
+        },
+        {
+          "n": 2,
+          "wrong": "The security guard checked the motorcycle seat storage before employees leave the company.",
+          "fix": "The security guard checked the motorcycle seat storage before employees left the company.",
+          "cn": "保全人員在員工離開公司之前檢查了機車座位置物箱。",
+          "pat": "主詞 + V-ed + before + 主詞 + V-ed",
+          "note": "主要子句 checked 用過去式，before 引導的時間子句也要用過去式 left，保持時態一致。leave 是現在式，與主句的 checked 時態矛盾。另外，leave the company 字面上也有「離職」的意思，工廠情境說 left work 或 left the factory 更精確。"
+        },
+        {
+          "n": 3,
+          "wrong": "Based on the security measures, vistors are not allowed take photos.",
+          "fix": "Based on the security measures, visitors are not allowed to take photos.",
+          "cn": "根據安全規定，訪客不允許拍照。",
+          "pat": "Based on + N, 主詞 + be not allowed to + V",
+          "note": "be allowed to + V 是被動語態的固定用法，表示「被允許做某事」，to 不可省略。be not allowed to ＝ 不被允許 ＝ 禁止。"
+        },
+        {
+          "n": 4,
+          "wrong": "Smoking are not allow in the workplace because it may cause fire.",
+          "fix": "Smoking is not allowed in the workplace because it may cause a fire.",
+          "cn": "工作場所禁止吸菸，因為可能引起火災。",
+          "pat": "V-ing(主詞) + is not allowed + because + 主詞 + may + V",
+          "note": "此題有三個錯誤：(1) Smoking 是動名詞當主詞，視為單數，所以用 is 不用 are。(2) 被動語態「不被允許」＝ is not allowed（be + 過去分詞），不能用原形 allow。(3) fire 是可數名詞，「一場火災」要加冠詞 a fire。"
+        },
+        {
+          "n": 5,
+          "wrong": "The operator need to check the label on the cardboard box before shipping.",
+          "fix": "The operator needs to check the label on the cardboard box before shipping.",
+          "cn": "操作員在出貨前需要檢查紙箱上的標籤。",
+          "pat": "The + 單數主詞 + needs to + V + before + N/V-ing",
+          "note": "The operator 是第三人稱單數，動詞要加 s → needs。need to + V 表示「需要做某事」。before shipping 的 shipping 是動名詞，表示「出貨之前」。"
+        },
+        {
+          "n": 6,
+          "wrong": "The tape on the box became loosen because of the several rainy day.",
+          "fix": "The tape on the box became loose because of several rainy days.",
+          "cn": "箱子上的膠帶因為連日下雨變鬆了。",
+          "pat": "主詞 + became + adj. + because of + N",
+          "note": "became 後面接形容詞 loose（鬆的），不是動詞 loosen（使鬆開）。several 前面不加 the，且 day 要用複數 days。更道地的說法是用「潮濕」描述原因：The tape became loose because of the dampness / humidity / moisture.（詳見 VI）"
+        }
+      ],
+      "vocabTitle": "II. 單字 Vocabulary — A. 單字表",
+      "vocab": [
+        {
+          "w": "stick to",
+          "ipa": "/stɪk tu/",
+          "pos": "phr.v.",
+          "cn": "遵守、堅持",
+          "ex": "We need to stick to the schedule.",
+          "exCn": "我們需要遵守時程表。"
+        },
+        {
+          "w": "security guard",
+          "ipa": "/səˈkjʊr.ə.ti ɡɑːrd/",
+          "pos": "n.",
+          "cn": "保全人員",
+          "ex": "The security guard patrols the factory gate.",
+          "exCn": "保全人員巡邏工廠大門。"
+        },
+        {
+          "w": "storage",
+          "ipa": "/ˈstɔːr.ɪdʒ/",
+          "pos": "n.",
+          "cn": "置物箱、儲存空間",
+          "ex": "There is a small storage under the seat.",
+          "exCn": "座位底下有一個小置物箱。"
+        },
+        {
+          "w": "visitor",
+          "ipa": "/ˈvɪz.ɪ.tɚ/",
+          "pos": "n.",
+          "cn": "訪客",
+          "ex": "Visitors must wear a badge.",
+          "exCn": "訪客必須配戴識別證。"
+        },
+        {
+          "w": "workplace",
+          "ipa": "/ˈwɝːk.pleɪs/",
+          "pos": "n.",
+          "cn": "工作場所",
+          "ex": "Safety rules apply in the workplace.",
+          "exCn": "安全規定適用於工作場所。"
+        },
+        {
+          "w": "operator",
+          "ipa": "/ˈɑːpəreɪtɚ/",
+          "pos": "n.",
+          "cn": "操作員",
+          "ex": "The operator runs the machine.",
+          "exCn": "操作員操作機器。"
+        },
+        {
+          "w": "cardboard box",
+          "ipa": "/ˈkɑːrdbɔːrd bɑːks/",
+          "pos": "n.",
+          "cn": "紙箱",
+          "ex": "Pack the parts in a cardboard box.",
+          "exCn": "把零件裝進紙箱裡。"
+        },
+        {
+          "w": "label",
+          "ipa": "/ˈleɪ.bəl/",
+          "pos": "n.",
+          "cn": "標籤",
+          "ex": "Check the label before shipping.",
+          "exCn": "出貨前檢查標籤。"
+        },
+        {
+          "w": "shipping",
+          "ipa": "/ˈʃɪp.ɪŋ/",
+          "pos": "n.",
+          "cn": "出貨",
+          "ex": "The goods are ready for shipping.",
+          "exCn": "貨物已準備好出貨。"
+        },
+        {
+          "w": "loose",
+          "ipa": "/luːs/",
+          "pos": "adj.",
+          "cn": "鬆的",
+          "ex": "The tape became loose.",
+          "exCn": "膠帶變鬆了。"
+        },
+        {
+          "w": "damp",
+          "star": true,
+          "ipa": "/dæmp/",
+          "pos": "adj.",
+          "cn": "潮濕的（微濕）",
+          "ex": "The box is damp.",
+          "exCn": "箱子是潮濕的。"
+        },
+        {
+          "w": "dampness",
+          "star": true,
+          "ipa": "/ˈdæmpnəs/",
+          "pos": "n.",
+          "cn": "潮濕（狀態）",
+          "ex": "The dampness caused the tape to come loose.",
+          "exCn": "潮濕導致膠帶脫落。"
+        },
+        {
+          "w": "humidity",
+          "star": true,
+          "ipa": "/hjuːˈmɪdɪti/",
+          "pos": "n.",
+          "cn": "濕度",
+          "ex": "High humidity can make tape lose its adhesive strength.",
+          "exCn": "高濕度會讓膠帶失去黏性。"
+        },
+        {
+          "w": "moisture",
+          "star": true,
+          "ipa": "/ˈmɔɪs.tʃɚ/",
+          "pos": "n.",
+          "cn": "水氣、濕氣",
+          "ex": "The tape came loose because of the moisture.",
+          "exCn": "膠帶因為水氣而脫落。"
+        },
+        {
+          "w": "relieve",
+          "ipa": "/rɪˈliːv/",
+          "pos": "v.",
+          "cn": "紓解、減輕",
+          "ex": "Exercise helps me relieve stress.",
+          "exCn": "運動幫助我紓解壓力。"
+        },
+        {
+          "w": "dare",
+          "ipa": "/der/",
+          "pos": "v.",
+          "cn": "敢",
+          "ex": "I don't dare to talk loudly with my boss.",
+          "exCn": "我不敢大聲跟老闆說話。"
+        },
+        {
+          "w": "unemployed",
+          "star": true,
+          "ipa": "/ˌʌn.ɪmˈplɔɪd/",
+          "pos": "adj.",
+          "cn": "失業的",
+          "ex": "He has been unemployed for three months.",
+          "exCn": "他已經失業三個月了。"
+        },
+        {
+          "w": "specifications",
+          "star": true,
+          "ipa": "/ˌspesɪfɪˈkeɪʃnz/",
+          "pos": "n.",
+          "cn": "規格",
+          "ex": "The frame is installed according to the specifications.",
+          "exCn": "車架按照規格安裝。"
+        }
+      ],
+      "vocab2Title": "B. 補充單字（含 VIII. 組裝線用語與安全設備）",
+      "vocab2": [
+        {
+          "w": "adhesive",
+          "star": true,
+          "ipa": "/ədˈhiː.sɪv/",
+          "pos": "n./adj.",
+          "cn": "黏合劑／黏性的",
+          "ex": "The adhesive loses strength in humid conditions.",
+          "exCn": "黏合劑在潮濕環境下會失去黏性。"
+        },
+        {
+          "w": "stressed",
+          "ipa": "/strest/",
+          "pos": "adj.",
+          "cn": "有壓力的",
+          "ex": "I was very stressed.",
+          "exCn": "我壓力很大。"
+        },
+        {
+          "w": "pressure",
+          "ipa": "/ˈpreʃɚ/",
+          "pos": "n.",
+          "cn": "壓力",
+          "ex": "I was under a lot of pressure.",
+          "exCn": "我承受很大的壓力。"
+        },
+        {
+          "w": "install",
+          "ipa": "/ɪnˈstɑːl/",
+          "pos": "v.",
+          "cn": "安裝",
+          "ex": "Make sure the frame is installed correctly.",
+          "exCn": "確保車架安裝正確。"
+        },
+        {
+          "w": "bike frame",
+          "ipa": "/baɪk freɪm/",
+          "pos": "n.",
+          "cn": "腳踏車車架",
+          "ex": "Check the bike frame for defects.",
+          "exCn": "檢查腳踏車車架有無瑕疵。"
+        },
+        {
+          "w": "work instructions",
+          "ipa": "/wɝːk ɪnˈstrʌk.ʃənz/",
+          "pos": "n.",
+          "cn": "作業指導書",
+          "ex": "We follow the work instructions.",
+          "exCn": "我們遵照作業指導書。"
+        },
+        {
+          "w": "assembly line",
+          "ipa": "/əˈsem.bli laɪn/",
+          "pos": "n.",
+          "cn": "組裝線",
+          "ex": "Place the frame on the assembly line.",
+          "exCn": "把車架放到組裝線上。"
+        },
+        {
+          "w": "assemble",
+          "ipa": "/əˈsembəl/",
+          "pos": "v.",
+          "cn": "組裝",
+          "ex": "The customer couldn't assemble the electrical part.",
+          "exCn": "客戶無法組裝電子零件。"
+        },
+        {
+          "w": "controller",
+          "ipa": "/kənˈtroʊ.lɚ/",
+          "pos": "n.",
+          "cn": "控制器",
+          "ex": "Install the controller onto the frame.",
+          "exCn": "將控制器安裝到車架上。"
+        },
+        {
+          "w": "belt pulley",
+          "ipa": "/belt ˈpʊl.i/",
+          "pos": "n.",
+          "cn": "皮帶輪",
+          "ex": "Install the belt pulley onto the frame.",
+          "exCn": "將皮帶輪安裝到車架上。"
+        },
+        {
+          "w": "cable tie",
+          "ipa": "/ˈkeɪ.bəl taɪ/",
+          "pos": "n.",
+          "cn": "束線帶",
+          "ex": "Secure the cables with cable ties.",
+          "exCn": "用束線帶固定線纜。"
+        },
+        {
+          "w": "scratch",
+          "ipa": "/skrætʃ/",
+          "pos": "n.",
+          "cn": "刮痕",
+          "ex": "Check the frame for scratches.",
+          "exCn": "檢查車架有無刮痕。"
+        },
+        {
+          "w": "dent",
+          "ipa": "/dent/",
+          "pos": "n.",
+          "cn": "凹痕",
+          "ex": "There is a small dent on the surface.",
+          "exCn": "表面有一個小凹痕。"
+        },
+        {
+          "w": "defect",
+          "star": true,
+          "ipa": "/ˈdiː.fekt/",
+          "pos": "n.",
+          "cn": "瑕疵、缺陷",
+          "ex": "If we find a defect, we stop the process.",
+          "exCn": "如果發現瑕疵，我們會停止製程。"
+        },
+        {
+          "w": "defective",
+          "star": true,
+          "ipa": "/dɪˈfek.tɪv/",
+          "pos": "adj.",
+          "cn": "有缺陷的",
+          "ex": "Separate the defective unit.",
+          "exCn": "將有缺陷的產品隔離。"
+        },
+        {
+          "w": "tighten",
+          "ipa": "/ˈtaɪtən/",
+          "pos": "v.",
+          "cn": "拴緊",
+          "ex": "The technician tightened the loose screw.",
+          "exCn": "技術人員拴緊了鬆動的螺絲。"
+        },
+        {
+          "w": "trim off",
+          "ipa": "/trɪm ɑːf/",
+          "pos": "phr.v.",
+          "cn": "修剪掉",
+          "ex": "They trim off the excess.",
+          "exCn": "他們修剪掉多餘的部分。"
+        },
+        {
+          "w": "secure",
+          "star": true,
+          "ipa": "/səˈkjʊr/",
+          "pos": "v.",
+          "cn": "固定、繫牢",
+          "ex": "They secure the cables with cable ties.",
+          "exCn": "他們用束線帶固定線纜。"
+        },
+        {
+          "w": "functional test",
+          "ipa": "/ˈfʌŋk.ʃən.əl test/",
+          "pos": "n.",
+          "cn": "功能測試",
+          "ex": "We perform a functional test at the fourth station.",
+          "exCn": "我們在第四站進行功能測試。"
+        },
+        {
+          "w": "corrective action",
+          "star": true,
+          "ipa": "/kəˈrek.tɪv ˈæk.ʃən/",
+          "pos": "n.",
+          "cn": "矯正措施",
+          "ex": "Take corrective action before the unit moves forward.",
+          "exCn": "在產品進入下一站前採取矯正措施。"
+        },
+        {
+          "w": "accessories",
+          "ipa": "/əkˈses.ɚ.iz/",
+          "pos": "n.",
+          "cn": "配件",
+          "ex": "Don't forget the accessories in the box.",
+          "exCn": "別忘了把配件放進箱子裡。"
+        },
+        {
+          "w": "moisture absorber",
+          "ipa": "/ˈmɔɪs.tʃɚ əbˈzɔːr.bɚ/",
+          "pos": "n.",
+          "cn": "乾燥劑／吸濕劑",
+          "ex": "Place a moisture absorber in the box.",
+          "exCn": "在箱子裡放一包乾燥劑。"
+        },
+        {
+          "w": "sharp edge",
+          "ipa": "/ʃɑːrp edʒ/",
+          "pos": "n.",
+          "cn": "毛邊、銳邊",
+          "ex": "We need to trim off the sharp edges.",
+          "exCn": "我們需要修掉毛邊。"
+        },
+        {
+          "w": "serial number",
+          "star": true,
+          "ipa": "/ˈsɪriəl ˌnʌmbɚ/",
+          "pos": "n.",
+          "cn": "序號",
+          "ex": "The label shows the model number and serial number.",
+          "exCn": "標籤上顯示型號和序號。"
+        },
+        {
+          "w": "tag",
+          "ipa": "/tæɡ/",
+          "pos": "v.",
+          "cn": "貼標",
+          "ex": "We tag the finished goods for shipping.",
+          "exCn": "我們在成品上貼標準備出貨。"
+        },
+        {
+          "w": "safety helmet",
+          "ipa": "/ˈseɪf.ti ˈhel.mət/",
+          "pos": "n.",
+          "cn": "安全帽",
+          "ex": "You need to wear a safety helmet in this area.",
+          "exCn": "你在這個區域需要戴安全帽。"
+        },
+        {
+          "w": "safety gloves",
+          "ipa": "/ˈseɪf.ti ɡlʌvz/",
+          "pos": "n.",
+          "cn": "安全手套",
+          "ex": "Workers must wear safety gloves.",
+          "exCn": "工人必須戴安全手套。"
+        },
+        {
+          "w": "safety shoes",
+          "ipa": "/ˈseɪf.ti ʃuːz/",
+          "pos": "n.",
+          "cn": "安全鞋",
+          "ex": "All operators need to wear safety shoes.",
+          "exCn": "所有操作員都需穿安全鞋。"
+        },
+        {
+          "w": "goggles",
+          "ipa": "/ˈɡɑːɡəlz/",
+          "pos": "n.",
+          "cn": "護目鏡",
+          "ex": "Wear goggles when using the grinder.",
+          "exCn": "使用研磨機時要戴護目鏡。"
+        },
+        {
+          "w": "safety glasses",
+          "ipa": "/ˈseɪf.ti ˈɡlæs.ɪz/",
+          "pos": "n.",
+          "cn": "安全眼鏡",
+          "ex": "Workers must wear safety glasses.",
+          "exCn": "工人必須戴安全眼鏡。"
+        },
+        {
+          "w": "safety vest",
+          "ipa": "/ˈseɪf.ti vest/",
+          "pos": "n.",
+          "cn": "安全背心",
+          "ex": "Visitors must wear a safety vest.",
+          "exCn": "訪客必須穿安全背心。"
+        },
+        {
+          "w": "staple gun",
+          "ipa": "/ˈsteɪpəl ɡʌn/",
+          "pos": "n.",
+          "cn": "釘槍",
+          "ex": "Use the staple gun to secure the box.",
+          "exCn": "用釘槍固定紙箱。"
+        },
+        {
+          "w": "disassemble",
+          "star": true,
+          "ipa": "/ˌdɪs.əˈsem.bəl/",
+          "pos": "v.",
+          "cn": "拆解、拆開",
+          "ex": "If there is a problem, will you disassemble the product?",
+          "exCn": "如果有問題，你們會把產品拆開嗎？"
+        }
+      ],
+      "phrasesTitle": "III. 片語與搭配詞（索引表）Phrases & Collocations",
+      "phrases": [
+        {
+          "p": "stick to + N",
+          "cn": "遵守、堅持（詳見 IV-A）"
+        },
+        {
+          "p": "be (not) allowed to + V",
+          "cn": "被（不）允許做某事（詳見 IV-B）"
+        },
+        {
+          "p": "dare (not) to + V",
+          "cn": "敢（不敢）做某事（詳見 IV-C）"
+        },
+        {
+          "p": "be between jobs",
+          "cn": "待業中（委婉說法）（詳見 IV-D）"
+        },
+        {
+          "p": "be in a hurry / in a rush",
+          "cn": "趕時間（詳見 IV-E）"
+        },
+        {
+          "p": "relieve stress",
+          "cn": "紓解壓力（詳見 V）"
+        },
+        {
+          "p": "be under stress / pressure",
+          "cn": "承受壓力（詳見 V）"
+        },
+        {
+          "p": "come loose",
+          "cn": "變鬆脫（詳見 VI）"
+        },
+        {
+          "p": "according to + N",
+          "cn": "根據、按照（詳見 VII）"
+        },
+        {
+          "p": "visually inspect + for",
+          "cn": "目視檢查有無⋯（詳見 IX-A）"
+        },
+        {
+          "p": "perform a functional test",
+          "cn": "進行功能測試（詳見 IX-D）"
+        },
+        {
+          "p": "take corrective action",
+          "cn": "採取矯正措施（詳見 IX-F）"
+        }
+      ],
+      "grammarTitle": "IV. 句型與文法解說 Sentence Patterns & Grammar",
+      "grammar": [
+        {
+          "k": "IV-A",
+          "title": "stick to + N（遵守／堅持）",
+          "pat": "主詞 + stick to + 名詞",
+          "pts": [
+            "stick to 表示「堅持、遵守」，後面接名詞（計劃、規則、時間表等）。",
+            "過去式：stuck to。",
+            "常見搭配：stick to the plan / schedule / rules / budget。"
+          ]
+        },
+        {
+          "k": "IV-B",
+          "title": "be (not) allowed to + V（被允許／禁止做某事）",
+          "pat": "主詞 + be (not) allowed to + 原形動詞",
+          "pts": [
+            "這是被動語態的固定用法，to 不可省略。",
+            "⚠️ 常見錯誤：allowed take → 一定要加 to。",
+            "⚠️ 動名詞當主詞時用 is：Smoking is not allowed.（不是 are）"
+          ],
+          "exs": [
+            {
+              "tag": "肯定",
+              "en": "You are allowed to enter.",
+              "cn": "你被允許進入。"
+            },
+            {
+              "tag": "否定",
+              "en": "Visitors are not allowed to take photos.",
+              "cn": "訪客不允許拍照。"
+            }
+          ]
+        },
+        {
+          "k": "IV-C",
+          "title": "dare (not) to + V（敢／不敢做某事）",
+          "pat": "主詞 + don't/doesn't dare to + 原形動詞",
+          "pts": [
+            "dare 當一般動詞用，否定加 don't/doesn't。",
+            "⚠️ tell a lie（說謊）是可數片語，lie 前要加 a；也可用 tell lies（複數）。"
+          ],
+          "exs": [
+            {
+              "en": "I don't dare to talk loudly with my boss.",
+              "cn": "我不敢大聲跟老闆說話。"
+            },
+            {
+              "en": "She doesn't dare to tell a lie.",
+              "cn": "她不敢說謊。"
+            }
+          ]
+        },
+        {
+          "k": "IV-D",
+          "title": "be between jobs vs. be unemployed（待業 vs. 失業）",
+          "pat": "I'm between jobs.（委婉）／ I'm unemployed.（直接）",
+          "pts": [
+            "I'm between jobs. ＝ 我正在換工作（委婉、正面，暗示有在找工作）。",
+            "I'm unemployed. ＝ 我失業了（直接、較正式，強調沒有工作的狀態）。",
+            "社交場合建議用 between jobs，比較禮貌。"
+          ],
+          "exs": [
+            {
+              "en": "I'm between jobs right now, so I have more free time.",
+              "cn": "我目前待業中，所以比較有空。"
+            }
+          ]
+        },
+        {
+          "k": "IV-E",
+          "title": "be in a hurry / in a rush（趕時間）",
+          "pat": "主詞 + be in a hurry / in a rush",
+          "pts": [
+            "兩者意思相同，都表示「趕時間」。",
+            "in a rush 較口語，in a hurry 較常見。"
+          ],
+          "exs": [
+            {
+              "en": "I'm in a hurry. I have to leave now.",
+              "cn": "我趕時間，我必須現在離開。"
+            }
+          ]
+        },
+        {
+          "k": "V",
+          "title": "relieve stress 與不定詞表目的（紓解壓力的說法）",
+          "pat": "V-ing is a good way to + V ／ … + to relieve stress（目的）",
+          "pts": [
+            "relieve stress ＝ 紓解壓力，relieve 是動詞，stress 是名詞。",
+            "to relieve stress 可放句尾當「目的」（不定詞表目的）：I listen to music to relieve stress.",
+            "Taking a walk is a good way to... 是實用句型：「V-ing is a good way to + V」＝ 做某事是⋯的好方法。",
+            "stressed（形容詞）描述「人的感受」；stress（名詞）描述「壓力本身」。"
+          ]
+        },
+        {
+          "k": "VI",
+          "title": "潮濕四個詞如何選擇：damp / dampness / humidity / moisture",
+          "pat": "damp（adj.）／ dampness・humidity・moisture（n.）",
+          "pts": [
+            "damp（adj.）：形容東西「摸起來微微濕濕的」，常用來形容牆壁、衣服、箱子。",
+            "dampness（n.）：damp 的名詞形式，強調「潮濕這個狀態」造成的影響。",
+            "humidity（n.）：指「空氣中的水氣含量」，常與天氣、環境有關（high/low humidity）。",
+            "moisture（n.）：泛指任何「水分、濕氣」，使用範圍最廣，描述膠帶脫落的原因很自然。"
+          ]
+        },
+        {
+          "k": "VII-A",
+          "title": "make sure + 子句、according to + N（確認安裝品質）",
+          "pat": "make sure (that) + 子句 ／ according to + N",
+          "pts": [
+            "make sure (that) + 子句 ＝ 確保⋯，that 可省略。",
+            "according to + N ＝ 根據、按照（後接名詞，如規格、指示、計畫）。",
+            "work instructions ＝ 作業指導書（工廠用語）。",
+            "specifications ＝ 規格（常簡稱 specs）。"
+          ],
+          "exs": [
+            {
+              "tag": "Q",
+              "en": "How do you make sure the bike frame is installed correctly?",
+              "cn": "你們怎麼確保腳踏車車架安裝正確？"
+            },
+            {
+              "tag": "A",
+              "en": "We follow the work instructions and check that the frame is installed according to the specifications.",
+              "cn": "我們遵照作業指導書，並確認車架是依照規格安裝的。"
+            }
+          ]
+        },
+        {
+          "k": "VII-B",
+          "title": "disassemble vs. assemble（重點字）",
+          "pat": "dis-（相反動作）+ assemble（組裝）= disassemble（拆解）",
+          "pts": [
+            "disassemble /ˌdɪs.əˈsem.bəl/ ＝ 拆解、拆開（dis- 表示相反動作 + assemble 組裝）。",
+            "相反詞：assemble /əˈsembəl/ ＝ 組裝。"
+          ]
+        },
+        {
+          "k": "IX-A",
+          "title": "visually inspect + N + for（目視檢查有無⋯）",
+          "pat": "visually inspect + N + for + 瑕疵名稱",
+          "pts": [
+            "visually inspect + N + for + 瑕疵名稱 ＝ 目視檢查某物有無⋯（for 表示「找」的目標）。",
+            "scratches, dents, damage 是並列名詞，用逗號＋and 連接。",
+            "visible defects ＝ 可見的瑕疵（visible 是 defects 的形容詞）。"
+          ],
+          "exs": [
+            {
+              "en": "We visually inspect the frame for scratches, dents, damage, and other visible defects.",
+              "cn": "我們目視檢查車架有無刮痕、凹痕、損壞及其他可見的瑕疵。"
+            }
+          ]
+        },
+        {
+          "k": "IX-B",
+          "title": "onto / through / into：三個安裝方向的介系詞",
+          "pat": "install A onto B ／ put A through B ／ put A into B",
+          "pts": [
+            "onto ＝ 安裝到⋯的表面或結構上（controller → onto the frame）。",
+            "through ＝ 穿過（cable → through the frame，從一側到另一側）。",
+            "into ＝ 裝進⋯裡面（例：Put the part into the box.）。",
+            "三個介系詞描述不同的安裝動作方向，不可混用。"
+          ]
+        },
+        {
+          "k": "IX-C",
+          "title": "secure、tight enough、trim off the excess（固定線纜）",
+          "pat": "secure + O + with + 工具 ／ adj. + enough ／ trim off + the excess",
+          "pts": [
+            "secure（v.）＝ 固定、繫牢，比 fasten 更正式，工廠常用。",
+            "tight enough ＝ 夠緊的（adj. + enough 表示「足夠地」）。",
+            "trim off the excess ＝ 修剪掉多餘的部分。excess 在這裡當名詞用（the excess ＝ 多餘的那截）。",
+            "make sure + 子句 ＝ 確保⋯（同 VII-A 的用法）。"
+          ]
+        },
+        {
+          "k": "IX-D",
+          "title": "perform a functional test、pass the test（功能測試）",
+          "pat": "perform a functional test on + O ／ If + S + V, S + V",
+          "pts": [
+            "perform a functional test ＝ 進行功能測試（比 do a test 更正式、更精確）。",
+            "pass the test ＝ 通過測試（反義：fail the test）。",
+            "to identify and fix ＝ 不定詞表目的（為了找出並修復）。",
+            "disassemble ＝ dis-（拆）+ assemble（組裝）＝ 拆解。"
+          ]
+        },
+        {
+          "k": "IX-E",
+          "title": "moisture absorber、accessories、shouldn't forget to（包裝成品）",
+          "pat": "S + shouldn't forget to + V",
+          "pts": [
+            "moisture absorber ＝ 吸濕劑／乾燥劑（absorber 來自動詞 absorb 吸收）。",
+            "accessories ＝ 配件（注意拼字，重音在第二音節 /əkˈses.ɚ.iz/）。",
+            "shouldn't forget to + V ＝ 不應該忘記做某事。",
+            "tag（v.）＝ 貼標籤；tag the finished goods ＝ 在成品上貼標。"
+          ]
+        },
+        {
+          "k": "IX-F",
+          "title": "take corrective action、separate the defective unit（發現瑕疵的處理）",
+          "pat": "Stop → Separate → Identify → Take corrective action before + 子句",
+          "pts": [
+            "take corrective action ＝ 採取矯正措施（工廠品管常用語）。",
+            "separate the defective unit ＝ 隔離不良品（separate 當動詞 /ˈsep.ə.reɪt/）。",
+            "before the unit moves ＝ before 引導時間子句，描述「在⋯之前」。"
+          ]
+        },
+        {
+          "k": "X-A",
+          "title": "tighten、V-ing 當主詞、which 代指整件事（鎖緊螺絲解決噪音）",
+          "pat": "S + V-ed + O, which + V-ed + O ／ V-ing + V（單數）",
+          "pts": [
+            "tighten（v.）＝ 拴緊（tight adj. 緊的 → tighten v. 使變緊），過去式 tightened。",
+            "Tightening... fixed...：動名詞（V-ing）當主詞，視為單數（同 Smoking is not allowed 的結構）。",
+            "which fixed ＝ 關係子句，which 指前面整件事（拴螺絲這個動作）。"
+          ]
+        },
+        {
+          "k": "X-C",
+          "title": "missing（配件遺漏）與 couldn't + 原形動詞",
+          "pat": "S + couldn't + V ／ some + N + were missing",
+          "pts": [
+            "missing（adj.）＝ 遺漏的、不見的（were missing ＝ 不見了，被動描述狀態）。",
+            "couldn't assemble ＝ could not 的縮寫 + 原形動詞（過去式表達「無法」）。"
+          ]
+        }
+      ],
+      "cmpTitle": "VI. 潮濕相關詞彙比較 Dampness, Humidity & Moisture",
+      "cmp": [
+        {
+          "u": "damp",
+          "sc": "adj.　slightly wet 微微潮濕的",
+          "ex": "The box is damp.",
+          "exCn": "箱子是潮濕的。",
+          "cn": "潮濕的（微濕）"
+        },
+        {
+          "u": "dampness",
+          "sc": "n.　the condition of being damp 潮濕的狀態",
+          "ex": "The dampness caused the tape to come loose.",
+          "exCn": "潮濕導致膠帶脫落。",
+          "cn": "潮濕（狀態）"
+        },
+        {
+          "u": "humidity",
+          "sc": "n.　moisture in the air 空氣中的水分",
+          "ex": "High humidity can make tape lose its adhesive strength.",
+          "exCn": "高濕度會讓膠帶失去黏性。",
+          "cn": "濕度"
+        },
+        {
+          "u": "moisture",
+          "sc": "n.　water / wetness 水分、濕氣",
+          "ex": "The tape came loose because of the moisture.",
+          "exCn": "膠帶因為水氣而脫落。",
+          "cn": "水氣、濕氣"
+        }
+      ],
+      "reading": [
+        {
+          "bar": "IX. 組裝線各站作業 Assembly-Line Stations",
+          "title": "Assembly-Line Stations",
+          "titleCn": "組裝線各站作業（e-bike 五個工站）",
+          "paras": [
+            {
+              "en": "At the first station, the operators place the frame on the assembly line and check the appearance of the frame.",
+              "cn": "在第一站，操作員將車架放上組裝線，並檢查車架的外觀。"
+            },
+            {
+              "en": "At the second station, they install the controller and the belt pulley onto the frame. They put the cable through the frame.",
+              "cn": "在第二站，他們把控制器和皮帶輪安裝到車架上，並把線纜穿過車架。"
+            },
+            {
+              "en": "First, they install the electronic cables and then secure them with cable ties. They must make sure the cable ties are tight enough. Then they trim off the excess.",
+              "cn": "首先，他們安裝電子線纜，然後用束線帶固定。他們必須確保束線帶夠緊，接著修剪掉多餘的部分。"
+            },
+            {
+              "en": "At the fourth station, the worker moves the unit to the testing room to perform a functional test on it. If the unit passes the test, we can move it to the next station. If not, we need to disassemble the unit to identify and fix the problem.",
+              "cn": "在第四站，作業員把產品移到測試室進行功能測試。如果通過測試，就送往下一站；如果沒通過，就要拆解產品找出問題並修復。"
+            },
+            {
+              "en": "If every function is okay, we package the unit. We place the completed product into the box with a moisture absorber, and we shouldn't forget to put the accessories in the box with the finished product.",
+              "cn": "如果所有功能都正常，我們就包裝產品。我們把成品放入箱中，附上乾燥劑，也不能忘記把配件放進箱子裡。"
+            },
+            {
+              "en": "After packaging, we tag the finished goods and send them to the warehouse to wait for shipping.",
+              "cn": "包裝完成後，我們在成品上貼標，送到倉庫等待出貨。"
+            },
+            {
+              "en": "If an operator finds a defect, they should: 1. Stop the process. 2. Separate the defective unit. 3. Identify the problem. 4. Take corrective action before the unit moves to the next stage.",
+              "cn": "如果操作員發現瑕疵，應該：1. 停止製程。2. 隔離不良品。3. 找出問題。4. 在產品進入下一站前採取矯正措施。"
+            }
+          ],
+          "questions": [
+            {
+              "q": "How do you check the appearance of the frame?",
+              "qCn": "你們怎麼檢查車架的外觀？",
+              "a": "We visually inspect the frame for scratches, dents, damage, and other visible defects.",
+              "aCn": "我們目視檢查車架有無刮痕、凹痕、損壞及其他可見的瑕疵。"
+            },
+            {
+              "q": "How many workers are assigned to each station?",
+              "qCn": "每一站配置多少人？",
+              "a": "Two workers are assigned to each station.",
+              "aCn": "每站配置兩個人。"
+            },
+            {
+              "q": "What does the worker do at the first station?",
+              "qCn": "第一站的作業員做什麼？",
+              "a": "They place the frame on the assembly line and check its appearance.",
+              "aCn": "他們把車架放上組裝線並檢查外觀。"
+            },
+            {
+              "q": "How do you secure the electronic cables?",
+              "qCn": "你們怎麼固定電子線纜？",
+              "a": "We secure them with cable ties and trim off the excess.",
+              "aCn": "我們用束線帶固定，再修掉多餘的部分。"
+            },
+            {
+              "q": "At which station does the operator perform the functional test?",
+              "qCn": "哪一站做功能測試？",
+              "a": "At the fourth station.",
+              "aCn": "在第四站。"
+            },
+            {
+              "q": "What do you do if a defect is found?",
+              "qCn": "發現瑕疵怎麼辦？",
+              "a": "We stop the process, separate the defective unit, identify the problem, and take corrective action.",
+              "aCn": "停止製程、隔離不良品、找出問題、採取矯正措施。"
+            }
+          ]
+        }
+      ],
+      "extraTitle": "V / VI / VII / VIII / X. 實用說法與課堂例句",
+      "extra": [
+        {
+          "title": "V-A. 表達「有壓力」的四種說法",
+          "exs": [
+            {
+              "en": "I was under a lot of stress.",
+              "cn": "我壓力很大。",
+              "hi": "under a lot of stress"
+            },
+            {
+              "en": "I was very stressed.",
+              "cn": "我壓力很大。",
+              "hi": "very stressed"
+            },
+            {
+              "en": "I had a lot of stress.",
+              "cn": "我有很大的壓力。",
+              "hi": "a lot of stress"
+            },
+            {
+              "en": "I was under a lot of pressure.",
+              "cn": "我承受很大的壓力。",
+              "hi": "under a lot of pressure"
+            }
+          ]
+        },
+        {
+          "title": "V-B. 表達「紓解壓力」",
+          "exs": [
+            {
+              "en": "I was under a lot of stress, so I went outside for a few minutes to feel calm.",
+              "cn": "我壓力很大，所以我到外面待了幾分鐘讓自己冷靜一下。",
+              "hi": "to feel calm"
+            },
+            {
+              "en": "Exercise helps me relieve stress.",
+              "cn": "運動幫助我紓解壓力。",
+              "hi": "relieve stress"
+            },
+            {
+              "en": "I listen to music to relieve stress.",
+              "cn": "我聽音樂來紓解壓力。",
+              "hi": "to relieve stress"
+            },
+            {
+              "en": "Taking a walk is a good way to relieve stress.",
+              "cn": "散步是紓解壓力的好方法。",
+              "hi": "is a good way to"
+            }
+          ]
+        },
+        {
+          "title": "VI. 老師的修正版本（作業第 6 題的四種道地說法）",
+          "exs": [
+            {
+              "en": "The tape on the box became loose because of the dampness.",
+              "cn": "箱子上的膠帶因為潮濕而變鬆了。",
+              "hi": "because of the dampness"
+            },
+            {
+              "en": "The tape on the box became loose because of the humidity.",
+              "cn": "箱子上的膠帶因為濕度而變鬆了。",
+              "hi": "because of the humidity"
+            },
+            {
+              "en": "The tape on the box became loose because the box got damp.",
+              "cn": "箱子上的膠帶因為箱子受潮而變鬆了。",
+              "hi": "got damp"
+            },
+            {
+              "en": "The tape came loose because of the moisture.",
+              "cn": "膠帶因為水氣而脫落了。",
+              "hi": "came loose"
+            }
+          ]
+        },
+        {
+          "title": "VII-B. 課堂延伸問答",
+          "exs": [
+            {
+              "en": "If there is a problem, will you disassemble the product?",
+              "cn": "如果有問題，你們會把產品拆開嗎？",
+              "hi": "disassemble"
+            }
+          ]
+        },
+        {
+          "title": "VIII-B. 安全設備實用句型",
+          "exs": [
+            {
+              "en": "All operators need to wear safety shoes, safety glasses, helmets, and safety vests.",
+              "cn": "所有操作員都需要穿安全鞋、戴安全眼鏡、安全帽和安全背心。",
+              "hi": "need to wear"
+            },
+            {
+              "en": "Make sure you have the proper safety equipment before starting work.",
+              "cn": "開工前請確認你有穿戴適當的安全設備。",
+              "hi": "Make sure"
+            }
+          ]
+        },
+        {
+          "title": "X-A. 鎖緊螺絲解決噪音（三種說法）",
+          "exs": [
+            {
+              "en": "Our technician tightened the loose screw, which fixed the noise problem.",
+              "cn": "我們的技術人員拴緊了鬆動的螺絲，解決了噪音問題。",
+              "hi": "which fixed"
+            },
+            {
+              "en": "The noise stopped after we tightened the loose screw.",
+              "cn": "拴緊螺絲後噪音就停了。",
+              "hi": "after we tightened"
+            },
+            {
+              "en": "Tightening the loose screw fixed the noise problem.",
+              "cn": "拴緊螺絲解決了噪音問題。",
+              "hi": "Tightening"
+            }
+          ]
+        },
+        {
+          "title": "X-B～E. 修剪毛邊、配件遺漏、貼標與封箱",
+          "exs": [
+            {
+              "en": "We need to trim off the sharp edges because they may affect the appearance.",
+              "cn": "我們需要修掉毛邊，因為它們可能會影響外觀。",
+              "hi": "trim off the sharp edges"
+            },
+            {
+              "en": "The customer couldn't assemble the electrical part because some accessories were missing.",
+              "cn": "客戶無法組裝電子零件，因為有些配件遺漏了。",
+              "hi": "were missing"
+            },
+            {
+              "en": "After testing, the operator must attach a label on the unit showing the model number, production date, and serial number.",
+              "cn": "測試完成後，操作員必須在產品上貼標籤，標示型號、生產日期和序號。",
+              "hi": "attach a label"
+            },
+            {
+              "en": "The operator uses a staple gun to secure the cardboard box.",
+              "cn": "操作員用釘槍固定紙箱。",
+              "hi": "staple gun"
+            }
+          ]
+        }
+      ]
     }
   ]
 };
