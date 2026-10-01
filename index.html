@@ -6629,7 +6629,7 @@ let micStartWatch=null;  /* 啟動看門狗：start() 之後遲遲沒真的開�
 let micRetried=false;
 const TTS_GAP=280;       /* 示範語音 cancel 之後留一點空檔再開錄，避免喇叭聲被收進去 */
 function speechOK(){return ('webkitSpeechRecognition' in window)||('SpeechRecognition' in window);}
-let whisperWorker,whisperActive=false,whisperCfg,whisperRec,whisperStream,whisperChunks=[],whisperLiveSR=null;
+let whisperWorker,whisperActive=false,whisperCfg,whisperRec,whisperStream,whisperChunks=[],whisperLiveSR=null,whisperWait=null;
 function recMode(){return localStorage.getItem('speakup_rec_mode')||'fast';}
 let whisperReady=false,whisperLoadErr=null,whisperProg=0;
 function renderRecMode(){const b=$('rec-mode');if(!b)return;
@@ -6653,7 +6653,9 @@ function whisperEnsure(){
   whisperWorker.onerror=e=>{if(!whisperReady)fail(e&&e.message);};
   whisperWorker.postMessage({type:'load'});
 }
-function whisperDone(t,e){const c=whisperCfg;if(!c)return;whisperActive=false;micActive=false;meterStop();try{whisperStream.getTracks().forEach(x=>x.stop());}catch(_){}whisperLiveStop();setMicUI(c,false);whisperCfg=null;c.onDone&&c.onDone(t,e,[]);}
+function whisperDone(t,e){const c=whisperCfg;if(!c)return;
+  /* Whisper 對靜音會幻覺出 [MUSIC PLAYING]、(inaudible) 這類標記，不能當成使用者說的話 */
+  t=(t||'').replace(/\[[^\]]*\]|\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();if(whisperWait){clearTimeout(whisperWait);whisperWait=null;}whisperActive=false;micActive=false;meterStop();try{whisperStream.getTracks().forEach(x=>x.stop());}catch(_){}whisperLiveStop();setMicUI(c,false);whisperCfg=null;c.onDone&&c.onDone(t,e,[]);}
 function whisperLiveStop(){if(whisperLiveSR){try{whisperLiveSR.onresult=whisperLiveSR.onend=whisperLiveSR.onerror=null;whisperLiveSR.abort();}catch(_){}whisperLiveSR=null;}}
 function whisperLiveStart(cfg){
   if(!speechOK()||whisperLiveSR)return;
@@ -6671,7 +6673,7 @@ function whisperLiveStart(cfg){
   whisperLiveSR=sr;
   try{sr.start();}catch(_){whisperLiveSR=null;}
 }
-async function whisperMic(c){if(whisperActive){whisperRec.stop();return;}try{whisperCfg=c;whisperActive=micActive=true;setMicUI(c,true);meterStart(c);whisperLiveStart(c);whisperStream=await navigator.mediaDevices.getUserMedia({audio:true});whisperChunks=[];whisperRec=new MediaRecorder(whisperStream);whisperRec.ondataavailable=e=>whisperChunks.push(e.data);whisperRec.onstop=async()=>{const ctx=new AudioContext(),b=await ctx.decodeAudioData(await new Blob(whisperChunks).arrayBuffer()),o=new OfflineAudioContext(1,Math.ceil(b.duration*16000),16000),s=o.createBufferSource();s.buffer=b;s.connect(o.destination);s.start();const a=(await o.startRendering()).getChannelData(0).slice();whisperWorker.postMessage({type:'transcribe',audio:a.buffer},[a.buffer]);};whisperRec.start();}catch(e){whisperLiveStop();whisperDone('',e.name==='NotAllowedError'?'not-allowed':'whisper-error');}}
+async function whisperMic(c){if(whisperActive){whisperRec.stop();return;}try{whisperCfg=c;whisperActive=micActive=true;setMicUI(c,true);meterStart(c);whisperLiveStart(c);whisperStream=await navigator.mediaDevices.getUserMedia({audio:true});whisperChunks=[];whisperRec=new MediaRecorder(whisperStream);whisperRec.ondataavailable=e=>whisperChunks.push(e.data);whisperRec.onstop=async()=>{try{const ctx=new AudioContext(),b=await ctx.decodeAudioData(await new Blob(whisperChunks).arrayBuffer());ctx.close();const o=new OfflineAudioContext(1,Math.max(16000,Math.ceil(b.duration*16000)),16000),s=o.createBufferSource();s.buffer=b;s.connect(o.destination);s.start();const a=(await o.startRendering()).getChannelData(0).slice();const l=$(c.lbl);if(l)l.textContent='⏳ 辨識中…';whisperWorker.postMessage({type:'transcribe',audio:a.buffer},[a.buffer]);whisperWait=setTimeout(()=>whisperDone('','whisper-timeout'),45000);}catch(e){whisperDone('','whisper-error');}};whisperRec.start();}catch(e){whisperLiveStop();whisperDone('',e.name==='NotAllowedError'?'not-allowed':'whisper-error');}}
 function setMicUI(cfg,on){if(!cfg)return;const b=$(cfg.btn);if(b){b.classList.toggle('rec',on);b.textContent=on?'⏹':(cfg.icon||'🎤');}
   const l=$(cfg.lbl);if(l)l.textContent=on?'🔴 聽你說…（說完再按一次結束）':(cfg.idle||'按一下，開始說');
   if(cfg.redo){const r=$(cfg.redo);if(r)r.classList.toggle('hide',!on);}}
@@ -6859,6 +6861,7 @@ function micErrMsg(err){
   if(err==='not-allowed'||err==='service-not-allowed')return '🚫 麥克風權限被封鎖：點網址列左邊的 🔒 → 麥克風 → 允許，再重新整理頁面';
   if(err==='audio-capture')return '🎙️ 找不到麥克風：請確認麥克風已接上，且 Windows「隱私權 → 麥克風」有允許瀏覽器';
   if(err==='network')return '📶 語音辨識需要網路（Chrome 透過 Google 伺服器辨識），請檢查連線後再試';
+  if(err==='whisper-error'||err==='whisper-timeout')return '⚠ 穩定模式轉寫失敗，請到 ⚙ 設定切回「語音：快速」再試';
   return null;}
 function micUnsupported(lbl){const l=$(lbl);if(l)l.innerHTML='⚠ 這個瀏覽器不支援語音辨識，建議用 <b>Chrome</b> 或 <b>Edge</b>。你仍可用 🔊 聽示範跟著念。';}
 
