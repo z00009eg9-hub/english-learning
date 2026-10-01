@@ -7758,15 +7758,24 @@ function vdSpeak(){
   say(l.say||l.en, VD.rate, step, vdVoiceFor(l.sp), vdPitchFor(l.sp));
   VD.watch=setTimeout(step, Math.max(1800, words*430/VD.rate)+2600);
 }
-/* 小測驗的倒數圈：停頓期間讓學習者自己想答案 */
+/* 小測驗的倒數圈：停頓期間讓學習者自己想答案。
+   只倒數 3、2、1（停頓比 3 秒長的話，前面留白當思考空檔）；
+   圓環用 CSS transition 連續收合、數字只在變化時更新，不會一格一格閃（2026-10-01 使用者指定） */
 function vdCountdown(ms){
   const box=$('vd-cd'); if(!box) return;
-  const R=40, C=2*Math.PI*R, t0=Date.now();
-  box.innerHTML='<svg viewBox="0 0 100 100"><circle class="bgc" cx="50" cy="50" r="'+R+'"/><circle class="fgc" id="vd-cdc" cx="50" cy="50" r="'+R+'" stroke-dasharray="'+C+'" stroke-dashoffset="0"/></svg><b id="vd-cdn"></b>';
-  const tick=()=>{ const left=Math.max(0,ms-(Date.now()-t0));
-    const c=$('vd-cdc'), n=$('vd-cdn'); if(!c||!n){ return; }
-    c.setAttribute('stroke-dashoffset', String(C*(1-left/ms))); n.textContent=Math.ceil(left/1000)||''; };
-  tick(); VD.cd=setInterval(tick,100);
+  const R=40, C=2*Math.PI*R, show=Math.min(3000,ms), t0=Date.now();
+  const start=()=>{
+    if(!document.contains(box)) return;
+    box.style.opacity='0'; box.style.transition='opacity .25s';
+    box.innerHTML='<svg viewBox="0 0 100 100"><circle class="bgc" cx="50" cy="50" r="'+R+'"/><circle class="fgc" id="vd-cdc" cx="50" cy="50" r="'+R+'" stroke-dasharray="'+C+'" stroke-dashoffset="0"/></svg><b id="vd-cdn">3</b>';
+    requestAnimationFrame(()=>{ const c=$('vd-cdc'); if(!c) return;
+      box.style.opacity='1';
+      c.style.transition='stroke-dashoffset '+(show/1000)+'s linear';
+      c.style.strokeDashoffset=String(C); });
+    VD.cd=setInterval(()=>{ const left=Math.max(0,ms-(Date.now()-t0)), n=$('vd-cdn'); if(!n) return;
+      const v=String(Math.ceil(left/1000)||''); if(n.textContent!==v) n.textContent=v; },100);
+  };
+  if(ms>show) VD.cd=setTimeout(start, ms-show); else start();
 }
 function vdPlay(){
   if(!('speechSynthesis' in window)){ alert('這個瀏覽器不支援語音朗讀。'); return; }
