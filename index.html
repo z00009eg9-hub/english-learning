@@ -6750,7 +6750,7 @@ function _startRec(){
     micAlts=baseAlts.concat(alts);
     cfg.onLive&&cfg.onLive(micLive,micAlts);resetIdle();};
   r.onerror=e=>{if(!alive())return;micErr=e.error;
-    if(e.error==='not-allowed'||e.error==='service-not-allowed')micStopping=true;};
+    if(/^(not-allowed|service-not-allowed|audio-capture|network)$/.test(e.error))micStopping=true;};
   r.onend=()=>{if(!alive())return;
     if(resTimer){clearTimeout(resTimer);resTimer=null;}
     /* keepAlive 之外：引擎「什麼都還沒聽到」就自己結束（iOS 常見）也自動重開，
@@ -6806,6 +6806,12 @@ let AUTOREC=(localStorage.getItem('autorec')!=='0');
 function toggleAutoRec(){AUTOREC=!AUTOREC;localStorage.setItem('autorec',AUTOREC?'1':'0');renderAutoRec();}
 function renderAutoRec(){document.querySelectorAll('.autorec').forEach(b=>{
   b.classList.toggle('on',AUTOREC);b.textContent=AUTOREC?'🎙️ 自動錄音：開':'🎙️ 自動錄音：關';});}
+/* 收音失敗要講真正原因；以前一律說「沒聽清楚」，權限被封鎖時使用者只會一直重按 */
+function micErrMsg(err){
+  if(err==='not-allowed'||err==='service-not-allowed')return '🚫 麥克風權限被封鎖：點網址列左邊的 🔒 → 麥克風 → 允許，再重新整理頁面';
+  if(err==='audio-capture')return '🎙️ 找不到麥克風：請確認麥克風已接上，且 Windows「隱私權 → 麥克風」有允許瀏覽器';
+  if(err==='network')return '📶 語音辨識需要網路（Chrome 透過 Google 伺服器辨識），請檢查連線後再試';
+  return null;}
 function micUnsupported(lbl){const l=$(lbl);if(l)l.innerHTML='⚠ 這個瀏覽器不支援語音辨識，建議用 <b>Chrome</b> 或 <b>Edge</b>。你仍可用 🔊 聽示範跟著念。';}
 
 /* ---------- 語音合成 TTS ---------- */
@@ -7752,7 +7758,7 @@ function sayMic(){micStart({btn:'say-mic',lbl:'say-mlbl',redo:'say-redo',idle:'�
   onReset:()=>{$('say-heard').innerHTML='';$('say-score').classList.add('hide');$('say-diff').classList.add('hide');},
   onLive:t=>{$('say-heard').innerHTML='你說：<b>'+esc(t)+'</b>';},
   onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('say-mlbl');$('say-reveal').classList.remove('hide');$('say-next').classList.remove('hide');return;}
-    if(!t){$('say-mlbl').textContent='沒聽清楚，再按一次試試 🎤';return;}sayScore(t);}});}
+    if(!t){$('say-mlbl').textContent=micErrMsg(err)||'沒聽清楚，再按一次試試 🎤';return;}sayScore(t);}});}
 /* 多個參考答案：對每個可接受的說法都評分，取最高分那個當對照基準 */
 function sayAltsHTML(ans,used){
   const rest=ans.filter(a=>norm(a)!==norm(used));
@@ -7847,7 +7853,7 @@ function shMic(){micStart({btn:'sh-mic',lbl:'sh-mlbl',redo:'sh-redo',idle:'先�
   onReset:()=>{$('sh-heard').innerHTML='';$('sh-score').classList.add('hide');$('sh-diff').classList.add('hide');},
   onLive:(t,alts)=>{$('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>'+altLine(alts,t);},
   onDone:(t,err,alts)=>{if(err==='unsupported'){micUnsupported('sh-mlbl');$('sh-next').classList.remove('hide');return;}
-    if(!t){$('sh-mlbl').textContent='沒聽清楚，再按一次 🎤';return;}
+    if(!t){$('sh-mlbl').textContent=micErrMsg(err)||'沒聽清楚，再按一次 🎤';return;}
     const r=scoreSpeech(t,shCur.en,{fuzzy:true});showRing('sh-score',r.pct,r.diff.filter(x=>x.near).length);
     const diff=$('sh-diff');diff.classList.remove('hide');
     diff.innerHTML=diffHTML(r,'答案：');
@@ -7905,7 +7911,7 @@ function wordMic(){micStart({btn:'word-mic',lbl:'word-mlbl',redo:'word-redo',idl
   onReset:()=>{$('word-heard').innerHTML='';$('word-score').classList.add('hide');},
   onLive:t=>{$('word-heard').innerHTML='你說：<b>'+esc(t)+'</b>';},
   onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('word-mlbl');return;}
-    if(!t){$('word-mlbl').textContent='沒聽清楚，再按一次 🎤';return;}
+    if(!t){$('word-mlbl').textContent=micErrMsg(err)||'沒聽清楚，再按一次 🎤';return;}
     /* 單字發音允許辨識誤差（Tom 更寬鬆），不要因為一個音抓不準就 0 分 */
     const r=scoreSpeech(t,wCur.w,{fuzzy:true});const pct=r.pct;showRing('word-score',pct,r.diff.filter(x=>x.near).length);
     $('word-heard').innerHTML='你說：<b>'+esc(t)+'</b>';
@@ -7987,7 +7993,7 @@ function readMic(pi){
     onLive:(t,alts)=>{const c=markRead(pi,t);$('rcov-'+pi).textContent=c+'%';$('rlbl-'+pi).textContent='🔴 唸吧，說到哪亮到哪…（唸完再按一次）';
       const h=$('rheard-'+pi);if(h)h.innerHTML=altLine(alts,t);},
     onDone:(t,err,alts)=>{if(err==='unsupported'){micUnsupported('rlbl-'+pi);return;}
-      if(!t){$('rlbl-'+pi).textContent='沒聽清楚，再按一次 🎤';return;}
+      if(!t){$('rlbl-'+pi).textContent=micErrMsg(err)||'沒聽清楚，再按一次 🎤';return;}
       /* 主結果＋瀏覽器候選合併成同一個字池再比對：同一段音訊的不同轉寫各抓到不同的字，
          合併後綠字亮得最全，而且分數和畫面一定一致（修正 90% 但綠字沒全亮的 bug） */
       const pool=[t].concat(alts||[]).filter(Boolean).slice(0,7).join(' ');
@@ -8154,7 +8160,7 @@ function talkMic(){micStart({btn:'talk-mic',lbl:'talk-mlbl',redo:'talk-redo',ico
   onReset:()=>{$('talk-mlbl').textContent='🔄 重來，說吧…';},
   onLive:t=>{$('talk-mlbl').textContent='🔴 '+t;},
   onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('talk-mlbl');talkReveal();return;}
-    if(!t){$('talk-mlbl').textContent='沒聽清楚，再按一次 ⬆';return;}
+    if(!t){$('talk-mlbl').textContent=micErrMsg(err)||'沒聽清楚，再按一次 ⬆';return;}
     talkJudge(t);}});}
 function talkToggleType(){talkTyping=!talkTyping;
   $('talk-type').classList.toggle('hide',!talkTyping);
@@ -9047,7 +9053,7 @@ function vPracMic(){
     continuous:true,keepAlive:true,idleMs:4000,firstIdleMs:20000,
     onLive:t=>{$('vp-heard').innerHTML='你說：<b>'+esc(t)+'</b>';},
     onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('vp-mlbl');return;}
-      if(!t){$('vp-mlbl').textContent='沒聽清楚，再按一次 🎤';return;}
+      if(!t){$('vp-mlbl').textContent=micErrMsg(err)||'沒聽清楚，再按一次 🎤';return;}
       const r=scoreSpeech(t,line.en,{fuzzy:true});showRing('vp-score',r.pct,r.diff.filter(x=>x.near).length);
       const d=$('vp-diff');d.classList.remove('hide');d.innerHTML=diffHTML(r,'答案：');
       $('vp-heard').innerHTML='你說：<b>'+esc(t)+'</b>';
