@@ -411,7 +411,8 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
   transition:transform .15s;position:relative;font-family:inherit;}
 .mic:active{transform:scale(.94);}
 .mic:disabled{background:var(--faint);box-shadow:none;cursor:not-allowed;animation:none;}
-.mic.rec{background:linear-gradient(135deg,var(--bad),#BE123C);animation:micpulse 1.3s infinite;}
+.mic.rec{background:linear-gradient(135deg,var(--bad),#BE123C);animation:micpulse 1.3s infinite;
+  outline:calc(var(--lv,0)*20px) solid rgba(225,29,72,.32);outline-offset:3px;transition:outline-width .08s;}
 @keyframes micpulse{0%{box-shadow:0 0 0 0 rgba(225,29,72,.5)}70%{box-shadow:0 0 0 22px rgba(225,29,72,0)}100%{box-shadow:0 0 0 0 rgba(225,29,72,0)}}
 /* 主 CTA 呼吸光暈：待機時緩慢脈動，一眼看出「按這裡開始說」 */
 .mic:not(.rec):not(:disabled){animation:micbreathe 2.8s ease-in-out infinite;}
@@ -6660,14 +6661,38 @@ function clearMicTimers(){[micTimer,micWatch,idleTimer,micStartWatch].forEach(t=
 function resetIdle(){if(!micCfg||!micCfg.idleMs)return;if(idleTimer)clearTimeout(idleTimer);
   idleTimer=setTimeout(()=>{micStopping=true;try{if(micRec)micRec.stop();}catch(e){}
     setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},300);},micCfg.idleMs);}
+/* 收音音量環：按鈕外圈跟著音量跳，使用者才看得出麥克風有沒有真的收到聲音；
+   幾秒內都接近靜音就直接提醒（常見原因：Windows 麥克風音量太低、選到錯的裝置） */
+let meterStream=null,meterCtx=null,meterRaf=null;
+async function meterStart(cfg){meterStop();
+  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia||!window.AudioContext)return;
+  const gen=micGen;
+  try{const s=await navigator.mediaDevices.getUserMedia({audio:true});
+    if(gen!==micGen||!micActive){s.getTracks().forEach(t=>t.stop());return;}
+    meterStream=s;meterCtx=new AudioContext();const an=meterCtx.createAnalyser();an.fftSize=1024;
+    meterCtx.createMediaStreamSource(s).connect(an);const buf=new Float32Array(an.fftSize);
+    const btn=$(cfg.btn),t0=Date.now();let peak=0,warned=false;
+    const tick=()=>{if(gen!==micGen||!micActive){meterStop();return;}
+      an.getFloatTimeDomainData(buf);let p=0;for(let i=0;i<buf.length;i++){const v=Math.abs(buf[i]);if(v>p)p=v;}
+      if(p>peak)peak=p;if(btn)btn.style.setProperty('--lv',Math.min(1,p*4).toFixed(2));
+      if(!warned&&Date.now()-t0>3500&&peak<0.03&&!(micLive||micFinal).trim()){warned=true;
+        const l=$(cfg.lbl);if(l)l.textContent='🔈 幾乎收不到聲音：請靠近麥克風、大聲一點，或檢查 Windows「麥克風音量」與選用的裝置';}
+      meterRaf=requestAnimationFrame(tick);};
+    tick();
+  }catch(e){}
+}
+function meterStop(){if(meterRaf)cancelAnimationFrame(meterRaf);meterRaf=null;
+  try{if(meterStream)meterStream.getTracks().forEach(t=>t.stop());}catch(e){}meterStream=null;
+  try{if(meterCtx)meterCtx.close();}catch(e){}meterCtx=null;
+  if(micCfg&&micCfg.btn){const b=$(micCfg.btn);if(b)b.style.removeProperty('--lv');}}
 function finishMic(){
-  if(micDone)return;micDone=true;micActive=false;micGen++;clearMicTimers();
+  if(micDone)return;micDone=true;micActive=false;micGen++;meterStop();clearMicTimers();
   const cfg=micCfg,txt=(micLive||micFinal||'').trim(),err=micErr,alts=micAlts.slice();
   try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;}}catch(e){}
   micRec=null;if(cfg)setMicUI(cfg,false);if(cfg&&cfg.onDone)cfg.onDone(txt,err,alts);
 }
 function hardResetMic(){
-  clearMicTimers();micStopping=true;micGen++;
+  meterStop();clearMicTimers();micStopping=true;micGen++;
   try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;micRec.abort();}}catch(e){}
   if(micCfg)setMicUI(micCfg,false);
   micRec=null;micActive=false;micDone=true;micCfg=null;micAlts=[];
@@ -6779,7 +6804,7 @@ function micStart(cfg){
   if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}
   micGen++;micRetried=false;
   micCfg=cfg;micFinal='';micLive='';micAlts=[];micErr=null;micDone=false;micStopping=false;
-  micActive=true;setMicUI(cfg,true);
+  micActive=true;setMicUI(cfg,true);meterStart(cfg);
   armFirstIdle(cfg);armWatchdog(cfg);
   /* 等示範語音真的停下來再開錄，喇叭聲被收進去會嚴重拖垮辨識 */
   const gen=micGen;
@@ -7756,7 +7781,7 @@ function sayMic(){micStart({btn:'say-mic',lbl:'say-mlbl',redo:'say-redo',idle:'�
   continuous:true,keepAlive:true,idleMs:4000,firstIdleMs:20000,
   target:()=>sayCur?sayCur.en:'',
   onReset:()=>{$('say-heard').innerHTML='';$('say-score').classList.add('hide');$('say-diff').classList.add('hide');},
-  onLive:t=>{$('say-heard').innerHTML='你說：<b>'+esc(t)+'</b>';},
+  onLive:t=>{$('say-heard').innerHTML='你說：<b>'+esc(t)+'</b>';$('say-mlbl').textContent='🔴 '+t;},
   onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('say-mlbl');$('say-reveal').classList.remove('hide');$('say-next').classList.remove('hide');return;}
     if(!t){$('say-mlbl').textContent=micErrMsg(err)||'沒聽清楚，再按一次試試 🎤';return;}sayScore(t);}});}
 /* 多個參考答案：對每個可接受的說法都評分，取最高分那個當對照基準 */
@@ -7851,7 +7876,7 @@ function shMic(){micStart({btn:'sh-mic',lbl:'sh-mlbl',redo:'sh-redo',idle:'先�
   continuous:true,keepAlive:true,idleMs:2200,firstIdleMs:20000,
   target:()=>shCur.en,
   onReset:()=>{$('sh-heard').innerHTML='';$('sh-score').classList.add('hide');$('sh-diff').classList.add('hide');},
-  onLive:(t,alts)=>{$('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>'+altLine(alts,t);},
+  onLive:(t,alts)=>{$('sh-heard').innerHTML='你說：<b>'+esc(t)+'</b>'+altLine(alts,t);$('sh-mlbl').textContent='🔴 '+t;},
   onDone:(t,err,alts)=>{if(err==='unsupported'){micUnsupported('sh-mlbl');$('sh-next').classList.remove('hide');return;}
     if(!t){$('sh-mlbl').textContent=micErrMsg(err)||'沒聽清楚，再按一次 🎤';return;}
     const r=scoreSpeech(t,shCur.en,{fuzzy:true});showRing('sh-score',r.pct,r.diff.filter(x=>x.near).length);
@@ -7909,7 +7934,7 @@ function wordPlayEx(){const ex=wCur.exs&&wCur.exs[0]?wCur.exs[0].en:wCur.exEn;if
 function wordMic(){micStart({btn:'word-mic',lbl:'word-mlbl',redo:'word-redo',idle:'按一下，念出這個單字',
   target:()=>wCur?wCur.w:'',
   onReset:()=>{$('word-heard').innerHTML='';$('word-score').classList.add('hide');},
-  onLive:t=>{$('word-heard').innerHTML='你說：<b>'+esc(t)+'</b>';},
+  onLive:t=>{$('word-heard').innerHTML='你說：<b>'+esc(t)+'</b>';$('word-mlbl').textContent='🔴 '+t;},
   onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('word-mlbl');return;}
     if(!t){$('word-mlbl').textContent=micErrMsg(err)||'沒聽清楚，再按一次 🎤';return;}
     /* 單字發音允許辨識誤差（Tom 更寬鬆），不要因為一個音抓不準就 0 分 */
@@ -9051,7 +9076,7 @@ function vPracMic(){
   const idx=VID?VID.i:0,line=VID.lines[idx];
   micStart({btn:'vp-mic',lbl:'vp-mlbl',idle:'按一下,跟著唸一次',
     continuous:true,keepAlive:true,idleMs:4000,firstIdleMs:20000,
-    onLive:t=>{$('vp-heard').innerHTML='你說：<b>'+esc(t)+'</b>';},
+    onLive:t=>{$('vp-heard').innerHTML='你說：<b>'+esc(t)+'</b>';$('vp-mlbl').textContent='🔴 '+t;},
     onDone:(t,err)=>{if(err==='unsupported'){micUnsupported('vp-mlbl');return;}
       if(!t){$('vp-mlbl').textContent=micErrMsg(err)||'沒聽清楚，再按一次 🎤';return;}
       const r=scoreSpeech(t,line.en,{fuzzy:true});showRing('vp-score',r.pct,r.diff.filter(x=>x.near).length);
