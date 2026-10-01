@@ -6653,7 +6653,7 @@ function whisperEnsure(){
   whisperWorker.onerror=e=>{if(!whisperReady)fail(e&&e.message);};
   whisperWorker.postMessage({type:'load'});
 }
-function whisperDone(t,e){const c=whisperCfg;if(!c)return;whisperActive=false;micActive=false;try{whisperStream.getTracks().forEach(x=>x.stop());}catch(_){}whisperLiveStop();setMicUI(c,false);whisperCfg=null;c.onDone&&c.onDone(t,e,[]);}
+function whisperDone(t,e){const c=whisperCfg;if(!c)return;whisperActive=false;micActive=false;meterStop();try{whisperStream.getTracks().forEach(x=>x.stop());}catch(_){}whisperLiveStop();setMicUI(c,false);whisperCfg=null;c.onDone&&c.onDone(t,e,[]);}
 function whisperLiveStop(){if(whisperLiveSR){try{whisperLiveSR.onresult=whisperLiveSR.onend=whisperLiveSR.onerror=null;whisperLiveSR.abort();}catch(_){}whisperLiveSR=null;}}
 function whisperLiveStart(cfg){
   if(!speechOK()||whisperLiveSR)return;
@@ -6671,7 +6671,7 @@ function whisperLiveStart(cfg){
   whisperLiveSR=sr;
   try{sr.start();}catch(_){whisperLiveSR=null;}
 }
-async function whisperMic(c){if(whisperActive){whisperRec.stop();return;}try{whisperCfg=c;whisperActive=micActive=true;setMicUI(c,true);whisperLiveStart(c);whisperStream=await navigator.mediaDevices.getUserMedia({audio:true});whisperChunks=[];whisperRec=new MediaRecorder(whisperStream);whisperRec.ondataavailable=e=>whisperChunks.push(e.data);whisperRec.onstop=async()=>{const ctx=new AudioContext(),b=await ctx.decodeAudioData(await new Blob(whisperChunks).arrayBuffer()),o=new OfflineAudioContext(1,Math.ceil(b.duration*16000),16000),s=o.createBufferSource();s.buffer=b;s.connect(o.destination);s.start();const a=(await o.startRendering()).getChannelData(0).slice();whisperWorker.postMessage({type:'transcribe',audio:a.buffer},[a.buffer]);};whisperRec.start();}catch(e){whisperLiveStop();whisperDone('',e.name==='NotAllowedError'?'not-allowed':'whisper-error');}}
+async function whisperMic(c){if(whisperActive){whisperRec.stop();return;}try{whisperCfg=c;whisperActive=micActive=true;setMicUI(c,true);meterStart(c);whisperLiveStart(c);whisperStream=await navigator.mediaDevices.getUserMedia({audio:true});whisperChunks=[];whisperRec=new MediaRecorder(whisperStream);whisperRec.ondataavailable=e=>whisperChunks.push(e.data);whisperRec.onstop=async()=>{const ctx=new AudioContext(),b=await ctx.decodeAudioData(await new Blob(whisperChunks).arrayBuffer()),o=new OfflineAudioContext(1,Math.ceil(b.duration*16000),16000),s=o.createBufferSource();s.buffer=b;s.connect(o.destination);s.start();const a=(await o.startRendering()).getChannelData(0).slice();whisperWorker.postMessage({type:'transcribe',audio:a.buffer},[a.buffer]);};whisperRec.start();}catch(e){whisperLiveStop();whisperDone('',e.name==='NotAllowedError'?'not-allowed':'whisper-error');}}
 function setMicUI(cfg,on){if(!cfg)return;const b=$(cfg.btn);if(b){b.classList.toggle('rec',on);b.textContent=on?'⏹':(cfg.icon||'🎤');}
   const l=$(cfg.lbl);if(l)l.textContent=on?'🔴 聽你說…（說完再按一次結束）':(cfg.idle||'按一下，開始說');
   if(cfg.redo){const r=$(cfg.redo);if(r)r.classList.toggle('hide',!on);}}
@@ -6683,7 +6683,7 @@ function resetIdle(){if(!micCfg||!micCfg.idleMs)return;if(idleTimer)clearTimeout
     setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},300);},micCfg.idleMs);}
 /* 收音音量環：按鈕外圈跟著音量跳，使用者才看得出麥克風有沒有真的收到聲音；
    幾秒內都接近靜音就直接提醒（常見原因：Windows 麥克風音量太低、選到錯的裝置） */
-let meterStream=null,meterCtx=null,meterRaf=null;
+let meterStream=null,meterCtx=null,meterRaf=null,meterBtn=null;
 async function meterStart(cfg){meterStop();
   if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia||!window.AudioContext)return;
   const gen=micGen;
@@ -6691,7 +6691,7 @@ async function meterStart(cfg){meterStop();
     if(gen!==micGen||!micActive){s.getTracks().forEach(t=>t.stop());return;}
     meterStream=s;meterCtx=new AudioContext();const an=meterCtx.createAnalyser();an.fftSize=1024;
     meterCtx.createMediaStreamSource(s).connect(an);const buf=new Float32Array(an.fftSize);
-    const btn=$(cfg.btn),t0=Date.now();let peak=0,warned=false;
+    const btn=meterBtn=$(cfg.btn),t0=Date.now();let peak=0,warned=false;
     const tick=()=>{if(gen!==micGen||!micActive){meterStop();return;}
       an.getFloatTimeDomainData(buf);let p=0;for(let i=0;i<buf.length;i++){const v=Math.abs(buf[i]);if(v>p)p=v;}
       if(p>peak)peak=p;if(btn)btn.style.setProperty('--lv',Math.min(1,p*4).toFixed(2));
@@ -6704,7 +6704,7 @@ async function meterStart(cfg){meterStop();
 function meterStop(){if(meterRaf)cancelAnimationFrame(meterRaf);meterRaf=null;
   try{if(meterStream)meterStream.getTracks().forEach(t=>t.stop());}catch(e){}meterStream=null;
   try{if(meterCtx)meterCtx.close();}catch(e){}meterCtx=null;
-  if(micCfg&&micCfg.btn){const b=$(micCfg.btn);if(b)b.style.removeProperty('--lv');}}
+  if(meterBtn)meterBtn.style.removeProperty('--lv');meterBtn=null;}
 function finishMic(){
   if(micDone)return;micDone=true;micActive=false;micGen++;meterStop();clearMicTimers();
   const cfg=micCfg,txt=(micLive||micFinal||'').trim(),err=micErr,alts=micAlts.slice();
