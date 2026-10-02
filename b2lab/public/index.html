@@ -2440,34 +2440,47 @@ nav button{font-size:11px}
 /* 用法比較：快速比較（三欄、細分隔線、無表頭底色） */
 /* 用法比較字重層級：區塊標題 600、快速比較第一欄 600、其他再次出現的英文 500、中文說明 400；
    次要說明用淡色，不靠粗體。只作用在這個元件，不改全站 b / strong */
+/* 用法比較字級只用四級（元件內 token）：區塊標題 22（#v-real .mr-sec）、主要內容 17、次要 16、補充 14；
+   字重：英文 500、標題 600、中文與說明 400。手機只改排列，不縮字 */
+.ucmp-wrap{--u-main:calc(17px * var(--fs));--u-sec:calc(16px * var(--fs));--u-note:calc(14px * var(--fs))}
 .mr-sec.u-title{font-weight:600}
 .ucmp{margin-top:4px}
-.ucmp-hd,.ucmp-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.8fr) minmax(0,1.5fr);gap:12px;align-items:baseline;padding:8px 2px;border-bottom:1px solid var(--line)}
-.ucmp-hd{padding:4px 2px 6px;font-size:var(--font-meta);color:var(--ink2);font-weight:500}
-.ucmp-t{font-weight:600;color:var(--ink)}
-.ucmp-m{font-weight:400;color:var(--ink)}
-.ucmp-c{color:var(--ink2);font-size:var(--font-secondary)}
+.ucmp-hd,.ucmp-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.8fr) minmax(0,1.5fr);gap:12px;align-items:baseline;padding:9px 2px;border-bottom:1px solid var(--line)}
+.ucmp-hd{padding:4px 2px 6px;font-size:var(--u-note);color:var(--ink2);font-weight:500}
+.ucmp-t{font-size:var(--u-main);font-weight:600;color:var(--ink);line-height:1.5}
+.ucmp-m{font-size:var(--u-main);font-weight:400;color:var(--ink);line-height:1.5}
+.ucmp-c{font-size:var(--u-sec);font-weight:400;color:var(--ink2);line-height:1.5}
 .ucmp-c i{font-style:normal;margin-right:5px}
-/* 垂直節奏：表格 → 差異 28px；差異標題 → 三欄 12px；三欄 → 提醒 20px；提醒 → 其他用法 28px；→ 相關說法 24px */
-.usub{font-weight:600;font-size:calc(16px * var(--fs));color:var(--ink);margin:28px 0 12px}
+/* 次標題（差異怎麼記／搭車時也常說／相關說法）同一級：16px 600 */
+.usub,.usub3{font-size:var(--u-sec);font-weight:600;color:var(--ink);line-height:1.5;margin:26px 0 10px}
 .utips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 24px}
-.utip-t{display:block;font-weight:600;color:var(--ink);font-size:var(--font-body)}
-.utip-k{display:block;margin-top:2px;font-weight:600;color:var(--ink);font-size:var(--font-secondary)}
-.utip-s{display:block;margin-top:1px;font-size:calc(14px * var(--fs));font-weight:400;color:var(--ink2);line-height:1.5}
-.uwarn{display:inline-block;margin-top:20px;padding:4px 10px;background:#f7f2ea;border-radius:6px;font-size:calc(14px * var(--fs));font-weight:400;color:var(--ink2);line-height:1.5}
-.usub3{font-weight:600;font-size:var(--font-secondary);color:var(--ink);margin:28px 0 8px}
-.urel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 24px}
-.urel-t{display:block;font-weight:600;color:var(--ink);font-size:var(--font-secondary)}
-.urel-m{display:block;font-size:calc(14px * var(--fs));color:var(--ink2);line-height:1.5}
+.utip-t{display:block;font-size:var(--u-main);font-weight:500;color:var(--ink)}
+.utip-k{display:block;margin-top:2px;font-size:var(--u-sec);font-weight:600;color:var(--ink)}
+.utip-s{display:block;margin-top:1px;font-size:var(--u-sec);font-weight:400;color:var(--ink2);line-height:1.5}
+.urel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 24px}
+.urel-t{display:block;font-size:var(--u-main);font-weight:500;color:var(--ink);line-height:1.5}
+.urel-m{display:block;font-size:var(--u-sec);font-weight:400;color:var(--ink2);line-height:1.5}
 .urel-m .u-sup{color:var(--ink2)}
-.urel-n{margin-top:6px;font-size:var(--font-meta);font-weight:400;color:#9a8b7a}
-.uterms{margin-top:24px;font-size:calc(14px * var(--fs));color:var(--ink2);line-height:1.6}
-.uterms-h{font-weight:600;color:var(--ink);margin-right:12px}
-.uterms-i b{font-weight:600;color:var(--ink)}
-.uterms-sep{margin:0 8px;color:#c9b8a4}
-/* 實景內頁：步驟膠囊與完整情境小標放大一級（原本 13px 太小） */
-#v-real .artbox .steps .stp{font-size:var(--font-secondary);padding:3px 11px}
-#v-real .rwd-h{font-size:calc(16px * var(--fs));font-weight:700;margin-top:8px}
+.urel-n{margin-top:6px;font-size:var(--u-note);font-weight:400;color:#9a8b7a}
+.uwarn{display:inline-block;margin-top:14px;padding:4px 10px;background:#f7f2ea;border-radius:6px;font-size:var(--u-sec);font-weight:400;color:var(--ink2);line-height:1.5}
+.uterms{margin-top:22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 0;font-size:var(--u-sec);color:var(--ink2);line-height:1.6}
+.uterms-h{font-weight:600;color:var(--ink);margin-right:14px}
+.uterms-i b{font-weight:500;color:var(--ink)}
+.uterms-sep{margin:0 10px;color:#c9b8a4}
+/* 實景內頁字體層級：L1 區塊標題 22px/600 → L2 完整情境小標 16px/600 橘 → L3 情境流程膠囊 16px/600 → 正文維持 17px/400 */
+#v-real .mr-sec{font-size:calc(22px * var(--fs));font-weight:600;line-height:1.4}
+#v-real .artbox .steps{gap:6px;align-items:center}
+#v-real .artbox .steps .stp{font-size:calc(16px * var(--fs));font-weight:600;line-height:1.4;padding:7px 13px}
+#v-real .artbox .steps .sarr{line-height:1;display:inline-flex;align-items:center}
+#v-real .rwd{padding:0}
+#v-real .rwd-h{font-size:calc(16px * var(--fs));font-weight:600;line-height:1.45;letter-spacing:0;margin:18px 0 6px}
+#v-real .rwd:first-child .rwd-h{margin-top:10px}
+#v-real .rwd .rwctx-p{margin:0 0 4px}
+@media(max-width:999px){ #v-real .artbox .steps .stp{font-size:calc(15px * var(--fs))} }
+@media(max-width:640px){
+  #v-real .mr-sec{font-size:calc(20px * var(--fs))}
+  #v-real .artbox .steps .stp{padding:6px 12px}
+}
 @media(max-width:640px){
   .rwkey-row{flex-direction:column;align-items:flex-start;gap:2px}
   .rwkey-sep{display:none}
@@ -2477,6 +2490,9 @@ nav button{font-size:11px}
   .utip{padding:8px 0;border-bottom:1px solid var(--line)}
   .utip:last-child{border-bottom:0}
   .urel{grid-template-columns:minmax(0,1fr);gap:8px}
+  .uterms{flex-direction:column;gap:2px}
+  .uterms-h{margin:0 0 2px}
+  .uterms-sep{display:none}
 }
 /* ===== 課本目錄（雜誌目錄式）：月份分組、最新月展開、其他月收合成一列 ===== */
 #v-book .bk-search{margin-bottom:12px}
@@ -5985,8 +6001,9 @@ function rwUsageHTML(l){
   if(u&&(u.items||[]).length){
     const ic=x=>RW_UICON[x]||x;
     const sup=t=>esc(rwPad(t)).replace(/（[^（）]*）|\([^()]*\)/g,m=>'<span class="u-sup">'+m+'</span>');
-    /* 層級只有三層：用法比較（表格）→ 💡 差異怎麼記？（記憶關鍵字）→ 次要資訊（提醒、其他用法、相關說法） */
-    let h='<div class="mr-sec u-title">用法比較</div>'
+    /* 同一個概念只說一次：比較表就是差異記憶區 → 實際會用的句子 → 一個易錯提醒 → 相關說法。
+       tips（差異怎麼記）是選填，只有提供「表格沒說到的記憶技巧」時才顯示，沒有就不留空白 */
+    let h='<div class="mr-sec u-title">用法比較</div><div class="ucmp-wrap">'
       +'<div class="ucmp"><div class="ucmp-hd"><span>說法</span><span>意思</span><span>常用情境</span></div>'
       +u.items.map(x=>'<div class="ucmp-row"><b class="ucmp-t">'+esc(x.term)+'</b><span class="ucmp-m">'+esc(rwPad(x.meaning||''))+'</span>'
         +'<span class="ucmp-c">'+(x.icon?'<i aria-hidden="true">'+esc(ic(x.icon))+'</i>':'')+esc(rwPad(x.context||''))+'</span></div>').join('')+'</div>';
@@ -5995,13 +6012,13 @@ function rwUsageHTML(l){
       +u.tips.map(x=>'<div class="utip"><span class="utip-t">'+esc(x.term)+'</span>'
         +(x.key?'<span class="utip-k">'+esc(rwPad(x.key))+'</span>':'')
         +(x.text?'<span class="utip-s">'+esc(rwPad(x.text))+'</span>':'')+'</div>').join('')+'</div>';
-    if(u.note) h+='<div class="uwarn">⚠️ '+esc(rwPad(u.note))+'</div>';
     if((u.rel||[]).length) h+='<div class="usub3">'+esc(u.relTitle||'其他常見用法')+'</div><div class="urel">'
       +u.rel.map(x=>'<div class="urel-i"><span class="urel-t">'+esc(x.term)+'</span><span class="urel-m">'+sup(x.meaning||'')+'</span></div>').join('')+'</div>'
       +(u.relNote?'<div class="urel-n">'+esc(rwPad(u.relNote))+'</div>':'');
+    if(u.note) h+='<div><div class="uwarn">⚠️ '+esc(rwPad(u.note))+'</div></div>';
     if((u.terms||[]).length) h+='<div class="uterms"><span class="uterms-h">相關說法</span>'
       +u.terms.map(x=>'<span class="uterms-i"><b>'+esc(x.term)+'</b> '+sup(x.meaning||'')+'</span>').join('<span class="uterms-sep" aria-hidden="true">·</span>')+'</div>';
-    return h;
+    return h+'</div>';
   }
   if(!(l.usage||(l.cmp||[]).length)) return '';
   return '<div class="mr-sec">用法比較</div>'
