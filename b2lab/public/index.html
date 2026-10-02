@@ -2452,7 +2452,8 @@ nav button{font-size:11px}
 .ucmp-c{font-size:var(--u-sec);font-weight:400;color:var(--ink2);line-height:1.5}
 .ucmp-c i{font-style:normal;margin-right:5px}
 /* 次標題（差異怎麼記／搭車時也常說／相關說法）同一級：16px 600 */
-.usub,.usub3{font-size:var(--u-sec);font-weight:600;color:var(--ink);line-height:1.5;margin:26px 0 10px}
+.usub,.usub3{font-size:var(--font-subhead);font-weight:600;color:var(--ink);line-height:1.45;margin:28px 0 10px}
+.usub3.u-terms{margin-top:24px}
 .utips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 24px}
 .utip-t{display:block;font-size:var(--u-main);font-weight:500;color:var(--ink)}
 .utip-k{display:block;margin-top:2px;font-size:var(--u-sec);font-weight:600;color:var(--ink)}
@@ -6016,8 +6017,9 @@ function rwUsageHTML(l){
       +u.rel.map(x=>'<div class="urel-i"><span class="urel-t">'+esc(x.term)+'</span><span class="urel-m">'+sup(x.meaning||'')+'</span></div>').join('')+'</div>'
       +(u.relNote?'<div class="urel-n">'+esc(rwPad(u.relNote))+'</div>':'');
     if(u.note) h+='<div><div class="uwarn">⚠️ '+esc(rwPad(u.note))+'</div></div>';
-    if((u.terms||[]).length) h+='<div class="uterms"><span class="uterms-h">相關說法</span>'
-      +u.terms.map(x=>'<span class="uterms-i"><b>'+esc(x.term)+'</b> '+sup(x.meaning||'')+'</span>').join('<span class="uterms-sep" aria-hidden="true">·</span>')+'</div>';
+    /* 相關說法跟「搭車時也常說」同一種排法：小標一行、下面詞＋中文，避免整列擠在一起字太小 */
+    if((u.terms||[]).length) h+='<div class="usub3 u-terms">相關說法</div><div class="urel">'
+      +u.terms.map(x=>'<div class="urel-i"><span class="urel-t">'+esc(x.term)+'</span><span class="urel-m">'+sup(x.meaning||'')+'</span></div>').join('')+'</div>';
     return h+'</div>';
   }
   if(!(l.usage||(l.cmp||[]).length)) return '';
