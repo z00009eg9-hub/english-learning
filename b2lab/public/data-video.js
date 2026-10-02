@@ -27686,12 +27686,12 @@ window.VIDEO.bk20260922 = {
 };
 
 window.VIDEO.au01 = {
- "title": "Audit English I — Receiving an Auditor, Clarifying & Handing Over",
- "titleCn": "稽核英文一｜接待稽核員、澄清問題與轉接窗口",
+ "title": "Audit English I — Current Practice, Gaps & Plans",
+ "titleCn": "稽核英文一｜說現況、講缺口、給計畫",
  "date": "2026-09-21",
  "level": "B1+",
- "scene": "Factory Audit · Receiving a Customer Auditor",
- "sceneCn": "工廠稽核・接待客戶稽核員",
+ "scene": "Factory Audit · Answering with Substance",
+ "sceneCn": "工廠稽核・實質回答現況與計畫",
  "sceneArt": "clipboard",
  "titleArt": [
   "clipboard",
@@ -27742,49 +27742,38 @@ window.VIDEO.au01 = {
   }
  ],
  "expr": {
-  "audit": {
-   "t": "audit",
-   "cn": "稽核",
+  "control": {
+   "t": "control",
+   "cn": "管控",
    "tag": [
     "稽核英文",
-    "準備稽核"
+    "包裝管控"
    ],
-   "note": "搭配：prepare for an audit（準備稽核）。",
-   "ex": "We are preparing for the audit.",
-   "exCn": "我們正在準備稽核。"
-  },
-  "representative": {
-   "t": "representative",
-   "cn": "代表、窗口",
-   "tag": [
-    "稽核英文",
-    "品保窗口"
-   ],
-   "note": "搭配：QA representative（品保窗口）。",
-   "ex": "Let me ask our QA representative.",
-   "exCn": "讓我請我們的品保窗口協助。"
+   "note": "搭配：packing control（包裝管控）。",
+   "ex": "We use weight checks to prevent missing items.",
+   "exCn": "我們以秤重確認防止短裝。"
   },
   "record": {
    "t": "record",
    "cn": "紀錄",
    "tag": [
     "稽核英文",
-    "檢驗紀錄"
+    "考核紀錄"
    ],
-   "note": "搭配：inspection records（檢驗紀錄）。",
-   "ex": "Which inspection record do you need?",
-   "exCn": "您需要哪一份檢驗紀錄？"
+   "note": "搭配：assessment records（考核紀錄）。",
+   "ex": "Our assessment records are not complete yet.",
+   "exCn": "我們的考核紀錄尚未完整。"
   },
-  "confirm": {
-   "t": "confirm",
-   "cn": "確認",
+  "procedure": {
+   "t": "procedure",
+   "cn": "程序",
    "tag": [
     "稽核英文",
-    "確認狀態"
+    "變更管制程序"
    ],
-   "note": "搭配：confirm the status（確認狀態）。",
-   "ex": "Let me confirm the current status.",
-   "exCn": "讓我確認目前狀態。"
+   "note": "搭配：change control procedure（變更管制程序）。",
+   "ex": "We plan to issue the procedure in both required languages.",
+   "exCn": "我們計畫以雙語發行程序。"
   },
   "target": {
    "t": "target",
@@ -27794,8 +27783,19 @@ window.VIDEO.au01 = {
     "目標日期"
    ],
    "note": "搭配：target date（目標日期）。",
-   "ex": "Our target date is June 2027.",
-   "exCn": "我們的目標日期是 2027 年 6 月。"
+   "ex": "Our certification target is June 2027.",
+   "exCn": "我們的認證目標為 2027 年 6 月。"
+  },
+  "update": {
+   "t": "update",
+   "cn": "更新",
+   "tag": [
+    "稽核英文",
+    "更新管制計畫"
+   ],
+   "note": "搭配：update the control plan（更新管制計畫）。",
+   "ex": "We plan to update the control plan when documents change.",
+   "exCn": "我們計畫在文件變更時同步更新管制計畫。"
   }
  },
  "lines": [
@@ -27825,8 +27825,8 @@ window.VIDEO.au01 = {
     "type": "scene",
     "art": "clipboard"
    },
-   "en": "What is your role in today's audit?",
-   "cn": "你在今天稽核中的角色是什麼？"
+   "en": "What will you cover during the audit?",
+   "cn": "今天稽核會說明哪些內容？"
   },
   {
    "ch": 1,
@@ -27835,13 +27835,13 @@ window.VIDEO.au01 = {
     "type": "scene",
     "art": "clipboard"
    },
-   "en": "I will help coordinate the audit and bring in the right person for each question.",
-   "cn": "我會協助協調稽核，並請適合的人員回答問題。",
+   "en": "We will cover quality controls, engineering changes, operator training, materials, and team responsibilities.",
+   "cn": "我們會說明品質管控、工程變更、人員訓練、資材及團隊職責。",
    "hi": [
     {
-     "t": "audit",
-     "cn": "稽核",
-     "k": "audit",
+     "t": "controls",
+     "cn": "管控",
+     "k": "control",
      "c": 1
     }
    ]
@@ -27853,8 +27853,8 @@ window.VIDEO.au01 = {
     "type": "scene",
     "art": "talk"
    },
-   "en": "Which departments will support the audit?",
-   "cn": "哪些部門會支援稽核？"
+   "en": "Can you give one example of a quality control?",
+   "cn": "可以舉一個品質管控例子嗎？"
   },
   {
    "ch": 1,
@@ -27863,8 +27863,8 @@ window.VIDEO.au01 = {
     "type": "scene",
     "art": "talk"
    },
-   "en": "The planned teams are QA, Product Development, Manufacturing Engineering, Production, Materials, and HR.",
-   "cn": "規劃的團隊包括品保、開發、生技、製造、資材及人資。"
+   "en": "On the packing line, we use fixed quantities, a packing board, and weight checks to prevent missing items.",
+   "cn": "包裝線透過定量、包裝看板及秤重確認，防止短裝。"
   },
   {
    "ch": 1,
@@ -27873,8 +27873,8 @@ window.VIDEO.au01 = {
     "type": "scene",
     "art": "doc"
    },
-   "en": "What will you do if you are not sure?",
-   "cn": "如果你不確定，會怎麼做？"
+   "en": "What still needs improvement?",
+   "cn": "還有哪些需要改善？"
   },
   {
    "ch": 1,
@@ -27883,14 +27883,14 @@ window.VIDEO.au01 = {
     "type": "scene",
     "art": "doc"
    },
-   "en": "I will confirm the current status with the responsible person.",
-   "cn": "我會向負責人確認目前狀態。",
+   "en": "The weight-check procedure needs limits for each model. The scale calibration procedure also needs to be established.",
+   "cn": "秤重程序需訂定各機種重量上下限，也需建立秤重設備校驗程序。",
    "hi": [
     {
-     "t": "confirm",
-     "cn": "確認",
-     "k": "confirm",
-     "c": 4
+     "t": "procedure",
+     "cn": "程序",
+     "k": "procedure",
+     "c": 3
     }
    ]
   },
@@ -27902,7 +27902,7 @@ window.VIDEO.au01 = {
     "art": "check"
    },
    "en": "Is this factory ISO 9001 certified?",
-   "cn": "這間工廠已取得 ISO 9001 認證嗎？"
+   "cn": "本廠已取得 ISO 9001 認證嗎？"
   },
   {
    "ch": 1,
@@ -27911,89 +27911,13 @@ window.VIDEO.au01 = {
     "type": "scene",
     "art": "check"
    },
-   "en": "Not yet. Our target is to obtain ISO 9001 certification by June 2027.",
-   "cn": "目前尚未取得；目標是在 2027 年 6 月前取得認證。",
+   "en": "Not yet. Our target is to obtain ISO 9001 certification by June 2027. QA is responsible for this action.",
+   "cn": "尚未取得。目標是在 2027 年 6 月前取得 ISO 9001 認證，由品保負責。",
    "hi": [
     {
      "t": "target",
      "cn": "目標",
      "k": "target",
-     "c": 1
-    }
-   ]
-  },
-  {
-   "ch": 1,
-   "sp": "T",
-   "vis": {
-    "type": "scene",
-    "art": "warning"
-   },
-   "en": "Can you show me the certificate?",
-   "cn": "可以給我看證書嗎？"
-  },
-  {
-   "ch": 1,
-   "sp": "A",
-   "vis": {
-    "type": "scene",
-    "art": "warning"
-   },
-   "en": "We do not have the certificate yet. Let me ask QA to explain the certification plan.",
-   "cn": "我們目前還沒有證書。我請品保說明認證計畫。"
-  },
-  {
-   "ch": 1,
-   "sp": "T",
-   "vis": {
-    "type": "scene",
-    "art": "label"
-   },
-   "en": "How do you control quality before certification?",
-   "cn": "取得認證前，你們如何管控品質？"
-  },
-  {
-   "ch": 1,
-   "sp": "A",
-   "vis": {
-    "type": "scene",
-    "art": "label"
-   },
-   "en": "Let me ask QA to explain the current controls and show the available records.",
-   "cn": "我請品保說明目前管控方式，並提供現有紀錄。",
-   "hi": [
-    {
-     "t": "records",
-     "cn": "紀錄",
-     "k": "record",
-     "c": 3
-    }
-   ]
-  },
-  {
-   "ch": 1,
-   "sp": "T",
-   "vis": {
-    "type": "scene",
-    "art": "sealedBox"
-   },
-   "en": "Is June 2027 a confirmed completion date?",
-   "cn": "2027 年 6 月是已確認的完成日期嗎？"
-  },
-  {
-   "ch": 1,
-   "sp": "A",
-   "vis": {
-    "type": "scene",
-    "art": "sealedBox"
-   },
-   "en": "It is our target date. Let me confirm the latest schedule with QA.",
-   "cn": "這是我們的目標日期。我向品保確認最新時程。",
-   "hi": [
-    {
-     "t": "confirm",
-     "cn": "確認",
-     "k": "confirm",
      "c": 4
     }
    ]
@@ -28003,10 +27927,86 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
+    "art": "warning"
+   },
+   "en": "What is your plan for certification?",
+   "cn": "取得認證的計畫是什麼？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "warning"
+   },
+   "en": "We plan to submit the proposal for an ISO consulting company by October 16. The action plan lists December as the planned start.",
+   "cn": "我們計畫在 10 月 16 日前提出 ISO 輔導公司簽呈。改善表列出的預計開始時間為 12 月。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "label"
+   },
+   "en": "Can you show the certificate now?",
+   "cn": "現在能提供證書嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "label"
+   },
+   "en": "No. We do not have the certificate yet. June 2027 is our target, not a completed certification date.",
+   "cn": "不能，我們尚未取得證書。2027 年 6 月是目標，不是已完成認證的日期。",
+   "hi": [
+    {
+     "t": "target",
+     "cn": "目標",
+     "k": "target",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "sealedBox"
+   },
+   "en": "How do you control quality before certification?",
+   "cn": "取得認證前如何管控品質？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "sealedBox"
+   },
+   "en": "Our SOPs have release controls and revision records. Full-dimensional inspection reports are also listed in the assessment.",
+   "cn": "我們的 SOP 已有發行管控與修改紀錄，評估表也記載已有全尺寸檢驗報告。",
+   "hi": [
+    {
+     "t": "controls",
+     "cn": "管控",
+     "k": "control",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
     "art": "target"
    },
-   "en": "Can your system detect duplicate barcodes at the shipping dock?",
-   "cn": "系統能在出貨月台偵測重複條碼嗎？"
+   "en": "What is the remaining gap?",
+   "cn": "還有哪些缺口？"
   },
   {
    "ch": 1,
@@ -28015,8 +28015,16 @@ window.VIDEO.au01 = {
     "type": "scene",
     "art": "target"
    },
-   "en": "Not at the shipping dock yet. We have this control at the end-of-line station.",
-   "cn": "出貨月台目前還沒有；我們在產線末端站點有這項管控。"
+   "en": "The control plan was not updated with the SOP changes. We also need to compare the control plan with actual work on the production lines.",
+   "cn": "管制計畫未隨 SOP 變更同步更新，也需將管制計畫與產線實際作業比對。",
+   "hi": [
+    {
+     "t": "control",
+     "cn": "管控",
+     "k": "control",
+     "c": 1
+    }
+   ]
   },
   {
    "ch": 1,
@@ -28025,8 +28033,8 @@ window.VIDEO.au01 = {
     "type": "scene",
     "art": "clipboard"
    },
-   "en": "Do you have this control at both locations?",
-   "cn": "兩個位置都有這項管控嗎？"
+   "en": "What action will you take?",
+   "cn": "你們會採取什麼措施？"
   },
   {
    "ch": 1,
@@ -28035,40 +28043,108 @@ window.VIDEO.au01 = {
     "type": "scene",
     "art": "clipboard"
    },
-   "en": "No. According to the current action plan, it is available at EOL, but not at the shipping dock.",
-   "cn": "沒有。依目前改善表，EOL 有這項功能，出貨月台尚未具備。"
+   "en": "We plan to adopt the Headquarters document-change process and update the the overseas plant control plan at the same time. The target for this action is November 2.",
+   "cn": "我們計畫採用總部文件變更流程，同步更新海外廠管制計畫。此項目標日期為 11 月 2 日。",
+   "hi": [
+    {
+     "t": "control",
+     "cn": "管控",
+     "k": "control",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "talk"
+   },
+   "en": "How do you prevent missing items during packing?",
+   "cn": "包裝時如何防止短裝？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "talk"
+   },
+   "en": "We use fixed quantities, a packing board, and weight checks. These are the methods listed for the packing line.",
+   "cn": "我們採用定量、包裝看板與秤重確認，這些是情境所列的包裝線做法。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "doc"
+   },
+   "en": "What needs to be added to the weight-check procedure?",
+   "cn": "秤重程序還需要補什麼？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "doc"
+   },
+   "en": "We plan to define upper and lower weight limits for each model and establish a scale calibration procedure. We also plan to add large-print instructions in both required languages.",
+   "cn": "我們計畫訂定各機種重量上下限、建立秤重設備校驗程序，並增加大字雙語作業說明。",
+   "hi": [
+    {
+     "t": "procedure",
+     "cn": "程序",
+     "k": "procedure",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "check"
+   },
+   "en": "Does this prove that the shipping dock blocks duplicate barcodes?",
+   "cn": "這能證明出貨月台可攔阻重複條碼嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "check"
+   },
+   "en": "No. Packing checks and duplicate-barcode control are different. The dock does not have the same function as EOL in the action plan.",
+   "cn": "不能。包裝檢查與重複條碼管控不同。依改善表，月台尚無 EOL 的相同功能。",
+   "hi": [
+    {
+     "t": "control",
+     "cn": "管控",
+     "k": "control",
+     "c": 1
+    }
+   ]
   },
   {
    "ch": 2,
    "sp": "N",
    "vis": {
     "type": "slide",
-    "w": "audit",
-    "ipa": "/ˈɔːdɪt/",
+    "w": "control",
+    "ipa": "/kənˈtroʊl/",
     "pos": "n.",
     "art": "clipboard",
-    "def": "audit n. — prepare for an audit.",
-    "cn": "稽核｜搭配：準備稽核",
-    "note": "搭配：prepare for an audit（準備稽核）。"
+    "def": "control n. — packing control.",
+    "cn": "管控｜搭配：包裝管控",
+    "note": "搭配：packing control（包裝管控）。"
    },
-   "en": "We are preparing for the audit.",
-   "cn": "我們正在準備稽核。"
-  },
-  {
-   "ch": 2,
-   "sp": "N",
-   "vis": {
-    "type": "slide",
-    "w": "representative",
-    "ipa": "/ˌreprɪˈzentətɪv/",
-    "pos": "n.",
-    "art": "talk",
-    "def": "representative n. — QA representative.",
-    "cn": "代表、窗口｜搭配：品保窗口",
-    "note": "搭配：QA representative（品保窗口）。"
-   },
-   "en": "Let me ask our QA representative.",
-   "cn": "讓我請我們的品保窗口協助。"
+   "en": "We use weight checks to prevent missing items.",
+   "cn": "我們以秤重確認防止短裝。"
   },
   {
    "ch": 2,
@@ -28078,29 +28154,29 @@ window.VIDEO.au01 = {
     "w": "record",
     "ipa": "/ˈrekɔːrd/",
     "pos": "n.",
-    "art": "doc",
-    "def": "record n. — inspection records.",
-    "cn": "紀錄｜搭配：檢驗紀錄",
-    "note": "搭配：inspection records（檢驗紀錄）。"
+    "art": "talk",
+    "def": "record n. — assessment records.",
+    "cn": "紀錄｜搭配：考核紀錄",
+    "note": "搭配：assessment records（考核紀錄）。"
    },
-   "en": "Which inspection record do you need?",
-   "cn": "您需要哪一份檢驗紀錄？"
+   "en": "Our assessment records are not complete yet.",
+   "cn": "我們的考核紀錄尚未完整。"
   },
   {
    "ch": 2,
    "sp": "N",
    "vis": {
     "type": "slide",
-    "w": "confirm",
-    "ipa": "/kənˈfɜːrm/",
-    "pos": "v.",
-    "art": "check",
-    "def": "confirm v. — confirm the status.",
-    "cn": "確認｜搭配：確認狀態",
-    "note": "搭配：confirm the status（確認狀態）。"
+    "w": "procedure",
+    "ipa": "/prəˈsiːdʒər/",
+    "pos": "n.",
+    "art": "doc",
+    "def": "procedure n. — change control procedure.",
+    "cn": "程序｜搭配：變更管制程序",
+    "note": "搭配：change control procedure（變更管制程序）。"
    },
-   "en": "Let me confirm the current status.",
-   "cn": "讓我確認目前狀態。"
+   "en": "We plan to issue the procedure in both required languages.",
+   "cn": "我們計畫以雙語發行程序。"
   },
   {
    "ch": 2,
@@ -28110,27 +28186,119 @@ window.VIDEO.au01 = {
     "w": "target",
     "ipa": "/ˈtɑːrɡɪt/",
     "pos": "n.",
-    "art": "warning",
+    "art": "check",
     "def": "target n. — target date.",
     "cn": "目標｜搭配：目標日期",
     "note": "搭配：target date（目標日期）。"
    },
-   "en": "Our target date is June 2027.",
-   "cn": "我們的目標日期是 2027 年 6 月。"
+   "en": "Our certification target is June 2027.",
+   "cn": "我們的認證目標為 2027 年 6 月。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "update",
+    "ipa": "/ʌpˈdeɪt/",
+    "pos": "v.",
+    "art": "warning",
+    "def": "update v. — update the control plan.",
+    "cn": "更新｜搭配：更新管制計畫",
+    "note": "搭配：update the control plan（更新管制計畫）。"
+   },
+   "en": "We plan to update the control plan when documents change.",
+   "cn": "我們計畫在文件變更時同步更新管制計畫。"
   },
   {
    "ch": 3,
    "sp": "N",
    "vis": {
     "type": "pattern",
-    "kick": "Let me + 動詞原形 + 受詞",
+    "kick": "We have + 已有措施, but + 缺口 + is still missing",
     "art": "clipboard",
     "rows": [
      {
-      "lab": "Let me + 原形動詞（我來…，當場承接）",
+      "lab": "We have X, but Y is still missing（已有＋缺口）",
       "blocks": [
        {
-        "t": "Let me",
+        "t": "We have",
+        "k": "s"
+       },
+       {
+        "t": "已有措施, but",
+        "k": "v"
+       },
+       {
+        "t": "缺口",
+        "k": "o"
+       },
+       {
+        "t": "is still missing",
+        "k": "s"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "We have calibration labels, but the reports are still missing.",
+   "cn": "已有校驗標籤，但報告仍缺。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "We use + A + B + and C + to + 目的",
+    "art": "doc",
+    "rows": [
+     {
+      "lab": "We use A, B, and C（具體說明現行做法）",
+      "blocks": [
+       {
+        "t": "We use",
+        "k": "s"
+       },
+       {
+        "t": "A",
+        "k": "v"
+       },
+       {
+        "t": "B",
+        "k": "o"
+       },
+       {
+        "t": "and C",
+        "k": "s"
+       },
+       {
+        "t": "to",
+        "k": "v"
+       },
+       {
+        "t": "目的",
+        "k": "o"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "We use fixed quantities, a packing board, and weight checks to prevent missing items.",
+   "cn": "包裝線透過定量、包裝看板及秤重確認，防止短裝。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "We plan to + 動詞原形 + 受詞",
+    "art": "target",
+    "rows": [
+     {
+      "lab": "We plan to + V（講計畫，不說成已完成）",
+      "blocks": [
+       {
+        "t": "We plan to",
         "k": "s"
        },
        {
@@ -28145,88 +28313,8 @@ window.VIDEO.au01 = {
      }
     ]
    },
-   "en": "Let me confirm the current status with QA.",
-   "cn": "讓我向品保確認目前的狀態。"
-  },
-  {
-   "ch": 3,
-   "sp": "N",
-   "vis": {
-    "type": "pattern",
-    "kick": "Do you mean + 選項 A + or + 選項 B ?",
-    "art": "doc",
-    "rows": [
-     {
-      "lab": "Do you mean A or B?（釐清對方要什麼）",
-      "blocks": [
-       {
-        "t": "Do you mean",
-        "k": "s"
-       },
-       {
-        "t": "選項 A",
-        "k": "v"
-       },
-       {
-        "t": "or",
-        "k": "o"
-       },
-       {
-        "t": "選項 B ?",
-        "k": "s"
-       }
-      ]
-     }
-    ]
-   },
-   "en": "Do you mean the training records or the inspection records?",
-   "cn": "您指的是訓練紀錄還是檢驗紀錄？"
-  },
-  {
-   "ch": 3,
-   "sp": "N",
-   "vis": {
-    "type": "pattern",
-    "kick": "主詞 + have + 功能 + at + 地點, but not at + 地點 + yet",
-    "art": "target",
-    "rows": [
-     {
-      "lab": "We have X at A, but not at B yet（限定範圍，不誇大）",
-      "blocks": [
-       {
-        "t": "主詞",
-        "k": "s"
-       },
-       {
-        "t": "have",
-        "k": "v"
-       },
-       {
-        "t": "功能",
-        "k": "o"
-       },
-       {
-        "t": "at",
-        "k": "s"
-       },
-       {
-        "t": "地點, but not at",
-        "k": "v"
-       },
-       {
-        "t": "地點",
-        "k": "o"
-       },
-       {
-        "t": "yet",
-        "k": "s"
-       }
-      ]
-     }
-    ]
-   },
-   "en": "We have this control at EOL, but not at the shipping dock yet.",
-   "cn": "我們在 EOL 站有這項管控，但出貨月台還沒有。"
+   "en": "We plan to issue the procedure in both required languages.",
+   "cn": "我們計畫以雙語發行程序。"
   },
   {
    "ch": 4,
@@ -28234,12 +28322,12 @@ window.VIDEO.au01 = {
    "vis": {
     "type": "fix",
     "n": 3,
-    "wrong": "Let me to ask our QA representative.",
+    "wrong": "We has calibration labels.",
     "bad": [],
-    "fix": "Let me ask our QA representative."
+    "fix": "We have calibration labels."
    },
-   "en": "Let me ask our QA representative.",
-   "cn": "讓我請教我們的品保窗口。"
+   "en": "We have calibration labels.",
+   "cn": "我們已有校驗標籤。"
   },
   {
    "ch": 4,
@@ -28249,23 +28337,23 @@ window.VIDEO.au01 = {
     "n": 5,
     "wrong": "Our system blocks duplicate barcodes everywhere.",
     "bad": [],
-    "fix": "We have this control at EOL, but not at the shipping dock yet."
+    "fix": "EOL has this function, but the shipping dock does not."
    },
-   "en": "We have this control at EOL, but not at the shipping dock yet.",
-   "cn": "我們在 EOL 站有這項管控，但出貨月台還沒有。"
+   "en": "EOL has this function, but the shipping dock does not.",
+   "cn": "EOL 有此功能，出貨月台沒有。"
   },
   {
    "ch": 5,
    "sp": "N",
    "vis": {
     "type": "quiz",
-    "q": "Let me ___ the current status with QA.",
-    "a": "confirm",
+    "q": "We use weight ___ to prevent missing items.",
+    "a": "checks",
     "n": 1
    },
-   "en": "Let me ___ the current status with QA.",
-   "cn": "讓我向品保＿＿目前的狀態。",
-   "say": "Let me , blank, the current status with QA.",
+   "en": "We use weight ___ to prevent missing items.",
+   "cn": "我們以秤重＿＿防止短裝。",
+   "say": "We use weight , blank, to prevent missing items.",
    "pause": 4000
   },
   {
@@ -28273,13 +28361,13 @@ window.VIDEO.au01 = {
    "sp": "N",
    "vis": {
     "type": "quiz",
-    "q": "Let me ask our QA ___.",
-    "a": "representative",
+    "q": "Our assessment ___ are not complete yet.",
+    "a": "records",
     "n": 2
    },
-   "en": "Let me ask our QA ___.",
-   "cn": "讓我請教我們的品保＿＿。",
-   "say": "Let me ask our QA , blank,.",
+   "en": "Our assessment ___ are not complete yet.",
+   "cn": "我們的考核＿＿尚未完整。",
+   "say": "Our assessment , blank, are not complete yet.",
    "pause": 4000
   },
   {
@@ -28287,13 +28375,13 @@ window.VIDEO.au01 = {
    "sp": "N",
    "vis": {
     "type": "quiz",
-    "q": "I do not have a ___ date yet.",
-    "a": "confirmed",
+    "q": "We plan to issue the ___ in both required languages.",
+    "a": "procedure",
     "n": 3
    },
-   "en": "I do not have a ___ date yet.",
-   "cn": "我目前還沒有＿＿的日期。",
-   "say": "I do not have a , blank, date yet.",
+   "en": "We plan to issue the ___ in both required languages.",
+   "cn": "我們計畫以雙語發行＿＿。",
+   "say": "We plan to issue the , blank, in both required languages.",
    "pause": 4000
   },
   {
@@ -28301,13 +28389,13 @@ window.VIDEO.au01 = {
    "sp": "N",
    "vis": {
     "type": "quiz",
-    "q": "Which ___ would you like to see?",
-    "a": "record",
+    "q": "Our certification ___ is June 2027.",
+    "a": "target",
     "n": 4
    },
-   "en": "Which ___ would you like to see?",
-   "cn": "您想查看哪一份＿＿？",
-   "say": "Which , blank, would you like to see?",
+   "en": "Our certification ___ is June 2027.",
+   "cn": "我們的認證＿＿為 2027 年 6 月。",
+   "say": "Our certification , blank, is June 2027.",
    "pause": 4000
   },
   {

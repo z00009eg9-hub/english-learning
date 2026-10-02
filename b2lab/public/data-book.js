@@ -19546,184 +19546,223 @@ window.BOOK = {
    "icon": "🏭",
    "video": true,
    "date": "2026-09-21",
-   "title": "Audit English I — Receiving an Auditor, Clarifying & Handing Over",
-   "titleCn": "稽核英文一｜接待稽核員、澄清問題與轉接窗口",
-   "topics": "稽核英文, audit, representative, record, confirm, target, 澄清問題, 轉接窗口, 說明現況與目標, 不確定時怎麼回答",
+   "title": "Audit English I — Current Practice, Gaps & Plans",
+   "titleCn": "稽核英文一｜說現況、講缺口、給計畫",
+   "topics": "稽核英文, 現況與缺口, 包裝管控, ISO 認證, control, record, procedure, target, update, 校驗與證據",
    "hwTitle": "六題測驗 Quiz & Answers",
    "hw": [
     {
      "n": 1,
-     "ok": "B. Our target is to obtain certification.",
-     "cn": "B. 我們的目標是取得認證。",
-     "pat": "主詞 + is + to + 動詞原形",
-     "note": "說明目標。常見錯誤：將未來計畫說成已取得資格。"
+     "ok": "Not yet. Our ISO 9001 certification target is June 2027.",
+     "cn": "尚未取得；ISO 9001 認證目標是 2027 年 6 月。",
+     "pat": "Not yet. + 主詞 + target + is + 時間",
+     "note": "尚未取得；ISO 9001 認證目標是 2027 年 6 月。常見錯誤：把目標說成已取得。"
     },
     {
      "n": 2,
-     "ok": "Let me confirm the current status with QA.",
-     "cn": "讓我向品保確認目前的狀態。",
-     "pat": "Let me + 動詞原形 + 受詞 + with + 對象",
-     "note": "confirm 是查證。常見錯誤：未確認就直接承諾。"
+     "ok": "We use fixed quantities, a packing board, and weight checks.",
+     "cn": "我們使用定量、包裝看板與秤重確認。",
+     "pat": "We use + A + B + and C",
+     "note": "使用定量、包裝看板與秤重確認。常見錯誤：只說 We check quality，沒有說方法。"
     },
     {
      "n": 3,
-     "cn": "讓我請教我們的品保窗口。",
-     "pat": "Let me + 動詞原形 + 受詞",
-     "note": "Let me 後接動詞原形。常見錯誤：多加 to。",
-     "wrong": "Let me to ask our QA representative.",
-     "fix": "Let me ask our QA representative."
+     "cn": "我們已有校驗標籤。",
+     "pat": "We + have + 受詞",
+     "note": "我們已有校驗標籤。We 搭配 have，不是 has。",
+     "wrong": "We has calibration labels.",
+     "fix": "We have calibration labels."
     },
     {
      "n": 4,
-     "ok": "Do you mean the training records or the inspection records?",
-     "cn": "您指的是訓練紀錄還是檢驗紀錄？",
-     "pat": "Do you mean + 選項A + or + 選項B ?",
-     "note": "提出兩個選項釐清。常見錯誤：猜測客戶要哪種紀錄。"
+     "ok": "The control plan was not updated with the SOP changes.",
+     "cn": "管制計畫未隨 SOP 變更同步更新。",
+     "pat": "主詞 + was not updated with + 變更",
+     "note": "管制計畫未隨 SOP 變更同步更新。常見錯誤：因有 SOP 就說全部文件都已同步。"
     },
     {
      "n": 5,
-     "cn": "我們在 EOL 站有這項管控，但出貨月台還沒有。",
-     "pat": "主詞 + have + 受詞 + at + 地點, but not at + 地點 + yet",
-     "note": "限定站點。常見錯誤：用 everywhere 誤稱全流程都有。",
+     "cn": "EOL 有此功能，出貨月台沒有。",
+     "pat": "A + has + 功能, but + B + does not",
+     "note": "EOL 有此功能，月台沒有。常見錯誤：把局部功能說成全流程。",
      "wrong": "Our system blocks duplicate barcodes everywhere.",
-     "fix": "We have this control at EOL, but not at the shipping dock yet."
+     "fix": "EOL has this function, but the shipping dock does not."
     },
     {
      "n": 6,
-     "ok": "I do not have a confirmed date. Let me confirm the decision and schedule.",
-     "cn": "我目前沒有確定的日期。讓我確認決議與時程。",
-     "pat": "主詞 + do not have + 受詞。Let me + 動詞原形",
-     "note": "承認日期未定並提出下一步。常見錯誤：把其他項目的日期套用到此功能。"
+     "ok": "October 20 is the planned date for serial-number printing. The dock function is still under discussion.",
+     "cn": "10 月 20 日是序號列印的預計導入日；月台功能仍在討論中。",
+     "pat": "日期 + is the planned date for + 事項",
+     "note": "10/20 是序號列印的預計導入日，月台功能仍待討論。常見錯誤：混用改善日期。"
     }
    ],
    "vocabTitle": "五個關鍵詞 Key Words",
    "vocab": [
     {
-     "w": "audit",
-     "ipa": "/ˈɔːdɪt/",
+     "w": "control",
+     "ipa": "/kənˈtroʊl/",
      "pos": "n.",
-     "cn": "稽核",
-     "ex": "We are preparing for the audit.",
-     "exCn": "我們正在準備稽核。"
-    },
-    {
-     "w": "representative",
-     "ipa": "/ˌreprɪˈzentətɪv/",
-     "pos": "n.",
-     "cn": "代表、窗口",
-     "ex": "Let me ask our QA representative.",
-     "exCn": "讓我請我們的品保窗口協助。"
+     "cn": "管控",
+     "ex": "We use weight checks to prevent missing items.",
+     "exCn": "我們以秤重確認防止短裝。"
     },
     {
      "w": "record",
      "ipa": "/ˈrekɔːrd/",
      "pos": "n.",
      "cn": "紀錄",
-     "ex": "Which inspection record do you need?",
-     "exCn": "您需要哪一份檢驗紀錄？"
+     "ex": "Our assessment records are not complete yet.",
+     "exCn": "我們的考核紀錄尚未完整。"
     },
     {
-     "w": "confirm",
-     "ipa": "/kənˈfɜːrm/",
-     "pos": "v.",
-     "cn": "確認",
-     "ex": "Let me confirm the current status.",
-     "exCn": "讓我確認目前狀態。"
+     "w": "procedure",
+     "ipa": "/prəˈsiːdʒər/",
+     "pos": "n.",
+     "cn": "程序",
+     "ex": "We plan to issue the procedure in both required languages.",
+     "exCn": "我們計畫以雙語發行程序。"
     },
     {
      "w": "target",
      "ipa": "/ˈtɑːrɡɪt/",
      "pos": "n.",
      "cn": "目標",
-     "ex": "Our target date is June 2027.",
-     "exCn": "我們的目標日期是 2027 年 6 月。"
+     "ex": "Our certification target is June 2027.",
+     "exCn": "我們的認證目標為 2027 年 6 月。"
+    },
+    {
+     "w": "update",
+     "ipa": "/ʌpˈdeɪt/",
+     "pos": "v.",
+     "cn": "更新",
+     "ex": "We plan to update the control plan when documents change.",
+     "exCn": "我們計畫在文件變更時同步更新管制計畫。"
     }
    ],
    "phrasesTitle": "關鍵搭配 Collocations",
    "phrases": [
     {
-     "p": "prepare for an audit",
-     "cn": "準備稽核"
+     "p": "packing control",
+     "cn": "包裝管控"
     },
     {
-     "p": "QA representative",
-     "cn": "品保窗口"
+     "p": "assessment records",
+     "cn": "考核紀錄"
     },
     {
-     "p": "inspection records",
-     "cn": "檢驗紀錄"
-    },
-    {
-     "p": "confirm the status",
-     "cn": "確認狀態"
+     "p": "change control procedure",
+     "cn": "變更管制程序"
     },
     {
      "p": "target date",
      "cn": "目標日期"
+    },
+    {
+     "p": "update the control plan",
+     "cn": "更新管制計畫"
     }
    ],
    "grammarTitle": "核心句型 Patterns",
    "grammar": [
     {
      "k": "I-A",
-     "title": "Let me + 原形動詞（我來…，當場承接）",
-     "pat": "Let me + 動詞原形 + 受詞",
+     "title": "We have X, but Y is still missing（已有＋缺口）",
+     "pat": "We have + 已有措施, but + 缺口 + is still missing",
      "pts": [
-      "Let me 後面一定接動詞原形，不可加 to（✗ Let me to ask）。",
-      "用在當場承接問題：Let me confirm / Let me ask / Let me summarize。",
-      "比 I will 更即時，適合稽核現場回應。"
+      "先交代已做到的事，再明確指出缺口，不隱藏也不誇大。",
+      "待完成措施用 We plan to…，不說 We have completed…。",
+      "例：We have calibration labels, but the reports are still missing.（已有校驗標籤，但報告仍缺。）"
      ],
-     "ex": "Let me confirm the current status with QA.",
-     "exCn": "讓我向品保確認目前的狀態。"
+     "ex": "We have calibration labels, but the reports are still missing.",
+     "exCn": "已有校驗標籤，但報告仍缺。"
     },
     {
      "k": "I-B",
-     "title": "Do you mean A or B?（釐清對方要什麼）",
-     "pat": "Do you mean + 選項 A + or + 選項 B ?",
+     "title": "We use A, B, and C（具體說明現行做法）",
+     "pat": "We use + A + B + and C + to + 目的",
      "pts": [
-      "不確定對方指哪一種時，提出兩個具體選項，不要用猜的。",
-      "例：Do you mean the training records or the inspection records?",
-      "比 What do you mean? 更有效率，也顯得專業。"
+      "回答「怎麼管控」要說出具體方法，不能只說 We check quality。",
+      "三個以上項目用 A, B, and C 的並列結構。",
+      "例：We use fixed quantities, a packing board, and weight checks to prevent missing items.（透過定量、包裝看板及秤重確認防止短裝。）"
      ],
-     "ex": "Do you mean the training records or the inspection records?",
-     "exCn": "您指的是訓練紀錄還是檢驗紀錄？"
+     "ex": "We use fixed quantities, a packing board, and weight checks to prevent missing items.",
+     "exCn": "包裝線透過定量、包裝看板及秤重確認，防止短裝。"
     },
     {
      "k": "I-C",
-     "title": "We have X at A, but not at B yet（限定範圍，不誇大）",
-     "pat": "主詞 + have + 功能 + at + 地點, but not at + 地點 + yet",
+     "title": "We plan to + V（講計畫，不說成已完成）",
+     "pat": "We plan to + 動詞原形 + 受詞",
      "pts": [
-      "只說有的範圍，沒有的要講清楚，不可用 everywhere 概括。",
-      "yet 表示「目前還沒有，之後可能會有」。",
-      "例：We have this control at EOL, but not at the shipping dock yet."
+      "規劃中的事用 plan to / will，完成的事才用現在完成式。",
+      "把表列目標講成已完成是稽核大忌。",
+      "例：We plan to issue the procedure in both required languages.（我們計畫以雙語發行程序。）"
      ],
-     "ex": "We have this control at EOL, but not at the shipping dock yet.",
-     "exCn": "我們在 EOL 站有這項管控，但出貨月台還沒有。"
+     "ex": "We plan to issue the procedure in both required languages.",
+     "exCn": "我們計畫以雙語發行程序。"
     }
    ],
    "cmpTitle": "",
    "cmp": [],
    "reading": [
     {
-     "bar": "真實案例 01｜ISO",
-     "title": "ISO",
-     "titleCn": "真實案例 01｜ISO",
+     "bar": "ISO｜認證現況與計畫",
+     "title": "認證現況與計畫",
+     "titleCn": "ISO｜認證現況與計畫",
      "paras": [
       {
        "en": "Auditor: Is this factory ISO 9001 certified?",
-       "cn": "稽核員：這間工廠已取得 ISO 9001 認證嗎？"
+       "cn": "稽核員：本廠已取得 ISO 9001 認證嗎？"
       },
       {
-       "en": "You: Not yet. Our target is to obtain ISO 9001 certification by June 2027.",
-       "cn": "你：目前尚未取得；目標是在 2027 年 6 月前取得認證。"
+       "en": "You: Not yet. Our target is to obtain ISO 9001 certification by June 2027. QA is responsible for this action.",
+       "cn": "你：尚未取得。目標是在 2027 年 6 月前取得 ISO 9001 認證，由品保負責。"
       },
       {
-       "en": "Auditor: Can you show me the certificate?",
-       "cn": "稽核員：可以給我看證書嗎？"
+       "en": "Auditor: What is your plan for certification?",
+       "cn": "稽核員：取得認證的計畫是什麼？"
       },
       {
-       "en": "You: We do not have the certificate yet. Let me ask QA to explain the certification plan.",
-       "cn": "你：我們目前還沒有證書。我請品保說明認證計畫。"
+       "en": "You: We plan to submit the proposal for an ISO consulting company by October 16. The action plan lists December as the planned start.",
+       "cn": "你：我們計畫在 10 月 16 日前提出 ISO 輔導公司簽呈。改善表列出的預計開始時間為 12 月。"
+      },
+      {
+       "en": "Auditor: Can you show the certificate now?",
+       "cn": "稽核員：現在能提供證書嗎？"
+      },
+      {
+       "en": "You: No. We do not have the certificate yet. June 2027 is our target, not a completed certification date.",
+       "cn": "你：不能，我們尚未取得證書。2027 年 6 月是目標，不是已完成認證的日期。"
+      }
+     ]
+    },
+    {
+     "bar": "ISO｜認證前如何管控",
+     "title": "認證前如何管控",
+     "titleCn": "ISO｜認證前如何管控",
+     "paras": [
+      {
+       "en": "Auditor: How do you control quality before certification?",
+       "cn": "稽核員：取得認證前如何管控品質？"
+      },
+      {
+       "en": "You: Our SOPs have release controls and revision records. Full-dimensional inspection reports are also listed in the assessment.",
+       "cn": "你：我們的 SOP 已有發行管控與修改紀錄，評估表也記載已有全尺寸檢驗報告。"
+      },
+      {
+       "en": "Auditor: What is the remaining gap?",
+       "cn": "稽核員：還有哪些缺口？"
+      },
+      {
+       "en": "You: The control plan was not updated with the SOP changes. We also need to compare the control plan with actual work on the production lines.",
+       "cn": "你：管制計畫未隨 SOP 變更同步更新，也需將管制計畫與產線實際作業比對。"
+      },
+      {
+       "en": "Auditor: What action will you take?",
+       "cn": "稽核員：你們會採取什麼措施？"
+      },
+      {
+       "en": "You: We plan to adopt the Headquarters document-change process and update the the overseas plant control plan at the same time. The target for this action is November 2.",
+       "cn": "你：我們計畫採用總部文件變更流程，同步更新海外廠管制計畫。此項目標日期為 11 月 2 日。"
       }
      ]
     },
@@ -19751,165 +19790,382 @@ window.BOOK = {
      ]
     },
     {
-     "bar": "演練 A｜接待與澄清",
-     "title": "接待與澄清",
-     "titleCn": "演練 A｜接待與澄清",
+     "bar": "包裝｜實際做法與缺口",
+     "title": "實際做法與缺口",
+     "titleCn": "包裝｜實際做法與缺口",
      "paras": [
       {
-       "en": "Auditor: Could you introduce yourself?",
-       "cn": "稽核員：可以請你自我介紹嗎？"
+       "en": "Auditor: How do you prevent missing items during packing?",
+       "cn": "稽核員：包裝時如何防止短裝？"
       },
       {
-       "en": "You: My name is [name]. I will help coordinate today's audit.",
-       "cn": "你：我是［姓名］，今天協助協調稽核。"
+       "en": "You: We use fixed quantities, a packing board, and weight checks. These are the methods listed for the packing line.",
+       "cn": "你：我們採用定量、包裝看板與秤重確認，這些是情境所列的包裝線做法。"
       },
       {
-       "en": "Auditor: We would like to see the records.",
-       "cn": "稽核員：我們想查看紀錄。"
+       "en": "Auditor: What needs to be added to the weight-check procedure?",
+       "cn": "稽核員：秤重程序還需要補什麼？"
       },
       {
-       "en": "You: Do you mean the training records or the inspection records?",
-       "cn": "你：您是指訓練紀錄，還是檢驗紀錄？"
+       "en": "You: We plan to define upper and lower weight limits for each model and establish a scale calibration procedure. We also plan to add large-print instructions in both required languages.",
+       "cn": "你：我們計畫訂定各機種重量上下限、建立秤重設備校驗程序，並增加大字雙語作業說明。"
       },
       {
-       "en": "Auditor: The inspection records, please.",
-       "cn": "稽核員：請提供檢驗紀錄。"
+       "en": "Auditor: Does this prove that the shipping dock blocks duplicate barcodes?",
+       "cn": "稽核員：這能證明出貨月台可攔阻重複條碼嗎？"
       },
       {
-       "en": "You: Let me ask QA to help locate the relevant records.",
-       "cn": "你：我請品保協助找出相關紀錄。"
-      },
-      {
-       "en": "Auditor: Please include the latest results.",
-       "cn": "稽核員：請包含最新結果。"
-      },
-      {
-       "en": "You: Let me confirm which records are the latest.",
-       "cn": "你：讓我確認哪些是最新紀錄。"
+       "en": "You: No. Packing checks and duplicate-barcode control are different. The dock does not have the same function as EOL in the action plan.",
+       "cn": "你：不能。包裝檢查與重複條碼管控不同。依改善表，月台尚無 EOL 的相同功能。"
       }
      ]
     },
     {
-     "bar": "演練 B｜ISO 連續問答",
-     "title": "ISO 連續問答",
-     "titleCn": "演練 B｜ISO 連續問答",
+     "bar": "演練 A｜帶看包裝作業",
+     "title": "帶看包裝作業",
+     "titleCn": "演練 A｜帶看包裝作業",
+     "paras": [
+      {
+       "en": "Auditor: What happens in this area?",
+       "cn": "稽核員：這個區域做什麼？"
+      },
+      {
+       "en": "You: This is the packing area. It is separate from production. The two areas are on opposite sides of the quiet room.",
+       "cn": "你：這裡是包裝區，與生產區分開，兩區位於靜音室的前後兩側。"
+      },
+      {
+       "en": "Auditor: How do you prevent missing items?",
+       "cn": "稽核員：如何防止短裝？"
+      },
+      {
+       "en": "You: We use fixed quantities, a packing board, and weight checks.",
+       "cn": "你：我們採用定量、包裝看板及秤重確認。"
+      },
+      {
+       "en": "Auditor: Is the weight-check procedure complete?",
+       "cn": "稽核員：秤重程序完整了嗎？"
+      },
+      {
+       "en": "You: Not yet. We need to define the weight limits for each model and add the scale calibration procedure.",
+       "cn": "你：尚未完整，需訂定各機種重量上下限，並增加秤重設備校驗程序。"
+      },
+      {
+       "en": "Auditor: What language will the instructions use?",
+       "cn": "稽核員：作業說明會用什麼語言？"
+      },
+      {
+       "en": "You: The plan is to add large-print instructions in both required languages at the weighing station.",
+       "cn": "你：計畫在秤重站增加大字的雙語作業說明。"
+      }
+     ]
+    },
+    {
+     "bar": "演練 B｜品保實質回答",
+     "title": "品保實質回答",
+     "titleCn": "演練 B｜品保實質回答",
      "paras": [
       {
        "en": "Auditor: Q1. Are you ISO 9001 certified?",
-       "cn": "稽核員：你們已取得 ISO 9001 認證嗎？"
+       "cn": "稽核員：已取得 ISO 9001 認證嗎？"
       },
       {
-       "en": "You: Not yet. Our target is to obtain certification by June 2027.",
-       "cn": "你：尚未取得。目標是在 2027 年 6 月前取得。"
+       "en": "You: Not yet. Our target is June 2027. QA owns the certification action.",
+       "cn": "你：尚未取得，目標為 2027 年 6 月，由品保負責。"
       },
       {
-       "en": "Auditor: Q2. Who is responsible for this action?",
-       "cn": "稽核員：誰負責這項改善？"
+       "en": "Auditor: Q2. Are your work instructions controlled?",
+       "cn": "稽核員：作業指導書有受控嗎？"
       },
       {
-       "en": "You: QA is responsible for this action. Let me bring in our QA representative.",
-       "cn": "你：品保負責這項改善。我請品保窗口加入說明。"
+       "en": "You: Our SOPs have release controls and revision records. However, the control plan was not updated with the SOP changes.",
+       "cn": "你：SOP 已有發行管控與修改紀錄，但管制計畫未隨 SOP 變更更新。"
       },
       {
-       "en": "Auditor: Q3. What has been completed so far?",
-       "cn": "稽核員：到目前為止，已完成哪些事項？"
+       "en": "Auditor: Q3. How will you close that gap?",
+       "cn": "稽核員：如何改善這個缺口？"
       },
       {
-       "en": "You: Let me confirm the completed items with QA and check the supporting records.",
-       "cn": "你：讓我向品保確認已完成項目，並查核佐證紀錄。"
+       "en": "You: We plan to adopt the Headquarters document-change process and update the the overseas plant control plan with it. The target is November 2.",
+       "cn": "你：計畫採用總部文件變更流程，同步更新海外廠管制計畫，目標為 11 月 2 日。"
       }
      ]
     },
     {
-     "bar": "演練 B｜證據與結尾",
-     "title": "證據與結尾",
-     "titleCn": "演練 B｜證據與結尾",
+     "bar": "演練 B｜校驗與證據",
+     "title": "校驗與證據",
+     "titleCn": "演練 B｜校驗與證據",
      "paras": [
       {
-       "en": "Auditor: Q4. Can you show evidence that the controls are working?",
-       "cn": "稽核員：能出示管控有效的證據嗎？"
+       "en": "Auditor: Q4. What calibration controls are in place?",
+       "cn": "稽核員：目前有哪些校驗管控？"
       },
       {
-       "en": "You: Let me ask QA to show the available inspection results and explain how they are reviewed.",
-       "cn": "你：我請品保提供現有檢驗結果，並說明如何審查。"
+       "en": "You: Calibration labels have been established. A calibration system is also listed in the assessment, but the local procedure and third-party reports are still missing.",
+       "cn": "你：已建立校驗標籤，評估表也記載有校驗系統，但仍缺當地規定與第三方報告。"
       },
       {
-       "en": "Auditor: Q5. Is this action closed?",
-       "cn": "稽核員：這項改善已結案嗎？"
+       "en": "Auditor: Q5. What are your next actions?",
+       "cn": "稽核員：下一步具體措施是什麼？"
       },
       {
-       "en": "You: It is marked Open in the current action plan. Let me confirm the latest status.",
-       "cn": "你：在 目前的改善表中仍為 Open。我確認一下最新狀態。"
+       "en": "You: The plan is to submit the third-party calibration proposal by October 5 and complete the local procedure by November 20. Production gauges are also to be included in the system and records.",
+       "cn": "你：計畫在 10 月 5 日前提出第三方校驗簽呈、11 月 20 日前完成當地規定，並將產線檢具納入系統及紀錄。"
       },
       {
-       "en": "Auditor: Q6. What do we still need to review?",
-       "cn": "稽核員：還有哪些內容需要確認？"
+       "en": "Auditor: Q6. Is a label enough to close this action?",
+       "cn": "稽核員：有標籤就能結案嗎？"
       },
       {
-       "en": "You: We still need to confirm the current controls, supporting records, and the latest schedule with QA.",
-       "cn": "你：我們還需向品保確認目前管控、佐證紀錄與最新時程。"
+       "en": "You: No. The reports and the procedure are still missing. The action remains Open in the current action plan.",
+       "cn": "你：不能，報告與規定仍缺。目前的改善表中此項仍為 Open。"
       }
      ]
     },
     {
-     "bar": "演練 C｜條碼與範圍",
-     "title": "條碼與範圍",
-     "titleCn": "演練 C｜條碼與範圍",
+     "bar": "演練 C｜條碼與工單",
+     "title": "條碼與工單",
+     "titleCn": "演練 C｜條碼與工單",
      "paras": [
       {
-       "en": "Auditor: Q1. Does the barcode control cover the whole process?",
-       "cn": "稽核員：條碼管控涵蓋整個流程嗎？"
+       "en": "Auditor: Q1. Does duplicate-barcode control cover both EOL and the dock?",
+       "cn": "稽核員：EOL 和月台都有重複條碼管控嗎？"
       },
       {
-       "en": "You: The action plan describes this control at EOL, but not at the shipping dock.",
-       "cn": "你：改善表記載 EOL 有這项管控，但出貨月台尚未具備。"
+       "en": "You: No. EOL has this function, but the shipping dock does not. The action plan says the dock function still needs discussion.",
+       "cn": "你：沒有。EOL 有此功能，出貨月台沒有，改善表記載月台功能仍待討論。"
       },
       {
-       "en": "Auditor: Q2. So the dock also blocks duplicates, correct?",
-       "cn": "稽核員：所以月台也會攔阻重複條碼，對嗎？"
+       "en": "Auditor: Q2. How will serial numbers be linked to work orders?",
+       "cn": "稽核員：序號將如何對應工單？"
       },
       {
-       "en": "You: Not yet. The EOL control and the dock control are different.",
-       "cn": "你：目前還不會。EOL 與月台的管控不同。"
+       "en": "You: The plan is to link machine serial numbers to work orders in the three-day production schedule. The assembly line will follow that schedule.",
+       "cn": "你：計畫在三日生產排程中將機台序號與工單對應，組裝線依此執行。"
       },
       {
-       "en": "Auditor: Q3. Can you demonstrate the EOL control?",
-       "cn": "稽核員：可以示範 EOL 的管控嗎？"
+       "en": "Auditor: Q3. Who will print the serial numbers?",
+       "cn": "稽核員：誰會列印序號？"
       },
       {
-       "en": "You: Let me ask the production team to arrange a demonstration and explain the result.",
-       "cn": "你：我請製造團隊安排示範，並說明結果。"
+       "en": "You: Production Planning will print the machine serial numbers. The planned introduction date is October 20.",
+       "cn": "你：計畫由生管列印機台序號，預計 10 月 20 日導入。"
       }
      ]
     },
     {
-     "bar": "演練 C｜證據與未定時程",
-     "title": "證據與未定時程",
-     "titleCn": "演練 C｜證據與未定時程",
+     "bar": "演練 C｜辨別不同改善",
+     "title": "辨別不同改善",
+     "titleCn": "演練 C｜辨別不同改善",
      "paras": [
       {
-       "en": "Auditor: Q4. How do you prevent errors at the dock?",
-       "cn": "稽核員：月台如何防止錯誤？"
+       "en": "Auditor: Q4. Will the dock function start on October 20 too?",
+       "cn": "稽核員：月台功能也是 10 月 20 日導入嗎？"
       },
       {
-       "en": "You: I need to confirm the current checks with the shipping team. Let me bring in the responsible person.",
-       "cn": "你：我需要向出貨團隊確認目前檢查方式，請負責人加入說明。"
+       "en": "You: That date is for serial-number printing by Production Planning. The dock function is still under discussion; the plan does not give a confirmed start date for it.",
+       "cn": "你：那個日期是生管序號列印的導入計畫。月台功能仍待討論，表中沒有該功能已確認的開始日期。"
       },
       {
-       "en": "Auditor: Q5. Is there an approved date for the new function?",
-       "cn": "稽核員：新功能已有核准導入日期嗎？"
+       "en": "Auditor: Q5. What is the label-checking action?",
+       "cn": "稽核員：標籤核對的改善內容是什麼？"
       },
       {
-       "en": "You: I do not have a confirmed date. The action plan says it still needs discussion.",
-       "cn": "你：我目前沒有已確認的日期。改善表記載仍待討論。"
+       "en": "You: The shipping-barcode label-checking procedure needs to be defined. Production Planning owns this action, with a target date of October 30.",
+       "cn": "你：需提出出貨條碼標籤核對流程，由生管負責，目標日期為 10 月 30 日。"
       },
       {
-       "en": "Auditor: Q6. What will you check next?",
-       "cn": "稽核員：接下來你會確認什麼？"
+       "en": "Auditor: Q6. What is the weighing action?",
+       "cn": "稽核員：秤重的改善內容是什麼？"
       },
       {
-       "en": "You: I will confirm the dock checks, the available records, and the decision on the new function.",
-       "cn": "你：我會確認月台檢查方式、現有紀錄與新功能的決策。"
+       "en": "You: The plan includes weight limits by model, a scale calibration procedure, and large-print instructions in both required languages.",
+       "cn": "你：計畫包括各機種重量上下限、秤重設備校驗程序及大字雙語作業說明。"
+      }
+     ]
+    },
+    {
+     "bar": "品保｜校驗完整回答",
+     "title": "校驗完整回答",
+     "titleCn": "品保｜校驗完整回答",
+     "paras": [
+      {
+       "en": "Auditor: What calibration controls do you have?",
+       "cn": "稽核員：有哪些校驗管控？"
+      },
+      {
+       "en": "You: We have a calibration system and calibration labels. However, the local calibration procedure and third-party reports are still missing.",
+       "cn": "你：已有校驗系統及校驗標籤，但仍缺當地校驗規定與第三方報告。"
+      },
+      {
+       "en": "Auditor: What is the corrective action?",
+       "cn": "稽核員：改善措施是什麼？"
+      },
+      {
+       "en": "You: We plan to submit the third-party calibration proposal by October 5. The local procedure is targeted for November 20. We also plan to include production gauges in the system and records.",
+       "cn": "你：計畫 10/5 前提出第三方校驗簽呈，當地規定目標為 11/20，並將產線檢具納入系統及紀錄。"
+      },
+      {
+       "en": "Auditor: Will everything be finished before the November audit?",
+       "cn": "稽核員：11 月稽核前會全部完成嗎？"
+      },
+      {
+       "en": "You: The procedure target is November 20, which is after the audit. The action plan does not show this item as completed.",
+       "cn": "你：規定目標為 11/20，晚於稽核。改善表未顯示此項已完成。"
+      }
+     ]
+    },
+    {
+     "bar": "開發｜變更完整回答",
+     "title": "變更完整回答",
+     "titleCn": "開發｜變更完整回答",
+     "paras": [
+      {
+       "en": "Auditor: Do you have an engineering change process?",
+       "cn": "稽核員：有工程變更流程嗎？"
+      },
+      {
+       "en": "You: We have engineering change notices. However, we still need a local change control procedure in both required languages.",
+       "cn": "你：已有設變通知單，但仍需建立雙語的當地變更管制規定。"
+      },
+      {
+       "en": "Auditor: What is your action and target date?",
+       "cn": "稽核員：改善措施與目標日期是什麼？"
+      },
+      {
+       "en": "You: Product Development is responsible for establishing the bilingual procedure. The target date is October 19. The action is still Open in the current action plan.",
+       "cn": "你：由開發建立雙語規定，目標為 10/19。目前的改善表中仍為 Open。"
+      },
+      {
+       "en": "Auditor: Does having a change notice mean the process is complete?",
+       "cn": "稽核員：有設變通知單就代表流程完整嗎？"
+      },
+      {
+       "en": "You: No. The notice is available, but the local procedure is still missing. This action is to establish that procedure, not just to create a form.",
+       "cn": "你：不是。已有通知單，但仍缺當地規定。此項改善是建立程序，不只是製作表單。"
+      }
+     ]
+    },
+    {
+     "bar": "生技｜PFMEA 完整回答",
+     "title": "PFMEA 完整回答",
+     "titleCn": "生技｜PFMEA 完整回答",
+     "paras": [
+      {
+       "en": "Auditor: Do you have a PFMEA?",
+       "cn": "稽核員：有 PFMEA 嗎？"
+      },
+      {
+       "en": "You: Yes. We have an existing PFMEA, but it needs to be strengthened using the Headquarters format. The local procedure and flowchart are also missing.",
+       "cn": "你：有現有 PFMEA，但需依總部格式補強，當地管理規定及流程圖也仍缺。"
+      },
+      {
+       "en": "Auditor: How will you connect it to error-proofing?",
+       "cn": "稽核員：將如何連結防錯措施？"
+      },
+      {
+       "en": "You: We plan to define error-proofing controls in the SOP and include them in the PFMEA. The action plan lists this as a separate improvement.",
+       "cn": "你：我們計畫在 SOP 建立防錯機制，並納入 PFMEA。改善表將此列為另一項改善。"
+      },
+      {
+       "en": "Auditor: What are the target dates?",
+       "cn": "稽核員：目標日期是什麼？"
+      },
+      {
+       "en": "You: The PFMEA document action is targeted for October 19. The SOP and error-proofing link is targeted for November 2. Both are Open in the plan.",
+       "cn": "你：PFMEA 文件改善目標為 10/19，SOP 與防錯連結目標為 11/2，表中兩項皆為 Open。"
+      }
+     ]
+    },
+    {
+     "bar": "製造｜訓練完整回答",
+     "title": "訓練完整回答",
+     "titleCn": "製造｜訓練完整回答",
+     "paras": [
+      {
+       "en": "Auditor: What is the current training status?",
+       "cn": "稽核員：目前訓練進度如何？"
+      },
+      {
+       "en": "You: Team leaders are being trained, and the skills matrices for each process are being updated. Assessment records and backup-operator records are not complete yet.",
+       "cn": "你：組長培訓中，各製程多能工表更新中；考核紀錄及代理人實績尚未完整。"
+      },
+      {
+       "en": "Auditor: What will be completed by October 30?",
+       "cn": "稽核員：10/30 前預計完成哪些事項？"
+      },
+      {
+       "en": "You: The plan is to complete team-leader training, assessment records, and the training plan. Production will also provide skills matrices for Departments 1, 2, and 3.",
+       "cn": "你：計畫完成組長培訓、考核紀錄與訓練計畫，並提供製一、製二、製三部多能工表。"
+      },
+      {
+       "en": "Auditor: Does attendance alone prove that an operator is qualified?",
+       "cn": "稽核員：有出席紀錄就代表人員合格嗎？"
+      },
+      {
+       "en": "You: Attendance alone does not show the assessment result. Our action includes assessment records and backup-operator evidence, not just the training plan.",
+       "cn": "你：出席紀錄本身無法顯示考核結果。我們的改善包含考核紀錄與代理人實績，不只是訓練計畫。"
+      }
+     ]
+    },
+    {
+     "bar": "資材｜化學品完整回答",
+     "title": "化學品完整回答",
+     "titleCn": "資材｜化學品完整回答",
+     "paras": [
+      {
+       "en": "Auditor: What gaps were found in chemical control?",
+       "cn": "稽核員：化學品管控有哪些缺口？"
+      },
+      {
+       "en": "You: The gaps cover issue records, storage locations, expiry-date control, warning labels, and protective equipment. Control of chemicals on the production line also needs a plan.",
+       "cn": "你：缺口涵蓋領用紀錄、存放位置、效期、警示標籤及防護設備；送到產線後的管控也需提出計畫。"
+      },
+      {
+       "en": "Auditor: What is your action plan?",
+       "cn": "稽核員：改善計畫是什麼？"
+      },
+      {
+       "en": "You: Materials is responsible for establishing these controls and the related local documents. The listed target date is September 28.",
+       "cn": "你：由資材建立上述管控及海外廠當地文件，表列目標日期為 9/28。"
+      },
+      {
+       "en": "Auditor: Does the plan cover chemicals after they leave storage?",
+       "cn": "稽核員：計畫有涵蓋離開倉庫後的化學品嗎？"
+      },
+      {
+       "en": "You: Yes. It specifically calls for a plan for chemicals sent to the production line. That requirement is part of the open action.",
+       "cn": "你：有，對策明確要求提出送到產線後的管控計畫，這是未結案改善的一部分。"
+      }
+     ]
+    },
+    {
+     "bar": "人資｜組織圖完整回答",
+     "title": "組織圖完整回答",
+     "titleCn": "人資｜組織圖完整回答",
+     "paras": [
+      {
+       "en": "Auditor: What information will the organization chart include?",
+       "cn": "稽核員：組織圖會列出什麼資訊？"
+      },
+      {
+       "en": "You: It will include names and length of service for section managers and above. Each department is to provide its information, and HR owns the action.",
+       "cn": "你：將列出課級以上姓名與年資，各部門提供資料，由人資負責此項。"
+      },
+      {
+       "en": "Auditor: What is the target date?",
+       "cn": "稽核員：目標日期是什麼？"
+      },
+      {
+       "en": "You: The target is October 19. The organization chart action is still Open in the current action plan.",
+       "cn": "你：目標為 10/19，目前的改善表中的組織圖項目仍為 Open。"
+      },
+      {
+       "en": "Auditor: How will you arrange English communication?",
+       "cn": "稽核員：英文溝通如何安排？"
+      },
+      {
+       "en": "You: The plan requires an English-speaking contact from each department, with Sales providing support. This is a separate action, also targeted for October 19.",
+       "cn": "你：計畫要求各部門提供英文窗口，由銷售支援。這是另一項改善，目標同樣為 10/19。"
       }
      ]
     }
@@ -19917,31 +20173,31 @@ window.BOOK = {
    "extraTitle": "隨身速查 Quick Reference",
    "extra": [
     {
-     "title": "隨身速查｜現場救援句",
+     "title": "隨身速查｜六句有內容",
      "exs": [
       {
-       "en": "Could you repeat that more slowly, please?",
-       "cn": "請您再說一次，稍微慢一點，好嗎？"
+       "en": "We have calibration labels, but third-party calibration reports are still missing.",
+       "cn": "已有校驗標籤，但仍缺第三方校驗報告。"
       },
       {
-       "en": "Do you mean the EOL station or the shipping dock?",
-       "cn": "您指的是 EOL 站點，還是出貨月台？"
+       "en": "We have change notices, but the local bilingual procedure is still missing.",
+       "cn": "已有設變通知單，但仍缺當地雙語程序。"
       },
       {
-       "en": "Which record would you like to see?",
-       "cn": "您想查看哪一份紀錄？"
+       "en": "We have an existing PFMEA, but it needs to be strengthened using the Headquarters format.",
+       "cn": "已有 PFMEA，但需依總部格式補強。"
       },
       {
-       "en": "Let me confirm the latest status with the responsible person.",
-       "cn": "讓我向負責人確認最新狀態。"
+       "en": "Our skills matrices are being updated. Assessment records are due by October 30.",
+       "cn": "多能工表更新中，考核紀錄目標為 10/30 前補齊。"
       },
       {
-       "en": "I have not confirmed that record yet.",
-       "cn": "我尚未確認該紀錄。"
+       "en": "The chemical action covers storage, expiry dates, warning labels, and issue records.",
+       "cn": "化學品改善涵蓋存放、效期、警示標籤及領用紀錄。"
       },
       {
-       "en": "Let me summarize the items we still need to confirm.",
-       "cn": "讓我整理一下還需要確認的項目。"
+       "en": "The organization chart needs names and length of service for section managers and above.",
+       "cn": "組織圖需列出課級以上姓名與年資。"
       }
      ]
     }
@@ -19954,7 +20210,7 @@ window.BOOK = {
    "date": "2026-09-28",
    "title": "Audit English II — Responsibility, Training & Assessment Records",
    "titleCn": "稽核英文二｜責任歸屬、訓練進度與考核紀錄",
-   "topics": "稽核英文, responsibility, assessment, backup, evidence, complete, 組織圖, 英文窗口, 訓練進度, 代理人安排, 目標日期不等於完成",
+   "topics": "稽核英文, 責任歸屬, 訓練與考核, 組織圖, 英文窗口, 代理人安排, responsibility, assessment, backup, evidence, complete, 目標日期不等於完成",
    "hwTitle": "六題測驗 Quiz & Answers",
    "hw": [
     {
