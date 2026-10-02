@@ -2431,44 +2431,69 @@ nav button{font-size:11px}
   #v-read .rdlist-hd .seg-ctrl button{flex:1}
   #v-read .rdlist-hd .chips{margin-bottom:6px}
 
-  /* 文章、實景標題卡：拿掉粗黑框與立體陰影；標題截短（點標題展開全文），中文副標、來源各 1 行 */
+  /* 文章、實景、課本標題卡：手機上標題一律完整顯示、不截斷、不用點擊。
+     做法是改成一般大小寫（全大寫在窄螢幕又寬又長）＋稍小字級與緊一點的行距；文章／實景再拿掉粗黑框與立體陰影 */
   #v-read .magttl,#v-real .magttl{padding:10px 12px;margin-bottom:10px;border-width:1.5px;box-shadow:none}
-  #v-read .magttl h2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.15;letter-spacing:0}
-  #v-real .magttl h2{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2;padding-right:0}
-  #v-read .magttl.ttlopen h2{-webkit-line-clamp:unset;overflow:visible}
-  #v-real .magttl.ttlopen h2{white-space:normal;overflow:visible}
-  #v-read .magttl .cn{margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  #v-read .magttl.ttlopen .cn{white-space:normal}
+  #v-read .magttl h2,#v-real .magttl h2,#v-book .magttl h2{display:block;-webkit-line-clamp:unset;overflow:visible;white-space:normal;
+    text-transform:none;font-size:calc(21px * var(--fs));line-height:1.25;letter-spacing:0}
+  #v-read .magttl h2,#v-real .magttl h2{padding-right:0}
+  #v-read .magttl .cn{margin-top:2px}
   #v-read .magttl .bar,#v-real .magttl .bar{margin-top:6px;gap:6px}
-  #v-read .magttl .set{margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  #v-read .magttl.ttlopen .set{white-space:normal}
+  #v-read .magttl .set{margin-top:5px;line-height:1.45}
   #v-real .magttl .mr-time{margin-top:2px}
 
   /* 課本閱讀文章：標題佔滿一行，「朗讀全文／說明」排到下一行，不再把標題擠成好幾行 */
   #v-book .bkrd-hd{flex-wrap:wrap;gap:8px}
   #v-book .bkrd-hd > h2{flex:1 1 100%!important}
 }
-/* ===== 實景情境三元件（沿用網站色票、圓角與字級；不做大卡片，用細分隔線與淡底建立層級） ===== */
-.rwflow{list-style:none;margin:0 0 14px;padding:12px 2px;display:flex;align-items:flex-start;gap:8px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.rwf-step{flex:1 1 0;min-width:0;display:flex;gap:9px;align-items:flex-start}
-.rwf-n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent2);font-weight:800;font-size:13px;line-height:1;display:grid;place-items:center;margin-top:1px}
-.rwf-tx{min-width:0}
-.rwf-tx b{display:block;font-size:var(--font-body);line-height:1.35;color:var(--ink);font-weight:var(--fw-emph)}
-.rwf-d{display:block;font-size:var(--font-meta);color:var(--ink2);line-height:1.45;margin-top:2px}
-.rwf-arr{flex:none;align-self:center;color:var(--accent);font-weight:800;line-height:1}
-.rwf-arr::before{content:'→'}
+/* ===== 實景情境＋用法比較（沿用網站色票、字級；靠留白、細分隔線、字重建立層級，不做卡片牆） ===== */
 .rwctx-p{margin:6px 0;line-height:var(--lh-body)}
-.rwctx-more summary{cursor:pointer;color:var(--ink2);font-size:var(--font-meta);padding:2px 0}
-.kwtag{display:inline-block;padding:0 6px;margin:0 1px;border:1px solid #ecd3bb;background:#fdf6ec;color:#8a4a17;border-radius:6px;font-size:.92em;font-weight:600;line-height:1.45;white-space:nowrap}
-.rwkey{margin:12px 0 6px;padding:12px 14px;background:#fdf6ec;border:1px solid #f3e1cb;border-radius:12px}
-.rwkey-h{font-weight:800;font-size:var(--font-secondary);color:var(--accent2);margin-bottom:6px}
-.rwkey-p{margin:4px 0;line-height:1.5}
-.rwkey-n{margin-top:7px;font-size:var(--font-secondary);color:var(--ink2);line-height:1.55}
+/* 英文重點詞：淡底細框小標籤，權重不高於正文 */
+.kwtag{display:inline-block;padding:0 5px;margin:0 1px;border:1px solid #f0dcc6;background:#fdf8f1;color:#7a4a22;border-radius:5px;font-size:.92em;font-weight:600;line-height:1.45;white-space:nowrap}
+/* 看完整情境：整列可點，展開／收合有過場 */
+.rwmore{margin:2px 0 4px}
+.rwmore-t{display:flex;align-items:center;width:100%;min-height:36px;padding:6px 2px;border:0;border-top:1px dashed var(--line);
+  background:none;font:inherit;font-size:var(--font-secondary);color:var(--ink2);text-align:left;cursor:pointer}
+.rwmore-t:hover{color:var(--accent2)}
+.rwmore-t .cl,.rwmore.open .rwmore-t .op{display:none}
+.rwmore.open .rwmore-t .cl{display:inline}
+.rwmore-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease}
+.rwmore.open .rwmore-b{grid-template-rows:1fr}
+.rwmore-i{overflow:hidden;min-height:0}
+.rwd{padding:4px 0 2px}
+.rwd-h{font-size:var(--font-meta);font-weight:800;color:var(--accent2);letter-spacing:.02em;margin-top:4px}
+.rwd .rwctx-p{margin:2px 0 6px}
+/* 你只要記住：一列呈現，手機改上下排 */
+.rwkey{margin:10px 0 6px;padding:8px 12px;background:#fdf8f1;border:1px solid #f3e4d2;border-radius:10px}
+.rwkey-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;line-height:1.6}
+.rwkey-h{font-weight:800;font-size:var(--font-secondary);color:var(--accent2);margin-right:2px}
+.rwkey-sep{color:var(--ink2)}
+.rwkey-n{margin-top:3px;font-size:var(--font-secondary);color:var(--ink2);line-height:1.55}
+/* 用法比較：快速比較（三欄、細分隔線、無表頭底色） */
+.ucmp{margin-top:4px}
+.ucmp-hd,.ucmp-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.8fr) minmax(0,1.5fr);gap:12px;align-items:baseline;padding:8px 2px;border-bottom:1px solid var(--line)}
+.ucmp-hd{padding:4px 2px 6px;font-size:var(--font-meta);color:var(--ink2);font-weight:700}
+.ucmp-t{font-weight:800;color:var(--ink)}
+.ucmp-c{color:var(--ink2);font-size:var(--font-secondary)}
+.ucmp-c i{font-style:normal;margin-right:5px}
+.usub{font-weight:800;font-size:var(--font-secondary);color:var(--ink);margin:16px 0 6px}
+.utips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 18px}
+.utip b{display:block;font-weight:800;color:var(--ink)}
+.utip span{display:block;font-size:var(--font-secondary);color:var(--ink2);line-height:1.5}
+.urel{display:flex;flex-wrap:wrap;gap:6px 24px}
+.urel-i b{font-weight:800;color:var(--ink);margin-right:8px}
+.urel-i{font-size:var(--font-secondary);color:var(--ink2)}
+.urel-n{margin-top:4px;font-size:var(--font-meta);color:var(--ink2)}
+.uwarn{display:inline-block;margin-top:14px;padding:5px 10px;background:#f7f2ea;border-radius:8px;font-size:var(--font-secondary);color:var(--ink2);line-height:1.5}
 @media(max-width:640px){
-  .rwflow{flex-direction:column;gap:4px;padding:10px 2px}
-  .rwf-step{flex:none;width:100%}
-  .rwf-arr{align-self:flex-start;margin-left:7px}
-  .rwf-arr::before{content:'↓'}
+  .rwkey-row{flex-direction:column;align-items:flex-start;gap:2px}
+  .rwkey-sep{display:none}
+  .ucmp-hd{display:none}
+  .ucmp-row{grid-template-columns:minmax(0,1fr);gap:1px;padding:9px 2px}
+  .utips{grid-template-columns:minmax(0,1fr);gap:0}
+  .utip{padding:7px 0;border-bottom:1px solid var(--line)}
+  .utip:last-child{border-bottom:0}
+  .urel{flex-direction:column;gap:4px}
 }
 </style>
 </head>
@@ -3744,7 +3769,7 @@ function readerHTML(a){
 
   /* 標題卡只留標題＋基本標籤；導讀與文法重點收進可展開的提示區，資訊不再擠成一團 */
   let h='<div class="magttl"><button class="back" onclick="rdClose()"><span class="back-label">返回閱讀</span></button>'
-   +'<h2 onclick="bkTtlTog(this)" title="點一下展開／收合完整標題">'+esc(a.title)+'</h2>'
+   +'<h2>'+esc(a.title)+'</h2>'
    +'<div class="cn">'+esc(a.titleCn)+'</div>'
    +'<div class="bar"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'
    +'<span class="magbadge">🏷 '+esc(a.topic)+'</span>'
@@ -5920,7 +5945,7 @@ function rwWordRow(t,l){
 /* 實景 detail 三圓圖示帶：情境 → 核心單字 → 開口說。
    沿用每日文章五圓圖示帶的視覺模板（白圓、波浪、箭頭），配色用全站暖橘調；
    第一圓依分類換情境圖示（生活/交通/職場/旅行/其他），文字用膠囊列不畫進 SVG */
-function rwStripSVG(l,noCap){
+function rwStripSVG(l){
   const D='#2b2118', A='#e8813a', T='#f7e3c9';
   const L=RW_ICONLIB(D,A,T);
   const byCat={'生活':'house','交通':'road','職場':'briefcase','旅行':'plane','其他':'screen'};
@@ -5934,23 +5959,23 @@ function rwStripSVG(l,noCap){
    +circ(104,L[icons[0]])+circ(352,L[icons[1]])+circ(600,L[icons[2]])
    +'<g fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".8">'+arrow(293)+arrow(541)+'</g>'
    +'</svg>'
-   +(noCap?'':'<figcaption><div class="steps">'+steps.map((t,i)=>'<span class="stp">'+(i+1)+'. '+esc(t)+'</span>'+(i<2?'<span class="sarr">➔</span>':'')).join('')+'</div></figcaption>')+'</figure>';
+   +'<figcaption><div class="steps">'+steps.map((t,i)=>'<span class="stp">'+(i+1)+'. '+esc(t)+'</span>'+(i<2?'<span class="sarr">➔</span>':'')).join('')+'</div></figcaption></figure>';
 }
-/* ===== 實景「先看懂，再閱讀，再學單字」三元件：ScenarioFlow／ContextSummary／KeyTakeaway =====
-   資料驅動、欄位全部選填，舊教材自動備援：
-   scenarioSteps [{title,desc}]        → 沒有就用 steps（只有標題）
-   ctxShort（3–5 行短版）              → 沒有就顯示原本的 ctx；有的話完整 ctx 收在下方可展開
-   keyTakeaway {pairs:[{w,cn}], note}  → 沒有就取第一個核心單字 */
-function rwFlowSteps(l){
-  if(Array.isArray(l.scenarioSteps)&&l.scenarioSteps.length)
-    return l.scenarioSteps.slice(0,3).map(x=>({title:String(x.title||'').trim(),desc:String(x.desc||x.description||'').trim()})).filter(x=>x.title);
-  return (Array.isArray(l.steps)?l.steps:[]).filter(Boolean).slice(0,3).map(t=>({title:String(t),desc:''}));
+/* ===== 實景情境：摘要 → 完整情境（選擇性展開）→ 你只要記住 =====
+   圖片上方已有「圖示＋步驟」流程，這裡不再重複一組三步驟。資料驅動、欄位全部選填，舊教材自動備援：
+   ctxShort（3～4 行摘要，負責快速看懂）       → 沒有就直接顯示原本的 ctx
+   ctxDetail [{h,t}]（完整情境，負責補充為什麼／實際情況／語意，小標如「看到什麼／代表什麼／接下來呢？」）
+                                               → 沒有就把原本的 ctx 收進展開區
+   keyTakeaway {pairs:[{w,cn}], note, arrow}   → 沒有就取第一個核心單字 */
+function rwKeyTerms(l){
+  const own=((l.keyTakeaway||{}).pairs||[]).map(p=>p&&p.w).filter(Boolean);
+  if(own.length) return own;
+  const v0=(l.vocab||[])[0]; return v0&&v0.w?[v0.w]:[];
 }
-/* 情境文字裡的重點詞換成輕量 keyword 標籤（每個詞只標第一次），不用整句橘色粗體。
+/* 情境文字只把真正重要的詞（你只要記住的詞）換成輕量標籤，每段每個詞只標一次；
    先換成不含英文字母的佔位符再展開，長詞先處理，短詞才不會被標進長詞的標籤裡 */
 function rwKw(text,l){
-  const terms=[...new Set([].concat((l.vocab||[]).map(v=>v.w),(l.cmp||[]).map(c=>c.w)).filter(t=>t&&/[A-Za-z]{2,}/.test(t)))]
-    .sort((a,b)=>b.length-a.length);
+  const terms=rwKeyTerms(l).filter(t=>/[A-Za-z]{2,}/.test(t)).sort((a,b)=>b.length-a.length);
   let h=esc(rwPad(text)); const keep=[];
   terms.forEach(t=>{
     const re=new RegExp('(^|[^A-Za-z])('+reEsc(esc(t))+')(?![A-Za-z])','i');
@@ -5961,27 +5986,88 @@ function rwKw(text,l){
 function rwKwParas(text,l){
   return String(text||'').split(/\n+/).map(p=>p.trim()).filter(Boolean).map(p=>'<p class="rwctx-p">'+rwKw(p,l)+'</p>').join('');
 }
-function rwFlowHTML(l){
-  const st=rwFlowSteps(l); if(!st.length) return '';
-  return '<ol class="rwflow">'+st.map((x,i)=>'<li class="rwf-step"><span class="rwf-n">'+(i+1)+'</span><div class="rwf-tx"><b>'+esc(rwPad(x.title))+'</b>'
-    +(x.desc?'<span class="rwf-d">'+esc(rwPad(x.desc))+'</span>':'')+'</div></li>'
-    +(i<st.length-1?'<li class="rwf-arr" aria-hidden="true"></li>':'')).join('')+'</ol>';
-}
 function rwContextHTML(l){
   const short=String(l.ctxShort||'').trim();
-  if(short) return '<div class="mr-sec" style="margin-top:0">情境 Context</div>'+rwKwParas(short,l)
-    +(l.ctx?'<details class="rwctx-more"><summary>看完整情境說明</summary>'+rwKwParas(l.ctx,l)+'</details>':'');
-  return l.ctx?'<div class="mr-sec" style="margin-top:0">情境 Context</div>'+rwKwParas(l.ctx,l):'';
+  if(!short) return l.ctx?'<div class="mr-sec" style="margin-top:0">情境 Context</div>'+rwKwParas(l.ctx,l):'';
+  const det=(Array.isArray(l.ctxDetail)?l.ctxDetail:[]).filter(x=>x&&(x.h||x.t));
+  const more=det.length
+    ? det.map(x=>'<div class="rwd">'+(x.h?'<div class="rwd-h">'+esc(x.h)+'</div>':'')+rwKwParas(x.t,l)+'</div>').join('')
+    : (l.ctx?rwKwParas(l.ctx,l):'');
+  return '<div class="mr-sec" style="margin-top:0">情境 Context</div>'+rwKwParas(short,l)
+    +(more?'<div class="rwmore"><button class="rwmore-t" onclick="rwMoreTog(this)" aria-expanded="false">'
+      +'<span class="op">▸ 看完整情境</span><span class="cl">▾ 收起完整情境</span></button>'
+      +'<div class="rwmore-b"><div class="rwmore-i">'+more+'</div></div></div>':'');
 }
+function rwMoreTog(b){ const w=b.closest('.rwmore'); if(!w) return; b.setAttribute('aria-expanded',w.classList.toggle('open')?'true':'false'); }
+window.rwMoreTog=rwMoreTog;
 function rwKeyHTML(l){
   const k=l.keyTakeaway||{}, v0=(l.vocab||[])[0];
   const own=(k.pairs||[]).filter(p=>p&&p.w);
   const pairs=own.length?own:(v0&&v0.w&&v0.cn?[{w:v0.w,cn:v0.cn}]:[]);
   const note=String(k.note||'').trim();
   if(!pairs.length&&!note) return '';
-  return '<div class="rwkey"><div class="rwkey-h">💡 你只要記住</div>'
-    +pairs.map(p=>'<div class="rwkey-p"><span class="kwtag">'+esc(p.w)+'</span> = '+esc(rwPad(p.cn||''))+'</div>').join('')
-    +(note?'<div class="rwkey-n">'+rwKw(note,l)+'</div>':'')+'</div>';
+  const sep='<span class="rwkey-sep" aria-hidden="true">'+(k.arrow?'→':'·')+'</span>';
+  return '<div class="rwkey"><div class="rwkey-row"><span class="rwkey-h">💡 你只要記住</span>'
+    +pairs.map(p=>'<span class="rwkey-p"><span class="kwtag">'+esc(p.w)+'</span> '+esc(rwPad(p.cn||''))+'</span>').join(sep)+'</div>'
+    +(note?'<div class="rwkey-n">'+esc(rwPad(note))+'</div>':'')+'</div>';
+}
+/* ===== 用法比較：快速比較 → 💡 差異怎麼記？ → 其他常見用法 → ⚠️ 小提醒 → 相關說法 =====
+   usageCmp {items:[{term,meaning,context,icon}], tips:[{term,text}], relTitle, rel:[{term,meaning}], relNote, note, terms:[{term,meaning}]}
+   icon 可以直接寫 emoji，或用 RW_UICON 的名稱。沒有 usageCmp 的舊教材維持原本的 usage 文字＋cmp 清單 */
+const RW_UICON={store:'🏪',celebration:'🎉',mobile:'📱',web:'🌐',car:'🚗',bus:'🚌',food:'🍽️',office:'🏢',money:'💰',doc:'📄',hospital:'🏥',plane:'✈️',people:'👥'};
+function rwUsageHTML(l){
+  const u=l.usageCmp;
+  if(u&&(u.items||[]).length){
+    const ic=x=>RW_UICON[x]||x;
+    const list=arr=>'<div class="urel">'+arr.map(x=>'<span class="urel-i"><b>'+esc(x.term)+'</b>'+esc(rwPad(x.meaning||''))+'</span>').join('')+'</div>';
+    let h='<div class="mr-sec">用法比較</div>'
+      +'<div class="ucmp"><div class="ucmp-hd"><span>說法</span><span>意思</span><span>常用情境</span></div>'
+      +u.items.map(x=>'<div class="ucmp-row"><b class="ucmp-t">'+esc(x.term)+'</b><span class="ucmp-m">'+esc(rwPad(x.meaning||''))+'</span>'
+        +'<span class="ucmp-c">'+(x.icon?'<i aria-hidden="true">'+esc(ic(x.icon))+'</i>':'')+esc(rwPad(x.context||''))+'</span></div>').join('')+'</div>';
+    if((u.tips||[]).length) h+='<div class="usub">💡 差異怎麼記？</div><div class="utips">'
+      +u.tips.map(x=>'<div class="utip"><b>'+esc(x.term)+'</b><span>'+esc(rwPad(x.text||''))+'</span></div>').join('')+'</div>';
+    if((u.rel||[]).length) h+='<div class="usub">'+esc(u.relTitle||'其他常見用法')+'</div>'+list(u.rel)
+      +(u.relNote?'<div class="urel-n">'+esc(rwPad(u.relNote))+'</div>':'');
+    if(u.note) h+='<div class="uwarn">⚠️ '+esc(rwPad(u.note))+'</div>';
+    if((u.terms||[]).length) h+='<div class="usub">相關說法</div>'+list(u.terms);
+    return h;
+  }
+  if(!(l.usage||(l.cmp||[]).length)) return '';
+  return '<div class="mr-sec">用法比較</div>'
+     +(l.usage?'<div class="rw-usage">'+rwParas(l.usage)+'</div>':'')
+     +((l.cmp||[]).length
+       ?'<ul class="rw-cmp"'+(l.usage?' style="margin-top:8px;border-top:1px solid var(--line);padding-top:4px"':'')+'>'
+        +l.cmp.map(c=>'<li><b>'+esc(c.w)+'</b>'+esc(rwPad(c.d))+'</li>').join('')+'</ul>'
+       :'');
+}
+/* 用法比較（新版）在編輯表單的文字格式：一行一筆，以前綴分類 */
+const RW_UCMP_KEYS={比較:'items',記法:'tips',延伸:'rel',相關:'terms'};
+function rwUcmpToTxt(u){
+  if(!u) return '';
+  const L=[];
+  (u.items||[]).forEach(x=>L.push('比較：'+[x.term,x.meaning,x.context,x.icon].filter(v=>v!=null).join(' | ')));
+  (u.tips||[]).forEach(x=>L.push('記法：'+x.term+' | '+x.text));
+  if(u.relTitle) L.push('延伸標題：'+u.relTitle);
+  (u.rel||[]).forEach(x=>L.push('延伸：'+x.term+' | '+x.meaning));
+  if(u.relNote) L.push('延伸說明：'+u.relNote);
+  if(u.note) L.push('注意：'+u.note);
+  (u.terms||[]).forEach(x=>L.push('相關：'+x.term+' | '+x.meaning));
+  return L.join('\n');
+}
+function rwUcmpParse(txt){
+  const u={items:[],tips:[],rel:[],terms:[]};
+  String(txt||'').split('\n').map(s=>s.trim()).filter(Boolean).forEach(line=>{
+    const m=/^(比較|記法|延伸標題|延伸說明|延伸|注意|相關)[:：]\s*(.*)$/.exec(line); if(!m) return;
+    const p=m[2].split(/\s*[|｜]\s*/);
+    if(m[1]==='延伸標題') u.relTitle=m[2];
+    else if(m[1]==='延伸說明') u.relNote=m[2];
+    else if(m[1]==='注意') u.note=m[2];
+    else if(m[1]==='比較') u.items.push({term:p[0]||'',meaning:p[1]||'',context:p[2]||'',icon:p[3]||''});
+    else if(m[1]==='記法') u.tips.push({term:p[0]||'',text:p.slice(1).join(' ')});
+    else u[RW_UCMP_KEYS[m[1]]].push({term:p[0]||'',meaning:p.slice(1).join(' ')});
+  });
+  ['items','tips','rel','terms'].forEach(k=>u[k]=u[k].filter(x=>x.term));
+  return u.items.length?u:null;
 }
 /* 實景圖示庫（64×64 線性圖，同每日文章插圖風格）。建教材時用 icons:[a,b,c] 指定三個，
    標籤用 steps:[…]；沒指定就用 分類圖 → 書 → 對話泡泡 */
@@ -6041,18 +6127,18 @@ function rwDetailHTML(l){
   const st=rwStat(l.id);
   /* Header：觀看原影片直接放在標題卡的 bar 裡，不再獨立一個「原始影片」區塊 */
   let h='<div class="magttl"><button class="back" onclick="rwBack()"><span class="back-label">返回實景</span></button>'
-   +'<h2 onclick="bkTtlTog(this)" title="點一下展開／收合完整標題">'+esc(rwPad(l.ti))+'</h2>'
+   +'<h2>'+esc(rwPad(l.ti))+'</h2>'
    +'<div class="mr-time">'+esc([l.country,l.cat,l.level,l.min].filter(Boolean).join(' · '))+'</div>'
    +'<div class="bar">'
    +(l.url?'<a class="spk" style="text-decoration:none" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>':'')
    +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button></div></div>';
   /* 雜誌雙欄（同閱讀頁）：左欄 圖示帶＋情境＋原句＋用法比較＋Speak Up，右欄 Words & Phrases */
   h+='<div class="mag"><div><div class="card">';
-  /* 閱讀順序：插圖 → 三步驟流程 → 情境短文 → 你只要記住 → 原句／延伸例句／用法比較／Speak Up */
-  const flow=rwFlowHTML(l);
-  h+=rwStripSVG(l,!!flow)+flow+rwContextHTML(l)+rwKeyHTML(l);
-  /* 影片實景原句：只放有來源依據的句子（字幕 / 頁面文字 / 使用者提供），絕不由標題自行生成 */
-  h+='<div class="mr-sec">影片實景原句'+((l.quotes||[]).length?'（'+l.quotes.length+'）':'')+'</div>';
+  /* 閱讀順序：情境圖片 → Context 摘要 → 看完整情境（選擇性展開）→ 你只要記住 → 原句（有才顯示）→ 延伸例句 → 用法比較 → Speak Up */
+  h+=rwStripSVG(l)+rwContextHTML(l)+rwKeyHTML(l);
+  /* 影片實景原句：只放有來源依據的句子（字幕 / 頁面文字 / 使用者提供），絕不由標題自行生成。
+     沒有原句時整節不顯示（要補原句用編輯表單的「影片字幕或原句」欄） */
+  if((l.quotes||[]).length||rwQAOn) h+='<div class="mr-sec">影片實景原句'+((l.quotes||[]).length?'（'+l.quotes.length+'）':'')+'</div>';
   if((l.quotes||[]).length){
     h+=l.quotes.map((q,i)=>{
       let s=rwHiAll(q.en,l.vocab);
@@ -6062,9 +6148,6 @@ function rwDetailHTML(l){
        +(q.cn?'<div class="cnx rwq-cn">'+esc(rwPad(q.cn))+'</div>':'')
        +'</div>';
     }).join('');
-  }else{
-    h+='<div class="muted">目前尚未取得影片字幕或原句。</div>'
-     +(rwQAOn?'':'<button class="btn ghost sm" style="margin-top:8px" onclick="rwQATog()">補充影片原句</button>');
   }
   if(rwQAOn)
     h+='<div class="rw-form" style="margin-top:10px">'
@@ -6082,15 +6165,7 @@ function rwDetailHTML(l){
         +'<span class="sent" data-t="'+esc(q.en)+'" onclick="saySent(this)">'+s+'</span> '+spk(q.en)
         +(q.cn?'<div class="cnx rwq-cn">'+esc(rwPad(q.cn))+'</div>':'')+'</div>';
      }).join('');
-  /* 用法比較：實境用法＋比較合併為一個區塊 */
-  if(l.usage||(l.cmp||[]).length){
-    h+='<div class="mr-sec">用法比較</div>'
-     +(l.usage?'<div class="rw-usage">'+rwParas(l.usage)+'</div>':'')
-     +((l.cmp||[]).length
-       ?'<ul class="rw-cmp"'+(l.usage?' style="margin-top:8px;border-top:1px solid var(--line);padding-top:4px"':'')+'>'
-        +l.cmp.map(c=>'<li><b>'+esc(c.w)+'</b>'+esc(rwPad(c.d))+'</li>').join('')+'</ul>'
-       :'');
-  }
+  h+=rwUsageHTML(l);
   if(l.spq){
     let spqH=rwHiAll(l.spq,l.vocab);
     h+='<div class="mr-sec" style="color:#2e7d6f">Speak Up</div>'
@@ -6132,11 +6207,13 @@ function rwFormHTML(){
     : (e.vocab||[]).map(v=>[v.w,v.ipa,v.pos,v.cn,v.ex,v.exCn].join(' | ')).join('\n');
   const cmpTxt = d.cmpTxt!=null ? d.cmpTxt
     : (e.cmp||[]).map(c=>c.w+' | '+c.d).join('\n');
-  const flowTxt = d.flowTxt!=null ? d.flowTxt
-    : (e.scenarioSteps||[]).map(x=>x.title+(x.desc?' | '+x.desc:'')).join('\n');
+  const ctxDetailTxt = d.ctxDetailTxt!=null ? d.ctxDetailTxt
+    : (e.ctxDetail||[]).map(x=>(x.h||'')+' | '+(x.t||'')).join('\n');
   const ek=e.keyTakeaway||{};
+  const kp=(ek.pairs||[]).map(p=>p.w+' = '+p.cn);
   const keyTxt = d.keyTxt!=null ? d.keyTxt
-    : (ek.pairs||[]).map(p=>p.w+' = '+p.cn).concat(ek.note?[ek.note]:[]).join('\n');
+    : (ek.arrow?[kp.join(' → ')]:kp).concat(ek.note?[ek.note]:[]).filter(Boolean).join('\n');
+  const ucmpTxt = d.ucmpTxt!=null ? d.ucmpTxt : rwUcmpToTxt(e.usageCmp);
   const catOpts=RW_CATS.map(c=>'<option value="'+c+'"'+((d.cat||'生活')===c?' selected':'')+'>'+c+'</option>').join('');
   return '<div class="card rw-form">'
    +'<h2 class="sec">'+(rwEditId?'編輯實景教材':'新增實景教材')+'</h2>'
@@ -6163,12 +6240,14 @@ function rwFormHTML(){
    +'<label>延伸例句（選填，一行一句：英文 | 中文；依情境補充的句子，會與影片原句分開標示）</label>'
    +'<textarea id="rwf-exs" placeholder="Cars are not allowed in the bus corridor during rush hour. | 尖峰時段汽車不能開進公車廊道。">'+esc(d.exsTxt!=null?d.exsTxt:(e.exs||[]).map(q=>q.en+' | '+q.cn).join('\n'))+'</textarea>'
    +'<label>情境說明（1–3 段短文字）</label><textarea id="rwf-ctx" placeholder="這支影片的場景是什麼？為什麼這個單字在這裡這樣用？">'+esc(d.ctx||'')+'</textarea>'
-   +'<label>三步驟情境流程（選填，三行：標題 | 說明；有填會取代上面的步驟標籤）</label>'
-   +'<textarea id="rwf-flow" placeholder="看到 SOFT OPENING 海報 | 店門口寫著「SOFT OPENING」">'+esc(flowTxt)+'</textarea>'
-   +'<label>情境短版（選填，3–5 行；有填就先顯示短版，完整說明收在下方可展開）</label>'
+   +'<label>情境摘要（選填，3～4 行，負責「快速看懂」；有填就先顯示摘要，完整情境收在下方可展開）</label>'
    +'<textarea id="rwf-ctxshort" placeholder="10 秒內就能看懂的核心情境">'+esc(d.ctxShort||'')+'</textarea>'
-   +'<label>你只要記住（選填；一行一組「詞 = 中文」，其他行當補充說明）</label>'
-   +'<textarea id="rwf-key" placeholder="soft opening = 試營業">'+esc(keyTxt)+'</textarea>'
+   +'<label>完整情境（選填，一行一段「小標 | 內容」，補充為什麼、實際情況與語意，不要只是摘要的長版）</label>'
+   +'<textarea id="rwf-ctxdetail" placeholder="看到什麼 | …&#10;代表什麼 | …&#10;接下來呢？ | …">'+esc(ctxDetailTxt)+'</textarea>'
+   +'<label>你只要記住（選填；一行一組「詞 = 中文」；有先後關係就寫在同一行用 → 連接，例：A = 甲 → B = 乙；其他行當補充說明）</label>'
+   +'<textarea id="rwf-key" placeholder="soft opening = 試營業 → grand opening = 正式開幕">'+esc(keyTxt)+'</textarea>'
+   +'<label>用法比較（新版，選填；有填就取代下方的實境用法與比較）</label>'
+   +'<textarea id="rwf-ucmp" placeholder="比較：soft opening | 試營業 | 餐廳、飯店、實體店 | 🏪&#10;記法：soft opening | 先小規模營業，測試實際營運&#10;延伸標題：soft 還有哪些常見用法？&#10;延伸：soft copy | 電子檔&#10;延伸說明：…&#10;注意：…&#10;相關：trial period | 試營運">'+esc(ucmpTxt)+'</textarea>'
    +'<label>實境用法（可分行）</label><textarea id="rwf-usage" placeholder="corridor&#10;一般：走廊&#10;交通 / 都市規劃：交通廊道、沿線">'+esc(d.usage||'')+'</textarea>'
    +'<label>比較（選填，一行一組：詞 | 說明）</label><textarea id="rwf-cmp" placeholder="road | 道路本身&#10;route | 路線&#10;corridor | 重要交通廊道 / 沿線">'+esc(cmpTxt)+'</textarea>'
    +'<label>Speak Up 口說問題（選填，英文）</label><input id="rwf-spq" value="'+esc(d.spq||'')+'" placeholder="What does &quot;corridor&quot; mean in this video?">'
@@ -6184,7 +6263,7 @@ function rwCapture(){
     paste:g('rwf-paste'), ti:g('rwf-ti'), tiSrc:g('rwf-tisrc'), url:g('rwf-url'), country:g('rwf-country'),
     cat:g('rwf-cat'), level:g('rwf-lv'), min:g('rwf-min'), point:g('rwf-point'),
     icons:g('rwf-icons').split(/[,，\s]+/).filter(Boolean), steps:g('rwf-steps').split(/[,，|｜]/).map(s=>s.trim()).filter(Boolean),
-    vocabTxt:g('rwf-vocab'), quotesTxt:g('rwf-quotes'), exsTxt:g('rwf-exs'), ctx:g('rwf-ctx'), flowTxt:g('rwf-flow'), ctxShort:g('rwf-ctxshort'), keyTxt:g('rwf-key'), usage:g('rwf-usage'), cmpTxt:g('rwf-cmp'), spq:g('rwf-spq'), spHint:g('rwf-sphint')
+    vocabTxt:g('rwf-vocab'), quotesTxt:g('rwf-quotes'), exsTxt:g('rwf-exs'), ctx:g('rwf-ctx'), ctxShort:g('rwf-ctxshort'), ctxDetailTxt:g('rwf-ctxdetail'), keyTxt:g('rwf-key'), ucmpTxt:g('rwf-ucmp'), usage:g('rwf-usage'), cmpTxt:g('rwf-cmp'), spq:g('rwf-spq'), spHint:g('rwf-sphint')
   });
 }
 function rwParse(){
@@ -6222,13 +6301,16 @@ function rwSave(){
   const exs=(d.exsTxt||'').split('\n').map(s=>s.trim()).filter(Boolean).map(line=>{
     const p=line.split(/\s*[|｜]\s*/); return {en:p[0]||'', cn:p[1]||''};
   }).filter(q=>q.en);
-  const scenarioSteps=(d.flowTxt||'').split('\n').map(x=>x.trim()).filter(Boolean).slice(0,3).map(line=>{
-    const p=line.split(/\s*[|｜]\s*/); return {title:p[0]||'', desc:p.slice(1).join(' ')}; }).filter(x=>x.title);
+  const ctxDetail=(d.ctxDetailTxt||'').split('\n').map(x=>x.trim()).filter(Boolean).map(line=>{
+    const p=line.split(/\s*[|｜]\s*/); return p.length>1?{h:p[0], t:p.slice(1).join(' ')}:{h:'', t:p[0]}; }).filter(x=>x.t);
   const keyLines=(d.keyTxt||'').split('\n').map(x=>x.trim()).filter(Boolean);
   const isPair=x=>/\s=\s|＝/.test(x);
-  const keyPairs=keyLines.filter(isPair).map(x=>{ const p=x.split(/\s*[=＝]\s*/); return {w:p[0]||'', cn:p.slice(1).join(' = ')}; }).filter(p=>p.w);
+  let keyArrow=false;
+  const keyPairs=[].concat(...keyLines.filter(isPair).map(x=>{ const segs=x.split(/\s*→\s*/); if(segs.length>1) keyArrow=true; return segs; }))
+    .map(x=>{ const p=x.split(/\s*[=＝]\s*/); return {w:p[0]||'', cn:p.slice(1).join(' = ')}; }).filter(p=>p.w);
   const keyNote=keyLines.filter(x=>!isPair(x)).join('\n');
-  const keyTakeaway=(keyPairs.length||keyNote)?{pairs:keyPairs, note:keyNote}:null;
+  const keyTakeaway=(keyPairs.length||keyNote)?{pairs:keyPairs, note:keyNote, arrow:keyArrow}:null;
+  const usageCmp=rwUcmpParse(d.ucmpTxt);
   ST.rw=ST.rw||{};
   ST.rw[id]={ id, created:prev.created||Date.now(), t:Date.now(),
     videoType:prev.videoType||'external',
@@ -6239,8 +6321,8 @@ function rwSave(){
     point:(d.point||'').trim(), ctx:(d.ctx||'').trim(), usage:(d.usage||'').trim(),
     cmp, quotes, exs, spq:(d.spq||'').trim(), spHint:(d.spHint||'').trim(), vocab,
     icons:(d.icons||[]).filter(k=>RW_ICON_KEYS.includes(k)).slice(0,3),
-    steps:scenarioSteps.length?scenarioSteps.map(x=>x.title):(d.steps||[]).slice(0,3),
-    scenarioSteps, ctxShort:(d.ctxShort||'').trim(), keyTakeaway };
+    steps:(d.steps||[]).slice(0,3),
+    ctxShort:(d.ctxShort||'').trim(), ctxDetail, keyTakeaway, usageCmp };
   save(); rwShare();
   rwFormOn=false; rwDraft=null; rwEditId=null;
   rwOpen=id; sbAutoCollapse(); RENDER.real(); window.scrollTo(0,0);
