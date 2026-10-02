@@ -2448,25 +2448,35 @@ nav button{font-size:11px}
 .ucmp-m{font-weight:400;color:var(--ink)}
 .ucmp-c{color:var(--ink2);font-size:var(--font-secondary)}
 .ucmp-c i{font-style:normal;margin-right:5px}
-.usub{font-weight:600;font-size:var(--font-secondary);color:var(--ink);margin:16px 0 6px}
-.utips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 18px}
-.utip b{display:block;font-weight:500;color:var(--ink)}
-.utip span{display:block;font-size:var(--font-secondary);font-weight:400;color:var(--ink2);line-height:1.5}
-.urel{display:flex;flex-wrap:wrap;gap:6px 24px}
-.urel-i b{font-weight:500;color:var(--ink);margin-right:8px}
-.urel-i{font-size:var(--font-secondary);font-weight:400;color:var(--ink)}
-.urel-i .u-sup{color:var(--ink2)}
-.urel-n{margin-top:4px;font-size:var(--font-meta);font-weight:400;color:var(--ink2)}
-.uwarn{display:inline-block;margin-top:14px;padding:5px 10px;background:#f7f2ea;border-radius:8px;font-size:var(--font-secondary);font-weight:400;color:var(--ink2);line-height:1.5}
+/* 垂直節奏：表格 → 差異 28px；差異標題 → 三欄 12px；三欄 → 提醒 20px；提醒 → 其他用法 28px；→ 相關說法 24px */
+.usub{font-weight:600;font-size:calc(16px * var(--fs));color:var(--ink);margin:28px 0 12px}
+.utips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 24px}
+.utip-t{display:block;font-weight:600;color:var(--ink);font-size:var(--font-body)}
+.utip-k{display:block;margin-top:2px;font-weight:600;color:var(--ink);font-size:var(--font-secondary)}
+.utip-s{display:block;margin-top:1px;font-size:calc(14px * var(--fs));font-weight:400;color:var(--ink2);line-height:1.5}
+.uwarn{display:inline-block;margin-top:20px;padding:4px 10px;background:#f7f2ea;border-radius:6px;font-size:calc(14px * var(--fs));font-weight:400;color:var(--ink2);line-height:1.5}
+.usub3{font-weight:600;font-size:var(--font-secondary);color:var(--ink);margin:28px 0 8px}
+.urel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 24px}
+.urel-t{display:block;font-weight:600;color:var(--ink);font-size:var(--font-secondary)}
+.urel-m{display:block;font-size:calc(14px * var(--fs));color:var(--ink2);line-height:1.5}
+.urel-m .u-sup{color:var(--ink2)}
+.urel-n{margin-top:6px;font-size:var(--font-meta);font-weight:400;color:#9a8b7a}
+.uterms{margin-top:24px;font-size:calc(14px * var(--fs));color:var(--ink2);line-height:1.6}
+.uterms-h{font-weight:600;color:var(--ink);margin-right:12px}
+.uterms-i b{font-weight:600;color:var(--ink)}
+.uterms-sep{margin:0 8px;color:#c9b8a4}
+/* 實景內頁：步驟膠囊與完整情境小標放大一級（原本 13px 太小） */
+#v-real .artbox .steps .stp{font-size:var(--font-secondary);padding:3px 11px}
+#v-real .rwd-h{font-size:calc(16px * var(--fs));font-weight:700;margin-top:8px}
 @media(max-width:640px){
   .rwkey-row{flex-direction:column;align-items:flex-start;gap:2px}
   .rwkey-sep{display:none}
   .ucmp-hd{display:none}
   .ucmp-row{grid-template-columns:minmax(0,1fr);gap:1px;padding:9px 2px}
   .utips{grid-template-columns:minmax(0,1fr);gap:0}
-  .utip{padding:7px 0;border-bottom:1px solid var(--line)}
+  .utip{padding:8px 0;border-bottom:1px solid var(--line)}
   .utip:last-child{border-bottom:0}
-  .urel{flex-direction:column;gap:4px}
+  .urel{grid-template-columns:minmax(0,1fr);gap:8px}
 }
 /* ===== 課本目錄（雜誌目錄式）：月份分組、最新月展開、其他月收合成一列 ===== */
 #v-book .bk-search{margin-bottom:12px}
@@ -5975,17 +5985,22 @@ function rwUsageHTML(l){
   if(u&&(u.items||[]).length){
     const ic=x=>RW_UICON[x]||x;
     const sup=t=>esc(rwPad(t)).replace(/（[^（）]*）|\([^()]*\)/g,m=>'<span class="u-sup">'+m+'</span>');
-    const list=arr=>'<div class="urel">'+arr.map(x=>'<span class="urel-i"><b>'+esc(x.term)+'</b>'+sup(x.meaning||'')+'</span>').join('')+'</div>';
+    /* 層級只有三層：用法比較（表格）→ 💡 差異怎麼記？（記憶關鍵字）→ 次要資訊（提醒、其他用法、相關說法） */
     let h='<div class="mr-sec u-title">用法比較</div>'
       +'<div class="ucmp"><div class="ucmp-hd"><span>說法</span><span>意思</span><span>常用情境</span></div>'
       +u.items.map(x=>'<div class="ucmp-row"><b class="ucmp-t">'+esc(x.term)+'</b><span class="ucmp-m">'+esc(rwPad(x.meaning||''))+'</span>'
         +'<span class="ucmp-c">'+(x.icon?'<i aria-hidden="true">'+esc(ic(x.icon))+'</i>':'')+esc(rwPad(x.context||''))+'</span></div>').join('')+'</div>';
+    /* tip：key＝要記住的關鍵字（唯一加粗），text＝一行補充（淡色） */
     if((u.tips||[]).length) h+='<div class="usub">💡 差異怎麼記？</div><div class="utips">'
-      +u.tips.map(x=>'<div class="utip"><b>'+esc(x.term)+'</b><span>'+esc(rwPad(x.text||''))+'</span></div>').join('')+'</div>';
-    if((u.rel||[]).length) h+='<div class="usub">'+esc(u.relTitle||'其他常見用法')+'</div>'+list(u.rel)
-      +(u.relNote?'<div class="urel-n">'+esc(rwPad(u.relNote))+'</div>':'');
+      +u.tips.map(x=>'<div class="utip"><span class="utip-t">'+esc(x.term)+'</span>'
+        +(x.key?'<span class="utip-k">'+esc(rwPad(x.key))+'</span>':'')
+        +(x.text?'<span class="utip-s">'+esc(rwPad(x.text))+'</span>':'')+'</div>').join('')+'</div>';
     if(u.note) h+='<div class="uwarn">⚠️ '+esc(rwPad(u.note))+'</div>';
-    if((u.terms||[]).length) h+='<div class="usub">相關說法</div>'+list(u.terms);
+    if((u.rel||[]).length) h+='<div class="usub3">'+esc(u.relTitle||'其他常見用法')+'</div><div class="urel">'
+      +u.rel.map(x=>'<div class="urel-i"><span class="urel-t">'+esc(x.term)+'</span><span class="urel-m">'+sup(x.meaning||'')+'</span></div>').join('')+'</div>'
+      +(u.relNote?'<div class="urel-n">'+esc(rwPad(u.relNote))+'</div>':'');
+    if((u.terms||[]).length) h+='<div class="uterms"><span class="uterms-h">相關說法</span>'
+      +u.terms.map(x=>'<span class="uterms-i"><b>'+esc(x.term)+'</b> '+sup(x.meaning||'')+'</span>').join('<span class="uterms-sep" aria-hidden="true">·</span>')+'</div>';
     return h;
   }
   if(!(l.usage||(l.cmp||[]).length)) return '';
@@ -6002,7 +6017,7 @@ function rwUcmpToTxt(u){
   if(!u) return '';
   const L=[];
   (u.items||[]).forEach(x=>L.push('比較：'+[x.term,x.meaning,x.context,x.icon].filter(v=>v!=null).join(' | ')));
-  (u.tips||[]).forEach(x=>L.push('記法：'+x.term+' | '+x.text));
+  (u.tips||[]).forEach(x=>L.push('記法：'+x.term+' | '+(x.key?x.key+' | ':'')+(x.text||'')));
   if(u.relTitle) L.push('延伸標題：'+u.relTitle);
   (u.rel||[]).forEach(x=>L.push('延伸：'+x.term+' | '+x.meaning));
   if(u.relNote) L.push('延伸說明：'+u.relNote);
@@ -6019,7 +6034,7 @@ function rwUcmpParse(txt){
     else if(m[1]==='延伸說明') u.relNote=m[2];
     else if(m[1]==='注意') u.note=m[2];
     else if(m[1]==='比較') u.items.push({term:p[0]||'',meaning:p[1]||'',context:p[2]||'',icon:p[3]||''});
-    else if(m[1]==='記法') u.tips.push({term:p[0]||'',text:p.slice(1).join(' ')});
+    else if(m[1]==='記法') u.tips.push(p.length>2?{term:p[0]||'',key:p[1]||'',text:p.slice(2).join(' ')}:{term:p[0]||'',text:p[1]||''});
     else u[RW_UCMP_KEYS[m[1]]].push({term:p[0]||'',meaning:p.slice(1).join(' ')});
   });
   ['items','tips','rel','terms'].forEach(k=>u[k]=u[k].filter(x=>x.term));
@@ -6203,7 +6218,7 @@ function rwFormHTML(){
    +'<label>你只要記住（選填；一行一組「詞 = 中文」；有先後關係就寫在同一行用 → 連接，例：A = 甲 → B = 乙；其他行當補充說明）</label>'
    +'<textarea id="rwf-key" placeholder="soft opening = 試營業 → grand opening = 正式開幕">'+esc(keyTxt)+'</textarea>'
    +'<label>用法比較（新版，選填；有填就取代下方的實境用法與比較）</label>'
-   +'<textarea id="rwf-ucmp" placeholder="比較：soft opening | 試營業 | 餐廳、飯店、實體店 | 🏪&#10;記法：soft opening | 先小規模營業，測試實際營運&#10;延伸標題：soft 還有哪些常見用法？&#10;延伸：soft copy | 電子檔&#10;延伸說明：…&#10;注意：…&#10;相關：trial period | 試營運">'+esc(ucmpTxt)+'</textarea>'
+   +'<textarea id="rwf-ucmp" placeholder="比較：soft opening | 試營業 | 餐廳、飯店、實體店 | 🏪&#10;記法：soft opening | 先小規模開 | 測試實際營運&#10;延伸標題：soft 還有哪些常見用法？&#10;延伸：soft copy | 電子檔&#10;延伸說明：…&#10;注意：…&#10;相關：trial period | 試營運">'+esc(ucmpTxt)+'</textarea>'
    +'<label>實境用法（可分行）</label><textarea id="rwf-usage" placeholder="corridor&#10;一般：走廊&#10;交通 / 都市規劃：交通廊道、沿線">'+esc(d.usage||'')+'</textarea>'
    +'<label>比較（選填，一行一組：詞 | 說明）</label><textarea id="rwf-cmp" placeholder="road | 道路本身&#10;route | 路線&#10;corridor | 重要交通廊道 / 沿線">'+esc(cmpTxt)+'</textarea>'
    +'<label>Speak Up 口說問題（選填，英文）</label><input id="rwf-spq" value="'+esc(d.spq||'')+'" placeholder="What does &quot;corridor&quot; mean in this video?">'
