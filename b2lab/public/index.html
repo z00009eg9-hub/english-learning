@@ -2328,11 +2328,59 @@ body.vd-lock{overflow:hidden}
 #moresheet .ms-grid button.on{border-color:var(--accent);background:var(--accent-soft)}
 #moresheet .ms-grid button.on b{color:var(--accent2)}
 nav button{font-size:11px}
+/* ===== 手機總導覽模式（≤640px）=====================================================
+   進站先到總導覽頁（大卡片選分區）；分區內不放底部 nav，header 只留「← 首頁＋分區名」一行，
+   畫面高度全部留給內容。平板與電腦（≥641px）完全不受影響。                              */
+.hd-mback,.hd-mtitle{display:none}
+.hm-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:2px 2px 14px}
+.hm-hi{font-size:calc(22px * var(--fs));font-weight:800;color:var(--ink);line-height:1.25}
+.hm-date{font-size:var(--font-meta);color:var(--ink2);margin-top:2px}
+.hm-streak{background:var(--accent-soft);color:var(--accent2);border:1px solid #f0c9a0;border-radius:999px;padding:5px 12px;font-weight:800;white-space:nowrap}
+.hm-card{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left;width:100%;min-height:96px;
+  padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:0 1px 4px rgba(60,45,30,.06);
+  font:inherit;color:var(--ink);cursor:pointer;transition:transform .12s,background .12s}
+.hm-card i{font-style:normal;font-size:26px;line-height:1}
+.hm-card b{font-size:calc(17px * var(--fs));font-weight:800;margin-top:6px;line-height:1.2}
+.hm-card span{font-size:var(--font-meta);color:var(--ink2);line-height:1.35}
+.hm-card:active{transform:scale(.98);background:var(--accent-soft)}
+.hm-today{flex-direction:row;align-items:center;gap:12px;min-height:72px;margin-bottom:10px;padding:16px 18px;border:0;
+  background:linear-gradient(135deg,#f0964f,#d9691f);color:#fff;box-shadow:0 4px 14px rgba(200,100,30,.25)}
+.hm-today b{margin:0;font-size:calc(20px * var(--fs))}
+.hm-today span{color:rgba(255,255,255,.92);margin-left:auto;text-align:right}
+.hm-today:active{background:linear-gradient(135deg,#e8873f,#c95f17)}
+.hm-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hm-set{margin-top:18px;padding:12px 14px;border:1px solid var(--line);border-radius:16px;background:var(--card);display:flex;flex-direction:column;gap:10px}
+.hm-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.hm-lb{font-size:var(--font-meta);color:var(--ink2);min-width:3.6em;font-weight:700}
+.hm-chip{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:7px 13px;min-height:38px;
+  font:inherit;font-size:var(--font-meta);font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+.hm-chip.on{background:var(--accent-soft);border-color:#f0c9a0;color:var(--accent2)}
+@media(max-width:640px){
+  nav,#moresheet{display:none !important}
+  /* 原本為底部 nav 預留的空間與「浮在 nav 上方」的定位，nav 拿掉後一起歸零 */
+  body{padding-bottom:env(safe-area-inset-bottom)}
+  main{padding-bottom:calc(20px + env(safe-area-inset-bottom))}
+  .gloss{bottom:calc(12px + env(safe-area-inset-bottom))}
+  .grade,.flipbar{bottom:env(safe-area-inset-bottom)}
+  .toast{bottom:calc(24px + env(safe-area-inset-bottom))}
+  /* header：導覽頁整條隱藏（導覽頁自己有問候列）；分區內只剩一行返回列 */
+  body[data-tab="home"] header{display:none}
+  header{flex-wrap:nowrap}
+  header > *{display:none !important}
+  header > .hd-mback,header > .hd-mtitle{display:inline-flex !important;align-items:center}
+  .hd-mback{border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.18);color:#fff;border-radius:999px;
+    padding:6px 14px;min-height:38px;font:inherit;font-size:15px;font-weight:800;cursor:pointer;white-space:nowrap}
+  .hd-mback:active{background:rgba(255,255,255,.32)}
+  .hd-mtitle{color:#fff;font-size:17px;font-weight:800;margin-left:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
 </style>
 </head>
-<body>
+<body data-tab="home">
 
 <header>
+  <!-- 手機（≤640px）專用：分區內只留一行「← 首頁＋分區名」，其餘 header 項目收到總導覽頁 -->
+  <button class="hd-mback" id="hd-mback" onclick="event.stopPropagation();goHome()" aria-label="回總導覽">← 首頁</button>
+  <span class="hd-mtitle" id="hd-mtitle"></span>
   <button class="brand" onclick="toTop()" title="回到頁面頂端" style="margin-right:0">
     <h1>📚 B2 Read</h1>
   </button>
@@ -2368,6 +2416,7 @@ nav button{font-size:11px}
 </aside>
 
 <main>
+  <section id="v-home" hidden></section>
   <section id="v-daily"></section>
   <section id="v-read" hidden></section>
   <section id="v-book" hidden></section>
@@ -2949,10 +2998,19 @@ const RENDER={};
 /* 底部導覽把「單字卡＋文法」收攏成一顆「練習」：記住上次停留的子分頁，下次點練習直接回到那頁 */
 /* 文法在 2026-08-24 依使用者要求恢復為獨立分頁；「練習」改名「單字卡」只放單字複習 */
 const NAVMAP={vocab:'prac'};
+/* 手機（≤640px）總導覽模式：進站先到導覽頁，分區內沒有底部 nav，返回靠「← 首頁」或手機返回手勢 */
+const isMobileNav=()=>window.matchMedia('(max-width:640px)').matches;
+const TAB_NAME={home:'B2 Read',daily:'今日',book:'課本',read:'閱讀',gram:'文法',listen:'聽力',real:'實景',vocab:'單字卡',prog:'進度'};
+let NAV_POP=false;
 function go(t,visualTab){
+  const prev=TAB;
   TAB=t;
+  document.body.dataset.tab=t;
+  const mt=$('hd-mtitle'); if(mt) mt.textContent=TAB_NAME[t]||'';
+  /* 從導覽頁進分區時記一筆 history，手機返回手勢才會回導覽頁而不是直接離開網站 */
+  if(isMobileNav() && !NAV_POP && t!=='home' && prev==='home'){ try{ history.pushState({b2:'sec'},''); }catch(e){} }
   const vt=NAVMAP[visualTab||t]||visualTab||t;
-  ['daily','read','book','listen','real','vocab','gram','prog'].forEach(k=>{ $('v-'+k).hidden = (k!==t); });
+  ['home','daily','read','book','listen','real','vocab','gram','prog'].forEach(k=>{ $('v-'+k).hidden = (k!==t); });
   ['daily','read','book','listen','real','prac','gram','prog'].forEach(k=>{
     const b=$('t-'+k); if(b) b.classList.toggle('on', k===vt);
     const sb=$('sb-'+k); if(sb) sb.classList.toggle('on', k===vt);
@@ -2960,6 +3018,7 @@ function go(t,visualTab){
   });
   /* 手機底部的「更多」：目前分頁收在它裡面時，它亮起 */
   const mo=$('t-more'); if(mo) mo.classList.toggle('on', ['listen','real','prac','prog'].includes(vt));
+  if(t!=='book') bkSkipLast=false;
   if(t!=='listen') destroyPlayer();
   if(t!=='listen'&&typeof recFinish==='function') recFinish();   // 換分頁就停止錄音、釋放麥克風
   hideGloss();
@@ -2974,6 +3033,67 @@ function moreTog(on){ const m=$('moresheet'), b=$('t-more'); if(!m) return;
   const show=on===undefined?m.hidden:!!on; m.hidden=!show; if(b) b.setAttribute('aria-expanded',show?'true':'false'); document.body.classList.toggle('ms-open',show); }
 function moreGo(t){ moreTog(false); go(t); }
 window.moreTog=moreTog; window.moreGo=moreGo;
+
+/* ---------- 手機總導覽頁 ---------- */
+const HOME_CARDS=[
+  {t:'book',  i:'📕', n:'課本',   d:'課堂筆記＋影片版'},
+  {t:'read',  i:'📖', n:'閱讀',   d:'分級文章'},
+  {t:'gram',  i:'📐', n:'文法',   d:'句型圖解'},
+  {t:'listen',i:'🎧', n:'聽力',   d:'影片＋逐字稿跟讀'},
+  {t:'real',  i:'🎬', n:'實景',   d:'真實語速影片'},
+  {t:'vocab', i:'🎯', n:'單字卡', d:'間隔複習與收藏字'},
+  {t:'audit', i:'🏭', n:'稽核英文', d:'工廠稽核實戰'},
+  {t:'prog',  i:'📊', n:'進度',   d:'打卡、統計與設定'}
+];
+RENDER.home=function(){
+  const v=$('v-home'); if(!v) return;
+  const d=new Date(), wd='日一二三四五六'[d.getDay()];
+  const nm={anita:'Anita',tom:'Tom'}[PROFILE]||'';
+  /* 課數用跟課本搜尋同一套比對，卡片上的數字＝點進去看到的結果數 */
+  const auN=(typeof BOOK_LESSONS!=='undefined'?BOOK_LESSONS:[]).filter(b=>bkWhere(b,'稽核英文').length).length;
+  const card=c=>'<button class="hm-card" onclick="homeGo(\''+c.t+'\')"><i>'+c.i+'</i><b>'+c.n+'</b><span>'
+    +(c.t==='audit'&&auN?c.d+'｜'+auN+' 課':c.d)+'</span></button>';
+  v.innerHTML=
+    '<div class="hm-top"><div><div class="hm-hi">Hi, '+esc(nm)+' 👋</div><div class="hm-date">'+(d.getMonth()+1)+' 月 '+d.getDate()+' 日・週'+wd+'</div></div>'
+    +'<span class="hm-streak">🔥 '+(ST.streak||1)+' 天</span></div>'
+    +'<button class="hm-card hm-today" onclick="homeGo(\'daily\')"><i>☀️</i><b>今日</b><span>今天的新內容與複習</span></button>'
+    +'<div class="hm-grid">'+HOME_CARDS.map(card).join('')+'</div>'
+    /* 原本擠在橘色 header 的次要功能，手機改收在這裡 */
+    +'<div class="hm-set">'
+    +'<div class="hm-row"><span class="hm-lb">學習者</span>'
+    +['anita','tom'].map(p=>'<button class="hm-chip'+(PROFILE===p?' on':'')+'" onclick="setProfile(\''+p+'\')">'+(p==='anita'?'🍎 Anita':'🐻 Tom')+'</button>').join('')+'</div>'
+    +'<div class="hm-row"><span class="hm-lb">程度</span>'
+    +band().map(l=>'<button class="hm-chip lv '+lvCls(l)+'" onclick="hdLv(\''+l+'\')">'+l+'</button>').join('')+'</div>'
+    +'<div class="hm-row"><span class="hm-lb">中譯</span><button class="hm-chip'+(CNALL?' on':'')+'" onclick="togGlobalCn();RENDER.home()">'+(CNALL?'🈶 全部顯示':'🈶 點開才顯示')+'</button></div>'
+    +'<div class="hm-row"><a class="hm-chip" href="https://learning-english-notes.web.app">🍎🐻 Speak Up ↗</a><a class="hm-chip" href="https://rexon-qa-english.web.app/">🔤 題庫 ↗</a></div>'
+    +'</div>';
+};
+/* 「← 首頁」：若目前這筆 history 是進分區時推入的，就用 history.back() 把它消掉，
+   否則來回幾次後，在導覽頁按返回要按好幾下才離得開網站 */
+let HOME_REQ=false;
+function goHome(){
+  if(isMobileNav() && history.state && history.state.b2==='sec'){ HOME_REQ=true; history.back(); return; }
+  go('home');
+}
+/* 稽核英文目前放在課本裡：開課本並直接列出搜尋結果，跳過「自動打開上一課」一次（不刪除上一課的記憶） */
+let bkSkipLast=false;
+function homeGo(t){
+  if(t==='audit'){ bkOpen=null; bkRevYM=null; bkQuery='稽核英文'; bkSkipLast=true; go('book'); return; }
+  go(t);
+}
+window.goHome=goHome; window.homeGo=homeGo;
+/* 手機返回手勢：先關影片／課文，再回導覽頁；在導覽頁按返回才離開網站 */
+window.addEventListener('popstate',()=>{
+  if(!isMobileNav()) return;
+  if(HOME_REQ){ HOME_REQ=false; NAV_POP=true; go('home'); NAV_POP=false; return; }   /* 按鈕要求回首頁：不先關課文，直接回 */
+  const keep=()=>{ try{ history.pushState({b2:'sec'},''); }catch(e){} };
+  if($('vd') && typeof vdClose==='function'){ vdClose(); keep(); return; }
+  if(TAB==='book' && (bkOpen||bkRevYM)){ bkClose(); keep(); return; }
+  if(TAB!=='home'){ NAV_POP=true; go('home'); NAV_POP=false; }
+});
+/* 手機轉成寬螢幕（旋轉、分割畫面）時導覽頁沒有意義，回到今日 */
+/* 用 resize 而不是 matchMedia 的 change 事件：後者在部分瀏覽器／模擬器不會觸發 */
+window.addEventListener('resize',()=>{ if(TAB==='home' && !isMobileNav()) go('daily'); });
 function updateStreak(){
   const s=ST.streak||1;
   const hs=$('hd-streak'); if(hs) hs.textContent='🔥 '+s+' 天';
@@ -5025,7 +5145,8 @@ RENDER.book=function(){
   const v=$('v-book');
   /* 每月智慧複習頁優先於「記住上次讀到哪一課」，不然按了複習會被彈回課文 */
   if(bkRevYM){ v.classList.add('bkopen'); v.innerHTML=mrPageHTML(bkRevYM); return; }
-  if(!bkOpen){
+  /* 從導覽頁「稽核英文」進來：停留在搜尋結果，直到打開某一課或離開課本（背景同步重繪也不會跳走） */
+  if(!bkOpen && !bkSkipLast){
     try{ const last=localStorage.getItem('b2lab_bkLast_'+PROFILE);
       if(last){ const found=BOOK_LESSONS.find(x=>x.id===last); if(found){ bkOpen=found; sbAutoCollapse(); } }
     }catch(e){}
@@ -6108,7 +6229,7 @@ function bkSearch(q){
   res.innerHTML='<div class="muted" style="margin:2px 0 8px">「'+esc(bkQuery.trim())+'」出現在 '+hits.length+' 課</div>'
     + hits.map(x=>bkItem(x.b,'<div class="meta" style="margin-top:4px"><span>🔍 出現在：'+x.where.map(esc).join('、')+'</span></div>')).join('');
 }
-function bkGo(id,sec){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; bkRevYM=null; sbAutoCollapse();
+function bkGo(id,sec){ bkSkipLast=false; bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; bkRevYM=null; sbAutoCollapse();
   try{ if(bkOpen) localStorage.setItem('b2lab_bkLast_'+PROFILE, bkOpen.id); }catch(e){}
   /* 開過課＝讀過（每月智慧複習用來分辨「未閱讀 / 已開始」；只記時間戳，不動原本完成狀態） */
   if(bkOpen){ if(!ST.bkSeen) ST.bkSeen={}; ST.bkSeen[bkOpen.id]=Date.now(); save(); }
@@ -7496,7 +7617,15 @@ const RESUME=(()=>{
   }catch(e){ return null; }
 })();
 const resumeScroll=()=>{ if(RESUME && !RESUME.done && TAB==='book' && bkOpen){ RESUME.done=true; window.scrollTo(0,RESUME.y||0); } };
-if(RESUME){ go(RESUME.tab); requestAnimationFrame(resumeScroll); } else RENDER.daily();
+if(isMobileNav()){
+  /* 手機：進站一律先到總導覽頁；30 分鐘內切 app 回來才還原原本的分區（導覽頁墊在 history 底下） */
+  try{ history.replaceState({b2:'home'},''); }catch(e){}
+  go('home');
+  if(RESUME && RESUME.tab!=='home'){ go(RESUME.tab); requestAnimationFrame(resumeScroll); }
+} else {
+  document.body.dataset.tab=TAB;
+  if(RESUME && RESUME.tab!=='home'){ go(RESUME.tab); requestAnimationFrame(resumeScroll); } else RENDER.daily();
+}
 cloudPull(()=>{ touchStreak(); updateStreak(); RENDER[TAB] && RENDER[TAB](); resumeScroll(); cloudSubscribe(); vidSubscribe(); rwShare(); });
 
 /* ============================================================
@@ -7885,7 +8014,7 @@ function vdOpen(id){
     document.body.classList.add('vd-lock');
     document.addEventListener('keydown',vdKey);
     /* 網址列換成可分享的影片網址，關閉時還原 */
-    try{ VD.prevUrl=location.href; const u=new URL(location.href); u.searchParams.delete('lesson'); u.searchParams.delete('w'); u.searchParams.set('video',id); history.replaceState(null,'',u.toString()); }catch(e){}
+    try{ VD.prevUrl=location.href; const u=new URL(location.href); u.searchParams.delete('lesson'); u.searchParams.delete('w'); u.searchParams.set('video',id); history.replaceState(history.state,'',u.toString()); }catch(e){}
   });
 }
 /* 實測標題列與控制列高度寫進 CSS 變數（不同縮放比例、字型下常數會猜錯，播放鍵就被切掉；2026-09-27） */
@@ -7901,7 +8030,7 @@ function vdClose(){
   const el=$('vd'); if(el) el.remove();
   document.body.classList.remove('vd-lock');
   document.removeEventListener('keydown',vdKey);
-  try{ const u=new URL(location.href); u.searchParams.delete('video'); history.replaceState(null,'',u.toString()); }catch(e){}
+  try{ const u=new URL(location.href); u.searchParams.delete('video'); history.replaceState(history.state,'',u.toString()); }catch(e){}
 }
 Object.assign(window,{vdOpen,vdClose,vdToggle,vdPane,vdGo,vdStep,vdReplay,vdLoopTog,vdShadowTog,vdRateTog,vdMode,vdModeNext,vdSeek,vdPause,vdFollow,vdMoreTog,vdSetTog,VD});
 
