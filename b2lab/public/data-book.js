@@ -19544,6 +19544,7 @@ window.BOOK = {
     /* ---- bk20261001 Quality Inspection Before Shipment ---- */
     {
       "id": "bk20261001",
+      "video": true,
       "icon": "🔍",
       "date": "2026-10-01",
       "doc": "https://docs.google.com/document/d/1LooJzV4A91Php4xMeKUsqDC4PnhkdbP7rSvAeNqaFAg/edit",

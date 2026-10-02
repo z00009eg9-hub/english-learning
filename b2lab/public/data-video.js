@@ -29077,3 +29077,1119 @@ window.VIDEO.au02 = {
   }
  ]
 };
+
+window.VIDEO.bk20261001 = {
+ "title": "Quality Inspection Before Shipment",
+ "titleCn": "出貨前品質檢驗",
+ "date": "2026-10-01",
+ "level": "B1+",
+ "scene": "Final Inspection Before Shipment",
+ "sceneCn": "出貨前最終檢驗",
+ "sceneArt": "sealedBox",
+ "titleArt": [
+  "check",
+  "box",
+  "calendar"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・品保檢驗員",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・產線主管",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "Final Inspection",
+   "cn": "情境：出貨前最終檢驗"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Phrases & Collocations",
+   "cn": "片語搭配"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "approaching": {
+   "t": "the shipment date is approaching",
+   "cn": "出貨日期快到了",
+   "tag": [
+    "approach 動詞①",
+    "作業第 5 題"
+   ],
+   "note": "approach 當動詞是「接近」：描述截止日期或出貨日期快到了，was approaching 比 was coming 更專業。",
+   "ex": "The car is approaching the building.",
+   "exCn": "汽車正在接近大樓。"
+  },
+  "inspect": {
+   "t": "visually inspect",
+   "cn": "目視檢查",
+   "tag": [
+    "品管",
+    "作業第 3 題"
+   ],
+   "note": "visually inspect = 目視檢查，是品管常用的動詞搭配。",
+   "ex": "We visually inspected the returned unit and found a scratch on the frame.",
+   "exCn": "我們目視檢查了退回的機台，發現框架上有一道刮痕。"
+  },
+  "exterior": {
+   "t": "exterior",
+   "cn": "外部；外部的",
+   "tag": [
+    "名詞 / 形容詞"
+   ],
+   "note": "名詞：the exterior of + 名詞（……的外部）；形容詞：exterior + 名詞（外部的……）。",
+   "ex": "The exterior wall needs to be repaired.",
+   "exCn": "外牆需要維修。"
+  },
+  "maybe": {
+   "t": "maybe",
+   "cn": "也許（副詞）",
+   "tag": [
+    "放句首",
+    "vs may"
+   ],
+   "note": "maybe 是副詞，放在句首修飾整個句子；may 是助動詞，後面接動詞原形，兩者不可互換。",
+   "ex": "Maybe he is busy.",
+   "exCn": "也許他很忙。"
+  },
+  "may": {
+   "t": "may + 動詞原形",
+   "cn": "可能（助動詞）",
+   "tag": [
+    "助動詞",
+    "vs maybe"
+   ],
+   "note": "may 是助動詞（modal verb），意思是「可能」，後面直接接動詞原形。",
+   "ex": "It may rain tomorrow.",
+   "exCn": "明天可能會下雨。"
+  },
+  "separate": {
+   "t": "separate",
+   "cn": "分離、分開",
+   "tag": [
+    "動詞",
+    "+ from"
+   ],
+   "note": "separate A from B ＝ 把 A 和 B 分開；也可以不接受詞：The connector separated from the cable.（自己分離了）。",
+   "ex": "The connector separated from the cable while disassembling.",
+   "exCn": "連接器在拆卸時從電纜分離。"
+  },
+  "detached": {
+   "t": "become detached from",
+   "cn": "從……脫離",
+   "tag": [
+    "較正式",
+    "三種說法"
+   ],
+   "note": "become detached from（正式，品管報告常用）= come off（口語）= separate from（中性）。",
+   "ex": "The connector came off the cable during disassembly.",
+   "exCn": "拆卸時，接頭從線材上掉了下來／脫落了。"
+  },
+  "broken": {
+   "t": "was broken",
+   "cn": "被弄壞了（被動）",
+   "tag": [
+    "被動語態",
+    "作業第 2 題"
+   ],
+   "note": "被動語態一定是 was/were + 過去分詞（broken）；broke 是過去式，不能放在 was 後面。下面例句的 broke 是主動（線材自己斷了）。",
+   "ex": "The cable was pulled and broke during disassembly.",
+   "exCn": "拆卸過程中，線材因拉扯而斷裂。"
+  },
+  "practical": {
+   "t": "a practical approach",
+   "cn": "實際可行的方法",
+   "tag": [
+    "practical + 名詞",
+    "approach 名詞"
+   ],
+   "note": "approach 當名詞是「方法」，常見搭配 a practical / different / new approach to + 名詞（介系詞用 to）。",
+   "ex": "We need to find a practical solution to this quality issue.",
+   "exCn": "我們需要為這個品質問題找到一個實際可行的解決方案。"
+  },
+  "approachperson": {
+   "t": "approach + 人",
+   "cn": "找某人談、接洽某人",
+   "tag": [
+    "approach 動詞②",
+    "職場常用"
+   ],
+   "note": "approach + 人 = 找某人談、接洽某人；談的內容用 about：approach someone about something。",
+   "ex": "I approached the operator about the quality issue.",
+   "exCn": "我去找操作員談品質問題。"
+  },
+  "replace": {
+   "t": "replace",
+   "cn": "更換、取代",
+   "tag": [
+    "vs change",
+    "作業第 1 題"
+   ],
+   "note": "replace 是「替換」（拿掉舊的、換一個新的），用於實體物品；change 偏向「改變」狀態或性質。",
+   "ex": "We may need to replace it.",
+   "exCn": "我們可能需要更換它。"
+  },
+  "report": {
+   "t": "received a report about",
+   "cn": "收到……的報告",
+   "tag": [
+    "搭配",
+    "作業第 4 題"
+   ],
+   "note": "received the quality issue 搭配不自然，道地說法是 received a report about the quality issue。",
+   "ex": "Our manager received a report about a late delivery this morning.",
+   "exCn": "我們經理今天早上收到一份延遲交貨的報告。"
+  },
+  "teamwas": {
+   "t": "our team was",
+   "cn": "我們的團隊（單數）",
+   "tag": [
+    "集合名詞",
+    "作業第 5 題"
+   ],
+   "note": "美式英文 team 是集合名詞，通常視為單數，搭配 was；英式英文可接受 team were。",
+   "ex": "Our team was under a lot of stress because the shipment date was approaching.",
+   "exCn": "我們的團隊壓力很大，因為出貨日期快到了。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today we follow a final quality inspection right before shipment.",
+   "cn": "歡迎回來。今天我們跟著出貨前的最終品質檢驗走一趟。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Listen for may and maybe, three ways to use approach, and how to describe a part coming off.",
+   "cn": "注意聽 may 和 maybe、approach 的三種用法，以及零件「脫離」的說法。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "tightDeadline"
+   },
+   "en": "Anita, the shipment date is approaching. Are we still on track for Friday?",
+   "cn": "Anita，出貨日期快到了。我們星期五還趕得上嗎？",
+   "hi": [
+    {
+     "t": "the shipment date is approaching",
+     "cn": "出貨日期快到了",
+     "k": "approaching",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "ebike"
+   },
+   "en": "Almost. We visually inspected a returned unit this morning, and there's a problem.",
+   "cn": "差不多。我們今天早上目視檢查了一台退回的機台，有個問題。",
+   "hi": [
+    {
+     "t": "visually inspected",
+     "cn": "目視檢查",
+     "k": "inspect",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "scratch"
+   },
+   "en": "What kind of problem?",
+   "cn": "什麼樣的問題？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "bikeFrame"
+   },
+   "en": "There's a scratch on the exterior of the frame, right next to the pedal.",
+   "cn": "車架外部有一道刮痕，就在踏板旁邊。",
+   "hi": [
+    {
+     "t": "exterior",
+     "cn": "外部",
+     "k": "exterior",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "scratch"
+   },
+   "en": "Maybe we can just touch it up and ship it?",
+   "cn": "也許我們補個漆就出貨？",
+   "hi": [
+    {
+     "t": "Maybe",
+     "cn": "也許",
+     "k": "maybe",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "warning"
+   },
+   "en": "It may look bad to the customer. I asked the operator to separate the defective part.",
+   "cn": "客戶看了可能觀感不好。我已經請操作員把有缺陷的零件分開了。",
+   "hi": [
+    {
+     "t": "may look",
+     "cn": "可能看起來",
+     "k": "may",
+     "c": 4
+    },
+    {
+     "t": "separate the defective part",
+     "cn": "把不良零件分開",
+     "k": "separate",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "Good call. Anything else?",
+   "cn": "做得好。還有別的嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "cableTie"
+   },
+   "en": "Yeah. During disassembly, the connector became detached from the cable.",
+   "cn": "有。拆卸的時候，接頭從線材上脫離了。",
+   "hi": [
+    {
+     "t": "became detached from",
+     "cn": "從……脫離",
+     "k": "detached",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "cableTie"
+   },
+   "en": "Did someone pull on it too hard?",
+   "cn": "是有人拉得太用力嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "cableTie"
+   },
+   "en": "Pretty much. The operator forgot to remove the cable first, so the cable was broken.",
+   "cn": "差不多。操作員忘了先把線拔掉，所以線被弄壞了。",
+   "hi": [
+    {
+     "t": "was broken",
+     "cn": "被弄壞了",
+     "k": "broken",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "tools"
+   },
+   "en": "So should we just swap the connector and move on?",
+   "cn": "那我們是不是換個接頭就繼續？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "check"
+   },
+   "en": "I'd take a practical approach and check the whole unit first, in case there's another problem.",
+   "cn": "我會用比較務實的做法，先把整台檢查一遍，以防還有其他問題。",
+   "hi": [
+    {
+     "t": "practical approach",
+     "cn": "務實的做法",
+     "k": "practical",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "talk"
+   },
+   "en": "Makes sense. I'll approach the line leader about the cable issue.",
+   "cn": "有道理。我去找線長談線材的問題。",
+   "hi": [
+    {
+     "t": "approach the line leader",
+     "cn": "去找線長談",
+     "k": "approachperson",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "damagedBox"
+   },
+   "en": "Thanks. Oh, and one cardboard box was damp, so we need to replace it before shipping.",
+   "cn": "謝謝。對了，有一個紙箱受潮了，所以出貨前要換掉。",
+   "hi": [
+    {
+     "t": "replace it",
+     "cn": "更換它",
+     "k": "replace",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "dehumidifierTank"
+   },
+   "en": "Good catch. I just received a report about the humidity in the warehouse.",
+   "cn": "抓得好。我剛好收到一份倉庫濕度的報告。",
+   "hi": [
+    {
+     "t": "received a report about",
+     "cn": "收到……的報告",
+     "k": "report",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "people"
+   },
+   "en": "Honestly, our team was pretty stressed this week, but we'll be ready by Friday.",
+   "cn": "說真的，我們團隊這週壓力滿大的，不過星期五前會準備好。",
+   "hi": [
+    {
+     "t": "our team was",
+     "cn": "我們團隊（單數 was）",
+     "k": "teamwas",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "box"
+   },
+   "en": "Great work, Anita. Let's ship it on Friday.",
+   "cn": "做得好，Anita。我們星期五出貨。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "approach",
+    "ipa": "/əˈproʊtʃ/",
+    "pos": "v. / n.",
+    "art": "calendar",
+    "def": "As a verb: to come closer, or to go and talk to someone. As a noun: a way of dealing with something.",
+    "cn": "動詞：接近；找某人談。名詞：方法。",
+    "note": "A practical approach to a problem — the preposition is to."
+   },
+   "en": "Approach has three uses: the date is approaching, approach your manager, and a practical approach.",
+   "cn": "approach 有三種用法：日期快到了、找主管談、務實的方法。",
+   "hi": [
+    {
+     "t": "a practical approach",
+     "cn": "務實的方法",
+     "k": "practical",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "may",
+     "ipa": "/meɪ/",
+     "cn": "可能（助動詞）",
+     "def": "Modal verb: comes right before a verb.",
+     "art": "calendar"
+    },
+    "b": {
+     "w": "maybe",
+     "ipa": "/ˈmeɪ.bi/",
+     "cn": "也許（副詞）",
+     "def": "Adverb: starts a full sentence.",
+     "art": "talk"
+    }
+   },
+   "en": "She may be late. Maybe she is late. Same meaning, different structure.",
+   "cn": "她可能會遲到。也許她會遲到。意思相同，結構不同。",
+   "hi": [
+    {
+     "t": "may be late",
+     "cn": "可能會遲到",
+     "k": "may",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "exterior (n.)",
+     "ipa": "/ɪkˈstɪr.i.ɚ/",
+     "cn": "外部（名詞）",
+     "def": "Noun: the exterior of something.",
+     "art": "bikeFrame"
+    },
+    "b": {
+     "w": "exterior (adj.)",
+     "ipa": "/ɪkˈstɪr.i.ɚ/",
+     "cn": "外部的（形容詞）",
+     "def": "Adjective: an exterior surface.",
+     "art": "scratch"
+    }
+   },
+   "en": "The exterior of the frame, or the exterior surface. Exterior can be a noun or an adjective.",
+   "cn": "車架的外部，或外部表面。exterior 可以當名詞，也可以當形容詞。",
+   "hi": [
+    {
+     "t": "exterior",
+     "cn": "外部",
+     "k": "exterior",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "replace",
+     "ipa": "/rɪˈpleɪs/",
+     "cn": "更換（換一個新的）",
+     "def": "To take something away and put a new one in its place.",
+     "art": "damagedBox"
+    },
+    "b": {
+     "w": "change",
+     "ipa": "/tʃeɪndʒ/",
+     "cn": "改變（狀態、性質）",
+     "def": "To make something different.",
+     "art": "tools"
+    }
+   },
+   "en": "Replace the damp box with a new one. Change is for making something different.",
+   "cn": "把受潮的箱子換成新的；change 是指改變狀態。",
+   "hi": [
+    {
+     "t": "Replace",
+     "cn": "更換",
+     "k": "replace",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "practical",
+    "coreCn": "實際的＋名詞",
+    "art": "check",
+    "items": [
+     {
+      "t": "approach",
+      "cn": "務實的做法"
+     },
+     {
+      "t": "solution",
+      "cn": "可行的解決方案"
+     },
+     {
+      "t": "experience",
+      "cn": "實務經驗"
+     },
+     {
+      "t": "skills",
+      "cn": "實務技能"
+     }
+    ]
+   },
+   "en": "A practical approach, a practical solution, practical experience, and practical skills.",
+   "cn": "務實的做法、可行的解決方案、實務經驗、實務技能。",
+   "hi": [
+    {
+     "t": "A practical approach",
+     "cn": "務實的做法",
+     "k": "practical",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "QC actions",
+    "coreCn": "品管常用動作",
+    "art": "clipboard",
+    "items": [
+     {
+      "t": "visually inspect",
+      "cn": "目視檢查"
+     },
+     {
+      "t": "separate the defective part",
+      "cn": "隔離不良零件"
+     },
+     {
+      "t": "replace the damp box",
+      "cn": "更換受潮紙箱"
+     },
+     {
+      "t": "report the problem",
+      "cn": "回報問題"
+     }
+    ]
+   },
+   "en": "Visually inspect, separate the defective part, replace the damp box, and report the problem.",
+   "cn": "目視檢查、隔離不良零件、更換受潮紙箱、回報問題。",
+   "hi": [
+    {
+     "t": "separate the defective part",
+     "cn": "隔離不良零件",
+     "k": "separate",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "may + V  vs  Maybe + 句子",
+    "art": "calendar",
+    "rows": [
+     {
+      "lab": "may + 動詞原形",
+      "blocks": [
+       {
+        "t": "We",
+        "k": "s"
+       },
+       {
+        "t": "may need",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "to replace it",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "Maybe + 完整句子",
+      "blocks": [
+       {
+        "t": "Maybe",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "we",
+        "k": "s"
+       },
+       {
+        "t": "need to replace it",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "may 是助動詞，後接動詞原形；maybe 是副詞，放在句首。"
+   },
+   "en": "We may need to replace it. Maybe we need to replace it.",
+   "cn": "我們可能需要更換它。也許我們需要更換它。",
+   "hi": [
+    {
+     "t": "may need",
+     "cn": "可能需要",
+     "k": "may",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "was + 過去分詞（被動）",
+    "art": "warning",
+    "rows": [
+     {
+      "lab": "被動語態",
+      "blocks": [
+       {
+        "t": "The cable",
+        "k": "s"
+       },
+       {
+        "t": "was broken",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "during disassembly",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "broke 是過去式，不能放在 was 後面；被動一定是 was/were + 過去分詞。"
+   },
+   "en": "The cable was broken during disassembly. Use broken, not broke, after was.",
+   "cn": "線材在拆卸時被弄壞了。was 後面要用 broken，不是 broke。",
+   "hi": [
+    {
+     "t": "was broken",
+     "cn": "被弄壞了",
+     "k": "broken",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "a（第一次提到）→ the（再次提到）",
+    "art": "scratch",
+    "rows": [
+     {
+      "lab": "第一次提到",
+      "blocks": [
+       {
+        "t": "We",
+        "k": "s"
+       },
+       {
+        "t": "found",
+        "k": "v"
+       },
+       {
+        "t": "a scratch",
+        "k": "o",
+        "add": true
+       }
+      ]
+     },
+     {
+      "lab": "再次提到",
+      "blocks": [
+       {
+        "t": "The scratch",
+        "k": "s",
+        "add": true
+       },
+       {
+        "t": "is",
+        "k": "v"
+       },
+       {
+        "t": "close to the pedal",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "第一次提到某個東西用 a（新資訊）；之後再提到才用 the。"
+   },
+   "en": "We found a scratch. The scratch is close to the pedal.",
+   "cn": "我們發現一道刮痕。那道刮痕靠近踏板。"
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "「脫離」的三種說法",
+    "art": "cableTie",
+    "rows": [
+     {
+      "lab": "正式",
+      "blocks": [
+       {
+        "t": "The connector",
+        "k": "s"
+       },
+       {
+        "t": "became detached from",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "the cable",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "口語",
+      "blocks": [
+       {
+        "t": "The connector",
+        "k": "s"
+       },
+       {
+        "t": "came off",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "the cable",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "中性",
+      "blocks": [
+       {
+        "t": "The connector",
+        "k": "s"
+       },
+       {
+        "t": "separated from",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "the cable",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "become detached from 較正式，品管報告常用；come off 口語；separate from 中性。"
+   },
+   "en": "Became detached from is formal. Came off is casual. Separated from is neutral.",
+   "cn": "became detached from 較正式，came off 口語，separated from 中性。",
+   "hi": [
+    {
+     "t": "Became detached from",
+     "cn": "從……脫離",
+     "k": "detached",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 2,
+    "wrong": "The operator forgot to remove the cable when disassembling the unit, so the cabel was broke.",
+    "bad": [
+     "cabel",
+     "broke"
+    ],
+    "fix": "The operator forgot to remove the cable when disassembling the unit, so the cable was broken.",
+    "good": [
+     "cable",
+     "broken"
+    ],
+    "why": "After was, use the past participle broken, not broke. And cable is spelled c-a-b-l-e."
+   },
+   "en": "The operator forgot to remove the cable when disassembling the unit, so the cable was broken.",
+   "cn": "操作員在拆卸機台時忘了拔掉電纜，所以電纜壞了。",
+   "hi": [
+    {
+     "t": "was broken",
+     "cn": "被弄壞了",
+     "k": "broken",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 4,
+    "wrong": "The inspector asked operator to separate the defective part because he recieved the quality issue.",
+    "bad": [
+     "asked operator",
+     "recieved the quality issue"
+    ],
+    "fix": "The inspector asked the operator to separate the defective part because he received a report about the quality issue.",
+    "good": [
+     "asked the operator",
+     "received a report about the quality issue"
+    ],
+    "why": "Use the before a specific person. Received is spelled with e before i, and you receive a report about an issue."
+   },
+   "en": "The inspector asked the operator to separate the defective part because he received a report about the quality issue.",
+   "cn": "檢驗員要求操作員將有缺陷的零件分開，因為他收到了品質問題的報告。",
+   "hi": [
+    {
+     "t": "received a report about",
+     "cn": "收到……的報告",
+     "k": "report",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 5,
+    "wrong": "Our team were under a lot of stress because the shipment date was coming.",
+    "bad": [
+     "team were",
+     "was coming"
+    ],
+    "fix": "Our team was under a lot of stress because the shipment date was approaching.",
+    "good": [
+     "team was",
+     "was approaching"
+    ],
+    "why": "In American English, team takes was. Approaching sounds more professional for a date."
+   },
+   "en": "Our team was under a lot of stress because the shipment date was approaching.",
+   "cn": "我們的團隊壓力很大，因為出貨日期快到了。",
+   "hi": [
+    {
+     "t": "Our team was",
+     "cn": "我們團隊（單數 was）",
+     "k": "teamwas",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The shipment date is ___.",
+    "a": "approaching",
+    "n": 1
+   },
+   "en": "The shipment date is ___.",
+   "cn": "出貨日期快＿＿了。",
+   "say": "The shipment date is, blank.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The shipment date is ___.",
+    "a": "approaching",
+    "n": 1,
+    "show": true
+   },
+   "en": "The shipment date is approaching.",
+   "cn": "出貨日期快到了。",
+   "hi": [
+    {
+     "t": "The shipment date is approaching",
+     "cn": "出貨日期快到了",
+     "k": "approaching",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We need a more ___ approach to this problem.",
+    "a": "practical",
+    "n": 2
+   },
+   "en": "We need a more ___ approach to this problem.",
+   "cn": "我們需要用更＿＿的方法來處理這個問題。",
+   "say": "We need a more, blank, approach to this problem.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We need a more ___ approach to this problem.",
+    "a": "practical",
+    "n": 2,
+    "show": true
+   },
+   "en": "We need a more practical approach to this problem.",
+   "cn": "我們需要用更實際的方法來處理這個問題。",
+   "hi": [
+    {
+     "t": "practical approach",
+     "cn": "實際的方法",
+     "k": "practical",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "One cardboard box was damp, so we need to ___ it.",
+    "a": "replace",
+    "n": 3
+   },
+   "en": "One cardboard box was damp, so we need to ___ it.",
+   "cn": "有一個紙箱受潮了，所以我們需要＿＿它。",
+   "say": "One cardboard box was damp, so we need to, blank, it.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "One cardboard box was damp, so we need to ___ it.",
+    "a": "replace",
+    "n": 3,
+    "show": true
+   },
+   "en": "One cardboard box was damp, so we need to replace it.",
+   "cn": "有一個紙箱受潮了，所以我們需要更換它。",
+   "hi": [
+    {
+     "t": "replace it",
+     "cn": "更換它",
+     "k": "replace",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
