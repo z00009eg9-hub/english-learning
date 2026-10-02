@@ -14,6 +14,917 @@ window.LISTEN = {
 
 /* ========== 依課堂筆記自製（每週二／五更新） ========== */
 notes:[
+/* ---------- 2026-10-02 健康與醫療主題（四個程度） ---------- */
+{
+  "id": "dl20261002a2",
+  "date": "2026-10-02",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Twelve People Ahead of Us",
+  "titleCn": "我們前面還有十二個人",
+  "series": "本站自製聽力 · 健康主題",
+  "topic": "💉 候診室裡的流感疫苗",
+  "focus": "講每年的習慣用現在簡單式，講昨天用過去簡單式，講此刻用現在進行式，講還沒發生的事用 will 和 can",
+  "intro": "Tom和同事Lisa一起到公司附近的診所打流感疫苗，兩個人在候診室聊起預約的經過。請注意四組動詞的分工：gets、opens 講的是每年或每天都這樣；called、wrote 後面接的是昨天；is reading、are waiting 講的是此刻；will call、can go 講的是還沒發生的事。",
+  "tip": "第一次聽抓三個數字（前面有幾個人、診所幾點開門、打針要幾秒），第二次聽專心分辨動詞講的是習慣、昨天還是此刻。",
+  "pre": [
+    {
+      "w": "clinic",
+      "ipa": "/ˈklɪnɪk/",
+      "pos": "n.",
+      "cn": "診所",
+      "def": "A small place where you see a doctor."
+    },
+    {
+      "w": "nurse",
+      "ipa": "/nɝːs/",
+      "pos": "n.",
+      "cn": "護理師",
+      "def": "A person whose job is to look after sick people."
+    },
+    {
+      "w": "shot",
+      "ipa": "/ʃɑːt/",
+      "pos": "n.",
+      "cn": "注射、打針",
+      "def": "Medicine that a nurse puts into your body with a needle."
+    },
+    {
+      "w": "fever",
+      "ipa": "/ˈfiː.vɚ/",
+      "pos": "n.",
+      "cn": "發燒",
+      "def": "When your body is hotter than normal because you are sick."
+    },
+    {
+      "w": "rest",
+      "ipa": "/rest/",
+      "pos": "n./v.",
+      "cn": "休息",
+      "def": "To stop working and let your body get better."
+    },
+    {
+      "w": "busy",
+      "ipa": "/ˈbɪzi/",
+      "pos": "adj.",
+      "cn": "忙的、人多的",
+      "def": "Full of people or full of work."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "This clinic is very busy today. How many people are in front of us?",
+      "cn": "今天這間診所人好多。我們前面有幾個人？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Twelve. I counted them twice.",
+      "cn": "十二個，我數了兩次。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Do you come here every year?",
+      "cn": "你每年都來這裡嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes. I get a flu shot here every autumn.",
+      "cn": "對，我每年秋天都在這裡打流感疫苗。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Did someone call you about the time?",
+      "cn": "有人打電話跟你講時間嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "A nurse called me yesterday. She said the clinic opens at nine o'clock.",
+      "cn": "一位護理師昨天打給我。她說診所九點開門。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Did you write it down?",
+      "cn": "你有寫下來嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I wrote the time on my hand. Look.",
+      "cn": "我寫在手上。你看。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "That is funny. What are you reading now?",
+      "cn": "好好笑。你現在在看什麼？"
+    },
+    {
+      "sp": "Tom",
+      "en": "A poster about fever and rest. It says sleep is important.",
+      "cn": "一張關於發燒和休息的海報。上面說睡覺很重要。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Is the shot slow?",
+      "cn": "打針很慢嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "No. It will take only about ten seconds.",
+      "cn": "不會，只會花大約十秒。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Good. Then we can go back to work before lunch.",
+      "cn": "太好了，那我們午餐前就可以回去上班。"
+    },
+    {
+      "sp": "Tom",
+      "en": "The nurse is calling a name now. Listen.",
+      "cn": "護理師現在正在叫名字，你聽。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many people are in front of Tom and Lisa?",
+      "qCn": "Tom和Lisa前面有幾個人？",
+      "opts": [
+        "A. Two",
+        "B. Nine",
+        "C. Ten",
+        "D. Twelve"
+      ],
+      "optsCn": [
+        "A. 兩個",
+        "B. 九個",
+        "C. 十個",
+        "D. 十二個"
+      ],
+      "ans": 3,
+      "expl": "Twelve. I counted them twice.——Tom第二句就回答了，而且說他數了兩次。"
+    },
+    {
+      "q": "What did the nurse tell Tom yesterday?",
+      "qCn": "護理師昨天告訴Tom什麼？",
+      "opts": [
+        "A. The clinic opens at nine o'clock",
+        "B. The shot is not free",
+        "C. He needs two shots",
+        "D. He should stay at home"
+      ],
+      "optsCn": [
+        "A. 診所九點開門",
+        "B. 打針不免費",
+        "C. 他需要打兩針",
+        "D. 他應該待在家裡"
+      ],
+      "ans": 0,
+      "expl": "She said the clinic opens at nine o'clock.——called 和 said 都是過去式，所以這是昨天的事。"
+    },
+    {
+      "q": "What is Tom reading in the clinic?",
+      "qCn": "Tom在診所裡正在看什麼？",
+      "opts": [
+        "A. A newspaper",
+        "B. A poster about fever and rest",
+        "C. A text from Lisa",
+        "D. A book about sleep"
+      ],
+      "optsCn": [
+        "A. 一份報紙",
+        "B. 一張關於發燒和休息的海報",
+        "C. Lisa傳來的訊息",
+        "D. 一本關於睡覺的書"
+      ],
+      "ans": 1,
+      "expl": "A poster about fever and rest.——問句用 What are you reading now，回答講的就是此刻在看的東西。"
+    },
+    {
+      "q": "How long will the shot take?",
+      "qCn": "打針會花多久？",
+      "opts": [
+        "A. About ten seconds",
+        "B. About ten minutes",
+        "C. Half an hour",
+        "D. All morning"
+      ],
+      "optsCn": [
+        "A. 大約十秒",
+        "B. 大約十分鐘",
+        "C. 半小時",
+        "D. 一整個早上"
+      ],
+      "ans": 0,
+      "expl": "It will take only about ten seconds.——will 表示還沒發生，only about ten seconds 是很短的時間。"
+    }
+  ]
+},
+{
+  "id": "dl20261002b1",
+  "date": "2026-10-02",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Eleven Minutes on the Second Floor",
+  "titleCn": "二樓的十一分鐘",
+  "series": "本站自製聽力 · 健康主題",
+  "topic": "🏢 公司裡的疫苗接種室",
+  "focus": "現在完成式講「到現在為止的經驗」，搭配比較級 shorter／faster／quieter 和 because／so／but 的連接",
+  "intro": "Anita剛從公司二樓的接種室回到座位，同事Mai想知道過程順不順。請注意兩種時態的分工：has worked、has had、has never liked、has not booked 講的是累積到現在的經驗；opened、took、asked 講的是已經結束的那一次。另外數一數對話裡出現幾個比較級。",
+  "tip": "第一次聽抓三個數字（在越南幾年、花了幾分鐘、Mai打算星期幾去），第二次聽注意 has 加過去分詞和單純過去式各出現在什麼句子裡。",
+  "pre": [
+    {
+      "w": "needle",
+      "ipa": "/ˈniːdl/",
+      "pos": "n.",
+      "cn": "針",
+      "def": "A thin sharp metal tool used to give medicine or to sew."
+    },
+    {
+      "w": "queue",
+      "ipa": "/kjuː/",
+      "pos": "n./v.",
+      "cn": "隊伍、排隊",
+      "def": "A line of people waiting for something."
+    },
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "Someone who works in the same place as you."
+    },
+    {
+      "w": "book",
+      "ipa": "/bʊk/",
+      "pos": "v.",
+      "cn": "預約、訂",
+      "def": "To arrange a place or a time before you go."
+    },
+    {
+      "w": "vaccination",
+      "ipa": "/ˌvæk.səˈneɪ.ʃən/",
+      "pos": "n.",
+      "cn": "疫苗接種",
+      "def": "The act of giving someone medicine that stops an illness."
+    },
+    {
+      "w": "quiet",
+      "ipa": "/ˈkwaɪət/",
+      "pos": "adj.",
+      "cn": "安靜的",
+      "def": "With little noise."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "You are back already? That was quick.",
+      "cn": "你已經回來了？真快。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Eleven minutes, door to door. It was much faster than last year.",
+      "cn": "從進門到出門十一分鐘，比去年快多了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Where exactly is the vaccination room?",
+      "cn": "接種室到底在哪裡？"
+    },
+    {
+      "sp": "Anita",
+      "en": "On the second floor, next to the old training room. The company opened it this week.",
+      "cn": "在二樓，舊的訓練室旁邊。公司這星期才開的。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Was there a long queue?",
+      "cn": "隊伍很長嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "No. The queue was shorter than the queue at the public clinic, so I signed up at once.",
+      "cn": "不長。那裡的隊伍比公立診所的短，所以我就馬上報名了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Have you had a flu shot before?",
+      "cn": "你以前打過流感疫苗嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I have worked here for four years, and I have had one every single year.",
+      "cn": "我在這裡工作四年了，而且每一年都打。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So you are used to it by now.",
+      "cn": "那你現在應該很習慣了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Not really. I have never liked needles, so I always look at the wall.",
+      "cn": "其實沒有。我從來就不喜歡針，所以我總是看牆壁。"
+    },
+    {
+      "sp": "Mai",
+      "en": "What did the nurse do first?",
+      "cn": "護理師先做了什麼？"
+    },
+    {
+      "sp": "Anita",
+      "en": "She asked me a few questions and checked my arm. Then it was over.",
+      "cn": "她問了我幾個問題，檢查了我的手臂，然後就結束了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "I have not booked a time yet. Is Friday a good day?",
+      "cn": "我還沒預約時間。星期五好嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Friday is fine. The room is quieter than the clinic, and the nurses are kind.",
+      "cn": "星期五可以。那間房間比診所安靜，護理師也很親切。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Then I will go at four, after the team call.",
+      "cn": "那我四點去，團隊會議之後。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How long has Anita worked at the company?",
+      "qCn": "Anita在這間公司工作多久了？",
+      "opts": [
+        "A. Eleven months",
+        "B. One year",
+        "C. Four years",
+        "D. Since Friday"
+      ],
+      "optsCn": [
+        "A. 十一個月",
+        "B. 一年",
+        "C. 四年",
+        "D. 從星期五開始"
+      ],
+      "ans": 2,
+      "expl": "I have worked here for four years.——has／have worked ... for four years 表示從四年前累積到現在，她現在還在這裡。"
+    },
+    {
+      "q": "Why did Anita sign up at once?",
+      "qCn": "Anita為什麼馬上就報名了？",
+      "opts": [
+        "A. The queue was shorter than at the public clinic",
+        "B. Her manager asked her to",
+        "C. The shot was free only that day",
+        "D. She was already feeling ill"
+      ],
+      "optsCn": [
+        "A. 隊伍比公立診所的短",
+        "B. 她的主管要求她去",
+        "C. 只有那天免費",
+        "D. 她已經覺得不舒服了"
+      ],
+      "ans": 0,
+      "expl": "The queue was shorter than the queue at the public clinic, so I signed up at once.——so 前面那一句就是原因。"
+    },
+    {
+      "q": "What does Anita do during the shot?",
+      "qCn": "打針的時候Anita會做什麼？",
+      "opts": [
+        "A. She closes her eyes",
+        "B. She talks to the nurse",
+        "C. She looks at the wall",
+        "D. She holds Mai's hand"
+      ],
+      "optsCn": [
+        "A. 她閉上眼睛",
+        "B. 她跟護理師講話",
+        "C. 她看牆壁",
+        "D. 她握著Mai的手"
+      ],
+      "ans": 2,
+      "expl": "I have never liked needles, so I always look at the wall.——她明確說自己總是看牆壁。"
+    },
+    {
+      "q": "What has Mai not done yet?",
+      "qCn": "Mai還沒有做什麼？",
+      "opts": [
+        "A. Finished the team call",
+        "B. Booked a time for the shot",
+        "C. Visited the second floor",
+        "D. Met the new nurse"
+      ],
+      "optsCn": [
+        "A. 開完團隊會議",
+        "B. 預約打針的時間",
+        "C. 去過二樓",
+        "D. 見過新來的護理師"
+      ],
+      "ans": 1,
+      "expl": "I have not booked a time yet.——yet 配現在完成式，表示到現在為止還沒做。"
+    },
+    {
+      "q": "When will Mai go?",
+      "qCn": "Mai打算什麼時候去？",
+      "opts": [
+        "A. Friday at four, after the team call",
+        "B. Thursday morning",
+        "C. Right now",
+        "D. Next month"
+      ],
+      "optsCn": [
+        "A. 星期五四點，團隊會議之後",
+        "B. 星期四早上",
+        "C. 現在馬上",
+        "D. 下個月"
+      ],
+      "ans": 0,
+      "expl": "Then I will go at four, after the team call.——前一句Anita說 Friday is fine，所以是星期五四點。"
+    }
+  ]
+},
+{
+  "id": "dl20261002b1p",
+  "date": "2026-10-02",
+  "level": "B1+",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Seven Million Doses, One Busy Week",
+  "titleCn": "七百萬劑疫苗，一個忙碌的星期",
+  "series": "本站自製聽力 · 新聞討論 · 健康與醫療",
+  "topic": "📰 午休時聊流感高峰的新聞",
+  "focus": "被動語態（is expected、have been bought、was opened、are being reserved）把焦點放在事情本身，搭配 which／who 關係子句",
+  "intro": "Anita和Mai在午休時聊到台灣流感高峰的新聞。請特別注意被動語態：is expected、have been bought、was opened、are being reserved，這些句子的主詞都是「事情」而不是「誰做的」。另外聽出 which 和 who 引導的關係子句各自在補充哪一個名詞。",
+  "tip": "第一次聽抓四個數字（一週就診人次、疫苗劑數、第一階段開始的日期、第二階段開始的日期），第二次聽專心辨認被動語態的三個零件：be動詞、過去分詞，還有有沒有 being。",
+  "pre": [
+    {
+      "w": "outpatient",
+      "ipa": "/ˈaʊtpeɪʃnt/",
+      "pos": "n./adj.",
+      "cn": "門診（病人）",
+      "def": "A patient who visits a hospital but does not stay the night."
+    },
+    {
+      "w": "dose",
+      "ipa": "/doʊs/",
+      "pos": "n.",
+      "cn": "劑量、一劑",
+      "def": "One measured amount of a medicine."
+    },
+    {
+      "w": "chronic",
+      "ipa": "/ˈkrɑː.nɪk/",
+      "pos": "adj.",
+      "cn": "慢性的",
+      "def": "Lasting for a long time and hard to cure."
+    },
+    {
+      "w": "vaccinate",
+      "ipa": "/ˈvæk.sə.neɪt/",
+      "pos": "v.",
+      "cn": "接種疫苗",
+      "def": "To give someone medicine that stops an illness."
+    },
+    {
+      "w": "reserve",
+      "ipa": "/rɪˈzɝːv/",
+      "pos": "v.",
+      "cn": "保留、預留",
+      "def": "To keep something for one person or group only."
+    },
+    {
+      "w": "peak",
+      "ipa": "/piːk/",
+      "pos": "n./v.",
+      "cn": "高峰、達到高點",
+      "def": "The highest point of something."
+    },
+    {
+      "w": "stage",
+      "ipa": "/steɪdʒ/",
+      "pos": "n.",
+      "cn": "階段",
+      "def": "One part of a plan that happens in order."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "Did you see the number in the news this morning?",
+      "cn": "你有看到今天早上新聞上的數字嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The one about flu visits? A hundred and fifty thousand in a single week is a lot.",
+      "cn": "類流感就診那個嗎？一週十五萬人次真的很多。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And this week is expected to be the worst of the whole season.",
+      "cn": "而且這一週預計是整個流感季最嚴重的。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That figure covers outpatient clinics and emergency rooms, which are counted together every week.",
+      "cn": "那個數字把門診和急診合起來算，兩者每週是一起統計的。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So one person with a mild cough is in the same number as someone in the emergency room.",
+      "cn": "所以只是輕微咳嗽的人，跟進急診的人算在同一個數字裡。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Exactly. The good news is that more than seven million doses have been bought for this season.",
+      "cn": "沒錯。好消息是本季採購的疫苗超過七百萬劑。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Seven million? Has it ever been that high before?",
+      "cn": "七百萬？以前有這麼多過嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "No. It is the first time the figure has passed that mark.",
+      "cn": "沒有。這是第一次突破這個數字。"
+    },
+    {
+      "sp": "Mai",
+      "en": "My mother is sixty-eight. Can she go now?",
+      "cn": "我媽六十八歲，她現在可以去了嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Yes. The first stage was opened on October the first to people aged sixty-five and over.",
+      "cn": "可以。第一階段十月一日就對六十五歲以上的人開放了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "What about my uncle? He is fifty-two and quite healthy.",
+      "cn": "那我叔叔呢？他五十二歲，身體很好。"
+    },
+    {
+      "sp": "Anita",
+      "en": "He has to wait. Adults aged fifty and over without chronic conditions can be vaccinated from November the second.",
+      "cn": "他要等。五十歲以上、沒有慢性病的成人，從十一月二日起可以接種。"
+    },
+    {
+      "sp": "Mai",
+      "en": "I heard something about a stronger vaccine too.",
+      "cn": "我還聽說有一種更強的疫苗。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Enhanced shots are being reserved first for residents who live in long-term care homes.",
+      "cn": "增強型疫苗優先保留給住在長照機構的住民。"
+    },
+    {
+      "sp": "Mai",
+      "en": "That makes sense. When will all this calm down?",
+      "cn": "有道理。這一切什麼時候會平靜下來？"
+    },
+    {
+      "sp": "Anita",
+      "en": "A clear drop is expected by the middle of October, but activity will stay high until mid-November.",
+      "cn": "十月中旬預計會明顯下降，但疫情活躍度會持續到十一月中。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What does the figure of 150,000 cover?",
+      "qCn": "十五萬這個數字包含什麼？",
+      "opts": [
+        "A. Only emergency room visits",
+        "B. Outpatient clinics and emergency rooms together",
+        "C. Only people who were admitted to hospital",
+        "D. Vaccine doses used in one week"
+      ],
+      "optsCn": [
+        "A. 只有急診就診",
+        "B. 門診和急診合起來算",
+        "C. 只有住院的人",
+        "D. 一週用掉的疫苗劑數"
+      ],
+      "ans": 1,
+      "expl": "That figure covers outpatient clinics and emergency rooms, which are counted together every week.——which 引導的關係子句就是在補充說明這兩者是一起統計的。"
+    },
+    {
+      "q": "Why is seven million doses described as unusual?",
+      "qCn": "為什麼七百萬劑被說成不尋常？",
+      "opts": [
+        "A. It is the lowest number in ten years",
+        "B. It is the first time the figure has passed that mark",
+        "C. Half of the doses were returned",
+        "D. It is only enough for one city"
+      ],
+      "optsCn": [
+        "A. 這是十年來最低的數字",
+        "B. 這是第一次突破這個數字",
+        "C. 有一半的疫苗被退回",
+        "D. 這個量只夠一個城市用"
+      ],
+      "ans": 1,
+      "expl": "It is the first time the figure has passed that mark.——Anita直接回答Mai的問題，說以前從來沒有這麼高。"
+    },
+    {
+      "q": "When can Mai's fifty-two-year-old uncle be vaccinated?",
+      "qCn": "Mai五十二歲的叔叔什麼時候可以接種？",
+      "opts": [
+        "A. From October the first",
+        "B. From November the second",
+        "C. Only in mid-November",
+        "D. He is not eligible at all"
+      ],
+      "optsCn": [
+        "A. 十月一日起",
+        "B. 十一月二日起",
+        "C. 只能在十一月中",
+        "D. 他完全不符合資格"
+      ],
+      "ans": 1,
+      "expl": "Adults aged fifty and over without chronic conditions can be vaccinated from November the second.——他五十二歲又很健康，屬於第二階段。"
+    },
+    {
+      "q": "Who gets the enhanced shots first?",
+      "qCn": "增強型疫苗優先給誰？",
+      "opts": [
+        "A. Health workers at the clinic",
+        "B. Children under five",
+        "C. Residents who live in long-term care homes",
+        "D. Anyone who books online"
+      ],
+      "optsCn": [
+        "A. 診所的醫護人員",
+        "B. 五歲以下的兒童",
+        "C. 住在長照機構的住民",
+        "D. 任何線上預約的人"
+      ],
+      "ans": 2,
+      "expl": "Enhanced shots are being reserved first for residents who live in long-term care homes.——who 引導的關係子句補充說明這些住民住在哪裡。"
+    },
+    {
+      "q": "What does Anita expect by the middle of October?",
+      "qCn": "Anita預期十月中旬會怎樣？",
+      "opts": [
+        "A. A clear drop in cases",
+        "B. A second wave",
+        "C. The end of the vaccine program",
+        "D. More emergency rooms to close"
+      ],
+      "optsCn": [
+        "A. 病例明顯下降",
+        "B. 第二波疫情",
+        "C. 疫苗計畫結束",
+        "D. 更多急診室關閉"
+      ],
+      "ans": 0,
+      "expl": "A clear drop is expected by the middle of October.——is expected 是被動語態，主詞是 a clear drop。"
+    }
+  ]
+},
+{
+  "id": "dl20261002b2",
+  "date": "2026-10-02",
+  "level": "B2",
+  "minutes": 5,
+  "kind": "note",
+  "title": "The Mask in the Gym Class",
+  "titleCn": "體育課上的那張口罩",
+  "series": "本站自製聽力 · 新聞討論 · 健康與醫療",
+  "topic": "🪞 兩個大人讀一份青少年調查",
+  "focus": "用數據當主詞的名詞片語、among／against 的對比結構，以及 what 引導的名詞子句",
+  "intro": "Anita和同事在讀兒盟那份青少年外貌焦慮調查，兩個人從數字談到父母的角色。請注意三件事：第一，數據怎麼變成句子的主詞（Almost a quarter of them、One in five）；第二，among 和 against 怎麼把兩群人擺在一起比；第三，what feeling is being hidden 這種 what 名詞子句整串當受詞用。",
+  "tip": "第一次聽抓五個比例（整體、女生、男生、戴口罩、被父母批評），第二次聽注意每個數字後面緊接著的動詞，以及講話的人怎麼從數字轉到解讀。",
+  "pre": [
+    {
+      "w": "survey",
+      "ipa": "/ˈsɝː.veɪ/",
+      "pos": "n.",
+      "cn": "調查",
+      "def": "A set of questions asked to many people to find out what they think."
+    },
+    {
+      "w": "anxious",
+      "ipa": "/ˈæŋk.ʃəs/",
+      "pos": "adj.",
+      "cn": "焦慮的",
+      "def": "Worried and uneasy about something."
+    },
+    {
+      "w": "appearance",
+      "ipa": "/əˈpɪrəns/",
+      "pos": "n.",
+      "cn": "外貌、外觀",
+      "def": "The way a person or thing looks."
+    },
+    {
+      "w": "figure",
+      "ipa": "/ˈfɪɡjɚ/",
+      "pos": "n.",
+      "cn": "數字；身材",
+      "def": "A number in a report, or the shape of a person's body."
+    },
+    {
+      "w": "severe",
+      "ipa": "/sɪˈvɪr/",
+      "pos": "adj.",
+      "cn": "嚴重的",
+      "def": "Very bad or very serious."
+    },
+    {
+      "w": "cosmetic",
+      "ipa": "/kɑːzˈmet̬.ɪk/",
+      "pos": "adj.",
+      "cn": "美容的；表面的",
+      "def": "Done to improve how something looks."
+    },
+    {
+      "w": "psychologist",
+      "ipa": "/saɪˈkɑː.lə.dʒɪst/",
+      "pos": "n.",
+      "cn": "心理師",
+      "def": "A person trained to study how people think and feel."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Anita",
+      "en": "Have you read the survey that came out yesterday? Ten thousand students, and over a third of them are anxious about how they look.",
+      "cn": "你看了昨天公布的那份調查嗎？一萬多名學生，超過三分之一對自己的外貌感到焦慮。"
+    },
+    {
+      "sp": "Hao",
+      "en": "A third sounds high until you split it by gender. Among girls it is nearly half.",
+      "cn": "三分之一聽起來很高，但按性別拆開看更驚人，女生將近一半。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Forty-eight point seven percent for girls, against twenty point six for boys. That is more than double.",
+      "cn": "女生百分之四十八點七，男生百分之二十點六，是兩倍多。"
+    },
+    {
+      "sp": "Hao",
+      "en": "What surprised me was the mask question.",
+      "cn": "讓我意外的是口罩那一題。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Almost a quarter of them keep a mask on for more than half of every day, purely because of their appearance.",
+      "cn": "將近四分之一的人每天有超過一半的時間戴著口罩，純粹是因為外貌。"
+    },
+    {
+      "sp": "Hao",
+      "en": "And nearly forty percent said they keep it on in gym class. In gym class.",
+      "cn": "而且將近四成的人說他們連體育課都戴著。體育課啊。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is the detail that stays with me. A mask that is worn while you are running is not a habit.",
+      "cn": "這就是讓我一直想著的細節。跑步時還戴著的口罩不是習慣。"
+    },
+    {
+      "sp": "Hao",
+      "en": "It is a signal. So what is the survey saying about where the pressure comes from?",
+      "cn": "那是一個訊號。那調查怎麼說這個壓力是從哪裡來的？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Forty-two point eight percent said a parent had commented critically on their face, their figure or their clothes.",
+      "cn": "百分之四十二點八的人說，父母曾批評過他們的臉、身材或穿著。"
+    },
+    {
+      "sp": "Hao",
+      "en": "Did the report connect that to the level of anxiety?",
+      "cn": "報告有把這件事跟焦慮程度連起來嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "It did. Among the students with the most severe anxiety, ten point eight percent had parents who did it regularly, against three point three percent whose parents rarely did.",
+      "cn": "有。在焦慮最嚴重的那一群裡，百分之十點八的父母經常這樣講，相對地只有百分之三點三的父母很少這樣講。"
+    },
+    {
+      "sp": "Hao",
+      "en": "One in five had also thought about a cosmetic procedure, I saw.",
+      "cn": "我看到五個人裡有一個想過做醫美。"
+    },
+    {
+      "sp": "Anita",
+      "en": "And nearly one in ten were interested in weight-loss injections. These are school students.",
+      "cn": "還有接近十分之一對減重針劑有興趣。這些是在學的學生。"
+    },
+    {
+      "sp": "Hao",
+      "en": "So what does the psychologist recommend? Take the mask away?",
+      "cn": "那心理師建議怎麼做？把口罩拿掉嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The opposite. She argued that removing the mask solves nothing, and that the useful question is what feeling is being hidden behind it.",
+      "cn": "恰恰相反。她認為把口罩拿掉解決不了任何事，真正有用的問題是，那底下藏著什麼情緒。"
+    },
+    {
+      "sp": "Hao",
+      "en": "Listening before ruling. That is harder than it sounds.",
+      "cn": "先聽再管，這比聽起來難多了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is the gap between girls and boys in the survey?",
+      "qCn": "調查中女生和男生的差距是多少？",
+      "opts": [
+        "A. 48.7 percent against 20.6 percent",
+        "B. 42.8 percent against 23.5 percent",
+        "C. 29.6 percent against 10.8 percent",
+        "D. 20.6 percent against 10.8 percent"
+      ],
+      "optsCn": [
+        "A. 百分之四十八點七對百分之二十點六",
+        "B. 百分之四十二點八對百分之二十三點五",
+        "C. 百分之二十九點六對百分之十點八",
+        "D. 百分之二十點六對百分之十點八"
+      ],
+      "ans": 0,
+      "expl": "Forty-eight point seven percent for girls, against twenty point six for boys.——against 在這裡是「相對於」，把兩個比例擺在一起比。"
+    },
+    {
+      "q": "Why does Anita say the gym class detail matters?",
+      "qCn": "Anita為什麼說體育課那個細節很重要？",
+      "opts": [
+        "A. Because masks are against school rules",
+        "B. Because a mask worn while running is a signal, not a habit",
+        "C. Because exercise makes the anxiety worse",
+        "D. Because the number was the highest in the survey"
+      ],
+      "optsCn": [
+        "A. 因為戴口罩違反校規",
+        "B. 因為跑步時還戴著的口罩是訊號，不是習慣",
+        "C. 因為運動會讓焦慮更嚴重",
+        "D. 因為那是調查裡最高的數字"
+      ],
+      "ans": 1,
+      "expl": "A mask that is worn while you are running is not a habit.——下一句Hao接著說 It is a signal，兩句合起來就是答案。"
+    },
+    {
+      "q": "What did 42.8 percent of the students report?",
+      "qCn": "百分之四十二點八的學生表示什麼？",
+      "opts": [
+        "A. They had tried a cosmetic procedure",
+        "B. They wore a mask in gym class",
+        "C. A parent had commented critically on their face, figure or clothes",
+        "D. They had never felt anxious"
+      ],
+      "optsCn": [
+        "A. 他們做過醫美",
+        "B. 他們體育課戴口罩",
+        "C. 父母曾批評過他們的臉、身材或穿著",
+        "D. 他們從未感到焦慮"
+      ],
+      "ans": 2,
+      "expl": "Forty-two point eight percent said a parent had commented critically on their face, their figure or their clothes.——這是數字後面緊接著的那一句。"
+    },
+    {
+      "q": "What does the comparison of 10.8 and 3.3 percent show?",
+      "qCn": "百分之十點八和百分之三點三的對比說明什麼？",
+      "opts": [
+        "A. Severe anxiety was far more common where a parent criticised regularly",
+        "B. Most parents never criticise their children",
+        "C. Boys hear more criticism than girls",
+        "D. Criticism has no link to anxiety"
+      ],
+      "optsCn": [
+        "A. 父母經常批評的學生，重度焦慮比例高得多",
+        "B. 大部分父母從不批評孩子",
+        "C. 男生聽到的批評比女生多",
+        "D. 批評跟焦慮沒有關聯"
+      ],
+      "ans": 0,
+      "expl": "Among the students with the most severe anxiety, ten point eight percent had parents who did it regularly, against three point three percent whose parents rarely did.——among 先框出一群人，against 再把兩個比例對比起來。"
+    },
+    {
+      "q": "What does the psychologist recommend?",
+      "qCn": "心理師建議什麼？",
+      "opts": [
+        "A. Making a clear rule about masks at home",
+        "B. Removing the mask during exercise",
+        "C. Asking what feeling is hidden behind the mask",
+        "D. Taking the student to a cosmetic clinic"
+      ],
+      "optsCn": [
+        "A. 在家訂一條關於口罩的明確規定",
+        "B. 運動時把口罩拿掉",
+        "C. 問口罩背後藏著什麼情緒",
+        "D. 帶學生去醫美診所"
+      ],
+      "ans": 2,
+      "expl": "She argued that removing the mask solves nothing, and that the useful question is what feeling is being hidden behind it.——what feeling is being hidden behind it 這整串 what 名詞子句就是她建議要問的問題。"
+    }
+  ]
+},
+
 {
   "id": "dl20260929a2",
   "date": "2026-09-29",

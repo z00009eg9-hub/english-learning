@@ -33,6 +33,741 @@
    ============================================================ */
 window.GVPLUS = {
 
+/* ---------- 2026-10-02 每日文法（過去完成進行式；have 與 have got） ---------- */
+"dg20261002a2": {
+  "vis": true,
+  "oneLine": "had been 加 V-ing 不是在講「很久以前」，而是在講「到過去那一刻之前，這件事已經做了多久」。",
+  "map": {
+    "when": "你要說某個過去時刻之前，某件事已經持續了一段時間的時候",
+    "why": "中文用「已經」加「了」就夠了，英文沒有這種語助詞，只能靠動詞的形狀把長度寫出來",
+    "form": "had been 加 V-ing　|　常接 for 一段時間、since 起點、all 一整段"
+  },
+  "visual": {
+    "type": "timeline",
+    "cap": "線上一段一段的是持續，用 had been 加 V-ing；單獨的點是一次就發生完的事，用過去簡單式。注意那一段要接到中間那個主時間點，不是接到 NOW。看一個句子要畫成段還是畫成點，動詞就照著怎麼寫。",
+    "rows": [
+      {
+        "kind": "span",
+        "label": "18:00 → 19:00",
+        "tone": "accent",
+        "from": "傍晚六點",
+        "to": "主時間點",
+        "sub": "I had been standing at the stop for an hour.",
+        "subCn": "整整一小時都在站著，一路接到公車來，所以畫成一段"
+      },
+      {
+        "kind": "point",
+        "label": "19:00 主時間點",
+        "tone": "accent",
+        "at": "公車終於來的那一刻",
+        "sub": "The bus arrived.",
+        "subCn": "整段故事的基準點，留在過去簡單式"
+      },
+      {
+        "kind": "point",
+        "label": "19:05",
+        "tone": "ink",
+        "at": "上車之後",
+        "sub": "I sat down near the window.",
+        "subCn": "基準點之後的事，形狀不用跟著改"
+      },
+      {
+        "kind": "span",
+        "label": "現在",
+        "tone": "ink",
+        "from": "這幾個月",
+        "to": "NOW",
+        "sub": "I take the earlier bus now.",
+        "subCn": "現在的習慣跟那一天無關，用現在簡單式"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "wait",
+      "icon": "clock",
+      "title": "等了很久",
+      "titleCn": "for 加一段時間",
+      "ask": "怎麼說「他來之前我已經等很久了」？",
+      "en": "I had been waiting in the lobby for thirty minutes.",
+      "cn": "我已經在大廳等了三十分鐘。",
+      "why": "重點不是「我等過」，而是「等了三十分鐘」這個長度。for thirty minutes 把長度講出來，had been waiting 則告訴讀者這段時間在某個過去時刻就結束了。只寫 I waited 的話，讀者不知道這一段接到哪裡。"
+    },
+    {
+      "key": "repeat",
+      "icon": "cycle",
+      "title": "一直重複",
+      "titleCn": "all 加一整段時間",
+      "ask": "一整個早上都在做同一件事要怎麼說？",
+      "en": "The phone had been ringing all morning.",
+      "cn": "電話整個早上都在響。",
+      "why": "all morning 不是一次，是一整段。中文的「一直響」已經含了這個意思，英文卻要靠 had been ringing 的形狀表現出來。如果寫 The phone rang，讀者會以為只響了一次。"
+    },
+    {
+      "key": "trace",
+      "icon": "person",
+      "title": "看得出痕跡",
+      "titleCn": "結果反推過程",
+      "ask": "看到結果，怎麼推回剛才一直在做什麼？",
+      "en": "Her hair was wet because she had been swimming.",
+      "cn": "她的頭髮是濕的，因為她剛才一直在游泳。",
+      "why": "頭髮濕是現場看得到的痕跡，游泳是造成痕跡的那段時間。because 後面用 had been swimming，是因為游泳發生在「頭髮是濕的」之前。這種「痕跡加原因」的句型是這個時態最常見的用法。"
+    },
+    {
+      "key": "nogo",
+      "icon": "check",
+      "title": "不必用的時候",
+      "titleCn": "沒有長度就別用",
+      "ask": "什麼時候其實不用這麼長的形狀？",
+      "en": "She opened the door and said hello.",
+      "cn": "她打開門，說了你好。",
+      "why": "兩件事都是一瞬間發生的，沒有「持續多久」可以講，所以用過去簡單式最乾淨。這個時態是用來表達長度的工具，句子裡沒有長度卻硬用，讀者會一直在找那個不存在的時間段。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要說：媽媽回家的時候，我已經寫作業寫了兩小時。"
+    },
+    {
+      "label": "釘住主時間點",
+      "text": "「媽媽回家」是你正在講的那一刻，用過去簡單式：My mother came home."
+    },
+    {
+      "label": "找出持續的那一段",
+      "text": "寫作業持續了兩小時，而且接到媽媽回家為止：I had been doing my homework for two hours."
+    },
+    {
+      "label": "接起來",
+      "text": "I had been doing my homework for two hours when my mother came home."
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "寫成 I had been do my homework 就漏了 -ing，寫成 I have been doing 又把基準點拉到現在，媽媽就變成「現在」回家了。"
+    }
+  ],
+  "comparison": {
+    "title": "一段 vs 一點",
+    "left": {
+      "tag": "HAD BEEN DOING",
+      "tagCn": "持續的一段",
+      "icon": "arrow",
+      "head": "how long before that moment",
+      "headCn": "那一刻之前持續多久",
+      "en": "We had been cleaning since lunchtime.",
+      "cn": "我們從午餐時間就一直在打掃。",
+      "pts": [
+        "句子裡會有 for、since 或 all",
+        "動作是自己在做，不是被做",
+        "狀態動詞 know、own 不能用這個形狀"
+      ]
+    },
+    "right": {
+      "tag": "DID",
+      "tagCn": "一次的事",
+      "icon": "pin",
+      "head": "the moment itself",
+      "headCn": "那一刻本身",
+      "en": "Our teacher walked in.",
+      "cn": "我們老師走了進來。",
+      "pts": [
+        "整段故事的基準點",
+        "一瞬間就發生完",
+        "用最簡單的過去式就好"
+      ]
+    },
+    "note": "判斷口訣：句子裡講得出「多久」就畫成一段，用 had been 加 V-ing；講不出多久就畫成一點，用過去簡單式。"
+  },
+  "quizMore": [
+    {
+      "q": "My shoes were full of water because I ___ in the rain.",
+      "opts": [
+        "walk",
+        "had been walking",
+        "have been walking",
+        "had been walked"
+      ],
+      "ans": 1,
+      "expl": "鞋子濕是痕跡，走在雨裡是造成痕跡的那一段時間，整句又都在過去，所以用 had been walking。"
+    },
+    {
+      "q": "The kettle ___ for five minutes before anyone noticed.",
+      "opts": [
+        "had been boiling",
+        "had been boiled",
+        "boils",
+        "has been boiling"
+      ],
+      "ans": 0,
+      "expl": "水壺是自己在滾，不是被滾，所以用 boiling。before anyone noticed 把基準點放在過去，所以用 had。"
+    }
+  ]
+},
+"dg20261002b1": {
+  "vis": true,
+  "oneLine": "兩種形狀都在講「比主時間點更早」，差別只有一個：你要讓讀者感覺到拖了多久，還是只要知道做完了。",
+  "map": {
+    "when": "一段過去的敘述裡，你要決定把時間長度攤開來，還是只報結果的時候",
+    "why": "英文把「持續」和「完成」做成兩種不同的形狀，讀者會從形狀讀出你的重點在哪裡",
+    "form": "過程：had been 加 V-ing　|　結果：had 加過去分詞"
+  },
+  "visual": {
+    "type": "cols",
+    "cap": "同一組事實，三個欄位分別把重點放在不同地方：左欄攤開長度，讀者會自動問「那為什麼沒人處理」；中欄只報次數與結局，語氣最乾淨；右欄是整段故事的基準點，形狀最簡單。寫作時先決定重點在哪一欄，再決定動詞的形狀。",
+    "cols": [
+      {
+        "tag": "HAD BEEN DOING",
+        "tagCn": "長度與痕跡",
+        "tone": 1,
+        "items": [
+          {
+            "en": "The tap had been dripping since Tuesday.",
+            "cn": "水龍頭從星期二就一直在滴。",
+            "nt": "since 一出現就走這一欄"
+          },
+          {
+            "en": "Her eyes were sore; she had been reading in the dark.",
+            "cn": "她眼睛很不舒服，因為剛才一直在暗處看書。",
+            "nt": "先給痕跡，再補原因"
+          }
+        ]
+      },
+      {
+        "tag": "HAD DONE",
+        "tagCn": "次數與結局",
+        "tone": 2,
+        "items": [
+          {
+            "en": "The tap had dripped twice that week.",
+            "cn": "那週水龍頭滴了兩次。",
+            "nt": "twice 是次數，不能攤開"
+          },
+          {
+            "en": "She had finished the whole novel by Sunday.",
+            "cn": "到星期日她已經把整本小說看完了。",
+            "nt": "重點在看完，不在看多久"
+          }
+        ]
+      },
+      {
+        "tag": "DID",
+        "tagCn": "主時間點本身",
+        "tone": 3,
+        "items": [
+          {
+            "en": "The plumber knocked at seven.",
+            "cn": "水電師傅七點來敲門。",
+            "nt": "基準點永遠是最簡單的過去式"
+          },
+          {
+            "en": "She closed the book and turned off the lamp.",
+            "cn": "她把書闔上，關了燈。",
+            "nt": "照順序寫的動作不必退格"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "length",
+      "icon": "balance",
+      "title": "攤開長度",
+      "titleCn": "想讓讀者感覺到久",
+      "ask": "怎麼讓讀者感覺到這件事拖了很久？",
+      "en": "The team had been chasing the same approval for three weeks.",
+      "cn": "團隊已經追同一份核准追了三週。",
+      "why": "three weeks 本身就是一句無聲的抱怨。用 had been chasing 把這段時間攤開，讀者不必你多說就知道事情卡住了。如果寫 had chased，三週會變成一個中性的事實，情緒就不見了。"
+    },
+    {
+      "key": "count",
+      "icon": "eye",
+      "title": "報次數",
+      "titleCn": "數字一出現就換形狀",
+      "ask": "句子裡有次數的時候要用哪一種？",
+      "en": "The system had crashed four times before the update.",
+      "cn": "更新之前系統已經當機四次。",
+      "why": "had been doing 畫的是一條沒有斷的線，four times 卻是四個分開的點，兩者互相矛盾。只要看到 times、emails、calls 這種可數的字，就走 had done。中文的「當機了四次」不改動詞，所以這條線特別容易踩過去。"
+    },
+    {
+      "key": "passive",
+      "icon": "arrow",
+      "title": "寫成被動",
+      "titleCn": "過程沒有被動形",
+      "ask": "想寫被動又想保留長度怎麼辦？",
+      "en": "The file had been kept in the wrong folder for months.",
+      "cn": "那個檔案已經被放在錯誤的資料夾好幾個月了。",
+      "why": "had been doing 沒有被動形，所以被動一律用 had been 加過去分詞。想保留長度就把它寫成副詞片語 for months，放在句尾。這樣讀者既知道不是誰的錯被點名，也知道事情拖了多久。"
+    },
+    {
+      "key": "wrongbase",
+      "icon": "cross",
+      "title": "基準點選錯",
+      "titleCn": "had 還是 have",
+      "ask": "現在還在繼續的事該用哪一個？",
+      "en": "I have been using this laptop since my first week here.",
+      "cn": "我從到職第一週就一直用這台筆電。",
+      "why": "這台筆電現在還在用，基準點就是現在，所以用 have been using。改成 had been using，讀者會以為你早就換掉了。中文的「我從第一週就一直用」沒有選基準點這個動作，所以要特別提醒自己先問「現在還算不算」。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要在稽核報告裡寫：我們發現問題的時候，那台機器已經超出公差兩個月了。"
+    },
+    {
+      "label": "釘住主時間點",
+      "text": "「我們發現問題」是基準點，用過去簡單式：We identified the problem."
+    },
+    {
+      "label": "決定重點",
+      "text": "兩個月這個長度就是重點，所以選攤開過程的形狀，不是只報結果。"
+    },
+    {
+      "label": "寫出來",
+      "text": "The machine had been running out of tolerance for two months when we identified the problem."
+    },
+    {
+      "label": "換個說法並對照",
+      "text": "只報結果就寫 The machine had drifted out of tolerance，少了兩個月，責任的味道就淡很多；想不點名是誰沒發現，就改被動 The deviation had been overlooked for two months."
+    }
+  ],
+  "comparison": {
+    "title": "過程 vs 結果",
+    "left": {
+      "tag": "HAD BEEN DOING",
+      "tagCn": "攤開過程",
+      "icon": "cycle",
+      "head": "how long it went on",
+      "headCn": "持續了多久",
+      "en": "Water had been leaking under the floor all winter.",
+      "cn": "整個冬天地板下都在漏水。",
+      "pts": [
+        "配 for、since、all，不配次數",
+        "常用來解釋現場看到的痕跡",
+        "沒有被動形，狀態動詞也不能用"
+      ]
+    },
+    "right": {
+      "tag": "HAD DONE",
+      "tagCn": "只報結果",
+      "icon": "flag",
+      "head": "what was already done",
+      "headCn": "已經完成什麼",
+      "en": "The owner had replaced two pipes by March.",
+      "cn": "到三月為止屋主已經換了兩根管子。",
+      "pts": [
+        "配次數、數量、程度",
+        "適合會議紀錄與摘要",
+        "被動是 had been 加過去分詞"
+      ]
+    },
+    "note": "判斷口訣：句子裡講得出「多久」就攤開過程，講得出「幾次、幾個」就只報結果；兩者都講不出來，就留在過去簡單式。"
+  },
+  "quizMore": [
+    {
+      "q": "The warehouse floor was soaked because a pipe ___ since the weekend.",
+      "opts": [
+        "had leaked",
+        "had been leaking",
+        "has been leaking",
+        "had been leaked"
+      ],
+      "ans": 1,
+      "expl": "since the weekend 是長度，而且地板濕是現場痕跡，所以攤開過程用 had been leaking。整句在過去，不能用 has。"
+    },
+    {
+      "q": "Before the deadline moved, the designer ___ the cover three times.",
+      "opts": [
+        "had been redrawing",
+        "had redrawn",
+        "has redrawn",
+        "had been redrawn"
+      ],
+      "ans": 1,
+      "expl": "three times 是次數，只能走 had done。had been redrawn 是被動，會變成設計師被重畫。"
+    }
+  ]
+},
+"dg20261002b1p": {
+  "vis": true,
+  "oneLine": "have got 不是時態，只是 have 的口語替身——而這個替身只在「現在式加擁有」這一個場合上場。",
+  "map": {
+    "when": "你想說某人擁有什麼、長什麼樣、哪裡不舒服，而且講的是現在的時候",
+    "why": "中文的「有」一個字包了擁有和動作兩種意思，英文卻把它們分成兩種 have，只有前者能加 got",
+    "form": "狀態現在式：have 或 have got　|　動作、過去、未來：只能用 have"
+  },
+  "visual": {
+    "type": "matrix",
+    "cap": "橫向看每一列：左欄是中性、書面也能用的 have，中欄是口語的 have got，右欄是學生最常寫出來的錯誤版本。只有前兩列的中欄填得進去，後兩列的中欄一填就是錯的，這就是 have got 的活動範圍。",
+    "cols": [
+      "have（中性，書面可用）",
+      "have got（口語，只有現在式）",
+      "常見錯誤"
+    ],
+    "rows": [
+      {
+        "h": "擁有東西",
+        "cells": [
+          {
+            "en": "They have a small van for deliveries.",
+            "cn": "他們有一台小貨車送貨。"
+          },
+          {
+            "en": "They have got a small van for deliveries.",
+            "cn": "他們有一台小貨車送貨。（口語）",
+            "hi": true
+          },
+          {
+            "en": "They are having a small van for deliveries.",
+            "cn": "（錯）擁有是狀態，沒有進行式"
+          }
+        ]
+      },
+      {
+        "h": "特徵與身體狀況",
+        "cells": [
+          {
+            "en": "My father has a very deep voice.",
+            "cn": "我爸爸的聲音很低。"
+          },
+          {
+            "en": "My father has got a very deep voice.",
+            "cn": "我爸爸的聲音很低。（口語）",
+            "hi": true
+          },
+          {
+            "en": "My father is having a very deep voice.",
+            "cn": "（錯）特徵不會正在發生"
+          }
+        ]
+      },
+      {
+        "h": "動作片語",
+        "cells": [
+          {
+            "en": "We have a short meeting every Monday.",
+            "cn": "我們每個星期一開一場短會。",
+            "hi": true
+          },
+          {
+            "en": "We have got a short meeting every Monday.",
+            "cn": "（錯）開會是動作，不能加 got"
+          },
+          {
+            "en": "We are having got a short meeting right now.",
+            "cn": "（錯）進行式和 got 不能同時出現"
+          }
+        ]
+      },
+      {
+        "h": "離開現在式",
+        "cells": [
+          {
+            "en": "In her first job she had no desk of her own.",
+            "cn": "第一份工作時她連自己的桌子都沒有。",
+            "hi": true
+          },
+          {
+            "en": "In her first job she had got no desk of her own.",
+            "cn": "（錯）have got 沒有過去式"
+          },
+          {
+            "en": "Had she got a desk in her first job?",
+            "cn": "（錯）過去式的問句要用 Did she have"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "own",
+      "icon": "house",
+      "title": "擁有與特徵",
+      "titleCn": "唯一能互換的場合",
+      "ask": "什麼時候 have 和 have got 真的可以隨便挑？",
+      "en": "Their office has got three meeting rooms on this floor.",
+      "cn": "他們辦公室在這一層有三間會議室。",
+      "why": "主詞擁有某樣東西、而且講的是現在，這是 have got 唯一的地盤，兩種寫法意思完全一樣。挑哪一個只看場合：跟同事講話用 have got 最自然，寫進說明文件就換回 have。"
+    },
+    {
+      "key": "action",
+      "icon": "tool",
+      "title": "動作片語",
+      "titleCn": "加了 got 就錯",
+      "ask": "為什麼 have lunch 不能說成 have got lunch？",
+      "en": "The night shift is having a break in the canteen.",
+      "cn": "夜班的人正在餐廳休息。",
+      "why": "have lunch、have a break、have a look 這些片語裡的 have 是動作動詞，不是「擁有」。動作動詞可以有進行式，所以 is having 完全正確；而 have got 只能講狀態，一加上去就衝突了。測試方法：能寫成 is having 的就是動作，那就不要加 got。"
+    },
+    {
+      "key": "ask",
+      "icon": "money",
+      "title": "問句與否定",
+      "titleCn": "兩套不能各拿一半",
+      "ask": "問「你有沒有零錢」有幾種正確寫法？",
+      "en": "Do you have any small change for the machine?",
+      "cn": "你有零錢可以投那台機器嗎？",
+      "why": "有兩套：走 do 的 Do you have 和走 have 的 Have you got，兩套都對。錯的是各拿一半，寫成 Do you have got。美式英文與正式文件偏好 do 那一套，所以寫作時直接選它最安全。"
+    },
+    {
+      "key": "tense",
+      "icon": "fork",
+      "title": "換時態",
+      "titleCn": "got 要先拿掉",
+      "ask": "講過去或未來的時候 got 去哪裡了？",
+      "en": "Next month every technician will have a tablet instead of a clipboard.",
+      "cn": "下個月每位技術員都會有一台平板，不用再拿板夾。",
+      "why": "have got 只有現在式這一種形狀，所以句子一旦離開現在式，got 就沒有位置了。過去用 had、未來用 will have、不定詞用 to have。中文的「有」在任何時間都是同一個字，所以這個反射動作要靠練習養成。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要跟越南同事說：我們廠裡有兩台備用壓力計，不過去年只有一台。"
+    },
+    {
+      "label": "先分類",
+      "text": "「有兩台備用壓力計」是擁有加現在式，所以兩種寫法都能用。"
+    },
+    {
+      "label": "挑語氣",
+      "text": "口頭講話就說 We have got two spare pressure gauges in the plant."
+    },
+    {
+      "label": "處理後半句",
+      "text": "「去年只有一台」離開現在式了，got 要拿掉：Last year we had only one."
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "寫成 Last year we had got only one 就錯了；如果要寫成問句問對方，也要說 Did you have a spare one last year? 而不是 Had you got one?"
+    }
+  ],
+  "comparison": {
+    "title": "狀態的 have vs 動作的 have",
+    "left": {
+      "tag": "STATE",
+      "tagCn": "狀態：可以加 got",
+      "icon": "key",
+      "head": "something you possess",
+      "headCn": "你擁有的東西或特徵",
+      "en": "She has got a Vietnamese driving licence.",
+      "cn": "她有越南的駕照。",
+      "pts": [
+        "只有現在式能加 got",
+        "沒有進行式",
+        "問句可以用 Have you got"
+      ]
+    },
+    "right": {
+      "tag": "ACTION",
+      "tagCn": "動作：不能加 got",
+      "icon": "bubble",
+      "head": "something you do",
+      "headCn": "你做的事",
+      "en": "She is having a video call with the client.",
+      "cn": "她正在跟客戶視訊。",
+      "pts": [
+        "可以有進行式",
+        "過去式就是 had，沒有 had got",
+        "問句一律走 do 或 did"
+      ]
+    },
+    "note": "判斷口訣：把句子改成 is having 試一次，講得通就是動作，不能加 got；講不通就是狀態，才輪到 have got 上場。"
+  },
+  "quizMore": [
+    {
+      "q": "___ a moment to check the serial number before I send the report?",
+      "opts": [
+        "Do you have got",
+        "Have you got",
+        "Are you having",
+        "Had you got"
+      ],
+      "ans": 1,
+      "expl": "have got 的問句助動詞是 have，所以是 Have you got。寫成 Do you have a moment 也對，但不能把 do 和 got 放在一起。"
+    },
+    {
+      "q": "When the line was new, it ___ only one inspection point.",
+      "opts": [
+        "has got",
+        "had got",
+        "had",
+        "is having"
+      ],
+      "ans": 2,
+      "expl": "was new 把句子推到過去，have got 沒有過去式，所以只能用 had。"
+    }
+  ]
+},
+"dg20261002b2": {
+  "vis": true,
+  "oneLine": "文法上兩種都對的時候，決定權就交給語域——have got 像在講話，have 像在寫文件，再往上還有 hold 和 be required to。",
+  "map": {
+    "when": "同一件事要分別寫進對話、內部郵件和對外文件的時候",
+    "why": "讀者會從你選的字判斷你跟他的距離，選錯不是文法錯，是場合錯",
+    "form": "口語 have got　|　中性 have　|　正式 hold、carry、be required to"
+  },
+  "visual": {
+    "type": "scale",
+    "cap": "一條從「跟同事閒聊」滑到「寫進合約」的光譜：越往右，動詞越具體、主觀的人越少出現、也越禁得起查證。同一個事實放在不同位置，讀者對你的專業判斷就不一樣。",
+    "lo": "最口語",
+    "hi": "最正式",
+    "stops": [
+      {
+        "at": 10,
+        "label": "have got",
+        "labelCn": "面對面講話",
+        "en": "We have got a spare gauge somewhere.",
+        "cn": "我們某個地方有一台備用的壓力計。"
+      },
+      {
+        "at": 38,
+        "label": "have",
+        "labelCn": "內部郵件",
+        "en": "We have one spare gauge in the tool room.",
+        "cn": "工具室裡有一台備用壓力計。"
+      },
+      {
+        "at": 68,
+        "label": "carry / hold",
+        "labelCn": "對外說明",
+        "en": "The tool room carries one calibrated spare gauge.",
+        "cn": "工具室備有一台已校正的備用壓力計。"
+      },
+      {
+        "at": 95,
+        "label": "be + 名詞化",
+        "labelCn": "規格書與合約",
+        "en": "One calibrated spare gauge is kept on site at all times.",
+        "cn": "廠內須全時保有一台已校正的備用壓力計。"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "client",
+      "icon": "book",
+      "title": "寫給客戶",
+      "titleCn": "先問動作是什麼",
+      "ask": "為什麼客戶信裡不該出現 have got？",
+      "en": "We have reviewed your request and will reply by Thursday.",
+      "cn": "我們已經看過您的需求，星期四前會回覆。",
+      "why": "have got 的語域太低，而且它常被當成萬用動詞，把真正的動作藏起來。改寫的第一步不是把 got 刪掉，而是問自己這個 have 真正在做什麼：收到就寫 received，看過就寫 reviewed，準備好就寫 prepared。語域和精準度會一起提升。"
+    },
+    {
+      "key": "rule",
+      "icon": "pin",
+      "title": "寫規定",
+      "titleCn": "把人從句子裡拿掉",
+      "ask": "怎麼把要求寫得像制度而不像命令？",
+      "en": "Contractors are required to sign in before entering the yard.",
+      "cn": "承攬商進入場區前須先簽到。",
+      "why": "You have got to sign in 像在吼人，You must sign in 聽起來是「我要你」，are required to 則把要求放在規定本身，誰都躲不掉也誰都不針對。英文的正式文件很喜歡這種拿掉主詞的寫法，因為責任落在制度上，不落在寫信的人身上。"
+    },
+    {
+      "key": "obligation",
+      "icon": "star",
+      "title": "壓力從哪來",
+      "titleCn": "have to 與 must 的分工",
+      "ask": "外在規定和自己的決心該用哪一個？",
+      "en": "I really must start replying to emails before noon.",
+      "cn": "我真的該開始在中午前回信了。",
+      "why": "must 多半是自己給自己的壓力或強烈判斷，所以用在這種自我約束的句子裡最自然。反過來說，公司規定、法規、期限這些外在壓力走 have to 或 be required to。中文的「必須」兩種情況共用一個字，所以英文這個分工要刻意練。"
+    },
+    {
+      "key": "fixed",
+      "icon": "bubble",
+      "title": "動不了的口語",
+      "titleCn": "整句背下來",
+      "ask": "哪些 have got 不能換成 have？",
+      "en": "I have got a feeling this batch will need a second check.",
+      "cn": "我有種感覺這一批需要再檢一次。",
+      "why": "have got a feeling、have got to be joking、have got some nerve 這幾句是固定搭配，換成 have 之後語氣就平掉了。它們屬於口語，寫進正式報告會突兀，但在會議上講出來非常自然。遇到這類固定說法就整句背，不要套改寫規則。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要把同一件事寫三次：跟同事口頭講、寫進內部週報、回給客戶。"
+    },
+    {
+      "label": "口頭版",
+      "text": "最自然的是 We have got two units on hold until the retest."
+    },
+    {
+      "label": "週報版",
+      "text": "內部文件換成中性的 have：Two units are on hold pending a retest."
+    },
+    {
+      "label": "客戶版",
+      "text": "對外再往上一格，把動作寫清楚：Two units have been placed on hold and will be retested on Monday."
+    },
+    {
+      "label": "回頭檢查",
+      "text": "三個版本的事實完全一樣，變的只有距離感。如果你在客戶版裡留下 have got，對方讀到的不只是資訊，還會讀到「這家供應商很隨便」。"
+    }
+  ],
+  "comparison": {
+    "title": "口語 vs 書面",
+    "left": {
+      "tag": "SPOKEN",
+      "tagCn": "口語：拉近距離",
+      "icon": "bubble",
+      "head": "talking to someone you know",
+      "headCn": "跟熟人說話",
+      "en": "We have got to get this out before Friday.",
+      "cn": "我們得在星期五前把這個弄出去。",
+      "pts": [
+        "have got、have got to、gonna 這一類",
+        "會議上、電話裡最自然",
+        "固定說法不要硬改"
+      ]
+    },
+    "right": {
+      "tag": "WRITTEN",
+      "tagCn": "書面：禁得起查證",
+      "icon": "balance",
+      "head": "writing for the record",
+      "headCn": "寫下來存檔",
+      "en": "The shipment is required to leave before Friday.",
+      "cn": "該批貨須在星期五前出貨。",
+      "pts": [
+        "have、hold、carry、be required to",
+        "主詞常是事實而不是人",
+        "動詞越具體越好"
+      ]
+    },
+    "note": "判斷口訣：先問這句話會被誰讀到、會不會被存檔；會存檔就把 got 拿掉，再挑一個更具體的動詞。"
+  },
+  "quizMore": [
+    {
+      "q": "Which sentence best fits a calibration certificate?",
+      "opts": [
+        "The gauge has got a valid calibration.",
+        "The gauge has a valid calibration.",
+        "The gauge holds a valid calibration until 30 June.",
+        "The gauge has got to be calibrated sometime."
+      ],
+      "ans": 2,
+      "expl": "證書要禁得起查證，所以用具體動詞 holds 再加上明確日期。前兩個語域偏低也不夠精準，最後一個 sometime 完全不能寫進證書。"
+    },
+    {
+      "q": "A colleague says the deadline moved to tomorrow. Which reply sounds most natural in speech?",
+      "opts": [
+        "You are required to be joking.",
+        "You have to be joking.",
+        "You have got to be joking.",
+        "You must be joking me."
+      ],
+      "ans": 2,
+      "expl": "這是固定的口語說法，只有 have got to 的形狀留得住那個驚訝的語氣。換成 have to 或 are required to 就變成在講義務了。"
+    }
+  ]
+},
+
+
 /* ---------- 2026-09-29 每日文法（過去完成式與過去完成進行式） ---------- */
 "dg20260929a2": {
   "vis": true,

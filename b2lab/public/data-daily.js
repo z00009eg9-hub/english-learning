@@ -7,6 +7,800 @@
 window.DAILY = {
 
 articles:[
+/* ---------- 2026-10-02 每日文章（健康與醫療） ---------- */
+{
+  "id": "d20261002a2",
+  "date": "2026-10-02",
+  "level": "A2",
+  "topic": "健康",
+  "words": 101,
+  "kind": "orig",
+  "title": "Tom Gets His Flu Shot",
+  "titleCn": "Tom去打流感疫苗",
+  "focus": "講每年的習慣用現在簡單式，講昨天用過去簡單式，講此刻用現在進行式，講還沒發生的事用 will 和 can",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "十月到了，Tom去公司附近的診所打流感疫苗。請注意四組動詞的分工：gets、opens 講的是每年或每天都這樣；called、said、wrote 後面接的是昨天；is sitting、is reading 講的是此刻正在做；will call、will take、can go 講的是還沒發生的事。第三段還有 There are 這種「有幾個人」的句型。",
+  "spoken": [
+    {
+      "en": "Flu shot season again. Same clinic, same chair.",
+      "cn": "又到了打流感疫苗的季節，同一間診所、同一張椅子。"
+    },
+    {
+      "en": "Twelve people ahead of me. I'm not going anywhere.",
+      "cn": "我前面還有十二個人，我是走不了了。"
+    },
+    {
+      "en": "Ten seconds, that's it? I waited an hour for ten seconds.",
+      "cn": "十秒就好？我等一小時就為了這十秒。"
+    },
+    {
+      "en": "Back at my desk before lunch. Not bad.",
+      "cn": "午餐前就回到位子上了，還不錯。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "October is here, and the clinic near Tom's office is busy. Tom gets a flu shot there every autumn. This year he books one for Friday morning.",
+      "cn": "十月到了，Tom辦公室附近的診所很忙。Tom每年秋天都在那裡打流感疫苗。今年他預約了星期五早上。"
+    },
+    {
+      "en": "Yesterday a nurse called him about the time. She said the clinic opens at nine o'clock. Tom wrote the time down on his hand.",
+      "cn": "昨天有一位護理師打電話跟他講時間。她說診所九點開門。Tom把時間寫在手上。"
+    },
+    {
+      "en": "Right now Tom is sitting in the waiting room. There are twelve people in front of him. He is reading a poster about fever and rest.",
+      "cn": "現在Tom正坐在候診室裡。他前面有十二個人。他正在看一張關於發燒和休息的海報。"
+    },
+    {
+      "en": "The nurse will call his name very soon. The shot will take only about ten seconds. Tom can go back to work before lunch.",
+      "cn": "護理師很快就會叫他的名字。打針只會花大約十秒。Tom午餐前就可以回去上班。"
+    }
+  ],
+  "target": [
+    {
+      "w": "clinic",
+      "ipa": "/ˈklɪnɪk/",
+      "pos": "n.",
+      "cn": "診所",
+      "def": "A small place where you see a doctor.",
+      "ex": "A small clinic opened next to the night market.",
+      "exCn": "夜市旁邊開了一間小診所。"
+    },
+    {
+      "w": "nurse",
+      "ipa": "/nɝːs/",
+      "pos": "n.",
+      "cn": "護理師",
+      "def": "A person whose job is to look after sick people.",
+      "ex": "The nurse put a small bandage on my arm.",
+      "exCn": "護理師在我手臂上貼了一小塊紗布。"
+    },
+    {
+      "w": "shot",
+      "ipa": "/ʃɑːt/",
+      "pos": "n.",
+      "cn": "注射、打針",
+      "def": "Medicine that a nurse puts into your body with a needle.",
+      "ex": "My sister cried for one second after the shot.",
+      "exCn": "我妹妹打完針哭了一秒鐘。"
+    },
+    {
+      "w": "fever",
+      "ipa": "/ˈfiː.vɚ/",
+      "pos": "n.",
+      "cn": "發燒",
+      "def": "When your body is hotter than normal because you are sick.",
+      "ex": "Her baby had a high fever all night.",
+      "exCn": "她的寶寶整晚都在發高燒。"
+    },
+    {
+      "w": "rest",
+      "ipa": "/rest/",
+      "pos": "n./v.",
+      "cn": "休息",
+      "def": "To stop working and let your body get better.",
+      "ex": "The doctor told him to rest for three days.",
+      "exCn": "醫生叫他休息三天。"
+    },
+    {
+      "w": "busy",
+      "ipa": "/ˈbɪzi/",
+      "pos": "adj.",
+      "cn": "忙的、人多的",
+      "def": "Full of people or full of work.",
+      "ex": "The post office is always busy on Monday mornings.",
+      "exCn": "郵局星期一早上總是很多人。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is Tom doing right now in the story?",
+      "qCn": "故事裡Tom現在正在做什麼？",
+      "opts": [
+        "A. Walking to the clinic",
+        "B. Sitting in the waiting room",
+        "C. Talking to the doctor",
+        "D. Buying medicine"
+      ],
+      "optsCn": [
+        "A. 走去診所",
+        "B. 坐在候診室裡",
+        "C. 跟醫生講話",
+        "D. 買藥"
+      ],
+      "ans": 1,
+      "expl": "Right now Tom is sitting in the waiting room.——is sitting 是現在進行式，講的就是此刻。"
+    },
+    {
+      "q": "Who called Tom yesterday?",
+      "qCn": "昨天是誰打電話給Tom？",
+      "opts": [
+        "A. His boss",
+        "B. A nurse",
+        "C. His sister",
+        "D. A bus driver"
+      ],
+      "optsCn": [
+        "A. 他的老闆",
+        "B. 一位護理師",
+        "C. 他的妹妹",
+        "D. 一位公車司機"
+      ],
+      "ans": 1,
+      "expl": "Yesterday a nurse called him about the time.——called 是過去式，所以是昨天發生的事。"
+    },
+    {
+      "q": "Right now Tom ___ in the waiting room.",
+      "qCn": "現在Tom正坐在候診室裡。（選出正確的動詞形式）",
+      "opts": [
+        "A. sit",
+        "B. sits",
+        "C. is sitting",
+        "D. sat"
+      ],
+      "ans": 2,
+      "expl": "Right now 是「此刻」，要用現在進行式 is sitting。sits 是講每天的習慣，sat 是昨天的事，sit 前面少了be動詞。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "There are twelve people in front of him.",
+      "b2": "Twelve people are still ahead of him in the queue.",
+      "note": "原句用 There are 只是報數字。升級版把 twelve people 直接當主詞，再用 still（還）和 ahead of him in the queue（在他前面排著）說出「他還要等」這件事。同樣一句話，讀者多知道了Tom的心情。",
+      "sp": "Twelve to go. Great.",
+      "spNote": "to go 是口語的「還剩下」，後面接 Great 其實是反話，聽起來很像真人在抱怨。",
+      "b1Cn": "他前面有十二個人。",
+      "b2Cn": "還有十二個人排在他前面。",
+      "spCn": "還有十二個，真棒。"
+    },
+    {
+      "b1": "Tom can go back to work before lunch.",
+      "b2": "Tom should be back at his desk well before lunch.",
+      "note": "can 只說「可以」，be back at his desk 把畫面講得更具體（回到座位，不只是回去上班）。should 在這裡不是「應該要」，而是「照這樣看應該會」，再加 well before（遠早於）就把時間感也補上了。",
+      "sp": "He'll be back at his desk with time to spare.",
+      "spNote": "with time to spare（還有剩的時間）是很常用的口語說法，比 early 生動。",
+      "b1Cn": "Tom午餐前可以回去上班。",
+      "b2Cn": "Tom應該會遠在午餐前就回到座位上。",
+      "spCn": "他會回到位子上，而且時間還很充裕。"
+    }
+  ]
+},
+{
+  "id": "d20261002b1",
+  "date": "2026-10-02",
+  "level": "B1",
+  "topic": "健康",
+  "words": 127,
+  "kind": "orig",
+  "title": "Anita Has Never Liked Needles",
+  "titleCn": "Anita從來就不喜歡打針",
+  "focus": "現在完成式講「到現在為止的經驗」（has worked／has had／has never liked／has not booked），搭配比較級 shorter／faster／quieter 和 because／so／when／but",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Anita在越南工作，每年都打流感疫苗，但她一直很怕針。請注意兩種時態的分工：has worked、has had、has never liked、has not booked 講的是「從過去累積到現在」；opened、was、signed、asked、took 講的是已經結束的某一次。另外找出三個比較級 shorter、faster、quieter，看看它們各自在比什麼。",
+  "spoken": [
+    {
+      "en": "Four years, four shots. I still look away every time.",
+      "cn": "四年打了四針，我每次還是把頭轉開。"
+    },
+    {
+      "en": "Second floor now? That beats queuing at the clinic.",
+      "cn": "現在搬到二樓了？那比在診所排隊好多了。"
+    },
+    {
+      "en": "Eleven minutes, door to door. Last year took an hour.",
+      "cn": "從進門到出門十一分鐘，去年花了一小時。"
+    },
+    {
+      "en": "Go Friday. It's quiet up there, and the nurses are lovely.",
+      "cn": "你星期五去吧，上面很安靜，護理師也很好。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita has worked in Vietnam for four years, and she has had a flu shot every single year. She still does not enjoy it, because she has never liked needles.",
+      "cn": "Anita在越南工作四年了，而且她每一年都打流感疫苗。她還是不喜歡打針，因為她從來就不喜歡針。"
+    },
+    {
+      "en": "This week her company opened a small vaccination room on the second floor. The queue was shorter than the queue at the public clinic, so Anita signed up at once.",
+      "cn": "這星期她公司在二樓開了一間小小的疫苗接種室。那裡的隊伍比公立診所的隊伍短，所以Anita馬上就報名了。"
+    },
+    {
+      "en": "A nurse asked her a few questions and checked her arm. The whole visit took eleven minutes, and that was much faster than last year.",
+      "cn": "一位護理師問了她幾個問題，也檢查了她的手臂。整個過程花了十一分鐘，比去年快多了。"
+    },
+    {
+      "en": "Anita told her colleague Mai about it when she got back to her desk. Mai has not booked a time yet, but she wants to go on Friday. Anita said the room is quieter than the clinic, and the nurses are kind.",
+      "cn": "Anita回到座位時跟同事Mai講了這件事。Mai還沒有預約時間，但她想星期五去。Anita說那間房間比診所安靜，護理師也很親切。"
+    }
+  ],
+  "target": [
+    {
+      "w": "needle",
+      "ipa": "/ˈniːdl/",
+      "pos": "n.",
+      "cn": "針",
+      "def": "A thin sharp metal tool used to give medicine or to sew.",
+      "ex": "The tailor dropped a needle under the table.",
+      "exCn": "裁縫師把一根針掉到桌子底下。"
+    },
+    {
+      "w": "queue",
+      "ipa": "/kjuː/",
+      "pos": "n./v.",
+      "cn": "隊伍、排隊",
+      "def": "A line of people waiting for something.",
+      "ex": "A long queue formed outside the ticket office.",
+      "exCn": "售票處外面排起了長長的隊伍。"
+    },
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "Someone who works in the same place as you.",
+      "ex": "My colleague drives me to the station on rainy days.",
+      "exCn": "下雨天我同事會載我去車站。"
+    },
+    {
+      "w": "book",
+      "ipa": "/bʊk/",
+      "pos": "v.",
+      "cn": "預約、訂",
+      "def": "To arrange a place or a time before you go.",
+      "ex": "We booked a table for six on Saturday evening.",
+      "exCn": "我們訂了星期六晚上六人的位子。"
+    },
+    {
+      "w": "vaccination",
+      "ipa": "/ˌvæk.səˈneɪ.ʃən/",
+      "pos": "n.",
+      "cn": "疫苗接種",
+      "def": "The act of giving someone medicine that stops an illness.",
+      "ex": "The vaccination record is printed on the yellow card.",
+      "exCn": "接種紀錄印在那張黃色卡片上。"
+    },
+    {
+      "w": "quiet",
+      "ipa": "/ˈkwaɪət/",
+      "pos": "adj.",
+      "cn": "安靜的",
+      "def": "With little noise.",
+      "ex": "The library stays quiet until the exam week ends.",
+      "exCn": "圖書館一直很安靜，直到考試週結束。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How long has Anita worked in Vietnam?",
+      "qCn": "Anita在越南工作多久了？",
+      "opts": [
+        "A. Four months",
+        "B. One year",
+        "C. Four years",
+        "D. Eleven years"
+      ],
+      "optsCn": [
+        "A. 四個月",
+        "B. 一年",
+        "C. 四年",
+        "D. 十一年"
+      ],
+      "ans": 2,
+      "expl": "Anita has worked in Vietnam for four years.——has worked ... for four years 表示從四年前累積到現在，她現在還在越南。"
+    },
+    {
+      "q": "Why did Anita sign up at once?",
+      "qCn": "Anita為什麼馬上就報名了？",
+      "opts": [
+        "A. The shot was free that week",
+        "B. The queue was shorter than at the public clinic",
+        "C. Her boss told her to go",
+        "D. She was already feeling sick"
+      ],
+      "optsCn": [
+        "A. 那星期打針免費",
+        "B. 隊伍比公立診所的短",
+        "C. 她老闆叫她去",
+        "D. 她已經覺得不舒服了"
+      ],
+      "ans": 1,
+      "expl": "The queue was shorter than the queue at the public clinic, so Anita signed up at once.——so 前面那一句就是原因，其他三個選項文章都沒提到。"
+    },
+    {
+      "q": "Mai ___ a time yet, but she wants to go on Friday.",
+      "qCn": "Mai還沒有預約時間，但她想星期五去。（選出正確的動詞形式）",
+      "opts": [
+        "A. did not book",
+        "B. has not booked",
+        "C. does not book",
+        "D. not booked"
+      ],
+      "ans": 1,
+      "expl": "yet（還沒）講的是「到現在為止還沒做」，要用現在完成式 has not booked。did not book 會變成在講某個已經過完的時間點，跟 yet 配不起來。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The queue was shorter than the queue at the public clinic.",
+      "b2": "The queue was half the length of the one at the public clinic.",
+      "note": "shorter than 只說「比較短」，讀者不知道差多少。升級版用 half the length of（只有一半長）把差距量化，再用 the one 代替重複的 the queue，句子乾淨很多。英文很討厭同一個名詞在一句裡出現兩次。",
+      "sp": "Half the queue, same shot.",
+      "spNote": "把兩個名詞片語直接並排、省掉動詞，是口語裡表達對比最快的方式。",
+      "b1Cn": "那裡的隊伍比公立診所的隊伍短。",
+      "b2Cn": "那裡的隊伍只有公立診所那條的一半長。",
+      "spCn": "隊伍只要一半，針還是同一針。"
+    },
+    {
+      "b1": "She still does not enjoy it, because she has never liked needles.",
+      "b2": "She has never got used to needles, and four years have not changed that.",
+      "note": "原句用 because 把兩件事接起來，邏輯很清楚但有點像在解釋。升級版改用 get used to（習慣）這個片語，再用 four years have not changed that 當第二句，讓「時間過去了但感覺沒變」自己說出來，不必再寫 because。",
+      "sp": "Four years in, still can't look at the needle.",
+      "spNote": "Four years in（都第四年了）和 still can't 是口語裡很常見的組合，用來講「照理說該習慣了卻還是沒有」。",
+      "b1Cn": "她還是不喜歡打針，因為她從來就不喜歡針。",
+      "b2Cn": "她從來沒習慣過針，四年也沒改變這件事。",
+      "spCn": "都第四年了，還是不敢看那根針。"
+    }
+  ]
+},
+{
+  "id": "d20261002b1p",
+  "date": "2026-10-02",
+  "level": "B1+",
+  "topic": "新聞·健康與醫療",
+  "words": 202,
+  "kind": "news",
+  "title": "A Flu Peak Is Forecast, and Seven Million Doses Are Ready",
+  "titleCn": "流感高峰本週到頂，七百萬劑疫苗已就位",
+  "source": "改寫自 中央社 Focus Taiwan 報導（2026/10/01）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202610010016",
+  "focus": "被動語態（is expected、have been bought、was opened、are being reserved）把焦點放在事情本身，搭配 which／who 關係子句補充說明",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "這是十月初台灣流感疫情與公費疫苗的新聞，事實取自中央社報導，英文由本站重寫。請特別注意被動語態：is expected、have been warned、have been bought、was opened、can be vaccinated、are being reserved，這些句子的主詞都是「事情」而不是「誰做的」。另外找出 which 和 who 引導的關係子句，看看它們各自在補充哪一個名詞。",
+  "spoken": [
+    {
+      "en": "A hundred and fifty thousand visits in one week? That's a lot.",
+      "cn": "一週十五萬人次？那很多啊。"
+    },
+    {
+      "en": "Seven million doses. First time they've gone over seven.",
+      "cn": "七百萬劑，第一次超過七百萬。"
+    },
+    {
+      "en": "My mum's sixty-eight, so she can go from today.",
+      "cn": "我媽六十八歲，所以她今天就可以去打。"
+    },
+    {
+      "en": "Fifty and over has to wait until November. Noted.",
+      "cn": "五十歲以上要等到十一月，知道了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Taiwan's flu season has arrived early this year, and the worst week is expected to be this one. Health officials have warned that clinics and emergency rooms could record between 140,000 and 150,000 visits for flu-like illness in a single week. The figure covers both outpatient clinics and emergency rooms, which are counted together every week.",
+      "cn": "台灣今年的流感季來得早，而最嚴重的一週預計就是這一週。衛生主管機關警告，一週之內診所與急診室的類流感就診人次可能達到十四萬到十五萬。這個數字把門診和急診合起來算，兩者每週是一起統計的。"
+    },
+    {
+      "en": "More than seven million doses of flu vaccine have been bought for this season, the first time the figure has passed that mark. The first stage of the free program was opened on October 1 to people aged 65 and over, Indigenous residents aged 55 and over, preschool children and pregnant women.",
+      "cn": "本季採購的流感疫苗超過七百萬劑，這個數字第一次突破七百萬。公費接種的第一階段在十月一日開放，對象是六十五歲以上民眾、五十五歲以上原住民、學齡前幼兒與孕婦。"
+    },
+    {
+      "en": "A second stage will begin on November 2, when adults aged 50 and over without high-risk chronic conditions can also be vaccinated. Enhanced shots are being reserved first for residents aged 65 and over who live in long-term care homes.",
+      "cn": "第二階段將於十一月二日開始，屆時五十歲以上、沒有高風險慢性病的成人也可以接種。增強型疫苗則優先保留給住在長照機構、六十五歲以上的住民。"
+    },
+    {
+      "en": "The CDC's director-general, Lo Yi-chun, said vaccination should bring the wave down faster, and a clear drop is expected by the middle of October. Even so, activity is likely to stay high until mid-November. Health Minister Shih Chung-liang reminded the public that autumn and winter are the peak months for both influenza and COVID-19.",
+      "cn": "疾管署署長羅一鈞表示，接種疫苗應該能讓這一波疫情更快降下來，十月中旬預計會看到明顯下降。即使如此，疫情活躍度可能會持續到十一月中。衛福部長石崇良提醒民眾，秋冬是流感與COVID-19的流行高峰期。"
+    }
+  ],
+  "target": [
+    {
+      "w": "outpatient",
+      "ipa": "/ˈaʊtpeɪʃnt/",
+      "pos": "n./adj.",
+      "cn": "門診（病人）",
+      "def": "A patient who visits a hospital but does not stay the night.",
+      "ex": "An outpatient visit usually costs less than a night in hospital.",
+      "exCn": "看門診通常比住院一晚便宜。"
+    },
+    {
+      "w": "dose",
+      "ipa": "/doʊs/",
+      "pos": "n.",
+      "cn": "劑量、一劑",
+      "def": "One measured amount of a medicine.",
+      "ex": "A second dose of the medicine made him sleepy.",
+      "exCn": "第二劑藥讓他想睡。"
+    },
+    {
+      "w": "chronic",
+      "ipa": "/ˈkrɑː.nɪk/",
+      "pos": "adj.",
+      "cn": "慢性的",
+      "def": "Lasting for a long time and hard to cure.",
+      "ex": "Her chronic back pain gets worse in cold weather.",
+      "exCn": "她的慢性背痛在天冷時會更嚴重。"
+    },
+    {
+      "w": "vaccinate",
+      "ipa": "/ˈvæk.sə.neɪt/",
+      "pos": "v.",
+      "cn": "接種疫苗",
+      "def": "To give someone medicine that stops an illness.",
+      "ex": "The school vaccinated every new pupil in September.",
+      "exCn": "學校在九月為每一位新學生接種。"
+    },
+    {
+      "w": "reserve",
+      "ipa": "/rɪˈzɝːv/",
+      "pos": "v.",
+      "cn": "保留、預留",
+      "def": "To keep something for one person or group only.",
+      "ex": "He reserved two seats near the window.",
+      "exCn": "他預留了兩個靠窗的座位。"
+    },
+    {
+      "w": "peak",
+      "ipa": "/piːk/",
+      "pos": "n./v.",
+      "cn": "高峰、達到高點",
+      "def": "The highest point of something.",
+      "ex": "Traffic peaks at about six in the evening.",
+      "exCn": "車流大約在傍晚六點達到高峰。"
+    },
+    {
+      "w": "stage",
+      "ipa": "/steɪdʒ/",
+      "pos": "n.",
+      "cn": "階段",
+      "def": "One part of a plan that happens in order.",
+      "ex": "The repair work moved into its final stage last week.",
+      "exCn": "修繕工程上週進入最後階段。"
+    },
+    {
+      "w": "resident",
+      "ipa": "/ˈrezɪdənt/",
+      "pos": "n.",
+      "cn": "住民、居民",
+      "def": "A person who lives in a place.",
+      "ex": "Residents on the top floor pay a higher fee.",
+      "exCn": "住在頂樓的住戶要付比較高的費用。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What does the article say about this week?",
+      "qCn": "文章對這一週的說法是什麼？",
+      "opts": [
+        "A. It is expected to be the worst week of the flu season",
+        "B. All clinics will be closed",
+        "C. The vaccine program will end",
+        "D. Cases have already dropped"
+      ],
+      "optsCn": [
+        "A. 預計會是流感季最嚴重的一週",
+        "B. 所有診所都會關門",
+        "C. 疫苗計畫將結束",
+        "D. 病例已經下降了"
+      ],
+      "ans": 0,
+      "expl": "the worst week is expected to be this one——is expected 是被動語態，主詞是 the worst week，所以重點在「最嚴重的那一週」而不是誰在預測。"
+    },
+    {
+      "q": "Who could already be vaccinated from October 1?",
+      "qCn": "從十月一日起，哪些人已經可以接種？",
+      "opts": [
+        "A. Everyone aged 50 and over",
+        "B. People aged 65 and over, Indigenous residents aged 55 and over, preschool children and pregnant women",
+        "C. Only people in long-term care homes",
+        "D. Only health workers"
+      ],
+      "optsCn": [
+        "A. 所有五十歲以上的人",
+        "B. 六十五歲以上民眾、五十五歲以上原住民、學齡前幼兒與孕婦",
+        "C. 只有住在長照機構的人",
+        "D. 只有醫護人員"
+      ],
+      "ans": 1,
+      "expl": "The first stage of the free program was opened on October 1 to people aged 65 and over, Indigenous residents aged 55 and over, preschool children and pregnant women.——五十歲以上要等第二階段，也就是十一月二日。"
+    },
+    {
+      "q": "In the third paragraph, who does the relative clause starting with who describe?",
+      "qCn": "第三段裡 who 引導的關係子句是在補充說明誰？",
+      "opts": [
+        "A. The enhanced shots",
+        "B. Adults aged 50 and over",
+        "C. Residents aged 65 and over",
+        "D. The second stage"
+      ],
+      "optsCn": [
+        "A. 增強型疫苗",
+        "B. 五十歲以上的成人",
+        "C. 六十五歲以上的住民",
+        "D. 第二階段"
+      ],
+      "ans": 2,
+      "expl": "Enhanced shots are being reserved first for residents aged 65 and over who live in long-term care homes.——who 緊接在 residents aged 65 and over 後面，補充說明這些住民住在哪裡。關係子句通常就黏在它要修飾的名詞後面。"
+    },
+    {
+      "q": "More than seven million doses of flu vaccine ___ for this season.",
+      "qCn": "本季採購的流感疫苗超過七百萬劑。（選出正確的動詞形式）",
+      "opts": [
+        "A. have bought",
+        "B. have been bought",
+        "C. are buying",
+        "D. had bought"
+      ],
+      "ans": 1,
+      "expl": "疫苗是「被採購」的，而且重點不是誰買的，所以要用現在完成式的被動 have been bought。have bought 會變成「疫苗自己買了東西」。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Health officials have warned that clinics could record a lot of visits.",
+      "b2": "Clinics have been warned to brace for one of the heaviest weeks of the season.",
+      "note": "原句的主詞是 health officials，讀者的注意力在「誰在警告」。升級版改成被動 have been warned，主詞換成真正受影響的 clinics，再用 brace for（做好準備迎接）這個新聞英文很愛用的動詞片語，語氣立刻專業很多。",
+      "sp": "Clinics are being told to get ready for a rough week.",
+      "spNote": "are being told 和 a rough week 都是口語說法，意思一樣但不像新聞稿。",
+      "b1Cn": "衛生主管機關警告，診所的就診人次可能很多。",
+      "b2Cn": "各診所已被提醒，要為本季最忙的一週做好準備。",
+      "spCn": "診所被告知要為難熬的一週做準備。"
+    },
+    {
+      "b1": "The program started on October 1. People aged 65 and over can get the shot.",
+      "b2": "The program, which opened on October 1, covers everyone aged 65 and over.",
+      "note": "原本兩句各講一件事，讀者要自己把它們接起來。升級版用 which opened on October 1 這個非限定關係子句把日期塞進主詞後面，主線就只剩「計畫涵蓋哪些人」一件事。這是 B2 寫作最常用的壓縮技巧：把次要資訊折進子句。",
+      "sp": "It kicked off on the first, and anyone sixty-five or older is in.",
+      "spNote": "kick off（開跑）和 is in（算在內）都是很口語的說法，講話時比 which 子句自然。",
+      "b1Cn": "計畫在十月一日開始。六十五歲以上的人可以打。",
+      "b2Cn": "這項十月一日開跑的計畫，涵蓋所有六十五歲以上的民眾。",
+      "spCn": "一號就開跑了，六十五歲以上都算在內。"
+    }
+  ]
+},
+{
+  "id": "d20261002b2",
+  "date": "2026-10-02",
+  "level": "B2",
+  "topic": "新聞·健康與醫療",
+  "words": 280,
+  "kind": "news",
+  "title": "The Mask That Is Not About Germs",
+  "titleCn": "那張口罩不是為了防病毒",
+  "source": "改寫自 中央社 Focus Taiwan 報導（2026/10/01）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202610010014",
+  "focus": "用數據當主詞的名詞片語（Almost a quarter of the students、One in five）、among／against 的對比結構，以及 what 引導的名詞子句",
+  "intro": "這是兒童福利聯盟十月一日公布的青少年外貌焦慮調查，事實取自中央社報導，英文由本站重寫。請注意三件事：第一，大量數據怎麼變成句子的主詞（Almost a quarter of the students、One in five、Some 42.8 percent）；第二，among 和 against 怎麼把兩群人擺在一起比；第三，最後一段 what feeling is being hidden behind it 這種 what 名詞子句，整串當受詞用。",
+  "spoken": [
+    {
+      "en": "A third of them? That's not vanity, that's pressure.",
+      "cn": "三分之一？那不是愛漂亮，那是壓力。"
+    },
+    {
+      "en": "Masks in gym class. I'd never have guessed that.",
+      "cn": "體育課還戴口罩，我完全沒想到。"
+    },
+    {
+      "en": "Forty percent heard it from a parent. That's the part that stings.",
+      "cn": "四成是從父母那裡聽來的，這才是最刺的地方。"
+    },
+    {
+      "en": "So taking the mask off isn't the fix. Asking why is.",
+      "cn": "所以把口罩拿掉不是解法，問為什麼才是。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "A survey released in Taipei on October 1 suggests that for many teenagers a face mask has very little to do with germs. The Child Welfare League Foundation questioned 10,345 junior and senior high school students earlier this year, and 35.4 percent of them said they felt anxious about how they looked. Among girls the figure reached 48.7 percent, more than twice the 20.6 percent reported by boys.",
+      "cn": "十月一日在台北公布的一份調查顯示，對許多青少年來說，口罩跟病毒幾乎沒什麼關係。兒童福利聯盟今年稍早訪問了一萬零三百四十五名國中與高中學生，其中百分之三十五點四說自己對外貌感到焦慮。女生的比例達到百分之四十八點七，是男生百分之二十點六的兩倍多。"
+    },
+    {
+      "en": "Almost a quarter of the students, 23.5 percent, said they kept a mask on for more than half of every day purely because of their appearance, and close to 40 percent said they even kept one on while exercising. One in five had thought about a cosmetic procedure, and nearly one in ten said they were interested in GLP-1 weight-loss injections.",
+      "cn": "將近四分之一的學生，也就是百分之二十三點五，說他們每天有超過一半的時間戴著口罩，純粹是因為外貌；接近四成的學生說連運動時都還戴著。五個人裡有一個想過做醫美，接近十個人裡有一個說對GLP-1減重針劑有興趣。"
+    },
+    {
+      "en": "The survey also pointed at the adults in the room. Some 42.8 percent of the students said a parent had commented critically on their face, their figure or their clothes. Among the group with the most severe anxiety, 10.8 percent had parents who did this regularly, against 3.3 percent whose parents rarely did. The emotional cost was visible elsewhere too: 90.4 percent of the students with low anxiety said they had never had suicidal thoughts, while 29.6 percent of those with high anxiety said they had.",
+      "cn": "這份調查也把矛頭指向身邊的大人。約百分之四十二點八的學生說，父母曾批評過他們的臉、身材或穿著。在焦慮最嚴重的那一群裡，有百分之十點八的父母經常這樣講，相對地只有百分之三點三的父母很少這樣講。情緒代價在別的地方也看得見：低焦慮的學生有百分之九十點四說自己從未有過自殺念頭，但高焦慮的學生有百分之二十九點六說有過。"
+    },
+    {
+      "en": "Teng Shan-ting, a counseling psychologist quoted in the report, argued that taking the mask away solves nothing. A mask that is worn in a gym class is a signal, not a habit, and the useful question for a parent is what feeling is being hidden behind it. Listening first, she suggested, works better than any rule about what a child may or may not wear.",
+      "cn": "報告中受訪的諮商心理師鄧善庭認為，把口罩拿掉解決不了任何事。體育課上還戴著的口罩是一個訊號，不是習慣；對父母來說真正有用的問題是，那底下藏著什麼情緒。她建議，先聽，比任何「孩子可以穿什麼、不可以穿什麼」的規定都有效。"
+    }
+  ],
+  "target": [
+    {
+      "w": "survey",
+      "ipa": "/ˈsɝː.veɪ/",
+      "pos": "n.",
+      "cn": "調查",
+      "def": "A set of questions asked to many people to find out what they think.",
+      "ex": "A short survey asked drivers about parking fees.",
+      "exCn": "一份簡短的調查詢問駕駛人對停車費的看法。"
+    },
+    {
+      "w": "anxious",
+      "ipa": "/ˈæŋk.ʃəs/",
+      "pos": "adj.",
+      "cn": "焦慮的",
+      "def": "Worried and uneasy about something.",
+      "ex": "He felt anxious before his first driving test.",
+      "exCn": "第一次路考前他很焦慮。"
+    },
+    {
+      "w": "appearance",
+      "ipa": "/əˈpɪrəns/",
+      "pos": "n.",
+      "cn": "外貌、外觀",
+      "def": "The way a person or thing looks.",
+      "ex": "The appearance of the old hotel has not changed.",
+      "exCn": "那間老旅館的外觀沒有變過。"
+    },
+    {
+      "w": "figure",
+      "ipa": "/ˈfɪɡjɚ/",
+      "pos": "n.",
+      "cn": "數字；身材",
+      "def": "A number in a report, or the shape of a person's body.",
+      "ex": "The sales figure for August arrived late.",
+      "exCn": "八月的業績數字來得很晚。"
+    },
+    {
+      "w": "severe",
+      "ipa": "/sɪˈvɪr/",
+      "pos": "adj.",
+      "cn": "嚴重的",
+      "def": "Very bad or very serious.",
+      "ex": "A severe storm closed the bridge for two days.",
+      "exCn": "一場強烈風暴讓那座橋封閉了兩天。"
+    },
+    {
+      "w": "cosmetic",
+      "ipa": "/kɑːzˈmet̬.ɪk/",
+      "pos": "adj.",
+      "cn": "美容的；表面的",
+      "def": "Done to improve how something looks.",
+      "ex": "The damage was only cosmetic, so the car still runs.",
+      "exCn": "損傷只是外觀上的，所以車子還能開。"
+    },
+    {
+      "w": "psychologist",
+      "ipa": "/saɪˈkɑː.lə.dʒɪst/",
+      "pos": "n.",
+      "cn": "心理師",
+      "def": "A person trained to study how people think and feel.",
+      "ex": "A psychologist visits the factory once a month.",
+      "exCn": "有一位心理師每個月到工廠一次。"
+    },
+    {
+      "w": "signal",
+      "ipa": "/ˈsɪɡnəl/",
+      "pos": "n.",
+      "cn": "訊號",
+      "def": "Something that shows what is happening or what someone feels.",
+      "ex": "A red lamp is the signal to stop the line.",
+      "exCn": "紅燈就是停線的訊號。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "According to the survey, which group reported appearance anxiety most often?",
+      "qCn": "根據這份調查，哪一群人最常表示有外貌焦慮？",
+      "opts": [
+        "A. Boys, at 48.7 percent",
+        "B. Girls, at 48.7 percent",
+        "C. Boys, at 20.6 percent",
+        "D. All students equally"
+      ],
+      "optsCn": [
+        "A. 男生，百分之四十八點七",
+        "B. 女生，百分之四十八點七",
+        "C. 男生，百分之二十點六",
+        "D. 所有學生一樣多"
+      ],
+      "ans": 1,
+      "expl": "Among girls the figure reached 48.7 percent, more than twice the 20.6 percent reported by boys.——48.7 屬於女生，20.6 才是男生。"
+    },
+    {
+      "q": "Why do some students keep a mask on, according to the article?",
+      "qCn": "根據文章，有些學生為什麼一直戴著口罩？",
+      "opts": [
+        "A. Because of their school rules",
+        "B. Because of air pollution",
+        "C. Because of how they feel about their appearance",
+        "D. Because the clinic asked them to"
+      ],
+      "optsCn": [
+        "A. 因為學校規定",
+        "B. 因為空氣污染",
+        "C. 因為他們對自己外貌的感受",
+        "D. 因為診所要求他們戴"
+      ],
+      "ans": 2,
+      "expl": "said they kept a mask on for more than half of every day purely because of their appearance——purely because of their appearance 把原因講得很死，就是外貌，不是衛生或規定。"
+    },
+    {
+      "q": "What does the comparison between 10.8 percent and 3.3 percent show?",
+      "qCn": "百分之十點八和百分之三點三的對比說明了什麼？",
+      "opts": [
+        "A. Severe anxiety was more common where a parent commented critically on a regular basis",
+        "B. Most parents never comment on appearance",
+        "C. Boys hear more criticism than girls",
+        "D. Criticism makes no difference to anxiety"
+      ],
+      "optsCn": [
+        "A. 父母經常批評外貌的學生，重度焦慮比例高得多",
+        "B. 大部分父母從不評論外貌",
+        "C. 男生聽到的批評比女生多",
+        "D. 批評對焦慮沒有影響"
+      ],
+      "ans": 0,
+      "expl": "Among the group with the most severe anxiety, 10.8 percent had parents who did this regularly, against 3.3 percent whose parents rarely did.——against 在這裡是「相對於」，把兩個比例擺在一起比，10.8 遠高於 3.3。"
+    },
+    {
+      "q": "What is the psychologist's main advice to parents?",
+      "qCn": "心理師給父母的主要建議是什麼？",
+      "opts": [
+        "A. Make a clear rule about masks",
+        "B. Take the mask away at home",
+        "C. Listen first and ask what feeling is behind the mask",
+        "D. Send the child to a cosmetic clinic"
+      ],
+      "optsCn": [
+        "A. 訂一條關於口罩的明確規定",
+        "B. 在家裡把口罩拿走",
+        "C. 先聽，並問口罩背後是什麼情緒",
+        "D. 帶孩子去醫美診所"
+      ],
+      "ans": 2,
+      "expl": "Listening first, she suggested, works better than any rule about what a child may or may not wear.——她明確說「先聽」比任何規定有效，而前一句也說拿掉口罩解決不了事情。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "23.5 percent of the students wore a mask most of the day because of their appearance.",
+      "b2": "Almost a quarter kept a mask on for most of the day, and not one of them did it for health.",
+      "note": "原句把百分比直接擺在句首，讀起來像報表。升級版先用 Almost a quarter（將近四分之一）把數字講成日常說法，再用 not one of them did it for health 這個否定強調句把真正的重點點出來。寫作時數據要先翻成人話，讀者才有感覺。",
+      "sp": "Nearly a quarter of them, and it's got nothing to do with being ill.",
+      "spNote": "it's got nothing to do with 是很常用的口語否定，比 not for health reasons 自然得多。",
+      "b1Cn": "百分之二十三點五的學生因為外貌而大半天都戴著口罩。",
+      "b2Cn": "將近四分之一的人大半天都戴著口罩，而且沒有一個是為了健康。",
+      "spCn": "差不多四分之一的人，而且跟生病完全沒關係。"
+    },
+    {
+      "b1": "Parents should not just take the mask away. They should ask why the child wears it.",
+      "b2": "Removing the mask treats the symptom; asking what sits behind it treats the cause.",
+      "note": "原本兩句用 should 給建議，語氣像在規勸。升級版改用「症狀 vs 病因」的對比（treats the symptom / treats the cause），兩個動名詞當主詞並排，中間用分號連接，一句話就把兩種做法的差別說完。這種平行結構是 B2 寫作裡最有力的工具之一。",
+      "sp": "Pulling the mask off fixes the look, not the feeling.",
+      "spNote": "fixes the look, not the feeling 用同一個動詞帶出兩個受詞，口語裡聽起來很俐落。",
+      "b1Cn": "父母不應該只是把口罩拿走，應該問孩子為什麼要戴。",
+      "b2Cn": "拿掉口罩是治症狀，問清楚口罩底下是什麼才是治病因。",
+      "spCn": "把口罩拉下來只修了外觀，沒修到感受。"
+    }
+  ]
+},
+
 {
   "id": "d20260929a2",
   "date": "2026-09-29",
@@ -9157,6 +9951,843 @@ articles:[
 ],
 
 grammar:[
+/* ---------- 2026-10-02 每日文法（過去完成進行式；have 與 have got） ---------- */
+{
+  "id": "dg20261002a2",
+  "date": "2026-10-02",
+  "unitNo": 16,
+  "level": "A2",
+  "title": "Past Perfect Continuous: How Long Before That Moment",
+  "titleCn": "那一刻之前已經持續多久：had been 加 V-ing",
+  "srcDays": [],
+  "summary": "要說「過去某一刻之前，這件事已經持續做了多久」，就用 had been 加動詞的 -ing 形式，後面常接 for 加一段時間。",
+  "sections": [
+    {
+      "h": "形狀是固定的：had been 加 V-ing",
+      "body": "這個時態只有一個形狀，背下來就不會錯。had 不管主詞是誰都一樣，been 永遠不變，真正的動作放在最後面，一定要加 -ing。整句的意思是「在過去那一刻之前，這件事已經做了一陣子」，所以句子裡幾乎都會再出現另一個過去的時間點。",
+      "table": {
+        "head": [
+          "主詞",
+          "固定不變",
+          "動作加 -ing",
+          "常接的時間"
+        ],
+        "rows": [
+          [
+            "I",
+            "had been",
+            "waiting",
+            "for an hour"
+          ],
+          [
+            "She",
+            "had been",
+            "studying",
+            "for two years"
+          ],
+          [
+            "They",
+            "had been",
+            "working",
+            "all morning"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I had been waiting for an hour when the bus finally came.",
+          "cn": "公車終於來的時候，我已經等了一小時。",
+          "note": "等了多久在前，公車來的那一刻在後"
+        },
+        {
+          "en": "She had been studying English for two years before she moved here.",
+          "cn": "她搬來這裡之前，已經學英文兩年了。",
+          "note": "before 後面那一句是過去式，給出基準點"
+        },
+        {
+          "en": "They had been working all morning, so they were very hungry.",
+          "cn": "他們整個早上都在工作，所以非常餓。",
+          "note": "持續一整個早上，結果就是很餓"
+        }
+      ]
+    },
+    {
+      "h": "為什麼不能只說 I waited",
+      "bullets": [
+        "I waited an hour 只講「我等了一小時」，沒有告訴讀者這一小時是在哪一刻之前結束的",
+        "had been 加 V-ing 把「到那一刻之前」這條界線畫出來，所以句子裡要有另一個過去的時間點",
+        "那個時間點常常用 when 或 before 帶出來，而且用過去簡單式",
+        "沒有那個時間點的話，直接用過去簡單式就好，不用這麼長的形狀"
+      ],
+      "examples": [
+        {
+          "en": "He had been sleeping for ten hours before his alarm rang.",
+          "cn": "鬧鐘響之前，他已經睡了十個小時。",
+          "note": "before his alarm rang 就是那條界線"
+        },
+        {
+          "en": "We had been standing in the rain because there was no shelter.",
+          "cn": "我們一直站在雨裡，因為那裡沒有地方可以躲。",
+          "note": "because 後面講原因，動詞用過去式"
+        }
+      ]
+    },
+    {
+      "h": "最常搭配的三個字：for、since、all",
+      "table": {
+        "head": [
+          "搭配的字",
+          "意思",
+          "例句"
+        ],
+        "rows": [
+          [
+            "for 加一段長度",
+            "持續了多久",
+            "The baby had been crying for twenty minutes."
+          ],
+          [
+            "since 加起點",
+            "從什麼時候開始",
+            "The lights had been shining since six o'clock."
+          ],
+          [
+            "all 加一段時間",
+            "一整段時間都是",
+            "The dog had been barking all night."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "My phone had been charging for two hours, so the battery was full.",
+          "cn": "我的手機已經充了兩小時，所以電池是滿的。",
+          "note": "for 兩小時在前，電池滿了是結果"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I had been waited for an hour.",
+      "good": "I had been waiting for an hour.",
+      "why": "been 後面一定要接 -ing，不能接過去分詞。中文說「我等了一小時」只有一個動詞，看不出主動被動，所以學生常常隨手寫成 waited。記住：waited 是「被等」的形狀，自己在等就要用 waiting。"
+    },
+    {
+      "bad": "I had been knowing him for five years.",
+      "good": "I had known him for five years.",
+      "why": "know、like、want、have 這幾個字講的是「狀態」，不是「動作」，所以不加 -ing。中文的「我認識他五年了」聽起來像一直在做某件事，但英文把「認識」當成一個狀態，所以只能用 had known。"
+    },
+    {
+      "bad": "Yesterday I have been waiting outside for an hour.",
+      "good": "Yesterday I had been waiting outside for an hour.",
+      "why": "yesterday 把整句釘在過去，基準點就不是現在，所以要用 had 而不是 have。have been 的基準點永遠在「現在」，跟 yesterday 擺在一起就互相打架。"
+    },
+    {
+      "bad": "They had been play football for an hour.",
+      "good": "They had been playing football for an hour.",
+      "why": "三個零件 had、been、V-ing 缺一不可，最容易掉的就是最後那個 -ing。寫完念一次，聽到 been 後面是原形動詞就是漏了。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The street was wet because it ___ all afternoon.",
+      "qCn": "街道是濕的，因為整個下午都在下雨。",
+      "opts": [
+        "A. rains",
+        "B. is raining",
+        "C. had been raining",
+        "D. had been rained"
+      ],
+      "ans": 2,
+      "expl": "整句都在過去，而且下雨持續了一整個下午才造成街道濕，所以用 had been raining。had been rained 是被動的形狀，雨不是被下的。"
+    },
+    {
+      "q": "She ___ for the train for forty minutes when it was cancelled.",
+      "qCn": "火車被取消的時候，她已經等了四十分鐘。",
+      "opts": [
+        "A. waits",
+        "B. had been waiting",
+        "C. will wait",
+        "D. has been waiting"
+      ],
+      "ans": 1,
+      "expl": "when it was cancelled 是過去的那一刻，等待發生在它之前，所以要用 had been waiting。has been waiting 的基準點在現在，跟 was cancelled 配不起來。"
+    },
+    {
+      "q": "Which sentence is correct?",
+      "qCn": "哪一句是正確的？",
+      "opts": [
+        "A. I had been having a car for ten years.",
+        "B. I had had a car for ten years.",
+        "C. I had been have a car for ten years.",
+        "D. I had being a car for ten years."
+      ],
+      "ans": 1,
+      "expl": "have 在這裡是「擁有」，是狀態不是動作，所以不加 -ing，要寫 had had。C和D的形狀本身就錯了。"
+    },
+    {
+      "q": "The children ___ in the garden before dinner.",
+      "qCn": "孩子們晚餐前一直在花園裡玩。",
+      "opts": [
+        "A. had been played",
+        "B. had been playing",
+        "C. have been playing",
+        "D. had been play"
+      ],
+      "ans": 1,
+      "expl": "小孩是自己在玩，不是被玩，所以用 playing。整句的基準點 before dinner 在過去，所以用 had 而不是 have。"
+    }
+  ]
+},
+{
+  "id": "dg20261002b1",
+  "date": "2026-10-02",
+  "unitNo": 16,
+  "level": "B1",
+  "title": "had been doing or had done? Process or Result",
+  "titleCn": "had been doing 還是 had done？你要講過程還是結果",
+  "srcDays": [],
+  "summary": "兩種形狀都在講「比主時間點更早」，差別只在你想讓讀者注意什麼：had been doing 把時間長度攤開來，had done 只交代事情做完了。",
+  "sections": [
+    {
+      "h": "同一件事，兩種寫法，重點不一樣",
+      "body": "先確認整段話的主時間點在過去，這一步兩種形狀都一樣。接下來問自己一個問題：我要讀者感覺到「拖了很久」，還是只要知道「已經完成」？想要前者就攤開過程，想要後者就給結果。選錯不會讓句子不合文法，但會讓讀者抓錯重點。",
+      "table": {
+        "head": [
+          "想讓讀者注意",
+          "用哪個形狀",
+          "例句"
+        ],
+        "rows": [
+          [
+            "持續了多久",
+            "had been doing",
+            "The line had been stopping every hour."
+          ],
+          [
+            "做完了幾件、做到什麼程度",
+            "had done",
+            "The line had stopped three times."
+          ],
+          [
+            "看得到的痕跡、後果",
+            "had been doing",
+            "His eyes were red; he had been crying."
+          ],
+          [
+            "事情的結局",
+            "had done",
+            "He had sent the apology already."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The kitchen smelled wonderful; someone had been baking.",
+          "cn": "廚房聞起來很香，有人剛才一直在烤東西。",
+          "note": "我沒看到人，只看到痕跡，所以講過程"
+        },
+        {
+          "en": "The kitchen was empty; someone had taken the last loaf.",
+          "cn": "廚房空了，有人把最後一條麵包拿走了。",
+          "note": "重點在「東西不見了」這個結果"
+        },
+        {
+          "en": "By the time the auditor arrived, the team had been rewriting the record for two days.",
+          "cn": "稽核員到的時候，團隊已經改那份紀錄改了兩天。",
+          "note": "兩天這個長度本身就是重點"
+        }
+      ]
+    },
+    {
+      "h": "數量和次數一律走 had done",
+      "bullets": [
+        "had been doing 不能接「幾次、幾個」這種數字，因為它講的是一條連續的線",
+        "一旦句子裡出現 three times、five emails、twice 這種字，就要換成 had done",
+        "長度（for two hours、since June、all week）才是 had been doing 的地盤",
+        "兩者可以在同一段裡輪流出現，一個講過程、一個報數字，讀起來反而更清楚"
+      ],
+      "examples": [
+        {
+          "en": "She had called the supplier four times before anyone picked up.",
+          "cn": "在有人接電話之前，她已經打了四次給供應商。",
+          "note": "four times 是次數，只能用 had called"
+        },
+        {
+          "en": "She had been calling the supplier since nine o'clock.",
+          "cn": "她從九點就一直在打電話給供應商。",
+          "note": "since nine 是長度，所以攤開過程"
+        }
+      ]
+    },
+    {
+      "h": "狀態動詞只有一條路",
+      "body": "know、own、belong、understand、mean 這些字講的是狀態，本來就沒有「正在進行」的概念，所以不管你多想強調時間長度，都只能用 had 加過去分詞。唯一的例外是 live、work、study 這幾個字，兩種形狀都通，語感差別很小。",
+      "table": {
+        "head": [
+          "動詞類型",
+          "能不能用 had been doing",
+          "正確寫法"
+        ],
+        "rows": [
+          [
+            "know、own、belong",
+            "不能",
+            "They had owned the shop for ten years."
+          ],
+          [
+            "live、work、study",
+            "都可以",
+            "He had been working there since 2019."
+          ],
+          [
+            "wait、rain、try、look for",
+            "最適合",
+            "We had been looking for the file all morning."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The family had owned that corner shop long before the mall opened.",
+          "cn": "那家轉角店在購物中心開幕之前很久就是那家人的了。",
+          "note": "own 是狀態，不能加 -ing"
+        }
+      ]
+    },
+    {
+      "h": "被動只有一種：had been done",
+      "bullets": [
+        "had been doing 沒有被動形，想寫被動就只能用 had been 加過去分詞",
+        "想保留「持續很久」的味道，就把長度寫成副詞片語，例如 for weeks、since the audit",
+        "正式文件很愛用這個形狀，因為可以不點名是誰做的"
+      ],
+      "examples": [
+        {
+          "en": "The samples had been stored in the wrong cabinet for weeks.",
+          "cn": "那些樣品已經被放在錯誤的櫃子裡好幾週了。",
+          "note": "for weeks 補上長度，被動形狀不變"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "He had been finishing the report twice that week.",
+      "good": "He had finished the report twice that week.",
+      "why": "twice 是次數，had been doing 講的卻是一條沒有斷的線，兩者放在一起互相矛盾。中文的「他那週完成了兩次」不會改動詞形狀，所以學生常常沒注意到英文這裡要換形狀。看到數字就先想 had done。"
+    },
+    {
+      "bad": "They had been belonging to the same club for years.",
+      "good": "They had belonged to the same club for years.",
+      "why": "belong 是狀態動詞，沒有進行式。中文的「他們一直屬於同一個社團」裡的「一直」讓人很想加 -ing，但英文的 belong 本身就含有持續的意思，再加 -ing 反而不通。"
+    },
+    {
+      "bad": "The floor had been cleaning before the guests arrived.",
+      "good": "The floor had been cleaned before the guests arrived.",
+      "why": "地板是被清的，所以要用被動 had been cleaned。寫成 had been cleaning 會變成「地板自己在打掃」。判斷方法很簡單：問自己主詞是動手的人還是被處理的東西。"
+    },
+    {
+      "bad": "I had been working here since 2019, and I still work here.",
+      "good": "I have been working here since 2019.",
+      "why": "had 系列的基準點在過去，讀者會以為你早就離職了。既然現在還在，基準點就是現在，要用 have been working。這是中文母語者最常見的時態混用，因為中文的「我從2019年就在這裡工作」不必選基準點。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Her hands were covered in paint; she ___ the fence.",
+      "qCn": "她滿手都是漆，她剛才一直在漆那道籬笆。",
+      "opts": [
+        "A. had painted",
+        "B. had been painting",
+        "C. has painted",
+        "D. was painted"
+      ],
+      "ans": 1,
+      "expl": "滿手是漆是「剛才一直在做」留下的痕跡，重點在過程而不是籬笆漆完了沒有，所以用 had been painting。"
+    },
+    {
+      "q": "By Friday the office ___ three different suppliers about the same part.",
+      "qCn": "到星期五為止，辦公室已經為同一個零件問過三家不同的供應商。",
+      "opts": [
+        "A. had been contacting",
+        "B. had contacted",
+        "C. has contacted",
+        "D. had been contacted"
+      ],
+      "ans": 1,
+      "expl": "three different suppliers 是數量，只能用 had contacted。had been contacted 是被動，會變成辦公室被聯絡。"
+    },
+    {
+      "q": "Which sentence is wrong?",
+      "qCn": "哪一句是錯的？",
+      "opts": [
+        "A. We had been waiting since noon.",
+        "B. We had been knowing the answer all along.",
+        "C. We had known the answer all along.",
+        "D. We had waited for two hours."
+      ],
+      "ans": 1,
+      "expl": "know 是狀態動詞，沒有進行式，所以B錯。C是同一個意思的正確寫法。"
+    },
+    {
+      "q": "The machine ___ twice before the engineer found the loose cable.",
+      "qCn": "工程師找到那條鬆掉的線之前，機器已經壞了兩次。",
+      "opts": [
+        "A. had been failing",
+        "B. had failed",
+        "C. has failed",
+        "D. had been failed"
+      ],
+      "ans": 1,
+      "expl": "twice 是次數，走 had done 這一條。had been failed 的被動也不通，機器不是被弄壞的對象，而是自己故障。"
+    }
+  ]
+},
+{
+  "id": "dg20261002b1p",
+  "date": "2026-10-02",
+  "unitNo": 17,
+  "level": "B1+",
+  "title": "have and have got: Where They Swap and Where They Do Not",
+  "titleCn": "have 與 have got：哪裡可以互換，哪裡不行",
+  "srcDays": [],
+  "summary": "have got 只能用在「擁有、關係、特徵、身體狀況」這類狀態，而且只有現在式；一旦講的是動作，或是換成過去式、未來式、不定詞，就只能用 have。",
+  "sections": [
+    {
+      "h": "能互換的只有一種情況：講狀態的現在式",
+      "body": "have got 不是另一個時態，它只是 have 的口語替身，而且替身只在一個場合上場：主詞「擁有」某個東西、某個人、某個特徵，而且講的是現在。這個場合裡兩種寫法意思完全一樣，差別只在語氣，have got 比較口語。離開這個場合，have got 就不能用了。",
+      "table": {
+        "head": [
+          "意思",
+          "have 的寫法",
+          "have got 的寫法"
+        ],
+        "rows": [
+          [
+            "擁有東西",
+            "I have two bicycles.",
+            "I have got two bicycles."
+          ],
+          [
+            "人際關係",
+            "She has three cousins in Taipei.",
+            "She has got three cousins in Taipei."
+          ],
+          [
+            "身體特徵",
+            "He has very long fingers.",
+            "He has got very long fingers."
+          ],
+          [
+            "身體不舒服",
+            "I have a terrible headache.",
+            "I have got a terrible headache."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Our flat has got a tiny balcony, but the view is worth it.",
+          "cn": "我們的公寓有個小陽台，不過那個景色很值得。",
+          "note": "擁有加現在式，兩種寫法都可以"
+        },
+        {
+          "en": "The new printer has a paper tray on the side.",
+          "cn": "新的印表機側面有一個紙匣。",
+          "note": "說明書這類文件通常選 have"
+        },
+        {
+          "en": "I have got a sore throat, so I will skip the meeting.",
+          "cn": "我喉嚨痛，所以這場會我就不參加了。",
+          "note": "身體狀況是最常用 have got 的場合之一"
+        }
+      ]
+    },
+    {
+      "h": "動作一律不能加 got",
+      "body": "英文有一大批片語長得像「擁有」，其實講的是動作：吃飯、洗澡、看一眼、聊一下、玩得開心、遇到麻煩。這些片語裡的 have 是真正的動作動詞，所以不能換成 have got，而且它們可以有進行式。這是中文母語者最常踩到的一條線。",
+      "table": {
+        "head": [
+          "動作片語",
+          "意思",
+          "可以有進行式"
+        ],
+        "rows": [
+          [
+            "have breakfast / lunch",
+            "吃早餐、吃午餐",
+            "She is having lunch now."
+          ],
+          [
+            "have a shower / a bath",
+            "洗澡",
+            "He is having a shower."
+          ],
+          [
+            "have a look",
+            "看一下",
+            "They are having a look at the file."
+          ],
+          [
+            "have trouble / difficulty",
+            "遇到困難",
+            "We are having trouble with the printer."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "We are having a quick chat about the schedule before lunch.",
+          "cn": "午餐前我們正在快速討論一下行程。",
+          "note": "動作可以有進行式，狀態不行"
+        },
+        {
+          "en": "I had a long shower after the night shift.",
+          "cn": "夜班結束後我洗了一個很久的澡。",
+          "note": "動作的過去式就是 had，沒有 got 的空間"
+        }
+      ]
+    },
+    {
+      "h": "疑問句和否定句有兩套，不要混著用",
+      "bullets": [
+        "have got 走助動詞 have：Have you got a spare key? 以及 I have not got a spare key.",
+        "have 走助動詞 do：Do you have a spare key? 以及 I do not have a spare key.",
+        "兩套不能各拿一半，Do you have got 和 Have you a spare key 都不要寫",
+        "美式英文日常更常用 do 那一套，正式文件也偏好它"
+      ],
+      "examples": [
+        {
+          "en": "Have you got the landlord's number on your phone?",
+          "cn": "你手機裡有房東的電話嗎？",
+          "note": "have got 的疑問句，助動詞是 have"
+        },
+        {
+          "en": "Do you have a copy of the lease in English?",
+          "cn": "你有英文版的租約嗎？",
+          "note": "同樣的意思，走 do 那一套"
+        }
+      ]
+    },
+    {
+      "h": "換時態就只剩 have",
+      "bullets": [
+        "過去式只有 had，沒有 had got，問句用 Did you have 而不是 Had you got",
+        "未來式、不定詞、動名詞也都只能用 have：will have、to have、having",
+        "have got 只有現在式這一種形狀，所以它不是時態，只是一種口語說法",
+        "判斷口訣：句子一旦離開現在式，got 就要拿掉"
+      ],
+      "examples": [
+        {
+          "en": "When I was a student, I had only one pair of shoes.",
+          "cn": "學生時代我只有一雙鞋。",
+          "note": "過去式沒有 had got 這種寫法"
+        },
+        {
+          "en": "Next year the department will have its own budget.",
+          "cn": "明年那個部門會有自己的預算。",
+          "note": "未來式也只能用 have"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I am having two brothers.",
+      "good": "I have two brothers.",
+      "why": "人際關係是狀態，狀態沒有進行式。中文可以說「我有兩個哥哥」而不管動詞形狀，英文卻把 have 分成兩種身分：講擁有時不能加 -ing，講動作（吃飯、洗澡）時才可以。"
+    },
+    {
+      "bad": "Do you have got a minute?",
+      "good": "Have you got a minute?",
+      "why": "兩套疑問句各拿一半是最常見的錯誤。要嘛用 Have you got，要嘛用 Do you have，不能把 do 和 got 放在同一句。寫完檢查：句子裡有 got 就不應該出現 do。"
+    },
+    {
+      "bad": "Last winter I had got a very bad cough.",
+      "good": "Last winter I had a very bad cough.",
+      "why": "have got 只有現在式。last winter 把句子推到過去，got 就必須拿掉。中文的「我那時候有」和「我現在有」用同一個「有」字，所以學生常常把 got 一路帶到過去式裡。"
+    },
+    {
+      "bad": "She has got a shower every morning before work.",
+      "good": "She has a shower every morning before work.",
+      "why": "洗澡是動作不是擁有，所以不能加 got。分辨方法：把句子改成進行式試試看，講得通（She is having a shower）就是動作，那就不能用 have got。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "___ a spare charger I could borrow for ten minutes?",
+      "qCn": "你有多的充電器可以借我十分鐘嗎？",
+      "opts": [
+        "A. Do you have got",
+        "B. Have you got",
+        "C. Are you having",
+        "D. Have you had got"
+      ],
+      "ans": 1,
+      "expl": "have got 的疑問句助動詞是 have，所以是 Have you got。A把兩套混在一起，C的進行式只能用在動作，不能用在擁有。"
+    },
+    {
+      "q": "When my sister was ten, she ___ a rabbit called Button.",
+      "qCn": "我妹妹十歲的時候，養了一隻叫Button的兔子。",
+      "opts": [
+        "A. has got",
+        "B. had got",
+        "C. had",
+        "D. is having"
+      ],
+      "ans": 2,
+      "expl": "was ten 把句子推到過去，have got 沒有過去式，所以只能用 had。"
+    },
+    {
+      "q": "Which sentence is correct?",
+      "qCn": "哪一句是正確的？",
+      "opts": [
+        "A. He is having a sore knee today.",
+        "B. He has got a sore knee today.",
+        "C. He has got a nap every afternoon.",
+        "D. He is having got a sore knee."
+      ],
+      "ans": 1,
+      "expl": "身體不舒服是狀態，用 has got 最自然。A把狀態寫成進行式，C的午睡是動作不能加 got，D的形狀本身就不存在。"
+    },
+    {
+      "q": "By the end of next month, the team ___ three new testing machines.",
+      "qCn": "到下個月底，那個團隊會有三台新的檢測機。",
+      "opts": [
+        "A. has got",
+        "B. will have got",
+        "C. will have",
+        "D. is having"
+      ],
+      "ans": 2,
+      "expl": "句子講的是未來，have got 只有現在式，所以要用 will have。"
+    }
+  ]
+},
+{
+  "id": "dg20261002b2",
+  "date": "2026-10-02",
+  "unitNo": 17,
+  "level": "B2",
+  "title": "Choosing between have and have got: Register and Weight",
+  "titleCn": "have 與 have got 的語域選擇：什麼時候必須換回 have",
+  "srcDays": [],
+  "summary": "文法上兩種寫法都對的時候，決定權在語域：have got 聽起來像在講話，have 聽起來像在寫文件，而 have got to 和 must 的差別則是「現實壓力」與「我的判斷」。",
+  "sections": [
+    {
+      "h": "同一句話，三種重量",
+      "body": "當句子是「現在式加擁有」，have 和 have got 都合文法，這時你挑的其實不是文法而是距離感。have got 把讀者拉近，像面對面說話；have 中性，適合大多數書面場合；再往上還有 hold、possess、be equipped with 這種專業動詞，用在規格書與法律文件裡。寫作被扣分，往往不是寫錯而是選錯重量。",
+      "table": {
+        "head": [
+          "場合",
+          "合適的寫法",
+          "為什麼"
+        ],
+        "rows": [
+          [
+            "跟同事口頭確認",
+            "We have got enough stock.",
+            "最自然，像在講話"
+          ],
+          [
+            "內部郵件、會議紀錄",
+            "We have enough stock.",
+            "中性，不會太隨便"
+          ],
+          [
+            "對客戶的正式回覆",
+            "Sufficient stock is available.",
+            "把主詞換成事實本身"
+          ],
+          [
+            "規格書、合約",
+            "The facility holds a valid licence.",
+            "專業動詞，可查證"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Between you and me, we have got a bit of a problem with the second batch.",
+          "cn": "私下跟你說，第二批有點問題。",
+          "note": "口語開場加 have got，距離最近"
+        },
+        {
+          "en": "The second batch has a minor deviation in thickness.",
+          "cn": "第二批在厚度上有一個小偏差。",
+          "note": "同一件事，寫進報告就換成 have"
+        },
+        {
+          "en": "A deviation of 0.2 millimetres was recorded in the second batch.",
+          "cn": "第二批記錄到0.2毫米的偏差。",
+          "note": "最正式的版本連 have 都不見了"
+        }
+      ]
+    },
+    {
+      "h": "have got to 與 must：壓力從哪裡來",
+      "body": "have got to 和 have to 都是「外面的現實逼我做」，must 則多半是「我自己認為應該」。這個差別在寫信給客戶時特別重要：把對方的要求寫成 must，聽起來像你在下命令；寫成 have to，聽起來像在說明規定。另外 must 沒有過去式，過去一律用 had to。",
+      "table": {
+        "head": [
+          "寫法",
+          "壓力的來源",
+          "語域"
+        ],
+        "rows": [
+          [
+            "I have got to leave by six.",
+            "外在現實，例如趕車",
+            "最口語"
+          ],
+          [
+            "I have to leave by six.",
+            "外在現實",
+            "中性，書面可用"
+          ],
+          [
+            "I must leave by six.",
+            "自己的判斷或強烈決心",
+            "偏正式、偏主觀"
+          ],
+          [
+            "I had to leave by six.",
+            "過去的外在現實",
+            "must 沒有過去式"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Suppliers have to submit the certificate before the first shipment.",
+          "cn": "供應商必須在首批出貨前提交證明。",
+          "note": "說明規定，責任不在寫信的人"
+        },
+        {
+          "en": "I must stop promising things on Friday afternoons.",
+          "cn": "我真的要戒掉在星期五下午隨口答應別人的習慣。",
+          "note": "must 在這裡是對自己說的話"
+        }
+      ]
+    },
+    {
+      "h": "把 have got 換掉的四個改寫動作",
+      "bullets": [
+        "擁有：have got 換成 have，再看能不能換成 hold、carry、include 這種更具體的動詞",
+        "身體狀況：have got a headache 在醫療紀錄裡寫成 reports a headache 或 presents with a headache",
+        "必要性：have got to 換成 have to，對外文件再換成 is required to",
+        "有無：I have not got the file 換成 The file is not in my possession 或更簡單的 I do not have the file"
+      ],
+      "examples": [
+        {
+          "en": "Each unit now carries a serial number on the inner panel.",
+          "cn": "現在每一台在內側板上都有一個序號。",
+          "note": "carry 比 have 精準，讀者知道號碼在哪裡"
+        },
+        {
+          "en": "Visitors are required to wear a badge inside the clean room.",
+          "cn": "訪客在無塵室內必須佩戴識別證。",
+          "note": "are required to 把規定寫成制度，不是個人要求"
+        }
+      ]
+    },
+    {
+      "h": "口語裡動不了的固定說法",
+      "bullets": [
+        "You have got to be joking 這種驚訝的反應，換成 have to 就沒有那個語氣了",
+        "I have got a feeling 這種講直覺的說法，也幾乎只以 have got 的形狀出現",
+        "這些固定說法屬於口語，寫進正式文件會顯得突兀，說話時卻非常自然",
+        "學起來的方式是整句背，不要試著套進前面的改寫規則"
+      ],
+      "examples": [
+        {
+          "en": "You have got to be joking, the deadline is tomorrow?",
+          "cn": "你開玩笑的吧，期限是明天？",
+          "note": "固定說法，換成 have to 語氣就不見了"
+        },
+        {
+          "en": "I have got a feeling the second sample will fail too.",
+          "cn": "我有種感覺第二個樣品也會不合格。",
+          "note": "講直覺的固定搭配"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "Dear Mr Chen, we have got your complaint and we have got a plan.",
+      "good": "Dear Mr Chen, we have received your complaint and have prepared a plan.",
+      "why": "have got 在客戶信裡太隨便，而且原句的 have got 還被當成「收到」用，意思也不對。寫對外文件時先問自己：這個 have 真正的動作是什麼？收到就寫 received，準備好就寫 prepared，語域和精準度會一起提升。"
+    },
+    {
+      "bad": "All contractors must wear a helmet, and we must see your licence today.",
+      "good": "All contractors are required to wear a helmet, and we need to see your licence today.",
+      "why": "連續兩個 must 會讓讀者覺得你在下命令。第一句是公司規定，寫成 are required to 比較像制度；第二句是你自己的需求，寫成 need to 就夠了。中文的「必須」一個字包了所有情況，英文卻會因為選字而讓語氣差很多。"
+    },
+    {
+      "bad": "The laboratory had got the certificate before the audit.",
+      "good": "The laboratory had held the certificate before the audit.",
+      "why": "過去式不能用 had got，而在這種稽核情境裡，held 比 had 更精準，因為它暗示證書是有效期間內持有的。改寫時不要只把 got 刪掉，順手挑一個更具體的動詞，文件的專業度就上來了。"
+    },
+    {
+      "bad": "Does the new line have got its own quality check?",
+      "good": "Does the new line have its own quality check?",
+      "why": "do 和 got 不能同時出現，這在口語裡還可能被聽成口誤，寫在文件裡就是明顯的錯誤。另外在書面語裡 Do you have 這一套本來就比 Have you got 安全，所以直接把 got 刪掉就好。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Which version is most suitable for a formal reply to a client?",
+      "qCn": "哪一個版本最適合用在對客戶的正式回覆裡？",
+      "opts": [
+        "A. We have got your file right here.",
+        "B. We have your file and will respond by Friday.",
+        "C. We have got to look at your file first.",
+        "D. We have not got round to your file yet."
+      ],
+      "ans": 1,
+      "expl": "B用中性的 have，再補上明確的時程，是對外回覆最安全的寫法。A和D太口語，C的 have got to 聽起來像在推託。"
+    },
+    {
+      "q": "In a company handbook, which sentence states a rule most appropriately?",
+      "qCn": "在公司手冊裡，哪一句最適合用來陳述規定？",
+      "opts": [
+        "A. You have got to log every visitor.",
+        "B. You must log every visitor because I say so.",
+        "C. All visitors are required to be logged at reception.",
+        "D. You have got a duty to log visitors."
+      ],
+      "ans": 2,
+      "expl": "手冊寫的是制度，用 are required to 把要求放在規定本身，不牽涉到特定的人。A和D太口語，B的 because I say so 完全不適合書面文件。"
+    },
+    {
+      "q": "Last year the plant ___ three separate licences, all of which expired in June.",
+      "qCn": "去年那座廠持有三張不同的許可證，全部在六月到期。",
+      "opts": [
+        "A. has got",
+        "B. had got",
+        "C. held",
+        "D. is having"
+      ],
+      "ans": 2,
+      "expl": "整句在過去，have got 沒有過去式，而在許可證這個情境裡 held 比 had 更精準，也更像稽核文件的用字。"
+    },
+    {
+      "q": "Which sentence keeps its intended tone if have got is replaced by have to?",
+      "qCn": "哪一句把 have got 換成 have to 之後，原本的語氣還留得住？",
+      "opts": [
+        "A. You have got to be joking.",
+        "B. I have got a feeling about this.",
+        "C. We have got to submit the form by noon.",
+        "D. You have got some nerve."
+      ],
+      "ans": 2,
+      "expl": "C講的是真正的期限，換成 We have to submit the form by noon 意思和語氣都沒變。A、B、D都是固定的口語說法，換掉之後味道就不見了。"
+    }
+  ]
+},
+
 {
   "id": "dg20260929a2",
   "date": "2026-09-29",
