@@ -625,25 +625,6 @@ body.cnall #v-real span.cnx{display:inline!important}
 .item.arw::after{content:"›";position:absolute;right:14px;top:50%;transform:translateY(-50%);
   font-size:24px;font-weight:700;color:#cfc4b4;line-height:1}
 @media(hover:hover){.item.arw:hover::after{color:var(--accent2)}}
-/* ---------- 課本課程卡片：日期小標籤＋大標題＋統計數據卡片＋開始課程按鈕 ---------- */
-.bkdate{font-size:var(--font-meta);color:#57504a;font-weight:600;margin-bottom:2px}
-.item .t.bkbig{font-size:calc(19px * var(--fs));margin-bottom:2px;line-height:1.35}
-.item .tc.bksub{font-size:calc(13px * var(--fs));color:var(--ink2);margin-bottom:6px;font-weight:400}
-.bkstats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
-.bstat{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:10px 6px;text-align:center;
-  cursor:pointer;transition:border-color .15s,box-shadow .15s,background .15s}
-@media(hover:hover){.bstat:hover{border-color:#D1D5DB;box-shadow:0 2px 8px rgba(0,0,0,.08);background:var(--card)}}
-.bstat:active{background:#F3F4F6}
-.bstat i{font-style:normal;font-size:calc(15px * var(--fs));display:block;color:#4B5563}
-.bstat b{display:block;font-size:calc(28px * var(--fs));line-height:1.2;color:#1F2937;font-weight:800}
-.bstat span{font-size:calc(11px * var(--fs));color:#6B7280;font-weight:600}
-.bstat .bstat-hint{display:none;font-size:calc(10px * var(--fs));color:var(--accent2);margin-top:2px}
-@media(hover:hover){.bstat:hover .bstat-hint{display:block}}
-.bkstart{display:block;margin-top:10px;width:100%;border:0;border-radius:22px;padding:10px 0;cursor:pointer;
-  background:linear-gradient(135deg,#f2953f,#e0731f);color:#fff;font:inherit;font-weight:800;font-size:calc(14px * var(--fs));
-  box-shadow:0 2px 8px rgba(224,115,31,.25);transition:filter .15s,box-shadow .15s}
-@media(hover:hover){.bkstart:hover{filter:brightness(1.04);box-shadow:0 4px 14px rgba(224,115,31,.35)}}
-.bkstart:active{filter:brightness(.92)}
 /* 課本：標題列搜尋＋說明同行 */
 .bk-hdr-row{display:flex;align-items:center;gap:8px;margin:4px 0 8px}
 .bk-hdr-row input{flex:1;margin:0}
@@ -2407,19 +2388,6 @@ nav button{font-size:11px}
   #v-prog .pgrow .pgtag{grid-row:2;grid-column:1 / 3;justify-self:start}
   #v-prog .pgrow .pgact{grid-row:2;grid-column:3;justify-self:end}
 
-  /* 課本搜尋結果卡（用 #bk-results 提高權重，否則會被全站 :is(#v-…) 通用卡片樣式蓋掉）：三個大數字方塊改成一行小字，整張卡可點、右側小箭頭取代滿寬按鈕 */
-  #v-book #bk-results .item .bkstats{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px}
-  #v-book #bk-results .item .bstat{display:inline-flex;align-items:baseline;gap:3px;background:none;border:0;padding:0;box-shadow:none}
-  #v-book #bk-results .item .bstat i,#v-book #bk-results .item .bstat .bstat-hint{display:none}
-  #v-book #bk-results .item .bstat b{display:inline;font-size:calc(15px * var(--fs))}
-  #v-book #bk-results .item .bstat span{font-size:var(--font-meta)}
-  #v-book #bk-results .item .bkstart{display:none}
-  /* 中文標題、英文副標都只留 1 行（課文內可看完整標題） */
-  #v-book #bk-results .item .tc.bksub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
-  #v-book #bk-results .item .t.bkbig{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  #v-book #bk-results .item:has(.bkstats){position:relative;padding-right:34px}
-  #v-book #bk-results .item:has(.bkstats)::after{content:'›';position:absolute;right:14px;top:50%;transform:translateY(-50%);
-    font-size:26px;line-height:1;color:var(--accent2);font-weight:700}
 }
 /* ===== 手機版面精簡（≤640px）：閱讀列表標題區、文章／實景標題卡、課本閱讀標題列 ===== */
 @media(max-width:640px){
@@ -2470,21 +2438,26 @@ nav button{font-size:11px}
 .rwkey-sep{color:var(--ink2)}
 .rwkey-n{margin-top:3px;font-size:var(--font-secondary);color:var(--ink2);line-height:1.55}
 /* 用法比較：快速比較（三欄、細分隔線、無表頭底色） */
+/* 用法比較字重層級：區塊標題 600、快速比較第一欄 600、其他再次出現的英文 500、中文說明 400；
+   次要說明用淡色，不靠粗體。只作用在這個元件，不改全站 b / strong */
+.mr-sec.u-title{font-weight:600}
 .ucmp{margin-top:4px}
 .ucmp-hd,.ucmp-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.8fr) minmax(0,1.5fr);gap:12px;align-items:baseline;padding:8px 2px;border-bottom:1px solid var(--line)}
-.ucmp-hd{padding:4px 2px 6px;font-size:var(--font-meta);color:var(--ink2);font-weight:700}
-.ucmp-t{font-weight:800;color:var(--ink)}
+.ucmp-hd{padding:4px 2px 6px;font-size:var(--font-meta);color:var(--ink2);font-weight:500}
+.ucmp-t{font-weight:600;color:var(--ink)}
+.ucmp-m{font-weight:400;color:var(--ink)}
 .ucmp-c{color:var(--ink2);font-size:var(--font-secondary)}
 .ucmp-c i{font-style:normal;margin-right:5px}
-.usub{font-weight:800;font-size:var(--font-secondary);color:var(--ink);margin:16px 0 6px}
+.usub{font-weight:600;font-size:var(--font-secondary);color:var(--ink);margin:16px 0 6px}
 .utips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 18px}
-.utip b{display:block;font-weight:800;color:var(--ink)}
-.utip span{display:block;font-size:var(--font-secondary);color:var(--ink2);line-height:1.5}
+.utip b{display:block;font-weight:500;color:var(--ink)}
+.utip span{display:block;font-size:var(--font-secondary);font-weight:400;color:var(--ink2);line-height:1.5}
 .urel{display:flex;flex-wrap:wrap;gap:6px 24px}
-.urel-i b{font-weight:800;color:var(--ink);margin-right:8px}
-.urel-i{font-size:var(--font-secondary);color:var(--ink2)}
-.urel-n{margin-top:4px;font-size:var(--font-meta);color:var(--ink2)}
-.uwarn{display:inline-block;margin-top:14px;padding:5px 10px;background:#f7f2ea;border-radius:8px;font-size:var(--font-secondary);color:var(--ink2);line-height:1.5}
+.urel-i b{font-weight:500;color:var(--ink);margin-right:8px}
+.urel-i{font-size:var(--font-secondary);font-weight:400;color:var(--ink)}
+.urel-i .u-sup{color:var(--ink2)}
+.urel-n{margin-top:4px;font-size:var(--font-meta);font-weight:400;color:var(--ink2)}
+.uwarn{display:inline-block;margin-top:14px;padding:5px 10px;background:#f7f2ea;border-radius:8px;font-size:var(--font-secondary);font-weight:400;color:var(--ink2);line-height:1.5}
 @media(max-width:640px){
   .rwkey-row{flex-direction:column;align-items:flex-start;gap:2px}
   .rwkey-sep{display:none}
@@ -2494,6 +2467,56 @@ nav button{font-size:11px}
   .utip{padding:7px 0;border-bottom:1px solid var(--line)}
   .utip:last-child{border-bottom:0}
   .urel{flex-direction:column;gap:4px}
+}
+/* ===== 課本目錄（雜誌目錄式）：月份分組、最新月展開、其他月收合成一列 ===== */
+#v-book .bk-search{margin-bottom:12px}
+.bktoc-m{margin-bottom:10px}
+.bktoc-hd{display:flex;align-items:center;gap:10px;width:100%;min-height:48px;padding:10px 14px;border:1px solid var(--line);
+  border-radius:var(--r);background:var(--card);font:inherit;color:var(--ink);text-align:left;cursor:pointer}
+.bktoc-hd:hover{border-color:#e0b98c}
+.bktoc-hd .t{font-weight:800;font-size:var(--font-subhead)}
+.bktoc-hd .n{font-size:var(--font-meta);color:var(--ink2)}
+.bktoc-hd .pv{margin-left:auto;display:flex;gap:4px;font-size:18px;line-height:1}
+.bktoc-hd .pv i{font-style:normal}
+.bktoc-hd .pv i svg{width:20px;height:20px}
+.bktoc-hd .arr{color:var(--ink2);font-size:14px}
+.bktoc-hd .pv + .arr{margin-left:6px}
+.bktoc-hd .n + .arr{margin-left:auto}
+.bktoc-m.open .bktoc-hd{background:linear-gradient(135deg,#f0964f,#d9691f);border-color:transparent;color:#fff}
+.bktoc-m.open .bktoc-hd .n,.bktoc-m.open .bktoc-hd .arr{color:rgba(255,255,255,.9)}
+.bktoc-m .mrcard{margin-top:10px}
+/* 卡片牆：電腦 3 欄、平板 2 欄、手機 1 欄 */
+.bkc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:10px}
+.bkc{display:flex;flex-direction:column;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;cursor:pointer;box-shadow:0 1px 3px rgba(60,45,30,.05);transition:border-color .15s,box-shadow .15s}
+@media(hover:hover){.bkc:hover{border-color:#e0b98c;box-shadow:0 4px 12px rgba(60,45,30,.08)}}
+.bkc:active{background:#fffaf3}
+.bkc-hd{display:flex;align-items:center;gap:8px;min-width:0;padding:6px 10px;background:#f6efe6;border-bottom:1px solid var(--line)}
+.bkc-n{flex:none;min-width:22px;height:22px;padding:0 6px;border-radius:6px;background:var(--accent);color:#fff;font-weight:800;font-size:13px;line-height:22px;text-align:center}
+.bkc-cat{min-width:0;font-weight:700;font-size:var(--font-meta);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bkc-new{margin-left:auto;flex:none;padding:1px 6px;border-radius:5px;background:#d9534f;color:#fff;font-size:11px;font-weight:800;letter-spacing:.03em}
+.bkc-bd{display:flex;gap:10px;flex:1;padding:10px}
+.bkc-th{flex:none;width:84px;height:84px;border-radius:10px;overflow:hidden;background:#fdf6ec;display:grid;place-items:center}
+.bkc-th svg{width:100%;height:100%;display:block}
+.bkc-th.ico{font-size:40px;line-height:1}
+.bkc-th.ico svg{width:62%;height:62%}
+.bkc-tx{flex:1;min-width:0}
+.bkc-en{font-weight:800;font-size:var(--font-body);line-height:1.3;color:var(--ink);overflow-wrap:anywhere}
+.bkc-cn{margin-top:3px;font-size:var(--font-secondary);line-height:1.4;color:var(--ink2)}
+.bkc-g{margin-top:6px;font-size:var(--font-meta);line-height:1.4;color:#8a4a17}
+.bkc-where{margin-top:6px;font-size:var(--font-meta);line-height:1.4;color:var(--ink2)}
+.bkc-ft{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px;padding:7px 10px;border-top:1px solid var(--line);font-size:var(--font-meta);color:var(--ink2)}
+.bkc-ft .vd{color:#2f6db5;font-weight:700}
+.bkc-ft .d{margin-left:auto;white-space:nowrap}
+@media(max-width:999px){ .bkc-grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media(max-width:640px){
+  .bkc-grid{grid-template-columns:minmax(0,1fr);gap:8px}
+  .bkc-th{width:64px;height:64px}
+  .bkc-bd{padding:9px 10px;gap:9px}
+  /* 手機卡片精簡：英文標題完整顯示；中文標題 1 行；重點句型留到課文內再看 */
+  .bkc-cn{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bkc-g{display:none}
+  .bktoc-hd{padding:9px 12px}
 }
 </style>
 </head>
@@ -5217,7 +5240,7 @@ document.addEventListener('click',e=>{
 const BOOK_LESSONS=((window.BOOK||{}).lessons||[]).slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
 // 課本單字也進字庫，全站點字都查得到
 BOOK_LESSONS.forEach(b=>(b.vocab||[]).concat(b.vocab2||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:'',exEn:t.ex,exCn:t.exCn,src:'課本：'+b.titleCn})));
-let bkOpen=null, bkCalY=null, bkCalM=null, bkQuery='', bkRevYM=null, mrChIdx=0, mrChShow=false;
+let bkOpen=null, bkQuery='', bkRevYM=null, mrChIdx=0, mrChShow=false;
 /* 例句裡用到該單字／片語就加粗（compensate 也會對到 compensated；片語去掉 something/someone 佔位字再比對） */
 function bkHi(sent,w){
   let s=esc(sent);
@@ -5262,25 +5285,6 @@ function bkNote(s){
     return p.trim()?'<div>'+brk(p)+'</div>':'';
   }).join('');
 }
-function bkItem(b,extraMeta){
-  const nV=(b.vocab||[]).length+(b.vocab2||[]).length;
-  const nG=(b.grammar||[]).length, nH=(b.hw||[]).length;
-  return '<div class="item" onclick="bkGo(\''+b.id+'\')">'
-   +'<div class="bkdate">'+(b.icon||'📕')+' '+bkDate(b.date)+'</div>'
-   +'<div class="t bkbig">'+esc(b.titleCn)+'</div>'
-   +'<div class="tc bksub">'+esc(b.title)+'</div>'
-   +'<div class="bkstats">'
-   +'<div class="bstat" onclick="event.stopPropagation();bkGo(\''+b.id+'\',\'vocab\')" title="開啟單字表">'
-   +'<i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B5563" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg></i><b>'+nV+'</b><span>單字</span><span class="bstat-hint">複習 ›</span></div>'
-   +'<div class="bstat" onclick="event.stopPropagation();bkGo(\''+b.id+'\',\'gram\')" title="開啟句型文法">'
-   +'<i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B5563" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21L12 3l9 18"/><path d="M6.5 15h11"/></svg></i><b>'+nG+'</b><span>句型</span><span class="bstat-hint">練習 ›</span></div>'
-   +'<div class="bstat" onclick="event.stopPropagation();bkGo(\''+b.id+'\',\'hw\')" title="開啟作業複習">'
-   +'<i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B5563" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4Z"/></svg></i><b>'+nH+'</b><span>作業複習</span><span class="bstat-hint">檢視 ›</span></div>'
-   +'</div>'
-   +(extraMeta||'')
-   +'<button class="bkstart">開始課程 ➔</button>'
-   +'</div>';
-}
 let bkHintOpen=false;
 function bkTogHint(){
   bkHintOpen=!bkHintOpen;
@@ -5299,134 +5303,84 @@ RENDER.book=function(){
   }
   v.classList.toggle('bkopen',!!bkOpen);
   if(bkOpen){ v.innerHTML=bookHTML(bkOpen); return; }
-  if(bkCalY==null){ const t=new Date(); bkCalY=t.getFullYear(); bkCalM=t.getMonth(); }
   v.innerHTML=
-    '<div class="card"><h2 class="sec" style="margin:0 0 4px">📕 課本</h2>'
+    '<div class="card bk-search"><h2 class="sec" style="margin:0 0 4px">📕 課本</h2>'
     +'<div class="bk-hdr-row">'
     +'<input id="bk-q" value="'+esc(bkQuery)+'" oninput="bkSearch(this.value)" placeholder="🔍 搜尋單字、片語、主題…">'
     +'<button class="spk" id="bk-hint-btn" onclick="bkTogHint()">'+(bkHintOpen?'💡 說明 ▲':'💡 說明 ▼')+'</button></div>'
     +'<div class="hint" id="bk-hint" style="display:'+(bkHintOpen?'block':'none')+';margin-top:4px">'
     +'課堂筆記的完整版面，內容與上課的 Google 文件一字不差。'
-    +'日曆上<b>有藍色小圓點</b>的日期就是有筆記/課程的日子，點日期後右側（手機為下方）會列出當天課程，再按「開始學習」開課文；<b>淡橘格</b>是今天、<b>實心橘格</b>是目前選取；« » 換年、‹ › 換月。'
+    +'課程依月份排列，最新一個月自動展開，其他月份點一下就能展開；點任一課的卡片就會打開課文。'
     +'搜尋欄輸入單字或主題，會列出這個字<b>出現在哪幾課、哪個段落</b>。'
-    +'<b>每個單字、每個句子都有 🔊</b>；中譯跟著右上角的「🈶 中譯」開關。</div>'
+    +'<b>每個單字、每個句子都有 🔊</b>；中譯跟著右上角的「中譯」開關。</div>'
+    +'</div>'
     +'<div id="bk-results"></div>'
-    +'<div id="bk-cal">'+bkCalHTML()+'</div>'
-    +'</div>';
+    +'<div id="bk-cal">'+bkTOCHTML()+'</div>';
   bkSearch(bkQuery);
 };
-/* 「月曆負責瀏覽日期，右側面板負責顯示選定日期的課程」——點日期＝選取，開課走面板的「開始學習」 */
-let bkSelDate=null;
-function bkLessonsOn(ds){ return BOOK_LESSONS.filter(b=>b.date===ds); }
-function bkCalHTML(){
-  const td=today();
-  if(!bkSelDate){
-    /* 預設選今天；今天沒課就選最近一堂課的日期，右側不留白（月曆跟著跳到那個月） */
-    bkSelDate = bkLessonsOn(td).length ? td :
-      (BOOK_LESSONS.filter(b=>(b.date||'')<=td).map(b=>b.date).sort().pop() || td);
-    const p=bkSelDate.split('-'); bkCalY=+p[0]; bkCalM=+p[1]-1;
-  }
-  const map={};
-  BOOK_LESSONS.forEach(b=>{ if(b.date){ (map[b.date]=map[b.date]||[]).push(b); } });
-  const startWd=new Date(bkCalY,bkCalM,1).getDay();
-  const days=new Date(bkCalY,bkCalM+1,0).getDate();
-  let h='<div class="bk-split"><div class="bk-cal-col">'
-   +'<div class="calhd">'
-   +'<span><button class="calnav" onclick="bkCalShift(-12)" title="前一年">«</button> '
-   +'<button class="calnav" onclick="bkCalShift(-1)" title="前一個月">‹</button></span>'
-   +'<span class="m">'+bkCalY+' 年 '+(bkCalM+1)+' 月</span>'
-   +'<span><button class="calnav" onclick="bkCalShift(1)" title="下一個月">›</button> '
-   +'<button class="calnav" onclick="bkCalShift(12)" title="下一年">»</button></span></div>'
-   +'<div class="calgrid">'+'日一二三四五六'.split('').map(w=>'<div class="wd">'+w+'</div>').join('');
-  for(let i=0;i<startWd;i++) h+='<div class="cell empty"></div>';
-  for(let d=1;d<=days;d++){
-    const ds=bkCalY+'-'+String(bkCalM+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
-    const ls=map[ds]||[];
-    const tip=ls.length? ls.map(b=>esc(b.titleCn)).join('、') :'';
-    h+='<div class="cell'+(ls.length?' has':'')+(ds===td?' today':'')+(ds===bkSelDate?' sel':'')+'"'
-     +' onclick="bkSelDay(\''+ds+'\')"'+(tip?' title="'+tip+'"':'')+'>'
-     +'<span class="caldnum">'+d+'</span>'
-     +(ls.length?'<span class="caldot"></span>'+(ls.length>1?'<span class="calmore">+'+(ls.length-1)+'</span>':''):'')
-     +'</div>';
-  }
-  h+='</div>'
-   +'<div class="callegend">'
-   +'<span><i class="leg-has"></i>有課程</span>'
-   +'<span><i class="leg-today"></i>今天</span>'
-   +'<span><i class="leg-sel"></i>選取中</span></div>'
-   +'</div>'
-   +'<div class="bk-day-col">'+bkDayPanel()+'</div>'
+/* ===== 課本目錄（雜誌目錄式，取代日曆）=====
+   依月份分組；最新一個月展開，其他月份收合成一列，點了才展開。
+   每課一張卡：月內序號＋分類（第一個 Topic）、閱讀插圖縮圖、英文標題、中文標題、本課重點句型、
+   底列（影片版／單字數／句型數／日期）。每個展開的月份最後接一張「當月重點複習」。 */
+let bkMonSet=null;   /* 展開中的月份 {'2026-10':true}；第一次進來只展開最新一個月 */
+function bkMonths(){
+  const g={};
+  BOOK_LESSONS.forEach(b=>{ const ym=(b.date||'').slice(0,7); if(ym) (g[ym]=g[ym]||[]).push(b); });
+  return Object.keys(g).sort().reverse().map(ym=>({ym, list:g[ym].slice().sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:0)}));
+}
+/* 縮圖：把閱讀插圖（800×200 的五格圖示帶）的 viewBox 裁到第一格，變成方形縮圖；沒有插圖就用課程圖示 */
+function bkThumb(b){
+  const r=(b.reading||[])[0]||{}, ba=(window.BOOKART||{})[b.id+'#0'];
+  const svg=r.art||(ba&&(ba.svg||ba.art))||'';
+  const m=/viewBox="0 0 800 200"/.test(svg)&&/<g transform="translate\((\d+),52\) scale\(1\.5\)">/.exec(svg);
+  if(m) return '<div class="bkc-th">'+svg.replace('viewBox="0 0 800 200"','viewBox="'+(+m[1]-10)+' 42 116 116"')+'</div>';
+  return '<div class="bkc-th ico">'+(b.iconSvg||b.icon||'📕')+'</div>';
+}
+function bkCard(b,n,opts){
+  opts=opts||{};
+  const nV=(b.vocab||[]).length+(b.vocab2||[]).length, nG=(b.grammar||[]).length;
+  const cat=String(b.topics||'').split(/[,，、｜|]/).map(t=>t.trim()).filter(Boolean)[0]||'';
+  const g=(b.grammar||[])[0];
+  const [y,mo,d]=(b.date||'').split('-');
+  const wd=b.date?'日一二三四五六'.charAt(new Date(+y,+mo-1,+d).getDay()):'';
+  const meta=[nV?nV+' 單字':'', nG?nG+' 句型':''].filter(Boolean).join(' · ');
+  return '<div class="bkc" role="listitem" onclick="bkGo(\''+b.id+'\')">'
+   +'<div class="bkc-hd">'+(n?'<span class="bkc-n">'+n+'</span>':'')+(cat?'<span class="bkc-cat">'+esc(cat)+'</span>':'')
+   +(opts.isNew?'<span class="bkc-new">NEW</span>':'')+'</div>'
+   +'<div class="bkc-bd">'+bkThumb(b)+'<div class="bkc-tx">'
+   +'<div class="bkc-en">'+esc(b.title||'')+'</div>'
+   +'<div class="bkc-cn">'+esc(b.titleCn||'')+'</div>'
+   +(g&&g.title?'<div class="bkc-g">✪ '+esc(g.title)+'</div>':'')
+   +(opts.extra||'')
+   +'</div></div>'
+   +'<div class="bkc-ft">'+(b.video?'<span class="vd">▶ 影片版</span>':'')+(meta?'<span>'+meta+'</span>':'')
+   +(b.date?'<span class="d">'+(+mo)+'/'+(+d)+' 週'+wd+'</span>':'')+'</div>'
    +'</div>';
-  return h;
 }
-/* 右側：選定日期面板（日期標頭＋當天課程扁平清單；沒課給引導不留白） */
-function bkDayPanel(){
-  const ds=bkSelDate, td=today();
-  const ls=bkLessonsOn(ds);
-  const [y,m,d]=ds.split('-');
-  const wd='日一二三四五六'.charAt(new Date(+y,+m-1,+d).getDay());
-  let h='<div class="bkday-hd"><div class="bkday-date">'+y+' / '+m+' / '+d
-   +'<span class="bkday-wd">週'+wd+'</span>'+(ds===td?'<span class="bkday-today">今天</span>':'')+'</div>'
-   +'<div class="bkday-sub">'+(ds===td?'今日課程':'當日課程')+(ls.length?'（'+ls.length+'）':'')+'</div></div>';
-  if(!ls.length){
-    /* 空狀態：給最近一堂課捷徑，不留大面積空白 */
-    const prev=BOOK_LESSONS.filter(b=>(b.date||'')<ds).map(b=>b.date).sort().pop();
-    h+='<div class="bkday-empty"><div>'+(ds===td?'今天沒有安排課程':'這天沒有安排課程')+'</div>'
-     +'<div class="muted" style="margin-top:4px">點日曆上有藍點的日期查看課程</div>'
-     +(prev?'<button class="bkday-jump" onclick="bkSelDay(\''+prev+'\')">查看最近一堂（'+esc(prev.slice(5).replace('-','/'))+'）</button>':'')
-     +'</div>';
-  }else{
-    h+=ls.map(b=>{
-      const nV=(b.vocab||[]).length+(b.vocab2||[]).length;
-      const nG=(b.grammar||[]).length, nH=(b.hw||[]).length;
-      const meta=[nV?nV+' 單字':'',nG?nG+' 句型':'',nH?nH+' 複習':''].filter(Boolean).join(' · ');
-      return '<div class="bkday-card" onclick="bkGo(\''+b.id+'\')">'
-       +'<div class="bkday-ico">'+(b.icon||'📕')+'</div>'
-       +'<div class="bkday-body">'
-       +'<div class="bkday-t">'+esc(b.titleCn)+'</div>'
-       +'<div class="bkday-tc">'+esc(b.title||'')+'</div>'
-       +(meta?'<div class="bkday-meta">'+meta+'</div>':'')
-       +'</div>'
-       +'<button class="bkday-cta" onclick="event.stopPropagation();bkGo(\''+b.id+'\')">開始學習 →</button>'
-       +'</div>';
-    }).join('');
-  }
-  /* 本月課程摺疊清單：掃一眼整月主題；點一列＝選取那天（跟月曆同一套互動） */
-  const ym=bkCalY+'-'+String(bkCalM+1).padStart(2,'0');
-  const mm=BOOK_LESSONS.filter(b=>(b.date||'').indexOf(ym)===0).sort((a,b)=>a.date<b.date?-1:1);
-  h+=mrEntryHTML(ym);
-  h+='<div class="bkmon">'
-   +'<button class="bkmon-tog" onclick="bkMonTog()">📅 '+(bkCalM+1)+' 月課程（'+mm.length+'）'
-   +'<span class="bkmon-arr">'+(bkMonOpen?'▲':'▼')+'</span></button>';
-  if(bkMonOpen){
-    h+= mm.length
-      ? '<div class="bkmon-list">'+mm.map(b=>
-          '<button class="bkmon-row'+(b.date===bkSelDate?' cur':'')+'" onclick="bkSelDay(\''+b.date+'\')">'
-          +'<span class="bkmon-d">'+b.date.slice(5).replace('-','/')+'</span>'
-          +'<span class="bkmon-t">'+(b.icon||'📕')+' '+esc(b.titleCn)+'</span></button>').join('')
-        +'</div>'
-      : '<div class="muted" style="margin-top:6px;font-size:var(--font-meta)">這個月沒有課程。</div>';
-  }
-  h+='</div>';
-  return h;
+function bkTOCHTML(){
+  const months=bkMonths(); if(!months.length) return '<div class="muted">還沒有課程。</div>';
+  if(!bkMonSet){ bkMonSet={}; bkMonSet[months[0].ym]=true; }
+  const newest=months[0].list[months[0].list.length-1];
+  return months.map(({ym,list})=>{
+    const [y,m]=ym.split('-'), open=!!bkMonSet[ym];
+    let h='<section class="bktoc-m'+(open?' open':'')+'"><button class="bktoc-hd" onclick="bkMonToggle(\''+ym+'\')" aria-expanded="'+open+'">'
+      +'<span class="t">'+y+' 年 '+(+m)+' 月</span><span class="n">'+list.length+' 課</span>'
+      +(open?'':'<span class="pv">'+list.slice(-3).reverse().map(b=>'<i>'+(b.icon||'📕')+'</i>').join('')+'</span>')
+      +'<span class="arr">'+(open?'▾':'▸')+'</span></button>';
+    if(open){
+      /* 新課在前；序號照月內上課順序（第 1 課＝當月第一堂） */
+      h+='<div class="bkc-grid" role="list">'+list.map((b,i)=>({b,n:i+1})).reverse()
+        .map(x=>bkCard(x.b,x.n,{isNew:x.b===newest})).join('')+'</div>'
+        +mrEntryHTML(ym);
+    }
+    return h+'</section>';
+  }).join('');
 }
-let bkMonOpen=false;
-function bkMonTog(){
-  bkMonOpen=!bkMonOpen;
-  const c=$('bk-cal'); if(c) c.innerHTML=bkCalHTML();
+function bkMonToggle(ym){
+  bkMonSet=bkMonSet||{}; bkMonSet[ym]=!bkMonSet[ym];
+  const c=$('bk-cal'); if(c) c.innerHTML=bkTOCHTML();
 }
-function bkSelDay(ds){
-  bkSelDate=ds;
-  /* 選到別的月份（例如空狀態的「查看最近一堂」）就把月曆一起切過去 */
-  const p=ds.split('-'); bkCalY=+p[0]; bkCalM=+p[1]-1;
-  const c=$('bk-cal'); if(c) c.innerHTML=bkCalHTML();
-}
-function bkCalShift(d){
-  bkCalM+=d;
-  while(bkCalM<0){ bkCalM+=12; bkCalY--; }
-  while(bkCalM>11){ bkCalM-=12; bkCalY++; }
-  const c=$('bk-cal'); if(c) c.innerHTML=bkCalHTML();
-}
+window.bkMonToggle=bkMonToggle;
 
 /* ============================================================
    每月智慧複習 Monthly Smart Review
@@ -6019,8 +5973,9 @@ function rwUsageHTML(l){
   const u=l.usageCmp;
   if(u&&(u.items||[]).length){
     const ic=x=>RW_UICON[x]||x;
-    const list=arr=>'<div class="urel">'+arr.map(x=>'<span class="urel-i"><b>'+esc(x.term)+'</b>'+esc(rwPad(x.meaning||''))+'</span>').join('')+'</div>';
-    let h='<div class="mr-sec">用法比較</div>'
+    const sup=t=>esc(rwPad(t)).replace(/（[^（）]*）|\([^()]*\)/g,m=>'<span class="u-sup">'+m+'</span>');
+    const list=arr=>'<div class="urel">'+arr.map(x=>'<span class="urel-i"><b>'+esc(x.term)+'</b>'+sup(x.meaning||'')+'</span>').join('')+'</div>';
+    let h='<div class="mr-sec u-title">用法比較</div>'
       +'<div class="ucmp"><div class="ucmp-hd"><span>說法</span><span>意思</span><span>常用情境</span></div>'
       +u.items.map(x=>'<div class="ucmp-row"><b class="ucmp-t">'+esc(x.term)+'</b><span class="ucmp-m">'+esc(rwPad(x.meaning||''))+'</span>'
         +'<span class="ucmp-c">'+(x.icon?'<i aria-hidden="true">'+esc(ic(x.icon))+'</i>':'')+esc(rwPad(x.context||''))+'</span></div>').join('')+'</div>';
@@ -6498,8 +6453,8 @@ function bkSearch(q){
   if(!s){ res.innerHTML=''; if(cal) cal.style.display='block'; return; }
   if(cal) cal.style.display='none';
   const hits=BOOK_LESSONS.map(b=>({b:b,where:bkWhere(b,s)})).filter(x=>x.where.length);
-  res.innerHTML='<div class="muted" style="margin:2px 0 8px">「'+esc(bkQuery.trim())+'」出現在 '+hits.length+' 課</div>'
-    + hits.map(x=>bkItem(x.b,'<div class="meta" style="margin-top:4px"><span>🔍 出現在：'+x.where.map(esc).join('、')+'</span></div>')).join('');
+  res.innerHTML='<div class="muted" style="margin:2px 2px 8px">「'+esc(bkQuery.trim())+'」出現在 '+hits.length+' 課</div>'
+    +'<div class="bkc-grid" role="list">'+hits.map(x=>bkCard(x.b,0,{extra:'<div class="bkc-where">🔍 出現在：'+x.where.map(esc).join('、')+'</div>'})).join('')+'</div>';
 }
 function bkGo(id,sec){ bkSkipLast=false; bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; bkRevYM=null; sbAutoCollapse();
   try{ if(bkOpen) localStorage.setItem('b2lab_bkLast_'+PROFILE, bkOpen.id); }catch(e){}
@@ -6577,7 +6532,7 @@ function bkTogAns(btn){
   card.classList.toggle('hideans');
   btn.textContent=card.classList.contains('hideans')?'👀 顯示答案':'🙈 隱藏答案';
 }
-window.bkGo=bkGo; window.bkClose=bkClose; window.bkCalShift=bkCalShift; window.bkSearch=bkSearch;
+window.bkGo=bkGo; window.bkClose=bkClose; window.bkSearch=bkSearch;
 window.bkTogHint=bkTogHint; window.bkReadPara=bkReadPara; window.bkTogAns=bkTogAns;
 window.bkReadAll=bkReadAll; window.togHintBox=togHintBox;
 window.mrOpen=mrOpen; window.mrClose=mrClose;
