@@ -1634,25 +1634,47 @@ body.cnall #v-book span.cnx{display:inline!important}
 #v-book .magico svg{width:96px;height:96px;display:block}
 #v-real .magttl{position:relative}
 #v-real .magttl h2{padding-right:84px}
-@media(max-width:640px){
-  /* 手機標題卡精簡（2026-09-27）：Topics 一行橫向滑動、單字／句型數量徽章不顯示（內文各節都有） */
-  /* 英文標題最多 2 行，其餘用 …（點一下展開全文）；中文副標完整顯示 */
-  #v-book .magttl h2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* ===== 課本共用 Header 響應式 =====================================================
+   共用元件，所有現有與未來新增的課本自動套用；不綁定課本數量或 Topics 個數。
+   電腦：完整主標題＋中文副標，Topics 全部排列。
+   平板：主標題最多 2 行，Topics 前 5 個＋「＋N 更多」。
+   手機：主標題最多 2 行、中文副標保留，Topics 收合成「Topics ＋N」，次要徽章收進「⋯」。
+   一律不縮字級、不裁切文字、不產生水平捲動。                                        */
+@media(max-width:999px){
+  /* 主標題最多 2 行（點一下展開全文），標題再長也不會把卡片撐高 */
+  #v-book .magttl h2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.2}
   #v-book .magttl.ttlopen h2{-webkit-line-clamp:unset;overflow:visible}
+  /* Topics 只留前 5 個，第 6 個起交給「＋N 更多」；數量由 CSS 決定，不受資料筆數影響 */
+  #v-book .magttl .set .topicpill:nth-of-type(n+6){display:none}
+  #v-book .magttl .set.open .topicpill{display:inline-block}
+  #v-book .magttl .topicmore{display:inline-block}
+  #v-book .magttl .topicmore.few{display:none}          /* 5 個以內不需要更多鈕 */
+  #v-book .magttl .topicmore .mo-t{display:inline}
+  #v-book .magttl .set.open .topicmore .mo-t{display:none}
+}
+@media(max-width:640px){
   #v-book .magttl{padding:10px 12px;margin-bottom:10px}
   #v-book .magttl h2{line-height:1.15;letter-spacing:0}
   #v-book .magttl .back{margin-bottom:2px}
-  #v-book .magttl .cn{margin-top:2px;line-height:1.35}
+  #v-book .magttl .cn{margin-top:2px;line-height:1.35}   /* 中文副標保留 */
   #v-book .magttl .set{margin-top:5px}
   #v-book .magttl .bar{margin-top:7px}
-  #v-book .magttl .set .xtra{display:none}
-  #v-book .magttl .set.open .xtra{display:inline-block}
-  #v-book .magttl .set.open .topicmore{display:none}
-  /* 底部徽章一行：文件連結只留圖示 */
-  #v-book .magttl .bar{flex-wrap:nowrap;overflow:hidden;gap:6px}
+  /* Topics 預設全收合；按鈕本身已寫「Topics ＋N」，所以前面的標籤不再重複 */
+  #v-book .magttl .set .set-lb{display:none}
+  #v-book .magttl .set .topicpill{display:none}
+  #v-book .magttl .set.open .topicpill{display:inline-block}
+  #v-book .magttl .topicmore,#v-book .magttl .topicmore.few{display:inline-block}
+  #v-book .magttl .topicmore .mo-t{display:none}
+  #v-book .magttl .topicmore .mo-m{display:inline}
+  #v-book .magttl .set.open .topicmore .mo-m{display:none}
+  /* 徽章列：換行而不是裁切（原本 nowrap+overflow:hidden 會把文字切掉）；次要項目收進「⋯」 */
+  #v-book .magttl .bar{flex-wrap:wrap;gap:6px}
+  #v-book .magttl .bar-x{display:none}
+  #v-book .magttl .bar.baropen .bar-x{display:contents}
+  #v-book .magttl .barmore{display:inline-block}
+  #v-book .magttl .bar [data-ratebtn]{margin-left:0}
   #v-book .magttl .bar .doclink .dl-tx{display:none}
   #v-book .magttl .bar .doclink{padding:2px 9px}
-  #v-book .magttl .bar .magbadge.c2,#v-book .magttl .bar .magbadge.c3{display:none}
   #v-book .magico,#v-real .magico{font-size:36px;right:12px;top:12px} #v-book .magico svg{width:56px;height:56px} #v-book .magttl h2,#v-real .magttl h2{padding-right:52px} }
 #v-book .sent{cursor:pointer;border-radius:4px;transition:background .15s}
 #v-book .sent.reading,#v-real .sent.reading,#v-read .sent.reading{background:#fff2d9;box-shadow:0 0 0 2px #fff2d9}
@@ -1686,7 +1708,14 @@ body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .ex
 #v-book .magttl h2{text-transform:none}
 /* Topics 改為膠囊標籤，可點查字義／發音 */
 .topicmore{line-height:1.4;display:none;border:1px dashed #d8bf9d;background:transparent;color:var(--accent2);border-radius:16px;padding:2px 10px;font:inherit;font-size:var(--font-meta);font-weight:700;cursor:pointer;margin-left:2px}
-@media(max-width:640px){ .topicmore{display:inline-block} }
+/* 三種標籤預先備好，由斷點決定顯示哪一個；展開後一律顯示「收合」 */
+.topicmore .mo-t,.topicmore .mo-m,.topicmore .mo-c{display:none}
+.set.open .topicmore .mo-c{display:inline}
+.magttl .set-lb{font-weight:inherit}
+/* 次要徽章容器：contents＝不影響版面，手機才真的收起來 */
+.magttl .bar-x{display:contents}
+.magttl .barmore{display:none;line-height:1.4;border:1px solid var(--line);background:var(--card);color:var(--ink2);
+  border-radius:16px;padding:2px 10px;font:inherit;font-size:var(--font-meta);font-weight:700;cursor:pointer;margin-left:auto}
 .topicpill{line-height:1.4;display:inline-block;background:var(--card);border:1px solid #e2d2bd;border-radius:16px;
   padding:2px 11px;margin:3px 5px 0 0;font-size:var(--font-meta);font-weight:700;color:#8a4a12;
   cursor:pointer;font-style:normal}
@@ -6083,8 +6112,10 @@ function bkGo(id,sec){ bkOpen=BOOK_LESSONS.find(x=>x.id===id)||null; bkRevYM=nul
   window.scrollTo(0,0); }
 /* 手機標題卡：標題預設兩行，點一下展開／收合；Topics 的「＋N」按一下顯示其餘標籤（2026-09-27） */
 function bkTtlTog(el){ const c=el.closest(".magttl"); if(c) c.classList.toggle("ttlopen"); }
-function bkTopicsOpen(el){ const s=el.closest(".set"); if(s) s.classList.add("open"); el.remove(); }
-window.bkTtlTog=bkTtlTog; window.bkTopicsOpen=bkTopicsOpen;
+/* 可反覆收合：不能 remove 按鈕，否則轉到別的斷點（或旋轉螢幕）就收不回去 */
+function bkTopicsOpen(el){ const s=el.closest(".set"); if(!s) return; el.setAttribute("aria-expanded",s.classList.toggle("open")?"true":"false"); }
+function bkBarTog(el){ const b=el.closest(".bar"); if(!b) return; el.setAttribute("aria-expanded",b.classList.toggle("baropen")?"true":"false"); }
+window.bkTtlTog=bkTtlTog; window.bkTopicsOpen=bkTopicsOpen; window.bkBarTog=bkBarTog;
 function bkClose(){ bkOpen=null; bkRevYM=null; try{ localStorage.removeItem('b2lab_bkLast_'+PROFILE); }catch(e){} sbAutoExpand(); RENDER.book(); window.scrollTo(0,0); }
 /* 課本朗讀（整段／全文共用）：一句一句念、念到哪句反黃到哪句；
    按下去的按鈕變紅色「⏹ 停止」，再按一次或點空白處就停。
@@ -6254,17 +6285,27 @@ function bookHTML(b){
    +(function(){
       const ts=String(b.topics||'').split(/[,，、｜|]/).map(t=>t.trim()).filter(Boolean);
       /* 核心動詞用綠色系與一般詞彙區分，標籤多的時候比較有層次 */
-      const pill=(t,i)=>{ const g=lookup(t), isV=g&&/^(v|phr)/.test(String(g.pos||''));
-        return '<span class="topicpill'+(isV?' vb':'')+(i>=2?' xtra':'')+'" onclick="showGloss(this.textContent)">'+esc(t)+'</span>'; };
-      const more=ts.length>2?'<button class="topicmore" onclick="bkTopicsOpen(this)">＋'+(ts.length-2)+'</button>':'';
-      return '<div class="set" style="font-style:normal">Topics：'+ts.map(pill).join('')+more+'</div>';
+      const pill=t=>{ const g=lookup(t), isV=g&&/^(v|phr)/.test(String(g.pos||''));
+        return '<span class="topicpill'+(isV?' vb':'')+'" onclick="showGloss(this.textContent)">'+esc(t)+'</span>'; };
+      /* 顯示幾個由 CSS 依斷點決定（電腦全部／平板 5 個／手機收合），
+         所以按鈕三種標籤都先備好，不綁定課本數量或 Topics 個數 */
+      const TB=5, more=ts.length?'<button class="topicmore'+(ts.length<=TB?' few':'')+'" onclick="bkTopicsOpen(this)" aria-expanded="false">'
+        +'<span class="mo-t">＋'+Math.max(0,ts.length-TB)+' 更多</span>'
+        +'<span class="mo-m">Topics ＋'+ts.length+'</span>'
+        +'<span class="mo-c">收合</span></button>':'';
+      /* 標籤刻意用 <b> 而非 <span>：Topics 數量靠 :nth-of-type(span) 計算，標籤若也是 span 會把序號錯開 */
+      return '<div class="set" style="font-style:normal"><b class="set-lb">Topics：</b>'+ts.map(pill).join('')+more+'</div>';
     })()
    +'<div class="bar">'+(b.video?'<button class="magbadge vdbtn" onclick="vdOpen(\''+esc(b.id)+'\')" title="約 3–5 分鐘的影片版：雙語字幕同步、重點表達卡、跟讀">▶ 影片版</button>':'')
    +'<span class="magbadge c1">📅 '+bkDate(b.date)+'</span>'
+   /* .bar-x 在電腦／平板是 display:contents（版面等同沒包），手機才整組收進「⋯」 */
+   +'<span class="bar-x">'
    +'<span class="magbadge c2">🔤 '+((b.vocab||[]).length+(b.vocab2||[]).length)+' 個單字</span>'
    +'<span class="magbadge c3">📐 '+(b.grammar||[]).length+' 個句型</span>'
    +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速（0.8x 慢速／1x 正常／1.2x 快速）" style="margin-left:auto">⏱ '+(Number(ST.rate)||1)+'x</button>'
    +(b.doc?'<a class="doclink" href="'+esc(b.doc)+'" target="_blank" rel="noopener" title="原始 Google 文件"><span class="dl-ic">📄</span><span class="dl-tx"> 原始 Google 文件 ↗</span></a>':'')
+   +'</span>'
+   +'<button class="barmore" onclick="bkBarTog(this)" aria-expanded="false" title="更多資訊">⋯</button>'
    +'</div></div>';
 
   /* ★ 作業複習（原句錯的字反紅、訂正改對的字反綠；沒有作業就整節跳過） */
