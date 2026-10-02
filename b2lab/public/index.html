@@ -4920,12 +4920,11 @@ function pgGramHTML(){
   pool.forEach(g=>stCnt[pgStatus(g)]++);
   if(pgLv!=='all'&&!inBand(pgLv)) pgLv='all';
   const list=pool.filter(g=>(pgLv==='all'||g.level===pgLv)&&(pgSt==='all'||pgStatus(g)===pgSt));
-  /* 第一次進來：有「進行中」的主題先展開，其他先收合，頁面短一點 */
+  /* 第一次進來：全部分組先收合，頁面短一點 */
   if(!pgGrpOpen){
     pgGrpOpen={};
-    /* 手機畫面窄，分組一律先收合，點了才展開 */
-    PG_GROUPS.forEach(n=>pgGrpOpen[n]=!isMobileNav()&&pool.some(g=>pgCat(g)===n&&pgStatus(g)==='part'));
-    if(!isMobileNav()&&!Object.values(pgGrpOpen).some(Boolean)) pgGrpOpen[PG_GROUPS[0]]=true;
+    /* 所有裝置分組一律先收合，點了才展開 */
+    PG_GROUPS.forEach(n=>pgGrpOpen[n]=false);
   }
   const lvChips=[['all','全部程度']].concat(band().map(l=>[l,l]))
     .map(([k,t])=>'<button class="chip'+(pgLv===k?' on':'')+'" onclick="pgSet(\'lv\',\''+k+'\')">'+t+'</button>').join('');
