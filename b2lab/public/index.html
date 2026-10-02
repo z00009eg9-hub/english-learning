@@ -568,7 +568,7 @@ body.cnall #v-real span.cnx{display:inline!important}
 #v-real .bkvrow:not(:last-child){border-bottom:1px solid var(--line)}
 #v-real .bkvmeta{display:flex;align-items:center;flex-wrap:wrap;gap:5px 12px;min-width:0}
 #v-real .bkvcell{padding:0;white-space:normal;overflow-wrap:anywhere;word-break:break-word}
-#v-real .bkvword{font-weight:var(--fw-emph);font-size:var(--font-body);line-height:var(--lh-body)}
+#v-real .bkvword{font-weight:var(--fw-emph);font-size:var(--font-body);line-height:var(--lh-body);flex-basis:100%}
 #v-real .bkvipa{font-family:var(--font-stack);font-size:var(--font-secondary);color:var(--ink2)}
 #v-real .bkvpos{color:var(--ink2);font-size:var(--font-secondary);font-style:italic}
 #v-real .bkvexample{margin-top:5px;line-height:var(--lh-body);font-size:var(--font-body);color:#4a4238}
@@ -667,7 +667,6 @@ body.cnall #v-real span.cnx{display:inline!important}
 .ex .enote{font-size:var(--font-secondary);color:var(--accent2);margin-top:3px}
 /* 測驗中譯：預設收起來，按「顯示中譯」才出現 */
 .q .qcn,.opt .ocn{display:none}
-[id^="quiz-"].qcn-on .qcn,[id^="quiz-"].qcn-on .ocn{display:block}
 .q .qcn{font-size:var(--font-body);color:var(--ink2);font-weight:400;margin-top:3px}
 .opt .ocn{font-size:var(--font-body);color:var(--ink2);margin-top:2px}
 .trap{background:#fff6f5;border:1px solid #f3d5d2;border-radius:10px;padding:11px 13px;margin-bottom:9px;font-size:var(--font-body)}
@@ -1197,8 +1196,10 @@ sup.tno{color:#c0392b;font-weight:var(--fw-title);font-size:var(--font-meta);pad
 @media(hover:hover){.wpline .spk:hover,.wpline .wbb:hover{background:var(--accent-soft);border-color:var(--accent)}}
 .wpitem.flash{background:#fff3dd;box-shadow:0 0 0 2px #e8b13a inset;border-radius:10px}
 .wpline .n{color:#c0392b;font-weight:900}
-.wpline .ipa{font-family:var(--font-stack);font-size:var(--font-secondary);color:var(--ink2);font-weight:400}
-.wpline .pos{font-size:var(--font-secondary);color:#2b7a78;font-weight:var(--fw-body);font-style:italic}
+/* 單字卡統一格式：第一行單字（＋🔊／☆），第二行音標，後面接詞性 */
+.wpmeta{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;margin-top:2px}
+.wpmeta .ipa,.wpline .ipa{font-family:var(--font-stack);font-size:var(--font-secondary);color:var(--ink2);font-weight:400}
+.wpmeta .pos,.wpline .pos{font-size:var(--font-secondary);color:#2b7a78;font-weight:var(--fw-body);font-style:italic}
 .wpitem .zh{font-size:var(--font-body);line-height:var(--lh-body);font-weight:var(--fw-emph);color:var(--accent2);margin-top:2px}
 /* Words & Phrases 層級（閱讀、實景共用）：單字 > 中文意思 > 英文例句 > 英文定義（斜體、小一級）> 中文例句 > 音標詞性。
    斜體只給定義本身；例句維持正體，因為那才是學生主要讀的內容 */
@@ -1741,7 +1742,7 @@ body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .ex
 @media(hover:hover){#v-book .bkvrow:hover{background:rgba(232,129,58,.035)}}
 #v-book .bkvmeta{display:flex;align-items:center;flex-wrap:wrap;gap:5px 12px;min-width:0}
 #v-book .bkvcell{padding:0;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;word-break:break-word;height:auto;max-height:none}
-#v-book .bkvword{font-weight:var(--fw-emph);font-size:var(--font-body);line-height:var(--lh-body)}
+#v-book .bkvword{font-weight:var(--fw-emph);font-size:var(--font-body);line-height:var(--lh-body);flex-basis:100%}
 .wt{cursor:pointer}
 #v-book .bkvipa{font-family:var(--font-stack);font-size:var(--font-secondary);color:var(--ink2);line-height:var(--lh-secondary)}
 #v-book .bkvpos{color:var(--ink2);font-size:var(--font-secondary);font-weight:var(--fw-body);font-style:italic;line-height:var(--lh-secondary)}
@@ -2419,6 +2420,55 @@ nav button{font-size:11px}
   #v-book #bk-results .item:has(.bkstats){position:relative;padding-right:34px}
   #v-book #bk-results .item:has(.bkstats)::after{content:'›';position:absolute;right:14px;top:50%;transform:translateY(-50%);
     font-size:26px;line-height:1;color:var(--accent2);font-weight:700}
+}
+/* ===== 手機版面精簡（≤640px）：閱讀列表標題區、文章／實景標題卡、課本閱讀標題列 ===== */
+@media(max-width:640px){
+  /* 閱讀列表：頂部返回列已寫「閱讀」，卡片內的大標題與操作說明不再重複；程度切換佔滿一行 */
+  #v-read .rdlist-hd{padding:10px 12px}
+  #v-read .rdlist-hd > h2.sec,#v-read .rdlist-hd > .hint{display:none}
+  #v-read .rdlist-hd > .row{margin-bottom:8px!important}
+  #v-read .rdlist-hd .seg-ctrl{display:flex;width:100%;margin-bottom:8px}
+  #v-read .rdlist-hd .seg-ctrl button{flex:1}
+  #v-read .rdlist-hd .chips{margin-bottom:6px}
+
+  /* 文章、實景標題卡：拿掉粗黑框與立體陰影；標題截短（點標題展開全文），中文副標、來源各 1 行 */
+  #v-read .magttl,#v-real .magttl{padding:10px 12px;margin-bottom:10px;border-width:1.5px;box-shadow:none}
+  #v-read .magttl h2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.15;letter-spacing:0}
+  #v-real .magttl h2{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2;padding-right:0}
+  #v-read .magttl.ttlopen h2{-webkit-line-clamp:unset;overflow:visible}
+  #v-real .magttl.ttlopen h2{white-space:normal;overflow:visible}
+  #v-read .magttl .cn{margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #v-read .magttl.ttlopen .cn{white-space:normal}
+  #v-read .magttl .bar,#v-real .magttl .bar{margin-top:6px;gap:6px}
+  #v-read .magttl .set{margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #v-read .magttl.ttlopen .set{white-space:normal}
+  #v-real .magttl .mr-time{margin-top:2px}
+
+  /* 課本閱讀文章：標題佔滿一行，「朗讀全文／說明」排到下一行，不再把標題擠成好幾行 */
+  #v-book .bkrd-hd{flex-wrap:wrap;gap:8px}
+  #v-book .bkrd-hd > h2{flex:1 1 100%!important}
+}
+/* ===== 實景情境三元件（沿用網站色票、圓角與字級；不做大卡片，用細分隔線與淡底建立層級） ===== */
+.rwflow{list-style:none;margin:0 0 14px;padding:12px 2px;display:flex;align-items:flex-start;gap:8px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rwf-step{flex:1 1 0;min-width:0;display:flex;gap:9px;align-items:flex-start}
+.rwf-n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent2);font-weight:800;font-size:13px;line-height:1;display:grid;place-items:center;margin-top:1px}
+.rwf-tx{min-width:0}
+.rwf-tx b{display:block;font-size:var(--font-body);line-height:1.35;color:var(--ink);font-weight:var(--fw-emph)}
+.rwf-d{display:block;font-size:var(--font-meta);color:var(--ink2);line-height:1.45;margin-top:2px}
+.rwf-arr{flex:none;align-self:center;color:var(--accent);font-weight:800;line-height:1}
+.rwf-arr::before{content:'→'}
+.rwctx-p{margin:6px 0;line-height:var(--lh-body)}
+.rwctx-more summary{cursor:pointer;color:var(--ink2);font-size:var(--font-meta);padding:2px 0}
+.kwtag{display:inline-block;padding:0 6px;margin:0 1px;border:1px solid #ecd3bb;background:#fdf6ec;color:#8a4a17;border-radius:6px;font-size:.92em;font-weight:600;line-height:1.45;white-space:nowrap}
+.rwkey{margin:12px 0 6px;padding:12px 14px;background:#fdf6ec;border:1px solid #f3e1cb;border-radius:12px}
+.rwkey-h{font-weight:800;font-size:var(--font-secondary);color:var(--accent2);margin-bottom:6px}
+.rwkey-p{margin:4px 0;line-height:1.5}
+.rwkey-n{margin-top:7px;font-size:var(--font-secondary);color:var(--ink2);line-height:1.55}
+@media(max-width:640px){
+  .rwflow{flex-direction:column;gap:4px;padding:10px 2px}
+  .rwf-step{flex:none;width:100%}
+  .rwf-arr{align-self:flex-start;margin-left:7px}
+  .rwf-arr::before{content:'↓'}
 }
 </style>
 </head>
@@ -3114,7 +3164,6 @@ RENDER.home=function(){
     +['anita','tom'].map(p=>'<button class="hm-chip'+(PROFILE===p?' on':'')+'" onclick="setProfile(\''+p+'\')">'+(p==='anita'?'🍎 Anita':'🐻 Tom')+'</button>').join('')+'</div>'
     +'<div class="hm-row"><span class="hm-lb">程度</span>'
     +band().map(l=>'<button class="hm-chip lv '+lvCls(l)+'" onclick="hdLv(\''+l+'\')">'+l+'</button>').join('')+'</div>'
-    +'<div class="hm-row"><span class="hm-lb">中譯</span><button class="hm-chip'+(CNALL?' on':'')+'" onclick="togGlobalCn();RENDER.home()">'+(CNALL?'🈶 全部顯示':'🈶 點開才顯示')+'</button></div>'
     +'<div class="hm-row"><a class="hm-chip" href="https://learning-english-notes.web.app">🍎🐻 Speak Up ↗</a><a class="hm-chip" href="https://rexon-qa-english.web.app/">🔤 題庫 ↗</a></div>'
     +'</div>';
 };
@@ -3370,7 +3419,7 @@ RENDER.read=function(){
       +'</div>'
     : '';
   v.innerHTML=
-    '<div class="card"><h2 class="sec">📖 分級閱讀'
+    '<div class="card rdlist-hd"><h2 class="sec">📖 分級閱讀'
     +(rdHintOff?' <button class="spk" onclick="rdHint(0)" title="顯示操作說明" style="margin-left:auto">ℹ️</button>':'')+'</h2>'
     +(rdHintOff?'':'<div class="hint" style="position:relative;padding-right:34px">雜誌式版面：內文的<b style="color:#c0561a">橘色加粗＋編號</b>字對應右欄「Words &amp; Phrases」單字片語，另有補充詞彙與選字填空。點<b>任何一個英文字</b>都能查中文。'
       +'<button onclick="rdHint(1)" title="關閉說明" style="position:absolute;top:6px;right:8px;border:0;background:none;cursor:pointer;font-size:15px;color:var(--ink2);line-height:1;padding:3px">✕</button></div>')
@@ -3695,7 +3744,7 @@ function readerHTML(a){
 
   /* 標題卡只留標題＋基本標籤；導讀與文法重點收進可展開的提示區，資訊不再擠成一團 */
   let h='<div class="magttl"><button class="back" onclick="rdClose()"><span class="back-label">返回閱讀</span></button>'
-   +'<h2>'+esc(a.title)+'</h2>'
+   +'<h2 onclick="bkTtlTog(this)" title="點一下展開／收合完整標題">'+esc(a.title)+'</h2>'
    +'<div class="cn">'+esc(a.titleCn)+'</div>'
    +'<div class="bar"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'
    +'<span class="magbadge">🏷 '+esc(a.topic)+'</span>'
@@ -3717,8 +3766,6 @@ function readerHTML(a){
   /* 左欄：內文 */
   h+='<div><div class="card">'
    +'<div class="row" style="margin-bottom:11px;align-items:center">'
-   +'<button class="btn ghost sm" id="btn-cn-show" onclick="cnAll(1)">顯示全部中譯</button>'
-   +'<button class="btn gray sm" id="btn-cn-hide" onclick="cnAll(0)">隱藏中譯</button>'
    +'<button class="btn ghost sm" id="btn-readall" onclick="readAll()">🔊 朗讀全文</button>'
    +'<button class="btn ghost sm" id="btn-rate" onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button>'
    +'<button class="spk" style="margin-left:auto" onclick="togHintBox(this)">💡 說明 ▼</button></div>'
@@ -3745,7 +3792,8 @@ function readerHTML(a){
      + tg.map((t,i)=>{
        return '<div class="wpitem" id="wp-'+(i+1)+'">'
        +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="sayWord(this)">'+esc(t.w)+'</w> '
-       +spk(t.w)+wbBtn(t.w,'閱讀文章')+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
+       +spk(t.w)+wbBtn(t.w,'閱讀文章')+'</div>'
+       +(t.ipa||t.pos?'<div class="wpmeta">'+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>':'')
        +'<div class="zh">'+esc(t.cn)+'</div>'
        +(t.def?'<div class="def">'+esc(t.def)+'</div>':'')
        +(t.ex?'<div class="exs">'+esc(t.ex)+' '+spk(t.ex)+(t.exCn?'<div class="excn">'+esc(t.exCn)+'</div>':'')+'</div>':'')
@@ -3890,12 +3938,8 @@ window.togCn=togCn; window.cnAll=cnAll; window.readAll=readAll;
    4. 通用測驗元件
    ============================================================ */
 let QSTATE={};
-/* 標題列右側的「顯示中譯」開關；沒有中譯資料的測驗回空字串 */
-function qzBtnHTML(ns,qs){
-  const hasCn=(qs||[]).some(q=>q.qCn||(q.optsCn||[]).length);
-  if(!hasCn) return '';
-  return '<button class="spk" id="qcn-'+ns+'" data-ns="'+ns+'" onclick="togQuizCn(this.dataset.ns)" style="margin-left:auto">🈶 顯示中譯</button>';
-}
+/* 測驗不再有自己的中譯開關：題目／選項中譯跟著頁面右上的全站中譯（body.cnall）顯示 */
+function qzBtnHTML(){ return ''; }
 function quizHTML(qs,ns){
   /* 題幹朗讀把挖空唸成 blank，作答前點 🔊 不會洩漏答案 */
   return ''
@@ -3908,12 +3952,6 @@ function quizHTML(qs,ns){
     + '<div class="expl" id="e-'+ns+'-'+i+'">'+(q.ans!=null?'✔ 正解：'+esc(q.opts[q.ans])+'<br>':'')+esc(q.expl||'')+'</div></div>').join('')
   +'</div>';
 }
-function togQuizCn(ns){
-  const box=$('quiz-'+ns); if(!box) return;
-  const on=box.classList.toggle('qcn-on');
-  const b=$('qcn-'+ns); if(b) b.textContent = on?'🈶 隱藏中譯':'🈶 顯示中譯';
-}
-window.togQuizCn=togQuizCn;
 /* 三種測驗共用：art=文章、gram=文法單元、listen=聽力課 */
 function qsOf(ns){ return ns==='art' ? (rdOpen&&rdOpen.questions)||[] : ns==='listen' ? (lsOpen&&lsOpen.questions)||[] : (CURG&&CURG.quiz)||[]; }
 function scoreBoxId(ns){ return ns==='art'?'quizScore':ns==='listen'?'lsquizScore':'gquizScore'; }
@@ -5882,7 +5920,7 @@ function rwWordRow(t,l){
 /* 實景 detail 三圓圖示帶：情境 → 核心單字 → 開口說。
    沿用每日文章五圓圖示帶的視覺模板（白圓、波浪、箭頭），配色用全站暖橘調；
    第一圓依分類換情境圖示（生活/交通/職場/旅行/其他），文字用膠囊列不畫進 SVG */
-function rwStripSVG(l){
+function rwStripSVG(l,noCap){
   const D='#2b2118', A='#e8813a', T='#f7e3c9';
   const L=RW_ICONLIB(D,A,T);
   const byCat={'生活':'house','交通':'road','職場':'briefcase','旅行':'plane','其他':'screen'};
@@ -5896,7 +5934,54 @@ function rwStripSVG(l){
    +circ(104,L[icons[0]])+circ(352,L[icons[1]])+circ(600,L[icons[2]])
    +'<g fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".8">'+arrow(293)+arrow(541)+'</g>'
    +'</svg>'
-   +'<figcaption><div class="steps">'+steps.map((t,i)=>'<span class="stp">'+(i+1)+'. '+esc(t)+'</span>'+(i<2?'<span class="sarr">➔</span>':'')).join('')+'</div></figcaption></figure>';
+   +(noCap?'':'<figcaption><div class="steps">'+steps.map((t,i)=>'<span class="stp">'+(i+1)+'. '+esc(t)+'</span>'+(i<2?'<span class="sarr">➔</span>':'')).join('')+'</div></figcaption>')+'</figure>';
+}
+/* ===== 實景「先看懂，再閱讀，再學單字」三元件：ScenarioFlow／ContextSummary／KeyTakeaway =====
+   資料驅動、欄位全部選填，舊教材自動備援：
+   scenarioSteps [{title,desc}]        → 沒有就用 steps（只有標題）
+   ctxShort（3–5 行短版）              → 沒有就顯示原本的 ctx；有的話完整 ctx 收在下方可展開
+   keyTakeaway {pairs:[{w,cn}], note}  → 沒有就取第一個核心單字 */
+function rwFlowSteps(l){
+  if(Array.isArray(l.scenarioSteps)&&l.scenarioSteps.length)
+    return l.scenarioSteps.slice(0,3).map(x=>({title:String(x.title||'').trim(),desc:String(x.desc||x.description||'').trim()})).filter(x=>x.title);
+  return (Array.isArray(l.steps)?l.steps:[]).filter(Boolean).slice(0,3).map(t=>({title:String(t),desc:''}));
+}
+/* 情境文字裡的重點詞換成輕量 keyword 標籤（每個詞只標第一次），不用整句橘色粗體。
+   先換成不含英文字母的佔位符再展開，長詞先處理，短詞才不會被標進長詞的標籤裡 */
+function rwKw(text,l){
+  const terms=[...new Set([].concat((l.vocab||[]).map(v=>v.w),(l.cmp||[]).map(c=>c.w)).filter(t=>t&&/[A-Za-z]{2,}/.test(t)))]
+    .sort((a,b)=>b.length-a.length);
+  let h=esc(rwPad(text)); const keep=[];
+  terms.forEach(t=>{
+    const re=new RegExp('(^|[^A-Za-z])('+reEsc(esc(t))+')(?![A-Za-z])','i');
+    h=h.replace(re,(m,pre,w)=>{ keep.push(w); return pre+'\u0001'+(keep.length-1)+'\u0002'; });
+  });
+  return h.replace(/\u0001(\d+)\u0002/g,(m,i)=>'<span class="kwtag">'+keep[+i]+'</span>');
+}
+function rwKwParas(text,l){
+  return String(text||'').split(/\n+/).map(p=>p.trim()).filter(Boolean).map(p=>'<p class="rwctx-p">'+rwKw(p,l)+'</p>').join('');
+}
+function rwFlowHTML(l){
+  const st=rwFlowSteps(l); if(!st.length) return '';
+  return '<ol class="rwflow">'+st.map((x,i)=>'<li class="rwf-step"><span class="rwf-n">'+(i+1)+'</span><div class="rwf-tx"><b>'+esc(rwPad(x.title))+'</b>'
+    +(x.desc?'<span class="rwf-d">'+esc(rwPad(x.desc))+'</span>':'')+'</div></li>'
+    +(i<st.length-1?'<li class="rwf-arr" aria-hidden="true"></li>':'')).join('')+'</ol>';
+}
+function rwContextHTML(l){
+  const short=String(l.ctxShort||'').trim();
+  if(short) return '<div class="mr-sec" style="margin-top:0">情境 Context</div>'+rwKwParas(short,l)
+    +(l.ctx?'<details class="rwctx-more"><summary>看完整情境說明</summary>'+rwKwParas(l.ctx,l)+'</details>':'');
+  return l.ctx?'<div class="mr-sec" style="margin-top:0">情境 Context</div>'+rwKwParas(l.ctx,l):'';
+}
+function rwKeyHTML(l){
+  const k=l.keyTakeaway||{}, v0=(l.vocab||[])[0];
+  const own=(k.pairs||[]).filter(p=>p&&p.w);
+  const pairs=own.length?own:(v0&&v0.w&&v0.cn?[{w:v0.w,cn:v0.cn}]:[]);
+  const note=String(k.note||'').trim();
+  if(!pairs.length&&!note) return '';
+  return '<div class="rwkey"><div class="rwkey-h">💡 你只要記住</div>'
+    +pairs.map(p=>'<div class="rwkey-p"><span class="kwtag">'+esc(p.w)+'</span> = '+esc(rwPad(p.cn||''))+'</div>').join('')
+    +(note?'<div class="rwkey-n">'+rwKw(note,l)+'</div>':'')+'</div>';
 }
 /* 實景圖示庫（64×64 線性圖，同每日文章插圖風格）。建教材時用 icons:[a,b,c] 指定三個，
    標籤用 steps:[…]；沒指定就用 分類圖 → 書 → 對話泡泡 */
@@ -5956,15 +6041,16 @@ function rwDetailHTML(l){
   const st=rwStat(l.id);
   /* Header：觀看原影片直接放在標題卡的 bar 裡，不再獨立一個「原始影片」區塊 */
   let h='<div class="magttl"><button class="back" onclick="rwBack()"><span class="back-label">返回實景</span></button>'
-   +'<h2>'+esc(rwPad(l.ti))+'</h2>'
+   +'<h2 onclick="bkTtlTog(this)" title="點一下展開／收合完整標題">'+esc(rwPad(l.ti))+'</h2>'
    +'<div class="mr-time">'+esc([l.country,l.cat,l.level,l.min].filter(Boolean).join(' · '))+'</div>'
    +'<div class="bar">'
    +(l.url?'<a class="spk" style="text-decoration:none" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>':'')
    +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button></div></div>';
   /* 雜誌雙欄（同閱讀頁）：左欄 圖示帶＋情境＋原句＋用法比較＋Speak Up，右欄 Words & Phrases */
   h+='<div class="mag"><div><div class="card">';
-  h+=rwStripSVG(l);
-  if(l.ctx) h+='<div class="mr-sec" style="margin-top:0">情境 Context</div>'+rwParas(l.ctx);
+  /* 閱讀順序：插圖 → 三步驟流程 → 情境短文 → 你只要記住 → 原句／延伸例句／用法比較／Speak Up */
+  const flow=rwFlowHTML(l);
+  h+=rwStripSVG(l,!!flow)+flow+rwContextHTML(l)+rwKeyHTML(l);
   /* 影片實景原句：只放有來源依據的句子（字幕 / 頁面文字 / 使用者提供），絕不由標題自行生成 */
   h+='<div class="mr-sec">影片實景原句'+((l.quotes||[]).length?'（'+l.quotes.length+'）':'')+'</div>';
   if((l.quotes||[]).length){
@@ -6020,7 +6106,8 @@ function rwDetailHTML(l){
     h+='<div class="wpbox"><div class="wphead">▼ Words &amp; Phrases<span class="zh">單字片語</span></div><div class="wpbody">'
      +l.vocab.map((t,i)=>'<div class="wpitem" id="rwp-'+(i+1)+'">'
        +'<div class="wpline"><span class="n">'+(i+1)+'.</span> <w onclick="sayWord(this)">'+esc(t.w)+'</w> '
-       +spk(t.w)+wbBtn(t.w,'實景：'+(l.ti||''))+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>'
+       +spk(t.w)+wbBtn(t.w,'實景：'+(l.ti||''))+'</div>'
+       +(t.ipa||t.pos?'<div class="wpmeta">'+(t.ipa?'<span class="ipa">'+esc(t.ipa)+'</span>':'')+(t.pos?'<span class="pos">'+esc(t.pos)+'</span>':'')+'</div>':'')
        +(t.cn?'<div class="zh">'+esc(t.cn)+'</div>':'')
        +(t.ex?'<div class="exs">'+bkHi(t.ex,t.w)+' '+spk(t.ex)+(t.exCn?'<div class="excn">'+esc(t.exCn)+'</div>':'')+'</div>':'')
        +'</div>').join('')
@@ -6045,6 +6132,11 @@ function rwFormHTML(){
     : (e.vocab||[]).map(v=>[v.w,v.ipa,v.pos,v.cn,v.ex,v.exCn].join(' | ')).join('\n');
   const cmpTxt = d.cmpTxt!=null ? d.cmpTxt
     : (e.cmp||[]).map(c=>c.w+' | '+c.d).join('\n');
+  const flowTxt = d.flowTxt!=null ? d.flowTxt
+    : (e.scenarioSteps||[]).map(x=>x.title+(x.desc?' | '+x.desc:'')).join('\n');
+  const ek=e.keyTakeaway||{};
+  const keyTxt = d.keyTxt!=null ? d.keyTxt
+    : (ek.pairs||[]).map(p=>p.w+' = '+p.cn).concat(ek.note?[ek.note]:[]).join('\n');
   const catOpts=RW_CATS.map(c=>'<option value="'+c+'"'+((d.cat||'生活')===c?' selected':'')+'>'+c+'</option>').join('');
   return '<div class="card rw-form">'
    +'<h2 class="sec">'+(rwEditId?'編輯實景教材':'新增實景教材')+'</h2>'
@@ -6071,6 +6163,12 @@ function rwFormHTML(){
    +'<label>延伸例句（選填，一行一句：英文 | 中文；依情境補充的句子，會與影片原句分開標示）</label>'
    +'<textarea id="rwf-exs" placeholder="Cars are not allowed in the bus corridor during rush hour. | 尖峰時段汽車不能開進公車廊道。">'+esc(d.exsTxt!=null?d.exsTxt:(e.exs||[]).map(q=>q.en+' | '+q.cn).join('\n'))+'</textarea>'
    +'<label>情境說明（1–3 段短文字）</label><textarea id="rwf-ctx" placeholder="這支影片的場景是什麼？為什麼這個單字在這裡這樣用？">'+esc(d.ctx||'')+'</textarea>'
+   +'<label>三步驟情境流程（選填，三行：標題 | 說明；有填會取代上面的步驟標籤）</label>'
+   +'<textarea id="rwf-flow" placeholder="看到 SOFT OPENING 海報 | 店門口寫著「SOFT OPENING」">'+esc(flowTxt)+'</textarea>'
+   +'<label>情境短版（選填，3–5 行；有填就先顯示短版，完整說明收在下方可展開）</label>'
+   +'<textarea id="rwf-ctxshort" placeholder="10 秒內就能看懂的核心情境">'+esc(d.ctxShort||'')+'</textarea>'
+   +'<label>你只要記住（選填；一行一組「詞 = 中文」，其他行當補充說明）</label>'
+   +'<textarea id="rwf-key" placeholder="soft opening = 試營業">'+esc(keyTxt)+'</textarea>'
    +'<label>實境用法（可分行）</label><textarea id="rwf-usage" placeholder="corridor&#10;一般：走廊&#10;交通 / 都市規劃：交通廊道、沿線">'+esc(d.usage||'')+'</textarea>'
    +'<label>比較（選填，一行一組：詞 | 說明）</label><textarea id="rwf-cmp" placeholder="road | 道路本身&#10;route | 路線&#10;corridor | 重要交通廊道 / 沿線">'+esc(cmpTxt)+'</textarea>'
    +'<label>Speak Up 口說問題（選填，英文）</label><input id="rwf-spq" value="'+esc(d.spq||'')+'" placeholder="What does &quot;corridor&quot; mean in this video?">'
@@ -6086,7 +6184,7 @@ function rwCapture(){
     paste:g('rwf-paste'), ti:g('rwf-ti'), tiSrc:g('rwf-tisrc'), url:g('rwf-url'), country:g('rwf-country'),
     cat:g('rwf-cat'), level:g('rwf-lv'), min:g('rwf-min'), point:g('rwf-point'),
     icons:g('rwf-icons').split(/[,，\s]+/).filter(Boolean), steps:g('rwf-steps').split(/[,，|｜]/).map(s=>s.trim()).filter(Boolean),
-    vocabTxt:g('rwf-vocab'), quotesTxt:g('rwf-quotes'), exsTxt:g('rwf-exs'), ctx:g('rwf-ctx'), usage:g('rwf-usage'), cmpTxt:g('rwf-cmp'), spq:g('rwf-spq'), spHint:g('rwf-sphint')
+    vocabTxt:g('rwf-vocab'), quotesTxt:g('rwf-quotes'), exsTxt:g('rwf-exs'), ctx:g('rwf-ctx'), flowTxt:g('rwf-flow'), ctxShort:g('rwf-ctxshort'), keyTxt:g('rwf-key'), usage:g('rwf-usage'), cmpTxt:g('rwf-cmp'), spq:g('rwf-spq'), spHint:g('rwf-sphint')
   });
 }
 function rwParse(){
@@ -6124,6 +6222,13 @@ function rwSave(){
   const exs=(d.exsTxt||'').split('\n').map(s=>s.trim()).filter(Boolean).map(line=>{
     const p=line.split(/\s*[|｜]\s*/); return {en:p[0]||'', cn:p[1]||''};
   }).filter(q=>q.en);
+  const scenarioSteps=(d.flowTxt||'').split('\n').map(x=>x.trim()).filter(Boolean).slice(0,3).map(line=>{
+    const p=line.split(/\s*[|｜]\s*/); return {title:p[0]||'', desc:p.slice(1).join(' ')}; }).filter(x=>x.title);
+  const keyLines=(d.keyTxt||'').split('\n').map(x=>x.trim()).filter(Boolean);
+  const isPair=x=>/\s=\s|＝/.test(x);
+  const keyPairs=keyLines.filter(isPair).map(x=>{ const p=x.split(/\s*[=＝]\s*/); return {w:p[0]||'', cn:p.slice(1).join(' = ')}; }).filter(p=>p.w);
+  const keyNote=keyLines.filter(x=>!isPair(x)).join('\n');
+  const keyTakeaway=(keyPairs.length||keyNote)?{pairs:keyPairs, note:keyNote}:null;
   ST.rw=ST.rw||{};
   ST.rw[id]={ id, created:prev.created||Date.now(), t:Date.now(),
     videoType:prev.videoType||'external',
@@ -6133,7 +6238,9 @@ function rwSave(){
     cat:d.cat||'生活', level:(d.level||'').trim(), min:(d.min||'').trim(),
     point:(d.point||'').trim(), ctx:(d.ctx||'').trim(), usage:(d.usage||'').trim(),
     cmp, quotes, exs, spq:(d.spq||'').trim(), spHint:(d.spHint||'').trim(), vocab,
-    icons:(d.icons||[]).filter(k=>RW_ICON_KEYS.includes(k)).slice(0,3), steps:(d.steps||[]).slice(0,3) };
+    icons:(d.icons||[]).filter(k=>RW_ICON_KEYS.includes(k)).slice(0,3),
+    steps:scenarioSteps.length?scenarioSteps.map(x=>x.title):(d.steps||[]).slice(0,3),
+    scenarioSteps, ctxShort:(d.ctxShort||'').trim(), keyTakeaway };
   save(); rwShare();
   rwFormOn=false; rwDraft=null; rwEditId=null;
   rwOpen=id; sbAutoCollapse(); RENDER.real(); window.scrollTo(0,0);
@@ -6613,8 +6720,8 @@ function bookHTML(b){
     const _bart=r.art||(_ba?_ba.svg:'')||'';
     const _bcap=r.artCap||(_ba?_ba.cap:'')||'';
     h+='<div class="bkbar">'+esc(r.bar)+'</div>'
-     +'<div class="card"><div class="row" style="justify-content:space-between;align-items:center">'
-     +'<h2 class="sec bkattl" style="color:var(--accent2);margin:0;flex:1">'+esc(r.title)+' '+spk(r.title)+'</h2>'
+     +'<div class="card"><div class="row bkrd-hd" style="justify-content:space-between;align-items:center">'
+     +'<h2 class="sec bkattl" style="color:var(--accent2);margin:0;flex:1">'+esc(r.title)+'</h2>'
      +'<span class="row" style="flex-wrap:nowrap;gap:6px">'
      +'<button class="spk" onclick="bkReadAll(this)">🔊 朗讀全文</button>'
      +'<button class="spk" onclick="togHintBox(this)">💡 ▼</button></span></div>'
