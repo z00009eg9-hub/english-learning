@@ -1258,19 +1258,14 @@ body.cnall #v-listen .precn{display:block}
 }
 .focus .sub{font-size:var(--font-secondary);font-weight:800;color:var(--accent2);margin:14px 0 6px;letter-spacing:.3px}
 .focus .gobtn{margin-top:12px}
-.back{
-  display:inline-flex;align-items:center;gap:6px;
-  height:38px;border-radius:12px;border:1.5px solid var(--line);
-  background:var(--card);box-shadow:0 1px 5px rgba(0,0,0,.10);
-  cursor:pointer;padding:0 14px 0 10px;margin-bottom:8px;font:inherit;font-size:var(--font-secondary);line-height:1;
-  transition:box-shadow .15s,border-color .15s;color:var(--ink)
-}
-.back::before{
-  content:'';display:block;flex-shrink:0;width:20px;height:20px;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -3 106 106'%3E%3Cpolygon points='50,5 5,50 50,95 50,70 95,70 95,30 50,30' fill='%23f5a623' stroke='%23222' stroke-width='7' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
-}
-@media(hover:hover){.back:hover{border-color:#dccfbe;box-shadow:0 2px 8px rgba(60,45,30,.12)}}
-.back:active{box-shadow:0 0 0 rgba(0,0,0,0);background:#f5f5f5}
+/* 共用返回導覽（backLinkHTML 產生）：文字型「← 上一層」，放在標題卡外面左上方；
+   不用按鈕底色、陰影、圓角；平常是次要深色，hover／鍵盤 focus 才變橘色；點擊區至少 32px 高 */
+.backnav{margin:0 0 8px}
+.backlink{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:4px 6px 4px 0;border:0;background:none;
+  font:inherit;font-size:calc(15px * var(--fs));font-weight:500;line-height:1.3;color:var(--ink2);cursor:pointer;border-radius:4px}
+.backlink .bl-arr{font-size:1.05em;line-height:1}
+@media(hover:hover){ .backlink:hover{color:var(--accent2)} }
+.backlink:focus-visible{outline:2px solid var(--accent);outline-offset:2px;color:var(--accent2)}
 .hint{font-size:var(--font-secondary);line-height:var(--lh-secondary);color:var(--ink2);background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
 .hint-toggle{border:1px dashed var(--line);border-radius:10px;margin-bottom:12px;background:var(--card);overflow:hidden}
 .hint-toggle .hint{border:none;border-radius:0 0 10px 10px;margin:0}
@@ -1544,6 +1539,21 @@ body.cnall #v-book span.cnx{display:inline!important}
 /* compact filter dropdown */
 .filter-sel{border:1.5px solid var(--line);border-radius:10px;padding:7px 12px;font:inherit;
   font-size:calc(13px * var(--fs));color:var(--ink2);background:var(--card);cursor:pointer;margin-bottom:12px}
+/* 分級閱讀篩選工具列：左＝程度＋文法篩選，右＝搜尋（約 300px）＋類型；空間不夠就自然換行 */
+.rdtool{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;margin-bottom:10px}
+.rdtool-l,.rdtool-r{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.rdtool .seg-ctrl{margin:0}
+.rdtool .chip{margin:0}
+.rdtool-r{flex-wrap:nowrap;flex:0 0 auto}
+.rdtool-r #rd-q{flex:none;width:300px;margin:0}
+.rdtool-r .filter-sel{flex:none;width:auto}
+.rdtool-r .filter-sel{margin:0}
+.rdtool-chips{margin:0 0 10px}
+@media(max-width:640px){
+  .rdtool-l,.rdtool-r{flex:1 1 100%;min-width:0}
+  .rdtool-r #rd-q{flex:1 1 auto;width:auto;min-width:0}
+  .rdtool-r .filter-sel{flex:0 1 auto;min-width:0;max-width:44%}
+}
 /* audio player bar */
 .au-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .au-bar .au-main{
@@ -1604,11 +1614,6 @@ body.cnall #v-book span.cnx{display:inline!important}
 #v-book table.bkrev td:nth-child(1),#v-book table.bkrev th:nth-child(1){width:24%}
 #v-book table.bkrev td:nth-child(2),#v-book table.bkrev th:nth-child(2){width:36%}
 #v-book table.bkrev td:nth-child(3),#v-book table.bkrev th:nth-child(3){width:10%}
-/* 返回鍵（課本＋閱讀共用）：標題卡上方獨立一行，不再 absolute 定位，避免被側邊欄遮擋 */
-#v-book .magttl .back,#v-read .magttl .back,#v-real .magttl .back{display:inline-flex;align-items:center;gap:6px;
-  margin:0 0 10px;font-size:var(--font-secondary);line-height:1;z-index:2}
-#v-book .magttl .back .back-label,#v-read .magttl .back .back-label,#v-real .magttl .back .back-label{
-  font-size:var(--font-secondary);font-weight:var(--fw-emph);color:var(--ink2)}
 /* 課本標題卡：右側大圖示（純裝飾）＋彩色徽章 */
 #v-book .magttl h2{padding-right:84px}
 #v-book .magico,#v-real .magico{position:absolute;right:20px;top:16px;font-size:58px;line-height:1;
@@ -1631,7 +1636,6 @@ body.cnall #v-book span.cnx{display:inline!important}
 @media(max-width:640px){
   #v-book .magttl{padding:10px 12px;margin-bottom:10px}
   #v-book .magttl h2{line-height:1.15;letter-spacing:0}
-  #v-book .magttl .back{margin-bottom:2px}
   #v-book .magttl .cn{margin-top:2px;line-height:1.35}   /* 中文副標保留 */
   #v-book .magttl .set{margin-top:5px}
   #v-book .magttl .bar{margin-top:7px}
@@ -2350,9 +2354,10 @@ nav button{font-size:11px}
   header{flex-wrap:nowrap}
   header > *{display:none !important}
   header > .hd-mback,header > .hd-mtitle{display:inline-flex !important;align-items:center}
-  .hd-mback{border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.18);color:#fff;border-radius:999px;
-    padding:6px 14px;min-height:38px;font:inherit;font-size:15px;font-weight:800;cursor:pointer;white-space:nowrap}
-  .hd-mback:active{background:rgba(255,255,255,.32)}
+  body.m-detail header > .hd-mtitle{display:none !important}
+  .hd-mback{border:0;background:none;color:#fff;border-radius:4px;
+    padding:6px 8px 6px 0;min-height:38px;font:inherit;font-size:15px;font-weight:500;cursor:pointer;white-space:nowrap}
+  .hd-mback:active{opacity:.75}
   .hd-mtitle{color:#fff;font-size:17px;font-weight:800;margin-left:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   /* 中譯小鈕：返回列最右側，切換全站中譯（課本、文章、今日、文法、聽力共用同一個開關） */
   header > .hd-mcn{display:inline-flex !important;align-items:center;justify-content:center}
@@ -2367,8 +2372,8 @@ nav button{font-size:11px}
   /* 課文標題卡：獨立的「返回課本」改由返回列的「← 課本」負責；
      影片版／日期／Topics／⋯ 併成同一行，拿掉粗黑框與立體陰影 */
   #v-book .magttl{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:10px 12px;border-width:1.5px;box-shadow:none}
-  /* 要寫到 .magttl .back 這一層，才蓋得過全站「課本＋閱讀＋實景共用返回鍵」那條 display:inline-flex */
-  #v-book .back,#v-book .magttl .back,#v-read .back,#v-read .magttl .back,#v-real .back,#v-real .magttl .back,#v-gram .back,#v-listen .back{display:none}
+  /* 手機的返回在頂端返回列（← 分區名，同一套 mDetail 名稱與目的地），頁內的返回導覽就不重複顯示 */
+  .backnav{display:none}
   #v-book .magttl h2,#v-book .magttl .cn{flex:0 0 100%}
   #v-book .magttl .cn{margin-top:0;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
   #v-book .magttl.ttlopen .cn{-webkit-line-clamp:unset;overflow:visible}
@@ -2394,8 +2399,8 @@ nav button{font-size:11px}
   /* 閱讀列表：頂部返回列已寫「閱讀」，卡片內的大標題與操作說明不再重複；程度切換佔滿一行 */
   #v-read .rdlist-hd{padding:10px 12px}
   #v-read .rdlist-hd > h2.sec,#v-read .rdlist-hd > .hint{display:none}
-  #v-read .rdlist-hd > .row{margin-bottom:8px!important}
-  #v-read .rdlist-hd .seg-ctrl{display:flex;width:100%;margin-bottom:8px}
+  #v-read .rdlist-hd .rdtool{margin-bottom:8px}
+  #v-read .rdlist-hd .seg-ctrl{display:flex;width:100%;margin-bottom:0}
   #v-read .rdlist-hd .seg-ctrl button{flex:1}
   #v-read .rdlist-hd .chips{margin-bottom:6px}
 
@@ -3290,21 +3295,36 @@ window.goHome=goHome; window.homeGo=homeGo;
    在詳細頁裡，手機返回列顯示「← 分區名」，按下或用返回手勢回到列表；其他地方是「← 首頁」。
    這取代各詳細頁頂端那顆獨立的返回按鈕（手機上隱藏），標題區因此少一整行。
    從別的分區點進來的（FROM_TAB，例如從今日點進文章），返回列寫的是來源分區，關閉函式也會帶回那裡。 */
-function mDetail(){
+function mDetail(t){
+  t=t||TAB;
   const from=lb=>FROM_TAB&&TAB_NAME[FROM_TAB]?TAB_NAME[FROM_TAB]:lb;
-  if(TAB==='book'   && bkOpen)   return {lb:'課本', close:bkClose};
-  if(TAB==='book'   && bkRevYM)  return {lb:'課本', close:mrClose};
-  if(TAB==='read'   && rdOpen)   return {lb:from('閱讀'), close:rdClose};
-  if(TAB==='gram'   && CURG)     return {lb:from('文法'), close:gClose};
-  if(TAB==='real'   && rwOpen)   return {lb:'實景', close:rwBack};
-  if(TAB==='listen' && myVid)    return {lb:'聽力', close:closeMyVid};
-  if(TAB==='listen' && lsOpen)   return {lb:from('聽力'), close:lsClose};
+  if(t==='book'   && bkOpen)   return {lb:'課本', close:bkClose};
+  if(t==='book'   && bkRevYM)  return {lb:'課本', close:mrClose};
+  if(t==='read'   && rdOpen)   return {lb:from('閱讀'), close:rdClose};
+  if(t==='gram'   && CURG)     return {lb:from('文法'), close:gClose};
+  if(t==='real'   && rwOpen)   return {lb:'實景', close:rwBack};
+  if(t==='listen' && myVid)    return {lb:'聽力', close:closeMyVid};
+  if(t==='listen' && lsOpen)   return {lb:from('聽力'), close:lsClose};
   return null;
 }
+/* ===== 共用返回導覽 BackLink =====
+   所有詳細頁（課本、月複習、分級閱讀、實景、文法、聽力、我的影片）統一用文字型「← 上一層名稱」，
+   放在標題卡外面的左上方；名稱與目的地跟手機返回列共用 mDetail()：回到明確的上一層列表，
+   不靠瀏覽器的上一頁（從外部網址直接進來也不會跳出網站）；從別的分區點進來就寫來源分區 */
+const BACK_NAME={'閱讀':'分級閱讀','實景':'實景英語'};
+function backLinkHTML(t){
+  const d=mDetail(t); if(!d) return '';
+  return '<div class="backnav" role="navigation" aria-label="返回"><button type="button" class="backlink" onclick="backGo(\''+t+'\')">'
+    +'<span class="bl-arr" aria-hidden="true">←</span>'+esc(BACK_NAME[d.lb]||d.lb)+'</button></div>';
+}
+function backGo(t){ const d=mDetail(t); if(d){ d.close(); window.scrollTo(0,0); } }
+window.backGo=backGo;
 function updMback(){
   const b=$('hd-mback'); if(!b) return;
   const d=mDetail();
   b.textContent='← '+(d?d.lb:'首頁');
+  /* 詳細頁的返回已寫出分區名，旁邊的分區標題就不重複 */
+  document.body.classList.toggle('m-detail',!!d);
 }
 function hdBack(){ const d=mDetail(); if(d){ d.close(); window.scrollTo(0,0); } else goHome(); }
 window.hdBack=hdBack;
@@ -3518,21 +3538,24 @@ RENDER.read=function(){
   if(rdFilter.gram!=='all'&&!gCnt[rdFilter.gram])gCnt[rdFilter.gram]=0;
   const gb=[['all','全部文法']].concat(RD_GRAMKEYS.filter(k=>gCnt[k]!=null).map(k=>[k,k+' '+gCnt[k]]));
   /* 文法篩選收在「📐 文法篩選」按鈕後面；收合時若有作用中的主題，直接顯示在按鈕上 */
-  const gramRow = gb.length>1
-    ? '<div class="chips"><button class="chip'+(rdFilter.gram!=='all'?' on':'')+'" onclick="rdGramTog()">📐 文法篩選'
+  const gramBtn = gb.length>1
+    ? '<button class="chip rdtool-g'+(rdFilter.gram!=='all'?' on':'')+'" onclick="rdGramTog()" aria-expanded="'+rdGramOpen+'">📐 文法篩選'
       +(rdFilter.gram!=='all'?'：'+esc(rdFilter.gram):'')+' '+(rdGramOpen?'▴':'▾')+'</button>'
-      +(rdGramOpen?gb.map(([k,t])=>'<button class="chip'+(rdFilter.gram===k?' on':'')+'" onclick="rdSet(\'gram\',\''+k+'\')">'+t+'</button>').join(''):'')
-      +'</div>'
+    : '';
+  const gramRow = gb.length>1&&rdGramOpen
+    ? '<div class="chips rdtool-chips">'+gb.map(([k,t])=>'<button class="chip'+(rdFilter.gram===k?' on':'')+'" onclick="rdSet(\'gram\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
     : '';
   v.innerHTML=
     '<div class="card rdlist-hd"><h2 class="sec">📖 分級閱讀'
     +(rdHintOff?' <button class="spk" onclick="rdHint(0)" title="顯示操作說明" style="margin-left:auto">ℹ️</button>':'')+'</h2>'
     +(rdHintOff?'':'<div class="hint" style="position:relative;padding-right:34px">雜誌式版面：內文的<b style="color:#c0561a">橘色加粗＋編號</b>字對應右欄「Words &amp; Phrases」單字片語，另有補充詞彙與選字填空。點<b>任何一個英文字</b>都能查中文。'
       +'<button onclick="rdHint(1)" title="關閉說明" style="position:absolute;top:6px;right:8px;border:0;background:none;cursor:pointer;font-size:15px;color:var(--ink2);line-height:1;padding:3px">✕</button></div>')
-    +'<div class="row" style="gap:10px;margin-bottom:10px;flex-wrap:wrap;align-items:center">'
-    +'<input id="rd-q" value="'+esc(rdQuery)+'" oninput="rdQ(this.value)" placeholder="🔍 搜尋文章…" style="flex:1;min-width:140px;margin:0">'
-    +'<select class="filter-sel" onchange="rdSet(\'kind\',this.value)" style="margin:0">'+kb.map(([k,t])=>'<option value="'+k+'"'+(rdFilter.kind===k?' selected':'')+'>'+t+'</option>').join('')+'</select></div>'
-    +'<div class="seg-ctrl">'+lb.map(([k,t])=>'<button'+(rdFilter.level===k?' class="on"':'')+' onclick="rdSet(\'level\',\''+k+'\')">'+t+'</button>').join('')+'</div>'
+    /* 篩選工具列：左＝程度＋文法篩選，右＝搜尋＋類型；空間不夠時自然換行，不硬縮控制項 */
+    +'<div class="rdtool">'
+    +'<div class="rdtool-l"><div class="seg-ctrl">'+lb.map(([k,t])=>'<button'+(rdFilter.level===k?' class="on"':'')+' onclick="rdSet(\'level\',\''+k+'\')">'+t+'</button>').join('')+'</div>'+gramBtn+'</div>'
+    +'<div class="rdtool-r"><input id="rd-q" type="search" value="'+esc(rdQuery)+'" oninput="rdQ(this.value)" placeholder="🔍 搜尋文章…" aria-label="搜尋文章">'
+    +'<select class="filter-sel" onchange="rdSet(\'kind\',this.value)" aria-label="文章類型">'+kb.map(([k,t])=>'<option value="'+k+'"'+(rdFilter.kind===k?' selected':'')+'>'+t+'</option>').join('')+'</select></div>'
+    +'</div>'
     +gramRow
     +(function(){const p=rdProg(list);return '<div class="rdprog"><span id="rd-count">'+p.txt+'</span><div class="rdbar"><i id="rd-fill" style="width:'+p.pct+'%"></i></div></div>';})()
     +'</div>'
@@ -3849,7 +3872,7 @@ function readerHTML(a){
   const extras=extraWords(a,tgtSet);
 
   /* 標題卡只留標題＋基本標籤；導讀與文法重點收進可展開的提示區，資訊不再擠成一團 */
-  let h='<div class="magttl"><button class="back" onclick="rdClose()"><span class="back-label">返回閱讀</span></button>'
+  let h=backLinkHTML('read')+'<div class="magttl">'
    +'<h2>'+esc(a.title)+'</h2>'
    +'<div class="cn">'+esc(a.titleCn)+'</div>'
    +'<div class="bar"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'
@@ -4756,8 +4779,8 @@ function gvVisualTitle(g){
 }
 /* 視覺化文法內頁：SEE → UNDERSTAND → READ → COMPARE → PRACTICE */
 function gvHTML(g){
-  let h='<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
-   +'<div class="row" style="align-items:center;gap:10px;flex:1"><button class="back" onclick="gClose()" style="margin:0;flex-shrink:0"></button><h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
+  let h=backLinkHTML('gram')+'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
+   +'<div class="row" style="align-items:center;gap:10px;flex:1"><h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+'</div></div>';
 
   h+='<div class="gvlead"><div class="l1">💡 '+mkText(g.oneLine||g.summary||'')+'</div>'+gvMap(g.map)+'</div>';
@@ -4826,8 +4849,8 @@ function gSecPart(sections,want){
 }
 function gramHTML(g){
   if(g&&g.vis) return gvHTML(g);   /* 視覺化文法走新版面 */
-  let h='<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
-   +'<div class="row" style="align-items:center;gap:10px;flex:1"><button class="back" onclick="gClose()" style="margin:0;flex-shrink:0"></button><h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
+  let h=backLinkHTML('gram')+'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
+   +'<div class="row" style="align-items:center;gap:10px;flex:1"><h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+((g.srcDays||[]).length?' · 課堂 '+g.srcDays.join(' / '):'')+'</div>'
    +'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:var(--font-secondary)">💡 '+esc(g.summary)+'</div></div></div>'
    +'</div>';
@@ -6229,7 +6252,7 @@ function rwHiAll(sent,vocab){
 function rwDetailHTML(l){
   const st=rwStat(l.id);
   /* Header：觀看原影片直接放在標題卡的 bar 裡，不再獨立一個「原始影片」區塊 */
-  let h='<div class="magttl"><button class="back" onclick="rwBack()"><span class="back-label">返回實景</span></button>'
+  let h=backLinkHTML('real')+'<div class="magttl">'
    +'<h2>'+esc(rwPad(l.ti))+'</h2>'
    +'<div class="mr-time">'+esc([l.country,l.cat,l.level,l.min].filter(Boolean).join(' · '))+'</div>'
    +'<div class="bar">'
@@ -6477,7 +6500,7 @@ function mrClose(){ bkRevYM=null; mrChIdx=0; mrChShow=false; _mrChQs=null; sbAut
 function mrPageHTML(ym){
   const r=mrBuild(ym);
   const mon=+ym.split('-')[1], yr=ym.split('-')[0];
-  if(!r) return '<div class="card"><button class="back" onclick="mrClose()"><span class="back-label">返回課本</span></button>'
+  if(!r) return backLinkHTML('book')+'<div class="card">'
    +'<div class="muted" style="margin-top:10px">'+yr+' 年 '+mon+' 月沒有可複習的課程。</div></div>';
 
   const wordRow=(t,src)=>'<article class="bkvrow" role="listitem"><div class="bkvmeta">'
@@ -6490,7 +6513,7 @@ function mrPageHTML(ym){
 
   const chQs=mrBuildChallenge(r); _mrChQs=chQs; mrChIdx=0; mrChShow=false;
   const statBits=[(r.focus.length?r.focus.length+' 堂待補強':'重點回顧'),r.vocab.length+' 個重點單字',r.gram.length+' 個文法重點',chQs.length+' 題挑戰'];
-  let h='<div class="magttl"><button class="back" onclick="mrClose()"><span class="back-label">返回課本</span></button>'
+  let h=backLinkHTML('book')+'<div class="magttl">'
    +'<div class="magico">🔄</div>'
    +'<h2>'+mon+' 月重點複習</h2>'
    +'<div class="mr-time">根據你的 '+mon+' 月學習狀況整理　·　約 40 分鐘</div>'
@@ -6778,7 +6801,7 @@ function bookHTML(b){
   let h='';
 
   /* 標題卡：雜誌風＋右側大圖示＋彩色徽章＋原始 Google 文件連結 */
-  h+='<div class="magttl"><button class="back" onclick="bkClose()"><span class="back-label">返回課本</span></button>'
+  h+=backLinkHTML('book')+'<div class="magttl">'
    +'<div class="magico">'+(b.iconSvg||b.icon||'📕')+'</div>'
    +'<h2 onclick="bkTtlTog(this)" title="點一下展開／收合完整標題">'+esc(b.title)+'</h2>'
    +'<div class="cn">'+esc(b.titleCn)+'</div>'
@@ -7500,8 +7523,9 @@ function lessonHTML(l){
   const spCls=s=>{ const idx=speakers.indexOf(s); return idx===0?'sp-a':idx>=1?'sp-b':''; };
   let h=''
    /* 有逐字稿時，影片（或語音控制列）黏在最上面，往下捲字幕仍在手邊 */
-   +(au?'<div class="aupin"><div class="row" style="align-items:center"><button class="back" onclick="lsClose()" style="margin:0 6px 0 0;flex-shrink:0"></button><div style="flex:1">'+audioControls()+'</div></div></div>'
-       :'<button class="back" onclick="lsClose()"></button>'+(hasScript?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':''))
+   +backLinkHTML('listen')
+   +(au?'<div class="aupin"><div class="row" style="align-items:center"><div style="flex:1">'+audioControls()+'</div></div></div>'
+       :''+(hasScript?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':''))
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<h2 class="sec" style="margin:0">'+(au?'🎧 ':'🎬 ')+esc(l.title)+'</h2><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
    +'<div class="muted">'+esc(l.titleCn)+' · ⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</div>'
@@ -7741,7 +7765,7 @@ window.openMyVid=openMyVid; window.closeMyVid=closeMyVid;
 
 function myVidHTML(v){
   const hasCn=(v.lines||[]).some(l=>l.cn);
-  let h='<button class="back" onclick="closeMyVid()"></button>'
+  let h=backLinkHTML('listen')
    +'<div class="vidpin"><div class="ytwrap"><div id="yt-my"></div></div></div>'
    +'<div class="card"><h2 class="sec" style="margin:0">▶️ '+esc(v.title||'我的影片')+'</h2>'
    +'<div class="muted">📅 加入於 '+esc(v.addedAt||'—')+' · '+((v.lines||[]).length)+' 句字幕'

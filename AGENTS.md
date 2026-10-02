@@ -170,6 +170,7 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
   **左欄一定要明顯比右欄寬，不可以變成 1fr 1fr。**
 - 課本頁單字表用 `@container book`（`#v-book` 自己是 container），桌機雙欄，別動。
 - 文章正文行寬上限 `--read-w: 720px` 是刻意的可讀性設定，不要為了填滿畫面拿掉。
+- **返回導覽統一用 `backLinkHTML(分區)`**（b2lab/public/index.html）：文字型「← 上一層名稱」放在標題卡外面左上方，名稱與目的地來自 `mDetail()`（回明確的上一層列表，不用 history.back）。新增詳細頁不要再自己做返回按鈕；手機改由頂端返回列負責。
 - **卡片式清單頁共用 Card Design System**（今日、文法列表、課本、閱讀／聽力／實景列表、單字卡、進度）：
   token 在 `:root` 的 `--cd-*`（圓角、padding、間距、邊框、陰影、字級）、`--bd-*`（Badge）、`--act-*`（行動按鈕），
   只在清單狀態生效（打開單篇的 `.rdopen/.bkopen/.lsopen/.rwopen/.gopen` 與單字卡複習中的 `.vsession` 不套用）。
