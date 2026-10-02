@@ -2429,7 +2429,11 @@ nav button{font-size:11px}
 .rwmore.open .rwmore-b{grid-template-rows:1fr}
 .rwmore-i{overflow:hidden;min-height:0}
 .rwd{padding:4px 0 2px}
-.rwd-h{font-size:var(--font-meta);font-weight:800;color:var(--accent2);letter-spacing:.02em;margin-top:4px}
+/* Context 小節標題（實景完整情境的每一段小標，由 rwContextHTML 統一產生）：
+   左側 3px 橘色短線＋深色 16px/600 文字；不用背景、不用整段橘字。手機同一套，不縮字 */
+.rwd-h{position:relative;padding-left:11px;font-size:calc(16px * var(--fs));font-weight:600;line-height:1.5;letter-spacing:0;color:var(--ink);margin:20px 0 6px}
+.rwd-h::before{content:"";position:absolute;left:0;top:calc((1.5em - 17px) / 2);width:3px;height:17px;border-radius:2px;background:var(--accent)}
+.rwd:first-child .rwd-h{margin-top:10px}
 .rwd .rwctx-p{margin:2px 0 6px}
 /* 你只要記住：一列呈現，手機改上下排 */
 /* 你只要記住：Context 裡唯一的橘色提示（小標題改深色後才突顯得出來）；記憶公式一行、補充句淡色 */
@@ -2479,8 +2483,6 @@ nav button{font-size:11px}
 #v-real .artbox .steps .stp{font-size:calc(16px * var(--fs));font-weight:600;line-height:1.4;padding:7px 13px}
 #v-real .artbox .steps .sarr{line-height:1;display:inline-flex;align-items:center}
 #v-real .rwd{padding:0}
-#v-real .rwd-h{font-size:calc(16px * var(--fs));font-weight:600;line-height:1.5;letter-spacing:0;color:var(--ink);margin:18px 0 6px}
-#v-real .rwd:first-child .rwd-h{margin-top:10px}
 #v-real .rwd .rwctx-p{margin:0 0 4px}
 @media(max-width:999px){ #v-real .artbox .steps .stp{font-size:calc(15px * var(--fs))} }
 @media(max-width:640px){
@@ -2514,6 +2516,8 @@ nav button{font-size:11px}
 .bktoc-hd .pv{margin-left:auto;display:flex;gap:4px;font-size:18px;line-height:1}
 .bktoc-hd .pv i{font-style:normal}
 .bktoc-hd .pv i svg{width:20px;height:20px}
+.bktoc-hd .pv i.pvth{display:block;width:30px;height:30px;border-radius:50%;overflow:hidden}
+.bktoc-hd .pv i.pvth svg{width:100%;height:100%;display:block}
 .bktoc-hd .arr{color:var(--ink2);font-size:14px}
 .bktoc-hd .pv + .arr{margin-left:6px}
 .bktoc-hd .n + .arr{margin-left:auto}
@@ -5453,11 +5457,16 @@ function monTog(ns,key){
   if(ns==='rd') rdQ(rdQuery); else if(RENDER[ns]) RENDER[ns]();
 }
 window.monTog=monTog;
-function bkThumb(b){
+/* 課本縮圖的 SVG（目錄卡片與收合月份列的小預覽共用，兩處圖示才會一致） */
+function bkThumbSVG(b){
   const r=(b.reading||[])[0]||{}, ba=(window.BOOKART||{})[b.id+'#0'];
   const svg=r.art||(ba&&(ba.svg||ba.art))||b.coverArt||'';
   const m=/viewBox="0 0 800 200"/.test(svg)&&/<g transform="translate\((\d+),52\) scale\(1\.5\)">/.exec(svg);
-  if(m) return '<div class="bkc-th">'+svg.replace('viewBox="0 0 800 200"','viewBox="'+(+m[1]-10)+' 42 116 116"')+'</div>';
+  return m?svg.replace('viewBox="0 0 800 200"','viewBox="'+(+m[1]-10)+' 42 116 116"'):'';
+}
+function bkThumb(b){
+  const s=bkThumbSVG(b);
+  if(s) return '<div class="bkc-th">'+s+'</div>';
   return '<div class="bkc-th ico">'+(b.iconSvg||b.icon||'📕')+'</div>';
 }
 function bkCard(b,n,opts){
@@ -5489,7 +5498,7 @@ function bkTOCHTML(){
     const [y,m]=ym.split('-'), open=!!bkMonSet[ym];
     let h='<section class="bktoc-m'+(open?' open':'')+'"><button class="bktoc-hd" onclick="bkMonToggle(\''+ym+'\')" aria-expanded="'+open+'">'
       +'<span class="t">'+y+' 年 '+(+m)+' 月</span><span class="n">'+list.length+' 課</span>'
-      +(open?'':'<span class="pv">'+list.slice(-3).reverse().map(b=>'<i>'+(b.icon||'📕')+'</i>').join('')+'</span>')
+      +(open?'':'<span class="pv">'+list.slice(-3).reverse().map(b=>{const s=bkThumbSVG(b); return s?'<i class="pvth">'+s+'</i>':'<i>'+(b.icon||'📕')+'</i>';}).join('')+'</span>')
       +'<span class="arr">'+(open?'▾':'▸')+'</span></button>';
     if(open){
       /* 新課在前；序號照月內上課順序（第 1 課＝當月第一堂） */
@@ -6070,7 +6079,7 @@ function rwContextHTML(l){
   if(!short) return l.ctx?'<div class="mr-sec" style="margin-top:0">情境 Context</div>'+rwKwParas(l.ctx,l):'';
   const det=(Array.isArray(l.ctxDetail)?l.ctxDetail:[]).filter(x=>x&&(x.h||x.t));
   const more=det.length
-    ? det.map(x=>'<div class="rwd">'+(x.h?'<div class="rwd-h">'+esc(x.h)+'</div>':'')+rwKwParas(x.t,l)+'</div>').join('')
+    ? det.map(x=>'<div class="rwd">'+(x.h?'<div class="rwd-h" role="heading" aria-level="3">'+esc(x.h)+'</div>':'')+rwKwParas(x.t,l)+'</div>').join('')
     : (l.ctx?rwKwParas(l.ctx,l):'');
   return '<div class="mr-sec" style="margin-top:0">情境 Context</div>'+rwKwParas(short,l)
     +(more?'<div class="rwmore"><button class="rwmore-t" onclick="rwMoreTog(this)" aria-expanded="false">'
