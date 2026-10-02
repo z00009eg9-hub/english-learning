@@ -21356,7 +21356,20 @@ window.BOOK = {
     bk20260915:[[['building','check','doc','talk','box'],'工廠稽核與組裝線流程：arrange for someone to audit → 五個工站（車架上線、安裝零件、電子線束帶、功能測試、包裝出貨）→ 間接問句 how we control → be worried that → If OK... If not... → take vs bring → 稽核問答。']],
     bk20260910:[[['music','writing','talk','check','doc'],'動名詞與不定詞複習＋樂器名稱：enjoy/suggest/avoid + V-ing vs decide/arrange/agree + to V → dare to + V（敢做某事）→ be well prepared（做好準備）→ This is the first time + 現在完成式 → 稽核英文。']],
     bk20260908:[[['building','warning','doc','talk','check'],'辦公室難熬的一天：大樓施工改走另一個入口 → 電腦系統當機、電梯不可靠 → 主管打斷追問未付請款單 → 冷靜說服客戶付款 → 到外面紓壓、一切恢復正常。']],
-    bk20261001:[[['check','building','doc','talk','box'],'出貨前品質檢驗：replace vs change → cable was broken（被動語態）→ found a scratch（冠詞 a vs the）→ may vs maybe → approach 三種用法 → exterior 名詞/形容詞 → practical 搭配詞 → 脫離三種說法。']]
+    bk20261001:[[['check','building','doc','talk','box'],'出貨前品質檢驗：replace vs change → cable was broken（被動語態）→ found a scratch（冠詞 a vs the）→ may vs maybe → approach 三種用法 → exterior 名詞/形容詞 → practical 搭配詞 → 脫離三種說法。']],
+    bk20250709:[[['cross','house','food','warning','book'],'兩個生病的故事：Tom 頭痛發燒在家休息 → 做新冠檢測等結果 → 媽媽準備柳橙汁和藥 → Jessica 得了麻疹不能上學 → 待在房間看書、玩電腦遊戲。']],
+    bk20250717:[[['people','book','phone','calendar','heart'],'好朋友的日常：同班又住同一條街 → 一起寫作業互相幫忙 → 分開時打電話、傳訊息 → 週末一起進城、看電影 → 穿著相似還會交換衣服。']],
+    bk20250722:[[['people','talk','heart','check','star'],'Kelly 眼中的好朋友：需要時總在身邊 → 有問題願意傾聽 → 善良又有愛心 → 誠實說真話、一起解決問題 → 友誼會持續一輩子。']],
+    bk20250724:[[['phone','warning','doc','people','check'],'文章的五個重點：忘了帶手機會焦慮 → 香港研究：無手機恐懼症 → 手機成了自我的延伸 → 心理學家：重點在手機的用途 → 刻意分開可降低依賴。']],
+    bk20251016:[[['people','book','star','leaf','heart'],'社區專案的五個階段：啟動教育專案 → 一百多名學生參加 → 每月友好比賽 → 學習關心自然與文化 → 家長感謝、一起慶祝。']],
+    bk20251202:[[['heart','calendar','food','people','leaf'],'感恩節五重點：表達感激的節日 → 美國：十一月第四個星期四 → 火雞大餐、家人團聚 → 遊行、足球與志工服務 → 加拿大：十月慶祝豐收。']],
+    bk20251209:[[['food','house','smile','building','star'],'家鄉的五個面向：老街美食與咖啡館 → 乾淨溫馨的環境 → 熱情好客的居民 → 河濱公園與小型博物館 → 熱鬧的夜市。']],
+    bk20251216:[[['house','phone','plane','doc','check'],'忙碌修繕的一天：馬桶、水槽、磁磚出問題 → 打電話請水管工人 → 旅行社規劃假期 → 到政府辦公室辦文件 → 傍晚全部修好。']],
+    bk20251218:[[['house','phone','plane','doc','check'],'忙碌修繕的一天：馬桶、洗手台、磁磚出問題 → 打電話請水電工 → 旅行社規劃假期 → 到政府機關辦文件 → 晚上全部修好。']],
+    bk20251226b:[[['target','book','coin','star','heart'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
+    bk20260922:[[['check','gear','bolt','target','box'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
+    au01:[[['doc','target','calendar','briefcase','check'],'ISO 認證問答：尚未取得認證 → 目標 2027 年 6 月 → 先提出輔導公司簽呈 → 由品保負責 → 目標日期不等於已完成。']],
+    au02:[[['people','doc','briefcase','calendar','check'],'組織圖問答：列出課級以上姓名與年資 → 各部門提供資料 → 由人資負責 → 目標 10 月 19 日 → 仍標示 Open，尚未完成。']],
   };
   ((window.BOOK||{}).lessons||[]).forEach(function(b){
     var specs=S[b.id]; if(!specs) return;
@@ -21364,5 +21377,49 @@ window.BOOK = {
       var s=specs[i]; if(!s||r.art) return;
       r.art=art(s[0]); r.artCap=s[1];
     });
+  });
+  /* 沒有閱讀段落的課：目錄封面圖（只給課本目錄的卡片縮圖用，課文頁不顯示） */
+  var C={
+    bk20260827:['people','briefcase','talk','heart','check'],
+    bk20260825:['clock','globe','plane','people','talk'],
+    bk20260811:['coin','clock','chartUp','doc','check'],
+    bk20260108:['people','talk','gear','house','check'],
+    bk20260113:['gear','people','warning','talk','check'],
+    bk20260120b:['clock','house','cross','heart','smile'],
+    bk20260127:['clock','coin','house','heart','smile'],
+    bk20260203a:['briefcase','talk','food','star','check'],
+    bk20260210:['briefcase','check','talk','doc','star'],
+    bk20260224:['target','briefcase','chartUp','talk','star'],
+    bk20260226b:['talk','briefcase','doc','check','star'],
+    bk20260305:['smile','cross','talk','doc','check'],
+    bk20260310:['clock','calendar','book','doc','check'],
+    bk20260312:['calendar','house','smile','talk','mic'],
+    bk20260409:['house','gear','bolt','phone','check'],
+    bk20260421:['cross','warning','clock','heart','check'],
+    bk20260507:['mic','talk','smile','people','star'],
+    bk20260514:['warning','heart','smile','book','talk'],
+    bk20260519:['scooter','warning','clock','gear','check'],
+    bk20260528:['food','house','cloudRain','gear','check'],
+    bk20260602:['clock','globe','warning','heart','talk'],
+    bk20260604:['cloudRain','bolt','snow','umbrella','warning'],
+    bk20260611:['umbrella','cloudRain','warning','house','smile'],
+    bk20260616:['cloudRain','heart','warning','house','umbrella'],
+    bk20260709:['plane','doc','box','clock','globe'],
+    bk20260714:['plane','doc','food','clock','check'],
+    bk20260716:['plane','book','doc','talk','check'],
+    bk20260721:['book','plane','globe','doc','check'],
+    bk20260728:['globe','leaf','people','clock','star'],
+    bk20260804:['smile','talk','cross','heart','star'],
+    bk20260818:['people','talk','smile','heart','check'],
+    bk20260917:['warning','gear','box','check','building'],
+    bk20260915:['building','check','gear','doc','box'],
+    bk20260910:['music','book','check','doc','people'],
+    bk20250729:['gear','house','check','doc','star'],
+    bk20250805:['book','target','warning','chartUp','star'],
+    bk20250807:['clock','calendar','people','book','check'],
+    bk20251226a:['flame','heart','music','smile','star'],
+  };
+  ((window.BOOK||{}).lessons||[]).forEach(function(b){
+    if(C[b.id]&&!b.coverArt) b.coverArt=art(C[b.id]);
   });
 })();

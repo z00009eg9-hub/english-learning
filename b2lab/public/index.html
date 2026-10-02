@@ -5328,10 +5328,11 @@ function bkMonths(){
   BOOK_LESSONS.forEach(b=>{ const ym=(b.date||'').slice(0,7); if(ym) (g[ym]=g[ym]||[]).push(b); });
   return Object.keys(g).sort().reverse().map(ym=>({ym, list:g[ym].slice().sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:0)}));
 }
-/* 縮圖：把閱讀插圖（800×200 的五格圖示帶）的 viewBox 裁到第一格，變成方形縮圖；沒有插圖就用課程圖示 */
+/* 縮圖：把閱讀插圖（800×200 的五格圖示帶）的 viewBox 裁到第一格，變成方形縮圖；
+   沒有閱讀段落的課用目錄封面圖（coverArt，同一套圖示帶），都沒有才用課程圖示 */
 function bkThumb(b){
   const r=(b.reading||[])[0]||{}, ba=(window.BOOKART||{})[b.id+'#0'];
-  const svg=r.art||(ba&&(ba.svg||ba.art))||'';
+  const svg=r.art||(ba&&(ba.svg||ba.art))||b.coverArt||'';
   const m=/viewBox="0 0 800 200"/.test(svg)&&/<g transform="translate\((\d+),52\) scale\(1\.5\)">/.exec(svg);
   if(m) return '<div class="bkc-th">'+svg.replace('viewBox="0 0 800 200"','viewBox="'+(+m[1]-10)+' 42 116 116"')+'</div>';
   return '<div class="bkc-th ico">'+(b.iconSvg||b.icon||'📕')+'</div>';
