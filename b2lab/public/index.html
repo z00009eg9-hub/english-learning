@@ -2532,6 +2532,13 @@ nav button{font-size:11px}
 .bkc-new{margin-left:auto;flex:none;padding:1px 6px;border-radius:5px;background:#d9534f;color:#fff;font-size:11px;font-weight:800;letter-spacing:.03em}
 .bkc-bd{display:flex;gap:10px;flex:1;padding:10px}
 .bkc-th{flex:none;width:84px;height:84px;border-radius:10px;overflow:hidden;background:#fdf6ec;display:grid;place-items:center}
+/* 閱讀／實景／聽力清單卡片的縮圖（比照課本目錄）：左邊固定方形縮圖，右邊沿用原本卡片內容 */
+.thumbed{display:flex;gap:12px;align-items:flex-start}
+.thumb-b{flex:1;min-width:0}
+.lthumb{flex:none;width:76px;height:76px;border-radius:10px;overflow:hidden;background:#fdf6ec;display:grid;place-items:center}
+.lthumb svg{width:100%;height:100%;display:block}
+.lthumb.emo{font-size:36px;line-height:1}
+@media(max-width:640px){ .thumbed{gap:10px} .lthumb{width:60px;height:60px} .lthumb.emo{font-size:28px} }
 .bkc-th svg{width:100%;height:100%;display:block}
 .bkc-th.ico{font-size:40px;line-height:1}
 .bkc-th.ico svg{width:62%;height:62%}
@@ -3463,10 +3470,15 @@ function rdFiltered(){
   return {base,list};
 }
 function rdCards(list){
+  const ART_=window.ART||{};
+  const picks=pickThumbs(list,a=>(ART_[a.id]||{}).svg);
+  const thumb=a=>{ const s=(ART_[a.id]||{}).svg||''; const p=picks[a.id];
+    return p?stripThumb(s,p.x):(s?sceneThumb(s):emojiThumb('📖')); };
   return list.length ? list.map(a=>{
     const d=ST.artDone[a.id];
     const tw=(a.target||[]).length;
-    return '<div class="item arw'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="rdOpenArt(\''+a.id+'\')">'
+    return '<div class="item arw thumbed'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="rdOpenArt(\''+a.id+'\')">'
+    +thumb(a)+'<div class="thumb-b">'
     +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(a.level)+'">'+esc(a.title)+'</div><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span></div>'
     +'<div class="tc">'+esc(a.titleCn)+'</div>'
     +'<div class="meta" style="margin-top:6px"><span class="tag-chip topic">🏷 '+esc(a.topic)+'</span>'
@@ -3475,7 +3487,7 @@ function rdCards(list){
     +'</div>'
     +'<div class="meta" style="justify-content:space-between;margin-top:5px">'
     +'<span>'+wordsMeta(a.words)+'</span>'
-    +'<span class="goCta" style="margin:0"><i>'+(d?'再讀一次':'開始閱讀 ➔')+'</i></span></div></div>';
+    +'<span class="goCta" style="margin:0"><i>'+(d?'再讀一次':'開始閱讀 ➔')+'</i></span></div></div></div>';
   }).join('') : '<div class="muted" style="padding:8px 4px">找不到符合的文章，換個關鍵字或放寬篩選試試。</div>';
 }
 function rdProg(list){
@@ -5365,6 +5377,37 @@ function bkMonths(){
 }
 /* 縮圖：把閱讀插圖（800×200 的五格圖示帶）的 viewBox 裁到第一格，變成方形縮圖；
    沒有閱讀段落的課用目錄封面圖（coverArt，同一套圖示帶），都沒有才用課程圖示 */
+/* ===== 共用縮圖（閱讀／實景／聽力比照課本目錄）=====
+   stripCells：五圓圖示帶的每一格（x 位置＋圖示特徵字串）；pickThumbs：依清單順序，每篇挑一格「前面還沒用過」的圖示，
+   同一頁縮圖盡量不重複；都用過了才退回第一格。iconThumb：單一圖示放進同樣的白圓框 */
+const THUMB_CELL_RE=/<g transform="translate\((\d+),52\) scale\(1\.5\)">([\s\S]*?)<\/g>/g;
+function stripCells(svg){
+  if(!/viewBox="0 0 800 200"/.test(svg||'')) return [];
+  return [...svg.matchAll(THUMB_CELL_RE)].map(m=>({x:+m[1], sig:m[2].replace(/<circle cx="32" cy="32" r="33"[^>]*\/>/,'').slice(0,240)}));
+}
+function pickThumbs(items,svgOf){
+  const used=new Set(), out={};
+  items.forEach(it=>{
+    const cs=stripCells(svgOf(it)); if(!cs.length) return;
+    const c=cs.find(c=>!used.has(c.sig))||cs[0]; used.add(c.sig); out[it.id]=c;
+  });
+  return out;
+}
+function stripThumb(svg,x){
+  return '<div class="lthumb" aria-hidden="true">'+svg.replace('viewBox="0 0 800 200"','viewBox="'+(x-10)+' 42 116 116"')+'</div>';
+}
+function iconThumb(inner){
+  return '<div class="lthumb" aria-hidden="true"><svg viewBox="-6.7 -6.7 77.4 77.4" xmlns="http://www.w3.org/2000/svg">'
+    +'<rect x="-6.7" y="-6.7" width="77.4" height="77.4" fill="#fdf6ec"/>'
+    +'<circle cx="32" cy="32" r="33" fill="#fff" stroke="#f7e3c9" stroke-width="2.5"/>'+inner+'</svg></div>';
+}
+/* 不是圖示帶的自繪插圖：裁中間一塊正方形 */
+function sceneThumb(svg){
+  const m=/viewBox="0 0 (\d+) (\d+)"/.exec(svg||''); if(!m) return '';
+  const w=+m[1], h=+m[2], s=Math.min(w,h);
+  return '<div class="lthumb" aria-hidden="true">'+svg.replace(m[0],'viewBox="'+((w-s)/2)+' '+((h-s)/2)+' '+s+' '+s+'"')+'</div>';
+}
+function emojiThumb(e){ return '<div class="lthumb emo" aria-hidden="true">'+esc(e||'🎧')+'</div>'; }
 function bkThumb(b){
   const r=(b.reading||[])[0]||{}, ba=(window.BOOKART||{})[b.id+'#0'];
   const svg=r.art||(ba&&(ba.svg||ba.art))||b.coverArt||'';
@@ -5905,7 +5948,7 @@ function rwCardHTML(l){
   const kv=(l.vocab||[]).map(v=>v.w).filter(Boolean).join(' · ');
   /* metadata 只放學習資訊（國家/分類/程度/時間），不顯示平台名稱、不顯示進度狀態 */
   const meta=[l.country,l.cat,l.level,l.min].filter(Boolean).join(' · ');
-  return '<div class="rwcard">'
+  return '<div class="rwcard thumbed">'+rwThumb(l)+'<div class="thumb-b">'
    +'<div class="rw-t">'+esc(rwPad(l.ti))+'</div>'
    +(meta?'<div class="rw-meta">'+esc(meta)+'</div>':'')
    +(l.point?'<div class="rw-obj">'+esc(rwPad(l.point))+'</div>':'')
@@ -5913,7 +5956,15 @@ function rwCardHTML(l){
    +'<div class="rw-acts">'
    +'<button class="btn sm" onclick="rwGo(\''+l.id+'\')">開始學習 →</button>'
    +(l.url?'<a class="ext" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>':'')
-   +'</div></div>';
+   +'</div></div></div>';
+}
+/* 實景清單縮圖：l.thumb＝課本圖示庫（BOOK_ICONS）的圖示名，每課不同；沒有指定就用內頁三圓圖示的第一個 */
+function rwThumb(l){
+  const I=window.BOOK_ICONS||{};
+  if(l.thumb&&I[l.thumb]) return iconThumb(I[l.thumb]);
+  const L=RW_ICONLIB('#2b2118','#e8813a','#f7e3c9');
+  const k=(Array.isArray(l.icons)&&L[l.icons[0]])?l.icons[0]:({'交通':'road','職場':'briefcase','旅行':'plane'}[l.cat]||'house');
+  return iconThumb(L[k]||'');
 }
 
 function rwParas(s){
@@ -6327,7 +6378,7 @@ function rwSave(){
     cmp, quotes, exs, spq:(d.spq||'').trim(), spHint:(d.spHint||'').trim(), vocab,
     icons:(d.icons||[]).filter(k=>RW_ICON_KEYS.includes(k)).slice(0,3),
     steps:(d.steps||[]).slice(0,3),
-    ctxShort:(d.ctxShort||'').trim(), ctxDetail, keyTakeaway, usageCmp };
+    ctxShort:(d.ctxShort||'').trim(), ctxDetail, keyTakeaway, usageCmp, thumb:prev.thumb||'' };
   save(); rwShare();
   rwFormOn=false; rwDraft=null; rwEditId=null;
   rwOpen=id; sbAutoCollapse(); RENDER.real(); window.scrollTo(0,0);
@@ -7234,10 +7285,10 @@ RENDER.listen=function(){
   const others=list.filter(l=>l.kind!=='scene'&&l.kind!=='note');
   function lsCard(l){
     const d=(ST.listenDone||{})[l.id];
-    const icon=l.kind==='note'?'📒':l.kind==='scene'?'🏙️':'🎧';
     const lines=(l.script||l.keyLines||[]).length;
-    return '<div class="item'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
-     +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(l.level)+'">'+icon+' '+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
+    return '<div class="item thumbed'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
+     +lsThumb(l)+'<div class="thumb-b">'
+     +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(l.level)+'">'+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
      +'<div class="tc">'+esc(l.titleCn)+'</div>'
      +'<div class="meta" style="margin-top:6px"><span class="tag-chip topic">🏷 '+esc(l.topic)+'</span>'
      +'<span class="tag-chip gram">📐 '+esc(l.focus)+'</span>'
@@ -7245,7 +7296,7 @@ RENDER.listen=function(){
      +'</div>'
      +'<div class="meta" style="justify-content:space-between;margin-top:5px">'
      +'<span>⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</span>'
-     +'<span class="goCta" style="margin:0"><i>'+(d?'再聽一次':'▶ 開始聽練 ➔')+'</i></span></div></div>';
+     +'<span class="goCta" style="margin:0"><i>'+(d?'再聽一次':'▶ 開始聽練 ➔')+'</i></span></div></div></div>';
   }
   const lsDone=list.filter(l=>(ST.listenDone||{})[l.id]).length;
   const lsPct=list.length?Math.round(lsDone*100/list.length):0;
@@ -7263,6 +7314,34 @@ RENDER.listen=function(){
    +(scenes.length?'<h3 style="margin:16px 0 8px;font-size:var(--font-subhead);color:var(--ink2)">🏙️ 生活場景 · 實用對話</h3>'+scenes.map(lsCard).join(''):'')
    +(others.length?'<h3 style="margin:16px 0 8px;font-size:var(--font-subhead);color:var(--ink2)">🎬 VOA 課程教材</h3>'+others.map(lsCard).join(''):'');
 };
+/* 聽力清單縮圖：聽力沒有插圖，每課指定課本圖示庫（BOOK_ICONS）裡的一個圖示，彼此不重複；
+   新課還沒指定時用主題的 emoji 當縮圖（之後補進這張表即可） */
+const LS_THUMB={
+  dl20261002a2:'hourglass',dl20261002b1:'cross',dl20261002b1p:'chartUp',dl20261002b2:'mask',
+  dl20260929a2:'thermo',dl20260929b1:'suitcase',dl20260929b1p:'sun',dl20260929b2:'factory',
+  dl20260925a2:'pencil',dl20260925b1:'talk',dl20260925b1p:'school',dl20260925b2:'chartDown',
+  dl20260922a2:'cake',dl20260922b1:'flame',dl20260922b1p:'lock',dl20260922b2:'bowl',
+  dl20260918a2:'shirt',dl20260918b1:'house',dl20260918b1p:'building',dl20260918b2:'wallet',
+  dl20260915a2:'mirror',dl20260915b1:'question',dl20260915b1p:'idcard',dl20260915b2:'headphones',
+  dl20260911a2:'bag',dl20260911b1:'globe',dl20260911b1p:'briefcase',dl20260911b2:'plane',
+  dl20260904a2:'umbrella',dl20260904b1:'phone',dl20260904b1p:'truck',dl20260904b2:'wind',
+  dl20260902a2:'dumbbell',dl20260902b1:'trophy',dl20260902b1p:'clipboard',dl20260902b2:'bulb',
+  dl20260828a2:'apple',dl20260828b1:'warning',dl20260828b1p:'trash',dl20260828b2:'search',
+  dl20260826a2:'laptop',dl20260826b1:'piggy',dl20260826b1p:'faucet',dl20260826b2:'pin',
+  dl20260824a2:'coffee',dl20260824b1:'clock',dl20260824b1p:'handshake',dl20260824b2:'tv',
+  dl20260821a2:'bus',dl20260821b1:'train',dl20260821b1p:'bolt',dl20260821b2:'mic',
+  dl20260819a2:'heart',dl20260819b1:'people',dl20260819b1p:'door',dl20260819b2:'shield',
+  au01:'camera',au02:'gear',au03:'coin',au04:'passport',au05:'mountain',au06:'cloudRain',au07:'pill',
+  au08:'cert',au09:'redpacket',au10:'ticket',au11:'smile',au12:'star',au13:'gradcap',
+  vlog01:'bed',vlog02:'calendar',vlog03:'target',vlog04:'moon',
+  sc01:'sad',sc02:'tree',sc03:'food'
+};
+function lsThumb(l){
+  const I=window.BOOK_ICONS||{}, k=LS_THUMB[l.id];
+  if(k&&I[k]) return iconThumb(I[k]);
+  const e=(String(l.topic||'').match(/^\S+/)||[''])[0];
+  return emojiThumb(/[A-Za-z0-9一-鿿]/.test(e)?'🎧':e);
+}
 function lsGo(id){ lsOpen=LESSONS.find(l=>l.id===id); QSTATE={}; sbAutoCollapse(); go('listen'); }
 function lsClose(){ destroyPlayer(); stopSync(); lsOpen=null; sbAutoExpand(); if(FROM_TAB){const t=FROM_TAB;FROM_TAB=null;go(t);return;} RENDER.listen(); }
 window.lsGo=lsGo; window.lsClose=lsClose;

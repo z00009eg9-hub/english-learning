@@ -115,6 +115,7 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
   - 自己寫的句子只能放 `exs`（延伸例句），永遠不混進 `quotes`。
   - UI 不顯示第三方平台品牌，連結一律寫「觀看原影片 ↗」。
   - `icons[3]` / `steps[3]` 要隨內容挑，不要沿用別課的。
+  - 清單縮圖：實景每課設 `thumb`（課本圖示庫 `BOOK_ICONS` 的名稱，跟別課不重複）；新增聽力課要在 `index.html` 的 `LS_THUMB` 補一個不重複的圖示，沒補會先顯示主題 emoji。閱讀文章自動從插圖挑一格沒用過的圖示，不用另外設。
 - **實景教材是兩人共用**（Anita／Tom），`rwShare()` 會把 `ST.rw` 同步到另一位的
   Firestore 文件；`rwDone`（學習進度）則各自獨立。改這塊前先看懂 `rwShare()`。
 - **生詞本同步（b2wb）**：Speak Up 的 `cloudPush` 必須剔除 `b2wb` 再 `set(merge:true)`。
