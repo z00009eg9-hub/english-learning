@@ -2432,11 +2432,16 @@ nav button{font-size:11px}
 .rwd-h{font-size:var(--font-meta);font-weight:800;color:var(--accent2);letter-spacing:.02em;margin-top:4px}
 .rwd .rwctx-p{margin:2px 0 6px}
 /* 你只要記住：一列呈現，手機改上下排 */
-.rwkey{margin:10px 0 6px;padding:8px 12px;background:#fdf8f1;border:1px solid #f3e4d2;border-radius:10px}
-.rwkey-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;line-height:1.6}
-.rwkey-h{font-weight:800;font-size:var(--font-secondary);color:var(--accent2);margin-right:2px}
+/* 你只要記住：Context 裡唯一的橘色提示（小標題改深色後才突顯得出來）；記憶公式一行、補充句淡色 */
+.rwkey{margin:16px 0 6px;padding:10px 14px;background:#fdf8f1;border:1px solid #f3e4d2;border-radius:10px}
+.rwkey-h{font-weight:600;font-size:calc(16px * var(--fs));color:var(--accent2);line-height:1.5;margin-bottom:4px}
+.rwkey-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;line-height:1.6;font-size:var(--font-body)}
 .rwkey-sep{color:var(--ink2)}
-.rwkey-n{margin-top:3px;font-size:var(--font-secondary);color:var(--ink2);line-height:1.55}
+.rwkey-sep i{font-style:normal}
+.rwkey-sep .v{display:none}
+.rwkey-n{margin-top:6px;font-size:var(--font-secondary);font-weight:400;color:var(--ink2);line-height:1.55}
+.rwkey-n .en{font-style:italic;font-size:calc(16px * var(--fs));margin-right:6px}
+.rwkey-n .cn{color:#9a8b7a}
 /* 用法比較：快速比較（三欄、細分隔線、無表頭底色） */
 /* 用法比較字重層級：區塊標題 600、快速比較第一欄 600、其他再次出現的英文 500、中文說明 400；
    次要說明用淡色，不靠粗體。只作用在這個元件，不改全站 b / strong */
@@ -2474,7 +2479,7 @@ nav button{font-size:11px}
 #v-real .artbox .steps .stp{font-size:calc(16px * var(--fs));font-weight:600;line-height:1.4;padding:7px 13px}
 #v-real .artbox .steps .sarr{line-height:1;display:inline-flex;align-items:center}
 #v-real .rwd{padding:0}
-#v-real .rwd-h{font-size:calc(16px * var(--fs));font-weight:600;line-height:1.45;letter-spacing:0;margin:18px 0 6px}
+#v-real .rwd-h{font-size:calc(16px * var(--fs));font-weight:600;line-height:1.5;letter-spacing:0;color:var(--ink);margin:18px 0 6px}
 #v-real .rwd:first-child .rwd-h{margin-top:10px}
 #v-real .rwd .rwctx-p{margin:0 0 4px}
 @media(max-width:999px){ #v-real .artbox .steps .stp{font-size:calc(15px * var(--fs))} }
@@ -2485,6 +2490,9 @@ nav button{font-size:11px}
 @media(max-width:640px){
   .rwkey-row{flex-direction:column;align-items:flex-start;gap:2px}
   .rwkey-sep{display:none}
+  .rwkey-sep.arr{display:block;padding-left:28px;line-height:1.2}
+  .rwkey-sep.arr .h{display:none}
+  .rwkey-sep.arr .v{display:inline}
   .ucmp-hd{display:none}
   .ucmp-row{grid-template-columns:minmax(0,1fr);gap:1px;padding:9px 2px}
   .utips{grid-template-columns:minmax(0,1fr);gap:0}
@@ -5988,10 +5996,17 @@ function rwKeyHTML(l){
   const pairs=own.length?own:(v0&&v0.w&&v0.cn?[{w:v0.w,cn:v0.cn}]:[]);
   const note=String(k.note||'').trim();
   if(!pairs.length&&!note) return '';
-  const sep='<span class="rwkey-sep" aria-hidden="true">'+(k.arrow?'→':'·')+'</span>';
-  return '<div class="rwkey"><div class="rwkey-row"><span class="rwkey-h">💡 你只要記住</span>'
+  /* 有先後順序：電腦橫向 →、手機直排 ↓；沒有順序：電腦用 ·、手機直接換行 */
+  const sep=k.arrow?'<span class="rwkey-sep arr" aria-hidden="true"><i class="h">→</i><i class="v">↓</i></span>'
+    :'<span class="rwkey-sep" aria-hidden="true">·</span>';
+  /* 補充句是次要資訊：「標籤：英文句（中文）」拆成淡色標籤＋斜體英文＋更淡的中文，其他格式就整句淡色 */
+  const nm=/^([^:：A-Za-z]{1,12})[:：]\s*([A-Za-z][^（(]*?)\s*[（(]([^）)]+)[）)]\s*$/.exec(note);
+  const noteHTML=!note?'':nm
+    ?'<div class="rwkey-n"><span class="lb">'+esc(nm[1])+'：</span><span class="en">'+esc(nm[2])+'</span><span class="cn">'+esc(nm[3])+'</span></div>'
+    :'<div class="rwkey-n">'+esc(rwPad(note))+'</div>';
+  return '<div class="rwkey"><div class="rwkey-h">💡 你只要記住</div><div class="rwkey-row">'
     +pairs.map(p=>'<span class="rwkey-p"><span class="kwtag">'+esc(p.w)+'</span> '+esc(rwPad(p.cn||''))+'</span>').join(sep)+'</div>'
-    +(note?'<div class="rwkey-n">'+esc(rwPad(note))+'</div>':'')+'</div>';
+    +noteHTML+'</div>';
 }
 /* ===== 用法比較：快速比較 → 💡 差異怎麼記？ → 其他常見用法 → ⚠️ 小提醒 → 相關說法 =====
    usageCmp {items:[{term,meaning,context,icon}], tips:[{term,text}], relTitle, rel:[{term,meaning}], relNote, note, terms:[{term,meaning}]}
