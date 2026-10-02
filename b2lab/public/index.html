@@ -2331,7 +2331,7 @@ nav button{font-size:11px}
 /* ===== 手機總導覽模式（≤640px）=====================================================
    進站先到總導覽頁（大卡片選分區）；分區內不放底部 nav，header 只留「← 首頁＋分區名」一行，
    畫面高度全部留給內容。平板與電腦（≥641px）完全不受影響。                              */
-.hd-mback,.hd-mtitle{display:none}
+.hd-mback,.hd-mtitle,.hd-mcn{display:none}
 .hm-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:2px 2px 14px}
 .hm-hi{font-size:calc(22px * var(--fs));font-weight:800;color:var(--ink);line-height:1.25}
 .hm-date{font-size:var(--font-meta);color:var(--ink2);margin-top:2px}
@@ -2372,6 +2372,51 @@ nav button{font-size:11px}
     padding:6px 14px;min-height:38px;font:inherit;font-size:15px;font-weight:800;cursor:pointer;white-space:nowrap}
   .hd-mback:active{background:rgba(255,255,255,.32)}
   .hd-mtitle{color:#fff;font-size:17px;font-weight:800;margin-left:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  /* 中譯小鈕：返回列最右側，切換全站中譯（課本、文章、今日、文法、聽力共用同一個開關） */
+  header > .hd-mcn{display:inline-flex !important;align-items:center;justify-content:center}
+  .hd-mcn{margin-left:auto;flex:none;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.6);
+    background:rgba(255,255,255,.18);color:#fff;font:inherit;font-size:16px;font-weight:800;cursor:pointer}
+  .hd-mcn.on{background:#fff;color:var(--accent2);border-color:#fff}
+  /* 返回列：往下捲收起、往上捲出現；收起時黏頂元素（影片等）的 top 也歸零，不留空隙 */
+  header{transition:transform .22s ease}
+  body.hd-hide header{transform:translateY(-110%)}
+  body.hd-hide{--hdh:0px}
+
+  /* 課文標題卡：獨立的「返回課本」改由返回列的「← 課本」負責；
+     影片版／日期／Topics／⋯ 併成同一行，拿掉粗黑框與立體陰影 */
+  #v-book .magttl{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:10px 12px;border-width:1.5px;box-shadow:none}
+  #v-book .magttl .back{display:none}
+  #v-book .magttl h2,#v-book .magttl .cn{flex:0 0 100%}
+  #v-book .magttl .cn{margin-top:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  #v-book .magttl.ttlopen .cn{-webkit-line-clamp:unset;overflow:visible}
+  #v-book .magttl .bar{display:contents}
+  #v-book .magttl .bar .vdbtn{order:1}
+  #v-book .magttl .bar .c1{order:2}
+  #v-book .magttl .set{order:3;margin-top:0}
+  #v-book .magttl .bar-x > *{order:4}
+  #v-book .magttl .barmore{order:5}
+  #v-book .magttl .set.open{order:6;flex:0 0 100%}
+  #v-book .magttl .yr{display:none}
+
+  /* 文法進度列：第一行「程度＋標題」佔滿寬度，第二行放標籤與按鈕，標題不再被擠成好幾行 */
+  #v-prog .pgrow{display:grid;grid-template-columns:auto 1fr auto;column-gap:8px;row-gap:6px}
+  #v-prog .pgrow > .lv{grid-row:1;grid-column:1;align-self:start;margin-top:1px}
+  #v-prog .pgrow .pgt{grid-row:1;grid-column:2 / 4}
+  #v-prog .pgrow .pgtag{grid-row:2;grid-column:1 / 3;justify-self:start}
+  #v-prog .pgrow .pgact{grid-row:2;grid-column:3;justify-self:end}
+
+  /* 課本搜尋結果卡（用 #bk-results 提高權重，否則會被全站 :is(#v-…) 通用卡片樣式蓋掉）：三個大數字方塊改成一行小字，整張卡可點、右側小箭頭取代滿寬按鈕 */
+  #v-book #bk-results .item .bkstats{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px}
+  #v-book #bk-results .item .bstat{display:inline-flex;align-items:baseline;gap:3px;background:none;border:0;padding:0;box-shadow:none}
+  #v-book #bk-results .item .bstat i,#v-book #bk-results .item .bstat .bstat-hint{display:none}
+  #v-book #bk-results .item .bstat b{display:inline;font-size:calc(15px * var(--fs))}
+  #v-book #bk-results .item .bstat span{font-size:var(--font-meta)}
+  #v-book #bk-results .item .bkstart{display:none}
+  /* 英文副標只留 1 行（課文內可看完整標題），中文標題是主要辨識依據、保留 2 行 */
+  #v-book #bk-results .item .tc.bksub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
+  #v-book #bk-results .item:has(.bkstats){position:relative;padding-right:34px}
+  #v-book #bk-results .item:has(.bkstats)::after{content:'›';position:absolute;right:14px;top:50%;transform:translateY(-50%);
+    font-size:26px;line-height:1;color:var(--accent2);font-weight:700}
 }
 </style>
 </head>
@@ -2379,8 +2424,9 @@ nav button{font-size:11px}
 
 <header>
   <!-- 手機（≤640px）專用：分區內只留一行「← 首頁＋分區名」，其餘 header 項目收到總導覽頁 -->
-  <button class="hd-mback" id="hd-mback" onclick="event.stopPropagation();goHome()" aria-label="回總導覽">← 首頁</button>
+  <button class="hd-mback" id="hd-mback" onclick="event.stopPropagation();hdBack()" aria-label="返回">← 首頁</button>
   <span class="hd-mtitle" id="hd-mtitle"></span>
+  <button class="hd-mcn" id="hd-mcn" onclick="event.stopPropagation();togGlobalCn()" aria-label="切換全站中譯" title="中譯：全部顯示／點開才顯示">中</button>
   <button class="brand" onclick="toTop()" title="回到頁面頂端" style="margin-right:0">
     <h1>📚 B2 Read</h1>
   </button>
@@ -3007,6 +3053,8 @@ function go(t,visualTab){
   TAB=t;
   document.body.dataset.tab=t;
   const mt=$('hd-mtitle'); if(mt) mt.textContent=TAB_NAME[t]||'';
+  document.body.classList.remove('hd-hide');
+  updMback();
   /* 從導覽頁進分區時記一筆 history，手機返回手勢才會回導覽頁而不是直接離開網站 */
   if(isMobileNav() && !NAV_POP && t!=='home' && prev==='home'){ try{ history.pushState({b2:'sec'},''); }catch(e){} }
   const vt=NAVMAP[visualTab||t]||visualTab||t;
@@ -3082,6 +3130,26 @@ function homeGo(t){
   go(t);
 }
 window.goHome=goHome; window.homeGo=homeGo;
+/* 手機返回列依位置切換：在課文（或每月複習）裡是「← 課本」，其他地方是「← 首頁」。
+   取代課文標題卡上那顆獨立的「返回課本」按鈕，標題卡因此少一整行 */
+function updMback(){
+  const b=$('hd-mback'); if(!b) return;
+  const inLesson=TAB==='book'&&!!(bkOpen||bkRevYM);
+  b.textContent=inLesson?'← 課本':'← 首頁';
+  b.dataset.mode=inLesson?'book':'home';
+}
+function hdBack(){ const b=$('hd-mback'); if(b&&b.dataset.mode==='book') bkClose(); else goHome(); }
+window.hdBack=hdBack;
+/* 手機分區內：往下捲就把返回列收起來，往上捲一點就出現；靠近頂端一律顯示 */
+let hdLastY=0;
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  if(!isMobileNav()||TAB==='home'){ document.body.classList.remove('hd-hide'); hdLastY=y; return; }
+  if(y<60) document.body.classList.remove('hd-hide');
+  else if(y>hdLastY+8) document.body.classList.add('hd-hide');
+  else if(y<hdLastY-8) document.body.classList.remove('hd-hide');
+  if(Math.abs(y-hdLastY)>8) hdLastY=y;
+},{passive:true});
 /* 手機返回手勢：先關影片／課文，再回導覽頁；在導覽頁按返回才離開網站 */
 window.addEventListener('popstate',()=>{
   if(!isMobileNav()) return;
@@ -3142,6 +3210,7 @@ function applyCnAll(){
   document.body.classList.toggle('cnall',CNALL);
   const b=$('hd-cn');
   if(b){ b.textContent=CNALL?'🈶 中譯：開':'🈶 中譯：關'; b.classList.toggle('off',!CNALL); }
+  const mb=$('hd-mcn'); if(mb){ mb.classList.toggle('on',CNALL); mb.setAttribute('aria-pressed',CNALL?'true':'false'); }
   if(typeof showCn!=='undefined'){ showCn=CNALL; if(typeof applySubToggles==='function') applySubToggles(); }
 }
 function togGlobalCn(){
@@ -4853,8 +4922,9 @@ function pgGramHTML(){
   /* 第一次進來：有「進行中」的主題先展開，其他先收合，頁面短一點 */
   if(!pgGrpOpen){
     pgGrpOpen={};
-    PG_GROUPS.forEach(n=>pgGrpOpen[n]=pool.some(g=>pgCat(g)===n&&pgStatus(g)==='part'));
-    if(!Object.values(pgGrpOpen).some(Boolean)) pgGrpOpen[PG_GROUPS[0]]=true;
+    /* 手機畫面窄，分組一律先收合，點了才展開 */
+    PG_GROUPS.forEach(n=>pgGrpOpen[n]=!isMobileNav()&&pool.some(g=>pgCat(g)===n&&pgStatus(g)==='part'));
+    if(!isMobileNav()&&!Object.values(pgGrpOpen).some(Boolean)) pgGrpOpen[PG_GROUPS[0]]=true;
   }
   const lvChips=[['all','全部程度']].concat(band().map(l=>[l,l]))
     .map(([k,t])=>'<button class="chip'+(pgLv===k?' on':'')+'" onclick="pgSet(\'lv\',\''+k+'\')">'+t+'</button>').join('');
@@ -5169,6 +5239,8 @@ RENDER.book=function(){
     +'</div>';
   bkSearch(bkQuery);
 };
+/* 課本有三個提早 return 的分支（每月複習／課文／列表），統一在外層更新手機返回列的文字 */
+{ const _renderBook=RENDER.book; RENDER.book=function(){ _renderBook.apply(this,arguments); updMback(); }; }
 /* 「月曆負責瀏覽日期，右側面板負責顯示選定日期的課程」——點日期＝選取，開課走面板的「開始學習」 */
 let bkSelDate=null;
 function bkLessonsOn(ds){ return BOOK_LESSONS.filter(b=>b.date===ds); }
@@ -6423,7 +6495,7 @@ function bookHTML(b){
       return '<div class="set" style="font-style:normal"><b class="set-lb">Topics：</b>'+ts.map(pill).join('')+more+'</div>';
     })()
    +'<div class="bar">'+(b.video?'<button class="magbadge vdbtn" onclick="vdOpen(\''+esc(b.id)+'\')" title="約 3–5 分鐘的影片版：雙語字幕同步、重點表達卡、跟讀">▶ 影片版</button>':'')
-   +'<span class="magbadge c1">📅 '+bkDate(b.date)+'</span>'
+   +'<span class="magbadge c1">📅 '+bkDate(b.date).replace(/^(\d{4}\/)/,'<span class="yr">$1</span>')+'</span>'
    /* .bar-x 在電腦／平板是 display:contents（版面等同沒包），手機才整組收進「⋯」 */
    +'<span class="bar-x">'
    +'<span class="magbadge c2">🔤 '+((b.vocab||[]).length+(b.vocab2||[]).length)+' 個單字</span>'
