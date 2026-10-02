@@ -2385,7 +2385,8 @@ nav button{font-size:11px}
   /* 課文標題卡：獨立的「返回課本」改由返回列的「← 課本」負責；
      影片版／日期／Topics／⋯ 併成同一行，拿掉粗黑框與立體陰影 */
   #v-book .magttl{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:10px 12px;border-width:1.5px;box-shadow:none}
-  #v-book .magttl .back{display:none}
+  /* 要寫到 .magttl .back 這一層，才蓋得過全站「課本＋閱讀＋實景共用返回鍵」那條 display:inline-flex */
+  #v-book .back,#v-book .magttl .back,#v-read .back,#v-read .magttl .back,#v-real .back,#v-real .magttl .back,#v-gram .back,#v-listen .back{display:none}
   #v-book .magttl h2,#v-book .magttl .cn{flex:0 0 100%}
   #v-book .magttl .cn{margin-top:0;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
   #v-book .magttl.ttlopen .cn{-webkit-line-clamp:unset;overflow:visible}
@@ -3131,15 +3132,27 @@ function homeGo(t){
   go(t);
 }
 window.goHome=goHome; window.homeGo=homeGo;
-/* 手機返回列依位置切換：在課文（或每月複習）裡是「← 課本」，其他地方是「← 首頁」。
-   取代課文標題卡上那顆獨立的「返回課本」按鈕，標題卡因此少一整行 */
+/* 各分區的「詳細頁」（課文、每月複習、文章、文法單元、實景、聽力課、自訂影片）：
+   在詳細頁裡，手機返回列顯示「← 分區名」，按下或用返回手勢回到列表；其他地方是「← 首頁」。
+   這取代各詳細頁頂端那顆獨立的返回按鈕（手機上隱藏），標題區因此少一整行。
+   從別的分區點進來的（FROM_TAB，例如從今日點進文章），返回列寫的是來源分區，關閉函式也會帶回那裡。 */
+function mDetail(){
+  const from=lb=>FROM_TAB&&TAB_NAME[FROM_TAB]?TAB_NAME[FROM_TAB]:lb;
+  if(TAB==='book'   && bkOpen)   return {lb:'課本', close:bkClose};
+  if(TAB==='book'   && bkRevYM)  return {lb:'課本', close:mrClose};
+  if(TAB==='read'   && rdOpen)   return {lb:from('閱讀'), close:rdClose};
+  if(TAB==='gram'   && CURG)     return {lb:from('文法'), close:gClose};
+  if(TAB==='real'   && rwOpen)   return {lb:'實景', close:rwBack};
+  if(TAB==='listen' && myVid)    return {lb:'聽力', close:closeMyVid};
+  if(TAB==='listen' && lsOpen)   return {lb:from('聽力'), close:lsClose};
+  return null;
+}
 function updMback(){
   const b=$('hd-mback'); if(!b) return;
-  const inLesson=TAB==='book'&&!!(bkOpen||bkRevYM);
-  b.textContent=inLesson?'← 課本':'← 首頁';
-  b.dataset.mode=inLesson?'book':'home';
+  const d=mDetail();
+  b.textContent='← '+(d?d.lb:'首頁');
 }
-function hdBack(){ const b=$('hd-mback'); if(b&&b.dataset.mode==='book') bkClose(); else goHome(); }
+function hdBack(){ const d=mDetail(); if(d){ d.close(); window.scrollTo(0,0); } else goHome(); }
 window.hdBack=hdBack;
 /* 手機分區內：往下捲就把返回列收起來，往上捲一點就出現；靠近頂端一律顯示 */
 let hdLastY=0;
@@ -3151,13 +3164,13 @@ window.addEventListener('scroll',()=>{
   else if(y<hdLastY-8) document.body.classList.remove('hd-hide');
   if(Math.abs(y-hdLastY)>8) hdLastY=y;
 },{passive:true});
-/* 手機返回手勢：先關影片／課文，再回導覽頁；在導覽頁按返回才離開網站 */
+/* 手機返回手勢：先關影片，再關詳細頁（課文、文章、文法單元…），再回導覽頁；在導覽頁按返回才離開網站 */
 window.addEventListener('popstate',()=>{
   if(!isMobileNav()) return;
   if(HOME_REQ){ HOME_REQ=false; NAV_POP=true; go('home'); NAV_POP=false; return; }   /* 按鈕要求回首頁：不先關課文，直接回 */
   const keep=()=>{ try{ history.pushState({b2:'sec'},''); }catch(e){} };
   if($('vd') && typeof vdClose==='function'){ vdClose(); keep(); return; }
-  if(TAB==='book' && (bkOpen||bkRevYM)){ bkClose(); keep(); return; }
+  const d=mDetail(); if(d){ d.close(); keep(); return; }
   if(TAB!=='home'){ NAV_POP=true; go('home'); NAV_POP=false; }
 });
 /* 手機轉成寬螢幕（旋轉、分割畫面）時導覽頁沒有意義，回到今日 */
@@ -5239,8 +5252,6 @@ RENDER.book=function(){
     +'</div>';
   bkSearch(bkQuery);
 };
-/* 課本有三個提早 return 的分支（每月複習／課文／列表），統一在外層更新手機返回列的文字 */
-{ const _renderBook=RENDER.book; RENDER.book=function(){ _renderBook.apply(this,arguments); updMback(); }; }
 /* 「月曆負責瀏覽日期，右側面板負責顯示選定日期的課程」——點日期＝選取，開課走面板的「開始學習」 */
 let bkSelDate=null;
 function bkLessonsOn(ds){ return BOOK_LESSONS.filter(b=>b.date===ds); }
@@ -7663,6 +7674,9 @@ function oldSiteCard(){
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{ navigator.serviceWorker.register('sw.js').catch(()=>{}); });
 }
+
+/* 各分區打開／關閉詳細頁都會經過 RENDER.*，統一在重畫後更新手機返回列的文字 */
+Object.keys(RENDER).forEach(k=>{ const f=RENDER[k]; RENDER[k]=function(){ const r=f.apply(this,arguments); updMback(); return r; }; });
 
 /* ---------- 啟動 ---------- */
 updateProfileUI();
