@@ -2532,13 +2532,21 @@ nav button{font-size:11px}
 .bkc-new{margin-left:auto;flex:none;padding:1px 6px;border-radius:5px;background:#d9534f;color:#fff;font-size:11px;font-weight:800;letter-spacing:.03em}
 .bkc-bd{display:flex;gap:10px;flex:1;padding:10px}
 .bkc-th{flex:none;width:84px;height:84px;border-radius:10px;overflow:hidden;background:#fdf6ec;display:grid;place-items:center}
-/* 閱讀／實景／聽力清單卡片的縮圖（比照課本目錄）：左邊固定方形縮圖，右邊沿用原本卡片內容 */
-.thumbed{display:flex;gap:12px;align-items:flex-start}
-.thumb-b{flex:1;min-width:0}
-.lthumb{flex:none;width:76px;height:76px;border-radius:10px;overflow:hidden;background:#fdf6ec;display:grid;place-items:center}
+/* 閱讀／實景／聽力卡片牆：沿用課本目錄的 .bkc 卡片，以下只補差異 */
+.lthumb{flex:none;width:84px;height:84px;border-radius:10px;overflow:hidden;background:#fdf6ec;display:grid;place-items:center}
 .lthumb svg{width:100%;height:100%;display:block}
-.lthumb.emo{font-size:36px;line-height:1}
-@media(max-width:640px){ .thumbed{gap:10px} .lthumb{width:60px;height:60px} .lthumb.emo{font-size:28px} }
+.lthumb.emo{font-size:40px;line-height:1}
+.lcard .bkc-hd .lv{flex:none}
+.lc-clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.lc-done{margin-left:auto;flex:none;color:var(--ok);font-weight:700;font-size:var(--font-meta);white-space:nowrap}
+.lcard.fin{background:#faf8f4}
+.lcard.fin .bkc-bd,.lcard.fin .bkc-ft{opacity:.62}
+@media(hover:hover){ .lcard.fin:hover .bkc-bd,.lcard.fin:hover .bkc-ft{opacity:1} }
+.lcard:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lcard .bkc-ft .ext{color:var(--accent2);font-weight:600;text-decoration:none}
+.ls-sec{margin:18px 0 8px;font-size:var(--font-subhead);color:var(--ink2)}
+#rd-list,.rw-grid{margin-top:12px}
+@media(max-width:640px){ .lthumb{width:64px;height:64px} .lthumb.emo{font-size:30px} }
 .bkc-th svg{width:100%;height:100%;display:block}
 .bkc-th.ico{font-size:40px;line-height:1}
 .bkc-th.ico svg{width:62%;height:62%}
@@ -3470,25 +3478,21 @@ function rdFiltered(){
   return {base,list};
 }
 function rdCards(list){
+  if(!list.length) return '<div class="muted" style="padding:8px 4px">找不到符合的文章，換個關鍵字或放寬篩選試試。</div>';
   const ART_=window.ART||{};
   const picks=pickThumbs(list,a=>(ART_[a.id]||{}).svg);
   const thumb=a=>{ const s=(ART_[a.id]||{}).svg||''; const p=picks[a.id];
     return p?stripThumb(s,p.x):(s?sceneThumb(s):emojiThumb('📖')); };
-  return list.length ? list.map(a=>{
-    const d=ST.artDone[a.id];
+  const m=w=>Math.max(1,Math.round(w/130));
+  const card=a=>{
     const tw=(a.target||[]).length;
-    return '<div class="item arw thumbed'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="rdOpenArt(\''+a.id+'\')">'
-    +thumb(a)+'<div class="thumb-b">'
-    +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(a.level)+'">'+esc(a.title)+'</div><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span></div>'
-    +'<div class="tc">'+esc(a.titleCn)+'</div>'
-    +'<div class="meta" style="margin-top:6px"><span class="tag-chip topic">🏷 '+esc(a.topic)+'</span>'
-    +(a.focus?'<span class="tag-chip gram">📐 '+esc(a.focus)+'</span>':'')
-    +(tw?'<span class="tag-chip">🔤 '+tw+' 重點字</span>':'')
-    +'</div>'
-    +'<div class="meta" style="justify-content:space-between;margin-top:5px">'
-    +'<span>'+wordsMeta(a.words)+'</span>'
-    +'<span class="goCta" style="margin:0"><i>'+(d?'再讀一次':'開始閱讀 ➔')+'</i></span></div></div></div>';
-  }).join('') : '<div class="muted" style="padding:8px 4px">找不到符合的文章，換個關鍵字或放寬篩選試試。</div>';
+    return lCard({click:"rdOpenArt('"+a.id+"')", lv:a.level, cat:a.topic, thumb:thumb(a),
+      en:a.title, cn:a.titleCn, g:a.focus, done:!!ST.artDone[a.id],
+      ft:[a.words+' words · 約 '+m(a.words)+' 分鐘', tw?tw+' 重點字':''], right:lcDate(a.date)});
+  };
+  /* 搜尋時直接平鋪結果；平常依月份分組（原創分級沒有日期，放最後一組） */
+  if(rdQuery.trim()) return '<div class="bkc-grid" role="list">'+list.map(card).join('')+'</div>';
+  return monTOCHTML('rd',monGroups(list),card,'✍️ 原創分級文章','篇');
 }
 function rdProg(list){
   const n=list.filter(a=>ST.artDone[a.id]).length;
@@ -5408,6 +5412,54 @@ function sceneThumb(svg){
   return '<div class="lthumb" aria-hidden="true">'+svg.replace(m[0],'viewBox="'+((w-s)/2)+' '+((h-s)/2)+' '+s+' '+s+'"')+'</div>';
 }
 function emojiThumb(e){ return '<div class="lthumb emo" aria-hidden="true">'+esc(e||'🎧')+'</div>'; }
+/* ===== 閱讀／實景／聽力共用卡片（比照課本目錄的 .bkc）：上方色條 → 縮圖＋標題 → 資訊列。整張卡可點 =====
+   o={click, lv, cat, thumb, en, cn, g, ft:[html…], right:html, done} */
+function lCard(o){
+  return '<div class="bkc lcard'+(o.done?' fin':'')+'" role="listitem" tabindex="0" onclick="'+o.click+'" onkeydown="if(event.key===\'Enter\')this.click()">'
+   +'<div class="bkc-hd">'+(o.lv?'<span class="lv '+lvCls(o.lv)+'">'+esc(o.lv)+'</span>':'')
+   +(o.cat?'<span class="bkc-cat">'+esc(o.cat)+'</span>':'')
+   +(o.done?'<span class="lc-done">✓ 已完成</span>':'')+'</div>'
+   +'<div class="bkc-bd">'+(o.thumb||'')+'<div class="bkc-tx">'
+   +'<div class="bkc-en">'+esc(o.en||'')+'</div>'
+   +(o.cn?'<div class="bkc-cn">'+esc(o.cn)+'</div>':'')
+   +(o.g?'<div class="bkc-g lc-clamp">✪ '+esc(o.g)+'</div>':'')
+   +'</div></div>'
+   +'<div class="bkc-ft">'+(o.ft||[]).filter(Boolean).map(x=>'<span>'+x+'</span>').join('')
+   +(o.right?'<span class="d">'+o.right+'</span>':'')+'</div></div>';
+}
+function lcDate(s){
+  if(!s) return '';
+  const [y,mo,d]=s.split('-');
+  return (+mo)+'/'+(+d)+' 週'+'日一二三四五六'.charAt(new Date(+y,+mo-1,+d).getDay());
+}
+/* 依月份分組（閱讀／聽力，比照課本目錄）：新的在前；最新一個月展開、其他收合成一列；沒有日期的放最後一組。
+   只有一組時一定展開 */
+const MONSET={};
+function monGroups(items){
+  const g={}, nd=[];
+  items.forEach(x=>{ const ym=(x.date||'').slice(0,7); if(ym)(g[ym]=g[ym]||[]).push(x); else nd.push(x); });
+  const out=Object.keys(g).sort().reverse().map(ym=>({key:ym, list:g[ym].slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''))}));
+  if(nd.length) out.push({key:'nodate', list:nd});
+  return out;
+}
+function monTOCHTML(ns,groups,card,ndLabel,unit){
+  if(!groups.length) return '';
+  const st=MONSET[ns]||(MONSET[ns]={[groups[0].key]:true});
+  return groups.map(({key,list})=>{
+    const open=groups.length===1||!!st[key];
+    const title=key==='nodate'?ndLabel:key.slice(0,4)+' 年 '+(+key.slice(5,7))+' 月';
+    return '<section class="bktoc-m'+(open?' open':'')+'">'
+      +(groups.length>1?'<button class="bktoc-hd" onclick="monTog(\''+ns+'\',\''+key+'\')" aria-expanded="'+open+'">'
+        +'<span class="t">'+esc(title)+'</span><span class="n">'+list.length+' '+unit+'</span>'
+        +'<span class="arr">'+(open?'▾':'▸')+'</span></button>':'')
+      +(open?'<div class="bkc-grid" role="list">'+list.map(card).join('')+'</div>':'')+'</section>';
+  }).join('');
+}
+function monTog(ns,key){
+  const st=MONSET[ns]=MONSET[ns]||{}; st[key]=!st[key];
+  if(ns==='rd') rdQ(rdQuery); else if(RENDER[ns]) RENDER[ns]();
+}
+window.monTog=monTog;
 function bkThumb(b){
   const r=(b.reading||[])[0]||{}, ba=(window.BOOKART||{})[b.id+'#0'];
   const svg=r.art||(ba&&(ba.svg||ba.art))||b.coverArt||'';
@@ -5939,24 +5991,17 @@ function rwListHTML(){
    +'</div>'
    +(rwFormOn?rwFormHTML():'')
    +(list.length
-     ? list.map(rwCardHTML).join('')
+     ? '<div class="bkc-grid rw-grid" role="list">'+list.map(rwCardHTML).join('')+'</div>'
      : (rwFormOn?'':'<div class="card"><div class="muted">還沒有教材。點右上「＋ 新增教材」，貼上影片分享內容就能開始。</div></div>'));
   return h;
 }
 
 function rwCardHTML(l){
-  const kv=(l.vocab||[]).map(v=>v.w).filter(Boolean).join(' · ');
-  /* metadata 只放學習資訊（國家/分類/程度/時間），不顯示平台名稱、不顯示進度狀態 */
-  const meta=[l.country,l.cat,l.level,l.min].filter(Boolean).join(' · ');
-  return '<div class="rwcard thumbed">'+rwThumb(l)+'<div class="thumb-b">'
-   +'<div class="rw-t">'+esc(rwPad(l.ti))+'</div>'
-   +(meta?'<div class="rw-meta">'+esc(meta)+'</div>':'')
-   +(l.point?'<div class="rw-obj">'+esc(rwPad(l.point))+'</div>':'')
-   +(kv?'<div class="rw-kv">'+esc(kv)+'</div>':'')
-   +'<div class="rw-acts">'
-   +'<button class="btn sm" onclick="rwGo(\''+l.id+'\')">開始學習 →</button>'
-   +(l.url?'<a class="ext" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>':'')
-   +'</div></div></div>';
+  /* 色條：分類＋國家；資訊列：程度・時間＋觀看原影片。不顯示平台名稱、不顯示進度狀態（沿用原本規則） */
+  return lCard({click:"rwGo('"+l.id+"')", cat:[l.cat,l.country].filter(Boolean).join(' · '), thumb:rwThumb(l),
+    en:rwPad(l.ti), g:l.point?rwPad(l.point):'',
+    ft:[esc([l.level,l.min].filter(Boolean).join(' · '))],
+    right:l.url?'<a class="ext" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">觀看原影片 ↗</a>':''});
 }
 /* 實景清單縮圖：l.thumb＝課本圖示庫（BOOK_ICONS）的圖示名，每課不同；沒有指定就用內頁三圓圖示的第一個 */
 function rwThumb(l){
@@ -7284,19 +7329,10 @@ RENDER.listen=function(){
   const scenes=list.filter(l=>l.kind==='scene');
   const others=list.filter(l=>l.kind!=='scene'&&l.kind!=='note');
   function lsCard(l){
-    const d=(ST.listenDone||{})[l.id];
     const lines=(l.script||l.keyLines||[]).length;
-    return '<div class="item thumbed'+finCls(d)+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="lsGo(\''+l.id+'\')">'
-     +lsThumb(l)+'<div class="thumb-b">'
-     +'<div class="row" style="justify-content:space-between"><div class="t" style="'+lvTitle(l.level)+'">'+esc(l.title)+'</div><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
-     +'<div class="tc">'+esc(l.titleCn)+'</div>'
-     +'<div class="meta" style="margin-top:6px"><span class="tag-chip topic">🏷 '+esc(l.topic)+'</span>'
-     +'<span class="tag-chip gram">📐 '+esc(l.focus)+'</span>'
-     +(lines?'<span class="tag-chip">📜 '+lines+' 句</span>':'')
-     +'</div>'
-     +'<div class="meta" style="justify-content:space-between;margin-top:5px">'
-     +'<span>⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</span>'
-     +'<span class="goCta" style="margin:0"><i>'+(d?'再聽一次':'▶ 開始聽練 ➔')+'</i></span></div></div></div>';
+    return lCard({click:"lsGo('"+l.id+"')", lv:l.level, cat:String(l.topic||'').replace(/^\S*[^\sA-Za-z0-9一-鿿]\S*\s+/,''),
+      thumb:lsThumb(l), en:l.title, cn:l.titleCn, g:l.focus, done:!!(ST.listenDone||{})[l.id],
+      ft:['約 '+l.minutes+' 分鐘', lines?lines+' 句':''], right:lcDate(l.date)});
   }
   const lsDone=list.filter(l=>(ST.listenDone||{})[l.id]).length;
   const lsPct=list.length?Math.round(lsDone*100/list.length):0;
@@ -7310,9 +7346,9 @@ RENDER.listen=function(){
    +'播放用的是<b>裝置內建的語音朗讀</b>，不需要網路影片：可以整段連播、也可以<b>逐句跟讀</b>（念一句停一下讓你跟著念），速度能調 0.5x／0.75x。'
    +'點任何一個英文字查中文，也可以把英文或中譯蓋起來自我測驗。</div></details>'
    +'<div class="rdprog" style="margin-top:8px"><span>已完成 '+lsDone+' / '+list.length+' 課</span><div class="rdbar"><i style="width:'+lsPct+'%"></i></div></div></div>'
-   +(notes.length?'<h3 style="margin:16px 0 8px;font-size:var(--font-subhead);color:var(--ink2)">📒 依你的課堂筆記自製</h3>'+notes.map(lsCard).join(''):'')
-   +(scenes.length?'<h3 style="margin:16px 0 8px;font-size:var(--font-subhead);color:var(--ink2)">🏙️ 生活場景 · 實用對話</h3>'+scenes.map(lsCard).join(''):'')
-   +(others.length?'<h3 style="margin:16px 0 8px;font-size:var(--font-subhead);color:var(--ink2)">🎬 VOA 課程教材</h3>'+others.map(lsCard).join(''):'');
+   +(notes.length?'<h3 class="ls-sec">📒 依你的課堂筆記自製</h3>'+monTOCHTML('listen',monGroups(notes),lsCard,'其他','課'):'')
+   +(scenes.length?'<h3 class="ls-sec">🏙️ 生活場景 · 實用對話</h3><div class="bkc-grid" role="list">'+scenes.map(lsCard).join('')+'</div>':'')
+   +(others.length?'<h3 class="ls-sec">🎬 VOA 課程教材</h3><div class="bkc-grid" role="list">'+others.map(lsCard).join('')+'</div>':'');
 };
 /* 聽力清單縮圖：聽力沒有插圖，每課指定課本圖示庫（BOOK_ICONS）裡的一個圖示，彼此不重複；
    新課還沒指定時用主題的 emoji 當縮圖（之後補進這張表即可） */
