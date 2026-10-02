@@ -27684,3 +27684,1308 @@ window.VIDEO.bk20260922 = {
       cn: "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
   ]
 };
+
+window.VIDEO.au01 = {
+ "title": "Audit English I — Receiving an Auditor, Clarifying & Handing Over",
+ "titleCn": "稽核英文一｜接待稽核員、澄清問題與轉接窗口",
+ "date": "2026-09-21",
+ "level": "B1+",
+ "scene": "Factory Audit · Receiving a Customer Auditor",
+ "sceneCn": "工廠稽核・接待客戶稽核員",
+ "sceneArt": "clipboard",
+ "titleArt": [
+  "clipboard",
+  "check",
+  "talk"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・現場窗口",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・客戶稽核員",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "The Audit Conversation",
+   "cn": "情境：稽核問答"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "audit": {
+   "t": "audit",
+   "cn": "稽核",
+   "tag": [
+    "稽核英文",
+    "準備稽核"
+   ],
+   "note": "搭配：prepare for an audit（準備稽核）。",
+   "ex": "We are preparing for the audit.",
+   "exCn": "我們正在準備稽核。"
+  },
+  "representative": {
+   "t": "representative",
+   "cn": "代表、窗口",
+   "tag": [
+    "稽核英文",
+    "品保窗口"
+   ],
+   "note": "搭配：QA representative（品保窗口）。",
+   "ex": "Let me ask our QA representative.",
+   "exCn": "讓我請我們的品保窗口協助。"
+  },
+  "record": {
+   "t": "record",
+   "cn": "紀錄",
+   "tag": [
+    "稽核英文",
+    "檢驗紀錄"
+   ],
+   "note": "搭配：inspection records（檢驗紀錄）。",
+   "ex": "Which inspection record do you need?",
+   "exCn": "您需要哪一份檢驗紀錄？"
+  },
+  "confirm": {
+   "t": "confirm",
+   "cn": "確認",
+   "tag": [
+    "稽核英文",
+    "確認狀態"
+   ],
+   "note": "搭配：confirm the status（確認狀態）。",
+   "ex": "Let me confirm the current status.",
+   "exCn": "讓我確認目前狀態。"
+  },
+  "target": {
+   "t": "target",
+   "cn": "目標",
+   "tag": [
+    "稽核英文",
+    "目標日期"
+   ],
+   "note": "搭配：target date（目標日期）。",
+   "ex": "Our target date is June 2027.",
+   "exCn": "我們的目標日期是 2027 年 6 月。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today we practise answering a customer auditor in English.",
+   "cn": "歡迎回來。今天我們練習用英文回答客戶稽核員。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "Listen for five key words, the answer patterns, and how to say what you do not know yet.",
+   "cn": "注意聽五個關鍵詞、回答句型，以及「還不確定」要怎麼說。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "What is your role in today's audit?",
+   "cn": "你在今天稽核中的角色是什麼？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "I will help coordinate the audit and bring in the right person for each question.",
+   "cn": "我會協助協調稽核，並請適合的人員回答問題。",
+   "hi": [
+    {
+     "t": "audit",
+     "cn": "稽核",
+     "k": "audit",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "talk"
+   },
+   "en": "Which departments will support the audit?",
+   "cn": "哪些部門會支援稽核？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "talk"
+   },
+   "en": "The planned teams are QA, Product Development, Manufacturing Engineering, Production, Materials, and HR.",
+   "cn": "規劃的團隊包括品保、開發、生技、製造、資材及人資。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "doc"
+   },
+   "en": "What will you do if you are not sure?",
+   "cn": "如果你不確定，會怎麼做？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "doc"
+   },
+   "en": "I will confirm the current status with the responsible person.",
+   "cn": "我會向負責人確認目前狀態。",
+   "hi": [
+    {
+     "t": "confirm",
+     "cn": "確認",
+     "k": "confirm",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "check"
+   },
+   "en": "Is this factory ISO 9001 certified?",
+   "cn": "這間工廠已取得 ISO 9001 認證嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "check"
+   },
+   "en": "Not yet. Our target is to obtain ISO 9001 certification by June 2027.",
+   "cn": "目前尚未取得；目標是在 2027 年 6 月前取得認證。",
+   "hi": [
+    {
+     "t": "target",
+     "cn": "目標",
+     "k": "target",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "warning"
+   },
+   "en": "Can you show me the certificate?",
+   "cn": "可以給我看證書嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "warning"
+   },
+   "en": "We do not have the certificate yet. Let me ask QA to explain the certification plan.",
+   "cn": "我們目前還沒有證書。我請品保說明認證計畫。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "label"
+   },
+   "en": "How do you control quality before certification?",
+   "cn": "取得認證前，你們如何管控品質？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "label"
+   },
+   "en": "Let me ask QA to explain the current controls and show the available records.",
+   "cn": "我請品保說明目前管控方式，並提供現有紀錄。",
+   "hi": [
+    {
+     "t": "records",
+     "cn": "紀錄",
+     "k": "record",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "sealedBox"
+   },
+   "en": "Is June 2027 a confirmed completion date?",
+   "cn": "2027 年 6 月是已確認的完成日期嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "sealedBox"
+   },
+   "en": "It is our target date. Let me confirm the latest schedule with QA.",
+   "cn": "這是我們的目標日期。我向品保確認最新時程。",
+   "hi": [
+    {
+     "t": "confirm",
+     "cn": "確認",
+     "k": "confirm",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "target"
+   },
+   "en": "Can your system detect duplicate barcodes at the shipping dock?",
+   "cn": "系統能在出貨月台偵測重複條碼嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "target"
+   },
+   "en": "Not at the shipping dock yet. We have this control at the end-of-line station.",
+   "cn": "出貨月台目前還沒有；我們在產線末端站點有這項管控。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "Do you have this control at both locations?",
+   "cn": "兩個位置都有這項管控嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "No. According to the current action plan, it is available at EOL, but not at the shipping dock.",
+   "cn": "沒有。依目前改善表，EOL 有這項功能，出貨月台尚未具備。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "audit",
+    "ipa": "/ˈɔːdɪt/",
+    "pos": "n.",
+    "art": "clipboard",
+    "def": "audit n. — prepare for an audit.",
+    "cn": "稽核｜搭配：準備稽核",
+    "note": "搭配：prepare for an audit（準備稽核）。"
+   },
+   "en": "We are preparing for the audit.",
+   "cn": "我們正在準備稽核。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "representative",
+    "ipa": "/ˌreprɪˈzentətɪv/",
+    "pos": "n.",
+    "art": "talk",
+    "def": "representative n. — QA representative.",
+    "cn": "代表、窗口｜搭配：品保窗口",
+    "note": "搭配：QA representative（品保窗口）。"
+   },
+   "en": "Let me ask our QA representative.",
+   "cn": "讓我請我們的品保窗口協助。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "record",
+    "ipa": "/ˈrekɔːrd/",
+    "pos": "n.",
+    "art": "doc",
+    "def": "record n. — inspection records.",
+    "cn": "紀錄｜搭配：檢驗紀錄",
+    "note": "搭配：inspection records（檢驗紀錄）。"
+   },
+   "en": "Which inspection record do you need?",
+   "cn": "您需要哪一份檢驗紀錄？"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "confirm",
+    "ipa": "/kənˈfɜːrm/",
+    "pos": "v.",
+    "art": "check",
+    "def": "confirm v. — confirm the status.",
+    "cn": "確認｜搭配：確認狀態",
+    "note": "搭配：confirm the status（確認狀態）。"
+   },
+   "en": "Let me confirm the current status.",
+   "cn": "讓我確認目前狀態。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "target",
+    "ipa": "/ˈtɑːrɡɪt/",
+    "pos": "n.",
+    "art": "warning",
+    "def": "target n. — target date.",
+    "cn": "目標｜搭配：目標日期",
+    "note": "搭配：target date（目標日期）。"
+   },
+   "en": "Our target date is June 2027.",
+   "cn": "我們的目標日期是 2027 年 6 月。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "Let me + 動詞原形 + 受詞",
+    "art": "clipboard",
+    "rows": [
+     {
+      "lab": "Let me + 原形動詞（我來…，當場承接）",
+      "blocks": [
+       {
+        "t": "Let me",
+        "k": "s"
+       },
+       {
+        "t": "動詞原形",
+        "k": "v"
+       },
+       {
+        "t": "受詞",
+        "k": "o"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "Let me confirm the current status with QA.",
+   "cn": "讓我向品保確認目前的狀態。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "Do you mean + 選項 A + or + 選項 B ?",
+    "art": "doc",
+    "rows": [
+     {
+      "lab": "Do you mean A or B?（釐清對方要什麼）",
+      "blocks": [
+       {
+        "t": "Do you mean",
+        "k": "s"
+       },
+       {
+        "t": "選項 A",
+        "k": "v"
+       },
+       {
+        "t": "or",
+        "k": "o"
+       },
+       {
+        "t": "選項 B ?",
+        "k": "s"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "Do you mean the training records or the inspection records?",
+   "cn": "您指的是訓練紀錄還是檢驗紀錄？"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "主詞 + have + 功能 + at + 地點, but not at + 地點 + yet",
+    "art": "target",
+    "rows": [
+     {
+      "lab": "We have X at A, but not at B yet（限定範圍，不誇大）",
+      "blocks": [
+       {
+        "t": "主詞",
+        "k": "s"
+       },
+       {
+        "t": "have",
+        "k": "v"
+       },
+       {
+        "t": "功能",
+        "k": "o"
+       },
+       {
+        "t": "at",
+        "k": "s"
+       },
+       {
+        "t": "地點, but not at",
+        "k": "v"
+       },
+       {
+        "t": "地點",
+        "k": "o"
+       },
+       {
+        "t": "yet",
+        "k": "s"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "We have this control at EOL, but not at the shipping dock yet.",
+   "cn": "我們在 EOL 站有這項管控，但出貨月台還沒有。"
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 3,
+    "wrong": "Let me to ask our QA representative.",
+    "bad": [],
+    "fix": "Let me ask our QA representative."
+   },
+   "en": "Let me ask our QA representative.",
+   "cn": "讓我請教我們的品保窗口。"
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 5,
+    "wrong": "Our system blocks duplicate barcodes everywhere.",
+    "bad": [],
+    "fix": "We have this control at EOL, but not at the shipping dock yet."
+   },
+   "en": "We have this control at EOL, but not at the shipping dock yet.",
+   "cn": "我們在 EOL 站有這項管控，但出貨月台還沒有。"
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Let me ___ the current status with QA.",
+    "a": "confirm",
+    "n": 1
+   },
+   "en": "Let me ___ the current status with QA.",
+   "cn": "讓我向品保＿＿目前的狀態。",
+   "say": "Let me , blank, the current status with QA.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Let me ask our QA ___.",
+    "a": "representative",
+    "n": 2
+   },
+   "en": "Let me ask our QA ___.",
+   "cn": "讓我請教我們的品保＿＿。",
+   "say": "Let me ask our QA , blank,.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "I do not have a ___ date yet.",
+    "a": "confirmed",
+    "n": 3
+   },
+   "en": "I do not have a ___ date yet.",
+   "cn": "我目前還沒有＿＿的日期。",
+   "say": "I do not have a , blank, date yet.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Which ___ would you like to see?",
+    "a": "record",
+    "n": 4
+   },
+   "en": "Which ___ would you like to see?",
+   "cn": "您想查看哪一份＿＿？",
+   "say": "Which , blank, would you like to see?",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practise speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
+
+window.VIDEO.au02 = {
+ "title": "Audit English II — Responsibility, Training & Assessment Records",
+ "titleCn": "稽核英文二｜責任歸屬、訓練進度與考核紀錄",
+ "date": "2026-09-28",
+ "level": "B1+",
+ "scene": "Factory Audit · Organization, Training & Records",
+ "sceneCn": "工廠稽核・組織、訓練與紀錄",
+ "sceneArt": "people",
+ "titleArt": [
+  "people",
+  "clipboard",
+  "calendar"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・現場窗口",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・客戶稽核員",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "The Audit Conversation",
+   "cn": "情境：稽核問答"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "responsibility": {
+   "t": "responsibility",
+   "cn": "責任",
+   "tag": [
+    "稽核英文",
+    "分派責任"
+   ],
+   "note": "搭配：assign responsibility（分派責任）。",
+   "ex": "HR has responsibility for the organization chart action.",
+   "exCn": "人資負責組織圖改善。"
+  },
+  "assessment": {
+   "t": "assessment",
+   "cn": "考核",
+   "tag": [
+    "稽核英文",
+    "考核紀錄"
+   ],
+   "note": "搭配：assessment records（考核紀錄）。",
+   "ex": "Our assessment records are not complete yet.",
+   "exCn": "我們的考核紀錄尚未完整。"
+  },
+  "backup": {
+   "t": "backup",
+   "cn": "代理人",
+   "tag": [
+    "稽核英文",
+    "代理作業員"
+   ],
+   "note": "搭配：backup operator（代理作業員）。",
+   "ex": "The action includes records for backup operators.",
+   "exCn": "改善包含代理作業員的紀錄。"
+  },
+  "evidence": {
+   "t": "evidence",
+   "cn": "證據",
+   "tag": [
+    "稽核英文",
+    "訓練佐證"
+   ],
+   "note": "搭配：training evidence（訓練佐證）。",
+   "ex": "Training evidence is part of the open action.",
+   "exCn": "訓練佐證是待改善項目的一部分。"
+  },
+  "complete": {
+   "t": "complete",
+   "cn": "完整的",
+   "tag": [
+    "稽核英文",
+    "完整紀錄"
+   ],
+   "note": "搭配：complete records（完整紀錄）。",
+   "ex": "The records are not complete yet.",
+   "exCn": "紀錄目前仍不完整。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today we practise answering a customer auditor in English.",
+   "cn": "歡迎回來。今天我們練習用英文回答客戶稽核員。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "scene",
+    "art": "people"
+   },
+   "en": "Listen for five key words, the answer patterns, and how to say what you do not know yet.",
+   "cn": "注意聽五個關鍵詞、回答句型，以及「還不確定」要怎麼說。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "people"
+   },
+   "en": "Who owns the organization chart action?",
+   "cn": "誰負責組織圖改善？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "people"
+   },
+   "en": "HR owns this action. Each department is to provide names and length of service for section managers and above.",
+   "cn": "人資負責，各部門需提供課級以上的姓名與年資。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "talk"
+   },
+   "en": "Who owns the English-contact action?",
+   "cn": "誰負責英文窗口改善？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "talk"
+   },
+   "en": "Sales owns the action. Each department is to provide an English-speaking contact, with support from Sales.",
+   "cn": "銷售負責此項，各部門提供英文窗口，並由銷售支援。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "doc"
+   },
+   "en": "Who owns operator training?",
+   "cn": "谁負責作業員訓練？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "doc"
+   },
+   "en": "Production owns the training action. It covers team-leader training, skills matrices, assessment records, and backup-operator evidence.",
+   "cn": "製造負責訓練改善，涵蓋組長培訓、多能工表、考核紀錄與代理人實績。",
+   "hi": [
+    {
+     "t": "assessment",
+     "cn": "考核",
+     "k": "assessment",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "calendar"
+   },
+   "en": "What information will the organization chart include?",
+   "cn": "組織圖會包含哪些資料？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "calendar"
+   },
+   "en": "It will include names and length of service for section managers and above. Each department is to provide the information.",
+   "cn": "將列出課級以上的姓名與年資，由各部門提供資料。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "careerSteps"
+   },
+   "en": "Who is responsible, and what is the target date?",
+   "cn": "誰負責？目標日期是什麼？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "careerSteps"
+   },
+   "en": "HR is responsible for this action. The target date in the plan is October 19.",
+   "cn": "由人資負責，計畫中的目標日期為 10 月 19 日。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "check"
+   },
+   "en": "Does the action plan show it as completed?",
+   "cn": "改善表顯示已完成了嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "check"
+   },
+   "en": "No. It is marked Open in the current action plan. The target date does not mean that the chart has already been completed.",
+   "cn": "沒有，目前的改善表標示 Open。目標日期不代表組織圖已完成。",
+   "hi": [
+    {
+     "t": "completed",
+     "cn": "完整的",
+     "k": "complete",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "target"
+   },
+   "en": "How will you support English communication during the audit?",
+   "cn": "稽核時如何支援英文溝通？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "target"
+   },
+   "en": "The plan requires an English-speaking contact from each department. Sales will provide support.",
+   "cn": "計畫要求各部門提供英文窗口，由銷售支援。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "Is Sales responsible for every technical answer?",
+   "cn": "所有技術問題都由銷售回答嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "The plan is for each department to provide its own English-speaking contact. Sales supports communication; the relevant department explains its process.",
+   "cn": "計畫由各部門提供自己的英文窗口。銷售支援溝通，相關部門說明自身流程。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "people"
+   },
+   "en": "Are all contacts already confirmed?",
+   "cn": "所有窗口都已確認了嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "people"
+   },
+   "en": "The current action plan marks this action Open. Its target date is October 19, so the plan does not prove that all contacts are already in place.",
+   "cn": "目前的計畫仍標示 Open，目標日期為 10/19，不能以計畫當作所有窗口已到位的證明。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "talk"
+   },
+   "en": "What is the current training status?",
+   "cn": "目前訓練進度如何？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "talk"
+   },
+   "en": "Team leaders are being trained, and the skills matrices for each process are being updated. Assessment records are not complete yet.",
+   "cn": "組長培訓中，各製程多能工表更新中，考核紀錄尚未完整。",
+   "hi": [
+    {
+     "t": "Assessment",
+     "cn": "考核",
+     "k": "assessment",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "doc"
+   },
+   "en": "What do you plan to complete by October 30?",
+   "cn": "10/30 前計畫完成什麼？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "doc"
+   },
+   "en": "We plan to complete team-leader training, assessment records, and the training plan. Production will also provide skills matrices for Departments 1, 2, and 3.",
+   "cn": "計畫完成組長培訓、考核紀錄與訓練計畫，製造也會提供製一、製二、製三部多能工表。",
+   "hi": [
+    {
+     "t": "assessment",
+     "cn": "考核",
+     "k": "assessment",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "calendar"
+   },
+   "en": "Are all operators already qualified?",
+   "cn": "所有作業員都已合格了嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "calendar"
+   },
+   "en": "The assessment records are still incomplete in the action plan. That information does not support saying that every operator has passed.",
+   "cn": "改善表中的考核紀錄仍未完整，這項資訊不足以宣稱每位作業員都已通過。",
+   "hi": [
+    {
+     "t": "assessment",
+     "cn": "考核",
+     "k": "assessment",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "responsibility",
+    "ipa": "/rɪˌspɑːnsəˈbɪləti/",
+    "pos": "n.",
+    "art": "people",
+    "def": "responsibility n. — assign responsibility.",
+    "cn": "責任｜搭配：分派責任",
+    "note": "搭配：assign responsibility（分派責任）。"
+   },
+   "en": "HR has responsibility for the organization chart action.",
+   "cn": "人資負責組織圖改善。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "assessment",
+    "ipa": "/əˈsesmənt/",
+    "pos": "n.",
+    "art": "talk",
+    "def": "assessment n. — assessment records.",
+    "cn": "考核｜搭配：考核紀錄",
+    "note": "搭配：assessment records（考核紀錄）。"
+   },
+   "en": "Our assessment records are not complete yet.",
+   "cn": "我們的考核紀錄尚未完整。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "backup",
+    "ipa": "/ˈbækʌp/",
+    "pos": "n.",
+    "art": "doc",
+    "def": "backup n. — backup operator.",
+    "cn": "代理人｜搭配：代理作業員",
+    "note": "搭配：backup operator（代理作業員）。"
+   },
+   "en": "The action includes records for backup operators.",
+   "cn": "改善包含代理作業員的紀錄。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "evidence",
+    "ipa": "/ˈevɪdəns/",
+    "pos": "n.",
+    "art": "calendar",
+    "def": "evidence n. — training evidence.",
+    "cn": "證據｜搭配：訓練佐證",
+    "note": "搭配：training evidence（訓練佐證）。"
+   },
+   "en": "Training evidence is part of the open action.",
+   "cn": "訓練佐證是待改善項目的一部分。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "complete",
+    "ipa": "/kəmˈpliːt/",
+    "pos": "adj.",
+    "art": "careerSteps",
+    "def": "complete adj. — complete records.",
+    "cn": "完整的｜搭配：完整紀錄",
+    "note": "搭配：complete records（完整紀錄）。"
+   },
+   "en": "The records are not complete yet.",
+   "cn": "紀錄目前仍不完整。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "主詞 + is responsible for + 工作",
+    "art": "clipboard",
+    "rows": [
+     {
+      "lab": "誰負責",
+      "blocks": [
+       {
+        "t": "主詞",
+        "k": "s"
+       },
+       {
+        "t": "is responsible for",
+        "k": "v"
+       },
+       {
+        "t": "工作",
+        "k": "o"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "HR is responsible for the organization chart action.",
+   "cn": "人資負責組織圖改善。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "主詞 + is/are being + 過去分詞",
+    "art": "doc",
+    "rows": [
+     {
+      "lab": "正在進行",
+      "blocks": [
+       {
+        "t": "主詞",
+        "k": "s"
+       },
+       {
+        "t": "is/are being",
+        "k": "v"
+       },
+       {
+        "t": "過去分詞",
+        "k": "o"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "Team leaders are being trained. The skills matrices are being updated.",
+   "cn": "組長正在接受培訓，多能工表正在更新。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "We plan to + 動詞原形 + by + 日期",
+    "art": "target",
+    "rows": [
+     {
+      "lab": "目標期限",
+      "blocks": [
+       {
+        "t": "We plan to",
+        "k": "s"
+       },
+       {
+        "t": "動詞原形",
+        "k": "v"
+       },
+       {
+        "t": "by",
+        "k": "o"
+       },
+       {
+        "t": "日期",
+        "k": "s"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "We plan to complete the assessment records by October 30.",
+   "cn": "我們計畫在 10 月 30 日前補齊考核紀錄。"
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 4,
+    "wrong": "Training attendance proves that every operator is qualified.",
+    "bad": [],
+    "fix": "Attendance shows participation, not the assessment result."
+   },
+   "en": "Attendance shows participation, not the assessment result.",
+   "cn": "出席代表有參與，不等於考核結果。"
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "HR is ___ for the organization chart action.",
+    "a": "responsible",
+    "n": 1
+   },
+   "en": "HR is ___ for the organization chart action.",
+   "cn": "人資＿＿組織圖改善。",
+   "say": "HR is , blank, for the organization chart action.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Our ___ records are not complete yet.",
+    "a": "assessment",
+    "n": 2
+   },
+   "en": "Our ___ records are not complete yet.",
+   "cn": "我們的＿＿紀錄尚未完整。",
+   "say": "Our , blank, records are not complete yet.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Team leaders are being ___.",
+    "a": "trained",
+    "n": 3
+   },
+   "en": "Team leaders are being ___.",
+   "cn": "組長正在接受＿＿。",
+   "say": "Team leaders are being , blank,.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "A target date is not proof of ___.",
+    "a": "completion",
+    "n": 4
+   },
+   "en": "A target date is not proof of ___.",
+   "cn": "目標日期不是＿＿的證明。",
+   "say": "A target date is not proof of , blank,.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practise speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
