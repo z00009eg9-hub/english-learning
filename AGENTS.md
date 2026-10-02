@@ -120,6 +120,34 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
 - **生詞本同步（b2wb）**：Speak Up 的 `cloudPush` 必須剔除 `b2wb` 再 `set(merge:true)`。
   merge 是深合併，推回舊 map 會讓已移除的字復活。
 
+### 5-1. 課堂筆記同步到 B2 Read 課本（Codex 與 Claude 共用的必做清單）
+
+完整流程與 schema 在 `.claude/skills/english-learning/SKILL.md`「同步到 B2 Read 課本」一節，
+**那份是權威版本，同步前先讀**。以下是最常漏掉、使用者已經抓到過的項目，每一項都必做：
+
+1. **每次都重讀 Google Doc 最新版**，不可沿用稍早讀過的內容或資料夾裡的 `.html`／`.gs` 快照。
+   `read_file_content` 長文件會截斷 → 用 `https://docs.google.com/document/d/<ID>/mobilebasic`
+   讀全文。（2026-10-02：10/01 用了舊草稿，少了單字、閱讀理解問題，句型被改寫）
+2. **已存在的課要逐節比對，不增不減**：Doc 有、課本沒有的補上；**Doc 已刪掉的章節課本也要刪**
+   （例：Doc 拿掉「快速總結」，課本的 `summary` 就要移除）。內容逐字取自 Doc，不改寫、不濃縮。
+3. **欄位格式照 SKILL.md**：例如 `summary` 是 `[{k, v}]`，不是字串陣列
+   （寫成字串會在網站上顯示 `undefined`）；理解問題用 `reading[].questions[{q,qCn,a,aCn}]`。
+4. **每一課都要同時做影片版**（2026-09-27 起使用者規定）：
+   - `b2lab/public/data-video.js` 加 `window.VIDEO.<lessonId> = {…}`，`data-book.js` 該課加 `"video": true`
+     （沒加這個旗標，課本頁不會出現「▶ 影片版」按鈕）。
+   - 範本：`data-video.js` 的 `bk20261001`、`bk20260922`（章節 0 開場／1 情境對話／2 重點表達／
+     3 片語／4 文法／5 作業訂正／6 小測驗）。
+   - 驗證：每個 `hi[].t` 必須逐字出現在該句 `en`、`hi[].k` 必須在 `expr` 裡；`en`／`say` 不可有中文
+     （喇叭會唸出來）；長度 150–300 秒；`expr` 的例句不可和情境對話連續 5 個字相同。
+5. 改了 `data-book.js` 的單字 → 重跑 `node b2lab/tools/build-rel.js`，產物 `data-rel.js` 一起 commit。
+   再跑 `node b2lab/tools/check-ipa.js`：同一個字全站只能有一種音標寫法（美式 Cambridge），沒過不要 commit。
+6. `b2lab/public/sw.js` 的 `CACHE` 版號 +1。
+7. **收尾檢查（必跑，輸出必須是「(無)」）**：
+   ```bash
+   node -e "global.window={};require('./b2lab/public/data-book.js');require('./b2lab/public/data-video.js');const L=window.BOOK.lessons,V=window.VIDEO;console.log('沒有影片版的課:',L.filter(l=>!l.video||!V[l.id]).map(l=>l.id).join(', ')||'(無)')"
+   ```
+   本機開 `?video=<lessonId>` 把各種畫面切一遍、手機寬度也看一次，主控台沒有錯誤才算完成。
+
 ---
 
 ## 6. B2 Read（`b2lab/public/index.html`）架構

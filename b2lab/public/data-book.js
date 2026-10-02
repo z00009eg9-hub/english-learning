@@ -19689,7 +19689,7 @@ window.BOOK = {
         },
         {
           "w": "cardboard",
-          "ipa": "/ˈkɑːrd.bɔːrd/",
+          "ipa": "/ˈkɑːrdbɔːrd/",
           "pos": "n.",
           "cn": "紙板、紙箱"
         },
@@ -20155,7 +20155,7 @@ window.BOOK = {
     },
     {
      "w": "procedure",
-     "ipa": "/prəˈsiːdʒər/",
+     "ipa": "/prəˈsiː.dʒɚ/",
      "pos": "n.",
      "cn": "程序",
      "ex": "We plan to issue the procedure in both required languages.",

@@ -1331,7 +1331,7 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
 3c. **產生影片版（2026-09-27 使用者指定：每次同步課本都要一起做）**
    每堂課一支約 3–5 分鐘的「影片」：B2 Read 網頁即時產生畫面、用裝置的美式語音朗讀，
    右側雙語字幕逐句同步、重點表達變彩色標籤、下方重點表達卡可跟讀／再聽／收藏。
-   播放器已做好（`index.html` 的 `vd*` 函式），**每課只要寫腳本**。範本：`data-video.js` 的 `bk20260917`。
+   播放器已做好（`index.html` 的 `vd*` 函式），**每課只要寫腳本**。範本：`data-video.js` 的 `bk20260917`、`bk20261001`（最新、章節最完整）。
    - **放哪裡**：`b2lab/public/data-video.js` 加一筆 `window.VIDEO.<lessonId> = {…}`；
      `data-book.js` 該課加 `video: true`（課程頁頂端才會出現「▶ 影片版」按鈕）。
      分享網址：`https://english-b2-lab.web.app/?video=<lessonId>`。
@@ -1399,6 +1399,11 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
      node tools/check-ipa.js
      ```
      長度要落在 3–5 分鐘；本機 `?video=<lessonId>` 打開、各種畫面切一遍、主控台沒有錯誤，手機寬度也看一次。
+   - **收尾檢查：全站不可以有課漏做影片版**（2026-10-02 加：10/01 被同步時漏做，使用者自己發現）。輸出必須是「(無)」：
+     ```bash
+     node -e "global.window={};require('./b2lab/public/data-book.js');require('./b2lab/public/data-video.js');const L=window.BOOK.lessons,V=window.VIDEO;console.log('沒有影片版的課:',L.filter(l=>!l.video||!V[l.id]).map(l=>l.id).join(', ')||'(無)')"
+     ```
+     Codex 讀的是 repo 根目錄的 `AGENTS.md`（§5-1 有同一份必做清單）；這節規則有改時兩邊要一起更新。
    - **在 Google 筆記頂端加連結**：副標題（Topics 那一行）下方插一段「**▶ 影片版（約 N 分鐘）**：雙語字幕同步、重點表達卡、跟讀練習 ↗」，
      整段 `setLinkUrl` 到分享網址、字色 `#c9631f`、前段粗體、12pt、對齊方式跟副標題一樣。
      先 `body.findText("影片版（約")`，已經有就跳過（可重跑）。09/17 用的函式是 `addVideoLink0917()`，照著改 DOC／URL／副標題比對字串即可。

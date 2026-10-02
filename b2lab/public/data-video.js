@@ -28168,7 +28168,7 @@ window.VIDEO.au01 = {
    "vis": {
     "type": "slide",
     "w": "procedure",
-    "ipa": "/prəˈsiːdʒər/",
+    "ipa": "/prəˈsiː.dʒɚ/",
     "pos": "n.",
     "art": "doc",
     "def": "procedure n. — change control procedure.",

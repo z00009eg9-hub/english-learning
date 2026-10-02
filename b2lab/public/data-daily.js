@@ -6482,7 +6482,7 @@ articles:[
     }
   ],
   "target": [
-    {"w": "shipment", "ipa": "/ˈʃɪpmənt/", "pos": "n.", "cn": "貨運、一批貨", "def": "A load of goods that is sent somewhere.", "ex": "The bookstore is waiting for a new shipment of comic books to arrive next Tuesday.", "exCn": "這家書店正在等一批新的漫畫書下週二送到。"},
+    {"w": "shipment", "ipa": "/ˈʃɪp.mənt/", "pos": "n.", "cn": "貨運、一批貨", "def": "A load of goods that is sent somewhere.", "ex": "The bookstore is waiting for a new shipment of comic books to arrive next Tuesday.", "exCn": "這家書店正在等一批新的漫畫書下週二送到。"},
     {"w": "turn", "ipa": "/tɝːn/", "pos": "v.", "cn": "轉向", "def": "To change direction.", "ex": "When you see the red post office, turn left and my apartment is the second building.", "exCn": "看到紅色的郵局時左轉，我的公寓就是第二棟大樓。"},
     {"w": "delay", "ipa": "/dɪˈleɪ/", "pos": "v./n.", "cn": "延誤", "def": "To make something happen later than planned.", "ex": "A broken signal on the MRT line will delay trains by about fifteen minutes this morning.", "exCn": "捷運線上的號誌故障，今天早上會讓列車延誤大約十五分鐘。"},
     {"w": "warehouse", "ipa": "/ˈwerhaʊs/", "pos": "n.", "cn": "倉庫", "def": "A large building where goods are stored.", "ex": "My cousin works at a furniture warehouse, where he drives a forklift all day.", "exCn": "我表哥在一間家具倉庫工作，整天都在開堆高機。"},

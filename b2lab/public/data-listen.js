@@ -7893,7 +7893,7 @@ notes:[
     },
     {
       "w": "practical",
-      "ipa": "/ˈpræktɪkl/",
+      "ipa": "/ˈpræk.tɪ.kəl/",
       "pos": "adj.",
       "cn": "實作的、實際的",
       "def": "About doing real things, not only ideas."
