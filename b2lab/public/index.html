@@ -1259,14 +1259,13 @@ body.cnall #v-listen .precn{display:block}
 }
 .focus .sub{font-size:var(--font-secondary);font-weight:800;color:var(--accent2);margin:14px 0 6px;letter-spacing:.3px}
 .focus .gobtn{margin-top:12px}
-/* 頂端列的返回（電腦／平板，#hd-dback）：只在詳細頁出現，接在程度徽章後面；文字型，不做膠囊按鈕。
-   淡白底＋細白框，在橘色列上一眼找得到（純文字太容易被忽略）；hover 加深、鍵盤 focus 有外框；點擊區高 32px */
-.hd-dback{display:none;align-items:center;gap:4px;min-height:32px;margin-left:12px;margin-right:auto;padding:4px 12px;border:1px solid rgba(255,255,255,.55);border-radius:8px;
-  background:rgba(255,255,255,.18);color:#fff;font:inherit;font-size:calc(15px * var(--fs));font-weight:600;cursor:pointer;white-space:nowrap}
-body.m-detail .hd-dback{display:inline-flex}
-body.m-detail #hd-levels{margin-right:0 !important}
-@media(hover:hover){ .hd-dback:hover{background:rgba(255,255,255,.3)} }
-.hd-dback:focus-visible{outline:2px solid #fff;outline-offset:1px}
+/* 標題左邊的返回「‹」（tBack 產生，電腦／平板）：跟主標題同一行、不多佔高度；
+   平常次要深色，hover／鍵盤 focus 變橘色；點擊區 40×40 */
+.tback{display:inline-flex;align-items:center;justify-content:center;flex:none;width:40px;height:40px;margin:-6px 4px -6px -8px;
+  padding:0 0 4px;border:0;border-radius:8px;background:none;vertical-align:middle;cursor:pointer;
+  font:inherit;font-size:34px;font-weight:400;line-height:1;color:var(--ink2);text-transform:none}
+@media(hover:hover){ .tback:hover{color:var(--accent2);background:rgba(232,129,58,.10)} }
+.tback:focus-visible{outline:2px solid var(--accent);outline-offset:1px;color:var(--accent2)}
 .hint{font-size:var(--font-secondary);line-height:var(--lh-secondary);color:var(--ink2);background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
 .hint-toggle{border:1px dashed var(--line);border-radius:10px;margin-bottom:12px;background:var(--card);overflow:hidden}
 .hint-toggle .hint{border:none;border-radius:0 0 10px 10px;margin:0}
@@ -2357,7 +2356,11 @@ nav button{font-size:11px}
   header{flex-wrap:nowrap}
   header > *{display:none !important}
   header > .hd-mback,header > .hd-mtitle{display:inline-flex !important;align-items:center}
-  body.m-detail header > .hd-mtitle{display:none !important}
+  /* 內頁：左邊只放「‹」；標題卡捲出畫面後（body.hd-ttl）才淡入目前頁標題，標題卡上的 ‹ 手機不用 */
+  body.m-detail header > .hd-mtitle{opacity:0;transition:opacity .2s}
+  body.m-detail.hd-ttl header > .hd-mtitle{opacity:1}
+  body.m-detail .hd-mback{font-size:30px;font-weight:400;line-height:1;padding:0 12px 4px 0;min-width:40px}
+  .tback{display:none}
   .hd-mback{border:0;background:none;color:#fff;border-radius:4px;
     padding:6px 8px 6px 0;min-height:38px;font:inherit;font-size:15px;font-weight:500;cursor:pointer;white-space:nowrap}
   .hd-mback:active{opacity:.75}
@@ -2558,6 +2561,7 @@ nav button{font-size:11px}
 .lcard:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .lcard .bkc-ft .ext{color:var(--accent2);font-weight:600;text-decoration:none}
 .ls-sec{margin:18px 0 8px;font-size:var(--font-subhead);color:var(--ink2)}
+.dh-grid{margin:0 0 14px}
 #rd-list,.rw-grid{margin-top:12px}
 @media(max-width:640px){ .lthumb{width:64px;height:64px} .lthumb.emo{font-size:30px} }
 .bkc-th svg{width:100%;height:100%;display:block}
@@ -2594,8 +2598,6 @@ nav button{font-size:11px}
     <h1>📚 B2 Read</h1>
   </button>
   <span id="hd-levels" style="margin-right:auto;display:flex;gap:4px;align-items:center"></span>
-  <!-- 電腦／平板：詳細頁的返回（← 上一層），接在程度徽章後面；手機改用上面的 #hd-mback -->
-  <button class="hd-dback" id="hd-dback" onclick="event.stopPropagation();hdBack()" aria-label="返回上一層"></button>
   <div class="prof" title="切換學習者，各自獨立進度">
     <button id="prof-anita" class="on" onclick="setProfile('anita')">🍎 Anita</button>
     <button id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
@@ -3301,27 +3303,44 @@ window.goHome=goHome; window.homeGo=homeGo;
 function mDetail(t){
   t=t||TAB;
   const from=lb=>FROM_TAB&&TAB_NAME[FROM_TAB]?TAB_NAME[FROM_TAB]:lb;
-  if(t==='book'   && bkOpen)   return {lb:'課本', close:bkClose};
-  if(t==='book'   && bkRevYM)  return {lb:'課本', close:mrClose};
-  if(t==='read'   && rdOpen)   return {lb:from('閱讀'), close:rdClose};
-  if(t==='gram'   && CURG)     return {lb:from('文法'), close:gClose};
-  if(t==='real'   && rwOpen)   return {lb:'實景', close:rwBack};
-  if(t==='listen' && myVid)    return {lb:'聽力', close:closeMyVid};
-  if(t==='listen' && lsOpen)   return {lb:from('聽力'), close:lsClose};
+  if(t==='book'   && bkOpen)   return {lb:'課本', close:bkClose, title:bkOpen.title};
+  if(t==='book'   && bkRevYM)  return {lb:'課本', close:mrClose, title:(+bkRevYM.slice(5,7))+' 月重點複習'};
+  if(t==='read'   && rdOpen)   return {lb:from('閱讀'), close:rdClose, title:rdOpen.title};
+  if(t==='gram'   && CURG)     return {lb:from('文法'), close:gClose, title:CURG.titleCn};
+  if(t==='real'   && rwOpen)   return {lb:'實景', close:rwBack, title:((ST.rw||{})[rwOpen]||{}).ti};
+  if(t==='listen' && myVid)    return {lb:'聽力', close:closeMyVid, title:(curVidObj()||{}).title||'我的影片'};
+  if(t==='listen' && lsOpen)   return {lb:from('聽力'), close:lsClose, title:lsOpen.title};
   return null;
 }
 /* ===== 共用返回導覽 =====
-   所有詳細頁（課本、月複習、分級閱讀、實景、文法、聽力、我的影片）的返回都在頂端橘色列：
-   手機是 #hd-mback（← 課本），電腦／平板是 #hd-dback（← 分級閱讀…，接在程度徽章後面），內頁不再多佔一行。
+   所有詳細頁（課本、月複習、分級閱讀、實景、文法、聽力、我的影片）的返回都是「‹」：
+   電腦／平板放在標題卡主標題左邊（tBack），手機放在頂端列（#hd-mback），內頁不再多佔一行。
    名稱與目的地都來自 mDetail()：回到明確的上一層列表，不靠瀏覽器的上一頁；從別的分區點進來就寫來源分區 */
 const BACK_NAME={'閱讀':'分級閱讀','實景':'實景英語'};
+/* 電腦／平板：返回是標題卡主標題左邊的「‹」（不多佔一行）；滑過去、讀屏都會說「返回分級閱讀」 */
+function tBack(t){
+  const d=mDetail(t); if(!d) return '';
+  const nm=esc(BACK_NAME[d.lb]||d.lb);
+  return '<button type="button" class="tback" onclick="event.stopPropagation();backGo(\''+t+'\')" aria-label="返回'+nm+'" title="返回'+nm+'">‹</button>';
+}
+function backGo(t){ const d=mDetail(t); if(d){ d.close(); window.scrollTo(0,0); } }
+window.backGo=backGo;
+/* 手機頂端列：內頁只放「‹」；標題卡捲出畫面後，旁邊才顯示目前頁標題（iOS 大標題收合） */
+function hdTtlSync(){
+  if(!document.body.classList.contains('m-detail')){ document.body.classList.remove('hd-ttl'); return; }
+  const v=$('v-'+TAB);
+  const hero=v&&(v.querySelector('.magttl')||[...v.querySelectorAll('.card')].find(c=>c.offsetParent!==null));
+  document.body.classList.toggle('hd-ttl', !!hero && hero.getBoundingClientRect().bottom<56);
+}
 function updMback(){
   const b=$('hd-mback'); if(!b) return;
   const d=mDetail();
-  b.textContent='← '+(d?d.lb:'首頁');
+  b.textContent=d?'‹':'← 首頁';
+  b.setAttribute('aria-label', d?'返回'+(BACK_NAME[d.lb]||d.lb):'回首頁');
+  const mt=$('hd-mtitle'); if(mt&&d) mt.textContent=d.title||'';
   /* 詳細頁的返回已寫出分區名，旁邊的分區標題就不重複 */
   document.body.classList.toggle('m-detail',!!d);
-  const db=$('hd-dback'); if(db) db.textContent=d?'← '+(BACK_NAME[d.lb]||d.lb):'';
+  hdTtlSync();
 }
 function hdBack(){ const d=mDetail(); if(d){ d.close(); window.scrollTo(0,0); } else goHome(); }
 window.hdBack=hdBack;
@@ -3329,6 +3348,7 @@ window.hdBack=hdBack;
 let hdLastY=0;
 window.addEventListener('scroll',()=>{
   const y=window.scrollY;
+  hdTtlSync();
   if(!isMobileNav()||TAB==='home'){ document.body.classList.remove('hd-hide'); hdLastY=y; return; }
   if(y<60) document.body.classList.remove('hd-hide');
   else if(y>hdLastY+8) document.body.classList.add('hd-hide');
@@ -3501,19 +3521,24 @@ function rdFiltered(){
   if(q) list=list.filter(a=>[a.title,a.titleCn,a.topic,a.focus,a.intro].some(x=>String(x||'').toLowerCase().indexOf(q)>=0));
   return {base,list};
 }
-function rdCards(list){
-  if(!list.length) return '<div class="muted" style="padding:8px 4px">找不到符合的文章，換個關鍵字或放寬篩選試試。</div>';
+/* 閱讀文章卡（閱讀清單與今日頁共用）：縮圖從整份清單挑不重複的圖示格 */
+function rdCardMaker(list,opts){
+  opts=opts||{};
   const ART_=window.ART||{};
   const picks=pickThumbs(list,a=>(ART_[a.id]||{}).svg);
   const thumb=a=>{ const s=(ART_[a.id]||{}).svg||''; const p=picks[a.id];
     return p?stripThumb(s,p.x):(s?sceneThumb(s):emojiThumb('📖')); };
   const m=w=>Math.max(1,Math.round(w/130));
-  const card=a=>{
+  return a=>{
     const tw=(a.target||[]).length;
-    return lCard({click:"rdOpenArt('"+a.id+"')", lv:a.level, cat:a.topic, thumb:thumb(a),
-      en:a.title, cn:a.titleCn, g:a.focus, done:!!ST.artDone[a.id],
+    return lCard({click:(opts.click||'rdOpenArt')+"('"+a.id+"')", lv:a.level, cat:(opts.kind?opts.kind+' · ':'')+(a.topic||''), thumb:thumb(a),
+      en:a.title, cn:a.titleCn, g:a.focus, done:!!ST.artDone[a.id], isNew:opts.isNew&&opts.isNew(a),
       ft:[a.words+' words · 約 '+m(a.words)+' 分鐘', tw?tw+' 重點字':''], right:lcDate(a.date)});
   };
+}
+function rdCards(list){
+  if(!list.length) return '<div class="muted" style="padding:8px 4px">找不到符合的文章，換個關鍵字或放寬篩選試試。</div>';
+  const card=rdCardMaker(list);
   /* 搜尋時直接平鋪結果；平常依月份分組（原創分級沒有日期，放最後一組） */
   if(rdQuery.trim()) return '<div class="bkc-grid" role="list">'+list.map(card).join('')+'</div>';
   return monTOCHTML('rd',monGroups(list),card,'✍️ 原創分級文章','篇');
@@ -3870,7 +3895,7 @@ function readerHTML(a){
 
   /* 標題卡只留標題＋基本標籤；導讀與文法重點收進可展開的提示區，資訊不再擠成一團 */
   let h='<div class="magttl">'
-   +'<h2>'+esc(a.title)+'</h2>'
+   +'<h2>'+tBack('read')+esc(a.title)+'</h2>'
    +'<div class="cn">'+esc(a.titleCn)+'</div>'
    +'<div class="bar"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'
    +'<span class="magbadge">🏷 '+esc(a.topic)+'</span>'
@@ -4417,7 +4442,7 @@ RENDER.gram=function(){
     +'<div class="muted">共 '+ALL_GRAM.length+' 個單元'+(DAILY_GRAM.length?'（其中 '+DAILY_GRAM.length+' 個是每週三、五自動新增）':'')+'</div>'
     +'<div class="chips" style="margin-top:8px"><button class="chip'+(GLV==='all'?' on':'')+'" onclick="gSetLv(\'all\')">全部</button>'
     + lvs.map(l=>'<button class="chip'+(GLV===l?' on':'')+'" onclick="gSetLv(\''+l+'\')">'+esc(l)+'</button>').join('')+'</div></div>'
-    + (list.length?'<div id="g-list">'+monTOCHTML('gram',monGroups(list),gCard,'📘 核心文法單元','個'):'<div>')+'</div>';
+    + (list.length?'<div id="g-list">'+monTOCHTML('gram',monGroups(list),g=>gCard(g),'📘 核心文法單元','個'):'<div>')+'</div>';
 };
 /* 文法卡片（比照課本目錄卡片）：色條＝程度＋出處；縮圖＝Grammar in Use 單元號（同一單元的四個程度共用），
    核心單元沒有單元號就用各自的圖示；資訊列＝視覺化／練習題數＋日期 */
@@ -4428,10 +4453,11 @@ function gThumb(g){
   const I=window.BOOK_ICONS||{}, k=G_THUMB[g.id];
   return k&&I[k]?iconThumb(I[k]):emojiThumb('📐');
 }
-function gCard(g){
+function gCard(g,opts){
+  opts=opts||{};
   const src=g.unitNo?'Grammar in Use Unit '+g.unitNo:((g.srcDays||[]).length?'課堂：'+g.srcDays.join(' / '):(g.vis?'視覺化教學':'B2 補強單元'));
   const nq=(g.quiz||[]).length;
-  return lCard({click:"gOpen('"+g.id+"')", lv:g.level, cat:src, thumb:gThumb(g), en:g.titleCn, cn:g.title, g:g.summary,
+  return lCard({click:(opts.click||'gOpen')+"('"+g.id+"')", isNew:opts.isNew&&opts.isNew(g), lv:g.level, cat:(opts.kind?opts.kind+' · ':'')+src, thumb:gThumb(g), en:g.titleCn, cn:g.title, g:g.summary,
     done:!!ST.gramDone[g.id], ft:[g.vis?'✨ 視覺化':'', nq?nq+' 題練習':''], right:lcDate(g.date)});
 }
 /* 文法圖文說明（來自 data-gramviz.js，兩格對照卡） */
@@ -4777,7 +4803,7 @@ function gvVisualTitle(g){
 /* 視覺化文法內頁：SEE → UNDERSTAND → READ → COMPARE → PRACTICE */
 function gvHTML(g){
   let h='<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
-   +'<div class="row" style="align-items:center;gap:10px;flex:1"><h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
+   +'<div class="row" style="align-items:center;gap:10px;flex:1"><h2 class="sec" style="margin:0">'+tBack('gram')+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+'</div></div>';
 
   h+='<div class="gvlead"><div class="l1">💡 '+mkText(g.oneLine||g.summary||'')+'</div>'+gvMap(g.map)+'</div>';
@@ -4847,7 +4873,7 @@ function gSecPart(sections,want){
 function gramHTML(g){
   if(g&&g.vis) return gvHTML(g);   /* 視覺化文法走新版面 */
   let h='<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
-   +'<div class="row" style="align-items:center;gap:10px;flex:1"><h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
+   +'<div class="row" style="align-items:center;gap:10px;flex:1"><h2 class="sec" style="margin:0">'+tBack('gram')+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+((g.srcDays||[]).length?' · 課堂 '+g.srcDays.join(' / '):'')+'</div>'
    +'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:var(--font-secondary)">💡 '+esc(g.summary)+'</div></div></div>'
    +'</div>';
@@ -4918,35 +4944,12 @@ RENDER.daily=function(){
    +'<div class="stat go" onclick="statGo(\'prog\')" title="點一下看打卡日曆與成就"><b><span style="font-size:.7em">🔥</span> '+(ST.streak||1)+'<i>天</i></b><span>連續學習 ›</span></div>'
    +'<div class="stat tap'+(VOCAB.filter(x=>isDue(x.w)).length>0?' cta':'')+'" onclick="goReview()" title="點一下直接開始複習"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'<i>個</i></b><span>今日待複習 ›</span></div></div></div>';
 
-  artsToday.forEach(a=>{
-    const d=ST.artDone[a.id];
-    h+='<div class="item'+(isToday(a)?' new':finCls(d))+'"'+finTitle(d)+' style="'+lvBar(a.level)+'" onclick="dailyArt(\''+a.id+'\')">'
-     +'<div class="t" style="'+lvTitle(a.level)+'">📖 '+esc(a.title)+'</div>'
-     +'<div class="tc">'+esc(a.titleCn)+'</div>'
-     +'<div class="meta"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'+(d?'':'<span class="stc">未開始</span>')+(isToday(a)?'':'<span>📅 '+esc(a.date||'')+'</span>')+'<span>🏷 '+esc(a.topic)+'</span>'
-     +(a.kind==='news'||a.sourceUrl?'<span>📰 真實新聞改寫</span>':'<span>✍️ 原創</span>')
-     +finMeta(d,isToday(a))+'<span class="mR">'+wordsMeta(a.words)+'</span></div>'
-     +((a.target||[]).length||a.focus?'<div class="meta" style="margin-top:3px">'+((a.target||[]).length?'<span class="tag-chip">🔤 '+(a.target||[]).length+' 重點字</span>':'')+(a.focus?'<span class="tag-chip gram">📐 '+esc(a.focus)+'</span>':'')+'</div>':'')
-     +'<div class="goCta'+(d?' again':'')+'"><i>'+(d?'再讀一次':'開始閱讀')+' ➔</i></div></div>';
-  });
-  gramsToday.forEach(g=>{
-    const d=ST.gramDone[g.id];
-    h+='<div class="item'+(isToday(g)?' new':finCls(d))+'"'+finTitle(d,'練習')+' style="'+lvBar(g.level)+'" onclick="dailyGram(\''+g.id+'\')">'
-     +'<div class="t" style="'+lvTitle(g.level)+'">📐 '+esc(g.titleCn)+'</div>'
-     +'<div class="tc">'+esc(g.title)+'</div>'
-     +'<div class="meta"><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span>'+(d?'':'<span class="stc">未開始</span>')+(isToday(g)?'':'<span>📅 '+esc(g.date||'')+'</span>')+(g.unitNo?'<span>Grammar in Use 進度 Unit '+g.unitNo+'</span>':'')
-     +finMeta(d,isToday(g),'練習')+'</div>'
-     +'<div class="goCta'+(d?' again':'')+'"><i>'+(d?'再練一次':'開始練習')+' ➔</i></div></div>';
-  });
-  listensToday.forEach(l=>{
-    const d=(ST.listenDone||{})[l.id];
-    h+='<div class="item'+(l.date===t?' new':finCls(d))+'"'+finTitle(d)+' style="'+lvBar(l.level)+'" onclick="dailyListen(\''+l.id+'\')">'
-     +'<div class="t" style="'+lvTitle(l.level)+'">🎧 '+esc(l.title)+'</div>'
-     +'<div class="tc">'+esc(l.titleCn)+'</div>'
-     +'<div class="meta"><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span>'+(d?'':'<span class="stc">未開始</span>')+(l.date&&l.date!==t?'<span>📅 '+esc(l.date)+'</span>':'')+'<span>🏷 '+esc(l.topic)+'</span>'
-     +finMeta(d,l.date===t)+'<span class="mR">⏱ 約 '+l.minutes+' 分鐘</span></div>'
-     +'<div class="goCta'+(d?' again':'')+'"><i>'+(d?'再聽一次':'開始聽')+' ➔</i></div></div>';
-  });
+  /* 今日新內容比照課本目錄：卡片牆（電腦 3 欄、平板 2 欄、手機 1 欄），文章 → 文法 → 聽力；當天新增的掛 NEW */
+  const artCard=rdCardMaker(artsToday,{click:'dailyArt',kind:'📖 閱讀',isNew:isToday});
+  const todayCards=artsToday.map(artCard)
+    .concat(gramsToday.map(g=>gCard(g,{click:'dailyGram',kind:'📐 文法',isNew:isToday})))
+    .concat(listensToday.map(l=>lsCardHTML(l,{click:'dailyListen',kind:'🎧 聽力',isNew:x=>x.date===t})));
+  if(todayCards.length) h+='<div class="bkc-grid dh-grid" role="list">'+todayCards.join('')+'</div>';
   const anyArt=artsToday.length>0, anyGram=gramsToday.length>0;
   const anyNew=artsToday.some(a=>isToday(a))||gramsToday.some(g=>isToday(g));
   if(!anyArt&&!anyGram){
@@ -4971,10 +4974,12 @@ RENDER.daily=function(){
     +DAILY_GRAM.filter(g=>inBand(g.level)&&!todayIds.has(g.id)&&!thisWeek(g)).length
     +LESSONS.filter(l=>inBand(l.level)&&!todayIds.has(l.id)&&l.date&&l.date<ws).length;
   if(pastArts.length||pastGram.length||pastListen.length||olderN){
-    h+='<div class="card"><h2 class="sec">🗂 本週的每日內容</h2>'
-     + pastArts.map(a=>'<div class="item compact" onclick="dailyArt(\''+a.id+'\')"><div class="t">📖 '+esc(a.title)+'</div><div class="meta"><span>📅 '+esc(a.date||'')+'</span><span>'+esc(a.titleCn)+'</span></div></div>').join('')
-     + pastListen.map(l=>'<div class="item compact" onclick="dailyListen(\''+l.id+'\')"><div class="t">🎧 '+esc(l.title)+'</div><div class="meta"><span>📅 '+esc(l.date||'')+'</span><span>'+esc(l.titleCn)+'</span></div></div>').join('')
-     + pastGram.map(g=>'<div class="item compact" onclick="dailyGram(\''+g.id+'\')"><div class="t">📐 '+esc(g.titleCn)+'</div><div class="meta"><span>📅 '+esc(g.date||'')+'</span><span>'+esc(g.title)+'</span></div></div>').join('')
+    const pastArtCard=rdCardMaker(pastArts,{click:'dailyArt',kind:'📖 閱讀'});
+    h+='<h3 class="ls-sec">🗂 本週的每日內容</h3><div class="bkc-grid dh-grid" role="list">'
+     + pastArts.map(pastArtCard).join('')
+     + pastListen.map(l=>lsCardHTML(l,{click:'dailyListen',kind:'🎧 聽力'})).join('')
+     + pastGram.map(g=>gCard(g,{click:'dailyGram',kind:'📐 文法'})).join('')
+     +'</div><div>'
      +(olderN?'<div class="hint" style="margin-top:8px">更早的 '+olderN+' 份內容已依分類回歸 <b>閱讀</b>、<b>聽力</b>、<b>文法</b> 分頁，都排在各分頁最上方（日期新的在前）。</div>':'')
      +'</div>';
   }
@@ -5435,7 +5440,7 @@ function lCard(o){
   return '<div class="bkc lcard'+(o.done?' fin':'')+'" role="listitem" tabindex="0" onclick="'+o.click+'" onkeydown="if(event.key===\'Enter\')this.click()">'
    +'<div class="bkc-hd">'+(o.lv?'<span class="lv '+lvCls(o.lv)+'">'+esc(o.lv)+'</span>':'')
    +(o.cat?'<span class="bkc-cat">'+esc(o.cat)+'</span>':'')
-   +(o.done?'<span class="lc-done">✓ 已完成</span>':'')+'</div>'
+   +(o.isNew?'<span class="bkc-new">NEW</span>':o.done?'<span class="lc-done">✓ 已完成</span>':'')+'</div>'
    +'<div class="bkc-bd">'+(o.thumb||'')+'<div class="bkc-tx">'
    +'<div class="bkc-en">'+esc(o.en||'')+'</div>'
    +(o.cn?'<div class="bkc-cn">'+esc(o.cn)+'</div>':'')
@@ -6250,7 +6255,7 @@ function rwDetailHTML(l){
   const st=rwStat(l.id);
   /* Header：觀看原影片直接放在標題卡的 bar 裡，不再獨立一個「原始影片」區塊 */
   let h='<div class="magttl">'
-   +'<h2>'+esc(rwPad(l.ti))+'</h2>'
+   +'<h2>'+tBack('real')+esc(rwPad(l.ti))+'</h2>'
    +'<div class="mr-time">'+esc([l.country,l.cat,l.level,l.min].filter(Boolean).join(' · '))+'</div>'
    +'<div class="bar">'
    +(l.url?'<a class="spk" style="text-decoration:none" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>':'')
@@ -6497,7 +6502,7 @@ function mrClose(){ bkRevYM=null; mrChIdx=0; mrChShow=false; _mrChQs=null; sbAut
 function mrPageHTML(ym){
   const r=mrBuild(ym);
   const mon=+ym.split('-')[1], yr=ym.split('-')[0];
-  if(!r) return '<div class="card">'
+  if(!r) return '<div class="card"><h2 class="sec">'+tBack('book')+yr+' 年 '+mon+' 月重點複習</h2>'
    +'<div class="muted" style="margin-top:10px">'+yr+' 年 '+mon+' 月沒有可複習的課程。</div></div>';
 
   const wordRow=(t,src)=>'<article class="bkvrow" role="listitem"><div class="bkvmeta">'
@@ -6512,7 +6517,7 @@ function mrPageHTML(ym){
   const statBits=[(r.focus.length?r.focus.length+' 堂待補強':'重點回顧'),r.vocab.length+' 個重點單字',r.gram.length+' 個文法重點',chQs.length+' 題挑戰'];
   let h='<div class="magttl">'
    +'<div class="magico">🔄</div>'
-   +'<h2>'+mon+' 月重點複習</h2>'
+   +'<h2>'+tBack('book')+mon+' 月重點複習</h2>'
    +'<div class="mr-time">根據你的 '+mon+' 月學習狀況整理　·　約 40 分鐘</div>'
    +'<div class="mr-stats">'+statBits.join(' · ')+'</div>'
    +'<div class="bar">'
@@ -6800,7 +6805,7 @@ function bookHTML(b){
   /* 標題卡：雜誌風＋右側大圖示＋彩色徽章＋原始 Google 文件連結 */
   h+='<div class="magttl">'
    +'<div class="magico">'+(b.iconSvg||b.icon||'📕')+'</div>'
-   +'<h2 onclick="bkTtlTog(this)" title="點一下展開／收合完整標題">'+esc(b.title)+'</h2>'
+   +'<h2 onclick="bkTtlTog(this)" title="點一下展開／收合完整標題">'+tBack('book')+esc(b.title)+'</h2>'
    +'<div class="cn">'+esc(b.titleCn)+'</div>'
    /* Topics 改膠囊標籤：點一下查字義＋發音 */
    +(function(){
@@ -7350,12 +7355,7 @@ RENDER.listen=function(){
   const notes=list.filter(l=>l.kind==='note');
   const scenes=list.filter(l=>l.kind==='scene');
   const others=list.filter(l=>l.kind!=='scene'&&l.kind!=='note');
-  function lsCard(l){
-    const lines=(l.script||l.keyLines||[]).length;
-    return lCard({click:"lsGo('"+l.id+"')", lv:l.level, cat:String(l.topic||'').replace(/^\S*[^\sA-Za-z0-9一-鿿]\S*\s+/,''),
-      thumb:lsThumb(l), en:l.title, cn:l.titleCn, g:l.focus, done:!!(ST.listenDone||{})[l.id],
-      ft:['約 '+l.minutes+' 分鐘', lines?lines+' 句':''], right:lcDate(l.date)});
-  }
+  const lsCard=l=>lsCardHTML(l);
   const lsDone=list.filter(l=>(ST.listenDone||{})[l.id]).length;
   const lsPct=list.length?Math.round(lsDone*100/list.length):0;
   v.innerHTML='<div class="card"><div class="row" style="justify-content:space-between;align-items:center"><h2 class="sec" style="margin:0">🎧 聽力跟讀</h2>'
@@ -7394,6 +7394,14 @@ const LS_THUMB={
   vlog01:'bed',vlog02:'calendar',vlog03:'target',vlog04:'moon',
   sc01:'sad',sc02:'tree',sc03:'food'
 };
+/* 聽力卡（聽力清單與今日頁共用） */
+function lsCardHTML(l,opts){
+    opts=opts||{};
+    const lines=(l.script||l.keyLines||[]).length;
+    return lCard({click:(opts.click||'lsGo')+"('"+l.id+"')", isNew:opts.isNew&&opts.isNew(l), lv:l.level, cat:(opts.kind?opts.kind+' · ':'')+String(l.topic||'').replace(/^\S*[^\sA-Za-z0-9一-鿿]\S*\s+/,''),
+      thumb:lsThumb(l), en:l.title, cn:l.titleCn, g:l.focus, done:!!(ST.listenDone||{})[l.id],
+      ft:['約 '+l.minutes+' 分鐘', lines?lines+' 句':''], right:lcDate(l.date)});
+}
 function lsThumb(l){
   const I=window.BOOK_ICONS||{}, k=LS_THUMB[l.id];
   if(k&&I[k]) return iconThumb(I[k]);
@@ -7523,7 +7531,7 @@ function lessonHTML(l){
    +(au?'<div class="aupin"><div class="row" style="align-items:center"><div style="flex:1">'+audioControls()+'</div></div></div>'
        :''+(hasScript?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':''))
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
-   +'<h2 class="sec" style="margin:0">'+(au?'🎧 ':'🎬 ')+esc(l.title)+'</h2><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
+   +'<h2 class="sec" style="margin:0">'+tBack('listen')+(au?'🎧 ':'🎬 ')+esc(l.title)+'</h2><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
    +'<div class="muted">'+esc(l.titleCn)+' · ⏱ 約 '+l.minutes+' 分鐘 · '+esc(l.series)+'</div>'
    + (au?toggles:(hasScript?'':playerBox('yt-main')))
    + (!au&&hasScript?playerControls()+toggles:'')
@@ -7763,7 +7771,7 @@ function myVidHTML(v){
   const hasCn=(v.lines||[]).some(l=>l.cn);
   let h=''
    +'<div class="vidpin"><div class="ytwrap"><div id="yt-my"></div></div></div>'
-   +'<div class="card"><h2 class="sec" style="margin:0">▶️ '+esc(v.title||'我的影片')+'</h2>'
+   +'<div class="card"><h2 class="sec" style="margin:0">'+tBack('listen')+'▶️ '+esc(v.title||'我的影片')+'</h2>'
    +'<div class="muted">📅 加入於 '+esc(v.addedAt||'—')+' · '+((v.lines||[]).length)+' 句字幕'
    +(v.addedBy?' · '+(v.addedBy==='tom'?'🐻 Tom':'🍎 Anita')+' 加入':'')+'</div>'
    + playerControls()
