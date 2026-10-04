@@ -1273,9 +1273,11 @@ body.cnall #v-listen .precn{display:block}
 .focus .gobtn{margin-top:12px}
 /* 標題左邊的返回「‹」（tBack 產生，電腦／平板）：跟主標題同一行、不多佔高度；
    平常次要深色，hover／鍵盤 focus 變橘色；點擊區 40×40 */
-.tback{display:inline-flex;align-items:center;justify-content:center;flex:none;width:40px;height:40px;margin:-6px 4px -6px -8px;
-  padding:0 0 4px;border:0;border-radius:8px;background:none;vertical-align:middle;cursor:pointer;
-  font:inherit;font-size:34px;font-weight:400;line-height:1;color:var(--ink2);text-transform:none}
+.tback{display:inline-flex;align-items:center;justify-content:center;flex:none;width:40px;height:40px;margin:0 6px 0 -8px;
+  padding:0;border:0;border-radius:8px;background:none;vertical-align:middle;position:relative;top:-0.16em;cursor:pointer;
+  font-size:26px;line-height:1;color:var(--ink);text-transform:none}
+.tback svg{display:block}
+h2.sec .tback{top:0}
 @media(hover:hover){ .tback:hover{color:var(--accent2);background:rgba(232,129,58,.10)} }
 .tback:focus-visible{outline:2px solid var(--accent);outline-offset:1px;color:var(--accent2)}
 .hint{font-size:var(--font-secondary);line-height:var(--lh-secondary);color:var(--ink2);background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
@@ -2371,7 +2373,8 @@ nav button{font-size:11px}
   /* 內頁：左邊只放「‹」；標題卡捲出畫面後（body.hd-ttl）才淡入目前頁標題，標題卡上的 ‹ 手機不用 */
   body.m-detail header > .hd-mtitle{opacity:0;transition:opacity .2s}
   body.m-detail.hd-ttl header > .hd-mtitle{opacity:1}
-  body.m-detail .hd-mback{font-size:30px;font-weight:400;line-height:1;padding:0 12px 4px 0;min-width:40px}
+  body.m-detail .hd-mback{font-size:26px;line-height:1;padding:0 12px 0 0;min-width:40px}
+  body.m-detail .hd-mback svg{display:block}
   .tback{display:none}
   .hd-mback{border:0;background:none;color:#fff;border-radius:4px;
     padding:6px 8px 6px 0;min-height:38px;font:inherit;font-size:15px;font-weight:500;cursor:pointer;white-space:nowrap}
@@ -3355,11 +3358,12 @@ function mDetail(t){
    電腦／平板放在標題卡主標題左邊（tBack），手機放在頂端列（#hd-mback），內頁不再多佔一行。
    名稱與目的地都來自 mDetail()：回到明確的上一層列表，不靠瀏覽器的上一頁；從別的分區點進來就寫來源分區 */
 const BACK_NAME={'閱讀':'分級閱讀','實景':'實景英語'};
+const CHEV_SVG='<svg viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M15 4.5 7.5 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 /* 電腦／平板：返回是標題卡主標題左邊的「‹」（不多佔一行）；滑過去、讀屏都會說「返回分級閱讀」 */
 function tBack(t){
   const d=mDetail(t); if(!d) return '';
   const nm=esc(BACK_NAME[d.lb]||d.lb);
-  return '<button type="button" class="tback" onclick="event.stopPropagation();backGo(\''+t+'\')" aria-label="返回'+nm+'" title="返回'+nm+'">‹</button>';
+  return '<button type="button" class="tback" onclick="event.stopPropagation();backGo(\''+t+'\')" aria-label="返回'+nm+'" title="返回'+nm+'">'+CHEV_SVG+'</button>';
 }
 function backGo(t){ const d=mDetail(t); if(d){ d.close(); window.scrollTo(0,0); } }
 window.backGo=backGo;
@@ -3373,7 +3377,7 @@ function hdTtlSync(){
 function updMback(){
   const b=$('hd-mback'); if(!b) return;
   const d=mDetail();
-  b.textContent=d?'‹':'← 首頁';
+  if(d) b.innerHTML=CHEV_SVG; else b.textContent='← 首頁';
   b.setAttribute('aria-label', d?'返回'+(BACK_NAME[d.lb]||d.lb):'回首頁');
   const mt=$('hd-mtitle'); if(mt&&d) mt.textContent=d.title||'';
   /* 詳細頁的返回已寫出分區名，旁邊的分區標題就不重複 */
