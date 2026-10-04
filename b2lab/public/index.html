@@ -725,8 +725,13 @@ body.cnall .ucn{display:block}
   .mag{grid-template-columns:minmax(0,1fr) minmax(320px,30%)}            /* 約 68–70 / 30–32 */
 }
 @container mag (min-width:1200px){
-  /* 右欄維持可讀的下限與上限；側欄收合或螢幕變寬後，多出的空間優先給主內容。 */
-  .mag{grid-template-columns:minmax(0,1fr) minmax(340px,min(30%,480px))} /* 約 70 / 30 起 */
+  /* 寬螢幕：左欄只取文章需要的寬度（正文行寬 --read-w＋卡片內距），不再在段落右邊留一大塊空白；
+     多出來的空間給右邊 Words & Phrases。右欄很寬時單字改雙欄流排，一行不會拉得太長 */
+  .mag{grid-template-columns:minmax(0,calc(var(--read-w) + 40px)) minmax(340px,1fr)}
+}
+@container mag (min-width:1500px){
+  .mag:not(.stack):not(.solo)>div:last-child .wpbody{column-count:2;column-gap:20px}
+  .mag:not(.stack):not(.solo)>div:last-child .wpbody>*{break-inside:avoid;-webkit-column-break-inside:avoid}
 }
 .magttl{
   background:linear-gradient(135deg,#fff4e2,#ffe3c2);border:2.5px solid #2b2118;border-radius:16px;
@@ -1258,14 +1263,14 @@ body.cnall #v-listen .precn{display:block}
 }
 .focus .sub{font-size:var(--font-secondary);font-weight:800;color:var(--accent2);margin:14px 0 6px;letter-spacing:.3px}
 .focus .gobtn{margin-top:12px}
-/* 共用返回導覽（backLinkHTML 產生）：文字型「← 上一層」，放在標題卡外面左上方；
-   不用按鈕底色、陰影、圓角；平常是次要深色，hover／鍵盤 focus 才變橘色；點擊區至少 32px 高 */
-.backnav{margin:0 0 8px}
-.backlink{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:4px 6px 4px 0;border:0;background:none;
-  font:inherit;font-size:calc(15px * var(--fs));font-weight:500;line-height:1.3;color:var(--ink2);cursor:pointer;border-radius:4px}
-.backlink .bl-arr{font-size:1.05em;line-height:1}
-@media(hover:hover){ .backlink:hover{color:var(--accent2)} }
-.backlink:focus-visible{outline:2px solid var(--accent);outline-offset:2px;color:var(--accent2)}
+/* 頂端列的返回（電腦／平板，#hd-dback）：只在詳細頁出現，接在程度徽章後面；文字型，不做膠囊按鈕。
+   hover 加淡底色、鍵盤 focus 有外框；點擊區高 32px */
+.hd-dback{display:none;align-items:center;min-height:32px;margin-left:6px;margin-right:auto;padding:4px 8px;border:0;border-radius:6px;
+  background:none;color:#fff;font:inherit;font-size:calc(15px * var(--fs));font-weight:500;cursor:pointer;white-space:nowrap}
+body.m-detail .hd-dback{display:inline-flex}
+body.m-detail #hd-levels{margin-right:0 !important}
+@media(hover:hover){ .hd-dback:hover{background:rgba(255,255,255,.16)} }
+.hd-dback:focus-visible{outline:2px solid #fff;outline-offset:1px}
 .hint{font-size:var(--font-secondary);line-height:var(--lh-secondary);color:var(--ink2);background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
 .hint-toggle{border:1px dashed var(--line);border-radius:10px;margin-bottom:12px;background:var(--card);overflow:hidden}
 .hint-toggle .hint{border:none;border-radius:0 0 10px 10px;margin:0}
@@ -1899,6 +1904,8 @@ body.vd-lock{overflow:hidden}
 #vd .vd-vsc .c{font-size:clamp(12px,2.1cqw,20px);margin-top:.5em;font-weight:700}
 #vd .vd-vsc .ic{position:absolute;right:2.2cqw;top:2.2cqw;width:9cqw;height:9cqw}
 #vd .vd-vsc .ic svg{width:100%;height:100%}
+/* 有右上角圖示時，標題與音標讓出圖示的位置，長字（exterior (adj.)）自動換行不被蓋住 */
+#vd .vd-vsc:has(.ic) .w,#vd .vd-vsc:has(.ic) .i{padding-right:11cqw}
 #vd .vd-vsc.a{border-color:#9cc4ea} #vd .vd-vsc.a .c{color:var(--b1p)}
 #vd .vd-vsc.b{border-color:#f0c9a0} #vd .vd-vsc.b .c{color:var(--accent2)}
 /* 片語搭配：核心字＋依序亮起的搭配詞 */
@@ -2372,8 +2379,6 @@ nav button{font-size:11px}
   /* 課文標題卡：獨立的「返回課本」改由返回列的「← 課本」負責；
      影片版／日期／Topics／⋯ 併成同一行，拿掉粗黑框與立體陰影 */
   #v-book .magttl{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:10px 12px;border-width:1.5px;box-shadow:none}
-  /* 手機的返回在頂端返回列（← 分區名，同一套 mDetail 名稱與目的地），頁內的返回導覽就不重複顯示 */
-  .backnav{display:none}
   #v-book .magttl h2,#v-book .magttl .cn{flex:0 0 100%}
   #v-book .magttl .cn{margin-top:0;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
   #v-book .magttl.ttlopen .cn{-webkit-line-clamp:unset;overflow:visible}
@@ -2593,6 +2598,8 @@ nav button{font-size:11px}
     <h1>📚 B2 Read</h1>
   </button>
   <span id="hd-levels" style="margin-right:auto;display:flex;gap:4px;align-items:center"></span>
+  <!-- 電腦／平板：詳細頁的返回（← 上一層），接在程度徽章後面；手機改用上面的 #hd-mback -->
+  <button class="hd-dback" id="hd-dback" onclick="event.stopPropagation();hdBack()" aria-label="返回上一層"></button>
   <div class="prof" title="切換學習者，各自獨立進度">
     <button id="prof-anita" class="on" onclick="setProfile('anita')">🍎 Anita</button>
     <button id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
@@ -3307,24 +3314,18 @@ function mDetail(t){
   if(t==='listen' && lsOpen)   return {lb:from('聽力'), close:lsClose};
   return null;
 }
-/* ===== 共用返回導覽 BackLink =====
-   所有詳細頁（課本、月複習、分級閱讀、實景、文法、聽力、我的影片）統一用文字型「← 上一層名稱」，
-   放在標題卡外面的左上方；名稱與目的地跟手機返回列共用 mDetail()：回到明確的上一層列表，
-   不靠瀏覽器的上一頁（從外部網址直接進來也不會跳出網站）；從別的分區點進來就寫來源分區 */
+/* ===== 共用返回導覽 =====
+   所有詳細頁（課本、月複習、分級閱讀、實景、文法、聽力、我的影片）的返回都在頂端橘色列：
+   手機是 #hd-mback（← 課本），電腦／平板是 #hd-dback（← 分級閱讀…，接在程度徽章後面），內頁不再多佔一行。
+   名稱與目的地都來自 mDetail()：回到明確的上一層列表，不靠瀏覽器的上一頁；從別的分區點進來就寫來源分區 */
 const BACK_NAME={'閱讀':'分級閱讀','實景':'實景英語'};
-function backLinkHTML(t){
-  const d=mDetail(t); if(!d) return '';
-  return '<div class="backnav" role="navigation" aria-label="返回"><button type="button" class="backlink" onclick="backGo(\''+t+'\')">'
-    +'<span class="bl-arr" aria-hidden="true">←</span>'+esc(BACK_NAME[d.lb]||d.lb)+'</button></div>';
-}
-function backGo(t){ const d=mDetail(t); if(d){ d.close(); window.scrollTo(0,0); } }
-window.backGo=backGo;
 function updMback(){
   const b=$('hd-mback'); if(!b) return;
   const d=mDetail();
   b.textContent='← '+(d?d.lb:'首頁');
   /* 詳細頁的返回已寫出分區名，旁邊的分區標題就不重複 */
   document.body.classList.toggle('m-detail',!!d);
+  const db=$('hd-dback'); if(db) db.textContent=d?'← '+(BACK_NAME[d.lb]||d.lb):'';
 }
 function hdBack(){ const d=mDetail(); if(d){ d.close(); window.scrollTo(0,0); } else goHome(); }
 window.hdBack=hdBack;
@@ -3872,7 +3873,7 @@ function readerHTML(a){
   const extras=extraWords(a,tgtSet);
 
   /* 標題卡只留標題＋基本標籤；導讀與文法重點收進可展開的提示區，資訊不再擠成一團 */
-  let h=backLinkHTML('read')+'<div class="magttl">'
+  let h='<div class="magttl">'
    +'<h2>'+esc(a.title)+'</h2>'
    +'<div class="cn">'+esc(a.titleCn)+'</div>'
    +'<div class="bar"><span class="lv '+lvCls(a.level)+'">'+esc(a.level)+'</span>'
@@ -4779,7 +4780,7 @@ function gvVisualTitle(g){
 }
 /* 視覺化文法內頁：SEE → UNDERSTAND → READ → COMPARE → PRACTICE */
 function gvHTML(g){
-  let h=backLinkHTML('gram')+'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
+  let h='<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<div class="row" style="align-items:center;gap:10px;flex:1"><h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+'</div></div>';
 
@@ -4849,7 +4850,7 @@ function gSecPart(sections,want){
 }
 function gramHTML(g){
   if(g&&g.vis) return gvHTML(g);   /* 視覺化文法走新版面 */
-  let h=backLinkHTML('gram')+'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
+  let h='<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<div class="row" style="align-items:center;gap:10px;flex:1"><h2 class="sec" style="margin:0">'+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
    +'<div class="muted">'+esc(g.title)+((g.srcDays||[]).length?' · 課堂 '+g.srcDays.join(' / '):'')+'</div>'
    +'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:var(--font-secondary)">💡 '+esc(g.summary)+'</div></div></div>'
@@ -6252,7 +6253,7 @@ function rwHiAll(sent,vocab){
 function rwDetailHTML(l){
   const st=rwStat(l.id);
   /* Header：觀看原影片直接放在標題卡的 bar 裡，不再獨立一個「原始影片」區塊 */
-  let h=backLinkHTML('real')+'<div class="magttl">'
+  let h='<div class="magttl">'
    +'<h2>'+esc(rwPad(l.ti))+'</h2>'
    +'<div class="mr-time">'+esc([l.country,l.cat,l.level,l.min].filter(Boolean).join(' · '))+'</div>'
    +'<div class="bar">'
@@ -6500,7 +6501,7 @@ function mrClose(){ bkRevYM=null; mrChIdx=0; mrChShow=false; _mrChQs=null; sbAut
 function mrPageHTML(ym){
   const r=mrBuild(ym);
   const mon=+ym.split('-')[1], yr=ym.split('-')[0];
-  if(!r) return backLinkHTML('book')+'<div class="card">'
+  if(!r) return '<div class="card">'
    +'<div class="muted" style="margin-top:10px">'+yr+' 年 '+mon+' 月沒有可複習的課程。</div></div>';
 
   const wordRow=(t,src)=>'<article class="bkvrow" role="listitem"><div class="bkvmeta">'
@@ -6513,7 +6514,7 @@ function mrPageHTML(ym){
 
   const chQs=mrBuildChallenge(r); _mrChQs=chQs; mrChIdx=0; mrChShow=false;
   const statBits=[(r.focus.length?r.focus.length+' 堂待補強':'重點回顧'),r.vocab.length+' 個重點單字',r.gram.length+' 個文法重點',chQs.length+' 題挑戰'];
-  let h=backLinkHTML('book')+'<div class="magttl">'
+  let h='<div class="magttl">'
    +'<div class="magico">🔄</div>'
    +'<h2>'+mon+' 月重點複習</h2>'
    +'<div class="mr-time">根據你的 '+mon+' 月學習狀況整理　·　約 40 分鐘</div>'
@@ -6801,7 +6802,7 @@ function bookHTML(b){
   let h='';
 
   /* 標題卡：雜誌風＋右側大圖示＋彩色徽章＋原始 Google 文件連結 */
-  h+=backLinkHTML('book')+'<div class="magttl">'
+  h+='<div class="magttl">'
    +'<div class="magico">'+(b.iconSvg||b.icon||'📕')+'</div>'
    +'<h2 onclick="bkTtlTog(this)" title="點一下展開／收合完整標題">'+esc(b.title)+'</h2>'
    +'<div class="cn">'+esc(b.titleCn)+'</div>'
@@ -7523,7 +7524,6 @@ function lessonHTML(l){
   const spCls=s=>{ const idx=speakers.indexOf(s); return idx===0?'sp-a':idx>=1?'sp-b':''; };
   let h=''
    /* 有逐字稿時，影片（或語音控制列）黏在最上面，往下捲字幕仍在手邊 */
-   +backLinkHTML('listen')
    +(au?'<div class="aupin"><div class="row" style="align-items:center"><div style="flex:1">'+audioControls()+'</div></div></div>'
        :''+(hasScript?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':''))
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
@@ -7765,7 +7765,7 @@ window.openMyVid=openMyVid; window.closeMyVid=closeMyVid;
 
 function myVidHTML(v){
   const hasCn=(v.lines||[]).some(l=>l.cn);
-  let h=backLinkHTML('listen')
+  let h=''
    +'<div class="vidpin"><div class="ytwrap"><div id="yt-my"></div></div></div>'
    +'<div class="card"><h2 class="sec" style="margin:0">▶️ '+esc(v.title||'我的影片')+'</h2>'
    +'<div class="muted">📅 加入於 '+esc(v.addedAt||'—')+' · '+((v.lines||[]).length)+' 句字幕'
