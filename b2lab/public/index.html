@@ -3385,7 +3385,7 @@ function updMback(){
   const d=mDetail();
   if(d) b.innerHTML=CHEV_SVG; else b.textContent='← 首頁';
   b.setAttribute('aria-label', d?'返回'+(BACK_NAME[d.lb]||d.lb):'回首頁');
-  const mt=$('hd-mtitle'); if(mt&&d) mt.textContent=d.title||'';
+  const mt=$('hd-mtitle'); if(mt) mt.textContent=d?(d.title||''):(TAB_NAME[TAB]||'');
   /* 詳細頁的返回已寫出分區名，旁邊的分區標題就不重複 */
   document.body.classList.toggle('m-detail',!!d);
   hdTtlSync();
