@@ -2902,6 +2902,12 @@ function mergeState(remote){
     const a=(ST.rw||{})[id], b=remote.rw[id];
     out.rw[id] = (!a || (b.t||0)>=(a.t||0)) ? b : a;
   });
+  /* 上次讀到哪裡：同一篇取時間較新的那筆（null＝已清除，視為最舊） */
+  out.last=Object.assign({},ST.last||{});
+  Object.keys(remote.last||{}).forEach(k=>{
+    const a=(ST.last||{})[k], b=remote.last[k];
+    if(!a || (b&&(b.t||0)>=(a.t||0))) out.last[k]=b;
+  });
   out.rwDone=Object.assign({},ST.rwDone||{});
   Object.keys(remote.rwDone||{}).forEach(id=>{
     const a=(ST.rwDone||{})[id], b=remote.rwDone[id];
@@ -8088,6 +8094,7 @@ function lastMarks(tab){
   let els=vis(m.sel); if(!els.length&&m.alt) els=vis(m.alt);
   return els;
 }
+function lastEnded(e){ return !!e.end&&(e.tab==='book'||e.tab==='video'); }
 function lastDone(e){
   if(!e) return true;
   if(e.tab==='read') return !!ST.artDone[e.id];
@@ -8096,7 +8103,6 @@ function lastDone(e){
   if(e.tab==='real') return ((ST.rwDone||{})[e.id]||{}).k==='done';
   return false;
 }
-let lastSaveTimer=null;
 function lastSet(e){
   ST.last=ST.last||{};
   const key=e.tab+':'+e.id, prev=ST.last[key];
@@ -8104,7 +8110,7 @@ function lastSet(e){
   if(prev&&!prev.end&&e.pos<prev.pos&&!e.end){ e=Object.assign({},prev,{t:Date.now()}); }
   if(prev&&prev.pos===e.pos&&prev.end===e.end&&Date.now()-prev.t<60000) return;
   ST.last[key]=e;
-  clearTimeout(lastSaveTimer); lastSaveTimer=setTimeout(()=>{ lastPrune(); save(); },2500);
+  lastPrune(); save();
 }
 function lastPrune(){ const L=ST.last||{}, lim=Date.now()-30*864e5; Object.keys(L).forEach(k=>{ if(L[k]&&L[k].t<lim) L[k]=null; }); }
 function lastTrack(){
@@ -8124,7 +8130,7 @@ function lastVideoTrack(){
 function lastPick(){
   const lim=Date.now()-14*864e5;
   return Object.entries(ST.last||{}).map(([k,e])=>e&&Object.assign({key:k},e))
-    .filter(e=>e&&e.t>=lim&&e.pos>0&&!e.end&&!lastDone(e)).sort((a,b)=>b.t-a.t)[0]||null;
+    .filter(e=>e&&e.t>=lim&&e.pos>0&&!lastEnded(e)&&!lastDone(e)).sort((a,b)=>b.t-a.t)[0]||null;
 }
 function lastAgo(t){
   const m=Math.round((Date.now()-t)/60000);
@@ -8175,7 +8181,7 @@ function lastBarShow(key,e){
 function lastPrompt(){
   const c=lastCur(); if(!c){ lastBarHide(); return; }
   const key=c.tab+':'+c.id, e=(ST.last||{})[key];
-  if(!e||e.pos<1||e.end||lastDone(e)) return;
+  if(!e||e.pos<1||lastEnded(e)||lastDone(e)) return;
   if(LAST_RESUME===key){ LAST_RESUME=null; setTimeout(()=>lastJump(key,true),250); return; }
   if(LAST_SHOWN[key]) return;
   LAST_SHOWN[key]=1; setTimeout(()=>lastBarShow(key,e),300);
@@ -8183,7 +8189,7 @@ function lastPrompt(){
 function lastPromptVideo(){
   if(!VD||!VD.id) return;
   const key='video:'+VD.id, e=(ST.last||{})[key];
-  if(!e||e.pos<1||e.end||LAST_SHOWN[key]||LAST_RESUME===key) return;
+  if(!e||e.pos<1||lastEnded(e)||LAST_SHOWN[key]||LAST_RESUME===key) return;
   LAST_SHOWN[key]=1; lastBarShow(key,e);
 }
 let lastScrollT=0;
@@ -8212,8 +8218,8 @@ const RESUME_MS=30*60*1000;
 function saveResume(){
   try{ localStorage.setItem('b2lab_resume_'+PROFILE, JSON.stringify({tab:TAB, y:Math.round(window.scrollY), t:Date.now()})); }catch(e){}
 }
-window.addEventListener('pagehide',saveResume);
-document.addEventListener('visibilitychange',()=>{ if(document.hidden) saveResume(); });
+window.addEventListener('pagehide',()=>{ try{ lastTrack(); }catch(e){} saveResume(); });
+document.addEventListener('visibilitychange',()=>{ if(document.hidden){ try{ lastTrack(); }catch(e){} saveResume(); } });
 const RESUME=(()=>{
   try{
     const r=JSON.parse(localStorage.getItem('b2lab_resume_'+PROFILE)||'null');
