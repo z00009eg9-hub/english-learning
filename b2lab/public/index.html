@@ -725,13 +725,9 @@ body.cnall .ucn{display:block}
   .mag{grid-template-columns:minmax(0,1fr) minmax(320px,30%)}            /* 約 68–70 / 30–32 */
 }
 @container mag (min-width:1200px){
-  /* 寬螢幕：左欄只取文章需要的寬度（正文行寬 --read-w＋卡片內距），不再在段落右邊留一大塊空白；
-     多出來的空間給右邊 Words & Phrases。右欄很寬時單字改雙欄流排，一行不會拉得太長 */
-  .mag{grid-template-columns:minmax(0,calc(var(--read-w) + 40px)) minmax(340px,1fr)}
-}
-@container mag (min-width:1500px){
-  .mag:not(.stack):not(.solo)>div:last-child .wpbody{column-count:2;column-gap:20px}
-  .mag:not(.stack):not(.solo)>div:last-child .wpbody>*{break-inside:avoid;-webkit-column-break-inside:avoid}
+  /* 寬螢幕：文章欄拿大部分寬度、段落填滿整欄（不留右側空白）；Words & Phrases 維持適合看單字的寬度（最多 460px） */
+  .mag{grid-template-columns:minmax(0,1fr) minmax(340px,min(32%,460px))}
+  .mag>div:first-child .para{max-width:none}
 }
 .magttl{
   background:linear-gradient(135deg,#fff4e2,#ffe3c2);border:2.5px solid #2b2118;border-radius:16px;
@@ -1264,12 +1260,12 @@ body.cnall #v-listen .precn{display:block}
 .focus .sub{font-size:var(--font-secondary);font-weight:800;color:var(--accent2);margin:14px 0 6px;letter-spacing:.3px}
 .focus .gobtn{margin-top:12px}
 /* 頂端列的返回（電腦／平板，#hd-dback）：只在詳細頁出現，接在程度徽章後面；文字型，不做膠囊按鈕。
-   hover 加淡底色、鍵盤 focus 有外框；點擊區高 32px */
-.hd-dback{display:none;align-items:center;min-height:32px;margin-left:6px;margin-right:auto;padding:4px 8px;border:0;border-radius:6px;
-  background:none;color:#fff;font:inherit;font-size:calc(15px * var(--fs));font-weight:500;cursor:pointer;white-space:nowrap}
+   淡白底＋細白框，在橘色列上一眼找得到（純文字太容易被忽略）；hover 加深、鍵盤 focus 有外框；點擊區高 32px */
+.hd-dback{display:none;align-items:center;gap:4px;min-height:32px;margin-left:12px;margin-right:auto;padding:4px 12px;border:1px solid rgba(255,255,255,.55);border-radius:8px;
+  background:rgba(255,255,255,.18);color:#fff;font:inherit;font-size:calc(15px * var(--fs));font-weight:600;cursor:pointer;white-space:nowrap}
 body.m-detail .hd-dback{display:inline-flex}
 body.m-detail #hd-levels{margin-right:0 !important}
-@media(hover:hover){ .hd-dback:hover{background:rgba(255,255,255,.16)} }
+@media(hover:hover){ .hd-dback:hover{background:rgba(255,255,255,.3)} }
 .hd-dback:focus-visible{outline:2px solid #fff;outline-offset:1px}
 .hint{font-size:var(--font-secondary);line-height:var(--lh-secondary);color:var(--ink2);background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:9px 11px;margin-bottom:12px}
 .hint-toggle{border:1px dashed var(--line);border-radius:10px;margin-bottom:12px;background:var(--card);overflow:hidden}
