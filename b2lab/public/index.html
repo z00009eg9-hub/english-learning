@@ -2562,6 +2562,30 @@ nav button{font-size:11px}
 .lcard .bkc-ft .ext{color:var(--accent2);font-weight:600;text-decoration:none}
 .ls-sec{margin:18px 0 8px;font-size:var(--font-subhead);color:var(--ink2)}
 .dh-grid{margin:0 0 14px}
+/* 今日頁「繼續上次」：一張橫條卡，左邊橘色細線；整張可點 */
+.lastcard{display:flex;align-items:center;gap:14px;padding:12px 16px;margin:0 0 14px;background:var(--card);border:1px solid var(--line);
+  border-left:4px solid var(--accent);border-radius:12px;cursor:pointer;min-width:0}
+@media(hover:hover){ .lastcard:hover{border-color:#e0b98c;border-left-color:var(--accent)} }
+.lastcard:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lastcard .lc-k{flex:none;font-size:var(--font-meta);font-weight:700;color:var(--accent2);white-space:nowrap}
+.lastcard .lc-x{display:flex;flex-direction:column;min-width:0;flex:1}
+.lastcard .lc-t{font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lastcard .lc-s{font-size:var(--font-secondary);color:var(--ink2)}
+.lastcard .lc-go{flex:none;padding:6px 14px;border-radius:999px;background:var(--accent2);color:#fff;font-weight:700;font-size:var(--font-secondary);white-space:nowrap}
+@media(max-width:640px){
+  .lastcard{flex-wrap:wrap;gap:6px 10px;padding:10px 12px}
+  .lastcard .lc-x{flex:1 1 100%;order:3}
+  .lastcard .lc-go{margin-left:auto}
+}
+/* 打開內頁時的「上次讀到…［跳過去］×」浮動提示：不佔版面，捲動或按 × 就消失 */
+.lastbar{position:fixed;top:calc(var(--hdh,56px) + 12px);left:50%;transform:translateX(-50%);z-index:60;max-width:calc(100vw - 32px);
+  display:flex;align-items:center;gap:10px;padding:6px 6px 6px 16px;background:#2b2118;color:#fff;border-radius:999px;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);font-size:var(--font-secondary);animation:lbIn .2s ease}
+.lastbar.on-vd{z-index:10000;top:16px}
+.lastbar span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.lastbar .lb-go{flex:none;border:0;border-radius:999px;padding:6px 14px;background:var(--accent);color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.lastbar .lb-x{flex:none;border:0;background:none;color:#fff;opacity:.8;font-size:20px;line-height:1;width:32px;height:32px;cursor:pointer}
+@keyframes lbIn{from{opacity:0;transform:translate(-50%,-6px)}to{opacity:1;transform:translate(-50%,0)}}
 #rd-list,.rw-grid{margin-top:12px}
 @media(max-width:640px){ .lthumb{width:64px;height:64px} .lthumb.emo{font-size:30px} }
 .bkc-th svg{width:100%;height:100%;display:block}
@@ -4949,6 +4973,7 @@ RENDER.daily=function(){
   const todayCards=artsToday.map(artCard)
     .concat(gramsToday.map(g=>gCard(g,{click:'dailyGram',kind:'📐 文法',isNew:isToday})))
     .concat(listensToday.map(l=>lsCardHTML(l,{click:'dailyListen',kind:'🎧 聽力',isNew:x=>x.date===t})));
+  h+=lastCardHTML();
   if(todayCards.length) h+='<div class="bkc-grid dh-grid" role="list">'+todayCards.join('')+'</div>';
   const anyArt=artsToday.length>0, anyGram=gramsToday.length>0;
   const anyNew=artsToday.some(a=>isToday(a))||gramsToday.some(g=>isToday(g));
@@ -8015,7 +8040,143 @@ if('serviceWorker' in navigator){
 }
 
 /* 各分區打開／關閉詳細頁都會經過 RENDER.*，統一在重畫後更新手機返回列的文字 */
-Object.keys(RENDER).forEach(k=>{ const f=RENDER[k]; RENDER[k]=function(){ const r=f.apply(this,arguments); updMback(); return r; }; });
+Object.keys(RENDER).forEach(k=>{ const f=RENDER[k]; RENDER[k]=function(){ const r=f.apply(this,arguments); updMback(); lastPrompt(); return r; }; });
+
+/* ===== 上次讀到哪裡（ST.last：跟學習進度存在同一份雲端文件，所以跨裝置、Anita／Tom 各自分開）=====
+   每個內頁記「最遠讀到第幾個段落標記」；今日頁最上面顯示最近一次讀到一半的內容（14 天內、還沒完成、沒讀到底）；
+   再打開同一篇時，頂端浮出「上次讀到…［跳過去］×」，由使用者決定，不自動捲動。
+   從今日的「繼續」按進來才直接跳到上次位置。要移除紀錄一律設成 null（雲端是合併寫入，delete 會被舊值帶回來） */
+const LAST_MARK={
+  read:{sel:'#v-read .para', lab:(i,n)=>'第 '+(i+1)+' 段 / 共 '+n+' 段', ico:'📖', kind:'閱讀'},
+  book:{sel:'#v-book h2.sec', lab:(i,n,el)=>'「'+lastTxt(el)+'」', ico:'📕', kind:'課本'},
+  gram:{sel:'#v-gram .step', alt:'#v-gram .card h3', lab:(i,n,el)=>'「'+lastTxt(el)+'」', ico:'📐', kind:'文法'},
+  listen:{sel:'#v-listen .sline', lab:(i,n)=>'第 '+(i+1)+' 句 / 共 '+n+' 句', ico:'🎧', kind:'聽力', verb:'聽到'},
+  real:{sel:'#v-real .mr-sec', lab:(i,n,el)=>'「'+lastTxt(el)+'」', ico:'🎬', kind:'實景'},
+  video:{lab:(i,n)=>'第 '+(i+1)+' 句 / 共 '+n+' 句', ico:'▶️', kind:'影片版', verb:'看到'}
+};
+function lastVerb(tab){ return (LAST_MARK[tab]||{}).verb||'讀到'; }
+function lastTxt(el){ return String(el.textContent||'').replace(/^‹/,'').trim().slice(0,24); }
+function lastCur(){
+  if(TAB==='book'&&bkOpen) return {tab:'book',id:bkOpen.id,title:bkOpen.title};
+  if(TAB==='read'&&rdOpen) return {tab:'read',id:rdOpen.id,title:rdOpen.title};
+  if(TAB==='gram'&&CURG) return {tab:'gram',id:CURG.id,title:CURG.titleCn};
+  if(TAB==='listen'&&lsOpen&&!myVid) return {tab:'listen',id:lsOpen.id,title:lsOpen.title};
+  if(TAB==='real'&&rwOpen) return {tab:'real',id:rwOpen,title:((ST.rw||{})[rwOpen]||{}).ti};
+  return null;
+}
+function lastMarks(tab){
+  const m=LAST_MARK[tab]; if(!m||!m.sel) return [];
+  const vis=sel=>[...document.querySelectorAll(sel)].filter(e=>e.offsetParent!==null);
+  let els=vis(m.sel); if(!els.length&&m.alt) els=vis(m.alt);
+  return els;
+}
+function lastDone(e){
+  if(!e) return true;
+  if(e.tab==='read') return !!ST.artDone[e.id];
+  if(e.tab==='gram') return !!ST.gramDone[e.id];
+  if(e.tab==='listen') return !!(ST.listenDone||{})[e.id];
+  if(e.tab==='real') return ((ST.rwDone||{})[e.id]||{}).k==='done';
+  return false;
+}
+let lastSaveTimer=null;
+function lastSet(e){
+  ST.last=ST.last||{};
+  const key=e.tab+':'+e.id, prev=ST.last[key];
+  /* 記「最遠」讀到的位置：回頭重看前面不會把進度蓋掉；讀到底之後再打開才重新算 */
+  if(prev&&!prev.end&&e.pos<prev.pos&&!e.end){ e=Object.assign({},prev,{t:Date.now()}); }
+  if(prev&&prev.pos===e.pos&&prev.end===e.end&&Date.now()-prev.t<60000) return;
+  ST.last[key]=e;
+  clearTimeout(lastSaveTimer); lastSaveTimer=setTimeout(()=>{ lastPrune(); save(); },2500);
+}
+function lastPrune(){ const L=ST.last||{}, lim=Date.now()-30*864e5; Object.keys(L).forEach(k=>{ if(L[k]&&L[k].t<lim) L[k]=null; }); }
+function lastTrack(){
+  const c=lastCur(); if(!c) return;
+  const els=lastMarks(c.tab); if(els.length<2) return;
+  const y=window.innerHeight*0.45; let i=0;
+  els.forEach((e,k)=>{ if(e.getBoundingClientRect().top<y) i=k; });
+  const end=i>=els.length-1&&(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-40);
+  lastSet({tab:c.tab,id:c.id,title:c.title||'',pos:i,n:els.length,lab:LAST_MARK[c.tab].lab(i,els.length,els[i]),end,t:Date.now()});
+}
+function lastVideoTrack(){
+  if(!VD||!VD.id||!VD.lines||!VD.lines.length) return;
+  const n=VD.lines.length, i=VD.i||0;
+  lastSet({tab:'video',id:VD.id,title:(VD.d&&VD.d.title)||'',pos:i,n,lab:LAST_MARK.video.lab(i,n),end:i>=n-1,t:Date.now()});
+}
+/* 今日頁：最近一次讀到一半的內容 */
+function lastPick(){
+  const lim=Date.now()-14*864e5;
+  return Object.entries(ST.last||{}).map(([k,e])=>e&&Object.assign({key:k},e))
+    .filter(e=>e&&e.t>=lim&&e.pos>0&&!e.end&&!lastDone(e)).sort((a,b)=>b.t-a.t)[0]||null;
+}
+function lastAgo(t){
+  const m=Math.round((Date.now()-t)/60000);
+  return m<1?'剛剛':m<60?m+' 分鐘前':m<1440?Math.round(m/60)+' 小時前':Math.round(m/1440)+' 天前';
+}
+function lastCardHTML(){
+  const e=lastPick(); if(!e) return '';
+  const m=LAST_MARK[e.tab]||{};
+  return '<div class="lastcard" role="button" tabindex="0" onclick="lastResume(\''+e.key+'\')" onkeydown="if(event.key===\'Enter\')this.click()">'
+    +'<span class="lc-k">▶ 繼續上次</span>'
+    +'<span class="lc-x"><span class="lc-t">'+(m.ico||'')+' '+esc(e.title||'')+'</span>'
+    +'<span class="lc-s">'+esc(m.kind||'')+' · '+lastVerb(e.tab)+esc(e.lab||'')+' · '+lastAgo(e.t)+'</span></span>'
+    +'<span class="lc-go">繼續 →</span></div>';
+}
+let LAST_RESUME=null;
+const LAST_SHOWN={};
+function lastResume(key){
+  const e=(ST.last||{})[key]; if(!e) return;
+  LAST_RESUME=key; LAST_SHOWN[key]=1;
+  if(e.tab==='read') dailyArt(e.id);
+  else if(e.tab==='gram') dailyGram(e.id);
+  else if(e.tab==='listen') dailyListen(e.id);
+  else if(e.tab==='book'){ go('book'); bkGo(e.id); }
+  else if(e.tab==='real'){ go('real'); rwGo(e.id); }
+  else if(e.tab==='video'){
+    vdOpen(e.id);
+    let tries=0; const w=setInterval(()=>{ if((VD&&VD.id===e.id&&VD.lines&&VD.lines.length)||++tries>40){ clearInterval(w); if(VD.id===e.id) vdGo(e.pos,false); LAST_RESUME=null; } },150);
+  }
+}
+window.lastResume=lastResume;
+function lastJump(key,instant){
+  const e=(ST.last||{})[key]; lastBarHide(); if(!e) return;
+  if(e.tab==='video'){ vdGo(e.pos,false); return; }
+  const el=lastMarks(e.tab)[e.pos]; if(!el) return;
+  window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-90, behavior:instant?'auto':'smooth'});
+}
+window.lastJump=lastJump;
+function lastBarHide(){ const b=$('lastbar'); if(b) b.remove(); }
+window.lastBarHide=lastBarHide;
+function lastBarShow(key,e){
+  lastBarHide();
+  const b=document.createElement('div'); b.id='lastbar'; b.className='lastbar'+(e.tab==='video'?' on-vd':''); b.setAttribute('role','status');
+  b.innerHTML='<span>上次'+lastVerb(e.tab)+esc(e.lab||'')+'</span><button type="button" class="lb-go" onclick="lastJump(\''+key+'\')">跳過去</button>'
+    +'<button type="button" class="lb-x" onclick="lastBarHide()" aria-label="關閉提示">×</button>';
+  document.body.appendChild(b);
+}
+/* 打開內頁後：有上次位置就提示；從「繼續」進來的直接跳 */
+function lastPrompt(){
+  const c=lastCur(); if(!c){ lastBarHide(); return; }
+  const key=c.tab+':'+c.id, e=(ST.last||{})[key];
+  if(!e||e.pos<1||e.end||lastDone(e)) return;
+  if(LAST_RESUME===key){ LAST_RESUME=null; setTimeout(()=>lastJump(key,true),250); return; }
+  if(LAST_SHOWN[key]) return;
+  LAST_SHOWN[key]=1; setTimeout(()=>lastBarShow(key,e),300);
+}
+function lastPromptVideo(){
+  if(!VD||!VD.id) return;
+  const key='video:'+VD.id, e=(ST.last||{})[key];
+  if(!e||e.pos<1||e.end||LAST_SHOWN[key]||LAST_RESUME===key) return;
+  LAST_SHOWN[key]=1; lastBarShow(key,e);
+}
+let lastScrollT=0;
+window.addEventListener('scroll',()=>{
+  const b=$('lastbar'); if(b&&!b.classList.contains('on-vd')&&window.scrollY>260) lastBarHide();
+  const now=Date.now(); if(now-lastScrollT<700) return; lastScrollT=now;
+  lastTrack();
+},{passive:true});
+{ const _vp=vdPaint; vdPaint=function(){ const r=_vp.apply(this,arguments); lastVideoTrack(); return r; }; }
+{ const _vr=vdRender; vdRender=function(){ const r=_vr.apply(this,arguments); lastPromptVideo(); return r; }; }
+
 
 /* ---------- 啟動 ---------- */
 updateProfileUI();
