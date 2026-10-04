@@ -2870,7 +2870,8 @@ document.addEventListener('visibilitychange',()=>{
   if(document.hidden){ cloudFlush(); return; }
   /* 回到前景：把雲端最新進度拉下來合併（另一台裝置剛做完的也會亮打勾） */
   cloudPull(()=>{
-    if(!vQueue.length && !(TAB==='listen' && (lsOpen||myVid))) RENDER[TAB] && RENDER[TAB]();
+    /* iOS 回到前景時重畫整篇文章會跳回最上面：正在讀內頁就只合併資料，下次換頁再顯示最新狀態 */
+    if(!vQueue.length && !(TAB==='listen' && (lsOpen||myVid)) && !mDetail(TAB)) RENDER[TAB] && RENDER[TAB]();
   });
 });
 /* 兩邊的單字複習紀錄逐字合併，取比較新的那一筆，避免換裝置時覆蓋掉進度 */
@@ -2938,7 +2939,7 @@ function cloudSubscribe(){
     const r=s.data()||{};
     if((r.updatedAt||0)<=(ST.updatedAt||0)) return;   // 自己剛推上去的不用理
     ST=mergeState(r); saveLocal(); cloudBadge(true);
-    if(!vQueue.length && !(TAB==='listen' && (lsOpen||myVid))) RENDER[TAB] && RENDER[TAB]();   // 單字卡複習中不打斷
+    if(!vQueue.length && !(TAB==='listen' && (lsOpen||myVid)) && !mDetail(TAB)) RENDER[TAB] && RENDER[TAB]();   // 單字卡複習中、正在讀內頁時不打斷
   },()=>cloudBadge(false));
 }
 /* 實景教材是「共用教材」，不是個人進度：Anita 新增/修改的課，Tom 也要看得到。
@@ -8065,7 +8066,16 @@ if('serviceWorker' in navigator){
 }
 
 /* 各分區打開／關閉詳細頁都會經過 RENDER.*，統一在重畫後更新手機返回列的文字 */
-Object.keys(RENDER).forEach(k=>{ const f=RENDER[k]; RENDER[k]=function(){ const r=f.apply(this,arguments); updMback(); lastPrompt(); return r; }; });
+Object.keys(RENDER).forEach(k=>{ const f=RENDER[k]; RENDER[k]=function(){
+  const c0=lastCur(), key0=c0&&(c0.tab+':'+c0.id), y0=window.scrollY;
+  const r=f.apply(this,arguments); updMback(); lastPrompt();
+  /* iOS Safari 換掉整頁內容時可能把捲動歸零：還是同一個內頁就放回原本的位置 */
+  const c1=lastCur(), key1=c1&&(c1.tab+':'+c1.id);
+  if(key0&&key0===key1&&y0>0){
+    if(Math.abs(window.scrollY-y0)>2) window.scrollTo(0,y0);
+    requestAnimationFrame(()=>{ if(lastCur()&&Math.abs(window.scrollY-y0)>2&&window.scrollY<10) window.scrollTo(0,y0); });
+  }
+  return r; }; });
 
 /* ===== 上次讀到哪裡（ST.last：跟學習進度存在同一份雲端文件，所以跨裝置、Anita／Tom 各自分開）=====
    每個內頁記「最遠讀到第幾個段落標記」；今日頁最上面顯示最近一次讀到一半的內容（14 天內、還沒完成、沒讀到底）；
