@@ -327,6 +327,18 @@ tr:nth-child(even) td{background:#fdfbf8}
 .stat b{display:block;font-size:calc(26px * var(--fs));color:var(--ink);line-height:1.15;font-weight:800}
 .stat b i{font-style:normal;font-size:calc(10.5px * var(--fs));font-weight:500;color:var(--ink2);margin-left:4px;vertical-align:2px}
 .stat span{font-size:calc(10.5px * var(--fs));color:var(--ink2);word-break:keep-all}
+/* 手機「今日新內容」：維持 2×2，但每格改成「數字＋說明」同一行、內距收小，整張卡矮一截；「使用說明」只留「?」 */
+@media(max-width:640px){
+  #v-daily .dh-card{padding:12px 14px}
+  #v-daily .dh-card h2.sec{font-size:calc(18px * var(--fs))}
+  #v-daily .dh-help{width:32px;height:32px;padding:0;border:1px solid var(--line);border-radius:50%}
+  #v-daily .dh-help-t{display:none}
+  #v-daily .dh-sub{margin:2px 0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #v-daily .stats{gap:6px}
+  #v-daily .stat{display:flex;align-items:baseline;justify-content:center;gap:6px;padding:6px 6px;min-width:0}
+  #v-daily .dh-card .stats .stat b{display:inline;font-size:calc(21px * var(--fs));line-height:1.2;white-space:nowrap}
+  #v-daily .stat span{white-space:nowrap}
+}
 /* 可點擊的統計格（點了跳到對應清單） */
 .stat.tap{cursor:pointer;border-color:var(--accent)}
 .stat.tap:active{background:#fff7ee}
@@ -3296,6 +3308,8 @@ RENDER.home=function(){
     '<div class="hm-top"><div><div class="hm-hi">Hi, '+esc(nm)+' 👋</div><div class="hm-date">'+(d.getMonth()+1)+' 月 '+d.getDate()+' 日・週'+wd+'</div></div>'
     +'<span class="hm-streak">🔥 '+(ST.streak||1)+' 天</span></div>'
     +'<button class="hm-card hm-today" onclick="homeGo(\'daily\')"><i>☀️</i><b>今日</b><span>今天的新內容與複習</span></button>'
+    /* 手機導覽首頁也放「繼續上次」，一打開網站就接得上 */
+    +lastCardHTML()
     +'<div class="hm-grid">'+HOME_CARDS.map(card).join('')+'</div>'
     /* 原本擠在橘色 header 的次要功能，手機改收在這裡 */
     +'<div class="hm-set">'
@@ -4958,9 +4972,9 @@ RENDER.daily=function(){
   const listensToday=pickMines(LESSONS);
   const dLabel=(+t.slice(5,7))+' 月 '+(+t.slice(8,10))+' 日';
   let h=installCard()
-   +'<div class="card">'
+   +'<div class="card dh-card">'
    +'<div class="dh-top"><h2 class="sec" style="margin:0">📅 今日新內容</h2>'
-   +'<button class="dh-help" onclick="dhHelpTog()">使用說明 ?</button></div>'
+   +'<button class="dh-help" onclick="dhHelpTog()" aria-label="使用說明"><span class="dh-help-t">使用說明 </span>?</button></div>'
    +'<div class="dh-sub"><span class="mut">'+dLabel+' · '+(PROFILES[PROFILE]||'')+'</span>　'+(GOALS[PROFILE]||'')+'</div>'
    +'<div class="hint" id="dh-hint" hidden style="margin-bottom:10px"><b>每週三、五</b>更新，每次都會依你的程度給<b>三份文章</b>、<b>三個文法單元</b>與<b>三課聽力</b>（由淺到深，可以先讀最簡單的再往上挑戰）。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力是<b>依你的課堂筆記單字自製的對話</b>，用語音朗讀跟讀練習。</div>'
    +'<div class="stats"><div class="stat go" onclick="statGo(\'read\')" title="點一下看全部每日文章"><b>'+pool.length+'<i>篇</i></b><span>累積文章 ›</span></div>'
