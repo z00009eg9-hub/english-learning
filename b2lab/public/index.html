@@ -2819,7 +2819,7 @@ function loadLocal(){
       if(old){ raw=old; localStorage.setItem(skey(),old); localStorage.removeItem('b2lab.v1'); }
     }
     if(raw) ST=Object.assign(ST,JSON.parse(raw));
-    const rmap={0.55:0.7, 0.6:0.7, 0.85:0.8, 0.9:1, 1.1:1, 1.2:1, 1.25:1, 1.4:1};
+    const rmap={0.55:0.6, 0.7:0.6, 0.85:0.8, 0.9:1, 1.1:1, 1.2:1, 1.25:1, 1.4:1};
     if(rmap[ST.rate]!==undefined) ST.rate=rmap[ST.rate];
   }catch(e){}
 }
@@ -3769,8 +3769,8 @@ function wpFlash(n){
 window.wpFlash=wpFlash;
 
 /* 朗讀語速：全站共用這三段（進度分頁與各內頁的 ⏱ 鈕都用同一組，才不會互相覆蓋） */
-const RATES=[0.7,0.8,1];
-const RATE_LB={0.7:'慢',0.8:'稍慢',1:'正常'};
+const RATES=[0.6,0.8,1];
+const RATE_LB={0.6:'慢',0.8:'稍慢',1:'正常'};
 function cycleRate(){
   const cur=Number(ST.rate)||1;
   const i=RATES.findIndex(r=>Math.abs(r-cur)<0.05);
@@ -6880,7 +6880,7 @@ function bookHTML(b){
    +'<span class="bar-x">'
    +'<span class="magbadge c2">🔤 '+((b.vocab||[]).length+(b.vocab2||[]).length)+' 個單字</span>'
    +'<span class="magbadge c3">📐 '+(b.grammar||[]).length+' 個句型</span>'
-   +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速（0.7x 慢／0.8x 稍慢／1x 正常）" style="margin-left:auto">⏱ '+(Number(ST.rate)||1)+'x</button>'
+   +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速（0.6x 慢／0.8x 稍慢／1x 正常）" style="margin-left:auto">⏱ '+(Number(ST.rate)||1)+'x</button>'
    +(b.doc?'<a class="doclink" href="'+esc(b.doc)+'" target="_blank" rel="noopener" title="原始 Google 文件"><span class="dl-ic">📄</span><span class="dl-tx"> 原始 Google 文件 ↗</span></a>':'')
    +'</span>'
    +'<button class="barmore" onclick="bkBarTog(this)" aria-expanded="false" title="更多資訊">⋯</button>'
