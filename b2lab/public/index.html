@@ -1414,7 +1414,7 @@ body.cnall #v-book span.cnx{display:inline!important}
   #sidebar .sb-streak .streak-text strong{display:block;font-size:13px;color:#ea580c}
   #sidebar.collapsed .sb-streak .streak-text{width:0;opacity:0}
   /* nav */
-  #sidebar .sb-nav{flex:1;display:flex;flex-direction:column;gap:8px;padding:10px 8px;overflow-y:auto;min-height:0}
+  #sidebar .sb-nav{flex:1;display:flex;flex-direction:column;justify-content:space-evenly;gap:0;padding:6px 8px;overflow-y:auto;min-height:0}
   #sidebar .sb-nav button{
     display:flex;align-items:center;gap:10px;width:100%;flex-shrink:0;border:0;background:none;padding:12px;
     font:inherit;font-size:14px;color:#6B7280;cursor:pointer;border-radius:12px;text-align:left;
@@ -1451,8 +1451,8 @@ body.cnall #v-book span.cnx{display:inline!important}
   #sidebar .sb-toggle button svg{width:20px;height:20px;transition:transform .3s}
   #sidebar.collapsed .sb-toggle button svg{transform:rotate(180deg)}
   nav{display:none!important}
-  header{z-index:60}
-  main{margin-left:var(--sb-w);transition:margin-left .3s cubic-bezier(.4,0,.2,1)}
+  header{position:fixed;width:100%;z-index:60}
+  main{margin-left:var(--sb-w);padding-top:calc(var(--hdh,52px) + 12px);transition:margin-left .3s cubic-bezier(.4,0,.2,1)}
   body.sb-col{--sb-w:64px}
   body{padding-bottom:20px}
 }
