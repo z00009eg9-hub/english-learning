@@ -1949,6 +1949,9 @@ body.vd-lock{overflow:hidden}
 #vd .vd-fx .bad{color:#c0392b;text-decoration:line-through;text-decoration-thickness:2px}
 #vd .vd-fx .good{color:var(--ok);font-weight:700;background:#e6f5ec;border-radius:4px;padding:0 .15em}
 #vd .vd-why{font-size:clamp(11px,1.9cqw,18px);color:var(--accent2);margin-top:.8em;font-weight:600}
+/* 作業解說的中文：只在雙語／中文字幕模式顯示，英文模式保持純英文 */
+#vd .vd-fxcn{font-size:clamp(12px,1.9cqw,18px);color:var(--ink2);margin-top:.35em;line-height:1.5}
+#vd:not(.m-dual):not(.m-cn) .vd-fxcn{display:none}
 #vd .vd-q{font-size:clamp(16px,3.8cqw,38px);font-weight:600;line-height:1.35;text-align:center}
 #vd .vd-blank{display:inline-block;min-width:5.5em;border-bottom:3px solid var(--accent);margin:0 .15em;text-align:center;color:var(--ok);font-weight:800}
 #vd .vd-cd{margin:3cqw auto 0;width:11cqw;height:11cqw;position:relative}
@@ -8477,7 +8480,9 @@ function vdStageHTML(l){
     h='<div class="vd-scn"><div class="vd-kick">Homework Fix · 作業第 '+esc(v.n)+' 題</div>'
      +'<div class="vd-fx w" style="margin-top:2cqw"><span class="tag">❌</span>'+vdMark(v.wrong,v.bad,'bad')+'</div>'
      +'<div class="vd-fx g"><span class="tag">✅</span>'+vdMark(v.fix,v.good,'good')+'</div>'
-     +'<div class="vd-why">💡 '+esc(v.why||'')+'</div></div>';
+     +(l.cn?'<div class="vd-fxcn">'+esc(l.cn)+'</div>':'')
+     +'<div class="vd-why">💡 '+esc(v.why||'')+'</div>'
+     +(v.whyCn?'<div class="vd-fxcn">'+esc(v.whyCn)+'</div>':'')+'</div>';
   }else if(v.type==='quiz'){
     const q=esc(v.q).replace('___','<span class="vd-blank">'+(v.show?esc(v.a):'&nbsp;')+'</span>');
     const tot=VD.lines.filter(x=>x.vis&&x.vis.type==='quiz'&&!x.vis.show).length;

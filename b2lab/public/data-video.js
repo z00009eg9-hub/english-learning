@@ -30006,7 +30006,8 @@ window.VIDEO.bk20261001 = {
      "cable",
      "broken"
     ],
-    "why": "After was, use the past participle broken, not broke. And cable is spelled c-a-b-l-e."
+    "why": "After was, use the past participle broken, not broke. And cable is spelled c-a-b-l-e.",
+    "whyCn": "was 後面要用過去分詞 broken，不是 broke。cable 的拼法是 c-a-b-l-e。"
    },
    "en": "The operator forgot to remove the cable when disassembling the unit, so the cable was broken.",
    "cn": "操作員在拆卸機台時忘了拔掉電纜，所以電纜壞了。",
@@ -30035,7 +30036,8 @@ window.VIDEO.bk20261001 = {
      "asked the operator",
      "received a report about the quality issue"
     ],
-    "why": "Use the before a specific person. Received is spelled with e before i, and you receive a report about an issue."
+    "why": "Use the before a specific person. Received is spelled with e before i, and you receive a report about an issue.",
+    "whyCn": "特定的人前面要用 the。Received 的拼法是 e 在 i 前面；收到關於問題的報告用 receive a report about an issue。"
    },
    "en": "The inspector asked the operator to separate the defective part because he received a report about the quality issue.",
    "cn": "檢驗員要求操作員將有缺陷的零件分開，因為他收到了品質問題的報告。",
@@ -30064,7 +30066,8 @@ window.VIDEO.bk20261001 = {
      "team was",
      "was approaching"
     ],
-    "why": "In American English, team takes was. Approaching sounds more professional for a date."
+    "why": "In American English, team takes was. Approaching sounds more professional for a date.",
+    "whyCn": "美式英文裡 team 搭配 was。日期「快到了」用 approaching 比較專業。"
    },
    "en": "Our team was under a lot of stress because the shipment date was approaching.",
    "cn": "我們的團隊壓力很大，因為出貨日期快到了。",
