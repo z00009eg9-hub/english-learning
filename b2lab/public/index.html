@@ -1297,6 +1297,8 @@ h2.sec .tback{top:0}
 button.hdlink{font:inherit;font-size:11.5px;font-weight:800;cursor:pointer}
 /* 中譯開關：開＝白底橘字（跟 Anita/Tom 切換一樣明顯），關＝半透明 */
 #hd-cn:not(.off){background:var(--card);color:var(--accent2);border-color:#fff}
+/* 朗讀速度：切到非正常速度就白底橘字，跟中譯開關一樣一眼看得出已經切換過 */
+#hd-rate.on{background:var(--card);color:var(--accent2);border-color:#fff}
 button.hdlink.off{opacity:.6}
 /* 全站中譯開關＝開：所有中譯不用逐一點就直接顯示 */
 body.cnall .para .cn{display:block}
@@ -2602,6 +2604,7 @@ nav button{font-size:11px}
 #spkbar button{flex:none;min-width:44px;height:44px;border:0;border-radius:999px;background:rgba(255,255,255,.14);
   color:#fff;font:inherit;font-size:calc(16px * var(--fs));line-height:1;cursor:pointer}
 #spkbar .sk-rate{min-width:72px;font-weight:600}
+#spkbar .sk-rate.on{background:#fff;color:#2b2118}
 #spkbar .sk-x{font-size:22px;background:none}
 #spkbar button:active{opacity:.75}
 /* 電腦／平板用橘色列的 ⏱ 鈕，這條不出現 */
@@ -3789,7 +3792,9 @@ const RATE_LB={0.6:'慢',0.8:'稍慢',1:'正常'};
 /* 速度顯示散在好幾處（內頁 ⏱ 鈕、電腦橘色列、手機首頁設定、進度頁、朗讀浮動列），統一由這裡更新 */
 function rateSync(){
   const r=Number(ST.rate)||1;
+  const slow=Math.abs(r-1)>0.05;
   document.querySelectorAll('#btn-rate,[data-ratebtn],#hd-rate,#spk-rate').forEach(b=>{ b.textContent='⏱ '+r+'x'; });
+  document.querySelectorAll('#hd-rate,#spk-rate').forEach(b=>b.classList.toggle('on',slow));
   document.querySelectorAll('[data-ratechip]').forEach(b=>b.classList.toggle('on', Math.abs(Number(b.dataset.ratechip)-r)<0.05));
 }
 window.rateSync=rateSync;
