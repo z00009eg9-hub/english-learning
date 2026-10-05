@@ -1297,8 +1297,10 @@ h2.sec .tback{top:0}
 button.hdlink{font:inherit;font-size:11.5px;font-weight:800;cursor:pointer}
 /* 中譯開關：開＝白底橘字（跟 Anita/Tom 切換一樣明顯），關＝半透明 */
 #hd-cn:not(.off){background:var(--card);color:var(--accent2);border-color:#fff}
-/* 朗讀速度：切到非正常速度就白底橘字，跟中譯開關一樣一眼看得出已經切換過 */
-#hd-rate.on{background:var(--card);color:var(--accent2);border-color:#fff}
+/* 朗讀速度：一律白底橘字（含 1x），跟中譯開關同一種「常駐控制」外觀 */
+#hd-rate{background:var(--card);color:var(--accent2);border-color:#fff}
+#hd-rate .r-ico{font-style:normal;margin-right:3px}
+#hd-rate .r-val{font-weight:800}
 button.hdlink.off{opacity:.6}
 /* 全站中譯開關＝開：所有中譯不用逐一點就直接顯示 */
 body.cnall .para .cn{display:block}
@@ -2384,8 +2386,13 @@ nav button{font-size:11px}
   .hd-mback:active{opacity:.75}
   .hd-mtitle{color:#fff;font-size:17px;font-weight:800;margin-left:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   /* 中譯小鈕：返回列最右側，切換全站中譯（課本、文章、今日、文法、聽力共用同一個開關） */
-  header > .hd-mcn{display:inline-flex !important;align-items:center;justify-content:center}
-  .hd-mcn{margin-left:auto;flex:none;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.6);
+  header > .hd-mcn,header > #hd-rate{display:inline-flex !important;align-items:center;justify-content:center}
+  /* 速度圓鈕排在「中」左邊，兩顆一起靠右 */
+  #hd-rate{order:1;margin-left:auto;flex:none;width:38px;height:38px;padding:0;border-radius:50%;
+    font-size:13px;font-weight:800;line-height:1}
+  #hd-rate .r-ico{display:none}
+  .hd-mcn{order:2}
+  .hd-mcn{margin-left:6px;flex:none;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.6);
     background:rgba(255,255,255,.18);color:#fff;font:inherit;font-size:16px;font-weight:800;cursor:pointer}
   .hd-mcn.on{background:#fff;color:var(--accent2);border-color:#fff}
   /* 返回列：往下捲收起、往上捲出現；收起時黏頂元素（影片等）的 top 也歸零，不留空隙 */
@@ -2604,7 +2611,7 @@ nav button{font-size:11px}
 #spkbar button{flex:none;min-width:44px;height:44px;border:0;border-radius:999px;background:rgba(255,255,255,.14);
   color:#fff;font:inherit;font-size:calc(16px * var(--fs));line-height:1;cursor:pointer}
 #spkbar .sk-rate{min-width:72px;font-weight:600}
-#spkbar .sk-rate.on{background:#fff;color:#2b2118}
+#spkbar .sk-rate{background:#fff;color:#2b2118}
 #spkbar .sk-x{font-size:22px;background:none}
 #spkbar button:active{opacity:.75}
 /* 電腦／平板用橘色列的 ⏱ 鈕，這條不出現 */
@@ -2659,7 +2666,7 @@ nav button{font-size:11px}
   </div>
   <span class="hd-streak" id="hd-streak" title="連續學習天數">🔥 1 天</span>
   <span id="sync-badge" title="進度已雲端同步（跨裝置共用）">☁️</span>
-  <button class="hdlink" id="hd-rate" onclick="cycleRate()" title="朗讀速度（0.6x 慢／0.8x 稍慢／1x 正常）">⏱ 1x</button>
+  <button class="hdlink" id="hd-rate" onclick="cycleRate()" title="朗讀速度（0.6x 慢／0.8x 稍慢／1x 正常）" aria-label="朗讀速度"><i class="r-ico">⏱</i><b class="r-val">1x</b></button>
   <button class="hdlink" id="hd-cn" onclick="togGlobalCn()" title="全站中譯一鍵顯示／隱藏">🈶 中譯</button>
   <a class="hdlink ext" href="https://learning-english-notes.web.app" title="Speak Up! 課堂筆記 · 口說練習 · 每日測驗">🍎🐻 Speak&nbsp;Up ↗</a>
   <a class="hdlink ext" href="https://rexon-qa-english.web.app/" title="英文題庫練習">🔤 題庫 ↗</a>
@@ -3792,9 +3799,9 @@ const RATE_LB={0.6:'慢',0.8:'稍慢',1:'正常'};
 /* 速度顯示散在好幾處（內頁 ⏱ 鈕、電腦橘色列、手機首頁設定、進度頁、朗讀浮動列），統一由這裡更新 */
 function rateSync(){
   const r=Number(ST.rate)||1;
-  const slow=Math.abs(r-1)>0.05;
-  document.querySelectorAll('#btn-rate,[data-ratebtn],#hd-rate,#spk-rate').forEach(b=>{ b.textContent='⏱ '+r+'x'; });
-  document.querySelectorAll('#hd-rate,#spk-rate').forEach(b=>b.classList.toggle('on',slow));
+  document.querySelectorAll('#btn-rate,[data-ratebtn],#spk-rate').forEach(b=>{ b.textContent='⏱ '+r+'x'; });
+  /* 橘色列那顆手機上是圓鈕，只顯示數字（⏱ 圖示在手機隱藏） */
+  const hv=document.querySelector('#hd-rate .r-val'); if(hv) hv.textContent=r+'x';
   document.querySelectorAll('[data-ratechip]').forEach(b=>b.classList.toggle('on', Math.abs(Number(b.dataset.ratechip)-r)<0.05));
 }
 window.rateSync=rateSync;
