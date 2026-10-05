@@ -2594,6 +2594,18 @@ nav button{font-size:11px}
   .lastcard .lc-go{margin-left:auto}
 }
 /* 打開內頁時的「上次讀到…［跳過去］×」浮動提示：不佔版面，捲動或按 × 就消失 */
+/* 朗讀浮動列（手機）：朗讀時才浮出，停了就收起 */
+#spkbar{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));transform:translate(-50%,8px);z-index:65;
+  display:none;align-items:center;gap:6px;padding:6px;background:#2b2118;border-radius:999px;
+  box-shadow:0 8px 22px rgba(0,0,0,.22);opacity:0;transition:opacity .18s ease,transform .18s ease}
+#spkbar.on{display:flex;opacity:1;transform:translate(-50%,0)}
+#spkbar button{flex:none;min-width:44px;height:44px;border:0;border-radius:999px;background:rgba(255,255,255,.14);
+  color:#fff;font:inherit;font-size:calc(16px * var(--fs));line-height:1;cursor:pointer}
+#spkbar .sk-rate{min-width:72px;font-weight:600}
+#spkbar .sk-x{font-size:22px;background:none}
+#spkbar button:active{opacity:.75}
+/* 電腦／平板用橘色列的 ⏱ 鈕，這條不出現 */
+@media(min-width:641px){ #spkbar{display:none!important} }
 .lastbar{position:fixed;top:calc(var(--hdh,56px) + 12px);left:50%;transform:translateX(-50%);z-index:60;max-width:calc(100vw - 32px);
   display:flex;align-items:center;gap:10px;padding:6px 6px 6px 16px;background:#2b2118;color:#fff;border-radius:999px;
   box-shadow:0 6px 18px rgba(0,0,0,.18);font-size:var(--font-secondary);animation:lbIn .2s ease}
@@ -2644,6 +2656,7 @@ nav button{font-size:11px}
   </div>
   <span class="hd-streak" id="hd-streak" title="連續學習天數">🔥 1 天</span>
   <span id="sync-badge" title="進度已雲端同步（跨裝置共用）">☁️</span>
+  <button class="hdlink" id="hd-rate" onclick="cycleRate()" title="朗讀速度（0.6x 慢／0.8x 稍慢／1x 正常）">⏱ 1x</button>
   <button class="hdlink" id="hd-cn" onclick="togGlobalCn()" title="全站中譯一鍵顯示／隱藏">🈶 中譯</button>
   <a class="hdlink ext" href="https://learning-english-notes.web.app" title="Speak Up! 課堂筆記 · 口說練習 · 每日測驗">🍎🐻 Speak&nbsp;Up ↗</a>
   <a class="hdlink ext" href="https://rexon-qa-english.web.app/" title="英文題庫練習">🔤 題庫 ↗</a>
@@ -3328,6 +3341,8 @@ RENDER.home=function(){
     +['anita','tom'].map(p=>'<button class="hm-chip'+(PROFILE===p?' on':'')+'" onclick="setProfile(\''+p+'\')">'+(p==='anita'?'🍎 Anita':'🐻 Tom')+'</button>').join('')+'</div>'
     +'<div class="hm-row"><span class="hm-lb">程度</span>'
     +band().map(l=>'<button class="hm-chip lv '+lvCls(l)+'" onclick="hdLv(\''+l+'\')">'+l+'</button>').join('')+'</div>'
+    +'<div class="hm-row"><span class="hm-lb">朗讀速度</span>'
+    +RATES.map(r=>'<button class="hm-chip" data-ratechip="'+r+'" onclick="setRate('+r+')">'+RATE_LB[r]+' '+r+'x</button>').join('')+'</div>'
     +'<div class="hm-row"><a class="hm-chip" href="https://learning-english-notes.web.app">🍎🐻 Speak Up ↗</a><a class="hm-chip" href="https://rexon-qa-english.web.app/">🔤 題庫 ↗</a></div>'
     +'</div>';
 };
@@ -3771,13 +3786,20 @@ window.wpFlash=wpFlash;
 /* 朗讀語速：全站共用這三段（進度分頁與各內頁的 ⏱ 鈕都用同一組，才不會互相覆蓋） */
 const RATES=[0.6,0.8,1];
 const RATE_LB={0.6:'慢',0.8:'稍慢',1:'正常'};
+/* 速度顯示散在好幾處（內頁 ⏱ 鈕、電腦橘色列、手機首頁設定、進度頁、朗讀浮動列），統一由這裡更新 */
+function rateSync(){
+  const r=Number(ST.rate)||1;
+  document.querySelectorAll('#btn-rate,[data-ratebtn],#hd-rate,#spk-rate').forEach(b=>{ b.textContent='⏱ '+r+'x'; });
+  document.querySelectorAll('[data-ratechip]').forEach(b=>b.classList.toggle('on', Math.abs(Number(b.dataset.ratechip)-r)<0.05));
+}
+window.rateSync=rateSync;
 function cycleRate(){
   const cur=Number(ST.rate)||1;
   const i=RATES.findIndex(r=>Math.abs(r-cur)<0.05);
   ST.rate = i<0 ? 1 : RATES[(i+1)%RATES.length];
-  save();
-  document.querySelectorAll('#btn-rate,[data-ratebtn]').forEach(b=>{ b.textContent='⏱ '+ST.rate+'x'; });
-  say('This is the reading speed.');
+  save(); rateSync();
+  /* 正在朗讀就用新速度把這一句重念，不用等到下一句才聽得出差別 */
+  if(spkBusy()) spkRestart(); else say('This is the reading speed.');
 }
 window.cycleRate=cycleRate;
 
@@ -5266,14 +5288,17 @@ RENDER.prog=function(){
    +'<div class="muted" style="margin-top:14px">每日新單字上限</div><div class="chips" style="margin-top:6px">'
    +[8,12,20,30].map(n=>'<button class="chip'+((ST.newPerDay||12)===n?' on':'')+'" onclick="vNewLimit('+n+');go(\'prog\')">'+n+' 個</button>').join('')+'</div>'
    +'<div class="muted" style="margin-top:10px">朗讀速度（各內容頁的 ⏱ 鈕也能直接切換）</div><div class="chips" style="margin-top:6px">'
-   +RATES.map(r=>'<button class="chip'+(Math.abs((Number(ST.rate)||1)-r)<0.05?' on':'')+'" onclick="setRate('+r+')">'+RATE_LB[r]+' '+r+'x</button>').join('')+'</div>'
+   +RATES.map(r=>'<button class="chip" data-ratechip="'+r+'" onclick="setRate('+r+')">'+RATE_LB[r]+' '+r+'x</button>').join('')+'</div>'
    +'<div style="margin-top:14px"><button class="btn gray" onclick="wipe()">清除本機學習紀錄</button></div>'
    +'<div class="muted" style="margin-top:9px;font-size:var(--font-meta)">學習紀錄只存在這台裝置的瀏覽器裡，不會上傳。</div>'
    +'</div>'
 
    + installCard() + oldSiteCard();
 };
-function setRate(r){ ST.rate=r; save(); say('This is the reading speed.',r); go('prog'); }
+function setRate(r){
+  ST.rate=r; save(); rateSync();
+  if(spkBusy()) spkRestart(); else say('This is the reading speed.',r);
+}
 /* 預設字級依螢幕寬度而定：手機拿在手上看需要大一點，桌機整頁掃讀時
    1.15 會讓每一行都變得又大又長，反而累。使用者自己調過就以他的選擇為準。 */
 const DEFAULT_FS = 1;  /* 正文基準 17px（--font-body）後各裝置一致，倍率交給使用者在設定裡調 */
@@ -8069,7 +8094,7 @@ if('serviceWorker' in navigator){
 /* 各分區打開／關閉詳細頁都會經過 RENDER.*，統一在重畫後更新手機返回列的文字 */
 Object.keys(RENDER).forEach(k=>{ const f=RENDER[k]; RENDER[k]=function(){
   const c0=lastCur(), key0=c0&&(c0.tab+':'+c0.id), y0=window.scrollY;
-  const r=f.apply(this,arguments); updMback(); lastPrompt();
+  const r=f.apply(this,arguments); updMback(); lastPrompt(); rateSync();
   /* iOS Safari 換掉整頁內容時可能把捲動歸零：還是同一個內頁就放回原本的位置 */
   const c1=lastCur(), key1=c1&&(c1.tab+':'+c1.id);
   if(key0&&key0===key1&&y0>0){
@@ -8210,6 +8235,72 @@ window.addEventListener('scroll',()=>{
   const now=Date.now(); if(now-lastScrollT<700) return; lastScrollT=now;
   lastTrack();
 },{passive:true});
+/* ===== 朗讀浮動列（手機）=====
+   一開始朗讀就從畫面底部浮出「⏸ 暫停／⏱ 速度／× 停止」，停了就收起來，
+   平常完全不佔版面。電腦／平板用橘色列的 ⏱ 鈕，這條不顯示。 */
+const SPK={text:null,voice:null,pitch:null,cb:null,paused:false,idle:0};
+function spkBusy(){ return !!(readSeq || SPK.paused || (window.speechSynthesis && (speechSynthesis.speaking||speechSynthesis.pending))); }
+function spkRestart(){
+  SPK.paused=false;
+  if(readSeq){ if(readSeq.wd) clearTimeout(readSeq.wd); stepRead(); spkSync(); return; }
+  if(SPK.text) say(SPK.text, null, SPK.cb, SPK.voice, SPK.pitch);
+  spkSync();
+}
+function spkStop(){
+  SPK.paused=false; SPK.text=null;
+  if(typeof stopReadAll==='function' && readSeq) stopReadAll();
+  else if(window.speechSynthesis) speechSynthesis.cancel();
+  document.querySelectorAll('.spkon,.sent.reading').forEach(x=>x.classList.remove('spkon','reading'));
+  spkHide();
+}
+function spkPP(){
+  if(SPK.paused){ /* 繼續：引擎還停在暫停狀態就 resume，否則從這一句重念 */
+    SPK.paused=false;
+    if(window.speechSynthesis && speechSynthesis.paused) speechSynthesis.resume(); else spkRestart();
+    spkSync(); return;
+  }
+  SPK.paused=true;
+  try{ speechSynthesis.pause(); }catch(e){}
+  /* iOS 的 pause() 不一定有效：沒停下來就先取消，按 ▶ 從這一句重念 */
+  setTimeout(()=>{ if(SPK.paused && window.speechSynthesis && !speechSynthesis.paused){
+    if(readSeq&&readSeq.wd) clearTimeout(readSeq.wd); speechSynthesis.cancel(); } },180);
+  spkSync();
+}
+window.spkPP=spkPP; window.spkStop=spkStop;
+function spkEl(){
+  let b=$('spkbar');
+  if(!b){
+    b=document.createElement('div'); b.id='spkbar'; b.setAttribute('role','toolbar'); b.setAttribute('aria-label','朗讀控制');
+    b.innerHTML='<button type="button" class="sk-pp" onclick="spkPP()" aria-label="暫停朗讀">⏸</button>'
+      +'<button type="button" class="sk-rate" id="spk-rate" onclick="cycleRate()" aria-label="朗讀速度">⏱ 1x</button>'
+      +'<button type="button" class="sk-x" onclick="spkStop()" aria-label="停止朗讀">×</button>';
+    document.body.appendChild(b);
+  }
+  return b;
+}
+function spkSync(){
+  const b=$('spkbar'); if(!b) return;
+  const pp=b.querySelector('.sk-pp');
+  pp.textContent=SPK.paused?'▶':'⏸';
+  pp.setAttribute('aria-label',SPK.paused?'繼續朗讀':'暫停朗讀');
+  b.querySelector('#spk-rate').textContent='⏱ '+(Number(ST.rate)||1)+'x';
+}
+function spkShow(){ spkEl().classList.add('on'); SPK.idle=0; spkSync(); }
+function spkHide(){ const b=$('spkbar'); if(b) b.classList.remove('on'); }
+/* 唸完就收起來：句與句之間會有空檔，連續兩次都沒在唸才算結束 */
+setInterval(()=>{
+  const b=$('spkbar'); if(!b||!b.classList.contains('on')) return;
+  if(spkBusy()){ SPK.idle=0; return; }
+  if(++SPK.idle>=2) spkHide();
+},500);
+{ const _say=say;
+  say=function(text,rate,onend,voice,pitchMul){
+    SPK.text=text; SPK.voice=voice; SPK.pitch=pitchMul; SPK.cb=onend; SPK.paused=false;
+    spkShow();
+    return _say.apply(this,arguments);
+  };
+  window.say=say;
+}
 { const _vp=vdPaint; vdPaint=function(){ const r=_vp.apply(this,arguments); lastVideoTrack(); return r; }; }
 { const _vr=vdRender; vdRender=function(){ const r=_vr.apply(this,arguments); lastPromptVideo(); return r; }; }
 
