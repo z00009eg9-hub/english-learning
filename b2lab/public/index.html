@@ -6348,7 +6348,7 @@ function rwDetailHTML(l){
    +'<div class="mr-time">'+esc([l.country,l.cat,l.level,l.min].filter(Boolean).join(' · '))+'</div>'
    +'<div class="bar">'
    +(l.url?'<a class="spk" style="text-decoration:none" href="'+esc(l.url)+'" target="_blank" rel="noopener noreferrer">觀看原影片 ↗</a>':'')
-   +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button></div></div>';
+   +'</div></div>';
   /* 雜誌雙欄（同閱讀頁）：左欄 圖示帶＋情境＋原句＋用法比較＋Speak Up，右欄 Words & Phrases */
   h+='<div class="mag"><div><div class="card">';
   /* 閱讀順序：情境圖片 → Context 摘要 → 看完整情境（選擇性展開）→ 你只要記住 → 原句（有才顯示）→ 延伸例句 → 用法比較 → Speak Up */
@@ -6609,9 +6609,7 @@ function mrPageHTML(ym){
    +'<h2>'+tBack('book')+mon+' 月重點複習</h2>'
    +'<div class="mr-time">根據你的 '+mon+' 月學習狀況整理　·　約 40 分鐘</div>'
    +'<div class="mr-stats">'+statBits.join(' · ')+'</div>'
-   +'<div class="bar">'
-   +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速">⏱ '+(Number(ST.rate)||1)+'x</button>'
-   +'</div></div>'
+   +'</div>'
    +'<div class="mr-hint">優先順序：未閱讀 → 未完成 → 收藏 / 重點內容 → 已完成快速回顧</div>';
 
   /* I. 優先補強 */
@@ -6917,7 +6915,6 @@ function bookHTML(b){
    +'<span class="bar-x">'
    +'<span class="magbadge c2">🔤 '+((b.vocab||[]).length+(b.vocab2||[]).length)+' 個單字</span>'
    +'<span class="magbadge c3">📐 '+(b.grammar||[]).length+' 個句型</span>'
-   +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速（0.6x 慢／0.8x 稍慢／1x 正常）" style="margin-left:auto">⏱ '+(Number(ST.rate)||1)+'x</button>'
    +(b.doc?'<a class="doclink" href="'+esc(b.doc)+'" target="_blank" rel="noopener" title="原始 Google 文件"><span class="dl-ic">📄</span><span class="dl-tx"> 原始 Google 文件 ↗</span></a>':'')
    +'</span>'
    +'<button class="barmore" onclick="bkBarTog(this)" aria-expanded="false" title="更多資訊">⋯</button>'
