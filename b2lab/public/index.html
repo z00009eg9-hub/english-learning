@@ -1410,9 +1410,9 @@ body.cnall #v-book span.cnx{display:inline!important}
   #sidebar .sb-streak .streak-text strong{display:block;font-size:13px;color:#ea580c}
   #sidebar.collapsed .sb-streak .streak-text{width:0;opacity:0}
   /* nav */
-  #sidebar .sb-nav{flex:1;padding:8px;overflow-y:auto;min-height:0}
+  #sidebar .sb-nav{flex:1;display:flex;flex-direction:column;gap:8px;padding:10px 8px;overflow-y:auto;min-height:0}
   #sidebar .sb-nav button{
-    display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;padding:12px;
+    display:flex;align-items:center;gap:10px;width:100%;flex-shrink:0;border:0;background:none;padding:12px;
     font:inherit;font-size:14px;color:#6B7280;cursor:pointer;border-radius:12px;text-align:left;
     transition:background .15s,color .15s;appearance:none;-webkit-appearance:none;
     position:relative;overflow:hidden;white-space:nowrap
@@ -2819,7 +2819,7 @@ function loadLocal(){
       if(old){ raw=old; localStorage.setItem(skey(),old); localStorage.removeItem('b2lab.v1'); }
     }
     if(raw) ST=Object.assign(ST,JSON.parse(raw));
-    const rmap={0.7:0.6, 0.9:1, 0.85:1, 0.55:0.6, 1.1:1.4, 1.25:1.4};
+    const rmap={0.55:0.7, 0.6:0.7, 0.85:0.8, 0.9:1, 1.1:1, 1.2:1, 1.25:1, 1.4:1};
     if(rmap[ST.rate]!==undefined) ST.rate=rmap[ST.rate];
   }catch(e){}
 }
@@ -3768,12 +3768,13 @@ function wpFlash(n){
 }
 window.wpFlash=wpFlash;
 
-/* 朗讀語速快速切換：0.8x ↔ 1x ↔ 1.2x（進度分頁的語速設定仍可選慢／快） */
+/* 朗讀語速：全站共用這三段（進度分頁與各內頁的 ⏱ 鈕都用同一組，才不會互相覆蓋） */
+const RATES=[0.7,0.8,1];
+const RATE_LB={0.7:'慢',0.8:'稍慢',1:'正常'};
 function cycleRate(){
-  const seq=[0.8,1,1.2];
   const cur=Number(ST.rate)||1;
-  const i=seq.findIndex(r=>Math.abs(r-cur)<0.05);
-  ST.rate = i<0 ? 1 : seq[(i+1)%seq.length];
+  const i=RATES.findIndex(r=>Math.abs(r-cur)<0.05);
+  ST.rate = i<0 ? 1 : RATES[(i+1)%RATES.length];
   save();
   document.querySelectorAll('#btn-rate,[data-ratebtn]').forEach(b=>{ b.textContent='⏱ '+ST.rate+'x'; });
   say('This is the reading speed.');
@@ -5264,8 +5265,8 @@ RENDER.prog=function(){
    +[['0','一般'],['1','護眼']].map(([v,t])=>'<button class="chip'+((ST.eye?'1':'0')===v?' on':'')+'" onclick="setEye('+v+')">'+t+'</button>').join('')+'</div>'
    +'<div class="muted" style="margin-top:14px">每日新單字上限</div><div class="chips" style="margin-top:6px">'
    +[8,12,20,30].map(n=>'<button class="chip'+((ST.newPerDay||12)===n?' on':'')+'" onclick="vNewLimit('+n+');go(\'prog\')">'+n+' 個</button>').join('')+'</div>'
-   +'<div class="muted" style="margin-top:10px">朗讀速度</div><div class="chips" style="margin-top:6px">'
-   +[['0.6','慢'],['1','正常'],['1.4','快']].map(([r,t])=>'<button class="chip'+(String(ST.rate)===r?' on':'')+'" onclick="setRate('+r+')">'+t+' '+r+'x</button>').join('')+'</div>'
+   +'<div class="muted" style="margin-top:10px">朗讀速度（各內容頁的 ⏱ 鈕也能直接切換）</div><div class="chips" style="margin-top:6px">'
+   +RATES.map(r=>'<button class="chip'+(Math.abs((Number(ST.rate)||1)-r)<0.05?' on':'')+'" onclick="setRate('+r+')">'+RATE_LB[r]+' '+r+'x</button>').join('')+'</div>'
    +'<div style="margin-top:14px"><button class="btn gray" onclick="wipe()">清除本機學習紀錄</button></div>'
    +'<div class="muted" style="margin-top:9px;font-size:var(--font-meta)">學習紀錄只存在這台裝置的瀏覽器裡，不會上傳。</div>'
    +'</div>'
@@ -6879,7 +6880,7 @@ function bookHTML(b){
    +'<span class="bar-x">'
    +'<span class="magbadge c2">🔤 '+((b.vocab||[]).length+(b.vocab2||[]).length)+' 個單字</span>'
    +'<span class="magbadge c3">📐 '+(b.grammar||[]).length+' 個句型</span>'
-   +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速（0.8x 慢速／1x 正常／1.2x 快速）" style="margin-left:auto">⏱ '+(Number(ST.rate)||1)+'x</button>'
+   +'<button class="spk" data-ratebtn onclick="cycleRate()" title="切換朗讀語速（0.7x 慢／0.8x 稍慢／1x 正常）" style="margin-left:auto">⏱ '+(Number(ST.rate)||1)+'x</button>'
    +(b.doc?'<a class="doclink" href="'+esc(b.doc)+'" target="_blank" rel="noopener" title="原始 Google 文件"><span class="dl-ic">📄</span><span class="dl-tx"> 原始 Google 文件 ↗</span></a>':'')
    +'</span>'
    +'<button class="barmore" onclick="bkBarTog(this)" aria-expanded="false" title="更多資訊">⋯</button>'
