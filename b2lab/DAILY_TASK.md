@@ -78,6 +78,8 @@ date +%Y-%m-%d                # 今天日期（用 UTC 即可，排程在當地�
 - `b2lab/public/data-reading.js`（文章的寫法範本）
 - `b2lab/public/data-grammar.js`（文法單元的寫法範本）
 - `b2lab/public/data-a2.js`（**A2 篇的寫法範本，寫 Tom 那篇前一定要看**）
+- `b2lab/public/data-listen.js` 的 `notes[]`（**聽力對話的寫法範本**；`lessons[]` 是舊制、已經空了）
+- `b2lab/public/data-gvplus.js`（視覺化教材的寫法範本）
 
 **若 `lastRun` 已經等於今天** → 什麼都不要改，回報「今天已產生過」並結束。
 
@@ -364,153 +366,70 @@ console.log('OK');"
 
 ⚠️ 只能畫**橫幅**。文章裡如果有明確數字想畫成圖表，不要自己編數據——沒有把握就只做橫幅。
 
-### 3.6 追加**四課聽力**（A2 / B1 / B1+ / B2）→ 都插入 `public/data-listen.js` 的 `lessons` 陣列**最前面**
+### 3.6 追加**四課聽力**（A2 / B1 / B1+ / B2）→ 都插入 `public/data-listen.js` 的 `notes` 陣列**最前面**
 
-> **⭐ 2026-08-15 起：聽力以「真人 vlog」為主。**
-> 學習者要求每週二、五的例行更新都以 vlog 為主要素材——也就是真人對著鏡頭講話、
-> 街頭訪問、一日紀錄這一類**真實語速、真實口音**的影片，而不是教室錄製的教材對話。
-> VOA 那種棚內教材只當**備援**：某個程度真的找不到合格 vlog 時才用，並在回報裡說明。
+> **⭐ 2026-08-19 起：聽力一律是本站原創的 TTS 對話，不用外部影片。**
+> 在這之前試過 VOA 棚內教材，也試過 YouTube 真人 vlog，兩種都踩到同樣的問題：
+> 影片會下架、字幕抓不到（`youtube-transcript-api` 動不動回 `IpBlocked`）、
+> 版權又不允許把逐字稿放進站內，結果有些課只收得到影片，沒有逐字稿、沒有理解題。
+>
+> 現在改成**自己寫對話**：逐字稿直接寫在課程物件的 `script` 欄位裡，
+> 網站用裝置內建語音（TTS）朗讀，離線也能練，每一課都一定有完整中譯與理解題。
+>
+> 所以這一步**不要上 YouTube 找影片**，也不要寫 `yt`／`source`／`sourceUrl`／`keyLines`／
+> `cc`／`needsSubs` 這些欄位——index.html 已經不讀它們了（`lessonHTML()` 的判斷是：
+> 沒有 `yt` 而且有 `script`，就走 TTS 跟讀版面）。`data-scripts.js` 也不用動，見 3.6.1。
 
 網站「今日」分頁會列出**該學習者程度區間內、當天所有程度**的聽力，所以每次執行要補四課：
 
-| 程度 | 首選（vlog） | 備援 | id |
+| 程度 | id | 對話長度 | 難度定位 |
 |---|---|---|---|
-| `A2` | 慢速、畫面對得上動作的日常 vlog（作息、開箱、料理） | VOA Let's Learn English **Level 1** | `"dl"+YYYYMMDD+"a2"` |
-| `B1` | 兩人對談式 vlog、簡單的街頭訪問 | VOA Let's Learn English **Level 2**（前段課次） | `"dl"+YYYYMMDD+"b1"` |
-| `B1+` | 街頭訪問（多種口音）、旅遊或工作日常 vlog | VOA Let's Learn English **Level 2**（後段課次） | `"dl"+YYYYMMDD+"b1p"` |
-| `B2` | 觀點型 vlog、長一點的訪談 | TED-Ed 或 VOA *Everyday Grammar* / *News Words* | `"dl"+YYYYMMDD+"b2"` |
+| `A2` | `"dl"+YYYYMMDD+"a2"` | 12–16 句 | 短句、最基本的生活場景，句子 6–12 字 |
+| `B1` | `"dl"+YYYYMMDD+"b1"` | 14–18 句 | 兩人一來一往，可以有轉折、比較、原因 |
+| `B1+` | `"dl"+YYYYMMDD+"b1p"` | 16–20 句 | 聊當天那則新聞，可用被動語態與關係子句 |
+| `B2` | `"dl"+YYYYMMDD+"b2"` | 16–20 句 | 交換觀點，句子較長、語氣有層次 |
 
 - **四課都必須有 `date:"YYYY-MM-DD"` 欄位**（今天日期），網站才會把它當成今天的新聽力顯示。
-- 四課的 `level` 必須剛好是 A2、B1、B1+、B2 各一個。
-- vlog 課要加上 `kind:"vlog"` 與 `cc:true` 兩個欄位（網站靠它顯示「🎥 真人 vlog」標籤，
-  以及「字幕請按播放器的 CC」那張提示卡）。
-- 用備援的 VOA／TED-Ed 時不要加這兩個欄位，照原本的方式處理（含站內逐字稿）。
-- `usedVoa` 一律拿來記錄「今天用掉的素材」避免重複：vlog 用 `"YT-<影片ID>"`，
-  VOA 用 `"L1-9"`、TED-Ed 用 `"TED-<slug>"`。
+- 四課的 `level` 必須剛好是 A2、B1、B1+、B2 各一個，`kind` 一律 `"note"`。
+- 四課跟當天四篇文章走**同一個情境**，主角只用 Tom 與 Anita
+  （配角如同事、店員、房東可自由取名，但不要叫 Amy——見開頭的人物設定）。
+- **不用管 `usedVoa`**：沒有外部素材要防重複，那個欄位保留現值不動
+  （只有未來真的改回外部影片時才需要登記）。
 
-#### 3.6.0 vlog 怎麼找、怎麼驗（**每一支都要跑完這四關**）
-
-**第一關：找候選。** 抓 YouTube 搜尋結果頁，從 `ytInitialData` 裡撈 `videoRenderer`
-（含 `videoId` / 標題 / 頻道 / 長度）。查詢字串例如
-`easy english street interview daily routine`、`learn english vlog a day in my life`。
-
-**第二關：頻道與長度。** 只用教英文或做英語街訪的正派頻道，例如
-BBC Learning English、Easy Languages / Easy English、Learn English with Bob the Canadian、
-Speak English With Vanessa、English with Lucy、VOA。長度取 **2–10 分鐘**。
-**娛樂型 vlog、個人生活頻道、來源不明的頻道一律不要。**
-
-**第三關：影片真的存在。** oEmbed 驗證，拿到真實 `title` 與 `author_name`：
-
-```bash
-curl -s "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=<ID>&format=json"
-```
-
-**第四關：一定要有「人工上的」英文字幕**（不能是機器自動聽打，auto 的錯字太多）：
-
-```bash
-python -m pip install --quiet youtube-transcript-api
-python -c "
-from youtube_transcript_api import YouTubeTranscriptApi
-api=YouTubeTranscriptApi()
-tl=api.list('<ID>')
-for t in tl:
-    if t.language_code.startswith('en'):
-        print(t.language_code, 'AUTO' if t.is_generated else 'MANUAL', len(t.fetch().to_raw_data()))
-"
-```
-
-印出 **MANUAL** 才算過關；只有 AUTO 或完全沒有就換一支。
-（注意語言代碼可能是 `en-GB`／`en-CA`，`languages` 要一起帶進去。）
-
-> ⚠️ 這個 API 有時會回 `IpBlocked`——短時間查太多支就會被 YouTube 暫時擋掉。
->
-> **被擋到時的做法（學習者指定）：影片照樣先收進來，字幕之後再補。**
-> 第四關過不了**不代表要放棄這一課**，只要第一到第三關過了（頻道正派、長度合適、
-> oEmbed 驗證影片真的存在），就照常寫進 `data-listen.js`，並且：
->
-> - 加上 `needsSubs:true`，網站會在該課顯示「⏳ 字幕待補」的標籤與說明卡。
-> - `pre`／`keyLines`／`questions` **一律留空陣列**——沒讀過字幕就不要憑標題編內容。
-> - `intro`／`tip` 照樣自己寫（可以根據影片標題、頻道、主題寫，不要宣稱影片裡有什麼具體句子）。
-> - 在回報裡列出「這幾課字幕待補」，學習者會自己補上。
->
-> 補字幕的方式：把中英對照寫進 `public/data-scripts.js` 的
-> `window.LISTEN_SCRIPTS["課程 id"]`（格式見 3.6.1），然後把該課的 `needsSubs` 拿掉。
-> 站內一有逐字稿，「字幕待補」提示就會自動消失、換成逐字稿面板。
-
-#### 3.6.0.1 vlog 的版權處理（**和 VOA 不一樣，務必分清楚**）
-
-BBC、Easy Languages 這些頻道的影片**不是公共領域**，所以：
-
-- **不可以**把它們的逐字稿寫進 `public/data-scripts.js`。vlog 課不做站內逐字稿，
-  改用 `cc:true` 讓網站提示學習者按播放器的 CC 開啟頻道自己上的字幕。
-- 字幕只拿來**當作備課用的參考**：你要先讀過字幕才知道影片實際講了什麼，
-  然後用它來寫**你自己原創的** `intro`、`tip`、`pre`、`questions`。
-- `keyLines` 最多引用 **6 句**、每句盡量短，屬於教學用的少量引用；不要整段搬。
-- `source` 寫頻道名稱（例：`"BBC Learning English（YouTube 官方頻道）"`），
-  `sourceUrl` 填該影片的 YouTube 連結。
-- **沒有實際讀過字幕就不要寫 `pre`／`keyLines`／`questions`**——一律留空陣列，
-  並加上 `needsSubs:true`。留空的話網站只會顯示影片、導讀與 CC 提示，不會壞掉，
-  學習者之後會自己補中譯字幕。**不要因為讀不到字幕就放棄整支影片。**
-
-**⚠️ 影片鐵則（做不到就跳過那一課，不要硬編）**
-
-1. **YouTube 影片 ID 一定要是真的。** 先 WebFetch 該課的 VOA 課程頁（`learningenglish.voanews.com` 上的 *Let's Learn English* 對應課次），從頁面裡拿到它嵌入的 YouTube 影片 ID，**再用 oEmbed 驗證存在**：
-   ```bash
-   curl -s "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=<ID>&format=json"
-   ```
-   有回傳 JSON（含 `title`、`author_name`）才算通過；查不到就換下一課，**絕對不要自己猜 ID**。
-2. **對白只能引用該頁面上公開的逐字稿**（VOA 是美國政府出版物／公共領域；TED-Ed 為 CC BY-NC-ND）。`keyLines` 取幾句真實對白即可；`intro`、`tip`、`pre`、`questions` 全部自己原創撰寫。
-3. 理解題的答案必須真的能在逐字稿裡找到依據，`expl` 要引用對白。**沒把握答案就換一課**，不要編。
-
-**B2 那一課的專用規則**
-
-VOA *Let's Learn English* 只有 Level 1 與 Level 2，沒有更高的級別，所以 B2 要另外找：
-
-- 優先用 **TED-Ed**（`ed.ted.com`）的科普短片，主題盡量呼應當天四篇文章的主題。
-  `source:"TED-Ed（Creative Commons BY-NC-ND 4.0）"`、`sourceUrl` 填該課程頁網址。
-- 次選 VOA 的 *Everyday Grammar TV* 或 *News Words* 系列（一樣是公共領域）。
-- 一樣要 oEmbed 驗證 YouTube ID，`usedVoa` 用 `"TED-<slug>"` 這種代號記錄避免重複。
-- **如果找不到能驗證的 B2 影片，就跳過 B2 那一課**，其他三課照常寫，並在回報時說明。
-
-物件欄位**完全照 `public/data-listen.js` 現有的一筆**（先讀一筆當範本），另外：
+物件欄位**完全照 `public/data-listen.js` 的 `notes[]` 現有的一筆**（先讀一筆當範本）：
 
 | 欄位 | 說明 |
 |---|---|
-| `id` | 見上方 id 命名規則表 |
-| `date` | `"YYYY-MM-DD"`（今天；一定要有，網站靠它挑出今天的新聽力） |
-| `level` | `"A2"` / `"B1"` / `"B1+"` / `"B2"`（四課各一） |
-| `yt` | 上面驗證過的真實 YouTube ID |
-| `minutes` | 影片長度（分鐘，取整數） |
-| `title` / `titleCn` | 該課英文標題與中譯 |
-| `series` | 例 `"VOA Let's Learn English · Level 2 · Lesson 5"` |
-| `topic` / `focus` | 主題與這課的語言焦點（一句話） |
-| `source` | VOA 課：`"VOA Learning English（美國之音，美國政府出版物／公共領域）"`；TED-Ed：`"TED-Ed（Creative Commons BY-NC-ND 4.0）"` |
-| `sourceUrl` | 該課程頁網址 |
-| `intro` / `tip` | 中文導讀與聽力策略提示（原創） |
-| `pre` | 5–7 個 `{w, ipa, cn, def}` 聽前單字，`def` 用簡單英文 |
-| `keyLines` | 5–7 句 `{en, cn}`，`en` 取自真實對白、`cn` 自己翻 |
+| `id` / `date` / `level` | 見上表；`date` 是今天 |
+| `minutes` | 朗讀大約幾分鐘（取整數；A2 約 2、B1 約 3、B1+／B2 約 4） |
+| `kind` | 一律 `"note"` |
+| `title` / `titleCn` | 這一課的英文標題與中譯 |
+| `series` | `"本站自製聽力 · <當日主題>主題"` |
+| `topic` | 一個 emoji 加一句情境，例 `"🚆 下班前聊星期天的火車票"` |
+| `focus` | 這一課的語言焦點（一句話，跟當天的文法點對齊） |
+| `intro` / `tip` | 中文導讀與聽力策略提示，兩個都自己原創；`tip` 要寫「第一次聽抓什麼、第二次聽注意什麼」 |
+| `pre` | 5–7 個 `{w, ipa, pos, cn, def}` 聽前單字，`def` 用簡單英文。音標規則完全比照第 2 步的 `ipa` 欄位（美式 Cambridge、捲舌 r）；**同一個字若已出現在任何 `public/data-*.js`，先 grep 沿用完全相同的音標字串**，通常直接沿用當天文章的 `target` 就好 |
+| `script` | 整份對話，每句 `{sp, en, cn}`：`sp` 是說話者名字，`en` 是台詞，`cn` 是口語中譯。**這就是站內逐字稿**，不要另外寫到 `data-scripts.js` |
 | `questions` | 4–5 個 `{q, qCn, opts, optsCn, ans, expl}`，格式同文章題（含中譯欄位規則），`ans` 為 0-based |
 
-#### 3.6.1 公共領域的那幾課要補逐字稿到 `public/data-scripts.js`
+**寫對話的要求**
 
-> 這一節**只適用於 VOA／TED-Ed 這種可以合法轉錄的備援課**。
-> `kind:"vlog"` 的課**跳過這一節**，改用 `cc:true`（見 3.6.0.1）。
+- 要像真人在講話：有人問、有人答、有人插話或抱怨，不要寫成一人一大段的朗讀稿。
+- 每一課至少放三個可以當理解題答案的**具體事實**（數字、時間、地點、原因）。
+- 當天的文法點要在對話裡自然出現好幾次，但**不要把文法頁或文章的例句照搬過來**，
+  換情境重寫（同一句完整例句不要跨檔重複）。
+- 理解題的答案一定要在 `script` 裡找得到依據，`expl` 要引用那一句原文。
+- **至少有一題考當天的文法點**（像第 2 步的文章題那樣）。
+- 所有中文一律繁體中文台灣用語。
 
-網站的聽力課會把影片黏在最上面、**下面接整份逐字稿（英文＋中譯）**，資料來源是
-`public/data-scripts.js` 的 `window.LISTEN_SCRIPTS[課程 id]`：
+#### 3.6.1 `public/data-scripts.js` 現在是空的，不用動
 
-```js
-"dl20260814":[
-  {sp:"Anna", en:"Ms. Weaver is giving new assignments out.", cn:"Weaver 女士正在分派新任務。"},
-  ...
-]
-```
-
-- **英文一律取自該課程頁（`sourceUrl`）的 Conversation／Transcript 段落，不可自己編。**
-  抓法：下載課程頁 HTML，去掉標籤後撈出 `說話者: 台詞` 這種行。
-- `sp` 是說話者名字（沒有就省略）、`cn` 由自己翻成口語中文。
-- 抓不到逐字稿、又不是 vlog 的影片就**不要選它當今天的聽力**，改挑另一支。
-- 沒有寫進 `data-scripts.js` 又沒有 `cc:true` 的課，網站只會顯示影片與關鍵句，不會有字幕區。
+> 這個檔原本放 VOA／TED-Ed 這類公共領域影片的逐字稿（`window.LISTEN_SCRIPTS[課程 id]`）。
+> 2026-08-19 之後聽力全部自製、逐字稿寫在課程物件的 `script` 欄位裡，所以它目前是空的，
+> 只保留給未來真的改回外部影片時使用。
+> **每日流程不需要改它，第 6 步也不用 `git add` 它。**
+>
+> 網站另外還有一個 `LSUBS` 機制（學習者自己貼上的時間軸字幕），也不由這個流程產生。
 
 ### 3.7 配圖是硬性要求
 
@@ -527,7 +446,8 @@ VOA *Let's Learn English* 只有 Level 1 與 Level 2，沒有更高的級別，�
 - `usedTitles` 加入今天**四篇**的標題
 - `topicRotation` 把用掉的主題移到陣列尾端（保持輪替）
 - `usedA2Topics` 加入今天 A2 篇用掉的主題（若已包含全部 `a2Topics`，就清空重新輪）
-- `usedVoa` 加入今天補的**四課**代號（例 `"L1-9"`、`"L2-5"`、`"L2-6"`、`"TED-how-do-hurricanes-form"`）。**某一課若因為找不到／驗證不過而跳過，就只加成功的那幾課、缺的下次再補。**
+- `usedVoa` **不要動**：2026-08-19 起聽力全部是本站原創 TTS 對話，沒有外部素材要防重複，
+  這個欄位保留現值即可（只有未來真的改回外部影片時才需要登記代號）。
 
 ### 5. 驗證（**沒過就不要 commit**）
 
@@ -648,48 +568,53 @@ todays.forEach(a=>{ if(!ART[a.id]||!ART[a.id].svg) throw a.id+' 沒有配圖（d
 console.log('art ok', todays.map(a=>a.id).join(' | '));"
 ```
 
-也驗證今天補的聽力（每課都要有今天日期；沒過就不要 commit 聽力那步的改動）：
+也驗證今天補的四課聽力（沒過就不要 commit 聽力那步的改動）。
+⚠ 2026-10-06 修正：這段腳本以前讀的是 `window.LISTEN.lessons`，但 2026-08-19 起聽力
+改成本站原創對話、放在 `notes[]`，舊的寫法會直接 `TypeError`。現在讀 `notes`：
 
 ```bash
 cd b2lab/public
-node -e "global.window={};require('./data-listen.js');require('./data-scripts.js');
-const SC=window.LISTEN_SCRIPTS||{};
-const L=window.LISTEN.lessons, TODAY=new Date().toISOString().slice(0,10);
+node -e "global.window={};require('./data-listen.js');
+const L=window.LISTEN.notes||[], TODAY=new Date().toISOString().slice(0,10);
+const LV=['A2','B1','B1+','B2'];
 const todays=L.filter(x=>x.date===TODAY);
-if(todays.length<3) throw '今天聽力至少要有 A2/B1/B1+ 三課，實際 '+todays.length+' 課';
-['A2','B1','B1+'].forEach(l=>{ if(todays.filter(x=>x.level===l).length!==1) throw '聽力缺少或重複 '+l+' 這一級'; });
-if(todays.filter(x=>x.level==='B2').length>1) throw '聽力 B2 重複';
-if(!todays.some(x=>x.level==='B2')) console.warn('⚠ 今天沒有 B2 聽力（可接受，但要在回報裡說明原因）');
+if(todays.length!==4) throw '今天聽力應該有四課（A2/B1/B1+/B2），實際 '+todays.length+' 課';
+LV.forEach(l=>{ if(todays.filter(x=>x.level===l).length!==1) throw '聽力缺少或重複 '+l+' 這一級'; });
+const MIN={'A2':12,'B1':14,'B1+':16,'B2':16};
 todays.forEach(x=>{
-  if(!/^dl\d{8}(a2|b1|b1p|b2)?$/.test(x.id)) throw 'id 格式錯: '+x.id;
-  if(!/^[A-Za-z0-9_-]{11}$/.test(x.yt)) throw 'YouTube ID 格式怪怪的: '+x.yt;
-  if(x.kind==='vlog'){
-    if(!x.cc) throw x.id+' 是 vlog 但沒有 cc:true';
-    if(x.keyLines.length>6) throw x.id+' vlog 引用超過 6 句（版權）';
-    // 自動流程不轉錄 vlog 逐字稿；但學習者自己補上的不算錯，只提醒
-    if((SC[x.id]||[]).length && x.needsSubs) console.warn('⚠ '+x.id+' 已經有逐字稿了，可以把 needsSubs 拿掉');
-    if(!(SC[x.id]||[]).length && !x.needsSubs) throw x.id+' 沒有逐字稿也沒有標 needsSubs:true';
-    if(!x.keyLines.length && !x.needsSubs) throw x.id+' 沒有關鍵句也沒有標 needsSubs:true';
-  }else{
-    if(!x.keyLines.length||x.questions.length<4) throw x.id+' 聽力內容不完整';
-    if(!(SC[x.id]||[]).length) throw x.id+' 沒有逐字稿（data-scripts.js）';
-  }
-  x.questions.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw x.id+' ans 索引錯誤: '+q.q});
+  if(!/^dl\d{8}(a2|b1|b1p|b2)$/.test(x.id)) throw 'id 格式錯: '+x.id;
+  if(x.kind!=='note') throw x.id+' kind 要是 \'note\'（本站自製 TTS 對話），實際 '+x.kind;
+  ['date','level','minutes','title','titleCn','series','topic','focus','intro','tip'].forEach(k=>{
+    if(!x[k]) throw x.id+' 缺欄位 '+k; });
+  if(x.yt||x.sourceUrl||x.keyLines||x.cc||x.needsSubs) throw x.id+' 不該有外部影片的欄位（yt/sourceUrl/keyLines/cc/needsSubs）';
+  const sc=x.script||[];
+  if(sc.length<MIN[x.level]) throw x.id+' 對話不足 '+MIN[x.level]+' 句，實際 '+sc.length;
+  sc.forEach((s,i)=>{ if(!s.en||!s.cn) throw x.id+' 第 '+(i+1)+' 句缺英文或中譯'; });
+  if(new Set(sc.map(s=>s.sp).filter(Boolean)).size<2) throw x.id+' 對話至少要有兩個說話者';
+  const pre=x.pre||[];
+  if(pre.length<5||pre.length>7) throw x.id+' 聽前單字要 5–7 個，實際 '+pre.length;
+  pre.forEach(t=>{ if(!t.w||!t.ipa||!t.cn||!t.def) throw x.id+' 聽前單字欄位不全: '+t.w;
+    if(!/^\/.*\/$/.test(t.ipa)) throw x.id+' 音標要用 /…/ 包起來: '+t.w+' '+t.ipa; });
+  if((x.questions||[]).length<4) throw x.id+' 理解題不足 4 題';
+  x.questions.forEach(q=>{
+    if(!q.qCn) throw x.id+' 題目缺 qCn 中譯: '+q.q;
+    if(q.ans<0||q.ans>=q.opts.length) throw x.id+' ans 索引錯誤: '+q.q;
+  });
 });
-const yts=todays.map(x=>x.yt);
-if(new Set(yts).size!==yts.length) throw '今天有兩課用到同一支影片';
-console.log('listen ok', todays.map(x=>x.id+'('+x.level+','+x.yt+')').join(' | '));"
+const ids=todays.map(x=>x.id);
+if(new Set(ids).size!==ids.length) throw '今天有重複的聽力 id';
+console.log('listen ok', todays.map(x=>x.id+'('+x.level+', '+x.script.length+'句, '+x.questions.length+'題)').join(' | '));"
 ```
 
 ### 6. commit 並 push
 
 ```bash
-git add b2lab/public/data-daily.js b2lab/public/data-art.js b2lab/public/data-listen.js b2lab/public/data-scripts.js b2lab/daily-state.json
+git add b2lab/public/data-daily.js b2lab/public/data-gvplus.js b2lab/public/data-art.js b2lab/public/data-listen.js b2lab/daily-state.json
 git commit -m "Daily content YYYY-MM-DD: 4 levels (A2/B1/B1+/B2) — <當日主題>"
 git push origin main
 ```
 
-新文法單元的視覺化教材寫在 `b2lab/public/data-gvplus.js`，有改就要一起 `git add`。
+上面五個檔是每次執行**一定**會動到的。`data-scripts.js` 不要加（見 3.6.1，它現在是空的）。
 另外，如果第 5 步的 `check-ipa.js` 逼你回頭去改其他資料檔的音標
 （例如今天的字跟 `data-book.js`／`data-notes.js` 既有寫法不一致），
 那幾個檔也要一起 `git add`——半套的音標修改會讓下一次執行直接卡在同一個檢查。
@@ -701,7 +626,7 @@ push 之後 `.github/workflows/deploy-b2lab.yml` 會自動部署到 https://engl
 
 用繁體中文簡短回報，**依程度列成一張表**：
 
-| 程度 | 文章（標題／字數／類型） | 文法單元（中文名／syllabus 編號） | 聽力（vlog 或備援／頻道／YouTube ID） |
+| 程度 | 文章（標題／字數／類型） | 文法單元（中文名／syllabus 編號） | 聽力（標題／對話句數／題數） |
 |---|---|---|---|
 | A2 | | | |
 | B1 | | | |
@@ -714,10 +639,12 @@ push 之後 `.github/workflows/deploy-b2lab.yml` 會自動部署到 https://engl
 - **§1.5 網路自我檢查的結果**：WebFetch 能用（用原文取材）或仍被擋（退回 WebSearch 摘要）。
   若仍被擋，明確寫一行「⚠ WebFetch 仍被擋」提醒使用者確認網路政策。
 - `usedUnits` 與 `usedUnitsTom` 各還剩幾個單元沒教
-- 四張橫幅各用了哪套配色與哪三個圖示
-- 有跳過的項目（例如 B2 聽力找不到可驗證的影片）要說明原因
-- **另外列一份「⏳ 字幕待補」清單**：哪幾課因為抓不到字幕（IpBlocked 或影片沒有人工字幕）
-  只收了影片，等學習者補中譯。附上課程 id 與 YouTube 連結，方便直接點開看。
+- 四張橫幅各用了哪套配色與哪**五個**圖示
+- 四課聽力各用了哪個情境，以及當天的文法點在對話裡怎麼出現
+- 有跳過或沒照任務書做的項目要說明原因（四個程度是硬性要求，不能跳）
+
+（舊制的「⏳ 字幕待補」清單已經不需要了：2026-08-19 起聽力全部自製，
+逐字稿寫在 `script` 欄位，不會有只收影片、等人補字幕的情況。）
 
 最後提醒一句：Tom 會看到 A2／B1／B1+ 三份，Anita 會看到 B1／B1+／B2 三份。
 
