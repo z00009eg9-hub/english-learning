@@ -33,6 +33,731 @@
    ============================================================ */
 window.GVPLUS = {
 
+/* ---------- 2026-10-06 每日文法（have 與 have got；used to + 原形） ---------- */
+"dg20261006a2": {
+  "vis": true,
+  "oneLine": "have 和 have got 說的是同一件事——差別不在意思，而在問句和否定句要怎麼轉。",
+  "map": {
+    "when": "想說「我有一個東西、我有家人、我有某個特徵」的時候",
+    "why": "中文一個「有」字包辦所有狀況，英文卻分成兩套句型，問句和否定句的做法完全不同",
+    "form": "主詞 + have／has + 名詞　|　主詞 + have／has got + 名詞"
+  },
+  "visual": {
+    "type": "cols",
+    "cap": "左欄是 have 這條路：問句和否定句要請 do／does 幫忙。中欄是 have got 這條路：have 自己跳到句首就好。右欄是完全不同的第三種 have——它的意思是「做」，所以永遠不加 got。看一個句子屬於哪一欄，就照那一欄的規則轉。",
+    "cols": [
+      {
+        "tag": "HAVE",
+        "tagCn": "擁有，中性寫法",
+        "tone": 1,
+        "items": [
+          {
+            "en": "I have a bus pass.",
+            "cn": "我有一張公車卡。",
+            "nt": "肯定句"
+          },
+          {
+            "en": "I do not have a bus pass.",
+            "cn": "我沒有公車卡。",
+            "nt": "否定要加 do not"
+          },
+          {
+            "en": "Do you have a bus pass?",
+            "cn": "你有公車卡嗎？",
+            "nt": "問句要加 Do"
+          }
+        ]
+      },
+      {
+        "tag": "HAVE GOT",
+        "tagCn": "擁有，口語寫法",
+        "tone": 2,
+        "items": [
+          {
+            "en": "I have got a bus pass.",
+            "cn": "我有一張公車卡。",
+            "nt": "意思完全一樣"
+          },
+          {
+            "en": "I have not got a bus pass.",
+            "cn": "我沒有公車卡。",
+            "nt": "否定不用 do"
+          },
+          {
+            "en": "Have you got a bus pass?",
+            "cn": "你有公車卡嗎？",
+            "nt": "Have 自己跑到最前面"
+          }
+        ]
+      },
+      {
+        "tag": "HAVE = DO",
+        "tagCn": "做某件事，不能加 got",
+        "tone": 3,
+        "items": [
+          {
+            "en": "I have a shower before work.",
+            "cn": "我上班前洗澡。",
+            "nt": "have 在這裡是「洗」"
+          },
+          {
+            "en": "I do not have a shower at night.",
+            "cn": "我晚上不洗澡。",
+            "nt": "動作的 have 只能走 do 這條路"
+          },
+          {
+            "en": "Do you have a shower every day?",
+            "cn": "你每天洗澡嗎？",
+            "nt": "一樣要加 Do，不可以用 Have you got"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "own",
+      "icon": "key",
+      "title": "身上有什麼",
+      "titleCn": "東西、卡片、鑰匙",
+      "ask": "怎麼說「我有兩把鑰匙」？",
+      "en": "I have got two keys for the front door.",
+      "cn": "我有兩把前門的鑰匙。",
+      "why": "鑰匙是東西，是最典型的「擁有」，所以 have 和 have got 都通。選 have got 只是因為講話時比較順；如果這句話要寫進作文，用 I have two keys 反而更穩。意思沒有差別，不用糾結哪一個比較高級。"
+    },
+    {
+      "key": "family",
+      "icon": "house",
+      "title": "家裡有幾個人",
+      "titleCn": "家人也算擁有",
+      "ask": "為什麼講家人也可以用 have got？",
+      "en": "My cousin has got three children.",
+      "cn": "我表姊有三個小孩。",
+      "why": "英文的「擁有」範圍比中文想的大：東西、家人、朋友、身體特徵、生病都歸在這一類，因為它們講的都是一個不會動的狀態。主詞是 My cousin，等於 she，所以 have 要變成 has，got 不用跟著變。"
+    },
+    {
+      "key": "ask",
+      "icon": "bubble",
+      "title": "開口問別人",
+      "titleCn": "兩種問法選一種",
+      "ask": "問「你有傘嗎」有幾種說法？",
+      "en": "Have you got an umbrella in your bag?",
+      "cn": "你包包裡有傘嗎？",
+      "why": "兩種都可以：Have you got an umbrella 或 Do you have an umbrella。重點是不要混在一起變成 Do you have got。選了哪一條路，否定句和短答也要走同一條——Have 開頭就回答 Yes, I have，Do 開頭就回答 Yes, I do。"
+    },
+    {
+      "key": "nogot",
+      "icon": "cross",
+      "title": "這時候不能加 got",
+      "titleCn": "have 當「做」的時候",
+      "ask": "哪一種 have 絕對不能加 got？",
+      "en": "We have a short break at ten thirty.",
+      "cn": "我們十點半有一段短休息。",
+      "why": "這裡的 have 不是擁有，而是「休息」這個動作本身。判斷方法很簡單：把中文念出來，如果你說的是「吃、洗、休息、玩得開心」，那就是動作，got 一加上去意思就壞了。只有中文說「有」的時候才可以加 got。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你想問同學：你有腳踏車嗎？"
+    },
+    {
+      "label": "先確認是哪一種 have",
+      "text": "中文說的是「有」，不是「做」，所以這是擁有，兩種路都可以走。"
+    },
+    {
+      "label": "走 have 這條路",
+      "text": "問句要請 Do 幫忙：Do you have a bicycle?"
+    },
+    {
+      "label": "走 have got 這條路",
+      "text": "不用 Do，直接把 Have 搬到最前面：Have you got a bicycle?"
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "最常見的錯是把兩條路各走一半，寫成 Do you have got a bicycle。看到句子裡同時有 Do 和 got，就知道要刪掉一個。"
+    }
+  ],
+  "comparison": {
+    "title": "擁有的 have vs 做事的 have",
+    "left": {
+      "tag": "OWN",
+      "tagCn": "擁有：可以加 got",
+      "icon": "star",
+      "head": "something is yours",
+      "headCn": "某個東西是你的",
+      "en": "Tom has got a blue backpack.",
+      "cn": "Tom有一個藍色背包。",
+      "pts": [
+        "東西、家人、特徵、生病都算",
+        "可以換成 Tom has a blue backpack，意思一樣",
+        "不能變成 is having，因為它是狀態"
+      ]
+    },
+    "right": {
+      "tag": "DO",
+      "tagCn": "做事：不能加 got",
+      "icon": "clock",
+      "head": "you are doing it",
+      "headCn": "你在做這件事",
+      "en": "Tom has a swimming lesson on Tuesdays.",
+      "cn": "Tom星期二有游泳課。",
+      "pts": [
+        "整個片語才是動作，像 have a lesson、have lunch",
+        "絕對不能寫成 has got a swimming lesson",
+        "可以變成 is having，因為它是動作"
+      ]
+    },
+    "note": "判斷口訣：中文說「有」就可以加 got，中文說「吃、洗、上課、休息」就不能加。"
+  },
+  "quizMore": [
+    {
+      "q": "___ your parents got a car?",
+      "opts": [
+        "Does",
+        "Do",
+        "Has",
+        "Have"
+      ],
+      "ans": 3,
+      "expl": "句中有 got，所以走 have got 這條路，不要加 Do。主詞 your parents 是複數，所以用 Have。"
+    },
+    {
+      "q": "Which one is NOT possible?",
+      "opts": [
+        "She has a sister.",
+        "She has got a sister.",
+        "She has got a piano lesson at four.",
+        "She has a piano lesson at four."
+      ],
+      "ans": 2,
+      "expl": "have a piano lesson 的 have 是「上課」，是動作，所以不能加 got。前兩句講的是擁有一個姊妹，兩種寫法都對。"
+    }
+  ]
+},
+"dg20261006b1": {
+  "vis": true,
+  "oneLine": "一個 have，兩個身分：當它是「擁有」就能換成 have got、不能變 having；當它是「做」就剛好相反。",
+  "map": {
+    "when": "每次要用 have 的時候，先問自己這一個 have 在做哪一種工作",
+    "why": "英文把「擁有」當狀態、把「做某件事」當動作，兩者的句型規則整組不同，中文卻都用同一個「有」字帶過",
+    "form": "擁有：have／has（可換 have got，不可 having）　|　做事：have／has（不可加 got，可用 having）"
+  },
+  "visual": {
+    "type": "matrix",
+    "cap": "橫軸是三種形狀，縱軸是 have 的兩個身分。對照表裡打勾的格子才是合法的組合：擁有可以加 got 但不能變 -ing，做事可以變 -ing 但不能加 got。查一個句子對不對，就在這張表上找它的格子。",
+    "cols": [
+      "have / has",
+      "have got / has got",
+      "is / are having"
+    ],
+    "rows": [
+      {
+        "h": "擁有（a van, two sisters, a cold）",
+        "cells": [
+          {
+            "en": "She has a van.",
+            "cn": "她有一台廂型車。",
+            "hi": true
+          },
+          {
+            "en": "She has got a van.",
+            "cn": "她有一台廂型車。",
+            "hi": true
+          },
+          {
+            "en": "She is having a van.",
+            "cn": "不成立：擁有不是進行中的動作",
+            "hi": false
+          }
+        ]
+      },
+      {
+        "h": "做某件事（lunch, a look, trouble）",
+        "cells": [
+          {
+            "en": "She has lunch at noon.",
+            "cn": "她中午吃午餐。",
+            "hi": true
+          },
+          {
+            "en": "She has got lunch at noon.",
+            "cn": "不成立：動作的 have 不能加 got",
+            "hi": false
+          },
+          {
+            "en": "She is having lunch now.",
+            "cn": "她現在正在吃午餐。",
+            "hi": true
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "state",
+      "icon": "person",
+      "title": "辦公室裡的擁有",
+      "titleCn": "座位、置物櫃、權限",
+      "ask": "為什麼 is having a desk 聽起來很怪？",
+      "en": "Every engineer has a locker by the changing room.",
+      "cn": "每位工程師在更衣室旁邊都有一個置物櫃。",
+      "why": "置物櫃是分配好的、長期的狀態，沒有「正在進行」的畫面可言。進行式的工作是告訴讀者「這件事現在在發生、而且會結束」，擁有一個置物櫃沒有這種時間感，所以只能用 has。改成 is having 會讓母語者以為置物櫃正在被生出來。"
+    },
+    {
+      "key": "action",
+      "icon": "fork",
+      "title": "正在做的事",
+      "titleCn": "吃飯、開會、休息",
+      "ask": "什麼時候 having 才是對的？",
+      "en": "They are having a safety briefing in the cafeteria.",
+      "cn": "他們正在員工餐廳裡做安全宣導。",
+      "why": "have a briefing 整組才是動作，意思是「進行一場宣導」。因為它是動作，就有開始和結束，所以可以配進行式表示此刻正在發生。這一類片語很多：have a meeting、have a look、have a rest、have a good time，全部都能變成 having。"
+    },
+    {
+      "key": "past",
+      "icon": "clock",
+      "title": "句子跑到過去",
+      "titleCn": "過去的擁有只有 had",
+      "ask": "為什麼過去式不能寫 had got？",
+      "en": "The first warehouse had only two forklifts.",
+      "cn": "第一座倉庫只有兩台堆高機。",
+      "why": "have got 這個組合的基準點永遠釘在現在，所以它沒有過去式，也沒有未來式。一旦句子跑到過去就只剩 had，跑到未來就只剩 will have。這也是為什麼 had got 和 will have got 在英文裡都不存在——不是比較不常用，而是根本不是這個句型的形狀。"
+    },
+    {
+      "key": "formal",
+      "icon": "check",
+      "title": "寫報告的時候",
+      "titleCn": "語域：have 比較穩",
+      "ask": "正式郵件裡該選哪一個？",
+      "en": "The line currently has two spare sensors in stock.",
+      "cn": "這條線目前庫存有兩顆備用感測器。",
+      "why": "have got 不是錯，但它的語氣偏口語，寫進稽核報告或客戶郵件會顯得隨意。正式文件偏好 have，而且常常再加一個副詞把時間講清楚，例如 currently。這不是文法問題，是語域問題：同樣的意思，選錯高度就跟場合不搭。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要在工作群組裡說：Mai現在正在和供應商談，她有兩個未結的客訴。"
+    },
+    {
+      "label": "分出兩個 have",
+      "text": "「正在和供應商談」是動作（have a call），「有兩個未結客訴」是擁有。"
+    },
+    {
+      "label": "動作配進行式",
+      "text": "Mai is having a call with the supplier."
+    },
+    {
+      "label": "擁有配 has 或 has got",
+      "text": "She has two open complaints. 寫給客戶就留 has；在群組裡講 She's got two open complaints 也通。"
+    },
+    {
+      "label": "對照錯誤版",
+      "text": "寫成 She is having two open complaints 會變成「她正在生出兩個客訴」，寫成 She has got a call with the supplier 又把動作錯當擁有，兩種都讓讀者停下來重讀。"
+    }
+  ],
+  "comparison": {
+    "title": "狀態的 have vs 動作的 have",
+    "left": {
+      "tag": "STATE",
+      "tagCn": "狀態：不動的事實",
+      "icon": "pin",
+      "head": "it simply is the case",
+      "headCn": "它就是這樣，沒有進行中",
+      "en": "Anita has a Vietnamese driver's license.",
+      "cn": "Anita有越南的駕照。",
+      "pts": [
+        "可以換成 has got，語氣變口語",
+        "不能加 -ing，也沒有 had got 這種過去式",
+        "同一類的狀態動詞還有 own、know、belong、need"
+      ]
+    },
+    "right": {
+      "tag": "ACTION",
+      "tagCn": "動作：有開始有結束",
+      "icon": "cycle",
+      "head": "it is going on right now",
+      "headCn": "它正在進行",
+      "en": "Anita is having trouble with the new scanner.",
+      "cn": "Anita在用新的掃描器時遇到問題。",
+      "pts": [
+        "整個片語才是動作，例如 have trouble、have a look",
+        "絕對不能加 got",
+        "可以自由換成過去進行式 was having"
+      ]
+    },
+    "note": "判斷口訣：這個 have 能不能換成 own 或 possess？能就是狀態，不能就是動作。"
+  },
+  "quizMore": [
+    {
+      "q": "Sorry, she can't come to the phone. She ___ a fitting with the auditor.",
+      "opts": [
+        "has got",
+        "is having",
+        "is have",
+        "had got"
+      ],
+      "ans": 1,
+      "expl": "have a fitting 是進行一場會面，是動作，所以可以用進行式表示此刻正在發生。has got 只能表示擁有。"
+    },
+    {
+      "q": "Which sentence is correct?",
+      "opts": [
+        "By next year the plant will have got a third line.",
+        "By next year the plant will have a third line.",
+        "By next year the plant is having a third line.",
+        "By next year the plant had got a third line."
+      ],
+      "ans": 1,
+      "expl": "未來的擁有只能用 will have，不加 got；have got 沒有未來式也沒有過去式。進行式則不能用在「擁有」上。"
+    }
+  ]
+},
+"dg20261006b1p": {
+  "vis": true,
+  "oneLine": "used to 畫的是一段「有頭有尾、尾巴停在過去」的線——線一旦碰到 NOW，就不是這個句型了。",
+  "map": {
+    "when": "想說「以前常這樣，現在已經不是了」的時候",
+    "why": "中文靠「以前」「那時候」這些副詞，英文卻把這層對比直接寫進動詞片語，所以句子裡不必再補 but now",
+    "form": "主詞 + used to + 原形動詞　|　否定 didn't use to　|　問句 Did…use to"
+  },
+  "visual": {
+    "type": "timeline",
+    "cap": "最上面那一段是 used to：它是一段反覆發生的習慣，而且在碰到 NOW 之前就停了。第二段是現在的常態，兩段之間的空白就是「已經不一樣」這層意思。第三行那個點提醒你，單一次的事件要用過去簡單式，不能用 used to。最下面一段是 be used to，它反而是壓在 NOW 上面的——同樣的三個字，線的位置完全不同。",
+    "rows": [
+      {
+        "kind": "span",
+        "label": "前兩年",
+        "tone": "accent",
+        "from": "剛到越南",
+        "to": "去年停止",
+        "sub": "Anita used to fly north every month.",
+        "subCn": "反覆的習慣，而且尾巴停在過去，所以畫成一段不碰 NOW"
+      },
+      {
+        "kind": "span",
+        "label": "現在",
+        "tone": "ink",
+        "from": "今年起",
+        "to": "NOW",
+        "sub": "She flies four times a year.",
+        "subCn": "現在的常態用現在簡單式，兩段之間的空白就是對照"
+      },
+      {
+        "kind": "point",
+        "label": "某一天",
+        "tone": "ink",
+        "at": "去年三月的那一趟",
+        "sub": "She missed one audit in March.",
+        "subCn": "只發生一次的事件沒有「反覆」可言，要用過去簡單式"
+      },
+      {
+        "kind": "span",
+        "label": "長到現在",
+        "tone": "accent",
+        "from": "半年前開始",
+        "to": "NOW",
+        "sub": "She is used to the shorter trips.",
+        "subCn": "be used to 講的是「已經習慣」，線壓在 NOW 上，和上面那一段剛好相反"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "habit",
+      "icon": "calendar",
+      "title": "過去的常態",
+      "titleCn": "反覆發生，現在停了",
+      "ask": "怎麼說「這裡以前每天都有平交道的鈴聲」？",
+      "en": "A bell used to ring at this corner all day long.",
+      "cn": "這個路口以前整天都有鈴聲在響。",
+      "why": "重點不是「響過」，而是「那是當時的常態」。用 used to 之後讀者自動知道現在不響了，所以不必再寫 but now it is quiet。如果改成 A bell rang at this corner，讀者只會以為某一次響了一下，整個時代感就不見了。"
+    },
+    {
+      "key": "negative",
+      "icon": "tool",
+      "title": "否定句的陷阱",
+      "titleCn": "didn't use to，不加 d",
+      "ask": "為什麼 didn't used to 是錯的？",
+      "en": "Drivers didn't use to complain about the barriers.",
+      "cn": "駕駛人以前不會抱怨那些柵欄。",
+      "why": "didn't 已經把過去這件事標記完了，後面的動詞必須回到原形，所以 used 要退回 use。這一組之所以錯得特別多，是因為 use to 和 used to 唸起來幾乎一樣，手比腦快就多打了一個 d。檢查口訣：句子裡有 did 或 didn't，就不准再出現 used。"
+    },
+    {
+      "key": "would",
+      "icon": "arrow",
+      "title": "換成 would 可以嗎",
+      "titleCn": "動作可以，狀態不行",
+      "ask": "哪一種句子不能把 used to 換成 would？",
+      "en": "The old station used to be the tallest building here.",
+      "cn": "舊車站以前是這裡最高的建築。",
+      "why": "be 是狀態動詞，would 帶不動，所以這一句只能用 used to。反過來說，如果講的是反覆的動作，兩者就可以互換：The guard would lower the barrier by hand 和 The guard used to lower the barrier by hand 都成立。一句話的分界線就是：動作還是狀態。"
+    },
+    {
+      "key": "beused",
+      "icon": "flag",
+      "title": "多一個 be 就換句型",
+      "titleCn": "be used to 加名詞或 V-ing",
+      "ask": "I used to 和 I am used to 差在哪裡？",
+      "en": "Commuters are used to taking the long way round.",
+      "cn": "通勤族已經習慣繞遠路了。",
+      "why": "be used to 的意思是「已經習慣、不覺得困難」，後面只能接名詞或 V-ing，而且時間點可以在現在。把它跟 used to 搞混，句子的意思會整個反過來：Commuters used to take the long way round 是「以前繞，現在不繞了」，兩句講的根本是不同的事。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要寫：我媽以前每天走那條地下道去市場，現在她走新的天橋。"
+    },
+    {
+      "label": "判斷是常態還是單一事件",
+      "text": "「每天走」是反覆的常態，而且已經停了，所以用 used to。"
+    },
+    {
+      "label": "寫出過去那一段",
+      "text": "My mother used to walk through that underpass to the market."
+    },
+    {
+      "label": "寫出現在這一段",
+      "text": "現在的常態用現在簡單式：Now she takes the new footbridge. 兩段之間不需要 but。"
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "想問同一件事就寫 Did she use to walk through the underpass?。若寫成 Did she used to walk 就錯了，寫成 She was used to walk 又跳到另一個句型，少了 -ing 整句破掉。"
+    }
+  ],
+  "comparison": {
+    "title": "used to + 原形 vs be used to + 名詞／V-ing",
+    "left": {
+      "tag": "USED TO",
+      "tagCn": "以前的習慣，現在沒了",
+      "icon": "book",
+      "head": "a habit that has stopped",
+      "headCn": "已經結束的常態",
+      "en": "I used to walk along the tracks after dinner.",
+      "cn": "我以前晚餐後會沿著鐵軌走一走。",
+      "pts": [
+        "後面接原形動詞，沒有 be 動詞",
+        "自帶「現在不這樣了」的意思",
+        "否定與疑問都要退回 use to"
+      ]
+    },
+    "right": {
+      "tag": "BE USED TO",
+      "tagCn": "已經習慣了",
+      "icon": "balance",
+      "head": "no longer strange to me",
+      "headCn": "對我來說已經不奇怪",
+      "en": "I am used to the noise from the depot.",
+      "cn": "我已經習慣機廠那邊的噪音了。",
+      "pts": [
+        "後面接名詞或 V-ing，前面一定要有 be",
+        "時間可以是現在、過去或未來",
+        "想說「正在習慣」就換成 get used to"
+      ]
+    },
+    "note": "判斷口訣：後面是原形動詞就不要 be，後面是名詞或 V-ing 就一定要 be。"
+  },
+  "quizMore": [
+    {
+      "q": "This platform ___ be open to the public, but the gates were locked years ago.",
+      "opts": [
+        "uses to",
+        "used to",
+        "is used to",
+        "was used to"
+      ],
+      "ans": 1,
+      "expl": "講的是已經結束的過去常態，而且後面是原形 be，所以用 used to。used to 沒有現在式，不會變成 uses to。"
+    },
+    {
+      "q": "Which sentence means the driver no longer waits at the crossing?",
+      "opts": [
+        "The driver is used to waiting at the crossing.",
+        "The driver used to wait at the crossing.",
+        "The driver is getting used to the crossing.",
+        "The driver has waited at the crossing."
+      ],
+      "ans": 1,
+      "expl": "只有 used to 加原形自帶「現在不這樣了」。另外三句分別是「已經習慣」、「正在習慣」和「到現在為止等過」，都沒有說他不再等了。"
+    }
+  ]
+},
+"dg20261006b2": {
+  "vis": true,
+  "oneLine": "used to 是一個對照裝置：寫下它，讀者自己把「現在不是了」補完——你省下的那一句，拿去寫新資訊。",
+  "map": {
+    "when": "寫回憶、寫變革、寫稽核前後差異，任何需要「今昔對照」的段落",
+    "why": "中文要靠「以前」「如今」兩邊都標才清楚，英文只標一邊就夠，多標一次就顯得不信任讀者",
+    "form": "used to + 原形（中性）　|　formerly／once／no longer（正式）　|　back then、in those days（口語）"
+  },
+  "visual": {
+    "type": "scale",
+    "cap": "同一件事實，從最口語到最正式排成一條光譜。左端是聊天的語氣，右端是公告與稽核文件的語氣，used to 落在中間，所以上下都能用。寫作時先決定讀者是誰，再在這條線上挑一個位置；挑錯不會錯文法，只會讓語氣跟場合不搭。",
+    "lo": "口語",
+    "hi": "很正式",
+    "stops": [
+      {
+        "at": 8,
+        "label": "back then",
+        "labelCn": "聊天、訪談",
+        "en": "We did it by hand back then.",
+        "cn": "那時候我們都用手做。"
+      },
+      {
+        "at": 32,
+        "label": "didn't use to",
+        "labelCn": "口語偏中性",
+        "en": "We didn't use to log it on a screen.",
+        "cn": "我們以前不會在螢幕上登錄這件事。"
+      },
+      {
+        "at": 55,
+        "label": "used to",
+        "labelCn": "中性，大多場合通用",
+        "en": "The team used to record readings on paper.",
+        "cn": "這個團隊以前把讀數記在紙上。"
+      },
+      {
+        "at": 78,
+        "label": "formerly / once",
+        "labelCn": "報告、說明文件",
+        "en": "Readings were formerly recorded on paper.",
+        "cn": "讀數先前係以紙本記錄。"
+      },
+      {
+        "at": 95,
+        "label": "no longer",
+        "labelCn": "公告、法規、稽核",
+        "en": "Paper recording of readings is no longer accepted.",
+        "cn": "讀數的紙本記錄已不被接受。"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "economy",
+      "icon": "eye",
+      "title": "省掉多餘的半句",
+      "titleCn": "對照已經內建了",
+      "ask": "寫完 used to 還要不要補 but now？",
+      "en": "The yard used to flood whenever the tide came in.",
+      "cn": "以前只要漲潮，那個場地就會淹水。",
+      "why": "這一句到這裡就完整了，讀者已經知道現在不淹了。如果你接一句 but now it does not flood，那半句沒有任何新資訊，只是把 used to 的意思再說一次，段落會立刻變鬆。值得接的是新畫面，例如現在那裡變成什麼——有新資訊才寫第二句。"
+    },
+    {
+      "key": "register",
+      "icon": "money",
+      "title": "挑對語域",
+      "titleCn": "同一件事，四種高度",
+      "ask": "稽核報告裡該用 used to 還是 no longer？",
+      "en": "Cash settlement is no longer available at the counter.",
+      "cn": "櫃台已不再提供現金結帳。",
+      "why": "no longer 把對照放在「現在」這一側，語氣像規定，所以稽核與公告偏好它。used to 把重心放在過去的常態，比較適合敘述與說明。兩者都不難，難的是意識到自己正在選語域——寫之前先問這份文件會被誰讀。"
+    },
+    {
+      "key": "rhythm",
+      "icon": "link",
+      "title": "一段回憶的節奏",
+      "titleCn": "used to 架台，would 走戲",
+      "ask": "為什麼整段都寫 used to 會很顛？",
+      "en": "He would check the gauges twice before he signed anything.",
+      "cn": "他每次簽名之前都會把錶看兩遍。",
+      "why": "used to 每出現一次就重新宣告一次「以前」，連續用三四句，讀者會覺得作者一直在原地重啟。正確的分工是：開頭一句用 used to 把時代架好，後面改用 would 一句一個畫面往前走。但 would 不能單獨開場，沒有錨點讀者會把它讀成假設語氣。"
+    },
+    {
+      "key": "duration",
+      "icon": "star",
+      "title": "有長度就不能用",
+      "titleCn": "used to 和 for 互相排斥",
+      "ask": "為什麼 used to work there for nine years 是錯的？",
+      "en": "She audited that plant for nine years before the handover.",
+      "cn": "交接之前，她稽核那間廠稽核了九年。",
+      "why": "used to 的工作是標記「反覆的常態」，不是測量「持續多久」。一旦你寫出 for 加一段時間，句子要的是長度，這時只能用過去簡單式。中文的「她以前在那裡做了九年」把兩個意思合在一起，英文必須選一個——要長度就放掉 used to。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要在一份改善報告裡寫：以前每張檢驗單都要兩個人簽名，現在系統自動留下紀錄。"
+    },
+    {
+      "label": "決定讀者與語域",
+      "text": "這是給主管與客戶看的報告，所以不走 back then 那一端，也不必走到法規那一端，中性偏正式最合適。"
+    },
+    {
+      "label": "用 used to 架出過去的常態",
+      "text": "Every inspection sheet used to carry two signatures."
+    },
+    {
+      "label": "第二句給新資訊，不要重複對照",
+      "text": "The system now stamps each entry automatically. 這一句有新畫面，所以值得寫；but now it is different 那種句子就不要。"
+    },
+    {
+      "label": "換個說法",
+      "text": "同一段若要更正式，可以改寫成 Two signatures were formerly required on every inspection sheet.，或把重心移到現在：Manual counter-signing is no longer required."
+    }
+  ],
+  "comparison": {
+    "title": "敘述的過去 vs 規定的現在",
+    "left": {
+      "tag": "USED TO",
+      "tagCn": "重心在過去的常態",
+      "icon": "clock",
+      "head": "this is how it was done",
+      "headCn": "當時就是這樣做的",
+      "en": "Inspectors used to walk the whole line before each shift.",
+      "cn": "檢驗員以前每班之前都要走完整條線。",
+      "pts": [
+        "適合敘述、說明、個案背景",
+        "讀者自動補上「現在不是了」",
+        "後面接原形動詞，否定與疑問退回 use to"
+      ]
+    },
+    "right": {
+      "tag": "NO LONGER",
+      "tagCn": "重心在現在的規定",
+      "icon": "check",
+      "head": "this is what applies today",
+      "headCn": "現在的規定是這樣",
+      "en": "A full walk-through is no longer required before each shift.",
+      "cn": "每班之前已不再要求走完整條線。",
+      "pts": [
+        "適合公告、法規、稽核結論",
+        "常和被動語態一起用，不點出是誰決定的",
+        "語氣最重，讀者會當成現行規則"
+      ]
+    },
+    "note": "判斷口訣：你要讀者記住「當年怎麼做」就用 used to，要他們照「現在的規定」走就用 no longer。"
+  },
+  "quizMore": [
+    {
+      "q": "A company newsletter wants a warm, readable tone. Which opening works best?",
+      "opts": [
+        "Overtime approval was formerly obtained by fax.",
+        "We used to fax the overtime forms upstairs.",
+        "Faxed overtime approval is no longer in use.",
+        "We were used to fax the overtime forms upstairs."
+      ],
+      "ans": 1,
+      "expl": "公司刊物要親切好讀，used to 的中性語氣最合適。第一句與第三句是公文語域，太冷；第四句誤用 be used to 加原形，句型就破了。"
+    },
+    {
+      "q": "Which sentence should be rewritten?",
+      "opts": [
+        "The depot used to open at four in the morning.",
+        "In the past, the depot used to open early, but now it does not open early any more.",
+        "The depot opens at six now.",
+        "The depot was once the only one in the county."
+      ],
+      "ans": 1,
+      "expl": "第二句在一句話裡標了三次過去（In the past、used to、but now…any more），後半句沒有新資訊。改成 The depot used to open early. It now opens at six. 就乾淨了。"
+    }
+  ]
+},
+
 /* ---------- 2026-10-02 每日文法（過去完成進行式；have 與 have got） ---------- */
 "dg20261002a2": {
   "vis": true,

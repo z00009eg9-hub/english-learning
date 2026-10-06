@@ -14,6 +14,951 @@ window.LISTEN = {
 
 /* ========== 依課堂筆記自製（每週二／五更新） ========== */
 notes:[
+/* ---------- 2026-10-06 旅遊與交通主題（四個程度） ---------- */
+{
+  "id": "dl20261006a2",
+  "date": "2026-10-06",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Have You Got the Window Seat?",
+  "titleCn": "你訂到靠窗的位子了嗎？",
+  "series": "本站自製聽力 · 交通主題",
+  "topic": "🚆 下班前聊星期天的火車票",
+  "focus": "用 have 和 have got 講「有什麼」，再分辨問句的兩種開頭（Do you have…？／Have you got…？）",
+  "intro": "Tom和同事Lisa下班前聊到星期天要坐火車去台南。請特別注意兩個人問問題的方式：Lisa用 Have you got…？，Tom用 Do you have…？，兩種都對，意思一樣。另外注意Tom說到吃早餐時用的是 have breakfast，這裡絕對不能加 got。",
+  "tip": "第一次聽只抓三個數字（火車幾點開、幾號車廂、車程幾小時）；第二次聽專心數一數：Have 開頭的問句出現幾次，Do 開頭的出現幾次。",
+  "pre": [
+    {
+      "w": "ticket",
+      "ipa": "/ˈtɪkɪt/",
+      "pos": "n.",
+      "cn": "票",
+      "def": "A small paper or phone code that lets you travel."
+    },
+    {
+      "w": "seat",
+      "ipa": "/siːt/",
+      "pos": "n.",
+      "cn": "座位",
+      "def": "A place where you sit."
+    },
+    {
+      "w": "station",
+      "ipa": "/ˈsteɪʃən/",
+      "pos": "n.",
+      "cn": "車站",
+      "def": "A place where trains or buses stop for people."
+    },
+    {
+      "w": "charger",
+      "ipa": "/ˈtʃɑːr.dʒɚ/",
+      "pos": "n.",
+      "cn": "充電器",
+      "def": "A thing that puts power back into a phone."
+    },
+    {
+      "w": "bottle",
+      "ipa": "/ˈbɑːtl/",
+      "pos": "n.",
+      "cn": "瓶子",
+      "def": "A tall container for water or other drinks."
+    },
+    {
+      "w": "pack",
+      "ipa": "/pæk/",
+      "pos": "v.",
+      "cn": "打包、整理行李",
+      "def": "To put things into a bag or a box."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "Have you got your ticket for Sunday?",
+      "cn": "你星期天的票訂好了嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes. I booked it on my phone yesterday.",
+      "cn": "訂好了，我昨天用手機訂的。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Which train have you got?",
+      "cn": "你訂到哪一班？"
+    },
+    {
+      "sp": "Tom",
+      "en": "The eight o'clock one. It leaves from the big station.",
+      "cn": "八點那一班，從大車站出發。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Do you have a window seat?",
+      "cn": "你有靠窗的位子嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I have got one, in car five.",
+      "cn": "我有一個，在五號車廂。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Nice. Is it a long trip?",
+      "cn": "不錯喔。車程很長嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Three hours. I will sleep for a while.",
+      "cn": "三個小時，我會睡一下。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Do you have breakfast before you go?",
+      "cn": "你出門前會吃早餐嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I always have breakfast at home first.",
+      "cn": "我一定先在家吃早餐。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Have you got a bag for your books?",
+      "cn": "你有包包可以裝書嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "My small blue one. Two books and one water bottle.",
+      "cn": "我那個小藍色的，兩本書和一瓶水。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "And your charger? You always forget it.",
+      "cn": "充電器呢？你每次都忘記。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I am looking for it right now.",
+      "cn": "我現在正在找。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Who is meeting you in Tainan?",
+      "cn": "誰會去台南接你？"
+    },
+    {
+      "sp": "Tom",
+      "en": "My aunt. She can wait at the new station.",
+      "cn": "我阿姨，她可以在新車站等。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What time does Tom's train leave?",
+      "qCn": "Tom的火車幾點開？",
+      "opts": [
+        "A. At six",
+        "B. At seven",
+        "C. At eight",
+        "D. At nine"
+      ],
+      "optsCn": [
+        "A. 六點",
+        "B. 七點",
+        "C. 八點",
+        "D. 九點"
+      ],
+      "ans": 2,
+      "expl": "The eight o'clock one.——Tom第二次回答時就說了是八點那一班。"
+    },
+    {
+      "q": "Which car is Tom's seat in?",
+      "qCn": "Tom的位子在哪一節車廂？",
+      "opts": [
+        "A. Car two",
+        "B. Car three",
+        "C. Car five",
+        "D. Car eight"
+      ],
+      "optsCn": [
+        "A. 二號車廂",
+        "B. 三號車廂",
+        "C. 五號車廂",
+        "D. 八號車廂"
+      ],
+      "ans": 2,
+      "expl": "I have got one, in car five.——他用 have got 回答「有」，然後說了車廂號碼。"
+    },
+    {
+      "q": "What is Tom doing while they talk?",
+      "qCn": "他們講話的時候Tom正在做什麼？",
+      "opts": [
+        "A. Looking for his charger",
+        "B. Eating breakfast",
+        "C. Booking the ticket",
+        "D. Waiting at the station"
+      ],
+      "optsCn": [
+        "A. 找他的充電器",
+        "B. 吃早餐",
+        "C. 訂票",
+        "D. 在車站等車"
+      ],
+      "ans": 0,
+      "expl": "I am looking for it right now.——am looking 是現在進行式，講的就是此刻。"
+    },
+    {
+      "q": "Why does Tom say \"I always have breakfast\" and not \"I always have got breakfast\"?",
+      "qCn": "Tom為什麼說 I always have breakfast，而不是 I always have got breakfast？",
+      "opts": [
+        "A. Because breakfast is not his own",
+        "B. Because have here means to eat, so it cannot take got",
+        "C. Because the sentence is in the past",
+        "D. Because always must come after have got"
+      ],
+      "optsCn": [
+        "A. 因為早餐不是他的",
+        "B. 因為這裡的 have 是「吃」，所以不能加 got",
+        "C. 因為句子是過去式",
+        "D. 因為 always 一定要放在 have got 後面"
+      ],
+      "ans": 1,
+      "expl": "have breakfast 的 have 是動作「吃」，不是擁有，所以不能加 got。只有「擁有」的 have 才可以換成 have got，例如 Have you got your ticket?。"
+    }
+  ]
+},
+{
+  "id": "dl20261006b1",
+  "date": "2026-10-06",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "The Early Shuttle Leaves Ten Minutes Sooner",
+  "titleCn": "早班接駁車早十分鐘出發",
+  "series": "本站自製聽力 · 交通主題",
+  "topic": "🚐 公司接駁車換班次",
+  "focus": "分辨「擁有」的 have／have got 和「做某件事」的 have（is having），搭配現在完成式與比較級",
+  "intro": "Anita在越南的辦公室跟同事Mai聊公司新加的早班接駁車。請注意 have 的兩個身分：has got a second shuttle、have you got a seat 是「擁有」；is having a call、have trouble 是「做某件事」。另外聽出三個比較級（cheaper、quieter、earlier）各自在比什麼。",
+  "tip": "第一次聽抓三件事（新接駁車幾點走、Anita為什麼換車、Mai還在猶豫什麼）；第二次聽每次聽到 have 就在心裡標一下：這一個是「有」還是「在做」。",
+  "pre": [
+    {
+      "w": "commute",
+      "ipa": "/kəˈmjuːt/",
+      "pos": "n./v.",
+      "cn": "通勤（的路程）",
+      "def": "The journey you make to work and back every day."
+    },
+    {
+      "w": "shuttle",
+      "ipa": "/ˈʃʌt̬.əl/",
+      "pos": "n.",
+      "cn": "接駁車",
+      "def": "A bus or small van that goes between two places again and again."
+    },
+    {
+      "w": "traffic",
+      "ipa": "/ˈtræfɪk/",
+      "pos": "n.",
+      "cn": "車流、交通",
+      "def": "All the cars and buses moving on a road."
+    },
+    {
+      "w": "manager",
+      "ipa": "/ˈmæn.ə.dʒɚ/",
+      "pos": "n.",
+      "cn": "主管、經理",
+      "def": "The person who is in charge of a team at work."
+    },
+    {
+      "w": "shift",
+      "ipa": "/ʃɪft/",
+      "pos": "n.",
+      "cn": "班（工作時段）",
+      "def": "A set period of work, for example from six to two."
+    },
+    {
+      "w": "apartment",
+      "ipa": "/əˈpɑːrtmənt/",
+      "pos": "n.",
+      "cn": "公寓",
+      "def": "A home on one floor inside a bigger building."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "I hear the company has got a second shuttle now.",
+      "cn": "我聽說公司現在多了第二台接駁車。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It started on Monday. It is for the early shift.",
+      "cn": "星期一開始的，是給早班的人搭的。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Have you got a seat on it?",
+      "cn": "你在那台上面有位子嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I moved over last week. It leaves ten minutes earlier.",
+      "cn": "我上星期就換過去了，它早十分鐘出發。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Ten minutes does not sound like much.",
+      "cn": "十分鐘聽起來好像沒差多少。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It is enough to miss the worst of the traffic.",
+      "cn": "但足夠避開最塞的那一段。"
+    },
+    {
+      "sp": "Mai",
+      "en": "My apartment is further north than yours, though.",
+      "cn": "可是我的公寓比你的還北邊。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Then you would need to leave before five thirty.",
+      "cn": "那你就得五點半前出門了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "That is early. Is the new one quieter?",
+      "cn": "那很早。新那台比較安靜嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Much quieter, and it is cheaper than a taxi.",
+      "cn": "安靜多了，而且比計程車便宜。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Have you had any trouble with it?",
+      "cn": "你搭的時候有遇到什麼問題嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Not yet. The old one broke down twice last week.",
+      "cn": "還沒有。舊那台上星期壞了兩次。"
+    },
+    {
+      "sp": "Mai",
+      "en": "I remember. You were late for the audit meeting.",
+      "cn": "我記得，你稽核會議還遲到了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "My manager has not said anything about it yet.",
+      "cn": "我主管到現在還沒說什麼。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Can I ask her today? She is having a call now.",
+      "cn": "我今天可以問她嗎？她現在正在通話。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Wait until after lunch. She has more time then.",
+      "cn": "等午餐之後吧，那時候她比較有空。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Anita move to the new shuttle?",
+      "qCn": "Anita為什麼換到新的接駁車？",
+      "opts": [
+        "A. It is free for the early shift",
+        "B. It leaves ten minutes earlier and misses the worst traffic",
+        "C. Her manager told her to move",
+        "D. The old one does not stop near her apartment"
+      ],
+      "optsCn": [
+        "A. 早班搭它免費",
+        "B. 它早十分鐘出發，可以避開最塞的路段",
+        "C. 她主管叫她換的",
+        "D. 舊那台不停她公寓附近"
+      ],
+      "ans": 1,
+      "expl": "It leaves ten minutes earlier. 加上 It is enough to miss the worst of the traffic.——兩句合起來就是原因。"
+    },
+    {
+      "q": "What is Mai worried about?",
+      "qCn": "Mai在擔心什麼？",
+      "opts": [
+        "A. The new shuttle is noisier",
+        "B. She lives further north, so she would have to leave before five thirty",
+        "C. The new shuttle is more expensive than a taxi",
+        "D. Her manager does not allow the early shift"
+      ],
+      "optsCn": [
+        "A. 新的接駁車比較吵",
+        "B. 她住得比較北邊，所以得五點半前出門",
+        "C. 新接駁車比計程車貴",
+        "D. 她主管不准她上早班"
+      ],
+      "ans": 1,
+      "expl": "My apartment is further north than yours, though. 加上 Then you would need to leave before five thirty.——問題就在出門時間。"
+    },
+    {
+      "q": "What happened to the old shuttle last week?",
+      "qCn": "舊的接駁車上星期發生了什麼事？",
+      "opts": [
+        "A. It broke down twice",
+        "B. It changed its route",
+        "C. It stopped running",
+        "D. It became more expensive"
+      ],
+      "optsCn": [
+        "A. 壞了兩次",
+        "B. 改了路線",
+        "C. 停駛了",
+        "D. 變貴了"
+      ],
+      "ans": 0,
+      "expl": "The old one broke down twice last week.——Anita自己說的，而且Mai接著提到她因此遲到。"
+    },
+    {
+      "q": "In \"She is having a call now\", why is having correct?",
+      "qCn": "在 She is having a call now 這句裡，為什麼可以用 having？",
+      "opts": [
+        "A. Because a call belongs to her",
+        "B. Because have a call is an action, so it can take the continuous form",
+        "C. Because the sentence is about the future",
+        "D. Because having is the only form after is"
+      ],
+      "optsCn": [
+        "A. 因為那通電話是她的",
+        "B. 因為 have a call 是動作，所以可以用進行式",
+        "C. 因為這句講的是未來",
+        "D. 因為 is 後面只能接 having"
+      ],
+      "ans": 1,
+      "expl": "have a call 整組才是動作（進行一通通話），動作可以配進行式。如果是「擁有」的 have，例如 She has a desk，就不能寫成 is having。"
+    },
+    {
+      "q": "When does Anita suggest Mai should ask the manager?",
+      "qCn": "Anita建議Mai什麼時候去問主管？",
+      "opts": [
+        "A. Right now",
+        "B. Before the shuttle leaves",
+        "C. After lunch",
+        "D. Tomorrow morning"
+      ],
+      "optsCn": [
+        "A. 現在馬上",
+        "B. 接駁車出發前",
+        "C. 午餐之後",
+        "D. 明天早上"
+      ],
+      "ans": 2,
+      "expl": "Wait until after lunch. She has more time then.——主管現在正在通話，所以要等。"
+    }
+  ]
+},
+{
+  "id": "dl20261006b1p",
+  "date": "2026-10-06",
+  "level": "B1+",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Twenty-Three Crossings, All Going Away",
+  "titleCn": "二十三處交叉口，全部要消失了",
+  "series": "本站自製聽力 · 新聞·旅遊與交通主題",
+  "topic": "🚧 台南鐵路地下化新站啟用",
+  "focus": "被動語態（is being moved、will be removed、has been kept、are expected）加上 which／where 關係子句，用來講工程新聞",
+  "intro": "Anita和同事Mai在午休時聊到台南新車站十月十七日啟用的新聞。請特別注意對話裡的被動語態：has been kept、is being moved、will be removed、are expected、has been used——說話的人都把焦點放在工程本身，而不是「誰在做」。另外聽出 which 和 where 兩種關係子句分別在補充哪一個名詞。",
+  "tip": "第一次聽抓四個數字（啟用日期、地下化長度、會拆掉幾處交叉設施、計畫排到哪一年）；第二次聽專心數被動語態，聽到 be 動詞加過去分詞就記一筆。",
+  "pre": [
+    {
+      "w": "heritage",
+      "ipa": "/ˈher.ɪ.t̬ɪdʒ/",
+      "pos": "n.",
+      "cn": "文化遺產、古蹟",
+      "def": "Buildings or customs from the past that a country keeps on purpose."
+    },
+    {
+      "w": "crossing",
+      "ipa": "/ˈkrɑː.sɪŋ/",
+      "pos": "n.",
+      "cn": "（鐵路、道路的）交叉處、平交道",
+      "def": "A place where a road and a railway, or two roads, cut across each other."
+    },
+    {
+      "w": "barrier",
+      "ipa": "/ˈber.i.ɚ/",
+      "pos": "n.",
+      "cn": "柵欄、障礙",
+      "def": "A bar or fence that stops people or cars from going through."
+    },
+    {
+      "w": "underpass",
+      "ipa": "/ˈʌn.dɚ.pæs/",
+      "pos": "n.",
+      "cn": "地下道",
+      "def": "A road or path that goes under a railway or a bigger road."
+    },
+    {
+      "w": "overpass",
+      "ipa": "/ˈoʊ.vɚ.pæs/",
+      "pos": "n.",
+      "cn": "跨越橋、高架橋",
+      "def": "A bridge that carries a road over a railway or another road."
+    },
+    {
+      "w": "northbound",
+      "ipa": "/ˈnɔːrθ.baʊnd/",
+      "pos": "adj.",
+      "cn": "往北的",
+      "def": "Going towards the north."
+    },
+    {
+      "w": "passenger",
+      "ipa": "/ˈpæsɪndʒɚ/",
+      "pos": "n.",
+      "cn": "旅客、乘客",
+      "def": "A person who travels in a vehicle but does not drive it."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "Did you see the news about Tainan? The new station opens on the seventeenth.",
+      "cn": "你看到台南的新聞了嗎？新車站十七號啟用。"
+    },
+    {
+      "sp": "Anita",
+      "en": "My brother sent me a photo. The old building has been kept, hasn't it?",
+      "cn": "我弟傳了照片給我。舊建築被保留下來了，對吧？"
+    },
+    {
+      "sp": "Mai",
+      "en": "It has. It stays there as a heritage building, right next to the new one.",
+      "cn": "是的，它作為古蹟留在那裡，就在新站旁邊。"
+    },
+    {
+      "sp": "Anita",
+      "en": "So where do the trains actually run now?",
+      "cn": "那現在火車到底是走哪裡？"
+    },
+    {
+      "sp": "Mai",
+      "en": "Below ground. Eight point two three kilometers of main line is being moved down there.",
+      "cn": "地面以下。有八點二三公里的主線正被移到地下。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is a long stretch. When was the project approved?",
+      "cn": "那是很長一段。這個計畫是什麼時候核定的？"
+    },
+    {
+      "sp": "Mai",
+      "en": "Two thousand and nine. So it has taken seventeen years to reach this point.",
+      "cn": "二〇〇九年，所以走到這一步花了十七年。"
+    },
+    {
+      "sp": "Anita",
+      "en": "And the crossings? My uncle used to wait at one of them every morning.",
+      "cn": "那些交叉口呢？我叔叔以前每天早上都要在其中一個那裡等。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Twenty-three of them will be removed once the line has been lowered.",
+      "cn": "等鐵路降下去之後，二十三處會被拆掉。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Twenty-three? Are they all level crossings with barriers?",
+      "cn": "二十三處？全部都是有柵欄的平交道嗎？"
+    },
+    {
+      "sp": "Mai",
+      "en": "Only nine are. The rest are eight underpasses and four overpasses.",
+      "cn": "只有九處是，其餘是八座地下道和四座跨越橋。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Which were built so that traffic could get around the tracks, I suppose.",
+      "cn": "我想那些本來就是為了讓車流繞過鐵軌而建的。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Exactly. Once the tracks are underground, nobody needs to go around them.",
+      "cn": "沒錯。鐵軌一到地下，就沒有人需要繞路了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Is anything different inside the station itself?",
+      "cn": "車站裡面有什麼不一樣嗎？"
+    },
+    {
+      "sp": "Mai",
+      "en": "The signs. It is the first railway station where a color system has been used.",
+      "cn": "標示。它是第一座採用顏色系統的台鐵車站。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Like the high speed rail? Blue for northbound trains?",
+      "cn": "像高鐵那樣嗎？藍色代表往北的列車？"
+    },
+    {
+      "sp": "Mai",
+      "en": "Blue for northbound, green for southbound. Passengers should find it easier.",
+      "cn": "藍色往北，綠色往南。旅客應該會覺得比較好找。"
+    },
+    {
+      "sp": "Anita",
+      "en": "And two more stations are expected by twenty thirty, I read.",
+      "cn": "我讀到說二〇三〇年前還會有兩座車站。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What has happened to the old Tainan station building?",
+      "qCn": "舊的台南車站建築怎麼了？",
+      "opts": [
+        "A. It has been pulled down",
+        "B. It has been kept as a heritage building",
+        "C. It has been moved below ground",
+        "D. It has been turned into a bus depot"
+      ],
+      "optsCn": [
+        "A. 已經被拆掉了",
+        "B. 已經被保留下來當古蹟建築",
+        "C. 已經被移到地下",
+        "D. 已經被改成公車站"
+      ],
+      "ans": 1,
+      "expl": "It stays there as a heritage building, right next to the new one.——Mai證實了Anita的猜測，而且用的是被動 has been kept。"
+    },
+    {
+      "q": "How many years passed between approval and this opening?",
+      "qCn": "從核定到這次啟用，過了幾年？",
+      "opts": [
+        "A. Eight years",
+        "B. Nine years",
+        "C. Seventeen years",
+        "D. Twenty-three years"
+      ],
+      "optsCn": [
+        "A. 八年",
+        "B. 九年",
+        "C. 十七年",
+        "D. 二十三年"
+      ],
+      "ans": 2,
+      "expl": "Two thousand and nine. So it has taken seventeen years to reach this point.——二十三是會拆掉的交叉設施數量，不要混在一起。"
+    },
+    {
+      "q": "Of the twenty-three crossings, how many are level crossings?",
+      "qCn": "那二十三處交叉設施裡，有幾處是平交道？",
+      "opts": [
+        "A. Four",
+        "B. Eight",
+        "C. Nine",
+        "D. Twelve"
+      ],
+      "optsCn": [
+        "A. 四處",
+        "B. 八處",
+        "C. 九處",
+        "D. 十二處"
+      ],
+      "ans": 2,
+      "expl": "Only nine are. The rest are eight underpasses and four overpasses.——九處平交道、八座地下道、四座跨越橋，加起來剛好二十三。"
+    },
+    {
+      "q": "Why will the underpasses and overpasses stop being useful?",
+      "qCn": "為什麼那些地下道和跨越橋以後就沒用了？",
+      "opts": [
+        "A. They are too old to repair",
+        "B. They were built to take traffic around the tracks, and the tracks are going underground",
+        "C. The city wants to build shops there instead",
+        "D. Only the high speed rail will use them"
+      ],
+      "optsCn": [
+        "A. 它們太舊了，修不了",
+        "B. 它們本來是為了讓車流繞過鐵軌而建，而鐵軌要移到地下了",
+        "C. 市政府想改在那裡蓋商店",
+        "D. 以後只有高鐵會用它們"
+      ],
+      "ans": 1,
+      "expl": "Which were built so that traffic could get around the tracks… Once the tracks are underground, nobody needs to go around them.——Anita先猜用途，Mai再確認結論。"
+    },
+    {
+      "q": "What is new about the signs at the station?",
+      "qCn": "車站的標示有什麼新作法？",
+      "opts": [
+        "A. They are printed in four languages",
+        "B. They use color, blue for northbound and green for southbound",
+        "C. They show the arrival time of every bus",
+        "D. They are the same as the old building's signs"
+      ],
+      "optsCn": [
+        "A. 用四種語言印製",
+        "B. 用顏色區分，藍色往北、綠色往南",
+        "C. 標出每班公車的到站時間",
+        "D. 跟舊建築的標示一樣"
+      ],
+      "ans": 1,
+      "expl": "Blue for northbound, green for southbound.——Mai在Anita猜到高鐵之後直接確認了兩個顏色的分工。"
+    }
+  ]
+},
+{
+  "id": "dl20261006b2",
+  "date": "2026-10-06",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "The First Monday I Used to Lose",
+  "titleCn": "以前每個月第一個星期一就這樣沒了",
+  "series": "本站自製聽力 · 旅遊與交通主題",
+  "topic": "✈️ 每月出差變成每季一次",
+  "focus": "used to 加原形講已經結束的習慣，didn't use to 的否定形，以及 be used to 加名詞或 V-ing 這個完全不同的句型",
+  "intro": "Anita和同事Mai在機場候機室聊她出差頻率的改變。請特別注意三個長得很像的句型：used to fly（以前常飛，現在不這樣了）、didn't use to think（以前不這麼想）、am used to the shorter trips（已經習慣較短的行程）。另外注意Anita講一連串回憶時怎麼從 used to 換成 would。",
+  "tip": "第一次聽抓三個數字（以前多久飛一次、現在多久一次、五個工作日裡有幾天花在路上）；第二次聽每次聽到 used to 就判斷一下：後面接的是原形動詞，還是名詞或 V-ing。",
+  "pre": [
+    {
+      "w": "audit",
+      "ipa": "/ˈɑː.dɪt/",
+      "pos": "n./v.",
+      "cn": "稽核、查帳",
+      "def": "An official check of how a company works or keeps its records."
+    },
+    {
+      "w": "transit",
+      "ipa": "/ˈtræn.zɪt/",
+      "pos": "n.",
+      "cn": "運送中、轉乘途中",
+      "def": "The time spent moving between two places, or between two flights."
+    },
+    {
+      "w": "quarterly",
+      "ipa": "/ˈkwɔːr.t̬ɚ.li/",
+      "pos": "adj./adv.",
+      "cn": "每季的、每季一次",
+      "def": "Happening four times a year."
+    },
+    {
+      "w": "paperwork",
+      "ipa": "/ˈpeɪ.pɚ.wɝːk/",
+      "pos": "n.",
+      "cn": "文書作業、文件",
+      "def": "The forms and documents a job requires you to fill in."
+    },
+    {
+      "w": "inherit",
+      "ipa": "/ɪnˈher.ɪt/",
+      "pos": "v.",
+      "cn": "承接、繼承（別人留下的東西）",
+      "def": "To get something from the person who had the job before you."
+    },
+    {
+      "w": "consume",
+      "ipa": "/kənˈsuːm/",
+      "pos": "v.",
+      "cn": "耗掉、消耗",
+      "def": "To use up time, money or energy."
+    },
+    {
+      "w": "evaporate",
+      "ipa": "/ɪˈvæp.ə.reɪt/",
+      "pos": "v.",
+      "cn": "蒸發、消失無蹤",
+      "def": "To disappear completely, often faster than expected."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "This is only your second trip north this year, isn't it?",
+      "cn": "這是你今年第二次往北飛，對不對？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Second. I used to fly on the first Monday of every month.",
+      "cn": "第二次。我以前每個月第一個星期一都要飛。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Every month? For how long?",
+      "cn": "每個月？這樣多久了？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The first two years. I kept a packed bag under my desk.",
+      "cn": "前兩年。我桌子底下一直放著一個打包好的袋子。"
+    },
+    {
+      "sp": "Mai",
+      "en": "That sounds exhausting. Did you ever ask to go less often?",
+      "cn": "聽起來很累。你有要求過少去一點嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "No, and I didn't use to think of it as travel at all.",
+      "cn": "沒有，而且我以前根本不把它當成出差。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So what changed it? Your manager?",
+      "cn": "那是什麼改變的？你的主管嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "A new auditor. She asked what exactly the flight added.",
+      "cn": "一位新的稽核員。她問這趟飛行到底多帶來了什麼。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And you wrote down the honest answer, I imagine.",
+      "cn": "我想你老實寫下了答案。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Three of five working days went on transit or recovering from it.",
+      "cn": "五個工作日有三天花在路上，或是花在恢復上。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Out of five? And the checks themselves?",
+      "cn": "五天裡面三天？那真正的查核呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "One morning. The rest went on meetings an email would have settled.",
+      "cn": "一個早上。剩下的都耗在那些一封信就能解決的會議上。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So now it is quarterly. Did that feel like a demotion?",
+      "cn": "所以現在變成每季一次。那感覺像被降級嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "For a while, yes. I used to be the one who carried news between the sites.",
+      "cn": "有一陣子是。我以前是那個在兩個廠之間傳消息的人。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And that role just disappeared?",
+      "cn": "那個角色就這樣消失了？"
+    },
+    {
+      "sp": "Anita",
+      "en": "It evaporated the moment everyone could open the same dashboard.",
+      "cn": "大家都能打開同一個儀表板的那一刻，它就蒸發了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Do you miss it, though? Honestly?",
+      "cn": "不過你會懷念嗎？老實說？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I am used to the shorter trips now. And these flights are chosen, not inherited.",
+      "cn": "我現在已經習慣比較短的行程了。而且現在這些飛行是我自己選的，不是繼承來的。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How often did Anita fly north in her first two years?",
+      "qCn": "Anita在前兩年多久往北飛一次？",
+      "opts": [
+        "A. Once a week",
+        "B. On the first Monday of every month",
+        "C. Four times a year",
+        "D. Only when an audit failed"
+      ],
+      "optsCn": [
+        "A. 一週一次",
+        "B. 每個月第一個星期一",
+        "C. 一年四次",
+        "D. 只有稽核沒過的時候"
+      ],
+      "ans": 1,
+      "expl": "I used to fly on the first Monday of every month.——used to 告訴你這是以前的常態，現在已經不是了。"
+    },
+    {
+      "q": "What did the new auditor ask?",
+      "qCn": "新來的稽核員問了什麼？",
+      "opts": [
+        "A. Who paid for the flights",
+        "B. What exactly the flight added",
+        "C. Why Anita kept a packed bag",
+        "D. Whether the parent factory wanted her there"
+      ],
+      "optsCn": [
+        "A. 機票是誰出錢的",
+        "B. 這趟飛行到底多帶來了什麼",
+        "C. Anita為什麼放一個打包好的袋子",
+        "D. 母廠是不是希望她去"
+      ],
+      "ans": 1,
+      "expl": "She asked what exactly the flight added.——就是這個問題讓整件事改變的。"
+    },
+    {
+      "q": "How much of the five working days went on travelling?",
+      "qCn": "五個工作日裡，有多少天花在交通上？",
+      "opts": [
+        "A. One day",
+        "B. Two days",
+        "C. Three days",
+        "D. The whole week"
+      ],
+      "optsCn": [
+        "A. 一天",
+        "B. 兩天",
+        "C. 三天",
+        "D. 整個星期"
+      ],
+      "ans": 2,
+      "expl": "Three of five working days went on transit or recovering from it.——真正的查核只佔一個早上。"
+    },
+    {
+      "q": "Why did her role as a messenger between the sites disappear?",
+      "qCn": "為什麼她在兩個廠之間傳消息的角色消失了？",
+      "opts": [
+        "A. A colleague took the job over",
+        "B. Everyone could open the same dashboard",
+        "C. The parent factory closed",
+        "D. She asked to stop doing it"
+      ],
+      "optsCn": [
+        "A. 有同事接手了這份工作",
+        "B. 大家都能打開同一個儀表板",
+        "C. 母廠關掉了",
+        "D. 她自己要求不要再做"
+      ],
+      "ans": 1,
+      "expl": "It evaporated the moment everyone could open the same dashboard.——資訊人人看得到，傳話的人就不需要了。"
+    },
+    {
+      "q": "In \"I am used to the shorter trips now\", what does the speaker mean?",
+      "qCn": "在 I am used to the shorter trips now 這句裡，說話者的意思是什麼？",
+      "opts": [
+        "A. She used to take shorter trips but no longer does",
+        "B. She has got accustomed to the shorter trips",
+        "C. She is slowly starting to take shorter trips",
+        "D. She would prefer the shorter trips to stop"
+      ],
+      "optsCn": [
+        "A. 她以前搭比較短的行程，現在不搭了",
+        "B. 她已經習慣了比較短的行程",
+        "C. 她正在慢慢開始搭比較短的行程",
+        "D. 她希望比較短的行程停止"
+      ],
+      "ans": 1,
+      "expl": "be used to 後面接名詞 the shorter trips，意思是「已經習慣」，和 used to 加原形的「以前常做、現在不做」完全不同。選項C的意思要用 getting used to 才對。"
+    }
+  ]
+},
 /* ---------- 2026-10-02 健康與醫療主題（四個程度） ---------- */
 {
   "id": "dl20261002a2",

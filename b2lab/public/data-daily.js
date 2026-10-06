@@ -7,6 +7,818 @@
 window.DAILY = {
 
 articles:[
+/* ---------- 2026-10-06 每日文章（旅遊與交通） ---------- */
+{
+  "id": "d20261006a2",
+  "date": "2026-10-06",
+  "level": "A2",
+  "topic": "交通",
+  "words": 107,
+  "kind": "orig",
+  "title": "Tom Has Got the Window Seat",
+  "titleCn": "Tom訂到了靠窗的位子",
+  "focus": "用 have 和 have got 講「有什麼」（has a ticket／has got a window seat），再搭配現在簡單式、過去簡單式、現在進行式、there are 和 will／can",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom星期天要坐火車去台南看阿姨，這一篇把今天的文法點放進最生活的情境裡。請特別注意兩種說「有」的方式：has a train ticket 和 has got a window seat 意思一樣，形狀不一樣。另外分辨三組動詞：leaves、wants 講的是固定或現在的狀態；booked 講昨天；is packing、is looking 講此刻；will sleep、can meet 講還沒發生的事。",
+  "spoken": [
+    {
+      "en": "Car five, window seat. Worth getting up early for.",
+      "cn": "五號車廂、靠窗的位子，早起訂票是值得的。"
+    },
+    {
+      "en": "Two books, one bottle. Where is that charger?",
+      "cn": "兩本書、一瓶水。充電器跑哪去了？"
+    },
+    {
+      "en": "Three hours on the train. I'll sleep most of it.",
+      "cn": "火車上三個小時，我大概會睡掉一大半。"
+    },
+    {
+      "en": "Auntie's picking me up at the new station. Easy.",
+      "cn": "阿姨會到新車站接我，很輕鬆。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom has a train ticket for Sunday morning. He wants to visit his aunt in Tainan this weekend. The train leaves the station at eight o'clock.",
+      "cn": "Tom有一張星期天早上的火車票。他這個週末想去台南看他的阿姨。火車八點從車站開出。"
+    },
+    {
+      "en": "Yesterday he booked the ticket on his phone at work. He has got a window seat in car five. The ticket was not expensive, so he is happy.",
+      "cn": "昨天他在公司用手機訂了票。他訂到五號車廂一個靠窗的位子。票不貴，所以他很開心。"
+    },
+    {
+      "en": "Right now Tom is packing his small blue bag. There are two books and one water bottle inside it. He is looking for his phone charger again.",
+      "cn": "現在Tom正在整理他的小藍色包包。裡面有兩本書和一瓶水。他又在找他的手機充電器。"
+    },
+    {
+      "en": "Tom has got three hours on the train. He will sleep for a little while after breakfast. His aunt can meet him at the new station.",
+      "cn": "Tom在火車上有三個小時。他吃完早餐會睡一下。他的阿姨可以到新車站接他。"
+    }
+  ],
+  "target": [
+    {
+      "w": "ticket",
+      "ipa": "/ˈtɪkɪt/",
+      "pos": "n.",
+      "cn": "票",
+      "def": "A small paper or phone code that lets you travel.",
+      "ex": "I lost my movie ticket before the film started.",
+      "exCn": "我在電影開始前把電影票弄丟了。"
+    },
+    {
+      "w": "seat",
+      "ipa": "/siːt/",
+      "pos": "n.",
+      "cn": "座位",
+      "def": "A place where you sit.",
+      "ex": "She asked me to save her a seat at the concert.",
+      "exCn": "她叫我在演唱會幫她留一個位子。"
+    },
+    {
+      "w": "pack",
+      "ipa": "/pæk/",
+      "pos": "v.",
+      "cn": "打包、整理行李",
+      "def": "To put things into a bag or a box.",
+      "ex": "My mother packs a lunch box for my brother every day.",
+      "exCn": "我媽媽每天幫我弟弟準備一個便當。"
+    },
+    {
+      "w": "bottle",
+      "ipa": "/ˈbɑːtl/",
+      "pos": "n.",
+      "cn": "瓶子",
+      "def": "A tall container for water or other drinks.",
+      "ex": "The milk bottle fell off the kitchen table and broke.",
+      "exCn": "牛奶瓶從廚房桌上掉下來，破了。"
+    },
+    {
+      "w": "station",
+      "ipa": "/ˈsteɪʃən/",
+      "pos": "n.",
+      "cn": "車站",
+      "def": "A place where trains or buses stop for people.",
+      "ex": "We met outside the police station at noon.",
+      "exCn": "我們中午在警察局外面見面。"
+    },
+    {
+      "w": "charger",
+      "ipa": "/ˈtʃɑːr.dʒɚ/",
+      "pos": "n.",
+      "cn": "充電器",
+      "def": "A thing that puts power back into a phone.",
+      "ex": "My laptop charger stopped working last night.",
+      "exCn": "我的筆電充電器昨天晚上壞了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Where is Tom going on Sunday?",
+      "qCn": "Tom星期天要去哪裡？",
+      "opts": [
+        "A. To the airport",
+        "B. To Tainan",
+        "C. To his office",
+        "D. To a bookshop"
+      ],
+      "optsCn": [
+        "A. 去機場",
+        "B. 去台南",
+        "C. 去他的辦公室",
+        "D. 去書店"
+      ],
+      "ans": 1,
+      "expl": "He wants to visit his aunt in Tainan this weekend.——第一段就說了他要去台南看阿姨。"
+    },
+    {
+      "q": "What is Tom doing right now?",
+      "qCn": "Tom現在正在做什麼？",
+      "opts": [
+        "A. Booking a ticket on his phone",
+        "B. Sleeping on the train",
+        "C. Packing his bag",
+        "D. Meeting his aunt"
+      ],
+      "optsCn": [
+        "A. 用手機訂票",
+        "B. 在火車上睡覺",
+        "C. 整理他的包包",
+        "D. 跟他的阿姨見面"
+      ],
+      "ans": 2,
+      "expl": "Right now Tom is packing his small blue bag.——is packing 是現在進行式，講的就是此刻。訂票是昨天的事（booked）。"
+    },
+    {
+      "q": "___ you got a train ticket for Sunday?",
+      "qCn": "你有星期天的火車票嗎？（選出正確的開頭）",
+      "opts": [
+        "A. Do",
+        "B. Does",
+        "C. Have",
+        "D. Are"
+      ],
+      "ans": 2,
+      "expl": "have got 的問句要把 have 搬到最前面，變成 Have you got…？不要再多加 Do。如果用 have（不加 got）才需要說 Do you have a ticket?"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "There are two books and one water bottle inside it.",
+      "b2": "He has packed two books and a water bottle.",
+      "note": "There are 只是報「裡面有什麼」，讀者不知道是誰放的。升級版換成 He has packed，主詞變成Tom，句子就同時告訴你「東西在裡面」和「是他剛放進去的」。同一個畫面，資訊多一層。",
+      "sp": "Books in, water in. Done.",
+      "spNote": "口語常常把動詞整個省掉，只留 in／out 表示放進去或拿出來，聽起來像一邊打包一邊念。",
+      "b1Cn": "裡面有兩本書和一瓶水。",
+      "b2Cn": "他已經放了兩本書和一瓶水進去。",
+      "spCn": "書放了，水放了，好了。"
+    },
+    {
+      "b1": "Tom has got three hours on the train.",
+      "b2": "Tom has a three-hour ride ahead of him.",
+      "note": "has got three hours 只給長度。升級版用 ride（一趟車程）把「三個小時」變成一件具體的事，再加 ahead of him（在他前面等著）說出這段還沒開始。英文很喜歡用 ahead of 把時間講成空間。",
+      "sp": "Three hours to kill. Window seat, though.",
+      "spNote": "to kill 在這裡不是「殺」，而是口語的「時間要想辦法打發」；後面補 though 表示「不過還好啦」。",
+      "b1Cn": "Tom在火車上有三個小時。",
+      "b2Cn": "Tom還有三個小時的車程要坐。",
+      "spCn": "有三個小時要耗，不過有靠窗的位子。"
+    }
+  ]
+},
+{
+  "id": "d20261006b1",
+  "date": "2026-10-06",
+  "level": "B1",
+  "topic": "交通",
+  "words": 144,
+  "kind": "orig",
+  "title": "Anita Has Got a Shorter Commute",
+  "titleCn": "Anita的通勤變短了",
+  "focus": "have 與 have got 的分工（has got a long commute 講「有」、has breakfast 講「做」），搭配現在完成式 has worked／has never bought／has not said、比較級 cheaper／quieter／earlier 和 because／so／but／when",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "同樣是通勤的主題，這一篇換成在越南上班的Anita。請注意 have 的兩種身分：has got a long commute、has got a favorite seat 是「擁有」，可以換成 has；但 has breakfast 是「吃」，這時候絕對不能加 got。另外找出三個現在完成式（has worked、has never bought、has not said）和三個比較級（cheaper、quieter、earlier），看看它們各自在比什麼。",
+  "spoken": [
+    {
+      "en": "Four years of this road. I know every pothole.",
+      "cn": "這條路走了四年，每個坑我都認得。"
+    },
+    {
+      "en": "A car? In that traffic? No thanks.",
+      "cn": "買車？在那種車流裡？不用了，謝謝。"
+    },
+    {
+      "en": "Broke down twice in one week. Twice.",
+      "cn": "一個星期壞了兩次，兩次。"
+    },
+    {
+      "en": "Ten minutes earlier and the whole morning feels different.",
+      "cn": "早十分鐘出門，整個早上的感覺就不一樣了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita has worked in Vietnam for four years, and she has got a long commute. Her apartment is in the north of the city, but her factory is in the south. She has never bought a car, because the traffic there is terrible.",
+      "cn": "Anita在越南工作四年了，而且她的通勤很長。她的公寓在城市北邊，但她的工廠在南邊。她從來沒有買車，因為那裡的交通很可怕。"
+    },
+    {
+      "en": "Every morning she has breakfast at six and then takes the company shuttle. The shuttle is cheaper than a taxi and quieter than the public bus. She has got a favorite seat near the back window.",
+      "cn": "她每天早上六點吃早餐，然後搭公司的接駁車。接駁車比計程車便宜，也比公車安靜。她有一個最喜歡的位子，在後面靠窗的地方。"
+    },
+    {
+      "en": "Last week the shuttle broke down twice, so Anita was late for a meeting. Her manager has not said anything about it yet, but she still feels bad.",
+      "cn": "上星期接駁車壞了兩次，所以Anita會議遲到了。她的主管到現在還沒說什麼，但她還是很不好意思。"
+    },
+    {
+      "en": "Now her company has got a second shuttle for the early shift. Anita has already moved to that one, because it leaves ten minutes earlier. She has more time at her desk before the first email arrives.",
+      "cn": "現在她公司多了第二台接駁車，給早班的人搭。Anita已經換到那一台了，因為它早十分鐘出發。她在第一封信進來之前，有比較多時間坐在位子上。"
+    }
+  ],
+  "target": [
+    {
+      "w": "commute",
+      "ipa": "/kəˈmjuːt/",
+      "pos": "n./v.",
+      "cn": "通勤（的路程）",
+      "def": "The journey you make to work and back every day.",
+      "ex": "His commute got shorter after the new bridge opened.",
+      "exCn": "新橋通車之後，他的通勤路程變短了。"
+    },
+    {
+      "w": "shuttle",
+      "ipa": "/ˈʃʌt̬.əl/",
+      "pos": "n.",
+      "cn": "接駁車",
+      "def": "A bus or small van that goes between two places again and again.",
+      "ex": "A free shuttle runs between the hotel and the airport.",
+      "exCn": "飯店和機場之間有免費接駁車。"
+    },
+    {
+      "w": "traffic",
+      "ipa": "/ˈtræfɪk/",
+      "pos": "n.",
+      "cn": "車流、交通",
+      "def": "All the cars and buses moving on a road.",
+      "ex": "We sat in heavy traffic for almost an hour.",
+      "exCn": "我們在壅塞的車流裡坐了快一個小時。"
+    },
+    {
+      "w": "manager",
+      "ipa": "/ˈmæn.ə.dʒɚ/",
+      "pos": "n.",
+      "cn": "主管、經理",
+      "def": "The person who is in charge of a team at work.",
+      "ex": "The store manager apologized and gave us a new box.",
+      "exCn": "店長道歉，還給了我們一個新的盒子。"
+    },
+    {
+      "w": "shift",
+      "ipa": "/ʃɪft/",
+      "pos": "n.",
+      "cn": "班（工作時段）",
+      "def": "A set period of work, for example from six to two.",
+      "ex": "My cousin works the night shift at a bakery.",
+      "exCn": "我表哥在麵包店上夜班。"
+    },
+    {
+      "w": "apartment",
+      "ipa": "/əˈpɑːrtmənt/",
+      "pos": "n.",
+      "cn": "公寓",
+      "def": "A home on one floor inside a bigger building.",
+      "ex": "They painted the whole apartment over one long weekend.",
+      "exCn": "他們利用一個長週末把整間公寓都漆了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why has Anita never bought a car?",
+      "qCn": "Anita為什麼從來沒有買車？",
+      "opts": [
+        "A. The traffic in the city is terrible",
+        "B. Her company does not allow cars",
+        "C. She cannot drive",
+        "D. Cars are cheaper than the shuttle"
+      ],
+      "optsCn": [
+        "A. 城市裡的交通很可怕",
+        "B. 她公司不准開車",
+        "C. 她不會開車",
+        "D. 車子比接駁車便宜"
+      ],
+      "ans": 0,
+      "expl": "She has never bought a car, because the traffic there is terrible.——because 後面就是原因。"
+    },
+    {
+      "q": "What has her manager done about her being late?",
+      "qCn": "關於她遲到的事，她的主管做了什麼？",
+      "opts": [
+        "A. Moved her to the night shift",
+        "B. Said nothing so far",
+        "C. Asked her to buy a car",
+        "D. Changed the meeting time"
+      ],
+      "optsCn": [
+        "A. 把她調去上夜班",
+        "B. 到目前為止什麼都沒說",
+        "C. 要她去買車",
+        "D. 改了會議時間"
+      ],
+      "ans": 1,
+      "expl": "Her manager has not said anything about it yet.——has not said…yet 是現在完成式，意思是「到現在為止還沒有」，所以還有可能會說。"
+    },
+    {
+      "q": "Which sentence is correct?",
+      "qCn": "哪一句是正確的？",
+      "opts": [
+        "A. She has got breakfast at six every morning.",
+        "B. She has breakfast at six every morning.",
+        "C. She has got a breakfast at six every morning.",
+        "D. She is having got breakfast at six."
+      ],
+      "optsCn": [
+        "A. 她每天早上六點「擁有」早餐。",
+        "B. 她每天早上六點吃早餐。",
+        "C. 她每天早上六點「擁有一份」早餐。",
+        "D. （形狀錯誤的句子）"
+      ],
+      "ans": 1,
+      "expl": "have breakfast 的 have 是「吃」，是動作，不能加 got。只有「擁有」的 have 才可以換成 have got，例如 She has got a favorite seat。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The shuttle is cheaper than a taxi and quieter than the public bus.",
+      "b2": "The shuttle beats a taxi on price and the public bus on noise.",
+      "note": "原句用兩個 than 把兩件事分開比。升級版用 beats A on B（在B這一點上贏過A）把兩個比較合成一句，還順便換掉重複的 than。寫作時這招很省字。",
+      "sp": "Cheaper than a taxi, quieter than the bus. Sold.",
+      "spNote": "Sold 原意是「賣掉了」，口語用來表示「我被說服了、就這個」，很常出現在比較完兩個選項之後。",
+      "b1Cn": "接駁車比計程車便宜，也比公車安靜。",
+      "b2Cn": "論價格接駁車贏計程車，論吵不吵它贏公車。",
+      "spCn": "比計程車便宜、比公車安靜，就這個了。"
+    },
+    {
+      "b1": "Her manager has not said anything about it yet, but she still feels bad.",
+      "b2": "Her manager has let it go so far, but it still sits badly with her.",
+      "note": "has not said anything 只講「沒說」。let it go（放過它）把主管的沉默講成一個選擇，不只是沒開口。後半句 it sits badly with her（這件事在她心裡擺得不舒服）比 feels bad 具體，也更像母語者的說法。",
+      "sp": "He hasn't brought it up. Doesn't mean I've forgotten.",
+      "spNote": "bring something up 是口語的「把某件事提出來講」；後半句省掉主詞 It，是真人講話很自然的省略。",
+      "b1Cn": "她的主管到現在還沒說什麼，但她還是很不好意思。",
+      "b2Cn": "她的主管目前為止放過了這件事，但她心裡還是擺不平。",
+      "spCn": "他沒提起這件事，不代表我忘了。"
+    }
+  ]
+},
+{
+  "id": "d20261006b1p",
+  "date": "2026-10-06",
+  "level": "B1+",
+  "topic": "新聞·旅遊與交通",
+  "words": 189,
+  "kind": "news",
+  "title": "Tainan's Main Line Is Going Underground",
+  "titleCn": "台南鐵路地下化，新站十月十七日啟用",
+  "source": "改寫自 中央社 Focus Taiwan 報導（2026/10/04）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202610040006",
+  "focus": "被動語態（is scheduled、has been kept、is being moved、will be removed、has been used）把焦點放在工程本身，搭配 which／who／where 引導的關係子句補充說明",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "這是台南鐵路地下化新站啟用的新聞，事實取自中央社報導，英文由本站重寫。請特別注意被動語態：is scheduled、has been kept、is being moved、are expected、will be removed、were built、has been used——這些句子的主詞都是「工程」或「車站」，不是「誰做的」，因為做事的單位不是重點。另外找出 which、who、where 三種關係子句，看看每一個分別在補充哪一個名詞。",
+  "spoken": [
+    {
+      "en": "Seventeen years from approval to opening. That's a long wait.",
+      "cn": "從核定到通車十七年，等得真久。"
+    },
+    {
+      "en": "Twenty-three crossings gone. My uncle will not miss the barriers.",
+      "cn": "二十三處平交道和地下道全部不見，我叔叔絕對不會想念那些柵欄。"
+    },
+    {
+      "en": "Blue for north, green for south. Same as the high speed rail.",
+      "cn": "藍色往北、綠色往南，跟高鐵一樣。"
+    },
+    {
+      "en": "Two more stations by 2030? Then I'll wait.",
+      "cn": "二〇三〇年前還會有兩站？那我等等看。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "A new railway station in Tainan is scheduled to open on October 17. It stands beside the old station, which has been kept as a heritage building. The new station has been given a plaza, a car park, a transport hub and an area of green space.",
+      "cn": "台南一座新的火車站預定在十月十七日啟用。它就蓋在舊站旁邊，而舊站已經被保留下來當古蹟建築。新站配置了站前廣場、停車場、轉運中心，還有一塊綠地。"
+    },
+    {
+      "en": "The work is part of the Tainan Urban District Railway Underground Project, which was approved back in 2009. Along a stretch of 8.23 kilometers, the main line is being moved below ground. Two more underground stations, Linsen and South Tainan, are expected to open in 2029 and 2030.",
+      "cn": "這項工程屬於台南市區鐵路地下化計畫的一部分，該計畫早在二〇〇九年就已核定。在長達八點二三公里的路段上，主線正被移到地面以下。另外兩座地下通勤車站——林森站與南台南站——預計在二〇二九年與二〇三〇年啟用。"
+    },
+    {
+      "en": "Twenty-three railway crossings will be removed once the line has been lowered. Nine of them are level crossings, where drivers have to wait behind the barriers. Eight underpasses and four overpasses, which were built to carry traffic around the tracks, will no longer be needed.",
+      "cn": "等鐵路降到地下之後，二十三處鐵路交叉設施將會被拆除。其中九處是平交道，駕駛人在那裡必須停在柵欄後面等。另外八座地下道與四座跨越橋當初是為了讓車流繞過鐵軌而建的，以後就不再需要了。"
+    },
+    {
+      "en": "Passengers who often travel by high speed rail will recognize the new signs. Tainan is the first Taiwan Railway station where a color-coded system has been used: blue for northbound trains and green for southbound ones. The project is not finished, and the remaining stages are planned through 2031.",
+      "cn": "經常搭高鐵的旅客會認得新站的標示方式。台南是台鐵第一座採用顏色分流系統的車站：藍色代表往北的列車，綠色代表往南的列車。整個計畫還沒完工，剩下的階段規劃到二〇三一年。"
+    }
+  ],
+  "target": [
+    {
+      "w": "heritage",
+      "ipa": "/ˈher.ɪ.t̬ɪdʒ/",
+      "pos": "n.",
+      "cn": "文化遺產、古蹟",
+      "def": "Buildings or customs from the past that a country keeps on purpose.",
+      "ex": "The old sugar factory was listed as heritage last spring.",
+      "exCn": "那間舊糖廠去年春天被列為古蹟。"
+    },
+    {
+      "w": "approve",
+      "ipa": "/əˈpruːv/",
+      "pos": "v.",
+      "cn": "核准、通過",
+      "def": "To say officially that a plan can go ahead.",
+      "ex": "The committee approved her budget without a single change.",
+      "exCn": "委員會一字未改就通過了她的預算。"
+    },
+    {
+      "w": "crossing",
+      "ipa": "/ˈkrɑː.sɪŋ/",
+      "pos": "n.",
+      "cn": "（鐵路、道路的）交叉處、平交道",
+      "def": "A place where a road and a railway, or two roads, cut across each other.",
+      "ex": "A guard stands at the school crossing every afternoon.",
+      "exCn": "每天下午都有導護人員站在學校的路口。"
+    },
+    {
+      "w": "barrier",
+      "ipa": "/ˈber.i.ɚ/",
+      "pos": "n.",
+      "cn": "柵欄、障礙",
+      "def": "A bar or fence that stops people or cars from going through.",
+      "ex": "Fans pushed against the barrier until the gates opened.",
+      "exCn": "歌迷一直推著柵欄，直到大門打開。"
+    },
+    {
+      "w": "underpass",
+      "ipa": "/ˈʌn.dɚ.pæs/",
+      "pos": "n.",
+      "cn": "地下道",
+      "def": "A road or path that goes under a railway or a bigger road.",
+      "ex": "The underpass floods every time a typhoon arrives.",
+      "exCn": "每次颱風來，那條地下道就淹水。"
+    },
+    {
+      "w": "overpass",
+      "ipa": "/ˈoʊ.vɚ.pæs/",
+      "pos": "n.",
+      "cn": "跨越橋、高架橋",
+      "def": "A bridge that carries a road over a railway or another road.",
+      "ex": "Workers closed the overpass for repairs all weekend.",
+      "exCn": "工人整個週末都封閉那座高架橋進行維修。"
+    },
+    {
+      "w": "northbound",
+      "ipa": "/ˈnɔːrθ.baʊnd/",
+      "pos": "adj.",
+      "cn": "往北的",
+      "def": "Going towards the north.",
+      "ex": "All northbound lanes were closed after the accident.",
+      "exCn": "事故發生後，所有往北的車道都封閉了。"
+    },
+    {
+      "w": "passenger",
+      "ipa": "/ˈpæsɪndʒɚ/",
+      "pos": "n.",
+      "cn": "旅客、乘客",
+      "def": "A person who travels in a vehicle but does not drive it.",
+      "ex": "One passenger left a laptop in the overhead rack.",
+      "exCn": "有一位乘客把筆電留在頭頂的行李架上。"
+    },
+    {
+      "w": "stretch",
+      "ipa": "/stretʃ/",
+      "pos": "n.",
+      "cn": "一段（路、距離）",
+      "def": "A length of road, river or railway between two points.",
+      "ex": "That stretch of coast is dangerous in winter.",
+      "exCn": "那一段海岸冬天很危險。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What has happened to the old Tainan station?",
+      "qCn": "舊的台南車站怎麼了？",
+      "opts": [
+        "A. It has been pulled down",
+        "B. It has been kept as a heritage building",
+        "C. It has been moved underground",
+        "D. It has been turned into a car park"
+      ],
+      "optsCn": [
+        "A. 已經被拆掉了",
+        "B. 已經被保留下來當古蹟建築",
+        "C. 已經被移到地下",
+        "D. 已經被改成停車場"
+      ],
+      "ans": 1,
+      "expl": "It stands beside the old station, which has been kept as a heritage building.——has been kept 是現在完成式的被動，重點是舊站「被保留」這個結果，誰保留的不是重點。"
+    },
+    {
+      "q": "How long is the section of main line being moved below ground?",
+      "qCn": "被移到地下的主線路段有多長？",
+      "opts": [
+        "A. 0.6 kilometers",
+        "B. 8.23 kilometers",
+        "C. 17 kilometers",
+        "D. 23 kilometers"
+      ],
+      "optsCn": [
+        "A. 零點六公里",
+        "B. 八點二三公里",
+        "C. 十七公里",
+        "D. 二十三公里"
+      ],
+      "ans": 1,
+      "expl": "Along a stretch of 8.23 kilometers, the main line is being moved below ground.——17 是啟用日期、23 是會拆掉的交叉設施數量，不要跟長度混在一起。"
+    },
+    {
+      "q": "Why will the eight underpasses and four overpasses no longer be needed?",
+      "qCn": "為什麼那八座地下道和四座跨越橋以後都不需要了？",
+      "opts": [
+        "A. The roads around them will be closed",
+        "B. They were built for the high speed rail",
+        "C. They were built to take traffic around the tracks, and the tracks are going underground",
+        "D. The city has run out of money for repairs"
+      ],
+      "optsCn": [
+        "A. 它們周圍的道路會封閉",
+        "B. 它們本來是為高鐵建的",
+        "C. 它們本來是為了讓車流繞過鐵軌而建，而鐵軌要移到地下了",
+        "D. 市政府沒有錢維修了"
+      ],
+      "ans": 2,
+      "expl": "Eight underpasses and four overpasses, which were built to carry traffic around the tracks, will no longer be needed.——which 引導的關係子句說明它們當初的用途；鐵軌一進地下，車流就不必再繞路。"
+    },
+    {
+      "q": "What is new about the signs at Tainan station?",
+      "qCn": "台南車站的標示有什麼新作法？",
+      "opts": [
+        "A. They are written in four languages",
+        "B. They use colors, blue for northbound and green for southbound",
+        "C. They show the price of every ticket",
+        "D. They are the same as the old station's signs"
+      ],
+      "optsCn": [
+        "A. 用四種語言書寫",
+        "B. 用顏色區分，藍色往北、綠色往南",
+        "C. 標出每一張票的票價",
+        "D. 跟舊站的標示一樣"
+      ],
+      "ans": 1,
+      "expl": "Tainan is the first Taiwan Railway station where a color-coded system has been used: blue for northbound trains and green for southbound ones.——where 引導的關係子句補充說明「在這座車站裡」發生了什麼。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Twenty-three railway crossings will be removed once the line has been lowered.",
+      "b2": "Lowering the line will do away with twenty-three railway crossings in one go.",
+      "note": "原句是被動，主詞是 crossings，看不出是什麼讓它們消失的。升級版把 Lowering the line（把鐵路降下去）當主詞，動作與結果之間的因果就直接接起來了。do away with 是「一次處理掉」，加上 in one go（一口氣）更有「一次解決」的語氣。",
+      "sp": "Drop the line, and twenty-three crossings just go away.",
+      "spNote": "drop 在口語裡可以當「把東西往下移」；後半用 just go away（就這樣不見了）聽起來比 be removed 輕鬆得多。",
+      "b1Cn": "等鐵路降到地下之後，二十三處鐵路交叉設施將會被拆除。",
+      "b2Cn": "把鐵路降下去，一口氣就解決掉二十三處交叉設施。",
+      "spCn": "鐵路往下一放，二十三處交叉口就這樣沒了。"
+    },
+    {
+      "b1": "The project is not finished, and the remaining stages are planned through 2031.",
+      "b2": "The project still has six years to run, with the final stages scheduled through 2031.",
+      "note": "is not finished 只說「還沒好」。升級版用 has six years to run（還要跑六年）把剩下的時間講出來，再用 with 加名詞片語（with the final stages scheduled…）把後半句壓縮成補充說明，不必再開一個 and 子句。這是新聞英文很常見的濃縮手法。",
+      "sp": "Still six years to go on this one.",
+      "spNote": "to go 是口語的「還剩下」，on this one 指「這個案子」，整句比正式說法短得多。",
+      "b1Cn": "整個計畫還沒完工，剩下的階段規劃到二〇三一年。",
+      "b2Cn": "這項計畫還要再跑六年，最後幾個階段排到二〇三一年。",
+      "spCn": "這案子還要再六年。"
+    }
+  ]
+},
+{
+  "id": "d20261006b2",
+  "date": "2026-10-06",
+  "level": "B2",
+  "topic": "旅遊與交通",
+  "words": 289,
+  "kind": "original",
+  "title": "The Flight Anita Used to Take Every Month",
+  "titleCn": "Anita以前每個月都要搭的那班飛機",
+  "focus": "used to (do) 講「過去的習慣，現在不這樣了」，以及它的否定 didn't use to、它和現在對照的寫法，再加上 be used to 加名詞／V-ing 這個完全不同的句型",
+  "intro": "這一篇完全原創，寫Anita出差習慣的改變，也正好示範今天的文法點。請注意 used to 在文中出現的每一次：它都在告訴你「以前這樣，現在不是了」，所以不需要再寫 but now 讀者也懂。另外特別留意最後一段的 she used to be able to say，以及文中的 didn't use to——否定時 used 要變回 use，這是中文母語者最常漏的一筆。",
+  "spoken": [
+    {
+      "en": "First Monday of the month. I didn't even think of it as a trip.",
+      "cn": "每個月第一個星期一。我根本沒把它當成一趟出差。"
+    },
+    {
+      "en": "Three of five days in transit. Writing that down changed things.",
+      "cn": "五個工作日有三天花在路上。把這件事寫下來之後，情況就變了。"
+    },
+    {
+      "en": "I used to be the one carrying news between the sites.",
+      "cn": "我以前是那個在兩個廠之間傳消息的人。"
+    },
+    {
+      "en": "I still fly. The difference is I can say what for.",
+      "cn": "我還是會飛，差別在於我說得出來是為了什麼。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "For her first two years in Vietnam, Anita used to fly to Taiwan on the first Monday of every month. The audit at the parent factory could not, she was told, be done any other way. She used to keep a packed bag under her desk, and she didn't use to think of the trip as travel at all. It was simply Monday.",
+      "cn": "在越南的前兩年，Anita以前每個月第一個星期一都要飛回台灣。公司跟她說，母廠的稽核沒有別的做法。她以前習慣在桌子底下放一個打包好的行李袋，而且她以前根本不把那趟行程當成旅行。那就只是星期一而已。"
+    },
+    {
+      "en": "Then the company changed auditors, and the new one asked a question nobody had asked before: what exactly did the flight add? Anita wrote the honest answer. Three of the five working days went on transit or on recovering from it. The checks themselves took a morning. The rest was spent in meetings that could have been emails, in a building where she used to know everyone and now knew almost nobody.",
+      "cn": "後來公司換了稽核單位，新來的人問了一個以前沒人問過的問題：這趟飛行到底多帶來了什麼？Anita老實寫下答案。五個工作日裡有三天花在路上，或是花在從路上恢復過來。真正的查核本身只要一個早上。剩下的時間都耗在那些其實寄信就好的會議上，而且是在一棟她以前認得每一個人、現在幾乎誰都不認得的大樓裡。"
+    },
+    {
+      "en": "The monthly flight became a quarterly one. Anita expected to feel sidelined, and for a while she did. She used to be the person who carried news between the two sites, and that role simply evaporated once everyone could open the same dashboard. What she had not expected was how much of her working life the trip had been quietly consuming: the packing, the visa paperwork, the two days she used to lose to a swollen ankle and a stiff neck.",
+      "cn": "每月一班變成每季一班。Anita本來以為自己會被邊緣化，有一段時間她確實這麼覺得。她以前是那個在兩個廠之間傳遞消息的人，而當大家都能打開同一個儀表板之後，那個角色就這樣蒸發了。她沒料到的是，這趟行程原來一直在悄悄吃掉她多少工作時間：打包、簽證文件，還有以前每次都要賠上的兩天——腳踝腫起來、脖子僵掉。"
+    },
+    {
+      "en": "She still flies, and she is careful not to romanticize whatever replaced it. A video call cannot walk a production line, and some problems only give way to someone standing in the room. But the flights she takes now are chosen rather than inherited. When she boards, she can say what the trip is for, which is more than she used to be able to say about the first Monday of the month.",
+      "cn": "她還是會搭飛機，而且她很小心，不去把取代出差的那些做法講得太美好。視訊會議不能走一遍生產線，有些問題只有人真的站在現場才解得開。但她現在搭的每一班飛機都是自己選的，不是一路繼承下來的。登機的時候，她說得出這趟是為了什麼——這是她以前面對每個月第一個星期一時說不出來的。"
+    }
+  ],
+  "target": [
+    {
+      "w": "audit",
+      "ipa": "/ˈɑː.dɪt/",
+      "pos": "n./v.",
+      "cn": "稽核、查帳",
+      "def": "An official check of how a company works or keeps its records.",
+      "ex": "The annual audit turned up two missing calibration records.",
+      "exCn": "年度稽核查出兩筆校正紀錄不見了。"
+    },
+    {
+      "w": "transit",
+      "ipa": "/ˈtræn.zɪt/",
+      "pos": "n.",
+      "cn": "運送中、轉乘途中",
+      "def": "The time spent moving between two places, or between two flights.",
+      "ex": "Two cartons were damaged in transit from Hamburg.",
+      "exCn": "有兩箱貨在從漢堡運來的途中損壞了。"
+    },
+    {
+      "w": "sideline",
+      "ipa": "/ˈsaɪd.laɪn/",
+      "pos": "v.",
+      "cn": "使邊緣化、使失去舞台",
+      "def": "To stop someone from taking part in something important.",
+      "ex": "A knee injury sidelined their captain for three months.",
+      "exCn": "膝蓋受傷讓他們的隊長休息了三個月。"
+    },
+    {
+      "w": "evaporate",
+      "ipa": "/ɪˈvæp.ə.reɪt/",
+      "pos": "v.",
+      "cn": "蒸發、消失無蹤",
+      "def": "To disappear completely, often faster than expected.",
+      "ex": "Her confidence evaporated the moment the lights came on.",
+      "exCn": "燈一亮，她的自信就蒸發了。"
+    },
+    {
+      "w": "consume",
+      "ipa": "/kənˈsuːm/",
+      "pos": "v.",
+      "cn": "耗掉、消耗",
+      "def": "To use up time, money or energy.",
+      "ex": "Reviewing those drawings consumed most of her Friday.",
+      "exCn": "審那些圖佔掉了她星期五大半的時間。"
+    },
+    {
+      "w": "paperwork",
+      "ipa": "/ˈpeɪ.pɚ.wɝːk/",
+      "pos": "n.",
+      "cn": "文書作業、文件",
+      "def": "The forms and documents a job requires you to fill in.",
+      "ex": "Customs paperwork held the container up for nine days.",
+      "exCn": "海關文件讓那只貨櫃卡了九天。"
+    },
+    {
+      "w": "inherit",
+      "ipa": "/ɪnˈher.ɪt/",
+      "pos": "v.",
+      "cn": "承接、繼承（別人留下的東西）",
+      "def": "To get something from the person who had the job before you.",
+      "ex": "He inherited a backlog of complaints from the last engineer.",
+      "exCn": "他從上一位工程師手上接下一堆積壓的客訴。"
+    },
+    {
+      "w": "quarterly",
+      "ipa": "/ˈkwɔːr.t̬ɚ.li/",
+      "pos": "adj./adv.",
+      "cn": "每季的、每季一次",
+      "def": "Happening four times a year.",
+      "ex": "The supplier sends a quarterly summary of defect rates.",
+      "exCn": "供應商每季寄一份不良率摘要過來。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What does \"she didn't use to think of the trip as travel at all\" tell us?",
+      "qCn": "「她以前根本不把那趟行程當成旅行」這句話告訴我們什麼？",
+      "opts": [
+        "A. She disliked travelling in general",
+        "B. Back then the trip felt like routine work, not a journey",
+        "C. She had never flown before",
+        "D. She thought the trip was too short to count"
+      ],
+      "optsCn": [
+        "A. 她整體上不喜歡旅行",
+        "B. 當時那趟行程感覺像例行工作，不像一趟旅程",
+        "C. 她以前沒搭過飛機",
+        "D. 她覺得那趟行程太短，算不上旅行"
+      ],
+      "ans": 1,
+      "expl": "didn't use to 講的是「以前不這樣」，後面緊接著 It was simply Monday.（那就只是星期一而已），說明那趟飛行在她心裡等於上班的一部分，不是旅行。"
+    },
+    {
+      "q": "What did Anita's honest answer show about the monthly trip?",
+      "qCn": "Anita老實寫下的答案，顯示那趟每月出差是什麼情況？",
+      "opts": [
+        "A. The checks took almost the whole week",
+        "B. Most of the time went on travelling and on meetings that could have been emails",
+        "C. The parent factory had asked her to stop coming",
+        "D. The flights were too expensive for the company"
+      ],
+      "optsCn": [
+        "A. 查核幾乎佔掉整個星期",
+        "B. 大部分時間花在交通，還有那些寄信就好的會議上",
+        "C. 母廠要求她不要再來了",
+        "D. 機票對公司來說太貴了"
+      ],
+      "ans": 1,
+      "expl": "Three of the five working days went on transit or on recovering from it. The checks themselves took a morning.——查核只要一個早上，剩下的耗在交通與會議，這正是她寫下的答案。"
+    },
+    {
+      "q": "Why did Anita's role as a messenger between the two sites disappear?",
+      "qCn": "為什麼Anita在兩個廠之間傳遞消息的角色消失了？",
+      "opts": [
+        "A. Her manager gave the job to someone else",
+        "B. The parent factory closed down",
+        "C. Everyone could open the same dashboard",
+        "D. She stopped flying completely"
+      ],
+      "optsCn": [
+        "A. 她的主管把這工作交給別人了",
+        "B. 母廠關掉了",
+        "C. 大家都能打開同一個儀表板",
+        "D. 她完全不再搭飛機了"
+      ],
+      "ans": 2,
+      "expl": "that role simply evaporated once everyone could open the same dashboard——once 引導的子句就是原因：資訊人人看得到，傳話的人就不需要了。"
+    },
+    {
+      "q": "In the last paragraph, what is the difference between the flights she takes now and the old ones?",
+      "qCn": "最後一段說，她現在搭的飛機和以前那些有什麼不同？",
+      "opts": [
+        "A. They are shorter and cheaper",
+        "B. They are chosen for a reason she can name, not simply handed down",
+        "C. They are all paid for by the parent factory",
+        "D. She now travels with a colleague"
+      ],
+      "optsCn": [
+        "A. 比較短也比較便宜",
+        "B. 都是為了一個她說得出來的理由而選的，不是一路交接下來的",
+        "C. 全部由母廠出錢",
+        "D. 她現在都和同事一起出差"
+      ],
+      "ans": 1,
+      "expl": "the flights she takes now are chosen rather than inherited… she can say what the trip is for——chosen rather than inherited（自己選的，不是繼承來的）就是差別；最後再用 which is more than she used to be able to say 把今與昔對照起來。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "She used to keep a packed bag under her desk.",
+      "b2": "A packed bag used to live under her desk.",
+      "note": "原句主詞是 She，重點在她的習慣。升級版讓 bag 當主詞，再用 live（住）而不是 be 或 stay——英文常用 live 講「某個東西長期固定放在哪裡」，一下就有「它就長在那裡」的畫面。used to 的位置不變，照樣在說「以前這樣，現在沒了」。",
+      "sp": "There was always a bag under that desk.",
+      "spNote": "口語常用 There was always… 取代 used to，意思一樣，但聽起來更像在回憶，不那麼像在報告習慣。",
+      "b1Cn": "她以前習慣在桌子底下放一個打包好的行李袋。",
+      "b2Cn": "以前她桌子底下總是住著一個打包好的行李袋。",
+      "spCn": "那張桌子底下以前永遠有一個袋子。"
+    },
+    {
+      "b1": "The rest was spent in meetings that could have been emails.",
+      "b2": "The rest went on meetings that an email would have settled.",
+      "note": "was spent 是被動，讀者不知道誰在花這些時間。go on something（時間花在某件事上）讓時間自己當主詞，更簡潔。後半把 could have been emails 換成 an email would have settled（一封信就解決了），把「本來可以更省」這層意思說得更重，語氣也更接近寫報告時的評論。",
+      "sp": "The rest? Meetings an email would have fixed.",
+      "spNote": "用一個問號把句子切成兩半（The rest?）是很口語的強調法，後面直接給答案，不必再寫完整句子。",
+      "b1Cn": "剩下的時間都耗在那些其實寄信就好的會議上。",
+      "b2Cn": "剩下的時間都花在那些一封信就能解決的會議上。",
+      "spCn": "剩下的時間？花在一封信就能處理掉的會議上。"
+    }
+  ]
+},
 /* ---------- 2026-10-02 每日文章（健康與醫療） ---------- */
 {
   "id": "d20261002a2",
@@ -9951,6 +10763,886 @@ articles:[
 ],
 
 grammar:[
+/* ---------- 2026-10-06 每日文法（have 與 have got；used to + 原形） ---------- */
+{
+  "id": "dg20261006a2",
+  "date": "2026-10-06",
+  "unitNo": 17,
+  "level": "A2",
+  "title": "have and have got: Two Ways to Say You Own Something",
+  "titleCn": "have 和 have got：說「我有」的兩種形狀",
+  "srcDays": [],
+  "summary": "講「我有一個東西」時，have 和 have got 意思完全一樣，但問句和否定句的做法不一樣，而且「吃早餐」這種動作的 have 絕對不能加 got。",
+  "sections": [
+    {
+      "h": "兩種形狀，一樣的意思",
+      "body": "說「擁有」的時候，I have a bike 和 I have got a bike 是同一個意思，沒有哪一個比較對。差別只在語氣：have got 聽起來比較口語，have 比較中性，寫作文的時候用 have 最安全。主詞是 he、she、it 的時候，have 要變成 has，got 永遠不變。",
+      "table": {
+        "head": [
+          "主詞",
+          "寫法一（中性）",
+          "寫法二（口語）",
+          "縮寫"
+        ],
+        "rows": [
+          [
+            "I / you / we / they",
+            "have a bike",
+            "have got a bike",
+            "I've got a bike"
+          ],
+          [
+            "he / she / it",
+            "has a bike",
+            "has got a bike",
+            "She's got a bike"
+          ],
+          [
+            "Tom",
+            "has two sisters",
+            "has got two sisters",
+            "Tom's got two sisters"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I have a new umbrella in my bag.",
+          "cn": "我包包裡有一把新雨傘。",
+          "note": "最中性的說法，寫作文可以直接用"
+        },
+        {
+          "en": "My sister has got long hair.",
+          "cn": "我姊姊有一頭長髮。",
+          "note": "has got，主詞是 she 所以用 has"
+        },
+        {
+          "en": "We've got three days off next week.",
+          "cn": "我們下星期有三天休假。",
+          "note": "We have got 縮寫成 We've got，講話時最常這樣"
+        }
+      ]
+    },
+    {
+      "h": "問句和否定句：兩條路不能走一半",
+      "body": "這裡是最容易出錯的地方。用 have 的時候，問句和否定句要借 do 或 does 來幫忙。用 have got 的時候不用借，直接把 have 或 has 搬到最前面就好。選一條路走完，不要走到一半換到另一條。",
+      "table": {
+        "head": [
+          "",
+          "走 have 這條路",
+          "走 have got 這條路"
+        ],
+        "rows": [
+          [
+            "肯定",
+            "You have a ticket.",
+            "You have got a ticket."
+          ],
+          [
+            "否定",
+            "You do not have a ticket.",
+            "You have not got a ticket."
+          ],
+          [
+            "問句",
+            "Do you have a ticket?",
+            "Have you got a ticket?"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Does he have a bicycle?",
+          "cn": "他有腳踏車嗎？",
+          "note": "走 have 這條路，所以前面要 Does"
+        },
+        {
+          "en": "Has he got a bicycle?",
+          "cn": "他有腳踏車嗎？",
+          "note": "走 have got 這條路，Has 自己跑到最前面，不用 Does"
+        },
+        {
+          "en": "I haven't got any coins for the machine.",
+          "cn": "我沒有零錢可以投那台機器。",
+          "note": "haven't got 是 have not got 的縮寫"
+        }
+      ]
+    },
+    {
+      "h": "有一種 have 不能加 got",
+      "bullets": [
+        "have 還有另一個意思是「做」：have breakfast（吃早餐）、have a shower（洗澡）、have a rest（休息一下）",
+        "這種 have 是動作，不是擁有，所以不能寫成 have got",
+        "判斷方法：如果中文翻成「吃、洗、上、玩得」就是動作；翻成「有」才可以加 got",
+        "過去式只要用 had 就好，不管是擁有還是動作，都沒有 had got 這種寫法"
+      ],
+      "examples": [
+        {
+          "en": "We have lunch at twelve every day.",
+          "cn": "我們每天十二點吃午餐。",
+          "note": "吃午餐是動作，所以不能說 have got lunch"
+        },
+        {
+          "en": "She had a bad cold last winter.",
+          "cn": "她去年冬天感冒得很嚴重。",
+          "note": "過去式只用 had，不要寫 had got"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "She have got two dogs.",
+      "good": "She has got two dogs.",
+      "why": "中文的「有」不管主詞是誰都長一樣，所以學生很容易忘記改動詞。英文的 he、she、it 一定要用 has，got 則永遠不變。寫完念一次「She has」，耳朵就會幫你抓到。"
+    },
+    {
+      "bad": "Do you have got a pen?",
+      "good": "Do you have a pen?",
+      "why": "兩條路被走成一半一半。Do 已經在幫忙問了，後面就不需要 got；如果想用 got，整句要改成 Have you got a pen?，前面不加 Do。選一條，不要兩個都放。"
+    },
+    {
+      "bad": "I have got breakfast at seven every morning.",
+      "good": "I have breakfast at seven every morning.",
+      "why": "這裡的 have 是「吃」，是動作不是擁有，所以不能加 got。加了 got 會變成「我每天早上七點擁有一份早餐」，意思很怪。看到中文是「吃」就把 got 拿掉。"
+    },
+    {
+      "bad": "Yesterday I had got a headache.",
+      "good": "Yesterday I had a headache.",
+      "why": "have got 只能用在「現在」。一旦句子跑到過去，就只剩 had 這一個形狀，沒有 had got。中文的「我昨天頭痛」沒有時態記號，所以要靠 yesterday 提醒自己把 got 刪掉。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "My brother ___ got a motorcycle.",
+      "qCn": "我哥哥有一台機車。",
+      "opts": [
+        "A. have",
+        "B. has",
+        "C. is",
+        "D. does"
+      ],
+      "ans": 1,
+      "expl": "主詞是 My brother，等於 he，所以 have 要變成 has。got 不用跟著變。"
+    },
+    {
+      "q": "___ you got a charger I can borrow?",
+      "qCn": "你有充電器可以借我嗎？",
+      "opts": [
+        "A. Do",
+        "B. Does",
+        "C. Have",
+        "D. Are"
+      ],
+      "ans": 2,
+      "expl": "後面已經有 got，就是走 have got 這條路，直接把 Have 搬到句首。要用 Do 的話整句得寫成 Do you have a charger…？"
+    },
+    {
+      "q": "Which sentence is correct?",
+      "qCn": "哪一句是正確的？",
+      "opts": [
+        "A. We have got dinner at six on Sundays.",
+        "B. We have dinner at six on Sundays.",
+        "C. We are have dinner at six on Sundays.",
+        "D. We has got dinner at six on Sundays."
+      ],
+      "optsCn": [
+        "A. 我們星期天六點「擁有」晚餐。",
+        "B. 我們星期天六點吃晚餐。",
+        "C. （形狀錯誤的句子）",
+        "D. （主詞與動詞不合的句子）"
+      ],
+      "ans": 1,
+      "expl": "have dinner 的 have 是「吃」，是動作，所以不能加 got。主詞 We 也不能配 has。"
+    },
+    {
+      "q": "Last summer my cousin ___ a small shop near the market.",
+      "qCn": "去年夏天我表哥在市場附近有一間小店。",
+      "opts": [
+        "A. has got",
+        "B. have got",
+        "C. had",
+        "D. had got"
+      ],
+      "ans": 2,
+      "expl": "Last summer 把句子釘在過去，have got 只能講現在，所以要用 had。英文裡沒有 had got 這個寫法。"
+    }
+  ]
+},
+{
+  "id": "dg20261006b1",
+  "date": "2026-10-06",
+  "unitNo": 17,
+  "level": "B1",
+  "title": "Owning or Doing? Why I'm Having Lunch Works but I'm Having a Car Does Not",
+  "titleCn": "擁有還是在做？為什麼 I'm having lunch 可以、I'm having a car 不行",
+  "srcDays": [],
+  "summary": "have 有兩個身分：「擁有」和「做某件事」。只有「做」的那個 have 可以變成 having，也只有「擁有」的那個 have 可以換成 have got。",
+  "sections": [
+    {
+      "h": "先看懂 have 的兩個身分",
+      "body": "同一個字 have，在英文裡其實做兩種工作。第一種是「擁有」：東西、家人、特徵、生病都算，它描述的是一個狀態，不是正在發生的事。第二種是「做某件事」，整個片語才是動作，像 have lunch、have a shower、have a look。分清楚身分，後面兩條規則就自動成立了。",
+      "table": {
+        "head": [
+          "身分",
+          "常見搭配",
+          "可以換成 have got 嗎",
+          "可以變成 having 嗎"
+        ],
+        "rows": [
+          [
+            "擁有（狀態）",
+            "a car, two brothers, brown eyes, a cold",
+            "可以",
+            "不可以"
+          ],
+          [
+            "做某件事（動作）",
+            "lunch, a shower, a look, a good time",
+            "不可以",
+            "可以"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Anita has got a small balcony on the north side.",
+          "cn": "Anita有一個朝北的小陽台。",
+          "note": "陽台是擁有，所以 have got 沒問題"
+        },
+        {
+          "en": "Anita is having a quick look at the shift report.",
+          "cn": "Anita正在快速看一下班表報告。",
+          "note": "have a look 是動作，所以可以變成 is having"
+        },
+        {
+          "en": "She has a headache, so she is not having coffee today.",
+          "cn": "她頭痛，所以今天不喝咖啡。",
+          "note": "同一句裡兩個身分：has a headache 是狀態，is having coffee 是動作"
+        }
+      ]
+    },
+    {
+      "h": "為什麼擁有不能變成 having",
+      "bullets": [
+        "進行式的工作是告訴讀者「這件事正在進行，而且會結束」",
+        "擁有一台車不是正在進行的動作，它只是一個狀態，沒有開始也沒有結束的畫面",
+        "所以 I am having a car 文法上雖然看得懂，母語者會理解成「我正在生一台車」這種怪意思",
+        "同一類的字還有 know、own、belong、like、need，它們全都是狀態，一樣不加 -ing"
+      ],
+      "examples": [
+        {
+          "en": "They own two vans, but neither of them works.",
+          "cn": "他們有兩台廂型車，但兩台都壞了。",
+          "note": "own 也是狀態動詞，不能寫 are owning"
+        },
+        {
+          "en": "We are having trouble with the second shuttle.",
+          "cn": "我們第二台接駁車出了問題。",
+          "note": "have trouble 是「遇到問題」，是動作，所以可以用進行式"
+        }
+      ]
+    },
+    {
+      "h": "have got 的三個邊界",
+      "body": "have got 很好用，但它的範圍比 have 窄。第一，它只能講現在；只要句子跑到過去或未來，就只能用 have 的各種變化。第二，它只能表示「擁有」，動作意義的 have 一律不能加 got。第三，正式的書面英文偏好 have，報告、公文、電子郵件裡寫 have 比較穩。",
+      "table": {
+        "head": [
+          "想說的事",
+          "可以寫",
+          "不可以寫"
+        ],
+        "rows": [
+          [
+            "現在擁有",
+            "He has got a van.",
+            "（都可以，沒有錯的）"
+          ],
+          [
+            "過去擁有",
+            "He had a van.",
+            "He had got a van."
+          ],
+          [
+            "未來擁有",
+            "He will have a van.",
+            "He will have got a van."
+          ],
+          [
+            "吃午餐",
+            "He has lunch at noon.",
+            "He has got lunch at noon."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Ten years ago the plant had only one loading bay.",
+          "cn": "十年前這間廠只有一個裝卸區。",
+          "note": "過去的擁有只能用 had"
+        },
+        {
+          "en": "By December we will have a second line in Hanoi.",
+          "cn": "到十二月我們在河內會有第二條線。",
+          "note": "未來的擁有用 will have，不加 got"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I am having two younger brothers.",
+      "good": "I have two younger brothers.",
+      "why": "中文「我有兩個弟弟」沒有時態記號，學生就常常隨手配一個 be 加 -ing 讓句子看起來比較完整。但擁有家人是狀態，不是進行中的動作，所以只能用最乾淨的 I have。"
+    },
+    {
+      "bad": "Last year she had got a motorbike.",
+      "good": "Last year she had a motorbike.",
+      "why": "have got 的基準點永遠在現在。Last year 把整句拉到過去，got 就必須拿掉。記一句話：過去的擁有只有 had 一種形狀。"
+    },
+    {
+      "bad": "Have you got an entry card? — Yes, I do.",
+      "good": "Have you got an entry card? — Yes, I have.",
+      "why": "短答要跟著問句的助動詞走。問句是 Have 開頭，回答就得用 have；只有問句寫成 Do you have an entry card? 的時候，才回答 Yes, I do。中文「有啊」兩種都一樣，所以這一組特別容易配錯——回答前先看一眼問句的第一個字。"
+    },
+    {
+      "bad": "Does she has got a locker?",
+      "good": "Does she have a locker?",
+      "why": "兩套問句系統被混在一起。用 Does 開頭就表示走 have 這條路，後面要用原形 have，而且不要 got。想用 got 的話整句改成 Has she got a locker?。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Please call back later. She ___ a meeting with the supplier.",
+      "qCn": "請稍後再打來，她正在和供應商開會。",
+      "opts": [
+        "A. has got",
+        "B. is having",
+        "C. is have",
+        "D. has been"
+      ],
+      "ans": 1,
+      "expl": "have a meeting 是「開會」，是動作，所以可以用進行式 is having。has got 只能表示擁有，放在這裡會變成「她擁有一場會議」。"
+    },
+    {
+      "q": "The old warehouse ___ three loading doors before the fire.",
+      "qCn": "火災之前那間舊倉庫有三個裝卸門。",
+      "opts": [
+        "A. has got",
+        "B. is having",
+        "C. had",
+        "D. had got"
+      ],
+      "ans": 2,
+      "expl": "before the fire 把句子釘在過去，而且講的是擁有，所以只能用 had。had got 不是英文的寫法。"
+    },
+    {
+      "q": "Which sentence is wrong?",
+      "qCn": "哪一句是錯的？",
+      "opts": [
+        "A. Mai has got brown eyes.",
+        "B. Mai is having a short break.",
+        "C. Mai is having brown eyes.",
+        "D. Mai has a short break at ten."
+      ],
+      "optsCn": [
+        "A. Mai有一雙棕色的眼睛。",
+        "B. Mai正在稍微休息一下。",
+        "C. （把「擁有」寫成進行式，所以是錯的）",
+        "D. Mai十點有一段短休息。"
+      ],
+      "ans": 2,
+      "expl": "眼睛顏色是天生的狀態，不是正在進行的動作，所以不能用 is having。A、B、D 三句的身分都配對正確。"
+    },
+    {
+      "q": "___ the night shift got its own shuttle now?",
+      "qCn": "夜班現在有自己的接駁車了嗎？",
+      "opts": [
+        "A. Does",
+        "B. Has",
+        "C. Is",
+        "D. Have"
+      ],
+      "ans": 1,
+      "expl": "句中有 got，所以走 have got 這條路；主詞 the night shift 是單數，要用 Has。想用 Does 的話，整句要改成 Does the night shift have its own shuttle now?。"
+    }
+  ]
+},
+{
+  "id": "dg20261006b1p",
+  "date": "2026-10-06",
+  "unitNo": 18,
+  "level": "B1+",
+  "title": "used to (do): The Habit That Has Already Stopped",
+  "titleCn": "used to + 原形：已經結束的過去習慣",
+  "srcDays": [],
+  "summary": "used to 加原形動詞講「過去反覆發生、但現在已經不這樣」的事；它自己就把「現在不是了」說完了，所以不必再補 but now。",
+  "sections": [
+    {
+      "h": "形狀很簡單，難的是它多說了什麼",
+      "body": "肯定句就是主詞加 used to 加原形動詞，不管主詞是誰都一樣，也沒有 uses to 這種形狀。真正要學的是它的言外之意：只要你寫 used to，讀者就自動知道「現在已經不這樣了」。這一層意思是過去簡單式沒有的，所以兩者不能隨便互換。",
+      "table": {
+        "head": [
+          "你寫的句子",
+          "讀者讀到的事實",
+          "讀者還讀到什麼"
+        ],
+        "rows": [
+          [
+            "I took the ferry to work.",
+            "過去有這件事",
+            "（沒多講，可能一次也可能很多次）"
+          ],
+          [
+            "I used to take the ferry to work.",
+            "過去反覆有這件事",
+            "現在已經不搭了"
+          ],
+          [
+            "I have taken the ferry to work.",
+            "到現在為止有過這個經驗",
+            "這件事還連著現在"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "This road used to flood twice a year.",
+          "cn": "這條路以前每年會淹兩次。",
+          "note": "現在不淹了，這層意思不用另外寫出來"
+        },
+        {
+          "en": "Mai used to live three streets from the plant.",
+          "cn": "Mai以前住在離廠區三條街的地方。",
+          "note": "狀態也可以用 used to，不限於動作"
+        },
+        {
+          "en": "Nobody used to lock that side gate.",
+          "cn": "以前沒有人會鎖那道側門。",
+          "note": "主詞是 Nobody，used to 的形狀照樣不變"
+        }
+      ]
+    },
+    {
+      "h": "否定和問句：used 要退回 use",
+      "body": "這是整個單元最常被扣分的地方。一旦句子裡出現 did 或 didn't，後面的動詞就必須回到原形，所以 used 要寫成 use。另外還有一種比較正式、比較舊式的否定寫法 used not to，兩個都對，但 didn't use to 在今天的英文裡常見得多。",
+      "table": {
+        "head": [
+          "類型",
+          "正確寫法",
+          "常見錯誤"
+        ],
+        "rows": [
+          [
+            "否定（常用）",
+            "She didn't use to drive.",
+            "She didn't used to drive."
+          ],
+          [
+            "否定（較正式）",
+            "She used not to drive.",
+            "She not used to drive."
+          ],
+          [
+            "問句",
+            "Did you use to drive?",
+            "Did you used to drive?"
+          ],
+          [
+            "短答",
+            "Yes, I did.",
+            "Yes, I used."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The night shift didn't use to finish before six.",
+          "cn": "夜班以前不會在六點前結束。",
+          "note": "didn't 後面一定是 use，不加 d"
+        },
+        {
+          "en": "Did your team use to report straight to Taipei?",
+          "cn": "你們組以前是直接向台北回報嗎？",
+          "note": "Did 開頭，所以是 use to"
+        }
+      ]
+    },
+    {
+      "h": "used to 和 would 不是同一把工具",
+      "bullets": [
+        "動作反覆發生時，used to 和 would 大多可以互換：My father would drive us to the coast 和 My father used to drive us to the coast 都通",
+        "但講狀態（live、have、own、be、know、believe）時只能用 used to，不能用 would",
+        "一段回憶的第一句通常先用 used to 把時代背景架起來，後面才接一串 would 描寫細節",
+        "would 必須靠上下文或時間副詞撐著；單獨一句 He would walk to school 讀者會以為你在講假設語氣"
+      ],
+      "examples": [
+        {
+          "en": "We used to own a small van, and every August we would load it up and drive south.",
+          "cn": "我們以前有一台小廂型車，每年八月都會把它裝滿然後往南開。",
+          "note": "先用 used to 講擁有（狀態），再用 would 接反覆的動作"
+        },
+        {
+          "en": "The plant used to be the biggest employer in the district.",
+          "cn": "那間廠以前是這個區最大的雇主。",
+          "note": "be 是狀態，這裡不能換成 would be"
+        }
+      ]
+    },
+    {
+      "h": "長得很像、意思完全不同：be used to 加名詞或 V-ing",
+      "body": "used to 後面接原形動詞，講過去的習慣。be used to 後面接名詞或 V-ing，講「已經習慣了某件事，不覺得奇怪或困難」，而且時間點可以是現在、過去或未來。兩個句型只差一個 be 動詞，意思卻完全不同，中間還有一個 get used to（逐漸習慣）。",
+      "table": {
+        "head": [
+          "句型",
+          "後面接",
+          "意思",
+          "例句"
+        ],
+        "rows": [
+          [
+            "used to",
+            "原形動詞",
+            "以前常做，現在不做了",
+            "I used to ride a scooter."
+          ],
+          [
+            "be used to",
+            "名詞／V-ing",
+            "已經習慣了",
+            "I am used to riding in traffic."
+          ],
+          [
+            "get used to",
+            "名詞／V-ing",
+            "正在或逐漸習慣",
+            "I am getting used to the new route."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "He is used to the noise now, but he used to wear earplugs all day.",
+          "cn": "他現在已經習慣那個噪音了，不過他以前整天都戴耳塞。",
+          "note": "同一句裡兩個句型並排，差別一眼看得出來"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "She didn't used to work weekends.",
+      "good": "She didn't use to work weekends.",
+      "why": "didn't 已經把時態講完了，後面的動詞必須回到原形，所以 used 要退回 use。這個錯之所以頻繁，是因為 use to 和 used to 唸起來幾乎一樣，寫的時候就順手多打一個 d。檢查口訣：句子裡只要有 did 或 didn't，就不准再出現 used。"
+    },
+    {
+      "bad": "I am used to get up at five.",
+      "good": "I used to get up at five.",
+      "why": "多了一個 am，整句就從「我以前五點起床」變成一個半成品——be used to 後面必須接名詞或 V-ing，不能接原形。想講「我已經習慣五點起床」就要寫 I am used to getting up at five。先決定要講哪一個意思，再決定 be 動詞放不放。"
+    },
+    {
+      "bad": "He would be a quiet child.",
+      "good": "He used to be a quiet child.",
+      "why": "would 只能帶反覆發生的動作，不能帶狀態。「是一個安靜的小孩」是狀態，所以只能用 used to。寫成 would be，母語者會把它讀成假設語氣，等著你接 if，整句就失焦了。"
+    },
+    {
+      "bad": "Taiwan uses to have more level crossings.",
+      "good": "Taiwan used to have more level crossings.",
+      "why": "used to 沒有現在式，不會因為主詞是第三人稱單數就變成 uses to。它永遠是 used to 這個固定形狀，動詞永遠是原形。中文的「以前」沒有形狀變化，所以學生會不自覺地把它當普通動詞來變位。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "There ___ be a wooden footbridge where the new station stands.",
+      "qCn": "新車站現在的位置以前有一座木造人行天橋。",
+      "opts": [
+        "A. uses to",
+        "B. used to",
+        "C. is used to",
+        "D. was used to"
+      ],
+      "ans": 1,
+      "expl": "講的是過去存在、現在沒有了的東西，所以用 used to be。is used to 和 was used to 後面要接名詞或 V-ing，意思是「習慣於」，放在這裡不通。"
+    },
+    {
+      "q": "Did the shuttle ___ leave from the back gate?",
+      "qCn": "接駁車以前是從後門出發的嗎？",
+      "opts": [
+        "A. used to",
+        "B. use to",
+        "C. using to",
+        "D. uses to"
+      ],
+      "ans": 1,
+      "expl": "Did 已經在句首負責時態了，後面必須是原形 use to。寫成 Did…used to 是最常見的扣分點。"
+    },
+    {
+      "q": "After six months in Hanoi, Anita ___ the heat.",
+      "qCn": "在河內待了半年之後，Anita已經習慣那裡的熱了。",
+      "opts": [
+        "A. used to",
+        "B. is used to",
+        "C. used to be",
+        "D. did use to"
+      ],
+      "ans": 1,
+      "expl": "後面接的是名詞 the heat，而且講的是現在的狀態「已經習慣」，所以要用 be used to。used to the heat 前面少了 be 動詞就不成句。"
+    },
+    {
+      "q": "Which sentence is wrong?",
+      "qCn": "哪一句是錯的？",
+      "opts": [
+        "A. My grandfather would cycle to the harbor every Sunday.",
+        "B. My grandfather used to cycle to the harbor every Sunday.",
+        "C. My grandfather would own a fishing boat.",
+        "D. My grandfather used to own a fishing boat."
+      ],
+      "optsCn": [
+        "A. 我爺爺以前每個星期天都會騎車去港口。",
+        "B. 我爺爺以前每個星期天都騎車去港口。",
+        "C. （把「擁有」配上 would，所以是錯的）",
+        "D. 我爺爺以前有一艘漁船。"
+      ],
+      "ans": 2,
+      "expl": "own 是狀態動詞，不能配 would。騎車是反覆的動作，所以 A 和 B 都可以；擁有一艘船只能用 used to own。"
+    }
+  ]
+},
+{
+  "id": "dg20261006b2",
+  "date": "2026-10-06",
+  "unitNo": 18,
+  "level": "B2",
+  "title": "Writing with used to: The Contrast You Never Have to Spell Out",
+  "titleCn": "用 used to 寫作：不必說出口的今昔對照",
+  "srcDays": [],
+  "summary": "used to 不只是一個時態，它是一個對照工具：寫下它，讀者自動補上「現在不是了」，所以句子可以更短、語氣可以更有層次。",
+  "sections": [
+    {
+      "h": "它幫你省下一整個子句",
+      "body": "很多學生寫完 used to 還要再加一句 but now it is different，其實那一句是多餘的。used to 的語意裡已經內建了對照，補上去只會讓文章變鬆。真正值得寫的不是「現在不一樣了」，而是「現在變成怎樣」——如果你沒有新資訊要補，就讓 used to 自己工作。",
+      "table": {
+        "head": [
+          "寫法",
+          "問題",
+          "怎麼改"
+        ],
+        "rows": [
+          [
+            "The line used to run above ground, but now it does not.",
+            "後半句沒有新資訊，純粹重複 used to 的意思",
+            "The line used to run above ground."
+          ],
+          [
+            "The line used to run above ground. Today it runs beneath the city.",
+            "後半句給出新畫面，值得留",
+            "保留，兩句形成對照"
+          ],
+          [
+            "In the past, the line used to run above ground.",
+            "In the past 和 used to 重複標記過去",
+            "挑一個就好"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Freight used to move through the city at night.",
+          "cn": "貨運以前是在夜裡穿過市區的。",
+          "note": "單獨成立，讀者自己知道現在不是了"
+        },
+        {
+          "en": "Passengers used to queue on the sidewalk; the new concourse holds all of them indoors.",
+          "cn": "乘客以前要在人行道上排隊；新的大廳把所有人都容納在室內。",
+          "note": "分號後面給新畫面，對照才有重量"
+        },
+        {
+          "en": "She used to apologize for the delay before anyone asked about it.",
+          "cn": "她以前在別人問起之前就先為誤點道歉了。",
+          "note": "用習慣寫人物性格，比形容詞有說服力"
+        }
+      ]
+    },
+    {
+      "h": "語域：同一個意思的四種高度",
+      "body": "口語和正式書寫選的字不一樣。used to 本身是中性的，上下都能用；但正式報告裡常見的是 formerly、once、at one time、no longer 這幾個詞，而口語會偏向 back then、in those days。挑錯高度不會錯文法，只會讓讀者覺得語氣跟場合不搭。",
+      "table": {
+        "head": [
+          "高度",
+          "典型寫法",
+          "適合的場合"
+        ],
+        "rows": [
+          [
+            "口語",
+            "We used to do it that way back then.",
+            "聊天、訪談、個人部落格"
+          ],
+          [
+            "中性",
+            "The company used to process claims by post.",
+            "一般文章、工作郵件"
+          ],
+          [
+            "正式",
+            "Claims were formerly processed by post.",
+            "報告、說明文件"
+          ],
+          [
+            "很正式",
+            "Postal processing of claims is no longer in use.",
+            "公告、法規、稽核文件"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The site was once the largest employer in the district.",
+          "cn": "這個廠區曾經是本區最大的雇主。",
+          "note": "once 比 used to be 正式一級，而且更短"
+        },
+        {
+          "en": "Manual logging is no longer permitted on the line.",
+          "cn": "線上已不允許手寫紀錄。",
+          "note": "no longer 把對照放在現在這一側，語氣更像規定"
+        }
+      ]
+    },
+    {
+      "h": "敘事節奏：used to 架台，would 走戲",
+      "body": "寫一段回憶時，兩個工具分工很清楚。used to 負責把時代背景一次架好，通常只出現在開頭一兩句；would 負責推進一連串反覆的畫面，讓讀者感覺到那段日子的節奏。如果整段都用 used to，句子會一直在重新宣告「以前」，讀起來很顛；但若開頭沒有 used to 就直接用 would，讀者會以為你在寫假設語氣。",
+      "bullets": [
+        "開場先用 used to 定錨：這是哪一段時期、當時的常態是什麼",
+        "接下來換 would 描寫細節動作，一句一個畫面，不必再提「以前」",
+        "狀態動詞（be、own、know、live）永遠留給 used to，would 帶不動",
+        "段落收尾可以切回現在式，對照就完成了，不需要寫 but now"
+      ],
+      "examples": [
+        {
+          "en": "Anita used to arrive at the gate before the guards changed over. She would sign the book, take the stairs, and open the windows herself.",
+          "cn": "Anita以前總是在警衛交班之前就到大門口。她會簽名、走樓梯，然後自己把窗戶打開。",
+          "note": "第一句架台，第二句用三個 would 動作走戲"
+        }
+      ]
+    },
+    {
+      "h": "寫作時最容易失手的三個細節",
+      "bullets": [
+        "否定與疑問一律 didn't use to／Did…use to，正式文件裡若要避開這個形狀，改寫成 no longer 或 was not in the habit of 更乾淨",
+        "be used to 加 V-ing 是另一個句型，同一段裡兩個都出現時要確認讀者分得出來，必要時改寫其中一句",
+        "used to 不能和 for 加一段時間連用：要說持續多久就改用過去簡單式，例如 She worked there for nine years，而不是 She used to work there for nine years"
+      ],
+      "examples": [
+        {
+          "en": "The department was not in the habit of keeping paper copies.",
+          "cn": "該部門並沒有保留紙本副本的習慣。",
+          "note": "正式文件常用的替代說法，語氣比 didn't use to 重"
+        },
+        {
+          "en": "He drove that route for eleven years before the bypass opened.",
+          "cn": "在外環道通車之前，他走那條路線走了十一年。",
+          "note": "有明確的時間長度，就用過去簡單式，不要用 used to"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "She used to work in the Hanoi office for six years.",
+      "good": "She worked in the Hanoi office for six years.",
+      "why": "used to 講的是「反覆的常態」，不是「持續了多久」，所以它和 for 加一段時間互相排斥。中文的「她以前在河內辦公室做了六年」把兩個意思合在一起講，英文必須選一個：要長度就用過去簡單式，要常態對照就把 for six years 拿掉。"
+    },
+    {
+      "bad": "In the past, the plant used to run three shifts, but now it does not any more.",
+      "good": "The plant used to run three shifts.",
+      "why": "一句話裡標了三次「過去」：In the past、used to、but now it does not。這不是文法錯，而是寫作問題——讀者會覺得作者不信任他們。留 used to 就夠了；真要寫後半句，就給新資訊，例如 Today it runs two。"
+    },
+    {
+      "bad": "Residents were used to complain about the noise.",
+      "good": "Residents used to complain about the noise.",
+      "why": "多了 were，句型就跳到 be used to，而 be used to 後面只能接名詞或 V-ing。若本意是「居民以前習慣了那個噪音」，要寫 Residents were used to the noise。這一組在正式寫作裡特別危險，因為兩句都看得懂，意思卻相反。"
+    },
+    {
+      "bad": "The crossings would be a daily nuisance for drivers.",
+      "good": "The crossings used to be a daily nuisance for drivers.",
+      "why": "would 不能帶狀態動詞 be。寫成 would be，英文讀者會先把它當成條件句的結果，等著找 if，讀到句尾發現沒有，就得回頭重讀一次。正式寫作最怕這種讓人回頭的句子。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Which version is the best piece of writing?",
+      "qCn": "哪一個版本的寫作品質最好？",
+      "opts": [
+        "A. In the past, trains used to stop here, but now they do not stop here any more.",
+        "B. Trains used to stop here. The platform is now a cycle path.",
+        "C. Trains used to stop here in the past.",
+        "D. Trains were used to stop here."
+      ],
+      "optsCn": [
+        "A. （三次標記過去，而且後半句沒有新資訊）",
+        "B. 火車以前會停在這裡。那座月台現在是自行車道。",
+        "C. （In the past 和 used to 重複標記過去）",
+        "D. （誤用 be used to，句型錯誤）"
+      ],
+      "ans": 1,
+      "expl": "B 用 used to 架出今昔對照，第二句再給一個全新的畫面，對照才有重量。A 和 C 重複標記過去，D 把句型換成 be used to 就不成句了。"
+    },
+    {
+      "q": "An audit report needs the most formal wording. Which line fits best?",
+      "qCn": "一份稽核報告需要最正式的措辭，哪一句最合適？",
+      "opts": [
+        "A. We used to do the checks by hand back then.",
+        "B. Manual checks are no longer carried out.",
+        "C. We didn't use to do the checks on a computer.",
+        "D. The checks would be done by hand."
+      ],
+      "optsCn": [
+        "A. （口語語域，back then 太隨意）",
+        "B. 手動查核已不再執行。",
+        "C. （didn't use to 偏口語，而且重點不清）",
+        "D. （would 帶被動狀態，讀起來像條件句）"
+      ],
+      "ans": 1,
+      "expl": "no longer 加被動語態是稽核文件最常見的高度，把對照放在現在這一側，語氣像規定。A 的 back then 太口語，C 的 didn't use to 不適合正式文件，D 會讓讀者誤讀成條件句。"
+    },
+    {
+      "q": "In a memoir paragraph, which sentence should come first?",
+      "qCn": "在一段回憶的文字裡，哪一句應該放在最前面？",
+      "opts": [
+        "A. She would leave the key under the third flowerpot.",
+        "B. She would wave from the balcony until the car turned.",
+        "C. My aunt used to live above a tailor's shop.",
+        "D. She would shout down the stairwell when the kettle boiled."
+      ],
+      "optsCn": [
+        "A. 她會把鑰匙放在第三個花盆下面。",
+        "B. 她會從陽台上揮手，直到車子轉彎。",
+        "C. 我阿姨以前住在一間裁縫店樓上。",
+        "D. 水燒開的時候，她會朝樓梯間大喊。"
+      ],
+      "ans": 2,
+      "expl": "C 用 used to 加狀態動詞 live 把時代與地點一次架好，是整段的錨。A、B、D 都是 would 帶的反覆動作，必須先有錨點，讀者才不會把 would 讀成假設語氣。"
+    },
+    {
+      "q": "Which sentence keeps its intended meaning?",
+      "qCn": "哪一句保住了作者原本想講的意思？",
+      "opts": [
+        "A. The engineers were used to sign every drawing.",
+        "B. The engineers used to signing every drawing.",
+        "C. The engineers used to sign every drawing.",
+        "D. The engineers were used to sign off every drawing."
+      ],
+      "optsCn": [
+        "A. （be used to 後面接了原形，句型破了）",
+        "B. （used to 後面接了 V-ing，少了 be 動詞）",
+        "C. 工程師以前每張圖都要簽名。",
+        "D. （同 A 的錯誤）"
+      ],
+      "ans": 2,
+      "expl": "要講「以前的習慣」就是 used to 加原形，所以只有 C 成立。be used to 必須接名詞或 V-ing（The engineers were used to signing every drawing 才通，但意思變成「他們習慣了簽圖」）。"
+    }
+  ]
+},
 /* ---------- 2026-10-02 每日文法（過去完成進行式；have 與 have got） ---------- */
 {
   "id": "dg20261002a2",
