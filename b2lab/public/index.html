@@ -92,22 +92,40 @@ header .brand{
 header .brand h1{margin:0;font-size:16.5px;font-weight:800;letter-spacing:.2px;white-space:nowrap}
 header .brand:active{opacity:.75}
 header .lv{font-size:9.5px;padding:1.5px 5px;border-radius:5px}
-header .prof{display:flex;background:rgba(255,255,255,.18);border-radius:20px;padding:2px;border:1px solid rgba(255,255,255,.3)}
+/* ---- header 右側工具列重設計 ---- */
+header .prof{display:flex;align-items:center;background:none;border:none;border-radius:0;padding:0;gap:1px}
 header .prof button{
-  border:0;background:none;color:rgba(255,255,255,.85);font:inherit;font-size:11.5px;padding:3px 9px;
-  border-radius:18px;cursor:pointer;white-space:nowrap
+  border:1px solid transparent;background:none;color:rgba(255,255,255,.9);
+  font:inherit;font-size:13px;padding:3px 8px;
+  border-radius:7px;cursor:pointer;white-space:nowrap;transition:background .15s
 }
-header .prof button.on{background:var(--card);color:var(--accent2);font-weight:700}
-header #sync-badge{font-size:14px;line-height:1;opacity:.9;display:none}
+header .prof button:not(.on){opacity:.38;padding:3px 5px}
+header .prof button.on{background:rgba(255,255,255,.18);color:#fff;font-weight:700;border-color:rgba(255,255,255,.3)}
+header #sync-badge{font-size:11px;line-height:1;opacity:.45;display:none !important;margin-left:1px}
+/* 分隔線 */
+.hd-sep{display:inline-block;width:1px;height:16px;background:rgba(255,255,255,.22);align-self:center;margin:0 3px;flex-shrink:0}
+/* 輕量文字型 control（1x、中譯） */
 header .hdlink{
-  font-size:11.5px;font-weight:800;text-decoration:none;color:#fff;white-space:nowrap;
-  background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.45);
-  border-radius:20px;padding:4px 10px
+  font-size:13px;font-weight:700;text-decoration:none;color:rgba(255,255,255,.92);white-space:nowrap;
+  background:transparent;border:1px solid rgba(255,255,255,.28);
+  border-radius:7px;padding:3px 9px;cursor:pointer;transition:background .15s
 }
-header .hdlink:active{background:rgba(255,255,255,.34)}
-/* 外連站台是「離開本站」的次要動作：降為透明底細字，減少視覺干擾 */
-header a.hdlink.ext{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);font-weight:700;opacity:1;text-decoration:none;padding:4px 10px}
-header a.hdlink.ext:active{opacity:1;background:rgba(255,255,255,.2)}
+@media(hover:hover){header .hdlink:hover{background:rgba(255,255,255,.14)}}
+header .hdlink:active{background:rgba(255,255,255,.24)}
+/* 外連入口（Speak Up、題庫）：比 control 略明顯，半透明白底 */
+header a.hdlink.ext{
+  background:rgba(255,255,255,.17);border:1px solid rgba(255,255,255,.4);
+  font-weight:700;opacity:1;text-decoration:none;padding:4px 11px;border-radius:8px;color:#fff
+}
+@media(hover:hover){header a.hdlink.ext:hover{background:rgba(255,255,255,.27)}}
+header a.hdlink.ext:active{background:rgba(255,255,255,.32)}
+/* tablet：header 縮小間距 */
+@media(max-width:900px) and (min-width:641px){
+  header{gap:5px}
+  .hd-sep{margin:0 2px}
+  header .hdlink{padding:3px 7px}
+  header a.hdlink.ext{padding:4px 8px}
+}
 /* 頂部 B1/B1+/B2 標籤可以點：直接跳到「閱讀」並套用該程度篩選 */
 header button.lv{border:0;font-family:inherit;cursor:pointer;opacity:.92}
 header button.lv:active{transform:scale(.93)}
@@ -1294,14 +1312,14 @@ h2.sec .tback{top:0}
 .spk.on{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
 .spk.stopbtn,.btn.stopbtn{background:#c0392b!important;color:#fff!important;border-color:#c0392b!important;font-weight:700;animation:auPulse 1.6s ease-in-out infinite}
 /* 標頭的全站中譯開關（button 版 hdlink） */
-button.hdlink{font:inherit;font-size:11.5px;font-weight:800;cursor:pointer}
-/* 中譯開關：開＝白底橘字（跟 Anita/Tom 切換一樣明顯），關＝半透明 */
-#hd-cn:not(.off){background:var(--card);color:var(--accent2);border-color:#fff}
-/* 朗讀速度：一律白底橘字（含 1x），跟中譯開關同一種「常駐控制」外觀 */
-#hd-rate{background:var(--card);color:var(--accent2);border-color:#fff}
-#hd-rate .r-ico{font-style:normal;margin-right:3px}
+button.hdlink{font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+/* 中譯：開 → 淡白底 + 粗白字；關 → 半透明 */
+#hd-cn:not(.off){background:rgba(255,255,255,.22);color:#fff;border-color:rgba(255,255,255,.5)}
+/* 朗讀速度：跟其他 control 一致，透明底 */
+#hd-rate{background:transparent;color:rgba(255,255,255,.92);border-color:rgba(255,255,255,.28)}
+#hd-rate .r-ico{font-style:normal;margin-right:2px}
 #hd-rate .r-val{font-weight:800}
-button.hdlink.off{opacity:.6}
+button.hdlink.off{opacity:.5}
 /* 全站中譯開關＝開：所有中譯不用逐一點就直接顯示 */
 body.cnall .para .cn{display:block}
 body.cnall .qcn,body.cnall .ocn{display:block}
@@ -1456,9 +1474,9 @@ body.cnall #v-book span.cnx{display:inline!important}
   body.sb-col{--sb-w:64px}
   body{padding-bottom:20px}
 }
-/* streak badge in header (mobile) */
-.hd-streak{font-size:11.5px;font-weight:800;color:#fff;background:rgba(255,255,255,.2);
-  border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:3px 9px;white-space:nowrap}
+/* streak badge in header (desktop：無膠囊) */
+.hd-streak{font-size:13px;font-weight:700;color:rgba(255,255,255,.9);
+  background:none;border:none;border-radius:0;padding:0 3px;white-space:nowrap}
 /* tag chips on cards */
 .tag-chip{display:inline-block;font-size:var(--font-meta);font-weight:700;
   background:#f2f7f7;border:1px solid #d5e5e4;border-radius:14px;padding:2px 10px;color:#2b6b69;white-space:nowrap}
@@ -2665,14 +2683,16 @@ nav button{font-size:11px}
   <span id="hd-levels" style="margin-right:auto;display:flex;gap:4px;align-items:center"></span>
   <div class="prof" title="切換學習者，各自獨立進度">
     <button id="prof-anita" class="on" onclick="setProfile('anita')">🍎 Anita</button>
-    <button id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
+    <button id="prof-tom" onclick="setProfile('tom')">🐻</button>
   </div>
   <span class="hd-streak" id="hd-streak" title="連續學習天數">🔥 1 天</span>
   <span id="sync-badge" title="進度已雲端同步（跨裝置共用）">☁️</span>
-  <button class="hdlink" id="hd-rate" onclick="cycleRate()" title="朗讀速度（0.6x 慢／0.8x 稍慢／1x 正常）" aria-label="朗讀速度"><i class="r-ico">⏱</i><b class="r-val">1x</b></button>
-  <button class="hdlink" id="hd-cn" onclick="togGlobalCn()" title="全站中譯一鍵顯示／隱藏">🈶 中譯</button>
-  <a class="hdlink ext" href="https://learning-english-notes.web.app" title="Speak Up! 課堂筆記 · 口說練習 · 每日測驗">🍎🐻 Speak&nbsp;Up ↗</a>
-  <a class="hdlink ext" href="https://rexon-qa-english.web.app/" title="英文題庫練習">🔤 題庫 ↗</a>
+  <span class="hd-sep" aria-hidden="true"></span>
+  <button class="hdlink" id="hd-rate" onclick="cycleRate()" title="朗讀速度（0.6x 慢／0.8x 稍慢／1x 正常）" aria-label="朗讀速度"><b class="r-val">1x</b></button>
+  <button class="hdlink" id="hd-cn" onclick="togGlobalCn()" title="全站中譯一鍵顯示／隱藏">中譯</button>
+  <span class="hd-sep" aria-hidden="true"></span>
+  <a class="hdlink ext" href="https://learning-english-notes.web.app" title="Speak Up! 課堂筆記 · 口說練習 · 每日測驗">Speak&nbsp;Up ↗</a>
+  <a class="hdlink ext" href="https://rexon-qa-english.web.app/" title="英文題庫練習">題庫 ↗</a>
 </header>
 
 <aside id="sidebar">
@@ -3492,7 +3512,7 @@ let CNALL=localStorage.getItem('b2lab_cnall')==='1';
 function applyCnAll(){
   document.body.classList.toggle('cnall',CNALL);
   const b=$('hd-cn');
-  if(b){ b.textContent=CNALL?'🈶 中譯：開':'🈶 中譯：關'; b.classList.toggle('off',!CNALL); }
+  if(b){ b.classList.toggle('off',!CNALL); }
   const mb=$('hd-mcn'); if(mb){ mb.classList.toggle('on',CNALL); mb.setAttribute('aria-pressed',CNALL?'true':'false'); }
   if(typeof showCn!=='undefined'){ showCn=CNALL; if(typeof applySubToggles==='function') applySubToggles(); }
 }
