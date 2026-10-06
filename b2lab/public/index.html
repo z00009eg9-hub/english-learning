@@ -6901,8 +6901,8 @@ function bookHTML(b){
     const cell=t=>'<article class="bkvrow" role="listitem"><div class="bkvmeta">'
         +'<div class="bkvcell bkvword">'+word(t)+'</div>'
         +'<div class="bkvcell bkvipa">'+esc(t.ipa)+'</div><div class="bkvcell bkvpos">'+esc(t.pos)+'</div>'
-        +'</div><div class="bkvcell bkvexample"><span class="sent" data-t="'+esc(t.ex)+'" onclick="saySent(this)">'+bkHi(t.ex,t.w)+'</span> '+spk(t.ex)+'</div>'
-        +(showChinese?'<div class="bkvtranslation">'+esc(t.exCn)+'</div><div class="bkvcell bkvmeaning">'+esc(t.cn)+'</div>':'')+'</article>';
+        +'</div>'+(t.ex?'<div class="bkvcell bkvexample"><span class="sent" data-t="'+esc(t.ex)+'" onclick="saySent(this)">'+bkHi(t.ex,t.w)+'</span> '+spk(t.ex)+'</div>':'')
+        +(showChinese?(t.exCn?'<div class="bkvtranslation">'+esc(t.exCn)+'</div>':'')+'<div class="bkvcell bkvmeaning">'+esc(t.cn)+'</div>':'')+'</article>';
     let rows='';
     for(let i=0;i<list.length;i+=2){
       rows+='<div class="bkvpair">'+cell(list[i])+(i+1<list.length?cell(list[i+1]):'')+'</div>';

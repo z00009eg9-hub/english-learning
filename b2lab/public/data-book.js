@@ -21258,6 +21258,195 @@ window.BOOK = {
      ]
     }
    ]
+  },
+  /* ---- bk20261006 Operator Training and Qualification ---- */
+  {
+    "id": "bk20261006",
+    "video": true,
+    "icon": "🎓",
+    "date": "2026-10-06",
+    "doc": "https://docs.google.com/document/d/1hbL7LYJ-mjE6o94_iriLinHsgpnOG33C5K5R_dTVeL4/edit",
+    "title": "Operator Training and Qualification",
+    "titleCn": "操作員訓練與資格",
+    "topics": "receive / provide training、practical training、tighten / loosen、cover for someone、客戶稽核 (audit) 回答訓練與資格",
+    "hwTitle": "I. ★ 10/06 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "ok": "Our customer found a scratch on the exterior surface.",
+        "cn": "我們的客戶在外觀表面發現了一道刮痕。",
+        "pat": "主詞 + found + 受詞 + on + 地點",
+        "note": "found 是 find 的過去式；exterior surface 指「外觀表面」，on the surface 表示「在表面上」。"
+      },
+      {
+        "n": 2,
+        "ok": "We discussed several solutions and chose the practical approach.",
+        "cn": "我們討論了幾個解決方案，並選擇了實際可行的做法。",
+        "pat": "主詞 + 動詞1（過去式）+ 受詞 and 動詞2（過去式）+ 受詞",
+        "note": "discuss 後面直接接受詞（不加 about）；兩個過去式動詞 discussed 與 chose 用 and 並列；practical approach 是「實際可行的做法」。"
+      },
+      {
+        "n": 3,
+        "wrong": "The operator 接受 practical training so he can reduce operator errors.",
+        "fix": "The operator received practical training to reduce operator errors.",
+        "cn": "操作員接受實務訓練，以減少操作員失誤。",
+        "pat": "主詞 + received + 受詞 + to + 原形動詞（表目的）",
+        "note": "「接受訓練」= receive training，過去式用 received。表示目的時用「to + 原形動詞」，比 so he can 簡潔。"
+      },
+      {
+        "n": 4,
+        "ok": "This problem may cause a quality issue.",
+        "cn": "這個問題可能會導致品質問題。",
+        "pat": "主詞 + may + lead to + 名詞",
+        "note": "課堂上改用 lead to（導致、引發）更自然：This problem may lead to a quality issue. may 後面接原形動詞；lead to 的 to 是介系詞，後面接名詞。"
+      },
+      {
+        "n": 5,
+        "wrong": "Maybe the screw wasn't tighted properly.",
+        "fix": "Maybe the screw wasn't tightened properly.",
+        "cn": "可能螺絲沒有鎖緊。",
+        "pat": "主詞 + wasn't + 過去分詞 + 副詞（被動語態否定）",
+        "note": "tight 是形容詞（緊的），動詞是 tighten（鎖緊），被動要用過去分詞 tightened。螺絲「被鎖緊」所以用 was tightened；詳見 IV-B。"
+      }
+    ],
+    "vocabTitle": "II. 單字 Vocabulary",
+    "vocab": [
+      { "w": "practical training", "ipa": "/ˈpræk.tɪ.kəl ˈtreɪ.nɪŋ/", "pos": "n.", "cn": "實務訓練（詳見 IV-A）" },
+      { "w": "evaluate", "star": true, "ipa": "/ɪˈvæl.ju.eɪt/", "pos": "v.", "cn": "評估（詳見 IV-E）" },
+      { "w": "assess", "star": true, "ipa": "/əˈses/", "pos": "v.", "cn": "評估（詳見 IV-E）" },
+      { "w": "operator competency", "star": true, "ipa": "/ˈɑː.pə.reɪ.t̬ɚ ˈkɑːm.pə.tən.si/", "pos": "n.", "cn": "操作員能力／勝任程度（詳見 V）" },
+      { "w": "training records", "ipa": "/ˈtreɪ.nɪŋ ˈrek.ɚdz/", "pos": "n.", "cn": "訓練紀錄（詳見 IV-E）" },
+      { "w": "qualified", "star": true, "ipa": "/ˈkwɑː.lə.faɪd/", "pos": "adj.", "cn": "具備資格的（詳見 IV-C）" },
+      { "w": "work station", "ipa": "/ˈwɝːk ˌsteɪ.ʃən/", "pos": "n.", "cn": "工作站（詳見 IV-C）" },
+      { "w": "skill level", "ipa": "/ˈskɪl ˌlev.əl/", "pos": "n.", "cn": "技能等級（詳見 IV-E）" },
+      { "w": "assign", "star": true, "ipa": "/əˈsaɪn/", "pos": "v.", "cn": "分配、安排（詳見 IV-E）" },
+      { "w": "cover for someone", "ipa": "/ˈkʌv.ɚ fɔːr ˈsʌm.wʌn/", "pos": "phr. v.", "cn": "代替某人工作（詳見 IV-D）" },
+      { "w": "audit", "star": true, "ipa": "/ˈɑː.dɪt/", "pos": "v. / n.", "cn": "稽核、審核（詳見 IV-C）" },
+      { "w": "verify", "star": true, "ipa": "/ˈver.ə.faɪ/", "pos": "v.", "cn": "驗證、確認（詳見 IV-C）" },
+      { "w": "independently", "star": true, "ipa": "/ˌɪn.dɪˈpen.dənt.li/", "pos": "adv.", "cn": "獨立地（詳見 IV-E）" },
+      { "w": "tighten", "ipa": "/ˈtaɪtən/", "pos": "v.", "cn": "鎖緊（詳見 IV-B）" },
+      { "w": "loosen", "ipa": "/ˈluːsən/", "pos": "v.", "cn": "鬆開（詳見 IV-B）" },
+      { "w": "strengthen", "ipa": "/ˈstreŋ.θən/", "pos": "v.", "cn": "加強（詳見 IV-B）" },
+      { "w": "replacement operator", "ipa": "/rɪˈpleɪs.mənt ˈɑː.pə.reɪ.t̬ɚ/", "pos": "n.", "cn": "代班操作員（詳見 IV-D）" }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases",
+    "phrases": [
+      { "p": "receive training", "cn": "接受訓練（詳見 IV-A）" },
+      { "p": "provide training", "cn": "提供訓練（詳見 IV-A）" },
+      { "p": "practical training", "cn": "實務訓練（詳見 IV-A）" },
+      { "p": "tighten the screw", "cn": "把螺絲鎖緊（詳見 IV-B）" },
+      { "p": "cover for someone", "cn": "代替某人工作（詳見 IV-D）" },
+      { "p": "replacement operator", "cn": "代班操作員（詳見 IV-D）" },
+      { "p": "receive the necessary training", "cn": "接受必要的訓練（詳見 IV-D）" },
+      { "p": "train someone to work at a station", "cn": "訓練某人在某工作站工作（詳見 IV-D）" },
+      { "p": "pass an evaluation", "cn": "通過評估（詳見 IV-E）" },
+      { "p": "assign someone to a task", "cn": "分配某人一項工作（詳見 IV-E）" },
+      { "p": "more challenging tasks", "cn": "更具挑戰性的工作（詳見 IV-E）" }
+    ],
+    "grammarTitle": "IV. 句型與文法解說 Grammar",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "receive / provide training",
+        "pat": "主詞 + receive / provide + (practical) training",
+        "pts": [
+          "「接受訓練」= receive training；「提供訓練」= provide training。",
+          "公司提供（provide），員工接受（receive）。"
+        ],
+        "exs": [
+          { "tag": "員工接受", "en": "All new employees receive training before starting work.", "cn": "所有新員工在開始工作前都會接受訓練。", "hi": "receive training" },
+          { "tag": "公司提供", "en": "Company: We provide practical training to all operators.", "cn": "公司：我們提供實務訓練給所有操作員。", "hi": "provide practical training" },
+          { "tag": "員工接受", "en": "Employee: I received practical training before operating the machine.", "cn": "員工：我在操作機器之前接受過實務訓練。", "hi": "received practical training" }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "形容詞與動詞：tight / tighten、loose / loosen、strong / strengthen",
+        "pat": "形容詞 + -en = 動詞（使變得……）",
+        "pts": [
+          "tight（緊的，adj.）→ tighten（鎖緊，v.）",
+          "loose（鬆的，adj.）→ loosen（鬆開，v.）",
+          "strong（強的，adj.）→ strengthen（加強，v.）",
+          "字尾 -en 常用來把形容詞變成動詞，意思是「使變得……」。",
+          "形容詞描述狀態（The screw is loose.），動詞表示動作（Loosen the screw.）。"
+        ],
+        "exs": [
+          { "tag": "動詞", "en": "Tighten the screw.", "cn": "把螺絲鎖緊。", "hi": "Tighten" },
+          { "tag": "動詞", "en": "Loosen the screw.", "cn": "把螺絲鬆開。", "hi": "Loosen" },
+          { "tag": "形容詞", "en": "The screw is loose.", "cn": "螺絲鬆了。", "hi": "loose" },
+          { "tag": "運送途中鬆脫", "en": "Maybe the screw loosened during transportation.", "cn": "可能螺絲在運送過程中鬆了。", "hi": "loosened" }
+        ]
+      },
+      {
+        "k": "IV-C",
+        "title": "客戶稽核：audit、verify、qualified、suitable",
+        "pat": "check whether + 子句／be qualified to + 原形動詞",
+        "pts": [
+          "whether 引導名詞子句，意思是「是否」，常接在 check 後面。",
+          "be supposed to 表示「應該、被期待要」。",
+          "be qualified to + 原形動詞 表示「有資格做……」。"
+        ],
+        "exs": [
+          { "tag": "安排訓練", "en": "We need to arrange practical training for the operators because our customers will audit their performance. We are supposed to check whether the operators’ skills are suitable for their work stations.", "cn": "我們需要為操作員安排實務訓練，因為客戶將稽核他們的表現。我們應該確認操作員的技能是否適合他們的工作站。", "hi": "check whether" },
+          { "tag": "確認技能", "en": "We need to check whether the operators have the right skills for their jobs.", "cn": "我們需要確認操作員是否具備適合其工作的技能。", "hi": "check whether" },
+          { "tag": "客戶提問", "en": "How do you verify that your operators are qualified to perform their job?", "cn": "你們如何驗證操作員有資格執行他們的工作？", "hi": "qualified to" }
+        ]
+      },
+      {
+        "k": "IV-D",
+        "title": "cover for someone 代替某人工作",
+        "pat": "cover for + 人（代替某人工作）",
+        "pts": [
+          "cover for someone 是「代替某人工作」。",
+          "replacement operator 是「代班操作員」。",
+          "receive the necessary training 是「接受必要的訓練」。",
+          "train someone to work at a station 是「訓練某人在某工作站工作」。"
+        ],
+        "exs": [
+          { "tag": "完整回答", "en": "If an operator takes a day off, we have another operator who can cover for them. The replacement operator has also received the necessary training before working at that station. We normally train all operators to work at all stations, so they can cover for each other when needed.", "cn": "如果操作員請假，我們有另一位操作員可以代替他們。代班操作員在該工作站工作前，也已接受過必要的訓練。我們通常訓練所有操作員在所有工作站工作，所以他們需要時可以互相代班。", "hi": "cover for" },
+          { "tag": "互相代班", "en": "This allows qualified operators to cover for each other when needed.", "cn": "這讓具備資格的操作員在需要時可以互相代班。", "hi": "cover for each other" }
+        ]
+      },
+      {
+        "k": "IV-E",
+        "title": "回答客戶：訓練、評估、技能等級",
+        "pat": "主詞 + provide training and evaluate skills + before + 子句",
+        "pts": [
+          "before + 子句／V-ing 表示「在……之前」。",
+          "ensure 後面接子句，表示「確保」。",
+          "assign someone to a task 是「分配某人一項工作」。",
+          "until 表示「直到」。"
+        ],
+        "exs": [
+          { "tag": "完整回答", "en": "We provide practical training and check the operators’ skills before they work independently. We also review their training records and make sure they have the right skills for their work stations.", "cn": "我們提供實務訓練，並在操作員獨立工作之前確認他們的能力。我們也會檢視他們的訓練紀錄，確保他們具備適合工作站的技能。", "hi": "before they work independently" },
+          { "tag": "評估技能", "en": "We provide practical training and evaluate operators’ skills before they work independently.", "cn": "我們會提供實務訓練，並在操作員獨立工作之前評估他們的技能。", "hi": "evaluate" },
+          { "tag": "保存紀錄", "en": "We also keep training records and ensure all operators are trained to work at different stations.", "cn": "我們也會保存訓練紀錄，並確保所有操作員都接受過不同工作站的訓練。", "hi": "ensure" },
+          { "tag": "內部確認", "en": "We check our employees’ abilities ourselves.", "cn": "我們自己確認員工的能力。", "hi": "ourselves" },
+          { "tag": "未通過評估", "en": "If an operator does not pass our evaluation, we assign them to an easier task at a simpler station until they are ready to take on more challenging tasks.", "cn": "如果操作員沒有通過我們的評估，我們會安排他們做比較簡單的工作，並在較簡單的工作站工作，直到他們準備好接受更具挑戰性的工作。", "hi": "assign them to" },
+          { "tag": "技能等級", "en": "For each station, we have three different skill levels: A, B, and C. Level A tasks are easier than Level B and Level C tasks. Operators start at Level A and can move to higher levels when their skills improve.", "cn": "每個工作站都有三個不同的技能等級：A、B 和 C。A 級的工作比 B 級和 C 級的工作簡單。操作員會從 A 級開始，隨著技能提升，再晉升到更高的等級。", "hi": "skill levels" }
+        ]
+      }
+    ],
+    "reading": [
+      {
+        "bar": "V. 閱讀文章 Reading Article",
+        "title": "Operator Training and Qualification",
+        "titleCn": "操作員訓練與資格認定",
+        "paras": [
+          { "en": "Before operators work independently, we provide practical training and evaluate their skills. We also maintain training records to make sure every operator has received the necessary training for their work station.", "cn": "操作員獨立工作之前，我們會提供實務訓練並評估他們的技能。我們也會維護訓練紀錄，確保每位操作員都接受過其工作站所需的必要訓練。" },
+          { "en": "For each station, we have three different skill levels: A, B, and C. Level A tasks are easier than Level B and Level C tasks. Operators usually start at Level A and move to higher levels as their skills improve.", "cn": "每個工作站都有三個技能等級：A、B 和 C。A 級的工作比 B 級和 C 級簡單。操作員通常從 A 級開始，隨著技能提升再晉升到更高的等級。" },
+          { "en": "We assess our operators’ skills internally. If an operator does not pass our evaluation, we assign them to an easier task at a simpler station. After receiving more training, they can be evaluated again.", "cn": "我們在公司內部評估操作員的技能。如果操作員沒有通過評估，我們會安排他們在較簡單的工作站做比較簡單的工作。接受更多訓練後，他們可以再次接受評估。" },
+          { "en": "We also make sure that operators can cover for each other when needed. If an operator takes a day off, another qualified operator can cover for them. Since all operators are trained to work at different stations, we can keep the production process running smoothly.", "cn": "我們也確保操作員在需要時可以互相代班。如果操作員請假，另一位具備資格的操作員可以代替他們。由於所有操作員都接受過不同工作站的訓練，我們可以讓生產流程順利運作。" },
+          { "en": "When a customer audits our production process, we can show the operators’ training records and explain how we verify their qualifications and skills.", "cn": "當客戶稽核我們的生產流程時，我們可以出示操作員的訓練紀錄，並說明我們如何驗證他們的資格與技能。" }
+        ]
+      }
+    ],
+    "extraVocabTitle": "VI. 補充字彙與句型 Extra",
+    "extraVocab": [
+      { "k": "腦霧", "en": "Brain fog", "cn": "腦霧" },
+      { "k": "有腦霧", "en": "Have brain fog", "cn": "有腦霧" },
+      { "k": "頻率副詞", "en": "Regularly", "cn": "常、定期地" }
+    ]
   }
   ]
 };
@@ -21469,7 +21658,8 @@ window.BOOK = {
     bk20251226b:[[['star','book','piggy','ticket','sprout'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
     bk20260922:[[['eye','gear','plug','clipboard','box'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
     au01:[[['cert','calendar','doc','briefcase','check'],'ISO 認證問答：尚未取得認證 → 目標 2027 年 6 月 → 先提出輔導公司簽呈 → 由品保負責 → 目標日期不等於已完成。']],
-    au02:[[['orgchart','idcard','briefcase','calendar','doc'],'組織圖問答：列出課級以上姓名與年資 → 各部門提供資料 → 由人資負責 → 目標 10 月 19 日 → 仍標示 Open，尚未完成。']]
+    au02:[[['orgchart','idcard','briefcase','calendar','doc'],'組織圖問答：列出課級以上姓名與年資 → 各部門提供資料 → 由人資負責 → 目標 10 月 19 日 → 仍標示 Open，尚未完成。']],
+    bk20261006:[[['cert','chartUp','clipboard','people','search'],'操作員訓練五階段：獨立作業前提供實務訓練並評估技能 → 每站分 A/B/C 三個技能等級逐級晉升 → 內部評估未通過先安排較簡單的工作站 → 所有人都受過訓可互相代班維持生產 → 客戶稽核時出示訓練紀錄說明驗證方式。']]
   };;
   ((window.BOOK||{}).lessons||[]).forEach(function(b){
     var specs=S[b.id]; if(!specs) return;
