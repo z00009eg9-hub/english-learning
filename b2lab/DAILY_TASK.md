@@ -442,16 +442,27 @@ const LS_THUMB={
 
 挑圖示的規則：
 
-- 只能用 `BOOK_ICONS` 裡有的名稱。先把**還沒用過的**列出來再挑：
+- 只能用 `BOOK_ICONS` 裡有的名稱（目前 128 個）。先把可以挑的列出來：
   ```bash
   cd b2lab/public
   node -e "const fs=require('fs');global.window={};require('./data-book.js');
+  const COOL=6;   /* 冷卻批數：最近 6 批（約 3 週）用過的不能再用 */
   const m=/const LS_THUMB=\{([\s\S]*?)\n\};/.exec(fs.readFileSync('index.html','utf8'))[1];
-  const used=[...m.matchAll(/:'([a-zA-Z0-9]+)'/g)].map(x=>x[1]);
-  const free=Object.keys(window.BOOK_ICONS).filter(k=>!used.includes(k));
-  console.log('還沒用過的 '+free.length+' 個：'); console.log(free.join(' '));"
+  const rows=[...m.matchAll(/(dl(\d{8})[a-z0-9]*)\s*:\s*'([a-zA-Z0-9]+)'/g)];
+  const days=[...new Set(rows.map(r=>r[2]))].sort().reverse().slice(0,COOL);
+  const cooling=new Set(rows.filter(r=>days.includes(r[2])).map(r=>r[3]));
+  const everUsed=new Set([...m.matchAll(/:'([a-zA-Z0-9]+)'/g)].map(x=>x[1]));
+  const all=Object.keys(window.BOOK_ICONS);
+  const fresh=all.filter(k=>!everUsed.has(k));
+  const reusable=all.filter(k=>everUsed.has(k)&&!cooling.has(k));
+  console.log('① 從沒用過（優先挑）'+fresh.length+' 個：'); console.log('   '+fresh.join(' '));
+  console.log('② 可重用（冷卻期已過）'+reusable.length+' 個：'); console.log('   '+reusable.join(' '));
+  console.log('③ 冷卻中（最近 '+COOL+' 批用過，不可用）'+cooling.size+' 個：'); console.log('   '+[...cooling].join(' '));"
   ```
-- **同一天四課絕對不能重複**，而且盡量不要跟既有的任何一課重複。
+- **同一天四課絕對不能重複。**
+- **優先挑 ①「從沒用過」的**；①裡找不到語意貼切的，才去 ② 挑可重用的。
+- **③「冷卻中」的絕對不能用**——最近 6 批（約三週）用過的圖示再出現，清單看起來會很重複。
+  第 5 步的驗證會擋下來。
 - 挑**語意貼切**的，不要隨便抓一個沒用過的。例：接駁車 `car`、舊車站／古蹟 `temple`、
   打包行李 `box`、兩個廠之間的角色 `orgchart`。
 - ⚠ 圖示庫裡有幾個是「帶字的徽章」（例如 `clock2` 畫出來是「24」兩個字），
@@ -470,8 +481,11 @@ const LS_THUMB={
   ```
   用瀏覽器開那個檔看過再挑（Windows 會寫到 `D:\icons-preview.html`，
   不寫 C: 的暫存目錄；要改路徑就設環境變數 `ICONS_OUT`）。
-- 真的找不到貼切又沒用過的，才可以重用很久以前某一課用過的——
-  寧可重用一個對的，也不要硬挑一個語意不對的。
+- 寧可從 ② 重用一個語意對的，也不要從 ① 硬挑一個語意不對的。
+- 四個分類加起來永遠有一百個以上可選，所以**不會有「挑不到」這種事**；
+  真的覺得整個圖示庫都沒有貼切的，就在 `data-book.js` 的 `var I={…}` 裡補一個新圖示
+  （64×64、`'+D+'` 深色描邊、`'+A+'` 橘色、stroke-width 3、round caps，照既有筆法畫），
+  補完一樣要渲染出來看過再用。
 
 **這一步會改到 `public/index.html`，所以第 6 步的 `git add` 一定要包含它**（見第 6 步的清單）。
 
@@ -679,10 +693,16 @@ todays.forEach(x=>{
   picks.push(k);
 });
 if(new Set(picks).size!==picks.length) throw '今天四課的圖示有重複: '+picks.join(',');
-const all=Object.values(map);
-const dup=all.filter((v,i)=>all.indexOf(v)!==i);
-if(dup.length) console.warn('⚠ LS_THUMB 全表有重複的圖示: '+[...new Set(dup)].join(','));
-console.log('thumb ok', todays.map(x=>x.id+'→'+map[x.id]).join(' | '));"
+/* 冷卻期：最近 COOL 批（不含今天）用過的圖示不可以再用，否則清單看起來很重複 */
+const COOL=6, today=TODAY.replace(/-/g,'');
+const rows=[...m[1].matchAll(/(dl(\d{8})[a-z0-9]*)\s*:\s*'([a-zA-Z0-9]+)'/g)];
+const days=[...new Set(rows.map(r=>r[2]))].filter(d=>d!==today).sort().reverse().slice(0,COOL);
+const cooling=new Map();
+rows.filter(r=>days.includes(r[2])).forEach(r=>{ if(!cooling.has(r[3])) cooling.set(r[3],r[2]); });
+todays.forEach(x=>{ const k=map[x.id];
+  if(cooling.has(k)) throw x.id+' 用的圖示 '+k+' 還在冷卻期（'+cooling.get(k)+' 那批用過，最近 '+COOL+' 批不可重複），換一個'; });
+console.log('thumb ok', todays.map(x=>x.id+'→'+map[x.id]).join(' | '),
+  '| 冷卻中 '+cooling.size+' 個，可選 '+(Object.keys(I).length-cooling.size)+' 個');"
 ```
 
 ### 6. commit 並 push
