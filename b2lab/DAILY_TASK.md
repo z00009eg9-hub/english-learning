@@ -455,7 +455,21 @@ const LS_THUMB={
 - 挑**語意貼切**的，不要隨便抓一個沒用過的。例：接駁車 `car`、舊車站／古蹟 `temple`、
   打包行李 `box`、兩個廠之間的角色 `orgchart`。
 - ⚠ 圖示庫裡有幾個是「帶字的徽章」（例如 `clock2` 畫出來是「24」兩個字），
-  語意對不上就不要用；不確定長什麼樣就先渲染出來看一眼再決定。
+  語意對不上就不要用。**不確定長什麼樣就先渲染出來看一眼**，不要照名字猜：
+  ```bash
+  cd b2lab/public
+  node -e "const fs=require('fs');global.window={};require('./data-book.js');
+  const I=window.BOOK_ICONS;
+  const m=/const LS_THUMB=\{([\s\S]*?)\n\};/.exec(fs.readFileSync('index.html','utf8'))[1];
+  const used=[...m.matchAll(/:'([a-zA-Z0-9]+)'/g)].map(x=>x[1]);
+  const free=Object.keys(I).filter(k=>!used.includes(k));
+  const t=i=>'<svg viewBox=\'-6.7 -6.7 77.4 77.4\' xmlns=\'http://www.w3.org/2000/svg\'><rect x=\'-6.7\' y=\'-6.7\' width=\'77.4\' height=\'77.4\' fill=\'#fdf6ec\'/><circle cx=\'32\' cy=\'32\' r=\'33\' fill=\'#fff\' stroke=\'#f7e3c9\' stroke-width=\'2.5\'/>'+i+'</svg>';
+  const OUT=process.env.ICONS_OUT||(process.platform==='win32'?'D:/icons-preview.html':'/tmp/icons-preview.html');
+  fs.writeFileSync(OUT,'<!doctype html><meta charset=utf-8><style>body{font-family:system-ui;display:flex;flex-wrap:wrap;gap:10px;padding:16px}figure{margin:0;width:104px;text-align:center}svg{width:84px;height:84px;border:1px solid #f0e2cf;border-radius:12px;display:block;margin:0 auto}figcaption{font-size:12px;color:#6b5540}</style>'+free.map(k=>'<figure>'+t(I[k])+'<figcaption>'+k+'</figcaption></figure>').join(''));
+  console.log('已寫出 '+OUT+'（'+free.length+' 個未使用圖示）');"
+  ```
+  用瀏覽器開那個檔看過再挑（Windows 會寫到 `D:\icons-preview.html`，
+  不寫 C: 的暫存目錄；要改路徑就設環境變數 `ICONS_OUT`）。
 - 真的找不到貼切又沒用過的，才可以重用很久以前某一課用過的——
   寧可重用一個對的，也不要硬挑一個語意不對的。
 
