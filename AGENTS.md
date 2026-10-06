@@ -115,7 +115,14 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
   - 自己寫的句子只能放 `exs`（延伸例句），永遠不混進 `quotes`。
   - UI 不顯示第三方平台品牌，連結一律寫「觀看原影片 ↗」。
   - `icons[3]` / `steps[3]` 要隨內容挑，不要沿用別課的。
-  - 清單縮圖：實景每課設 `thumb`（課本圖示庫 `BOOK_ICONS` 的名稱，跟別課不重複）；新增聽力課要在 `index.html` 的 `LS_THUMB` 補一個不重複的圖示，沒補會先顯示主題 emoji。閱讀文章自動從插圖挑一格沒用過的圖示，不用另外設。
+  - 清單縮圖：實景每課設 `thumb`（課本圖示庫 `BOOK_ICONS` 的名稱，跟別課不重複）；閱讀文章自動從插圖挑一格沒用過的圖示，不用另外設。
+- **清單縮圖一律用線稿圖示，不要用 emoji（2026-10-06 使用者指定）**：
+  全站卡片（課本、閱讀、實景、聽力）的縮圖都是 `data-book.js` 的 `BOOK_ICONS` 線稿（橘黑兩色、114 個）。
+  **聽力是唯一要手動登記的**：`index.html` 的 `lsThumb()` 查 `LS_THUMB[課程 id]`，查不到就退回
+  `topic` 開頭的 emoji，卡片上會冒出 🚐🚧✈️ 這種彩色 emoji，跟其他卡片風格不一致。
+  所以**每次新增聽力課（含每週二／五的四課）都要同時在 `LS_THUMB` 補一筆**，
+  同一批不可重複、語意要貼切。細則與挑圖示的指令見 `b2lab/DAILY_TASK.md` 第 3.6.1 節，
+  第 5 步驗證會擋下漏登記的課。
 - **實景教材是兩人共用**（Anita／Tom），`rwShare()` 會把 `ST.rw` 同步到另一位的
   Firestore 文件；`rwDone`（學習進度）則各自獨立。改這塊前先看懂 `rwShare()`。
 - **生詞本同步（b2wb）**：Speak Up 的 `cloudPush` 必須剔除 `b2wb` 再 `set(merge:true)`。

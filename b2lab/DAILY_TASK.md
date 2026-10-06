@@ -378,7 +378,7 @@ console.log('OK');"
 >
 > 所以這一步**不要上 YouTube 找影片**，也不要寫 `yt`／`source`／`sourceUrl`／`keyLines`／
 > `cc`／`needsSubs` 這些欄位——index.html 已經不讀它們了（`lessonHTML()` 的判斷是：
-> 沒有 `yt` 而且有 `script`，就走 TTS 跟讀版面）。`data-scripts.js` 也不用動，見 3.6.1。
+> 沒有 `yt` 而且有 `script`，就走 TTS 跟讀版面）。`data-scripts.js` 也不用動，見 3.6.2。
 
 網站「今日」分頁會列出**該學習者程度區間內、當天所有程度**的聽力，所以每次執行要補四課：
 
@@ -393,6 +393,7 @@ console.log('OK');"
 - 四課的 `level` 必須剛好是 A2、B1、B1+、B2 各一個，`kind` 一律 `"note"`。
 - 四課跟當天四篇文章走**同一個情境**，主角只用 Tom 與 Anita
   （配角如同事、店員、房東可自由取名，但不要叫 Amy——見開頭的人物設定）。
+- **四課都要在 `index.html` 的 `LS_THUMB` 登記一個線稿圖示**（見 3.6.1），漏了卡片會變成 emoji。
 - **不用管 `usedVoa`**：沒有外部素材要防重複，那個欄位保留現值不動
   （只有未來真的改回外部影片時才需要登記）。
 
@@ -422,7 +423,45 @@ console.log('OK');"
 - **至少有一題考當天的文法點**（像第 2 步的文章題那樣）。
 - 所有中文一律繁體中文台灣用語。
 
-#### 3.6.1 `public/data-scripts.js` 現在是空的，不用動
+#### 3.6.1 四課聽力都要在 `index.html` 的 `LS_THUMB` 補一個線稿圖示（**2026-10-06 使用者指定**）
+
+> 聽力卡片的縮圖跟課本、閱讀、實景一樣，**一律用線稿圖示**
+> （`public/data-book.js` 的 `BOOK_ICONS`，橘黑兩色、共 114 個）。
+> `index.html` 的 `lsThumb()` 會去查 `LS_THUMB[課程 id]`，
+> **查不到就退回 `topic` 開頭的 emoji**——卡片上就會冒出 🚐🚧✈️ 這種彩色 emoji，
+> 跟其他卡片的線稿風格對不起來。所以每次補四課聽力，一定要同時補這四筆。
+
+作法：在 `b2lab/public/index.html` 的 `const LS_THUMB={` 後面**第一行**插入今天四筆
+（最新的放最上面，跟其他資料檔的慣例一致）：
+
+```js
+const LS_THUMB={
+  dl20261006a2:'box',dl20261006b1:'car',dl20261006b1p:'temple',dl20261006b2:'orgchart',
+  dl20261002a2:'hourglass',dl20261002b1:'cross',…
+```
+
+挑圖示的規則：
+
+- 只能用 `BOOK_ICONS` 裡有的名稱。先把**還沒用過的**列出來再挑：
+  ```bash
+  cd b2lab/public
+  node -e "const fs=require('fs');global.window={};require('./data-book.js');
+  const m=/const LS_THUMB=\{([\s\S]*?)\n\};/.exec(fs.readFileSync('index.html','utf8'))[1];
+  const used=[...m.matchAll(/:'([a-zA-Z0-9]+)'/g)].map(x=>x[1]);
+  const free=Object.keys(window.BOOK_ICONS).filter(k=>!used.includes(k));
+  console.log('還沒用過的 '+free.length+' 個：'); console.log(free.join(' '));"
+  ```
+- **同一天四課絕對不能重複**，而且盡量不要跟既有的任何一課重複。
+- 挑**語意貼切**的，不要隨便抓一個沒用過的。例：接駁車 `car`、舊車站／古蹟 `temple`、
+  打包行李 `box`、兩個廠之間的角色 `orgchart`。
+- ⚠ 圖示庫裡有幾個是「帶字的徽章」（例如 `clock2` 畫出來是「24」兩個字），
+  語意對不上就不要用；不確定長什麼樣就先渲染出來看一眼再決定。
+- 真的找不到貼切又沒用過的，才可以重用很久以前某一課用過的——
+  寧可重用一個對的，也不要硬挑一個語意不對的。
+
+**這一步會改到 `public/index.html`，所以第 6 步的 `git add` 一定要包含它**（見第 6 步的清單）。
+
+#### 3.6.2 `public/data-scripts.js` 現在是空的，不用動
 
 > 這個檔原本放 VOA／TED-Ed 這類公共領域影片的逐字稿（`window.LISTEN_SCRIPTS[課程 id]`）。
 > 2026-08-19 之後聽力全部自製、逐字稿寫在課程物件的 `script` 欄位裡，所以它目前是空的，
@@ -606,15 +645,42 @@ if(new Set(ids).size!==ids.length) throw '今天有重複的聽力 id';
 console.log('listen ok', todays.map(x=>x.id+'('+x.level+', '+x.script.length+'句, '+x.questions.length+'題)').join(' | '));"
 ```
 
+也驗證四課聽力都在 `index.html` 的 `LS_THUMB` 登記了線稿圖示（見 3.6.1；漏登記卡片會變成 emoji）：
+
+```bash
+cd b2lab/public
+node -e "const fs=require('fs');global.window={};
+require('./data-book.js');require('./data-listen.js');
+const I=window.BOOK_ICONS||{}, TODAY=new Date().toISOString().slice(0,10);
+const src=fs.readFileSync('index.html','utf8');
+const m=/const LS_THUMB=\{([\s\S]*?)\n\};/.exec(src);
+if(!m) throw '在 index.html 找不到 LS_THUMB';
+const map={}; [...m[1].matchAll(/([A-Za-z0-9_]+)\s*:\s*'([A-Za-z0-9]+)'/g)].forEach(x=>map[x[1]]=x[2]);
+const todays=(window.LISTEN.notes||[]).filter(x=>x.date===TODAY);
+const picks=[];
+todays.forEach(x=>{
+  const k=map[x.id];
+  if(!k) throw x.id+' 沒有在 index.html 的 LS_THUMB 登記圖示（卡片會退回 emoji，見 3.6.1）';
+  if(!I[k]) throw x.id+' 的圖示 '+k+' 不在 BOOK_ICONS 裡';
+  picks.push(k);
+});
+if(new Set(picks).size!==picks.length) throw '今天四課的圖示有重複: '+picks.join(',');
+const all=Object.values(map);
+const dup=all.filter((v,i)=>all.indexOf(v)!==i);
+if(dup.length) console.warn('⚠ LS_THUMB 全表有重複的圖示: '+[...new Set(dup)].join(','));
+console.log('thumb ok', todays.map(x=>x.id+'→'+map[x.id]).join(' | '));"
+```
+
 ### 6. commit 並 push
 
 ```bash
-git add b2lab/public/data-daily.js b2lab/public/data-gvplus.js b2lab/public/data-art.js b2lab/public/data-listen.js b2lab/daily-state.json
+git add b2lab/public/data-daily.js b2lab/public/data-gvplus.js b2lab/public/data-art.js b2lab/public/data-listen.js b2lab/public/index.html b2lab/daily-state.json
 git commit -m "Daily content YYYY-MM-DD: 4 levels (A2/B1/B1+/B2) — <當日主題>"
 git push origin main
 ```
 
-上面五個檔是每次執行**一定**會動到的。`data-scripts.js` 不要加（見 3.6.1，它現在是空的）。
+上面六個檔是每次執行**一定**會動到的（`index.html` 只為了 3.6.1 的 `LS_THUMB` 那一行）。
+`data-scripts.js` 不要加（見 3.6.2，它現在是空的）。
 另外，如果第 5 步的 `check-ipa.js` 逼你回頭去改其他資料檔的音標
 （例如今天的字跟 `data-book.js`／`data-notes.js` 既有寫法不一致），
 那幾個檔也要一起 `git add`——半套的音標修改會讓下一次執行直接卡在同一個檢查。
@@ -640,7 +706,7 @@ push 之後 `.github/workflows/deploy-b2lab.yml` 會自動部署到 https://engl
   若仍被擋，明確寫一行「⚠ WebFetch 仍被擋」提醒使用者確認網路政策。
 - `usedUnits` 與 `usedUnitsTom` 各還剩幾個單元沒教
 - 四張橫幅各用了哪套配色與哪**五個**圖示
-- 四課聽力各用了哪個情境，以及當天的文法點在對話裡怎麼出現
+- 四課聽力各用了哪個情境、哪個線稿圖示（`LS_THUMB`），以及當天的文法點在對話裡怎麼出現
 - 有跳過或沒照任務書做的項目要說明原因（四個程度是硬性要求，不能跳）
 
 （舊制的「⏳ 字幕待補」清單已經不需要了：2026-08-19 起聽力全部自製，
