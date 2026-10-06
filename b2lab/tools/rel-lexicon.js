@@ -179,6 +179,8 @@ const SYN = [
     d:{ 'stop to':'停下來去做另一件事 → stop to V', stop:'停止正在做的事 → stop V-ing' } },
   { m:['spoiled','rotten'], concept:'壞掉的食物',
     d:{ spoiled:'（食物）壞掉、變質', rotten:'腐爛（更嚴重，會有味道）' } },
+  { m:['damaged','defective','faulty'], concept:'壞掉三兄弟',
+    d:{ damaged:'外力造成損壞（撞到、泡水）', defective:'出廠就有製造瑕疵', faulty:'功能異常、運作不正常' } },
   { m:['damp','wet','humid'], concept:'潮濕',
     d:{ damp:'微濕、潮潮的（不舒服）', wet:'濕的（有水）', humid:'（天氣）濕度高' } },
   { m:['scare','scared','scary'], concept:'害怕',

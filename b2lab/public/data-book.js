@@ -17518,10 +17518,24 @@ window.BOOK = {
           "cn": "房仲與租約"
         },
         {
-          "u": "faulty vs defective vs damaged",
-          "sc": "三者差別見下方快速總結（原文只列用法、未給例句）",
-          "ex": "An electrician came to fix a faulty electrical wire.",
-          "exCn": "一位電工前來修理有問題的電線。",
+          "u": "damaged",
+          "sc": "外力損壞（撞到、泡水等造成）",
+          "ex": "The package arrived damaged, with a crushed corner and torn wrapping.",
+          "exCn": "包裹送達時已損壞，一角凹陷、包裝也破了。",
+          "cn": "壞掉三兄弟"
+        },
+        {
+          "u": "defective",
+          "sc": "出廠就有製造瑕疵",
+          "ex": "The company recalled 50,000 units due to a defective battery that could overheat.",
+          "exCn": "該公司召回五萬個產品，因為電池有瑕疵可能過熱。",
+          "cn": "壞掉三兄弟"
+        },
+        {
+          "u": "faulty",
+          "sc": "功能異常、運作不正常",
+          "ex": "The fire was caused by faulty wiring in the basement.",
+          "exCn": "火災是由地下室的電線故障引起的。",
           "cn": "壞掉三兄弟"
         },
       ],
