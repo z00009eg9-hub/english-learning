@@ -8701,11 +8701,38 @@ function vdCountdown(ms){
   };
   if(ms>show) VD.cd=setTimeout(start, ms-show); else start();
 }
+/* 播放時保持螢幕不自動變暗（iOS／平板閒置會鎖屏，鎖屏後語音就停了）。
+   優先用 Screen Wake Lock；舊 iOS 不支援時，用隱形靜音影片保活（NoSleep 做法）。 */
+const VDWL={lock:null,vid:null};
+async function vdWakeOn(){
+  try{
+    if('wakeLock' in navigator){
+      if(VDWL.lock) return;
+      VDWL.lock=await navigator.wakeLock.request('screen');
+      VDWL.lock.addEventListener('release',()=>{ VDWL.lock=null; });
+      return;
+    }
+    if(!VDWL.vid){
+      const c=document.createElement('canvas'); c.width=c.height=2;
+      const g=c.getContext('2d'); g.fillRect(0,0,2,2);
+      const v=document.createElement('video');
+      v.muted=true; v.loop=true; v.setAttribute('playsinline',''); v.setAttribute('muted','');
+      v.style.cssText='position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;left:0;top:0';
+      v.srcObject=c.captureStream(1); document.body.appendChild(v); VDWL.vid=v;
+    }
+    await VDWL.vid.play();
+  }catch(e){}
+}
+function vdWakeOff(){
+  try{ if(VDWL.lock){ VDWL.lock.release(); VDWL.lock=null; } }catch(e){}
+  try{ if(VDWL.vid){ VDWL.vid.pause(); VDWL.vid.remove(); VDWL.vid=null; } }catch(e){}
+}
+document.addEventListener('visibilitychange',()=>{ if(!document.hidden && VD.on) vdWakeOn(); });
 function vdPlay(){
   if(!('speechSynthesis' in window)){ alert('這個瀏覽器不支援語音朗讀。'); return; }
   if(typeof auStop==='function') auStop();
   if(VD.i>=VD.lines.length-1 && !VD.on && VD.lines[VD.i] && (VD.lines[VD.i].vis||{}).type==='end') VD.i=0;
-  VD.on=true;
+  VD.on=true; vdWakeOn();
   if(!VD.keep) VD.keep=setInterval(()=>{
     if(!VD.on){ clearInterval(VD.keep); VD.keep=null; return; }
     if(speechSynthesis.speaking && !speechSynthesis.paused) speechSynthesis.resume();
@@ -8713,7 +8740,7 @@ function vdPlay(){
   vdSpeak();
 }
 function vdPause(){
-  VD.on=false; vdClear();
+  VD.on=false; vdClear(); vdWakeOff();
   if(VD.keep){ clearInterval(VD.keep); VD.keep=null; }
   if('speechSynthesis' in window) speechSynthesis.cancel();
   if($('vd')) vdPaint(false);
