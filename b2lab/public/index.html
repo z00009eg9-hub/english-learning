@@ -3177,7 +3177,6 @@ function dictPlay(raw, done, fallback){
               'https://ssl.gstatic.com/dictionary/static/sounds/20200429/'+key+'_us_1.mp3'];
   let i=0;
   if(dictAu){ try{dictAu.pause()}catch(e){} }
-  speechSynthesis.cancel();
   const a=dictAu=new Audio();
   a.playbackRate=Number(ST.rate)||1;
   a.onended=done;
