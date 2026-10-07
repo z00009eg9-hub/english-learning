@@ -3089,6 +3089,14 @@ function ttsChunks(s){
   return x.replace(/([,;:])\s+/g,'$1').replace(CLAUSE_RE,'')
           .split('').map(y=>y.trim()).filter(Boolean);
 }
+/* iOS：speechSynthesis 要先在使用者手勢內開嗓過一次，之後由非同步流程（如 audio 404 後的
+   fallback）觸發的朗讀才會出聲；第一次觸碰時念一個無聲空白來解鎖 */
+let TTS_UNLOCKED=false;
+document.addEventListener('touchend',function(){
+  if(TTS_UNLOCKED||!('speechSynthesis' in window)) return;
+  TTS_UNLOCKED=true;
+  try{ const u=new SpeechSynthesisUtterance(' '); u.volume=0; speechSynthesis.speak(u); }catch(e){}
+},{capture:true,once:true});
 function say(text,rate,onend,voice,pitchMul){
   const pm=Number(pitchMul)||1;   /* 影片版：女聲 1.15、男聲 0.85（同一個語音也能分出誰在說話） */
   if(!('speechSynthesis' in window)) return;
