@@ -146,6 +146,39 @@ if (noR.length) {
   });
 }
 
+/* --- 6. 自由文字裡的音標（2026-10-08 新增）---
+   課本 k:、patLabel、解說文字等地方會把音標直接寫進句子，不是 w/ipa 相鄰，
+   上面的掃描看不到。這裡掃所有 data-*.js 與 index.html 裡含 IPA 符號的 /…/ 或 […]：
+   不能有英式符號、不能用方括號、ɑ/ɔ 後面要有 ː（或 r、ɪ）。 */
+const FREE_RULES = [
+  ['方括號 […]（應一律 /…/）', null],
+  ['ɒ / ɛ / ɜː / əʊ / ʧ ʤ（非美式）', /[ɒɛʧʤ]|ɜː|əʊ/],
+  ['ɪə / eə / ʊə（英式）', /(?<![aɔ])ɪə|eə|(?<!a)ʊə/],
+  ['ɑ / ɔ 缺 ː（應寫 ɑː / ɔː）', /ɑ(?![ːr])|ɔ(?![ːrɪ])/],
+];
+const free = [];
+fs.readdirSync(PUB).filter(f => /^data-.*\.js$|^index\.html$/.test(f)).sort().forEach(f => {
+  const text = fs.readFileSync(path.join(PUB, f), 'utf8');
+  const re = /[\/\[]([^\/\[\]\n"'<>]{2,60})[\/\]]/g;
+  let m;
+  while ((m = re.exec(text))) {
+    const t = m[1];
+    if (!/[əɪʊæɑɔʃʒθðŋʌɜɒɛ]|[ˈˌ]/.test(t) || /[一-鿿]/.test(t)) continue;
+    const bracket = m[0][0] === '[';
+    FREE_RULES.forEach(([label, rx]) => {
+      if (rx ? rx.test(t) : bracket) free.push({ label, line: text.slice(0, m.index).split('\n').length, f, t: m[0] });
+    });
+  }
+});
+if (free.length) {
+  problems.push({
+    title: '自由文字裡的音標不符美式 Cambridge 記法',
+    n: free.length,
+    lines: free.map(x => '  ' + x.t + '  ' + x.label + '  [' + x.f + ':' + x.line + ']'),
+    fix: '改成美式、用 /…/ 包起來（ɑː 不用 ɑ/ɒ、e 不用 ɛ、oʊ 不用 əʊ）',
+  });
+}
+
 /* --- 報告 --- */
 const words = new Set(rows.map(r => r.w)).size;
 console.log('音標檢查：掃描 ' + rows.length + ' 筆詞條（' + words + ' 個不同的字）');
