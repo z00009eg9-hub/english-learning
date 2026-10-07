@@ -3066,7 +3066,7 @@ articles:[
     },
     {
       "w": "context",
-      "ipa": "/ˈkɑntekst/",
+      "ipa": "/ˈkɑːntekst/",
       "pos": "n.",
       "cn": "脈絡；背景",
       "def": "The situation around something that helps explain it.",
@@ -10263,7 +10263,7 @@ articles:[
     {w:"aging",ipa:"/ˈeɪdʒɪŋ/",pos:"adj.",cn:"老舊的",def:"Old and often close to needing replacement.",ex:"The city is replacing its aging water pipes one street at a time.",exCn:"市政府正一條街一條街地更換老舊的水管。"},
     {w:"significantly",ipa:"/sɪɡˈnɪfɪkəntli/",pos:"adv.",cn:"顯著地、大幅地",def:"By a large or noticeable amount.",ex:"My English improved significantly after I started watching videos without subtitles.",exCn:"我開始看沒有字幕的影片之後，英文進步了很多。"},
     {w:"rush hour",ipa:"/ˈrʌʃ aʊr/",pos:"n.",cn:"尖峰時段",def:"The time of day when traffic and public transportation are the busiest.",ex:"Try to avoid driving downtown during rush hour.",exCn:"尖峰時段盡量不要開車進市區。"},
-    {w:"rely on",ipa:"/rɪˈlaɪ ɑn/",pos:"phr.v.",cn:"仰賴、依靠",def:"To depend on someone or something regularly.",ex:"Many elderly people rely on their neighbors to help them buy groceries.",exCn:"許多年長者仰賴鄰居幫忙買日用品。"}
+    {w:"rely on",ipa:"/rɪˈlaɪ ɑːn/",pos:"phr.v.",cn:"仰賴、依靠",def:"To depend on someone or something regularly.",ex:"Many elderly people rely on their neighbors to help them buy groceries.",exCn:"許多年長者仰賴鄰居幫忙買日用品。"}
   ],
   questions:[
     {q:"Why did the Red Line have delays this week?",qCn:"這週紅線為什麼會延誤？",
