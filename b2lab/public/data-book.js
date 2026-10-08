@@ -7617,7 +7617,7 @@ window.BOOK = {
       date: '2026-06-09',
       doc: 'https://docs.google.com/document/d/1XQre5kA4BrsX-nLU-1UQ7wbq4vKbqzGllF3UVzy5mcE/edit',
       title: 'Flooded Roads & Picture Description',
-      titleCn: '圖片描述',
+      titleCn: '淹水道路與圖片描述',
       topics: '作業複習、圖片描述、flooded vs. flooding、間接引語 would、protect from、It seems、否定不定詞、圖片描述四步驟',
       hwTitle: '★ 06/08 作業複習 Homework Review',
       hw: [
