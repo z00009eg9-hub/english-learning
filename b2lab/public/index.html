@@ -2608,7 +2608,9 @@ nav button{font-size:11px}
 .lcard.fin .bkc-bd,.lcard.fin .bkc-ft{opacity:.62}
 @media(hover:hover){ .lcard.fin:hover .bkc-bd,.lcard.fin:hover .bkc-ft{opacity:1} }
 .lcard:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.lcard .bkc-ft .ext{color:var(--accent2);font-weight:600;text-decoration:none}
+.lcard .bkc-ft .ext{color:var(--accent2);font-weight:600;text-decoration:none;display:inline-block;padding:3px 10px;margin:-3px 0;border-radius:999px;background:rgba(232,129,58,.1);transition:background .15s,color .15s,transform .15s,box-shadow .15s}
+@media(hover:hover){ .lcard .bkc-ft .ext:hover{background:var(--accent2);color:#fff;transform:translateY(-1px);box-shadow:0 2px 6px rgba(201,99,31,.35)} }
+.lcard .bkc-ft .ext:active{transform:scale(.96)}
 .ls-sec{margin:18px 0 8px;font-size:var(--font-subhead);color:var(--ink2)}
 .dh-grid{margin:0 0 14px}
 /* 今日頁「繼續上次」：一張橫條卡，左邊橘色細線；整張可點 */
