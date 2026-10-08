@@ -175,8 +175,11 @@ function buildIndex(lessons) {
     (b.hw || []).forEach(h => push(h.ok || h.fix, h.cn, b, 'hw'));
     (b.reading || []).forEach(r => (r.paras || []).forEach(p => {
       const en = String(p.en || '').replace(/<[^>]*>/g, '');
-      // 只拆英文，中譯是整段的，不對齊 → 閱讀句子不附中譯
-      en.split(/(?<=[.!?])\s+(?=[A-Z"“])/).forEach(s => push(s, '', b, 'reading'));
+      // 中譯是整段的：英文句數與中文句數（。！？）一致時才逐句對齊，否則不附中譯（不亂配）
+      const ens = en.split(/(?<=[.!?])\s+(?=[A-Z"“])/);
+      const cns = String(p.cn || '').replace(/<[^>]*>/g, '').split(/(?<=[。！？])/).map(x => x.trim()).filter(Boolean);
+      const ok = cns.length === ens.length;
+      ens.forEach((s, i) => push(s, ok ? cns[i] : '', b, 'reading'));
     }));
   });
   return { words, phrases, sentences };
@@ -468,7 +471,7 @@ function fromFlow(lessons, idx) {
       title: members.map(m => m.en).join(' → '), members, concept: String(r.titleCn || r.title || '').trim(),
       diff: members.map(m => ({ en: m.en, cn: m.cn })).filter(d => d.cn),
       tip: cap.replace(/^[^：:]*[：:]\s*/, ''), pats: [],
-      exs: chain.filter(c => c.sent).slice(0, 2).map(c => ({ en: c.sent.trim(), cn: '', id: b.id, of: idx[c.kind === 'p' ? 'phrases' : 'words'][c.key].en })),
+      exs: chain.filter(c => c.sent).slice(0, 2).map(c => ({ en: c.sent.trim(), cn: ((idx.sentences.find(x => x.id === b.id && x.en === c.sent.trim() && x.cn) || {}).cn) || '', id: b.id, of: idx[c.kind === 'p' ? 'phrases' : 'words'][c.key].en })),
       lessonIds: [b.id], score: 75 + (earlier ? 10 : 0), src: 'flow', reading: { id: b.id, ri, title: r.title || '' }, earlier,
     });
     if (!o.lessonIds.includes(b.id)) o.lessonIds.push(b.id);

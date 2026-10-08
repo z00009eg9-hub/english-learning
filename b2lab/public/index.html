@@ -5630,7 +5630,7 @@ function bkCard(b,n,opts){
    +(g&&g.title?'<div class="bkc-g">✪ '+esc(g.title)+'</div>':'')
    +(opts.extra||'')
    +'</div></div>'
-   +'<div class="bkc-ft">'+(b.video?'<span class="vd">▶ 影片版</span>':'')+(meta?'<span>'+meta+'</span>':'')
+   +'<div class="bkc-ft">'+(b.video?'<span class="vd" onclick="event.stopPropagation();vdOpen(\''+esc(b.id)+'\',true)">▶ 影片版</span>':'')+(meta?'<span>'+meta+'</span>':'')
    +(b.date?'<span class="d">'+(+mo)+'/'+(+d)+' 週'+wd+'</span>':'')+'</div>'
    +'</div>';
 }
@@ -5655,7 +5655,10 @@ function bkTOCHTML(){
 }
 function bkMonToggle(ym){
   bkMonSet=bkMonSet||{}; bkMonSet[ym]=!bkMonSet[ym];
-  const c=$('bk-cal'); if(c) c.innerHTML=bkTOCHTML();
+  const c=$('bk-cal'); if(!c) return;
+  const sy=window.scrollY;   /* iOS：innerHTML 重繪會把捲動夾到頂端 → 還原 */
+  c.innerHTML=bkTOCHTML();
+  window.scrollTo(0,sy); requestAnimationFrame(()=>{ if(Math.abs(window.scrollY-sy)>2) window.scrollTo(0,sy); });
 }
 window.bkMonToggle=bkMonToggle;
 
@@ -6752,7 +6755,8 @@ function bkGo(id,sec){ bkSkipLast=false; bkOpen=BOOK_LESSONS.find(x=>x.id===id)|
   if(bkOpen){ if(!ST.bkSeen) ST.bkSeen={}; ST.bkSeen[bkOpen.id]=Date.now(); save(); }
   RENDER.book();
   if(sec){ const el=$('bksec-'+sec); if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); el.classList.add('bksec-flash'); setTimeout(()=>el.classList.remove('bksec-flash'),1200); return; } }
-  window.scrollTo(0,0); }
+  /* iOS：重繪後版面還在變動，捲動位置可能被帶到中段 → 立即＋下一幀＋稍後各歸零一次 */
+  window.scrollTo(0,0); requestAnimationFrame(()=>window.scrollTo(0,0)); setTimeout(()=>{ if(bkOpen&&window.scrollY>0) window.scrollTo(0,0); },120); }
 /* 手機標題卡：標題預設兩行，點一下展開／收合；Topics 的「＋N」按一下顯示其餘標籤（2026-09-27） */
 function bkTtlTog(el){ const c=el.closest(".magttl"); if(c) c.classList.toggle("ttlopen"); }
 /* 可反覆收合：不能 remove 按鈕，否則轉到別的斷點（或旋轉螢幕）就收不回去 */
@@ -6939,7 +6943,7 @@ function bookHTML(b){
       /* 標籤刻意用 <b> 而非 <span>：Topics 數量靠 :nth-of-type(span) 計算，標籤若也是 span 會把序號錯開 */
       return '<div class="set" style="font-style:normal"><b class="set-lb">Topics：</b>'+ts.map(pill).join('')+more+'</div>';
     })()
-   +'<div class="bar">'+(b.video?'<button class="magbadge vdbtn" onclick="vdOpen(\''+esc(b.id)+'\')" title="約 3–5 分鐘的影片版：雙語字幕同步、重點表達卡、跟讀">▶ 影片版</button>':'')
+   +'<div class="bar">'+(b.video?'<button class="magbadge vdbtn" onclick="vdOpen(\''+esc(b.id)+'\',true)" title="約 3–5 分鐘的影片版：雙語字幕同步、重點表達卡、跟讀">▶ 影片版</button>':'')
    +'<span class="magbadge c1">📅 '+bkDate(b.date).replace(/^(\d{4}\/)/,'<span class="yr">$1</span>')+'</span>'
    /* .bar-x 在電腦／平板是 display:contents（版面等同沒包），手機才整組收進「⋯」 */
    +'<span class="bar-x">'
@@ -8784,7 +8788,7 @@ function vdKey(e){
   else if(e.key==='ArrowRight'){ e.preventDefault(); vdStep(1); }
   else if(e.key==='ArrowLeft'){ e.preventDefault(); vdStep(-1); }
 }
-function vdOpen(id){
+function vdOpen(id,autoplay){
   vdLoad(()=>{
     const d=window.VIDEO&&window.VIDEO[id];
     if(!d){ alert('這一課還沒有影片版。'); return; }
@@ -8795,6 +8799,7 @@ function vdOpen(id){
     vdCalc(); vdRender();
     document.body.classList.add('vd-lock');
     document.addEventListener('keydown',vdKey);
+    if(autoplay===true) vdPlay();   /* 從課本卡片點「▶ 影片版」：直接播放 */
     /* 網址列換成可分享的影片網址，關閉時還原 */
     try{ VD.prevUrl=location.href; const u=new URL(location.href); u.searchParams.delete('lesson'); u.searchParams.delete('w'); u.searchParams.set('video',id); history.replaceState(history.state,'',u.toString()); }catch(e){}
   });
