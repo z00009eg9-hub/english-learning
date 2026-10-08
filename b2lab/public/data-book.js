@@ -21259,6 +21259,510 @@ window.BOOK = {
     }
    ]
   },
+  {
+   "id": "au03",
+   "icon": "📦",
+   "video": true,
+   "date": "2026-10-05",
+   "title": "Audit English III — Materials, Production Planning & Logistics",
+   "titleCn": "稽核英文三｜資材、生管與物流",
+   "topics": "稽核英文, 資材, 生管, 物流, 化學品管控, FIFO, 儲存條件, 產能, 供應商變更, 出貨條碼, expiry date, storage, capacity, approval, shipment, 目標不等於實績",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "It must also cover chemicals sent to the production line.",
+     "cn": "還需涵蓋化學品送到產線後的管控。",
+     "pat": "主詞 + must also cover + 受詞",
+     "note": "除了倉庫存放，還要管控送到產線的化學品。常見錯誤：只說倉庫位置。"
+    },
+    {
+     "n": 2,
+     "ok": "The finding says it has not been implemented. The local FIFO procedure needs revision.",
+     "cn": "缺失記載尚未執行，當地 FIFO 程序需修改。",
+     "pat": "主詞 + has not been + 過去分詞",
+     "note": "尚未執行，當地程序需修改。常見錯誤：將計畫說成已執行。"
+    },
+    {
+     "n": 3,
+     "ok": "The plan covers temperature and humidity. Controllers need bubble-wrap protection.",
+     "cn": "計畫管控溫度與濕度；控制器需氣泡袋保護。",
+     "pat": "主詞 + covers + 受詞",
+     "note": "溫度、濕度，加上控制器的氣泡袋保護。常見錯誤：編造溫濕度數值。"
+    },
+    {
+     "n": 4,
+     "cn": "是目標，仍需實際生產紀錄與產能分析報告。",
+     "pat": "主詞 + is + a target, not + 實績",
+     "note": "2,000 台／月是目標。常見錯誤：把目標當實績。",
+     "wrong": "The 2,000 units per month is already confirmed actual output.",
+     "fix": "It is a target. Actual production records and a capacity analysis report are still required."
+    },
+    {
+     "n": 5,
+     "cn": "不是，供應商評鑑與客戶變更核准是不同紀錄。",
+     "pat": "A is not the same as B",
+     "note": "評鑑簽名不等於變更核准。常見錯誤：有簽名就當作變更核准。",
+     "wrong": "A signed evaluation form means the customer has approved the material change.",
+     "fix": "No. Supplier evaluation and customer change approval are different records."
+    },
+    {
+     "n": 6,
+     "ok": "October 20 is for planned serial-number printing. The dock function is still under discussion.",
+     "cn": "10/20 是序號列印導入計畫，月台功能仍待討論。",
+     "pat": "主詞 + is for + 計畫事項",
+     "note": "10/20 是序號列印，月台功能仍待討論。常見錯誤：混用時程。"
+    }
+   ],
+   "vocabTitle": "五個關鍵詞 Key Words",
+   "vocab": [
+    {
+     "w": "expiry date",
+     "ipa": "/ɪkˈspaɪri deɪt/",
+     "pos": "n.",
+     "cn": "有效期限",
+     "ex": "The chemical action includes expiry-date control.",
+     "exCn": "化學品改善包含效期管控。"
+    },
+    {
+     "w": "storage",
+     "ipa": "/ˈstɔːr.ɪdʒ/",
+     "pos": "n.",
+     "cn": "儲存",
+     "ex": "We plan to control storage temperature and humidity.",
+     "exCn": "計畫管控儲存溫度及濕度。"
+    },
+    {
+     "w": "capacity",
+     "ipa": "/kəˈpæsəti/",
+     "pos": "n.",
+     "cn": "產能",
+     "ex": "The capacity analysis report is still missing.",
+     "exCn": "產能分析報告仍缺。"
+    },
+    {
+     "w": "approval",
+     "ipa": "/əˈpruːvl/",
+     "pos": "n.",
+     "cn": "核准",
+     "ex": "The finding lists missing customer approval records.",
+     "exCn": "缺失列出客戶核准紀錄不足。"
+    },
+    {
+     "w": "shipment",
+     "ipa": "/ˈʃɪp.mənt/",
+     "pos": "n.",
+     "cn": "出貨貨物",
+     "ex": "The shipping-label checking process needs to be defined.",
+     "exCn": "需建立出貨標籤核對流程。"
+    }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    {
+     "p": "control expiry dates",
+     "cn": "管控效期"
+    },
+    {
+     "p": "storage conditions",
+     "cn": "儲存條件"
+    },
+    {
+     "p": "capacity analysis",
+     "cn": "產能分析"
+    },
+    {
+     "p": "customer approval",
+     "cn": "客戶核准"
+    },
+    {
+     "p": "shipment checks",
+     "cn": "出貨檢查"
+    }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "III-A",
+     "title": "計畫建立措施",
+     "pat": "We plan to + 動詞原形。",
+     "pts": [
+      "例：We plan to establish chemical issue records and expiry-date controls.（我們計畫建立化學品領用紀錄及效期管控。）",
+      "to 後接動詞原形。",
+      "措施列在對策中，尚未證實完成。"
+     ],
+     "ex": "We plan to establish chemical issue records and expiry-date controls.",
+     "exCn": "我們計畫建立化學品領用紀錄及效期管控。"
+    },
+    {
+     "k": "III-B",
+     "title": "指出範圍不同",
+     "pat": "A has…, but B does not have…。",
+     "pts": [
+      "例：EOL has barcode control, but the shipping dock does not have the same function.（EOL 有條碼管控，但出貨月台尚無相同功能。）",
+      "but 前後各說一個站點。",
+      "不能將某站點的功能擴大為全流程。"
+     ],
+     "ex": "EOL has barcode control, but the shipping dock does not have the same function.",
+     "exCn": "EOL 有條碼管控，但出貨月台尚無相同功能。"
+    },
+    {
+     "k": "III-C",
+     "title": "區分目標與實績",
+     "pat": "The target is…。It is not…。",
+     "pts": [
+      "例：The target is 2,000 units per month. It is not a confirmed actual output.（目標是每月 2,000 台，並非已確認的實際產量。）",
+      "先說目標，再補一句 It is not…。",
+      "回答產能時避免把計畫當成實績。"
+     ],
+     "ex": "The target is 2,000 units per month. It is not a confirmed actual output.",
+     "exCn": "目標是每月 2,000 台，並非已確認的實際產量。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "capacity",
+     "sc": "n.　how much can be produced 產能、能生產多少",
+     "cn": "產能（最多能做多少）",
+     "ex": "The capacity analysis report is still missing.",
+     "exCn": "產能分析報告仍缺。"
+    },
+    {
+     "u": "output",
+     "sc": "n.　what is actually produced 產出、實際做了多少",
+     "cn": "產出（實際做了多少）",
+     "ex": "The target needs support from actual output records.",
+     "exCn": "目標需由實際產出紀錄支持。"
+    },
+    {
+     "u": "evaluation",
+     "sc": "n.　checking how a supplier performs 評鑑、評估供應商",
+     "cn": "評鑑（評估供應商）",
+     "ex": "The evaluation form needs signatures.",
+     "exCn": "評鑑表需簽名。"
+    },
+    {
+     "u": "approval",
+     "sc": "n.　permission to go ahead 核准、同意執行",
+     "cn": "核准（同意變更）",
+     "ex": "The change also needs the missing approval records.",
+     "exCn": "變更也需補足缺少的核准紀錄。"
+    },
+    {
+     "u": "serial number",
+     "sc": "n.　a number for one machine 序號、每台機台的編號",
+     "cn": "序號（每台機台）",
+     "ex": "The plan links serial numbers to work orders.",
+     "exCn": "計畫將序號對應工單。"
+    },
+    {
+     "u": "barcode",
+     "sc": "n.　a scannable code on a label 條碼、可掃描的標籤碼",
+     "cn": "條碼（可掃描）",
+     "ex": "EOL has barcode control.",
+     "exCn": "EOL 有條碼管控。"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "案例 01｜化學品管控",
+     "title": "化學品管控",
+     "titleCn": "案例 01｜化學品管控",
+     "paras": [
+      {
+       "en": "Auditor: What gaps were found in chemical control?",
+       "cn": "稽核員：化學品管控有哪些缺口？"
+      },
+      {
+       "en": "You: The gaps cover issue records, storage locations, expiry dates, warning labels, and protective equipment.",
+       "cn": "你：缺口涵蓋領用紀錄、存放位置、效期、警示標籤與防護設備。"
+      },
+      {
+       "en": "Auditor: What is the action plan?",
+       "cn": "稽核員：改善措施是什麼？"
+      },
+      {
+       "en": "You: Materials is responsible for establishing these controls and the local documents. The plan also requires controls for chemicals sent to the production line.",
+       "cn": "你：資材負責建立上述管控及當地文件，計畫也要求提出化學品送到產線後的管控。"
+      },
+      {
+       "en": "Auditor: Does the storage plan cover use on the line?",
+       "cn": "稽核員：儲存計畫有涵蓋產線使用嗎？"
+      },
+      {
+       "en": "You: Line use is a specific item in the action plan. Storage alone does not cover that requirement. The action is Open in the current plan.",
+       "cn": "你：產線使用是對策中的明確項目，只有倉儲管理不能涵蓋該要求。目前的計畫中此項仍為 Open。"
+      }
+     ]
+    },
+    {
+     "bar": "案例 02｜FIFO 與儲存",
+     "title": "FIFO 與儲存",
+     "titleCn": "案例 02｜FIFO 與儲存",
+     "paras": [
+      {
+       "en": "Auditor: Is the FIFO color system in use?",
+       "cn": "稽核員：FIFO 顏色管理已執行了嗎？"
+      },
+      {
+       "en": "You: The finding says the FIFO color system has not been implemented. The local FIFO procedure also needs revision because the Headquarters and overseas-plant procedures differ.",
+       "cn": "你：缺失記載 FIFO 顏色管理尚未執行；總部與海外廠規定不同，當地 FIFO 程序也需修改。"
+      },
+      {
+       "en": "Auditor: How will you store electronic components?",
+       "cn": "稽核員：將如何儲存電子元件？"
+      },
+      {
+       "en": "You: The plan is to establish temperature- and humidity-controlled storage and define the local management procedure.",
+       "cn": "你：計畫建立恆溫恆濕儲存空間，並制定當地管理規定。"
+      },
+      {
+       "en": "Auditor: What happens if temperature or humidity is outside the limits?",
+       "cn": "稽核員：溫濕度超出範圍時如何處理？"
+      },
+      {
+       "en": "You: The finding requires an alarm for abnormal conditions and a checklist for the alarm equipment. The records do not show completed alarm verification.",
+       "cn": "你：缺失要求異常警示及報警設備點檢表；紀錄未顯示已完成警報驗證。"
+      }
+     ]
+    },
+    {
+     "bar": "案例 03｜電子元件保護",
+     "title": "電子元件保護",
+     "titleCn": "案例 03｜電子元件保護",
+     "paras": [
+      {
+       "en": "Auditor: What protection is required for controllers?",
+       "cn": "稽核員：控制器需要哪些保護？"
+      },
+      {
+       "en": "You: The finding calls for controllers to be protected with bubble wrap during material handling. It also calls for the return requirement to be written into the procedure when this protection is missing.",
+       "cn": "你：缺失要求物料搬運中的控制器有氣泡袋保護；缺少此保護時的退回要求也需寫入規定。"
+      },
+      {
+       "en": "Auditor: What condition should the carriers be in?",
+       "cn": "稽核員：載具應維持什麼狀態？"
+      },
+      {
+       "en": "You: Electronic-component carriers should be free of dust and water marks. This requirement is listed in the finding.",
+       "cn": "你：電子元件載具不可有灰塵或水漬，這是缺失中列出的要求。"
+      },
+      {
+       "en": "Auditor: Does a storage room alone close this action?",
+       "cn": "稽核員：只要有儲存室就能結案嗎？"
+      },
+      {
+       "en": "You: No. The action also covers FIFO, controller protection, storage rules, and checks for abnormal temperature or humidity.",
+       "cn": "你：不能，此項也涵蓋 FIFO、控制器保護、儲存規定及溫濕度異常檢查。"
+      }
+     ]
+    },
+    {
+     "bar": "案例 04｜產能目標與實績",
+     "title": "產能目標與實績",
+     "titleCn": "案例 04｜產能目標與實績",
+     "paras": [
+      {
+       "en": "Auditor: What is your V2 production target?",
+       "cn": "稽核員：V2 生產目標是多少？"
+      },
+      {
+       "en": "You: The ramp-up plan targets 2,000 units per month at the overseas plant. This is a planned target, not confirmed actual output.",
+       "cn": "你：海外廠產能爬坡計畫目標為每月 2,000 台，這是規劃目標，不是已確認實際產量。"
+      },
+      {
+       "en": "Auditor: What evidence is still missing?",
+       "cn": "稽核員：仍缺少什麼證據？"
+      },
+      {
+       "en": "You: The finding lists a missing capacity analysis report. It also calls for actual production records to support the ramp-up plan.",
+       "cn": "你：缺失列出產能分析報告不足，也要求實際生產紀錄支持產能爬坡計畫。"
+      },
+      {
+       "en": "Auditor: What will the analysis cover?",
+       "cn": "稽核員：分析將涵蓋什麼？"
+      },
+      {
+       "en": "You: The action covers the forecast, OEE, production schedules, labor loading, actual output, outsourcing, and long-lead purchasing plans. A six-month capacity plan is also required.",
+       "cn": "你：對策涵蓋預測、OEE、排程、人力負荷、實際產出、外包及長交期採購計畫，並要求未來六個月產能規劃。"
+      }
+     ]
+    },
+    {
+     "bar": "案例 05｜供應商變更",
+     "title": "供應商變更",
+     "titleCn": "案例 05｜供應商變更",
+     "paras": [
+      {
+       "en": "Auditor: What gaps were found in supplier change control?",
+       "cn": "稽核員：供應商變更管制有哪些缺口？"
+      },
+      {
+       "en": "You: The SCR document lacks a local-language version, and the local supplier change procedure needs to be established. Sub-supplier change records and customer approval records are also missing.",
+       "cn": "你：SCR 文件缺當地語言版本，需建立當地供應商變更規定；也缺子供應商變更及客戶核准紀錄。"
+      },
+      {
+       "en": "Auditor: What action will Materials take?",
+       "cn": "稽核員：資材會採取什麼措施？"
+      },
+      {
+       "en": "You: The plan is to use the Headquarters approach to create local documents and establish a sign-back mechanism. The supplier evaluation action also requires signatures and corrective-action reports.",
+       "cn": "你：計畫參考總部做法建立當地文件及回簽機制；供應商評鑑改善也要求簽名與缺失改善報告。"
+      },
+      {
+       "en": "Auditor: Does a signed evaluation form prove that a material change is approved?",
+       "cn": "稽核員：評鑑表有簽名就代表材料變更已核准嗎？"
+      },
+      {
+       "en": "You: No. Supplier evaluation and change approval are different records. The action plan separately lists missing change and customer approval records.",
+       "cn": "你：不是，供應商評鑑與變更核准是不同紀錄。改善表另列變更及客戶核准紀錄不足。"
+      }
+     ]
+    },
+    {
+     "bar": "案例 06｜工單與出貨條碼",
+     "title": "工單與出貨條碼",
+     "titleCn": "案例 06｜工單與出貨條碼",
+     "paras": [
+      {
+       "en": "Auditor: How will serial numbers be linked to work orders?",
+       "cn": "稽核員：序號將如何對應工單？"
+      },
+      {
+       "en": "You: The plan links machine serial numbers to work orders in the three-day production schedule. Production Planning is to print the serial numbers, with introduction planned for October 20.",
+       "cn": "你：計畫在三日排程中對應機台序號與工單，由生管列印序號，預計 10/20 導入。"
+      },
+      {
+       "en": "Auditor: Does the shipping dock block duplicate barcodes?",
+       "cn": "稽核員：出貨月台會攔阻重複條碼嗎？"
+      },
+      {
+       "en": "You: EOL has this function, but the dock does not. Adding the dock function still needs discussion in the action plan.",
+       "cn": "你：EOL 有此功能，月台沒有。依改善表，是否增加月台功能仍待討論。"
+      },
+      {
+       "en": "Auditor: What is the shipping-label action?",
+       "cn": "稽核員：出貨標籤的改善是什麼？"
+      },
+      {
+       "en": "You: Production Planning is to define the shipping-barcode label-checking process. The target date is October 30.",
+       "cn": "你：生管需提出出貨條碼標籤核對流程，目標日期為 10/30。"
+      }
+     ]
+    },
+    {
+     "bar": "演練 A｜倉庫連續追問",
+     "title": "倉庫連續追問",
+     "titleCn": "演練 A｜倉庫連續追問",
+     "paras": [
+      {
+       "en": "Auditor: Q1. Is the FIFO color system working?",
+       "cn": "稽核員：FIFO 顏色管理已運作了嗎？"
+      },
+      {
+       "en": "You: The current finding says it has not been implemented. The local procedure needs revision.",
+       "cn": "你：目前的缺失記載尚未執行，當地規定需修改。"
+      },
+      {
+       "en": "Auditor: Q2. What storage improvement is planned?",
+       "cn": "稽核員：計畫改善什麼儲存條件？"
+      },
+      {
+       "en": "You: Temperature- and humidity-controlled storage is planned for electronic components.",
+       "cn": "你：計畫為電子元件建立恆溫恆濕儲存空間。"
+      },
+      {
+       "en": "Auditor: Q3. What checks are required?",
+       "cn": "稽核員：要求哪些檢查？"
+      },
+      {
+       "en": "You: The finding requires alarms for abnormal conditions and an alarm-equipment checklist.",
+       "cn": "你：缺失要求異常警報與報警設備點檢表。"
+      },
+      {
+       "en": "Auditor: Q4. What about handling protection?",
+       "cn": "稽核員：搬運保護方面呢？"
+      },
+      {
+       "en": "You: The finding calls for bubble-wrap protection for controllers and clean carriers without dust or water marks.",
+       "cn": "你：缺失要求控制器氣泡袋保護，以及無灰塵、水漬的乾淨載具。"
+      }
+     ]
+    },
+    {
+     "bar": "演練 B｜產能與交付追問",
+     "title": "產能與交付追問",
+     "titleCn": "演練 B｜產能與交付追問",
+     "paras": [
+      {
+       "en": "Auditor: Q1. Can you already make 2,000 units a month?",
+       "cn": "稽核員：已能每月生產 2,000 台嗎？"
+      },
+      {
+       "en": "You: That is the V2 ramp-up target. The finding still requires actual production records and a capacity analysis report.",
+       "cn": "你：那是 V2 爬坡目標；缺失仍要求實際生產紀錄與產能分析報告。"
+      },
+      {
+       "en": "Auditor: Q2. Does the target prove that delivery can be met?",
+       "cn": "稽核員：有這個目標就能證明交期可達成嗎？"
+      },
+      {
+       "en": "You: No. The target needs support from output records, schedules, and labor-loading data.",
+       "cn": "你：不能。目標需由產出紀錄、排程及人力負荷資料支持。"
+      },
+      {
+       "en": "Auditor: Q3. What planning period is required?",
+       "cn": "稽核員：要求規劃多長期間？"
+      },
+      {
+       "en": "You: A six-month capacity plan is required, involving Materials and Production.",
+       "cn": "你：要求未來六個月產能規劃，涉及資材與製造。"
+      },
+      {
+       "en": "Auditor: Q4. What purchasing risks are included?",
+       "cn": "稽核員：包含哪些採購風險規劃？"
+      },
+      {
+       "en": "You: The action includes outsourcing and purchasing plans for long-lead items.",
+       "cn": "你：對策包含外包與長交期物料採購計畫。"
+      }
+     ]
+    }
+   ],
+   "extraTitle": "隨身速查 Quick Reference",
+   "extra": [
+    {
+     "title": "隨身速查｜六句重點",
+     "exs": [
+      {
+       "en": "The chemical plan covers storage and use on the production line.",
+       "cn": "化學品計畫涵蓋儲存與產線使用。"
+      },
+      {
+       "en": "The local FIFO procedure needs revision.",
+       "cn": "當地 FIFO 程序需修改。"
+      },
+      {
+       "en": "Electronic components need temperature- and humidity-controlled storage.",
+       "cn": "電子元件需要恆溫恆濕儲存。"
+      },
+      {
+       "en": "The V2 target is 2,000 units per month, not confirmed actual output.",
+       "cn": "V2 目標為每月 2,000 台，非已確認實績。"
+      },
+      {
+       "en": "Supplier evaluation is not the same as customer change approval.",
+       "cn": "供應商評鑑不等於客戶變更核准。"
+      },
+      {
+       "en": "EOL has this function, but the shipping dock does not.",
+       "cn": "EOL 有此功能，但月台沒有。"
+      }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261006 Operator Training and Qualification ---- */
   {
     "id": "bk20261006",
@@ -21659,6 +22163,7 @@ window.BOOK = {
     bk20260922:[[['eye','gear','plug','clipboard','box'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
     au01:[[['cert','calendar','doc','briefcase','check'],'ISO 認證問答：尚未取得認證 → 目標 2027 年 6 月 → 先提出輔導公司簽呈 → 由品保負責 → 目標日期不等於已完成。']],
     au02:[[['orgchart','idcard','briefcase','calendar','doc'],'組織圖問答：列出課級以上姓名與年資 → 各部門提供資料 → 由人資負責 → 目標 10 月 19 日 → 仍標示 Open，尚未完成。']],
+    au03:[[['warning','calendar','box','factory','check'],'化學品管控問答：缺領用紀錄、存放位置、效期、警示標籤與防護設備 → 還要管控送到產線的化學品 → 由資材負責建立管控 → 只有倉儲管理不能涵蓋 → 仍標示 Open，尚未完成。']],
     bk20261006:[[['cert','chartUp','clipboard','people','search'],'操作員訓練五階段：獨立作業前提供實務訓練並評估技能 → 每站分 A/B/C 三個技能等級逐級晉升 → 內部評估未通過先安排較簡單的工作站 → 所有人都受過訓可互相代班維持生產 → 客戶稽核時出示訓練紀錄說明驗證方式。']]
   };;
   ((window.BOOK||{}).lessons||[]).forEach(function(b){
