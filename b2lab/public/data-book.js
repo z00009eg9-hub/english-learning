@@ -7722,7 +7722,7 @@ window.BOOK = {
       grammarTitle: 'III／VII. 句型練習＋文法解說 Sentence Patterns',
       grammar: [
         {
-          k: '1', title: 'The roads are flooded. vs The roads are flooding. — 狀態 vs 動作',
+          k: '1', title: 'The roads are flooded. vs The roads are flooding.（路面被淹沒了 vs 路面正在淹水）— 狀態 vs 動作',
           patLabel: 'flooded（形容詞/被動）：完成的狀態，強調「結果」；flooding（現在進行式）：正在發生的動作，強調「過程」',
           pts: [
             '類似區別：broken（已壞掉）vs. breaking（正在壞）；burnt（已燒焦）vs. burning（正在燃燒）。',
