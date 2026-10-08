@@ -185,7 +185,7 @@ window.BOOK = {
       grammarTitle: 'III. 句型與文法解說 Sentence Patterns & Grammar',
       grammar: [
         {
-          k: 'A', title: 'arrive at / arrive in / arrive home',
+          k: 'A', title: 'arrive at / arrive in / arrive home（抵達：at／in／home 的用法）',
           pat: 'arrive at + 小地點（建築、車站、山頂）／ arrive in + 大地點（城市、國家）／ arrive home（不加介系詞）',
           pts: [
             'arrive 是不及物動詞，後面接地點一定要有介系詞；作業第 3 題「arrived the top」就是少了 at。',
@@ -997,7 +997,7 @@ window.BOOK = {
           ]
         },
         {
-          k: 'IV-A', title: 'think alike ／ look alike ／ have a lot in common',
+          k: 'IV-A', title: 'think alike ／ look alike ／ have a lot in common（想法相似／長得像／有很多共同點）',
           pat: 'think alike（想法）／ look alike（外表）／ have a lot in common with（範圍最廣）',
           pts: [
             '1. think alike（範圍最窄）：只講「想法、意見相似」。',
@@ -1013,7 +1013,7 @@ window.BOOK = {
           ]
         },
         {
-          k: 'IV-B', title: 'have something in common ／ have nothing in common',
+          k: 'IV-B', title: 'have something in common ／ have nothing in common（有共同點／毫無共同點）',
           pat: '主詞 + have something / nothing + in common (with someone)',
           pts: [
             'have something in common ＝ 有共同的興趣或特質；have nothing in common ＝ 完全沒有共同點。',
@@ -1337,7 +1337,7 @@ window.BOOK = {
           ]
         },
         {
-          k: 'D', title: 'connect A to B ＋ using ＋ to V',
+          k: 'D', title: 'connect A to B ＋ using ＋ to V（把 A 連接到 B ＋ 使用…來…）',
           pat: 'connect + A + to + B + using + 工具 + to + V',
           pts: [
             '✅ He wanted to connect his laptop to the TV using an HDMI cable to show his PowerPoint presentation.',
@@ -1643,7 +1643,7 @@ window.BOOK = {
           ]
         },
         {
-          k: 'D', title: 'approve of vs. refuse to',
+          k: 'D', title: 'approve of vs. refuse to（贊成 vs. 拒絕）',
           pat: 'approve of + N / V-ing　／　refuse to + V',
           pts: [
             "✅ They didn't approve of the manager's decision.（他們不認可經理的決定。）",
@@ -1652,7 +1652,7 @@ window.BOOK = {
           ]
         },
         {
-          k: 'E', title: 'exposure vs. advertisement',
+          k: 'E', title: 'exposure vs. advertisement（曝光 vs. 廣告）',
           patLabel: '重點比較：exposure ≠ advertisement',
           pts: [
             'exposure（曝光度）＝ 被更多人看見、注意的程度。',
@@ -4535,7 +4535,7 @@ window.BOOK = {
           ]
         },
         {
-          title: '13. Work v.',
+          title: '13. Work v.（13. Work 當動詞用）',
           exs: [
             { tag: '1 現在簡單', en: 'She works here every day.', cn: '她每天都在這裡工作。（描述常態事實）' },
             { tag: '2 過去簡單', en: 'She worked here in 2018.', cn: '她 2018 年時在這裡工作過。（已經結束）' },
@@ -6919,7 +6919,7 @@ window.BOOK = {
       grammarTitle: '📌 2–3. Obvious vs. Obviously ＋ 實用句型與動詞變化',
       grammar: [
         {
-          k: '1', title: 'Obvious /ˈɑːb.vi.əs/ (adj.) vs. Obviously /ˈɑːb.vi.əs.li/ (adv.)',
+          k: '1', title: 'Obvious /ˈɑːb.vi.əs/ (adj.) vs. Obviously /ˈɑːb.vi.əs.li/ (adv.)（明顯的（形容詞）vs. 明顯地（副詞））',
           patLabel: '形容詞修飾「名詞」或放 be 動詞後作主詞補語；副詞修飾「動詞、形容詞或整個句子」，放句首時表達說話者對整件事情的語氣',
           pts: [],
           exs: [
@@ -7076,7 +7076,7 @@ window.BOOK = {
       grammarTitle: '💧 Drain vs. Flow（水的流動）',
       grammar: [
         {
-          k: '1', title: 'Drain vs. Flow',
+          k: '1', title: 'Drain vs. Flow（排出 vs. 流動）',
           patLabel: 'Drain (v.) 著重於「排空、讓液體流出」；Flow (v.) 著重於「液體自然流動的狀態」',
           pts: [
             "The water couldn't drain properly.（引申義 drained 也可以形容人「精力被耗盡」。）",
@@ -7561,7 +7561,7 @@ window.BOOK = {
           ]
         },
         {
-          k: '4', title: 'Extreme Weather：Tornado vs. Typhoon vs. Hurricane',
+          k: '4', title: 'Extreme Weather：Tornado vs. Typhoon vs. Hurricane（極端天氣：龍捲風 vs. 颱風 vs. 颶風）',
           patLabel: '描述風暴襲擊最常用 hit、strike 或 affect；避免用 attack',
           pts: [
             'Tornado /tɔːrˈneɪ.doʊ/（龍捲風）：A fast-rotating column of air from cloud to ground——從雲層延伸到地面的快速旋轉氣柱；範圍小但破壞力非常集中；持續時間短（幾分鐘到一小時）。',
@@ -7948,7 +7948,7 @@ window.BOOK = {
       grammarTitle: 'III. 句型練習：be 動詞 + blown 被動結構',
       grammar: [
         {
-          k: '1', title: 'be + blown + (over/away/off/down) + by + the wind',
+          k: '1', title: 'be + blown + (over/away/off/down) + by + the wind（被風吹（倒／走／掉））',
           pat: '主詞 + be 動詞 + blown + (over/away/off/down) + by + the wind / strong wind（風／強風為施動者）',
           pts: [
             '中文解析：當「風」把某樣東西吹倒、吹走時，若想強調「受影響的物品」，英文常改用被動語態，把物品放在主詞位置，動詞用 be + blown，後面再用 by 帶出「風」這個施動者。',
@@ -8599,7 +8599,7 @@ window.BOOK = {
           ]
         },
         {
-          k: '2', title: 'because vs. because of',
+          k: '2', title: 'because vs. because of（because vs. because of 因為（接子句 vs 接名詞））',
           patLabel: 'because + 子句（S + V）；because of + 名詞片語。⚠️ 不可混用：✗ because of it was raining',
           pts: [],
           exs: [
@@ -8736,7 +8736,7 @@ window.BOOK = {
           ]
         },
         {
-          k: '2', title: "It's gonna be an amazing trip（be going to）",
+          k: '2', title: "It's gonna be an amazing trip（be going to）（這趟旅行會很棒）",
           pat: 'be going to + 原形動詞，口語縮寫為 gonna',
           pts: [
             'be going to 用來表達「根據現在的計畫或跡象」對未來的預測；gonna 是口語自然縮讀，只用在非正式對話，不可用於正式書面英文。',
@@ -10360,7 +10360,7 @@ window.BOOK = {
           ]
         },
         {
-          k: 'C', title: 'make me grow up ❌ vs. help me grow ✅',
+          k: 'C', title: 'make me grow up ❌ vs. help me grow ✅（讓我長大（錯）vs. 幫助我成長（對））',
           patLabel: 'grow up = 長大（年齡上變大），不是「進步、成長」的意思',
           pts: [
             '✅ Pressure can help me grow and become stronger.',
@@ -10719,7 +10719,7 @@ window.BOOK = {
       grammarTitle: 'IV. 句型與文法解說 Sentence Patterns & Grammar',
       grammar: [
         {
-          k: 'A', title: 'be curious about something',
+          k: 'A', title: 'be curious about something（對某事感到好奇）',
           pat: 'be + curious + about + N / V-ing',
           pts: [
             'curious 後面要用介系詞 about，表示「對……好奇」。',
@@ -10728,7 +10728,7 @@ window.BOOK = {
           ]
         },
         {
-          k: 'B', title: 'confuse A as / with B',
+          k: 'B', title: 'confuse A as / with B（把 A 誤認為／混淆成 B）',
           pat: 'confuse + A + as / with + B',
           pts: [
             'confuse A as B 把 A 誤認為 B；confuse A with B 把 A 跟 B 搞混。',
@@ -10737,7 +10737,7 @@ window.BOOK = {
           ]
         },
         {
-          k: 'C', title: 'make it up to someone',
+          k: 'C', title: 'make it up to someone（補償某人）',
           pat: 'make it up to + 人 + by + V-ing',
           pts: [
             '表示「彌補某人」，後面用 by + V-ing 說明彌補的方式。',
@@ -21347,7 +21347,7 @@ window.BOOK = {
     "grammar": [
       {
         "k": "IV-A",
-        "title": "receive / provide training",
+        "title": "receive / provide training（接受／提供訓練）",
         "pat": "主詞 + receive / provide + (practical) training",
         "pts": [
           "「接受訓練」= receive training；「提供訓練」= provide training。",
