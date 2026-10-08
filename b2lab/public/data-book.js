@@ -6968,7 +6968,7 @@ window.BOOK = {
           note: 'get + 形容詞／過去分詞 表示「狀態的轉變」（變得卡住）。' },
         { n: 4, ok: 'Our customer expressed concern about the new product quality.',
           cn: '我們的客戶對新產品的品質表示擔憂。', pat: 'express concern about + 名詞',
-          note: '單字：concern /kənˈsɜːrn/ (n.) 擔憂、關注。' },
+          note: '單字：concern /kənˈsɝːn/ (n.) 擔憂、關注。' },
         { n: 5, ok: 'There is an obvious scratch on the product surface.',
           cn: '產品表面有一道明顯的刮痕。', pat: 'There is + 單數名詞',
           note: 'There is + 單數名詞 表示「存在有……」。' }
