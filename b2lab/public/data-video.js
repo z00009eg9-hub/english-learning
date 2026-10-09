@@ -32852,7 +32852,11 @@ window.VIDEO["bk20261008"] = {
 (function(){
   var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
   var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
-  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  /* 線稿屬性組：thw(w) 指定線寬，th 是預設 2.5。
+     要別的線寬一定要用 thw(w)，不可寫 '+th+' stroke-width="3"：
+     同一元素出現兩個 stroke-width，parser 只取第一個，後面那個會靜默失效。 */
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
   var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
   var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
   /* 稽核員提問的共同記號（與 au01／au02 一致） */
@@ -32988,7 +32992,7 @@ window.VIDEO["bk20261008"] = {
      +'<circle cx="110" cy="46" r="7"/><circle cx="110" cy="66" r="7"/><circle cx="110" cy="86" r="7"/>'
      +'<circle cx="60" cy="96" r="7"/><circle cx="88" cy="96" r="7"/>'
      +'<circle cx="60" cy="44" r="7"/><circle cx="88" cy="44" r="7"/></g>'
-     +'<path d="M140 30 h16 v70 h30" '+th+' stroke-width="3"/>'
+     +'<path d="M140 30 h16 v70 h30" '+thw(3)+'/>'
      +'<circle cx="150" cy="116" r="11" fill="'+L+'" '+st+'/>'
      +'<circle cx="182" cy="116" r="11" fill="'+L+'" '+st+'/>'),
 
@@ -33003,7 +33007,7 @@ window.VIDEO["bk20261008"] = {
 
     /* 13 Anita：爬坡計畫目標每月 2,000 台，是規劃目標不是實際產量 */
     au3Ramp2000: svg(
-      '<path d="M18 122 H186 M18 122 V24" '+th+' stroke-width="3"/>'
+      '<path d="M18 122 H186 M18 122 V24" '+thw(3)+'/>'
      +'<path d="M26 112 l34 -22 l34 -26 l34 -30" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 6"/>'
      +'<g fill="'+A+'" stroke="'+D+'" stroke-width="2"><circle cx="26" cy="112" r="5"/><circle cx="60" cy="90" r="5"/>'
      +'<circle cx="94" cy="64" r="5"/><circle cx="128" cy="34" r="5"/></g>'
