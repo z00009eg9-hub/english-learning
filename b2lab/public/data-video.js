@@ -8965,7 +8965,7 @@ window.VIDEO.bk20260122 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "moneyWorld" },
       en: "Anita, I saw an article today — money makes the world go round. Agree?",
       cn: "Anita，我今天看到一篇文章——說金錢讓世界運轉。你同意嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "moneyWorld" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260122_01" },
       en: "I partly agree that it does. Without money, life doesn't go so smoothly.",
       cn: "我部分同意。沒有錢，生活就沒那麼順利。",
       hi: [{ t: "I partly agree that", cn: "我部分同意", k: "partly", c: 1 },
@@ -8974,24 +8974,24 @@ window.VIDEO.bk20260122 = {
       en: "It also called money the root of all evil. That seems a bit much.",
       cn: "它還說金錢是萬惡之源。那有點太過了。",
       hi: [{ t: "root of all evil", cn: "萬惡之源", k: "root", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "evilRoot" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260122_02" },
       en: "Money itself isn't evil. The real problem's greed.",
       cn: "錢本身不邪惡，真正的問題是貪婪。",
       hi: [{ t: "greed", cn: "貪婪", k: "greed", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "cross" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260122_03" },
       en: "True. Greed's what leads to blackmail, corruption — even slave labour.",
       cn: "沒錯。貪婪才會導致勒索、貪污——甚至奴工。",
       hi: [{ t: "blackmail", cn: "勒索", k: "blackmail", c: 3 },
            { t: "corruption", cn: "貪污", k: "corruption", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "globe" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260122_04" },
       en: "Exactly. Less greed, and there would be less evil in the world.",
       cn: "正是。少一點貪婪，世界上的邪惡就會少一些。",
       hi: [{ t: "there would be less evil", cn: "就會有更少的邪惡", k: "therewould", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "coin" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260122_05" },
       en: "So can money buy happiness? Because if I had loads of money, I'd be pretty happy.",
       cn: "那金錢能買到快樂嗎？因為如果我有一大堆錢，我會蠻開心的。",
       hi: [{ t: "if I had loads of money, I'd be", cn: "如果我有很多錢，我就會", k: "ifhad", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "heart" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260122_06" },
       en: "It can't guarantee happiness, though. Love, good health — can't buy those.",
       cn: "但它無法保證幸福。愛、健康——這些買不到。",
       hi: [{ t: "can't guarantee happiness", cn: "無法保證幸福", k: "guarantee", c: 3 }] },
@@ -9003,20 +9003,20 @@ window.VIDEO.bk20260122 = {
       en: "Maybe. However, some people would just spend it all on plastic surgery!",
       cn: "也許吧。不過，有些人會直接把錢全花在整形上！",
       hi: [{ t: "However", cn: "然而", k: "however", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "star" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260122_07" },
       en: "Ha! Why do people want to look like movie stars, anyway?",
       cn: "哈！話說回來，為什麼大家都想長得像電影明星？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "mirrorFace" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260122_08" },
       en: "Stars always look perfect. As a result, people compare themselves to them and feel bad.",
       cn: "明星看起來永遠很完美。結果大家拿自己跟他們比，然後覺得很差。",
       hi: [{ t: "As a result", cn: "因此", k: "asaresult", c: 1 },
            { t: "compare themselves to", cn: "把自己和……比較", k: "compare", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "warning" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260122_09" },
       en: "Surgery can improve a person's appearance, sure — but it carries health risks.",
       cn: "手術的確能改善一個人的外表——但它有健康風險。",
       hi: [{ t: "improve a person's appearance", cn: "改善一個人的外表", k: "appearance", c: 4 },
            { t: "carries health risks", cn: "帶有健康風險", k: "risks", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "smile" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260122_10" },
       en: "Right. In my opinion, it's not the only way to feel confident.",
       cn: "對。在我看來，那不是讓自己有自信的唯一方法。",
       hi: [{ t: "In my opinion", cn: "在我看來", k: "opinion", c: 4 }] },
@@ -9992,7 +9992,7 @@ window.VIDEO.bk20260129b = {
       cn: "注意聽活動用字：venue、vendor、set menu，以及公司為什麼要辦這些派對。" },
 
     /* ---------- 1 情境對話 ---------- */
-    { ch: 1, sp: "A", vis: { type: "scene", art: "calendar" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260129b_01" },
       en: "Tom, we need to plan the year-end party. Where do we start?",
       cn: "Tom，我們得規劃尾牙了。從哪裡開始？" },
     { ch: 1, sp: "T", vis: { type: "scene", art: "banquetHall" },
@@ -10000,7 +10000,7 @@ window.VIDEO.bk20260129b = {
       cn: "場地。去年我們用飯店的宴會廳，大家都很喜歡。",
       hi: [{ t: "venue", cn: "場地", k: "venue", c: 1 },
            { t: "banquet hall", cn: "宴會廳", k: "banquethall", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "phone" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260129b_02" },
       en: "Okay, I'll make a reservation today. December fills up fast.",
       cn: "好，我今天就去訂。十二月很快就滿了。",
       hi: [{ t: "make a reservation", cn: "訂位、預約", k: "reservation", c: 2 }] },
@@ -10008,7 +10008,7 @@ window.VIDEO.bk20260129b = {
       en: "Good. And which vendor's doing the decorations this time?",
       cn: "好。那這次是哪家廠商負責佈置？",
       hi: [{ t: "vendor", cn: "廠商", k: "vendor", c: 4 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "vendorSetup" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260129b_03" },
       en: "Same one. Unlike last year, they'll set up the round tables too.",
       cn: "同一家。跟去年不同，他們這次也會擺圓桌。",
       hi: [{ t: "Unlike last year", cn: "不像去年", k: "unlike", c: 1 }] },
@@ -10016,27 +10016,27 @@ window.VIDEO.bk20260129b = {
       en: "And food? Set menu again?",
       cn: "那餐點呢？再選套餐？",
       hi: [{ t: "Set menu", cn: "套餐", k: "setmenu", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "setMenu" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260129b_04" },
       en: "Yeah. It's served in courses, so nobody has to order.",
       cn: "對。一道一道上，大家都不用點餐。",
       hi: [{ t: "served in courses", cn: "分道上菜", k: "courses", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "chartUp" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260129b_05" },
       en: "Oh, the boss asked me why we spend so much on one dinner.",
       cn: "喔對，老闆問我為什麼一頓晚餐要花這麼多。" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "people" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260129b_06" },
       en: "Because these events are crucial milestones. They boost morale and foster team spirit.",
       cn: "因為這些活動是重要的里程碑。能提升士氣、培養團隊精神。",
       hi: [{ t: "crucial milestones", cn: "重要的里程碑", k: "milestone", c: 1 },
            { t: "boost morale", cn: "提升士氣", k: "morale", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "talk" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260129b_07" },
       en: "True. People from different departments finally get to mingle with people they never see.",
       cn: "沒錯。不同部門的人終於能跟平常見不到的人交流。",
       hi: [{ t: "mingle with people", cn: "與人交際", k: "mingle", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "heart" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260129b_08" },
       en: "And a generous party makes people feel valued. That's the real point.",
       cn: "而且辦得大方，員工會覺得被重視。這才是重點。",
       hi: [{ t: "feel valued", cn: "感到被重視", k: "valued", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "coin" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260129b_09" },
       en: "So money isn't the root of all evil after all!",
       cn: "所以錢畢竟不是萬惡之源嘛！",
       hi: [{ t: "the root of all evil", cn: "萬惡之源", k: "rootevil", c: 1 }] },
@@ -10045,7 +10045,7 @@ window.VIDEO.bk20260129b = {
       cn: "對，但它也無法保證幸福。派對後再問我——我睡眠很淺。",
       hi: [{ t: "guarantee happiness", cn: "保證幸福", k: "guarantee", c: 4 },
            { t: "a light sleeper", cn: "睡眠很淺的人", k: "lightsleeper", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "lightSleeper" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260129b_10" },
       en: "Then don't stay up all night worrying about the vendor!",
       cn: "那就別為了廠商的事整晚不睡！",
       hi: [{ t: "stay up all night", cn: "整晚沒睡", k: "stayup", c: 2 }] },
@@ -40046,3 +40046,276 @@ window.VIDEO["bk20261008"] = {
   });
 })();
 
+/* ---------- bk20260122／bk20260129b 影片左圖：每句一張專屬線稿 ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y2=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y2+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(cx,cy,w,h){ return '<rect x="'+(cx-w/2)+'" y="'+(cy-h/2)+'" width="'+w+'" height="'+h+'" rx="3" fill="#fff" '+st+'/>'
+     +'<path d="M'+(cx-w/2+6)+' '+(cy-h/2+8)+' h'+(w-12)+' M'+(cx-w/2+6)+' '+(cy-h/2+16)+' h'+(w-16)+'" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'; };
+  var base=function(y){ return '<path d="M10 '+y+' H190" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* ===== bk20260122 金錢觀與整形手術 ===== */
+
+    /* #3 Anita：沒有錢生活不順（硬幣打叉＋顛簸崎嶇路面） */
+    va20260122_01: svg(
+      '<circle cx="52" cy="40" r="20" fill="'+A+'" '+st+'/>'
+     +txt(52,48,'$',24,'#fff')
+     +ex(52,40,30,R)
+     +'<path d="M16 110 q18 -14 36 0 q18 14 36 0 q18 -14 36 0 q18 14 36 0 q9 -7 18 0" fill="none" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +per(152,56,14,C)
+     +'<path d="M138 50 l-6 -8 M166 50 l6 -8" '+thw(3)+'/>'),
+
+    /* #5 Anita：錢本身不邪惡，貪婪才是（平靜硬幣勾 vs 錢袋溢出叉） */
+    va20260122_02: svg(
+      '<circle cx="50" cy="56" r="22" fill="'+A+'" '+st+'/>'
+     +txt(50,64,'$',24,'#fff')
+     +chk(34,42,18,B)
+     +'<path d="M96 10 v130" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 5"/>'
+     +'<path d="M132 86 q18 -4 36 0 q-18 -14 -36 0" fill="'+L+'" '+st+'/>'
+     +'<path d="M132 86 v-40 q0 -6 6 -6 h24 q6 0 6 6 v40" fill="'+L+'" '+st+'/>'
+     +'<g font-family="sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">'
+     +'<circle cx="136" cy="34" r="8" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><text x="136" y="38">$</text>'
+     +'<circle cx="150" cy="26" r="8" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><text x="150" y="30">$</text>'
+     +'<circle cx="164" cy="32" r="8" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><text x="164" y="36">$</text></g>'
+     +ex(150,60,30,R)
+     +base(128)),
+
+    /* #6 Tom：貪婪導致勒索、貪污、奴工（信封＄＋公章＋鎖鏈） */
+    va20260122_03: svg(
+      '<rect x="10" y="30" width="46" height="32" rx="3" fill="#fff" '+st+'/>'
+     +'<path d="M10 30 l23 18 l23 -18" fill="none" stroke="'+D+'" stroke-width="2.5"/>'
+     +txt(33,74,'$',14,R)
+     +'<circle cx="100" cy="46" r="20" fill="#fff" '+st+'/>'
+     +'<circle cx="100" cy="46" r="12" fill="none" stroke="'+R+'" stroke-width="2.5"/>'
+     +txt(100,51,'$',16,R)
+     +'<ellipse cx="166" cy="36" rx="12" ry="16" fill="none" stroke="'+D+'" stroke-width="4"/>'
+     +'<ellipse cx="166" cy="60" rx="12" ry="16" fill="none" stroke="'+D+'" stroke-width="4"/>'
+     +'<path d="M33 98 h134" stroke="'+R+'" stroke-width="3" stroke-dasharray="4 4"/>'
+     +base(128)),
+
+    /* #7 Anita：少一點貪婪就少一點邪惡（下降箭頭＋和平鴿） */
+    va20260122_04: svg(
+      '<path d="M34 28 v70 M24 88 l10 14 l10 -14" fill="none" stroke="'+B+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +txt(34,118,'greed',10,B)
+     +'<path d="M120 56 q14 -20 40 -16 q-6 12 -20 16 q14 6 32 0 q-12 14 -30 12 q-4 10 -14 14 q-2 -10 -8 -14 q-18 2 -30 -12 q18 6 32 0 z" fill="#fff" '+st+'/>'
+     +'<circle cx="148" cy="44" r="2.5" fill="'+D+'"/>'
+     +'<path d="M120 56 q-6 8 -8 18" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M108 82 q4 -4 10 -2 q2 4 8 -2" fill="none" stroke="'+B+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +base(128)),
+
+    /* #8 Tom：錢能買快樂嗎？一大堆錢就會開心（硬幣堆＋問號＋笑臉） */
+    va20260122_05: svg(
+      '<g font-family="sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">'
+     +'<circle cx="34" cy="52" r="12" fill="'+A+'" '+st+'/><text x="34" y="56">$</text>'
+     +'<circle cx="56" cy="42" r="12" fill="'+A+'" '+st+'/><text x="56" y="46">$</text>'
+     +'<circle cx="34" cy="76" r="12" fill="'+A+'" '+st+'/><text x="34" y="80">$</text>'
+     +'<circle cx="56" cy="68" r="12" fill="'+A+'" '+st+'/><text x="56" y="72">$</text></g>'
+     +qb(100,58)
+     +'<circle cx="156" cy="58" r="24" fill="'+C+'" '+st+'/>'
+     +'<circle cx="148" cy="52" r="3" fill="'+D+'"/><circle cx="164" cy="52" r="3" fill="'+D+'"/>'
+     +'<path d="M146 66 q10 8 20 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +base(128)),
+
+    /* #9 Anita：愛和健康買不到（心＋醫療十字被牆隔開、硬幣彈開） */
+    va20260122_06: svg(
+      '<path d="M54 30 q10 -16 22 0 q12 -16 22 0 q14 20 -22 44 q-36 -24 -22 -44" fill="'+R+'" '+st+'/>'
+     +'<rect x="36" y="82" width="42" height="32" rx="4" fill="#fff" '+st+'/>'
+     +'<path d="M49 92 h16 M57 84 v16" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<rect x="114" y="18" width="6" height="112" rx="2" fill="'+D+'"/>'
+     +'<g font-family="sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">'
+     +'<circle cx="150" cy="50" r="10" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><text x="150" y="54">$</text>'
+     +'<circle cx="168" cy="70" r="10" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><text x="168" y="74">$</text></g>'
+     +'<path d="M136 50 l6 -6 M154 70 l6 -6 M142 44 l4 -8" fill="none" stroke="'+R+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +base(128)),
+
+    /* #12 Tom：為什麼想長得像明星（電影銀幕＋聚光燈＋明星） */
+    va20260122_07: svg(
+      '<rect x="26" y="18" width="148" height="88" rx="6" fill="'+D+'" '+st+'/>'
+     +'<rect x="34" y="26" width="132" height="72" rx="3" fill="#fff"/>'
+     +per(100,56,16,L)
+     +'<path d="M100 22 l4 8 l9 1 l-7 6 l2 9 l-8 -4 l-8 4 l2 -9 l-7 -6 l9 -1 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M24 16 l16 10 M176 16 l-16 10" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M24 8 l6 6 M176 8 l-6 6 M100 4 v8" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +base(128)),
+
+    /* #13 Anita：拿自己和明星比覺得差（明星發光 vs 沮喪的人下沉箭頭） */
+    va20260122_08: svg(
+      per(54,48,16,L)
+     +'<path d="M38 26 l-4 -6 M54 22 v-8 M70 26 l4 -6" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M46 58 q8 4 16 0" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M88 56 h24 M106 48 l8 8 l-8 8" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +per(152,48,16,C)
+     +'<path d="M144 58 q8 -6 16 0" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M152 98 v18 M146 110 l6 8 l6 -8" fill="none" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +base(128)),
+
+    /* #14 Tom：手術能改善外表但有健康風險（手術刀＋警告三角） */
+    va20260122_09: svg(
+      '<path d="M40 30 l8 -22 l4 1 l-4 22 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M42 30 h8 v40 q-4 6 -8 0 v-40" fill="'+B+'" '+st+'/>'
+     +'<circle cx="46" cy="14" r="4" fill="#fff" '+st+'/>'
+     +'<path d="M72 56 h24" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M90 48 l8 8 l-8 8" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M140 20 l36 72 h-72 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M140 46 v24" stroke="#fff" stroke-width="6" stroke-linecap="round"/>'
+     +'<circle cx="140" cy="78" r="3.5" fill="#fff"/>'
+     +base(128)),
+
+    /* #15 Anita：自信不只靠手術（多條路通往自信的人） */
+    va20260122_10: svg(
+      per(100,36,16,C)
+     +'<path d="M84 18 l-4 -6 M100 14 v-8 M116 18 l4 -6" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M92 46 q8 4 16 0" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M24 120 l44 -30 M100 120 v-30 M176 120 l-44 -30" fill="none" stroke="'+B+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M64 96 l4 -8 l4 6 M96 96 l4 -8 l4 6 M128 96 l4 -8 l4 6" fill="none" stroke="'+B+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="14" y="118" width="20" height="16" rx="2" fill="#fff" '+st+'/>'
+     +'<path d="M24 118 v16" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M88 122 h24 M92 118 v8 M108 118 v8" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M168 118 q4 -6 8 0 q4 -6 8 0 q6 8 -8 16 q-14 -8 -8 -16" fill="'+R+'" stroke="'+D+'" stroke-width="2"/>'),
+
+    /* ===== bk20260129b 公司活動與社交英文手冊 ===== */
+
+    /* #2 Anita：規劃尾牙從哪開始（待辦清單＋問號） */
+    va20260129b_01: svg(
+      '<rect x="42" y="14" width="116" height="120" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="42" y="14" width="116" height="24" rx="6" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>'
+     +txt(100,31,'PLAN',12,'#fff')
+     +'<rect x="56" y="48" width="14" height="14" rx="2" fill="none" '+st+'/>'
+     +'<path d="M78 55 h66" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<rect x="56" y="72" width="14" height="14" rx="2" fill="none" '+st+'/>'
+     +'<path d="M78 79 h66" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<rect x="56" y="96" width="14" height="14" rx="2" fill="none" '+st+'/>'
+     +'<path d="M78 103 h66" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +qb(172,74)),
+
+    /* #4 Anita：今天就訂位，十二月很快滿（日曆 DEC 格子快填滿＋時鐘趕） */
+    va20260129b_02: svg(
+      '<rect x="32" y="20" width="100" height="96" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="32" y="20" width="100" height="22" rx="6" fill="'+A+'" stroke="'+D+'" stroke-width="3"/>'
+     +txt(82,37,'DEC',12,'#fff')
+     +'<path d="M52 16 v10 M112 16 v10" '+thw(3)+'/>'
+     +'<g fill="'+L+'" stroke="'+D+'" stroke-width="1.5">'
+     +'<rect x="40" y="48" width="18" height="14" rx="2"/><rect x="62" y="48" width="18" height="14" rx="2"/>'
+     +'<rect x="84" y="48" width="18" height="14" rx="2"/><rect x="106" y="48" width="18" height="14" rx="2"/>'
+     +'<rect x="40" y="66" width="18" height="14" rx="2"/><rect x="62" y="66" width="18" height="14" rx="2"/>'
+     +'<rect x="84" y="66" width="18" height="14" rx="2"/><rect x="106" y="66" width="18" height="14" rx="2"/>'
+     +'<rect x="40" y="84" width="18" height="14" rx="2"/></g>'
+     +'<g fill="none" stroke="'+D+'" stroke-width="1.5">'
+     +'<rect x="62" y="84" width="18" height="14" rx="2"/><rect x="84" y="84" width="18" height="14" rx="2"/></g>'
+     +'<circle cx="160" cy="70" r="22" fill="#fff" '+st+'/>'
+     +'<path d="M160 54 v16 l10 8" '+thw(3)+'/>'
+     +'<path d="M176 56 l6 -4 M178 70 l6 0" fill="none" stroke="'+R+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +base(128)),
+
+    /* #6 Anita：跟去年不同，廠商還會擺圓桌（圓桌俯視＋佈置中） */
+    va20260129b_03: svg(
+      '<ellipse cx="80" cy="64" rx="44" ry="24" fill="'+C+'" '+st+'/>'
+     +'<circle cx="56" cy="58" r="6" fill="#fff" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="80" cy="52" r="6" fill="#fff" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="104" cy="58" r="6" fill="#fff" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="68" cy="76" r="6" fill="#fff" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="92" cy="76" r="6" fill="#fff" stroke="'+D+'" stroke-width="2"/>'
+     +per(158,52,12,L)
+     +'<path d="M146 72 l-20 12" '+thw(3)+'/>'
+     +base(128)),
+
+    /* #8 Anita：套餐一道一道上不用點（三盤菜 1→2→3） */
+    va20260129b_04: svg(
+      '<ellipse cx="36" cy="58" rx="22" ry="12" fill="#fff" '+st+'/>'
+     +'<path d="M26 48 q10 -8 20 0" fill="'+L+'" '+st+'/>'
+     +txt(36,86,'1',14,A)
+     +'<ellipse cx="100" cy="58" rx="22" ry="12" fill="#fff" '+st+'/>'
+     +'<path d="M90 48 q10 -8 20 0" fill="'+L+'" '+st+'/>'
+     +txt(100,86,'2',14,A)
+     +'<ellipse cx="164" cy="58" rx="22" ry="12" fill="#fff" '+st+'/>'
+     +'<path d="M154 48 q10 -8 20 0" fill="'+L+'" '+st+'/>'
+     +txt(164,86,'3',14,A)
+     +'<path d="M62 58 h14 M72 52 l6 6 l-6 6" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M126 58 h14 M136 52 l6 6 l-6 6" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M34 36 q-2 -6 2 -12 M38 34 q-2 -6 2 -12 M98 36 q-2 -6 2 -12 M102 34 q-2 -6 2 -12 M162 36 q-2 -6 2 -12 M166 34 q-2 -6 2 -12" fill="none" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>'
+     +base(128)),
+
+    /* #9 Tom：老闆問為什麼花這麼多（人皺眉＋帳單 $$$） */
+    va20260129b_05: svg(
+      per(60,48,18,C)
+     +'<path d="M52 56 q8 -4 16 0" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M48 38 l8 -4 M72 38 l-8 -4" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +doc(148,56,52,70)
+     +txt(148,48,'$$$',16,R)
+     +'<path d="M128 68 h40 M128 78 h36 M128 88 h32" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>'
+     +base(128)),
+
+    /* #10 Anita：活動是重要里程碑、提振士氣（里程碑旗＋上升箭頭＋歡呼的人） */
+    va20260129b_06: svg(
+      '<path d="M50 28 v100" '+thw(4)+'/>'
+     +'<path d="M50 28 h40 l-10 14 l10 14 h-40" fill="'+A+'" '+st+'/>'
+     +'<path d="M130 100 v-50 M118 60 l12 -14 l12 14" fill="none" stroke="'+B+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +per(160,88,10,C)
+     +'<path d="M152 82 l-6 -8 M168 82 l6 -8" '+thw(2.5)+'/>'
+     +base(128)),
+
+    /* #11 Tom：不同部門的人交際往來（兩群人中間握手） */
+    va20260129b_07: svg(
+      per(38,44,12,L)
+     +per(62,50,10,L)
+     +per(138,44,12,C)
+     +per(162,50,10,C)
+     +'<path d="M78 52 q22 12 44 0" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M122 52 q-22 12 -44 0" fill="none" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M88 90 q12 -8 24 0" fill="none" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M84 90 l4 0 l8 10" '+thw(3)+'/>'
+     +'<path d="M116 90 l-4 0 l-8 10" '+thw(3)+'/>'
+     +base(128)),
+
+    /* #12 Anita：慷慨派對讓員工覺得被重視（人胸前掛獎章、發光） */
+    va20260129b_08: svg(
+      per(100,44,18,C)
+     +'<path d="M92 68 l8 10 l8 -10" fill="'+R+'" '+st+'/>'
+     +'<circle cx="100" cy="86" r="10" fill="'+A+'" '+st+'/>'
+     +txt(100,91,'\u2605',12,'#fff')
+     +'<path d="M76 30 l-6 -6 M124 30 l6 -6 M100 20 v-8" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M90 54 q10 8 20 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +base(128)),
+
+    /* #13 Tom：錢畢竟不是萬惡之源！（硬幣長天使翅膀＋光環） */
+    va20260129b_09: svg(
+      '<circle cx="100" cy="68" r="24" fill="'+A+'" '+st+'/>'
+     +txt(100,76,'$',28,'#fff')
+     +'<ellipse cx="100" cy="36" rx="18" ry="6" fill="none" stroke="'+A+'" stroke-width="3.5"/>'
+     +'<path d="M76 60 q-20 -10 -30 4 q-4 12 10 16 q-8 -10 6 -16 q10 -8 20 0 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M124 60 q20 -10 30 4 q4 12 -10 16 q8 -10 -6 -16 q-10 -8 -20 0 z" fill="'+C+'" '+st+'/>'
+     +base(128)),
+
+    /* #15 Tom：別為廠商的事整晚沒睡（床上睜眼、思緒泡泡裡有廠商推車） */
+    va20260129b_10: svg(
+      '<rect x="12" y="72" width="110" height="46" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="12" y="58" width="36" height="24" rx="6" fill="'+L+'" '+st+'/>'
+     +'<circle cx="40" cy="68" r="12" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="35" cy="66" r="3" fill="#fff" stroke="'+D+'" stroke-width="1.5"/><circle cx="35" cy="66" r="1.5" fill="'+D+'"/>'
+     +'<circle cx="45" cy="66" r="3" fill="#fff" stroke="'+D+'" stroke-width="1.5"/><circle cx="45" cy="66" r="1.5" fill="'+D+'"/>'
+     +'<path d="M52 86 h62 q8 0 8 -8" fill="none" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="18" y="118" width="10" height="18" fill="'+D+'"/><rect x="106" y="118" width="10" height="18" fill="'+D+'"/>'
+     +'<ellipse cx="150" cy="36" rx="34" ry="22" fill="#fff" '+st+'/>'
+     +'<circle cx="114" cy="60" r="4" fill="#fff" '+st+'/>'
+     +'<circle cx="122" cy="50" r="6" fill="#fff" '+st+'/>'
+     +'<rect x="136" y="28" width="18" height="14" rx="2" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M154 42 h8 v-6" fill="none" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="142" cy="46" r="3" fill="'+D+'"/>'
+     +'<path d="M56 52 q2 -6 6 -4 M64 54 q2 -4 4 -2" fill="none" stroke="'+R+'" stroke-width="2" stroke-linecap="round"/>')
+  });
+})();

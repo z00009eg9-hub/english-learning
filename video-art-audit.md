@@ -1,23 +1,21 @@
 # 影片左圖盤點
 
-- 有場景的課：87；場景句 1299；不同圖 1227；重複格 72；相鄰同圖 52
-- 圖庫 816 張；場景用到的專屬圖 802 張；通用小圖示佔 214 個場景格；沒被用過的專屬圖 14 張
+- 有場景的課：87；場景句 1299；不同圖 1233；重複格 66；相鄰同圖 47
+- 圖庫 836 張；場景用到的專屬圖 822 張；通用小圖示佔 200 個場景格；沒被用過的專屬圖 14 張
 - 指向不存在圖庫的 art：無
-- **完全合格的課（重複 0 且無通用圖示）：50 / 87；還要做 37 課**
+- **完全合格的課（重複 0 且無通用圖示）：52 / 87；還要做 35 課**
 
 | 級別 | 課數 | 重複格合計 |
 |---|---|---|
 | 重複 10～+ | 0 | 0 |
 | 重複 5～9 | 0 | 0 |
-| 重複 1～4 | 36 | 72 |
-| 重複 0 | 51 | 0 |
+| 重複 1～4 | 34 | 66 |
+| 重複 0 | 53 | 0 |
 
 ## 待辦明細（重複格多的在前）
 
 | 課 | 日期 | 標題 | 場景句 | 不同圖 | 重複格 | 相鄰同圖 | 單圖最多次 | 通用圖示格 |
 |---|---|---|---|---|---|---|---|---|
-| bk20260122 | 2026-01-22 | 金錢觀與整形手術 | 14 | 11 | 3 | 2 | 2 | 7 |
-| bk20260129b | 2026-01-29 | 公司活動與社交英文手冊 | 14 | 11 | 3 | 3 | 2 | 7 |
 | bk20260604 | 2026-06-04 | 天氣與災害：龍捲風、颱風、颶風 | 14 | 11 | 3 | 2 | 3 | 7 |
 | bk20260108 | 2026-01-08 | 使役動詞與借過用語 | 14 | 11 | 3 | 3 | 3 | 6 |
 | bk20260226b | 2026-02-26 | 面試 interview（QA 問答訂正） | 14 | 11 | 3 | 2 | 2 | 5 |
@@ -55,30 +53,6 @@
 | bk20251202 | 2025-12-02 | 感恩節 | 14 | 14 | 0 | 0 | 1 | 4 |
 
 ## 每課要換圖的句子
-
-### bk20260122 金錢觀與整形手術（重複 3 格、通用圖示 7 格）
-- #3 [moneyWorld] 重複：I partly agree that it does. Without money, life doesn't go so smoothl
-- #5 [evilRoot] 重複：Money itself isn't evil. The real problem's greed.
-- #6 [cross] 通用圖示：True. Greed's what leads to blackmail, corruption — even slave labour.
-- #7 [globe] 通用圖示：Exactly. Less greed, and there would be less evil in the world.
-- #8 [coin] 通用圖示：So can money buy happiness? Because if I had loads of money, I'd be pr
-- #9 [heart] 通用圖示：It can't guarantee happiness, though. Love, good health — can't buy th
-- #12 [star] 通用圖示：Ha! Why do people want to look like movie stars, anyway?
-- #13 [mirrorFace] 重複：Stars always look perfect. As a result, people compare themselves to t
-- #14 [warning] 通用圖示：Surgery can improve a person's appearance, sure — but it carries healt
-- #15 [smile] 通用圖示：Right. In my opinion, it's not the only way to feel confident.
-
-### bk20260129b 公司活動與社交英文手冊（重複 3 格、通用圖示 7 格）
-- #2 [calendar] 通用圖示：Tom, we need to plan the year-end party. Where do we start?
-- #4 [phone] 通用圖示：Okay, I'll make a reservation today. December fills up fast.
-- #6 [vendorSetup] 重複：Same one. Unlike last year, they'll set up the round tables too.
-- #8 [setMenu] 重複：Yeah. It's served in courses, so nobody has to order.
-- #9 [chartUp] 通用圖示：Oh, the boss asked me why we spend so much on one dinner.
-- #10 [people] 通用圖示：Because these events are crucial milestones. They boost morale and fos
-- #11 [talk] 通用圖示：True. People from different departments finally get to mingle with peo
-- #12 [heart] 通用圖示：And a generous party makes people feel valued. That's the real point.
-- #13 [coin] 通用圖示：So money isn't the root of all evil after all!
-- #15 [lightSleeper] 重複：Then don't stay up all night worrying about the vendor!
 
 ### bk20260604 天氣與災害：龍捲風、颱風、颶風（重複 3 格、通用圖示 7 格）
 - #3 [rainIntensity] 重複：It is drizzling now, but it should clear up this afternoon.
