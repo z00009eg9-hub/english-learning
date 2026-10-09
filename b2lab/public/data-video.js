@@ -1565,18 +1565,18 @@ window.VIDEO.bk20260716 = {
       en: "Excuse me — could you help me get my bag into the overhead compartment?",
       cn: "不好意思——你可以幫我把包包放進頭頂置物櫃嗎？",
       hi: [{ t: "overhead compartment", cn: "頭頂置物櫃", k: "overhead", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "overheadBin" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260716_01" },
       en: "Certainly. Anything fragile inside?",
       cn: "當然。裡面有易碎的東西嗎？",
       hi: [{ t: "Certainly", cn: "當然", k: "certainly", c: 4 },
            { t: "Anything fragile", cn: "易碎的東西", k: "fragile", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "box" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260716_02" },
       en: "Yeah, a camera and some electronics. Please be careful with it.",
       cn: "有，一台相機和一些電子產品。請小心一點。" },
     { ch: 1, sp: "T", vis: { type: "scene", art: "cabinSeat" },
       en: "No problem. You're in 24A, the window seat.",
       cn: "沒問題。您的座位是 24A，靠窗座位。" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "clock" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260716_03" },
       en: "Great. Any idea how long the flight will take?",
       cn: "太好了。知道飛行要多久嗎？",
       hi: [{ t: "how long the flight will take", cn: "飛行要多久", k: "indirect", c: 2 }] },
@@ -1585,33 +1585,33 @@ window.VIDEO.bk20260716 = {
       cn: "大約三個半小時。第一個小時會有一些亂流。",
       hi: [{ t: "Approximately", cn: "大約", k: "approx", c: 1 },
            { t: "turbulence", cn: "亂流", k: "turbulence", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "turbulence" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260716_04" },
       en: "I'm a little nervous about flying. Any tips?",
       cn: "我對搭飛機有點緊張。有什麼建議嗎？" },
     { ch: 1, sp: "T", vis: { type: "scene", art: "seatBelt" },
       en: "Just relax, and keep your seat belt fastened.",
       cn: "放輕鬆，安全帶保持繫好就行。",
       hi: [{ t: "keep your seat belt fastened", cn: "安全帶保持繫好", k: "fasten", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "cabinSeat" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260716_05" },
       en: "Okay. Also, the seat in front of me is reclined — I can't open my tray table.",
       cn: "好。另外，我前面的椅背往後傾了——我打不開小桌板。",
       hi: [{ t: "is reclined", cn: "椅背往後傾", k: "recline", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "cabinSeat" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260716_06" },
       en: "I'll ask them to put it in the upright position before the meal.",
       cn: "我會請對方在用餐前把椅背調回直立位置。",
       hi: [{ t: "upright position", cn: "直立位置", k: "upright", c: 4 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "food" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260716_07" },
       en: "Thanks. By the way, why's the food wrapped in aluminum foil?",
       cn: "謝謝。對了，為什麼食物是用鋁箔紙包著的？",
       hi: [{ t: "wrapped in aluminum foil", cn: "用鋁箔紙包起來", k: "wrap", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "food" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260716_08" },
       en: "Foil helps keep it hot. Hot food would soften a plastic box.",
       cn: "鋁箔紙能讓它保持熱的。熱食會讓塑膠盒變軟。",
       hi: [{ t: "keep it hot", cn: "讓它保持熱的", k: "keep", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "plane" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260716_09" },
       en: "One more thing — could you wake me before we land?",
       cn: "還有一件事——可以在降落前叫醒我嗎？" },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "plane" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260716_10" },
       en: "Sure. We start preparing for landing about 30 minutes out. Enjoy your flight.",
       cn: "好的。我們會在抵達前大約 30 分鐘開始準備降落。祝您飛行愉快。",
       hi: [{ t: "preparing for landing", cn: "準備降落", k: "landing", c: 2 },
@@ -1896,22 +1896,22 @@ window.VIDEO.bk20260721 = {
       en: "Yep, here you go. What's the baggage allowance on this domestic flight?",
       cn: "對，給你。這班國內航班的行李限額是多少？",
       hi: [{ t: "baggage allowance", cn: "行李限額", k: "allowance", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "luggageScale" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260721_01" },
       en: "It's a budget airline, so carry-on is only seven kilograms.",
       cn: "這是廉價航空，所以隨身行李只有 7 公斤。",
       hi: [{ t: "budget airline", cn: "廉價航空", k: "budget", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "luggageScale" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260721_02" },
       en: "Only seven? I'm way over that. What are my options?",
       cn: "只有 7 公斤？我超過很多。我有哪些選擇？",
       hi: [{ t: "What are my options", cn: "我有哪些選擇", k: "options", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "luggageScale" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260721_03" },
       en: "You can check in the bag. Put it on the scale, please.",
       cn: "您可以托運這件行李。請放到磅秤上。" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "coin" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260721_04" },
       en: "Sure. Can I purchase extra baggage if it's over?",
       cn: "好。如果超重，我可以加購行李額度嗎？",
       hi: [{ t: "purchase extra baggage", cn: "加購行李額度", k: "purchase", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "coin" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260721_05" },
       en: "You can. It's about five dollars per extra kilogram.",
       cn: "可以。每超重一公斤大約五美元。",
       hi: [{ t: "per extra kilogram", cn: "每超重一公斤", k: "perkg", c: 4 }] },
@@ -1920,25 +1920,25 @@ window.VIDEO.bk20260721 = {
       cn: "好。可以在箱子上貼個易碎標籤嗎？裡面裝了杯子。",
       hi: [{ t: "fragile label", cn: "易碎標籤", k: "fragile", c: 2 },
            { t: "contains cups", cn: "裝有杯子", k: "contain", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "fragileLabel" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260721_06" },
       en: "No problem. Anything else in there?",
       cn: "沒問題。裡面還有別的東西嗎？" },
     { ch: 1, sp: "A", vis: { type: "scene", art: "foilWrap" },
       en: "Just a sweet potato wrapped in aluminum foil. Roasted it this morning.",
       cn: "只有一顆用鋁箔紙包起來的地瓜。今天早上烤的。",
       hi: [{ t: "wrapped in aluminum foil", cn: "用鋁箔紙包起來", k: "wrap", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "briefcase" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260721_07" },
       en: "Nice. Traveling for business?",
       cn: "真好。是出差嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "building" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260721_08" },
       en: "Yeah. We've got approximately 300 employees at our factory in Vietnam, and we're still hiring.",
       cn: "對。我們在越南的工廠大約有 300 名員工，而且還在招人。",
       hi: [{ t: "approximately", cn: "大約", k: "approx", c: 4 },
            { t: "at our factory in Vietnam", cn: "在我們越南的工廠", k: "factory", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "checkinDesk" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260721_09" },
       en: "Impressive. Here's your boarding pass. Window seat?",
       cn: "真厲害。這是您的登機證。要靠窗座位嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "plane" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260721_10" },
       en: "Aisle, please. Last time I felt like vomiting because of the turbulence.",
       cn: "請給我走道。上次因為亂流，我覺得想吐。",
       hi: [{ t: "felt like vomiting", cn: "覺得想吐", k: "feellike", c: 1 },
@@ -2222,36 +2222,36 @@ window.VIDEO.bk20260728 = {
       en: "Hi! Is this where I take a boat ride on the river?",
       cn: "你好！這裡是搭船遊河的地方嗎？",
       hi: [{ t: "take a boat ride", cn: "搭船遊覽", k: "boatride", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "boatCave" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260728_01" },
       en: "That's right. How long have you been in Tam Coc?",
       cn: "沒錯。你來三谷多久了？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "star" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260728_02" },
       en: "Just a day. First time here, so I was really looking forward to the trip.",
       cn: "才一天。第一次來，所以我非常期待這趟旅程。",
       hi: [{ t: "looking forward to the trip", cn: "期待這趟旅程", k: "lookforward", c: 2 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "ebike" },
       en: "What'd you do this morning?",
       cn: "你今天早上做了什麼？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "ebike" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260728_03" },
       en: "I rented an e-bike and rode around the countryside. Amazing scenery.",
       cn: "我租了一台電動車，在鄉間四處騎。風景超美。",
       hi: [{ t: "rented an e-bike", cn: "租了一台電動車", k: "rented", c: 3 },
            { t: "scenery", cn: "風景", k: "scenery", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "ebike" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260728_04" },
       en: "Rice fields and limestone mountains. Did you take many photos?",
       cn: "稻田和石灰岩山。你拍了很多照片嗎？",
       hi: [{ t: "limestone mountains", cn: "石灰岩山", k: "limestone", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "clock" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260728_05" },
       en: "Yeah, I took many photos. So, how long does the boat ride take?",
       cn: "有，我拍了很多照片。那遊船要花多久？",
       hi: [{ t: "took many photos", cn: "拍了很多照片", k: "took", c: 3 },
            { t: "how long does the boat ride take", cn: "遊船要花多久", k: "howlong", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "boatCave" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260728_06" },
       en: "It takes approximately two hours. I'll take you through three caves.",
       cn: "大約要花兩個小時。我會帶你穿過三個洞穴。",
       hi: [{ t: "It takes approximately two hours", cn: "大約要花兩個小時", k: "ittakes", c: 1 },
            { t: "take you through", cn: "帶你穿過", k: "takethrough", c: 4 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "coin" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260728_07" },
       en: "Great. Could you give me a discount?",
       cn: "太好了。可以給我折扣嗎？",
       hi: [{ t: "give me a discount", cn: "給我折扣", k: "discount", c: 2 }] },
@@ -2264,15 +2264,15 @@ window.VIDEO.bk20260728 = {
       en: "Sure. Should I apply sunscreen, too?",
       cn: "好。我也應該塗防曬乳嗎？",
       hi: [{ t: "apply sunscreen", cn: "塗防曬乳", k: "sunscreen", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "sunscreenSun" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260728_08" },
       en: "Yes. The sun's strong out on the water — it'll prevent sunburn.",
       cn: "要。水面上的太陽很強——防曬乳可以防止曬傷。",
       hi: [{ t: "prevent sunburn", cn: "防止曬傷", k: "sunburn", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "sunscreenSun" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260728_09" },
       en: "It never crossed my mind the sun would be this strong.",
       cn: "我從沒想過太陽會這麼強。",
       hi: [{ t: "It never crossed my mind", cn: "我從沒想過", k: "crossmind", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "boatCave" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260728_10" },
       en: "Everyone says that. Okay, let's go. You'll see such beautiful views inside the caves.",
       cn: "大家都這麼說。好，出發吧。你會在洞穴裡看到如此美麗的景色。",
       hi: [{ t: "such beautiful views", cn: "如此美麗的景色", k: "such", c: 3 }] },
@@ -4532,7 +4532,7 @@ window.VIDEO.bk20260821 = {
       cn: "注意聽 lend 和 borrow、檔案損毀，還有 under construction 這些說法。" },
 
     /* ---------- 1 情境對話 ---------- */
-    { ch: 1, sp: "T", vis: { type: "scene", art: "mic" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260821_01" },
       en: "Hi Anita, thanks for having me. Can I show my PowerPoint on the TV?",
       cn: "嗨 Anita，謝謝你們的接待。我可以把 PowerPoint 放到電視上嗎？" },
     { ch: 1, sp: "A", vis: { type: "scene", art: "hdmiCable" },
@@ -4548,18 +4548,18 @@ window.VIDEO.bk20260821 = {
       en: "No problem, I'll lend you mine.",
       cn: "沒問題，我的借你。",
       hi: [{ t: "lend you mine", cn: "把我的借給你", k: "lend", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "hdmiCable" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260821_02" },
       en: "Thanks. Mine's an Apple, though — I'll need an adapter for HDMI.",
       cn: "謝謝。不過我的是 Apple——我需要一個 HDMI 轉接器。",
       hi: [{ t: "an adapter", cn: "轉接器", k: "adapter", c: 4 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "hdmiCable" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260821_03" },
       en: "Here's one. Let me sort out the cable.",
       cn: "這裡有一個。我來把線接好。",
       hi: [{ t: "sort out the cable", cn: "把線材的問題處理好", k: "sortout", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "doc" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260821_04" },
       en: "Great, it works. Can you open the first folder?",
       cn: "太好了，可以用了。可以打開第一個資料夾嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "doc" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260821_05" },
       en: "Sure. I made five subfolders in the ABC folder, sorted by date.",
       cn: "好。我在 ABC 資料夾裡建了五個子資料夾，依日期排好了。",
       hi: [{ t: "five subfolders in the ABC folder", cn: "ABC 資料夾裡的五個子資料夾", k: "subfolder", c: 4 }] },
@@ -4567,23 +4567,23 @@ window.VIDEO.bk20260821 = {
       en: "Hmm, this file is corrupted. I can't open it.",
       cn: "嗯，這個檔案損毀了，我打不開。",
       hi: [{ t: "this file is corrupted", cn: "這個檔案損毀了", k: "corrupted", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "check" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260821_06" },
       en: "The files are identical, so no need to open it.",
       cn: "這些檔案完全相同，所以不用開它。",
       hi: [{ t: "The files are identical", cn: "這些檔案完全相同", k: "identical", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "building" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260821_07" },
       en: "Okay. By the way, why the small room today?",
       cn: "好。對了，今天怎麼在這個小房間？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "building" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260821_08" },
       en: "Our test room's still under construction, so we're in here temporarily.",
       cn: "我們的測試室還在施工，所以暫時用這間。",
       hi: [{ t: "under construction", cn: "施工中", k: "construction", c: 3 },
            { t: "temporarily", cn: "暫時地", k: "temporarily", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "briefcase" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260821_09" },
       en: "I see. Have you purchased the equipment for it yet?",
       cn: "了解。那裡的設備買好了嗎？",
       hi: [{ t: "purchased the equipment", cn: "購買了設備", k: "purchase", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "doc" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260821_10" },
       en: "Not yet. The invoices are under my boss's review.",
       cn: "還沒。發票還在我老闆那邊審核。",
       hi: [{ t: "under my boss's review", cn: "正在我老闆審核中", k: "review", c: 1 }] },
@@ -10670,7 +10670,7 @@ window.VIDEO.bk20260203b = {
       en: "Anita, whenever they ask for an example, use the STAR method.",
       cn: "Anita，只要他們要你舉例，就用 STAR 架構。",
       hi: [{ t: "the STAR method", cn: "STAR 回答架構", k: "starmethod", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "starSteps" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260203b_01" },
       en: "Situation, Task, Action, Result. So where do I start?",
       cn: "情況、任務、行動、結果。那我從哪裡開始？" },
     { ch: 1, sp: "T", vis: { type: "scene", art: "clipboard" },
@@ -10680,17 +10680,17 @@ window.VIDEO.bk20260203b = {
       en: "In my previous role as a quality inspector, we were launching a new treadmill model.",
       cn: "我之前擔任品檢員的時候，我們正要推出新的跑步機機型。",
       hi: [{ t: "In my previous role as", cn: "在我之前擔任……的職務時", k: "situation", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "target" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260203b_02" },
       en: "Good. Now the task — what exactly did they expect from you?",
       cn: "好。接著是任務——他們到底期待你做什麼？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "target" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260203b_03" },
       en: "My task was to ensure the first batch met all quality standards before shipment.",
       cn: "我的任務是確保第一批貨出貨前符合所有品質標準。",
       hi: [{ t: "My task was to ensure", cn: "我的任務是確保", k: "taskwas", c: 3 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "tools" },
       en: "Now the action. Say I, not we — or I can't hear what you did.",
       cn: "接著是行動。說 I，不要說 we——不然聽不出你做了什麼。" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "tools" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260203b_04" },
       en: "I initiated a full inspection protocol and personally tested the electronic parts.",
       cn: "我發起了完整的檢驗流程，並親自測試電子零件。",
       hi: [{ t: "I initiated", cn: "我發起了", k: "initiated", c: 4 }] },
@@ -10698,15 +10698,15 @@ window.VIDEO.bk20260203b = {
       en: "I also documented a dimensional discrepancy in the frame.",
       cn: "我也記錄了框架上的一處尺寸落差。",
       hi: [{ t: "documented a dimensional discrepancy", cn: "記錄了一處尺寸落差", k: "documented", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "chartUp" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260203b_05" },
       en: "Excellent. And the result? Give me a number if you've got one.",
       cn: "太好了。結果呢？有數字的話給我一個。" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "chartUp" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260203b_06" },
       en: "As a result, we fixed it before mass production, preventing a costly recall.",
       cn: "結果，我們在量產前就修好了，避免了一次昂貴的召回。",
       hi: [{ t: "As a result", cn: "結果", k: "asaresult", c: 2 },
            { t: "preventing a costly recall", cn: "避免了昂貴的召回", k: "preventing", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "starSteps" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260203b_07" },
       en: "It also improved our production-line efficiency by 15% on that model.",
       cn: "也讓那個機型的產線效率提升了 15%。",
       hi: [{ t: "improved our production-line efficiency by 15%", cn: "讓產線效率提升 15%", k: "improved", c: 4 }] },
@@ -10714,7 +10714,7 @@ window.VIDEO.bk20260203b = {
       en: "Perfect. Now your elevator pitch — present, past, future, two minutes.",
       cn: "完美。現在換電梯簡報——現在、過去、未來，兩分鐘。",
       hi: [{ t: "elevator pitch", cn: "電梯簡報", k: "elevator", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "elevatorPitch" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260203b_08" },
       en: "With over ten years of experience, I have developed a deep expertise in product quality.",
       cn: "憑著超過十年的經驗，我在產品品質上培養出深厚的專業。",
       hi: [{ t: "With over ten years of experience", cn: "憑著超過十年的經驗", k: "withover", c: 2 },
@@ -14053,7 +14053,7 @@ window.VIDEO.bk20260319 = {
       en: "My aim is to improve my English speaking, especially at work.",
       cn: "我的目標是提升英語口說，尤其是在工作上。",
       hi: [{ t: "My aim is to improve my English speaking", cn: "我的目標是提升英語口說", k: "aim", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "aimGoalTarget" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260319_01" },
       en: "Nice. Did you set a clear goal back in January?",
       cn: "很好。你一月的時候有設定明確的目標嗎？",
       hi: [{ t: "set a clear goal", cn: "設定明確的目標", k: "setgoal", c: 2 }] },
@@ -14062,25 +14062,25 @@ window.VIDEO.bk20260319 = {
       cn: "有。我做了一個簡單的學習計畫，每月目標是五十個新單字。",
       hi: [{ t: "made a simple study plan", cn: "制定了學習計畫", k: "plan", c: 3 },
            { t: "my monthly target is fifty new words", cn: "每月目標五十個新單字", k: "target", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "clock" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260319_02" },
       en: "How much time a day?",
       cn: "一天花多少時間？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "clock" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260319_03" },
       en: "About thirty minutes. Mostly listening and speaking — those are the hardest for me.",
       cn: "大約三十分鐘。主要是聽力和口說——那對我最難。",
       hi: [{ t: "listening and speaking", cn: "聽力和口說", k: "improve", c: 1 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "marathonRunner" },
       en: "Was it easy at first?",
       cn: "一開始容易嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "marathonRunner" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260319_04" },
       en: "No. Progress was slow, and I felt I was falling behind.",
       cn: "不容易。進度很慢，我覺得自己正在落後。",
       hi: [{ t: "I was falling behind", cn: "我當時正在落後", k: "fallbehind", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "calendar" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260319_05" },
       en: "So what did you change to catch up?",
       cn: "那你改了什麼來趕上進度？",
       hi: [{ t: "catch up", cn: "趕上進度", k: "catchup", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "wordNotebook" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260319_06" },
       en: "A little every day instead of one long session a week. Then I began to make progress.",
       cn: "每天練一點，而不是一週練一次很久。然後我就開始進步了。",
       hi: [{ t: "make progress", cn: "取得進步", k: "makeprogress", c: 4 }] },
@@ -14088,14 +14088,14 @@ window.VIDEO.bk20260319 = {
       en: "Smart. So you feel you're on track now?",
       cn: "聰明。所以你覺得現在進度正常了？",
       hi: [{ t: "you're on track", cn: "進度正常", k: "ontrack", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "onTrackRail" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260319_07" },
       en: "Yeah, I'm on track, and I'm less afraid of making mistakes.",
       cn: "對，我的進度正常，而且我比較不怕犯錯了。",
       hi: [{ t: "I'm on track", cn: "我的進度正常", k: "ontrack", c: 1 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "rainSuddenly" },
       en: "Oh, did you practice last night? I called at eight, nobody answered.",
       cn: "對了，你昨晚有練習嗎？我八點打給你，沒人接。" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "rainSuddenly" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260319_08" },
       en: "Sorry! I was walking home when it started raining, so I was running for the bus.",
       cn: "抱歉！我正走路回家時突然下雨，所以我在跑著趕公車。",
       hi: [{ t: "was walking home when it started raining", cn: "正走路回家時突然下雨", k: "bgwhen", c: 2 }] },
@@ -14388,24 +14388,24 @@ window.VIDEO.bk20260324 = {
       cn: "注意聽 while 這個字的四種用法。" },
 
     /* ---------- 1 情境對話 ---------- */
-    { ch: 1, sp: "T", vis: { type: "scene", art: "book" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260324_01" },
       en: "Anita, your English has improved so much. When did you start?",
       cn: "Anita，你的英文進步好多。你什麼時候開始的？" },
     { ch: 1, sp: "A", vis: { type: "scene", art: "contextClues" },
       en: "Last year. At first, I found it difficult to recognize new words in a text.",
       cn: "去年。一開始，我覺得在文章裡認出新單字很難。",
       hi: [{ t: "found it difficult to recognize new words", cn: "覺得認出新單字很難", k: "finddifficult", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "contextClues" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260324_02" },
       en: "So what did you do with a word you didn't know?",
       cn: "那遇到不認識的字你怎麼辦？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "contextClues" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260324_03" },
       en: "I had to guess the meaning from the context — and sometimes I got it wrong.",
       cn: "我只能從上下文猜意思——有時候猜錯。",
       hi: [{ t: "guess the meaning from the context", cn: "從上下文猜意思", k: "guess", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "doc" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260324_04" },
       en: "Do you write new words down?",
       cn: "你會把新單字寫下來嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "doc" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260324_05" },
       en: "Yeah. I keep a record of the new words and make a note of important phrases.",
       cn: "會。我記錄新單字，也記下重要的片語。",
       hi: [{ t: "keep a record of the new words", cn: "記錄新單字", k: "keeprecord", c: 2 },
@@ -14413,7 +14413,7 @@ window.VIDEO.bk20260324 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "readAloudMouth" },
       en: "And then? Just reading a list isn't enough, I think.",
       cn: "然後呢？我覺得光看清單不夠。" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "readAloudMouth" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260324_06" },
       en: "Every day I repeat these words out loud and try to use them in a conversation.",
       cn: "我每天大聲重複這些單字，並試著在對話中用它們。",
       hi: [{ t: "repeat these words out loud", cn: "大聲重複這些單字", k: "repeat", c: 1 },
@@ -14421,24 +14421,24 @@ window.VIDEO.bk20260324 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "foreignFilmSubs" },
       en: "Always the same way?",
       cn: "一直都用同樣的方式嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "foreignFilmSubs" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260324_07" },
       en: "No, I like to experiment with different learning methods. I watch foreign films, while my sister only reads articles.",
       cn: "不，我喜歡嘗試不同的學習方法。我看外語片，而我姊姊只讀文章。",
       hi: [{ t: "experiment with different learning methods", cn: "嘗試不同的學習方法", k: "experiment", c: 2 },
            { t: "while my sister only reads articles", cn: "而我姊姊只讀文章", k: "whilecontrast", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "music" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260324_08" },
       en: "Nice. I usually listen to podcasts while I'm driving.",
       cn: "不錯。我通常一邊開車一邊聽 Podcast。",
       hi: [{ t: "while I'm driving", cn: "一邊開車", k: "whilesame", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "doc" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260324_09" },
       en: "Good idea. I also revise my notes regularly, so I don't forget the words.",
       cn: "好主意。我也會定期複習筆記，才不會忘記單字。",
       hi: [{ t: "revise my notes regularly", cn: "定期複習筆記", k: "revise", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "warning" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260324_10" },
       en: "Aren't you afraid of making mistakes when you speak?",
       cn: "你說話的時候不怕犯錯嗎？",
       hi: [{ t: "making mistakes", cn: "犯錯", k: "mistakes", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "smile" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260324_11" },
       en: "Not anymore. Every mistake is an opportunity to learn.",
       cn: "現在不怕了。每個錯誤都是學習的機會。",
       hi: [{ t: "an opportunity to learn", cn: "學習的機會", k: "opportunity", c: 4 }] },
@@ -14727,7 +14727,7 @@ window.VIDEO.bk20260326 = {
       cn: "注意聽她怎麼描述自己的進步，還有 -ed 和 -ing 結尾的形容詞。" },
 
     /* ---------- 1 情境對話 ---------- */
-    { ch: 1, sp: "T", vis: { type: "scene", art: "smile" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260326_01" },
       en: "Anita, I just started my first English class. Any advice?",
       cn: "Anita，我剛開始上第一堂英文課。有什麼建議嗎？" },
     { ch: 1, sp: "A", vis: { type: "scene", art: "progressPlateau" },
@@ -14737,32 +14737,32 @@ window.VIDEO.bk20260326 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "tonguePronounce" },
       en: "Was anything hard at the beginning?",
       cn: "一開始有什麼很難的嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "tonguePronounce" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260326_02" },
       en: "Yeah. I found the pronunciation difficult — people didn't always understand me.",
       cn: "有。我覺得發音很難，而且別人不一定聽得懂我。",
       hi: [{ t: "found the pronunciation difficult", cn: "覺得發音很難", k: "pronunciation", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "progressPlateau" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260326_03" },
       en: "That sounds frustrating. So how did it change?",
       cn: "聽起來很挫折。那後來怎麼改變的？",
       hi: [{ t: "frustrating", cn: "令人挫折的", k: "frustrating", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "mic" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260326_04" },
       en: "After a while my pronunciation improved, and I could express basic ideas quite effectively.",
       cn: "過了一陣子我的發音進步了，也能相當有效地表達基本想法。",
       hi: [{ t: "After a while", cn: "過了一陣子", k: "afterwhile", c: 4 },
            { t: "express basic ideas quite effectively", cn: "有效地表達基本想法", k: "express", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "chartUp" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260326_05" },
       en: "Could you feel the difference?",
       cn: "你自己感覺得到差別嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "chartUp" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260326_06" },
       en: "Yeah. It was obvious that I was getting better, which was very encouraging.",
       cn: "感覺得到。很明顯我在變好，那非常令人鼓舞。",
       hi: [{ t: "It was obvious that", cn: "很明顯地", k: "obvious", c: 2 },
            { t: "very encouraging", cn: "非常令人鼓舞", k: "encouraging", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "progressPlateau" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260326_07" },
       en: "So your pronunciation improved. Does it keep getting easier?",
       cn: "所以你的發音進步了。會一直越來越輕鬆嗎？",
       hi: [{ t: "your pronunciation improved", cn: "你的發音進步了", k: "improved", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "progressPlateau" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260326_08" },
       en: "Not exactly. At intermediate level, I made slower progress.",
       cn: "不完全是。到了中級階段，我的進步變慢了。",
       hi: [{ t: "At intermediate level", cn: "在中級階段", k: "intermediate", c: 4 },
@@ -14770,18 +14770,18 @@ window.VIDEO.bk20260326 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "redPenMistakes" },
       en: "How come? Too many new words?",
       cn: "怎麼會？新單字太多嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "redPenMistakes" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260326_09" },
       en: "Yeah, and a lot of words I understood but couldn't use accurately.",
       cn: "對，而且很多字我看得懂，卻不會準確地使用。",
       hi: [{ t: "couldn't use accurately", cn: "不會準確地使用", k: "accurately", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "redPenMistakes" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260326_10" },
       en: "I was also more aware of my mistakes — good, but frustrating too.",
       cn: "我也更意識到自己的錯誤——是好事，但也很挫折。",
       hi: [{ t: "more aware of my mistakes", cn: "更意識到自己的錯誤", k: "aware", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "book" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260326_11" },
       en: "So what keeps you going?",
       cn: "那是什麼讓你繼續下去？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "star" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260326_12" },
       en: "I found the method that works best for me, and I keep making steady progress.",
       cn: "我找到最適合我的方法，然後持續穩定進步。",
       hi: [{ t: "the method that works best for me", cn: "最適合我的方法", k: "method", c: 4 },
@@ -15397,30 +15397,30 @@ window.VIDEO.bk20260402 = {
       cn: "注意聽被動語態：被做成、被包著、被清理的東西。" },
 
     /* ---------- 1 情境對話 ---------- */
-    { ch: 1, sp: "T", vis: { type: "scene", art: "calendar" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260402_01" },
       en: "Thanks for inviting me, Anita. So this takes place in early April every year?",
       cn: "謝謝你邀我來，Anita。所以這個節日每年四月初舉行？",
       hi: [{ t: "takes place", cn: "舉行", k: "takeplace", c: 1 },
            { t: "in early April", cn: "在四月初", k: "early", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "leaf" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260402_02" },
       en: "Yeah. We call it Sweeping Tombs Day, also known as Qingming Festival.",
       cn: "對。我們叫它掃墓節，也就是大家熟知的清明節。",
       hi: [{ t: "also known as", cn: "也就是熟知的", k: "knownas", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "people" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260402_03" },
       en: "It's when families remember their ancestors.",
       cn: "這是家人緬懷祖先的時候。",
       hi: [{ t: "remember their ancestors", cn: "緬懷祖先", k: "ancestor", c: 4 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "tombSweep" },
       en: "Whose grave are we visiting today?",
       cn: "我們今天要去看誰的墳墓？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "tombSweep" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260402_04" },
       en: "My grandmother's. She passed away six years ago.",
       cn: "我奶奶的。她六年前過世了。",
       hi: [{ t: "passed away", cn: "過世", k: "passedaway", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "tombSweep" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260402_05" },
       en: "The grass around it is really tall.",
       cn: "周圍的草長得好高。" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "gear" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260402_06" },
       en: "After a year it's overgrown, so it needs to be cleaned. We clean the tombs by removing weeds and dirt.",
       cn: "過了一年草長太多了，所以需要清理。我們清除雜草和泥土來打掃墳墓。",
       hi: [{ t: "needs to be cleaned", cn: "需要被清理", k: "needcleaned", c: 1 },
@@ -15428,32 +15428,32 @@ window.VIDEO.bk20260402 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "offeringTable" },
       en: "And all this food on the table?",
       cn: "那桌上這些食物呢？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "offeringTable" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260402_07" },
       en: "We prepare offerings — fruit, tea, traditional food. It's a way to show respect and love.",
       cn: "我們準備祭品——水果、茶、傳統食物。這是展現尊敬與愛的方式。",
       hi: [{ t: "prepare offerings", cn: "準備祭品", k: "offering", c: 4 },
            { t: "show respect and love", cn: "展現尊敬與愛", k: "respect", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "flame" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260402_08" },
       en: "Later we burn paper money and incense for her.",
       cn: "稍後我們會為她燒紙錢和香。",
       hi: [{ t: "burn paper money", cn: "燒紙錢", k: "burn", c: 1 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "springRoll" },
       en: "I know these. Spring rolls, right? What's inside?",
       cn: "這個我認得。潤餅，對吧？裡面包什麼？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "springRoll" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260402_09" },
       en: "They are made with thin wrappers and are filled with vegetables, meat, sometimes peanuts.",
       cn: "用薄餅皮做的，裡面包蔬菜、肉，有時候還有花生。",
       hi: [{ t: "are made with thin wrappers", cn: "用薄餅皮做的", k: "madewith", c: 3 },
            { t: "are filled with vegetables", cn: "裡面包著蔬菜", k: "filledwith", c: 4 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "springRoll" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260402_10" },
       en: "People say eating them brings good luck and represents a fresh start in spring.",
       cn: "大家說吃潤餅會帶來好運，也代表春天的全新開始。",
       hi: [{ t: "represents a fresh start", cn: "代表全新的開始", k: "represent", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "food" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260402_11" },
       en: "So it's not only a time to feel sad, but also a time to eat together and talk.",
       cn: "所以這不只是悲傷的時刻，也是一起吃東西、聊天的時刻。",
       hi: [{ t: "not only a time to feel sad, but also", cn: "不只……而且", k: "notonly", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "heart" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260402_12" },
       en: "Exactly. It's a meaningful tradition that helps us stay connected to our family and culture.",
       cn: "沒錯。這是個有意義的傳統，讓我們跟家人和文化保持聯繫。",
       hi: [{ t: "a meaningful tradition", cn: "有意義的傳統", k: "tradition", c: 3 },
@@ -16783,23 +16783,23 @@ window.VIDEO.bk20260423 = {
       en: "Morning. I've got a problem. My house is so noisy I can't concentrate.",
       cn: "早安。我有個問題。我家吵到我沒辦法專心。",
       hi: [{ t: "can't concentrate", cn: "無法專心", k: "concentrate", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "talk" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260423_01" },
       en: "So why come to me?",
       cn: "那你為什麼來找我？" },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "people" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260423_02" },
       en: "Everyone referred me to you. So I set out for your house first thing today.",
       cn: "大家都向我推薦你。所以我今天一早就出發來你家。",
       hi: [{ t: "referred me to you", cn: "把我介紹給你", k: "referred", c: 3 },
            { t: "set out for your house", cn: "出發前往你家", k: "setout", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "noisyHouse" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260423_03" },
       en: "I'm annoyed and irritated all day — tiny house, way too many noisy kids.",
       cn: "我整天都煩躁又火大——房子小，吵鬧的小孩又太多。",
       hi: [{ t: "annoyed and irritated", cn: "煩躁又被激怒", k: "irritated", c: 4 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "paw" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260423_04" },
       en: "Coax your horse inside the house. Talk to it nice and gentle.",
       cn: "哄你的馬進到屋子裡。好好地、溫柔地跟牠說話。",
       hi: [{ t: "Coax your horse", cn: "哄你的馬", k: "coax", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "warning" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260423_05" },
       en: "That's an odd suggestion, but okay — I'll do as you say.",
       cn: "這建議很奇怪，但好吧——我照你說的做。",
       hi: [{ t: "an odd suggestion", cn: "奇怪的建議", k: "odd", c: 2 }] },
@@ -16808,7 +16808,7 @@ window.VIDEO.bk20260423 = {
       cn: "我拒絕你的建議！那匹馬把家具、盤子，全都弄倒了。",
       hi: [{ t: "I reject your advice", cn: "我拒絕你的建議", k: "reject", c: 3 },
            { t: "topples the furniture", cn: "把家具弄倒", k: "topple", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "horseInside" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260423_06" },
       en: "I can't manage to get anything done.",
       cn: "我什麼事都做不成。",
       hi: [{ t: "can't manage to get anything done", cn: "什麼事都完成不了", k: "manage", c: 4 }] },
@@ -16816,27 +16816,27 @@ window.VIDEO.bk20260423 = {
       en: "Now get your brother's cows and transport them to your house.",
       cn: "現在去把你哥哥的牛運到你家。",
       hi: [{ t: "transport them to your house", cn: "把牠們運到你家", k: "transport", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "cowsTruck" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260423_07" },
       en: "I did. And that boosted the noise even more.",
       cn: "我照做了。結果噪音變得更大了。",
       hi: [{ t: "boosted the noise", cn: "把噪音提升", k: "boosted", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "paw" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260423_08" },
       en: "The animals assembled all over the house. I devoted all day to chasing them.",
       cn: "動物在屋子裡到處聚集。我整天都在追牠們。",
       hi: [{ t: "assembled all over the house", cn: "到處聚集", k: "assembled", c: 3 },
            { t: "devoted all day to chasing", cn: "整天投入在追趕", k: "devoted", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "clock" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260423_09" },
       en: "Weeks of this, and I was exhausted. I weakened and just lay down.",
       cn: "這樣過了幾週，我累壞了。我整個人虛弱下來，只能躺著。",
       hi: [{ t: "I weakened", cn: "我變虛弱", k: "weakened", c: 2 }] },
     { ch: 1, sp: "A", vis: { type: "scene", art: "peacefulHouse" },
       en: "Now take all the animals outside.",
       cn: "現在把所有動物都帶出去。" },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "peacefulHouse" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260423_10" },
       en: "I apologize. The house is back to normal — it feels so peaceful now.",
       cn: "我道歉。房子恢復正常了——現在感覺好平靜。",
       hi: [{ t: "I apologize", cn: "我道歉", k: "apologize", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "smile" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260423_11" },
       en: "You've revealed to me a truth: people should learn to be content with their lives.",
       cn: "你讓我明白了一個道理：人應該學會滿足於自己的生活。",
       hi: [{ t: "revealed to me a truth", cn: "揭示了一個道理", k: "revealed", c: 3 },
@@ -17423,26 +17423,26 @@ window.VIDEO.bk20260512 = {
       en: "So — when did you start learning English seriously?",
       cn: "所以——你是什麼時候開始認真學英文的？",
       hi: [{ t: "start learning English", cn: "開始學英文", k: "startlearning", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "star" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260512_01" },
       en: "Last year. I was so enthusiastic and motivated at first.",
       cn: "去年。一開始我超有熱情、超有動力。",
       hi: [{ t: "enthusiastic and motivated", cn: "熱情又有動力", k: "enthusiastic", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "mic" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260512_02" },
       en: "What was the hardest part?",
       cn: "最難的是什麼？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "mic" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260512_03" },
       en: "I found the pronunciation difficult. People couldn't always understand me.",
       cn: "我覺得發音很難。別人不一定聽得懂我在說什麼。",
       hi: [{ t: "found the pronunciation difficult", cn: "覺得發音很難", k: "found", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "talk" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260512_04" },
       en: "After a while it improved, and I could express basic ideas pretty well.",
       cn: "過了一陣子就進步了，基本的想法我都能表達得不錯。",
       hi: [{ t: "After a while", cn: "過了一陣子", k: "afterawhile", c: 3 },
            { t: "express basic ideas", cn: "表達基本的想法", k: "express", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "chartUp" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260512_05" },
       en: "That's real progress.",
       cn: "那是真的有進步。" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "chartUp" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260512_06" },
       en: "It was obvious that I was getting better — very encouraging.",
       cn: "很明顯我在變好——那真的很鼓舞人。",
       hi: [{ t: "It was obvious that", cn: "很明顯地", k: "obvious", c: 1 },
@@ -17451,7 +17451,7 @@ window.VIDEO.bk20260512 = {
       en: "And now? You're at intermediate level, right?",
       cn: "那現在呢？你在中級了，對吧？",
       hi: [{ t: "at intermediate level", cn: "在中級階段", k: "intermediate", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "learningCurveFlat" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260512_07" },
       en: "Yeah, and I've made slower progress here. So many words I understand but can't use accurately.",
       cn: "對，在這個階段我進步變慢了。好多字我看得懂，卻沒辦法準確地用。",
       hi: [{ t: "made slower progress", cn: "進步變慢了", k: "slower", c: 1 },
@@ -17459,14 +17459,14 @@ window.VIDEO.bk20260512 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "brainBlank" },
       en: "Like when you're speaking?",
       cn: "像是講話的時候？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "brainBlank" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260512_08" },
       en: "Sometimes my brain goes blank, or just gets stuck. It's frustrating.",
       cn: "有時候我腦袋一片空白，或者就卡住了。很挫折。",
       hi: [{ t: "my brain goes blank", cn: "我腦袋一片空白", k: "blank", c: 2 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "vocabNotebookTicks" },
       en: "So what do you do?",
       cn: "那你怎麼辦？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "vocabNotebookTicks" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260512_09" },
       en: "To improve, I keep a record of new words and repeat them out loud daily.",
       cn: "為了進步，我把新單字記下來，每天大聲唸。",
       hi: [{ t: "To improve", cn: "為了進步", k: "topurpose", c: 3 },
@@ -17476,7 +17476,7 @@ window.VIDEO.bk20260512 = {
       cn: "我現在更注意自己的錯誤了，這是好事——每個錯誤都是學習的機會。",
       hi: [{ t: "more aware of my mistakes", cn: "更意識到自己的錯誤", k: "aware", c: 4 },
            { t: "which is good", cn: "這是件好事", k: "which", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "smile" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260512_10" },
       en: "I really like that attitude. If you practice a little every day, you'll make steady progress.",
       cn: "我真的很喜歡這種態度。每天練一點，你就會穩定進步。",
       hi: [{ t: "really like", cn: "真的很喜歡", k: "reallylike", c: 3 },
@@ -18461,7 +18461,7 @@ window.VIDEO.bk20260521 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "leftoverBento" },
       en: "Just rice today? Where's your usual bento?",
       cn: "今天只吃白飯？你平常的便當呢？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "leftoverBento" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260521_01" },
       en: "I had been eating restaurant food for weeks, and now I have no appetite at all.",
       cn: "我連續好幾週都吃餐廳的食物，現在完全沒胃口。",
       hi: [{ t: "had been eating", cn: "一直在吃", k: "hadbeeneating", c: 1 },
@@ -18470,23 +18470,23 @@ window.VIDEO.bk20260521 = {
       en: "I know the feeling. Takeout's usually oily and heavily flavored.",
       cn: "我懂那種感覺。外帶通常又油又重口味。",
       hi: [{ t: "oily and heavily flavored", cn: "油膩又重口味", k: "oily", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "leftoverBento" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260521_02" },
       en: "Last night I stared at the leftover bento meals I had brought home.",
       cn: "昨晚我盯著之前帶回家的剩菜便當。",
       hi: [{ t: "leftover bento meals", cn: "剩菜便當", k: "leftover", c: 4 },
            { t: "I had brought home", cn: "我先前帶回家的", k: "hadbrought", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "leftoverBento" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260521_03" },
       en: "They just looked boring, even though there was variety.",
       cn: "它們看起來就是很乏味，儘管菜色不少。",
       hi: [{ t: "even though", cn: "儘管", k: "eventhough", c: 3 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "airFryerNuggets" },
       en: "So what'd you end up eating?",
       cn: "那你最後吃了什麼？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "airFryerNuggets" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260521_04" },
       en: "I decided to warm up some chicken nuggets in the air fryer.",
       cn: "我決定用氣炸鍋熱幾塊雞塊。",
       hi: [{ t: "warm up some chicken nuggets", cn: "加熱一些雞塊", k: "warmup", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "food" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260521_05" },
       en: "Simple but satisfying. Still, if I kept eating like this, I would gain weight.",
       cn: "簡單但很滿足。不過，再這樣吃下去我會變胖。",
       hi: [{ t: "Simple but satisfying", cn: "簡單卻令人滿足", k: "satisfying", c: 1 },
@@ -18494,7 +18494,7 @@ window.VIDEO.bk20260521 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "satisfiedVsOk" },
       en: "Oh, how was that restaurant by the station?",
       cn: "對了，車站旁那家餐廳怎麼樣？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "satisfiedVsOk" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260521_06" },
       en: "The service was satisfactory — not great. And I wasn't really satisfied with the soup.",
       cn: "服務算合格——不算很棒。那道湯我也不太滿意。",
       hi: [{ t: "satisfactory", cn: "（事物）合格的", k: "satisfactory", c: 3 },
@@ -18503,11 +18503,11 @@ window.VIDEO.bk20260521 = {
       en: "Fair enough. Different topic — you going to attend the English workshop tomorrow?",
       cn: "有道理。換個話題——你明天要去參加英文工作坊嗎？",
       hi: [{ t: "attend the English workshop", cn: "出席英文工作坊", k: "attend", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "joinVsAttend" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260521_07" },
       en: "Yep. And next month I'm planning to join the company running club.",
       cn: "要。而且下個月我打算加入公司的跑步社。",
       hi: [{ t: "join the company running club", cn: "加入公司跑步社團", k: "join", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "warning" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260521_08" },
       en: "Nice. Oh, heads up: the pantry sink won't drain properly today.",
       cn: "不錯。喔，提醒一下：小廚房的水槽今天排水不順。",
       hi: [{ t: "drain properly", cn: "順利排水", k: "drain", c: 2 }] },
@@ -20801,7 +20801,7 @@ window.VIDEO.bk20260616 = {
       cn: "早安，Anita。你看起來很累。昨晚很折騰嗎？",
       hi: [{ t: "tired", cn: "（我）覺得累", k: "edIng", c: 1 },
            { t: "stressful", cn: "令人有壓力的", k: "stressful", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "cloudRain" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260616_01" },
       en: "Very. It poured all night, and the wind was really strong.",
       cn: "超累。雨下了一整晚，風也真的很大。",
       hi: [{ t: "poured", cn: "下傾盆大雨", k: "pouring", c: 3 }] },
@@ -20814,12 +20814,12 @@ window.VIDEO.bk20260616 = {
       cn: "我的也是。而且一陣強風把我們院子裡的帳篷吹倒了。",
       hi: [{ t: "strong wind", cn: "強風", k: "strongwind", c: 4 },
            { t: "blew over", cn: "吹倒（原地）", k: "blowover", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "powerLineDown" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260616_02" },
       en: "The storm blew down the power lines on my street, so the power went out at ten.",
       cn: "暴風雨把我家那條街的電線桿吹倒了，所以十點就停電了。",
       hi: [{ t: "blew down", cn: "吹倒（高物）", k: "blowdown", c: 1 },
            { t: "the power went out", cn: "停電了", k: "goout", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "warning" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260616_03" },
       en: "No power all night? You must've been stressed out.",
       cn: "整晚沒電？你一定壓力很大。",
       hi: [{ t: "stressed out", cn: "壓力很大", k: "stressedout", c: 2 }] },
@@ -20827,14 +20827,14 @@ window.VIDEO.bk20260616 = {
       en: "I was. Went for a run this morning to blow off steam.",
       cn: "是啊。今天早上去跑了步紓解壓力。",
       hi: [{ t: "blow off steam", cn: "紓解壓力", k: "steam", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "umbrella" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260616_04" },
       en: "Smart. So what's it like out there now?",
       cn: "聰明。那現在外面怎麼樣？" },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "cloudRain" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260616_05" },
       en: "Just drizzling. You only need a light jacket.",
       cn: "只是下毛毛雨。穿件薄外套就夠了。",
       hi: [{ t: "drizzling", cn: "下毛毛雨", k: "drizzling", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "cloudRain" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260616_06" },
       en: "There's a shower coming this afternoon, though. Summer weather's so unpredictable.",
       cn: "不過下午會有一場陣雨。夏天的天氣真難預測。",
       hi: [{ t: "a shower", cn: "陣雨", k: "shower", c: 4 },
@@ -20844,19 +20844,19 @@ window.VIDEO.bk20260616 = {
       cn: "沒錯。三天豪雨導致山區發生落石和土石流。",
       hi: [{ t: "led to", cn: "導致", k: "leadto", c: 1 },
            { t: "rockfalls and landslides", cn: "落石與土石流", k: "landslide", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "mudRoad" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260616_07" },
       en: "I saw the photos. Some roads were flooded, and cars got stuck in the mud.",
       cn: "我看到照片了。有些路被淹了，車子卡在泥巴裡。",
       hi: [{ t: "were flooded", cn: "被淹了", k: "flooded", c: 2 },
            { t: "got stuck", cn: "卡住", k: "getstuck", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "plane" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260616_08" },
       en: "The typhoon messed up flight schedules too. My sister's flight got cancelled.",
       cn: "颱風也打亂了班機時刻表。我姐姐的班機被取消了。",
       hi: [{ t: "messed up", cn: "打亂", k: "messup", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "leaf" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260616_09" },
       en: "Well, at least the sun's coming out now.",
       cn: "嗯，至少現在太陽出來了。" },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "leaf" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260616_10" },
       en: "Then let's have lunch outside, in the shade.",
       cn: "那我們中午到外面吃，坐陰涼處。",
       hi: [{ t: "in the shade", cn: "在陰涼處", k: "shade", c: 3 }] },
@@ -21174,20 +21174,20 @@ window.VIDEO.bk20260618 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "crackedRoad" },
       en: "In bed. It woke me up, and the ground was shaking.",
       cn: "在床上。它把我震醒，地面一直在搖。" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "crackedRoad" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260618_01" },
       en: "Reports say it shook the buildings and cracked the roads downtown.",
       cn: "報導說它搖動了建築物，也讓市區道路龜裂。",
       hi: [{ t: "shook the buildings", cn: "搖動建築物", k: "shook", c: 2 },
            { t: "cracked the roads", cn: "使道路龜裂", k: "cracked", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "people" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260618_02" },
       en: "Yeah. Lots of people went out to take shelter in the park.",
       cn: "對。很多人跑到外面的公園避難。",
       hi: [{ t: "take shelter", cn: "避難", k: "takeshelter", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "warning" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260618_03" },
       en: "Were people worried about aftershocks?",
       cn: "大家會擔心餘震嗎？",
       hi: [{ t: "aftershocks", cn: "餘震", k: "aftershock", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "crackedRoad" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260618_04" },
       en: "A little. One old building collapsed, and two statues toppled near the temple.",
       cn: "有一點。一棟老房子倒塌了，廟旁邊兩座雕像也倒了。",
       hi: [{ t: "collapsed", cn: "倒塌", k: "collapse", c: 2 },
@@ -21196,11 +21196,11 @@ window.VIDEO.bk20260618 = {
       en: "I heard firefighters went out for search and rescue.",
       cn: "我聽說消防員出動搜救。",
       hi: [{ t: "search and rescue", cn: "搜救", k: "rescue", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "rescueDig" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260618_05" },
       en: "They did — pulled out four trapped people with a crane and a bulldozer.",
       cn: "沒錯——用起重機和推土機救出了四名受困者。",
       hi: [{ t: "trapped", cn: "受困的", k: "trapped", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "heart" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260618_06" },
       en: "And then the typhoon, two days later.",
       cn: "然後兩天後颱風就來了。" },
     { ch: 1, sp: "T", vis: { type: "scene", art: "typhoonDamage" },
@@ -21208,25 +21208,25 @@ window.VIDEO.bk20260618 = {
       cn: "對。氣象預報警告有颱風，很多樹被吹倒了。",
       hi: [{ t: "warned of", cn: "警告有", k: "warnof", c: 1 },
            { t: "were blown down", cn: "被吹倒", k: "blowndown", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "typhoonDamage" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260618_07" },
       en: "Some streets were flooded too, and there was a power outage.",
       cn: "有些街道也淹水了，還停了電。",
       hi: [{ t: "were flooded", cn: "淹水了", k: "flooded", c: 4 },
            { t: "a power outage", cn: "停電", k: "poweroutage", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "doc" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260618_08" },
       en: "The government warned people to stay indoors, and most schools were closed for safety.",
       cn: "政府警告民眾待在室內，大多數學校基於安全考量停課。",
       hi: [{ t: "warned people to stay indoors", cn: "警告民眾留在室內", k: "warnto", c: 1 },
            { t: "were closed for safety", cn: "基於安全考量關閉", k: "closedforsafety", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "people" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260618_09" },
       en: "How's the town doing now?",
       cn: "小鎮現在狀況如何？" },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "gift" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260618_10" },
       en: "Volunteers cleared the mud, and people donated food and blankets.",
       cn: "義工清掉了泥土，大家也捐了食物和毛毯。",
       hi: [{ t: "Volunteers", cn: "義工", k: "volunteer", c: 3 },
            { t: "donated", cn: "捐贈", k: "donate", c: 4 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "check" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260618_11" },
       en: "So things went back to normal pretty fast. Thanks, Tom.",
       cn: "所以一切很快就恢復正常了。謝謝你，Tom。",
       hi: [{ t: "went back to normal", cn: "恢復正常", k: "backtonormal", c: 1 }] },
@@ -21541,27 +21541,27 @@ window.VIDEO.bk20260623 = {
       en: "Anita, you're here already. Did you use to come this early?",
       cn: "Anita，你已經到了。你以前也這麼早來嗎？",
       hi: [{ t: "Did you use to", cn: "你以前會……嗎", k: "diduseto", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "coffeeBreak" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260623_01" },
       en: "I used to have coffee first thing in the morning, on an empty stomach.",
       cn: "我以前一早起來就空腹喝咖啡。",
       hi: [{ t: "first thing in the morning", cn: "一早第一件事", k: "firstthing", c: 2 },
            { t: "on an empty stomach", cn: "空腹", k: "emptystomach", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "clock" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260623_02" },
       en: "And now?",
       cn: "那現在呢？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "clock" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260623_03" },
       en: "Now I eat first. I used to stay up late too, but not anymore.",
       cn: "現在我先吃東西。我以前也常熬夜，但現在不了。",
       hi: [{ t: "used to stay up late", cn: "以前常熬夜", k: "stayuplate", c: 1 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "seasonsThenNow" },
       en: "Smart. By the way, the weather here surprises me. Is summer always this long?",
       cn: "聰明。對了，這裡的天氣讓我很意外。夏天一直都這麼長嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "seasonsThenNow" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260623_04" },
       en: "No. There used to be four distinct seasons in Taiwan.",
       cn: "不是。台灣以前四季分明。",
       hi: [{ t: "There used to be", cn: "以前有", k: "thereusedtobe", c: 1 },
            { t: "four distinct seasons", cn: "四季分明", k: "distinct", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "calendar" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260623_05" },
       en: "So spring and fall didn't use to be this short?",
       cn: "所以春天和秋天以前沒這麼短？",
       hi: [{ t: "didn't use to", cn: "以前不", k: "didntuseto", c: 2 }] },
@@ -21569,10 +21569,10 @@ window.VIDEO.bk20260623 = {
       en: "Exactly. Oh, and Taiwan sits right near the boundary of tectonic plates.",
       cn: "沒錯。喔，還有台灣就位在板塊交界附近。",
       hi: [{ t: "tectonic plates", cn: "板塊", k: "tectonic", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "warning" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260623_06" },
       en: "So earthquakes are common here?",
       cn: "所以這裡地震很常見？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "warning" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260623_07" },
       en: "Very. Last year the east coast was hit by a strong one.",
       cn: "非常常見。去年東岸就遭受一場強震侵襲。",
       hi: [{ t: "was hit by", cn: "遭受侵襲", k: "behitby", c: 1 }] },
@@ -21585,16 +21585,16 @@ window.VIDEO.bk20260623 = {
       en: "Good idea. Our office holds emergency drills twice a year, too.",
       cn: "好主意。我們公司一年也辦兩次緊急演練。",
       hi: [{ t: "emergency drills", cn: "緊急演練", k: "drill", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "emergencySupplies" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260623_08" },
       en: "Preparing ahead really reduces the impact of natural disasters.",
       cn: "事先準備真的能降低天然災害的衝擊。",
       hi: [{ t: "reduces the impact", cn: "降低衝擊", k: "reduceimpact", c: 3 },
            { t: "natural disasters", cn: "天然災害", k: "naturaldisaster", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "chartUp" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260623_09" },
       en: "That's a lot to learn. Hard to keep up with all of it.",
       cn: "要學的好多。很難全部跟上。",
       hi: [{ t: "keep up with", cn: "跟上", k: "keepupwith", c: 4 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "star" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260623_10" },
       en: "You'll be fine. You're a smart cookie.",
       cn: "你會沒問題的。你很聰明。",
       hi: [{ t: "a smart cookie", cn: "聰明的人", k: "smartcookie", c: 1 }] },
@@ -21899,28 +21899,28 @@ window.VIDEO.bk20260625 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "cherryTemple" },
       en: "Welcome back, Anita. How was Kyoto?",
       cn: "歡迎回來，Anita。京都怎麼樣？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "cherryTemple" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260625_01" },
       en: "Amazing. It was my first time visiting Japan, so I was pretty excited.",
       cn: "超棒的。那是我第一次去日本，所以很興奮。",
       hi: [{ t: "my first time visiting", cn: "我第一次造訪", k: "firsttime", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "cherryTemple" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260625_02" },
       en: "Did you catch the cherry blossoms?",
       cn: "有趕上櫻花嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "cherryTemple" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260625_03" },
       en: "Yeah. Sunny and pleasant the whole time — perfect for sightseeing.",
       cn: "有。整趟都晴朗宜人——超適合觀光。",
       hi: [{ t: "perfect for sightseeing", cn: "很適合觀光", k: "sightseeing", c: 2 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "trainPlatform" },
       en: "Easy to get around?",
       cn: "在那裡移動方便嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "trainPlatform" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260625_04" },
       en: "The train system seemed confusing at first, but after two days it got way easier.",
       cn: "火車系統一開始看起來很讓人困惑，但兩天後就順多了。",
       hi: [{ t: "confusing", cn: "令人困惑的", k: "confusing", c: 3 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "leftBackpack" },
       en: "Anything go wrong?",
       cn: "有出什麼狀況嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "leftBackpack" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260625_05" },
       en: "I left my backpack in a café. Fortunately, the staff kept it safe. I was so relieved.",
       cn: "我把背包忘在一間咖啡廳。幸好店員幫我保管好，我真是鬆了一口氣。",
       hi: [{ t: "Fortunately", cn: "幸好", k: "fortunately", c: 1 },
@@ -21928,7 +21928,7 @@ window.VIDEO.bk20260625 = {
     { ch: 1, sp: "T", vis: { type: "scene", art: "caughtInStorm" },
       en: "And I heard the weather turned bad on your last day.",
       cn: "我聽說你最後一天天氣變差了。" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "caughtInStorm" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260625_06" },
       en: "We got caught in a storm and took shelter in a little temple.",
       cn: "我們遇上暴風雨，躲進一間小廟避難。",
       hi: [{ t: "caught in a storm", cn: "被困在暴風雨中", k: "caughtinstorm", c: 1 },
@@ -21938,10 +21938,10 @@ window.VIDEO.bk20260625 = {
       cn: "市政府發布颱風警報，強風也讓車站附近停電了。",
       hi: [{ t: "issued a typhoon warning", cn: "發布颱風警報", k: "issuewarning", c: 3 },
            { t: "cut off", cn: "切斷", k: "cutoff", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "departureBoard" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260625_07" },
       en: "So your flight was late?",
       cn: "所以你的班機誤點了？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "departureBoard" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260625_08" },
       en: "We were stranded at the airport for six hours. The storm lasted all day.",
       cn: "我們在機場滯留了六個小時。暴風雨持續了一整天。",
       hi: [{ t: "were stranded", cn: "滯留", k: "stranded", c: 1 },
@@ -21950,14 +21950,14 @@ window.VIDEO.bk20260625 = {
       en: "Did anyone have to evacuate?",
       cn: "有人需要撤離嗎？",
       hi: [{ t: "evacuate", cn: "撤離", k: "evacuate", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "evacuateShelter" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260625_09" },
       en: "A few families moved to a shelter, and relief efforts started the next morning.",
       cn: "幾戶人家搬到避難所，救災行動隔天早上就展開了。",
       hi: [{ t: "relief efforts", cn: "救災行動", k: "reliefefforts", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "smile" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260625_10" },
       en: "What a trip. Still worth it?",
       cn: "真是一趟旅行。還是值得嗎？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "heart" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260625_11" },
       en: "Of course. The trip was not boring but full of surprises.",
       cn: "當然。這趟旅行一點也不無聊，反而充滿驚喜。",
       hi: [{ t: "not boring but full of surprises", cn: "不無聊，而是充滿驚喜", k: "notabutb", c: 1 }] },
@@ -22269,7 +22269,7 @@ window.VIDEO.bk20260630 = {
       en: "Excuse me, when's the next train? I need the train timetable.",
       cn: "不好意思，下一班火車幾點？我需要火車時刻表。",
       hi: [{ t: "the train timetable", cn: "火車時刻表", k: "timetable", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "departureBoard" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260630_01" },
       en: "The next early train to Berlin is 8:15 a.m. Train number IC 2345.",
       cn: "下一班到柏林的早班車是早上 8:15，車次 IC 2345。" },
     { ch: 1, sp: "A", vis: { type: "scene", art: "ticketWindow" },
@@ -22281,7 +22281,7 @@ window.VIDEO.bk20260630 = {
       en: "You're at it. Your platform is 3.",
       cn: "你已經在櫃檯了。你的月台是 3 號。",
       hi: [{ t: "platform is 3", cn: "三號月台", k: "platform", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "ticketWindow" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260630_02" },
       en: "Should I get a one-way ticket or a return ticket?",
       cn: "我該買單程票還是來回票？",
       hi: [{ t: "a one-way ticket", cn: "單程票", k: "oneway", c: 1 },
@@ -22294,24 +22294,24 @@ window.VIDEO.bk20260630 = {
       en: "One more thing. If I ask for a refund, will there be any extra charges?",
       cn: "還有一件事。如果我要退款，會有額外費用嗎？",
       hi: [{ t: "will there be any extra charges", cn: "會有額外費用嗎", k: "therebe", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "cancellationFee" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260630_03" },
       en: "There's a small cancellation fee if you cancel on the day of departure.",
       cn: "如果出發當天取消，會有一筆小額取消手續費。",
       hi: [{ t: "a small cancellation fee", cn: "取消手續費", k: "cancellationfee", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "coin" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260630_04" },
       en: "Got it. If I cancel early, I will get a refund with no penalty.",
       cn: "了解。如果早一點取消，就能拿到退款、不用罰款。",
       hi: [{ t: "If I cancel early, I will", cn: "第一條件句", k: "firstcond", c: 1 },
            { t: "get a refund", cn: "拿到退款", k: "refund", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "mic" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260630_05" },
       en: "Exactly. And listen for announcements — sometimes a train has been cancelled due to an accident.",
       cn: "正是。也請注意廣播——有時候列車會因為事故被取消。",
       hi: [{ t: "has been cancelled", cn: "已經被取消", k: "hasbeencancelled", c: 4 },
            { t: "due to", cn: "由於", k: "dueto", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "clock" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260630_06" },
       en: "What if it's just late?",
       cn: "如果只是誤點呢？" },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "clock" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260630_07" },
       en: "Then we say the train will be delayed for ten minutes.",
       cn: "那我們會說列車將誤點十分鐘。",
       hi: [{ t: "will be delayed for ten minutes", cn: "將誤點十分鐘", k: "delayedfor", c: 1 }] },
@@ -22319,14 +22319,14 @@ window.VIDEO.bk20260630 = {
       en: "Thanks. Well, if I had a thousand dollars, I would fly to Hokkaido instead.",
       cn: "謝謝。說真的，如果我有一千美元，我會乾脆飛去北海道。",
       hi: [{ t: "if I had a thousand dollars, I would", cn: "第二條件句", k: "secondcond", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "skiSnow" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260630_08" },
       en: "Nice dream. What would you do there?",
       cn: "美好的夢。你會在那裡做什麼？" },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "skiSnow" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260630_09" },
       en: "Go skiing — I've never seen so much snow.",
       cn: "去滑雪——我從沒見過這麼多雪。",
       hi: [{ t: "so much snow", cn: "這麼多雪", k: "muchsnow", c: 2 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "gift" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260630_10" },
       en: "It's going to be a great trip someday. Grab some souvenirs for your friends too.",
       cn: "總有一天那會是很棒的旅行。也幫你的朋友帶些紀念品吧。",
       hi: [{ t: "It's going to be", cn: "將會是", k: "gonna", c: 3 },
@@ -31507,7 +31507,7 @@ window.VIDEO["bk20261008"] = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "printerJam"
+    "art": "va20261008_01"
    },
    "en": "So it's not broken?",
    "cn": "所以沒壞？"
@@ -31535,7 +31535,7 @@ window.VIDEO["bk20261008"] = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "tools"
+    "art": "va20261008_02"
    },
    "en": "And if it only acts up?",
    "cn": "那如果只是出問題呢？"
@@ -31545,7 +31545,7 @@ window.VIDEO["bk20261008"] = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "tools"
+    "art": "va20261008_03"
    },
    "en": "Same thing. We should call a technician.",
    "cn": "一樣。我們應該叫技術員來。",
@@ -31637,7 +31637,7 @@ window.VIDEO["bk20261008"] = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "scratch"
+    "art": "va20261008_04"
    },
    "en": "If the operator has poor competency, it may lead to quality problems.",
    "cn": "如果操作員的能力不足，可能會導致品質問題。",
@@ -31673,7 +31673,7 @@ window.VIDEO["bk20261008"] = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "timeZoneClocks"
+    "art": "va20261008_05"
    },
    "en": "He has worked at this station since 2021.",
    "cn": "他從 2021 年起就在這個站點工作。",
@@ -31691,7 +31691,7 @@ window.VIDEO["bk20261008"] = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "va20261008_06"
    },
    "en": "And you? How long have you been in your current position?",
    "cn": "那你呢？你擔任目前的職位多久了？"
@@ -31701,7 +31701,7 @@ window.VIDEO["bk20261008"] = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "va20261008_07"
    },
    "en": "I have been in my current position for ten years.",
    "cn": "我擔任目前的職位十年了。",
@@ -31719,7 +31719,7 @@ window.VIDEO["bk20261008"] = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "va20261008_08"
    },
    "en": "Alright, thanks for walking me through it.",
    "cn": "好，謝謝你帶我走一遍。"
@@ -33465,6 +33465,2891 @@ window.VIDEO["bk20261008"] = {
      +'<rect x="94" y="92" width="34" height="14" rx="6" fill="'+L+'" '+st+'/>'
      +'<rect x="134" y="96" width="36" height="26" rx="3" fill="'+A+'" '+st+'/>'
      +'<path d="M134 104 h36" stroke="'+D+'" stroke-width="2.5"/>')
+
+  });
+})();
+/* ===================== bk20260203b 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 提問句的共同記號 */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  /* 文件：白紙＋橘色頁首＋內文橫線 */
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  /* 瓦楞紙箱 */
+  var carton=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+w/2)+' '+y+' v'+h+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+x+' '+(y+h*0.3)+' h'+w+'" stroke="'+A+'" stroke-width="5"/>'; };
+  /* 遞增的橘色條（愈往右愈高） */
+  var ramp=function(x0,n,w,gap,base,h0,dh){ var s='<g '+st+' fill="'+A+'">', i, h;
+    for(i=0;i<n;i++){ h=h0+i*dh; s+='<rect x="'+(x0+i*(w+gap))+'" y="'+(base-h)+'" width="'+w+'" height="'+h+'" rx="2"/>'; }
+    return s+'</g>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 3 Anita：情境、任務、行動、結果 —— 那我從哪裡開始？ —— 四階上升階梯 S/T/A/R */
+    va20260203b_01: svg(
+      '<g '+st+'><rect x="14" y="98" width="38" height="34" rx="4" fill="'+L+'"/>'
+     +'<rect x="58" y="80" width="38" height="52" rx="4" fill="'+L+'"/>'
+     +'<rect x="102" y="62" width="38" height="70" rx="4" fill="'+A+'"/>'
+     +'<rect x="146" y="44" width="38" height="88" rx="4" fill="'+A+'"/></g>'
+     +txt(33,122,'S',19,D)+txt(77,122,'T',19,D)
+     +txt(121,122,'A',19,'#fff')+txt(165,122,'R',19,'#fff')
+     +'<path d="M36 72 v-6" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +qb(36,40)),
+
+    /* 6 Tom：那任務呢 —— 他們到底要你做到什麼？ —— 待辦任務單上的空白勾選格 */
+    va20260203b_02: svg(
+      '<rect x="24" y="26" width="98" height="104" rx="7" fill="#fff" '+st+'/>'
+     +'<rect x="36" y="38" width="74" height="11" rx="3" fill="'+A+'"/>'
+     +'<g '+st+' fill="'+C+'"><rect x="36" y="62" width="17" height="17" rx="3"/>'
+     +'<rect x="36" y="90" width="17" height="17" rx="3"/></g>'
+     +'<path d="M62 71 h46 M62 99 h38" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M160 70 h-22" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M130 70 l13 -9 v18 z" fill="'+A+'"/>'
+     +qb(166,116)),
+
+    /* 7 Anita：我的任務是確保第一批貨出貨前符合所有品質標準 —— 第一批紙箱蓋上合格章再出貨 */
+    va20260203b_03: svg(
+      '<circle cx="84" cy="36" r="24" fill="#fff" '+st+'/>'
+     +chk(72,38,28,A)
+     +carton(14,74,44,50)
+     +carton(62,74,44,50)
+     +carton(110,74,44,50)
+     +'<path d="M14 130 h140" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M160 99 h22" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M194 99 l-14 -10 v20 z" fill="'+A+'"/>'),
+
+    /* 9 Anita：我啟動完整檢驗流程，親自測試電子零件 —— 電路板＋探針＋放大鏡 */
+    va20260203b_04: svg(
+      '<rect x="16" y="50" width="106" height="74" rx="6" fill="'+L+'" '+st+'/>'
+     +'<g fill="none" stroke="'+D+'" stroke-width="2.5"><path d="M28 66 h32 v24 h34"/>'
+     +'<path d="M28 106 h46 v-16 h28"/></g>'
+     +'<rect x="54" y="78" width="24" height="18" rx="2" fill="'+D+'"/>'
+     +'<g fill="'+A+'"><circle cx="100" cy="64" r="5"/><circle cx="38" cy="114" r="5"/></g>'
+     +'<path d="M180 20 l-56 58" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M128 74 l-12 14 l17 -7 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="152" cy="100" r="20" fill="none" stroke="'+D+'" stroke-width="3.5"/>'
+     +'<path d="M166 114 l16 16" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/>'),
+
+    /* 11 Tom：那結果呢？有數字的話給我一個 —— 長條圖缺最後一根（待填的數字） */
+    va20260203b_05: svg(
+      '<path d="M26 128 H182 M26 128 V34" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<g '+st+' fill="'+L+'"><rect x="40" y="98" width="26" height="30" rx="2"/>'
+     +'<rect x="76" y="80" width="26" height="48" rx="2"/>'
+     +'<rect x="112" y="62" width="26" height="66" rx="2"/></g>'
+     +'<rect x="148" y="42" width="26" height="86" rx="2" fill="none" stroke="'+A+'" stroke-width="3" stroke-dasharray="7 6"/>'
+     +qb(60,50)),
+
+    /* 12 Anita：結果我們在量產前就修好，避免了昂貴的召回 —— 量產線前先修好，召回被劃掉 */
+    va20260203b_06: svg(
+      '<path d="M28 60 l30 -32" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'
+     +'<circle cx="64" cy="22" r="11" fill="none" stroke="'+D+'" stroke-width="6"/>'
+     +'<g '+st+' fill="'+C+'"><rect x="20" y="70" width="24" height="26" rx="3"/>'
+     +'<rect x="54" y="70" width="24" height="26" rx="3"/>'
+     +'<rect x="88" y="70" width="24" height="26" rx="3"/></g>'
+     +'<rect x="12" y="98" width="116" height="14" rx="7" fill="'+L+'" '+st+'/>'
+     +'<g fill="'+D+'"><circle cx="30" cy="122" r="7"/><circle cx="70" cy="122" r="7"/><circle cx="110" cy="122" r="7"/></g>'
+     +'<path d="M128 100 h38 v-20 h12 l14 16 v24 h-64 z" fill="#fff" '+st+'/>'
+     +'<circle cx="144" cy="122" r="7" fill="'+D+'"/><circle cx="176" cy="122" r="7" fill="'+D+'"/>'
+     +ex(160,46,30,R)),
+
+    /* 13 Anita：那個機種的產線效率也因此提升了 15% —— 產線＋上升曲線＋15% */
+    va20260203b_07: svg(
+      '<rect x="12" y="104" width="116" height="14" rx="7" fill="'+L+'" '+st+'/>'
+     +'<g fill="'+D+'"><circle cx="28" cy="128" r="6"/><circle cx="70" cy="128" r="6"/><circle cx="112" cy="128" r="6"/></g>'
+     +'<g '+st+' fill="'+C+'"><rect x="20" y="82" width="22" height="22" rx="3"/>'
+     +'<rect x="50" y="82" width="22" height="22" rx="3"/>'
+     +'<rect x="80" y="82" width="22" height="22" rx="3"/></g>'
+     +'<path d="M24 68 l34 -22 l26 14 l32 -28" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M120 26 l-21 3 l11 16 z" fill="'+A+'"/>'
+     +pill(132,66,58,30,'15%',A,'#fff',17)),
+
+    /* 15 Anita：十年以上的經驗，讓我在產品品質上累積了深厚專業 —— 品質徽章＋逐年加深的經驗層 */
+    va20260203b_08: svg(
+      '<circle cx="56" cy="58" r="34" fill="'+L+'" '+st+'/>'
+     +'<circle cx="56" cy="58" r="22" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +chk(44,60,26,A)
+     +'<path d="M38 86 l-10 32 l22 -11 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M74 86 l10 32 l-22 -11 z" fill="'+A+'" '+st+'/>'
+     +ramp(104,10,7,2,128,12,6)
+     +pill(104,14,86,26,'10 YRS',A,'#fff',14)),
+
+  });
+})();
+
+
+/* ===================== bk20260319 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 提問的共同記號（與 au01／au02／au03 一致） */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  /* 文件：白紙＋橘色頁首＋內文橫線 */
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  /* 指定線寬的細線樣式（避免重複 stroke-width 屬性） */
+  var thw=function(w){ return 'fill="none" stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round"'; };
+  /* 跑者側面（粗線火柴人，dir=1 向右） */
+  var runner=function(cx,cy,s,dir){ var d=dir||1;
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+(s*0.9)+'" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g '+thw(3)+'>'
+     +'<path d="M'+cx+' '+(cy+s)+' l'+(d*s*0.4)+' '+(s*2.6)+'"/>'
+     +'<path d="M'+(cx+d*s*0.1)+' '+(cy+s*1.6)+' l'+(-d*s*1.5)+' '+(-s*0.9)+'"/>'
+     +'<path d="M'+(cx+d*s*0.2)+' '+(cy+s*1.7)+' l'+(d*s*1.4)+' '+(s*0.7)+'"/>'
+     +'<path d="M'+(cx+d*s*0.4)+' '+(cy+s*3.6)+' l'+(-d*s*1.3)+' '+(s*2.1)+'"/>'
+     +'<path d="M'+(cx+d*s*0.4)+' '+(cy+s*3.6)+' l'+(d*s*1.5)+' '+(s*1.8)+'"/></g>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 4 Tom：一月的時候就定下清楚的目標了嗎？（提問：一月月曆＋目標旗） */
+    va20260319_01: svg(
+      '<rect x="36" y="28" width="8" height="16" rx="3" fill="'+L+'" '+st+'/>'
+     +'<rect x="84" y="28" width="8" height="16" rx="3" fill="'+L+'" '+st+'/>'
+     +'<rect x="18" y="38" width="92" height="84" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="18" y="38" width="92" height="20" rx="6" fill="'+A+'"/>'
+     +'<path d="M18 58 h92" stroke="'+D+'" stroke-width="2.5"/>'
+     +txt(64,96,'JAN',26,D)
+     +'<path d="M30 108 h68" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>'
+     +'<path d="M136 132 V56" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M136 56 l36 11 l-36 11 z" fill="'+A+'" '+st+'/>'
+     +qb(168,26)),
+
+    /* 6 Tom：一天花多少時間？（提問：時鐘＋白天的太陽） */
+    va20260319_02: svg(
+      '<circle cx="66" cy="80" r="44" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M66 42 v8"/><path d="M66 110 v8"/><path d="M28 80 h8"/><path d="M96 80 h8"/></g>'
+     +'<path d="M66 80 V52" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M66 80 l22 12" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<circle cx="66" cy="80" r="5" fill="'+D+'"/>'
+     +'<circle cx="152" cy="36" r="15" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M152 10 v-6"/><path d="M152 68 v6"/><path d="M126 36 h-6"/><path d="M178 36 h6"/>'
+     +'<path d="M134 18 l-4 -4"/><path d="M170 54 l4 4"/><path d="M170 18 l4 -4"/><path d="M134 54 l-4 4"/></g>'
+     +qb(160,114)),
+
+    /* 7 Anita：一天約三十分鐘，大多在聽和說（半小時鐘面＋耳機＋說話泡泡） */
+    va20260319_03: svg(
+      '<circle cx="52" cy="58" r="38" fill="#fff" '+st+'/>'
+     +'<path d="M52 58 V20 a38 38 0 0 1 0 76 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M52 58 V24 M52 58 v34" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<circle cx="52" cy="58" r="5" fill="'+D+'"/>'
+     +txt(52,126,'30',22,D)
+     +'<path d="M112 56 a26 26 0 0 1 52 0" fill="none" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<rect x="104" y="52" width="16" height="26" rx="6" fill="'+L+'" '+st+'/>'
+     +'<rect x="156" y="52" width="16" height="26" rx="6" fill="'+L+'" '+st+'/>'
+     +'<path d="M104 96 h74 a8 8 0 0 1 8 8 v22 a8 8 0 0 1 -8 8 h-50 l-14 12 v-12 h-10 a8 8 0 0 1 -8 -8 v-22 a8 8 0 0 1 8 -8 z" fill="#fff" '+st+'/>'
+     +'<g fill="'+A+'"><circle cx="124" cy="115" r="4.5"/><circle cx="141" cy="115" r="4.5"/><circle cx="158" cy="115" r="4.5"/></g>'),
+
+    /* 9 Anita：進步很慢，覺得自己落後了（後方跑者＋拉開的距離＋下降箭頭） */
+    va20260319_04: svg(
+      '<path d="M10 122 h180" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +runner(42,46,9,1)
+     +runner(150,46,9,1)
+     +'<path d="M66 32 h66" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-dasharray="8 6" stroke-linecap="round"/>'
+     +'<path d="M132 32 l-11 -6 v12 z" fill="'+A+'"/>'
+     +'<path d="M66 32 l11 -6 v12 z" fill="'+A+'"/>'
+     +'<path d="M22 86 v26" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M22 118 l-7 -12 h14 z" fill="'+R+'"/>'),
+
+    /* 10 Tom：你改了什麼才追上進度？（提問：落後的跑者＋追趕的弧形箭頭） */
+    va20260319_05: svg(
+      '<path d="M10 124 h180" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +runner(38,52,9,1)
+     +'<path d="M112 28 v96" stroke="'+D+'" stroke-width="3" stroke-dasharray="9 7" stroke-linecap="round"/>'
+     +'<path d="M58 44 q26 -26 50 -4" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M108 40 l2 14 l-13 -4 z" fill="'+A+'"/>'
+     +'<rect x="104" y="110" width="16" height="14" rx="2" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +qb(162,76)),
+
+    /* 11 Anita：改成每天一點，而不是一週一次長時間，於是開始進步 */
+    va20260319_06: svg(
+      '<rect x="18" y="34" width="34" height="74" rx="4" fill="#fff" '+st+'/>'
+     +'<path d="M18 58 h34 M18 82 h34" stroke="'+D+'" stroke-width="2"/>'
+     +ex(35,126,20,R)
+     +'<g fill="'+A+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round">'
+     +'<rect x="82" y="88" width="13" height="13" rx="2"/><rect x="99" y="88" width="13" height="13" rx="2"/>'
+     +'<rect x="116" y="88" width="13" height="13" rx="2"/><rect x="133" y="88" width="13" height="13" rx="2"/>'
+     +'<rect x="150" y="88" width="13" height="13" rx="2"/><rect x="167" y="88" width="13" height="13" rx="2"/></g>'
+     +chk(118,116,26,A)
+     +'<path d="M84 72 l92 -44" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M176 28 l-16 0 l6 13 z" fill="'+A+'"/>'),
+
+    /* 13 Anita：進度正常，也比較不怕犯錯（鐵軌上的車＋打勾＋放鬆的臉） */
+    va20260319_07: svg(
+      '<path d="M14 134 L74 36 M118 134 L92 36" '+thw(3.5)+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M70 48 h18"/><path d="M58 70 h26"/><path d="M42 96 h36"/><path d="M24 124 h50"/></g>'
+     +'<rect x="52" y="78" width="46" height="26" rx="5" fill="'+C+'" '+st+'/>'
+     +'<rect x="60" y="84" width="14" height="12" rx="2" fill="#fff" stroke="'+D+'" stroke-width="2"/>'
+     +'<g fill="'+D+'"><circle cx="63" cy="108" r="6"/><circle cx="88" cy="108" r="6"/></g>'
+     +chk(130,40,30,A)
+     +'<circle cx="160" cy="104" r="23" fill="'+L+'" '+st+'/>'
+     +'<g fill="'+D+'"><circle cx="152" cy="99" r="3"/><circle cx="168" cy="99" r="3"/></g>'
+     +'<path d="M149 110 q11 10 22 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'),
+
+    /* 15 Anita：走回家時下起雨，所以跑著去追公車 */
+    va20260319_08: svg(
+      '<path d="M26 44 a15 15 0 0 1 11 -25 a19 19 0 0 1 35 4 a13 13 0 0 1 2 27 H31 a13 13 0 0 1 -5 -6 z" fill="#fff" '+st+'/>'
+     +'<g stroke="'+B+'" stroke-width="3.5" stroke-linecap="round">'
+     +'<path d="M34 56 l-5 13"/><path d="M52 56 l-5 13"/><path d="M70 56 l-5 13"/></g>'
+     +'<path d="M8 132 h184" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +runner(46,84,9,1)
+     +'<rect x="110" y="62" width="80" height="48" rx="7" fill="'+C+'" '+st+'/>'
+     +'<rect x="118" y="70" width="26" height="20" rx="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="150" y="70" width="32" height="20" rx="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M110 100 h80" stroke="'+A+'" stroke-width="5"/>'
+     +'<g fill="'+D+'"><circle cx="128" cy="116" r="10"/><circle cx="172" cy="116" r="10"/></g>')
+
+  });
+})();
+
+
+/* ===================== bk20260324 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 提問句的共同記號（與 au01／au02／au03 一致） */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var carton=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+w/2)+' '+y+' v'+h+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+x+' '+(y+h*0.3)+' h'+w+'" stroke="'+A+'" stroke-width="5"/>'; };
+  /* 聲音弧線 */
+  var sound=function(x,y,n,col){ var s='', i; for(i=0;i<n;i++){ var r=10+i*9;
+      s+='<path d="M'+x+' '+(y-r)+' a'+r+' '+r+' 0 0 1 0 '+(2*r)+'" fill="none" stroke="'+col+'" stroke-width="3" stroke-linecap="round"/>'; }
+    return s; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 2 Tom：你英文進步好多，什麼時候開始的？（提問） */
+    va20260324_01: svg(
+      '<path d="M18 126 H176 M18 126 V22" '+th+' stroke-width="3"/>'
+     +'<g '+st+' fill="'+L+'">'
+     +'<rect x="30" y="100" width="22" height="26" rx="3"/>'
+     +'<rect x="62" y="80" width="22" height="46" rx="3"/>'
+     +'<rect x="94" y="58" width="22" height="68" rx="3"/></g>'
+     +'<path d="M34 92 l34 -22 l34 -22 l30 -20" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M134 26 l-18 4 l6 16 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +qb(166,104)),
+
+    /* 4 Tom：遇到不會的字你怎麼辦？（提問） */
+    va20260324_02: svg(
+      '<rect x="14" y="36" width="116" height="78" rx="6" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.6" stroke-linecap="round">'
+     +'<path d="M26 54 h22 M86 54 h32"/>'
+     +'<path d="M26 92 h40 M78 92 h40"/></g>'
+     +'<rect x="54" y="44" width="26" height="18" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="5 4"/>'
+     +'<rect x="26" y="68" width="92" height="14" rx="4" fill="'+A+'" opacity="0.35" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 5"/>'
+     +qb(164,76)),
+
+    /* 5 Anita：只能從上下文猜意思，有時候猜錯 */
+    va20260324_03: svg(
+      '<rect x="12" y="26" width="118" height="96" rx="6" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.6" stroke-linecap="round">'
+     +'<path d="M24 44 h30 M86 44 h32"/>'
+     +'<path d="M24 62 h20 M24 100 h36 M74 100 h44"/></g>'
+     +'<rect x="54" y="54" width="30" height="16" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M94 62 h24" stroke="'+D+'" stroke-width="2.6" stroke-linecap="round"/>'
+     +'<g stroke="'+D+'" stroke-width="3" fill="none">'
+     +'<circle cx="86" cy="84" r="26"/><path d="M104 102 l22 22" stroke-linecap="round" stroke-width="5"/></g>'
+     +'<circle cx="86" cy="84" r="26" fill="'+B+'" opacity="0.12"/>'
+     +ex(160,34,26,R)),
+
+    /* 6 Tom：你會把新單字抄下來嗎？（提問） */
+    va20260324_04: svg(
+      '<rect x="14" y="22" width="104" height="104" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M14 42 h104" stroke="'+A+'" stroke-width="5"/>'
+     +'<g fill="'+D+'"><circle cx="34" cy="22" r="5"/><circle cx="66" cy="22" r="5"/><circle cx="98" cy="22" r="5"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2.6" stroke-linecap="round">'
+     +'<path d="M26 60 h48 M26 78 h66 M26 96 h30"/></g>'
+     +'<path d="M96 110 l50 -50 l16 16 l-50 50 l-22 6 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M146 60 l16 16" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M96 110 l-6 22 l22 -6" fill="'+A+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +qb(170,30)),
+
+    /* 7 Anita：會，我記錄新單字，也把重要片語記下來 */
+    va20260324_05: svg(
+      '<rect x="14" y="20" width="106" height="110" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M34 20 V130" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="'+A+'"><circle cx="24" cy="42" r="5"/><circle cx="24" cy="70" r="5"/><circle cx="24" cy="98" r="5"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2.6" stroke-linecap="round">'
+     +'<path d="M44 42 h62 M44 56 h44"/>'
+     +'<path d="M44 70 h62 M44 84 h50"/>'
+     +'<path d="M44 98 h62 M44 112 h38"/></g>'
+     +'<rect x="128" y="36" width="60" height="58" rx="4" fill="'+A+'" '+st+'/>'
+     +'<g stroke="#fff" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M140 54 h36 M140 66 h36 M140 78 h22"/></g>'
+     +'<path d="M128 94 l60 0 l-18 18 h-42 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'),
+
+    /* 9 Anita：每天把這些字唸出來，試著用在對話裡 */
+    va20260324_06: svg(
+      '<path d="M18 126 V96 a22 22 0 0 1 44 0 v30 z" fill="'+L+'" '+st+'/>'
+     +'<circle cx="40" cy="72" r="19" fill="#fff" '+st+'/>'
+     +'<g fill="'+D+'"><circle cx="34" cy="68" r="2.6"/><circle cx="47" cy="68" r="2.6"/></g>'
+     +'<ellipse cx="41" cy="82" rx="7" ry="5" fill="'+A+'" stroke="'+D+'" stroke-width="2.2"/>'
+     +sound(62,78,3,A)
+     +'<path d="M108 20 h76 a8 8 0 0 1 8 8 v30 a8 8 0 0 1 -8 8 h-52 l-16 14 v-14 h-8 a8 8 0 0 1 -8 -8 V28 a8 8 0 0 1 8 -8 z" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.6" stroke-linecap="round"><path d="M118 36 h58 M118 50 h38"/></g>'
+     +'<path d="M112 92 h66 a8 8 0 0 1 8 8 v26 a8 8 0 0 1 -8 8 h-50 l-14 12 v-12 h-2 a8 8 0 0 1 -8 -8 v-26 a8 8 0 0 1 8 -8 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M94 48 a30 30 0 0 0 -28 30" fill="none" stroke="'+A+'" stroke-width="3.4" stroke-dasharray="7 5"/>'),
+
+    /* 11 Anita：我看外語片，而我妹只讀文章 */
+    va20260324_07: svg(
+      '<path d="M100 10 V140" stroke="'+D+'" stroke-width="3" stroke-dasharray="8 6" stroke-linecap="round"/>'
+     +'<rect x="12" y="24" width="76" height="52" rx="5" fill="'+D+'"/>'
+     +'<path d="M44 38 l20 12 l-20 12 z" fill="'+A+'"/>'
+     +'<path d="M50 76 v12 M32 100 h36" '+th+' stroke-width="3"/>'
+     +per(50,112,13,'#fff')
+     +'<rect x="112" y="24" width="76" height="60" rx="4" fill="#fff" '+st+'/>'
+     +'<path d="M112 40 h76" stroke="'+A+'" stroke-width="5"/>'
+     +'<g stroke="'+D+'" stroke-width="2.4" stroke-linecap="round">'
+     +'<path d="M120 52 h26 M120 62 h26 M120 72 h18"/>'
+     +'<path d="M156 52 h24 M156 62 h24 M156 72 h16"/></g>'
+     +per(150,112,13,'#fff')
+     +'<path d="M132 100 h36" '+th+' stroke-width="3"/>'),
+
+    /* 12 Tom：我通常開車時聽 podcast */
+    va20260324_08: svg(
+      '<g fill="none" stroke="'+D+'" stroke-width="3.4"><circle cx="74" cy="84" r="46"/><circle cx="74" cy="84" r="15"/></g>'
+     +'<g stroke="'+D+'" stroke-width="3.4" stroke-linecap="round">'
+     +'<path d="M74 69 V48 M61 94 l-24 20 M87 94 l24 20"/></g>'
+     +'<circle cx="74" cy="84" r="15" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M128 72 v-12 a26 26 0 0 1 52 0 v12" fill="none" stroke="'+D+'" stroke-width="3.4" stroke-linecap="round"/>'
+     +'<rect x="120" y="70" width="18" height="30" rx="8" fill="'+A+'" '+st+'/>'
+     +'<rect x="170" y="70" width="18" height="30" rx="8" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+B+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M146 118 v-8 M156 122 v-16 M166 118 v-8"/></g>'),
+
+    /* 13 Anita：也會定期複習筆記，才不會忘記 */
+    va20260324_09: svg(
+      '<rect x="46" y="34" width="86" height="94" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M62 34 V128" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+D+'" stroke-width="2.6" stroke-linecap="round">'
+     +'<path d="M84 54 h38 M84 76 h38 M84 98 h38"/></g>'
+     +chk(70,52,18,A)+chk(70,74,18,A)+chk(70,96,18,A)
+     +'<path d="M30 60 a62 62 0 0 1 118 -14" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M150 30 l2 20 l-20 -4 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M168 102 a62 62 0 0 1 -116 20" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M50 136 l-2 -20 l20 6 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'),
+
+    /* 14 Tom：講英文的時候不怕說錯嗎？（提問） */
+    va20260324_10: svg(
+      '<path d="M22 24 h108 a10 10 0 0 1 10 10 v50 a10 10 0 0 1 -10 10 H60 l-20 18 V94 H22 a10 10 0 0 1 -10 -10 V34 a10 10 0 0 1 10 -10 z" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.6" stroke-linecap="round"><path d="M28 42 h40 M28 76 h30"/></g>'
+     +ex(100,60,38,R)
+     +'<path d="M48 132 q22 -10 44 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +qb(168,112)),
+
+    /* 15 Anita：不怕了，每個錯誤都是學習的機會 */
+    va20260324_11: svg(
+      ex(32,52,32,R)
+     +'<path d="M54 60 h28" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M96 60 l-16 -10 v20 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<g '+st+' fill="'+L+'">'
+     +'<rect x="104" y="104" width="28" height="24" rx="2"/>'
+     +'<rect x="132" y="84" width="28" height="44" rx="2"/>'
+     +'<rect x="160" y="64" width="28" height="64" rx="2"/></g>'
+     +chk(104,46,30,A)
+     +'<path d="M174 42 l5 11 l12 1 l-9 8 l3 12 l-11 -7 l-11 7 l3 -12 l-9 -8 l12 -1 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M14 136 h176" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>')
+
+  });
+})();
+
+
+/* ===================== bk20260326 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  /* 攤開的書 */
+  var bookOpen=function(cx,cy,w,h){ var hw=w/2;
+    return '<path d="M'+(cx-hw)+' '+(cy-h/2)+' a'+hw+' '+(h*0.2)+' 0 0 1 '+hw+' 0 a'+hw+' '+(h*0.2)+' 0 0 1 '+hw+' 0 v'+h+' a'+hw+' '+(h*0.2)+' 0 0 0 -'+hw+' 0 a'+hw+' '+(h*0.2)+' 0 0 0 -'+hw+' 0 z" fill="#fff" '+st+'/>'
+     +'<path d="M'+cx+' '+(cy-h/2+2)+' v'+h+'" stroke="'+D+'" stroke-width="2.5"/>'; };
+  /* 聲波：乾淨的弧線 */
+  var wave=function(x,y,n,col){ var s='<g fill="none" stroke="'+col+'" stroke-width="3" stroke-linecap="round">', i, r;
+    for(i=1;i<=n;i++){ r=i*11; s+='<path d="M'+x+' '+(y-r)+' a'+r+' '+r+' 0 0 1 0 '+(2*r)+'"/>'; }
+    return s+'</g>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 2 Tom：剛開始上第一堂英文課，想請教建議（提問＋全新的書桌課本與鉛筆） */
+    va20260326_01: svg(
+      bookOpen(66,70,104,54)
+     +'<path d="M24 60 h34 M24 74 h34 M74 60 h34 M74 74 h34" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M22 112 h100" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<g transform="rotate(32 100 104)">'
+     +'<rect x="92" y="88" width="10" height="34" rx="2" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M92 122 l5 10 l5 -10 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/></g>'
+     +qb(164,44)),
+
+    /* 5 Anita：覺得發音很難，別人常聽不懂（糾結的語音泡泡＋聽者困惑） */
+    va20260326_02: svg(
+      per(34,34,13,L)
+     +'<path d="M20 112 V72 a14 14 0 0 1 28 0 v40" '+th+' stroke-width="3"/>'
+     +'<path d="M60 36 h62 a8 8 0 0 1 8 8 v34 a8 8 0 0 1 -8 8 H76 l-12 12 v-12 h-4 a8 8 0 0 1 -8 -8 V44 a8 8 0 0 1 8 -8 z" fill="#fff" '+st+'/>'
+     +'<path d="M66 68 c8 -18 16 10 24 -8 c6 -14 -8 -4 -4 10 c4 12 18 -6 24 4" fill="none" stroke="'+R+'" stroke-width="3" stroke-linecap="round"/>'
+     +per(166,34,13,C)
+     +'<path d="M152 112 V72 a14 14 0 0 1 28 0 v40" '+th+' stroke-width="3"/>'
+     +txt(166,42,'?',22,D)
+     +ex(140,100,22,R)),
+
+    /* 6 Tom：聽起來很挫折，那後來怎麼改變的？（提問＋顛簸起伏的曲線） */
+    va20260326_03: svg(
+      '<path d="M16 120 H150 M16 120 V26" '+th+' stroke-width="3.5"/>'
+     +'<path d="M24 100 c12 22 20 -30 32 -6 c10 20 16 -22 28 -2 c10 16 18 -18 28 -4" fill="none" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M16 50 h8"/><path d="M16 74 h8"/><path d="M16 98 h8"/></g>'
+     +qb(170,40)),
+
+    /* 7 Anita：一段時間後發音進步，能有效表達基本想法（清楚的聲波＋勾） */
+    va20260326_04: svg(
+      per(44,40,15,L)
+     +'<path d="M28 118 V80 a16 16 0 0 1 32 0 v38" '+th+' stroke-width="3"/>'
+     +'<ellipse cx="44" cy="52" rx="8" ry="5" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +wave(72,52,4,A)
+     +chk(132,96,34,A)),
+
+    /* 8 Tom：你感覺得出差別嗎？（提問＋矮柱與高柱對照） */
+    va20260326_05: svg(
+      '<path d="M16 120 H126" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<rect x="26" y="86" width="34" height="34" rx="3" fill="'+C+'" '+st+'/>'
+     +'<rect x="80" y="34" width="34" height="86" rx="3" fill="'+A+'" '+st+'/>'
+     +'<path d="M66 60 h8" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M70 82 v-44" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 5"/>'
+     +qb(164,100)),
+
+    /* 9 Anita：明顯感覺在進步，非常鼓舞（階梯式上升＋星星） */
+    va20260326_06: svg(
+      '<path d="M14 124 H160 M14 124 V22" '+th+' stroke-width="3.5"/>'
+     +'<path d="M22 114 h26 v-22 h26 v-24 h26 v-26 h26" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<g fill="'+A+'" stroke="'+D+'" stroke-width="2"><circle cx="48" cy="92" r="5"/><circle cx="74" cy="68" r="5"/><circle cx="100" cy="42" r="5"/></g>'
+     +'<path d="M172 44 l7 -16 l7 16 l17 7 l-17 7 l-7 16 l-7 -16 l-17 -7 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'),
+
+    /* 10 Tom：所以發音進步了，之後會一直越來越輕鬆嗎？（提問＋實線轉虛線向上） */
+    va20260326_07: svg(
+      '<path d="M16 120 H154 M16 120 V26" '+th+' stroke-width="3.5"/>'
+     +'<path d="M24 108 l34 -26 l24 -20" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M82 62 l30 -16 l28 -12" fill="none" stroke="'+D+'" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 7"/>'
+     +'<circle cx="82" cy="62" r="6" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +qb(170,100)),
+
+    /* 11 Anita：到了中級，進步變慢（曲線在高處走平＋小刻度） */
+    va20260326_08: svg(
+      '<path d="M14 122 H186 M14 122 V22" '+th+' stroke-width="3.5"/>'
+     +'<path d="M22 112 l26 -26 l22 -22" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M70 64 c26 -4 48 -2 74 -6 c16 -2 26 -2 34 -4" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M70 64 H180" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 6"/>'
+     +'<g fill="'+A+'" stroke="'+D+'" stroke-width="2"><circle cx="100" cy="62" r="5"/><circle cx="134" cy="60" r="5"/><circle cx="168" cy="56" r="5"/></g>'
+     +pill(104,80,80,26,'INTERMEDIATE',L,D,10)),
+
+    /* 13 Anita：很多字看得懂，但沒辦法用得精準（字典懂了＋射偏靶心的箭） */
+    va20260326_09: svg(
+      bookOpen(52,56,84,44)
+     +'<path d="M18 48 h26 M18 60 h26 M60 48 h26 M60 60 h26" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +chk(30,86,24,A)
+     +'<g fill="none" stroke="'+D+'" stroke-width="3"><circle cx="138" cy="78" r="40"/><circle cx="138" cy="78" r="24"/></g>'
+     +'<circle cx="138" cy="78" r="9" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M186 30 l-28 26" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M158 56 l14 -2 l-2 -12 z" fill="'+R+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="158" cy="56" r="5" fill="'+R+'"/>'),
+
+    /* 14 Anita：更能察覺自己的錯誤，是好事但也讓人煩（放大鏡照出紅色批改） */
+    va20260326_10: svg(
+      doc(16,20,106,110,0)
+     +'<g stroke="'+R+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M30 46 l16 14 M46 46 l-16 14"/>'
+     +'<path d="M62 70 l16 14 M78 70 l-16 14"/>'
+     +'<path d="M34 104 l14 12 M48 104 l-14 12"/></g>'
+     +'<circle cx="124" cy="74" r="36" fill="#fff" fill-opacity="0.15" stroke="'+A+'" stroke-width="5"/>'
+     +'<path d="M150 100 l30 28" stroke="'+A+'" stroke-width="8" stroke-linecap="round"/>'
+     +'<path d="M112 60 l20 18 M132 60 l-20 18" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/>'),
+
+    /* 15 Tom：那是什麼支撐你一直學下去？（提問＋火苗燃料） */
+    va20260326_11: svg(
+      '<path d="M78 124 c-26 0 -42 -18 -42 -38 c0 -22 18 -30 24 -54 c16 14 20 24 20 34 c8 -6 10 -16 8 -28 c20 16 32 32 32 48 c0 20 -16 38 -42 38 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M78 112 c-12 0 -20 -10 -20 -20 c0 -12 12 -18 16 -30 c10 12 24 18 24 30 c0 10 -8 20 -20 20 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M20 128 h116" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +qb(168,44)),
+
+    /* 16 Anita：找到最適合自己的方法，持續穩定進步（鑰匙開鎖＋穩定上升階梯） */
+    va20260326_12: svg(
+      '<circle cx="34" cy="48" r="17" fill="none" stroke="'+A+'" stroke-width="6"/>'
+     +'<path d="M48 54 l34 22" stroke="'+A+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M62 66 l-8 10 M74 74 l-8 10" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<rect x="84" y="72" width="40" height="34" rx="5" fill="'+C+'" '+st+'/>'
+     +'<path d="M92 72 V60 a12 12 0 0 1 24 0 v12" '+th+'/>'
+     +'<circle cx="104" cy="88" r="5" fill="'+D+'"/>'
+     +'<path d="M134 124 h14 v-18 h14 v-18 h14 v-18 h14" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M130 128 H194" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>')
+
+  });
+})();
+
+
+/* ===================== bk20260402 影片左圖（每句一張） ===================== */
+/* bk20260402 台灣的清明節 — 每句一張專屬線稿 */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var G='#6aa84f';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  /* 墓碑：圓頂石碑＋底座 */
+  var tomb=function(cx,by,w,h){ var x=cx-w/2;
+    return '<path d="M'+x+' '+by+' V'+(by-h+w/2)+' a'+(w/2)+' '+(w/2)+' 0 0 1 '+w+' 0 V'+by+' z" fill="#fff" '+st+'/>'
+     +'<rect x="'+(x-10)+'" y="'+by+'" width="'+(w+20)+'" height="12" rx="3" fill="'+L+'" '+st+'/>'; };
+  /* 草葉 */
+  var grass=function(x,by,n,gap,h,col,w){ var s='<g fill="none" stroke="'+col+'" stroke-width="'+w+'" stroke-linecap="round">', i, d;
+    for(i=0;i<n;i++){ d=(i%2?1:-1)*(h*0.3); s+='<path d="M'+(x+i*gap)+' '+by+' q'+d+' -'+(h*0.6)+' '+(d*1.6)+' -'+h+'"/>'; }
+    return s+'</g>'; };
+  /* 煙／香的裊裊線 */
+  var smoke=function(x,y,h){ return '<path d="M'+x+' '+y+' c-7 -'+(h*0.3)+' 7 -'+(h*0.5)+' 0 -'+h+'" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 2 Tom：所以每年四月初都會過這個節？（提問） */
+    va20260402_01: svg(
+      '<rect x="22" y="36" width="104" height="94" rx="7" fill="#fff" '+st+'/>'
+     +'<rect x="22" y="36" width="104" height="24" rx="7" fill="'+A+'" '+st+'/>'
+     +'<path d="M46 36 V24 M102 36 V24" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +txt(74,114,'4',40,D)
+     +'<g fill="'+D+'"><circle cx="40" cy="74" r="4"/><circle cx="58" cy="74" r="4"/><circle cx="108" cy="74" r="4"/></g>'
+     +'<circle cx="76" cy="74" r="7" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M150 120 a28 28 0 1 0 -24 -42" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M118 70 l12 14 l-16 4 z" fill="'+A+'"/>'
+     +qb(168,34)),
+
+    /* 3 Anita：我們叫它掃墓節，也就是清明節 */
+    va20260402_02: svg(
+      tomb(62,112,52,66)
+     +'<path d="M150 20 v54" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M134 74 h32 l8 30 h-48 z" fill="'+L+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2" stroke-linecap="round">'
+     +'<path d="M130 104 v12"/><path d="M140 104 v14"/><path d="M150 104 v12"/><path d="M160 104 v14"/><path d="M170 104 v12"/></g>'
+     +'<g fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round">'
+     +'<path d="M106 122 c10 8 22 8 32 2"/><path d="M104 132 c12 8 26 8 38 2"/></g>'
+     +'<path d="M14 136 h172" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'),
+
+    /* 4 Anita：這是家人想念祖先的日子 */
+    va20260402_03: svg(
+      '<rect x="56" y="14" width="88" height="62" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="66" y="24" width="68" height="42" rx="3" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +per(100,40,11,'#fff')
+     +'<path d="M89 28 a11 11 0 0 1 22 0" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M100 76 v12" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +per(44,112,14,C)
+     +per(100,112,12,L)
+     +per(156,112,14,C)
+     +'<path d="M62 100 l24 -8 M138 100 l-24 -8" stroke="'+A+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 5"/>'),
+
+    /* 6 Anita：是我外婆的墓，她六年前過世 */
+    va20260402_04: svg(
+      '<rect x="46" y="16" width="100" height="106" rx="6" fill="'+L+'" '+st+'/>'
+     +'<ellipse cx="96" cy="66" rx="34" ry="42" fill="#fff" '+st+'/>'
+     +'<circle cx="96" cy="56" r="15" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="96" cy="38" r="8" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M78 100 a18 18 0 0 1 36 0" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+D+'" stroke-width="2" stroke-linecap="round"><path d="M88 54 h-6 M104 54 h6"/></g>'
+     +'<path d="M88 70 c5 5 11 5 16 0" '+th+'/>'
+     +pill(100,126,54,22,'6',A,'#fff',15)
+     +'<g><path d="M30 126 v-22" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<circle cx="30" cy="96" r="9" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M30 110 l-12 -6 M30 112 l12 -8" '+th+'/></g>'),
+
+    /* 7 Tom：墓旁邊的草長得好高 */
+    va20260402_05: svg(
+      tomb(78,110,50,60)
+     +grass(20,124,12,14,46,G,4)
+     +grass(28,124,10,16,66,D,3)
+     +'<path d="M14 136 h172" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M176 124 V58" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M176 58 l-7 12 h14 z" fill="'+A+'"/>'
+     +'<path d="M176 124 l-7 -12 h14 z" fill="'+A+'"/>'),
+
+    /* 8 Anita：一年沒整理就雜草叢生，要除草清土 */
+    va20260402_06: svg(
+      '<path d="M44 128 q-10 -22 2 -42" fill="none" stroke="'+G+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M46 96 q-18 -4 -22 -18 M46 96 q16 -8 18 -22" fill="none" stroke="'+G+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M40 128 h16" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M56 74 l32 -20" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M84 42 a14 14 0 0 1 22 14 l-10 10 a16 16 0 0 0 -16 -20 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M114 64 h26" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M152 64 l-14 -9 v18 z" fill="'+A+'"/>'
+     +'<path d="M150 82 h40 l-6 46 h-28 z" fill="'+C+'" '+st+'/>'
+     +grass(156,82,4,10,16,G,3)
+     +'<g fill="'+D+'"><circle cx="164" cy="104" r="3"/><circle cx="176" cy="114" r="3"/><circle cx="170" cy="120" r="3"/></g>'),
+
+    /* 10 Anita：我們準備水果、茶、傳統食物當供品，表達尊敬和愛 */
+    va20260402_07: svg(
+      '<rect x="14" y="96" width="172" height="12" rx="4" fill="'+L+'" '+st+'/>'
+     +'<path d="M30 108 v28 M170 108 v28" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M26 96 a26 10 0 0 1 52 0 z" fill="#fff" '+st+'/>'
+     +'<circle cx="40" cy="74" r="13" fill="'+R+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="64" cy="76" r="11" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M40 61 v-8 l8 -4" '+th+'/>'
+     +'<path d="M96 70 h34 v16 a10 10 0 0 1 -10 10 h-14 a10 10 0 0 1 -10 -10 z" fill="#fff" '+st+'/>'
+     +'<path d="M130 76 a9 9 0 0 1 0 14" '+th+'/>'
+     +smoke(113,62,22)
+     +'<path d="M146 86 a22 10 0 0 0 36 0 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M150 80 h28" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M164 30 c8 -12 26 -6 26 8 c0 12 -16 18 -26 28 c-10 -10 -26 -16 -26 -28 c0 -14 18 -20 26 -8 z" fill="'+A+'" '+st+'/>'),
+
+    /* 11 Anita：之後我們為她燒紙錢和香 */
+    va20260402_08: svg(
+      '<path d="M40 128 h84 l-10 -44 h-64 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M46 84 h72" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M82 78 c-14 -12 -4 -22 2 -28 c-2 12 12 14 10 26 c8 -6 10 -16 6 -24 c12 10 14 26 2 34 z" fill="'+A+'" '+st+'/>'
+     +'<rect x="26" y="52" width="30" height="22" rx="3" fill="#fff" '+st+' transform="rotate(-18 41 63)"/>'
+     +'<circle cx="41" cy="63" r="5" fill="'+A+'"/>'
+     +'<rect x="112" y="44" width="30" height="22" rx="3" fill="#fff" '+st+' transform="rotate(14 127 55)"/>'
+     +'<circle cx="127" cy="55" r="5" fill="'+A+'"/>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M158 128 V74"/><path d="M170 128 V68"/><path d="M182 128 V76"/></g>'
+     +'<g fill="'+A+'"><circle cx="158" cy="72" r="4"/><circle cx="170" cy="66" r="4"/><circle cx="182" cy="74" r="4"/></g>'
+     +smoke(158,62,26)+smoke(170,56,30)+smoke(182,64,24)),
+
+    /* 13 Anita：春捲是用薄皮做的，裡面包蔬菜、肉，有時還有花生 */
+    va20260402_09: svg(
+      '<circle cx="76" cy="76" r="54" fill="#fff" '+st+'/>'
+     +'<circle cx="76" cy="76" r="44" fill="none" stroke="'+D+'" stroke-width="2" stroke-dasharray="7 6"/>'
+     +'<g stroke="'+G+'" stroke-width="5" stroke-linecap="round">'
+     +'<path d="M54 62 h44"/><path d="M52 76 h48"/></g>'
+     +'<rect x="54" y="86" width="44" height="12" rx="4" fill="'+R+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="'+L+'" stroke="'+D+'" stroke-width="2">'
+     +'<ellipse cx="60" cy="108" rx="7" ry="5"/><ellipse cx="78" cy="110" rx="7" ry="5"/><ellipse cx="96" cy="108" rx="7" ry="5"/></g>'
+     +'<path d="M138 48 a26 26 0 0 1 0 56" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M138 104 l-12 -6 l14 -8 z" fill="'+A+'"/>'
+     +'<path d="M160 44 h24 l-6 66 h-12 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M162 60 h20 M163 78 h18" stroke="'+D+'" stroke-width="2"/>'),
+
+    /* 14 Anita：聽說吃春捲會帶來好運，象徵春天的新開始 */
+    va20260402_10: svg(
+      '<path d="M40 136 h60 l-8 -22 H48 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M70 114 V76" stroke="'+G+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M70 84 c-20 -2 -26 -14 -26 -24 c14 0 24 8 26 20" fill="'+G+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M70 78 c18 -4 24 -16 24 -26 c-14 0 -22 10 -24 22" fill="'+G+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="152" cy="42" r="20" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="4" stroke-linecap="round">'
+     +'<path d="M152 12 v-8"/><path d="M182 42 h8"/><path d="M174 20 l7 -7"/><path d="M174 64 l7 7"/><path d="M122 42 h-8"/></g>'
+     +'<path d="M150 96 l7 16 l17 2 l-13 12 l4 17 l-15 -9 l-15 9 l4 -17 l-13 -12 l17 -2 z" fill="'+L+'" '+st+'/>'),
+
+    /* 15 Tom：所以不只是難過，也是一起吃飯聊天的時候 */
+    va20260402_11: svg(
+      '<circle cx="100" cy="92" r="46" fill="'+L+'" '+st+'/>'
+     +'<circle cx="100" cy="92" r="16" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="#fff" stroke="'+D+'" stroke-width="2.5">'
+     +'<circle cx="100" cy="60" r="10"/><circle cx="132" cy="92" r="10"/>'
+     +'<circle cx="100" cy="124" r="10"/><circle cx="68" cy="92" r="10"/></g>'
+     +per(30,46,13,C)
+     +per(170,46,13,C)
+     +'<path d="M54 24 h40 a7 7 0 0 1 7 7 v14 a7 7 0 0 1 -7 7 H66 l-10 10 v-10 h-2 a7 7 0 0 1 -7 -7 V31 a7 7 0 0 1 7 -7 z" fill="#fff" '+st+'/>'
+     +'<g fill="'+A+'"><circle cx="64" cy="38" r="4"/><circle cx="76" cy="38" r="4"/><circle cx="88" cy="38" r="4"/></g>'
+     +'<path d="M130 20 h30 a6 6 0 0 1 6 6 v10 a6 6 0 0 1 -6 6 h-22 l-8 8 v-8 a6 6 0 0 1 0 -22 z" fill="'+C+'" '+st+'/>'),
+
+    /* 16 Anita：這個傳統很有意義，讓我們和家人、文化保持連結 */
+    va20260402_12: svg(
+      '<g fill="'+C+'" stroke="'+D+'" stroke-width="2.5">'
+     +'<circle cx="36" cy="30" r="14"/><circle cx="164" cy="30" r="14"/>'
+     +'<circle cx="36" cy="122" r="14"/><circle cx="164" cy="122" r="14"/></g>'
+     +'<path d="M50 38 L82 66 M150 38 L118 66 M50 114 L82 86 M150 114 L118 86" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M100 48 c10 -16 34 -8 34 12 c0 16 -20 24 -34 38 c-14 -14 -34 -22 -34 -38 c0 -20 24 -28 34 -12 z" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M30 26 h12"/><path d="M158 26 h12"/><path d="M30 118 h12"/><path d="M158 118 h12"/></g>'
+     +'<path d="M14 76 h34 M152 76 h34" stroke="'+L+'" stroke-width="6" stroke-linecap="round"/>'),
+
+  });
+})();
+
+
+/* ===================== bk20260423 影片左圖（每句一張） ===================== */
+/* bk20260423 農夫與智者 — 每句一張專屬線稿 */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  /* 小屋 */
+  var hut=function(cx,by,w,h){ var x=cx-w/2;
+    return '<path d="M'+x+' '+by+' V'+(by-h)+' l'+(w/2)+' -'+(h*0.5)+' l'+(w/2)+' '+(h*0.5)+' V'+by+' z" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+x+' '+(by-h)+' h'+w+'" stroke="'+D+'" stroke-width="2.5"/>'; };
+  /* 噪音弧線 */
+  var noise=function(cx,cy,dir,n,col){ var s='<g fill="none" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round">', i, r;
+    for(i=1;i<=n;i++){ r=i*9; s+='<path d="M'+(cx+dir*r*0.5)+' '+(cy-r)+' a'+r+' '+r+' 0 0 '+(dir>0?1:0)+' 0 '+(2*r)+'"/>'; }
+    return s+'</g>'; };
+  /* 馬頭 */
+  var horseHead=function(x,y){ return '<path d="M'+x+' '+y+' c0 -20 10 -32 26 -34 l-2 -16 l12 10 l10 -8 l0 16 c14 6 18 20 14 32 l-18 6 l-6 20 l-22 0 z" fill="'+L+'" '+st+'/>'
+     +'<circle cx="'+(x+32)+'" cy="'+(y-18)+'" r="3" fill="'+D+'"/>'
+     +'<circle cx="'+(x+52)+'" cy="'+(y+8)+'" r="2.5" fill="'+D+'"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 3 智者：那你為什麼來找我？（提問） */
+    va20260423_01: svg(
+      per(70,52,18,C)
+     +'<path d="M50 34 a20 20 0 0 1 40 0 l4 -6 a24 24 0 0 0 -48 0 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M46 100 h48" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M94 108 q26 -4 24 -26" fill="none" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M118 82 l-10 6 l12 8 z" fill="'+A+'"/>'
+     +'<rect x="38" y="120" width="64" height="12" rx="5" fill="'+L+'" '+st+'/>'
+     +qb(162,44)),
+
+    /* 4 農夫：大家都推薦我來找你，所以我今天一早就出發 */
+    va20260423_02: svg(
+      '<path d="M8 36 a30 30 0 0 1 56 0" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<circle cx="36" cy="36" r="13" fill="'+A+'" '+st+'/>'
+     +per(26,78,11,C)
+     +per(54,86,11,C)
+     +per(36,110,11,C)
+     +'<g stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" fill="none">'
+     +'<path d="M70 76 h26"/><path d="M72 94 h24"/><path d="M60 112 h36"/></g>'
+     +'<path d="M104 94 l-14 -9 v18 z" fill="'+A+'"/>'
+     +hut(154,118,66,40)
+     +'<rect x="146" y="98" width="18" height="20" rx="2" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M112 136 c22 -8 46 -8 72 0" '+th+' stroke-dasharray="7 6"/>'),
+
+    /* 5 農夫：我整天又煩又躁 — 房子太小，小孩太多又吵 */
+    va20260423_03: svg(
+      hut(76,120,104,62)
+     +'<g fill="'+C+'" stroke="'+D+'" stroke-width="2.5">'
+     +'<circle cx="46" cy="96" r="9"/><circle cx="70" cy="104" r="9"/>'
+     +'<circle cx="94" cy="94" r="9"/><circle cx="112" cy="106" r="9"/>'
+     +'<circle cx="60" cy="116" r="9"/><circle cx="92" cy="116" r="9"/></g>'
+     +noise(24,96,-1,3,A)
+     +noise(130,96,1,3,A)
+     +'<circle cx="166" cy="44" r="20" fill="'+C+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M156 38 l8 4"/><path d="M176 38 l-8 4"/></g>'
+     +'<path d="M156 54 c6 -6 14 -6 20 0" fill="none" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'),
+
+    /* 6 智者：把你的馬哄進屋裡，溫柔地跟牠說話 */
+    va20260423_04: svg(
+      horseHead(26,96)
+     +'<path d="M118 136 V48 h44 v88" fill="'+C+'" '+st+'/>'
+     +'<circle cx="128" cy="94" r="4" fill="'+A+'"/>'
+     +'<path d="M162 56 q22 36 0 76" fill="none" stroke="'+D+'" stroke-width="3" stroke-dasharray="7 6"/>'
+     +'<path d="M96 70 l18 -8 l-4 10 l10 2 l-20 10 l4 -10 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<g fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M70 32 c10 -6 20 2 30 -4"/><path d="M78 20 c10 -6 20 2 30 -4"/></g>'),
+
+    /* 7 農夫：這建議很奇怪，但好吧 — 我照你說的做 */
+    va20260423_05: svg(
+      per(72,58,19,C)
+     +'<path d="M91 44 q22 -14 32 4" fill="none" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M123 48 a9 9 0 0 1 -14 8" fill="none" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M62 54 l-8 -4"/><path d="M84 54 l8 -4"/></g>'
+     +'<path d="M62 68 c7 4 14 4 20 0" '+th+'/>'
+     +'<path d="M44 112 q28 -14 56 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M36 100 l-14 14 M108 100 l14 14" '+th+'/>'
+     +'<circle cx="160" cy="88" r="26" fill="'+L+'" '+st+'/>'
+     +chk(146,88,40,A)),
+
+    /* 9 農夫：我什麼事都做不成 */
+    va20260423_06: svg(
+      doc(24,20,86,106,1)
+     +'<g fill="none" stroke="'+D+'" stroke-width="2.5">'
+     +'<rect x="32" y="56" width="13" height="13" rx="2"/>'
+     +'<rect x="32" y="78" width="13" height="13" rx="2"/>'
+     +'<rect x="32" y="100" width="13" height="13" rx="2"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M54 62 h46"/><path d="M54 84 h40"/><path d="M54 106 h46"/></g>'
+     +ex(67,72,78,R)
+     +'<path d="M156 128 L178 34" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M150 128 h36" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M178 34 l-18 10 l6 14 l20 -8 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M128 70 c10 -8 10 -22 0 -30" fill="none" stroke="'+A+'" stroke-width="3" stroke-dasharray="6 5"/>'),
+
+    /* 11 農夫：我照做了，結果噪音還變得更大 */
+    va20260423_07: svg(
+      '<path d="M22 108 c0 -22 12 -34 32 -34 c20 0 32 12 32 34 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M26 78 l-8 -16 l16 6 M82 78 l8 -16 l-16 6" fill="'+L+'" '+st+'/>'
+     +'<g fill="'+D+'"><circle cx="42" cy="92" r="3.5"/><circle cx="66" cy="92" r="3.5"/></g>'
+     +'<path d="M46 104 h16" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M48 134 c0 -16 8 -24 22 -24 c14 0 22 8 22 24 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +noise(104,80,1,4,A)
+     +'<path d="M172 118 V46" stroke="'+A+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M172 40 l-13 20 h26 z" fill="'+A+'"/>'),
+
+    /* 12 農夫：動物聚在屋子各處，我整天都在趕牠們 */
+    va20260423_08: svg(
+      '<path d="M14 134 V58 l78 -40 l78 40 v76 z" fill="#fff" '+st+'/>'
+     +'<path d="M14 58 h156" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="'+L+'" stroke="'+D+'" stroke-width="2.5">'
+     +'<ellipse cx="42" cy="84" rx="14" ry="10"/>'
+     +'<ellipse cx="132" cy="78" rx="16" ry="11"/>'
+     +'<ellipse cx="146" cy="118" rx="15" ry="10"/>'
+     +'<ellipse cx="40" cy="122" rx="13" ry="9"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M34 94 v8 M50 94 v8"/><path d="M124 89 v8 M140 89 v8"/>'
+     +'<path d="M138 128 v7 M154 128 v7"/><path d="M34 131 v6 M48 131 v6"/></g>'
+     +'<g fill="'+A+'"><circle cx="30" cy="80" r="3"/><circle cx="118" cy="74" r="3"/><circle cx="134" cy="114" r="3"/><circle cx="28" cy="118" r="3"/></g>'
+     +per(92,86,14,C)
+     +'<path d="M70 120 q22 10 44 0" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="7 6"/>'
+     +'<path d="M114 120 l-12 -7 v14 z" fill="'+A+'"/>'),
+
+    /* 13 農夫：這樣過了好幾週，我累垮了，虛弱地躺了下來 */
+    va20260423_09: svg(
+      '<g fill="none" stroke="'+D+'" stroke-width="2.5">'
+     +'<rect x="20" y="16" width="26" height="24" rx="3"/>'
+     +'<rect x="56" y="16" width="26" height="24" rx="3"/>'
+     +'<rect x="92" y="16" width="26" height="24" rx="3"/>'
+     +'<rect x="128" y="16" width="26" height="24" rx="3"/></g>'
+     +ex(33,28,20,R)+ex(69,28,20,R)+ex(105,28,20,R)+ex(141,28,20,R)
+     +'<path d="M14 130 h172" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<rect x="34" y="112" width="124" height="18" rx="9" fill="'+C+'" '+st+'/>'
+     +'<circle cx="46" cy="100" r="16" fill="'+C+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M38 96 l8 6"/><path d="M56 96 l-8 6"/></g>'
+     +'<path d="M62 86 q10 -10 20 0" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<g fill="'+B+'"><path d="M96 70 c4 6 6 8 6 11 a6 6 0 0 1 -12 0 c0 -3 2 -5 6 -11 z"/>'
+     +'<path d="M120 60 c4 6 6 8 6 11 a6 6 0 0 1 -12 0 c0 -3 2 -5 6 -11 z"/></g>'),
+
+    /* 15 農夫：我道歉。家裡恢復正常了 — 現在真平靜 */
+    va20260423_10: svg(
+      '<circle cx="48" cy="46" r="17" fill="'+C+'" '+st+'/>'
+     +'<path d="M48 63 q-18 24 -6 54" fill="none" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M44 86 q16 10 12 26" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M40 44 h7"/><path d="M53 44 h7"/></g>'
+     +'<path d="M20 66 q14 -12 28 -2" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +hut(140,122,76,46)
+     +'<rect x="130" y="98" width="20" height="24" rx="2" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="158" y="96" width="18" height="16" rx="2" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M106 48 c12 -6 24 2 32 -4" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M150 40 c-12 8 -6 22 6 22 c-2 -10 4 -16 12 -18 z" fill="'+L+'" '+st+'/>'),
+
+    /* 16 農夫：你讓我看見一個道理：人該學會對自己的生活知足 */
+    va20260423_11: svg(
+      '<path d="M14 14 h56 c6 32 -10 48 -4 80 c-10 -4 -22 -4 -34 2 c6 -34 -12 -52 -18 -82 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M30 20 c4 28 -8 46 -6 70 M50 18 c4 28 -6 48 -4 72" fill="none" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="112" cy="54" r="22" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="4" stroke-linecap="round">'
+     +'<path d="M112 20 v-10"/><path d="M146 54 h10"/><path d="M136 30 l8 -8"/><path d="M136 78 l8 8"/></g>'
+     +'<circle cx="124" cy="112" r="20" fill="'+C+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M114 106 h8"/><path d="M128 106 h8"/></g>'
+     +'<path d="M114 118 c7 8 17 8 22 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M166 108 c6 -10 20 -4 20 8 c0 10 -12 14 -20 22 c-8 -8 -20 -12 -20 -22 c0 -12 14 -18 20 -8 z" fill="'+A+'" '+st+'/>'),
+
+  });
+})();
+
+
+/* ===================== bk20260512 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 提問共同記號：橘色問號徽章 */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var spark=function(cx,cy,s){ return '<path d="M'+cx+' '+(cy-s)+' Q'+(cx+s*0.22)+' '+(cy-s*0.22)+' '+(cx+s)+' '+cy
+     +' Q'+(cx+s*0.22)+' '+(cy+s*0.22)+' '+cx+' '+(cy+s)
+     +' Q'+(cx-s*0.22)+' '+(cy+s*0.22)+' '+(cx-s)+' '+cy
+     +' Q'+(cx-s*0.22)+' '+(cy-s*0.22)+' '+cx+' '+(cy-s)+' z" fill="'+A+'"/>'; };
+  var arrow=function(x1,y1,x2,y2,col,w){ var dx=x2-x1, dy=y2-y1, m=Math.sqrt(dx*dx+dy*dy)||1, ux=dx/m, uy=dy/m, hl=w*2.6;
+    var bx=x2-ux*hl, by=y2-uy*hl, px=-uy*hl*0.6, py=ux*hl*0.6;
+    return '<path d="M'+x1+' '+y1+' L'+bx.toFixed(1)+' '+by.toFixed(1)+'" stroke="'+col+'" stroke-width="'+w+'" stroke-linecap="round"/>'
+     +'<path d="M'+x2+' '+y2+' L'+(bx+px).toFixed(1)+' '+(by+py).toFixed(1)+' L'+(bx-px).toFixed(1)+' '+(by-py).toFixed(1)+' z" fill="'+col+'"/>'; };
+  var gear=function(cx,cy,r,n){ var s='', i, t=r*0.32;
+    for(i=0;i<n;i++) s+='<rect x="'+(cx-t/2).toFixed(1)+'" y="'+(cy-r-t*0.9).toFixed(1)+'" width="'+t.toFixed(1)+'" height="'+(t*1.7).toFixed(1)+'" rx="2" fill="'+L+'" stroke="'+D+'" stroke-width="2" transform="rotate('+(i*360/n).toFixed(1)+' '+cx+' '+cy+')"/>';
+    return s+'<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+C+'" '+st+'/>'
+     +'<circle cx="'+cx+'" cy="'+cy+'" r="'+(r*0.34).toFixed(1)+'" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'; };
+  var rep=function(n,fn){ var s='',i; for(i=0;i<n;i++) s+=fn(i); return s; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 3 Anita：去年開始學，一開始又熱情又有動力 */
+    va20260512_01: svg(
+      '<g stroke="'+A+'" stroke-width="4" stroke-linecap="round">'
+     +'<path d="M70 16 v12"/><path d="M42 22 l9 9"/><path d="M98 22 l-9 9"/>'
+     +'<path d="M18 42 h12"/><path d="M110 42 h12"/></g>'
+     +'<path d="M50 86 L34 62" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M90 86 L106 62" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<circle cx="32" cy="58" r="6" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="108" cy="58" r="6" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +per(70,48,14,L)
+     +'<path d="M160 48 c13 19 19 26 19 36 a19 19 0 0 1 -38 0 c0 -10 6 -17 19 -36 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M160 78 c6 9 9 12 9 16 a9 9 0 0 1 -18 0 c0 -4 3 -7 9 -16 z" fill="#fff"/>'
+     +spark(186,28,8)),
+
+    /* 4 Tom：最難的部分是什麼？ */
+    va20260512_02: svg(
+      '<g '+st+' fill="'+C+'">'
+     +'<rect x="16" y="110" width="30" height="22" rx="2"/>'
+     +'<rect x="46" y="96" width="30" height="36" rx="2"/>'
+     +'<rect x="76" y="82" width="30" height="50" rx="2"/>'
+     +'<rect x="106" y="34" width="34" height="98" rx="2" fill="'+A+'"/></g>'
+     +'<path d="M14 134 h130" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +qb(168,56)),
+
+    /* 5 Anita：發音很難，別人不一定聽得懂 */
+    va20260512_03: svg(
+      per(32,44,13,L)
+     +'<path d="M70 18 h112 a6 6 0 0 1 6 6 v44 a6 6 0 0 1 -6 6 H88 l-14 14 v-14 h-4 a6 6 0 0 1 -6 -6 V24 a6 6 0 0 1 6 -6 z" fill="#fff" '+st+'/>'
+     +'<path d="M82 50 c8 -16 14 10 22 -6 c8 -16 14 14 22 -2 c8 -16 16 12 24 -4" fill="none" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M30 106 a15 15 0 1 1 21 11 a7 7 0 1 1 -9 -9" fill="#fff" '+st+'/>'
+     +'<g fill="none" stroke="'+D+'" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="5 5">'
+     +'<path d="M72 94 a24 24 0 0 1 0 32"/><path d="M92 86 a34 34 0 0 1 0 48"/></g>'
+     +ex(136,110,22,R)),
+
+    /* 6 Anita：過一陣子進步了，基本想法能表達得不錯 */
+    va20260512_04: svg(
+      '<circle cx="40" cy="50" r="24" fill="#fff" '+st+'/>'
+     +'<path d="M40 50 V32 M40 50 l14 9" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M42 86 a32 32 0 1 0 -28 -50" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="7 6"/>'
+     +'<path d="M84 22 h98 a6 6 0 0 1 6 6 v48 a6 6 0 0 1 -6 6 H106 l-16 16 v-16 h-6 a6 6 0 0 1 -6 -6 V28 a6 6 0 0 1 6 -6 z" fill="#fff" '+st+'/>'
+     +'<circle cx="108" cy="52" r="10" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="130" y="42" width="20" height="20" rx="2" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M170 42 l10 20 h-20 z" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +chk(24,110,24,A)),
+
+    /* 7 Tom：那是真正的進步 */
+    va20260512_05: svg(
+      '<g '+st+' fill="'+C+'">'
+     +'<rect x="22" y="100" width="26" height="30" rx="2"/>'
+     +'<rect x="56" y="80" width="26" height="50" rx="2"/>'
+     +'<rect x="90" y="56" width="26" height="74" rx="2"/>'
+     +'<rect x="124" y="32" width="26" height="98" rx="2" fill="'+A+'"/></g>'
+     +'<path d="M18 130 h164" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +arrow(32,94,166,22,A,4.5)),
+
+    /* 8 Anita：很明顯在進步，非常令人振奮 */
+    va20260512_06: svg(
+      '<path d="M14 126 C52 120 72 96 104 48" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<g fill="'+D+'"><circle cx="14" cy="126" r="5"/><circle cx="56" cy="112" r="5"/><circle cx="86" cy="80" r="5"/><circle cx="104" cy="48" r="5"/></g>'
+     +'<circle cx="112" cy="62" r="32" fill="#fff" fill-opacity="0.32" stroke="'+D+'" stroke-width="4"/>'
+     +'<path d="M134 86 l26 28" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'
+     +spark(166,22,10)+spark(188,44,7)+spark(146,12,6)),
+
+    /* 10 Anita：中級後進步變慢，看得懂的字用不準 */
+    va20260512_07: svg(
+      '<path d="M12 128 L108 66" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<g stroke="'+D+'" stroke-width="2" opacity="0.45"><path d="M24 128 v-7"/><path d="M44 128 v-20"/><path d="M64 128 v-33"/><path d="M84 128 v-46"/></g>'
+     +'<path d="M36 104 h30 a11 11 0 0 0 0 -22 h-6" fill="'+C+'" '+st+'/>'
+     +'<path d="M40 82 l-5 -12 M50 80 l3 -13" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<circle cx="60" cy="80" r="15" fill="'+L+'" '+st+'/>'
+     +'<path d="M60 80 a7 7 0 1 1 7 -7 a11 11 0 1 1 -14 10" fill="none" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g '+st+' fill="#fff"><rect x="126" y="22" width="60" height="24" rx="3"/>'
+     +'<rect x="126" y="54" width="60" height="24" rx="3"/>'
+     +'<rect x="126" y="86" width="60" height="24" rx="3"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2" stroke-linecap="round"><path d="M134 34 h30"/><path d="M134 66 h36"/><path d="M134 98 h26"/></g>'
+     +'<rect x="140" y="120" width="32" height="24" rx="4" fill="'+A+'" '+st+'/>'
+     +'<path d="M146 120 v-8 a10 10 0 0 1 20 0 v8" fill="none" stroke="'+D+'" stroke-width="3"/>'),
+
+    /* 12 Anita：腦袋突然空白、卡住，很挫折 */
+    va20260512_08: svg(
+      '<path d="M26 112 V84 a38 38 0 0 1 76 0 v28 a8 8 0 0 1 -8 8 H34 a8 8 0 0 1 -8 -8 z" fill="#fff" '+st+'/>'
+     +'<rect x="42" y="56" width="46" height="40" rx="8" fill="'+C+'" stroke="'+R+'" stroke-width="3" stroke-dasharray="7 6" fill-opacity="0.6"/>'
+     +gear(156,60,24,8)
+     +'<path d="M134 38 l44 44" stroke="'+R+'" stroke-width="7" stroke-linecap="round"/>'),
+
+    /* 14 Anita：為了進步，記下新單字並每天大聲重複 */
+    va20260512_09: svg(
+      '<path d="M14 36 c16 -8 34 -8 44 2 c10 -10 28 -10 44 -2 v64 c-16 -8 -34 -8 -44 2 c-10 -10 -28 -10 -44 -2 z" fill="#fff" '+st+'/>'
+     +'<path d="M58 38 v64" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+D+'" stroke-width="2" stroke-linecap="round">'
+     +'<path d="M22 54 h28"/><path d="M22 68 h24"/><path d="M22 82 h28"/>'
+     +'<path d="M66 54 h28"/><path d="M66 68 h24"/><path d="M66 82 h28"/></g>'
+     +'<circle cx="152" cy="58" r="26" fill="'+L+'" '+st+'/>'
+     +'<path d="M138 58 q14 16 28 0 q-14 -8 -28 0 z" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M152 24 a34 34 0 1 1 -28 48" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M124 72 l12 -4 l-2 13 z" fill="'+A+'"/>'
+     +'<g '+st+' fill="'+C+'">'
+     +rep(7,function(i){ return '<rect x="'+(16+i*25)+'" y="116" width="20" height="22" rx="3"/>'; })
+     +'</g>'
+     +rep(7,function(i){ return chk(20+i*25,126,13,A); })),
+
+    /* 16 Tom：每天練一點就會穩定進步 */
+    va20260512_10: svg(
+      '<g '+st+' fill="'+C+'">'
+     +rep(5,function(i){ return '<rect x="'+(14+i*34)+'" y="'+(110-i*20)+'" width="34" height="'+(22+i*20)+'" rx="2"/>'; })
+     +'</g>'
+     +rep(5,function(i){ return '<ellipse cx="'+(31+i*34)+'" cy="'+(102-i*20)+'" rx="8" ry="5" fill="'+A+'"/>'; })
+     +'<path d="M166 30 v-22 h20 l-6 8 l6 8 h-20" fill="'+A+'" '+st+'/>'
+     +'<path d="M10 134 h180" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>')
+
+  });
+})();
+
+
+/* ===================== bk20260521 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  /* 指定線寬的細線樣式（避免重複 stroke-width 屬性） */
+  var thw=function(w){ return 'fill="none" stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round"'; };
+  /* 外帶紙盒（梯形盒身＋盒蓋） */
+  var box=function(x,y,w,h){ return '<path d="M'+x+' '+y+' h'+w+' l-'+(w*0.12)+' '+h+' h-'+(w*0.76)+' z" fill="'+C+'" '+st+'/>'
+     +'<rect x="'+(x-3)+'" y="'+(y-9)+'" width="'+(w+6)+'" height="11" rx="3" fill="'+L+'" '+st+'/>'; };
+  /* 五角星 */
+  var star=function(cx,cy,r,f){ var p='', i, a, rr;
+    for(i=0;i<10;i++){ a=-Math.PI/2+i*Math.PI/5; rr=(i%2?r*0.45:r);
+      p+=(i?' L':'M')+(cx+rr*Math.cos(a)).toFixed(1)+' '+(cy+rr*Math.sin(a)).toFixed(1); }
+    return '<path d="'+p+' Z" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  /* 沒表情的臉 */
+  var flatFace=function(cx,cy,r){ return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+L+'" '+st+'/>'
+     +'<g fill="'+D+'"><circle cx="'+(cx-r*0.35)+'" cy="'+(cy-r*0.2)+'" r="3"/><circle cx="'+(cx+r*0.35)+'" cy="'+(cy-r*0.2)+'" r="3"/></g>'
+     +'<path d="M'+(cx-r*0.45)+' '+(cy+r*0.45)+' h'+(r*0.9)+'" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 3 Anita：連吃好幾週餐廳外食，現在完全沒胃口 */
+    va20260521_01: svg(
+      box(16,34,44,52)
+     +box(70,34,44,52)
+     +box(124,34,44,52)
+     +'<path d="M18 102 h128" fill="none" stroke="'+A+'" stroke-width="4" stroke-dasharray="9 6" stroke-linecap="round"/>'
+     +'<path d="M146 102 l-12 -7 v14 z" fill="'+A+'"/>'
+     +'<circle cx="166" cy="116" r="26" fill="#fff" '+st+'/>'
+     +'<circle cx="166" cy="116" r="14" fill="none" stroke="'+D+'" stroke-width="2"/>'
+     +ex(166,116,22,R)),
+
+    /* 5 Anita：昨晚盯著帶回家的剩便當 */
+    va20260521_02: svg(
+      '<path d="M32 12 a24 24 0 1 0 0 48 a28 28 0 0 1 0 -48 z" fill="'+L+'" '+st+'/>'
+     +'<g fill="'+A+'"><circle cx="66" cy="16" r="3"/><circle cx="80" cy="34" r="2.5"/></g>'
+     +'<path d="M96 36 a24 13 0 0 1 44 0 a24 13 0 0 1 -44 0 z" fill="#fff" '+st+'/>'
+     +'<circle cx="118" cy="36" r="6" fill="'+D+'"/>'
+     +'<path d="M150 36 a18 11 0 0 1 36 0 a18 11 0 0 1 -36 0 z" fill="#fff" '+st+'/>'
+     +'<circle cx="168" cy="36" r="5" fill="'+D+'"/>'
+     +'<g stroke="'+A+'" stroke-width="3" stroke-dasharray="6 6" stroke-linecap="round">'
+     +'<path d="M114 50 l-12 28"/><path d="M164 50 l-18 28"/></g>'
+     +'<rect x="50" y="80" width="100" height="26" rx="5" fill="'+C+'" '+st+'/>'
+     +'<path d="M84 80 v26 M118 80 v26" stroke="'+D+'" stroke-width="2"/>'
+     +'<rect x="50" y="108" width="100" height="26" rx="5" fill="'+C+'" '+st+'/>'
+     +'<path d="M84 108 v26 M118 108 v26" stroke="'+D+'" stroke-width="2"/>'),
+
+    /* 6 Anita：雖然菜色有變化，看起來就是很無聊 */
+    va20260521_03: svg(
+      '<rect x="14" y="54" width="140" height="78" rx="8" fill="'+C+'" '+st+'/>'
+     +'<path d="M84 54 v78 M14 93 h140" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="49" cy="73" r="11" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M119 64 l11 18 H108 z" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="36" y="104" width="26" height="16" rx="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M104 112 a15 9 0 0 1 30 0 a15 9 0 0 1 -30 0 z" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +flatFace(170,32,24)),
+
+    /* 8 Anita：決定用氣炸鍋把雞塊加熱 */
+    va20260521_04: svg(
+      '<g stroke="'+A+'" stroke-width="3.5" fill="none" stroke-linecap="round">'
+     +'<path d="M62 30 q7 -11 14 0 q7 11 14 0"/><path d="M96 24 q7 -11 14 0 q7 11 14 0"/></g>'
+     +'<rect x="38" y="42" width="116" height="92" rx="16" fill="#fff" '+st+'/>'
+     +'<rect x="54" y="54" width="68" height="20" rx="5" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="138" cy="64" r="9" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="52" y="86" width="88" height="40" rx="7" fill="'+C+'" '+st+'/>'
+     +'<path d="M140 98 h18 v18 h-18" fill="none" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/>'
+     +'<g fill="'+A+'" stroke="'+D+'" stroke-width="2.5">'
+     +'<ellipse cx="72" cy="100" rx="12" ry="8"/><ellipse cx="100" cy="100" rx="12" ry="8"/>'
+     +'<ellipse cx="86" cy="116" rx="12" ry="8"/><ellipse cx="117" cy="116" rx="12" ry="8"/></g>'),
+
+    /* 9 同事：簡單但滿足；再這樣吃下去會變胖 */
+    va20260521_05: svg(
+      '<circle cx="48" cy="56" r="34" fill="#fff" '+st+'/>'
+     +'<circle cx="48" cy="56" r="20" fill="none" stroke="'+D+'" stroke-width="2"/>'
+     +'<g fill="'+D+'"><circle cx="40" cy="50" r="3"/><circle cx="56" cy="50" r="3"/></g>'
+     +'<path d="M37 60 q11 11 22 0" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M92 56 h24" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M120 56 l-12 -7 v14 z" fill="'+A+'"/>'
+     +'<rect x="128" y="30" width="62" height="52" rx="9" fill="'+C+'" '+st+'/>'
+     +'<path d="M140 70 a19 19 0 0 1 38 0 z" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M159 70 l14 -13" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<circle cx="159" cy="70" r="4" fill="'+D+'"/>'
+     +'<path d="M159 136 V100" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M159 96 l-9 13 h18 z" fill="'+R+'"/>'),
+
+    /* 11 Anita：服務只是尚可，湯也不是真的滿意 */
+    va20260521_06: svg(
+      star(26,28,16,A)+star(62,28,16,A)+star(98,28,16,A)
+     +star(134,28,16,'#fff')+star(170,28,16,'#fff')
+     +'<path d="M30 82 h74 a37 37 0 0 1 -74 0 z" fill="'+C+'" '+st+'/>'
+     +'<ellipse cx="67" cy="82" rx="39" ry="8" fill="#fff" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="3" fill="none" stroke-linecap="round">'
+     +'<path d="M54 66 q6 -9 12 0"/><path d="M74 62 q6 -9 12 0"/></g>'
+     +'<path d="M118 126 l22 -34" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +flatFace(164,100,24)),
+
+    /* 13 Anita：下個月打算加入公司的跑步社 */
+    va20260521_07: svg(
+      '<rect x="14" y="44" width="68" height="62" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="14" y="44" width="68" height="16" rx="6" fill="'+A+'"/>'
+     +'<path d="M14 60 h68" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="'+D+'"><circle cx="30" cy="74" r="3.5"/><circle cx="48" cy="74" r="3.5"/><circle cx="66" cy="74" r="3.5"/>'
+     +'<circle cx="30" cy="92" r="3.5"/></g>'
+     +'<circle cx="48" cy="92" r="8" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M90 76 h16" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M110 76 l-11 -7 v14 z" fill="'+A+'"/>'
+     +'<path d="M96 132 q50 -12 98 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<g '+thw(3)+'>'
+     +'<circle cx="118" cy="58" r="8" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M118 66 l3 22"/><path d="M118 72 l-12 -7"/><path d="M119 73 l12 6"/>'
+     +'<path d="M121 88 l-10 18"/><path d="M121 88 l12 15"/>'
+     +'<circle cx="152" cy="50" r="8" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M152 58 l3 22"/><path d="M152 64 l-12 -7"/><path d="M153 65 l12 6"/>'
+     +'<path d="M155 80 l-10 18"/><path d="M155 80 l12 15"/>'
+     +'<circle cx="182" cy="62" r="8" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M182 70 l2 20"/><path d="M182 76 l-12 -6"/>'
+     +'<path d="M184 90 l-9 16"/><path d="M184 90 l8 14"/></g>'),
+
+    /* 14 同事：茶水間的水槽今天排水不順 */
+    va20260521_08: svg(
+      '<path d="M158 56 V30 h-40 v14" '+thw(4)+'/>'
+     +'<rect x="112" y="42" width="12" height="10" rx="2" fill="'+L+'" '+st+'/>'
+     +'<g stroke="'+B+'" stroke-width="3" stroke-linecap="round"><path d="M118 56 v8"/></g>'
+     +'<rect x="26" y="58" width="132" height="56" rx="8" fill="#fff" '+st+'/>'
+     +'<rect x="34" y="72" width="116" height="34" fill="'+B+'" opacity="0.25"/>'
+     +'<path d="M34 72 q14 -8 29 0 q14 8 29 0 q14 -8 29 0 q14 8 29 0" fill="none" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<circle cx="92" cy="100" r="11" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M84 100 h16 M92 92 v16" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M12 114 h176" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +ex(92,132,22,R))
+
+  });
+})();
+
+
+/* ===================== bk20260616 影片左圖（每句一張） ===================== */
+/* bk20260616 blow 片語＋情緒形容詞＋天氣災害 — 每句一張專屬線稿 */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  /* 雲：白色輪廓雲團 */
+  var cloud=function(cx,cy,s){ var k=function(v){ return +(v*s).toFixed(1); };
+    return '<path d="M'+(cx-k(44))+' '+(cy+k(14))+' a'+k(20)+' '+k(20)+' 0 0 1 '+k(6)+' -'+k(38)
+     +' a'+k(26)+' '+k(26)+' 0 0 1 '+k(48)+' -'+k(6)
+     +' a'+k(18)+' '+k(18)+' 0 0 1 '+k(30)+' '+k(16)
+     +' a'+k(15)+' '+k(15)+' 0 0 1 -'+k(6)+' '+k(28)+' z" fill="#fff" '+st+'/>'; };
+  /* 雨絲 */
+  var rain=function(x,y,n,gap,len,slant,w){ var s='<g stroke="'+B+'" stroke-width="'+w+'" stroke-linecap="round">', i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+i*gap)+' '+y+' l'+slant+' '+len+'"/>';
+    return s+'</g>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 3 Anita：整夜大雨傾盆，風又很強 */
+    va20260616_01: svg(
+      '<circle cx="174" cy="22" r="12" fill="'+L+'" '+st+'/>'
+     +cloud(76,48,1)
+     +rain(38,70,9,13,46,-12,4)
+     +'<g stroke="'+A+'" stroke-width="4" fill="none" stroke-linecap="round">'
+     +'<path d="M120 96 c16 -8 30 4 46 -4"/><path d="M128 114 c16 -8 30 4 44 -4"/></g>'
+     +'<path d="M176 142 C174 126 182 116 194 110" '+th+' stroke-width="4"/>'
+     +'<path d="M180 124 l14 -8 M182 134 l12 -6" '+th+'/>'),
+
+    /* 6 Anita：暴風把街上的電線吹斷，十點就停電 */
+    va20260616_02: svg(
+      '<path d="M30 140 L58 50" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M36 76 l34 -10 M40 60 l30 -8" '+th+' stroke-width="3"/>'
+     +'<path d="M70 62 l20 16 l-14 10 l22 12" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 0"/>'
+     +'<g fill="'+A+'"><path d="M92 86 l12 -8 l-4 10 l12 -2 l-16 16 l4 -12 z"/></g>'
+     +'<path d="M122 140 v-54 l34 -24 l34 24 v54 z" fill="'+C+'" '+st+'/>'
+     +'<rect x="136" y="96" width="20" height="18" rx="2" fill="'+D+'"/>'
+     +'<rect x="164" y="96" width="20" height="18" rx="2" fill="'+D+'"/>'
+     +'<rect x="146" y="122" width="22" height="18" rx="2" fill="'+D+'"/>'
+     +pill(118,14,46,26,'10',L,D,16)),
+
+    /* 7 Tom：整晚沒電？你一定壓力很大吧（提問） */
+    va20260616_03: svg(
+      '<circle cx="56" cy="56" r="24" fill="#fff" '+st+'/>'
+     +'<path d="M46 80 h20 v10 a10 10 0 0 1 -20 0 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M48 56 l8 10 l8 -14" '+th+'/>'
+     +ex(56,56,30,R)
+     +per(118,86,15,C)
+     +'<path d="M100 54 l10 -14 l10 14 l10 -14 l10 14" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'
+     +qb(170,28)),
+
+    /* 9 Tom：那現在外面怎麼樣？（提問） */
+    va20260616_04: svg(
+      '<rect x="22" y="30" width="96" height="84" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M70 30 v84 M22 72 h96" stroke="'+D+'" stroke-width="3"/>'
+     +cloud(52,54,0.5)
+     +rain(38,76,4,10,18,-5,3)
+     +'<circle cx="98" cy="52" r="11" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="16" y="114" width="108" height="8" rx="4" fill="'+L+'" '+st+'/>'
+     +per(150,96,16,C)
+     +qb(172,30)),
+
+    /* 10 Anita：只是毛毛雨，穿件薄外套就夠 */
+    va20260616_05: svg(
+      '<path d="M78 34 a7 7 0 1 1 7 7 v6" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M50 60 h70" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M85 47 L46 66 l6 68 h66 l6 -68 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M85 47 l-12 14 l12 10 l12 -10 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M85 71 v63" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<g fill="'+D+'"><circle cx="76" cy="88" r="3"/><circle cx="76" cy="106" r="3"/></g>'
+     +rain(146,36,4,14,16,-4,3)
+     +rain(152,76,3,14,14,-4,3)),
+
+    /* 11 Anita：下午還有一陣雨，夏天天氣真難預測 */
+    va20260616_06: svg(
+      '<circle cx="46" cy="48" r="20" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="4" stroke-linecap="round">'
+     +'<path d="M46 16 v-8"/><path d="M20 22 l-6 -6"/><path d="M16 48 h-8"/><path d="M20 74 l-6 6"/><path d="M72 22 l6 -6"/></g>'
+     +cloud(142,44,0.72)
+     +rain(118,70,5,12,26,-6,3.5)
+     +'<path d="M14 134 l26 -20 l22 26 l26 -32 l24 28 l26 -22 l24 18" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'),
+
+    /* 13 Tom：照片我看了，有些路淹水，車子還陷在爛泥裡 */
+    va20260616_07: svg(
+      '<rect x="14" y="16" width="172" height="118" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="24" y="26" width="152" height="82" rx="3" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M62 76 h48 l16 18 h12 v14 H50 V94 z" fill="'+L+'" '+st+'/>'
+     +'<rect x="70" y="80" width="18" height="12" rx="2" fill="#fff" stroke="'+D+'" stroke-width="2"/>'
+     +'<g fill="'+D+'"><circle cx="68" cy="106" r="7"/><circle cx="116" cy="106" r="7"/></g>'
+     +'<path d="M24 100 h152 v8 H24 z" fill="'+B+'" opacity="0.35"/>'
+     +'<g stroke="'+B+'" stroke-width="3" fill="none" stroke-linecap="round">'
+     +'<path d="M28 98 c8 -6 16 6 24 0 c8 -6 16 6 24 0"/>'
+     +'<path d="M100 104 c8 -6 16 6 24 0 c8 -6 16 6 24 0"/></g>'
+     +'<path d="M24 108 h152" stroke="'+D+'" stroke-width="3"/>'
+     +'<rect x="150" y="114" width="30" height="14" rx="4" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'),
+
+    /* 14 Anita：颱風也打亂班機，我姊的航班被取消 */
+    va20260616_08: svg(
+      '<rect x="14" y="30" width="118" height="96" rx="6" fill="'+D+'" '+st+'/>'
+     +'<rect x="24" y="42" width="98" height="14" rx="3" fill="'+A+'"/>'
+     +'<g fill="#fff"><rect x="24" y="64" width="70" height="12" rx="3"/>'
+     +'<rect x="24" y="84" width="84" height="12" rx="3"/>'
+     +'<rect x="24" y="104" width="58" height="12" rx="3"/></g>'
+     +'<rect x="100" y="64" width="22" height="12" rx="3" fill="'+L+'"/>'
+     +ex(73,90,34,R)
+     +'<path d="M190 42 l-42 20 l12 5 l-3 13 l11 -10 l14 6 z" fill="'+C+'" '+st+'/>'
+     +ex(166,106,26,R)),
+
+    /* 15 Tom：至少太陽現在出來了 */
+    va20260616_09: svg(
+      cloud(50,44,0.72)
+     +'<circle cx="124" cy="58" r="25" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="4" stroke-linecap="round">'
+     +'<path d="M124 22 v-10"/><path d="M160 58 h10"/><path d="M150 32 l8 -8"/><path d="M150 84 l8 8"/><path d="M124 94 v10"/></g>'
+     +'<path d="M26 40 h-14 M26 56 h-18" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M14 130 h172" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M54 130 c0 -14 -8 -18 -14 -20 M54 130 c0 -12 8 -16 14 -18" '+th+'/>'
+     +'<path d="M54 130 v-16" '+th+'/>'),
+
+    /* 16 Anita：那我們到外面樹蔭下吃午餐 */
+    va20260616_10: svg(
+      '<path d="M44 132 V74" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M44 92 l-16 -12 M44 102 l16 -12" '+th+'/>'
+     +'<circle cx="44" cy="46" r="30" fill="'+L+'" '+st+'/>'
+     +'<circle cx="74" cy="60" r="18" fill="'+L+'" '+st+'/>'
+     +'<ellipse cx="66" cy="136" rx="52" ry="8" fill="'+D+'" opacity="0.18"/>'
+     +'<rect x="92" y="88" width="88" height="10" rx="4" fill="'+C+'" '+st+'/>'
+     +'<path d="M104 98 v34 M168 98 v34" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<circle cx="116" cy="82" r="10" fill="#fff" '+st+'/>'
+     +'<circle cx="156" cy="82" r="10" fill="#fff" '+st+'/>'
+     +'<rect x="132" y="74" width="12" height="14" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M94 120 h14 v12 M164 120 h14 v12" '+th+'/>'),
+
+  });
+})();
+
+
+/* ===================== bk20260618 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 提問共同記號：橘色問號徽章 */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var carton=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+w/2)+' '+y+' v'+h+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+x+' '+(y+h*0.3)+' h'+w+'" stroke="'+A+'" stroke-width="5"/>'; };
+  var spark=function(cx,cy,s){ return '<path d="M'+cx+' '+(cy-s)+' Q'+(cx+s*0.22)+' '+(cy-s*0.22)+' '+(cx+s)+' '+cy
+     +' Q'+(cx+s*0.22)+' '+(cy+s*0.22)+' '+cx+' '+(cy+s)
+     +' Q'+(cx-s*0.22)+' '+(cy+s*0.22)+' '+(cx-s)+' '+cy
+     +' Q'+(cx-s*0.22)+' '+(cy-s*0.22)+' '+cx+' '+(cy-s)+' z" fill="'+A+'"/>'; };
+  var arrow=function(x1,y1,x2,y2,col,w){ var dx=x2-x1, dy=y2-y1, m=Math.sqrt(dx*dx+dy*dy)||1, ux=dx/m, uy=dy/m, hl=w*2.6;
+    var bx=x2-ux*hl, by=y2-uy*hl, px=-uy*hl*0.6, py=ux*hl*0.6;
+    return '<path d="M'+x1+' '+y1+' L'+bx.toFixed(1)+' '+by.toFixed(1)+'" stroke="'+col+'" stroke-width="'+w+'" stroke-linecap="round"/>'
+     +'<path d="M'+x2+' '+y2+' L'+(bx+px).toFixed(1)+' '+(by+py).toFixed(1)+' L'+(bx-px).toFixed(1)+' '+(by-py).toFixed(1)+' z" fill="'+col+'"/>'; };
+  var win=function(x,y,s,col){ return '<rect x="'+x+'" y="'+y+'" width="'+s+'" height="'+s+'" fill="'+(col||L)+'"/>'; };
+  var rep=function(n,fn){ var s='',i; for(i=0;i<n;i++) s+=fn(i); return s; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 4 Anita：報導說地震搖晃建築、把市區馬路震裂 */
+    va20260618_01: svg(
+      doc(6,10,50,66,1)
+     +'<g '+st+' fill="'+C+'">'
+     +'<rect x="78" y="42" width="32" height="62" rx="2"/>'
+     +'<rect x="116" y="24" width="28" height="80" rx="2"/>'
+     +'<rect x="150" y="54" width="32" height="50" rx="2"/></g>'
+     +win(86,52,8)+win(98,52,8)+win(86,70,8)+win(98,70,8)
+     +win(122,36,8)+win(132,36,8)+win(122,54,8)+win(132,54,8)
+     +win(157,66,8)+win(169,66,8)
+     +'<g fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round">'
+     +'<path d="M70 48 q-7 11 0 22"/><path d="M62 42 q-10 17 0 34"/>'
+     +'<path d="M190 60 q7 11 0 22"/></g>'
+     +'<rect x="0" y="104" width="200" height="30" fill="'+L+'"/>'
+     +'<path d="M0 104 h200 M0 134 h200" stroke="'+D+'" stroke-width="3"/>'
+     +'<g fill="none" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round">'
+     +'<path d="M34 104 l10 14 l-7 16"/><path d="M128 104 l-8 12 l11 18"/></g>'),
+
+    /* 5 Tom：很多人跑出去到公園避難 */
+    va20260618_02: svg(
+      '<path d="M58 118 V72" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'
+     +'<circle cx="58" cy="52" r="30" fill="'+L+'" '+st+'/>'
+     +'<circle cx="32" cy="66" r="17" fill="'+L+'" '+st+'/>'
+     +'<circle cx="84" cy="66" r="17" fill="'+L+'" '+st+'/>'
+     +per(34,96,9,'#fff')+per(60,98,9,C)+per(86,96,9,'#fff')
+     +'<rect x="128" y="86" width="58" height="9" rx="3" fill="'+C+'" '+st+'/>'
+     +'<path d="M128 76 h58" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M134 95 v22 M180 95 v22" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +per(152,58,9,'#fff')
+     +'<path d="M8 124 h184" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'),
+
+    /* 6 Anita：大家擔心餘震嗎？ */
+    va20260618_03: svg(
+      '<path d="M10 92 h16 l10 -46 l12 88 l12 -62 l10 40 l10 -26 l9 18 l9 -12 l8 10 h30" fill="none" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M10 128 h150" stroke="'+D+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7"/>'
+     +'<circle cx="36" cy="46" r="5" fill="'+R+'"/>'
+     +qb(170,36)),
+
+    /* 7 Tom：一棟老屋倒了，廟旁兩座雕像倒下 */
+    va20260618_04: svg(
+      '<path d="M14 136 L26 54 l32 8 L52 136 z" fill="'+C+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5"><path d="M22 84 l34 7 M18 110 l35 6"/></g>'
+     +'<path d="M30 62 l10 22 l-8 12" fill="none" stroke="'+R+'" stroke-width="2.8" stroke-linecap="round"/>'
+     +'<path d="M8 136 l14 -16 l10 10 l12 -12 l10 18 z" fill="'+L+'" '+st+'/>'
+     +'<g '+st+' fill="'+C+'">'
+     +'<rect x="68" y="98" width="16" height="14" rx="2"/>'
+     +'<rect x="86" y="100" width="34" height="10" rx="5"/>'
+     +'<rect x="68" y="120" width="16" height="14" rx="2"/>'
+     +'<rect x="86" y="122" width="34" height="10" rx="5"/></g>'
+     +'<circle cx="126" cy="105" r="7" fill="'+L+'" '+st+'/>'
+     +'<circle cx="126" cy="127" r="7" fill="'+L+'" '+st+'/>'
+     +'<path d="M126 46 q-8 -12 6 -14 q16 -14 28 -14 q12 0 28 14 q14 2 6 14 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M130 46 h60 v6 h-60 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g '+st+' fill="#fff"><rect x="138" y="52" width="11" height="36" rx="2"/>'
+     +'<rect x="170" y="52" width="11" height="36" rx="2"/></g>'
+     +'<path d="M128 88 h64" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'),
+
+    /* 9 Tom：用吊車和推土機救出四名受困者 */
+    va20260618_05: svg(
+      '<path d="M168 132 V18 h-58" stroke="'+D+'" stroke-width="6" stroke-linecap="round" fill="none"/>'
+     +'<path d="M168 32 L154 18" stroke="'+D+'" stroke-width="4"/>'
+     +'<path d="M112 18 v24" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M106 42 h12 v10 a6 6 0 0 1 -12 0 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M66 128 l18 -28 h42 l12 28 z" fill="'+L+'" '+st+'/>'
+     +per(80,108,7,'#fff')+per(98,104,7,'#fff')+per(116,108,7,'#fff')+per(134,104,7,'#fff')
+     +'<rect x="16" y="98" width="46" height="20" rx="3" fill="'+C+'" '+st+'/>'
+     +'<rect x="30" y="82" width="22" height="16" rx="3" fill="#fff" '+st+'/>'
+     +'<path d="M14 94 q-9 16 -2 30 h12 V94 z" fill="'+A+'" '+st+'/>'
+     +'<circle cx="26" cy="122" r="9" fill="#fff" '+st+'/>'
+     +'<circle cx="52" cy="122" r="9" fill="#fff" '+st+'/>'
+     +'<path d="M6 132 h180" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'),
+
+    /* 10 Tom：兩天後颱風又來 */
+    va20260618_06: svg(
+      '<g fill="none" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 6"><circle cx="90" cy="72" r="56"/></g>'
+     +'<g fill="none" stroke="'+A+'" stroke-width="7" stroke-linecap="round">'
+     +'<path d="M90 54 a34 34 0 0 1 30 42 a52 52 0 0 1 -50 24"/>'
+     +'<path d="M90 90 a34 34 0 0 1 -30 -42 a52 52 0 0 1 50 -24"/></g>'
+     +'<circle cx="90" cy="72" r="12" fill="#fff" '+st+'/>'
+     +'<g '+st+' fill="#fff"><rect x="148" y="112" width="22" height="24" rx="3"/>'
+     +'<rect x="174" y="112" width="22" height="24" rx="3"/></g>'
+     +'<rect x="150" y="114" width="18" height="7" rx="2" fill="'+A+'"/>'
+     +'<rect x="176" y="114" width="18" height="7" rx="2" fill="'+A+'"/>'
+     +'<circle cx="159" cy="129" r="3.5" fill="'+D+'"/><circle cx="185" cy="129" r="3.5" fill="'+D+'"/>'
+     +arrow(144,104,194,104,D,3)),
+
+    /* 12 Anita：有些街道淹水，還停電 */
+    va20260618_07: svg(
+      '<rect x="0" y="84" width="200" height="66" fill="'+C+'"/>'
+     +'<path d="M0 84 h200" stroke="'+D+'" stroke-width="3"/>'
+     +'<path d="M26 92 h48 l14 -20 h26 l12 20 h12 v16 a6 6 0 0 1 -6 6 H32 a6 6 0 0 1 -6 -6 z" fill="#fff" '+st+'/>'
+     +'<path d="M78 92 l12 -16 h18 v16 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="50" cy="114" r="10" fill="'+L+'" '+st+'/>'
+     +'<circle cx="114" cy="114" r="10" fill="'+L+'" '+st+'/>'
+     +'<g fill="none" stroke="'+B+'" stroke-width="4" stroke-linecap="round">'
+     +'<path d="M4 116 q12 -8 24 0 q12 8 24 0 q12 -8 24 0 q12 8 24 0 q12 -8 24 0 q12 8 24 0 q12 -8 24 0"/>'
+     +'<path d="M4 134 q12 -8 24 0 q12 8 24 0 q12 -8 24 0 q12 8 24 0 q12 -8 24 0 q12 8 24 0 q12 -8 24 0"/></g>'
+     +'<circle cx="162" cy="38" r="21" fill="#fff" '+st+'/>'
+     +'<rect x="152" y="58" width="20" height="12" rx="3" fill="'+L+'" '+st+'/>'
+     +'<path d="M166 26 l-10 14 h8 l-4 12 l12 -16 h-9 z" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +ex(162,38,26,R)),
+
+    /* 13 Anita：政府要民眾待在室內，多數學校停課 */
+    va20260618_08: svg(
+      doc(6,12,48,66,1)
+     +'<circle cx="30" cy="100" r="17" fill="none" stroke="'+A+'" stroke-width="4"/>'
+     +txt(30,108,'!',22,A)
+     +'<path d="M66 72 l30 -26 l30 26 v44 a6 6 0 0 1 -6 6 H72 a6 6 0 0 1 -6 -6 z" fill="#fff" '+st+'/>'
+     +per(96,90,10,L)
+     +'<path d="M140 56 l25 -18 l25 18" fill="'+L+'" '+st+'/>'
+     +'<rect x="142" y="56" width="46" height="60" rx="4" fill="'+C+'" '+st+'/>'
+     +'<rect x="155" y="82" width="20" height="34" rx="2" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +ex(165,98,20,R)
+     +'<path d="M6 122 h186" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'),
+
+    /* 14 Anita：小鎮現在狀況怎麼樣？ */
+    va20260618_09: svg(
+      '<g '+st+' fill="#fff">'
+     +'<rect x="12" y="74" width="34" height="48" rx="2"/>'
+     +'<rect x="52" y="56" width="28" height="66" rx="2"/>'
+     +'<path d="M86 122 V62 l20 -18 l20 18 v60 z"/>'
+     +'<rect x="132" y="84" width="26" height="38" rx="2"/></g>'
+     +win(20,86,9)+win(33,86,9)+win(20,104,9)+win(33,104,9)
+     +win(60,68,9)+win(60,88,9)+win(60,106,9)
+     +win(96,78,9)+win(108,78,9)+win(102,98,9)
+     +win(138,96,9)+win(138,110,9)
+     +'<path d="M8 122 h178" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +qb(172,34)),
+
+    /* 15 Anita：志工清掉泥巴，大家捐食物和毛毯 */
+    va20260618_10: svg(
+      '<path d="M8 18 h20" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M18 20 L56 66" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M52 62 l24 20 l-16 16 l-24 -20 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M22 134 q24 -32 50 -10 q16 14 38 10 z" fill="'+L+'" '+st+'/>'
+     +'<g fill="'+D+'"><circle cx="46" cy="124" r="3"/><circle cx="68" cy="118" r="3"/><circle cx="92" cy="126" r="3"/></g>'
+     +carton(126,62,62,40)
+     +'<ellipse cx="141" cy="54" rx="16" ry="9" fill="'+L+'" '+st+'/>'
+     +'<rect x="166" y="38" width="18" height="24" rx="3" fill="#fff" '+st+'/>'
+     +'<path d="M166 46 h18" stroke="'+A+'" stroke-width="4"/>'
+     +'<g '+st+'><rect x="128" y="108" width="58" height="12" rx="4" fill="#fff"/>'
+     +'<rect x="128" y="122" width="58" height="12" rx="4" fill="'+C+'"/></g>'
+     +'<path d="M140 108 v12 M152 122 v12" stroke="'+D+'" stroke-width="2"/>'),
+
+    /* 16 Anita：所以很快就恢復正常了，謝謝 Tom */
+    va20260618_11: svg(
+      '<circle cx="32" cy="30" r="14" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="3.5" stroke-linecap="round">'
+     +'<path d="M32 8 v-6"/><path d="M13 15 l-5 -5"/><path d="M51 15 l5 -5"/><path d="M10 30 h-6"/><path d="M13 45 l-5 5"/></g>'
+     +'<g '+st+' fill="#fff">'
+     +'<rect x="64" y="74" width="34" height="46" rx="2"/>'
+     +'<rect x="104" y="56" width="30" height="64" rx="2"/>'
+     +'<rect x="140" y="82" width="30" height="38" rx="2"/></g>'
+     +win(72,84,9)+win(85,84,9)+win(72,102,9)+win(85,102,9)
+     +win(112,68,9)+win(112,88,9)+win(112,106,9)
+     +win(147,94,9)+win(147,108,9)
+     +'<path d="M56 120 h124" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M46 102 a62 62 0 1 1 48 34" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-dasharray="11 9"/>'
+     +arrow(84,140,100,132,A,5)
+     +chk(20,74,30,A))
+
+  });
+})();
+
+
+/* ===================== bk20260623 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 提問共同記號：橘色問號徽章 */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var spark=function(cx,cy,s){ return '<path d="M'+cx+' '+(cy-s)+' Q'+(cx+s*0.22)+' '+(cy-s*0.22)+' '+(cx+s)+' '+cy
+     +' Q'+(cx+s*0.22)+' '+(cy+s*0.22)+' '+cx+' '+(cy+s)
+     +' Q'+(cx-s*0.22)+' '+(cy+s*0.22)+' '+(cx-s)+' '+cy
+     +' Q'+(cx-s*0.22)+' '+(cy-s*0.22)+' '+cx+' '+(cy-s)+' z" fill="'+A+'"/>'; };
+  var arrow=function(x1,y1,x2,y2,col,w){ var dx=x2-x1, dy=y2-y1, m=Math.sqrt(dx*dx+dy*dy)||1, ux=dx/m, uy=dy/m, hl=w*2.6;
+    var bx=x2-ux*hl, by=y2-uy*hl, px=-uy*hl*0.6, py=ux*hl*0.6;
+    return '<path d="M'+x1+' '+y1+' L'+bx.toFixed(1)+' '+by.toFixed(1)+'" stroke="'+col+'" stroke-width="'+w+'" stroke-linecap="round"/>'
+     +'<path d="M'+x2+' '+y2+' L'+(bx+px).toFixed(1)+' '+(by+py).toFixed(1)+' L'+(bx-px).toFixed(1)+' '+(by-py).toFixed(1)+' z" fill="'+col+'"/>'; };
+  var flower=function(cx,cy,r,col){ return '<g fill="'+col+'" stroke="'+D+'" stroke-width="2">'
+     +'<circle cx="'+cx+'" cy="'+(cy-r)+'" r="'+r+'"/><circle cx="'+(cx+r)+'" cy="'+cy+'" r="'+r+'"/>'
+     +'<circle cx="'+cx+'" cy="'+(cy+r)+'" r="'+r+'"/><circle cx="'+(cx-r)+'" cy="'+cy+'" r="'+r+'"/></g>'
+     +'<circle cx="'+cx+'" cy="'+cy+'" r="'+(r*0.7)+'" fill="#fff" stroke="'+D+'" stroke-width="2"/>'; };
+  var rep=function(n,fn){ var s='',i; for(i=0;i<n;i++) s+=fn(i); return s; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 3 Anita：以前一早空腹就先喝咖啡 */
+    va20260623_01: svg(
+      '<path d="M6 94 h80" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M24 94 a22 22 0 0 1 44 0 z" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="3.5" stroke-linecap="round">'
+     +'<path d="M46 60 v-10"/><path d="M20 70 l-7 -7"/><path d="M72 70 l7 -7"/></g>'
+     +'<path d="M102 46 h58 v30 a29 29 0 0 1 -58 0 z" fill="#fff" '+st+'/>'
+     +'<path d="M160 54 a14 14 0 0 1 0 22" fill="none" stroke="'+D+'" stroke-width="4"/>'
+     +'<path d="M102 58 h58" stroke="'+A+'" stroke-width="5"/>'
+     +'<g fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M120 38 q7 -9 0 -18"/><path d="M140 38 q7 -9 0 -18"/></g>'
+     +'<ellipse cx="116" cy="122" rx="36" ry="13" fill="#fff" '+st+'/>'
+     +'<ellipse cx="116" cy="121" rx="22" ry="7" fill="'+C+'" stroke="'+D+'" stroke-width="2"/>'
+     +ex(116,121,20,R)
+     +'<path d="M170 106 v34 M182 106 v34" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'),
+
+    /* 4 Tom：那現在呢？ */
+    va20260623_02: svg(
+      '<circle cx="76" cy="76" r="44" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M76 36 v-7"/><path d="M116 76 h7"/><path d="M76 116 v7"/><path d="M36 76 h-7"/></g>'
+     +'<path d="M76 76 V42" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M76 76 l26 14" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<circle cx="76" cy="76" r="5" fill="'+D+'"/>'
+     +qb(166,48)),
+
+    /* 5 Anita：現在先吃東西，以前也熬夜，現在不熬了 */
+    va20260623_03: svg(
+      '<ellipse cx="52" cy="66" rx="38" ry="14" fill="#fff" '+st+'/>'
+     +'<ellipse cx="52" cy="62" rx="21" ry="9" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M18 88 v28 M28 88 v28 M38 88 v28" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M70 88 v28" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<circle cx="24" cy="28" r="15" fill="'+A+'" '+st+'/>'
+     +txt(24,36,'1',18,'#fff')
+     +'<path d="M148 34 a21 21 0 1 0 18 26 a17 17 0 1 1 -18 -26 z" fill="'+L+'" '+st+'/>'
+     +ex(156,48,24,R)
+     +'<rect x="96" y="70" width="11" height="48" rx="3" fill="'+L+'" '+st+'/>'
+     +'<rect x="104" y="92" width="82" height="26" rx="6" fill="'+C+'" '+st+'/>'
+     +'<rect x="110" y="80" width="26" height="14" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M142 92 h44 v26 h-44 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M112 118 v12 M180 118 v12" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'),
+
+    /* 7 Anita：台灣以前有四個分明的季節 */
+    va20260623_04: svg(
+      '<circle cx="100" cy="76" r="60" fill="'+C+'" '+st+'/>'
+     +'<path d="M100 16 V136 M40 76 H160" stroke="'+D+'" stroke-width="3"/>'
+     +flower(66,38,8,A)
+     +'<circle cx="134" cy="40" r="13" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+A+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M134 20 v-6"/><path d="M151 25 l5 -5"/><path d="M156 40 h6"/><path d="M151 55 l5 5"/><path d="M134 60 v6"/></g>'
+     +'<path d="M120 114 q20 -26 38 -18 q6 20 -14 29 q-18 8 -24 -11 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M124 120 l30 -17" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<g stroke="'+B+'" stroke-width="3.5" stroke-linecap="round">'
+     +'<path d="M66 90 v38"/><path d="M49 100 l34 19"/><path d="M83 100 l-34 19"/></g>'),
+
+    /* 8 Tom：所以春天和秋天以前沒這麼短？ */
+    va20260623_05: svg(
+      flower(26,42,6,A)
+     +'<circle cx="68" cy="42" r="9" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+A+'" stroke-width="2.8" stroke-linecap="round">'
+     +'<path d="M68 28 v-5"/><path d="M80 32 l4 -4"/><path d="M84 42 h5"/><path d="M80 52 l4 4"/></g>'
+     +'<path d="M106 48 q10 -16 22 -11 q3 12 -9 17 q-11 4 -13 -6 z" fill="'+L+'" '+st+'/>'
+     +'<g stroke="'+B+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M156 30 v24"/><path d="M145 36 l22 12"/><path d="M167 36 l-22 12"/></g>'
+     +'<g '+st+'>'
+     +'<rect x="14" y="64" width="20" height="34" fill="'+L+'"/>'
+     +'<rect x="34" y="64" width="70" height="34" fill="'+A+'"/>'
+     +'<rect x="104" y="64" width="20" height="34" fill="'+L+'"/>'
+     +'<rect x="124" y="64" width="58" height="34" fill="'+C+'"/></g>'
+     +'<g fill="none" stroke="'+R+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M14 104 v7 h20 v-7"/><path d="M104 104 v7 h20 v-7"/></g>'
+     +arrow(16,128,30,116,R,3)+arrow(122,128,108,116,R,3)
+     +qb(166,126)),
+
+    /* 10 Tom：所以這裡地震很常見嗎？ */
+    va20260623_06: svg(
+      '<rect x="8" y="24" width="140" height="10" rx="4" fill="'+A+'" '+st+'/>'
+     +'<rect x="8" y="42" width="140" height="62" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M16 73 h16 l8 -24 l10 46 l10 -36 l8 26 l8 -16 l8 12 l10 -20 l8 12 h36" fill="none" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<circle cx="24" cy="118" r="12" fill="'+L+'" '+st+'/>'
+     +'<circle cx="132" cy="118" r="12" fill="'+L+'" '+st+'/>'
+     +'<path d="M24 118 h108" stroke="'+D+'" stroke-width="3"/>'
+     +qb(172,74)),
+
+    /* 11 Anita：去年東海岸被一場強震襲擊 */
+    va20260623_07: svg(
+      '<path d="M86 16 c22 10 34 44 32 72 c-2 28 -16 46 -34 46 c-16 0 -26 -18 -28 -46 c-2 -32 8 -62 30 -72 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M72 48 q10 16 4 32 q-6 16 2 34" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="5 5"/>'
+     +'<g fill="none" stroke="'+R+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6">'
+     +'<path d="M148 48 a48 48 0 0 1 0 64"/><path d="M164 32 a68 68 0 0 1 0 96"/></g>'
+     +'<path d="M118 70 l24 -12 l-8 16 l22 2 l-18 11 l15 13 l-21 -5 l-3 17 l-13 -16 z" fill="'+A+'" '+st+'/>'
+     +'<circle cx="124" cy="82" r="6" fill="'+R+'"/>'),
+
+    /* 14 Anita：事先準備真的能減少天災的衝擊 */
+    va20260623_08: svg(
+      '<g fill="'+L+'" '+st+'><path d="M34 24 l18 2 l-9 15 z"/><path d="M86 10 l19 3 l-10 15 z"/><path d="M138 24 l17 5 l-11 13 z"/></g>'
+     +'<g fill="none" stroke="'+R+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M54 44 l-8 -10"/><path d="M90 36 v-10"/><path d="M128 44 l9 -10"/></g>'
+     +'<path d="M90 46 l44 16 v30 c0 28 -20 42 -44 50 c-24 -8 -44 -22 -44 -50 V62 z" fill="'+C+'" '+st+'/>'
+     +chk(68,88,42,A)
+     +arrow(176,46,176,112,A,5)),
+
+    /* 15 Tom：要學的東西好多，很難跟上 */
+    va20260623_09: svg(
+      '<g '+st+'>'
+     +'<rect x="92" y="118" width="86" height="18" rx="3" fill="'+C+'"/>'
+     +'<rect x="96" y="100" width="78" height="18" rx="3" fill="#fff"/>'
+     +'<rect x="90" y="82" width="84" height="18" rx="3" fill="'+L+'"/>'
+     +'<rect x="100" y="64" width="72" height="18" rx="3" fill="#fff"/>'
+     +'<rect x="94" y="46" width="78" height="18" rx="3" fill="'+C+'"/>'
+     +'<rect x="104" y="28" width="66" height="18" rx="3" fill="'+A+'"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2" stroke-linecap="round">'
+     +'<path d="M100 127 h20"/><path d="M104 109 h20"/><path d="M98 91 h20"/>'
+     +'<path d="M108 73 h20"/><path d="M102 55 h20"/></g>'
+     +per(44,84,14,L)
+     +'<path d="M26 124 L16 110 M62 124 l10 -14" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<g fill="'+B+'"><path d="M22 52 q6 9 0 12 q-6 -3 0 -12 z"/><path d="M66 48 q6 9 0 12 q-6 -3 0 -12 z"/></g>'),
+
+    /* 16 Anita：你會沒問題的，你很聰明 */
+    va20260623_10: svg(
+      '<path d="M94 18 l44 17 l-44 17 l-44 -17 z" fill="'+D+'"/>'
+     +'<path d="M128 44 v20" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<circle cx="128" cy="68" r="6" fill="'+A+'"/>'
+     +'<circle cx="92" cy="104" r="40" fill="'+L+'" '+st+'/>'
+     +'<g fill="'+D+'"><circle cx="78" cy="88" r="6"/><circle cx="104" cy="94" r="5"/>'
+     +'<circle cx="84" cy="114" r="5.5"/><circle cx="108" cy="118" r="5"/><circle cx="66" cy="106" r="4.5"/></g>'
+     +spark(154,98,11)+spark(176,76,8)+spark(166,120,6))
+
+  });
+})();
+
+
+/* ===================== bk20260625 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var carton=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+w/2)+' '+y+' v'+h+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+x+' '+(y+h*0.3)+' h'+w+'" stroke="'+A+'" stroke-width="5"/>'; };
+  /* 櫻花：五瓣小花 */
+  var sakura=function(cx,cy,r){ var s='', i, a, px, py;
+    for(i=0;i<5;i++){ a=(-90+i*72)*Math.PI/180; px=+(cx+Math.cos(a)*r).toFixed(1); py=+(cy+Math.sin(a)*r).toFixed(1);
+      s+='<circle cx="'+px+'" cy="'+py+'" r="'+(r*0.62).toFixed(1)+'" fill="#fff" stroke="'+D+'" stroke-width="2"/>'; }
+    return s+'<circle cx="'+cx+'" cy="'+cy+'" r="'+(r*0.3).toFixed(1)+'" fill="'+A+'"/>'; };
+  /* 行李箱 */
+  var bag=function(x,y,w,h){ return '<path d="M'+(x+w*0.3)+' '+y+' v-9 h'+(w*0.4)+' v9" '+th+'/>'
+     +'<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="6" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+w*0.35)+' '+y+' v'+h+'" stroke="'+D+'" stroke-width="2.5"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 3 Anita：第一次去日本，所以很興奮（行李箱＋鳥居＋興奮光芒） */
+    va20260625_01: svg(
+      '<path d="M96 120 V48 M164 120 V48" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'
+     +'<path d="M84 44 h92" stroke="'+A+'" stroke-width="9" stroke-linecap="round"/>'
+     +'<path d="M92 62 h76" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'
+     +bag(24,78,46,42)
+     +per(47,52,11,L)
+     +'<g stroke="'+A+'" stroke-width="3.5" stroke-linecap="round">'
+     +'<path d="M24 32 l-6 -10"/><path d="M47 24 v-11"/><path d="M70 32 l6 -10"/></g>'),
+
+    /* 4 Tom：有看到櫻花嗎？（提問＋櫻花枝） */
+    va20260625_02: svg(
+      '<path d="M16 130 C40 104 44 72 36 40" '+th+' stroke-width="4"/>'
+     +'<path d="M36 76 C56 70 68 58 74 44 M34 54 C52 50 62 42 68 30" '+th+'/>'
+     +sakura(74,40,13)
+     +sakura(68,26,10)
+     +sakura(40,34,11)
+     +sakura(96,66,9)
+     +qb(158,98)),
+
+    /* 5 Anita：全程晴朗舒適，很適合觀光（太陽＋相機） */
+    va20260625_03: svg(
+      '<circle cx="48" cy="40" r="19" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="3.5" stroke-linecap="round">'
+     +'<path d="M48 10 v-7"/><path d="M48 77 v7"/><path d="M18 40 h-8"/><path d="M78 40 h8"/>'
+     +'<path d="M26 18 l-6 -6"/><path d="M70 18 l6 -6"/><path d="M26 62 l-6 6"/><path d="M70 62 l6 6"/></g>'
+     +'<rect x="92" y="62" width="92" height="60" rx="8" fill="#fff" '+st+'/>'
+     +'<rect x="110" y="50" width="34" height="14" rx="4" fill="'+L+'" '+st+'/>'
+     +'<circle cx="138" cy="92" r="20" fill="'+C+'" '+st+'/>'
+     +'<circle cx="138" cy="92" r="9" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="170" cy="74" r="5" fill="'+D+'"/>'),
+
+    /* 7 Anita：路網一開始很亂，兩天後就順了（糾結線→直線＋2 天） */
+    va20260625_04: svg(
+      '<path d="M16 100 C34 56 56 116 74 70 C84 44 46 50 30 78 C20 96 62 104 76 92" fill="none" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<g fill="'+D+'"><circle cx="16" cy="100" r="5"/><circle cx="76" cy="92" r="5"/></g>'
+     +'<path d="M92 76 h20" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M124 76 l-15 -10 v20 z" fill="'+A+'"/>'
+     +'<path d="M132 100 h56" stroke="'+B+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<g fill="'+D+'"><circle cx="132" cy="100" r="5"/><circle cx="160" cy="100" r="5"/><circle cx="188" cy="100" r="5"/></g>'
+     +'<rect x="134" y="22" width="52" height="46" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M134 38 h52" stroke="'+A+'" stroke-width="7"/>'
+     +txt(160,62,'2',21,D)),
+
+    /* 9 Anita：背包忘在咖啡店，店員幫她收好（椅上背包＋咖啡杯＋勾） */
+    va20260625_05: svg(
+      '<path d="M34 128 V64 a8 8 0 0 1 8 -8 h30 a8 8 0 0 1 8 8 v64" '+th+' stroke-width="3.5"/>'
+     +'<path d="M30 92 h58" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<rect x="88" y="52" width="46" height="56" rx="12" fill="'+L+'" '+st+'/>'
+     +'<path d="M100 52 v-8 a11 11 0 0 1 22 0 v8" '+th+'/>'
+     +'<rect x="96" y="76" width="30" height="18" rx="4" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="144" y="76" width="34" height="32" rx="4" fill="#fff" '+st+'/>'
+     +'<path d="M178 84 h8 a7 7 0 0 1 0 14 h-8" '+th+'/>'
+     +'<g stroke="'+A+'" stroke-width="3" stroke-linecap="round"><path d="M154 66 c4 -6 -4 -10 0 -16"/><path d="M168 66 c4 -6 -4 -10 0 -16"/></g>'
+     +chk(96,22,28,A)),
+
+    /* 11 Anita：遇上暴風雨，躲進小寺廟（小廟＋雨） */
+    va20260625_06: svg(
+      '<path d="M26 60 L96 24 L166 60" fill="'+L+'" '+st+'/>'
+     +'<path d="M38 60 h116 v60 H38 z" fill="#fff" '+st+'/>'
+     +'<path d="M20 62 h152" stroke="'+A+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M80 120 V84 h32 v36" '+th+' stroke-width="3"/>'
+     +'<path d="M56 120 V88 M136 120 V88" '+th+'/>'
+     +'<g stroke="'+B+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M14 84 l-6 16"/><path d="M26 104 l-6 16"/><path d="M182 76 l-6 16"/><path d="M192 100 l-6 16"/>'
+     +'<path d="M172 108 l-5 14"/></g>'
+     +'<path d="M6 30 c10 -14 32 -12 36 2 c14 -4 22 6 18 16 H10 c-10 0 -12 -14 -4 -18 z" fill="'+C+'" '+st+'/>'),
+
+    /* 13 Tom：所以你的班機誤點了？（提問＋飛機與時鐘） */
+    va20260625_07: svg(
+      '<path d="M18 92 L96 70 L66 36 l16 -4 l44 30 l40 -8 a9 9 0 0 1 4 18 l-120 34 z" fill="'+C+'" '+st+'/>'
+     +'<circle cx="54" cy="36" r="24" fill="#fff" '+st+'/>'
+     +'<path d="M54 36 V20 M54 36 l12 8" '+th+' stroke="'+R+'" stroke-width="3.5"/>'
+     +'<circle cx="54" cy="36" r="3.5" fill="'+D+'"/>'
+     +qb(160,110)),
+
+    /* 14 Anita：在機場滯留六小時，暴風雨下了一整天（候機椅＋6 小時＋雨） */
+    va20260625_08: svg(
+      '<path d="M12 120 V98 h92 v22" '+th+' stroke-width="3.5"/>'
+     +'<path d="M12 98 V74 h92" '+th+' stroke-width="3.5"/>'
+     +'<path d="M46 98 V74 M80 98 V74" stroke="'+D+'" stroke-width="2.5"/>'
+     +per(28,56,10,L)
+     +per(64,56,10,C)
+     +'<rect x="108" y="104" width="30" height="24" rx="4" fill="'+C+'" '+st+'/>'
+     +'<circle cx="150" cy="54" r="30" fill="#fff" '+st+'/>'
+     +'<path d="M150 54 V32 M150 54 l18 8" '+th+' stroke="'+A+'" stroke-width="4"/>'
+     +'<circle cx="150" cy="54" r="4" fill="'+D+'"/>'
+     +pill(118,96,64,26,'6 h',A,'#fff',15)),
+
+    /* 16 Anita：幾戶人家移往收容所，隔天早上開始救援（帳篷＋物資箱＋日出） */
+    va20260625_09: svg(
+      '<path d="M18 112 L56 44 L94 112 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M56 44 V112 M40 112 L56 84 L72 112" '+th+'/>'
+     +per(34,96,8,L)
+     +carton(108,76,38,34)
+     +carton(152,88,38,22)
+     +'<path d="M104 118 h88" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M112 46 a34 34 0 0 1 68 0" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M146 8 v-5"/><path d="M114 18 l-5 -5"/><path d="M178 18 l5 -5"/></g>'
+     +'<path d="M104 46 h88" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'),
+
+    /* 17 Tom：這趟真精彩，還是值得吧？（提問＋貼滿貼紙的行李箱） */
+    va20260625_10: svg(
+      bag(40,46,78,76)
+     +sakura(62,68,10)
+     +'<circle cx="98" cy="66" r="11" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="84" y="94" width="28" height="18" rx="4" fill="'+B+'" opacity="0.4" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M52 100 l10 10 l12 -16" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'
+     +qb(162,52)),
+
+    /* 18 Anita：這趟不無聊，而是充滿驚喜（相片堆＋驚喜光芒） */
+    va20260625_11: svg(
+      '<g transform="rotate(-10 60 84)">'+doc(24,52,62,64,0)+'</g>'
+     +'<rect x="68" y="44" width="76" height="76" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="76" y="52" width="60" height="44" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M76 96 l20 -22 l14 14 l12 -12 l14 20 z" fill="'+C+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<circle cx="94" cy="64" r="6" fill="'+A+'"/>'
+     +'<g stroke="'+A+'" stroke-width="3.5" stroke-linecap="round">'
+     +'<path d="M160 44 v-14"/><path d="M178 60 h14"/><path d="M174 42 l10 -10"/><path d="M164 80 l12 10"/></g>'
+     +'<path d="M150 62 l8 -16 l8 16 l16 8 l-16 8 l-8 16 l-8 -16 l-16 -8 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>')
+
+  });
+})();
+
+
+/* ===================== bk20260630 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 提問句的共同記號 */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  /* 文件：白紙＋橘色頁首＋內文橫線 */
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  /* 車票：白票＋左右半圓缺口 */
+  var tkt=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="6" fill="#fff" '+st+'/>'
+     +'<circle cx="'+x+'" cy="'+(y+h/2)+'" r="6" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="'+(x+w)+'" cy="'+(y+h/2)+'" r="6" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'; };
+  /* 時鐘 */
+  var clk=function(cx,cy,r){ var s='<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="#fff" '+st+'/>';
+    s+='<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M'+cx+' '+(cy-r+3)+' v7"/><path d="M'+(cx+r-3)+' '+cy+' h-7"/>'
+     +'<path d="M'+cx+' '+(cy+r-3)+' v-7"/><path d="M'+(cx-r+3)+' '+cy+' h7"/></g>';
+    s+='<path d="M'+cx+' '+cy+' V'+(cy-r*0.58)+'" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M'+cx+' '+cy+' l'+(r*0.52)+' '+(r*0.28)+'" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<circle cx="'+cx+'" cy="'+cy+'" r="4.5" fill="'+D+'"/>';
+    return s; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 3 站務：下一班早班車 8:15 開往柏林，車次 IC 2345 —— 看板掛出車次＋車頭 */
+    va20260630_01: svg(
+      '<rect x="12" y="20" width="176" height="60" rx="6" fill="'+D+'"/>'
+     +'<rect x="20" y="27" width="160" height="19" rx="3" fill="'+A+'"/>'
+     +txt(52,70,'8:15',20,'#fff')
+     +txt(138,70,'IC 2345',18,'#fff')
+     +'<path d="M54 134 v-28 a16 16 0 0 1 16 -16 h44 a16 16 0 0 1 16 16 v28 z" fill="'+C+'" '+st+'/>'
+     +'<rect x="70" y="100" width="44" height="18" rx="4" fill="'+B+'" opacity="0.35" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="70" cy="128" r="5" fill="'+A+'"/><circle cx="114" cy="128" r="5" fill="'+A+'"/>'
+     +'<path d="M150 134 a22 22 0 0 1 44 0 z" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="3" stroke-linecap="round"><path d="M172 100 v-10"/>'
+     +'<path d="M152 114 l-7 -7"/><path d="M192 114 l6 -6"/></g>'),
+
+    /* 6 Anita：該買單程票還是來回票？ —— 單向箭頭票 vs 雙向箭頭票 */
+    va20260630_02: svg(
+      tkt(16,50,74,42)
+     +'<path d="M30 71 h40" stroke="'+A+'" stroke-width="4.5" stroke-linecap="round"/>'
+     +'<path d="M80 71 l-13 -9 v18 z" fill="'+A+'"/>'
+     +'<path d="M98 56 v30" stroke="'+D+'" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round"/>'
+     +tkt(110,50,74,42)
+     +'<path d="M126 63 h38" stroke="'+A+'" stroke-width="4.5" stroke-linecap="round"/>'
+     +'<path d="M172 63 l-12 -8 v16 z" fill="'+A+'"/>'
+     +'<path d="M170 80 h-38" stroke="'+A+'" stroke-width="4.5" stroke-linecap="round"/>'
+     +'<path d="M124 80 l12 -8 v16 z" fill="'+A+'"/>'
+     +qb(100,124)),
+
+    /* 9 站務：當天取消會收一筆小額取消手續費 —— 票被劃掉＋當天日曆＋手續費硬幣 */
+    va20260630_03: svg(
+      tkt(16,36,92,52)
+     +'<path d="M28 54 h50 M28 68 h36" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +ex(62,62,38,R)
+     +'<rect x="124" y="30" width="62" height="60" rx="6" fill="'+C+'" '+st+'/>'
+     +'<rect x="124" y="30" width="62" height="18" rx="6" fill="'+A+'"/>'
+     +'<path d="M124 48 h62" stroke="'+D+'" stroke-width="2.5"/>'
+     +txt(155,78,'30',21,D)
+     +'<circle cx="62" cy="120" r="18" fill="'+L+'" '+st+'/>'
+     +txt(62,128,'$',18,D)
+     +'<path d="M90 120 h22" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M124 120 l-12 -8 v16 z" fill="'+A+'"/>'),
+
+    /* 10 Anita：提早取消的話，我會全額退費、不罰款 —— 錢退回來＋罰款被劃掉 */
+    va20260630_04: svg(
+      '<rect x="40" y="70" width="92" height="52" rx="7" fill="#fff" '+st+'/>'
+     +'<rect x="30" y="80" width="92" height="52" rx="7" fill="#fff" '+st+'/>'
+     +'<circle cx="76" cy="106" r="14" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +txt(76,113,'$',17,D)
+     +'<path d="M140 62 C134 28 68 24 54 54" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M54 60 l-11 -15 l19 1 z" fill="'+A+'"/>'
+     +'<rect x="146" y="86" width="44" height="34" rx="6" fill="#fff" '+st+'/>'
+     +txt(168,112,'$',17,D)
+     +ex(168,100,28,R)),
+
+    /* 11 站務：留意廣播，有時列車因事故取消 —— 擴音器＋被劃掉的列車 */
+    va20260630_05: svg(
+      '<path d="M18 68 h22 l28 -24 v64 l-28 -24 H18 z" fill="'+L+'" '+st+'/>'
+     +'<g fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round">'
+     +'<path d="M80 60 a18 18 0 0 1 0 28"/><path d="M92 48 a32 32 0 0 1 0 52"/></g>'
+     +'<rect x="116" y="88" width="70" height="34" rx="9" fill="'+C+'" '+st+'/>'
+     +'<rect x="126" y="96" width="18" height="15" rx="3" fill="'+B+'" opacity="0.35" stroke="'+D+'" stroke-width="2"/>'
+     +'<rect x="156" y="96" width="18" height="15" rx="3" fill="'+B+'" opacity="0.35" stroke="'+D+'" stroke-width="2"/>'
+     +'<circle cx="132" cy="126" r="6" fill="'+D+'"/><circle cx="170" cy="126" r="6" fill="'+D+'"/>'
+     +ex(151,52,32,R)),
+
+    /* 12 Anita：如果只是誤點呢？ —— 時鐘 */
+    va20260630_06: svg(
+      clk(84,82,46)
+     +'<path d="M44 132 h80" stroke="'+D+'" stroke-width="3" stroke-linecap="round" opacity="0.35"/>'
+     +qb(168,36)),
+
+    /* 13 站務：那就說列車會誤點十分鐘 —— 列車旁的時鐘加十分 */
+    va20260630_07: svg(
+      '<rect x="16" y="58" width="112" height="46" rx="11" fill="'+C+'" '+st+'/>'
+     +'<rect x="28" y="68" width="30" height="20" rx="4" fill="'+B+'" opacity="0.35" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="68" y="68" width="30" height="20" rx="4" fill="'+B+'" opacity="0.35" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="42" cy="110" r="8" fill="'+D+'"/><circle cx="104" cy="110" r="8" fill="'+D+'"/>'
+     +'<path d="M12 126 h176" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +clk(160,84,24)
+     +pill(122,14,66,28,'+10',A,'#fff',18)),
+
+    /* 15 站務：好夢。你到那裡會做什麼？ —— 夢想泡泡 */
+    va20260630_08: svg(
+      '<path d="M46 84 a24 24 0 0 1 10 -44 a28 28 0 0 1 52 -6 a24 24 0 0 1 24 24 a22 22 0 0 1 -16 26 z" fill="#fff" '+st+'/>'
+     +'<path d="M62 72 l18 -22 l13 17 l11 -11 l18 16 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<circle cx="40" cy="104" r="9" fill="#fff" '+st+'/>'
+     +'<circle cx="24" cy="122" r="6" fill="#fff" '+st+'/>'
+     +qb(170,112)),
+
+    /* 16 Anita：去滑雪，我從沒見過那麼多雪 —— 滑雪的人＋深雪＋雪花 */
+    va20260630_09: svg(
+      '<path d="M6 120 C44 92 84 106 118 96 C150 87 174 96 196 86 V150 H6 Z" fill="'+C+'" '+st+'/>'
+     +'<circle cx="72" cy="44" r="11" fill="'+L+'" '+st+'/>'
+     +'<path d="M72 55 l-3 26" stroke="'+D+'" stroke-width="4.5" stroke-linecap="round"/>'
+     +'<path d="M71 64 l-19 9 M71 64 l21 -7" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M52 73 l-6 28 M92 57 l11 32" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M69 81 l-9 16 M69 81 l13 14" stroke="'+D+'" stroke-width="4.5" stroke-linecap="round"/>'
+     +'<path d="M44 102 l32 -6 M76 98 l32 -5" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<g stroke="'+B+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M152 26 v16 M144 34 h16 M146 28 l12 12 M158 28 l-12 12"/>'
+     +'<path d="M178 58 v12 M172 64 h12"/><path d="M24 36 v12 M18 42 h12"/></g>'),
+
+    /* 17 站務：那一定是趟很棒的旅行，也幫朋友帶點紀念品 —— 紀念品提袋＋禮盒 */
+    va20260630_10: svg(
+      '<path d="M34 58 h78 v68 a7 7 0 0 1 -7 7 H41 a7 7 0 0 1 -7 -7 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M54 58 a19 19 0 0 1 38 0" fill="none" '+st+'/>'
+     +'<path d="M34 80 h78" stroke="'+A+'" stroke-width="6"/>'
+     +'<path d="M62 100 a11 11 0 0 1 22 0 a11 11 0 0 1 -22 0" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="132" y="86" width="56" height="44" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M160 86 v44" stroke="'+A+'" stroke-width="5"/>'
+     +'<path d="M132 104 h56" stroke="'+A+'" stroke-width="5"/>'
+     +'<path d="M160 86 c-11 -16 -24 -11 -17 0 M160 86 c11 -16 24 -11 17 0" fill="none" '+st+'/>')
+
+  });
+})();
+
+
+/* ===================== bk20260716 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 提問句的共同記號（與 au01／au02／au03 一致） */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var carton=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+w/2)+' '+y+' v'+h+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+x+' '+(y+h*0.3)+' h'+w+'" stroke="'+A+'" stroke-width="5"/>'; };
+  /* 熱氣上升 */
+  var heat=function(x,y){ var s='', i; for(i=0;i<3;i++){ var xx=x+i*16;
+      s+='<path d="M'+xx+' '+y+' q-7 -9 0 -18 t0 -18" fill="none" stroke="'+R+'" stroke-width="3" stroke-linecap="round"/>'; }
+    return s; };
+  /* 行李箱提把 */
+  var bagBody=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="10" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+w*0.3)+' '+y+' v-12 a'+(w*0.2)+' 12 0 0 1 '+(w*0.4)+' 0 V'+y+'" fill="none" stroke="'+D+'" stroke-width="3"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 3 空服員：好的。裡面有易碎物品嗎？（提問） */
+    va20260716_01: svg(
+      bagBody(18,44,96,76)
+     +'<path d="M18 86 h96" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="38" y="94" width="56" height="18" rx="4" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M50 78 h32 l-10 -14 h-12 z" fill="#fff" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<path d="M62 64 V54 M54 54 h16" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M70 70 l-12 -8" stroke="'+R+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M128 24 l10 14 l-10 14 l10 14" fill="none" stroke="'+R+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+     +qb(166,100)),
+
+    /* 4 Anita：有相機和一些電子產品，請小心 */
+    va20260716_02: svg(
+      '<path d="M22 70 h116 v40 a12 12 0 0 1 -12 12 H34 a12 12 0 0 1 -12 -12 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M22 70 l10 -16 h116 l-10 16" fill="'+L+'" '+st+'/>'
+     +'<rect x="30" y="20" width="48" height="34" rx="5" fill="#fff" '+st+'/>'
+     +'<circle cx="54" cy="38" r="11" fill="'+B+'" opacity="0.3" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="44" y="12" width="18" height="9" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<rect x="86" y="24" width="44" height="30" rx="4" fill="#fff" '+st+'/>'
+     +'<rect x="98" y="34" width="20" height="12" rx="2" fill="'+D+'"/>'
+     +'<g stroke="'+D+'" stroke-width="2.4" stroke-linecap="round">'
+     +'<path d="M98 34 h-10 M98 46 h-10 M118 34 h10 M118 46 h10"/></g>'
+     +'<path d="M150 128 a30 22 0 0 1 36 -42" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M146 92 v24 a10 10 0 0 0 10 10 h22" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<g stroke="'+A+'" stroke-width="4" stroke-linecap="round"><path d="M160 72 v-12 M176 74 l8 -10 M146 76 l-8 -10"/></g>'),
+
+    /* 6 Anita：飛行時間大概多久？（提問） */
+    va20260716_03: svg(
+      '<path d="M18 112 a74 62 0 0 1 150 -34" fill="none" stroke="'+A+'" stroke-width="3.4" stroke-dasharray="8 7" stroke-linecap="round"/>'
+     +'<circle cx="18" cy="112" r="7" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="168" cy="78" r="7" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g transform="rotate(-22 92 56)">'
+     +'<path d="M72 56 h34 l16 -14 h10 l-8 14 h12 l10 -8 h8 l-6 12 l6 12 h-8 l-10 -8 h-12 l8 14 h-10 l-16 -14 H72 a8 8 0 0 1 0 -8 z" fill="#fff" '+st+'/></g>'
+     +'<circle cx="46" cy="40" r="19" fill="#fff" '+st+'/>'
+     +'<path d="M46 40 V28 M46 40 l9 6" stroke="'+D+'" stroke-width="2.8" stroke-linecap="round"/>'
+     +qb(170,122)),
+
+    /* 8 Anita：我有點怕搭飛機，有什麼建議嗎？（提問） */
+    va20260716_04: svg(
+      '<path d="M30 130 V98 a26 26 0 0 1 52 0 v32 z" fill="'+L+'" '+st+'/>'
+     +'<circle cx="56" cy="68" r="24" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.8" stroke-linecap="round">'
+     +'<path d="M44 58 l10 4 M68 58 l-10 4"/></g>'
+     +'<g fill="'+D+'"><circle cx="47" cy="68" r="3"/><circle cx="65" cy="68" r="3"/></g>'
+     +'<path d="M46 82 q5 -6 10 0 t10 0" fill="none" stroke="'+D+'" stroke-width="2.8" stroke-linecap="round"/>'
+     +'<path d="M88 50 c5 7 7 10 7 13 a7 7 0 0 1 -14 0 c0 -3 2 -6 7 -13 z" fill="'+B+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M24 46 c5 7 7 10 7 13 a7 7 0 0 1 -14 0 c0 -3 2 -6 7 -13 z" fill="'+B+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round" fill="none">'
+     +'<path d="M112 108 q10 -14 20 0 t20 0 t20 0"/>'
+     +'<path d="M112 128 q10 -14 20 0 t20 0 t20 0"/></g>'
+     +qb(152,52)),
+
+    /* 10 Anita：前面的椅背倒下來，餐桌打不開 */
+    va20260716_05: svg(
+      '<path d="M26 128 h66 v-14 H26 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M34 114 V66 a10 10 0 0 1 10 -10 h30 a10 10 0 0 1 10 10 v48" fill="'+C+'" '+st+' transform="rotate(-26 58 114)"/>'
+     +'<path d="M96 54 a34 34 0 0 1 -14 24" fill="none" stroke="'+A+'" stroke-width="3.4" stroke-dasharray="7 6" stroke-linecap="round"/>'
+     +'<path d="M94 82 l-14 -6 l2 14 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<rect x="112" y="76" width="74" height="12" rx="4" fill="#fff" '+st+'/>'
+     +'<path d="M120 88 v22 M178 88 v22" '+th+' stroke-width="3"/>'
+     +'<path d="M112 110 h74" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +ex(149,56,32,R)),
+
+    /* 11 空服員：用餐前我請他把椅背豎直 */
+    va20260716_06: svg(
+      '<path d="M22 130 h70 v-14 H22 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M30 116 V62 a10 10 0 0 1 10 -10 h30 a10 10 0 0 1 10 10 v54" fill="'+C+'" '+st+'/>'
+     +'<path d="M38 72 h34" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M104 112 a42 42 0 0 1 10 -52" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M114 58 l-12 10 l16 6 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<rect x="124" y="84" width="66" height="34" rx="5" fill="#fff" '+st+'/>'
+     +'<circle cx="146" cy="101" r="11" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="164" y="92" width="18" height="18" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +chk(96,34,30,A)),
+
+    /* 12 Anita：為什麼餐點用鋁箔包著？（提問） */
+    va20260716_07: svg(
+      '<path d="M18 116 h120 l-10 -44 H28 z" fill="#fff" '+st+'/>'
+     +'<path d="M24 72 q14 -14 28 0 t28 0 t28 0 t24 0" fill="'+L+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/>'
+     +'<g stroke="'+D+'" stroke-width="2.2" stroke-linecap="round">'
+     +'<path d="M40 74 l6 36 M66 74 l3 36 M94 74 l-2 36 M118 74 l-6 36"/></g>'
+     +'<path d="M12 116 h132 v10 H12 z" fill="'+L+'" '+st+'/>'
+     +'<g stroke="'+B+'" stroke-width="3" stroke-linecap="round" opacity="0.8">'
+     +'<path d="M46 52 l8 -12 M76 50 l4 -14 M106 52 l12 -12"/></g>'
+     +qb(170,54)),
+
+    /* 13 空服員：鋁箔保溫，熱食會讓塑膠盒變軟 */
+    va20260716_08: svg(
+      '<path d="M14 96 h78 l-8 -32 H22 z" fill="#fff" '+st+'/>'
+     +'<path d="M18 64 q12 -12 24 0 t24 0 t20 0" fill="'+L+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/>'
+     +'<path d="M10 96 h86 v10 H10 z" fill="'+L+'" '+st+'/>'
+     +heat(34,58)
+     +'<path d="M112 72 h72 v24 q-12 14 -24 8 q-12 -6 -24 4 q-12 10 -24 -4 z" fill="'+B+'" opacity="0.25" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/>'
+     +'<path d="M112 72 h72" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M120 60 h56" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round"/>'
+     +'<path d="M148 126 q14 -8 28 0" fill="none" stroke="'+R+'" stroke-width="3" stroke-linecap="round"/>'),
+
+    /* 14 Anita：降落前可以叫我起來嗎？（提問） */
+    va20260716_09: svg(
+      '<path d="M14 128 V110 a30 20 0 0 1 60 0 v18 z" fill="'+L+'" '+st+'/>'
+     +'<circle cx="44" cy="84" r="22" fill="#fff" '+st+'/>'
+     +'<path d="M34 82 q6 5 12 0" fill="none" stroke="'+D+'" stroke-width="2.8" stroke-linecap="round"/>'
+     +'<path d="M50 82 q6 5 12 0" fill="none" stroke="'+D+'" stroke-width="2.8" stroke-linecap="round"/>'
+     +'<path d="M38 96 q8 5 16 0" fill="none" stroke="'+D+'" stroke-width="2.8" stroke-linecap="round"/>'
+     +'<g stroke="'+A+'" stroke-width="3" stroke-linecap="round" fill="none">'
+     +'<path d="M74 58 h12 l-12 14 h12"/>'
+     +'<path d="M92 34 h16 l-16 18 h16"/></g>'
+     +'<path d="M132 96 v-18 a22 22 0 0 1 44 0 v18 l8 10 h-60 z" fill="#fff" '+st+'/>'
+     +'<path d="M146 106 a8 8 0 0 0 16 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M154 56 v-10" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +qb(170,132)),
+
+    /* 15 空服員：降落前大約 30 分鐘開始準備 */
+    va20260716_10: svg(
+      '<g transform="rotate(20 86 56)">'
+     +'<path d="M50 56 h36 l16 -14 h10 l-8 14 h12 l10 -8 h8 l-6 12 l6 12 h-8 l-10 -8 h-12 l8 14 h-10 l-16 -14 H50 a8 8 0 0 1 0 -8 z" fill="#fff" '+st+'/></g>'
+     +'<path d="M24 24 a90 90 0 0 0 44 68" fill="none" stroke="'+A+'" stroke-width="3.4" stroke-dasharray="8 7" stroke-linecap="round"/>'
+     +'<path d="M20 120 h170" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 10"><path d="M26 130 h158"/></g>'
+     +pill(110,24,80,30,'30 min',A,'#fff',16)
+     +'<circle cx="152" cy="86" r="22" fill="#fff" '+st+'/>'
+     +'<path d="M152 86 V70 M152 86 l12 7" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<circle cx="152" cy="86" r="3.2" fill="'+A+'"/>')
+
+  });
+})();
+
+
+/* ===================== bk20260721 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 提問句的共同記號 */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  /* 文件：白紙＋橘色頁首＋內文橫線 */
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  /* 行李箱：箱體＋拉桿＋輪子 */
+  var bag=function(x,y,w,h,f){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="7" fill="'+f+'" '+st+'/>'
+     +'<path d="M'+(x+w*0.3)+' '+y+' v-12 h'+(w*0.4)+' v12" '+th+' stroke-width="3"/>'
+     +'<path d="M'+x+' '+(y+h*0.32)+' h'+w+'" stroke="'+A+'" stroke-width="5"/>'
+     +'<circle cx="'+(x+w*0.22)+'" cy="'+(y+h+6)+'" r="6" fill="'+D+'"/>'
+     +'<circle cx="'+(x+w*0.78)+'" cy="'+(y+h+6)+'" r="6" fill="'+D+'"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 4 地勤：廉航手提行李只有七公斤 —— 隨身行李尺寸框＋7kg 吊牌 */
+    va20260721_01: svg(
+      '<g '+st+' fill="'+L+'"><rect x="34" y="24" width="12" height="104" rx="3"/>'
+     +'<rect x="126" y="24" width="12" height="104" rx="3"/>'
+     +'<rect x="34" y="24" width="104" height="12" rx="3"/></g>'
+     +bag(60,56,52,58,C)
+     +pill(146,50,48,28,'7kg',A,'#fff',15)
+     +'<path d="M146 64 l-10 0" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'),
+
+    /* 5 Anita：只有七公斤？我超重很多，有什麼辦法？ —— 磅秤指針衝破紅區 */
+    va20260721_02: svg(
+      '<circle cx="80" cy="84" r="46" fill="#fff" '+st+'/>'
+     +'<path d="M111 53 A44 44 0 0 1 124 84" fill="none" stroke="'+R+'" stroke-width="7" stroke-linecap="round"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"><path d="M80 44 v9"/>'
+     +'<path d="M48 68 l8 4"/><path d="M112 68 l-8 4"/><path d="M80 124 v-9"/></g>'
+     +'<path d="M80 84 l34 -22" stroke="'+R+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<circle cx="80" cy="84" r="6" fill="'+D+'"/>'
+     +'<path d="M40 136 h80" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +qb(168,36)),
+
+    /* 6 地勤：那就託運，請把行李放上磅秤 —— 箱子放上秤台，橘色下壓箭頭 */
+    va20260721_03: svg(
+      bag(54,42,68,56,C)
+     +'<g stroke="'+A+'" stroke-width="5" stroke-linecap="round"><path d="M24 30 v36"/></g>'
+     +'<path d="M24 82 l-11 -16 h22 z" fill="'+A+'"/>'
+     +'<rect x="30" y="110" width="140" height="18" rx="5" fill="'+L+'" '+st+'/>'
+     +'<path d="M44 128 v10 M156 128 v10" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<rect x="140" y="66" width="52" height="32" rx="5" fill="#fff" '+st+'/>'
+     +txt(166,90,'kg',16,D)),
+
+    /* 7 Anita：超重的話可以加購行李嗎？ —— 信用卡＋多一件行李的加號 */
+    va20260721_04: svg(
+      '<rect x="18" y="72" width="84" height="52" rx="7" fill="#fff" '+st+'/>'
+     +'<path d="M18 90 h84" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="28" y="100" width="24" height="16" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M64 110 h28" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +bag(120,74,48,44,C)
+     +'<circle cx="176" cy="68" r="15" fill="'+A+'" '+st+'/>'
+     +'<g stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="M176 60 v16 M168 68 h16"/></g>'
+     +qb(60,34)),
+
+    /* 8 地勤：每超重一公斤大約五美元 —— 硬幣堆對應一公斤砝碼 */
+    va20260721_05: svg(
+      '<g '+st+' fill="'+L+'"><ellipse cx="52" cy="114" rx="34" ry="12"/>'
+     +'<ellipse cx="52" cy="98" rx="34" ry="12"/><ellipse cx="52" cy="82" rx="34" ry="12"/></g>'
+     +txt(52,89,'$5',19,D)
+     +'<path d="M94 96 h14" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M124 96 l-12 -8 v16 z" fill="'+A+'"/>'
+     +'<path d="M122 126 h66 l-10 -40 h-46 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M143 86 a12 12 0 0 1 24 0" fill="none" '+st+'/>'
+     +txt(155,114,'1kg',15,D)),
+
+    /* 10 地勤：沒問題，裡面還有別的東西嗎？ —— 打開的紙箱往裡看 */
+    va20260721_06: svg(
+      '<path d="M46 62 h84 v56 a7 7 0 0 1 -7 7 H53 a7 7 0 0 1 -7 -7 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M88 68 v57" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M46 62 l-28 -12 l16 -14 l32 12 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M130 62 l28 -12 l-16 -14 l-32 12 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M54 68 h68" stroke="'+D+'" stroke-width="7" opacity="0.2"/>'
+     +qb(170,106)),
+
+    /* 12 地勤：出差嗎？ —— 公事包 */
+    va20260721_07: svg(
+      '<rect x="28" y="60" width="106" height="66" rx="9" fill="'+C+'" '+st+'/>'
+     +'<path d="M62 60 v-14 h38 v14" '+th+' stroke-width="3"/>'
+     +'<path d="M28 86 h38 M96 86 h38" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="68" y="84" width="26" height="18" rx="4" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M46 116 h18" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +qb(166,36)),
+
+    /* 13 Anita：越南廠大約三百位員工，而且還在招人 —— 鋸齒屋頂廠房＋300＋人員＋成長箭頭 */
+    va20260721_08: svg(
+      '<path d="M14 128 V86 l26 -14 v14 l26 -14 v14 l26 -14 v56 z" fill="'+C+'" '+st+'/>'
+     +'<g fill="'+A+'" stroke="'+D+'" stroke-width="2"><rect x="24" y="100" width="16" height="15"/>'
+     +'<rect x="50" y="100" width="16" height="15"/><rect x="76" y="100" width="16" height="15"/></g>'
+     +pill(104,20,66,28,'300',A,'#fff',17)
+     +per(118,96,9,'#fff')+per(144,96,9,L)+per(170,96,9,'#fff')
+     +'<path d="M188 84 v-24" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M188 54 l-9 14 h18 z" fill="'+A+'"/>'),
+
+    /* 14 地勤：登機證給你，要靠窗嗎？ —— 登機證＋機窗 */
+    va20260721_09: svg(
+      '<rect x="18" y="54" width="122" height="56" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M104 54 v56" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 5"/>'
+     +'<rect x="26" y="62" width="50" height="11" rx="3" fill="'+A+'"/>'
+     +'<path d="M26 82 h60 M26 95 h44" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<g stroke="'+D+'" stroke-width="2"><path d="M112 64 v36 M118 64 v36 M124 64 v36 M132 64 v36"/></g>'
+     +'<rect x="150" y="74" width="38" height="48" rx="19" fill="'+B+'" opacity="0.3" stroke="'+D+'" stroke-width="3"/>'
+     +'<path d="M158 108 a8 8 0 0 1 16 0 h8" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +qb(168,34)),
+
+    /* 15 Anita：靠走道，上次亂流讓我很想吐 —— 走道座位＋亂流波浪＋反胃的臉 */
+    va20260721_10: svg(
+      '<path d="M14 32 q13 -16 26 0 t26 0 t26 0 t26 0" fill="none" stroke="'+D+'" stroke-width="3"/>'
+     +'<g '+st+'><rect x="16" y="78" width="28" height="46" rx="5" fill="'+L+'"/>'
+     +'<rect x="48" y="78" width="28" height="46" rx="5" fill="'+L+'"/>'
+     +'<rect x="100" y="78" width="28" height="46" rx="5" fill="'+A+'"/>'
+     +'<rect x="132" y="78" width="28" height="46" rx="5" fill="'+L+'"/></g>'
+     +'<path d="M88 80 v42" stroke="'+D+'" stroke-width="4" stroke-dasharray="8 7" stroke-linecap="round"/>'
+     +'<circle cx="168" cy="38" r="18" fill="'+C+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round" fill="none">'
+     +'<path d="M160 32 l7 5"/><path d="M176 32 l-7 5"/>'
+     +'<path d="M160 46 q4 -5 7 0 t7 0"/></g>'
+     +'<path d="M168 56 v12" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>')
+
+  });
+})();
+
+
+/* ===================== bk20260728 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 提問句的共同記號（與 au01／au02／au03 一致） */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var carton=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+w/2)+' '+y+' v'+h+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+x+' '+(y+h*0.3)+' h'+w+'" stroke="'+A+'" stroke-width="5"/>'; };
+  /* 水面波紋 */
+  var water=function(y){ var s='', i; for(i=0;i<3;i++){ var yy=y+i*11;
+      s+='<path d="M12 '+yy+' q12 -7 24 0 t24 0 t24 0 t24 0 t24 0 t24 0" fill="none" stroke="'+B+'" stroke-width="2.6" stroke-linecap="round"/>'; }
+    return s; };
+  /* 石灰岩山：連續尖峰 */
+  var karst=function(y){ return '<path d="M8 '+y+' l26 -50 l20 30 l18 -22 l24 42 l18 -34 l22 34 l20 -24 l16 24 z" fill="'+C+'" '+st+'/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 3 船家：你在三谷待多久了？（提問） */
+    va20260728_01: svg(
+      karst(96)
+     +water(104)
+     +'<path d="M46 126 q26 14 54 0 l-8 -12 H54 z" fill="'+L+'" '+st+'/>'
+     +per(72,104,8,'#fff')
+     +qb(166,36)),
+
+    /* 4 Anita：才一天，第一次來，很期待這趟行程 */
+    va20260728_02: svg(
+      '<rect x="12" y="26" width="92" height="94" rx="7" fill="#fff" '+st+'/>'
+     +'<rect x="12" y="26" width="92" height="20" rx="7" fill="'+A+'"/>'
+     +'<path d="M12 46 h92" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="'+D+'">'
+     +'<circle cx="30" cy="62" r="4"/><circle cx="52" cy="62" r="4"/><circle cx="74" cy="62" r="4"/><circle cx="94" cy="62" r="4"/>'
+     +'<circle cx="30" cy="82" r="4"/><circle cx="74" cy="82" r="4"/><circle cx="94" cy="82" r="4"/>'
+     +'<circle cx="30" cy="102" r="4"/><circle cx="52" cy="102" r="4"/><circle cx="74" cy="102" r="4"/><circle cx="94" cy="102" r="4"/></g>'
+     +'<circle cx="52" cy="82" r="13" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +txt(52,89,'1',16,'#fff')
+     +per(154,72,15,'#fff')
+     +'<path d="M132 76 l-14 -22 M176 76 l14 -22" '+th+' stroke-width="3"/>'
+     +'<path d="M140 36 l5 10 l11 1 l-8 8 l2 11 l-10 -6 l-10 6 l2 -11 l-8 -8 l11 -1 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'),
+
+    /* 6 Anita：租電動車繞鄉間騎，風景很美 */
+    va20260728_03: svg(
+      '<g stroke="'+D+'" stroke-width="2.6" stroke-linecap="round">'
+     +'<path d="M14 36 h30 M54 36 h26 M90 36 h28 M128 36 h24"/>'
+     +'<path d="M14 50 h22 M46 50 h30 M86 50 h24 M120 50 h30"/></g>'
+     +'<path d="M10 124 h180" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<g fill="none" stroke="'+D+'" stroke-width="3"><circle cx="48" cy="106" r="18"/><circle cx="142" cy="106" r="18"/></g>'
+     +'<path d="M48 106 L82 106 L104 74 L126 106 M104 74 h22 M142 106 L126 82" '+th+' stroke-width="3"/>'
+     +'<path d="M118 78 h20" stroke="'+D+'" stroke-width="3.4" stroke-linecap="round"/>'
+     +'<rect x="78" y="88" width="24" height="18" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M92 91 l-7 8 h6 l-3 7 l9 -10 h-6 z" fill="#fff"/>'
+     +per(108,52,11,'#fff')
+     +'<path d="M112 84 l16 -8" '+th+' stroke-width="3"/>'),
+
+    /* 7 船家：稻田和石灰岩山。你拍了很多照片嗎？（提問） */
+    va20260728_04: svg(
+      '<rect x="34" y="20" width="56" height="42" rx="4" fill="#fff" stroke="'+D+'" stroke-width="2.5" transform="rotate(-9 62 41)"/>'
+     +'<path d="M40 54 l16 -16 l12 12 l10 -10 l14 14" fill="none" stroke="'+A+'" stroke-width="3" transform="rotate(-9 62 41)"/>'
+     +'<rect x="20" y="72" width="104" height="60" rx="9" fill="'+C+'" '+st+'/>'
+     +'<rect x="48" y="60" width="34" height="14" rx="4" fill="'+L+'" '+st+'/>'
+     +'<circle cx="72" cy="102" r="21" fill="#fff" stroke="'+D+'" stroke-width="3"/>'
+     +'<circle cx="72" cy="102" r="11" fill="'+B+'" opacity="0.3" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="110" cy="84" r="5" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +qb(164,44)),
+
+    /* 8 Anita：拍了很多。那搭船要多久？（提問） */
+    va20260728_05: svg(
+      '<circle cx="146" cy="48" r="28" fill="#fff" '+st+'/>'
+     +'<path d="M146 48 V30 M146 48 l14 8" stroke="'+D+'" stroke-width="3.2" stroke-linecap="round"/>'
+     +'<circle cx="146" cy="48" r="3.4" fill="'+A+'"/>'
+     +water(96)
+     +'<path d="M22 124 q30 16 62 0 l-9 -14 H31 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M53 110 V78" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M53 80 l22 12 l-22 10 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +qb(166,112)),
+
+    /* 9 船家：大約兩小時，我會帶你穿過三個洞 */
+    va20260728_06: svg(
+      '<circle cx="44" cy="44" r="27" fill="#fff" '+st+'/>'
+     +'<path d="M44 44 V26 M44 44 l16 9" stroke="'+D+'" stroke-width="3.2" stroke-linecap="round"/>'
+     +'<circle cx="44" cy="44" r="3.4" fill="'+A+'"/>'
+     +pill(92,28,70,30,'2 h',A,'#fff',17)
+     +'<g '+st+'>'
+     +'<path d="M14 128 V104 a21 21 0 0 1 42 0 v24 z" fill="'+C+'"/>'
+     +'<path d="M78 128 V104 a21 21 0 0 1 42 0 v24 z" fill="'+C+'"/>'
+     +'<path d="M142 128 V104 a21 21 0 0 1 42 0 v24 z" fill="'+C+'"/></g>'
+     +'<g fill="'+D+'" opacity="0.85">'
+     +'<path d="M24 128 V108 a11 11 0 0 1 22 0 v20 z"/>'
+     +'<path d="M88 128 V108 a11 11 0 0 1 22 0 v20 z"/>'
+     +'<path d="M152 128 V108 a11 11 0 0 1 22 0 v20 z"/></g>'
+     +'<path d="M8 134 h184" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'),
+
+    /* 10 Anita：可以給我折扣嗎？（提問） */
+    va20260728_07: svg(
+      '<path d="M30 54 h74 a10 10 0 0 1 7 3 l34 34 a10 10 0 0 1 0 14 l-34 34 a10 10 0 0 1 -7 3 H30 a8 8 0 0 1 -8 -8 V62 a8 8 0 0 1 8 -8 z" fill="'+L+'" '+st+'/>'
+     +'<circle cx="44" cy="100" r="8" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M68 76 l34 48 M68 124 l34 -48" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M122 24 V62" stroke="'+A+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M106 50 l16 20 l16 -20 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +qb(168,34)),
+
+    /* 13 船家：水面上陽光很強，防曬可以預防曬傷 */
+    va20260728_08: svg(
+      '<circle cx="54" cy="44" r="21" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="4" stroke-linecap="round">'
+     +'<path d="M54 14 V4 M22 44 H10 M86 44 h12 M31 21 l-8 -8 M77 21 l8 -8 M31 67 l-8 8"/></g>'
+     +'<g stroke="'+A+'" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="7 6">'
+     +'<path d="M66 62 l22 26 M54 70 l6 34 M78 54 l30 16"/></g>'
+     +water(108)
+     +'<path d="M150 46 l30 10 v26 c0 20 -14 30 -30 36 c-16 -6 -30 -16 -30 -36 V56 z" fill="#fff" '+st+'/>'
+     +chk(136,86,30,A)),
+
+    /* 14 Anita：從沒想到太陽會這麼強 */
+    va20260728_09: svg(
+      '<path d="M26 128 V98 a24 24 0 0 1 48 0 v30 z" fill="'+L+'" '+st+'/>'
+     +'<circle cx="50" cy="74" r="20" fill="#fff" '+st+'/>'
+     +'<g fill="'+D+'"><circle cx="43" cy="70" r="2.8"/><circle cx="57" cy="70" r="2.8"/></g>'
+     +'<path d="M42 84 q8 6 16 0" '+th+'/>'
+     +'<circle cx="86" cy="44" r="5" fill="#fff" '+st+'/>'
+     +'<circle cx="98" cy="32" r="7" fill="#fff" '+st+'/>'
+     +'<path d="M124 20 a22 22 0 0 1 22 -6 a20 20 0 0 1 32 10 a18 18 0 0 1 -6 34 h-48 a19 19 0 0 1 0 -38 z" fill="#fff" '+st+'/>'
+     +'<circle cx="150" cy="34" r="13" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+A+'" stroke-width="3" stroke-linecap="round"><path d="M150 14 v-5 M170 34 h5 M136 20 l-4 -4 M164 20 l4 -4"/></g>'
+     +ex(150,34,40,R)),
+
+    /* 15 船家：走吧，洞裡的景色很漂亮 */
+    va20260728_10: svg(
+      '<path d="M16 136 V84 a84 56 0 0 1 168 0 v52 z" fill="'+D+'"/>'
+     +'<path d="M40 136 V92 a60 42 0 0 1 120 0 v44 z" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M44 112 l20 -24 l16 18 l14 -14 l20 26 l16 -18 l26 24 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<circle cx="74" cy="78" r="9" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="none" stroke="'+B+'" stroke-width="2.6" stroke-linecap="round">'
+     +'<path d="M46 120 q11 -6 22 0 t22 0 t22 0 t22 0 t22 0"/>'
+     +'<path d="M46 130 q11 -6 22 0 t22 0 t22 0 t22 0 t22 0"/></g>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M62 136 V84 l-6 -12 l-6 12 V136"/></g>'
+     +'<path d="M8 140 h184" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>')
+
+  });
+})();
+
+
+/* ===================== bk20260821 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var carton=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+w/2)+' '+y+' v'+h+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+x+' '+(y+h*0.3)+' h'+w+'" stroke="'+A+'" stroke-width="5"/>'; };
+  /* 掀蓋筆電 */
+  var laptop=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>'
+     +'<path d="M'+(x-6)+' '+(y+h)+' h'+(w+12)+' l8 10 H'+(x-14)+' z" fill="'+L+'" '+st+'/>'; };
+  /* 資料夾（左上有標籤的那種） */
+  var folder=function(x,y,w,h,f){ return '<path d="M'+x+' '+(y+8)+' a6 6 0 0 1 6 -6 h'+(w*0.32)+' l'+(w*0.1)+' 8 h'+(w*0.58-6)+
+      ' a6 6 0 0 1 6 6 v'+(h-14)+' a6 6 0 0 1 -6 6 H'+(x+6)+' a6 6 0 0 1 -6 -6 z" fill="'+(f||L)+'" '+st+'/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 2 客戶：可以把我的投影片放到電視上嗎？（提問：筆電投影片→電視） */
+    va20260821_01: svg(
+      laptop(14,38,62,42)
+     +'<rect x="22" y="46" width="46" height="8" rx="2" fill="'+A+'"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"><path d="M22 62 h40"/><path d="M22 70 h30"/></g>'
+     +'<path d="M84 58 h14" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M102 58 l-11 -7 v14 z" fill="'+A+'"/>'
+     +'<rect x="108" y="24" width="82" height="60" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="116" y="32" width="66" height="44" rx="3" fill="'+C+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M140 84 v14 M158 84 v14" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M124 100 h50" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +qb(60,122)),
+
+    /* 6 客戶：我的是 Apple 機，要一個 HDMI 轉接頭 */
+    va20260821_02: svg(
+      laptop(10,24,60,40)
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"><path d="M18 36 h34"/><path d="M18 46 h24"/></g>'
+     +'<rect x="76" y="40" width="10" height="7" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +ex(104,44,22,R)
+     +'<rect x="124" y="24" width="64" height="40" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M138 38 h36 l-5 14 h-26 z" fill="'+D+'"/>'
+     +'<g stroke="#fff" stroke-width="2"><path d="M144 42 v6"/><path d="M152 42 v6"/><path d="M160 42 v6"/><path d="M168 42 v6"/></g>'
+     +'<path d="M54 70 q-6 26 20 32" fill="none" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M150 70 q10 22 -14 30" fill="none" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +pill(70,96,62,28,'HDMI',A,'#fff',15)),
+
+    /* 7 Anita：這裡有一個，我來把線整理好 */
+    va20260821_03: svg(
+      '<path d="M22 54 c20 -32 42 22 62 -10 c14 -22 -12 44 -42 32 c-20 -8 -2 -42 22 -20 c16 14 -6 44 -30 32" '
+     +'fill="none" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +ex(52,116,22,R)
+     +'<path d="M96 62 h16" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M116 62 l-11 -7 v14 z" fill="'+A+'"/>'
+     +'<circle cx="152" cy="58" r="28" fill="none" stroke="'+D+'" stroke-width="3.5"/>'
+     +'<circle cx="152" cy="58" r="15" fill="none" stroke="'+D+'" stroke-width="3"/>'
+     +'<path d="M152 30 l-14 -12 M180 58 l12 -10" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +chk(136,108,28,A)),
+
+    /* 8 客戶：可以打開第一個資料夾嗎？（提問：點開第一個資料夾） */
+    va20260821_04: svg(
+      folder(24,38,112,74,L)
+     +txt(60,98,'1',26,D)
+     +'<path d="M96 86 v34 l9 -9 l7 14 l7 -3 l-7 -14 l11 -3 z" fill="#fff" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +qb(166,36)),
+
+    /* 9 Anita：ABC 資料夾裡做了五個子資料夾，依日期排 */
+    va20260821_05: svg(
+      pill(14,12,54,24,'ABC',A,'#fff',15)
+     +folder(10,42,180,72,C)
+     +'<g>'
+     +folder(20,62,30,32,L)+txt(35,86,'1',13,D)
+     +folder(54,62,30,32,L)+txt(69,86,'2',13,D)
+     +folder(88,62,30,32,L)+txt(103,86,'3',13,D)
+     +folder(122,62,30,32,L)+txt(137,86,'4',13,D)
+     +folder(156,62,30,32,L)+txt(171,86,'5',13,D)
+     +'</g>'
+     +'<path d="M22 104 h148" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M170 104 l-12 -7 v14 z" fill="'+A+'"/>'),
+
+    /* 11 Anita：檔案內容一樣，所以不用開 */
+    va20260821_06: svg(
+      doc(18,20,64,88,1)
+     +doc(118,20,64,88,1)
+     +'<g stroke="'+A+'" stroke-width="5" stroke-linecap="round"><path d="M92 58 h16"/><path d="M92 72 h16"/></g>'
+     +chk(84,122,30,A)),
+
+    /* 12 客戶：為什麼今天在這間小房間？（提問：窄小的房間） */
+    va20260821_07: svg(
+      '<rect x="16" y="38" width="104" height="88" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M26 56 h22" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M48 56 l-10 -6 v12 z" fill="'+A+'"/>'
+     +'<path d="M110 56 h-22" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M88 56 l10 -6 v12 z" fill="'+A+'"/>'
+     +'<ellipse cx="68" cy="98" rx="30" ry="14" fill="'+C+'" '+st+'/>'
+     +'<rect x="26" y="82" width="15" height="15" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="95" y="82" width="15" height="15" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +qb(158,74)),
+
+    /* 13 Anita：測試間還在施工，所以暫時在這裡 */
+    va20260821_08: svg(
+      '<path d="M12 32 h180" fill="none" stroke="'+A+'" stroke-width="4" stroke-dasharray="12 8" stroke-linecap="round"/>'
+     +'<rect x="26" y="48" width="84" height="80" rx="3" fill="'+C+'" '+st+'/>'
+     +'<g fill="#fff" stroke="'+D+'" stroke-width="2.5">'
+     +'<rect x="38" y="60" width="24" height="20" rx="2"/><rect x="74" y="60" width="24" height="20" rx="2"/>'
+     +'<rect x="38" y="92" width="24" height="20" rx="2"/><rect x="74" y="92" width="24" height="20" rx="2"/></g>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M20 42 v90"/><path d="M116 42 v90"/><path d="M20 70 h96"/><path d="M20 100 h96"/></g>'
+     +'<rect x="140" y="124" width="44" height="9" rx="3" fill="'+L+'" '+st+'/>'
+     +'<path d="M162 76 l16 48 h-32 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M154 102 h16" stroke="#fff" stroke-width="5"/>'),
+
+    /* 14 客戶：那間房的設備已經採購了嗎？（提問：設備箱＋價格標籤） */
+    va20260821_09: svg(
+      carton(20,48,92,70)
+     +'<rect x="40" y="70" width="52" height="34" rx="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"><path d="M48 80 h22"/><path d="M48 90 h32"/></g>'
+     +'<circle cx="84" cy="86" r="5" fill="'+A+'"/>'
+     +'<path d="M126 34 h44 l16 18 l-16 18 h-44 z" fill="'+L+'" '+st+'/>'
+     +'<circle cx="168" cy="52" r="4" fill="#fff" stroke="'+D+'" stroke-width="2"/>'
+     +txt(146,60,'$',22,D)
+     +qb(152,112)),
+
+    /* 15 Anita：還沒，發票還在老闆那邊審核 */
+    va20260821_10: svg(
+      '<rect x="24" y="26" width="70" height="84" rx="4" fill="'+C+'" '+st+'/>'
+     +doc(14,38,70,84,1)
+     +'<circle cx="118" cy="62" r="23" fill="'+B+'" opacity="0.18"/>'
+     +'<circle cx="118" cy="62" r="23" fill="none" stroke="'+D+'" stroke-width="3.5"/>'
+     +'<path d="M134 78 l20 20" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/>'
+     +per(166,34,14,L)
+     +'<circle cx="166" cy="112" r="19" fill="#fff" '+st+'/>'
+     +'<path d="M166 112 V100 M166 112 l9 6" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>')
+
+  });
+})();
+
+
+/* ===================== bk20261008 影片左圖（每句一張） ===================== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var carton=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+w/2)+' '+y+' v'+h+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+x+' '+(y+h*0.3)+' h'+w+'" stroke="'+A+'" stroke-width="5"/>'; };
+  /* 跑步機主體：底座＋立柱＋把手＋跑帶 */
+  var mill=function(x,y,sc){ var s=sc||1;
+    return '<g transform="translate('+x+' '+y+') scale('+s+')">'
+     +'<path d="M6 70 h96 l-10 20 H16 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M18 74 h74" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M94 70 V22 h-34" '+th+' stroke-width="3.5"/>'
+     +'<rect x="52" y="4" width="46" height="24" rx="4" fill="#fff" '+st+'/>'
+     +'</g>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 4 Tom：所以不是壞掉？（提問＋機器本體完好、電源仍亮） */
+    va20261008_01: svg(
+      mill(16,34,1.1)
+     +'<circle cx="68" cy="43" r="7" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +chk(96,118,24,A)
+     +qb(168,40)),
+
+    /* 6 Tom：如果只是不穩呢？（提問＋機器抖動波紋） */
+    va20261008_02: svg(
+      mill(10,36,1.05)
+     +'<g stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" fill="none">'
+     +'<path d="M22 24 c6 -8 14 8 20 0"/><path d="M62 18 c6 -8 14 8 20 0"/></g>'
+     +'<g stroke="'+R+'" stroke-width="3" stroke-linecap="round">'
+     +'<path d="M8 110 l-6 8"/><path d="M8 94 l-8 2"/><path d="M118 110 l6 8"/><path d="M118 94 l8 2"/></g>'
+     +qb(166,54)),
+
+    /* 7 Anita：一樣要叫技師（電話＋提著工具箱的技師） */
+    va20261008_03: svg(
+      '<path d="M22 44 a10 10 0 0 1 10 -10 h8 l8 20 l-10 8 c6 14 18 26 32 32 l8 -10 l20 8 v8 a10 10 0 0 1 -10 10 C50 110 22 80 22 44 z" fill="'+L+'" '+st+'/>'
+     +per(154,34,13,C)
+     +'<path d="M140 94 V72 a14 14 0 0 1 28 0 v22" '+th+' stroke-width="3"/>'
+     +'<rect x="128" y="96" width="56" height="34" rx="5" fill="'+A+'" '+st+'/>'
+     +'<path d="M146 96 v-8 h20 v8" '+th+'/>'
+     +'<path d="M128 112 h56" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+A+'" stroke-width="3" stroke-linecap="round" fill="none">'
+     +'<path d="M104 32 a22 22 0 0 1 0 28"/><path d="M114 22 a34 34 0 0 1 0 48"/></g>'),
+
+    /* 13 Anita：作業員能力不足會導致品質問題（能力儀表偏低→不良品） */
+    va20261008_04: svg(
+      '<path d="M12 96 a44 44 0 0 1 88 0" fill="none" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M12 96 a44 44 0 0 1 14 -32" fill="none" stroke="'+R+'" stroke-width="8" stroke-linecap="round"/>'
+     +'<path d="M56 96 L26 68" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<circle cx="56" cy="96" r="6" fill="'+D+'"/>'
+     +'<path d="M12 104 h88" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M112 70 h18" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M142 70 l-14 -9 v18 z" fill="'+A+'"/>'
+     +'<rect x="150" y="34" width="40" height="34" rx="4" fill="'+C+'" '+st+'/>'
+     +'<path d="M156 52 c8 -10 18 6 28 -4" fill="none" stroke="'+R+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<rect x="150" y="82" width="40" height="34" rx="4" fill="'+C+'" '+st+'/>'
+     +ex(170,99,22,R)),
+
+    /* 15 Anita：他從 2021 年起在這個工站工作（工站＋2021 起算的時間軸） */
+    va20261008_05: svg(
+      '<rect x="18" y="34" width="76" height="46" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M18 80 h76 v10 H18 z" fill="'+L+'" '+st+'/>'
+     +'<rect x="34" y="48" width="44" height="22" rx="3" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +per(56,22,11,L)
+     +'<path d="M18 118 H190" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<circle cx="34" cy="118" r="8" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M42 118 H182" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M190 118 l-16 -9 v18 z" fill="'+A+'"/>'
+     +txt(34,106,'2021',14,D)
+     +'<rect x="118" y="36" width="64" height="48" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M118 52 h64" stroke="'+A+'" stroke-width="7"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5"><path d="M132 36 v-8 M168 36 v-8"/></g>'
+     +chk(136,62,26,A)),
+
+    /* 16 Tom：你呢？在現職多久了？（提問＋名牌識別證） */
+    va20261008_06: svg(
+      '<path d="M96 24 h8 v18" '+th+'/>'
+     +'<path d="M80 22 a20 20 0 0 1 40 0" fill="none" stroke="'+D+'" stroke-width="3.5"/>'
+     +'<rect x="62" y="42" width="76" height="62" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="90" y="36" width="20" height="10" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +per(86,66,11,L)
+     +'<path d="M110 60 h20 M110 72 h20 M74 96 h52" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +qb(166,112)),
+
+    /* 17 Anita：在現職已經十年（辦公座位＋十年時間軸刻度） */
+    va20261008_07: svg(
+      '<rect x="14" y="52" width="76" height="12" rx="3" fill="'+L+'" '+st+'/>'
+     +'<path d="M24 64 v34 M80 64 v34" '+th+'/>'
+     +'<rect x="34" y="28" width="40" height="24" rx="3" fill="#fff" '+st+'/>'
+     +per(24,34,10,C)
+     +'<path d="M14 110 H186" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M26 110 v9"/><path d="M44 110 v9"/><path d="M62 110 v9"/><path d="M80 110 v9"/><path d="M98 110 v9"/>'
+     +'<path d="M116 110 v9"/><path d="M134 110 v9"/><path d="M152 110 v9"/><path d="M170 110 v9"/><path d="M186 110 v9"/></g>'
+     +'<path d="M26 100 H186" stroke="'+A+'" stroke-width="6" stroke-linecap="round"/>'
+     +pill(118,36,70,30,'10',A,'#fff',19)),
+
+    /* 18 Tom：謝謝你帶我走一遍（握手＋合起的筆記本） */
+    va20261008_08: svg(
+      '<path d="M22 72 l24 -14 l22 14 l22 -14 l24 14" fill="none" stroke="'+D+'" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M46 58 V40 M90 58 V40" '+th+'/>'
+     +per(46,28,11,L)
+     +per(90,28,11,C)
+     +'<path d="M46 84 l22 12 l22 -12" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="124" y="56" width="60" height="64" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M124 56 v64" stroke="'+A+'" stroke-width="8"/>'
+     +'<path d="M168 56 v-10 v10" '+th+'/>'
+     +'<rect x="160" y="46" width="12" height="26" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +chk(136,90,26,A))
 
   });
 })();

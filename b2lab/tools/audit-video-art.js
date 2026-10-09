@@ -58,7 +58,6 @@ if (nextIdx >= 0) {
 
 const out = [];
 out.push('# 影片左圖盤點\n');
-out.push(`- 盤點時間：${new Date().toISOString().slice(0, 16).replace('T', ' ')}`);
 out.push(`- 有場景的課：${rows.length}；場景句 ${T(r => r.n)}；不同圖 ${T(r => r.uniq)}；重複格 ${T(r => r.dup)}；相鄰同圖 ${T(r => r.adj)}`);
 out.push(`- 圖庫 ${LIB.size} 張；場景用到的專屬圖 ${[...used.keys()].filter(a => LIB.has(a)).length} 張；通用小圖示佔 ${T(r => r.gen)} 個場景格；沒被用過的專屬圖 ${[...LIB].filter(a => !used.has(a)).length} 張`);
 out.push(`- 指向不存在圖庫的 art：${bad.length ? bad.join(', ') : '無'}`);

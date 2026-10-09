@@ -1,40 +1,21 @@
 # 影片左圖盤點
 
-- 盤點時間：2026-10-09 11:38
-- 有場景的課：87；場景句 1299；不同圖 1013；重複格 286；相鄰同圖 224
-- 圖庫 409 張；場景用到的專屬圖 395 張；通用小圖示佔 451 個場景格；沒被用過的專屬圖 14 張
+- 有場景的課：87；場景句 1299；不同圖 1121；重複格 178；相鄰同圖 137
+- 圖庫 589 張；場景用到的專屬圖 575 張；通用小圖示佔 357 個場景格；沒被用過的專屬圖 14 張
 - 指向不存在圖庫的 art：無
-- **完全合格的課（重複 0 且無通用圖示）：6 / 87；還要做 81 課**
+- **完全合格的課（重複 0 且無通用圖示）：24 / 87；還要做 63 課**
 
 | 級別 | 課數 | 重複格合計 |
 |---|---|---|
 | 重複 10～+ | 0 | 0 |
-| 重複 5～9 | 26 | 148 |
+| 重複 5～9 | 8 | 40 |
 | 重複 1～4 | 54 | 138 |
-| 重複 0 | 7 | 0 |
+| 重複 0 | 25 | 0 |
 
 ## 待辦明細（重複格多的在前）
 
 | 課 | 日期 | 標題 | 場景句 | 不同圖 | 重複格 | 相鄰同圖 | 單圖最多次 | 通用圖示格 |
 |---|---|---|---|---|---|---|---|---|
-| bk20260625 | 2026-06-25 | 天然災害與旅遊敘述 | 17 | 8 | 9 | 9 | 4 | 2 |
-| bk20261008 | 2026-10-08 | 機器異常與 How long 句型 | 18 | 10 | 8 | 7 | 4 | 0 |
-| bk20260326 | 2026-03-26 | 穩定進步的學習歷程 | 15 | 8 | 7 | 5 | 4 | 6 |
-| bk20260728 | 2026-07-28 | 越南寧平旅遊、take someone place、時間句型 | 14 | 7 | 7 | 5 | 4 | 3 |
-| bk20260324 | 2026-03-24 | While 的四種用法與我的英文學習之旅 | 14 | 8 | 6 | 5 | 3 | 7 |
-| bk20260716 | 2026-07-16 | 搭機英文與作業複習 | 14 | 8 | 6 | 5 | 3 | 6 |
-| bk20260721 | 2026-07-21 | 作業複習與機場旅遊英文 | 14 | 8 | 6 | 5 | 4 | 5 |
-| bk20260630 | 2026-06-30 | 假設語氣與火車購票英文 | 16 | 10 | 6 | 5 | 3 | 5 |
-| bk20260203b | 2026-02-03 | 面試技巧手冊 STAR 方法 | 15 | 9 | 6 | 5 | 3 | 4 |
-| bk20260319 | 2026-03-19 | 過去簡單式、過去進行式與目標字彙 | 14 | 8 | 6 | 5 | 2 | 3 |
-| bk20260521 | 2026-05-21 | join, attend, Satisfactory 用法 | 14 | 8 | 6 | 5 | 4 | 2 |
-| bk20260821 | 2026-08-21 | 電腦檔案與辦公室英文 | 15 | 10 | 5 | 3 | 3 | 8 |
-| bk20260616 | 2026-06-16 | blow片語+情緒形容詞+天氣災害 | 15 | 10 | 5 | 3 | 3 | 8 |
-| bk20260402 | 2026-04-02 | 台灣的清明節 | 15 | 10 | 5 | 5 | 3 | 7 |
-| bk20260423 | 2026-04-23 | 農夫與智者 | 15 | 10 | 5 | 3 | 2 | 7 |
-| bk20260512 | 2026-05-12 | Making Progress | 15 | 10 | 5 | 5 | 2 | 7 |
-| bk20260618 | 2026-06-18 | 天然災害地震颱風 | 15 | 10 | 5 | 3 | 3 | 7 |
-| bk20260623 | 2026-06-23 | Used to + 天災詞彙 | 15 | 10 | 5 | 4 | 2 | 7 |
 | bk20260317 | 2026-03-17 | 現在簡單式與現在進行式 | 14 | 9 | 5 | 4 | 2 | 6 |
 | bk20260714 | 2026-07-14 | 搭機流程與機上英文 | 14 | 9 | 5 | 3 | 4 | 5 |
 | bk20260226a | 2026-02-26 | 台灣 vs 美國保險 insurance | 14 | 9 | 5 | 3 | 3 | 5 |
@@ -100,222 +81,6 @@
 | bk20251202 | 2025-12-02 | 感恩節 | 14 | 14 | 0 | 0 | 1 | 4 |
 
 ## 每課要換圖的句子
-
-### bk20260625 天然災害與旅遊敘述（重複 9 格、通用圖示 2 格）
-- #3 [cherryTemple] 重複：Amazing. It was my first time visiting Japan, so I was pretty excited.
-- #4 [cherryTemple] 重複：Did you catch the cherry blossoms?
-- #5 [cherryTemple] 重複：Yeah. Sunny and pleasant the whole time — perfect for sightseeing.
-- #7 [trainPlatform] 重複：The train system seemed confusing at first, but after two days it got 
-- #9 [leftBackpack] 重複：I left my backpack in a café. Fortunately, the staff kept it safe. I w
-- #11 [caughtInStorm] 重複：We got caught in a storm and took shelter in a little temple.
-- #13 [departureBoard] 重複：So your flight was late?
-- #14 [departureBoard] 重複：We were stranded at the airport for six hours. The storm lasted all da
-- #16 [evacuateShelter] 重複：A few families moved to a shelter, and relief efforts started the next
-- #17 [smile] 通用圖示：What a trip. Still worth it?
-- #18 [heart] 通用圖示：Of course. The trip was not boring but full of surprises.
-
-### bk20261008 機器異常與 How long 句型（重複 8 格、通用圖示 0 格）
-- #4 [printerJam] 重複：So it's not broken?
-- #6 [tools] 重複：And if it only acts up?
-- #7 [tools] 重複：Same thing. We should call a technician.
-- #13 [scratch] 重複：If the operator has poor competency, it may lead to quality problems.
-- #15 [timeZoneClocks] 重複：He has worked at this station since 2021.
-- #16 [clipboard] 重複：And you? How long have you been in your current position?
-- #17 [clipboard] 重複：I have been in my current position for ten years.
-- #18 [clipboard] 重複：Alright, thanks for walking me through it.
-
-### bk20260326 穩定進步的學習歷程（重複 7 格、通用圖示 6 格）
-- #2 [smile] 通用圖示：Anita, I just started my first English class. Any advice?
-- #5 [tonguePronounce] 重複：Yeah. I found the pronunciation difficult — people didn't always under
-- #6 [progressPlateau] 重複：That sounds frustrating. So how did it change?
-- #7 [mic] 通用圖示：After a while my pronunciation improved, and I could express basic ide
-- #8 [chartUp] 通用圖示：Could you feel the difference?
-- #9 [chartUp] 重複：Yeah. It was obvious that I was getting better, which was very encoura
-- #10 [progressPlateau] 重複：So your pronunciation improved. Does it keep getting easier?
-- #11 [progressPlateau] 重複：Not exactly. At intermediate level, I made slower progress.
-- #13 [redPenMistakes] 重複：Yeah, and a lot of words I understood but couldn't use accurately.
-- #14 [redPenMistakes] 重複：I was also more aware of my mistakes — good, but frustrating too.
-- #15 [book] 通用圖示：So what keeps you going?
-- #16 [star] 通用圖示：I found the method that works best for me, and I keep making steady pr
-
-### bk20260728 越南寧平旅遊、take someone place、時間句型（重複 7 格、通用圖示 3 格）
-- #3 [boatCave] 重複：That's right. How long have you been in Tam Coc?
-- #4 [star] 通用圖示：Just a day. First time here, so I was really looking forward to the tr
-- #6 [ebike] 重複：I rented an e-bike and rode around the countryside. Amazing scenery.
-- #7 [ebike] 重複：Rice fields and limestone mountains. Did you take many photos?
-- #8 [clock] 通用圖示：Yeah, I took many photos. So, how long does the boat ride take?
-- #9 [boatCave] 重複：It takes approximately two hours. I'll take you through three caves.
-- #10 [coin] 通用圖示：Great. Could you give me a discount?
-- #13 [sunscreenSun] 重複：Yes. The sun's strong out on the water — it'll prevent sunburn.
-- #14 [sunscreenSun] 重複：It never crossed my mind the sun would be this strong.
-- #15 [boatCave] 重複：Everyone says that. Okay, let's go. You'll see such beautiful views in
-
-### bk20260324 While 的四種用法與我的英文學習之旅（重複 6 格、通用圖示 7 格）
-- #2 [book] 通用圖示：Anita, your English has improved so much. When did you start?
-- #4 [contextClues] 重複：So what did you do with a word you didn't know?
-- #5 [contextClues] 重複：I had to guess the meaning from the context — and sometimes I got it w
-- #6 [doc] 通用圖示：Do you write new words down?
-- #7 [doc] 重複：Yeah. I keep a record of the new words and make a note of important ph
-- #9 [readAloudMouth] 重複：Every day I repeat these words out loud and try to use them in a conve
-- #11 [foreignFilmSubs] 重複：No, I like to experiment with different learning methods. I watch fore
-- #12 [music] 通用圖示：Nice. I usually listen to podcasts while I'm driving.
-- #13 [doc] 重複：Good idea. I also revise my notes regularly, so I don't forget the wor
-- #14 [warning] 通用圖示：Aren't you afraid of making mistakes when you speak?
-- #15 [smile] 通用圖示：Not anymore. Every mistake is an opportunity to learn.
-
-### bk20260716 搭機英文與作業複習（重複 6 格、通用圖示 6 格）
-- #3 [overheadBin] 重複：Certainly. Anything fragile inside?
-- #4 [box] 通用圖示：Yeah, a camera and some electronics. Please be careful with it.
-- #6 [clock] 通用圖示：Great. Any idea how long the flight will take?
-- #8 [turbulence] 重複：I'm a little nervous about flying. Any tips?
-- #10 [cabinSeat] 重複：Okay. Also, the seat in front of me is reclined — I can't open my tray
-- #11 [cabinSeat] 重複：I'll ask them to put it in the upright position before the meal.
-- #12 [food] 通用圖示：Thanks. By the way, why's the food wrapped in aluminum foil?
-- #13 [food] 重複：Foil helps keep it hot. Hot food would soften a plastic box.
-- #14 [plane] 通用圖示：One more thing — could you wake me before we land?
-- #15 [plane] 重複：Sure. We start preparing for landing about 30 minutes out. Enjoy your 
-
-### bk20260721 作業複習與機場旅遊英文（重複 6 格、通用圖示 5 格）
-- #4 [luggageScale] 重複：It's a budget airline, so carry-on is only seven kilograms.
-- #5 [luggageScale] 重複：Only seven? I'm way over that. What are my options?
-- #6 [luggageScale] 重複：You can check in the bag. Put it on the scale, please.
-- #7 [coin] 通用圖示：Sure. Can I purchase extra baggage if it's over?
-- #8 [coin] 重複：You can. It's about five dollars per extra kilogram.
-- #10 [fragileLabel] 重複：No problem. Anything else in there?
-- #12 [briefcase] 通用圖示：Nice. Traveling for business?
-- #13 [building] 通用圖示：Yeah. We've got approximately 300 employees at our factory in Vietnam,
-- #14 [checkinDesk] 重複：Impressive. Here's your boarding pass. Window seat?
-- #15 [plane] 通用圖示：Aisle, please. Last time I felt like vomiting because of the turbulenc
-
-### bk20260630 假設語氣與火車購票英文（重複 6 格、通用圖示 5 格）
-- #3 [departureBoard] 重複：The next early train to Berlin is 8:15 a.m. Train number IC 2345.
-- #6 [ticketWindow] 重複：Should I get a one-way ticket or a return ticket?
-- #9 [cancellationFee] 重複：There's a small cancellation fee if you cancel on the day of departure
-- #10 [coin] 通用圖示：Got it. If I cancel early, I will get a refund with no penalty.
-- #11 [mic] 通用圖示：Exactly. And listen for announcements — sometimes a train has been can
-- #12 [clock] 通用圖示：What if it's just late?
-- #13 [clock] 重複：Then we say the train will be delayed for ten minutes.
-- #15 [skiSnow] 重複：Nice dream. What would you do there?
-- #16 [skiSnow] 重複：Go skiing — I've never seen so much snow.
-- #17 [gift] 通用圖示：It's going to be a great trip someday. Grab some souvenirs for your fr
-
-### bk20260203b 面試技巧手冊 STAR 方法（重複 6 格、通用圖示 4 格）
-- #3 [starSteps] 重複：Situation, Task, Action, Result. So where do I start?
-- #6 [target] 通用圖示：Good. Now the task — what exactly did they expect from you?
-- #7 [target] 重複：My task was to ensure the first batch met all quality standards before
-- #9 [tools] 重複：I initiated a full inspection protocol and personally tested the elect
-- #11 [chartUp] 通用圖示：Excellent. And the result? Give me a number if you've got one.
-- #12 [chartUp] 重複：As a result, we fixed it before mass production, preventing a costly r
-- #13 [starSteps] 重複：It also improved our production-line efficiency by 15% on that model.
-- #15 [elevatorPitch] 重複：With over ten years of experience, I have developed a deep expertise i
-
-### bk20260319 過去簡單式、過去進行式與目標字彙（重複 6 格、通用圖示 3 格）
-- #4 [aimGoalTarget] 重複：Nice. Did you set a clear goal back in January?
-- #6 [clock] 通用圖示：How much time a day?
-- #7 [clock] 重複：About thirty minutes. Mostly listening and speaking — those are the ha
-- #9 [marathonRunner] 重複：No. Progress was slow, and I felt I was falling behind.
-- #10 [calendar] 通用圖示：So what did you change to catch up?
-- #11 [wordNotebook] 重複：A little every day instead of one long session a week. Then I began to
-- #13 [onTrackRail] 重複：Yeah, I'm on track, and I'm less afraid of making mistakes.
-- #15 [rainSuddenly] 重複：Sorry! I was walking home when it started raining, so I was running fo
-
-### bk20260521 join, attend, Satisfactory 用法（重複 6 格、通用圖示 2 格）
-- #3 [leftoverBento] 重複：I had been eating restaurant food for weeks, and now I have no appetit
-- #5 [leftoverBento] 重複：Last night I stared at the leftover bento meals I had brought home.
-- #6 [leftoverBento] 重複：They just looked boring, even though there was variety.
-- #8 [airFryerNuggets] 重複：I decided to warm up some chicken nuggets in the air fryer.
-- #9 [food] 通用圖示：Simple but satisfying. Still, if I kept eating like this, I would gain
-- #11 [satisfiedVsOk] 重複：The service was satisfactory — not great. And I wasn't really satisfie
-- #13 [joinVsAttend] 重複：Yep. And next month I'm planning to join the company running club.
-- #14 [warning] 通用圖示：Nice. Oh, heads up: the pantry sink won't drain properly today.
-
-### bk20260821 電腦檔案與辦公室英文（重複 5 格、通用圖示 8 格）
-- #2 [mic] 通用圖示：Hi Anita, thanks for having me. Can I show my PowerPoint on the TV?
-- #6 [hdmiCable] 重複：Thanks. Mine's an Apple, though — I'll need an adapter for HDMI.
-- #7 [hdmiCable] 重複：Here's one. Let me sort out the cable.
-- #8 [doc] 通用圖示：Great, it works. Can you open the first folder?
-- #9 [doc] 重複：Sure. I made five subfolders in the ABC folder, sorted by date.
-- #11 [check] 通用圖示：The files are identical, so no need to open it.
-- #12 [building] 通用圖示：Okay. By the way, why the small room today?
-- #13 [building] 重複：Our test room's still under construction, so we're in here temporarily
-- #14 [briefcase] 通用圖示：I see. Have you purchased the equipment for it yet?
-- #15 [doc] 重複：Not yet. The invoices are under my boss's review.
-
-### bk20260616 blow片語+情緒形容詞+天氣災害（重複 5 格、通用圖示 8 格）
-- #3 [cloudRain] 通用圖示：Very. It poured all night, and the wind was really strong.
-- #6 [powerLineDown] 重複：The storm blew down the power lines on my street, so the power went ou
-- #7 [warning] 通用圖示：No power all night? You must've been stressed out.
-- #9 [umbrella] 通用圖示：Smart. So what's it like out there now?
-- #10 [cloudRain] 重複：Just drizzling. You only need a light jacket.
-- #11 [cloudRain] 重複：There's a shower coming this afternoon, though. Summer weather's so un
-- #13 [mudRoad] 重複：I saw the photos. Some roads were flooded, and cars got stuck in the m
-- #14 [plane] 通用圖示：The typhoon messed up flight schedules too. My sister's flight got can
-- #15 [leaf] 通用圖示：Well, at least the sun's coming out now.
-- #16 [leaf] 重複：Then let's have lunch outside, in the shade.
-
-### bk20260402 台灣的清明節（重複 5 格、通用圖示 7 格）
-- #2 [calendar] 通用圖示：Thanks for inviting me, Anita. So this takes place in early April ever
-- #3 [leaf] 通用圖示：Yeah. We call it Sweeping Tombs Day, also known as Qingming Festival.
-- #4 [people] 通用圖示：It's when families remember their ancestors.
-- #6 [tombSweep] 重複：My grandmother's. She passed away six years ago.
-- #7 [tombSweep] 重複：The grass around it is really tall.
-- #8 [gear] 通用圖示：After a year it's overgrown, so it needs to be cleaned. We clean the t
-- #10 [offeringTable] 重複：We prepare offerings — fruit, tea, traditional food. It's a way to sho
-- #11 [flame] 通用圖示：Later we burn paper money and incense for her.
-- #13 [springRoll] 重複：They are made with thin wrappers and are filled with vegetables, meat,
-- #14 [springRoll] 重複：People say eating them brings good luck and represents a fresh start i
-- #15 [food] 通用圖示：So it's not only a time to feel sad, but also a time to eat together a
-- #16 [heart] 通用圖示：Exactly. It's a meaningful tradition that helps us stay connected to o
-
-### bk20260423 農夫與智者（重複 5 格、通用圖示 7 格）
-- #3 [talk] 通用圖示：So why come to me?
-- #4 [people] 通用圖示：Everyone referred me to you. So I set out for your house first thing t
-- #5 [noisyHouse] 重複：I'm annoyed and irritated all day — tiny house, way too many noisy kid
-- #6 [paw] 通用圖示：Coax your horse inside the house. Talk to it nice and gentle.
-- #7 [warning] 通用圖示：That's an odd suggestion, but okay — I'll do as you say.
-- #9 [horseInside] 重複：I can't manage to get anything done.
-- #11 [cowsTruck] 重複：I did. And that boosted the noise even more.
-- #12 [paw] 重複：The animals assembled all over the house. I devoted all day to chasing
-- #13 [clock] 通用圖示：Weeks of this, and I was exhausted. I weakened and just lay down.
-- #15 [peacefulHouse] 重複：I apologize. The house is back to normal — it feels so peaceful now.
-- #16 [smile] 通用圖示：You've revealed to me a truth: people should learn to be content with 
-
-### bk20260512 Making Progress（重複 5 格、通用圖示 7 格）
-- #3 [star] 通用圖示：Last year. I was so enthusiastic and motivated at first.
-- #4 [mic] 通用圖示：What was the hardest part?
-- #5 [mic] 重複：I found the pronunciation difficult. People couldn't always understand
-- #6 [talk] 通用圖示：After a while it improved, and I could express basic ideas pretty well
-- #7 [chartUp] 通用圖示：That's real progress.
-- #8 [chartUp] 重複：It was obvious that I was getting better — very encouraging.
-- #10 [learningCurveFlat] 重複：Yeah, and I've made slower progress here. So many words I understand b
-- #12 [brainBlank] 重複：Sometimes my brain goes blank, or just gets stuck. It's frustrating.
-- #14 [vocabNotebookTicks] 重複：To improve, I keep a record of new words and repeat them out loud dail
-- #16 [smile] 通用圖示：I really like that attitude. If you practice a little every day, you'l
-
-### bk20260618 天然災害地震颱風（重複 5 格、通用圖示 7 格）
-- #4 [crackedRoad] 重複：Reports say it shook the buildings and cracked the roads downtown.
-- #5 [people] 通用圖示：Yeah. Lots of people went out to take shelter in the park.
-- #6 [warning] 通用圖示：Were people worried about aftershocks?
-- #7 [crackedRoad] 重複：A little. One old building collapsed, and two statues toppled near the
-- #9 [rescueDig] 重複：They did — pulled out four trapped people with a crane and a bulldozer
-- #10 [heart] 通用圖示：And then the typhoon, two days later.
-- #12 [typhoonDamage] 重複：Some streets were flooded too, and there was a power outage.
-- #13 [doc] 通用圖示：The government warned people to stay indoors, and most schools were cl
-- #14 [people] 重複：How's the town doing now?
-- #15 [gift] 通用圖示：Volunteers cleared the mud, and people donated food and blankets.
-- #16 [check] 通用圖示：So things went back to normal pretty fast. Thanks, Tom.
-
-### bk20260623 Used to + 天災詞彙（重複 5 格、通用圖示 7 格）
-- #3 [coffeeBreak] 重複：I used to have coffee first thing in the morning, on an empty stomach.
-- #4 [clock] 通用圖示：And now?
-- #5 [clock] 重複：Now I eat first. I used to stay up late too, but not anymore.
-- #7 [seasonsThenNow] 重複：No. There used to be four distinct seasons in Taiwan.
-- #8 [calendar] 通用圖示：So spring and fall didn't use to be this short?
-- #10 [warning] 通用圖示：So earthquakes are common here?
-- #11 [warning] 重複：Very. Last year the east coast was hit by a strong one.
-- #14 [emergencySupplies] 重複：Preparing ahead really reduces the impact of natural disasters.
-- #15 [chartUp] 通用圖示：That's a lot to learn. Hard to keep up with all of it.
-- #16 [star] 通用圖示：You'll be fine. You're a smart cookie.
 
 ### bk20260317 現在簡單式與現在進行式（重複 5 格、通用圖示 6 格）
 - #2 [house] 通用圖示：Hi! You must be my new neighbor. I'm Tom, fifth floor.
