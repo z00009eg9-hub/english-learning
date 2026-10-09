@@ -21957,6 +21957,7 @@ window.BOOK = {
     "id": "bk20261008",
     "video": true,
     "icon": "🛠️",
+    "iconSvg": "<svg viewBox=\"0 0 96 96\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"48\" cy=\"48\" r=\"45\" fill=\"#fff\" stroke=\"#f0c9a0\" stroke-width=\"3\"/><rect x=\"24\" y=\"38\" width=\"48\" height=\"30\" rx=\"4\" fill=\"#fff\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><circle cx=\"42\" cy=\"53\" r=\"8\" fill=\"#e8913a\" stroke=\"#2b2118\" stroke-width=\"3\"/><circle cx=\"42\" cy=\"53\" r=\"2.5\" fill=\"#2b2118\"/><path d=\"M42 42 v4 M42 60 v4 M31 53 h4 M49 53 h4\" stroke=\"#2b2118\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect x=\"58\" y=\"46\" width=\"9\" height=\"14\" rx=\"2\" fill=\"#c9631f\" stroke=\"#2b2118\" stroke-width=\"3\"/><path d=\"M34 38 v-7 h28 v7\" fill=\"none\" stroke=\"#2b2118\" stroke-width=\"3.5\" stroke-linejoin=\"round\"/><g stroke=\"#d9691f\" stroke-width=\"3.5\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M18 30 l6 4\"/><path d=\"M78 30 l-6 4\"/><path d=\"M48 20 v6\"/></g></svg>",
     "date": "2026-10-08",
     "doc": "https://docs.google.com/document/d/1aZz_clyX1jA92XFTg8MqqQo_B3w1pHjrtz_S1lfTYP8/edit",
     "title": "Machine Problems & How long",
