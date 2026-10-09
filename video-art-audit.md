@@ -1,39 +1,21 @@
 # 影片左圖盤點
 
-- 有場景的課：87；場景句 1299；不同圖 1233；重複格 66；相鄰同圖 47
-- 圖庫 836 張；場景用到的專屬圖 822 張；通用小圖示佔 200 個場景格；沒被用過的專屬圖 14 張
+- 有場景的課：87；場景句 1299；不同圖 1278；重複格 21；相鄰同圖 15
+- 圖庫 983 張；場景用到的專屬圖 969 張；通用小圖示佔 92 個場景格；沒被用過的專屬圖 14 張
 - 指向不存在圖庫的 art：無
-- **完全合格的課（重複 0 且無通用圖示）：52 / 87；還要做 35 課**
+- **完全合格的課（重複 0 且無通用圖示）：70 / 87；還要做 17 課**
 
 | 級別 | 課數 | 重複格合計 |
 |---|---|---|
 | 重複 10～+ | 0 | 0 |
 | 重複 5～9 | 0 | 0 |
-| 重複 1～4 | 34 | 66 |
-| 重複 0 | 53 | 0 |
+| 重複 1～4 | 16 | 21 |
+| 重複 0 | 71 | 0 |
 
 ## 待辦明細（重複格多的在前）
 
 | 課 | 日期 | 標題 | 場景句 | 不同圖 | 重複格 | 相鄰同圖 | 單圖最多次 | 通用圖示格 |
 |---|---|---|---|---|---|---|---|---|
-| bk20260604 | 2026-06-04 | 天氣與災害：龍捲風、颱風、颶風 | 14 | 11 | 3 | 2 | 3 | 7 |
-| bk20260108 | 2026-01-08 | 使役動詞與借過用語 | 14 | 11 | 3 | 3 | 3 | 6 |
-| bk20260226b | 2026-02-26 | 面試 interview（QA 問答訂正） | 14 | 11 | 3 | 2 | 2 | 5 |
-| bk20250722 | 2025-07-22 | 我最好的朋友：友誼片語與 That's why／That's what 句型 | 15 | 12 | 3 | 3 | 2 | 5 |
-| bk20250724 | 2025-07-24 | 手機分離焦慮真的存在嗎？ | 16 | 13 | 3 | 3 | 2 | 5 |
-| bk20261001 | 2026-10-01 | 出貨前品質檢驗 | 17 | 14 | 3 | 2 | 3 | 5 |
-| bk20260507 | 2026-05-07 | 基本口說 | 14 | 11 | 3 | 2 | 3 | 4 |
-| bk20251216 | 2025-12-16 | 修繕與職業 | 14 | 11 | 3 | 2 | 2 | 0 |
-| bk20251226a | 2025-12-26 | 壓力管理與假設語氣 | 14 | 11 | 3 | 3 | 2 | 0 |
-| bk20260611 | 2026-06-11 | 修剪刮鬍與颱風強風片語 | 15 | 13 | 2 | 2 | 2 | 10 |
-| bk20260804 | 2026-08-04 | 樂觀思考 Elaborate 與健康症狀 | 14 | 12 | 2 | 1 | 2 | 9 |
-| bk20260825 | 2026-08-25 | 時差表達與默契用語 | 14 | 12 | 2 | 1 | 2 | 9 |
-| bk20260827 | 2026-08-27 | 動名詞與不定詞、默契用語與職場英文 | 14 | 12 | 2 | 2 | 2 | 9 |
-| bk20260212 | 2026-02-12 | 農曆新年＋面試 | 15 | 13 | 2 | 2 | 2 | 8 |
-| bk20260910 | 2026-09-10 | 動名詞與不定詞、樂器與稽核英文 | 13 | 11 | 2 | 0 | 2 | 7 |
-| bk20260224 | 2026-02-24 | 面試 future goal | 14 | 12 | 2 | 0 | 2 | 7 |
-| bk20260915 | 2026-09-15 | 工廠稽核與組裝線流程 | 15 | 13 | 2 | 1 | 2 | 6 |
-| bk20260106b | 2026-01-06 | 與房東的糾紛 | 14 | 12 | 2 | 1 | 2 | 6 |
 | bk20260120b | 2026-01-20 | 生活英文 Leave Hurry Health | 14 | 12 | 2 | 2 | 2 | 6 |
 | bk20260331 | 2026-03-31 | 進步與表達 | 14 | 12 | 2 | 2 | 2 | 6 |
 | bk20260421 | 2026-04-21 | 時態與身體症狀複習 | 15 | 13 | 2 | 2 | 2 | 6 |
@@ -53,189 +35,6 @@
 | bk20251202 | 2025-12-02 | 感恩節 | 14 | 14 | 0 | 0 | 1 | 4 |
 
 ## 每課要換圖的句子
-
-### bk20260604 天氣與災害：龍捲風、颱風、颶風（重複 3 格、通用圖示 7 格）
-- #3 [rainIntensity] 重複：It is drizzling now, but it should clear up this afternoon.
-- #4 [cloudRain] 通用圖示：Here it is pouring. The weather forecast says a typhoon hits us Friday
-- #5 [warning] 通用圖示：Be careful. The news says roads may close due to the storm.
-- #7 [tornadoFunnel] 重複：Yeah. The sirens went off, and everyone ran to take shelter.
-- #8 [house] 通用圖示：Scary. Do you go down to the basement?
-- #9 [tornadoFunnel] 重複：Always. A tornado is small but really strong, and it might hit this ar
-- #11 [plane] 通用圖示：Same here before a hurricane. Last year, one disrupted flights for thr
-- #12 [bolt] 通用圖示：Our last typhoon knocked down trees and power lines. No power for hour
-- #14 [snow] 通用圖示：Wow. Hail's rare here, but it is snowing heavily in the mountains righ
-- #15 [calendar] 通用圖示：Stay safe Friday. Text me if school's closed because of the typhoon.
-
-### bk20260108 使役動詞與借過用語（重複 3 格、通用圖示 6 格）
-- #3 [crowdedAisle] 重複：Oh, sure. Let me move my cart over a bit.
-- #4 [crowdedAisle] 重複：Thanks. I always pick the busiest aisle in the store.
-- #7 [doc] 通用圖示：Sorry about that. Got the receipt?
-- #9 [refundPhone] 重複：Of course. Or I can exchange this shirt for a bigger size, if you'd li
-- #10 [gear] 通用圖示：A refund, please. Store policy makes me keep the receipt for a month, 
-- #11 [check] 通用圖示：That's right. I'll have my manager approve it right now.
-- #12 [box] 通用圖示：Thanks. Oh, let me carry the box myself — it's not heavy.
-- #13 [people] 通用圖示：Careful, the exit's packed. Make way, please! Customer coming through!
-- #15 [smile] 通用圖示：Well, I hope your next visit's quieter. Have a nice day!
-
-### bk20260226b 面試 interview（QA 問答訂正）（重複 3 格、通用圖示 5 格）
-- #3 [check] 通用圖示：I make sure the product meets quality standards.
-- #5 [warning] 通用圖示：Good. And when a quality problem shows up?
-- #6 [stopRepeat] 重複：First, I prevent it from getting worse.
-- #7 [people] 通用圖示：Then I analyze the root cause and work out a fix with the team.
-- #8 [chartUp] 通用圖示：Finally, we implement improvements and monitor the results.
-- #9 [briefcase] 通用圖示：Here's a harder one. Why should we hire you?
-- #12 [sentenceSlots] 重複：Nice. You could put that at the end, too: I work carefully as well.
-- #14 [tightDeadline] 重複：Sure, especially during product launches, when we face tight deadlines
-
-### bk20250722 我最好的朋友：友誼片語與 That's why／That's what 句型（重複 3 格、通用圖示 5 格）
-- #2 [phone] 通用圖示：Anita, you texted me at midnight. Everything okay?
-- #3 [heart] 通用圖示：Yeah, sorry. Sarah and I have been friends for ages, and she needed me
-- #4 [people] 通用圖示：What's Sarah like?
-- #7 [feedbackNote] 重複：Always. If I'm doing something wrong, she's honest with me.
-- #9 [cheerUp] 重複：She knows just how to cheer me up. Last week she brought me milk tea.
-- #14 [verbFork] 重複：Exactly. And that's what makes our friendship so strong.
-- #15 [gift] 通用圖示：I appreciate friends like that. My roommate's sociable, but not honest
-- #16 [clock] 通用圖示：Whenever I have a problem, I know I can talk to her. I'm lucky to have
-
-### bk20250724 手機分離焦慮真的存在嗎？（重複 3 格、通用圖示 5 格）
-- #4 [worriedFace] 重複：Exactly. Does phone separation anxiety really exist?
-- #5 [doc] 通用圖示：It does. Researchers call it nomophobia — short for no-mobile phobia.
-- #6 [people] 通用圖示：That's just a teenager thing, right?
-- #7 [people] 重複：Nope. It affects teenagers and adults alike.
-- #12 [fomoFeed] 重複：He says it is what is on the phone that counts — the social networking
-- #15 [warning] 通用圖示：It also has to compromise relationships or work and provoke inner conf
-- #17 [check] 通用圖示：Good plan. People adapt really fast when there's no internet.
-
-### bk20261001 出貨前品質檢驗（重複 3 格、通用圖示 5 格）
-- #6 [scratch] 重複：Maybe we can just touch it up and ship it?
-- #7 [warning] 通用圖示：It may look bad to the customer. I asked the operator to separate the 
-- #10 [cableTie] 重複：Did someone pull on it too hard?
-- #11 [cableTie] 重複：Pretty much. The operator forgot to remove the cable first, so the cab
-- #13 [check] 通用圖示：I'd take a practical approach and check the whole unit first, in case 
-- #14 [talk] 通用圖示：Makes sense. I'll approach the line leader about the cable issue.
-- #17 [people] 通用圖示：Honestly, our team was pretty stressed this week, but we'll be ready b
-- #18 [box] 通用圖示：Great work, Anita. Let's ship it on Friday.
-
-### bk20260507 基本口說（重複 3 格、通用圖示 4 格）
-- #6 [cyclistSun] 重複：Did he drink enough water?
-- #7 [cyclistSun] 重複：Nope. We tried to coax him to take a big bottle, but he wouldn't liste
-- #8 [book] 通用圖示：Sounds like my son. Anyway, how's the English class going?
-- #9 [chartUp] 通用圖示：Really well. One-on-one every week — it helps me boost my English skil
-- #11 [mail] 通用圖示：Every single day. For business emails, I check the grammar first.
-- #12 [people] 通用圖示：And how'd you get to know your teacher?
-- #15 [coffeeBreak] 重複：Good luck. I'll try to manage my time better too, but this heat makes 
-
-### bk20251216 修繕與職業（重複 3 格、通用圖示 0 格）
-- #5 [toiletBroken] 重複：Okay. Does it empty all the way when you press it?
-- #12 [faultySocket] 重複：Smart. He'll make sure the lights and sockets are safe.
-- #14 [clipboard] 重複：Well, that's a long day. Skilled professionals solve problems efficien
-
-### bk20251226a 壓力管理與假設語氣（重複 3 格、通用圖示 0 格）
-- #5 [stuckFaucet] 重複：The faucet's stuck, and a ceiling tile fell off in the bathroom.
-- #9 [priorityStack] 重複：Fix the most urgent and dangerous stuff first.
-- #13 [hotBathRelax] 重複：A bathtub full of hot water. Calms everything down.
-
-### bk20260611 修剪刮鬍與颱風強風片語（重複 2 格、通用圖示 10 格）
-- #3 [scooter] 通用圖示：I know. The scooters outside my building are all blown over.
-- #5 [cross] 通用圖示：Oh no. The old tree too?
-- #6 [leaf] 通用圖示：Yeah, and the shop sign was blown away by the wind too.
-- #7 [cloudRain] 通用圖示：At least the typhoon made landfall at night. What's the forecast now?
-- #8 [umbrella] 通用圖示：It has blown over. It's only drizzling now.
-- #9 [warning] 通用圖示：Good. The air's full of dust, though, so I'm wearing a mask.
-- #10 [calendar] 通用圖示：By the way, did you make the office meeting yesterday?
-- #11 [calendar] 重複：Well, I blew off the meeting. I was just too tired.
-- #12 [smile] 通用圖示：Take it easy. This will blow over soon.
-- #15 [shaveRazor] 重複：I do, but my razor blew off the balcony last night!
-- #16 [music] 通用圖示：That's a first. I'm blown away by that story!
-
-### bk20260804 樂觀思考 Elaborate 與健康症狀（重複 2 格、通用圖示 9 格）
-- #2 [warning] 通用圖示：Tom, you look pale. You okay?
-- #4 [talk] 通用圖示：Can you elaborate on that? When did it start?
-- #6 [cross] 通用圖示：Sounds like food poisoning. Any stomach pain?
-- #7 [doc] 通用圖示：A little. But the real problem's my presentation. It was a failure.
-- #8 [smile] 通用圖示：Cheer up! It's not the end of the world.
-- #9 [warning] 重複：My boss yelled at me. I don't want to fail again.
-- #11 [target] 通用圖示：You always have such a positive mindset.
-- #13 [growVsGrowUp] 重複：Grow, not grow up, right? Our teacher corrected that last week.
-- #14 [chartUp] 通用圖示：Exactly. Our company is constantly improving its quality — and so will
-- #15 [heart] 通用圖示：Thanks for the encouragement. I'll head home and rest.
-
-### bk20260825 時差表達與默契用語（重複 2 格、通用圖示 9 格）
-- #3 [timeZoneClocks] 重複：We're sixteen hours ahead of California — it's already Tuesday morning
-- #4 [clock] 通用圖示：Right, we're sixteen hours behind you. Did you get my file yesterday?
-- #6 [mail] 通用圖示：Sorry about that. I'll compress the photos and resend.
-- #7 [building] 通用圖示：Thanks. Also, our QA office is under construction — we're working temp
-- #8 [box] 通用圖示：Oh, is that why the products can't ship yet?
-- #9 [doc] 通用圖示：No — the quality issue is still under review.
-- #10 [globe] 通用圖示：Got it. We have a lot in common, by the way — we both love traveling.
-- #12 [people] 通用圖示：We've got good chemistry. And the whole team's on the same page.
-- #14 [check] 通用圖示：Okay, managed to fix it. Let's continue.
-- #15 [doc] 重複：Great. After this, I'll submit the report to my boss for review.
-
-### bk20260827 動名詞與不定詞、默契用語與職場英文（重複 2 格、通用圖示 9 格）
-- #2 [calendar] 通用圖示：Morning, Anita. Would you mind going over the schedule with me?
-- #3 [doc] 通用圖示：Sure. First, I suggest finishing the test report today.
-- #5 [keepCrashing] 重複：Again? My laptop's unreliable too — keeps breaking down.
-- #7 [check] 通用圖示：No, we can't keep the client waiting. We managed to fix it last time, 
-- #8 [briefcase] 通用圖示：True. I'm responsible for submitting the invoices, too.
-- #9 [food] 通用圖示：Don't forget to do it today. Oh — and we're out of coffee.
-- #10 [smile] 通用圖示：Guess I'll go on working without coffee.
-- #12 [puzzleFit] 重複：Yeah, the team's got great chemistry — we communicate efficiently.
-- #13 [people] 通用圖示：And we've built good rapport with our clients, too.
-- #14 [talk] 通用圖示：I've given up trying to persuade the boss to hire more people, though.
-- #15 [thumb] 通用圖示：Don't give up — I'll convince him that we need help. That's all about 
-
-### bk20260212 農曆新年＋面試（重複 2 格、通用圖示 8 格）
-- #2 [calendar] 通用圖示：Anita, the office is empty next week. Is Chinese New Year really that 
-- #3 [star] 通用圖示：It's the most important festival in Taiwan, and it lasts for several d
-- #4 [heart] 通用圖示：People believe it brings good luck, health, and happiness.
-- #5 [house] 通用圖示：My neighbors were cleaning all weekend. How come?
-- #6 [trash] 通用圖示：Because cleaning helps remove the bad luck from the old year.
-- #9 [reunionDinner] 重複：The whole family gets together for the reunion dinner.
-- #10 [food] 通用圖示：Fish, dumplings, rice cakes — those foods mean wealth and success.
-- #12 [redEnvelope] 重複：Yep. Kids receive red envelopes from their parents or grandparents.
-- #13 [building] 通用圖示：Do people go anywhere during the holiday?
-- #16 [gear] 通用圖示：We ran out of treadmill magnets, and the supplier didn't deliver on ti
-
-### bk20260910 動名詞與不定詞、樂器與稽核英文（重複 2 格、通用圖示 7 格）
-- #3 [building] 通用圖示：Not really. This is the first time our factory has set up a painting r
-- #4 [calendar] 通用圖示：When's the audit?
-- #6 [check] 通用圖示：Okay, be well prepared — but don't work all night.
-- #7 [coffeeBreak] 重複：My manager suggested taking a break, but I'm always in a hurry.
-- #10 [music] 通用圖示：Then let's practice together. My coworkers avoid listening to me — I n
-- #11 [briefcase] 通用圖示：Okay. I decided to change jobs last year because of stress. I really n
-- #13 [calendar] 重複：Let's arrange to meet Saturday, then. I'll bring my keyboard.
-- #14 [smile] 通用圖示：Deal. Now go finish that audit plan. You'll do fine.
-
-### bk20260224 面試 future goal（重複 2 格、通用圖示 7 格）
-- #4 [briefcase] 通用圖示：Nice. Okay, let's start — tell me about your job.
-- #7 [gear] 通用圖示：I inspect and test the equipment, and I check the dimensions carefully
-- #8 [people] 通用圖示：When I find problems, I report them to the design engineers.
-- #9 [warning] 通用圖示：And when the problems persist?
-- #12 [globe] 通用圖示：In the near future, I hope to be hired by a company that can expand my
-- #13 [careerSteps] 重複：Long term, I'd like to grow into a senior quality manager.
-- #14 [people] 重複：I also want to lead cross-functional teams and ensure that projects ar
-- #15 [check] 通用圖示：That's a clear answer. Thanks, Anita.
-
-### bk20260915 工廠稽核與組裝線流程（重複 2 格、通用圖示 6 格）
-- #3 [building] 通用圖示：Welcome, Tom. It's the first time we have had an audit in Vietnam, so 
-- #4 [smile] 通用圖示：No worries. Just show me how you control the quality.
-- #8 [scratch] 重複：We visually inspect it — scratches, dents, any visible defects.
-- #9 [warning] 通用圖示：And if you find one?
-- #10 [cross] 通用圖示：We separate the defective unit, find the problem, and take corrective 
-- #12 [check] 通用圖示：And after the functional test at station four?
-- #15 [doc] 通用圖示：Very clear. Do workers follow the work instruction at every station?
-- #16 [clipboard] 重複：Yes. Each station has one, and they have to follow it.
-
-### bk20260106b 與房東的糾紛（重複 2 格、通用圖示 6 格）
-- #2 [phone] 通用圖示：Hey Tom, it's Anita. I'm calling about the repairs again.
-- #3 [talk] 通用圖示：Hi, Anita. What's going on this time?
-- #6 [calendar] 通用圖示：Oh. Can it wait till next month? I'm pretty busy.
-- #8 [leakingPipe] 重複：The faulty pipe is damaging the wall right now.
-- #10 [sinkFellOff] 重複：Yep. It had fallen off the countertop before I moved in — the glue was
-- #11 [warning] 通用圖示：These problems could get dangerous if not fixed properly.
-- #12 [doc] 通用圖示：I get that. Repairs are expensive, though.
-- #15 [smile] 通用圖示：Thanks. I'm relieved we solved this without a bigger dispute.
 
 ### bk20260120b 生活英文 Leave Hurry Health（重複 2 格、通用圖示 6 格）
 - #3 [hurryMorning] 重複：Very. I left my phone at home and had to go back.
