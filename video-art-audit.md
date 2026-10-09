@@ -1,23 +1,21 @@
 # 影片左圖盤點
 
-- 有場景的課：87；場景句 1299；不同圖 1215；重複格 84；相鄰同圖 59
-- 圖庫 776 張；場景用到的專屬圖 762 張；通用小圖示佔 245 個場景格；沒被用過的專屬圖 14 張
+- 有場景的課：87；場景句 1299；不同圖 1221；重複格 78；相鄰同圖 54
+- 圖庫 797 張；場景用到的專屬圖 783 張；通用小圖示佔 229 個場景格；沒被用過的專屬圖 14 張
 - 指向不存在圖庫的 art：無
-- **完全合格的課（重複 0 且無通用圖示）：46 / 87；還要做 41 課**
+- **完全合格的課（重複 0 且無通用圖示）：48 / 87；還要做 39 課**
 
 | 級別 | 課數 | 重複格合計 |
 |---|---|---|
 | 重複 10～+ | 0 | 0 |
 | 重複 5～9 | 0 | 0 |
-| 重複 1～4 | 40 | 84 |
-| 重複 0 | 47 | 0 |
+| 重複 1～4 | 38 | 78 |
+| 重複 0 | 49 | 0 |
 
 ## 待辦明細（重複格多的在前）
 
 | 課 | 日期 | 標題 | 場景句 | 不同圖 | 重複格 | 相鄰同圖 | 單圖最多次 | 通用圖示格 |
 |---|---|---|---|---|---|---|---|---|
-| bk20260903 | 2026-09-03 | 辦公室難熬的一天與紓壓用語 | 16 | 13 | 3 | 3 | 2 | 8 |
-| bk20260106a | 2026-01-06 | 房東與房客 | 15 | 12 | 3 | 2 | 2 | 8 |
 | bk20260120a | 2026-01-20 | 整形手術 | 14 | 11 | 3 | 1 | 2 | 8 |
 | bk20260707 | 2026-07-07 | 航班旅遊閱讀 飛行問題 | 14 | 11 | 3 | 1 | 2 | 7 |
 | bk20260122 | 2026-01-22 | 金錢觀與整形手術 | 14 | 11 | 3 | 2 | 2 | 7 |
@@ -59,31 +57,6 @@
 | bk20251202 | 2025-12-02 | 感恩節 | 14 | 14 | 0 | 0 | 1 | 4 |
 
 ## 每課要換圖的句子
-
-### bk20260903 辦公室難熬的一天與紓壓用語（重複 3 格、通用圖示 8 格）
-- #2 [clock] 通用圖示：Anita, you look tired. Rough day?
-- #5 [elevatorDown] 重複：Totally unreliable. I took it several times and waited forever.
-- #6 [building] 通用圖示：And when you arrived at your department?
-- #7 [phone] 通用圖示：The computer service was down, and I was in charge of contacting IT.
-- #9 [tools] 重複：Not right away. He denied that it was serious, but said it'd be fixed 
-- #11 [invoiceDue] 重複：That's okay. The customer had put off making the payment, so I called 
-- #12 [talk] 通用圖示：Did you persuade him to pay?
-- #13 [smile] 通用圖示：Yeah. I have a good rapport with him. I explained it calmly, and event
-- #14 [cloudRain] 通用圖示：That sounds stressful. How'd you handle it?
-- #16 [leaf] 通用圖示：Good idea. A walk's a great way to relieve stress.
-- #17 [check] 通用圖示：By five, everything was back to normal. I'm proud I handled the proble
-
-### bk20260106a 房東與房客（重複 3 格、通用圖示 8 格）
-- #2 [house] 通用圖示：Thanks for coming up, Tom. I've got a few problems to show you.
-- #3 [talk] 通用圖示：Sure. As your landlord, I want to hear all of them.
-- #5 [toiletBroken] 重複：Okay. Anything else in the bathroom?
-- #8 [warning] 通用圖示：That's dangerous. Anyone get hurt?
-- #10 [warning] 重複：I'm also worried about the faulty wiring by the kitchen sink.
-- #11 [calendar] 通用圖示：Well, I kept delaying these repairs — I've been really busy.
-- #13 [tools] 重複：Some of this needs a professional plumber or electrician, not a tenant
-- #14 [doc] 通用圖示：Keeping it safe is your responsibility. Can you arrange repairs as soo
-- #15 [check] 通用圖示：You're right. I'll arrange repairs this Friday and cover everything.
-- #16 [smile] 通用圖示：Thanks. I'm relieved we solved this without a real dispute.
 
 ### bk20260120a 整形手術（重複 3 格、通用圖示 8 格）
 - #5 [wasteOfMoney] 重複：I'm not the best-looking person, but I'd never get surgery — even if i
