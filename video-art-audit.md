@@ -1,24 +1,22 @@
 # 影片左圖盤點
 
-- 盤點時間：2026-10-09 11:13
-- 有場景的課：87；場景句 1299；不同圖 992；重複格 307；相鄰同圖 242
-- 圖庫 386 張；場景用到的專屬圖 372 張；通用小圖示佔 454 個場景格；沒被用過的專屬圖 14 張
+- 盤點時間：2026-10-09 11:38
+- 有場景的課：87；場景句 1299；不同圖 1013；重複格 286；相鄰同圖 224
+- 圖庫 409 張；場景用到的專屬圖 395 張；通用小圖示佔 451 個場景格；沒被用過的專屬圖 14 張
 - 指向不存在圖庫的 art：無
-- **完全合格的課（重複 0 且無通用圖示）：4 / 87；還要做 83 課**
+- **完全合格的課（重複 0 且無通用圖示）：6 / 87；還要做 81 課**
 
 | 級別 | 課數 | 重複格合計 |
 |---|---|---|
-| 重複 10～+ | 2 | 21 |
+| 重複 10～+ | 0 | 0 |
 | 重複 5～9 | 26 | 148 |
 | 重複 1～4 | 54 | 138 |
-| 重複 0 | 5 | 0 |
+| 重複 0 | 7 | 0 |
 
 ## 待辦明細（重複格多的在前）
 
 | 課 | 日期 | 標題 | 場景句 | 不同圖 | 重複格 | 相鄰同圖 | 單圖最多次 | 通用圖示格 |
 |---|---|---|---|---|---|---|---|---|
-| bk20261006 | 2026-10-06 | 操作員訓練與資格 | 18 | 7 | 11 | 8 | 5 | 1 |
-| bk20260609 | 2026-06-09 | 淹水道路與圖片描述 | 15 | 5 | 10 | 10 | 6 | 2 |
 | bk20260625 | 2026-06-25 | 天然災害與旅遊敘述 | 17 | 8 | 9 | 9 | 4 | 2 |
 | bk20261008 | 2026-10-08 | 機器異常與 How long 句型 | 18 | 10 | 8 | 7 | 4 | 0 |
 | bk20260326 | 2026-03-26 | 穩定進步的學習歷程 | 15 | 8 | 7 | 5 | 4 | 6 |
@@ -102,33 +100,6 @@
 | bk20251202 | 2025-12-02 | 感恩節 | 14 | 14 | 0 | 0 | 1 | 4 |
 
 ## 每課要換圖的句子
-
-### bk20261006 操作員訓練與資格（重複 11 格、通用圖示 1 格）
-- #4 [clipboard] 重複：Nice. So how do you verify that your operators are qualified to perfor
-- #6 [safetyGearSet] 重複：And who evaluates them? An outside body?
-- #7 [clipboard] 重複：No, we check our employees’ abilities ourselves. It's all internal.
-- #8 [station] 重複：What if someone doesn't pass?
-- #9 [station] 重複：Then we assign them to an easier task at a simpler station. More train
-- #11 [skillLevelsABC] 重複：Three skill levels per station — A, B, and C. Level A tasks are the ea
-- #12 [skillLevelsABC] 重複：So people move up over time?
-- #13 [chartUp] 通用圖示：Right. Operators start at Level A and move to higher levels as their s
-- #15 [haveYourBack] 重複：Another qualified operator can cover for them. The replacement has rec
-- #17 [assemblyLine] 重複：Exactly. We train all operators to work at different stations, so prod
-- #18 [clipboard] 重複：Alright, that's everything on my list. Thanks for walking me through i
-- #19 [clipboard] 重複：Any time. On audit day we'll show the records and explain how we verif
-
-### bk20260609 淹水道路與圖片描述（重複 10 格、通用圖示 2 格）
-- #4 [umbrellaWoman] 重複：Good. Now details — what is she wearing?
-- #5 [umbrellaWoman] 重複：She is wearing a grey coat, a colorful scarf, glasses, and earrings.
-- #6 [umbrellaWoman] 重複：Her hair? Use the fixed phrase we learned.
-- #7 [umbrellaWoman] 重複：She has tied her hair in a ponytail. The wind's strong — it's blowing 
-- #8 [cloudRain] 通用圖示：Step three, the scene. What's the weather like?
-- #9 [cloudRain] 重複：It is drizzling. She has just finished work and is heading home.
-- #11 [maskRider] 重複：He has short black hair and a beard. The traffic is heavy, so he is st
-- #12 [maskRider] 重複：Why the mask?
-- #13 [maskRider] 重複：He is wearing a mask to protect himself from air pollution.
-- #14 [maskRider] 重複：Now step four. What can you guess about the place?
-- #15 [maskRider] 重複：It seems the air is polluted — too many vehicles. And there's a dispos
 
 ### bk20260625 天然災害與旅遊敘述（重複 9 格、通用圖示 2 格）
 - #3 [cherryTemple] 重複：Amazing. It was my first time visiting Japan, so I was pretty excited.
