@@ -1,23 +1,21 @@
 # 影片左圖盤點
 
-- 有場景的課：87；場景句 1299；不同圖 1221；重複格 78；相鄰同圖 54
-- 圖庫 797 張；場景用到的專屬圖 783 張；通用小圖示佔 229 個場景格；沒被用過的專屬圖 14 張
+- 有場景的課：87；場景句 1299；不同圖 1227；重複格 72；相鄰同圖 52
+- 圖庫 816 張；場景用到的專屬圖 802 張；通用小圖示佔 214 個場景格；沒被用過的專屬圖 14 張
 - 指向不存在圖庫的 art：無
-- **完全合格的課（重複 0 且無通用圖示）：48 / 87；還要做 39 課**
+- **完全合格的課（重複 0 且無通用圖示）：50 / 87；還要做 37 課**
 
 | 級別 | 課數 | 重複格合計 |
 |---|---|---|
 | 重複 10～+ | 0 | 0 |
 | 重複 5～9 | 0 | 0 |
-| 重複 1～4 | 38 | 78 |
-| 重複 0 | 49 | 0 |
+| 重複 1～4 | 36 | 72 |
+| 重複 0 | 51 | 0 |
 
 ## 待辦明細（重複格多的在前）
 
 | 課 | 日期 | 標題 | 場景句 | 不同圖 | 重複格 | 相鄰同圖 | 單圖最多次 | 通用圖示格 |
 |---|---|---|---|---|---|---|---|---|
-| bk20260120a | 2026-01-20 | 整形手術 | 14 | 11 | 3 | 1 | 2 | 8 |
-| bk20260707 | 2026-07-07 | 航班旅遊閱讀 飛行問題 | 14 | 11 | 3 | 1 | 2 | 7 |
 | bk20260122 | 2026-01-22 | 金錢觀與整形手術 | 14 | 11 | 3 | 2 | 2 | 7 |
 | bk20260129b | 2026-01-29 | 公司活動與社交英文手冊 | 14 | 11 | 3 | 3 | 2 | 7 |
 | bk20260604 | 2026-06-04 | 天氣與災害：龍捲風、颱風、颶風 | 14 | 11 | 3 | 2 | 3 | 7 |
@@ -57,29 +55,6 @@
 | bk20251202 | 2025-12-02 | 感恩節 | 14 | 14 | 0 | 0 | 1 | 4 |
 
 ## 每課要換圖的句子
-
-### bk20260120a 整形手術（重複 3 格、通用圖示 8 格）
-- #5 [wasteOfMoney] 重複：I'm not the best-looking person, but I'd never get surgery — even if i
-- #6 [star] 通用圖示：While I respect your opinion, I think surgery can boost a person's con
-- #7 [heart] 通用圖示：It also improves appearance for people who've been in accidents.
-- #8 [heart] 重複：That part I agree with. Medical cases aren't a nose job.
-- #9 [briefcase] 通用圖示：And looking professional sometimes means better career opportunities.
-- #11 [noseJobPlan] 重複：True. A good cosmetic surgeon usually says no to that.
-- #12 [smile] 通用圖示：I would rather stay natural and look human.
-- #13 [talk] 通用圖示：So — you prefer staying natural and accepting yourself.
-- #14 [people] 通用圖示：Exactly. And if a friend's overweight, I'd use that word — not fat.
-- #15 [check] 通用圖示：Fair enough. Confidence usually comes from the mind, not the face.
-
-### bk20260707 航班旅遊閱讀 飛行問題（重複 3 格、通用圖示 7 格）
-- #4 [cloudRain] 通用圖示：Right, sorry about that. It was delayed because of bad weather.
-- #5 [departureBoard] 重複：And I'm afraid we just announced the flight is cancelled.
-- #6 [plane] 通用圖示：Oh no. Can I rebook my flight — is there another available flight toda
-- #7 [calendar] 通用圖示：Not today. But you can book another flight for tomorrow morning.
-- #8 [coin] 通用圖示：Then I'd like to ask for a refund on today's ticket.
-- #10 [coin] 重複：Do I have to pay a cancellation fee?
-- #11 [check] 通用圖示：No, you don't have to pay anything. We cancelled it, not you.
-- #12 [doc] 通用圖示：Great. One more thing — is my return ticket still okay?
-- #15 [trainPlatform] 重複：Platform three. Check the number so you don't miss your train.
 
 ### bk20260122 金錢觀與整形手術（重複 3 格、通用圖示 7 格）
 - #3 [moneyWorld] 重複：I partly agree that it does. Without money, life doesn't go so smoothl

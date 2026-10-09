@@ -577,24 +577,24 @@ window.VIDEO.bk20260707 = {
       en: "Hi. I checked the flight timetable this morning — now the board says my Tokyo flight's delayed.",
       cn: "你好。我今天早上查過航班時刻表——現在看板卻說我飛東京的班機延誤了。",
       hi: [{ t: "flight timetable", cn: "航班時刻表", k: "timetable", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "cloudRain" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260707_01" },
       en: "Right, sorry about that. It was delayed because of bad weather.",
       cn: "是的，很抱歉。它是因為天氣不好而延誤的。",
       hi: [{ t: "was delayed because of bad weather", cn: "因為天氣不好而延誤", k: "delayed", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "departureBoard" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260707_02" },
       en: "And I'm afraid we just announced the flight is cancelled.",
       cn: "而且很遺憾，我們剛剛宣布班機取消了。",
       hi: [{ t: "the flight is cancelled", cn: "班機取消了", k: "cancelled", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "plane" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260707_03" },
       en: "Oh no. Can I rebook my flight — is there another available flight today?",
       cn: "糟糕。我可以重新訂位嗎——今天還有其他可搭的班機嗎？",
       hi: [{ t: "rebook my flight", cn: "重新訂位", k: "rebook", c: 4 },
            { t: "another available flight", cn: "另一班可搭的班機", k: "available", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "calendar" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260707_04" },
       en: "Not today. But you can book another flight for tomorrow morning.",
       cn: "今天沒有了。但您可以訂明天早上的另一班航班。",
       hi: [{ t: "book another flight for tomorrow", cn: "訂明天的另一班航班", k: "bookanother", c: 1 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "coin" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260707_05" },
       en: "Then I'd like to ask for a refund on today's ticket.",
       cn: "那我想要求今天這張票退款。",
       hi: [{ t: "ask for a refund", cn: "要求退款", k: "askrefund", c: 2 }] },
@@ -602,15 +602,15 @@ window.VIDEO.bk20260707 = {
       en: "Sure. You can apply for a refund through the online platform.",
       cn: "可以。您可以透過線上平台申請退款。",
       hi: [{ t: "apply for a refund through the online platform", cn: "透過線上平台申請退款", k: "applyfor", c: 4 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "coin" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260707_06" },
       en: "Do I have to pay a cancellation fee?",
       cn: "我需要付取消費用嗎？",
       hi: [{ t: "pay a cancellation fee", cn: "付取消費用", k: "fee", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "check" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260707_07" },
       en: "No, you don't have to pay anything. We cancelled it, not you.",
       cn: "不用，您不必付任何費用。是我們取消的，不是您。",
       hi: [{ t: "don't have to pay", cn: "不必付", k: "donthaveto", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "doc" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260707_08" },
       en: "Great. One more thing — is my return ticket still okay?",
       cn: "太好了。還有一件事——我的回程票還有效嗎？",
       hi: [{ t: "return ticket", cn: "回程票", k: "returnticket", c: 2 }] },
@@ -622,7 +622,7 @@ window.VIDEO.bk20260707 = {
       en: "Thanks. So I need a train back to the city. Which platform does it leave from?",
       cn: "謝謝。那我要搭火車回市區，它從哪個月台出發？",
       hi: [{ t: "Which platform does it leave from?", cn: "它從哪個月台出發？", k: "platform", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "trainPlatform" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260707_09" },
       en: "Platform three. Check the number so you don't miss your train.",
       cn: "三號月台。確認一下號碼，才不會錯過你的火車。",
       hi: [{ t: "miss your train", cn: "錯過你的火車", k: "miss", c: 2 }] },
@@ -8281,23 +8281,23 @@ window.VIDEO.bk20260120a = {
       en: "Really? Some people just want to remove wrinkles and look younger.",
       cn: "真的嗎？有些人只是想消除皺紋、看起來年輕一點。",
       hi: [{ t: "remove wrinkles", cn: "消除皺紋", k: "wrinkle", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "wasteOfMoney" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260120a_01" },
       en: "I'm not the best-looking person, but I'd never get surgery — even if it were free.",
       cn: "我不是最好看的人，但我絕不會去動手術——就算免費也一樣。",
       hi: [{ t: "even if it were free", cn: "即使它是免費的", k: "evenif", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "star" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260120a_02" },
       en: "While I respect your opinion, I think surgery can boost a person's confidence.",
       cn: "雖然我尊重你的看法，但我覺得手術可以提升一個人的自信。",
       hi: [{ t: "While I respect your opinion", cn: "雖然我尊重你的看法", k: "respect", c: 2 },
            { t: "boost a person's confidence", cn: "提升一個人的自信", k: "confidence", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "heart" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260120a_03" },
       en: "It also improves appearance for people who've been in accidents.",
       cn: "它也能改善出過意外的人的外貌。",
       hi: [{ t: "improves appearance", cn: "改善外貌", k: "appearance", c: 4 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "heart" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260120a_04" },
       en: "That part I agree with. Medical cases aren't a nose job.",
       cn: "這點我同意。醫療需求跟隆鼻是兩回事。" },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "briefcase" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260120a_05" },
       en: "And looking professional sometimes means better career opportunities.",
       cn: "而且看起來專業，有時代表更好的職涯機會。",
       hi: [{ t: "better career opportunities", cn: "更好的職涯機會", k: "opportunity", c: 2 }] },
@@ -8306,24 +8306,24 @@ window.VIDEO.bk20260120a = {
       cn: "也許吧。但有些人手術做太多，看起來就不自然了。",
       hi: [{ t: "so many operations that", cn: "手術做太多，以致於……", k: "sothat", c: 1 },
            { t: "look unnatural", cn: "看起來不自然", k: "unnatural", c: 3 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "noseJobPlan" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260120a_06" },
       en: "True. A good cosmetic surgeon usually says no to that.",
       cn: "沒錯。好的整形外科醫師通常會拒絕那種要求。",
       hi: [{ t: "cosmetic surgeon", cn: "整形外科醫師", k: "surgeon", c: 4 },
            { t: "usually", cn: "通常", k: "frequency", c: 2 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "smile" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260120a_07" },
       en: "I would rather stay natural and look human.",
       cn: "我寧願保持自然，看起來像個真正的人。",
       hi: [{ t: "would rather stay natural", cn: "寧願保持自然", k: "wouldrather", c: 1 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "talk" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260120a_08" },
       en: "So — you prefer staying natural and accepting yourself.",
       cn: "所以——你比較喜歡保持自然、接受自己。",
       hi: [{ t: "prefer staying natural", cn: "比較喜歡保持自然", k: "prefer", c: 3 }] },
-    { ch: 1, sp: "A", vis: { type: "scene", art: "people" },
+    { ch: 1, sp: "A", vis: { type: "scene", art: "va20260120a_09" },
       en: "Exactly. And if a friend's overweight, I'd use that word — not fat.",
       cn: "沒錯。而且如果朋友體重過重，我會說 overweight——不說 fat。",
       hi: [{ t: "overweight", cn: "過重（禮貌說法）", k: "overweight", c: 4 }] },
-    { ch: 1, sp: "T", vis: { type: "scene", art: "check" },
+    { ch: 1, sp: "T", vis: { type: "scene", art: "va20260120a_10" },
       en: "Fair enough. Confidence usually comes from the mind, not the face.",
       cn: "有道理。自信通常來自內心，不是外表。",
       hi: [{ t: "usually", cn: "通常", k: "frequency", c: 2 }] },
@@ -39802,3 +39802,247 @@ window.VIDEO["bk20261008"] = {
 
   });
 })();
+
+/* ---------- bk20260120a／bk20260707 影片左圖：每句一張專屬線稿 ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
+  var cs=function(col,w){ return 'stroke="'+col+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y2=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y2+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(cx,cy,w,h){ return '<rect x="'+(cx-w/2)+'" y="'+(cy-h/2)+'" width="'+w+'" height="'+h+'" rx="3" fill="#fff" '+st+'/>'
+     +'<path d="M'+(cx-w/2+6)+' '+(cy-h/2+8)+' h'+(w-12)+' M'+(cx-w/2+6)+' '+(cy-h/2+16)+' h'+(w-16)+'" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'; };
+  var base=function(y){ return '<path d="M10 '+y+' H190" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* ===== bk20260120a 整形手術 ===== */
+
+    /* #5 Anita：就算免費我也不動手術（人搖頭＋手術刀被畫叉） */
+    va20260120a_01: svg(
+      per(60,52,18,C)
+     +'<path d="M42 48 l-8 -8 M78 48 l8 -8" '+thw(3)+'/>'
+     +'<rect x="120" y="30" width="56" height="46" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M134 46 l14 16 M148 46 l-14 16" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M138 66 l4 -28 l3 0 l-2 28 z" fill="'+L+'" '+st+'/>'
+     +'<circle cx="142" cy="38" r="4" fill="#fff" '+st+'/>'
+     +base(128)),
+
+    /* #6 Tom：手術能提升自信（挺胸人物＋自信光芒） */
+    va20260120a_02: svg(
+      per(100,50,18,C)
+     +'<path d="M100 16 v-6 M80 20 l-4 -6 M120 20 l4 -6 M70 34 l-6 -3 M130 34 l6 -3" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M82 46 q8 -5 18 -2 M100 46 q8 -5 18 -2" '+th+'/>'
+     +'<path d="M88 60 q12 6 24 0" '+thw(3)+'/>'
+     +'<path d="M66 110 v-18 q0 -12 14 -16 M134 110 v-18 q0 -12 -14 -16" '+thw(3)+'/>'
+     +'<path d="M66 110 h68" '+thw(3)+'/>'
+     +base(128)),
+
+    /* #7 Tom：也能改善意外受傷者的外貌（繃帶臉→箭頭→好轉的臉） */
+    va20260120a_03: svg(
+      '<circle cx="52" cy="60" r="28" fill="'+C+'" '+st+'/>'
+     +'<path d="M38 44 h28 M38 52 h28" stroke="#fff" stroke-width="6"/>'
+     +'<path d="M38 44 h28 M38 52 h28" stroke="'+R+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<circle cx="44" cy="56" r="3" fill="'+D+'"/><circle cx="60" cy="56" r="3" fill="'+D+'"/>'
+     +'<path d="M44 74 q8 4 16 0" '+thw(3)+'/>'
+     +'<path d="M90 60 h20 M104 52 l8 8 l-8 8" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<circle cx="148" cy="60" r="28" fill="'+C+'" '+st+'/>'
+     +'<circle cx="140" cy="54" r="3.5" fill="'+D+'"/><circle cx="156" cy="54" r="3.5" fill="'+D+'"/>'
+     +'<path d="M138 70 q10 8 20 0" '+thw(3)+'/>'
+     +base(128)),
+
+    /* #8 Anita：醫療需求≠隆鼻（醫療十字 vs 鏡子鼻子） */
+    va20260120a_04: svg(
+      '<rect x="18" y="28" width="64" height="64" rx="8" fill="#fff" '+st+'/>'
+     +'<path d="M40 44 h20 M50 34 v20" stroke="'+R+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M94 60 v-50 M94 60 v50" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 5"/>'
+     +'<ellipse cx="144" cy="54" rx="26" ry="32" fill="'+L+'" '+st+'/>'
+     +'<path d="M144 36 l14 16 l-14 8" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M130 80 q14 6 28 0" stroke="'+D+'" stroke-width="3" stroke-linecap="round" fill="none"/>'
+     +txt(50,112,'MEDICAL',10,R)
+     +txt(144,112,'COSMETIC',10,A)
+     +base(128)),
+
+    /* #9 Tom：看起來專業能帶來更好的職涯機會（人爬階梯） */
+    va20260120a_05: svg(
+      '<path d="M30 120 h32 v-24 h32 v-24 h32 v-24 h32 v-24 h16" fill="none" '+st+'/>'
+     +per(80,44,12,C)
+     +'<path d="M80 72 v8" '+thw(3)+'/>'
+     +'<path d="M72 80 l8 8 l8 -8" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="130" y="20" width="50" height="28" rx="5" fill="'+A+'" '+st+'/>'
+     +txt(155,39,'JOB',13,'#fff')
+     +base(134)),
+
+    /* #11 Tom：好的整形醫師會拒絕過度要求（醫師舉手擋） */
+    va20260120a_06: svg(
+      per(70,52,18,C)
+     +'<path d="M68 46 q8 -5 16 0 M82 46 q6 -5 12 0" '+th+'/>'
+     +'<path d="M64 62 q6 3 12 0" '+thw(3)+'/>'
+     +'<rect x="56" y="74" width="28" height="16" rx="3" fill="#fff" '+st+'/>'
+     +txt(70,87,'+',14,R)
+     +'<path d="M106 34 v36" '+thw(4)+'/>'
+     +'<rect x="96" y="18" width="20" height="20" rx="3" fill="'+C+'" '+st+'/>'
+     +'<path d="M102 28 h8 M106 24 v8" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<rect x="136" y="40" width="44" height="30" rx="6" fill="#fff" '+st+'/>'
+     +ex(158,55,18,R)
+     +base(128)),
+
+    /* #12 Anita：寧願保持自然、看起來像人（微笑臉＋葉子） */
+    va20260120a_07: svg(
+      '<circle cx="100" cy="58" r="36" fill="'+C+'" '+st+'/>'
+     +'<circle cx="86" cy="50" r="4.5" fill="'+D+'"/><circle cx="114" cy="50" r="4.5" fill="'+D+'"/>'
+     +'<path d="M86 72 q14 10 28 0" fill="none" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M50 32 q-14 -16 2 -26" fill="none" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M52 28 q-12 8 -20 -4 q8 -14 20 4" fill="'+L+'" '+st+'/>'
+     +'<path d="M150 32 q14 -16 -2 -26" fill="none" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M148 28 q12 8 20 -4 q-8 -14 -20 4" fill="'+L+'" '+st+'/>'
+     +base(128)),
+
+    /* #13 Tom：你偏好保持自然、接受自己（鏡子照出的自己給自己比讚） */
+    va20260120a_08: svg(
+      '<ellipse cx="100" cy="60" rx="40" ry="50" fill="'+L+'" '+st+'/>'
+     +'<circle cx="100" cy="46" r="18" fill="'+C+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="93" cy="42" r="3" fill="'+D+'"/><circle cx="107" cy="42" r="3" fill="'+D+'"/>'
+     +'<path d="M93 54 q7 5 14 0" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M78 76 q0 -8 10 -6 l4 -10 l5 5" fill="none" '+thw(3)+'/>'
+     +'<path d="M88 60 l5 5" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<rect x="60" y="6" width="80" height="108" rx="12" fill="none" stroke="'+B+'" stroke-width="4"/>'
+     +base(128)),
+
+    /* #14 Anita：用 overweight 不用 fat（禮貌泡泡＋劃掉粗魯詞） */
+    va20260120a_09: svg(
+      per(44,54,16,C)
+     +'<rect x="80" y="18" width="104" height="36" rx="10" fill="#fff" '+st+'/>'
+     +'<path d="M80 40 l-10 8 l14 -2 z" fill="#fff" '+st+'/>'
+     +chk(88,30,16,B)
+     +txt(140,42,'polite',12,B)
+     +'<rect x="80" y="72" width="104" height="36" rx="10" fill="#fff" '+st+'/>'
+     +ex(100,90,16,R)
+     +txt(142,96,'rude',12,R)
+     +'<path d="M80 78 h104 M80 102 h104" stroke="none"/>'
+     +base(128)),
+
+    /* #15 Tom：自信來自內心不是外表（大腦發光 vs 臉被劃掉） */
+    va20260120a_10: svg(
+      '<ellipse cx="60" cy="56" rx="30" ry="34" fill="'+C+'" '+st+'/>'
+     +'<path d="M40 42 q10 -18 24 -14 q14 -10 22 4 q8 12 2 24 q8 14 -2 28 q-14 12 -28 8 q-16 4 -22 -12 q-8 -10 4 -38" fill="'+L+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<path d="M48 28 l4 -6 M60 24 v-8 M72 28 l4 -6" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<circle cx="152" cy="56" r="28" fill="'+C+'" '+st+'/>'
+     +'<circle cx="144" cy="50" r="3" fill="'+D+'"/><circle cx="160" cy="50" r="3" fill="'+D+'"/>'
+     +'<path d="M144 66 q8 4 16 0" fill="none" '+thw(3)+'/>'
+     +ex(152,56,40,R)
+     +base(128)),
+
+    /* ===== bk20260707 航班旅遊 飛行問題 ===== */
+
+    /* #4 Tom：因為天氣不好而延誤（飛機被雲雨擋住＋時鐘延遲符號） */
+    va20260707_01: svg(
+      '<ellipse cx="70" cy="40" rx="44" ry="22" fill="'+L+'" '+st+'/>'
+     +'<path d="M50 56 v18 M62 56 v24 M78 56 v20" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M120 70 l30 -14 l-6 -4 l18 -6 l-2 8 l-6 -4 l-22 14 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M130 76 h20 l8 4 h-36 z" fill="'+C+'" '+st+'/>'
+     +'<circle cx="158" cy="110" r="20" fill="#fff" '+st+'/>'
+     +'<path d="M158 96 v14 l10 6" '+thw(3)+'/>'
+     +'<path d="M172 98 l6 -4" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +base(138)),
+
+    /* #5 Tom：班機取消了（看板紅色 CANCELLED 大字） */
+    va20260707_02: svg(
+      '<rect x="24" y="18" width="152" height="94" rx="8" fill="'+D+'" '+st+'/>'
+     +'<rect x="32" y="26" width="136" height="18" rx="3" fill="'+A+'"/>'
+     +txt(100,39,'DEPARTURES',11,'#fff')
+     +'<g font-family="sans-serif" font-size="11" fill="'+C+'"><text x="38" y="64">10:30  TOKYO</text></g>'
+     +'<rect x="110" y="53" width="62" height="15" rx="3" fill="'+R+'"/>'
+     +txt(141,64,'CANCELLED',9,'#fff')
+     +'<g font-family="sans-serif" font-size="11" fill="'+C+'"><text x="38" y="88">11:00  OSAKA</text></g>'
+     +'<rect x="110" y="77" width="62" height="15" rx="3" fill="'+B+'"/>'
+     +txt(141,88,'ON TIME',9,'#fff')
+     +base(128)),
+
+    /* #6 Anita：能不能改訂別班？（人在櫃檯問＋飛機＋問號） */
+    va20260707_03: svg(
+      '<rect x="20" y="88" width="160" height="32" rx="4" fill="'+L+'" '+st+'/>'
+     +'<path d="M20 100 h160" stroke="'+D+'" stroke-width="2.5"/>'
+     +per(60,60,14,C)
+     +per(140,60,14,L)
+     +'<path d="M80 30 l22 -10 l-4 -3 l14 -4 l-1 6 l-5 -3 l-16 10 z" fill="'+C+'" '+st+'/>'
+     +qb(164,28)
+     +base(130)),
+
+    /* #7 Tom：明天早上可以訂另一班（日曆翻頁＋飛機） */
+    va20260707_04: svg(
+      '<rect x="28" y="22" width="80" height="76" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="28" y="22" width="80" height="20" rx="6" fill="'+A+'" '+st+'/>'
+     +'<path d="M28 42 h80" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M48 18 v10 M88 18 v10" '+thw(3)+'/>'
+     +txt(68,38,'TOMORROW',8,'#fff')
+     +chk(56,62,24,B)
+     +'<path d="M140 68 l28 -12 l-5 -4 l16 -5 l-1 7 l-5 -3 l-20 12 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M148 76 h18 l6 3 h-30 z" fill="'+C+'" '+st+'/>'
+     +base(128)),
+
+    /* #8 Anita：要求退今天的票（票券＋回退箭頭＋$） */
+    va20260707_05: svg(
+      '<rect x="24" y="30" width="96" height="60" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M24 50 h96" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 4"/>'
+     +txt(72,46,'TICKET',11,D)
+     +txt(72,72,'$',18,A)
+     +'<path d="M140 60 q20 -30 30 0 q-10 30 -30 0" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M138 52 l2 8 l-8 -2" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+     +base(128)),
+
+    /* #10 Anita：需要付取消費嗎？（費用收據＋問號） */
+    va20260707_06: svg(
+      doc(72,58,64,68)
+     +txt(72,46,'FEE',14,D)
+     +txt(72,66,'$??',16,A)
+     +'<path d="M72 78 h-20 M72 86 h-16" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +qb(152,56)
+     +base(128)),
+
+    /* #11 Tom：不必付任何費用（$ 被劃叉＋揮手） */
+    va20260707_07: svg(
+      '<circle cx="80" cy="56" r="30" fill="#fff" '+st+'/>'
+     +txt(80,64,'$',28,D)
+     +ex(80,56,40,R)
+     +'<path d="M132 44 q12 -18 22 0 q-12 18 -22 0" fill="'+C+'" '+st+'/>'
+     +'<path d="M138 40 v-8 M148 36 v-12 M156 40 v-8 M144 44 v-4" '+thw(3)+'/>'
+     +base(128)),
+
+    /* #12 Anita：回程票還有效嗎？（來回票＋勾 vs 問號） */
+    va20260707_08: svg(
+      '<rect x="20" y="28" width="100" height="64" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M20 48 h100" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 4"/>'
+     +txt(70,44,'RETURN TICKET',9,D)
+     +'<path d="M48 62 l22 -8 l-5 -3 l14 -4 l-1 6 l-5 -3 l-16 8 z" fill="'+C+'" '+st+'/>'
+     +'<path d="M82 62 l-22 -8 l5 -3 l-14 -4 l1 6 l5 -3 l16 8 z" fill="'+C+'" '+st+'/>'
+     +txt(70,82,'?',20,A)
+     +chk(140,50,28,B)
+     +base(128)),
+
+    /* #15 Tom：確認號碼別錯過火車（人跑向火車） */
+    va20260707_09: svg(
+      per(44,56,14,C)
+     +'<path d="M34 96 l14 -8 M54 96 l-14 -8" '+thw(3)+'/>'
+     +'<path d="M32 100 l8 -16 M56 100 l-8 -16" '+thw(3)+'/>'
+     +'<rect x="96" y="52" width="80" height="52" rx="10" fill="'+A+'" '+st+'/>'
+     +'<rect x="106" y="62" width="22" height="16" rx="3" fill="#fff" '+st+'/>'
+     +'<rect x="136" y="62" width="22" height="16" rx="3" fill="#fff" '+st+'/>'
+     +'<circle cx="110" cy="112" r="7" fill="'+D+'"/><circle cx="162" cy="112" r="7" fill="'+D+'"/>'
+     +'<path d="M70 76 h18 M82 68 l8 8 l-8 8" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'
+     +base(126))
+
+  });
+})();
+
