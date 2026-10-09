@@ -1,39 +1,21 @@
 # 影片左圖盤點
 
-- 有場景的課：87；場景句 1299；不同圖 1121；重複格 178；相鄰同圖 137
-- 圖庫 589 張；場景用到的專屬圖 575 張；通用小圖示佔 357 個場景格；沒被用過的專屬圖 14 張
+- 有場景的課：87；場景句 1299；不同圖 1201；重複格 98；相鄰同圖 71
+- 圖庫 744 張；場景用到的專屬圖 730 張；通用小圖示佔 266 個場景格；沒被用過的專屬圖 14 張
 - 指向不存在圖庫的 art：無
-- **完全合格的課（重複 0 且無通用圖示）：24 / 87；還要做 63 課**
+- **完全合格的課（重複 0 且無通用圖示）：42 / 87；還要做 45 課**
 
 | 級別 | 課數 | 重複格合計 |
 |---|---|---|
 | 重複 10～+ | 0 | 0 |
-| 重複 5～9 | 8 | 40 |
-| 重複 1～4 | 54 | 138 |
-| 重複 0 | 25 | 0 |
+| 重複 5～9 | 0 | 0 |
+| 重複 1～4 | 44 | 98 |
+| 重複 0 | 43 | 0 |
 
 ## 待辦明細（重複格多的在前）
 
 | 課 | 日期 | 標題 | 場景句 | 不同圖 | 重複格 | 相鄰同圖 | 單圖最多次 | 通用圖示格 |
 |---|---|---|---|---|---|---|---|---|
-| bk20260317 | 2026-03-17 | 現在簡單式與現在進行式 | 14 | 9 | 5 | 4 | 2 | 6 |
-| bk20260714 | 2026-07-14 | 搭機流程與機上英文 | 14 | 9 | 5 | 3 | 4 | 5 |
-| bk20260226a | 2026-02-26 | 台灣 vs 美國保險 insurance | 14 | 9 | 5 | 3 | 3 | 5 |
-| bk20260312 | 2026-03-12 | 英語時態、日常生活與穿脫動詞 | 14 | 9 | 5 | 4 | 2 | 5 |
-| bk20250717 | 2025-07-17 | 永遠的好朋友 | 17 | 12 | 5 | 5 | 2 | 5 |
-| bk20260203a | 2026-02-03 | 面試與宴會總結 | 15 | 10 | 5 | 5 | 2 | 4 |
-| bk20260917 | 2026-09-17 | 工廠安全與包裝出貨 | 14 | 9 | 5 | 4 | 2 | 0 |
-| bk20260519 | 2026-05-19 | Stuck vs. Blocked 辨析 | 14 | 9 | 5 | 5 | 3 | 0 |
-| bk20260811 | 2026-08-11 | 補償用語與效率詞彙 | 14 | 10 | 4 | 1 | 2 | 9 |
-| bk20260709 | 2026-07-09 | 機場旅遊英文 | 14 | 10 | 4 | 3 | 3 | 7 |
-| bk20260113 | 2026-01-13 | 使役動詞 make cause let | 15 | 11 | 4 | 4 | 2 | 7 |
-| bk20260127 | 2026-01-27 | 睡眠與金錢 | 14 | 10 | 4 | 4 | 2 | 7 |
-| bk20260129a | 2026-01-29 | 尾牙宴會與睡眠習慣 | 14 | 10 | 4 | 3 | 2 | 7 |
-| bk20260528 | 2026-05-28 | 食物變質與居家除濕 | 14 | 10 | 4 | 4 | 2 | 7 |
-| bk20260409 | 2026-04-09 | 家用設備 | 15 | 11 | 4 | 3 | 2 | 6 |
-| bk20260514 | 2026-05-14 | worry, worried, ing, ed, 副詞用法 | 14 | 10 | 4 | 4 | 2 | 4 |
-| bk20260526 | 2026-05-26 | spoiled, rotten 易腐、食物變質 | 14 | 10 | 4 | 4 | 2 | 4 |
-| bk20260310 | 2026-03-10 | 八大英文時態與健康症狀 | 14 | 10 | 4 | 3 | 2 | 3 |
 | bk20260922 | 2026-09-22 | 職場安全與紓壓英文 | 16 | 12 | 4 | 3 | 3 | 2 |
 | bk20251218 | 2025-12-18 | 居家修繕與服務 | 14 | 10 | 4 | 4 | 2 | 0 |
 | bk20260730 | 2026-07-30 | 樂觀悲觀與 Hugh Laurie 閱讀 | 15 | 12 | 3 | 2 | 2 | 10 |
@@ -81,197 +63,6 @@
 | bk20251202 | 2025-12-02 | 感恩節 | 14 | 14 | 0 | 0 | 1 | 4 |
 
 ## 每課要換圖的句子
-
-### bk20260317 現在簡單式與現在進行式（重複 5 格、通用圖示 6 格）
-- #2 [house] 通用圖示：Hi! You must be my new neighbor. I'm Tom, fifth floor.
-- #4 [rushHourJam] 重複：It is. Streets are always full of cars during rush hour.
-- #5 [scooter] 通用圖示：I take the bus every day, but I'm driving this week because of the rai
-- #7 [carHorn] 重複：And my neighbor downstairs is always parking in my space these days.
-- #9 [rentNotice] 重複：Really? Some friends suggested moving to a smaller town to avoid the t
-- #11 [smile] 通用圖示：True. Living here is helping me improve my communication skills, too.
-- #12 [calendar] 通用圖示：So — staying or moving?
-- #13 [calendar] 重複：I'm meeting the landlord tomorrow about the rent. I'd like to stay.
-- #15 [smile] 重複：Thanks for the tip. See you around!
-
-### bk20260714 搭機流程與機上英文（重複 5 格、通用圖示 5 格）
-- #6 [cabinSeat] 重複：Sure. Now please fasten your seat belt and fold up your tray table for
-- #7 [cabinSeat] 重複：Okay. Can I recline my seat after takeoff?
-- #8 [plane] 通用圖示：You can. Just keep your window shade open for takeoff and landing.
-- #9 [clock] 通用圖示：When does the meal service start?
-- #10 [food] 通用圖示：Meal service will begin shortly after takeoff. A soft drink for now?
-- #11 [food] 重複：Yes, please. Could you fill my cup with apple juice?
-- #12 [cabinSeat] 重複：One more thing. The guy in front reclined his seat, leaving me with ve
-- #13 [talk] 通用圖示：That's inconsiderate. I'll ask him to put his seat upright for the mea
-- #15 [gate] 重複：Immigration. If your luggage contains dangerous items, they'll ask you
-
-### bk20260226a 台灣 vs 美國保險 insurance（重複 5 格、通用圖示 5 格）
-- #2 [clock] 通用圖示：Anita, I waited ten minutes and the doctor's already calling my name.
-- #4 [coin] 通用圖示：So who pays for it?
-- #6 [cross] 通用圖示：And today? What do I pay at the counter?
-- #7 [nhiCard] 重複：You just pay a small co-pay. Even for serious illness or surgery, most
-- #8 [globe] 通用圖示：Back in the US, health insurance works differently.
-- #9 [building] 通用圖示：Most people get insurance from their employer. Others buy it on their 
-- #10 [premiumMonthly] 重複：Do you pay every month too?
-- #11 [premiumMonthly] 重複：Yeah, we pay monthly premiums — and usually we pay deductibles on top.
-- #13 [deductibleBar] 重複：A set amount I have to pay each year before the insurance pays anythin
-- #15 [bigBill] 重複：Very. Without insurance, a simple hospital visit can run thousands of 
-
-### bk20260312 英語時態、日常生活與穿脫動詞（重複 5 格、通用圖示 5 格）
-- #3 [coffeeBreak] 重複：Yes, please. I usually drink instant, but filter coffee tastes better.
-- #4 [scooter] 通用圖示：So how do you commute to work these days?
-- #5 [scooter] 重複：I ride a scooter every day. Twenty minutes.
-- #9 [assemblyLine] 重複：I will inspect the products with the new supplier.
-- #10 [clock] 通用圖示：Can we meet at ten? Or will you be busy?
-- #11 [clock] 重複：At ten I will be inspecting the products, so let's say eleven.
-- #13 [building] 通用圖示：I visited a museum Saturday, and baked a frozen pizza at home Sunday.
-- #15 [shoesTakeOff] 重複：Sounds relaxing. See you at eleven tomorrow!
-
-### bk20250717 永遠的好朋友（重複 5 格、通用圖示 5 格）
-- #3 [smile] 通用圖示：Almost every day. Kelly's my bestie — we spend a lot of time together.
-- #5 [moveOverBench] 重複：Same class. We sat beside each other for three years.
-- #7 [messageBubbles] 重複：We message each other all day. She seldom leaves me on read.
-- #9 [clothesShop] 重複：We meet up at the station, head into town, and do a bit of shopping.
-- #12 [swapClothes] 重複：We seldom argue. We even swap clothes sometimes.
-- #13 [scooter] 通用圖示：By the way, how do you commute to work?
-- #14 [scooter] 重複：By scooter. It takes me fifteen minutes.
-- #17 [briefcase] 通用圖示：I work for a fitness equipment company, so I'm responsible for the qua
-- #18 [heart] 通用圖示：Well, the good thing about your week is you always have time for your 
-
-### bk20260203a 面試與宴會總結（重複 5 格、通用圖示 4 格）
-- #3 [interviewDesk] 重複：I'm currently working as a quality engineer at Rexon — we make fitness
-- #4 [calendar] 通用圖示：And how long have you been there?
-- #5 [calendar] 重複：I've been with the company for about ten years now.
-- #7 [clipboard] 重複：My main responsibilities include inspecting and testing the equipment.
-- #10 [curiousMark] 重複：I identify potential issues first, then investigate the root cause.
-- #12 [talk] 通用圖示：Great answer. Good communication fosters strong teamwork.
-- #14 [music] 通用圖示：Nice. Okay, relax now! So, the annual banquet featured a variety of pe
-- #16 [outCold] 重複：Same here. My wife says I tend to snore when I'm that tired.
-
-### bk20260917 工廠安全與包裝出貨（重複 5 格、通用圖示 0 格）
-- #5 [goggles] 重複：Safety glasses and gloves. Everyone must wear them. It's a rule, not a
-- #7 [gate] 重複：Trained operators only. A security guard checks everyone at the gate.
-- #11 [desiccant] 重複：Desiccant. Keeps the box dry — high humidity can damage the machine.
-- #13 [desiccantRed] 重複：If it has turned red, it's no longer effective. We swap it out.
-- #15 [clipboard] 重複：Perfect. Thanks, Anita.
-
-### bk20260519 Stuck vs. Blocked 辨析（重複 5 格、通用圖示 0 格）
-- #3 [elevatorDown] 重複：Sorry about that. The door got stuck again — I've called the technicia
-- #6 [carHorn] 重複：Forty minutes. I was really annoyed at first, but after a while I just
-- #8 [cloggedDrain] 重複：Clogged or blocked?
-- #9 [cloggedDrain] 重複：Both work. Clogged means it's full of hair and soap, so nothing gets t
-- #15 [beachWarningSign] 重複：Agreed. Obviously, a sign's cheaper than a complaint.
-
-### bk20260811 補償用語與效率詞彙（重複 4 格、通用圖示 9 格）
-- #2 [plane] 通用圖示：Morning, Anita. Finally back from Vietnam. Sorry I missed your birthda
-- #3 [talk] 通用圖示：No worries. How was the trip?
-- #4 [clock] 通用圖示：Terrible. My flight was delayed six hours.
-- #5 [plane] 重複：Did the airline do anything about it?
-- #6 [gift] 通用圖示：They did. A free ticket to compensate for the delay.
-- #7 [talk] 重複：That's fair. But why do you keep coughing?
-- #9 [house] 通用圖示：Did you at least sleep well?
-- #12 [eyeBreak] 重複：I've been staring at one small screen all morning.
-- #13 [clock] 重複：Take a short break every hour — an effective tip to reduce eye strain.
-- #15 [food] 通用圖示：Good idea. And your birthday — let me make it up to you. Lunch is on m
-
-### bk20260709 機場旅遊英文（重複 4 格、通用圖示 7 格）
-- #4 [liquidBottle] 重複：If a bottle is over 100 ml, I will ask you to empty it or throw it awa
-- #5 [liquidBottle] 重複：It's a small one. I filled it with shampoo this morning.
-- #7 [luggageScale] 重複：Only five. I don't need to check in a bag.
-- #8 [doc] 通用圖示：Good. Passport, please. Hmm, it expires next month.
-- #9 [calendar] 通用圖示：I know. I'll renew it when I get home — it's still valid today.
-- #10 [talk] 通用圖示：Okay. And the purpose of your trip?
-- #11 [globe] 通用圖示：I'm here for sightseeing. Staying with family.
-- #12 [calendar] 重複：How long are you staying?
-- #13 [people] 通用圖示：Two weeks. My friend's going to pick me up when I arrive.
-- #14 [box] 通用圖示：All set. If you lose anything, go to the lost and found office.
-
-### bk20260113 使役動詞 make cause let（重複 4 格、通用圖示 7 格）
-- #3 [crowdedElevator] 重複：Sure. Come on in — squeeze in next to me.
-- #4 [clock] 通用圖示：Morning, Anita. Why were you late for the meeting?
-- #6 [accidentJam] 重複：It caused all the cars to stop for like twenty minutes.
-- #7 [warning] 通用圖示：Did the police let drivers pass?
-- #8 [people] 通用圖示：Nope — they didn't let anyone pass until the ambulance came. Everyone 
-- #9 [doc] 通用圖示：Okay. Different question — does this job give you enough freedom?
-- #11 [videoMeeting] 重複：You trusted me to lead it — that really boosted my confidence.
-- #12 [gear] 通用圖示：Good. Big budget decisions, though — company policy makes us get appro
-- #14 [tidyRoom] 重複：She made me clean my room every Sunday. I hated it, but she insisted.
-- #15 [star] 通用圖示：And how'd you feel afterward?
-- #16 [smile] 通用圖示：Well, a sense of achievement. And it taught me to be more responsible.
-
-### bk20260127 睡眠與金錢（重複 4 格、通用圖示 7 格）
-- #3 [tossTurn] 重複：Barely. I was wide awake till four — tossed and turned all night.
-- #4 [clock] 通用圖示：Rough. Do you have insomnia, or was it just one bad night?
-- #6 [warning] 通用圖示：Good. So what happened? Did you have a nightmare?
-- #8 [cribBaby] 重複：So now you're the one who needs a crib! A sleeping baby is the quietes
-- #10 [sleepLog] 重複：I slept like a log. My husband snores when he's tired, though, so some
-- #11 [briefcase] 通用圖示：Careful, or you'll doze off in the meeting. Oh — sorry I missed your c
-- #12 [phone] 通用圖示：No worries. I was tied up with a client all afternoon anyway.
-- #13 [coin] 通用圖示：So what keeps you up at night? For me it's always work and money.
-- #14 [coin] 重複：Money's essential for daily life, but greed for money — that's where t
-- #15 [talk] 通用圖示：Yeah. Anyway, thanks for listening. I can always share my problems wit
-
-### bk20260129a 尾牙宴會與睡眠習慣（重複 4 格、通用圖示 7 格）
-- #3 [calendar] 通用圖示：We call it Weiya. It's a tradition in Taiwan — happens right before Lu
-- #4 [people] 通用圖示：So kind of like a company Christmas party?
-- #5 [roundTable] 重複：Exactly, but with Chinese food. We sit around big round tables, and ev
-- #6 [food] 通用圖示：That seafood looks amazing. Is there a dress code?
-- #7 [star] 通用圖示：Smart casual's fine. It's lively and festive — nothing too formal.
-- #8 [mic] 通用圖示：Oh look, the boss is heading to the stage with the MC.
-- #9 [mic] 重複：He gave a short speech last year to thank everyone. He treats all empl
-- #11 [toastGlasses] 重複：Raise your glass. We make a toast to a good year together.
-- #13 [luckyDraw] 重複：The lucky draw! Last year I won a gift voucher, and everyone got a bon
-- #14 [gift] 通用圖示：Nice! Can you guarantee I'll win something tonight?
-
-### bk20260528 食物變質與居家除濕（重複 4 格、通用圖示 7 格）
-- #2 [house] 通用圖示：Hey Anita, I'm back. Why does the place smell musty?
-- #4 [bolt] 通用圖示：Oh, so that's why. And the fridge? Power was out for two days, right?
-- #5 [trash] 通用圖示：Yeah. The meat went bad, so I threw it out.
-- #7 [spoiledMilk] 重複：Don't drink that! It has gone off. The cheese has green mold, too.
-- #8 [food] 通用圖示：Too late. I've lost my appetite.
-- #9 [warning] 通用圖示：Careful. Expired food can make you sick.
-- #10 [leaf] 通用圖示：And the plants? They look wilted.
-- #11 [leaf] 重複：Sorry — I forgot to water them.
-- #13 [dehumidifierTank] 重複：Then it collects the water in a tank and releases drier air?
-- #15 [sipBite] 重複：Okay. Hmm, a bit salty, but not bad.
-
-### bk20260409 家用設備（重複 4 格、通用圖示 6 格）
-- #3 [house] 通用圖示：Yeah. Just moved in last week. I want stuff that'll help reduce househ
-- #4 [applianceShelf] 重複：Start here, then. A vacuum cleaner for the floors, and this washer cle
-- #6 [ironWrinkles] 重複：This steam iron removes wrinkles from clothes in seconds.
-- #8 [electricKettle] 重複：An electric kettle boils water quickly — and needs almost no maintenan
-- #9 [food] 通用圖示：I bring food home from work a lot.
-- #10 [gear] 通用圖示：Then you need a microwave. It heats leftovers quickly.
-- #12 [blenderSmoothie] 重複：A blender. It makes smoothies, crushes food — lasting benefits for you
-- #13 [coin] 通用圖示：On the one hand, I want all of them. On the other hand — my budget's s
-- #14 [calendar] 通用圖示：Start with the vacuum and the washer, then — the rest can wait. The tw
-- #16 [mail] 通用圖示：Done. Oh, you emailed us about prices, right? Please ignore my previou
-
-### bk20260514 worry, worried, ing, ed, 副詞用法（重複 4 格、通用圖示 4 格）
-- #3 [worriedFace] 重複：I am worried about the presentation. I worried about it all night.
-- #5 [dizzyHead] 重複：My brain goes blank when everyone looks at me — then it just gets stuc
-- #7 [ingEdPair] 重複：Exactly. And one small mistake, and I feel frustrated for the rest of 
-- #8 [mic] 通用圖示：Don't worry about accurate pronunciation today. Fluency comes first.
-- #10 [talk] 通用圖示：Say 'let me check,' then get back to them. That works effectively.
-- #12 [chartUp] 通用圖示：It is obvious that you've prepared well. Your slides are clear.
-- #13 [smile] 通用圖示：Thanks for the encouragement. My teacher encourages us to speak up too
-- #15 [mooncakeLantern] 重複：Very. It takes place in autumn, and it's the best time for family gath
-
-### bk20260526 spoiled, rotten 易腐、食物變質（重複 4 格、通用圖示 4 格）
-- #3 [airCon] 重複：So hot. I turned on the AC last week, and I have been turning it on ev
-- #6 [powerOutFridge] 重複：So the fridge wasn't cold enough?
-- #8 [rottenPasta] 重複：The sauce had turned sour, green mold on the cheese — the whole thing 
-- #9 [warning] 通用圖示：That's disgusting. Anything else go bad?
-- #11 [leaf] 通用圖示：The veggies were soft and wilted. Some of the food had probably spoile
-- #12 [trash] 通用圖示：Did you throw it all out?
-- #13 [trash] 重複：Straight into a garbage bag. Cleaning up, I realized how much food I h
-
-### bk20260310 八大英文時態與健康症狀（重複 4 格、通用圖示 3 格）
-- #5 [feverThermometer] 重複：Yeah. A high fever last night, and he has felt nausea since this morni
-- #7 [greasyFood] 重複：Fried chicken from the night market. He has been having diarrhea all d
-- #10 [clipboard] 重複：Good. And Mei? Haven't seen her either.
-- #11 [calendar] 通用圖示：Mei is pregnant, so she's on leave this week. Back next Monday.
-- #12 [cross] 通用圖示：Right, I remember. Has she been to the doctor for a check-up?
-- #13 [cross] 重複：Yeah, she has been to the hospital twice this month. All good.
 
 ### bk20260922 職場安全與紓壓英文（重複 4 格、通用圖示 2 格）
 - #5 [gate] 重複：Yep. One more thing — visitors are not allowed to take photos. Securit
