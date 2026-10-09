@@ -29206,7 +29206,7 @@ window.VIDEO.au03 = {
    "sp": "N",
    "vis": {
     "type": "scene",
-    "art": "box"
+    "art": "auFiveKeys"
    },
    "en": "Listen for five key words, the answer patterns, and how to separate a target from actual output.",
    "cn": "注意聽五個關鍵詞、回答句型，以及如何區分「目標」與「實際產出」。"
@@ -29216,7 +29216,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "warning"
+    "art": "au3ChemGapAsk"
    },
    "en": "What gaps were found in chemical control?",
    "cn": "化學品管控有哪些缺口？"
@@ -29226,7 +29226,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "warning"
+    "art": "au3ChemFiveGaps"
    },
    "en": "The gaps cover issue records, storage locations, expiry dates, warning labels, and protective equipment.",
    "cn": "缺口涵蓋領用紀錄、存放位置、效期、警示標籤與防護設備。",
@@ -29244,7 +29244,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "box"
+    "art": "au3LineUseAsk"
    },
    "en": "Does the storage plan cover use on the line?",
    "cn": "儲存計畫有涵蓋產線使用嗎？"
@@ -29254,7 +29254,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "box"
+    "art": "au3LineUseItem"
    },
    "en": "Line use is a specific item in the action plan. Storage alone does not cover that requirement.",
    "cn": "產線使用是對策中的明確項目，只有倉儲管理不能涵蓋該要求。",
@@ -29272,7 +29272,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "calendar"
+    "art": "au3FifoAsk"
    },
    "en": "Is the FIFO color system in use?",
    "cn": "FIFO 顏色管理已執行了嗎？"
@@ -29282,7 +29282,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "calendar"
+    "art": "au3FifoNotDone"
    },
    "en": "No. The finding says the FIFO color system has not been implemented. The local FIFO procedure needs revision.",
    "cn": "還沒有。缺失記載 FIFO 顏色管理尚未執行，當地 FIFO 程序需修改。"
@@ -29292,7 +29292,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "thermo"
+    "art": "au3PcbStoreAsk"
    },
    "en": "How will you store electronic components?",
    "cn": "將如何儲存電子元件？"
@@ -29302,7 +29302,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "thermo"
+    "art": "au3TempHumidRoom"
    },
    "en": "The plan is to establish temperature- and humidity-controlled storage and define the local management procedure.",
    "cn": "計畫建立恆溫恆濕儲存空間，並制定當地管理規定。",
@@ -29320,7 +29320,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "shield"
+    "art": "au3ProtectAsk"
    },
    "en": "What protection is required for controllers?",
    "cn": "控制器需要哪些保護？"
@@ -29330,7 +29330,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "shield"
+    "art": "au3BubbleWrap"
    },
    "en": "The finding calls for controllers to be protected with bubble wrap during material handling.",
    "cn": "缺失要求物料搬運中的控制器有氣泡袋保護。"
@@ -29340,7 +29340,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "gauge"
+    "art": "au3V2TargetAsk"
    },
    "en": "What is your V2 production target?",
    "cn": "V2 生產目標是多少？"
@@ -29350,7 +29350,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "gauge"
+    "art": "au3Ramp2000"
    },
    "en": "The ramp-up plan targets 2,000 units per month. This is a planned target, not confirmed actual output.",
    "cn": "爬坡計畫目標為每月 2,000 台，這是規劃目標，不是已確認實際產量。"
@@ -29360,7 +29360,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "au3EvidenceAsk"
    },
    "en": "What evidence is still missing?",
    "cn": "仍缺少什麼證據？"
@@ -29370,7 +29370,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "au3MissingReports"
    },
    "en": "The finding lists a missing capacity analysis report. It also calls for actual production records.",
    "cn": "缺失列出產能分析報告不足，也要求實際生產紀錄。",
@@ -29388,7 +29388,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "chartUp"
+    "art": "au3ScopeAsk"
    },
    "en": "What will the analysis cover?",
    "cn": "分析將涵蓋什麼？"
@@ -29398,7 +29398,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "chartUp"
+    "art": "au3CapacityScope"
    },
    "en": "The action covers the forecast, OEE, production schedules, labor loading, outsourcing, and long-lead purchasing plans. A six-month capacity plan is also required.",
    "cn": "對策涵蓋預測、OEE、排程、人力負荷、外包及長交期採購計畫，也要求未來六個月產能規劃。",
@@ -29416,7 +29416,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "cert"
+    "art": "au3SignProveAsk"
    },
    "en": "Does a signed evaluation form prove that a material change is approved?",
    "cn": "評鑑表有簽名就代表材料變更已核准嗎？"
@@ -29426,7 +29426,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "cert"
+    "art": "au3TwoRecords"
    },
    "en": "No. Supplier evaluation and change approval are different records.",
    "cn": "不是，供應商評鑑與變更核准是不同紀錄。",
@@ -29444,7 +29444,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "doc"
+    "art": "au3SupChangeAsk"
    },
    "en": "What gaps were found in supplier change control?",
    "cn": "供應商變更管制有哪些缺口？"
@@ -29454,7 +29454,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "doc"
+    "art": "au3SubSupGap"
    },
    "en": "Sub-supplier change records and customer approval records are missing. The local supplier change procedure also needs to be established.",
    "cn": "缺子供應商變更及客戶核准紀錄，也需建立當地供應商變更規定。",
@@ -29472,7 +29472,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "search"
+    "art": "au3DupBarcodeAsk"
    },
    "en": "Does the shipping dock block duplicate barcodes?",
    "cn": "出貨月台會攔阻重複條碼嗎？"
@@ -29482,7 +29482,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "search"
+    "art": "au3EolVsDock"
    },
    "en": "EOL has this function, but the dock does not. Adding the dock function still needs discussion.",
    "cn": "EOL 有此功能，月台沒有。是否增加月台功能仍待討論。"
@@ -29492,7 +29492,7 @@ window.VIDEO.au03 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "truck"
+    "art": "au3LabelAsk"
    },
    "en": "What is the shipping-label action?",
    "cn": "出貨標籤的改善是什麼？"
@@ -29502,7 +29502,7 @@ window.VIDEO.au03 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "truck"
+    "art": "au3Oct30Label"
    },
    "en": "Production Planning is to define the shipping-barcode label-checking process. The target date is October 30.",
    "cn": "生管需提出出貨條碼標籤核對流程，目標日期為 10/30。"
@@ -32844,6 +32844,308 @@ window.VIDEO["bk20261008"] = {
      +chk(38,62,20,B)+chk(90,62,20,B)+chk(38,86,20,B)
      +'<g fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5">'
      +'<rect x="130" y="54" width="44" height="16" rx="4"/><rect x="78" y="102" width="44" height="12" rx="4"/></g>')
+
+  });
+})();
+
+/* ---------- au03 影片專屬插圖（每句一張，不重複；2026-10-09） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 稽核員提問的共同記號（與 au01／au02 一致） */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  /* 文件：白紙＋橘色頁首＋內文橫線 */
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  /* 瓦楞紙箱 */
+  var carton=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+w/2)+' '+y+' v'+h+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+x+' '+(y+h*0.3)+' h'+w+'" stroke="'+A+'" stroke-width="5"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 2 Tom：化學品管控有哪些缺口？ */
+    au3ChemGapAsk: svg(
+      '<path d="M58 54 h40 v56 a10 10 0 0 1 -10 10 H68 a10 10 0 0 1 -10 -10 z" fill="#fff" '+st+'/>'
+     +'<rect x="68" y="34" width="20" height="22" rx="3" fill="'+L+'" '+st+'/>'
+     +'<rect x="64" y="70" width="28" height="26" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M78 76 l7 13 H71 z" fill="#fff"/>'
+     +'<g fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5">'
+     +'<rect x="110" y="62" width="34" height="18" rx="4"/><rect x="110" y="92" width="34" height="18" rx="4"/></g>'
+     +qb(166,36)),
+
+    /* 3 Anita：缺口涵蓋領用紀錄、存放位置、效期、警示標籤與防護設備 */
+    au3ChemFiveGaps: svg(
+      doc(10,16,52,56,1)
+     +'<rect x="74" y="16" width="52" height="56" rx="4" fill="'+C+'" '+st+'/>'
+     +'<path d="M74 40 h52 M74 56 h52" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M100 34 l-7 -10 h14 z" fill="'+A+'"/>'
+     +'<rect x="138" y="16" width="52" height="56" rx="4" fill="#fff" '+st+'/>'
+     +'<path d="M138 30 h52" stroke="'+A+'" stroke-width="5"/>'
+     +txt(164,58,'30',19,D)
+     +'<path d="M42 82 l26 44 H16 z" fill="'+A+'" '+st+'/>'
+     +txt(42,120,'!',20,'#fff')
+     +'<path d="M96 126 v-22 a8 8 0 0 1 8 -8 h22 a8 8 0 0 1 8 8 v22 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M104 96 v-10 M118 96 v-14 M130 96 v-8" '+th+'/>'
+     +pill(150,96,42,30,'PPE',A,'#fff',15)),
+
+    /* 4 Tom：儲存計畫有涵蓋產線使用嗎？ */
+    au3LineUseAsk: svg(
+      '<path d="M14 40 h60 M14 64 h60 M14 88 h60" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M18 40 v52 M70 40 v52" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<rect x="26" y="46" width="18" height="16" rx="2" fill="'+C+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<rect x="48" y="70" width="18" height="16" rx="2" fill="'+C+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M84 64 h22" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M118 64 l-14 -9 v18 z" fill="'+A+'"/>'
+     +'<rect x="124" y="96" width="70" height="14" rx="7" fill="'+L+'" '+st+'/>'
+     +'<g fill="'+D+'"><circle cx="136" cy="118" r="6"/><circle cx="159" cy="118" r="6"/><circle cx="182" cy="118" r="6"/></g>'
+     +'<rect x="142" y="72" width="34" height="24" rx="2" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +qb(158,34)),
+
+    /* 5 Anita：產線使用是對策中的明確項目，只有倉儲不能涵蓋 */
+    au3LineUseItem: svg(
+      doc(22,14,120,34,1)
+     +'<rect x="22" y="58" width="120" height="30" rx="5" fill="'+L+'" '+st+'/>'
+     +txt(86,79,'LINE USE',17,D)
+     +chk(150,68,26,A)
+     +'<rect x="22" y="98" width="120" height="30" rx="5" fill="#fff" '+st+'/>'
+     +txt(86,119,'STORAGE',16,D)
+     +ex(163,112,20,R)),
+
+    /* 6 Tom：FIFO 顏色管理已執行了嗎？ */
+    au3FifoAsk: svg(
+      pill(14,20,76,30,'FIFO',A,'#fff',17)
+     +'<g '+st+'><rect x="18" y="68" width="40" height="40" rx="4" fill="'+C+'"/>'
+     +'<rect x="68" y="68" width="40" height="40" rx="4" fill="'+C+'"/>'
+     +'<rect x="118" y="68" width="40" height="40" rx="4" fill="'+C+'"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2"><rect x="26" y="76" width="24" height="12" rx="2" fill="'+A+'"/>'
+     +'<rect x="76" y="76" width="24" height="12" rx="2" fill="'+B+'"/>'
+     +'<rect x="126" y="76" width="24" height="12" rx="2" fill="#fff"/></g>'
+     +'<path d="M18 122 h140" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +qb(166,34)),
+
+    /* 7 Anita：FIFO 顏色管理尚未執行，當地程序需修改 */
+    au3FifoNotDone: svg(
+      '<g stroke="'+D+'" stroke-width="2.5"><rect x="16" y="24" width="30" height="14" rx="3" fill="'+A+'"/>'
+     +'<rect x="16" y="46" width="30" height="14" rx="3" fill="'+B+'"/>'
+     +'<rect x="16" y="68" width="30" height="14" rx="3" fill="#fff"/></g>'
+     +ex(31,96,26,R)
+     +doc(84,18,92,100,1)
+     +'<path d="M150 96 l26 -26 l12 12 l-26 26 l-14 2 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M176 70 l12 12" stroke="'+D+'" stroke-width="2.5"/>'),
+
+    /* 8 Tom：將如何儲存電子元件？ */
+    au3PcbStoreAsk: svg(
+      '<rect x="30" y="38" width="86" height="74" rx="6" fill="'+C+'" '+st+'/>'
+     +'<rect x="52" y="60" width="42" height="30" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M52 66 h-12 M52 75 h-12 M52 84 h-12"/><path d="M94 66 h12 M94 75 h12 M94 84 h12"/></g>'
+     +'<g fill="'+A+'"><circle cx="66" cy="72" r="4"/><circle cx="80" cy="78" r="4"/></g>'
+     +qb(152,56)),
+
+    /* 9 Anita：建立恆溫恆濕儲存空間，並制定當地管理規定 */
+    au3TempHumidRoom: svg(
+      '<rect x="14" y="26" width="110" height="98" rx="8" fill="#fff" '+st+'/>'
+     +'<path d="M14 52 h110" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="46" cy="86" r="9" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M46 77 V58 a5 5 0 0 1 10 0 v19" fill="none" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M51 77 V60" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M92 62 c14 18 18 24 18 32 a18 18 0 0 1 -36 0 c0 -8 4 -14 18 -32 z" fill="'+B+'" opacity="0.25" stroke="'+D+'" stroke-width="2.5"/>'
+     +txt(69,45,'%',16,D)
+     +doc(138,40,52,70,1)),
+
+    /* 10 Tom：控制器需要哪些保護？ */
+    au3ProtectAsk: svg(
+      '<rect x="40" y="46" width="78" height="58" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="54" y="60" width="50" height="20" rx="3" fill="'+D+'"/>'
+     +'<g fill="'+A+'"><circle cx="62" cy="92" r="5"/><circle cx="78" cy="92" r="5"/></g>'
+     +'<path d="M94 88 h14" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M40 46 l-14 -14 h78 l14 14" fill="'+L+'" '+st+'/>'
+     +qb(152,74)),
+
+    /* 11 Anita：物料搬運中的控制器要有氣泡袋保護 */
+    au3BubbleWrap: svg(
+      '<rect x="26" y="34" width="96" height="70" rx="8" fill="'+C+'" '+st+'/>'
+     +'<rect x="48" y="54" width="52" height="30" rx="4" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="none" stroke="'+B+'" stroke-width="2">'
+     +'<circle cx="38" cy="46" r="7"/><circle cx="38" cy="66" r="7"/><circle cx="38" cy="86" r="7"/>'
+     +'<circle cx="110" cy="46" r="7"/><circle cx="110" cy="66" r="7"/><circle cx="110" cy="86" r="7"/>'
+     +'<circle cx="60" cy="96" r="7"/><circle cx="88" cy="96" r="7"/>'
+     +'<circle cx="60" cy="44" r="7"/><circle cx="88" cy="44" r="7"/></g>'
+     +'<path d="M140 30 h16 v70 h30" '+th+' stroke-width="3"/>'
+     +'<circle cx="150" cy="116" r="11" fill="'+L+'" '+st+'/>'
+     +'<circle cx="182" cy="116" r="11" fill="'+L+'" '+st+'/>'),
+
+    /* 12 Tom：V2 生產目標是多少？ */
+    au3V2TargetAsk: svg(
+      pill(16,18,56,30,'V2',A,'#fff',18)
+     +'<g fill="none" stroke="'+D+'" stroke-width="3"><circle cx="92" cy="86" r="44"/><circle cx="92" cy="86" r="26"/></g>'
+     +'<circle cx="92" cy="86" r="9" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M150 44 l-44 34" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M150 44 l-16 2 l4 14 z" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +qb(170,112)),
+
+    /* 13 Anita：爬坡計畫目標每月 2,000 台，是規劃目標不是實際產量 */
+    au3Ramp2000: svg(
+      '<path d="M18 122 H186 M18 122 V24" '+th+' stroke-width="3"/>'
+     +'<path d="M26 112 l34 -22 l34 -26 l34 -30" fill="none" stroke="'+A+'" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 6"/>'
+     +'<g fill="'+A+'" stroke="'+D+'" stroke-width="2"><circle cx="26" cy="112" r="5"/><circle cx="60" cy="90" r="5"/>'
+     +'<circle cx="94" cy="64" r="5"/><circle cx="128" cy="34" r="5"/></g>'
+     +pill(116,74,74,28,'2,000 / mo',A,'#fff',14)
+     +pill(112,106,78,26,'TARGET',C,D,14)),
+
+    /* 14 Tom：仍缺少什麼證據？ */
+    au3EvidenceAsk: svg(
+      '<path d="M18 50 h52 l12 14 h100 v56 a8 8 0 0 1 -8 8 H26 a8 8 0 0 1 -8 -8 z" fill="'+L+'" '+st+'/>'
+     +'<path d="M18 50 v-8 a8 8 0 0 1 8 -8 h36 a8 8 0 0 1 8 8 v8" fill="'+C+'" '+st+'/>'
+     +'<g fill="none" stroke="'+R+'" stroke-width="3" stroke-dasharray="7 5">'
+     +'<rect x="44" y="76" width="44" height="34" rx="4"/><rect x="102" y="76" width="44" height="34" rx="4"/></g>'
+     +qb(166,40)),
+
+    /* 15 Anita：缺產能分析報告，也要求實際生產紀錄 */
+    au3MissingReports: svg(
+      '<rect x="12" y="24" width="82" height="100" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="22" y="36" width="62" height="10" rx="3" fill="'+A+'"/>'
+     +txt(53,70,'CAP',18,D)
+     +'<path d="M22 86 h62 M22 100 h44" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>'
+     +ex(53,114,20,R)
+     +'<rect x="106" y="24" width="82" height="100" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="116" y="36" width="62" height="10" rx="3" fill="'+A+'"/>'
+     +'<g stroke="'+D+'" stroke-width="2" stroke-linecap="round">'
+     +'<path d="M116 62 h62"/><path d="M116 76 h62"/><path d="M116 90 h40"/></g>'
+     +ex(147,114,20,R)),
+
+    /* 16 Tom：分析將涵蓋什麼？ */
+    au3ScopeAsk: svg(
+      '<rect x="22" y="26" width="104" height="96" rx="6" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"><path d="M38 48 h72"/><path d="M38 66 h72"/></g>'
+     +'<g fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5">'
+     +'<rect x="34" y="80" width="34" height="14" rx="4"/><rect x="78" y="80" width="34" height="14" rx="4"/>'
+     +'<rect x="34" y="100" width="34" height="14" rx="4"/><rect x="78" y="100" width="34" height="14" rx="4"/></g>'
+     +qb(158,46)),
+
+    /* 17 Anita：涵蓋預測、OEE、排程、人力、外包與長交期採購，加未來六個月規劃 */
+    au3CapacityScope: svg(
+      '<g '+st+' fill="#fff">'
+     +'<rect x="10" y="14" width="56" height="40" rx="5"/><rect x="72" y="14" width="56" height="40" rx="5"/>'
+     +'<rect x="10" y="62" width="56" height="40" rx="5"/><rect x="72" y="62" width="56" height="40" rx="5"/></g>'
+     +'<path d="M20 44 l12 -12 l10 8 l14 -16" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +txt(100,42,'OEE',17,D)
+     +'<g stroke="'+D+'" stroke-width="2.2" stroke-linecap="round"><path d="M20 74 h36"/><path d="M20 84 h26"/><path d="M20 94 h32"/></g>'
+     +per(88,78,9,L)+per(112,78,9,A)
+     +'<rect x="10" y="110" width="118" height="30" rx="5" fill="'+L+'" '+st+'/>'
+     +txt(69,131,'OUTSOURCE · LEAD',11,D)
+     +'<circle cx="164" cy="76" r="30" fill="'+A+'" '+st+'/>'
+     +txt(164,84,'6M',21,'#fff')),
+
+    /* 18 Tom：評鑑表有簽名就代表材料變更已核准嗎？ */
+    au3SignProveAsk: svg(
+      '<rect x="14" y="30" width="76" height="92" rx="5" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2" stroke-linecap="round"><path d="M26 48 h52"/><path d="M26 62 h52"/></g>'
+     +'<path d="M26 98 c10 -14 16 6 26 -6 c8 -10 14 4 22 -4" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M100 76 h16" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M130 76 l-14 -9 v18 z" fill="'+A+'"/>'
+     +'<circle cx="160" cy="62" r="26" fill="none" stroke="'+D+'" stroke-width="3" stroke-dasharray="8 6"/>'
+     +qb(160,122)),
+
+    /* 19 Anita：供應商評鑑與變更核准是不同紀錄 */
+    au3TwoRecords: svg(
+      '<rect x="8" y="26" width="72" height="92" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="16" y="36" width="56" height="10" rx="3" fill="'+A+'"/>'
+     +txt(44,70,'EVAL',16,D)
+     +'<path d="M18 88 c8 -10 13 5 21 -4 c7 -8 11 3 17 -3" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<rect x="120" y="26" width="72" height="92" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="128" y="36" width="56" height="10" rx="3" fill="'+A+'"/>'
+     +txt(156,70,'ECN',16,D)
+     +chk(140,84,24,A)
+     +txt(100,82,'≠',30,R)),
+
+    /* 20 Tom：供應商變更管制有哪些缺口？ */
+    au3SupChangeAsk: svg(
+      '<rect x="12" y="52" width="46" height="38" rx="5" fill="'+C+'" '+st+'/>'
+     +txt(35,76,'SUB',14,D)
+     +'<path d="M62 71 h16" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M94 71 l-14 -9 v18 z" fill="'+A+'"/>'
+     +'<rect x="98" y="52" width="46" height="38" rx="5" fill="'+L+'" '+st+'/>'
+     +txt(121,76,'SUP',14,D)
+     +'<g fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5">'
+     +'<rect x="12" y="104" width="46" height="18" rx="4"/><rect x="98" y="104" width="46" height="18" rx="4"/></g>'
+     +qb(166,36)),
+
+    /* 21 Anita：缺子供應商變更與客戶核准紀錄，也需建立當地規定 */
+    au3SubSupGap: svg(
+      '<g fill="none" stroke="'+R+'" stroke-width="3" stroke-dasharray="7 5">'
+     +'<rect x="10" y="16" width="80" height="44" rx="5"/><rect x="10" y="74" width="80" height="44" rx="5"/></g>'
+     +txt(50,44,'SUB CHG',14,D)
+     +txt(50,102,'CUST OK',14,D)
+     +doc(112,20,78,94,1)
+     +'<circle cx="176" cy="104" r="20" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="#fff" stroke-width="3.5" stroke-linecap="round"><path d="M176 94 v20"/><path d="M166 104 h20"/></g>'),
+
+    /* 22 Tom：出貨月台會攔阻重複條碼嗎？ */
+    au3DupBarcodeAsk: svg(
+      '<g fill="'+D+'">'
+     +'<rect x="16" y="26" width="4" height="36"/><rect x="24" y="26" width="7" height="36"/><rect x="35" y="26" width="3" height="36"/>'
+     +'<rect x="42" y="26" width="6" height="36"/><rect x="52" y="26" width="4" height="36"/><rect x="60" y="26" width="8" height="36"/></g>'
+     +'<g fill="'+D+'">'
+     +'<rect x="16" y="82" width="4" height="36"/><rect x="24" y="82" width="7" height="36"/><rect x="35" y="82" width="3" height="36"/>'
+     +'<rect x="42" y="82" width="6" height="36"/><rect x="52" y="82" width="4" height="36"/><rect x="60" y="82" width="8" height="36"/></g>'
+     +'<rect x="8" y="18" width="70" height="52" rx="5" fill="none" stroke="'+A+'" stroke-width="3"/>'
+     +'<rect x="8" y="74" width="70" height="52" rx="5" fill="none" stroke="'+A+'" stroke-width="3"/>'
+     +'<path d="M104 24 v104" stroke="'+D+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 7"/>'
+     +'<rect x="118" y="60" width="70" height="34" rx="5" fill="'+L+'" '+st+'/>'
+     +txt(153,84,'DOCK',16,D)
+     +qb(153,34)),
+
+    /* 23 Anita：EOL 有此功能，月台沒有，是否增加仍待討論 */
+    au3EolVsDock: svg(
+      '<rect x="12" y="34" width="76" height="40" rx="8" fill="#fff" '+st+'/>'
+     +txt(50,61,'EOL',18,D)
+     +chk(104,46,26,A)
+     +'<rect x="12" y="90" width="76" height="40" rx="8" fill="#fff" '+st+'/>'
+     +txt(50,117,'DOCK',16,D)
+     +ex(117,108,22,R)
+     +'<path d="M140 14 h50 v34 h-20 l-12 12 v-12 h-18 z" fill="'+L+'" '+st+'/>'
+     +'<g fill="'+D+'"><circle cx="153" cy="31" r="3"/><circle cx="165" cy="31" r="3"/><circle cx="177" cy="31" r="3"/></g>'),
+
+    /* 24 Tom：出貨標籤的改善是什麼？ */
+    au3LabelAsk: svg(
+      carton(26,52,92,70)
+     +'<rect x="44" y="70" width="56" height="34" rx="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="'+D+'"><rect x="52" y="78" width="3" height="18"/><rect x="59" y="78" width="5" height="18"/>'
+     +'<rect x="68" y="78" width="3" height="18"/><rect x="75" y="78" width="6" height="18"/>'
+     +'<rect x="85" y="78" width="3" height="18"/></g>'
+     +qb(152,56)),
+
+    /* 25 Anita：生管訂出出貨條碼標籤核對流程，目標 10/30 */
+    au3Oct30Label: svg(
+      '<rect x="12" y="52" width="64" height="48" rx="4" fill="'+C+'" '+st+'/>'
+     +'<rect x="24" y="64" width="40" height="24" rx="2" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="'+D+'"><rect x="30" y="69" width="3" height="14"/><rect x="37" y="69" width="5" height="14"/>'
+     +'<rect x="46" y="69" width="3" height="14"/><rect x="53" y="69" width="5" height="14"/></g>'
+     +'<path d="M20 34 l24 22 l24 -22" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M44 14 v30" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +chk(16,110,26,A)
+     +'<path d="M108 54 v-14 a9 9 0 0 1 9 -9 h62 a9 9 0 0 1 9 9 v14 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M108 54 v58 a9 9 0 0 0 9 9 h62 a9 9 0 0 0 9 -9 V54 z" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"><path d="M128 24 v12"/><path d="M168 24 v12"/></g>'
+     +txt(148,80,'OCT',18,D)+txt(148,106,'30',24,D))
 
   });
 })();
