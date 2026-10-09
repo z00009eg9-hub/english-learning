@@ -21951,6 +21951,1184 @@ window.BOOK = {
       { "k": "有腦霧", "en": "Have brain fog", "cn": "有腦霧" },
       { "k": "頻率副詞", "en": "Regularly", "cn": "常、定期地" }
     ]
+  },
+  /* ---- bk20261008 Machine Problems & How long ---- */
+  {
+    "id": "bk20261008",
+    "video": true,
+    "icon": "🛠️",
+    "date": "2026-10-08",
+    "doc": "https://docs.google.com/document/d/1aZz_clyX1jA92XFTg8MqqQo_B3w1pHjrtz_S1lfTYP8/edit",
+    "title": "Machine Problems & How long",
+    "titleCn": "機器異常與 How long 句型",
+    "topics": "If 條件句 / act up vs break down / qualified / inspection frequency / How long + has/have / since vs for / WH 問句 / 訓練與出貨檢驗複習",
+    "hwTitle": "I. ★ 10/08 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "wrong": "If the worker has poor operator competency may led to quality problems.",
+        "fix": "If the operator has poor competency, it may lead to quality problems.",
+        "cn": "如果操作員的能力不足，可能會導致品質問題。",
+        "pat": "If + 主詞 + 現在式, 主詞 + may + 原形動詞",
+        "note": "① 一個人只用一個名詞指稱，worker 和 operator 重複，改成 the operator；competency 本身就是「能力」，不必再加 operator 修飾。② if 子句結束要加逗號，主句需要主詞 it（指前面整個情況）。③ may 後面接原形，所以 led 要改成 lead（詳見第 IV 章）；lead to + 名詞 = 導致。④ 老師的說法 lack（缺乏）是及物動詞，後面直接接名詞：lacks the necessary skills，比 has poor competency 更自然、更具體。老師另一種說法：If an operator lacks the necessary skills, it may lead to quality problems."
+      },
+      {
+        "n": 2,
+        "wrong": "The operator is is qualified to assemble the treadmill.",
+        "fix": "The operator is qualified to assemble the treadmill.（刪掉多打的一個 is）",
+        "cn": "這位操作員有資格組裝跑步機。",
+        "pat": "主詞 + be + qualified to + 原形動詞",
+        "note": "qualified 是形容詞「有資格的」，be qualified to + 原形動詞 = 有資格做某事；to assemble 是不定詞。句子只需要一個 be 動詞 is。形容詞位置的說明見第 VI 章。"
+      },
+      {
+        "n": 3,
+        "wrong": "We need to increase our inspectionsfrequency when a replacement operator starts working.",
+        "fix": "We need to increase the frequency of our inspections when a replacement operator starts working.",
+        "cn": "當替補的操作員開始工作時，我們需要提高檢驗的頻率。",
+        "pat": "increase the frequency of + 名詞 / when + 主詞 + 現在式",
+        "note": "① 原句 inspectionsfrequency 是兩個字黏在一起，而且英文要說「the frequency of + 名詞」（……的頻率）。② when 引導的時間子句，雖然指未來的事，動詞仍用現在式 starts，不用 will start。③ replacement operator = 替補的操作員。④ 老師另外示範了「inspection frequency」的名詞＋名詞說法，見第 VII 章。"
+      },
+      {
+        "n": 4,
+        "wrong": "The QA manager assign engineer to collect the defective samples and prepare the root cause repport.",
+        "fix": "The QA manager assigned an engineer to collect the defective samples and prepare the root cause report.",
+        "cn": "品保經理指派一位工程師去收集不良樣品，並準備根本原因報告。",
+        "pat": "assign + 人 + to + 原形動詞",
+        "note": "① 指派這件事已經發生，要用過去式 assigned（原句 assign 時態不對）。② engineer 是可數名詞，單數前要加冠詞 an。③ report 拼字只有一個 p。④ to collect … and prepare … 兩個動詞用 and 並列，共用同一個 to。⑤ defective samples（不良樣品）不是 effective samples；root cause report 的專業說明見第 VII 章。"
+      },
+      {
+        "n": 5,
+        "ok": "He will cover for me while I am in Taiwan.",
+        "cn": "我在台灣期間，他會幫我代班。",
+        "pat": "will + 原形動詞 / while + 主詞 + 現在式",
+        "note": "這句話文法正確。cover for + 人 = 代替某人（代班、頂替）。while 表示兩件事發生在同一段期間：「在我人在台灣的這段期間」；while 引導的時間子句指未來，動詞用現在式 am，不用 will be。"
+      }
+    ],
+    "vocabTitle": "II. 單字 Vocabulary",
+    "vocab": [
+      {
+        "w": "competency",
+        "star": true,
+        "ipa": "/ˈkɑːmpɪtənsi/",
+        "pos": "n.",
+        "cn": "能力、勝任度",
+        "ex": "Good competency takes training and practice.",
+        "exCn": "好的能力需要訓練與練習。"
+      },
+      {
+        "w": "lack",
+        "star": true,
+        "ipa": "/læk/",
+        "pos": "v.",
+        "cn": "缺乏",
+        "ex": "The new team lacks experience.",
+        "exCn": "這個新團隊缺乏經驗。"
+      },
+      {
+        "w": "qualified",
+        "ipa": "/ˈkwɑː.lə.faɪd/",
+        "pos": "adj.",
+        "cn": "有資格的、合格的",
+        "ex": "Only qualified staff can run this line.",
+        "exCn": "只有合格的人員才能操作這條產線。"
+      },
+      {
+        "w": "replacement",
+        "ipa": "/rɪˈpleɪs.mənt/",
+        "pos": "n.",
+        "cn": "替補者、替代品",
+        "ex": "We are training a replacement for Tom.",
+        "exCn": "我們正在訓練一位接替 Tom 的人。"
+      },
+      {
+        "w": "assign",
+        "star": true,
+        "ipa": "/əˈsaɪn/",
+        "pos": "v.",
+        "cn": "指派、分配",
+        "ex": "She assigned the task to Ken.",
+        "exCn": "她把這項任務指派給 Ken。"
+      },
+      {
+        "w": "defective",
+        "star": true,
+        "ipa": "/dɪˈfek.tɪv/",
+        "pos": "adj.",
+        "cn": "有瑕疵的、不良的",
+        "ex": "Please set aside the defective parts.",
+        "exCn": "請把有瑕疵的零件挑出來。"
+      },
+      {
+        "w": "assemble",
+        "ipa": "/əˈsembəl/",
+        "pos": "v.",
+        "cn": "組裝",
+        "ex": "It takes two people to assemble this frame.",
+        "exCn": "組裝這個框架需要兩個人。"
+      },
+      {
+        "w": "treadmill",
+        "ipa": "/ˈtredmɪl/",
+        "pos": "n.",
+        "cn": "跑步機",
+        "ex": "The factory makes treadmills for home use.",
+        "exCn": "這間工廠生產家用跑步機。"
+      },
+      {
+        "w": "technician",
+        "ipa": "/tekˈnɪʃən/",
+        "pos": "n.",
+        "cn": "技術員",
+        "ex": "The technician fixed the problem in an hour.",
+        "exCn": "技術員一個小時就修好了問題。"
+      },
+      {
+        "w": "inspection",
+        "ipa": "/ɪnˈspek.ʃən/",
+        "pos": "n.",
+        "cn": "檢驗、檢查",
+        "ex": "The final inspection is done at the end of the line.",
+        "exCn": "最後檢驗在產線尾端進行。"
+      },
+      {
+        "w": "frequency",
+        "star": true,
+        "ipa": "/ˈfriː.kwən.si/",
+        "pos": "n.",
+        "cn": "頻率",
+        "ex": "The frequency of breakdowns has dropped.",
+        "exCn": "故障的頻率下降了。"
+      },
+      {
+        "w": "supervisor",
+        "ipa": "/ˈsuː.pɚ.vaɪ.zɚ/",
+        "pos": "n.",
+        "cn": "主管、領班",
+        "ex": "Please report the problem to your supervisor.",
+        "exCn": "請把問題回報給你的主管。"
+      },
+      {
+        "w": "reevaluate",
+        "star": true,
+        "ipa": "/ˌriː.ɪˈvæl.ju.eɪt/",
+        "pos": "v.",
+        "cn": "重新評估（再評一次）",
+        "ex": "We will reevaluate the operator next week.",
+        "exCn": "我們下週會重新評核這位操作員。"
+      },
+      {
+        "w": "exterior",
+        "star": true,
+        "ipa": "/ɪkˈstɪr.i.ɚ/",
+        "pos": "n.",
+        "cn": "外部、外觀",
+        "ex": "Check the exterior of the box first.",
+        "exCn": "先檢查箱子的外表。"
+      },
+      {
+        "w": "scratch",
+        "ipa": "/skrætʃ/",
+        "pos": "n.",
+        "cn": "刮痕",
+        "ex": "There is a small scratch on the panel.",
+        "exCn": "面板上有一道小刮痕。"
+      },
+      {
+        "w": "connector",
+        "ipa": "/kəˈnek.tɚ/",
+        "pos": "n.",
+        "cn": "連接器、接頭",
+        "ex": "Check that the connector is tight.",
+        "exCn": "確認連接器有鎖緊。"
+      },
+      {
+        "w": "shipment",
+        "ipa": "/ˈʃɪp.mənt/",
+        "pos": "n.",
+        "cn": "出貨、貨物",
+        "ex": "The shipment leaves on Friday.",
+        "exCn": "這批貨星期五出貨。"
+      },
+      {
+        "w": "approach",
+        "star": true,
+        "ipa": "/əˈproʊtʃ/",
+        "pos": "n. / v.",
+        "cn": "方法；接近（詳見 XI-C）"
+      }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases",
+    "phrases": [
+      {
+        "p": "act up",
+        "cn": "出問題、運作異常；（小孩）搗蛋（詳見 V）"
+      },
+      {
+        "p": "break down",
+        "cn": "故障、完全停止運作（詳見 V）"
+      },
+      {
+        "p": "behave badly",
+        "cn": "行為不乖、表現很差（詳見 V）"
+      },
+      {
+        "p": "cover for sb",
+        "cn": "代替某人（代班）（詳見 I-5、VII）"
+      },
+      {
+        "p": "lead to",
+        "cn": "導致（詳見 I-1、IV）"
+      },
+      {
+        "p": "root cause",
+        "cn": "根本原因（詳見 I-4、VII）"
+      },
+      {
+        "p": "be qualified to + V",
+        "cn": "有資格做……（詳見 I-2、VI）"
+      },
+      {
+        "p": "the frequency of",
+        "cn": "……的頻率（詳見 I-3、VII）"
+      },
+      {
+        "p": "set up a company",
+        "cn": "創辦公司（詳見 IV）"
+      },
+      {
+        "p": "come off",
+        "cn": "脫落、鬆脫（詳見 XI）"
+      },
+      {
+        "p": "provide / receive training",
+        "cn": "提供訓練／接受訓練（詳見 XI）"
+      },
+      {
+        "p": "fit the related station",
+        "cn": "符合該站點的要求（詳見 XI）"
+      }
+    ],
+    "grammarTitle": "IV–X. 句型與文法解說 Grammar",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "IV. If 條件句：兩個部分怎麼拆",
+        "pat": "If + 條件（if 子句）, 結果（主句）",
+        "pts": [
+          "if 開頭的句子通常有兩個部分：if 子句（條件）＋主句（結果）。",
+          "只說 If the operator has poor competency. 不完整，聽的人會等你說出「結果是什麼」。",
+          "if 子句交代條件，主句交代結果，兩邊缺一不可。",
+          "工作中講「如果 X 發生，就會／應該 Y」時一律用這個框架。"
+        ],
+        "exs": [
+          {
+            "tag": "條件／結果",
+            "en": "If I had a lot of money, I would set up my own company.",
+            "cn": "如果我有很多錢，我會創辦自己的公司。",
+            "hi": "set up"
+          },
+          {
+            "tag": "條件／結果",
+            "en": "If it rains, I won't go outside tomorrow.",
+            "cn": "如果下雨，我明天就不出門。"
+          }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "助動詞（modal）後面一定接原形",
+        "pat": "may / can / could / would / should / will / might + 原形動詞",
+        "pts": [
+          "may、can、could、would、should、will、might 後面，主要動詞一律用原形。所以是 may lead，不是 may led。"
+        ],
+        "exs": [
+          {
+            "tag": "can",
+            "en": "It can cause delays.",
+            "cn": "這可能造成延誤。"
+          },
+          {
+            "tag": "should",
+            "en": "We should call a technician.",
+            "cn": "我們應該叫技術員來。"
+          },
+          {
+            "tag": "might",
+            "en": "The problem might affect production.",
+            "cn": "這個問題可能會影響生產。"
+          }
+        ]
+      },
+      {
+        "k": "V-A",
+        "title": "V. act up vs break down：兩者對照",
+        "pat": "主詞 + act up（不可分的片語動詞，後面不接受詞）",
+        "pts": [
+          "act up = 出問題／運作異常／不聽話：「不正常，但不一定完全壞掉」。",
+          "break down = 故障／完全停止運作：「整個壞了、不能動」。",
+          "act up 比 break down 輕微，機器可能不穩、變慢、有雜音、時好時壞或不可靠，但還能運作；例如網路 acting up，是時通時斷，不是完全沒有。",
+          "act up 是口語，比較非正式；正式報告可改說 malfunction。"
+        ],
+        "exs": [
+          {
+            "tag": "act up",
+            "en": "The machine is acting up.",
+            "cn": "機器運作不太正常。",
+            "hi": "acting up"
+          },
+          {
+            "tag": "break down",
+            "en": "The machine broke down.",
+            "cn": "機器故障了／完全不能運轉了。",
+            "hi": "broke down"
+          },
+          {
+            "tag": "break down",
+            "en": "The machine broke down, so production stopped.",
+            "cn": "機器故障了，所以生產停了。",
+            "hi": "broke down"
+          }
+        ]
+      },
+      {
+        "k": "V-B",
+        "title": "act up 的四類用法（取決於主詞）",
+        "pat": "主詞（機器／科技產品／身體部位／人）+ act up",
+        "pts": [
+          "身體部位的 act up：又開始不舒服，不是完全不能用。",
+          "人，尤其是小孩的 act up：調皮、搗蛋。",
+          "behave badly = 行為不乖，是 act up 用在「人」身上時的白話說法。（小孩 acting up 不是壞掉，而是在惹麻煩。）"
+        ],
+        "exs": [
+          {
+            "tag": "機器、設備",
+            "en": "My computer is acting up.",
+            "cn": "我的電腦出問題了。",
+            "hi": "acting up"
+          },
+          {
+            "tag": "機器、設備",
+            "en": "The printer has been acting up all morning.",
+            "cn": "印表機整個早上一直出問題。",
+            "hi": "acting up"
+          },
+          {
+            "tag": "機器、設備",
+            "en": "The machine started acting up during production.",
+            "cn": "機器在生產過程中開始出現異常。",
+            "hi": "acting up"
+          },
+          {
+            "tag": "科技產品",
+            "en": "My phone is acting up.",
+            "cn": "我的手機出問題了。",
+            "hi": "acting up"
+          },
+          {
+            "tag": "科技產品",
+            "en": "The Wi-Fi is acting up today.",
+            "cn": "今天 Wi-Fi 不太正常。",
+            "hi": "acting up"
+          },
+          {
+            "tag": "科技產品",
+            "en": "The software keeps acting up.",
+            "cn": "這個軟體一直出問題。",
+            "hi": "acting up"
+          },
+          {
+            "tag": "身體部位",
+            "en": "My knee has been acting up lately.",
+            "cn": "我的膝蓋最近一直不太舒服。",
+            "hi": "acting up"
+          },
+          {
+            "tag": "身體部位",
+            "en": "My back is acting up again.",
+            "cn": "我的背／腰又開始不舒服了。",
+            "hi": "acting up"
+          },
+          {
+            "tag": "人（小孩）",
+            "en": "The kids were acting up in class.",
+            "cn": "孩子們在課堂上很不乖／一直搗蛋。",
+            "hi": "acting up"
+          }
+        ]
+      },
+      {
+        "k": "V-C",
+        "title": "機器出問題怎麼辦",
+        "pat": "If + 主詞 + 現在式, 主詞 + should / have to + 原形動詞",
+        "pts": [
+          "acts up 在這裡和 has a problem 一樣，當 if 子句的動詞片語；前兩句暗示機器可能還能動、但有問題，breaks down 則表示已完全停止。",
+          "should 是「應該」（建議），have to 是「不得不／必須」（比較強）。"
+        ],
+        "exs": [
+          {
+            "tag": "has a problem",
+            "en": "If the machine has a problem, we should call a technician.",
+            "cn": "如果機器有問題，我們應該叫技術員來。",
+            "hi": "has a problem"
+          },
+          {
+            "tag": "act up",
+            "en": "If the machine acts up, we should call a technician.",
+            "cn": "如果機器出問題，我們應該叫技術員來。",
+            "hi": "acts up"
+          },
+          {
+            "tag": "break down",
+            "en": "If the machine breaks down, we have to call a technician.",
+            "cn": "如果機器故障了，我們就得叫技術員來。",
+            "hi": "breaks down"
+          }
+        ]
+      },
+      {
+        "k": "VI",
+        "title": "VI. 形容詞位置：qualified",
+        "pat": "主詞 + be 動詞 + 形容詞 + 不定詞片語",
+        "pts": [
+          "形容詞常見兩個位置：① be 動詞後面 ② 名詞前面。",
+          "The operator（主詞）／is（be 動詞）／qualified（形容詞）／to assemble the treadmill（說明有資格做什麼的不定詞片語）。",
+          "表示某人有做這件事的訓練、技能或授權。"
+        ],
+        "exs": [
+          {
+            "tag": "be 動詞後面",
+            "en": "The operator is qualified.",
+            "cn": "這位操作員有資格。",
+            "hi": "qualified"
+          },
+          {
+            "tag": "名詞前面",
+            "en": "A qualified operator can assemble the treadmill.",
+            "cn": "合格的操作員可以組裝跑步機。",
+            "hi": "qualified"
+          }
+        ]
+      },
+      {
+        "k": "VII-A",
+        "title": "VII. 專業搭配詞：inspection frequency（檢驗頻率）",
+        "pat": "名詞 + of + 名詞（……的……）",
+        "pts": [
+          "兩種說法都正確；名詞＋名詞較精簡，of 結構較明確。",
+          "名詞 + of + 名詞：the leg of the table（桌腳）、the handle of the door（門把）、the screen of the computer（電腦螢幕）、the frequency of inspection（檢驗頻率）。"
+        ],
+        "exs": [
+          {
+            "tag": "名詞＋名詞（簡潔）",
+            "en": "We need to increase our inspection frequency when a replacement operator starts working.",
+            "cn": "當替補的操作員開始工作時，我們需要提高檢驗頻率。",
+            "hi": "inspection frequency"
+          },
+          {
+            "tag": "名詞＋of＋名詞（較明確）",
+            "en": "We need to increase the frequency of inspection when a replacement operator starts working.",
+            "cn": "同上，語氣較明確。",
+            "hi": "the frequency of inspection"
+          }
+        ]
+      },
+      {
+        "k": "VII-B",
+        "title": "QA 報告：assign + 人 + to + 動詞",
+        "pat": "assign + 人 + to + 原形動詞",
+        "pts": [
+          "QA manager：品保（quality assurance）經理。",
+          "defective samples：有瑕疵、有品質問題的樣品（不是 effective samples）。",
+          "root cause report：說明問題「根本原因」的報告；找出根本原因才能避免同樣的問題再發生。"
+        ],
+        "exs": [
+          {
+            "tag": "assign + 人 + to + V",
+            "en": "The manager assigned an engineer to collect samples.",
+            "cn": "經理指派一位工程師去收集樣品。",
+            "hi": "assigned"
+          },
+          {
+            "tag": "assign + 人 + to + V",
+            "en": "The supervisor assigned a technician to check the machine.",
+            "cn": "主管指派一位技術員去檢查機器。",
+            "hi": "assigned"
+          },
+          {
+            "tag": "assign + 人 + to + V",
+            "en": "The QA manager assigned an employee to prepare the report.",
+            "cn": "品保經理指派一位員工去準備報告。",
+            "hi": "assigned"
+          }
+        ]
+      },
+      {
+        "k": "VII-C",
+        "title": "cover for someone（代班）",
+        "pat": "cover for + 人",
+        "pts": [
+          "cover for + 人 = 在某人不在時，暫時代替他做工作。"
+        ],
+        "exs": [
+          {
+            "tag": "cover for + 人",
+            "en": "My colleague covered for me during my vacation.",
+            "cn": "我休假期間，同事幫我代班。",
+            "hi": "covered for"
+          },
+          {
+            "tag": "cover for + 人",
+            "en": "Can you cover for me tomorrow morning?",
+            "cn": "你明天早上可以幫我代班嗎？",
+            "hi": "cover for"
+          }
+        ]
+      },
+      {
+        "k": "VIII-A",
+        "title": "VIII. How long + 現在完成式：基本句型",
+        "pat": "How long + has/have + 主詞 + 過去分詞？／How long + has/have + 主詞 + been + V-ing？",
+        "pts": [
+          "問「從過去到現在已經多久了」。",
+          "主詞是 he / she / 單數名詞用 has；you / they / 複數名詞用 have。發問前先決定時間：還在持續、已結束、未來、還是現在狀態。"
+        ],
+        "exs": [
+          {
+            "tag": "has + p.p.",
+            "en": "How long has he worked here?",
+            "cn": "他在這裡工作多久了？",
+            "hi": "How long has he worked"
+          },
+          {
+            "tag": "has been + V-ing",
+            "en": "How long has she been working at this company?",
+            "cn": "她在這間公司工作多久了？",
+            "hi": "has she been working"
+          },
+          {
+            "tag": "has been + V-ing",
+            "en": "How long has the manager been working in this department?",
+            "cn": "這個經理在這個部門工作多久了？",
+            "hi": "has the manager been working"
+          },
+          {
+            "tag": "has + p.p.",
+            "en": "How long has the manager worked in this department?",
+            "cn": "這個經理在這個部門工作多久了？",
+            "hi": "has the manager worked"
+          }
+        ]
+      },
+      {
+        "k": "VIII-B",
+        "title": "完成式 vs 完成進行式",
+        "pat": "have + p.p.（強調經歷）／have been + V-ing（強調持續進行）",
+        "pts": [
+          "⭐ 重點：日常英文中兩種都很自然，意思非常接近；have been + V-ing 通常更常用。"
+        ],
+        "exs": [
+          {
+            "tag": "have taught（強調「經歷」）",
+            "en": "How long have you taught English online?",
+            "cn": "你教線上英文多久了？（強調經歷、期間）",
+            "hi": "have you taught"
+          },
+          {
+            "tag": "have been teaching（強調持續進行）",
+            "en": "How long have you been teaching English online?",
+            "cn": "你在線上教英文多久了？（強調一直在教）",
+            "hi": "have you been teaching"
+          }
+        ]
+      },
+      {
+        "k": "VIII-C",
+        "title": "未來 vs 到現在",
+        "pat": "未來：How long + will + 主詞 + 原形動詞？",
+        "pts": [
+          "例如客戶買了東西，想問「之後的服務期限」，要用未來式 will，不用現在完成式。"
+        ],
+        "exs": [
+          {
+            "tag": "will provide（未來會提供多久）",
+            "en": "How long will your department provide this service?",
+            "cn": "你們部門會提供這項服務多久？（將提供多長時間）",
+            "hi": "will your department provide"
+          },
+          {
+            "tag": "回答",
+            "en": "Our department will provide this service for five years.",
+            "cn": "我們部門會提供這項服務五年。",
+            "hi": "for five years"
+          },
+          {
+            "tag": "has been providing（從過去到現在）",
+            "en": "How long has your department been providing this service?",
+            "cn": "你們部門提供這項服務多久了？",
+            "hi": "has your department been providing"
+          }
+        ]
+      },
+      {
+        "k": "VIII-D",
+        "title": "經歷 vs 持續",
+        "pat": "has worked（年資、經歷）／has been working（仍在進行）",
+        "pts": [],
+        "exs": [
+          {
+            "tag": "has worked（強調工作年資、經歷）",
+            "en": "How long has your employee worked in this department?",
+            "cn": "你的員工在這個部門工作多久了？（強調年資）",
+            "hi": "has your employee worked"
+          },
+          {
+            "tag": "has been working（強調仍在做）",
+            "en": "How long has this employee been working in this department?",
+            "cn": "這位員工在這個部門工作多久了？（強調仍在職）",
+            "hi": "has this employee been working"
+          }
+        ]
+      },
+      {
+        "k": "VIII-E",
+        "title": "對你發問（老師示範，附答句）",
+        "pat": "How long + have you + p.p. ...? → I have ... for / since ...",
+        "pts": [],
+        "exs": [
+          {
+            "tag": "發問",
+            "en": "How long have you worked for your company?",
+            "cn": "你在公司工作多久了？"
+          },
+          {
+            "tag": "發問",
+            "en": "How long have you been in your current position?",
+            "cn": "你擔任目前的職位多久了？"
+          },
+          {
+            "tag": "答句",
+            "en": "I have been in my current position for ten years.",
+            "cn": "我擔任目前職位十年了。",
+            "hi": "for ten years"
+          },
+          {
+            "tag": "答句",
+            "en": "I have been in my current position since 2015.",
+            "cn": "我從 2015 年起擔任目前的職位。",
+            "hi": "since 2015"
+          },
+          {
+            "tag": "發問",
+            "en": "How long have you worked in this department?",
+            "cn": "你在這個部門工作多久了？"
+          },
+          {
+            "tag": "答句",
+            "en": "I have worked in this department for ten years.",
+            "cn": "我在這個部門工作十年了。",
+            "hi": "for ten years"
+          },
+          {
+            "tag": "答句",
+            "en": "I have worked in this department since 2015.",
+            "cn": "我從 2015 年起在這個部門工作。",
+            "hi": "since 2015"
+          },
+          {
+            "tag": "發問",
+            "en": "How long have you used this machine?",
+            "cn": "你用這台機器多久了？"
+          },
+          {
+            "tag": "發問",
+            "en": "How long have you worked with your manager?",
+            "cn": "你跟你的經理共事多久了？"
+          },
+          {
+            "tag": "答句",
+            "en": "I have worked with my manager since 2020.",
+            "cn": "我從 2020 年起就和我的經理共事。",
+            "hi": "since 2020"
+          },
+          {
+            "tag": "發問",
+            "en": "How long has your team provided this service?",
+            "cn": "你們團隊提供這項服務多久了？"
+          },
+          {
+            "tag": "答句",
+            "en": "We have provided the service for five years.",
+            "cn": "我們提供這項服務五年了。",
+            "hi": "for five years"
+          },
+          {
+            "tag": "發問",
+            "en": "How long has this operator worked at this station?",
+            "cn": "這位操作員在這個站點工作多久了？"
+          },
+          {
+            "tag": "答句",
+            "en": "He has worked at this station since 2021.",
+            "cn": "他從 2021 年起就在這個站點工作。",
+            "hi": "since 2021"
+          }
+        ]
+      },
+      {
+        "k": "VIII-F",
+        "title": "答句要和問句的時態一致",
+        "pat": "問 has + p.p. → 答 has + p.p.；問 been V-ing → 答 been V-ing",
+        "pts": [
+          "have stayed 偏重期間；have been staying 偏重持續中的狀態。"
+        ],
+        "exs": [
+          {
+            "tag": "問 has + p.p.",
+            "en": "How long has this employee worked in this company?",
+            "cn": "這位員工在這間公司工作多久了？"
+          },
+          {
+            "tag": "答 has + p.p.",
+            "en": "He has worked in this company for ten years.",
+            "cn": "他在這間公司工作十年了。"
+          },
+          {
+            "tag": "問 been V-ing",
+            "en": "How long has he been working in this company?",
+            "cn": "他在這間公司工作多久了？"
+          },
+          {
+            "tag": "答 been V-ing",
+            "en": "He has been working in this company for ten years.",
+            "cn": "他一直在這間公司工作十年了。"
+          },
+          {
+            "tag": "have stayed（偏重期間）",
+            "en": "How long have you stayed in Vietnam?",
+            "cn": "你在越南待多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "I have stayed in Vietnam for one year.",
+            "cn": "我在越南待一年了。"
+          },
+          {
+            "tag": "have been staying（偏重持續中的狀態）",
+            "en": "How long have you been staying in Vietnam?",
+            "cn": "你一直在越南待多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "I have been staying in Vietnam for one year.",
+            "cn": "我一直在越南待一年了。"
+          }
+        ]
+      },
+      {
+        "k": "VIII-G",
+        "title": "造句練習：10 題（提示 → 問句＋回答）",
+        "pat": "How long + has + 主詞 + 過去分詞？ → 主詞 + has + 過去分詞 + for / since ...",
+        "pts": [],
+        "exs": [
+          {
+            "tag": "operator / work / this department / 3 years",
+            "en": "How long has the operator worked in this department?",
+            "cn": "這位操作員在這個部門工作多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "He has worked there for three years.",
+            "cn": "他在那裡工作三年了。"
+          },
+          {
+            "tag": "manager / work / this company / 10 years",
+            "en": "How long has the manager worked for this company?",
+            "cn": "這位經理在這間公司工作多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "She has worked for it for ten years.",
+            "cn": "她在這裡工作十年了。"
+          },
+          {
+            "tag": "employee / work / this position / 2 years",
+            "en": "How long has the employee worked in this position?",
+            "cn": "這位員工做這個職位多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "He has worked in it for two years.",
+            "cn": "他做了兩年。"
+          },
+          {
+            "tag": "technician / work / this factory / 8 years",
+            "en": "How long has the technician worked at this factory?",
+            "cn": "這位技術員在這間工廠工作多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "He has worked here for eight years.",
+            "cn": "他在這裡工作八年了。"
+          },
+          {
+            "tag": "supervisor / manage / this team / 5 years",
+            "en": "How long has the supervisor managed this team?",
+            "cn": "這位主管帶這個團隊多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "She has managed it for five years.",
+            "cn": "她帶了五年。"
+          },
+          {
+            "tag": "operator / use / this machine / 4 years",
+            "en": "How long has the operator used this machine?",
+            "cn": "這位操作員用這台機器多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "He has used it for four years.",
+            "cn": "他用了四年。"
+          },
+          {
+            "tag": "engineer / work / in the QA department / 6 years",
+            "en": "How long has the engineer worked in the QA department?",
+            "cn": "這位工程師在品保部門工作多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "She has worked there for six years.",
+            "cn": "她在那裡工作六年了。"
+          },
+          {
+            "tag": "employee / provide / this service / 3 years",
+            "en": "How long has the employee provided this service?",
+            "cn": "這位員工提供這項服務多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "He has provided it for three years.",
+            "cn": "他提供了三年。"
+          },
+          {
+            "tag": "worker / work / at this station / 1 year",
+            "en": "How long has the worker worked at this station?",
+            "cn": "這位工人在這個站點工作多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "She has worked here for one year.",
+            "cn": "她在這裡工作一年了。"
+          },
+          {
+            "tag": "manager / be / in this position / 7 years",
+            "en": "How long has the manager been in this position?",
+            "cn": "這位經理擔任這個職位多久了？"
+          },
+          {
+            "tag": "答",
+            "en": "He has been in it for seven years.",
+            "cn": "他擔任了七年。"
+          }
+        ]
+      },
+      {
+        "k": "IX",
+        "title": "IX. since vs for",
+        "pat": "since + 起點（時間點）／for + 時間長度",
+        "pts": [
+          "since = 起點（從某個時間點開始）；for = 時間長度（持續一段時間）。",
+          "since 的時間詞：since 2020、since 2021、since Monday、since last week、since January、since 9 a.m.",
+          "for 的時間詞：for 6 years、for two weeks、for one year、for two days、for three months、for five hours。",
+          "⚠ 完成式說「從某年開始」要用 since，不用 from。✅ I have worked here since 2020. ❌ I have worked here from 2020.（這個時態下不自然）",
+          "兩種說法可以描述同一件事：for 給的是「長度」，since 給的是「起點」。"
+        ],
+        "exs": [
+          {
+            "tag": "since（自從／從……開始）",
+            "en": "I've worked here since 2021.",
+            "cn": "我從 2021 年起就在這裡工作。",
+            "hi": "since 2021"
+          },
+          {
+            "tag": "for（持續……多久）",
+            "en": "I've worked in this department for five years.",
+            "cn": "我在這個部門工作五年了。",
+            "hi": "for five years"
+          }
+        ]
+      },
+      {
+        "k": "X-1",
+        "title": "X. WH 問句總整理：1. WHO — 誰",
+        "pat": "Who + 動詞 + ……？",
+        "pts": [
+          "⚠ who 當主詞時，不加 do / does / did。"
+        ],
+        "exs": [
+          {
+            "tag": "Who",
+            "en": "Who checks the equipment?",
+            "cn": "誰負責檢查設備？",
+            "hi": "Who checks"
+          },
+          {
+            "tag": "Who",
+            "en": "Who trains the new operators?",
+            "cn": "誰訓練新的操作員？",
+            "hi": "Who trains"
+          },
+          {
+            "tag": "Who",
+            "en": "Who assigned the engineer?",
+            "cn": "誰指派了這位工程師？",
+            "hi": "Who assigned"
+          }
+        ]
+      },
+      {
+        "k": "X-2",
+        "title": "2. WHAT / WHERE / WHEN / WHY / HOW",
+        "pat": "WH-word + do/does/did + 主詞 + 原形動詞？",
+        "pts": [
+          "問受詞、地點、時間、原因、方法。Pattern：WH + 助動詞 + 主詞 + 動詞。拆解：Where + does + he + work? / Why + did + she + leave?"
+        ],
+        "exs": [
+          {
+            "tag": "What",
+            "en": "What does the operator do?",
+            "cn": "這位操作員負責做什麼？"
+          },
+          {
+            "tag": "Where",
+            "en": "Where does he work?",
+            "cn": "他在哪裡工作？"
+          },
+          {
+            "tag": "When",
+            "en": "When did she start?",
+            "cn": "她是什麼時候開始的？"
+          },
+          {
+            "tag": "Why",
+            "en": "Why does he need training?",
+            "cn": "他為什麼需要訓練？"
+          },
+          {
+            "tag": "How",
+            "en": "How does the manager evaluate employees?",
+            "cn": "經理怎麼評估員工？"
+          }
+        ]
+      },
+      {
+        "k": "X-2B",
+        "title": "2-B. 不同時態的助動詞拆解（課堂補充）",
+        "pat": "WH 詞 + 助動詞 + 主詞 + 主要動詞",
+        "pts": [
+          "⭐ 重點：練習造問句和練習回答一樣重要，問句是口說流暢度的基礎。下次的功課：用 who、what、where、when、how、how long、how many、how much 各造問句。"
+        ],
+        "exs": [
+          {
+            "tag": "What(WH 詞）＋ do（助動詞）＋ you（主詞）＋ want（主要動詞）",
+            "en": "What do you want to eat?",
+            "cn": "你想吃什麼？"
+          },
+          {
+            "tag": "What ＋ will（未來助動詞）＋ you ＋ do",
+            "en": "What will you do on the weekend?",
+            "cn": "你週末要做什麼？"
+          },
+          {
+            "tag": "另一種未來說法：be going to",
+            "en": "What are you going to do on the weekend?",
+            "cn": "你週末打算做什麼？"
+          },
+          {
+            "tag": "Where ＋ did（過去助動詞）＋ she ＋ stay",
+            "en": "Where did she stay?",
+            "cn": "她住在哪裡？"
+          }
+        ]
+      },
+      {
+        "k": "X-3",
+        "title": "3. HOW LONG — 多久",
+        "pat": "How long + have/has + 主詞 + 過去分詞？／How long + have/has + 主詞 + been + V-ing？",
+        "pts": [
+          "從過去開始、持續到現在的動作。例句與兩種句型的差別，請看第 VIII 章。"
+        ],
+        "exs": []
+      },
+      {
+        "k": "X-4",
+        "title": "4. HOW MANY — 多少",
+        "pat": "How many + 複數名詞 + do/does + 主詞 + 動詞？",
+        "pts": [
+          "⚠ 補充：當 How many + 名詞 本身是主詞時，不加 do/does（見第一個例句）。"
+        ],
+        "exs": [
+          {
+            "tag": "How many",
+            "en": "How many employees work here?",
+            "cn": "這裡有多少員工在工作？"
+          },
+          {
+            "tag": "How many",
+            "en": "How many operators does the company have?",
+            "cn": "這間公司有多少操作員？"
+          },
+          {
+            "tag": "How many",
+            "en": "How many machines does this department use?",
+            "cn": "這個部門用幾台機器？"
+          }
+        ]
+      },
+      {
+        "k": "X-5",
+        "title": "5. WHICH — 哪一個",
+        "pat": "Which + 名詞 + do/does/did + 主詞 + 動詞？",
+        "pts": [
+          "⚠ 補充：介系詞會留在句尾（work in），不放在 which 前面。"
+        ],
+        "exs": [
+          {
+            "tag": "Which",
+            "en": "Which machine does the operator use?",
+            "cn": "這位操作員用哪一台機器？"
+          },
+          {
+            "tag": "Which",
+            "en": "Which department does she work in?",
+            "cn": "她在哪一個部門工作？"
+          },
+          {
+            "tag": "Which",
+            "en": "Which employee did the manager assign?",
+            "cn": "經理指派了哪一位員工？"
+          }
+        ]
+      },
+      {
+        "k": "X-6",
+        "title": "6. YES/NO Questions",
+        "pat": "一般動詞：Do/Does/Did + 主詞 + 動詞？／現在完成式：Have/Has + 主詞 + 過去分詞？",
+        "pts": [
+          "可以用 yes / no 回答的問句。"
+        ],
+        "exs": [
+          {
+            "tag": "Do / Does / Did",
+            "en": "Does he work here?",
+            "cn": "他在這裡工作嗎？"
+          },
+          {
+            "tag": "Do / Does / Did",
+            "en": "Does the operator need training?",
+            "cn": "這位操作員需要訓練嗎？"
+          },
+          {
+            "tag": "Do / Does / Did",
+            "en": "Did she report the problem?",
+            "cn": "她有回報這個問題嗎？"
+          },
+          {
+            "tag": "Have / Has",
+            "en": "Has he worked here for ten years?",
+            "cn": "他在這裡工作十年了嗎？"
+          },
+          {
+            "tag": "Have / Has",
+            "en": "Have you finished the training?",
+            "cn": "你完成訓練了嗎？"
+          }
+        ]
+      }
+    ],
+    "extraTitle": "XI. 課堂複習：訓練資格與出貨前檢驗",
+    "extra": [
+      {
+        "title": "A. 操作員訓練與資格（口說回答）",
+        "exs": [
+          {
+            "en": "We provide practical training and check our operators' skills before they work independently at the station. We also review their training records and make sure every employee is qualified to work at the station. For each station, we have different requirements. We have three skill levels: A, B, and C. Level A is easier than Levels B and C. If an employee passes Level A, they can move to a higher level, such as Level B or Level C. If the employee does not pass the evaluation, we will reevaluate them and measure their skills again. We have to make sure that all employees' skills fit the related station.",
+            "cn": "我們在操作員獨立上站之前，會提供實作訓練並檢查他們的技能。我們也會檢視訓練紀錄，確保每位員工都有資格在該站工作。每個站點的要求不同。我們有 A、B、C 三個技能等級，A 級比 B、C 級容易。如果員工通過 A 級，就能晉升到更高等級，例如 B 或 C 級。如果沒通過評核，我們會重新評核，再次測量技能。我們必須確保所有員工的技能符合相關站點。"
+          },
+          {
+            "en": "before working station independently ❌ → before they work independently at the station",
+            "cn": "訂正重點：before 後面接完整子句；at the station 說明地點。"
+          },
+          {
+            "en": "more easier ❌ → Level A is easier than Levels B and C.",
+            "cn": "訂正重點：easier 已經是比較級，不加 more。"
+          },
+          {
+            "en": "reevaluate = evaluate again",
+            "cn": "再評一次。訓練、資格認定常用。"
+          },
+          {
+            "en": "employees' skills fit the related station",
+            "cn": "fit the related station：員工的能力符合該站點的要求。"
+          }
+        ]
+      },
+      {
+        "title": "B. 出貨前品質檢驗",
+        "exs": [
+          {
+            "en": "How do you inspect the exterior?",
+            "cn": "你怎麼檢查外觀？（問「怎麼檢查」）"
+          },
+          {
+            "en": "Where did you find the scratch?",
+            "cn": "你在哪裡發現刮痕？（問「在哪裡」）"
+          },
+          {
+            "en": "In which part of the frame did you find the scratch?",
+            "cn": "你在框架的哪個部位發現刮痕？（問「在哪裡」）"
+          },
+          {
+            "en": "We found a scratch on the exterior of the frame.",
+            "cn": "我們在框架的外表發現一道刮痕。（答「找到什麼」）"
+          },
+          {
+            "en": "The connector came off the cable.",
+            "cn": "連接器從線材上脫落了。（come off = 脫落、鬆脫）"
+          }
+        ]
+      },
+      {
+        "title": "C. approach 的兩種意思",
+        "exs": [
+          {
+            "en": "We need a different approach to solve this problem.",
+            "cn": "我們需要換個方法來解決這個問題。（名詞：方法）"
+          },
+          {
+            "en": "The shipment date is approaching.",
+            "cn": "出貨日期快到了。（動詞：接近）"
+          }
+        ]
+      },
+      {
+        "title": "D. provide training vs receive training",
+        "exs": [
+          {
+            "en": "Our department provides training to all employees.",
+            "cn": "我們部門為所有員工提供訓練。（公司／部門 provides）"
+          },
+          {
+            "en": "All employees receive practical training.",
+            "cn": "所有員工都接受實作訓練。（員工 receive）"
+          },
+          {
+            "en": "Our department provides training to all employees, and all employees receive practical training before working independently.",
+            "cn": "我們部門為所有員工提供訓練，所有員工在獨立作業前都會接受實作訓練。（合併一句）"
+          }
+        ]
+      }
+    ]
   }
   ]
 };

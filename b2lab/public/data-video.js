@@ -31247,3 +31247,1055 @@ window.VIDEO["bk20261006"] = {
     "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
  ]
 };
+
+/* ===== bk20261008 Machine Problems & How long ===== */
+window.VIDEO = window.VIDEO || {};
+window.VIDEO["bk20261008"] = {
+ "title": "Machine Problems & How long",
+ "titleCn": "機器異常與 How long 句型",
+ "date": "2026-10-08",
+ "level": "B1+",
+ "scene": "A Machine Starts Acting Up",
+ "sceneCn": "機器開始出問題",
+ "sceneArt": "printerJam",
+ "titleArt": [
+  "gear",
+  "wrench",
+  "clock"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・品保",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・稽核員",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "Machine Check",
+   "cn": "情境：產線上的機器"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Phrases & Collocations",
+   "cn": "片語搭配"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "actUp": {
+   "t": "acting up",
+   "cn": "運作異常",
+   "tag": [
+    "act up",
+    "V"
+   ],
+   "note": "act up = 運作不正常，但不一定完全壞掉；機器、手機、膝蓋都能用。人（尤其小孩）acting up 則是搗蛋。",
+   "ex": "The printer has been acting up all morning.",
+   "exCn": "印表機整個早上一直出問題。"
+  },
+  "breakDown": {
+   "t": "breaks down",
+   "cn": "故障",
+   "tag": [
+    "break down",
+    "V"
+   ],
+   "note": "break down = 完全停止運作。比 act up 嚴重。過去式 broke down，不是 breaked down。",
+   "ex": "The old truck broke down on the highway.",
+   "exCn": "那台舊卡車在高速公路上拋錨了。"
+  },
+  "callTech": {
+   "t": "call a technician",
+   "cn": "叫技術員來",
+   "tag": [
+    "句型",
+    "V-C"
+   ],
+   "note": "If + 主詞 + 現在式, 主詞 + should / have to + 原形。should 是建議，have to 比較強、不得不。",
+   "ex": "If the alarm goes off, call a technician right away.",
+   "exCn": "如果警報響了，馬上叫技術員。"
+  },
+  "coverFor": {
+   "t": "cover for me",
+   "cn": "幫我代班",
+   "tag": [
+    "cover for",
+    "VII-C"
+   ],
+   "note": "cover for + 人 = 在某人不在時暫時代替他做工作。while 引導的時間子句用現在式，不用 will。",
+   "ex": "Can you cover for me on Friday afternoon?",
+   "exCn": "星期五下午你可以幫我代班嗎？"
+  },
+  "qualified": {
+   "t": "qualified to assemble",
+   "cn": "有資格組裝",
+   "tag": [
+    "qualified",
+    "VI"
+   ],
+   "note": "be qualified to + 原形動詞 = 有資格做某事。qualified 是形容詞，句子只需要一個 be 動詞。",
+   "ex": "Only qualified staff are allowed to open the panel.",
+   "exCn": "只有合格的人員才能打開面板。"
+  },
+  "frequency": {
+   "t": "the frequency of our inspections",
+   "cn": "我們檢驗的頻率",
+   "tag": [
+    "frequency",
+    "VII-A"
+   ],
+   "note": "「……的頻率」要說 the frequency of + 名詞，不能把兩個字黏在一起。也可以說 inspection frequency。",
+   "ex": "The frequency of audits goes up every year.",
+   "exCn": "稽核的頻率每年都在增加。"
+  },
+  "replacement": {
+   "t": "a replacement operator",
+   "cn": "替補的操作員",
+   "tag": [
+    "replacement",
+    "II"
+   ],
+   "note": "replacement 是名詞，指接替別人的人或替代品。replacement operator = 替補的操作員。",
+   "ex": "We are looking for a replacement for the old pump.",
+   "exCn": "我們正在找舊幫浦的替代品。"
+  },
+  "leadTo": {
+   "t": "lead to quality problems",
+   "cn": "導致品質問題",
+   "tag": [
+    "lead to",
+    "IV-B"
+   ],
+   "note": "may 後面接原形，所以是 may lead，不是 may led。lead to + 名詞 = 導致。",
+   "ex": "Skipping the final check can lead to complaints.",
+   "exCn": "跳過最後檢查可能會導致客訴。"
+  },
+  "competency": {
+   "t": "poor competency",
+   "cn": "能力不足",
+   "tag": [
+    "competency",
+    "I-1"
+   ],
+   "note": "competency = 能力、勝任度。老師的另一種說法是 lacks the necessary skills（缺乏必要的技能），lack 直接接名詞。",
+   "ex": "Good competency takes training and practice.",
+   "exCn": "好的能力需要訓練與練習。"
+  },
+  "howLong": {
+   "t": "How long has he worked",
+   "cn": "他工作多久了",
+   "tag": [
+    "How long",
+    "VIII"
+   ],
+   "note": "How long + has/have + 主詞 + 過去分詞？問「從過去到現在已經多久」。he / she 用 has，you / they 用 have。",
+   "ex": "How long has she lived in Vietnam?",
+   "exCn": "她住在越南多久了？"
+  },
+  "since": {
+   "t": "since 2021",
+   "cn": "從 2021 年起",
+   "tag": [
+    "since",
+    "IX"
+   ],
+   "note": "since + 起點（since 2021、since Monday）。完成式說「從某年開始」用 since，不用 from。",
+   "ex": "I have lived here since last March.",
+   "exCn": "我從去年三月起就住在這裡。"
+  },
+  "forDur": {
+   "t": "for ten years",
+   "cn": "十年了",
+   "tag": [
+    "for",
+    "IX"
+   ],
+   "note": "for + 一段時間（for ten years、for two weeks）。for 給的是長度，since 給的是起點。",
+   "ex": "We have used this supplier for three years.",
+   "exCn": "我們用這家供應商三年了。"
+  },
+  "assignTo": {
+   "t": "assign an engineer to collect",
+   "cn": "指派工程師去收集",
+   "tag": [
+    "assign",
+    "VII-B"
+   ],
+   "note": "assign + 人 + to + 原形動詞。指派已經發生要用過去式 assigned；engineer 是可數名詞，單數前要加 an。",
+   "ex": "The boss assigned Ken to check the shipment.",
+   "exCn": "老闆指派 Ken 去檢查出貨。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today we're on a treadmill assembly line, and one machine isn't running quite right.",
+   "cn": "歡迎回來。今天我們在跑步機組裝線上，其中一台機器運作得不太對勁。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Listen for how Anita talks about machine problems, and how Tom asks how long.",
+   "cn": "聽聽 Anita 怎麼談機器的問題，以及 Tom 怎麼問「多久了」。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "treadmill"
+   },
+   "en": "Hey Anita. Is that machine okay? It sounds a little off.",
+   "cn": "嘿 Anita。那台機器沒事吧？聽起來有點怪。"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "printerJam"
+   },
+   "en": "It's acting up again. It still runs, but it's not stable.",
+   "cn": "它又出問題了。還能動，但不穩定。",
+   "hi": [
+    {
+     "t": "acting up",
+     "cn": "運作異常",
+     "k": "actUp",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "printerJam"
+   },
+   "en": "So it's not broken?",
+   "cn": "所以沒壞？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "tools"
+   },
+   "en": "Not yet. If it breaks down, we have to call a technician.",
+   "cn": "還沒。如果它故障了，我們就得叫技術員來。",
+   "hi": [
+    {
+     "t": "breaks down",
+     "cn": "故障",
+     "k": "breakDown",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "tools"
+   },
+   "en": "And if it only acts up?",
+   "cn": "那如果只是出問題呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "tools"
+   },
+   "en": "Same thing. We should call a technician.",
+   "cn": "一樣。我們應該叫技術員來。",
+   "hi": [
+    {
+     "t": "call a technician",
+     "cn": "叫技術員來",
+     "k": "callTech",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "assemblyLine"
+   },
+   "en": "Who's running the line today?",
+   "cn": "今天誰在操作這條線？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "haveYourBack"
+   },
+   "en": "A replacement operator. He will cover for me while I am in Taiwan.",
+   "cn": "一位替補的操作員。我在台灣期間，他會幫我代班。",
+   "hi": [
+    {
+     "t": "cover for me",
+     "cn": "幫我代班",
+     "k": "coverFor",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "safetyGearSet"
+   },
+   "en": "Is he qualified to assemble the treadmill?",
+   "cn": "他有資格組裝跑步機嗎？",
+   "hi": [
+    {
+     "t": "qualified to assemble",
+     "cn": "有資格組裝",
+     "k": "qualified",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "Yes. And we increase the frequency of our inspections when a replacement operator starts working.",
+   "cn": "有。而且替補的操作員開始工作時，我們會提高檢驗的頻率。",
+   "hi": [
+    {
+     "t": "the frequency of our inspections",
+     "cn": "我們檢驗的頻率",
+     "k": "frequency",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "scratch"
+   },
+   "en": "Makes sense. What if his skills are weak?",
+   "cn": "合理。那如果他的技能不夠呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "scratch"
+   },
+   "en": "If the operator has poor competency, it may lead to quality problems.",
+   "cn": "如果操作員的能力不足，可能會導致品質問題。",
+   "hi": [
+    {
+     "t": "lead to quality problems",
+     "cn": "導致品質問題",
+     "k": "leadTo",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "timeZoneClocks"
+   },
+   "en": "Got it. How long has he worked here?",
+   "cn": "懂了。那他在這裡工作多久了？",
+   "hi": [
+    {
+     "t": "How long has he worked",
+     "cn": "他工作多久了",
+     "k": "howLong",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "timeZoneClocks"
+   },
+   "en": "He has worked at this station since 2021.",
+   "cn": "他從 2021 年起就在這個站點工作。",
+   "hi": [
+    {
+     "t": "since 2021",
+     "cn": "從 2021 年起",
+     "k": "since",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "And you? How long have you been in your current position?",
+   "cn": "那你呢？你擔任目前的職位多久了？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "I have been in my current position for ten years.",
+   "cn": "我擔任目前的職位十年了。",
+   "hi": [
+    {
+     "t": "for ten years",
+     "cn": "十年了",
+     "k": "forDur",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "Alright, thanks for walking me through it.",
+   "cn": "好，謝謝你帶我走一遍。"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "rootCause"
+   },
+   "en": "Any time. If a defective sample shows up, I'll assign an engineer to collect it.",
+   "cn": "隨時歡迎。如果有不良樣品出現，我會指派一位工程師去收集。",
+   "hi": [
+    {
+     "t": "assign an engineer to collect",
+     "cn": "指派工程師去收集",
+     "k": "assignTo",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "act up",
+     "ipa": "/ækt ʌp/",
+     "cn": "運作異常（還能動）",
+     "def": "To not work normally, but not completely broken.",
+     "art": "printerJam"
+    },
+    "b": {
+     "w": "break down",
+     "ipa": "/breɪk daʊn/",
+     "cn": "故障（完全不能動）",
+     "def": "To stop working completely.",
+     "art": "tools"
+    }
+   },
+   "en": "The machine is acting up. The machine broke down, so production stopped.",
+   "cn": "機器運作不太正常。機器故障了，所以生產停了。",
+   "hi": [
+    {
+     "t": "acting up",
+     "cn": "運作異常",
+     "k": "actUp",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "qualified",
+    "ipa": "/ˈkwɑː.lə.faɪd/",
+    "pos": "adj.",
+    "art": "cert",
+    "def": "Having the training or skills needed to do a job.",
+    "cn": "有資格的、合格的。",
+    "note": "be qualified to + 原形動詞；句子只要一個 be 動詞。"
+   },
+   "en": "The operator is qualified to assemble the treadmill.",
+   "cn": "這位操作員有資格組裝跑步機。",
+   "hi": [
+    {
+     "t": "qualified to assemble",
+     "cn": "有資格組裝",
+     "k": "qualified",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "frequency",
+    "ipa": "/ˈfriː.kwən.si/",
+    "pos": "n.",
+    "art": "chartUp",
+    "def": "How often something happens.",
+    "cn": "頻率。",
+    "note": "「……的頻率」= the frequency of + 名詞，或 inspection frequency。"
+   },
+   "en": "We need to increase the frequency of our inspections.",
+   "cn": "我們需要提高檢驗的頻率。",
+   "hi": [
+    {
+     "t": "the frequency of our inspections",
+     "cn": "我們檢驗的頻率",
+     "k": "frequency",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "competency",
+    "ipa": "/ˈkɑːmpɪtənsi/",
+    "pos": "n.",
+    "art": "gauge",
+    "def": "The skill and knowledge needed to do a job well.",
+    "cn": "能力、勝任度。",
+    "note": "老師另一種說法：lacks the necessary skills（缺乏必要技能）。"
+   },
+   "en": "Poor competency is a risk. Good competency takes training and practice.",
+   "cn": "能力不足是個風險。好的能力需要訓練與練習。",
+   "hi": [
+    {
+     "t": "Poor competency",
+     "cn": "能力不足",
+     "k": "competency",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "machine problem",
+    "coreCn": "機器出問題的說法",
+    "art": "printerJam",
+    "items": [
+     {
+      "t": "has a problem",
+      "cn": "有問題"
+     },
+     {
+      "t": "act up",
+      "cn": "運作異常"
+     },
+     {
+      "t": "break down",
+      "cn": "故障"
+     },
+     {
+      "t": "call a technician",
+      "cn": "叫技術員"
+     }
+    ]
+   },
+   "en": "Has a problem, acts up, breaks down. Then call a technician.",
+   "cn": "有問題、出問題、故障。然後叫技術員來。",
+   "hi": [
+    {
+     "t": "call a technician",
+     "cn": "叫技術員來",
+     "k": "callTech",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "inspection",
+    "coreCn": "檢驗頻率的搭配",
+    "art": "clipboard",
+    "items": [
+     {
+      "t": "inspection frequency",
+      "cn": "檢驗頻率"
+     },
+     {
+      "t": "the frequency of inspection",
+      "cn": "檢驗的頻率"
+     },
+     {
+      "t": "increase the ~",
+      "cn": "提高頻率"
+     },
+     {
+      "t": "a replacement operator",
+      "cn": "替補的操作員"
+     }
+    ]
+   },
+   "en": "Inspection frequency, or the frequency of inspection. Both are correct.",
+   "cn": "inspection frequency，或 the frequency of inspection。兩種都正確。",
+   "hi": [
+    {
+     "t": "the frequency of inspection",
+     "cn": "檢驗的頻率",
+     "k": "frequency",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "cover for",
+    "coreCn": "代班與指派",
+    "art": "haveYourBack",
+    "items": [
+     {
+      "t": "cover for + 人",
+      "cn": "代班"
+     },
+     {
+      "t": "assign + 人 + to + V",
+      "cn": "指派某人去做"
+     },
+     {
+      "t": "root cause report",
+      "cn": "根本原因報告"
+     },
+     {
+      "t": "defective samples",
+      "cn": "不良樣品"
+     }
+    ]
+   },
+   "en": "The QA manager assigned an engineer to collect the defective samples.",
+   "cn": "品保經理指派一位工程師去收集不良樣品。",
+   "hi": [
+    {
+     "t": "assigned an engineer to collect",
+     "cn": "指派工程師去收集",
+     "k": "assignTo",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "If 條件句 ＋ should / have to",
+    "art": "tools",
+    "rows": [
+     {
+      "lab": "條件（if 子句，現在式）",
+      "blocks": [
+       {
+        "t": "If",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "the machine",
+        "k": "s"
+       },
+       {
+        "t": "acts up",
+        "k": "v"
+       }
+      ]
+     },
+     {
+      "lab": "結果（主句）",
+      "blocks": [
+       {
+        "t": "we",
+        "k": "s"
+       },
+       {
+        "t": "should",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "call a technician",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "if 子句交代條件，主句交代結果，缺一不可。should 是建議，have to 比較強。"
+   },
+   "en": "If the machine acts up, we should call a technician.",
+   "cn": "如果機器出問題，我們應該叫技術員來。",
+   "hi": [
+    {
+     "t": "call a technician",
+     "cn": "叫技術員來",
+     "k": "callTech",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "How long ＋ has / have ＋ 過去分詞",
+    "art": "timeZoneClocks",
+    "rows": [
+     {
+      "lab": "問：從過去到現在多久",
+      "blocks": [
+       {
+        "t": "How long",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "has",
+        "k": "v"
+       },
+       {
+        "t": "he",
+        "k": "s"
+       },
+       {
+        "t": "worked here",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "答：起點用 since",
+      "blocks": [
+       {
+        "t": "He has worked here",
+        "k": "o"
+       },
+       {
+        "t": "since 2021",
+        "k": "n",
+        "add": true
+       }
+      ]
+     }
+    ],
+    "note": "he / she 用 has，you / they 用 have。答句時態要和問句一致。"
+   },
+   "en": "How long has he worked here? He has worked here since 2021.",
+   "cn": "他在這裡工作多久了？他從 2021 年起就在這裡工作。",
+   "hi": [
+    {
+     "t": "How long has he worked",
+     "cn": "他工作多久了",
+     "k": "howLong",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "since ＝ 起點，for ＝ 長度",
+    "art": "timeZoneClocks",
+    "rows": [
+     {
+      "lab": "since + 時間點",
+      "blocks": [
+       {
+        "t": "I've worked here",
+        "k": "o"
+       },
+       {
+        "t": "since 2021",
+        "k": "n",
+        "add": true
+       }
+      ]
+     },
+     {
+      "lab": "for + 一段時間",
+      "blocks": [
+       {
+        "t": "I've worked here",
+        "k": "o"
+       },
+       {
+        "t": "for five years",
+        "k": "n",
+        "add": true
+       }
+      ]
+     }
+    ],
+    "note": "兩種說法可以描述同一件事。完成式說「從某年開始」用 since，不用 from。"
+   },
+   "en": "I've worked in this department for five years.",
+   "cn": "我在這個部門工作五年了。",
+   "hi": [
+    {
+     "t": "for five years",
+     "cn": "五年了",
+     "k": "forDur",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 1,
+    "wrong": "If the worker has poor operator competency may led to quality problems.",
+    "bad": [
+     "worker",
+     "may led"
+    ],
+    "fix": "If the operator has poor competency, it may lead to quality problems.",
+    "good": [
+     "operator has poor competency, it",
+     "may lead"
+    ],
+    "why": "Use one noun for one person. End the if clause with a comma, then give the main clause a subject. After may, use the base verb.",
+    "whyCn": "一個人只用一個名詞；if 子句後要加逗號、主句要有主詞 it；may 後面接原形 lead。"
+   },
+   "en": "If the operator has poor competency, it may lead to quality problems.",
+   "cn": "如果操作員的能力不足，可能會導致品質問題。",
+   "hi": [
+    {
+     "t": "lead to quality problems",
+     "cn": "導致品質問題",
+     "k": "leadTo",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 3,
+    "wrong": "We need to increase our inspectionsfrequency when a replacement operator starts working.",
+    "bad": [
+     "inspectionsfrequency"
+    ],
+    "fix": "We need to increase the frequency of our inspections when a replacement operator starts working.",
+    "good": [
+     "the frequency of our inspections"
+    ],
+    "why": "Say the frequency of plus a noun. The when clause stays in the present tense.",
+    "whyCn": "「……的頻率」說 the frequency of + 名詞；when 子句雖指未來，動詞仍用現在式 starts。"
+   },
+   "en": "We need to increase the frequency of our inspections when a replacement operator starts working.",
+   "cn": "當替補的操作員開始工作時，我們需要提高檢驗的頻率。",
+   "hi": [
+    {
+     "t": "the frequency of our inspections",
+     "cn": "我們檢驗的頻率",
+     "k": "frequency",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "If the machine ___ ___, we have to call a technician.",
+    "a": "breaks down",
+    "n": 1
+   },
+   "en": "If the machine ___ ___, we have to call a technician.",
+   "cn": "如果機器＿＿＿＿，我們就得叫技術員來。",
+   "say": "If the machine, blank blank, we have to call a technician.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "If the machine ___ ___, we have to call a technician.",
+    "a": "breaks down",
+    "n": 1,
+    "show": true
+   },
+   "en": "If the machine breaks down, we have to call a technician.",
+   "cn": "如果機器故障了，我們就得叫技術員來。",
+   "hi": [
+    {
+     "t": "breaks down",
+     "cn": "故障",
+     "k": "breakDown",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "I have worked here ___ 2021.",
+    "a": "since",
+    "n": 2
+   },
+   "en": "I have worked here ___ 2021.",
+   "cn": "我＿＿ 2021 年起就在這裡工作。",
+   "say": "I have worked here, blank, 2021.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "I have worked here ___ 2021.",
+    "a": "since",
+    "n": 2,
+    "show": true
+   },
+   "en": "I have worked here since 2021.",
+   "cn": "我從 2021 年起就在這裡工作。",
+   "hi": [
+    {
+     "t": "since 2021",
+     "cn": "從 2021 年起",
+     "k": "since",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "He will ___ ___ me while I am in Taiwan.",
+    "a": "cover for",
+    "n": 3
+   },
+   "en": "He will ___ ___ me while I am in Taiwan.",
+   "cn": "我在台灣期間，他會＿＿＿＿我。",
+   "say": "He will, blank blank, me while I am in Taiwan.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "He will ___ ___ me while I am in Taiwan.",
+    "a": "cover for",
+    "n": 3,
+    "show": true
+   },
+   "en": "He will cover for me while I am in Taiwan.",
+   "cn": "我在台灣期間，他會幫我代班。",
+   "hi": [
+    {
+     "t": "cover for me",
+     "cn": "幫我代班",
+     "k": "coverFor",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
