@@ -27813,7 +27813,7 @@ window.VIDEO.au01 = {
    "sp": "N",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "auFiveKeys"
    },
    "en": "Listen for five key words, the answer patterns, and how to say what you do not know yet.",
    "cn": "注意聽五個關鍵詞、回答句型，以及「還不確定」要怎麼說。"
@@ -27823,7 +27823,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "auScopeAsk"
    },
    "en": "What will you cover during the audit?",
    "cn": "今天稽核會說明哪些內容？"
@@ -27833,7 +27833,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "auFiveAreas"
    },
    "en": "We will cover quality controls, engineering changes, operator training, materials, and team responsibilities.",
    "cn": "我們會說明品質管控、工程變更、人員訓練、資材及團隊職責。",
@@ -27851,7 +27851,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "talk"
+    "art": "auExampleAsk"
    },
    "en": "Can you give one example of a quality control?",
    "cn": "可以舉一個品質管控例子嗎？"
@@ -27861,7 +27861,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "talk"
+    "art": "auPackingBoard"
    },
    "en": "On the packing line, we use fixed quantities, a packing board, and weight checks to prevent missing items.",
    "cn": "包裝線透過定量、包裝看板及秤重確認，防止短裝。"
@@ -27871,7 +27871,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "doc"
+    "art": "auGapAsk"
    },
    "en": "What still needs improvement?",
    "cn": "還有哪些需要改善？"
@@ -27881,7 +27881,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "doc"
+    "art": "weightScale"
    },
    "en": "The weight-check procedure needs limits for each model. The scale calibration procedure also needs to be established.",
    "cn": "秤重程序需訂定各機種重量上下限，也需建立秤重設備校驗程序。",
@@ -27899,7 +27899,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "check"
+    "art": "auCertAsk"
    },
    "en": "Is this factory ISO 9001 certified?",
    "cn": "本廠已取得 ISO 9001 認證嗎？"
@@ -27909,7 +27909,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "check"
+    "art": "auTargetDate"
    },
    "en": "Not yet. Our target is to obtain ISO 9001 certification by June 2027. QA is responsible for this action.",
    "cn": "尚未取得。目標是在 2027 年 6 月前取得 ISO 9001 認證，由品保負責。",
@@ -27927,7 +27927,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "warning"
+    "art": "auPlanAsk"
    },
    "en": "What is your plan for certification?",
    "cn": "取得認證的計畫是什麼？"
@@ -27937,7 +27937,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "warning"
+    "art": "auProposal"
    },
    "en": "We plan to submit the proposal for an ISO consulting company by October 16. The action plan lists December as the planned start.",
    "cn": "我們計畫在 10 月 16 日前提出 ISO 輔導公司簽呈。改善表列出的預計開始時間為 12 月。"
@@ -27947,7 +27947,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "label"
+    "art": "auShowCert"
    },
    "en": "Can you show the certificate now?",
    "cn": "現在能提供證書嗎？"
@@ -27957,7 +27957,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "label"
+    "art": "auEmptyFrame"
    },
    "en": "No. We do not have the certificate yet. June 2027 is our target, not a completed certification date.",
    "cn": "不能，我們尚未取得證書。2027 年 6 月是目標，不是已完成認證的日期。",
@@ -27975,7 +27975,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "sealedBox"
+    "art": "auControlAsk"
    },
    "en": "How do you control quality before certification?",
    "cn": "取得認證前如何管控品質？"
@@ -27985,7 +27985,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "sealedBox"
+    "art": "auSopRevision"
    },
    "en": "Our SOPs have release controls and revision records. Full-dimensional inspection reports are also listed in the assessment.",
    "cn": "我們的 SOP 已有發行管控與修改紀錄，評估表也記載已有全尺寸檢驗報告。",
@@ -28003,7 +28003,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "target"
+    "art": "auGapArrow"
    },
    "en": "What is the remaining gap?",
    "cn": "還有哪些缺口？"
@@ -28013,7 +28013,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "target"
+    "art": "auPlanVsActual"
    },
    "en": "The control plan was not updated with the SOP changes. We also need to compare the control plan with actual work on the production lines.",
    "cn": "管制計畫未隨 SOP 變更同步更新，也需將管制計畫與產線實際作業比對。",
@@ -28031,7 +28031,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "auActionAsk"
    },
    "en": "What action will you take?",
    "cn": "你們會採取什麼措施？"
@@ -28041,7 +28041,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "auHqToPlant"
    },
    "en": "We plan to adopt the Headquarters document-change process and update the the overseas plant control plan at the same time. The target for this action is November 2.",
    "cn": "我們計畫採用總部文件變更流程，同步更新海外廠管制計畫。此項目標日期為 11 月 2 日。",
@@ -28059,7 +28059,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "talk"
+    "art": "missing"
    },
    "en": "How do you prevent missing items during packing?",
    "cn": "包裝時如何防止短裝？"
@@ -28069,7 +28069,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "talk"
+    "art": "auFixedQty"
    },
    "en": "We use fixed quantities, a packing board, and weight checks. These are the methods listed for the packing line.",
    "cn": "我們採用定量、包裝看板與秤重確認，這些是情境所列的包裝線做法。"
@@ -28079,7 +28079,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "doc"
+    "art": "auProcAdd"
    },
    "en": "What needs to be added to the weight-check procedure?",
    "cn": "秤重程序還需要補什麼？"
@@ -28089,7 +28089,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "doc"
+    "art": "auWeightLimits"
    },
    "en": "We plan to define upper and lower weight limits for each model and establish a scale calibration procedure. We also plan to add large-print instructions in both required languages.",
    "cn": "我們計畫訂定各機種重量上下限、建立秤重設備校驗程序，並增加大字雙語作業說明。",
@@ -28107,7 +28107,7 @@ window.VIDEO.au01 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "check"
+    "art": "auDupBarcode"
    },
    "en": "Does this prove that the shipping dock blocks duplicate barcodes?",
    "cn": "這能證明出貨月台可攔阻重複條碼嗎？"
@@ -28117,7 +28117,7 @@ window.VIDEO.au01 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "check"
+    "art": "auDockVsEol"
    },
    "en": "No. Packing checks and duplicate-barcode control are different. The dock does not have the same function as EOL in the action plan.",
    "cn": "不能。包裝檢查與重複條碼管控不同。依改善表，月台尚無 EOL 的相同功能。",
@@ -32299,3 +32299,269 @@ window.VIDEO["bk20261008"] = {
   }
  ]
 };
+
+
+/* ---------- 稽核英文一（au01）專屬插圖：每句一張，不重複 ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  /* Tom 提問用的共同記號：橘色問號徽章 */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +'<text x="'+cx+'" y="'+(cy+9)+'" text-anchor="middle" font-family="sans-serif" font-size="25" font-weight="700" fill="#fff">?</text>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 1 旁白：聽五個關鍵字＋回答句型 */
+    auFiveKeys: svg(
+      '<rect x="34" y="24" width="132" height="102" rx="10" fill="'+L+'" '+st+'/>'
+     +'<path d="M52 32 h8 l9 -8 v28 l-9 -8 h-8 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<g fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M74 34 a10 10 0 0 1 0 16"/><path d="M81 29 a17 17 0 0 1 0 26"/></g>'
+     +txt(141,47,'× 5',17,D)
+     +'<rect x="44" y="54" width="112" height="62" rx="6" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+D+'" stroke-width="2" stroke-linecap="round">'
+     +'<path d="M66 64 h78"/><path d="M66 76 h78"/><path d="M66 88 h78"/><path d="M66 100 h78"/><path d="M66 112 h56"/></g>'
+     +'<g fill="'+A+'"><circle cx="56" cy="64" r="4"/><circle cx="56" cy="76" r="4"/><circle cx="56" cy="88" r="4"/>'
+     +'<circle cx="56" cy="100" r="4"/><circle cx="56" cy="112" r="4"/></g>'),
+
+    /* 2 Tom：稽核要看哪些範圍？ */
+    auScopeAsk: svg(
+      '<path d="M22 120 V74 l22 -16 v16 l22 -16 v16 l22 -16 v62 z" fill="'+L+'" '+st+'/>'
+     +'<g fill="#fff" stroke="'+D+'" stroke-width="2.5"><rect x="32" y="92" width="18" height="16" rx="3"/>'
+     +'<rect x="76" y="92" width="18" height="16" rx="3"/></g>'
+     +'<rect x="54" y="92" width="18" height="28" rx="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M12 122 H188" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +qb(152,62)),
+
+    /* 3 Anita：五大範圍（品管／工程變更／操作員訓練／物料／職責） */
+    auFiveAreas: svg(
+      '<g>'
+     +'<rect x="16" y="32" width="50" height="46" rx="8" fill="'+L+'" '+st+'/>'
+     +'<rect x="74" y="32" width="50" height="46" rx="8" fill="#fff" '+st+'/>'
+     +'<rect x="132" y="32" width="50" height="46" rx="8" fill="'+L+'" '+st+'/>'
+     +'<rect x="46" y="88" width="50" height="46" rx="8" fill="#fff" '+st+'/>'
+     +'<rect x="104" y="88" width="50" height="46" rx="8" fill="'+L+'" '+st+'/></g>'
+     +'<path d="M33 56 l6 7 l12 -15" fill="none" stroke="'+B+'" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<g fill="none" stroke="'+D+'" stroke-width="2.5"><circle cx="99" cy="55" r="9"/>'
+     +'<path d="M99 42 v5 M99 63 v5 M86 55 h5 M107 55 h5"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2.5" fill="#fff"><circle cx="157" cy="48" r="7"/>'
+     +'<path d="M146 68 a11 11 0 0 1 22 0" fill="none"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2.5" fill="#fff"><rect x="59" y="101" width="24" height="20" rx="3"/>'
+     +'<path d="M59 108 h24" fill="none"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2.5" fill="#fff"><circle cx="121" cy="104" r="6"/><circle cx="137" cy="104" r="6"/>'
+     +'<path d="M112 122 a9 9 0 0 1 18 0 M128 122 a9 9 0 0 1 18 0" fill="none"/></g>'),
+
+    /* 4 Tom：舉一個品管的例子？ */
+    auExampleAsk: svg(
+      '<rect x="20" y="86" width="36" height="36" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="62" y="86" width="36" height="36" rx="6" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 5"/>'
+     +'<rect x="104" y="86" width="36" height="36" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="146" y="86" width="36" height="36" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M80 82 v-8" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M80 62 l-8 12 h16 z" fill="'+A+'"/>'
+     +'<rect x="60" y="22" width="40" height="40" rx="7" fill="'+A+'" '+st+'/>'
+     +qb(158,44)),
+
+    /* 5 Anita：包裝板＋固定數量＋重量檢查 */
+    auPackingBoard: svg(
+      '<rect x="22" y="34" width="156" height="90" rx="10" fill="'+L+'" '+st+'/>'
+     +'<g fill="#fff" stroke="'+D+'" stroke-width="2.5">'
+     +'<rect x="34" y="46" width="42" height="32" rx="5"/><rect x="80" y="46" width="42" height="32" rx="5"/>'
+     +'<rect x="126" y="46" width="42" height="32" rx="5"/><rect x="34" y="86" width="42" height="32" rx="5"/>'
+     +'<rect x="80" y="86" width="42" height="32" rx="5"/><rect x="126" y="86" width="42" height="32" rx="5"/></g>'
+     +'<g fill="'+A+'"><circle cx="55" cy="62" r="9"/><circle cx="101" cy="62" r="9"/><circle cx="147" cy="62" r="9"/>'
+     +'<circle cx="55" cy="102" r="9"/><circle cx="101" cy="102" r="9"/><circle cx="147" cy="102" r="9"/></g>'
+     +'<circle cx="172" cy="38" r="15" fill="#fff" '+st+'/>'
+     +'<path d="M165 38 l5 6 l11 -13" fill="none" stroke="'+B+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'),
+
+    /* 6 Tom：還有哪裡需要改善？ */
+    auGapAsk: svg(
+      '<rect x="24" y="76" width="152" height="30" rx="10" fill="#fff" '+st+'/>'
+     +'<rect x="28" y="80" width="86" height="22" rx="7" fill="'+A+'"/>'
+     +'<rect x="118" y="80" width="54" height="22" rx="7" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="7 6"/>'
+     +qb(145,42)),
+
+    /* 9 Anita：目標 2027 年 6 月取得認證 */
+    auTargetDate: svg(
+      '<path d="M30 62 v-18 a10 10 0 0 1 10 -10 h96 a10 10 0 0 1 10 10 v18 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M30 62 v56 a10 10 0 0 0 10 10 h96 a10 10 0 0 0 10 -10 V62 z" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round"><path d="M56 22 v16"/><path d="M120 22 v16"/></g>'
+     +txt(88,92,'JUN',24,D)+txt(88,116,'2027',19,D)
+     +'<path d="M166 34 v92" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M166 38 h20 l-7 10 l7 10 h-20 z" fill="'+A+'" '+st+'/>'),
+
+    /* 8 Tom：工廠通過 ISO 9001 了嗎？ */
+    auCertAsk: svg(
+      '<rect x="22" y="30" width="110" height="82" rx="6" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M36 50 h82"/><path d="M36 66 h82"/><path d="M36 82 h56"/></g>'
+     +'<path d="M106 110 l-6 24 l16 -8 l16 8 l-6 -24 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<circle cx="116" cy="104" r="16" fill="'+A+'" '+st+'/>'
+     +qb(166,44)),
+
+    /* 10 Tom：你們的認證計畫是什麼？ */
+    auPlanAsk: svg(
+      '<path d="M44 86 H156" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<circle cx="44" cy="86" r="17" fill="'+A+'" '+st+'/>'
+     +'<path d="M37 86 l5 6 l11 -13" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<circle cx="100" cy="86" r="17" fill="'+L+'" '+st+'/><circle cx="100" cy="86" r="5" fill="'+A+'"/>'
+     +'<circle cx="156" cy="86" r="17" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-dasharray="6 5"/>'
+     +txt(156,95,'?',24,D)),
+
+    /* 11 Anita：10/16 前送出顧問公司提案 */
+    auProposal: svg(
+      '<rect x="52" y="22" width="76" height="62" rx="5" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M64 40 h52"/><path d="M64 54 h52"/><path d="M64 68 h32"/></g>'
+     +'<path d="M90 90 v12" stroke="'+A+'" stroke-width="7" stroke-linecap="round"/>'
+     +'<path d="M81 100 l9 13 l9 -13 z" fill="'+A+'"/>'
+     +'<path d="M28 112 h144 v12 a8 8 0 0 1 -8 8 H36 a8 8 0 0 1 -8 -8 z" fill="'+L+'" '+st+'/>'
+     +'<rect x="128" y="26" width="52" height="26" rx="9" fill="'+A+'" '+st+'/>'
+     +txt(154,45,'10/16',14,'#fff')),
+
+    /* 12 Tom：現在可以看證書嗎？ */
+    auShowCert: svg(
+      '<rect x="16" y="20" width="106" height="84" rx="6" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M30 42 h74"/><path d="M30 58 h74"/><path d="M30 74 h48"/></g>'
+     +'<path d="M94 102 l-6 26 l17 -9 l17 9 l-6 -26 z" fill="'+L+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<circle cx="105" cy="96" r="16" fill="'+A+'" '+st+'/>'
+     +'<circle cx="156" cy="78" r="28" fill="'+L+'" '+st+'/>'
+     +'<path d="M156 78 V60 M156 78 h13" fill="none" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<circle cx="156" cy="78" r="4" fill="'+D+'"/>'),
+
+    /* 13 Anita：還沒有證書，2027 是目標不是已完成 */
+    auEmptyFrame: svg(
+      '<rect x="34" y="26" width="132" height="94" rx="10" fill="'+C+'" stroke="'+D+'" stroke-width="3" stroke-dasharray="10 8"/>'
+     +'<circle cx="100" cy="66" r="22" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="7 6"/>'
+     +'<path d="M88 84 l-5 20 l17 -8 l17 8 l-5 -20" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="7 6"/>'
+     +'<rect x="64" y="108" width="72" height="28" rx="10" fill="'+L+'" '+st+'/>'
+     +txt(100,128,'2027',16,D)),
+
+    /* 14 Tom：認證前怎麼管品質？ */
+    auControlAsk: svg(
+      '<rect x="18" y="100" width="164" height="16" rx="8" fill="'+L+'" '+st+'/>'
+     +'<g fill="#fff" '+st+'><rect x="30" y="74" width="30" height="26" rx="4"/>'
+     +'<rect x="140" y="74" width="30" height="26" rx="4"/></g>'
+     +'<path d="M100 12 l27 10 v17 c0 19 -13 29 -27 35 c-14 -6 -27 -16 -27 -35 V22 z" fill="#fff" '+st+'/>'
+     +txt(100,56,'?',27,A)),
+
+    /* 15 Anita：SOP 有發行管制與改版紀錄 */
+    auSopRevision: svg(
+      '<rect x="34" y="26" width="120" height="100" rx="8" fill="'+L+'" '+st+'/>'
+     +'<path d="M42 26 h12 v100 h-12 a8 8 0 0 1 -8 -8 V34 a8 8 0 0 1 8 -8 z" fill="'+A+'" '+st+'/>'
+     +'<rect x="64" y="40" width="78" height="72" rx="4" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M74 56 h58"/><path d="M74 70 h58"/><path d="M74 84 h38"/></g>'
+     +'<path d="M74 98 l6 7 l12 -14" fill="none" stroke="'+B+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<rect x="150" y="46" width="24" height="18" rx="4" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="150" y="74" width="24" height="18" rx="4" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'),
+
+    /* 16 Tom：還剩下什麼落差？ */
+    auGapArrow: svg(
+      '<rect x="26" y="58" width="48" height="66" rx="6" fill="'+L+'" '+st+'/>'
+     +'<rect x="126" y="34" width="48" height="90" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M14 126 H186" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M84 98 H116" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M78 98 l11 -7 v14 z" fill="'+A+'"/><path d="M122 98 l-11 -7 v14 z" fill="'+A+'"/>'
+     +qb(100,42)),
+
+    /* 17 Anita：管制計畫沒跟著 SOP 改版，還要跟現場實作比對 */
+    auPlanVsActual: svg(
+      '<rect x="16" y="30" width="70" height="90" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M16 50 V40 a10 10 0 0 1 10 -10 h50 a10 10 0 0 1 10 10 v10 z" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M28 68 h46"/><path d="M28 84 h46"/><path d="M28 100 h30"/></g>'
+     +'<rect x="114" y="30" width="70" height="90" rx="6" fill="'+L+'" '+st+'/>'
+     +'<path d="M114 50 V40 a10 10 0 0 1 10 -10 h50 a10 10 0 0 1 10 10 v10 z" fill="'+B+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M126 68 h46"/><path d="M126 84 h46"/><path d="M126 100 h30"/></g>'
+     +txt(100,86,'≠',30,R)),
+
+    /* 18 Tom：你們要採取什麼行動？ */
+    auActionAsk: svg(
+      '<rect x="22" y="30" width="130" height="96" rx="10" fill="#fff" '+st+'/>'
+     +'<g fill="'+C+'" stroke="'+D+'" stroke-width="2.5">'
+     +'<rect x="36" y="46" width="16" height="16" rx="3"/><rect x="36" y="72" width="16" height="16" rx="3"/>'
+     +'<rect x="36" y="98" width="16" height="16" rx="3"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M64 54 h72"/><path d="M64 80 h72"/><path d="M64 106 h48"/></g>'
+     +qb(162,44)),
+
+    /* 19 Anita：採用總部文件變更流程，同步更新海外廠管制計畫 */
+    auHqToPlant: svg(
+      '<rect x="12" y="40" width="58" height="82" rx="4" fill="'+L+'" '+st+'/>'
+     +'<rect x="8" y="30" width="66" height="12" rx="4" fill="'+A+'" '+st+'/>'
+     +'<g fill="#fff" stroke="'+D+'" stroke-width="2">'
+     +'<rect x="22" y="54" width="16" height="14" rx="2"/><rect x="44" y="54" width="16" height="14" rx="2"/>'
+     +'<rect x="22" y="78" width="16" height="14" rx="2"/><rect x="44" y="78" width="16" height="14" rx="2"/></g>'
+     +'<path d="M118 122 V76 l20 -14 v14 l20 -14 v14 l20 -14 v60 z" fill="#fff" '+st+'/>'
+     +'<path d="M6 124 H194" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M80 90 H108" stroke="'+A+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M114 90 l-12 -8 v16 z" fill="'+A+'"/>'
+     +'<rect x="84" y="56" width="22" height="18" rx="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M89 63 h12 M89 69 h8" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>'),
+
+    /* 21 Anita：固定數量，數到滿才算完成 */
+    auFixedQty: svg(
+      '<rect x="24" y="62" width="152" height="56" rx="12" fill="'+L+'" '+st+'/>'
+     +'<g fill="#fff" stroke="'+D+'" stroke-width="2.5">'
+     +'<circle cx="48" cy="90" r="13"/><circle cx="74" cy="90" r="13"/><circle cx="100" cy="90" r="13"/>'
+     +'<circle cx="126" cy="90" r="13"/><circle cx="152" cy="90" r="13"/></g>'
+     +'<rect x="66" y="22" width="68" height="28" rx="10" fill="'+A+'" '+st+'/>'
+     +txt(100,43,'5 / 5',16,'#fff')),
+
+    /* 22 Tom：重量檢查程序還要補什麼？ */
+    auProcAdd: svg(
+      '<rect x="38" y="22" width="94" height="104" rx="6" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M52 46 h66"/><path d="M52 62 h66"/><path d="M52 78 h66"/><path d="M52 94 h42"/></g>'
+     +'<circle cx="144" cy="104" r="22" fill="'+A+'" '+st+'/>'
+     +'<path d="M144 92 v24 M132 104 h24" stroke="#fff" stroke-width="5" stroke-linecap="round"/>'),
+
+    /* 23 Anita：各機種上下限＋校正程序 */
+    auWeightLimits: svg(
+      '<rect x="24" y="24" width="152" height="52" rx="10" fill="#fff" '+st+'/>'
+     +txt(100,60,'12.0 kg',25,D)
+     +'<rect x="24" y="104" width="152" height="24" rx="10" fill="'+L+'" '+st+'/>'
+     +'<rect x="72" y="107" width="56" height="18" rx="7" fill="'+A+'"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M72 98 v34"/><path d="M128 98 v34"/></g>'
+     +txt(72,94,'LL',14,D)+txt(128,94,'UL',14,D)),
+
+    /* 24 Tom：這證明出貨口會擋重複條碼嗎？ */
+    auDupBarcode: svg(
+      '<rect x="18" y="38" width="72" height="68" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="110" y="38" width="72" height="68" rx="6" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-linecap="square">'
+     +'<path d="M30 52 v38" stroke-width="3"/><path d="M38 52 v38" stroke-width="2"/><path d="M44 52 v38" stroke-width="4"/>'
+     +'<path d="M53 52 v38" stroke-width="2"/><path d="M59 52 v38" stroke-width="3"/><path d="M67 52 v38" stroke-width="2"/>'
+     +'<path d="M73 52 v38" stroke-width="4"/><path d="M81 52 v38" stroke-width="2"/>'
+     +'<path d="M122 52 v38" stroke-width="3"/><path d="M130 52 v38" stroke-width="2"/><path d="M136 52 v38" stroke-width="4"/>'
+     +'<path d="M145 52 v38" stroke-width="2"/><path d="M151 52 v38" stroke-width="3"/><path d="M159 52 v38" stroke-width="2"/>'
+     +'<path d="M165 52 v38" stroke-width="4"/><path d="M173 52 v38" stroke-width="2"/></g>'
+     +'<circle cx="100" cy="112" r="18" fill="'+R+'" '+st+'/>'
+     +txt(100,121,'!',23,'#fff')),
+
+    /* 25 Anita：出貨口和 EOL 功能不一樣 */
+    auDockVsEol: svg(
+      '<rect x="12" y="38" width="76" height="78" rx="5" fill="'+L+'" '+st+'/>'
+     +'<rect x="24" y="52" width="52" height="64" rx="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+D+'" stroke-width="2" stroke-linecap="round">'
+     +'<path d="M24 64 h52"/><path d="M24 74 h52"/><path d="M24 84 h52"/></g>'
+     +'<rect x="36" y="92" width="28" height="24" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M50 92 v24" stroke="'+D+'" stroke-width="2"/>'
+     +'<rect x="106" y="56" width="76" height="14" rx="5" fill="'+L+'" '+st+'/>'
+     +'<rect x="110" y="70" width="12" height="42" rx="3" fill="#fff" '+st+'/>'
+     +'<rect x="166" y="70" width="12" height="42" rx="3" fill="#fff" '+st+'/>'
+     +'<rect x="104" y="108" width="80" height="10" rx="5" fill="'+L+'" '+st+'/>'
+     +'<rect x="130" y="84" width="28" height="24" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M126 78 h36" stroke="'+B+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M6 120 H194" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<circle cx="100" cy="74" r="17" fill="#fff" stroke="'+R+'" stroke-width="4"/>'
+     +'<path d="M88 86 L112 62" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/>')
+
+  });
+})();
