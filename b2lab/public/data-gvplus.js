@@ -32,6 +32,733 @@
    ⚠ 文字欄位一律寫純文字，不要寫 HTML 標籤（渲染時會被轉義顯示出來）。
    ============================================================ */
 window.GVPLUS = {
+/* ---------- 2026-10-09 每日文法（used to + 原形；用現在式講未來） ---------- */
+"dg20261009a2": {
+  "vis": true,
+  "oneLine": "used to 是一台只開往過去的車——它載的是「反覆做過、現在停了」的事，所以後面永遠掛原形動詞。",
+  "map": {
+    "when": "想說「我以前常常這樣，現在不這樣了」的時候",
+    "why": "中文靠「以前」兩個字提醒讀者，英文把這層對比直接寫進動詞片語，讀者不必等下一句",
+    "form": "主詞 + used to + 原形動詞　|　只有過去式，沒有 uses to"
+  },
+  "visual": {
+    "type": "cols",
+    "cap": "左邊那一欄是 used to，講的是已經停掉的舊常態；中間是現在簡單式，講現在的常態；右邊是過去簡單式，講某一天發生過的一件事。三欄的英文都在說「上班」這件事，但時間位置完全不同——這就是今天要分清楚的三格。",
+    "cols": [
+      {
+        "tag": "USED TO",
+        "tagCn": "以前的常態，停了",
+        "tone": 1,
+        "items": [
+          {
+            "en": "I used to start at six.",
+            "cn": "我以前六點就開始上班。",
+            "nt": "後面是原形 start，不加 -ed"
+          },
+          {
+            "en": "He used to wear a uniform.",
+            "cn": "他以前要穿制服。",
+            "nt": "現在不穿了，不必再補一句"
+          }
+        ]
+      },
+      {
+        "tag": "NOW",
+        "tagCn": "現在的常態",
+        "tone": 2,
+        "items": [
+          {
+            "en": "I start at nine.",
+            "cn": "我九點開始上班。",
+            "nt": "現在的習慣用現在簡單式"
+          },
+          {
+            "en": "He wears a shirt.",
+            "cn": "他穿襯衫。",
+            "nt": "英文沒有 uses to 這種形狀"
+          }
+        ]
+      },
+      {
+        "tag": "ONE DAY",
+        "tagCn": "某一天的一件事",
+        "tone": 3,
+        "items": [
+          {
+            "en": "I started at five on Monday.",
+            "cn": "我星期一五點就開始了。",
+            "nt": "單一次用過去簡單式"
+          },
+          {
+            "en": "He wore a tie yesterday.",
+            "cn": "他昨天打了領帶。",
+            "nt": "yesterday 一出現就不用 used to"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "habit",
+      "icon": "clock",
+      "title": "以前的作息",
+      "titleCn": "反覆發生，現在停了",
+      "ask": "怎麼說「我以前五點就起床」？",
+      "en": "I used to get up at five every day.",
+      "cn": "我以前每天五點就起床。",
+      "why": "重點不是「起床過」，而是「那段時間我天天都這樣」。用 used to 之後，讀者自動知道現在不必那麼早了，所以句子不用再加 but now I sleep late。如果改成 I got up at five，聽起來只是某一天的事，那種「一整段日子」的感覺就沒了。"
+    },
+    {
+      "key": "form",
+      "icon": "person",
+      "title": "主詞不影響形狀",
+      "titleCn": "he、she 也是 used to",
+      "ask": "為什麼不能寫 He uses to work here？",
+      "en": "My sister used to work in the same shop.",
+      "cn": "我姊姊以前在同一家店工作。",
+      "why": "現在簡單式遇到 he、she、it 要加 -s，很多人就把這個習慣帶到 used to 上面。但 used to 本身就是過去式，過去式不分主詞，所以永遠是 used to，沒有 uses to、也沒有 usesd to。看到主詞是第三人稱就提醒自己：這條規則在這裡不適用。"
+    },
+    {
+      "key": "base",
+      "icon": "cycle",
+      "title": "後面接原形",
+      "titleCn": "不加 -ing，也不加 -ed",
+      "ask": "used to 後面要接哪一種動詞形狀？",
+      "en": "We used to walk to the market together.",
+      "cn": "我們以前會一起走去市場。",
+      "why": "used to 已經把過去扛完了，所以後面那個動詞回到最乾淨的原形 walk。寫成 walked 是標記兩次過去，寫成 walking 又跳到 be used to 那個句型，前面卻沒有 be，整句就散了。檢查方法：把 used to 四個字遮起來，剩下的動詞應該長得像字典裡那樣。"
+    },
+    {
+      "key": "once",
+      "icon": "cross",
+      "title": "只有一次就不能用",
+      "titleCn": "last week 配過去簡單式",
+      "ask": "為什麼 I used to call her last night 是錯的？",
+      "en": "I called her last night.",
+      "cn": "我昨天晚上打電話給她了。",
+      "why": "used to 的意思裡藏著「反覆」，last night 卻只有一次，兩個訊息互相打架，所以句子讀起來很怪。只要句子裡出現 yesterday、last night、in 2023 這種單一時間點，就乾脆用過去簡單式。想講反覆就把時間詞換掉：I used to call her every Sunday."
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要說：我以前在夜市賣飲料，現在在圖書館打工。"
+    },
+    {
+      "label": "先問這是常態還是一次",
+      "text": "「賣飲料」是一段時間裡天天做的事，而且已經停了，所以走 used to 這條路。"
+    },
+    {
+      "label": "寫出以前那一半",
+      "text": "I used to sell drinks at the night market. 後面是原形 sell，不要寫 sold。"
+    },
+    {
+      "label": "寫出現在那一半",
+      "text": "現在的常態回到現在簡單式：Now I work at the library. 兩句中間不需要 but。"
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "想問別人就寫 Did you use to sell drinks there? 這時 use 不帶 d。寫成 Did you used to sell 就多了一個 d；寫成 I am used to sell drinks 又跳到另一個句型，整句壞掉。"
+    }
+  ],
+  "comparison": {
+    "title": "used to + 原形　vs　過去簡單式",
+    "left": {
+      "tag": "USED TO",
+      "tagCn": "一整段反覆的舊常態",
+      "icon": "cycle",
+      "head": "it happened again and again",
+      "headCn": "一再發生，後來停了",
+      "en": "She used to bring her lunch from home.",
+      "cn": "她以前都從家裡帶午餐。",
+      "pts": [
+        "後面一定是原形動詞",
+        "自帶「現在不這樣了」",
+        "不能配 yesterday 這種單點時間"
+      ]
+    },
+    "right": {
+      "tag": "PAST SIMPLE",
+      "tagCn": "某一天發生的一件事",
+      "icon": "pin",
+      "head": "it happened once",
+      "headCn": "發生過一次",
+      "en": "She brought her lunch from home on Friday.",
+      "cn": "她星期五從家裡帶了午餐。",
+      "pts": [
+        "動詞要變過去式",
+        "沒有說現在如何",
+        "可以直接配時間點"
+      ]
+    },
+    "note": "判斷口訣：句子裡有「每天、常常、那幾年」就走 used to；有「昨天、上週、某一天」就走過去簡單式。"
+  },
+  "quizMore": [
+    {
+      "q": "There ___ to be a post office on this corner.",
+      "opts": [
+        "use",
+        "used",
+        "uses",
+        "using"
+      ],
+      "ans": 1,
+      "expl": "There used to be 是講「以前這裡有」的固定說法。句子裡沒有 did 幫忙，所以 d 要留著；英文也沒有 uses to 這種形狀。"
+    },
+    {
+      "q": "Which sentence is about a habit that has stopped?",
+      "opts": [
+        "He takes the lift every morning.",
+        "He used to take the lift every morning.",
+        "He is taking the lift now.",
+        "He took the lift at eight."
+      ],
+      "ans": 1,
+      "expl": "只有 used to 自帶「現在已經不這樣」。第一句是現在的習慣，第三句是此刻正在做，第四句只講八點那一次。"
+    }
+  ]
+},
+"dg20261009b1": {
+  "vis": true,
+  "oneLine": "used to 的 d 是一張過去的票——didn't 或 Did 一出現就已經驗過票了，後面不能再驗第二次。",
+  "map": {
+    "when": "要把 used to 改成否定句或問句，或是要跟過去簡單式、be used to 分家的時候",
+    "why": "英文一個句子只標記一次過去；中文沒有這種規則，所以我們很容易標兩次",
+    "form": "肯定 used to + 原形　|　否定 didn't use to　|　問句 Did … use to"
+  },
+  "visual": {
+    "type": "chain",
+    "cap": "這條鏈子把否定句拆成四塊：didn't 是扛過去的那一塊（橘色的 verb 位置），use 已經退回原形，to 只是接頭，最後才是真正的動作。看懂這條鏈，你就知道那個 d 為什麼不能留在 use 上——過去的標記已經被 didn't 拿走了。下面三個變形是同一條鏈換成肯定、問句與簡答。",
+    "links": [
+      {
+        "t": "She",
+        "c": "主詞",
+        "role": "subj"
+      },
+      {
+        "t": "didn't",
+        "c": "扛過去",
+        "role": "verb"
+      },
+      {
+        "t": "use",
+        "c": "退回原形",
+        "role": "glue"
+      },
+      {
+        "t": "to",
+        "c": "接頭",
+        "role": "mute"
+      },
+      {
+        "t": "answer the phones",
+        "c": "真正的動作",
+        "role": "obj"
+      }
+    ],
+    "eg": {
+      "en": "She didn't use to answer the phones.",
+      "cn": "她以前不接電話。"
+    },
+    "variants": [
+      {
+        "k": "肯定",
+        "en": "She used to answer the phones.",
+        "cn": "她以前要接電話。（沒有助動詞，d 留在 used 上）"
+      },
+      {
+        "k": "問句",
+        "en": "Did she use to answer the phones?",
+        "cn": "她以前要接電話嗎？（Did 扛過去，use 不帶 d）"
+      },
+      {
+        "k": "簡答",
+        "en": "No, she didn't.",
+        "cn": "不用。（只留 didn't，不重複 use to）"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "negative",
+      "icon": "tool",
+      "title": "否定句",
+      "titleCn": "didn't use to，不加 d",
+      "ask": "為什麼 didn't used to 是錯的？",
+      "en": "The warehouse didn't use to open on Sundays.",
+      "cn": "倉庫以前星期天不開。",
+      "why": "didn't 已經把這句標成過去了，後面的動詞必須回到原形，所以 used 要退成 use。這一組錯得特別多，因為 use to 和 used to 唸起來幾乎沒差，手比腦快就多打了一個 d。寫完用眼睛檢查一次：看到 did 或 didn't，就不准再看到 used。"
+    },
+    {
+      "key": "question",
+      "icon": "bubble",
+      "title": "問句與簡答",
+      "titleCn": "Did … use to，答只留 did",
+      "ask": "怎麼問「你們以前要加班嗎」？",
+      "en": "Did your team use to stay late on Fridays?",
+      "cn": "你們團隊以前星期五要加班嗎？",
+      "why": "問句跟否定句同一條邏輯：Did 站在最前面扛過去，use 就不需要 d。回答時也不用把整個句型搬出來，Yes, we did. 或 No, we didn't. 就夠了。注意一下 Are you used to…? 問的是「你習慣了嗎」，那是另一個句型、另一個意思，別混。"
+    },
+    {
+      "key": "state",
+      "icon": "balance",
+      "title": "would 帶不動的句子",
+      "titleCn": "動作可以換，狀態不行",
+      "ask": "哪一種句子不能把 used to 換成 would？",
+      "en": "This floor used to be the sales department.",
+      "cn": "這層樓以前是業務部。",
+      "why": "be、have、live、know 這些動詞描述的是狀態，不是一個會重複上演的動作，所以 would 帶不動它們。反過來說，如果講的是反覆的動作，兩者就可以互換：He would print the list every Monday 和 He used to print the list every Monday 都成立。分界線只有一句話：動作還是狀態。"
+    },
+    {
+      "key": "beused",
+      "icon": "fork",
+      "title": "多一個 be 就分岔",
+      "titleCn": "be used to 接名詞或 V-ing",
+      "ask": "I used to 和 I am used to 差在哪裡？",
+      "en": "New staff are used to working with two screens.",
+      "cn": "新同事已經習慣用兩個螢幕工作了。",
+      "why": "be used to 的意思是「已經習慣、不覺得困難」，後面只能接名詞或 V-ing，時間點可以在現在。把它跟 used to 搞混，意思會整個反過來：New staff used to work with two screens 是「以前用兩個，現在不用了」。想說「正在習慣」就把 be 換成 get。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要問同事：你以前在台中那間廠做過嗎？"
+    },
+    {
+      "label": "先決定走哪一條",
+      "text": "問的是「以前的常態」，所以走 used to 這條路，而不是 Are you used to…。"
+    },
+    {
+      "label": "把 Did 放到最前面",
+      "text": "Did you … 一旦 Did 出現，過去就標記完了。"
+    },
+    {
+      "label": "讓 used 退回原形",
+      "text": "Did you use to work at the Taichung plant? 這裡 use 不帶 d，work 也保持原形。"
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "想改成否定就寫 I didn't use to work there. 寫成 I didn't used to work there 是標記了兩次過去；寫成 I wasn't used to work there 則跳到 be used to，而且後面少了 -ing，整句破掉。"
+    }
+  ],
+  "comparison": {
+    "title": "didn't use to　vs　wasn't used to",
+    "left": {
+      "tag": "DIDN'T USE TO",
+      "tagCn": "以前不做這件事",
+      "icon": "tool",
+      "head": "it was not my habit then",
+      "headCn": "那時候沒有這個習慣",
+      "en": "I didn't use to check my email at night.",
+      "cn": "我以前晚上不看信。",
+      "pts": [
+        "didn't 扛過去，use 不帶 d",
+        "後面接原形動詞",
+        "暗示現在反而會看了"
+      ]
+    },
+    "right": {
+      "tag": "WASN'T USED TO",
+      "tagCn": "當時還不習慣",
+      "icon": "balance",
+      "head": "it still felt strange then",
+      "headCn": "那時候還不適應",
+      "en": "I wasn't used to checking email at night.",
+      "cn": "我當時還不習慣晚上看信。",
+      "pts": [
+        "be 動詞要跟著時態變",
+        "後面接名詞或 V-ing",
+        "講的是適應程度，不是有沒有做"
+      ]
+    },
+    "note": "判斷口訣：先看前面有沒有 be。有 be 就是「習不習慣」，沒有 be 就是「以前做不做」。"
+  },
+  "quizMore": [
+    {
+      "q": "___ she use to live in Kaohsiung before the transfer?",
+      "opts": [
+        "Was",
+        "Did",
+        "Does",
+        "Has"
+      ],
+      "ans": 1,
+      "expl": "問過去的常態要用 Did，後面的 use 也因此不帶 d。Was she used to… 問的是她當時適不適應，是另一個意思。"
+    },
+    {
+      "q": "He ___ the long commute now, so he reads on the bus.",
+      "opts": [
+        "used to",
+        "is used to",
+        "use to",
+        "didn't use to"
+      ],
+      "ans": 1,
+      "expl": "now 指出這是現在的狀態，而且後面接名詞 the long commute，所以用 be used to 的現在式。used to 會變成「以前通勤很久、現在不是」，跟後半句對不上。"
+    }
+  ]
+},
+"dg20261009b1p": {
+  "vis": true,
+  "oneLine": "未來式的選擇不是看時間遠近，而是看「這件事定了沒有、是誰定的」——定了就用現在式，還沒定才用 will。",
+  "map": {
+    "when": "要講明天、下週、下個月已經排好的事情的時候",
+    "why": "中文加個「明天」就夠了，英文卻用動詞的形狀告訴讀者這件事確定到什麼程度",
+    "form": "個人安排 be + V-ing + 時間　|　時刻表 現在簡單式 + 時間　|　當場決定 will"
+  },
+  "visual": {
+    "type": "matrix",
+    "cap": "這張表的三欄是三種寫法，三列是三種情況。對角線上那三格（有底色的）才是母語者的預設選擇：人跟人約好的事走現在進行式，公告的班次走現在簡單式，還沒定的事走 will。其他格子不是文法錯，而是語感錯——它們會讓確定的事聽起來不確定，或讓公告聽起來像私人打算。",
+    "cols": [
+      "現在進行式",
+      "現在簡單式",
+      "will"
+    ],
+    "rows": [
+      {
+        "h": "人跟人約好的事",
+        "cells": [
+          {
+            "en": "I am interviewing two candidates on Friday.",
+            "cn": "最自然：行程已經排定",
+            "hi": true
+          },
+          {
+            "en": "I interview two candidates on Friday.",
+            "cn": "怪：聽起來像每週固定的班表"
+          },
+          {
+            "en": "I will interview two candidates on Friday.",
+            "cn": "弱：對方會以為還沒確定"
+          }
+        ]
+      },
+      {
+        "h": "公告好的時刻表",
+        "cells": [
+          {
+            "en": "The gate is closing at nine.",
+            "cn": "可以，但像在提醒眼前這一次"
+          },
+          {
+            "en": "The gate closes at nine.",
+            "cn": "最自然：牌子上就是這個時間",
+            "hi": true
+          },
+          {
+            "en": "The gate will close at nine.",
+            "cn": "弱：像在猜，不像公告"
+          }
+        ]
+      },
+      {
+        "h": "還沒定的事",
+        "cells": [
+          {
+            "en": "I am calling the lab back.",
+            "cn": "錯位：會被當成現在正在打"
+          },
+          {
+            "en": "I call the lab back.",
+            "cn": "錯位：聽起來像習慣動作"
+          },
+          {
+            "en": "I will call the lab back.",
+            "cn": "最自然：此刻才決定",
+            "hi": true
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "arrange",
+      "icon": "calendar",
+      "title": "已經約好的事",
+      "titleCn": "現在進行式 + 時間詞",
+      "ask": "怎麼說「我星期二要去客戶的廠」？",
+      "en": "I am visiting the client's plant on Tuesday.",
+      "cn": "我星期二要去客戶的廠。",
+      "why": "日期談好了、對方也知道，這在英文裡就屬於「安排」，預設寫法是現在進行式。寫成 I will visit 不算錯，但語氣鬆掉了，對方很可能回信再確認一次——在工作往來裡，這等於多出一輪信。選對時態不只是文法，是省時間。"
+    },
+    {
+      "key": "timetable",
+      "icon": "plane",
+      "title": "班次與營業時間",
+      "titleCn": "現在簡單式，不是我能改的",
+      "ask": "為什麼班機時刻要用現在簡單式？",
+      "en": "The last flight to Hanoi leaves at ten past eleven.",
+      "cn": "飛河內的末班機十一點十分起飛。",
+      "why": "時刻表由航空公司公告，不是說話的人安排的，所以用現在簡單式，語感像在念牌子上的字。能走這條路的動詞就那幾個：leave、arrive、start、open、close、finish。反過來說，只要主詞換成人、而且是跟人談好的，就要回到現在進行式。"
+    },
+    {
+      "key": "timeword",
+      "icon": "pin",
+      "title": "時間詞不能省",
+      "titleCn": "沒有它就變成「現在」",
+      "ask": "I am training the new operator 是現在還是未來？",
+      "en": "I am training the new operator on Monday morning.",
+      "cn": "我星期一早上要帶那位新作業員。",
+      "why": "現在進行式一個形狀要扛兩種意思，分辨全靠時間詞。把 on Monday morning 拿掉，這句就會被理解成「我正在帶他」。所以講未來時，tomorrow、next week、at ten 這類詞不是裝飾，是句子的定位器——漏掉它，讀者的時間感就跑到現在。"
+    },
+    {
+      "key": "nofix",
+      "icon": "arrow",
+      "title": "還沒定的事怎麼寫",
+      "titleCn": "will、may 留給沒有日期的事",
+      "ask": "日期還沒定的事可以用現在進行式嗎？",
+      "en": "We will arrange a second visit once the samples pass.",
+      "cn": "樣品通過之後我們會再安排一次訪廠。",
+      "why": "不行。現在進行式的前提是「已經排定」，條件還沒成立的事沒有資格用它。這裡用 will 才誠實，而且 once 子句說明了要等什麼。寫成 We are arranging a second visit 會讓對方以為日期定了，之後還要再解釋一次，反而更麻煩。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要在信裡交代三件事：下週三跟廠長開會、接駁車每天七點開、報告好了會寄給對方。"
+    },
+    {
+      "label": "先分堆",
+      "text": "前兩件有明確時間、已經定了；第三件要等報告完成，還沒有日期。"
+    },
+    {
+      "label": "已排定的分成兩種",
+      "text": "跟人約好的用現在進行式：I am meeting the plant manager next Wednesday. 公告的班次用現在簡單式：The shuttle runs at seven every day."
+    },
+    {
+      "label": "沒定的那一件交給 will",
+      "text": "I will send you the report as soon as it is ready. 時間取決於別人，所以不能用現在式假裝已排定。"
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "若把第一件寫成 I meet the plant manager next Wednesday，會聽起來像每週固定行程；把第三件寫成 I am sending you the report，對方會以為你今天就要寄。"
+    }
+  ],
+  "comparison": {
+    "title": "be + V-ing（安排）　vs　現在簡單式（時刻表）",
+    "left": {
+      "tag": "ARRANGEMENT",
+      "tagCn": "人跟人約好的",
+      "icon": "calendar",
+      "head": "we agreed on this time",
+      "headCn": "這個時間是談好的",
+      "en": "The engineers are checking the line on Saturday.",
+      "cn": "工程師星期六要檢查產線。",
+      "pts": [
+        "主詞通常是人",
+        "可以因為雙方同意而改期",
+        "一定要配時間詞"
+      ]
+    },
+    "right": {
+      "tag": "TIMETABLE",
+      "tagCn": "公告出來的",
+      "icon": "clock",
+      "head": "the schedule says so",
+      "headCn": "表上就是這樣寫",
+      "en": "The line stops for maintenance every third Sunday.",
+      "cn": "產線每三個星期天停機保養。",
+      "pts": [
+        "主詞常是班次、場館、課程",
+        "個人改不了",
+        "動詞多半是 leave、start、open、close"
+      ]
+    },
+    "note": "判斷口訣：這個時間是「我們談好的」就用進行式，是「表上寫的」就用簡單式。"
+  },
+  "quizMore": [
+    {
+      "q": "Don't book me for Friday — I ___ the auditor from Osaka that afternoon.",
+      "opts": [
+        "meet",
+        "am meeting",
+        "will meet",
+        "met"
+      ],
+      "ans": 1,
+      "expl": "時間已經約好、對方也知道，屬於個人安排，用現在進行式。will meet 會讓同事以為還有空間調動，而 meet 聽起來像每週固定行程。"
+    },
+    {
+      "q": "Which sentence is a timetable, not a personal plan?",
+      "opts": [
+        "We are starting the audit at eight.",
+        "The canteen stops serving at two.",
+        "I am driving to Taichung tomorrow.",
+        "She is giving the briefing later."
+      ],
+      "ans": 1,
+      "expl": "只有第二句的主詞是機構公告的營業時間，個人改不了，所以用現在簡單式。另外三句都是人安排好的事，走現在進行式。"
+    }
+  ]
+},
+"dg20261009b2": {
+  "vis": true,
+  "oneLine": "同一件排定好的未來，從口頭約定到合約條款有一條正式度刻度——走錯一格，定案的事會被讀成還在討論。",
+  "map": {
+    "when": "同一件未來的事要寫進信件、議程、新聞稿或合約的時候",
+    "why": "英文把「確定程度」和「說話者的責任」都壓在動詞形狀上，中文則靠上下文與敬語",
+    "form": "口頭 be + V-ing　|　議程與新聞 現在簡單式　|　承諾 will　|　條款 shall"
+  },
+  "visual": {
+    "type": "scale",
+    "cap": "這把尺從左到右是正式度，四個停點對應四種文件。同一場十一月的檢討會議，寫在便條、議程、報導和合約裡各有一種預設寫法；愈往右，寫的人承擔的責任愈重。選錯格子通常不是文法錯，而是把責任放錯位置——把合約義務寫成行程，或把行程寫成承諾。",
+    "lo": "口語、內部便條",
+    "hi": "合約、正式條款",
+    "stops": [
+      {
+        "at": 10,
+        "label": "Spoken note",
+        "labelCn": "口頭或便條",
+        "en": "We are doing the review in November.",
+        "cn": "最輕鬆的寫法，只交代彼此知道的安排"
+      },
+      {
+        "at": 40,
+        "label": "Agenda",
+        "labelCn": "議程與行程表",
+        "en": "The review takes place in November.",
+        "cn": "機構公告的時程，句子最短、最中性"
+      },
+      {
+        "at": 65,
+        "label": "News report",
+        "labelCn": "新聞報導",
+        "en": "The review resumes in November, the ministry says.",
+        "cn": "現在簡單式把已定的事拉近，並與未定的部分劃清界線"
+      },
+      {
+        "at": 95,
+        "label": "Contract",
+        "labelCn": "合約條款",
+        "en": "The parties shall complete the review by 30 November.",
+        "cn": "shall 標記的是義務，不只是時程，日後才追究得起"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "agenda",
+      "icon": "book",
+      "title": "議程裡的一行字",
+      "titleCn": "現在簡單式最中性",
+      "ask": "議程上為什麼不寫 is presenting？",
+      "en": "14:00 The quality team reports on the corrective actions.",
+      "cn": "十四點 品保組報告改善措施。",
+      "why": "議程是機構對全體公告的時程，慣例用現在簡單式，句子短、語氣中性，而且同一份文件每一列形狀一致，讀者掃過去就懂。改成 is reporting 會讓那一列讀起來像某個人的私人行程，在表格裡也顯得冗長。一致性在正式文件裡本身就是訊息。"
+    },
+    {
+      "key": "commit",
+      "icon": "money",
+      "title": "承諾與時程不一樣",
+      "titleCn": "will 管的是責任",
+      "ask": "什麼時候非用 will 不可？",
+      "en": "I will confirm the unit price before you leave today.",
+      "cn": "我會在你今天離開前確認單價。",
+      "why": "這句的重點不是「什麼時候」，而是「我負責」。承諾的本質是把責任放在自己身上，而 will 正是扛這個功能的字；改成 I am confirming 會把它降級成行程表上的一格，責任感就消失了。同理，條件句的主句與純預測也只能用 will。"
+    },
+    {
+      "key": "news",
+      "icon": "eye",
+      "title": "新聞的分界線",
+      "titleCn": "定了用現在式，沒定用 may",
+      "ask": "報導怎麼讓讀者看出哪些事還沒定？",
+      "en": "Talks resume on Thursday, but no date has been set for any walkout.",
+      "cn": "談判星期四重啟，但罷工日期尚未決定。",
+      "why": "記者用動詞形狀當標籤：有日期的用現在式，沒日期的改用 may、could 或 has not been set。讀新聞時把這條線找出來，你就知道哪些是事實、哪些只是可能。寫作時更要守住它——把沒定的事寫成現在式，等於替別人宣布了他沒宣布的事。"
+    },
+    {
+      "key": "mix",
+      "icon": "star",
+      "title": "一段話裡怎麼排",
+      "titleCn": "先分堆，再用轉折詞隔開",
+      "ask": "為什麼同一段裡不能三種寫法亂跳？",
+      "en": "Both meetings are fixed; the final figure, however, may take weeks.",
+      "cn": "兩場會議都定了，不過最終數字可能要好幾週。",
+      "why": "讀者是靠動詞形狀在心裡分堆的。一段話裡時態亂跳，他就得自己猜哪件事定了，閱讀成本全部轉嫁給對方。處理方法很簡單：有日期的寫一堆、沒日期的寫一堆，中間用 but、however 或分號隔開，分界線就清楚了。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要把同一件事寫三次：給同事的便條、會議議程的一行、以及合約裡的一條。"
+    },
+    {
+      "label": "先確認這件事定了沒有",
+      "text": "日期已經雙方同意，所以三種文件都可以用現在式講未來；若還沒定，三種都只能用 will 或 may。"
+    },
+    {
+      "label": "便條最輕",
+      "text": "寫給同事：We are closing the line for two days in December. 現在進行式，口語、彼此心裡有數。"
+    },
+    {
+      "label": "議程最中性",
+      "text": "寫進議程：The line closes for two days in December. 現在簡單式，句子短，跟其他列形狀一致。"
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "寫進合約要改成 The seller shall suspend production for two days in December. 若把合約那條寫成 is closing，義務就被寫成行程；反過來把便條寫成 shall，同事會覺得你在下命令。"
+    }
+  ],
+  "comparison": {
+    "title": "現在式講未來（已定案）　vs　will / shall（責任與未定）",
+    "left": {
+      "tag": "PRESENT",
+      "tagCn": "已經排定的事",
+      "icon": "calendar",
+      "head": "it is already in the schedule",
+      "headCn": "行程上已經有了",
+      "en": "The committee reviews the case on 12 December.",
+      "cn": "委員會十二月十二日審這個案子。",
+      "pts": [
+        "有明確日期才有資格用",
+        "語氣中性，像在報時程",
+        "議程、公告、新聞的預設"
+      ]
+    },
+    "right": {
+      "tag": "WILL / SHALL",
+      "tagCn": "責任、條件或預測",
+      "icon": "balance",
+      "head": "someone takes responsibility",
+      "headCn": "有人要負責，或還沒定",
+      "en": "The committee shall give its reasons in writing.",
+      "cn": "委員會應以書面說明理由。",
+      "pts": [
+        "承諾、條件句主句、純預測",
+        "合約裡 shall 標記義務",
+        "沒有日期的事只能走這條"
+      ]
+    },
+    "note": "判斷口訣：先問「這件事有日期嗎」，再問「這句話在交代時程還是在承擔責任」。"
+  },
+  "quizMore": [
+    {
+      "q": "Which line fits a formal public notice best?",
+      "opts": [
+        "The office is closing early on 24 December.",
+        "The office closes at noon on 24 December.",
+        "The office will close early on 24 December.",
+        "The office is going to close on 24 December."
+      ],
+      "ans": 1,
+      "expl": "公告屬於機構對全體說話，慣例用現在簡單式，句子最短也最中性。進行式偏個人安排，will 和 be going to 則讓公告聽起來像預測或打算。"
+    },
+    {
+      "q": "The contract needs a clause about replacing faulty parts. Which wording is right?",
+      "opts": [
+        "The seller is replacing faulty parts at its own cost.",
+        "The seller replaces faulty parts at its own cost.",
+        "The seller shall replace faulty parts at its own cost.",
+        "The seller is going to replace faulty parts at its own cost."
+      ],
+      "ans": 2,
+      "expl": "條款要標記義務，而 shall 正是合約語域裡扛義務的字。現在式會把責任寫成時程或習慣，be going to 則只是打算，日後都難以追究。"
+    }
+  ]
+},
 
 /* ---------- 2026-10-06 每日文法（have 與 have got；used to + 原形） ---------- */
 "dg20261006a2": {

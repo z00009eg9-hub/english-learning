@@ -1,7 +1,7 @@
 {
   "_note": "內容排程狀態檔（每週二、五各跑一次）。每次執行讓兩位學習者各拿到一整份：四個程度（A2/B1/B1+/B2）的文章、文法、聽力。usedUnits = Anita 那條線（B1+/B2）已教過的文法單元編號；usedUnitsTom = Tom 那條線（A2/B1）已教過的文法單元編號（各自從 syllabus.json 依序走、互不影響）；usedSources = 已改寫過的新聞網址；usedVoa = 已加入聽力庫的 VOA／YouTube 素材代號（2026-08-19 起聽力改為本站原創 TTS 對話，未使用外部影片，故此欄位本次未異動）；lastRun = 最後一次成功產生的日期。",
-  "lastRun": "2026-10-06",
-  "nextKind": "news",
+  "lastRun": "2026-10-09",
+  "nextKind": "original",
   "usedVoa": [
     "L1-1",
     "L1-7",
@@ -28,7 +28,8 @@
     15,
     16,
     17,
-    18
+    18,
+    19
   ],
   "usedUnitsTom": [
     1,
@@ -47,7 +48,8 @@
     14,
     15,
     16,
-    17
+    17,
+    18
   ],
   "usedSources": [
     "https://www.taipeitimes.com/News/front/archives/2026/08/08/2003862135",
@@ -64,7 +66,9 @@
     "https://focustaiwan.tw/society/202609280004",
     "https://focustaiwan.tw/society/202610010016",
     "https://focustaiwan.tw/society/202610010014",
-    "https://focustaiwan.tw/society/202610040006"
+    "https://focustaiwan.tw/society/202610040006",
+    "https://focustaiwan.tw/society/202610080011",
+    "https://focustaiwan.tw/business/202610070021"
   ],
   "usedTitles": [
     "A Sea Warning, but No Landfall",
@@ -133,16 +137,20 @@
     "Tom Has Got the Window Seat",
     "Anita Has Got a Shorter Commute",
     "Tainan's Main Line Is Going Underground",
-    "The Flight Anita Used to Take Every Month"
+    "The Flight Anita Used to Take Every Month",
+    "Tom Used to Work at a Counter",
+    "Anita Used to Be the One Answering",
+    "Four Days at the Glass Plant",
+    "A 99 Percent Yes, and No Date"
   ],
   "topicRotation": [
-    "職場與面試",
     "金錢與居住",
     "食物與生活",
     "學習與心理",
     "天災與天氣",
     "健康與醫療",
-    "旅遊與交通"
+    "旅遊與交通",
+    "職場與面試"
   ],
   "dualLevel": {
     "tom": "A2",
@@ -165,6 +173,7 @@
     "日常作息",
     "天氣與衣服",
     "健康",
-    "交通"
+    "交通",
+    "職場"
   ]
 }

@@ -14,6 +14,876 @@ window.LISTEN = {
 
 /* ========== 依課堂筆記自製（每週二／五更新） ========== */
 notes:[
+/* ---------- 2026-10-09 職場與面試主題（四個程度） ---------- */
+{
+  "id": "dl20261009a2",
+  "date": "2026-10-09",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "You Used to Work at Night?",
+  "titleCn": "你以前上夜班喔？",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "☕ 茶水間聊以前那份打工",
+  "focus": "用 used to + 原形動詞講以前的常態，再跟現在簡單式與現在進行式對照",
+  "intro": "Tom和同事Lisa在茶水間等咖啡，聊起Tom之前在便利商店的工作。請注意Tom每次講到舊工作都用 used to + 原形動詞（used to work、used to clean），講現在的事就換回現在簡單式（I finish at six）。最後Lisa講到某一天發生的事，用的是過去簡單式，不是 used to。",
+  "tip": "第一次聽只抓三個數字（以前幾點上班、以前一週幾天、現在幾點下班）；第二次聽專心數一數 used to 出現幾次，並注意後面那個動詞有沒有加 -ed。",
+  "pre": [
+    {
+      "w": "office",
+      "ipa": "/ˈɑː.fɪs/",
+      "pos": "n.",
+      "cn": "辦公室",
+      "def": "A room or building where people work at desks."
+    },
+    {
+      "w": "team",
+      "ipa": "/tiːm/",
+      "pos": "n.",
+      "cn": "團隊；隊",
+      "def": "A group of people who work or play together."
+    },
+    {
+      "w": "desk",
+      "ipa": "/desk/",
+      "pos": "n.",
+      "cn": "書桌；辦公桌",
+      "def": "A table that you sit at to write or use a computer."
+    },
+    {
+      "w": "noisy",
+      "ipa": "/ˈnɔɪ.zi/",
+      "pos": "adj.",
+      "cn": "吵的",
+      "def": "Making a lot of loud sound."
+    },
+    {
+      "w": "finish",
+      "ipa": "/ˈfɪn.ɪʃ/",
+      "pos": "v.",
+      "cn": "結束；完成",
+      "def": "To come to the end of something."
+    },
+    {
+      "w": "miss",
+      "ipa": "/mɪs/",
+      "pos": "v.",
+      "cn": "想念；錯過",
+      "def": "To feel sad because someone or something is not with you."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "You look tired. Late night?",
+      "cn": "你看起來很累，昨天很晚睡？"
+    },
+    {
+      "sp": "Tom",
+      "en": "No, I slept well. This office is just very quiet.",
+      "cn": "沒有，我睡得很好，只是這間辦公室太安靜了。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Quiet is bad?",
+      "cn": "安靜不好嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "It is strange. I used to work in a noisy shop.",
+      "cn": "有點奇怪。我以前在一家很吵的店工作。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Which shop?",
+      "cn": "哪一家店？"
+    },
+    {
+      "sp": "Tom",
+      "en": "A convenience store. I used to start at four in the morning.",
+      "cn": "一家便利商店。我以前早上四點就開始上班。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Four? That is too early for me.",
+      "cn": "四點？對我來說太早了。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I used to clean the coffee machine first. Then the bread came.",
+      "cn": "我以前都先洗咖啡機，然後麵包就送來了。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "How many days every week?",
+      "cn": "一個星期上幾天？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Six days. Now I work five days and I finish at six.",
+      "cn": "六天。現在我上五天班，六點下班。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Do you miss it?",
+      "cn": "你會想念嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I miss the free bread. I do not miss the early mornings.",
+      "cn": "我想念免費的麵包，但我不想念那麼早起。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "My first job was in a bakery. I ate too much cake.",
+      "cn": "我第一份工作在麵包店，我吃太多蛋糕了。"
+    },
+    {
+      "sp": "Tom",
+      "en": "See? Food is always the problem.",
+      "cn": "看吧？問題永遠都是食物。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Your coffee is ready. Welcome to the quiet team.",
+      "cn": "你的咖啡好了。歡迎加入安靜的團隊。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What time did Tom use to start work?",
+      "qCn": "Tom以前幾點開始上班？",
+      "opts": [
+        "A. At three",
+        "B. At four",
+        "C. At five",
+        "D. At six"
+      ],
+      "optsCn": [
+        "A. 三點",
+        "B. 四點",
+        "C. 五點",
+        "D. 六點"
+      ],
+      "ans": 1,
+      "expl": "I used to start at four in the morning.——Tom第三次講話時就說了是早上四點。"
+    },
+    {
+      "q": "How many days does Tom work now?",
+      "qCn": "Tom現在一週上幾天班？",
+      "opts": [
+        "A. Four days",
+        "B. Five days",
+        "C. Six days",
+        "D. Seven days"
+      ],
+      "optsCn": [
+        "A. 四天",
+        "B. 五天",
+        "C. 六天",
+        "D. 七天"
+      ],
+      "ans": 1,
+      "expl": "Six days. Now I work five days and I finish at six.——以前六天，現在五天，問的是現在。"
+    },
+    {
+      "q": "What does Tom miss?",
+      "qCn": "Tom想念什麼？",
+      "opts": [
+        "A. The early mornings",
+        "B. The coffee machine",
+        "C. The free bread",
+        "D. The noisy shop"
+      ],
+      "optsCn": [
+        "A. 很早的早晨",
+        "B. 咖啡機",
+        "C. 免費的麵包",
+        "D. 很吵的店"
+      ],
+      "ans": 2,
+      "expl": "I miss the free bread. I do not miss the early mornings.——他想念麵包，不想念早起。"
+    },
+    {
+      "q": "Tom says, \"I ___ to clean the coffee machine first.\"",
+      "qCn": "Tom說：我以前都先洗咖啡機。",
+      "opts": [
+        "A. use",
+        "B. uses",
+        "C. used",
+        "D. using"
+      ],
+      "ans": 2,
+      "expl": "講以前反覆做的事要用 used to + 原形動詞，而且句子裡沒有 did 幫忙，所以 d 要留著。"
+    }
+  ]
+},
+{
+  "id": "dl20261009b1",
+  "date": "2026-10-09",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Nine Candidates in Four Days",
+  "titleCn": "四天面試了九個人",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "🗂 下班前跟同事對一下面試筆記",
+  "focus": "used to 和過去簡單式的分工，以及否定句的 didn't use to（use 不帶 d）",
+  "intro": "Anita和越南同事Mai在收東西時聊這一週的面試。請注意兩人怎麼分辨兩種過去：講「那幾年都這樣」用 used to，講「八年前那一次」用過去簡單式。另外聽Mai說 didn't use to 的時候，後面的 use 有沒有那個 d。",
+  "tip": "第一次聽抓三個數字（面試了幾個人、要招幾個人、Anita幾年前第一次面試）；第二次聽注意 used to 和過去簡單式交替出現的地方，想一想為什麼要換。",
+  "pre": [
+    {
+      "w": "terrified",
+      "ipa": "/ˈterəˌfaɪd/",
+      "pos": "adj.",
+      "cn": "非常害怕的",
+      "def": "Feeling very, very afraid."
+    },
+    {
+      "w": "interviewer",
+      "ipa": "/ˈɪn.t̬ɚ.vjuː.ɚ/",
+      "pos": "n.",
+      "cn": "面試官；採訪者",
+      "def": "The person who asks the questions in an interview."
+    },
+    {
+      "w": "engineer",
+      "ipa": "/ˌen.dʒɪˈnɪr/",
+      "pos": "n.",
+      "cn": "工程師",
+      "def": "A person trained to design, build or check machines and systems."
+    },
+    {
+      "w": "plant",
+      "ipa": "/plænt/",
+      "pos": "n.",
+      "cn": "工廠；廠區",
+      "def": "A factory where something is made in large amounts."
+    },
+    {
+      "w": "CV",
+      "ipa": "/ˌsiːˈviː/",
+      "pos": "n.",
+      "cn": "履歷",
+      "def": "A short written record of your studies and jobs."
+    },
+    {
+      "w": "forget",
+      "ipa": "/fɚˈɡet/",
+      "pos": "v.",
+      "cn": "忘記",
+      "def": "To be unable to remember something."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "That is nine people since Monday. My ears hurt.",
+      "cn": "從星期一到現在九個人，我耳朵好痛。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Nine, and we only need two engineers.",
+      "cn": "九個，而我們只要兩位工程師。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Which one did you like?",
+      "cn": "你比較喜歡哪一個？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The woman from the Bien Hoa plant. She asked good questions.",
+      "cn": "邊和那間廠來的那位女士，她問的問題很好。"
+    },
+    {
+      "sp": "Mai",
+      "en": "I did not write that down. Where is my pen?",
+      "cn": "我沒記下來，我的筆呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I didn't use to take notes either, and I always forgot names.",
+      "cn": "我以前也不做筆記，結果老是忘記人家的名字。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So when did you start?",
+      "cn": "那你是什麼時候開始做筆記的？"
+    },
+    {
+      "sp": "Anita",
+      "en": "After my first week here. Four candidates sounded exactly the same.",
+      "cn": "來這裡的第一個星期以後。有四個人聽起來完全一樣。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Did you use to be nervous in interviews?",
+      "cn": "你以前面試的時候會緊張嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Terrified. Eight years ago I sat outside a room in Hanoi and shook.",
+      "cn": "怕死了。八年前我坐在河內一間會議室外面發抖。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Did you get the job?",
+      "cn": "你拿到那份工作了嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "No. I forgot half of my answers, so they chose someone else.",
+      "cn": "沒有。我忘了一半的答案，所以他們選了別人。"
+    },
+    {
+      "sp": "Mai",
+      "en": "That is why you start with an easy question now.",
+      "cn": "所以你現在都先問一個簡單的問題。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Exactly. My first interviewer asked about statistics in minute one.",
+      "cn": "沒錯。我第一位面試官第一分鐘就問統計。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Cruel. And the CVs? Are you reading them at home again?",
+      "cn": "好狠。那些履歷呢？你又要帶回家看嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Two more tonight. Then we are meeting the manager on Monday.",
+      "cn": "今晚還要看兩份，然後星期一我們要跟經理開會。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many engineers does the plant need?",
+      "qCn": "這間廠需要幾位工程師？",
+      "opts": [
+        "A. One",
+        "B. Two",
+        "C. Four",
+        "D. Nine"
+      ],
+      "optsCn": [
+        "A. 一位",
+        "B. 兩位",
+        "C. 四位",
+        "D. 九位"
+      ],
+      "ans": 1,
+      "expl": "Nine, and we only need two engineers.——Anita第一句就把兩個數字放在一起對比。"
+    },
+    {
+      "q": "Why did Anita start taking notes?",
+      "qCn": "Anita為什麼開始做筆記？",
+      "opts": [
+        "A. Because Mai asked her to",
+        "B. Because four candidates sounded exactly the same",
+        "C. Because the manager told her to",
+        "D. Because she wanted to practise writing"
+      ],
+      "optsCn": [
+        "A. 因為Mai要她這麼做",
+        "B. 因為有四個應徵者聽起來完全一樣",
+        "C. 因為經理要求她",
+        "D. 因為她想練習寫字"
+      ],
+      "ans": 1,
+      "expl": "After my first week here. Four candidates sounded exactly the same.——她自己說出了原因。"
+    },
+    {
+      "q": "What happened at Anita's interview eight years ago?",
+      "qCn": "八年前Anita面試時發生了什麼事？",
+      "opts": [
+        "A. She got the job",
+        "B. She forgot half of her answers",
+        "C. She asked about statistics",
+        "D. She took very good notes"
+      ],
+      "optsCn": [
+        "A. 她拿到了工作",
+        "B. 她忘了一半的答案",
+        "C. 她問了統計的問題",
+        "D. 她做了很好的筆記"
+      ],
+      "ans": 1,
+      "expl": "I forgot half of my answers, so they chose someone else.——注意這裡用過去簡單式，因為講的是那一次。"
+    },
+    {
+      "q": "Anita says, \"I ___ use to take notes either.\"",
+      "qCn": "Anita說：我以前也不做筆記。",
+      "opts": [
+        "A. didn't",
+        "B. wasn't",
+        "C. don't",
+        "D. haven't"
+      ],
+      "ans": 0,
+      "expl": "後面是 use to（沒有 d），代表過去的標記要由 didn't 來扛。wasn't used to 講的是「當時不習慣」，意思不一樣。"
+    }
+  ]
+},
+{
+  "id": "dl20261009b1p",
+  "date": "2026-10-09",
+  "level": "B1+",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Four Days, and Then a Deal",
+  "titleCn": "罷工四天，然後談成了",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "📰 午休時聊雲林玻璃廠的那場罷工",
+  "focus": "新聞話題裡的被動語態與現在完成式，再用現在進行式講已排定的後續會議",
+  "intro": "Tom和Lisa午休時聊雲林那場四天罷工的新聞。請注意兩人講新聞事實時大量用被動語態（was extended、was reached、will not be punished），因為重點是「事情被做了」而不是誰做的。最後Lisa提到二○二八年那場會議時用 are meeting，因為日期已經寫進協議了。",
+  "tip": "第一次聽抓四個數字（罷工幾天、多少人連署、月薪加多少、哪一年再談）；第二次聽專心數被動語態出現幾次，並聽出最後那句為什麼不用 will meet。",
+  "pre": [
+    {
+      "w": "union",
+      "ipa": "/ˈjuː.njən/",
+      "pos": "n.",
+      "cn": "工會",
+      "def": "An organization of workers that speaks for them about pay and conditions."
+    },
+    {
+      "w": "strike",
+      "ipa": "/straɪk/",
+      "pos": "n.",
+      "cn": "罷工",
+      "def": "A time when workers stop working to ask for something."
+    },
+    {
+      "w": "petition",
+      "ipa": "/pəˈtɪʃ.ən/",
+      "pos": "n.",
+      "cn": "連署書；請願書",
+      "def": "A paper that many people sign to ask for a change."
+    },
+    {
+      "w": "extend",
+      "ipa": "/ɪkˈstend/",
+      "pos": "v.",
+      "cn": "延長",
+      "def": "To make something last longer than planned."
+    },
+    {
+      "w": "settle",
+      "ipa": "/ˈset̬.əl/",
+      "pos": "v.",
+      "cn": "解決；達成和解",
+      "def": "To end an argument by agreeing."
+    },
+    {
+      "w": "punish",
+      "ipa": "/ˈpʌnɪʃ/",
+      "pos": "v.",
+      "cn": "處罰",
+      "def": "To make someone suffer because they did something wrong."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "Did you see the Yunlin story? The glass workers went back today.",
+      "cn": "你看到雲林那則新聞了嗎？玻璃廠的員工今天回去上班了。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I saw the photos. How long were they out?",
+      "cn": "我看到照片了。他們罷工多久？"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Four days. It was only planned for two and a half.",
+      "cn": "四天。原本只排兩天半。"
+    },
+    {
+      "sp": "Tom",
+      "en": "So why was it extended?",
+      "cn": "那為什麼延長了？"
+    },
+    {
+      "sp": "Lisa",
+      "en": "A petition was passed round on Wednesday. More than 350 people signed it.",
+      "cn": "星期三有人傳了一份連署書，三百五十多人簽了。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That is a lot for one plant.",
+      "cn": "對一間廠來說算很多了。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "About 950 of the workers there belong to the union.",
+      "cn": "那裡大約有九百五十名員工是工會會員。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And the pay? Did they get the six percent?",
+      "cn": "那薪水呢？他們拿到百分之六了嗎？"
+    },
+    {
+      "sp": "Lisa",
+      "en": "No. They asked for five or six, and the deal is NT$1,200 a month.",
+      "cn": "沒有。他們要求五到六趴，最後的協議是一個月一千兩百元。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Is that good or bad?",
+      "cn": "這樣算好還是不好？"
+    },
+    {
+      "sp": "Lisa",
+      "en": "For most workers it is about four percent, and the same rise comes again in 2028.",
+      "cn": "對大多數員工來說大約是百分之四，而且二○二八年會再加一次同樣的金額。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How was it settled in the end?",
+      "cn": "最後是怎麼談成的？"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Seven hours of talks on Wednesday night. The county labor office helped.",
+      "cn": "星期三晚上談了七個小時，縣政府勞工單位有協助。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I would be worried about going back. Were the strikers punished?",
+      "cn": "換我會擔心回去上班。罷工的人被處分了嗎？"
+    },
+    {
+      "sp": "Lisa",
+      "en": "No. The company has promised that nobody will be punished.",
+      "cn": "沒有。公司承諾不會有人被處分。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Good. And 2029?",
+      "cn": "那就好。二○二九年呢？"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Not agreed yet. Both sides are sitting down again at the end of 2028.",
+      "cn": "還沒談定。雙方約好二○二八年底再談一次。"
+    },
+    {
+      "sp": "Tom",
+      "en": "So the date is already fixed. That is the interesting part.",
+      "cn": "所以日期已經定了，這點最有意思。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why was the strike extended?",
+      "qCn": "罷工為什麼延長了？",
+      "opts": [
+        "A. The company closed the plant",
+        "B. More than 350 people signed a petition",
+        "C. The labor office asked for more time",
+        "D. The union wanted a photo in the news"
+      ],
+      "optsCn": [
+        "A. 公司把廠關了",
+        "B. 有三百五十多人連署",
+        "C. 勞工單位要求更多時間",
+        "D. 工會想上新聞"
+      ],
+      "ans": 1,
+      "expl": "A petition was passed round on Wednesday. More than 350 people signed it.——Lisa直接說出了原因。"
+    },
+    {
+      "q": "What did the workers finally get?",
+      "qCn": "員工最後拿到什麼？",
+      "opts": [
+        "A. Six percent every year",
+        "B. NT$1,200 more a month, and the same again in 2028",
+        "C. A one-off payment of NT$950",
+        "D. Nothing at all"
+      ],
+      "optsCn": [
+        "A. 每年百分之六",
+        "B. 月薪多一千兩百元，二○二八年再加一次",
+        "C. 一次性的九百五十元",
+        "D. 什麼都沒有"
+      ],
+      "ans": 1,
+      "expl": "the deal is NT$1,200 a month… the same rise comes again in 2028——注意 950 是會員人數，不是金額。"
+    },
+    {
+      "q": "How long did the final talks last?",
+      "qCn": "最後那場談判談了多久？",
+      "opts": [
+        "A. Two and a half hours",
+        "B. Four hours",
+        "C. Seven hours",
+        "D. All night"
+      ],
+      "optsCn": [
+        "A. 兩個半小時",
+        "B. 四小時",
+        "C. 七小時",
+        "D. 一整夜"
+      ],
+      "ans": 2,
+      "expl": "Seven hours of talks on Wednesday night.——Lisa在倒數第三次講話時說的。"
+    },
+    {
+      "q": "Why does Lisa say \"are sitting down\" about the 2028 talks?",
+      "qCn": "Lisa講二○二八年那場談判時為什麼用 are sitting down？",
+      "opts": [
+        "A. Because the talks are happening right now",
+        "B. Because the date is already agreed",
+        "C. Because she is guessing",
+        "D. Because the union has refused to meet"
+      ],
+      "optsCn": [
+        "A. 因為談判正在進行",
+        "B. 因為日期已經談定了",
+        "C. 因為她在猜",
+        "D. 因為工會拒絕見面"
+      ],
+      "ans": 1,
+      "expl": "Both sides are sitting down again at the end of 2028.——Tom下一句就點明 So the date is already fixed，現在進行式專門用在已排定的安排上。"
+    }
+  ]
+},
+{
+  "id": "dl20261009b2",
+  "date": "2026-10-09",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Three Dates and One Blank",
+  "titleCn": "三個日期，一個空白",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "🗳 下班後聊那場九成九通過的投票",
+  "focus": "用現在式講已排定的未來，並和 may、is expected to 這類未定說法對照",
+  "intro": "Anita和Mai下班後聊美光桃園廠的罷工投票。請注意兩人提到已經排定的事（董事會開會、集會、調解）時都用現在式，而提到罷工本身時改用 may 和 nobody knows。這正是今天文法頁講的那條分界線，聽的時候請把兩堆分開。",
+  "tip": "第一次聽抓四個數字（多少人有投票權、多少人投贊成、工會要求幾趴、集會在幾號）；第二次聽把句子分成「已排定」與「還沒定」兩堆，注意動詞形狀怎麼跟著換。",
+  "pre": [
+    {
+      "w": "ballot",
+      "ipa": "/ˈbæl.ət̬/",
+      "pos": "n.",
+      "cn": "選票；投票",
+      "def": "A secret vote, or the paper you vote on."
+    },
+    {
+      "w": "permanent",
+      "ipa": "/ˈpɝː.mə.nənt/",
+      "pos": "adj.",
+      "cn": "永久的；長期固定的",
+      "def": "Lasting for a long time, not just once."
+    },
+    {
+      "w": "opaque",
+      "ipa": "/oʊˈpeɪk/",
+      "pos": "adj.",
+      "cn": "不透明的；難以看清的",
+      "def": "Hard to see through or hard to understand."
+    },
+    {
+      "w": "executive",
+      "ipa": "/ɪɡˈzek.jə.t̬ɪv/",
+      "pos": "n.",
+      "cn": "主管；高階經理人",
+      "def": "A senior manager who makes decisions in a company."
+    },
+    {
+      "w": "revenue",
+      "ipa": "/ˈrev.ə.nuː/",
+      "pos": "n.",
+      "cn": "營收",
+      "def": "The total money a business takes in."
+    },
+    {
+      "w": "mediation",
+      "ipa": "/ˌmiːdiˈeɪʃn/",
+      "pos": "n.",
+      "cn": "調解",
+      "def": "A meeting where a third person helps two sides agree."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "Did you read the Micron result? Almost nobody voted no.",
+      "cn": "你看了美光的投票結果嗎？幾乎沒人投反對。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Fourteen, out of more than two thousand ballots. That is remarkable.",
+      "cn": "兩千多張票裡只有十四張反對，這很驚人。"
+    },
+    {
+      "sp": "Mai",
+      "en": "How many members could vote?",
+      "cn": "有投票權的會員有多少？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Two thousand two hundred and fifty-eight at the Taoyuan plant.",
+      "cn": "桃園廠有兩千兩百五十八人。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And they still have not named a day.",
+      "cn": "而他們還是沒有公布日期。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is deliberate. Members hear by text message, so the plant cannot prepare.",
+      "cn": "那是故意的。會員用簡訊收到通知，這樣廠方就沒辦法準備。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Clever, but hard on the people who have to plan shifts.",
+      "cn": "很聰明，但對要排班的人很折磨。"
+    },
+    {
+      "sp": "Anita",
+      "en": "What strikes me is the demand. They are not asking for a bonus.",
+      "cn": "我覺得最值得注意的是訴求。他們要的不是獎金。"
+    },
+    {
+      "sp": "Mai",
+      "en": "No? The company offered a very large figure in September.",
+      "cn": "不是嗎？公司九月給的數字很大。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It did, and the union turned it down. They want a permanent rule instead.",
+      "cn": "是啊，可是工會拒絕了。他們要的是一套長期制度。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Fifteen percent of operating profit, I read.",
+      "cn": "我看到的是營業利益的百分之十五。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Exactly. Their argument is that the current plan is opaque.",
+      "cn": "沒錯。他們的論點是現行方案不透明。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Opaque in what way?",
+      "cn": "哪裡不透明？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Nobody outside the executive floor can explain how the numbers are set.",
+      "cn": "高層以外的人沒辦法解釋那些數字是怎麼算出來的。"
+    },
+    {
+      "sp": "Mai",
+      "en": "With that revenue, the company can hardly say it is unaffordable.",
+      "cn": "以那樣的營收，公司很難說負擔不起。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is the union's favorite line. So, three dates matter now.",
+      "cn": "那正是工會最愛講的一句。所以現在有三個日期很關鍵。"
+    },
+    {
+      "sp": "Mai",
+      "en": "The board, the rally, and the mediation?",
+      "cn": "董事會、集會，還有調解？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Yes. The board meets this week, the rally is on the nineteenth, and mediation resumes on the twenty-second.",
+      "cn": "對。董事會本週開會，集會在十九號，調解二十二號重啟。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And the strike?",
+      "cn": "那罷工呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Nobody knows. It may be called at any time, and that is the whole point.",
+      "cn": "沒人知道。它可能隨時被宣布，而這就是重點。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many members voted against the strike?",
+      "qCn": "有多少會員投票反對罷工？",
+      "opts": [
+        "A. Fourteen",
+        "B. Two hundred",
+        "C. Two thousand and twelve",
+        "D. Two thousand two hundred and fifty-eight"
+      ],
+      "optsCn": [
+        "A. 十四人",
+        "B. 兩百人",
+        "C. 兩千零十二人",
+        "D. 兩千兩百五十八人"
+      ],
+      "ans": 0,
+      "expl": "Fourteen, out of more than two thousand ballots.——Anita第一次回答就給了這個數字；D 是有投票權的人數。"
+    },
+    {
+      "q": "Why will members be told about the strike by text message?",
+      "qCn": "為什麼要用簡訊通知會員罷工？",
+      "opts": [
+        "A. Because the union has no office",
+        "B. So that the plant cannot prepare",
+        "C. Because the company asked for it",
+        "D. So that the Ministry of Labor can join"
+      ],
+      "optsCn": [
+        "A. 因為工會沒有辦公室",
+        "B. 這樣廠方就沒辦法準備",
+        "C. 因為公司要求這麼做",
+        "D. 這樣勞動部才能參加"
+      ],
+      "ans": 1,
+      "expl": "Members hear by text message, so the plant cannot prepare.——Anita說這是刻意的安排。"
+    },
+    {
+      "q": "What does the union want instead of the September offer?",
+      "qCn": "工會想要的不是九月的提案，而是什麼？",
+      "opts": [
+        "A. A larger one-off bonus",
+        "B. A permanent rule giving fifteen percent of operating profit",
+        "C. A seat on the board",
+        "D. An earlier mediation date"
+      ],
+      "optsCn": [
+        "A. 更大筆的一次性獎金",
+        "B. 一套分配營業利益百分之十五的長期制度",
+        "C. 一個董事席位",
+        "D. 更早的調解日期"
+      ],
+      "ans": 1,
+      "expl": "They want a permanent rule instead… Fifteen percent of operating profit——兩人一來一往把訴求講完整了。"
+    },
+    {
+      "q": "Which event does Anita NOT put a date on?",
+      "qCn": "哪一件事Anita沒有給出日期？",
+      "opts": [
+        "A. The board meeting",
+        "B. The rally",
+        "C. The mediation",
+        "D. The strike"
+      ],
+      "optsCn": [
+        "A. 董事會",
+        "B. 集會",
+        "C. 調解",
+        "D. 罷工"
+      ],
+      "ans": 3,
+      "expl": "前三件她分別用 meets、is on the nineteenth、resumes on the twenty-second 講，都是現在式講已排定的未來；講罷工時卻換成 It may be called at any time。"
+    }
+  ]
+},
 /* ---------- 2026-10-06 旅遊與交通主題（四個程度） ---------- */
 {
   "id": "dl20261006a2",

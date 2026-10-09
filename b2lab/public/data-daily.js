@@ -7,6 +7,805 @@
 window.DAILY = {
 
 articles:[
+/* ---------- 2026-10-09 每日文章（職場與面試） ---------- */
+{
+  "id": "d20261009a2",
+  "date": "2026-10-09",
+  "level": "A2",
+  "topic": "職場",
+  "words": 102,
+  "kind": "orig",
+  "title": "Tom Used to Work at a Counter",
+  "titleCn": "Tom以前在櫃台工作",
+  "focus": "用 used to + 原形動詞講「以前常這樣，現在不是了」，再搭配現在簡單式、過去簡單式、現在進行式、there are 和 will／can",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom換工作了，這一篇把今天的文法點放在最生活的情境裡。請特別注意 used to 出現的兩次：它後面一定接原形動詞（work、carry），而且自己就說完了「現在已經不是這樣」，所以句子裡不必再補 but now。另外分辨三組動詞：works、misses 講現在的常態；stood、was 講以前那一段；is learning 講此刻正在發生的事；will finish、can meet 講還沒發生的事。",
+  "spoken": [
+    {
+      "en": "Six in the morning. Every day. Don't ask.",
+      "cn": "早上六點，每天都這樣，別問了。"
+    },
+    {
+      "en": "Eight people, one coffee machine. That's the whole team.",
+      "cn": "八個人，一台咖啡機，整個團隊就這樣。"
+    },
+    {
+      "en": "New system today. Click here, wait, click again.",
+      "cn": "今天學新系統，按這裡、等一下、再按一次。"
+    },
+    {
+      "en": "Six o'clock, out the door. Dinner with Lisa.",
+      "cn": "六點一到就走人，跟Lisa吃晚餐。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom used to work in a convenience store near his apartment. He stood at the counter from six in the morning. The shop was always busy and noisy.",
+      "cn": "Tom以前在他公寓附近的便利商店工作。他從早上六點就站在櫃台。那家店總是很忙、很吵。"
+    },
+    {
+      "en": "Now Tom works in a small office next to the train station. There are only eight people on his team. He has a desk by the window.",
+      "cn": "現在Tom在火車站旁邊的一間小辦公室工作。他的團隊只有八個人。他有一張靠窗的桌子。"
+    },
+    {
+      "en": "He used to carry heavy boxes every night. Now he answers emails and he is learning a new computer system.",
+      "cn": "他以前每天晚上都要搬很重的箱子。現在他回電子郵件，而且正在學一套新的電腦系統。"
+    },
+    {
+      "en": "Tom misses the free rice balls, but he does not miss the early starts. He will finish at six tonight, so he can meet Lisa for dinner.",
+      "cn": "Tom想念那些免費的飯糰，但他不想念那麼早上班。他今晚六點就會下班，所以可以跟Lisa吃晚餐。"
+    }
+  ],
+  "target": [
+    {
+      "w": "office",
+      "ipa": "/ˈɑː.fɪs/",
+      "pos": "n.",
+      "cn": "辦公室",
+      "def": "A room or building where people work at desks.",
+      "ex": "The dentist has a small office above the bakery.",
+      "exCn": "那位牙醫的診間在麵包店樓上。"
+    },
+    {
+      "w": "team",
+      "ipa": "/tiːm/",
+      "pos": "n.",
+      "cn": "團隊；隊",
+      "def": "A group of people who work or play together.",
+      "ex": "Our basketball team practices on Saturday afternoons.",
+      "exCn": "我們的籃球隊週六下午練球。"
+    },
+    {
+      "w": "desk",
+      "ipa": "/desk/",
+      "pos": "n.",
+      "cn": "書桌；辦公桌",
+      "def": "A table that you sit at to write or use a computer.",
+      "ex": "My little brother does his homework on a blue desk.",
+      "exCn": "我弟弟在一張藍色的書桌上寫功課。"
+    },
+    {
+      "w": "noisy",
+      "ipa": "/ˈnɔɪ.zi/",
+      "pos": "adj.",
+      "cn": "吵的",
+      "def": "Making a lot of loud sound.",
+      "ex": "The night market gets very noisy after eight.",
+      "exCn": "夜市八點以後會變得很吵。"
+    },
+    {
+      "w": "finish",
+      "ipa": "/ˈfɪn.ɪʃ/",
+      "pos": "v.",
+      "cn": "結束；完成",
+      "def": "To come to the end of something.",
+      "ex": "Please finish your soup before it gets cold.",
+      "exCn": "請趁湯還熱的時候喝完。"
+    },
+    {
+      "w": "miss",
+      "ipa": "/mɪs/",
+      "pos": "v.",
+      "cn": "想念；錯過",
+      "def": "To feel sad because someone or something is not with you.",
+      "ex": "Grandma misses her old cat very much.",
+      "exCn": "奶奶非常想念她那隻老貓。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Where did Tom work before?",
+      "qCn": "Tom以前在哪裡工作？",
+      "opts": [
+        "A. In a convenience store",
+        "B. In a train station",
+        "C. In a computer shop",
+        "D. In a restaurant"
+      ],
+      "optsCn": [
+        "A. 在便利商店",
+        "B. 在火車站",
+        "C. 在電腦店",
+        "D. 在餐廳"
+      ],
+      "ans": 0,
+      "expl": "Tom used to work in a convenience store near his apartment.——第一段第一句就說了。"
+    },
+    {
+      "q": "What is Tom doing in his new job?",
+      "qCn": "Tom在新工作裡正在做什麼？",
+      "opts": [
+        "A. He is carrying boxes",
+        "B. He is learning a new computer system",
+        "C. He is selling rice balls",
+        "D. He is driving a train"
+      ],
+      "optsCn": [
+        "A. 他在搬箱子",
+        "B. 他在學一套新的電腦系統",
+        "C. 他在賣飯糰",
+        "D. 他在開火車"
+      ],
+      "ans": 1,
+      "expl": "Now he answers emails and he is learning a new computer system.——第三段用現在進行式講此刻的事。"
+    },
+    {
+      "q": "Tom ___ to carry heavy boxes every night.",
+      "qCn": "Tom以前每天晚上都要搬很重的箱子。",
+      "opts": [
+        "A. use",
+        "B. uses",
+        "C. used",
+        "D. using"
+      ],
+      "ans": 2,
+      "expl": "講「以前的常態，現在不做了」要用 used to + 原形動詞。這句沒有 did／didn't 幫忙，所以 use 要帶 -d。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Before, he worked in a shop. Now he works in an office.",
+      "b2": "He used to work in a shop.",
+      "note": "第一種說法要寫兩句，而且得自己加 Before 和 Now 讀者才看得懂對比。used to 一個片語就把「以前這樣、現在不是」兩層意思都裝進去了，所以後面那句可以不用寫。",
+      "sp": "Shop before. Office now.",
+      "spNote": "講話時常常把動詞整個省掉，只留時間詞和地點，聽起來像在隨口比較。",
+      "b1Cn": "他以前在店裡工作，現在在辦公室工作。",
+      "b2Cn": "他以前在店裡工作。",
+      "spCn": "以前在店裡，現在在辦公室。"
+    },
+    {
+      "b1": "His team is small. It has eight people.",
+      "b2": "There are only eight people on his team.",
+      "note": "兩句話分開講會讓讀者先記一個形容詞再記一個數字。用 there are 把人數一次報出來，再加上 only，小的感覺就自己跑出來了，不必再說 small。",
+      "sp": "Eight of us. That's it.",
+      "spNote": "That's it 是口語裡報完數字後常接的一句，意思是「就這樣，沒有更多了」。",
+      "b1Cn": "他的團隊很小，有八個人。",
+      "b2Cn": "他的團隊只有八個人。",
+      "spCn": "我們八個人，就這樣。"
+    }
+  ]
+},
+{
+  "id": "d20261009b1",
+  "date": "2026-10-09",
+  "level": "B1",
+  "topic": "職場與面試",
+  "words": 122,
+  "kind": "orig",
+  "title": "Anita Used to Be the One Answering",
+  "titleCn": "以前是Anita在回答問題",
+  "focus": "used to 和過去簡單式的分工：一段反覆的舊常態用 used to，單一次的事件用過去簡單式；否定要退回 didn't use to",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "同樣是面試，這一篇換成Anita，也換到桌子的另一邊。請注意兩種過去的寫法怎麼分工：used to be terrified 講的是一整段時間的狀態，waited、forgot 講的是八年前那一次。另外看一下 didn't use to understand 的形狀——有了 didn't，後面的 used 就要退回原形 use。",
+  "spoken": [
+    {
+      "en": "Cold hands, blank page. I remember that feeling.",
+      "cn": "手冰冰的、腦袋一片空白，那種感覺我記得。"
+    },
+    {
+      "en": "Nine people since Monday. My ears are tired.",
+      "cn": "從星期一到現在九個人，耳朵都累了。"
+    },
+    {
+      "en": "Who said what? That's what the notes are for.",
+      "cn": "誰說了什麼？筆記就是為了這個。"
+    },
+    {
+      "en": "One easy question first. Always.",
+      "cn": "第一題一定先問簡單的，每次都這樣。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita used to be terrified of interviews. Eight years ago she waited outside a meeting room in Hanoi with cold hands. She forgot half of her answers and she did not get the job.",
+      "cn": "Anita以前很怕面試。八年前她手冰冰地坐在河內一間會議室外面等。她忘了一半的答案，也沒拿到那份工作。"
+    },
+    {
+      "en": "This month she is on the other side of the table. Her plant needs two new quality engineers, so she reads CVs every evening. She has interviewed nine people since Monday.",
+      "cn": "這個月她坐到桌子的另一邊了。她的廠要招兩位新的品保工程師，所以她每天晚上都在看履歷。從星期一到現在她已經面試了九個人。"
+    },
+    {
+      "en": "Anita didn't use to understand why interviewers wrote so much during an interview. Now she knows, because her own notes tell her who said what. Without them, every candidate starts to sound the same.",
+      "cn": "Anita以前不懂為什麼面試官在面試時要寫那麼多東西。現在她懂了，因為她自己的筆記會告訴她誰說了什麼。沒有筆記的話，每個應徵者聽起來都會變得一樣。"
+    },
+    {
+      "en": "She is also kinder than her old interviewers were. She always begins with one easy question, because she still remembers those cold hands.",
+      "cn": "她也比以前面試她的那些人更友善。她總是從一個簡單的問題開始，因為她還記得當年那雙冰冷的手。"
+    }
+  ],
+  "target": [
+    {
+      "w": "terrified",
+      "ipa": "/ˈterəˌfaɪd/",
+      "pos": "adj.",
+      "cn": "非常害怕的",
+      "def": "Feeling very, very afraid.",
+      "ex": "My cousin is terrified of elevators and always takes the stairs.",
+      "exCn": "我表弟很怕電梯，一向都走樓梯。"
+    },
+    {
+      "w": "interviewer",
+      "ipa": "/ˈɪn.t̬ɚ.vjuː.ɚ/",
+      "pos": "n.",
+      "cn": "面試官；採訪者",
+      "def": "The person who asks the questions in an interview.",
+      "ex": "A radio interviewer called my uncle about his orchid farm.",
+      "exCn": "一位電台採訪者為了我叔叔的蘭花園打電話給他。"
+    },
+    {
+      "w": "engineer",
+      "ipa": "/ˌen.dʒɪˈnɪr/",
+      "pos": "n.",
+      "cn": "工程師",
+      "def": "A person trained to design, build or check machines and systems.",
+      "ex": "An engineer came to look at the elevator in our building.",
+      "exCn": "有位工程師來看我們大樓的電梯。"
+    },
+    {
+      "w": "plant",
+      "ipa": "/plænt/",
+      "pos": "n.",
+      "cn": "工廠；廠區",
+      "def": "A factory where something is made in large amounts.",
+      "ex": "The milk from our town goes to a plant in the next county.",
+      "exCn": "我們鎮上的牛奶會送到隔縣的一座工廠。"
+    },
+    {
+      "w": "CV",
+      "ipa": "/ˌsiːˈviː/",
+      "pos": "n.",
+      "cn": "履歷",
+      "def": "A short written record of your studies and jobs.",
+      "ex": "He put his part-time café work at the top of his CV.",
+      "exCn": "他把咖啡店的打工經驗寫在履歷最上面。"
+    },
+    {
+      "w": "forget",
+      "ipa": "/fɚˈɡet/",
+      "pos": "v.",
+      "cn": "忘記",
+      "def": "To be unable to remember something.",
+      "ex": "I always forget my umbrella on the bus.",
+      "exCn": "我老是把雨傘忘在公車上。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What happened to Anita eight years ago?",
+      "qCn": "八年前Anita發生了什麼事？",
+      "opts": [
+        "A. She became a quality engineer in Hanoi",
+        "B. She forgot half of her answers and did not get the job",
+        "C. She interviewed nine people in one week",
+        "D. She started reading CVs every evening"
+      ],
+      "optsCn": [
+        "A. 她在河內成為品保工程師",
+        "B. 她忘了一半的答案，也沒拿到那份工作",
+        "C. 她一週面試了九個人",
+        "D. 她開始每天晚上看履歷"
+      ],
+      "ans": 1,
+      "expl": "She forgot half of her answers and she did not get the job.——第一段最後一句。"
+    },
+    {
+      "q": "Why does Anita take notes during interviews now?",
+      "qCn": "Anita現在為什麼在面試時做筆記？",
+      "opts": [
+        "A. Because her plant asks her to",
+        "B. Because she wants to remember who said what",
+        "C. Because she is still terrified of interviews",
+        "D. Because she has to send them to Hanoi"
+      ],
+      "optsCn": [
+        "A. 因為她的廠要求她這麼做",
+        "B. 因為她想記住誰說了什麼",
+        "C. 因為她還是很怕面試",
+        "D. 因為她必須把筆記寄到河內"
+      ],
+      "ans": 1,
+      "expl": "because her own notes tell her who said what——第三段說出了原因，而且下一句補了「沒有筆記每個人聽起來都一樣」。"
+    },
+    {
+      "q": "Anita ___ use to understand why interviewers wrote so much.",
+      "qCn": "Anita以前不懂為什麼面試官要寫那麼多東西。",
+      "opts": [
+        "A. didn't",
+        "B. wasn't",
+        "C. doesn't",
+        "D. hasn't"
+      ],
+      "ans": 0,
+      "expl": "後面是 use to（沒有 d），代表前面要用 didn't 來幫忙。was／is 配的是 be used to 那個完全不同的句型。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "She was afraid of interviews for many years. Now she is not afraid.",
+      "b2": "She used to be terrified of interviews.",
+      "note": "過去簡單式加上 for many years 只是報告一段時間，讀者還得等下一句才知道現在變了。used to 把「那是舊的常態」直接寫進動詞，一句就夠，而且 terrified 比 very afraid 更精準。",
+      "sp": "Interviews? I was a wreck.",
+      "spNote": "a wreck 是口語裡形容「整個人緊張到不行」的說法，比 afraid 生動，但只適合說話，不適合寫正式文件。",
+      "b1Cn": "她很多年都怕面試，現在不怕了。",
+      "b2Cn": "她以前很怕面試。",
+      "spCn": "面試喔？我以前整個人都垮掉。"
+    },
+    {
+      "b1": "She has interviewed nine people. She started on Monday.",
+      "b2": "She has interviewed nine people since Monday.",
+      "note": "兩句分開寫，讀者得自己把「九個人」和「星期一」接起來。since Monday 直接掛在現在完成式後面，一句話就同時給了數量和起點，也說明這件事還沒結束。",
+      "sp": "Nine, and it's only Thursday.",
+      "spNote": "口語常把數字丟在前面，再用 and it's only… 表達「才幾天就這麼多」的驚訝。",
+      "b1Cn": "她已經面試了九個人，她是星期一開始的。",
+      "b2Cn": "她從星期一到現在已經面試了九個人。",
+      "spCn": "九個了，而且今天才星期四。"
+    }
+  ]
+},
+{
+  "id": "d20261009b1p",
+  "date": "2026-10-09",
+  "level": "B1+",
+  "topic": "新聞·職場",
+  "words": 203,
+  "kind": "news",
+  "title": "Four Days at the Glass Plant",
+  "titleCn": "玻璃廠停下來的四天",
+  "focus": "被動語態（was reached、was extended、will be punished）加上現在完成式的否定（has not been agreed），最後用現在進行式講已排定的未來（are meeting again）",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "這是雲林一家玻璃廠四天罷工落幕的新聞改寫。請數一下被動語態出現幾次：新聞英文很喜歡用它，因為重點是「事情被做了」而不是「誰做的」。另外注意最後一句的 are meeting again——會議日期已經談定，所以用現在進行式講未來，而不是 will meet。",
+  "source": "改寫自 Focus Taiwan 報導（2026/10/08）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202610080011",
+  "spoken": [
+    {
+      "en": "Four days. The furnaces don't like that.",
+      "cn": "四天，熔爐可受不了。"
+    },
+    {
+      "en": "Two and a half days, they said. Then the petition went round.",
+      "cn": "他們本來說兩天半，然後連署就傳開了。"
+    },
+    {
+      "en": "Seven hours in that room. Nobody ate.",
+      "cn": "在那個房間裡談了七個小時，沒人吃東西。"
+    },
+    {
+      "en": "Twelve hundred a month. It's not six percent, but it's a rule now.",
+      "cn": "一個月一千兩百塊，不到六趴，但從現在起是制度了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "For four days this week, the lines at a glass factory in Yunlin County stayed quiet. More than 500 union members at AGC Display Glass Taiwan walked out at eight on Monday morning. It was the first strike the county had ever seen.",
+      "cn": "這星期有四天，雲林一家玻璃廠的生產線安靜了下來。AGC台灣顯示玻璃有五百多名工會會員在星期一早上八點走出廠區。這是雲林縣史上第一次罷工。"
+    },
+    {
+      "en": "The union had asked for yearly rises of five to six percent, which is what staff at the Japanese parent company receive. The walkout was planned to last two and a half days, but it was extended on Wednesday after more than 350 members signed a petition.",
+      "cn": "工會原本要求每年全面加薪百分之五到六，也就是日本母公司員工拿到的幅度。這場罷工原定只進行兩天半，但星期三有三百五十多名會員連署之後就延長了。"
+    },
+    {
+      "en": "An agreement was reached late on Wednesday after seven hours of talks, and union representatives approved it the next morning. Every employee at the Douliu plant will get NT$1,200 more in monthly base pay in 2027, and the same again in 2028. For most workers, whose base pay is around NT$30,000, that first rise is worth about four percent.",
+      "cn": "星期三深夜在談了七個小時之後達成協議，工會代表隔天早上通過了它。斗六廠每一位員工在二○二七年的月基本薪資都會增加一千兩百元，二○二八年再加一次同樣的金額。對大多數基本薪資約三萬元的員工來說，第一次調薪大約是百分之四。"
+    },
+    {
+      "en": "The county labor office helped both sides settle, and the company has promised that nobody will be punished for striking. Pay for 2029 and 2030 has not been agreed yet. The two sides are meeting again at the end of 2028, because inflation and the minimum wage are hard to predict that far ahead.",
+      "cn": "縣政府勞工單位協助雙方達成和解，公司也承諾不會對參與罷工的人做出處分。二○二九與二○三○年的薪資還沒談定。雙方約好在二○二八年底再坐下來談一次，因為通膨和最低工資那麼久以後很難預測。"
+    }
+  ],
+  "target": [
+    {
+      "w": "union",
+      "ipa": "/ˈjuː.njən/",
+      "pos": "n.",
+      "cn": "工會",
+      "def": "An organization of workers that speaks for them about pay and conditions.",
+      "ex": "The bus drivers' union printed a leaflet about weekend shifts.",
+      "exCn": "公車司機工會印了一張關於週末班次的傳單。"
+    },
+    {
+      "w": "strike",
+      "ipa": "/straɪk/",
+      "pos": "n.",
+      "cn": "罷工",
+      "def": "A time when workers stop working to ask for something.",
+      "ex": "A one-day strike closed the ferry to the island.",
+      "exCn": "一天的罷工讓往那座島的渡輪停駛。"
+    },
+    {
+      "w": "petition",
+      "ipa": "/pəˈtɪʃ.ən/",
+      "pos": "n.",
+      "cn": "連署書；請願書",
+      "def": "A paper that many people sign to ask for a change.",
+      "ex": "Parents handed a petition about the school gate to the mayor.",
+      "exCn": "家長把一份關於校門的連署書交給市長。"
+    },
+    {
+      "w": "extend",
+      "ipa": "/ɪkˈstend/",
+      "pos": "v.",
+      "cn": "延長",
+      "def": "To make something last longer than planned.",
+      "ex": "The library extended its opening hours during the exam season.",
+      "exCn": "圖書館在考試期間延長了開館時間。"
+    },
+    {
+      "w": "representative",
+      "ipa": "/ˌreprɪˈzentətɪv/",
+      "pos": "n.",
+      "cn": "代表",
+      "def": "A person chosen to speak or decide for a group.",
+      "ex": "Each class sends one representative to the student meeting.",
+      "exCn": "每個班級派一位代表參加學生會議。"
+    },
+    {
+      "w": "settle",
+      "ipa": "/ˈset̬.əl/",
+      "pos": "v.",
+      "cn": "解決；達成和解",
+      "def": "To end an argument by agreeing.",
+      "ex": "The neighbors settled the parking argument over tea.",
+      "exCn": "鄰居們喝茶時把停車的爭執解決了。"
+    },
+    {
+      "w": "punish",
+      "ipa": "/ˈpʌnɪʃ/",
+      "pos": "v.",
+      "cn": "處罰",
+      "def": "To make someone suffer because they did something wrong.",
+      "ex": "The coach never punishes a player for asking questions.",
+      "exCn": "那位教練從不因為球員提問而處罰他。"
+    },
+    {
+      "w": "inflation",
+      "ipa": "/ɪnˈfleɪʃn/",
+      "pos": "n.",
+      "cn": "通膨；物價上漲",
+      "def": "A general rise in prices over time.",
+      "ex": "My grandmother talks about inflation every time she buys rice.",
+      "exCn": "我奶奶每次買米都會談到物價上漲。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did the strike last longer than planned?",
+      "qCn": "罷工為什麼比原定的時間更久？",
+      "opts": [
+        "A. Because the company closed the factory",
+        "B. Because more than 350 members signed a petition",
+        "C. Because the labor office asked for more time",
+        "D. Because the Japanese parent company refused to talk"
+      ],
+      "optsCn": [
+        "A. 因為公司把工廠關了",
+        "B. 因為有三百五十多名會員連署",
+        "C. 因為勞工單位要求更多時間",
+        "D. 因為日本母公司拒絕談判"
+      ],
+      "ans": 1,
+      "expl": "it was extended on Wednesday after more than 350 members signed a petition——第二段最後一句直接給了原因。"
+    },
+    {
+      "q": "What exactly did the workers win?",
+      "qCn": "員工最後拿到了什麼？",
+      "opts": [
+        "A. Yearly rises of five to six percent",
+        "B. NT$1,200 more in monthly base pay in 2027 and again in 2028",
+        "C. A single bonus of NT$30,000",
+        "D. Pay agreements for 2029 and 2030"
+      ],
+      "optsCn": [
+        "A. 每年加薪百分之五到六",
+        "B. 二○二七與二○二八各增加月基本薪資一千兩百元",
+        "C. 一次三萬元的獎金",
+        "D. 二○二九與二○三○年的薪資協議"
+      ],
+      "ans": 1,
+      "expl": "will get NT$1,200 more in monthly base pay in 2027, and the same again in 2028——第三段寫得很清楚；A 是工會原本的要求，D 則是「還沒談定」。"
+    },
+    {
+      "q": "What has the company promised about the strikers?",
+      "qCn": "公司對參與罷工的人做了什麼承諾？",
+      "opts": [
+        "A. They will all be moved to another plant",
+        "B. They will not be punished",
+        "C. They will lose four days of pay",
+        "D. They will join the 2028 talks"
+      ],
+      "optsCn": [
+        "A. 他們全部會被調到別的廠",
+        "B. 他們不會被處分",
+        "C. 他們會損失四天的薪水",
+        "D. 他們會參加二○二八年的談判"
+      ],
+      "ans": 1,
+      "expl": "the company has promised that nobody will be punished for striking——第四段用了現在完成式講這個到現在仍然有效的承諾。"
+    },
+    {
+      "q": "Which sentence shows that the 2028 meeting is already arranged?",
+      "qCn": "哪一句顯示二○二八年那場會議已經約定好了？",
+      "opts": [
+        "A. Pay for 2029 and 2030 has not been agreed yet.",
+        "B. The two sides are meeting again at the end of 2028.",
+        "C. An agreement was reached late on Wednesday.",
+        "D. The union had asked for yearly rises of five to six percent."
+      ],
+      "optsCn": [
+        "A. 二○二九與二○三○年的薪資還沒談定。",
+        "B. 雙方約好在二○二八年底再談一次。",
+        "C. 星期三深夜達成了協議。",
+        "D. 工會原本要求每年加薪百分之五到六。"
+      ],
+      "ans": 1,
+      "expl": "are meeting 是現在進行式講未來，專門用在「已經約好、雙方都知道」的安排上。如果寫 will meet，聽起來只是打算，還沒定案。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "They talked for seven hours and then they agreed.",
+      "b2": "An agreement was reached late on Wednesday after seven hours of talks.",
+      "note": "主動句得先交代「他們」是誰，新聞常常不想把焦點放在人身上。改成被動之後，agreement 站上主詞位置，時間與條件都掛得進同一句，這就是新聞英文的標準寫法。",
+      "sp": "Seven hours, and it was done.",
+      "spNote": "it was done 口語裡用來宣布「搞定了」，不交代細節，語氣比完整被動句輕鬆得多。",
+      "b1Cn": "他們談了七個小時，然後就同意了。",
+      "b2Cn": "星期三深夜在談了七個小時之後達成協議。",
+      "spCn": "七個小時，然後就搞定了。"
+    },
+    {
+      "b1": "They will meet again at the end of 2028.",
+      "b2": "The two sides are meeting again at the end of 2028.",
+      "note": "will meet 聽起來像現在才決定或只是打算；are meeting 表示日期已經談定、雙方都寫進行程了。差別不在時間遠近，而在「這件事定了沒有」。",
+      "sp": "End of 2028. It's in the deal.",
+      "spNote": "It's in the deal 把「已經寫進協議」講得很直接，比任何時態都更能說明這是定案。",
+      "b1Cn": "他們會在二○二八年底再談一次。",
+      "b2Cn": "雙方約好在二○二八年底再談一次。",
+      "spCn": "二○二八年底，協議裡寫了。"
+    }
+  ]
+},
+{
+  "id": "d20261009b2",
+  "date": "2026-10-09",
+  "level": "B2",
+  "topic": "新聞·職場",
+  "words": 297,
+  "kind": "news",
+  "title": "A 99 Percent Yes, and No Date",
+  "titleCn": "九成九贊成，日期卻還沒定",
+  "focus": "用現在式講已排定的未來（the board meets、it is holding a rally、the two sides return to mediation），並對照 may be called 這種還沒定案的說法",
+  "intro": "這是一則還在進行中的勞資新聞改寫，重點在最後一段：三個日期已經排定，所以英文用現在簡單式與現在進行式去講未來，而不是 will。相對地，罷工本身沒有日期，所以只能用 may be called。讀的時候請把「已排定」和「還沒定」兩種寫法分開看。",
+  "source": "改寫自 Focus Taiwan 報導（2026/10/07）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/business/202610070021",
+  "spoken": [
+    {
+      "en": "Two thousand ballots, fourteen against. That's not a close call.",
+      "cn": "兩千張票，只有十四張反對，這根本不叫接近。"
+    },
+    {
+      "en": "They do not want a check. They want a rule.",
+      "cn": "他們要的不是一張支票，是一個制度。"
+    },
+    {
+      "en": "Nobody gets a date. That's the whole point.",
+      "cn": "沒人會拿到日期，這就是重點。"
+    },
+    {
+      "en": "The nineteenth, Ketagalan. Take the day off.",
+      "cn": "十九號，凱達格蘭大道，請一天假吧。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "The Taoyuan numbers were hard to misread. Of the 2,258 union members entitled to vote at Micron's plant there, 2,012 cast a ballot over six days, and 1,994 backed a strike. Only fourteen voted against. The union chairman announced the result in Taipei on Wednesday, and added the line that unsettles any employer: no strike date has been fixed, and members will hear by text message.",
+      "cn": "桃園的數字很難解讀錯。美光桃園廠有投票權的工會會員共兩千兩百五十八人，其中兩千零十二人在六天內投了票，有一千九百九十四人支持罷工。只有十四票反對。工會理事長星期三在台北的記者會上公布結果，接著補上一句任何雇主聽了都會不安的話：罷工日期還沒定，會員會用簡訊收到通知。"
+    },
+    {
+      "en": "The union is not asking for a bigger payment but for a different rule. It wants a permanent system that passes fifteen percent of Micron's operating profit to the people who make the chips. In September the company offered Taiwanese staff at least NT$1.7 million in cash for the 2026 financial year. The union turned that down, arguing that the current incentive plan is opaque, leans toward senior executives, and looks thin beside rivals' pay.",
+      "cn": "工會要的不是更大筆的錢，而是一套不一樣的規則。他們希望建立長期制度，把美光營業利益的百分之十五分給做晶片的人。公司九月時提出，二○二六會計年度給台灣員工至少一百七十萬元現金。工會拒絕了，理由是現行的獎酬方案不透明、偏向高階主管，而且跟同業比起來並不漂亮。"
+    },
+    {
+      "en": "Scale explains some of the heat. The Taoyuan site employs about 3,000 people, roughly 2,400 of them union members, while Taichung, in the Central Taiwan Science Park, is four times larger. Micron closed its 2026 financial year on 30 September with revenue of US$133.19 billion and operating income of US$99.34 billion — figures the union repeats whenever it is told its demand is unaffordable.",
+      "cn": "規模解釋了部分的火氣。桃園廠約有三千名員工，其中大約兩千四百人是工會會員，而中科的台中廠規模是桃園的四倍。美光在九月三十日結算二○二六會計年度，營收一千三百三十一億九千萬美元、營業利益九百九十三億四千萬美元——每次有人說工會的要求負擔不起，工會就會把這兩個數字再搬出來。"
+    },
+    {
+      "en": "Three dates now sit in everyone's calendar. The board meets in the United States this week, and the union hopes proposals follow. On 19 October it is holding a rally on Ketagalan Boulevard and is urging members to take leave for it. On 22 October the company and the Taichung union return to mediation. The Ministry of Labor respects the vote and has urged Micron to bring workable offers. The one event nobody can write down is the strike, which may be called at short notice so that the plant cannot prepare.",
+      "cn": "現在有三個日期進了所有人的行事曆。董事會本週在美國開會，工會希望之後能看到具體方案。十月十九日工會要在台北凱達格蘭大道舉行集會，並呼籲會員請假參加。十月二十二日公司與台中工會回到調解桌。勞動部表示尊重這次投票，並已要求美光提出可行的方案。唯一沒辦法寫進行事曆的，就是罷工本身——它可能在很短的時間內被宣布，而這正是為了讓廠方無法事先準備。"
+    }
+  ],
+  "target": [
+    {
+      "w": "ballot",
+      "ipa": "/ˈbæl.ət̬/",
+      "pos": "n.",
+      "cn": "選票；投票",
+      "def": "A secret vote, or the paper you vote on.",
+      "ex": "The tennis club decided its new colours by secret ballot.",
+      "exCn": "網球社用不記名投票決定了新的隊色。"
+    },
+    {
+      "w": "permanent",
+      "ipa": "/ˈpɝː.mə.nənt/",
+      "pos": "adj.",
+      "cn": "永久的；長期固定的",
+      "def": "Lasting for a long time, not just once.",
+      "ex": "After two years of contracts, she was offered a permanent post.",
+      "exCn": "簽了兩年的約之後，她被給了一個正職。"
+    },
+    {
+      "w": "opaque",
+      "ipa": "/oʊˈpeɪk/",
+      "pos": "adj.",
+      "cn": "不透明的；難以看清的",
+      "def": "Hard to see through or hard to understand.",
+      "ex": "The fee table on that website is completely opaque.",
+      "exCn": "那個網站的收費表完全看不懂。"
+    },
+    {
+      "w": "executive",
+      "ipa": "/ɪɡˈzek.jə.t̬ɪv/",
+      "pos": "n.",
+      "cn": "主管；高階經理人",
+      "def": "A senior manager who makes decisions in a company.",
+      "ex": "A retired executive now teaches at the night school near us.",
+      "exCn": "一位退休的高階經理人現在在我們附近的夜校教書。"
+    },
+    {
+      "w": "revenue",
+      "ipa": "/ˈrev.ə.nuː/",
+      "pos": "n.",
+      "cn": "營收",
+      "def": "The total money a business takes in.",
+      "ex": "Ticket revenue from the summer festival paid for the new roof.",
+      "exCn": "夏季音樂節的票房收入支付了新屋頂的費用。"
+    },
+    {
+      "w": "mediation",
+      "ipa": "/ˌmiːdiˈeɪʃn/",
+      "pos": "n.",
+      "cn": "調解",
+      "def": "A meeting where a third person helps two sides agree.",
+      "ex": "Their landlord dispute ended in mediation at the district office.",
+      "exCn": "他們跟房東的爭執最後在區公所調解收場。"
+    },
+    {
+      "w": "rally",
+      "ipa": "/ˈræl.i/",
+      "pos": "n.",
+      "cn": "集會；造勢活動",
+      "def": "A large public meeting to show support for something.",
+      "ex": "A rally for the old market filled the square on Sunday.",
+      "exCn": "星期天有場為舊市場請命的集會塞滿了廣場。"
+    },
+    {
+      "w": "urge",
+      "ipa": "/ɝːdʒ/",
+      "pos": "v.",
+      "cn": "強烈呼籲；力勸",
+      "def": "To strongly advise someone to do something.",
+      "ex": "Doctors urge drivers to rest every two hours on long trips.",
+      "exCn": "醫師力勸駕駛人長途開車時每兩小時休息一次。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did the union reject in September?",
+      "qCn": "工會在九月拒絕了什麼？",
+      "opts": [
+        "A. A permanent profit-sharing system",
+        "B. At least NT$1.7 million in cash for the 2026 financial year",
+        "C. A second round of mediation in Taichung",
+        "D. A rally on Ketagalan Boulevard"
+      ],
+      "optsCn": [
+        "A. 一套長期的分紅制度",
+        "B. 二○二六會計年度至少一百七十萬元現金",
+        "C. 台中第二輪調解",
+        "D. 凱達格蘭大道的集會"
+      ],
+      "ans": 1,
+      "expl": "the company offered its Taiwanese staff at least NT$1.7 million in cash… The union turned that down——第二段先給金額再說被拒絕；A 其實是工會自己想要的東西。"
+    },
+    {
+      "q": "Why does the union keep repeating the company's revenue and operating income?",
+      "qCn": "工會為什麼一再提起公司的營收與營業利益？",
+      "opts": [
+        "A. To show that the Taichung plant is larger",
+        "B. To answer the claim that its demand cannot be afforded",
+        "C. To explain why no strike date has been fixed",
+        "D. To ask the Ministry of Labor for mediation"
+      ],
+      "optsCn": [
+        "A. 為了證明台中廠比較大",
+        "B. 為了回應「這個要求負擔不起」的說法",
+        "C. 為了解釋為什麼罷工日期還沒定",
+        "D. 為了向勞動部要求調解"
+      ],
+      "ans": 1,
+      "expl": "figures the union repeats whenever it is told that its demand is unaffordable——第三段最後一句就是答案。"
+    },
+    {
+      "q": "Why might the strike be called at short notice?",
+      "qCn": "罷工為什麼可能在很短的時間內才宣布？",
+      "opts": [
+        "A. So that the Ministry of Labor can join the talks",
+        "B. So that the plant cannot prepare",
+        "C. Because the board meets in the United States this week",
+        "D. Because members can only be reached by text message"
+      ],
+      "optsCn": [
+        "A. 這樣勞動部才能加入談判",
+        "B. 這樣廠方就無法事先準備",
+        "C. 因為董事會本週在美國開會",
+        "D. 因為只能用簡訊聯絡會員"
+      ],
+      "ans": 1,
+      "expl": "which may be called at short notice precisely so that the plant cannot prepare——最後一句用 so that 說出了目的。"
+    },
+    {
+      "q": "Which event is NOT already fixed in the calendar?",
+      "qCn": "哪一件事還沒排進行事曆？",
+      "opts": [
+        "A. The rally on 19 October",
+        "B. The mediation on 22 October",
+        "C. The board meeting this week",
+        "D. The strike"
+      ],
+      "optsCn": [
+        "A. 十月十九日的集會",
+        "B. 十月二十二日的調解",
+        "C. 本週的董事會",
+        "D. 罷工"
+      ],
+      "ans": 3,
+      "expl": "前三件事都用現在式講未來（meets、is holding、return），代表已排定；罷工則寫成 may be called，而且文中說 no strike date has been fixed。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The union will have a rally on 19 October. They want members to go.",
+      "b2": "On 19 October it is holding a rally on Ketagalan Boulevard and is urging members to take leave for it.",
+      "note": "will have 把一個已經申請、已經公告的活動講得像還在考慮。改成 is holding 之後，讀者知道場地和日期都定了；再加上 is urging，兩個現在進行式把「已排定」和「正在進行的動作」排在同一條時間線上。",
+      "sp": "Nineteenth. Ketagalan. Bring everyone.",
+      "spNote": "口語報活動常常只留日期和地點，動詞整個省掉，聽起來像在發動員訊息。",
+      "b1Cn": "工會十月十九日會辦集會，他們希望會員去。",
+      "b2Cn": "十月十九日工會要在凱達格蘭大道舉行集會，並呼籲會員請假參加。",
+      "spCn": "十九號，凱達格蘭，大家都來。"
+    },
+    {
+      "b1": "Maybe they will strike suddenly, and then the factory cannot get ready.",
+      "b2": "The strike may be called at short notice precisely so that the plant cannot prepare.",
+      "note": "maybe + will 把可能性說了兩次，語氣反而鬆掉；may be called 一個助動詞就夠，而且被動讓焦點留在罷工本身。precisely so that 則把「這是故意的」講清楚，比 and then 精確得多。",
+      "sp": "No warning. That's the idea.",
+      "spNote": "That's the idea 是口語裡確認「對，就是故意這樣設計的」，一句話取代整個目的子句。",
+      "b1Cn": "他們可能會突然罷工，這樣工廠就沒辦法準備。",
+      "b2Cn": "罷工可能在很短的時間內被宣布，而這正是為了讓廠方無法事先準備。",
+      "spCn": "不給預警，就是這個用意。"
+    }
+  ]
+},
 /* ---------- 2026-10-06 每日文章（旅遊與交通） ---------- */
 {
   "id": "d20261006a2",
@@ -10763,6 +11562,959 @@ articles:[
 ],
 
 grammar:[
+/* ---------- 2026-10-09 每日文法（used to + 原形；用現在式講未來） ---------- */
+{
+  "id": "dg20261009a2",
+  "date": "2026-10-09",
+  "unitNo": 18,
+  "level": "A2",
+  "title": "used to (do): A Habit That Has Stopped",
+  "titleCn": "used to + 原形：以前這樣，現在不這樣了",
+  "srcDays": [],
+  "summary": "used to + 原形動詞講的是「以前反覆做、現在已經不做」的事；這個片語只有過去這一種形狀，沒有現在式，而且後面永遠接原形動詞。",
+  "sections": [
+    {
+      "h": "一個片語，兩層意思",
+      "body": "中文說「我以前在便利商店上班」，要靠「以前」這兩個字才聽得出現在已經不是了。英文把這層對比直接裝進動詞片語裡：只要寫 used to，讀者就自動知道「那是舊的，現在停了」，所以後面不必再補一句 but now I don't。這是 used to 最大的好處，也是它跟一般過去式最大的差別。",
+      "table": {
+        "head": [
+          "你想說的意思",
+          "英文怎麼寫",
+          "現在還做嗎"
+        ],
+        "rows": [
+          [
+            "以前每天搬箱子",
+            "I used to carry boxes.",
+            "不做了"
+          ],
+          [
+            "昨天搬了箱子",
+            "I carried boxes yesterday.",
+            "只講那一次"
+          ],
+          [
+            "現在每天回信",
+            "I answer emails.",
+            "現在的常態"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Lisa used to take the bus to work.",
+          "cn": "Lisa以前搭公車上班。",
+          "note": "一句話就說完「以前搭、現在不搭」"
+        },
+        {
+          "en": "My brother used to play the drums.",
+          "cn": "我弟弟以前打鼓。",
+          "note": "現在不打了，不用再寫 but now he doesn't"
+        },
+        {
+          "en": "We used to eat lunch at the same shop.",
+          "cn": "我們以前都在同一家店吃午餐。",
+          "note": "we 也一樣用 used to，主詞不影響形狀"
+        }
+      ]
+    },
+    {
+      "h": "後面一定接原形動詞",
+      "body": "used to 後面那個動詞永遠是最乾淨的原形：work、go、eat、live。不要加 -ing，也不要加 -ed。很多人會寫成 used to working，那是因為把它跟 be used to（已經習慣）搞混了，那是另一個句型，等到B1再處理。現在只要記住：used to 後面不加 be、不加 -ing。",
+      "bullets": [
+        "used to live（對）／used to living（錯）",
+        "used to walk（對）／used to walked（錯）",
+        "主詞是 he、she、it 的時候，used to 不用改，不會變成 uses to"
+      ],
+      "examples": [
+        {
+          "en": "She used to live near the market.",
+          "cn": "她以前住在市場附近。",
+          "note": "live 是原形，不是 lived"
+        },
+        {
+          "en": "They used to open at seven.",
+          "cn": "他們以前七點開門。",
+          "note": "主詞換成 they，used to 一樣不變"
+        },
+        {
+          "en": "Tom used to sleep on the bus.",
+          "cn": "Tom以前在公車上睡覺。",
+          "note": "sleep 保持原形，後面不加 -ing"
+        }
+      ]
+    },
+    {
+      "h": "沒有「現在式的 used to」",
+      "body": "這一點很多人會踩到：used to 只能講過去，所以英文裡沒有 uses to、也沒有 am using to。想講現在的習慣，就用最單純的現在簡單式；想講以前的習慣，才換成 used to。兩個時間用兩個不同的工具，不要把它們混成一個。",
+      "table": {
+        "head": [
+          "時間",
+          "要用的句型",
+          "例句"
+        ],
+        "rows": [
+          [
+            "以前的習慣",
+            "used to + 原形",
+            "I used to drink tea at night."
+          ],
+          [
+            "現在的習慣",
+            "現在簡單式",
+            "I drink coffee at night."
+          ],
+          [
+            "現在正在做",
+            "現在進行式",
+            "I am drinking water now."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "He used to walk to school.",
+          "cn": "他以前走路去學校。",
+          "note": "過去的習慣"
+        },
+        {
+          "en": "He rides a bike to school.",
+          "cn": "他騎腳踏車去學校。",
+          "note": "現在的習慣，不能寫 uses to ride"
+        },
+        {
+          "en": "He is waiting at the gate now.",
+          "cn": "他現在在校門口等。",
+          "note": "此刻正在做，用現在進行式"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I am used to work in a shop.",
+      "good": "I used to work in a shop.",
+      "why": "多放了一個 be 動詞，整句就跳到另一個句型去了。be used to 的意思是「已經習慣」，而且後面要接名詞或 V-ing。想說「以前在店裡上班」，前面絕對不要加 am、is、was。檢查方法：看到 used to 後面是原形動詞，前面就不准有 be。"
+    },
+    {
+      "bad": "I use to get up at five.",
+      "good": "I used to get up at five.",
+      "why": "use 和 used 唸起來幾乎一樣，手比腦快就少打了一個 d。只要句子裡沒有 did 或 didn't 來幫忙標記過去，used 的那個 d 就一定要留著。念出來聽不出差別，所以要用眼睛檢查。"
+    },
+    {
+      "bad": "She used to working at night.",
+      "good": "She used to work at night.",
+      "why": "中文的「以前在夜班工作」沒有形狀上的提示，所以學生常常順手加 -ing。但 used to 後面的位置只收原形動詞，加了 -ing 就變成 be used to 那一組的用法，前面卻又沒有 be，整句就壞了。"
+    },
+    {
+      "bad": "I used to go to Tainan last Friday.",
+      "good": "I went to Tainan last Friday.",
+      "why": "used to 講的是「反覆發生的常態」，last Friday 只有一次，兩者互相打架。只要句子裡出現 yesterday、last week、in 2024 這種「單一時間點」，就改用過去簡單式。中文的「我上星期五去台南」也沒有「常常」的意思，看中文就能分辨。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Tom ___ to work in a convenience store.",
+      "qCn": "Tom以前在便利商店工作。",
+      "opts": [
+        "A. use",
+        "B. uses",
+        "C. used",
+        "D. using"
+      ],
+      "ans": 2,
+      "expl": "句子裡沒有 did／didn't 幫忙，所以要自己留住那個 d，寫 used to。uses to 這種形狀英文裡不存在。"
+    },
+    {
+      "q": "My aunt used to ___ a small bakery near the station.",
+      "qCn": "我阿姨以前在車站附近開一家小麵包店。",
+      "opts": [
+        "A. runs",
+        "B. run",
+        "C. running",
+        "D. ran"
+      ],
+      "ans": 1,
+      "expl": "used to 後面只收原形動詞，所以是 run。runs、ran、running 三個都被 used to 擋住了。"
+    },
+    {
+      "q": "Which sentence means she does NOT do it now?",
+      "qCn": "哪一句的意思是她現在已經不做了？",
+      "opts": [
+        "A. She works on Saturdays.",
+        "B. She used to work on Saturdays.",
+        "C. She is working on Saturday.",
+        "D. She will work on Saturday."
+      ],
+      "ans": 1,
+      "expl": "只有 used to 自帶「現在已經不是這樣」。A 是現在的常態，C 是這個星期六的安排，D 是還沒發生的事。"
+    },
+    {
+      "q": "I ___ a new phone last month.",
+      "qCn": "我上個月買了一支新手機。",
+      "opts": [
+        "A. used to buy",
+        "B. bought",
+        "C. use to buy",
+        "D. am buying"
+      ],
+      "ans": 1,
+      "expl": "last month 是單一次的時間點，沒有「反覆」可言，所以用過去簡單式 bought。used to buy 會變成「以前常常買手機」，意思整個跑掉。"
+    }
+  ]
+},
+{
+  "id": "dg20261009b1",
+  "date": "2026-10-09",
+  "unitNo": 18,
+  "level": "B1",
+  "title": "didn't use to, Did you use to: The Extra d",
+  "titleCn": "used to 的否定與問句：那個多出來的 d",
+  "srcDays": [],
+  "summary": "有了 did 或 didn't，used 就要退回原形 use；而 used to 只負責「反覆的舊常態」，單一次的事件仍然交給過去簡單式，前面多一個 be 又是完全不同的句型。",
+  "sections": [
+    {
+      "h": "三種形狀，一條規則",
+      "body": "肯定句的 used to 要帶 d，否定句和問句卻要把 d 還回去——因為過去的標記已經由 didn't 或 Did 扛走了，同一個句子不需要標記兩次。這跟 He didn't go（不是 didn't went）是同一條邏輯，只是 use／used 唸起來太像，所以錯誤特別常見。",
+      "table": {
+        "head": [
+          "",
+          "寫法",
+          "為什麼"
+        ],
+        "rows": [
+          [
+            "肯定",
+            "She used to answer the phones.",
+            "沒有助動詞，d 留在 used 上"
+          ],
+          [
+            "否定",
+            "She didn't use to answer the phones.",
+            "didn't 已經標記過去，use 回原形"
+          ],
+          [
+            "問句",
+            "Did she use to answer the phones?",
+            "Did 標記過去，use 回原形"
+          ],
+          [
+            "簡答",
+            "Yes, she did. / No, she didn't.",
+            "回答時只留 did，不重複 use to"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Mai didn't use to join the morning meeting.",
+          "cn": "Mai以前不參加早會。",
+          "note": "didn't 在前，use 沒有 d"
+        },
+        {
+          "en": "Did your team use to work on Saturdays?",
+          "cn": "你們團隊以前星期六要上班嗎？",
+          "note": "Did 在前，use 沒有 d"
+        },
+        {
+          "en": "No, we didn't, but the warehouse did.",
+          "cn": "不用，但倉庫那邊要。",
+          "note": "簡答只留 did／didn't"
+        }
+      ]
+    },
+    {
+      "h": "used to 和過去簡單式的分工",
+      "body": "兩個都講過去，分工點在「有沒有反覆」。used to 是一段時間裡反覆發生、而且已經停掉的常態；過去簡單式可以講一次，也可以講一段，但它不會自己說「現在不一樣了」。所以當你想強調的是對比，用 used to；想報告某天發生的事，用過去簡單式。",
+      "table": {
+        "head": [
+          "情境",
+          "該用什麼",
+          "例句"
+        ],
+        "rows": [
+          [
+            "那三年每天都做",
+            "used to",
+            "He used to drive the night shift."
+          ],
+          [
+            "某一天做了一次",
+            "過去簡單式",
+            "He drove the night shift on Tuesday."
+          ],
+          [
+            "做了幾次、也可以數出來",
+            "過去簡單式 + 次數",
+            "He drove the night shift twice."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The office used to close for two weeks every summer.",
+          "cn": "辦公室以前每年夏天都休兩個星期。",
+          "note": "every summer 顯示是反覆的常態"
+        },
+        {
+          "en": "The office closed for two weeks after the typhoon.",
+          "cn": "颱風過後辦公室關了兩個星期。",
+          "note": "單一次事件，用過去簡單式"
+        },
+        {
+          "en": "I visited that plant three times in 2024.",
+          "cn": "我二○二四年去過那間廠三次。",
+          "note": "次數數得出來，就不是 used to 的範圍"
+        }
+      ]
+    },
+    {
+      "h": "換成 would 可以嗎",
+      "body": "講反覆的動作時，used to 和 would 常常可以互換；但講狀態就只有 used to 能用。be、have、live、know、like 這些動詞描述的是狀態，不是一個會重複上演的動作，所以 would 帶不動它們。另外，一段話的第一句通常要先用 used to 把時代背景立起來，後面才接 would 講細節。",
+      "bullets": [
+        "動作可以互換：He used to lock the gate. ／ He would lock the gate.",
+        "狀態只能用 used to：She used to be our supervisor.（不能說 She would be our supervisor 來表達這個意思）",
+        "開場先 used to，之後再用 would 列細節，讀起來最自然"
+      ],
+      "examples": [
+        {
+          "en": "The old manager used to be very strict.",
+          "cn": "以前那位經理非常嚴格。",
+          "note": "be 是狀態，只能用 used to"
+        },
+        {
+          "en": "He would check every box before lunch.",
+          "cn": "他以前都會在午餐前檢查每一箱。",
+          "note": "反覆的動作，would 可以"
+        },
+        {
+          "en": "We used to have two printers on this floor.",
+          "cn": "這層樓以前有兩台印表機。",
+          "note": "have 是狀態，不要換成 would have"
+        }
+      ]
+    },
+    {
+      "h": "多一個 be，意思就反過來",
+      "body": "used to 和 be used to 只差一個 be，意思卻幾乎相反：前者說「以前這樣，現在不是了」，後者說「已經習慣了，現在不覺得困難」。形狀上也不一樣——be used to 後面只能接名詞或 V-ing。想說「正在慢慢習慣」就把 be 換成 get。",
+      "table": {
+        "head": [
+          "句型",
+          "後面接什麼",
+          "意思"
+        ],
+        "rows": [
+          [
+            "used to + 原形",
+            "原形動詞",
+            "以前的常態，現在停了"
+          ],
+          [
+            "be used to + 名詞／V-ing",
+            "名詞或 V-ing",
+            "已經習慣，現在不陌生"
+          ],
+          [
+            "get used to + 名詞／V-ing",
+            "名詞或 V-ing",
+            "正在習慣的過程"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I used to work alone.",
+          "cn": "我以前都一個人工作。",
+          "note": "現在不是一個人了"
+        },
+        {
+          "en": "I am used to working alone.",
+          "cn": "我已經習慣一個人工作了。",
+          "note": "現在還是一個人，而且不覺得難"
+        },
+        {
+          "en": "She is getting used to the new system.",
+          "cn": "她正在習慣新系統。",
+          "note": "過程還沒完成"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "She didn't used to read the reports.",
+      "good": "She didn't use to read the reports.",
+      "why": "didn't 已經把這句標記成過去了，後面的動詞必須回到原形，所以 used 要退成 use。這一組錯得特別多，因為兩個字唸起來幾乎一樣。檢查口訣：句子裡出現 did 或 didn't，就不准再看到 used。"
+    },
+    {
+      "bad": "Did he used to manage the night shift?",
+      "good": "Did he use to manage the night shift?",
+      "why": "問句的道理跟否定句一樣：Did 站在最前面扛過去，use 就不需要那個 d。順便注意後面的 manage 也是原形——一個句子裡只標記一次過去。"
+    },
+    {
+      "bad": "I used to go to Hanoi last March.",
+      "good": "I went to Hanoi last March.",
+      "why": "used to 要求「反覆」，last March 只有一次，兩個訊息互相矛盾。只要出現 last…、in 2023、two years ago 這種單點時間，就換過去簡單式。想講反覆就改成 I used to go to Hanoi every March."
+    },
+    {
+      "bad": "I am used to get up at five.",
+      "good": "I am used to getting up at five.",
+      "why": "前面已經有 am，所以這是 be used to 那個句型，後面只能接名詞或 V-ing，不能接原形。如果你真正想說的是「以前五點起床、現在不了」，那就要把 am 整個刪掉，寫成 I used to get up at five——兩句意思完全不同，先確定自己要講哪一個。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Anita ___ use to understand why interviewers wrote so much.",
+      "qCn": "Anita以前不懂為什麼面試官要寫那麼多東西。",
+      "opts": [
+        "A. didn't",
+        "B. wasn't",
+        "C. doesn't",
+        "D. hasn't"
+      ],
+      "ans": 0,
+      "expl": "後面是 use to（沒有 d），代表過去的標記必須由 didn't 來扛。wasn't 配的是 be used to，那是「已經習慣」的句型。"
+    },
+    {
+      "q": "___ you use to work in Taichung?",
+      "qCn": "你以前在台中工作嗎？",
+      "opts": [
+        "A. Do",
+        "B. Did",
+        "C. Are",
+        "D. Have"
+      ],
+      "ans": 1,
+      "expl": "問的是過去的常態，所以用 Did；後面的 use 也因此不帶 d。Are you used to… 問的是「你習慣了嗎」，是另一回事。"
+    },
+    {
+      "q": "Which sentence is correct?",
+      "qCn": "哪一句是正確的？",
+      "opts": [
+        "A. He didn't used to drive.",
+        "B. He didn't use to drive.",
+        "C. He not used to drive.",
+        "D. He wasn't use to drive."
+      ],
+      "optsCn": [
+        "A. 他以前不開車。（形狀錯）",
+        "B. 他以前不開車。",
+        "C. 他以前不開車。（缺助動詞）",
+        "D. 他以前不開車。（混到另一個句型）"
+      ],
+      "ans": 1,
+      "expl": "didn't 之後動詞回原形，所以只有 B 成立。A 多了 d，C 少了 didn't，D 把 be used to 和 used to 混在一起。"
+    },
+    {
+      "q": "I ___ the heat in Hanoi now, but my first summer was hard.",
+      "qCn": "我現在已經習慣河內的熱了，但第一年夏天很難熬。",
+      "opts": [
+        "A. used to",
+        "B. am used to",
+        "C. use to",
+        "D. was used to"
+      ],
+      "ans": 1,
+      "expl": "now 告訴你這是現在的狀態，而且後面接名詞 the heat，所以要用 be used to 的現在式 am used to。used to 會變成「以前習慣、現在不習慣」，跟後半句打架。"
+    }
+  ]
+},
+{
+  "id": "dg20261009b1p",
+  "date": "2026-10-09",
+  "unitNo": 19,
+  "level": "B1+",
+  "title": "Present Tenses for the Future",
+  "titleCn": "用現在式講未來：已排定的安排與時刻表",
+  "srcDays": [],
+  "summary": "已經排定的未來，英文習慣用現在式講：自己跟別人約好的安排用現在進行式，班次、節目、營業時間這種公告好的時刻表用現在簡單式，而 will 留給當場的決定與預測。",
+  "sections": [
+    {
+      "h": "三條路，三種確定程度",
+      "body": "中文講未來只要加「明天」「下週」就好，動詞不動；英文卻用動詞的形狀告訴你「這件事定了沒有」。現在進行式說的是「我已經跟人約好、行程表上有了」；現在簡單式說的是「這是公告出來的時刻，不是我能改的」；will 則是此刻才決定或純粹的推測。三者講的都是未來，差別在確定感和由誰決定。",
+      "table": {
+        "head": [
+          "句型",
+          "誰決定的",
+          "例句",
+          "語感"
+        ],
+        "rows": [
+          [
+            "現在進行式",
+            "我和對方約好的",
+            "I am meeting the auditor at ten.",
+            "行程已經排定"
+          ],
+          [
+            "現在簡單式",
+            "時刻表、公告",
+            "The shuttle leaves at seven.",
+            "固定班次，不會因人而改"
+          ],
+          [
+            "will",
+            "當場決定或預測",
+            "I will call her back later.",
+            "還沒排進任何行程"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "We are signing the contract on Friday morning.",
+          "cn": "我們星期五早上要簽約。",
+          "note": "雙方約好了，所以用現在進行式"
+        },
+        {
+          "en": "The factory tour starts at nine and ends at noon.",
+          "cn": "參觀行程九點開始、中午結束。",
+          "note": "公告的行程表，用現在簡單式"
+        },
+        {
+          "en": "I will ask the supplier about it.",
+          "cn": "這件事我會去問供應商。",
+          "note": "剛剛才決定，還沒約時間"
+        }
+      ]
+    },
+    {
+      "h": "一定要有時間詞",
+      "body": "這是最容易被忽略的一點：現在進行式本身也可以指「此刻正在做」，所以講未來的時候，句子裡必須有 tomorrow、at ten、on Monday、next week 這類時間詞，否則讀者會以為你在說現在。時間詞不是裝飾，它是唯一讓人分辨「現在」還是「未來」的訊號。",
+      "bullets": [
+        "沒有時間詞：I am seeing the supplier.（聽起來像正在見面）",
+        "有時間詞：I am seeing the supplier on Thursday.（星期四的安排）",
+        "疑問句同理：What are you doing tonight? 問的是今晚的安排，不是此刻在幹什麼"
+      ],
+      "examples": [
+        {
+          "en": "Are you coming to the audit next week?",
+          "cn": "你下週的稽核會來嗎？",
+          "note": "next week 把句子推到未來"
+        },
+        {
+          "en": "She is flying to Hanoi on Sunday night.",
+          "cn": "她星期天晚上要飛河內。",
+          "note": "機票訂好了，時間詞也在"
+        },
+        {
+          "en": "Nobody is working here tomorrow.",
+          "cn": "明天這裡沒人上班。",
+          "note": "否定句一樣靠 tomorrow 定位"
+        }
+      ]
+    },
+    {
+      "h": "哪些事只走時刻表那一條",
+      "body": "交通班次、營業時間、課程與節目、比賽與放假日，這些事由機構公告、不是個人能約的，所以用現在簡單式。常見的動詞就那幾個：leave、arrive、start、begin、finish、end、open、close、be。反過來說，只要主詞是人、而且是跟別人談好的，就回到現在進行式。",
+      "table": {
+        "head": [
+          "主詞是什麼",
+          "用哪種現在式",
+          "例句"
+        ],
+        "rows": [
+          [
+            "班次、場館、課程",
+            "現在簡單式",
+            "The gate closes twenty minutes before take-off."
+          ],
+          [
+            "人跟人約好的事",
+            "現在進行式",
+            "The two sides are meeting again in December."
+          ],
+          [
+            "還沒談好的打算",
+            "will 或 be going to",
+            "We will probably meet again in December."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The night bus arrives at five past six.",
+          "cn": "夜間公車六點五分到。",
+          "note": "時刻表，用現在簡單式"
+        },
+        {
+          "en": "The canteen opens at eleven on public holidays.",
+          "cn": "國定假日餐廳十一點開。",
+          "note": "營業時間也是公告，不是個人安排"
+        },
+        {
+          "en": "Mai is giving the safety talk after lunch.",
+          "cn": "Mai午餐後要講安全規定。",
+          "note": "人排好的事，用現在進行式"
+        }
+      ]
+    },
+    {
+      "h": "為什麼不乾脆都用 will",
+      "body": "都寫 will 當然看得懂，但語感會整個鬆掉：對方會以為你只是打算，還沒定案。這在工作信件裡差別很大——寫 I will visit your plant next week，對方可能還要再跟你確認一次；寫 I am visiting your plant next week，對方知道你機票都訂了。把確定的事寫成 will，等於把已經談好的事又丟回談判桌。",
+      "bullets": [
+        "已經訂好票、約好人、排進會議室 → 現在進行式",
+        "公告在牌子上、網站上、班表上 → 現在簡單式",
+        "此刻才想到、答應幫忙、做預測 → will"
+      ],
+      "examples": [
+        {
+          "en": "I am collecting the samples myself on Monday.",
+          "cn": "星期一我會親自去拿樣品。",
+          "note": "已經排定，對方不需要再確認"
+        },
+        {
+          "en": "I will collect them if the driver cannot.",
+          "cn": "如果司機不行，我去拿。",
+          "note": "條件還沒成立，用 will"
+        },
+        {
+          "en": "Prices will probably rise again next year.",
+          "cn": "明年價格可能還會再漲。",
+          "note": "預測，沒有人可以把它排進行事曆"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I meet the auditor tomorrow at ten.",
+      "good": "I am meeting the auditor tomorrow at ten.",
+      "why": "跟人約好的個人安排要用現在進行式。現在簡單式在這裡會讓句子聽起來像時刻表，好像「見稽核員」是每天固定的班次。判斷方法：這件事是你跟某個人談好的嗎？是的話就用 be + V-ing。"
+    },
+    {
+      "bad": "The shuttle will leave at seven every morning.",
+      "good": "The shuttle leaves at seven every morning.",
+      "why": "every morning 告訴你這是固定班次，不是某一次的預測，所以用現在簡單式。加了 will 反而像在猜「它應該會七點開」，把公告好的事說得不確定。"
+    },
+    {
+      "bad": "I am seeing the supplier.",
+      "good": "I am seeing the supplier on Thursday.",
+      "why": "少了時間詞，這句會被理解成「我現在正在見供應商」。現在進行式一個形狀要扛兩種意思，靠的就是時間詞分辨，所以講未來時它不能省。"
+    },
+    {
+      "bad": "What do you do on Saturday night?",
+      "good": "What are you doing on Saturday night?",
+      "why": "用現在簡單式問，聽起來像在問對方的職業或每週固定行程；想問「這個星期六晚上有什麼安排」就要用現在進行式。中文的「你星期六晚上做什麼」兩種意思都蓋得住，所以要特別小心。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The two sides ___ again at the end of 2028, as the agreement says.",
+      "qCn": "依照協議，雙方在二○二八年底會再談一次。",
+      "opts": [
+        "A. will meeting",
+        "B. are meeting",
+        "C. meets",
+        "D. are met"
+      ],
+      "ans": 1,
+      "expl": "日期已經寫進協議、雙方都知道，屬於排定好的安排，所以用現在進行式 are meeting。are met 是被動，意思不通。"
+    },
+    {
+      "q": "Hurry up — the last shuttle ___ in eight minutes.",
+      "qCn": "快一點，最後一班接駁車八分鐘後就開了。",
+      "opts": [
+        "A. is leaving",
+        "B. leaves",
+        "C. will leave",
+        "D. left"
+      ],
+      "ans": 1,
+      "expl": "班次是公告好的時刻表，用現在簡單式最自然。這裡 is leaving 不算錯，但 leaves 更能表達「表上就是這個時間」；will leave 則像在猜。"
+    },
+    {
+      "q": "Which sentence tells you the rally is already organised?",
+      "qCn": "哪一句告訴你集會已經安排好了？",
+      "opts": [
+        "A. The union will hold a rally.",
+        "B. The union is holding a rally on 19 October.",
+        "C. The union wants to hold a rally.",
+        "D. The union may hold a rally."
+      ],
+      "optsCn": [
+        "A. 工會會辦一場集會。",
+        "B. 工會十月十九日要辦集會。",
+        "C. 工會想辦一場集會。",
+        "D. 工會可能會辦集會。"
+      ],
+      "ans": 1,
+      "expl": "現在進行式加上明確日期，代表場地與時間都定了。A、C、D 都還停在打算或可能的階段。"
+    },
+    {
+      "q": "I ___ you a copy as soon as the report is ready.",
+      "qCn": "報告一好我就寄一份給你。",
+      "opts": [
+        "A. am sending",
+        "B. send",
+        "C. will send",
+        "D. sent"
+      ],
+      "ans": 2,
+      "expl": "報告什麼時候好還不知道，所以這不是排定的安排，而是當下的承諾，用 will。排定好的事才有資格用現在進行式。"
+    }
+  ]
+},
+{
+  "id": "dg20261009b2",
+  "date": "2026-10-09",
+  "unitNo": 19,
+  "level": "B2",
+  "title": "Choosing the Present for the Future: Register and Effect",
+  "titleCn": "用現在式講未來：正式度與文件語感",
+  "srcDays": [],
+  "summary": "同一件已排定的未來，寫進議程、公告、新聞或口頭約定時要選不同的現在式；選錯不只是文法問題，而會讓定案的事看起來還在討論、或讓個人安排讀起來像官方公告。",
+  "sections": [
+    {
+      "h": "四種文件，四種預設寫法",
+      "body": "英文的未來式之所以難，是因為選擇權在寫的人手上：同一場會議，你可以寫 we are meeting、the meeting takes place、the meeting will be held，三句都對，但送到不同的人手上效果完全不同。決定的關鍵不是時間遠近，而是這份文件的語域——誰在說話、對誰說、有沒有責任。",
+      "table": {
+        "head": [
+          "文件類型",
+          "預設寫法",
+          "範例",
+          "讀者接到的訊息"
+        ],
+        "rows": [
+          [
+            "口頭約定、內部信",
+            "現在進行式",
+            "We are meeting the auditor on Monday.",
+            "我跟他講好了"
+          ],
+          [
+            "議程、行程表、公告",
+            "現在簡單式",
+            "The review takes place in Room 3 at nine.",
+            "這是排定的時程，不討論"
+          ],
+          [
+            "新聞報導",
+            "現在簡單式／進行式",
+            "The company returns to mediation on 22 October.",
+            "確定會發生，像在報進度"
+          ],
+          [
+            "合約、正式承諾",
+            "will / shall",
+            "The supplier shall deliver within thirty days.",
+            "這是責任，不只是行程"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I am taking the early flight so that I can join the briefing.",
+          "cn": "我會搭早班飛機，這樣才能參加簡報。",
+          "note": "內部信，講自己安排好的事"
+        },
+        {
+          "en": "The audit closes on 14 November and the report follows two weeks later.",
+          "cn": "稽核十一月十四日結束，報告兩週後提出。",
+          "note": "行程公告，兩個動詞都用現在簡單式"
+        },
+        {
+          "en": "The parties shall review the rate at the end of the second year.",
+          "cn": "雙方應於第二年年底檢視費率。",
+          "note": "合約語言，shall 帶的是義務"
+        }
+      ]
+    },
+    {
+      "h": "新聞為什麼愛用現在式講未來",
+      "body": "打開任何一則英文報導，排定好的未來幾乎都用現在式：the board meets this week、the union is holding a rally。原因有兩層。第一，現在式把事情拉近，讀起來像正在推進的進度，而不是遙遠的計畫。第二，記者要跟還沒定案的部分劃清界線——定了的用現在式，沒定的改用 may、could、is expected to。讀新聞時這條線很好用：動詞的形狀就在告訴你哪些是事實、哪些還在猜。",
+      "bullets": [
+        "已排定：Talks resume on Thursday.（時間是確定的）",
+        "未排定：A strike may be called at short notice.（刻意不給時間）",
+        "預期但未定：Proposals are expected after the board meeting.（留了退路）"
+      ],
+      "examples": [
+        {
+          "en": "Mediation resumes in Taichung later this month.",
+          "cn": "調解本月稍後在台中重啟。",
+          "note": "日期已公告，用現在簡單式"
+        },
+        {
+          "en": "Members are gathering outside the ministry on Monday.",
+          "cn": "會員星期一要在部會外面集合。",
+          "note": "人安排好的動作，用現在進行式"
+        },
+        {
+          "en": "The date of any walkout remains unannounced.",
+          "cn": "任何罷工的日期仍未公布。",
+          "note": "沒定案就不能用現在式講未來"
+        }
+      ]
+    },
+    {
+      "h": "will 還有它的位置",
+      "body": "有人聽完上面兩節就以為 will 很低級，那是誤解。will 在三個地方不但正確，而且不可取代：第一是承諾與保證（I will send it today），第二是條件句的主句（If the talks fail, the union will act），第三是不受人控制的預測（Prices will keep rising）。真正要避免的只有一種：把已經排進行程、別人也知道的事寫成 will，那會讓對方以為還有討論空間。",
+      "table": {
+        "head": [
+          "用途",
+          "寫法",
+          "為什麼不能換成現在式"
+        ],
+        "rows": [
+          [
+            "承諾",
+            "I will confirm the numbers before noon.",
+            "承諾的重點是「我負責」，不是時程表"
+          ],
+          [
+            "條件結果",
+            "If they strike, the line will stop.",
+            "事情還沒發生，談不上排定"
+          ],
+          [
+            "預測",
+            "Inflation will complicate the next round.",
+            "沒有人能把預測排進行事曆"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I will let you know the moment the board decides.",
+          "cn": "董事會一決定我就通知你。",
+          "note": "承諾，時間取決於別人"
+        },
+        {
+          "en": "If the offer improves, the union will drop the threat.",
+          "cn": "如果條件變好，工會就會收回威脅。",
+          "note": "條件句的主句一律 will"
+        },
+        {
+          "en": "Nobody knows how long the dispute will last.",
+          "cn": "沒人知道這場爭議會持續多久。",
+          "note": "純預測，不是安排"
+        }
+      ]
+    },
+    {
+      "h": "混用造成的時間感混亂",
+      "body": "寫作時最常見的毛病不是單句錯，而是一段話裡三種寫法亂跳，讀者讀完不知道哪件事定了。處理方法很簡單：先把段落裡的每一件事分成「已排定」與「未定」兩堆，已排定的那堆統一用現在式，未定的那堆統一用 will 或 may，兩堆之間用一個轉折詞隔開。這樣一段話就有了清楚的分界線，而不是讓讀者自己猜。",
+      "bullets": [
+        "先分堆：哪些事有日期、哪些沒有",
+        "有日期的那堆：現在簡單式或現在進行式，不要夾 will",
+        "沒日期的那堆：will、may、be expected to，並用 but、however 跟前面隔開"
+      ],
+      "examples": [
+        {
+          "en": "The board meets on Thursday and the union publishes its reply on Friday.",
+          "cn": "董事會星期四開會，工會星期五公布回應。",
+          "note": "同一堆、同一種時態，讀起來乾淨"
+        },
+        {
+          "en": "Both dates are fixed; the outcome, however, may take months.",
+          "cn": "兩個日期都定了，但結果可能要好幾個月。",
+          "note": "用分號與 however 把兩堆隔開"
+        },
+        {
+          "en": "We are submitting the file on 30 October, although the review will probably slip.",
+          "cn": "我們十月三十日送件，不過審查大概會延。",
+          "note": "已排定的用進行式，未定的用 will"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "Dear supplier, we will visit your plant on 3 November.",
+      "good": "Dear supplier, we are visiting your plant on 3 November.",
+      "why": "信件裡寫 will visit，對方很可能回信再確認一次，因為 will 聽起來像剛決定、還可以改。日期已經談好、機票也訂了，就用現在進行式，對方才知道這是定案。語域問題比文法問題更貴——它會多出一輪往返。"
+    },
+    {
+      "bad": "Agenda: 09:00 The quality manager is opening the session.",
+      "good": "Agenda: 09:00 The quality manager opens the session.",
+      "why": "議程是機構公告的時程，慣例用現在簡單式，句子才短而中性。改成現在進行式會讓它讀起來像某個人的私人行程，而且在表格裡顯得冗長。同一份文件裡的每一列也要用同一種形狀，不要一列進行式、一列簡單式。"
+    },
+    {
+      "bad": "The supplier will deliver within thirty days, as the contract says.",
+      "good": "The supplier shall deliver within thirty days.",
+      "why": "這句本身不算錯，但在合約語域裡 shall 才是標準，因為它標記的是義務而非時程。把義務寫成 will，日後爭議時對方可以主張那只是預期。正式文件選字的標準不是「聽得懂」，而是「追究得起」。"
+    },
+    {
+      "bad": "The talks resume on Thursday and a strike starts next week.",
+      "good": "The talks resume on Thursday, but a strike may be called at short notice.",
+      "why": "前半句是已公告的事實，後半句其實沒有日期。兩件事用同一種現在式寫，讀者會以為罷工也排定了，這在新聞裡等於製造錯誤訊息。沒定案的事要換成 may、could 或 is expected to，並用 but 把兩堆隔開。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "In a meeting agenda, which line reads most naturally?",
+      "qCn": "在會議議程裡，哪一行最自然？",
+      "opts": [
+        "A. 10:30 The auditor is presenting the findings.",
+        "B. 10:30 The auditor presents the findings.",
+        "C. 10:30 The auditor will present the findings.",
+        "D. 10:30 The auditor is going to present the findings."
+      ],
+      "optsCn": [
+        "A. 10:30 稽核員要報告結果。（私人行程感）",
+        "B. 10:30 稽核員報告結果。",
+        "C. 10:30 稽核員將報告結果。（像預測）",
+        "D. 10:30 稽核員打算報告結果。（像計畫）"
+      ],
+      "ans": 1,
+      "expl": "議程屬於公告型文件，慣例用現在簡單式，句子最短也最中性。其他三個都把機構時程寫成個人打算或預測。"
+    },
+    {
+      "q": "A news report wants to show that the strike date is NOT fixed. Which sentence does that?",
+      "qCn": "一則報導想表達罷工日期還沒定，哪一句辦得到？",
+      "opts": [
+        "A. The strike starts next Monday.",
+        "B. The strike is starting next Monday.",
+        "C. The strike may be called at short notice.",
+        "D. The strike takes place after the board meeting."
+      ],
+      "optsCn": [
+        "A. 罷工下週一開始。",
+        "B. 罷工下週一就要開始了。",
+        "C. 罷工可能在很短的時間內宣布。",
+        "D. 罷工在董事會之後舉行。"
+      ],
+      "ans": 2,
+      "expl": "A、B、D 三句都用現在式講未來，等於宣告日期已定。只有 C 用 may 把不確定留下來，這正是記者劃分「事實」與「未定」的方法。"
+    },
+    {
+      "q": "Which sentence belongs in a contract rather than an email?",
+      "qCn": "哪一句屬於合約，而不是電子郵件？",
+      "opts": [
+        "A. We are sending the samples on Friday.",
+        "B. The seller shall replace defective units at its own cost.",
+        "C. I will chase the courier this afternoon.",
+        "D. The lab opens at eight tomorrow."
+      ],
+      "optsCn": [
+        "A. 我們星期五寄樣品。",
+        "B. 賣方應自費更換不良品。",
+        "C. 我今天下午會去催快遞。",
+        "D. 實驗室明天八點開。"
+      ],
+      "ans": 1,
+      "expl": "shall 在合約裡標記的是義務與責任，這是其他三句都沒有的語域。A 是安排、C 是承諾、D 是公告時間。"
+    },
+    {
+      "q": "Which paragraph mixes fixed and unfixed events most clearly?",
+      "qCn": "哪一段把「已定」與「未定」分得最清楚？",
+      "opts": [
+        "A. Talks resume on Thursday and the dispute ends soon.",
+        "B. Talks will resume on Thursday and the dispute will end soon.",
+        "C. Talks resume on Thursday, but the dispute may last for months.",
+        "D. Talks are resuming on Thursday and the dispute is ending soon."
+      ],
+      "optsCn": [
+        "A. 談判星期四重啟，爭議很快結束。",
+        "B. 談判星期四將重啟，爭議將很快結束。",
+        "C. 談判星期四重啟，但爭議可能持續好幾個月。",
+        "D. 談判星期四重啟，爭議就要結束了。"
+      ],
+      "ans": 2,
+      "expl": "只有 C 把有日期的事放在現在簡單式、沒日期的事交給 may，中間還用 but 隔開。A 和 D 讓讀者以為結束的時間也定了，B 則把已公告的日期降級成預測。"
+    }
+  ]
+},
 /* ---------- 2026-10-06 每日文法（have 與 have got；used to + 原形） ---------- */
 {
   "id": "dg20261006a2",
