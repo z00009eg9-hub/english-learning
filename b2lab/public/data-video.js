@@ -28538,7 +28538,7 @@ window.VIDEO.au02 = {
    "sp": "N",
    "vis": {
     "type": "scene",
-    "art": "people"
+    "art": "auFiveKeys"
    },
    "en": "Listen for five key words, the answer patterns, and how to say what you do not know yet.",
    "cn": "注意聽五個關鍵詞、回答句型，以及「還不確定」要怎麼說。"
@@ -28548,7 +28548,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "people"
+    "art": "au2ChartWho"
    },
    "en": "Who owns the organization chart action?",
    "cn": "誰負責組織圖改善？"
@@ -28558,7 +28558,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "people"
+    "art": "au2HrOwns"
    },
    "en": "HR owns this action. Each department is to provide names and length of service for section managers and above.",
    "cn": "人資負責，各部門需提供課級以上的姓名與年資。"
@@ -28568,7 +28568,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "talk"
+    "art": "au2ContactWho"
    },
    "en": "Who owns the English-contact action?",
    "cn": "誰負責英文窗口改善？"
@@ -28578,7 +28578,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "talk"
+    "art": "au2SalesSupport"
    },
    "en": "Sales owns the action. Each department is to provide an English-speaking contact, with support from Sales.",
    "cn": "銷售負責此項，各部門提供英文窗口，並由銷售支援。"
@@ -28588,7 +28588,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "doc"
+    "art": "au2TrainWho"
    },
    "en": "Who owns operator training?",
    "cn": "谁負責作業員訓練？"
@@ -28598,7 +28598,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "doc"
+    "art": "au2TrainScope"
    },
    "en": "Production owns the training action. It covers team-leader training, skills matrices, assessment records, and backup-operator evidence.",
    "cn": "製造負責訓練改善，涵蓋組長培訓、多能工表、考核紀錄與代理人實績。",
@@ -28616,7 +28616,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "calendar"
+    "art": "au2ChartInfo"
    },
    "en": "What information will the organization chart include?",
    "cn": "組織圖會包含哪些資料？"
@@ -28626,7 +28626,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "calendar"
+    "art": "au2NameYears"
    },
    "en": "It will include names and length of service for section managers and above. Each department is to provide the information.",
    "cn": "將列出課級以上的姓名與年資，由各部門提供資料。"
@@ -28636,7 +28636,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "careerSteps"
+    "art": "au2OwnerDate"
    },
    "en": "Who is responsible, and what is the target date?",
    "cn": "誰負責？目標日期是什麼？"
@@ -28646,7 +28646,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "careerSteps"
+    "art": "au2Oct19"
    },
    "en": "HR is responsible for this action. The target date in the plan is October 19.",
    "cn": "由人資負責，計畫中的目標日期為 10 月 19 日。"
@@ -28656,7 +28656,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "check"
+    "art": "au2DoneAsk"
    },
    "en": "Does the action plan show it as completed?",
    "cn": "改善表顯示已完成了嗎？"
@@ -28666,7 +28666,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "check"
+    "art": "au2OpenStatus"
    },
    "en": "No. It is marked Open in the current action plan. The target date does not mean that the chart has already been completed.",
    "cn": "沒有，目前的改善表標示 Open。目標日期不代表組織圖已完成。",
@@ -28684,7 +28684,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "target"
+    "art": "au2EngSupportAsk"
    },
    "en": "How will you support English communication during the audit?",
    "cn": "稽核時如何支援英文溝通？"
@@ -28694,7 +28694,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "target"
+    "art": "au2DeptContacts"
    },
    "en": "The plan requires an English-speaking contact from each department. Sales will provide support.",
    "cn": "計畫要求各部門提供英文窗口，由銷售支援。"
@@ -28704,7 +28704,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "au2SalesAskAll"
    },
    "en": "Is Sales responsible for every technical answer?",
    "cn": "所有技術問題都由銷售回答嗎？"
@@ -28714,7 +28714,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "clipboard"
+    "art": "au2WhoExplains"
    },
    "en": "The plan is for each department to provide its own English-speaking contact. Sales supports communication; the relevant department explains its process.",
    "cn": "計畫由各部門提供自己的英文窗口。銷售支援溝通，相關部門說明自身流程。"
@@ -28724,7 +28724,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "people"
+    "art": "au2ConfirmAsk"
    },
    "en": "Are all contacts already confirmed?",
    "cn": "所有窗口都已確認了嗎？"
@@ -28734,7 +28734,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "people"
+    "art": "au2NotProven"
    },
    "en": "The current action plan marks this action Open. Its target date is October 19, so the plan does not prove that all contacts are already in place.",
    "cn": "目前的計畫仍標示 Open，目標日期為 10/19，不能以計畫當作所有窗口已到位的證明。"
@@ -28744,7 +28744,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "talk"
+    "art": "au2StatusAsk"
    },
    "en": "What is the current training status?",
    "cn": "目前訓練進度如何？"
@@ -28754,7 +28754,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "talk"
+    "art": "au2InProgress"
    },
    "en": "Team leaders are being trained, and the skills matrices for each process are being updated. Assessment records are not complete yet.",
    "cn": "組長培訓中，各製程多能工表更新中，考核紀錄尚未完整。",
@@ -28772,7 +28772,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "doc"
+    "art": "au2Oct30Ask"
    },
    "en": "What do you plan to complete by October 30?",
    "cn": "10/30 前計畫完成什麼？"
@@ -28782,7 +28782,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "doc"
+    "art": "au2ThreeDepts"
    },
    "en": "We plan to complete team-leader training, assessment records, and the training plan. Production will also provide skills matrices for Departments 1, 2, and 3.",
    "cn": "計畫完成組長培訓、考核紀錄與訓練計畫，製造也會提供製一、製二、製三部多能工表。",
@@ -28800,7 +28800,7 @@ window.VIDEO.au02 = {
    "sp": "T",
    "vis": {
     "type": "scene",
-    "art": "calendar"
+    "art": "au2QualifiedAsk"
    },
    "en": "Are all operators already qualified?",
    "cn": "所有作業員都已合格了嗎？"
@@ -28810,7 +28810,7 @@ window.VIDEO.au02 = {
    "sp": "A",
    "vis": {
     "type": "scene",
-    "art": "calendar"
+    "art": "au2RecordsGap"
    },
    "en": "The assessment records are still incomplete in the action plan. That information does not support saying that every operator has passed.",
    "cn": "改善表中的考核紀錄仍未完整，這項資訊不足以宣稱每位作業員都已通過。",
@@ -32562,6 +32562,288 @@ window.VIDEO["bk20261008"] = {
      +'<path d="M6 120 H194" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
      +'<circle cx="100" cy="74" r="17" fill="#fff" stroke="'+R+'" stroke-width="4"/>'
      +'<path d="M88 86 L112 62" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/>')
+
+  });
+})();
+
+
+/* ---------- 稽核英文二（au02）專屬插圖：組織、訓練與紀錄，每句一張 ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 稽核員提問的共同記號（與 au01 一致） */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var mtx=function(x,y,c,g,n){ var s='';for(var r=0;r<n;r++)for(var k=0;k<n;k++)
+     s+='<rect x="'+(x+k*(c+g))+'" y="'+(y+r*(c+g))+'" width="'+c+'" height="'+c+'" rx="1.5" fill="#fff" stroke="'+D+'" stroke-width="1.6"/>';return s; };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 2 Tom：組織圖這項行動誰負責？ */
+    au2ChartWho: svg(
+      '<rect x="72" y="22" width="56" height="28" rx="6" fill="'+A+'" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round" fill="none">'
+     +'<path d="M100 50 v14"/><path d="M40 64 H160"/><path d="M40 64 v14"/><path d="M100 64 v14"/><path d="M160 64 v14"/></g>'
+     +'<rect x="16" y="78" width="48" height="28" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="76" y="78" width="48" height="28" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="136" y="78" width="48" height="28" rx="5" fill="#fff" '+st+'/>'
+     +qb(166,34)),
+
+    /* 3 Anita：人資負責，各部門提供名單與年資 */
+    au2HrOwns: svg(
+      pill(14,20,48,26,'HR',A,'#fff',15)
+     +per(42,62,16,L)
+     +'<path d="M84 76 h16" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M112 76 l-14 -9 v18 z" fill="'+A+'"/>'
+     +'<rect x="116" y="32" width="68" height="86" rx="6" fill="#fff" '+st+'/>'
+     +'<g fill="'+L+'" stroke="'+D+'" stroke-width="2"><circle cx="132" cy="50" r="7"/>'
+     +'<circle cx="132" cy="74" r="7"/><circle cx="132" cy="98" r="7"/></g>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M146 50 h24"/><path d="M146 74 h24"/><path d="M146 98 h24"/></g>'),
+
+    /* 4 Tom：英文窗口這項行動誰負責？ */
+    au2ContactWho: svg(
+      '<rect x="20" y="28" width="108" height="62" rx="16" fill="#fff" '+st+'/>'
+     +'<path d="M48 90 l-6 20 l24 -20 z" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/>'
+     +txt(74,70,'EN',30,A)
+     +'<rect x="138" y="80" width="46" height="30" rx="15" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="'+D+'"><circle cx="151" cy="95" r="3"/><circle cx="161" cy="95" r="3"/><circle cx="171" cy="95" r="3"/></g>'
+     +qb(162,34)),
+
+    /* 5 Anita：業務負責，各部門各出一位英文窗口 */
+    au2SalesSupport: svg(
+      pill(8,52,68,32,'SALES',A,'#fff',15)
+     +'<path d="M80 68 h8" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M100 68 l-14 -9 v18 z" fill="'+A+'"/>'
+     +per(120,56,11,L)+per(150,56,11,L)+per(180,56,11,L)
+     +'<path d="M99 96 v8 H197 v-8" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>'),
+
+    /* 6 Tom：操作員訓練誰負責？ */
+    au2TrainWho: svg(
+      '<rect x="34" y="20" width="112" height="74" rx="6" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M48 40 h58"/><path d="M48 56 h58"/><path d="M48 72 h38"/></g>'
+     +'<g fill="none" stroke="'+A+'" stroke-width="2.5"><circle cx="124" cy="60" r="11"/>'
+     +'<path d="M124 43 v6 M124 71 v6 M107 60 h6 M135 60 h6"/></g>'
+     +'<path d="M58 94 l-12 30 M122 94 l12 30" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +per(26,84,12,L)
+     +qb(168,34)),
+
+    /* 7 Anita：製造負責，含班長訓練、技能矩陣、考核紀錄、備援操作員 */
+    au2TrainScope: svg(
+      '<rect x="14" y="22" width="82" height="52" rx="8" fill="'+L+'" '+st+'/>'
+     +'<rect x="104" y="22" width="82" height="52" rx="8" fill="#fff" '+st+'/>'
+     +'<rect x="14" y="84" width="82" height="52" rx="8" fill="#fff" '+st+'/>'
+     +'<rect x="104" y="84" width="82" height="52" rx="8" fill="'+L+'" '+st+'/>'
+     +per(55,40,10,'#fff')
+     +mtx(128,34,10,4,3)
+     +'<rect x="44" y="96" width="24" height="30" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g stroke="'+D+'" stroke-width="2" stroke-linecap="round"><path d="M50 106 h12"/><path d="M50 114 h12"/></g>'
+     +per(132,102,10,'#fff')+per(154,102,10,A)),
+
+    /* 8 Tom：組織圖要寫哪些資料？ */
+    au2ChartInfo: svg(
+      '<rect x="26" y="28" width="148" height="94" rx="10" fill="#fff" '+st+'/>'
+     +'<rect x="42" y="50" width="38" height="12" rx="4" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<rect x="42" y="88" width="38" height="12" rx="4" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6">'
+     +'<path d="M92 62 h66"/><path d="M92 100 h66"/></g>'
+     +qb(168,36)),
+
+    /* 9 Anita：課級以上的姓名與年資 */
+    au2NameYears: svg(
+      '<g fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">'
+     +'<path d="M88 34 l10 -10 l10 10"/><path d="M88 48 l10 -10 l10 10"/></g>'
+     +'<rect x="18" y="62" width="164" height="60" rx="12" fill="#fff" '+st+'/>'
+     +per(48,84,13,L)
+     +'<path d="M80 88 h48" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +pill(136,76,36,26,'8y',A,'#fff',14)),
+
+    /* 10 Tom：誰負責？目標日期是哪天？ */
+    au2OwnerDate: svg(
+      per(44,48,17,L)
+     +'<path d="M104 56 v-14 a9 9 0 0 1 9 -9 h58 a9 9 0 0 1 9 9 v14 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M104 56 v38 a9 9 0 0 0 9 9 h58 a9 9 0 0 0 9 -9 V56 z" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"><path d="M122 26 v12"/><path d="M162 26 v12"/></g>'
+     +'<g fill="'+L+'" stroke="'+D+'" stroke-width="1.6">'
+     +'<rect x="114" y="66" width="14" height="12" rx="2"/><rect x="134" y="66" width="14" height="12" rx="2"/>'
+     +'<rect x="154" y="66" width="14" height="12" rx="2"/><rect x="114" y="84" width="14" height="12" rx="2"/>'
+     +'<rect x="134" y="84" width="14" height="12" rx="2"/><rect x="154" y="84" width="14" height="12" rx="2"/></g>'
+     +qb(100,124)),
+
+    /* 11 Anita：人資負責，計畫上的目標日是 10/19 */
+    au2Oct19: svg(
+      '<path d="M34 62 v-18 a10 10 0 0 1 10 -10 h92 a10 10 0 0 1 10 10 v18 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M34 62 v52 a10 10 0 0 0 10 10 h92 a10 10 0 0 0 10 -10 V62 z" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round"><path d="M60 22 v16"/><path d="M120 22 v16"/></g>'
+     +txt(90,90,'OCT',22,D)+txt(90,114,'19',26,D)
+     +pill(128,94,56,30,'HR',A,'#fff',16)),
+
+    /* 12 Tom：行動計畫上寫的是已完成嗎？ */
+    au2DoneAsk: svg(
+      '<rect x="14" y="60" width="76" height="38" rx="19" fill="#fff" '+st+'/>'
+     +txt(52,86,'OPEN',16,D)
+     +'<rect x="110" y="60" width="76" height="38" rx="19" fill="#fff" '+st+'/>'
+     +txt(148,86,'DONE',16,D)
+     +qb(100,30)),
+
+    /* 13 Anita：狀態是 Open，目標日不等於已完成 */
+    au2OpenStatus: svg(
+      '<rect x="28" y="30" width="144" height="46" rx="23" fill="'+A+'" '+st+'/>'
+     +txt(100,62,'OPEN',26,'#fff')
+     +'<rect x="20" y="96" width="62" height="30" rx="8" fill="#fff" '+st+'/>'
+     +txt(51,117,'10/19',15,D)
+     +txt(100,122,'≠',28,R)
+     +'<circle cx="152" cy="111" r="22" fill="#fff" '+st+'/>'
+     +chk(142,111,24,B)),
+
+    /* 14 Tom：稽核當天英文溝通怎麼支援？ */
+    au2EngSupportAsk: svg(
+      per(38,72,17,L)+per(160,72,17,'#fff')
+     +'<rect x="68" y="30" width="64" height="38" rx="15" fill="#fff" '+st+'/>'
+     +'<path d="M88 68 l-4 14 l16 -14 z" fill="#fff" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +txt(100,58,'EN',22,A)
+     +qb(176,28)),
+
+    /* 15 Anita：每個部門各派一位英文窗口，業務支援 */
+    au2DeptContacts: svg(
+      '<rect x="8" y="42" width="56" height="70" rx="8" fill="#fff" '+st+'/>'
+     +'<rect x="72" y="42" width="56" height="70" rx="8" fill="'+L+'" '+st+'/>'
+     +'<rect x="136" y="42" width="56" height="70" rx="8" fill="#fff" '+st+'/>'
+     +'<g fill="'+L+'" stroke="'+D+'" stroke-width="2"><rect x="8" y="42" width="56" height="12" rx="6"/>'
+     +'<rect x="136" y="42" width="56" height="12" rx="6"/></g>'
+     +'<rect x="72" y="42" width="56" height="12" rx="6" fill="#fff" stroke="'+D+'" stroke-width="2"/>'
+     +per(36,70,11,L)+per(100,70,11,'#fff')+per(164,70,11,L)
+     +pill(20,94,32,16,'EN',A,'#fff',10)
+     +pill(84,94,32,16,'EN',A,'#fff',10)
+     +pill(148,94,32,16,'EN',A,'#fff',10)),
+
+    /* 16 Tom：技術問題全部都由業務回答嗎？ */
+    au2SalesAskAll: svg(
+      '<rect x="6" y="50" width="36" height="30" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="82" y="8" width="36" height="30" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="158" y="50" width="36" height="30" rx="5" fill="#fff" '+st+'/>'
+     +'<g stroke="'+A+'" stroke-width="4" stroke-linecap="round">'
+     +'<path d="M46 66 h12"/><path d="M100 42 v10"/><path d="M154 66 h-12"/></g>'
+     +'<path d="M68 66 l-12 -8 v16 z" fill="'+A+'"/><path d="M100 64 l-8 -12 h16 z" fill="'+A+'"/>'
+     +'<path d="M132 66 l12 -8 v16 z" fill="'+A+'"/>'
+     +per(100,82,15,L)
+     +pill(70,112,60,26,'SALES',A,'#fff',14)
+     +qb(172,116)),
+
+    /* 17 Anita：業務只負責溝通，流程由該部門自己說明 */
+    au2WhoExplains: svg(
+      '<rect x="8" y="36" width="82" height="86" rx="10" fill="'+L+'" '+st+'/>'
+     +'<rect x="110" y="36" width="82" height="86" rx="10" fill="#fff" '+st+'/>'
+     +per(49,58,11,'#fff')
+     +'<g fill="none" stroke="'+D+'" stroke-width="2.5"><circle cx="49" cy="104" r="12"/>'
+     +'<path d="M49 86 v6 M49 116 v6 M31 104 h6 M61 104 h6"/></g>'
+     +per(151,58,11,L)
+     +'<rect x="127" y="92" width="48" height="24" rx="12" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="'+D+'"><circle cx="139" cy="104" r="3"/><circle cx="151" cy="104" r="3"/><circle cx="163" cy="104" r="3"/></g>'
+     +'<path d="M94 78 h8" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M112 78 l-13 -9 v18 z" fill="'+A+'"/>'),
+
+    /* 18 Tom：窗口都確認好了嗎？ */
+    au2ConfirmAsk: svg(
+      '<rect x="20" y="24" width="130" height="102" rx="10" fill="#fff" '+st+'/>'
+     +'<g fill="'+C+'" stroke="'+D+'" stroke-width="2.5">'
+     +'<rect x="34" y="38" width="16" height="16" rx="3"/><rect x="34" y="62" width="16" height="16" rx="3"/>'
+     +'<rect x="34" y="86" width="16" height="16" rx="3"/></g>'
+     +chk(36,46,18,B)+chk(36,70,18,B)
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M62 46 h72"/><path d="M62 70 h72"/><path d="M62 94 h50"/></g>'
+     +qb(160,38)),
+
+    /* 19 Anita：狀態還是 Open，不能當成已經到位 */
+    au2NotProven: svg(
+      '<rect x="22" y="24" width="100" height="98" rx="6" fill="#fff" '+st+'/>'
+     +pill(34,34,64,26,'OPEN',A,'#fff',14)
+     +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
+     +'<path d="M36 74 h72"/><path d="M36 88 h72"/></g>'
+     +'<rect x="34" y="98" width="58" height="18" rx="6" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +txt(63,112,'10/19',11,D)
+     +'<circle cx="158" cy="74" r="26" fill="#fff" '+st+'/>'
+     +chk(146,74,28,B)
+     +'<path d="M139 94 L177 54" stroke="'+R+'" stroke-width="5" stroke-linecap="round"/>'),
+
+    /* 20 Tom：目前訓練進度如何？ */
+    au2StatusAsk: svg(
+      per(26,44,9,L)
+     +mtx(16,62,7,3,3)
+     +'<rect x="18" y="98" width="18" height="24" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="#fff" stroke="'+D+'" stroke-width="2.5">'
+     +'<rect x="50" y="36" width="98" height="18" rx="9"/><rect x="50" y="62" width="98" height="18" rx="9"/>'
+     +'<rect x="50" y="101" width="98" height="18" rx="9"/></g>'
+     +'<g fill="none" stroke="'+D+'" stroke-width="2" stroke-dasharray="7 6">'
+     +'<path d="M62 45 h74"/><path d="M62 71 h74"/><path d="M62 110 h74"/></g>'
+     +qb(172,71)),
+
+    /* 21 Anita：班長訓練中、技能矩陣更新中、考核紀錄還沒齊 */
+    au2InProgress: svg(
+      per(26,44,9,L)
+     +mtx(16,62,7,3,3)
+     +'<rect x="18" y="98" width="18" height="24" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<g fill="#fff" stroke="'+D+'" stroke-width="2.5">'
+     +'<rect x="50" y="36" width="126" height="18" rx="9"/><rect x="50" y="62" width="126" height="18" rx="9"/>'
+     +'<rect x="50" y="101" width="126" height="18" rx="9"/></g>'
+     +'<rect x="53" y="39" width="86" height="12" rx="6" fill="'+A+'"/>'
+     +'<rect x="53" y="65" width="60" height="12" rx="6" fill="'+A+'"/>'
+     +'<rect x="53" y="104" width="24" height="12" rx="6" fill="'+R+'"/>'),
+
+    /* 22 Tom：10/30 之前要完成哪些？ */
+    au2Oct30Ask: svg(
+      '<path d="M24 56 v-16 a10 10 0 0 1 10 -10 h96 a10 10 0 0 1 10 10 v16 z" fill="'+A+'" '+st+'/>'
+     +'<path d="M24 56 v58 a10 10 0 0 0 10 10 h96 a10 10 0 0 0 10 -10 V56 z" fill="#fff" '+st+'/>'
+     +'<g stroke="'+D+'" stroke-width="3" stroke-linecap="round"><path d="M52 20 v14"/><path d="M114 20 v14"/></g>'
+     +'<g fill="'+L+'" stroke="'+D+'" stroke-width="1.6">'
+     +'<rect x="36" y="66" width="16" height="13" rx="2"/><rect x="58" y="66" width="16" height="13" rx="2"/>'
+     +'<rect x="80" y="66" width="16" height="13" rx="2"/><rect x="102" y="66" width="16" height="13" rx="2"/>'
+     +'<rect x="36" y="85" width="16" height="13" rx="2"/><rect x="58" y="85" width="16" height="13" rx="2"/>'
+     +'<rect x="80" y="85" width="16" height="13" rx="2"/><rect x="102" y="85" width="16" height="13" rx="2"/>'
+     +'<rect x="36" y="104" width="16" height="13" rx="2"/><rect x="58" y="104" width="16" height="13" rx="2"/></g>'
+     +'<circle cx="88" cy="110" r="13" fill="none" stroke="'+A+'" stroke-width="3.5"/>'
+     +qb(170,36)),
+
+    /* 23 Anita：製造另外提供一、二、三部的技能矩陣 */
+    au2ThreeDepts: svg(
+      '<rect x="8" y="40" width="56" height="76" rx="8" fill="'+L+'" '+st+'/>'
+     +'<rect x="72" y="40" width="56" height="76" rx="8" fill="#fff" '+st+'/>'
+     +'<rect x="136" y="40" width="56" height="76" rx="8" fill="'+L+'" '+st+'/>'
+     +pill(23,26,26,22,'1',A,'#fff',14)
+     +pill(87,26,26,22,'2',A,'#fff',14)
+     +pill(151,26,26,22,'3',A,'#fff',14)
+     +mtx(18,62,11,4,3)+mtx(82,62,11,4,3)+mtx(146,62,11,4,3)),
+
+    /* 24 Tom：操作員都已經合格了嗎？ */
+    au2QualifiedAsk: svg(
+      '<rect x="10" y="40" width="40" height="60" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="58" y="40" width="40" height="60" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="106" y="40" width="40" height="60" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="154" y="40" width="40" height="60" rx="6" fill="#fff" '+st+'/>'
+     +per(30,60,10,L)+per(78,60,10,L)+per(126,60,10,L)+per(174,60,10,L)
+     +chk(22,88,20,B)+chk(70,88,20,B)
+     +'<g fill="'+C+'" stroke="'+D+'" stroke-width="2.5">'
+     +'<rect x="118" y="82" width="16" height="14" rx="3"/><rect x="166" y="82" width="16" height="14" rx="3"/></g>'
+     +qb(100,126)),
+
+    /* 25 Anita：考核紀錄還不齊，不能說每個人都通過 */
+    au2RecordsGap: svg(
+      '<rect x="18" y="26" width="164" height="96" rx="8" fill="#fff" '+st+'/>'
+     +'<rect x="22" y="30" width="156" height="20" rx="5" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<g stroke="'+D+'" stroke-width="2" stroke-linecap="round">'
+     +'<path d="M74 50 v68"/><path d="M126 50 v68"/><path d="M22 74 h156"/><path d="M22 98 h156"/></g>'
+     +chk(38,62,20,B)+chk(90,62,20,B)+chk(38,86,20,B)
+     +'<g fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5">'
+     +'<rect x="130" y="54" width="44" height="16" rx="4"/><rect x="78" y="102" width="44" height="12" rx="4"/></g>')
 
   });
 })();
