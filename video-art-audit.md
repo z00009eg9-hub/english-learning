@@ -1,23 +1,21 @@
 # 影片左圖盤點
 
-- 有場景的課：87；場景句 1299；不同圖 1201；重複格 98；相鄰同圖 71
-- 圖庫 744 張；場景用到的專屬圖 730 張；通用小圖示佔 266 個場景格；沒被用過的專屬圖 14 張
+- 有場景的課：87；場景句 1299；不同圖 1209；重複格 90；相鄰同圖 64
+- 圖庫 754 張；場景用到的專屬圖 740 張；通用小圖示佔 264 個場景格；沒被用過的專屬圖 14 張
 - 指向不存在圖庫的 art：無
-- **完全合格的課（重複 0 且無通用圖示）：42 / 87；還要做 45 課**
+- **完全合格的課（重複 0 且無通用圖示）：44 / 87；還要做 43 課**
 
 | 級別 | 課數 | 重複格合計 |
 |---|---|---|
 | 重複 10～+ | 0 | 0 |
 | 重複 5～9 | 0 | 0 |
-| 重複 1～4 | 44 | 98 |
-| 重複 0 | 43 | 0 |
+| 重複 1～4 | 42 | 90 |
+| 重複 0 | 45 | 0 |
 
 ## 待辦明細（重複格多的在前）
 
 | 課 | 日期 | 標題 | 場景句 | 不同圖 | 重複格 | 相鄰同圖 | 單圖最多次 | 通用圖示格 |
 |---|---|---|---|---|---|---|---|---|
-| bk20260922 | 2026-09-22 | 職場安全與紓壓英文 | 16 | 12 | 4 | 3 | 3 | 2 |
-| bk20251218 | 2025-12-18 | 居家修繕與服務 | 14 | 10 | 4 | 4 | 2 | 0 |
 | bk20260730 | 2026-07-30 | 樂觀悲觀與 Hugh Laurie 閱讀 | 15 | 12 | 3 | 2 | 2 | 10 |
 | bk20260407 | 2026-04-07 | 合租公寓生活 | 15 | 12 | 3 | 3 | 2 | 9 |
 | bk20260903 | 2026-09-03 | 辦公室難熬的一天與紓壓用語 | 16 | 13 | 3 | 3 | 2 | 8 |
@@ -63,20 +61,6 @@
 | bk20251202 | 2025-12-02 | 感恩節 | 14 | 14 | 0 | 0 | 1 | 4 |
 
 ## 每課要換圖的句子
-
-### bk20260922 職場安全與紓壓英文（重複 4 格、通用圖示 2 格）
-- #5 [gate] 重複：Yep. One more thing — visitors are not allowed to take photos. Securit
-- #9 [beltPulleyInstall] 重複：They install the controller and belt pulley onto the frame and run the
-- #12 [clipboard] 重複：We follow the work instructions and check it according to the specific
-- #14 [warning] 通用圖示：We disassemble it, pull the defective unit, and take corrective action
-- #16 [music] 通用圖示：Humidity. Fixing it put us under a lot of stress that week — I listene
-- #17 [clipboard] 重複：Ha, I hear you. Thanks, Anita.
-
-### bk20251218 居家修繕與服務（重複 4 格、通用圖示 0 格）
-- #4 [leakingPipe] 重複：A water pipe burst while we were asleep. Nobody heard it.
-- #6 [cloggedDrain] 重複：No. The drain was clogged with hair and grease, so we had to mop.
-- #10 [radiatorFins] 重複：The knob got stuck on low, so the room never gets warm.
-- #13 [tireLosingAir] 重複：I can lend you a pump. Pressure's probably just low.
 
 ### bk20260730 樂觀悲觀與 Hugh Laurie 閱讀（重複 3 格、通用圖示 10 格）
 - #2 [plane] 通用圖示：Welcome back, Anita! How was the trip?
