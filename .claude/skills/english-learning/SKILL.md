@@ -1315,6 +1315,7 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
      `grammarTitle`/`extraTitle`/`summaryTitle`…）列出來，與 Doc 的章節編號 I、II、III… 逐一對照。
      課本有、Doc 沒有的一律刪掉；編號對不上就停下來問，不要自己補內容。
 2. **轉成 lesson 物件**：加進 `D:\english-learning\b2lab\public\data-book.js` 的 `window.BOOK.lessons` 陣列（附加在陣列尾端即可，執行時會依 date 排序）。
+   - ⚠ **封面必須是線稿（2026-10-09 使用者指定）**：目錄卡片縮圖優先用閱讀文章的五圓插圖；**沒有閱讀文章的課一定要加 `iconSvg`**（96×96 線稿圓形圖示，仿其他課），不可只留 `icon` emoji。推送前在本機課本目錄確認縮圖不是彩色 emoji。
    - **內容不增不減**，逐字取自 Doc；schema 參考檔內 `bk20260813`（最完整範例）。
    - 常用欄位：`id`（bk+YYYYMMDD，同日兩份加 a/b）、`icon`（貼題 emoji）、`date`、`doc`（Google Doc 連結）、`title`/`titleCn`/`topics`、`hwTitle`+`hw[]`（n/wrong/fix/ok/cn/pat/note）、`vocabTitle`+`vocab[]`（w/star/ipa/pos/cn/ex/exCn）、`vocab2`/`vocabReview`、`phrasesTitle`+`phrases[]`（p/cn/ex/exCn）、`colloc[]`（p/def/defCn/cn）、`grammarTitle`+`grammar[]`（k/title/pat|patLabel/pts[]/exs[{tag,en,cn}]）、`cmpTitle`+`cmp[]`+`cmpWarn`、`reading[]`（bar/title/titleCn/paras[{en,cn}]/questions[{q,qCn,a,aCn}]/sumEn[]/sumCn[]）、`extraTitle`+`extra[]`（title+exs）、`extraVocabTitle`+`extraVocab[]`（k/en/cn）、`discussionTitle`+`discussion[]`（q/qCn/a/aCn）、`summaryTitle`+`summary[]`（k/v）。
    - 渲染器沒有的區塊會自動跳過，不必硬湊；區塊順序固定為 hw→vocab→phrases→grammar→cmp→reading→extra→extraVocab→discussion→summary，對不上 Doc 順序沒關係，標題可自訂。
