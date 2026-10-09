@@ -32853,7 +32853,7 @@ window.VIDEO["bk20261008"] = {
   var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
   var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
   /* 線稿屬性組：thw(w) 指定線寬，th 是預設 2.5。
-     要別的線寬一定要用 thw(w)，不可寫 '+th+' stroke-width="3"：
+     要別的線寬一定要用 thw(w)，不可在 th 後面再疊一個 stroke-width：
      同一元素出現兩個 stroke-width，parser 只取第一個，後面那個會靜默失效。 */
   var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
   var th=thw(2.5);
@@ -33743,7 +33743,11 @@ window.VIDEO["bk20261008"] = {
 (function(){
   var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
   var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
-  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  /* 線稿屬性組：thw(w) 指定線寬，th 是預設 2.5。
+     要別的線寬一定要用 thw(w)，不可在 th 後面再疊一個 stroke-width：同一元素兩個
+     stroke-width，parser 只取第一個，後面指定的會靜默失效。 */
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
   var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
   var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
   /* 提問句的共同記號（與 au01／au02／au03 一致） */
@@ -33775,7 +33779,7 @@ window.VIDEO["bk20261008"] = {
 
     /* 2 Tom：你英文進步好多，什麼時候開始的？（提問） */
     va20260324_01: svg(
-      '<path d="M18 126 H176 M18 126 V22" '+th+' stroke-width="3"/>'
+      '<path d="M18 126 H176 M18 126 V22" '+thw(3)+'/>'
      +'<g '+st+' fill="'+L+'">'
      +'<rect x="30" y="100" width="22" height="26" rx="3"/>'
      +'<rect x="62" y="80" width="22" height="46" rx="3"/>'
@@ -33850,7 +33854,7 @@ window.VIDEO["bk20261008"] = {
       '<path d="M100 10 V140" stroke="'+D+'" stroke-width="3" stroke-dasharray="8 6" stroke-linecap="round"/>'
      +'<rect x="12" y="24" width="76" height="52" rx="5" fill="'+D+'"/>'
      +'<path d="M44 38 l20 12 l-20 12 z" fill="'+A+'"/>'
-     +'<path d="M50 76 v12 M32 100 h36" '+th+' stroke-width="3"/>'
+     +'<path d="M50 76 v12 M32 100 h36" '+thw(3)+'/>'
      +per(50,112,13,'#fff')
      +'<rect x="112" y="24" width="76" height="60" rx="4" fill="#fff" '+st+'/>'
      +'<path d="M112 40 h76" stroke="'+A+'" stroke-width="5"/>'
@@ -33858,7 +33862,7 @@ window.VIDEO["bk20261008"] = {
      +'<path d="M120 52 h26 M120 62 h26 M120 72 h18"/>'
      +'<path d="M156 52 h24 M156 62 h24 M156 72 h16"/></g>'
      +per(150,112,13,'#fff')
-     +'<path d="M132 100 h36" '+th+' stroke-width="3"/>'),
+     +'<path d="M132 100 h36" '+thw(3)+'/>'),
 
     /* 12 Tom：我通常開車時聽 podcast */
     va20260324_08: svg(
@@ -33913,7 +33917,11 @@ window.VIDEO["bk20261008"] = {
 (function(){
   var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
   var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
-  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  /* 線稿屬性組：thw(w) 指定線寬，th 是預設 2.5。
+     要別的線寬一定要用 thw(w)，不可在 th 後面再疊一個 stroke-width：同一元素兩個
+     stroke-width，parser 只取第一個，後面指定的會靜默失效。 */
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
   var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
   var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
   var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
@@ -33956,17 +33964,17 @@ window.VIDEO["bk20261008"] = {
     /* 5 Anita：覺得發音很難，別人常聽不懂（糾結的語音泡泡＋聽者困惑） */
     va20260326_02: svg(
       per(34,34,13,L)
-     +'<path d="M20 112 V72 a14 14 0 0 1 28 0 v40" '+th+' stroke-width="3"/>'
+     +'<path d="M20 112 V72 a14 14 0 0 1 28 0 v40" '+thw(3)+'/>'
      +'<path d="M60 36 h62 a8 8 0 0 1 8 8 v34 a8 8 0 0 1 -8 8 H76 l-12 12 v-12 h-4 a8 8 0 0 1 -8 -8 V44 a8 8 0 0 1 8 -8 z" fill="#fff" '+st+'/>'
      +'<path d="M66 68 c8 -18 16 10 24 -8 c6 -14 -8 -4 -4 10 c4 12 18 -6 24 4" fill="none" stroke="'+R+'" stroke-width="3" stroke-linecap="round"/>'
      +per(166,34,13,C)
-     +'<path d="M152 112 V72 a14 14 0 0 1 28 0 v40" '+th+' stroke-width="3"/>'
+     +'<path d="M152 112 V72 a14 14 0 0 1 28 0 v40" '+thw(3)+'/>'
      +txt(166,42,'?',22,D)
      +ex(140,100,22,R)),
 
     /* 6 Tom：聽起來很挫折，那後來怎麼改變的？（提問＋顛簸起伏的曲線） */
     va20260326_03: svg(
-      '<path d="M16 120 H150 M16 120 V26" '+th+' stroke-width="3.5"/>'
+      '<path d="M16 120 H150 M16 120 V26" '+thw(3.5)+'/>'
      +'<path d="M24 100 c12 22 20 -30 32 -6 c10 20 16 -22 28 -2 c10 16 18 -18 28 -4" fill="none" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/>'
      +'<g stroke="'+D+'" stroke-width="2.5" stroke-linecap="round">'
      +'<path d="M16 50 h8"/><path d="M16 74 h8"/><path d="M16 98 h8"/></g>'
@@ -33975,7 +33983,7 @@ window.VIDEO["bk20261008"] = {
     /* 7 Anita：一段時間後發音進步，能有效表達基本想法（清楚的聲波＋勾） */
     va20260326_04: svg(
       per(44,40,15,L)
-     +'<path d="M28 118 V80 a16 16 0 0 1 32 0 v38" '+th+' stroke-width="3"/>'
+     +'<path d="M28 118 V80 a16 16 0 0 1 32 0 v38" '+thw(3)+'/>'
      +'<ellipse cx="44" cy="52" rx="8" ry="5" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
      +wave(72,52,4,A)
      +chk(132,96,34,A)),
@@ -33991,14 +33999,14 @@ window.VIDEO["bk20261008"] = {
 
     /* 9 Anita：明顯感覺在進步，非常鼓舞（階梯式上升＋星星） */
     va20260326_06: svg(
-      '<path d="M14 124 H160 M14 124 V22" '+th+' stroke-width="3.5"/>'
+      '<path d="M14 124 H160 M14 124 V22" '+thw(3.5)+'/>'
      +'<path d="M22 114 h26 v-22 h26 v-24 h26 v-26 h26" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
      +'<g fill="'+A+'" stroke="'+D+'" stroke-width="2"><circle cx="48" cy="92" r="5"/><circle cx="74" cy="68" r="5"/><circle cx="100" cy="42" r="5"/></g>'
      +'<path d="M172 44 l7 -16 l7 16 l17 7 l-17 7 l-7 16 l-7 -16 l-17 -7 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'),
 
     /* 10 Tom：所以發音進步了，之後會一直越來越輕鬆嗎？（提問＋實線轉虛線向上） */
     va20260326_07: svg(
-      '<path d="M16 120 H154 M16 120 V26" '+th+' stroke-width="3.5"/>'
+      '<path d="M16 120 H154 M16 120 V26" '+thw(3.5)+'/>'
      +'<path d="M24 108 l34 -26 l24 -20" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
      +'<path d="M82 62 l30 -16 l28 -12" fill="none" stroke="'+D+'" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 7"/>'
      +'<circle cx="82" cy="62" r="6" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
@@ -34006,7 +34014,7 @@ window.VIDEO["bk20261008"] = {
 
     /* 11 Anita：到了中級，進步變慢（曲線在高處走平＋小刻度） */
     va20260326_08: svg(
-      '<path d="M14 122 H186 M14 122 V22" '+th+' stroke-width="3.5"/>'
+      '<path d="M14 122 H186 M14 122 V22" '+thw(3.5)+'/>'
      +'<path d="M22 112 l26 -26 l22 -22" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
      +'<path d="M70 64 c26 -4 48 -2 74 -6 c16 -2 26 -2 34 -4" fill="none" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
      +'<path d="M70 64 H180" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 6"/>'
@@ -34753,7 +34761,11 @@ window.VIDEO["bk20261008"] = {
 (function(){
   var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
   var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
-  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  /* 線稿屬性組：thw(w) 指定線寬，th 是預設 2.5。
+     要別的線寬一定要用 thw(w)，不可在 th 後面再疊一個 stroke-width：同一元素兩個
+     stroke-width，parser 只取第一個，後面指定的會靜默失效。 */
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
   var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
   var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
   var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
@@ -34792,13 +34804,13 @@ window.VIDEO["bk20261008"] = {
      +rain(38,70,9,13,46,-12,4)
      +'<g stroke="'+A+'" stroke-width="4" fill="none" stroke-linecap="round">'
      +'<path d="M120 96 c16 -8 30 4 46 -4"/><path d="M128 114 c16 -8 30 4 44 -4"/></g>'
-     +'<path d="M176 142 C174 126 182 116 194 110" '+th+' stroke-width="4"/>'
+     +'<path d="M176 142 C174 126 182 116 194 110" '+thw(4)+'/>'
      +'<path d="M180 124 l14 -8 M182 134 l12 -6" '+th+'/>'),
 
     /* 6 Anita：暴風把街上的電線吹斷，十點就停電 */
     va20260616_02: svg(
       '<path d="M30 140 L58 50" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'
-     +'<path d="M36 76 l34 -10 M40 60 l30 -8" '+th+' stroke-width="3"/>'
+     +'<path d="M36 76 l34 -10 M40 60 l30 -8" '+thw(3)+'/>'
      +'<path d="M70 62 l20 16 l-14 10 l22 12" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 0"/>'
      +'<g fill="'+A+'"><path d="M92 86 l12 -8 l-4 10 l12 -2 l-16 16 l4 -12 z"/></g>'
      +'<path d="M122 140 v-54 l34 -24 l34 24 v54 z" fill="'+C+'" '+st+'/>'
@@ -35284,7 +35296,11 @@ window.VIDEO["bk20261008"] = {
 (function(){
   var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
   var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
-  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  /* 線稿屬性組：thw(w) 指定線寬，th 是預設 2.5。
+     要別的線寬一定要用 thw(w)，不可在 th 後面再疊一個 stroke-width：同一元素兩個
+     stroke-width，parser 只取第一個，後面指定的會靜默失效。 */
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
   var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
   var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
   var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
@@ -35330,7 +35346,7 @@ window.VIDEO["bk20261008"] = {
 
     /* 4 Tom：有看到櫻花嗎？（提問＋櫻花枝） */
     va20260625_02: svg(
-      '<path d="M16 130 C40 104 44 72 36 40" '+th+' stroke-width="4"/>'
+      '<path d="M16 130 C40 104 44 72 36 40" '+thw(4)+'/>'
      +'<path d="M36 76 C56 70 68 58 74 44 M34 54 C52 50 62 42 68 30" '+th+'/>'
      +sakura(74,40,13)
      +sakura(68,26,10)
@@ -35364,7 +35380,7 @@ window.VIDEO["bk20261008"] = {
 
     /* 9 Anita：背包忘在咖啡店，店員幫她收好（椅上背包＋咖啡杯＋勾） */
     va20260625_05: svg(
-      '<path d="M34 128 V64 a8 8 0 0 1 8 -8 h30 a8 8 0 0 1 8 8 v64" '+th+' stroke-width="3.5"/>'
+      '<path d="M34 128 V64 a8 8 0 0 1 8 -8 h30 a8 8 0 0 1 8 8 v64" '+thw(3.5)+'/>'
      +'<path d="M30 92 h58" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
      +'<rect x="88" y="52" width="46" height="56" rx="12" fill="'+L+'" '+st+'/>'
      +'<path d="M100 52 v-8 a11 11 0 0 1 22 0 v8" '+th+'/>'
@@ -35379,7 +35395,7 @@ window.VIDEO["bk20261008"] = {
       '<path d="M26 60 L96 24 L166 60" fill="'+L+'" '+st+'/>'
      +'<path d="M38 60 h116 v60 H38 z" fill="#fff" '+st+'/>'
      +'<path d="M20 62 h152" stroke="'+A+'" stroke-width="6" stroke-linecap="round"/>'
-     +'<path d="M80 120 V84 h32 v36" '+th+' stroke-width="3"/>'
+     +'<path d="M80 120 V84 h32 v36" '+thw(3)+'/>'
      +'<path d="M56 120 V88 M136 120 V88" '+th+'/>'
      +'<g stroke="'+B+'" stroke-width="3" stroke-linecap="round">'
      +'<path d="M14 84 l-6 16"/><path d="M26 104 l-6 16"/><path d="M182 76 l-6 16"/><path d="M192 100 l-6 16"/>'
@@ -35390,20 +35406,20 @@ window.VIDEO["bk20261008"] = {
     va20260625_07: svg(
       '<path d="M18 92 L96 70 L66 36 l16 -4 l44 30 l40 -8 a9 9 0 0 1 4 18 l-120 34 z" fill="'+C+'" '+st+'/>'
      +'<circle cx="54" cy="36" r="24" fill="#fff" '+st+'/>'
-     +'<path d="M54 36 V20 M54 36 l12 8" '+th+' stroke="'+R+'" stroke-width="3.5"/>'
+     +'<path d="M54 36 V20 M54 36 l12 8" fill="none" stroke="'+R+'" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>'
      +'<circle cx="54" cy="36" r="3.5" fill="'+D+'"/>'
      +qb(160,110)),
 
     /* 14 Anita：在機場滯留六小時，暴風雨下了一整天（候機椅＋6 小時＋雨） */
     va20260625_08: svg(
-      '<path d="M12 120 V98 h92 v22" '+th+' stroke-width="3.5"/>'
-     +'<path d="M12 98 V74 h92" '+th+' stroke-width="3.5"/>'
+      '<path d="M12 120 V98 h92 v22" '+thw(3.5)+'/>'
+     +'<path d="M12 98 V74 h92" '+thw(3.5)+'/>'
      +'<path d="M46 98 V74 M80 98 V74" stroke="'+D+'" stroke-width="2.5"/>'
      +per(28,56,10,L)
      +per(64,56,10,C)
      +'<rect x="108" y="104" width="30" height="24" rx="4" fill="'+C+'" '+st+'/>'
      +'<circle cx="150" cy="54" r="30" fill="#fff" '+st+'/>'
-     +'<path d="M150 54 V32 M150 54 l18 8" '+th+' stroke="'+A+'" stroke-width="4"/>'
+     +'<path d="M150 54 V32 M150 54 l18 8" fill="none" stroke="'+A+'" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>'
      +'<circle cx="150" cy="54" r="4" fill="'+D+'"/>'
      +pill(118,96,64,26,'6 h',A,'#fff',15)),
 
@@ -35604,7 +35620,11 @@ window.VIDEO["bk20261008"] = {
 (function(){
   var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
   var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
-  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  /* 線稿屬性組：thw(w) 指定線寬，th 是預設 2.5。
+     要別的線寬一定要用 thw(w)，不可在 th 後面再疊一個 stroke-width：同一元素兩個
+     stroke-width，parser 只取第一個，後面指定的會靜默失效。 */
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
   var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
   var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
   /* 提問句的共同記號（與 au01／au02／au03 一致） */
@@ -35696,7 +35716,7 @@ window.VIDEO["bk20261008"] = {
      +'<path d="M96 54 a34 34 0 0 1 -14 24" fill="none" stroke="'+A+'" stroke-width="3.4" stroke-dasharray="7 6" stroke-linecap="round"/>'
      +'<path d="M94 82 l-14 -6 l2 14 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
      +'<rect x="112" y="76" width="74" height="12" rx="4" fill="#fff" '+st+'/>'
-     +'<path d="M120 88 v22 M178 88 v22" '+th+' stroke-width="3"/>'
+     +'<path d="M120 88 v22 M178 88 v22" '+thw(3)+'/>'
      +'<path d="M112 110 h74" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
      +ex(149,56,32,R)),
 
@@ -35769,7 +35789,11 @@ window.VIDEO["bk20261008"] = {
 (function(){
   var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
   var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
-  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  /* 線稿屬性組：thw(w) 指定線寬，th 是預設 2.5。
+     要別的線寬一定要用 thw(w)，不可在 th 後面再疊一個 stroke-width：同一元素兩個
+     stroke-width，parser 只取第一個，後面指定的會靜默失效。 */
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
   var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
   var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
   /* 提問句的共同記號 */
@@ -35791,7 +35815,7 @@ window.VIDEO["bk20261008"] = {
     return s; };
   /* 行李箱：箱體＋拉桿＋輪子 */
   var bag=function(x,y,w,h,f){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="7" fill="'+f+'" '+st+'/>'
-     +'<path d="M'+(x+w*0.3)+' '+y+' v-12 h'+(w*0.4)+' v12" '+th+' stroke-width="3"/>'
+     +'<path d="M'+(x+w*0.3)+' '+y+' v-12 h'+(w*0.4)+' v12" '+thw(3)+'/>'
      +'<path d="M'+x+' '+(y+h*0.32)+' h'+w+'" stroke="'+A+'" stroke-width="5"/>'
      +'<circle cx="'+(x+w*0.22)+'" cy="'+(y+h+6)+'" r="6" fill="'+D+'"/>'
      +'<circle cx="'+(x+w*0.78)+'" cy="'+(y+h+6)+'" r="6" fill="'+D+'"/>'; };
@@ -35863,7 +35887,7 @@ window.VIDEO["bk20261008"] = {
     /* 12 地勤：出差嗎？ —— 公事包 */
     va20260721_07: svg(
       '<rect x="28" y="60" width="106" height="66" rx="9" fill="'+C+'" '+st+'/>'
-     +'<path d="M62 60 v-14 h38 v14" '+th+' stroke-width="3"/>'
+     +'<path d="M62 60 v-14 h38 v14" '+thw(3)+'/>'
      +'<path d="M28 86 h38 M96 86 h38" stroke="'+D+'" stroke-width="2.5"/>'
      +'<rect x="68" y="84" width="26" height="18" rx="4" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
      +'<path d="M46 116 h18" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
@@ -35912,7 +35936,11 @@ window.VIDEO["bk20261008"] = {
 (function(){
   var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
   var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
-  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  /* 線稿屬性組：thw(w) 指定線寬，th 是預設 2.5。
+     要別的線寬一定要用 thw(w)，不可在 th 後面再疊一個 stroke-width：同一元素兩個
+     stroke-width，parser 只取第一個，後面指定的會靜默失效。 */
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
   var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
   var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
   /* 提問句的共同記號（與 au01／au02／au03 一致） */
@@ -35964,7 +35992,7 @@ window.VIDEO["bk20261008"] = {
      +'<circle cx="52" cy="82" r="13" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
      +txt(52,89,'1',16,'#fff')
      +per(154,72,15,'#fff')
-     +'<path d="M132 76 l-14 -22 M176 76 l14 -22" '+th+' stroke-width="3"/>'
+     +'<path d="M132 76 l-14 -22 M176 76 l14 -22" '+thw(3)+'/>'
      +'<path d="M140 36 l5 10 l11 1 l-8 8 l2 11 l-10 -6 l-10 6 l2 -11 l-8 -8 l11 -1 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'),
 
     /* 6 Anita：租電動車繞鄉間騎，風景很美 */
@@ -35974,12 +36002,12 @@ window.VIDEO["bk20261008"] = {
      +'<path d="M14 50 h22 M46 50 h30 M86 50 h24 M120 50 h30"/></g>'
      +'<path d="M10 124 h180" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
      +'<g fill="none" stroke="'+D+'" stroke-width="3"><circle cx="48" cy="106" r="18"/><circle cx="142" cy="106" r="18"/></g>'
-     +'<path d="M48 106 L82 106 L104 74 L126 106 M104 74 h22 M142 106 L126 82" '+th+' stroke-width="3"/>'
+     +'<path d="M48 106 L82 106 L104 74 L126 106 M104 74 h22 M142 106 L126 82" '+thw(3)+'/>'
      +'<path d="M118 78 h20" stroke="'+D+'" stroke-width="3.4" stroke-linecap="round"/>'
      +'<rect x="78" y="88" width="24" height="18" rx="3" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
      +'<path d="M92 91 l-7 8 h6 l-3 7 l9 -10 h-6 z" fill="#fff"/>'
      +per(108,52,11,'#fff')
-     +'<path d="M112 84 l16 -8" '+th+' stroke-width="3"/>'),
+     +'<path d="M112 84 l16 -8" '+thw(3)+'/>'),
 
     /* 7 船家：稻田和石灰岩山。你拍了很多照片嗎？（提問） */
     va20260728_04: svg(
@@ -36225,7 +36253,11 @@ window.VIDEO["bk20261008"] = {
 (function(){
   var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
   var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
-  var th='stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"';
+  /* 線稿屬性組：thw(w) 指定線寬，th 是預設 2.5。
+     要別的線寬一定要用 thw(w)，不可在 th 後面再疊一個 stroke-width：同一元素兩個
+     stroke-width，parser 只取第一個，後面指定的會靜默失效。 */
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
   var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
   var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
   var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
@@ -36251,7 +36283,7 @@ window.VIDEO["bk20261008"] = {
     return '<g transform="translate('+x+' '+y+') scale('+s+')">'
      +'<path d="M6 70 h96 l-10 20 H16 z" fill="'+C+'" '+st+'/>'
      +'<path d="M18 74 h74" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
-     +'<path d="M94 70 V22 h-34" '+th+' stroke-width="3.5"/>'
+     +'<path d="M94 70 V22 h-34" '+thw(3.5)+'/>'
      +'<rect x="52" y="4" width="46" height="24" rx="4" fill="#fff" '+st+'/>'
      +'</g>'; };
 
@@ -36278,7 +36310,7 @@ window.VIDEO["bk20261008"] = {
     va20261008_03: svg(
       '<path d="M22 44 a10 10 0 0 1 10 -10 h8 l8 20 l-10 8 c6 14 18 26 32 32 l8 -10 l20 8 v8 a10 10 0 0 1 -10 10 C50 110 22 80 22 44 z" fill="'+L+'" '+st+'/>'
      +per(154,34,13,C)
-     +'<path d="M140 94 V72 a14 14 0 0 1 28 0 v22" '+th+' stroke-width="3"/>'
+     +'<path d="M140 94 V72 a14 14 0 0 1 28 0 v22" '+thw(3)+'/>'
      +'<rect x="128" y="96" width="56" height="34" rx="5" fill="'+A+'" '+st+'/>'
      +'<path d="M146 96 v-8 h20 v8" '+th+'/>'
      +'<path d="M128 112 h56" stroke="'+D+'" stroke-width="2.5"/>'
