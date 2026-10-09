@@ -1,23 +1,21 @@
 # 影片左圖盤點
 
-- 有場景的課：87；場景句 1299；不同圖 1209；重複格 90；相鄰同圖 64
-- 圖庫 754 張；場景用到的專屬圖 740 張；通用小圖示佔 264 個場景格；沒被用過的專屬圖 14 張
+- 有場景的課：87；場景句 1299；不同圖 1215；重複格 84；相鄰同圖 59
+- 圖庫 776 張；場景用到的專屬圖 762 張；通用小圖示佔 245 個場景格；沒被用過的專屬圖 14 張
 - 指向不存在圖庫的 art：無
-- **完全合格的課（重複 0 且無通用圖示）：44 / 87；還要做 43 課**
+- **完全合格的課（重複 0 且無通用圖示）：46 / 87；還要做 41 課**
 
 | 級別 | 課數 | 重複格合計 |
 |---|---|---|
 | 重複 10～+ | 0 | 0 |
 | 重複 5～9 | 0 | 0 |
-| 重複 1～4 | 42 | 90 |
-| 重複 0 | 45 | 0 |
+| 重複 1～4 | 40 | 84 |
+| 重複 0 | 47 | 0 |
 
 ## 待辦明細（重複格多的在前）
 
 | 課 | 日期 | 標題 | 場景句 | 不同圖 | 重複格 | 相鄰同圖 | 單圖最多次 | 通用圖示格 |
 |---|---|---|---|---|---|---|---|---|
-| bk20260730 | 2026-07-30 | 樂觀悲觀與 Hugh Laurie 閱讀 | 15 | 12 | 3 | 2 | 2 | 10 |
-| bk20260407 | 2026-04-07 | 合租公寓生活 | 15 | 12 | 3 | 3 | 2 | 9 |
 | bk20260903 | 2026-09-03 | 辦公室難熬的一天與紓壓用語 | 16 | 13 | 3 | 3 | 2 | 8 |
 | bk20260106a | 2026-01-06 | 房東與房客 | 15 | 12 | 3 | 2 | 2 | 8 |
 | bk20260120a | 2026-01-20 | 整形手術 | 14 | 11 | 3 | 1 | 2 | 8 |
@@ -61,32 +59,6 @@
 | bk20251202 | 2025-12-02 | 感恩節 | 14 | 14 | 0 | 0 | 1 | 4 |
 
 ## 每課要換圖的句子
-
-### bk20260730 樂觀悲觀與 Hugh Laurie 閱讀（重複 3 格、通用圖示 10 格）
-- #2 [plane] 通用圖示：Welcome back, Anita! How was the trip?
-- #3 [building] 通用圖示：Wonderful. Our guide took us through the old streets and told us a lot
-- #4 [cloudRain] 通用圖示：Was it sunny? You look a little red.
-- #6 [warning] 通用圖示：Smart. Anything go wrong?
-- #8 [plane] 重複：Oh no. Did you realize before the plane took off?
-- #11 [halfGlass] 重複：I guess I'm an optimist. What about you, Tom — pessimist or optimist?
-- #12 [music] 通用圖示：Pessimist, like Hugh Laurie. He's a talented musician, but he never th
-- #13 [music] 重複：Really? I heard he's passionate about the blues.
-- #14 [smile] 通用圖示：He is. Maybe that's why he never feels blue for long.
-- #15 [food] 通用圖示：Ha! Anyway, it takes me five minutes to make filter coffee. Want some?
-- #16 [book] 通用圖示：Please. I spend 30 minutes drinking coffee and reading every morning.
-
-### bk20260407 合租公寓生活（重複 3 格、通用圖示 9 格）
-- #5 [routineClash] 重複：Like what?
-- #6 [music] 通用圖示：I prefer quiet mornings. Our other roommate blasts music while making 
-- #7 [talk] 通用圖示：So what do you do?
-- #8 [heart] 通用圖示：We talk it out. Negotiating these differences requires patience and cl
-- #9 [trash] 通用圖示：And household chores? Who takes out the trash, does the dishes?
-- #11 [choreChart] 重複：Some roommates create a schedule, while others rely on informal agreem
-- #12 [warning] 通用圖示：What if someone skips?
-- #13 [warning] 重複：When chores are ignored, tension can build fast.
-- #14 [check] 通用圖示：So set rules early and stick to them.
-- #15 [people] 通用圖示：Despite the challenges, I think I'll like the social side.
-- #16 [food] 通用圖示：You will. Cooking dinner together makes this more than a room — it's a
 
 ### bk20260903 辦公室難熬的一天與紓壓用語（重複 3 格、通用圖示 8 格）
 - #2 [clock] 通用圖示：Anita, you look tired. Rough day?
