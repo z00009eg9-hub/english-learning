@@ -6147,11 +6147,12 @@ function rwListHTML(){
    +'</div>'
    +(rwFormOn?rwFormHTML():'')
    +(list.length
-     ? '<div class="bkc-grid rw-grid" role="list">'+list.map(rwCardHTML).join('')+'</div>'
+     ? '<div class="bkc-grid rw-grid" role="list">'+(rwUsedThumbs={},list.map(rwCardHTML)).join('')+'</div>'
      : (rwFormOn?'':'<div class="card"><div class="muted">還沒有教材。點右上「＋ 新增教材」，貼上影片分享內容就能開始。</div></div>'));
   return h;
 }
 
+var rwUsedThumbs={};
 function rwCardHTML(l){
   /* 色條：分類＋國家；資訊列：程度・時間＋觀看原影片。不顯示平台名稱、不顯示進度狀態（沿用原本規則） */
   return lCard({click:"rwGo('"+l.id+"')", cat:[l.cat,l.country].filter(Boolean).join(' · '), thumb:rwThumb(l),
@@ -6164,7 +6165,11 @@ function rwThumb(l){
   const I=window.BOOK_ICONS||{};
   if(l.thumb&&I[l.thumb]) return iconThumb(I[l.thumb]);
   const L=RW_ICONLIB('#2b2118','#e8813a','#f7e3c9');
-  const k=(Array.isArray(l.icons)&&L[l.icons[0]])?l.icons[0]:({'交通':'road','職場':'briefcase','旅行':'plane'}[l.cat]||'house');
+  const fb=({'交通':'road','職場':'briefcase','旅行':'plane'}[l.cat]||'house');
+  const ks=(Array.isArray(l.icons)?l.icons:[]).filter(x=>L[x]);
+  /* 同一份清單內不重複：優先挑還沒被前面卡片用過的圖示 */
+  const k=ks.find(x=>!rwUsedThumbs[x])||(rwUsedThumbs[fb]?'':fb)||ks[0]||fb;
+  rwUsedThumbs[k]=1;
   return iconThumb(L[k]||'');
 }
 
