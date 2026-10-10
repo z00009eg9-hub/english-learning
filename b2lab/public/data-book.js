@@ -22035,7 +22035,7 @@ window.BOOK = {
     },
     {
      "w": "approval",
-     "ipa": "/əˈpruːvəl/",
+     "ipa": "/əˈpruːvl/",
      "pos": "n.",
      "cn": "核准",
      "ex": "The development checklist lacks management approval.",

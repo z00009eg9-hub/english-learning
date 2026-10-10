@@ -30185,7 +30185,7 @@ window.VIDEO.au04 = {
    "vis": {
     "type": "slide",
     "w": "approval",
-    "ipa": "/əˈpruːvəl/",
+    "ipa": "/əˈpruːvl/",
     "pos": "n.",
     "art": "check",
     "def": "approval n. — management approval.",
