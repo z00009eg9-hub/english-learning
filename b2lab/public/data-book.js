@@ -21952,6 +21952,315 @@ window.BOOK = {
       { "k": "頻率副詞", "en": "Regularly", "cn": "常、定期地" }
     ]
   },
+  /* ---- au04 Audit English IV — Development & Project Management ---- */
+  {
+   "id": "au04",
+   "icon": "🏭",
+   "date": "2026-10-12",
+   "title": "Audit English IV — Development & Project Management",
+   "titleCn": "稽核英文四｜開發與專案管理",
+   "topics": "稽核英文, 開發改善, 工程變更, 工程團隊, 台越安規分工, 安規文件, 專案時程, 量產問題追蹤, change, responsibility, progress, approval, closure",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "We have change notices, but the local bilingual procedure is missing. Product Development owns the action.",
+     "cn": "已有通知單，缺當地雙語規定，開發負責。",
+     "pat": "We have + 已有, but + 缺口 + is missing",
+     "note": "已有通知單，缺當地雙語規定，開發負責。常見錯誤：有表單就說流程完整。"
+    },
+    {
+     "n": 2,
+     "ok": "Taiwan leads product safety work, and Vietnam supports it. The plan does not show a complete local team.",
+     "cn": "台灣主導、越南協助；未顯示完整在地團隊。",
+     "pat": "A leads + 工作, and B supports it",
+     "note": "台灣主導、越南協助；未顯示完整在地團隊。常見錯誤：將支援當成在地能力。"
+    },
+    {
+     "n": 3,
+     "ok": "No. PDM storage and the review procedure are different items.",
+     "cn": "不是，PDM 存放與審核程序是不同項目。",
+     "pat": "A + and + B + are different items",
+     "note": "PDM 存放與審核程序是不同項目。常見錯誤：把存放當作核准。"
+    },
+    {
+     "n": 4,
+     "ok": "Taiwan provides the schedule. Vietnam updates actual progress and records missed targets.",
+     "cn": "台灣提供時程，越南更新實際進度並記錄未達目標。",
+     "pat": "A provides + 計畫. B updates + 實績",
+     "note": "台灣提供時程，越南更新實際進度並記錄未達目標。常見錯誤：只說計畫日期。"
+    },
+    {
+     "n": 5,
+     "cn": "缺管理層核准；填表不等於核准。",
+     "pat": "主詞 + lacks + 缺項",
+     "note": "缺管理層核准；填表不等於核准。常見錯誤：混淆文件完成與核准。",
+     "wrong": "The development checklist is approved because it is completed.",
+     "fix": "Management approval is missing. Completing the checklist is not the same as approval."
+    },
+    {
+     "n": 6,
+     "ok": "The development project owner tracks the issues. The named case is the BU/BR25VS production release notice.",
+     "cn": "開發專案負責人追蹤；指定案例為 BU/BR25VS 可量產通知書。",
+     "pat": "主詞 + tracks + 受詞 + through to closure",
+     "note": "開發專案負責人追蹤可量產通知書問題。常見錯誤：當成所有問題已結案。"
+    }
+   ],
+   "vocabTitle": "五個關鍵詞 Key Words",
+   "vocab": [
+    {
+     "w": "change",
+     "ipa": "/tʃeɪndʒ/",
+     "pos": "n.",
+     "cn": "變更",
+     "ex": "We have engineering change notices.",
+     "exCn": "我們已有設變通知單。（IA-5）"
+    },
+    {
+     "w": "responsibility",
+     "ipa": "/rɪˌspɑːnsəˈbɪləti/",
+     "pos": "n.",
+     "cn": "職責",
+     "ex": "The plan requires product safety team responsibilities to be documented.",
+     "exCn": "計畫要求列出安規團隊職掌。（IE-3）"
+    },
+    {
+     "w": "progress",
+     "ipa": "/ˈprɑːɡres/",
+     "pos": "n.",
+     "cn": "進度",
+     "ex": "Vietnam is to update the actual project progress.",
+     "exCn": "越南需更新專案實際進度。（IID-1）"
+    },
+    {
+     "w": "approval",
+     "ipa": "/əˈpruːvəl/",
+     "pos": "n.",
+     "cn": "核准",
+     "ex": "The development checklist lacks management approval.",
+     "exCn": "產品開發檢核表缺管理層核准。（IIA-2）"
+    },
+    {
+     "w": "closure",
+     "ipa": "/ˈkloʊʒɚ/",
+     "pos": "n.",
+     "cn": "結案",
+     "ex": "The project owner is to track launch issues to closure.",
+     "exCn": "專案負責人需追蹤量產問題至結案。（IID-3）"
+    }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "engineering change", "cn": "工程變更" },
+    { "p": "team responsibilities", "cn": "團隊職責" },
+    { "p": "actual progress", "cn": "實際進度" },
+    { "p": "management approval", "cn": "管理層核准" },
+    { "p": "track to closure", "cn": "追蹤至結案" },
+    { "p": "change control procedure", "cn": "變更管制程序" },
+    { "p": "role descriptions", "cn": "職掌說明" },
+    { "p": "backup arrangements", "cn": "代理安排" },
+    { "p": "product safety", "cn": "產品安規" },
+    { "p": "production release notice", "cn": "可量產通知書" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "IV-A",
+     "title": "We have X, but Y is still missing（已有但尚缺）",
+     "pat": "We have + 已有資料, but + 缺口 + is still missing",
+     "pts": [
+      "先交代已有的文件，再明確指出尚缺的程序。",
+      "不把通知單當成完整流程。",
+      "例：We have change notices, but the local procedure is still missing.（已有設變通知單，但當地規定仍缺。）"
+     ],
+     "ex": "We have change notices, but the local procedure is still missing.",
+     "exCn": "已有設變通知單，但當地規定仍缺。（IA-5）"
+    },
+    {
+     "k": "IV-B",
+     "title": "A leads X, and B provides support（明確分工）",
+     "pat": "A + 動詞, and B + 動詞",
+     "pts": [
+      "簡短說明兩地不同責任。",
+      "用兩個對等子句，一句一個角色。",
+      "例：Taiwan leads product safety work, and Vietnam provides support.（台灣主導安規，越南協助。）"
+     ],
+     "ex": "Taiwan leads product safety work, and Vietnam provides support.",
+     "exCn": "台灣主導安規，越南協助。（IE-3）"
+    },
+    {
+     "k": "IV-C",
+     "title": "We plan to + V + after + 事件（將採取的動作）",
+     "pat": "We plan to + 動詞原形 + after + 事件",
+     "pts": [
+      "說明待建立的對策，不宣稱已完成。",
+      "after 後接條件事件，表達先後順序。",
+      "例：We plan to document the local process after Vietnam receives the trial-production drawings.（計畫記錄越南收到量試圖後的當地專案流程。）"
+     ],
+     "ex": "We plan to document the local process after Vietnam receives the trial-production drawings.",
+     "exCn": "計畫記錄越南收到量試圖後的當地專案流程。（IID-1）"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "a": "notice",
+     "b": "procedure",
+     "diff": "notice 是通知單，procedure 是程序。有設變通知單不代表變更管理程序已完整。（IA-5）",
+     "exA": "The notice exists, but the local procedure is still missing.",
+     "exB": "已有通知單，但當地程序仍缺。"
+    },
+    {
+     "a": "planned progress",
+     "b": "actual progress",
+     "diff": "planned 是預定，actual 是實際。IID-1 要求更新實況，未達目標需紀錄，不能只展示原定日期。",
+     "exA": "Vietnam is to update actual progress against the project schedule.",
+     "exB": "越南需依專案時程更新實際進度。"
+    },
+    {
+     "a": "release",
+     "b": "closure",
+     "diff": "release 在此為量產放行，closure 是問題結案。IID-3 要求專案負責人繼續追蹤通知書問題，不把文件發行當作逐項完成。",
+     "exA": "Issuing the production release notice does not close every open issue.",
+     "exB": "發行可量產通知書不代表所有未結案問題都已結案。"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "案例 01｜工程變更",
+     "title": "Engineering Change Control",
+     "titleCn": "案例 01｜工程變更（IA-5）",
+     "paras": [
+      { "en": "Auditor: Do you have engineering change control?", "cn": "稽核員：你們有工程變更管控嗎？" },
+      { "en": "You: We have engineering change notices. The local change control procedure in Chinese and Vietnamese is still missing in the assessment.", "cn": "你：已有設變通知單；評估表仍記載缺少當地中越文變更管制程序。" },
+      { "en": "Auditor: What is the corrective action?", "cn": "稽核員：改善措施是什麼？" },
+      { "en": "You: Product Development is responsible for establishing the bilingual procedure. The target in the September 21 action plan is October 19.", "cn": "你：由開發建立雙語規定；9/21 改善表的目標為 10/19。" },
+      { "en": "Auditor: Does having a notice prove that the process is complete?", "cn": "稽核員：有通知單就能證明流程完整嗎？" },
+      { "en": "You: No. The notice exists, but the local procedure is still an open action. A form alone does not explain the complete approval and implementation process.", "cn": "你：不能。已有通知單，但當地規定仍是未結案項目；只有表單不能說明完整核准與執行流程。" }
+     ]
+    },
+    {
+     "bar": "案例 02｜工程團隊資料",
+     "title": "Engineering Team Information",
+     "titleCn": "案例 02｜工程團隊資料（IB-3）",
+     "paras": [
+      { "en": "Auditor: What is missing from the engineering team information?", "cn": "稽核員：工程團隊資料缺少什麼？" },
+      { "en": "You: The finding lists missing development and manufacturing engineering team information, role descriptions, and training records.", "cn": "你：缺失列出開發與生技工程團隊資料、職掌及培訓紀錄不足。" },
+      { "en": "Auditor: What does the action plan require?", "cn": "稽核員：改善計畫要求什麼？" },
+      { "en": "You: It requires organization charts, role descriptions, training records, and backup arrangements covering Taiwan and Vietnam. Product Development owns this action.", "cn": "你：要求涵蓋台越的組織圖、職掌、培訓紀錄及代理安排，由開發負責此項。" },
+      { "en": "Auditor: Does support from Taiwan prove local capability?", "cn": "稽核員：有台灣支援就能證明越南能力嗎？" },
+      { "en": "You: Support and local capability are different. The team information and training records still need to show who performs each role and how the work is supported.", "cn": "你：支援與在地能力不同。團隊資料及培訓紀錄仍需呈現誰執行各職務，以及如何提供支援。" }
+     ]
+    },
+    {
+     "bar": "案例 03｜台越安規分工",
+     "title": "Taiwan-Vietnam Safety Division",
+     "titleCn": "案例 03｜台越安規分工（IE-3）",
+     "paras": [
+      { "en": "Auditor: Who leads product safety work?", "cn": "稽核員：安規工作由誰主導？" },
+      { "en": "You: Taiwan leads product safety work, and Vietnam provides support. The finding says Vietnam does not have a product safety engineer and receives support from Taiwan.", "cn": "你：台灣主導安規，越南協助。缺失記載越南無安規工程師，由台灣支援。" },
+      { "en": "Auditor: What needs to be documented?", "cn": "稽核員：需要建立哪些文件資料？" },
+      { "en": "You: The plan requires the product safety team responsibilities to be listed. The findings also call for role definitions and training plans and records.", "cn": "你：計畫要求列出安規團隊職掌；缺失也要求職能定義、教育訓練計畫與紀錄。" },
+      { "en": "Auditor: Can you say all safety capability is already local?", "cn": "稽核員：能說安規能力已全部在越南嗎？" },
+      { "en": "You: No. The September 21 plan describes Taiwan-led support. It does not show a complete local product safety team in Vietnam.", "cn": "你：不能。9/21 計畫記載由台灣主導支援，未顯示越南已有完整在地安規團隊。" }
+     ]
+    },
+    {
+     "bar": "案例 04｜安規文件管理",
+     "title": "Product Safety Document Management",
+     "titleCn": "案例 04｜安規文件管理（IE-9）",
+     "paras": [
+      { "en": "Auditor: What is the plan for storing product safety documents?", "cn": "稽核員：安規文件計畫如何存放？" },
+      { "en": "You: The action plan identifies PDM as the storage location for product safety data. It also calls for a product safety review procedure.", "cn": "你：對策指定 PDM 為安規資料存放位置，也要求建立安規審核流程管理規定。" },
+      { "en": "Auditor: What gaps were found beyond storage?", "cn": "稽核員：除了存放位置，還有哪些缺口？" },
+      { "en": "You: The finding lists missing test-document management, an abnormality-handling process, and related procedures. Naming a storage system alone does not close these gaps.", "cn": "你：缺失列出測試文件管理、異常流程及相關規定不足；只指定儲存系統不能解決這些缺口。" },
+      { "en": "Auditor: What are the planned dates?", "cn": "稽核員：規劃日期是什麼？" },
+      { "en": "You: The plan lists October 9 for the PDM storage item and October 19 for the review procedure. It is still Open in the September 21 version.", "cn": "你：計畫列出 PDM 存放項目為 10/9、審核規定為 10/19；9/21 版本中仍是 Open。" }
+     ]
+    },
+    {
+     "bar": "案例 05｜專案時程與核准",
+     "title": "Project Schedule & Approval",
+     "titleCn": "案例 05｜專案時程與核准（IIA-2、IID-1）",
+     "paras": [
+      { "en": "Auditor: How are project schedules to be managed?", "cn": "稽核員：專案時程規劃如何管理？" },
+      { "en": "You: Taiwan is to provide the project schedule, and Vietnam is to update actual progress. Missed targets need records, and management sign-off is required.", "cn": "你：台灣提供專案時程表，越南更新實際進度；未達目標需有紀錄，並需管理層簽核。" },
+      { "en": "Auditor: What local process needs to be documented?", "cn": "稽核員：需記錄哪段當地流程？" },
+      { "en": "You: The action is to describe the Vietnam project process after Taiwan issues the trial-production drawings. The plan also calls for Vietnam BU and BR Gantt charts.", "cn": "你：對策是記錄台灣發行量試圖後的越南專案流程，也要求越南 BU、BR 甘特圖。" },
+      { "en": "Auditor: What approval gap was found?", "cn": "稽核員：發現哪項核准缺口？" },
+      { "en": "You: The development checklist lacks management approval. A completed checklist is not the same as a signed approval.", "cn": "你：產品開發檢核表缺管理層核准。填完檢核表不等於已有核准簽認。" }
+     ]
+    },
+    {
+     "bar": "案例 06｜量產問題追蹤",
+     "title": "Production Issue Tracking",
+     "titleCn": "案例 06｜量產問題追蹤（IID-3）",
+     "paras": [
+      { "en": "Auditor: Who tracks issues on the production release notice?", "cn": "稽核員：誰追蹤可量產通知書上的問題？" },
+      { "en": "You: The development project owner is to track the issues on the QA production release notice through to closure.", "cn": "你：由開發專案負責人追蹤品保可量產通知書上的問題至結案。" },
+      { "en": "Auditor: Which case is named in the action plan?", "cn": "稽核員：改善表指定哪個案例？" },
+      { "en": "You: The action plan names the BU/BR25VS production release notice to be provided to Peloton. It is a concrete document named in the action, not proof that all its issues are closed.", "cn": "你：對策指定提供 BU/BR25VS 可量產通知書給客戶。這是表中明確文件，不代表其所有問題已結案。" },
+      { "en": "Auditor: Does issuing the notice close every issue?", "cn": "稽核員：發行通知書就代表每個問題結案嗎？" },
+      { "en": "You: No. The finding specifically calls for follow-up to closure. The September 21 action remains Open and does not show that all issues have been resolved.", "cn": "你：不是。缺失明確要求追蹤至結案；9/21 項目仍為 Open，未顯示所有問題已解決。" }
+     ]
+    },
+    {
+     "bar": "演練 A｜工程變更追問",
+     "title": "Engineering Change Follow-up",
+     "titleCn": "演練 A｜工程變更追問",
+     "paras": [
+      { "en": "Auditor: Q1. What change document is available?", "cn": "稽核員：已有哪份變更文件？" },
+      { "en": "You: Engineering change notices are available.", "cn": "你：已有設變通知單。" },
+      { "en": "Auditor: Q2. What is still missing?", "cn": "稽核員：還缺什麼？" },
+      { "en": "You: The local change control procedure in Chinese and Vietnamese is still missing in the assessment.", "cn": "你：評估表仍記載缺少當地中越文變更管制規定。" },
+      { "en": "Auditor: Q3. Who owns the action and when is it due?", "cn": "稽核員：誰負責？何時到期？" },
+      { "en": "You: Product Development owns it. The target in the plan is October 19.", "cn": "你：由開發負責，計畫目標為 10/19。" },
+      { "en": "Auditor: Q4. Can you call it complete because a notice exists?", "cn": "稽核員：有通知單就能說完成了嗎？" },
+      { "en": "You: No. The notice exists, but the procedure action is still Open in the September 21 plan.", "cn": "你：不能。已有通知單，但 9/21 計畫中的程序改善仍為 Open。" }
+     ]
+    },
+    {
+     "bar": "演練 B｜專案管理追問",
+     "title": "Project Management Follow-up",
+     "titleCn": "演練 B｜專案管理追問",
+     "paras": [
+      { "en": "Auditor: Q1. Who updates actual project progress?", "cn": "稽核員：誰更新實際專案進度？" },
+      { "en": "You: Vietnam is to update actual progress against the schedule provided by Taiwan.", "cn": "你：越南依台灣提供的時程表更新實際進度。" },
+      { "en": "Auditor: Q2. What if a target is missed?", "cn": "稽核員：若未達目標呢？" },
+      { "en": "You: The finding requires a record when the project target is missed. A planned date alone does not show the actual result.", "cn": "你：缺失要求未達專案目標時留下紀錄；只有計畫日期不能呈現實際結果。" },
+      { "en": "Auditor: Q3. Is the development checklist approved?", "cn": "稽核員：開發檢核表已核准嗎？" },
+      { "en": "You: The finding lists missing management approval. It does not show that the checklist has been approved.", "cn": "你：缺失列出管理層核准不足，未顯示檢核表已核准。" },
+      { "en": "Auditor: Q4. Who follows the release-notice issues?", "cn": "稽核員：誰追蹤可量產通知書問題？" },
+      { "en": "You: The development project owner is to track the QA notice issues through to closure.", "cn": "你：由開發專案負責人追蹤品保通知書問題至結案。" }
+     ]
+    },
+    {
+     "bar": "完整口說稿｜開發現況",
+     "title": "Full Speaking Script",
+     "titleCn": "完整口說稿｜開發現況",
+     "paras": [
+      { "en": "We have engineering change notices, but the local bilingual procedure is still an open action. Product Development is responsible for it.", "cn": "已有設變通知單，但當地雙語規定仍是待改善項目，由開發負責。" },
+      { "en": "Taiwan leads product safety work, and Vietnam provides support. The plan requires the team responsibilities and training information to be documented.", "cn": "台灣主導安規，越南協助；計畫要求建立團隊職掌與訓練資料。" },
+      { "en": "The PDM storage item and the product safety review procedure are separate actions. A storage location alone does not prove that the review process is complete.", "cn": "PDM 存放項目與安規審核規定是分開的工作；僅有儲存位置不能證明審核流程完整。" },
+      { "en": "Vietnam is to update actual project progress against the Taiwan schedule. Missed targets need records and management sign-off is required.", "cn": "越南依台灣時程更新實際進度；未達目標需紀錄，並需管理層簽核。" },
+      { "en": "The project owner is to track the issues on the QA production release notice through to closure.", "cn": "專案負責人需追蹤品保可量產通知書問題至結案。" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "We have change notices, but the local bilingual procedure is still missing.", "cn": "已有設變通知單，但當地雙語規定仍缺。（IA-5）" },
+      { "en": "The engineering action includes role descriptions, training records, and backup arrangements.", "cn": "工程改善涵蓋職掌、培訓紀錄及代理安排。（IB-3）" },
+      { "en": "Taiwan leads product safety work, and Vietnam provides support.", "cn": "台灣主導安規，越南協助。（IE-3）" },
+      { "en": "PDM storage does not replace the product safety review procedure.", "cn": "PDM 存放不能取代安規審核程序。（IE-9）" },
+      { "en": "Vietnam is to update actual progress and record missed targets.", "cn": "越南需更新實際進度並記錄未達目標。（IID-1）" },
+      { "en": "The project owner is to track release-notice issues through to closure.", "cn": "專案負責人需追蹤可量產通知書問題至結案。（IID-3）" }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -23343,6 +23652,7 @@ window.BOOK = {
     au01:[[['cert','calendar','doc','briefcase','check'],'ISO 認證問答：尚未取得認證 → 目標 2027 年 6 月 → 先提出輔導公司簽呈 → 由品保負責 → 目標日期不等於已完成。']],
     au02:[[['orgchart','idcard','briefcase','calendar','doc'],'組織圖問答：列出課級以上姓名與年資 → 各部門提供資料 → 由人資負責 → 目標 10 月 19 日 → 仍標示 Open，尚未完成。']],
     au03:[[['warning','calendar','box','factory','check'],'化學品管控問答：缺領用紀錄、存放位置、效期、警示標籤與防護設備 → 還要管控送到產線的化學品 → 由資材負責建立管控 → 只有倉儲管理不能涵蓋 → 仍標示 Open，尚未完成。']],
+    au04:[[['gear','clipboard','calendar','briefcase','check'],'開發與專案管理：設變通知單≠完整程序 → 台灣主導安規越南協助 → PDM 存放≠審核程序 → 台灣提供時程越南更新實際進度 → 填表≠核准 → 追蹤量產問題至結案。']],
     bk20261006:[[['cert','chartUp','clipboard','people','search'],'操作員訓練五階段：獨立作業前提供實務訓練並評估技能 → 每站分 A/B/C 三個技能等級逐級晉升 → 內部評估未通過先安排較簡單的工作站 → 所有人都受過訓可互相代班維持生產 → 客戶稽核時出示訓練紀錄說明驗證方式。']]
   };;
   ((window.BOOK||{}).lessons||[]).forEach(function(b){
