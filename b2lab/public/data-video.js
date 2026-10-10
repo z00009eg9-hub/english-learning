@@ -29758,6 +29758,630 @@ window.VIDEO.au03 = {
  ]
 };
 
+window.VIDEO.au04 = {
+ "title": "Audit English IV — Development & Project Management",
+ "titleCn": "稽核英文四｜開發與專案管理",
+ "date": "2026-10-12",
+ "level": "B1+",
+ "scene": "Factory Audit · Development & Project Management",
+ "sceneCn": "工廠稽核・開發與專案管理",
+ "sceneArt": "gear",
+ "titleArt": [
+  "gear",
+  "clipboard",
+  "calendar"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・現場窗口",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・客戶稽核員",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "The Audit Conversation",
+   "cn": "情境：稽核問答"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "change": {
+   "t": "change",
+   "cn": "變更",
+   "tag": [
+    "稽核英文",
+    "工程變更"
+   ],
+   "note": "搭配：engineering change（工程變更）。",
+   "ex": "We have engineering change notices.",
+   "exCn": "我們已有設變通知單。"
+  },
+  "responsibility": {
+   "t": "responsibility",
+   "cn": "職責",
+   "tag": [
+    "稽核英文",
+    "團隊職掌"
+   ],
+   "note": "搭配：team responsibilities（團隊職責）。",
+   "ex": "The plan requires product safety team responsibilities to be documented.",
+   "exCn": "計畫要求列出安規團隊職掌。"
+  },
+  "progress": {
+   "t": "progress",
+   "cn": "進度",
+   "tag": [
+    "稽核英文",
+    "專案進度"
+   ],
+   "note": "搭配：actual progress（實際進度）。",
+   "ex": "Vietnam is to update the actual project progress.",
+   "exCn": "越南需更新專案實際進度。"
+  },
+  "approval": {
+   "t": "approval",
+   "cn": "核准",
+   "tag": [
+    "稽核英文",
+    "管理層核准"
+   ],
+   "note": "搭配：management approval（管理層核准）。",
+   "ex": "The development checklist lacks management approval.",
+   "exCn": "產品開發檢核表缺管理層核准。"
+  },
+  "closure": {
+   "t": "closure",
+   "cn": "結案",
+   "tag": [
+    "稽核英文",
+    "追蹤結案"
+   ],
+   "note": "搭配：track to closure（追蹤至結案）。",
+   "ex": "The project owner is to track launch issues to closure.",
+   "exCn": "專案負責人需追蹤量產問題至結案。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today we practise answering a customer auditor about development and project management.",
+   "cn": "歡迎回來。今天我們練習用英文回答客戶稽核員有關開發與專案管理的問題。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "scene",
+    "art": "auFiveKeys"
+   },
+   "en": "Listen for five key words, the answer patterns, and how to separate a document from a complete process.",
+   "cn": "注意聽五個關鍵詞、回答句型，以及如何區分「文件」與「完整流程」。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au4ChangeAsk"
+   },
+   "en": "Do you have engineering change control?",
+   "cn": "你們有工程變更管控嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au4NoticeNoLocal"
+   },
+   "en": "We have change notices, but the local bilingual procedure is still missing.",
+   "cn": "已有設變通知單，但當地雙語規定仍缺。",
+   "hi": [
+    {
+     "t": "change",
+     "cn": "變更",
+     "k": "change",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au4OwnerAsk"
+   },
+   "en": "Who owns that action?",
+   "cn": "這項改善誰負責？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au4DevOwns"
+   },
+   "en": "Product Development owns it. The target date is October 19.",
+   "cn": "由開發負責，目標日期為 10/19。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au4NoticeProveAsk"
+   },
+   "en": "Does having a notice prove the process is complete?",
+   "cn": "有通知單就能證明流程完整嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au4NoticeOpen"
+   },
+   "en": "No. The notice exists, but the local procedure is still an open action.",
+   "cn": "不能。已有通知單，但當地規定仍是未結案項目。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au4TeamAsk"
+   },
+   "en": "What is missing from the engineering team information?",
+   "cn": "工程團隊資料缺少什麼？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au4TeamMissing"
+   },
+   "en": "Team information, role descriptions, and training records are missing.",
+   "cn": "缺團隊資料、職掌說明與培訓紀錄。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au4SafetyLeadAsk"
+   },
+   "en": "Who leads product safety work?",
+   "cn": "安規工作由誰主導？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au4TwLeadVnSupport"
+   },
+   "en": "Taiwan leads product safety work, and Vietnam provides support.",
+   "cn": "台灣主導安規，越南協助。",
+   "hi": [
+    {
+     "t": "responsibility",
+     "cn": "職責",
+     "k": "responsibility",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au4LocalAsk"
+   },
+   "en": "Can you say all safety capability is already local?",
+   "cn": "能說安規能力已全部在越南嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au4NotLocal"
+   },
+   "en": "No. The plan describes Taiwan-led support. It does not show a complete local team.",
+   "cn": "不能。計畫記載由台灣主導支援，未顯示完整在地團隊。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au4PdmAsk"
+   },
+   "en": "Where will product safety documents be stored?",
+   "cn": "安規文件要存放在哪裡？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au4PdmReview"
+   },
+   "en": "In PDM. But storage alone does not close the gaps. A review procedure is also required.",
+   "cn": "存放在 PDM。但只有存放不能解決缺口，還需要審核程序。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au4ScheduleAsk"
+   },
+   "en": "How are project schedules managed?",
+   "cn": "專案時程如何管理？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au4GanttActual"
+   },
+   "en": "Taiwan provides the schedule, and Vietnam updates the actual progress.",
+   "cn": "台灣提供時程，越南更新實際進度。",
+   "hi": [
+    {
+     "t": "progress",
+     "cn": "進度",
+     "k": "progress",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au4ApprovalAsk"
+   },
+   "en": "What approval gap was found?",
+   "cn": "發現哪項核准缺口？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au4NoSignoff"
+   },
+   "en": "The development checklist lacks management approval. A completed checklist is not the same as approval.",
+   "cn": "產品開發檢核表缺管理層核准。填完檢核表不等於已核准。",
+   "hi": [
+    {
+     "t": "approval",
+     "cn": "核准",
+     "k": "approval",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au4TrackAsk"
+   },
+   "en": "Who tracks the issues on the production release notice?",
+   "cn": "誰追蹤可量產通知書上的問題？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au4ToClosure"
+   },
+   "en": "The development project owner tracks them through to closure. Issuing the notice does not close every issue.",
+   "cn": "由開發專案負責人追蹤至結案。發行通知書不代表所有問題都已結案。",
+   "hi": [
+    {
+     "t": "closure",
+     "cn": "結案",
+     "k": "closure",
+     "c": 5
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "change",
+    "ipa": "/tʃeɪndʒ/",
+    "pos": "n.",
+    "art": "gear",
+    "def": "change n. — engineering change.",
+    "cn": "變更｜搭配：工程變更",
+    "note": "搭配：engineering change（工程變更）。"
+   },
+   "en": "We have engineering change notices.",
+   "cn": "我們已有設變通知單。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "responsibility",
+    "ipa": "/rɪˌspɑːnsəˈbɪləti/",
+    "pos": "n.",
+    "art": "orgchart",
+    "def": "responsibility n. — team responsibilities.",
+    "cn": "職責｜搭配：團隊職責",
+    "note": "搭配：team responsibilities（團隊職責）。"
+   },
+   "en": "Product safety team responsibilities need to be documented.",
+   "cn": "安規團隊職掌需要列出。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "progress",
+    "ipa": "/ˈprɑːɡres/",
+    "pos": "n.",
+    "art": "chartUp",
+    "def": "progress n. — actual progress.",
+    "cn": "進度｜搭配：實際進度",
+    "note": "搭配：actual progress（實際進度）。"
+   },
+   "en": "Vietnam is to update the actual project progress.",
+   "cn": "越南需更新專案實際進度。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "approval",
+    "ipa": "/əˈpruːvəl/",
+    "pos": "n.",
+    "art": "check",
+    "def": "approval n. — management approval.",
+    "cn": "核准｜搭配：管理層核准",
+    "note": "搭配：management approval（管理層核准）。"
+   },
+   "en": "The development checklist lacks management approval.",
+   "cn": "產品開發檢核表缺管理層核准。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "closure",
+    "ipa": "/ˈkloʊʒɚ/",
+    "pos": "n.",
+    "art": "flag",
+    "def": "closure n. — track to closure.",
+    "cn": "結案｜搭配：追蹤至結案",
+    "note": "搭配：track to closure（追蹤至結案）。"
+   },
+   "en": "The project owner is to track launch issues to closure.",
+   "cn": "專案負責人需追蹤量產問題至結案。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "We have X, but Y is still missing",
+    "art": "clipboard",
+    "rows": [
+     {
+      "lab": "已有但尚缺",
+      "blocks": [
+       {
+        "t": "We have",
+        "k": "s"
+       },
+       {
+        "t": "已有資料, but",
+        "k": "v"
+       },
+       {
+        "t": "缺口 is still missing",
+        "k": "o"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "We have change notices, but the local procedure is still missing.",
+   "cn": "已有設變通知單，但當地規定仍缺。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "A leads X, and B provides support",
+    "art": "people",
+    "rows": [
+     {
+      "lab": "明確分工",
+      "blocks": [
+       {
+        "t": "A leads",
+        "k": "s"
+       },
+       {
+        "t": "工作, and B",
+        "k": "v"
+       },
+       {
+        "t": "provides support",
+        "k": "o"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "Taiwan leads product safety work, and Vietnam provides support.",
+   "cn": "台灣主導安規，越南協助。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "We plan to + 動詞原形 + after + 事件",
+    "art": "calendar",
+    "rows": [
+     {
+      "lab": "將採取的動作",
+      "blocks": [
+       {
+        "t": "We plan to",
+        "k": "s"
+       },
+       {
+        "t": "動詞原形",
+        "k": "v"
+       },
+       {
+        "t": "after 事件",
+        "k": "o"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "We plan to document the local process after Vietnam receives the trial-production drawings.",
+   "cn": "計畫記錄越南收到量試圖後的當地專案流程。"
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 5,
+    "wrong": "The development checklist is approved because it is completed.",
+    "bad": [],
+    "fix": "Management approval is missing. Completing the checklist is not the same as approval."
+   },
+   "en": "Management approval is missing. Completing the checklist is not the same as approval.",
+   "cn": "缺管理層核准；填完檢核表不等於核准。"
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We have change notices, but the local procedure is still ___.",
+    "a": "missing",
+    "n": 1
+   },
+   "en": "We have change notices, but the local procedure is still ___.",
+   "cn": "我們已有通知單，但當地規定仍＿＿。",
+   "say": "We have change notices, but the local procedure is still , blank,.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Taiwan leads product safety work, and Vietnam provides ___.",
+    "a": "support",
+    "n": 2
+   },
+   "en": "Taiwan leads product safety work, and Vietnam provides ___.",
+   "cn": "台灣主導安規，越南提供＿＿。",
+   "say": "Taiwan leads product safety work, and Vietnam provides , blank,.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Vietnam is to update the actual project ___.",
+    "a": "progress",
+    "n": 3
+   },
+   "en": "Vietnam is to update the actual project ___.",
+   "cn": "越南需更新專案實際＿＿。",
+   "say": "Vietnam is to update the actual project , blank,.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The project owner tracks launch issues to ___.",
+    "a": "closure",
+    "n": 4
+   },
+   "en": "The project owner tracks launch issues to ___.",
+   "cn": "專案負責人追蹤量產問題至＿＿。",
+   "say": "The project owner tracks launch issues to , blank,.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practise speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
+
 window.VIDEO.bk20261001 = {
  "title": "Quality Inspection Before Shipment",
  "titleCn": "出貨前品質檢驗",
@@ -43974,5 +44598,229 @@ window.VIDEO["bk20261008"] = {
      +'<path d="M154 68 a8 5 0 0 0 12 0" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
      +'<path d="M178 34 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 z" fill="'+A+'" stroke="'+D+'" stroke-width="1.5"/>'
      +base(128))
+  });
+})();
+
+/* ---------- au04 影片專屬插圖（每句一張，不重複；2026-10-10） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  /* 提問句的共同記號（與 au01／au02／au03 一致） */
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  /* 缺少的項目：紅色虛線框 */
+  var gap=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="5" fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5"/>'; };
+  /* 齒輪 */
+  var gear=function(cx,cy,r,f){ var s='', i;
+    for(i=0;i<8;i++){ var a=i*Math.PI/4, x1=cx+Math.cos(a)*r, y1=cy+Math.sin(a)*r, x2=cx+Math.cos(a)*(r+7), y2=cy+Math.sin(a)*(r+7);
+      s+='<path d="M'+x1.toFixed(1)+' '+y1.toFixed(1)+' L'+x2.toFixed(1)+' '+y2.toFixed(1)+'" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'; }
+    return s+'<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+f+'" '+st+'/>'
+     +'<circle cx="'+cx+'" cy="'+cy+'" r="'+(r*0.4)+'" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'; };
+  /* 盾牌：(cx,top) 為上緣中心 */
+  var shield=function(cx,top,w,h,f){ var x=cx-w/2;
+    return '<path d="M'+x+' '+(top+h*0.15)+' L'+cx+' '+top+' L'+(cx+w/2)+' '+(top+h*0.15)+' V'+(top+h*0.5)+' Q'+(cx+w/2)+' '+(top+h*0.85)+' '+cx+' '+(top+h)+' Q'+x+' '+(top+h*0.85)+' '+x+' '+(top+h*0.5)+' Z" fill="'+f+'" '+st+'/>'; };
+  /* 甘特橫條 */
+  var bar=function(x,y,w,f,o){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="12" rx="6" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"'+(o?' stroke-dasharray="5 4"':'')+'/>'; };
+  /* 圓柱資料庫 */
+  var dbase=function(cx,y,w,h,f){ var x=cx-w/2;
+    return '<path d="M'+x+' '+(y+8)+' v'+h+' a'+(w/2)+' 8 0 0 0 '+w+' 0 v-'+h+'" fill="'+f+'" '+st+'/>'
+     +'<ellipse cx="'+cx+'" cy="'+(y+8)+'" rx="'+(w/2)+'" ry="8" fill="'+L+'" '+st+'/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 2 Tom：你們有工程變更管控嗎？ */
+    au4ChangeAsk: svg(
+      doc(24,22,70,92,1)
+     +gear(59,76,13,A)
+     +'<path d="M112 70 h30" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/><path d="M150 70 l-14 -9 v18 z" fill="'+A+'"/>'
+     +'<rect x="110" y="94" width="62" height="28" rx="5" fill="'+L+'" '+st+'/>'
+     +qb(160,34)),
+
+    /* 3 Anita：已有通知單，缺當地雙語規定 */
+    au4NoticeNoLocal: svg(
+      doc(14,18,70,96,1)
+     +chk(36,82,26,A)
+     +gap(106,28,76,86)
+     +txt(144,64,'EN',22,D)
+     +txt(144,94,'VN',22,D)
+     +pill(112,122,64,22,'MISSING',R,'#fff',12)),
+
+    /* 4 Tom：這項改善誰負責？ */
+    au4OwnerAsk: svg(
+      per(60,56,20,L)
+     +'<rect x="104" y="40" width="64" height="44" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M116 52 h40 M116 64 h40 M116 74 h24" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +qb(166,26)),
+
+    /* 5 Anita：開發負責，目標 10/19 */
+    au4DevOwns: svg(
+      per(54,50,20,A)
+     +pill(24,112,60,26,'DEV',D,'#fff',15)
+     +'<rect x="104" y="30" width="72" height="80" rx="6" fill="#fff" '+st+'/>'
+     +'<rect x="104" y="30" width="72" height="22" rx="6" fill="'+A+'" '+st+'/>'
+     +txt(140,86,'10/19',20,D)),
+
+    /* 6 Tom：有通知單就代表流程完整嗎？ */
+    au4NoticeProveAsk: svg(
+      doc(22,24,62,84,1)
+     +'<path d="M96 60 h14 M96 74 h14" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<rect x="120" y="28" width="62" height="84" rx="6" fill="none" stroke="'+B+'" stroke-width="3" stroke-dasharray="6 5"/>'
+     +'<path d="M134 52 l8 8 l14 -16 M134 82 l8 8 l14 -16" fill="none" stroke="'+B+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>'
+     +qb(100,130)),
+
+    /* 7 Anita：不能。通知單有了，當地規定仍是未結案項目 */
+    au4NoticeOpen: svg(
+      doc(18,20,66,86,1)
+     +chk(40,80,24,A)
+     +'<circle cx="130" cy="48" r="20" fill="#fff" '+st+'/>'
+     +'<path d="M130 48 V36 M130 48 l9 5" '+th+'/>'
+     +gap(104,78,70,44)
+     +txt(139,106,'OPEN',17,R)),
+
+    /* 8 Tom：工程團隊資料缺什麼？ */
+    au4TeamAsk: svg(
+      '<rect x="74" y="14" width="52" height="24" rx="5" fill="'+L+'" '+st+'/>'
+     +'<path d="M100 38 v14 M52 52 h96 M52 52 v14 M100 52 v14 M148 52 v14" '+th+'/>'
+     +'<rect x="30" y="66" width="44" height="24" rx="5" fill="#fff" '+st+'/>'
+     +gap(78,66,44,24)
+     +'<rect x="126" y="66" width="44" height="24" rx="5" fill="#fff" '+st+'/>'
+     +qb(100,118)),
+
+    /* 9 Anita：缺團隊資料、職掌與培訓紀錄 */
+    au4TeamMissing: svg(
+      gap(10,22,54,84)
+     +'<rect x="26" y="34" width="22" height="12" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M37 46 v8 M27 54 h20 M27 54 v8 M47 54 v8" '+thw(2)+'/>'
+     +gap(73,22,54,84)
+     +'<rect x="84" y="34" width="32" height="56" rx="4" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="100" cy="50" r="6" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M91 68 h18 M91 78 h18" '+thw(2)+'/>'
+     +gap(136,22,54,84)
+     +'<rect x="146" y="40" width="34" height="26" rx="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="163" cy="53" r="6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+     +'<path d="M152 82 h22" '+thw(2.5)+'/>'
+     +pill(56,118,88,24,'3 MISSING',R,'#fff',12)),
+
+    /* 10 Tom：安規工作由誰主導？ */
+    au4SafetyLeadAsk: svg(
+      shield(76,30,72,92,L)
+     +'<path d="M58 78 l12 13 l22 -26" fill="none" stroke="'+A+'" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>'
+     +per(158,84,13,'#fff')
+     +qb(160,30)),
+
+    /* 11 Anita：台灣主導，越南協助 */
+    au4TwLeadVnSupport: svg(
+      per(46,34,18,A)
+     +per(154,44,12,L)
+     +shield(100,66,40,50,'#fff')
+     +'<path d="M62 70 L80 86" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M140 74 L122 88" stroke="'+D+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 4"/>'
+     +pill(16,118,60,24,'TW',A,'#fff',15)
+     +pill(124,118,60,24,'VN',L,D,15)),
+
+    /* 12 Tom：能說安規能力已全部在越南嗎？ */
+    au4LocalAsk: svg(
+      '<path d="M30 74 l70 -46 l70 46 v50 h-140 z" fill="'+C+'" '+st+'/>'
+     +shield(100,70,40,50,L)
+     +gap(24,60,152,70)
+     +qb(168,24)),
+
+    /* 13 Anita：不能。計畫是台灣主導支援，沒有完整在地團隊 */
+    au4NotLocal: svg(
+      per(38,42,15,A)
+     +'<path d="M62 62 h42" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/><path d="M114 62 l-14 -9 v18 z" fill="'+A+'"/>'
+     +'<path d="M124 76 l32 -24 l32 24 v40 h-64 z" fill="#fff" '+st+'/>'
+     +'<rect x="142" y="92" width="28" height="24" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +ex(156,36,22,R)
+     +pill(10,110,56,24,'TW',A,'#fff',14)),
+
+    /* 14 Tom：安規文件要存在哪？ */
+    au4PdmAsk: svg(
+      dbase(64,26,64,70,A)
+     +txt(64,84,'PDM',18,'#fff')
+     +doc(118,48,56,66,1)
+     +'<path d="M102 76 h10" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +qb(158,26)),
+
+    /* 15 Anita：存在 PDM，但還要有審核規定 */
+    au4PdmReview: svg(
+      dbase(48,22,56,64,A)
+     +txt(48,80,'PDM',15,'#fff')
+     +chk(40,126,20,A)
+     +'<path d="M84 60 h14 M84 74 h14" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +gap(112,26,76,88)
+     +'<path d="M124 50 h52 M124 64 h52 M124 78 h30" stroke="'+R+'" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>'
+     +txt(150,106,'REVIEW',13,R)),
+
+    /* 16 Tom：專案時程怎麼管理？ */
+    au4ScheduleAsk: svg(
+      '<rect x="14" y="22" width="132" height="96" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M14 42 h132" stroke="'+D+'" stroke-width="2.5"/>'
+     +bar(24,52,50,L,0)+bar(52,72,56,L,0)+bar(84,92,50,L,0)
+     +qb(166,34)),
+
+    /* 17 Anita：台灣給時程，越南更新實際進度 */
+    au4GanttActual: svg(
+      '<rect x="14" y="14" width="172" height="104" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M14 34 h172" stroke="'+D+'" stroke-width="2.5"/>'
+     +bar(24,44,100,C,1)+bar(24,44,64,A,0)
+     +bar(52,66,100,C,1)+bar(52,66,70,A,0)
+     +bar(80,88,90,C,1)+bar(80,88,36,A,0)
+     +pill(24,124,52,20,'TW',D,'#fff',12)
+     +pill(124,124,62,20,'VN',A,'#fff',12)),
+
+    /* 18 Tom：發現哪項核准缺口？ */
+    au4ApprovalAsk: svg(
+      doc(24,18,70,98,0)
+     +'<path d="M36 40 l4 4 l8 -10 M36 62 l4 4 l8 -10 M36 84 l4 4 l8 -10" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M56 40 h26 M56 62 h26 M56 84 h26" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<circle cx="140" cy="86" r="26" fill="none" stroke="'+R+'" stroke-width="3" stroke-dasharray="6 5"/>'
+     +qb(166,30)),
+
+    /* 19 Anita：缺管理層核准，填完不等於核准 */
+    au4NoSignoff: svg(
+      doc(14,16,70,96,0)
+     +'<path d="M26 38 l4 4 l8 -10 M26 60 l4 4 l8 -10 M26 82 l4 4 l8 -10" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<path d="M46 38 h28 M46 60 h28 M46 82 h28" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M96 60 h14 M96 74 h14" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +gap(122,30,62,66)
+     +ex(153,63,24,R)
+     +pill(104,112,90,24,'NO SIGN-OFF',R,'#fff',11)),
+
+    /* 20 Tom：誰追蹤可量產通知書上的問題？ */
+    au4TrackAsk: svg(
+      doc(22,18,74,98,1)
+     +'<circle cx="42" cy="68" r="5" fill="'+R+'"/><circle cx="42" cy="86" r="5" fill="'+R+'"/><circle cx="42" cy="104" r="5" fill="'+R+'"/>'
+     +per(144,86,16,L)
+     +'<path d="M108 66 h12" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +qb(158,30)),
+
+    /* 21 Anita：專案負責人追蹤到結案，發行通知書不等於全結案 */
+    au4ToClosure: svg(
+      '<rect x="16" y="20" width="110" height="100" rx="6" fill="#fff" '+st+'/>'
+     +'<path d="M30 44 l5 5 l9 -11 M30 70 l5 5 l9 -11" fill="none" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+     +'<circle cx="38" cy="98" r="6" fill="none" stroke="'+R+'" stroke-width="3"/>'
+     +'<path d="M58 44 h50 M58 70 h50 M58 98 h50" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M140 120 V34" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M140 34 h36 l-8 12 l8 12 h-36 z" fill="'+A+'" '+st+'/>'
+     +pill(136,100,56,24,'CLOSE',D,'#fff',12))
   });
 })();
