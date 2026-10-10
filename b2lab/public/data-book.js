@@ -21956,6 +21956,7 @@ window.BOOK = {
   {
    "id": "au04",
    "icon": "🏭",
+   "video": true,
    "date": "2026-10-12",
    "title": "Audit English IV — Development & Project Management",
    "titleCn": "稽核英文四｜開發與專案管理",
