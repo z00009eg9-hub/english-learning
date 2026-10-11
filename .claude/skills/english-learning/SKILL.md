@@ -1320,7 +1320,8 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
    - 常用欄位：`id`（bk+YYYYMMDD，同日兩份加 a/b）、`icon`（貼題 emoji）、`date`、`doc`（Google Doc 連結）、`title`/`titleCn`/`topics`、`hwTitle`+`hw[]`（n/wrong/fix/ok/cn/pat/note）、`vocabTitle`+`vocab[]`（w/star/ipa/pos/cn/ex/exCn）、`vocab2`/`vocabReview`、`phrasesTitle`+`phrases[]`（p/cn/ex/exCn）、`colloc[]`（p/def/defCn/cn）、`grammarTitle`+`grammar[]`（k/title/pat|patLabel/pts[]/exs[{tag,en,cn}]）、`cmpTitle`+`cmp[]`+`cmpWarn`、`reading[]`（bar/title/titleCn/paras[{en,cn}]/questions[{q,qCn,a,aCn}]/sumEn[]/sumCn[]）、`extraTitle`+`extra[]`（title+exs）、`extraVocabTitle`+`extraVocab[]`（k/en/cn）、`discussionTitle`+`discussion[]`（q/qCn/a/aCn）、`summaryTitle`+`summary[]`（k/v）。
    - 渲染器沒有的區塊會自動跳過，不必硬湊；區塊順序固定為 hw→vocab→phrases→grammar→cmp→reading→extra→extraVocab→discussion→summary，對不上 Doc 順序沒關係，標題可自訂。
 3. **閱讀文章一定要加五圓插圖**：在 data-book.js 檔尾的插圖 IIFE 中，把該課加進 `S`（spec）——`S[lessonId] = [ [五個圖示 key 陣列, '中文圖說'], ... ]`（每篇 reading 一組）。
-   - 圖示從既有圖示庫 `I` 挑（house/talk/warning/check/coin/plane/food/heart/star/chartUp…共 37 個）；缺的圖示才新增（64×64 線稿，深色 `#2b2118`、橘色 `#e8813a`，仿現有風格）。
+   - 圖示從圖示庫 `I`（`BOOK_ICONS`）挑，每個階段畫**具體的東西**；不要拿星星／時鐘／文件這類萬用圖示湊數，也不要整組照抄別課的五個。
+   - **圖示不夠就自己補畫，不用問使用者**（2026-10-11 使用者指定）：缺貼切的就直接加進 `var I={…}`（一次最多 6 個），畫法見 `b2lab/DAILY_TASK.md` 3.5.1，補完跑 `cd b2lab && node tools/check-icons.js`，回報時列出新增的圖示。沒有閱讀文章的課畫封面 `iconSvg` 時同理。
    - 圖說描述文章的故事階段（「A → B → C → D → E。」格式），內容取自文章本身。
    - 新增圖示後要用 headless Chrome 截圖驗證（`chrome --headless=new --screenshot`，輸出到本機可寫目錄，G: 或 scratchpad 會存取被拒）。
 3b. **Build Relationships（關聯學習系統，2026-09-09 新增，每次新增／更新課都要跑）**：`cd b2lab && node tools/build-rel.js`
@@ -1348,7 +1349,7 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
      | 6 小測驗 | 3 題填空：題目句（`say` 把 ___ 唸成 blank、`pause: 4000` 倒數）＋答案句（`show: true`）；最後一句 `end` | `quiz`／`end` |
      超過 5 分鐘時優先刪情境對話的句子，其次解說卡、作業訂正；片語和文法章節保留。
    - **插圖（使用者選 A＋B）**：`art` 先找 `VIDEO_ART`（data-video.js 檔頭的專屬插圖，是**跨課共用的線稿庫**，2026-09-27 起已有 309 張（2025–2026 全部 80 課累積，key 見各課區塊註解）；先用 `node -e "global.window={};require('./public/data-video.js');console.log(Object.keys(window.VIDEO_ART).join(' '))"` 列出全部；新課先 grep `VIDEO_ART` 現有 key 重用，缺的才新畫並加進去，一課最多新畫 4 張），找不到再用課本線稿圖示庫 `BOOK_ICONS`
-     （data-book.js 的 37 個：box、check、warning、gear、doc…）。專屬插圖用同一套線稿風格：
+     （data-book.js 的線稿圖示庫；不夠就照上面第 3 步自己補）。專屬插圖用同一套線稿風格：
      `viewBox="0 0 200 150"`、線條 `#2b2118` 粗 3、主色 `#e8813a`、底色 `#fdf6ec`／`#f7e3c9`，需要時用紅 `#d9534f`、藍 `#3b82c4`。
      畫**有教學意義的具體東西**（乾燥劑變紅、標籤上的型號／流水號、配件盒缺一格），抽象概念直接用 BOOK_ICONS。
      `VIDEO_ART` 是全站共用的，新課能沿用就沿用，新畫的放進去並在註解寫用途。
