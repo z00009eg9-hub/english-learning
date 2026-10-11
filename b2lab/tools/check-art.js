@@ -14,7 +14,7 @@
    所以手寫或改過的 SVG 會被當成「認不出的圖示」擋下來。
    ============================================================ */
 const { P, I, GENERIC, family } = require('./genart.js');
-const COOL = 1;
+const COOL = 2;
 const FROM = '20260819';           // 這天起改成五圓橫幅；之前的三圓舊圖不檢查
 
 global.window = {};
