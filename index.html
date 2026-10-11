@@ -342,6 +342,13 @@ body.home-active .hd-topic{display:none;}
 .sub-top{display:flex;align-items:center;gap:11px;margin-bottom:12px;}
 /* 標題和副標排同一行（2026-08-16 使用者要求） */
 .sub-top>div{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;}
+/* 手機：標題列＝標題＋「怎麼玩」同一行，副標獨立一行，不再亂換行 */
+@media(max-width:699px){
+  .sub-top>div{display:grid;grid-template-columns:1fr auto;align-items:center;gap:3px 10px;flex:1;min-width:0;}
+  .sub-top>div .sub-h{grid-column:1;grid-row:1;}
+  .sub-top>div .how-tog{grid-column:2;grid-row:1;}
+  .sub-top>div .sub-s{grid-column:1/-1;grid-row:2;font-size:.82rem;line-height:1.35;}
+}
 /* 「怎麼玩」收合鈕：放在標題旁，點了展開說明條 */
 .how-tog{border:1.5px solid var(--bdr);background:#fff;color:var(--sub);border-radius:100px;
   padding:3px 11px;font-size:.8rem;font-weight:800;cursor:pointer;font-family:inherit;white-space:nowrap;}
