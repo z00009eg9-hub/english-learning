@@ -189,6 +189,33 @@ body.home-active .hd-topic{display:none;}
 /* 課堂內容統計：從多色膠囊改為安靜的「icon＋數字」一行字，中間用點分隔 */
 .day-meta .mi{display:inline-flex;align-items:center;gap:3px;font-weight:700;color:var(--sub);font-size:.84rem;}
 .day-meta .mi+.mi::before{content:'·';margin-right:9px;color:var(--bdr);font-weight:900;}
+/* ═══ 全部課程清單（▾ 快速跳課，滑動仍然可用） ═══ */
+.day-jump{margin-left:auto;display:inline-flex;align-items:center;gap:4px;padding:5px 11px;
+  border:1.5px solid var(--bdr2);border-radius:100px;background:#fff;color:var(--teal);
+  font:800 .78rem/1 inherit;cursor:pointer;box-shadow:var(--sh-sm);}
+.day-jump:hover{background:var(--teal-l);border-color:var(--teal);}
+.day-jump:focus-visible{outline:3px solid rgba(21,154,166,.35);outline-offset:2px;}
+.dj-ovl{position:fixed;inset:0;z-index:520;background:rgba(32,48,60,.5);backdrop-filter:blur(4px);
+  display:flex;align-items:flex-end;justify-content:center;}
+.dj-box{background:#fff;width:100%;max-width:460px;max-height:78vh;display:flex;flex-direction:column;
+  border-radius:22px 22px 0 0;box-shadow:var(--sh-lg);overflow:hidden;}
+@media(min-width:561px){.dj-ovl{align-items:center;padding:20px;}.dj-box{border-radius:22px;}}
+.dj-hd{display:flex;align-items:center;gap:8px;padding:15px 16px 11px;border-bottom:1px solid var(--bdr);
+  font-size:1.02rem;font-weight:900;color:var(--ink);}
+.dj-x{margin-left:auto;width:32px;height:32px;flex:0 0 32px;border:1.5px solid var(--bdr2);border-radius:10px;
+  background:#fff;color:var(--sub);font:900 1.05rem/1 inherit;cursor:pointer;}
+.dj-x:hover{background:var(--bg);border-color:var(--coral);color:var(--coral-d);}
+.dj-list{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:8px;display:flex;flex-direction:column;gap:6px;}
+.dj-row{display:flex;align-items:center;gap:11px;width:100%;text-align:left;cursor:pointer;
+  background:#fff;border:2px solid var(--bdr2);border-radius:13px;padding:10px 12px;font-family:inherit;}
+.dj-row:hover{border-color:var(--coral);background:var(--bg);}
+.dj-row.sel{background:var(--coral);border-color:var(--coral);}
+.dj-d{flex:0 0 58px;font-size:.95rem;font-weight:900;color:var(--ink);line-height:1.15;}
+.dj-d small{display:block;font-size:.68rem;font-weight:800;color:var(--coral-d);}
+.dj-t{flex:1;min-width:0;font-size:.84rem;font-weight:700;color:var(--ink);line-height:1.35;}
+.dj-t small{display:block;font-size:.7rem;font-weight:700;color:var(--faint);margin-top:2px;}
+.dj-row.sel .dj-d,.dj-row.sel .dj-t{color:#fff;}
+.dj-row.sel .dj-d small,.dj-row.sel .dj-t small{color:rgba(255,255,255,.85);}
 
 /* ═══ ACTIVITY GRID ═══ */
 .grid-ttl{font-size:.95rem;font-weight:900;margin:18px 3px 10px;display:flex;align-items:center;gap:7px;flex-wrap:wrap;min-width:0;}
@@ -888,7 +915,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
     </div>
 
     <div class="card card-soft pick-card">
-      <div class="pick-lbl">📅 選擇今天想練的主題<span style="font-weight:600;font-size:.8rem;color:var(--faint);margin-left:auto">電腦按箭頭／拖曳 · 手機直接滑動</span></div>
+      <div class="pick-lbl">📅 選擇今天想練的主題<span style="font-weight:600;font-size:.8rem;color:var(--faint)">電腦按箭頭／拖曳 · 手機直接滑動</span><button class="day-jump" type="button" onclick="openDayJump()" aria-label="開啟全部課程清單">📋 全部課程 ▾</button></div>
       <div class="day-switch">
         <button class="day-arrow" type="button" onclick="scrollDayRail(-1)" aria-label="上一個課程">‹</button>
         <div class="day-rail" id="day-rail" tabindex="0" role="region" aria-label="課程日期清單"></div>
@@ -7981,6 +8008,28 @@ function scrollDayRail(direction){const rail=$('day-rail');if(!rail)return;
   const card=rail.querySelector('.day-pill');const distance=(card?card.offsetWidth+8:180)*direction;
   rail.scrollBy({left:distance,behavior:'smooth'});
 }
+/* ---------- 全部課程清單：直向一次看完，點一下就跳課（橫向滑動照舊） ---------- */
+function openDayJump(){let ovl=$('dj-ovl');
+  if(!ovl){ovl=document.createElement('div');ovl.id='dj-ovl';ovl.className='dj-ovl';
+    ovl.addEventListener('click',e=>{if(e.target===ovl)closeDayJump();});document.body.appendChild(ovl);}
+  ovl.innerHTML='<div class="dj-box" role="dialog" aria-modal="true" aria-label="全部課程">'
+    +'<div class="dj-hd">📋 全部課程（'+DDATES.length+'）'
+    +'<button class="dj-x" type="button" onclick="closeDayJump()" aria-label="關閉">✕</button></div>'
+    +'<div class="dj-list">'+DDATES.map(d=>{const p=dayPillParts(d);
+      return '<button class="dj-row'+(d===DAY?' sel':'')+'" type="button" onclick="djPick(\''+d+'\')" title="'+esc(ddLabel(d))+'">'
+        +'<span class="dj-d">'+esc(p.top)+'<small>'+esc(p.wd)+'</small></span>'
+        +'<span class="dj-t">'+esc(p.ttl)+'<small>'+esc(dayPracticeSummary(d))+'</small></span></button>';}).join('')
+    +'</div></div>';
+  ovl.style.display='flex';
+  /* 只捲清單本身，不用 scrollIntoView，避免連帶把整頁往下捲 */
+  const list=ovl.querySelector('.dj-list'),sel=ovl.querySelector('.dj-row.sel');
+  if(list&&sel)list.scrollTop=sel.offsetTop-list.clientHeight/2+sel.clientHeight/2;
+  document.addEventListener('keydown',djEsc);
+}
+function djEsc(e){if(e.key==='Escape')closeDayJump();}
+function closeDayJump(){const ovl=$('dj-ovl');if(ovl)ovl.style.display='none';
+  document.removeEventListener('keydown',djEsc);}
+function djPick(d){ddSelect(d);closeDayJump();}
 function initDayRailControls(){const rail=$('day-rail');if(!rail||rail.dataset.controlsReady)return;
   rail.dataset.controlsReady='1';
   rail.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();scrollDayRail(e.key==='ArrowRight'?1:-1);}});
