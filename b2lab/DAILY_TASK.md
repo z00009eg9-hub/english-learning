@@ -403,6 +403,7 @@ ids.forEach(k=>{const v=A[k];
 console.log('OK');"
 cd ..
 node tools/check-art.js   # 圖示重複檢查，沒有「✓ 圖示重複檢查通過」就回頭換圖示
+node tools/check-listen-thumb.js   # 聽力清單縮圖重複檢查（新增聽力課後要在 index.html 的 LS_THUMB 補一筆圖示）
 ```
 
 ⚠️ 只能畫**橫幅**。文章裡如果有明確數字想畫成圖表，不要自己編數據——沒有把握就只做橫幅。
@@ -678,7 +679,7 @@ console.log('art ok', todays.map(a=>a.id).join(' | '));"
 橫幅圖示重複檢查＋圖示庫風格檢查（規則見 3.5／3.5.1；沒過就不要 commit）：
 
 ```bash
-cd b2lab && node tools/check-art.js && node tools/check-icons.js
+cd b2lab && node tools/check-art.js && node tools/check-listen-thumb.js && node tools/check-icons.js
 ```
 
 也驗證今天補的四課聽力（沒過就不要 commit 聽力那步的改動）。
