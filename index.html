@@ -605,7 +605,7 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
   header{padding-bottom:7px;}
   #say-card .pc-cn{font-size:1.4rem;}
   /* 手機：卡片高度完全跟內容走（不撐滿畫面），題目→提示→麥克風依序自然排列；錄音／辨識結果／提示展開時自動增高 */
-  #say-card{min-height:0;height:auto;}
+  #say-card{min-height:calc(100svh - var(--hdh,56px) - 250px);height:auto;justify-content:center;gap:18px;}
   #say-card .pc{flex:0 0 auto;justify-content:flex-start;}
   #say-card .sticky-ctrl{margin-top:28px;padding-top:0;}
 }
@@ -908,6 +908,14 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
   .hd-topic{max-width:none;width:100%;order:9;margin-top:8px;text-align:center;}
   /* 手機：B2 Read 移到右上角（跟標題同一列），不再多占一列 */
   .hd-b2{position:absolute;top:0;right:0;margin-top:0 !important;}
+  /* 手機：頁首固定單排（logo｜切換｜連續天數｜設定），標題與日期文字隱藏省高度 */
+  .hd-in{flex-wrap:nowrap;gap:8px;}
+  .hd-brand>div:last-child{display:none;}
+  .hd-brand{flex:0 0 auto;}
+  .hd-logo{width:36px;height:34px;}
+  .hd-right{flex:1 1 auto;min-width:0;flex-wrap:nowrap;justify-content:space-between;gap:5px;}
+  .hd-gear-wrap{padding-left:8px;margin-left:0;}
+  header{padding-top:calc(6px + env(safe-area-inset-top));padding-bottom:6px;}
   /* 手機：活動卡 — 標題完整顯示不換行、圖示縮小不擋字（2026-08-16 使用者要求）。
      這一塊必須放在 .act 基礎樣式之後，放前面會被同權重的基礎規則蓋掉（實際踩過的雷） */
   .act-en{display:none;}
