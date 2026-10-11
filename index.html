@@ -572,6 +572,40 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
   .sticky-ctrl{margin-top:6px;}
 }
 
+/* ═══ 說出來頁面 UI 微調：縮留白、卡片高度跟內容走、進度條對比、桌機限寬 ═══ */
+#scr-say .sub-top{margin-bottom:8px;}
+#scr-say .how-bar{padding:6px 11px;font-size:.84rem;line-height:1.45;margin-bottom:7px;}
+#scr-say .lvl-tog{margin-bottom:8px;}
+#scr-say .lvl-btn{padding:6px 18px;font-size:.82rem;}
+#scr-say .prog{height:6px;background:#E3EEEE;margin-bottom:8px;}
+#say-card{min-height:0;justify-content:flex-start;padding:10px 12px 12px;}
+#say-card .pc{min-height:0;padding:6px 8px 2px;}
+#say-card .pc-tag{margin-bottom:4px;}
+#say-card .pc-hint{margin-top:8px;gap:6px;}
+#say-card .hint-cap{padding:4px 12px;font-size:.88rem;}
+#say-card .scorebox{margin:8px 0 2px;}
+#say-card .diff{margin-top:6px;}
+#say-card .sticky-ctrl{margin-top:6px;}
+#say-card .mic-zone{margin-top:0;}
+#say-card .mic-row{gap:16px;}
+#say-card .mic-lbl{margin-top:6px;}
+#say-card .actions{margin-top:6px;gap:8px;}
+#say-card .btn{padding:10px 16px;font-size:.9rem;min-height:42px;}
+#say-card .mic-side{margin-top:2px;}
+@media(max-width:699px){
+  .wrap{padding-top:10px;}
+  header{padding-bottom:7px;}
+  #say-card .pc-cn{font-size:1.4rem;}
+}
+@media(min-width:700px){
+  #scr-say{max-width:680px;margin-left:auto;margin-right:auto;}
+  #say-card .pc{padding:8px 12px 4px;}
+  #say-card .pc-cn{font-size:1.75rem;}
+  #say-card .pc-hint{font-size:1.02rem;}
+  #say-card .mic{width:70px;height:70px;font-size:1.7rem;}
+  #say-card .btn{padding:11px 20px;font-size:.95rem;}
+}
+
 /* ═══ TALK 基礎填空卡：句子挖空，自己想著把整句說出來 ═══ */
 .cloze-card{background:var(--card);border:2px solid var(--line);border-radius:16px;
   padding:16px 18px;margin:10px 4px;text-align:center;}
