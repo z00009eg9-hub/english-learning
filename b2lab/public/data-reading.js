@@ -1002,6 +1002,426 @@ window.READING = [
      b2:"Nowhere is the cost of this more visible than in the shops below.",
      note:"Nowhere is ... more ... than ... 是社論常見的強調倒裝，比 the most 更有份量。", "sp": "You can see the damage most clearly in the shops downstairs.", "spNote": "口語把 Nowhere is...more visible 的倒裝還原成 You can see...，最自然。", "b1Cn": "樓下的商店受害最深。", "b2Cn": "這個代價在樓下的商店最清楚可見。", "spCn": "傷害最明顯的地方，就是樓下那排店面。"}
   ]
+},
+
+/* ---------------------------------------------------------- 20 */
+{
+  id:"r20", level:"B1", topic:"網購與生活", words:205,
+  title:"The Parcel That Went to the Wrong Floor",
+  titleCn:"送錯樓層的包裹",
+  focus:"現在完成式 vs. 過去簡單式（just / already / yet / ever）",
+  intro:"網購收不到貨的小事件。注意哪些句子講「到現在為止的狀態或結果」（用現在完成式），哪些句子講「已經結束的某個時間」（用過去簡單式）。",
+  spoken:[
+    {en:"Anita ordered a desk lamp online, and the app said it was delivered — but there was nothing at her door.",cn:"Anita 網購了一盞檯燈，App 說已經送達，可是她門口什麼都沒有。"},
+    {en:"She asked the security guard, but he hadn't seen any parcel.",cn:"她去問警衛，但他沒看到任何包裹。"},
+    {en:"The delivery photo showed door 603, and she lives in 503.",cn:"送貨照片拍的是 603 號門，而她住 503。"},
+    {en:"Now she writes her floor number on every order.",cn:"現在她每筆訂單都會寫上自己的樓層。"}
+  ],
+  paras:[
+    {en:"Anita ordered a new desk lamp online last Friday. The shop promised to deliver it in three days, so she was not worried. On Monday evening her phone showed a message: “Your parcel has been delivered.” But when she opened her door, there was nothing outside.",
+     cn:"上週五，Anita 在網路上訂了一盞新的檯燈。商家承諾三天內送到，所以她一點也不擔心。週一晚上，她的手機跳出一則訊息：「您的包裹已送達。」但她打開門，外面什麼都沒有。"},
+    {en:"She has lived in the building for two years, and this has never happened before. First she looked on the stairs. Then she asked the security guard downstairs. He said he had not seen any parcel today, and the delivery man had already left.",
+     cn:"她在這棟大樓已經住了兩年，從來沒發生過這種事。她先看了樓梯間，接著去問樓下的警衛。警衛說今天沒看到任何包裹，而且送貨員已經離開了。"},
+    {en:"Anita sent a message to the delivery company. Five minutes later, a worker wrote back. He had just checked the photo from the delivery. The door in the photo was number 603. Anita lives in 503.",
+     cn:"Anita 傳訊息給物流公司。五分鐘後，一位職員回覆了。他剛剛查了送貨時拍的照片，照片裡的門牌是 603 號，但 Anita 住的是 503。"},
+    {en:"She walked up to the sixth floor and knocked. A young man opened the door and looked embarrassed. “I have not opened it yet,” he said. “I was going to bring it down to you tomorrow. I am so sorry!” Anita laughed and took her lamp.",
+     cn:"她走上六樓敲門。一位年輕男子開了門，看起來很不好意思。「我還沒拆開，」他說，「我本來打算明天拿下去給妳。真的很抱歉！」Anita 笑了笑，把檯燈拿了回去。"},
+    {en:"Since that evening, Anita has added one line to every order: “Please check the floor number.” It took her ten seconds to write, but it has already saved her a lot of trouble.",
+     cn:"從那天晚上起，Anita 在每張訂單都加了一行字：「請確認樓層。」這行字她只花了十秒鐘寫，卻已經替她省下不少麻煩。"}
+  ],
+  target:[
+    {w:"parcel",ipa:"/ˈpɑːrsl/",pos:"n.",cn:"包裹",def:"A package that is sent by post or delivered to someone's home.",ex:"I picked up a parcel from my cousin at the post office.",exCn:"我在郵局領了表哥寄來的包裹。"},
+    {w:"promise",ipa:"/ˈprɑː.mɪs/",pos:"v.",cn:"承諾",def:"To say that you will definitely do something.",ex:"My boss promised me a day off after the busy season.",exCn:"老闆答應我旺季結束後讓我休一天假。"},
+    {w:"deliver",ipa:"/dɪˈlɪvɚ/",pos:"v.",cn:"遞送",def:"To take something to a person or a place.",ex:"This restaurant delivers lunch boxes to offices until two o'clock.",exCn:"這家餐廳到兩點前都會把便當送到辦公室。"},
+    {w:"worried",ipa:"/ˈwɝːid/",pos:"adj.",cn:"擔心的",def:"Feeling that something bad might happen.",ex:"Mom was worried because the bus was an hour late.",exCn:"公車晚了一小時，媽媽很擔心。"},
+    {w:"embarrassed",ipa:"/ɪmˈberəst/",pos:"adj.",cn:"尷尬的",def:"Feeling shy or uncomfortable because of something that happened.",ex:"Tom felt embarrassed when he called his teacher by the wrong name.",exCn:"Tom 叫錯老師的名字，覺得很尷尬。"},
+    {w:"trouble",ipa:"/ˈtrʌbl/",pos:"n.",cn:"麻煩",def:"Problems or difficulties.",ex:"We had trouble finding a taxi after the concert.",exCn:"演唱會結束後，我們很難攔到計程車。"}
+  ],
+  questions:[
+    {q:"Where was Anita's parcel?",
+     opts:["A. Downstairs with the security guard","B. In front of her own door","C. In a neighbour's flat on the sixth floor","D. At the delivery company"],
+     ans:2,
+     expl:"送貨照片拍的是 603 號門，Anita 到六樓敲門，年輕男子說包裹還在他那裡。"},
+    {q:"How did Anita find out which door the parcel went to?",
+     opts:["A. The security guard told her","B. She saw it on the stairs","C. The delivery company checked a photo","D. A neighbour called her"],
+     ans:2,
+     expl:"文章寫 He had just checked the photo from the delivery. The door in the photo was number 603. → 物流職員查了送貨照片。"},
+    {q:"Choose the correct sentence: Anita ___ the lamp last Friday.",
+     opts:["A. has ordered","B. ordered","C. orders","D. is ordering"],
+     ans:1,
+     expl:"有明確的過去時間 last Friday，要用過去簡單式 ordered，不能用現在完成式。"}
+  ],
+  upgrade:[
+    {b1:"Anita has lived here for two years. This never happened.",
+     b2:"Anita has lived here for two years, and nothing like this has ever happened before.",
+     note:"現在完成式搭配 ever / never，表示「到現在為止的經驗」；用 and 把兩個完成式接在一起，句子更完整。",
+     sp:"I've been here two years and this has never happened — not once.",
+     spNote:"not once（一次也沒有）放句尾，是口語強調「從來沒有」的常見說法。",
+     b1Cn:"Anita 住在這裡兩年了。這件事從沒發生過。",
+     b2Cn:"Anita 在這裡住了兩年，這種事以前從來沒發生過。",
+     spCn:"我住這兩年了，這種事從來沒發生過——連一次都沒有。"},
+    {b1:"I did not open it. I will bring it tomorrow.",
+     b2:"I haven't opened it yet — I was going to bring it down to you tomorrow.",
+     note:"否定句句尾加 yet 表示「到現在還沒」；was going to 表示「原本打算要做」。",
+     sp:"Haven't touched it, honest — I was gonna drop it off tomorrow.",
+     spNote:"gonna 是 going to 的口語縮讀；honest 當插入語，表示「真的啦」。",
+     b1Cn:"我沒有拆。我明天會拿過去。",
+     b2Cn:"我還沒拆開——我本來打算明天拿下去給妳。",
+     spCn:"我完全沒碰，真的——我本來打算明天幫你送過去。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 21 */
+{
+  id:"r21", level:"B1", topic:"運動與習慣", words:222,
+  title:"Tom Decides to Run",
+  titleCn:"Tom 決定開始跑步",
+  focus:"be going to 與 will：事先的計畫 vs. 當下的決定",
+  intro:"一個「說了很久卻一直沒開始」的運動故事。注意 I'm going to ... 是已經有的打算，I'll ... 則是說話當下才做的決定。",
+  spoken:[
+    {en:"Tom's doctor told him to walk more, so he said he was going to start running.",cn:"Tom 的醫生叫他多走路，所以他說他要開始跑步。"},
+    {en:"But first it rained, then it was cold, and he kept saying, “I'll start tomorrow.”",cn:"但先是下雨、後來太冷，他一直說「我明天再開始」。"},
+    {en:"Then his neighbour invited him to the park, and Tom decided on the spot — “OK, I'll get my shoes.”",cn:"後來鄰居約他去公園，Tom 當場就決定：「好，我去拿鞋。」"},
+    {en:"Now there's a card on his fridge with his weekly plan.",cn:"現在他冰箱上貼著一張寫著每週計畫的卡片。"}
+  ],
+  paras:[
+    {en:"Tom works at a desk all day, and last month his doctor gave him some simple advice: walk more. “I'm going to start running,” Tom told his sister that night. She laughed. “You said that last year, too.”",
+     cn:"Tom 整天坐在辦公桌前工作，上個月醫生給了他一個簡單的建議：多走路。「我打算開始跑步，」那天晚上 Tom 對姊姊說。姊姊笑了。「你去年也這樣說過。」"},
+    {en:"The next morning he put on his old running shoes. It was raining, so he said, “I'll start tomorrow.” But the next day was too cold, and the day after that he was too tired. He was not ready to give up, but he was not really moving, either.",
+     cn:"隔天早上，他穿上舊的跑鞋。外面在下雨，所以他說：「我明天再開始。」但第二天太冷，再隔天他又太累。他還不想放棄，但也沒真的動起來。"},
+    {en:"On Saturday his neighbour Mr. Lin knocked on the door. “I'm going to the park for a walk,” he said. “Do you want to come?” Tom looked at the sky. It was grey, but it was not raining. “OK, I'll get my shoes,” he said.",
+     cn:"週六，鄰居林先生來敲門。「我要去公園散步，」他說，「你要一起來嗎？」Tom 看了看天空，雖然是灰的，但沒有下雨。「好，我去拿鞋，」他說。"},
+    {en:"They walked for twenty minutes, and then Tom tried to run. After ten minutes he had to stop. His legs were shaking, and he was breathing hard. But he felt happy. “Same time next Saturday?” Mr. Lin asked. “Yes,” Tom said. “And I think I'll try a short run on Wednesday, too.”",
+     cn:"他們走了二十分鐘，然後 Tom 試著跑起來。十分鐘後他不得不停下來，雙腿發抖，呼吸急促，但他覺得很開心。「下週六同一時間？」林先生問。「好，」Tom 說，「而且我想週三也試著跑一小段。」"},
+    {en:"It is still a small plan. But this time Tom wrote it on a card and put it on the fridge: “Saturday — park. Wednesday — 10 minutes.” He says the card is more useful than his promise.",
+     cn:"這還只是個小計畫。但這次 Tom 把它寫在一張卡片上，貼在冰箱門：「週六——公園。週三——十分鐘。」他說這張卡片比他的承諾更有用。"}
+  ],
+  target:[
+    {w:"advice",ipa:"/ədˈvaɪs/",pos:"n.",cn:"建議",def:"An opinion about what someone should do.",ex:"The old taxi driver gave us good advice about the night market.",exCn:"那位老計程車司機給了我們關於夜市的好建議。"},
+    {w:"neighbour",ipa:"/ˈneɪbɚ/",pos:"n.",cn:"鄰居",def:"A person who lives near you.",ex:"Our neighbour waters the plants when we go away.",exCn:"我們出遠門時，鄰居會幫忙澆花。"},
+    {w:"give up",ipa:"/ɡɪv ˈʌp/",pos:"phr. v.",cn:"放棄",def:"To stop trying to do something.",ex:"Don't give up on your English — you get better every week.",exCn:"別放棄英文——你每週都在進步。"},
+    {w:"breathe",ipa:"/briːð/",pos:"v.",cn:"呼吸",def:"To take air into your body and let it out again.",ex:"Breathe in slowly, and then count to four.",exCn:"慢慢吸氣，然後數到四。"},
+    {w:"shake",ipa:"/ʃeɪk/",pos:"v.",cn:"發抖；搖動",def:"To move quickly from side to side or up and down.",ex:"My hands shake a little when I speak in front of a big group.",exCn:"在一大群人面前說話時，我的手會微微發抖。"},
+    {w:"useful",ipa:"/ˈjuːsfəl/",pos:"adj.",cn:"有用的",def:"Helpful for doing or getting something.",ex:"A small flashlight is useful during a power cut.",exCn:"停電時，一支小手電筒很有用。"}
+  ],
+  questions:[
+    {q:"What advice did Tom's doctor give him?",
+     opts:["A. Sleep more","B. Walk more","C. Eat less","D. Work less"],
+     ans:1,
+     expl:"文章寫 his doctor gave him some simple advice: walk more。"},
+    {q:"Why did Tom say, “OK, I'll get my shoes”?",
+     opts:["A. He had planned it a week before","B. It already happened yesterday","C. He decided at that moment","D. It is a fact about him"],
+     ans:2,
+     expl:"鄰居剛邀請他，Tom 看看天空後當場決定去。這種「說話當下的決定」用 will，不用 be going to。"},
+    {q:"What did Tom put on the fridge?",
+     opts:["A. A photo of Mr. Lin","B. A new pair of shoes","C. A card with his weekly plan","D. A note from his doctor"],
+     ans:2,
+     expl:"最後一段：he wrote it on a card and put it on the fridge。"}
+  ],
+  upgrade:[
+    {b1:"I want to run. I will start tomorrow.",
+     b2:"I'm going to start running, but I'll wait until the rain stops.",
+     note:"be going to 表示已經有的打算；will 表示說話當下才做的決定或附帶條件。",
+     sp:"I'm gonna get into running — just not while it's pouring.",
+     spNote:"get into 是「開始迷上」，pouring 是「下傾盆大雨」，都是口語常用字。",
+     b1Cn:"我想跑步。我明天開始。",
+     b2Cn:"我打算開始跑步，但我會等雨停了再說。",
+     spCn:"我打算開始跑步——只是不要在下大雨的時候。"},
+    {b1:"Tom wrote a plan. A plan is better than only saying it.",
+     b2:"Tom wrote the plan on a card, which is more useful than just promising.",
+     note:"用 which 接在前面整句後面補充說明，再用 more + 形容詞 + than 做比較。",
+     sp:"Writing it down beats just promising yourself.",
+     spNote:"beat 在口語裡是「勝過」的意思，比 is better than 更簡短有力。",
+     b1Cn:"Tom 寫了一個計畫。寫下來比只用說的好。",
+     b2Cn:"Tom 把計畫寫在卡片上，這比光是承諾更有用。",
+     spCn:"寫下來比只在心裡答應自己有效多了。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 22 */
+{
+  id:"r22", level:"B1+", topic:"手機與社交", words:220,
+  title:"The Café Where Nobody Checks Their Phone",
+  titleCn:"沒人滑手機的咖啡店",
+  focus:"現在完成進行式 vs. 現在完成式（has been doing / has done）",
+  intro:"一間要客人把手機放進盒子的咖啡店。注意 has been running / has been watching 強調「從過去持續到現在的過程」，而 has chosen / has become 強調「已經有的結果」。",
+  spoken:[
+    {en:"A café in Taipei has been asking customers to put their phones in a box since March.",cn:"台北有間咖啡店從三月起，就請客人把手機放進盒子裡。"},
+    {en:"If you do it, you get a free cookie.",cn:"放進去的話，就送你一片免費餅乾。"},
+    {en:"Some students refused at first, so the owner let people who needed their phones keep them at the counter.",cn:"一開始有些學生拒絕，所以老闆讓需要手機的人把手機放在櫃檯。"},
+    {en:"Now the place is louder, and some regulars say they've finally made friends there.",cn:"現在店裡變吵了，有些常客說他們終於在那裡交到朋友。"}
+  ],
+  paras:[
+    {en:"A small café near a Taipei university has been running an unusual experiment since March. At the door, customers are asked to put their phones in a wooden box. Nobody is forced to do it, but those who agree get a free cookie. The owner, Ms. Chen, has been watching the results closely ever since.",
+     cn:"台北一所大學附近的小咖啡店，從三月起就在進行一項特別的實驗。在門口，客人會被請求把手機放進一個木盒子裡。沒有人被強迫，但願意配合的人可以拿到一片免費餅乾。老闆陳小姐從那時起就一直仔細觀察結果。"},
+    {en:"At first, many students refused. They had been using their phones to study, they explained, or to wait for messages from family. Ms. Chen listened carefully and changed one rule: anyone who needed to stay in touch could keep a phone at the counter. Since then, more than half of the customers have chosen the box.",
+     cn:"一開始，很多學生拒絕。他們解釋說，自己一直是用手機在念書，或是在等家人的訊息。陳小姐聽了之後改了一條規則：需要保持聯絡的人，可以把手機放在櫃檯。從那之後，超過一半的客人選擇了放進盒子。"},
+    {en:"The change has been noticeable. The café has become louder in a pleasant way, with more laughter and the sound of cups instead of keyboards. Some regular customers say they have made friends there for the first time in years. One student has been coming every Thursday and has already finished two books.",
+     cn:"這個改變相當明顯。咖啡店變得更吵了，但是吵得很舒服，有更多笑聲，還有杯子的聲音取代了鍵盤聲。有些常客說，他們多年來第一次在這裡交到朋友。有一位學生每週四都來，已經讀完了兩本書。"},
+    {en:"Not everyone is happy. A few people have complained that the idea is old-fashioned, and one customer has stopped coming altogether. Ms. Chen is not worried. “I haven't been trying to change the world,” she says. “I have only been trying to give people one quiet hour. That seems to be enough. Most evenings, it is.”",
+     cn:"並不是每個人都滿意。少數人抱怨這個點子太老派，還有一位客人完全不來了。陳小姐並不擔心。「我並不是想改變世界，」她說，「我只是想讓大家有一個安靜的小時。這樣似乎就夠了。大多數晚上，確實是夠的。」"}
+  ],
+  target:[
+    {w:"experiment",ipa:"/ɪkˈsper.ə.mənt/",pos:"n.",cn:"實驗",def:"A test that you do to find out if an idea works.",ex:"Our science teacher did an experiment with ice and salt.",exCn:"我們的自然老師用冰和鹽做了一個實驗。"},
+    {w:"owner",ipa:"/ˈoʊnɚ/",pos:"n.",cn:"老闆；擁有者",def:"A person who owns something, such as a shop.",ex:"The owner of the bakery remembers every customer's favorite bread.",exCn:"麵包店老闆記得每位客人最愛的麵包。"},
+    {w:"refuse",ipa:"/rɪˈfjuːz/",pos:"v.",cn:"拒絕",def:"To say that you will not do or accept something.",ex:"The bank refused to lend him money without a guarantor.",exCn:"沒有保證人，銀行拒絕借錢給他。"},
+    {w:"regular",ipa:"/ˈreɡjəlɚ/",pos:"n.",cn:"常客",def:"A person who goes to the same place often.",ex:"As a regular at the gym, Jason knows all the trainers by name.",exCn:"身為健身房常客，Jason 叫得出所有教練的名字。"},
+    {w:"noticeable",ipa:"/ˈnoʊtɪsəbl/",pos:"adj.",cn:"明顯的",def:"Easy to see or to feel.",ex:"There has been a noticeable drop in traffic since the new subway opened.",exCn:"新地鐵開通以後，車流量明顯減少。"},
+    {w:"complain",ipa:"/kəmˈpleɪn/",pos:"v.",cn:"抱怨",def:"To say that you are not satisfied with something.",ex:"Several tenants complained about the noise from the construction site.",exCn:"好幾位房客抱怨工地的噪音。"},
+    {w:"old-fashioned",ipa:"/ˌoʊldˈfæʃnd/",pos:"adj.",cn:"老派的；過時的",def:"Not modern; belonging to an earlier time.",ex:"My grandmother still uses an old-fashioned sewing machine.",exCn:"我奶奶還在用一台老式縫紉機。"},
+    {w:"altogether",ipa:"/ˌɔːltəˈɡeðɚ/",pos:"adv.",cn:"完全；總共",def:"Completely; in total.",ex:"The trip cost five thousand dollars altogether, including meals.",exCn:"這趟旅行含餐費總共花了五千元。"}
+  ],
+  questions:[
+    {q:"What do customers get if they put their phones in the box?",
+     opts:["A. A free drink","B. A free cookie","C. A discount card","D. A free book"],
+     ans:1,
+     expl:"文章寫 those who agree get a free cookie。"},
+    {q:"What rule did Ms. Chen change after some students refused?",
+     opts:["A. Phones were banned completely","B. Phones could stay on the table","C. People who needed to stay in touch could keep a phone at the counter","D. The box was moved outside"],
+     ans:2,
+     expl:"第二段：anyone who needed to stay in touch could keep a phone at the counter。"},
+    {q:"Why does the writer say “One student has been coming every Thursday”?",
+     opts:["A. To show an action that began in the past and continues until now","B. To show a finished action in the past","C. To talk about a future plan","D. To describe a single event last Thursday"],
+     ans:0,
+     expl:"has been coming + every Thursday 表示從過去持續到現在的重複行為，這是現在完成進行式的典型用法。"},
+    {q:"How does Ms. Chen feel about the criticism?",
+     opts:["A. She is angry","B. She plans to close the café","C. She is not worried","D. She wants to ban phones everywhere"],
+     ans:2,
+     expl:"文章寫 Ms. Chen is not worried，她只是想讓大家有一個安靜的小時。"}
+  ],
+  upgrade:[
+    {b1:"The café started this idea in March. It still does it now.",
+     b2:"The café has been running this experiment since March.",
+     note:"現在完成進行式 has been V-ing + since，一句話就說完「從過去開始、到現在仍在進行」。",
+     sp:"They've been doing this phone-box thing since March.",
+     spNote:"thing 在口語裡可以代替較正式的名詞，像 phone-box thing（手機盒那套做法）。",
+     b1Cn:"這家咖啡店三月開始這個點子。現在還在做。",
+     b2Cn:"這家咖啡店從三月起就一直在進行這項實驗。",
+     spCn:"他們從三月就一直在搞這個手機盒的玩意兒。"},
+    {b1:"They give a free cookie to people who put their phones in the box.",
+     b2:"Nobody is forced to do it, but those who agree get a free cookie.",
+     note:"用被動語態 is forced 淡化「誰在強迫」，再用 those who 代替 people who，語氣更正式。",
+     sp:"No one's making you — but if you do, you get a free cookie.",
+     spNote:"No one's making you 是口語把被動還原成「沒人逼你」，一聽就懂。",
+     b1Cn:"他們把免費餅乾送給把手機放進盒子的人。",
+     b2Cn:"沒有人被強迫這麼做，但願意配合的人可以拿到免費餅乾。",
+     spCn:"沒人逼你——不過你放了，就送你一片免費餅乾。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 23 */
+{
+  id:"r23", level:"B1+", topic:"語言學習與職場", words:228,
+  title:"Learning Vietnamese Five Minutes at a Time",
+  titleCn:"一次五分鐘的越南語",
+  focus:"第二條件句與 wish（If I had ..., I would ... / I wish I could ...）",
+  intro:"在越南工作的 Anita 想學當地語言，卻總說「沒時間」。注意 If + 過去式, would + 原形 如何談「和現在事實相反的假設」，以及 wish 後面的時態。",
+  spoken:[
+    {en:"Anita's Vietnamese is still basic, and she says she'd take a class if she had more time.",cn:"Anita 的越南語還很基礎，她說如果有更多時間，就會去上課。"},
+    {en:"Her colleague Mai told her, “If I were you, I'd learn five minutes at a time.”",cn:"同事 Mai 對她說：「如果我是妳，我會一次只學五分鐘。」"},
+    {en:"So now she learns one sentence on the shuttle bus and tries it out at lunch.",cn:"所以她現在在交通車上學一句，午餐時就拿來用。"},
+    {en:"After six weeks she knows about forty sentences, and she wishes she'd started in January.",cn:"六週後她會了大約四十句，也希望自己一月就開始了。"}
+  ],
+  paras:[
+    {en:"Anita has lived in Vietnam for eight months, but her Vietnamese is still very basic. She can order coffee, ask for a price, and say thank you politely. If she had more free time, she would take a proper class, she often tells herself. But after ten hours at the factory, she is usually too tired to open a textbook.",
+     cn:"Anita 在越南住了八個月，但她的越南語仍然非常基礎。她會點咖啡、問價錢，還會禮貌地說謝謝。她常對自己說，如果有更多空閒時間，她就會去上正式的課。但在工廠待了十個小時之後，她通常累得連課本都打不開。"},
+    {en:"Last month her colleague Mai offered a different idea. “If I were you, I wouldn't wait for free time,” Mai said. “I'd learn five minutes at a time.” She suggested one new sentence every morning on the shuttle bus, and a short chat at lunch. Anita wished she had thought of it earlier.",
+     cn:"上個月，同事 Mai 提出了不同的想法。「如果我是妳，我不會等有空閒時間，」Mai 說，「我會一次只學五分鐘。」她建議每天早上在交通車上學一個新句子，午餐時再聊幾句。Anita 後悔自己沒有早點想到。"},
+    {en:"The plan sounded too small to matter, but Anita tried it. On the bus she repeats one sentence about her day. At lunch she uses it with Mai, who corrects her gently. Some days she makes mistakes and everyone laughs. If she were afraid of looking silly, she would stop, but she has decided that laughing is part of learning.",
+     cn:"這個計畫聽起來小到沒什麼用，但 Anita 還是試了。在車上，她會重複一句關於自己這一天的話。午餐時，她把這句話用在 Mai 身上，Mai 會溫和地糾正她。有些日子她犯了錯，大家一起笑。如果她害怕看起來很蠢，她早就放棄了，但她已經決定，笑也是學習的一部分。"},
+    {en:"After six weeks, Anita knows about forty sentences. It is not much, yet the market vendors now smile when she speaks. “I wish I could say more,” she admits, “but if someone had told me this in January, I would have started then.” Her next goal is simple: a full conversation with a taxi driver.",
+     cn:"六週後，Anita 會了大約四十個句子。數量不多，但市場的攤販現在聽她開口就會微笑。「我真希望自己能說得更多，」她承認，「但如果一月有人告訴我這個方法，我當時就會開始了。」她的下一個目標很簡單：和計程車司機進行一段完整的對話。"}
+  ],
+  target:[
+    {w:"proper",ipa:"/ˈprɑːpɚ/",pos:"adj.",cn:"正式的；適當的",def:"Right or suitable for a particular purpose.",ex:"You need proper shoes for hiking in the mountains.",exCn:"去山裡健行需要一雙合適的鞋。"},
+    {w:"colleague",ipa:"/ˈkɑː.liːɡ/",pos:"n.",cn:"同事",def:"A person who works with you.",ex:"My colleague from the sales team brought us mango cake.",exCn:"業務部的同事帶了芒果蛋糕給我們。"},
+    {w:"suggest",ipa:"/səˈdʒest/",pos:"v.",cn:"建議",def:"To offer an idea for someone to think about.",ex:"The waiter suggested the grilled fish, so we ordered it.",exCn:"服務生推薦了烤魚，所以我們就點了。"},
+    {w:"correct",ipa:"/kəˈrekt/",pos:"v.",cn:"糾正",def:"To show and fix a mistake.",ex:"The teacher corrected my pronunciation of the word “comfortable.”",exCn:"老師糾正了我 comfortable 這個字的發音。"},
+    {w:"silly",ipa:"/ˈsɪli/",pos:"adj.",cn:"傻的；愚蠢的",def:"Not serious or sensible.",ex:"It felt silly to wear a raincoat on such a sunny day.",exCn:"在這麼晴朗的日子穿雨衣，感覺很傻。"},
+    {w:"vendor",ipa:"/ˈvendɚ/",pos:"n.",cn:"小販；攤商",def:"A person who sells things, often outdoors.",ex:"A street vendor sold us two cups of fresh sugarcane juice.",exCn:"一位街頭小販賣給我們兩杯現榨甘蔗汁。"},
+    {w:"admit",ipa:"/ədˈmɪt/",pos:"v.",cn:"承認",def:"To say that something is true, often unwillingly.",ex:"Paul finally admitted that he had forgotten the password.",exCn:"Paul 終於承認他忘了密碼。"},
+    {w:"goal",ipa:"/ɡoʊl/",pos:"n.",cn:"目標",def:"Something you want to achieve.",ex:"Her goal this year is to save enough for a short trip to Japan.",exCn:"她今年的目標是存夠錢去日本玩幾天。"}
+  ],
+  questions:[
+    {q:"Why does Anita not take a proper class?",
+     opts:["A. Classes are too expensive","B. She is usually too tired after work","C. She already speaks Vietnamese well","D. There are no classes near the factory"],
+     ans:1,
+     expl:"第一段：after ten hours at the factory, she is usually too tired to open a textbook。"},
+    {q:"What did Mai suggest?",
+     opts:["A. Waiting for more free time","B. Studying five minutes at a time","C. Watching Vietnamese TV all night","D. Asking the manager for a day off"],
+     ans:1,
+     expl:"Mai 說 I'd learn five minutes at a time，並建議在交通車上學一句、午餐時練習。"},
+    {q:"“If she were afraid of looking silly, she would stop.” What does this tell us?",
+     opts:["A. She is afraid, so she has stopped","B. She is not afraid, so she keeps going","C. She will stop tomorrow","D. She stopped last week"],
+     ans:1,
+     expl:"If + were ... would 是第二條件句，表示和現在事實相反：她其實不怕出糗，所以沒有放棄。"},
+    {q:"What is Anita's next goal?",
+     opts:["A. To pass an exam","B. To teach Mai English","C. To have a full conversation with a taxi driver","D. To move to another city"],
+     ans:2,
+     expl:"最後一句：a full conversation with a taxi driver。"}
+  ],
+  upgrade:[
+    {b1:"I do not have free time, so I cannot take a class.",
+     b2:"If I had more free time, I would take a proper class.",
+     note:"第二條件句：If + 過去式, would + 原形，用來談和現在事實相反的假設，比直接說「做不到」更委婉。",
+     sp:"If I had the time, I'd be in a class by now.",
+     spNote:"by now（到現在早就）讓語氣帶著一點遺憾，口語很常用。",
+     b1Cn:"我沒有空閒時間，所以不能去上課。",
+     b2Cn:"如果我有更多空閒時間，我就會去上一堂正式的課。",
+     spCn:"要是我有時間，現在早就在上課了。"},
+    {b1:"I want to say more, but I cannot.",
+     b2:"I wish I could say more.",
+     note:"wish + could / 過去式，表達對現在情況的遺憾；wish + 過去完成式則是對過去的後悔。",
+     sp:"Man, I wish I could just say what I'm thinking.",
+     spNote:"Man 是口語感嘆詞，just 加強「就是想直接說出來」的語氣。",
+     b1Cn:"我想多說一點，但是我不行。",
+     b2Cn:"我真希望自己能說得更多。",
+     spCn:"唉，我真希望能直接把心裡想的說出來。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 24 */
+{
+  id:"r24", level:"B2", topic:"職場與時間", words:285,
+  title:"Why We Keep Saying Yes",
+  titleCn:"為什麼我們總是說好",
+  focus:"動名詞與不定詞的意義差別（stop / remember / regret）；the more..., the more...",
+  intro:"關於加班和「說好」的習慣。注意 stop to ask（停下來去問）和 stop treating（不再當成）意思完全不同，另外 remember promising（記得曾經答應）與 remember to ask（記得要去問）也是同一組對比。",
+  spoken:[
+    {en:"Anita was about to leave at 6:40 when her manager asked her to stay and finish one more report.",cn:"Anita 6 點 40 分正要下班，主管卻問她能不能留下來再做一份報告。"},
+    {en:"She said yes again — it's easier to agree than to refuse.",cn:"她又答應了——答應總是比拒絕容易。"},
+    {en:"The next week, she stopped to ask when the report was actually due.",cn:"隔週，她停下來問這份報告到底什麼時候要。"},
+    {en:"Surprisingly often, the answer was Friday, not tonight.",cn:"出乎意料的是，答案常常是週五，不是今晚。"}
+  ],
+  paras:[
+    {en:"At 6:40 p.m., Anita was about to leave when her manager asked whether she could stay and finish one more report. She remembered promising herself to stop working late on weekdays, yet she heard herself say yes. It was the third time that week, and she walked back to her desk feeling both annoyed and oddly relieved. The report was not even difficult; it was simply one more task that had arrived at the end of the day.",
+     cn:"晚上 6 點 40 分，Anita 正要下班，主管問她能不能留下來再完成一份報告。她記得自己答應過自己要停止在平日加班，但她卻聽見自己說了好。這已經是那週第三次，她走回座位，心裡既惱火又莫名地鬆了一口氣。那份報告其實並不難，只是一天快結束時又多出來的一件事。"},
+    {en:"Psychologists have long observed that most people find it easier to agree than to refuse, especially when the request comes from someone senior. Refusing means risking an awkward silence; agreeing costs only an hour, or so it seems. Each yes looks reasonable on its own, which is exactly why the pattern is so hard to notice. The trouble is that these hours accumulate, and the more we agree, the more others expect us to agree.",
+     cn:"心理學家早就觀察到，大多數人覺得同意比拒絕容易，尤其當請求來自職位較高的人。拒絕意味著要冒尷尬沉默的風險；答應似乎只需要花一個小時。每一次答應單獨來看都很合理，這正是這種模式如此難以察覺的原因。問題是這些小時會累積，而且我們答應得越多，別人就越期待我們答應。"},
+    {en:"Anita tried a different approach the following week. Instead of answering at once, she stopped to ask when the report was actually due. Several times the answer was Friday, not tonight. She did not regret asking, and her manager seemed relieved to have a clearer deadline. Not every request can wait, of course, but she had stopped treating every request as an emergency.",
+     cn:"隔週 Anita 試了不同的做法。她不再立刻回答，而是停下來問這份報告實際上什麼時候要交。好幾次答案都是週五，而不是今晚。她並不後悔開口問，而她的主管似乎也因為有了更明確的期限而鬆了口氣。當然，不是每件事都能等，但她已經不再把每個要求都當成緊急狀況。"},
+    {en:"It would be naive to claim that one habit can change a workplace culture. Still, Anita no longer regrets saying yes, because she now says it deliberately, and sometimes she says no with a smile. Remembering to ask one simple question has given her something she thought she had lost: the sense that her evenings belong to her. Perhaps that is all most of us are trying to protect.",
+     cn:"如果宣稱一個習慣就能改變職場文化，那未免太天真。儘管如此，Anita 不再為答應而後悔，因為她現在是有意識地答應，有時候也能帶著微笑說不。記得問一個簡單的問題，讓她找回了她以為已經失去的東西：晚上的時間屬於自己的那種感覺。或許，這正是我們大多數人想守住的東西。"}
+  ],
+  target:[
+    {w:"accumulate",ipa:"/əˈkjuːmjəleɪt/",pos:"v.",cn:"累積",def:"To gradually get more and more of something.",ex:"Dust had accumulated on the shelves during the long summer.",exCn:"漫長的夏天裡，架子上積了一層灰塵。"},
+    {w:"annoyed",ipa:"/əˈnɔɪd/",pos:"adj.",cn:"惱火的",def:"Slightly angry about something.",ex:"She was annoyed that the train was cancelled again.",exCn:"火車又被取消了，她很惱火。"},
+    {w:"awkward",ipa:"/ˈɔːkwɚd/",pos:"adj.",cn:"尷尬的",def:"Uncomfortable or difficult to deal with.",ex:"There was an awkward pause when nobody knew the answer.",exCn:"沒有人知道答案時，出現了一陣尷尬的停頓。"},
+    {w:"senior",ipa:"/ˈsiːnjɚ/",pos:"adj.",cn:"資深的；職位較高的",def:"Higher in rank or position.",ex:"He was promoted to senior engineer after five years.",exCn:"他工作五年後晉升為資深工程師。"},
+    {w:"deadline",ipa:"/ˈdedlaɪn/",pos:"n.",cn:"截止期限",def:"The latest time by which something must be done.",ex:"We extended the deadline by two days because of the typhoon.",exCn:"因為颱風，我們把截止期限延了兩天。"},
+    {w:"regret",ipa:"/rɪˈɡret/",pos:"v.",cn:"後悔",def:"To feel sorry about something you did or did not do.",ex:"I regret not learning to swim when I was young.",exCn:"我後悔小時候沒學游泳。"},
+    {w:"deliberately",ipa:"/dɪˈlɪbɚətli/",pos:"adv.",cn:"刻意地",def:"On purpose, not by accident.",ex:"He deliberately arrived early to find a quiet seat.",exCn:"他刻意提早到，好找個安靜的座位。"},
+    {w:"naive",ipa:"/naɪˈiːv/",pos:"adj.",cn:"天真的",def:"Believing things too easily; lacking experience.",ex:"It was naive of us to think the road would be empty on a holiday.",exCn:"我們以為假日路上會沒什麼車，真是太天真了。"},
+    {w:"emergency",ipa:"/ɪˈmɝː.dʒən.si/",pos:"n.",cn:"緊急狀況",def:"A serious situation that needs action right away.",ex:"In an emergency, call the hotel desk first.",exCn:"遇到緊急狀況，請先打給飯店櫃檯。"}
+  ],
+  questions:[
+    {q:"What had Anita promised herself?",
+     opts:["A. To ask for a raise","B. To stop working late on weekdays","C. To change her job","D. To finish every report early"],
+     ans:1,
+     expl:"第一段：She remembered promising herself to stop working late on weekdays。"},
+    {q:"According to the writer, why do the extra hours accumulate?",
+     opts:["A. Managers cannot plan their work","B. Agreeing seems cheap, and the more we agree, the more others expect","C. Reports are always urgent","D. Employees enjoy working late"],
+     ans:1,
+     expl:"第二段：agreeing costs only an hour, or so it seems ... the more we agree, the more others expect us to agree。"},
+    {q:"What did Anita do differently the following week?",
+     opts:["A. She refused every request","B. She left the office early","C. She stopped to ask when the report was due","D. She asked another colleague to do it"],
+     ans:2,
+     expl:"第三段：she stopped to ask when the report was actually due。"},
+    {q:"What is the difference between “stopped to ask” and “stopped treating”?",
+     opts:["A. They mean exactly the same","B. “Stopped to ask” = paused in order to ask; “stopped treating” = ended a habit","C. “Stopped to ask” = ended a habit; “stopped treating” = paused in order to ask","D. Both mean she asked a question"],
+     ans:1,
+     expl:"stop + to V 是「停下來去做某事」；stop + V-ing 是「不再做某事」。文章裡兩種用法同時出現。"}
+  ],
+  upgrade:[
+    {b1:"Saying no is hard. Saying yes is easy.",
+     b2:"Most people find it easier to agree than to refuse.",
+     note:"find it + 形容詞 + to V：用 it 當形式受詞，再用比較級 easier ... than ... 做對比，一句涵蓋整個論點。",
+     sp:"Honestly, it's way easier to just say yes than to say no.",
+     spNote:"way easier 是口語的「遠比…容易」，just 帶出「乾脆答應算了」的語氣。",
+     b1Cn:"說不很難。說好很容易。",
+     b2Cn:"大多數人覺得同意比拒絕容易。",
+     spCn:"說真的，直接說好比說不容易多了。"},
+    {b1:"If we say yes a lot, people ask us for more.",
+     b2:"The more we agree, the more others expect us to agree.",
+     note:"the + 比較級 ..., the + 比較級 ... 表示「越……就越……」，兩件事同步增加。",
+     sp:"Say yes once and suddenly everyone expects it every time.",
+     spNote:"口語把 If 省掉，直接用祈使句 Say yes once and ... 表達條件。",
+     b1Cn:"如果我們常常說好，別人就會要求更多。",
+     b2Cn:"我們答應得越多，別人就越期待我們答應。",
+     spCn:"答應一次，突然大家就覺得你每次都會答應。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 25 */
+{
+  id:"r25", level:"B2", topic:"環境與都市", words:260,
+  title:"The Truck That Plays Music Every Evening",
+  titleCn:"每晚唱歌的垃圾車",
+  focus:"目的與結果子句（in order to / so that / so ... that / such ... that）",
+  intro:"從台北的垃圾車說到都市政策。注意表示「目的」的 in order to、so as to、so that，以及表示「結果」的 so ... that、such ... that，它們在說明政策動機時非常好用。",
+  spoken:[
+    {en:"In Taiwan, a truck plays music every evening, and people bring their rubbish down to hand it over.",cn:"在台灣，垃圾車每天傍晚放著音樂，大家把垃圾帶下樓親手交給清潔人員。"},
+    {en:"Taipei started charging for general rubbish bags so people would throw away less.",cn:"台北開始對一般垃圾袋收費，好讓大家少丟一點。"},
+    {en:"Recycling is free, so sorting is worth the effort.",cn:"回收是免費的，所以花力氣分類很划算。"},
+    {en:"It takes time, but most residents think it's a fair price for clean streets.",cn:"這很花時間，但大多數居民覺得為了乾淨的街道，這樣很值得。"}
+  ],
+  paras:[
+    {en:"In Taiwan, rubbish collection is a small daily event. Official bags are sold in convenience stores in several sizes, so even the smallest apartment has to think about how much it throws away. Every evening a truck plays a tune, and residents carry their bags down to hand them over in person. The system is so familiar that most locals never think about it, yet visitors are often surprised by how much effort it involves.",
+     cn:"在台灣，收垃圾是一件小小的每日大事。官方垃圾袋在便利商店就買得到，有好幾種尺寸，所以就算是再小的住家，也得想想自己到底丟了多少東西。每天傍晚，垃圾車會播放一段旋律，居民提著垃圾袋下樓，親手交給清潔人員。這套制度對本地人來說太熟悉了，大家根本不會多想，但訪客常常驚訝於它需要花多少功夫。"},
+    {en:"The system was designed in order to solve a real problem. In the early 2000s, Taipei was producing such large amounts of waste that its landfills were almost full. The city introduced a charge for general rubbish bags so that people would have a reason to throw away less. Recyclables, by contrast, were collected free of charge.",
+     cn:"這套制度是為了解決一個真實的問題而設計的。在 2000 年代初期，台北製造的垃圾量大到讓掩埋場幾乎滿載。市政府對一般垃圾袋開始收費，讓大家有理由少丟一點；相對地，資源回收物則是免費收取。"},
+    {en:"The results were encouraging. Recycling rates climbed steadily, and the amount of household waste per person fell. The system works partly because it is so predictable: residents sort their rubbish carefully so as to avoid fines, and collectors check bags to make sure the rules are followed. Neighbours often chat while they wait for the truck, which gives the routine an unexpected social side.",
+     cn:"成果令人鼓舞。回收率穩定攀升，每人的家戶垃圾量也下降了。這套制度之所以有效，部分原因在於它太可預期：居民仔細分類垃圾以避免罰款，清潔人員也會檢查垃圾袋，確保大家遵守規則。鄰居們常在等垃圾車的時候聊天，讓這個例行公事多了一層意想不到的社交面向。"},
+    {en:"Critics point out that the approach demands a lot of time, particularly from working people who cannot be home at the right hour. Even so, many residents defend it. Such a routine, they argue, is a small price to pay for clean streets and a shared sense of responsibility. It is a system inconvenient enough to change habits, and simple enough to keep them.",
+     cn:"批評者指出，這種做法需要花很多時間，尤其對無法在固定時間待在家的上班族來說。即便如此，仍有許多居民為它辯護。他們認為，這樣的日常，是為了乾淨的街道和共同的責任感而付出的小小代價。這套制度夠不方便，足以改變習慣；又夠簡單，足以讓習慣持續下去。"}
+  ],
+  target:[
+    {w:"collection",ipa:"/kəˈlekʃn/",pos:"n.",cn:"收集；收取",def:"The act of taking things away from many places.",ex:"The museum has a large collection of old coins.",exCn:"這間博物館有大量的古錢幣收藏。"},
+    {w:"resident",ipa:"/ˈrezɪdənt/",pos:"n.",cn:"居民",def:"A person who lives in a particular place.",ex:"Residents of the tower can use the rooftop garden.",exCn:"大樓的住戶可以使用頂樓花園。"},
+    {w:"landfill",ipa:"/ˈlændfɪl/",pos:"n.",cn:"垃圾掩埋場",def:"A large area where waste is buried under the ground.",ex:"Most of the old furniture ended up in a landfill outside the city.",exCn:"大部分舊家具最後都被送到城外的掩埋場。"},
+    {w:"charge",ipa:"/tʃɑːrdʒ/",pos:"n.",cn:"費用",def:"An amount of money that you must pay for something.",ex:"There is no charge for children under six.",exCn:"六歲以下兒童免費。"},
+    {w:"recyclable",ipa:"/riːˈsaɪkləbl/",pos:"adj.",cn:"可回收的",def:"Able to be processed and used again.",ex:"Check that the cup is recyclable before you put it in the blue bin.",exCn:"把杯子丟進藍色回收桶之前，先確認它可以回收。"},
+    {w:"predictable",ipa:"/prɪˈdɪktəbl/",pos:"adj.",cn:"可預測的",def:"Happening in a way that you expect.",ex:"The ending of the film was so predictable that we laughed.",exCn:"這部電影的結局太好猜，我們都笑了。"},
+    {w:"fine",ipa:"/faɪn/",pos:"n.",cn:"罰款",def:"Money that you must pay as a punishment.",ex:"She paid a small fine for returning the book late.",exCn:"她因為太晚還書，繳了一小筆罰款。"},
+    {w:"critic",ipa:"/ˈkrɪtɪk/",pos:"n.",cn:"批評者；評論家",def:"A person who says what is wrong or good about something.",ex:"The critic gave the new restaurant three stars out of five.",exCn:"那位評論家給了這家新餐廳五顆星裡的三顆。"},
+    {w:"responsibility",ipa:"/rɪˌspɑːnsəˈbɪləti/",pos:"n.",cn:"責任",def:"A duty to take care of something or someone.",ex:"Taking care of the shared kitchen is everyone's responsibility.",exCn:"照顧共用廚房是每個人的責任。"}
+  ],
+  questions:[
+    {q:"What happens in Taiwan every evening, according to the first paragraph?",
+     opts:["A. Streets are closed to traffic","B. A truck plays a tune and residents hand over their rubbish","C. Residents leave bags outside their doors","D. Factories stop producing waste"],
+     ans:1,
+     expl:"第一段：Every evening a truck plays a tune, and residents carry their bags down to hand them over in person。"},
+    {q:"Why did the city introduce a charge for general rubbish bags?",
+     opts:["A. To earn more money from tourists","B. To give people a reason to throw away less","C. To close the recycling centres","D. To replace the garbage trucks"],
+     ans:1,
+     expl:"第二段：so that people would have a reason to throw away less。"},
+    {q:"What do critics say about the system?",
+     opts:["A. It costs too much for the city","B. It demands a lot of time from working people","C. It produces more waste","D. It is too difficult to understand"],
+     ans:1,
+     expl:"第四段：the approach demands a lot of time, particularly from working people。"},
+    {q:"In “so that people would have a reason”, what does “so that” express?",
+     opts:["A. Purpose","B. Contrast","C. Condition","D. Time"],
+     ans:0,
+     expl:"so that + would 表示「為了讓……」的目的，不是結果或條件。"}
+  ],
+  upgrade:[
+    {b1:"The city made people pay for bags. People will use fewer bags.",
+     b2:"The city introduced a charge so that people would have a reason to throw away less.",
+     note:"so that + 子句表示目的，而且主詞可以和主要子句不同（city / people）；用 would 是因為主要動詞是過去式。",
+     sp:"They put a price on the bags to get people to throw less away.",
+     spNote:"get people to V（讓人去做某事）是口語最自然的「為了讓大家……」。",
+     b1Cn:"市府讓人們為垃圾袋付費。人們會少用垃圾袋。",
+     b2Cn:"市府開始收費，好讓人們有理由少丟一點垃圾。",
+     spCn:"他們幫垃圾袋定了價，讓大家少丟一點東西。"},
+    {b1:"There was a lot of waste. The landfills were nearly full.",
+     b2:"Taipei was producing such large amounts of waste that its landfills were almost full.",
+     note:"such + 形容詞 + 名詞 + that 子句：前面說程度，that 後面說結果，一句連貫。",
+     sp:"There was so much trash the landfills were basically full.",
+     spNote:"口語常把 so much ... that 的 that 省略；basically 是口語常見的緩和副詞。",
+     b1Cn:"垃圾很多。掩埋場快滿了。",
+     b2Cn:"台北製造的垃圾量大到掩埋場幾乎滿了。",
+     spCn:"垃圾多到掩埋場基本上都滿了。"}
+  ]
 }
 
 ];

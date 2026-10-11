@@ -520,6 +520,121 @@ r19:{ unit:"g11", title:"分裂句 It is ... that 與 Nowhere 倒裝",
     {bad:"Nowhere the cost is more visible.",good:"Nowhere is the cost more visible.",why:"Nowhere 置句首要把 be 動詞提到主詞前。"},
     {bad:"It is not a shortage of buildings which keeps rents high.",good:"It is not a shortage of buildings that keeps rents high.",why:"分裂句習慣用 that，不用 which。"}
   ]
+},
+
+r20:{ unit:"g04", title:"現在完成式 vs. 過去簡單式",
+  formula:"have / has + 過去分詞（和現在有關）　|　動詞過去式（已結束的某個時間）",
+  points:[
+    "現在完成式連結「過去」與「現在」：重點是到現在為止的結果、經驗或持續狀態。The parcel has been delivered. 讓人關心的是「現在包裹應該在了」。",
+    "過去簡單式只談已經結束的時間點：Anita ordered a lamp last Friday. 有 last Friday、yesterday、in 2020 這種明確過去時間，就不能用現在完成式。",
+    "just / already / yet / ever / never 是現在完成式的常見搭配：just 剛剛、already 已經、yet 用在否定與疑問句句尾、ever / never 談人生經驗。",
+    "for + 一段時間、since + 起點，也是現在完成式的信號：She has lived here for two years."
+  ],
+  examples:[
+    {en:"I have already finished my homework.",cn:"我已經寫完功課了。",note:"already + 現在完成式"},
+    {en:"I finished my homework an hour ago.",cn:"我一小時前寫完了功課。",note:"明確過去時間 → 過去簡單式"},
+    {en:"Have you ever tried durian?",cn:"你吃過榴槤嗎？",note:"ever 問經驗"}
+  ],
+  traps:[
+    {bad:"She has ordered the lamp last Friday.",good:"She ordered the lamp last Friday.",why:"last Friday 是明確的過去時間，要用過去簡單式。"},
+    {bad:"I didn't open it already.",good:"I haven't opened it yet.",why:"否定句要用 yet；already 通常用在肯定句。"}
+  ]
+},
+
+r21:{ unit:"g01", title:"be going to 與 will：計畫 vs. 當下決定",
+  formula:"be going to + 原形（事先的打算）　|　will + 原形（說話當下的決定、承諾、預測）",
+  points:[
+    "be going to 用在「說話之前就已經打算好」的事：I'm going to start running. Tom 在對姊姊說這句話之前，就已經有這個想法。",
+    "will 用在「說話當下才決定」的事：鄰居問「要不要一起去？」Tom 看看天空，說 OK, I'll get my shoes. 這個決定是當場做的。",
+    "兩者都能做預測：看得到證據時多用 be going to（Look at those clouds. It's going to rain.）；單純的意見或猜測多用 will（I think it will be fine.）。",
+    "口語中 going to 常縮讀成 gonna，但書寫或正式場合請寫完整。"
+  ],
+  examples:[
+    {en:"I'm going to visit my grandmother this weekend.",cn:"我這個週末打算去看奶奶。",note:"事先的計畫"},
+    {en:"The phone is ringing. I'll answer it.",cn:"電話在響，我來接。",note:"當下決定"},
+    {en:"Be careful! You're going to fall.",cn:"小心！你要跌倒了。",note:"有證據的預測"}
+  ],
+  traps:[
+    {bad:"A: Do you want some tea? B: Yes, I'm going to have some.",good:"A: Do you want some tea? B: Yes, I'll have some.",why:"當場被問才決定，要用 will，不是事先的計畫。"},
+    {bad:"I will visit my aunt tomorrow. I already bought the ticket.",good:"I'm going to visit my aunt tomorrow. I already bought the ticket.",why:"票都買了，代表事先已有計畫，用 be going to 更自然。"}
+  ]
+},
+
+r22:{ unit:"g04", title:"現在完成進行式 vs. 現在完成式",
+  formula:"have / has been + V-ing（強調持續的過程）　|　have / has + 過去分詞（強調完成的結果）",
+  points:[
+    "現在完成進行式強調「從過去開始、到現在仍在進行（或剛剛才停）」的動作：The café has been running this experiment since March.",
+    "現在完成式強調「已經有的結果或次數」：More than half of the customers have chosen the box. 重點是數量與結果，不是過程。",
+    "for / since 搭配兩者都可以，但 How long 的問題多半用進行式：How long has she been watching the results?",
+    "stative verbs（know、belong、want）不用進行式，要用現在完成式：I have known her for years."
+  ],
+  examples:[
+    {en:"I have been waiting for twenty minutes.",cn:"我已經等了二十分鐘。",note:"強調等待的過程"},
+    {en:"I have read three chapters today.",cn:"我今天已經讀了三章。",note:"強調完成的量"},
+    {en:"Her eyes are red. She has been crying.",cn:"她眼睛紅紅的，她一直在哭。",note:"剛停止、仍看得到痕跡"}
+  ],
+  traps:[
+    {bad:"She has been knowing him for years.",good:"She has known him for years.",why:"know 是狀態動詞，不能用進行式。"},
+    {bad:"One student has been finishing two books.",good:"One student has finished two books.",why:"講「完成了幾本」用現在完成式，強調結果。"}
+  ]
+},
+
+r23:{ unit:"g08", title:"第二條件句與 wish",
+  formula:"If + 過去式, would + 原形　|　wish + 過去式 / could（現在的遺憾）　|　wish + had + p.p.（過去的後悔）",
+  points:[
+    "第二條件句談「和現在事實相反」的假設：If she had more free time, she would take a class. 事實是：她沒有空閒時間。",
+    "if 子句裡的 be 動詞，不論主詞是誰，正式寫法用 were：If I were you, I would start small.",
+    "wish + 過去式 / could 表示對現在的遺憾：I wish I could say more.（事實上說不出來）。",
+    "wish + had + 過去分詞表示對過去的後悔：Anita wished she had thought of it earlier. 句型 If + had + p.p., would have + p.p. 則是第三條件句。"
+  ],
+  examples:[
+    {en:"If I had a car, I would drive to work.",cn:"如果我有車，我就會開車上班。",note:"第二條件句"},
+    {en:"I wish I lived closer to the beach.",cn:"我真希望住得離海灘近一點。",note:"wish + 過去式"},
+    {en:"I wish I had studied harder in school.",cn:"我真希望當年在學校念書更用功。",note:"wish + 過去完成式"}
+  ],
+  traps:[
+    {bad:"If I would have more time, I would learn Vietnamese.",good:"If I had more time, I would learn Vietnamese.",why:"if 子句裡不放 would，要用過去式。"},
+    {bad:"I wish I can say more.",good:"I wish I could say more.",why:"wish 後面要退一個時態：can → could。"}
+  ]
+},
+
+r24:{ unit:"g14", title:"動名詞與不定詞的意義差別；the more..., the more...",
+  formula:"stop + to V（停下來去做）　|　stop + V-ing（不再做）　|　remember + to V（記得要做）　|　remember + V-ing（記得做過）",
+  points:[
+    "同一個動詞接 to V 或 V-ing，意思可能完全不同：She stopped to ask when it was due.（停下手邊的事去問）；She stopped treating every request as an emergency.（不再這樣看待）。",
+    "remember / regret 也有同樣的對比：remember promising（記得曾經答應）vs. remember to ask（記得要去問）；regret saying yes（後悔答應了）。",
+    "find it + 形容詞 + to V：用 it 當形式受詞，真正的受詞是後面的 to V。Most people find it easier to agree than to refuse.",
+    "the + 比較級, the + 比較級：兩件事同步增減。The more we agree, the more others expect us to agree."
+  ],
+  examples:[
+    {en:"I forgot to lock the door.",cn:"我忘了鎖門。",note:"forget to V：沒做"},
+    {en:"I'll never forget meeting her for the first time.",cn:"我永遠忘不了第一次見到她的情景。",note:"forget V-ing：做過的事"},
+    {en:"The longer we waited, the angrier we became.",cn:"我們等得越久，就越生氣。",note:"the + 比較級 ..., the + 比較級 ..."}
+  ],
+  traps:[
+    {bad:"She stopped to treat every request as an emergency.",good:"She stopped treating every request as an emergency.",why:"想說「不再這樣做」要用 stop + V-ing，不是 stop + to V。"},
+    {bad:"The more we agree, the others expect more.",good:"The more we agree, the more others expect.",why:"兩邊都要用 the + 比較級的結構，位置在子句開頭。"}
+  ]
+},
+
+r25:{ unit:"g12", title:"目的與結果子句",
+  formula:"目的：in order to / so as to + V　|　so that + 子句　　結果：so + 形容詞 + that　|　such + 名詞片語 + that",
+  points:[
+    "in order to / so as to 後面接原形動詞，主詞和主要子句相同：residents sort their rubbish so as to avoid fines.",
+    "so that 後面接完整子句，主詞可以不同：The city introduced a charge so that people would have a reason to throw away less.",
+    "so + 形容詞 / 副詞 + that 表示結果：The system is so familiar that most locals never think about it.",
+    "such + (a/an) + 形容詞 + 名詞 + that 也表示結果：such large amounts of waste that its landfills were almost full。注意 so 與 such 的詞性搭配不同。"
+  ],
+  examples:[
+    {en:"She left early in order to catch the first train.",cn:"她提早出門，為了趕上第一班車。",note:"in order to"},
+    {en:"I wrote it down so that I wouldn't forget.",cn:"我把它寫下來，這樣才不會忘記。",note:"so that + 子句"},
+    {en:"It was such a good book that I read it twice.",cn:"那本書太好看了，我讀了兩遍。",note:"such a ... that"}
+  ],
+  traps:[
+    {bad:"The soup was such hot that I couldn't eat it.",good:"The soup was so hot that I couldn't eat it.",why:"後面直接接形容詞用 so；such 後面要有名詞。"},
+    {bad:"He saved money so that to buy a car.",good:"He saved money so that he could buy a car. / He saved money in order to buy a car.",why:"so that 後面要接完整子句，不能接 to V。"}
+  ]
 }
+
 
 };
