@@ -2780,7 +2780,6 @@ nav button{font-size:11px}
 <script src="data-daily.js"></script>
 <script src="data-book.js"></script>
 <script src="data-rel.js"></script>
-<script src="data-bookart.js"></script>
 <script>
 /* ============================================================
    0. 基礎工具
@@ -5610,8 +5609,8 @@ function monTog(ns,key){
 window.monTog=monTog;
 /* 課本縮圖的 SVG（目錄卡片與收合月份列的小預覽共用，兩處圖示才會一致） */
 function bkThumbSVG(b){
-  const r=(b.reading||[])[0]||{}, ba=(window.BOOKART||{})[b.id+'#0'];
-  const svg=r.art||(ba&&(ba.svg||ba.art))||b.coverArt||'';
+  const r=(b.reading||[])[0]||{};
+  const svg=r.art||b.coverArt||'';
   const m=/viewBox="0 0 800 200"/.test(svg)&&/<g transform="translate\((\d+),52\) scale\(1\.5\)">/.exec(svg);
   return m?svg.replace('viewBox="0 0 800 200"','viewBox="'+(+m[1]-10)+' 42 116 116"'):'';
 }
@@ -7078,9 +7077,8 @@ function bookHTML(b){
   const stripHtml=t=>String(t||'').replace(/<[^>]*>/g,'');
   const sentSpans=t=>{const c=stripHtml(t);return splitSentences(c).map(s=>'<span class="sent" data-t="'+esc(s)+'" onclick="saySent(this)">'+esc(s)+'</span>').join(' ');};
   (b.reading||[]).forEach((r,ri)=>{
-    const _ba=(window.BOOKART||{})[b.id+'#'+ri];
-    const _bart=r.art||(_ba?_ba.svg:'')||'';
-    const _bcap=r.artCap||(_ba?_ba.cap:'')||'';
+    const _bart=r.art||'';
+    const _bcap=r.artCap||'';
     h+='<div class="bkbar">'+esc(r.bar)+'</div>'
      +'<div class="card"><div class="row bkrd-hd" style="justify-content:space-between;align-items:center">'
      +'<h2 class="sec bkattl" style="color:var(--accent2);margin:0;flex:1">'+esc(r.title)+'</h2>'
@@ -7089,7 +7087,7 @@ function bookHTML(b){
      +'<button class="spk" onclick="togHintBox(this)">💡 ▼</button></span></div>'
      +'<div class="hint" style="display:none;margin-top:8px">點<b>任何一句</b>就朗讀那一句並反黃；「🔊 朗讀全文」與「🔊 整段」會一句一句念、念到哪句亮到哪句，再點一下空白處可停止。</div>'
      +'<div class="muted cnx" style="font-weight:var(--fw-emph);margin:6px 0 8px">'+esc(r.titleCn)+'</div>'
-     /* 文章插圖：五個大圓圖示，放在標題下方、與內文同寬（有才顯示）— 先查 r.art，再查 BOOKART */
+     /* 文章插圖：五個大圓圖示，放在標題下方、與內文同寬（有才顯示）— 由 data-book.js 的 S 掛上 */
      + (_bart?'<figure class="artbox flush" style="margin:14px 0 12px">'+artSeqHTML(_bart)+(_bcap?bkStepCap(_bcap):'')+'</figure>':'')
      + (r.paras||[]).map(p=>'<div class="para"><div class="en">'+sentSpans(p.en)+'</div>'
        +'<div class="pbar"><button class="spk" onclick="bkReadPara(this)">🔊 整段</button></div>'

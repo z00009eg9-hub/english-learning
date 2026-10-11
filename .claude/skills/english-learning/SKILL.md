@@ -1321,6 +1321,7 @@ hwCard("1", null, "I put my bags on a trolley at the airport.", null,
    - 渲染器沒有的區塊會自動跳過，不必硬湊；區塊順序固定為 hw→vocab→phrases→grammar→cmp→reading→extra→extraVocab→discussion→summary，對不上 Doc 順序沒關係，標題可自訂。
 3. **閱讀文章一定要加五圓插圖**：在 data-book.js 檔尾的插圖 IIFE 中，把該課加進 `S`（spec）——`S[lessonId] = [ [五個圖示 key 陣列, '中文圖說'], ... ]`（每篇 reading 一組）。
    - 圖示從圖示庫 `I`（`BOOK_ICONS`）挑，每個階段畫**具體的東西**；不要拿星星／時鐘／文件這類萬用圖示湊數，也不要整組照抄別課的五個。
+   - 加完跑 `cd b2lab && node tools/check-art.js`（同組不重複、萬用圖示每組最多 1 個、相鄰課程不重複）與 `node tools/check-icons.js`，沒過就回頭換圖示。
    - **圖示不夠就自己補畫，不用問使用者**（2026-10-11 使用者指定）：缺貼切的就直接加進 `var I={…}`（一次最多 6 個），畫法見 `b2lab/DAILY_TASK.md` 3.5.1，補完跑 `cd b2lab && node tools/check-icons.js`，回報時列出新增的圖示。沒有閱讀文章的課畫封面 `iconSvg` 時同理。
    - 圖說描述文章的故事階段（「A → B → C → D → E。」格式），內容取自文章本身。
    - 新增圖示後要用 headless Chrome 截圖驗證（`chrome --headless=new --screenshot`，輸出到本機可寫目錄，G: 或 scratchpad 會存取被拒）。
