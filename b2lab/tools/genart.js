@@ -98,6 +98,29 @@ const I = {
   star:    c=>`<path d="M32 8 l7 16 18 2 -13 12 4 18 -16 -9 -16 9 4 -18 -13 -12 18 -2z" fill="#ffd98a" stroke="${c.ink}" stroke-width="2.5" stroke-linejoin="round"/>`
 };
 
+/* 2026-10-11：併入課本線稿圖示庫 BOOK_ICONS（data-book.js，聽力／實景縮圖也用這套），
+   圖示從 68 個擴到約 190 個，閱讀橫幅才不會一直用同幾個。
+   BOOK_ICONS 寫死深色 #2b2118、橘色 #e8813a，這裡換成各配色的 ink／dot。
+   名字跟上面重複的（mail、mirror、gauge）以上面這套為準；帶文字的徽章（<text>）不收，橫幅不放字。 */
+{
+  const g = global.window; global.window = {};
+  require('../public/data-book.js');
+  const B = global.window.BOOK_ICONS || {};
+  global.window = g;
+  for (const k in B) {
+    if (I[k] || /<text\b/.test(B[k])) continue;
+    const s = B[k];
+    I[k] = c => s.split('#2b2118').join(c.ink).split('#e8813a').join(c.dot);
+  }
+}
+
+/* 萬用圖示：什麼文章都套得上，用多了每張橫幅看起來都一樣 → 每張最多 1 個（tools/check-art.js 會擋） */
+const GENERIC = ['star','clock','people','doc','chat','talk','phone','house','chart','calendar','question'];
+
+/* 長得幾乎一樣的圖示：檢查重複／冷卻時當成同一個 */
+const SAME = [['chat','talk'],['magnify','search'],['bag','toolbox','briefcase'],['bowl','rice','food'],['tap','faucet'],['chart','chartUp']];
+const family = n => (SAME.find(g => g.includes(n)) || [n])[0];
+
 /* 2026-08-19 版面規則：橫幅只放「五圓圖示」，不放任何文字（標題／中文／tag 一律不畫）。
    spec.i 要給 5 個圖示；只給 3 個時會置中排（舊 spec 相容），en/cn/tag 欄位即使有也會被忽略。 */
 function banner(spec){
@@ -114,6 +137,10 @@ function banner(spec){
    + icons
    +`</svg>`;
 }
+
+/* 給 tools/check-art.js 等腳本 require 用；直接執行時才跑下面的 CLI */
+module.exports = { P, I, GENERIC, SAME, family, banner };
+if (require.main !== module) return;
 
 /* ---- CLI ---- */
 const args = process.argv.slice(2);

@@ -309,11 +309,12 @@ dg20260904b1: {
 
 ### 3.5 為今天的四篇文章各產生一張橫幅圖
 
-**不要手寫 SVG**，用現成的產生器（裡面有 68 個圖示與 7 套配色，風格才會跟其他文章一致）：
+**不要手寫 SVG**，用現成的產生器（約 157 個圖示與 7 套配色，含課本線稿圖示庫 BOOK_ICONS，風格才會跟其他文章一致）：
 
 ```bash
 cd b2lab
 node tools/genart.js --list          # 先看有哪些配色與圖示可用
+node tools/check-art.js --free 20261014   # 換成今天日期：列出今天還能用的圖示（扣掉前一批用過的）
 ```
 
 寫一個暫時的規格檔（**四篇各一筆**，id 要跟文章的 id 完全一致）。
@@ -336,6 +337,16 @@ node tools/genart.js --list          # 先看有哪些配色與圖示可用
   **同一天的四篇要用四套不同的配色**（剛好 7 套可挑，不會不夠）。
 - `i` 挑 **5 個**能代表文章「五個階段／五個要點」的圖示（只能用 `--list` 列出來的名稱），
   順序照文章敘事順序排。
+- **⚠ 圖示不能一直重複（2026-10-11 使用者反映「閱讀的線稿圖重複性很高」）**，以下四條 `tools/check-art.js` 會擋：
+  1. 一張橫幅 5 個圖示不重複
+  2. **萬用圖示每張最多 1 個**：`star` `clock` `people` `doc` `chat` `talk` `phone` `house` `chart` `calendar` `question`
+     ——它們什麼文章都套得上，以前常被拿來湊數（尤其第 5 格放 `star` 收尾），每張看起來都一樣。
+     要畫「每個階段的具體東西」：等公車就 `sign`、罷工就 `flag`、搬家就 `truck`/`sofa`。
+  3. **同一天四篇之間圖示不重複**、配色不重複
+  4. **前一批（上一個日期）用過的圖示今天不能用**（`--free` 會列出可用的）
+  - 長得幾乎一樣的算同一個：`chat`/`talk`、`magnify`/`search`、`bag`/`toolbox`/`briefcase`、
+    `bowl`/`rice`/`food`、`tap`/`faucet`、`chart`/`chartUp`（見 genart.js 的 `SAME`）
+- `cap` 裡**不要寫圖示名稱**（例如「時鐘=…」「（wind）」），只寫五個階段的內容。
 - `cap` 用「A → B → C → D → E。」的五段式寫法，對應五個圖示各代表文章哪一段，
   最後點出本課文法重點；不要寫成純裝飾的句子。
 
@@ -362,6 +373,8 @@ ids.forEach(k=>{const v=A[k];
   if(o!==c) throw k+' 標籤沒配對';
 });
 console.log('OK');"
+cd ..
+node tools/check-art.js   # 圖示重複檢查，沒有「✓ 圖示重複檢查通過」就回頭換圖示
 ```
 
 ⚠️ 只能畫**橫幅**。文章裡如果有明確數字想畫成圖表，不要自己編數據——沒有把握就只做橫幅。
@@ -635,6 +648,12 @@ const ART=window.ART||{}, TODAY=new Date().toISOString().slice(0,10);
 const todays=(window.DAILY.articles||[]).filter(a=>a.date===TODAY);
 todays.forEach(a=>{ if(!ART[a.id]||!ART[a.id].svg) throw a.id+' 沒有配圖（data-art.js）'; });
 console.log('art ok', todays.map(a=>a.id).join(' | '));"
+```
+
+橫幅圖示重複檢查（規則見 3.5；沒過就不要 commit）：
+
+```bash
+cd b2lab && node tools/check-art.js
 ```
 
 也驗證今天補的四課聽力（沒過就不要 commit 聽力那步的改動）。
