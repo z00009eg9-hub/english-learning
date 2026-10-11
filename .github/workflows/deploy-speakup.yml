@@ -1,0 +1,52 @@
+name: Deploy Speak Up to Firebase Hosting
+
+# push 到 main 且 Speak Up 的檔案有變動時，自動部署 learning-english-notes.web.app。
+# 也可在 GitHub（含手機版）Actions 頁面手動按 Run workflow。
+# 需要一個 repo secret：FIREBASE_SERVICE_ACCOUNT_LEARNING_ENGLISH_NOTES
+#   Firebase Console → 專案設定 → 服務帳戶 → 產生新的私密金鑰 → 下載的 JSON 全文
+#   貼到 GitHub → Settings → Secrets and variables → Actions → New repository secret
+# 備案：本機仍可用
+#   cp index.html public/index.html && npx firebase-tools deploy --only hosting --project learning-english-notes
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'manifest.json'
+      - 'whisper-worker.js'
+      - 'icons/**'
+      - '.github/workflows/deploy-speakup.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-speakup
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build public/ (same as the local cp step)
+        run: |
+          mkdir -p public
+          cp index.html manifest.json whisper-worker.js public/
+          cp -r icons public/icons
+
+      - name: Sanity check
+        run: |
+          size=$(wc -c < public/index.html)
+          echo "index.html: $size bytes"
+          if [ "$size" -lt 500000 ]; then
+            echo "index.html 看起來不完整（小於 500KB），停止部署"; exit 1
+          fi
+          grep -q "Speak Up" public/index.html || { echo "找不到 Speak Up 標記，停止部署"; exit 1; }
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_LEARNING_ENGLISH_NOTES }}
+          projectId: learning-english-notes
+          channelId: live
