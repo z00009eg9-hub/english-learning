@@ -1,0 +1,1 @@
+window.THUMB_FAM={"1ger8rp":"chat","1e4c4uk":"chat","m6wdt7":"magnify","1oc20u":"magnify","ihyeav":"bag","1g51gte":"bag","kfmrud":"bag","17ephs7":"bowl","20g6g3":"bowl","bm1rz0":"bowl","1nfnsq4":"tap","12v6oit":"tap","61fq74":"chart","jbwgr9":"chart"};

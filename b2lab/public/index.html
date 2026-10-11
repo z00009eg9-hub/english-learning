@@ -2778,6 +2778,7 @@ nav button{font-size:11px}
 <script src="data-focus.js"></script>
 <script src="data-a2.js"></script>
 <script src="data-art.js"></script>
+<script src="data-thumbfam.js"></script>
 <script src="data-gramviz.js"></script>
 <script src="data-gramvis.js"></script>
 <script src="data-gvplus.js"></script>
@@ -3652,7 +3653,9 @@ function rdCardMaker(list,opts){
   const ART_=window.ART||{};
   const picks=pickThumbs(list,a=>(ART_[a.id]||{}).svg);
   const thumb=a=>{ const s=(ART_[a.id]||{}).svg||''; const p=picks[a.id];
-    return p?stripThumb(s,p.x):(s?sceneThumb(s):emojiThumb('📖')); };
+    if(p) return stripThumb(s,p.x);
+    const ic=(window.BOOK_ICONS||{})[RD_CHART_THUMB[a.id]];
+    return ic?iconThumb(ic):(s?sceneThumb(s):emojiThumb('📖')); };
   const m=w=>Math.max(1,Math.round(w/130));
   return a=>{
     const tw=(a.target||[]).length;
@@ -5546,10 +5549,18 @@ function bkMonths(){
    stripCells：五圓圖示帶的每一格（x 位置＋圖示特徵字串）；pickThumbs：依清單順序，每篇挑一格「前面還沒用過」的圖示，
    同一頁縮圖盡量不重複；都用過了才退回第一格。iconThumb：單一圖示放進同樣的白圓框 */
 const THUMB_CELL_RE=/<g transform="translate\((\d+),52\) scale\(1\.5\)">([\s\S]*?)<\/g>/g;
+/* 縮圖去重用的簽名：去掉顏色；長相相近的圖示（chat/talk、bag/briefcase…，tools/build-thumbfam.js）歸成同一個家族 */
+function thumbSig(inner){
+  const k=inner.replace(/<circle cx="32" cy="32" r="33"[^>]*\/>/,'').replace(/#[0-9a-fA-F]{3,8}/g,'#').replace(/\s+/g,'').slice(0,240);
+  let x=5381; for(let i=0;i<k.length;i++) x=((x*33)^k.charCodeAt(i))>>>0;
+  return (window.THUMB_FAM||{})[x.toString(36)]||k;
+}
 function stripCells(svg){
   if(!/viewBox="0 0 800 200"/.test(svg||'')) return [];
-  return [...svg.matchAll(THUMB_CELL_RE)].map(m=>({x:+m[1], sig:m[2].replace(/<circle cx="32" cy="32" r="33"[^>]*\/>/,'').replace(/#[0-9a-fA-F]{3,8}/g,'#').replace(/\s+/g,'').slice(0,240)}));
+  return [...svg.matchAll(THUMB_CELL_RE)].map(m=>({x:+m[1], sig:thumbSig(m[2])}));
 }
+/* 數據圖表型橫幅（不是五圓）：清單縮圖改用專屬圖示，不裁圖表截圖 */
+const RD_CHART_THUMB={r02:'sun',r03:'basket',r06:'typhoon',r09:'umbrella',r10:'bed',r12:'stethoL',r18:'piggy'};
 function pickThumbs(items,svgOf){
   const used=new Set(), out={};
   items.forEach(it=>{
