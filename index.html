@@ -596,6 +596,10 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
   .wrap{padding-top:10px;}
   header{padding-bottom:7px;}
   #say-card .pc-cn{font-size:1.4rem;}
+  /* 手機：卡片撐到畫面底部（有結果時自然變高），題目置中、麥克風與按鈕靠下，拇指好按、底部不留空 */
+  #say-card{min-height:calc(100vh - 275px);min-height:calc(100dvh - 275px);}
+  #say-card .pc{flex:1;justify-content:center;}
+  #say-card .sticky-ctrl{margin-top:auto;padding-top:8px;}
 }
 @media(min-width:700px){
   #scr-say{max-width:680px;margin-left:auto;margin-right:auto;}
