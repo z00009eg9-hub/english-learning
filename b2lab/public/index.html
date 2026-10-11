@@ -5548,7 +5548,7 @@ function bkMonths(){
 const THUMB_CELL_RE=/<g transform="translate\((\d+),52\) scale\(1\.5\)">([\s\S]*?)<\/g>/g;
 function stripCells(svg){
   if(!/viewBox="0 0 800 200"/.test(svg||'')) return [];
-  return [...svg.matchAll(THUMB_CELL_RE)].map(m=>({x:+m[1], sig:m[2].replace(/<circle cx="32" cy="32" r="33"[^>]*\/>/,'').slice(0,240)}));
+  return [...svg.matchAll(THUMB_CELL_RE)].map(m=>({x:+m[1], sig:m[2].replace(/<circle cx="32" cy="32" r="33"[^>]*\/>/,'').replace(/#[0-9a-fA-F]{3,8}/g,'#').replace(/\s+/g,'').slice(0,240)}));
 }
 function pickThumbs(items,svgOf){
   const used=new Set(), out={};
