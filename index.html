@@ -190,6 +190,23 @@ body.home-active .hd-topic{display:none;}
 .day-meta .mi{display:inline-flex;align-items:center;gap:3px;font-weight:700;color:var(--sub);font-size:.84rem;}
 .day-meta .mi+.mi::before{content:'·';margin-right:9px;color:var(--bdr);font-weight:900;}
 /* ═══ 全部課程清單（▾ 快速跳課，滑動仍然可用） ═══ */
+/* 選課：今天建議大卡 + 直向清單 */
+.pk-hero{background:var(--coral);border-radius:16px;padding:14px 16px;color:#fff;box-shadow:0 4px 12px rgba(21,154,166,.28);}
+.pk-tag{font-size:.78rem;font-weight:800;opacity:.92;letter-spacing:.3px;}
+.pk-title{font-size:1.25rem;font-weight:900;line-height:1.3;margin-top:3px;word-break:break-word;}
+.pk-sub{font-size:.82rem;font-weight:700;opacity:.9;margin-top:3px;}
+.pk-go{margin-top:11px;width:100%;border:0;border-radius:12px;padding:11px;background:#fff;color:var(--coral-d);font:900 1.02rem/1 inherit;cursor:pointer;}
+.pk-go:active{transform:scale(.98);}
+.pk-more-lbl{font-size:.82rem;font-weight:800;color:var(--sub);margin:13px 2px 6px;}
+.pk-list{display:flex;flex-direction:column;gap:6px;}
+.pk-row{display:grid;grid-template-columns:1fr auto;grid-template-areas:"t d" "s d";column-gap:10px;align-items:center;width:100%;text-align:left;cursor:pointer;background:#fff;border:2px solid var(--bdr2);border-radius:13px;padding:9px 12px;font-family:inherit;}
+.pk-row:hover{border-color:var(--coral);background:var(--bg);}
+.pk-t{grid-area:t;font-size:.92rem;font-weight:800;color:var(--ink);line-height:1.35;}
+.pk-s{grid-area:s;font-size:.74rem;font-weight:800;color:var(--faint);margin-top:1px;}
+.pk-s.done{color:#15803D;}.pk-s.part{color:#B8860B;}
+.pk-d{grid-area:d;font-size:.72rem;font-weight:800;color:var(--faint);white-space:nowrap;}
+.pk-toggle{margin-top:8px;width:100%;border:1.5px dashed var(--bdr2);border-radius:12px;background:transparent;color:var(--coral-d);font:800 .86rem/1 inherit;padding:10px;cursor:pointer;}
+.pk-toggle:hover{background:var(--bg);}
 .day-jump{margin-left:auto;display:inline-flex;align-items:center;gap:4px;padding:5px 11px;
   border:1.5px solid var(--bdr2);border-radius:100px;background:#fff;color:var(--teal);
   font:800 .78rem/1 inherit;cursor:pointer;box-shadow:var(--sh-sm);}
@@ -915,13 +932,9 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
     </div>
 
     <div class="card card-soft pick-card">
-      <div class="pick-lbl">📅 選擇今天想練的主題<span style="font-weight:600;font-size:.8rem;color:var(--faint)">電腦按箭頭／拖曳 · 手機直接滑動</span><button class="day-jump" type="button" onclick="openDayJump()" aria-label="開啟全部課程清單">📋 全部課程 ▾</button></div>
-      <div class="day-switch">
-        <button class="day-arrow" type="button" onclick="scrollDayRail(-1)" aria-label="上一個課程">‹</button>
-        <div class="day-rail" id="day-rail" tabindex="0" role="region" aria-label="課程日期清單"></div>
-        <button class="day-arrow" type="button" onclick="scrollDayRail(1)" aria-label="下一個課程">›</button>
-      </div>
-      <div class="day-meta" id="day-meta"></div>
+      <div class="pick-lbl">📅 今天練哪一課</div>
+      <div id="day-pick"></div>
+      <div class="day-meta" id="day-meta" style="display:none"></div>
     </div>
 
     <button class="warmup-bar hide" id="warmup-bar" onclick="startWarmup()" title="上課前 15 分鐘快速暖身：5 句說出來，開口熱身">
@@ -7688,7 +7701,18 @@ function noteDates(){const s=new Set();
 /* Tom：全部真實課程筆記（新的在最上面）+ A2 基礎主題排在最後；Anita：只有真實筆記 */
 function allDates(){return isTom()?noteDates().concat(A2LESSONS.map(l=>l.id)):noteDates();}
 /* 預設選哪一天：兩位學習者一致，都停在最新的一篇筆記（2026-08-16 使用者要求） */
-function defaultDay(){return allDates()[0]||'all';}
+function defaultDay(){return recommendDay()||allDates()[0]||'all';}
+/* 每課練習進度（ST.dayProg[day]={n:已練句數,ts:最後練習時間,done:是否練完}），推薦與清單狀態都靠它 */
+function dayProgOf(d){return (typeof ST!=='undefined'&&ST&&ST.dayProg&&ST.dayProg[d])||null;}
+/* 推薦順序：沒練完的（最近練的優先）> 還沒練過的最新一課 > 最久沒複習的一課 */
+function recommendDay(){
+  const ds=allDates();if(!ds.length)return '';
+  let part=null;
+  ds.forEach(d=>{const o=dayProgOf(d);if(o&&!o.done&&o.n>0&&(!part||o.ts>dayProgOf(part).ts))part=d;});
+  if(part)return part;
+  const fresh=ds.find(d=>!dayProgOf(d));
+  if(fresh)return fresh;
+  return ds.slice().sort((x,y)=>(dayProgOf(x).ts||0)-(dayProgOf(y).ts||0))[0];}
 function dayVocab(d){
   /* 一律去重：資料表裡同一個字可能被登記多次，重複會讓各活動一直出到同一個字 */
   if(d==='b2wb')return dedupe(b2wbItems().filter(v=>v.cn),'w');   /* B2 Read 生詞本（單字口說/測驗/例句都吃這份） */
@@ -7992,14 +8016,31 @@ function dayPillParts(d){
   return {top:'🟢',wd:'基礎',ttl:lessonTitle(d)};   /* Tom 的 A2 主題 */
 }
 function dayPracticeSummary(d){try{const n=sayItems(d).length;return n?n+' 句 · 約 8 分鐘':'開口練習';}catch(e){return '開口練習';}}
-function buildDayList(){const rail=$('day-rail');if(!rail)return;
-  rail.innerHTML=DDATES.map(d=>{const p=dayPillParts(d),load=dayPracticeSummary(d);
-    return '<button class="day-pill'+(d===DAY?' sel':'')+'" data-d="'+d+'" onclick="ddSelect(\''+d+'\')" title="'+esc(ddLabel(d))+'">'
-      +'<div><span class="dp-top">'+esc(p.top)+'</span><span class="dp-wd">'+esc(p.wd)+'</span></div>'
-      +'<div class="dp-ttl">'+esc(p.ttl)+'</div><div class="dp-load">'+esc(load)+'</div></button>';}).join('');
-  const sel=rail.querySelector('.day-pill.sel');
-  /* 只捲動軌道本身（不用 scrollIntoView，避免連帶把整頁往下捲） */
-  if(sel)rail.scrollLeft=sel.offsetLeft-rail.clientWidth/2+sel.clientWidth/2;}
+let DAYLIST_OPEN=false;
+function dayStatus(d){
+  if(d==='b2wb'||d==='all')return {cls:'',txt:dayPracticeSummary(d)};
+  const o=dayProgOf(d),tot=sayItems(d).length;
+  if(o&&o.done)return {cls:'done',txt:'✓ 已練完'+(tot?' · '+tot+' 句':'')};
+  if(o&&o.n>0)return {cls:'part',txt:'練到 '+Math.min(o.n,tot||o.n)+(tot?'/'+tot:'')+' 句'};
+  return {cls:'new',txt:tot?'未練 · '+tot+' 句':'未練'};}
+function dayDateTxt(q){return q.top+(/^\d/.test(q.top)?' '+q.wd:'');}
+function buildDayList(){const box=$('day-pick');if(!box||!DAY)return;
+  const rec=recommendDay(),p=dayPillParts(DAY),st=dayStatus(DAY);
+  const tag=DAY===rec?'👉 今天建議':'已選擇';
+  const lessons=DDATES.filter(d=>d!==DAY),SHOW=4;
+  const rows=(DAYLIST_OPEN?lessons:lessons.slice(0,SHOW)).map(d=>{const q=dayPillParts(d),t=dayStatus(d);
+    return '<button class="pk-row" type="button" onclick="ddSelect(\''+d+'\')" title="'+esc(ddLabel(d))+'">'
+      +'<span class="pk-t">'+esc(q.ttl)+'</span>'
+      +'<span class="pk-s '+t.cls+'">'+esc(t.txt)+'</span>'
+      +'<span class="pk-d">'+esc(dayDateTxt(q))+'</span></button>';}).join('');
+  box.innerHTML='<div class="pk-hero">'
+      +'<div class="pk-tag">'+tag+'</div>'
+      +'<div class="pk-title">'+esc(p.ttl)+'</div>'
+      +'<div class="pk-sub">'+esc(dayDateTxt(p))+' · '+esc(st.txt)+'</div>'
+      +'<button class="pk-go" type="button" onclick="startTodayPractice()">'+(st.cls==='part'?'繼續練習':'開始練習')+' →</button></div>'
+    +(lessons.length?'<div class="pk-more-lbl">想換一課？</div><div class="pk-list">'+rows+'</div>'
+      +(lessons.length>SHOW?'<button class="pk-toggle" type="button" onclick="toggleDayList()">'+(DAYLIST_OPEN?'收合 ▴':'查看全部 '+lessons.length+' 課 ▾')+'</button>':''):'');}
+function toggleDayList(){DAYLIST_OPEN=!DAYLIST_OPEN;buildDayList();}
 /* 舊下拉相容用的 no-op（影片選單另用 <select>，不受影響） */
 function ddToggle(e){if(e)e.stopPropagation();}
 function ddClose(){}
@@ -8084,8 +8125,7 @@ function renderWarmup(){const bar=$('warmup-bar');if(!bar)return;
                                :'快上課了！5 句快速暖身，開口就進入狀況 💪';}}
 let WARMUP=false;
 function startWarmup(){WARMUP=true;openAct('say');}
-function renderMeta(){const d=DAY;
-  $('day-meta').innerHTML='<span class="mi">🎯 本課：'+esc(dayPracticeSummary(d))+'</span>';}
+function renderMeta(){}
 
 /* ═══════════════════════════════════════════════════════════
    1) SAY IT
@@ -9508,6 +9548,11 @@ function bumpActToday(cur,pct){
   if(!ST.actToday)ST.actToday={};
   const o=ST.actToday[SESS.act]||(ST.actToday[SESS.act]={n:0,sum:0,cnt:0});
   if(!cur){ o.n++; if(pct!=null){o.sum+=Math.round(pct);o.cnt++;} }
+  if(!cur&&SESS.act==='say'&&SESS.day&&SESS.day!=='all'&&SESS.day!=='b2wb'){
+    if(!ST.dayProg)ST.dayProg={};
+    const dp=ST.dayProg[SESS.day]||(ST.dayProg[SESS.day]={n:0,ts:0,done:false});
+    if(dp.done)dp.n=0;   /* 練完後重練：從頭重算 */
+    dp.done=false;dp.n++;dp.ts=Date.now();}
   else if(pct!=null){ if(cur.pct==null){o.sum+=Math.round(pct);o.cnt++;} else if(pct>cur.pct){o.sum+=Math.round(pct)-cur.pct;} }
   saveST(); renderActProg();
 }
@@ -9541,6 +9586,7 @@ function showSummary(){
   if(S.act){if(!ST.actToday)ST.actToday={};
     const o=ST.actToday[S.act]||(ST.actToday[S.act]={n:0,sum:0,cnt:0});
     if(allDone)o.done=true;
+    if(allDone&&S.act==='say'&&ST.dayProg&&ST.dayProg[S.day]){ST.dayProg[S.day].done=true;ST.dayProg[S.day].ts=Date.now();}
     saveST();renderActProg();renderStats();   /* 首頁目標環要跟著更新 */}
   const avg=done.length?Math.round(done.reduce((a,b)=>a+b.pct,0)/done.length):null;
   const isQuiz=S.kind==='quiz';
