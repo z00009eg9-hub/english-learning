@@ -6169,7 +6169,12 @@ function rwCardHTML(l){
 /* 實景清單縮圖：l.thumb＝課本圖示庫（BOOK_ICONS）的圖示名，每課不同；沒有指定就用內頁三圓圖示的第一個 */
 function rwThumb(l){
   const I=window.BOOK_ICONS||{};
-  if(l.thumb&&I[l.thumb]) return iconThumb(I[l.thumb]);
+  /* 同一份清單內不重複：指定的圖示已被前面卡片用過，就改挑圖示庫裡還沒用過的 */
+  if(l.thumb&&I[l.thumb]){
+    let t=l.thumb;
+    if(rwUsedThumbs['b:'+t]) t=Object.keys(I).find(x=>!rwUsedThumbs['b:'+x])||t;
+    rwUsedThumbs['b:'+t]=1; return iconThumb(I[t]);
+  }
   const L=RW_ICONLIB('#2b2118','#e8813a','#f7e3c9');
   const fb=({'交通':'road','職場':'briefcase','旅行':'plane'}[l.cat]||'house');
   const ks=(Array.isArray(l.icons)?l.icons:[]).filter(x=>L[x]);
