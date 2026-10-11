@@ -2353,8 +2353,8 @@ body.vd-lock{overflow:hidden}
 #moresheet .ms-grip{width:36px;height:4px;border-radius:2px;background:var(--line);margin:2px auto 12px}
 #moresheet .ms-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 #moresheet .ms-grid button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:12px 14px;font:inherit;color:var(--ink);cursor:pointer;text-align:left}
-#moresheet .ms-grid button i{font-style:normal;font-size:24px;line-height:1;margin-bottom:4px;color:var(--accent2)}
-#moresheet .ms-grid button i svg{width:26px;height:26px;display:block}
+#moresheet .ms-grid button i{font-style:normal;font-size:24px;line-height:0;margin-bottom:4px}
+#moresheet .ms-grid button i svg{width:44px;height:44px;display:block;border-radius:11px;background:#fdf6ec}
 #moresheet .ms-grid button b{font-size:calc(16px * var(--fs))}
 #moresheet .ms-grid button span{font-size:calc(12.5px * var(--fs));color:var(--ink2)}
 #moresheet .ms-grid button.on{border-color:var(--accent);background:var(--accent-soft)}
@@ -2371,9 +2371,9 @@ nav button{font-size:11px}
 .hm-card{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left;width:100%;min-height:96px;
   padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:0 1px 4px rgba(60,45,30,.06);
   font:inherit;color:var(--ink);cursor:pointer;transition:transform .12s,background .12s}
-.hm-card i{font-style:normal;font-size:26px;line-height:1;color:var(--accent2)}
-.hm-card i svg{width:28px;height:28px;display:block}
-.hm-today i{color:#fff}
+.hm-card i{font-style:normal;line-height:0}
+.hm-card i svg{width:56px;height:56px;display:block;border-radius:12px;background:#fdf6ec}
+.hm-today i svg{width:48px;height:48px}
 .hm-card b{font-size:calc(17px * var(--fs));font-weight:800;margin-top:6px;line-height:1.2}
 .hm-card span{font-size:var(--font-meta);color:var(--ink2);line-height:1.35}
 .hm-card:active{transform:scale(.98);background:var(--accent-soft)}
@@ -2760,10 +2760,10 @@ nav button{font-size:11px}
   <div class="ms-panel" role="dialog" aria-label="更多功能">
     <div class="ms-grip"></div>
     <div class="ms-grid">
-      <button id="m-listen" onclick="moreGo('listen')"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg></i><b>聽力</b><span>影片＋逐字稿跟讀</span></button>
-      <button id="m-real" onclick="moreGo('real')"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8.5l-6 3.5 6 3.5z"/></svg></i><b>實景</b><span>真實語速的影片</span></button>
-      <button id="m-prac" onclick="moreGo('vocab')"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 7h10M7 12h10M7 17h6"/></svg></i><b>單字卡</b><span>間隔複習與收藏字</span></button>
-      <button id="m-prog" onclick="moreGo('prog')"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></i><b>進度</b><span>打卡、統計與設定</span></button>
+      <button id="m-listen" onclick="moreGo('listen')"><i></i><b>聽力</b><span>影片＋逐字稿跟讀</span></button>
+      <button id="m-real" onclick="moreGo('real')"><i></i><b>實景</b><span>真實語速的影片</span></button>
+      <button id="m-prac" onclick="moreGo('vocab')"><i></i><b>單字卡</b><span>間隔複習與收藏字</span></button>
+      <button id="m-prog" onclick="moreGo('prog')"><i></i><b>進度</b><span>打卡、統計與設定</span></button>
     </div>
   </div>
 </div>
@@ -3359,7 +3359,15 @@ function moreGo(t){ moreTog(false); go(t); }
 window.moreTog=moreTog; window.moreGo=moreGo;
 
 /* ---------- 手機總導覽頁 ---------- */
-const HOME_IC={book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5z"/></svg>',read:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>',gram:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21L12 3l9 18"/><path d="M6.5 15h11"/></svg>',listen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>',real:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8.5l-6 3.5 6 3.5z"/></svg>',vocab:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 7h10M7 12h10M7 17h6"/></svg>',audit:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 3.5V10l6 3.5V5h3.5v16z"/><path d="M3 21h18"/><path d="M8 17h2M13 17h2"/></svg>',prog:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>',daily:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>'};
+/* 首頁／更多選單圖示：沿用課本封面的彩色線稿圖示庫（BOOK_ICONS），圓形白底＋米色框 */
+const HOME_IC_KEY={book:'book',read:'notebook',gram:'board',listen:'headphones',real:'camera',vocab:'bulb',audit:'factory',prog:'chartUp',daily:'sun'};
+function homeIc(k){
+  const I=window.BOOK_ICONS||{}, inner=I[HOME_IC_KEY[k]]||'';
+  return '<svg viewBox="-6.7 -6.7 77.4 77.4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="33" fill="#fff" stroke="#f7e3c9" stroke-width="2.5"/>'+inner+'</svg>';
+}
+const HOME_IC=new Proxy({},{get:(_,k)=>homeIc(k)});
+function fillMoreIc(){ [['listen','m-listen'],['real','m-real'],['vocab','m-prac'],['prog','m-prog']].forEach(([k,id])=>{const i=document.querySelector('#'+id+' i'); if(i) i.innerHTML=homeIc(k);}); }
+fillMoreIc();
 const HOME_CARDS=[
   {t:'book',  i:HOME_IC.book, n:'課本',   d:'課堂筆記＋影片版'},
   {t:'read',  i:HOME_IC.read, n:'閱讀',   d:'分級文章'},
