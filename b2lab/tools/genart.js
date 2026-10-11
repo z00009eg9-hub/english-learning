@@ -114,6 +114,13 @@ const I = {
   }
 }
 
+/* 深色配色（night）的 ink 是白色，白底圖示的內部線條會跟填色混在一起（手機、冰箱只剩一塊白）
+   → 深色時白色填色改成 band 色，白線才看得到 */
+for (const k in I) {
+  const f = I[k];
+  I[k] = c => { const s = f(c); return c.dark ? s.split('fill="#fff"').join(`fill="${c.band}"`) : s; };
+}
+
 /* 萬用圖示：什麼文章都套得上，用多了每張橫幅看起來都一樣 → 每張最多 1 個（tools/check-art.js 會擋） */
 const GENERIC = ['star','clock','people','doc','chat','talk','phone','house','chart','calendar','question'];
 
