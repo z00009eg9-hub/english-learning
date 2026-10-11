@@ -103,17 +103,27 @@ const I = {
    BOOK_ICONS 寫死深色 #2b2118、橘色 #e8813a，這裡換成各配色的 ink／dot。
    名字跟上面重複的（house、phone、clock… 共 38 個）以上面這套為準；帶文字的（<text>）不收，橫幅不放字。
    新增圖示不可再撞名，tools/check-icons.js 會擋。 */
+let COLOR = {};   /* 圖示主色表，下面從 data-book.js 讀入 */
 const BUILTIN = Object.keys(I);   /* genart 自己畫的；BOOK_ICONS 撞名時以這套為準 */
 {
   const g = global.window; global.window = {};
   require('../public/data-book.js');
   const B = global.window.BOOK_ICONS || {};
+  COLOR = global.window.BOOK_ICON_COLOR || {};
   global.window = g;
   for (const k in B) {
     if (I[k] || /<text\b/.test(B[k])) continue;
     const s = B[k];
     I[k] = c => s.split('#2b2118').join(c.ink).split('#e8813a').join(c.dot);
   }
+}
+
+/* 2026-10-11 貼紙線稿風（同閱讀清單的籃子縮圖）：外框一律深咖啡 #2b2118，
+   主色改用「東西本來的顏色」，不再跟著配色整張染成同一色系。
+   顏色表 COLOR 在 data-book.js（window.BOOK_ICON_COLOR），課本橫幅共用；沒列到的圖示主色用全站暖橘 #e8813a；深色配色（night）外框維持白色。 */
+for (const k in I) {
+  const f = I[k];
+  I[k] = c => f(Object.assign({}, c, { ink: c.dark ? c.ink : '#2b2118', dot: COLOR[k] || '#e8813a' }));
 }
 
 /* 深色配色（night）的 ink 是白色，白底圖示的內部線條會跟填色混在一起（手機、冰箱只剩一塊白）

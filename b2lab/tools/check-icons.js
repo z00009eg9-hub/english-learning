@@ -21,7 +21,9 @@ const I = window.BOOK_ICONS;
 const D = '#2b2118', A = '#e8813a';
 const COLORS = new Set([D, A, '#fff', '#ffffff', 'none',
   '#c0392b', '#d9534f', '#f5c542', '#f4c9a0', '#f0b04e', '#a7d8f0', '#ffd98a',
-  '#3f9e64', '#6b4f36', '#8a5a33', '#d9a34a', '#3f6b55']);
+  '#3f9e64', '#6b4f36', '#8a5a33', '#d9a34a', '#3f6b55',
+  /* 2026-10-11 貼紙線稿風主色表（data-book.js 的 BOOK_ICON_COLOR）用到的色 */
+  '#3b82c4', '#9aa5b1', '#8b5cf6', '#e57373', '#8fa6c9', '#c9631f', '#3f7d5a']);
 const LEGACY_TEXT = ['bed', 'clock2'];                       // 舊的帶字圖示（zzz、24），保留不動
 // 舊的同名圖示（同一個東西兩種畫法；閱讀橫幅用 genart 那套，聽力／實景用這套），保留不動；新圖示不可再撞名
 const LEGACY_DUP = ['mail','house','phone','globe','calendar','people','star','doc','cross','target','clock','box','umbrella',

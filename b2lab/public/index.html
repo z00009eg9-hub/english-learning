@@ -6372,7 +6372,7 @@ function rwUcmpParse(txt){
 const RW_ICON_KEYS='house road briefcase plane screen book bubble bus sign camera car cart train clock money map plate hospital people office lamp teacup box wind gauge mail chart phone umbrella bucket gift receipt handshake pot suitcase key calendar shirt bed ticket bag heart wrench pill door trophy globe bell glass pencil'.split(' ');
 function RW_ICONLIB(D,A,T){
   const S='stroke="'+D+'" stroke-width="3"';
-  return {
+  const o={
     house:'<path d="M32 12 L54 30 v22 a3 3 0 0 1 -3 3 H13 a3 3 0 0 1 -3 -3 V30 z" fill="#fff" '+S+'/><rect x="26" y="38" width="12" height="17" fill="'+A+'"/><rect x="16" y="34" width="8" height="7" fill="'+T+'"/>',
     road:'<path d="M14 54 L28 12 M50 54 L36 12" fill="none" '+S+' stroke-linecap="round"/><path d="M32 16 v8 M32 32 v8 M32 48 v6" stroke="'+A+'" stroke-width="3.5" stroke-linecap="round"/>',
     briefcase:'<rect x="12" y="26" width="40" height="24" rx="4" fill="'+A+'" '+S+'/><path d="M24 26 v-4 a4 4 0 0 1 4 -4 h8 a4 4 0 0 1 4 4 v4" fill="none" '+S+'/>',
@@ -6424,6 +6424,18 @@ function RW_ICONLIB(D,A,T){
     glass:'<path d="M18 28 h28 l-2 24 a3 3 0 0 1 -3 3 H23 a3 3 0 0 1 -3 -3z" fill="'+A+'"/><path d="M16 12 h32 l-4 40 a3 3 0 0 1 -3 3 H23 a3 3 0 0 1 -3 -3z" fill="none" '+S+' stroke-linejoin="round"/><path d="M38 22 l6 -12" '+S+' stroke-linecap="round"/>',
     pencil:'<path d="M14 50 l4 -12 26 -26 8 8 -26 26z" fill="'+A+'" '+S+' stroke-linejoin="round"/><path d="M14 50 l4 -12 8 8z" fill="'+T+'" '+S+' stroke-linejoin="round"/>'
   };
+  /* 貼紙線稿風（同閱讀清單的籃子縮圖）：主色改用東西本來的顏色，不再每個圖示都同一個橘；
+     只在用全站暖橘當主色時換（其他呼叫者傳別的 A 就照舊） */
+  if(A!=='#e8813a') return o;
+  const C={road:'#f0b04e',briefcase:'#8a5a33',plane:'#a7d8f0',screen:'#3b82c4',bubble:'#3b82c4',bus:'#f0b04e',
+    sign:'#3f9e64',camera:'#3b82c4',car:'#c0392b',cart:'#3b82c4',train:'#3b82c4',clock:'#c0392b',money:'#8fcf9f',
+    map:'#c0392b',hospital:'#c0392b',people:'#3b82c4',lamp:'#f0b04e',box:'#d9a34a',wind:'#8fa6c9',gauge:'#c0392b',
+    mail:'#c0392b',chart:'#3b82c4',umbrella:'#3b82c4',bucket:'#3b82c4',gift:'#c0392b',receipt:'#3b82c4',
+    handshake:'#3b82c4',pot:'#9aa5b1',suitcase:'#c0392b',key:'#f0b04e',calendar:'#c0392b',shirt:'#3b82c4',
+    ticket:'#f0b04e',bag:'#d9a34a',heart:'#c0392b',wrench:'#9aa5b1',pill:'#c0392b',door:'#8a5a33',
+    trophy:'#f0b04e',bell:'#f0b04e',glass:'#a7d8f0',pencil:'#f0b04e'};
+  for(const k in C) o[k]=o[k].split(A).join(C[k]);
+  return o;
 }
 function rwHiAll(sent,vocab){
   let s=esc(sent);
