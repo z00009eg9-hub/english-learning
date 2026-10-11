@@ -617,6 +617,36 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
   #say-card .mic{width:70px;height:70px;font-size:1.7rem;}
   #say-card .btn{padding:11px 20px;font-size:.95rem;}
 }
+/* ═══ 說出來 手機版精修（iPhone 375/390/430）：標題區壓縮、卡片跟內容走、字級統一 ═══ */
+@media(max-width:699px){
+  #scr-say{padding-bottom:env(safe-area-inset-bottom);}
+  #scr-say .sub-top{margin-bottom:5px;gap:8px;}
+  #scr-say .sub-h{font-size:24px;line-height:1.2;}
+  #scr-say .sub-s{font-size:13px;}
+  #scr-say .how-bar{padding:5px 10px;font-size:13px;line-height:1.4;margin-bottom:5px;}
+  #scr-say .lvl-tog{margin-bottom:6px;}
+  #scr-say .lvl-btn{padding:5px 18px;font-size:14px;}
+  #scr-say .prog{height:5px;margin-bottom:6px;}
+  #say-card{min-height:0;height:auto;justify-content:flex-start;gap:0;padding:20px;
+    border:1.5px solid var(--bdr);border-radius:22px;}
+  #say-card .pc{padding:0;}
+  #say-card .pc-tag{font-size:13px;font-weight:700;margin-bottom:8px;}
+  #say-card .pc-cn{font-size:23px;line-height:1.4;}
+  #say-card .pc-hint{margin-top:10px;gap:8px;}
+  #say-card .hint-cap{box-sizing:border-box;min-height:38px;padding:4px 14px;font-size:14px;font-weight:700;
+    justify-content:center;text-align:center;white-space:normal;max-width:100%;}
+  #say-card .heard{font-size:14px;}
+  #say-card .sticky-ctrl{margin-top:16px;}
+  #say-card .mic-row{align-items:center;gap:20px;}
+  #say-card .mic{width:80px;height:80px;font-size:1.9rem;}
+  #say-card .mic-side{width:56px;margin-top:0;}
+  #say-card .mic-side .ms-ico{width:54px;height:54px;border-width:1.5px;}
+  #say-card .mic-side .ms-t{font-size:13px;}
+  #say-card .mic-side-ph{width:56px;}
+  #say-card .mic-lbl{font-size:14px;margin-top:8px;}
+  #say-card .actions{margin-top:10px;}
+  #say-card .btn{font-size:14px;min-height:42px;padding:9px 16px;}
+}
 
 /* ═══ TALK 基礎填空卡：句子挖空，自己想著把整句說出來 ═══ */
 .cloze-card{background:var(--card);border:2px solid var(--line);border-radius:16px;
