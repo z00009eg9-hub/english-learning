@@ -105,14 +105,14 @@ body.home-active .hd-topic{display:none;}
 /* 設定型卡片（選課）：弱化外框，把黑粗框留給下方核心操作卡，建立層級 */
 .card-soft{border:1.5px solid var(--bdr);box-shadow:none;background:rgba(255,255,255,.5);}
 /* 選課卡與下方行動區之間拉開間距，減少堆疊壓迫感 */
-.pick-card{margin-bottom:16px;padding:11px 13px;}
+.pick-card{margin-bottom:10px;padding:8px 10px;}
 /* sticky header 錨點捲動時不遮擋內容 */
 .screen,.grid-ttl,.card,.act{scroll-margin-top:calc(var(--hdh,58px) + 12px);}
 
 /* ═══ COACH GREETING ═══ */
-.coach{display:flex;gap:10px;align-items:center;background:var(--soft);
-  border:2px solid var(--line);border-radius:15px;padding:7px 11px;box-shadow:var(--sh-sm);margin-bottom:12px;}
-.coach-av{width:42px;height:42px;border-radius:50%;flex-shrink:0;font-size:1.4rem;
+.coach{display:flex;gap:9px;align-items:center;background:var(--soft);
+  border:2px solid var(--line);border-radius:14px;padding:5px 10px;box-shadow:var(--sh-sm);margin-bottom:8px;}
+.coach-av{width:34px;height:34px;border-radius:50%;flex-shrink:0;font-size:1.15rem;
   background:linear-gradient(135deg,#159AA6,#35BAC6);display:grid;place-items:center;
   box-shadow:0 4px 14px rgba(21,154,166,.35);
   animation:coachBob 2.8s ease-in-out infinite;transform-origin:50% 90%;}
@@ -124,11 +124,11 @@ body.home-active .hd-topic{display:none;}
   32%{transform:rotate(0) translateY(0);}
 }
 @media(prefers-reduced-motion:reduce){.coach-av{animation:none;}}
-.coach-txt{font-size:.98rem;color:var(--ink);}
+.coach-txt{font-size:.88rem;line-height:1.4;color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .coach-txt b{color:var(--coral-d);}
 .coach-name{font-size:.74rem;color:var(--sub);font-weight:700;margin-top:5px;}
 /* 今日進度條：招呼語下方一行，帶出「已完成幾項／已說幾句」，提高動機 */
-.coach-prog{display:flex;align-items:center;gap:8px;margin-top:7px;}
+.coach-prog{display:flex;align-items:center;gap:8px;margin-top:4px;}
 .coach-prog .cp-track{flex:1;height:6px;background:rgba(43,36,28,.12);border-radius:100px;overflow:hidden;min-width:60px;}
 .coach-prog .cp-track i{display:block;height:100%;width:0;border-radius:100px;
   background:linear-gradient(90deg,#159AA6,#35BAC6);transition:width .5s cubic-bezier(.3,.7,.3,1);}
@@ -191,11 +191,15 @@ body.home-active .hd-topic{display:none;}
 .day-meta .mi+.mi::before{content:'·';margin-right:9px;color:var(--bdr);font-weight:900;}
 /* ═══ 全部課程清單（▾ 快速跳課，滑動仍然可用） ═══ */
 /* 選課：今天建議大卡 + 直向清單 */
-.pk-hero{background:var(--coral);border-radius:16px;padding:14px 16px;color:#fff;box-shadow:0 4px 12px rgba(21,154,166,.28);}
+.pk-hero{background:var(--coral);border-radius:14px;padding:10px 12px;color:#fff;box-shadow:0 4px 12px rgba(21,154,166,.28);display:flex;align-items:center;gap:10px;}
+.pk-info{flex:1;min-width:0;}
+.pk-btns{display:flex;flex-direction:column;gap:6px;flex-shrink:0;}
 .pk-tag{font-size:.78rem;font-weight:800;opacity:.92;letter-spacing:.3px;}
-.pk-title{font-size:1.25rem;font-weight:900;line-height:1.3;margin-top:3px;word-break:break-word;}
+.pk-title{font-size:1.05rem;font-weight:900;line-height:1.3;margin-top:1px;word-break:break-word;}
 .pk-sub{font-size:.82rem;font-weight:700;opacity:.9;margin-top:3px;}
-.pk-go{margin-top:11px;width:100%;border:0;border-radius:12px;padding:11px;background:#fff;color:var(--coral-d);font:900 1.02rem/1 inherit;cursor:pointer;}
+.pk-go{border:0;border-radius:11px;padding:9px 14px;background:#fff;color:var(--coral-d);font:900 .95rem/1 inherit;cursor:pointer;white-space:nowrap;}
+.pk-sw{border:1.5px solid rgba(255,255,255,.7);border-radius:11px;padding:6px 10px;background:transparent;color:#fff;font:800 .78rem/1 inherit;cursor:pointer;white-space:nowrap;}
+.pk-sw:active{transform:scale(.97);}
 .pk-go:active{transform:scale(.98);}
 .pk-more-lbl{font-size:.82rem;font-weight:800;color:var(--sub);margin:13px 2px 6px;}
 .pk-list{display:flex;flex-direction:column;gap:6px;}
@@ -939,7 +943,6 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
     </div>
 
     <div class="card card-soft pick-card">
-      <div class="pick-lbl">📅 今天練哪一課</div>
       <div id="day-pick"></div>
       <div class="day-meta" id="day-meta" style="display:none"></div>
     </div>
@@ -8040,13 +8043,12 @@ function buildDayList(){const box=$('day-pick');if(!box||!DAY)return;
       +'<span class="pk-t">'+esc(q.ttl)+'</span>'
       +'<span class="pk-s '+t.cls+'">'+esc(t.txt)+'</span>'
       +'<span class="pk-d">'+esc(dayDateTxt(q))+'</span></button>';}).join('');
-  box.innerHTML='<div class="pk-hero">'
+  box.innerHTML='<div class="pk-hero"><div class="pk-info">'
       +'<div class="pk-tag">'+tag+'</div>'
       +'<div class="pk-title">'+esc(p.ttl)+'</div>'
-      +'<div class="pk-sub">'+esc(dayDateTxt(p))+' · '+esc(st.txt)+'</div>'
-      +'<button class="pk-go" type="button" onclick="startTodayPractice()">'+(st.cls==='part'?'繼續練習':'開始練習')+' →</button></div>'
-    +(lessons.length?'<div class="pk-more-lbl">想換一課？</div><div class="pk-list">'+rows+'</div>'
-      +(lessons.length>SHOW?'<button class="pk-toggle" type="button" onclick="toggleDayList()">'+(DAYLIST_OPEN?'收合 ▴':'查看全部 '+lessons.length+' 課 ▾')+'</button>':''):'');}
+      +'<div class="pk-sub">'+esc(dayDateTxt(p))+' · '+esc(st.txt)+'</div></div>'
+      +'<div class="pk-btns"><button class="pk-go" type="button" onclick="startTodayPractice()">'+(st.cls==='part'?'繼續':'開始')+' →</button>'
+      +(DDATES.length>1?'<button class="pk-sw" type="button" onclick="openDayJump()">換課 ▾</button>':'')+'</div></div>';}
 function toggleDayList(){DAYLIST_OPEN=!DAYLIST_OPEN;buildDayList();}
 /* 舊下拉相容用的 no-op（影片選單另用 <select>，不受影響） */
 function ddToggle(e){if(e)e.stopPropagation();}
