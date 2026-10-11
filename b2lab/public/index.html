@@ -2373,11 +2373,11 @@ nav button{font-size:11px}
   font:inherit;color:var(--ink);cursor:pointer;transition:transform .12s,background .12s}
 .hm-card i{font-style:normal;line-height:0}
 .hm-card i svg{width:56px;height:56px;display:block;border-radius:12px;background:#fdf6ec}
-.hm-today i svg{width:48px;height:48px}
+.hm-today i svg{width:36px;height:36px;border-radius:10px}
 .hm-card b{font-size:calc(17px * var(--fs));font-weight:800;margin-top:6px;line-height:1.2}
 .hm-card span{font-size:var(--font-meta);color:var(--ink2);line-height:1.35}
 .hm-card:active{transform:scale(.98);background:var(--accent-soft)}
-.hm-today{flex-direction:row;align-items:center;gap:12px;min-height:72px;margin-bottom:10px;padding:16px 18px;border:0;
+.hm-today{flex-direction:row;align-items:center;gap:12px;min-height:52px;margin-bottom:10px;padding:10px 14px;border:0;
   background:linear-gradient(135deg,#f0964f,#d9691f);color:#fff;box-shadow:0 4px 14px rgba(200,100,30,.25)}
 .hm-today b{margin:0;font-size:calc(20px * var(--fs))}
 .hm-today span{color:rgba(255,255,255,.92);margin-left:auto;text-align:right}
@@ -2627,8 +2627,9 @@ nav button{font-size:11px}
 .lastcard .lc-s{font-size:var(--font-secondary);color:var(--ink2)}
 .lastcard .lc-go{flex:none;padding:6px 14px;border-radius:999px;background:var(--accent2);color:#fff;font-weight:700;font-size:var(--font-secondary);white-space:nowrap}
 @media(max-width:640px){
-  .lastcard{flex-wrap:wrap;gap:6px 10px;padding:10px 12px}
-  .lastcard .lc-x{flex:1 1 100%;order:3}
+  .lastcard{gap:10px;padding:8px 12px}
+  .lastcard .lc-k{display:none}
+  .lastcard .lc-s::before{content:"▶ ";color:var(--accent2)}
   .lastcard .lc-go{margin-left:auto}
 }
 /* 打開內頁時的「上次讀到…［跳過去］×」浮動提示：不佔版面，捲動或按 × 就消失 */
