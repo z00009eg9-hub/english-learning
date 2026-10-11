@@ -2380,7 +2380,8 @@ nav button{font-size:11px}
 .hm-today{flex-direction:row;align-items:center;gap:12px;min-height:52px;margin-bottom:10px;padding:10px 14px;border:0;
   background:linear-gradient(135deg,#f0964f,#d9691f);color:#fff;box-shadow:0 4px 14px rgba(200,100,30,.25)}
 .hm-today b{margin:0;font-size:calc(20px * var(--fs))}
-.hm-today span{color:rgba(255,255,255,.92);margin-left:auto;text-align:right}
+.hm-today span{color:rgba(255,255,255,.92);margin-left:auto;text-align:right;display:inline-flex;align-items:center;gap:7px;min-width:0}
+.hm-today span::after{content:"→";flex:none;line-height:1;font-weight:700}
 .hm-today:active{background:linear-gradient(135deg,#e8873f,#c95f17)}
 .hm-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .hm-set{margin-top:18px;padding:12px 14px;border:1px solid var(--line);border-radius:16px;background:var(--card);display:flex;flex-direction:column;gap:10px}
@@ -2624,8 +2625,8 @@ nav button{font-size:11px}
 .lastcard .lc-k{flex:none;font-size:var(--font-meta);font-weight:700;color:var(--accent2);white-space:nowrap}
 .lastcard .lc-x{display:flex;flex-direction:column;min-width:0;flex:1}
 .lastcard .lc-t{font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lastcard .lc-s{font-size:var(--font-secondary);color:var(--ink2)}
-.lastcard .lc-go{flex:none;padding:6px 14px;border-radius:999px;background:var(--accent2);color:#fff;font-weight:700;font-size:var(--font-secondary);white-space:nowrap}
+.lastcard .lc-s{font-size:var(--font-secondary);color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.lastcard .lc-go{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 16px;border-radius:999px;background:var(--accent2);color:#fff;font-weight:700;font-size:var(--font-secondary);white-space:nowrap}
 @media(max-width:640px){
   .lastcard{gap:10px;padding:8px 12px}
   .lastcard .lc-k{display:none}
