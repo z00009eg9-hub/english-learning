@@ -5604,7 +5604,14 @@ function monTOCHTML(ns,groups,card,ndLabel,unit){
 }
 function monTog(ns,key){
   const st=MONSET[ns]=MONSET[ns]||{}; st[key]=!st[key];
+  /* iOS：innerHTML 重繪會把捲動夾到頂端 → 重繪後讓被點的月份列回到畫面同一位置 */
+  const sel='.bktoc-hd[onclick*="\''+ns+'\',\''+key+'\'"]';
+  const b0=document.querySelector(sel), top0=b0?b0.getBoundingClientRect().top:null, sy=window.scrollY;
   if(ns==='rd') rdQ(rdQuery); else if(RENDER[ns]) RENDER[ns]();
+  const fix=()=>{ const b=document.querySelector(sel);
+    const y=(top0!=null&&b)?window.scrollY+b.getBoundingClientRect().top-top0:sy;
+    if(Math.abs(window.scrollY-y)>2) window.scrollTo(0,y); };
+  fix(); requestAnimationFrame(fix); setTimeout(fix,120);
 }
 window.monTog=monTog;
 /* 課本縮圖的 SVG（目錄卡片與收合月份列的小預覽共用，兩處圖示才會一致） */
