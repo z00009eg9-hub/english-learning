@@ -350,6 +350,34 @@ node tools/check-art.js --free 20261014   # 換成今天日期：列出今天還
 - `cap` 用「A → B → C → D → E。」的五段式寫法，對應五個圖示各代表文章哪一段，
   最後點出本課文法重點；不要寫成純裝飾的句子。
 
+#### 3.5.1 圖示不夠時**自己補畫**，不用問使用者（2026-10-11 使用者指定）
+
+挑圖示時（3.5 橫幅、3.6.1 聽力縮圖都一樣），只要遇到下面任一種情況，**就直接畫新圖示補進圖示庫**：
+
+- 某個階段最貼切的東西**圖示庫裡沒有**（例：口罩、投票箱、麵包）
+- 貼切的那個**在冷卻中**，剩下的只是勉強相關（例：拿「門」代替「提著包包」）
+- 你發現自己正要拿**萬用圖示**（星星、時鐘、文件…）湊數
+
+做法：
+
+1. 畫在 `public/data-book.js` 的 `var I={…}` 最後面，前面加一行註解
+   `/* YYYY-MM-DD 排程新增：<主題> */`。**一次最多補 6 個**，寧可少而精。
+2. 名稱用英文名詞、小寫開頭 camelCase（`facemask`、`ballot`），**不能跟既有名稱撞名**。
+3. 照既有筆法畫（先找一個結構類似的既有圖示照著改，例如畫建築就參考 `hospital`、畫器物參考 `pot`）：
+   - 64×64 的框，主體放在 8～56 之間，3～6 個簡單形狀，正面視角
+   - 主輪廓 `stroke="'+D+'"` `stroke-width="3"`，`stroke-linecap="round"` `stroke-linejoin="round"`
+   - 一塊橘色 `fill="'+A+'"` 當重點，其餘填白 `#fff`；點綴色只能用既有的
+     （紅 `#c0392b`、黃 `#ffd98a`、綠 `#3f9e64`、木頭 `#d9a34a`／`#8a5a33`、膚色 `#f4c9a0`、水藍 `#a7d8f0`）
+   - **不放字**（不要 `<text>`），不要漸層、陰影、圖片
+4. 跑風格檢查，沒過就修到過：
+   ```bash
+   cd b2lab && node tools/check-icons.js
+   ```
+   環境有瀏覽器的話，再輸出對照表看一眼（淺色＋深色配色都要看得清楚）：
+   `node tools/check-icons.js --sheet /tmp/icons.html`
+5. 新圖示馬上就能用在今天的橫幅（genart.js 會自動吃進來）和聽力縮圖。
+6. 第 6 步記得 `git add b2lab/public/data-book.js`；第 7 步回報要列出新增了哪些圖示。
+
 產生並併入：
 
 ```bash
@@ -455,7 +483,7 @@ const LS_THUMB={
 
 挑圖示的規則：
 
-- 只能用 `BOOK_ICONS` 裡有的名稱（目前 128 個）。先把可以挑的列出來：
+- 只能用 `BOOK_ICONS` 裡有的名稱。先把可以挑的列出來：
   ```bash
   cd b2lab/public
   node -e "const fs=require('fs');global.window={};require('./data-book.js');
@@ -495,10 +523,7 @@ const LS_THUMB={
   用瀏覽器開那個檔看過再挑（Windows 會寫到 `D:\icons-preview.html`，
   不寫 C: 的暫存目錄；要改路徑就設環境變數 `ICONS_OUT`）。
 - 寧可從 ② 重用一個語意對的，也不要從 ① 硬挑一個語意不對的。
-- 四個分類加起來永遠有一百個以上可選，所以**不會有「挑不到」這種事**；
-  真的覺得整個圖示庫都沒有貼切的，就在 `data-book.js` 的 `var I={…}` 裡補一個新圖示
-  （64×64、`'+D+'` 深色描邊、`'+A+'` 橘色、stroke-width 3、round caps，照既有筆法畫），
-  補完一樣要渲染出來看過再用。
+- 找不到語意貼切的，就照 **3.5.1** 自己補畫新圖示，不用問使用者。
 
 **這一步會改到 `public/index.html`，所以第 6 步的 `git add` 一定要包含它**（見第 6 步的清單）。
 
@@ -650,10 +675,10 @@ todays.forEach(a=>{ if(!ART[a.id]||!ART[a.id].svg) throw a.id+' 沒有配圖（d
 console.log('art ok', todays.map(a=>a.id).join(' | '));"
 ```
 
-橫幅圖示重複檢查（規則見 3.5；沒過就不要 commit）：
+橫幅圖示重複檢查＋圖示庫風格檢查（規則見 3.5／3.5.1；沒過就不要 commit）：
 
 ```bash
-cd b2lab && node tools/check-art.js
+cd b2lab && node tools/check-art.js && node tools/check-icons.js
 ```
 
 也驗證今天補的四課聽力（沒過就不要 commit 聽力那步的改動）。
@@ -736,6 +761,7 @@ git push origin main
 
 上面六個檔是每次執行**一定**會動到的（`index.html` 只為了 3.6.1 的 `LS_THUMB` 那一行）。
 `data-scripts.js` 不要加（見 3.6.2，它現在是空的）。
+如果照 3.5.1 補了新圖示，`b2lab/public/data-book.js` 也要一起 `git add`。
 另外，如果第 5 步的 `check-ipa.js` 逼你回頭去改其他資料檔的音標
 （例如今天的字跟 `data-book.js`／`data-notes.js` 既有寫法不一致），
 那幾個檔也要一起 `git add`——半套的音標修改會讓下一次執行直接卡在同一個檢查。
@@ -756,6 +782,7 @@ push 之後 `.github/workflows/deploy-b2lab.yml` 會自動部署到 https://engl
 
 另外補充：
 - 當日共同主題是什麼
+- **新增的線稿圖示**（3.5.1）：名稱＋中文意思＋用在哪篇；沒補就寫「無」
 - B2 篇是新聞改寫還是原創；新聞改寫要附原文網址
 - **§1.5 網路自我檢查的結果**：WebFetch 能用（用原文取材）或仍被擋（退回 WebSearch 摘要）。
   若仍被擋，明確寫一行「⚠ WebFetch 仍被擋」提醒使用者確認網路政策。

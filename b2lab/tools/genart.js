@@ -101,7 +101,9 @@ const I = {
 /* 2026-10-11：併入課本線稿圖示庫 BOOK_ICONS（data-book.js，聽力／實景縮圖也用這套），
    圖示從 68 個擴到約 190 個，閱讀橫幅才不會一直用同幾個。
    BOOK_ICONS 寫死深色 #2b2118、橘色 #e8813a，這裡換成各配色的 ink／dot。
-   名字跟上面重複的（mail、mirror、gauge）以上面這套為準；帶文字的徽章（<text>）不收，橫幅不放字。 */
+   名字跟上面重複的（house、phone、clock… 共 38 個）以上面這套為準；帶文字的（<text>）不收，橫幅不放字。
+   新增圖示不可再撞名，tools/check-icons.js 會擋。 */
+const BUILTIN = Object.keys(I);   /* genart 自己畫的；BOOK_ICONS 撞名時以這套為準 */
 {
   const g = global.window; global.window = {};
   require('../public/data-book.js');
@@ -146,7 +148,7 @@ function banner(spec){
 }
 
 /* 給 tools/check-art.js 等腳本 require 用；直接執行時才跑下面的 CLI */
-module.exports = { P, I, GENERIC, SAME, family, banner };
+module.exports = { P, I, GENERIC, SAME, family, banner, BUILTIN };
 if (require.main !== module) return;
 
 /* ---- CLI ---- */
