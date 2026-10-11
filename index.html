@@ -93,6 +93,14 @@ body.home-active .hd-topic{display:none;}
   .hd-fs{padding:4px 8px;font-size:.7rem;}
   .hd-b2{font-size:10.5px!important;padding:4px 9px!important;}
 }
+/* 手機：向上滑時表頭縮成單列（藏 logo/標題/日期，只留切換、連續天數、設定） */
+@media(max-width:560px){
+  header{transition:padding .2s;}
+  body.hd-compact header{padding-top:calc(5px + env(safe-area-inset-top));padding-bottom:5px;}
+  body.hd-compact .hd-brand{display:none;}
+  body.hd-compact .hd-right{width:100%;flex-wrap:nowrap;justify-content:space-between;}
+  body.hd-compact .hd-gear-wrap{margin-left:auto;}
+}
 /* 手機活動卡的規則在檔案更後面（.act 基礎樣式之後才蓋得過去），見「手機：活動卡」區塊 */
 
 /* ═══ LAYOUT ═══ */
@@ -9745,6 +9753,11 @@ document.addEventListener('touchend',e=>{
 function setHdh(){const h=document.querySelector('header');
   if(h)document.documentElement.style.setProperty('--hdh',h.offsetHeight+'px');}
 window.addEventListener('resize',()=>{setHdh();vSetPinH();});
+window.addEventListener('scroll',()=>{if(innerWidth>560){document.body.classList.remove('hd-compact');return;}
+  const y=scrollY,c=document.body.classList.contains('hd-compact');
+  if(!c&&y>90){document.body.classList.add('hd-compact');setHdh();}
+  else if(c&&y<20){document.body.classList.remove('hd-compact');setHdh();}},{passive:true});
+
 loadLevel();loadST();initHome();renderStats();setHdh();
 </script>
 </body>
