@@ -11,7 +11,7 @@
 | LINE 單字查詢 Bot | Cloudflare Worker | `line-bot/` |
 
 - 原始碼：`D:\english-learning`（已從 Google Drive 搬出，避免 Drive 同步破壞 .git）
-- Speak Up 部署：`npx firebase deploy --only hosting`
+- Speak Up 部署：push 到 main 自動部署（`.github/workflows/deploy-speakup.yml`）；備案本機 `cp index.html public/index.html && npx firebase-tools deploy --only hosting --project learning-english-notes`
 - B2 Read 部署：push 到 main 自動部署
 - GitHub：`https://github.com/z00009eg9-hub/english-learning.git`
 

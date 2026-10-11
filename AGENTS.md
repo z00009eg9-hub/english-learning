@@ -14,7 +14,7 @@
 
 | 名稱 | 網址 | 原始碼 | 部署方式 |
 |---|---|---|---|
-| **Speak Up**（課堂筆記／口說／每日測驗） | https://learning-english-notes.web.app | 根目錄 `index.html` | **本機一行指令**（見 §2） |
+| **Speak Up**（課堂筆記／口說／每日測驗） | https://learning-english-notes.web.app | 根目錄 `index.html` | **push 到 main 自動部署**（見 §2；備案本機一行指令） |
 | **B2 Read**（分級閱讀／課本／文法／實景） | https://english-b2-lab.web.app | `b2lab/public/index.html` | **push 到 main 自動部署**（見 §2） |
 | LINE 單字查詢 Bot | Cloudflare Worker | `line-bot/` | `npm run deploy`（wrangler） |
 
@@ -66,7 +66,7 @@ git fetch && git status
 1. `git add` + `git commit` + `git push` — 先把改動推上 GitHub
 2. `git pull` — 部署前再拉一次，確保本地是 GitHub 上的最新版
 3. 部署指令（依子專案）：
-   - **Speak Up**：`cp index.html public/index.html && npx firebase-tools deploy --only hosting --project learning-english-notes`
+   - **Speak Up**：push 到 main 後 CI 自動部署（`.github/workflows/deploy-speakup.yml`）。本機備案：`cp index.html public/index.html && npx firebase-tools deploy --only hosting --project learning-english-notes`
    - **B2 Read**：push 到 main 後 CI 自動部署（`.github/workflows/deploy-b2lab.yml`）
 4. 部署後打開網站確認版本正確（檢查改動是否生效）
 
