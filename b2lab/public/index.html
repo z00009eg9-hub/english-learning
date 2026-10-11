@@ -2390,6 +2390,11 @@ nav button{font-size:11px}
 .hm-chip{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:7px 13px;min-height:38px;
   font:inherit;font-size:var(--font-meta);font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
 .hm-chip.on{background:var(--accent-soft);border-color:#f0c9a0;color:var(--accent2)}
+.hm-lv{gap:6px;padding-left:10px}
+.hm-lv.A2{--lc:var(--a2)} .hm-lv.B1{--lc:var(--b1)} .hm-lv.B1P{--lc:var(--b1p)} .hm-lv.B2{--lc:var(--b2)}
+.hm-lv{border-color:var(--lc)}
+.lv-ic{width:22px;height:22px;flex:none;fill:none;stroke:#c9bcab;stroke-width:1.5;stroke-linejoin:round}
+.lv-ic rect.on{stroke:var(--lc);fill:var(--lc);fill-opacity:.22}
 @media(max-width:640px){
   nav,#moresheet{display:none !important}
   /* 原本為底部 nav 預留的空間與「浮在 nav 上方」的定位，nav 拿掉後一起歸零 */
@@ -2792,6 +2797,14 @@ nav button{font-size:11px}
 const $ = id => document.getElementById(id);
 const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const lvCls = l => l==='B1+'?'B1P':(l==='B2'?'B2':(l==='A2'?'A2':'B1'));
+/* 程度線稿圖示：四格階梯，依程度點亮 A2=1、B1=2、B1+=3、B2=4（顏色跟程度色） */
+function lvIc(l){
+  const n={'A2':1,'B1':2,'B1+':3,'B2':4}[l]||2;
+  return '<svg class="lv-ic" viewBox="0 0 24 24" aria-hidden="true">'+[0,1,2,3].map(i=>{
+    const h=5+i*4, on=i<n;
+    return '<rect x="'+(2+i*5.4)+'" y="'+(21-h)+'" width="4" height="'+h+'" rx="1.2"'+(on?' class="on"':'')+'/>';
+  }).join('')+'</svg>';
+}
 /* 錯誤示範自動變紅、正確示範自動變綠：
    ✗ / X / ✘ 之後到下一個中文標點或全形括號結束為止，都算「錯的那段」。 */
 function mkWrong(s){
@@ -3400,7 +3413,7 @@ RENDER.home=function(){
     +'<div class="hm-row"><span class="hm-lb">學習者</span>'
     +['anita','tom'].map(p=>'<button class="hm-chip'+(PROFILE===p?' on':'')+'" onclick="setProfile(\''+p+'\')">'+(p==='anita'?'🍎 Anita':'🐻 Tom')+'</button>').join('')+'</div>'
     +'<div class="hm-row"><span class="hm-lb">程度</span>'
-    +band().map(l=>'<button class="hm-chip lv '+lvCls(l)+'" onclick="hdLv(\''+l+'\')">'+l+'</button>').join('')+'</div>'
+    +band().map(l=>'<button class="hm-chip hm-lv '+lvCls(l)+'" onclick="hdLv(\''+l+'\')">'+lvIc(l)+l+'</button>').join('')+'</div>'
     +'<div class="hm-row"><span class="hm-lb">朗讀速度</span>'
     +RATES.map(r=>'<button class="hm-chip" data-ratechip="'+r+'" onclick="setRate('+r+')">'+RATE_LB[r]+' '+r+'x</button>').join('')+'</div>'
     +'<div class="hm-row"><a class="hm-chip" href="https://learning-english-notes.web.app">🍎🐻 Speak Up ↗</a><a class="hm-chip" href="https://rexon-qa-english.web.app/">🔤 題庫 ↗</a></div>'
