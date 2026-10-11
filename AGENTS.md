@@ -31,6 +31,25 @@ CSS 與 JS 全部內嵌在同一個檔案裡：
 
 ---
 
+## 0-1. skill 檔案：`.claude/` 是正本，`.agents/` 由腳本產生（2026-10-11）
+
+Claude Code 讀 `.claude/`，Codex 讀 `.agents/`（同一份 skill 的轉換副本）。
+以前兩邊各改各的，`.agents/` 曾經落後好幾條規則，`sync-notes` 還指向停用的
+`G:\我的雲端硬碟\英文筆記\.Codex\…`。現在規則是：
+
+- **只改 `.claude/`**（skill 正本、slash command 正本、`.gs` 腳本）
+- 改完一定要重新產生 `.agents/`，兩邊一起 commit：
+  ```bash
+  node tools/sync-agent-skills.js
+  ```
+- 提交前可以先確認有沒有漏跑（不同步會 exit 1）：
+  ```bash
+  node tools/sync-agent-skills.js --check
+  ```
+- **不要手改 `.agents/` 底下的檔案**，下次產生就會被蓋掉。
+- 這份 AGENTS.md 是另一回事：跨工具共用規範，由人手動維護，不受上面的腳本管。
+
+---
 ## 1. 開工前的固定檢查（每次都要做）
 
 ```bash

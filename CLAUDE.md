@@ -114,6 +114,13 @@ GitHub 是唯一的同步來源；D: 只存在本機、不會自動備份，**�
 - `.git` 裡的 `pack`、`info` 資料夾、`packed-refs`、`refs` 是必要檔案，任何時候都不要刪
 - 根本解法：英文學習一律從 `D:\english-learning` 開對話（上面第 8 步）
 
+## skill 檔案：.claude 是正本
+
+- skill／slash command／.gs 腳本**只改 `.claude/`**
+- 改完跑 `node tools/sync-agent-skills.js` 重新產生 Codex 讀的 `.agents/`，兩邊一起 commit
+- 不要手改 `.agents/` 底下的檔案；`--check` 可在提交前確認有沒有漏跑
+- 根目錄 AGENTS.md 是跨工具共用規範，由人手動維護，不受這支腳本管
+
 ## 技術備註
 
 - 兩個網站都是單一大 HTML 檔，CSS/JS 內嵌，無 build step

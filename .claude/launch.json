@@ -1,0 +1,83 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "b2lab",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-y",
+        "http-server",
+        "b2lab/public",
+        "-p",
+        "8787",
+        "-c-1"
+      ],
+      "port": 8787
+    },
+    {
+      "name": "rexon-qa",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-y",
+        "http-server",
+        "G:/我的雲端硬碟/越南/品保課/儀器/rexon-qa-english/public",
+        "-p",
+        "8788",
+        "-c-1"
+      ],
+      "port": 8788
+    },
+    {
+      "name": "rexon-spec",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-y",
+        "http-server",
+        "G:/我的雲端硬碟/越南/rexon-spec-vn/public",
+        "-p",
+        "8123",
+        "-c-1"
+      ],
+      "port": 8123
+    },
+    {
+      "name": "speakup",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-y",
+        "http-server",
+        ".",
+        "-p",
+        "8789",
+        "-c-1"
+      ],
+      "port": 8789
+    },
+    {
+      "name": "rexon-qa2",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-y",
+        "http-server",
+        "G:/我的雲端硬碟/越南/品保課/儀器/rexon-qa-english/public",
+        "-p",
+        "8790",
+        "-c-1"
+      ],
+      "port": 8790
+    },
+    {
+      "name": "rexon-training",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-y",
+        "http-server",
+        "G:/我的雲端硬碟/越南/rexon-training-vn/public",
+        "-p",
+        "8099",
+        "-c-1"
+      ],
+      "port": 8099
+    }
+  ]
+}
