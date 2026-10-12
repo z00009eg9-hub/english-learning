@@ -22286,10 +22286,10 @@ window.BOOK = {
       {
         "n": 2,
         "wrong": "The operator is is qualified to assemble the treadmill.",
-        "fix": "The operator is qualified to assemble the treadmill.（刪掉多打的一個 is）",
+        "fix": "The operator is qualified to assemble the treadmill.",
         "cn": "這位操作員有資格組裝跑步機。",
         "pat": "主詞 + be + qualified to + 原形動詞",
-        "note": "qualified 是形容詞「有資格的」，be qualified to + 原形動詞 = 有資格做某事；to assemble 是不定詞。句子只需要一個 be 動詞 is。形容詞位置的說明見第 VI 章。"
+        "note": "原句多打了一個 is，刪掉一個即可。qualified 是形容詞「有資格的」，be qualified to + 原形動詞 = 有資格做某事；to assemble 是不定詞。句子只需要一個 be 動詞 is。形容詞位置的說明見第 VI 章。"
       },
       {
         "n": 3,
