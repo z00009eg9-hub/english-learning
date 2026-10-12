@@ -22348,8 +22348,8 @@ window.BOOK = {
         "ipa": "/rɪˈpleɪs.mənt/",
         "pos": "n.",
         "cn": "替補者、替代品",
-        "ex": "We are training a replacement for Tom.",
-        "exCn": "我們正在訓練一位接替 Tom 的人。"
+        "ex": "We are training a replacement for Anita.",
+        "exCn": "我們正在訓練一位接替 Anita 的人。"
       },
       {
         "w": "assign",
