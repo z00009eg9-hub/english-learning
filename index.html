@@ -7077,7 +7077,7 @@ let micRec=null,micActive=false,micCfg=null,micFinal='',micLive='',micErr=null,m
 let micGen=0;            /* 世代編號：上一輪殘留的事件不准影響這一輪 */
 let micAlts=[];          /* 這一輪瀏覽器給的所有候選（除錯 + 挑最接近的那個） */
 let micStartWatch=null;  /* 啟動看門狗：start() 之後遲遲沒真的開始就當作卡死 */
-let micRetried=false;
+let micRetried=false,startRetried=false;
 const TTS_GAP=280;       /* 示範語音 cancel 之後留一點空檔再開錄，避免喇叭聲被收進去 */
 /* 開錄前把示範語音收乾淨：ttsGen++ 讓 speak() 裡還沒開口的排程作廢（否則 cancel 之後 80ms 它又開口，
    把答案朗讀灌進麥克風），再等引擎真的停下來（iOS 在 TTS 剛結束時音訊通道還停在播放模式，收音近乎靜音） */
@@ -7198,7 +7198,7 @@ function micRestart(){
   const cfg=micCfg;
   micGen++;
   try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;micRec.abort();}}catch(e){}
-  micRec=null;micFinal='';micLive='';micAlts=[];micErr=null;micStopping=false;
+  micRec=null;micFinal='';micLive='';micAlts=[];micErr=null;micStopping=false;startRetried=false;
   clearMicTimers();
   ttsHalt();
   cfg.onReset&&cfg.onReset();
@@ -7273,7 +7273,11 @@ function _startRec(){
         try{_startRec();}catch(e){finishMic();}},120);
     }else finishMic();};
   micRec=r;
-  try{r.start();armStartWatch();}catch(e){micErr='busy';finishMic();}
+  try{r.start();armStartWatch();}catch(e){
+    /* Safari 上一顆引擎還沒真的放掉時 start() 會丟錯 → 隔一拍再試一次，不要立刻報失敗 */
+    if(!startRetried){startRetried=true;try{r.onend=r.onresult=r.onerror=r.onstart=null;}catch(_){}if(micRec===r)micRec=null;
+      setTimeout(()=>{if(micActive&&gen===micGen&&!micRec)_startRec();},400);return;}
+    micErr='busy';finishMic();}
 }
 function micStart(cfg){
   /* 穩定模式：模型還沒好（下載中／載入失敗）就先用快速模式，不讓使用者空等 */
@@ -7290,9 +7294,12 @@ function micStart(cfg){
   }
   /* 上一輪殘留的辨識器沒放掉，新的 start() 會靜靜失敗 —— 開錄前一律先清掉 */
   if(micRec){try{micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;micRec.abort();}catch(e){}micRec=null;}
+  /* iOS/Safari：播完示範語音後音訊工作階段停在「播放」模式，之後麥克風輸入是靜音的
+     （第 1 句正常、朗讀答案後每一次都收不到）→ 固定成「播放＋錄音」模式 */
+  try{if(navigator.audioSession&&navigator.audioSession.type!=='play-and-record')navigator.audioSession.type='play-and-record';}catch(e){}
   ttsHalt();
   micGen++;micRetried=false;
-  micCfg=cfg;micFinal='';micLive='';micAlts=[];micErr=null;micDone=false;micStopping=false;
+  micCfg=cfg;micFinal='';micLive='';micAlts=[];micErr=null;micDone=false;micStopping=false;startRetried=false;
   micActive=true;meterRetried=false;setMicUI(cfg,true);meterStart(cfg);
   if(recMode()==='whisper'&&!whisperReady){const l=$(cfg.lbl);
     if(l)l.textContent='🔴 聽你說…（'+(whisperLoadErr?'穩定模式載入失敗':'穩定模式模型下載中 '+whisperProg+'%')+'，先用快速模式）';}
@@ -7328,6 +7335,8 @@ function micErrMsg(err){
   if(err==='audio-capture')return '🎙️ 找不到麥克風：請確認麥克風已接上，且 Windows「隱私權 → 麥克風」有允許瀏覽器';
   if(err==='network')return '📶 語音辨識需要網路（Chrome 透過 Google 伺服器辨識），請檢查連線後再試';
   if(err==='whisper-error'||err==='whisper-timeout')return '⚠ 穩定模式轉寫失敗，請到 ⚙ 設定切回「語音：快速」再試';
+  /* 其他原因（no-speech／aborted／busy…）也把代碼帶出來，回報問題時一眼看得出是哪一種 */
+  if(err&&err!=='unsupported')return '沒聽清楚（'+esc(String(err))+'），再按一次試試 <svg class=ic><use href=#i-mic></use></svg>';
   return null;}
 function micUnsupported(lbl){const l=$(lbl);if(l)l.innerHTML='⚠ 這個瀏覽器不支援語音辨識，建議用 <b>Chrome</b> 或 <b>Edge</b>。你仍可用 <svg class=ic><use href=#i-spk></use></svg> 聽示範跟著念。';}
 
