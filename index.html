@@ -7146,20 +7146,23 @@ function resetIdle(){if(!micCfg||!micCfg.idleMs)return;if(idleTimer)clearTimeout
 /* 收音音量環：按鈕外圈跟著音量跳，使用者才看得出麥克風有沒有真的收到聲音；
    幾秒內都接近靜音就直接提醒（常見原因：Windows 麥克風音量太低、選到錯的裝置） */
 let meterStream=null,meterCtx=null,meterRaf=null,meterBtn=null,meterRetried=false;
-async function meterStart(cfg){meterStop();
+/* Safari／iOS 上，語音辨識和 getUserMedia 同時開麥會互搶，辨識端被靜音（第 2 句起收不到音）；
+   只在 Chrome／Edge（非 iOS）才開音量環，Safari 只靠辨識本身 */
+const METER_OK=!/iPad|iPhone|iPod/.test(navigator.userAgent)&&!(navigator.maxTouchPoints>1&&/Mac/.test(navigator.platform))&&!(/^((?!chrome|android|crios|fxios|edg).)*safari/i.test(navigator.userAgent));
+async function meterStart(cfg){meterStop();if(!METER_OK)return;
   if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia||!window.AudioContext)return;
   const gen=micGen;
   try{const s=await navigator.mediaDevices.getUserMedia({audio:true});
     if(gen!==micGen||!micActive){s.getTracks().forEach(t=>t.stop());return;}
     meterStream=s;meterCtx=new AudioContext();const an=meterCtx.createAnalyser();an.fftSize=1024;
     meterCtx.createMediaStreamSource(s).connect(an);const buf=new Float32Array(an.fftSize);
-    const btn=meterBtn=$(cfg.btn),t0=Date.now();let peak=0,warned=false;
+    const btn=meterBtn=$(cfg.btn);let t0=Date.now(),peak=0,warned=false;
     const tick=()=>{if(gen!==micGen||!micActive){meterStop();return;}
       an.getFloatTimeDomainData(buf);let p=0;for(let i=0;i<buf.length;i++){const v=Math.abs(buf[i]);if(v>p)p=v;}
       if(p>peak)peak=p;if(btn)btn.style.setProperty('--lv',Math.min(1,p*4).toFixed(2));
       if(!warned&&Date.now()-t0>3500&&peak<0.03&&!(micLive||micFinal).trim()){
         /* 第一次靜音先自動換一顆辨識引擎＋重新取得麥克風（iPad 在示範語音後常收不到），還是靜音才提醒 */
-        if(!meterRetried&&micCfg===cfg){meterRetried=true;try{micRestart();}catch(e){}meterStart(cfg);return;}
+        if(!meterRetried&&micCfg===cfg){meterRetried=true;try{micRestart();}catch(e){}t0=Date.now();peak=0;meterRaf=requestAnimationFrame(tick);return;}
         warned=true;
         const l=$(cfg.lbl);if(l)l.textContent='🔈 幾乎收不到聲音：請靠近麥克風、大聲一點，或檢查 Windows「麥克風音量」與選用的裝置';}
       meterRaf=requestAnimationFrame(tick);};
