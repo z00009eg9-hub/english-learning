@@ -620,7 +620,14 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
 /* 平板：頂部綠底標題加高留白；說出來卡片撐到接近滿版並垂直置中，避免底部大片空白 */
 @media(min-width:700px){
   header{padding-top:calc(22px + env(safe-area-inset-top));padding-bottom:14px;}
-  #say-card{min-height:calc(100svh - var(--hdh,100px) - 280px);justify-content:center;gap:28px;}
+  #say-card{min-height:calc(100svh - var(--hdh,100px) - 150px - env(safe-area-inset-bottom));justify-content:center;gap:28px;}
+  #scr-say{max-width:900px;}
+  #say-card .pc-cn{font-size:2.1rem;}
+  #say-card .mic{width:84px;height:84px;font-size:2rem;}
+}
+/* 平板橫式：可用高度少，標題列留白與直式分開 */
+@media(min-width:700px) and (orientation:landscape){
+  header{padding-top:calc(26px + env(safe-area-inset-top));padding-bottom:12px;}
 }
 /* ═══ 說出來 手機版精修（iPhone 375/390/430）：標題區壓縮、卡片跟內容走、字級統一 ═══ */
 @media(max-width:699px){
