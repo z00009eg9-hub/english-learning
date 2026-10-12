@@ -7078,6 +7078,10 @@ let micGen=0;            /* 世代編號：上一輪殘留的事件不准影響�
 let micAlts=[];          /* 這一輪瀏覽器給的所有候選（除錯 + 挑最接近的那個） */
 let micStartWatch=null;  /* 啟動看門狗：start() 之後遲遲沒真的開始就當作卡死 */
 let micRetried=false,startRetried=false,abortN=0;
+/* 收音事件紀錄：失敗時連同提示一起顯示，截圖就能看出 iPad 上實際的事件順序 */
+let micTrace=[],micT0=0;
+function mtr(x){const t=Date.now()-micT0;if(micTrace.length<24)micTrace.push(x+'@'+(t<1000?t+'ms':(t/1000).toFixed(1)+'s'));}
+function micTraceStr(){return micTrace.join(' ');}
 const TTS_GAP=280;       /* 示範語音 cancel 之後留一點空檔再開錄，避免喇叭聲被收進去 */
 /* 開錄前把示範語音收乾淨：ttsGen++ 讓 speak() 裡還沒開口的排程作廢（否則 cancel 之後 80ms 它又開口，
    把答案朗讀灌進麥克風），再等引擎真的停下來（iOS 在 TTS 剛結束時音訊通道還停在播放模式，收音近乎靜音） */
@@ -7143,7 +7147,7 @@ function clearMicTimers(){[micTimer,micWatch,idleTimer,micStartWatch].forEach(t=
   micTimer=micWatch=idleTimer=micStartWatch=null;}
 /* idle：偵測到說話後開始計時，最後一個字之後過 idleMs 沒新內容就自動收尾 */
 function resetIdle(){if(!micCfg||!micCfg.idleMs)return;if(idleTimer)clearTimeout(idleTimer);
-  idleTimer=setTimeout(()=>{micStopping=true;try{if(micRec)micRec.stop();}catch(e){}
+  idleTimer=setTimeout(()=>{mtr('idle');micStopping=true;try{if(micRec)micRec.stop();}catch(e){}
     setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},300);},micCfg.idleMs);}
 /* 收音音量環：按鈕外圈跟著音量跳，使用者才看得出麥克風有沒有真的收到聲音；
    幾秒內都接近靜音就直接提醒（常見原因：Windows 麥克風音量太低、選到錯的裝置） */
@@ -7189,14 +7193,14 @@ function hardResetMic(){
 }
 function micStop(){
   if(!micActive){hardResetMic();return;}
-  micStopping=true;
+  mtr('micStop');micStopping=true;
   try{if(micRec)micRec.stop();}catch(e){}
   if(micTimer)clearTimeout(micTimer);
   micTimer=setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},350);
 }
 /* 重說：不結束這一輪，只把已經聽到的內容丟掉、辨識引擎重開，麥克風繼續開著 */
 function micRestart(){
-  if(!micActive||!micCfg)return;
+  if(!micActive||!micCfg)return;mtr('restart');
   const cfg=micCfg;
   micGen++;
   try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;micRec.abort();}}catch(e){}
@@ -7211,17 +7215,17 @@ function micRestart(){
 }
 /* 還沒開口前給更長的思考時間，開口後才用 idleMs 收尾 */
 function armFirstIdle(cfg){if(!cfg.idleMs)return;if(idleTimer)clearTimeout(idleTimer);
-  idleTimer=setTimeout(()=>{micStopping=true;try{if(micRec)micRec.stop();}catch(e){}
+  idleTimer=setTimeout(()=>{mtr('firstIdle');micStopping=true;try{if(micRec)micRec.stop();}catch(e){}
     setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},300);},cfg.firstIdleMs||Math.max(cfg.idleMs,15000));}
 /* 看門狗上限：朗讀/開講(keepAlive) 5 分鐘、連續句 60 秒、單字 40 秒（給學習者充足思考時間） */
 function armWatchdog(cfg){if(micWatch)clearTimeout(micWatch);
-  micWatch=setTimeout(()=>{micStop();},cfg.keepAlive?300000:(cfg.continuous?60000:40000));}
+  micWatch=setTimeout(()=>{mtr('watchdog');micStop();},cfg.keepAlive?300000:(cfg.continuous?60000:40000));}
 /* 引擎啟動看門狗：iOS 回到前景、權限被收回時 start() 會靜靜失敗，
    按鈕會停在 ⏹ 但其實已經死了 — 自動救一次，救不回來就把按鈕放回可按狀態 */
 function armStartWatch(){
   if(micStartWatch)clearTimeout(micStartWatch);
   micStartWatch=setTimeout(()=>{
-    micStartWatch=null;if(!micActive)return;
+    micStartWatch=null;if(!micActive)return;mtr('noStart');
     if(!micRetried){micRetried=true;micRestart();return;}
     const cfg=micCfg;hardResetMic();
     if(cfg&&cfg.lbl){const l=$(cfg.lbl);if(l)l.innerHTML='⚠ 麥克風沒啟動，請再按一次 <svg class=ic><use href=#i-mic></use></svg>';}
@@ -7241,7 +7245,7 @@ function pickAlt(res,target){
 function _startRec(){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
   const cfg=micCfg,gen=micGen;
-  let r;try{r=new SR();}catch(e){micErr='unsupported';finishMic();return;}
+  let r;try{r=new SR();}catch(e){micErr='unsupported';finishMic();return;}mtr('new');
   r.lang='en-US';r.interimResults=true;r.continuous=!!cfg.continuous;
   try{r.maxAlternatives=5;}catch(e){}
   const base=micFinal,baseAlts=micAlts.slice(),tgt=typeof cfg.target==='function'?cfg.target():cfg.target;
@@ -7254,8 +7258,8 @@ function _startRec(){
       if((micLive||micFinal).trim())return;
       try{r.onend=r.onresult=r.onerror=r.onstart=null;r.abort();}catch(e){}
       if(micRec===r){micRec=null;_startRec();}},10000);};
-  r.onstart=()=>{if(!alive())return;micRetried=false;if(micStartWatch){clearTimeout(micStartWatch);micStartWatch=null;}armRes();};
-  r.onresult=e=>{if(!alive())return;
+  r.onstart=()=>{if(!alive())return;mtr('onstart');micRetried=false;if(micStartWatch){clearTimeout(micStartWatch);micStartWatch=null;}armRes();};
+  r.onresult=e=>{if(!alive())return;mtr('res');
     if(resTimer){clearTimeout(resTimer);resTimer=null;}
     if(micErr==='aborted')micErr=null;   /* 重試後聽到東西了，就不要再帶著舊的中止代碼 */
     let f='',itm='';const alts=[];
@@ -7265,11 +7269,11 @@ function _startRec(){
     micFinal=((base?base+' ':'')+f).trim();micLive=(micFinal+' '+itm).trim();
     micAlts=baseAlts.concat(alts);
     cfg.onLive&&cfg.onLive(micLive,micAlts);resetIdle();};
-  r.onerror=e=>{if(!alive())return;micErr=e.error;
+  r.onerror=e=>{if(!alive())return;mtr('err:'+e.error);micErr=e.error;
     if(/^(not-allowed|service-not-allowed|audio-capture|network)$/.test(e.error))micStopping=true;
     /* iOS 系統中止（aborted）：還沒聽到東西就被打斷 → 逐步拉長間隔重試，連續 5 次都不行才放棄 */
     if(e.error==='aborted'&&!(micLive||micFinal).trim()){abortN++;if(abortN>=5){micErr='aborted×'+abortN;micStopping=true;}}};
-  r.onend=()=>{if(!alive())return;
+  r.onend=()=>{if(!alive())return;mtr('end');
     if(resTimer){clearTimeout(resTimer);resTimer=null;}
     /* keepAlive 之外：引擎「什麼都還沒聽到」就自己結束（iOS 常見）也自動重開，
        不要立刻回報「沒聽清楚」害使用者重按 */
@@ -7279,12 +7283,13 @@ function _startRec(){
         try{_startRec();}catch(e){finishMic();}},wait);
     }else finishMic();};
   micRec=r;
-  try{r.start();armStartWatch();}catch(e){
+  try{r.start();mtr('start');armStartWatch();}catch(e){mtr('startThrow');
     /* Safari 上一顆引擎還沒真的放掉時 start() 會丟錯 → 隔一拍再試一次，不要立刻報失敗 */
     if(!startRetried){startRetried=true;try{r.onend=r.onresult=r.onerror=r.onstart=null;}catch(_){}if(micRec===r)micRec=null;
       setTimeout(()=>{if(micActive&&gen===micGen&&!micRec)_startRec();},400);return;}
     micErr='busy';finishMic();}
 }
+try{if(navigator.audioSession)navigator.audioSession.type='play-and-record';}catch(e){}
 function micStart(cfg){
   /* 穩定模式：模型還沒好（下載中／載入失敗）就先用快速模式，不讓使用者空等 */
   if(recMode()==='whisper'){whisperEnsure();if(whisperReady){whisperMic(cfg);return;}}
@@ -7302,10 +7307,10 @@ function micStart(cfg){
   if(micRec){try{micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;micRec.abort();}catch(e){}micRec=null;}
   /* iOS/Safari：播完示範語音後音訊工作階段停在「播放」模式，之後麥克風輸入是靜音的
      （第 1 句正常、朗讀答案後每一次都收不到）→ 固定成「播放＋錄音」模式 */
-  try{if(navigator.audioSession&&navigator.audioSession.type!=='play-and-record')navigator.audioSession.type='play-and-record';}catch(e){}
   ttsHalt();
   micGen++;micRetried=false;
   micCfg=cfg;micFinal='';micLive='';micAlts=[];micErr=null;micDone=false;micStopping=false;startRetried=false;abortN=0;
+  micTrace=[];micT0=Date.now();mtr('press'+(navigator.audioSession?'/as='+navigator.audioSession.type:'')+(window.speechSynthesis&&speechSynthesis.speaking?'/tts':''));
   micActive=true;meterRetried=false;setMicUI(cfg,true);meterStart(cfg);
   if(recMode()==='whisper'&&!whisperReady){const l=$(cfg.lbl);
     if(l)l.textContent='🔴 聽你說…（'+(whisperLoadErr?'穩定模式載入失敗':'穩定模式模型下載中 '+whisperProg+'%')+'，先用快速模式）';}
@@ -7316,7 +7321,7 @@ function micStart(cfg){
 }
 /* 切到別的 App、鎖螢幕、換分頁：辨識引擎會被瀏覽器中止，先收乾淨，回來才按得動 */
 function micInterrupted(){
-  if(!micActive&&!micRec)return;
+  if(!micActive&&!micRec)return;mtr('hidden');
   const cfg=micCfg;hardResetMic();
   if(cfg&&cfg.lbl){const l=$(cfg.lbl);if(l)l.innerHTML='錄音已中斷，按一下重新開始 '+(cfg.icon||'<svg class=ic><use href=#i-mic></use></svg>');}}
 document.addEventListener('visibilitychange',()=>{
@@ -7342,7 +7347,7 @@ function micErrMsg(err){
   if(err==='network')return '📶 語音辨識需要網路（Chrome 透過 Google 伺服器辨識），請檢查連線後再試';
   if(err==='whisper-error'||err==='whisper-timeout')return '⚠ 穩定模式轉寫失敗，請到 ⚙ 設定切回「語音：快速」再試';
   /* 其他原因（no-speech／aborted／busy…）也把代碼帶出來，回報問題時一眼看得出是哪一種 */
-  if(err&&err!=='unsupported')return '沒聽清楚（'+esc(String(err))+'），再按一次試試 <svg class=ic><use href=#i-mic></use></svg>';
+  if(err&&err!=='unsupported')return '沒聽清楚（'+esc(String(err))+'），再按一次試試 <svg class=ic><use href=#i-mic></use></svg><div class="alt-line" style="font-size:.8em;opacity:.7">紀錄：'+esc(micTraceStr())+'</div>';
   return null;}
 function micUnsupported(lbl){const l=$(lbl);if(l)l.innerHTML='⚠ 這個瀏覽器不支援語音辨識，建議用 <b>Chrome</b> 或 <b>Edge</b>。你仍可用 <svg class=ic><use href=#i-spk></use></svg> 聽示範跟著念。';}
 
