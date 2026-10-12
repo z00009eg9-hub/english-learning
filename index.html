@@ -7079,6 +7079,15 @@ let micAlts=[];          /* 這一輪瀏覽器給的所有候選（除錯 + 挑�
 let micStartWatch=null;  /* 啟動看門狗：start() 之後遲遲沒真的開始就當作卡死 */
 let micRetried=false;
 const TTS_GAP=280;       /* 示範語音 cancel 之後留一點空檔再開錄，避免喇叭聲被收進去 */
+/* 開錄前把示範語音收乾淨：ttsGen++ 讓 speak() 裡還沒開口的排程作廢（否則 cancel 之後 80ms 它又開口，
+   把答案朗讀灌進麥克風），再等引擎真的停下來（iOS 在 TTS 剛結束時音訊通道還停在播放模式，收音近乎靜音） */
+function ttsHalt(){try{ttsGen++;}catch(e){}if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}}
+function whenTtsQuiet(fn,gen){const t0=Date.now();
+  const chk=()=>{if(!micActive||gen!==micGen)return;
+    const busy=window.speechSynthesis&&(speechSynthesis.speaking||speechSynthesis.pending);
+    if(busy&&Date.now()-t0<1500){try{speechSynthesis.cancel();}catch(e){}setTimeout(chk,120);return;}
+    fn();};
+  setTimeout(chk,TTS_GAP);}
 function speechOK(){return ('webkitSpeechRecognition' in window)||('SpeechRecognition' in window);}
 let whisperWorker,whisperActive=false,whisperCfg,whisperRec,whisperStream,whisperChunks=[],whisperLiveSR=null,whisperWait=null;
 function recMode(){return localStorage.getItem('speakup_rec_mode')||'fast';}
@@ -7136,7 +7145,7 @@ function resetIdle(){if(!micCfg||!micCfg.idleMs)return;if(idleTimer)clearTimeout
     setTimeout(()=>{try{if(micRec)micRec.abort();}catch(e){}finishMic();},300);},micCfg.idleMs);}
 /* 收音音量環：按鈕外圈跟著音量跳，使用者才看得出麥克風有沒有真的收到聲音；
    幾秒內都接近靜音就直接提醒（常見原因：Windows 麥克風音量太低、選到錯的裝置） */
-let meterStream=null,meterCtx=null,meterRaf=null,meterBtn=null;
+let meterStream=null,meterCtx=null,meterRaf=null,meterBtn=null,meterRetried=false;
 async function meterStart(cfg){meterStop();
   if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia||!window.AudioContext)return;
   const gen=micGen;
@@ -7148,7 +7157,10 @@ async function meterStart(cfg){meterStop();
     const tick=()=>{if(gen!==micGen||!micActive){meterStop();return;}
       an.getFloatTimeDomainData(buf);let p=0;for(let i=0;i<buf.length;i++){const v=Math.abs(buf[i]);if(v>p)p=v;}
       if(p>peak)peak=p;if(btn)btn.style.setProperty('--lv',Math.min(1,p*4).toFixed(2));
-      if(!warned&&Date.now()-t0>3500&&peak<0.03&&!(micLive||micFinal).trim()){warned=true;
+      if(!warned&&Date.now()-t0>3500&&peak<0.03&&!(micLive||micFinal).trim()){
+        /* 第一次靜音先自動換一顆辨識引擎＋重新取得麥克風（iPad 在示範語音後常收不到），還是靜音才提醒 */
+        if(!meterRetried&&micCfg===cfg){meterRetried=true;try{micRestart();}catch(e){}meterStart(cfg);return;}
+        warned=true;
         const l=$(cfg.lbl);if(l)l.textContent='🔈 幾乎收不到聲音：請靠近麥克風、大聲一點，或檢查 Windows「麥克風音量」與選用的裝置';}
       meterRaf=requestAnimationFrame(tick);};
     tick();
@@ -7185,12 +7197,12 @@ function micRestart(){
   try{if(micRec){micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;micRec.abort();}}catch(e){}
   micRec=null;micFinal='';micLive='';micAlts=[];micErr=null;micStopping=false;
   clearMicTimers();
-  if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}
+  ttsHalt();
   cfg.onReset&&cfg.onReset();
   const l=$(cfg.lbl);if(l)l.textContent='🔄 重來，說吧…（說完按 ⏹ 結束）';
   armFirstIdle(cfg);armWatchdog(cfg);
   const gen=micGen;
-  setTimeout(()=>{if(micActive&&gen===micGen)_startRec();},TTS_GAP);
+  whenTtsQuiet(_startRec,gen);
 }
 /* 還沒開口前給更長的思考時間，開口後才用 idleMs 收尾 */
 function armFirstIdle(cfg){if(!cfg.idleMs)return;if(idleTimer)clearTimeout(idleTimer);
@@ -7275,16 +7287,16 @@ function micStart(cfg){
   }
   /* 上一輪殘留的辨識器沒放掉，新的 start() 會靜靜失敗 —— 開錄前一律先清掉 */
   if(micRec){try{micRec.onend=micRec.onresult=micRec.onerror=micRec.onstart=null;micRec.abort();}catch(e){}micRec=null;}
-  if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}
+  ttsHalt();
   micGen++;micRetried=false;
   micCfg=cfg;micFinal='';micLive='';micAlts=[];micErr=null;micDone=false;micStopping=false;
-  micActive=true;setMicUI(cfg,true);meterStart(cfg);
+  micActive=true;meterRetried=false;setMicUI(cfg,true);meterStart(cfg);
   if(recMode()==='whisper'&&!whisperReady){const l=$(cfg.lbl);
     if(l)l.textContent='🔴 聽你說…（'+(whisperLoadErr?'穩定模式載入失敗':'穩定模式模型下載中 '+whisperProg+'%')+'，先用快速模式）';}
   armFirstIdle(cfg);armWatchdog(cfg);
   /* 等示範語音真的停下來再開錄，喇叭聲被收進去會嚴重拖垮辨識 */
   const gen=micGen;
-  setTimeout(()=>{if(micActive&&gen===micGen)_startRec();},TTS_GAP);
+  whenTtsQuiet(_startRec,gen);
 }
 /* 切到別的 App、鎖螢幕、換分頁：辨識引擎會被瀏覽器中止，先收乾淨，回來才按得動 */
 function micInterrupted(){
