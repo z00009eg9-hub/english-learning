@@ -7092,7 +7092,8 @@ const IS_APPLE=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.maxTouch
    網頁已在收音時，iOS 播語音不會把音訊工作階段切成純播放，語音播完麥克風也不會被靜音 */
 let holdStream=null;
 async function micHold(){if(!IS_APPLE||holdStream||!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia)return;
-  try{const st=await navigator.mediaDevices.getUserMedia({audio:true});
+  /* 關掉回音消除／降噪／自動增益：iOS 開著這些會把音訊工作階段切成通話模式（低取樣率），辨識會明顯變差 */
+  try{const st=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
     if(holdStream){st.getTracks().forEach(t=>t.stop());return;}
     holdStream=st;const tk=st.getAudioTracks()[0];
     if(tk){tk.onmute=()=>mtr('trackMute');tk.onunmute=()=>mtr('trackUnmute');tk.onended=()=>{mtr('trackEnd');holdStream=null;};}
