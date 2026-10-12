@@ -7087,12 +7087,28 @@ const TTS_GAP=280;       /* 示範語音 cancel 之後留一點空檔再開錄�
    把答案朗讀灌進麥克風），再等引擎真的停下來（iOS 在 TTS 剛結束時音訊通道還停在播放模式，收音近乎靜音） */
 function ttsHalt(){try{ttsGen++;}catch(e){}if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}}
 const IS_APPLE=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.maxTouchPoints>1&&/Mac/.test(navigator.platform))||/^((?!chrome|android|crios|fxios|edg).)*safari/i.test(navigator.userAgent);
+/* iOS 27：播過示範語音之後，送給網頁的麥克風訊號會變成靜音（辨識引擎有啟動、6 秒完全沒結果；
+   音量環也量到靜音）。對策一：從第一次按麥克風起就一直持有一路麥克風串流，離開練習才放掉——
+   網頁已在收音時，iOS 播語音不會把音訊工作階段切成純播放，語音播完麥克風也不會被靜音 */
+let holdStream=null;
+async function micHold(){if(!IS_APPLE||holdStream||!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia)return;
+  try{const st=await navigator.mediaDevices.getUserMedia({audio:true});
+    if(holdStream){st.getTracks().forEach(t=>t.stop());return;}
+    holdStream=st;const tk=st.getAudioTracks()[0];
+    if(tk){tk.onmute=()=>mtr('trackMute');tk.onunmute=()=>mtr('trackUnmute');tk.onended=()=>{mtr('trackEnd');holdStream=null;};}
+    mtr('hold'+(tk&&tk.muted?'/muted':''));
+  }catch(e){mtr('holdFail:'+(e&&e.name));}}
+function micRelease(){if(!holdStream)return;try{holdStream.getTracks().forEach(t=>t.stop());}catch(e){}holdStream=null;}
+/* 對策二：開錄前播 50ms 靜音 <audio>，讓 WebKit 自己的媒體路徑把音訊工作階段搶回來 */
+let kickEl=null;
+function audioKick(){if(!IS_APPLE)return;try{if(!kickEl){kickEl=new Audio('data:audio/wav;base64,UklGRmQGAABXQVZFZm10IBAAAAABAAEAgD4AAAB9AAACABAAZGF0YUAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');kickEl.setAttribute('playsinline','');kickEl.volume=0.01;}
+  const pr=kickEl.play();if(pr&&pr.catch)pr.catch(()=>{});mtr('kick');}catch(e){}}
 function whenTtsQuiet(fn,gen){const t0=Date.now();
   const chk=()=>{if(!micActive||gen!==micGen)return;
     const busy=window.speechSynthesis&&(speechSynthesis.speaking||speechSynthesis.pending);
     if(busy&&Date.now()-t0<1500){setTimeout(chk,120);return;}
     /* iOS：語音引擎停下來後音訊工作階段還要一下子才釋放，太早開錄會被系統以 aborted 中止 */
-    setTimeout(fn,IS_APPLE?700:0);};
+    if(IS_APPLE){audioKick();setTimeout(fn,700);}else fn();};
   setTimeout(chk,TTS_GAP);}
 function speechOK(){return ('webkitSpeechRecognition' in window)||('SpeechRecognition' in window);}
 let whisperWorker,whisperActive=false,whisperCfg,whisperRec,whisperStream,whisperChunks=[],whisperLiveSR=null,whisperWait=null;
@@ -7310,7 +7326,7 @@ function micStart(cfg){
   ttsHalt();
   micGen++;micRetried=false;
   micCfg=cfg;micFinal='';micLive='';micAlts=[];micErr=null;micDone=false;micStopping=false;startRetried=false;abortN=0;
-  micTrace=[];micT0=Date.now();mtr('press'+(navigator.audioSession?'/as='+navigator.audioSession.type:'')+(window.speechSynthesis&&speechSynthesis.speaking?'/tts':''));
+  micTrace=[];micT0=Date.now();micHold();mtr('press'+(holdStream?'/held'+(holdStream.getAudioTracks()[0]&&holdStream.getAudioTracks()[0].muted?'-muted':''):'')+(navigator.audioSession?'/as='+navigator.audioSession.type:'')+(window.speechSynthesis&&speechSynthesis.speaking?'/tts':''));
   micActive=true;meterRetried=false;setMicUI(cfg,true);meterStart(cfg);
   if(recMode()==='whisper'&&!whisperReady){const l=$(cfg.lbl);
     if(l)l.textContent='🔴 聽你說…（'+(whisperLoadErr?'穩定模式載入失敗':'穩定模式模型下載中 '+whisperProg+'%')+'，先用快速模式）';}
@@ -7321,6 +7337,7 @@ function micStart(cfg){
 }
 /* 切到別的 App、鎖螢幕、換分頁：辨識引擎會被瀏覽器中止，先收乾淨，回來才按得動 */
 function micInterrupted(){
+  micRelease();
   if(!micActive&&!micRec)return;mtr('hidden');
   const cfg=micCfg;hardResetMic();
   if(cfg&&cfg.lbl){const l=$(cfg.lbl);if(l)l.innerHTML='錄音已中斷，按一下重新開始 '+(cfg.icon||'<svg class=ic><use href=#i-mic></use></svg>');}}
@@ -8106,7 +8123,7 @@ let DAY='all';
 function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo(0,0);
   /* 首頁時隱藏頂部主題膠囊（下方大選單已顯示同資訊，避免重複）；進活動才顯示 */
   document.body.classList.toggle('home-active',id==='scr-home');}
-function goHome(){reviewMode=false;if(typeof WARMUP!=='undefined')WARMUP=false;micStop();if(typeof vStop==='function')vStop();if(window.speechSynthesis)speechSynthesis.cancel();show('scr-home');coachSay(coachHome());renderWarmup();}
+function goHome(){reviewMode=false;if(typeof WARMUP!=='undefined')WARMUP=false;micStop();micRelease();if(typeof vStop==='function')vStop();if(window.speechSynthesis)speechSynthesis.cancel();show('scr-home');coachSay(coachHome());renderWarmup();}
 function openAct(a){micStop();if(typeof vStop==='function'&&a!=='video')vStop();if(window.speechSynthesis)speechSynthesis.cancel();
   if(!speechOK()&&a!=='quiz'&&a!=='read'){/* 仍可進入，會顯示提示 */}
     const f={say:startSay,shadow:startShadow,word:startWord,read:startRead,talk:startTalk,quiz:startQuiz,listen:startListen,video:startVideo}[a];
@@ -9737,7 +9754,7 @@ function renderActProg(){
 }
 function pctCls(p){return p==null?'skip':p>=85?'ok':p>=60?'mid':'no';}
 function sumNum(n,l){return '<div class="sum-num"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>';}
-function finishAct(title,msg){micStop();if(window.speechSynthesis)speechSynthesis.cancel();
+function finishAct(title,msg){micStop();micRelease();if(window.speechSynthesis)speechSynthesis.cancel();
   if(!SESS){goHome();coachSay('✅ <b>'+esc(title)+'</b> 完成!'+esc(msg));return;}
   SESS.msg=msg;showSummary();}
 function showSummary(){
