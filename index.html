@@ -7077,16 +7077,18 @@ let micRec=null,micActive=false,micCfg=null,micFinal='',micLive='',micErr=null,m
 let micGen=0;            /* 世代編號：上一輪殘留的事件不准影響這一輪 */
 let micAlts=[];          /* 這一輪瀏覽器給的所有候選（除錯 + 挑最接近的那個） */
 let micStartWatch=null;  /* 啟動看門狗：start() 之後遲遲沒真的開始就當作卡死 */
-let micRetried=false,startRetried=false;
+let micRetried=false,startRetried=false,abortN=0;
 const TTS_GAP=280;       /* 示範語音 cancel 之後留一點空檔再開錄，避免喇叭聲被收進去 */
 /* 開錄前把示範語音收乾淨：ttsGen++ 讓 speak() 裡還沒開口的排程作廢（否則 cancel 之後 80ms 它又開口，
    把答案朗讀灌進麥克風），再等引擎真的停下來（iOS 在 TTS 剛結束時音訊通道還停在播放模式，收音近乎靜音） */
 function ttsHalt(){try{ttsGen++;}catch(e){}if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}}
+const IS_APPLE=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.maxTouchPoints>1&&/Mac/.test(navigator.platform))||/^((?!chrome|android|crios|fxios|edg).)*safari/i.test(navigator.userAgent);
 function whenTtsQuiet(fn,gen){const t0=Date.now();
   const chk=()=>{if(!micActive||gen!==micGen)return;
     const busy=window.speechSynthesis&&(speechSynthesis.speaking||speechSynthesis.pending);
-    if(busy&&Date.now()-t0<1500){try{speechSynthesis.cancel();}catch(e){}setTimeout(chk,120);return;}
-    fn();};
+    if(busy&&Date.now()-t0<1500){setTimeout(chk,120);return;}
+    /* iOS：語音引擎停下來後音訊工作階段還要一下子才釋放，太早開錄會被系統以 aborted 中止 */
+    setTimeout(fn,IS_APPLE?700:0);};
   setTimeout(chk,TTS_GAP);}
 function speechOK(){return ('webkitSpeechRecognition' in window)||('SpeechRecognition' in window);}
 let whisperWorker,whisperActive=false,whisperCfg,whisperRec,whisperStream,whisperChunks=[],whisperLiveSR=null,whisperWait=null;
@@ -7255,6 +7257,7 @@ function _startRec(){
   r.onstart=()=>{if(!alive())return;micRetried=false;if(micStartWatch){clearTimeout(micStartWatch);micStartWatch=null;}armRes();};
   r.onresult=e=>{if(!alive())return;
     if(resTimer){clearTimeout(resTimer);resTimer=null;}
+    if(micErr==='aborted')micErr=null;   /* 重試後聽到東西了，就不要再帶著舊的中止代碼 */
     let f='',itm='';const alts=[];
     for(let i=0;i<e.results.length;i++){const res=e.results[i];
       if(res.isFinal){f+=pickAlt(res,tgt)+' ';for(let k=0;k<res.length&&k<5;k++)alts.push(res[k].transcript);}
@@ -7263,14 +7266,17 @@ function _startRec(){
     micAlts=baseAlts.concat(alts);
     cfg.onLive&&cfg.onLive(micLive,micAlts);resetIdle();};
   r.onerror=e=>{if(!alive())return;micErr=e.error;
-    if(/^(not-allowed|service-not-allowed|audio-capture|network)$/.test(e.error))micStopping=true;};
+    if(/^(not-allowed|service-not-allowed|audio-capture|network)$/.test(e.error))micStopping=true;
+    /* iOS 系統中止（aborted）：還沒聽到東西就被打斷 → 逐步拉長間隔重試，連續 5 次都不行才放棄 */
+    if(e.error==='aborted'&&!(micLive||micFinal).trim()){abortN++;if(abortN>=5){micErr='aborted×'+abortN;micStopping=true;}}};
   r.onend=()=>{if(!alive())return;
     if(resTimer){clearTimeout(resTimer);resTimer=null;}
     /* keepAlive 之外：引擎「什麼都還沒聽到」就自己結束（iOS 常見）也自動重開，
        不要立刻回報「沒聽清楚」害使用者重按 */
     if(!micStopping&&micActive&&(cfg.keepAlive||!(micLive||micFinal).trim())){
+      const wait=micErr==='aborted'?Math.min(2400,300*Math.pow(2,abortN)):120;
       setTimeout(()=>{if(gen!==micGen||!micActive||micStopping)return;
-        try{_startRec();}catch(e){finishMic();}},120);
+        try{_startRec();}catch(e){finishMic();}},wait);
     }else finishMic();};
   micRec=r;
   try{r.start();armStartWatch();}catch(e){
@@ -7299,7 +7305,7 @@ function micStart(cfg){
   try{if(navigator.audioSession&&navigator.audioSession.type!=='play-and-record')navigator.audioSession.type='play-and-record';}catch(e){}
   ttsHalt();
   micGen++;micRetried=false;
-  micCfg=cfg;micFinal='';micLive='';micAlts=[];micErr=null;micDone=false;micStopping=false;startRetried=false;
+  micCfg=cfg;micFinal='';micLive='';micAlts=[];micErr=null;micDone=false;micStopping=false;startRetried=false;abortN=0;
   micActive=true;meterRetried=false;setMicUI(cfg,true);meterStart(cfg);
   if(recMode()==='whisper'&&!whisperReady){const l=$(cfg.lbl);
     if(l)l.textContent='🔴 聽你說…（'+(whisperLoadErr?'穩定模式載入失敗':'穩定模式模型下載中 '+whisperProg+'%')+'，先用快速模式）';}
@@ -7363,7 +7369,7 @@ function ttsFix(t){let s=String(t);TTS_FIX.forEach(f=>{s=s.replace(f[0],f[1]);})
    （使用者回報「再聽一次沒反應」）→ cancel 完補一個 resume 把引擎叫醒 */
 function ttsKick(){try{speechSynthesis.cancel();speechSynthesis.resume();}catch(e){}}
 /* speak 之後過一拍檢查：引擎若還停在 paused 就再叫醒一次 */
-function ttsUnstick(){setTimeout(()=>{try{if(speechSynthesis.paused)speechSynthesis.resume();}catch(e){}},450);}
+function ttsUnstick(){setTimeout(()=>{try{if(!micActive&&speechSynthesis.paused)speechSynthesis.resume();}catch(e){}},450);}
 /* 念完的回呼會被下一次 speak() 作廢，避免「按🔊打斷上一句」時誤觸自動錄音 */
 let ttsGen=0;
 function ttsEta(text,rate){const w=String(text).split(/\s+/).filter(Boolean).length;
