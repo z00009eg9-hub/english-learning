@@ -22523,7 +22523,7 @@ window.BOOK = {
     "grammar": [
       {
         "k": "IV-A",
-        "title": "IV. If 條件句：兩個部分怎麼拆",
+        "title": "If 條件句：兩個部分怎麼拆",
         "pat": "If + 條件（if 子句）, 結果（主句）",
         "pts": [
           "if 開頭的句子通常有兩個部分：if 子句（條件）＋主句（結果）。",
@@ -22572,7 +22572,7 @@ window.BOOK = {
       },
       {
         "k": "V-A",
-        "title": "V. act up vs break down：兩者對照",
+        "title": "act up vs break down：兩者對照",
         "pat": "主詞 + act up（不可分的片語動詞，後面不接受詞）",
         "pts": [
           "act up = 出問題／運作異常／不聽話：「不正常，但不一定完全壞掉」。",
@@ -22698,7 +22698,7 @@ window.BOOK = {
       },
       {
         "k": "VI",
-        "title": "VI. 形容詞位置：qualified",
+        "title": "形容詞位置：qualified",
         "pat": "主詞 + be 動詞 + 形容詞 + 不定詞片語",
         "pts": [
           "形容詞常見兩個位置：① be 動詞後面 ② 名詞前面。",
@@ -22722,7 +22722,7 @@ window.BOOK = {
       },
       {
         "k": "VII-A",
-        "title": "VII. 專業搭配詞：inspection frequency（檢驗頻率）",
+        "title": "專業搭配詞：inspection frequency（檢驗頻率）",
         "pat": "名詞 + of + 名詞（……的……）",
         "pts": [
           "兩種說法都正確；名詞＋名詞較精簡，of 結構較明確。",
@@ -22797,7 +22797,7 @@ window.BOOK = {
       },
       {
         "k": "VIII-A",
-        "title": "VIII. How long + 現在完成式：基本句型",
+        "title": "How long + 現在完成式：基本句型",
         "pat": "How long + has/have + 主詞 + 過去分詞？／How long + has/have + 主詞 + been + V-ing？",
         "pts": [
           "問「從過去到現在已經多久了」。",
@@ -23145,7 +23145,7 @@ window.BOOK = {
       },
       {
         "k": "IX",
-        "title": "IX. since vs for",
+        "title": "since vs for",
         "pat": "since + 起點（時間點）／for + 時間長度",
         "pts": [
           "since = 起點（從某個時間點開始）；for = 時間長度（持續一段時間）。",
@@ -23171,7 +23171,7 @@ window.BOOK = {
       },
       {
         "k": "X-1",
-        "title": "X. WH 問句總整理：1. WHO — 誰",
+        "title": "WH 問句總整理：1. WHO — 誰",
         "pat": "Who + 動詞 + ……？",
         "pts": [
           "⚠ who 當主詞時，不加 do / does / did。"
@@ -23199,7 +23199,7 @@ window.BOOK = {
       },
       {
         "k": "X-2",
-        "title": "2. WHAT / WHERE / WHEN / WHY / HOW",
+        "title": "WHAT / WHERE / WHEN / WHY / HOW",
         "pat": "WH-word + do/does/did + 主詞 + 原形動詞？",
         "pts": [
           "問受詞、地點、時間、原因、方法。Pattern：WH + 助動詞 + 主詞 + 動詞。拆解：Where + does + he + work? / Why + did + she + leave?"
@@ -23234,7 +23234,7 @@ window.BOOK = {
       },
       {
         "k": "X-2B",
-        "title": "2-B. 不同時態的助動詞拆解（課堂補充）",
+        "title": "不同時態的助動詞拆解（課堂補充）",
         "pat": "WH 詞 + 助動詞 + 主詞 + 主要動詞",
         "pts": [
           "⭐ 重點：練習造問句和練習回答一樣重要，問句是口說流暢度的基礎。下次的功課：用 who、what、where、when、how、how long、how many、how much 各造問句。"
@@ -23264,7 +23264,7 @@ window.BOOK = {
       },
       {
         "k": "X-3",
-        "title": "3. HOW LONG — 多久",
+        "title": "HOW LONG — 多久",
         "pat": "How long + have/has + 主詞 + 過去分詞？／How long + have/has + 主詞 + been + V-ing？",
         "pts": [
           "從過去開始、持續到現在的動作。例句與兩種句型的差別，請看第 VIII 章。"
@@ -23273,7 +23273,7 @@ window.BOOK = {
       },
       {
         "k": "X-4",
-        "title": "4. HOW MANY — 多少",
+        "title": "HOW MANY — 多少",
         "pat": "How many + 複數名詞 + do/does + 主詞 + 動詞？",
         "pts": [
           "⚠ 補充：當 How many + 名詞 本身是主詞時，不加 do/does（見第一個例句）。"
@@ -23298,7 +23298,7 @@ window.BOOK = {
       },
       {
         "k": "X-5",
-        "title": "5. WHICH — 哪一個",
+        "title": "WHICH — 哪一個",
         "pat": "Which + 名詞 + do/does/did + 主詞 + 動詞？",
         "pts": [
           "⚠ 補充：介系詞會留在句尾（work in），不放在 which 前面。"
@@ -23323,7 +23323,7 @@ window.BOOK = {
       },
       {
         "k": "X-6",
-        "title": "6. YES/NO Questions",
+        "title": "YES/NO Questions",
         "pat": "一般動詞：Do/Does/Did + 主詞 + 動詞？／現在完成式：Have/Has + 主詞 + 過去分詞？",
         "pts": [
           "可以用 yes / no 回答的問句。"
