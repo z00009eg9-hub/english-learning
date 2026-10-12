@@ -634,6 +634,44 @@ r25:{ unit:"g12", title:"目的與結果子句",
     {bad:"The soup was such hot that I couldn't eat it.",good:"The soup was so hot that I couldn't eat it.",why:"後面直接接形容詞用 so；such 後面要有名詞。"},
     {bad:"He saved money so that to buy a car.",good:"He saved money so that he could buy a car. / He saved money in order to buy a car.",why:"so that 後面要接完整子句，不能接 to V。"}
   ]
+},
+
+r26:{ unit:"g05", title:"used to / would 與 be used to",
+  formula:"used to + V（以前常常，現在不了）　|　would + V（過去重複的動作）　|　be / get used to + 名詞 / V-ing（習慣了）",
+  points:[
+    "used to + 原形動詞：說過去的習慣或狀態，現在已經不是了：Her grandfather used to wake up at five o'clock.",
+    "would + 原形動詞：只能說過去「重複發生的動作」，不能說狀態：He would walk to the market. （不能說 She would be tall.）",
+    "be used to + 名詞 / V-ing：表示「現在已經習慣」，to 是介系詞：She is used to the noise of the city / eating dinner at her desk.",
+    "get used to 強調「慢慢變得習慣」的過程；否定與疑問的 used to 要用 didn't use to / Did you use to ...?"
+  ],
+  examples:[
+    {en:"I used to bite my nails when I was nervous.",cn:"我緊張的時候以前會咬指甲。",note:"used to + V"},
+    {en:"On Sundays we would visit my aunt and help her cook.",cn:"每個禮拜天我們都會去看阿姨，幫她煮飯。",note:"would：過去重複動作"},
+    {en:"He is used to getting up early because of his job.",cn:"因為工作的關係，他習慣早起。",note:"be used to + V-ing"}
+  ],
+  traps:[
+    {bad:"I am used to live alone.",good:"I am used to living alone.",why:"be used to 的 to 是介系詞，後面要接名詞或 V-ing，不能接原形動詞。"},
+    {bad:"I didn't used to like coffee.",good:"I didn't use to like coffee.",why:"助動詞 did 已經表示過去，後面的 use to 不再加 d。"}
+  ]
+},
+
+r27:{ unit:"g15", title:"情態動詞的推測（must / might / can't + have p.p.）",
+  formula:"現在：must / might / could / can't + V　|　過去：must / might / could / can't + have + p.p.",
+  points:[
+    "must 表示很有把握的肯定推測；can't 表示很有把握的否定推測（不是 mustn't）：It can't have been a problem with the license.",
+    "might / could / may 表示「有可能，但不確定」：The owner might have caught a cold.",
+    "推測過去的事用 情態動詞 + have + p.p.：The owner must have been very excited.",
+    "推測現在正在發生的事用 情態動詞 + be + V-ing：He must be waiting at the hospital. 推測要有線索依據，沒把握時用 might。"
+  ],
+  examples:[
+    {en:"The lights are off, so they must be asleep.",cn:"燈都關了，所以他們一定睡了。",note:"must + be：現在推測"},
+    {en:"She might have missed the bus.",cn:"她可能沒趕上公車。",note:"might have p.p."},
+    {en:"He can't have heard me; he wasn't wearing his hearing aid.",cn:"他不可能聽到我說話；他沒戴助聽器。",note:"can't have p.p."}
+  ],
+  traps:[
+    {bad:"He mustn't have forgotten. （要表達「不可能忘了」）",good:"He can't have forgotten.",why:"否定的推測用 can't have + p.p.；mustn't 是「禁止」的意思。"},
+    {bad:"She must have been at home now.",good:"She must be at home now.",why:"談現在的事不用 have + p.p.；have + p.p. 只用在推測過去。"}
+  ]
 }
 
 

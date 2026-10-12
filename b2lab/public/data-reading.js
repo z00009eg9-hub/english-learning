@@ -1422,6 +1422,144 @@ window.READING = [
      b2Cn:"台北製造的垃圾量大到掩埋場幾乎滿了。",
      spCn:"垃圾多到掩埋場基本上都滿了。"}
   ]
+},
+
+/* ---------------------------------------------------------- 26 */
+{
+  id:"r26", level:"B1", topic:"家庭與童年", words:200,
+  title:"Summers at Grandpa's House",
+  titleCn:"在爺爺家過暑假",
+  focus:"used to / would 與 be used to（過去的習慣 vs. 習慣某件事）",
+  intro:"Anita 回想小時候在爺爺家的暑假，再對照現在的城市生活。注意 used to / would 說「以前常常這樣（現在不了）」，而 be used to + 名詞 / V-ing 說「現在已經習慣了」。",
+  spoken:[
+    {en:"I used to spend every summer at my grandparents' place near Tainan.",cn:"我以前每年暑假都會待在台南附近的爺爺奶奶家。"},
+    {en:"Grandpa would go to the market before six and come back with hot soy milk.",cn:"爺爺六點前就會去市場，回來時帶著熱豆漿。"},
+    {en:"These days I'm used to the noise in Taipei, so the quiet felt weird.",cn:"我現在已經習慣台北的吵雜，所以那種安靜反而很怪。"},
+    {en:"But I used to love that quiet, you know?",cn:"不過我以前其實很愛那種安靜，你知道嗎？"}
+  ],
+  paras:[
+    {en:"When Anita was a child, she spent every summer at her grandparents' house in a small town near Tainan. Life there was very different from her life in the city.",
+     cn:"Anita 小時候，每年暑假都待在台南附近小鎮的爺爺奶奶家。那裡的生活和她在城市的生活很不一樣。"},
+    {en:"Her grandfather used to wake up at five o'clock every morning. He would walk to the market, buy fresh fish, and bring home hot soy milk for everyone. Anita never used to get up so early at home, but in the village she always did.",
+     cn:"她的爺爺以前每天早上五點就起床。他會走去市場，買新鮮的魚，再帶熱豆漿回家給大家喝。Anita 在家從來不會這麼早起，但在鄉下她總是起得來。"},
+    {en:"In the afternoons, the children used to play outside until it got dark. They would catch small fish in the river and ride old bicycles along the rice fields. There were no tablets or video games, and nobody missed them.",
+     cn:"下午，孩子們以前都在外面玩到天黑。他們會在小河裡抓小魚，騎著舊腳踏車穿過稻田。那時沒有平板電腦或電動，也沒有人想念它們。"},
+    {en:"Now Anita is thirty, and she lives in a busy apartment in Taipei. She is used to the noise of the city, and she is used to eating dinner at her desk. But last month she visited her grandparents again, and the quiet felt strange.",
+     cn:"現在 Anita 三十歲，住在台北一間熱鬧的公寓裡。她習慣了城市的吵雜，也習慣坐在書桌前吃晚餐。但上個月她再回去看爺爺奶奶時，那份安靜讓她覺得很陌生。"},
+    {en:"She could not sleep on the first night. Then she remembered something. She used to love that silence! On the second morning she got up early, walked to the market, and bought hot soy milk. Some habits never really disappear.",
+     cn:"第一個晚上她睡不著。接著她想起一件事：她以前明明很愛那份寧靜！第二天早上，她很早起床，走去市場，買了熱豆漿。有些習慣其實永遠不會消失。"}
+  ],
+  target:[
+    {w:"fresh",ipa:"/freʃ/",pos:"adj.",cn:"新鮮的",def:"Recently made, picked or caught; not old.",ex:"The vegetables at this stall are always cheap and fresh.",exCn:"這個攤位的蔬菜總是又便宜又新鮮。"},
+    {w:"river",ipa:"/ˈrɪvɚ/",pos:"n.",cn:"河；河流",def:"A long natural stream of water that flows to the sea.",ex:"We had a picnic by the river last Sunday.",exCn:"我們上週日在河邊野餐。"},
+    {w:"strange",ipa:"/streɪndʒ/",pos:"adj.",cn:"奇怪的；陌生的",def:"Unusual or not familiar in a way that is hard to understand.",ex:"It felt strange to hear my own voice on the recording.",exCn:"聽到錄音裡自己的聲音，感覺很奇怪。"},
+    {w:"silence",ipa:"/ˈsaɪləns/",pos:"n.",cn:"寂靜；沉默",def:"A time when there is no sound at all.",ex:"After the music stopped, a long silence filled the hall.",exCn:"音樂停止後，長長的寂靜充滿了大廳。"},
+    {w:"habit",ipa:"/ˈhæbɪt/",pos:"n.",cn:"習慣",def:"Something you do often, usually without thinking.",ex:"Drinking a glass of water before breakfast is a good habit.",exCn:"早餐前喝一杯水是個好習慣。"},
+    {w:"disappear",ipa:"/ˌdɪsəˈpɪr/",pos:"v.",cn:"消失",def:"To go away so that you cannot be seen any more.",ex:"The stars disappear when the morning sky gets bright.",exCn:"早晨天空變亮時，星星就消失了。"}
+  ],
+  questions:[
+    {q:"What did Anita's grandfather bring home from the market?",
+     opts:["A. Fresh fruit","B. Hot soy milk","C. Rice and eggs","D. A new bicycle"],
+     ans:1,
+     expl:"第二段：He would walk to the market, buy fresh fish, and bring home hot soy milk for everyone。"},
+    {q:"Which sentence means that Anita is comfortable with the city noise now?",
+     opts:["A. She used to live in the city.","B. She is used to the noise of the city.","C. She would hear the noise of the city.","D. She used the noise of the city."],
+     ans:1,
+     expl:"be used to + 名詞表示「已經習慣了」；used to + 原形動詞才是「以前常常（現在不了）」。"},
+    {q:"What did Anita do on the second morning at her grandparents' house?",
+     opts:["A. She caught fish in the river","B. She stayed in bed until noon","C. She went to the market and bought soy milk","D. She went back to Taipei"],
+     ans:2,
+     expl:"最後一段：On the second morning she got up early, walked to the market, and bought hot soy milk。"}
+  ],
+  upgrade:[
+    {b1:"Anita lived in the city, and she liked the noise there.",
+     b2:"Anita is used to the noise of the city.",
+     note:"be used to + 名詞 / V-ing 表示「習慣了某件事」，比 liked 更貼近「久了就自然」的感覺。注意這裡的 to 是介系詞，後面不能接原形動詞。",
+     sp:"I've gotten used to the noise — it doesn't bother me anymore.",
+     spNote:"get / have gotten used to 強調「從不習慣變成習慣」的過程，口語很常用。",
+     b1Cn:"Anita 住在城市裡，而且她喜歡那裡的吵雜。",
+     b2Cn:"Anita 已經習慣了城市的吵雜。",
+     spCn:"我已經習慣那種吵雜了——現在一點也不會被影響。"},
+    {b1:"Every morning her grandfather walked to the market. He did it for many years.",
+     b2:"Her grandfather used to wake up at five and would walk to the market.",
+     note:"used to 說過去的狀態或習慣，would 只能說過去重複的動作；兩個都在說「以前是這樣，現在不了」。",
+     sp:"Back then, Grandpa was always up at five, heading to the market.",
+     spNote:"口語常用 back then 和 was always ...ing 來說「那時候總是……」，不用刻意背 used to。",
+     b1Cn:"每天早上，她的爺爺都走去市場。他這樣做了很多年。",
+     b2Cn:"她的爺爺以前五點就起床，而且會走去市場。",
+     spCn:"那時候爺爺總是五點就起床，往市場走去。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 27 */
+{
+  id:"r27", level:"B1+", topic:"夜市與小生意", words:224,
+  title:"The Dark Stall at the Night Market",
+  titleCn:"夜市裡暗著的攤位",
+  focus:"情態動詞推測（must / might / could / can't + have p.p.）",
+  intro:"Tom 在夜市發現熟悉的攤位沒開，開始猜原因。注意 must / can't 表示很有把握的推測，might / could 表示沒那麼確定；猜過去的事用 must have / might have / can't have + p.p.。",
+  spoken:[
+    {en:"The chicken stall was closed, which is weird. He's always there by six.",cn:"炸雞攤今天沒開，很奇怪，他六點前一定都在。"},
+    {en:"He might have caught a cold. It's been freezing all week.",cn:"他可能感冒了。整個禮拜都冷得要命。"},
+    {en:"It can't have been the license — I just saw a new certificate on the wall.",cn:"不可能是執照的問題——我才剛看到牆上貼了新的證書。"},
+    {en:"Turns out his wife was having a baby. He must have been so excited!",cn:"原來他太太要生了。他一定超興奮的！"}
+  ],
+  paras:[
+    {en:"Last Saturday, Tom went to his favorite night market in Kaohsiung to buy his usual fried chicken. When he arrived, the stall was dark, and the metal door was closed. Around him, the street was busy and full of the smell of grilled food. “That's strange,” he thought. “The owner is always here by six o'clock.”",
+     cn:"上週六，Tom 去了他最愛的高雄夜市，想買平常吃的炸雞。他到的時候，攤位黑漆漆的，鐵門也拉下來了。四周的街道熱鬧擁擠，空氣中滿是烤肉的香味。「好奇怪，」他想。「老闆六點前一定都會在。」"},
+    {en:"Tom stood there and made some guesses. The owner might have caught a cold, because the weather had been freezing all week. Or perhaps there was a family emergency. It couldn't be a holiday, since the other stalls were all open. And it can't have been a problem with the license, because Tom had seen a new certificate on the wall only a week earlier.",
+     cn:"Tom 站在那裡，開始猜原因。老闆可能感冒了，因為整個禮拜天氣都冷得要命。或者也許是家裡出了緊急狀況。不可能是放假，因為其他攤位都有開。也不可能是執照出問題，因為 Tom 才在一個禮拜前看到牆上貼了新的證書。"},
+    {en:"A woman at the next stall noticed him looking worried. “You must be looking for Mr. Lin,” she said. “He's at the hospital with his wife. She's having a baby tonight!” Tom laughed with relief. The owner must have been very excited when he left in such a hurry.",
+     cn:"隔壁攤的一位女士注意到他一臉擔心。「你一定是在找林老闆，」她說。「他和太太在醫院。她今晚要生了！」Tom 鬆了一口氣，笑了出來。老闆匆匆離開時，心情一定非常興奮。"},
+    {en:"Tom bought dinner from another stall, but the chicken wasn't as good. On his way home, he wrote a short note: “Congratulations, Mr. Lin! We'll wait for you.” He stuck it on the closed door, hoping the family would see it on Monday. “Next time,” he thought, “I'll stop guessing and just ask someone.”",
+     cn:"Tom 在別的攤位買了晚餐，但那裡的雞肉沒那麼好吃。回家的路上，他寫了一張短短的字條：「恭喜林老闆！我們等你回來。」他把字條貼在拉下來的鐵門上，希望一家人週一能看到。「下次，」他想，「我不要再亂猜了，直接問人就好。」"}
+  ],
+  target:[
+    {w:"stall",ipa:"/stɑːl/",pos:"n.",cn:"攤位；小攤",def:"A small open shop where goods are sold, often in a market.",ex:"My aunt runs a tea stall near the train station.",exCn:"我阿姨在火車站附近經營一個茶攤。"},
+    {w:"emergency",ipa:"/ɪˈmɝː.dʒən.si/",pos:"n.",cn:"緊急狀況",def:"A serious situation that needs quick action.",ex:"Call this number if you have a medical emergency.",exCn:"如果有醫療上的緊急狀況，請撥這支電話。"},
+    {w:"guess",ipa:"/ɡes/",pos:"v.",cn:"猜測",def:"To give an answer without knowing for sure.",ex:"Can you guess how old my neighbor's dog is?",exCn:"你猜得出我鄰居的狗幾歲嗎？"},
+    {w:"certificate",ipa:"/sɚˈtɪfɪkət/",pos:"n.",cn:"證書；證明",def:"An official paper that shows something is true or allowed.",ex:"She hung her swimming certificate above her desk.",exCn:"她把游泳證書掛在書桌上方。"},
+    {w:"worried",ipa:"/ˈwɝːid/",pos:"adj.",cn:"擔心的",def:"Unhappy because you think something bad may happen.",ex:"Mom was worried when I didn't answer my phone.",exCn:"我沒接電話，媽媽很擔心。"},
+    {w:"relief",ipa:"/rɪˈliːf/",pos:"n.",cn:"鬆一口氣；寬慰",def:"A happy feeling when something bad did not happen.",ex:"It was a relief to find my keys in the car.",exCn:"在車子裡找到鑰匙，讓我鬆了一口氣。"},
+    {w:"hurry",ipa:"/ˈhɝːi/",pos:"n.",cn:"匆忙",def:"A need to do something very quickly.",ex:"The students ran out of the classroom in a hurry.",exCn:"學生們匆匆忙忙跑出教室。"},
+    {w:"congratulations",ipa:"/kənˌɡrætʃəˈleɪʃənz/",pos:"n.",cn:"恭喜",def:"Words you say to show that you are happy about someone's good news.",ex:"Congratulations on your new job at the bank!",exCn:"恭喜你在銀行找到新工作！"}
+  ],
+  questions:[
+    {q:"Why was Tom surprised when he got to the stall?",
+     opts:["A. The chicken was very expensive","B. The stall was dark and closed even though the owner is always there","C. The market was closed on Saturdays","D. There was a long line"],
+     ans:1,
+     expl:"第一段：the stall was dark... The owner is always here by six o'clock。"},
+    {q:"Why does Tom think it can't have been a problem with the license?",
+     opts:["A. The other stalls were closed too","B. The owner told him last week","C. He saw a new certificate on the wall a week earlier","D. He had called the owner"],
+     ans:2,
+     expl:"第二段：it can't have been a problem with the license, because Tom had seen a new certificate on the wall。"},
+    {q:"What does “The owner must have been very excited” show?",
+     opts:["A. A strong guess about the past","B. A rule that the owner must follow","C. A plan for the future","D. A polite request"],
+     ans:0,
+     expl:"must have + p.p. 表示對過去的事「很有把握的推測」，不是「必須」。"},
+    {q:"What did Tom do before he went home?",
+     opts:["A. He waited until the owner came back","B. He called the hospital","C. He wrote a note and stuck it on the closed door","D. He bought the stall"],
+     ans:2,
+     expl:"最後一段：he wrote a short note ... He stuck it on the closed door。"}
+  ],
+  upgrade:[
+    {b1:"Maybe the owner was sick. Maybe he caught a cold.",
+     b2:"The owner might have caught a cold.",
+     note:"might / could + have p.p. 表示「過去可能發生，但不太確定」；把 maybe 的猜測濃縮成一個情態動詞。",
+     sp:"Maybe he came down with something — it's been so cold lately.",
+     spNote:"come down with + 病名是口語說「生病了」的常見講法，聽起來更自然。",
+     b1Cn:"也許老闆生病了。也許他感冒了。",
+     b2Cn:"老闆可能感冒了。",
+     spCn:"也許他染上了什麼病——最近真的好冷。"},
+    {b1:"I am sure it was not a problem with the license, because I saw a new certificate.",
+     b2:"It can't have been a problem with the license; I saw a new certificate.",
+     note:"can't have + p.p. 表示「根據證據，我確定過去不可能是這樣」，語氣比 I am sure ... not 更簡潔有力。",
+     sp:"No way it was the license — I literally just saw the new certificate.",
+     spNote:"No way + 子句是口語說「不可能」的方式，搭配 literally just 強調剛剛才看到。",
+     b1Cn:"我確定不是執照出問題，因為我看到了新的證書。",
+     b2Cn:"不可能是執照出問題；我看到了新的證書。",
+     spCn:"不可能是執照啦——我才剛看到新的證書。"}
+  ]
 }
 
 ];
