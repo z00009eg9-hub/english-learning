@@ -95,10 +95,12 @@ body.home-active .hd-topic{display:none;}
 }
 /* 手機：向上滑時表頭縮成單列（藏 logo/標題/日期，只留切換、連續天數、設定） */
 @media(max-width:560px){
-  header{transition:padding .2s;}
+  header{transition:padding .25s ease;}
+  .hd-brand{max-width:220px;overflow:hidden;opacity:1;white-space:nowrap;transition:max-width .25s ease,opacity .18s ease,gap .25s ease;}
   body.hd-compact header{padding-top:calc(5px + env(safe-area-inset-top));padding-bottom:5px;}
-  body.hd-compact .hd-brand{display:none;}
-  body.hd-compact .hd-right{width:100%;flex-wrap:nowrap;justify-content:space-between;}
+  body.hd-compact .hd-brand{max-width:0;opacity:0;gap:0;pointer-events:none;}
+  body.hd-compact .hd-in{gap:0;}
+  body.hd-compact .hd-right{flex:1;flex-wrap:nowrap;justify-content:space-between;}
   body.hd-compact .hd-gear-wrap{margin-left:auto;}
 }
 /* 手機活動卡的規則在檔案更後面（.act 基礎樣式之後才蓋得過去），見「手機：活動卡」區塊 */
@@ -627,7 +629,9 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
 }
 /* 電腦版（≥1200px）：頁首再壓矮；往下捲動時縮到最小（平板／手機不動） */
 @media(min-width:1200px){
-  header{padding-top:3px;padding-bottom:2px;transition:padding .2s;}
+  header{padding-top:3px;padding-bottom:2px;transition:padding .25s ease;}
+  .hd-logo,.hd-ttl,.hd-streak,.prof-btn,.hd-fs{transition:all .25s ease;}
+  .hd-sub{max-height:1.4em;overflow:hidden;transition:max-height .25s ease,opacity .2s ease,margin .25s ease;}
   .hd-logo{width:auto;height:26px;padding:0 7px;display:flex;align-items:center;white-space:nowrap;font-size:.8rem;letter-spacing:0;}
   .hd-ttl{font-size:1.1rem;}
   .hd-sub{font-size:.7rem;margin-top:0;}
@@ -636,7 +640,7 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
   .hd-fs{padding:3px 9px;}
   .hd-fs .ic{width:1em;height:1em;}
   body.hd-sm header{padding-top:1px;padding-bottom:1px;}
-  body.hd-sm .hd-sub{display:none;}
+  body.hd-sm .hd-sub{max-height:0;opacity:0;}
   body.hd-sm .hd-logo{height:22px;padding:0 6px;font-size:.78rem;}
   body.hd-sm .hd-ttl{font-size:1.05rem;}
   body.hd-sm .hd-streak{padding:2px 10px;}
@@ -9878,15 +9882,18 @@ document.addEventListener('touchend',e=>{
 function setHdh(){const h=document.querySelector('header');
   if(h)document.documentElement.style.setProperty('--hdh',h.offsetHeight+'px');}
 window.addEventListener('resize',()=>{setHdh();vSetPinH();});
-window.addEventListener('scroll',()=>{
-  if(innerWidth>=1200){const sm=document.body.classList.contains('hd-sm');
-    if(!sm&&scrollY>80){document.body.classList.add('hd-sm');setHdh();}
-    else if(sm&&scrollY<20){document.body.classList.remove('hd-sm');setHdh();}}
-  else document.body.classList.remove('hd-sm');
-  if(innerWidth>560){document.body.classList.remove('hd-compact');return;}
-  const y=scrollY,c=document.body.classList.contains('hd-compact');
-  if(!c&&y>90){document.body.classList.add('hd-compact');setHdh();}
-  else if(c&&y<20){document.body.classList.remove('hd-compact');setHdh();}},{passive:true});
+/* 頁首縮放：rAF 節流＋遲滯（>100 縮、<10 放），過渡期間持續更新 --hdh，避免版面跳動 */
+let _hdTick=false;
+function hdTrack(){const t0=performance.now();(function f(){setHdh();if(performance.now()-t0<320)requestAnimationFrame(f);})();}
+function hdScroll(){_hdTick=false;
+  const y=scrollY,B=document.body;
+  const cls=innerWidth>=1200?'hd-sm':(innerWidth<=560?'hd-compact':null);
+  ['hd-sm','hd-compact'].forEach(k=>{if(k!==cls&&B.classList.contains(k)){B.classList.remove(k);hdTrack();}});
+  if(!cls)return;
+  const on=B.classList.contains(cls);
+  if(!on&&y>100){B.classList.add(cls);hdTrack();}
+  else if(on&&y<10){B.classList.remove(cls);hdTrack();}}
+window.addEventListener('scroll',()=>{if(!_hdTick){_hdTick=true;requestAnimationFrame(hdScroll);}},{passive:true});
 
 loadLevel();loadST();initHome();renderStats();setHdh();
 </script>
