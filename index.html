@@ -627,15 +627,21 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
 }
 /* 電腦版（≥1200px）：頁首再壓矮；往下捲動時縮到最小（平板／手機不動） */
 @media(min-width:1200px){
-  header{padding-top:4px;padding-bottom:3px;transition:padding .2s;}
-  .hd-logo{width:auto;height:30px;padding:0 8px;display:flex;align-items:center;white-space:nowrap;font-size:.9rem;letter-spacing:0;}
-  .hd-ttl{font-size:1.25rem;}
-  .hd-sub{font-size:.78rem;margin-top:0;}
-  body.hd-sm header{padding-top:2px;padding-bottom:2px;}
+  header{padding-top:3px;padding-bottom:2px;transition:padding .2s;}
+  .hd-logo{width:auto;height:26px;padding:0 7px;display:flex;align-items:center;white-space:nowrap;font-size:.8rem;letter-spacing:0;}
+  .hd-ttl{font-size:1.1rem;}
+  .hd-sub{font-size:.7rem;margin-top:0;}
+  .hd-streak{padding:3px 11px;font-size:.8rem;}
+  .prof-btn{padding:3px 10px;}
+  .hd-fs{padding:3px 9px;}
+  .hd-fs .ic{width:1em;height:1em;}
+  body.hd-sm header{padding-top:1px;padding-bottom:1px;}
   body.hd-sm .hd-sub{display:none;}
-  body.hd-sm .hd-logo{height:24px;padding:0 6px;font-size:.78rem;}
+  body.hd-sm .hd-logo{height:22px;padding:0 6px;font-size:.78rem;}
   body.hd-sm .hd-ttl{font-size:1.05rem;}
-  body.hd-sm .hd-streak{padding:3px 11px;}
+  body.hd-sm .hd-streak{padding:2px 10px;}
+  body.hd-sm .prof-btn{padding:2px 9px;}
+  body.hd-sm .hd-fs{padding:2px 8px;}
 }
 /* 平板橫式：可用高度少，標題列留白與直式分開 */
 @media(min-width:700px) and (orientation:landscape){
@@ -9755,7 +9761,7 @@ function bumpActToday(cur,pct){
     const dp=ST.dayProg[SESS.day]||(ST.dayProg[SESS.day]={n:0,ts:0,done:false});
     if(dp.done)dp.n=0;   /* 練完後重練：從頭重算 */
     dp.done=false;dp.n++;dp.ts=Date.now();}
-  else if(pct!=null){ if(cur.pct==null){o.sum+=Math.round(pct);o.cnt++;} else if(pct>cur.pct){o.sum+=Math.round(pct)-cur.pct;} }
+  else if(pct!=null&&cur){ if(cur.pct==null){o.sum+=Math.round(pct);o.cnt++;} else if(pct>cur.pct){o.sum+=Math.round(pct)-cur.pct;} }
   saveST(); renderActProg();
 }
 /* 今天有把一輪練完整（看到成績頁）的活動，卡片右上角打勾 */
