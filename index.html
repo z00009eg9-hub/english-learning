@@ -627,13 +627,13 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
 }
 /* 電腦版（≥1200px）：頁首再壓矮；往下捲動時縮到最小（平板／手機不動） */
 @media(min-width:1200px){
-  header{padding-top:7px;padding-bottom:6px;transition:padding .2s;}
-  .hd-logo{width:34px;height:31px;}
-  .hd-ttl{font-size:1.3rem;}
+  header{padding-top:4px;padding-bottom:3px;transition:padding .2s;}
+  .hd-logo{width:auto;height:30px;padding:0 8px;display:flex;align-items:center;white-space:nowrap;font-size:.9rem;letter-spacing:0;}
+  .hd-ttl{font-size:1.25rem;}
   .hd-sub{font-size:.78rem;margin-top:0;}
-  body.hd-sm header{padding-top:3px;padding-bottom:3px;}
+  body.hd-sm header{padding-top:2px;padding-bottom:2px;}
   body.hd-sm .hd-sub{display:none;}
-  body.hd-sm .hd-logo{width:26px;height:24px;font-size:.8rem;}
+  body.hd-sm .hd-logo{height:24px;padding:0 6px;font-size:.78rem;}
   body.hd-sm .hd-ttl{font-size:1.05rem;}
   body.hd-sm .hd-streak{padding:3px 11px;}
 }
