@@ -1365,6 +1365,7 @@ body.cnall [id^="kc"]{display:block!important}
 /* ---------- 課本（照課堂筆記 Doc 版面） ---------- */
 .bkbar{background:#fbe3cc;border:1px solid #f0c9a0;border-radius:10px;text-align:center;font-weight:var(--fw-title);
   font-size:var(--font-section-title);line-height:var(--lh-title);color:#8a4a12;padding:9px 12px;margin:18px 0 12px}
+.bk-en{white-space:nowrap}
 .bkq{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:13px 15px;margin-bottom:12px}
 .bkq .qn{display:flex;align-items:center;gap:8px;font-weight:var(--fw-emph);color:var(--accent2);margin-bottom:6px;font-size:var(--font-body);line-height:var(--lh-body)}
 .bkline{font-size:var(--font-body);line-height:var(--lh-body);margin-bottom:6px;display:flex;gap:7px;align-items:flex-start;flex-wrap:wrap}
@@ -2792,6 +2793,15 @@ nav button{font-size:11px}
    ============================================================ */
 const $ = id => document.getElementById(id);
 const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const bkTitle = t => {
+  t=String(t==null?'':t);
+  if(!/[\u3400-\u9fff]/.test(t)) return esc(t);
+  const m=t.match(/^([IVX]+\.\s*)?([\s\S]*)$/);
+  const re=/[A-Za-z][A-Za-z0-9&'\/\-]*(?: [A-Za-z0-9&'\/\-]+)*/g;
+  let out='',last=0,x,body=m[2];
+  while((x=re.exec(body))){out+=esc(body.slice(last,x.index))+'<span class="bk-en">'+esc(x[0])+'</span>';last=x.index+x[0].length}
+  return esc(m[1]||'')+out+esc(body.slice(last));
+};
 const lvCls = l => l==='B1+'?'B1P':(l==='B2'?'B2':(l==='A2'?'A2':'B1'));
 /* 錯誤示範自動變紅、正確示範自動變綠：
    ✗ / X / ✘ 之後到下一個中文標點或全形括號結束為止，都算「錯的那段」。 */
@@ -7035,7 +7045,7 @@ function bookHTML(b){
    +'</div></div>';
 
   /* ★ 作業複習（原句錯的字反紅、訂正改對的字反綠；沒有作業就整節跳過） */
-  if((b.hw||[]).length) h+='<div class="bkbar" id="bksec-hw">'+esc(b.hwTitle)+'</div>'
+  if((b.hw||[]).length) h+='<div class="bkbar" id="bksec-hw">'+bkTitle(b.hwTitle)+'</div>'
    + (b.hw||[]).map(q=>{
       let x='<div class="bkq"><div class="qn">第 '+q.n+' 題</div>';
       if(q.wrong) x+='<div class="bkline hwbad"><b class="lb wrong">❌ 原句：</b><span>'+bkDiff(q.wrong,q.fix,'wrong')+'</span></div>'
@@ -7048,7 +7058,7 @@ function bookHTML(b){
     }).join('');
 
   /* 單字：主表＋補充單字＋前次已學（有才顯示） */
-  if((b.vocab||[]).length) h+='<div class="bkbar" id="bksec-vocab">'+esc(b.vocabTitle||'I. 單字 Vocabulary')+'</div>'+vtable(b.vocab);
+  if((b.vocab||[]).length) h+='<div class="bkbar" id="bksec-vocab">'+bkTitle(b.vocabTitle||'I. 單字 Vocabulary')+'</div>'+vtable(b.vocab);
   if((b.vocab2||[]).length){
     h+=subh(b.vocab2Title||'補充單字')+vtable(b.vocab2);
   }
@@ -7064,7 +7074,7 @@ function bookHTML(b){
 
   /* 片語與搭配詞（英文解釋在前、中文最後；沒有就整節跳過） */
   if((b.colloc||[]).length||(b.phrases||[]).length)
-    h+='<div class="bkbar">'+esc(b.phrasesTitle||'II. 片語與搭配詞 Phrases & Collocations')+'</div>';
+    h+='<div class="bkbar">'+bkTitle(b.phrasesTitle||'II. 片語與搭配詞 Phrases & Collocations')+'</div>';
   if((b.colloc||[]).length){
     h+='<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
      +'<tr><th>片語</th><th>英文解釋</th><th class="cnx">中文</th></tr>'
@@ -7080,7 +7090,7 @@ function bookHTML(b){
      +(p.ex?exRow({en:p.ex,cn:p.exCn,hi:p.p}):'')+'</div>').join('');
 
   /* 句型與文法解説（沒有就整節跳過） */
-  if((b.grammar||[]).length) h+='<div class="bkbar" id="bksec-gram">'+esc(b.grammarTitle||'III. 句型與文法解説 Sentence Patterns & Grammar')+'</div>'
+  if((b.grammar||[]).length) h+='<div class="bkbar" id="bksec-gram">'+bkTitle(b.grammarTitle||'III. 句型與文法解説 Sentence Patterns & Grammar')+'</div>'
    + (b.grammar||[]).map(g=>{
       let x='<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(g.k)+'. '+esc(g.title)+'</h2>';
       if(g.pat) x+='<div class="bkfml">📌 句型：'+fmlGroups(g.pat)+'</div>';
@@ -7092,7 +7102,7 @@ function bookHTML(b){
 
   /* 比較表＋注意搭配（有才顯示；中文欄最後） */
   if((b.cmp||[]).length){
-    h+='<div class="bkbar">'+esc(b.cmpTitle||'IV. 比較表 Comparison Table')+'</div>'
+    h+='<div class="bkbar">'+bkTitle(b.cmpTitle||'IV. 比較表 Comparison Table')+'</div>'
      +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
      +'<tr><th>用法</th><th>適用場景</th><th>例句</th><th class="cnx">中文</th></tr>'
      + b.cmp.map(c=>'<tr><td class="nw" style="font-weight:700">'+esc(c.u)+(/[a-zA-Z]{2,}/.test(c.u)?'<br>'+spk(c.u):'')+'</td><td>'+esc(c.sc)+'</td>'
@@ -7110,7 +7120,7 @@ function bookHTML(b){
      跟 cmp（用法／場景／例句／中文）不同，這張表用在「A 和 B 差在哪」的逐項比較。 */
   if(b.pair && (b.pair.rows||[]).length){
     const p=b.pair;
-    h+='<div class="bkbar">'+esc(b.pairTitle||'易混淆比較 Compare')+'</div>'
+    h+='<div class="bkbar">'+bkTitle(b.pairTitle||'易混淆比較 Compare')+'</div>'
      +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
      +'<tr><th>比較</th>'
      +'<th>'+esc(p.a)+(p.aCn?'<div class="muted cnx" style="font-weight:400">'+esc(p.aCn)+'</div>':'')+(/[a-zA-Z]{2,}/.test(p.a)?' '+spk(p.a):'')+'</th>'
@@ -7128,7 +7138,7 @@ function bookHTML(b){
   (b.reading||[]).forEach((r,ri)=>{
     const _bart=r.art||'';
     const _bcap=r.artCap||'';
-    h+='<div class="bkbar">'+esc(r.bar)+'</div>'
+    h+='<div class="bkbar">'+bkTitle(r.bar)+'</div>'
      +'<div class="card"><div class="row bkrd-hd" style="justify-content:space-between;align-items:center">'
      +'<h2 class="sec bkattl" style="color:var(--accent2);margin:0;flex:1">'+esc(r.title)+'</h2>'
      +'<span class="row" style="flex-wrap:nowrap;gap:6px">'
@@ -7165,14 +7175,14 @@ function bookHTML(b){
 
   /* 補充例句（0811 型，有才顯示） */
   if((b.extra||[]).length){
-    h+='<div class="bkbar">'+esc(b.extraTitle||'V. 補充例句 Additional Examples')+'</div>'
+    h+='<div class="bkbar">'+bkTitle(b.extraTitle||'V. 補充例句 Additional Examples')+'</div>'
      + b.extra.map(s=>'<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(s.title)+'</h2>'
        + (s.exs||[]).map(exRow).join('')+'</div>').join('');
   }
 
   /* 補充字彙與句型（0813 型，有才顯示；中文欄最後） */
   if((b.extraVocab||[]).length){
-    h+='<div class="bkbar">'+esc(b.extraVocabTitle||'補充字彙與句型 Additional Vocabulary & Expressions')+'</div>'
+    h+='<div class="bkbar">'+bkTitle(b.extraVocabTitle||'補充字彙與句型 Additional Vocabulary & Expressions')+'</div>'
      +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table class="bkxv">'
      +'<tr><th>補充內容</th><th>英文</th><th class="cnx">中文</th></tr>'
      + b.extraVocab.map(x=>{
@@ -7206,7 +7216,7 @@ function bookHTML(b){
         return '<b class="sent" data-t="'+m+'" onclick="saySent(this)">'+m+'</b>'+spk(m);
       });
   }).join('');
-  if((b.summary||[]).length) h+='<div class="bkbar">'+esc(b.summaryTitle||'VI. 快速總結 Quick Summary')+'</div>'
+  if((b.summary||[]).length) h+='<div class="bkbar">'+bkTitle(b.summaryTitle||'VI. 快速總結 Quick Summary')+'</div>'
    +'<div class="card" style="padding:10px">'
    +'<div class="row" style="justify-content:flex-end;margin:2px 2px 6px"><button class="spk" onclick="bkReadAll(this)">▶️ 總結例句連播</button></div>'
    +'<div class="tw" style="margin:0"><table class="bksm">'
