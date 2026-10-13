@@ -625,6 +625,18 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
   #say-card .pc-cn{font-size:2.1rem;}
   #say-card .mic{width:84px;height:84px;font-size:2rem;}
 }
+/* 電腦版（≥1200px）：頁首再壓矮；往下捲動時縮到最小（平板／手機不動） */
+@media(min-width:1200px){
+  header{padding-top:7px;padding-bottom:6px;transition:padding .2s;}
+  .hd-logo{width:34px;height:31px;}
+  .hd-ttl{font-size:1.3rem;}
+  .hd-sub{font-size:.78rem;margin-top:0;}
+  body.hd-sm header{padding-top:3px;padding-bottom:3px;}
+  body.hd-sm .hd-sub{display:none;}
+  body.hd-sm .hd-logo{width:26px;height:24px;font-size:.8rem;}
+  body.hd-sm .hd-ttl{font-size:1.05rem;}
+  body.hd-sm .hd-streak{padding:3px 11px;}
+}
 /* 平板橫式：可用高度少，標題列留白與直式分開 */
 @media(min-width:700px) and (orientation:landscape){
   header{padding-top:calc(26px + env(safe-area-inset-top));padding-bottom:12px;}
@@ -9860,7 +9872,12 @@ document.addEventListener('touchend',e=>{
 function setHdh(){const h=document.querySelector('header');
   if(h)document.documentElement.style.setProperty('--hdh',h.offsetHeight+'px');}
 window.addEventListener('resize',()=>{setHdh();vSetPinH();});
-window.addEventListener('scroll',()=>{if(innerWidth>560){document.body.classList.remove('hd-compact');return;}
+window.addEventListener('scroll',()=>{
+  if(innerWidth>=1200){const sm=document.body.classList.contains('hd-sm');
+    if(!sm&&scrollY>80){document.body.classList.add('hd-sm');setHdh();}
+    else if(sm&&scrollY<20){document.body.classList.remove('hd-sm');setHdh();}}
+  else document.body.classList.remove('hd-sm');
+  if(innerWidth>560){document.body.classList.remove('hd-compact');return;}
   const y=scrollY,c=document.body.classList.contains('hd-compact');
   if(!c&&y>90){document.body.classList.add('hd-compact');setHdh();}
   else if(c&&y<20){document.body.classList.remove('hd-compact');setHdh();}},{passive:true});
