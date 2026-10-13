@@ -3523,6 +3523,17 @@ function hideToast(){ const t=$('toast'); if(t) t.classList.remove('on'); }
 window.showToast=showToast; window.hideToast=hideToast;
 /* 點標頭回到頁面頂端 */
 function toTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
+/* 手機：快速點兩下標題列（非按鈕處）回到頂端；iOS 不一定觸發 dblclick，改用 touchend 間隔判斷 */
+(function(){
+  const h=document.querySelector('header'); if(!h) return;
+  h.style.touchAction='manipulation';
+  let lastT=0;
+  h.addEventListener('touchend',e=>{
+    if(!isMobileNav()||e.target.closest('button,a,.prof,input,select')) return;
+    const n=Date.now();
+    if(n-lastT<350){ lastT=0; toTop(); } else lastT=n;
+  },{passive:true});
+})();
 window.toTop=toTop;
 /* 側欄收合/展開 */
 function togSidebar(){
