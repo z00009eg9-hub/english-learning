@@ -685,6 +685,8 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
 .opt.ok{border-color:var(--good);background:var(--good-l);color:var(--good);font-weight:800;}
 .opt.no{border-color:var(--bad);background:var(--bad-l);color:var(--bad);}
 .opt:disabled{cursor:default;}
+/* 聽力選擇題：電腦版選項壓矮一點（平板／手機維持原樣） */
+@media(min-width:1000px){#ls-opts .opt{padding:5px 13px;line-height:1.35;margin-bottom:5px;}}
 .fill-in{width:100%;padding:13px 15px;border-radius:13px;border:2px solid var(--bdr2);font-size:1.05rem;
   font-family:'Inter';font-weight:600;text-align:center;}
 .fill-in:focus{outline:none;border-color:var(--coral);}
@@ -9037,6 +9039,7 @@ function lsPick(i){
   sessLog(lsI,lsCur.en,cn,ok?100:0);
   logSpeak(ok?100:0);
   $('ls-next').classList.remove('hide');
+  setTimeout(()=>{try{$('ls-next').scrollIntoView({behavior:'smooth',block:'nearest'});}catch(e){}},60);
   speak(lsCur.en,0.9);}
 function lsPlay(r){speak(lsCur.en,r);}
 /* 聽寫智慧比對：標點大小寫本來就不計較（norm 已處理）；再把「只差 1~2 個字母」
@@ -9070,6 +9073,7 @@ function lsCheck(){const inp=$('ls-input');const v=inp.value.trim();if(!v){lsPla
     +(typos?'<div class="pc-sub" style="margin-top:6px">🟡 黃底線＝只是拼字手滑（算你聽對了）；刪除線＝真的漏聽的字</div>':'')
     +((lsCur.cn||cnFor(lsCur.en))?'<div class="pc-sub" style="margin-top:6px">'+esc(lsCur.cn||cnFor(lsCur.en))+'</div>':'');
   $('ls-check').classList.add('hide');$('ls-next').classList.remove('hide');
+  setTimeout(()=>{try{$('ls-next').scrollIntoView({behavior:'smooth',block:'nearest'});}catch(e){}},60);
   sessLog(lsI,lsCur.en,lsCur.cn||cnFor(lsCur.en),r.pct);
   logSpeak(r.pct);   /* 這張聽寫卡片完整核對完，就計入統計 */
   speak(lsCur.en,0.9);}
