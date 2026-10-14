@@ -7510,6 +7510,8 @@ const SLOW_RATE=0.5;
 /* 發音修正字典：合成語音會念錯的字，統一在這裡改寫成念得對的拼法。
    （2026-08-16 使用者回報 mindset 念錯）只影響 TTS 唸出來的音，畫面上的字不變。 */
 const TTS_FIX=[
+  [/\bSOPs\b/g,'ess oh pees'],
+  [/\bSOP\b/g,'ess oh pee'],
   [/\bmindset\b/gi,'mind-set'],
   [/\bmindsets\b/gi,'mind-sets'],
   [/\baccessories\b/gi,'ucksessories'],
