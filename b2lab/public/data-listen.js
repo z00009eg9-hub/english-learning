@@ -14,6 +14,903 @@ window.LISTEN = {
 
 /* ========== 依課堂筆記自製（每週三更新） ========== */
 notes:[
+/* ---------- 2026-10-14 金錢與居住主題（四個程度） ---------- */
+{
+  "id": "dl20261014a2",
+  "date": "2026-10-14",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "The Truck Comes at Nine",
+  "titleCn": "貨車九點來",
+  "series": "本站自製聽力 · 金錢與居住主題",
+  "topic": "📦 午休時聊星期六搬家的事",
+  "focus": "用現在進行式講已經排定的未來（I am moving、I am packing），用現在簡單式講照班表的時間（the truck comes、you start work），will 留給當場才決定的事",
+  "intro": "Tom在辦公室跟同事Lisa聊他星期六要搬家的事。請注意Tom講自己行程時都用 be 加 V-ing：am packing、am moving、am painting；講貨車和Lisa的班表時卻換成現在簡單式：comes、start。最後Lisa說 I will bring lunch，那是她聽完才決定的，所以用 will。",
+  "tip": "第一次聽只抓三個數字（貨車幾點來、新房間在幾樓、房租多少）；第二次聽專心分辨哪些句子是 be 加 V-ing、哪些是現在簡單式，並想一想為什麼要換形狀。",
+  "pre": [
+    {
+      "w": "move",
+      "ipa": "/muːv/",
+      "pos": "v.",
+      "cn": "搬；移動",
+      "def": "To go to live in a different place."
+    },
+    {
+      "w": "box",
+      "ipa": "/bɑːks/",
+      "pos": "n.",
+      "cn": "箱子",
+      "def": "A container with four sides, often made of paper."
+    },
+    {
+      "w": "floor",
+      "ipa": "/flɔːr/",
+      "pos": "n.",
+      "cn": "樓層；地板",
+      "def": "One level of a building."
+    },
+    {
+      "w": "rent",
+      "ipa": "/rent/",
+      "pos": "n.",
+      "cn": "房租",
+      "def": "The money you pay every month to live in a place."
+    },
+    {
+      "w": "cheap",
+      "ipa": "/tʃiːp/",
+      "pos": "adj.",
+      "cn": "便宜的",
+      "def": "Not costing a lot of money."
+    },
+    {
+      "w": "quiet",
+      "ipa": "/ˈkwaɪət/",
+      "pos": "adj.",
+      "cn": "安靜的",
+      "def": "With little or no sound."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "You look busy. What are you doing tonight?",
+      "cn": "你看起來很忙，今天晚上要做什麼？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I am packing. I am moving on Saturday.",
+      "cn": "我在打包。我星期六要搬家。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Saturday? That is very soon.",
+      "cn": "星期六？那很快啊。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I know. The truck comes at nine in the morning.",
+      "cn": "我知道。貨車早上九點來。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Nine is early. How many boxes?",
+      "cn": "九點很早。幾個箱子？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Six now. Maybe eight on Friday night.",
+      "cn": "現在六個，星期五晚上可能變八個。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Where is the new place?",
+      "cn": "新的地方在哪裡？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Near the park. It is on the fourth floor, and it is very quiet.",
+      "cn": "公園附近。在四樓，而且很安靜。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Fourth floor? Is there a lift?",
+      "cn": "四樓？有電梯嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes, there is a lift. Don't worry.",
+      "cn": "有電梯，別擔心。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Good. Is the rent high?",
+      "cn": "那就好。房租貴嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Nine thousand a month. My old room was eleven thousand.",
+      "cn": "一個月九千。我舊的房間是一萬一。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "That is cheap. I can help you on Saturday.",
+      "cn": "那很便宜。我星期六可以幫你。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Thank you, but you start work at seven on Saturday.",
+      "cn": "謝謝，可是你星期六七點就要上班。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Oh, that is true. Then I will bring lunch on Sunday.",
+      "cn": "對喔，那我星期日帶午餐過去。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Perfect. I am painting the shelf on Sunday anyway.",
+      "cn": "太好了，我星期日本來就要漆架子。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What time does the truck come?",
+      "qCn": "貨車幾點來？",
+      "opts": [
+        "A. At seven",
+        "B. At eight",
+        "C. At nine",
+        "D. At ten"
+      ],
+      "optsCn": [
+        "A. 七點",
+        "B. 八點",
+        "C. 九點",
+        "D. 十點"
+      ],
+      "ans": 2,
+      "expl": "The truck comes at nine in the morning.——Tom第二次講話就說了，而且用現在簡單式，因為那是搬家公司排的班。"
+    },
+    {
+      "q": "How much is the new room each month?",
+      "qCn": "新房間一個月多少錢？",
+      "opts": [
+        "A. Six thousand",
+        "B. Eight thousand",
+        "C. Nine thousand",
+        "D. Eleven thousand"
+      ],
+      "optsCn": [
+        "A. 六千",
+        "B. 八千",
+        "C. 九千",
+        "D. 一萬一"
+      ],
+      "ans": 2,
+      "expl": "Nine thousand a month. My old room was eleven thousand.——一萬一是舊房間的價錢，不要選錯。"
+    },
+    {
+      "q": "Why can Lisa not help on Saturday?",
+      "qCn": "Lisa星期六為什麼不能幫忙？",
+      "opts": [
+        "A. She is painting a shelf",
+        "B. She starts work at seven",
+        "C. She is moving too",
+        "D. She is going to the park"
+      ],
+      "optsCn": [
+        "A. 她要漆架子",
+        "B. 她七點要上班",
+        "C. 她也要搬家",
+        "D. 她要去公園"
+      ],
+      "ans": 1,
+      "expl": "but you start work at seven on Saturday——Tom自己點出來的，所以Lisa改成星期日。"
+    },
+    {
+      "q": "Lisa says she ___ lunch on Sunday. She decides it while she is talking.",
+      "qCn": "Lisa說她星期日會帶午餐來，這是她講話當下才決定的。",
+      "opts": [
+        "A. is bringing",
+        "B. will bring",
+        "C. brings",
+        "D. brought"
+      ],
+      "ans": 1,
+      "expl": "她聽完Tom的話才想到這個辦法，決定是當場做的，所以用 will bring。is bringing 會變成她早就安排好了。"
+    }
+  ]
+},
+{
+  "id": "dl20261014b1",
+  "date": "2026-10-14",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Four Lines From the Landlord",
+  "titleCn": "房東那四行字",
+  "series": "本站自製聽力 · 金錢與居住主題",
+  "topic": "🍚 工廠餐廳裡聊漲租與那份長合約",
+  "focus": "合約與薪資表上的固定時間用現在簡單式（goes up、ends、arrives），自己約好的事用現在進行式（am meeting），當場的提議用 will",
+  "intro": "Anita跟越南同事Mai在工廠餐廳吃午餐，聊房東傳來的漲租通知。請注意三種未來式怎麼分工：goes up、ends、arrives 是寫在合約和薪資表上的；am meeting 是她自己約的；最後Mai說 I will read it for you，那是她當場的提議。",
+  "tip": "第一次聽抓四個具體資訊（漲到多少、租約哪天到期、星期幾幾點見房東、薪水幾號進帳）；第二次聽注意Anita每次換時態的原因，特別是她為什麼不說 I will meet him。",
+  "pre": [
+    {
+      "w": "landlord",
+      "ipa": "/ˈlændˌlɔːrd/",
+      "pos": "n.",
+      "cn": "房東",
+      "def": "A person who owns a place and lets others live in it for money."
+    },
+    {
+      "w": "contract",
+      "ipa": "/ˈkɑːn.trækt/",
+      "pos": "n.",
+      "cn": "合約",
+      "def": "A written agreement that both sides must follow."
+    },
+    {
+      "w": "salary",
+      "ipa": "/ˈsæləri/",
+      "pos": "n.",
+      "cn": "薪水",
+      "def": "The money you are paid for your job every month."
+    },
+    {
+      "w": "budget",
+      "ipa": "/ˈbʌdʒɪt/",
+      "pos": "n.",
+      "cn": "預算",
+      "def": "A plan for how much money you can spend."
+    },
+    {
+      "w": "afford",
+      "ipa": "/əˈfɔːrd/",
+      "pos": "v.",
+      "cn": "付得起",
+      "def": "To have enough money to pay for something."
+    },
+    {
+      "w": "deposit",
+      "ipa": "/dɪˈpɑːzɪt/",
+      "pos": "n.",
+      "cn": "押金",
+      "def": "Money you pay first and get back later if nothing is damaged."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "You have been staring at your phone all lunchtime. Bad news?",
+      "cn": "你整個午休都在看手機，壞消息嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "My landlord. The rent goes up in January.",
+      "cn": "房東。房租一月要漲。"
+    },
+    {
+      "sp": "Mai",
+      "en": "By how much?",
+      "cn": "漲多少？"
+    },
+    {
+      "sp": "Anita",
+      "en": "From eight million to nine. He sent four lines and nothing else.",
+      "cn": "從八百萬漲到九百萬。他就傳了四行字，別的什麼都沒說。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Mine went up last year. I argued for a week and got nothing.",
+      "cn": "我的去年也漲過。我吵了一個星期，什麼都沒爭到。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I am not arguing. I am meeting him on Thursday at seven.",
+      "cn": "我不吵。我星期四七點要跟他見面。"
+    },
+    {
+      "sp": "Mai",
+      "en": "To ask for a lower price?",
+      "cn": "去要求降價？"
+    },
+    {
+      "sp": "Anita",
+      "en": "No. To ask for a longer contract — two years instead of one.",
+      "cn": "不是，是要求一份更長的合約，兩年而不是一年。"
+    },
+    {
+      "sp": "Mai",
+      "en": "That is smarter. Then he cannot raise it again next January.",
+      "cn": "那聰明多了，這樣他明年一月就不能再漲。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Exactly. My lease ends on the thirty-first of December, so I still have time.",
+      "cn": "就是這樣。我的租約十二月三十一日到期，所以還有時間。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Will you look at other places as well?",
+      "cn": "你也會去看別的地方嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Maybe. But any new place needs a new deposit, and I can afford nine million — only just.",
+      "cn": "可能吧。但任何新的地方都要再付一次押金，而九百萬我付得起，只是剛剛好。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So moving is not really cheaper.",
+      "cn": "所以搬家其實沒有比較便宜。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Not for me. The budget works either way, but one way costs me a weekend.",
+      "cn": "對我來說沒有。兩種方式預算都過得去，但其中一種要花掉我一個週末。"
+    },
+    {
+      "sp": "Anita",
+      "en": "On the salary side, my salary arrives on the fifth. From November a part of it goes straight into savings.",
+      "cn": "薪水那邊，我的薪水五號進帳。從十一月開始，一部分會直接進存款。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Before you can spend it.",
+      "cn": "在你花掉之前。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Before I even see it. That is the whole point.",
+      "cn": "在我看到之前就走了，這就是重點。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Send me the contract on Thursday night. I will read it for you.",
+      "cn": "星期四晚上把合約傳給我，我幫你看。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How much will the rent be from January?",
+      "qCn": "一月開始房租是多少？",
+      "opts": [
+        "A. Eight million",
+        "B. Nine million",
+        "C. Ten million",
+        "D. Eleven million"
+      ],
+      "optsCn": [
+        "A. 八百萬",
+        "B. 九百萬",
+        "C. 一千萬",
+        "D. 一千一百萬"
+      ],
+      "ans": 1,
+      "expl": "From eight million to nine.——八百萬是現在的價錢，九百萬才是一月以後的。"
+    },
+    {
+      "q": "What does Anita want to ask the landlord for?",
+      "qCn": "Anita想跟房東要求什麼？",
+      "opts": [
+        "A. A lower price",
+        "B. A longer contract",
+        "C. A smaller deposit",
+        "D. A different flat"
+      ],
+      "optsCn": [
+        "A. 降價",
+        "B. 更長的合約",
+        "C. 比較少的押金",
+        "D. 換一間房子"
+      ],
+      "ans": 1,
+      "expl": "To ask for a longer contract — two years instead of one.——她明確說不是去談價錢。"
+    },
+    {
+      "q": "When does Anita's lease end?",
+      "qCn": "Anita的租約什麼時候到期？",
+      "opts": [
+        "A. On the fifth of November",
+        "B. On the thirty-first of December",
+        "C. In January",
+        "D. In two years"
+      ],
+      "optsCn": [
+        "A. 十一月五日",
+        "B. 十二月三十一日",
+        "C. 一月",
+        "D. 兩年後"
+      ],
+      "ans": 1,
+      "expl": "My lease ends on the thirty-first of December——合約上的日期，所以她用現在簡單式講。"
+    },
+    {
+      "q": "Which sentence shows that the meeting has already been arranged?",
+      "qCn": "哪一句顯示那場會面已經約好了？",
+      "opts": [
+        "A. I will meet him on Thursday.",
+        "B. I am meeting him on Thursday at seven.",
+        "C. I meet him on Thursdays.",
+        "D. I met him on Thursday."
+      ],
+      "optsCn": [
+        "A. 我星期四會跟他見面。",
+        "B. 我星期四七點要跟他見面。",
+        "C. 我每個星期四都跟他見面。",
+        "D. 我星期四跟他見過面。"
+      ],
+      "ans": 1,
+      "expl": "現在進行式加上具體時間就是「已經約定」的標準寫法。A聽起來像當下才決定，C是每週的慣例，D是過去。"
+    }
+  ]
+},
+{
+  "id": "dl20261014b1p",
+  "date": "2026-10-14",
+  "level": "B1+",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Six Percent of What?",
+  "titleCn": "百分之六是從哪裡算的？",
+  "series": "本站自製聽力 · 金錢與居住主題",
+  "topic": "📰 下班前聊昨天那場退休金抗議",
+  "focus": "被動語態（has not been raised、have been filed、are not finished、are going to be dropped）加上 going to 講「照跡象看就要發生」",
+  "intro": "Tom看到立法院外的抗議畫面，向Anita問起那個百分之六是什麼意思。請注意Anita講制度時大量使用被動語態，因為重點是「那個數字有沒有被動過」而不是誰動的；講法案的結局時她用 are going to be dropped，因為證據（只過一讀）已經擺在對話裡了。",
+  "tip": "第一次聽抓三個數字（法定下限幾趴、去年平均幾趴、幾個修正案）；第二次聽數一數被動語態出現幾次，並注意 going to 和 will 各出現在什麼位置。",
+  "pre": [
+    {
+      "w": "pension",
+      "ipa": "/ˈpen.ʃən/",
+      "pos": "n.",
+      "cn": "退休金",
+      "def": "Regular money paid to someone after they stop working."
+    },
+    {
+      "w": "contribution",
+      "ipa": "/ˌkɑːntrɪˈbjuːʃn/",
+      "pos": "n.",
+      "cn": "提撥（款）",
+      "def": "An amount of money that someone pays into a fund."
+    },
+    {
+      "w": "retirement",
+      "ipa": "/rɪˈtaɪr.mənt/",
+      "pos": "n.",
+      "cn": "退休",
+      "def": "The time of life after you stop working."
+    },
+    {
+      "w": "mandatory",
+      "ipa": "/ˈmæn.dəˌtɔːr.i/",
+      "pos": "adj.",
+      "cn": "強制的；法定的",
+      "def": "Required by a rule or a law, not a free choice."
+    },
+    {
+      "w": "wage",
+      "ipa": "/weɪdʒ/",
+      "pos": "n.",
+      "cn": "工資",
+      "def": "Money paid to a worker, often by the month."
+    },
+    {
+      "w": "union",
+      "ipa": "/ˈjuː.njən/",
+      "pos": "n.",
+      "cn": "工會",
+      "def": "An organization of workers that speaks for them together."
+    },
+    {
+      "w": "employer",
+      "ipa": "/ɪmˈplɔɪɚ/",
+      "pos": "n.",
+      "cn": "雇主",
+      "def": "A person or company that pays people to work."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Tom",
+      "en": "Did you see the protest outside the Legislative Yuan yesterday?",
+      "cn": "你有看到昨天立法院外面那場抗議嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The pension one? My cousin was there with her union.",
+      "cn": "退休金那場嗎？我表姊跟她的工會一起去的。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I could not read the signs. Six percent of what?",
+      "cn": "我看不懂那些標語。百分之六是從哪裡算的？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Of your monthly wage. That is what your employer has to put into your retirement account.",
+      "cn": "你月薪的百分之六。那是你的雇主必須存進你退休金帳戶的金額。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Only six percent? That sounds low.",
+      "cn": "只有百分之六？聽起來很少。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Six is the floor — the mandatory contribution — and it has not been raised since 2005.",
+      "cn": "六是下限，也就是法定提撥率，而且從2005年到現在沒被調高過。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Twenty-one years with the same number.",
+      "cn": "二十一年都是同一個數字。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Exactly. And last year the average across all employers was 6.04 percent.",
+      "cn": "沒錯。而去年所有雇主的平均是百分之6.04。"
+    },
+    {
+      "sp": "Tom",
+      "en": "So almost nobody pays above the minimum.",
+      "cn": "所以幾乎沒人提撥超過下限。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Almost nobody. That is why the unions want twelve percent written into the law.",
+      "cn": "幾乎沒有。所以工會要求把百分之十二寫進法律。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Is that going to happen?",
+      "cn": "那有可能成真嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Not quickly. Seventeen amendments have been filed, and not one of them has passed a second reading.",
+      "cn": "不會很快。已經送進十七個修正案，但沒有一個通過二讀。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And if the session runs out?",
+      "cn": "如果會期跑完了呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "If they are not finished before January 2028, they are all going to be dropped.",
+      "cn": "如果2028年1月之前沒審完，它們全部都會被作廢。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And then somebody files them again from the beginning.",
+      "cn": "然後又有人從頭再送一次。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Probably. The ministry says it is still collecting opinions.",
+      "cn": "大概吧。勞動部說還在收集意見。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That sentence is going to appear in the news every single year.",
+      "cn": "那句話每一年都會在新聞裡出現。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It already does. Check your own account on Friday and you will see the same six percent.",
+      "cn": "已經在出現了。你星期五去查自己的帳戶，看到的還是那個百分之六。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I am opening mine properly this weekend. I have never even looked at it.",
+      "cn": "我這個週末要好好打開來看。我連看都沒看過。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What has not changed since 2005?",
+      "qCn": "從2005年到現在沒有改變的是什麼？",
+      "opts": [
+        "A. The average monthly wage",
+        "B. The mandatory contribution floor of six percent",
+        "C. The number of labor unions",
+        "D. The retirement age"
+      ],
+      "optsCn": [
+        "A. 平均月薪",
+        "B. 百分之六的法定提撥下限",
+        "C. 工會的數量",
+        "D. 退休年齡"
+      ],
+      "ans": 1,
+      "expl": "Six is the floor — the mandatory contribution — and it has not been raised since 2005.——Anita用現在完成式的被動講「到現在都沒被調過」。"
+    },
+    {
+      "q": "What was the average employer rate last year?",
+      "qCn": "去年雇主的平均提撥率是多少？",
+      "opts": [
+        "A. 6.00 percent",
+        "B. 6.04 percent",
+        "C. 8 percent",
+        "D. 12 percent"
+      ],
+      "optsCn": [
+        "A. 百分之6.00",
+        "B. 百分之6.04",
+        "C. 百分之八",
+        "D. 百分之十二"
+      ],
+      "ans": 1,
+      "expl": "last year the average across all employers was 6.04 percent——百分之十二是工會的訴求，不是現況。"
+    },
+    {
+      "q": "How many amendments have been filed?",
+      "qCn": "目前送進了幾個修正案？",
+      "opts": [
+        "A. Six",
+        "B. Twelve",
+        "C. Seventeen",
+        "D. Twenty-one"
+      ],
+      "optsCn": [
+        "A. 六個",
+        "B. 十二個",
+        "C. 十七個",
+        "D. 二十一個"
+      ],
+      "ans": 2,
+      "expl": "Seventeen amendments have been filed——二十一是年數，十二是工會要求的比率，不要混在一起。"
+    },
+    {
+      "q": "Which sentence is a prediction based on evidence already given in the conversation?",
+      "qCn": "哪一句是根據對話裡已經給出的證據所做的預測？",
+      "opts": [
+        "A. I am opening mine properly this weekend.",
+        "B. If they are not finished before January 2028, they are all going to be dropped.",
+        "C. My cousin was there with her union.",
+        "D. Check your own account on Friday."
+      ],
+      "optsCn": [
+        "A. 我這個週末要好好打開來看。",
+        "B. 如果2028年1月之前沒審完，它們全部都會被作廢。",
+        "C. 我表姊跟她的工會一起去的。",
+        "D. 你星期五去查自己的帳戶。"
+      ],
+      "ans": 1,
+      "expl": "前面已經說「沒有一個通過二讀」，那就是證據，所以結論用 going to。A是她自己的安排，C是過去的事，D是建議。"
+    }
+  ]
+},
+{
+  "id": "dl20261014b2",
+  "date": "2026-10-14",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Bored Rather Than Surprised",
+  "titleCn": "寧可無聊，也不要被嚇到",
+  "series": "本站自製聽力 · 金錢與居住主題",
+  "topic": "🚌 下班路上交換房租與通勤的取捨",
+  "focus": "was going to 講斷掉的打算、going to 講有根據的預測、現在進行式講已定案的安排，will 留給假設之後的回應",
+  "intro": "Anita跟Mai在下班路上交換意見：到底是房租便宜重要，還是通勤時間重要。請注意Anita一開始說 I was going to，那是「本來打算、後來沒做」；講房租趨勢時她用 are going to，因為證據是眼前的新廠；講自己的決定時她用 am signing 和 am going to run，語氣都是「已經定了」。",
+  "tip": "第一次聽抓三個數字（通勤多遠、一週多少小時、Mai多付幾成房租）；第二次聽專心分辨 was going to、are going to、am signing、will 四種形狀各出現在哪裡，以及為什麼不能互換。",
+  "pre": [
+    {
+      "w": "savings",
+      "ipa": "/ˈseɪ.vɪŋz/",
+      "pos": "n.",
+      "cn": "存款",
+      "def": "Money you have kept instead of spending it."
+    },
+    {
+      "w": "lease",
+      "ipa": "/liːs/",
+      "pos": "n.",
+      "cn": "租約",
+      "def": "A legal agreement that lets you use a place for a set time."
+    },
+    {
+      "w": "trade-off",
+      "ipa": "/ˈtreɪd ɑːf/",
+      "pos": "n.",
+      "cn": "取捨",
+      "def": "A situation where you accept something worse to get something better."
+    },
+    {
+      "w": "inflation",
+      "ipa": "/ɪnˈfleɪʃn/",
+      "pos": "n.",
+      "cn": "通貨膨脹",
+      "def": "A general rise in prices over time."
+    },
+    {
+      "w": "cushion",
+      "ipa": "/ˈkʊʃ.ən/",
+      "pos": "n.",
+      "cn": "緩衝（金）",
+      "def": "An amount of money kept to protect you from a sudden problem."
+    },
+    {
+      "w": "commute",
+      "ipa": "/kəˈmjuːt/",
+      "pos": "n.",
+      "cn": "通勤（路程）",
+      "def": "The regular journey between home and work."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "So you signed? For another year?",
+      "cn": "所以你簽了？又一年？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I am signing the lease on Saturday. Two years, actually.",
+      "cn": "我星期六要簽租約，而且是兩年。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Two? I thought you were going to move somewhere cheaper.",
+      "cn": "兩年？我以為你本來要搬到便宜一點的地方。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I was going to. Then I actually measured the cheaper option.",
+      "cn": "我本來是要搬。後來我真的去算了便宜那個選項。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Measured it how?",
+      "cn": "怎麼算？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Forty minutes further out each way. That is almost seven hours of commute a week.",
+      "cn": "單趟多四十分鐘。那差不多是一週七個小時的通勤。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Seven hours is a part-time job.",
+      "cn": "七小時是一份兼差了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It is. And the savings came to about a tenth of what I pay now.",
+      "cn": "就是這樣。而省下來的錢大概只有我現在房租的十分之一。"
+    },
+    {
+      "sp": "Mai",
+      "en": "My place is eight minutes from the gate, and I pay thirty percent more than you.",
+      "cn": "我住的地方離廠門八分鐘，但我付的房租比你多三成。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Which is the same trade-off, just seen from the other end.",
+      "cn": "那是同一個取捨，只是從另一頭看過來。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Do you think rents are going to keep climbing here? With inflation like this?",
+      "cn": "你覺得這裡的房租會一直漲嗎？通膨又這麼高。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Look at the three new factories on that road. Yes, they are.",
+      "cn": "你看那條路上三間新廠。會的。"
+    },
+    {
+      "sp": "Mai",
+      "en": "That is not very comforting.",
+      "cn": "聽起來不太安慰人。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It is not meant to be. It is why a fixed amount now leaves my account on payday.",
+      "cn": "本來就不是要安慰人。這就是為什麼現在發薪日一到就有一筆固定金額離開我的帳戶。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Automatically? You do not touch it?",
+      "cn": "自動的嗎？你不碰它？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I never get the chance. I want a real cushion before the next notice arrives.",
+      "cn": "我根本沒機會碰。我想在下一張通知來之前存出真正的緩衝金。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And you are checking the numbers again when?",
+      "cn": "那你什麼時候會再核一次數字？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I am going to run them again in April. That was decided the night I opened the file.",
+      "cn": "我四月會再跑一次。這是我打開那個檔案那天晚上就決定的。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And if the rent moves anyway?",
+      "cn": "那如果房租還是漲了呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Then I will look again. But I would rather be bored than surprised.",
+      "cn": "那我就再找一次。不過我寧可無聊，也不要被嚇到。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Anita decide not to move to the cheaper place?",
+      "qCn": "Anita為什麼決定不搬到便宜一點的地方？",
+      "opts": [
+        "A. The landlord refused to let her go",
+        "B. The extra commute would cost her almost seven hours a week",
+        "C. The deposit was too high",
+        "D. Mai asked her to stay nearby"
+      ],
+      "optsCn": [
+        "A. 房東不讓她走",
+        "B. 多出來的通勤一週要花掉她快七個小時",
+        "C. 押金太高",
+        "D. Mai要她留在附近"
+      ],
+      "ans": 1,
+      "expl": "That is almost seven hours of commute a week.——她算完才改變主意，而且省下的錢只有房租的十分之一。"
+    },
+    {
+      "q": "How much more rent does Mai pay for living close to the factory?",
+      "qCn": "Mai為了住得離工廠近，房租多付多少？",
+      "opts": [
+        "A. Ten percent more",
+        "B. Twenty percent more",
+        "C. Thirty percent more",
+        "D. Forty percent more"
+      ],
+      "optsCn": [
+        "A. 多一成",
+        "B. 多兩成",
+        "C. 多三成",
+        "D. 多四成"
+      ],
+      "ans": 2,
+      "expl": "I pay thirty percent more than you——八分鐘是距離，三成才是價差。"
+    },
+    {
+      "q": "Why does Anita think rents will keep rising?",
+      "qCn": "Anita為什麼認為房租會繼續漲？",
+      "opts": [
+        "A. Her landlord told her so",
+        "B. Three new factories are opening on that road",
+        "C. The bus fares went up",
+        "D. Her salary is rising too"
+      ],
+      "optsCn": [
+        "A. 房東跟她說的",
+        "B. 那條路上有三間新廠",
+        "C. 公車票價漲了",
+        "D. 她的薪水也在漲"
+      ],
+      "ans": 1,
+      "expl": "Look at the three new factories on that road. Yes, they are.——證據就在眼前，所以她用 going to 而不是 will。"
+    },
+    {
+      "q": "Anita says she ___ the numbers again in April. The decision was made weeks earlier.",
+      "qCn": "Anita說她四月會再核一次數字，而這個決定是幾週前就做好的。",
+      "opts": [
+        "A. will run",
+        "B. is going to run",
+        "C. runs",
+        "D. ran"
+      ],
+      "ans": 1,
+      "expl": "That was decided the night I opened the file.——決定在說話之前就存在，所以用 am going to run；will 會變成當場才想到。"
+    }
+  ]
+},
 /* ---------- 2026-10-09 職場與面試主題（四個程度） ---------- */
 {
   "id": "dl20261009a2",

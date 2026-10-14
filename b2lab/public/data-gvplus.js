@@ -32,6 +32,704 @@
    ⚠ 文字欄位一律寫純文字，不要寫 HTML 標籤（渲染時會被轉義顯示出來）。
    ============================================================ */
 window.GVPLUS = {
+/* ---------- 2026-10-14 每日文法（用現在式講未來；going to） ---------- */
+"dg20261014a2": {
+  "vis": true,
+  "oneLine": "日子已經訂好的事，英文不先伸手拿 will——直接用 be 加 V-ing，像把行事曆念出來一樣。",
+  "map": {
+    "when": "講一件已經跟人約好、或印在時刻表上的未來事情時",
+    "why": "中文的「要」和「會」一個字兼三種意思，英文用三種動詞形狀把「定了／照表走／我猜的」分開",
+    "form": "主詞 + am／is／are + V-ing + 未來的時間詞　|　時刻表用現在簡單式"
+  },
+  "visual": {
+    "type": "chain",
+    "cap": "這條鏈子把「已排定的未來」拆成四塊：先是誰，再是跟著主詞變化的 be 動詞，然後是掛上 -ing 的動詞，最後那塊未來的時間詞最關鍵——少了它，同一句話就會被讀成「此刻正在做」。下面三個變形是同一條鏈換成否定、問句，以及改走時刻表那條路的寫法。",
+    "links": [
+      {
+        "t": "She",
+        "c": "主詞",
+        "role": "subj"
+      },
+      {
+        "t": "is",
+        "c": "跟主詞變化",
+        "role": "glue"
+      },
+      {
+        "t": "starting",
+        "c": "動詞掛 -ing",
+        "role": "verb"
+      },
+      {
+        "t": "on Monday",
+        "c": "未來的時間詞",
+        "role": "obj"
+      }
+    ],
+    "eg": {
+      "en": "She is starting her new job on Monday.",
+      "cn": "她星期一要開始新工作。"
+    },
+    "variants": [
+      {
+        "k": "否定",
+        "en": "I am not working on Sunday.",
+        "cn": "我星期日不上班。（not 放在 be 動詞後面）"
+      },
+      {
+        "k": "問句",
+        "en": "Are they leaving on the early bus?",
+        "cn": "他們要搭早班車走嗎？（be 動詞提到最前面）"
+      },
+      {
+        "k": "時刻表",
+        "en": "The early bus leaves at six fifteen.",
+        "cn": "早班車六點十五分開。（表上的時間，換成現在簡單式）"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "diary",
+      "icon": "calendar",
+      "title": "行事曆上有了",
+      "titleCn": "約好的事",
+      "ask": "怎麼說「我星期四要去剪頭髮」？",
+      "en": "I am getting a haircut on Thursday.",
+      "cn": "我星期四要去剪頭髮。",
+      "why": "電話打了、時間講好了，這件事已經躺在行事曆上，所以用 be 加 V-ing。如果換成 will，對方會以為你只是「哪天想去剪」，還沒約。這也是為什麼別人問你有空嗎，最自然的回答就是直接把行事曆念出來。"
+    },
+    {
+      "key": "who",
+      "icon": "person",
+      "title": "兩個人講好的",
+      "titleCn": "有對象的約定",
+      "ask": "為什麼回答約會時間不用 will？",
+      "en": "We are meeting by the station gate.",
+      "cn": "我們要在車站門口碰面。",
+      "why": "約定需要兩個人同意，一旦講好了，它就變成事實而不是打算。用 be 加 V-ing 等於告訴對方「這件事我們都同意了」。用 will 的語氣是你自己一個人剛剛決定的，另一邊還不知道，拿來講約會就會讓人困惑。"
+    },
+    {
+      "key": "table",
+      "icon": "clock",
+      "title": "照表走的時間",
+      "titleCn": "不是我能決定的",
+      "ask": "時刻表上的時間要用哪一種現在式？",
+      "en": "The ferry sails at half past nine.",
+      "cn": "渡輪九點半開。",
+      "why": "船班幾點開是船公司排的，你只能照著走，這種未來交給現在簡單式。重點是動詞要記得跟主詞變化，the ferry 是第三人稱單數所以加 -s。很多人一想到未來就忘了這個 -s，句子就壞在這裡。"
+    },
+    {
+      "key": "every",
+      "icon": "cross",
+      "title": "每天的常態不算安排",
+      "titleCn": "重複的事回到現在簡單式",
+      "ask": "為什麼不能用 be 加 V-ing 講每天都做的事？",
+      "en": "I finish at six every day.",
+      "cn": "我每天六點下班。",
+      "why": "be 加 V-ing 的未來用法背後要有一個「特別安排」。每天都一樣的事情沒有什麼好安排的，它就是常態，所以回到現在簡單式。判斷方法：句子裡出現 every day、always、usually，就不要用 be 加 V-ing。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要說：我下星期二要去銀行開戶。"
+    },
+    {
+      "label": "先問定了沒",
+      "text": "號碼牌不用先約，但你心裡的日子已經挑好了，而且是你自己排的行程，所以走 be 加 V-ing 這條路。"
+    },
+    {
+      "label": "挑形狀",
+      "text": "主詞是 I，所以 be 動詞用 am；動詞 go 掛上 -ing 變成 going。"
+    },
+    {
+      "label": "補上時間詞",
+      "text": "I am going to the bank next Tuesday. 沒有 next Tuesday 的話，這句會被讀成「我現在正在去銀行」。"
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "銀行幾點開門不是你能決定的，所以那一段要換成現在簡單式：The bank opens at nine. 如果寫成 The bank is opening at nine，聽起來像銀行特地為你安排了開門時間。"
+    }
+  ],
+  "comparison": {
+    "title": "be 加 V-ing（我排的）　vs　現在簡單式（表上的）",
+    "left": {
+      "tag": "ARRANGED",
+      "tagCn": "我或我們排好的",
+      "icon": "calendar",
+      "head": "someone agreed to it",
+      "headCn": "有人講好了",
+      "en": "I am catching the eight o'clock ferry.",
+      "cn": "我要搭八點那班渡輪。",
+      "pts": [
+        "背後一定有一個已完成的動作（訂票、打電話、講好）",
+        "句子裡要有未來的時間詞",
+        "be 動詞跟著主詞變化"
+      ]
+    },
+    "right": {
+      "tag": "TIMETABLE",
+      "tagCn": "表上印好的",
+      "icon": "clock",
+      "head": "the timetable says so",
+      "headCn": "表上就是這樣寫",
+      "en": "The eight o'clock ferry takes forty minutes.",
+      "cn": "八點那班渡輪要開四十分鐘。",
+      "pts": [
+        "我只是照著走，不能改",
+        "第三人稱單數要加 -s",
+        "語氣像在念公告"
+      ]
+    },
+    "note": "判斷口訣：問自己「這是誰決定的」——我決定的用 be 加 V-ing，表上決定的用現在簡單式，沒人決定的才用 will。"
+  },
+  "quizMore": [
+    {
+      "q": "The library ___ at five on Saturdays.",
+      "opts": [
+        "is closing",
+        "closes",
+        "close",
+        "will closing"
+      ],
+      "ans": 1,
+      "expl": "圖書館的開放時間是固定的，屬於時刻表那一類，用現在簡單式；主詞是第三人稱單數，所以加 -s。"
+    },
+    {
+      "q": "Which sentence is about a plan the speaker has already made?",
+      "opts": [
+        "I think I will buy a bike.",
+        "I am buying a bike on Sunday.",
+        "I buy a bike every year.",
+        "I bought a bike last year."
+      ],
+      "ans": 1,
+      "expl": "只有第二句用 be 加 V-ing 並配上未來的時間詞，表示日子已經定了。第一句有 I think 是猜測，第三句是常態，第四句是過去。"
+    }
+  ]
+},
+"dg20261014b1": {
+  "vis": true,
+  "oneLine": "三條路、一個問題：這件事是誰決定的——機構、我，還是還沒有人？答案決定你用哪一個時態。",
+  "map": {
+    "when": "同一件未來的事有三種寫法，而你得挑一個的時候",
+    "why": "英文把「誰決定的」寫進動詞形狀裡，讀者不必問就知道這件事定到什麼程度",
+    "form": "機構決定 → 現在簡單式　|　我排好 → be 加 V-ing　|　還沒定 → will"
+  },
+  "visual": {
+    "type": "cols",
+    "cap": "三欄講的都是房租和看房這件事，難度一樣，差別只在決定權在誰手上。左欄是合約與公告，右欄是純粹的猜測，中間那欄是自己排好的行程。寫句子之前先決定你站在哪一欄，時態就不用再猜了。",
+    "cols": [
+      {
+        "tag": "THEY DECIDE",
+        "tagCn": "機構決定，我照著走",
+        "tone": 1,
+        "items": [
+          {
+            "en": "The rent review falls due every two years.",
+            "cn": "租金檢討每兩年一次。",
+            "nt": "合約條文的語氣，用現在簡單式"
+          },
+          {
+            "en": "The agency closes for the whole holiday week.",
+            "cn": "仲介整個假期週都不開。",
+            "nt": "公告時間，第三人稱加 -s"
+          }
+        ]
+      },
+      {
+        "tag": "I DECIDE",
+        "tagCn": "我或我們談好的",
+        "tone": 2,
+        "items": [
+          {
+            "en": "I am collecting the new key on Friday.",
+            "cn": "我星期五要去拿新鑰匙。",
+            "nt": "時間已經跟對方講好"
+          },
+          {
+            "en": "We are viewing two flats before the weekend.",
+            "cn": "週末前我們要看兩間房子。",
+            "nt": "行程排好了，所以用 be 加 V-ing"
+          }
+        ]
+      },
+      {
+        "tag": "NOBODY YET",
+        "tagCn": "還沒人決定，我在猜",
+        "tone": 3,
+        "items": [
+          {
+            "en": "Rents will probably keep climbing for another year.",
+            "cn": "房租大概還會再漲一年。",
+            "nt": "probably 一出現就是預測"
+          },
+          {
+            "en": "Fine, I will take the smaller room.",
+            "cn": "好，那我選小的那間。",
+            "nt": "對話中當場才下的決定"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "clause",
+      "icon": "book",
+      "title": "合約上寫好的日期",
+      "titleCn": "引述條文",
+      "ask": "為什麼講合約上的日期不用 will？",
+      "en": "The deposit becomes refundable after twelve months.",
+      "cn": "押金十二個月後就可以退。",
+      "why": "條文描述的是一個持續有效的規定，不是某一次的未來事件，所以英文用現在簡單式，語氣才會像在引述而不是在預測。一旦改成 will，讀者會覺得那只是你以為的規則，整句的可信度就掉了。這也是合約通篇幾乎看不到 will 的原因。"
+    },
+    {
+      "key": "trip",
+      "icon": "plane",
+      "title": "行程單上的時間",
+      "titleCn": "別人排的時程",
+      "ask": "旅遊行程單上的時間該用哪一種時態？",
+      "en": "The coach reaches the border at noon.",
+      "cn": "巴士中午到邊境。",
+      "why": "行程是旅行社排的，你只是乘客，所以歸在「機構決定」那一欄，用現在簡單式。這裡常見的錯誤是寫成 be 加 V-ing，那會變成「巴士特地安排中午到」，像是車子自己有行事曆。只要那個時間印在單子上，就用現在簡單式。"
+    },
+    {
+      "key": "refuse",
+      "icon": "bubble",
+      "title": "用行程當理由",
+      "titleCn": "婉拒的標準寫法",
+      "ask": "怎麼拒絕才不會顯得不想去？",
+      "en": "I am covering the late shift that evening.",
+      "cn": "那天晚上我要代晚班。",
+      "why": "拒絕的時候報「意願」很容易傷感情，報「行程」就客觀得多。用 be 加 V-ing 等於把行事曆攤給對方看，語氣是「我不是不想，是排不開」。如果說 I will work that evening，反而像你聽完邀約才決定去上班，聽起來像藉口。"
+    },
+    {
+      "key": "promise",
+      "icon": "check",
+      "title": "當場答應的事",
+      "titleCn": "will 的真正位置",
+      "ask": "什麼時候 will 才是最自然的選擇？",
+      "en": "All right, I will bring the forms myself.",
+      "cn": "好，那我自己把表格帶過去。",
+      "why": "決定在這一秒才做出來，之前沒有任何安排，這正是 will 的主場。所以 will 的句子常常出現在對話裡，前面帶著 all right、OK、fine 這種反應詞。反過來說，如果這件事昨天就講好了，用 will 就會讓對方以為計畫又改了。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要在郵件裡交代三件事：租約到期日、你去拿鑰匙的時間，以及你對明年房價的看法。"
+    },
+    {
+      "label": "第一件：誰決定的？",
+      "text": "到期日寫在合約上，不是你能改的，所以用現在簡單式：My tenancy runs until the last day of March."
+    },
+    {
+      "label": "第二件：誰決定的？",
+      "text": "拿鑰匙的時間是你跟仲介談好的，所以用 be 加 V-ing：I am picking up the keys at four on Monday."
+    },
+    {
+      "label": "第三件：誰決定的？",
+      "text": "明年的房價沒有人決定得了，你只是在推測，所以用 will：Prices will probably settle once the new blocks open."
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "如果三件事全部寫成 will，讀者會以為連到期日都只是你的猜測；如果全部寫成現在簡單式，你對房價的看法就會變成在宣布政策。時態選錯不是文法問題，是可信度問題。"
+    }
+  ],
+  "comparison": {
+    "title": "現在進行式的未來　vs　will 的未來",
+    "left": {
+      "tag": "ARRANGED",
+      "tagCn": "已經排定",
+      "icon": "calendar",
+      "head": "the plan already exists",
+      "headCn": "安排已經存在",
+      "en": "She is handing in her notice on Monday morning.",
+      "cn": "她星期一早上要遞辭呈。",
+      "pts": [
+        "背後有一個已完成的動作",
+        "通常帶具體的時間詞",
+        "只能用在人可以安排的事情上"
+      ]
+    },
+    "right": {
+      "tag": "UNSETTLED",
+      "tagCn": "還沒定",
+      "icon": "bubble",
+      "head": "I am guessing or deciding now",
+      "headCn": "我在猜，或現在才決定",
+      "en": "Her boss will probably ask her to stay.",
+      "cn": "她的主管大概會請她留下。",
+      "pts": [
+        "常配 probably、I think、maybe",
+        "也用在當場的承諾與提議",
+        "天氣、價格、結果只能用它"
+      ]
+    },
+    "note": "判斷口訣：能說出「是誰、什麼時候講好的」就用現在進行式；說不出來就用 will。"
+  },
+  "quizMore": [
+    {
+      "q": "The lease ___ on 31 December; it says so on page one.",
+      "opts": [
+        "is ending",
+        "ends",
+        "will end",
+        "ended"
+      ],
+      "ans": 1,
+      "expl": "日期印在合約第一頁，屬於機構決定、我照著走的那一類，所以用現在簡單式。"
+    },
+    {
+      "q": "Which sentence should NOT use the present continuous for the future?",
+      "opts": [
+        "We are inspecting the roof on Tuesday.",
+        "The rain is stopping before noon tomorrow.",
+        "They are delivering the sofa this afternoon.",
+        "I am seeing the agent at three."
+      ],
+      "ans": 1,
+      "expl": "雨不會跟你約時間，天氣只能被預測，所以要用 will。其他三句都是人能安排的事。"
+    }
+  ]
+},
+"dg20261014b1p": {
+  "vis": true,
+  "oneLine": "going to 的重點不在未來，而在過去：決定或證據早就存在了，說話的這一刻只是把它報出來。",
+  "map": {
+    "when": "講早就決定好的打算，或眼前已經有跡象的預測",
+    "why": "英文用 going to 和 will 分開「說話前就有的根據」和「說話那一秒才生出的想法」",
+    "form": "主詞 + be going to + 原形動詞　|　被動：be going to be + 過去分詞"
+  },
+  "visual": {
+    "type": "timeline",
+    "cap": "四條線的差別全在「決定或證據落在 NOW 的哪一邊」。前兩條的起點都在 NOW 之前，所以用 going to；第三條的決定剛好壓在 NOW 上，那是 will 的位置；最後一條的打算在過去起跑，卻在半路斷掉，那就是 was going to。看線的起點，不要看事情發生的時間，這是最快的判斷法。",
+    "rows": [
+      {
+        "kind": "span",
+        "label": "打算",
+        "tone": "accent",
+        "from": "上個月的會議",
+        "to": "下季執行",
+        "sub": "We are going to retire the old line next quarter.",
+        "subCn": "決定在上個月就做完了，線的起點在 NOW 之前，所以用 going to"
+      },
+      {
+        "kind": "span",
+        "label": "跡象",
+        "tone": "accent",
+        "from": "眼前的裂縫",
+        "to": "雨季之後",
+        "sub": "That seal is going to fail before the rain stops.",
+        "subCn": "證據就在眼前，結果已經在路上，同樣是起點在 NOW 之前"
+      },
+      {
+        "kind": "point",
+        "label": "當場決定",
+        "tone": "ink",
+        "at": "說話的這一秒",
+        "sub": "Fine, I will log it as a minor fault.",
+        "subCn": "之前什麼都沒有，決定和說話同時發生，這是 will 的位置"
+      },
+      {
+        "kind": "range",
+        "label": "斷掉的打算",
+        "tone": "ink",
+        "from": "原本的計畫",
+        "to": "沒走完",
+        "sub": "They were going to recalibrate every unit.",
+        "subCn": "起點在過去，但線沒有走到終點，所以用 was／were going to"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "evidence",
+      "icon": "eye",
+      "title": "證據就在眼前",
+      "titleCn": "有根據的預測",
+      "ask": "為什麼指著東西講未來時要用 going to？",
+      "en": "Look at that gauge. It is going to trip again.",
+      "cn": "你看那個儀表，它又要跳掉了。",
+      "why": "叫對方去看，等於把證據攤在他面前，這時候用 will 就自相矛盾——will 的語氣是沒有根據的猜測。going to 把「我是從這個現象推出來的」這層意思一起帶進句子，所以它在工程報告和警告裡特別常見。判斷方法：你能指著某個東西說「就是因為這個」，就用 going to。"
+    },
+    {
+      "key": "decided",
+      "icon": "money",
+      "title": "決定早就做了",
+      "titleCn": "報告既有的打算",
+      "ask": "會議上決定的事，之後怎麼轉述？",
+      "en": "The board is going to fund two extra inspectors.",
+      "cn": "董事會決定再撥款請兩位稽核員。",
+      "why": "決定發生在會議上，說話的這一刻只是在轉述，所以用 going to。如果換成 will，聽起來像你剛剛替董事會做了決定。這一條最容易被中文帶偏，因為中文的「會」不分決定是什麼時候做的，只能靠英文的形狀自己標記。"
+    },
+    {
+      "key": "passive",
+      "icon": "arrow",
+      "title": "不說是誰做的",
+      "titleCn": "going to 的被動",
+      "ask": "怎麼用 going to 寫出公告語氣的被動句？",
+      "en": "A new ceiling is going to be added to the rules.",
+      "cn": "規章裡會加上一個新的上限。",
+      "why": "公告不想點名誰負責，重點是結果已經在路上，所以把 going to 和被動疊起來：be going to be 加過去分詞。三個 be 的分工要記清楚——第一個跟主詞變化，第二個永遠保持原形，最後那塊一定是過去分詞。寫成 be add 就只剩半個被動。"
+    },
+    {
+      "key": "broken",
+      "icon": "fork",
+      "title": "本來打算，後來沒做",
+      "titleCn": "was going to",
+      "ask": "怎麼一句話說完「我本來要做但沒做」？",
+      "en": "I was going to flag it on the report.",
+      "cn": "我本來要在報告上標出來。",
+      "why": "把 be 動詞換成過去式，整句就自動帶上「後來沒發生」這層意思，所以它後面幾乎都接 but 或 then 說明原因。這個形狀在解釋延誤時非常省力，因為你不必再寫一句「可是我沒做」。注意它跟過去簡單式剛好相反：過去簡單式是做了，was going to 是沒做。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要在週報裡寫三件事：已經決定的採購、從數據看得出來的風險，以及開會時臨時答應的事。"
+    },
+    {
+      "label": "第一件：決定在什麼時候做的？",
+      "text": "採購在上週就簽核了，所以用 going to：We are going to order two spare pumps."
+    },
+    {
+      "label": "第二件：證據在哪裡？",
+      "text": "良率連續三週下滑，數據就是證據，所以也用 going to：On this trend, the yield is going to miss the target."
+    },
+    {
+      "label": "第三件：決定在什麼時候做的？",
+      "text": "是開會當下才答應的，所以用 will：I will send the raw data this afternoon."
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "如果三件事全部寫成 will，讀的人會以為連採購都還沒拍板；全部寫成 going to，臨時答應的那一件又會像早就安排好。把前兩件改成被動還能更像公告：Two spare pumps are going to be ordered."
+    }
+  ],
+  "comparison": {
+    "title": "going to（根據在前）　vs　will（想法在當下）",
+    "left": {
+      "tag": "GOING TO",
+      "tagCn": "決定或證據早就存在",
+      "icon": "eye",
+      "head": "the reason came first",
+      "headCn": "先有理由，才有這句話",
+      "en": "The backlog is going to double before the audit.",
+      "cn": "積壓在稽核之前就會翻倍。",
+      "pts": [
+        "前面通常鋪了數據或現象",
+        "決定做在說話之前",
+        "被動寫成 be going to be 加過去分詞"
+      ]
+    },
+    "right": {
+      "tag": "WILL",
+      "tagCn": "說話那一秒才生出的想法",
+      "icon": "bubble",
+      "head": "the sentence came first",
+      "headCn": "先說出口，才有這個決定",
+      "en": "In that case I will stay until the line restarts.",
+      "cn": "那樣的話我就留到產線重啟。",
+      "pts": [
+        "常配 I think、maybe、probably",
+        "承諾、提議、拒絕都用它",
+        "沒有任何前置證據"
+      ]
+    },
+    "note": "判斷口訣：先問「這句話之前有沒有東西存在」——有決定或有證據就用 going to，什麼都沒有才用 will。"
+  },
+  "quizMore": [
+    {
+      "q": "The valve has been leaking all week. It ___ before the shutdown.",
+      "opts": [
+        "will fail",
+        "is going to fail",
+        "fails",
+        "is failing"
+      ],
+      "ans": 1,
+      "expl": "前一句的漏水就是證據，所以用 going to 的有根據預測；will 在這裡會變成毫無依據的猜測。"
+    },
+    {
+      "q": "Two of the three bills ___ in the next session, according to the committee.",
+      "opts": [
+        "are going to be withdraw",
+        "are going to withdraw",
+        "are going to be withdrawn",
+        "will be withdraw"
+      ],
+      "ans": 2,
+      "expl": "法案是被撤回的，所以要被動：are going to be 加過去分詞 withdrawn。第二個 be 後面絕對不是原形。"
+    }
+  ]
+},
+"dg20261014b2": {
+  "vis": true,
+  "oneLine": "到了這一層，問題不再是哪個時態對，而是你想讓讀者感覺到多少重量——條文、行事曆、證據，還是個人意見。",
+  "map": {
+    "when": "寫報告、公告、商務信件，要決定語氣有多硬的時候",
+    "why": "同一件事換一個時態，責任與可信度就跟著移動，讀者不必看語氣詞也感覺得到",
+    "form": "現在簡單式最硬　|　現在進行式中性　|　going to 帶證據　|　will 最輕"
+  },
+  "visual": {
+    "type": "scale",
+    "cap": "這把尺從左到右是語氣的重量，四個停點對應四種文件。同一件四月調整費用的事，寫在簡訊、郵件、分析報告和合約裡各有一種預設寫法；愈往右，寫的人承擔的責任愈重。選錯格子通常不是文法錯，而是把責任放錯位置——把個人判斷寫成規定，或把規定寫成猜測。",
+    "lo": "個人判斷、口語",
+    "hi": "條款、不容討論",
+    "stops": [
+      {
+        "at": 12,
+        "label": "Personal view",
+        "labelCn": "個人判斷",
+        "en": "I think the fee will move again in April.",
+        "cn": "最輕的寫法，I think 已經替整句打上「這只是我的看法」"
+      },
+      {
+        "at": 42,
+        "label": "Email",
+        "labelCn": "郵件通知",
+        "en": "We are adjusting the fee in April.",
+        "cn": "行程已定、語氣中性，標準的商務通知寫法"
+      },
+      {
+        "at": 68,
+        "label": "Analysis",
+        "labelCn": "分析與警告",
+        "en": "At this rate the fee is going to move twice a year.",
+        "cn": "前面鋪了數據，going to 把因果接起來，帶一點壓力"
+      },
+      {
+        "at": 94,
+        "label": "Clause",
+        "labelCn": "合約條款",
+        "en": "The fee is reviewed each April.",
+        "cn": "現在簡單式把事情釘死，描述的是持續有效的規定"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "weight",
+      "icon": "balance",
+      "title": "條文不預測",
+      "titleCn": "現在簡單式的硬度",
+      "ask": "為什麼合約幾乎看不到 will？",
+      "en": "The tenant settles the service charge each quarter.",
+      "cn": "承租人每季結清服務費。",
+      "why": "條款描述的是一個持續有效的義務，不是某一次的未來事件。用現在簡單式，句子讀起來像規則本身在說話，沒有留下討論空間；換成 will，同一句就變成「我預期他會付」，把義務降級成期待。法律英文怕的就是這一點點語氣鬆動。"
+    },
+    {
+      "key": "proof",
+      "icon": "flag",
+      "title": "證據要有人接",
+      "titleCn": "going to 在書面語的功能",
+      "ask": "鋪完數據之後，結論句該用哪一個？",
+      "en": "Four of the six sites already run over budget, so the overrun is going to spread.",
+      "cn": "六個場地裡已經有四個超支，所以超支一定會擴散。",
+      "why": "going to 在正式書面語裡最有用的功能不是講未來，而是把前面那段證據和後面的結論綁在一起。如果把它換成 will，讀者會把結論讀成作者的個人意見，前面辛苦鋪的數據就白費了。想再正式一點，可以換成 is likely to 或 is expected to，把判斷的強度也標出來。"
+    },
+    {
+      "key": "polite",
+      "icon": "pin",
+      "title": "距離感要靠 will",
+      "titleCn": "承諾與拒絕",
+      "ask": "拒絕對方的時候為什麼要用 will not be able to？",
+      "en": "Regrettably we will not be able to hold the current terms.",
+      "cn": "很遺憾，我們無法維持現有的條件。",
+      "why": "will 把動作推到未來，同時留下一點彈性，所以它是客服信和談判信的主力。加上 be able to 之後，拒絕的理由從「我們不想」變成「我們做不到」，語氣再退一步。如果改成現在簡單式 we do not hold，那就變成宣布政策，對方連回話的空間都沒有。"
+    },
+    {
+      "key": "story",
+      "icon": "link",
+      "title": "敘事裡的過去的未來",
+      "titleCn": "was going to 與 would",
+      "ask": "回顧過去的事情時，兩個形狀怎麼選？",
+      "en": "That one notice would reshape her budget for years.",
+      "cn": "那一張通知後來改變了她好幾年的記帳方式。",
+      "why": "would 站在現在回望過去，暗示那件事後來真的發生了，所以傳記和回顧文章愛用它。was going to 剛好相反，它把讀者帶回當時的心情，暗示計畫還沒實現、甚至沒實現。選錯會讓讀者誤判結局：一個是伏筆，一個是落空。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要寫一封信給客戶，裡面有三件事：合約裡的付款規定、你方下週的出貨安排，以及你對明年運費的看法。"
+    },
+    {
+      "label": "第一件：要多硬？",
+      "text": "付款規定不容討論，用現在簡單式：Invoices fall due thirty days from issue."
+    },
+    {
+      "label": "第二件：要多硬？",
+      "text": "出貨已經排好，語氣中性就好，用現在進行式：We are shipping the balance next Wednesday."
+    },
+    {
+      "label": "第三件：要多硬？",
+      "text": "運費是你的判斷，留彈性，用 will 加一個緩衝詞：Freight rates will probably ease after the new year."
+    },
+    {
+      "label": "換個說法／對照錯誤版",
+      "text": "如果第一件寫成 Invoices will fall due，義務就降級成期待；第三件寫成 Freight rates ease after the new year，你的猜測就變成了承諾。想把第三件寫得更正式又不失彈性，可以換成 Freight rates are expected to ease early next year."
+    }
+  ],
+  "comparison": {
+    "title": "把判斷藏起來　vs　把判斷標出來",
+    "left": {
+      "tag": "UNMARKED",
+      "tagCn": "不標記判斷強度",
+      "icon": "flag",
+      "head": "it reads as a fact",
+      "headCn": "讀起來像事實",
+      "en": "The reserve runs out in eight years.",
+      "cn": "這筆準備金八年後用完。",
+      "pts": [
+        "現在簡單式，語氣最硬",
+        "讀者很難反駁",
+        "數字錯了責任全在作者"
+      ]
+    },
+    "right": {
+      "tag": "MARKED",
+      "tagCn": "標出判斷強度",
+      "icon": "balance",
+      "head": "it reads as an estimate",
+      "headCn": "讀起來像推估",
+      "en": "The reserve is expected to run out within a decade.",
+      "cn": "這筆準備金預計十年內用完。",
+      "pts": [
+        "is expected to 把推估標明",
+        "留下修正的空間",
+        "正式報告的標準寫法"
+      ]
+    },
+    "note": "判斷口訣：寫得愈硬，責任愈大。把握十足就用現在簡單式，有證據但不保證就標出來。"
+  },
+  "quizMore": [
+    {
+      "q": "Under clause nine, the guarantee ___ twenty-four months from delivery.",
+      "opts": [
+        "will run",
+        "runs",
+        "is running",
+        "is going to run"
+      ],
+      "ans": 1,
+      "expl": "引述條款要用現在簡單式，語氣才是規定本身在說話。用 will 會把義務講成預期。"
+    },
+    {
+      "q": "Which ending keeps the most room for revision in a formal report?",
+      "opts": [
+        "so the shortfall widens by 2030.",
+        "so the shortfall will widen by 2030.",
+        "so the shortfall is expected to widen by 2030.",
+        "so the shortfall is widening by 2030."
+      ],
+      "ans": 2,
+      "expl": "is expected to 把判斷的強度標出來，留下修正空間，是正式報告的標準寫法。第一個像斷言，第二個像個人意見，第四個像已經在發生的安排。"
+    }
+  ]
+},
 /* ---------- 2026-10-09 每日文法（used to + 原形；用現在式講未來） ---------- */
 "dg20261009a2": {
   "vis": true,

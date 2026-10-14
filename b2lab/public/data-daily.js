@@ -7,6 +7,791 @@
 window.DAILY = {
 
 articles:[
+/* ---------- 2026-10-14 每日文章（金錢與居住：搬家、房租與未來的錢） ---------- */
+{
+  "id": "d20261014a2",
+  "date": "2026-10-14",
+  "level": "A2",
+  "topic": "居家",
+  "words": 93,
+  "kind": "orig",
+  "title": "Tom Is Moving on Saturday",
+  "titleCn": "Tom星期六要搬家",
+  "focus": "用現在進行式講「已經排定的未來」（is moving、is paying），用現在簡單式講照班表的固定時間（comes、finishes），will 只留給還沒安排好的那一件事",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom找到一個便宜的小房間，星期六就要搬過去。請注意這一篇講未來的三種形狀：is moving、is packing、is paying 是「日子已經訂好」的安排；comes、finishes 是照班表走的固定時間；只有最後那箱還沒打包，所以用 will pack。中文全部靠「要」「會」這兩個字，英文卻用三種不同的動詞形狀，這就是今天要分清楚的地方。",
+  "spoken": [
+    {
+      "en": "New room. Small, but cheap.",
+      "cn": "新房間，小，但是便宜。"
+    },
+    {
+      "en": "Six boxes already. Lisa's helping.",
+      "cn": "已經六個箱子了，Lisa在幫忙。"
+    },
+    {
+      "en": "Truck at nine. Last box tonight.",
+      "cn": "車九點來，最後一箱今晚打包。"
+    },
+    {
+      "en": "Fourth floor. Quiet. Deposit tomorrow.",
+      "cn": "四樓，很安靜，明天付押金。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom is moving to a new room on Saturday. The room is small, but the rent is cheap. It is nine thousand dollars a month.",
+      "cn": "Tom星期六要搬到一個新房間。房間很小，但是房租很便宜，一個月九千元。"
+    },
+    {
+      "en": "He is packing his things tonight. There are six boxes by the door. His friend Lisa is helping him.",
+      "cn": "他今晚在打包東西。門邊有六個箱子。他的朋友Lisa在幫他。"
+    },
+    {
+      "en": "The small truck comes at nine on Saturday morning. Tom finishes work at six on Friday. He will pack the last box after dinner.",
+      "cn": "小貨車星期六早上九點來。Tom星期五六點下班。他會在晚餐後打包最後一個箱子。"
+    },
+    {
+      "en": "The new room is on the fourth floor. It is quiet, and there is a desk by the window. Tom is paying the deposit tomorrow.",
+      "cn": "新房間在四樓。那裡很安靜，而且窗邊有一張書桌。Tom明天要付押金。"
+    }
+  ],
+  "target": [
+    {
+      "w": "move",
+      "ipa": "/muːv/",
+      "pos": "v.",
+      "cn": "搬；移動",
+      "def": "To go to live in a different place, or to change the place of something.",
+      "ex": "The teacher moves her chair closer to the board.",
+      "exCn": "老師把她的椅子移到離白板近一點的地方。"
+    },
+    {
+      "w": "rent",
+      "ipa": "/rent/",
+      "pos": "n.",
+      "cn": "房租",
+      "def": "The money you pay every month to live in a place.",
+      "ex": "My uncle pays a high rent for his noodle shop.",
+      "exCn": "我叔叔為他的麵店付很高的租金。"
+    },
+    {
+      "w": "box",
+      "ipa": "/bɑːks/",
+      "pos": "n.",
+      "cn": "箱子",
+      "def": "A container with four sides, often made of paper or wood.",
+      "ex": "Please put the shoes in that big box.",
+      "exCn": "請把鞋子放進那個大箱子裡。"
+    },
+    {
+      "w": "floor",
+      "ipa": "/flɔːr/",
+      "pos": "n.",
+      "cn": "樓層；地板",
+      "def": "One level of a building, or the part you walk on.",
+      "ex": "The cat is sleeping on the kitchen floor.",
+      "exCn": "貓在廚房的地板上睡覺。"
+    },
+    {
+      "w": "cheap",
+      "ipa": "/tʃiːp/",
+      "pos": "adj.",
+      "cn": "便宜的",
+      "def": "Not costing a lot of money.",
+      "ex": "These oranges are cheap today, so I will buy six.",
+      "exCn": "今天橘子很便宜，所以我要買六顆。"
+    },
+    {
+      "w": "quiet",
+      "ipa": "/ˈkwaɪət/",
+      "pos": "adj.",
+      "cn": "安靜的",
+      "def": "With little or no sound.",
+      "ex": "The library is very quiet in the morning.",
+      "exCn": "圖書館早上非常安靜。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "When is Tom moving?",
+      "qCn": "Tom什麼時候搬家？",
+      "opts": [
+        "A. On Friday",
+        "B. On Saturday",
+        "C. On Sunday",
+        "D. On Monday"
+      ],
+      "optsCn": [
+        "A. 星期五",
+        "B. 星期六",
+        "C. 星期日",
+        "D. 星期一"
+      ],
+      "ans": 1,
+      "expl": "Tom is moving to a new room on Saturday.——第一段第一句就用現在進行式講已經訂好的日子。"
+    },
+    {
+      "q": "How many boxes are by the door?",
+      "qCn": "門邊有幾個箱子？",
+      "opts": [
+        "A. Four",
+        "B. Five",
+        "C. Six",
+        "D. Seven"
+      ],
+      "optsCn": [
+        "A. 四個",
+        "B. 五個",
+        "C. 六個",
+        "D. 七個"
+      ],
+      "ans": 2,
+      "expl": "There are six boxes by the door.——第二段用 there are 報出數量。"
+    },
+    {
+      "q": "Tom ___ the deposit tomorrow.",
+      "qCn": "Tom明天要付押金。",
+      "opts": [
+        "A. pay",
+        "B. paid",
+        "C. is paying",
+        "D. was paying"
+      ],
+      "ans": 2,
+      "expl": "押金是明天的事，而且已經跟房東約好了，所以用現在進行式 is paying 講已排定的未來。paid 和 was paying 都是過去，pay 少了時態。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Tom will move to a new room on Saturday.",
+      "b2": "Tom is moving to a new room on Saturday.",
+      "note": "will 聽起來像現在才決定的，日子好像還能改。用 is moving 等於告訴對方「日子訂了、車也叫了」，英文講已經安排好的事幾乎都用這個形狀。",
+      "sp": "Moving Saturday.",
+      "spNote": "口語常把主詞和 be 動詞一起吃掉，只留動作和日子。",
+      "b1Cn": "Tom星期六會搬到一個新房間。",
+      "b2Cn": "Tom星期六要搬到一個新房間。",
+      "spCn": "星期六搬。"
+    },
+    {
+      "b1": "The truck will come at nine.",
+      "b2": "The truck comes at nine.",
+      "note": "搬家公司的車是照班表來的，不是臨時決定，所以用現在簡單式。寫 will 反而讓人以為時間還沒定下來。",
+      "sp": "Truck's at nine.",
+      "spNote": "口語直接把動詞換成 be 動詞加時間，意思一樣清楚。",
+      "b1Cn": "貨車九點會來。",
+      "b2Cn": "貨車九點來。",
+      "spCn": "車九點。"
+    }
+  ]
+},
+{
+  "id": "d20261014b1",
+  "date": "2026-10-14",
+  "level": "B1",
+  "topic": "金錢與居住",
+  "words": 149,
+  "kind": "orig",
+  "title": "The Rent Goes Up in January",
+  "titleCn": "一月房租就要漲了",
+  "focus": "三種講未來的方式分工：現在進行式講已經約好的事（is meeting），現在簡單式講合約與班表上的固定時間（goes up、arrives），will 只留給預測與當場的決定",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "同一個星期，換到Anita這邊。她收到房東的漲租通知，開始算下個月的錢。這一篇請把三種未來式分開看：goes up、ends、arrives 是合約和薪資表上寫好的固定時間，所以用現在簡單式；is meeting、is moving 是她自己排好的行程；will send、will look 才是還沒發生、她自己決定或預測的部分。",
+  "spoken": [
+    {
+      "en": "Nine million from January. Great.",
+      "cn": "一月開始九百萬，真好。"
+    },
+    {
+      "en": "Thursday evening. I'm asking for a longer one.",
+      "cn": "星期四晚上，我要談長一點的合約。"
+    },
+    {
+      "en": "Fifth in, tenth out. Every month.",
+      "cn": "五號進來，十號出去，每個月都這樣。"
+    },
+    {
+      "en": "Nine million? I can do it. Only just.",
+      "cn": "九百萬？我付得起，但只是剛剛好。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita's landlord sent her a short message on Monday evening. The rent goes up in January, from eight million dong to nine. Her lease ends on the last day of December, so she has eleven weeks to decide.",
+      "cn": "Anita的房東星期一晚上傳了一則簡短的訊息給她。房租一月開始要漲，從八百萬越南盾漲到九百萬。她的租約十二月最後一天到期，所以她有十一個星期可以決定。"
+    },
+    {
+      "en": "She is meeting the landlord on Thursday evening. She is not asking for a lower price, because the building is clean and the bus to her factory stops at the corner. She wants a longer contract instead.",
+      "cn": "她星期四晚上要跟房東見面。她不會要求降價，因為那棟樓很乾淨，而且去她工廠的公車就停在轉角。她想要的是一份更長的合約。"
+    },
+    {
+      "en": "Anita is also moving some money this week. Her salary arrives on the fifth of every month, and she pays the rent on the tenth. From November she will send part of it to a savings account first, so the budget feels tighter but safer.",
+      "cn": "Anita這個星期也要把一些錢挪一下。她的薪水每個月五號進帳，房租十號付。從十一月開始，她會先把一部分薪水轉到存款帳戶，這樣預算會比較緊，但也比較安全。"
+    },
+    {
+      "en": "She can afford nine million, but only just. Any new place also needs a new deposit, so moving is not really cheaper. She is not packing any boxes yet.",
+      "cn": "九百萬她付得起，但只是剛剛好。任何新的地方都要再付一次押金，所以搬家其實沒有比較便宜。她現在還沒開始打包任何箱子。"
+    }
+  ],
+  "target": [
+    {
+      "w": "landlord",
+      "ipa": "/ˈlændˌlɔːrd/",
+      "pos": "n.",
+      "cn": "房東",
+      "def": "A person who owns a place and lets other people live in it for money.",
+      "ex": "Our landlord fixed the broken window the same afternoon.",
+      "exCn": "我們的房東當天下午就把破掉的窗戶修好了。"
+    },
+    {
+      "w": "contract",
+      "ipa": "/ˈkɑːn.trækt/",
+      "pos": "n.",
+      "cn": "合約",
+      "def": "A written agreement that both sides must follow.",
+      "ex": "The gym made me read every line of the contract twice.",
+      "exCn": "健身房要我把合約的每一行讀兩遍。"
+    },
+    {
+      "w": "salary",
+      "ipa": "/ˈsæləri/",
+      "pos": "n.",
+      "cn": "薪水",
+      "def": "The money you are paid for your job every month.",
+      "ex": "He spends half his salary on guitar lessons.",
+      "exCn": "他把一半的薪水花在吉他課上。"
+    },
+    {
+      "w": "budget",
+      "ipa": "/ˈbʌdʒɪt/",
+      "pos": "n.",
+      "cn": "預算",
+      "def": "A plan for how much money you can spend.",
+      "ex": "The team kept the whole party inside a very small budget.",
+      "exCn": "那個團隊把整場派對控制在很小的預算裡。"
+    },
+    {
+      "w": "afford",
+      "ipa": "/əˈfɔːrd/",
+      "pos": "v.",
+      "cn": "付得起",
+      "def": "To have enough money to pay for something.",
+      "ex": "We could not afford two tickets, so we watched it at home.",
+      "exCn": "我們買不起兩張票，所以在家看。"
+    },
+    {
+      "w": "deposit",
+      "ipa": "/dɪˈpɑːzɪt/",
+      "pos": "n.",
+      "cn": "押金",
+      "def": "Money you pay first and get back later if nothing is damaged.",
+      "ex": "You get the deposit back when you return the key.",
+      "exCn": "你還鑰匙的時候就會拿回押金。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "When is Anita meeting her landlord?",
+      "qCn": "Anita什麼時候要跟房東見面？",
+      "opts": [
+        "A. On Monday evening",
+        "B. On Thursday evening",
+        "C. On the fifth",
+        "D. On the last day of December"
+      ],
+      "optsCn": [
+        "A. 星期一晚上",
+        "B. 星期四晚上",
+        "C. 五號",
+        "D. 十二月最後一天"
+      ],
+      "ans": 1,
+      "expl": "She is meeting the landlord on Thursday evening.——第二段第一句用現在進行式講已經約好的時間。"
+    },
+    {
+      "q": "Why does Anita want to stay in the same building?",
+      "qCn": "Anita為什麼想留在同一棟樓？",
+      "opts": [
+        "A. The rent is going down",
+        "B. The building is clean and the bus stops nearby",
+        "C. Her sister lives upstairs",
+        "D. The landlord is an old friend"
+      ],
+      "optsCn": [
+        "A. 房租要降了",
+        "B. 那棟樓很乾淨，而且公車就停在附近",
+        "C. 她姊姊住在樓上",
+        "D. 房東是老朋友"
+      ],
+      "ans": 1,
+      "expl": "because the building is clean and the bus to her factory stops at the corner——第二段把兩個理由都寫出來了。"
+    },
+    {
+      "q": "Her salary ___ on the fifth of every month.",
+      "qCn": "她的薪水每個月五號進帳。",
+      "opts": [
+        "A. is arriving",
+        "B. arrives",
+        "C. will arrive",
+        "D. arrived"
+      ],
+      "ans": 1,
+      "expl": "薪資表上的固定日期屬於「時刻表型的未來」，用現在簡單式 arrives。is arriving 會變成只講這一次的安排，will arrive 聽起來像在猜。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "She will meet the landlord on Thursday.",
+      "b2": "She is meeting the landlord on Thursday.",
+      "note": "兩個人已經約好、時間地點都談定了，這種事英文習慣用現在進行式。will meet 會讓對方以為只是「打算去約」，還沒真的約到。",
+      "sp": "Seeing him Thursday.",
+      "spNote": "口語連主詞都省了，直接從動詞開始，聽起來像在報自己的行程。",
+      "b1Cn": "她星期四會跟房東見面。",
+      "b2Cn": "她星期四要跟房東見面。",
+      "spCn": "星期四跟他見面。"
+    },
+    {
+      "b1": "The rent will go up in January.",
+      "b2": "The rent goes up in January.",
+      "note": "漲價的日期寫在合約上，是既定事實而不是預測。改成現在簡單式之後，句子的語氣從「我猜」變成「表上就是這樣寫」，比較有說服力。",
+      "sp": "Nine million from January.",
+      "spNote": "口語常把動詞整個省掉，只留金額和起算的時間。",
+      "b1Cn": "房租一月會漲。",
+      "b2Cn": "房租一月開始漲。",
+      "spCn": "一月起九百萬。"
+    }
+  ]
+},
+{
+  "id": "d20261014b1p",
+  "date": "2026-10-14",
+  "level": "B1+",
+  "topic": "新聞·金錢",
+  "words": 218,
+  "kind": "news",
+  "title": "Six Percent, Twenty-One Years",
+  "titleCn": "百分之六，二十一年沒動",
+  "focus": "被動語態（are required、has not been raised、is finished、are rewarded）加上 going to 講「照跡象看就要發生」，再練一個關係子句（the system that began in 2005）",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "同樣是錢的問題，這一篇把鏡頭從一個人的房租拉到全台灣的退休金。請先數被動語態出現幾次：新聞英文愛用它，因為重點是「那個數字被誰訂下來、有沒有被動過」，而不是誰在動手。再注意兩個 is going to——它們不是預測天氣式的猜測，而是「照現在的局面看，結局已經在路上」。",
+  "source": "改寫自 Focus Taiwan 報導（2026/10/13）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/politics/202610130013",
+  "spoken": [
+    {
+      "en": "Streets first, letters later. That's how it works.",
+      "cn": "先上街，公文後面再說，就是這樣運作的。"
+    },
+    {
+      "en": "Six percent. Since 2005. Nobody touched it.",
+      "cn": "百分之六，從2005年到現在，沒人動過。"
+    },
+    {
+      "en": "Seventeen bills. First reading. That's all.",
+      "cn": "十七個法案，只過一讀，就這樣。"
+    },
+    {
+      "en": "Open to proposals, they say. Still collecting opinions.",
+      "cn": "他們說對提案持開放態度，還在收集意見。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Union members carried their anger to the streets of Taipei on Tuesday. An alliance of labor groups gathered outside the Executive Yuan and the Legislative Yuan, and asked the cabinet to write its own pension bill instead of leaving the work to lawmakers.",
+      "cn": "工會成員星期二把怒氣帶上了台北街頭。一個勞工團體聯盟分別聚集在行政院和立法院外面，要求內閣自己提出退休金法案，不要把這件事丟給立法委員去處理。"
+    },
+    {
+      "en": "Their complaint is simple. Under the system that began in 2005, employers are required to pay at least six percent of a monthly wage into each worker's retirement account. That mandatory contribution has not been raised for twenty-one years. One union president argued that the floor should be lifted to twelve percent. He added that the average rate was only 6.04 percent last year.",
+      "cn": "他們的訴求很單純。在2005年上路的這套制度下，雇主被要求至少把月薪的百分之六存進每位勞工的退休金帳戶。這個法定的提撥比率已經二十一年沒有調高。一位工會理事長主張，下限應該拉到百分之十二。他還補充，去年的平均提撥率只有百分之6.04。"
+    },
+    {
+      "en": "Nearly 7.87 million people now save through the newer scheme, so a small change in the rate is going to touch almost every office and factory in Taiwan. Seventeen amendments are already sitting in the legislature, and a few would push the minimum to between eight and ten percent. None has passed a second reading.",
+      "cn": "目前將近787萬人透過這套較新的制度存退休金，所以比率只要動一點，幾乎每一間辦公室和工廠都會被影響到。立法院裡已經躺著十七個修正案，其中幾個會把下限推到百分之八到百分之十之間。但沒有一個通過二讀。"
+    },
+    {
+      "en": "If nothing is finished before the term ends in January 2028, every one of those bills is going to die on the shelf. The labor ministry says it is still open to a higher floor and is collecting opinions, and it points out that generous employers already earn credit in the ESG scores of listed companies.",
+      "cn": "如果在2028年1月本屆任期結束前沒有審完，這些法案全部都會躺在架上作廢。勞動部表示，對於調高下限仍持開放態度，也還在收集各方意見，並指出提撥較多的雇主，在上市公司的ESG評分裡已經可以加分。"
+    }
+  ],
+  "target": [
+    {
+      "w": "pension",
+      "ipa": "/ˈpen.ʃən/",
+      "pos": "n.",
+      "cn": "退休金",
+      "def": "Regular money paid to someone after they stop working.",
+      "ex": "My aunt lives on a small pension and a vegetable garden.",
+      "exCn": "我阿姨靠一點退休金和一片菜園生活。"
+    },
+    {
+      "w": "contribution",
+      "ipa": "/ˌkɑːntrɪˈbjuːʃn/",
+      "pos": "n.",
+      "cn": "提撥（款）；貢獻",
+      "def": "An amount of money that someone pays into a fund.",
+      "ex": "Every member makes a monthly contribution to the temple fund.",
+      "exCn": "每位成員每月都往廟方的基金裡繳一筆錢。"
+    },
+    {
+      "w": "retirement",
+      "ipa": "/rɪˈtaɪr.mənt/",
+      "pos": "n.",
+      "cn": "退休",
+      "def": "The time of life after you stop working.",
+      "ex": "He bought a fishing boat the week after his retirement.",
+      "exCn": "他退休後一個星期就買了一艘漁船。"
+    },
+    {
+      "w": "mandatory",
+      "ipa": "/ˈmæn.dəˌtɔːr.i/",
+      "pos": "adj.",
+      "cn": "強制的；法定的",
+      "def": "Required by a rule or a law, not a free choice.",
+      "ex": "Helmets are mandatory on every site, even for visitors.",
+      "exCn": "所有工地都強制戴安全帽，連訪客也一樣。"
+    },
+    {
+      "w": "wage",
+      "ipa": "/weɪdʒ/",
+      "pos": "n.",
+      "cn": "工資",
+      "def": "Money paid to a worker, often by the hour, day or month.",
+      "ex": "A daily wage is still common on small building sites.",
+      "exCn": "小型工地上按日計酬還是很常見。"
+    },
+    {
+      "w": "union",
+      "ipa": "/ˈjuː.njən/",
+      "pos": "n.",
+      "cn": "工會",
+      "def": "An organization of workers that speaks for them together.",
+      "ex": "The drivers' union called a meeting at the depot.",
+      "exCn": "司機工會在車庫召開了一場會議。"
+    },
+    {
+      "w": "employer",
+      "ipa": "/ɪmˈplɔɪɚ/",
+      "pos": "n.",
+      "cn": "雇主",
+      "def": "A person or company that pays people to work.",
+      "ex": "Her new employer pays for a language class every term.",
+      "exCn": "她的新雇主每學期都幫員工出語言課的學費。"
+    },
+    {
+      "w": "amendment",
+      "ipa": "/əˈmend.mənt/",
+      "pos": "n.",
+      "cn": "修正案",
+      "def": "A change written into a law or an agreement.",
+      "ex": "The committee accepted one amendment and threw out the rest.",
+      "exCn": "委員會接受了一個修正案，其餘的全部退回。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did the labor groups ask the cabinet to do?",
+      "qCn": "勞工團體要求內閣做什麼？",
+      "opts": [
+        "A. To lower the contribution rate",
+        "B. To write its own pension bill",
+        "C. To close the older pension system",
+        "D. To pay the protesters' wages"
+      ],
+      "optsCn": [
+        "A. 調低提撥比率",
+        "B. 自己提出退休金法案",
+        "C. 關掉舊的退休金制度",
+        "D. 支付抗議者的工資"
+      ],
+      "ans": 1,
+      "expl": "asked the cabinet to write its own pension bill instead of leaving the work to lawmakers——第一段最後一句就是他們的訴求。"
+    },
+    {
+      "q": "How long has the six percent floor stayed the same?",
+      "qCn": "百分之六的下限已經維持多久沒變？",
+      "opts": [
+        "A. Six years",
+        "B. Twelve years",
+        "C. Twenty-one years",
+        "D. Twenty-eight years"
+      ],
+      "optsCn": [
+        "A. 六年",
+        "B. 十二年",
+        "C. 二十一年",
+        "D. 二十八年"
+      ],
+      "ans": 2,
+      "expl": "That mandatory contribution has not been raised for twenty-one years.——第二段用現在完成式的被動講「到現在都沒被調過」。"
+    },
+    {
+      "q": "What happens to the seventeen amendments if the legislature does not finish them?",
+      "qCn": "如果立法院沒有把那十七個修正案審完，它們會怎麼樣？",
+      "opts": [
+        "A. They are signed by the president",
+        "B. They die when the term ends in January 2028",
+        "C. They move to the labor ministry",
+        "D. They become ESG rules for listed companies"
+      ],
+      "optsCn": [
+        "A. 由總統簽署生效",
+        "B. 2028年1月任期結束時作廢",
+        "C. 轉到勞動部去處理",
+        "D. 變成上市公司的ESG規定"
+      ],
+      "ans": 1,
+      "expl": "If nothing is finished before the term ends in January 2028, every one of those bills is going to die on the shelf.——第四段第一句。"
+    },
+    {
+      "q": "Employers ___ to pay at least six percent of a monthly wage.",
+      "qCn": "雇主被要求至少提撥月薪的百分之六。",
+      "opts": [
+        "A. require",
+        "B. are required",
+        "C. requiring",
+        "D. have required"
+      ],
+      "ans": 1,
+      "expl": "重點是「雇主被規定」，動作來自法律而不是雇主自己，所以用被動 are required。寫 require 會變成雇主去要求別人，意思整個反過來。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The government has not raised the rate for twenty-one years.",
+      "b2": "That mandatory contribution has not been raised for twenty-one years.",
+      "note": "新聞不想把焦點放在「誰沒做」，而是「那個數字沒動」。把主詞換成數字本身、動詞改成被動之後，句子的主角就從政府變成制度，讀起來也更像報導而不是指責。",
+      "sp": "Twenty-one years. Same number.",
+      "spNote": "口語把動詞全部拿掉，只留時間和結果，怒氣反而更明顯。",
+      "b1Cn": "政府二十一年沒有調高這個比率。",
+      "b2Cn": "這個法定提撥比率已經二十一年沒有被調高。",
+      "spCn": "二十一年了，數字都一樣。"
+    },
+    {
+      "b1": "Maybe all those bills will die in January 2028.",
+      "b2": "Every one of those bills is going to die on the shelf.",
+      "note": "will 加 maybe 只是猜測；going to 的意思是「照現在的進度看，結局已經在路上」。前面已經寫了「只過一讀」，證據就在句子裡，所以用 going to 比 will 有力。",
+      "sp": "They're all going to expire. All of them.",
+      "spNote": "口語會把關鍵字再講一次（All of them）來加重語氣。",
+      "b1Cn": "也許那些法案2028年1月都會作廢。",
+      "b2Cn": "那些法案一個一個都會躺在架上作廢。",
+      "spCn": "全部都會到期，一個都跑不掉。"
+    }
+  ]
+},
+{
+  "id": "d20261014b2",
+  "date": "2026-10-14",
+  "level": "B2",
+  "topic": "金錢與居住",
+  "words": 299,
+  "kind": "original",
+  "title": "The Four Lines That Opened a Spreadsheet",
+  "titleCn": "那四行字讓我打開了試算表",
+  "focus": "三種未來式的語氣差別：is going up／is going to run 表示有根據、已經上路的事；現在進行式（I am signing）講已經定案的安排；will 留給預測與當場的決定",
+  "intro": "這一篇是Anita的第一人稱記述，把同一件漲租的事寫成一段反省。請注意她幾乎不用 will：講已經確定的事，她用 is going up、am signing；講自己早就決定好的下一步，她用 am going to run。這種選擇讓整篇文章聽起來「有憑有據」，而不是在許願。另外注意 had been、what I actually did was 這類結構怎麼把節奏拉慢。",
+  "spoken": [
+    {
+      "en": "Four lines. Eleven at night. Spreadsheet open.",
+      "cn": "四行字，晚上十一點，試算表就打開了。"
+    },
+    {
+      "en": "Four percent. That was the comfortable part.",
+      "cn": "百分之四，那就是我以為很寬鬆的那部分。"
+    },
+    {
+      "en": "Cheaper rent, longer bus. Pick one.",
+      "cn": "房租便宜一點，公車坐久一點，選一個。"
+    },
+    {
+      "en": "Payday, money gone. On purpose.",
+      "cn": "發薪日錢就不見了，而且是故意的。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "My landlord's message arrived on a Monday evening, between two meetings, and it was four lines long. The rent is going up in January. I read it twice, closed the laptop, and told myself I was going to look at it properly at the weekend. I did not. What I actually did was open a spreadsheet at eleven that same night, because the number in my head refused to sit still.",
+      "cn": "房東的訊息在一個星期一傍晚、兩場會議之間進來，只有四行字：房租一月要漲。我讀了兩遍，把筆電闔上，告訴自己週末會好好看一下。結果沒有。我實際做的事，是當天晚上十一點打開了一張試算表，因為腦袋裡那個數字就是不肯安靜。"
+    },
+    {
+      "en": "Until that night my budget had been a feeling rather than a figure. I knew roughly what I earned and roughly what the lease cost me, and I let the gap between the two look after itself. The spreadsheet was less forgiving. Rent, utility bills, the bus pass, the Sunday market, two flights home a year: once every line had a number beside it, the comfortable part of my salary turned out to be about four percent of it.",
+      "cn": "在那一晚之前，我的預算一直是一種感覺，而不是一個數字。我大概知道自己賺多少，也大概知道租約花掉多少，中間那段差額就讓它自己照顧自己。試算表沒那麼寬容。房租、水電帳單、公車月票、週日市場、一年兩趟回家的機票：等到每一行旁邊都填上數字，我薪水裡「可以放心花」的那部分，原來只占百分之四左右。"
+    },
+    {
+      "en": "That is the trade-off nobody prints on a lease. A cheaper flat sits forty minutes further out, so a smaller rent buys me a longer commute and two fewer free evenings a week. A flat I can walk to work from costs me the savings cushion I keep promising myself. Inflation does not care which one I pick; it quietly lifts both numbers every year.",
+      "cn": "那就是沒有人會印在租約上的取捨。便宜的房子在再遠四十分鐘的地方，所以房租少一點，換來的是通勤久一點、一週少兩個自由的晚上。走路就能到公司的房子，代價是我一直答應自己要存的那筆緩衝金。通膨不在乎我選哪一邊，它每年都安靜地把兩邊的數字一起往上推。"
+    },
+    {
+      "en": "So I am doing something unglamorous instead. From November a fixed amount leaves my account on payday, before I can argue with it, and what stays behind is what I am allowed to spend. I am not moving in January. I am signing one more year, with a longer contract and a slightly thinner month, and I am going to run the spreadsheet again in April. Discipline, it turns out, is mostly about arranging things so that you never have to be brave twice.",
+      "cn": "所以我改做一件很不浪漫的事。從十一月開始，發薪日一到就有一筆固定金額離開我的帳戶，在我還來不及跟它討價還價之前；剩下來的，才是我可以花的。一月我不會搬。我會再簽一年，換一份長一點的合約和稍微吃緊一點的月份，然後四月再把試算表跑一次。原來紀律這件事，大多是把事情安排好，讓你不必勇敢第二次。"
+    }
+  ],
+  "target": [
+    {
+      "w": "savings",
+      "ipa": "/ˈseɪ.vɪŋz/",
+      "pos": "n.",
+      "cn": "存款",
+      "def": "Money you have kept instead of spending it.",
+      "ex": "They emptied their savings to open a second noodle stall.",
+      "exCn": "他們把存款全部掏出來，開了第二個麵攤。"
+    },
+    {
+      "w": "lease",
+      "ipa": "/liːs/",
+      "pos": "n.",
+      "cn": "租約",
+      "def": "A legal agreement that lets you use a place for a set time.",
+      "ex": "The gallery signed a three-year lease on the old bank building.",
+      "exCn": "那間畫廊跟舊銀行大樓簽了三年的租約。"
+    },
+    {
+      "w": "utility",
+      "ipa": "/juːˈtɪləti/",
+      "pos": "n.",
+      "cn": "水電等公共服務",
+      "def": "A basic service such as water, gas or electricity.",
+      "ex": "In winter the utility costs almost double at the workshop.",
+      "exCn": "冬天工作室的水電費幾乎翻倍。"
+    },
+    {
+      "w": "trade-off",
+      "ipa": "/ˈtreɪd ɑːf/",
+      "pos": "n.",
+      "cn": "取捨",
+      "def": "A situation where you accept something worse to get something better.",
+      "ex": "Every cheap flight involves a trade-off with sleep.",
+      "exCn": "每一張便宜機票都要拿睡眠來換。"
+    },
+    {
+      "w": "inflation",
+      "ipa": "/ɪnˈfleɪʃn/",
+      "pos": "n.",
+      "cn": "通貨膨脹",
+      "def": "A general rise in prices over time.",
+      "ex": "Inflation ate most of the raise the staff celebrated in spring.",
+      "exCn": "通膨把員工春天慶祝的那次加薪吃掉了大半。"
+    },
+    {
+      "w": "cushion",
+      "ipa": "/ˈkʊʃ.ən/",
+      "pos": "n.",
+      "cn": "緩衝（金）",
+      "def": "An amount of money kept to protect you from a sudden problem.",
+      "ex": "A three-month cushion lets a small shop survive a quiet season.",
+      "exCn": "三個月的緩衝金可以讓一家小店撐過淡季。"
+    },
+    {
+      "w": "commute",
+      "ipa": "/kəˈmjuːt/",
+      "pos": "n.",
+      "cn": "通勤（路程）",
+      "def": "The regular journey between home and work.",
+      "ex": "His commute shrank to nine minutes when the new line opened.",
+      "exCn": "新線通車後，他的通勤縮到九分鐘。"
+    },
+    {
+      "w": "discipline",
+      "ipa": "/ˈdɪsəplɪn/",
+      "pos": "n.",
+      "cn": "紀律；自制",
+      "def": "The habit of making yourself do what you planned.",
+      "ex": "Learning an instrument rewards discipline more than talent.",
+      "exCn": "學樂器靠的是紀律，而不是天分。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What made the writer open a spreadsheet that night?",
+      "qCn": "是什麼讓作者那天晚上打開試算表？",
+      "opts": [
+        "A. A four-line message about a rent increase",
+        "B. A new job offer from another factory",
+        "C. A bill from the bus company",
+        "D. A phone call from her bank"
+      ],
+      "optsCn": [
+        "A. 一則四行字的漲租訊息",
+        "B. 另一家工廠給的新工作機會",
+        "C. 公車公司寄來的帳單",
+        "D. 銀行打來的電話"
+      ],
+      "ans": 0,
+      "expl": "it was four lines long. The rent is going up in January.——第一段，而且她原本打算週末再看，結果當晚十一點就開了試算表。"
+    },
+    {
+      "q": "What did the spreadsheet show about her salary?",
+      "qCn": "試算表讓她看清薪水的什麼事？",
+      "opts": [
+        "A. About a quarter of it was free to spend",
+        "B. About four percent of it was free to spend",
+        "C. Half of it went on flights home",
+        "D. It had fallen since the year before"
+      ],
+      "optsCn": [
+        "A. 大約四分之一可以放心花",
+        "B. 大約百分之四可以放心花",
+        "C. 一半花在回家的機票上",
+        "D. 比前一年少了"
+      ],
+      "ans": 1,
+      "expl": "the comfortable part of my salary turned out to be about four percent of it——第二段最後一句。"
+    },
+    {
+      "q": "What is the trade-off described in the third paragraph?",
+      "qCn": "第三段講的取捨是什麼？",
+      "opts": [
+        "A. Cheaper rent against a longer commute",
+        "B. A bigger flat against a quieter street",
+        "C. More savings against a better job",
+        "D. A longer lease against a smaller deposit"
+      ],
+      "optsCn": [
+        "A. 房租便宜一點，換通勤久一點",
+        "B. 房子大一點，換街道安靜一點",
+        "C. 存款多一點，換工作好一點",
+        "D. 租約長一點，換押金少一點"
+      ],
+      "ans": 0,
+      "expl": "so a smaller rent buys me a longer commute and two fewer free evenings a week——第三段把代價寫得很具體。"
+    },
+    {
+      "q": "I ___ the spreadsheet again in April. I decided that weeks ago.",
+      "qCn": "我四月會再把試算表跑一次，這是幾個星期前就決定的。",
+      "opts": [
+        "A. will run",
+        "B. am going to run",
+        "C. run",
+        "D. ran"
+      ],
+      "ans": 1,
+      "expl": "決定早就做好了，不是說話當下才想到，所以用 am going to run。will run 聽起來像臨時起意，run 是習慣，ran 是過去。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The rent will go up in January.",
+      "b2": "The rent is going up in January.",
+      "note": "通知已經寄到手上了，這不是預測，而是已經在路上的事實。換成 is going up 之後，讀者馬上知道「文件在她手裡」；寫 will 反而像作者自己在猜，整段的重量就輕掉了。",
+      "sp": "January. Up it goes.",
+      "spNote": "口語把時間丟到最前面，再用倒裝的短句補一刀，帶一點無奈的語氣。",
+      "b1Cn": "房租一月會漲。",
+      "b2Cn": "房租一月就要漲了。",
+      "spCn": "一月，就漲上去了。"
+    },
+    {
+      "b1": "I decided to put some money away first and then spend the rest.",
+      "b2": "A fixed amount leaves my account on payday, before I can argue with it.",
+      "note": "第一種寫法把主角放在「我決定」，讀起來像在宣示決心；第二種把主詞換成那筆錢，動作自己會發生，連作者都插不上手。寫自制力的時候，讓制度當主詞比讓自己當主詞有說服力得多。",
+      "sp": "Money's gone before I see it.",
+      "spNote": "口語用「還沒看到就不見了」這種誇張說法，把自動轉帳講得很生動。",
+      "b1Cn": "我決定先存一些錢，再花剩下的。",
+      "b2Cn": "發薪日一到，一筆固定金額就離開我的帳戶，我還來不及跟它討價還價。",
+      "spCn": "錢在我看到之前就不見了。"
+    }
+  ]
+},
 /* ---------- 2026-10-09 每日文章（職場與面試） ---------- */
 {
   "id": "d20261009a2",
@@ -11562,6 +12347,904 @@ articles:[
 ],
 
 grammar:[
+/* ---------- 2026-10-14 每日文法（用現在式講未來；going to） ---------- */
+{
+  "id": "dg20261014a2",
+  "date": "2026-10-14",
+  "unitNo": 19,
+  "level": "A2",
+  "title": "Present Tenses for the Future: It Is Already Arranged",
+  "titleCn": "用現在式講未來：已經排定的事",
+  "srcDays": [],
+  "summary": "英文講未來不一定用 will：已經跟人約好、日子訂了的事用 be + V-ing，照班表或時刻表走的時間用現在簡單式，will 留給預測和當場才決定的事。",
+  "sections": [
+    {
+      "h": "已經約好的事：be + V-ing",
+      "body": "中文說「我星期四要看牙醫」，那個「要」既可以是預測也可以是約好的事，聽的人得靠上下文猜。英文不猜：只要是已經打過電話、訂過位、寫進行事曆的事，就用 be 動詞加 V-ing。這個形狀本來是講「現在正在做」，加上一個未來的時間詞之後，就變成「那件事已經排好了」。所以句子裡幾乎都會有 tomorrow、on Monday、tonight 這種時間詞，不然讀者會以為你在講此刻。",
+      "table": {
+        "head": [
+          "你想說的意思",
+          "英文怎麼寫",
+          "定了沒"
+        ],
+        "rows": [
+          [
+            "我星期四要看牙醫",
+            "I am seeing the dentist on Thursday.",
+            "約好了"
+          ],
+          [
+            "我們星期五在外面吃",
+            "We are eating out on Friday.",
+            "訂位了"
+          ],
+          [
+            "我每個星期一跟她碰面",
+            "I meet her every Monday.",
+            "這是常態，不是安排"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "My sister is flying to Osaka on Tuesday.",
+          "cn": "我姊姊星期二要飛大阪。",
+          "note": "機票買了，所以用 be + V-ing"
+        },
+        {
+          "en": "We are having dinner at my aunt's house tonight.",
+          "cn": "我們今天晚上要在我阿姨家吃飯。",
+          "note": "tonight 讓讀者知道這是未來，不是此刻"
+        },
+        {
+          "en": "The team is cleaning the office on Friday afternoon.",
+          "cn": "團隊星期五下午要打掃辦公室。",
+          "note": "主詞是 the team，be 動詞用 is"
+        }
+      ]
+    },
+    {
+      "h": "照表走的時間：現在簡單式",
+      "body": "公車幾點開、店幾點開門、電影幾點放，這些時間不是你能決定的，它們印在表上。英文把這種未來交給現在簡單式，因為現在簡單式本來就是講「固定、重複、本來就這樣」。注意這裡動詞要跟著主詞變化：單數第三人稱要加 -s（leaves、opens、starts），很多人一想到未來就忘了加。",
+      "bullets": [
+        "班表、時刻表、開店時間、上課時間 → 現在簡單式",
+        "自己跟別人約好的事 → be + V-ing",
+        "用現在簡單式講未來時，句子裡一定要有時間詞，不然會變成在講常態"
+      ],
+      "table": {
+        "head": [
+          "情況",
+          "英文怎麼寫",
+          "為什麼"
+        ],
+        "rows": [
+          [
+            "火車七點開（時刻表）",
+            "The train arrives at seven.",
+            "表上寫的，不是我排的"
+          ],
+          [
+            "我搭七點那班（我的安排）",
+            "I am taking the seven o'clock train.",
+            "我自己訂的行程"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The last bus leaves at ten forty.",
+          "cn": "最後一班公車十點四十開。",
+          "note": "時刻表上的時間，動詞加 -s"
+        },
+        {
+          "en": "The post office opens at nine on Saturdays.",
+          "cn": "郵局星期六九點開門。",
+          "note": "固定的營業時間"
+        },
+        {
+          "en": "Our class starts at two next week.",
+          "cn": "我們下星期的課兩點開始。",
+          "note": "next week 指向未來，動詞還是現在簡單式"
+        }
+      ]
+    },
+    {
+      "h": "那 will 什麼時候用？",
+      "body": "will 不是不能用，而是位置不同。它負責兩件事：第一是預測，也就是你心裡猜的事；第二是當場才決定的事，話說出口的那一秒才想到。所以 will 的句子常常跟 maybe、I think、I hope 一起出現，或是出現在你伸手幫忙的那一刻。如果事情早就定了，用 will 反而會讓人以為你還在考慮。",
+      "table": {
+        "head": [
+          "will 的用途",
+          "例句",
+          "感覺"
+        ],
+        "rows": [
+          [
+            "預測",
+            "Maybe it will rain tomorrow night.",
+            "我猜的"
+          ],
+          [
+            "當場決定",
+            "I will carry that bag for you.",
+            "話說出口才決定"
+          ],
+          [
+            "已經排定（不要用 will）",
+            "I am picking up the keys at four.",
+            "已經約好四點"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I will call you when I get home.",
+          "cn": "我到家就打電話給你。",
+          "note": "講的這一刻才答應的事"
+        },
+        {
+          "en": "I think the shop will be busy on Sunday.",
+          "cn": "我想那家店星期日會很忙。",
+          "note": "I think 一出現就是在猜"
+        },
+        {
+          "en": "That box looks heavy. I will help you.",
+          "cn": "那個箱子看起來很重，我幫你。",
+          "note": "看到了才決定幫忙，所以用 will"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I will go to the dentist tomorrow at three.",
+      "good": "I am going to the dentist tomorrow at three.",
+      "why": "時間都報到三點了，表示電話早就打了、位子早就掛了，這種事在英文裡屬於「已經排定」，要用 be + V-ing。寫 will 會讓對方以為你只是「打算哪天去」，還沒約。檢查方法：句子裡出現具體的時間點，而且是你自己安排的，就不要用 will。"
+    },
+    {
+      "bad": "The movie will start at eight.",
+      "good": "The movie starts at eight.",
+      "why": "電影時刻是戲院排的，不是你決定的，所以歸在時刻表那一類，用現在簡單式。中文的「會」沒有分這一層，所以學生一看到未來就伸手去拿 will。只要那個時間是印在表上、牌子上、票上的，就用現在簡單式。"
+    },
+    {
+      "bad": "He is play basketball on Sunday.",
+      "good": "He is playing basketball on Sunday.",
+      "why": "be + V-ing 是一組的，少了 -ing 就只剩半個句型。中文沒有這種形狀變化，所以手比腦快的時候很容易漏。檢查方法：看到 am、is、are 就往後找 -ing，兩個一定要成對出現。"
+    },
+    {
+      "bad": "Do you come to the party on Saturday?",
+      "good": "Are you coming to the party on Saturday?",
+      "why": "問別人「已經安排好了沒」要用 be + V-ing 的問句，把 be 動詞提到前面。寫 Do you come 會變成問對方「你平常都來嗎」，像在問習慣，而不是問這個星期六。中文兩句都是「你星期六要來嗎」，所以要靠英文的形狀自己分。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I ___ my grandmother on Sunday. We arranged it last week.",
+      "qCn": "我星期日要去看我奶奶，我們上星期就講好了。",
+      "opts": [
+        "A. visit",
+        "B. am visiting",
+        "C. visited",
+        "D. will visiting"
+      ],
+      "ans": 1,
+      "expl": "第二句說「上星期就講好了」，表示已經約定，所以用 be + V-ing。will visiting 這種形狀英文裡不存在。"
+    },
+    {
+      "q": "The shop ___ at eleven on Sundays.",
+      "qCn": "那家店星期日十一點開門。",
+      "opts": [
+        "A. is opening",
+        "B. open",
+        "C. opens",
+        "D. will opening"
+      ],
+      "ans": 2,
+      "expl": "營業時間是固定的，屬於時刻表那一類，用現在簡單式，主詞 the shop 是第三人稱單數所以加 -s。"
+    },
+    {
+      "q": "Don't worry about the chair. I ___ one for you.",
+      "qCn": "椅子別擔心，我幫你搬一張來。",
+      "opts": [
+        "A. am bringing",
+        "B. will bring",
+        "C. bring",
+        "D. brought"
+      ],
+      "ans": 1,
+      "expl": "這是看到對方沒椅子、話說出口才決定的幫忙，所以用 will。am bringing 會變成「我早就排好要搬椅子」，語氣不對。"
+    },
+    {
+      "q": "___ you coming to the station with us tomorrow?",
+      "qCn": "你明天要跟我們一起去車站嗎？",
+      "opts": [
+        "A. Do",
+        "B. Are",
+        "C. Will",
+        "D. Does"
+      ],
+      "ans": 1,
+      "expl": "後面是 coming，所以前面要配 be 動詞，問句就把 are 提到最前面。Do you coming 兩個系統混在一起，是錯的。"
+    }
+  ]
+},
+{
+  "id": "dg20261014b1",
+  "date": "2026-10-14",
+  "unitNo": 19,
+  "level": "B1",
+  "title": "Timetable or Arrangement? Two Present Tenses, One Future",
+  "titleCn": "時刻表還是約好的事？兩種現在式都在講未來",
+  "srcDays": [],
+  "summary": "同一件未來的事，英文會先問「誰決定的」：表上定好的用現在簡單式，自己跟人約好的用現在進行式，還沒定、只是猜或當場想到的才用 will。",
+  "sections": [
+    {
+      "h": "先問一句：這是誰決定的？",
+      "body": "A2那一層只要記住「約好的用 be + V-ing、表上的用現在簡單式」就夠了。到了B1，真正好用的是一個判斷問題：這件事是誰決定的？如果是機構、公司、時刻表決定的，你只是照著走，就用現在簡單式；如果是你自己或你跟某個人談好的，就用現在進行式；如果還沒有人決定，那就不是安排，只能用 will 去猜。這一條問題一問，三種形狀幾乎自動分好。",
+      "table": {
+        "head": [
+          "誰決定的",
+          "用什麼",
+          "例句"
+        ],
+        "rows": [
+          [
+            "時刻表、公司、學校",
+            "現在簡單式",
+            "The rent review happens every two years."
+          ],
+          [
+            "我自己或我跟別人談好",
+            "現在進行式",
+            "I am collecting the new key on Friday."
+          ],
+          [
+            "還沒人決定，我在猜",
+            "will",
+            "I think the price will drop after the holiday."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The office closes for three days over the festival.",
+          "cn": "辦公室過節會關三天。",
+          "note": "公司公告，不是我排的"
+        },
+        {
+          "en": "We are signing the papers on Thursday morning.",
+          "cn": "我們星期四早上要簽文件。",
+          "note": "雙方談好的時間"
+        },
+        {
+          "en": "I think they will ask for a bigger deposit.",
+          "cn": "我想他們會要求更高的押金。",
+          "note": "I think 一出現就是猜測"
+        }
+      ]
+    },
+    {
+      "h": "現在簡單式的未來：有點官方的語氣",
+      "body": "用現在簡單式講未來，句子會帶一種「這是規定、這是公告」的味道，所以常出現在時刻表、課表、合約、行程單上。因為語氣偏官方，動詞的選擇也偏固定的幾個：start、finish、open、close、leave、arrive、begin、end。注意兩件事：主詞第三人稱單數要加 -s，而且句子裡一定要有時間詞，否則整句會被讀成「平常都這樣」。",
+      "bullets": [
+        "常見動詞：start、finish、open、close、leave、arrive、begin、end",
+        "語氣偏公告、偏正式，所以旅遊行程和合約最愛用",
+        "沒有時間詞的話，同一句話會被讀成「現在的常態」而不是未來"
+      ],
+      "examples": [
+        {
+          "en": "The tour leaves the hotel at six fifteen on Wednesday.",
+          "cn": "旅遊團星期三六點十五分從飯店出發。",
+          "note": "行程單上的時間"
+        },
+        {
+          "en": "My contract ends at the end of December.",
+          "cn": "我的合約十二月底到期。",
+          "note": "日期寫在合約上，不是我能改的"
+        },
+        {
+          "en": "The new rule takes effect next month.",
+          "cn": "新規定下個月開始實施。",
+          "note": "官方公告的語氣"
+        }
+      ]
+    },
+    {
+      "h": "現在進行式的未來：我已經排進行程了",
+      "body": "現在進行式講未來，背後一定有一個已經做完的動作：打了電話、買了票、跟人說好了。所以這個形狀常常用來回答「你那天有空嗎」，因為它直接把你的行程念出來。它也特別適合拒絕：I am working on Saturday 比 I cannot come 客觀，因為你報的是事實而不是意願。要注意的是它不能用在「不是人能安排」的事情上，天氣、價格、股市都不會跟你約時間。",
+      "examples": [
+        {
+          "en": "I am working on Saturday, so Sunday suits me better.",
+          "cn": "我星期六要上班，所以星期日比較適合我。",
+          "note": "報行程比講意願客觀"
+        },
+        {
+          "en": "She is moving out at the end of the month.",
+          "cn": "她月底要搬走。",
+          "note": "已經跟房東講好了"
+        },
+        {
+          "en": "They are not renewing the lease this year.",
+          "cn": "他們今年不會續租。",
+          "note": "否定句把 not 放在 be 動詞後面"
+        }
+      ]
+    },
+    {
+      "h": "will 的兩個位置：預測與當場決定",
+      "body": "B1最常見的錯誤不是不會用 will，而是用太多。will 真正的位置只有兩個：第一是預測，心裡沒有證據、純粹在猜；第二是當場決定，話說出口的那一秒才下的決心，所以它常出現在答應、拒絕、提議的句子裡。還有一種特別容易混的：if 子句後面的主句要用 will，但 if 子句本身不能用 will，這一點中文完全沒有對應的規則，只能記住。",
+      "table": {
+        "head": [
+          "用途",
+          "例句",
+          "判斷線索"
+        ],
+        "rows": [
+          [
+            "預測",
+            "Prices will probably rise again next spring.",
+            "probably、I think、maybe"
+          ],
+          [
+            "當場決定",
+            "Fine, I will take the smaller room.",
+            "對話中的即時反應"
+          ],
+          [
+            "條件句的主句",
+            "If the rent rises again, I will look elsewhere.",
+            "if 子句本身用現在式"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Nobody knows what the market will look like in two years.",
+          "cn": "沒有人知道兩年後的市場會是什麼樣子。",
+          "note": "純預測，沒有任何安排"
+        },
+        {
+          "en": "All right, I will bring the forms myself.",
+          "cn": "好，那我自己把表格帶過去。",
+          "note": "講話當下才決定"
+        },
+        {
+          "en": "If she signs this week, the landlord will keep the old price.",
+          "cn": "如果她這星期簽，房東就會維持舊價錢。",
+          "note": "if 子句用 signs，主句用 will keep"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I will meet the landlord on Thursday evening. It is already arranged.",
+      "good": "I am meeting the landlord on Thursday evening. It is already arranged.",
+      "why": "自己都說「已經約好了」，卻用 will，前後矛盾。will 的語氣是「還沒定、我現在決定」，而 be + V-ing 的語氣是「定了，我只是在報行程」。檢查方法：如果這件事你已經跟某個人講過了，就把 will 換掉。"
+    },
+    {
+      "bad": "The new price will start from January, it says so in the contract.",
+      "good": "The new price starts in January, it says so in the contract.",
+      "why": "合約上寫好的日期屬於「別人決定、我照著走」，所以用現在簡單式，語氣才像在引述條文。另外 start 後面接時間點用 in，不用 from，from 要搭配一個終點才自然。"
+    },
+    {
+      "bad": "If the rent will rise again, I will move out.",
+      "good": "If the rent rises again, I will move out.",
+      "why": "if 子句裡不能用 will，即使中文的「如果房租又會漲」聽起來很順。英文把未來的訊息交給主句那個 will 就夠了，條件子句只負責設定情況，所以用現在簡單式。這是中文母語者最常犯的一條。"
+    },
+    {
+      "bad": "Tomorrow the weather is being hot.",
+      "good": "Tomorrow the weather will be hot.",
+      "why": "現在進行式的未來只能用在「人可以安排」的事情上。天氣不會跟你約時間，所以它只能被預測，要用 will。同理，價格、匯率、比賽結果也都不能用 be + V-ing 講未來。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The train ___ at 7:20, so we need to leave home by seven.",
+      "qCn": "火車七點二十開，所以我們七點前要出門。",
+      "opts": [
+        "A. is leaving",
+        "B. leaves",
+        "C. will leave",
+        "D. left"
+      ],
+      "ans": 1,
+      "expl": "時刻表上的時間由鐵路公司決定，不是我們排的，所以用現在簡單式 leaves。"
+    },
+    {
+      "q": "Sorry, I can't come on Friday. I ___ a client that afternoon.",
+      "qCn": "抱歉，星期五我不能來，那天下午我要見一個客戶。",
+      "opts": [
+        "A. will see",
+        "B. see",
+        "C. am seeing",
+        "D. saw"
+      ],
+      "ans": 2,
+      "expl": "會面早就約好，所以用現在進行式報行程。will see 會變成「我現在決定那天去見客戶」，拿來當拒絕的理由就很怪。"
+    },
+    {
+      "q": "If the landlord ___ the rent again, we will start looking.",
+      "qCn": "如果房東再漲一次房租，我們就會開始找房子。",
+      "opts": [
+        "A. will raise",
+        "B. raises",
+        "C. is raising",
+        "D. raised"
+      ],
+      "ans": 1,
+      "expl": "if 子句裡不用 will，未來的訊息交給主句的 will start 就夠了，所以條件子句用現在簡單式 raises。"
+    },
+    {
+      "q": "Which sentence is a pure prediction with no arrangement behind it?",
+      "qCn": "哪一句是純粹的預測，背後沒有任何安排？",
+      "opts": [
+        "A. We are viewing two flats on Saturday.",
+        "B. The agency opens at ten tomorrow.",
+        "C. Rents will probably keep rising for a few more years.",
+        "D. I am paying the deposit this afternoon."
+      ],
+      "ans": 2,
+      "expl": "只有C沒有任何已經談好或排定的動作，probably 也直接標明是猜測。A和D是自己的安排，B是機構的營業時間。"
+    }
+  ]
+},
+{
+  "id": "dg20261014b1p",
+  "date": "2026-10-14",
+  "unitNo": 20,
+  "level": "B1+",
+  "title": "I'm going to (do): The Plan in Your Head, the Evidence in Front of You",
+  "titleCn": "going to：心裡的打算，與眼前的跡象",
+  "srcDays": [],
+  "summary": "be going to 有兩個工作：講「我早就決定要做」的打算，以及講「眼前的跡象已經指向這個結果」的預測；兩者的共同點是決定或證據都發生在說話之前。",
+  "sections": [
+    {
+      "h": "兩個用途，一個共同點",
+      "body": "教科書常把 going to 拆成「打算」和「有根據的預測」兩個用法，看起來像兩件不相干的事，其實它們共用同一個邏輯：決定或證據都已經存在於說話之前。講打算的時候，決定在你腦袋裡早就做好了；講預測的時候，證據就擺在眼前。所以 going to 的句子讀起來總是帶著一種「這件事已經上路了」的重量，而 will 比較輕，像是當下才生出來的想法。",
+      "table": {
+        "head": [
+          "用途",
+          "句子",
+          "說話前就存在的東西"
+        ],
+        "rows": [
+          [
+            "早就有的打算",
+            "They are going to review every supplier this quarter.",
+            "會議上已經決定了"
+          ],
+          [
+            "眼前有跡象的預測",
+            "Those cracks are going to get worse after the rain.",
+            "裂縫就在眼前"
+          ],
+          [
+            "當下才決定（用 will）",
+            "Fine, I will check the figures myself.",
+            "什麼都沒有，話出口才決定"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "We are going to replace the whole pipe, not just the joint.",
+          "cn": "我們打算把整根管子換掉，不只是接頭。",
+          "note": "決定早就做了，所以不用 will"
+        },
+        {
+          "en": "Look at that queue. We are going to miss the first session.",
+          "cn": "你看那條隊伍，我們第一場一定趕不上了。",
+          "note": "證據是眼前的隊伍"
+        },
+        {
+          "en": "The deadline is tight, so something is going to slip.",
+          "cn": "期限太趕了，一定有東西會延。",
+          "note": "前半句就是證據"
+        }
+      ]
+    },
+    {
+      "h": "going to 和現在進行式的分工",
+      "body": "兩個都講已經決定的未來，差別在「定到什麼程度」。現在進行式背後通常有一個具體的安排：時間、地點、對方都齊了，所以它常常跟時間詞綁在一起。going to 只要求你心裡有打算，細節可以還沒談。因此 I am meeting the auditor at ten 表示十點那場會議已經排進行事曆，而 I am going to meet the auditor 只是說你決定要見他，哪天還不知道。另外還有一個細節：go 這個動詞本身用 going to 會變成 going to go，雖然文法沒錯，母語者通常直接說 I am going to the airport。",
+      "bullets": [
+        "現在進行式：時間地點都定了，像在念行事曆",
+        "going to：決定做了，細節可能還沒排",
+        "動詞是 go 的時候，口語幾乎都把 going to go 縮成現在進行式"
+      ],
+      "examples": [
+        {
+          "en": "I am going to ask for a longer contract, but I have not booked a time.",
+          "cn": "我打算要求一份更長的合約，但還沒約時間。",
+          "note": "打算有了，安排還沒有"
+        },
+        {
+          "en": "I am asking for a longer contract at Thursday's meeting.",
+          "cn": "我星期四的會議上要要求一份更長的合約。",
+          "note": "時間地點都齊了"
+        },
+        {
+          "en": "She is going to look at three flats before she decides.",
+          "cn": "她決定先看三間房子再做決定。",
+          "note": "決定明確，日期還沒排"
+        }
+      ]
+    },
+    {
+      "h": "被動語態裡的 going to",
+      "body": "新聞和公告很愛把 going to 和被動語態疊在一起，因為它既能說「這件事已經在路上」，又能把動作的執行者藏起來。形狀是 be going to be 加過去分詞，三個 be 的位置很容易寫錯：第一個 be 跟著主詞變化，第二個 be 永遠保持原形。中文完全沒有這一層，所以寫的時候要一塊一塊疊，不要憑語感。",
+      "table": {
+        "head": [
+          "主動",
+          "被動",
+          "差別"
+        ],
+        "rows": [
+          [
+            "They are going to raise the minimum rate.",
+            "The minimum rate is going to be raised.",
+            "後者不必說出是誰"
+          ],
+          [
+            "Nobody is going to review these bills.",
+            "These bills are not going to be reviewed.",
+            "焦點從人移到法案"
+          ],
+          [
+            "The ministry is going to announce the change.",
+            "The change is going to be announced.",
+            "公告的標準語氣"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "A new ceiling is going to be written into the regulations.",
+          "cn": "新的上限會被寫進規章裡。",
+          "note": "是誰寫的不重要，所以用被動"
+        },
+        {
+          "en": "Those accounts are going to be checked twice a year.",
+          "cn": "那些帳戶每年會被查兩次。",
+          "note": "第二個 be 保持原形"
+        },
+        {
+          "en": "Nothing is going to be decided before the hearing.",
+          "cn": "聽證會之前不會有任何決定。",
+          "note": "否定放在第一個 be 後面"
+        }
+      ]
+    },
+    {
+      "h": "was going to：當初打算，後來沒做",
+      "body": "把 going to 的 be 動詞換成過去式，整句就變成「當初打算，後來沒有發生」。這個句型在解釋、道歉、報告延誤的時候特別好用，因為它一句話就交代了「我有計畫」和「計畫沒走完」兩件事，後面再接 but 說明原因。注意它跟單純的過去式不一樣：I called him 是真的打了，I was going to call him 是沒打。",
+      "examples": [
+        {
+          "en": "I was going to raise it at the meeting, but we ran out of time.",
+          "cn": "我本來打算在會議上提，但時間不夠了。",
+          "note": "提了沒有？沒有"
+        },
+        {
+          "en": "They were going to extend the lease, and then the price changed.",
+          "cn": "他們本來要續租，後來價錢變了。",
+          "note": "計畫被後來的事打斷"
+        },
+        {
+          "en": "She was going to pay the whole deposit in cash.",
+          "cn": "她本來打算用現金付全額押金。",
+          "note": "光是這個形狀就暗示事情沒照計畫走"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "Look at the ceiling. It will leak again.",
+      "good": "Look at the ceiling. It is going to leak again.",
+      "why": "前一句已經叫對方去看，證據就在眼前，這種「有根據的預測」要用 going to。will 的語氣是沒有證據的猜測，跟 Look at 這個開場互相衝突。判斷方法：如果你能指著某個東西說「就是因為這個」，就用 going to。"
+    },
+    {
+      "bad": "We decided last week. We will change the supplier.",
+      "good": "We decided last week. We are going to change the supplier.",
+      "why": "決定在上星期就做完了，說話的這一刻只是在報告，所以用 going to。will 表示決定發生在說話的那一秒，跟 last week 打架。中文的「我們會換供應商」兩種情況都適用，所以只能靠英文自己標記。"
+    },
+    {
+      "bad": "The rate is going to be raise next year.",
+      "good": "The rate is going to be raised next year.",
+      "why": "going to 的被動要疊三層：is going to + be + 過去分詞。寫成 be raise 是把過去分詞漏掉了，整句只剩半個被動。檢查方法：第二個 be 後面一定是 -ed 或不規則的過去分詞，絕對不是原形。"
+    },
+    {
+      "bad": "I am going to go to the bank tomorrow morning.",
+      "good": "I am going to the bank tomorrow morning.",
+      "why": "文法上沒有錯，但母語者聽起來很囉嗦，因為 going 已經有「去」的意思了。動詞是 go 的時候，直接用現在進行式就好。反過來說，如果你要強調「這是我早就決定的」，就換個動詞：I am going to open an account tomorrow."
+    },
+    {
+      "bad": "I was going to call the agent, so I called him at noon.",
+      "good": "I was going to call the agent, but the line was busy all morning.",
+      "why": "was going to 自帶「後來沒做」的意思，所以後面接 so 再說自己做了，前後就矛盾了。這個句型後面幾乎都接 but 或 then 來說明計畫為什麼斷掉。真的做了就直接用過去式。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Those figures look wrong. The auditor ___ a lot of questions.",
+      "qCn": "那些數字看起來不對，稽核員一定會問很多問題。",
+      "opts": [
+        "A. will ask",
+        "B. is going to ask",
+        "C. asks",
+        "D. is asking"
+      ],
+      "ans": 1,
+      "expl": "第一句就是眼前的證據（數字看起來不對），所以用 going to 的有根據預測。will 在這裡會變成沒來由的猜測。"
+    },
+    {
+      "q": "The minimum rate ___ to eight percent under one of the bills.",
+      "qCn": "依照其中一個法案，法定下限會被調高到百分之八。",
+      "opts": [
+        "A. is going to raise",
+        "B. is going to be raised",
+        "C. is going to be raise",
+        "D. will raising"
+      ],
+      "ans": 1,
+      "expl": "下限是被調高的，不是自己去調別人，所以要被動：is going to be 加過去分詞 raised。"
+    },
+    {
+      "q": "I ___ the figures myself, but the file was locked all afternoon.",
+      "qCn": "我本來打算自己核那些數字，但檔案整個下午都被鎖住。",
+      "opts": [
+        "A. am going to check",
+        "B. was going to check",
+        "C. checked",
+        "D. will check"
+      ],
+      "ans": 1,
+      "expl": "後半句說檔案鎖住，表示事情沒做成，所以用 was going to 講「當初打算、後來沒做」。"
+    },
+    {
+      "q": "Which sentence shows a decision made at the moment of speaking?",
+      "qCn": "哪一句表示決定是在說話的那一刻才做的？",
+      "opts": [
+        "A. We are going to move the audit to November.",
+        "B. We are moving the audit to November.",
+        "C. All right, I will move the audit to November.",
+        "D. The audit moves to November every year."
+      ],
+      "ans": 2,
+      "expl": "All right 是對話中的即時反應，決定在這一秒才下，所以用 will。A是早就有的打算，B是已排定的安排，D是每年固定的慣例。"
+    }
+  ]
+},
+{
+  "id": "dg20261014b2",
+  "date": "2026-10-14",
+  "unitNo": 20,
+  "level": "B2",
+  "title": "Choosing a Future: going to, will and the Present Continuous in Writing",
+  "titleCn": "挑一個未來式：going to、will 與現在進行式在寫作裡的語氣",
+  "srcDays": [],
+  "summary": "到了B2，三種未來式不只是文法選擇，而是語氣選擇：現在簡單式最正式、最不容爭辯，現在進行式像在念行事曆，going to 帶著證據的重量，will 最輕也最主觀。",
+  "sections": [
+    {
+      "h": "同一件事，四種重量",
+      "body": "B1那一層問的是「哪一個對」，B2要問的是「哪一個最適合這份文件」。把同一件事用四種形狀寫出來，讀者接收到的訊息並不一樣：現在簡單式聽起來像條文，誰都別想討論；現在進行式像在念行事曆，語氣中性；going to 把證據推到讀者面前，帶一點壓力；will 最輕，常常聽起來像作者的個人意見。寫報告、寫信、寫公告之前先決定你要哪一種重量，再回頭挑形狀。",
+      "table": {
+        "head": [
+          "形狀",
+          "讀者接收到的語氣",
+          "典型場合"
+        ],
+        "rows": [
+          [
+            "現在簡單式",
+            "規定如此，不必討論",
+            "合約、公告、行程表"
+          ],
+          [
+            "現在進行式",
+            "行程已定，我只是通知你",
+            "郵件、會議紀錄"
+          ],
+          [
+            "going to",
+            "證據擺著，結果已經在路上",
+            "分析、警告、提案"
+          ],
+          [
+            "will",
+            "這是我的判斷",
+            "預測、承諾、客套"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The revised policy applies to all contracts signed after April.",
+          "cn": "修訂後的政策適用於四月之後簽的所有合約。",
+          "note": "條文語氣，最不容爭辯"
+        },
+        {
+          "en": "We are circulating the revised policy to department heads on Monday.",
+          "cn": "我們星期一會把修訂後的政策發給各部門主管。",
+          "note": "中性的行程通知"
+        },
+        {
+          "en": "Without a clearer cap, the same dispute is going to reach us every spring.",
+          "cn": "如果上限不寫清楚，同樣的爭議每年春天都會再來一次。",
+          "note": "帶證據的警告"
+        }
+      ]
+    },
+    {
+      "h": "going to 在正式書面語裡的位置",
+      "body": "很多學習者以為 going to 偏口語，所以寫報告就全部改成 will，結果句子變得輕飄飄，像在許願。其實 going to 在書面語裡有一個 will 取代不了的功能：它把因果連起來。當你前面已經鋪了數據或事實，接著用 going to，讀者會自動把前面那一段當成證據。這就是為什麼分析報告的結論段很適合用它。要注意的是正式書面英文偏好 is likely to、is expected to 這類寫法，所以真正的高階選擇不是 will 還是 going to，而是要不要把判斷的強度標出來。",
+      "bullets": [
+        "前面鋪了證據，結論用 going to，因果關係最清楚",
+        "最正式的場合可以換成 is likely to、is expected to、is set to",
+        "把 going to 全部換成 will，整篇會失去「有憑有據」的語氣"
+      ],
+      "examples": [
+        {
+          "en": "Three of the five lines already run above capacity, so the backlog is going to grow.",
+          "cn": "五條線裡已經有三條超載，所以積壓一定會變多。",
+          "note": "前半句就是證據"
+        },
+        {
+          "en": "On these numbers, the fund is expected to run dry within a decade.",
+          "cn": "照這些數字看，這筆基金預計十年內就會用完。",
+          "note": "最正式的場合改用 is expected to"
+        },
+        {
+          "en": "The committee is set to publish its findings before the recess.",
+          "cn": "委員會預定在休會前公布調查結果。",
+          "note": "is set to 帶有官方排定的味道"
+        }
+      ]
+    },
+    {
+      "h": "will 的禮貌與距離",
+      "body": "will 在正式書面語裡最常見的功能其實不是預測，而是保持距離。英文寫信常用 I will 來承諾，因為它把動作放在未來，同時留下一點彈性；加上 would、may、might 之後，語氣還能再退一步。這就是為什麼客服信、拒絕信、談判信幾乎都是 will 和 would 的天下。相反地，想把語氣壓實、不給對方討論空間，就換回現在簡單式——這也是合約一律用現在簡單式的原因。",
+      "table": {
+        "head": [
+          "你想要的語氣",
+          "寫法",
+          "效果"
+        ],
+        "rows": [
+          [
+            "承諾但留彈性",
+            "I will confirm the final figure by Friday.",
+            "禮貌、有距離"
+          ],
+          [
+            "更客氣",
+            "We would be glad to review the clause with you.",
+            "再退一步"
+          ],
+          [
+            "不給討論空間",
+            "Payment falls due on the first of each month.",
+            "像條文"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "We will respond to your query within three working days.",
+          "cn": "我們會在三個工作日內回覆您的詢問。",
+          "note": "標準的客服承諾句"
+        },
+        {
+          "en": "Unfortunately we will not be able to extend the discount this year.",
+          "cn": "很遺憾，今年我們無法延長這項折扣。",
+          "note": "拒絕時用 will not be able to 比 cannot 柔軟"
+        },
+        {
+          "en": "Interest accrues from the date of signature.",
+          "cn": "利息自簽署日起計算。",
+          "note": "合約語氣，用現在簡單式把事情釘死"
+        }
+      ]
+    },
+    {
+      "h": "敘事裡的未來：讓時間往前推",
+      "body": "寫故事或寫回顧的時候，三種形狀還有一個額外的功能：控制讀者的視角。用 was going to 可以把讀者帶回當時的心情，讓他知道主角原本打算做什麼；用 would 可以站在現在回望過去的未來，常見於傳記和回顧性的文章。兩者的差別在於 was going to 偏向「當時的打算」，而 would 偏向「後來果然發生」。選錯了，讀者會誤判結局。",
+      "examples": [
+        {
+          "en": "She was going to sign for another year, and nobody in the office knew yet.",
+          "cn": "她本來打算再簽一年，辦公室裡還沒有人知道。",
+          "note": "帶讀者回到當時的心情"
+        },
+        {
+          "en": "That single notice would change how she budgeted for the next five years.",
+          "cn": "那一張通知將改變她接下來五年的記帳方式。",
+          "note": "站在現在回望，暗示後來真的發生了"
+        },
+        {
+          "en": "By April she was checking the same spreadsheet every payday.",
+          "cn": "到了四月，她每個發薪日都會打開同一張試算表。",
+          "note": "過去進行式把習慣的形成寫成畫面"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "Under clause four, the tenant will pay the service charge each quarter.",
+      "good": "Under clause four, the tenant pays the service charge each quarter.",
+      "why": "引述條文的時候用 will，語氣會從「規定如此」掉到「我預期他會付」，等於把義務講成期待。合約、規章、政策一律用現在簡單式，因為它們描述的是一個持續有效的狀態，不是某一次的未來事件。"
+    },
+    {
+      "bad": "The figures are bad, so the fund will run out within ten years.",
+      "good": "The figures are bad, so the fund is going to run out within ten years.",
+      "why": "前半句已經把證據攤開了，後半句卻用 will，因果鏈就斷了，讀起來像作者的個人猜測而不是從數據推出來的結論。有證據鋪在前面，就讓 going to 或 is expected to 把那層因果接起來。"
+    },
+    {
+      "bad": "I am going to send you the revised draft tomorrow at ten.",
+      "good": "I am sending you the revised draft tomorrow at ten.",
+      "why": "時間都報到十點了，這是已排定的安排，用現在進行式才是郵件裡的標準語氣。going to 會讓對方覺得你只是「打算」，時間還可能變動，在商務信件裡反而製造不確定感。"
+    },
+    {
+      "bad": "We are going to be delighted to review the clause with you.",
+      "good": "We would be delighted to review the clause with you.",
+      "why": "客套句的重點是保持距離和彈性，所以用 would，不是用 going to。going to 把「我們一定會很高興」講得像已經安排好的事實，語氣突然變得很怪。禮貌語氣幾乎都靠 would、may、might 這類形狀撐起來。"
+    },
+    {
+      "bad": "She would sign for another year, but she had not told anyone.",
+      "good": "She was going to sign for another year, but she had not told anyone.",
+      "why": "would 的敘事功能是「後來果然發生」，可是後半句說她還沒跟任何人講，顯然在寫當時的打算，所以要用 was going to。兩個形狀都能講「過去的未來」，但一個暗示成真、一個暗示還在心裡，選錯會讓讀者誤判結局。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Under the agreement, interest ___ from the date of signature.",
+      "qCn": "依本協議，利息自簽署日起計算。",
+      "opts": [
+        "A. will accrue",
+        "B. accrues",
+        "C. is accruing",
+        "D. is going to accrue"
+      ],
+      "ans": 1,
+      "expl": "引述條文要用現在簡單式，語氣才是「規定如此」。用 will 會把義務講成預期，是法律英文裡不會出現的寫法。"
+    },
+    {
+      "q": "Occupancy has fallen for six quarters, so the yield ___ under pressure.",
+      "qCn": "住用率已經連續六季下滑，所以收益率勢必會承受壓力。",
+      "opts": [
+        "A. will come",
+        "B. comes",
+        "C. is going to come",
+        "D. came"
+      ],
+      "ans": 2,
+      "expl": "前半句是攤開的數據，後半句的結論要承接那層證據，所以用 going to 把因果接起來。"
+    },
+    {
+      "q": "We ___ the signed copy to your office tomorrow morning; the courier is booked.",
+      "qCn": "我們明天早上會把簽好的那份送到您辦公室，快遞已經叫好了。",
+      "opts": [
+        "A. will send",
+        "B. are sending",
+        "C. are going to send",
+        "D. send"
+      ],
+      "ans": 1,
+      "expl": "快遞都訂好了，是已排定的安排，商務信件用現在進行式最自然。going to 會讓對方以為時間還會變。"
+    },
+    {
+      "q": "Which sentence keeps the most polite distance in a letter of refusal?",
+      "qCn": "在拒絕信裡，哪一句維持了最客氣的距離？",
+      "opts": [
+        "A. We are not extending the discount this year.",
+        "B. We do not extend the discount in October.",
+        "C. We are going to drop the discount this year.",
+        "D. Unfortunately we will not be able to extend the discount this year."
+      ],
+      "ans": 3,
+      "expl": "will not be able to 把拒絕包在能力與未來裡，再加上 Unfortunately 緩衝，距離最客氣。A是通知，B像規定，C直接而且帶著「已經決定」的壓力。"
+    }
+  ]
+},
 /* ---------- 2026-10-09 每日文法（used to + 原形；用現在式講未來） ---------- */
 {
   "id": "dg20261009a2",
