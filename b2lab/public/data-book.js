@@ -23440,6 +23440,935 @@ window.BOOK = {
         ]
       }
     ]
+  },
+  /* ---- bk20261013 WH Questions, Auxiliary Verbs & Manufacturing English ---- */
+  {
+    "id": "bk20261013",
+    "video": true,
+    "icon": "🔩",
+    "date": "2026-10-13",
+    "doc": "https://docs.google.com/document/d/1DSxJumjlfnsIuBjPhwDmCr6pXKLQtYRMNvbjlE7g9YQ/edit",
+    "title": "WH Questions, Auxiliary Verbs & Manufacturing English",
+    "titleCn": "疑問句與品保會議英文",
+    "topics": "WHO / WHAT / WHERE / WHEN / WHY / HOW / HOW LONG / HOW MANY / HOW MUCH / WHICH、Yes/No 問句",
+    "hwTitle": "I. ★ 10/13 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "wrong": "The supervisor asked us to verify the new fixture was ready for production.",
+        "fix": "The supervisor asked us to verify that the new fixture was ready for production.",
+        "cn": "主管要求我們確認新治具已經準備好可以生產。",
+        "pat": "verify + that + 子句",
+        "note": "句子裡有兩個相連的想法：The supervisor asked us to verify / the new fixture was ready for production。用 that 把兩段清楚接起來。沒有 that 意思還是看得懂，但在正式的職場英文裡，加上 that 更正確、更清楚。asked us to verify 是 ask + 受詞 + to + 原形動詞。"
+      },
+      {
+        "n": 2,
+        "wrong": "The machine was acting up so we need to stop testing.",
+        "fix": "The machine was acting up, so we needed to stop testing.",
+        "cn": "機器出狀況，所以我們必須停止測試。",
+        "pat": "子句, so + 子句",
+        "note": "前半句 was acting up 是過去式，事情發生在過去，所以 need 要改成 needed（聽力原文用 had to）。動詞時態要配合事件發生的時間。stop + V-ing 表示「停止做某事」；so 前面加逗號。"
+      },
+      {
+        "n": 3,
+        "wrong": "We need to increase the frequency of inspection because the defective rate is higher than before.",
+        "fix": "We need to increase the frequency of inspections because the defect rate is higher than before.",
+        "cn": "我們需要提高檢驗頻率，因為不良率比以前高。",
+        "pat": "主詞 + need to + V + because + 子句",
+        "note": "defective 是形容詞（The machine was defective.），但「不良率」要用名詞 defect 組成 defect rate，不是 defective rate。the frequency of + 複數名詞 inspections。"
+      },
+      {
+        "n": 4,
+        "wrong": "How long will the production line stop?",
+        "fix": "How long will the production line be stopped?",
+        "cn": "產線會停多久？",
+        "pat": "How long + will + 主詞 + be + 過去分詞？",
+        "note": "產線不是人，不會自己停下來，是被工廠、操作員或主管「停下來」的。沒有說出誰做這個動作時，要用被動語態 be stopped。完整的主動／被動比較看 IV-H。"
+      },
+      {
+        "n": 5,
+        "ok": "What is the root cause?",
+        "cn": "根本原因是什麼？",
+        "pat": "What + be 動詞 + 主詞？",
+        "note": "動詞是 be 動詞，疑問句直接把 is 放在主詞前面，不需要 do/does。品保和製造業，root cause 是「問題發生的根本原因」。"
+      },
+      {
+        "n": 6,
+        "ok": "Where did the assembly problem first show up?",
+        "cn": "組裝問題最先出現在哪裡？",
+        "pat": "Where + did + 主詞 + 原形動詞？",
+        "note": "意思是：問題最先出現在哪個地方或哪一站。did 已經表示過去式，所以 show up 用原形；first 放在動詞前面修飾動詞。"
+      },
+      {
+        "n": 7,
+        "ok": "When will the operator training be completed?",
+        "cn": "操作員訓練什麼時候會完成？",
+        "pat": "When + will + 主詞 + be + 過去分詞？",
+        "note": "訓練不會自己完成，是由人「完成」的，所以用被動語態 will be completed（同第 4 題）。回答可以是：The operator training will be completed by next week.（操作員訓練會在下週前完成。）"
+      },
+      {
+        "n": 8,
+        "ok": "Who is responsible for updating the SOP?",
+        "cn": "誰負責更新 SOP？",
+        "pat": "Who + be + responsible for + V-ing？",
+        "note": "who 當主詞，不加 do/does/did。responsible for 是介系詞片語，介系詞 for 後面接動名詞，所以是 updating，不是 update。意思是某個人或部門有責任更新 SOP（Standard Operating Procedure，標準作業程序，說明某個流程該怎麼做的正式文件）。"
+      },
+      {
+        "n": 9,
+        "wrong": "Why the screw break down during assembly?",
+        "fix": "Why did the screw break during assembly?",
+        "cn": "螺絲為什麼在組裝時斷掉？",
+        "pat": "Why + did + 主詞 + 原形動詞？",
+        "note": "原句漏了助動詞。老師問：這件事發生在什麼時候？幾小時前，所以是過去，助動詞用 did，後面的動詞回到原形 break（不是 broke）。如果問的是一般或重複發生的現在情況，助動詞改成 does：Why does the screw break during assembly? 另外 break down 通常指機器「故障」，螺絲「斷裂」用 break 就好。"
+      },
+      {
+        "n": 10,
+        "wrong": "I makes sure the product meets quality standards. I check problems, find the causes, and prevent the same issue happen again.",
+        "fix": "I make sure the product meets quality standards. I check problems, find the causes, and prevent the same issue from happening again.",
+        "cn": "我確保產品符合品質標準。我檢查問題、找出原因，並防止同樣的問題再次發生。",
+        "pat": "make sure + 子句／prevent + 受詞 + from + V-ing",
+        "note": "【面試題】What do you think is the role of a QA engineer?（你認為品保工程師的角色是什麼？）主詞是 I，動詞不加 s，用原形 make。prevent 後面要用 from + V-ing（防止…發生），不能直接接原形動詞。"
+      },
+      {
+        "n": 11,
+        "ok": "First, I find the problem and stop it from getting worse. Then, I check the root cause and discuss solutions with the team.",
+        "cn": "首先，我找出問題，不讓它變得更糟。然後，我檢查根本原因，並和團隊討論解決方案。",
+        "pat": "stop + 受詞 + from + V-ing／discuss + 受詞 + with + 人",
+        "note": "【面試題】How do you handle quality problems?（你如何處理品質問題？）First…, Then… 是說明步驟的好用連接詞；stop it from getting worse 用到和 prevent 一樣的 from + V-ing；discuss 是及物動詞，後面直接接 solutions，不加 about。"
+      },
+      {
+        "n": 12,
+        "ok": "I have over ten years of fitness equipment experience and I work carefully and always try to improve product quality.",
+        "cn": "我有超過十年的健身器材經驗，我做事謹慎，而且總是努力提升產品品質。",
+        "pat": "主詞 + have + 時間 + of experience／always try to + 原形動詞",
+        "note": "【面試題】Why should we hire you?（我們為什麼該僱用你？）work carefully 用副詞修飾動詞；always 放在 try 前面。小提醒：說成 experience in fitness equipment 會更自然。hire 的用法看 II 單字表。"
+      },
+      {
+        "n": 13,
+        "ok": "Yes, especially during launch. Sometimes I have tight deadlines, but I stay calm and focus on solving problems.",
+        "cn": "有，尤其是在產品上市期間。有時候我的期限很緊，但我會保持冷靜，專心解決問題。",
+        "pat": "stay + 形容詞／focus on + V-ing",
+        "note": "【面試題】Have you ever worked under pressure?（你有在壓力下工作過嗎？）Have you ever…? 是現在完成式問句，回答用 Yes 開頭很自然；stay calm 的 stay 後面接形容詞；on 是介系詞，後面用 V-ing（solving）。小提醒：launch 是可數名詞，說 during product launches 更完整。"
+      }
+    ],
+    "vocabTitle": "II. 單字 Vocabulary",
+    "vocab": [
+      {
+        "w": "fixture",
+        "star": true,
+        "ipa": "/ˈfɪks.tʃɚ/",
+        "pos": "n.",
+        "cn": "治具、夾具",
+        "ex": "the new fixture is ready for production",
+        "exCn": "新治具已可投入生產"
+      },
+      {
+        "w": "verify",
+        "star": true,
+        "ipa": "/ˈver.ə.faɪ/",
+        "pos": "v.",
+        "cn": "確認、查證",
+        "ex": "Have we verified that…?",
+        "exCn": "我們確認過…了嗎？"
+      },
+      {
+        "w": "identify",
+        "star": true,
+        "ipa": "/aɪˈden.t̬ə.faɪ/",
+        "pos": "v.",
+        "cn": "找出、辨識",
+        "ex": "Has anyone identified the root cause?",
+        "exCn": "有人找出根本原因了嗎？"
+      },
+      {
+        "w": "defect",
+        "ipa": "/ˈdiː.fekt/",
+        "pos": "n.",
+        "cn": "缺陷、不良",
+        "ex": "the defect rate is higher than before",
+        "exCn": "不良率比以前高"
+      },
+      {
+        "w": "defective",
+        "ipa": "/dɪˈfek.tɪv/",
+        "pos": "adj.",
+        "cn": "有缺陷的、不良的",
+        "ex": "The machine was defective.",
+        "exCn": "這台機器有缺陷。"
+      },
+      {
+        "w": "assembly",
+        "ipa": "/əˈsem.bli/",
+        "pos": "n.",
+        "cn": "組裝",
+        "ex": "the screw broke during assembly",
+        "exCn": "螺絲在組裝時斷了"
+      },
+      {
+        "w": "inspection",
+        "ipa": "/ɪnˈspek.ʃən/",
+        "pos": "n.",
+        "cn": "檢驗、檢查",
+        "ex": "increase the frequency of inspections",
+        "exCn": "增加檢驗的頻率"
+      },
+      {
+        "w": "frequency",
+        "ipa": "/ˈfriː.kwən.si/",
+        "pos": "n.",
+        "cn": "頻率",
+        "ex": "the frequency of inspections",
+        "exCn": "檢驗的頻率"
+      },
+      {
+        "w": "screw",
+        "ipa": "/skruː/",
+        "pos": "n.",
+        "cn": "螺絲",
+        "ex": "the screw broke",
+        "exCn": "螺絲斷了"
+      },
+      {
+        "w": "station",
+        "ipa": "/ˈsteɪʃən/",
+        "pos": "n.",
+        "cn": "工作站、工站",
+        "ex": "It first appeared at Station Three.",
+        "exCn": "它最先出現在第三站。"
+      },
+      {
+        "w": "align",
+        "star": true,
+        "ipa": "/əˈlaɪn/",
+        "pos": "v.",
+        "cn": "對準、對齊",
+        "ex": "whether the fixture is aligned correctly",
+        "exCn": "治具是否對準正確"
+      },
+      {
+        "w": "restart",
+        "ipa": "/ˌriːˈstɑːrt/",
+        "pos": "v.",
+        "cn": "重新啟動",
+        "ex": "We expect to restart it tomorrow afternoon.",
+        "exCn": "我們預計明天下午重啟。"
+      },
+      {
+        "w": "schedule",
+        "ipa": "/ˈskedʒuːl/",
+        "pos": "n.",
+        "cn": "時程、時間表",
+        "ex": "the restart schedule",
+        "exCn": "重啟時程"
+      },
+      {
+        "w": "operator",
+        "ipa": "/ˈɑːpəreɪtɚ/",
+        "pos": "n.",
+        "cn": "操作員",
+        "ex": "the operator training",
+        "exCn": "操作員訓練"
+      },
+      {
+        "w": "responsible",
+        "star": true,
+        "ipa": "/rɪˈspɑːn.sə.bəl/",
+        "pos": "adj.",
+        "cn": "負責的",
+        "ex": "responsible for updating the SOP",
+        "exCn": "負責更新 SOP"
+      },
+      {
+        "w": "supervisor",
+        "ipa": "/ˈsuː.pɚ.vaɪ.zɚ/",
+        "pos": "n.",
+        "cn": "主管、課長",
+        "ex": "Supervisor: Not yet.",
+        "exCn": "主管：還沒。"
+      },
+      {
+        "w": "SOP",
+        "ipa": "/ˌes.oʊˈpiː/",
+        "pos": "n.",
+        "cn": "標準作業程序",
+        "ex": "updating the SOP",
+        "exCn": "更新 SOP"
+      },
+      {
+        "w": "hire",
+        "ipa": "/ˈhaɪr/",
+        "pos": "v.",
+        "cn": "僱用（老闆「僱用」你是 hire）",
+        "ex": "My boss hired me.",
+        "exCn": "老闆僱用了我。"
+      },
+      {
+        "w": "fire",
+        "ipa": "/faɪr/",
+        "pos": "v.",
+        "cn": "解僱、開除（老闆「解僱」你是 fire）",
+        "ex": "My boss fired me.",
+        "exCn": "老闆開除了我。"
+      },
+      {
+        "w": "quit",
+        "ipa": "/kwɪt/",
+        "pos": "v.",
+        "cn": "辭職、放棄（quit – quit – quit；你自己決定離開是 quit，員工自己離職不能說 My boss fired me.）",
+        "ex": "I quit the job.",
+        "exCn": "我辭掉了工作。"
+      }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases",
+    "phrases": [
+      {
+        "p": "act up",
+        "cn": "（機器）出狀況、運轉不正常（詳見 V-B）"
+      },
+      {
+        "p": "show up",
+        "cn": "出現（詳見 I-A 第 6 題）"
+      },
+      {
+        "p": "root cause",
+        "cn": "根本原因（詳見 I-A 第 5 題）"
+      },
+      {
+        "p": "increase the frequency of …",
+        "cn": "提高…的頻率（詳見 I-A 第 3 題）"
+      },
+      {
+        "p": "be responsible for + V-ing",
+        "cn": "負責做…（詳見 I-A 第 8 題）"
+      },
+      {
+        "p": "depend on",
+        "cn": "取決於、看…而定（詳見 V-B）"
+      },
+      {
+        "p": "keep someone informed",
+        "cn": "隨時讓某人知道進度（詳見 V-B）"
+      },
+      {
+        "p": "prevent / stop + 受詞 + from + V-ing",
+        "cn": "防止…發生（詳見 I-B 第 10、11 題）"
+      }
+    ],
+    "grammarTitle": "IV. 句型與文法解說：疑問句 Question Patterns",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "WHO — 誰",
+        "pat": "Who + verb + …?",
+        "pts": [
+          "大部分 WH 問句是 WH + 助動詞 + 主詞 + 動詞；但 who 當主詞時是例外 exception（例外＝不照一般規則的東西），直接 Who + 動詞 + 受詞。",
+          "問「誰做了這件事」，就像把答案裡的主詞換成 who。",
+          "⚠ 不能說 Who does check the device?，要說 Who checks the device?",
+          "動詞跟著時態變，who 後面不加助動詞。"
+        ],
+        "exs": [
+          {
+            "tag": "who 當主詞",
+            "en": "Who checks the equipment?",
+            "cn": "誰檢查設備？"
+          },
+          {
+            "tag": "who 當主詞",
+            "en": "Who trains the new operators?",
+            "cn": "誰訓練新操作員？"
+          },
+          {
+            "tag": "who 當主詞",
+            "en": "Who assigned the engineer?",
+            "cn": "誰指派了這位工程師？"
+          },
+          {
+            "tag": "who 當主詞",
+            "en": "Who broke the screw?",
+            "cn": "誰弄斷了螺絲？"
+          },
+          {
+            "tag": "who 當主詞",
+            "en": "Who came here yesterday?",
+            "cn": "昨天誰來過這裡？"
+          },
+          {
+            "tag": "who 當主詞",
+            "en": "Who verified the problem?",
+            "cn": "誰確認了這個問題？"
+          },
+          {
+            "tag": "時態變化",
+            "en": "Who checks the equipment? → Who checked the equipment? → Who will check the equipment?",
+            "cn": "誰檢查／誰檢查過／誰會檢查設備？"
+          },
+          {
+            "tag": "時態變化",
+            "en": "Who will train the operator?",
+            "cn": "誰會訓練操作員？"
+          }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "WHAT / WHERE / WHEN / WHY / HOW",
+        "pat": "WH-word + auxiliary + subject + base verb?",
+        "pts": [
+          "疑問詞放句首，接助動詞，再接主詞，最後是動詞原形。",
+          "公式：WH word + auxiliary verb + subject + main verb。WH 字：what, where, when, why, how；助動詞（auxiliary，幫助動詞）：do, does, did, will, can, should, may, might, have, has。will、can、should 這類情態助動詞也是一種助動詞。",
+          "what 問事物、where 問地點、when 問時間、why 問原因、how 問方式。",
+          "⚠ 助動詞已經帶了時態與第三人稱 s，主要動詞要用原形：Why did the screw break?（不是 broke）。若動詞是 be 動詞，直接把 be 放在主詞前面（What is the root cause?）。"
+        ],
+        "exs": [
+          {
+            "tag": "where",
+            "en": "Where does he work?",
+            "cn": "他在哪裡工作？"
+          },
+          {
+            "tag": "when",
+            "en": "When did she start?",
+            "cn": "她什麼時候開始的？"
+          },
+          {
+            "tag": "why",
+            "en": "Why does he need training?",
+            "cn": "他為什麼需要訓練？"
+          },
+          {
+            "tag": "how",
+            "en": "How does the manager evaluate employees?",
+            "cn": "經理如何評估員工？"
+          },
+          {
+            "tag": "why",
+            "en": "Why did she leave?",
+            "cn": "她為什麼離職？"
+          },
+          {
+            "tag": "公式",
+            "en": "Why + did + the screw + break?",
+            "cn": "螺絲為什麼斷了？（WH + 助動詞 + 主詞 + 原形動詞）"
+          }
+        ]
+      },
+      {
+        "k": "IV-B-2",
+        "title": "換時態、換主詞練習 Tense Practice",
+        "patLabel": "先判斷「主詞單數／複數」與「發生時間」，再決定助動詞",
+        "pts": [
+          "練習重點是先判斷「主詞是單數還是複數」、「事情發生在什麼時間」，再決定助動詞是 does / do / did / will / has / have。這種換句練習要多做，才會變成自動反應。",
+          "do – did – done、work – worked – worked。",
+          "start 後面接另一個動作，用 -ing：When does she start working?",
+          "特定一間銀行用 does，銀行一般用 do。"
+        ],
+        "exs": [
+          {
+            "tag": "do（現在）",
+            "en": "What does the operator do? / What do the operators do?",
+            "cn": "現在：單數用 does，複數用 do"
+          },
+          {
+            "tag": "do（未來）",
+            "en": "What will the operator do? / What will the operators do?",
+            "cn": "未來：will + 原形"
+          },
+          {
+            "tag": "do（過去）",
+            "en": "What did the operator do? / What did the operators do?",
+            "cn": "過去：did + 原形"
+          },
+          {
+            "tag": "do（完成）",
+            "en": "What has the operator done? / What have the operators done?",
+            "cn": "現在完成：單數 has，複數 have + 過去分詞"
+          },
+          {
+            "tag": "work",
+            "en": "Where do you work? / Where will you work?",
+            "cn": "你在哪裡工作？／你會在哪裡工作？"
+          },
+          {
+            "tag": "work",
+            "en": "Where has he worked? / Where have you worked?",
+            "cn": "他／你在哪些地方工作過？"
+          },
+          {
+            "tag": "When",
+            "en": "When does she start?",
+            "cn": "她什麼時候開始？"
+          },
+          {
+            "tag": "When",
+            "en": "When does she start working?",
+            "cn": "她什麼時候開始工作？（start 後面接另一個動作，用 -ing）"
+          },
+          {
+            "tag": "When",
+            "en": "When will she start?",
+            "cn": "她什麼時候會開始？"
+          },
+          {
+            "tag": "When",
+            "en": "When does Fubon Bank open? / When do banks open?",
+            "cn": "富邦銀行幾點開門？／銀行幾點開門？"
+          },
+          {
+            "tag": "When",
+            "en": "When does that supermarket close?",
+            "cn": "那間超市幾點關門？"
+          },
+          {
+            "tag": "When",
+            "en": "When do banks close in Taiwan?",
+            "cn": "台灣的銀行幾點關門？"
+          },
+          {
+            "tag": "When",
+            "en": "When do people go to work in Taiwan?",
+            "cn": "台灣人幾點上班？"
+          },
+          {
+            "tag": "Why",
+            "en": "Why does he need training? → Why do they need training? → Why did he need training?",
+            "cn": "他為什麼需要訓練？／他們為什麼需要訓練？／他當時為什麼需要訓練？"
+          },
+          {
+            "tag": "How",
+            "en": "How do managers evaluate employees?",
+            "cn": "經理們如何評估員工？"
+          },
+          {
+            "tag": "回答",
+            "en": "Managers evaluate employees in different ways. It depends on their method.",
+            "cn": "每位經理評估的方式不同，要看他們的方法。"
+          }
+        ]
+      },
+      {
+        "k": "IV-C",
+        "title": "HOW LONG — 多久",
+        "pat": "How long + have/has + subject + past participle?",
+        "pts": [
+          "How long 雖然不是 W 開頭，但功能像疑問詞，句型和 what、where 一樣。",
+          "How long 搭配現在完成式（或現在完成進行式），問「到現在為止已經多久」；for five years 表示一段期間。",
+          "has 用在 he/she/it，have 用在 I/you/we/they；worked、taught 是過去分詞。",
+          "兩種完成式都表示「過去開始、持續到現在」，兩者有細微差別，老師說等熟悉完成式後再細講。一般來說，現在完成式常強調結果或累積的經驗，現在完成進行式常強調持續進行的過程。",
+          "未來的長度用 will，過去已結束的用 did，持續到現在用 have/has。",
+          "⚠ did 後面用原形：How long did she work?（不是 worked）"
+        ],
+        "exs": [
+          {
+            "tag": "完成式",
+            "en": "How long has he worked here?",
+            "cn": "他在這裡工作多久了？"
+          },
+          {
+            "tag": "完成式",
+            "en": "How long has she worked in this department?",
+            "cn": "她在這個部門工作多久了？"
+          },
+          {
+            "tag": "完成式",
+            "en": "How long have you taught English online?",
+            "cn": "你教線上英文多久了？"
+          },
+          {
+            "tag": "換時態",
+            "en": "How long will he work here?",
+            "cn": "他會在這裡工作多久？"
+          },
+          {
+            "tag": "換時態",
+            "en": "How long did he work here?",
+            "cn": "他以前在這裡工作了多久？"
+          },
+          {
+            "tag": "換時態",
+            "en": "How long did she work in this department?",
+            "cn": "她在這個部門工作了多久？"
+          },
+          {
+            "tag": "加 -ing",
+            "en": "How long has he been working here?",
+            "cn": "他一直在這裡工作多久了？"
+          },
+          {
+            "tag": "加 -ing",
+            "en": "How long have you been teaching English?",
+            "cn": "你教英文教多久了？"
+          },
+          {
+            "tag": "加 -ing",
+            "en": "How long have you been working in Vietnam?",
+            "cn": "你在越南工作多久了？"
+          },
+          {
+            "tag": "回答",
+            "en": "I have taught English online for five years.",
+            "cn": "我教線上英文五年了。"
+          },
+          {
+            "tag": "回答",
+            "en": "I have been teaching English for five years.",
+            "cn": "兩種說法都可以。"
+          },
+          {
+            "tag": "回答",
+            "en": "I have learned English for seven months.",
+            "cn": "我學英文七個月了。"
+          },
+          {
+            "tag": "回答",
+            "en": "I have been learning English for seven months.",
+            "cn": "我學英文七個月了。"
+          }
+        ]
+      },
+      {
+        "k": "IV-D",
+        "title": "HOW MANY — 多少（可數）",
+        "pat": "How many + plural noun + auxiliary + subject + verb?",
+        "pts": [
+          "how many 後面一定接可數名詞的複數（加 -s/-es）：student – students、manager – managers、class – classes、cup – cups、computer – computers、customer – customers、question – questions、sentence – sentences、operating line – operating lines。",
+          "⚠ 不能說 How many employee?，要說 How many employees?",
+          "⚠ 名詞本身就是主詞時，直接接動詞，不加 do/does（How many employees work here?、How many operators work in each station?）；名詞後面還有另一個主詞時才需要助動詞（How many boxes did the operator pack?）。",
+          "問句用 did，主要動詞就留原形（pack）；回答才改成過去式（packed）。hours 可以數，所以用 How many hours did you practice? / How many hours did you study?（你練習／念了幾個小時？）"
+        ],
+        "exs": [
+          {
+            "tag": "名詞當主詞",
+            "en": "How many employees work here?",
+            "cn": "這裡有多少員工在工作？"
+          },
+          {
+            "tag": "加助動詞",
+            "en": "How many operators does the company have?",
+            "cn": "公司有多少操作員？"
+          },
+          {
+            "tag": "加助動詞",
+            "en": "How many machines does this department use?",
+            "cn": "這個部門用多少台機器？"
+          },
+          {
+            "tag": "加助動詞",
+            "en": "How many questions did you write?",
+            "cn": "你寫了幾個問題？"
+          },
+          {
+            "tag": "加助動詞",
+            "en": "How many sentences should I write?",
+            "cn": "我該寫幾個句子？"
+          },
+          {
+            "tag": "加助動詞",
+            "en": "How many screws did the machine break?",
+            "cn": "機器弄斷了幾根螺絲？"
+          },
+          {
+            "tag": "回答",
+            "en": "The machine broke more than ten screws.",
+            "cn": "超過十根。"
+          },
+          {
+            "tag": "加助動詞",
+            "en": "How many boxes did the operator pack?",
+            "cn": "操作員包了幾個箱子？"
+          },
+          {
+            "tag": "回答",
+            "en": "The operator packed five boxes.",
+            "cn": "五個箱子。"
+          },
+          {
+            "tag": "加助動詞",
+            "en": "How many mistakes did they find?",
+            "cn": "他們找到幾個錯誤？"
+          },
+          {
+            "tag": "名詞當主詞",
+            "en": "How many operators work in each station?",
+            "cn": "每一站有幾位操作員？"
+          }
+        ]
+      },
+      {
+        "k": "IV-E",
+        "title": "HOW MUCH — 多少（不可數）",
+        "pat": "How much + uncountable noun + auxiliary + subject + verb?",
+        "pts": [
+          "不可數名詞是不能一個一個數的東西，例如 water、money、homework、housework，我們不說 one money, two money，而是說金額（one hundred、one thousand）。",
+          "不可數名詞用 how much，可數名詞用 how many。"
+        ],
+        "exs": [
+          {
+            "tag": "how much",
+            "en": "How much water do you drink every day?",
+            "cn": "你每天喝多少水？"
+          },
+          {
+            "tag": "how much",
+            "en": "How much money do you need?",
+            "cn": "你需要多少錢？"
+          },
+          {
+            "tag": "how much",
+            "en": "How much homework did you do?",
+            "cn": "你寫了多少功課？"
+          },
+          {
+            "tag": "回答",
+            "en": "I did a lot of homework.",
+            "cn": "我寫了很多功課。"
+          },
+          {
+            "tag": "how much",
+            "en": "How much housework did you do?",
+            "cn": "你做了多少家事？"
+          },
+          {
+            "tag": "回答",
+            "en": "I did a lot of housework.",
+            "cn": "我做了很多家事。"
+          }
+        ]
+      },
+      {
+        "k": "IV-F",
+        "title": "WHICH — 哪一個",
+        "pat": "Which + noun + do/does/did + subject + verb?",
+        "pts": [
+          "which 和 how many、how much 一樣後面接名詞，但 which 後面的名詞不一定要複數（which color）。which 是從有限的選項中挑一個。",
+          "Which department does she work in? 的 in 留在句尾，介系詞跟著動詞走。"
+        ],
+        "exs": [
+          {
+            "tag": "which",
+            "en": "Which machine does the operator use?",
+            "cn": "操作員用哪一台機器？"
+          },
+          {
+            "tag": "which",
+            "en": "Which department does she work in?",
+            "cn": "她在哪一個部門工作？"
+          },
+          {
+            "tag": "which",
+            "en": "Which employee did the manager assign?",
+            "cn": "經理指派了哪一位員工？"
+          },
+          {
+            "tag": "which",
+            "en": "Which color do you like? / Which color did you like?",
+            "cn": "你喜歡／你當時喜歡哪個顏色？"
+          },
+          {
+            "tag": "which",
+            "en": "Which color will you choose?",
+            "cn": "你會選哪個顏色？"
+          }
+        ]
+      },
+      {
+        "k": "IV-G",
+        "title": "YES / NO Questions",
+        "pat": "Do/Does/Did + subject + verb?",
+        "pts": [
+          "助動詞放句首，沒有疑問詞。",
+          "問「有沒有／是不是」。do/does/did 後接原形動詞；have/has 後接過去分詞。短回答：Yes, I did. / Yes, I will. / Yes, I have.",
+          "會議中的例子：Has anyone identified the root cause?（有人找出根本原因了嗎？）"
+        ],
+        "exs": [
+          {
+            "tag": "do / does / did",
+            "en": "Does he work here?",
+            "cn": "他在這裡工作嗎？"
+          },
+          {
+            "tag": "do / does / did",
+            "en": "Does the operator need training?",
+            "cn": "操作員需要訓練嗎？"
+          },
+          {
+            "tag": "do / does / did",
+            "en": "Did she report the problem?",
+            "cn": "她有回報問題嗎？"
+          },
+          {
+            "tag": "do / does / did",
+            "en": "Did you study? / Did you practice English?",
+            "cn": "你念書了嗎？／你練習英文了嗎？"
+          },
+          {
+            "tag": "do / does / did",
+            "en": "Do you want to learn new grammar?",
+            "cn": "你想學新的文法嗎？"
+          },
+          {
+            "tag": "will / have / has",
+            "en": "Will you go back to Taiwan soon?",
+            "cn": "你很快會回台灣嗎？"
+          },
+          {
+            "tag": "will / have / has",
+            "en": "Has he worked here for ten years?",
+            "cn": "他在這裡工作十年了嗎？"
+          },
+          {
+            "tag": "will / have / has",
+            "en": "Have you finished the training?",
+            "cn": "你完成訓練了嗎？"
+          },
+          {
+            "tag": "will / have / has",
+            "en": "Have you been in Vietnam for five months?",
+            "cn": "你在越南待五個月了嗎？"
+          }
+        ]
+      },
+      {
+        "k": "IV-H",
+        "title": "主動與被動 Active vs Passive",
+        "pat": "How long + will + subject + be + past participle?",
+        "pts": [
+          "主動語態：主詞「做」動作，例如 The factory will stop the line.",
+          "被動語態：主詞「接受」動作，例如 The production line will be stopped.（有人會把它停下來，只是沒說是誰）",
+          "判斷方法：主詞是人或組織，動詞可以主動；主詞是物或事（產線、訓練），而且沒說誰做，就用被動。When will the operator training be completed? 也是同樣道理。",
+          "時態比較：How long will you stay in Taiwan?（未來用 will）；How long have you been in Manchester?（持續到現在用 have been）。"
+        ],
+        "exs": [
+          {
+            "tag": "被動",
+            "en": "How long will the production line be stopped?",
+            "cn": "產線會被停多久？"
+          },
+          {
+            "tag": "回答",
+            "en": "It will be stopped for two days.",
+            "cn": "會停兩天。"
+          },
+          {
+            "tag": "主動",
+            "en": "How long will the factory stop the line?",
+            "cn": "工廠會讓產線停多久？"
+          },
+          {
+            "tag": "主動",
+            "en": "How long will the team stop the line?",
+            "cn": "團隊會讓產線停多久？"
+          },
+          {
+            "tag": "主動",
+            "en": "How long will the supervisor stop the production line?",
+            "cn": "主管會讓產線停多久？"
+          }
+        ]
+      }
+    ],
+    "reading": [
+      {
+        "bar": "V. 聽力與閱讀 Listening & Reading",
+        "title": "A QA Meeting about a Fixture Problem",
+        "titleCn": "關於治具問題的品保會議（先做 Part 1 理解問題，再看 Part 2 聽力原文）",
+        "paras": [
+          {
+            "en": "Quality Engineer: Have we verified that the new fixture is ready for production?",
+            "cn": "品保工程師：我們確認過新治具可以投入生產了嗎？"
+          },
+          {
+            "en": "Supervisor: Not yet. The machine was acting up this morning, so we had to stop testing.",
+            "cn": "主管：還沒。機器今天早上出狀況，所以我們必須停止測試。"
+          },
+          {
+            "en": "Quality Engineer: I see. Has anyone identified the root cause?",
+            "cn": "品保工程師：了解。有人找出根本原因了嗎？"
+          },
+          {
+            "en": "Supervisor: Not yet. We noticed that the screw broke during assembly, and the defect rate is higher than before.",
+            "cn": "主管：還沒。我們發現螺絲在組裝時斷了，而且不良率比以前高。"
+          },
+          {
+            "en": "Quality Engineer: Then we need to increase the frequency of inspections. Where did the assembly problem first show up?",
+            "cn": "品保工程師：那我們需要增加檢驗頻率。組裝問題最先出現在哪裡？"
+          },
+          {
+            "en": "Supervisor: It first appeared at Station Three. We're checking whether the fixture is aligned correctly.",
+            "cn": "主管：最先出現在第三站。我們正在檢查治具是否對準正確。"
+          },
+          {
+            "en": "Quality Engineer: How long will the production line be stopped?",
+            "cn": "品保工程師：產線會停多久？"
+          },
+          {
+            "en": "Supervisor: We expect to restart it tomorrow afternoon, but it depends on the test results.",
+            "cn": "主管：我們預計明天下午重啟，但要看測試結果而定。"
+          },
+          {
+            "en": "Quality Engineer: When will the operator training be completed?",
+            "cn": "品保工程師：操作員訓練什麼時候會完成？"
+          },
+          {
+            "en": "Supervisor: By Friday. The quality engineer is also responsible for updating the SOP.",
+            "cn": "主管：週五前。品保工程師也負責更新 SOP。"
+          },
+          {
+            "en": "Quality Engineer: Great. Please keep me informed about the root cause and the restart schedule.",
+            "cn": "品保工程師：好的。請隨時告訴我根本原因和重啟時程的進度。"
+          }
+        ],
+        "questions": [
+          {
+            "q": "Why did the production team stop testing? (A. The operator was absent. / B. The machine was acting up. / C. The fixture was missing. / D. The supervisor canceled the meeting.)",
+            "qCn": "生產團隊為什麼停止測試？",
+            "a": "B. The machine was acting up.",
+            "aCn": "機器出狀況。（老師提醒：這題的結構是 Why + did + 主詞 + 原形動詞，問的是過去。）"
+          },
+          {
+            "q": "What happened to the defect rate? (A. It decreased significantly. / B. It stayed the same. / C. It became higher than before. / D. It was not measured.)",
+            "qCn": "不良率發生了什麼事？",
+            "a": "C. It became higher than before.",
+            "aCn": "比以前高。"
+          },
+          {
+            "q": "What did the team need to check? (A. Whether the new fixture was ready for production. / B. Whether the factory was closing. / C. Whether the operator had left. / D. Whether the products had been shipped.)",
+            "qCn": "團隊需要確認什麼？",
+            "a": "A. Whether the new fixture was ready for production.",
+            "aCn": "新治具是否可以投入生產。"
+          },
+          {
+            "q": "What was the suspected problem with the screw? (A. It was too expensive. / B. It broke during assembly. / C. It was installed in the wrong factory. / D. It was missing from the shipment.)",
+            "qCn": "螺絲被懷疑有什麼問題？",
+            "a": "B. It broke during assembly.",
+            "aCn": "在組裝時斷了。"
+          },
+          {
+            "q": "Who was responsible for updating the SOP? (A. The machine operator. / B. The customer. / C. The quality engineer. / D. The delivery driver.)",
+            "qCn": "誰負責更新 SOP？",
+            "a": "C. The quality engineer.",
+            "aCn": "品保工程師。"
+          }
+        ]
+      }
+    ],
+    "extraVocabTitle": "VI. 補充字彙與句型 Extra",
+    "extraVocab": [
+      {
+        "k": "例外",
+        "en": "exception /ɪkˈsep.ʃən/",
+        "cn": "例外（who 當主詞不加 do/does/did 就是例外，見 IV-A）"
+      },
+      {
+        "k": "動詞三態",
+        "en": "work – worked – worked",
+        "cn": "工作（規則動詞 -ed）"
+      },
+      {
+        "k": "動詞三態",
+        "en": "do – did – done",
+        "cn": "做（不規則動詞，見 IV-B-2）"
+      }
+    ]
   }
   ]
 };
@@ -23733,6 +24662,7 @@ window.BOOK = {
     au03:[[['bottleL','factory','cart','lock','eye'],'化學品管控問答：缺領用紀錄、存放位置、效期、警示標籤與防護設備 → 還要管控送到產線的化學品 → 由資材負責建立管控 → 只有倉儲管理不能涵蓋 → 仍標示 Open，尚未完成。']],
     au04:[[['gear','flag','laptop','chartUp','thumb'],'開發與專案管理：設變通知單≠完整程序 → 台灣主導安規越南協助 → PDM 存放≠審核程序 → 台灣提供時程越南更新實際進度 → 填表≠核准 → 追蹤量產問題至結案。']],
     bk20261006:[[['board','stairs','gauge','orgchart','clipboard'],'操作員訓練五階段：獨立作業前提供實務訓練並評估技能 → 每站分 A/B/C 三個技能等級逐級晉升 → 內部評估未通過先安排較簡單的工作站 → 所有人都受過訓可互相代班維持生產 → 客戶稽核時出示訓練紀錄說明驗證方式。']],
+    bk20261013:[[['key','plug','search','map','ballot'],'品保會議五階段：確認新治具能否投入生產 → 機器出狀況先停止測試 → 螺絲組裝時斷裂、不良率變高 → 問題最先出現在第三站、檢查治具是否對準 → 預計明天下午重啟、週五前完成訓練並更新 SOP。']],
   };;
   ((window.BOOK||{}).lessons||[]).forEach(function(b){
     var specs=S[b.id]; if(!specs) return;

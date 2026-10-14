@@ -44824,3 +44824,1124 @@ window.VIDEO["bk20261008"] = {
      +pill(136,100,56,24,'CLOSE',D,'#fff',12))
   });
 })();
+
+/* ===== bk20261013 WH Questions, Auxiliary Verbs & Manufacturing English ===== */
+(function(){
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  /* 2026-10-14 新增：治具、斷掉的螺絲、不良率上升、SOP 更新 */
+  window.VIDEO_ART.fixtureJig = '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="184" height="134" rx="8" fill="#fdf6ec" stroke="#2b2118" stroke-width="3"/><rect x="28" y="102" width="144" height="22" rx="4" fill="#f7e3c9" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="52" y="74" width="12" height="28" fill="#9aa5b1" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="136" y="74" width="12" height="28" fill="#9aa5b1" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="40" y="52" width="120" height="22" rx="4" fill="#e8813a" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M100 24 V102" stroke="#3b82c4" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round"/><circle cx="162" cy="34" r="14" fill="#fff" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M155 34 l5 6 l9 -12" fill="none" stroke="#3b82c4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  window.VIDEO_ART.brokenScrew = '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="184" height="134" rx="8" fill="#fdf6ec" stroke="#2b2118" stroke-width="3"/><rect x="36" y="40" width="40" height="14" rx="4" fill="#f7e3c9" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="48" y="54" width="16" height="30" fill="#9aa5b1" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M48 62 h16 M48 70 h16 M48 78 h16" stroke="#2b2118" stroke-width="2.5"/><path d="M48 84 l5 6 l5 -6 l6 6" fill="none" stroke="#d9534f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><g transform="rotate(28 130 100)"><rect x="122" y="88" width="16" height="32" fill="#9aa5b1" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M122 98 h16 M122 106 h16 M122 114 h16" stroke="#2b2118" stroke-width="2.5"/></g><path d="M96 38 l12 12 M108 38 l-12 12" stroke="#d9534f" stroke-width="5" stroke-linecap="round"/><line x1="22" y1="124" x2="178" y2="124" stroke="#2b2118" stroke-width="3" stroke-linecap="round"/></svg>';
+  window.VIDEO_ART.defectUp = '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="184" height="134" rx="8" fill="#fdf6ec" stroke="#2b2118" stroke-width="3"/><line x1="26" y1="122" x2="176" y2="122" stroke="#2b2118" stroke-width="3" stroke-linecap="round"/><rect x="36" y="98" width="24" height="24" fill="#f7e3c9" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="68" y="86" width="24" height="36" fill="#f7e3c9" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="100" y="64" width="24" height="58" fill="#e8813a" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="132" y="38" width="24" height="84" fill="#d9534f" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M44 80 L116 46 L150 26" fill="none" stroke="#2b2118" stroke-width="3" stroke-linecap="round"/><path d="M150 26 l-10 1 m10 -1 l-3 10" fill="none" stroke="#2b2118" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  window.VIDEO_ART.sopUpdate = '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="184" height="134" rx="8" fill="#fdf6ec" stroke="#2b2118" stroke-width="3"/><rect x="48" y="22" width="78" height="104" rx="6" fill="#fff" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="60" y="34" width="34" height="16" rx="8" fill="#e8813a" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="77" y="46" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#fff">SOP</text><path d="M60 64 h54 M60 78 h54 M60 92 h54 M60 106 h34" stroke="#2b2118" stroke-width="2.5" stroke-linecap="round"/><g transform="rotate(35 140 90)"><rect x="132" y="48" width="14" height="52" rx="3" fill="#e8813a" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M132 100 l7 14 l7 -14 z" fill="#f7e3c9" stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></g></svg>';
+})();
+
+window.VIDEO = window.VIDEO || {};
+window.VIDEO["bk20261013"] = {
+ "title": "WH Questions, Auxiliary Verbs & Manufacturing English",
+ "titleCn": "疑問句與品保會議英文",
+ "date": "2026-10-13",
+ "level": "B1",
+ "scene": "A Quality Meeting about a Fixture Problem",
+ "sceneCn": "關於治具問題的品保會議",
+ "sceneArt": "fixtureJig",
+ "titleArt": [
+  "search",
+  "gear",
+  "chartUp"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・品保工程師",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・主管",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "Quality Meeting",
+   "cn": "情境：品保會議"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Phrases & Collocations",
+   "cn": "片語搭配"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "fixture": {
+   "t": "new fixture",
+   "cn": "新治具",
+   "tag": [
+    "單字",
+    "製造業"
+   ],
+   "note": "fixture 是治具、夾具，用來固定零件。常見搭配：test fixture、a new fixture、the fixture is aligned。",
+   "ex": "The fixture holds the housing while we drill the holes.",
+   "exCn": "治具在我們鑽孔時固定外殼。"
+  },
+  "actUp": {
+   "t": "acting up",
+   "cn": "出狀況",
+   "tag": [
+    "片語",
+    "機器"
+   ],
+   "note": "act up = 機器運作不正常，但還沒完全壞掉。過去進行式 was acting up 描述「當時一直在出狀況」。",
+   "ex": "The printer was acting up all morning.",
+   "exCn": "印表機整個早上都在出問題。"
+  },
+  "rootCause": {
+   "t": "root cause",
+   "cn": "根本原因",
+   "tag": [
+    "單字",
+    "品保必備"
+   ],
+   "note": "root cause 是「問題發生的根本原因」。常搭配 find / check / identify / report the root cause。",
+   "ex": "We need a report on the root cause by Friday.",
+   "exCn": "我們需要在週五前拿到根本原因的報告。"
+  },
+  "defectRate": {
+   "t": "defect rate",
+   "cn": "不良率",
+   "tag": [
+    "單字",
+    "品保必備"
+   ],
+   "note": "「不良率」是名詞 defect + rate，不說 defective rate；defective 是形容詞，用來形容產品或機器。",
+   "ex": "Last month the defect rate went down to two percent.",
+   "exCn": "上個月不良率降到百分之二。"
+  },
+  "frequency": {
+   "t": "the frequency of inspections",
+   "cn": "檢驗的頻率",
+   "tag": [
+    "片語",
+    "IV"
+   ],
+   "note": "the frequency of + 複數名詞 = 「…的頻率」；increase the frequency of inspections = 提高檢驗頻率。",
+   "ex": "We reduced the frequency of audits last year.",
+   "exCn": "我們去年減少了稽核的頻率。"
+  },
+  "showUp": {
+   "t": "show up",
+   "cn": "出現",
+   "tag": [
+    "片語",
+    "問句"
+   ],
+   "note": "show up = 出現。did 已經表示過去式，所以 show up 要用原形；first 放在動詞前面。",
+   "ex": "The scratch only showed up after the paint dried.",
+   "exCn": "刮痕在油漆乾了之後才出現。"
+  },
+  "align": {
+   "t": "aligned correctly",
+   "cn": "對準正確",
+   "tag": [
+    "單字",
+    "治具"
+   ],
+   "note": "align = 對準、對齊；be aligned correctly = 被正確對準。correctly 是副詞，放在過去分詞後面。",
+   "ex": "Please make sure the belt is aligned correctly.",
+   "exCn": "請確認皮帶有對準。"
+  },
+  "beStopped": {
+   "t": "be stopped",
+   "cn": "被停下來",
+   "tag": [
+    "文法",
+    "被動"
+   ],
+   "note": "產線不是人，不會自己停下來。沒說誰做動作時用被動：will + be + 過去分詞。",
+   "ex": "The conveyor will be stopped for two hours.",
+   "exCn": "輸送帶會停兩個小時。"
+  },
+  "dependOn": {
+   "t": "depends on",
+   "cn": "取決於",
+   "tag": [
+    "片語",
+    "日常"
+   ],
+   "note": "depend on = 取決於、看…而定。後面接名詞：it depends on the test results。",
+   "ex": "It depends on the weather.",
+   "exCn": "這要看天氣而定。"
+  },
+  "beCompleted": {
+   "t": "be completed",
+   "cn": "被完成",
+   "tag": [
+    "文法",
+    "被動"
+   ],
+   "note": "訓練不會自己完成，是由人完成，所以用被動：will be completed。回答：It will be completed by next week.",
+   "ex": "The repair will be completed by noon.",
+   "exCn": "修理會在中午前完成。"
+  },
+  "responsible": {
+   "t": "responsible for updating",
+   "cn": "負責更新",
+   "tag": [
+    "片語",
+    "IV"
+   ],
+   "note": "responsible for 是介系詞片語，for 後面接名詞或動名詞，所以是 updating，不是 update。",
+   "ex": "Who is responsible for ordering the parts?",
+   "exCn": "誰負責訂購零件？"
+  },
+  "keepInformed": {
+   "t": "keep me informed",
+   "cn": "隨時讓我知道",
+   "tag": [
+    "片語",
+    "職場"
+   ],
+   "note": "keep + 人 + informed = 讓某人隨時知道最新進度。about 後面接要追蹤的事情。",
+   "ex": "Please keep the customer informed about the delay.",
+   "exCn": "請隨時讓客戶知道延誤的進度。"
+  },
+  "quit": {
+   "t": "you quit",
+   "cn": "你自己辭職",
+   "tag": [
+    "單字",
+    "hire / fire"
+   ],
+   "note": "老闆僱用你是 hire，開除你是 fire，自己決定離開是 quit（quit – quit – quit）。員工自己離職不能說 My boss fired me.",
+   "ex": "He quit last month to start his own business.",
+   "exCn": "他上個月辭職，自己創業。"
+  },
+  "verify": {
+   "t": "Verify that",
+   "cn": "確認…",
+   "tag": [
+    "單字",
+    "職場"
+   ],
+   "note": "verify (that) + 子句。verify 後面有兩段想法時，用 that 把兩段清楚接起來。",
+   "ex": "Please verify that the label is correct.",
+   "exCn": "請確認標籤正確。"
+  },
+  "stopFrom": {
+   "t": "stop it from getting worse",
+   "cn": "不讓它變得更糟",
+   "tag": [
+    "片語",
+    "from + V-ing"
+   ],
+   "note": "stop / prevent + 受詞 + from + V-ing = 防止…發生；from 後面用 -ing，不能直接接原形動詞。",
+   "ex": "We stopped the leak from spreading.",
+   "exCn": "我們阻止了漏水擴大。"
+  },
+  "whyDid": {
+   "t": "Why did the screw break",
+   "cn": "螺絲為什麼斷了",
+   "tag": [
+    "文法",
+    "WH 問句"
+   ],
+   "note": "WH 問句要有助動詞：Why + did + 主詞 + 原形動詞。過去用 did，一般現在用 does。",
+   "ex": "Why did the machine stop?",
+   "exCn": "機器為什麼停了？"
+  },
+  "howMany": {
+   "t": "How many employees",
+   "cn": "多少員工",
+   "tag": [
+    "文法",
+    "數量"
+   ],
+   "note": "how many + 可數名詞複數。名詞本身是主詞時直接接動詞，不加 do/does。",
+   "ex": "How many boxes are on the pallet?",
+   "exCn": "棧板上有多少箱？"
+  },
+  "howMuch": {
+   "t": "How much money",
+   "cn": "多少錢",
+   "tag": [
+    "文法",
+    "數量"
+   ],
+   "note": "how much + 不可數名詞（money、water、homework、housework）。可數的 hours 用 how many。",
+   "ex": "How much time do we have?",
+   "exCn": "我們還有多少時間？"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today we're in a quality meeting about a new fixture.",
+   "cn": "歡迎回來。今天我們在開一場關於新治具的品保會議。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Listen for how Anita asks questions: who, where, when, and how long.",
+   "cn": "聽聽 Anita 怎麼問問題：誰、哪裡、什麼時候、多久。"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "fixtureJig"
+   },
+   "en": "Morning, Tom. Is the new fixture ready for production?",
+   "cn": "早安，Tom。新治具可以投入生產了嗎？",
+   "hi": [
+    {
+     "t": "new fixture",
+     "cn": "新治具",
+     "k": "fixture",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "delayedTest"
+   },
+   "en": "Not yet. The machine was acting up this morning, so we had to stop testing.",
+   "cn": "還沒。機器今天早上出狀況，所以我們得停止測試。",
+   "hi": [
+    {
+     "t": "acting up",
+     "cn": "出狀況",
+     "k": "actUp",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "rootCause"
+   },
+   "en": "Oh no. Do we know the root cause yet?",
+   "cn": "糟了。我們知道根本原因了嗎？",
+   "hi": [
+    {
+     "t": "root cause",
+     "cn": "根本原因",
+     "k": "rootCause",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "brokenScrew"
+   },
+   "en": "Not yet. A screw broke during assembly, and the defect rate is higher than before.",
+   "cn": "還不知道。有一根螺絲在組裝時斷了，而且不良率比以前高。",
+   "hi": [
+    {
+     "t": "the defect rate",
+     "cn": "不良率",
+     "k": "defectRate",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "defectUp"
+   },
+   "en": "Then we need to increase the frequency of inspections.",
+   "cn": "那我們得提高檢驗的頻率。",
+   "hi": [
+    {
+     "t": "the frequency of inspections",
+     "cn": "檢驗的頻率",
+     "k": "frequency",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "assemblyLine"
+   },
+   "en": "Where did the problem first show up?",
+   "cn": "問題最先出現在哪裡？",
+   "hi": [
+    {
+     "t": "first show up",
+     "cn": "最先出現",
+     "k": "showUp",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "caliper"
+   },
+   "en": "Station Three. We're checking whether the fixture is aligned correctly.",
+   "cn": "第三站。我們正在檢查治具有沒有對準。",
+   "hi": [
+    {
+     "t": "aligned correctly",
+     "cn": "對準正確",
+     "k": "align",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "hourglass"
+   },
+   "en": "How long will the line be stopped?",
+   "cn": "產線會停多久？",
+   "hi": [
+    {
+     "t": "be stopped",
+     "cn": "被停下來",
+     "k": "beStopped",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "functionalTestPass"
+   },
+   "en": "We expect to restart it tomorrow afternoon, but it depends on the test results.",
+   "cn": "我們預計明天下午重啟，但要看測試結果。",
+   "hi": [
+    {
+     "t": "depends on",
+     "cn": "取決於",
+     "k": "dependOn",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "safetyGearSet"
+   },
+   "en": "And when will the operator training be completed?",
+   "cn": "那操作員訓練什麼時候會完成？",
+   "hi": [
+    {
+     "t": "be completed",
+     "cn": "被完成",
+     "k": "beCompleted",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "sopUpdate"
+   },
+   "en": "By Friday. You're also responsible for updating the SOP.",
+   "cn": "週五前。你也要負責更新 SOP。",
+   "hi": [
+    {
+     "t": "responsible for updating",
+     "cn": "負責更新",
+     "k": "responsible",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "Great. Please keep me informed about the root cause and the restart schedule.",
+   "cn": "好。請隨時告訴我根本原因和重啟時程的進度。",
+   "hi": [
+    {
+     "t": "keep me informed",
+     "cn": "隨時讓我知道",
+     "k": "keepInformed",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "messageBubbles"
+   },
+   "en": "Will do. I'll call you as soon as we know.",
+   "cn": "沒問題。一有消息我就打給你。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "fixture",
+    "ipa": "/ˈfɪks.tʃɚ/",
+    "pos": "n.",
+    "art": "fixtureJig",
+    "def": "A tool that holds a part in the right position.",
+    "cn": "治具、夾具。",
+    "note": "fixture 是製造業的「治具」，用來固定零件，讓加工或測試的位置每次都一樣。"
+   },
+   "en": "A fixture holds the part in the right position while we test it.",
+   "cn": "治具會在我們測試時，把零件固定在正確的位置。",
+   "hi": [
+    {
+     "t": "A fixture",
+     "cn": "治具",
+     "k": "fixture",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "defect",
+     "ipa": "/ˈdiː.fekt/",
+     "cn": "缺陷（名詞）",
+     "def": "A problem in a product.",
+     "art": "scratch"
+    },
+    "b": {
+     "w": "defective",
+     "ipa": "/dɪˈfek.tɪv/",
+     "cn": "有缺陷的（形容詞）",
+     "def": "Having a defect.",
+     "art": "missing"
+    }
+   },
+   "en": "A defect is the problem. Defective describes the machine. And we say defect rate.",
+   "cn": "defect 是缺陷本身，defective 用來形容機器；不良率要說 defect rate。",
+   "hi": [
+    {
+     "t": "defect rate",
+     "cn": "不良率",
+     "k": "defectRate",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "hire",
+     "ipa": "/ˈhaɪr/",
+     "cn": "僱用（公司僱用你）",
+     "def": "To give someone a job.",
+     "art": "interviewDesk"
+    },
+    "b": {
+     "w": "fire",
+     "ipa": "/faɪr/",
+     "cn": "解僱（公司開除你）",
+     "def": "To make someone leave a job.",
+     "art": "emptyDeskSkip"
+    }
+   },
+   "en": "A company hires you. A company fires you. If you leave by yourself, you quit.",
+   "cn": "公司僱用你是 hire，開除你是 fire；自己決定離開就是 quit。",
+   "hi": [
+    {
+     "t": "you quit",
+     "cn": "你自己辭職",
+     "k": "quit",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "verify",
+    "ipa": "/ˈver.ə.faɪ/",
+    "pos": "v.",
+    "art": "functionalTestPass",
+    "def": "To check that something is true or correct.",
+    "cn": "確認、查證。",
+    "note": "verify (that) + 子句；在正式職場英文裡，加上 that 會更清楚。"
+   },
+   "en": "Verify that the new fixture was ready for production.",
+   "cn": "確認新治具已經準備好可以生產。",
+   "hi": [
+    {
+     "t": "Verify that",
+     "cn": "確認…",
+     "k": "verify",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "root cause",
+    "coreCn": "根本原因的搭配",
+    "art": "rootCause",
+    "items": [
+     {
+      "t": "find the ~",
+      "cn": "找出根本原因"
+     },
+     {
+      "t": "check the ~",
+      "cn": "檢查根本原因"
+     },
+     {
+      "t": "identify the ~",
+      "cn": "辨識出根本原因"
+     },
+     {
+      "t": "keep me informed about the ~",
+      "cn": "讓我知道根本原因的進度"
+     }
+    ]
+   },
+   "en": "Find the root cause, check the root cause, identify the root cause.",
+   "cn": "找出根本原因、檢查根本原因、辨識出根本原因。",
+   "hi": [
+    {
+     "t": "identify the root cause",
+     "cn": "辨識出根本原因",
+     "k": "rootCause",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "介系詞 + V-ing",
+    "coreCn": "介系詞後面接 -ing",
+    "art": "stopRepeat",
+    "items": [
+     {
+      "t": "responsible for updating",
+      "cn": "負責更新"
+     },
+     {
+      "t": "focus on solving",
+      "cn": "專注於解決"
+     },
+     {
+      "t": "stop it from getting worse",
+      "cn": "不讓它變得更糟"
+     },
+     {
+      "t": "prevent it from happening",
+      "cn": "防止它發生"
+     }
+    ]
+   },
+   "en": "Responsible for updating, focus on solving, stop it from getting worse.",
+   "cn": "負責更新、專注於解決、不讓它變得更糟。",
+   "hi": [
+    {
+     "t": "stop it from getting worse",
+     "cn": "不讓它變得更糟",
+     "k": "stopFrom",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "How ~",
+    "coreCn": "數量與選擇的問法",
+    "art": "frequencyScale",
+    "items": [
+     {
+      "t": "How many ~s",
+      "cn": "多少（可數）"
+     },
+     {
+      "t": "How much ~",
+      "cn": "多少（不可數）"
+     },
+     {
+      "t": "How long ~",
+      "cn": "多久"
+     },
+     {
+      "t": "Which ~",
+      "cn": "哪一個"
+     }
+    ]
+   },
+   "en": "How many employees? How much money? How long? Which machine?",
+   "cn": "多少員工？多少錢？多久？哪一台機器？",
+   "hi": [
+    {
+     "t": "How many employees",
+     "cn": "多少員工",
+     "k": "howMany",
+     "c": 1
+    },
+    {
+     "t": "How much money",
+     "cn": "多少錢",
+     "k": "howMuch",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "WH + 助動詞 + 主詞 + 原形動詞",
+    "art": "activePassive",
+    "rows": [
+     {
+      "lab": "一般 WH 問句要有助動詞",
+      "blocks": [
+       {
+        "t": "Why",
+        "k": "n"
+       },
+       {
+        "t": "did",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "the screw",
+        "k": "s"
+       },
+       {
+        "t": "break",
+        "k": "v"
+       }
+      ]
+     },
+     {
+      "lab": "who 當主詞：不加助動詞",
+      "blocks": [
+       {
+        "t": "Who",
+        "k": "s"
+       },
+       {
+        "t": "checks",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "the equipment",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "一般 WH 問句：疑問詞 + 助動詞 + 主詞 + 原形動詞；who 當主詞是例外，直接接動詞。"
+   },
+   "en": "Why did the screw break? Who checks the equipment? With who as the subject, we skip did.",
+   "cn": "螺絲為什麼斷了？誰檢查設備？who 當主詞時，不加 did。",
+   "hi": [
+    {
+     "t": "Why did the screw break",
+     "cn": "螺絲為什麼斷了",
+     "k": "whyDid",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "will + 主詞 + be + 過去分詞（被動）",
+    "art": "activePassive",
+    "rows": [
+     {
+      "lab": "產線被停下來（沒說誰做）",
+      "blocks": [
+       {
+        "t": "How long",
+        "k": "n"
+       },
+       {
+        "t": "will",
+        "k": "n"
+       },
+       {
+        "t": "the production line",
+        "k": "s"
+       },
+       {
+        "t": "be stopped",
+        "k": "v",
+        "add": true
+       }
+      ]
+     },
+     {
+      "lab": "訓練被完成",
+      "blocks": [
+       {
+        "t": "When",
+        "k": "n"
+       },
+       {
+        "t": "will",
+        "k": "n"
+       },
+       {
+        "t": "the operator training",
+        "k": "s"
+       },
+       {
+        "t": "be completed",
+        "k": "v",
+        "add": true
+       }
+      ]
+     }
+    ],
+    "note": "主詞是物或事（產線、訓練），而且沒說誰做動作，就用被動：will + be + 過去分詞。"
+   },
+   "en": "How long will the production line be stopped? When will the operator training be completed?",
+   "cn": "產線會停多久？操作員訓練什麼時候會完成？",
+   "hi": [
+    {
+     "t": "be stopped",
+     "cn": "被停下來",
+     "k": "beStopped",
+     "c": 1
+    },
+    {
+     "t": "be completed",
+     "cn": "被完成",
+     "k": "beCompleted",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "how many + 複數；how much + 不可數",
+    "art": "frequencyScale",
+    "rows": [
+     {
+      "lab": "可數名詞用 how many",
+      "blocks": [
+       {
+        "t": "How many",
+        "k": "n"
+       },
+       {
+        "t": "employees",
+        "k": "s"
+       },
+       {
+        "t": "work",
+        "k": "v"
+       },
+       {
+        "t": "here",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "不可數名詞用 how much",
+      "blocks": [
+       {
+        "t": "How much",
+        "k": "n"
+       },
+       {
+        "t": "money",
+        "k": "s"
+       },
+       {
+        "t": "do you need",
+        "k": "v"
+       }
+      ]
+     }
+    ],
+    "note": "名詞本身是主詞時（How many employees work here?）直接接動詞，不加 do/does。"
+   },
+   "en": "How many employees work here? How much money do you need?",
+   "cn": "這裡有多少員工在工作？你需要多少錢？",
+   "hi": [
+    {
+     "t": "How many employees",
+     "cn": "多少員工",
+     "k": "howMany",
+     "c": 1
+    },
+    {
+     "t": "How much money",
+     "cn": "多少錢",
+     "k": "howMuch",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 4,
+    "wrong": "How long will the production line stop?",
+    "bad": [
+     "stop"
+    ],
+    "fix": "How long will the production line be stopped?",
+    "good": [
+     "be stopped"
+    ],
+    "why": "Nobody says who stops the line, so we use the passive: will plus be plus the past participle.",
+    "whyCn": "產線不會自己停下來，是被人停下來的；沒說誰做時用被動：will + be + 過去分詞。"
+   },
+   "en": "How long will the production line be stopped?",
+   "cn": "產線會停多久？",
+   "hi": [
+    {
+     "t": "be stopped",
+     "cn": "被停下來",
+     "k": "beStopped",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 9,
+    "wrong": "Why the screw break down during assembly?",
+    "bad": [
+     "Why the",
+     "break down"
+    ],
+    "fix": "Why did the screw break during assembly?",
+    "good": [
+     "did",
+     "break during"
+    ],
+    "why": "A WH question needs an auxiliary. It happened in the past, so use did and the base verb break.",
+    "whyCn": "WH 問句要有助動詞；事情發生在過去，所以用 did，後面動詞用原形 break；螺絲斷裂用 break，不用 break down。"
+   },
+   "en": "Why did the screw break during assembly?",
+   "cn": "螺絲為什麼在組裝時斷掉？",
+   "hi": [
+    {
+     "t": "Why did the screw break",
+     "cn": "螺絲為什麼斷了",
+     "k": "whyDid",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "How long will the production line be ___?",
+    "a": "stopped",
+    "n": 1
+   },
+   "en": "How long will the production line be ___?",
+   "cn": "產線會停多久？",
+   "say": "How long will the production line be, blank?",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "How long will the production line be ___?",
+    "a": "stopped",
+    "n": 1,
+    "show": true
+   },
+   "en": "How long will the production line be stopped?",
+   "cn": "產線會停多久？",
+   "hi": [
+    {
+     "t": "be stopped",
+     "cn": "被停下來",
+     "k": "beStopped",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Why ___ the screw break during assembly?",
+    "a": "did",
+    "n": 2
+   },
+   "en": "Why ___ the screw break during assembly?",
+   "cn": "螺絲為什麼在組裝時斷掉？",
+   "say": "Why, blank, the screw break during assembly?",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Why ___ the screw break during assembly?",
+    "a": "did",
+    "n": 2,
+    "show": true
+   },
+   "en": "Why did the screw break during assembly?",
+   "cn": "螺絲為什麼在組裝時斷掉？",
+   "hi": [
+    {
+     "t": "Why did the screw break",
+     "cn": "螺絲為什麼斷了",
+     "k": "whyDid",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Who is responsible ___ updating the SOP?",
+    "a": "for",
+    "n": 3
+   },
+   "en": "Who is responsible ___ updating the SOP?",
+   "cn": "誰負責更新 SOP？",
+   "say": "Who is responsible, blank, updating the SOP?",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Who is responsible ___ updating the SOP?",
+    "a": "for",
+    "n": 3,
+    "show": true
+   },
+   "en": "Who is responsible for updating the SOP?",
+   "cn": "誰負責更新 SOP？",
+   "hi": [
+    {
+     "t": "responsible for updating",
+     "cn": "負責更新",
+     "k": "responsible",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
