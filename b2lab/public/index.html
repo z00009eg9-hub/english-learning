@@ -3144,11 +3144,12 @@ function say(text,rate,onend,voice,pitchMul){
   /* 一句可能再切成幾段（見 ttsChunks），語速語調同一句共用，onend 只掛最後一段 */
   const add=(txt,r,p,last)=>{
     const parts=ttsChunks(txt);
-    /* 問句語調上揚：不再把最後一字切成獨立段（段與段之間會停頓），
-       改由引擎依句尾「?」自然上揚，整句音調（p）已在呼叫端略為拉高 */
+    /* 問句不切段（段與段之間會停頓），Web Speech 無法只拉高句尾，
+       改把整句音調再拉高一點，聽起來像在發問 */
+    const q=/\?\s*$/.test(txt);
     parts.forEach((part,k)=>{
       const u=new SpeechSynthesisUtterance(part);
-      u.lang='en-US'; u.rate=r; u.pitch=Math.max(0.5,Math.min(2,p*pm));
+      u.lang='en-US'; u.rate=r; u.pitch=Math.max(0.5,Math.min(2,p*pm*(q?1.18:1)));
       if(v) u.voice=v;
       if(last && k===parts.length-1 && onend){ u.onend=onend; u.onerror=onend; }
       us.push(u);
