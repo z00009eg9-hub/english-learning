@@ -7177,10 +7177,12 @@ function bookHTML(b){
       h+='<div class="card"><div class="row" style="justify-content:space-between;align-items:center">'
        +'<h2 class="sec" style="margin:0;color:var(--accent2)">📌 理解問題 Comprehension Questions</h2>'
        +'<button class="spk" onclick="bkTogAns(this)">🙈 隱藏答案</button></div>'
-       + r.questions.map((q,i)=>'<div class="bkex"><div class="een">'+(i+1)+'. <span class="sent" data-t="'+esc(q.q)+'" onclick="saySent(this)">'+esc(q.q)+'</span> '+spk(q.q)+'</div>'
+       + r.questions.map((q,i)=>{const m=/^(.*?)\s*\(\s*(A\.[\s\S]*)\)\s*$/.exec(q.q||''),stem=m?m[1]:q.q,opts=m?m[2].split(/\s+\/\s+(?=[B-F]\.\s)/):[];
+        return '<div class="bkex"><div class="een">'+(i+1)+'. <span class="sent" data-t="'+esc(stem)+'" onclick="saySent(this)">'+esc(stem)+'</span> '+spk(stem)+'</div>'
+         +opts.map(o=>'<div class="een" style="margin:3px 0 0 22px;font-weight:400">'+esc(o.trim())+'</div>').join('')
          +'<div class="ecn cnx">'+esc(q.qCn)+'</div>'
          +'<div class="bkans"><div style="margin-top:5px"><span class="sent" data-t="'+esc(q.a)+'" onclick="saySent(this)">'+esc(q.a)+'</span> '+spk(q.a)+'</div>'
-         +'<div class="ecn cnx">'+esc(q.aCn)+'</div></div></div>').join('')
+         +'<div class="ecn cnx">'+esc(q.aCn)+'</div></div></div>';}).join('')
        +'</div>';
     }
     if((r.sumEn||[]).length){
