@@ -1404,6 +1404,14 @@ body.cnall [id^="kc"]{display:block!important}
 /* 課本表格：表頭一律一行、音標與片語/中文欄不在奇怪的地方斷行（表格改用橫向捲動） */
 #v-book th{white-space:nowrap}
 #v-book td.nw{white-space:nowrap}
+@media(max-width:600px){
+  #v-book table.bkcmp,#v-book table.bkcmp tbody{display:block;width:100%}
+  #v-book table.bkcmp tr:first-child{display:none}
+  #v-book table.bkcmp tr{display:block;padding:8px 2px;border-bottom:1px solid #f0c9a0}
+  #v-book table.bkcmp td{display:block;border:0;padding:3px 4px;white-space:normal}
+  #v-book table.bkcmp td.nw{white-space:normal}
+  #v-book table.bkcmp td:nth-child(2){color:var(--ink2)}
+}
 /* 課本的句子中譯跟著右上角全站 🈶 中譯開關 */
 #v-book .cnx{display:none}
 body.cnall #v-book .cnx{display:block!important}
@@ -7124,7 +7132,7 @@ function bookHTML(b){
   /* 比較表＋注意搭配（有才顯示；中文欄最後） */
   if((b.cmp||[]).length){
     h+='<div class="bkbar">'+bkTitle(b.cmpTitle||'IV. 比較表 Comparison Table')+'</div>'
-     +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table>'
+     +'<div class="card" style="padding:10px"><div class="tw" style="margin:0"><table class="bkcmp">'
      +'<tr><th>用法</th><th>適用場景</th><th>例句</th><th class="cnx">中文</th></tr>'
      + b.cmp.map(c=>'<tr><td class="nw" style="font-weight:700">'+esc(c.u)+(/[a-zA-Z]{2,}/.test(c.u)?'<br>'+spk(c.u):'')+'</td><td>'+esc(c.sc)+'</td>'
        +'<td><span class="sent" data-t="'+esc(c.ex)+'" onclick="saySent(this)">'+bkHi(c.ex,c.u)+'</span> '+spk(c.ex)+'<div class="muted cnx">'+esc(c.exCn)+'</div></td>'
