@@ -7070,8 +7070,8 @@ function bookHTML(b){
    + (b.hw||[]).map(q=>{
       let x='<div class="bkq"><div class="qn">第 '+q.n+' 題</div>';
       if(q.wrong) x+='<div class="bkline hwbad"><b class="lb wrong">❌ 原句：</b><span>'+bkDiff(q.wrong,q.fix,'wrong')+'</span></div>'
-        +'<div class="bkline hwok"><b class="lb right">✅ 訂正：</b>'+spk(q.fix)+'<span class="sent" data-t="'+esc(q.fix)+'" onclick="saySent(this)">'+bkDiff(q.fix,q.wrong,'right')+'</span></div>';
-      else x+='<div class="bkline hwok"><b class="lb right">✅ 原句：</b>'+spk(q.ok)+'<span class="sent" data-t="'+esc(q.ok)+'" onclick="saySent(this)">'+esc(q.ok)+'</span></div>';
+        +'<div class="bkline hwok"><b class="lb right">✅ 訂正：</b>'+'<span class="sent" data-t="'+esc(q.fix)+'" onclick="saySent(this)">'+bkDiff(q.fix,q.wrong,'right')+'</span>'+' '+spk(q.fix)+'</div>';
+      else x+='<div class="bkline hwok"><b class="lb right">✅ 原句：</b>'+'<span class="sent" data-t="'+esc(q.ok)+'" onclick="saySent(this)">'+esc(q.ok)+'</span>'+' '+spk(q.ok)+'</div>';
       x+='<div class="bkcn cnx">中文：'+esc(q.cn)+'</div>'
        +'<div class="bkpatline">結構：'+fmlGroups(q.pat)+'</div>'
        +'<div class="bknote"><b>💬 文法解説：</b>'+bkNote(q.note)+'</div></div>';
