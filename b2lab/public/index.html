@@ -833,7 +833,7 @@ body.cnall .ucn{display:block}
 .rel-k{font-size:var(--font-meta);color:var(--ink2);margin:6px 0 2px;font-weight:var(--fw-emph)}
 .rel-d{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 6px;padding:2px 0;min-width:0}
 .rel-d .w{color:var(--ink);font-weight:var(--fw-emph);cursor:pointer;min-width:0;overflow-wrap:anywhere}
-.rel-d .cnx{color:var(--ink);min-width:0;overflow-wrap:anywhere}
+.rel-d .rel-cn{color:var(--ink);min-width:0;overflow-wrap:anywhere}
 .rel-key{font-style:normal;color:var(--accent2);font-weight:var(--fw-emph)}
 .rel-pos{color:#2b7a78;font-size:var(--font-secondary);font-weight:var(--fw-body);font-style:italic}
 .rel-memo{font-size:var(--font-secondary);color:var(--ink2);margin-top:2px}
@@ -5984,7 +5984,7 @@ function relBodyHTML(o,ctx){
   const rows=o.members.map(m=>{
     let right='';
     if(fam) right=m.pos?'<span class="rel-pos">'+esc(m.pos)+'</span>':'';
-    else { const cn=relDiffCn(o,m)||(o.type==='chain'||o.type==='pat'||o.type==='flow'?m.cn:''); right=cn?'<span class="cnx">'+relEm(cn)+'</span>':''; }
+    else { const cn=relDiffCn(o,m)||(o.type==='chain'||o.type==='pat'||o.type==='flow'?m.cn:''); right=cn?'<span class="rel-cn">'+relEm(cn)+'</span>':''; }
     if(!right) return '';
     return '<div class="rel-d"><span class="w sent" data-t="'+esc(m.en)+'" onclick="saySent(this)">'+esc(m.en)+'</span><span class="rel-arr">→</span>'+right+'</div>';
   }).join('');
