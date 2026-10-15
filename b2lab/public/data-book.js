@@ -22105,25 +22105,25 @@ window.BOOK = {
    "cmpTitle": "別混淆 Easily Confused",
    "cmp": [
     {
-     "a": "notice",
-     "b": "procedure",
-     "diff": "notice 是通知單，procedure 是程序。有設變通知單不代表變更管理程序已完整。（IA-5）",
-     "exA": "The notice exists, but the local procedure is still missing.",
-     "exB": "已有通知單，但當地程序仍缺。"
+     "u": "notice vs procedure",
+     "sc": "notice 是通知單，procedure 是程序。有設變通知單不代表變更管理程序已完整。（IA-5）",
+     "ex": "The notice exists, but the local procedure is still missing.",
+     "exCn": "已有通知單，但當地程序仍缺。",
+     "cn": "通知單 vs 程序"
     },
     {
-     "a": "planned progress",
-     "b": "actual progress",
-     "diff": "planned 是預定，actual 是實際。IID-1 要求更新實況，未達目標需紀錄，不能只展示原定日期。",
-     "exA": "Vietnam is to update actual progress against the project schedule.",
-     "exB": "越南需依專案時程更新實際進度。"
+     "u": "planned progress vs actual progress",
+     "sc": "planned 是預定，actual 是實際。IID-1 要求更新實況，未達目標需紀錄，不能只展示原定日期。",
+     "ex": "Vietnam is to update actual progress against the project schedule.",
+     "exCn": "越南需依專案時程更新實際進度。",
+     "cn": "預定進度 vs 實際進度"
     },
     {
-     "a": "release",
-     "b": "closure",
-     "diff": "release 在此為量產放行，closure 是問題結案。IID-3 要求專案負責人繼續追蹤通知書問題，不把文件發行當作逐項完成。",
-     "exA": "Issuing the production release notice does not close every open issue.",
-     "exB": "發行可量產通知書不代表所有未結案問題都已結案。"
+     "u": "release vs closure",
+     "sc": "release 在此為量產放行，closure 是問題結案。IID-3 要求專案負責人繼續追蹤通知書問題，不把文件發行當作逐項完成。",
+     "ex": "Issuing the production release notice does not close every open issue.",
+     "exCn": "發行可量產通知書不代表所有未結案問題都已結案。",
+     "cn": "放行 vs 結案"
     }
    ],
    "reading": [
