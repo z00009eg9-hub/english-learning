@@ -3144,16 +3144,11 @@ function say(text,rate,onend,voice,pitchMul){
   /* 一句可能再切成幾段（見 ttsChunks），語速語調同一句共用，onend 只掛最後一段 */
   const add=(txt,r,p,last)=>{
     const parts=ttsChunks(txt);
-    /* 問句語調上揚：最後一個字另成一段、音調拉高，聽起來句尾往上揚 */
-    let rise=false;
-    if(/\?\s*$/.test(txt)){
-      const m=parts[parts.length-1].match(/^(.*\S)\s+(\S+)$/);
-      if(m){ parts.splice(parts.length-1,1,m[1],m[2]); rise=true; }
-    }
+    /* 問句語調上揚：不再把最後一字切成獨立段（段與段之間會停頓），
+       改由引擎依句尾「?」自然上揚，整句音調（p）已在呼叫端略為拉高 */
     parts.forEach((part,k)=>{
       const u=new SpeechSynthesisUtterance(part);
-      const up=rise&&k===parts.length-1;
-      u.lang='en-US'; u.rate=up?r*0.92:r; u.pitch=Math.max(0.5,Math.min(2,p*pm*(up?1.3:1)));
+      u.lang='en-US'; u.rate=r; u.pitch=Math.max(0.5,Math.min(2,p*pm));
       if(v) u.voice=v;
       if(last && k===parts.length-1 && onend){ u.onend=onend; u.onerror=onend; }
       us.push(u);
