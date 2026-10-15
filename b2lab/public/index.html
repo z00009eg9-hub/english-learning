@@ -1845,6 +1845,7 @@ body:not(.cnall) #v-read .wpitem .exs .excn,body:not(.cnall) #v-real .wpitem .ex
 /* 文法重點裡的 ✅ 正確／❌ 錯誤：淺綠／淺紅底塊對比，不只靠文字顏色 */
 #v-book .bkul li .right{background:#eefaf1;border-radius:6px;padding:1px 6px;
   -webkit-box-decoration-break:clone;box-decoration-break:clone}
+#v-book .bkul li .strike{text-decoration:line-through;text-decoration-thickness:2px}
 #v-book .bkul li .wrong{background:#fdf0ef;border-radius:6px;padding:1px 6px;
   -webkit-box-decoration-break:clone;box-decoration-break:clone}
 
@@ -3106,10 +3107,11 @@ const IS_IOS=/iPad|iPhone|iPod/.test(navigator.userAgent)
 /* 用控制字元當切點，不用 lookbehind（舊版 Safari 不支援，會讓整份 script 掛掉） */
 const CLAUSE_RE=new RegExp('\\s+(?=(?:because|but|so|and then|which|who|when|while|if|although|though|after|before|until|unless)\\b)','gi');
 function ttsChunks(s){
-  const x=String(s).trim();
-  if(!IS_IOS || x.split(/\s+/).length<8) return [x];
+  /* than before 的 before 不是子句連接詞，不能在這裡斷開 */
+  const x=String(s).trim().replace(/\bthan before\b/gi,m=>m.replace(' ','\u0002'));
+  if(!IS_IOS || x.split(/\s+/).length<8) return [x.replace(/\u0002/g,' ')];
   return x.replace(/([,;:])\s+/g,'$1').replace(CLAUSE_RE,'')
-          .split('').map(y=>y.trim()).filter(Boolean);
+          .split('').map(y=>y.trim().replace(/\u0002/g,' ')).filter(Boolean);
 }
 /* iOS：speechSynthesis 要先在使用者手勢內開嗓過一次，之後由非同步流程（如 audio 404 後的
    fallback）觸發的朗讀才會出聲；第一次觸碰時念一個無聲空白來解鎖 */
@@ -3134,9 +3136,16 @@ function say(text,rate,onend,voice,pitchMul){
   /* 一句可能再切成幾段（見 ttsChunks），語速語調同一句共用，onend 只掛最後一段 */
   const add=(txt,r,p,last)=>{
     const parts=ttsChunks(txt);
+    /* 問句語調上揚：最後一個字另成一段、音調拉高，聽起來句尾往上揚 */
+    let rise=false;
+    if(/\?\s*$/.test(txt)){
+      const m=parts[parts.length-1].match(/^(.*\S)\s+(\S+)$/);
+      if(m){ parts.splice(parts.length-1,1,m[1],m[2]); rise=true; }
+    }
     parts.forEach((part,k)=>{
       const u=new SpeechSynthesisUtterance(part);
-      u.lang='en-US'; u.rate=r; u.pitch=Math.max(0.5,Math.min(2,p*pm));
+      const up=rise&&k===parts.length-1;
+      u.lang='en-US'; u.rate=up?r*0.92:r; u.pitch=Math.max(0.5,Math.min(2,p*pm*(up?1.3:1)));
       if(v) u.voice=v;
       if(last && k===parts.length-1 && onend){ u.onend=onend; u.onerror=onend; }
       us.push(u);
@@ -6935,6 +6944,7 @@ window.mrOpen=mrOpen; window.mrClose=mrClose;
 /* 文法重點的 ✅❌✓✗ 自動上色（❌✅ 在文字前面所以連帶後文；✓✗ 在文字後面只上色符號本身） */
 function bkMark(s){
   return esc(s)
+    .replace(/(不能說|不可說|別說|不能寫成)\s*([A-Za-z][^，。；（(]*)/g,'$1 <span class="wrong strike">$2</span>')
     .replace(/❌\s*([^（(]*)/g,'<span class="wrong">❌ $1</span>')
     .replace(/✅\s*([^（(]*)/g,'<span class="right">✅ $1</span>')
     .replace(/(✗|✘|×)/g,'<span class="wrong">$1</span>')

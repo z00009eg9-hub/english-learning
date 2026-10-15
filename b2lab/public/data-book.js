@@ -23688,7 +23688,7 @@ window.BOOK = {
       },
       {
         "w": "SOP",
-        "ipa": "/ˌes.oʊˈpiː/",
+        "ipa": "/ˌes ˌoʊ ˈpiː/",
         "pos": "n.",
         "cn": "標準作業程序",
         "ex": "updating the SOP",
@@ -24011,7 +24011,7 @@ window.BOOK = {
           {
             "tag": "回答",
             "en": "I have been teaching English for five years.",
-            "cn": "兩種說法都可以。"
+            "cn": "我教英文五年了。"
           },
           {
             "tag": "回答",
@@ -24069,7 +24069,7 @@ window.BOOK = {
           {
             "tag": "回答",
             "en": "The machine broke more than ten screws.",
-            "cn": "超過十根。"
+            "cn": "機器弄斷了超過十根螺絲。"
           },
           {
             "tag": "加助動詞",
@@ -24355,7 +24355,7 @@ window.BOOK = {
     "extraVocab": [
       {
         "k": "例外",
-        "en": "exception /ɪkˈsep.ʃən/",
+        "en": "exception",
         "cn": "例外（who 當主詞不加 do/does/did 就是例外，見 IV-A）"
       },
       {
