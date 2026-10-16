@@ -88,12 +88,17 @@ GitHub 是唯一的同步來源；D: 只存在本機、不會自動備份，**�
    ```bash
    git clone https://github.com/z00009eg9-hub/english-learning.git D:/english-learning
    ```
+   B2 Read AI 語音檔 repo 也抓下來（約 700 MB；路徑要跟 `D:\english-learning` 同層，產生器才讀得到網站資料）：
+   ```bash
+   git clone https://github.com/z00009eg9-hub/b2lab-audio.git D:/b2lab-audio
+   cd D:/b2lab-audio && npm install
+   ```
 4. 裝 LINE Bot 的建置工具並確認能跑（words 要 ≥ 900，太少代表 G: 的 QA 資料沒同步好）：
    ```bash
    cd D:/english-learning/line-bot && npm install && npm run build:data
    git checkout -- src/data/vocabulary.json
    ```
-5. 登入部署工具：`npx firebase-tools login`（Speak Up）、`npx wrangler login`（LINE Bot）。B2 Read 是 push 自動部署，不用登入
+5. 登入部署工具：`npx firebase-tools login`（Speak Up，以及 B2 Read AI 語音檔——音檔由本機部署，不走 CI）、`npx wrangler login`（LINE Bot）。B2 Read 網站本身是 push 自動部署，不用登入
 6. 還原 Claude 設定與記憶（**先做這步再開 Claude**）：
    - 設使用者環境變數 `CLAUDE_CONFIG_DIR=D:\ClaudeConfig`（Windows 設定 → 編輯帳戶的環境變數），設完重開 Claude
    - 把 `settings.json` 放回 `D:\ClaudeConfig\`，記憶放回 `D:\ClaudeConfig\projects\D--english-learning\memory\`
