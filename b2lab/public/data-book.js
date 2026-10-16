@@ -22262,6 +22262,323 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- au05 Audit English V — Quality Assurance ---- */
+  {
+   "id": "au05",
+   "icon": "📏",
+   "video": true,
+   "date": "2026-10-19",
+   "title": "Audit English V — Quality Assurance",
+   "titleCn": "稽核英文五｜品保",
+   "topics": "稽核英文, 品保, 校驗, 進料檢驗 IQC, 抽樣計畫, 材料證明, 8D, GR&R, calibration, sampling, certificate, corrective, effectiveness",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "cn": "標籤已建立，但當地程序與外部報告仍缺，所以仍是 Open。",
+     "pat": "We have + 已有, but + 缺口 + are still gaps",
+     "note": "標籤已建立，但當地程序與外部報告仍缺，所以仍是 Open。常見錯誤：有標籤就說校驗全部完成。",
+     "wrong": "We have labels, so all calibration actions are complete.",
+     "fix": "Labels are established. However, the local procedure and external reports are gaps, so the action remains Open in the September plan."
+    },
+    {
+     "n": 2,
+     "ok": "The sampling plan and the inspection submission process need to be added to the procedure.",
+     "cn": "程序要補上抽樣計畫與送檢流程。",
+     "pat": "主詞 + need to be added to + 文件",
+     "note": "程序要補上抽樣計畫與送檢流程。常見錯誤：只說「有檢驗」卻沒說缺什麼。"
+    },
+    {
+     "n": 3,
+     "ok": "It requires dimensional results, hardness results, and material certificates.",
+     "cn": "要求尺寸結果、硬度結果與材料證明。",
+     "pat": "It requires + 三項證據",
+     "note": "量產要求尺寸結果、硬度結果與材料證明。常見錯誤：只提材料證明，漏掉硬度與尺寸。"
+    },
+    {
+     "n": 4,
+     "ok": "No. An 8D example is available, but training records are missing in the assessment.",
+     "cn": "不能。有 8D 範例，但評估記載缺訓練紀錄。",
+     "pat": "No. 範例 is available, but 紀錄 are missing",
+     "note": "有 8D 範例，但評估記載缺訓練紀錄。常見錯誤：把範例當成訓練證據。"
+    },
+    {
+     "n": 5,
+     "ok": "Taiwan and Vietnam are to confirm effectiveness before closure.",
+     "cn": "台灣與越南都要在結案前確認有效性。",
+     "pat": "A and B are to + 動詞 + before closure",
+     "note": "台灣與越南結案前都要確認有效性。常見錯誤：只說「做完」就結案。"
+    },
+    {
+     "n": 6,
+     "ok": "No. Calibration checks a gauge against a reference. GR&R studies variation in repeated measurements and between operators.",
+     "cn": "不能。校驗是對照標準；GR&R 研究重複量測與不同人員的變異。",
+     "pat": "No. A checks … GR&R studies …",
+     "note": "校驗是對照標準；GR&R 研究量測變異。常見錯誤：以為校驗過就不用做 GR&R。"
+    }
+   ],
+   "vocabTitle": "五個關鍵詞 Key Words",
+   "vocab": [
+    {
+     "w": "calibration",
+     "ipa": "/ˌkæləˈbreɪʃn/",
+     "pos": "n.",
+     "cn": "校驗",
+     "ex": "Third-party calibration reports are missing.",
+     "exCn": "第三方校驗報告仍缺。（IIID-3）"
+    },
+    {
+     "w": "sampling",
+     "ipa": "/ˈsæmplɪŋ/",
+     "pos": "n.",
+     "cn": "抽樣",
+     "ex": "The sampling plan needs to be added to the procedure.",
+     "exCn": "程序需補上抽樣計畫。（IIIB-1）"
+    },
+    {
+     "w": "certificate",
+     "ipa": "/sɚˈtɪfɪkət/",
+     "pos": "n.",
+     "cn": "證明書",
+     "ex": "Batch material certificates are missing.",
+     "exCn": "各批次的材料證明仍缺。（IIIB-3）"
+    },
+    {
+     "w": "corrective",
+     "ipa": "/kəˈrektɪv/",
+     "pos": "adj.",
+     "cn": "矯正的",
+     "ex": "The plan requires a local corrective action form.",
+     "exCn": "計畫要求建立當地矯正措施表單。（IIIC-3）"
+    },
+    {
+     "w": "effectiveness",
+     "ipa": "/ɪˈfektɪvnəs/",
+     "pos": "n.",
+     "cn": "有效性",
+     "ex": "Both teams are to confirm effectiveness before closure.",
+     "exCn": "兩邊團隊結案前都要確認有效性。（IIIC-3）"
+    }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "calibration report", "cn": "校驗報告" },
+    { "p": "sampling plan", "cn": "抽樣計畫" },
+    { "p": "inspection instructions", "cn": "檢驗指導書" },
+    { "p": "material certificate", "cn": "材料證明" },
+    { "p": "corrective action", "cn": "矯正措施" },
+    { "p": "confirm effectiveness", "cn": "確認有效性" },
+    { "p": "critical dimensions", "cn": "關鍵尺寸" },
+    { "p": "incoming inspection (IQC)", "cn": "進料檢驗" },
+    { "p": "hardness test", "cn": "硬度測試" },
+    { "p": "measurement variation", "cn": "量測變異" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "V-A",
+     "title": "We have X, but Y is still missing（已有但尚缺）",
+     "pat": "We have + 已有項目, but + 缺口 + is still missing",
+     "pts": [
+      "先講已建立的部分，再用 but 指出缺口。",
+      "不把「標籤」當成「完整校驗系統」。",
+      "例：We have calibration labels, but the local procedure is still missing in the assessment.（已有校驗標籤，但評估仍記載缺當地程序。）"
+     ],
+     "ex": "We have calibration labels, but the local procedure is still missing in the assessment.",
+     "exCn": "已有校驗標籤，但評估仍記載缺當地程序。（IIID-3）"
+    },
+    {
+     "k": "V-B",
+     "title": "The plan requires X（計畫要求…）",
+     "pat": "The plan requires + 名詞（要求的內容）",
+     "pts": [
+      "requires 後面直接接要求的內容。",
+      "說的是「計畫要求」，不是「已經做到」。",
+      "例：The plan requires inspection instructions for critical part dimensions.（計畫要求關鍵尺寸要有檢驗指導書。）"
+     ],
+     "ex": "The plan requires inspection instructions for critical part dimensions.",
+     "exCn": "計畫要求關鍵尺寸要有檢驗指導書。（IIIB-1）"
+    },
+    {
+     "k": "V-C",
+     "title": "A and B are to + V + before + 事件（結案前要做）",
+     "pat": "A and B are to + 動詞原形 + before + 事件",
+     "pts": [
+      "are to 表示「依計畫要做」，語氣比 will 更正式。",
+      "before 後接結案等時間點，說清楚先後順序。",
+      "例：Taiwan and Vietnam are to confirm effectiveness before closure.（台灣與越南結案前要確認有效性。）"
+     ],
+     "ex": "Taiwan and Vietnam are to confirm effectiveness before closure.",
+     "exCn": "台灣與越南結案前要確認有效性。（IIIC-3）"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "label vs report",
+     "sc": "label 是貼在儀器上的標籤，report 是校驗報告。有標籤不代表外部報告齊全。（IIID-3）",
+     "ex": "A label is not a calibration report. Our assessment lists the reports as a separate gap.",
+     "exCn": "標籤不是校驗報告，評估把報告列為另一項缺口。",
+     "cn": "標籤 vs 報告"
+    },
+    {
+     "u": "example vs training record",
+     "sc": "example 是範例，training record 是受訓證據。有 8D 範例不代表人員已受訓。（IIIC-2）",
+     "ex": "An 8D example is available, but the assessment lists missing training records.",
+     "exCn": "有 8D 範例，但評估列出缺訓練紀錄。",
+     "cn": "範例 vs 訓練紀錄"
+    },
+    {
+     "u": "target vs completion",
+     "sc": "target 是計畫目標日，completion 是已經完成。目標日期不是完成證明。（IIC-2）",
+     "ex": "October 23 is the GR&R target in the plan. It is not proof that the study has been completed.",
+     "exCn": "10/23 是計畫的 GR&R 目標，不是已完成的證明。",
+     "cn": "目標 vs 完成"
+    },
+    {
+     "u": "calibration vs GR&R",
+     "sc": "calibration 是量具對照標準；GR&R 是研究重複量測與不同人員的變異。兩者不能互相取代。（IIC-2）",
+     "ex": "Calibration checks a gauge against a reference. GR&R studies measurement variation.",
+     "exCn": "校驗是量具對照標準；GR&R 研究量測變異。",
+     "cn": "校驗 vs GR&R"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "案例 01｜校驗",
+     "title": "Calibration",
+     "titleCn": "案例 01｜校驗（IIID-3）",
+     "paras": [
+      { "en": "Auditor: Is your calibration action complete?", "cn": "稽核員：你們的校驗改善完成了嗎？" },
+      { "en": "You: It is Open in the September 21 plan. Labels are established, but the local procedure and third-party reports are still listed as gaps.", "cn": "你：9/21 改善表中仍是 Open。標籤已建立，但當地程序與第三方報告仍列為缺口。" },
+      { "en": "Auditor: What is the planned improvement?", "cn": "稽核員：預定的改善是什麼？" },
+      { "en": "You: The plan covers a local procedure, a third-party calibration proposal, and system records for production gauges.", "cn": "你：計畫包含當地程序、第三方校驗提案，以及產線量具的系統紀錄。" },
+      { "en": "Auditor: Do the labels prove that external reports are available?", "cn": "稽核員：標籤能證明外部報告都有嗎？" },
+      { "en": "You: No. The labels show one completed action. The third-party reports are a separate gap in the assessment.", "cn": "你：不能。標籤只代表一項已完成；第三方報告是評估中另一項缺口。" }
+     ]
+    },
+    {
+     "bar": "案例 02｜進料檢驗 IQC",
+     "title": "Incoming Inspection (IQC)",
+     "titleCn": "案例 02｜進料檢驗（IIIB-1）",
+     "paras": [
+      { "en": "Auditor: Is the sampling plan included in your procedure?", "cn": "稽核員：你們的程序有包含抽樣計畫嗎？" },
+      { "en": "You: The assessment says it is not included. The action is to add both the sampling plan and the inspection submission process.", "cn": "你：評估記載沒有。對策是補上抽樣計畫與送檢流程。" },
+      { "en": "Auditor: How will you inspect critical part dimensions?", "cn": "稽核員：關鍵尺寸怎麼檢驗？" },
+      { "en": "You: The plan requires specific inspection instructions for those dimensions. It also requires these controls to be included in the Control Plan.", "cn": "你：計畫要求針對這些尺寸建立檢驗指導書，並把管制納入管制計畫（Control Plan）。" },
+      { "en": "Auditor: Does the action plan prove these instructions are in use?", "cn": "稽核員：改善表能證明這些指導書已在使用嗎？" },
+      { "en": "You: No. It states the required improvement. The September record still lists this action as Open, with a November 2 target.", "cn": "你：不能。它寫的是要求的改善；9 月紀錄仍是 Open，目標日 11/2。" }
+     ]
+    },
+    {
+     "bar": "案例 03｜進料不良處理",
+     "title": "Incoming Defect Handling",
+     "titleCn": "案例 03｜進料不良處理（IIIB-2）",
+     "paras": [
+      { "en": "Auditor: What is missing from the incoming defect process?", "cn": "稽核員：進料不良處理缺什麼？" },
+      { "en": "You: The local supplier abnormality process is not defined. Inspection storage signs and document numbers for IQC abnormality records are also missing.", "cn": "你：當地供應商異常處理流程未定義，檢驗存放標示與 IQC 異常紀錄的文件編號也缺。" },
+      { "en": "Auditor: What about defect classification and 8D?", "cn": "稽核員：不良分級與 8D 呢？" },
+      { "en": "You: The return criteria for critical, major, and minor defects are not defined. The existing quality improvement form is not an 8D form.", "cn": "你：致命、主要、次要缺點的退貨標準未定義；現有品質改善單不是 8D 表單。" },
+      { "en": "Auditor: What does the corrective plan require?", "cn": "稽核員：矯正計畫要求什麼？" },
+      { "en": "You: It requires inspection submission and abnormality handling to be included in the rules after ISO guidance. Inspection storage signs are also planned.", "cn": "你：要求 ISO 輔導後，把送檢與異常處理納入規定，也計畫設置檢驗存放標示。" }
+     ]
+    },
+    {
+     "bar": "案例 04｜材料證明",
+     "title": "Material Certificates",
+     "titleCn": "案例 04｜材料證明（IIIB-3）",
+     "paras": [
+      { "en": "Auditor: Are material certificates available for every batch?", "cn": "稽核員：每個批次都有材料證明嗎？" },
+      { "en": "You: The assessment identifies missing batch material certificates. It also requires a link between the drawing requirements and the material certificates.", "cn": "你：評估指出缺各批次材料證明，也要求圖面要求與材料證明之間要能對應。" },
+      { "en": "Auditor: What raw material inspection evidence is missing?", "cn": "稽核員：原料檢驗缺哪些證據？" },
+      { "en": "You: The finding includes missing raw material tests, such as hardness tests. The action calls for dimensional results, hardness results, and material certificates for mass production.", "cn": "你：缺失包含缺原料測試，例如硬度測試；對策要求量產提供尺寸結果、硬度結果與材料證明。" },
+      { "en": "Auditor: Who supports this action?", "cn": "稽核員：這項由誰支援？" },
+      { "en": "You: QA, Materials, and Production share the action. Procurement is to provide material certificates for trial production. The listed target is November 2.", "cn": "你：品保、資材、生產共同負責；採購須提供量試的材料證明，目標日 11/2。" }
+     ]
+    },
+    {
+     "bar": "案例 05｜8D 與有效性確認",
+     "title": "8D & Effectiveness",
+     "titleCn": "案例 05｜8D 與有效性確認（IIIC-2、IIIC-3）",
+     "paras": [
+      { "en": "Auditor: Do you have 8D training records?", "cn": "稽核員：你們有 8D 訓練紀錄嗎？" },
+      { "en": "You: The assessment lists missing 8D training records, although an 8D example is available. An example does not prove that training was completed.", "cn": "你：評估列出缺 8D 訓練紀錄，雖然有 8D 範例；範例不能證明訓練已完成。" },
+      { "en": "Auditor: How will Vietnam develop its 8D process?", "cn": "稽核員：越南如何建立 8D 流程？" },
+      { "en": "You: The plan uses Taiwan training materials and cases. Vietnam is to practise on actual abnormalities and issue a controlled local procedure and form.", "cn": "你：計畫採用台灣的訓練教材與案例；越南針對實際異常演練，並發行受管制的當地程序與表單。" },
+      { "en": "Auditor: How will you decide when to close an action?", "cn": "稽核員：怎麼決定改善何時結案？" },
+      { "en": "You: Vietnam is to track actions in a log. Taiwan and Vietnam are to confirm effectiveness before closure. Taiwan is also to review the first reports.", "cn": "你：越南用清單追蹤；台越雙方結案前確認有效性；台灣也會審查最初幾份報告。" }
+     ]
+    },
+    {
+     "bar": "案例 06｜GR&R",
+     "title": "GR&R",
+     "titleCn": "案例 06｜GR&R（IIC-2）",
+     "paras": [
+      { "en": "Auditor: Have you completed GR&R for key dimensions?", "cn": "稽核員：關鍵尺寸的 GR&R 做完了嗎？" },
+      { "en": "You: The assessment lists no GR&R for key dimensions in the Control Plan. It also lists no GR&R for IQC instruments.", "cn": "你：評估記載管制計畫中的關鍵尺寸沒有 GR&R，IQC 儀器也沒有。" },
+      { "en": "Auditor: What does the improvement plan include?", "cn": "稽核員：改善計畫包含什麼？" },
+      { "en": "You: It includes Taiwan procedures and acceptance criteria, a Vietnam plan for critical gauges, training, and review of the first report. The target is October 23.", "cn": "你：包含台灣的程序與允收標準、越南關鍵量具計畫、訓練，以及第一份報告的審查；目標日 10/23。" },
+      { "en": "Auditor: Does calibration replace GR&R?", "cn": "稽核員：校驗可以取代 GR&R 嗎？" },
+      { "en": "You: No. Calibration checks a gauge against a reference. GR&R studies measurement variation when measurements are repeated and different operators use the gauge.", "cn": "你：不行。校驗是量具對照標準；GR&R 研究重複量測、不同人員使用時的量測變異。" }
+     ]
+    },
+    {
+     "bar": "演練 A｜校驗追問",
+     "title": "Calibration Follow-up",
+     "titleCn": "演練 A｜校驗追問",
+     "paras": [
+      { "en": "Auditor: Q1. Can you introduce the calibration status?", "cn": "稽核員：能介紹校驗現況嗎？" },
+      { "en": "You: The assessment records a calibration system, and labels were established on September 21.", "cn": "你：評估記載已有校驗系統，標籤在 9/21 建立。" },
+      { "en": "Auditor: Q2. So the action is closed?", "cn": "稽核員：所以這項已結案？" },
+      { "en": "You: No. The September action remains Open. The local procedure and external reports are listed as gaps.", "cn": "你：沒有。9 月項目仍是 Open，當地程序與外部報告列為缺口。" },
+      { "en": "Auditor: Q3. What does the plan say about the procedure?", "cn": "稽核員：計畫對程序怎麼說？" },
+      { "en": "You: It is planned after ISO guidance, with a November 20 target.", "cn": "你：計畫在 ISO 輔導後建立，目標日 11/20。" },
+      { "en": "Auditor: Q4. Is that before our November 16 audit?", "cn": "稽核員：那是在我們 11/16 稽核之前嗎？" },
+      { "en": "You: No. That target is after the audit starts. The September plan does not show completion before your visit.", "cn": "你：不是。那個目標日在稽核開始之後；9 月計畫沒有顯示在你們來訪前完成。" }
+     ]
+    },
+    {
+     "bar": "演練 B｜進料不良與 8D 追問",
+     "title": "Incoming Defect & 8D Follow-up",
+     "titleCn": "演練 B｜進料不良與 8D 追問",
+     "paras": [
+      { "en": "Auditor: Q1. Is the incoming defect procedure complete?", "cn": "稽核員：進料不良程序完整嗎？" },
+      { "en": "You: The assessment lists an undefined local process and missing inspection storage signs.", "cn": "你：評估列出當地流程未定義，且缺檢驗存放標示。" },
+      { "en": "Auditor: Q2. Can your improvement form serve as an 8D report?", "cn": "稽核員：你們的改善單可以當 8D 報告嗎？" },
+      { "en": "You: The assessment says the existing form is not an 8D form. A local 8D procedure and form are planned.", "cn": "你：評估記載現有表單不是 8D 表單；計畫建立當地 8D 程序與表單。" },
+      { "en": "Auditor: Q3. Does an 8D example prove staff training?", "cn": "稽核員：8D 範例能證明人員受訓嗎？" },
+      { "en": "You: No. An example is available, but training records are missing in the assessment.", "cn": "你：不能。有範例，但評估記載缺訓練紀錄。" },
+      { "en": "Auditor: Q4. Who will confirm effectiveness?", "cn": "稽核員：誰來確認有效性？" },
+      { "en": "You: The plan requires Taiwan and Vietnam to confirm effectiveness before closure.", "cn": "你：計畫要求台灣與越南在結案前確認有效性。" }
+     ]
+    },
+    {
+     "bar": "完整口說稿｜品保現況",
+     "title": "Full Speaking Script",
+     "titleCn": "完整口說稿｜品保現況",
+     "paras": [
+      { "en": "Welcome to the QA review. We will cover calibration, incoming inspection, material records, 8D, and GR&R.", "cn": "歡迎來到品保審查。我們會說明校驗、進料檢驗、材料紀錄、8D 與 GR&R。" },
+      { "en": "Our September assessment records a calibration system. Labels are established, but the local procedure and external reports remain gaps.", "cn": "9 月評估記載已有校驗系統。標籤已建立，但當地程序與外部報告仍是缺口。" },
+      { "en": "For incoming inspection, the plan requires sampling rules and instructions for critical dimensions. It also calls for material certificates and hardness results.", "cn": "進料檢驗方面，計畫要求抽樣規則與關鍵尺寸檢驗指導書，也要求材料證明與硬度結果。" },
+      { "en": "For 8D, Vietnam is to use Taiwan materials and practise on actual abnormalities. Both teams are to confirm effectiveness before closure.", "cn": "8D 方面，越南採用台灣教材並針對實際異常演練；兩邊團隊結案前都要確認有效性。" },
+      { "en": "GR&R is another open action. The plan includes critical gauges, training, and the first report review. These statements reflect our September 21 records.", "cn": "GR&R 是另一項未結案工作；計畫包含關鍵量具、訓練與第一份報告審查。以上內容反映我們 9/21 的紀錄。" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "Calibration labels are established, but external reports remain a gap in the assessment.", "cn": "校驗標籤已建立，但評估中外部報告仍是缺口。（IIID-3）" },
+      { "en": "The plan requires sampling rules and inspection instructions for critical dimensions.", "cn": "計畫要求抽樣規則與關鍵尺寸檢驗指導書。（IIIB-1）" },
+      { "en": "The local incoming defect process and inspection storage signs need improvement.", "cn": "當地進料不良流程與檢驗存放標示需改善。（IIIB-2）" },
+      { "en": "The material action requires dimensional results, hardness results, and certificates.", "cn": "材料對策要求尺寸結果、硬度結果與證明書。（IIIB-3）" },
+      { "en": "Taiwan and Vietnam are to confirm 8D effectiveness before closure.", "cn": "台灣與越南結案前要確認 8D 有效性。（IIIC-3）" },
+      { "en": "The GR&R plan covers critical gauges, training, and the first report review.", "cn": "GR&R 計畫涵蓋關鍵量具、訓練與第一份報告審查。（IIC-2）" }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -24660,6 +24977,7 @@ window.BOOK = {
     au01:[[['cert','calendar','stamp','shield','hourglass'],'ISO 認證問答：尚未取得認證 → 目標 2027 年 6 月 → 先提出輔導公司簽呈 → 由品保負責 → 目標日期不等於已完成。']],
     au02:[[['meeting','doc','idcard','timetable','warning'],'組織圖問答：列出課級以上姓名與年資 → 各部門提供資料 → 由人資負責 → 目標 10 月 19 日 → 仍標示 Open，尚未完成。']],
     au03:[[['bottleL','factory','cart','lock','eye'],'化學品管控問答：缺領用紀錄、存放位置、效期、警示標籤與防護設備 → 還要管控送到產線的化學品 → 由資材負責建立管控 → 只有倉儲管理不能涵蓋 → 仍標示 Open，尚未完成。']],
+    au05:[[['gauge','clipboard','cert','search','check'],'品保：標籤≠校驗報告 → 補抽樣計畫與關鍵尺寸檢驗 → 進料不良流程 → 材料證明與硬度 → 8D 範例≠訓練紀錄、結案前確認有效性 → 校驗≠GR&R。']],
     au04:[[['gear','flag','laptop','chartUp','thumb'],'開發與專案管理：設變通知單≠完整程序 → 台灣主導安規越南協助 → PDM 存放≠審核程序 → 台灣提供時程越南更新實際進度 → 填表≠核准 → 追蹤量產問題至結案。']],
     bk20261006:[[['board','stairs','gauge','orgchart','clipboard'],'操作員訓練五階段：獨立作業前提供實務訓練並評估技能 → 每站分 A/B/C 三個技能等級逐級晉升 → 內部評估未通過先安排較簡單的工作站 → 所有人都受過訓可互相代班維持生產 → 客戶稽核時出示訓練紀錄說明驗證方式。']],
     bk20261013:[[['key','plug','search','map','ballot'],'品保會議五階段：確認新治具能否投入生產 → 機器出狀況先停止測試 → 螺絲組裝時斷裂、不良率變高 → 問題最先出現在第三站、檢查治具是否對準 → 預計明天下午重啟、週五前完成訓練並更新 SOP。']],

@@ -45945,3 +45945,876 @@ window.VIDEO["bk20261013"] = {
   }
  ]
 };
+
+/* ---------- au05 影片專屬插圖（每句一張，不重複；2026-10-16） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var th=thw(2.5);
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var gap=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="5" fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5"/>'; };
+  /* 圓盤量表：(cx,cy) 圓心、r 半徑、ang 指針角度（度，0=向右） */
+  var dial=function(cx,cy,r,ang){ var a=ang*Math.PI/180, i, s='<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="#fff" '+st+'/>';
+    for(i=0;i<7;i++){ var t=(200+i*23.3)*Math.PI/180;
+      s+='<path d="M'+(cx+Math.cos(t)*(r-4)).toFixed(1)+' '+(cy+Math.sin(t)*(r-4)).toFixed(1)+' L'+(cx+Math.cos(t)*(r-10)).toFixed(1)+' '+(cy+Math.sin(t)*(r-10)).toFixed(1)+'" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'; }
+    return s+'<path d="M'+cx+' '+cy+' L'+(cx+Math.cos(a)*(r-9)).toFixed(1)+' '+(cy+Math.sin(a)*(r-9)).toFixed(1)+'" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<circle cx="'+cx+'" cy="'+cy+'" r="4" fill="'+D+'"/>'; };
+  /* 吊牌標籤 */
+  var tag=function(x,y,w,h,f){ return '<path d="M'+x+' '+y+' h'+(w-12)+' l12 '+(h/2)+' l-12 '+(h/2)+' h-'+(w-12)+' z" fill="'+f+'" '+st+'/>'
+     +'<circle cx="'+(x+9)+'" cy="'+(y+h/2)+'" r="3" fill="#fff" stroke="'+D+'" stroke-width="2"/>'; };
+  /* 小方塊（產品） */
+  var cube=function(x,y,s,f){ return '<rect x="'+x+'" y="'+y+'" width="'+s+'" height="'+s+'" rx="3" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'; };
+  /* 尺寸標註線（水平） */
+  var dimh=function(x1,x2,y){ return '<path d="M'+x1+' '+y+' H'+x2+' M'+x1+' '+(y-6)+' v12 M'+x2+' '+(y-6)+' v12" fill="none" stroke="'+B+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M'+(x1+4)+' '+y+' l7 -4 v8 z M'+(x2-4)+' '+y+' l-7 -4 v8 z" fill="'+B+'"/>'; };
+  /* 紅色警示旗 */
+  var tri=function(cx,cy,s){ return '<path d="M'+cx+' '+(cy-s)+' L'+(cx+s*1.15)+' '+(cy+s*0.8)+' H'+(cx-s*1.15)+' Z" fill="#fff" stroke="'+R+'" stroke-width="3" stroke-linejoin="round"/>'
+     +txt(cx,cy+s*0.5,'!',s*1.1,R); };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 2 Tom：你們的校驗改善完成了嗎？ */
+    au5CalAsk: svg(
+      dial(70,76,46,-35)
+     +'<rect x="50" y="122" width="40" height="12" rx="3" fill="'+L+'" '+st+'/>'
+     +'<rect x="124" y="42" width="52" height="64" rx="6" fill="#fff" '+st+'/>'
+     +'<circle cx="138" cy="60" r="5" fill="none" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M150 60 h16 M132 78 h34 M132 92 h24" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +qb(166,26)),
+
+    /* 3 Anita：標籤已建立，當地程序與第三方報告仍缺 */
+    au5CalLabelGap: svg(
+      dial(46,60,34,-40)
+     +tag(22,104,50,26,A)
+     +chk(36,119,14,'#fff')
+     +gap(96,22,40,56)
+     +txt(116,54,'SOP',14,R)
+     +gap(144,22,44,56)
+     +txt(166,54,'RPT',14,R)
+     +pill(98,94,88,24,'2 GAPS',R,'#fff',13)),
+
+    /* 4 Tom：標籤能證明外部報告都有嗎？ */
+    au5LabelProveAsk: svg(
+      tag(14,50,66,34,A)
+     +chk(36,69,16,'#fff')
+     +'<path d="M92 60 h14 M92 74 h14" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<rect x="118" y="26" width="64" height="88" rx="5" fill="none" stroke="'+B+'" stroke-width="3" stroke-dasharray="6 5"/>'
+     +'<path d="M130 52 h40 M130 66 h40 M130 80 h26" stroke="'+B+'" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>'
+     +qb(100,124)),
+
+    /* 5 Anita：不能。標籤不是報告，報告是另一項缺口 */
+    au5LabelNotReport: svg(
+      tag(12,28,62,32,A)
+     +chk(32,45,14,'#fff')
+     +'<path d="M88 44 h20 M88 56 h20" stroke="'+R+'" stroke-width="4.5" stroke-linecap="round" transform="rotate(-14 98 50)"/>'
+     +doc(122,16,62,76,1)
+     +ex(153,62,26,R)
+     +pill(40,106,120,26,'LABEL ≠ REPORT',D,'#fff',13)),
+
+    /* 6 Tom：程序有包含抽樣計畫嗎？ */
+    au5SamplingAsk: svg(
+      '<rect x="14" y="40" width="140" height="68" rx="6" fill="'+L+'" '+st+'/>'
+     +cube(26,50,24,'#fff')+cube(58,50,24,'#fff')+cube(90,50,24,'#fff')+cube(122,50,24,'#fff')
+     +cube(26,78,24,'#fff')+cube(58,78,24,'#fff')+cube(90,78,24,'#fff')+cube(122,78,24,'#fff')
+     +qb(172,34)),
+
+    /* 7 Anita：評估記載沒有；對策是補抽樣計畫與送檢流程 */
+    au5SamplingAdd: svg(
+      '<rect x="12" y="24" width="86" height="76" rx="6" fill="'+L+'" '+st+'/>'
+     +cube(20,32,20,'#fff')+cube(46,32,20,A)+cube(72,32,20,'#fff')
+     +cube(20,60,20,A)+cube(46,60,20,'#fff')+cube(72,60,20,'#fff')
+     +'<path d="M104 62 h18" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/><path d="M130 62 l-12 -8 v16 z" fill="'+A+'"/>'
+     +gap(134,24,54,76)
+     +'<path d="M146 44 h30 M146 58 h30 M146 72 h18" stroke="'+R+'" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>'
+     +pill(30,112,140,26,'ADD SAMPLING PLAN',D,'#fff',12)),
+
+    /* 8 Tom：關鍵尺寸怎麼檢驗？ */
+    au5DimAsk: svg(
+      '<rect x="34" y="52" width="108" height="46" rx="6" fill="'+L+'" '+st+'/>'
+     +'<circle cx="62" cy="75" r="9" fill="#fff" '+st+'/>'
+     +dimh(34,142,36)
+     +'<path d="M34 52 V30 M142 52 V30" stroke="'+B+'" stroke-width="2" stroke-dasharray="3 3"/>'
+     +txt(88,26,'CRITICAL',11,B)
+     +qb(168,92)),
+
+    /* 9 Anita：計畫要求針對關鍵尺寸建檢驗指導書 */
+    au5DimInstr: svg(
+      '<rect x="10" y="62" width="70" height="34" rx="5" fill="'+L+'" '+st+'/>'
+     +'<circle cx="28" cy="79" r="6" fill="#fff" '+st+'/>'
+     +dimh(10,80,48)
+     +'<path d="M88 79 h12" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/><path d="M108 79 l-12 -8 v16 z" fill="'+A+'"/>'
+     +doc(114,22,74,92,1)
+     +chk(130,96,22,A)
+     +pill(30,118,140,24,'INSPECTION INSTRUCTIONS',D,'#fff',9)),
+
+    /* 10 Tom：進料不良處理缺什麼？ */
+    au5IncomingAsk: svg(
+      '<rect x="12" y="52" width="66" height="40" rx="5" fill="#fff" '+st+'/>'
+     +'<rect x="76" y="62" width="20" height="30" rx="3" fill="'+L+'" '+st+'/>'
+     +'<circle cx="30" cy="98" r="9" fill="'+D+'"/><circle cx="62" cy="98" r="9" fill="'+D+'"/>'
+     +'<path d="M104 72 h20" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/><path d="M132 72 l-12 -8 v16 z" fill="'+A+'"/>'
+     +cube(142,50,22,L)+cube(170,50,22,L)+cube(156,76,22,'#fff')
+     +tri(120,30,13)
+     +qb(168,28)),
+
+    /* 11 Anita：當地異常流程未定義、檢驗存放標示缺 */
+    au5IncomingGap: svg(
+      gap(10,26,56,70)
+     +'<circle cx="38" cy="50" r="8" fill="none" stroke="'+D+'" stroke-width="2.5"/><path d="M38 58 v10 M26 68 h24 M26 68 v8 M50 68 v8" '+thw(2.5)+'/>'
+     +gap(72,26,56,70)
+     +'<rect x="84" y="38" width="32" height="40" rx="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/><path d="M92 50 h16 M92 60 h16" '+thw(2.5)+'/>'
+     +gap(134,26,56,70)
+     +'<path d="M162 40 v44 M150 40 h24" '+thw(3)+'/><rect x="146" y="40" width="32" height="18" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +pill(30,108,140,26,'UNDEFINED · NO SIGNS',R,'#fff',11)),
+
+    /* 12 Tom：每個批次都有材料證明嗎？ */
+    au5CertAsk: svg(
+      cube(14,66,26,L)+cube(44,66,26,L)+cube(74,66,26,L)
+     +'<path d="M20 50 h14 M50 50 h14 M80 50 h14" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M27 50 v14 M57 50 v14 M87 50 v14" stroke="'+D+'" stroke-width="2" stroke-dasharray="2 3"/>'
+     +'<rect x="116" y="32" width="64" height="86" rx="5" fill="#fff" '+st+'/>'
+     +'<circle cx="148" cy="82" r="14" fill="'+A+'" '+st+'/>'
+     +'<path d="M140 94 l-4 18 l12 -6 l12 6 l-4 -18" fill="'+A+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<path d="M128 48 h40 M128 60 h30" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +qb(104,118)),
+
+    /* 13 Anita：缺批次證明；要求尺寸、硬度、材料證明 */
+    au5CertEvidence: svg(
+      '<rect x="12" y="22" width="52" height="64" rx="5" fill="#fff" '+st+'/>'
+     +dimh(20,56,40)
+     +'<rect x="22" y="52" width="32" height="20" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<rect x="74" y="22" width="52" height="64" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M100 32 v26" stroke="'+D+'" stroke-width="3"/><path d="M92 58 h16 l-8 14 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +txt(100,80,'HRC',11,D)
+     +'<rect x="136" y="22" width="52" height="64" rx="5" fill="#fff" '+st+'/>'
+     +'<circle cx="162" cy="48" r="11" fill="'+A+'" '+st+'/><path d="M156 57 l-3 14 l9 -4 l9 4 l-3 -14" fill="'+A+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +chk(32,112,18,A)+chk(94,112,18,A)+chk(156,112,18,A)
+     +pill(12,120,176,22,'DIMENSION · HARDNESS · CERT',D,'#fff',10)),
+
+    /* 14 Tom：8D 範例能證明人員受過訓嗎？ */
+    au5EightDAsk: svg(
+      doc(18,14,72,100,1)
+     +txt(54,66,'8D',26,A)
+     +'<path d="M30 92 h40" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M100 66 h14" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/><path d="M100 80 h14" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +per(152,56,16,L)
+     +'<rect x="132" y="94" width="40" height="26" rx="4" fill="none" stroke="'+B+'" stroke-width="3" stroke-dasharray="5 4"/>'
+     +qb(168,24)),
+
+    /* 15 Anita：有範例，但缺訓練紀錄 */
+    au5EightDNoRecord: svg(
+      doc(12,18,62,86,1)
+     +txt(43,66,'8D',22,A)
+     +chk(30,92,16,A)
+     +'<path d="M84 60 h12 M84 74 h12" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +gap(106,22,80,86)
+     +'<path d="M118 40 h56 M118 52 h56 M118 64 h56 M118 76 h34" stroke="'+R+'" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>'
+     +pill(24,114,152,26,'NO TRAINING RECORDS',R,'#fff',11)),
+
+    /* 16 Tom：怎麼決定改善何時結案？ */
+    au5CloseAsk: svg(
+      '<rect x="14" y="22" width="104" height="96" rx="6" fill="#fff" '+st+'/>'
+     +'<circle cx="30" cy="44" r="6" fill="none" stroke="'+D+'" stroke-width="2.5"/><path d="M44 44 h60" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<circle cx="30" cy="68" r="6" fill="none" stroke="'+D+'" stroke-width="2.5"/><path d="M44 68 h60" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<circle cx="30" cy="92" r="6" fill="none" stroke="'+D+'" stroke-width="2.5"/><path d="M44 92 h60" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M146 120 V40" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M146 40 h32 l-7 11 l7 11 h-32 z" fill="'+L+'" '+st+'/>'
+     +qb(164,100)),
+
+    /* 17 Anita：台越結案前都要確認有效性 */
+    au5TwVnConfirm: svg(
+      per(44,40,15,A)
+     +per(156,40,15,L)
+     +'<path d="M66 70 L92 96" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/>'
+     +'<path d="M134 70 L108 96" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<circle cx="100" cy="104" r="20" fill="#fff" '+st+'/>'
+     +chk(90,104,20,A)
+     +pill(12,118,60,22,'TW',A,'#fff',14)
+     +pill(128,118,60,22,'VN',L,D,14)),
+
+    /* 18 Tom：關鍵尺寸的 GR&R 做完了嗎？ */
+    au5GrrAsk: svg(
+      per(36,44,13,L)+per(86,44,13,L)
+     +'<circle cx="62" cy="108" r="22" fill="#fff" '+st+'/>'
+     +'<path d="M62 108 L74 98" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/><circle cx="62" cy="108" r="3.5" fill="'+D+'"/>'
+     +'<path d="M36 74 L52 92 M86 74 L72 92" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="4 4" stroke-linecap="round"/>'
+     +'<rect x="124" y="30" width="62" height="70" rx="5" fill="#fff" '+st+'/>'
+     +'<path d="M134 80 q10 -34 20 0 q10 34 20 0" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +qb(158,118)),
+
+    /* 19 Anita：沒有關鍵尺寸 GR&R；計畫含關鍵量具、訓練、首份報告審查 */
+    au5GrrPlan: svg(
+      gap(10,16,50,64)
+     +txt(35,56,'GR&R',12,R)
+     +'<path d="M70 48 h14" stroke="'+A+'" stroke-width="4" stroke-linecap="round"/><path d="M92 48 l-11 -7 v14 z" fill="'+A+'"/>'
+     +'<circle cx="122" cy="48" r="22" fill="#fff" '+st+'/>'
+     +'<path d="M122 48 L134 38" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/><circle cx="122" cy="48" r="3.5" fill="'+D+'"/>'
+     +per(170,38,10,L)
+     +'<rect x="14" y="94" width="52" height="40" rx="5" fill="#fff" '+st+'/><path d="M22 110 h36 M22 122 h24" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<rect x="78" y="94" width="52" height="40" rx="5" fill="#fff" '+st+'/><path d="M88 104 l20 0 l-10 -8 z" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><path d="M86 122 h36" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<rect x="142" y="94" width="44" height="40" rx="5" fill="#fff" '+st+'/>'
+     +chk(152,122,18,A)),
+
+    /* 20 Tom：校驗可以取代 GR&R 嗎？ */
+    au5CalVsGrrAsk: svg(
+      dial(46,64,34,-40)
+     +'<path d="M92 54 h16 M92 74 h16" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
+     +per(138,48,10,L)+per(166,48,10,L)
+     +'<path d="M116 100 q10 -26 22 0 q10 26 22 0 q10 -26 22 0" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +txt(46,122,'CAL',13,D)
+     +qb(100,120)),
+
+    /* 21 Anita：不能。校驗是對照標準；GR&R 是量測變異 */
+    au5CalVsGrr: svg(
+      '<rect x="8" y="14" width="86" height="104" rx="6" fill="#fff" '+st+'/>'
+     +dial(51,56,26,-40)
+     +'<path d="M20 98 h62" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/><path d="M20 90 h20 M20 106 h20" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>'
+     +'<rect x="106" y="14" width="86" height="104" rx="6" fill="#fff" '+st+'/>'
+     +per(132,40,9,L)+per(166,40,9,L)
+     +'<path d="M116 88 q9 -26 19 0 q9 26 19 0 q9 -26 19 0" fill="none" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'
+     +pill(14,124,80,20,'REFERENCE',D,'#fff',10)
+     +pill(108,124,84,20,'VARIATION',A,'#fff',10))
+  });
+})();
+
+window.VIDEO.au05 = {
+ "title": "Audit English V — Quality Assurance",
+ "titleCn": "稽核英文五｜品保",
+ "date": "2026-10-19",
+ "level": "B1+",
+ "scene": "Factory Audit · Quality Assurance",
+ "sceneCn": "工廠稽核・品保",
+ "sceneArt": "gauge",
+ "titleArt": [
+  "gauge",
+  "clipboard",
+  "cert"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・現場窗口",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・客戶稽核員",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "The Audit Conversation",
+   "cn": "情境：稽核問答"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "calibration": {
+   "t": "calibration",
+   "cn": "校驗",
+   "tag": [
+    "稽核英文",
+    "品保"
+   ],
+   "note": "搭配：calibration report（校驗報告）。",
+   "ex": "Third-party calibration reports are missing.",
+   "exCn": "第三方校驗報告仍缺。"
+  },
+  "sampling": {
+   "t": "sampling",
+   "cn": "抽樣",
+   "tag": [
+    "稽核英文",
+    "進料檢驗"
+   ],
+   "note": "搭配：sampling plan（抽樣計畫）。",
+   "ex": "The sampling plan needs to be added to the procedure.",
+   "exCn": "程序需補上抽樣計畫。"
+  },
+  "certificate": {
+   "t": "certificate",
+   "cn": "證明書",
+   "tag": [
+    "稽核英文",
+    "材料證明"
+   ],
+   "note": "搭配：material certificate（材料證明）。",
+   "ex": "Batch material certificates are missing.",
+   "exCn": "各批次的材料證明仍缺。"
+  },
+  "corrective": {
+   "t": "corrective",
+   "cn": "矯正的",
+   "tag": [
+    "稽核英文",
+    "8D"
+   ],
+   "note": "搭配：corrective action（矯正措施）。",
+   "ex": "The plan requires a local corrective action form.",
+   "exCn": "計畫要求建立當地矯正措施表單。"
+  },
+  "effectiveness": {
+   "t": "effectiveness",
+   "cn": "有效性",
+   "tag": [
+    "稽核英文",
+    "結案確認"
+   ],
+   "note": "搭配：confirm effectiveness（確認有效性）。",
+   "ex": "Both teams are to confirm effectiveness before closure.",
+   "exCn": "兩邊團隊結案前都要確認有效性。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today we practise answering a customer auditor about quality assurance.",
+   "cn": "歡迎回來。今天我們練習用英文回答客戶稽核員有關品保的問題。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "scene",
+    "art": "auFiveKeys"
+   },
+   "en": "Listen for five key words, the answer patterns, and how to tell a label, an example, or a target date from real evidence.",
+   "cn": "注意聽五個關鍵詞、回答句型，以及如何分辨「標籤、範例、目標日」與真正的證據。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au5CalAsk"
+   },
+   "en": "Is your calibration action complete?",
+   "cn": "你們的校驗改善完成了嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au5CalLabelGap"
+   },
+   "en": "Labels are established, but the local procedure and third-party reports are still gaps.",
+   "cn": "標籤已建立，但當地程序與第三方報告仍是缺口。",
+   "hi": [
+    {
+     "t": "calibration",
+     "cn": "校驗",
+     "k": "calibration",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au5LabelProveAsk"
+   },
+   "en": "Do the labels prove that external reports are available?",
+   "cn": "標籤能證明外部報告都有嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au5LabelNotReport"
+   },
+   "en": "No. A label is not a calibration report. The reports are a separate gap.",
+   "cn": "不能。標籤不是校驗報告，報告是另一項缺口。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au5SamplingAsk"
+   },
+   "en": "Is the sampling plan included in your procedure?",
+   "cn": "你們的程序有包含抽樣計畫嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au5SamplingAdd"
+   },
+   "en": "The assessment says it is not. The action is to add the sampling plan and the inspection submission process.",
+   "cn": "評估記載沒有。對策是補上抽樣計畫與送檢流程。",
+   "hi": [
+    {
+     "t": "sampling",
+     "cn": "抽樣",
+     "k": "sampling",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au5DimAsk"
+   },
+   "en": "How will you inspect critical part dimensions?",
+   "cn": "關鍵尺寸怎麼檢驗？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au5DimInstr"
+   },
+   "en": "The plan requires specific inspection instructions for those dimensions.",
+   "cn": "計畫要求針對這些尺寸建立檢驗指導書。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au5IncomingAsk"
+   },
+   "en": "What is missing from the incoming defect process?",
+   "cn": "進料不良處理缺什麼？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au5IncomingGap"
+   },
+   "en": "The local supplier abnormality process is not defined, and inspection storage signs are missing.",
+   "cn": "當地供應商異常處理流程未定義，檢驗存放標示也缺。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au5CertAsk"
+   },
+   "en": "Are material certificates available for every batch?",
+   "cn": "每個批次都有材料證明嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au5CertEvidence"
+   },
+   "en": "Batch certificates are missing. The action calls for dimensional results, hardness results, and material certificates.",
+   "cn": "缺各批次證明書。對策要求尺寸結果、硬度結果與材料證明。",
+   "hi": [
+    {
+     "t": "certificate",
+     "cn": "證明書",
+     "k": "certificate",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au5EightDAsk"
+   },
+   "en": "Does an 8D example prove staff training?",
+   "cn": "8D 範例能證明人員受過訓嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au5EightDNoRecord"
+   },
+   "en": "No. An example is available, but training records are missing.",
+   "cn": "不能。有範例，但缺訓練紀錄。",
+   "hi": [
+    {
+     "t": "corrective",
+     "cn": "矯正的",
+     "k": "corrective",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au5CloseAsk"
+   },
+   "en": "How will you decide when to close an action?",
+   "cn": "怎麼決定改善何時結案？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au5TwVnConfirm"
+   },
+   "en": "Taiwan and Vietnam are to confirm effectiveness before closure.",
+   "cn": "台灣與越南結案前都要確認有效性。",
+   "hi": [
+    {
+     "t": "effectiveness",
+     "cn": "有效性",
+     "k": "effectiveness",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au5GrrAsk"
+   },
+   "en": "Have you completed GR&R for key dimensions?",
+   "cn": "關鍵尺寸的 GR&R 做完了嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au5GrrPlan"
+   },
+   "en": "Not yet. The plan covers critical gauges, training, and the first report review.",
+   "cn": "還沒有。計畫涵蓋關鍵量具、訓練與第一份報告審查。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au5CalVsGrrAsk"
+   },
+   "en": "Does calibration replace GR&R?",
+   "cn": "校驗可以取代 GR&R 嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au5CalVsGrr"
+   },
+   "en": "No. Calibration checks a gauge against a reference. GR&R studies variation in repeated measurements.",
+   "cn": "不行。校驗是量具對照標準；GR&R 研究重複量測的變異。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "calibration",
+    "ipa": "/ˌkæləˈbreɪʃn/",
+    "pos": "n.",
+    "art": "gauge",
+    "def": "calibration n. — calibration report.",
+    "cn": "校驗｜搭配：校驗報告",
+    "note": "搭配：calibration report（校驗報告）。"
+   },
+   "en": "Third-party calibration reports are missing.",
+   "cn": "第三方校驗報告仍缺。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "sampling",
+    "ipa": "/ˈsæmplɪŋ/",
+    "pos": "n.",
+    "art": "search",
+    "def": "sampling n. — sampling plan.",
+    "cn": "抽樣｜搭配：抽樣計畫",
+    "note": "搭配：sampling plan（抽樣計畫）。"
+   },
+   "en": "The sampling plan needs to be added to the procedure.",
+   "cn": "程序需補上抽樣計畫。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "certificate",
+    "ipa": "/sɚˈtɪfɪkət/",
+    "pos": "n.",
+    "art": "cert",
+    "def": "certificate n. — material certificate.",
+    "cn": "證明書｜搭配：材料證明",
+    "note": "搭配：material certificate（材料證明）。"
+   },
+   "en": "Batch material certificates are missing.",
+   "cn": "各批次的材料證明仍缺。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "corrective",
+    "ipa": "/kəˈrektɪv/",
+    "pos": "adj.",
+    "art": "wrench",
+    "def": "corrective adj. — corrective action.",
+    "cn": "矯正的｜搭配：矯正措施",
+    "note": "搭配：corrective action（矯正措施）。"
+   },
+   "en": "The plan requires a local corrective action form.",
+   "cn": "計畫要求建立當地矯正措施表單。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "effectiveness",
+    "ipa": "/ɪˈfektɪvnəs/",
+    "pos": "n.",
+    "art": "target",
+    "def": "effectiveness n. — confirm effectiveness.",
+    "cn": "有效性｜搭配：確認有效性",
+    "note": "搭配：confirm effectiveness（確認有效性）。"
+   },
+   "en": "Both teams are to confirm effectiveness before closure.",
+   "cn": "兩邊團隊結案前都要確認有效性。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "We have X, but Y is still missing",
+    "art": "clipboard",
+    "rows": [
+     {
+      "lab": "已有但尚缺",
+      "blocks": [
+       {
+        "t": "We have",
+        "k": "s"
+       },
+       {
+        "t": "已有項目, but",
+        "k": "v"
+       },
+       {
+        "t": "缺口 is still missing",
+        "k": "o"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "We have calibration labels, but the local procedure is still missing.",
+   "cn": "已有校驗標籤，但當地程序仍缺。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "The plan requires X",
+    "art": "check",
+    "rows": [
+     {
+      "lab": "計畫要求",
+      "blocks": [
+       {
+        "t": "The plan",
+        "k": "s"
+       },
+       {
+        "t": "requires",
+        "k": "v"
+       },
+       {
+        "t": "要求的內容",
+        "k": "o"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "The plan requires inspection instructions for critical part dimensions.",
+   "cn": "計畫要求關鍵尺寸要有檢驗指導書。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "A and B are to + 動詞原形 + before + 事件",
+    "art": "flag",
+    "rows": [
+     {
+      "lab": "結案前要做",
+      "blocks": [
+       {
+        "t": "A and B",
+        "k": "s"
+       },
+       {
+        "t": "are to 動詞原形",
+        "k": "v"
+       },
+       {
+        "t": "before 事件",
+        "k": "o"
+       }
+      ]
+     }
+    ]
+   },
+   "en": "Taiwan and Vietnam are to confirm effectiveness before closure.",
+   "cn": "台灣與越南結案前要確認有效性。"
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 1,
+    "wrong": "We have labels, so all calibration actions are complete.",
+    "bad": [],
+    "fix": "Labels are established, but the local procedure and external reports are still gaps."
+   },
+   "en": "Labels are established, but the local procedure and external reports are still gaps.",
+   "cn": "標籤已建立，但當地程序與外部報告仍是缺口。"
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Third-party ___ reports are still a gap.",
+    "a": "calibration",
+    "n": 1
+   },
+   "en": "Third-party ___ reports are still a gap.",
+   "cn": "第三方＿＿報告仍是缺口。",
+   "say": "Third-party , blank, reports are still a gap.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The ___ plan needs to be added to the procedure.",
+    "a": "sampling",
+    "n": 2
+   },
+   "en": "The ___ plan needs to be added to the procedure.",
+   "cn": "程序需補上＿＿計畫。",
+   "say": "The , blank, plan needs to be added to the procedure.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Batch material ___ are missing.",
+    "a": "certificates",
+    "n": 3
+   },
+   "en": "Batch material ___ are missing.",
+   "cn": "各批次的材料＿＿仍缺。",
+   "say": "Batch material , blank, are missing.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Both teams are to confirm ___ before closure.",
+    "a": "effectiveness",
+    "n": 4
+   },
+   "en": "Both teams are to confirm ___ before closure.",
+   "cn": "兩邊團隊結案前都要確認＿＿。",
+   "say": "Both teams are to confirm , blank, before closure.",
+   "pause": 4000
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practise speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
