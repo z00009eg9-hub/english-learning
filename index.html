@@ -7603,6 +7603,11 @@ function ttsDiag(){
   });
 }
 if(/[?&]ttsdiag\b/.test(location.search))window.addEventListener('load',()=>setTimeout(ttsDiag,800));
+/* 瀏覽器朗讀、錄音會讓 iOS 把 AudioContext 切成 interrupted，這時 taEl() 只能給沒放大的一般元素（小聲）。
+   播之前先試著喚醒，最多等 0.4 秒；醒了就走放大，沒醒才退一般（2026-10-16 ?ttsdiag 實測確認） */
+function taReady(){const c=TA.ctx;if(!c||c.state==='running')return Promise.resolve();
+  c.resume().catch(()=>{});const t0=Date.now();   /* resume 的 promise 會比 state 變 running 早到，所以輪詢 state */
+  return new Promise(r=>{const chk=()=>{if(c.state==='running'||Date.now()-t0>400)r();else setTimeout(chk,30);};chk();});}
 /* 抓音檔成 blob（Safari 播跨網域音檔較穩）；最近 80 個留著，重播不用再下載 */
 function taFetch(url){
   if(TA.cache.has(url))return TA.cache.get(url);
@@ -7627,7 +7632,7 @@ function taPlay(text,rate,done,miss,prog){
     if(q.i>=sents.length){TA.q=null;if(done)done();return;}
     const i=q.i++;
     if(i+1<urls.length)taFetch(urls[i+1]);          /* 先抓下一句，句與句之間不卡 */
-    taFetch(urls[i]).then(u=>{
+    taFetch(urls[i]).then(u=>taReady().then(()=>u)).then(u=>{
       if(TA.q!==q)return;
       const fb=()=>{if(TA.miss.indexOf(sents[i])<0)TA.miss.push(sents[i]);miss(sents[i],()=>{if(TA.q===q)next();});};
       if(!u){fb();return;}
