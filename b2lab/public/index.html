@@ -3183,7 +3183,7 @@ const TA={el:null, boost:null, plain:null, ctx:null, q:null, paused:false, cache
 /* 音量放大（2026-10-16）：AI 音檔錄得偏小聲（說話平均約 -19 dBFS），iPhone 上開到最大還是很小聲
    → 經 Web Audio 放大 TA_GAIN 倍，後面接限幅器避免破音。AudioContext 要在使用者手勢裡建立／喚醒；
    它沒在跑（iOS 切到背景回來等）就改用沒接 Web Audio 的一般元素，音量小一點但一定有聲音 */
-const TA_GAIN=2;
+const TA_GAIN=3;
 function taNewEl(){ const el=new Audio(); el.setAttribute('playsinline',''); return el; }
 /* iOS：audio 要先在使用者手勢內播過一次，之後 fetch 完才播得出來；用一小段無聲 wav 開嗓 */
 function taUnlock(el){
@@ -3199,7 +3199,7 @@ function taGesture(){
     const AC=window.AudioContext||window.webkitAudioContext; if(!AC) return;
     const c=new AC(), el=taNewEl(), g=c.createGain(), lim=c.createDynamicsCompressor();
     g.gain.value=TA_GAIN;
-    lim.threshold.value=-2; lim.knee.value=0; lim.ratio.value=20; lim.attack.value=0.003; lim.release.value=0.15;
+    lim.threshold.value=-4; lim.knee.value=0; lim.ratio.value=20; lim.attack.value=0.001; lim.release.value=0.15;
     c.createMediaElementSource(el).connect(g).connect(lim).connect(c.destination);
     TA.ctx=c; TA.boost=el; c.resume().catch(()=>{}); taUnlock(el);
   }catch(e){}
