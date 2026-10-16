@@ -7622,17 +7622,12 @@ function audioControls(){
    +'<button id="au-mode-play" class="on" onclick="auPlay(false)">▶ 連播</button>'
    +'<button id="au-shadow" onclick="auPlay(true)">🔁 跟讀</button></div>'
    +'<button class="spk" onclick="auStop()" title="停止">⏹</button>'
-   +'<button class="spk'+(adv?' on':'')+'" id="au-advbtn" onclick="auAdvTog()" title="速度與語音設定">⚙️</button>'
+   +'<button class="spk'+(adv?' on':'')+'" id="au-advbtn" onclick="auAdvTog()" title="速度設定">⚙️</button>'
    +'</div>'
    +'<div id="au-adv" style="display:'+(adv?'block':'none')+'">'
    +'<div class="row" style="margin-top:6px">'
    +'<span class="muted" style="font-size:var(--font-meta);font-weight:700">速度</span>'
    +[0.5,0.75,1,1.25].map(r=>'<button class="spk rbtn'+(r===auRate?' on':'')+'" data-r="'+r+'" onclick="auSetRate('+r+')">'+r+'x</button>').join('')
-   +'</div>'
-   +'<div class="row" id="au-vrow" style="margin-top:6px;align-items:center;gap:6px">'
-   +'<span class="muted" style="font-size:var(--font-meta);font-weight:700">語音</span>'
-   +'<span class="muted" id="au-vla" style="font-size:var(--font-meta)">A</span><select class="spk" id="au-va" onchange="auSetVoice(\'a\',this.value)"></select><button class="spk" onclick="auTestVoice(\'a\')">🔊</button>'
-   +'<span class="muted" id="au-vlb" style="font-size:var(--font-meta)">B</span><select class="spk" id="au-vb" onchange="auSetVoice(\'b\',this.value)"></select><button class="spk" onclick="auTestVoice(\'b\')">🔊</button>'
    +'</div>'
    +'</div>';
 }
