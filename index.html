@@ -1467,6 +1467,8 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
 
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<!-- AI 語音檔的切句／檔名規則：跟 B2 Read 共用同一份（b2lab/public/tts-key.js），載不到就退回瀏覽器朗讀 -->
+<script src="https://english-b2-lab.web.app/tts-key.js" async></script>
 <script>
 // ═══════════════════════════════════════════════
 // VOCABULARY DATA  ← 由 /sync-notes 指令自動維護
@@ -7213,7 +7215,7 @@ function micTraceStr(){return micTrace.join(' ');}
 const TTS_GAP=280;       /* 示範語音 cancel 之後留一點空檔再開錄，避免喇叭聲被收進去 */
 /* 開錄前把示範語音收乾淨：ttsGen++ 讓 speak() 裡還沒開口的排程作廢（否則 cancel 之後 80ms 它又開口，
    把答案朗讀灌進麥克風），再等引擎真的停下來（iOS 在 TTS 剛結束時音訊通道還停在播放模式，收音近乎靜音） */
-function ttsHalt(){try{ttsGen++;}catch(e){}if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}}
+function ttsHalt(){try{ttsGen++;taStop();}catch(e){}if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}}
 const IS_APPLE=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.maxTouchPoints>1&&/Mac/.test(navigator.platform))||/^((?!chrome|android|crios|fxios|edg).)*safari/i.test(navigator.userAgent);
 /* iOS 27：播過示範語音之後，送給網頁的麥克風訊號會變成靜音（辨識引擎有啟動、6 秒完全沒結果；
    音量環也量到靜音）。對策一：從第一次按麥克風起就一直持有一路麥克風串流，離開練習才放掉——
@@ -7234,7 +7236,7 @@ function audioKick(){if(!IS_APPLE)return;try{if(!kickEl){kickEl=new Audio('data:
   const pr=kickEl.play();if(pr&&pr.catch)pr.catch(()=>{});mtr('kick');}catch(e){}}
 function whenTtsQuiet(fn,gen){const t0=Date.now();
   const chk=()=>{if(!micActive||gen!==micGen)return;
-    const busy=window.speechSynthesis&&(speechSynthesis.speaking||speechSynthesis.pending);
+    const busy=TA.q||(window.speechSynthesis&&(speechSynthesis.speaking||speechSynthesis.pending));
     if(busy&&Date.now()-t0<1500){setTimeout(chk,120);return;}
     /* iOS：語音引擎停下來後音訊工作階段還要一下子才釋放，太早開錄會被系統以 aborted 中止 */
     if(IS_APPLE){audioKick();setTimeout(fn,700);}else fn();};
@@ -7527,7 +7529,68 @@ function ttsUnstick(){setTimeout(()=>{try{if(!micActive&&speechSynthesis.paused)
 let ttsGen=0;
 function ttsEta(text,rate){const w=String(text).split(/\s+/).filter(Boolean).length;
   return Math.min(90000,900+w*430/(rate||0.92));}
+/* ---------- AI 語音檔（和 B2 Read 共用 D:\b2lab-audio 用 edge-tts 事先產生的 mp3，部署在 TTS_BASE） ----------
+   每句先找音檔：有就播（問句句尾自然上揚、不會切段停頓），沒有就那一句退回瀏覽器朗讀（speakTTS）。
+   切句與檔名規則 ttsSplit/ttsFile 從 B2 Read 的 tts-key.js 載入（兩站同一份）；載不到就全部走瀏覽器朗讀。
+   一律 Aria 女聲（2026-08-16 起 Speak Up 取消男聲）。新課的音檔由每日排程 b2lab-audio-sync 補上。
+   停止朗讀一律走 ttsCancel()／ttsHalt()，它們會連 mp3 一起停，不要只呼叫 speechSynthesis.cancel()。 */
+const TTS_BASE=(()=>{try{return localStorage.getItem('speakup_tts_base');}catch(e){}})()||'https://english-b2-lab-audio.web.app/';   /* 測試時可用 localStorage 指到本機 */
+const TA={el:null,q:null,cache:new Map(),miss:[]};
+function taEl(){if(!TA.el){TA.el=new Audio();TA.el.setAttribute('playsinline','');}return TA.el;}
+/* iOS：audio 要先在使用者手勢內播過一次，之後 fetch 完才播得出來；用一小段無聲 wav 開嗓 */
+document.addEventListener('touchend',function(){
+  const b=new ArrayBuffer(46),d=new DataView(b),s=(o,t)=>{for(let i=0;i<t.length;i++)d.setUint8(o+i,t.charCodeAt(i));};
+  s(0,'RIFF');d.setUint32(4,38,true);s(8,'WAVEfmt ');d.setUint32(16,16,true);d.setUint16(20,1,true);d.setUint16(22,1,true);
+  d.setUint32(24,8000,true);d.setUint32(28,16000,true);d.setUint16(32,2,true);d.setUint16(34,16,true);s(36,'data');d.setUint32(40,2,true);
+  const el=taEl();if(TA.q)return;
+  el.src=URL.createObjectURL(new Blob([b],{type:'audio/wav'}));el.play().catch(()=>{});
+},{capture:true,once:true});
+/* 抓音檔成 blob（Safari 播跨網域音檔較穩）；最近 80 個留著，重播不用再下載 */
+function taFetch(url){
+  if(TA.cache.has(url))return TA.cache.get(url);
+  const p=fetch(url).then(r=>r.ok?r.blob():null).then(b=>b&&b.size>500?URL.createObjectURL(b):null).catch(()=>null)
+    .then(u=>{if(!u)TA.cache.delete(url);return u;});
+  TA.cache.set(url,p);
+  if(TA.cache.size>80){const k=TA.cache.keys().next().value,old=TA.cache.get(k);TA.cache.delete(k);old.then(u=>u&&URL.revokeObjectURL(u));}
+  return p;}
+/* 停止不呼叫 done：換下一句時舊的回呼若觸發，影片會多跳一行、口說會誤觸自動錄音 */
+function taStop(){TA.q=null;if(TA.el){TA.el.onended=TA.el.onerror=TA.el.ontimeupdate=null;try{TA.el.pause();}catch(e){}}}
+function ttsCancel(){ttsGen++;taStop();if(window.speechSynthesis){try{speechSynthesis.cancel();}catch(e){}}}
+/* 逐句播音檔。rate＝playbackRate（1＝原速）；miss(句子, 接下一句) 處理沒有音檔的那一句；
+   prog(第幾句, 共幾句, 這句播到的比例) 給影片卡拉 OK 逐字變色用。切不出句子／載不到規則就回 false */
+function taPlay(text,rate,done,miss,prog){
+  const sents=(typeof ttsSplit==='function'&&window.fetch)?ttsSplit(text):[];
+  if(!sents.length)return false;
+  taStop();
+  const urls=sents.map(s=>TTS_BASE+ttsFile('f',s));
+  const q=TA.q={i:0};
+  function next(){
+    if(TA.q!==q)return;
+    if(q.i>=sents.length){TA.q=null;if(done)done();return;}
+    const i=q.i++;
+    if(i+1<urls.length)taFetch(urls[i+1]);          /* 先抓下一句，句與句之間不卡 */
+    taFetch(urls[i]).then(u=>{
+      if(TA.q!==q)return;
+      const fb=()=>{if(TA.miss.indexOf(sents[i])<0)TA.miss.push(sents[i]);miss(sents[i],()=>{if(TA.q===q)next();});};
+      if(!u){fb();return;}
+      const el=taEl();
+      el.onended=()=>{if(TA.q===q)next();};
+      el.onerror=()=>{if(TA.q===q){el.onended=el.onerror=null;fb();}};
+      el.ontimeupdate=prog?()=>{if(TA.q===q&&el.duration)prog(i,sents.length,el.currentTime/el.duration);}:null;
+      el.src=u;el.defaultPlaybackRate=el.playbackRate=rate;
+      el.play().catch(()=>{if(TA.q===q){el.onended=el.onerror=null;fb();}});
+    });}
+  next();return true;}
+/* TTS 的 rate（0.92 是正常）換成音檔的 playbackRate；慢速（≤0.7）固定 0.7 倍，太慢 edge 語音會糊 */
+function taRate(rate){rate=rate||0.92;return rate<=0.7?0.7:Math.min(1.6,Math.max(0.6,rate/0.92));}
+window.ttsMiss=TA.miss;   /* 沒有音檔、退回瀏覽器朗讀的句子（檢查覆蓋率用） */
 function speak(text,rate,done,vopt){
+  ttsCancel();
+  let cb=done||null;const fire=()=>{if(!cb)return;const f=cb;cb=null;f();};
+  if(taPlay(text,taRate(rate),fire,(s,nx)=>speakTTS(s,rate,nx,vopt)))return;
+  speakTTS(text,rate,done,vopt);}
+/* 瀏覽器朗讀（沒有 AI 音檔時的退路） */
+function speakTTS(text,rate,done,vopt){
   /* vopt：{voice: 指定語音, pitchAdj: 音高微調}——朗讀示範男女聲交替用 */
   text=ttsFix(text);vopt=vopt||{};
   const vc=vopt.voice||VOICE,pAdj=vopt.pitchAdj||0;
@@ -7618,7 +7681,7 @@ if(!PROFILES[PROFILE])PROFILE='anita';
 function skey(){return 'speakup_v1_'+PROFILE;}
 function setProfile(p){
   if(!PROFILES[p]||p===PROFILE)return;
-  micStop();if(window.speechSynthesis)speechSynthesis.cancel();
+  micStop();ttsCancel();
   PROFILE=p;localStorage.setItem('speakup_profile',p);
   reviewMode=false;quizLevel=null;loadLevel();updateProfileUI();show('scr-home');loadST();initHome();
 }
@@ -7645,7 +7708,7 @@ function renderLvlBar(act){const el=$('lvl-'+act);if(!el)return;const L=levelLab
   el.innerHTML='<button class="lvl-btn'+(lvBasic()?' active':'')+'" onclick="setActLevel(\''+act+'\',\'basic\')">'+L[0]+'</button>'
     +'<button class="lvl-btn'+(lvBasic()?'':' active')+'" onclick="setActLevel(\''+act+'\',\'advanced\')">'+L[1]+'</button>';}
 function setActLevel(act,l){if(l===LEVEL)return;saveLevel(l);
-  micStop();if(window.speechSynthesis)speechSynthesis.cancel();
+  micStop();ttsCancel();
   openAct(act);}
 /* 依難度挑句子：基礎=短句優先，進階=完整長句 */
 /* 依難度挑句子：基礎＝最短的一半，進階＝去掉最短那幾句之後全給。
@@ -8254,8 +8317,8 @@ let DAY='all';
 function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');window.scrollTo(0,0);
   /* 首頁時隱藏頂部主題膠囊（下方大選單已顯示同資訊，避免重複）；進活動才顯示 */
   document.body.classList.toggle('home-active',id==='scr-home');}
-function goHome(){reviewMode=false;if(typeof WARMUP!=='undefined')WARMUP=false;micStop();micRelease();if(typeof vStop==='function')vStop();if(window.speechSynthesis)speechSynthesis.cancel();show('scr-home');coachSay(coachHome());renderWarmup();}
-function openAct(a){micStop();if(typeof vStop==='function'&&a!=='video')vStop();if(window.speechSynthesis)speechSynthesis.cancel();
+function goHome(){reviewMode=false;if(typeof WARMUP!=='undefined')WARMUP=false;micStop();micRelease();if(typeof vStop==='function')vStop();ttsCancel();show('scr-home');coachSay(coachHome());renderWarmup();}
+function openAct(a){micStop();if(typeof vStop==='function'&&a!=='video')vStop();ttsCancel();
   if(!speechOK()&&a!=='quiz'&&a!=='read'){/* 仍可進入，會顯示提示 */}
     const f={say:startSay,shadow:startShadow,word:startWord,read:startRead,talk:startTalk,quiz:startQuiz,listen:startListen,video:startVideo}[a];
   if(f)f(DAY);}
@@ -8997,7 +9060,7 @@ function startQuiz(d,level,mode){
 function renderQuizModeBar(){const el=$('quiz-mode');if(!el)return;el.style.display='flex';
   el.innerHTML=QUIZ_MODES.map(m=>'<button class="lvl-btn'+(quizMode===m[0]?' active':'')+'" onclick="setQuizMode(\''+m[0]+'\')">'+m[1]+'</button>').join('');}
 function setQuizMode(m){if(m===quizMode)return;
-  if(window.speechSynthesis)speechSynthesis.cancel();
+  ttsCancel();
   startQuiz(DAY,quizLevel,m);}
 function renderQuizLevelToggle(d){const el=$('quiz-lvl');if(!el)return;
   const L=levelLabels();
@@ -9559,7 +9622,7 @@ function vRenderSubs(){
   box.classList.toggle('noen',!VID.showEn);
   box.innerHTML=VID.lines.map((l,i)=>
     '<div class="sub-line'+(i===VID.i?' cur':i<VID.i?' done':'')+'" id="vl-'+i+'" onclick="vSeek('+i+')">'
-    +'<button class="sub-act" onclick="event.stopPropagation();speak('+JSON.stringify(l.en)+',0.92)" title="單獨聽這一句的發音（不動影片）"><svg class=ic><use href=#i-spk></use></svg></button>'
+    +'<button class="sub-act" onclick="event.stopPropagation();speak('+JSON.stringify(l.en).replace(/&/g,'&amp;').replace(/"/g,'&quot;')+',0.92)" title="單獨聽這一句的發音（不動影片）"><svg class=ic><use href=#i-spk></use></svg></button>'
     +(VID.mode==='yt'?'<div class="sub-t">'+vFmt(l.t)+'</div>':'')
     +'<div class="sub-en">'+(VID.vocab?vMark(l.en):esc(l.en))+'</div>'
     +'<div class="sub-cn">'+esc(l.cn||cnFor(l.en))+'</div></div>').join('');}
@@ -9655,12 +9718,12 @@ function vPlay(){
 function vPause(){
   if(!VID)return;VID.playing=false;vPP();
   if(VID.mode==='yt'){if(VID.yt&&VID.yt.pauseVideo)VID.yt.pauseVideo();}
-  else if(window.speechSynthesis)speechSynthesis.cancel();}
+  else ttsCancel();}
 function vStop(){
   if(VID){VID.playing=false;
     if(VID.timer){clearInterval(VID.timer);VID.timer=null;}
     if(VID.yt&&VID.yt.destroy)try{VID.yt.destroy();}catch(e){}}
-  if(window.speechSynthesis)speechSynthesis.cancel();
+  ttsCancel();
   VID=null;}
 function vSeek(i){
   if(!VID)return;VID.i=Math.max(0,Math.min(i,VID.lines.length-1));vHighlight();
@@ -9672,11 +9735,26 @@ function vPrev(){if(VID)vSeek(VID.i-1);}
 function vRepeat(){if(!VID)return;VID.playing=true;vPP();vSeek(VID.i);}
   /* vSeek 在播放中就會念這一句；以前這裡再叫一次 vSpeakLine 會讓同一句排兩遍 */
 /* 課文朗讀模式：一句唸完自動接下一句（循環模式則重複同一句） */
+/* 一行唸完：循環／AB 段落／接下一行 */
+function vLineEnd(i){if(!VID||!VID.playing||VID.i!==i)return;
+  vKarMark(i,VID.lines[i].en.split(/\s+/).length);   /* 唸完整句全亮 */
+  if(VID.loop){setTimeout(()=>{if(VID&&VID.playing)vSpeakLine(i);},600);return;}
+  /* AB 段落循環：唸完 B 句就跳回 A 句 */
+  if(VID.ab&&VID.ab.b!=null&&i>=VID.ab.b){setTimeout(()=>{if(VID&&VID.playing)vSpeakLine(VID.ab.a);},600);return;}
+  if(i+1<VID.lines.length)setTimeout(()=>{if(VID&&VID.playing)vSpeakLine(i+1);},500);
+  else{VID.playing=false;vPP();}}
 function vSpeakLine(i){
-  if(!VID||!window.speechSynthesis)return;
+  if(!VID)return;
   VID.i=i;vHighlight();
-  ttsKick();
   VID.sgen=(VID.sgen||0)+1;const sg=VID.sgen;   /* 短時間連按時只留最後一次 */
+  /* 先播 AI 音檔；音檔沒有 boundary 事件，卡拉 OK 改用播放進度推算唸到第幾個字 */
+  const en=VID.lines[i].en,sw=typeof ttsSplit==='function'?ttsSplit(en).map(s=>s.split(/\s+/).length):[];
+  ttsCancel();
+  if(taPlay(en,Math.min(1.6,Math.max(0.6,VID.rate||1)),()=>vLineEnd(i),
+    (s,nx)=>speakTTS(s,0.92*(VID.rate||1),nx),
+    (k,n,p)=>{if(!VID||VID.i!==i||VID.vocab)return;let wi=0;for(let j=0;j<k;j++)wi+=sw[j]||0;vKarMark(i,wi+Math.floor((sw[k]||0)*p));}))return;
+  if(!window.speechSynthesis)return;
+  ttsKick();
   /* cancel 之後馬上 speak 在 iOS 會整個卡死（按復讀沒反應）→ 隔一拍再開口 */
   setTimeout(()=>{
     if(!VID||VID.sgen!==sg||VID.i!==i||!VID.playing)return;
@@ -9688,13 +9766,7 @@ function vSpeakLine(i){
     u.onboundary=e=>{if(!VID||VID.i!==i||VID.vocab)return;
       const wi=spoken.slice(0,e.charIndex).trim().split(/\s+/).filter(Boolean).length;
       vKarMark(i,wi);};
-    u.onend=()=>{if(!VID||!VID.playing||VID.i!==i)return;
-      vKarMark(i,VID.lines[i].en.split(/\s+/).length);   /* 唸完整句全亮 */
-      if(VID.loop){setTimeout(()=>{if(VID&&VID.playing)vSpeakLine(i);},600);return;}
-      /* AB 段落循環：唸完 B 句就跳回 A 句 */
-      if(VID.ab&&VID.ab.b!=null&&i>=VID.ab.b){setTimeout(()=>{if(VID&&VID.playing)vSpeakLine(VID.ab.a);},600);return;}
-      if(i+1<VID.lines.length)setTimeout(()=>{if(VID&&VID.playing)vSpeakLine(i+1);},500);
-      else{VID.playing=false;vPP();}};
+    u.onend=()=>vLineEnd(i);
     speechSynthesis.speak(u);
     ttsUnstick();
   },80);}
@@ -9887,7 +9959,7 @@ function renderActProg(){
 }
 function pctCls(p){return p==null?'skip':p>=85?'ok':p>=60?'mid':'no';}
 function sumNum(n,l){return '<div class="sum-num"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>';}
-function finishAct(title,msg){micStop();micRelease();if(window.speechSynthesis)speechSynthesis.cancel();
+function finishAct(title,msg){micStop();micRelease();ttsCancel();
   if(!SESS){goHome();coachSay('✅ <b>'+esc(title)+'</b> 完成!'+esc(msg));return;}
   SESS.msg=msg;showSummary();}
 function showSummary(){
@@ -9977,7 +10049,7 @@ document.addEventListener('touchend',e=>{
   const scr=document.querySelector('.screen.on');if(!scr)return;
   const a=SWIPE_ACTS[scr.id];if(!a)return;
   if(micActive)micStop();
-  if(scr.id!=='scr-video'&&window.speechSynthesis)speechSynthesis.cancel();
+  if(scr.id!=='scr-video')ttsCancel();
   const f=dx<0?a.next:a.prev;if(f)f();
 },{passive:true});
 
