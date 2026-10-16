@@ -33,7 +33,10 @@
     var h=cyrb53(voice+'|'+ttsNorm(sentence));
     return voice+'/'+h.slice(0,2)+'/'+h.slice(2)+'.mp3';
   }
-  var api={ttsNorm:ttsNorm, ttsSplit:ttsSplit, ttsFile:ttsFile};
+  /* 對話角色名 → 'm'（Guy 男聲）或 'f'（Aria）；認不得的（Host、Manager…）一律 f */
+  var MALE=/^(tom|ben|mark|david|ryan|leo|kevin|ken|kai|hao|minh|mr.?|grandpa|dad|father|brother|john|james|mike|jack|peter|sam|alex|daniel|eric|jason|steve|paul|tony|jim|bob)(|$)/i;
+  function ttsGender(name){ return MALE.test(String(name||'').trim())?'m':'f'; }
+  var api={ttsNorm:ttsNorm, ttsSplit:ttsSplit, ttsFile:ttsFile, ttsGender:ttsGender};
   if(typeof module!=='undefined' && module.exports) module.exports=api;
   else for(var k in api) root[k]=api[k];
 })(typeof window!=='undefined'?window:this);

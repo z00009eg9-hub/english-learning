@@ -3272,7 +3272,7 @@ function spkGo(btn){
   const spv=(btn.dataset.sp&&typeof auSpMap!=='undefined')?auSpMap[btn.dataset.sp]:null;
   const cb=()=>{ if(hl) hl.classList.remove('spkon'); };
   /* 聽力對話有角色配音（spv），維持 TTS；其餘單字／短片語先試真人發音 */
-  if(spv){ say(btn.dataset.t, null, cb, spv); }
+  if(spv){ say(btn.dataset.t, null, cb, spv, ttsGender(btn.dataset.sp)==='m'?0.85:1); }
   else dictPlay(btn.dataset.t, cb, ()=>say(btn.dataset.t, null, cb));
 }
 window.spkGo=spkGo;
@@ -7575,7 +7575,7 @@ function auNext(){
     auTimer=setTimeout(auNext, gap);
   };
   const spVoice=auSpMap[auLines[auIdx].sp]||null;
-  say(txt, auRate, step, spVoice);
+  say(txt, auRate, step, spVoice, ttsGender(auLines[auIdx].sp)==='m'?0.85:1);
   /* 看門狗：Web Speech 的 onend 並不可靠——語音還沒載入、句子太長、
      或 Chrome 已知的長時間朗讀中斷，都可能永遠不觸發，整段就會卡在同一句。
      用「字數推估的時長」當上限，時間到了沒收到 onend 就自己往下走。 */
