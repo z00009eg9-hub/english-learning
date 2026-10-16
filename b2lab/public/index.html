@@ -3201,7 +3201,7 @@ function taGesture(){
     g.gain.value=TA_GAIN;
     lim.threshold.value=-2; lim.knee.value=0; lim.ratio.value=20; lim.attack.value=0.003; lim.release.value=0.15;
     c.createMediaElementSource(el).connect(g).connect(lim).connect(c.destination);
-    TA.ctx=c; TA.boost=el; c.resume().catch(()=>{}); taUnlock(el);
+    TA.ctx=c; TA.boost=el; TA.gain=g; try{ TA.meter=c.createAnalyser(); TA.meter.fftSize=2048; lim.connect(TA.meter); }catch(_){} c.resume().catch(()=>{}); taUnlock(el);
   }catch(e){}
 }
 ['pointerdown','touchend','keydown'].forEach(t=>document.addEventListener(t,taGesture,{capture:true,passive:true}));
@@ -3226,13 +3226,15 @@ function ttsDiag(){
     +'<div style="display:flex;flex-wrap:wrap;gap:6px">'
     +'<button data-k="a" style="'+bs+'">A 一般</button><button data-k="b" style="'+bs+'">B 放大×'+TA_GAIN+'</button>'
     +'<button data-k="c" style="'+bs+'">C 瀏覽器朗讀</button><button data-k="d" style="'+bs+'">D 切 playback 再放大</button>'
-    +(AS0?'<button data-k="r" style="'+bs+'">還原 '+AS0+'</button>':'')+'</div>';
+    +'<button data-k="e" style="'+bs+'">E 放大線路靜音</button>'+(navigator.audioSession?'<button data-k="f" style="'+bs+'">F 切 play-and-record</button>':'')+(AS0?'<button data-k="r" style="'+bs+'">還原 '+AS0+'</button>':'')+'</div>';
   document.body.appendChild(p);
   let log='按 A／B／C／D 聽同一句，比較哪個大聲';
   const show=()=>{const s=document.getElementById('tdg-s');if(!s)return;
     s.textContent='AudioContext：'+(TA.ctx?TA.ctx.state+'（'+TA.ctx.sampleRate+' Hz）':'還沒建立（先點一下畫面）')
       +'\n朗讀實際用：'+(TA.el?(TA.el===TA.boost?'B 放大':'A 一般'):'還沒播過')
-      +'\naudioSession：'+AS()+'\n倍率：'+TA_GAIN+'　缺檔退回瀏覽器朗讀：'+TA.miss.length+' 句\n→ '+log;};
+      +'\n放大線路輸出峰值：'+(pk>0?(20*Math.log10(pk)).toFixed(1)+' dB':'（沒有訊號）')+'\naudioSession：'+AS()+'\n倍率：'+TA_GAIN+'　缺檔退回瀏覽器朗讀：'+TA.miss.length+' 句\n→ '+log;};
+  let pk=0;const mbuf=new Float32Array(2048);
+  const mt=setInterval(()=>{if(!TA.meter)return;TA.meter.getFloatTimeDomainData(mbuf);for(const x of mbuf){const v=Math.abs(x);if(v>pk)pk=v;}},50);
   const tm=setInterval(show,500);show();
   const play=(el,name)=>{stop();if(!el){log=name+'：播放器不存在';return;}
     taFetch(TTS_BASE+ttsFile('f',SENT)).then(u=>{if(!u){log=name+'：抓不到音檔';return;}
@@ -3242,7 +3244,10 @@ function ttsDiag(){
     const go=()=>play(TA.boost,name+(TA.ctx?'（AudioContext '+TA.ctx.state+'）':''));
     if(TA.ctx&&TA.ctx.state!=='running')TA.ctx.resume().then(go,go);else go();};
   p.addEventListener('click',e=>{const k=e.target.getAttribute&&e.target.getAttribute('data-k');if(!k)return;
-    if(k==='x'){clearInterval(tm);stop();p.remove();return;}
+    pk=0;if(TA.gain&&k!=='e')TA.gain.gain.value=TA_GAIN;
+    if(k==='x'){clearInterval(tm);clearInterval(mt);stop();p.remove();return;}
+    if(k==='e'){if(!TA.gain){log='E：放大線路還沒建立（先點一下畫面）';return;}TA.gain.gain.value=0;setTimeout(()=>{if(TA.gain)TA.gain.gain.value=TA_GAIN;},4000);boost('E 放大線路靜音（聽得到＝沒經過放大線路）');}
+    if(k==='f'){try{navigator.audioSession.type='play-and-record';}catch(_){}log='已切 play-and-record，再按 A、B 比較';}
     if(k==='a'){taGesture();if(!TA.plain)TA.plain=taNewEl();play(TA.plain,'A 一般');}
     if(k==='b')boost('B 放大');
     if(k==='c'){stop();if(!window.speechSynthesis){log='C：不支援瀏覽器朗讀';return;}
