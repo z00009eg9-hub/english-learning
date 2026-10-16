@@ -7539,7 +7539,7 @@ const TA={el:null,boost:null,plain:null,ctx:null,q:null,cache:new Map(),miss:[]}
 /* 音量放大（2026-10-16）：AI 音檔錄得偏小聲（說話平均約 -19 dBFS），iPhone 上開到最大還是很小聲
    → 經 Web Audio 放大 TA_GAIN 倍，後面接限幅器避免破音。AudioContext 要在使用者手勢裡建立／喚醒；
    它沒在跑（iOS 切到背景回來等）就改用沒接 Web Audio 的一般元素，音量小一點但一定有聲音 */
-const TA_GAIN=3;
+const TA_GAIN=2;
 function taNewEl(){const el=new Audio();el.setAttribute('playsinline','');return el;}
 /* iOS：audio 要先在使用者手勢內播過一次，之後 fetch 完才播得出來；用一小段無聲 wav 開嗓 */
 function taUnlock(el){
@@ -7553,13 +7553,56 @@ function taGesture(){
   try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
     const c=new AC(),el=taNewEl(),g=c.createGain(),lim=c.createDynamicsCompressor();
     g.gain.value=TA_GAIN;
-    lim.threshold.value=-4;lim.knee.value=0;lim.ratio.value=20;lim.attack.value=0.001;lim.release.value=0.15;
+    lim.threshold.value=-2;lim.knee.value=0;lim.ratio.value=20;lim.attack.value=0.003;lim.release.value=0.15;
     c.createMediaElementSource(el).connect(g).connect(lim).connect(c.destination);
     TA.ctx=c;TA.boost=el;c.resume().catch(()=>{});taUnlock(el);}catch(e){}}
 ['pointerdown','touchend','keydown'].forEach(t=>document.addEventListener(t,taGesture,{capture:true,passive:true}));
 function taEl(){const ok=TA.boost&&TA.ctx&&TA.ctx.state==='running';
   if(!ok&&!TA.plain)TA.plain=taNewEl();
   return TA.el=ok?TA.boost:TA.plain;}
+/* 音量診斷面板（網址加 ?ttsdiag 才出現；2026-10-16 iPhone 太小聲時用）：
+   同一句分別用 A 一般播放／B 放大／C 瀏覽器朗讀／D 切 playback 模式再放大來比，並顯示 AudioContext、audioSession 狀態 */
+function ttsDiag(){
+  if(document.getElementById('tdg'))return;
+  const SENT='Could you live without your cell phone?';
+  const AS=()=>navigator.audioSession?navigator.audioSession.type:'（不支援）';
+  const AS0=navigator.audioSession?navigator.audioSession.type:null;
+  const stop=()=>{if(typeof ttsCancel==='function')ttsCancel();else if(typeof ttsStop==='function')ttsStop();};
+  const p=document.createElement('div');p.id='tdg';
+  p.style.cssText='position:fixed;left:8px;right:8px;bottom:8px;z-index:2147483647;background:#222;color:#fff;font:14px/1.5 system-ui,sans-serif;padding:10px 12px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.45)';
+  const bs='padding:8px 10px;border-radius:8px;border:0;background:#fff;color:#222;font:inherit';
+  p.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center"><b>🔊 音量診斷</b><button data-k="x" style="'+bs+'">✕</button></div>'
+    +'<div id="tdg-s" style="margin:6px 0;white-space:pre-wrap;font-size:13px"></div>'
+    +'<div style="display:flex;flex-wrap:wrap;gap:6px">'
+    +'<button data-k="a" style="'+bs+'">A 一般</button><button data-k="b" style="'+bs+'">B 放大×'+TA_GAIN+'</button>'
+    +'<button data-k="c" style="'+bs+'">C 瀏覽器朗讀</button><button data-k="d" style="'+bs+'">D 切 playback 再放大</button>'
+    +(AS0?'<button data-k="r" style="'+bs+'">還原 '+AS0+'</button>':'')+'</div>';
+  document.body.appendChild(p);
+  let log='按 A／B／C／D 聽同一句，比較哪個大聲';
+  const show=()=>{const s=document.getElementById('tdg-s');if(!s)return;
+    s.textContent='AudioContext：'+(TA.ctx?TA.ctx.state+'（'+TA.ctx.sampleRate+' Hz）':'還沒建立（先點一下畫面）')
+      +'\n朗讀實際用：'+(TA.el?(TA.el===TA.boost?'B 放大':'A 一般'):'還沒播過')
+      +'\naudioSession：'+AS()+'\n倍率：'+TA_GAIN+'　缺檔退回瀏覽器朗讀：'+TA.miss.length+' 句\n→ '+log;};
+  const tm=setInterval(show,500);show();
+  const play=(el,name)=>{stop();if(!el){log=name+'：播放器不存在';return;}
+    taFetch(TTS_BASE+ttsFile('f',SENT)).then(u=>{if(!u){log=name+'：抓不到音檔';return;}
+      TA.el=el;el.onended=el.onerror=el.ontimeupdate=null;el.src=u;el.defaultPlaybackRate=el.playbackRate=1;
+      el.play().then(()=>{log=name+'：播放中';}).catch(e=>{log=name+'：播放失敗 '+(e&&e.name);});});};
+  const boost=name=>{taGesture();
+    const go=()=>play(TA.boost,name+(TA.ctx?'（AudioContext '+TA.ctx.state+'）':''));
+    if(TA.ctx&&TA.ctx.state!=='running')TA.ctx.resume().then(go,go);else go();};
+  p.addEventListener('click',e=>{const k=e.target.getAttribute&&e.target.getAttribute('data-k');if(!k)return;
+    if(k==='x'){clearInterval(tm);stop();p.remove();return;}
+    if(k==='a'){taGesture();if(!TA.plain)TA.plain=taNewEl();play(TA.plain,'A 一般');}
+    if(k==='b')boost('B 放大');
+    if(k==='c'){stop();if(!window.speechSynthesis){log='C：不支援瀏覽器朗讀';return;}
+      const u=new SpeechSynthesisUtterance(SENT);u.lang='en-US';speechSynthesis.speak(u);log='C 瀏覽器朗讀：播放中';}
+    if(k==='d'){if(!navigator.audioSession){log='D：這台不支援 audioSession';return;}
+      try{navigator.audioSession.type='playback';}catch(_){}boost('D playback＋放大');}
+    if(k==='r'){try{navigator.audioSession.type=AS0;}catch(_){}log='已還原 '+AS0;}
+  });
+}
+if(/[?&]ttsdiag\b/.test(location.search))window.addEventListener('load',()=>setTimeout(ttsDiag,800));
 /* 抓音檔成 blob（Safari 播跨網域音檔較穩）；最近 80 個留著，重播不用再下載 */
 function taFetch(url){
   if(TA.cache.has(url))return TA.cache.get(url);
