@@ -108,6 +108,7 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
 |---|---|---|
 | `b2lab/public/data-rel.js`（單字關聯層） | `data-book.js` | `node b2lab/tools/build-rel.js` → **產物要 commit** |
 | `line-bot/` 的單字索引 | 兩個網站的 `data-*.js` | `cd line-bot && npm run build:data` |
+| B2 Read 的 AI 語音檔（另一個 repo `D:\b2lab-audio`，z00009eg9-hub/b2lab-audio） | `b2lab/public/data-*.js` | 每日排程 `b2lab-audio-sync` 自動補；手動：`cd D:/b2lab-audio && node build.js` 再 commit + `npx firebase-tools deploy --only hosting --project english-b2-lab` |
 
 改了網站的單字資料 → 記得重跑對應的 build，否則 Bot／關聯層會跟網站對不上。
 
@@ -217,6 +218,12 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
 - **文法內頁字級只用 5 個共用層級**（`#v-gram.gopen` 底下的 `--gt-title / --gt-step / --gt-ex / --gt-body / --gt-help`）：
   頁面標題 > Step／段落標題 > 英文例句 > 中文解說 > 輔助資訊。新增或修改文法元件時把文字歸到其中一組，
   **不要在元件裡寫 px 或 800／900 字重**；平板、手機的縮小值也在同一處設定。
+- **朗讀走 AI 語音檔**（2026-10-15）：`say()` 每句先抓 `https://english-b2-lab-audio.web.app/` 的 mp3
+  （edge-tts 產生，問句句尾自然上揚；影片男聲角色用 Guy，其餘 Aria），沒有才那一句退回瀏覽器朗讀（`sayTTS`）。
+  切句與檔名規則在 `b2lab/public/tts-key.js`，和產生器共用，**改了等於全部音檔要重產，非必要不要動**。
+  停止／暫停／繼續一律呼叫 `ttsStop / ttsPause / ttsResume / ttsBusy / ttsPaused`，**不要直接呼叫 `speechSynthesis.cancel()` 等**，否則停不掉音檔。
+  `window.ttsMiss` 列出這次退回瀏覽器朗讀的句子（查覆蓋率用）；測試時 `localStorage.b2lab_tts_base` 可把音檔網址指到本機。
+  新內容 push 後要等每日排程補完音檔才有 AI 語音，在那之前會自動用瀏覽器朗讀，不算壞掉。
 
 ---
 

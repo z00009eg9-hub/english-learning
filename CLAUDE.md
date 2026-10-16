@@ -9,6 +9,7 @@
 | Speak Up（課堂筆記/口說/測驗） | https://learning-english-notes.web.app | 根目錄 `index.html` |
 | B2 Read（閱讀/文法/實景） | https://english-b2-lab.web.app | `b2lab/public/index.html` |
 | LINE 單字查詢 Bot | Cloudflare Worker | `line-bot/` |
+| B2 Read AI 語音檔 | https://english-b2-lab-audio.web.app | 另一個 repo `D:\b2lab-audio`（z00009eg9-hub/b2lab-audio，private）；每日排程 `b2lab-audio-sync` 補產生並部署 |
 
 - 原始碼：`D:\english-learning`（已從 Google Drive 搬出，避免 Drive 同步破壞 .git）
 - Speak Up 部署：push 到 main 自動部署（`.github/workflows/deploy-speakup.yml`）；備案本機 `cp index.html public/index.html && npx firebase-tools deploy --only hosting --project learning-english-notes`
@@ -58,6 +59,7 @@ GitHub 是唯一的同步來源；D: 只存在本機、不會自動備份，**�
 | 東西 | 在哪 | 新電腦怎麼拿回來 |
 |---|---|---|
 | 網站、Bot 程式碼、b2lab 資料 | GitHub | `git clone` |
+| B2 Read AI 語音檔與產生器 | GitHub `z00009eg9-hub/b2lab-audio` | `git clone` 到 `D:\b2lab-audio`（要跟 `D:\english-learning` 同層），再 `npm install` |
 | 課堂筆記資料夾（`20250709-…` 這類日期資料夾） | 只在 Google 雲端硬碟（不進 git） | 裝 Google 雲端硬碟 |
 | rexon-qa-english（LINE Bot 會讀它的資料） | GitHub `z00009eg9-hub/rexon-qa-english`（本機 `D:\rexon-qa-english`）；LINE Bot 建置目前讀的是雲端硬碟那份 `G:\我的雲端硬碟\越南\品保課\儀器\rexon-qa-english` | `git clone` 到 `D:\rexon-qa-english`；並裝 Google 雲端硬碟（G:），否則 LINE Bot 讀不到 QA 資料 |
 | **Claude 記憶**（TTS 修正、音標規則、文法對齊等約定） | 本機 `D:\ClaudeConfig\projects\D--english-learning\memory\`（**不在 GitHub、也不在雲端**） | 從舊電腦複製（見下方步驟 6） |

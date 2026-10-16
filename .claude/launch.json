@@ -15,6 +15,20 @@
       "port": 8787
     },
     {
+      "name": "b2lab-audio",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-y",
+        "http-server",
+        "D:/b2lab-audio/public",
+        "-p",
+        "8791",
+        "--cors",
+        "-c-1"
+      ],
+      "port": 8791
+    },
+    {
       "name": "rexon-qa",
       "runtimeExecutable": "npx",
       "runtimeArgs": [

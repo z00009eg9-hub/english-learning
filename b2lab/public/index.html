@@ -2796,6 +2796,7 @@ nav button{font-size:11px}
 <script src="data-daily.js"></script>
 <script src="data-book.js"></script>
 <script src="data-rel.js"></script>
+<script src="tts-key.js"></script>
 <script>
 /* ============================================================
    0. 基礎工具
@@ -3042,7 +3043,7 @@ function rwShare(){
 }
 function setProfile(p){
   if(!PROFILES[p]||p===PROFILE) return;
-  if(window.speechSynthesis) speechSynthesis.cancel();
+  ttsStop();
   if(cloudUnsub){ cloudUnsub(); cloudUnsub=null; }
   PROFILE=p; localStorage.setItem('b2lab_profile',p);
   vQueue=[]; vIdx=0; vFlip=false; rdOpen=null; CURG=null; QSTATE={};
@@ -3129,7 +3130,8 @@ document.addEventListener('touchend',function(){
   TTS_UNLOCKED=true;
   try{ const u=new SpeechSynthesisUtterance(' '); u.volume=0; speechSynthesis.speak(u); }catch(e){}
 },{capture:true,once:true});
-function say(text,rate,onend,voice,pitchMul){
+/* 瀏覽器朗讀（沒有 AI 語音檔時的退路，見下方 say） */
+function sayTTS(text,rate,onend,voice,pitchMul){
   const pm=Number(pitchMul)||1;   /* 影片版：女聲 1.15、男聲 0.85（同一個語音也能分出誰在說話） */
   if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
@@ -3172,6 +3174,75 @@ function say(text,rate,onend,voice,pitchMul){
   },60);
   setTimeout(()=>{ if(speechSynthesis.paused) speechSynthesis.resume(); },150);
 }
+/* ---------- AI 語音檔（D:\b2lab-audio 用 edge-tts 事先產生，部署在 TTS_BASE） ----------
+   每句先找音檔：有就播（問句句尾自然上揚、影片男女聲分開），沒有就那一句改用瀏覽器朗讀。
+   切句與檔名規則在 tts-key.js；影片男聲角色 pitchMul<1（vdPitchFor 給 0.85）→ Guy，其餘 Aria。
+   停止朗讀一律走 ttsStop／ttsPause／ttsResume／ttsBusy，不要直接呼叫 speechSynthesis。 */
+const TTS_BASE=(()=>{ try{ return localStorage.getItem('b2lab_tts_base'); }catch(e){} })()||'https://english-b2-lab-audio.web.app/';   // 測試時可用 localStorage 指到本機
+const TA={el:null, q:null, paused:false, cache:new Map(), miss:[]};
+function taEl(){ return TA.el||(TA.el=new Audio()); }
+/* iOS：audio 要先在使用者手勢內播過一次，之後 fetch 完才播得出來；用一小段無聲 wav 開嗓 */
+document.addEventListener('touchend',function(){
+  const b=new ArrayBuffer(46), d=new DataView(b), s=(o,t)=>{ for(let i=0;i<t.length;i++) d.setUint8(o+i,t.charCodeAt(i)); };
+  s(0,'RIFF'); d.setUint32(4,38,true); s(8,'WAVEfmt '); d.setUint32(16,16,true); d.setUint16(20,1,true); d.setUint16(22,1,true);
+  d.setUint32(24,8000,true); d.setUint32(28,16000,true); d.setUint16(32,2,true); d.setUint16(34,16,true); s(36,'data'); d.setUint32(40,2,true);
+  const el=taEl(); if(TA.q) return;
+  el.src=URL.createObjectURL(new Blob([b],{type:'audio/wav'})); el.play().catch(()=>{});
+},{capture:true,once:true});
+/* 抓音檔成 blob（Safari 播跨網域音檔較穩）；最近 80 個留著，重播不用再下載 */
+function taFetch(url){
+  if(TA.cache.has(url)) return TA.cache.get(url);
+  const p=fetch(url).then(r=>r.ok?r.blob():null).then(b=>b&&b.size>500?URL.createObjectURL(b):null).catch(()=>null)
+    .then(u=>{ if(!u) TA.cache.delete(url); return u; });
+  TA.cache.set(url,p);
+  if(TA.cache.size>80){ const k=TA.cache.keys().next().value, old=TA.cache.get(k); TA.cache.delete(k); old.then(u=>u&&URL.revokeObjectURL(u)); }
+  return p;
+}
+function say(text,rate,onend,voice,pitchMul){
+  ttsStop();
+  const sents=typeof ttsSplit==='function'&&window.fetch ? ttsSplit(text) : [];
+  if(!sents.length) return sayTTS(text,rate,onend,voice,pitchMul);
+  const v=(Number(pitchMul)||1)<1?'m':'f', r=rate||ST.rate||1;
+  const urls=sents.map(s=>TTS_BASE+ttsFile(v,s));
+  const q=TA.q={i:0, mode:null};
+  const fallback=i=>{ q.mode='s'; sayTTS(sents[i],rate,next,voice,pitchMul); };
+  function next(){
+    if(TA.q!==q) return;
+    if(q.i>=sents.length){ TA.q=null; if(onend) onend(); return; }
+    const i=q.i++;
+    if(i+1<urls.length) taFetch(urls[i+1]);          // 先抓下一句，句與句之間不卡
+    taFetch(urls[i]).then(u=>{
+      if(TA.q!==q) return;
+      if(!u){ if(TA.miss.indexOf(sents[i])<0) TA.miss.push(sents[i]); fallback(i); return; }
+      const el=taEl(); q.mode='a';
+      el.onended=()=>{ if(TA.q===q) next(); };
+      el.onerror=()=>{ if(TA.q===q) fallback(i); };
+      el.src=u; el.defaultPlaybackRate=el.playbackRate=r;
+      if(!TA.paused) el.play().catch(()=>{ if(TA.q===q&&!TA.paused){ el.onended=el.onerror=null; fallback(i); } });
+    });
+  }
+  next();
+}
+/* 停止不呼叫 onend：換下一句時舊的 onend 若觸發，影片會多跳一行 */
+function ttsStop(){
+  TA.q=null; TA.paused=false;
+  if(TA.el){ TA.el.onended=TA.el.onerror=null; try{ TA.el.pause(); }catch(e){} }
+  window.speechSynthesis && speechSynthesis.cancel();
+}
+function ttsBusy(){ return !!(TA.q || (window.speechSynthesis && (speechSynthesis.speaking||speechSynthesis.pending))); }
+function ttsPaused(){
+  const ss=!!(window.speechSynthesis&&speechSynthesis.paused);
+  return TA.q ? TA.paused&&(TA.q.mode!=='s'||ss) : ss;
+}
+function ttsPause(){
+  if(TA.q){ TA.paused=true; if(TA.el) TA.el.pause(); }
+  if(window.speechSynthesis&&speechSynthesis.speaking) try{ speechSynthesis.pause(); }catch(e){}
+}
+function ttsResume(){
+  if(TA.q){ TA.paused=false; if(TA.q.mode==='a'&&TA.el) TA.el.play().catch(()=>{}); }
+  if(window.speechSynthesis&&speechSynthesis.paused) speechSynthesis.resume();
+}
+window.ttsMiss=TA.miss;   // 沒有音檔、退回瀏覽器朗讀的句子（檢查覆蓋率用）
 window.say=say;
 /* 點整句就朗讀那一句，並在朗讀時把那一句高亮起來 */
 function saySent(el){
@@ -4249,7 +4320,7 @@ window.readPara=readPara;
 function stopReadAll(){
   if(readSeq&&readSeq.wd) clearTimeout(readSeq.wd);
   readSeq=null;
-  if('speechSynthesis' in window) speechSynthesis.cancel();
+  ttsStop();
   document.querySelectorAll('#paras .sent.reading').forEach(x=>x.classList.remove('reading'));
   const btn=$('btn-readall'); if(btn){ btn.textContent='🔊 朗讀全文'; btn.classList.remove('on','stopbtn'); }
   document.querySelectorAll('[id^="pab"].on').forEach(b=>{ b.classList.remove('on','stopbtn'); b.textContent='🔊 整段'; });
@@ -5463,12 +5534,11 @@ document.addEventListener('click',e=>{
 
 /* ---------- 點空白處停止朗讀（點按鈕、句子、單字不算空白） ---------- */
 document.addEventListener('click',e=>{
-  if(!('speechSynthesis' in window)) return;
-  if(!speechSynthesis.speaking && !speechSynthesis.pending) return;
+  if(!ttsBusy()) return;
   if(e.target.closest('button,.spk,.sent,w,a,input,textarea,select,.opt3,.gloss')) return;
   if(typeof readSeq!=='undefined'&&readSeq) stopReadAll();
   if(typeof bkSeq!=='undefined'&&bkSeq) bkStop();
-  speechSynthesis.cancel();
+  ttsStop();
   document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
 });
 
@@ -6885,7 +6955,7 @@ let bkSeq=null;
 function bkStop(){
   if(bkSeq&&bkSeq.wd) clearTimeout(bkSeq.wd);
   bkSeq=null;
-  if('speechSynthesis' in window) speechSynthesis.cancel();
+  ttsStop();
   document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
   document.querySelectorAll('.spk.stopbtn').forEach(b=>{ b.classList.remove('stopbtn','on'); if(b.dataset.lbl) b.textContent=b.dataset.lbl; });
 }
@@ -7399,7 +7469,7 @@ function auTestVoice(slot){
   const i=slot==='a'?0:1;
   const v=auSpMap[auSpeakers[i]]||VOICE;
   const line=auLines.find(l=>l.sp===auSpeakers[i]);
-  if('speechSynthesis' in window) speechSynthesis.cancel();
+  ttsStop();
   say(line?line.en:'Hi, this is my voice. Nice to meet you.', auRate, null, v);
 }
 window.auSetVoice=auSetVoice; window.auTestVoice=auTestVoice;
@@ -7426,7 +7496,7 @@ async function recTog(i,ev){
   if(!navigator.mediaDevices||!window.MediaRecorder){ alert('這個瀏覽器不支援錄音功能。'); return; }
   try{
     const stream=await navigator.mediaDevices.getUserMedia({audio:true});
-    if('speechSynthesis' in window) speechSynthesis.cancel();   // 錄音時先安靜
+    ttsStop();   // 錄音時先安靜
     recChunks=[]; recIdx=i;
     recMedia=new MediaRecorder(stream);
     recMedia.ondataavailable=e=>{ if(e.data&&e.data.size) recChunks.push(e.data); };
@@ -7445,7 +7515,7 @@ async function recTog(i,ev){
 function recPlay(i,ev){
   if(ev) ev.stopPropagation();
   if(!recUrls[i]) return;
-  if('speechSynthesis' in window) speechSynthesis.cancel();
+  ttsStop();
   if(recAudio){ try{recAudio.pause();}catch(e){} }
   recAudio=new Audio(recUrls[i]); recAudio.play();
 }
@@ -7482,7 +7552,7 @@ function auStop(){
   if(auTimer){ clearTimeout(auTimer); auTimer=null; }
   if(auWatch){ clearTimeout(auWatch); auWatch=null; }
   if(auKeep){ clearInterval(auKeep); auKeep=null; }
-  if('speechSynthesis' in window) speechSynthesis.cancel();
+  ttsStop();
   auClearHi(); auBtns();
   const total=auLines.length||1;
   const pt=$('au-prog-txt'); if(pt) pt.textContent='句 0 / '+total;
@@ -8401,7 +8471,7 @@ window.addEventListener('scroll',()=>{
    一開始朗讀就從畫面底部浮出「⏸ 暫停／⏱ 速度／× 停止」，停了就收起來，
    平常完全不佔版面。電腦／平板用橘色列的 ⏱ 鈕，這條不顯示。 */
 const SPK={text:null,voice:null,pitch:null,cb:null,paused:false,idle:0};
-function spkBusy(){ return !!(readSeq || SPK.paused || (window.speechSynthesis && (speechSynthesis.speaking||speechSynthesis.pending))); }
+function spkBusy(){ return !!(readSeq || SPK.paused || ttsBusy()); }
 function spkRestart(){
   SPK.paused=false;
   if(readSeq){ if(readSeq.wd) clearTimeout(readSeq.wd); stepRead(); spkSync(); return; }
@@ -8411,21 +8481,21 @@ function spkRestart(){
 function spkStop(){
   SPK.paused=false; SPK.text=null;
   if(typeof stopReadAll==='function' && readSeq) stopReadAll();
-  else if(window.speechSynthesis) speechSynthesis.cancel();
+  else ttsStop();
   document.querySelectorAll('.spkon,.sent.reading').forEach(x=>x.classList.remove('spkon','reading'));
   spkHide();
 }
 function spkPP(){
   if(SPK.paused){ /* 繼續：引擎還停在暫停狀態就 resume，否則從這一句重念 */
     SPK.paused=false;
-    if(window.speechSynthesis && speechSynthesis.paused) speechSynthesis.resume(); else spkRestart();
+    if(ttsPaused()) ttsResume(); else spkRestart();
     spkSync(); return;
   }
   SPK.paused=true;
-  try{ speechSynthesis.pause(); }catch(e){}
+  ttsPause();
   /* iOS 的 pause() 不一定有效：沒停下來就先取消，按 ▶ 從這一句重念 */
-  setTimeout(()=>{ if(SPK.paused && window.speechSynthesis && !speechSynthesis.paused){
-    if(readSeq&&readSeq.wd) clearTimeout(readSeq.wd); speechSynthesis.cancel(); } },180);
+  setTimeout(()=>{ if(SPK.paused && !ttsPaused()){
+    if(readSeq&&readSeq.wd) clearTimeout(readSeq.wd); ttsStop(); } },180);
   spkSync();
 }
 window.spkPP=spkPP; window.spkStop=spkStop;
@@ -8871,7 +8941,7 @@ function vdPlay(){
 function vdPause(){
   VD.on=false; vdClear(); vdWakeOff();
   if(VD.keep){ clearInterval(VD.keep); VD.keep=null; }
-  if('speechSynthesis' in window) speechSynthesis.cancel();
+  ttsStop();
   if($('vd')) vdPaint(false);
 }
 function vdToggle(){ VD.on?vdPause():vdPlay(); }
@@ -8911,7 +8981,7 @@ function vdOpen(id,autoplay){
     const d=window.VIDEO&&window.VIDEO[id];
     if(!d){ alert('這一課還沒有影片版。'); return; }
     if(typeof auStop==='function') auStop();
-    if('speechSynthesis' in window) speechSynthesis.cancel();
+    ttsStop();
     Object.assign(VD,{id:id,d:d,lines:d.lines||[],i:0,on:false,loop:false,shadow:false,expr:null,more:false});
     VD.mode=vdDefaultMode(); try{ const m=localStorage.getItem('b2lab_vdsub'); if(VD_MODES.includes(m)) VD.mode=m; }catch(e){}
     vdCalc(); vdRender();
