@@ -7636,11 +7636,11 @@ function ttsDiag(){
   const AS0=navigator.audioSession?navigator.audioSession.type:null;
   const stop=()=>{if(typeof ttsCancel==='function')ttsCancel();else if(typeof ttsStop==='function')ttsStop();};
   const p=document.createElement('div');p.id='tdg';
-  p.style.cssText='position:fixed;left:8px;right:8px;bottom:8px;z-index:2147483647;background:#222;color:#fff;font:14px/1.5 system-ui,sans-serif;padding:10px 12px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.45)';
+  p.style.cssText='position:fixed;left:8px;right:8px;top:8px;z-index:2147483647;opacity:.92;background:#222;color:#fff;font:14px/1.5 system-ui,sans-serif;padding:10px 12px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.45)';
   const bs='padding:8px 10px;border-radius:8px;border:0;background:#fff;color:#222;font:inherit';
-  p.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center"><b>🔊 音量診斷</b><button data-k="x" style="'+bs+'">✕</button></div>'
+  p.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center"><b>🔊 音量診斷</b><span><button data-k="m" style="'+bs+'">收合</button> <button data-k="x" style="'+bs+'">✕</button></span></div>'
     +'<div id="tdg-s" style="margin:6px 0;white-space:pre-wrap;font-size:13px"></div>'
-    +'<div style="display:flex;flex-wrap:wrap;gap:6px">'
+    +'<div id="tdg-b" style="display:flex;flex-wrap:wrap;gap:6px">'
     +'<button data-k="a" style="'+bs+'">A 一般</button><button data-k="b" style="'+bs+'">B 放大×'+TA_GAIN+'</button>'
     +'<button data-k="c" style="'+bs+'">C 瀏覽器朗讀</button><button data-k="d" style="'+bs+'">D 切 playback 再放大</button>'
     +'<button data-k="e" style="'+bs+'">E 放大線路靜音</button>'+(navigator.audioSession?'<button data-k="f" style="'+bs+'">F 切 play-and-record</button>':'')+(AS0?'<button data-k="r" style="'+bs+'">還原 '+AS0+'</button>':'')+'</div>';
@@ -7662,6 +7662,7 @@ function ttsDiag(){
     if(TA.ctx&&TA.ctx.state!=='running')TA.ctx.resume().then(go,go);else go();};
   p.addEventListener('click',e=>{const k=e.target.getAttribute&&e.target.getAttribute('data-k');if(!k)return;
     pk=0;if(TA.gain&&k!=='e')TA.gain.gain.value=TA_GAIN;
+    if(k==='m'){const b=document.getElementById('tdg-b'),h=b.style.display==='none';b.style.display=h?'flex':'none';e.target.textContent=h?'收合':'展開';return;}
     if(k==='x'){clearInterval(tm);clearInterval(mt);stop();p.remove();return;}
     if(k==='e'){if(!TA.gain){log='E：放大線路還沒建立（先點一下畫面）';return;}TA.gain.gain.value=0;setTimeout(()=>{if(TA.gain)TA.gain.gain.value=TA_GAIN;},4000);boost('E 放大線路靜音（聽得到＝沒經過放大線路）');}
     if(k==='f'){try{navigator.audioSession.type='play-and-record';}catch(_){}log='已切 play-and-record，再按 A、B 比較';}
