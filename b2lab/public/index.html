@@ -8948,7 +8948,14 @@ function vdSpeak(){
     }, gap);
   };
   say(l.say||l.en, VD.rate, step, vdVoiceFor(l.sp), vdPitchFor(l.sp));
-  VD.watch=setTimeout(step, Math.max(1800, words*430/VD.rate)+2600);
+  /* 保險計時：AI 音檔串播還沒結束（抓檔、多句接續）就不能切掉，每 2 秒再看一次，最多多等 30 秒 */
+  const wd0=Date.now();
+  const guard=()=>{
+    if(done||!VD.on) return;
+    if(TA.q && !TA.paused && Date.now()-wd0<30000+words*430/VD.rate){ VD.watch=setTimeout(guard,2000); return; }
+    step();
+  };
+  VD.watch=setTimeout(guard, Math.max(1800, words*430/VD.rate)+2600);
 }
 /* 小測驗的倒數圈：停頓期間讓學習者自己想答案。
    只倒數 3、2、1（停頓比 3 秒長的話，前面留白當思考空檔）；
