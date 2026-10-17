@@ -1990,6 +1990,69 @@ body.vd-lock{overflow:hidden}
 #vd .vd-cd circle{fill:none;stroke-width:6}
 #vd .vd-cd .bgc{stroke:#f1e6d8} #vd .vd-cd .fgc{stroke:var(--accent);stroke-linecap:round}
 #vd .vd-cd b{position:absolute;inset:0;display:grid;place-items:center;font-size:4cqw;color:var(--accent2)}
+/* ---- 文法影片版（2026-10-17）：中文旁白字幕、整句對照、時間線、判斷流程、換你說 ----
+   顏色固定：c1／k3 藍＝現在簡單式（時刻表）、c2／k4 綠＝現在進行式（約好的事）、c3／k2 玫瑰＝will（還沒定） */
+#vd .vd-sub .zh{font-size:clamp(13px,2.4cqw,23px);font-weight:600;line-height:1.45;color:var(--ink)}
+#vd .vd-row .en.zh{font-weight:500}
+#vd .vd-vs.sm .vd-vsc .w{font-size:clamp(15px,3.1cqw,31px);line-height:1.25}
+#vd .vd-vsc{transition:opacity .3s}
+#vd .vd-vsc.dim{opacity:.35}
+#vd .gtl,#vd .gfl{justify-content:flex-start;padding-top:5cqw}
+#vd .gtl-box{position:relative;height:calc(22cqw + 40px);margin-top:2cqw}
+#vd .gtl-axis{position:absolute;left:2%;right:2%;top:18cqw;height:.5cqw;background:var(--ink);border-radius:1cqw}
+#vd .gtl-axis::after{content:'';position:absolute;right:-1.6cqw;top:50%;transform:translateY(-50%);border-left:2cqw solid var(--ink);border-top:1.3cqw solid transparent;border-bottom:1.3cqw solid transparent}
+#vd .gtl-now{position:absolute;top:11cqw;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center}
+#vd .gtl-now i{display:block;width:.55cqw;height:7.4cqw;background:var(--accent);border-radius:1cqw}
+#vd .gtl-now b{margin-top:1.6cqw;font-size:clamp(12px,2.2cqw,21px);color:var(--accent2)}
+#vd .gtl-dec{position:absolute;top:0;height:4cqw;border:.4cqw dashed var(--accent);border-bottom:0;border-radius:1.2cqw 1.2cqw 0 0;animation:vdIn .45s ease both}
+#vd .gtl-dec span{position:absolute;left:50%;top:-1.2cqw;transform:translateX(-50%);white-space:nowrap;background:var(--accent-soft);color:var(--accent2);font-weight:800;font-size:clamp(11px,1.9cqw,18px);padding:.1em .7em;border-radius:99px}
+#vd .gtl-it{position:absolute;top:0;width:20cqw;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;text-align:center;transition:opacity .3s}
+#vd .gtl-it.new{animation:vdIn .5s ease both}
+#vd .gtl-it.dim{opacity:.3}
+#vd .gtl-it .ic{width:11cqw;height:11cqw;margin-top:4.5cqw}
+#vd .gtl-it .ic svg{width:100%;height:100%}
+#vd .gtl-it .dot{position:absolute;top:17.15cqw;left:50%;transform:translateX(-50%);width:2.2cqw;height:2.2cqw;border-radius:50%;background:#fff;border:.5cqw solid var(--ink)}
+#vd .gtl-it.open .dot{border-style:dashed}
+#vd .gtl-it .lab{white-space:nowrap;margin-top:5.5cqw;font-size:clamp(12px,2.3cqw,22px);font-weight:800;padding:.12em .7em;border-radius:99px;border:1.5px solid}
+#vd .gtl-it .who{white-space:nowrap;font-size:clamp(9px,1.75cqw,17px);color:var(--ink2);margin-top:.35em}
+#vd .gtl-it.on .lab{box-shadow:0 0 0 .6cqw rgba(232,129,58,.22)}
+#vd .c1 .lab,#vd .gfl .a.c1{color:var(--vd-k3);background:var(--vd-k3b);border-color:var(--vd-k3l)}
+#vd .c2 .lab,#vd .gfl .a.c2{color:var(--vd-k4);background:var(--vd-k4b);border-color:var(--vd-k4l)}
+#vd .c3 .lab,#vd .gfl .a.c3{color:var(--vd-k2);background:var(--vd-k2b);border-color:var(--vd-k2l)}
+#vd .g-ex{margin-top:2.2cqw;text-align:center;font-size:clamp(14px,3cqw,30px);font-weight:700;line-height:1.3;color:var(--ink);animation:vdIn .4s ease both}
+#vd .g-ex .cn{font-size:clamp(11px,1.9cqw,18px);font-weight:500;color:var(--ink2);margin-top:.35em}
+#vd .g-ex .k1{color:var(--vd-k1)} #vd .g-ex .k2{color:var(--vd-k2)} #vd .g-ex .k3{color:var(--vd-k3)} #vd .g-ex .k4{color:var(--vd-k4)}
+#vd .gfl-list{display:flex;flex-direction:column;gap:1.6cqw;margin-top:2cqw}
+#vd .gfl-row{display:grid;grid-template-columns:4.4cqw minmax(0,1fr) 3cqw 27cqw;align-items:center;gap:1.4cqw;background:#fff;border:1.5px solid var(--line);border-radius:1.6cqw;padding:1.3cqw 1.8cqw;transition:opacity .3s,box-shadow .3s}
+#vd .gfl-row .n{width:4.4cqw;height:4.4cqw;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;font-weight:800;font-size:clamp(11px,2cqw,19px)}
+#vd .gfl-row .q{font-size:clamp(12px,2.3cqw,22px);font-weight:700;line-height:1.35}
+#vd .gfl-row .ar{font-size:clamp(12px,2.4cqw,23px);color:var(--ink2);text-align:center}
+#vd .gfl .a{font-size:clamp(12px,2.2cqw,21px);font-weight:800;text-align:center;padding:.3em .5em;border-radius:1.2cqw;border:1.5px solid var(--line);line-height:1.25}
+#vd .gfl .a small{display:block;font-weight:600;font-size:.72em;margin-top:.2em}
+#vd .gfl-row.wait{opacity:.32}
+#vd .gfl-row.wait .a{color:var(--ink2);background:#f3eee7;border-color:var(--line)}
+#vd .gfl-row.on{box-shadow:0 0 0 .6cqw rgba(232,129,58,.22);border-color:#f0c9a0}
+#vd .gfl-row.on .a{animation:vdPop .4s ease both}
+#vd .gsp{text-align:center}
+#vd .gsp-ic{font-size:clamp(30px,9cqw,90px)}
+#vd .gsp-sit{margin:2.6cqw auto 0;max-width:80%;background:#fff;border:1.5px solid var(--line);border-radius:2cqw;padding:2.4cqw 3cqw;font-size:clamp(15px,3.3cqw,33px);font-weight:700;line-height:1.4}
+#vd .gsp-wait{margin-top:2.4cqw;font-size:clamp(12px,2.2cqw,21px);color:var(--ink2)}
+#vd .gsp-ans{margin:3cqw auto 0;max-width:86%;font-size:clamp(16px,3.8cqw,38px);font-weight:800;line-height:1.3;animation:vdIn .45s ease both}
+#vd .gsp-ans .k1{color:var(--vd-k1)} #vd .gsp-ans .k2{color:var(--vd-k2)} #vd .gsp-ans .k3{color:var(--vd-k3)} #vd .gsp-ans .k4{color:var(--vd-k4)}
+/* 手機：影片框只有 350px 左右寬，字級被 clamp 的最小 px 撐大，判斷流程收掉公式、例句改看下方字幕 */
+@container (max-width:560px){
+  #vd .gtl,#vd .gfl{padding-top:3.5cqw}
+  #vd .gtl-it .lab{padding:.1em .45em}
+  #vd .gfl-list{gap:1.2cqw;margin-top:1.4cqw}
+  #vd .gfl-row{grid-template-columns:5.5cqw minmax(0,1fr) 3cqw 26cqw;padding:.6cqw 1.6cqw;gap:1.2cqw}
+  #vd .gfl-row .n{width:5.5cqw;height:5.5cqw}
+  #vd .gfl-row .q{font-size:11px;line-height:1.3}
+  #vd .gfl-list{gap:.9cqw;margin-top:1cqw}
+  #vd .gfl{padding-top:2.5cqw}
+  #vd .gfl .a small{display:none}
+  #vd .gfl .g-ex{display:none}
+  #vd .gsp-sit{max-width:92%;margin-top:2cqw}
+}
 #vd .vd-endbtns{display:flex;gap:2cqw;justify-content:center;margin-top:3cqw;flex-wrap:wrap}
 #vd .vd-endbtns button{border:1px solid #f0c9a0;background:#fff;padding:.7em 1.3em;border-radius:999px;font-size:clamp(12px,1.9cqw,17px);cursor:pointer;color:var(--accent2);font-weight:600}
 #vd .vd-endbtns button:hover{background:var(--accent-soft)}
@@ -3298,6 +3361,34 @@ function say(text,rate,onend,voice,pitchMul){
     });
   }
   next();
+}
+/* 中文旁白（文法影片版）：整行一個音檔，聲音 z＝HsiaoChen 台灣女聲（b2lab-audio/build.js 產生）；
+   沒有音檔才退回裝置的中文語音。不切句、不記進 TA.miss（那份是英文句子的覆蓋率） */
+function sayZhTTS(t,rate,onend){
+  if(!('speechSynthesis' in window)){ if(onend) onend(); return; }
+  speechSynthesis.cancel();
+  const vs=speechSynthesis.getVoices(), u=new SpeechSynthesisUtterance(t);
+  const v=vs.find(x=>/^zh[-_]TW$/i.test(x.lang)&&/natural|online|hsiaochen|hsiaoyu/i.test(x.name))
+    ||vs.find(x=>/^zh[-_]TW$/i.test(x.lang))||vs.find(x=>/^zh/i.test(x.lang));
+  u.lang=v?v.lang:'zh-TW'; if(v) u.voice=v; u.rate=rate||1;
+  if(onend){ u.onend=onend; u.onerror=onend; }
+  speechSynthesis.speak(u);
+}
+function sayZh(text,rate,onend){
+  ttsStop();
+  const t=ttsNorm(text), r=rate||1, q=TA.q={i:0, mode:null};
+  const fin=()=>{ if(TA.q!==q) return; TA.q=null; if(onend) onend(); };
+  const fallback=()=>{ q.mode='s'; sayZhTTS(t,r,fin); };
+  if(!window.fetch){ fallback(); return; }
+  taFetch(TTS_BASE+ttsFile('z',t)).then(u=>taReady().then(()=>u)).then(u=>{
+    if(TA.q!==q) return;
+    if(!u){ fallback(); return; }
+    const el=taEl(); q.mode='a';
+    el.onended=fin;
+    el.onerror=()=>{ if(TA.q===q) fallback(); };
+    el.src=u; el.defaultPlaybackRate=el.playbackRate=r;
+    if(!TA.paused) el.play().catch(()=>{ if(TA.q===q&&!TA.paused){ el.onended=el.onerror=null; fallback(); } });
+  });
 }
 /* 停止不呼叫 onend：換下一句時舊的 onend 若觸發，影片會多跳一行 */
 function ttsStop(){
@@ -5123,7 +5214,7 @@ function gvVisualTitle(g){
 function gvHTML(g){
   let h='<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<div class="row" style="align-items:center;gap:10px;flex:1"><h2 class="sec" style="margin:0">'+tBack('gram')+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
-   +'<div class="muted">'+esc(g.title)+'</div></div>';
+   +'<div class="muted">'+esc(g.title)+'</div>'+gvidBtn(g.id)+'</div>';
 
   h+='<div class="gvlead"><div class="l1">💡 '+mkText(g.oneLine||g.summary||'')+'</div>'+gvMap(g.map)+'</div>';
 
@@ -5189,11 +5280,15 @@ function gSecPart(sections,want){
     return x?'<div class="gsec"><h3>'+esc(s.h)+'</h3>'+x+'</div>':'';
   }).join('');
 }
+/* 有文法影片的單元：標題下方一顆「▶ 影片解說」（清單在影片版區塊的 vdIsGram） */
+function gvidBtn(id){
+  return vdIsGram(id) ? '<div style="margin-top:10px"><button class="magbadge vdbtn" onclick="vdOpen(\''+esc(id)+'\',true)" title="約 3–4 分鐘：中文講解＋英文例句，字幕同步">▶ 影片解說</button></div>' : '';
+}
 function gramHTML(g){
   if(g&&g.vis) return gvHTML(g);   /* 視覺化文法走新版面 */
   let h='<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<div class="row" style="align-items:center;gap:10px;flex:1"><h2 class="sec" style="margin:0">'+tBack('gram')+esc(g.titleCn)+'</h2></div><span class="lv '+lvCls(g.level)+'">'+esc(g.level)+'</span></div>'
-   +'<div class="muted">'+esc(g.title)+((g.srcDays||[]).length?' · 課堂 '+g.srcDays.join(' / '):'')+'</div>'
+   +'<div class="muted">'+esc(g.title)+((g.srcDays||[]).length?' · 課堂 '+g.srcDays.join(' / '):'')+'</div>'+gvidBtn(g.id)
    +'<div class="ex" style="margin-top:10px"><div class="enote" style="font-size:var(--font-secondary)">💡 '+esc(g.summary)+'</div></div></div>'
    +'</div>';
 
@@ -8655,18 +8750,25 @@ cloudPull(()=>{ touchStreak(); updateStreak(); RENDER[TAB] && RENDER[TAB](); res
 const VD={id:null,d:null,lines:[],i:0,on:false,loop:false,shadow:false,rate:1,mode:'dual',
   timer:null,watch:null,keep:null,cd:null,times:[],total:0,expr:null,prevUrl:null};
 const VD_WPS=2.4;   /* 1x 語速約每秒 2.4 個英文字（含句間停頓），用來估時間軸 */
-function vdLoad(cb){
-  if(window.VIDEO){ cb(); return; }
+/* 文法影片版（2026-10-17）：同一個播放器，資料在 data-gvideo.js（window.GVIDEO，以文法單元 id 為鍵）。
+   旁白是中文（每行 zh 欄位，用 sayZh 唸）、例句是英文。有影片的單元列在 vdIsGram，文法頁才會出現「▶ 影片解說」 */
+/* 寫在函式裡：首頁啟動時文法頁可能比這段先畫（const 會在宣告前用到而報錯） */
+function vdIsGram(id){ return ['dg20261014b1'].includes(id); }
+function vdLoad(cb,gram){
+  if(gram?window.GVIDEO:window.VIDEO){ cb(); return; }
   const s=document.createElement('script');
-  s.src='data-video.js';
+  s.src=gram?'data-gvideo.js':'data-video.js';
   s.onload=cb;
   s.onerror=()=>alert('影片資料載入失敗，請檢查網路後再試一次。');
   document.head.appendChild(s);
 }
 function vdWords(l){ return String(l.say||l.en||'').split(/\s+/).filter(Boolean).length; }
+/* 中文旁白約每秒 4.3 個字 */
+function vdZhLen(l){ return String(l.zh||'').replace(/[\s，。、：；！？「」『』（）]/g,'').length; }
+function vdDur(l){ return l.zh ? vdZhLen(l)/(4.3*VD.rate) : vdWords(l)/(VD_WPS*VD.rate); }
 function vdTime(s){ s=Math.max(0,Math.round(s)); return Math.floor(s/60)+':'+String(s%60).padStart(2,'0'); }
 function vdCalc(){
-  let t=0; VD.times=VD.lines.map(l=>{ const st=t; t+=vdWords(l)/(VD_WPS*VD.rate)+0.35+(l.pause||0)/1000; return st; });
+  let t=0; VD.times=VD.lines.map(l=>{ const st=t; t+=vdDur(l)+0.35+(l.pause||0)/1000; return st; });
   VD.total=t;
 }
 /* ---- 語音：旁白用全站最佳語音，對話依性別挑（使用者可在 ⚙️ 改，記在這台裝置上） ---- */
@@ -8716,21 +8818,27 @@ function vdMark(txt,parts,cls){
   (parts||[]).forEach(p=>{ const t=esc(p), i=s.indexOf(t); if(i>=0) s=s.slice(0,i)+'<span class="'+cls+'">'+t+'</span>'+s.slice(i+t.length); });
   return s;
 }
+/* 文法影片的時間線／流程畫面：唸英文例句時，例句大字顯示在圖下方（中文旁白那幾句不顯示） */
+function vdGramEx(l){
+  return (!l.zh&&l.en) ? '<div class="g-ex">'+vdHi(l.en,l.hi,false)+'<div class="cn">'+esc(l.cn||'')+'</div></div>' : '';
+}
 /* ---- 左側畫面 ---- */
 function vdArt(k){
   if(!k) return '';
-  const A=window.VIDEO_ART||{}, I=window.BOOK_ICONS||{};
+  const A=window.VIDEO_ART||{}, G=window.GVIDEO_ART||{}, I=window.BOOK_ICONS||{};
   if(A[k]) return A[k];
+  if(G[k]) return G[k];
   if(I[k]) return '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">'+I[k]+'</svg>';
   return '';
 }
 function vdStageHTML(l){
   const d=VD.d, v=l.vis||{type:'scene'}, cast=d.cast||{};
-  const sub='<div class="vd-sub"><div class="en">'+vdHi(l.en,l.hi,false)+'</div><div class="cn">'+esc(l.cn||'')+'</div></div>';
+  const sub=l.zh ? '<div class="vd-sub"><div class="zh">'+vdHi(l.zh,l.hi,false)+'</div></div>'   /* 中文旁白：只有一行，字幕切英文也照樣顯示 */
+    : '<div class="vd-sub"><div class="en">'+vdHi(l.en,l.hi,false)+'</div><div class="cn">'+esc(l.cn||'')+'</div></div>';
   const art=k=>{ const a=vdArt(k); return a?'<div class="vd-art">'+a+'</div>':''; };
   let h='';
   if(v.type==='title'){
-    h='<div class="vd-scn" style="justify-content:flex-start;padding-top:7cqw"><div class="vd-kick">'+esc(bkDate(d.date))+' · Video Lesson 影片版</div>'
+    h='<div class="vd-scn" style="justify-content:flex-start;padding-top:7cqw"><div class="vd-kick">'+esc(bkDate(d.date))+(d.kind==='gram'?' · Grammar Video 文法影片解說':' · Video Lesson 影片版')+'</div>'
      +'<div class="vd-big">'+esc(d.title)+'</div><div class="vd-bigcn">'+esc(d.titleCn)+'</div>'
      +'<div class="vd-ticons">'+(d.titleArt||[]).map(k=>'<span>'+vdArt(k)+'</span>').join('')+'</div></div>'+sub;
   }else if(v.type==='scene'){
@@ -8749,15 +8857,16 @@ function vdStageHTML(l){
      +'<div class="vd-def">'+esc(v.def||'')+'</div><div class="vd-defcn">'+esc(v.cn||'')+'</div>'
      +'<div class="vd-rule"></div><div class="vd-note">'+esc(v.note||'')+'</div></div>'+art(v.art)+'</div></div>';
   }else if(v.type==='vs'){
-    const c=(x,k)=>'<div class="vd-vsc '+k+'">'+(x.art?'<div class="ic">'+vdArt(x.art)+'</div>':'')
+    /* on：'a'／'b' 只亮那一邊（文法影片逐句對照用）；sm：卡片放整句時縮小字級 */
+    const c=(x,k)=>'<div class="vd-vsc '+k+(v.on&&v.on!==k?' dim':'')+'">'+(x.art?'<div class="ic">'+vdArt(x.art)+'</div>':'')
       +'<div class="w">'+esc(x.w)+'</div><div class="i">'+esc(x.ipa||'')+'</div>'
       +'<div class="d">'+esc(x.def||'')+'</div><div class="c">'+esc(x.cn||'')+'</div></div>';
     h='<div class="vd-scn"><div class="vd-kick" style="margin-bottom:2.5cqw">'+esc(v.kick||(v.a.w+' vs '+v.b.w+' 別搞混'))+'</div>'
-     +'<div class="vd-vs">'+c(v.a,'a')+c(v.b,'b')+'</div></div>';
+     +'<div class="vd-vs'+(v.sm?' sm':'')+'">'+c(v.a,'a')+c(v.b,'b')+'</div></div>';
   }else if(v.type==='family'){
     /* 搭配詞依序亮起：跟旁白唸的順序一致 */
     const items=(v.items||[]).map((it,i)=>'<div style="animation-delay:'+(0.25+i*0.55)+'s"><span class="pre">'+esc(/\s/.test(v.core)?'':v.core)+'</span>'+esc(it.t)+'<small>'+esc(it.cn||'')+'</small></div>').join('');
-    h='<div class="vd-scn"><div class="vd-split"><div><div class="vd-kick">Phrases 片語搭配</div>'
+    h='<div class="vd-scn"><div class="vd-split"><div><div class="vd-kick">'+esc(v.kick||'Phrases 片語搭配')+'</div>'
      +'<div class="vd-core">'+esc(v.core)+'</div><div class="vd-corecn">'+esc(v.coreCn||'')+'</div>'
      +'<div class="vd-fam">'+items+'</div></div>'+art(v.art)+'</div></div>';
   }else if(v.type==='pattern'){
@@ -8780,12 +8889,40 @@ function vdStageHTML(l){
     h='<div class="vd-scn"><div class="vd-kick" style="text-align:center">Quick Quiz '+esc(v.n)+' / '+tot+'</div>'
      +'<div class="vd-q" style="margin-top:2cqw">'+q+'</div>'
      +(v.show?'':'<div class="vd-cd" id="vd-cd"></div>')+'</div>';
+  }else if(v.type==='timeline'){
+    /* 文法影片：時間線（現在 → 時刻表 → 約好的事 → 還沒定）。項目定義在 d.timeline，
+       show＝出現前幾個、lit＝只亮第幾個、dec＝標出「說話時已經定好」。字都在 HTML，不畫進 SVG */
+    const T=d.timeline||[], NOW=8;
+    const it=(x,i)=>'<div class="gtl-it c'+(i+1)+(x.open?' open':'')+(v.pop&&i===v.show-1?' new':'')+(v.lit!=null?(v.lit===i?' on':' dim'):'')+'" style="left:'+x.x+'%">'
+      +'<div class="ic">'+vdArt(x.art)+'</div><i class="dot"></i>'
+      +'<div class="lab">'+esc(x.lab)+'</div><div class="who">'+esc(x.who)+'</div></div>';
+    h='<div class="vd-scn gtl"><div class="vd-kick">'+esc(v.kick||'Who decided? 這件事是誰決定的？')+'</div>'
+     +'<div class="gtl-box"><div class="gtl-axis"></div>'
+     +'<div class="gtl-now" style="left:'+NOW+'%"><i></i><b>現在</b></div>'
+     +(v.dec&&T[1]?'<div class="gtl-dec" style="left:'+NOW+'%;width:'+(T[1].x-NOW)+'%"><span>說話的這一刻，已經定好了</span></div>':'')
+     +T.slice(0,v.show||0).map(it).join('')+'</div>'+vdGramEx(l)+'</div>';
+  }else if(v.type==='flow'){
+    /* 文法影片：判斷流程，d.flow 的問題一題一題亮；at＝亮到第幾題，all＝總結時全部亮 */
+    const rows=(d.flow||[]).map((r,i)=>{
+      const st=i>=(v.at||0)?' wait':(i===v.at-1&&!v.all?' on':' done');
+      return '<div class="gfl-row'+st+'"><span class="n">'+(i+1)+'</span><div class="q">'+esc(r.q)+'</div><span class="ar">→</span>'
+        +'<div class="a c'+(i+1)+'">'+(st===' wait'?'？':esc(r.a)+'<small>'+esc(r.en||'')+'</small>')+'</div></div>'; }).join('');
+    h='<div class="vd-scn gfl"><div class="vd-kick">'+esc(v.kick||'Which one? 照順序問自己')+'</div><div class="gfl-list">'+rows+'</div>'+vdGramEx(l)+'</div>';
+  }else if(v.type==='speak'){
+    /* 文法影片：換你說。先唸中文情境、倒數讓學習者開口，下一句公布英文答案 */
+    const tot=VD.lines.filter(x=>x.vis&&x.vis.type==='speak'&&x.vis.n&&!x.vis.show).length;
+    h=!v.n ? '<div class="vd-scn gsp" style="text-align:center"><div class="gsp-ic">🗣</div><div class="vd-big">Your turn</div><div class="vd-bigcn">換你說說看</div></div>'
+      : '<div class="vd-scn gsp"><div class="vd-kick">Your turn 換你說 · '+v.n+' / '+tot+'</div>'
+       +'<div class="gsp-sit">'+esc(v.sit)+'</div>'
+       +(v.show?'<div class="gsp-ans">'+vdHi(v.a,l.hi,false)+'</div>':'<div class="gsp-wait">先用英文說說看…</div><div class="vd-cd" id="vd-cd"></div>')+'</div>';
   }else if(v.type==='end'){
-    const sceneAt=VD.lines.findIndex(x=>x.vis&&x.vis.type==='scene');
+    const gram=d.kind==='gram';
+    const sceneAt=gram?VD.lines.findIndex(x=>x.vis&&x.vis.type==='speak'&&x.vis.n):VD.lines.findIndex(x=>x.vis&&x.vis.type==='scene');
     h='<div class="vd-scn" style="text-align:center"><div class="vd-big">Great job! 🎉</div>'
-     +'<div class="vd-bigcn">'+esc(l.cn||'')+'</div>'
+     +'<div class="vd-bigcn">'+esc(l.zh||l.cn||'')+'</div>'
      +'<div class="vd-endbtns"><button onclick="vdGo(0,true)">↺ 從頭再看一次</button>'
-     +'<button onclick="vdShadowTog(true);vdGo('+Math.max(0,sceneAt)+',true)">🗣 開跟讀練對話</button></div></div>';
+     +(gram?'<button onclick="vdGo('+Math.max(0,sceneAt)+',true)">🗣 只練換你說</button>'
+       :'<button onclick="vdShadowTog(true);vdGo('+Math.max(0,sceneAt)+',true)">🗣 開跟讀練對話</button>')+'</div></div>';
   }
   return '<div class="vd-bg t-'+esc(v.type)+'"></div>'+h;
 }
@@ -8836,8 +8973,9 @@ function vdListHTML(){
     const c=d.cast[l.sp]||{};
     h+='<div class="vd-row'+(i===VD.i?' cur':'')+'" id="vd-r'+i+'" onclick="vdGo('+i+',true)">'
      +'<div class="tm">'+vdTime(VD.times[i])+'</div><div>'
-     +'<div class="en">'+(l.sp!=='N'?'<span class="sp">'+esc(c.name)+'：</span>':'')+vdHi(l.en,l.hi,true)+'</div>'
-     +'<div class="cn">'+esc(l.cn||'')+'</div></div></div>';
+     +(l.zh ? '<div class="en zh">'+vdHi(l.zh,l.hi,true)+'</div>'
+       : '<div class="en">'+(l.sp!=='N'?'<span class="sp">'+esc(c.name)+'：</span>':'')+vdHi(l.en,l.hi,true)+'</div>'
+        +'<div class="cn">'+esc(l.cn||'')+'</div>')+'</div></div>';
   });
   return h;
 }
@@ -8872,8 +9010,8 @@ function vdRender(){
    +'<div class="vd-set" id="vd-set">'
    +'<div class="vd-toggles"><button class="vd-cb" id="vd-loop" onclick="vdLoopTog()">🔁 單句循環</button>'
    +'<button class="vd-cb" id="vd-shadow" onclick="vdShadowTog()">⏸ 每句停頓跟念</button></div>'
-   +sel('n','旁白')+sel('f',(d.cast.A||{}).name||'女聲')+sel('m',(d.cast.T||{}).name||'男聲')
-   +'<div class="hint">聲音用這台裝置內建的美式語音，換裝置音色會不同；選擇只記在這台裝置上。'
+   +(d.kind==='gram'?'':sel('n','旁白'))+sel('f',(d.cast.A||{}).name||'女聲')+sel('m',(d.cast.T||{}).name||'男聲')
+   +'<div class="hint">'+(d.kind==='gram'?'中文旁白用 AI 台灣女聲；沒有音檔時改用裝置的中文語音。':'')+'聲音用這台裝置內建的美式語音，換裝置音色會不同；選擇只記在這台裝置上。'
    +(vs.length<=1?'<br>這台裝置只有 '+vs.length+' 個美式語音，三個角色靠音調高低區分。用 Edge 開同一個網址會多出十幾個微軟語音；或在 Windows「時間與語言 → 語言」新增 English (United States) 並勾選「語音」。':'')+'</div></div>'
    +'</div></div>'
    /* 右欄：字幕（填滿、自己捲）＋ 重點卡釘在底部 */
@@ -8949,15 +9087,16 @@ function vdSpeak(){
       else { VD.on=false; vdClear(); if(VD.keep){ clearInterval(VD.keep); VD.keep=null; } vdPaint(); }
     }, gap);
   };
-  say(l.say||l.en, VD.rate, step, vdVoiceFor(l.sp), vdPitchFor(l.sp));
+  if(l.zh) sayZh(l.zh, VD.rate, step);   /* 文法影片的中文旁白 */
+  else say(l.say||l.en, VD.rate, step, vdVoiceFor(l.sp), vdPitchFor(l.sp));
   /* 保險計時：AI 音檔串播還沒結束（抓檔、多句接續）就不能切掉，每 2 秒再看一次，最多多等 30 秒 */
-  const wd0=Date.now();
+  const wd0=Date.now(), est=l.zh ? vdZhLen(l)*260/VD.rate : words*430/VD.rate;
   const guard=()=>{
     if(done||!VD.on) return;
-    if(TA.q && !TA.paused && Date.now()-wd0<30000+words*430/VD.rate){ VD.watch=setTimeout(guard,2000); return; }
+    if(TA.q && !TA.paused && Date.now()-wd0<30000+est){ VD.watch=setTimeout(guard,2000); return; }
     step();
   };
-  VD.watch=setTimeout(guard, Math.max(1800, words*430/VD.rate)+2600);
+  VD.watch=setTimeout(guard, Math.max(1800, est)+2600);
 }
 /* 小測驗的倒數圈：停頓期間讓學習者自己想答案。
    只倒數 3、2、1（停頓比 3 秒長的話，前面留白當思考空檔）；
@@ -9055,9 +9194,10 @@ function vdKey(e){
   else if(e.key==='ArrowLeft'){ e.preventDefault(); vdStep(-1); }
 }
 function vdOpen(id,autoplay){
+  const gram=vdIsGram(id);
   vdLoad(()=>{
-    const d=window.VIDEO&&window.VIDEO[id];
-    if(!d){ alert('這一課還沒有影片版。'); return; }
+    const src=gram?window.GVIDEO:window.VIDEO, d=src&&src[id];
+    if(!d){ alert(gram?'這個單元還沒有影片解說。':'這一課還沒有影片版。'); return; }
     if(typeof auStop==='function') auStop();
     ttsStop();
     Object.assign(VD,{id:id,d:d,lines:d.lines||[],i:0,on:false,loop:false,shadow:false,expr:null,more:false});
@@ -9068,7 +9208,7 @@ function vdOpen(id,autoplay){
     if(autoplay===true) vdPlay();   /* 從課本卡片點「▶ 影片版」：直接播放 */
     /* 網址列換成可分享的影片網址，關閉時還原 */
     try{ VD.prevUrl=location.href; const u=new URL(location.href); u.searchParams.delete('lesson'); u.searchParams.delete('w'); u.searchParams.set('video',id); history.replaceState(history.state,'',u.toString()); }catch(e){}
-  });
+  },gram);
 }
 /* 實測標題列與控制列高度寫進 CSS 變數（不同縮放比例、字型下常數會猜錯，播放鍵就被切掉；2026-09-27） */
 function vdMeasure(){
