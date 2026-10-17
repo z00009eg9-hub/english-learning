@@ -672,6 +672,44 @@ r27:{ unit:"g15", title:"情態動詞的推測（must / might / can't + have p.p
     {bad:"He mustn't have forgotten. （要表達「不可能忘了」）",good:"He can't have forgotten.",why:"否定的推測用 can't have + p.p.；mustn't 是「禁止」的意思。"},
     {bad:"She must have been at home now.",good:"She must be at home now.",why:"談現在的事不用 have + p.p.；have + p.p. 只用在推測過去。"}
   ]
+},
+
+r28:{ unit:"g01", title:"未來完成式與未來進行式",
+  formula:"未來完成式：will have + p.p.　|　未來完成進行式：will have been + V-ing　|　未來進行式：will be + V-ing",
+  points:[
+    "未來完成式 will have + p.p.：站在未來某個時間點回看，說「到那時已經完成」：By December it will have trained nine new helpers.",
+    "未來完成進行式 will have been + V-ing：回看的是「已經持續多久」，後面常接 for + 一段時間：she will have been going for a full year.",
+    "未來進行式 will be + V-ing：說「到那個時間點正在進行中」，也常用來交代已經排定的行程：Next Saturday she will be working with a new group.",
+    "時間點通常用 by / by the end of / by the time 帶出來；by the time 引導的時間子句要用現在簡單式：by the time the rainy season ends（不是 will end）。"
+  ],
+  examples:[
+    {en:"By this time next year, I will have paid off the loan.",cn:"到明年這個時候，我就已經把貸款還完了。",note:"will have + p.p."},
+    {en:"In August we will have been living here for ten years.",cn:"到八月，我們就在這裡住滿十年了。",note:"will have been + V-ing"},
+    {en:"Don't call at seven — I will be driving then.",cn:"七點不要打來，我那時候在開車。",note:"will be + V-ing"}
+  ],
+  traps:[
+    {bad:"By the time the bus will arrive, we will have eaten.",good:"By the time the bus arrives, we will have eaten.",why:"by the time 引導的時間子句用現在簡單式表示未來，不能用 will。"},
+    {bad:"By Friday I will finish the report.",good:"By Friday I will have finished the report.",why:"by + 未來時間點強調「在那之前就完成」，要用 will have + p.p.；單純 will finish 沒有「在期限前完成」的意思。"}
+  ]
+},
+
+r29:{ unit:"g08", title:"第一條件句與 unless / as long as / in case",
+  formula:"If + 現在簡單式, 主句 will + V（或祈使句）　|　unless = if ... not　|　as long as = 只要……就　|　in case = 以防萬一",
+  points:[
+    "第一條件句講「有可能發生的未來」：if 子句用現在簡單式，主句用 will 或祈使句：If he does not eat anything for a whole day, call the clinic.",
+    "if 子句裡不用 will：If it rains tomorrow, we will stay home.（不是 If it will rain。）",
+    "unless 等於 if ... not：unless the shelter calls him ＝ if the shelter does not call him；unless 本身已經是否定，後面不要再加 not。",
+    "as long as / so long as / provided that 是「只要……就」，強調條件一成立結果就成立；in case 是「以防萬一」，說的是還沒發生、先做準備的事，和 if 不一樣。"
+  ],
+  examples:[
+    {en:"If the bus is late, I will take a taxi.",cn:"如果公車誤點，我就搭計程車。",note:"if + 現在簡單式, will"},
+    {en:"You won't pass unless you practise every day.",cn:"除非你每天練習，不然你不會通過。",note:"unless = if ... not"},
+    {en:"Take an umbrella in case it rains later.",cn:"帶把傘，以防晚一點下雨。",note:"in case：先做準備"}
+  ],
+  traps:[
+    {bad:"If it will rain tomorrow, we will stay home.",good:"If it rains tomorrow, we will stay home.",why:"if 子句不用 will，用現在簡單式就能表示未來。"},
+    {bad:"Unless you don't hurry, you will miss the train.",good:"Unless you hurry, you will miss the train.",why:"unless 本身就是 if ... not，後面再加 not 會變成雙重否定。"}
+  ]
 }
 
 

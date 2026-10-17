@@ -1560,6 +1560,146 @@ window.READING = [
      b2Cn:"不可能是執照出問題；我看到了新的證書。",
      spCn:"不可能是執照啦——我才剛看到新的證書。"}
   ]
+},
+
+/* ---------------------------------------------------------- 28 */
+{
+  id:"r28", level:"B2", topic:"志工與社區服務", words:280,
+  title:"Two Hours Every Saturday",
+  titleCn:"每個星期六的兩個小時",
+  focus:"未來完成式與未來進行式（will have done / will have been doing / will be doing）",
+  intro:"Anita 在越南的社區中心當了一年志工。注意 by + 未來時間點搭配 will have + p.p.（到那時已完成）與 will have been + V-ing（到那時已持續多久），以及 will be + V-ing 交代「那天正在進行的事」；by the time 後面的時間子句一律用現在簡單式。",
+  spoken:[
+    {en:"I started helping out at the community centre almost by accident.",cn:"我會去社區中心幫忙，幾乎是個意外。"},
+    {en:"By the end of this month I'll have been going for a whole year.",cn:"到這個月底，我就整整去了一年了。"},
+    {en:"Next Saturday I'll be reading with a group of six-year-olds.",cn:"下個星期六我會跟一群六歲的孩子一起讀故事。"},
+    {en:"Two hours a week isn't much, but I keep turning up.",cn:"一週兩小時不算多，但我一直都有出現。"}
+  ],
+  paras:[
+    {en:"Anita started volunteering almost by accident. A colleague mentioned that a community centre near the industrial park needed someone to sit with the workers' children on Saturday mornings, while their parents queued downstairs for free health checks. She agreed to try it once. By the end of this month she will have been going for a full year, and those two hours have quietly become the part of her week she protects most carefully.",
+     cn:"Anita 會開始當志工，幾乎是個意外。一位同事提起，工業區附近的社區中心需要有人在星期六早上陪工人的孩子，那時他們的父母正在樓下排隊等免費健康檢查。她答應去試一次。到這個月底，她就已經持續去滿一年了，而那兩個小時也悄悄變成她一週裡守得最緊的時段。"},
+    {en:"The room above a laundry holds twelve low chairs, a whiteboard and a shelf of battered picture books. Local shops donate what they can, so almost nothing in the room was bought. Anita follows no syllabus. She reads aloud, asks the children to retell the story in their own words, and lets them copy whichever sentences they like. Next Saturday she will be working with a new group of six-year-olds.",
+     cn:"洗衣店樓上那個房間裡有十二張矮椅、一塊白板，還有一櫃翻得破破爛爛的故事書。附近的店家捐出他們拿得出來的東西，所以房間裡幾乎沒有一件是買的。Anita 不照任何課程大綱走。她唸故事給孩子聽，請他們用自己的話把故事重說一遍，想抄哪幾句就抄哪幾句。下個星期六，她就會在帶一組新的六歲孩子了。"},
+    {en:"The centre plans carefully, because volunteers come and go. By December it will have trained nine new helpers, and by the time the rainy season ends, every Saturday slot will have been filled twice over. The coordinator says this matters far more than enthusiasm: a child who arrives to find the door locked rarely comes back, however warmly the adults talked about helping.",
+     cn:"社區中心把事情排得很仔細，因為志工來來去去。到十二月，它就已經訓練完九位新幫手；等雨季結束的時候，每一個星期六的時段都會被排滿兩輪。那位統籌的人說，這件事遠比熱情重要：一個孩子來了卻發現門鎖著，就很少會再來，不管當初大人把「要來幫忙」講得多熱切。"},
+    {en:"Anita is honest about the limits of two hours a week. She will not have taught anyone to read by next summer, and she knows it. What she can offer is a room that opens when it says it will. Next year, if nothing changes, she will still be sitting on the same low chair with the same worn books. Some kinds of usefulness, she says, only appear when you keep turning up.",
+     cn:"對於一週兩小時的限度，Anita 很誠實。到明年夏天，她不會已經教會任何人閱讀，這點她自己清楚。她能給的，是一個「說會開就真的會開」的房間。明年，如果沒什麼變化，她還是會坐在同一張矮椅上，手裡還是那幾本翻舊的書。她說，有些用處只有在你一直出現的時候才會浮出來。"}
+  ],
+  target:[
+    {w:"volunteer",ipa:"/ˌvɑː.lənˈtɪr/",pos:"n./v.",cn:"志工；自願幫忙",def:"A person who works without pay to help others.",ex:"Three volunteers carried the boxes up to the second floor.",exCn:"三位志工把箱子搬上二樓。"},
+    {w:"colleague",ipa:"/ˈkɑː.liːɡ/",pos:"n.",cn:"同事",def:"A person you work with.",ex:"My colleague lent me her umbrella when the rain started.",exCn:"下雨的時候，我同事把她的傘借給我。"},
+    {w:"queue",ipa:"/kjuː/",pos:"v.",cn:"排隊",def:"To stand in a line and wait for your turn.",ex:"We queued outside the bakery for twenty minutes.",exCn:"我們在麵包店外排了二十分鐘的隊。"},
+    {w:"syllabus",ipa:"/ˈsɪl.ə.bəs/",pos:"n.",cn:"課程大綱",def:"A plan that shows what a course will teach.",ex:"The teacher handed out the syllabus on the first day.",exCn:"老師在第一天就把課程大綱發下來。"},
+    {w:"donate",ipa:"/doʊˈneɪt/",pos:"v.",cn:"捐贈",def:"To give something in order to help people.",ex:"Several families donate rice to the temple every winter.",exCn:"每年冬天都有幾戶人家捐米給廟裡。"},
+    {w:"coordinator",ipa:"/koʊˈɔːrdɪneɪtɚ/",pos:"n.",cn:"統籌者；協調人",def:"A person who organizes people and work.",ex:"Ask the coordinator which bus will take us to the site.",exCn:"去問統籌的人，哪一班公車會載我們到現場。"},
+    {w:"enthusiasm",ipa:"/ɪnˈθuːziæzəm/",pos:"n.",cn:"熱情；熱忱",def:"A strong feeling of interest and excitement.",ex:"His enthusiasm for cooking faded after he burned the fish.",exCn:"他把魚烤焦之後，對做菜的熱情就退了。"},
+    {w:"battered",ipa:"/ˈbæt̬.ɚd/",pos:"adj.",cn:"破舊的；用得很舊的",def:"Old and damaged because it has been used a lot.",ex:"She still drives a battered blue van from the nineties.",exCn:"她到現在還開著一台九〇年代的破舊藍色廂型車。"},
+    {w:"slot",ipa:"/slɑːt/",pos:"n.",cn:"（安排好的）時段",def:"A period of time kept for one thing.",ex:"Only the eight o'clock slot was still free.",exCn:"只剩八點那個時段還空著。"},
+    {w:"limit",ipa:"/ˈlɪmɪt/",pos:"n.",cn:"限度；極限",def:"The point where something stops being possible.",ex:"Everyone has a limit, and he reached his after three night shifts.",exCn:"每個人都有極限，他上了三個夜班之後就到了。"}
+  ],
+  questions:[
+    {q:"Why did Anita first go to the community centre?",
+     opts:["A. She wanted to teach English professionally","B. A colleague told her the centre needed someone on Saturday mornings","C. The centre offered to pay her","D. Her own children went there"],
+     ans:1,
+     expl:"第一段：A colleague mentioned that a community centre near the industrial park needed someone to sit with the workers' children on Saturday mornings。"},
+    {q:"Where do most of the things in the room come from?",
+     opts:["A. The city government buys them","B. The children bring them from home","C. Local shops give them away","D. They are rented from a bookshop"],
+     ans:2,
+     expl:"第二段：Local shops donate what they can, so almost nothing in the room was bought。"},
+    {q:"According to the coordinator, what matters most?",
+     opts:["A. Having as many volunteers as possible","B. Following a clear syllabus","C. Being there reliably, so the door is never locked","D. Collecting more picture books"],
+     ans:2,
+     expl:"第三段：a child who arrives to find the door locked rarely comes back, however warmly the adults talked about helping。"},
+    {q:"In “she will have been going for a full year”, what does the sentence tell us?",
+     opts:["A. How long the activity will have lasted by a future point","B. That she is going there right now","C. That she went there only once in the past","D. That she has decided to stop going"],
+     ans:0,
+     expl:"will have been + V-ing（未來完成進行式）是站在未來的時間點回看，說「到那時已經持續多久」，所以後面接 for a full year。"}
+  ],
+  upgrade:[
+    {b1:"She has gone there for almost a year. This month it will be one year.",
+     b2:"By the end of this month she will have been going for a full year.",
+     note:"未來完成進行式 will have been + V-ing：站在未來的時間點（這個月底）回看一段持續到那時的時間，一句就把起點、持續與終點講完；時間長度用 for。",
+     sp:"This month makes it a year — she's been going every Saturday.",
+     spNote:"口語常用 this month makes it ... 代替未來完成式，再用現在完成進行式補上「一直持續」的感覺。",
+     b1Cn:"她去那裡快一年了。這個月就滿一年。",
+     b2Cn:"到這個月底，她就已經持續去滿一年了。",
+     spCn:"這個月就滿一年了——她每個星期六都去。"},
+    {b1:"Next Saturday she is going to work with a new group of six-year-olds.",
+     b2:"Next Saturday she will be working with a new group of six-year-olds.",
+     note:"will be + V-ing（未來進行式）把未來的事當成「到那個時間點正在進行中」的背景，語氣比 be going to 中性，不帶「我已經決定」的味道。",
+     sp:"She's with the new six-year-olds this Saturday.",
+     spNote:"口語常直接用現在進行式講已經排定的未來，連 will 都省掉。",
+     b1Cn:"下個星期六她要帶一組新的六歲孩子。",
+     b2Cn:"下個星期六，她就會在帶一組新的六歲孩子了。",
+     spCn:"這個星期六她帶那群新來的六歲小孩。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 29 */
+{
+  id:"r29", level:"B1", topic:"寵物與照顧", words:216,
+  title:"A Cat for Three Weeks",
+  titleCn:"只借住三個星期的貓",
+  focus:"第一條件句與 unless / as long as / in case",
+  intro:"Tom 答應當三個星期的貓中途。注意 if 子句用現在簡單式、主句用 will 或祈使句；unless 等於 if ... not，as long as 是「只要……就」，in case 則是「以防萬一」，事情還沒發生。",
+  spoken:[
+    {en:"I never planned to have a pet, but the shelter needed a foster home.",cn:"我從來沒打算養寵物，但收容所需要中途之家。"},
+    {en:"If he hides under the bed, just leave him alone.",cn:"如果他躲到床底下，就別去管他。"},
+    {en:"Keep the windows shut in case he tries to climb out.",cn:"把窗戶關好，以防他想爬出去。"},
+    {en:"As long as you sit still, he will come to you.",cn:"只要你坐著不動，他就會自己過來。"}
+  ],
+  paras:[
+    {en:"Tom never planned to have a pet. Then an animal shelter near his office asked for foster homes for three weeks, and he said yes before he had time to think. The cat arrived on a Friday evening in a cardboard box.",
+     cn:"Tom 從來沒打算養寵物。後來辦公室附近一間動物收容所在找三個星期的中途之家，他還沒來得及細想就答應了。那隻貓在一個星期五的傍晚到了，裝在一個硬紙板箱裡。"},
+    {en:"The staff gave him three simple rules. If the cat hides, leave him alone. If he does not eat anything for a whole day, call the clinic. And keep the windows shut in case he tries to climb out.",
+     cn:"工作人員給了他三條簡單的規則。如果貓躲起來，就別去管他。如果他一整天什麼都不吃，就打電話給診所。還有，窗戶要關好，以防他想爬出去。"},
+    {en:"For two days the cat stayed behind the washing machine. Tom put a small bowl of food and some water nearby and waited. On Sunday night he heard a soft sound in the kitchen, and in the morning the bowl was empty.",
+     cn:"頭兩天，那隻貓都待在洗衣機後面。Tom 在旁邊放了一小碗食物和一些水，然後等。星期天晚上，他聽見廚房傳來輕輕的聲音，到了早上，碗就空了。"},
+    {en:"By the second week the cat slept on the sofa. Tom learned something useful: cats do not come when you call them, but as long as you sit still and say nothing, they will come to you. He gave the cat a name, Momo. That was probably a mistake.",
+     cn:"到了第二個星期，那隻貓已經睡在沙發上。Tom 學到一件很有用的事：你叫貓，貓不會過來；但只要你坐著不動、什麼都不說，牠們就會自己走過來。他給那隻貓取了名字，叫 Momo。這大概是個錯誤。"},
+    {en:"The three weeks ended last Saturday. A family came to meet Momo, and Tom agreed, as long as they promised to send photos. They do, almost every week. Tom tells everyone he is not going to foster again — unless the shelter calls him.",
+     cn:"三個星期在上個星期六結束。一家人來看 Momo，Tom 答應了，條件是他們要答應寄照片來。他們真的有寄，幾乎每個星期都寄。Tom 跟每個人說他不會再當中途了——除非收容所打電話來找他。"}
+  ],
+  target:[
+    {w:"shelter",ipa:"/ˈʃel.t̬ɚ/",pos:"n.",cn:"收容所；避難所",def:"A safe place where animals or people can stay.",ex:"The dog spent two months at the shelter before someone took him home.",exCn:"那隻狗在收容所待了兩個月，才有人把牠帶回家。"},
+    {w:"foster",ipa:"/ˈfɔːstɚ/",pos:"v.",cn:"（短期）寄養；當中途",def:"To look after someone else's child or animal for a while.",ex:"Her neighbours foster puppies every spring.",exCn:"她的鄰居每年春天都會寄養小狗。"},
+    {w:"cardboard",ipa:"/ˈkɑːrdbɔːrd/",pos:"n.",cn:"硬紙板",def:"Thick stiff paper used to make boxes.",ex:"We cut the cardboard into squares and painted them green.",exCn:"我們把硬紙板剪成方塊，再塗成綠色。"},
+    {w:"clinic",ipa:"/ˈklɪnɪk/",pos:"n.",cn:"診所",def:"A small place where people see a doctor.",ex:"The clinic opens at nine and closes for lunch at twelve.",exCn:"那間診所九點開門，十二點休息吃午飯。"},
+    {w:"bowl",ipa:"/boʊl/",pos:"n.",cn:"碗",def:"A round deep dish for food or water.",ex:"He filled the bowl with hot noodles and sat down.",exCn:"他把碗裝滿熱麵，然後坐了下來。"},
+    {w:"promise",ipa:"/ˈprɑː.mɪs/",pos:"v.",cn:"承諾；答應",def:"To say that you will certainly do something.",ex:"I promise I will return your charger tomorrow.",exCn:"我保證明天把你的充電器還你。"}
+  ],
+  questions:[
+    {q:"Why did the cat come to Tom's home?",
+     opts:["A. He bought it from a pet shop","B. The shelter needed a foster home for three weeks","C. A neighbour moved away and left it","D. He found it in the street"],
+     ans:1,
+     expl:"第一段：an animal shelter near his office asked for foster homes for three weeks。"},
+    {q:"“Keep the windows shut in case he tries to climb out.” What does “in case” mean here?",
+     opts:["A. Because he has already climbed out","B. Only if he climbs out","C. To be ready for something that might happen","D. After he climbs out"],
+     ans:2,
+     expl:"in case 是「為了預防可能發生的事」，事情還沒發生；because（因為）和 only if（只有在……才）都不是這個意思。"},
+    {q:"What did Tom ask the family to do?",
+     opts:["A. To pay the shelter","B. To bring the cat back every month","C. To send him photos","D. To keep the windows shut"],
+     ans:2,
+     expl:"最後一段：Tom agreed, as long as they promised to send photos。"}
+  ],
+  upgrade:[
+    {b1:"Maybe he will try to climb out of the window. So close it.",
+     b2:"Keep the windows shut in case he tries to climb out.",
+     note:"in case + 現在簡單式表示「為了預防某件可能發生的事」，事情還沒發生；注意 in case 後面不用 will。",
+     sp:"Shut the windows — he might try to get out.",
+     spNote:"口語常直接用 might 講可能性，再用破折號接原因，比 in case 輕鬆得多。",
+     b1Cn:"他可能會想從窗戶爬出去。所以把窗戶關起來。",
+     b2Cn:"把窗戶關好，以防他想爬出去。",
+     spCn:"把窗戶關上——他可能會想跑出去。"},
+    {b1:"Sit still and say nothing. Then the cat will come to you.",
+     b2:"As long as you sit still and say nothing, they will come to you.",
+     note:"as long as 就是「只要……就」，後面接現在簡單式、主句用 will；它比 if 更強調「這個條件一成立，結果就一定成立」。",
+     sp:"Just sit there quietly and he'll come over.",
+     spNote:"口語用 just ... and he'll ... 兩句並列，就等於 as long as 的條件句。",
+     b1Cn:"坐著不動、什麼都不要說。然後貓就會走過來。",
+     b2Cn:"只要你坐著不動、什麼都不說，牠們就會自己走過來。",
+     spCn:"你就安靜坐在那，他自然會過來。"}
+  ]
 }
 
 ];
