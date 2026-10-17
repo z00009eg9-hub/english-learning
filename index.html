@@ -7270,16 +7270,16 @@ function cloudSupported(){return !!(navigator.mediaDevices&&navigator.mediaDevic
 function renderRecMode(){const b=$('rec-mode');if(!b)return;
   b.innerHTML='<svg class=ic><use href=#i-mic></use></svg> 語音：'+(recMode()==='cloud'?'精準（雲端）':'快速');}
 function toggleRecMode(){
-  if(recMode()==='cloud'){localStorage.setItem('speakup_rec_mode','fast');renderRecMode();return;}
+  if(recMode()==='cloud'){localStorage.setItem('speakup_rec_mode','fast');asIdle();renderRecMode();return;}
   if(!cloudSupported()){alert('這台裝置不支援精準模式。');return;}
-  localStorage.setItem('speakup_rec_mode','cloud');renderRecMode();}
+  localStorage.setItem('speakup_rec_mode','cloud');micRelease();asIdle();renderRecMode();}
 function cloudDone(t,e){const c=cloudCfg;if(!c)return;
   /* Whisper 對靜音會幻覺出 [MUSIC PLAYING]、(inaudible) 這類標記，不能當成使用者說的話 */
   t=(t||'').replace(/\[[^\]]*\]|\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();
   if(cloudStopT){clearTimeout(cloudStopT);cloudStopT=null;}
   cloudActive=false;cloudBusy=false;micActive=false;meterStop();
   try{cloudStream.getTracks().forEach(x=>x.stop());}catch(_){}
-  cloudLiveStop();setMicUI(c,false);cloudCfg=null;c.onDone&&c.onDone(t,e,[]);}
+  cloudLiveStop();asIdle();setMicUI(c,false);cloudCfg=null;c.onDone&&c.onDone(t,e,[]);}
 function cloudLiveStop(){if(cloudLiveSR){try{cloudLiveSR.onresult=cloudLiveSR.onend=cloudLiveSR.onerror=null;cloudLiveSR.abort();}catch(_){}cloudLiveSR=null;}}
 function cloudLiveStart(cfg){
   if(IS_APPLE||!speechOK()||cloudLiveSR)return;
@@ -7308,7 +7308,7 @@ async function cloudSend(){
   if(cloudStopT){clearTimeout(cloudStopT);cloudStopT=null;}
   cloudBusy=true;
   try{cloudStream.getTracks().forEach(x=>x.stop());}catch(_){}
-  cloudLiveStop();
+  cloudLiveStop();asIdle();
   try{
     const ctx=new AudioContext(),b=await ctx.decodeAudioData(await new Blob(cloudChunks).arrayBuffer());ctx.close();
     const o=new OfflineAudioContext(1,Math.max(16000,Math.ceil(b.duration*16000)),16000),src=o.createBufferSource();
@@ -7334,7 +7334,8 @@ async function cloudMic(c){
   if(cloudBusy)return;
   try{
     cloudCfg=c;cloudActive=micActive=true;cloudLiveTxt='';setMicUI(c,true);meterStart(c);cloudLiveStart(c);
-    cloudStream=await navigator.mediaDevices.getUserMedia({audio:true});
+    if(IS_APPLE)asSet('play-and-record');
+    cloudStream=await navigator.mediaDevices.getUserMedia({audio:IS_APPLE?{echoCancellation:false,noiseSuppression:false,autoGainControl:false}:true});
     cloudChunks=[];cloudRec=new MediaRecorder(cloudStream);
     cloudRec.ondataavailable=e=>{if(e.data&&e.data.size)cloudChunks.push(e.data);};
     cloudRec.onstop=cloudSend;
@@ -7491,7 +7492,11 @@ function _startRec(){
       setTimeout(()=>{if(micActive&&gen===micGen&&!micRec)_startRec();},400);return;}
     micErr='busy';finishMic();}
 }
-try{if(navigator.audioSession)navigator.audioSession.type='play-and-record';}catch(e){}
+/* iOS 音訊工作階段：「錄放音」會用通話品質播放（聲音又薄又扁，?ttsdiag 實測 D 純播放明顯較好）。
+   雲端精準模式平常用 playback，只有錄音那一刻才切 play-and-record；快速模式（瀏覽器辨識）仍維持 play-and-record */
+function asSet(t){try{if(navigator.audioSession&&navigator.audioSession.type!==t)navigator.audioSession.type=t;}catch(e){}}
+function asIdle(){asSet(recMode()==='cloud'&&cloudSupported()?'playback':'play-and-record');}
+asIdle();
 function micStart(cfg){
   /* 精準模式（雲端）：預設。裝置不支援錄音時才退回快速模式 */
   if(recMode()==='cloud'&&cloudSupported()){cloudMic(cfg);return;}
