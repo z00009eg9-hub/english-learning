@@ -7264,7 +7264,7 @@ function speechOK(){return ('webkitSpeechRecognition' in window)||('SpeechRecogn
    Worker 原始碼在 stt-worker/。失敗或逾時時，用同時跑的瀏覽器辨識結果當退路（Apple 裝置為避免搶麥克風不同時跑）。
    實測 initial_prompt 會讓結果少掉前半句，所以不傳目標句子當提示詞。 */
 const CLOUD_STT='https://speakup-stt.anitachen9279.workers.dev/';
-let cloudActive=false,cloudBusy=false,cloudCfg=null,cloudRec=null,cloudStream=null,cloudChunks=[],cloudLiveSR=null,cloudLiveTxt='',cloudStopT=null;
+let cloudTick=null,cloudActive=false,cloudBusy=false,cloudCfg=null,cloudRec=null,cloudStream=null,cloudChunks=[],cloudLiveSR=null,cloudLiveTxt='',cloudStopT=null;
 function recMode(){return localStorage.getItem('speakup_rec_mode')==='fast'?'fast':'cloud';}
 function cloudSupported(){return !!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia&&window.MediaRecorder&&window.AudioContext&&window.OfflineAudioContext);}
 function renderRecMode(){const b=$('rec-mode');if(!b)return;
@@ -7277,6 +7277,7 @@ function cloudDone(t,e){const c=cloudCfg;if(!c)return;
   /* Whisper 對靜音會幻覺出 [MUSIC PLAYING]、(inaudible) 這類標記，不能當成使用者說的話 */
   t=(t||'').replace(/\[[^\]]*\]|\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();
   if(cloudStopT){clearTimeout(cloudStopT);cloudStopT=null;}
+  if(cloudTick){clearInterval(cloudTick);cloudTick=null;}
   cloudActive=false;cloudBusy=false;micActive=false;meterStop();
   try{cloudStream.getTracks().forEach(x=>x.stop());}catch(_){}
   cloudLiveStop();asIdle();setMicUI(c,false);cloudCfg=null;c.onDone&&c.onDone(t,e,[]);}
@@ -7306,6 +7307,7 @@ function wavOf(f32){
 async function cloudSend(){
   const c=cloudCfg;if(!c)return;
   if(cloudStopT){clearTimeout(cloudStopT);cloudStopT=null;}
+  if(cloudTick){clearInterval(cloudTick);cloudTick=null;}
   cloudBusy=true;
   try{cloudStream.getTracks().forEach(x=>x.stop());}catch(_){}
   cloudLiveStop();asIdle();
@@ -7340,6 +7342,9 @@ async function cloudMic(c){
     cloudRec.ondataavailable=e=>{if(e.data&&e.data.size)cloudChunks.push(e.data);};
     cloudRec.onstop=cloudSend;
     cloudRec.start();
+    if(!cloudLiveSR){const t0=Date.now(),l=$(c.lbl);   /* 沒有即時字幕（Apple 裝置）→ 顯示錄音秒數 */
+      const show=()=>{if(l&&cloudActive)l.textContent='🔴 錄音中 '+Math.floor((Date.now()-t0)/1000)+' 秒…（說完再按一次，雲端辨識）';};
+      show();cloudTick=setInterval(show,500);}
     cloudStopT=setTimeout(()=>{try{cloudRec.stop();}catch(_){}},28000);   /* 到時間自動結束，Worker 上限 30 秒 */
   }catch(e){cloudLiveStop();cloudDone('',e.name==='NotAllowedError'?'not-allowed':'cloud-error');}
 }
@@ -7495,6 +7500,10 @@ function _startRec(){
 /* iOS 音訊工作階段：「錄放音」會用通話品質播放（聲音又薄又扁，?ttsdiag 實測 D 純播放明顯較好）。
    雲端精準模式平常用 playback，只有錄音那一刻才切 play-and-record；快速模式（瀏覽器辨識）仍維持 play-and-record */
 function asSet(t){try{if(navigator.audioSession&&navigator.audioSession.type!==t)navigator.audioSession.type=t;}catch(e){}}
+/* 播放前保險：錄完若還有麥克風串流沒關（橘點還亮），iOS 會一直用通話品質播放 */
+function cloudQuiet(){
+  if(!cloudActive&&!cloudBusy&&cloudStream){try{cloudStream.getTracks().forEach(x=>x.stop());}catch(_){}}
+  micRelease();asIdle();}
 function asIdle(){asSet(recMode()==='cloud'&&cloudSupported()?'playback':'play-and-record');}
 asIdle();
 function micStart(cfg){
@@ -7640,7 +7649,7 @@ function ttsDiag(){
   const show=()=>{const s=document.getElementById('tdg-s');if(!s)return;
     s.textContent='AudioContext：'+(TA.ctx?TA.ctx.state+'（'+TA.ctx.sampleRate+' Hz）':'還沒建立（先點一下畫面）')
       +'\n朗讀實際用：'+(TA.el?(TA.el===TA.boost?'B 放大':'A 一般'):'還沒播過')
-      +'\n放大線路輸出峰值：'+(pk>0?(20*Math.log10(pk)).toFixed(1)+' dB':'（沒有訊號）')+'\naudioSession：'+AS()+'\n倍率：'+TA_GAIN+'　缺檔退回瀏覽器朗讀：'+TA.miss.length+' 句\n→ '+log;};
+      +'\n放大線路輸出峰值：'+(pk>0?(20*Math.log10(pk)).toFixed(1)+' dB':'（沒有訊號）')+'\naudioSession：'+AS()+'　語音模式：'+recMode()+'\n麥克風：保持 '+(holdStream?holdStream.getAudioTracks().map(t=>t.readyState).join(','):'無')+'／雲端 '+(cloudStream?cloudStream.getAudioTracks().map(t=>t.readyState).join(','):'無')+(cloudActive?'（錄音中）':'')+'\n倍率：'+TA_GAIN+'　缺檔退回瀏覽器朗讀：'+TA.miss.length+' 句\n→ '+log;};
   let pk=0;const mbuf=new Float32Array(2048);
   const mt=setInterval(()=>{if(!TA.meter)return;TA.meter.getFloatTimeDomainData(mbuf);for(const x of mbuf){const v=Math.abs(x);if(v>pk)pk=v;}},50);
   const tm=setInterval(show,500);show();
@@ -7712,6 +7721,7 @@ function taRate(rate){rate=rate||0.92;return rate<=0.7?0.7:Math.min(1.6,Math.max
 window.ttsMiss=TA.miss;   /* 沒有音檔、退回瀏覽器朗讀的句子（檢查覆蓋率用） */
 function speak(text,rate,done,vopt){
   ttsCancel();
+  if(IS_APPLE&&recMode()==='cloud'&&!micActive)cloudQuiet();
   let cb=done||null;const fire=()=>{if(!cb)return;const f=cb;cb=null;f();};
   if(taPlay(text,taRate(rate),fire,(s,nx)=>speakTTS(s,rate,nx,vopt)))return;
   speakTTS(text,rate,done,vopt);}
