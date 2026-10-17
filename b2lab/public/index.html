@@ -2022,6 +2022,22 @@ body.vd-lock{overflow:hidden}
 #vd .g-ex{margin-top:2.2cqw;text-align:center;font-size:clamp(14px,3cqw,30px);font-weight:700;line-height:1.3;color:var(--ink);animation:vdIn .4s ease both}
 #vd .g-ex .cn{font-size:clamp(11px,1.9cqw,18px);font-weight:500;color:var(--ink2);margin-top:.35em}
 #vd .g-ex .k1{color:var(--vd-k1)} #vd .g-ex .k2{color:var(--vd-k2)} #vd .g-ex .k3{color:var(--vd-k3)} #vd .g-ex .k4{color:var(--vd-k4)}
+#vd .gcd{justify-content:flex-start;padding-top:5cqw}
+#vd .gcd-row{display:grid;gap:3cqw;margin-top:2.4cqw}
+#vd .gcd-row.n2{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 8cqw}
+#vd .gcd-row.n3{grid-template-columns:repeat(3,minmax(0,1fr))}
+#vd .gcd-it{display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;border:1.5px solid var(--line);border-radius:2cqw;padding:2cqw 1.4cqw;transition:opacity .3s,box-shadow .3s}
+#vd .gcd-it.ghost{visibility:hidden}
+#vd .gcd-it.new{animation:vdIn .5s ease both}
+#vd .gcd-it.dim{opacity:.32}
+#vd .gcd-it.on{box-shadow:0 0 0 .6cqw rgba(232,129,58,.22);border-color:#f0c9a0}
+#vd .gcd-it .ic{width:12cqw;height:10cqw}
+#vd .gcd-it .ic svg{width:100%;height:100%}
+#vd .gcd-it .lab{margin-top:1.4cqw;font-size:clamp(12px,2.3cqw,22px);font-weight:800;padding:.12em .7em;border-radius:99px;border:1.5px solid;line-height:1.3}
+#vd .gcd-it .who{font-size:clamp(10px,1.75cqw,17px);color:var(--ink2);margin-top:.45em;line-height:1.35}
+#vd .gcd-it.c1 .lab{color:var(--vd-k3);background:var(--vd-k3b);border-color:var(--vd-k3l)}
+#vd .gcd-it.c2 .lab{color:var(--vd-k4);background:var(--vd-k4b);border-color:var(--vd-k4l)}
+#vd .gcd-it.c3 .lab{color:var(--vd-k2);background:var(--vd-k2b);border-color:var(--vd-k2l)}
 #vd .gfl-list{display:flex;flex-direction:column;gap:1.6cqw;margin-top:2cqw}
 #vd .gfl-row{display:grid;grid-template-columns:4.4cqw minmax(0,1fr) 3cqw 27cqw;align-items:center;gap:1.4cqw;background:#fff;border:1.5px solid var(--line);border-radius:1.6cqw;padding:1.3cqw 1.8cqw;transition:opacity .3s,box-shadow .3s}
 #vd .gfl-row .n{width:4.4cqw;height:4.4cqw;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;font-weight:800;font-size:clamp(11px,2cqw,19px)}
@@ -2041,7 +2057,11 @@ body.vd-lock{overflow:hidden}
 #vd .gsp-ans .k1{color:var(--vd-k1)} #vd .gsp-ans .k2{color:var(--vd-k2)} #vd .gsp-ans .k3{color:var(--vd-k3)} #vd .gsp-ans .k4{color:var(--vd-k4)}
 /* 手機：影片框只有 350px 左右寬，字級被 clamp 的最小 px 撐大，判斷流程收掉公式、例句改看下方字幕 */
 @container (max-width:560px){
-  #vd .gtl,#vd .gfl{padding-top:3.5cqw}
+  #vd .gtl,#vd .gfl,#vd .gcd{padding-top:3.5cqw}
+  #vd .gcd-row{gap:1.6cqw;margin-top:1.4cqw}
+  #vd .gcd-row.n2{padding:0 3cqw}
+  #vd .gcd-it{padding:1.4cqw 1cqw}
+  #vd .gcd .g-ex{display:none}
   #vd .gtl-it .lab{padding:.1em .45em}
   #vd .gfl-list{gap:1.2cqw;margin-top:1.4cqw}
   #vd .gfl-row{grid-template-columns:5.5cqw minmax(0,1fr) 3cqw 26cqw;padding:.6cqw 1.6cqw;gap:1.2cqw}
@@ -2859,6 +2879,7 @@ nav button{font-size:11px}
 <script src="data-daily.js"></script>
 <script src="data-book.js"></script>
 <script src="data-rel.js"></script>
+<script src="gvideo/index.js"></script>
 <script src="tts-key.js"></script>
 <script>
 /* ============================================================
@@ -8754,12 +8775,12 @@ const VD={id:null,d:null,lines:[],i:0,on:false,loop:false,shadow:false,rate:1,mo
 const VD_WPS=2.4;   /* 1x 語速約每秒 2.4 個英文字（含句間停頓），用來估時間軸 */
 /* 文法影片版（2026-10-17）：同一個播放器，資料在 data-gvideo.js（window.GVIDEO，以文法單元 id 為鍵）。
    旁白是中文（每行 zh 欄位，用 sayZh 唸）、例句是英文。有影片的單元列在 vdIsGram，文法頁標題和文法卡片才會出現「▶ 影片版」 */
-/* 寫在函式裡：首頁啟動時文法頁可能比這段先畫（const 會在宣告前用到而報錯） */
-function vdIsGram(id){ return ['dg20261014b1'].includes(id); }
-function vdLoad(cb,gram){
-  if(gram?window.GVIDEO:window.VIDEO){ cb(); return; }
+/* 一個單元一個檔 gvideo/<id>.js；有哪些單元記在 gvideo/index.js 的 GVIDEO_IDS（tools/build-gvideo-index.js 產生，頁面一開就載入） */
+function vdIsGram(id){ return (window.GVIDEO_IDS||[]).includes(id); }
+function vdLoad(cb,gram,id){
+  if(gram?(window.GVIDEO&&window.GVIDEO[id]):window.VIDEO){ cb(); return; }
   const s=document.createElement('script');
-  s.src=gram?'data-gvideo.js':'data-video.js';
+  s.src=gram?'gvideo/'+id+'.js':'data-video.js';
   s.onload=cb;
   s.onerror=()=>alert('影片資料載入失敗，請檢查網路後再試一次。');
   document.head.appendChild(s);
@@ -8903,6 +8924,14 @@ function vdStageHTML(l){
      +'<div class="gtl-now" style="left:'+NOW+'%"><i></i><b>現在</b></div>'
      +(v.dec&&T[1]?'<div class="gtl-dec" style="left:'+NOW+'%;width:'+(T[1].x-NOW)+'%"><span>說話的這一刻，已經定好了</span></div>':'')
      +T.slice(0,v.show||0).map(it).join('')+'</div>'+vdGramEx(l)+'</div>';
+  }else if(v.type==='cards'){
+    /* 文法影片：概念對照卡（不是時態的單元用它取代時間線）。卡片定義在 d.cards（2–3 張），
+       show／lit／pop 跟時間線一樣 */
+    const K=d.cards||[];
+    const it=(x,i)=>'<div class="gcd-it c'+(i+1)+(v.pop&&i===v.show-1?' new':'')+(v.lit!=null?(v.lit===i?' on':' dim'):'')+'">'
+      +'<div class="ic">'+vdArt(x.art)+'</div><div class="lab">'+esc(x.lab)+'</div><div class="who">'+esc(x.who||'')+'</div></div>';
+    h='<div class="vd-scn gcd"><div class="vd-kick">'+esc(v.kick||d.cardsKick||'Key idea 核心觀念')+'</div>'
+     +'<div class="gcd-row n'+K.length+'">'+K.map((x,i)=>i<(v.show||0)?it(x,i):'<div class="gcd-it ghost"></div>').join('')+'</div>'+vdGramEx(l)+'</div>';   /* 還沒出現的留空位，卡片位置不跳 */
   }else if(v.type==='flow'){
     /* 文法影片：判斷流程，d.flow 的問題一題一題亮；at＝亮到第幾題，all＝總結時全部亮 */
     const rows=(d.flow||[]).map((r,i)=>{
@@ -9210,7 +9239,7 @@ function vdOpen(id,autoplay){
     if(autoplay===true) vdPlay();   /* 從課本卡片點「▶ 影片版」：直接播放 */
     /* 網址列換成可分享的影片網址，關閉時還原 */
     try{ VD.prevUrl=location.href; const u=new URL(location.href); u.searchParams.delete('lesson'); u.searchParams.delete('w'); u.searchParams.set('video',id); history.replaceState(history.state,'',u.toString()); }catch(e){}
-  },gram);
+  },gram,id);
 }
 /* 實測標題列與控制列高度寫進 CSS 變數（不同縮放比例、字型下常數會猜錯，播放鍵就被切掉；2026-09-27） */
 function vdMeasure(){
