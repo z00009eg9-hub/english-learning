@@ -4867,7 +4867,7 @@ function gCard(g,opts){
   opts=opts||{};
   const src=g.unitNo?'Grammar in Use Unit '+g.unitNo:((g.srcDays||[]).length?'課堂：'+g.srcDays.join(' / '):(g.vis?'視覺化教學':'B2 補強單元'));
   const nq=(g.quiz||[]).length;
-  return lCard({click:(opts.click||'gOpen')+"('"+g.id+"')", isNew:opts.isNew&&opts.isNew(g), lv:g.level, cat:(opts.kind?opts.kind+' · ':'')+src, thumb:gThumb(g), en:g.titleCn, cn:g.title, g:g.summary,
+  return lCard({click:(opts.click||'gOpen')+"('"+g.id+"')", isNew:opts.isNew&&opts.isNew(g), lv:g.level, cat:(opts.kind?opts.kind+' · ':'')+src, thumb:gThumb(g), en:g.titleCn, cn:g.title, g:g.summary, vd:vdIsGram(g.id)?g.id:'',
     done:!!ST.gramDone[g.id], ft:[g.vis?'✨ 視覺化':'', nq?nq+' 題練習':''], right:lcDate(g.date)});
 }
 /* 文法圖文說明（來自 data-gramviz.js，兩格對照卡） */
@@ -5280,9 +5280,9 @@ function gSecPart(sections,want){
     return x?'<div class="gsec"><h3>'+esc(s.h)+'</h3>'+x+'</div>':'';
   }).join('');
 }
-/* 有文法影片的單元：標題下方一顆「▶ 影片解說」（清單在影片版區塊的 vdIsGram） */
+/* 有文法影片的單元：標題下方一顆「▶ 影片版」，跟課本內頁標題列同一種按鈕（清單在影片版區塊的 vdIsGram） */
 function gvidBtn(id){
-  return vdIsGram(id) ? '<div style="margin-top:10px"><button class="magbadge vdbtn" onclick="vdOpen(\''+esc(id)+'\',true)" title="約 3–4 分鐘：中文講解＋英文例句，字幕同步">▶ 影片解說</button></div>' : '';
+  return vdIsGram(id) ? '<div style="display:flex;gap:7px;margin-top:9px"><button class="magbadge vdbtn" onclick="vdOpen(\''+esc(id)+'\',true)" title="約 3–4 分鐘的影片版：中文講解＋英文例句，字幕同步">▶ 影片版</button></div>' : '';
 }
 function gramHTML(g){
   if(g&&g.vis) return gvHTML(g);   /* 視覺化文法走新版面 */
@@ -5871,7 +5871,9 @@ function lCard(o){
    +(o.cn?'<div class="bkc-cn">'+esc(o.cn)+'</div>':'')
    +(o.g?'<div class="bkc-g lc-clamp">✪ '+esc(o.g)+'</div>':'')
    +'</div></div>'
-   +'<div class="bkc-ft">'+(o.ft||[]).filter(Boolean).map(x=>'<span>'+x+'</span>').join('')
+   /* o.vd＝有影片的 id：比照課本目錄卡片，「▶ 影片版」放資訊列最前面 */
+   +'<div class="bkc-ft">'+(o.vd?'<span class="vd" onclick="event.stopPropagation();vdOpen(\''+esc(o.vd)+'\',true)">▶ 影片版</span>':'')
+   +(o.ft||[]).filter(Boolean).map(x=>'<span>'+x+'</span>').join('')
    +(o.right?'<span class="d">'+o.right+'</span>':'')+'</div></div>';
 }
 function lcDate(s){
@@ -8751,7 +8753,7 @@ const VD={id:null,d:null,lines:[],i:0,on:false,loop:false,shadow:false,rate:1,mo
   timer:null,watch:null,keep:null,cd:null,times:[],total:0,expr:null,prevUrl:null};
 const VD_WPS=2.4;   /* 1x 語速約每秒 2.4 個英文字（含句間停頓），用來估時間軸 */
 /* 文法影片版（2026-10-17）：同一個播放器，資料在 data-gvideo.js（window.GVIDEO，以文法單元 id 為鍵）。
-   旁白是中文（每行 zh 欄位，用 sayZh 唸）、例句是英文。有影片的單元列在 vdIsGram，文法頁才會出現「▶ 影片解說」 */
+   旁白是中文（每行 zh 欄位，用 sayZh 唸）、例句是英文。有影片的單元列在 vdIsGram，文法頁標題和文法卡片才會出現「▶ 影片版」 */
 /* 寫在函式裡：首頁啟動時文法頁可能比這段先畫（const 會在宣告前用到而報錯） */
 function vdIsGram(id){ return ['dg20261014b1'].includes(id); }
 function vdLoad(cb,gram){
