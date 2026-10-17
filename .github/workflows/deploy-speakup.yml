@@ -13,7 +13,6 @@ on:
     paths:
       - 'index.html'
       - 'manifest.json'
-      - 'whisper-worker.js'
       - 'icons/**'
       - '.github/workflows/deploy-speakup.yml'
   workflow_dispatch:
@@ -31,7 +30,7 @@ jobs:
       - name: Build public/ (same as the local cp step)
         run: |
           mkdir -p public
-          cp index.html manifest.json whisper-worker.js public/
+          cp index.html manifest.json public/
           cp -r icons public/icons
 
       - name: Sanity check

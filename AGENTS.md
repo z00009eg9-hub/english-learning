@@ -17,6 +17,7 @@
 | **Speak Up**（課堂筆記／口說／每日測驗） | https://learning-english-notes.web.app | 根目錄 `index.html` | **push 到 main 自動部署**（見 §2；備案本機一行指令） |
 | **B2 Read**（分級閱讀／課本／文法／實景） | https://english-b2-lab.web.app | `b2lab/public/index.html` | **push 到 main 自動部署**（見 §2） |
 | LINE 單字查詢 Bot | Cloudflare Worker | `line-bot/` | `npm run deploy`（wrangler） |
+| Speak Up 雲端語音辨識 | Cloudflare Worker | `stt-worker/` | `cd stt-worker && npx --prefix ../line-bot wrangler deploy` |
 
 兩個網站都是**單一大 HTML 檔**，沒有 build step、沒有框架、沒有打包，
 CSS 與 JS 全部內嵌在同一個檔案裡：

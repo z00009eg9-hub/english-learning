@@ -1069,8 +1069,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
         <button class="hd-fs" onclick="gearTog(event)" title="設定與其他學習網站（字級、B2 Read、QA 題庫）"><svg class=ic><use href=#i-gear></use></svg></button>
         <div class="gear-menu" id="gear-menu">
           <button class="gear-it" id="hd-fs" onclick="cycleFS()" title="調整字體大小（標準 → 大 → 特大）">Aa 標準</button>
-          <button class="gear-it" id="rec-mode" onclick="toggleRecMode()"><svg class=ic><use href=#i-mic></use></svg> 語音：快速</button>
-          <button class="gear-it" id="rec-mode" onclick="toggleRecMode()" title="快速：瀏覽器辨識；穩定：Whisper 在本機辨識，首次需下載模型"><svg class=ic><use href=#i-mic></use></svg> 語音：快速</button>
+          <button class="gear-it" id="rec-mode" onclick="toggleRecMode()" title="精準：錄音後由雲端 Whisper 辨識（較準）；快速：瀏覽器內建辨識"><svg class=ic><use href=#i-mic></use></svg> 語音：快速</button>
           <a href="https://english-b2-lab.web.app" class="gear-it" title="B2 Read — 閱讀 · 單字間隔複習 · 文法教材，每天自動更新">📚 B2 Read ↗</a>
           <a href="https://rexon-qa-english.web.app/" class="gear-it" title="Rexon QA — 英文練習題庫">📝 QA 題庫 ↗</a>
         </div>
@@ -7261,51 +7260,88 @@ function whenTtsQuiet(fn,gen){const t0=Date.now();
     if(IS_APPLE){audioKick();setTimeout(fn,700);}else fn();};
   setTimeout(chk,TTS_GAP);}
 function speechOK(){return ('webkitSpeechRecognition' in window)||('SpeechRecognition' in window);}
-let whisperWorker,whisperActive=false,whisperCfg,whisperRec,whisperStream,whisperChunks=[],whisperLiveSR=null,whisperWait=null;
-function recMode(){return localStorage.getItem('speakup_rec_mode')||'fast';}
-let whisperReady=false,whisperLoadErr=null,whisperProg=0;
+/* ---------- 精準模式（雲端）：錄音 → 16kHz WAV → Cloudflare Whisper large-v3-turbo ----------
+   Worker 原始碼在 stt-worker/。失敗或逾時時，用同時跑的瀏覽器辨識結果當退路（Apple 裝置為避免搶麥克風不同時跑）。
+   實測 initial_prompt 會讓結果少掉前半句，所以不傳目標句子當提示詞。 */
+const CLOUD_STT='https://speakup-stt.anitachen9279.workers.dev/';
+let cloudActive=false,cloudBusy=false,cloudCfg=null,cloudRec=null,cloudStream=null,cloudChunks=[],cloudLiveSR=null,cloudLiveTxt='',cloudStopT=null;
+function recMode(){return localStorage.getItem('speakup_rec_mode')==='fast'?'fast':'cloud';}
+function cloudSupported(){return !!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia&&window.MediaRecorder&&window.AudioContext&&window.OfflineAudioContext);}
 function renderRecMode(){const b=$('rec-mode');if(!b)return;
-  if(recMode()!=='whisper'){b.innerHTML='<svg class=ic><use href=#i-mic></use></svg> 語音：快速';return;}
-  b.innerHTML='<svg class=ic><use href=#i-mic></use></svg> 語音：穩定（Beta）'+(whisperReady?'':whisperLoadErr?'　⚠ 載入失敗，暫用快速':'　⏳ 模型下載 '+whisperProg+'%');}
-function toggleRecMode(){if(recMode()==='whisper'){localStorage.setItem('speakup_rec_mode','fast');renderRecMode();return;}
-  if(!window.Worker||!navigator.mediaDevices||!window.MediaRecorder){alert('這台裝置不支援穩定模式。');return;}
-  localStorage.setItem('speakup_rec_mode','whisper');whisperEnsure();renderRecMode();}
-/* 穩定模式的模型在背景預載。以前是第一次按麥克風才跳 alert 然後直接 return、不錄音，
-   每次重新整理都重來一次，使用者看到的就是「按了麥克風馬上跳掉」 */
-function whisperEnsure(){
-  if(whisperWorker||whisperLoadErr)return;
-  if(!window.Worker||!navigator.mediaDevices||!window.MediaRecorder){whisperLoadErr='unsupported';renderRecMode();return;}
-  try{whisperWorker=new Worker('whisper-worker.js',{type:'module'});}catch(e){whisperLoadErr=e.message||'worker';renderRecMode();return;}
-  const fail=m=>{whisperLoadErr=m||'load';try{whisperWorker.terminate();}catch(_){}whisperWorker=null;renderRecMode();};
-  whisperWorker.onmessage=e=>{const d=e.data;
-    if(d.type==='status'&&d.status==='ready'){whisperReady=true;renderRecMode();}
-    else if(d.type==='progress'){whisperProg=Math.round(d.progress||0);renderRecMode();}
-    else if(d.type==='result')whisperDone(d.text,null);
-    else if(d.type==='error'){if(whisperReady)whisperDone('',d.message);else fail(d.message);}};
-  whisperWorker.onerror=e=>{if(!whisperReady)fail(e&&e.message);};
-  whisperWorker.postMessage({type:'load'});
-}
-function whisperDone(t,e){const c=whisperCfg;if(!c)return;
+  b.innerHTML='<svg class=ic><use href=#i-mic></use></svg> 語音：'+(recMode()==='cloud'?'精準（雲端）':'快速');}
+function toggleRecMode(){
+  if(recMode()==='cloud'){localStorage.setItem('speakup_rec_mode','fast');renderRecMode();return;}
+  if(!cloudSupported()){alert('這台裝置不支援精準模式。');return;}
+  localStorage.setItem('speakup_rec_mode','cloud');renderRecMode();}
+function cloudDone(t,e){const c=cloudCfg;if(!c)return;
   /* Whisper 對靜音會幻覺出 [MUSIC PLAYING]、(inaudible) 這類標記，不能當成使用者說的話 */
-  t=(t||'').replace(/\[[^\]]*\]|\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();if(whisperWait){clearTimeout(whisperWait);whisperWait=null;}whisperActive=false;micActive=false;meterStop();try{whisperStream.getTracks().forEach(x=>x.stop());}catch(_){}whisperLiveStop();setMicUI(c,false);whisperCfg=null;c.onDone&&c.onDone(t,e,[]);}
-function whisperLiveStop(){if(whisperLiveSR){try{whisperLiveSR.onresult=whisperLiveSR.onend=whisperLiveSR.onerror=null;whisperLiveSR.abort();}catch(_){}whisperLiveSR=null;}}
-function whisperLiveStart(cfg){
-  if(!speechOK()||whisperLiveSR)return;
+  t=(t||'').replace(/\[[^\]]*\]|\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();
+  if(cloudStopT){clearTimeout(cloudStopT);cloudStopT=null;}
+  cloudActive=false;cloudBusy=false;micActive=false;meterStop();
+  try{cloudStream.getTracks().forEach(x=>x.stop());}catch(_){}
+  cloudLiveStop();setMicUI(c,false);cloudCfg=null;c.onDone&&c.onDone(t,e,[]);}
+function cloudLiveStop(){if(cloudLiveSR){try{cloudLiveSR.onresult=cloudLiveSR.onend=cloudLiveSR.onerror=null;cloudLiveSR.abort();}catch(_){}cloudLiveSR=null;}}
+function cloudLiveStart(cfg){
+  if(IS_APPLE||!speechOK()||cloudLiveSR)return;
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
   let sr;try{sr=new SR();}catch(_){return;}
   sr.lang='en-US';sr.interimResults=true;sr.continuous=true;
-  let fin='';
-  sr.onresult=e=>{if(!whisperActive)return;
+  sr.onresult=e=>{if(!cloudActive)return;
     let f='',itm='';
     for(let i=0;i<e.results.length;i++){if(e.results[i].isFinal)f+=e.results[i][0].transcript+' ';else itm+=e.results[i][0].transcript;}
-    fin=f.trim();const live=(fin+' '+itm).trim();
-    cfg.onLive&&cfg.onLive(live);};
-  sr.onend=()=>{if(whisperActive){try{sr.start();}catch(_){whisperLiveSR=null;}}};
+    cloudLiveTxt=(f.trim()+' '+itm).trim();
+    cfg.onLive&&cfg.onLive(cloudLiveTxt);};
+  sr.onend=()=>{if(cloudActive){try{sr.start();}catch(_){cloudLiveSR=null;}}};
   sr.onerror=()=>{};
-  whisperLiveSR=sr;
-  try{sr.start();}catch(_){whisperLiveSR=null;}
+  cloudLiveSR=sr;
+  try{sr.start();}catch(_){cloudLiveSR=null;}
 }
-async function whisperMic(c){if(whisperActive){whisperRec.stop();return;}try{whisperCfg=c;whisperActive=micActive=true;setMicUI(c,true);meterStart(c);whisperLiveStart(c);whisperStream=await navigator.mediaDevices.getUserMedia({audio:true});whisperChunks=[];whisperRec=new MediaRecorder(whisperStream);whisperRec.ondataavailable=e=>whisperChunks.push(e.data);whisperRec.onstop=async()=>{try{const ctx=new AudioContext(),b=await ctx.decodeAudioData(await new Blob(whisperChunks).arrayBuffer());ctx.close();const o=new OfflineAudioContext(1,Math.max(16000,Math.ceil(b.duration*16000)),16000),s=o.createBufferSource();s.buffer=b;s.connect(o.destination);s.start();const a=(await o.startRendering()).getChannelData(0).slice();const l=$(c.lbl);if(l)l.textContent='⏳ 辨識中…';whisperWorker.postMessage({type:'transcribe',audio:a.buffer},[a.buffer]);whisperWait=setTimeout(()=>whisperDone('','whisper-timeout'),45000);}catch(e){whisperDone('','whisper-error');}};whisperRec.start();}catch(e){whisperLiveStop();whisperDone('',e.name==='NotAllowedError'?'not-allowed':'whisper-error');}}
+function wavOf(f32){
+  const n=f32.length,buf=new ArrayBuffer(44+n*2),v=new DataView(buf);
+  const w=(o,t)=>{for(let i=0;i<t.length;i++)v.setUint8(o+i,t.charCodeAt(i));};
+  w(0,'RIFF');v.setUint32(4,36+n*2,true);w(8,'WAVEfmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);
+  v.setUint32(24,16000,true);v.setUint32(28,32000,true);v.setUint16(32,2,true);v.setUint16(34,16,true);w(36,'data');v.setUint32(40,n*2,true);
+  for(let i=0;i<n;i++){const x=Math.max(-1,Math.min(1,f32[i]));v.setInt16(44+i*2,x<0?x*0x8000:x*0x7fff,true);}
+  return buf;}
+async function cloudSend(){
+  const c=cloudCfg;if(!c)return;
+  if(cloudStopT){clearTimeout(cloudStopT);cloudStopT=null;}
+  cloudBusy=true;
+  try{cloudStream.getTracks().forEach(x=>x.stop());}catch(_){}
+  cloudLiveStop();
+  try{
+    const ctx=new AudioContext(),b=await ctx.decodeAudioData(await new Blob(cloudChunks).arrayBuffer());ctx.close();
+    const o=new OfflineAudioContext(1,Math.max(16000,Math.ceil(b.duration*16000)),16000),src=o.createBufferSource();
+    src.buffer=b;src.connect(o.destination);src.start();
+    const a=(await o.startRendering()).getChannelData(0).slice(0,480000);   /* 上限 30 秒 */
+    let pk=0;for(let i=0;i<a.length;i++){const x=Math.abs(a[i]);if(x>pk)pk=x;}
+    if(pk<0.008){cloudDone('',null);return;}                                /* 幾乎全靜音：不送，省額度也避免幻覺 */
+    const l=$(c.lbl);if(l)l.textContent='⏳ 辨識中…';
+    const ac=new AbortController(),tm=setTimeout(()=>ac.abort(),12000);
+    const r=await fetch(CLOUD_STT,{method:'POST',body:wavOf(a),headers:{'Content-Type':'audio/wav'},signal:ac.signal});
+    clearTimeout(tm);
+    if(!r.ok)throw new Error('http'+r.status);
+    const j=await r.json();
+    cloudDone(j.text||'',null);
+  }catch(e){
+    /* 退路：同時跑的瀏覽器辨識有聽到東西就用它；沒有（Apple 裝置）才報錯 */
+    console.warn('[cloud-stt]',e&&e.message||e);
+    cloudDone(cloudLiveTxt,cloudLiveTxt?null:'cloud-error');
+  }
+}
+async function cloudMic(c){
+  if(cloudActive){if(cloudRec){try{cloudRec.stop();}catch(_){}}return;}
+  if(cloudBusy)return;
+  try{
+    cloudCfg=c;cloudActive=micActive=true;cloudLiveTxt='';setMicUI(c,true);meterStart(c);cloudLiveStart(c);
+    cloudStream=await navigator.mediaDevices.getUserMedia({audio:true});
+    cloudChunks=[];cloudRec=new MediaRecorder(cloudStream);
+    cloudRec.ondataavailable=e=>{if(e.data&&e.data.size)cloudChunks.push(e.data);};
+    cloudRec.onstop=cloudSend;
+    cloudRec.start();
+    cloudStopT=setTimeout(()=>{try{cloudRec.stop();}catch(_){}},28000);   /* 到時間自動結束，Worker 上限 30 秒 */
+  }catch(e){cloudLiveStop();cloudDone('',e.name==='NotAllowedError'?'not-allowed':'cloud-error');}
+}
 function setMicUI(cfg,on){if(!cfg)return;const b=$(cfg.btn);if(b){b.classList.toggle('rec',on);b.innerHTML=on?'<svg class=ic><use href=#i-stop></use></svg>':(cfg.icon||'<svg class=ic><use href=#i-mic></use></svg>');}
   const l=$(cfg.lbl);if(l)l.innerHTML=on?'🔴 聽你說…（說完再按一次結束）':(cfg.idle||'按一下，開始說');
   if(cfg.redo){const r=$(cfg.redo);if(r)r.classList.toggle('hide',!on);}}
@@ -7457,8 +7493,8 @@ function _startRec(){
 }
 try{if(navigator.audioSession)navigator.audioSession.type='play-and-record';}catch(e){}
 function micStart(cfg){
-  /* 穩定模式：模型還沒好（下載中／載入失敗）就先用快速模式，不讓使用者空等 */
-  if(recMode()==='whisper'){whisperEnsure();if(whisperReady){whisperMic(cfg);return;}}
+  /* 精準模式（雲端）：預設。裝置不支援錄音時才退回快速模式 */
+  if(recMode()==='cloud'&&cloudSupported()){cloudMic(cfg);return;}
   if(!speechOK()){cfg.onDone&&cfg.onDone('','unsupported',[]);return;}
   if(micActive){
     /* 正在收尾（已經按過結束、引擎還沒回話）時又被按 → 直接收乾淨，這一按當作重新開始錄；
@@ -7478,8 +7514,6 @@ function micStart(cfg){
   micCfg=cfg;micFinal='';micLive='';micAlts=[];micErr=null;micDone=false;micStopping=false;startRetried=false;abortN=0;
   micTrace=[];micT0=Date.now();micHold();mtr('press'+(holdStream?'/held'+(holdStream.getAudioTracks()[0]&&holdStream.getAudioTracks()[0].muted?'-muted':''):'')+(navigator.audioSession?'/as='+navigator.audioSession.type:'')+(window.speechSynthesis&&speechSynthesis.speaking?'/tts':''));
   micActive=true;meterRetried=false;setMicUI(cfg,true);meterStart(cfg);
-  if(recMode()==='whisper'&&!whisperReady){const l=$(cfg.lbl);
-    if(l)l.textContent='🔴 聽你說…（'+(whisperLoadErr?'穩定模式載入失敗':'穩定模式模型下載中 '+whisperProg+'%')+'，先用快速模式）';}
   armFirstIdle(cfg);armWatchdog(cfg);
   /* 等示範語音真的停下來再開錄，喇叭聲被收進去會嚴重拖垮辨識 */
   const gen=micGen;
@@ -7512,7 +7546,7 @@ function micErrMsg(err){
   if(err==='not-allowed'||err==='service-not-allowed')return '🚫 麥克風權限被封鎖：點網址列左邊的 🔒 → 麥克風 → 允許，再重新整理頁面';
   if(err==='audio-capture')return '🎙️ 找不到麥克風：請確認麥克風已接上，且 Windows「隱私權 → 麥克風」有允許瀏覽器';
   if(err==='network')return '📶 語音辨識需要網路（Chrome 透過 Google 伺服器辨識），請檢查連線後再試';
-  if(err==='whisper-error'||err==='whisper-timeout')return '⚠ 穩定模式轉寫失敗，請到 ⚙ 設定切回「語音：快速」再試';
+  if(err==='cloud-error')return '⚠ 雲端辨識失敗（網路不穩？），請再按一次；或到 ⚙ 設定切回「語音：快速」';
   /* 其他原因（no-speech／aborted／busy…）也把代碼帶出來，回報問題時一眼看得出是哪一種 */
   if(err&&err!=='unsupported')return '沒聽清楚（'+esc(String(err))+'），再按一次試試 <svg class=ic><use href=#i-mic></use></svg><div class="alt-line" style="font-size:.8em;opacity:.7">紀錄：'+esc(micTraceStr())+'</div>';
   return null;}
@@ -8422,7 +8456,7 @@ function cycleFS(){const v=+(localStorage.getItem('speakup_fs')||1);
   const i=(FS_STEPS.findIndex(s=>s[0]===v)+1)%FS_STEPS.length;
   localStorage.setItem('speakup_fs',FS_STEPS[i][0]);applyFS();}
 applyFS();
-renderRecMode();if(recMode()==='whisper')whisperEnsure();
+renderRecMode();
 /* 右上角 ⚙️ 選單（字級、B2 Read、QA 題庫收在這裡，頂部留給學習狀態） */
 function gearTog(e){e.stopPropagation();const g=$('gear-menu');if(g)g.classList.toggle('open');}
 document.addEventListener('click',e=>{

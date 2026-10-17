@@ -9,6 +9,7 @@
 | Speak Up（課堂筆記/口說/測驗） | https://learning-english-notes.web.app | 根目錄 `index.html` |
 | B2 Read（閱讀/文法/實景） | https://english-b2-lab.web.app | `b2lab/public/index.html` |
 | LINE 單字查詢 Bot | Cloudflare Worker | `line-bot/` |
+| Speak Up 雲端語音辨識 | Cloudflare Worker（Workers AI Whisper，免費額度） | `stt-worker/`；網址 https://speakup-stt.anitachen9279.workers.dev |
 | B2 Read AI 語音檔 | https://english-b2-lab-audio.web.app | 另一個 repo `D:\b2lab-audio`（z00009eg9-hub/b2lab-audio，private）；每日排程 `b2lab-audio-sync` 補產生並部署 |
 
 - 原始碼：`D:\english-learning`（已從 Google Drive 搬出，避免 Drive 同步破壞 .git）
