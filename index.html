@@ -426,6 +426,7 @@ button.hint-cap.hint-lock:active{transform:scale(.96);}
 .w-ok{color:var(--good);}
 .w-miss{color:var(--faint);text-decoration:line-through;}
 .w-soft{color:var(--sub);opacity:.55;}
+.w-heard{color:var(--amber);font-size:.72em;margin-left:2px;}
 .w-near{border-bottom:2px dotted var(--good);}
 .w-extra{color:var(--amber);font-style:italic;font-size:.85em;}
 /* 聽寫智慧比對：黃＝拼字小誤（typo，仍算對）；紅底線保留給真的聽錯 */
@@ -7100,8 +7101,20 @@ function phonKey(w){
 }
 /* 兩個字算不算「聽起來就是同一個字」
    loose（Tom）：發音相近就放行 — 他是初學者，先建立敢開口的信心 */
+/* 數字與同音字：4=four、1st=first、their=there=they're 視為同一個字（只在 fuzzy 比對用） */
+const NUMW=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+const TENSW=['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+const ORDW=['','first','second','third','fourth','fifth','sixth','seventh','eighth','ninth','tenth'];
+const HOMO=[['their','there',"they're"],['to','too','two'],['for','four','fore'],['right','write','rite'],['know','no'],['hear','here'],['by','buy','bye'],['sea','see'],['son','sun'],['one','won'],['would','wood'],['week','weak'],['whole','hole'],['wait','weight'],['piece','peace'],['plane','plain'],['meet','meat'],['mail','male'],['made','maid'],['hour','our'],['new','knew'],['night','knight'],['read','red'],['road','rode'],['sale','sail'],['tail','tale'],['threw','through'],['way','weigh'],['wear','where'],['which','witch'],['your',"you're"],['its',"it's"],['break','brake'],['flower','flour'],['die','dye'],['eye','i','aye'],['bear','bare'],['allowed','aloud'],['principal','principle']];
+const HOMOMAP={};HOMO.forEach(g=>g.forEach(w=>{HOMOMAP[w]=g[0];}));
+function numWord(w){
+  if(/^\d{1,2}$/.test(w)){const n=+w;return n<20?NUMW[n]:TENSW[Math.floor(n/10)]+(n%10?' '+NUMW[n%10]:'');}
+  const m=w.match(/^(\d{1,2})(st|nd|rd|th)$/);if(m&&+m[1]>=1&&+m[1]<=10)return ORDW[+m[1]];
+  return w;}
+function canon(w){const n=numWord(w);return HOMOMAP[n]||n;}
 function wordClose(a,b,loose){
   if(a===b)return true;
+  if(canon(a)===canon(b))return true;
   const sa=stemOf(a),sb=stemOf(b);
   if(sa&&sa.length>=3&&sa===sb)return true;   /* 只差字尾 -s/-ed/-ing */
   const n=Math.max(a.length,b.length);
@@ -7141,7 +7154,13 @@ function scoreSpeech(said,target,opts){
       if(k>=0){used[k]=used[k+1]=true;matched++;return{w,ok:true,near:true};}}
     if(loose&&SOFT_WORDS.has(w)){soft++;return{w,ok:false,soft:true};}
     return{w,ok:false};});
-  const extra=st.filter((s,k)=>!used[k]);
+  /* 「聽成」提示：沒對上的目標字，配給發音最像、沒被用掉的辨識字（只顯示，不影響分數） */
+  let extra=st.filter((s,k)=>!used[k]);
+  if(fuzzy&&extra.length){
+    diff.forEach(d=>{if(d.ok||!extra.length)return;
+      const pw=phonKey(d.w);let bi=-1,bd=99;
+      extra.forEach((e,k)=>{const dd=lev(pw,phonKey(e));if(dd<bd){bd=dd;bi=k;}});
+      if(bi>=0&&bd<=Math.max(2,Math.ceil(pw.length/2))){d.heard=extra[bi];extra=extra.filter((_,k)=>k!==bi);}});}
   const denom=Math.max(1,tt.length-soft);
   const pct=tt.length?Math.min(100,Math.round(matched/denom*100)):0;
   return{pct,matched,total:tt.length,diff,extra};
@@ -7159,7 +7178,7 @@ function diffHTML(r,label){
   return (label||'')
     +r.diff.map((x,i)=>{let w=(x.w==='i'||/^i'/.test(x.w))?cap(x.w):x.w;if(i===0)w=cap(w);
       const c=x.ok?(x.typo?'w-typo':(x.near?'w-ok w-near':'w-ok')):(x.soft?'w-soft':'w-miss');
-      return '<span class="'+c+'">'+esc(w)+'</span>';}).join(' ')
+      return '<span class="'+c+'">'+esc(w)+'</span>'+(x.heard&&!x.ok?'<span class="w-heard">聽成 '+esc(x.heard)+'</span>':'');}).join(' ')
     +(extraN?' &nbsp;'+r.extra.map(w=>'<span class="w-extra">+'+esc(w)+'</span>').join(' '):'')
     +(legends.length?'<div class="diff-legend">'+legends.join('　')+'</div>':'');
 }
