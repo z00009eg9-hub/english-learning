@@ -7606,7 +7606,9 @@ const TA={el:null,boost:null,plain:null,ctx:null,q:null,cache:new Map(),miss:[]}
 /* 音量放大（2026-10-16）：AI 音檔錄得偏小聲（說話平均約 -19 dBFS），iPhone 上開到最大還是很小聲
    → 經 Web Audio 放大 TA_GAIN 倍，後面接限幅器避免破音。AudioContext 要在使用者手勢裡建立／喚醒；
    它沒在跑（iOS 切到背景回來等）就改用沒接 Web Audio 的一般元素，音量小一點但一定有聲音 */
-const TA_GAIN=2;
+/* 2026-10-17：iPhone 改用純播放（playback）後音量已足夠；放大×2 會讓限幅器把輸出頂在 0 dB、聲音變扁（?ttsdiag A 比 B 好）
+   → 1＝不放大，直接用一般元素播放；?ttsdiag 的 B 仍可強制測放大 */
+const TA_GAIN=1;
 function taNewEl(){const el=new Audio();el.setAttribute('playsinline','');return el;}
 /* iOS：audio 要先在使用者手勢內播過一次，之後 fetch 完才播得出來；用一小段無聲 wav 開嗓 */
 function taUnlock(el){
@@ -7624,7 +7626,7 @@ function taGesture(){
     c.createMediaElementSource(el).connect(g).connect(lim).connect(c.destination);
     TA.ctx=c;TA.boost=el;TA.gain=g;try{TA.meter=c.createAnalyser();TA.meter.fftSize=2048;lim.connect(TA.meter);}catch(_){}c.resume().catch(()=>{});taUnlock(el);}catch(e){}}
 ['pointerdown','touchend','keydown'].forEach(t=>document.addEventListener(t,taGesture,{capture:true,passive:true}));
-function taEl(){const ok=TA.boost&&TA.ctx&&TA.ctx.state==='running';
+function taEl(){const ok=TA_GAIN>1&&TA.boost&&TA.ctx&&TA.ctx.state==='running';
   if(!ok&&!TA.plain)TA.plain=taNewEl();
   return TA.el=ok?TA.boost:TA.plain;}
 /* 音量診斷面板（網址加 ?ttsdiag 才出現；2026-10-16 iPhone 太小聲時用）：
@@ -7678,7 +7680,7 @@ function ttsDiag(){
 if(/[?&]ttsdiag\b/.test(location.search))window.addEventListener('load',()=>setTimeout(ttsDiag,800));
 /* 瀏覽器朗讀、錄音會讓 iOS 把 AudioContext 切成 interrupted，這時 taEl() 只能給沒放大的一般元素（小聲）。
    播之前先試著喚醒，最多等 0.4 秒；醒了就走放大，沒醒才退一般（2026-10-16 ?ttsdiag 實測確認） */
-function taReady(){const c=TA.ctx;if(!c||c.state==='running')return Promise.resolve();
+function taReady(){const c=TA.ctx;if(TA_GAIN<=1)return Promise.resolve();if(!c||c.state==='running')return Promise.resolve();
   c.resume().catch(()=>{});const t0=Date.now();   /* resume 的 promise 會比 state 變 running 早到，所以輪詢 state */
   return new Promise(r=>{const chk=()=>{if(c.state==='running'||Date.now()-t0>400)r();else setTimeout(chk,30);};chk();});}
 /* 抓音檔成 blob（Safari 播跨網域音檔較穩）；最近 80 個留著，重播不用再下載 */
