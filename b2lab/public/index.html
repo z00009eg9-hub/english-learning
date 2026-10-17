@@ -8915,14 +8915,14 @@ function vdStageHTML(l){
   }else if(v.type==='timeline'){
     /* 文法影片：時間線（現在 → 時刻表 → 約好的事 → 還沒定）。項目定義在 d.timeline，
        show＝出現前幾個、lit＝只亮第幾個、dec＝標出「說話時已經定好」。字都在 HTML，不畫進 SVG */
-    const T=d.timeline||[], NOW=8;
+    const T=d.timeline||[], NOW=d.timelineNow!=null?d.timelineNow:8;   /* timelineNow：「現在」的位置（%），過去式單元可放中間或右邊 */
     const it=(x,i)=>'<div class="gtl-it c'+(i+1)+(x.open?' open':'')+(v.pop&&i===v.show-1?' new':'')+(v.lit!=null?(v.lit===i?' on':' dim'):'')+'" style="left:'+x.x+'%">'
       +'<div class="ic">'+vdArt(x.art)+'</div><i class="dot"></i>'
       +'<div class="lab">'+esc(x.lab)+'</div><div class="who">'+esc(x.who)+'</div></div>';
     h='<div class="vd-scn gtl"><div class="vd-kick">'+esc(v.kick||'Who decided? 這件事是誰決定的？')+'</div>'
      +'<div class="gtl-box"><div class="gtl-axis"></div>'
      +'<div class="gtl-now" style="left:'+NOW+'%"><i></i><b>現在</b></div>'
-     +(v.dec&&T[1]?'<div class="gtl-dec" style="left:'+NOW+'%;width:'+(T[1].x-NOW)+'%"><span>說話的這一刻，已經定好了</span></div>':'')
+     +(v.dec&&T[1]?'<div class="gtl-dec" style="left:'+Math.min(NOW,T[1].x)+'%;width:'+Math.abs(T[1].x-NOW)+'%"><span>'+esc(v.decText||'說話的這一刻，已經定好了')+'</span></div>':'')
      +T.slice(0,v.show||0).map(it).join('')+'</div>'+vdGramEx(l)+'</div>';
   }else if(v.type==='cards'){
     /* 文法影片：概念對照卡（不是時態的單元用它取代時間線）。卡片定義在 d.cards（2–3 張），

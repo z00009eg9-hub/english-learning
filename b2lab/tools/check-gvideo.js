@@ -111,12 +111,12 @@ for(const id of list){
     }
     for(const m of s.matchAll(/<text[^>]*>([^<]*)<\/text>/g)) if(m[1].length>6) E.push('插圖 '+k+'：SVG 文字太長「'+m[1]+'」（只允許 6 字內的標記）');
   });
-  /* 例句不可抄文法頁：任何 4 個字連續相同就算 */
+  /* 例句不可抄文法頁：連續 6 個字相同就算（4 字太嚴，did you use to 這種句型骨架都會被擋） */
   if(unit){
-    const page=new Set(); strs(unit).concat(strs((site.GVPLUS||{})[id])).forEach(s=>grams(s,4).forEach(g=>page.add(g)));
+    const page=new Set(); strs(unit).concat(strs((site.GVPLUS||{})[id])).forEach(s=>grams(s,6).forEach(g=>page.add(g)));
     const mine=[]; L.forEach(l=>{ if(l.en) mine.push(l.en); const vis=l.vis||{}; if(vis.a&&vis.a.w) mine.push(vis.a.w); if(vis.b&&vis.b.w) mine.push(vis.b.w); });
     Object.values(expr).forEach(e=>e.ex&&mine.push(e.ex));
-    [...new Set(mine)].forEach(s=>{ const hit=grams(s,4).find(g=>page.has(g)); if(hit) E.push('例句跟文法頁重疊「'+hit+'」：'+s); });
+    [...new Set(mine)].forEach(s=>{ const hit=grams(s,6).find(g=>page.has(g)); if(hit) E.push('例句跟文法頁重疊「'+hit+'」：'+s); });
   }
   if(E.length){ fail++; console.log('✗ '+id); E.forEach(x=>console.log('    ✗ '+x)); }
   else console.log('✓ '+id+'  '+L.length+' 句 · 約 '+Math.round(t)+' 秒 · 情境圖 '+new Set(sceneArts).size+' 張');
