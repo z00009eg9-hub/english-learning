@@ -24686,6 +24686,1071 @@ window.BOOK = {
         "cn": "做（不規則動詞，見 IV-B-2）"
       }
     ]
+  },
+  /* ---- bk20261015 Quality Specifications & Question Practice ---- */
+  {
+    "id": "bk20261015",
+    "video": true,
+    "icon": "📐",
+    "iconSvg": "<svg viewBox=\"0 0 96 96\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"48\" cy=\"48\" r=\"45\" fill=\"#fff\" stroke=\"#f0c9a0\" stroke-width=\"3\"/><rect x=\"22\" y=\"20\" width=\"40\" height=\"52\" rx=\"4\" fill=\"#fdf6ec\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><path d=\"M29 32 h26 M29 42 h26 M29 52 h14\" stroke=\"#2b2118\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M29 62 l5 5 l9 -10\" fill=\"none\" stroke=\"#3f9e64\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"68\" cy=\"62\" r=\"15\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><path d=\"M62.5 57.5 q0 -6.5 6.5 -6.5 q6.5 0 6.5 5.5 q0 3.5 -4.5 5 q-2 1 -2 3.5\" fill=\"none\" stroke=\"#fff\" stroke-width=\"3.5\" stroke-linecap=\"round\"/><circle cx=\"69\" cy=\"72\" r=\"2.2\" fill=\"#fff\"/></svg>",
+    "date": "2026-10-15",
+    "doc": "https://docs.google.com/document/d/1MdfU20A3RLzPVih_W3l4CNaK-OlKlDr40Nbd2mFnXXI/edit",
+    "title": "Quality Specifications & Question Practice",
+    "titleCn": "品質規格與疑問句練習",
+    "topics": "作業複習(團隊職責、品質規格、振動測試、量產、離職預告)、用作業句造 WH 問句與回答、情境造問句、did 後面用原形、品質規格文件(雙語、檢視與更新、圖面變更)",
+    "hwTitle": "I. ★ 10/15 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "wrong": "Our team responsibilities include incoming inspection and new product.",
+        "fix": "Our team's responsibilities include incoming inspection, new product development, and inspection of parts received from suppliers.",
+        "cn": "我們團隊的職責包括進料檢驗、新產品開發，以及檢查從供應商收到的零件。",
+        "pat": "主詞 + include + A, B, and C(三項並列)",
+        "note": "團隊「的」職責要用所有格：team's responsibilities。 include 後面列出的項目，詞性要對等：incoming inspection、new product development、inspection of parts… 都是名詞片語。原句的 new product 只是「新產品」，加上 development 才是「新產品開發」。 老師先給的簡短版：Our team's responsibilities include incoming inspection of new parts received from suppliers.(我們團隊的職責包括對從供應商收到的新零件進行進料檢驗。)"
+      },
+      {
+        "n": 2,
+        "wrong": "We need to align quality spec with customer because it can help our production smoothly.",
+        "fix": "We need to align the quality specifications with the customer's requirements because this will help our production run smoothly.",
+        "cn": "我們需要讓品質規格與客戶的要求一致，因為這會讓我們的生產順利進行。",
+        "pat": "align A with B／help + 受詞 + 原形動詞",
+        "note": "align A with B = 使 A 與 B 一致。A 是 the quality specifications，B 是 the customer's requirements。 spec 是口語縮寫，正式寫成 quality specifications。 customer 後面要接名詞 requirements：the customer's requirements = 客戶的要求。 run smoothly = 順利進行。"
+      },
+      {
+        "n": 3,
+        "ok": "The screw came loose after the vibration test.",
+        "cn": "振動測試之後，螺絲鬆脫了。",
+        "pat": "come + 形容詞／after + 名詞",
+        "note": "come loose = 鬆脫。come 在這裡是「變成某種狀態」，後面接形容詞 loose。 vibration test = 振動測試，檢查產品在振動下能否保持穩定。"
+      },
+      {
+        "n": 4,
+        "ok": "We need to hire more inspectors before mass production.",
+        "cn": "量產前，我們需要僱用更多檢驗員。",
+        "pat": "need to + 原形動詞／before + 名詞",
+        "note": "mass production = 量產，before 後面可直接接名詞片語。 before 後面也可以接子句：before mass production begins / starts(量產開始之前)。"
+      },
+      {
+        "n": 5,
+        "wrong": "Our QA inspector quit job without any notification.",
+        "fix": "Our QA inspector quit without giving any notice.(較正式的說法：Our QA inspector resigned without prior notice.)",
+        "cn": "我們的品保檢驗員沒有事先通知就離職了。",
+        "pat": "quit／without + V-ing + 名詞",
+        "note": "quit = 離職、辭職，後面不用再接 job；真的要接，要說 quit the job。 「離職預告」的慣用說法是 give notice(提前通知)，不是 notification。 without + V-ing：without giving any notice = 沒有事先通知；without prior notice = 未提前通知。"
+      }
+    ],
+    "vocabTitle": "II. 單字 Vocabulary",
+    "vocab": [
+      {
+        "w": "responsibility",
+        "star": true,
+        "ipa": "/rɪˌspɑːn.səˈbɪl.ə.t̬i/",
+        "pos": "n.",
+        "cn": "職責、責任",
+        "ex": "Our team's responsibilities include…",
+        "exCn": "我們團隊的職責包括…"
+      },
+      {
+        "w": "include",
+        "ipa": "/ɪnˈkluːd/",
+        "pos": "v.",
+        "cn": "包括、包含",
+        "ex": "responsibilities include incoming inspection",
+        "exCn": "職責包括進料檢驗"
+      },
+      {
+        "w": "supplier",
+        "ipa": "/səˈplaɪɚ/",
+        "pos": "n.",
+        "cn": "供應商",
+        "ex": "parts received from suppliers",
+        "exCn": "從供應商收到的零件"
+      },
+      {
+        "w": "specification",
+        "star": true,
+        "ipa": "/ˌspes.ə.fɪˈkeɪ.ʃən/",
+        "pos": "n.",
+        "cn": "規格(口語縮寫 spec)",
+        "ex": "the quality specification documents",
+        "exCn": "品質規格文件"
+      },
+      {
+        "w": "requirement",
+        "ipa": "/rɪˈkwaɪr.mənt/",
+        "pos": "n.",
+        "cn": "要求、需求",
+        "ex": "the customer's requirements",
+        "exCn": "客戶的要求"
+      },
+      {
+        "w": "align",
+        "star": true,
+        "ipa": "/əˈlaɪn/",
+        "pos": "v.",
+        "cn": "對齊、使一致",
+        "ex": "align A with B",
+        "exCn": "使 A 與 B 一致"
+      },
+      {
+        "w": "smoothly",
+        "ipa": "/ˈsmuːð.li/",
+        "pos": "adv.",
+        "cn": "順利地",
+        "ex": "run smoothly",
+        "exCn": "順利進行"
+      },
+      {
+        "w": "vibration",
+        "star": true,
+        "ipa": "/vaɪˈbreɪ.ʃən/",
+        "pos": "n.",
+        "cn": "振動",
+        "ex": "after the vibration test",
+        "exCn": "振動測試之後"
+      },
+      {
+        "w": "loose",
+        "ipa": "/luːs/",
+        "pos": "adj.",
+        "cn": "鬆的、鬆脫的",
+        "ex": "The screw came loose.",
+        "exCn": "螺絲鬆脫了。"
+      },
+      {
+        "w": "inspector",
+        "ipa": "/ɪnˈspektɚ/",
+        "pos": "n.",
+        "cn": "檢驗員",
+        "ex": "hire more inspectors",
+        "exCn": "僱用更多檢驗員"
+      },
+      {
+        "w": "notice",
+        "ipa": "/ˈnoʊtɪs/",
+        "pos": "n.",
+        "cn": "通知、預告",
+        "ex": "without giving any notice",
+        "exCn": "沒有事先通知"
+      },
+      {
+        "w": "resign",
+        "star": true,
+        "ipa": "/rɪˈzaɪn/",
+        "pos": "v.",
+        "cn": "辭職(比 quit 正式)",
+        "ex": "resigned without prior notice",
+        "exCn": "未提前通知就離職"
+      },
+      {
+        "w": "review",
+        "ipa": "/rɪˈvjuː/",
+        "pos": "v.",
+        "cn": "檢視、審查(確認文件仍正確、最新)",
+        "ex": "review the documents every six months",
+        "exCn": "每六個月檢視文件"
+      },
+      {
+        "w": "update",
+        "ipa": "/ʌpˈdeɪt/",
+        "pos": "v.",
+        "cn": "更新(資訊有變時修訂)",
+        "ex": "update them whenever necessary",
+        "exCn": "必要時更新"
+      },
+      {
+        "w": "necessary",
+        "ipa": "/ˈnes.ə.ser.i/",
+        "pos": "adj.",
+        "cn": "必要的",
+        "ex": "whenever necessary",
+        "exCn": "每當有需要時"
+      },
+      {
+        "w": "drawing",
+        "ipa": "/ˈdrɑː.ɪŋ/",
+        "pos": "n.",
+        "cn": "圖面、圖紙",
+        "ex": "the updated drawings",
+        "exCn": "更新後的圖面"
+      },
+      {
+        "w": "revise",
+        "ipa": "/rɪˈvaɪz/",
+        "pos": "v.",
+        "cn": "修訂",
+        "ex": "the revised drawings",
+        "exCn": "修訂後的圖面"
+      },
+      {
+        "w": "version",
+        "ipa": "/ˈvɝː.ʒən/",
+        "pos": "n.",
+        "cn": "版本",
+        "ex": "the English version",
+        "exCn": "英文版本"
+      },
+      {
+        "w": "bilingual",
+        "ipa": "/baɪˈlɪŋ.ɡwəl/",
+        "pos": "adj.",
+        "cn": "雙語的",
+        "ex": "The document is bilingual.",
+        "exCn": "這份文件是雙語的。"
+      },
+      {
+        "w": "sign",
+        "ipa": "/saɪn/",
+        "pos": "v.",
+        "cn": "簽名",
+        "ex": "sign the drawings",
+        "exCn": "在圖面上簽名"
+      },
+      {
+        "w": "scan",
+        "ipa": "/skæn/",
+        "pos": "v.",
+        "cn": "掃描",
+        "ex": "scan the drawings",
+        "exCn": "掃描圖面"
+      },
+      {
+        "w": "employ",
+        "ipa": "/ɪmˈplɔɪ/",
+        "pos": "v.",
+        "cn": "僱用(= hire)",
+        "ex": "employ people",
+        "exCn": "僱用人員"
+      },
+      {
+        "w": "prefer",
+        "ipa": "/prɪˈfɝ/",
+        "pos": "v.",
+        "cn": "比較喜歡(在選項中選一個)",
+        "ex": "prefer coffee",
+        "exCn": "比較喜歡咖啡"
+      }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases",
+    "phrases": [
+      {
+        "p": "incoming inspection",
+        "cn": "進料檢驗"
+      },
+      {
+        "p": "new product development",
+        "cn": "新產品開發"
+      },
+      {
+        "p": "quality specifications",
+        "cn": "品質規格"
+      },
+      {
+        "p": "customer's requirements",
+        "cn": "客戶要求"
+      },
+      {
+        "p": "align A with B",
+        "cn": "使 A 與 B 一致"
+      },
+      {
+        "p": "run smoothly",
+        "cn": "順利進行"
+      },
+      {
+        "p": "vibration test",
+        "cn": "振動測試"
+      },
+      {
+        "p": "come loose",
+        "cn": "鬆脫"
+      },
+      {
+        "p": "mass production",
+        "cn": "量產"
+      },
+      {
+        "p": "give notice/without prior notice",
+        "cn": "提前通知/未提前通知"
+      },
+      {
+        "p": "every six months",
+        "cn": "每六個月"
+      },
+      {
+        "p": "whenever necessary",
+        "cn": "每當有需要時"
+      },
+      {
+        "p": "English version",
+        "cn": "英文版本"
+      },
+      {
+        "p": "sign, scan, and send back",
+        "cn": "簽名、掃描、寄回"
+      },
+      {
+        "p": "It takes + 人 + 時間 + to + 動詞",
+        "cn": "(某人)花多少時間做…"
+      }
+    ],
+    "grammarTitle": "IV–V. 句型與文法解說：疑問句 Question Patterns ＆ 品質規格文件 Quality Specification Documents",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "用作業句造問句與回答",
+        "pat": "WH 字 + 助動詞 + 主詞 + 原形動詞 + 其他？",
+        "pts": [
+          "include 是一般動詞，所以用助動詞 do：What do your team's responsibilities include?  ✗ What does your team's responsibilities include?",
+          "問過去的事用 did，後面動詞回到原形：When did the screw come loose?(不是 came)。"
+        ],
+        "exs": [
+          {
+            "tag": "What",
+            "en": "What do your team's responsibilities include?",
+            "cn": "你們團隊的職責包括什麼？(回答見 I 第 1 題)"
+          },
+          {
+            "tag": "Why",
+            "en": "Why do you need to align the quality specifications with the customer's requirements?",
+            "cn": "你們為什麼需要讓品質規格與客戶的要求一致？"
+          },
+          {
+            "tag": "Why・回答",
+            "en": "Because this will help our production run smoothly.",
+            "cn": "因為這會讓我們的生產順利進行。"
+          },
+          {
+            "tag": "When",
+            "en": "When did the screw come loose?",
+            "cn": "螺絲是什麼時候鬆脫的？(回答見 I 第 3 題)"
+          },
+          {
+            "tag": "How many",
+            "en": "How many inspectors do you need to hire?",
+            "cn": "你們需要僱用多少檢驗員？"
+          },
+          {
+            "tag": "How many・回答",
+            "en": "We need to hire ten inspectors.",
+            "cn": "我們需要僱用十名檢驗員。"
+          },
+          {
+            "tag": "How",
+            "en": "How did your QA inspector quit?",
+            "cn": "你們的品保檢驗員是怎麼離職的？"
+          },
+          {
+            "tag": "How・回答",
+            "en": "He quit without giving any notice.",
+            "cn": "他沒有事先通知就離職了。"
+          },
+          {
+            "tag": "How・回答(較正式)",
+            "en": "He resigned without prior notice.",
+            "cn": "他未提前通知就離職了。"
+          }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "情境造問句 Make Questions from Situations",
+        "pat": "先看情境，再決定用哪個疑問詞",
+        "pts": [
+          "問未來用 will 或 be going to：朋友已經在規劃旅行，所以用 When are you going to Thailand?；How much will the trip cost?(will 後面的 cost 用原形)。",
+          "問過去用 did，後面的動詞用原形：Where did you work? / Why did you leave? / Where did you grow up?",
+          "How many years of experience：years 是可數複數，問的是現在累計的經驗，所以用現在式 do you have。",
+          "What are your hobbies?：hobbies 是複數，動詞用 are，不是 is。"
+        ],
+        "exs": [
+          {
+            "tag": "Situation 1 規劃假期(朋友要去泰國)・旅行日期",
+            "en": "When are you going to Thailand?",
+            "cn": "你什麼時候要去泰國？"
+          },
+          {
+            "tag": "Situation 1・費用",
+            "en": "How much will the trip cost?",
+            "cn": "這趟旅行要花多少錢？"
+          },
+          {
+            "tag": "Situation 1・旅行多久",
+            "en": "How long will you stay in Thailand?",
+            "cn": "你會在泰國待多久？"
+          },
+          {
+            "tag": "Situation 2 工作面試・之前的工作",
+            "en": "Where did you work before?",
+            "cn": "你之前在哪裡工作？"
+          },
+          {
+            "tag": "Situation 2・為什麼離職",
+            "en": "Why did you leave your last job?",
+            "cn": "你為什麼離開上一份工作？"
+          },
+          {
+            "tag": "Situation 2・幾年經驗",
+            "en": "How many years of experience do you have?",
+            "cn": "你有幾年的經驗？"
+          },
+          {
+            "tag": "Situation 3 認識新朋友(咖啡廳)・興趣",
+            "en": "What are your hobbies?",
+            "cn": "你的興趣是什麼？"
+          },
+          {
+            "tag": "Situation 3・運動頻率",
+            "en": "How often do you exercise?",
+            "cn": "你多久運動一次？"
+          },
+          {
+            "tag": "Situation 3・在哪裡長大",
+            "en": "Where did you grow up?",
+            "cn": "你在哪裡長大的？"
+          }
+        ]
+      },
+      {
+        "k": "IV-C",
+        "title": "疑問句的基本結構 Question Structure",
+        "pat": "疑問詞 + 助動詞 + 主詞 + 主要動詞 + 其他？",
+        "pts": [
+          "拆解：Why + do + you + need + to align the quality specifications with the customer's requirements? When + did + the screw + come loose?",
+          "who 當主詞是例外，後面直接接動詞：Who called you?(誰打電話給你？)。一般問句不說 Who did call you?",
+          "did 已經表示過去式，後面的主要動詞要用原形，不能再用過去式。"
+        ],
+        "exs": [
+          {
+            "tag": "正確 Correct",
+            "en": "When did you go?",
+            "cn": "你什麼時候去的？(✗ When did you went?)"
+          },
+          {
+            "tag": "正確 Correct",
+            "en": "When did you sleep?",
+            "cn": "你什麼時候睡的？(✗ When did you slept?)"
+          },
+          {
+            "tag": "正確 Correct",
+            "en": "When did the screw come loose?",
+            "cn": "螺絲是什麼時候鬆脫的？(✗ When did the screw came loose?)"
+          },
+          {
+            "tag": "正確 Correct",
+            "en": "Why did you leave your last job?",
+            "cn": "你為什麼離開上一份工作？(✗ Why did you left your last job?)"
+          },
+          {
+            "tag": "正確 Correct",
+            "en": "Where did you grow up?",
+            "cn": "你在哪裡長大的？(✗ Where did you grew up?)"
+          }
+        ]
+      },
+      {
+        "k": "IV-D",
+        "title": "口說問答 Answering WH-Questions",
+        "pat": "It takes + 人 + 時間 + to + 動詞",
+        "pts": [
+          "時間用 at + 具體時間：at twelve p.m.。",
+          "spend + 金額 + on + 名詞：on food 接在金額後面，表示「花在什麼上」，every week 放在最後。",
+          "helped 是 help 的過去式：help + 人 + 原形動詞(finish)。"
+        ],
+        "exs": [
+          {
+            "tag": "問",
+            "en": "When do you usually have lunch?",
+            "cn": "你通常幾點吃午餐？"
+          },
+          {
+            "tag": "答",
+            "en": "I usually have lunch at twelve p.m.",
+            "cn": "我通常十二點吃午餐。"
+          },
+          {
+            "tag": "問",
+            "en": "How much money do you spend on food every week?",
+            "cn": "你每週花多少錢在食物上？"
+          },
+          {
+            "tag": "答",
+            "en": "I spend one thousand NT dollars on food every week.",
+            "cn": "我每週花一千元台幣在食物上。"
+          },
+          {
+            "tag": "問",
+            "en": "Why did you leave the meeting early?",
+            "cn": "你為什麼提早離開會議？"
+          },
+          {
+            "tag": "答",
+            "en": "I left the meeting early because I needed to pick up my children.",
+            "cn": "我提早離開會議，因為我需要去接我的孩子。"
+          },
+          {
+            "tag": "問",
+            "en": "How long does it take to get to the airport?",
+            "cn": "到機場要花多久？"
+          },
+          {
+            "tag": "答",
+            "en": "It takes me one hour to get to the airport.",
+            "cn": "我花一個小時到機場。"
+          },
+          {
+            "tag": "問",
+            "en": "Whose jacket is this? Is it yours?",
+            "cn": "這是誰的外套？是你的嗎？"
+          },
+          {
+            "tag": "答",
+            "en": "It's mine.",
+            "cn": "是我的。"
+          },
+          {
+            "tag": "問",
+            "en": "Which do you prefer, tea or coffee?",
+            "cn": "你比較喜歡哪個，茶還是咖啡？"
+          },
+          {
+            "tag": "答",
+            "en": "I prefer coffee.",
+            "cn": "我比較喜歡咖啡。"
+          },
+          {
+            "tag": "問",
+            "en": "How many people attended the meeting?",
+            "cn": "有多少人出席了會議？"
+          },
+          {
+            "tag": "答",
+            "en": "About ten people attended the meeting.",
+            "cn": "大約有十個人出席了會議。"
+          },
+          {
+            "tag": "問",
+            "en": "How far is your office from your home?",
+            "cn": "你的辦公室離你家多遠？"
+          },
+          {
+            "tag": "答",
+            "en": "It is ten kilometers.",
+            "cn": "十公里。"
+          },
+          {
+            "tag": "問",
+            "en": "How often do you exercise?",
+            "cn": "你多久運動一次？"
+          },
+          {
+            "tag": "答",
+            "en": "I exercise every morning.",
+            "cn": "我每天早上運動。"
+          },
+          {
+            "tag": "問",
+            "en": "Who helped you finish the project?",
+            "cn": "誰幫你完成了這個專案？"
+          },
+          {
+            "tag": "答",
+            "en": "My colleague Tom helped me finish the project.",
+            "cn": "我的同事 Tom 幫我完成了這個專案。"
+          }
+        ]
+      },
+      {
+        "k": "V-A",
+        "title": "檢視與更新 Review and Update",
+        "pat": "主詞 + 動詞 + every + 期間／whenever necessary",
+        "pts": [
+          "描述固定的做法用現在式，所以用 review、update，不用過去式。",
+          "How often 問「頻率」，回答可用 every six months(每六個月)。",
+          "whenever necessary = whenever it is necessary(省略 it is)，意思是「每當有需要時」。",
+          "What do you do if there are any changes?：if 子句用現在式 are，主句用 do you do。"
+        ],
+        "exs": [
+          {
+            "tag": "檢視與更新",
+            "en": "Let's look at the English version of the quality specifications.",
+            "cn": "我們來看一下品質規格的英文版本。"
+          },
+          {
+            "tag": "檢視與更新",
+            "en": "We review the quality specification documents every six months and update them whenever necessary.",
+            "cn": "我們每六個月檢視一次品質規格文件，並在必要時更新。"
+          },
+          {
+            "tag": "檢視與更新",
+            "en": "We review them every six months.",
+            "cn": "我們每六個月檢視一次。"
+          },
+          {
+            "tag": "檢視與更新",
+            "en": "How often do you review the quality specification documents?",
+            "cn": "你們多久檢視一次品質規格文件？"
+          },
+          {
+            "tag": "檢視與更新",
+            "en": "We update the documents whenever necessary.",
+            "cn": "我們在有需要時更新文件。"
+          },
+          {
+            "tag": "檢視與更新",
+            "en": "When do you update the documents?",
+            "cn": "你們什麼時候更新文件？"
+          },
+          {
+            "tag": "檢視與更新",
+            "en": "What do you do if there are any changes?",
+            "cn": "如果有任何變更，你們會怎麼做？"
+          }
+        ]
+      },
+      {
+        "k": "V-B",
+        "title": "文件有兩種語言 Bilingual Documents",
+        "pat": "There are + 複數名詞／be + bilingual",
+        "pts": [
+          "There are + 複數名詞：There are two languages…(two languages 是複數，所以用 are)。",
+          "bilingual 是形容詞，意思是「雙語的」，放在 be 動詞後面。",
+          "第四句用 includes 說明文件「包含」兩種語言，再用 and 接 we can follow…。"
+        ],
+        "exs": [
+          {
+            "tag": "雙語文件",
+            "en": "There are two languages in our quality specification document.",
+            "cn": "我們的品質規格文件裡有兩種語言。"
+          },
+          {
+            "tag": "雙語文件",
+            "en": "Our quality specification document is bilingual.",
+            "cn": "我們的品質規格文件是雙語的。"
+          },
+          {
+            "tag": "雙語文件",
+            "en": "We can follow the English version.",
+            "cn": "我們可以依照英文版本。"
+          },
+          {
+            "tag": "雙語文件",
+            "en": "This quality specification document includes two languages, and we can follow the English version.",
+            "cn": "這份品質規格文件包含兩種語言，我們可以依照英文版本。"
+          }
+        ]
+      },
+      {
+        "k": "V-C",
+        "title": "圖面變更與簽回 Drawing Changes",
+        "pat": "When + 子句(現在式), 主詞 + 動詞…",
+        "pts": [
+          "When 子句放前面，後面加逗號；子句用現在式，表示「每次」發生的固定做法。",
+          "are revised 是被動，意思是「被修訂」。",
+          "by email：用什麼方式，by + 方式，email 前面不加 an。",
+          "sign, scan, and send them back：三個動作並列，最後一個前面加 and；them 指 the updated drawings；send back = 寄回。"
+        ],
+        "exs": [
+          {
+            "tag": "圖面變更",
+            "en": "When our drawings change, we send the updated drawings to our customers by email.",
+            "cn": "當我們的圖面有變更時，我們會用電子郵件把更新後的圖面寄給客戶。"
+          },
+          {
+            "tag": "圖面變更",
+            "en": "When our drawings change, we send the updated drawings to our suppliers by email, and they need to sign, scan, and send them back to me.",
+            "cn": "當我們的圖面有變更時，我們會用電子郵件把更新後的圖面寄給供應商，他們需要簽名、掃描，然後寄回給我。"
+          },
+          {
+            "tag": "圖面變更",
+            "en": "When our drawings are revised, we send the updated drawings to our suppliers by email. They need to print, sign, scan, and send them back to us.",
+            "cn": "當我們的圖面修訂時，我們會用電子郵件把更新後的圖面寄給供應商。他們需要列印、簽名、掃描，然後寄回給我們。"
+          }
+        ]
+      }
+    ],
+    "extraTitle": "VI. 課堂練習題 Practice Worksheets",
+    "extra": [
+      {
+        "title": "A-1. Put the words in the correct order — 練習 1(答案為整理補充)",
+        "exs": [
+          {
+            "tag": "1. your / what / job / is",
+            "en": "What is your job?",
+            "cn": "你的工作是什麼？"
+          },
+          {
+            "tag": "2. did / where / last weekend / go / you",
+            "en": "Where did you go last weekend?",
+            "cn": "你上週末去了哪裡？"
+          },
+          {
+            "tag": "3. the report / who / prepared",
+            "en": "Who prepared the report?",
+            "cn": "誰準備了這份報告？"
+          },
+          {
+            "tag": "4. does / how often / your manager / hold / meetings",
+            "en": "How often does your manager hold meetings?",
+            "cn": "你的經理多久開一次會？"
+          },
+          {
+            "tag": "5. to finish / how long / did / the project / take",
+            "en": "How long did the project take to finish?",
+            "cn": "這個專案花了多久完成？"
+          },
+          {
+            "tag": "6. do / why / employees / need / training",
+            "en": "Why do employees need training?",
+            "cn": "員工為什麼需要訓練？"
+          },
+          {
+            "tag": "7. your office / how far / from home / is",
+            "en": "How far is your office from home?",
+            "cn": "你的辦公室離家多遠？"
+          },
+          {
+            "tag": "8. which / you / would / choose / position",
+            "en": "Which position would you choose?",
+            "cn": "你會選哪個職位？"
+          },
+          {
+            "tag": "9. how many / the company / does / have / factories",
+            "en": "How many factories does the company have?",
+            "cn": "這間公司有幾間工廠？"
+          },
+          {
+            "tag": "10. did / how much / you / spend / on your holiday",
+            "en": "How much did you spend on your holiday?",
+            "cn": "你的假期花了多少錢？"
+          }
+        ]
+      },
+      {
+        "title": "A-2. 練習 2",
+        "exs": [
+          {
+            "tag": "1. you / where / do / work",
+            "en": "Where do you work?",
+            "cn": "你在哪裡工作？"
+          },
+          {
+            "tag": "2. did / why / yesterday / leave / she / early",
+            "en": "Why did she leave early yesterday?",
+            "cn": "她昨天為什麼提早離開？"
+          },
+          {
+            "tag": "3. your / how / often / do / parents / visit / you",
+            "en": "How often do you visit your parents?",
+            "cn": "你多久探望父母一次？"
+          },
+          {
+            "tag": "4. the meeting / how long / last / did",
+            "en": "How long did the meeting last?",
+            "cn": "會議持續了多久？"
+          },
+          {
+            "tag": "5. many / how / does / your company / employ / people",
+            "en": "How many people does your company employ?",
+            "cn": "你們公司僱用多少人？"
+          },
+          {
+            "tag": "6. you / who / did / at the party / meet",
+            "en": "Who did you meet at the party?",
+            "cn": "你在派對上遇見了誰？"
+          },
+          {
+            "tag": "7. much / how / this phone / does / cost",
+            "en": "How much does this phone cost?",
+            "cn": "這支手機多少錢？"
+          },
+          {
+            "tag": "8. get to work / how / you / do",
+            "en": "How do you get to work?",
+            "cn": "你怎麼去上班？"
+          },
+          {
+            "tag": "9. the hospital / how far / from here / is",
+            "en": "How far is the hospital from here?",
+            "cn": "醫院離這裡多遠？"
+          },
+          {
+            "tag": "10. which / would / you / job / choose",
+            "en": "Which job would you choose?",
+            "cn": "你會選哪一份工作？"
+          }
+        ]
+      },
+      {
+        "title": "B. Correct the mistakes — 每個問句有一個錯，請改正",
+        "exs": [
+          {
+            "tag": "1. ✗ Where you work?",
+            "en": "Where do you work?",
+            "cn": "你在哪裡工作？(漏了助動詞 do)"
+          },
+          {
+            "tag": "2. ✗ Why did she went home early?",
+            "en": "Why did she go home early?",
+            "cn": "她為什麼提早回家？(did 後面用原形 go)"
+          },
+          {
+            "tag": "3. ✗ How many money do you earn each month?",
+            "en": "How much money do you earn each month?",
+            "cn": "你每個月賺多少錢？(money 不可數，用 how much)"
+          },
+          {
+            "tag": "4. ✗ How long do you live in Taiwan?",
+            "en": "How long have you lived in Taiwan?",
+            "cn": "你在台灣住多久了？(問「到現在住多久」用現在完成式)"
+          },
+          {
+            "tag": "5. ✗ What time the meeting starts?",
+            "en": "What time does the meeting start?",
+            "cn": "會議幾點開始？(漏了助動詞 does，start 用原形)"
+          },
+          {
+            "tag": "6. ✗ Who did called you last night?",
+            "en": "Who called you last night?",
+            "cn": "昨晚誰打電話給你？(who 當主詞，不加 did)"
+          },
+          {
+            "tag": "7. ✗ How often you go swimming?",
+            "en": "How often do you go swimming?",
+            "cn": "你多久去游泳一次？(漏了助動詞 do)"
+          },
+          {
+            "tag": "8. ✗ Which color you like better?",
+            "en": "Which color do you like better?",
+            "cn": "你比較喜歡哪個顏色？(漏了助動詞 do)"
+          },
+          {
+            "tag": "9. ✗ How much employees work in your department?",
+            "en": "How many employees work in your department?",
+            "cn": "你們部門有多少員工？(employees 可數，用 how many)"
+          },
+          {
+            "tag": "10. ✗ Where does your sister lives?",
+            "en": "Where does your sister live?",
+            "cn": "你的姐姐(或妹妹)住在哪裡？(does 後面用原形 live)"
+          }
+        ]
+      },
+      {
+        "title": "C-1. Complete each question with the correct word or phrase — 選擇題(練習 1)",
+        "exs": [
+          {
+            "tag": "1. 選項：Where / When / Who",
+            "en": "Where did you put my keys? I can't find them.",
+            "cn": "你把我的鑰匙放在哪裡了？我找不到。"
+          },
+          {
+            "tag": "2. 選項：How often / How long / How far",
+            "en": "How long does your English class last?",
+            "cn": "你的英文課持續多久？"
+          },
+          {
+            "tag": "3. 選項：What / Why / Whose",
+            "en": "Why did you decide to change your job?",
+            "cn": "你為什麼決定換工作？"
+          },
+          {
+            "tag": "4. 選項：How many / How much / How long",
+            "en": "How much sugar do you put in your coffee?",
+            "cn": "你的咖啡裡加多少糖？(sugar 不可數)"
+          },
+          {
+            "tag": "5. 選項：Which / Who / Where",
+            "en": "Which of these two phones has a better camera?",
+            "cn": "這兩支手機哪一支的相機比較好？"
+          },
+          {
+            "tag": "6. 選項：Who's / Whose / Which",
+            "en": "Whose bag is on the chair? Is it Anna's?",
+            "cn": "椅子上是誰的包包？是 Anna 的嗎？"
+          },
+          {
+            "tag": "7. 選項：How long / How often / How far",
+            "en": "How often do you visit your grandparents? Every weekend.",
+            "cn": "你多久探望祖父母一次？每個週末。"
+          },
+          {
+            "tag": "8. 選項：Who / Whose / Which",
+            "en": "Who did you invite to your birthday party?",
+            "cn": "你邀請了誰來你的生日派對？"
+          },
+          {
+            "tag": "9. 選項：How much / How many / How long",
+            "en": "How many kilometers do you walk every day?",
+            "cn": "你每天走幾公里？"
+          },
+          {
+            "tag": "10. 選項：How far / How often / How much",
+            "en": "How far is the nearest train station from here?",
+            "cn": "最近的火車站離這裡多遠？"
+          }
+        ]
+      },
+      {
+        "title": "C-2. 選擇題(練習 2)",
+        "exs": [
+          {
+            "tag": "1. 選項：When / Who / How many",
+            "en": "When do you usually have lunch?",
+            "cn": "你通常幾點吃午餐？"
+          },
+          {
+            "tag": "2. 選項：How many / How much / How long",
+            "en": "How much money do you spend on food every week?",
+            "cn": "你每週花多少錢在食物上？"
+          },
+          {
+            "tag": "3. 選項：Where / Why / Whose",
+            "en": "Why did you leave the meeting early?",
+            "cn": "你為什麼提早離開會議？"
+          },
+          {
+            "tag": "4. 選項：How far / How long / How often",
+            "en": "How long does it take to get to the airport?",
+            "cn": "到機場要花多久？"
+          },
+          {
+            "tag": "5. 選項：Who / Whose / Which",
+            "en": "Whose jacket is this? Is it yours?",
+            "cn": "這是誰的外套？是你的嗎？"
+          },
+          {
+            "tag": "6. 選項：Which / Where / When",
+            "en": "Which do you prefer, tea or coffee?",
+            "cn": "你比較喜歡哪個，茶還是咖啡？"
+          },
+          {
+            "tag": "7. 選項：How much / How long / How many",
+            "en": "How many people attended the meeting?",
+            "cn": "有多少人出席了會議？"
+          },
+          {
+            "tag": "8. 選項：How far / How often / How much",
+            "en": "How far is your office from your home?",
+            "cn": "你的辦公室離你家多遠？"
+          },
+          {
+            "tag": "9. 選項：How long / How often / How many",
+            "en": "How often do you exercise? Every morning.",
+            "cn": "你多久運動一次？每天早上。"
+          },
+          {
+            "tag": "10. 選項：Who / Whose / Where",
+            "en": "Who helped you finish the project?",
+            "cn": "誰幫你完成了這個專案？"
+          }
+        ]
+      },
+      {
+        "title": "D. Make questions for different situations — 每個情境用不同疑問詞造三個問句",
+        "exs": [
+          {
+            "tag": "A. At the airport(和等待班機的旅客聊天)・Ask about the destination",
+            "en": "Where are you going?",
+            "cn": "你要去哪裡？"
+          },
+          {
+            "tag": "A. At the airport・Ask about the flight departure time",
+            "en": "What time does your flight leave?",
+            "cn": "你的班機幾點起飛？"
+          },
+          {
+            "tag": "A. At the airport・Ask about the length of the trip",
+            "en": "How long will your trip last?",
+            "cn": "你的旅程會持續多久？"
+          },
+          {
+            "tag": "B. At work(和新同事聊天)・Ask about their responsibilities",
+            "en": "What are your responsibilities?",
+            "cn": "你的職責是什麼？"
+          },
+          {
+            "tag": "B. At work・Ask how often they attend meetings",
+            "en": "How often do you attend meetings?",
+            "cn": "你多久參加一次會議？"
+          },
+          {
+            "tag": "B. At work・Ask why they chose this company",
+            "en": "Why did you choose this company?",
+            "cn": "你為什麼選擇這家公司？"
+          },
+          {
+            "tag": "C. At a restaurant(和朋友聊他們的餐點)・Ask about the price",
+            "en": "How much was your meal?",
+            "cn": "你的餐點花了多少錢？"
+          },
+          {
+            "tag": "C. At a restaurant・Ask which dish they ordered",
+            "en": "Which dish did you order?",
+            "cn": "你點了哪一道菜？"
+          },
+          {
+            "tag": "C. At a restaurant・Ask who recommended the restaurant",
+            "en": "Who recommended the restaurant?",
+            "cn": "誰推薦了這家餐廳？"
+          }
+        ]
+      },
+      {
+        "title": "E. 疑問詞與例句表 Question Words",
+        "exs": [
+          {
+            "tag": "What",
+            "en": "What do you do?",
+            "cn": "你是做什麼的？＝ What is your job?(你的工作是什麼？)　回答：I am a quality engineer.(我是品保工程師。)"
+          },
+          {
+            "tag": "Where",
+            "en": "Where do you live?",
+            "cn": "你住在哪裡？"
+          },
+          {
+            "tag": "When",
+            "en": "When did you arrive?",
+            "cn": "你什麼時候到的？"
+          },
+          {
+            "tag": "Why",
+            "en": "Why are you learning English?",
+            "cn": "你為什麼學英文？"
+          },
+          {
+            "tag": "Who",
+            "en": "Who called you?",
+            "cn": "誰打電話給你？"
+          },
+          {
+            "tag": "How often",
+            "en": "How often do you exercise?",
+            "cn": "你多久運動一次？"
+          },
+          {
+            "tag": "How long",
+            "en": "How long have you worked here?",
+            "cn": "你在這裡工作多久了？"
+          },
+          {
+            "tag": "How much",
+            "en": "How much does it cost?",
+            "cn": "這個多少錢？"
+          },
+          {
+            "tag": "How many",
+            "en": "How many people work here?",
+            "cn": "這裡有多少人工作？"
+          },
+          {
+            "tag": "Which",
+            "en": "Which one do you prefer?",
+            "cn": "你比較喜歡哪一個？"
+          }
+        ]
+      }
+    ]
   }
   ]
 };

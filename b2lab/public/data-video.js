@@ -46818,3 +46818,1103 @@ window.VIDEO.au05 = {
   }
  ]
 };
+
+/* ===== bk20261015 Quality Specifications & Question Practice ===== */
+window.VIDEO = window.VIDEO || {};
+window.VIDEO["bk20261015"] = {
+ "title": "Quality Specifications & Question Practice",
+ "titleCn": "品質規格與疑問句練習",
+ "date": "2026-10-15",
+ "level": "B1",
+ "scene": "Going Over the Quality Specifications with a Customer",
+ "sceneCn": "和客戶一起看品質規格",
+ "sceneArt": "clipboard",
+ "titleArt": [
+  "doc",
+  "question",
+  "check"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・品保工程師",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・客戶",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "Spec Review",
+   "cn": "情境：看品質規格"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Phrases & Collocations",
+   "cn": "片語搭配"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "spec": {
+   "t": "quality specifications",
+   "cn": "品質規格",
+   "tag": [
+    "單字",
+    "文件"
+   ],
+   "note": "spec 是口語縮寫，正式寫成 quality specifications。specification 是名詞，可數，常用複數。",
+   "ex": "The customer sent us the new quality specifications.",
+   "exCn": "客戶寄給我們新的品質規格。"
+  },
+  "bilingual": {
+   "t": "bilingual",
+   "cn": "雙語的",
+   "tag": [
+    "單字",
+    "文件"
+   ],
+   "note": "bilingual 是形容詞，放在 be 動詞後面：The document is bilingual.",
+   "ex": "The manual is bilingual, English and Chinese.",
+   "exCn": "這份手冊是雙語的，有英文和中文。"
+  },
+  "howOften": {
+   "t": "How often do you review",
+   "cn": "你們多久檢視一次",
+   "tag": [
+    "文法",
+    "頻率"
+   ],
+   "note": "How often 問頻率，回答可以用 every six months（每六個月）這類說法。",
+   "ex": "How often do you check the machine?",
+   "exCn": "你們多久檢查一次機器？"
+  },
+  "whenever": {
+   "t": "whenever necessary",
+   "cn": "每當有需要時",
+   "tag": [
+    "片語",
+    "文件"
+   ],
+   "note": "whenever necessary = whenever it is necessary（省略 it is），意思是「每當有需要時」。",
+   "ex": "We call the supplier whenever necessary.",
+   "exCn": "有需要時我們就打給供應商。"
+  },
+  "drawings": {
+   "t": "updated drawings",
+   "cn": "更新後的圖面",
+   "tag": [
+    "單字",
+    "圖面"
+   ],
+   "note": "drawing 在工廠是「圖面、圖紙」。常搭配 send / revise / sign / scan the drawings。",
+   "ex": "Please check the revised drawings before production.",
+   "exCn": "量產前請先確認修訂後的圖面。"
+  },
+  "signScan": {
+   "t": "sign, scan, and send them back",
+   "cn": "簽名、掃描、寄回",
+   "tag": [
+    "片語",
+    "動作並列"
+   ],
+   "note": "三個動作並列，最後一個前面加 and；them 指 the updated drawings；send back = 寄回。",
+   "ex": "Please sign, scan, and send the form back to me.",
+   "exCn": "請簽名、掃描，然後把表單寄回給我。"
+  },
+  "alignSpec": {
+   "t": "align the specs with",
+   "cn": "讓規格與…一致",
+   "tag": [
+    "片語",
+    "品質"
+   ],
+   "note": "align A with B = 使 A 與 B 一致。A 是規格，B 是客戶的要求。",
+   "ex": "We align our process with the customer's needs.",
+   "exCn": "我們讓製程符合客戶的需求。"
+  },
+  "runSmoothly": {
+   "t": "run smoothly",
+   "cn": "順利進行",
+   "tag": [
+    "片語",
+    "生產"
+   ],
+   "note": "run smoothly = 順利進行。run 在這裡是「運作」的意思，help our production run smoothly 的 run 用原形。",
+   "ex": "A clear SOP helps the line run smoothly.",
+   "exCn": "清楚的 SOP 讓產線順利運作。"
+  },
+  "inspector": {
+   "t": "inspectors",
+   "cn": "檢驗員",
+   "tag": [
+    "單字",
+    "人員"
+   ],
+   "note": "inspector 是檢驗員。How many + 可數複數名詞，所以是 inspectors。",
+   "ex": "We hired two new inspectors last month.",
+   "exCn": "我們上個月僱用了兩位新檢驗員。"
+  },
+  "massProd": {
+   "t": "mass production",
+   "cn": "量產",
+   "tag": [
+    "單字",
+    "生產"
+   ],
+   "note": "mass production = 量產。before 後面可直接接名詞片語，也可以接子句：before mass production starts。",
+   "ex": "We finish all tests before mass production.",
+   "exCn": "我們在量產前完成所有測試。"
+  },
+  "comeLoose": {
+   "t": "come loose",
+   "cn": "鬆脫",
+   "tag": [
+    "片語",
+    "品質"
+   ],
+   "note": "come 在這裡是「變成某種狀態」，後面接形容詞 loose。過去式是 came loose。",
+   "ex": "The bolt came loose during shipping.",
+   "exCn": "螺栓在運送途中鬆脫了。"
+  },
+  "vibration": {
+   "t": "vibration test",
+   "cn": "振動測試",
+   "tag": [
+    "單字",
+    "測試"
+   ],
+   "note": "vibration test 用來檢查產品在振動下能不能保持穩定。",
+   "ex": "The product passed the vibration test.",
+   "exCn": "這個產品通過了振動測試。"
+  },
+  "itTakes": {
+   "t": "It takes me one hour",
+   "cn": "我要花一個小時",
+   "tag": [
+    "句型",
+    "時間"
+   ],
+   "note": "It takes + 人 + 時間 + to + 動詞，表示某人花多少時間做某事。",
+   "ex": "It takes me ten minutes to walk to work.",
+   "exCn": "我走路上班要花十分鐘。"
+  },
+  "resign": {
+   "t": "resign",
+   "cn": "辭職",
+   "tag": [
+    "單字",
+    "職場"
+   ],
+   "note": "resign 比 quit 正式；後面不用再接 job。resign without prior notice = 未提前通知就離職。",
+   "ex": "She resigned after five years at the company.",
+   "exCn": "她在公司工作五年後辭職了。"
+  },
+  "notice": {
+   "t": "give notice",
+   "cn": "提前通知",
+   "tag": [
+    "片語",
+    "職場"
+   ],
+   "note": "離職預告的慣用說法是 give notice，不是 notification。without prior notice = 未提前通知。",
+   "ex": "You need to give notice two weeks before you leave.",
+   "exCn": "離職前兩週你要先提出預告。"
+  },
+  "inspection": {
+   "t": "incoming inspection",
+   "cn": "進料檢驗",
+   "tag": [
+    "片語",
+    "品保"
+   ],
+   "note": "incoming inspection = 進料檢驗，檢查供應商送來的零件。",
+   "ex": "Incoming inspection checks every new shipment.",
+   "exCn": "進料檢驗會檢查每一批新到的貨。"
+  },
+  "whenDid": {
+   "t": "When did the screw come loose",
+   "cn": "螺絲什麼時候鬆脫",
+   "tag": [
+    "文法",
+    "WH 問句"
+   ],
+   "note": "did 已經表示過去式，後面的主要動詞要用原形：When did the screw come loose?（不是 came）。",
+   "ex": "When did the machine stop?",
+   "exCn": "機器是什麼時候停的？"
+  },
+  "whenChange": {
+   "t": "When our drawings change",
+   "cn": "圖面有變更時",
+   "tag": [
+    "文法",
+    "固定做法"
+   ],
+   "note": "When 子句用現在式，表示「每次」發生的固定做法；子句放前面要加逗號。",
+   "ex": "When the label changes, we update the SOP.",
+   "exCn": "標籤有變更時，我們就更新 SOP。"
+  },
+  "align": {
+   "t": "Align A with B",
+   "cn": "使 A 與 B 一致",
+   "tag": [
+    "單字",
+    "品質"
+   ],
+   "note": "align A with B = 使 A 與 B 一致。例如把品質規格和客戶要求對齊。",
+   "ex": "We need to align the drawing with the sample.",
+   "exCn": "我們需要讓圖面和樣品一致。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today Anita is going over the quality specifications with a customer.",
+   "cn": "歡迎回來。今天 Anita 要和客戶一起看品質規格。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Listen for how they ask and answer questions: how often, why, when, and how many.",
+   "cn": "聽聽他們怎麼問、怎麼答：多久一次、為什麼、什麼時候、多少。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "Hi, Anita. Let's look at the English version of the quality specifications.",
+   "cn": "嗨，Anita。我們來看品質規格的英文版本。",
+   "hi": [
+    {
+     "t": "quality specifications",
+     "cn": "品質規格",
+     "k": "spec",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "globe"
+   },
+   "en": "Sure. Our document is bilingual, so you can follow the English version.",
+   "cn": "好。我們的文件是雙語的，你可以照英文版看。",
+   "hi": [
+    {
+     "t": "bilingual",
+     "cn": "雙語的",
+     "k": "bilingual",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "calendar"
+   },
+   "en": "Got it. How often do you review it?",
+   "cn": "了解。你們多久檢視一次？",
+   "hi": [
+    {
+     "t": "How often do you review",
+     "cn": "你們多久檢視一次",
+     "k": "howOften",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "calendar"
+   },
+   "en": "Every six months. And we update it whenever necessary.",
+   "cn": "每六個月一次。有需要時我們也會更新。",
+   "hi": [
+    {
+     "t": "whenever necessary",
+     "cn": "每當有需要時",
+     "k": "whenever",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "question"
+   },
+   "en": "What do you do if there are any changes?",
+   "cn": "如果有任何變更，你們怎麼做？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "mail"
+   },
+   "en": "When our drawings change, we email the updated drawings to our suppliers.",
+   "cn": "圖面有變更時，我們會用電子郵件把更新後的圖面寄給供應商。",
+   "hi": [
+    {
+     "t": "updated drawings",
+     "cn": "更新後的圖面",
+     "k": "drawings",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "doc"
+   },
+   "en": "And then?",
+   "cn": "然後呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "stamp"
+   },
+   "en": "They sign, scan, and send them back to me.",
+   "cn": "他們簽名、掃描，然後寄回給我。",
+   "hi": [
+    {
+     "t": "sign, scan, and send them back",
+     "cn": "簽名、掃描、寄回",
+     "k": "signScan",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "handshake"
+   },
+   "en": "Why do you align the specs with our requirements?",
+   "cn": "你們為什麼要讓規格和我們的要求一致？",
+   "hi": [
+    {
+     "t": "align the specs with",
+     "cn": "讓規格與…一致",
+     "k": "alignSpec",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "gear"
+   },
+   "en": "Because it helps our production run smoothly.",
+   "cn": "因為這會讓我們的生產順利進行。",
+   "hi": [
+    {
+     "t": "run smoothly",
+     "cn": "順利進行",
+     "k": "runSmoothly",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "people"
+   },
+   "en": "Makes sense. How many inspectors do you need to hire?",
+   "cn": "有道理。你們需要僱用多少檢驗員？",
+   "hi": [
+    {
+     "t": "inspectors",
+     "cn": "檢驗員",
+     "k": "inspector",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "factory"
+   },
+   "en": "Ten, before mass production starts.",
+   "cn": "十個，在量產開始之前。",
+   "hi": [
+    {
+     "t": "mass production",
+     "cn": "量產",
+     "k": "massProd",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "tapeComeLoose"
+   },
+   "en": "Last thing. When did the screw come loose?",
+   "cn": "最後一件事。螺絲是什麼時候鬆脫的？",
+   "hi": [
+    {
+     "t": "come loose",
+     "cn": "鬆脫",
+     "k": "comeLoose",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "gauge"
+   },
+   "en": "After the vibration test. We're checking it now.",
+   "cn": "振動測試之後。我們正在檢查。",
+   "hi": [
+    {
+     "t": "vibration test",
+     "cn": "振動測試",
+     "k": "vibration",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "hourglass"
+   },
+   "en": "It takes me one hour to cover everything, so let's keep going.",
+   "cn": "我要花一個小時才能全部講完，所以我們繼續吧。",
+   "hi": [
+    {
+     "t": "It takes me one hour",
+     "cn": "我要花一個小時",
+     "k": "itTakes",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "align",
+    "ipa": "/əˈlaɪn/",
+    "pos": "v.",
+    "art": "handshake",
+    "def": "To make two things match or fit together.",
+    "cn": "對齊、使一致。",
+    "note": "align A with B = 使 A 與 B 一致。例如把品質規格和客戶的要求對齊。"
+   },
+   "en": "Align A with B means to make A match B. We align the specs with what the customer needs.",
+   "cn": "align A with B 的意思是讓 A 和 B 一致。我們讓規格符合客戶的需求。",
+   "hi": [
+    {
+     "t": "Align A with B",
+     "cn": "使 A 與 B 一致",
+     "k": "align",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "come loose",
+    "ipa": "/kʌm luːs/",
+    "pos": "phr.",
+    "art": "tapeComeLoose",
+    "def": "To stop being tight or fixed in place.",
+    "cn": "鬆脫。",
+    "note": "come 在這裡是「變成某種狀態」，後面接形容詞 loose；螺絲鬆脫就是 the screw came loose。"
+   },
+   "en": "A screw can come loose after a vibration test. Come here means become.",
+   "cn": "螺絲可能在振動測試後鬆脫。這裡的 come 是「變成」的意思。",
+   "hi": [
+    {
+     "t": "come loose",
+     "cn": "鬆脫",
+     "k": "comeLoose",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "quit",
+     "ipa": "/kwɪt/",
+     "cn": "離職（口語）",
+     "def": "To leave a job.",
+     "art": "emptyDeskSkip"
+    },
+    "b": {
+     "w": "resign",
+     "ipa": "/rɪˈzaɪn/",
+     "cn": "辭職（較正式）",
+     "def": "To formally leave a job.",
+     "art": "stamp"
+    }
+   },
+   "en": "Quit is common. Resign is more formal. Neither one needs the word job after it.",
+   "cn": "quit 比較口語，resign 比較正式；兩個後面都不用再接 job。",
+   "hi": [
+    {
+     "t": "Resign",
+     "cn": "辭職",
+     "k": "resign",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "notice",
+    "ipa": "/ˈnoʊtɪs/",
+    "pos": "n.",
+    "art": "calendar",
+    "def": "A warning that something will happen.",
+    "cn": "通知、預告。",
+    "note": "離職預告的慣用說法是 give notice，不是 notification。"
+   },
+   "en": "Say give notice, not notification. Without prior notice means without warning.",
+   "cn": "要說 give notice，不是 notification。without prior notice 是「沒有事先通知」。",
+   "hi": [
+    {
+     "t": "give notice",
+     "cn": "提前通知",
+     "k": "notice",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "drawings",
+    "coreCn": "圖面的搭配",
+    "art": "fillOutForm",
+    "items": [
+     {
+      "t": "send the updated ~",
+      "cn": "寄出更新後的圖面"
+     },
+     {
+      "t": "revise the ~",
+      "cn": "修訂圖面"
+     },
+     {
+      "t": "sign the ~",
+      "cn": "在圖面上簽名"
+     },
+     {
+      "t": "scan the ~",
+      "cn": "掃描圖面"
+     }
+    ]
+   },
+   "en": "Send the updated drawings, revise the drawings, sign the drawings, scan the drawings.",
+   "cn": "寄出更新後的圖面、修訂圖面、簽名、掃描。",
+   "hi": [
+    {
+     "t": "revise the drawings",
+     "cn": "修訂圖面",
+     "k": "drawings",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "notice",
+    "coreCn": "通知的搭配",
+    "art": "mail",
+    "items": [
+     {
+      "t": "give ~",
+      "cn": "提前通知"
+     },
+     {
+      "t": "without giving any ~",
+      "cn": "沒有事先通知"
+     },
+     {
+      "t": "without prior ~",
+      "cn": "未提前通知"
+     }
+    ]
+   },
+   "en": "Give notice, without giving any notice, without prior notice.",
+   "cn": "提前通知、沒有事先通知、未提前通知。",
+   "hi": [
+    {
+     "t": "without prior notice",
+     "cn": "未提前通知",
+     "k": "notice",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "inspection",
+    "coreCn": "檢驗的搭配",
+    "art": "gauge",
+    "items": [
+     {
+      "t": "incoming ~",
+      "cn": "進料檢驗"
+     },
+     {
+      "t": "~ of parts",
+      "cn": "零件的檢驗"
+     },
+     {
+      "t": "vibration test",
+      "cn": "振動測試"
+     },
+     {
+      "t": "before mass production",
+      "cn": "量產之前"
+     }
+    ]
+   },
+   "en": "Incoming inspection, inspection of parts, vibration test, and before mass production.",
+   "cn": "進料檢驗、零件檢驗、振動測試、量產之前。",
+   "hi": [
+    {
+     "t": "Incoming inspection",
+     "cn": "進料檢驗",
+     "k": "inspection",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "WH + 助動詞 + 主詞 + 原形動詞",
+    "art": "question",
+    "rows": [
+     {
+      "lab": "did 已經是過去式",
+      "blocks": [
+       {
+        "t": "When",
+        "k": "n"
+       },
+       {
+        "t": "did",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "the screw",
+        "k": "s"
+       },
+       {
+        "t": "came",
+        "k": "v",
+        "x": true
+       },
+       {
+        "t": "come loose",
+        "k": "v",
+        "add": true
+       }
+      ]
+     },
+     {
+      "lab": "問現在的習慣用 do",
+      "blocks": [
+       {
+        "t": "Why",
+        "k": "n"
+       },
+       {
+        "t": "do",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "you",
+        "k": "s"
+       },
+       {
+        "t": "need to align the specs",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "疑問詞 + 助動詞 + 主詞 + 主要動詞。did 後面的動詞一定回到原形，who 當主詞才是例外。"
+   },
+   "en": "When did the screw come loose? After did, the verb goes back to its base form.",
+   "cn": "螺絲什麼時候鬆脫的？did 後面的動詞要回到原形。",
+   "hi": [
+    {
+     "t": "When did the screw come loose",
+     "cn": "螺絲什麼時候鬆脫",
+     "k": "whenDid",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "It takes + 人 + 時間 + to + 動詞",
+    "art": "hourglass",
+    "rows": [
+     {
+      "lab": "花多少時間做某事",
+      "blocks": [
+       {
+        "t": "It",
+        "k": "s"
+       },
+       {
+        "t": "takes",
+        "k": "v"
+       },
+       {
+        "t": "me",
+        "k": "o"
+       },
+       {
+        "t": "one hour",
+        "k": "o"
+       },
+       {
+        "t": "to get to the airport",
+        "k": "n"
+       }
+      ]
+     }
+    ],
+    "note": "It takes + 人 + 時間 + to + 動詞 = 某人花多少時間做某事。問時間用 How long。"
+   },
+   "en": "It takes me one hour to get to the airport.",
+   "cn": "我花一個小時到機場。",
+   "hi": [
+    {
+     "t": "It takes me one hour",
+     "cn": "我花一個小時",
+     "k": "itTakes",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "When + 子句(現在式), 主詞 + 動詞",
+    "art": "mail",
+    "rows": [
+     {
+      "lab": "每次發生的固定做法",
+      "blocks": [
+       {
+        "t": "When our drawings change,",
+        "k": "n"
+       },
+       {
+        "t": "we send",
+        "k": "v"
+       },
+       {
+        "t": "the updated drawings",
+        "k": "o"
+       },
+       {
+        "t": "by email",
+        "k": "n"
+       }
+      ]
+     }
+    ],
+    "note": "When 子句放前面，後面加逗號；用現在式表示「每次」發生的固定做法。by email 的 email 前面不加 an。"
+   },
+   "en": "When our drawings change, we send the updated drawings by email.",
+   "cn": "圖面有變更時，我們用電子郵件寄出更新後的圖面。",
+   "hi": [
+    {
+     "t": "When our drawings change",
+     "cn": "圖面有變更時",
+     "k": "whenChange",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 2,
+    "wrong": "We need to align quality spec with customer because it can help our production smoothly.",
+    "bad": [
+     "quality spec",
+     "customer",
+     "production smoothly"
+    ],
+    "fix": "We need to align the quality specifications with the customer's requirements because this will help our production run smoothly.",
+    "good": [
+     "the quality specifications",
+     "the customer's requirements",
+     "run smoothly"
+    ],
+    "why": "Spec is casual, and customer needs a noun after it: requirements. Production needs the verb run before smoothly.",
+    "whyCn": "spec 是口語縮寫；customer 後面要接名詞 requirements；smoothly 前面要有動詞 run。"
+   },
+   "en": "We need to align the quality specifications with the customer's requirements.",
+   "cn": "我們需要讓品質規格與客戶的要求一致。",
+   "hi": [
+    {
+     "t": "align the quality specifications with",
+     "cn": "讓品質規格與…一致",
+     "k": "align",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 5,
+    "wrong": "Our QA inspector quit job without any notification.",
+    "bad": [
+     "quit job",
+     "notification"
+    ],
+    "fix": "Our QA inspector quit without giving any notice.",
+    "good": [
+     "quit",
+     "without giving any notice"
+    ],
+    "why": "Quit does not need job after it, and the usual phrase is give notice, not notification.",
+    "whyCn": "quit 後面不用再接 job；「離職預告」的慣用說法是 give notice，不是 notification。"
+   },
+   "en": "Our QA inspector quit without giving any notice.",
+   "cn": "我們的品保檢驗員沒有事先通知就離職了。",
+   "hi": [
+    {
+     "t": "without giving any notice",
+     "cn": "沒有事先通知",
+     "k": "notice",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "When did the screw ___ loose?",
+    "a": "come",
+    "n": 1
+   },
+   "en": "When did the screw ___ loose?",
+   "cn": "螺絲是什麼時候鬆脫的？",
+   "say": "When did the screw, blank, loose?",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "When did the screw ___ loose?",
+    "a": "come",
+    "n": 1,
+    "show": true
+   },
+   "en": "When did the screw come loose?",
+   "cn": "螺絲是什麼時候鬆脫的？",
+   "hi": [
+    {
+     "t": "come loose",
+     "cn": "鬆脫",
+     "k": "comeLoose",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "How ___ inspectors do you need to hire?",
+    "a": "many",
+    "n": 2
+   },
+   "en": "How ___ inspectors do you need to hire?",
+   "cn": "你們需要僱用多少檢驗員？",
+   "say": "How, blank, inspectors do you need to hire?",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "How ___ inspectors do you need to hire?",
+    "a": "many",
+    "n": 2,
+    "show": true
+   },
+   "en": "How many inspectors do you need to hire?",
+   "cn": "你們需要僱用多少檢驗員？",
+   "hi": [
+    {
+     "t": "inspectors",
+     "cn": "檢驗員",
+     "k": "inspector",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Our QA inspector quit without ___ any notice.",
+    "a": "giving",
+    "n": 3
+   },
+   "en": "Our QA inspector quit without ___ any notice.",
+   "cn": "我們的品保檢驗員沒有事先通知就離職了。",
+   "say": "Our QA inspector quit without, blank, any notice.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Our QA inspector quit without ___ any notice.",
+    "a": "giving",
+    "n": 3,
+    "show": true
+   },
+   "en": "Our QA inspector quit without giving any notice.",
+   "cn": "我們的品保檢驗員沒有事先通知就離職了。",
+   "hi": [
+    {
+     "t": "without giving any notice",
+     "cn": "沒有事先通知",
+     "k": "notice",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
