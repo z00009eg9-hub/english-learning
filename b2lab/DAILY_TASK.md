@@ -543,6 +543,29 @@ const LS_THUMB={
 收尾驗證會逐篇檢查 `window.ART[文章 id]`，缺圖就不要 commit。
 （`cap` 圖說要寫「圖中的 X 對應文章的哪一句」，並點出這課的文法重點。）
 
+### 3.8 為今天的**四個文法單元**各做一支文法影片
+
+2026-10-17 起，每日文法每個單元都要有影片版（文法頁標題與文法卡片的「▶ 影片版」靠它）。
+**規格與範本都在別處，不要憑印象做**，動手前先完整讀完：
+
+- 規格：`b2lab/tools/GVIDEO_SPEC.md`（內容鐵則、畫面種類、句數、170–290 秒、換你說 3 題）
+- 範本：`b2lab/public/gvideo/dg20261014b1.js`；同程度的前幾批（`gvideo/dg*.js`）也可以參考語氣
+- 每個單元一個檔 `b2lab/public/gvideo/<單元 id>.js`（id 就是今天 `DAILY.grammar` 的 `dg…`），插圖名以 `<id>_` 開頭
+- 影片只放**正確**英文：不放常見錯誤、不放小測驗；例句全部自己寫，不可與文法頁（含 `data-gvplus.js`）連續 8 字相同
+- 四個程度各一支，情境、人物、例句都要不同，難度貼合該程度
+- 中文旁白用台灣口語；旁白裡的英文只放短片語
+
+寫完四支之後：
+
+```bash
+node b2lab/tools/build-gvideo-index.js     # 重產 gvideo/index.js（不要手改）
+node b2lab/tools/check-gvideo.js dg…a1 dg…a2 dg…b1 dg…b2   # 換成今天四個 id，全部 ✓ 才算完成
+```
+
+另外把 `b2lab/public/sw.js` 的快取版號 +1（跟前幾次影片批次一樣）。
+文法頁本身若在做影片時發現規則錯誤，明確錯的直接修，並在第 7 步回報。
+旁白與例句的 AI 音檔不用在這裡產：每日排程 `b2lab-audio-sync`（`D:\b2lab-audio\build.js`）會讀 `gvideo/` 補產生。
+
 ### 4. 更新 `b2lab/daily-state.json`
 
 - `lastRun` = 今天
@@ -752,15 +775,23 @@ console.log('thumb ok', todays.map(x=>x.id+'→'+map[x.id]).join(' | '),
   '| 冷卻中 '+cooling.size+' 個，可選 '+(Object.keys(I).length-cooling.size)+' 個');"
 ```
 
+**文法影片（3.8）的驗證**也要過：
+
+```bash
+node b2lab/tools/build-gvideo-index.js && node b2lab/tools/check-gvideo.js dg…a1 dg…a2 dg…b1 dg…b2   # 今天四個 id
+```
+
+並確認 `window.GVIDEO_IDS` 含今天四個 id；缺任何一支或有 ✗ 就不要 commit。
+
 ### 6. commit 並 push
 
 ```bash
-git add b2lab/public/data-daily.js b2lab/public/data-gvplus.js b2lab/public/data-art.js b2lab/public/data-listen.js b2lab/public/index.html b2lab/daily-state.json
+git add b2lab/public/data-daily.js b2lab/public/data-gvplus.js b2lab/public/data-art.js b2lab/public/data-listen.js b2lab/public/index.html b2lab/daily-state.json b2lab/public/gvideo b2lab/public/sw.js
 git commit -m "Daily content YYYY-MM-DD: 4 levels (A2/B1/B1+/B2) — <當日主題>"
 git push origin main
 ```
 
-上面六個檔是每次執行**一定**會動到的（`index.html` 只為了 3.6.1 的 `LS_THUMB` 那一行）。
+上面的檔是每次執行**一定**會動到的（`index.html` 只為了 3.6.1 的 `LS_THUMB` 那一行；`gvideo/` 資料夾含 3.8 的四支影片與重產的 `index.js`；`sw.js` 是版號 +1）。
 `data-scripts.js` 不要加（見 3.6.2，它現在是空的）。
 如果照 3.5.1 補了新圖示，`b2lab/public/data-book.js` 也要一起 `git add`。
 另外，如果第 5 步的 `check-ipa.js` 逼你回頭去改其他資料檔的音標
@@ -790,10 +821,8 @@ push 之後 `.github/workflows/deploy-b2lab.yml` 會自動部署到 https://engl
 - `usedUnits` 與 `usedUnitsTom` 各還剩幾個單元沒教
 - 四張橫幅各用了哪套配色與哪**五個**圖示
 - 四課聽力各用了哪個情境、哪個線稿圖示（`LS_THUMB`），以及當天的文法點在對話裡怎麼出現
+- 四支文法影片（3.8）：id、秒數、`check-gvideo.js` 結果；若順手修了文法頁的錯誤，寫明改了什麼
 - 有跳過或沒照任務書做的項目要說明原因（四個程度是硬性要求，不能跳）
-
-（舊制的「⏳ 字幕待補」清單已經不需要了：2026-08-19 起聽力全部自製，
-逐字稿寫在 `script` 欄位，不會有只收影片、等人補字幕的情況。）
 
 最後提醒一句：Tom 會看到 A2／B1／B1+ 三份，Anita 會看到 B1／B1+／B2 三份。
 
