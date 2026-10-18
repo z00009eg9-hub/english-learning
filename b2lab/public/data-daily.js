@@ -5335,7 +5335,7 @@ articles:[
     },
     {
       "b1": "Officials say the money is not the point.",
-      "b2": "According to officials, revenue was never the main goal of the programme.",
+      "b2": "According to officials, revenue was never the main goal of the program.",
       "note": "According to + 消息來源 是新聞寫作標準的引述方式；revenue（營收）比 money 精確，never the main goal 也比 not the point 正式。",
       "sp": "The people running it say it was never really about the cash.",
       "spNote": "it was never really about the cash（重點從來就不是錢）是很自然的口語否定強調。",
@@ -13907,7 +13907,7 @@ grammar:[
       "expl": "班次是公告好的時刻表，用現在簡單式最自然。這裡 is leaving 不算錯，但 leaves 更能表達「表上就是這個時間」；will leave 則像在猜。"
     },
     {
-      "q": "Which sentence tells you the rally is already organised?",
+      "q": "Which sentence tells you the rally is already organized?",
       "qCn": "哪一句告訴你集會已經安排好了？",
       "opts": [
         "A. The union will hold a rally.",
@@ -17437,7 +17437,7 @@ grammar:[
           "note": "故障在報告之前，責任歸給稽查員"
         },
         {
-          "en": "The minister said the programme had already reached its target.",
+          "en": "The minister said the program had already reached its target.",
           "cn": "部長表示該計畫已經達標。",
           "note": "轉述時把 has 退成 had"
         }
@@ -21535,7 +21535,7 @@ grammar:[
   ],
   "quiz": [
     {"q": "___ regulators were still reviewing the soybean oil case, the sesame oil report arrived.", "qCn": "監管單位還在審查黃豆油案件的時候，芝麻油的報告就送來了。", "opts": ["While", "Since", "Although", "Because"], "ans": 0, "expl": "while表示『在…期間』，搭配過去進行式were reviewing鋪陳背景。"},
-    {"q": "Inspectors ___ the batches for two days before they released the results.", "qCn": "稽查人員在公布結果之前，花了兩天測試那些批次。", "opts": ["tested", "were testing", "have tested", "test"], "ans": 1, "expl": "for two days強調『過程花了多久』，用過去進行式were testing比單純過去式更凸顯繁瑣的過程。"},
+    {"q": "Inspectors ___ the batches when the fire alarm went off.", "qCn": "火災警報響的時候，稽查人員正在測試那些批次。", "opts": ["tested", "were testing", "have tested", "test"], "ans": 1, "expl": "警報響的那一刻，測試正在進行中，所以用過去進行式 were testing；警報（went off）是中途插進來的事，用過去式。"},
     {"q": "While regulators ___ new rules, another contaminated batch had already reached supermarket shelves.", "qCn": "監管單位還在爭論新規範的時候，另一批受污染的產品已經流入超市貨架。", "opts": ["were still debating", "still debated", "have still debated", "still debate"], "ans": 0, "expl": "were still debating（過去進行式）和had already reached（過去完成式）並列，製造『反應太慢』的諷刺對比。"},
     {"q": "Which sentence more appropriately reports a completed, confirmed fact in a formal news article?", "qCn": "哪一句最適合在正式新聞報導中陳述一個已確認、已完成的事實？", "opts": ["Regulators were finding the contamination in July.", "Regulators found the contamination in July.", "Regulators are finding the contamination in July.", "Regulators have been finding the contamination in July."], "ans": 1, "expl": "報告『已確認、已完成』的單一事實，用過去簡單式found最恰當；找到污染是一次性、已完成的動作，不適合用進行式或完成進行式。"}
   ]
@@ -22080,9 +22080,9 @@ grammar:[
       "why": "引用已發表的研究結果，用過去簡單式（那篇研究已經完成了）。"
     },
     {
-      "bad": "The government introduced a rent cap, and it has helped so far.",
-      "good": "正確！前半句過去式（引入政策），後半句完成式（效果持續到現在）。兩個混用是合理的。",
-      "why": "同一句裡可以混用：過去式講事件，完成式講到現在的影響。"
+      "bad": "The government has introduced a rent cap last year, and it helped so far.",
+      "good": "The government introduced a rent cap last year, and it has helped so far.",
+      "why": "last year 是已經結束的時間，配過去式 introduced；so far 一路算到現在，配完成式 has helped。同一句裡可以混用兩種時態。"
     },
     {
       "bad": "Housing costs rose sharply in recent years.",
@@ -22196,7 +22196,7 @@ grammar:[
         {
           "en": "He wants a big breakfast today.",
           "cn": "他今天想吃豐盛的早餐。",
-          "note": "就算加了 today 也一樣用原形"
+          "note": "就算加了 today 也一樣用現在簡單式"
         },
         {
           "en": "He is making eggs now.",

@@ -9728,7 +9728,7 @@ dg20260826a2: {
     { key: 'did', icon: 'cross',
       title: "did / didn't", titleCn: '否定與疑問用 did',
       ask: '這是否定句或疑問句嗎？',
-      en: "Did you eat breakfast? — No, I didn't eat.",
+      en: "Did you eat breakfast? — No, I didn't.",
       cn: '你吃早餐了嗎？——沒有，我沒吃。',
       why: 'did 已經表示過去，所以後面的動詞回到原形。Did you ate（✗）、I didn’t went（✗）都是把過去標記了兩次。' },
     { key: 'be', icon: 'person',
@@ -11703,7 +11703,7 @@ dg20260826b2: {
     { key: 'method', icon: 'book',
       title: 'Describing method', titleCn: '描述研究方法',
       ask: '你在說「當時做了什麼」嗎？',
-      en: 'We collected data over six months and analysed it using regression.',
+      en: 'We collected data over six months and analyzed it using regression.',
       cn: '我們花六個月收集資料，並以迴歸分析處理。',
       why: '研究方法一律用過去式，因為那是已經完成的動作。但描述「論文本身」要用現在式：This paper examines…（見 dg20260814b2）。' },
     { key: 'still', icon: 'link',
@@ -11731,14 +11731,14 @@ dg20260826b2: {
     left: {
       tag: 'PAST SIMPLE', tagCn: '過去簡單式', icon: 'book',
       head: 'a closed record', headCn: '已定論的紀錄',
-      en: 'The programme ended in 2022.',
+      en: 'The program ended in 2022.',
       cn: '該計畫於 2022 年結束。',
       pts: ['有明確期間', '讀起來像「這是紀錄」', '研究方法、歷史事件、數據期間']
     },
     right: {
       tag: 'PRESENT PERFECT', tagCn: '現在完成式', icon: 'link',
       head: 'still relevant', headCn: '現在還相關',
-      en: 'The programme has improved literacy rates.',
+      en: 'The program has improved literacy rates.',
       cn: '該計畫已提升了識字率。',
       pts: ['沒有封閉的時間', '讀起來像「影響還在」', '常配 since / so far / to date']
     },
@@ -11811,8 +11811,8 @@ dg20260828b2: {
   ],
   steps: [
     { label: '同一個事件', text: '演唱會中途下大雨，主辦方宣布取消。' },
-    { label: '純事實版', text: 'Heavy rain forced organisers to cancel the concert.（簡潔、客觀。）' },
-    { label: '敘事版', text: 'Fans were still singing in the downpour when organisers cancelled the show.（有畫面、有情緒。）' },
+    { label: '純事實版', text: 'Heavy rain forced organizers to cancel the concert.（簡潔、客觀。）' },
+    { label: '敘事版', text: 'Fans were still singing in the downpour when organizers cancelled the show.（有畫面、有情緒。）' },
     { label: '帶落差版', text: 'The band was preparing for its final song as the announcement came.（暗示可惜。）' },
     { label: '關鍵', text: '三句都正確。選哪一句取決於你寫的是快訊、特寫還是評論。' }
   ],
