@@ -21776,14 +21776,14 @@ grammar:[
       "why": "有 last month 這個具體時間，只能用過去簡單式。"
     },
     {
-      "bad": "She already moved to the new place.",
-      "good": "She has already moved to the new place.",
-      "why": "already 搭配完成式，強調「到現在」的結果。"
+      "bad": "She has already moved to the new place last month.",
+      "good": "She moved to the new place last month.",
+      "why": "last month 是明確的過去時間，要用過去式。想強調「到現在已經搬好了」才用 has already moved，這時不要再加明確時間。（美式口語也常說 She already moved.）"
     },
     {
-      "bad": "Did you ever visit Japan?",
-      "good": "Have you ever visited Japan?",
-      "why": "ever 問「這輩子有沒有」經驗，用完成式。"
+      "bad": "Have you ever visited Japan last year?",
+      "good": "Did you visit Japan last year?",
+      "why": "last year 是明確的過去時間，要用過去式。問「這輩子有沒有去過」不加時間，才用 Have you ever visited…?（美式口語也常說 Did you ever…?）"
     },
     {
       "bad": "I have bought this shelf yesterday.",
@@ -22527,9 +22527,9 @@ grammar:[
   ],
   "traps": [
     {
-      "bad": "You are very quiet today.（想表達「今天怪怪的」）",
-      "good": "You are being very quiet today.",
-      "why": "You are quiet 聽起來像在評論個性；加 being 才能表達「只有今天這樣、平常不會」的暫時行為。"
+      "bad": "You are being tired today.",
+      "good": "You seem tired today.",
+      "why": "being + 形容詞只用在「行為表現」（quiet、rude、careful），表示刻意或暫時的舉動；tired、hungry 是身體狀態，不能用 being。（You are very quiet today. 和 You are being very quiet today. 都正確，後者強調「今天的表現」。）"
     },
     {
       "bad": "I'm feeling this schedule is too tight.",
@@ -22677,7 +22677,7 @@ grammar:[
       "h": "寫作上的底線",
       "bullets": [
         "履歷、報告、論文：狀態動詞一律簡單式——I'm knowing、We are believing 在任何語域都是錯的，know 和 believe 沒有「暫時加溫」的用法",
-        "能玩這個規則的只有一小群「感受類」動詞：love, like, enjoy, miss, hope, wonder",
+        "能玩這個規則的只有一小群「感受類」動詞：love, like, miss, hope, wonder",
         "拿不準的時候用簡單式——打破規則要有明確的修辭理由，沒有理由的 -ing 只會像文法錯誤"
       ]
     }
@@ -22699,9 +22699,9 @@ grammar:[
       "why": "hope 接 could 文法彆扭；要放低姿態，母語者用 I was wondering if you could… 這個固定句式。"
     },
     {
-      "bad": "The data is suggesting that the process is stable.（論文）",
-      "good": "The data suggest that the process is stable.",
-      "why": "學術寫作中 suggest、indicate、mean 用簡單式陳述「資料恆常顯示的事」；進行式會把結論講成暫時現象。"
+      "bad": "The results are meaning that the process is stable.（論文）",
+      "good": "The results mean that the process is stable.",
+      "why": "mean（代表、意思是）是狀態動詞，不用進行式。學術寫作裡 suggest、indicate 也通常用簡單式陳述結論。"
     }
   ],
   "quiz": [
@@ -22867,9 +22867,9 @@ grammar:[
     ]}
   ],
   traps:[
-    {bad:"I will meet my manager at nine tomorrow, we already agreed on it.",good:"I'm meeting my manager at nine tomorrow.",why:"已經約好的計畫要用現在進行式，will 聽起來像是臨時才決定的。"},
+    {bad:"I meet my manager at nine tomorrow, we already agreed on it.",good:"I'm meeting my manager at nine tomorrow.",why:"跟人約好的事用現在進行式 I'm meeting；現在簡單式講未來只用在時刻表、課表這類固定的時間（The train leaves at nine）。"},
     {bad:"The first train will leave at five thirty every day.",good:"The first train leaves at five thirty every day.",why:"固定不變的時刻表用現在簡單式講未來，will 反而讓人以為時間可能會變。"},
-    {bad:"More people use bikes to commute these days.",good:"More people are using bikes to commute these days.",why:"these days 表示「這陣子的趨勢」，即使不是「這一刻」也要用現在進行式，不能用現在簡單式。"},
+    {bad:"More people using bikes to commute these days.",good:"More people are using bikes to commute these days.",why:"進行式一定要有 be 動詞：are using。these days 講這陣子正在發生的變化，常用現在進行式。"},
     {bad:"Does the MRT running on public holidays?",good:"Does the MRT run on public holidays?",why:"疑問句 Does 後面的動詞要用原形 run，不能加 -ing。"}
   ],
   quiz:[
@@ -22909,16 +22909,16 @@ grammar:[
     ]}
   ],
   traps:[
-    {bad:"The Red Line has signal problems sometimes, I'm so tired of it!",good:"The Red Line is always having signal problems, I'm so tired of it!",why:"想表達「抱怨、受不了了」的語氣，要用 always/constantly + 現在進行式，單純的現在簡單式聽起來太中性、沒有情緒。"},
-    {bad:"（新聞標題）A Fault Delayed Thousands This Morning",good:"（新聞標題）Signal Fault Delays Thousands",why:"新聞標題習慣用現在簡單式製造「即時感」，就算事情已經發生了；但內文報導本身還是要用過去式。"},
-    {bad:"Ridership falls this month compared to last month, we don't know why yet.",good:"Ridership is falling this month compared to last month, we don't know why yet.",why:"講「正在變化中、還沒結束」的趨勢，要用現在進行式；現在簡單式聽起來像是已經確定、固定的模式。"},
-    {bad:"Customer complaints are tending to rise in the summer months.（正式報告）",good:"Customer complaints tend to rise in the summer months.",why:"tend to 本身已經表達「傾向、通常」的意思，是狀態動詞用法，正式寫作中不需要、也不該再加 -ing。"}
+    {bad:"The Red Line is always have signal problems, I'm so tired of it!",good:"The Red Line is always having signal problems, I'm so tired of it!",why:"抱怨「老是這樣」用 is always + V-ing，be 後面要接 -ing。（The Red Line has signal problems sometimes. 也正確，只是語氣中性、沒有抱怨的感覺。）"},
+    {bad:"（新聞內文）A signal fault delays thousands of commuters this morning.",good:"（新聞內文）A signal fault delayed thousands of commuters this morning.",why:"現在簡單式是新聞「標題」的寫法（Signal Fault Delays Thousands）；內文報導已經發生的事，要用過去式 delayed。"},
+    {bad:"Ridership falls this month compared to last month, we don't know why yet.",good:"Ridership is falling this month compared to last month, we don't know why yet.",why:"講「正在變化中、還沒結束」的趨勢，常用現在進行式；現在簡單式聽起來像是已經確定、固定的模式。"},
+    {bad:"Customer complaints are tending to rise in the summer months.（正式報告）",good:"Customer complaints tend to rise in the summer months.",why:"tend to 本身已經表達「傾向、通常」的意思，正式寫作中通常不加 -ing。"}
   ],
   quiz:[
     {q:"Which sentence best expresses a complaint?",qCn:"哪一句最能表達「抱怨」的語氣？",opts:["The Red Line has signal problems sometimes.","The Red Line is always having signal problems.","The Red Line had a signal problem yesterday.","The Red Line will have a signal problem."],ans:1,expl:"always + 現在進行式是表達不滿、抱怨的固定用法。"},
     {q:"Which is a typical news headline style?",qCn:"哪一個比較像典型的新聞標題寫法？",opts:["Signal Fault Delays Thousands","A Signal Fault Delayed Thousands This Morning","A Signal Fault Was Delaying Thousands","A Signal Fault Has Delayed Thousands"],ans:0,expl:"新聞標題習慣用現在簡單式製造即時感，即使事情已經發生。"},
     {q:"Ridership ___ this month, and analysts are not sure why yet.",qCn:"這個月的搭乘人次正在下滑，分析師還不確定原因。",opts:["falls","is falling","fell","has fallen"],ans:1,expl:"強調「正在變化中、還沒有定論」的趨勢，用現在進行式：is falling。"},
-    {q:"Which sentence is more appropriate in a formal report?",qCn:"哪一句比較適合出現在正式報告中？",opts:["Aging infrastructure is tending to cause more frequent delays.","Aging infrastructure tends to cause more frequent delays.","Aging infrastructure is always causing more frequent delays.","Aging infrastructure will be causing more frequent delays."],ans:1,expl:"tend to 是狀態動詞用法，正式報告的客觀陳述不需要、也不能加 -ing。"}
+    {q:"Which sentence is more appropriate in a formal report?",qCn:"哪一句比較適合出現在正式報告中？",opts:["Aging infrastructure is tending to cause more frequent delays.","Aging infrastructure tends to cause more frequent delays.","Aging infrastructure is always causing more frequent delays.","Aging infrastructure will be causing more frequent delays."],ans:1,expl:"tend to 表達「傾向、通常」，正式報告的客觀陳述通常不加 -ing。"}
   ]
 },
 
@@ -23081,9 +23081,9 @@ grammar:[
     ]}
   ],
   traps:[
-    {bad:"Night shifts increase the defect rate. (寫品質報告時想強調嚴謹)",good:"Night shifts tend to increase the defect rate.",why:"正式報告習慣用 tend to / can 這類詞留餘地，直接斷言 increase 反而顯得不夠嚴謹、容易被挑戰。"},
+    {bad:"Night shifts are tend to increase the defect rate.",good:"Night shifts tend to increase the defect rate.",why:"tend 是一般動詞，前面不加 be。正式報告常用 tend to／can 留餘地；直接寫 Night shifts increase the defect rate. 也正確，只是語氣比較斷定。"},
     {bad:"In the report, I walk into the clinic and see the empty waiting room. (正式報告)",good:"In the report, I walked into the clinic and saw the empty waiting room.",why:"正式報告要用過去式維持客觀敘述的距離；歷史現在式只適合口語或非正式的敘事文體。"},
-    {bad:"Take your temperature. If it is high, you call the clinic. (指示文混用祈使句與泛稱you，語氣不一致)",good:"You take your temperature, and if it's high, you call the clinic.",why:"同一段說明步驟時，泛稱 you 和祈使句最好不要混用，選一種維持一致的語氣。"}
+    {bad:"Take your temperature. If it will be high, call the clinic.",good:"Take your temperature. If it is high, call the clinic.",why:"if 子句講未來也用現在式 is，不用 will。（寫步驟時，祈使句和泛稱 you 選一種用到底，讀起來比較一致。）"}
   ],
   quiz:[
     {q:"Which sentence uses the historical present for a vivid, informal story?",qCn:"哪一句用「歷史現在式」讓故事更生動、口語？",opts:["A. Yesterday I walked into the clinic and waited an hour.","B. So I walk into the clinic, and the waiting room is already full.","C. I have walked into the clinic many times.","D. I will walk into the clinic tomorrow."],ans:1,expl:"用現在簡單式敘述過去發生的事，是口語敘事常見的歷史現在式，增加臨場感。"},
@@ -23270,8 +23270,8 @@ grammar:[
   ],
   traps:[
     {bad:"The report is showing that 40% of residents were affected.",good:"The report shows that 40% of residents were affected.",why:"報告的內容是固定的事實，不是「正在改變的趨勢」，用簡單式。"},
-    {bad:"Typhoon is hitting northern coast. (標題)",good:"Typhoon Hits Northern Coast.",why:"新聞標題用簡單式、大寫開頭、省略冠詞。用進行式反而不像標題。"},
-    {bad:"I stand at the airport. People run in every direction. (想營造場景感)",good:"I'm standing at the airport. People are running in every direction.",why:"要讓讀者「看到畫面」，用進行式營造臨場感；簡單式聽起來像在陳述事實而不是說故事。"}
+    {bad:"Typhoon hits northern coast this morning. (新聞內文)",good:"A typhoon hit the northern coast this morning.",why:"簡單式、省略冠詞是「標題」的寫法（Typhoon Hits Northern Coast）；內文要寫完整句：加冠詞 a、the，已經發生的事用過去式 hit。"},
+    {bad:"I am stand at the airport. People are run in every direction.",good:"I'm standing at the airport. People are running in every direction.",why:"進行式是 be + V-ing，be 後面不能接原形。說故事想營造畫面常用進行式；I stand at the airport. 也正確，只是比較像在陳述。"}
   ],
   quiz:[
     {q:"Which is a typical news headline?",qCn:"哪一個是典型的新聞標題？",opts:["A. Typhoon Is Hitting Coast","B. Typhoon Hits Coast","C. Typhoon Has Hit Coast","D. Typhoon Was Hitting Coast"],ans:1,expl:"新聞標題用現在簡單式報導已發生的事。"},

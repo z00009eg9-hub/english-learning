@@ -9992,7 +9992,7 @@ dg20260814b1: {
       ask: '這件事還在變嗎？',
       en: 'Prices are rising faster than last year.',
       cn: '物價漲得比去年快。',
-      why: '講「正在變化」的趨勢一定用進行式：is getting / are rising / are increasing。用簡單式 Prices rise 會變成在講「物價會漲」這個普遍規律。' },
+      why: '講「正在變化」的趨勢通常用進行式：is getting / are rising / are increasing。用簡單式 Prices rise 會變成在講「物價會漲」這個普遍規律。' },
     { key: 'stative', icon: 'cross',
       title: 'Stative verbs', titleCn: '狀態動詞沒有進行式',
       ask: '這個動作能暫停嗎？',
@@ -10900,7 +10900,7 @@ dg20260821b1p: {
       ask: '你在問對方的計畫還是問班表？',
       en: 'What are you doing tonight? / What time does the film start?',
       cn: '你今晚要做什麼？／電影幾點開始？',
-      why: '問「你的計畫」用進行式，問「班表」用簡單式。用錯會很奇怪：What do you do tonight? 聽起來像在問你的職業。' }
+      why: '問「你的計畫」用進行式，問「班表」用簡單式。用錯會很奇怪：What do you do tonight? 不自然，要說 What are you doing tonight?（單獨問 What do you do? 才是在問職業）' }
   ],
   steps: [
     { label: '情境', text: '你想告訴同事「我明天下午三點要見客戶」。' },
@@ -11535,7 +11535,7 @@ dg20260821b2: {
       ask: '這件事還在變嗎？',
       en: 'Working patterns are shifting across the sector.',
       cn: '整個產業的工作型態正在轉變。',
-      why: '講趨勢一定用進行式，因為它暗示「還沒定案、還在動」。用簡單式 patterns shift 會變成在講一個普遍規律。' },
+      why: '講正在變化的趨勢常用進行式，因為它暗示「還沒定案、還在動」。用簡單式 patterns shift 會變成在講一個普遍規律。' },
     { key: 'formal', icon: 'balance',
       title: 'Formal objectivity', titleCn: '正式報告的客觀語氣',
       ask: '你要避免情緒色彩嗎？',
