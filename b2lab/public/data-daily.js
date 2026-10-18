@@ -20159,9 +20159,9 @@ grammar:[
   ],
   "traps": [
     {
-      "bad": "It is six months since I joined this team.",
+      "bad": "It has been six months since I have joined this team.",
       "good": "It has been six months since I joined this team.",
-      "why": "It has been...since...固定用現在完成式的has been，不能用is。"
+      "why": "since 後面接的是「起點」那一件事，那件事發生在過去，所以用過去式 joined，不用 have joined。（It is six months since… 也正確，但正式寫作常用 It has been。）"
     },
     {
       "bad": "It has been three weeks I last exercised.",
@@ -20185,12 +20185,12 @@ grammar:[
       "qCn": "我們工廠更換包裝已經將近一年了。",
       "opts": [
         "has been",
-        "is",
+        "have been",
         "was",
         "has"
       ],
       "ans": 0,
-      "expl": "It has been...since...固定用現在完成式has been。"
+      "expl": "It has been...since... 表示「從那件事到現在已經多久」，用現在完成式 has been。（Grammar in Use 也接受 It is... since...，這題的選項裡沒有放。）"
     },
     {
       "q": "It has been two years ___ the company launched this service.",
@@ -20930,7 +20930,7 @@ grammar:[
     {"bad": "Anita has been to the shelter now, so she is safe there.", "good": "Anita has gone to the shelter now, so she is safe there.", "why": "她現在人還在避難所，還沒回來，要用gone to，不是been to。"},
     {"bad": "Have you ever gone to a typhoon shelter before?", "good": "Have you ever been to a typhoon shelter before?", "why": "問『有沒有這樣的經驗』、而且人已經回來了，要用been to，不是gone to。"},
     {"bad": "He has went to the airport to check on his flight.", "good": "He has gone to the airport to check on his flight.", "why": "go的過去分詞是gone，不是went（went是過去簡單式）。"},
-    {"bad": "They have gone to Da Nang three times before, but they live there now.", "good": "They have been to Da Nang three times before they moved there.", "why": "『去過三次』是經驗，人現在住在那裡了（不是還在路上），要用been to。"}
+    {"bad": "They have gone to Da Nang three times before, but they live there now.", "good": "They had been to Da Nang three times before they moved there.", "why": "『去過三次』是經驗，人現在住在那裡了（不是還在路上），要用been to。"}
   ],
   "quiz": [
     {"q": "Where is Anita? — She ___ to the shelter. She isn't home yet.", "qCn": "Anita在哪裡？她去避難所了，還沒回家。", "opts": ["has been", "has gone", "went", "goes"], "ans": 1, "expl": "她現在還沒回來，用has gone to。"},
