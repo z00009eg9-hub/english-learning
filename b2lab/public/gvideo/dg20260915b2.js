@@ -208,8 +208,8 @@ window.GVIDEO.dg20260915b2 = {
     { ch: 2, sp: 'N', zh: '時間前置第一種：It\'s been 加時間，再加 since 和過去式子句。正式寫作寫 It has been。',
       hi: [{ t: "It's been", k: 'front', c: 2 }],
       vis: { type: 'pattern', kick: "It's been + 時間 + since", rows: [
-        { lab: '口語', blocks: [{ t: "It's been", k: 'v' }, { t: 'six months', k: 'o' }, { t: 'since', k: 'x' }, { t: 'we last spoke', k: 'n' }] },
-        { lab: '正式', blocks: [{ t: 'It has been', k: 'v' }, { t: 'two decades', k: 'o' }, { t: 'since', k: 'x' }, { t: 'the law changed', k: 'n' }] }
+        { lab: '口語', blocks: [{ t: "It's been", k: 'v' }, { t: 'six months', k: 'o' }, { t: 'since', k: 'n' }, { t: 'we last spoke', k: 'n' }] },
+        { lab: '正式', blocks: [{ t: 'It has been', k: 'v' }, { t: 'two decades', k: 'o' }, { t: 'since', k: 'n' }, { t: 'the law changed', k: 'n' }] }
       ], note: 'since 後面的子句用過去式' } },
     { ch: 2, sp: 'N', zh: '第二種：Having 加過去分詞，再加 for 或 since，資歷放句首，後面接結果。',
       hi: [{ t: 'Having', k: 'front', c: 2 }],
@@ -237,8 +237,8 @@ window.GVIDEO.dg20260915b2 = {
       hi: [{ t: 'since 1958', cn: '精準起點', k: 'precise', c: 4 }], vis: { type: 'scene', art: 'dg20260915b2_tin' } },
     { ch: 3, sp: 'N', zh: 'Victor 改用 since 加年份，馬上變成能登上雜誌的說法。',
       hi: [{ t: 'since', k: 'precise', c: 4 }], vis: { type: 'scene', art: 'dg20260915b2_magok' } },
-    { ch: 3, sp: 'A', en: "So it's been sixty-eight years since your grandfather opened the shop.", cn: '所以從你祖父開店到現在，已經六十八年了。',
-      hi: [{ t: "it's been sixty-eight years since", cn: '時間放句首', k: 'front', c: 2 }], vis: { type: 'scene', art: 'dg20260915b2_oldshop' } },
+    { ch: 3, sp: 'A', en: "So it's been three generations since your grandfather opened the shop.", cn: '所以從你祖父開店到現在，已經傳了三代。',
+      hi: [{ t: "it's been three generations since", cn: '時間放句首', k: 'front', c: 2 }], vis: { type: 'scene', art: 'dg20260915b2_oldshop' } },
     { ch: 3, sp: 'T', en: "That's right. Having worked beside my father for twenty years, I took over in 2019.", cn: '沒錯。我在父親身邊做了二十年，2019 年接手。',
       hi: [{ t: 'Having worked', cn: '資歷放句首', k: 'front', c: 2 }], vis: { type: 'scene', art: 'dg20260915b2_cups' } },
     { ch: 3, sp: 'N', zh: 'Natalie 用 It\'s been，Victor 用 Having，時間一放前面，語氣就有分量。',

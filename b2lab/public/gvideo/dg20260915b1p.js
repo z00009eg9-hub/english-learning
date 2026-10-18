@@ -206,7 +206,7 @@ window.GVIDEO.dg20260915b1p = {
     { ch: 2, sp: 'N', zh: 'since 也可以接一整句。那一句講起點，用過去式；主句還是現在完成式。',
       vis: { type: 'pattern', kick: 'since + 子句', rows: [
         { lab: '主句', blocks: [{ t: 'They', k: 's' }, { t: 'have been', k: 'v' }, { t: 'best friends', k: 'n' }] },
-        { lab: '起點', blocks: [{ t: 'since', k: 'x' }, { t: 'they met at camp', k: 'o', add: true }] }
+        { lab: '起點', blocks: [{ t: 'since', k: 'n' }, { t: 'they met at camp', k: 'o', add: true }] }
       ], note: '子句 met 用過去式，主句 have been 用完成式' } },
     { ch: 2, sp: 'N', zh: '問句也分兩種：When 問哪一天，用過去式；How long 問多長，用完成式。回答要配好。',
       vis: { type: 'pattern', kick: '兩種問法，兩種回答', rows: [

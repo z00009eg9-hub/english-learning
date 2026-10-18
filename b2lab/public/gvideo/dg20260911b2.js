@@ -181,13 +181,13 @@ window.GVIDEO.dg20260911b2 = {
     { ch: 2, sp: 'N', zh: '陳述句：It has been，加時間，加 since，再接過去式子句。',
       hi: [{ t: 'It has been', k: 'gap', c: 4 }],
       vis: { type: 'pattern', kick: 'It has been + 時間 + since + 子句', rows: [
-        { lab: '寫作', blocks: [{ t: 'It has been', k: 'v' }, { t: 'three months', k: 'o' }, { t: 'since', k: 'x' }, { t: 'we opened the store', k: 'n' }] },
-        { lab: '口語', blocks: [{ t: "It's been", k: 'v' }, { t: 'a while', k: 'o' }, { t: 'since', k: 'x' }, { t: 'I last cooked', k: 'n' }] }
+        { lab: '寫作', blocks: [{ t: 'It has been', k: 'v' }, { t: 'three months', k: 'o' }, { t: 'since', k: 'n' }, { t: 'we opened the store', k: 'n' }] },
+        { lab: '口語', blocks: [{ t: "It's been", k: 'v' }, { t: 'a while', k: 'o' }, { t: 'since', k: 'n' }, { t: 'I last cooked', k: 'n' }] }
       ], note: "It's been ＝ It has been" } },
     { ch: 2, sp: 'N', zh: '問句：How long has it been since，後面一樣接過去式子句。',
       hi: [{ t: 'How long has it been since', k: 'q', c: 2 }],
       vis: { type: 'pattern', kick: 'How long has it been since…?', rows: [
-        { lab: '問句', blocks: [{ t: 'How long', k: 'x' }, { t: 'has it been', k: 'v' }, { t: 'since', k: 'x' }, { t: 'the lights went out?', k: 'n' }] }
+        { lab: '問句', blocks: [{ t: 'How long', k: 'n' }, { t: 'has it been', k: 'v' }, { t: 'since', k: 'n' }, { t: 'the lights went out?', k: 'n' }] }
       ], note: '問句裡要有 it' } },
     { ch: 2, sp: 'N', zh: 'since 後面常加 last，意思是「上一次之後」。',
       hi: [{ t: 'last', k: 'since', c: 3 }],
@@ -198,7 +198,7 @@ window.GVIDEO.dg20260911b2 = {
     { ch: 2, sp: 'N', zh: '放在段落開頭，先讓讀者感覺隔了很久，再帶出現在的轉變。',
       vis: { type: 'pattern', kick: 'Opening line 開場句', rows: [
         { lab: '先講隔多久', blocks: [{ t: 'It has been a decade', k: 'v' }, { t: 'since the pool closed', k: 'n' }] },
-        { lab: '再講現在', blocks: [{ t: 'and', k: 'x' }, { t: 'it reopens on Monday', k: 'o', add: true }] }
+        { lab: '再講現在', blocks: [{ t: 'and', k: 'n' }, { t: 'it reopens on Monday', k: 'o', add: true }] }
       ], note: '先講隔多久 → 再講現在的變化' } },
 
     /* ---- 3 情境對話 ---- */

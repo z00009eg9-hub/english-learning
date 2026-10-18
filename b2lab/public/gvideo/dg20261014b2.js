@@ -187,7 +187,7 @@ window.GVIDEO.dg20261014b2 = {
       hi: [{ t: 'going to', k: 'proof', c: 4 }],
       vis: { type: 'pattern', kick: '證據 → 結論', rows: [
         { lab: '證據', blocks: [{ t: 'Sales have dropped', k: 'n' }, { t: 'for months,', k: 'o' }] },
-        { lab: '結論', blocks: [{ t: 'so', k: 'x' }, { t: 'the store', k: 's' }, { t: 'is going to close', k: 'v', add: true }] }
+        { lab: '結論', blocks: [{ t: 'so', k: 'n' }, { t: 'the store', k: 's' }, { t: 'is going to close', k: 'v', add: true }] }
       ], note: '先讓讀者看到事實，結論才站得住' } },
     { ch: 2, sp: 'N', zh: '正式的報告裡，還可以換成 is expected to 或 is likely to，把判斷的強度標清楚。',
       vis: { type: 'pattern', kick: '更正式的寫法', rows: [

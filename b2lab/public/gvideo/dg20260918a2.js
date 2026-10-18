@@ -208,8 +208,8 @@ window.GVIDEO.dg20260918a2 = {
     { ch: 2, sp: 'N', zh: '兩種問句也要記好：When 加 did，問哪一天；How long 加 have，問多久。',
       hi: [{ t: 'When', k: 'q', c: 3 }, { t: 'How long', k: 'q', c: 4 }],
       vis: { type: 'pattern', kick: 'When vs How long', rows: [
-        { lab: '問哪一天', blocks: [{ t: 'When', k: 'x' }, { t: 'did', k: 'v' }, { t: 'you', k: 's' }, { t: 'start?', k: 'v' }] },
-        { lab: '問多久',   blocks: [{ t: 'How long', k: 'x' }, { t: 'have', k: 'v' }, { t: 'you', k: 's' }, { t: 'worked here?', k: 'v' }] }
+        { lab: '問哪一天', blocks: [{ t: 'When', k: 'n' }, { t: 'did', k: 'v' }, { t: 'you', k: 's' }, { t: 'start?', k: 'v' }] },
+        { lab: '問多久',   blocks: [{ t: 'How long', k: 'n' }, { t: 'have', k: 'v' }, { t: 'you', k: 's' }, { t: 'worked here?', k: 'v' }] }
       ] } },
 
     /* ---- 3 情境對話 ---- */

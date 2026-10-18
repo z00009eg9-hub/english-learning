@@ -143,10 +143,10 @@ window.GRAMVIS = [
       why: 'ago 一定往回指一個明確的過去時間點。想強調「現在已經交出去了」，就把 ago 拿掉：I have finished my report.'
     },
     {
-      bad: 'Did you ever eat Vietnamese food?',
+      bad: 'Have you ever ate Vietnamese food?',
       good: 'Have you ever eaten Vietnamese food?',
       tag: 'ever = 到目前為止的經驗',
-      why: '問「這輩子有沒有過」用現在完成式 Have you ever…？用 Did you ever…？會變成在問某個已經過去的特定時期。'
+      why: '現在完成式是 have + 過去分詞：eaten，不是過去式 ate。問「這輩子有沒有過」用 Have you ever…？（美式口語也聽得到 Did you ever…?）'
     },
     {
       bad: 'I have been in Taipei since three years.',
@@ -165,7 +165,7 @@ window.GRAMVIS = [
   ],
 
   quiz: [
-    { q: 'I ____ my keys, so I can\'t get into my flat.', opts: ['lost', 'have lost', 'was losing', 'had lost'], ans: 1,
+    { q: 'I ____ my keys, so I can\'t get into my apartment.', opts: ['lost', 'have lost', 'was losing', 'had lost'], ans: 1,
       qCn: '我的鑰匙弄丟了，所以進不了家門。',
       expl: '重點是「現在進不去」——過去的動作留下現在的結果 → 現在完成式 have lost。' },
     { q: 'I ____ him yesterday.', opts: ['have seen', 'saw', 'have been seeing', 'was seen'], ans: 1,

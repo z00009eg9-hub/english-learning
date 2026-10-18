@@ -202,7 +202,7 @@ window.GVIDEO.dg20260902b1p = {
     { ch: 2, sp: 'N', zh: '如果主詞是被做的那一方，就用被動：have 或 has 加 been，再加過去分詞。',
       vis: { type: 'pattern', kick: 'Passive 完成式被動', rows: [
         { lab: '主動', blocks: [{ t: 'Someone', k: 's' }, { t: 'has fixed', k: 'v' }, { t: 'the gate', k: 'n' }] },
-        { lab: '被動', blocks: [{ t: 'The gate', k: 's' }, { t: 'has been', k: 'x', add: true }, { t: 'fixed', k: 'v' }] }
+        { lab: '被動', blocks: [{ t: 'The gate', k: 's' }, { t: 'has been', k: 'n', add: true }, { t: 'fixed', k: 'v' }] }
       ], note: '重點是結果，不是誰做的' } },
 
     /* ---- 3 情境對話 ---- */

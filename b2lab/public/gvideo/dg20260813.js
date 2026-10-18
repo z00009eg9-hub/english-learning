@@ -205,7 +205,7 @@ window.GVIDEO.dg20260813 = {
     { ch: 2, sp: 'N', zh: '問多久用 How long，have 搬到主詞前面；否定在 have 後面加 not。',
       hi: [{ t: 'How long', k: 'hl', c: 3 }],
       vis: { type: 'pattern', kick: 'Questions & negatives 問句與否定', rows: [
-        { lab: '問句', blocks: [{ t: 'How long', k: 'x' }, { t: 'have', k: 'v' }, { t: 'you', k: 's' }, { t: 'been playing', k: 'v' }, { t: 'the drums?', k: 'o' }] },
+        { lab: '問句', blocks: [{ t: 'How long', k: 'n' }, { t: 'have', k: 'v' }, { t: 'you', k: 's' }, { t: 'been playing', k: 'v' }, { t: 'the drums?', k: 'o' }] },
         { lab: '否定', blocks: [{ t: 'I', k: 's' }, { t: "haven't been sleeping", k: 'v' }, { t: 'well', k: 'o' }] }
       ] } },
     { ch: 2, sp: 'N', zh: '時間怎麼說：for 加一段時間，since 加起點，也可以說 all day、all morning。',

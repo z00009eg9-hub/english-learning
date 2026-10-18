@@ -198,14 +198,14 @@ window.GVIDEO.dg20260925b1 = {
     { ch: 2, sp: 'N', zh: 'When 問句：When 加 did，再加主詞和原形動詞。What time 也一樣。',
       hi: [{ t: 'When 加 did', k: 'when', c: 3 }],
       vis: { type: 'pattern', kick: 'When did…? 問一個點', rows: [
-        { lab: 'When',      blocks: [{ t: 'When did', k: 'x' }, { t: 'you', k: 's' }, { t: 'meet', k: 'v' }, { t: 'your roommate', k: 'n' }] },
-        { lab: 'What time', blocks: [{ t: 'What time did', k: 'x' }, { t: 'the bus', k: 's' }, { t: 'come', k: 'v' }] }
+        { lab: 'When',      blocks: [{ t: 'When did', k: 'n' }, { t: 'you', k: 's' }, { t: 'meet', k: 'v' }, { t: 'your roommate', k: 'n' }] },
+        { lab: 'What time', blocks: [{ t: 'What time did', k: 'n' }, { t: 'the bus', k: 's' }, { t: 'come', k: 'v' }] }
       ], note: 'did 之後，動詞一律用原形' } },
     { ch: 2, sp: 'N', zh: 'How long 問句：How long 加 have 或 has，再加主詞和過去分詞。',
       hi: [{ t: 'How long 加 have', k: 'long', c: 4 }],
       vis: { type: 'pattern', kick: 'How long have…? 問到現在', rows: [
-        { lab: 'have', blocks: [{ t: 'How long have', k: 'x' }, { t: 'you', k: 's' }, { t: 'known', k: 'v' }, { t: 'Mark', k: 'n' }] },
-        { lab: 'has',  blocks: [{ t: 'How long has', k: 'x' }, { t: 'she', k: 's' }, { t: 'had', k: 'v' }, { t: 'that car', k: 'n' }] }
+        { lab: 'have', blocks: [{ t: 'How long have', k: 'n' }, { t: 'you', k: 's' }, { t: 'known', k: 'v' }, { t: 'Mark', k: 'n' }] },
+        { lab: 'has',  blocks: [{ t: 'How long has', k: 'n' }, { t: 'she', k: 's' }, { t: 'had', k: 'v' }, { t: 'that car', k: 'n' }] }
       ], note: 'know → known・have → had' } },
     { ch: 2, sp: 'N', zh: '答案也長得不一樣。When 的答案是一個時間點；How long 的答案是一段長度。',
       vis: { type: 'pattern', kick: '答案長怎樣 Answers', rows: [

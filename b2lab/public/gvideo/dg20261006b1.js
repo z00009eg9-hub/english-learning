@@ -184,8 +184,8 @@ window.GVIDEO.dg20261006b1 = {
       ], note: '做事的 have 不加 got' } },
     { ch: 2, sp: 'N', zh: '問句分兩套：have 那套借 do，have got 那套把 have 搬到前面。回答看問句第一個字。',
       vis: { type: 'pattern', kick: 'Questions 問句兩套', rows: [
-        { lab: 'do 這套', blocks: [{ t: 'Do', k: 'x' }, { t: 'you', k: 's' }, { t: 'have', k: 'v' }, { t: 'a tent?', k: 'o' }, { t: 'Yes, I do.', k: 'n' }] },
-        { lab: 'have 這套', blocks: [{ t: 'Have', k: 'x' }, { t: 'you', k: 's' }, { t: 'got', k: 'v' }, { t: 'a tent?', k: 'o' }, { t: 'Yes, I have.', k: 'n' }] }
+        { lab: 'do 這套', blocks: [{ t: 'Do', k: 'n' }, { t: 'you', k: 's' }, { t: 'have', k: 'v' }, { t: 'a tent?', k: 'o' }, { t: 'Yes, I do.', k: 'n' }] },
+        { lab: 'have 這套', blocks: [{ t: 'Have', k: 'n' }, { t: 'you', k: 's' }, { t: 'got', k: 'v' }, { t: 'a tent?', k: 'o' }, { t: 'Yes, I have.', k: 'n' }] }
       ] } },
     { ch: 2, sp: 'N', zh: '做事的 have 常見這幾組，都能變成 having。',
       vis: { type: 'family', kick: 'have = do · 可以用 having', core: 'have = do', coreCn: '做事的 have', art: 'dg20261006b1_plate', items: [

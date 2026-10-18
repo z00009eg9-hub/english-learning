@@ -213,9 +213,9 @@ window.GVIDEO.dg20260922a2 = {
     { ch: 2, sp: 'N', zh: '完成式最常搭三個字：already 和 never 放在 have 後面，yet 放在句子最後。',
       hi: [{ t: 'already', k: 'never', c: 1 }, { t: 'never', k: 'never', c: 1 }, { t: 'yet', k: 'never', c: 1 }],
       vis: { type: 'pattern', kick: 'already · never · yet', rows: [
-        { lab: '已經',     blocks: [{ t: 'I', k: 's' }, { t: 'have', k: 'v' }, { t: 'already', k: 'x', add: true }, { t: 'eaten', k: 'v' }] },
-        { lab: '從來沒有', blocks: [{ t: 'We', k: 's' }, { t: 'have', k: 'v' }, { t: 'never', k: 'x', add: true }, { t: 'seen a bear', k: 'v' }] },
-        { lab: '了沒',     blocks: [{ t: 'Have', k: 'v' }, { t: 'you', k: 's' }, { t: 'eaten', k: 'v' }, { t: 'yet?', k: 'x', add: true }] }
+        { lab: '已經',     blocks: [{ t: 'I', k: 's' }, { t: 'have', k: 'v' }, { t: 'already', k: 'n', add: true }, { t: 'eaten', k: 'v' }] },
+        { lab: '從來沒有', blocks: [{ t: 'We', k: 's' }, { t: 'have', k: 'v' }, { t: 'never', k: 'n', add: true }, { t: 'seen a bear', k: 'v' }] },
+        { lab: '了沒',     blocks: [{ t: 'Have', k: 'v' }, { t: 'you', k: 's' }, { t: 'eaten', k: 'v' }, { t: 'yet?', k: 'n', add: true }] }
       ] } },
 
     /* ---- 3 情境對話 ---- */

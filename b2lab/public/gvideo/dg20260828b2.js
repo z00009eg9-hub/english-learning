@@ -199,7 +199,7 @@ window.GVIDEO.dg20260828b2 = {
       hi: [{ t: '動詞 ing', k: 'scene', c: 3 }],
       vis: { type: 'pattern', kick: 'Background + event 背景＋事件', rows: [
         { lab: '背景', blocks: [{ t: 'Reporters', k: 's' }, { t: 'were waiting', k: 'v' }, { t: 'outside the court', k: 'o' }] },
-        { lab: '＋事件', blocks: [{ t: 'when', k: 'x', add: true }, { t: 'the verdict', k: 's', add: true }, { t: 'came', k: 'v', add: true }] }
+        { lab: '＋事件', blocks: [{ t: 'when', k: 'n', add: true }, { t: 'the verdict', k: 's', add: true }, { t: 'came', k: 'v', add: true }] }
       ], note: '長的背景用 was / were + V-ing，短的事件用過去簡單式' } },
     { ch: 2, sp: 'N', zh: '陳述事實就單純用過去簡單式，數字、時間、結果直接講清楚。',
       hi: [{ t: '過去簡單式', k: 'fact', c: 4 }],
@@ -211,7 +211,7 @@ window.GVIDEO.dg20260828b2 = {
       hi: [{ t: 'still', k: 'gap', c: 2 }],
       vis: { type: 'pattern', kick: 'Contrast 製造落差', rows: [
         { lab: '還在做', blocks: [{ t: 'The board', k: 's' }, { t: 'was still discussing', k: 'v' }, { t: 'the budget', k: 'o' }] },
-        { lab: '已經出事', blocks: [{ t: 'when', k: 'x', add: true }, { t: 'the money', k: 's', add: true }, { t: 'ran out', k: 'v', add: true }] }
+        { lab: '已經出事', blocks: [{ t: 'when', k: 'n', add: true }, { t: 'the money', k: 's', add: true }, { t: 'ran out', k: 'v', add: true }] }
       ], note: '不用寫「太慢了」，讀者自己會感覺到' } },
     { ch: 2, sp: 'N', zh: '最常搭配的字：when、as、while，還有 still。',
       vis: { type: 'family', kick: 'Scene words 鋪陳畫面的好幫手', core: 'Scene words', coreCn: '常搭配的字', art: 'dg20260828b2_scene', items: [

@@ -181,8 +181,8 @@ window.GVIDEO.dg20260828a2 = {
     { ch: 2, sp: 'N', zh: '句型很簡單：主詞，加 was 或 were，再加動詞 ing。後面常常放一個過去的時間。',
       hi: [{ t: '過去的時間', k: 'prog', c: 1 }],
       vis: { type: 'pattern', kick: 'Past continuous 過去進行式', rows: [
-        { lab: '一個人', blocks: [{ t: 'She', k: 's' }, { t: 'was', k: 'x' }, { t: 'reading', k: 'v' }, { t: 'at ten', k: 'o' }] },
-        { lab: '兩個人以上', blocks: [{ t: 'We', k: 's' }, { t: 'were', k: 'x' }, { t: 'playing', k: 'v' }, { t: 'cards', k: 'n' }, { t: 'at ten', k: 'o' }] }
+        { lab: '一個人', blocks: [{ t: 'She', k: 's' }, { t: 'was', k: 'n' }, { t: 'reading', k: 'v' }, { t: 'at ten', k: 'o' }] },
+        { lab: '兩個人以上', blocks: [{ t: 'We', k: 's' }, { t: 'were', k: 'n' }, { t: 'playing', k: 'v' }, { t: 'cards', k: 'n' }, { t: 'at ten', k: 'o' }] }
       ], note: 'was / were 後面一定接 V-ing：read → reading' } },
     { ch: 2, sp: 'N', zh: '最常跟它一起出現的時間有這幾個：at eight last night、at that time、at noon yesterday。',
       vis: { type: 'family', kick: 'Time words 常配的時間', core: 'A past moment', coreCn: '過去的某個時間點', art: 'dg20260828a2_inprog', items: [
@@ -190,8 +190,8 @@ window.GVIDEO.dg20260828a2 = {
       ] } },
     { ch: 2, sp: 'N', zh: '否定句，在 was 後面加 not，變成 wasn\'t；問句，就把 was 或 were 搬到最前面。',
       vis: { type: 'pattern', kick: '否定和問句 No and questions', rows: [
-        { lab: '否定', blocks: [{ t: 'I', k: 's' }, { t: "wasn't", k: 'x' }, { t: 'sleeping', k: 'v' }] },
-        { lab: '問句', blocks: [{ t: 'Were', k: 'x' }, { t: 'you', k: 's' }, { t: 'cooking', k: 'v' }, { t: 'at six?', k: 'o' }] }
+        { lab: '否定', blocks: [{ t: 'I', k: 's' }, { t: "wasn't", k: 'n' }, { t: 'sleeping', k: 'v' }] },
+        { lab: '問句', blocks: [{ t: 'Were', k: 'n' }, { t: 'you', k: 's' }, { t: 'cooking', k: 'v' }, { t: 'at six?', k: 'o' }] }
       ], note: 'was not ＝ wasn\'t，were not ＝ weren\'t' } },
     { ch: 2, sp: 'N', zh: '時間點很重要。加上時間，聽的人馬上知道你說的是哪一刻的畫面。',
       vis: { type: 'pattern', kick: '加上時間 Add a time', rows: [

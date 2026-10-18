@@ -172,13 +172,13 @@ window.GVIDEO.dg20261006a2 = {
       hi: [{ t: 'do 或 does', k: 'have', c: 3 }],
       vis: { type: 'pattern', kick: 'have 這條路 · 借 do／does', rows: [
         { lab: '否定', blocks: [{ t: 'I', k: 's' }, { t: "don't have", k: 'v' }, { t: 'a car', k: 'o' }] },
-        { lab: '問句', blocks: [{ t: 'Does', k: 'x' }, { t: 'she', k: 's' }, { t: 'have', k: 'v' }, { t: 'a dog?', k: 'o' }] }
+        { lab: '問句', blocks: [{ t: 'Does', k: 'n' }, { t: 'she', k: 's' }, { t: 'have', k: 'v' }, { t: 'a dog?', k: 'o' }] }
       ], note: '用了 Does，後面的 have 就不變' } },
     { ch: 2, sp: 'N', zh: '再看 have got 這條路：不用 do，直接把 have 或 has 搬到最前面就好。',
       hi: [{ t: 'have got', k: 'got', c: 4 }],
       vis: { type: 'pattern', kick: 'have got 這條路 · 不用 do', rows: [
         { lab: '否定', blocks: [{ t: 'I', k: 's' }, { t: "haven't got", k: 'v' }, { t: 'a car', k: 'o' }] },
-        { lab: '問句', blocks: [{ t: 'Has', k: 'x' }, { t: 'she', k: 's' }, { t: 'got', k: 'v' }, { t: 'a dog?', k: 'o' }] }
+        { lab: '問句', blocks: [{ t: 'Has', k: 'n' }, { t: 'she', k: 's' }, { t: 'got', k: 'v' }, { t: 'a dog?', k: 'o' }] }
       ], note: '選好一條路，就一路走到底' } },
     { ch: 2, sp: 'N', zh: '回答也跟著問句走：用 Do 問，就回 Yes, I do；用 Have 問，就回 Yes, I have。',
       vis: { type: 'pattern', kick: '短答 Short answers', rows: [

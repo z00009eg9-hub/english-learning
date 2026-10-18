@@ -211,14 +211,14 @@ window.GVIDEO.dg20260819a2 = {
     { ch: 2, sp: 'N', zh: "要說「不」，就用 don't 或 doesn't，後面的動詞一律用原形。",
       hi: [{ t: "doesn't", k: 'do', c: 1 }],
       vis: { type: 'pattern', kick: 'Negative 否定句', rows: [
-        { lab: 'I / we / they', blocks: [{ t: 'I', k: 's' }, { t: "don't", k: 'x' }, { t: 'eat', k: 'v' }, { t: 'spicy food', k: 'o' }] },
-        { lab: 'he / she / it', blocks: [{ t: 'My mom', k: 's' }, { t: "doesn't", k: 'x', add: true }, { t: 'eat', k: 'v' }, { t: 'spicy food', k: 'o' }] }
+        { lab: 'I / we / they', blocks: [{ t: 'I', k: 's' }, { t: "don't", k: 'n' }, { t: 'eat', k: 'v' }, { t: 'spicy food', k: 'o' }] },
+        { lab: 'he / she / it', blocks: [{ t: 'My mom', k: 's' }, { t: "doesn't", k: 'n', add: true }, { t: 'eat', k: 'v' }, { t: 'spicy food', k: 'o' }] }
       ], note: "doesn't 已經帶了 s，eat 不用再加" } },
     { ch: 2, sp: 'N', zh: '要問問題，就把 Do 或 Does 放在最前面。一樣，s 跑到 does 身上，動詞回到原形。',
       hi: [{ t: 'Does', k: 'do', c: 1 }],
       vis: { type: 'pattern', kick: 'Questions 疑問句', rows: [
-        { lab: 'you / they', blocks: [{ t: 'Do', k: 'x' }, { t: 'you', k: 's' }, { t: 'like', k: 'v' }, { t: 'cartoons?', k: 'o' }] },
-        { lab: 'he / she / it', blocks: [{ t: 'Does', k: 'x', add: true }, { t: 'Ben', k: 's' }, { t: 'like', k: 'v' }, { t: 'cartoons?', k: 'o' }] }
+        { lab: 'you / they', blocks: [{ t: 'Do', k: 'n' }, { t: 'you', k: 's' }, { t: 'like', k: 'v' }, { t: 'cartoons?', k: 'o' }] },
+        { lab: 'he / she / it', blocks: [{ t: 'Does', k: 'n', add: true }, { t: 'Ben', k: 's' }, { t: 'like', k: 'v' }, { t: 'cartoons?', k: 'o' }] }
       ], note: 's 只出現一次：在動詞上，或在 does 上' } },
 
     /* ---- 3 情境對話 ---- */

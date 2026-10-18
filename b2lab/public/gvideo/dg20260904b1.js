@@ -191,14 +191,14 @@ window.GVIDEO.dg20260904b1 = {
     { ch: 2, sp: 'N', zh: 'been to 的句型一樣，只是 gone 換成 been。後面常接次數，例如 once、twice、three times。',
       hi: [{ t: 'twice', k: 'been', c: 4 }],
       vis: { type: 'pattern', kick: 'have / has been to 去過', rows: [
-        { lab: '一次', blocks: [{ t: 'I', k: 's' }, { t: 'have been to', k: 'v' }, { t: 'Seoul', k: 'o' }, { t: 'once', k: 'x', add: true }] },
-        { lab: '兩次', blocks: [{ t: 'She', k: 's' }, { t: 'has been to', k: 'v' }, { t: 'Bali', k: 'o' }, { t: 'twice', k: 'x', add: true }] }
+        { lab: '一次', blocks: [{ t: 'I', k: 's' }, { t: 'have been to', k: 'v' }, { t: 'Seoul', k: 'o' }, { t: 'once', k: 'n', add: true }] },
+        { lab: '兩次', blocks: [{ t: 'She', k: 's' }, { t: 'has been to', k: 'v' }, { t: 'Bali', k: 'o' }, { t: 'twice', k: 'n', add: true }] }
       ] } },
     { ch: 2, sp: 'N', zh: '問經驗用 Have you ever been to；說沒去過，用 never been to。',
       hi: [{ t: 'never been to', k: 'ever', c: 2 }],
       vis: { type: 'pattern', kick: 'ever · never', rows: [
-        { lab: '去過嗎', blocks: [{ t: 'Have', k: 'v' }, { t: 'you', k: 's' }, { t: 'ever', k: 'x', add: true }, { t: 'been to', k: 'v' }, { t: 'Paris?', k: 'o' }] },
-        { lab: '沒去過', blocks: [{ t: 'I', k: 's' }, { t: 'have', k: 'v' }, { t: 'never', k: 'x', add: true }, { t: 'been to', k: 'v' }, { t: 'Paris', k: 'o' }] }
+        { lab: '去過嗎', blocks: [{ t: 'Have', k: 'v' }, { t: 'you', k: 's' }, { t: 'ever', k: 'n', add: true }, { t: 'been to', k: 'v' }, { t: 'Paris?', k: 'o' }] },
+        { lab: '沒去過', blocks: [{ t: 'I', k: 's' }, { t: 'have', k: 'v' }, { t: 'never', k: 'n', add: true }, { t: 'been to', k: 'v' }, { t: 'Paris', k: 'o' }] }
       ] } },
     { ch: 2, sp: 'N', zh: '地點如果是 there、here、home 這種字，前面就不加 to。',
       vis: { type: 'family', kick: '不加 to 的地點', core: 'been there', coreCn: '這些字前面不放 to', art: 'dg20260904b1_been', items: [

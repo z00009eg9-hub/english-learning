@@ -188,13 +188,13 @@ window.GVIDEO.dg20261002b2 = {
       hi: [{ t: 'have got', k: 'got', c: 3 }],
       vis: { type: 'pattern', kick: '口語 Spoken', rows: [
         { lab: '直述', blocks: [{ t: 'I', k: 's' }, { t: "'ve got", k: 'v' }, { t: 'a call at two', k: 'o' }] },
-        { lab: '問句', blocks: [{ t: 'Have', k: 'x' }, { t: 'you', k: 's' }, { t: 'got', k: 'v' }, { t: 'a minute?', k: 'o' }] }
+        { lab: '問句', blocks: [{ t: 'Have', k: 'n' }, { t: 'you', k: 's' }, { t: 'got', k: 'v' }, { t: 'a minute?', k: 'o' }] }
       ], note: '過去式不用 had got，直接用 had' } },
     { ch: 2, sp: 'N', zh: '書面版：直接用 have，問句和否定交給 do。',
       hi: [{ t: 'have', k: 'have', c: 4 }],
       vis: { type: 'pattern', kick: '書面 Written', rows: [
         { lab: '直述', blocks: [{ t: 'The hotel', k: 's' }, { t: 'has', k: 'v' }, { t: 'a free shuttle', k: 'o' }] },
-        { lab: '問句', blocks: [{ t: 'Does', k: 'x' }, { t: 'the hotel', k: 's' }, { t: 'have', k: 'v' }, { t: 'a gym?', k: 'o' }] }
+        { lab: '問句', blocks: [{ t: 'Does', k: 'n' }, { t: 'the hotel', k: 's' }, { t: 'have', k: 'v' }, { t: 'a gym?', k: 'o' }] }
       ], note: 'do 和 got 不會同時出現' } },
     { ch: 2, sp: 'N', zh: '想更正式，就把 have 換成更具體的動詞，常用的有這四個。',
       vis: { type: 'family', kick: 'More precise verbs 更具體的動詞', core: 'Instead of have', coreCn: '取代 have', art: 'dg20261002b2_contract', items: [

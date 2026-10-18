@@ -202,8 +202,8 @@ window.GVIDEO.dg20260929a2 = {
     { ch: 2, sp: 'N', zh: 'already、never、just 這三個字，都夾在 had 和過去分詞中間。',
       hi: [{ t: 'already', k: 'mid', c: 2 }],
       vis: { type: 'pattern', kick: '小字放中間 In the middle', rows: [
-        { lab: '已經',     blocks: [{ t: 'She', k: 's' }, { t: 'had', k: 'v' }, { t: 'already', k: 'x', add: true }, { t: 'left', k: 'v' }] },
-        { lab: '從來沒有', blocks: [{ t: 'I', k: 's' }, { t: 'had', k: 'v' }, { t: 'never', k: 'x', add: true }, { t: 'flown', k: 'v' }, { t: 'before', k: 'o' }] }
+        { lab: '已經',     blocks: [{ t: 'She', k: 's' }, { t: 'had', k: 'v' }, { t: 'already', k: 'n', add: true }, { t: 'left', k: 'v' }] },
+        { lab: '從來沒有', blocks: [{ t: 'I', k: 's' }, { t: 'had', k: 'v' }, { t: 'never', k: 'n', add: true }, { t: 'flown', k: 'v' }, { t: 'before', k: 'o' }] }
       ] } },
     { ch: 2, sp: 'N', zh: '後發生的那一件，留在過去式，不要也加 had。',
       hi: [{ t: '過去式', k: 'later', c: 4 }],

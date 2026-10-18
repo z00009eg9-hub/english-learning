@@ -187,8 +187,8 @@ window.GVIDEO.dg20260918b1 = {
       hi: [{ t: 'opened', cn: '過去式', k: 'ago', c: 3 }, { t: 'ten years ago', cn: '往回數十年', k: 'ago', c: 3 }], vis: { type: 'timeline', show: 1, lit: 0, kick: 'One moment or up to now? 那一刻還是到現在？' } },
     { ch: 1, sp: 'N', zh: '事情延續到現在，就換成現在完成式。since 標出起點。',
       hi: [{ t: 'since', k: 'since', c: 4 }], vis: { type: 'timeline', show: 2, pop: true, kick: 'One moment or up to now? 那一刻還是到現在？' } },
-    { ch: 1, sp: 'T', en: 'She has sold noodles on our street since 2016.', cn: '她從 2016 年就在我們這條街賣麵。',
-      hi: [{ t: 'since 2016', cn: '起點', k: 'since', c: 4 }], vis: { type: 'timeline', show: 2, lit: 1, kick: 'One moment or up to now? 那一刻還是到現在？' } },
+    { ch: 1, sp: 'T', en: 'She has sold noodles on our street since then.', cn: '她從那時起就在我們這條街賣麵。',
+      hi: [{ t: 'since then', cn: '起點', k: 'since', c: 4 }], vis: { type: 'timeline', show: 2, lit: 1, kick: 'One moment or up to now? 那一刻還是到現在？' } },
     { ch: 1, sp: 'N', zh: '從起點一路到現在的這一整段，就是 How long 在問的東西。',
       vis: { type: 'timeline', show: 2, dec: true, decText: '這一整段＝How long', kick: 'One moment or up to now? 那一刻還是到現在？' } },
     { ch: 1, sp: 'N', zh: '要說這一段多長，就用 for 接長度，一樣配完成式。',
@@ -200,12 +200,12 @@ window.GVIDEO.dg20260918b1 = {
     { ch: 2, sp: 'N', zh: 'When 的問句：When 加 did，再加主詞和原形動詞。did 要放在主詞前面。',
       hi: [{ t: 'When', k: 'ago', c: 3 }],
       vis: { type: 'pattern', kick: 'When...? 問那一刻', rows: [
-        { lab: '問句', blocks: [{ t: 'When', k: 'x' }, { t: 'did', k: 'x' }, { t: 'you', k: 's' }, { t: 'join', k: 'v' }, { t: 'the band?', k: 'o' }] },
+        { lab: '問句', blocks: [{ t: 'When', k: 'n' }, { t: 'did', k: 'n' }, { t: 'you', k: 's' }, { t: 'join', k: 'v' }, { t: 'the band?', k: 'o' }] },
         { lab: '回答', blocks: [{ t: 'I', k: 's' }, { t: 'joined', k: 'v' }, { t: 'two years ago', k: 'o' }] }
       ], note: '回答用過去式，配 ago、in 2024、last May' } },
     { ch: 2, sp: 'N', zh: 'How long 的問句：How long 加 have，再加主詞和過去分詞。',
       vis: { type: 'pattern', kick: 'How long...? 問到現在多久', rows: [
-        { lab: '問句', blocks: [{ t: 'How long', k: 'x' }, { t: 'have', k: 'x' }, { t: 'you', k: 's' }, { t: 'been', k: 'v' }, { t: 'a member?', k: 'o' }] },
+        { lab: '問句', blocks: [{ t: 'How long', k: 'n' }, { t: 'have', k: 'n' }, { t: 'you', k: 's' }, { t: 'been', k: 'v' }, { t: 'a member?', k: 'o' }] },
         { lab: '回答', blocks: [{ t: 'For two years.', k: 'o' }] },
         { lab: '也可以', blocks: [{ t: 'Since 2024.', k: 'o' }] }
       ], note: '回答 How long：for 接長度、since 接起點' } },

@@ -182,8 +182,8 @@ window.GVIDEO.dg20260915a2 = {
     { ch: 2, sp: 'N', zh: '問句的順序：How long 放最前面，接著 have 加主詞，再接過去分詞。主詞是他或她，要換成 has。',
       hi: [{ t: 'How long', k: 'ask', c: 3 }],
       vis: { type: 'pattern', kick: '問句 Question', rows: [
-        { lab: 'you',    blocks: [{ t: 'How long', k: 'x' }, { t: 'have you', k: 's' }, { t: 'worked', k: 'v' }, { t: 'at the bank?', k: 'o' }] },
-        { lab: 'she',    blocks: [{ t: 'How long', k: 'x' }, { t: 'has she', k: 's' }, { t: 'lived', k: 'v' }, { t: 'in this building?', k: 'o' }] }
+        { lab: 'you',    blocks: [{ t: 'How long', k: 'n' }, { t: 'have you', k: 's' }, { t: 'worked', k: 'v' }, { t: 'at the bank?', k: 'o' }] },
+        { lab: 'she',    blocks: [{ t: 'How long', k: 'n' }, { t: 'has she', k: 's' }, { t: 'lived', k: 'v' }, { t: 'in this building?', k: 'o' }] }
       ], note: 'have 要放在主詞前面：have you、has she' } },
     { ch: 2, sp: 'N', zh: '回答的句型：主詞加 have，再加過去分詞，最後放 for 加長度，或 since 加起點。',
       vis: { type: 'pattern', kick: '回答 Answer', rows: [

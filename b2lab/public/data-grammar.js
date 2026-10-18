@@ -235,7 +235,7 @@ window.GRAMMAR = [
     ]}},
     {h:"三個容易混的字族", bullets:[
       "worry（v. 擔心）→ worried（adj. 感到擔心）→ worrying（adj. 令人擔心的）",
-      "scare（v. 使驚嚇）→ scared（感到害怕）→ scary / scaring（可怕的）",
+      "scare（v. 使驚嚇）→ scared（感到害怕）→ scary（可怕的）",
       "excite → excited（興奮）→ exciting（令人興奮）"
     ], examples:[
       {en:"I was scared because the sound was frightening.",cn:"我很害怕，因為那個聲音很嚇人。",note:"人用 -ed，物用 -ing"},
@@ -272,7 +272,7 @@ window.GRAMMAR = [
       "混合條件句：If I had saved money（過去）, I would be richer now（現在）.",
       "unless ＝ if...not：Unless you hurry, you will miss it."
     ], examples:[
-      {en:"If she had only compared the two salaries, she would have accepted the offer.",cn:"如果她只比較兩份薪水，她就會接受那份工作了。",note:"第三條件句"},
+      {en:"If she had only compared the two salaries, she would have accepted the offer.",cn:"要是她當初有比較這兩份薪水，她就會接受那份工作了。",note:"第三條件句"},
       {en:"If the team had been stable, she would have said yes.",cn:"如果那個團隊穩定，她就會答應了。"}
     ]},
     {h:"其他表達假設的方式", bullets:[
@@ -314,7 +314,7 @@ window.GRAMMAR = [
       "正式、客觀的說明文與報告：The samples were tested twice.",
       "需要提動作者時用 by：It was written by a student."
     ], examples:[
-      {en:"Many products are labelled \"best before\".",cn:"許多產品標示「最佳風味期限」。",note:"誰標的不重要"},
+      {en:"Many products are labeled \"best before\".",cn:"許多產品標示「最佳風味期限」。",note:"誰標的不重要"},
       {en:"Vegetables are put at the back of the fridge and forgotten.",cn:"蔬菜被放到冰箱後面然後被遺忘。",note:"兩個被動可共用 be"}
     ]},
     {h:"雙受詞與不可被動的動詞", bullets:[
@@ -344,7 +344,7 @@ window.GRAMMAR = [
     {h:"關係代名詞怎麼選", table:{head:["先行詞","關係詞","例句"],rows:[
       ["人","who / whom","the plumber who fixed my pipe"],
       ["物、事","which / that","a company which promised to send someone"],
-      ["所有格（人或物）","whose","Mr. Lin, whose flat is on the ground floor"],
+      ["所有格（人或物）","whose","Mr. Lin, whose apartment is on the first floor"],
       ["地點","where","the town where I grew up"],
       ["時間","when","the night when the power went out"],
       ["原因","why","the reason why people leave"]
@@ -355,7 +355,7 @@ window.GRAMMAR = [
       "非限定用法不能用 that，也不能省略關係詞"
     ], examples:[
       {en:"A patient whose face has been damaged may recover confidence.",cn:"臉部受損的病人可能會恢復自信。",note:"whose ＝ 他的"},
-      {en:"Memory formation, which depends on deep sleep, cannot be caught up.",cn:"記憶的形成依賴深層睡眠，無法用補眠追回。",note:"非限定，補充說明"}
+      {en:"Deep sleep, which supports memory formation, is hard to make up for later.",cn:"深層睡眠有助於形成記憶，事後很難補回來。",note:"非限定，補充說明"}
     ]},
     {h:"可以省略關係詞的時機", bullets:[
       "當關係詞是子句的受詞：the book (which) I bought yesterday ✓ 可省略",
@@ -370,7 +370,7 @@ window.GRAMMAR = [
   ],
   quiz:[
     {q:"The engineer ____ designed this system now works abroad.",qCn:"設計這個系統的工程師現在在國外工作。",opts:["which","whose","who","whom"],ans:2,expl:"先行詞是人且當主詞 → who。"},
-    {q:"Mr. Lin, ____ flat is on the ground floor, has lived here for 30 years.",qCn:"林先生的公寓在一樓，他在這裡住了三十年了。",opts:["who","whose","which","that"],ans:1,expl:"所有格 → whose。"},
+    {q:"Mr. Lin, ____ apartment is on the first floor, has lived here for 30 years.",qCn:"林先生的公寓在一樓，他在這裡住了三十年了。",opts:["who","whose","which","that"],ans:1,expl:"所有格 → whose。"},
     {q:"Which sentence is correct?",qCn:"哪一句是正確的？",opts:["The report, that I sent, was long.","The report which I sent it was long.","The report I sent was long.","The report who I sent was long."],ans:2,expl:"關係詞當受詞時可省略；非限定不用 that；不可留下多餘的 it。"},
     {q:"That's the café ____ we first met.",qCn:"那就是我們第一次見面的咖啡廳。",opts:["which","where","that","who"],ans:1,expl:"地點且後面子句完整 → where。"}
   ]
@@ -460,7 +460,7 @@ window.GRAMMAR = [
 {
   id:"g13", level:"B2", title:"Reported Speech", titleCn:"轉述句",
   srcDays:[],
-  summary:"把別人說的話轉成自己的敘述。三個動作：去引號加 that、時態退一格、換人稱與時間詞。",
+  summary:"把別人說的話轉成自己的敘述。三個動作：去引號加 that、時態通常退一格、換人稱與時間詞。",
   sections:[
     {h:"時態退一格對照表", table:{head:["直接引述","轉述後"],rows:[
       ["\"I am tired.\"","He said that he was tired."],
@@ -517,13 +517,13 @@ window.GRAMMAR = [
 {
   id:"g14", level:"B1+", title:"Comparatives & Superlatives", titleCn:"比較級、最高級與倍數",
   srcDays:["20260312"],
-  summary:"B2 很少讓比較級單獨出現：前面要加程度副詞，後面要有比較基準，倍數要用 as ... as。",
+  summary:"B2 常在比較級前加程度副詞（much、slightly），需要時補上比較基準（than…），倍數用 as ... as。",
   sections:[
     {h:"基本變化規則", table:{head:["音節","比較級","最高級","例"],rows:[
       ["單音節","+er","+est","cheap → cheaper → cheapest"],
-      ["單音節（短母音+單子音）","雙寫子音+er","+est","big → bigger → biggest"],
+      ["單音節（短母音+單子音）","雙寫子音+er","雙寫子音+est","big → bigger → biggest"],
       ["-y 結尾","y→ier","y→iest","easy → easier → easiest"],
-      ["兩音節以上","more +","most +","expensive → more expensive → most expensive"],
+      ["多數兩音節以上（-y 結尾見上一列；narrow、quiet 等兩種都可以）","more +","most +","expensive → more expensive → most expensive"],
       ["不規則","—","—","good/better/best · bad/worse/worst · far/further/furthest"]
     ]}},
     {h:"加強語氣的程度副詞", bullets:[
@@ -578,7 +578,7 @@ window.GRAMMAR = [
       ["must have + p.p.","一定是（過去）","He must have forgotten."],
       ["may / might have + p.p.","或許（過去）","A week away might have helped."],
       ["can't have + p.p.","不可能（過去）","She can't have left already."],
-      ["may/might have been + V-ing","很可能一直在（過去）","It may well have been developing for months."]
+      ["may/might have been + V-ing","可能一直在（過去）","It may well have been developing for months."]
     ]}},
     {h:"與「義務／後悔」的用法區分", bullets:[
       "must ＝ 推測（一定是）或義務（必須），看上下文：You must be tired.（推測）／ You must wear a helmet.（義務）",

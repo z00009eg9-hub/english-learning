@@ -191,19 +191,19 @@ window.GVIDEO.dg20260902b1 = {
       hi: [{ t: '過去簡單式', k: 'did', c: 3 }],
       vis: { type: 'pattern', kick: 'Past simple 過去簡單式', rows: [
         { lab: '肯定', blocks: [{ t: 'She', k: 's' }, { t: 'called', k: 'v' }, { t: 'her grandma', k: 'n' }, { t: 'last night', k: 'o' }] },
-        { lab: '問句', blocks: [{ t: 'Did', k: 'x' }, { t: 'you', k: 's' }, { t: 'call', k: 'v' }, { t: 'her', k: 'n' }, { t: 'on Friday?', k: 'o' }] }
+        { lab: '問句', blocks: [{ t: 'Did', k: 'n' }, { t: 'you', k: 's' }, { t: 'call', k: 'v' }, { t: 'her', k: 'n' }, { t: 'on Friday?', k: 'o' }] }
       ], note: '有 yesterday、ago、last… → 過去簡單式' } },
     { ch: 2, sp: 'N', zh: '現在完成式的句型：主詞加 have 或 has，再加過去分詞。ever、never、just、already 都放在中間。',
       hi: [{ t: '現在完成式', k: 'ever', c: 4 }],
       vis: { type: 'pattern', kick: 'Present perfect 現在完成式', rows: [
-        { lab: '經驗', blocks: [{ t: 'I', k: 's' }, { t: 'have', k: 'x' }, { t: 'never', k: 'x', add: true }, { t: 'tried', k: 'v' }, { t: 'durian', k: 'n' }] },
-        { lab: '問句', blocks: [{ t: 'Have', k: 'x' }, { t: 'you', k: 's' }, { t: 'ever', k: 'x', add: true }, { t: 'tried', k: 'v' }, { t: 'durian?', k: 'n' }] }
+        { lab: '經驗', blocks: [{ t: 'I', k: 's' }, { t: 'have', k: 'n' }, { t: 'never', k: 'n', add: true }, { t: 'tried', k: 'v' }, { t: 'durian', k: 'n' }] },
+        { lab: '問句', blocks: [{ t: 'Have', k: 'n' }, { t: 'you', k: 's' }, { t: 'ever', k: 'n', add: true }, { t: 'tried', k: 'v' }, { t: 'durian?', k: 'n' }] }
       ], note: '主詞是 he、she、it 用 has' } },
     { ch: 2, sp: 'N', zh: 'yet 比較特別，只放在否定句和問句的最後面，意思是「還沒」或「了沒」。',
       hi: [{ t: 'yet', k: 'just', c: 2 }],
       vis: { type: 'pattern', kick: 'yet 放句尾', rows: [
-        { lab: '否定', blocks: [{ t: 'I', k: 's' }, { t: "haven't", k: 'x' }, { t: 'packed', k: 'v' }, { t: 'my bag', k: 'n' }, { t: 'yet', k: 'o', add: true }] },
-        { lab: '問句', blocks: [{ t: 'Have', k: 'x' }, { t: 'you', k: 's' }, { t: 'packed', k: 'v' }, { t: 'your bag', k: 'n' }, { t: 'yet?', k: 'o', add: true }] }
+        { lab: '否定', blocks: [{ t: 'I', k: 's' }, { t: "haven't", k: 'n' }, { t: 'packed', k: 'v' }, { t: 'my bag', k: 'n' }, { t: 'yet', k: 'o', add: true }] },
+        { lab: '問句', blocks: [{ t: 'Have', k: 'n' }, { t: 'you', k: 's' }, { t: 'packed', k: 'v' }, { t: 'your bag', k: 'n' }, { t: 'yet?', k: 'o', add: true }] }
       ] } },
     { ch: 2, sp: 'N', zh: '最常跟完成式一起出現的信號字，就是這幾個。',
       vis: { type: 'family', kick: 'Signal words 完成式信號字', core: 'have / has + p.p.', coreCn: '常跟這些字一起出現', art: 'dg20260902b1_pass', items: [

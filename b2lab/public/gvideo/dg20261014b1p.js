@@ -196,7 +196,7 @@ window.GVIDEO.dg20261014b1p = {
     { ch: 2, sp: 'N', zh: '把 be 動詞換成過去式，就變成 was going to，意思是當初有打算，後來沒做成。',
       vis: { type: 'pattern', kick: 'was going to 本來要', rows: [
         { lab: '本來要', blocks: [{ t: 'He', k: 's' }, { t: 'was going to', k: 'v' }, { t: 'text you', k: 'n' }] },
-        { lab: '後來沒做', blocks: [{ t: 'but', k: 'x' }, { t: 'his phone died', k: 'n', add: true }] }
+        { lab: '後來沒做', blocks: [{ t: 'but', k: 'n' }, { t: 'his phone died', k: 'n', add: true }] }
       ], note: '後面常接 but，說明為什麼沒做' } },
 
     /* ---- 3 情境對話 ---- */

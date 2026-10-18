@@ -190,14 +190,14 @@ window.GVIDEO.dg20260911b1p = {
     { ch: 2, sp: 'N', zh: '問狀態：How long，加 have you 或 has she，再加過去分詞。',
       hi: [{ t: '過去分詞', k: 'stv', c: 3 }],
       vis: { type: 'pattern', kick: 'How long + have + 主詞 + p.p.?', rows: [
-        { lab: '認識', blocks: [{ t: 'How long', k: 'x' }, { t: 'have you', k: 's' }, { t: 'known', k: 'v' }, { t: 'the Lees?', k: 'o' }] },
-        { lab: '擁有', blocks: [{ t: 'How long', k: 'x' }, { t: 'has she', k: 's' }, { t: 'had', k: 'v' }, { t: 'that scooter?', k: 'o' }] }
+        { lab: '認識', blocks: [{ t: 'How long', k: 'n' }, { t: 'have you', k: 's' }, { t: 'known', k: 'v' }, { t: 'the Lees?', k: 'o' }] },
+        { lab: '擁有', blocks: [{ t: 'How long', k: 'n' }, { t: 'has she', k: 's' }, { t: 'had', k: 'v' }, { t: 'that scooter?', k: 'o' }] }
       ], note: 'he / she / it → has' } },
     { ch: 2, sp: 'N', zh: '問動作：How long，加 have you been，再加動詞 ing。',
       hi: [{ t: 'have you been', k: 'act', c: 4 }],
       vis: { type: 'pattern', kick: 'How long + have + 主詞 + been + V-ing?', rows: [
-        { lab: '學', blocks: [{ t: 'How long', k: 'x' }, { t: 'have you been', k: 's' }, { t: 'studying', k: 'v' }, { t: 'Korean?', k: 'o' }] },
-        { lab: '開車', blocks: [{ t: 'How long', k: 'x' }, { t: 'has he been', k: 's' }, { t: 'driving', k: 'v' }, { t: 'a taxi?', k: 'o' }] }
+        { lab: '學', blocks: [{ t: 'How long', k: 'n' }, { t: 'have you been', k: 's' }, { t: 'studying', k: 'v' }, { t: 'Korean?', k: 'o' }] },
+        { lab: '開車', blocks: [{ t: 'How long', k: 'n' }, { t: 'has he been', k: 's' }, { t: 'driving', k: 'v' }, { t: 'a taxi?', k: 'o' }] }
       ] } },
     { ch: 2, sp: 'N', zh: 'live 和 work 比較特別，兩種問法都可以，意思差不多。',
       vis: { type: 'family', kick: 'live · work 兩種都行', core: 'live · work', coreCn: '兩種問法都可以', art: 'dg20260911b1p_house', items: [

@@ -178,13 +178,13 @@ window.GVIDEO.dg20260915b1 = {
     { ch: 2, sp: 'N', zh: '動作的句型：How long have you been，再加 V-ing。',
       hi: [{ t: 'How long have you been', k: 'act', c: 3 }],
       vis: { type: 'pattern', kick: '動作 Action', rows: [
-        { lab: '問句', blocks: [{ t: 'How long', k: 'x' }, { t: 'have you been', k: 's' }, { t: 'driving?', k: 'v' }] },
+        { lab: '問句', blocks: [{ t: 'How long', k: 'n' }, { t: 'have you been', k: 's' }, { t: 'driving?', k: 'v' }] },
         { lab: '回答', blocks: [{ t: "I've been", k: 's' }, { t: 'driving', k: 'v' }, { t: 'for six hours', k: 'o' }] }
       ], note: 'been 後面一定接 V-ing' } },
     { ch: 2, sp: 'N', zh: '狀態的句型：How long have you，直接接過去分詞，沒有 been。',
       hi: [{ t: '過去分詞', k: 'state', c: 4 }],
       vis: { type: 'pattern', kick: '狀態 State', rows: [
-        { lab: '問句', blocks: [{ t: 'How long', k: 'x' }, { t: 'have you', k: 's' }, { t: 'owned', k: 'v' }, { t: 'this car?', k: 'o' }] },
+        { lab: '問句', blocks: [{ t: 'How long', k: 'n' }, { t: 'have you', k: 's' }, { t: 'owned', k: 'v' }, { t: 'this car?', k: 'o' }] },
         { lab: '回答', blocks: [{ t: "I've", k: 's' }, { t: 'owned', k: 'v' }, { t: 'it', k: 'n' }, { t: 'since 2019', k: 'o' }] }
       ] } },
     { ch: 2, sp: 'N', zh: '這些都是常見的狀態動詞，看到它們就不要加 ing。',

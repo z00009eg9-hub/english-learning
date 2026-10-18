@@ -199,8 +199,8 @@ window.GVIDEO.dg20260909b1 = {
     { ch: 2, sp: 'N', zh: '問多久：how long 開頭，再把 have 或 has 搬到主詞前面。',
       hi: [{ t: 'how long', k: 'long', c: 2 }],
       vis: { type: 'pattern', kick: 'How long…? 問多久', rows: [
-        { lab: 'you',  blocks: [{ t: 'How long', k: 'x' }, { t: 'have', k: 'v' }, { t: 'you', k: 's' }, { t: 'been learning', k: 'v' }, { t: 'piano?', k: 'n' }] },
-        { lab: 'she',  blocks: [{ t: 'How long', k: 'x' }, { t: 'has', k: 'v' }, { t: 'she', k: 's' }, { t: 'been running?', k: 'v' }] }
+        { lab: 'you',  blocks: [{ t: 'How long', k: 'n' }, { t: 'have', k: 'v' }, { t: 'you', k: 's' }, { t: 'been learning', k: 'v' }, { t: 'piano?', k: 'n' }] },
+        { lab: 'she',  blocks: [{ t: 'How long', k: 'n' }, { t: 'has', k: 'v' }, { t: 'she', k: 's' }, { t: 'been running?', k: 'v' }] }
       ] } },
 
     /* ---- 3 情境對話 ---- */

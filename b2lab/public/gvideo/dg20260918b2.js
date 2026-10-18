@@ -200,8 +200,8 @@ window.GVIDEO.dg20260918b2 = {
     { ch: 2, sp: 'N', zh: '正式的被動寫法：It has been 加過去分詞，後面接 that 子句。',
       hi: [{ t: 'It has been', k: 'pass', c: 2 }],
       vis: { type: 'pattern', kick: 'Formal passive 完成式被動', rows: [
-        { lab: '決定', blocks: [{ t: 'It', k: 's' }, { t: 'has been decided', k: 'v' }, { t: 'that', k: 'x' }, { t: 'the plan will continue', k: 'n' }] },
-        { lab: '報導', blocks: [{ t: 'It', k: 's' }, { t: 'has been reported', k: 'v' }, { t: 'that', k: 'x' }, { t: 'two roads are closed', k: 'n' }] }
+        { lab: '決定', blocks: [{ t: 'It', k: 's' }, { t: 'has been decided', k: 'v' }, { t: 'that', k: 'n' }, { t: 'the plan will continue', k: 'n' }] },
+        { lab: '報導', blocks: [{ t: 'It', k: 's' }, { t: 'has been reported', k: 'v' }, { t: 'that', k: 'n' }, { t: 'two roads are closed', k: 'n' }] }
       ], note: '主詞是 It，所以用 has' } },
 
     /* ---- 3 情境對話 ---- */

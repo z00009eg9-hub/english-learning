@@ -184,8 +184,8 @@ window.GVIDEO.dg20260826b1p = {
     { ch: 2, sp: 'N', zh: '連接詞可以放前面，也可以放中間。放前面的時候，子句後面要加逗號。',
       hi: [{ t: '連接詞', k: 'wn', c: 1 }],
       vis: { type: 'pattern', kick: 'Linker + clause 連接詞＋子句', rows: [
-        { lab: '放前面', blocks: [{ t: 'When', k: 'x' }, { t: 'Ella called,', k: 'v' }, { t: 'I picked up', k: 'v' }] },
-        { lab: '放中間', blocks: [{ t: 'I picked up', k: 'v' }, { t: 'when', k: 'x' }, { t: 'Ella called', k: 'v' }] }
+        { lab: '放前面', blocks: [{ t: 'When', k: 'n' }, { t: 'Ella called,', k: 'v' }, { t: 'I picked up', k: 'v' }] },
+        { lab: '放中間', blocks: [{ t: 'I picked up', k: 'v' }, { t: 'when', k: 'n' }, { t: 'Ella called', k: 'v' }] }
       ], note: '兩邊的動詞都用過去式' } },
     { ch: 2, sp: 'N', zh: '一連串動作的句型：同一個主詞只說一次，動詞用逗號隔開，最後一個前面加 and。',
       hi: [{ t: '一連串動作', k: 'seq', c: 3 }],
@@ -195,8 +195,8 @@ window.GVIDEO.dg20260826b1p = {
     { ch: 2, sp: 'N', zh: 'after 和 before 可以描述同一個順序，只是從不同的一端說起。',
       hi: [{ t: 'after', k: 'ab', c: 4 }, { t: 'before', k: 'ab', c: 4 }],
       vis: { type: 'pattern', kick: 'Same order 同一個順序', rows: [
-        { lab: 'after', blocks: [{ t: 'After', k: 'x' }, { t: 'I showered,', k: 'v' }, { t: 'I ate breakfast', k: 'v' }] },
-        { lab: 'before', blocks: [{ t: 'Before', k: 'x' }, { t: 'I ate breakfast,', k: 'v' }, { t: 'I showered', k: 'v' }] }
+        { lab: 'after', blocks: [{ t: 'After', k: 'n' }, { t: 'I showered,', k: 'v' }, { t: 'I ate breakfast', k: 'v' }] },
+        { lab: 'before', blocks: [{ t: 'Before', k: 'n' }, { t: 'I ate breakfast,', k: 'v' }, { t: 'I showered', k: 'v' }] }
       ], note: '都是先洗澡、再吃早餐' } },
     { ch: 2, sp: 'N', zh: '敘事最常用的時間連接詞，就是這四個。',
       vis: { type: 'family', kick: 'Story linkers 敘事連接詞', core: 'Time linkers', coreCn: '時間連接詞', art: 'dg20260826b1p_order', items: [

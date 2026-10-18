@@ -78,6 +78,7 @@ for(const id of list){
     if(ty==='scene'){ if(!vis.art) E.push(at+'：scene 每句都要指定 vis.art'); else sceneArts.push(vis.art); }
     if(ty==='vs'){ if(!vis.a||!vis.b) E.push(at+'：vs 要有 a、b'); else { needArt(vis.a.art,at); needArt(vis.b.art,at); } }
     if(ty==='family'){ needArt(vis.art,at); if((vis.items||[]).length>4) E.push(at+'：family 最多 4 項（多了手機放不下）'); }
+    if(ty==='pattern'&&(vis.rows||[]).some(r=>(r.blocks||[]).some(b=>b.k==='x'))) E.push(at+'：pattern 不可用 k:"x"（會顯示成紅色刪除線＝錯字）；連接詞、補充字用 k:"n"');
     if(ty==='timeline'&&!(d.timeline||[]).length) E.push(at+'：用了 timeline 但沒有 d.timeline');
     if(ty==='cards'&&!(d.cards||[]).length) E.push(at+'：用了 cards 但沒有 d.cards');
     if(ty==='flow'&&!(d.flow||[]).length) E.push(at+'：用了 flow 但沒有 d.flow');

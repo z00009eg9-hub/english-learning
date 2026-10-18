@@ -230,8 +230,8 @@ window.GVIDEO.dg20261002a2 = {
     { ch: 2, sp: 'N', zh: '那一刻常用 when 或 before 帶出來，後面用過去式。',
       hi: [{ t: '過去式', k: 'pt', c: 3 }],
       vis: { type: 'pattern', kick: '加上那一刻 Add the moment', rows: [
-        { lab: '用 when',   blocks: [{ t: 'She had been cooking', k: 'v' }, { t: 'when', k: 'x' }, { t: 'I arrived', k: 'o' }] },
-        { lab: '用 before', blocks: [{ t: 'We had been walking', k: 'v' }, { t: 'before', k: 'x' }, { t: 'it got dark', k: 'o' }] }
+        { lab: '用 when',   blocks: [{ t: 'She had been cooking', k: 'v' }, { t: 'when', k: 'n' }, { t: 'I arrived', k: 'o' }] },
+        { lab: '用 before', blocks: [{ t: 'We had been walking', k: 'v' }, { t: 'before', k: 'n' }, { t: 'it got dark', k: 'o' }] }
       ], note: 'when／before 後面那一句用過去式' } },
     { ch: 2, sp: 'N', zh: '一下子就發生的事，講不出多久，直接用過去式就好。',
       vis: { type: 'pattern', kick: '一下子 vs 一整段', rows: [

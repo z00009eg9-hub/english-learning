@@ -195,14 +195,14 @@ window.GVIDEO.dg20260824a2 = {
       ] } },
     { ch: 2, sp: 'N', zh: '要問別人的感覺，用 Do 或 Does 開頭，後面的動詞用原形。',
       vis: { type: 'pattern', kick: 'Questions 問感覺', rows: [
-        { lab: '問你', blocks: [{ t: 'Do', k: 'x' }, { t: 'you', k: 's' }, { t: 'like', k: 'v' }, { t: 'jazz?', k: 'o' }] },
-        { lab: '問他', blocks: [{ t: 'Does', k: 'x' }, { t: 'Ken', k: 's' }, { t: 'want', k: 'v' }, { t: 'a cookie?', k: 'o' }] }
+        { lab: '問你', blocks: [{ t: 'Do', k: 'n' }, { t: 'you', k: 's' }, { t: 'like', k: 'v' }, { t: 'jazz?', k: 'o' }] },
+        { lab: '問他', blocks: [{ t: 'Does', k: 'n' }, { t: 'Ken', k: 's' }, { t: 'want', k: 'v' }, { t: 'a cookie?', k: 'o' }] }
       ], note: 'Do / Does + 主詞 + 原形動詞' } },
     { ch: 2, sp: 'N', zh: '如果是現在正在做的動作，才用 be 動詞加 ing。',
       hi: [{ t: 'be 動詞加 ing', k: 'act', c: 3 }],
       vis: { type: 'pattern', kick: 'Actions 正在做的動作', rows: [
         { lab: '正在做', blocks: [{ t: 'She', k: 's' }, { t: 'is cooking', k: 'v' }, { t: 'dinner', k: 'o' }] },
-        { lab: '問正在做', blocks: [{ t: 'Is', k: 'x' }, { t: 'Dad', k: 's' }, { t: 'washing', k: 'v' }, { t: 'the car?', k: 'o' }] }
+        { lab: '問正在做', blocks: [{ t: 'Is', k: 'n' }, { t: 'Dad', k: 's' }, { t: 'washing', k: 'v' }, { t: 'the car?', k: 'o' }] }
       ], note: '看得見的動作：am / is / are + V-ing' } },
 
     /* ---- 3 情境對話 ---- */

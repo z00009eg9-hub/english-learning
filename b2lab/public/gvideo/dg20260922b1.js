@@ -207,8 +207,8 @@ window.GVIDEO.dg20260922b1 = {
     { ch: 2, sp: 'N', zh: '回答的時候跟著問句走：問 Have 就答 have，問 Did 就答 did。',
       hi: [{ t: '答 have', k: 'ans', c: 3 }, { t: '答 did', k: 'ans', c: 4 }],
       vis: { type: 'pattern', kick: 'Short answers 簡答', rows: [
-        { lab: 'Have you…?', blocks: [{ t: 'Yes, I have.', k: 'v' }, { t: "No, I haven't.", k: 'x' }] },
-        { lab: 'Did you…?',  blocks: [{ t: 'Yes, I did.', k: 'v' }, { t: "No, I didn't.", k: 'x' }] }
+        { lab: 'Have you…?', blocks: [{ t: 'Yes, I have.', k: 'v' }, { t: "No, I haven't.", k: 'n' }] },
+        { lab: 'Did you…?',  blocks: [{ t: 'Yes, I did.', k: 'v' }, { t: "No, I didn't.", k: 'n' }] }
       ] } },
     { ch: 2, sp: 'N', zh: '時間詞也能幫你選：yet、ever 偏向完成式；yesterday 就要用過去式。',
       vis: { type: 'family', kick: 'Time signals 時間訊號', core: 'Time signals', coreCn: '聽到哪個字，選哪種問法', art: 'dg20260922b1_note', items: [

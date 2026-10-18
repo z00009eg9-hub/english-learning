@@ -184,24 +184,24 @@ window.GVIDEO.dg20260828b1p = {
     { ch: 2, sp: 'N', zh: '鋪陳場景：先用進行式畫畫面，再用過去式帶出事件。',
       hi: [{ t: '鋪陳場景', k: 'scene', c: 3 }],
       vis: { type: 'pattern', kick: 'Set the scene 鋪陳場景', rows: [
-        { lab: '畫面', blocks: [{ t: 'The baby', k: 's' }, { t: 'was sleeping,', k: 'v' }, { t: 'and', k: 'x' }, { t: 'the rain', k: 's' }, { t: 'was tapping', k: 'v' }, { t: 'on the window', k: 'o' }] },
-        { lab: '事件', blocks: [{ t: 'Then', k: 'x' }, { t: 'someone', k: 's' }, { t: 'knocked', k: 'v' }, { t: 'at the door', k: 'o' }] }
+        { lab: '畫面', blocks: [{ t: 'The baby', k: 's' }, { t: 'was sleeping,', k: 'v' }, { t: 'and', k: 'n' }, { t: 'the rain', k: 's' }, { t: 'was tapping', k: 'v' }, { t: 'on the window', k: 'o' }] },
+        { lab: '事件', blocks: [{ t: 'Then', k: 'n' }, { t: 'someone', k: 's' }, { t: 'knocked', k: 'v' }, { t: 'at the door', k: 'o' }] }
       ], note: '畫面用 was / were + V-ing，事件用過去式' } },
     { ch: 2, sp: 'N', zh: '抱怨句：was 或 were，加 always，再加 V-ing。always 也能換成 constantly。',
       hi: [{ t: 'always', k: 'always', c: 4 }],
       vis: { type: 'pattern', kick: 'was always + V-ing 抱怨句', rows: [
-        { lab: 'always', blocks: [{ t: 'Our neighbor', k: 's' }, { t: 'was always', k: 'x' }, { t: 'parking', k: 'v' }, { t: 'in our spot', k: 'o' }] },
-        { lab: 'constantly', blocks: [{ t: 'The printer', k: 's' }, { t: 'was constantly', k: 'x' }, { t: 'jamming', k: 'v' }] }
+        { lab: 'always', blocks: [{ t: 'Our neighbor', k: 's' }, { t: 'was always', k: 'n' }, { t: 'parking', k: 'v' }, { t: 'in our spot', k: 'o' }] },
+        { lab: 'constantly', blocks: [{ t: 'The printer', k: 's' }, { t: 'was constantly', k: 'n' }, { t: 'jamming', k: 'v' }] }
       ], note: 'always／constantly 放在 was / were 和 V-ing 中間' } },
     { ch: 2, sp: 'N', zh: '只講事實用 often 加過去式；想帶情緒，就換成 was always 加 V-ing。',
       hi: [{ t: 'was always', k: 'always', c: 4 }],
       vis: { type: 'pattern', kick: '事實 vs 情緒 Fact or feeling', rows: [
-        { lab: '只講事實', blocks: [{ t: 'He', k: 's' }, { t: 'often', k: 'x' }, { t: 'turned up', k: 'v' }, { t: 'late', k: 'o' }] },
-        { lab: '帶著情緒', blocks: [{ t: 'He', k: 's' }, { t: 'was always', k: 'x' }, { t: 'turning up', k: 'v' }, { t: 'late!', k: 'o' }] }
+        { lab: '只講事實', blocks: [{ t: 'He', k: 's' }, { t: 'often', k: 'n' }, { t: 'turned up', k: 'v' }, { t: 'late', k: 'o' }] },
+        { lab: '帶著情緒', blocks: [{ t: 'He', k: 's' }, { t: 'was always', k: 'n' }, { t: 'turning up', k: 'v' }, { t: 'late!', k: 'o' }] }
       ] } },
     { ch: 2, sp: 'N', zh: '被動的話，是 was 或 were，加 being，再加過去分詞。',
       vis: { type: 'pattern', kick: 'Passive 被動：was / were being + p.p.', rows: [
-        { lab: '當時正在被漆', blocks: [{ t: 'The bridge', k: 's' }, { t: 'was being', k: 'x' }, { t: 'repainted', k: 'v' }, { t: 'when we drove across', k: 'o' }] }
+        { lab: '當時正在被漆', blocks: [{ t: 'The bridge', k: 's' }, { t: 'was being', k: 'n' }, { t: 'repainted', k: 'v' }, { t: 'when we drove across', k: 'o' }] }
       ], note: '過去 was ＋ 進行 being ＋ 被動 p.p.' } },
 
     /* ---- 3 情境對話 ---- */

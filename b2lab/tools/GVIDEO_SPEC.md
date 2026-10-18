@@ -63,7 +63,7 @@
 - `timelineNow`：「現在」在時間軸上的位置（%，預設 8＝最左邊）。**過去式／完成式單元**把它放中間或右邊（例如 70），項目的 `x` 就能放在「現在」左邊表示過去
 - `cards`：`[{art, lab, who}]` 2–3 項，`lab` ≤ 8 字、`who` ≤ 12 字；可加 `cardsKick`；畫面 `{type:'cards', show, lit?, pop?, kick?}`
 - `flow`：`[{q, a, en}]` 2–3 題，`q` ≤ 18 字、`a` ≤ 6 字、`en` 是公式（例如 `'主詞 + be + V-ing + 時間'`）
-- `pattern`：`rows:[{lab, blocks:[{t, k:'s'|'v'|'o'|'n'|'x', add?}]}]`、`kick`、`note?`
+- `pattern`：`rows:[{lab, blocks:[{t, k:'s'|'v'|'o'|'n', add?}]}]`（s 主詞、v 動詞、o 時間／受詞、n 其他字；**不要用 k:'x'**，它會畫成紅色刪除線＝錯字）、`kick`、`note?`
 - `speak`：情境句 `{type:'speak', n, sit}`（sit＝跟 zh 同一句情境）；答案句 `{type:'speak', n, show:true, sit, a}`，`a` 必須跟該句 `en` 完全一樣
 
 ## 插圖

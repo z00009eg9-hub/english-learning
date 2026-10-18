@@ -187,15 +187,15 @@ window.GVIDEO.dg20261002b1p = {
       ], note: "縮寫：it's got、we've got" } },
     { ch: 2, sp: 'N', zh: '問句和否定有兩套：一套借 do，一套把 have 搬到前面。兩套不要各拿一半。',
       vis: { type: 'pattern', kick: '問句與否定 · 兩套', rows: [
-        { lab: 'do・問句', blocks: [{ t: 'Do', k: 'x' }, { t: 'you', k: 's' }, { t: 'have', k: 'v' }, { t: 'a spare one?', k: 'o' }] },
+        { lab: 'do・問句', blocks: [{ t: 'Do', k: 'n' }, { t: 'you', k: 's' }, { t: 'have', k: 'v' }, { t: 'a spare one?', k: 'o' }] },
         { lab: 'do・否定', blocks: [{ t: 'I', k: 's' }, { t: "don't have", k: 'v' }, { t: 'one', k: 'o' }] },
-        { lab: 'have・問句', blocks: [{ t: 'Have', k: 'x' }, { t: 'you', k: 's' }, { t: 'got', k: 'v' }, { t: 'a spare one?', k: 'o' }] },
+        { lab: 'have・問句', blocks: [{ t: 'Have', k: 'n' }, { t: 'you', k: 's' }, { t: 'got', k: 'v' }, { t: 'a spare one?', k: 'o' }] },
         { lab: 'have・否定', blocks: [{ t: 'I', k: 's' }, { t: "haven't got", k: 'v' }, { t: 'one', k: 'o' }] }
       ], note: '美式英文日常更常用 do 這套' } },
     { ch: 2, sp: 'N', zh: '一離開現在，got 就消失：過去的問句用 Did you have，未來用 will have。',
       hi: [{ t: 'Did you have', k: 'tense', c: 2 }],
       vis: { type: 'pattern', kick: '換時態 · 只剩 have', rows: [
-        { lab: '過去', blocks: [{ t: 'Did', k: 'x' }, { t: 'you', k: 's' }, { t: 'have', k: 'v' }, { t: 'a bike', k: 'n' }, { t: 'in high school?', k: 'o' }] },
+        { lab: '過去', blocks: [{ t: 'Did', k: 'n' }, { t: 'you', k: 's' }, { t: 'have', k: 'v' }, { t: 'a bike', k: 'n' }, { t: 'in high school?', k: 'o' }] },
         { lab: '未來', blocks: [{ t: 'We', k: 's' }, { t: 'will have', k: 'v' }, { t: 'a new coach', k: 'n' }, { t: 'soon', k: 'o' }] }
       ] } },
     { ch: 2, sp: 'N', zh: '這些動作片語裡的 have，都不能加 got。',

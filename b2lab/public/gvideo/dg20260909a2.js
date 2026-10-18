@@ -202,7 +202,7 @@ window.GVIDEO.dg20260909a2 = {
     { ch: 2, sp: 'N', zh: '否定句在 have 後面加 not；問句把 have 或 has 搬到最前面。',
       vis: { type: 'pattern', kick: 'Negative & question 否定與問句', rows: [
         { lab: '否定', blocks: [{ t: 'I', k: 's' }, { t: "haven't been", k: 'v' }, { t: 'sleeping well', k: 'v' }] },
-        { lab: '問句', blocks: [{ t: 'Has', k: 'v' }, { t: 'she', k: 's' }, { t: 'been crying', k: 'v' }, { t: '?', k: 'x' }] }
+        { lab: '問句', blocks: [{ t: 'Has', k: 'v' }, { t: 'she', k: 's' }, { t: 'been crying', k: 'v' }, { t: '?', k: 'n' }] }
       ], note: '問句：Have / Has 放句首' } },
     { ch: 2, sp: 'N', zh: "口語常縮寫：I have been 說成 I've been，she has been 說成 she's been。",
       vis: { type: 'pattern', kick: 'Short forms 口語縮寫', rows: [

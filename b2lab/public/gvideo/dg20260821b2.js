@@ -187,8 +187,8 @@ window.GVIDEO.dg20260821b2 = {
     { ch: 2, sp: 'N', zh: 'always 的位置在 be 動詞和 ing 中間。constantly、forever 也放在同一個位置。',
       hi: [{ t: 'always', k: 'comp', c: 3 }],
       vis: { type: 'pattern', kick: 'be + always + V-ing', rows: [
-        { lab: 'always', blocks: [{ t: 'You', k: 's' }, { t: 'are', k: 'v' }, { t: 'always', k: 'x' }, { t: 'interrupting', k: 'v' }, { t: 'me', k: 'n' }] },
-        { lab: 'forever', blocks: [{ t: 'Our neighbor', k: 's' }, { t: 'is', k: 'v' }, { t: 'forever', k: 'x' }, { t: 'parking', k: 'v' }, { t: 'in our spot', k: 'n' }] }
+        { lab: 'always', blocks: [{ t: 'You', k: 's' }, { t: 'are', k: 'v' }, { t: 'always', k: 'n' }, { t: 'interrupting', k: 'v' }, { t: 'me', k: 'n' }] },
+        { lab: 'forever', blocks: [{ t: 'Our neighbor', k: 's' }, { t: 'is', k: 'v' }, { t: 'forever', k: 'n' }, { t: 'parking', k: 'v' }, { t: 'in our spot', k: 'n' }] }
       ], note: 'always 放在 be 和 V-ing 中間' } },
     { ch: 2, sp: 'N', zh: '講趨勢時，常用 rise、grow、change 這類會變的動詞。',
       hi: [{ t: '趨勢', k: 'trend', c: 4 }],

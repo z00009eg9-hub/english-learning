@@ -215,8 +215,8 @@ window.GVIDEO.dg20260925a2 = {
     { ch: 2, sp: 'N', zh: '問句用 When did 開頭。did 已經是過去式了，所以後面的動詞要回到原形。',
       hi: [{ t: 'When did', k: 'did', c: 4 }],
       vis: { type: 'pattern', kick: 'When did…? 什麼時候', rows: [
-        { lab: '問人', blocks: [{ t: 'When did', k: 'x' }, { t: 'you', k: 's' }, { t: 'call', k: 'v' }, { t: 'Grandpa', k: 'n' }] },
-        { lab: '問事', blocks: [{ t: 'When did', k: 'x' }, { t: 'the rain', k: 's' }, { t: 'stop', k: 'v' }] }
+        { lab: '問人', blocks: [{ t: 'When did', k: 'n' }, { t: 'you', k: 's' }, { t: 'call', k: 'v' }, { t: 'Grandpa', k: 'n' }] },
+        { lab: '問事', blocks: [{ t: 'When did', k: 'n' }, { t: 'the rain', k: 's' }, { t: 'stop', k: 'v' }] }
       ], note: '過去只標一次：did 標了，動詞就用原形' } },
     { ch: 2, sp: 'N', zh: '不講時間的時候：主詞加 have 或 has，再加過去分詞。一加上時間，就換回過去式。',
       hi: [{ t: '過去分詞', k: 'perf', c: 2 }],

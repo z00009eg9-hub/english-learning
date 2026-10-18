@@ -200,14 +200,14 @@ window.GVIDEO.dg20260826a2 = {
     { ch: 2, sp: 'N', zh: "否定句：主詞加 didn't，再加原形動詞。問句：Did 放最前面，接主詞，再接原形動詞。",
       hi: [{ t: "didn't", k: 'did', c: 2 }],
       vis: { type: 'pattern', kick: "Negative & question 否定與問句", rows: [
-        { lab: '否定', blocks: [{ t: 'He', k: 's' }, { t: "didn't", k: 'x' }, { t: 'call', k: 'v' }, { t: 'me', k: 'n' }] },
-        { lab: '問句', blocks: [{ t: 'Did', k: 'x' }, { t: 'you', k: 's' }, { t: 'sleep', k: 'v' }, { t: 'well?', k: 'o' }] }
+        { lab: '否定', blocks: [{ t: 'He', k: 's' }, { t: "didn't", k: 'n' }, { t: 'call', k: 'v' }, { t: 'me', k: 'n' }] },
+        { lab: '問句', blocks: [{ t: 'Did', k: 'n' }, { t: 'you', k: 's' }, { t: 'sleep', k: 'v' }, { t: 'well?', k: 'o' }] }
       ], note: 'did 後面用原形：call，不是 called' } },
     { ch: 2, sp: 'N', zh: "回答 Did 的問句很簡單：Yes, I did，或是 No, I didn't，後面不用再接動詞。",
       hi: [{ t: "No, I didn't", k: 'did', c: 2 }],
       vis: { type: 'pattern', kick: 'Short answers 簡短回答', rows: [
-        { lab: '有', blocks: [{ t: 'Yes,', k: 'x' }, { t: 'I', k: 's' }, { t: 'did', k: 'v' }] },
-        { lab: '沒有', blocks: [{ t: 'No,', k: 'x' }, { t: 'I', k: 's' }, { t: "didn't", k: 'v' }] }
+        { lab: '有', blocks: [{ t: 'Yes,', k: 'n' }, { t: 'I', k: 's' }, { t: 'did', k: 'v' }] },
+        { lab: '沒有', blocks: [{ t: 'No,', k: 'n' }, { t: 'I', k: 's' }, { t: "didn't", k: 'v' }] }
       ] } },
     { ch: 2, sp: 'N', zh: '最常用的不規則動詞，先背這幾個：go、eat、see、buy。',
       vis: { type: 'family', kick: 'Irregular verbs 先背這幾個', core: 'Irregular verbs', coreCn: '不規則動詞', art: 'dg20260826a2_book', items: [

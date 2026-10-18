@@ -182,8 +182,8 @@ window.GVIDEO.dg20260904a2 = {
     { ch: 2, sp: 'N', zh: '否定句在 have 後面加 not，常縮成 haven\'t、hasn\'t，句尾常加 yet；問句把 have、has 搬到最前面。',
       hi: [{ t: 'yet', k: 'yet', c: 1 }],
       vis: { type: 'pattern', kick: "Negative & question 否定與問句", rows: [
-        { lab: '還沒', blocks: [{ t: 'The mail', k: 's' }, { t: "hasn't arrived", k: 'v' }, { t: 'yet', k: 'x', add: true }] },
-        { lab: '了沒', blocks: [{ t: 'Has', k: 'v' }, { t: 'the mail', k: 's' }, { t: 'arrived', k: 'v' }, { t: 'yet?', k: 'x', add: true }] }
+        { lab: '還沒', blocks: [{ t: 'The mail', k: 's' }, { t: "hasn't arrived", k: 'v' }, { t: 'yet', k: 'n', add: true }] },
+        { lab: '了沒', blocks: [{ t: 'Has', k: 'v' }, { t: 'the mail', k: 's' }, { t: 'arrived', k: 'v' }, { t: 'yet?', k: 'n', add: true }] }
       ] } },
     { ch: 2, sp: 'N', zh: '要注意：句子裡一說出明確的時間，像 at ten、yesterday，就要換回過去式。',
       hi: [{ t: '過去式', k: 'past', c: 3 }],

@@ -197,8 +197,8 @@ window.GVIDEO.dg20260819b1p = {
     { ch: 2, sp: 'N', zh: 'if 和 when 的句型：子句用現在式，主句才用 will。兩半的順序可以對調。',
       hi: [{ t: '子句用現在式', k: 'ifw', c: 2 }],
       vis: { type: 'pattern', kick: 'if / when clauses 子句', rows: [
-        { lab: 'if 子句', blocks: [{ t: 'If', k: 'x' }, { t: 'it', k: 's' }, { t: 'snows', k: 'v' }, { t: "we'll stay home", k: 'o' }] },
-        { lab: 'when 子句', blocks: [{ t: 'When', k: 'x' }, { t: 'she', k: 's' }, { t: 'lands', k: 'v' }, { t: "she'll call us", k: 'o' }] }
+        { lab: 'if 子句', blocks: [{ t: 'If', k: 'n' }, { t: 'it', k: 's' }, { t: 'snows', k: 'v' }, { t: "we'll stay home", k: 'o' }] },
+        { lab: 'when 子句', blocks: [{ t: 'When', k: 'n' }, { t: 'she', k: 's' }, { t: 'lands', k: 'v' }, { t: "she'll call us", k: 'o' }] }
       ], note: '子句：現在式　主句：will' } },
     { ch: 2, sp: 'N', zh: '跟 if、when 同一條規則的，還有 as soon as、until、before、after。',
       vis: { type: 'family', kick: 'Same rule 同一條規則', core: 'if / when …', coreCn: '子句裡用現在式', art: 'dg20260819b1p_ifwhen', items: [
@@ -206,8 +206,8 @@ window.GVIDEO.dg20260819b1p = {
       ] } },
     { ch: 2, sp: 'N', zh: '頻率副詞也有細微差別。hardly ever 和 never 本身就是否定，句子裡不用再加 not。',
       vis: { type: 'pattern', kick: 'Frequency 頻率副詞', rows: [
-        { lab: '幾乎不', blocks: [{ t: 'My boss', k: 's' }, { t: 'hardly ever', k: 'x', add: true }, { t: 'takes', k: 'v' }, { t: 'a day off', k: 'o' }] },
-        { lab: '從不', blocks: [{ t: 'He', k: 's' }, { t: 'never', k: 'x', add: true }, { t: 'drinks', k: 'v' }, { t: 'soda', k: 'o' }] }
+        { lab: '幾乎不', blocks: [{ t: 'My boss', k: 's' }, { t: 'hardly ever', k: 'n', add: true }, { t: 'takes', k: 'v' }, { t: 'a day off', k: 'o' }] },
+        { lab: '從不', blocks: [{ t: 'He', k: 's' }, { t: 'never', k: 'n', add: true }, { t: 'drinks', k: 'v' }, { t: 'soda', k: 'o' }] }
       ], note: 'always > usually > often > sometimes > rarely > hardly ever > never' } },
 
     /* ---- 3 情境對話 ---- */

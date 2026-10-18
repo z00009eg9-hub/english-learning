@@ -188,7 +188,7 @@ window.GVIDEO.dg20260929b1 = {
       ] } },
     { ch: 2, sp: 'N', zh: 'by the time 要特別注意：它後面接的是主時間點，用過去式；另一半才用 had。',
       vis: { type: 'pattern', kick: 'By the time 等到那時', rows: [
-        { lab: '主時間點', blocks: [{ t: 'By the time', k: 'x' }, { t: 'they', k: 's' }, { t: 'reached', k: 'v' }, { t: 'the beach', k: 'o' }] },
+        { lab: '主時間點', blocks: [{ t: 'By the time', k: 'n' }, { t: 'they', k: 's' }, { t: 'reached', k: 'v' }, { t: 'the beach', k: 'o' }] },
         { lab: '更早的事', blocks: [{ t: 'the sun', k: 's' }, { t: 'had set', k: 'v', add: true }] }
       ], note: 'by the time 那一半不退格' } },
     { ch: 2, sp: 'N', zh: '不想說是誰做的，就用被動：had been 加過去分詞。',

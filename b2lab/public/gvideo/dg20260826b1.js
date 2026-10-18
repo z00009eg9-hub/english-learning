@@ -198,13 +198,13 @@ window.GVIDEO.dg20260826b1 = {
       hi: [{ t: '過去簡單式', k: 'ps', c: 3 }],
       vis: { type: 'pattern', kick: 'Past simple 過去簡單式', rows: [
         { lab: '肯定', blocks: [{ t: 'Leo', k: 's' }, { t: 'sold', k: 'v' }, { t: 'his old car', k: 'n' }, { t: 'last year', k: 'o' }] },
-        { lab: '問句', blocks: [{ t: 'When', k: 'x' }, { t: 'did', k: 'x' }, { t: 'you', k: 's' }, { t: 'move', k: 'v' }, { t: 'here?', k: 'o' }] }
+        { lab: '問句', blocks: [{ t: 'When', k: 'n' }, { t: 'did', k: 'n' }, { t: 'you', k: 's' }, { t: 'move', k: 'v' }, { t: 'here?', k: 'o' }] }
       ], note: '問「什麼時候」一定用過去簡單式：When did…?' } },
     { ch: 2, sp: 'N', zh: '現在完成式：主詞加 have 或 has，再加過去分詞，句子裡通常不放明確的過去時間。',
       hi: [{ t: '現在完成式', k: 'pp', c: 4 }],
       vis: { type: 'pattern', kick: 'Present perfect 現在完成式', rows: [
-        { lab: '結果', blocks: [{ t: 'I', k: 's' }, { t: 'have', k: 'x' }, { t: 'lost', k: 'v' }, { t: 'my glasses', k: 'n' }] },
-        { lab: '經驗', blocks: [{ t: 'She', k: 's' }, { t: 'has', k: 'x' }, { t: 'lived', k: 'v' }, { t: 'in three countries', k: 'n' }] }
+        { lab: '結果', blocks: [{ t: 'I', k: 's' }, { t: 'have', k: 'n' }, { t: 'lost', k: 'v' }, { t: 'my glasses', k: 'n' }] },
+        { lab: '經驗', blocks: [{ t: 'She', k: 's' }, { t: 'has', k: 'n' }, { t: 'lived', k: 'v' }, { t: 'in three countries', k: 'n' }] }
       ], note: 'lose → lost；live → lived（過去分詞）' } },
     { ch: 2, sp: 'N', zh: '現在完成式常跟這幾組字一起出現：ever、never、already、just、yet。',
       vis: { type: 'family', kick: 'Perfect words 完成式常配的字', core: 'Up to now', coreCn: '一路算到現在', art: 'dg20260826b1_haircut', items: [

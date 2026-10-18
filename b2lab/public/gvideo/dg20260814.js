@@ -206,8 +206,8 @@ window.GVIDEO.dg20260814 = {
     { ch: 2, sp: 'N', zh: 'always 的位置要記好：夾在 be 動詞和 V-ing 中間。也可以換成 constantly。',
       hi: [{ t: 'always', k: 'alw', c: 2 }],
       vis: { type: 'pattern', kick: 'be + always + V-ing', rows: [
-        { lab: 'always',     blocks: [{ t: 'My little brother', k: 's' }, { t: 'is', k: 'v' }, { t: 'always', k: 'x', add: true }, { t: 'eating my snacks', k: 'n' }] },
-        { lab: 'constantly', blocks: [{ t: 'You', k: 's' }, { t: 'are', k: 'v' }, { t: 'constantly', k: 'x', add: true }, { t: 'checking your phone', k: 'n' }] }
+        { lab: 'always',     blocks: [{ t: 'My little brother', k: 's' }, { t: 'is', k: 'v' }, { t: 'always', k: 'n', add: true }, { t: 'eating my snacks', k: 'n' }] },
+        { lab: 'constantly', blocks: [{ t: 'You', k: 's' }, { t: 'are', k: 'v' }, { t: 'constantly', k: 'n', add: true }, { t: 'checking your phone', k: 'n' }] }
       ], note: 'always 夾在 be 和 V-ing 中間' } },
     { ch: 2, sp: 'N', zh: '不過 know、own、need 這類狀態動詞，哪一種用法都不加 ing。',
       vis: { type: 'family', kick: 'Still no -ing 一樣不加 -ing', core: 'State verbs', coreCn: '狀態動詞', art: 'dg20260814_period', items: [

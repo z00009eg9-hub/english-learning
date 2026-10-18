@@ -203,8 +203,8 @@ window.GVIDEO.dg20260821b1p = {
       ], note: '常用動詞：leave、arrive、start、finish、open、close' } },
     { ch: 2, sp: 'N', zh: '問句也分兩種：問對方的計畫，用進行式；問班表或活動時間，就用 do 或 does。',
       vis: { type: 'pattern', kick: 'Questions 兩種問法', rows: [
-        { lab: '問計畫', blocks: [{ t: 'What', k: 'x' }, { t: 'are', k: 'x' }, { t: 'you', k: 's' }, { t: 'doing', k: 'v' }, { t: 'on Saturday?', k: 'o' }] },
-        { lab: '問班表', blocks: [{ t: 'When', k: 'x' }, { t: 'does', k: 'x' }, { t: 'the exhibition', k: 's' }, { t: 'end?', k: 'v' }] }
+        { lab: '問計畫', blocks: [{ t: 'What', k: 'n' }, { t: 'are', k: 'n' }, { t: 'you', k: 's' }, { t: 'doing', k: 'v' }, { t: 'on Saturday?', k: 'o' }] },
+        { lab: '問班表', blocks: [{ t: 'When', k: 'n' }, { t: 'does', k: 'n' }, { t: 'the exhibition', k: 's' }, { t: 'end?', k: 'v' }] }
       ] } },
 
     /* ---- 3 情境對話 ---- */

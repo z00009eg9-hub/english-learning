@@ -178,12 +178,12 @@ window.GVIDEO.dg20260828b1 = {
     /* ---- 2 句型 ---- */
     { ch: 2, sp: 'N', zh: '口訣是：while 接長的，when 接短的。兩種排法，意思一樣。',
       vis: { type: 'pattern', kick: 'while 接長的・when 接短的', rows: [
-        { lab: 'while 開頭', blocks: [{ t: 'While', k: 'x' }, { t: 'I', k: 's' }, { t: 'was shopping,', k: 'v' }, { t: 'my phone', k: 'n' }, { t: 'rang', k: 'o' }] },
-        { lab: 'when 在中間', blocks: [{ t: 'I', k: 's' }, { t: 'was shopping', k: 'v' }, { t: 'when', k: 'x' }, { t: 'my phone', k: 'n' }, { t: 'rang', k: 'o' }] }
+        { lab: 'while 開頭', blocks: [{ t: 'While', k: 'n' }, { t: 'I', k: 's' }, { t: 'was shopping,', k: 'v' }, { t: 'my phone', k: 'n' }, { t: 'rang', k: 'o' }] },
+        { lab: 'when 在中間', blocks: [{ t: 'I', k: 's' }, { t: 'was shopping', k: 'v' }, { t: 'when', k: 'n' }, { t: 'my phone', k: 'n' }, { t: 'rang', k: 'o' }] }
       ], note: '長的用 was / were + V-ing，短的用過去式' } },
     { ch: 2, sp: 'N', zh: 'when 也可以放句首，後面接短的那件事，記得加逗點。',
       vis: { type: 'pattern', kick: 'when 放句首', rows: [
-        { lab: '短的先說', blocks: [{ t: 'When', k: 'x' }, { t: 'my phone', k: 'n' }, { t: 'rang,', k: 'o' }, { t: 'I', k: 's' }, { t: 'was shopping', k: 'v' }] }
+        { lab: '短的先說', blocks: [{ t: 'When', k: 'n' }, { t: 'my phone', k: 'n' }, { t: 'rang,', k: 'o' }, { t: 'I', k: 's' }, { t: 'was shopping', k: 'v' }] }
       ], note: '放句首的子句後面加逗點' } },
     { ch: 2, sp: 'N', zh: '常常扮演「突然發生」的動詞有這幾個：rang、broke、fell、went out。',
       vis: { type: 'family', kick: 'Sudden verbs 突然發生的動詞', core: 'Sudden events', coreCn: '一下就結束的事', art: 'dg20260828b1_flash', items: [
@@ -192,7 +192,7 @@ window.GVIDEO.dg20260828b1 = {
     { ch: 2, sp: 'N', zh: 'while 的兩邊都用進行式，就是兩條平行線，同一段時間各做各的。',
       hi: [{ t: 'while', k: 'both', c: 2 }],
       vis: { type: 'pattern', kick: '兩條平行線 Two long actions', rows: [
-        { lab: '第一條', blocks: [{ t: 'While', k: 'x' }, { t: 'he', k: 's' }, { t: 'was mopping,', k: 'v' }] },
+        { lab: '第一條', blocks: [{ t: 'While', k: 'n' }, { t: 'he', k: 's' }, { t: 'was mopping,', k: 'v' }] },
         { lab: '第二條', blocks: [{ t: 'she', k: 's' }, { t: 'was vacuuming', k: 'v' }] }
       ] } },
 

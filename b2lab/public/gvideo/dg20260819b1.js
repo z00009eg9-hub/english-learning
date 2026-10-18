@@ -204,8 +204,8 @@ window.GVIDEO.dg20260819b1 = {
       ], note: '簡單式 fix → fixes；進行式 be + V-ing' } },
     { ch: 2, sp: 'N', zh: '頻率副詞像 always、often，放在一般動詞的前面，be 動詞的後面。',
       vis: { type: 'pattern', kick: 'Adverbs 頻率副詞的位置', rows: [
-        { lab: '一般動詞前', blocks: [{ t: 'She', k: 's' }, { t: 'often', k: 'x', add: true }, { t: 'forgets', k: 'v' }, { t: 'her umbrella', k: 'o' }] },
-        { lab: 'be 動詞後', blocks: [{ t: 'She', k: 's' }, { t: 'is', k: 'v' }, { t: 'often', k: 'x', add: true }, { t: 'tired after class', k: 'o' }] }
+        { lab: '一般動詞前', blocks: [{ t: 'She', k: 's' }, { t: 'often', k: 'n', add: true }, { t: 'forgets', k: 'v' }, { t: 'her umbrella', k: 'o' }] },
+        { lab: 'be 動詞後', blocks: [{ t: 'She', k: 's' }, { t: 'is', k: 'v' }, { t: 'often', k: 'n', add: true }, { t: 'tired after class', k: 'o' }] }
       ] } },
     { ch: 2, sp: 'N', zh: '還有一群動詞講的是狀態，不是動作，例如 know、want、like、need。它們通常不用進行式。',
       hi: [{ t: '狀態', k: 'state', c: 2 }],

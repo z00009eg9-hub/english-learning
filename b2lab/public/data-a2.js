@@ -434,7 +434,7 @@ grammar:[
   ],
   quiz:[
     {q:"Last night I ____ a headache.",qCn:"昨天晚上我頭痛。",opts:["have","has","had","having"],ans:2,expl:"have 的過去式是 had。"},
-    {q:"The clinic ____ near my home.",qCn:"診所在我家附近。",opts:["is","was","were","did"],ans:1,expl:"單數主詞的過去 be 動詞是 was。"},
+    {q:"Ten years ago, the clinic ____ near my home.",qCn:"十年前，診所在我家附近。",opts:["is","was","were","did"],ans:1,expl:"Ten years ago 是過去，單數主詞的過去 be 動詞是 was。"},
     {q:"I ____ finish the report yesterday.",qCn:"我昨天沒有完成報告。",opts:["didn't","don't","wasn't","doesn't"],ans:0,expl:"過去式否定用 didn't。"},
     {q:"____ you see the doctor yesterday?",qCn:"你昨天有去看醫生嗎？",opts:["Do","Did","Was","Were"],ans:1,expl:"一般動詞的過去疑問句用 Did。"}
   ]

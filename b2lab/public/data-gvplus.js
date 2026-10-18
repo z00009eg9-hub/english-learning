@@ -7749,7 +7749,7 @@ g01: {
       ask: '你想強調的是「多久」嗎？',
       en: 'I have been working since 8 a.m.',
       cn: '我從早上八點就一直在工作。',
-      why: '完成式問「做完了沒、做了幾次」，完成進行式問「做多久了」。所以 How long…? 幾乎都配完成進行式，How many…? 配完成式。' }
+      why: '完成式問「做完了沒、做了幾次」，完成進行式問「做多久了」。所以 How long…? 常配完成進行式（但 know、have 這類狀態動詞要用完成式：How long have you known her?），How many…? 配完成式。' }
   ],
   steps: [
     { label: '情境', text: '同事問你在這間公司待多久了。' },
@@ -7944,7 +7944,7 @@ g03: {
       head: 'the interruption', headCn: '打斷背景的突發事件',
       en: 'I was reading when he called.',
       cn: '我在看書的時候他打來。',
-      pts: ['when + 過去簡單式（短、瞬間）', '主句用過去進行式（長、背景）', '記法：when 後面是「那一下」']
+      pts: ['when 後面通常是過去簡單式（短、瞬間）', '主句用過去進行式（長、背景）', '記法：when 後面是「那一下」']
     },
     right: {
       tag: 'WHILE', tagCn: '接「長的」那件事', icon: 'eye',
@@ -8017,7 +8017,7 @@ g04: {
       ask: '已經做了嗎？',
       en: 'I have already eaten lunch.',
       cn: '我已經吃過午餐了。',
-      why: 'already 用在肯定句，位置在 have 和過去分詞「中間」。放句尾（I have eaten lunch already）也可以，但是語氣變成強調驚訝。注意不要說 I have eaten already lunch。' },
+      why: 'already 用在肯定句，位置在 have 和過去分詞「中間」。放句尾（I have eaten lunch already）也可以，口語很常見。注意不要說 I have eaten already lunch。' },
     { key: 'yet', icon: 'cross',
       title: 'yet', titleCn: 'yet：該做的還沒做',
       ask: '還沒做嗎？做了沒？',
@@ -8279,7 +8279,7 @@ g07: {
         items: [
           { en: 'The lesson is boring.', cn: '這堂課很無聊（它讓人無趣）。', nt: '課是來源' },
           { en: 'The news was surprising.', cn: '那個消息很令人驚訝。', nt: '消息是來源' },
-          { en: 'His behaviour is worrying.', cn: '他的行為令人擔心。', nt: '行為是來源' }
+          { en: 'His behavior is worrying.', cn: '他的行為令人擔心。', nt: '行為是來源' }
         ] }
     ]
   },
@@ -8387,26 +8387,26 @@ g08: {
       ask: '這件事有機會成真嗎？',
       en: 'If it rains tomorrow, we will cancel the picnic.',
       cn: '如果明天下雨，我們就取消野餐。',
-      why: 'if 子句用現在式，主句用 will——這是最重要的一條鐵則：if 後面永遠不放 will。中文說「如果明天會下雨」很自然，但英文不能說 If it will rain。' },
+      why: 'if 子句用現在式，主句用 will——這是最重要的一條規則：if 後面講未來通常不放 will。中文說「如果明天會下雨」很自然，但英文不能說 If it will rain。' },
     { key: 'second', icon: 'fork',
       title: 'Second Conditional', titleCn: '二類：不太可能、純想像',
       ask: '這是白日夢還是真的計畫？',
       en: 'If I won the lottery, I would buy a house.',
       cn: '如果我中樂透，我就買房子。',
-      why: '用過去式講的其實是「現在」，過去式只是拿來標記「這不太可能」。所以固定說 If I were you（不是 If I was you），這是虛擬語氣留下的用法。' },
+      why: '用過去式講的其實是「現在」，過去式只是拿來標記「這不太可能」。所以常說 If I were you（口語也聽得到 If I was you，但 were 比較常見、也比較正式），這是虛擬語氣留下的用法。' },
     { key: 'third', icon: 'cross',
       title: 'Third Conditional', titleCn: '三類：已經改變不了的過去',
       ask: '事情已經發生完了嗎？',
       en: 'If she had studied, she would have passed.',
       cn: '如果她當時有唸書，她就會及格了。',
-      why: '這是後悔句：兩邊都要退到「完成式」。if 子句 had + 過去分詞、主句 would have + 過去分詞。少退一邊就變成半句二類半句三類，是最常見的錯誤。' }
+      why: '這是後悔句：兩邊都要退到「完成式」。if 子句 had + 過去分詞、主句 would have + 過去分詞。講「過去沒做、結果也在過去」時，兩邊都要用完成式；如果結果是在講「現在」，主句才改用 would + 原形（混合句）。' }
   ],
   steps: [
     { label: '情境', text: '你想跟同事說「早知道就先訂位了」。' },
     { label: '先問可能性', text: '訂位的機會已經過去了，改不了——所以是第三類。' },
     { label: 'if 子句', text: 'if + had + 過去分詞：If we had booked a table…' },
-    { label: '主句', text: 'would have + 過去分詞：…we would have got a seat.' },
-    { label: '組出來', text: 'If we had booked a table, we would have got a seat.（如果我們有訂位，就有位子了。）' }
+    { label: '主句', text: 'would have + 過去分詞：…we would have gotten a seat.' },
+    { label: '組出來', text: 'If we had booked a table, we would have gotten a seat.（如果我們有訂位，就有位子了。）' }
   ],
   comparison: {
     title: '第二類 vs 第三類：現在還有救嗎',
@@ -8429,10 +8429,10 @@ g08: {
   quizMore: [
     { q: 'If I ____ you, I would take the job.', opts: ['am', 'was', 'were', 'will be'], ans: 2,
       qCn: '如果我是你，我會接那份工作。',
-      expl: '第二類的固定說法 If I were you（虛擬語氣），不用 was。' },
+      expl: '第二類最常見的說法是 If I were you（虛擬語氣）；口語也有人說 If I was you，但 were 比較常見。' },
     { q: 'If it ____ tomorrow, we will stay at home.', opts: ['will rain', 'rains', 'rained', 'would rain'], ans: 1,
       qCn: '如果明天下雨，我們就待在家。',
-      expl: '第一類：if 子句用現在式，if 後面永遠不放 will。' },
+      expl: '第一類：if 子句用現在式，if 後面講未來通常不放 will。' },
     { q: 'If they had left earlier, they ____ the train.', opts: ['would catch', 'would have caught', 'will catch', 'caught'], ans: 1,
       qCn: '如果他們早點出門，就趕得上火車了。',
       expl: '第三類：if + had + Vpp 搭配 would have + Vpp。' }
@@ -8662,8 +8662,8 @@ g11: {
   steps: [
     { label: '兩個短句', text: 'She was tired. + She went to bed early.' },
     { label: '檢查主詞', text: '兩句主詞都是 She——可以壓縮。' },
-    { label: '砍掉', text: '刪掉次要那句的主詞和 be 動詞：She was tired → tired… 但形容詞前面要留 Being。' },
-    { label: '組出來', text: 'Being tired, she went to bed early.（口語也常直接說 Tired, she went to bed early.）' },
+    { label: '砍掉', text: '刪掉次要那句的主詞和 be 動詞：She was tired → tired… 形容詞前面常留 Being。' },
+    { label: '組出來', text: 'Being tired, she went to bed early.（書面上也可以直接寫 Tired, she went to bed early.）' },
     { label: '主詞不同就不能壓', text: 'Being tired, the bed looked soft.（✗）——累的是她，不是床。主詞要一致：Being tired, she went to bed early.' }
   ],
   comparison: {
@@ -8715,7 +8715,7 @@ g12: {
         items: [
           { en: 'Although it was raining, we went out.', cn: '雖然在下雨，我們還是出門了。', nt: 'Although + 主詞 + 動詞' },
           { en: 'We stayed in because the weather was bad.', cn: '我們待在家，因為天氣很差。', nt: 'because + 完整句子' },
-          { en: 'While some prefer coffee, others prefer tea.', cn: '有些人偏好咖啡，有些人偏好茶。', nt: 'while 也可以表對比' }
+          { en: 'While some prefer coffee, others prefer tea.', cn: '有些人偏好咖啡，另一些人則偏好茶。', nt: 'while 也可以表對比' }
         ] },
       { tag: '接名詞（介系詞）', tone: 2,
         tagCn: 'despite / in spite of / because of / due to',
@@ -8815,7 +8815,7 @@ g13: {
       { a: 'did / have done', b: 'had done', nt: '過去式與現在完成式都退成過去完成式' },
       { a: 'will', b: 'would', nt: '「I will call」→ he would call' },
       { a: 'can', b: 'could', nt: '「I can swim」→ he could swim' },
-      { a: 'may / must', b: 'might / had to', nt: 'must 表義務時退成 had to' }
+      { a: 'may / must', b: 'might / had to', nt: 'must 表義務時常退成 had to（也可以保留 must）' }
     ]
   },
   scenarios: [
@@ -8842,7 +8842,7 @@ g13: {
       ask: '這件事現在還成立嗎？',
       en: 'He says the meeting starts at three.',
       cn: '他說會議三點開始。',
-      why: '轉述動詞是現在式（says / he says）、或內容是永遠成立的事實、或事情還沒發生，都可以不退時態。退不退是語意判斷，不是機械規則。' }
+      why: '轉述動詞是現在式（says / he says）、或內容到現在仍然成立（例如永遠的事實、還會發生的事），都可以不退時態。退不退是語意判斷，不是機械規則。' }
   ],
   steps: [
     { label: '原話', text: 'Tom：「I will finish it tomorrow.」' },
@@ -9022,7 +9022,7 @@ g15: {
       ask: '這是判斷還是規定？',
       en: 'You must submit the form by Friday.',
       cn: '你必須在星期五前交表格。',
-      why: '同一個 must 兩種意思，靠上下文分：後面接 be / have 這類狀態動詞，通常是推測；接動作動詞、又出現期限或規則，通常是義務。' }
+      why: '同一個 must 兩種意思，靠上下文分：後面接 be / have 這類狀態動詞，常常是推測（但 You must have a ticket 是義務）；接動作動詞、又出現期限或規則，通常是義務。' }
   ],
   steps: [
     { label: '情境', text: '你敲門沒人應，屋裡也沒聲音。' },
@@ -9198,7 +9198,7 @@ ga02: {
     { key: 'did', icon: 'cross',
       title: "did / didn't", titleCn: '否定與疑問用 did',
       ask: '這是否定句或疑問句嗎？',
-      en: "Did you eat lunch? — No, I didn't eat.",
+      en: "Did you eat lunch? — No, I didn't.",
       cn: '你吃午餐了嗎？——沒有，我沒吃。',
       why: 'did 已經表示過去了，所以後面的動詞要變回原形。Did you ate（✗）和 I didn’t went（✗）都是把過去式標記了兩次。' }
   ],
@@ -9291,7 +9291,7 @@ ga03: {
     { key: 'someany', icon: 'balance',
       title: 'some or any', titleCn: 'some 與 any 怎麼選',
       ask: '這是肯定句，還是否定／疑問句？',
-      en: "There aren't any seats, but there are some standing places.",
+      en: "There aren't any seats, but there is some standing room.",
       cn: '沒有座位了，但還有一些站位。',
       why: '肯定句用 some，否定和疑問用 any。例外：請求或邀約時用 some 比較客氣（Would you like some tea?），因為你預期對方會答應。' }
   ],
@@ -11001,7 +11001,7 @@ dg20260824b1p: {
     },
     right: {
       tag: 'BE BEING + ADJ', tagCn: '正在表現得…', icon: 'clock',
-      head: 'behaviour now', headCn: '此刻的行為',
+      head: 'behavior now', headCn: '此刻的行為',
       en: 'She is being patient with him.',
       cn: '她現在對他很有耐心。',
       pts: ['講她此刻選擇這樣做', '暗示平常不一定這樣', '只能配「行為」形容詞']
@@ -11625,7 +11625,7 @@ dg20260824b2: {
     { key: 'line', icon: 'cross',
       title: 'The line you must not cross', titleCn: '寫作上的底線',
       ask: '這是要交出去的正式文件嗎？',
-      en: 'The findings indicate a shift in consumer behaviour.',
+      en: 'The findings indicate a shift in consumer behavior.',
       cn: '研究結果顯示消費行為出現轉變。',
       why: '正式寫作、考試作文、學術論文，一律照規則走：狀態動詞不加 -ing。破格是母語者的風格選擇，不是你在考試裡該冒的險。' }
   ],

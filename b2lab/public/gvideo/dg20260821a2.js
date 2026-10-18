@@ -221,8 +221,8 @@ window.GVIDEO.dg20260821a2 = {
     { ch: 2, sp: 'N', zh: '問句記一句話：問習慣，先放 do 或 does；問現在，先放 am、is、are。',
       hi: [{ t: 'do 或 does', k: 'ask', c: 2 }],
       vis: { type: 'pattern', kick: 'Questions 問句', rows: [
-        { lab: '問習慣', blocks: [{ t: 'Does', k: 'x' }, { t: 'she', k: 's' }, { t: 'play', k: 'v' }, { t: 'the piano', k: 'n' }, { t: '?', k: 'x' }] },
-        { lab: '問現在', blocks: [{ t: 'Is', k: 'x' }, { t: 'she', k: 's' }, { t: 'playing', k: 'v' }, { t: 'the piano', k: 'n' }, { t: 'now?', k: 'o' }] }
+        { lab: '問習慣', blocks: [{ t: 'Does', k: 'n' }, { t: 'she', k: 's' }, { t: 'play', k: 'v' }, { t: 'the piano', k: 'n' }, { t: '?', k: 'n' }] },
+        { lab: '問現在', blocks: [{ t: 'Is', k: 'n' }, { t: 'she', k: 's' }, { t: 'playing', k: 'v' }, { t: 'the piano', k: 'n' }, { t: 'now?', k: 'o' }] }
       ], note: 'Does 後面用原形 play；Is 後面用 playing' } },
 
     /* ---- 3 情境對話 ---- */

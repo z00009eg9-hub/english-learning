@@ -218,8 +218,8 @@ window.GVIDEO.dg20260922b1p = {
     { ch: 2, sp: 'N', zh: '問活動也一樣：還在辦用 Have you，已經結束用 Did you。',
       hi: [{ t: 'Have you', k: 'status', c: 2 }],
       vis: { type: 'pattern', kick: 'Events 活動', rows: [
-        { lab: '還在辦', blocks: [{ t: 'Have you', k: 'x' }, { t: 'seen', k: 'v' }, { t: 'the light show', k: 'n' }] },
-        { lab: '已結束', blocks: [{ t: 'Did you', k: 'x' }, { t: 'see', k: 'v' }, { t: 'the light show', k: 'n' }] }
+        { lab: '還在辦', blocks: [{ t: 'Have you', k: 'n' }, { t: 'seen', k: 'v' }, { t: 'the light show', k: 'n' }] },
+        { lab: '已結束', blocks: [{ t: 'Did you', k: 'n' }, { t: 'see', k: 'v' }, { t: 'the light show', k: 'n' }] }
       ], note: '活動辦完了，機會也跟著關上' } },
 
     /* ---- 3 情境對話 ---- */
