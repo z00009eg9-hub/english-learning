@@ -155,6 +155,11 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
   就直接在 `data-book.js` 的 `var I={…}` 補畫（一次最多 6 個），畫法與檢查見 `b2lab/DAILY_TASK.md` **3.5.1**，
   補完跑 `cd b2lab && node tools/check-icons.js`（名稱撞名、色盤、線寬、範圍），沒過不要 commit；
   回報時列出新增了哪些圖示（名稱＋中文＋用在哪）。
+- **用瀏覽器 JS 直接寫 `ST.rw[id]` 的陷阱（2026-10-19 踩過）**：`save()` 的 `cloudPush` 有 1.2 秒 debounce，
+  寫完立刻關分頁／導頁，資料只留在那個瀏覽器、雲端沒有，使用者就看不到。
+  正確做法：`save()` 之後等 ≥6 秒，再用 `await cloudDoc().get()` 讀回雲端確認 `rw[id]` 在，才可跟使用者說「已加入」；
+  不要在確認前關分頁。`ST` 是 `let`，在 JS 工具要用裸 `ST`（`window.ST` 是 undefined）。
+  Claude in Chrome 要用使用者已登入的那個 Chrome（內建瀏覽器窗格沒登入，`ST.rw` 會是空的）。
 - **實景教材是兩人共用**（Anita／Tom），`rwShare()` 會把 `ST.rw` 同步到另一位的
   Firestore 文件；`rwDone`（學習進度）則各自獨立。改這塊前先看懂 `rwShare()`。
 - **生詞本同步（b2wb）**：Speak Up 的 `cloudPush` 必須剔除 `b2wb` 再 `set(merge:true)`。
