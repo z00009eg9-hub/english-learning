@@ -246,6 +246,12 @@ function fromCmp(lessons, idx) {
       const u0 = cleanEn(r.u);
       if (/\bvs\.?\b/i.test(u0)) {
         const g = u0.split(/\s*\bvs\.?\s*/i).map(u => ({ ...r, u: u.toLowerCase(), key: pkey(u) })).filter(x => x.key && (idx.words[x.key] || idx.phrases[x.key]));
+        // 差異說明若是「A 怎樣；B 怎樣」，依各段最先出現的成員字拆給對應成員，避免每個字都顯示同一整句
+        const parts = String(r.sc || '').split(/\s*[；;]\s*/).filter(Boolean);
+        if (g.length >= 2 && parts.length === g.length) {
+          const pick = parts.map(pt => { let best = -1, bi = -1; g.forEach((x, i) => { const at = pt.toLowerCase().indexOf(x.u); if (at >= 0 && (best < 0 || at < best)) { best = at; bi = i; } }); return bi; });
+          if (new Set(pick).size === g.length) pick.forEach((bi, pi) => { g[bi].sc = parts[pi]; });
+        }
         if (g.length >= 2) groups.push({ rows: g, label: g.map(x => x.u).join(' vs. ') });
         return;
       }

@@ -1643,6 +1643,8 @@ body.cnall #v-book span.cnx{display:inline!important}
 .bknum .no{flex-shrink:0;font-weight:700}
 /* 課本錯誤字用正紅色 */
 #v-book .wrong{color:#FF0000}
+/* ✗ 後面的錯誤句：紅色底線 */
+#v-book .wl{text-decoration:underline;text-decoration-color:#FF0000;text-decoration-thickness:2px;text-underline-offset:4px}
 /* 課文檢視（桌機）：整頁跳出 860px 主欄放寬到 1120px——橘色區塊標題、表格、卡片同寬對齊
    有側邊欄時減去 220px，避免內容被遮擋 */
 @media(min-width:920px){
@@ -2901,8 +2903,8 @@ const lvCls = l => l==='B1+'?'B1P':(l==='B2'?'B2':(l==='A2'?'A2':'B1'));
    ✗ / X / ✘ 之後到下一個中文標點或全形括號結束為止，都算「錯的那段」。 */
 function mkWrong(s){
   return esc(s)
-    .replace(/([✗✘Ⅹ×]|\bX(?=\s))\s*([^（）()「」。；，、,;]*)/g,
-             '<span class="wrong">$1 $2</span>')
+    .replace(/([✗✘Ⅹ×]|\bX(?=\s))\s*((?:&#39;|&amp;|&quot;|[^（）()「」。；，、,;])*)/g,
+             '<span class="wrong wl">$1 $2</span>')
     .replace(/(✓|✔)\s*([^（）()「」。；，、,;]*)/g,
              '<span class="right">$1 $2</span>')
     .replace(/<\/span>\s*<span class="wrong">/g,
@@ -6245,7 +6247,10 @@ function relSeen(id){ try{ const o=REL_BY[id]; if(!o) return; ST.relSeen=ST.relS
 function relBodyHTML(o,ctx){
   let h='';
   const fam=o.type==='fam';
-  const rows=o.members.map(m=>{
+  const _dc=o.members.map(m=>relDiffCn(o,m)).filter(Boolean);
+  const _same=!fam&&_dc.length>1&&_dc.every(x=>x===_dc[0]);   // 說明完全相同就只顯示一列
+  const rows=o.members.map((m,mi)=>{
+    if(_same&&mi>0) return '';
     let right='';
     if(fam) right=m.pos?'<span class="rel-pos">'+esc(m.pos)+'</span>':'';
     else { const cn=relDiffCn(o,m)||(o.type==='chain'||o.type==='pat'||o.type==='flow'?m.cn:''); right=cn?'<span class="rel-cn">'+relEm(cn)+'</span>':''; }
@@ -6259,7 +6264,7 @@ function relBodyHTML(o,ctx){
   if(o.tip&&o.type!=='chain'&&o.type!=='flow') h+='<div class="rel-memo cnx">'+relEm(o.tip)+'</div>';
   if((o.pats||[]).length) h+='<div class="rel-k">句型</div><div>'+o.pats.slice(0,3).map(p=>'<span class="rel-pat">'+esc(relPat(p))+'</span>').join('')+'</div>';
   const exN=(o.type==='chain'||o.type==='flow')?1:2;
-  if((o.exs||[]).length) h+='<div class="rel-k">例句</div>'+o.exs.slice(0,exN).map(x=>'<div class="rel-ex"><span class="sent en" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+esc(x.en)+'</span> '+spk(x.en)+(x.cn?'<div class="cnx">'+esc(x.cn)+'</div>':'')+'</div>').join('');
+  if((o.exs||[]).length) h+='<div class="rel-k">例句</div>'+o.exs.filter((x,i,a)=>a.findIndex(y=>y.en===x.en)===i).slice(0,exN).map(x=>'<div class="rel-ex"><span class="sent en" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+esc(x.en)+'</span> '+spk(x.en)+(x.cn?'<div class="cnx">'+esc(x.cn)+'</div>':'')+'</div>').join('');
   if((o.lessonIds||[]).length){
     const src=o.lessonIds.map(id=>{ const b=BOOK_LESSONS.find(x=>x.id===id); return b?'<a href="#" onclick="event.preventDefault();bkGo(\''+id+'\')">'+relMd(b.date)+' '+esc(b.titleCn||b.title||'')+'</a>':''; }).filter(Boolean).join('<br>');
     if(src) h+='<div class="rel-src"><button class="rel-srcb" onclick="var d=this.nextElementSibling;d.hidden=!d.hidden">查看來源</button><div class="rel-srcd" hidden>'+src+'</div></div>';
@@ -7279,11 +7284,15 @@ function bkFillBlanks(en,cn){
   if(!n) return null;
   return out.split(MARK).map(esc).join('<span class="bkblank">____</span>');
 }
+/* 例句標籤／中譯裡的「✗ 錯句」：紅字＋紅色底線（到括號或句尾為止） */
+function exWrong(s){
+  return esc(s).replace(/([✗✘×]|\bX(?=\s))\s*((?:&#39;|&amp;|&quot;|[^（）()；])*)/g,'<span class="wrong wl">$1 $2</span>');
+}
 function bookHTML(b){
   const exRow=e=>'<div class="bkex"><div class="een">'
-    +(e.tag?'<span class="bktag'+(e.tag==='非正式'?' inf':'')+'">'+esc(e.tag)+'</span> ':'')
+    +(e.tag?'<span class="bktag'+(e.tag==='非正式'?' inf':'')+'">'+exWrong(e.tag)+'</span> ':'')
     +'<span class="sent" data-t="'+esc(e.en)+'" onclick="saySent(this)">'+bkHi(e.en,e.hi)+'</span> '+spk(e.en)+'</div>'
-    +(e.cn?'<div class="ecn cnx">'+esc(e.cn)+'</div>':'')+'</div>';
+    +(e.cn?'<div class="ecn cnx">'+exWrong(e.cn)+'</div>':'')+'</div>';
   /* 中譯切換時重新 render：中文節點與第五欄真正加入／移除，而非保留空白欄。 */
   const vtable=list=>{
     const showChinese=CNALL;
