@@ -2901,14 +2901,21 @@ const bkTitle = t => {
 const lvCls = l => l==='B1+'?'B1P':(l==='B2'?'B2':(l==='A2'?'A2':'B1'));
 /* 錯誤示範自動變紅、正確示範自動變綠：
    ✗ / X / ✘ 之後到下一個中文標點或全形括號結束為止，都算「錯的那段」。 */
+/* 「錯誤片語 ✗」：✗ 在後面、緊接 → ／ ； 。 ) 或句尾時，往前把那段英文整段劃紅刪除線。
+   用 \uE000 暫代 ✗，避免後面的 ✗ 規則重複處理；最後由 xRestore 換回。 */
+function xTrail(h){
+  return h.replace(/([A-Za-z](?:&#39;|&amp;|&quot;|[^：:；;。（）()✓✔✗✘→\/／])*?)\s*[✗✘](?=\s*(?:→|\/|／|；|;|。|）|\)|$))/g,'<span class="wrong wl">$1 \uE000</span>');
+}
+const xRestore=h=>h.replace(/\uE000/g,'✗');
 function mkWrong(s){
-  return esc(s)
+  return xTrail(esc(s))
     .replace(/([✗✘Ⅹ×]|\bX(?=\s))\s*((?:&#39;|&amp;|&quot;|[^（）()「」。；，、,;])*)/g,
              '<span class="wrong wl">$1 $2</span>')
     .replace(/(✓|✔)\s*([^（）()「」。；，、,;]*)/g,
              '<span class="right">$1 $2</span>')
     .replace(/<\/span>\s*<span class="wrong">/g,
-             '</span><br><span class="wrong">');
+             '</span><br><span class="wrong">')
+    .replace(//g,'✗');
 }
 /* 句號之後自動換到下一行，長段解說比較好讀 */
 /* 句號斷行。但後面緊接收尾標點（）)］]」』】〉》”’"'）時不斷，
@@ -7218,12 +7225,14 @@ window.mrOpen=mrOpen; window.mrClose=mrClose;
 
 /* 文法重點的 ✅❌✓✗ 自動上色（❌✅ 在文字前面所以連帶後文；✓✗ 在文字後面只上色符號本身） */
 function bkMark(s){
-  return esc(s)
+  return xTrail(esc(s))
+    .replace(/[✗✘]\s*((?:&#39;|&amp;|&quot;|[^（）()；])*)/g,'<span class="wrong wl"> $1</span>')
     .replace(/(不能說|不可說|別說|不能寫成)\s*([A-Za-z][^，。；（(]*)/g,'$1 <span class="wrong strike">$2</span>')
     .replace(/❌\s*([^（(]*)/g,'<span class="wrong wl">❌ $1</span>')
     .replace(/✅\s*([^（(]*)/g,'<span class="right">✅ $1</span>')
     .replace(/(✗|✘|×)/g,'<span class="wrong">$1</span>')
-    .replace(/(✓|✔)/g,'<span class="right">$1</span>');
+    .replace(/(✓|✔)/g,'<span class="right">$1</span>')
+    .replace(//g,'✗');
 }
 /* 文法重點條列：英文例句後面的（中文翻譯…）跟著全站中譯開關隱藏／顯示 */
 function bkPt(p){
