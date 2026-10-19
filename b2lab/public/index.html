@@ -1643,8 +1643,8 @@ body.cnall #v-book span.cnx{display:inline!important}
 .bknum .no{flex-shrink:0;font-weight:700}
 /* 課本錯誤字用正紅色 */
 #v-book .wrong{color:#FF0000}
-/* ✗ 後面的錯誤句：紅色底線 */
-#v-book .wl{text-decoration:underline;text-decoration-color:#FF0000;text-decoration-thickness:2px;text-underline-offset:4px}
+/* ✗／❌ 的錯誤句：紅色刪除線 */
+.wl{text-decoration:line-through;text-decoration-color:#FF0000;text-decoration-thickness:2px}
 /* 課文檢視（桌機）：整頁跳出 860px 主欄放寬到 1120px——橘色區塊標題、表格、卡片同寬對齊
    有側邊欄時減去 220px，避免內容被遮擋 */
 @media(min-width:920px){
@@ -6235,6 +6235,8 @@ const REL_POS={'v.':'動詞','n.':'名詞','adj.':'形容詞','adv.':'副詞','p
   console.info('[關聯] '+REL_ITEMS.length+' 組 · 建於 '+R.built+(missing.length?' · 尚未索引的課：'+missing.join(', ')+'（請跑 node tools/build-rel.js）':' · 全部課次已索引'));
 })();
 function relForLesson(id){ return ((((window.REL||{}).byLesson||{})[id])||[]).map(k=>REL_BY[k]).filter(Boolean); }
+/* 例句裡「句子（❌）」：標記前面那句整句紅色刪除線 */
+function relExEn(en){ return esc(en).replace(/([^（）]+?)(（[❌✗✘×]）)/g,'<span class="wrong wl">$1</span>$2'); }
 function relMd(d){ return d?String(d).slice(5).replace('-','/'):''; }
 function relTitleHTML(o){ const sep='<span class="rel-arr">'+(REL_SEP[o.type]||'/')+'</span>'; return o.members.map(m=>esc(m.en)).join(' '+sep+' '); }
 function relDiffCn(o,m){ const d=(o.diff||[]).find(x=>String(x.en).toLowerCase()===String(m.en).toLowerCase()); return (d&&d.cn)||''; }
@@ -6264,7 +6266,7 @@ function relBodyHTML(o,ctx){
   if(o.tip&&o.type!=='chain'&&o.type!=='flow') h+='<div class="rel-memo cnx">'+relEm(o.tip)+'</div>';
   if((o.pats||[]).length) h+='<div class="rel-k">句型</div><div>'+o.pats.slice(0,3).map(p=>'<span class="rel-pat">'+esc(relPat(p))+'</span>').join('')+'</div>';
   const exN=(o.type==='chain'||o.type==='flow')?1:2;
-  if((o.exs||[]).length) h+='<div class="rel-k">例句</div>'+o.exs.filter((x,i,a)=>a.findIndex(y=>y.en===x.en)===i).slice(0,exN).map(x=>'<div class="rel-ex"><span class="sent en" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+esc(x.en)+'</span> '+spk(x.en)+(x.cn?'<div class="cnx">'+esc(x.cn)+'</div>':'')+'</div>').join('');
+  if((o.exs||[]).length) h+='<div class="rel-k">例句</div>'+o.exs.filter((x,i,a)=>a.findIndex(y=>y.en===x.en)===i).slice(0,exN).map(x=>'<div class="rel-ex"><span class="sent en" data-t="'+esc(x.en)+'" onclick="saySent(this)">'+relExEn(x.en)+'</span> '+spk(x.en)+(x.cn?'<div class="cnx">'+esc(x.cn)+'</div>':'')+'</div>').join('');
   if((o.lessonIds||[]).length){
     const src=o.lessonIds.map(id=>{ const b=BOOK_LESSONS.find(x=>x.id===id); return b?'<a href="#" onclick="event.preventDefault();bkGo(\''+id+'\')">'+relMd(b.date)+' '+esc(b.titleCn||b.title||'')+'</a>':''; }).filter(Boolean).join('<br>');
     if(src) h+='<div class="rel-src"><button class="rel-srcb" onclick="var d=this.nextElementSibling;d.hidden=!d.hidden">查看來源</button><div class="rel-srcd" hidden>'+src+'</div></div>';
@@ -7218,7 +7220,7 @@ window.mrOpen=mrOpen; window.mrClose=mrClose;
 function bkMark(s){
   return esc(s)
     .replace(/(不能說|不可說|別說|不能寫成)\s*([A-Za-z][^，。；（(]*)/g,'$1 <span class="wrong strike">$2</span>')
-    .replace(/❌\s*([^（(]*)/g,'<span class="wrong">❌ $1</span>')
+    .replace(/❌\s*([^（(]*)/g,'<span class="wrong wl">❌ $1</span>')
     .replace(/✅\s*([^（(]*)/g,'<span class="right">✅ $1</span>')
     .replace(/(✗|✘|×)/g,'<span class="wrong">$1</span>')
     .replace(/(✓|✔)/g,'<span class="right">$1</span>');
@@ -7284,7 +7286,7 @@ function bkFillBlanks(en,cn){
   if(!n) return null;
   return out.split(MARK).map(esc).join('<span class="bkblank">____</span>');
 }
-/* 例句標籤／中譯裡的「✗ 錯句」：紅字＋紅色底線（到括號或句尾為止） */
+/* 例句標籤／中譯裡的「✗ 錯句」：紅字＋紅色刪除線（到括號或句尾為止） */
 function exWrong(s){
   return esc(s).replace(/([✗✘×]|\bX(?=\s))\s*((?:&#39;|&amp;|&quot;|[^（）()；])*)/g,'<span class="wrong wl">$1 $2</span>');
 }
