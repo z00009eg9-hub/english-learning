@@ -23,6 +23,10 @@ const COPY = {
 for (const gs of ['article-to-paragraphs', 'fix-table-layout', 'prose-to-paragraphs', 'restyle-and-prose', 'restyle-format'])
   COPY['.claude/skills/english-learning/' + gs + '.gs'] = '.agents/skills/english-learning/' + gs + '.gs';
 
+/* references/ 拆檔（SKILL.md 內以「先讀 references/…」指向，Codex 也要有） */
+for (const ref of ['flow-e-apps-script', 'flow-h-b2-book'])
+  COPY['.claude/skills/english-learning/references/' + ref + '.md'] = '.agents/skills/english-learning/references/' + ref + '.md';
+
 /* slash command 轉成 skill：加上 Codex 要的 frontmatter 包裝，內文照抄 */
 const WRAP = {
   'create-lesson-doc': '.claude/commands/create-lesson-doc.md',
