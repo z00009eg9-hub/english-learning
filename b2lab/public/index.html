@@ -754,6 +754,8 @@ body.cnall .ucn{display:block}
 #v-work .wk3d{--w3d-accent:var(--accent);--w3d-border:var(--line);--w3d-button-bg:var(--card)}
 #v-work .wk3d .w3d-stage{border:0;border-radius:10px;background:#fdf6ec}
 #v-work .bkc-th .lthumb{width:100%;height:100%}
+/* 右欄部件比左欄長：兩欄時 3D 畫面釘在左邊跟著捲（同閱讀頁 .mag.pin 的做法，只是釘的是左欄），底部不再留白 */
+@container mag (min-width:840px){ #v-work .mag>div:first-child{position:sticky;top:58px} }
 @container mag (max-width:839px){
   .mag{grid-template-columns:1fr}                                  /* 空間不足 → 單欄：主內容 ↓ 單字 */
 }
