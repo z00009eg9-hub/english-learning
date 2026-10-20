@@ -1491,9 +1491,9 @@ body.cnall #v-book span.cnx{display:inline!important}
   #sidebar.collapsed .sb-toggle button svg{transform:rotate(180deg)}
   nav{display:none!important}
   header{z-index:60}
-  main{margin-left:var(--sb-w);transition:margin-left .3s cubic-bezier(.4,0,.2,1)}
+  main{margin-left:var(--sb-w);transition:margin-left .3s cubic-bezier(.4,0,.2,1);padding-bottom:16px}   /* 電腦版沒有底部導覽列，不必留手機用的 68px；跟上方 padding 一致 */
   body.sb-col{--sb-w:64px}
-  body{padding-bottom:20px}
+  body{padding-bottom:0}
 }
 /* streak badge in header (desktop：無膠囊) */
 .hd-streak{font-size:13px;font-weight:700;color:rgba(255,255,255,.9);
