@@ -1,5 +1,5 @@
 export const EQUIP = [{
-  id: 'cmm-arm', en: 'Measurement Workstation', zh: '量測工作站',
+  id: 'cmm-arm', en: 'Measurement Workstation', zh: '量測工作站', icon: 'gauge',
   note: '依照片建構 · 非尺寸精確模型',
   parts: [
     { n: 1, en: 'Granite surface plate', zh: '花崗石平台', ex: 'Wipe the granite surface plate before the next inspection.', exCn: '下次檢查前，先把花崗石平台擦乾淨。', desc: '放工件的平台，量之前先擦乾淨。', point: [-1.15,1.65,.65], cam: [4,3.4,5], target: [-.45,1.25,0] },

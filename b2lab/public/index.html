@@ -746,7 +746,14 @@ body.cnall .ucn{display:block}
    判斷依據是「內容區實際可用寬度」而不是裝置寬度——側邊欄收合後多出來的空間，
    會先讓左欄變寬（fr 比例愈往寬螢幕愈偏向左欄），右欄則維持適合看單字的寬度。
    .stack / .solo（右欄空或需要流排）仍走上面的規則，優先權比這裡高。 */
-#v-read,#v-real{container-type:inline-size;container-name:mag}
+#v-read,#v-real,#v-work{container-type:inline-size;container-name:mag}
+/* 職場・設備 3D：部件清單沿用 wpbox；選到的部件常亮（同 wpitem.flash），3D 編號吃網站配色 */
+#v-work .wkp{cursor:pointer;border-radius:10px;padding:9px 8px}
+#v-work .wkp.on{background:#fff3dd;box-shadow:0 0 0 2px #e8b13a inset}
+#v-work .wkp .desc{font-size:var(--font-def);line-height:var(--lh-body);color:var(--ink2);margin-top:4px}
+#v-work .wk3d{--w3d-accent:var(--accent);--w3d-border:var(--line);--w3d-button-bg:var(--card)}
+#v-work .wk3d .w3d-stage{border:0;border-radius:10px;background:#fdf6ec}
+#v-work .bkc-th .lthumb{width:100%;height:100%}
 @container mag (max-width:839px){
   .mag{grid-template-columns:1fr}                                  /* 空間不足 → 單欄：主內容 ↓ 單字 */
 }
@@ -6022,6 +6029,38 @@ function wkDestroy3d(){ if(wk3d){ try{ wk3d.destroy(); }catch(e){} wk3d=null; } 
 function wkOpenLesson(id){ FROM_TAB='work'; go('book','work'); bkGo(id); }
 function wkOpenEquip(id){ wkEquip=id; sbAutoCollapse(); RENDER.work(); window.scrollTo(0,0); }
 function wkEquipClose(){ wkDestroy3d(); wkEquip=null; sbAutoExpand(); RENDER.work(); window.scrollTo(0,0); }
+let wkRot=false;
+function wkEquipHTML(e){
+  const parts=e.parts||[];
+  return '<div class="magttl">'
+   +'<h2>'+tBack('work')+esc(e.en)+'</h2>'
+   +'<div class="cn">'+esc(e.zh)+'</div>'
+   +'<div class="bar"><span class="magbadge">🏭 設備 3D</span><span class="magbadge">'+parts.length+' 個部件</span></div>'
+   +(e.note?'<div class="set">'+esc(e.note)+'</div>':'')
+   +'</div>'
+   +'<div class="mag">'
+   +'<div><div class="card">'
+   +'<div class="row" style="margin-bottom:11px;align-items:center">'
+   +'<button class="btn ghost sm" onclick="wk3d&&wk3d.reset()">↺ 全景</button>'
+   +'<button class="btn ghost sm" id="wk-rot" onclick="wk3d&&wk3d.setAutoRotate(!wkRot)">⟳ 自動旋轉</button>'
+   +'<span class="muted" style="margin-left:auto;font-size:var(--font-meta)">拖曳旋轉・滾輪／雙指縮放・點編號</span></div>'
+   +'<div id="wk-3d" class="wk3d"></div></div></div>'
+   +'<div><div class="wpbox"><div class="wphead">▼ Parts<span class="zh">設備部件</span></div><div class="wpbody">'
+   +parts.map((p,i)=>'<div class="wpitem wkp'+(i?'':' on')+'" id="wkp-'+p.n+'" onclick="wkPick('+i+')">'
+     +'<div class="wpline"><span class="n">'+p.n+'.</span> '+esc(p.en)+' '+spk(p.en)+'</div>'
+     +'<div class="zh">'+esc(p.zh)+'</div>'
+     +(p.desc?'<div class="desc">'+esc(p.desc)+'</div>':'')
+     +(p.ex?'<div class="exs">'+bkHi(p.ex,p.en)+' '+spk(p.ex)+(p.exCn?'<div class="excn">'+esc(p.exCn)+'</div>':'')+'</div>':'')
+     +'</div>').join('')
+   +'</div></div></div>'
+   +'</div>';
+}
+/* 點右欄部件 → 3D 鏡頭移過去；點 3D 編號 → onPart 回來標亮右欄（喇叭按鈕自己會擋掉冒泡） */
+function wkPick(i){ if(wk3d) wk3d.select(i); }
+function wkMark(n){
+  document.querySelectorAll('#v-work .wkp').forEach(el=>el.classList.toggle('on',el.id==='wkp-'+n));
+}
+window.wkPick=wkPick;
 function wkLoadEquip(){
   if(wkEquipList||wkLoadErr) return Promise.resolve(wkEquipList);
   return import('./work3d/index.js').then(m=>{ wkEquipList=m.list(); window._wkMod=m; return wkEquipList; })
@@ -6034,12 +6073,15 @@ RENDER.work=function(){
   wkDestroy3d();
   v.classList.toggle('wkopen',!!wkEquip);
   if(wkEquip){
-    v.innerHTML='<div class="card">'+tBack('work')+'<div id="wk-3d"></div></div>';
-    const box=$('wk-3d'), id=wkEquip;
+    const id=wkEquip;
+    v.innerHTML='<div class="muted">載入中…</div>';
     wkLoadEquip().then(()=>{
-      if(wkEquip!==id||!$('wk-3d')||wk3d) return;
-      if(!window._wkMod){ box.innerHTML='<div class="muted">3D 模組載入失敗，請稍後再試。</div>'; return; }
-      wk3d=window._wkMod.mount(box,id,{speak:t=>say(t)});
+      if(wkEquip!==id||TAB!=='work'||wk3d) return;
+      const e=window._wkMod&&window._wkMod.EQUIP.find(x=>x.id===id);
+      if(!e){ v.innerHTML='<div class="card">'+tBack('work')+'3D 模組載入失敗，請稍後再試。</div>'; return; }
+      v.innerHTML=wkEquipHTML(e); updMback();
+      wkRot=false;
+      wk3d=window._wkMod.mount($('wk-3d'),id,{stageOnly:true,onPart:p=>wkMark(p.n),onRotate:on=>{ wkRot=on; const b=$('wk-rot'); if(b) b.classList.toggle('on',on); }});
     });
     return;
   }
@@ -6054,7 +6096,7 @@ RENDER.work=function(){
   wkLoadEquip().then(list=>{
     const el=$('wk-eq'); if(!el) return;
     el.innerHTML=list&&list.length
-      ? list.map(e=>'<div class="bkc" role="listitem" onclick="wkOpenEquip(\''+e.id+'\')"><div class="bkc-bd"><div class="bkc-th ico">🏭</div><div class="bkc-tx">'
+      ? list.map(e=>'<div class="bkc" role="listitem" onclick="wkOpenEquip(\''+e.id+'\')"><div class="bkc-bd"><div class="bkc-th">'+iconThumb((window.BOOK_ICONS||{})[e.icon]||(window.BOOK_ICONS||{}).gauge||'')+'</div><div class="bkc-tx">'
           +'<div class="bkc-en">'+esc(e.en)+'</div><div class="bkc-cn">'+esc(e.zh)+'</div></div></div></div>').join('')
       : '<div class="muted">設備 3D 暫時無法載入。</div>';
   });
