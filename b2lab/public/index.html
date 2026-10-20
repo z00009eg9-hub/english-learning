@@ -3997,7 +3997,7 @@ function rdProg(list){
 RENDER.read=function(){
   const v=$('v-read');
   v.classList.toggle('rdopen',!!rdOpen);
-  if(rdOpen){ v.innerHTML=readerHTML(rdOpen); rebalanceMag(); return; }
+  if(rdOpen){ v.innerHTML=readerHTML(rdOpen); rebalanceMag(); fillParaGap(); setTimeout(fillParaGap,500); return; }
   const {base,list}=rdFiltered();
   const kb=[['orig','✍️ 原創分級 '+ORIG_ARTS.length],['daily','📅 每日新文章 '+DAILY_ARTS.length],['note','📓 筆記文章 '+NOTE_ARTS.length],['all','全部']];
   const lb=[['all','全部程度']].concat(band().map(l=>[l,l]));
@@ -4040,6 +4040,26 @@ function rdQ(val){
   const f=$('rd-fill'); if(f) f.style.width=p.pct+'%';
 }
 /* 兩欄高度差太多就自動改版：內文全寬 + 單字片語雙欄流排 */
+/* 兩欄時文章卡片被拉到跟右欄單字卡同高；多出來的空間平均分到段落之間（每段最多加 40px），最後一段貼近卡片底部 */
+function fillParaGap(){
+  const box=document.getElementById('paras'); if(!box) return;
+  const ps=[].slice.call(box.querySelectorAll(':scope>.para'));
+  ps.forEach(p=>{ p.style.marginBottom=''; });
+  const mag=box.closest('.mag'), card=box.closest('.card');
+  if(!mag||!card||ps.length<2||!mag.children[1]) return;
+  if(getComputedStyle(mag).gridTemplateColumns.trim().split(/\s+/).length<2) return;   // 單欄不處理
+  const cs=getComputedStyle(card);
+  const inner=card.getBoundingClientRect().bottom-parseFloat(cs.paddingBottom)-parseFloat(cs.borderBottomWidth);
+  const last=ps[ps.length-1];
+  const extra=inner-(last.getBoundingClientRect().bottom+parseFloat(getComputedStyle(last).marginBottom));
+  if(extra<4) return;
+  const add=Math.min(40,extra/(ps.length-1));
+  ps.slice(0,-1).forEach(p=>{ p.style.marginBottom=(16+add)+'px'; });
+}
+let _fpgT=0;
+function fillParaGapSoon(){ clearTimeout(_fpgT); _fpgT=setTimeout(fillParaGap,60); }
+window.addEventListener('resize',fillParaGapSoon);
+new MutationObserver(fillParaGapSoon).observe(document.body,{attributes:true,attributeFilter:['class']});
 function rebalanceMag(sel){
   const mag=document.querySelector(sel||'#v-read .mag');
   if(!mag||!mag.children[1]) return;
@@ -4483,6 +4503,7 @@ window.goUnit=goUnit;
 function togCn(i){
   const on=$('p'+i).classList.toggle('showcn');
   const b=$('cnb'+i); if(b) b.classList.toggle('on',on);   // 按下去要看得出開了
+  fillParaGapSoon();
 }
 function cnAll(on){
   document.querySelectorAll('.para').forEach(p=>p.classList.toggle('showcn',!!on));
@@ -4490,6 +4511,7 @@ function cnAll(on){
   const a=$('btn-cn-show'), b=$('btn-cn-hide');
   if(a) a.classList.toggle('on',!!on);
   if(b) b.classList.toggle('on',!on);
+  fillParaGapSoon();
 }
 /* 朗讀全文：一句一句唸，唸到哪一句就把那一句反黃並捲進畫面 */
 let readSeq=null;
