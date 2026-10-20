@@ -273,6 +273,11 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
   **不要用 JavaScript 去算 viewport 或判斷裝置型號。**
 - 註解用繁體中文，寫「為什麼這樣做」而不是「這行在做什麼」，
   跟現有註解風格一致。
+- **B2 Read 新頁面／外掛模組沿用同一套版面（2026-10-20 使用者要求「同一套風格」）**：
+  模組（如 work3d）只畫內容本體，不自帶標題、返回鍵、清單樣式。內頁標題一律
+  `.magttl`＋`tBack()`（`‹` 在 h2 裡、貼標題左邊）；雙欄用 `.mag`，右欄清單用
+  `wpbox / wpitem`；列表卡片用 `.bkc`，縮圖用 `BOOK_ICONS` 線稿（`iconThumb`），不用 emoji。
+  曾經因為模組自畫標題，`‹` 跑到卡片上方另起一行、風格跟閱讀頁不一致。
 
 ---
 
