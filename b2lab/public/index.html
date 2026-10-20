@@ -2811,6 +2811,7 @@ nav button{font-size:11px}
   <div class="sb-nav">
     <button id="sb-daily" class="on" onclick="go('daily')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span class="sb-label">今日</span><span class="sb-tip">今日</span></button>
     <button id="sb-book" onclick="go('book')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5z"/></svg><span class="sb-label">課本</span><span class="sb-tip">課本</span></button>
+    <button id="sb-work" onclick="go('work')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M2 13h20"/></svg><span class="sb-label">職場</span><span class="sb-tip">職場</span></button>
     <button id="sb-read" onclick="go('read')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg><span class="sb-label">閱讀</span><span class="sb-tip">閱讀</span></button>
     <button id="sb-listen" onclick="go('listen')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg><span class="sb-label">聽力</span><span class="sb-tip">聽力</span></button>
     <button id="sb-real" onclick="go('real')"><svg class="sb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8.5l-6 3.5 6 3.5z"/></svg><span class="sb-label">實景</span><span class="sb-tip">實景</span></button>
@@ -2826,6 +2827,7 @@ nav button{font-size:11px}
   <section id="v-daily"></section>
   <section id="v-read" hidden></section>
   <section id="v-book" hidden></section>
+  <section id="v-work" hidden></section>
   <section id="v-listen" hidden></section>
   <section id="v-real" hidden></section>
   <section id="v-vocab" hidden></section>
@@ -2857,6 +2859,7 @@ nav button{font-size:11px}
   <div class="ms-panel" role="dialog" aria-label="更多功能">
     <div class="ms-grip"></div>
     <div class="ms-grid">
+      <button id="m-work" onclick="moreGo('work')"><i></i><b>職場</b><span>稽核英文＋設備 3D</span></button>
       <button id="m-listen" onclick="moreGo('listen')"><i></i><b>聽力</b><span>影片＋逐字稿跟讀</span></button>
       <button id="m-real" onclick="moreGo('real')"><i></i><b>實景</b><span>真實語速的影片</span></button>
       <button id="m-prac" onclick="moreGo('vocab')"><i></i><b>單字卡</b><span>間隔複習與收藏字</span></button>
@@ -3616,7 +3619,7 @@ const RENDER={};
 const NAVMAP={vocab:'prac'};
 /* 手機（≤640px）總導覽模式：進站先到導覽頁，分區內沒有底部 nav，返回靠「← 首頁」或手機返回手勢 */
 const isMobileNav=()=>window.matchMedia('(max-width:640px)').matches;
-const TAB_NAME={home:'B2 Read',daily:'今日',book:'課本',read:'閱讀',gram:'文法',listen:'聽力',real:'實景',vocab:'單字卡',prog:'進度'};
+const TAB_NAME={home:'B2 Read',daily:'今日',book:'課本',read:'閱讀',gram:'文法',listen:'聽力',real:'實景',vocab:'單字卡',work:'職場',prog:'進度'};
 let NAV_POP=false;
 function go(t,visualTab){
   const prev=TAB;
@@ -3628,15 +3631,17 @@ function go(t,visualTab){
   /* 從導覽頁進分區時記一筆 history，手機返回手勢才會回導覽頁而不是直接離開網站 */
   if(isMobileNav() && !NAV_POP && t!=='home' && prev==='home'){ try{ history.pushState({b2:'sec'},''); }catch(e){} }
   const vt=NAVMAP[visualTab||t]||visualTab||t;
-  ['home','daily','read','book','listen','real','vocab','gram','prog'].forEach(k=>{ $('v-'+k).hidden = (k!==t); });
-  ['daily','read','book','listen','real','prac','gram','prog'].forEach(k=>{
+  ['home','daily','read','book','work','listen','real','vocab','gram','prog'].forEach(k=>{ $('v-'+k).hidden = (k!==t); });
+  ['daily','read','book','work','listen','real','prac','gram','prog'].forEach(k=>{
     const b=$('t-'+k); if(b) b.classList.toggle('on', k===vt);
     const sb=$('sb-'+k); if(sb) sb.classList.toggle('on', k===vt);
     const mb=$('m-'+k); if(mb) mb.classList.toggle('on', k===vt);
   });
   /* 手機底部的「更多」：目前分頁收在它裡面時，它亮起 */
-  const mo=$('t-more'); if(mo) mo.classList.toggle('on', ['listen','real','prac','prog'].includes(vt));
+  const mo=$('t-more'); if(mo) mo.classList.toggle('on', ['work','listen','real','prac','prog'].includes(vt));
   if(t!=='book') bkSkipLast=false;
+  if(FROM_TAB==='work'&&visualTab!=='work') FROM_TAB=null;   /* 只有從職場頁點進課文才帶「返回職場」 */
+  if(t!=='work') wkDestroy3d();
   if(t!=='listen') destroyPlayer();
   if(t!=='listen'&&typeof recFinish==='function') recFinish();   // 換分頁就停止錄音、釋放麥克風
   hideGloss();
@@ -3654,13 +3659,13 @@ window.moreTog=moreTog; window.moreGo=moreGo;
 
 /* ---------- 手機總導覽頁 ---------- */
 /* 首頁／更多選單圖示：沿用課本封面的彩色線稿圖示庫（BOOK_ICONS），圓形白底＋米色框 */
-const HOME_IC_KEY={book:'book',read:'notebook',gram:'board',listen:'headphones',real:'camera',vocab:'bulb',audit:'factory',prog:'chartUp',daily:'sun'};
+const HOME_IC_KEY={book:'book',read:'notebook',gram:'board',listen:'headphones',real:'camera',vocab:'bulb',work:'factory',prog:'chartUp',daily:'sun'};
 function homeIc(k){
   const I=window.BOOK_ICONS||{}, inner=I[HOME_IC_KEY[k]]||'';
   return '<svg viewBox="-6.7 -6.7 77.4 77.4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="32" cy="32" r="33" fill="#fff" stroke="#f7e3c9" stroke-width="2.5"/>'+inner+'</svg>';
 }
 const HOME_IC=new Proxy({},{get:(_,k)=>homeIc(k)});
-function fillMoreIc(){ [['listen','m-listen'],['real','m-real'],['vocab','m-prac'],['prog','m-prog']].forEach(([k,id])=>{const i=document.querySelector('#'+id+' i'); if(i) i.innerHTML=homeIc(k);}); }
+function fillMoreIc(){ [['work','m-work'],['listen','m-listen'],['real','m-real'],['vocab','m-prac'],['prog','m-prog']].forEach(([k,id])=>{const i=document.querySelector('#'+id+' i'); if(i) i.innerHTML=homeIc(k);}); }
 fillMoreIc();
 const HOME_CARDS=[
   {t:'book',  i:HOME_IC.book, n:'課本',   d:'課堂筆記＋影片版'},
@@ -3669,7 +3674,7 @@ const HOME_CARDS=[
   {t:'listen',i:HOME_IC.listen, n:'聽力',   d:'影片＋逐字稿跟讀'},
   {t:'real',  i:HOME_IC.real, n:'實景',   d:'真實語速影片'},
   {t:'vocab', i:HOME_IC.vocab, n:'單字卡', d:'間隔複習與收藏字'},
-  {t:'audit', i:HOME_IC.audit, n:'稽核英文', d:'工廠稽核實戰'},
+  {t:'work',  i:HOME_IC.work, n:'職場',   d:'稽核英文＋設備 3D'},
   {t:'prog',  i:HOME_IC.prog, n:'進度',   d:'打卡、統計與設定'}
 ];
 RENDER.home=function(){
@@ -3677,9 +3682,9 @@ RENDER.home=function(){
   const d=new Date(), wd='日一二三四五六'[d.getDay()];
   const nm={anita:'Anita',tom:'Tom'}[PROFILE]||'';
   /* 課數用跟課本搜尋同一套比對，卡片上的數字＝點進去看到的結果數 */
-  const auN=(typeof BOOK_LESSONS!=='undefined'?BOOK_LESSONS:[]).filter(b=>bkWhere(b,'稽核英文').length).length;
+  const auN=(typeof BOOK_LESSONS!=='undefined'?BOOK_LESSONS:[]).filter(isWorkLesson).length;
   const card=c=>'<button class="hm-card" onclick="homeGo(\''+c.t+'\')"><i>'+c.i+'</i><b>'+c.n+'</b><span>'
-    +(c.t==='audit'&&auN?c.d+'｜'+auN+' 課':c.d)+'</span></button>';
+    +(c.t==='work'&&auN?c.d+'｜'+auN+' 課':c.d)+'</span></button>';
   v.innerHTML=
     '<div class="hm-top"><div><div class="hm-hi">Hi, '+esc(nm)+' 👋</div><div class="hm-date">'+(d.getMonth()+1)+' 月 '+d.getDate()+' 日・週'+wd+'</div></div>'
     +'<span class="hm-streak">🔥 '+(ST.streak||1)+' 天</span></div>'
@@ -3705,12 +3710,8 @@ function goHome(){
   if(isMobileNav() && history.state && history.state.b2==='sec'){ HOME_REQ=true; history.back(); return; }
   go('home');
 }
-/* 稽核英文目前放在課本裡：開課本並直接列出搜尋結果，跳過「自動打開上一課」一次（不刪除上一課的記憶） */
 let bkSkipLast=false;
-function homeGo(t){
-  if(t==='audit'){ bkOpen=null; bkRevYM=null; bkQuery='稽核英文'; bkSkipLast=true; go('book'); return; }
-  go(t);
-}
+function homeGo(t){ go(t); }
 window.goHome=goHome; window.homeGo=homeGo;
 /* 各分區的「詳細頁」（課文、每月複習、文章、文法單元、實景、聽力課、自訂影片）：
    在詳細頁裡，手機返回列顯示「← 分區名」，按下或用返回手勢回到列表；其他地方是「← 首頁」。
@@ -3719,7 +3720,8 @@ window.goHome=goHome; window.homeGo=homeGo;
 function mDetail(t){
   t=t||TAB;
   const from=lb=>FROM_TAB&&TAB_NAME[FROM_TAB]?TAB_NAME[FROM_TAB]:lb;
-  if(t==='book'   && bkOpen)   return {lb:'課本', close:bkClose, title:bkOpen.title};
+  if(t==='work'   && wkEquip)  return {lb:'職場', close:wkEquipClose, title:wkEquipName()};
+  if(t==='book'   && bkOpen)   return {lb:from('課本'), close:bkClose, title:bkOpen.title};
   if(t==='book'   && bkRevYM)  return {lb:'課本', close:mrClose, title:(+bkRevYM.slice(5,7))+' 月重點複習'};
   if(t==='read'   && rdOpen)   return {lb:from('閱讀'), close:rdClose, title:rdOpen.title};
   if(t==='gram'   && CURG)     return {lb:from('文法'), close:gClose, title:CURG.titleCn};
@@ -5760,6 +5762,8 @@ document.addEventListener('click',e=>{
 const BOOK_LESSONS=((window.BOOK||{}).lessons||[]).slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
 // 課本單字也進字庫，全站點字都查得到
 BOOK_LESSONS.forEach(b=>(b.vocab||[]).concat(b.vocab2||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:'',exEn:t.ex,exCn:t.exCn,src:'課本：'+b.titleCn})));
+/* 職場分頁收的課（稽核英文 au01…）：課本目錄、搜尋、「上次讀到」都不列；課文內頁仍用課本的 */
+const isWorkLesson=b=>/^au\d/.test(b.id||'');
 let bkOpen=null, bkQuery='', bkRevYM=null, mrChIdx=0, mrChShow=false;
 /* 例句裡用到該單字／片語就加粗（compensate 也會對到 compensated；片語去掉 something/someone 佔位字再比對） */
 function bkHi(sent,w){
@@ -5818,7 +5822,7 @@ RENDER.book=function(){
   /* 從導覽頁「稽核英文」進來：停留在搜尋結果，直到打開某一課或離開課本（背景同步重繪也不會跳走） */
   if(!bkOpen && !bkSkipLast){
     try{ const last=localStorage.getItem('b2lab_bkLast_'+PROFILE);
-      if(last){ const found=BOOK_LESSONS.find(x=>x.id===last); if(found){ bkOpen=found; sbAutoCollapse(); } }
+      if(last){ const found=BOOK_LESSONS.find(x=>x.id===last); if(found&&!isWorkLesson(found)){ bkOpen=found; sbAutoCollapse(); } }
     }catch(e){}
   }
   v.classList.toggle('bkopen',!!bkOpen);
@@ -5845,7 +5849,7 @@ RENDER.book=function(){
 let bkMonSet=null;   /* 展開中的月份 {'2026-10':true}；第一次進來只展開最新一個月 */
 function bkMonths(){
   const g={};
-  BOOK_LESSONS.forEach(b=>{ const ym=(b.date||'').slice(0,7); if(ym) (g[ym]=g[ym]||[]).push(b); });
+  BOOK_LESSONS.filter(b=>!isWorkLesson(b)).forEach(b=>{ const ym=(b.date||'').slice(0,7); if(ym) (g[ym]=g[ym]||[]).push(b); });
   return Object.keys(g).sort().reverse().map(ym=>({ym, list:g[ym].slice().sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:0)}));
 }
 /* 縮圖：把閱讀插圖（800×200 的五格圖示帶）的 viewBox 裁到第一格，變成方形縮圖；
@@ -5966,7 +5970,7 @@ function bkCard(b,n,opts){
   const [y,mo,d]=(b.date||'').split('-');
   const wd=b.date?'日一二三四五六'.charAt(new Date(+y,+mo-1,+d).getDay()):'';
   const meta=[nV?nV+' 單字':'', nG?nG+' 句型':''].filter(Boolean).join(' · ');
-  return '<div class="bkc" role="listitem" onclick="bkGo(\''+b.id+'\')">'
+  return '<div class="bkc" role="listitem" onclick="'+(opts.go||'bkGo(\''+b.id+'\')')+'">'
    +'<div class="bkc-hd">'+(n?'<span class="bkc-n">'+n+'</span>':'')+(cat?'<span class="bkc-cat">'+esc(cat)+'</span>':'')
    +(opts.isNew?'<span class="bkc-new">NEW</span>':'')+'</div>'
    +'<div class="bkc-bd">'+bkThumb(b)+'<div class="bkc-tx">'
@@ -6006,6 +6010,56 @@ function bkMonToggle(ym){
   window.scrollTo(0,sy); requestAnimationFrame(()=>{ if(Math.abs(window.scrollY-sy)>2) window.scrollTo(0,sy); });
 }
 window.bkMonToggle=bkMonToggle;
+
+/* ============================================================
+   職場 Work English
+   - 稽核英文系列（au01…）：資料仍在 data-book.js，這裡只是入口；課文內頁沿用課本，返回回到職場
+   - 設備 3D：work3d/（Codex 做的獨立模組），選到設備才動態載入 Three.js；離開分頁一定 destroy
+   ============================================================ */
+let wk3d=null, wkEquip=null, wkEquipList=null, wkLoadErr=false;
+function wkEquipName(){ const e=(wkEquipList||[]).find(x=>x.id===wkEquip); return e?e.zh:''; }
+function wkDestroy3d(){ if(wk3d){ try{ wk3d.destroy(); }catch(e){} wk3d=null; } }
+function wkOpenLesson(id){ FROM_TAB='work'; go('book','work'); bkGo(id); }
+function wkOpenEquip(id){ wkEquip=id; sbAutoCollapse(); RENDER.work(); window.scrollTo(0,0); }
+function wkEquipClose(){ wkDestroy3d(); wkEquip=null; sbAutoExpand(); RENDER.work(); window.scrollTo(0,0); }
+function wkLoadEquip(){
+  if(wkEquipList||wkLoadErr) return Promise.resolve(wkEquipList);
+  return import('./work3d/index.js').then(m=>{ wkEquipList=m.list(); window._wkMod=m; return wkEquipList; })
+    .catch(()=>{ wkLoadErr=true; return null; });
+}
+RENDER.work=function(){
+  const v=$('v-work'); if(!v) return;
+  /* 背景同步重繪不要把正在轉的 3D 拆掉重建 */
+  if(wkEquip && wk3d && $('wk-3d')) return;
+  wkDestroy3d();
+  v.classList.toggle('wkopen',!!wkEquip);
+  if(wkEquip){
+    v.innerHTML='<div class="card">'+tBack('work')+'<div id="wk-3d"></div></div>';
+    const box=$('wk-3d'), id=wkEquip;
+    wkLoadEquip().then(()=>{
+      if(wkEquip!==id||!$('wk-3d')||wk3d) return;
+      if(!window._wkMod){ box.innerHTML='<div class="muted">3D 模組載入失敗，請稍後再試。</div>'; return; }
+      wk3d=window._wkMod.mount(box,id,{speak:t=>say(t)});
+    });
+    return;
+  }
+  const au=BOOK_LESSONS.filter(isWorkLesson).sort((a,b)=>String(a.id).localeCompare(String(b.id)));
+  v.innerHTML=
+    '<div class="card"><h2 class="sec" style="margin:0 0 4px">💼 職場</h2>'
+    +'<div class="hint">工作上用得到的英文：稽核問答，以及設備 3D 部件認識。</div></div>'
+    +'<h3 class="sec" style="margin:14px 2px 0">🔍 稽核英文 <span class="muted" style="font-weight:400">'+au.length+' 課</span></h3>'
+    +'<div class="bkc-grid" role="list">'+au.map((b,i)=>bkCard(b,i+1,{go:"wkOpenLesson('"+b.id+"')"})).join('')+'</div>'
+    +'<h3 class="sec" style="margin:18px 2px 0">🏭 設備 3D</h3>'
+    +'<div id="wk-eq" class="bkc-grid" role="list"><div class="muted">載入中…</div></div>';
+  wkLoadEquip().then(list=>{
+    const el=$('wk-eq'); if(!el) return;
+    el.innerHTML=list&&list.length
+      ? list.map(e=>'<div class="bkc" role="listitem" onclick="wkOpenEquip(\''+e.id+'\')"><div class="bkc-bd"><div class="bkc-th ico">🏭</div><div class="bkc-tx">'
+          +'<div class="bkc-en">'+esc(e.en)+'</div><div class="bkc-cn">'+esc(e.zh)+'</div></div></div></div>').join('')
+      : '<div class="muted">設備 3D 暫時無法載入。</div>';
+  });
+};
+window.wkOpenLesson=wkOpenLesson; window.wkOpenEquip=wkOpenEquip; window.wkEquipClose=wkEquipClose;
 
 /* ============================================================
    每月智慧複習 Monthly Smart Review
@@ -7137,7 +7191,7 @@ function bkSearch(q){
   const s=bkQuery.trim().toLowerCase();
   if(!s){ res.innerHTML=''; if(cal) cal.style.display='block'; return; }
   if(cal) cal.style.display='none';
-  const hits=BOOK_LESSONS.map(b=>({b:b,where:bkWhere(b,s)})).filter(x=>x.where.length);
+  const hits=BOOK_LESSONS.filter(b=>!isWorkLesson(b)).map(b=>({b:b,where:bkWhere(b,s)})).filter(x=>x.where.length);
   res.innerHTML='<div class="muted" style="margin:2px 2px 8px">「'+esc(bkQuery.trim())+'」出現在 '+hits.length+' 課</div>'
     +'<div class="bkc-grid" role="list">'+hits.map(x=>bkCard(x.b,0,{extra:'<div class="bkc-where">🔍 出現在：'+x.where.map(esc).join('、')+'</div>'})).join('')+'</div>';
 }
@@ -7155,7 +7209,7 @@ function bkTtlTog(el){ const c=el.closest(".magttl"); if(c) c.classList.toggle("
 function bkTopicsOpen(el){ const s=el.closest(".set"); if(!s) return; el.setAttribute("aria-expanded",s.classList.toggle("open")?"true":"false"); }
 function bkBarTog(el){ const b=el.closest(".bar"); if(!b) return; el.setAttribute("aria-expanded",b.classList.toggle("baropen")?"true":"false"); }
 window.bkTtlTog=bkTtlTog; window.bkTopicsOpen=bkTopicsOpen; window.bkBarTog=bkBarTog;
-function bkClose(){ bkOpen=null; bkRevYM=null; try{ localStorage.removeItem('b2lab_bkLast_'+PROFILE); }catch(e){} sbAutoExpand(); RENDER.book(); window.scrollTo(0,0); }
+function bkClose(){ bkOpen=null; bkRevYM=null; try{ localStorage.removeItem('b2lab_bkLast_'+PROFILE); }catch(e){} sbAutoExpand(); if(FROM_TAB==='work'){ FROM_TAB=null; go('work'); return; } RENDER.book(); window.scrollTo(0,0); }
 /* 課本朗讀（整段／全文共用）：一句一句念、念到哪句反黃到哪句；
    按下去的按鈕變紅色「⏹ 停止」，再按一次或點空白處就停。
    Web Speech 的 onend 在 iOS/Chrome 不一定會觸發，所以每句都有看門狗，時間到就自己往下念。 */
