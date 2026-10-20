@@ -304,3 +304,13 @@ npx http-server . -p 8789 -c-1                # Speak Up
   內文條列「改了什麼、為什麼」。
 - 只 commit 這次真的要改的檔案，不要 `git add -A` 把別人的工作檔一起帶走。
 - 未經要求不要 push 到 `main` 以外的地方，也不要開 PR。
+
+---
+
+## 11. work3d 設備 3D 模組
+
+- 路徑：`b2lab/public/work3d/`，獨立測試頁 `work3d/demo.html`。Three.js r170 與 OrbitControls 固定放在 `vendor/`，附 MIT LICENSE，執行時無 CDN 請求。
+- 介面：`import { mount, list } from './work3d/index.js'`。`list()` 回傳 `[{id,en,zh}]`；`mount(containerEl,equipId,opts)` **同步**回傳 `{destroy()}`，Three.js 在 mount 時才動態載入。離頁務必呼叫 destroy（載入途中也可以），清理 WebGL、模型及監聽。
+- `opts.speak(text)` 選填，點例句後方喇叭時呼叫；未提供則不顯示喇叭。`opts.onPart(part)` 選填，初始選取及點部件時通知。CSS 變數 `--w3d-fg/bg/border/accent/button-bg` 可由外層設定，樣式限定 w3d 類別。
+- `equip-data.js` 匯出 `EQUIP` 陣列：每台設備 `{id,en,zh,note,parts}`，部件 `{n,en,zh,ex,exCn,desc}`。例句原創美式英文，中文用工廠現場口語。另有 `point:[x,y,z]`（HTML 編號錨點）、`cam:[x,y,z]` 與 `target:[x,y,z]`（聚焦視角）。
+- 新增設備：在 EQUIP 加入唯一 id 與完整部件資料；在 `model.js` 新增對應的基本幾何建模函式，並在 index.js 依設備 id 選擇建模函式。不得載入外部模型；所有文字保留 HTML。用 demo 測桌機、375px、點編號／全景／自動旋轉與 mount/destroy 10 次，再整合職場頁。

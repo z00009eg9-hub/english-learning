@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>設備 3D 英文測試</title>
+<body class="w3d-demo"><main id="demo"></main><script type="module">
+import { mount, list } from './index.js';
+window.work3d = { mount, list };
+window.demo = mount(document.getElementById('demo'), list()[0].id, { speak(text) { const u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; speechSynthesis.cancel(); speechSynthesis.speak(u); } });
+</script></body></html>
