@@ -4040,7 +4040,7 @@ function rdQ(val){
   const f=$('rd-fill'); if(f) f.style.width=p.pct+'%';
 }
 /* 兩欄高度差太多就自動改版：內文全寬 + 單字片語雙欄流排 */
-/* 兩欄時文章卡片被拉到跟右欄單字卡同高；多出來的空間平均分到段落之間（每段最多加 40px），最後一段貼近卡片底部 */
+/* 兩欄時文章卡片被拉到跟右欄單字卡同高；多出來的空間平均分到段落之間（每段最多加 60px），最後一段貼近卡片底部 */
 function fillParaGap(){
   const box=document.getElementById('paras'); if(!box) return;
   const ps=[].slice.call(box.querySelectorAll(':scope>.para'));
@@ -4053,7 +4053,7 @@ function fillParaGap(){
   const last=ps[ps.length-1];
   const extra=inner-(last.getBoundingClientRect().bottom+parseFloat(getComputedStyle(last).marginBottom));
   if(extra<4) return;
-  const add=Math.min(40,extra/(ps.length-1));
+  const add=Math.min(60,extra/(ps.length-1));
   ps.slice(0,-1).forEach(p=>{ p.style.marginBottom=(16+add)+'px'; });
 }
 let _fpgT=0;
