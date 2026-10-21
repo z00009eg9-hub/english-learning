@@ -7,6 +7,799 @@
 window.DAILY = {
 
 articles:[
+/* ---------- 2026-10-21 每日文章（食物與生活：買菜、烤蛋糕與邊境上的廚具） ---------- */
+{
+  "id": "d20261021a2",
+  "date": "2026-10-21",
+  "level": "A2",
+  "topic": "購物",
+  "words": 105,
+  "kind": "orig",
+  "title": "Tom Is Going to Bake a Cake",
+  "titleCn": "Tom要烤一個蛋糕",
+  "focus": "用 be going to 講已經決定好的計畫（is going to bake、is going to buy），用現在簡單式講店家的營業時間（opens），will 只留給當場才決定的那一件事",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom決定星期日要烤蛋糕，所以先列單子去買東西。這一篇請數一數 going to 出現幾次：每一次都是他「已經決定好」的事。店幾點開門用的是現在簡單式 opens，因為那是店家定的；最後一句的 will taste 是他站在烤箱前才想到要做的事。中文都講「要」，英文卻分成三種形狀。",
+  "spoken": [
+    {
+      "en": "Cake on Sunday. Lisa's birthday.",
+      "cn": "星期日烤蛋糕，Lisa生日。"
+    },
+    {
+      "en": "No flour, no sugar. Shopping list ready.",
+      "cn": "沒麵粉，沒糖，購物清單寫好了。"
+    },
+    {
+      "en": "Small shop. Opens at nine. Cheaper.",
+      "cn": "小店九點開門，比較便宜。"
+    },
+    {
+      "en": "Old oven. One hour. Taste it first.",
+      "cn": "舊烤箱，要一小時，先嚐一口。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom is going to bake a cake on Sunday. It is a present for his friend Lisa. Her birthday is next Wednesday.",
+      "cn": "Tom星期日要烤一個蛋糕。那是送給他朋友Lisa的禮物。她的生日是下星期三。"
+    },
+    {
+      "en": "There is a short list on his kitchen table. He has no flour at home, and he has no sugar. He is going to buy both things this afternoon.",
+      "cn": "他廚房桌上有一張短短的單子。他家裡沒有麵粉，也沒有糖。他今天下午要去買這兩樣東西。"
+    },
+    {
+      "en": "The small shop beside the park opens at nine every day. Tom is going to walk there after his lunch. The flour is much cheaper in that shop.",
+      "cn": "公園旁邊的小店每天九點開門。Tom午餐後要走過去。那家店的麵粉便宜很多。"
+    },
+    {
+      "en": "His oven is very old, so the cake needs one whole hour. Tom is a little worried about it. He will taste one small piece first.",
+      "cn": "他的烤箱很舊，所以蛋糕要整整一個小時。Tom有點擔心。他會先嚐一小塊。"
+    }
+  ],
+  "target": [
+    {
+      "w": "bake",
+      "ipa": "/beɪk/",
+      "pos": "v.",
+      "cn": "烘；烤（麵包、蛋糕）",
+      "def": "To cook bread or cakes in an oven.",
+      "ex": "My neighbor bakes bread every Friday morning.",
+      "exCn": "我的鄰居每個星期五早上都烤麵包。"
+    },
+    {
+      "w": "flour",
+      "ipa": "/ˈflaʊ.ɚ/",
+      "pos": "n.",
+      "cn": "麵粉",
+      "def": "White powder from wheat, used to make bread and cakes.",
+      "ex": "The cook poured some flour into a big white bowl.",
+      "exCn": "廚師把一些麵粉倒進一個白色大碗裡。"
+    },
+    {
+      "w": "sugar",
+      "ipa": "/ˈʃʊɡ.ɚ/",
+      "pos": "n.",
+      "cn": "糖",
+      "def": "A sweet white or brown food that you put in drinks or cakes.",
+      "ex": "Please put less sugar in my iced tea.",
+      "exCn": "請在我的冰茶裡少放一點糖。"
+    },
+    {
+      "w": "oven",
+      "ipa": "/ˈʌvən/",
+      "pos": "n.",
+      "cn": "烤箱",
+      "def": "A hot box in a kitchen where you cook food.",
+      "ex": "She opened the oven and a warm smell came out.",
+      "exCn": "她打開烤箱，一股溫熱的香味飄出來。"
+    },
+    {
+      "w": "list",
+      "ipa": "/lɪst/",
+      "pos": "n.",
+      "cn": "清單；單子",
+      "def": "Words or things written one under the other.",
+      "ex": "Dad writes a list before he goes fishing.",
+      "exCn": "爸爸去釣魚前都會寫一張單子。"
+    },
+    {
+      "w": "taste",
+      "ipa": "/teɪst/",
+      "pos": "v.",
+      "cn": "嚐；品嚐",
+      "def": "To put a little food in your mouth to know if it is good.",
+      "ex": "Taste the soup and tell me if it needs salt.",
+      "exCn": "嚐一下湯，然後告訴我需不需要加鹽。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is Tom going to make on Sunday?",
+      "qCn": "Tom星期日要做什麼？",
+      "opts": [
+        "A. Bread",
+        "B. A cake",
+        "C. Soup",
+        "D. Tea"
+      ],
+      "optsCn": [
+        "A. 麵包",
+        "B. 一個蛋糕",
+        "C. 湯",
+        "D. 茶"
+      ],
+      "ans": 1,
+      "expl": "Tom is going to bake a cake on Sunday.——第一段第一句就用 going to 講這個決定好的計畫。"
+    },
+    {
+      "q": "What two things does Tom need from the shop?",
+      "qCn": "Tom需要從店裡買哪兩樣東西？",
+      "opts": [
+        "A. Flour and sugar",
+        "B. Eggs and milk",
+        "C. Sugar and tea",
+        "D. Flour and salt"
+      ],
+      "optsCn": [
+        "A. 麵粉和糖",
+        "B. 蛋和牛奶",
+        "C. 糖和茶",
+        "D. 麵粉和鹽"
+      ],
+      "ans": 0,
+      "expl": "He has no flour at home, and he has no sugar.——第二段寫得很清楚，所以他要買這兩樣。"
+    },
+    {
+      "q": "Tom ___ a cake on Sunday. He decided this two days ago.",
+      "qCn": "Tom星期日要烤蛋糕，這是他兩天前就決定好的。",
+      "opts": [
+        "A. bake",
+        "B. is going to bake",
+        "C. baked",
+        "D. will baking"
+      ],
+      "ans": 1,
+      "expl": "兩天前就決定好的計畫，英文用 be going to 加原形動詞。baked 是過去，bake 少了時態，will baking 這種形狀英文裡不存在。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Tom will bake a cake on Sunday.",
+      "b2": "Tom is going to bake a cake on Sunday.",
+      "note": "will 聽起來像話說出口才決定的，好像蛋糕烤不烤還能再想。用 is going to 等於告訴對方「他早就決定了」，單子都寫好了。英文講「已經決定好的計畫」幾乎都用這個形狀。",
+      "sp": "Baking a cake Sunday.",
+      "spNote": "口語常把主詞和 be 動詞吃掉，只留動作和日子。",
+      "b1Cn": "Tom星期日會烤一個蛋糕。",
+      "b2Cn": "Tom星期日要烤一個蛋糕。",
+      "spCn": "星期日烤蛋糕。"
+    },
+    {
+      "b1": "The shop is opening at nine.",
+      "b2": "The shop opens at nine.",
+      "note": "營業時間是店家定的、天天一樣，這種未來交給現在簡單式。寫 is opening 會變成「店今天特地九點開」，像為你一個人安排的。",
+      "sp": "Open at nine.",
+      "spNote": "口語直接說時間，動詞都省掉了。",
+      "b1Cn": "那家店九點要開門。",
+      "b2Cn": "那家店九點開門。",
+      "spCn": "九點開。"
+    }
+  ]
+},
+{
+  "id": "d20261021b1",
+  "date": "2026-10-21",
+  "level": "B1",
+  "topic": "飲食",
+  "words": 160,
+  "kind": "orig",
+  "title": "Anita Is Going to Cook for Ten",
+  "titleCn": "Anita要煮十個人的份",
+  "focus": "be going to 講已經決定的計畫（is going to cook、is going to borrow），現在進行式講跟別人約好的事（is bringing、are meeting），will 留給臨時的決定（she will order）",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "同樣是廚房裡的事，鏡頭從一個人的蛋糕換到一整個辦公室的午餐。這一篇有三種講未來的形狀：going to 是Anita自己的決定，is bringing 和 are meeting 是她跟Mai講好的，而 will order 是萬一不夠才會做的事。請一邊讀一邊問自己：這件事定到什麼程度了？",
+  "spoken": [
+    {
+      "en": "Friday lunch. Ten people. My treat.",
+      "cn": "星期五午餐，十個人，我請。"
+    },
+    {
+      "en": "Spring rolls. Mom's recipe. No hot plate.",
+      "cn": "春捲，我媽的食譜，不用熱盤。"
+    },
+    {
+      "en": "Mai's bringing herbs. Seven in the morning.",
+      "cn": "Mai會帶香菜來，早上七點。"
+    },
+    {
+      "en": "If it runs out, noodles downstairs.",
+      "cn": "不夠的話就叫樓下的麵。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita is going to cook for her team this Friday. The company moved to a new office last month, and nobody has had a proper lunch together since then. She decided on Monday, so the plan is already in her notebook.",
+      "cn": "Anita這個星期五要煮給她的團隊吃。公司上個月搬進新辦公室，從那之後大家都沒有好好一起吃過一頓午餐。她星期一晚上就決定了，所以計畫早就寫在她的筆記本上。"
+    },
+    {
+      "en": "She is making Vietnamese spring rolls, because her mother's recipe is simple and nothing has to stay hot. Her colleague Mai is bringing a tray of fresh herbs from the market. They are meeting at seven on Friday morning to roll everything.",
+      "cn": "她要做越南春捲，因為她媽媽的食譜很簡單，而且沒有東西需要保持熱度。她的同事Mai會從傳統市場帶一盤新鮮香菜來。她們星期五早上七點要碰面，把春捲捲好。"
+    },
+    {
+      "en": "Anita is a little worried about the amount. Ten guests always eat more than she expects, and her rolls are smaller than the ones downstairs. She is also going to borrow a large pot for the dipping sauce.",
+      "cn": "Anita有點擔心份量。十位客人總是吃得比她預期的多，而且她捲的春捲比樓下賣的小。她還要借一個大鍋子來裝沾醬。"
+    },
+    {
+      "en": "She has not told the team yet. If the tray looks empty before one o'clock, she will order noodles from the shop next door. But when everyone walks in and smells the herbs, they are going to guess anyway.",
+      "cn": "她還沒告訴團隊。如果一點以前盤子就看起來空了，她會去隔壁那家店叫麵。不過等大家走進來聞到香菜味，他們反正也會猜到。"
+    }
+  ],
+  "target": [
+    {
+      "w": "recipe",
+      "ipa": "/ˈresəpi/",
+      "pos": "n.",
+      "cn": "食譜；作法",
+      "def": "A set of instructions for cooking a dish.",
+      "ex": "He keeps his grandfather's recipe in a kitchen drawer.",
+      "exCn": "他把他爺爺的食譜收在廚房抽屜裡。"
+    },
+    {
+      "w": "tray",
+      "ipa": "/treɪ/",
+      "pos": "n.",
+      "cn": "盤子；托盤",
+      "def": "A flat piece of plastic or metal for carrying food.",
+      "ex": "A nurse carried a metal tray down the long hallway.",
+      "exCn": "一位護理師端著金屬托盤走過長長的走廊。"
+    },
+    {
+      "w": "fresh",
+      "ipa": "/freʃ/",
+      "pos": "adj.",
+      "cn": "新鮮的",
+      "def": "Recently picked, made or produced; not old.",
+      "ex": "I only drink fresh juice at breakfast.",
+      "exCn": "我早餐只喝新鮮果汁。"
+    },
+    {
+      "w": "amount",
+      "ipa": "/əˈmaʊnt/",
+      "pos": "n.",
+      "cn": "數量；份量",
+      "def": "How much of something there is.",
+      "ex": "A small amount of salt changes the whole dish.",
+      "exCn": "一點點鹽就會改變整道菜的味道。"
+    },
+    {
+      "w": "guest",
+      "ipa": "/ɡest/",
+      "pos": "n.",
+      "cn": "客人",
+      "def": "A person you invite to your home or to an event.",
+      "ex": "The hotel gives every guest a paper fan in summer.",
+      "exCn": "那家飯店夏天會送每位客人一把紙扇。"
+    },
+    {
+      "w": "borrow",
+      "ipa": "/ˈbɑːroʊ/",
+      "pos": "v.",
+      "cn": "借（入）",
+      "def": "To take something and give it back later.",
+      "ex": "Can I borrow your umbrella until tonight?",
+      "exCn": "我可以借你的傘到今天晚上嗎？"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why is Anita cooking for her team?",
+      "qCn": "Anita為什麼要煮給她的團隊吃？",
+      "opts": [
+        "A. The team has not eaten together since the move",
+        "B. Her mother asked her to",
+        "C. The restaurant downstairs closed",
+        "D. She won a cooking competition"
+      ],
+      "optsCn": [
+        "A. 搬辦公室之後團隊沒一起吃過飯",
+        "B. 她媽媽叫她煮",
+        "C. 樓下的餐廳關了",
+        "D. 她贏了烹飪比賽"
+      ],
+      "ans": 0,
+      "expl": "nobody has had a proper lunch together since then——第一段用現在完成式說明搬家之後到現在都沒一起吃飯，這就是原因。"
+    },
+    {
+      "q": "What is Mai going to do on Friday morning?",
+      "qCn": "Mai星期五早上要做什麼？",
+      "opts": [
+        "A. Order noodles",
+        "B. Bring fresh herbs and help roll",
+        "C. Borrow a pot",
+        "D. Book the restaurant"
+      ],
+      "optsCn": [
+        "A. 叫麵",
+        "B. 帶新鮮香菜來並幫忙捲",
+        "C. 借一個鍋子",
+        "D. 訂餐廳"
+      ],
+      "ans": 1,
+      "expl": "Mai is bringing a tray of fresh herbs... The two of them are meeting at seven——第二段用現在進行式講兩人講好的事。"
+    },
+    {
+      "q": "If the tray looks empty before one o'clock, Anita ___ noodles.",
+      "qCn": "如果一點以前盤子看起來就空了，Anita會去叫麵。",
+      "opts": [
+        "A. is ordering",
+        "B. orders",
+        "C. will order",
+        "D. is going to ordering"
+      ],
+      "ans": 2,
+      "expl": "這是「萬一發生才做」的事，還沒決定，所以用 will order。is ordering 會變成她早就訂好麵了，跟 if 的語氣矛盾；D 的形狀不存在。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Anita wants to cook for her team on Friday.",
+      "b2": "Anita is going to cook for her team on Friday.",
+      "note": "wants to 只說出她的願望，別人聽了還會問「那你會煮嗎」。is going to 把願望升級成決定：日子有了、計畫也寫下來了。寫作時只要事情已經拍板，就不要停在 want。",
+      "sp": "Cooking for the team Friday.",
+      "spNote": "口語直接用 V-ing 開頭，主詞和 be 動詞都省掉。",
+      "b1Cn": "Anita想在星期五煮給她的團隊吃。",
+      "b2Cn": "Anita星期五要煮給她的團隊吃。",
+      "spCn": "星期五煮給團隊吃。"
+    },
+    {
+      "b1": "Mai will bring some herbs.",
+      "b2": "Mai is bringing a tray of fresh herbs.",
+      "note": "兩個人已經分工講好了，這種「約定」在英文裡屬於現在進行式的地盤。用 will bring 聽起來像Mai自己剛剛才想到要帶，Anita還不知道，分工的感覺就消失了。",
+      "sp": "Mai's on herbs.",
+      "spNote": "口語用 be on 加名詞表示「某人負責某件事」。",
+      "b1Cn": "Mai會帶一些香菜。",
+      "b2Cn": "Mai會帶一盤新鮮香菜來。",
+      "spCn": "香菜Mai負責。"
+    }
+  ]
+},
+{
+  "id": "d20261021b1p",
+  "date": "2026-10-21",
+  "level": "B1+",
+  "topic": "新聞·食安",
+  "words": 218,
+  "kind": "news",
+  "title": "Four Shipments Stopped Before the Shelf",
+  "titleCn": "四批貨在上架前被攔下",
+  "focus": "被動語態（were rejected、is tested、will be sent back）加上 going to 講「照目前的處理看就要發生」，再練一個關係子句（the test that measures…）",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "前兩篇是自己家的廚房，這一篇把鏡頭拉到海關。請先數被動語態出現幾次：新聞英文愛用它，因為重點是「那批貨被怎麼處理」，不是誰動手處理。再注意 will 和 going to 的分工：will 報的是官方宣布的做法，going to 講的是照現在的處理方式看，結局已經確定了。",
+  "source": "改寫自 Focus Taiwan 報導（2026/10/20）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202610200011",
+  "spoken": [
+    {
+      "en": "Four shipments. All from China. All rejected.",
+      "cn": "四批貨，全部來自中國，全部不合格。"
+    },
+    {
+      "en": "Limit thirty. One result: two hundred twenty-six.",
+      "cn": "限量三十，有一筆測出二百二十六。"
+    },
+    {
+      "en": "Returned or destroyed. Nothing reaches a shelf.",
+      "cn": "退運或銷毀，沒有一件會上架。"
+    },
+    {
+      "en": "Every batch checked. Until the nineteenth.",
+      "cn": "每一批都查，查到十九號。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Taiwan's Food and Drug Administration said on Tuesday that four shipments of kitchen goods from China had been stopped at the border. Paper baking cups, a roll of baking paper and a set of kitchen utensils were all rejected, and none of them will be allowed into the country.",
+      "cn": "台灣食藥署星期二表示，四批來自中國的廚房用品在邊境被攔下。紙烤杯、一捲烘焙紙和一組廚房用具全部不合格，沒有一樣可以進到國內。"
+    },
+    {
+      "en": "All four failed the same check. It is a test that measures how much material dissolves out of a product while it is being used, and the legal limit is thirty parts per million. Two batches of paper baking cups came back at 217 and 226. The baking paper reached 67, and the kitchen utensils were measured at 123.",
+      "cn": "這四批都是同一項檢查沒過。那是一項測量產品在使用過程中會溶出多少物質的檢驗，法定限量是百萬分之三十。兩批紙烤杯的結果是217和226。烘焙紙是67，廚房用具則測到123。"
+    },
+    {
+      "en": "The rejected goods are going to be sent back or destroyed. Until November 19, every incoming batch in this product group is going to be opened and tested, instead of being sampled. For one importer of kitchen utensils, the share of shipments that are pulled aside will rise to between 20 and 50 percent.",
+      "cn": "不合格的貨品將被退運或銷毀。到11月19日為止，這一類產品每一批進來都會被拆開檢驗，而不是只抽驗。其中一家廚房用具的進口商，被攔下送驗的批次比例將提高到百分之二十到五十之間。"
+    },
+    {
+      "en": "The failure rate is small but steady. Between April 12 and October 12, eleven of 206 batches of this kind of Chinese paper utensil did not pass. Food was stopped at the same border posts too: fresh durian from Vietnam and radishes from China were held for reasons that had nothing to do with this test.",
+      "cn": "不合格率不高，但一直都在。從4月12日到10月12日，這類中國紙製用具有206批中的11批沒過。食品也在同樣的邊境關卡被攔下：越南的新鮮榴槤和中國的白蘿蔔也被留置，原因跟這項檢驗無關。"
+    }
+  ],
+  "target": [
+    {
+      "w": "shipment",
+      "ipa": "/ˈʃɪp.mənt/",
+      "pos": "n.",
+      "cn": "一批貨；運送的貨物",
+      "def": "A load of goods sent from one place to another.",
+      "ex": "The warehouse manager signs for each shipment at the gate.",
+      "exCn": "倉庫主管會在大門口替每一批貨簽收。"
+    },
+    {
+      "w": "reject",
+      "ipa": "/rɪˈdʒekt/",
+      "pos": "v.",
+      "cn": "退回；判定不合格",
+      "def": "To refuse to accept something because it is not good enough.",
+      "ex": "The buyer rejected the whole lot after two samples cracked.",
+      "exCn": "兩個樣品裂開之後，買方把整批貨都退了。"
+    },
+    {
+      "w": "batch",
+      "ipa": "/bætʃ/",
+      "pos": "n.",
+      "cn": "批；一批",
+      "def": "A group of things made or sent at the same time.",
+      "ex": "Each batch of bottles gets its own number on the cap.",
+      "exCn": "每一批瓶子都會在瓶蓋上打上自己的編號。"
+    },
+    {
+      "w": "limit",
+      "ipa": "/ˈlɪmɪt/",
+      "pos": "n.",
+      "cn": "上限；限量",
+      "def": "The largest amount that is allowed.",
+      "ex": "The speed limit on that bridge drops to forty at night.",
+      "exCn": "那座橋上的速限晚上降到四十。"
+    },
+    {
+      "w": "border",
+      "ipa": "/ˈbɔːr.dɚ/",
+      "pos": "n.",
+      "cn": "邊境；國界",
+      "def": "The line where one country ends and another begins.",
+      "ex": "Her passport was checked twice before she crossed the border.",
+      "exCn": "她在過邊境之前護照被查了兩次。"
+    },
+    {
+      "w": "utensil",
+      "ipa": "/juːˈten.səl/",
+      "pos": "n.",
+      "cn": "（廚房）用具",
+      "def": "A tool you use in a kitchen, such as a spoon or a pan.",
+      "ex": "He washes every wooden utensil by hand.",
+      "exCn": "他每一件木製廚具都用手洗。"
+    },
+    {
+      "w": "importer",
+      "ipa": "/ɪmˈpɔːrtɚ/",
+      "pos": "n.",
+      "cn": "進口商",
+      "def": "A company that brings goods in from another country.",
+      "ex": "A small importer near the port handles most of the coffee.",
+      "exCn": "港口附近一家小進口商處理了大部分的咖啡。"
+    },
+    {
+      "w": "dissolve",
+      "ipa": "/dɪˈzɑːlv/",
+      "pos": "v.",
+      "cn": "溶出；溶解",
+      "def": "To mix into a liquid and seem to disappear.",
+      "ex": "Stir slowly until the powder dissolves in warm water.",
+      "exCn": "慢慢攪拌，直到粉末在溫水裡溶解。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many shipments were stopped at the border?",
+      "qCn": "有幾批貨在邊境被攔下？",
+      "opts": [
+        "A. Two",
+        "B. Three",
+        "C. Four",
+        "D. Eleven"
+      ],
+      "optsCn": [
+        "A. 兩批",
+        "B. 三批",
+        "C. 四批",
+        "D. 十一批"
+      ],
+      "ans": 2,
+      "expl": "four shipments of kitchen goods from China had been stopped at the border——第一段第一句就報了數字；eleven 是四月到十月累計的不合格批數，不是這一次。"
+    },
+    {
+      "q": "What is the legal limit in the test?",
+      "qCn": "這項檢驗的法定限量是多少？",
+      "opts": [
+        "A. 30 parts per million",
+        "B. 67 parts per million",
+        "C. 123 parts per million",
+        "D. 226 parts per million"
+      ],
+      "optsCn": [
+        "A. 百萬分之三十",
+        "B. 百萬分之六十七",
+        "C. 百萬分之一百二十三",
+        "D. 百萬分之二百二十六"
+      ],
+      "ans": 0,
+      "expl": "the legal limit is thirty parts per million——第二段寫明限量，67、123、226 都是測出來的結果，全部超標。"
+    },
+    {
+      "q": "What will happen to the rejected goods?",
+      "qCn": "不合格的貨品會怎麼處理？",
+      "opts": [
+        "A. They will be sold at a lower price",
+        "B. They will be sent back or destroyed",
+        "C. They will be tested again next year",
+        "D. They will be given to the importer"
+      ],
+      "optsCn": [
+        "A. 會降價賣掉",
+        "B. 會被退運或銷毀",
+        "C. 明年會再驗一次",
+        "D. 會交給進口商"
+      ],
+      "ans": 1,
+      "expl": "The rejected goods are going to be sent back or destroyed.——第三段第一句，用 going to 加被動語態，表示處理方式已經定了。"
+    },
+    {
+      "q": "Until November 19, every incoming batch ___ and tested.",
+      "qCn": "到11月19日為止，每一批進來的貨都會被拆開檢驗。",
+      "opts": [
+        "A. is going to open",
+        "B. is going to be opened",
+        "C. will opening",
+        "D. opens"
+      ],
+      "ans": 1,
+      "expl": "貨是「被」拆開的，動作不是貨自己做的，所以要用被動：be going to be + 過去分詞。A 少了被動，C 的形狀不存在，D 的現在簡單式講不出這個安排。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The officers stopped four shipments at the border.",
+      "b2": "Four shipments were stopped at the border.",
+      "note": "新聞的重點是那四批貨，不是哪位關員動手。被動語態把貨推到句首，讀者第一眼就看到主角；誰做的不重要時，連 by 都不用寫。",
+      "sp": "Four shipments. Stopped.",
+      "spNote": "口語只留名詞和過去分詞，被動的味道還在。",
+      "b1Cn": "關員在邊境攔下四批貨。",
+      "b2Cn": "四批貨在邊境被攔下。",
+      "spCn": "四批貨，攔下了。"
+    },
+    {
+      "b1": "They will check every batch until November 19.",
+      "b2": "Every incoming batch is going to be opened and tested until November 19.",
+      "note": "they 是誰？新聞裡這個 they 往往沒有交代，讀起來很空。改成被動之後，句子的主角變成「每一批貨」，而且 going to 表示這個做法已經排定，不是臨時起意。",
+      "sp": "Every batch. Opened and tested.",
+      "spNote": "口語把兩個過去分詞並排，最省字也最清楚。",
+      "b1Cn": "他們會檢查每一批貨，到11月19日為止。",
+      "b2Cn": "到11月19日為止，每一批進來的貨都會被拆開檢驗。",
+      "spCn": "每一批都拆開驗。"
+    }
+  ]
+},
+{
+  "id": "d20261021b2",
+  "date": "2026-10-21",
+  "level": "B2",
+  "topic": "新聞·食安",
+  "words": 297,
+  "kind": "news",
+  "title": "Five Point Three Percent, Twice a Week",
+  "titleCn": "百分之五點三，一週兩次",
+  "focus": "will 的兩種身分：報導制度即將採取的做法（inspectors will open、the cost will fall on），以及表達推測與意願；搭配名詞化與被動語態寫出新聞語域",
+  "intro": "同一則食安新聞，這一篇換成制度的角度。請注意 will 在新聞裡幾乎沒有「我現在才決定」的意思，它報的是官方已經公告、即將生效的做法，語氣冷靜而不帶情緒。另外看看作者怎麼用名詞化（the rejection、a tightening）把一整件事壓縮成一個名詞，這是 B2 寫作最常見的升級動作。",
+  "source": "改寫自 Focus Taiwan 報導（2026/10/20）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202610200011",
+  "spoken": [
+    {
+      "en": "Eleven out of two hundred six. Six months.",
+      "cn": "二百零六批裡有十一批，為期半年。"
+    },
+    {
+      "en": "Random sampling becomes batch by batch.",
+      "cn": "抽驗變成逐批查驗。"
+    },
+    {
+      "en": "Testing costs time. Importers pay the waiting.",
+      "cn": "檢驗要時間，等待的成本在進口商身上。"
+    },
+    {
+      "en": "The border catches some. Not everything.",
+      "cn": "邊境攔得住一些，攔不住全部。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "A regulator rarely announces a single bad result. What it announces is a pattern. When Taiwan's drug and food authority listed four rejected shipments of Chinese kitchen goods on Tuesday, the number that mattered was not 226 parts per million, high as that figure was against a threshold of 30. It was 5.3 percent: eleven failures in 206 batches of the same product group over six months.",
+      "cn": "主管機關很少只為了一筆不合格的結果開記者會，它公布的是一個趨勢。台灣的食藥主管機關星期二列出四批不合格的中國廚房用品時，真正關鍵的數字不是百萬分之226——儘管這個數字遠超過30的限量——而是百分之5.3：半年之間，同一類產品206批裡有11批不合格。"
+    },
+    {
+      "en": "That rate explains the response. A one-off failure is handled by a refusal at the dock; a rate closer to one batch in twenty is handled by changing the rules of entry. From Tuesday until November 19, inspectors will open every incoming batch in the category rather than sampling it, and for one importer the proportion of shipments pulled aside for testing will rise to somewhere between a fifth and a half.",
+      "cn": "這個比率解釋了處理方式。偶發的一筆不合格，在碼頭退掉就結束了；但接近二十批就有一批的比率，要靠改變進關規則來處理。從星期二到11月19日，查驗人員會把這一類每一批進來的貨全部拆開，而不是抽驗；其中一家進口商被攔下送驗的批次比例，則會提高到五分之一與二分之一之間。"
+    },
+    {
+      "en": "Compliance of this kind is expensive in a currency that does not appear in the announcement: time. A container that waits for a laboratory result is a container that is not earning anything, and that cost will fall on importers long before it reaches a shelf price. Companies that keep their own records clean therefore have a commercial reason, not only a legal one, to test before they ship.",
+      "cn": "這種法規遵循的代價，用的是公告裡看不到的一種貨幣：時間。一個櫃子在等實驗室報告，就是一個沒有在賺錢的櫃子，而這筆成本會先落在進口商身上，很久以後才反映到架上的價格。所以那些把自己紀錄維持乾淨的公司，除了法律上的理由，還有商業上的理由在出貨前先自行檢驗。"
+    },
+    {
+      "en": "What the announcement cannot promise is completeness. The same list named fresh durian from Vietnam, Chinese radishes and dried beans from Indonesia, each held for a different reason, and each a reminder that a border post inspects what arrives through it and nothing else. Products that are already in a kitchen are beyond its reach. For a shopper, the practical lesson is narrower than the headline: keep the receipt, read the label, and treat a baking cup as a thing that was manufactured somewhere, by someone, to some standard.",
+      "cn": "這份公告唯一不能保證的，就是完整。同一份清單上還有越南的新鮮榴槤、中國的白蘿蔔和印尼的乾豆，各自因為不同的原因被留置，也各自提醒我們：邊境關卡只檢查從它那裡進來的東西，別的管不到。已經在廚房裡的產品，它伸不到手。對消費者來說，實際能學到的事比標題小得多：留著收據、看標籤，並且把一個紙烤杯當成「某個地方、某個人、按某種標準做出來的東西」。"
+    }
+  ],
+  "target": [
+    {
+      "w": "regulator",
+      "ipa": "/ˈreɡ.jə.leɪ.t̬ɚ/",
+      "pos": "n.",
+      "cn": "主管機關；監管單位",
+      "def": "An official body that controls how an industry behaves.",
+      "ex": "The telecoms regulator fined two operators for misleading adverts.",
+      "exCn": "電信主管機關因為廣告不實罰了兩家業者。"
+    },
+    {
+      "w": "threshold",
+      "ipa": "/ˈθreʃ.hoʊld/",
+      "pos": "n.",
+      "cn": "門檻；臨界值",
+      "def": "The level at which something starts to count or to be a problem.",
+      "ex": "Noise above that threshold triggers an automatic alarm.",
+      "exCn": "噪音超過那個臨界值就會觸發自動警報。"
+    },
+    {
+      "w": "compliance",
+      "ipa": "/kəmˈplaɪ.əns/",
+      "pos": "n.",
+      "cn": "法規遵循；依規定辦理",
+      "def": "The act of obeying a rule or a law.",
+      "ex": "Her whole department exists to prove compliance to auditors.",
+      "exCn": "她整個部門存在的目的就是向稽核人員證明合規。"
+    },
+    {
+      "w": "sampling",
+      "ipa": "/ˈsæmplɪŋ/",
+      "pos": "n.",
+      "cn": "抽驗；抽樣",
+      "def": "Testing a small part of a group instead of all of it.",
+      "ex": "Random sampling found no problem in the first hundred units.",
+      "exCn": "隨機抽驗在前一百個單位裡沒有發現問題。"
+    },
+    {
+      "w": "proportion",
+      "ipa": "/prəˈpɔːr.ʃən/",
+      "pos": "n.",
+      "cn": "比例",
+      "def": "A part of a total, often given as a share or a percentage.",
+      "ex": "A growing proportion of her sales now comes from abroad.",
+      "exCn": "她的銷售中來自國外的比例越來越高。"
+    },
+    {
+      "w": "consumer",
+      "ipa": "/kənˈsuː.mɚ/",
+      "pos": "n.",
+      "cn": "消費者",
+      "def": "A person who buys and uses goods or services.",
+      "ex": "Consumer groups asked for clearer labels on frozen food.",
+      "exCn": "消費者團體要求冷凍食品的標籤更清楚。"
+    },
+    {
+      "w": "manufacture",
+      "ipa": "/ˌmæn.jəˈfæk.tʃɚ/",
+      "pos": "v.",
+      "cn": "製造",
+      "def": "To make goods in large numbers, usually in a factory.",
+      "ex": "The valves are manufactured in two plants outside Hanoi.",
+      "exCn": "這些閥件在河內郊外的兩座廠製造。"
+    },
+    {
+      "w": "standard",
+      "ipa": "/ˈstæn.dɚd/",
+      "pos": "n.",
+      "cn": "標準",
+      "def": "A level of quality that something should reach.",
+      "ex": "Every welder on site works to the same written standard.",
+      "exCn": "工地上每位焊工都照同一份書面標準作業。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "According to the article, which number matters most to the regulator?",
+      "qCn": "根據本文，對主管機關來說哪個數字最重要？",
+      "opts": [
+        "A. 226 parts per million",
+        "B. The threshold of 30",
+        "C. The 5.3 percent failure rate",
+        "D. The four rejected shipments"
+      ],
+      "optsCn": [
+        "A. 百萬分之226",
+        "B. 限量30",
+        "C. 百分之5.3的不合格率",
+        "D. 四批不合格的貨"
+      ],
+      "ans": 2,
+      "expl": "the number that mattered was not 226... It was 5.3 percent——第一段直接點明：單筆數字再高也只是個案，比率才是機關採取行動的依據。"
+    },
+    {
+      "q": "What changes between Tuesday and November 19?",
+      "qCn": "星期二到11月19日之間，做法有什麼改變？",
+      "opts": [
+        "A. Imports in the category are banned",
+        "B. Every batch is opened instead of sampled",
+        "C. The threshold is lowered to 20",
+        "D. Importers test their own goods at the dock"
+      ],
+      "optsCn": [
+        "A. 這一類產品禁止進口",
+        "B. 每一批都拆開驗，不再抽驗",
+        "C. 限量降到20",
+        "D. 進口商在碼頭自行檢驗"
+      ],
+      "ans": 1,
+      "expl": "inspectors will open every incoming batch in the category rather than sampling it——第二段說明做法從抽驗改成逐批，並沒有禁止進口，也沒有改限量。"
+    },
+    {
+      "q": "Why does the writer call compliance expensive?",
+      "qCn": "作者為什麼說法規遵循的代價很高？",
+      "opts": [
+        "A. Laboratory fees have doubled this year",
+        "B. Waiting containers earn nothing while they are held",
+        "C. Importers must pay the regulator a fine",
+        "D. Shelf prices are fixed by the authority"
+      ],
+      "optsCn": [
+        "A. 今年實驗室費用漲了一倍",
+        "B. 被留置的貨櫃在等待期間賺不到錢",
+        "C. 進口商必須繳罰款給主管機關",
+        "D. 架上價格由主管機關訂定"
+      ],
+      "ans": 1,
+      "expl": "A container that waits for a laboratory result is a container that is not earning anything——第三段把成本定義為時間，不是罰款，也沒有提到費用上漲。"
+    },
+    {
+      "q": "In this article, the many uses of will mainly ___.",
+      "qCn": "本文中大量出現的 will 主要是用來做什麼？",
+      "opts": [
+        "A. report decisions made while speaking",
+        "B. report measures that are already announced and about to take effect",
+        "C. make polite offers to the reader",
+        "D. express the writer's personal hope"
+      ],
+      "optsCn": [
+        "A. 報導說話當下才做的決定",
+        "B. 報導已經公告、即將生效的做法",
+        "C. 對讀者提出客氣的提議",
+        "D. 表達作者個人的希望"
+      ],
+      "ans": 1,
+      "expl": "inspectors will open every incoming batch、that cost will fall on importers 都是已經公告的制度安排，不是當場決定，也不是提議。新聞語域裡的 will 多半就是這種「預告既定措施」的用法。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "They refused the goods, and that shows the rate is too high.",
+      "b2": "The rejection of these four shipments points to a rate the authority can no longer treat as noise.",
+      "note": "把動詞 refuse 變成名詞 rejection，整件事就被壓縮成一個可以當主詞的東西，後面才有空間接評論。這是新聞與報告英文最常用的升級動作，叫名詞化；中文習慣一路用動詞往下講，所以要特別練。",
+      "sp": "Four rejections. That's the story.",
+      "spNote": "口語可以只丟名詞，讓對方自己補上動詞。",
+      "b1Cn": "他們把貨退了，這表示不合格率太高。",
+      "b2Cn": "這四批貨被退，指向一個主管機關已經不能當成雜訊的比率。",
+      "spCn": "四批被退，重點就在這。"
+    },
+    {
+      "b1": "Companies should test their products before they send them, because it is cheaper.",
+      "b2": "Companies that keep their records clean have a commercial reason, not only a legal one, to test before they ship.",
+      "note": "B1 版用 should 給建議，像在教訓對方；B2 版改成陳述一個事實：他們「有一個商業上的理由」。把建議改寫成理由，語氣變客觀，讀者自己就會得出結論，這在報告裡比命令句有說服力。",
+      "sp": "Test early. Cheaper that way.",
+      "spNote": "口語用兩個短句，前句祈使、後句補原因。",
+      "b1Cn": "公司應該在出貨前先檢驗產品，因為這樣比較便宜。",
+      "b2Cn": "把紀錄維持乾淨的公司，除了法律上的理由，還有商業上的理由在出貨前先檢驗。",
+      "spCn": "早點驗，這樣比較省。"
+    }
+  ]
+},
 /* ---------- 2026-10-14 每日文章（金錢與居住：搬家、房租與未來的錢） ---------- */
 {
   "id": "d20261014a2",
@@ -12347,6 +13140,799 @@ articles:[
 ],
 
 grammar:[
+/* ---------- 2026-10-21 每日文法（be going to；will and shall） ---------- */
+{
+  "id": "dg20261021a2",
+  "date": "2026-10-21",
+  "unitNo": 20,
+  "level": "A2",
+  "title": "I'm Going to Do It: Plans You Have Already Decided",
+  "titleCn": "我要做這件事：已經決定好的計畫",
+  "srcDays": [],
+  "summary": "be going to 不是在猜，而是在報告一個你早就決定好的計畫。形狀固定：be 動詞加 going to 再加原形動詞，中間的 going 永遠不變，會變的只有前面的 be 動詞。",
+  "sections": [
+    {
+      "h": "形狀：be 動詞 + going to + 原形動詞",
+      "body": "這個句型有三塊，少一塊就壞掉。第一塊是 be 動詞，它要跟著主詞變：I 配 am，he、she、it 配 is，we、you、they 配 are。第二塊 going to 不管主詞是誰都長一樣，不會變成 goings 也不會變成 went。第三塊是原形動詞，不加 s、不加 ed、也不加 ing。很多人會把第三塊也加上 ing，寫成 going to buying，那是把兩個句型疊在一起了。",
+      "table": {
+        "head": [
+          "主詞",
+          "be 動詞",
+          "going to + 原形動詞"
+        ],
+        "rows": [
+          [
+            "I",
+            "am",
+            "going to call the shop."
+          ],
+          [
+            "He / She / It",
+            "is",
+            "going to wash the big pot."
+          ],
+          [
+            "We / You / They",
+            "are",
+            "going to eat at six."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I am going to make soup tonight.",
+          "cn": "我今天晚上要煮湯。",
+          "note": "am 配 I，後面是原形 make"
+        },
+        {
+          "en": "My brother is going to help in the kitchen.",
+          "cn": "我弟弟要在廚房幫忙。",
+          "note": "主詞是單數，所以用 is"
+        },
+        {
+          "en": "They are going to open a small bakery.",
+          "cn": "他們要開一家小麵包店。",
+          "note": "主詞是複數，所以用 are"
+        }
+      ]
+    },
+    {
+      "h": "什麼時候用：決定已經做好了",
+      "body": "be going to 的重點不在未來，而在「已經決定」。你心裡已經拍板，可能單子寫了、錢存了、日子挑好了，只是動作還沒發生。所以它常跟 tonight、tomorrow、next week、this Sunday 這種時間詞一起出現。如果你還在考慮、還沒決定，就不要用這個句型，那是 will 的工作。",
+      "bullets": [
+        "已經決定好的事 → be going to",
+        "剛剛才決定、話說出口才想到 → will",
+        "店家或時刻表定的時間 → 現在簡單式"
+      ],
+      "examples": [
+        {
+          "en": "We are going to visit my grandmother next Sunday.",
+          "cn": "我們下星期日要去看我奶奶。",
+          "note": "日子已經跟家人說好了"
+        },
+        {
+          "en": "I am going to learn to swim this winter.",
+          "cn": "我這個冬天要學游泳。",
+          "note": "決定了，課還沒開始"
+        },
+        {
+          "en": "She is going to paint her door green.",
+          "cn": "她要把她的門漆成綠色。",
+          "note": "顏色都挑好了"
+        }
+      ]
+    },
+    {
+      "h": "否定與問句：只要動 be 動詞",
+      "body": "這個句型最方便的地方是，否定和問句都不用加 do 或 does。否定就在 be 動詞後面放 not，問句就把 be 動詞搬到最前面，其他部分一個字都不用改。這跟現在簡單式很不一樣，所以中文母語者常常不小心把 do 也拉進來，寫出 Do you going to… 這種混在一起的句子。",
+      "table": {
+        "head": [
+          "句型",
+          "寫法",
+          "注意"
+        ],
+        "rows": [
+          [
+            "肯定",
+            "He is going to wait outside.",
+            "be 動詞跟著主詞"
+          ],
+          [
+            "否定",
+            "He is not going to wait outside.",
+            "not 放在 be 動詞後面"
+          ],
+          [
+            "問句",
+            "Is he going to wait outside?",
+            "be 動詞搬到最前面"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I am not going to buy that red bag.",
+          "cn": "我不要買那個紅色的包包。",
+          "note": "am not，不要寫 I don't going"
+        },
+        {
+          "en": "Are you going to join us for dinner?",
+          "cn": "你要跟我們一起吃晚餐嗎？",
+          "note": "Are 開頭，後面完全不變"
+        },
+        {
+          "en": "What are we going to bring tomorrow?",
+          "cn": "我們明天要帶什麼？",
+          "note": "疑問詞放最前面，be 動詞跟在後面"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I going to clean the fridge.",
+      "good": "I am going to clean the fridge.",
+      "why": "中文的「我要洗冰箱」沒有 be 動詞這個零件，所以一不注意就會整個漏掉。但 going to 不能自己站著，它前面一定要有 am、is 或 are。檢查方法：看到 going to，先往前找 be 動詞，找不到就補上。"
+    },
+    {
+      "bad": "She is going to buys two eggs.",
+      "good": "She is going to buy two eggs.",
+      "why": "主詞是第三人稱單數時要加 s 的那個規則，已經用在 is 上面了，後面的動詞回到原形就好。寫成 buys 等於加了兩次。檢查方法：going to 後面永遠是字典上那個樣子的動詞。"
+    },
+    {
+      "bad": "Do you going to cook tonight?",
+      "good": "Are you going to cook tonight?",
+      "why": "句子裡已經有 be 動詞了，問句就靠它開頭，不需要再借 do。中文的「你今天晚上要煮嗎」看不出該用哪一個，所以要看英文句子裡本來有沒有 be 動詞：有 be 動詞就用 be 動詞問。"
+    },
+    {
+      "bad": "I am going to going to the market.",
+      "good": "I am going to go to the market.",
+      "why": "動詞剛好也是 go 的時候最容易打結。前面那個 going to 是句型的一部分，後面那個才是真正的動作，所以要寫原形 go。看起來很重複，但英文就是這樣寫，念起來反而很自然。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I ___ going to wash the rice now.",
+      "qCn": "我現在要洗米。",
+      "opts": [
+        "A. am",
+        "B. is",
+        "C. are",
+        "D. be"
+      ],
+      "ans": 0,
+      "expl": "主詞是 I，be 動詞要用 am。is 配單數的他、她、它，are 配複數，be 是原形不能直接放在這裡。"
+    },
+    {
+      "q": "My sister is going to ___ a cake for the party.",
+      "qCn": "我姊姊要為那場聚會烤一個蛋糕。",
+      "opts": [
+        "A. bakes",
+        "B. baking",
+        "C. bake",
+        "D. baked"
+      ],
+      "ans": 2,
+      "expl": "going to 後面一定接原形動詞。bakes 多加了 s，baking 多加了 ing，baked 是過去式。"
+    },
+    {
+      "q": "___ you going to carry the heavy basket?",
+      "qCn": "你要提那個重的籃子嗎？",
+      "opts": [
+        "A. Do",
+        "B. Are",
+        "C. Will",
+        "D. Does"
+      ],
+      "ans": 1,
+      "expl": "句子裡有 going to，前面的 be 動詞就是問句的開頭，所以用 Are。Do you going 是兩個系統混在一起。"
+    },
+    {
+      "q": "Which sentence is about a plan the speaker already made?",
+      "qCn": "哪一句講的是說話者早就決定好的計畫？",
+      "opts": [
+        "A. Maybe I will cook later.",
+        "B. I am going to cook at seven.",
+        "C. I cook every evening.",
+        "D. I cooked yesterday."
+      ],
+      "ans": 1,
+      "expl": "只有 B 用 be going to 並配上具體時間，表示決定做好了。A 有 maybe 是還沒決定，C 是習慣，D 是過去。"
+    }
+  ]
+},
+{
+  "id": "dg20261021b1",
+  "date": "2026-10-21",
+  "unitNo": 20,
+  "level": "B1",
+  "title": "Going to: A Decision You Made, or a Sign You Can See",
+  "titleCn": "going to 的兩張臉：我的決定，或眼前的跡象",
+  "srcDays": [],
+  "summary": "going to 有兩種工作：一種是報告你自己早就做好的決定，另一種是根據眼前看得到的跡象說「這件事就要發生了」。兩種都不是憑空猜測，所以它跟 will 的分界就在這裡。",
+  "sections": [
+    {
+      "h": "第一張臉：我已經決定了",
+      "body": "這是最常見的用法。決定在說話之前就做好了，說話只是把它報告出來。因為決定已經成立，所以你通常講得出細節：什麼時候、在哪裡、跟誰。這也是為什麼面試或會議裡被問到計畫時，英文母語者幾乎都用 going to，而不是 will——will 會讓對方覺得你是現在才想到的。",
+      "table": {
+        "head": [
+          "你想表達的",
+          "英文怎麼寫",
+          "聽起來像"
+        ],
+        "rows": [
+          [
+            "我決定了，下個月要搬去台中",
+            "I am going to move to Taichung next month.",
+            "已經在找房子了"
+          ],
+          [
+            "我現在才想到，可能搬去台中",
+            "I think I will move to Taichung.",
+            "還在考慮"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "We are going to redesign the menu before the New Year.",
+          "cn": "我們要在新年前把菜單重新設計。",
+          "note": "決定已經在會議上定案"
+        },
+        {
+          "en": "He is going to study food science in Tainan.",
+          "cn": "他要去台南念食品科學。",
+          "note": "學校和科系都選好了"
+        },
+        {
+          "en": "I am going to stop drinking coffee after four.",
+          "cn": "我要戒掉四點以後喝咖啡的習慣。",
+          "note": "自己跟自己做的決定也算"
+        }
+      ]
+    },
+    {
+      "h": "第二張臉：跡象就在眼前",
+      "body": "第二種用法跟你的決定無關，而是跟證據有關。天空整片黑、水已經滿到杯口、對手領先二十分——你看到跡象，於是說「這件事要發生了」。英文這時候也用 going to，因為結論是從眼前的東西推出來的，不是隨口猜的。這一點中文完全看不出來，中文兩種都說「要」或「會」。",
+      "bullets": [
+        "有看得到的跡象 → going to",
+        "純粹憑印象或希望 → will",
+        "跡象越明顯，用 going to 越自然"
+      ],
+      "examples": [
+        {
+          "en": "Look at those clouds. It is going to pour.",
+          "cn": "看那些雲，要下大雨了。",
+          "note": "雲是跡象"
+        },
+        {
+          "en": "The pan is smoking. The oil is going to burn.",
+          "cn": "鍋子在冒煙，油要燒焦了。",
+          "note": "冒煙就是證據"
+        },
+        {
+          "en": "She has read the whole file twice. She is going to find the mistake.",
+          "cn": "她把整份檔案看了兩次，她會找出那個錯誤。",
+          "note": "從她做的事推出結論"
+        }
+      ]
+    },
+    {
+      "h": "跟現在進行式怎麼分",
+      "body": "現在進行式講未來，背後一定有一個跟別人講好的安排：訂了位、約了時間、對方也知道。going to 只需要你自己決定，別人可能還沒聽說。所以同一件事，說法會隨著「定到什麼程度」往上跳一格：先是我的決定（going to），再是雙方的約定（現在進行式）。這兩個都比 will 確定。",
+      "table": {
+        "head": [
+          "確定的程度",
+          "用什麼",
+          "例句"
+        ],
+        "rows": [
+          [
+            "還沒決定，當場才想到",
+            "will",
+            "I will ask the supplier about it."
+          ],
+          [
+            "我自己決定了",
+            "be going to",
+            "I am going to ask the supplier about it."
+          ],
+          [
+            "已經約好時間了",
+            "現在進行式",
+            "I am asking the supplier at ten on Friday."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I am going to see a dentist about this tooth.",
+          "cn": "我要為這顆牙去看牙醫。",
+          "note": "決定了，還沒掛號"
+        },
+        {
+          "en": "I am seeing the dentist at two on Thursday.",
+          "cn": "我星期四兩點要看牙醫。",
+          "note": "掛號掛好了，時間談定了"
+        },
+        {
+          "en": "Our team is going to change the supplier this quarter.",
+          "cn": "我們這一季要換供應商。",
+          "note": "團隊內部決定，對方還不知道"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "Look at the sky. It will rain.",
+      "good": "Look at the sky. It is going to rain.",
+      "why": "前一句已經叫對方看天空，表示證據就在眼前，這時候英文用 going to 才對得上。will 聽起來像你沒看天空、只是隨口猜的，兩句話就互相矛盾了。判斷方法：句子裡有「看、聞、聽到」這種指向證據的提示，就用 going to。"
+    },
+    {
+      "bad": "I am going to meet the auditor at nine tomorrow, we agreed last week.",
+      "good": "I am meeting the auditor at nine tomorrow. We agreed last week.",
+      "why": "時間報到九點、而且雙方上週就談定了，這已經是約定，不只是我的決定，所以升級成現在進行式。going to 不算錯得很嚴重，但會讓對方以為對方還不知道這件事。另外兩個完整句子之間要用句點或連接詞，不能只用逗號。"
+    },
+    {
+      "bad": "He is going to buying a new fridge.",
+      "good": "He is going to buy a new fridge.",
+      "why": "going to 後面接原形動詞，這一點從 A2 到 B2 都不會變。寫成 buying 是因為前面那個 going 帶著 ing，手就順勢也加了一個。檢查方法：一句話裡只能有一個 ing，而那個 ing 屬於 going。"
+    },
+    {
+      "bad": "I am going to can finish it today.",
+      "good": "I am going to be able to finish it today.",
+      "why": "can 不能直接放在 going to 後面，因為兩個都是助動性質的字，不能疊著用。要講未來的能力就換成 be able to。中文「我今天應該可以做完」讓人以為英文也可以把兩個字疊起來，但英文一個位置只放一個。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The water is nearly at the top. It ___ over.",
+      "qCn": "水快到杯口了，要溢出來了。",
+      "opts": [
+        "A. will spill",
+        "B. is going to spill",
+        "C. spills",
+        "D. is spilling"
+      ],
+      "ans": 1,
+      "expl": "第一句就是眼前的跡象，從證據推出結論要用 going to。will 像是沒看到水的人在猜；現在簡單式講的是常態。"
+    },
+    {
+      "q": "We decided last night. We ___ the kitchen next month.",
+      "qCn": "我們昨天晚上決定了，下個月要重新整理廚房。",
+      "opts": [
+        "A. will repaint",
+        "B. are going to repaint",
+        "C. repaint",
+        "D. repainted"
+      ],
+      "ans": 1,
+      "expl": "決定在說話之前就做好了，所以用 be going to。will 會變成現在才想到，跟「昨天晚上決定」衝突。"
+    },
+    {
+      "q": "Someone knocks at the door while you are cooking. You say: \"I ___ it.\"",
+      "qCn": "你在煮飯的時候有人敲門，你說：我去開。",
+      "opts": [
+        "A. am getting",
+        "B. am going to get",
+        "C. will get",
+        "D. get"
+      ],
+      "ans": 2,
+      "expl": "敲門聲是這一秒才出現的，你話說出口才決定去開門，所以用 will。going to 會變成你早就知道有人要來。"
+    },
+    {
+      "q": "Which sentence shows an arrangement that both people already agreed on?",
+      "qCn": "哪一句表示雙方已經談定的約定？",
+      "opts": [
+        "A. I am going to talk to Mai about it.",
+        "B. I will talk to Mai about it.",
+        "C. I am talking to Mai at four on Monday.",
+        "D. I talk to Mai every Monday."
+      ],
+      "ans": 2,
+      "expl": "C 用現在進行式並報出具體時間，表示兩個人都知道、時間也定了。A 只是我的決定，B 是當場決定，D 是習慣。"
+    }
+  ]
+},
+{
+  "id": "dg20261021b1p",
+  "date": "2026-10-21",
+  "unitNo": 21,
+  "level": "B1+",
+  "title": "Will: The Word You Reach for in the Same Breath",
+  "titleCn": "will：話說出口才決定的那個字",
+  "srcDays": [],
+  "summary": "will 的主場不是未來，而是「說話這一刻」。你在這一秒決定、答應、提議或拒絕，英文就用 will；事情如果在開口之前就定了，那是 going to 或現在進行式的地盤。",
+  "sections": [
+    {
+      "h": "核心：決定發生在說話的那一秒",
+      "body": "把 will 想成一個時間戳記：它蓋的是「現在」。你聽到一件事、看到一個狀況，然後當場做出反應，那個反應就用 will。這也是為什麼 will 很少出現在你事先準備好的行程報告裡，卻大量出現在對話中——對話就是一連串的即時反應。口語幾乎都縮成 I'll、we'll、they'll，縮寫本身就在告訴你這是脫口而出的。",
+      "table": {
+        "head": [
+          "情況",
+          "你會說",
+          "為什麼不是 going to"
+        ],
+        "rows": [
+          [
+            "同事說檔案開不了",
+            "I'll send you another copy.",
+            "決定是在聽完那句話之後才有的"
+          ],
+          [
+            "已經排在今天的工作清單上",
+            "I'm going to send the quarterly report.",
+            "清單是昨天寫的，決定早就做好了"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "That box looks heavy. I'll take the other side.",
+          "cn": "那個箱子看起來很重，我抬另一邊。",
+          "note": "看到了才決定幫忙"
+        },
+        {
+          "en": "The line is busy. I'll try again in ten minutes.",
+          "cn": "電話占線，我十分鐘後再試。",
+          "note": "反應就在這一秒"
+        },
+        {
+          "en": "Fine, I'll ask the supplier myself.",
+          "cn": "好，我自己去問供應商。",
+          "note": "對話中讓步的那一刻"
+        }
+      ]
+    },
+    {
+      "h": "四個常見場合：提議、答應、承諾、拒絕",
+      "body": "will 在對話裡幾乎都在做這四件事。提議是你主動伸手幫忙；答應是你接受對方的要求；承諾是你保證會做到；拒絕用 won't，而且語氣比 I don't want to 強硬得多，因為它說的是「我不願意」，不只是「我不想」。注意 won't 用在人身上帶著意志的味道，用在機器上則是「就是不動」，例如門打不開。",
+      "bullets": [
+        "提議：I'll carry that for you.",
+        "答應：Yes, I'll check it this afternoon.",
+        "承諾：I promise I'll call you back.",
+        "拒絕：He won't sign anything today."
+      ],
+      "examples": [
+        {
+          "en": "Shall I open the window for you?",
+          "cn": "要我幫你開窗嗎？",
+          "note": "用 Shall I 提議，比 Will I 自然"
+        },
+        {
+          "en": "Shall we start with the oven test?",
+          "cn": "我們要不要先從烤箱測試開始？",
+          "note": "Shall we 用來提出建議"
+        },
+        {
+          "en": "The lid won't come off, even with hot water.",
+          "cn": "蓋子就是打不開，用熱水也沒用。",
+          "note": "won't 用在東西上表示「就是不」"
+        }
+      ]
+    },
+    {
+      "h": "will 不做的事",
+      "body": "will 不報告既定行程。公司明天的會議、你訂好的機票、簽好的合約日期，這些都不是 will 的工作。另外要特別小心兩個地方：第一，if 和 when 引導的那半句不寫 will，動詞用現在式，但主句照樣可以用 will；第二，I think、I'm sure、probably 這些字後面接 will 很自然，因為那本來就是你當下的判斷。",
+      "table": {
+        "head": [
+          "寫法",
+          "正確與否",
+          "說明"
+        ],
+        "rows": [
+          [
+            "If the result is high, we will reject the batch.",
+            "✓",
+            "if 那半句用現在式，主句用 will"
+          ],
+          [
+            "When the lab calls, I will tell you.",
+            "✓",
+            "when 那半句同樣用現在式"
+          ],
+          [
+            "I'm sure the importer will complain.",
+            "✓",
+            "當下的判斷，很自然"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "If the sample fails twice, the whole lot will go back.",
+          "cn": "如果樣品兩次都不合格，整批貨就會退回去。",
+          "note": "if 子句用現在式 fails"
+        },
+        {
+          "en": "I'm sure the laboratory will finish before Friday.",
+          "cn": "我確定實驗室會在星期五之前做完。",
+          "note": "I'm sure 後面接 will"
+        },
+        {
+          "en": "When the container arrives, we will weigh it first.",
+          "cn": "貨櫃到的時候，我們會先秤重。",
+          "note": "when 子句用 arrives，不用 will arrive"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I will meet the auditor at nine tomorrow. It was arranged last week.",
+      "good": "I'm meeting the auditor at nine tomorrow. It was arranged last week.",
+      "why": "後面那句自己承認上週就安排好了，那就不是說話這一刻的決定。既定的約會用現在進行式最自然，用 going to 也可以，但 will 會讓對方以為時間還沒定。檢查方法：如果你講得出誰跟你約的，就不要用 will。"
+    },
+    {
+      "bad": "When the report will arrive, I will forward it to you.",
+      "good": "When the report arrives, I will forward it to you.",
+      "why": "when 和 if 引導的子句裡不放 will，動詞用現在式就代表未來，主句才用 will。中文兩半都說「會」，所以很容易兩邊都寫上去。檢查方法：一個句子裡有 when 或 if 時，will 只准出現在沒有連接詞的那一半。"
+    },
+    {
+      "bad": "Will I carry your bag?",
+      "good": "Shall I carry your bag?",
+      "why": "用問句提議幫忙時，英文用 Shall I 或 Do you want me to，不用 Will I。Will I 問的是「我將來會不會」，像在問命運，不是在幫忙。同理，提出建議是 Shall we，不是 Will we。"
+    },
+    {
+      "bad": "I'll going to call the lab.",
+      "good": "I'll call the lab.",
+      "why": "will 和 going to 是兩個不同的句型，不能疊在一起。寫成這樣通常是先想到 will、又想補上確定感，結果兩個都放。要很確定就只留 going to，要表達當場決定就只留 will。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "A: The printer has no paper. B: Don't worry, I ___ some from the store room.",
+      "qCn": "A：印表機沒紙了。B：別擔心，我去倉庫拿一些。",
+      "opts": [
+        "A. am getting",
+        "B. will get",
+        "C. get",
+        "D. am going to getting"
+      ],
+      "ans": 1,
+      "expl": "B 是聽完 A 那句話才決定去拿紙的，決定就在這一秒，所以用 will。am getting 會變成他早就安排好要去倉庫。"
+    },
+    {
+      "q": "___ we postpone the tasting until the lab result comes back?",
+      "qCn": "我們要不要把試吃延到實驗室結果出來之後？",
+      "opts": [
+        "A. Will",
+        "B. Shall",
+        "C. Are",
+        "D. Do"
+      ],
+      "ans": 1,
+      "expl": "提出建議要用 Shall we。Will we 問的是「我們將來會不會」，語氣變成在問預言，不是在提議。"
+    },
+    {
+      "q": "If the box ___ damaged, we will open a claim with the carrier.",
+      "qCn": "如果箱子有破損，我們就會向承運商提出理賠。",
+      "opts": [
+        "A. will be",
+        "B. is",
+        "C. will arrive",
+        "D. would be"
+      ],
+      "ans": 1,
+      "expl": "if 引導的子句不用 will，用現在式 is 就足以表達未來；will 留給後面的主句。"
+    },
+    {
+      "q": "Which sentence expresses a refusal rather than a plan?",
+      "qCn": "哪一句表達的是拒絕，而不是計畫？",
+      "opts": [
+        "A. He is going to sign the form tomorrow.",
+        "B. He won't sign anything without a translation.",
+        "C. He is signing the form at four.",
+        "D. He signs the forms every Friday."
+      ],
+      "ans": 1,
+      "expl": "won't 在人身上表示「不願意」，是拒絕。A 是已經做好的決定，C 是約定好的時間，D 是例行工作。"
+    }
+  ]
+},
+{
+  "id": "dg20261021b2",
+  "date": "2026-10-21",
+  "unitNo": 21,
+  "level": "B2",
+  "title": "Will and Shall in Register: From the Contract to the Kitchen Door",
+  "titleCn": "will 與 shall 的語域：從合約到廚房門口",
+  "srcDays": [],
+  "summary": "will 的意思不只一種，而是隨語域移動：在合約裡它是義務，在公告裡它是既定措施，在對話裡它是你這一刻的意願。shall 則幾乎退到兩個角落——Shall I 與 Shall we 的提議，以及法律文件裡的規定。",
+  "sections": [
+    {
+      "h": "同一個 will，三種語域",
+      "body": "學到 B2 之後，困難的已經不是形狀而是語氣。will 在對話裡是最輕的：我這一秒願意做。在公告與新聞裡它變重了：某個機關已經決定，從某天開始照這樣辦，讀者沒有商量空間。在合約裡它最重，等於「必須」，而且常常跟 shall 互換使用。寫作時挑錯語域，不會被說文法錯，但會被覺得「口氣怪怪的」。",
+      "table": {
+        "head": [
+          "語域",
+          "例句",
+          "will 的意思"
+        ],
+        "rows": [
+          [
+            "對話",
+            "I'll walk you to the gate.",
+            "我這一刻願意"
+          ],
+          [
+            "公告",
+            "Inspectors will examine every consignment.",
+            "既定措施，照此執行"
+          ],
+          [
+            "合約",
+            "The seller will replace defective units within 30 days.",
+            "義務，等於必須"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The buyer will bear the cost of re-testing.",
+          "cn": "再驗的費用由買方負擔。",
+          "note": "合約語域，will 等於義務"
+        },
+        {
+          "en": "Collection times will change from the first of next month.",
+          "cn": "收件時間自下個月一日起調整。",
+          "note": "公告語域，冷靜而不帶情緒"
+        },
+        {
+          "en": "I'll walk the inspector through the paperwork myself.",
+          "cn": "我自己帶查驗人員看過文件。",
+          "note": "對話語域，表達意願"
+        }
+      ]
+    },
+    {
+      "h": "shall 剩下的兩個角落",
+      "body": "現代英語裡 shall 幾乎已經讓位給 will，但它在兩個地方還活得很好。第一是 Shall I 與 Shall we 的問句，用來提議或徵求意見，語氣比 Do you want me to 更俐落，在會議裡非常好用。第二是法律與契約英語，shall 用來寫出規定與義務，例如 Each party shall keep the records for five years。日常敘述句裡不要用 shall，會顯得過時或刻意。",
+      "bullets": [
+        "提議與徵詢：Shall I…? / Shall we…?",
+        "契約規定：Each party shall…",
+        "日常敘述句：改用 will",
+        "美式英語裡的提議問句也常用 Should I…?"
+      ],
+      "examples": [
+        {
+          "en": "Shall I summarize the findings in one page?",
+          "cn": "要我把發現整理成一頁嗎？",
+          "note": "會議裡最俐落的提議方式"
+        },
+        {
+          "en": "Shall we take the complaints in date order?",
+          "cn": "我們要不要照日期順序處理這些客訴？",
+          "note": "Shall we 徵求同意"
+        },
+        {
+          "en": "The supplier shall retain test records for five years.",
+          "cn": "供應商應保存檢驗紀錄五年。",
+          "note": "契約語域，shall 等於應當"
+        }
+      ]
+    },
+    {
+      "h": "寫作上的選擇：will、going to，還是不用未來式",
+      "body": "正式書寫裡有一個常被忽略的選項：根本不用未來式。報告的小標、合約的條件句、流程說明常常用現在式表達將來，因為制度性的動作不需要強調時間。另一個選擇是把 will 換成名詞化的說法，讓句子更密實。這不是炫技，而是因為正式文件要的是可引用的條款，而不是說話者的情緒。",
+      "table": {
+        "head": [
+          "寫法",
+          "語感",
+          "適用"
+        ],
+        "rows": [
+          [
+            "Inspectors will open each consignment.",
+            "公告、新聞",
+            "告知讀者即將生效的做法"
+          ],
+          [
+            "Inspection is tightened for 30 days.",
+            "制度性描述",
+            "流程文件、程序書"
+          ],
+          [
+            "A tightening of inspection follows any repeat failure.",
+            "最密實",
+            "報告摘要、政策分析"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Payment falls due thirty days after delivery.",
+          "cn": "貨到後三十日付款到期。",
+          "note": "合約用現在式講將來"
+        },
+        {
+          "en": "Any repeat failure triggers a full review of the supplier.",
+          "cn": "任何重複不合格都會觸發對供應商的全面檢討。",
+          "note": "用現在式寫規則，比 will 更像條款"
+        },
+        {
+          "en": "Our position on the clause will not change before the audit.",
+          "cn": "在稽核之前，我們對該條款的立場不會改變。",
+          "note": "刻意用 will not 表達堅定的意願"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I shall send you the certificate this afternoon.",
+      "good": "I'll send you the certificate this afternoon.",
+      "why": "用 shall 寫一般的敘述句，在現代英語裡聽起來像十九世紀的信件，或是刻意裝正式。shall 的日常地盤只剩下 Shall I 與 Shall we 的問句。檢查方法：如果句子不是問句、也不是合約條款，就把 shall 換成 will。"
+    },
+    {
+      "bad": "The company will reserve the right to cancel the order.",
+      "good": "The company reserves the right to cancel the order.",
+      "why": "條款描述的是一種本來就存在的權利，不是未來某天才發生的事，所以合約英語用現在式。加上 will 會讓讀者以為這項權利現在還沒生效。檢查方法：句子講的是制度或權利，而不是某個時間點的動作，就用現在式。"
+    },
+    {
+      "bad": "We will be glad to comply your instructions.",
+      "good": "We will be glad to comply with your instructions.",
+      "why": "comply 後面一定要有 with，這是正式書信最常被抓到的小錯之一。中文「遵照您的指示」是直接接受詞的，所以介系詞很容易掉。正式文件裡這種小洞特別顯眼，因為整句的語域拉得很高，一個介系詞就破功。"
+    },
+    {
+      "bad": "Shall you join the review meeting?",
+      "good": "Will you join the review meeting?",
+      "why": "shall 現在只跟 I 和 we 連用。問對方要不要參加，用 Will you 或 Would you like to。Shall you 在現代英語裡幾乎只會出現在模仿舊時代語氣的文本裡，寫在公司信件裡會讓人誤以為是機器翻譯。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "In a contract, which sentence states an obligation most conventionally?",
+      "qCn": "在合約裡，哪一句最符合慣例地寫出義務？",
+      "opts": [
+        "A. The seller is going to replace faulty parts.",
+        "B. The seller shall replace faulty parts.",
+        "C. The seller is replacing faulty parts.",
+        "D. The seller replaces faulty parts soon."
+      ],
+      "ans": 1,
+      "expl": "契約英語用 shall 或 will 寫義務，shall 最符合慣例。going to 與現在進行式都屬於口語語域，放進條款裡語氣不對。"
+    },
+    {
+      "q": "___ I circulate the minutes before Thursday?",
+      "qCn": "要我在星期四之前把會議紀錄發出去嗎？",
+      "opts": [
+        "A. Will",
+        "B. Shall",
+        "C. Am",
+        "D. Would"
+      ],
+      "ans": 1,
+      "expl": "主動提議由自己做某事，用 Shall I 最自然。Will I 聽起來像在問自己的命運，Am I 的形狀不完整。"
+    },
+    {
+      "q": "Which version sounds most like a formal public notice?",
+      "qCn": "哪一個版本最像正式的公告？",
+      "opts": [
+        "A. We're gonna check every box for a month.",
+        "B. I think we'll check the boxes.",
+        "C. Every consignment will be examined for thirty days.",
+        "D. Shall we examine every consignment?"
+      ],
+      "ans": 2,
+      "expl": "公告語域偏好被動語態加 will，主角是貨物而不是查驗人員。A 是口語縮寫，B 帶著個人判斷，D 是提議問句。"
+    },
+    {
+      "q": "Payment ___ due thirty days after delivery.",
+      "qCn": "貨到後三十日付款到期。",
+      "opts": [
+        "A. will be falling",
+        "B. falls",
+        "C. is going to fall",
+        "D. shall falling"
+      ],
+      "ans": 1,
+      "expl": "合約條款用現在式講制度上的將來，falls 最乾淨。will be falling 把條款變成進行中的動作，going to 語域太口語，D 的形狀不存在。"
+    }
+  ]
+},
 /* ---------- 2026-10-14 每日文法（用現在式講未來；going to） ---------- */
 {
   "id": "dg20261014a2",

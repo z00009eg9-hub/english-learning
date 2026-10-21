@@ -14,6 +14,969 @@ window.LISTEN = {
 
 /* ========== 依課堂筆記自製（每週三更新） ========== */
 notes:[
+/* ---------- 2026-10-21 食物與生活主題（四個程度） ---------- */
+{
+  "id": "dl20261021a2",
+  "date": "2026-10-21",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Flour, Sugar, and One Old Oven",
+  "titleCn": "麵粉、糖，和一台舊烤箱",
+  "series": "本站自製聽力 · 食物與生活主題",
+  "topic": "🛒 午休時聊星期日要烤的蛋糕",
+  "focus": "用 be going to 講已經決定好的計畫（I'm going to bake、I'm going to walk），用現在簡單式講店家的營業時間（opens），will 留給聽完才決定的事",
+  "intro": "Tom在午休時跟同事Lisa說他星期日要烤蛋糕。請注意Tom講自己的計畫時都用 going to：am going to bake、am going to buy、am going to walk，因為這些他昨天就決定好了。講小店幾點開門時卻換成 opens，因為那是店家定的。最後Lisa說 I'll bring，那是她聽完才想到的。",
+  "tip": "第一次聽只抓三件事：蛋糕是為誰烤的、家裡缺哪兩樣東西、蛋糕要烤多久。第二次聽專心分辨哪幾句是 going to、哪一句是 will，並想一想說話的人是什麼時候做決定的。",
+  "pre": [
+    {
+      "w": "bake",
+      "ipa": "/beɪk/",
+      "pos": "v.",
+      "cn": "烘；烤",
+      "def": "To cook bread or cakes in an oven."
+    },
+    {
+      "w": "flour",
+      "ipa": "/ˈflaʊ.ɚ/",
+      "pos": "n.",
+      "cn": "麵粉",
+      "def": "White powder from wheat, used to make bread and cakes."
+    },
+    {
+      "w": "sugar",
+      "ipa": "/ˈʃʊɡ.ɚ/",
+      "pos": "n.",
+      "cn": "糖",
+      "def": "A sweet white or brown food that you put in drinks or cakes."
+    },
+    {
+      "w": "oven",
+      "ipa": "/ˈʌvən/",
+      "pos": "n.",
+      "cn": "烤箱",
+      "def": "A hot box in a kitchen where you cook food."
+    },
+    {
+      "w": "list",
+      "ipa": "/lɪst/",
+      "pos": "n.",
+      "cn": "清單",
+      "def": "Words or things written one under the other."
+    },
+    {
+      "w": "taste",
+      "ipa": "/teɪst/",
+      "pos": "v.",
+      "cn": "嚐",
+      "def": "To put a little food in your mouth to know if it is good."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "You are writing something. Is that a shopping list?",
+      "cn": "你在寫東西，那是購物清單嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes. I am going to bake a cake on Sunday.",
+      "cn": "對，我星期日要烤一個蛋糕。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Nice! For who?",
+      "cn": "不錯啊！為誰烤的？"
+    },
+    {
+      "sp": "Tom",
+      "en": "For my friend Lisa. Her birthday is next Wednesday.",
+      "cn": "給我朋友Lisa，她下星期三生日。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "So what is on the list?",
+      "cn": "那清單上有什麼？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Flour and sugar. I have no flour at home.",
+      "cn": "麵粉和糖，我家裡沒有麵粉。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "The big market is expensive.",
+      "cn": "大市場很貴。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I know. I am going to walk to the small shop near the park.",
+      "cn": "我知道，我要走去公園附近的小店。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "What time does it open?",
+      "cn": "那家店幾點開？"
+    },
+    {
+      "sp": "Tom",
+      "en": "It opens at nine every day. The flour is cheaper there.",
+      "cn": "它每天九點開門，那裡的麵粉比較便宜。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Good. And your oven? Is it the old one?",
+      "cn": "好。那你的烤箱呢？是那台舊的嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes, it is very old. The cake needs one whole hour.",
+      "cn": "是，很舊了，蛋糕要整整一個小時。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "One hour! Are you worried?",
+      "cn": "一個小時！你會擔心嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "A little. I am going to taste one small piece first.",
+      "cn": "有一點。我會先嚐一小塊。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Then I will bring some tea on Monday.",
+      "cn": "那我星期一帶一些茶來。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Perfect. We can eat the cake in the office.",
+      "cn": "太好了，我們可以在辦公室吃蛋糕。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Who is the cake for?",
+      "qCn": "蛋糕是為誰烤的？",
+      "opts": [
+        "A. For Tom's sister",
+        "B. For his friend Lisa",
+        "C. For his mother",
+        "D. For the office"
+      ],
+      "optsCn": [
+        "A. 給Tom的姊妹",
+        "B. 給他朋友Lisa",
+        "C. 給他媽媽",
+        "D. 給辦公室"
+      ],
+      "ans": 1,
+      "expl": "For my friend Lisa. Her birthday is next Wednesday.——Tom第二次講話就說清楚了。"
+    },
+    {
+      "q": "What two things does Tom need?",
+      "qCn": "Tom需要哪兩樣東西？",
+      "opts": [
+        "A. Tea and sugar",
+        "B. Flour and eggs",
+        "C. Flour and sugar",
+        "D. Sugar and butter"
+      ],
+      "optsCn": [
+        "A. 茶和糖",
+        "B. 麵粉和蛋",
+        "C. 麵粉和糖",
+        "D. 糖和奶油"
+      ],
+      "ans": 2,
+      "expl": "Flour and sugar. I have no flour at home.——清單上就這兩樣。"
+    },
+    {
+      "q": "What time does the small shop open?",
+      "qCn": "那家小店幾點開門？",
+      "opts": [
+        "A. At eight",
+        "B. At nine",
+        "C. At ten",
+        "D. At eleven"
+      ],
+      "optsCn": [
+        "A. 八點",
+        "B. 九點",
+        "C. 十點",
+        "D. 十一點"
+      ],
+      "ans": 1,
+      "expl": "It opens at nine every day.——Tom用現在簡單式講營業時間，因為那是店家定的。"
+    },
+    {
+      "q": "Lisa says she ___ some tea on Monday. She decides it while they are talking.",
+      "qCn": "Lisa說她星期一會帶一些茶來，這是她講話當下才決定的。",
+      "opts": [
+        "A. is bringing",
+        "B. will bring",
+        "C. brings",
+        "D. is going to bringing"
+      ],
+      "ans": 1,
+      "expl": "她聽完蛋糕的事才想到帶茶，決定是當場做的，所以用 will bring。is bringing 會變成她早就安排好了。"
+    }
+  ]
+},
+{
+  "id": "dl20261021b1",
+  "date": "2026-10-21",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Ten Guests and One Borrowed Pot",
+  "titleCn": "十位客人和一個借來的鍋子",
+  "series": "本站自製聽力 · 食物與生活主題",
+  "topic": "🥬 下班前討論星期五的辦公室午餐",
+  "focus": "going to 講自己做好的決定（I'm going to cook），現在進行式講兩人談定的分工（you're bringing、we're meeting），will 留給臨時的備案（I'll order）",
+  "intro": "Anita跟越南同事Mai在下班前把星期五的午餐講定。請注意三種形狀怎麼分工：Anita自己的決定用 going to，兩個人談好的事一談定就跳到現在進行式，而「萬一不夠」的備案只能用 will。另外聽聽Mai怎麼用 going to 從眼前的數量推出結論。",
+  "tip": "第一次聽抓三個數字：幾個人、幾點碰面、春捲大概要幾個。第二次聽注意每一次換形狀的那一瞬間——同一件事從「我決定」變成「我們約好」時，動詞形狀就跟著跳。",
+  "pre": [
+    {
+      "w": "recipe",
+      "ipa": "/ˈresəpi/",
+      "pos": "n.",
+      "cn": "食譜",
+      "def": "A set of instructions for cooking a dish."
+    },
+    {
+      "w": "tray",
+      "ipa": "/treɪ/",
+      "pos": "n.",
+      "cn": "盤子；托盤",
+      "def": "A flat piece of plastic or metal for carrying food."
+    },
+    {
+      "w": "fresh",
+      "ipa": "/freʃ/",
+      "pos": "adj.",
+      "cn": "新鮮的",
+      "def": "Recently picked, made or produced; not old."
+    },
+    {
+      "w": "amount",
+      "ipa": "/əˈmaʊnt/",
+      "pos": "n.",
+      "cn": "份量",
+      "def": "How much of something there is."
+    },
+    {
+      "w": "guest",
+      "ipa": "/ɡest/",
+      "pos": "n.",
+      "cn": "客人",
+      "def": "A person you invite to your home or to an event."
+    },
+    {
+      "w": "borrow",
+      "ipa": "/ˈbɑːroʊ/",
+      "pos": "v.",
+      "cn": "借（入）",
+      "def": "To take something and give it back later."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "You look pleased with yourself. What is the plan?",
+      "cn": "你看起來很得意，有什麼計畫？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I am going to cook for the whole team on Friday.",
+      "cn": "我星期五要煮給整個團隊吃。"
+    },
+    {
+      "sp": "Mai",
+      "en": "The whole team? That is ten guests.",
+      "cn": "整個團隊？那是十位客人。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Ten, yes. I decided on Monday, so it is already in my notebook.",
+      "cn": "十位，沒錯。我星期一就決定了，所以已經寫在我的筆記本上。"
+    },
+    {
+      "sp": "Mai",
+      "en": "What are you making? Nothing complicated, I hope.",
+      "cn": "你要做什麼？希望不是太複雜的東西。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Spring rolls. My mother's recipe is simple, and nothing has to stay hot.",
+      "cn": "春捲。我媽媽的食譜很簡單，而且沒有東西需要保持熱度。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Clever. Then I am bringing the herbs. I pass the market every morning.",
+      "cn": "聰明。那我負責帶香菜，我每天早上都會經過市場。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Really? That saves me an hour.",
+      "cn": "真的嗎？那替我省下一小時。"
+    },
+    {
+      "sp": "Mai",
+      "en": "One tray or two?",
+      "cn": "一盤還是兩盤？"
+    },
+    {
+      "sp": "Anita",
+      "en": "One big tray of fresh herbs is enough, I think.",
+      "cn": "我想一大盤新鮮香菜就夠了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Fine. So we are meeting at seven on Friday to roll them?",
+      "cn": "好。那我們星期五七點碰面捲春捲？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Seven is perfect. I am also going to borrow the big pot for the sauce.",
+      "cn": "七點很好。我還要借那個大鍋子來裝醬。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Ten people always eat more than you expect, you know.",
+      "cn": "你知道，十個人總是吃得比你預期的多。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I know. The amount worries me a bit.",
+      "cn": "我知道，份量有點讓我擔心。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Look at the size of your rolls. Three each is going to disappear fast.",
+      "cn": "看看你春捲的大小，一人三個會很快就沒了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Then I will order noodles from the shop next door if the tray looks empty.",
+      "cn": "那如果盤子看起來空了，我就跟隔壁那家店叫麵。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Good backup. And do not tell them. Let them smell it first.",
+      "cn": "好備案。而且別告訴他們，讓他們先聞到味道。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Agreed. They are going to guess the moment they walk in anyway.",
+      "cn": "同意。反正他們一走進來就會猜到。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many people is Anita cooking for?",
+      "qCn": "Anita要煮給幾個人吃？",
+      "opts": [
+        "A. Seven",
+        "B. Eight",
+        "C. Ten",
+        "D. Twelve"
+      ],
+      "optsCn": [
+        "A. 七個",
+        "B. 八個",
+        "C. 十個",
+        "D. 十二個"
+      ],
+      "ans": 2,
+      "expl": "The whole team? That is ten guests.——Mai幫我們算出了人數；seven 是碰面的時間，不是人數。"
+    },
+    {
+      "q": "What is Mai going to bring?",
+      "qCn": "Mai要帶什麼來？",
+      "opts": [
+        "A. A big pot",
+        "B. A tray of fresh herbs",
+        "C. Noodles from next door",
+        "D. Her mother's recipe"
+      ],
+      "optsCn": [
+        "A. 一個大鍋子",
+        "B. 一盤新鮮香菜",
+        "C. 隔壁買的麵",
+        "D. 她媽媽的食譜"
+      ],
+      "ans": 1,
+      "expl": "Then I am bringing the herbs... One big tray of fresh herbs is enough——分工一談定，Mai就用現在進行式。"
+    },
+    {
+      "q": "When are the two of them meeting on Friday?",
+      "qCn": "她們兩個人星期五幾點碰面？",
+      "opts": [
+        "A. At six",
+        "B. At seven",
+        "C. At eight",
+        "D. At nine"
+      ],
+      "optsCn": [
+        "A. 六點",
+        "B. 七點",
+        "C. 八點",
+        "D. 九點"
+      ],
+      "ans": 1,
+      "expl": "So we are meeting at seven on Friday to roll them?——時間一談定就用現在進行式。"
+    },
+    {
+      "q": "Why does Anita say \"I will order noodles\" instead of \"I am ordering noodles\"?",
+      "qCn": "Anita為什麼說 I will order noodles 而不是 I am ordering noodles？",
+      "opts": [
+        "A. Because the shop is already booked",
+        "B. Because it is only a backup if the tray looks empty",
+        "C. Because she ordered noodles last week",
+        "D. Because Mai asked her to"
+      ],
+      "optsCn": [
+        "A. 因為店已經訂好了",
+        "B. 因為那只是盤子空了才用的備案",
+        "C. 因為她上週叫過麵",
+        "D. 因為Mai叫她這麼做"
+      ],
+      "ans": 1,
+      "expl": "I will order noodles from the shop next door if the tray looks empty——事情還沒決定，只是條件成立才做，所以用 will。"
+    },
+    {
+      "q": "Mai says the rolls \"are going to disappear fast.\" What is her reason?",
+      "qCn": "Mai說春捲「會很快就沒了」，她的根據是什麼？",
+      "opts": [
+        "A. She has tasted them before",
+        "B. The rolls are small and each person takes three",
+        "C. The team skipped breakfast",
+        "D. The sauce is too salty"
+      ],
+      "optsCn": [
+        "A. 她以前嚐過",
+        "B. 春捲很小，而且一人拿三個",
+        "C. 團隊沒吃早餐",
+        "D. 醬太鹹"
+      ],
+      "ans": 1,
+      "expl": "Look at the size of your rolls. Three each is going to disappear fast.——她先叫對方看大小，再推出結論，這就是有跡象的 going to。"
+    }
+  ]
+},
+{
+  "id": "dl20261021b1p",
+  "date": "2026-10-21",
+  "level": "B1+",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Four Boxes That Never Reached a Shelf",
+  "titleCn": "四箱永遠上不了架的東西",
+  "series": "本站自製聽力 · 食物與生活主題",
+  "topic": "📰 午餐後聊邊境攔下的烘焙紙杯",
+  "focus": "被動語態講貨物被怎麼處理（were stopped、will be returned），going to 講照現在的處理看結局已定，will 講官方宣布的做法",
+  "intro": "Anita和Mai午餐後聊起當天的食安新聞。請注意對話裡的被動語態：講貨的時候英文幾乎都用被動，因為重點是那批貨被怎麼處理，不是誰動手。另外注意 will 和 going to 的分工：will 報官方公告的做法，going to 講照目前的處理看已經確定的結局。",
+  "tip": "第一次聽抓三個數字：有幾批被攔下、法定限量是多少、最高測出多少。第二次聽數被動語態出現幾次，並注意兩人用 will 和 going to 時語氣有什麼不同。",
+  "pre": [
+    {
+      "w": "shipment",
+      "ipa": "/ˈʃɪp.mənt/",
+      "pos": "n.",
+      "cn": "一批貨",
+      "def": "A load of goods sent from one place to another."
+    },
+    {
+      "w": "reject",
+      "ipa": "/rɪˈdʒekt/",
+      "pos": "v.",
+      "cn": "退回；判定不合格",
+      "def": "To refuse to accept something because it is not good enough."
+    },
+    {
+      "w": "batch",
+      "ipa": "/bætʃ/",
+      "pos": "n.",
+      "cn": "批",
+      "def": "A group of things made or sent at the same time."
+    },
+    {
+      "w": "limit",
+      "ipa": "/ˈlɪmɪt/",
+      "pos": "n.",
+      "cn": "上限",
+      "def": "The largest amount that is allowed."
+    },
+    {
+      "w": "border",
+      "ipa": "/ˈbɔːr.dɚ/",
+      "pos": "n.",
+      "cn": "邊境",
+      "def": "The line where one country ends and another begins."
+    },
+    {
+      "w": "utensil",
+      "ipa": "/juːˈten.səl/",
+      "pos": "n.",
+      "cn": "（廚房）用具",
+      "def": "A tool you use in a kitchen, such as a spoon or a pan."
+    },
+    {
+      "w": "importer",
+      "ipa": "/ɪmˈpɔːrtɚ/",
+      "pos": "n.",
+      "cn": "進口商",
+      "def": "A company that brings goods in from another country."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "Did you see the food safety story this morning?",
+      "cn": "你今天早上有看到那則食安新聞嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The one about the baking cups? I read it on the bus.",
+      "cn": "那則烘焙紙杯的嗎？我在公車上讀了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Four shipments were stopped at the border, all from the same country.",
+      "cn": "四批貨在邊境被攔下，全部來自同一個國家。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Paper cups, baking paper, and a set of kitchen utensils, if I remember right.",
+      "cn": "紙杯、烘焙紙，還有一組廚房用具，如果我記得沒錯。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Right. And they all failed the same test.",
+      "cn": "對，而且它們都是同一項檢驗沒過。"
+    },
+    {
+      "sp": "Anita",
+      "en": "The dissolution one? That is the test I have to explain to our suppliers every year.",
+      "cn": "溶出試驗嗎？那是我每年都得跟我們供應商解釋的那一項。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Then explain it to me, because the numbers meant nothing to me.",
+      "cn": "那你解釋給我聽，因為那些數字對我完全沒意義。"
+    },
+    {
+      "sp": "Anita",
+      "en": "The legal limit is thirty. Two of the cup batches came back at 217 and 226.",
+      "cn": "法定限量是三十。其中兩批紙杯測出217和226。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Two hundred and twenty-six? That is more than seven times the limit.",
+      "cn": "二百二十六？那是限量的七倍多。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It is. The baking paper was 67, and the utensils were measured at 123.",
+      "cn": "沒錯。烘焙紙是67，用具測到123。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So what happens to all of it now?",
+      "cn": "那這些東西現在會怎麼樣？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Nothing reaches a shelf. The whole lot is going to be returned or destroyed.",
+      "cn": "沒有一件會上架，整批都會被退運或銷毀。"
+    },
+    {
+      "sp": "Mai",
+      "en": "And the importer just pays for that?",
+      "cn": "進口商就自己吃下那筆錢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Pretty much. And every batch in that group will be opened and tested until November 19.",
+      "cn": "差不多。而且那一類每一批到11月19日之前都會被拆開檢驗。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Every batch, not just a sample? That is slow.",
+      "cn": "每一批，不只抽樣？那很慢。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Very slow. For one of the importers the testing rate will rise to half of all shipments.",
+      "cn": "非常慢。其中一家進口商的送驗比例會提高到所有批次的一半。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Half! Their containers are going to sit at the port for weeks.",
+      "cn": "一半！他們的貨櫃會在港口躺好幾個星期。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is the real punishment, and it is not written in the announcement.",
+      "cn": "那才是真正的處罰，而且公告上不會寫。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So are you going to send our own cups for testing?",
+      "cn": "那你要把我們自己的杯子送驗嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I decided this morning. I am going to pull two samples before the audit.",
+      "cn": "我今天早上就決定了，我要在稽核之前抽兩個樣品。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many shipments were stopped at the border?",
+      "qCn": "有幾批貨在邊境被攔下？",
+      "opts": [
+        "A. Two",
+        "B. Three",
+        "C. Four",
+        "D. Nineteen"
+      ],
+      "optsCn": [
+        "A. 兩批",
+        "B. 三批",
+        "C. 四批",
+        "D. 十九批"
+      ],
+      "ans": 2,
+      "expl": "Four shipments were stopped at the border——Mai第二次講話就報了數字。"
+    },
+    {
+      "q": "What is the legal limit mentioned in the conversation?",
+      "qCn": "對話裡提到的法定限量是多少？",
+      "opts": [
+        "A. Thirty",
+        "B. Sixty-seven",
+        "C. One hundred and twenty-three",
+        "D. Two hundred and twenty-six"
+      ],
+      "optsCn": [
+        "A. 三十",
+        "B. 六十七",
+        "C. 一百二十三",
+        "D. 二百二十六"
+      ],
+      "ans": 0,
+      "expl": "The legal limit is thirty.——其他三個數字都是測出來的結果，全部超標。"
+    },
+    {
+      "q": "What will happen to the rejected goods?",
+      "qCn": "不合格的貨會怎麼處理？",
+      "opts": [
+        "A. They will be sold cheaply",
+        "B. They will be returned or destroyed",
+        "C. They will be stored at the port",
+        "D. They will be tested again in November"
+      ],
+      "optsCn": [
+        "A. 會便宜賣掉",
+        "B. 會被退運或銷毀",
+        "C. 會存放在港口",
+        "D. 十一月會再驗一次"
+      ],
+      "ans": 1,
+      "expl": "The whole lot is going to be returned or destroyed.——Anita用 going to 加被動，表示結局已經確定。"
+    },
+    {
+      "q": "Why does Anita call the waiting \"the real punishment\"?",
+      "qCn": "Anita為什麼說等待才是真正的處罰？",
+      "opts": [
+        "A. Because the fine is very large",
+        "B. Because containers sit at the port and earn nothing",
+        "C. Because the importer loses its licence",
+        "D. Because the test has to be repeated"
+      ],
+      "optsCn": [
+        "A. 因為罰款很高",
+        "B. 因為貨櫃躺在港口賺不到錢",
+        "C. 因為進口商會被吊照",
+        "D. 因為檢驗必須重做"
+      ],
+      "ans": 1,
+      "expl": "Their containers are going to sit at the port for weeks... That is the real punishment——成本是時間，公告上不會寫。"
+    },
+    {
+      "q": "Anita says: \"I ___ pull two samples before the audit.\" She decided this morning.",
+      "qCn": "Anita說她要在稽核之前抽兩個樣品，這是她今天早上就決定的。",
+      "opts": [
+        "A. will",
+        "B. am going to",
+        "C. am pulling",
+        "D. pull"
+      ],
+      "ans": 1,
+      "expl": "決定在今天早上就做好了，不是講話這一秒才想到，所以用 am going to。will 會變成她被問了才臨時決定。"
+    }
+  ]
+},
+{
+  "id": "dl20261021b2",
+  "date": "2026-10-21",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Who Should Catch It First",
+  "titleCn": "誰該先攔下來",
+  "series": "本站自製聽力 · 食物與生活主題",
+  "topic": "🧾 稽核前跟品保主管討論邊境查驗的意義",
+  "focus": "will 在正式語域裡報的是既定措施（inspectors will open、the cost will fall on），對話裡的 I'll 表達當下的意願；搭配名詞化讓論點更密實",
+  "intro": "Anita在稽核前跟品保主管Henry交換意見：邊境查驗到底該由誰負責。請注意同一個 will 在這段對話裡換了兩種身分——引用公告時它是冷靜的既定措施，Anita自己開口承諾時它又變回「我願意」。也聽聽Henry怎麼把一整件事壓縮成名詞。",
+  "tip": "第一次聽抓三個事實：不合格率是多少、新的查驗方式持續多久、Anita最後答應做什麼。第二次聽把每一個 will 標出來，判斷它是在報告制度，還是在表達說話者的意願。",
+  "pre": [
+    {
+      "w": "regulator",
+      "ipa": "/ˈreɡ.jə.leɪ.t̬ɚ/",
+      "pos": "n.",
+      "cn": "主管機關",
+      "def": "An official body that controls how an industry behaves."
+    },
+    {
+      "w": "threshold",
+      "ipa": "/ˈθreʃ.hoʊld/",
+      "pos": "n.",
+      "cn": "門檻；臨界值",
+      "def": "The level at which something starts to count or to be a problem."
+    },
+    {
+      "w": "compliance",
+      "ipa": "/kəmˈplaɪ.əns/",
+      "pos": "n.",
+      "cn": "法規遵循",
+      "def": "The act of obeying a rule or a law."
+    },
+    {
+      "w": "sampling",
+      "ipa": "/ˈsæmplɪŋ/",
+      "pos": "n.",
+      "cn": "抽驗",
+      "def": "Testing a small part of a group instead of all of it."
+    },
+    {
+      "w": "proportion",
+      "ipa": "/prəˈpɔːr.ʃən/",
+      "pos": "n.",
+      "cn": "比例",
+      "def": "A part of a total, often given as a share or a percentage."
+    },
+    {
+      "w": "consumer",
+      "ipa": "/kənˈsuː.mɚ/",
+      "pos": "n.",
+      "cn": "消費者",
+      "def": "A person who buys and uses goods or services."
+    },
+    {
+      "w": "standard",
+      "ipa": "/ˈstæn.dɚd/",
+      "pos": "n.",
+      "cn": "標準",
+      "def": "A level of quality that something should reach."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Henry",
+      "en": "You wanted to talk about the border story before the audit.",
+      "cn": "你說稽核前想談那則邊境的新聞。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I did, because our auditors are going to ask about it on Thursday.",
+      "cn": "是的，因為我們的稽核員星期四一定會問。"
+    },
+    {
+      "sp": "Henry",
+      "en": "Fair enough. What struck you about it?",
+      "cn": "有道理。你覺得哪一點最值得注意？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Not the worst result. The failure rate. Eleven batches in two hundred and six over six months.",
+      "cn": "不是最糟的那個數字，而是不合格率：半年之間二百零六批裡有十一批。"
+    },
+    {
+      "sp": "Henry",
+      "en": "Five point three percent. A rate, not an accident.",
+      "cn": "百分之五點三。那是一個比率，不是意外。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Exactly. One bad result is refused at the dock and forgotten. A rate changes the rules of entry.",
+      "cn": "正是。一筆不合格在碼頭退掉就沒事了，但一個比率會改變進關規則。"
+    },
+    {
+      "sp": "Henry",
+      "en": "Which is what happened. Sampling becomes batch-by-batch inspection for a month.",
+      "cn": "結果就是這樣：抽驗變成為期一個月的逐批查驗。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Until the nineteenth of November, and for one importer the proportion tested rises as high as half.",
+      "cn": "到11月19日，而其中一家進口商的送驗比例最高拉到一半。"
+    },
+    {
+      "sp": "Henry",
+      "en": "And the cost of that will fall on the importers long before anyone sees a shelf price.",
+      "cn": "而那筆成本會先落在進口商身上，遠在有人看到架上價格之前。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Time, not money. A container waiting for a laboratory earns nothing.",
+      "cn": "是時間，不是錢。一個在等實驗室的貨櫃賺不到任何東西。"
+    },
+    {
+      "sp": "Henry",
+      "en": "So here is my question. Should a border be the place where this is caught?",
+      "cn": "所以我的問題是：這種事該在邊境才被攔下來嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Honestly, no. A border post only inspects what arrives through it.",
+      "cn": "老實說，不該。邊境關卡只檢查從它那裡進來的東西。"
+    },
+    {
+      "sp": "Henry",
+      "en": "Anything already in a kitchen is beyond its reach.",
+      "cn": "已經在廚房裡的東西，它伸不到手。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Which is why I keep telling our suppliers to test before they ship, not after.",
+      "cn": "所以我一直跟我們的供應商說，要在出貨前驗，不是出貨後。"
+    },
+    {
+      "sp": "Henry",
+      "en": "Does that argument work? Compliance costs them money.",
+      "cn": "那套說法有用嗎？合規是要花錢的。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It works when I frame it as a commercial reason, not a legal one.",
+      "cn": "當我把它說成商業上的理由，而不是法律上的理由，就有用。"
+    },
+    {
+      "sp": "Henry",
+      "en": "A clean record is cheaper than a held container. That I can sell upstairs.",
+      "cn": "乾淨的紀錄比被扣住的貨櫃便宜，這一點我可以向上面說得通。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Then I'll put the five point three percent on one slide and bring it to Thursday's meeting.",
+      "cn": "那我把百分之五點三做成一張投影片，帶到星期四的會議。"
+    },
+    {
+      "sp": "Henry",
+      "en": "Do that. And add the threshold, so the number has something to stand against.",
+      "cn": "就這麼辦。再加上限量，這樣那個數字才有對照。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I will. One slide, two numbers, no adjectives.",
+      "cn": "我會的。一張投影片，兩個數字，不加形容詞。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Which figure does Anita say matters most?",
+      "qCn": "Anita說哪個數字最重要？",
+      "opts": [
+        "A. The worst single test result",
+        "B. The 5.3 percent failure rate",
+        "C. The legal threshold",
+        "D. The number of importers"
+      ],
+      "optsCn": [
+        "A. 最糟的單一檢驗結果",
+        "B. 百分之5.3的不合格率",
+        "C. 法定限量",
+        "D. 進口商的數量"
+      ],
+      "ans": 1,
+      "expl": "Not the worst result. The failure rate.——她立刻把重點從單筆結果轉到比率，Henry接著說出百分之五點三。"
+    },
+    {
+      "q": "How long will the batch-by-batch inspection last?",
+      "qCn": "逐批查驗會持續多久？",
+      "opts": [
+        "A. Until the end of October",
+        "B. Until the nineteenth of November",
+        "C. For six months",
+        "D. Until the audit on Thursday"
+      ],
+      "optsCn": [
+        "A. 到十月底",
+        "B. 到11月19日",
+        "C. 持續半年",
+        "D. 到星期四的稽核"
+      ],
+      "ans": 1,
+      "expl": "Until the nineteenth of November——Anita直接報出日期；六個月是不合格率的統計期間。"
+    },
+    {
+      "q": "Why does Anita say a border post is not the right place to catch the problem?",
+      "qCn": "Anita為什麼說邊境關卡不是攔下問題的正確位置？",
+      "opts": [
+        "A. Because inspectors are too slow",
+        "B. Because it only inspects what arrives through it",
+        "C. Because the threshold is too high",
+        "D. Because importers bribe the inspectors"
+      ],
+      "optsCn": [
+        "A. 因為查驗人員太慢",
+        "B. 因為它只檢查從它那裡進來的東西",
+        "C. 因為限量訂得太高",
+        "D. 因為進口商會賄賂查驗人員"
+      ],
+      "ans": 1,
+      "expl": "A border post only inspects what arrives through it... Anything already in a kitchen is beyond its reach——兩句合起來就是她的理由。"
+    },
+    {
+      "q": "What makes Anita's argument work with suppliers?",
+      "qCn": "Anita的說法為什麼對供應商有用？",
+      "opts": [
+        "A. She threatens to cancel their contracts",
+        "B. She frames it as a commercial reason, not a legal one",
+        "C. She offers to pay for the tests",
+        "D. She quotes the regulator's announcement"
+      ],
+      "optsCn": [
+        "A. 她威脅要解約",
+        "B. 她把它說成商業上的理由，不是法律上的理由",
+        "C. 她願意負擔檢驗費",
+        "D. 她引用主管機關的公告"
+      ],
+      "ans": 1,
+      "expl": "It works when I frame it as a commercial reason, not a legal one.——Henry接著把它翻成「乾淨的紀錄比被扣住的貨櫃便宜」。"
+    },
+    {
+      "q": "\"The cost of that will fall on the importers\" and \"Then I'll put the five point three percent on one slide\" use will differently because ___.",
+      "qCn": "「那筆成本會落在進口商身上」和「那我把百分之五點三做成一張投影片」兩句的 will 用法不同，因為什麼？",
+      "opts": [
+        "A. the first reports an already decided outcome, the second is a decision made while speaking",
+        "B. the first is a question and the second is an answer",
+        "C. the first is informal and the second is formal",
+        "D. the first refers to the past"
+      ],
+      "optsCn": [
+        "A. 前者報告已經確定的結果，後者是說話當下才做的決定",
+        "B. 前者是問句，後者是答句",
+        "C. 前者口語，後者正式",
+        "D. 前者指的是過去"
+      ],
+      "ans": 0,
+      "expl": "第一句引用的是制度的必然結果，語氣冷靜；第二句是Anita聽完Henry的話才答應做的，所以縮寫成 I'll，帶著「我願意」的意志。"
+    }
+  ]
+},
 /* ---------- 2026-10-14 金錢與居住主題（四個程度） ---------- */
 {
   "id": "dl20261014a2",

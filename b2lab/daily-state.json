@@ -1,7 +1,7 @@
 {
   "_note": "內容排程狀態檔（每週三跑一次；2026-10-10 之前是每週二、五各一次）。每次執行讓兩位學習者各拿到一整份：四個程度（A2/B1/B1+/B2）的文章、文法、聽力。usedUnits = Anita 那條線（B1+/B2）已教過的文法單元編號；usedUnitsTom = Tom 那條線（A2/B1）已教過的文法單元編號（各自從 syllabus.json 依序走、互不影響）；usedSources = 已改寫過的新聞網址；usedVoa = 已加入聽力庫的 VOA／YouTube 素材代號（2026-08-19 起聽力改為本站原創 TTS 對話，未使用外部影片，故此欄位本次未異動）；lastRun = 最後一次成功產生的日期。",
-  "lastRun": "2026-10-14",
-  "nextKind": "news",
+  "lastRun": "2026-10-21",
+  "nextKind": "original",
   "usedVoa": [
     "L1-1",
     "L1-7",
@@ -30,7 +30,8 @@
     17,
     18,
     19,
-    20
+    20,
+    21
   ],
   "usedUnitsTom": [
     1,
@@ -51,7 +52,8 @@
     16,
     17,
     18,
-    19
+    19,
+    20
   ],
   "usedSources": [
     "https://www.taipeitimes.com/News/front/archives/2026/08/08/2003862135",
@@ -71,7 +73,8 @@
     "https://focustaiwan.tw/society/202610040006",
     "https://focustaiwan.tw/society/202610080011",
     "https://focustaiwan.tw/business/202610070021",
-    "https://focustaiwan.tw/politics/202610130013"
+    "https://focustaiwan.tw/politics/202610130013",
+    "https://focustaiwan.tw/society/202610200011"
   ],
   "usedTitles": [
     "A Sea Warning, but No Landfall",
@@ -148,16 +151,20 @@
     "Tom Is Moving on Saturday",
     "The Rent Goes Up in January",
     "Six Percent, Twenty-One Years",
-    "The Four Lines That Opened a Spreadsheet"
+    "The Four Lines That Opened a Spreadsheet",
+    "Tom Is Going to Bake a Cake",
+    "Anita Is Going to Cook for Ten",
+    "Four Shipments Stopped Before the Shelf",
+    "Five Point Three Percent, Twice a Week"
   ],
   "topicRotation": [
-    "食物與生活",
     "學習與心理",
     "天災與天氣",
     "健康與醫療",
     "旅遊與交通",
     "職場與面試",
-    "金錢與居住"
+    "金錢與居住",
+    "食物與生活"
   ],
   "dualLevel": {
     "tom": "A2",
@@ -182,6 +189,7 @@
     "健康",
     "交通",
     "職場",
-    "居家"
+    "居家",
+    "購物"
   ]
 }
