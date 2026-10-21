@@ -1,6 +1,8 @@
 // 量測工作站：依照片手工建模（量測臂＋花崗石平台＋鋼架＋支承治具）。
 // 幾何放在 model 群組內，整組縮 0.6 並左移 0.6，讓畫面中心落在原點附近；equip-data.js 的座標已換算成世界座標。
-export function buildModel(THREE,scene){
+import { buildPaintLine } from './paint-line.js';
+export function buildModel(THREE,scene,id){
+if(id==='paint-line') return buildPaintLine(THREE,scene);
 const model=new THREE.Group();model.scale.setScalar(.6);model.position.set(-.6,0,0);scene.add(model);
 const mat=(color,metalness=.4,roughness=.36)=>new THREE.MeshStandardMaterial({color,metalness,roughness});const blue=mat('#164b7c',.6,.3),pedestal=mat('#1438a0',.6,.23),silver=mat('#a6aaa9',.72,.3),gray=mat('#41464b',.45,.42),dark=mat('#171d22',.25,.52),rubber=mat('#10151b',.05,.75),orange=mat('#d85424',.3,.4),red=mat('#ca2424'),green=mat('#1fad68');const led=new THREE.MeshStandardMaterial({color:'#008cff',emissive:'#0077ff',emissiveIntensity:2});
 function mesh(g,m,parent=model){const o=new THREE.Mesh(g,m);parent.add(o);o.castShadow=true;o.receiveShadow=true;return o}
