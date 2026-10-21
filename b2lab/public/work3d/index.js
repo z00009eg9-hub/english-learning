@@ -67,7 +67,7 @@ export function mount(containerEl, equipId, opts = {}) {
       renderer = new T.WebGLRenderer({ antialias: true, alpha: true }); renderer.domElement.className = 'w3d-canvas';
       renderer.domElement.setAttribute('aria-label', '設備 3D 模型；拖曳旋轉，雙指縮放');
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2)); q('stage').prepend(renderer.domElement);
-      camera.position.set(5,4.4,6); controls = new OrbitControls(camera, renderer.domElement); controls.target.set(0,1.4,0);
+      camera.position.set(4,3.2,5.8); controls = new OrbitControls(camera, renderer.domElement); controls.target.set(0,1.75,0);
       controls.enableDamping = true; controls.minDistance = 3; controls.maxDistance = 12; controls.maxPolarAngle = Math.PI * .48;
       scene.add(new T.HemisphereLight(0xffffff,0x78877c,2.5)); const light = new T.DirectionalLight(0xffffff,3); light.position.set(3,7,4); scene.add(light);
       buildModel(T, scene);
@@ -82,7 +82,7 @@ export function mount(containerEl, equipId, opts = {}) {
         if (move) { stopRotate(); const p = equip.parts[i]; destination = { pos: new T.Vector3(...p.cam), target: new T.Vector3(...p.target) }; }
       };
       select3d(active, false);
-      doReset = () => { stopRotate(); destination = { pos: new T.Vector3(5,4.4,6), target: new T.Vector3(0,1.4,0) }; };
+      doReset = () => { stopRotate(); destination = { pos: new T.Vector3(4,3.2,5.8), target: new T.Vector3(0,1.75,0) }; };
       doRotate = on => { destination = null; controls.autoRotate = on === undefined ? !controls.autoRotate : !!on; q('rotate')?.setAttribute('aria-pressed',String(controls.autoRotate)); opts.onRotate?.(controls.autoRotate); };
       if (q('reset')) listen(q('reset'),'click',() => doReset());
       if (q('rotate')) listen(q('rotate'),'click',() => doRotate());
