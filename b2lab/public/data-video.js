@@ -47918,3 +47918,987 @@ window.VIDEO["bk20261015"] = {
   }
  ]
 };
+
+/* ===== bk20261021 Quality Issues & Climate-Controlled Storage ===== */
+window.VIDEO = window.VIDEO || {};
+window.VIDEO["bk20261021"] = {
+ "title": "Quality Issues & Climate-Controlled Storage",
+ "titleCn": "品保異常處理與溫控儲藏室",
+ "date": "2026-10-21",
+ "level": "B1",
+ "scene": "Reporting a Quality Issue to the Supervisor",
+ "sceneCn": "向主管回報品質問題",
+ "sceneArt": "clipboard",
+ "titleArt": [
+  "sopUpdate",
+  "airCon",
+  "check"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・品保工程師",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・主管",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "Quality Report",
+   "cn": "情境：回報品質問題"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Phrases & Collocations",
+   "cn": "片語搭配"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "outdated": {
+   "t": "outdated work instruction",
+   "cn": "過時的作業指導書",
+   "tag": [
+    "單字",
+    "文件"
+   ],
+   "note": "old 講年紀、用很久；outdated 是「不再是最新、不再適用」。information 不可數：This information is outdated.",
+   "ex": "Please remove the outdated procedure from the line.",
+   "exCn": "請把產線上過時的程序撤掉。"
+  },
+  "makeDiff": {
+   "t": "making it difficult for sb to V",
+   "cn": "讓某人很難做……",
+   "tag": [
+    "句型",
+    "結果"
+   ],
+   "note": "making ... 帶出前面整件事造成的結果；it 是假受詞，形容詞用 difficult（不是 difficultly）。",
+   "ex": "The noise made it hard for us to talk.",
+   "exCn": "噪音讓我們很難交談。"
+  },
+  "rca": {
+   "t": "send A to B for C",
+   "cn": "把 A 送給 B 做 C",
+   "tag": [
+    "句型",
+    "品保"
+   ],
+   "note": "目的要用 for + 名詞；root cause analysis 是固定技術用語，不要拆開。",
+   "ex": "We send the samples to the lab for testing.",
+   "exCn": "我們把樣品送去實驗室做測試。"
+  },
+  "screening": {
+   "t": "screening",
+   "cn": "篩選、篩檢",
+   "tag": [
+    "單字",
+    "品保"
+   ],
+   "note": "screening 是在擔心有不良品時，檢查大量產品把不良品挑出來；test 是檢查產品是否正常。",
+   "ex": "Screening helped us find the weak units.",
+   "exCn": "篩檢幫我們找出有問題的產品。"
+  },
+  "test": {
+   "t": "pass the test",
+   "cn": "通過測試",
+   "tag": [
+    "片語",
+    "測試"
+   ],
+   "note": "perform a test = 進行測試，比 check 更正式；unit 是單數，所有格用 its。",
+   "ex": "Every unit must pass the test before shipping.",
+   "exCn": "每個產品出貨前都必須通過測試。"
+  },
+  "climate": {
+   "t": "climate-controlled",
+   "cn": "溫控的",
+   "tag": [
+    "單字",
+    "儲存"
+   ],
+   "note": "climate-controlled storage room：溫度與濕度受控制的儲藏室，常用來存放敏感的電子零件。",
+   "ex": "The boards stay in a climate-controlled room.",
+   "exCn": "電路板存放在溫控的房間裡。"
+  },
+  "alert": {
+   "t": "sends us an alert",
+   "cn": "發警報給我們",
+   "tag": [
+    "片語",
+    "監控"
+   ],
+   "note": "If + 現在簡單式, 現在簡單式；the system 是第三人稱單數，所以是 sends。24/7 = 24 hours a day, 7 days a week。",
+   "ex": "The app sends me a notification every morning.",
+   "exCn": "這個 App 每天早上傳通知給我。"
+  },
+  "record": {
+   "t": "fill out a record",
+   "cn": "填寫紀錄",
+   "tag": [
+    "片語",
+    "紀錄"
+   ],
+   "note": "equipment 是不可數名詞，動詞用 performs / operates；perform properly、operate correctly 是自然搭配。",
+   "ex": "Please fill out the log before you leave.",
+   "exCn": "離開前請填寫紀錄表。"
+  },
+  "ifFact": {
+   "t": "If a unit passes the test",
+   "cn": "如果產品通過測試",
+   "tag": [
+    "文法",
+    "條件句"
+   ],
+   "note": "事實條件句：if 子句和主要子句都用現在簡單式。",
+   "ex": "If a unit fails, we mark it as defective.",
+   "exCn": "如果產品沒通過，我們就標示為不良品。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today Anita reports a quality problem to her supervisor and talks about a new storage room.",
+   "cn": "歡迎回來。今天 Anita 要向主管回報一個品質問題，也要聊一間新的儲藏室。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Listen for outdated, test, screening, and how to explain what caused a problem.",
+   "cn": "聽聽 outdated、test、screening，還有怎麼說明問題的原因。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "assemblyLine"
+   },
+   "en": "Hey, Anita. What's going on with the frames?",
+   "cn": "嗨，Anita。框架怎麼了？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "wrongParts"
+   },
+   "en": "The holes are too small, making it difficult for the operator to install the part.",
+   "cn": "孔太小，讓作業員很難安裝零件。",
+   "hi": [
+    {
+     "t": "making it difficult for the operator to install the part",
+     "cn": "讓作業員很難安裝零件",
+     "k": "makeDiff",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "measureCaliper"
+   },
+   "en": "How did that happen?",
+   "cn": "怎麼會這樣？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "sopUpdate"
+   },
+   "en": "The line used an outdated work instruction. The hole size didn't match the current drawing.",
+   "cn": "產線用了過時的作業指導書，上面的孔徑和現行圖面不符。",
+   "hi": [
+    {
+     "t": "outdated work instruction",
+     "cn": "過時的作業指導書",
+     "k": "outdated",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "caliper"
+   },
+   "en": "And the inspector didn't catch it?",
+   "cn": "檢驗員沒發現嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "measureCaliper"
+   },
+   "en": "He checked against the same document, so the dimensions were measured incorrectly.",
+   "cn": "他拿同一份文件檢查，所以尺寸量錯了。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "clipboard"
+   },
+   "en": "So what's the plan?",
+   "cn": "那有什麼對策？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "check"
+   },
+   "en": "We'll use the latest version and re-measure every affected frame.",
+   "cn": "我們會改用最新版本，並重新量測所有受影響的框架。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "warning"
+   },
+   "en": "What about the defective ones?",
+   "cn": "不良品呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "rootCause"
+   },
+   "en": "We'll separate them and send them to the supplier for root cause analysis.",
+   "cn": "我們會隔離，再寄給供應商做根本原因分析。",
+   "hi": [
+    {
+     "t": "send them to the supplier for root cause analysis",
+     "cn": "寄給供應商做根本原因分析",
+     "k": "rca",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "treadmill"
+   },
+   "en": "Okay. And how's the controller storage room coming along?",
+   "cn": "好。控制器儲藏室進行得如何？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "airCon"
+   },
+   "en": "It's climate-controlled now. The air conditioner runs all day to control the humidity.",
+   "cn": "現在是溫控的了。空調整天運轉來控制濕度。",
+   "hi": [
+    {
+     "t": "climate-controlled",
+     "cn": "溫控的",
+     "k": "climate",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "thermo"
+   },
+   "en": "What if the temperature goes out of range?",
+   "cn": "如果溫度超出範圍呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "alarm"
+   },
+   "en": "The monitoring system sends us an alert, 24/7. It even texts our phones.",
+   "cn": "監控系統會發警報給我們，全天候，還會傳到手機。",
+   "hi": [
+    {
+     "t": "sends us an alert",
+     "cn": "發警報給我們",
+     "k": "alert",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "fillOutForm"
+   },
+   "en": "Great. And the maintenance records?",
+   "cn": "很好。維護紀錄呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "fillOutForm"
+   },
+   "en": "Workers fill out a record every day to make sure the equipment performs properly.",
+   "cn": "員工每天填寫紀錄，確保設備運作正常。",
+   "hi": [
+    {
+     "t": "fill out a record",
+     "cn": "填寫紀錄",
+     "k": "record",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "handshake"
+   },
+   "en": "Perfect. Thanks, Anita.",
+   "cn": "太好了。謝謝你，Anita。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "old",
+     "ipa": "/oʊld/",
+     "cn": "舊的（年紀、用很久）",
+     "def": "Used for a long time.",
+     "art": "hourglass"
+    },
+    "b": {
+     "w": "outdated",
+     "ipa": "/ˌaʊtˈdeɪ.t̬ɪd/",
+     "cn": "過時的",
+     "def": "No longer current or valid.",
+     "art": "sopUpdate"
+    }
+   },
+   "en": "Old is about age. Outdated means it's no longer current, like a work instruction.",
+   "cn": "old 講年紀；outdated 是不再適用，像作業指導書。",
+   "hi": [
+    {
+     "t": "Outdated",
+     "cn": "過時的",
+     "k": "outdated",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "test",
+     "ipa": "/test/",
+     "cn": "測試、檢測",
+     "def": "A check to see if one unit works properly.",
+     "art": "functionalTestPass"
+    },
+    "b": {
+     "w": "screening",
+     "ipa": "/ˈskriː.nɪŋ/",
+     "cn": "篩選、篩檢",
+     "def": "Checking many units to pick out the bad ones.",
+     "art": "search"
+    }
+   },
+   "en": "A test checks if a unit works. Screening checks many units to find the bad ones.",
+   "cn": "test 檢查產品是否正常；screening 檢查大量產品、挑出不良品。",
+   "hi": [
+    {
+     "t": "Screening",
+     "cn": "篩選",
+     "k": "screening",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "climate-controlled",
+    "ipa": "/ˈklaɪ.mət kənˈtroʊld/",
+    "pos": "adj.",
+    "art": "airCon",
+    "def": "Kept at the right temperature and humidity.",
+    "cn": "溫控的。",
+    "note": "climate-controlled storage room = 溫度與濕度受控制的儲藏室，常用來存放敏感的電子零件。"
+   },
+   "en": "A climate-controlled room keeps temperature and humidity under control.",
+   "cn": "溫控的房間會把溫度和濕度控制好。",
+   "hi": [
+    {
+     "t": "climate-controlled",
+     "cn": "溫控的",
+     "k": "climate",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "root cause analysis",
+    "ipa": "/ruːt kɑːz əˈnæl.ə.sɪs/",
+    "pos": "n. phr.",
+    "art": "rootCause",
+    "def": "A study to find the real reason for a problem.",
+    "cn": "根本原因分析。",
+    "note": "send A to B for C：目的要用 for + 名詞，不能把 analysis 直接接在 supplier 後面。"
+   },
+   "en": "Send A to B for C. We send defective motors to the supplier for root cause analysis.",
+   "cn": "send A to B for C。我們把不良馬達寄給供應商做根本原因分析。",
+   "hi": [
+    {
+     "t": "Send A to B for C",
+     "cn": "把 A 送給 B 做 C",
+     "k": "rca",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "outdated",
+    "coreCn": "outdated 的搭配",
+    "art": "sopUpdate",
+    "items": [
+     {
+      "t": "~ information",
+      "cn": "過時的資訊"
+     },
+     {
+      "t": "~ equipment",
+      "cn": "過時的設備"
+     },
+     {
+      "t": "~ procedures",
+      "cn": "過時的程序"
+     },
+     {
+      "t": "~ regulations",
+      "cn": "過時的法規"
+     }
+    ]
+   },
+   "en": "Outdated information, outdated equipment, outdated procedures, outdated regulations.",
+   "cn": "過時的資訊、設備、程序、法規。",
+   "hi": [
+    {
+     "t": "outdated procedures",
+     "cn": "過時的程序",
+     "k": "outdated",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "test",
+    "coreCn": "test 的搭配",
+    "art": "functionalTestPass",
+    "items": [
+     {
+      "t": "perform a ~",
+      "cn": "進行測試"
+     },
+     {
+      "t": "pass the ~",
+      "cn": "通過測試"
+     },
+     {
+      "t": "electrical continuity ~",
+      "cn": "電氣導通測試"
+     },
+     {
+      "t": "performance ~",
+      "cn": "性能測試"
+     }
+    ]
+   },
+   "en": "Perform a test, pass the test, electrical continuity test, performance test.",
+   "cn": "進行測試、通過測試、電氣導通測試、性能測試。",
+   "hi": [
+    {
+     "t": "pass the test",
+     "cn": "通過測試",
+     "k": "test",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "record",
+    "coreCn": "maintenance record 的搭配",
+    "art": "fillOutForm",
+    "items": [
+     {
+      "t": "fill out a ~",
+      "cn": "填寫紀錄"
+     },
+     {
+      "t": "keep the ~s",
+      "cn": "保存紀錄"
+     },
+     {
+      "t": "check the ~",
+      "cn": "檢查紀錄"
+     }
+    ]
+   },
+   "en": "Fill out a record, keep the records, check the record before the audit.",
+   "cn": "填寫紀錄、保存紀錄、稽核前檢查紀錄。",
+   "hi": [
+    {
+     "t": "check the record before the audit",
+     "cn": "稽核前檢查紀錄",
+     "k": "record",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "making it + 形容詞 + for sb + to V",
+    "art": "wrongParts",
+    "rows": [
+     {
+      "lab": "結果用 making 帶出",
+      "blocks": [
+       {
+        "t": "The hole is too small,",
+        "k": "s"
+       },
+       {
+        "t": "making it",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "difficult",
+        "k": "o"
+       },
+       {
+        "t": "for the operator",
+        "k": "o"
+       },
+       {
+        "t": "to install the part",
+        "k": "v"
+       }
+      ]
+     },
+     {
+      "lab": "或直接用 made 當動詞",
+      "blocks": [
+       {
+        "t": "The small hole",
+        "k": "s"
+       },
+       {
+        "t": "made it",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "difficult for the operator",
+        "k": "o"
+       },
+       {
+        "t": "to install the part",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "it 是假受詞，真正的受詞是後面的 to install。difficult 是形容詞；difficultly 不能放在這裡。"
+   },
+   "en": "The hole is too small, making it difficult for the operator to install the part.",
+   "cn": "孔太小，讓作業員很難安裝零件。",
+   "hi": [
+    {
+     "t": "making it difficult for the operator to install the part",
+     "cn": "讓作業員很難安裝零件",
+     "k": "makeDiff",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "send + 物 + to + 人／公司 + for + 名詞",
+    "art": "deliveryTruck",
+    "rows": [
+     {
+      "lab": "目的要用 for + 名詞",
+      "blocks": [
+       {
+        "t": "We send the motors",
+        "k": "s"
+       },
+       {
+        "t": "to the supplier",
+        "k": "n"
+       },
+       {
+        "t": "analysis the root cause",
+        "k": "v",
+        "x": true
+       },
+       {
+        "t": "for root cause analysis",
+        "k": "v",
+        "add": true
+       }
+      ]
+     }
+    ],
+    "note": "analysis 是名詞，不能直接接在 supplier 後面；follow-up 當名詞加連字號，follow up 才是動詞片語。"
+   },
+   "en": "We send the motors to the supplier for root cause analysis.",
+   "cn": "我們把馬達寄給供應商做根本原因分析。",
+   "hi": [
+    {
+     "t": "send the motors to the supplier for root cause analysis",
+     "cn": "把馬達寄給供應商做根本原因分析",
+     "k": "rca",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "If + 現在簡單式, 現在簡單式",
+    "art": "check",
+    "rows": [
+     {
+      "lab": "事實條件句",
+      "blocks": [
+       {
+        "t": "If",
+        "k": "n"
+       },
+       {
+        "t": "a unit",
+        "k": "s"
+       },
+       {
+        "t": "passes",
+        "k": "v"
+       },
+       {
+        "t": "the test,",
+        "k": "o"
+       },
+       {
+        "t": "we label it as “Pass”",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "主詞是第三人稱單數",
+      "blocks": [
+       {
+        "t": "the system",
+        "k": "s"
+       },
+       {
+        "t": "send",
+        "k": "v",
+        "x": true
+       },
+       {
+        "t": "sends",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "us an alert",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "if 子句和主要子句都用現在簡單式；the system 是第三人稱單數，動詞要加 s。unit 是單數，所有格用 its。"
+   },
+   "en": "If a unit passes the test, we label it as Pass. The system sends us an alert.",
+   "cn": "如果產品通過測試，我們就標示為 Pass。系統會發警報給我們。",
+   "hi": [
+    {
+     "t": "If a unit passes the test",
+     "cn": "如果產品通過測試",
+     "k": "ifFact",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 2,
+    "wrong": "The inspector used an old work instructions, so dimensions were measured incorrectly.",
+    "bad": [
+     "old",
+     "work instructions",
+     "dimensions"
+    ],
+    "fix": "The inspector used an outdated work instruction, so the dimensions were measured incorrectly.",
+    "good": [
+     "outdated",
+     "work instruction",
+     "the dimensions"
+    ],
+    "why": "Use outdated for something no longer current, and an needs a singular noun.",
+    "whyCn": "不再適用要用 outdated；an 後面要接單數名詞 work instruction。"
+   },
+   "en": "The inspector used an outdated work instruction, so the dimensions were measured incorrectly.",
+   "cn": "檢驗員用了過時的作業指導書，所以尺寸量錯了。",
+   "hi": [
+    {
+     "t": "outdated work instruction",
+     "cn": "過時的作業指導書",
+     "k": "outdated",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 5,
+    "wrong": "We use a multimeter to check electrial continuity screening, if test is OK, we label unit as pass.",
+    "bad": [
+     "check electrial continuity screening",
+     "if test is OK"
+    ],
+    "fix": "We use a multimeter to perform an electrical continuity test. If a unit passes the test, we label it as Pass.",
+    "good": [
+     "perform an electrical continuity test",
+     "If a unit passes the test"
+    ],
+    "why": "Perform goes with test, and a comma cannot join two full sentences.",
+    "whyCn": "perform 搭配 test；逗號不能連接兩個完整句子，要分成兩句。"
+   },
+   "en": "We use a multimeter to perform an electrical continuity test.",
+   "cn": "我們用萬用電表做電氣導通測試。",
+   "hi": [
+    {
+     "t": "perform an electrical continuity test",
+     "cn": "做電氣導通測試",
+     "k": "test",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The inspector used an ___ work instruction.",
+    "a": "outdated",
+    "n": 1
+   },
+   "en": "The inspector used an ___ work instruction.",
+   "cn": "檢驗員用了一份___的作業指導書。",
+   "say": "The inspector used an, blank, work instruction.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The inspector used an ___ work instruction.",
+    "a": "outdated",
+    "n": 1,
+    "show": true
+   },
+   "en": "The inspector used an outdated work instruction.",
+   "cn": "檢驗員用了過時的作業指導書。",
+   "hi": [
+    {
+     "t": "outdated work instruction",
+     "cn": "過時的作業指導書",
+     "k": "outdated",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The hole is too small, ___ it difficult for the operator to install the part.",
+    "a": "making",
+    "n": 2
+   },
+   "en": "The hole is too small, ___ it difficult for the operator to install the part.",
+   "cn": "孔太小，___作業員很難安裝零件。",
+   "say": "The hole is too small, blank, it difficult for the operator to install the part.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The hole is too small, ___ it difficult for the operator to install the part.",
+    "a": "making",
+    "n": 2,
+    "show": true
+   },
+   "en": "The hole is too small, making it difficult for the operator to install the part.",
+   "cn": "孔太小，讓作業員很難安裝零件。",
+   "hi": [
+    {
+     "t": "making it difficult for the operator to install the part",
+     "cn": "讓作業員很難安裝零件",
+     "k": "makeDiff",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We send the motors to the supplier ___ root cause analysis.",
+    "a": "for",
+    "n": 3
+   },
+   "en": "We send the motors to the supplier ___ root cause analysis.",
+   "cn": "我們把馬達寄給供應商___根本原因分析。",
+   "say": "We send the motors to the supplier, blank, root cause analysis.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We send the motors to the supplier ___ root cause analysis.",
+    "a": "for",
+    "n": 3,
+    "show": true
+   },
+   "en": "We send the motors to the supplier for root cause analysis.",
+   "cn": "我們把馬達寄給供應商做根本原因分析。",
+   "hi": [
+    {
+     "t": "for root cause analysis",
+     "cn": "做根本原因分析",
+     "k": "rca",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};

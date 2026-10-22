@@ -25751,6 +25751,598 @@ window.BOOK = {
         ]
       }
     ]
+  },
+  /* ---- bk20261021 Quality Issues & Climate-Controlled Storage ---- */
+  {
+    "id": "bk20261021",
+    "video": true,
+    "icon": "🌡️",
+    "iconSvg": "<svg viewBox=\"0 0 96 96\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"48\" cy=\"48\" r=\"45\" fill=\"#fff\" stroke=\"#f0c9a0\" stroke-width=\"3\"/><rect x=\"18\" y=\"20\" width=\"38\" height=\"50\" rx=\"4\" fill=\"#fdf6ec\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><path d=\"M25 32 h24 M25 42 h24 M25 52 h12\" stroke=\"#2b2118\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M26 59 l10 10 M36 59 l-10 10\" stroke=\"#d9534f\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"62\" y=\"18\" width=\"12\" height=\"38\" rx=\"6\" fill=\"#fff\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><circle cx=\"68\" cy=\"64\" r=\"11\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><rect x=\"65.5\" y=\"34\" width=\"5\" height=\"26\" rx=\"2.5\" fill=\"#e8813a\"/></svg>",
+    "date": "2026-10-21",
+    "doc": "https://docs.google.com/document/d/1KJ6eEQ7J1ZnFK76cuWdXZ_8RkeOf4Ahx2N8E4HPod5Y/edit",
+    "title": "Quality Issues & Climate-Controlled Storage",
+    "titleCn": "品保異常處理與溫控儲藏室",
+    "topics": "outdated vs old、test vs screening、making it difficult for sb to V、send A to B for C、溫控儲藏室與溫度監控、發音練習、問句與答案、稽核準備",
+    "hwTitle": "I. ★ 10/21 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "wrong": "No need to check security camera footage because I found who took the part.",
+        "fix": "There is no need to check the security camera footage because I found out who took the part.",
+        "cn": "不需要調閱監視器畫面了，因為我已經查出是誰拿走了那個零件。",
+        "pat": "There is no need to + V (沒有必要做……)",
+        "note": "find vs find out：find 是「找到某物」；find out 是「(調查後)查明、得知」，後面接 who / what / why 子句，這句表示已經查出負責的人，所以不必再調監視器。"
+      },
+      {
+        "n": 2,
+        "wrong": "The inspector used an old work instructions, so dimensions were measured incorrectly.",
+        "fix": "The inspector used an outdated work instruction, so the dimensions were measured incorrectly.",
+        "cn": "檢驗員用了過時的作業指導書，所以尺寸量錯了。",
+        "pat": "use + a/an + 單數名詞／被動語態 be + p.p.(were measured)",
+        "note": "an 後面要接單數，所以是 an work instruction，不是 instructions。 「過時」要用 outdated，不是 old(差別見 IV-A)。 outdated work instruction 表示指導書已被新版取代，用它才導致量錯。"
+      },
+      {
+        "n": 3,
+        "wrong": "The hole in the frame is too small, so the operator install difficultly.",
+        "fix": "The hole in the frame is too small, making it difficult for the operator to install the part.",
+        "cn": "框架上的孔太小，讓作業員很難安裝這個零件。",
+        "pat": "make it + 形容詞 + for sb + to V (讓某人很難／容易做……)",
+        "note": "另一種寫法：The small hole in the frame made it difficult for the operator to install the part. difficult 是形容詞，difficulty 是名詞，difficultly 不是這裡的用法。 it 是假受詞，真正的受詞是後面的 to install。這個句型把原因(孔太小)和結果(很難安裝)清楚連起來。"
+      },
+      {
+        "n": 4,
+        "wrong": "Treadmill incline motor issue : The outer tube is fully screwed in, we need to unscrew one and half turn then assemble it.",
+        "fix": "The outer tube of the treadmill incline motor is fully screwed in. We need to unscrew it one and a half turns before assembling it.",
+        "cn": "跑步機揚升馬達的外管被旋到底了，組裝前需要先旋鬆一圈半。",
+        "pat": "before + V-ing／one and a half + 複數名詞(turns)",
+        "note": "原句用逗號連接兩個完整句子(comma splice)，要改成兩句。 one and a half turns 是一整圈加半圈，超過一圈所以 turn 要加 s。"
+      },
+      {
+        "n": 5,
+        "wrong": "At the factory, we use a multimeter to check electrial continuity screening, if test is OK, we label unit as pass and record the serial number.",
+        "fix": "At the factory, we use a multimeter to perform an electrical continuity test. If a unit passes the test, we label it as “Pass” and record its serial number.",
+        "cn": "在工廠裡，我們用萬用電表做電氣導通測試。如果產品通過測試，就標示為「Pass」並記錄它的序號。",
+        "pat": "use A to + V／If + 現在簡單式, 現在簡單式(事實條件句)",
+        "note": "perform 比 check 更正式，常搭配測試、檢驗等技術程序。 unit 是單數，所以所有格要用 its。"
+      },
+      {
+        "n": 6,
+        "wrong": "We will send the defective incline motors to the supplier analysis the root cause and follow up actions.",
+        "fix": "We will send the defective incline motors to the supplier for root cause analysis and follow-up action(s).",
+        "cn": "我們會把不良的揚升馬達寄給供應商，做根本原因分析並提出後續改善措施。",
+        "pat": "send + 物 + to + 人／公司 + for + 目的",
+        "note": "目的要用 for + 名詞，不能把 analysis 直接接在 supplier 後面。 root cause analysis 是固定技術用語，不要拆成互不相干的 root cause 和 analysis。 follow-up 當名詞時加連字號，follow up 才是動詞片語。"
+      }
+    ],
+    "vocabTitle": "II-A. 品保與製程單字 Vocabulary",
+    "vocab": [
+      {
+        "w": "security camera footage",
+        "ipa": "/sɪˈkjʊr.ə.t̬i ˈkæm.rə ˈfʊt̬.ɪdʒ/",
+        "pos": "n.",
+        "cn": "監視器畫面",
+        "ex": "Please save the security camera footage.",
+        "exCn": "請保存監視器畫面。"
+      },
+      {
+        "w": "outdated work instruction",
+        "star": true,
+        "ipa": "/ˌaʊtˈdeɪ.t̬ɪd wɝːk ɪnˈstrʌk.ʃən/",
+        "pos": "n. phr.",
+        "cn": "過時的作業指導書",
+        "ex": "Remove every outdated work instruction from the line.",
+        "exCn": "把產線上所有過時的作業指導書撤掉。"
+      },
+      {
+        "w": "latest version",
+        "ipa": "/ˈleɪ.t̬ɪst ˈvɝː.ʒən/",
+        "pos": "n. phr.",
+        "cn": "最新版本",
+        "ex": "Please use the latest version.",
+        "exCn": "請使用最新版本。"
+      },
+      {
+        "w": "dimension",
+        "ipa": "/daɪˈmen.ʃən/",
+        "pos": "n.",
+        "cn": "尺寸",
+        "ex": "Check the dimensions of the hole.",
+        "exCn": "檢查孔的尺寸。"
+      },
+      {
+        "w": "assemble",
+        "ipa": "/əˈsembəl/",
+        "pos": "v.",
+        "cn": "組裝",
+        "ex": "We assemble the frame first.",
+        "exCn": "我們先組裝框架。"
+      },
+      {
+        "w": "unscrew",
+        "ipa": "/ʌnˈskruː/",
+        "pos": "v.",
+        "cn": "旋鬆、轉開螺絲",
+        "ex": "Please unscrew the cap.",
+        "exCn": "請把蓋子旋開。"
+      },
+      {
+        "w": "electrical continuity test",
+        "star": true,
+        "ipa": "/ɪˈlek.trɪ.kəl ˌkɑːn.tɪˈnuː.ə.t̬i test/",
+        "pos": "n. phr.",
+        "cn": "電氣導通測試",
+        "ex": "Each cable gets an electrical continuity test.",
+        "exCn": "每條線材都要做電氣導通測試。"
+      },
+      {
+        "w": "multimeter",
+        "ipa": "/ˈmʌl.t̬i.miː.t̬ɚ/",
+        "pos": "n.",
+        "cn": "萬用電表",
+        "ex": "Use a multimeter to check the wire.",
+        "exCn": "用萬用電表檢查這條線。"
+      },
+      {
+        "w": "defective",
+        "star": true,
+        "ipa": "/dɪˈfek.tɪv/",
+        "pos": "adj.",
+        "cn": "有缺陷的、不良的",
+        "ex": "This motor is defective.",
+        "exCn": "這顆馬達有缺陷。"
+      },
+      {
+        "w": "root cause analysis",
+        "star": true,
+        "ipa": "/ruːt kɑːz əˈnæl.ə.sɪs/",
+        "pos": "n. phr.",
+        "cn": "根本原因分析",
+        "ex": "The supplier will do a root cause analysis.",
+        "exCn": "供應商會做根本原因分析。"
+      },
+      {
+        "w": "follow-up action",
+        "ipa": "/ˈfɑː.loʊ ʌp ˈæk.ʃən/",
+        "pos": "n. phr.",
+        "cn": "後續改善措施",
+        "ex": "List the follow-up actions in the report.",
+        "exCn": "把後續改善措施列在報告裡。"
+      },
+      {
+        "w": "screening",
+        "star": true,
+        "ipa": "/ˈskriː.nɪŋ/",
+        "pos": "n.",
+        "cn": "篩選、篩檢",
+        "ex": "We use screening to find defective motors early.",
+        "exCn": "我們用篩選來及早找出不良馬達。"
+      },
+      {
+        "w": "outdated",
+        "star": true,
+        "ipa": "/ˌaʊtˈdeɪ.t̬ɪd/",
+        "pos": "adj.",
+        "cn": "過時的",
+        "ex": "This work instruction is outdated.",
+        "exCn": "這份作業指導書已經過時。"
+      }
+    ],
+    "vocab2Title": "II-B. 溫控儲藏室與維護單字",
+    "vocab2": [
+      {
+        "w": "climate-controlled",
+        "star": true,
+        "ipa": "/ˈklaɪ.mət kənˈtroʊld/",
+        "pos": "adj.",
+        "cn": "溫控的",
+        "ex": "The controllers are kept in a climate-controlled room.",
+        "exCn": "控制器存放在溫控的房間裡。"
+      },
+      {
+        "w": "humidity",
+        "ipa": "/hjuːˈmɪdɪti/",
+        "pos": "n.",
+        "cn": "濕度",
+        "ex": "Humidity can damage the boards.",
+        "exCn": "濕度可能損壞電路板。"
+      },
+      {
+        "w": "component",
+        "ipa": "/kəmˈpoʊ.nənt/",
+        "pos": "n.",
+        "cn": "零組件",
+        "ex": "Keep each component dry.",
+        "exCn": "讓每個零組件保持乾燥。"
+      },
+      {
+        "w": "environmental",
+        "ipa": "/ɪnˌvaɪ.rənˈmen.t̬əl/",
+        "pos": "adj.",
+        "cn": "環境的",
+        "ex": "Check the environmental conditions.",
+        "exCn": "確認環境條件。"
+      },
+      {
+        "w": "temperature sensor",
+        "ipa": "/ˈtem.prə.tʃɚ ˈsen.sɚ/",
+        "pos": "n. phr.",
+        "cn": "溫度感測器",
+        "ex": "Place a temperature sensor near the door.",
+        "exCn": "在門口附近放一個溫度感測器。"
+      },
+      {
+        "w": "temperature monitoring system",
+        "ipa": "/ˈtem.prə.tʃɚ ˈmɑː.nə.t̬ɚ.ɪŋ ˈsɪs.təm/",
+        "pos": "n. phr.",
+        "cn": "溫度監控系統",
+        "ex": "The temperature monitoring system runs 24/7.",
+        "exCn": "溫度監控系統全天候運作。"
+      },
+      {
+        "w": "temperature range",
+        "ipa": "/ˈtem.prə.tʃɚ reɪndʒ/",
+        "pos": "n. phr.",
+        "cn": "溫度範圍",
+        "ex": "Keep the room within the temperature range.",
+        "exCn": "讓房間維持在溫度範圍內。"
+      },
+      {
+        "w": "out of range",
+        "ipa": "/aʊt əv reɪndʒ/",
+        "pos": "phr.",
+        "cn": "超出範圍",
+        "ex": "The reading is out of range.",
+        "exCn": "讀數超出範圍。"
+      },
+      {
+        "w": "alert / notification",
+        "ipa": "/əˈlɝːt/ /ˌnoʊ.t̬ə.fəˈkeɪ.ʃən/",
+        "pos": "n.",
+        "cn": "警報／通知",
+        "ex": "The system sends an alert when the reading is out of range.",
+        "exCn": "讀數超出範圍時，系統會發出警報。"
+      },
+      {
+        "w": "maintenance record",
+        "ipa": "/ˈmeɪn.t̬ən.əns ˈrek.ɚd/",
+        "pos": "n. phr.",
+        "cn": "維護紀錄（maintenance documents 維護文件）",
+        "ex": "Please check the maintenance record before the audit.",
+        "exCn": "稽核前請先檢查維護紀錄。"
+      }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases",
+    "phrases": [
+      {
+        "p": "There is no need to + V",
+        "cn": "沒有必要做……"
+      },
+      {
+        "p": "find out",
+        "cn": "查明、得知"
+      },
+      {
+        "p": "make it difficult for sb to V",
+        "cn": "讓某人很難做……"
+      },
+      {
+        "p": "fully screwed in",
+        "cn": "已完全旋入"
+      },
+      {
+        "p": "one and a half turns",
+        "cn": "一圈半"
+      },
+      {
+        "p": "perform a test",
+        "cn": "進行測試"
+      },
+      {
+        "p": "pass the test",
+        "cn": "通過測試"
+      },
+      {
+        "p": "label ... as “Pass”",
+        "cn": "把……標示為「Pass」"
+      },
+      {
+        "p": "send A to B for C",
+        "cn": "把 A 送給 B 做 C"
+      },
+      {
+        "p": "fill out a record",
+        "cn": "填寫紀錄"
+      },
+      {
+        "p": "perform properly / operate correctly",
+        "cn": "運作正常"
+      },
+      {
+        "p": "24/7",
+        "cn": "全天候(一週七天、一天 24 小時)"
+      },
+      {
+        "p": "meet the requirements",
+        "cn": "符合要求"
+      }
+    ],
+    "grammarTitle": "IV. 句型與文法解說 Grammar Notes",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "old vs outdated",
+        "pat": "be + outdated／outdated + 名詞",
+        "pts": [
+          "old = 舊的，描述「年紀、用很久」。例：This is an old machine. 這是一台舊機器。",
+          "outdated = 過時的，指「不再是最新、不再適用或有效」。例：這台機器已經過時，需要更換。",
+          "舊的東西不一定過時(舊機器還能用)；過時的東西是「不符合現況」，所以作業指導書、資訊、程序都用 outdated。",
+          "⚠️ information 是不可數名詞：不能說 These information are outdated，要說 This information is outdated。"
+        ],
+        "exs": [
+          {
+            "tag": "This information is outdated.",
+            "en": "This information is outdated. We need to check the latest version.",
+            "cn": "這些資訊已經過時了。我們需要查看最新版本。"
+          },
+          {
+            "tag": "outdated equipment",
+            "en": "The factory is still using outdated equipment.",
+            "cn": "這家工廠仍在使用過時的設備。"
+          },
+          {
+            "tag": "outdated procedures",
+            "en": "Our company needs to update its outdated quality-control procedures.",
+            "cn": "我們公司需要更新過時的品質管制程序。"
+          },
+          {
+            "tag": "其他搭配詞",
+            "en": "outdated information／outdated technology／outdated instructions／outdated regulations",
+            "cn": "過時的資訊／技術／指示／法規"
+          }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "test vs screening",
+        "pat": "perform a test／conduct screening",
+        "pts": [
+          "test(測試、檢測)：用特定程序檢查某物是否符合要求或運作正常。例如產線最後一站確認跑步機是否正常，不一定是在找已知的缺陷。",
+          "screening(篩選、篩檢)：用來找出可能有缺陷或不符合要求的產品，通常是在擔心某些產品有問題時，檢查大量產品、把不良品挑出來。"
+        ],
+        "exs": [
+          {
+            "tag": "test",
+            "en": "We perform an electrical continuity test on every unit.",
+            "cn": "我們對每個產品做電氣導通測試。"
+          },
+          {
+            "tag": "test",
+            "en": "The motor failed the performance test.",
+            "cn": "這顆馬達沒通過性能測試。"
+          },
+          {
+            "tag": "test",
+            "en": "The technician tested the motor to make sure it worked properly.",
+            "cn": "技術員測試馬達，確認它運作正常。"
+          },
+          {
+            "tag": "screening",
+            "en": "We conduct incoming inspection screening to identify defective components.",
+            "cn": "我們做進料檢驗篩選，找出不良零組件。"
+          },
+          {
+            "tag": "screening",
+            "en": "The factory screened all the motors for potential defects.",
+            "cn": "工廠篩檢了所有馬達的潛在缺陷。"
+          },
+          {
+            "tag": "screening",
+            "en": "The screening process helped us identify units with electrical problems.",
+            "cn": "篩檢過程幫我們找出有電氣問題的產品。"
+          }
+        ]
+      },
+      {
+        "k": "IV-C",
+        "title": "make it difficult for sb to V",
+        "pat": "S + V, making it + 形容詞 + for sb + to V／S + made it + 形容詞 + for sb + to V",
+        "pts": [
+          "前面整件事造成的結果，用 making 帶出，或直接用 made 當主要動詞。",
+          "形容詞常用 difficult／easy／hard／impossible。"
+        ],
+        "exs": [
+          {
+            "tag": "making it",
+            "en": "The hole in the frame is too small, making it difficult for the operator to install the part.",
+            "cn": "框架上的孔太小，讓作業員很難安裝這個零件。"
+          },
+          {
+            "tag": "made it",
+            "en": "The small hole in the frame made it difficult for the operator to install the part.",
+            "cn": "框架上的小孔讓作業員很難安裝這個零件。"
+          }
+        ]
+      },
+      {
+        "k": "IV-D",
+        "title": "send A to B for C",
+        "pat": "send + 物 + to + 人／公司 + for + 目的(名詞)",
+        "pts": [
+          "analysis 的變化：analysis (名詞單數)／analyses (名詞複數)／analyze (動詞，美式拼法)。"
+        ],
+        "exs": [
+          {
+            "tag": "send A to B for C",
+            "en": "We will send the defective incline motors to the supplier for root cause analysis and follow-up action(s).",
+            "cn": "我們會把不良的揚升馬達寄給供應商，做根本原因分析並提出後續改善措施。"
+          }
+        ]
+      }
+    ],
+    "extraTitle": "V–VII. 溫控儲藏室與情境練習",
+    "extra": [
+      {
+        "title": "V. 溫控儲藏室與溫度監控 Climate-Controlled Storage",
+        "exs": [
+          {
+            "tag": "climate-controlled storage room",
+            "en": "A room where temperature and humidity are controlled, often used in factories to store sensitive electronic parts.",
+            "cn": "溫度與濕度受控制的儲藏室，常見於存放敏感電子零件的工廠。"
+          },
+          {
+            "tag": "1",
+            "en": "We are building a climate-controlled storage room for treadmill controllers.",
+            "cn": "我們正在為跑步機控制器蓋一間溫控儲藏室。"
+          },
+          {
+            "tag": "2",
+            "en": "The air conditioner needs to run 24 hours a day to control the humidity.",
+            "cn": "空調需要一天 24 小時運轉來控制濕度。"
+          },
+          {
+            "tag": "3",
+            "en": "We need to maintain the appropriate temperature and humidity to protect the components.",
+            "cn": "我們需要維持適當的溫度與濕度來保護零組件。"
+          },
+          {
+            "tag": "4",
+            "en": "The storage room must meet the environmental requirements for components.",
+            "cn": "儲藏室必須符合零組件的環境要求。"
+          },
+          {
+            "tag": "結構 1–4",
+            "en": "need to + V (需要做……)／to + V 表目的 (to control / to protect)／must + V (必須)",
+            "cn": "need to + V：需要做……；to + V 表目的；must + V：必須。"
+          },
+          {
+            "tag": "5・訂正 ✗ We have installed a temperature monitoring system in the climate-controlled storage room. If the temperature is not enough the system automatically send us an alert. This device can monitor the temperature 24/7 and send notifications to our phones.",
+            "en": "We have installed a temperature monitoring system in the climate-controlled storage room. If the temperature does not meet our requirements, the system automatically sends us an alert. This device can monitor the temperature 24/7 and send notifications to our phones.",
+            "cn": "我們在溫控儲藏室裝了溫度監控系統。如果溫度不符合我們的要求，系統會自動發出警報給我們。這個裝置可以全天候監控溫度，並把通知傳到我們的手機。如果溫度有任何問題，裝置會自動通知我們。"
+          },
+          {
+            "tag": "5・其他說法",
+            "en": "If the temperature is outside our required range, ... ｜ If there is any problem with the temperature, the device sends us an alert automatically.",
+            "cn": "如果溫度超出我們要求的範圍……｜如果溫度有任何問題，裝置會自動發警報給我們。"
+          },
+          {
+            "tag": "5・文法",
+            "en": "If + 現在簡單式, S + 現在簡單式；主詞 the system 是第三人稱單數，動詞要加 s (sends)。",
+            "cn": "if the temperature is not enough 不精確；監控的重點是溫度超出要求範圍，所以用 does not meet our requirements 或 is outside our required range。24/7 = 24 hours a day, 7 days a week，口語與職場英文常用。"
+          },
+          {
+            "tag": "6・訂正 ✗ Our workers fill out the maintenance records every day to make sure the equipment normally work.",
+            "en": "Our workers fill out maintenance records every day to make sure the equipment performs properly.",
+            "cn": "我們的員工每天填寫維護紀錄，確保設備運作正常。"
+          },
+          {
+            "tag": "6・另一種說法",
+            "en": "... to make sure the equipment operates correctly.",
+            "cn": "……確保設備運作正常。"
+          },
+          {
+            "tag": "6・文法",
+            "en": "to make sure + S + V (為了確保……)",
+            "cn": "perform properly、operate correctly 是設備的自然搭配。equipment 是不可數名詞，視為單數，所以動詞是 performs / operates，不是 perform；work 也要改成動詞加 s 的形式，且 normally 不如 properly 自然。"
+          }
+        ]
+      },
+      {
+        "title": "VII. 情境練習：向主管說明問題 Situation Practice",
+        "exs": [
+          {
+            "tag": "Situation",
+            "en": "An inspector discovers that several treadmill frames have incorrectly sized holes. The operator has difficulty installing the parts because the factory is using outdated work instructions. Explain the situation to your supervisor.",
+            "cn": "檢驗員發現數個跑步機框架的孔尺寸不對。因為工廠使用過時的作業指導書，作業員很難安裝零件。請向主管說明這個狀況。"
+          },
+          {
+            "tag": "回答時要說明",
+            "en": "problem → how it happened → what caused the measurement error → corrective action → prevention",
+            "cn": "問題是什麼 → 怎麼發生 → 什麼造成量測錯誤 → 該採取什麼矯正措施 → 如何預防再發生。"
+          },
+          {
+            "tag": "Q1・What is the problem?",
+            "en": "Several frames have holes of the wrong size. The holes are too small for the parts.",
+            "cn": "問題是什麼？好幾個框架的孔尺寸不對，對零件來說太小。"
+          },
+          {
+            "tag": "Q2・How did the problem happen?",
+            "en": "The line was following an outdated work instruction, so the hole size on it did not match the current drawing.",
+            "cn": "問題怎麼發生的？產線依照過時的作業指導書作業，上面的孔徑與現行圖面不符。"
+          },
+          {
+            "tag": "Q3・What caused the incorrect measurements?",
+            "en": "The inspector checked the dimensions against the outdated document, so the results were wrong.",
+            "cn": "什麼造成量測錯誤？檢驗員依過時的文件檢查尺寸，所以結果是錯的。"
+          },
+          {
+            "tag": "Q4・What corrective actions should be taken?",
+            "en": "We should remove the outdated instruction, replace it with the latest version, re-measure all affected frames, and separate the defective ones.",
+            "cn": "應採取哪些矯正措施？應撤下過時的指導書、換成最新版本、重新量測所有受影響的框架，並隔離不良品。"
+          },
+          {
+            "tag": "Q5・How can you prevent the same problem from happening again?",
+            "en": "We will control document versions, remove old copies from the line, and ask inspectors to confirm the revision number before each inspection.",
+            "cn": "如何避免同樣問題再次發生？我們會管制文件版本、把舊版從產線收回，並要求檢驗員每次檢驗前確認版本號。"
+          },
+          {
+            "tag": "完整口說範例 Model Answer",
+            "en": "Hi, I would like to report a quality issue. Several treadmill frames have holes that are too small, so the operator has difficulty installing the parts. The problem happened because our line was using an outdated work instruction. The inspector also used it, so the dimensions were measured incorrectly. To fix this, we will replace the document with the latest version, re-measure all affected frames, and separate the defective ones. To prevent it from happening again, we will control document versions and check the revision number before every inspection.",
+            "cn": "主管您好，我想回報一個品質問題。數個跑步機框架的孔太小，作業員很難安裝零件。原因是產線使用了過時的作業指導書，檢驗員也依它檢驗，所以尺寸量錯了。為了改善，我們會換成最新版本、重新量測所有受影響的框架並隔離不良品。為避免再發生，我們會管制文件版本，並在每次檢驗前確認版本號。"
+          }
+        ]
+      }
+    ],
+    "discussionTitle": "VI. 問句與答案 Q&A Practice",
+    "discussion": [
+      {
+        "q": "What kind of products does your factory manufacture?",
+        "qCn": "你們工廠製造什麼產品？",
+        "a": "We manufacture treadmills and key treadmill parts, such as controllers and incline motors.",
+        "aCn": "我們製造跑步機和主要零件，例如控制器與揚升馬達。"
+      },
+      {
+        "q": "What equipment do you use during production?",
+        "qCn": "生產時使用什麼設備？",
+        "a": "We use assembly tools, multimeters, and test equipment on the production line.",
+        "aCn": "產線上我們使用組裝工具、萬用電表和測試設備。"
+      },
+      {
+        "q": "How do workers record daily maintenance activities?",
+        "qCn": "員工如何記錄每日維護作業？",
+        "a": "They fill out a maintenance record every day, noting what they checked and whether the equipment is normal.",
+        "aCn": "他們每天填寫維護紀錄，寫下檢查了什麼、設備是否正常。"
+      },
+      {
+        "q": "Why is it important to keep maintenance records?",
+        "qCn": "為什麼保存維護紀錄很重要？",
+        "a": "Records prove that equipment is checked regularly, help us find problems early, and make it easier to trace the cause when something goes wrong.",
+        "aCn": "紀錄能證明設備有定期檢查、幫助我們及早發現問題，出問題時也更容易追查原因。"
+      },
+      {
+        "q": "How do you check whether a treadmill controller or incline motor is working properly?",
+        "qCn": "如何檢查跑步機控制器或揚升馬達是否正常運作？",
+        "a": "We power the unit on and run a function test. For the motor, we also perform an electrical continuity test.",
+        "aCn": "我們把產品通電做功能測試；馬達另外做電氣導通測試。"
+      },
+      {
+        "q": "What equipment do you use to perform an electrical continuity test?",
+        "qCn": "做電氣導通測試要用什麼設備？",
+        "a": "We use a multimeter. When the circuit is continuous, the multimeter shows a reading or beeps.",
+        "aCn": "我們用萬用電表。電路導通時，電表會顯示數值或發出嗶聲。"
+      },
+      {
+        "q": "What happens if a unit fails the test?",
+        "qCn": "如果產品沒通過測試會怎樣？",
+        "a": "We mark it as defective, separate it from good units, and report it to the supervisor.",
+        "aCn": "我們標示為不良品，與良品隔開，並回報主管。"
+      },
+      {
+        "q": "How do you identify and record defective products?",
+        "qCn": "如何辨識並記錄不良品？",
+        "a": "We attach a “Defective” label, move the unit to a rejected area, and write down its serial number and the problem in the log.",
+        "aCn": "我們貼上「Defective」標籤，移到不良品區，並在紀錄表寫下序號與問題。"
+      }
+    ]
   }
   ]
 };
