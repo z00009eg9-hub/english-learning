@@ -1,3 +1,5 @@
+import { powderGuideHTML } from './powder-learning.js';
+export { powderGuideHTML };
 import { EQUIP } from './equip-data.js';
 
 export { EQUIP };
@@ -20,9 +22,18 @@ export function mount(containerEl, equipId, opts = {}) {
 .w3d-root .w3d-title{font-size:1.2em;margin:0 0 8px}
 .w3d-root .w3d-text{margin:8px 0;line-height:1.6}
 .w3d-root .w3d-note{font-size:.85em;opacity:.75}
+.w3d-root.w3d-subtle .w3d-marker{width:30px;height:30px;min-height:30px;padding:0;border:0;background:transparent;outline:0;box-shadow:none}
+.w3d-root.w3d-subtle .w3d-marker::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:8px;height:8px;border:1.5px solid #fff;border-radius:50%;background:var(--w3d-accent,#bd732e);box-shadow:0 0 2px #0009}
+.w3d-root.w3d-subtle .w3d-marker[aria-pressed=true]::before{width:12px;height:12px;box-shadow:0 0 0 2px #bd732e55}
+.w3d-root.w3d-subtle .w3d-marker:focus-visible::before{box-shadow:0 0 0 3px var(--w3d-accent,#bd732e)}
+.w3d-root .w3d-selection{position:absolute;top:10px;left:10px;max-width:calc(100% - 40px);padding:6px 9px;border-radius:8px;background:var(--w3d-button-bg,#fff);font-size:.85em;pointer-events:none;z-index:2}
+.w3d-root .w3d-learning{margin-top:14px;padding:12px;border:1px solid var(--w3d-border,#8886);border-radius:12px;line-height:1.6}
+.w3d-root .w3d-learning summary{cursor:pointer}.w3d-root .w3d-learning button{margin-top:10px}
 .w3d-root .w3d-status{position:absolute;inset:12px;pointer-events:none}
 </style><h2 class="w3d-title"></h2><p class="w3d-note"></p><div class="w3d-toolbar"><button type="button" class="w3d-button w3d-reset">全景</button><button type="button" class="w3d-button w3d-rotate" aria-pressed="false">自動旋轉</button></div><div class="w3d-stage"><span class="w3d-status" role="status">正在載入 3D…</span></div><div class="w3d-parts" aria-label="設備部件"></div><div class="w3d-detail" aria-live="polite"></div>`;
   containerEl.append(root);
+  const subtle = equipId === 'paint-line'; if (subtle) root.classList.add('w3d-subtle');
+  let annotationMode = 'dots'; root.dataset.annotations = annotationMode;
   // stageOnly：外層網站自己畫標題、按鈕與部件清單，這裡只留 3D 畫面與編號；用回傳的 select/reset/setAutoRotate 控制。
   const stageOnly = !!opts.stageOnly;
   if (stageOnly) ['title','note','toolbar','parts','detail'].forEach(k => root.querySelector('.w3d-' + k)?.remove());
@@ -35,16 +46,25 @@ export function mount(containerEl, equipId, opts = {}) {
     const b = document.createElement('button'); b.type = 'button'; b.className = 'w3d-button w3d-inside'; b.textContent = '門內設備';
     listen(b, 'click', () => select(equip.parts[active].interior ? 0 : 7)); q('toolbar').append(b);
   }
+  if (subtle) {
+    const label=document.createElement('span');label.className='w3d-selection';label.setAttribute('aria-live','polite');q('stage').append(label);
+    if (!stageOnly) {const b=document.createElement('button');b.type='button';b.className='w3d-button w3d-annotations';listen(b,'click',()=>cycleAnnotations());q('toolbar').append(b);}
+  }
+  function syncAnnotationLabel(){const names={dots:'標註：定位點',selected:'標註：僅選取',none:'標註：隱藏'};if(q('annotations'))q('annotations').textContent=names[annotationMode];if(q('selection'))q('selection').hidden=annotationMode==='none';}
+  function cycleAnnotations(){annotationMode=annotationMode==='dots'?'selected':annotationMode==='selected'?'none':'dots';root.dataset.annotations=annotationMode;syncAnnotationLabel();return annotationMode;}
+  syncAnnotationLabel();
+  if (!stageOnly && equip.processGuide) {const panel=document.createElement('div');panel.innerHTML=powderGuideHTML(equip);root.append(panel);listen(panel,'click',ev=>{const b=ev.target.closest('[data-w3d-part]');if(b)select(Number(b.dataset.w3dPart));});}
   const buttons = stageOnly ? [] : equip.parts.map((part, i) => {
     const b = document.createElement('button'); b.type = 'button'; b.className = 'w3d-button'; b.textContent = `${part.n} ${part.zh}`;
     listen(b, 'click', () => select(i)); q('parts').append(b); return b;
   });
   function select(i, move = true) {
     active = i; const part = equip.parts[i];
+    if(q('selection'))q('selection').textContent=part.en+' · '+part.zh;
     buttons.forEach((b, j) => b.setAttribute('aria-pressed', String(i === j)));
     const detail = q('detail');
     if (detail) { detail.replaceChildren();
-    for (const [tag, text] of [['h3', `${part.n}. ${part.en} · ${part.zh}`], ['p', part.desc], ['p', part.ex], ['p', part.exCn]]) {
+    for (const [tag, text] of [['h3', `${part.n}. ${part.en} · ${part.zh}`], ['p', part.desc], ['p', part.def ? '('+part.pos+') '+part.def : ''], ['p', part.collocation ? '常用搭配：'+part.collocation : ''], ['p', part.usage || ''], ['p', part.ex], ['p', part.exCn]]) {
       const el = document.createElement(tag); el.className = tag === 'h3' ? 'w3d-title' : 'w3d-text'; el.textContent = text;
       if (text === part.ex && typeof opts.speak === 'function') {
         const b = document.createElement('button'); b.type = 'button'; b.className = 'w3d-button'; b.textContent = '🔊'; b.setAttribute('aria-label', '朗讀例句');
@@ -79,7 +99,7 @@ export function mount(containerEl, equipId, opts = {}) {
       let destination = null, previous = 0;
       function stopRotate() { controls.autoRotate = false; q('rotate')?.setAttribute('aria-pressed','false'); opts.onRotate?.(false); }
       equip.parts.forEach((part, i) => {
-        const b = document.createElement('button'); b.type = 'button'; b.className = 'w3d-button w3d-marker'; b.textContent = part.n; b.setAttribute('aria-label', `${part.n} ${part.en} ${part.zh}`);
+        const b = document.createElement('button'); b.type = 'button'; b.className = 'w3d-button w3d-marker'; b.textContent = subtle ? '' : part.n; b.title=part.en+' · '+part.zh; b.setAttribute('aria-label', `${part.n} ${part.en} ${part.zh}`);
         listen(b,'click',() => select(i)); q('stage').append(b); markers.push(b);
       });
       select3d = (i, move) => {
@@ -103,7 +123,7 @@ export function mount(containerEl, equipId, opts = {}) {
         const dt = Math.min((now - previous)/1000,.05); previous = now;
         if (destination) { const f = 1-Math.exp(-5*dt); camera.position.lerp(destination.pos,f); controls.target.lerp(destination.target,f); if (camera.position.distanceTo(destination.pos)<.01) destination = null; }
         controls.update(dt);
-        equip.parts.forEach((p,i) => { const v = new T.Vector3(...p.point).project(camera); markers[i].style.left = (v.x*.5+.5)*q('stage').clientWidth+'px'; markers[i].style.top = (-v.y*.5+.5)*q('stage').clientHeight+'px'; markers[i].hidden = !!p.interior !== inside || Math.abs(v.z)>1 || Math.abs(v.x)>1 || Math.abs(v.y)>1; });
+        equip.parts.forEach((p,i) => { const v = new T.Vector3(...p.point).project(camera); markers[i].style.left = (v.x*.5+.5)*q('stage').clientWidth+'px'; markers[i].style.top = (-v.y*.5+.5)*q('stage').clientHeight+'px'; markers[i].hidden = (subtle && (annotationMode==='none'||(annotationMode==='selected'&&i!==active))) || !!p.interior !== inside || Math.abs(v.z)>1 || Math.abs(v.x)>1 || Math.abs(v.y)>1; });
         renderer.render(scene,camera); frame = requestAnimationFrame(animate);
       }
       function sync() { cancelAnimationFrame(frame); frame = 0; if (!dead && visible && !document.hidden) { previous = performance.now(); frame = requestAnimationFrame(animate); } }
@@ -114,6 +134,7 @@ export function mount(containerEl, equipId, opts = {}) {
   return {
     select(i) { if (!dead && equip.parts[i]) select(i); },
     reset() { if (!dead) doReset(); },
+    cycleAnnotations() { return cycleAnnotations(); },
     setAutoRotate(on) { if (!dead) doRotate(on); },
     destroy() { if (dead) return; dead = true; abort.abort(); cleanup(); select3d = () => {}; root.remove(); } };
 }

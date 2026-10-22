@@ -6080,19 +6080,24 @@ function wkEquipHTML(e){
    +'<div class="row" style="margin-bottom:11px;align-items:center">'
    +'<button class="btn ghost sm" onclick="wk3d&&wk3d.reset()">↺ 全景</button>'
    +'<button class="btn ghost sm" id="wk-rot" onclick="wk3d&&wk3d.setAutoRotate(!wkRot)">⟳ 自動旋轉</button>'
-   +'<span class="muted" style="margin-left:auto;font-size:var(--font-meta)">拖曳旋轉・滾輪／雙指縮放・點編號</span></div>'
+   +(e.id==='paint-line'?'<button class="btn ghost sm" onclick="wkAnnotationMode(this)">標註：定位點</button>':'')
+   +'<span class="muted" style="margin-left:auto;font-size:var(--font-meta)">'+(e.id==='paint-line'?'拖曳旋轉・滾輪／雙指縮放・點定位點或右側設備':'拖曳旋轉・滾輪／雙指縮放・點編號')+'</span></div>'
    +'<div id="wk-3d" class="wk3d"></div></div></div>'
-   +'<div><div class="wpbox"><div class="wphead">▼ Parts<span class="zh">設備部件</span></div><div class="wpbody">'
+   +'<div>'+(window._wkMod.powderGuideHTML?window._wkMod.powderGuideHTML(e,'wkPick'):'')+'<div class="wpbox"><div class="wphead">▼ Parts<span class="zh">設備部件</span></div><div class="wpbody">'
    +parts.map((p,i)=>'<div class="wpitem wkp'+(i?'':' on')+'" id="wkp-'+p.n+'" onclick="wkPick('+i+')">'
      +'<div class="wpline"><span class="n">'+p.n+'.</span> '+esc(p.en)+' '+spk(p.en)+'</div>'
      +'<div class="zh">'+esc(p.zh)+'</div>'
      +(p.desc?'<div class="desc">'+esc(p.desc)+'</div>':'')
+     +(p.def?'<div class="desc">('+esc(p.pos)+') '+esc(p.def)+'</div>':'')
+     +(p.collocation?'<div class="desc">常用搭配：'+esc(p.collocation)+'</div>':'')
+     +(p.usage?'<div class="desc">'+esc(p.usage)+'</div>':'')
      +(p.ex?'<div class="exs">'+bkHi(p.ex,p.en)+' '+spk(p.ex)+(p.exCn?'<div class="excn">'+esc(p.exCn)+'</div>':'')+'</div>':'')
      +'</div>').join('')
    +'</div></div></div>'
    +'</div>';
 }
 /* 點右欄部件 → 3D 鏡頭移過去；點 3D 編號 → onPart 回來標亮右欄（喇叭按鈕自己會擋掉冒泡） */
+function wkAnnotationMode(b){if(!wk3d)return;const mode=wk3d.cycleAnnotations();b.textContent={dots:'標註：定位點',selected:'標註：僅選取',none:'標註：隱藏'}[mode];}
 function wkPick(i){ if(wk3d) wk3d.select(i); }
 function wkMark(n){
   document.querySelectorAll('#v-work .wkp').forEach(el=>el.classList.toggle('on',el.id==='wkp-'+n));

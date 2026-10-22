@@ -1,3 +1,4 @@
+import { applyPowderLearning } from './powder-learning.js';
 export const EQUIP = [{
   id: 'cmm-arm', en: 'Measurement Workstation', zh: '量測工作站', icon: 'gauge',
   note: '依照片建構 · 非尺寸精確模型',
@@ -34,3 +35,5 @@ EQUIP.find(e=>e.id==='paint-line').parts.push(
 {n:16,en:'Burner-equipped enclosure',zh:'紅色燃燒器箱體',interior:true,desc:'兩座金屬箱體前方裝有紅色燃燒器，並有表頭、金屬軟管與黃色上方管線；未推測箱內結構。',ex:'Report any unusual noise from the burner-equipped enclosure.',exCn:'燃燒器箱體有異音時要回報。',point:[-2.7,.6,-1.50],cam:[-4,1.65,.6],target:[-2.7,.65,-1.9]},
 {n:17,en:'Gray control cabinet',zh:'灰色高控制櫃',interior:true,desc:'依近照補上高櫃、圓形散熱風扇、下方百葉與頂端燈號。',ex:'Keep the control cabinet ventilation openings clear.',exCn:'控制櫃的通風孔要保持暢通。',point:[3.56,1.30,.28],cam:[4.8,1.8,2.7],target:[3.39,.7,.1]}
 );
+
+applyPowderLearning(EQUIP.find(e=>e.id==='paint-line'));
