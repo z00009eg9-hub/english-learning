@@ -1,6 +1,8 @@
-// 以門、窗、輸送軌的相對尺度對齊照片；缺乏實測的背面不補製程機構。
+import { buildPaintInterior } from './paint-interior.js';
+// 以門、窗、輸送軌的相對尺度對齊照片；新增內部照片以獨立視圖呈現，避免外牆遮擋設備。
 export function buildPaintLine(T, scene) {
- const g=new T.Group();scene.add(g);
+ const g=new T.Group();g.name='paint-exterior';scene.add(g);
+ const interior=buildPaintInterior(T,scene);
  const mat=(color,metalness=.25,roughness=.48)=>new T.MeshStandardMaterial({color,metalness,roughness});
  const white=mat('#e8e9e4'),yellow=mat('#efbe09'),orange=mat('#e69a13'),red=mat('#bd3028'),silver=mat('#a5adb0',.72,.3),dark=mat('#252a2c'),floor=mat('#b5b3a9',.04,.9),glass=mat('#66868d',.45,.22),black=mat('#151a1c'),green=mat('#17785c'),cardboard=mat('#c2a47a',.02,.95),blue=mat('#245d9b');
  function mesh(geo,m){const o=new T.Mesh(geo,m);g.add(o);return o;}
@@ -78,4 +80,5 @@ export function buildPaintLine(T, scene) {
  rod([2.86,2.9,.29],[2.86,2.12,.52],.009,silver);box(.38,.27,.035,2.86,2.08,.54,black);box(.34,.23,.009,2.86,2.08,.565,dark);
  box(.20,.04,.13,1.03,.03,.42,red);for(const x of [.98,1.08]){rod([x,.06,.42],[x,.29,.42],.035,red);rod([x,.29,.42],[x,.34,.42],.012,dark);}
  for(const z of [1.95,2.02])box(8,.005,.015,0,.002,z,yellow);
+ return {setInterior(on){g.visible=!on;interior.root.visible=on;}};
 }

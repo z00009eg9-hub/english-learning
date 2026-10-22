@@ -31,6 +31,10 @@ export function mount(containerEl, equipId, opts = {}) {
   let dead = false, cleanup = () => {}, select3d = () => {}, doReset = () => {}, doRotate = () => {}, active = 0;
   const abort = new AbortController();
   const listen = (el, type, fn) => el.addEventListener(type, fn, { signal: abort.signal });
+  if (!stageOnly && equipId === 'paint-line') {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'w3d-button w3d-inside'; b.textContent = '門內設備';
+    listen(b, 'click', () => select(equip.parts[active].interior ? 0 : 7)); q('toolbar').append(b);
+  }
   const buttons = stageOnly ? [] : equip.parts.map((part, i) => {
     const b = document.createElement('button'); b.type = 'button'; b.className = 'w3d-button'; b.textContent = `${part.n} ${part.zh}`;
     listen(b, 'click', () => select(i)); q('parts').append(b); return b;
@@ -70,7 +74,8 @@ export function mount(containerEl, equipId, opts = {}) {
       const home = equipId === "paint-line" ? [8,5.4,10] : [4,3.2,5.8]; camera.position.set(...home); controls = new OrbitControls(camera, renderer.domElement); controls.target.set(0,1.75,0);
       controls.enableDamping = true; controls.minDistance = 3; controls.maxDistance = equipId === "paint-line" ? 18 : 12; controls.maxPolarAngle = Math.PI * .48;
       scene.add(new T.HemisphereLight(0xffffff,0x78877c,2.5)); const light = new T.DirectionalLight(0xffffff,3); light.position.set(3,7,4); scene.add(light);
-      buildModel(T, scene, equipId);
+      const modelControl = buildModel(T, scene, equipId);
+      let inside = false;
       let destination = null, previous = 0;
       function stopRotate() { controls.autoRotate = false; q('rotate')?.setAttribute('aria-pressed','false'); opts.onRotate?.(false); }
       equip.parts.forEach((part, i) => {
@@ -78,11 +83,13 @@ export function mount(containerEl, equipId, opts = {}) {
         listen(b,'click',() => select(i)); q('stage').append(b); markers.push(b);
       });
       select3d = (i, move) => {
+        inside = !!equip.parts[i].interior; modelControl?.setInterior?.(inside);
+        if (q('inside')) q('inside').textContent = inside ? '返回外觀' : '門內設備';
         markers.forEach((b,j) => b.setAttribute('aria-pressed', String(i === j)));
         if (move) { stopRotate(); const p = equip.parts[i]; destination = { pos: new T.Vector3(...p.cam), target: new T.Vector3(...p.target) }; }
       };
       select3d(active, false);
-      doReset = () => { stopRotate(); destination = { pos: new T.Vector3(...home), target: new T.Vector3(0,1.75,0) }; };
+      doReset = () => { stopRotate(); select(0, false); destination = { pos: new T.Vector3(...home), target: new T.Vector3(0,1.75,0) }; };
       doRotate = on => { destination = null; controls.autoRotate = on === undefined ? !controls.autoRotate : !!on; q('rotate')?.setAttribute('aria-pressed',String(controls.autoRotate)); opts.onRotate?.(controls.autoRotate); };
       if (q('reset')) listen(q('reset'),'click',() => doReset());
       if (q('rotate')) listen(q('rotate'),'click',() => doRotate());
@@ -96,7 +103,7 @@ export function mount(containerEl, equipId, opts = {}) {
         const dt = Math.min((now - previous)/1000,.05); previous = now;
         if (destination) { const f = 1-Math.exp(-5*dt); camera.position.lerp(destination.pos,f); controls.target.lerp(destination.target,f); if (camera.position.distanceTo(destination.pos)<.01) destination = null; }
         controls.update(dt);
-        equip.parts.forEach((p,i) => { const v = new T.Vector3(...p.point).project(camera); markers[i].style.left = (v.x*.5+.5)*q('stage').clientWidth+'px'; markers[i].style.top = (-v.y*.5+.5)*q('stage').clientHeight+'px'; markers[i].hidden = Math.abs(v.z)>1 || Math.abs(v.x)>1 || Math.abs(v.y)>1; });
+        equip.parts.forEach((p,i) => { const v = new T.Vector3(...p.point).project(camera); markers[i].style.left = (v.x*.5+.5)*q('stage').clientWidth+'px'; markers[i].style.top = (-v.y*.5+.5)*q('stage').clientHeight+'px'; markers[i].hidden = !!p.interior !== inside || Math.abs(v.z)>1 || Math.abs(v.x)>1 || Math.abs(v.y)>1; });
         renderer.render(scene,camera); frame = requestAnimationFrame(animate);
       }
       function sync() { cancelAnimationFrame(frame); frame = 0; if (!dead && visible && !document.hidden) { previous = performance.now(); frame = requestAnimationFrame(animate); } }
