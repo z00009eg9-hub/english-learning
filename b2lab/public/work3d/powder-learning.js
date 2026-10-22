@@ -1,5 +1,6 @@
 import { enrichPowderGuide } from './powder-vocab.js';
 // 專業名稱以可見構造與照片標示為準；一般製程知識不代表已辨識出現場機型。
+const PART_IPA=["/ˌoʊ.vɚˈhed kənˈveɪ.ɚ/","/ˈpɑːrt ˌhæŋ.ɚ/","/ˌoʊ.vɚˈhed ˈlɪf.tɪŋ freɪm/","/ɪˈlek.trɪk tʃeɪn hɔɪst/","/ˈkoʊ.t̬ɪŋ ruːm ɪnˈkloʊ.ʒɚ/","/ˈpaʊ.dɚ kəˈlek.ʃən ˈjuː.nɪt/","/ˈhæŋ.ɚ ˈstɔːr.ɪdʒ ræk/","/ɪnˈtɪr.i.ɚ ˈoʊ.vɚ.vjuː/","/ˈel.ə.veɪ.t̬ɪd ˈprɑː.ses ɪnˈkloʊ.ʒɚ/","/ˈmeɪn.t̬ən.əns ˈplæt.fɔːrm/","/twɪn ˈtaʊ.ɚ er ˈtriːt.mənt ˈjuː.nɪt/","/juːˈtɪl.ə.t̬i ɪˈkwɪp.mənt ˈkæb.ɪ.nət/","/ˈɡreɪ.t̬ɪd wɝːk ˈer.i.ə/","/ˈwɑː.t̬ɚ ˈtriːt.mənt ˈsɪs.təm/","/ˈprɑː.ses tæŋk wɪð ə ˈtɑːp ˌmaʊn.t̬ɪd ˈmoʊ.t̬ɚ/","/ˈbɝː.nɚ ɪˈkwɪpt ˈhiː.t̬ɪŋ ˈjuː.nɪt/","/ɪˈlek.trɪ.kəl kənˈtroʊl ˈkæb.ɪ.nət/"];
 export function applyPowderLearning(e){
  e.en='Powder Coating Line';e.zh='粉體塗裝產線';e.note='依 18 張照片建立示意模型。定位點可切換為「只顯示選取」或「隱藏」；右側清單仍可選設備。內部／外觀會隨選取切換。';
  const data=[
@@ -21,7 +22,7 @@ export function applyPowderLearning(e){
  ['Burner-equipped heating unit','配有燃燒器的加熱設備','金屬箱體前方可見紅色燃燒器及管路；加熱哪一段、燃料種類與設定值須查設備資料。','a heating unit fitted with a burner','burner / heat source','The burner supplies heat to the heating system.','燃燒器提供熱量給加熱系統。','burner 是燃燒器；oven 是爐體。看到燃燒器不等於確認是固化爐。'],
  ['Electrical control cabinet','電氣控制櫃','灰色高櫃有散熱風扇、百葉與燈號，用來安裝電氣控制元件；具體控制範圍待現場確認。','a cabinet containing electrical controls','control panel / status light','Check the status lights on the control cabinet.','查看控制櫃上的狀態燈。','control cabinet＝控制櫃；control panel＝控制面板。']
  ];
- data.forEach((d,i)=>Object.assign(e.parts[i],{en:d[0],zh:d[1],desc:d[2],def:d[3],collocation:d[4],ex:d[5],exCn:d[6],usage:d[7],pos:'n.'}));
+ data.forEach((d,i)=>Object.assign(e.parts[i],{en:d[0],zh:d[1],desc:d[2],def:d[3],collocation:d[4],ex:d[5],exCn:d[6],usage:d[7],pos:'n.',ipa:PART_IPA[i]}));
  e.processGuide=[
  {en:'Pretreatment',zh:'前處理',text:'脫脂、洗淨與適合基材的表面處理。常見設備有清洗槽／噴淋設備、循環泵與水處理組。現場水處理可見；槽別仍待確認。',part:14},
  {en:'Dry-off',zh:'水切烘乾',text:'上粉前去除工件水分，常用 dry-off oven。高架箱體是否屬此段，須確認製程圖。',part:8},
@@ -35,5 +36,5 @@ export function applyPowderLearning(e){
 }
 export function powderGuideHTML(e,onclick){
  if(!e.processGuide)return '';const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- return '<details class="wpbox w3d-learning"><summary class="wphead">粉體塗裝：常見設備與英文用法</summary><div class="wpbody"><p>以下是一般製程順序，並非這座工廠已確認的配置。點選可查看相關設備或待確認區域。每個術語附簡易英文說明及原創例句；複合詞音標依組成詞的美式讀音標示。</p>'+e.processGuide.map(s=>'<div class="wpitem"><button type="button" class="btn ghost sm w3d-button" data-w3d-part="'+s.part+'" '+(onclick?'onclick="'+onclick+'('+s.part+')"':'')+'>'+esc(s.en)+' · '+esc(s.zh)+'</button><p lang="en">美式 '+esc(s.ipa)+'<br>'+esc(s.def)+'</p><p lang="en">'+esc(s.ex)+'<br><span lang="zh-Hant">'+esc(s.exCn)+'</span></p><p>'+esc(s.text)+'</p>'+s.terms.map(t=>'<div class="w3d-term"><strong lang="en">'+esc(t.en)+'</strong> · '+esc(t.zh)+'<p lang="en">美式 '+esc(t.ipa)+' ('+esc(t.pos)+')<br>'+esc(t.def)+'</p><p lang="en">'+esc(t.ex)+'<br><span lang="zh-Hant">'+esc(t.exCn)+'</span></p></div>').join('')+'</div>').join('')+'<p>英文重點：powder coating 是粉體塗裝；spray painting 常指液體噴漆。dry-off 是除水烘乾，curing 是固化。</p><p>'+e.sources.map(s=>'<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.title)+'</a>').join(' · ')+'</p></div></details>';
+ return '<details class="wpbox w3d-learning"><summary class="wphead"><span><span class="w3d-tri">▼</span>粉體塗裝：常見設備與英文用法</span></summary><div class="wpbody"><p>以下是一般製程順序，並非這座工廠已確認的配置。點選可查看相關設備或待確認區域。每個術語附簡易英文說明及原創例句；複合詞音標依組成詞的美式讀音標示。</p>'+e.processGuide.map(s=>'<div class="wpitem"><button type="button" class="btn ghost sm w3d-button" data-w3d-part="'+s.part+'" '+(onclick?'onclick="'+onclick+'('+s.part+')"':'')+'>'+esc(s.en)+' · '+esc(s.zh)+'</button><p lang="en">美式 '+esc(s.ipa)+'<br>'+esc(s.def)+'</p><p lang="en">'+esc(s.ex)+'<br><span lang="zh-Hant">'+esc(s.exCn)+'</span></p><p>'+esc(s.text)+'</p>'+s.terms.map(t=>'<div class="w3d-term"><strong lang="en">'+esc(t.en)+'</strong> · '+esc(t.zh)+'<p lang="en">美式 '+esc(t.ipa)+' ('+esc(t.pos)+')<br>'+esc(t.def)+'</p><p lang="en">'+esc(t.ex)+'<br><span lang="zh-Hant">'+esc(t.exCn)+'</span></p></div>').join('')+'</div>').join('')+'<p>英文重點：powder coating 是粉體塗裝；spray painting 常指液體噴漆。dry-off 是除水烘乾，curing 是固化。</p><p>'+e.sources.map(s=>'<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.title)+'</a>').join(' · ')+'</p></div></details>';
 }

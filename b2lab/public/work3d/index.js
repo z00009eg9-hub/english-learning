@@ -3,7 +3,7 @@ export { powderGuideHTML };
 import { EQUIP } from './equip-data.js';
 
 export { EQUIP };
-export function list() { return EQUIP.map(({ id, en, zh }) => ({ id, en, zh })); }
+export function list() { return EQUIP.map(({ id, en, zh, icon }) => ({ id, en, zh, icon })); }
 
 // 同步回傳控制器，讓尚在下載模組時離頁也能立即銷毀。
 export function mount(containerEl, equipId, opts = {}) {

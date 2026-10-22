@@ -750,6 +750,10 @@ body.cnall .ucn{display:block}
 /* 職場・設備 3D：部件清單沿用 wpbox；選到的部件常亮（同 wpitem.flash），3D 編號吃網站配色 */
 #v-work .wkp{cursor:pointer;border-radius:10px;padding:9px 8px}
 #v-work .wkp.on{background:#fff3dd;box-shadow:0 0 0 2px #e8b13a inset}
+#v-work .w3d-learning>summary{list-style:none;cursor:pointer;justify-content:flex-start}
+#v-work .w3d-learning>summary::-webkit-details-marker{display:none}
+#v-work .w3d-learning .w3d-tri{display:inline-block;margin-right:6px;transition:transform .15s}
+#v-work .w3d-learning:not([open]) .w3d-tri{transform:rotate(-90deg)}
 #v-work .wkp .desc{font-size:var(--font-def);line-height:var(--lh-body);color:var(--ink2);margin-top:4px}
 #v-work .wk3d{--w3d-accent:var(--accent);--w3d-border:var(--line);--w3d-button-bg:var(--card)}
 #v-work .wk3d .w3d-stage{border:0;border-radius:10px;background:#fdf6ec}
@@ -6085,10 +6089,11 @@ function wkEquipHTML(e){
    +'<div id="wk-3d" class="wk3d"></div></div></div>'
    +'<div>'+(window._wkMod.powderGuideHTML?window._wkMod.powderGuideHTML(e,'wkPick'):'')+'<div class="wpbox"><div class="wphead">▼ Parts<span class="zh">設備部件</span></div><div class="wpbody">'
    +parts.map((p,i)=>'<div class="wpitem wkp'+(i?'':' on')+'" id="wkp-'+p.n+'" onclick="wkPick('+i+')">'
-     +'<div class="wpline"><span class="n">'+p.n+'.</span> '+esc(p.en)+' '+spk(p.en)+'</div>'
+     +'<div class="wpline"><span class="n">'+p.n+'.</span> '+esc(p.en)+' '+spk(p.en)+wbBtn(p.en,'設備 3D')+'</div>'
+     +(p.ipa||p.pos?'<div class="wpmeta">'+(p.ipa?'<span class="ipa">'+esc(p.ipa)+'</span>':'')+(p.pos?'<span class="pos">'+esc(p.pos)+'</span>':'')+'</div>':'')
      +'<div class="zh">'+esc(p.zh)+'</div>'
+     +(p.def?'<div class="def">'+esc(p.def)+'</div>':'')
      +(p.desc?'<div class="desc">'+esc(p.desc)+'</div>':'')
-     +(p.def?'<div class="desc">('+esc(p.pos)+') '+esc(p.def)+'</div>':'')
      +(p.collocation?'<div class="desc">常用搭配：'+esc(p.collocation)+'</div>':'')
      +(p.usage?'<div class="desc">'+esc(p.usage)+'</div>':'')
      +(p.ex?'<div class="exs">'+bkHi(p.ex,p.en)+' '+spk(p.ex)+(p.exCn?'<div class="excn">'+esc(p.exCn)+'</div>':'')+'</div>':'')
