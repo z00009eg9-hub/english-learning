@@ -25941,7 +25941,9 @@ window.BOOK = {
     stethoL:'<path d="M18 10 v16 a12 12 0 0 0 24 0 V10" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><path d="M30 38 v6 a10 10 0 0 0 20 0 v-6" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><circle cx="50" cy="34" r="6" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><circle cx="18" cy="9" r="3" fill="'+D+'"/><circle cx="42" cy="9" r="3" fill="'+D+'"/>',
     signL:'<path d="M32 56 V14" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/><path d="M14 8 h36 l6 8 l-6 8 H14z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M22 16 h20" stroke="#fff" stroke-width="3" stroke-linecap="round"/>',
     screenL:'<rect x="8" y="12" width="48" height="32" rx="4" fill="#fff" stroke="'+D+'" stroke-width="3"/><rect x="14" y="18" width="36" height="20" rx="1" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><path d="M32 44 v8 M22 54 h20" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>',
-    tornadoL:'<path d="M10 14 h44 M14 24 h36 M20 34 h24 M25 44 h14 M29 54 h6" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/><path d="M10 14 h44 M14 24 h36 M20 34 h24 M25 44 h14 M29 54 h6" stroke="'+A+'" stroke-width="2" stroke-linecap="round"/>'
+    tornadoL:'<path d="M10 14 h44 M14 24 h36 M20 34 h24 M25 44 h14 M29 54 h6" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/><path d="M10 14 h44 M14 24 h36 M20 34 h24 M25 44 h14 M29 54 h6" stroke="'+A+'" stroke-width="2" stroke-linecap="round"/>',
+    caliper:'<rect x="8" y="32" width="48" height="14" rx="2" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M17 32 v6 M25 32 v8 M33 32 v6 M41 32 v8 M49 32 v6" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/><path d="M10 32 V12 h9 v20" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M36 32 V20 h9 v12" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M14 46 v8 M40 46 v8" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>',
+    spray:'<path d="M10 20 h26 a6 6 0 0 1 6 6 v8 H16 a6 6 0 0 1 -6 -6z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M20 34 l-4 20 h11 l3 -20" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M42 27 h5" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><circle cx="53" cy="20" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><circle cx="56" cy="29" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><circle cx="52" cy="38" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
   };
   /* 2026-10-11 貼紙線稿風（同閱讀清單的籃子縮圖）：橫幅圖示的主色改用「東西本來的顏色」，
      不再每個都是暖橘 #e8813a。閱讀橫幅（tools/genart.js）也讀這張表，改一處兩邊一致。
@@ -25968,7 +25970,7 @@ window.BOOK = {
     sun:Y, syringe:B, talk:B, tap:GR, target:R, teacup:GN, temple:R, thermo:R, thumb:Y,
     ticket:Y, timetable:B, toilet:LB, toolbox:R, tornado:SKY, train:B, trash:GN, trophy:Y,
     truck:B, tv:B, typhoon:B, umbrella:B, videocall:B, wallet:BR, warning:Y, wave:B, wind:SKY,
-    window:R, wrench:GR,
+    window:R, wrench:GR, caliper:B, spray:TAN,
     /* 只有課本／聽力用到的 */
     bike:R, tooth:B, ball:Y, mountain:GN, clock2:R, washer:B, ambulance:R, nametag:B, magnify:B
   };
