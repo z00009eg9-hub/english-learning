@@ -1,3 +1,4 @@
+import { addInteriorDetails } from './paint-details.js';
 // 內部配置取自新增四張照片；設備功能不明處以外觀命名。
 export function buildPaintInterior(T,scene){
  const root=new T.Group();root.name='paint-interior';root.visible=false;scene.add(root);
@@ -9,7 +10,7 @@ export function buildPaintInterior(T,scene){
  function rod(a,b,r,m){const A=new T.Vector3(...a),B=new T.Vector3(...b),o=mesh(new T.CylinderGeometry(r,r,A.distanceTo(B),10),m);o.position.copy(A).add(B).multiplyScalar(.5);o.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),B.sub(A).normalize());return o;}
  function tube(points,r,m){return mesh(new T.TubeGeometry(new T.CatmullRomCurve3(points.map(p=>new T.Vector3(...p))),points.length*10,r,8,false),m);}
  function frameBeam(a,b,w,m){const A=new T.Vector3(...a),B=new T.Vector3(...b),o=mesh(new T.BoxGeometry(w,A.distanceTo(B),w),m);o.position.copy(A).add(B).multiplyScalar(.5);o.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),B.sub(A).normalize());return o;}
- box(9,.05,4.6,0,-.04,-.6,floor);
+ box(9.5,.05,5.2,0,-.04,-.75,floor);
  // 長金屬箱體下方是開放鋼架；端部黑色通道保留照片的雙片遮簾。
  for(const z of [-1.45,-.50])box(6.1,1.12,.025,0,2.25,z,steel);
  box(6.1,.025,.95,0,2.82,-.975,steel);box(6.1,.04,.95,0,1.67,-.975,steel);
@@ -51,7 +52,8 @@ export function buildPaintInterior(T,scene){
  box(.34,.49,.30,.12,.36,.07,white);box(.31,.32,.018,.12,.40,.231,black);box(.34,.20,.30,.12,.15,.07,blue);
  for(let x=-.02;x<.28;x+=.04)box(.005,.30,.01,x,.40,.244,steel);for(let y=.26;y<.55;y+=.04)box(.30,.005,.01,.12,y,.245,steel);
  // 小型桶裝容器與橘色控制櫃保留現場設備層次，不寫入推測的化學品名稱。
- for(const x of [1,1.25,1.5]){box(.18,.27,.16,x,.19,-1.65,white);box(.10,.035,.12,x,.34,-1.65,white);cyl(.018,.02,x+.045,.365,-1.65,red);}
+ for(const x of [3.45,3.65,3.85]){box(.18,.27,.16,x,.19,-1.65,white);box(.10,.035,.12,x,.34,-1.65,white);cyl(.018,.02,x+.045,.365,-1.65,red);}
  box(.48,.96,.32,3.20,.50,-1.50,orange);box(.33,.18,.018,3.20,.79,-1.33,gray);
+ addInteriorDetails(T,root);
  return {root};
 }
