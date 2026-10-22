@@ -1,3 +1,4 @@
+import { enrichPowderGuide } from './powder-vocab.js';
 // 專業名稱以可見構造與照片標示為準；一般製程知識不代表已辨識出現場機型。
 export function applyPowderLearning(e){
  e.en='Powder Coating Line';e.zh='粉體塗裝產線';e.note='依 18 張照片建立示意模型。定位點可切換為「只顯示選取」或「隱藏」；右側清單仍可選設備。內部／外觀會隨選取切換。';
@@ -29,9 +30,10 @@ export function applyPowderLearning(e){
  {en:'Curing and cooling',zh:'固化與冷卻',text:'curing oven（固化爐）使塗層依粉末配方完成固化，再冷卻。爐溫、工件金屬溫度與時間需依粉末規格及現場製程；照片無法確認固化爐位置。',part:8},
  {en:'Utilities and quality control',zh:'配套與品質檢查',text:'輸送與接地、乾燥潔淨的壓縮空氣、控制系統，以及 coating thickness gauge（膜厚計）等。膜厚與固化品質檢查重要，但量具尚未在照片中辨識。',part:10}
  ];
- e.sources=[{title:'GFS｜固化爐與工業爐',url:'https://globalfinishing.com/products/cure/industrial-ovens/'},{title:'PPG｜供氣、接地與粉體塗裝問題排查',url:'https://powdercoatings.ppg.com/pages/powder-troubleshooting-guide'},{title:'Nordson｜粉體噴房、供粉與回收設備',url:'https://www.nordson.com/en/divisions/industrial-coating-solutions/application-solutions/powder-coating/powder-coating-booths'},{title:'Powder Coating Institute｜前處理、固化與供氣常見問題',url:'https://www.powdercoating.org/page/FAQ'}];
+ enrichPowderGuide(e);
+ e.sources=[{title:'Cambridge｜美式發音參考',url:'https://dictionary.cambridge.org/us/pronunciation/english/'},{title:'GFS｜固化爐與工業爐',url:'https://globalfinishing.com/products/cure/industrial-ovens/'},{title:'PPG｜供氣、接地與粉體塗裝問題排查',url:'https://powdercoatings.ppg.com/pages/powder-troubleshooting-guide'},{title:'Nordson｜粉體噴房、供粉與回收設備',url:'https://www.nordson.com/en/divisions/industrial-coating-solutions/application-solutions/powder-coating/powder-coating-booths'},{title:'Powder Coating Institute｜前處理、固化與供氣常見問題',url:'https://www.powdercoating.org/page/FAQ'}];
 }
 export function powderGuideHTML(e,onclick){
  if(!e.processGuide)return '';const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- return '<details class="wpbox w3d-learning"><summary class="wphead">粉體塗裝：常見設備與英文用法</summary><div class="wpbody"><p>以下是一般製程順序，並非這座工廠已確認的配置。點選可查看相關設備或待確認區域。</p>'+e.processGuide.map(s=>'<div class="wpitem"><button type="button" class="btn ghost sm w3d-button" data-w3d-part="'+s.part+'" '+(onclick?'onclick="'+onclick+'('+s.part+')"':'')+'>'+esc(s.en)+' · '+esc(s.zh)+'</button><p>'+esc(s.text)+'</p></div>').join('')+'<p>英文重點：powder coating 是粉體塗裝；spray painting 常指液體噴漆。dry-off 是除水烘乾，curing 是固化。</p><p>'+e.sources.map(s=>'<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.title)+'</a>').join(' · ')+'</p></div></details>';
+ return '<details class="wpbox w3d-learning"><summary class="wphead">粉體塗裝：常見設備與英文用法</summary><div class="wpbody"><p>以下是一般製程順序，並非這座工廠已確認的配置。點選可查看相關設備或待確認區域。每個術語附簡易英文說明及原創例句；複合詞音標依組成詞的美式讀音標示。</p>'+e.processGuide.map(s=>'<div class="wpitem"><button type="button" class="btn ghost sm w3d-button" data-w3d-part="'+s.part+'" '+(onclick?'onclick="'+onclick+'('+s.part+')"':'')+'>'+esc(s.en)+' · '+esc(s.zh)+'</button><p lang="en">美式 '+esc(s.ipa)+'<br>'+esc(s.def)+'</p><p lang="en">'+esc(s.ex)+'<br><span lang="zh-Hant">'+esc(s.exCn)+'</span></p><p>'+esc(s.text)+'</p>'+s.terms.map(t=>'<div class="w3d-term"><strong lang="en">'+esc(t.en)+'</strong> · '+esc(t.zh)+'<p lang="en">美式 '+esc(t.ipa)+' ('+esc(t.pos)+')<br>'+esc(t.def)+'</p><p lang="en">'+esc(t.ex)+'<br><span lang="zh-Hant">'+esc(t.exCn)+'</span></p></div>').join('')+'</div>').join('')+'<p>英文重點：powder coating 是粉體塗裝；spray painting 常指液體噴漆。dry-off 是除水烘乾，curing 是固化。</p><p>'+e.sources.map(s=>'<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.title)+'</a>').join(' · ')+'</p></div></details>';
 }
