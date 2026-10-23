@@ -16516,7 +16516,7 @@ window.VIDEO.bk20260421 = {
       cn: "Fever（發燒）。永遠說 have a fever。她發燒了，所以留在家裡。",
       hi: [{ t: "has a fever", cn: "發燒了", k: "fever", c: 1 }] },
     { ch: 2, sp: "N",
-      vis: { type: "slide", w: "maintenance", ipa: "/ˈmentənəns/", pos: "n.", art: "gear",
+      vis: { type: "slide", w: "maintenance", ipa: "/ˈmeɪn.t̬ən.əns/", pos: "n.", art: "gear",
         def: "The work of keeping a machine in good condition.",
         cn: "維護、保養：讓機器保持良好狀態的工作。",
         note: "Uncountable: need maintenance, not a maintenance." },
@@ -48888,6 +48888,1020 @@ window.VIDEO["bk20261021"] = {
      "cn": "做根本原因分析",
      "k": "rca",
      "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
+
+/* ===== bk20261023 Quality Control English ===== */
+/* 新增專屬插圖：rustPart（零件生鏽＋放大鏡）、multimeterTest（三用電表量電路板導通） */
+window.VIDEO_ART = window.VIDEO_ART || {};
+window.VIDEO_ART.rustPart = '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="184" height="134" rx="8" fill="#fdf6ec" stroke="#2b2118" stroke-width="3"/><path d="M30 104 h96 v-52 h-22 v30 h-74 z" fill="#9aa5b1" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><circle cx="48" cy="93" r="5" fill="#fdf6ec" stroke="#2b2118" stroke-width="2.5"/><circle cx="115" cy="64" r="5" fill="#fdf6ec" stroke="#2b2118" stroke-width="2.5"/><path d="M68 90 q6 -7 13 -1 q4 7 -4 10 q-11 2 -9 -9z" fill="#b5651d" stroke="#2b2118" stroke-width="2"/><path d="M107 86 q5 -4 10 1 q3 6 -4 8 q-8 0 -6 -9z" fill="#b5651d" stroke="#2b2118" stroke-width="2"/><circle cx="92" cy="96" r="3.5" fill="#b5651d"/><circle cx="150" cy="56" r="21" fill="#fff" stroke="#2b2118" stroke-width="3.5"/><circle cx="145" cy="53" r="5" fill="#b5651d"/><circle cx="155" cy="61" r="3" fill="#b5651d"/><circle cx="156" cy="48" r="2.5" fill="#b5651d"/><path d="M165 71 l15 15" stroke="#2b2118" stroke-width="7" stroke-linecap="round"/><line x1="22" y1="124" x2="178" y2="124" stroke="#2b2118" stroke-width="3" stroke-linecap="round"/></svg>';
+window.VIDEO_ART.multimeterTest = '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="184" height="134" rx="8" fill="#fdf6ec" stroke="#2b2118" stroke-width="3"/><rect x="24" y="22" width="60" height="96" rx="9" fill="#e8813a" stroke="#2b2118" stroke-width="3"/><rect x="32" y="31" width="44" height="25" rx="3" fill="#fdf6ec" stroke="#2b2118" stroke-width="2.5"/><path d="M42 44 l6 6 l13 -13" fill="none" stroke="#3b82c4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="54" cy="80" r="13" fill="#f7e3c9" stroke="#2b2118" stroke-width="3"/><path d="M54 80 l7 -7" stroke="#2b2118" stroke-width="3" stroke-linecap="round"/><circle cx="42" cy="106" r="4.5" fill="#d9534f" stroke="#2b2118" stroke-width="2"/><circle cx="66" cy="106" r="4.5" fill="#2b2118"/><path d="M42 110 C 58 138, 112 132, 130 99" fill="none" stroke="#d9534f" stroke-width="3" stroke-linecap="round"/><path d="M66 110 C 88 130, 142 128, 160 99" fill="none" stroke="#2b2118" stroke-width="3" stroke-linecap="round"/><rect x="112" y="58" width="66" height="40" rx="4" fill="#f7e3c9" stroke="#2b2118" stroke-width="3"/><path d="M120 80 h14 v-11 h17 v21 h19" fill="none" stroke="#e8813a" stroke-width="3.5" stroke-linejoin="round"/><path d="M93 38 q7 6 0 12 M101 32 q12 12 0 24" fill="none" stroke="#3b82c4" stroke-width="3" stroke-linecap="round"/></svg>';
+window.VIDEO = window.VIDEO || {};
+window.VIDEO["bk20261023"] = {
+ "title": "Quality Control English",
+ "titleCn": "品質檢驗與設備維護",
+ "date": "2026-10-23",
+ "level": "B1",
+ "scene": "A Factory Walk-Through",
+ "sceneCn": "帶客戶走一趟品管流程",
+ "sceneArt": "treadmill",
+ "titleArt": [
+  "screwTighten",
+  "multimeterTest",
+  "rootCause"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・品保工程師",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・客戶",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "Factory Walk-Through",
+   "cn": "情境：帶客戶看品管"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Phrases & Collocations",
+   "cn": "片語搭配"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "manufacture": {
+   "t": "manufacture",
+   "cn": "製造、生產",
+   "tag": [
+    "單字",
+    "工廠"
+   ],
+   "note": "manufacture = produce，前者較正式；including + 名詞列舉其中幾項。",
+   "ex": "This plant manufactures bike frames.",
+   "exCn": "這間廠生產自行車車架。"
+  },
+  "torque": {
+   "t": "tighten ... to the specified torque",
+   "cn": "鎖到規定扭力",
+   "tag": [
+    "片語",
+    "組裝"
+   ],
+   "note": "鎖到某個數值用 to，不用 with；torque 是扭力，不是 torch（手電筒）。",
+   "ex": "Set the tool to the specified torque first.",
+   "exCn": "先把工具設定到規定扭力。"
+  },
+  "leadTo": {
+   "t": "lead to product failure",
+   "cn": "導致產品故障",
+   "tag": [
+    "片語",
+    "結果"
+   ],
+   "note": "lead to 的 to 是介系詞，後面接名詞；cause + 名詞也可以。",
+   "ex": "Loose wires can lead to a short circuit.",
+   "exCn": "鬆脫的電線可能導致短路。"
+  },
+  "defective": {
+   "t": "defect / defective",
+   "cn": "瑕疵／有瑕疵的",
+   "tag": [
+    "單字",
+    "品保"
+   ],
+   "note": "defect 是名詞（可數，單數加 a）；defective 是形容詞，描述產品。",
+   "ex": "The defective unit goes to the red area.",
+   "exCn": "不良品放到紅色區。"
+  },
+  "whether": {
+   "t": "check whether ...",
+   "cn": "檢查是否……",
+   "tag": [
+    "文法",
+    "名詞子句"
+   ],
+   "note": "whether = 是否，引導名詞子句當 check 的受詞；兩個子句各用一個 whether，用 and 連接。",
+   "ex": "Check whether the light turns green.",
+   "exCn": "檢查燈是否變綠。"
+  },
+  "separate": {
+   "t": "separate it from the qualified units",
+   "cn": "與合格品分開",
+   "tag": [
+    "片語",
+    "不良品"
+   ],
+   "note": "label A as B 把 A 標示成 B；separate A from B 把 A 和 B 分開。qualified units 比 good units 正式。",
+   "ex": "Separate the scrap from the good parts.",
+   "exCn": "把報廢品和良品分開。"
+  },
+  "during": {
+   "t": "during the audit",
+   "cn": "在稽核時",
+   "tag": [
+    "介系詞",
+    "時間"
+   ],
+   "note": "during + 名詞（事件或期間）；後面不接子句。NG 以母音開頭，冠詞用 an。",
+   "ex": "Phones stay off during the meeting.",
+   "exCn": "開會時手機要關機。"
+  },
+  "corrective": {
+   "t": "take corrective action",
+   "cn": "採取矯正措施",
+   "tag": [
+    "片語",
+    "品保"
+   ],
+   "note": "不是 correct action；先找出 root cause（根本原因）再採取矯正措施。",
+   "ex": "The supplier must take corrective action this week.",
+   "exCn": "供應商這週必須採取矯正措施。"
+  },
+  "complain": {
+   "t": "complain that + 子句",
+   "cn": "抱怨說……",
+   "tag": [
+    "文法",
+    "動詞"
+   ],
+   "note": "complain about + 名詞；complain that + 完整子句，that 不要省略。",
+   "ex": "She complained about the noise.",
+   "exCn": "她抱怨噪音。"
+  },
+  "inspect": {
+   "t": "visual inspection",
+   "cn": "目視檢查",
+   "tag": [
+    "片語",
+    "檢驗"
+   ],
+   "note": "visual inspection = 用看的；functional testing = 測功能。方法用 by + 名詞。",
+   "ex": "We caught the crack by visual inspection.",
+   "exCn": "我們靠目視檢查抓到裂縫。"
+  },
+  "records": {
+   "t": "keep maintenance records",
+   "cn": "保存維護紀錄",
+   "tag": [
+    "片語",
+    "設備"
+   ],
+   "note": "It is important to V：虛主詞 it；help us track, identify, and ensure 三個動詞平行。",
+   "ex": "Keep the records for at least two years.",
+   "exCn": "紀錄至少保存兩年。"
+  },
+  "prevent": {
+   "t": "prevent ... from happening again",
+   "cn": "防止……再次發生",
+   "tag": [
+    "句型",
+    "品保"
+   ],
+   "note": "prevent + 事 + from + V-ing；from 後面接動名詞 happening，不是 happen。",
+   "ex": "Clear labels prevent mix-ups from happening.",
+   "exCn": "清楚的標籤能防止混料發生。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today Anita walks Tom through how her team checks treadmills on the line.",
+   "cn": "歡迎回來。今天 Anita 要帶 Tom 看她的團隊怎麼在產線上檢查跑步機。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Listen for torque, defective, and what to say when a unit fails the test.",
+   "cn": "聽聽 torque、defective，還有產品沒通過測試時怎麼說。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "treadmill"
+   },
+   "en": "Hey Anita, good to see you. So, what do you guys make here?",
+   "cn": "嗨 Anita，很高興見到你。你們這裡做什麼產品？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "assemblyLine"
+   },
+   "en": "We manufacture fitness equipment—mostly treadmills and ellipticals.",
+   "cn": "我們生產健身器材，大多是跑步機和橢圓機。",
+   "hi": [
+    {
+     "t": "manufacture",
+     "cn": "製造、生產",
+     "k": "manufacture",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "screwTighten"
+   },
+   "en": "Okay. How tight do the screws have to be?",
+   "cn": "好。螺絲要鎖多緊？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "screwTighten"
+   },
+   "en": "We tighten every screw to the specified torque.",
+   "cn": "每顆螺絲都鎖到規定扭力。",
+   "hi": [
+    {
+     "t": "to the specified torque",
+     "cn": "到規定扭力",
+     "k": "torque",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "brokenScrew"
+   },
+   "en": "How come that matters so much?",
+   "cn": "為什麼這麼重要？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "brokenScrew"
+   },
+   "en": "Too tight or too loose, and it can lead to product failure.",
+   "cn": "太緊或太鬆，都可能導致產品故障。",
+   "hi": [
+    {
+     "t": "lead to product failure",
+     "cn": "導致產品故障",
+     "k": "leadTo",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "scratch"
+   },
+   "en": "Got it. What do you check after assembly?",
+   "cn": "了解。組裝後檢查什麼？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "scratch"
+   },
+   "en": "The frame first. We look for scratches, cracks, or rust.",
+   "cn": "先看框架，找刮痕、裂縫或鏽。",
+   "hi": [
+    {
+     "t": "scratches, cracks, or rust",
+     "cn": "刮痕、裂縫或鏽",
+     "k": "defective",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "multimeterTest"
+   },
+   "en": "And the electrical side?",
+   "cn": "電的部分呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "multimeterTest"
+   },
+   "en": "We use a multimeter to check whether the circuit is complete.",
+   "cn": "我們用三用電表檢查電路是否完整。",
+   "hi": [
+    {
+     "t": "check whether the circuit is complete",
+     "cn": "檢查電路是否完整",
+     "k": "whether",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "functionalTestPass"
+   },
+   "en": "What happens if a unit fails the test?",
+   "cn": "如果產品沒通過測試呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "label"
+   },
+   "en": "We label it as defective and separate it from the qualified units.",
+   "cn": "我們標示為不良品，並和合格品分開。",
+   "hi": [
+    {
+     "t": "separate it from the qualified units",
+     "cn": "與合格品分開",
+     "k": "separate",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au3TempHumidRoom"
+   },
+   "en": "Makes sense. Oh, and the environmental chamber?",
+   "cn": "合理。對了，環境試驗箱呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "fillOutForm"
+   },
+   "en": "Well—its records weren't up to date, so we got an NG notification during the audit.",
+   "cn": "嗯，它的紀錄沒更新，所以稽核時我們收到 NG 通知。",
+   "hi": [
+    {
+     "t": "during the audit",
+     "cn": "在稽核時",
+     "k": "during",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "rustPart"
+   },
+   "en": "Ouch. And if you find rust on a part?",
+   "cn": "哎呀。那如果零件上發現鏽呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "rootCause"
+   },
+   "en": "We notify the supplier, find the root cause, and take corrective action.",
+   "cn": "我們通知供應商、找出根本原因，然後採取矯正措施。",
+   "hi": [
+    {
+     "t": "take corrective action",
+     "cn": "採取矯正措施",
+     "k": "corrective",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "handshake"
+   },
+   "en": "Perfect. Thanks for walking me through it.",
+   "cn": "太好了。謝謝你帶我看一遍。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "torque",
+    "ipa": "/tɔːrk/",
+    "pos": "n.",
+    "art": "screwTighten",
+    "def": "A twisting force used when you tighten a screw.",
+    "cn": "扭力。",
+    "note": "tighten ... to the specified torque：鎖到某個數值用 to，不用 with。torque 不是 torch。"
+   },
+   "en": "Torque is a twisting force. Tighten the screws to the specified torque.",
+   "cn": "torque 是扭力。把螺絲鎖到規定扭力。",
+   "hi": [
+    {
+     "t": "to the specified torque",
+     "cn": "到規定扭力",
+     "k": "torque",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "defect",
+     "ipa": "/ˈdiː.fekt/",
+     "cn": "瑕疵（名詞）",
+     "def": "A problem in a product.",
+     "art": "scratch"
+    },
+    "b": {
+     "w": "defective",
+     "ipa": "/dɪˈfek.tɪv/",
+     "cn": "有瑕疵的（形容詞）",
+     "def": "Having a problem; not good enough to ship.",
+     "art": "label"
+    }
+   },
+   "en": "A defect is the problem. Defective describes the product, like a defective part.",
+   "cn": "defect 是問題本身；defective 描述產品，例如 defective part。",
+   "hi": [
+    {
+     "t": "defective part",
+     "cn": "不良品",
+     "k": "defective",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "corrective action",
+    "ipa": "/kəˈrek.tɪv ˈæk.ʃən/",
+    "pos": "n. phr.",
+    "art": "rootCause",
+    "def": "Steps to fix a problem and stop it from happening again.",
+    "cn": "矯正措施。",
+    "note": "是 take corrective action，不是 correct action；root cause = 根本原因。"
+   },
+   "en": "Say take corrective action, not correct action.",
+   "cn": "要說 take corrective action，不是 correct action。",
+   "hi": [
+    {
+     "t": "take corrective action",
+     "cn": "採取矯正措施",
+     "k": "corrective",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "complain about",
+     "ipa": "/kəmˈpleɪn əˈbaʊt/",
+     "cn": "抱怨（某事）",
+     "def": "Followed by a noun.",
+     "art": "brokenScrew"
+    },
+    "b": {
+     "w": "complain that",
+     "ipa": "/kəmˈpleɪn ðæt/",
+     "cn": "抱怨說……",
+     "def": "Followed by a full sentence.",
+     "art": "talk"
+    }
+   },
+   "en": "Complain about a broken screw, or complain that a screw was broken.",
+   "cn": "complain about 接名詞；complain that 接完整句子。",
+   "hi": [
+    {
+     "t": "complain that a screw was broken",
+     "cn": "抱怨有螺絲壞了",
+     "k": "complain",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "inspection",
+    "coreCn": "inspection 的搭配",
+    "art": "scratch",
+    "items": [
+     {
+      "t": "visual ~",
+      "cn": "目視檢查"
+     },
+     {
+      "t": "unpacking ~",
+      "cn": "開箱檢查"
+     },
+     {
+      "t": "daily quality ~",
+      "cn": "每日品質檢驗"
+     }
+    ]
+   },
+   "en": "Visual inspection, unpacking inspection, daily quality inspection.",
+   "cn": "目視檢查、開箱檢查、每日品質檢驗。",
+   "hi": [
+    {
+     "t": "Visual inspection",
+     "cn": "目視檢查",
+     "k": "inspect",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "maintenance",
+    "coreCn": "maintenance 的搭配",
+    "art": "fillOutForm",
+    "items": [
+     {
+      "t": "~ records",
+      "cn": "維護紀錄"
+     },
+     {
+      "t": "~ log",
+      "cn": "維護日誌"
+     },
+     {
+      "t": "keep ~ records",
+      "cn": "保存維護紀錄"
+     },
+     {
+      "t": "regular ~",
+      "cn": "定期維護"
+     }
+    ]
+   },
+   "en": "Maintenance records, maintenance log, keep maintenance records, regular maintenance.",
+   "cn": "維護紀錄、維護日誌、保存維護紀錄、定期維護。",
+   "hi": [
+    {
+     "t": "keep maintenance records",
+     "cn": "保存維護紀錄",
+     "k": "records",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "defect",
+    "coreCn": "defect 的搭配",
+    "art": "label",
+    "items": [
+     {
+      "t": "~ label",
+      "cn": "不良標籤"
+     },
+     {
+      "t": "~ description",
+      "cn": "不良描述"
+     },
+     {
+      "t": "find a ~ in the frame",
+      "cn": "發現框架有瑕疵"
+     }
+    ]
+   },
+   "en": "Defect label, defect description, find a defect in the frame.",
+   "cn": "不良標籤、不良描述、發現框架有瑕疵。",
+   "hi": [
+    {
+     "t": "Defect label",
+     "cn": "不良標籤",
+     "k": "defective",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "prevent + 事 + from + V-ing",
+    "art": "rootCause",
+    "rows": [
+     {
+      "lab": "from 後面接 V-ing",
+      "blocks": [
+       {
+        "t": "to prevent",
+        "k": "v"
+       },
+       {
+        "t": "the same issue",
+        "k": "o"
+       },
+       {
+        "t": "happen",
+        "k": "v",
+        "x": true
+       },
+       {
+        "t": "from happening",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "again",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "prevent ... from V-ing 是固定搭配；happen 要改成動名詞 happening。"
+   },
+   "en": "Prevent the same issue from happening again.",
+   "cn": "防止同樣的問題再次發生。",
+   "hi": [
+    {
+     "t": "from happening again",
+     "cn": "再次發生",
+     "k": "prevent",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "check whether + 子句 and whether + 子句",
+    "art": "functionalTestPass",
+    "rows": [
+     {
+      "lab": "第一個是否",
+      "blocks": [
+       {
+        "t": "We check",
+        "k": "s"
+       },
+       {
+        "t": "whether",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "the controller responds correctly",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "第二個是否",
+      "blocks": [
+       {
+        "t": "and whether",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "the incline motor moves smoothly",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "whether = 是否；correctly、smoothly 是副詞，修飾動詞。"
+   },
+   "en": "We check whether the controller responds correctly and whether the motor moves smoothly.",
+   "cn": "我們檢查控制器反應是否正確、馬達是否順暢。",
+   "hi": [
+    {
+     "t": "whether the controller responds correctly",
+     "cn": "控制器反應是否正確",
+     "k": "whether",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "It is important to V because S + help + 人 + V",
+    "art": "fillOutForm",
+    "rows": [
+     {
+      "lab": "虛主詞 it",
+      "blocks": [
+       {
+        "t": "It is important",
+        "k": "s"
+       },
+       {
+        "t": "to keep maintenance records",
+        "k": "v",
+        "add": true
+       }
+      ]
+     },
+     {
+      "lab": "help + 人 + 原形",
+      "blocks": [
+       {
+        "t": "they help us",
+        "k": "s"
+       },
+       {
+        "t": "track",
+        "k": "v"
+       },
+       {
+        "t": "identify",
+        "k": "v"
+       },
+       {
+        "t": "ensure",
+        "k": "v"
+       }
+      ]
+     }
+    ],
+    "note": "It 是虛主詞，真主詞是 to keep ...；track、identify、ensure 平行，都用原形。"
+   },
+   "en": "It is important to keep maintenance records because they help us identify potential problems.",
+   "cn": "保存維護紀錄很重要，因為能幫我們找出潛在問題。",
+   "hi": [
+    {
+     "t": "keep maintenance records",
+     "cn": "保存維護紀錄",
+     "k": "records",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 4,
+    "wrong": "We found defect on the frame and ask assembly line train operators to prevent the same issue happen again.",
+    "bad": [
+     "defect on",
+     "ask",
+     "train operators",
+     "happen"
+    ],
+    "fix": "We found a defect in the frame and asked the assembly line supervisor to train the operators to prevent the same issue from happening again.",
+    "good": [
+     "a defect in",
+     "asked",
+     "supervisor to train the operators",
+     "from happening"
+    ],
+    "why": "Defect needs a, ask takes a person plus to, and prevent goes with from plus -ing.",
+    "whyCn": "defect 可數要加 a；ask + 人 + to V；prevent ... from V-ing。"
+   },
+   "en": "We asked the supervisor to train the operators to prevent the same issue from happening again.",
+   "cn": "我們請主管培訓作業員，防止同樣的問題再次發生。",
+   "hi": [
+    {
+     "t": "from happening again",
+     "cn": "再次發生",
+     "k": "prevent",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 5,
+    "wrong": "Our customer complained the screw was broken, so we tighted screws with specified torque and will be stay three days.",
+    "bad": [
+     "complained the",
+     "tighted",
+     "with specified torque",
+     "will be stay"
+    ],
+    "fix": "Our customer complained that a screw was broken, so we tightened the screws to the specified torque and will monitor the test condition for three days.",
+    "good": [
+     "complained that a",
+     "tightened",
+     "to the specified torque",
+     "will monitor"
+    ],
+    "why": "Complain that plus a sentence, tighten to a torque, and will plus a base verb.",
+    "whyCn": "complain that + 子句；tighten ... to the specified torque；will + 原形動詞。"
+   },
+   "en": "Our customer complained that a screw was broken, so we tightened the screws to the specified torque.",
+   "cn": "客戶抱怨有一顆螺絲壞了，所以我們把螺絲鎖到規定扭力。",
+   "hi": [
+    {
+     "t": "complained that a screw was broken",
+     "cn": "抱怨有一顆螺絲壞了",
+     "k": "complain",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We tightened the screws ___ the specified torque.",
+    "a": "to",
+    "n": 1
+   },
+   "en": "We tightened the screws ___ the specified torque.",
+   "cn": "我們把螺絲鎖___規定扭力。",
+   "say": "We tightened the screws, blank, the specified torque.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We tightened the screws ___ the specified torque.",
+    "a": "to",
+    "n": 1,
+    "show": true
+   },
+   "en": "We tightened the screws to the specified torque.",
+   "cn": "我們把螺絲鎖到規定扭力。",
+   "hi": [
+    {
+     "t": "to the specified torque",
+     "cn": "到規定扭力",
+     "k": "torque",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We received an NG notification ___ the audit.",
+    "a": "during",
+    "n": 2
+   },
+   "en": "We received an NG notification ___ the audit.",
+   "cn": "我們___稽核收到 NG 通知。",
+   "say": "We received an NG notification, blank, the audit.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We received an NG notification ___ the audit.",
+    "a": "during",
+    "n": 2,
+    "show": true
+   },
+   "en": "We received an NG notification during the audit.",
+   "cn": "我們在稽核時收到 NG 通知。",
+   "hi": [
+    {
+     "t": "during the audit",
+     "cn": "在稽核時",
+     "k": "during",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Finally, we should take ___ action.",
+    "a": "corrective",
+    "n": 3
+   },
+   "en": "Finally, we should take ___ action.",
+   "cn": "最後，我們應該採取___措施。",
+   "say": "Finally, we should take, blank, action.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Finally, we should take ___ action.",
+    "a": "corrective",
+    "n": 3,
+    "show": true
+   },
+   "en": "Finally, we should take corrective action.",
+   "cn": "最後，我們應該採取矯正措施。",
+   "hi": [
+    {
+     "t": "take corrective action",
+     "cn": "採取矯正措施",
+     "k": "corrective",
+     "c": 4
     }
    ]
   },

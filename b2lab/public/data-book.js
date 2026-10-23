@@ -6188,7 +6188,7 @@ window.BOOK = {
       ],
       vocabTitle: '📚 Part 3: 重點單字與片語 Key Vocabulary & Phrases',
       vocab: [
-        { w: 'maintenance', ipa: '/ˈmentənəns/', pos: 'n.', cn: '維護、保養',
+        { w: 'maintenance', ipa: '/ˈmeɪn.t̬ən.əns/', pos: 'n.', cn: '維護、保養',
           ex: 'The water dispenser needs maintenance.', exCn: '飲水機需要保養維修。' },
         { w: 'enthusiastic', ipa: '/ɪnˌθuːziˈæstɪk/', pos: 'adj.', cn: '熱情的、熱衷的',
           ex: 'I stay motivated and enthusiastic.', exCn: '我保持積極與熱情。' },
@@ -26343,6 +26343,769 @@ window.BOOK = {
         "aCn": "我們貼上「Defective」標籤，移到不良品區，並在紀錄表寫下序號與問題。"
       }
     ]
+  },
+  /* ---- bk20261023 Quality Control English ---- */
+  {
+    "id": "bk20261023",
+    "video": true,
+    "icon": "🔧",
+    "date": "2026-10-23",
+    "doc": "https://docs.google.com/document/d/1a8kkfG_fJoLdZseKlbs7PqleC-EnOkwotT6yiOjtOCY/edit",
+    "title": "Quality Control English",
+    "titleCn": "品質檢驗與設備維護",
+    "topics": "環境測試・維護紀錄・扭力與螺絲・不良品處理・看圖說話",
+    "hwTitle": "I. ★ 10/23 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "wrong": "We found the rust on the part durning environmental test.",
+        "fix": "We found rust on the part during the environmental test.",
+        "cn": "我們在環境測試期間，在零件上發現了鏽。",
+        "pat": "found + 不可數名詞 + on + 零件 + during + 名詞",
+        "note": "rust 不可數，不加 a / the。 durning → during（在……期間），後接名詞。 特定那次測試，要加 the。"
+      },
+      {
+        "n": 2,
+        "wrong": "We use a temperature sensor to monitor the room's temperature.",
+        "fix": "We use a temperature sensor to monitor the room temperature.",
+        "cn": "我們使用溫度感測器來監控室溫。",
+        "pat": "use + 工具 + to + 原形動詞",
+        "note": "room temperature 是名詞連用（room 當形容詞），技術文件的標準說法。 to monitor：不定詞表目的。"
+      },
+      {
+        "n": 3,
+        "wrong": "The enviromental chamber has no recent maintenance records, so we received the aduit NG notification.",
+        "fix": "The environmental chamber had no recent maintenance records, so we received an NG notification during the audit.",
+        "cn": "環境試驗箱最近沒有維護紀錄，所以我們在稽核時收到了 NG 通知。",
+        "pat": "S + had no + 名詞, so + S + received + 名詞",
+        "note": "拼字：environmental、audit。 稽核時的狀況已是過去，用 had。 NG 以母音開頭，用 an。 時間用 during the audit。"
+      },
+      {
+        "n": 4,
+        "wrong": "During the unpacking inspection, we found defect on the frame and ask assembly line train operators to prevent the same issue happen again.",
+        "fix": "During the unpacking inspection, we found a defect in the frame and asked the assembly line supervisor to train the operators to prevent the same issue from happening again.",
+        "cn": "開箱檢查時，我們發現框架有瑕疵，並請生產線主管培訓作業員，以防止同樣的問題再次發生。",
+        "pat": "ask + 人 + to + 原形；prevent + 事 + from + V-ing",
+        "note": "defect 可數，單數加 a；框架「裡」用 in。 ask + 人 + to V：請主管去培訓。 prevent ... from V-ing：防止……發生。"
+      },
+      {
+        "n": 5,
+        "wrong": "Our customer complained the screw was broken, so we tighted screws with specified torque and will be stay three days to check test condition.",
+        "fix": "Our customer complained that a screw was broken, so we tightened the screws to the specified torque and will monitor the test condition for three days.",
+        "cn": "客戶抱怨有一顆螺絲壞了，所以我們把螺絲鎖到規定的扭力，並會監控測試狀況三天。",
+        "pat": "complain that + 子句；will + 原形；for + 一段時間",
+        "note": "complain that + 子句；screw 可數，加 a。 tighted → tightened。 鎖到某扭力：tighten ... to the specified torque，不用 with。 will 後接原形，不可 will be stay。 三天：for three days。"
+      }
+    ],
+    "vocabTitle": "II-A. 核心單字 Vocabulary",
+    "vocab": [
+      {
+        "w": "defect",
+        "ipa": "/ˈdiː.fekt/",
+        "pos": "n.",
+        "cn": "瑕疵；缺陷",
+        "ex": "The frame has a visible defect.",
+        "exCn": "框架有明顯瑕疵。"
+      },
+      {
+        "w": "defective",
+        "ipa": "/dɪˈfek.tɪv/",
+        "pos": "adj.",
+        "cn": "有缺陷的",
+        "ex": "The unit is defective.",
+        "exCn": "這台是不良品。"
+      },
+      {
+        "w": "qualified",
+        "ipa": "/ˈkwɑː.lə.faɪd/",
+        "pos": "adj.",
+        "cn": "合格的",
+        "ex": "Keep it apart from the qualified units.",
+        "exCn": "跟合格品分開放。"
+      },
+      {
+        "w": "rust",
+        "ipa": "/rʌst/",
+        "pos": "n.",
+        "cn": "鏽",
+        "ex": "Check the frame for rust.",
+        "exCn": "檢查框架有沒有生鏽。"
+      },
+      {
+        "w": "scratch",
+        "ipa": "/skrætʃ/",
+        "pos": "n.",
+        "cn": "刮痕",
+        "ex": "Check the frame for scratches.",
+        "exCn": "檢查框架有沒有刮痕。"
+      },
+      {
+        "w": "crack",
+        "ipa": "/kræk/",
+        "pos": "n.",
+        "cn": "裂縫",
+        "ex": "Check the frame for cracks.",
+        "exCn": "檢查框架有沒有裂縫。"
+      },
+      {
+        "w": "torque",
+        "ipa": "/tɔːrk/",
+        "pos": "n.",
+        "cn": "扭力",
+        "ex": "Tighten the screws to the specified torque.",
+        "exCn": "把螺絲鎖到規定扭力。"
+      },
+      {
+        "w": "tighten",
+        "ipa": "/ˈtaɪtən/",
+        "pos": "v.",
+        "cn": "鎖緊",
+        "ex": "Tighten the nut.",
+        "exCn": "鎖緊螺帽。"
+      },
+      {
+        "w": "loosen",
+        "ipa": "/ˈluːsən/",
+        "pos": "v.",
+        "cn": "鬆開",
+        "ex": "Loosen the nut.",
+        "exCn": "鬆開螺帽。"
+      },
+      {
+        "w": "wrench",
+        "ipa": "/rentʃ/",
+        "pos": "n.",
+        "cn": "扳手",
+        "ex": "They use wrenches to tighten nuts.",
+        "exCn": "他們用扳手鎖緊螺帽。"
+      },
+      {
+        "w": "multimeter",
+        "ipa": "/ˈmʌl.t̬i.miː.t̬ɚ/",
+        "pos": "n.",
+        "cn": "三用電表",
+        "ex": "They use a digital multimeter.",
+        "exCn": "他們用數位三用電表。"
+      },
+      {
+        "w": "circuit",
+        "ipa": "/ˈsɝː.kɪt/",
+        "pos": "n.",
+        "cn": "電路",
+        "ex": "Check whether the circuit is complete.",
+        "exCn": "檢查電路是否完整。"
+      },
+      {
+        "w": "maintenance",
+        "ipa": "/ˈmeɪn.t̬ən.əns/",
+        "pos": "n.",
+        "cn": "維護；保養",
+        "ex": "Equipment needs regular maintenance.",
+        "exCn": "設備需要定期維護。"
+      },
+      {
+        "w": "audit",
+        "ipa": "/ˈɑː.dɪt/",
+        "pos": "n.",
+        "cn": "稽核",
+        "ex": "We were notified during the audit.",
+        "exCn": "我們在稽核時被通知。"
+      },
+      {
+        "w": "notification",
+        "ipa": "/ˌnoʊ.t̬ə.fɪˈkeɪ.ʃən/",
+        "pos": "n.",
+        "cn": "通知",
+        "ex": "We received an NG notification.",
+        "exCn": "我們收到 NG 通知。"
+      },
+      {
+        "w": "notify",
+        "ipa": "/ˈnoʊ.t̬ə.faɪ/",
+        "pos": "v.",
+        "cn": "通知",
+        "ex": "Notify the supplier about the defect.",
+        "exCn": "把瑕疵通知供應商。"
+      },
+      {
+        "w": "supplier",
+        "ipa": "/səˈplaɪɚ/",
+        "pos": "n.",
+        "cn": "供應商",
+        "ex": "Call the supplier.",
+        "exCn": "聯絡供應商。"
+      },
+      {
+        "w": "disassemble",
+        "ipa": "/ˌdɪs.əˈsem.bəl/",
+        "pos": "v.",
+        "cn": "拆解",
+        "ex": "Disassemble the part.",
+        "exCn": "把零件拆開。"
+      },
+      {
+        "w": "corrective",
+        "ipa": "/kəˈrektɪv/",
+        "pos": "adj.",
+        "cn": "矯正的",
+        "ex": "Take corrective action.",
+        "exCn": "採取矯正措施。"
+      },
+      {
+        "w": "manufacture",
+        "ipa": "/ˌmæn.jəˈfæk.tʃɚ/",
+        "pos": "v.",
+        "cn": "製造；生產",
+        "ex": "What does your factory manufacture?",
+        "exCn": "你們工廠生產什麼？"
+      },
+      {
+        "w": "treadmill",
+        "ipa": "/ˈtredmɪl/",
+        "pos": "n.",
+        "cn": "跑步機",
+        "ex": "A treadmill is used indoors.",
+        "exCn": "跑步機用在室內。"
+      },
+      {
+        "w": "elliptical",
+        "ipa": "/ɪˈlɪptɪkəl/",
+        "pos": "n.",
+        "cn": "橢圓機",
+        "ex": "An elliptical is low-impact.",
+        "exCn": "橢圓機對關節衝擊小。"
+      },
+      {
+        "w": "checklist",
+        "ipa": "/ˈtʃeklɪst/",
+        "pos": "n.",
+        "cn": "檢查表",
+        "ex": "Fill in the checklist.",
+        "exCn": "填寫檢查表。"
+      },
+      {
+        "w": "serial number",
+        "ipa": "/ˈsɪriəl ˌnʌmbɚ/",
+        "pos": "n.",
+        "cn": "序號",
+        "ex": "Record the serial number.",
+        "exCn": "記錄序號。"
+      }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases",
+    "phrases": [
+      {
+        "p": "environmental test",
+        "cn": "環境測試"
+      },
+      {
+        "p": "maintenance records / maintenance log",
+        "cn": "維護紀錄／日誌"
+      },
+      {
+        "p": "NG (No Good) notification",
+        "cn": "不合格通知"
+      },
+      {
+        "p": "unpacking inspection",
+        "cn": "開箱檢查"
+      },
+      {
+        "p": "assembly line supervisor",
+        "cn": "生產線主管"
+      },
+      {
+        "p": "prevent ... from happening again",
+        "cn": "防止……再次發生"
+      },
+      {
+        "p": "specified torque",
+        "cn": "規定扭力"
+      },
+      {
+        "p": "over-tightening / under-tightening",
+        "cn": "鎖太緊／鎖不夠緊"
+      },
+      {
+        "p": "assembly tools / measuring instruments",
+        "cn": "組裝工具／量測儀器"
+      },
+      {
+        "p": "keep maintenance records",
+        "cn": "保存維護紀錄"
+      },
+      {
+        "p": "follow the testing procedure",
+        "cn": "依測試程序"
+      },
+      {
+        "p": "electrical continuity test",
+        "cn": "電氣導通測試"
+      },
+      {
+        "p": "visual inspection / functional testing",
+        "cn": "目視檢查／功能測試"
+      },
+      {
+        "p": "defect label / defect description",
+        "cn": "不良標籤／不良描述"
+      },
+      {
+        "p": "notify ... about ...",
+        "cn": "就……通知（某人）"
+      },
+      {
+        "p": "root cause / take corrective action",
+        "cn": "根本原因／採取矯正措施"
+      },
+      {
+        "p": "qualified units",
+        "cn": "合格品"
+      }
+    ],
+    "grammarTitle": "IV. 句型與文法解說 Sentence Patterns",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "為什麼重要：動名詞當主詞",
+        "pat": "It is important because + V-ing (主詞) + can cause / lead to + 名詞",
+        "pts": [
+          "over-tightening：鎖太緊（可能斷裂、滑牙）；under-tightening：鎖不夠緊（可能鬆脫、不安全）。",
+          "動名詞片語當 because 子句的主詞。",
+          "cause + 名詞；lead to + 名詞（to 是介系詞）。"
+        ],
+        "exs": [
+          {
+            "tag": "Q",
+            "en": "Why is it important to tighten a screw to the specified torque?",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "It is important because over-tightening or under-tightening the screws can cause damage or lead to product failure.",
+            "cn": "因為鎖太緊或太鬆，都可能造成損壞或導致產品故障。"
+          }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "列舉三項以上",
+        "pat": "A, B, C, and D",
+        "pts": [
+          "逗號分隔，最後一項前加 and。",
+          "equipment 不可數；tools、wrenches 用複數。",
+          "during production：泛指，不加冠詞。"
+        ],
+        "exs": [
+          {
+            "tag": "Q",
+            "en": "What equipment do you use during production?",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "We use assembly tools, torque wrenches, testing equipment, and electrical measuring instruments during production.",
+            "cn": "生產時，我們使用組裝工具、扭力扳手、測試設備和電氣量測儀器。"
+          }
+        ]
+      },
+      {
+        "k": "IV-C",
+        "title": "過去分詞後置修飾",
+        "pat": "名詞 + 過去分詞",
+        "pts": [
+          "problems found = problems that were found；actions taken = actions that were taken。",
+          "record：此處是動詞；also 可當名詞（a maintenance record）。"
+        ],
+        "exs": [
+          {
+            "tag": "Q",
+            "en": "How do workers record daily maintenance activities?",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "Workers record daily maintenance activities on a checklist. They include the inspection results, problems found, and maintenance actions taken.",
+            "cn": "工人把每日維護作業記在檢查表上，包括檢驗結果、發現的問題和採取的維護措施。"
+          }
+        ]
+      },
+      {
+        "k": "IV-D",
+        "title": "虛主詞 It 與平行結構",
+        "pat": "It is important to V because S + help + 人 + V1, V2, and V3",
+        "pts": [
+          "It 是虛主詞，真主詞是 to keep ...。",
+          "help + 人 + 原形動詞。",
+          "track、identify、ensure 平行，形式一致。",
+          "maintenance records 能更早發現問題。"
+        ],
+        "exs": [
+          {
+            "tag": "Q",
+            "en": "Why is it important to keep maintenance records?",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "It is important to keep maintenance records because they help us track equipment conditions, identify potential problems, and ensure that the equipment is working properly.",
+            "cn": "保存維護紀錄很重要，能幫我們追蹤設備狀況、找出潛在問題，並確保設備正常運作。"
+          }
+        ]
+      },
+      {
+        "k": "IV-E",
+        "title": "whether 引導的名詞子句",
+        "pat": "check whether + 子句 and whether + 子句",
+        "pts": [
+          "whether = 是否，當 check 的受詞。",
+          "correctly、smoothly 是副詞，修飾動詞。",
+          "check for + 名詞：檢查有無……。"
+        ],
+        "exs": [
+          {
+            "tag": "Q",
+            "en": "How do you check whether a treadmill controller or incline motor is working properly?",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "We follow the testing procedure to check whether the treadmill controller responds correctly and whether the incline motor moves smoothly. We also check for unusual noise or error messages.",
+            "cn": "我們依測試程序，檢查控制器反應是否正確、坡度馬達是否順暢；也檢查有無異常噪音或錯誤訊息。"
+          }
+        ]
+      },
+      {
+        "k": "IV-F",
+        "title": "不定詞後接兩個並列動詞",
+        "pat": "use + 工具 + to V1 and V2",
+        "pts": [
+          "continuity test：檢查電流能否通過電路。",
+          "兩動詞共用一個 to，第二個 to 可省。",
+          "只答 We use a multimeter 不夠完整，要說明用來做什麼。"
+        ],
+        "exs": [
+          {
+            "tag": "Q",
+            "en": "What equipment do you use to perform an electrical continuity test?",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "We use a multimeter to perform an electrical continuity test and check whether the electrical circuit is complete.",
+            "cn": "我們用三用電表做導通測試，並檢查電路是否完整。"
+          }
+        ]
+      },
+      {
+        "k": "IV-G",
+        "title": "如何辨識並記錄不良品",
+        "pat": "identify ... by + 名詞. Then, attach ... and record ...",
+        "pts": [
+          "by + 名詞：方法。visual inspection = 用看的；functional testing = 測功能。",
+          "defect label：紅色標籤等醒目標示。",
+          "record 是動詞：除了貼標，還要寫下不良資訊。"
+        ],
+        "exs": [
+          {
+            "tag": "Q",
+            "en": "How do you identify and record defective products?",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "We identify defective products by visual inspection and functional testing. Then we attach a defect label and record the defect description in a report.",
+            "cn": "我們透過目視檢查和功能測試辨識不良品，接著貼上不良標籤，並把不良描述記錄在報告中。"
+          }
+        ]
+      },
+      {
+        "k": "IV-H",
+        "title": "complain about / complain that",
+        "pat": "complain about + 名詞 ／ complain that + 子句",
+        "pts": [
+          "complain 後不能直接接名詞或省略 that 的殘句（Our customer complained the screw was broken ✗ → 補 that）。",
+          "tight 形容詞 → tighten 動詞 → tightened 過去式。"
+        ],
+        "exs": [
+          {
+            "tag": "about",
+            "en": "The customer complained about a broken screw.",
+            "cn": ""
+          },
+          {
+            "tag": "that",
+            "en": "The customer complained that a screw was broken.",
+            "cn": ""
+          }
+        ]
+      },
+      {
+        "k": "IV-I",
+        "title": "發現零件生鏽怎麼辦",
+        "pat": "First, ... Then, ... Finally, ...",
+        "pts": [
+          "notify + 人 + about + 事。",
+          "root cause = 問題發生的根本原因。",
+          "take corrective action（原本說成 correct action，標準說法是 corrective）。",
+          "First / Then / Finally 依序說明步驟。"
+        ],
+        "exs": [
+          {
+            "tag": "Q",
+            "en": "What should you do if you find rust on a part?",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "First, I should notify our supplier about the defect. Then we need to disassemble the part and find the root cause of the rust. Finally, we should take corrective action to solve the problem and prevent the same defect from happening again.",
+            "cn": "首先通知供應商該瑕疵；接著拆解零件、找出生鏽的根本原因；最後採取矯正措施解決問題，防止再發生。"
+          }
+        ]
+      },
+      {
+        "k": "IV-J",
+        "title": "工廠生產什麼",
+        "pat": "S + manufactures + 產品類別, including + 例子",
+        "pts": [
+          "manufacture = produce，前者較正式。",
+          "including + 名詞：列舉其中幾項；equipment 不可數。"
+        ],
+        "exs": [
+          {
+            "tag": "Q",
+            "en": "What kind of products does your factory manufacture?",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "Our factory manufactures fitness equipment, including treadmills and ellipticals.",
+            "cn": "我們工廠生產健身器材，包括跑步機和橢圓機。"
+          }
+        ]
+      },
+      {
+        "k": "IV-K",
+        "title": "測試不合格怎麼處理",
+        "pat": "label A as B and separate A from C to V",
+        "pts": [
+          "label A as B：把 A 標示成 B。",
+          "separate A from B：把 A 與 B 分開。",
+          "to find：不定詞表目的。",
+          "qualified units 比 good units 更正式。"
+        ],
+        "exs": [
+          {
+            "tag": "Q",
+            "en": "What happens if a unit fails the test?",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "We label it as a defective part and separate it from the qualified units to find the root cause later.",
+            "cn": "我們把它標示為不良品，與合格品分開，之後再找出根本原因。"
+          }
+        ]
+      }
+    ],
+    "reading": [
+      {
+        "bar": "V. 閱讀文章 Reading Passage",
+        "title": "A Daily Quality Inspection",
+        "titleCn": "",
+        "paras": [
+          {
+            "en": "Nina works as a quality control engineer at a factory that manufactures treadmills and other fitness equipment. Every morning, she checks the production line to make sure that the machines and tools are working properly.",
+            "cn": "妮娜是一間健身器材工廠的品管工程師。每天早上，她都會檢查生產線，確保機器和工具運作正常。"
+          },
+          {
+            "en": "The assembly-line operators use electric screwdrivers and Phillips screwdrivers to install screws on the treadmill frame. They also use wrenches to tighten nuts. To ensure product quality, they must tighten the screws to the specified torque. If the screws are too loose or too tight, the product may have problems during use.",
+            "cn": "作業員用電動起子和十字起子把螺絲裝在跑步機框架上，也用扳手鎖緊螺帽。為確保品質，螺絲必須鎖到規定扭力。螺絲太鬆或太緊，產品使用時都可能出問題。"
+          },
+          {
+            "en": "After assembly, the quality control team performs several inspections. First, they check the frame for visible defects, such as scratches, cracks, or rust. Next, they test the treadmill controller and incline motor to make sure they are functioning properly. They also use a digital multimeter to perform an electrical continuity test.",
+            "cn": "組裝後，品管團隊進行幾項檢驗。首先檢查框架有無明顯瑕疵，如刮痕、裂縫或鏽蝕。接著測試控制器和坡度馬達是否正常，也用數位三用電表做導通測試。"
+          },
+          {
+            "en": "During one inspection, Nina discovered that the incline motor was not working properly. She immediately labeled the unit as defective and separated it from the qualified products. Then, she recorded the product's serial number and the defect description in the quality report.",
+            "cn": "有一次檢驗，妮娜發現坡度馬達運作不正常。她立刻標示為不良品，並與合格品分開，接著把序號和不良描述記錄在品質報告中。"
+          },
+          {
+            "en": "Later, Nina inspected the environmental chamber and found that its maintenance records were not up to date. She reported the issue to her supervisor because the equipment needed regular maintenance to ensure accurate test results.",
+            "cn": "之後，妮娜檢查環境試驗箱，發現維護紀錄沒有更新。她向主管回報，因為設備需要定期維護，測試結果才準確。"
+          },
+          {
+            "en": "At the end of the day, the workers updated the maintenance log and discussed the problems they had found. They also identified the root causes of the defects and took corrective actions to prevent the same issues from happening again.",
+            "cn": "一天結束時，工人更新維護日誌並討論發現的問題，也找出瑕疵的根本原因，採取矯正措施，防止再發生。"
+          },
+          {
+            "en": "Nina believes that good quality control is not just about finding defective products. It is also about preventing problems, keeping accurate records, and making sure that every product is safe and reliable.",
+            "cn": "妮娜相信，好的品管不只是找出不良品，也包括預防問題、保存準確紀錄，並確保每個產品安全可靠。"
+          }
+        ]
+      }
+    ],
+    "extraTitle": "VI. 看圖說話 Picture Description",
+    "extra": [
+      {
+        "title": "看圖說話 Picture Description",
+        "exs": [
+          {
+            "tag": "描述",
+            "en": "In the picture, a technician is working on a treadmill on the production line. He is leaning over the treadmill frame and checking the wires and the circuit board inside the motor housing. He is wearing a dark sweater and a smartwatch. Several treadmill frames are lined up on the conveyor behind him, and another worker is working in the background. He is probably inspecting the electrical connections to make sure the treadmill works properly.",
+            "cn": "圖中，一名技術員正在生產線上處理跑步機。他彎身檢查框架，查看馬達外殼內的電線和電路板。他穿深色毛衣、戴智慧手錶。後方輸送帶上排著數台跑步機框架，背景另有一名工人在作業。他可能在檢查電氣連接，確保跑步機運作正常。"
+          }
+        ]
+      },
+      {
+        "title": "圖片單字",
+        "exs": [
+          {
+            "tag": "/tekˈnɪʃən/",
+            "en": "technician",
+            "cn": "技術員"
+          },
+          {
+            "tag": "/prəˈdʌk.ʃən laɪn/",
+            "en": "production line",
+            "cn": "生產線"
+          },
+          {
+            "tag": "/ˈwaɪ.rɪŋ/",
+            "en": "wiring",
+            "cn": "配線"
+          },
+          {
+            "tag": "/ˈsɝː.kɪt bɔːrd/",
+            "en": "circuit board",
+            "cn": "電路板"
+          },
+          {
+            "tag": "/ˈmoʊ.t̬ɚ ˈhaʊ.zɪŋ/",
+            "en": "motor housing",
+            "cn": "馬達外殼"
+          },
+          {
+            "tag": "/kənˈveɪ.ɚ/",
+            "en": "conveyor",
+            "cn": "輸送帶"
+          },
+          {
+            "tag": "/liːn ˈoʊ.vɚ/",
+            "en": "lean over",
+            "cn": "彎身靠近"
+          },
+          {
+            "tag": "/ˈsmɑːrt.wɑːtʃ/",
+            "en": "smartwatch",
+            "cn": "智慧手錶"
+          }
+        ]
+      },
+      {
+        "title": "描述圖片的句型",
+        "exs": [
+          {
+            "tag": "主體在做什麼",
+            "en": "A + is + V-ing",
+            "cn": "現在進行式"
+          },
+          {
+            "tag": "穿著",
+            "en": "He is wearing ...",
+            "cn": "他穿著／戴著……"
+          },
+          {
+            "tag": "位置",
+            "en": "in the foreground / in the background / behind him",
+            "cn": "前景／背景／在他後面"
+          },
+          {
+            "tag": "排列",
+            "en": "are lined up on ...",
+            "cn": "排列在……上"
+          },
+          {
+            "tag": "推測",
+            "en": "He is probably + V-ing ...",
+            "cn": "他可能正在……"
+          }
+        ]
+      }
+    ],
+    "extraVocabTitle": "II-B. 補充單字：工具與零件",
+    "extraVocab": [
+      {
+        "k": "起子",
+        "en": "Flathead screwdriver",
+        "cn": "一字起子（直線溝槽）"
+      },
+      {
+        "k": "起子",
+        "en": "Phillips screwdriver / Phillips-head screw",
+        "cn": "十字起子／十字螺絲（十字溝槽）"
+      },
+      {
+        "k": "起子",
+        "en": "Electric screwdriver",
+        "cn": "電動起子"
+      },
+      {
+        "k": "零件",
+        "en": "Screw",
+        "cn": "螺絲（頭部有溝槽，用起子）"
+      },
+      {
+        "k": "零件",
+        "en": "Bolt",
+        "cn": "螺栓（搭配螺帽，用扳手）"
+      },
+      {
+        "k": "零件",
+        "en": "Nut",
+        "cn": "螺帽（鎖在螺栓上）"
+      },
+      {
+        "k": "零件",
+        "en": "Washer",
+        "cn": "墊圈"
+      },
+      {
+        "k": "工具",
+        "en": "Wrench / Spanner",
+        "cn": "扳手"
+      },
+      {
+        "k": "工具",
+        "en": "Torque wrench",
+        "cn": "扭力扳手"
+      },
+      {
+        "k": "設備",
+        "en": "Treadmill controller / Incline motor",
+        "cn": "跑步機控制器／坡度馬達"
+      },
+      {
+        "k": "設備",
+        "en": "Environmental chamber",
+        "cn": "環境試驗箱"
+      },
+      {
+        "k": "設備",
+        "en": "Temperature sensor",
+        "cn": "溫度感測器"
+      },
+      {
+        "k": "設備",
+        "en": "Assembly tools / Testing equipment",
+        "cn": "組裝工具／測試設備"
+      },
+      {
+        "k": "設備",
+        "en": "Electrical measuring instruments",
+        "cn": "電氣量測儀器"
+      }
+    ]
   }
   ]
 };
@@ -26640,6 +27403,7 @@ window.BOOK = {
     au04:[[['gear','flag','laptop','chartUp','thumb'],'開發與專案管理：設變通知單≠完整程序 → 台灣主導安規越南協助 → PDM 存放≠審核程序 → 台灣提供時程越南更新實際進度 → 填表≠核准 → 追蹤量產問題至結案。']],
     bk20261006:[[['board','stairs','gauge','orgchart','clipboard'],'操作員訓練五階段：獨立作業前提供實務訓練並評估技能 → 每站分 A/B/C 三個技能等級逐級晉升 → 內部評估未通過先安排較簡單的工作站 → 所有人都受過訓可互相代班維持生產 → 客戶稽核時出示訓練紀錄說明驗證方式。']],
     bk20261013:[[['key','plug','search','map','ballot'],'品保會議五階段：確認新治具能否投入生產 → 機器出狀況先停止測試 → 螺絲組裝時斷裂、不良率變高 → 問題最先出現在第三站、檢查治具是否對準 → 預計明天下午重啟、週五前完成訓練並更新 SOP。']],
+    bk20261023:[[['wrench','magnifyL','cross','thermo','target'],'妮娜的品管一天：作業員把螺絲鎖到規定扭力 → 檢查框架瑕疵、用三用電表做導通測試 → 坡度馬達故障，標示不良品並隔離 → 環境試驗箱維護紀錄未更新、回報主管 → 找出根本原因、採取矯正措施防止再發生。']],
   };;
   ((window.BOOK||{}).lessons||[]).forEach(function(b){
     var specs=S[b.id]; if(!specs) return;
