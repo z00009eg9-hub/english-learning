@@ -9445,5 +9445,37 @@ try{
   }
 }catch(e){}
 </script>
+<script>
+/* 助理只讀目前教材，沿用朗讀控制；不寫學習進度，也不另外呼叫雲端服務。 */
+window.b2Assistant={
+  context(){
+    const active=TAB==='book'?bkOpen:TAB==='read'?rdOpen:TAB==='gram'?CURG:TAB==='listen'?lsOpen:TAB==='real'?(ST.rw||{})[rwOpen]:null;
+    const detail=mDetail(), words=[], lines=[], seen=new Set();
+    function clean(s){ const el=document.createElement('div'); el.innerHTML=String(s||''); return el.textContent.trim(); }
+    function walk(item,depth){
+      if(!item||typeof item!=='object'||depth>8||seen.has(item))return;
+      seen.add(item);
+      if(item.w&&item.cn)words.push({w:clean(item.w),cn:clean(item.cn),ex:clean(item.ex||item.exEn),exCn:clean(item.exCn)});
+      if(typeof item.en==='string'&&/[a-z]/i.test(item.en)){
+        const en=clean(item.en), cn=clean(item.cn||item.zh||item.enCn);
+        if(en.length>12){
+          const sentences=splitSentences(en);
+          sentences.forEach(s=>{if(s.length<800)lines.push({en:s,cn:sentences.length===1?cn:''});});
+        }
+      }
+      Object.entries(item).forEach(([k,v])=>{if(!['art','coverArt','iconSvg','quiz','questions','hw','homework','corrections','spoken'].includes(k))walk(v,depth+1);});
+    }
+    walk(active,0);
+    const view=document.getElementById('v-'+TAB);
+    if(active&&!words.length&&view)view.querySelectorAll('.wpitem').forEach(el=>{
+      const w=el.querySelector('w'),cn=el.querySelector('.zh');if(w&&cn)words.push({w:w.textContent.trim(),cn:cn.textContent.trim()});
+    });
+    return {key:TAB+':'+(active?.id||rwOpen&&TAB==='real'&&rwOpen||detail?.title||''),title:detail?.title||TAB_NAME[TAB]||'B2 Read',words,lines};
+  },
+  speak(text,rate,done){if(typeof auStop==='function')auStop();say(text,rate,done);},
+  stop(){ttsStop();},busy(){return ttsBusy()&&!ttsPaused();}
+};
+</script>
+<script type="module" src="./assistant3d/index.js"></script>
 </body>
 </html>
