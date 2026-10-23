@@ -26949,6 +26949,7 @@ window.BOOK = {
     "extra": [
       {
         "title": "看圖說話 Picture Description",
+        "img": "img/bk20261023-pic.webp",
         "exs": [
           {
             "tag": "描述",

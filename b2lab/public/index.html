@@ -7632,6 +7632,7 @@ function bookHTML(b){
   if((b.extra||[]).length){
     h+='<div class="bkbar">'+bkTitle(b.extraTitle||'V. 補充例句 Additional Examples')+'</div>'
      + b.extra.map(s=>'<div class="card"><h2 class="sec" style="color:var(--accent2)">'+esc(s.title)+'</h2>'
+       + (s.img?'<img src="'+esc(s.img)+'" alt="'+esc(s.title)+'" style="display:block;width:100%;max-width:560px;margin:4px auto 12px;border-radius:12px">':'')
        + (s.exs||[]).map(exRow).join('')+'</div>').join('');
   }
 
