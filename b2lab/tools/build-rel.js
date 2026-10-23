@@ -157,7 +157,7 @@ function buildIndex(lessons) {
     (b.vocab2 || []).forEach(v => addW(v, b));
     (b.vocabReview || []).forEach(v => addW(v, b));
     // 老師比較表裡的字也是「學過的」（有些只出現在比較表，沒列進單字表）；表頭常是大寫、偶有「Illness / Sickness」兩字一列
-    (b.cmp || []).forEach(r => cleanEn(r.u).split(/\s*(?:\/|\bvs\.?)\s*/i).filter(Boolean).forEach(u => { const w = pkey(u); if (w) addW({ w, cn: r.cn || '', ex: r.ex, exCn: r.exCn, pos: '' }, b); }));
+    (b.cmp || []).forEach(r => cleanEn(r.u).split(/\s*(?:\/|\bvs\.?)\s*/i).filter(Boolean).forEach(u => { const w = pkey(u); if (w) addW({ w, cn: (r.sc && String(r.sc).length <= 20 ? String(r.sc) : String(r.cn || '')).trim(), ex: r.ex, exCn: r.exCn, pos: '' }, b); }));
     (b.phrases || []).forEach(p => addP(p, b));
     (b.colloc || []).forEach(p => addP(p, b, p.def));
   });
