@@ -10,6 +10,7 @@ on:
     paths:
       - 'b2lab/public/**'
       - 'b2lab/firebase.json'
+      - 'b2lab/tools/build-article-releases.js'
       - '.github/workflows/deploy-b2lab.yml'
   workflow_dispatch:
 
@@ -18,6 +19,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build article release index
+        run: node b2lab/tools/build-article-releases.js
 
       - name: Sanity check data files
         run: |

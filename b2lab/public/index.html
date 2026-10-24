@@ -9486,9 +9486,16 @@ window.b2Assistant={
     Object.values(GLOSS).filter(w=>w.w.toLowerCase().includes(term)).slice(0,12).forEach(w=>add(w,w.src||'全站字庫'));
     return results.slice(0,8);
   },
-  news(){
+  news(releases={}){
     const date=today(), seen=new Set();
-    const articles=DAILY_ALL.concat(ORIG_ARTS,NOTE_ARTS).filter(a=>a.date===date&&!seen.has(a.id)&&seen.add(a.id));
+    const articles=DAILY_ALL.concat(ORIG_ARTS,NOTE_ARTS).filter(a=>{
+      const stamp=releases[a.id]?.publishedAt;
+      const published=stamp&&Number.isFinite(Date.parse(stamp))?dstr(new Date(stamp)):'';
+      const scheduled=/^\d{4}-\d{2}-\d{2}$/.test(a.date||'')?a.date:'';
+      const available=published>scheduled?published:scheduled;
+      if(available!==date||seen.has(a.id))return false;
+      seen.add(a.id);return true;
+    });
     return {date,profile:PROFILE,articles:articles.map(a=>({id:a.id,title:a.title,titleCn:a.titleCn,level:a.level}))};
   },
   openArticle(id){
