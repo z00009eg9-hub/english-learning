@@ -9455,7 +9455,7 @@ window.b2Assistant={
     function walk(item,depth){
       if(!item||typeof item!=='object'||depth>8||seen.has(item))return;
       seen.add(item);
-      if(item.w&&item.cn)words.push({w:clean(item.w),cn:clean(item.cn),ex:clean(item.ex||item.exEn),exCn:clean(item.exCn)});
+      if((item.w||item.p)&&item.cn)words.push({w:clean(item.w||item.p),ipa:clean(item.ipa),pos:clean(item.pos),cn:clean(item.cn),def:clean(item.def),ex:clean(item.ex||item.exEn),exCn:clean(item.exCn)});
       if(typeof item.en==='string'&&/[a-z]/i.test(item.en)){
         const en=clean(item.en), cn=clean(item.cn||item.zh||item.enCn);
         if(en.length>12){
@@ -9471,6 +9471,31 @@ window.b2Assistant={
       const w=el.querySelector('w'),cn=el.querySelector('.zh');if(w&&cn)words.push({w:w.textContent.trim(),cn:cn.textContent.trim()});
     });
     return {key:TAB+':'+(active?.id||rwOpen&&TAB==='real'&&rwOpen||detail?.title||''),title:detail?.title||TAB_NAME[TAB]||'B2 Read',words,lines};
+  },
+  search(raw){
+    const term=String(raw||'').toLowerCase().replace(/[’‘]/g,"'").replace(/\s+/g,' ').trim().slice(0,100);
+    if(!term)return [];
+    const local=this.context().words, global=lookup(term), results=[], seen=new Set();
+    const add=(w,src)=>{if(!w||seen.has(w.w?.toLowerCase()))return;seen.add(w.w.toLowerCase());results.push({...w,ex:w.ex||w.exEn,src});};
+    local.filter(w=>w.w.toLowerCase()===term||global&&w.w.toLowerCase()===global.w.toLowerCase()).forEach(w=>add(w,'本課教材'));
+    if(global)add(global,global.src||'全站字庫');
+    local.filter(w=>w.w.toLowerCase().includes(term)).forEach(w=>add(w,'本課教材'));
+    BOOK_LESSONS.forEach(b=>(b.phrases||[]).filter(w=>String(w.w||w.p||'').toLowerCase().includes(term)).forEach(w=>add({...w,w:w.w||w.p},'課本：'+(b.titleCn||b.title))));
+    Object.values(ST.rw||{}).filter(l=>l&&!l.del).forEach(l=>(l.vocab||[]).filter(w=>w.w?.toLowerCase().includes(term)).forEach(w=>add(w,'實景：'+l.ti)));
+    Object.values(GLOSS).filter(w=>w.w.toLowerCase().includes(term)).slice(0,12).forEach(w=>add(w,w.src||'全站字庫'));
+    return results.slice(0,8);
+  },
+  news(){
+    const date=today(), seen=new Set();
+    const articles=DAILY_ALL.concat(ORIG_ARTS,NOTE_ARTS).filter(a=>a.date===date&&!seen.has(a.id)&&seen.add(a.id));
+    return {date,profile:PROFILE,articles:articles.map(a=>({id:a.id,title:a.title,titleCn:a.titleCn,level:a.level}))};
+  },
+  openArticle(id){
+    const article=ALL_ARTS.find(a=>a.id===id)||DAILY_ALL.find(a=>a.id===id&&a.date<=today());
+    if(!article)return;
+    /* 跨午夜仍停在舊分頁時，讓剛到發布日期的文章也能開啟。 */
+    if(!ALL_ARTS.some(a=>a.id===id))ALL_ARTS.unshift(article);
+    go('read');rdOpenArt(id);
   },
   speak(text,rate,done){if(typeof auStop==='function')auStop();say(text,rate,done);},
   stop(){ttsStop();},busy(){return ttsBusy()&&!ttsPaused();}
