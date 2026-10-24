@@ -17,7 +17,7 @@ root.innerHTML=`<style>
 </style>
 <aside class="notice" aria-label="新文章提醒" hidden><p class="notice-text" role="status"></p><div class="row"><button class="control notice-view">查看</button><button class="icon notice-dismiss" aria-label="關閉新文章提醒">×</button></div></aside>
 <section class="panel" role="dialog" aria-label="Benny 英文助理" hidden>
-<div class="top"><strong>Benny 英文助理</strong><button class="icon close" aria-label="縮小助理面板">縮小</button></div>
+<div class="top"><button class="icon hide" aria-label="隱藏小助理" title="隱藏小助理">−</button><strong>Benny 英文助理</strong><button class="icon close" aria-label="縮小助理面板">縮小</button></div>
 <p class="sub"></p><div class="actions"><button data-action="search">單字查詢</button><button data-action="read">帶我跟讀</button><button data-action="quiz">單字小測</button><button data-action="practice">句子重組</button><button class="news-action" data-action="news">新文章</button></div>
 <div class="foot"><button class="size">縮成迷你（32px）</button><button class="hide">隱藏助理</button></div>
 <div class="output" aria-live="polite"></div><p class="status" role="status"></p>
@@ -54,7 +54,7 @@ function close(focus=true){opened=false;panel.hidden=true;launch.setAttribute('a
 function size(){host.toggleAttribute('data-mini',mini);q('.size').textContent=mini?'恢復一般大小':'縮成迷你（32px）';}
 launch.onclick=()=>opened?close():open();q('.close').onclick=()=>close();
 q('.size').onclick=()=>{mini=!mini;store('mini',mini?'1':'0');size();close();};
-q('.hide').onclick=()=>{close(false);launch.hidden=true;q('.restore').hidden=false;store('hidden','1');q('.restore').focus();};
+root.querySelectorAll('.hide').forEach(b=>b.onclick=()=>{close(false);launch.hidden=true;q('.restore').hidden=false;store('hidden','1');q('.restore').focus();});
 q('.restore').onclick=()=>{launch.hidden=false;q('.restore').hidden=true;store('hidden','0');wake();launch.focus();checkNews(true);};
 mini=stored('mini')==='1';size();if(stored('hidden')==='1'){launch.hidden=true;q('.restore').hidden=false;}
 root.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
