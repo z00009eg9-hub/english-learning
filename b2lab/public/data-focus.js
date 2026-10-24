@@ -710,7 +710,44 @@ r29:{ unit:"g08", title:"第一條件句與 unless / as long as / in case",
     {bad:"If it will rain tomorrow, we will stay home.",good:"If it rains tomorrow, we will stay home.",why:"if 子句不用 will，用現在簡單式就能表示未來。"},
     {bad:"Unless you don't hurry, you will miss the train.",good:"Unless you hurry, you will miss the train.",why:"unless 本身就是 if ... not，後面再加 not 會變成雙重否定。"}
   ]
-}
+},
 
+r30:{ unit:"g07", title:"-ed 與 -ing 形容詞（worried / worrying）",
+  formula:"-ed 形容詞 → 有這種感覺的人（I was bored.）　|　-ing 形容詞 → 造成那種感覺的人或事（The film was boring.）",
+  points:[
+    "-ed 形容詞描述「人的感覺」：They were not disappointed at all. 失望的是人。",
+    "-ing 形容詞描述「造成感覺的人或事」：The result was surprising. 是那個結果讓人意外，不是結果自己覺得意外。",
+    "常用句型：be + -ed + 介系詞（interested in、worried about、bored with、excited about）；find / think + 受詞 + -ing（Tom found the offer annoying）。",
+    "東西幾乎只能用 -ing（a tiring day、a confusing map）；人兩種都能用，但意思差很多：He is boring.（他很無聊，讓別人覺得無聊）≠ He is bored.（他覺得無聊）。"
+  ],
+  examples:[
+    {en:"The instructions were confusing, so we were confused.",cn:"說明書很令人困惑，所以我們都搞糊塗了。",note:"-ing 說事、-ed 說人"},
+    {en:"She is really interested in second-hand furniture.",cn:"她對二手家具真的很有興趣。",note:"be interested in + 名詞"},
+    {en:"I found the whole weekend tiring.",cn:"我覺得整個週末都很累人。",note:"find + 受詞 + -ing"}
+  ],
+  traps:[
+    {bad:"I am very boring in this class.",good:"I am very bored in this class.",why:"要說「我覺得無聊」用 -ed；boring 會變成「我是個讓別人無聊的人」。"},
+    {bad:"The news was shocked.",good:"The news was shocking.",why:"消息是造成感覺的事物，用 -ing；-ed 留給有感覺的人（We were shocked.）。"}
+  ]
+},
+
+r31:{ unit:"g06", title:"使役與 have / get something done",
+  formula:"have / get + 受詞 + p.p.（安排別人做）　|　have / make / let + 人 + 原形V　|　get / want + 人 + to V",
+  points:[
+    "have / get + 受詞 + p.p. 表示「安排別人做某事」，重點在事情被做完，不必說是誰動手：She had the lighting adjusted three times.／She got two cameras moved higher.",
+    "have / make / let + 人 + 原形動詞，後面不加 to：She made the engineers write down every setting.（要求、逼得）／Her manager let her run those sessions.（允許）；help 後面加不加 to 都可以。",
+    "get 用在人身上要加 to：She got the engineers to move the cameras.（不是 got the engineers move）。",
+    "判斷關鍵是受詞在動作裡是被動還是主動：getting operators trained（作業員被訓練 → p.p.）vs. getting operators to check the line（作業員自己去檢查 → to V）。"
+  ],
+  examples:[
+    {en:"We had the air conditioner repaired last week.",cn:"我們上週請人把冷氣修好了。",note:"have + 物 + p.p."},
+    {en:"My parents never let me stay out late.",cn:"我爸媽從來不准我在外面待到很晚。",note:"let + 人 + 原形V"},
+    {en:"I got my brother to drive me to the airport.",cn:"我請我哥載我去機場。",note:"get + 人 + to V"}
+  ],
+  traps:[
+    {bad:"She had adjusted the lighting by the engineers.",good:"She had the lighting adjusted by the engineers.",why:"have something done 的語序是 have + 受詞 + p.p.；had adjusted 是過去完成式，意思會變成「她自己早就調好了」。"},
+    {bad:"My manager let me to run the session.",good:"My manager let me run the session.",why:"let / make / have 後面接原形動詞，不加 to；只有 get 才是 get someone to do。"}
+  ]
+}
 
 };

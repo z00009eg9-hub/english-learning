@@ -1700,6 +1700,149 @@ window.READING = [
      b2Cn:"只要你坐著不動、什麼都不說，牠們就會自己走過來。",
      spCn:"你就安靜坐在那，他自然會過來。"}
   ]
+},
+/* ---------------------------------------------------------- 30 */
+{
+  id:"r30", level:"B1+", topic:"二手與回收", words:239,
+  title:"The Shelf Nobody Wanted",
+  titleCn:"沒人想要的那個書架",
+  focus:"-ed 與 -ing 形容詞（worried / worrying）",
+  intro:"Tom 把家裡那個舊書架貼上二手社團送人。注意 -ing 形容詞（surprising、annoying、confusing）說的是「造成感覺的事物」，-ed 形容詞（disappointed、relieved、excited）說的是「有這種感覺的人」；find + 受詞 + -ing 也是很常見的句型。",
+  spoken:[
+    {en:"My place was so crowded that I finally put the old shelf online.",cn:"我家實在太擠了，最後我把那個舊書架貼上網。"},
+    {en:"I was surprised — eleven people replied in one night.",cn:"我很驚訝——一個晚上就有十一個人回我。"},
+    {en:"Some of the messages were really confusing, so I made one rule for everybody.",cn:"有些訊息真的很令人困惑，所以我訂了一條規則給所有人。"},
+    {en:"Giving it away was more satisfying than selling it, honestly.",cn:"老實說，送出去比賣掉更讓人滿足。"}
+  ],
+  paras:[
+    {en:"Tom's apartment in Taichung had become too crowded. A wooden shelf he had bought eight years earlier now held nothing but dusty boxes, so one evening he took a photo of it and posted it in a second-hand group online. He expected silence. The result was surprising: eleven people replied before midnight.",
+     cn:"Tom 在台中的公寓變得太擠了。一個八年前買的木頭書架，現在上面除了積灰塵的紙箱什麼都沒有，所以某天傍晚他拍了張照，貼到網路上的二手社團。他以為不會有人理。結果令人意外：半夜之前就有十一個人回覆。"},
+    {en:"The next two days were tiring. Several people asked for the exact size and then disappeared. One man offered half the price and called it a bargain, which Tom found annoying rather than funny. The messages became so confusing that in the end he wrote one short line to everybody: first come, first served, and please bring your own car.",
+     cn:"接下來兩天很累人。好幾個人問了確切尺寸，然後就消失了。有個男的出了一半的價，還說這很划算，Tom 覺得這很惱人，而不是好笑。訊息多到讓人一頭亂，最後他乾脆寫了一句話給所有人：先到先得，而且請自己開車來載。"},
+    {en:"On Saturday morning a young couple arrived. They were moving into their first apartment and were clearly excited about every piece of furniture they could find. Tom warned them about a long scratch down one side. They were not disappointed at all; the man said he would sand it down and polish it, because repairing old wood was relaxing for him.",
+     cn:"星期六早上來了一對年輕夫妻。他們正要搬進人生第一間公寓，對於每一件能找到的家具都明顯興奮。Tom 先提醒他們側面有一道長長的刮痕。他們一點也不失望；那位先生說他會把刮痕磨平再上蠟，因為修舊木頭對他來說很放鬆。"},
+    {en:"In the end they paid nothing. Tom decided to donate the shelf once he saw how carefully they wrapped it, and the couple left two bags of mangoes on his table instead. Standing in his suddenly empty corner, Tom felt relieved and, to his own surprise, a little proud. He has posted three more things since then. Nothing in that group is ever really thrown away.",
+     cn:"最後他們一塊錢都沒付。Tom 看見他們包得那麼小心，就決定把書架直接送出去，那對夫妻則留了兩袋芒果在他桌上。站在那個突然空出來的角落，Tom 覺得鬆了一口氣，而且出乎自己意料地有點驕傲。從那之後他又貼出了三樣東西。那個社團裡沒有一樣東西是真的被丟掉的。"}
+  ],
+  target:[
+    {w:"crowded",ipa:"/ˈkraʊdɪd/",pos:"adj.",cn:"擁擠的；塞滿東西的",def:"Too full of people or things.",ex:"The night bus to Hualien was so crowded that we stood all the way.",exCn:"開往花蓮的夜間巴士太擠了，我們一路都站著。"},
+    {w:"surprising",ipa:"/sɚˈpraɪzɪŋ/",pos:"adj.",cn:"令人驚訝的",def:"Causing a feeling that you did not expect.",ex:"It is surprising how quickly children pick up a second language.",exCn:"孩子學第二語言的速度快得令人驚訝。"},
+    {w:"bargain",ipa:"/ˈbɑːr.ɡɪn/",pos:"n.",cn:"便宜貨；划算的買賣",def:"Something you buy for much less than its usual price.",ex:"Two kilos of apples for fifty dollars is a real bargain.",exCn:"兩公斤蘋果五十元，真的很划算。"},
+    {w:"annoying",ipa:"/əˈnɔɪ.ɪŋ/",pos:"adj.",cn:"惱人的；讓人不耐煩的",def:"Making you feel a little angry or impatient.",ex:"The alarm next door rings every morning, and it is really annoying.",exCn:"隔壁的警報器每天早上都響，真的很惱人。"},
+    {w:"confusing",ipa:"/kənˈfjuːzɪŋ/",pos:"adj.",cn:"令人困惑的",def:"Hard to understand because it is not clear.",ex:"The map at the station was so confusing that we asked a guard.",exCn:"車站的地圖太令人困惑，我們只好去問站務員。"},
+    {w:"scratch",ipa:"/skrætʃ/",pos:"n.",cn:"刮痕",def:"A thin mark made on a surface by something sharp.",ex:"There is a small scratch on the screen of my new phone.",exCn:"我新手機的螢幕上有一道小刮痕。"},
+    {w:"furniture",ipa:"/ˈfɝː.nɪ.tʃɚ/",pos:"n.",cn:"家具",def:"Tables, chairs, beds and other large things in a room.",ex:"They bought all their furniture from one small shop near the market.",exCn:"他們所有的家具都在市場附近一家小店買的。"},
+    {w:"donate",ipa:"/doʊˈneɪt/",pos:"v.",cn:"捐出；捐贈",def:"To give something to a person or group that needs it.",ex:"Our office donates old computers to a primary school every year.",exCn:"我們辦公室每年都把舊電腦捐給一所小學。"}
+  ],
+  questions:[
+    {q:"Why did Tom put the shelf online?",
+     opts:["A. It was broken and dangerous","B. His apartment was too crowded and the shelf only held dusty boxes","C. He needed to get his money back","D. His landlord told him to"],
+     ans:1,
+     expl:"第一段：Tom's apartment ... had become too crowded ... now held nothing but dusty boxes。"},
+    {q:"“Tom found the low offer annoying.” Why “annoying” and not “annoyed”?",
+     opts:["A. Because the offer is the thing that caused the feeling","B. Because Tom is the one who had the feeling","C. Because it happened in the past","D. Because it comes after “found”"],
+     ans:0,
+     expl:"-ing 形容詞描述「造成感覺的人或事」，這裡是那個出價；-ed 形容詞才是描述有感覺的人，所以 Tom was annoyed. 也對，但主詞不同。"},
+    {q:"How did the couple react to the scratch?",
+     opts:["A. They asked for a lower price","B. They refused to take the shelf","C. They were not disappointed, and the man planned to sand and polish it","D. They did not notice it"],
+     ans:2,
+     expl:"第三段：They were not disappointed at all; the man said he would sand it down and polish it。"},
+    {q:"What happened at the end of the story?",
+     opts:["A. Tom sold the shelf for half the price","B. Tom gave the shelf away and was given mangoes","C. The couple changed their minds and left","D. Tom kept the shelf in the corner"],
+     ans:1,
+     expl:"最後一段：Tom decided to donate the shelf ... the couple left two bags of mangoes on his table instead。"}
+  ],
+  upgrade:[
+    {b1:"I was very surprised. Eleven people wrote to me that night.",
+     b2:"The response was surprising: eleven people replied before midnight.",
+     note:"同一件事可以從「人的感覺」(I was surprised) 或「事物的性質」(The response was surprising) 兩個角度講；-ed 說人、-ing 說造成感覺的事物，後者聽起來更客觀。",
+     sp:"I couldn't believe it — like eleven people messaged me that night.",
+     spNote:"口語常用 I couldn't believe it 代替 surprising，like 在這裡是「大概、就」的語氣詞，不是「像」。",
+     b1Cn:"我很驚訝。那天晚上有十一個人寫訊息給我。",
+     b2Cn:"回應令人意外：半夜之前就有十一個人回覆。",
+     spCn:"我真不敢相信——那天晚上大概有十一個人傳訊息給我。"},
+    {b1:"The scratch was not a problem for them. The man said he could fix it.",
+     b2:"They did not find the scratch disappointing; the man said he would sand it down.",
+     note:"find + 受詞 + -ing 形容詞（find it confusing / tiring / disappointing）是講「覺得某樣東西令人……」的常用句型，比 It was not a problem 精準得多。",
+     sp:"They were totally fine with the scratch — he said he'd just sand it.",
+     spNote:"be fine with something 是口語「不介意某件事」的說法，後面接名詞或 V-ing。",
+     b1Cn:"那道刮痕對他們來說不是問題。那位先生說他可以修。",
+     b2Cn:"他們不覺得那道刮痕令人失望；那位先生說他會把它磨平。",
+     spCn:"他們完全不介意那道刮痕——他說他磨一下就好。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 31 */
+{
+  id:"r31", level:"B2", topic:"自動化與技能", words:294,
+  title:"The Camera That Took Half Her Job",
+  titleCn:"接走她一半工作的那台相機",
+  focus:"使役與 have / get something done（have / make / let / get）",
+  intro:"Anita 的包裝線裝上自動檢查相機，她的工作被重新切了一刀。注意 have / get + 受詞 + p.p.（had the lighting adjusted）是「安排別人做、事情被做完」，have / make / let + 人 + 原形動詞則是「要求、逼得、允許」；受詞在動作裡是主動還是被動，決定後面用原形還是 p.p.。",
+  spoken:[
+    {en:"They had a camera system installed on our line last spring.",cn:"去年春天他們在我們的生產線上裝了一套相機系統。"},
+    {en:"For a month it stopped the line for every shadow. I had the lighting adjusted three times.",cn:"有一個月，它看到影子就停線。我請人把燈光調了三次。"},
+    {en:"My manager let me run the training myself, which I really did not expect.",cn:"我的主管讓我自己帶訓練，這真的是我沒想到的。"},
+    {en:"It did not take my job. It just made me do the harder half of it.",cn:"它沒有搶走我的工作，只是逼我去做比較難的那一半。"}
+  ],
+  paras:[
+    {en:"Last spring the factory where Anita works had an automatic camera system installed above the packing line. The supplier promised that the cameras would read every label and find every defect in less than a second. Anita, who had spent six years doing that inspection by hand, read the specification twice and then could not sleep. If a machine could count faults faster than she could, what was left for her?",
+     cn:"去年春天，Anita 工作的工廠在包裝線上方裝了一套自動相機系統。供應商保證那些相機能在不到一秒內讀完每一張標籤、找出每一個瑕疵。Anita 用手工做那項檢驗已經六年，她把規格書讀了兩遍，然後就睡不著了。如果機器數瑕疵比她還快，那還剩下什麼是她的工作？"},
+    {en:"The first month was humbling rather than frightening. The system caught scratches she would certainly have missed, but it also stopped the line for shadows and dust. Anita had the lighting adjusted three times, got two of the cameras moved twenty centimeters higher, and made the engineers write down every setting they changed. By June the false alarms had dropped by half, and nobody asked to switch the system off any more.",
+     cn:"第一個月讓人謙卑，而不是恐懼。那套系統抓到了她肯定會漏掉的刮痕，但它也會因為陰影和灰塵就停線。Anita 請人把燈光調了三次，請人把其中兩台相機往上移了二十公分，並且要求工程師把每一個改過的設定都寫下來。到了六月，誤判已經少了一半，也沒有人再要求把系統關掉。"},
+    {en:"What surprised her most was where her day went. She no longer counted defects, because the machine did that better. Instead she spent her mornings asking why the same defect kept coming back, and her afternoons getting operators trained on the new screens. Her manager let her run those sessions herself, and later had her write a short guide for two new trainees. Reading a spreadsheet had quietly become the most important part of her routine.",
+     cn:"最讓她意外的，是她一天的時間跑去哪裡了。她不再數瑕疵，因為機器做得更好。她改成用早上問「為什麼同一種瑕疵一直回來」，用下午帶作業員學新的操作畫面。她的主管讓她自己主持那些課，後來還請她為兩位新來的實習工程師寫一份簡短的指南。看懂試算表，已經悄悄變成她例行工作裡最重要的一環。"},
+    {en:"Anita still has the cameras calibrated every month, and she still argues with the supplier about software updates. But she describes her job differently now. The machine did not replace her; it took over the part of the work that a machine does better, and left her the part that needs someone to ask why. “It made me a better engineer,” she told her sister, “though I would never let it hear me say that.”",
+     cn:"Anita 現在還是每個月請人校正那些相機，也還是為了軟體更新跟供應商吵。但她現在講自己的工作，說法不一樣了。機器沒有取代她；它接走了機器本來就做得比較好的那一段，留給她的是需要有人追問「為什麼」的那一段。「它讓我變成更好的工程師，」她跟妹妹說，「不過我絕對不會讓它聽到我這麼說。」"}
+  ],
+  target:[
+    {w:"install",ipa:"/ɪnˈstɑːl/",pos:"v.",cn:"安裝",def:"To put a machine or program in place so that it can be used.",ex:"The landlord promised to install a new water heater before winter.",exCn:"房東答應在冬天前裝一台新的熱水器。"},
+    {w:"supplier",ipa:"/səˈplaɪɚ/",pos:"n.",cn:"供應商",def:"A company that provides goods or parts to another company.",ex:"Our main supplier in Hanoi closes for a week every Lunar New Year.",exCn:"我們在河內的主要供應商每年農曆新年都休一個星期。"},
+    {w:"defect",ipa:"/ˈdiː.fekt/",pos:"n.",cn:"瑕疵；缺陷",def:"A fault that makes something not good enough to sell or use.",ex:"A tiny defect in the zip meant the whole bag was sent back.",exCn:"拉鍊上一個小瑕疵，讓整個包包被退回。"},
+    {w:"inspection",ipa:"/ɪnˈspek.ʃən/",pos:"n.",cn:"檢驗；檢查",def:"The act of looking at something carefully to see if it is correct or safe.",ex:"The lift passed its yearly inspection on Tuesday.",exCn:"那部電梯星期二通過了年度檢查。"},
+    {w:"adjust",ipa:"/əˈdʒʌst/",pos:"v.",cn:"調整",def:"To change something a little so that it works better.",ex:"Please adjust your chair before you start typing.",exCn:"開始打字前，請先調整你的椅子。"},
+    {w:"operator",ipa:"/ˈɑːpəreɪtɚ/",pos:"n.",cn:"操作員；作業員",def:"A person whose job is to use a machine.",ex:"Each operator signs the log sheet at the end of the night.",exCn:"每位操作員在夜班結束時都要在紀錄表上簽名。"},
+    {w:"calibrate",ipa:"/ˈkæl.ə.breɪt/",pos:"v.",cn:"校正；校準",def:"To set a measuring tool so that it gives correct numbers.",ex:"We calibrate the kitchen scales once a season.",exCn:"我們每季校正一次廚房的秤。"},
+    {w:"spreadsheet",ipa:"/ˈspred.ʃiːt/",pos:"n.",cn:"試算表",def:"A computer file with rows and columns of numbers.",ex:"He keeps all his travel costs in one spreadsheet.",exCn:"他把所有旅費都記在同一份試算表裡。"},
+    {w:"routine",ipa:"/ruːˈtiːn/",pos:"n.",cn:"例行作業；固定做事的方式",def:"The usual way you do things, in the same order.",ex:"A short walk after dinner is part of my evening routine.",exCn:"晚餐後散散步是我晚間作息的一部分。"},
+    {w:"replace",ipa:"/rɪˈpleɪs/",pos:"v.",cn:"取代；更換",def:"To take the place of someone or something else.",ex:"Nothing can replace a good night's sleep.",exCn:"沒有什麼能取代一夜好眠。"}
+  ],
+  questions:[
+    {q:"Why could Anita not sleep after reading the specification?",
+     opts:["A. She had been moved to the night shift","B. She was afraid the machine would leave nothing for her to do","C. The new cameras were far too noisy","D. The supplier had sent the wrong system"],
+     ans:1,
+     expl:"第一段：If a machine could count faults faster than she could, what was left for her?"},
+    {q:"What did Anita do about the false alarms?",
+     opts:["A. She switched the system off at night","B. She had the lighting adjusted, had two cameras moved higher, and made the engineers record every change","C. She asked the supplier to replace all the cameras","D. She went back to checking every box by hand"],
+     ans:1,
+     expl:"第二段：Anita had the lighting adjusted three times, got two of the cameras moved ... and made the engineers write down every setting。"},
+    {q:"“Anita had the lighting adjusted three times.” Who most probably did the adjusting?",
+     opts:["A. Anita did it herself","B. Somebody else did it, and Anita arranged it","C. Nobody did it; it was only a plan","D. The lighting changed by itself"],
+     ans:1,
+     expl:"have + 受詞 + p.p.（have something done）表示「安排別人做」，動作不是主詞自己做的；若是自己動手，要寫 She adjusted the lighting herself。"},
+    {q:"How does Anita describe her job in the last paragraph?",
+     opts:["A. The machine has completely replaced her","B. The machine took the part it does better and left her the questions","C. Her work is exactly the same as six years ago","D. She is planning to leave the factory"],
+     ans:1,
+     expl:"最後一段：it took over the part of the work that a machine does better, and left her the part that needs someone to ask why。"}
+  ],
+  upgrade:[
+    {b1:"She asked the engineers to change the lighting. They changed it three times.",
+     b2:"She had the lighting adjusted three times.",
+     note:"have + 受詞 + p.p. 把「請人做、而且做完了」壓成一句；重點放在「燈光被調了」，所以不必說是誰動手的。",
+     sp:"She got them to tweak the lighting like three times.",
+     spNote:"get someone to do 是口語版的使役，tweak 是「小幅調一下」的口語說法，比 adjust 輕鬆。",
+     b1Cn:"她請工程師改燈光。他們改了三次。",
+     b2Cn:"她請人把燈光調了三次。",
+     spCn:"她叫他們把燈光調了大概三次。"},
+    {b1:"Her manager said yes, so she ran the training sessions herself.",
+     b2:"Her manager let her run those sessions herself.",
+     note:"let + 人 + 原形動詞（不加 to）直接點出「是誰給的許可」，比 said yes, so ... 緊湊；make 是「要求、逼得」，have 是「交辦」。",
+     sp:"Her boss was cool with her running the sessions.",
+     spNote:"be cool with something 是口語的「不反對、沒問題」，後面常接名詞或 V-ing。",
+     b1Cn:"她的主管同意了，所以那些訓練課是她自己帶的。",
+     b2Cn:"她的主管讓她自己主持那些課。",
+     spCn:"她老闆對她帶那些課沒什麼意見。"}
+  ]
 }
 
 ];
