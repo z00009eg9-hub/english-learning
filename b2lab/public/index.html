@@ -5787,6 +5787,7 @@ document.addEventListener('click',e=>{
 /* ---------- 點空白處停止朗讀（點按鈕、句子、單字不算空白） ---------- */
 document.addEventListener('click',e=>{
   if(!ttsBusy()) return;
+  if(e.target.closest('#b2-assistant')) return;   // 助理在 shadow DOM 裡，e.target 會被改成外殼，closest('button') 找不到
   if(e.target.closest('button,.spk,.sent,w,a,input,textarea,select,.opt3,.gloss')) return;
   if(typeof readSeq!=='undefined'&&readSeq) stopReadAll();
   if(typeof bkSeq!=='undefined'&&bkSeq) bkStop();
