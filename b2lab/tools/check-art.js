@@ -116,6 +116,8 @@ const bsrc = fs.readFileSync(__dirname + '/../public/data-book.js', 'utf8');
 const sb = bsrc.indexOf('  var S={'), cb = bsrc.indexOf('  var C={');
 const S = eval('(' + bsrc.slice(sb + 8, bsrc.indexOf('  };;', sb) + 3) + ')');
 const C = eval('(' + bsrc.slice(cb + 8, bsrc.indexOf('};', cb) + 1) + ')');
+/* 網站實際畫圖用的是 data-book.js 自己的圖示庫（BOOK_ICONS），genart 有但它沒有的圖示會畫成空白圓 */
+const { BOOK_KEYS } = require('./genart.js');
 const bk = [];
 for (const id in S) S[id].forEach((r, i) => bk.push({ key: id + '#' + i, id, i: r[0] }));
 for (const id in C) bk.push({ key: id + '（封面）', id, i: C[id] });
@@ -125,7 +127,7 @@ const bdates = [...new Set(bk.map(x => x.d))];
 const bookUse = {};
 bk.forEach(x => {
   if (x.i.length !== 5) err.push(x.key + '（課本）：圖示數 ' + x.i.length);
-  x.i.forEach(n => { if (!I[n]) err.push(x.key + '（課本）：沒有這個圖示 ' + n); });
+  x.i.forEach(n => { if (!I[n]) err.push(x.key + '（課本）：沒有這個圖示 ' + n); else if (!BOOK_KEYS.has(n)) err.push(x.key + '（課本）：' + n + ' 不在網站圖示庫 BOOK_ICONS（縮圖會空白）'); });
   if (new Set(x.i.map(family)).size !== x.i.length) err.push(x.key + '（課本）：同一組裡圖示重複 ' + x.i.join(','));
   const g = x.i.filter(n => GENERIC.includes(n));
   if (g.length > 1) err.push(x.key + '（課本）：萬用圖示超過 1 個 ' + g.join(','));

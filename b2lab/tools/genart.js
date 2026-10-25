@@ -105,10 +105,12 @@ const I = {
    新增圖示不可再撞名，tools/check-icons.js 會擋。 */
 let COLOR = {};   /* 圖示主色表，下面從 data-book.js 讀入 */
 const BUILTIN = Object.keys(I);   /* genart 自己畫的；BOOK_ICONS 撞名時以這套為準 */
+const BOOK_KEYS = new Set();      /* 網站課本插圖實際能畫的圖示（data-book.js 的 BOOK_ICONS） */
 {
   const g = global.window; global.window = {};
   require('../public/data-book.js');
   const B = global.window.BOOK_ICONS || {};
+  Object.keys(B).forEach(k => BOOK_KEYS.add(k));
   COLOR = global.window.BOOK_ICON_COLOR || {};
   global.window = g;
   for (const k in B) {
@@ -158,7 +160,7 @@ function banner(spec){
 }
 
 /* 給 tools/check-art.js 等腳本 require 用；直接執行時才跑下面的 CLI */
-module.exports = { P, I, GENERIC, SAME, family, banner, BUILTIN };
+module.exports = { P, I, GENERIC, SAME, family, banner, BUILTIN, BOOK_KEYS };
 if (require.main !== module) return;
 
 /* ---- CLI ---- */
