@@ -23855,6 +23855,222 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- qp02 品保實務二：客戶量的孔徑和我們不一樣 → 校驗過期、GR&R 不合格 ---- */
+  {
+   "id": "qp02",
+   "icon": "📏",
+   "video": true,
+   "date": "2026-10-25",
+   "title": "QA Practice II — Can We Trust the Number?",
+   "titleCn": "品保實務二｜客戶量的孔徑和我們不一樣：校驗過期、GR&R 不合格",
+   "topics": "品保實務, 量測, 校驗, 量具, MSA, 量測系統分析, GR&R, 重複性, 再現性, 卡尺, 通止針規, 隔離, 公差, 橢圓機, calibration, gauge R&R, pin gauge, quarantine",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "The caliper was overdue for calibration.",
+     "cn": "那支卡尺已經過了校驗期限。",
+     "pat": "be overdue for + 名詞",
+     "note": "過了校驗期限。overdue 是形容詞，後面用 for 接該做的事：overdue for calibration、overdue for maintenance。"
+    },
+    {
+     "n": 2,
+     "cn": "卡尺已經重新校驗過了。",
+     "pat": "has been + 過去分詞",
+     "note": "卡尺是「被校驗」，現在完成式的被動要用 has been + 過去分詞；少了 been 就變成卡尺自己去校驗別的東西。",
+     "wrong": "The caliper has recalibrated.",
+     "fix": "The caliper has been recalibrated."
+    },
+    {
+     "n": 3,
+     "ok": "There is a difference between our result and yours.",
+     "cn": "我們的結果和你們的有差異。",
+     "pat": "There is a difference between A and B",
+     "note": "兩個量測結果對不上時的中性說法，先承認有差異，不急著說誰對誰錯。"
+    },
+    {
+     "n": 4,
+     "cn": "我們週三前會檢查完。",
+     "pat": "by + 期限",
+     "note": "by 是「最晚在這個時間點之前完成」；until 是「一直持續到這個時間點」。說完成期限要用 by。",
+     "wrong": "We'll finish the check until Wednesday.",
+     "fix": "We'll finish the check by Wednesday."
+    },
+    {
+     "n": 5,
+     "ok": "We've quarantined 600 pieces.",
+     "cn": "我們已經把 600 件隔離了。",
+     "pat": "have + 過去分詞（已完成的處置）",
+     "note": "回報已經做好的處置用現在完成式，客戶聽到的是「現在已經是這個狀態」。"
+    },
+    {
+     "n": 6,
+     "cn": "每一支量具都有校驗標籤。",
+     "pat": "Every + 單數名詞 + 單數動詞",
+     "note": "every 後面接單數名詞，動詞也用單數：every gauge has，不是 every gauges。",
+     "wrong": "Every gauges has a calibration label.",
+     "fix": "Every gauge has a calibration label."
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    { "w": "calibration", "ipa": "/ˌkæləˈbreɪʃn/", "pos": "n.", "cn": "校驗、校正", "ex": "The torque wrench goes out for calibration every six months.", "exCn": "扭力扳手每六個月送校一次。" },
+    { "w": "gauge", "ipa": "/ɡeɪdʒ/", "pos": "n.", "cn": "量具、量規", "ex": "Put the gauge back in its box after you use it.", "exCn": "量具用完要放回盒子裡。" },
+    { "w": "overdue", "ipa": "/ˌoʊ.vɚˈduː/", "pos": "adj.", "cn": "過期的、逾期的", "ex": "Two scales on Line 3 are overdue, so don't use them today.", "exCn": "三線有兩台秤過期了，今天先別用。" },
+    { "w": "accuracy", "ipa": "/ˈæk.jɚ.ə.si/", "pos": "n.", "cn": "準確度（和真值有多接近）", "ex": "Dirt on the jaws can affect the accuracy of the reading.", "exCn": "量爪上有髒污會影響讀數的準確度。" },
+    { "w": "tolerance", "ipa": "/ˈtɑː.lɚ.əns/", "pos": "n.", "cn": "公差（允許的誤差範圍）", "ex": "The tolerance on this shaft is plus or minus 0.02 millimeters.", "exCn": "這根軸的公差是正負 0.02 毫米。" },
+    { "w": "quarantine", "ipa": "/ˈkwɔːr.ən.tiːn/", "pos": "n.", "cn": "隔離（把可疑品分開存放）", "ex": "Move the failed motors to the quarantine area.", "exCn": "把不合格的馬達移到隔離區。" },
+    { "w": "operator", "ipa": "/ˈɑːpəreɪtɚ/", "pos": "n.", "cn": "作業員、操作人員", "ex": "Each operator signs the check sheet at the end of the shift.", "exCn": "每位作業員下班前要在點檢表上簽名。" },
+    { "w": "traceable", "ipa": "/ˈtreɪ.sə.bəl/", "pos": "adj.", "cn": "可追溯的", "ex": "Each frame has a serial number, so it is traceable to the welding date.", "exCn": "每支車架都有序號，可以追溯到焊接日期。" }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "calibration due date", "cn": "校驗到期日" },
+    { "p": "calibration label", "cn": "校驗標籤" },
+    { "p": "gauge R&R study", "cn": "量具重複性與再現性研究（GR&R）" },
+    { "p": "go / no-go pin gauge", "cn": "通止針規" },
+    { "p": "out of tolerance", "cn": "超出公差" },
+    { "p": "quarantine area", "cn": "隔離區" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "QP2-A",
+     "title": "has / have been + 過去分詞（已經被處理好了）",
+     "pat": "主詞 + has / have been + 過去分詞",
+     "pts": [
+      "現在完成式的被動：重點是「東西現在已經被處理好」，不強調誰做的。",
+      "問句把 has 移到前面：Has it been recalibrated? 回答 Yes, it has. / No, it hasn't.",
+      "例：All the gauges on Line 2 have been checked.（二線所有量具都已經檢查過了。）"
+     ],
+     "ex": "All the gauges on Line 2 have been checked.",
+     "exCn": "二線所有量具都已經檢查過了。"
+    },
+    {
+     "k": "QP2-B",
+     "title": "There is a difference between A and B（兩個結果有差異）",
+     "pat": "There is a difference between A and B. / Why is there a difference?",
+     "pts": [
+      "比對兩個量測結果時最常用，語氣中性，不指責對方。",
+      "between 後面用 A and B；問原因時把 is 移到 there 前面：Why is there a difference?",
+      "例：There is a big difference between the morning and night readings.（早班和夜班的讀數差很多。）"
+     ],
+     "ex": "There is a big difference between the morning and night readings.",
+     "exCn": "早班和夜班的讀數差很多。"
+    },
+    {
+     "k": "QP2-C",
+     "title": "by vs until（期限前完成 vs 一直持續到）",
+     "pat": "動作 + by + 時間（最晚那時完成）／ 狀態 + until + 時間（持續到那時）",
+     "pts": [
+      "by Wednesday：週三或週三之前做完就好，用在 finish、send、check 這類有終點的動作。",
+      "until Wednesday：一直持續到週三才停，用在 keep、stay、wait 這類持續的狀態。",
+      "例：Keep the parts on hold until the lab result comes back.（零件先保留，等實驗室結果回來再說。）"
+     ],
+     "ex": "Keep the parts on hold until the lab result comes back.",
+     "exCn": "零件先保留，等實驗室結果回來再說。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "accuracy vs precision",
+     "sc": "accuracy（準確度）是量出來的數字和真值有多接近；precision（精密度）是重複量同一個東西，數字彼此有多一致。量具可能每次都一樣（精密）卻一直偏低（不準），就像這課的卡尺。",
+     "ex": "The readings were close to each other, but all of them were too low.",
+     "exCn": "讀數彼此很接近，但全部都偏低。",
+     "cn": "準確度 vs 精密度"
+    },
+    {
+     "u": "repeatability vs reproducibility",
+     "sc": "repeatability（重複性）是同一個人、同一支量具重複量同一個零件的變異；reproducibility（再現性）是不同的人量同一個零件的變異。GR&R 的 R&R 就是這兩個。",
+     "ex": "Repeatability is about the gauge; reproducibility is about the people.",
+     "exCn": "重複性主要看量具；再現性主要看人。",
+     "cn": "重複性 vs 再現性"
+    },
+    {
+     "u": "calibration vs verification",
+     "sc": "calibration（校驗）是拿量具和可追溯的標準比對，找出誤差並出具校驗證書，通常定期送校；verification（點檢）是使用前用標準件快速確認量具還正常，例如每天開工前用環規檢查一下。",
+     "ex": "We calibrate the caliper once a year and verify it every morning.",
+     "exCn": "卡尺每年校驗一次，每天早上點檢一次。",
+     "cn": "校驗 vs 點檢"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "背景｜校驗與 MSA 是什麼",
+     "title": "Can We Trust the Number?",
+     "titleCn": "背景｜量具校驗與量測系統分析（MSA）",
+     "paras": [
+      { "en": "Every measurement has some error. Before we use a number to accept or reject a part, we need to know that the gauge is right and that people use it in the same way.", "cn": "每次量測都有誤差。在用一個數字判定零件合格或不合格之前，要先確定量具是準的，而且大家的量法一致。" },
+      { "en": "Calibration compares a gauge with a reference standard, such as a gauge block. The standard must be traceable to a national standard, and each gauge has a due date for its next calibration.", "cn": "校驗是拿量具和參考標準（例如塊規）比對。標準件必須能追溯到國家標準，每支量具也都有下次校驗的到期日。" },
+      { "en": "A calibrated gauge can still give poor results. The operator may hold it at an angle, or the gauge may be the wrong tool for the feature, like a caliper on a small hole.", "cn": "校驗過的量具還是可能量不好：作業員可能拿歪了，或者量具根本不適合量這個部位，例如用卡尺量小孔。" },
+      { "en": "MSA, or measurement system analysis, checks the whole system: the gauge, the people and the method. The most common study is gauge R&R, which stands for repeatability and reproducibility.", "cn": "MSA（量測系統分析）檢查的是整個系統：量具、人和方法。最常見的研究是 GR&R，R&R 指的是重複性和再現性。" },
+      { "en": "In a typical study, three operators measure the same ten parts two or three times each, without seeing the earlier results.", "cn": "常見的做法是三位作業員量同樣十個零件，每個量兩到三次，而且量的時候看不到之前的結果。" },
+      { "en": "Many customers follow the AIAG guideline: under 10 percent is acceptable, 10 to 30 percent may be acceptable for some uses, and over 30 percent is not acceptable.", "cn": "很多客戶採用 AIAG 的準則：10% 以下可接受，10% 到 30% 視用途可能可接受，超過 30% 不可接受。" }
+     ],
+     "questions": [
+      { "q": "What does calibration compare a gauge with?", "qCn": "校驗是拿量具和什麼比對？", "a": "A reference standard, such as a gauge block.", "aCn": "參考標準，例如塊規。" },
+      { "q": "What does R&R stand for?", "qCn": "R&R 代表什麼？", "a": "Repeatability and reproducibility.", "aCn": "重複性和再現性。" },
+      { "q": "A gauge R&R result of 38 percent is ___. (A. acceptable / B. acceptable for some uses / C. not acceptable / D. not needed)", "qCn": "GR&R 結果 38% 屬於哪一種？", "a": "C. Not acceptable.", "aCn": "C. 不可接受。" }
+     ]
+    },
+    {
+     "bar": "情境｜客戶量的孔徑和我們不一樣",
+     "title": "Our Case: The Caliper Read Low",
+     "titleCn": "情境｜我們量 12.06、客戶量 12.14：卡尺校驗過期、GR&R 不合格（虛構情境）",
+     "paras": [
+      { "en": "Situation: A customer in the US measured the pin hole on our elliptical pedal arm and got 12.14 mm. The drawing says 12.00 to 12.10 mm, but our inspection record for the same lot says 12.06 mm. This is a practice case.", "cn": "情境：美國客戶量了我們橢圓機踏板臂的插銷孔，量到 12.14 毫米。圖面要求 12.00 到 12.10 毫米，但我們同一批的檢驗紀錄寫 12.06 毫米。這是練習用的虛構案例。" },
+      { "en": "Check 1: The caliper that IPQC used was two weeks overdue for calibration. After recalibration, we found that it read 0.05 mm low.", "cn": "查核一：製程檢驗用的那支卡尺，已經過了校驗期限兩週。重新校驗後發現它讀數偏低 0.05 毫米。" },
+      { "en": "Check 2: We ran a gauge R&R study on this hole with three operators, ten parts and three trials. The result was 38 percent, so a caliper is not suitable for this hole, even after calibration.", "cn": "查核二：針對這個孔做 GR&R，三位作業員、十個零件、各量三次，結果 38%。所以就算校驗過，卡尺也不適合量這個孔。" },
+      { "en": "Action 1: We quarantined the 600 pedal arms in our warehouse. We are checking every hole with go / no-go pin gauges: 12.00 go and 12.10 no-go.", "cn": "對策一：倉庫裡的 600 支踏板臂全部隔離，每個孔都用通止針規檢查：12.00 通、12.10 止。" },
+      { "en": "Action 2: We updated the control plan. This hole is now checked with pin gauges, and any new gauge for a key dimension needs a gauge R&R study first.", "cn": "對策二：更新管制計畫。這個孔改用針規檢查；以後重要尺寸要用新量具，必須先做 GR&R。" },
+      { "en": "Action 3: Every gauge now has a calibration label with its due date, and our system sends a reminder one week before the date.", "cn": "對策三：每支量具都貼上寫有到期日的校驗標籤，系統會在到期前一週發提醒。" }
+     ]
+    },
+    {
+     "bar": "演練｜客戶問為什麼數字不一樣",
+     "title": "Practice: Why Is There a Difference?",
+     "titleCn": "演練｜客戶來電：你們量的和我們量的為什麼不一樣？",
+     "paras": [
+      { "en": "Customer: Your record says 12.06 millimeters, but we measured 12.14. That's out of tolerance. Why is there a difference?", "cn": "客戶：你們紀錄寫 12.06 毫米，我們量到 12.14，超出公差了。為什麼會有差異？" },
+      { "en": "You: We checked our caliper. It was two weeks overdue for calibration.", "cn": "你：我們查了卡尺，它已經過了校驗期限兩週。" },
+      { "en": "Customer: Has it been recalibrated?", "cn": "客戶：重新校驗過了嗎？" },
+      { "en": "You: Yes, it has. It was reading 0.05 millimeters low.", "cn": "你：校過了。它讀數偏低 0.05 毫米。" },
+      { "en": "Customer: Did you do a gauge R&R study?", "cn": "客戶：你們有做 GR&R 嗎？" },
+      { "en": "You: Yes. The result was 38 percent, so the caliper isn't suitable for this hole.", "cn": "你：有，結果 38%，所以卡尺不適合量這個孔。" },
+      { "en": "Customer: What will you use instead?", "cn": "客戶：那你們要改用什麼？" },
+      { "en": "You: We'll use go / no-go pin gauges, 12.00 and 12.10.", "cn": "你：改用通止針規，12.00 和 12.10。" },
+      { "en": "Customer: What about the parts in your warehouse?", "cn": "客戶：倉庫裡的零件怎麼辦？" },
+      { "en": "You: We've quarantined 600 pieces, and we'll check all of them by Wednesday.", "cn": "你：600 件已經隔離了，週三前會全部檢查完。" },
+      { "en": "Customer: How will you stop this from happening again?", "cn": "客戶：你們要怎麼防止再發生？" },
+      { "en": "You: Every gauge now has a calibration label, and the system reminds us one week before the due date.", "cn": "你：現在每支量具都有校驗標籤，系統會在到期前一週提醒我們。" }
+     ]
+    },
+    {
+     "bar": "討論｜我們廠的現況",
+     "title": "Discussion: How Good Are Our Gauges?",
+     "titleCn": "討論｜我們廠的現況",
+     "paras": [
+      { "en": "Does every gauge on our lines have a calibration label, and who checks the due dates?", "cn": "我們產線上每支量具都有校驗標籤嗎？誰在追到期日？" },
+      { "en": "Which key dimensions do we still measure with a caliper, and should we use a pin gauge or a fixture instead?", "cn": "哪些重要尺寸我們還在用卡尺量？是不是該改用針規或檢具？" },
+      { "en": "Have we ever done a gauge R&R study, and what would we do if the result were over 30 percent?", "cn": "我們做過 GR&R 嗎？如果結果超過 30%，我們會怎麼處理？" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "Why is there a difference between our result and yours?", "cn": "我們的結果和你們的為什麼有差異？" },
+      { "en": "The caliper was overdue for calibration.", "cn": "那支卡尺已經過了校驗期限。" },
+      { "en": "It has been recalibrated.", "cn": "已經重新校驗過了。" },
+      { "en": "The caliper isn't suitable for this hole.", "cn": "卡尺不適合量這個孔。" },
+      { "en": "We've quarantined 600 pieces.", "cn": "我們已經把 600 件隔離了。" },
+      { "en": "We'll check all of them by Wednesday.", "cn": "我們週三前會全部檢查完。" }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -28673,6 +28889,7 @@ window.BOOK = {
     bk20251218:[[['toilet','wrench','suitcase','doc','moon'],'忙碌修繕的一天：馬桶、洗手台、磁磚出問題 → 打電話請水電工 → 旅行社規劃假期 → 到政府機關辦文件 → 晚上全部修好。']],
     bk20251226b:[[['signpost','exam','piggy','globe','sprout'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
     bk20260922:[[['eye','gear','plug','dumbbell','cart'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
+    qp02:[[['videocall','facesL','traffic','screenL','window'],'客戶量的孔徑和我們不一樣：我們量 12.06、客戶量 12.14 → 卡尺校驗過期兩週、讀數偏低 0.05 → GR&R 38% 不可接受 → 600 件隔離、改用通止針規 → 校驗標籤＋到期前提醒。']],
     qp01:[[['booksL','stethoL','building','officeL','briefcase'],'客戶要 EN ISO 20957 測試報告：手上只有內部測試紀錄 → 誠實說明、內部紀錄僅供參考 → 對照第 1、6 部做差異分析 → 送兩台樣品到認證實驗室、約四週出報告。']],
     qa05:[[['stepsL','globe','signpost','door','card'],'橢圓機踏板脫開：2010 兩品牌橢圓機召回約 18,000 台 → 踏板脫開 58 件、無人受傷 → 依序號範圍只召回受影響機台 → 模擬：銷孔過大、只用通規抓不到 → 序號綁批號、改用通止規。']],
     qa04:[[['flashlight','nurse','alarm','trophy','resume'],'J-cup 插銷焊道斷裂：2011 掛鉤召回約 5,500 個 → 焊道外觀正常卻熔深不足 → 1 人手腕扭傷 → 每班首件＋每兩小時破壞測試 → 不合格就停線隔離。']],

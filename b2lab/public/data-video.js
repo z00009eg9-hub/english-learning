@@ -51801,3 +51801,328 @@ window.VIDEO.qp01 = {
     "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
  ]
 };
+
+/* ---------- qp02 品保實務二 影片專屬插圖（每句一張，不重複；2026-10-25） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4', G='#3f9e64', M='#9aa5b1', Y='#f0b429';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'+txt(cx,cy+9,'?',25,'#fff'); };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'+txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round"><path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var arr=function(x1,y1,x2,y2,col){ var a=Math.atan2(y2-y1,x2-x1), h=8;
+    return '<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.5)).toFixed(1)+' '+(y2-h*Math.sin(a-0.5)).toFixed(1)+' M'+x2+' '+y2+' L'+(x2-h*Math.cos(a+0.5)).toFixed(1)+' '+(y2-h*Math.sin(a+0.5)).toFixed(1)+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'; };
+  var g=function(x,y,s,inner){ return '<g transform="translate('+x+' '+y+') scale('+s+')">'+inner+'</g>'; };
+  var phone=function(x,y){ return '<path d="M'+x+' '+y+' c-10 10 -6 30 14 46 c10 8 18 10 24 4 l4 -6 l-12 -10 l-6 5 c-6 -3 -14 -12 -16 -18 l5 -6 l-9 -12 z" fill="'+A+'" '+st+'/>'; };
+  var cal=function(x,y,col){ return '<rect x="'+x+'" y="'+y+'" width="44" height="40" rx="4" fill="#fff" '+st+'/><rect x="'+x+'" y="'+y+'" width="44" height="11" rx="4" fill="'+(col||A)+'" '+st+'/>'
+     +'<path d="M'+(x+8)+' '+(y+21)+' h28 M'+(x+8)+' '+(y+31)+' h28" stroke="'+M+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 4"/>'; };
+  var doc=function(x,y,w,h,hd,dash){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" stroke="'+D+'" stroke-width="3"'+(dash?' stroke-dasharray="6 5"':'')+'/>';
+    if(!dash){ s+='<rect x="'+(x+7)+'" y="'+(y+8)+'" width="'+(w-14)+'" height="8" rx="3" fill="'+(hd||A)+'"/>';
+      for(var k=y+27;k<y+h-7;k+=11) s+='<path d="M'+(x+9)+' '+k+' h'+(w-18)+'" stroke="'+M+'" stroke-width="3" stroke-linecap="round"/>'; }
+    return s; };
+  var seal=function(cx,cy,r){ return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="#fff" stroke="'+G+'" stroke-width="3"/><circle cx="'+cx+'" cy="'+cy+'" r="'+(r-5)+'" fill="none" stroke="'+G+'" stroke-width="2" stroke-dasharray="3 3"/>'+chk(cx-r*0.42,cy,r*0.85,G); };
+  /* 卡尺（scale 1 約 124×62；量爪在 x 2–12、38–48） */
+  var calp=function(x,y,s,val){
+    var inner='<rect x="0" y="12" width="124" height="12" rx="2" fill="'+M+'" '+st+'/>';
+    for(var i=0;i<8;i++) inner+='<path d="M'+(78+i*6)+' 12 v'+(i%2?4:6)+'" stroke="'+D+'" stroke-width="1.5"/>';
+    inner+='<path d="M2 24 L2 60 L10 52 L12 24 Z" fill="'+M+'" '+st+'/><path d="M4 12 V2 H9 V12" fill="'+M+'" '+st+'/>'
+      +'<path d="M38 32 L40 60 L48 52 L48 32 Z" fill="'+M+'" '+st+'/>'
+      +'<rect x="34" y="4" width="40" height="28" rx="4" fill="'+L+'" '+st+'/><rect x="39" y="9" width="30" height="12" rx="2" fill="'+B+'"/>'
+      +(val?txt(54,19,val,9,'#fff'):'');
+    return g(x,y,s,inner); };
+  /* 塊規 */
+  var blk=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="2" fill="#b9cfe6" '+st+'/><path d="M'+(x+4)+' '+(y+h-4)+' L'+(x+w-4)+' '+(y+4)+'" stroke="#fff" stroke-width="3" stroke-linecap="round"/>'; };
+  /* 作業員 */
+  var person=function(cx,cy,col){ return '<circle cx="'+cx+'" cy="'+cy+'" r="10" fill="'+L+'" '+st+'/><path d="M'+(cx-16)+' '+(cy+32)+' q0 -18 16 -18 q16 0 16 18 z" fill="'+col+'" '+st+'/>'; };
+  /* 校驗標籤（72×56） */
+  var lbl=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="72" height="56" rx="6" fill="#fff" '+st+'/><rect x="'+x+'" y="'+y+'" width="72" height="16" rx="6" fill="'+G+'" '+st+'/>'
+     +txt(x+36,y+12,'CAL',10,'#fff')+'<circle cx="'+(x+10)+'" cy="'+(y+34)+'" r="3.5" fill="none" stroke="'+D+'" stroke-width="2.5"/>'
+     +txt(x+42,y+34,'DUE',10,D)+'<path d="M'+(x+20)+' '+(y+45)+' h44" stroke="'+M+'" stroke-width="3" stroke-linecap="round"/>'; };
+  /* 針規：握把＋針，末端色帶 */
+  var pinG=function(x,y,col,lab){ return '<rect x="'+x+'" y="'+y+'" width="44" height="20" rx="4" fill="'+L+'" '+st+'/><rect x="'+(x+44)+'" y="'+(y+5)+'" width="56" height="10" rx="2" fill="'+M+'" '+st+'/>'
+     +'<rect x="'+(x+90)+'" y="'+(y+5)+'" width="10" height="10" fill="'+col+'" stroke="'+D+'" stroke-width="2"/>'+txt(x+72,y-5,lab,11,col); };
+  /* 踏板臂（插銷孔在左） */
+  var arm=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="80" height="30" rx="15" fill="'+L+'" '+st+'/><circle cx="'+(x+16)+'" cy="'+(y+15)+'" r="8" fill="#fff" '+st+'/><circle cx="'+(x+64)+'" cy="'+(y+15)+'" r="5" fill="'+M+'" '+st+'/>'; };
+  var crate=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="30" height="24" rx="2" fill="'+L+'" '+st+'/><path d="M'+(x+15)+' '+y+' v24" stroke="'+A+'" stroke-width="3"/>'; };
+  /* GR&R 判定尺：0–10 綠、10–30 黃、30–50 紅；v＝標記位置 */
+  var meter=function(x,y,w,v){ var s='<rect x="'+x+'" y="'+y+'" width="'+(w*0.2)+'" height="18" fill="'+G+'"/><rect x="'+(x+w*0.2)+'" y="'+y+'" width="'+(w*0.4)+'" height="18" fill="'+Y+'"/>'
+     +'<rect x="'+(x+w*0.6)+'" y="'+y+'" width="'+(w*0.4)+'" height="18" fill="'+R+'"/><rect x="'+x+'" y="'+y+'" width="'+w+'" height="18" rx="3" fill="none" '+st+'/>'
+     +txt(x+w*0.2,y+34,'10',11,D)+txt(x+w*0.6,y+34,'30',11,D);
+    if(v!=null){ var mx=x+v/50*w; s+='<path d="M'+mx+' '+(y-3)+' l-8 -13 h16 z" fill="'+D+'"/>'; }
+    return s; };
+  var lock=function(x,y){ return '<path d="M'+(x+8)+' '+(y+20)+' v-8 a12 12 0 0 1 24 0 v8" fill="none" stroke="'+D+'" stroke-width="5"/><rect x="'+x+'" y="'+(y+20)+'" width="40" height="30" rx="4" fill="'+Y+'" '+st+'/><circle cx="'+(x+20)+'" cy="'+(y+34)+'" r="4" fill="'+D+'"/>'; };
+  var bell=function(x,y){ return '<path d="M'+(x+6)+' '+(y+40)+' q0 -30 20 -32 q20 2 20 32 l6 8 h-52 z" fill="'+Y+'" '+st+'/><circle cx="'+(x+26)+'" cy="'+(y+53)+'" r="5" fill="'+D+'"/>'
+     +'<path d="M'+(x-6)+' '+(y+14)+' l-6 -4 M'+(x+58)+' '+(y+14)+' l6 -4" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'; };
+  /* 循環箭頭（再發） */
+  var loop=function(cx,cy,r,col){ var sx=cx+r*0.5, sy=cy-r*0.866, ex2=cx-r*0.5, ey=cy-r*0.866;
+    return '<path d="M'+sx+' '+sy+' A'+r+' '+r+' 0 1 1 '+ex2+' '+ey+'" fill="none" stroke="'+col+'" stroke-width="5" stroke-linecap="round"/>'+arr(ex2,ey,ex2+9,ey-5,col); };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* 0 旁白：數字能信嗎？ */
+    qp2Intro: svg(
+      calp(10,58,1,'12.06')
+     +qb(170,42)
+     +pill(140,106,54,26,'12.14',R,'#fff',12)),
+
+    /* 1 校驗：量具和塊規比對 */
+    qp2Cal: svg(
+      calp(6,30,0.8)
+     +blk(17,50,18,20)
+     +txt(124,72,'=',30,D)
+     +seal(166,62,24)
+     +pill(30,104,64,26,'STD',B,'#fff',13)),
+
+    /* 2 每支量具都有校驗標籤和到期日 */
+    qp2Due: svg(
+      calp(6,22,0.7)
+     +lbl(114,26)
+     +cal(26,92,G)
+     +arr(80,112,110,74,A)),
+
+    /* 3 校驗過的量具，人量法不同也會量錯 */
+    qp2Angle: svg(
+      person(48,34,B)+person(152,34,G)
+     +pill(16,90,64,26,'12.03',B,'#fff',12)
+     +pill(120,90,64,26,'12.08',G,'#fff',12)
+     +txt(100,110,'≠',30,R)),
+
+    /* 4 GR&R：重複性與再現性 */
+    qp2Grr: svg(
+      person(40,22,B)+person(100,22,G)+person(160,22,A)
+     +(function(){ var s=''; for(var r=0;r<2;r++) for(var c=0;c<5;c++) s+='<rect x="'+(32+c*28)+'" y="'+(70+r*22)+'" width="20" height="16" rx="3" fill="'+L+'" '+st+'/>'; return s; })()
+     +pill(70,118,60,26,'R&amp;R',B,'#fff',13)),
+
+    /* 5 10% 以下可接受，30% 以上不可 */
+    qp2Rule: svg(
+      meter(20,62,160,null)
+     +chk(28,40,18,G)
+     +ex(160,40,18,R)
+     +pill(56,112,88,26,'GR&amp;R %',D,'#fff',12)),
+
+    /* 6 客戶：紀錄 12.06，我們量 12.14 */
+    qp2Mismatch: svg(
+      doc(12,16,58,80,G)+pill(10,104,62,26,'12.06',G,'#fff',12)
+     +doc(130,16,58,80,B)+pill(128,104,62,26,'12.14',R,'#fff',12)
+     +qb(100,56)),
+
+    /* 7 Anita：卡尺過期兩週 */
+    qp2Overdue: svg(
+      cal(14,30,R)+ex(36,98,22,R)
+     +calp(80,34,0.85)
+     +pill(98,108,84,26,'+2 wk',R,'#fff',13)),
+
+    /* 8 客戶：重新校驗了嗎？ */
+    qp2RecalAsk: svg(
+      calp(10,40,0.8)
+     +blk(20,60,20,20)
+     +qb(168,52)),
+
+    /* 9 Anita：讀數偏低 0.05 */
+    qp2Low: svg(
+      calp(10,24,0.75,'12.06')
+     +arr(160,24,160,78,R)
+     +pill(112,92,82,28,'-0.05',R,'#fff',14)),
+
+    /* 10 客戶：做過 GR&R 嗎？ */
+    qp2GrrAsk: svg(
+      person(30,56,B)+person(72,56,G)+person(114,56,A)
+     +qb(170,40)),
+
+    /* 11 Anita：38%，卡尺不適合 */
+    qp2Result: svg(
+      meter(14,74,150,38)
+     +pill(56,14,88,32,'38%',R,'#fff',17)
+     +ex(184,83,16,R)),
+
+    /* 12 客戶：改用什麼？ */
+    qp2InsteadAsk: svg(
+      calp(8,48,0.6)+ex(46,70,26,R)
+     +arr(92,70,118,70,A)
+     +'<rect x="126" y="44" width="62" height="54" rx="6" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-dasharray="6 5"/>'
+     +txt(157,82,'?',30,A)),
+
+    /* 13 Anita：通止針規 12.00 / 12.10 */
+    qp2Pin: svg(
+      pinG(8,28,G,'GO')
+     +pinG(8,88,R,'NO-GO')
+     +arm(114,58)),
+
+    /* 14 客戶：倉庫裡的零件呢？ */
+    qp2StockAsk: svg(
+      '<path d="M12 20 V136 M136 20 V136 M12 62 H136 M12 102 H136" '+st+' fill="none"/>'
+     +crate(22,38)+crate(58,38)+crate(94,38)
+     +crate(22,78)+crate(58,78)+crate(94,78)
+     +qb(170,46)),
+
+    /* 15 Anita：600 件已隔離，週三前查完 */
+    qp2Quar: svg(
+      '<rect x="10" y="20" width="118" height="112" rx="4" fill="none" stroke="'+R+'" stroke-width="3" stroke-dasharray="8 6"/>'
+     +crate(22,44)+crate(54,44)+crate(86,44)
+     +crate(38,86)+crate(70,86)
+     +lock(148,26)
+     +pill(138,98,56,28,'600',A,'#fff',14)),
+
+    /* 16 客戶：怎麼防止再發生？ */
+    qp2AgainAsk: svg(
+      loop(78,80,42,A)
+     +ex(78,80,26,R)
+     +qb(170,40)),
+
+    /* 17 Anita：標籤＋到期前一週提醒 */
+    qp2Remind: svg(
+      lbl(12,30)
+     +bell(118,24)
+     +pill(102,104,90,26,'-7 days',B,'#fff',12)
+     +chk(28,108,22,G))
+  });
+})();
+
+window.VIDEO.qp02 = {
+ "title": "QA Practice II — Can We Trust the Number?",
+ "titleCn": "品保實務二｜客戶量的孔徑和我們不一樣：校驗過期、GR&R 不合格",
+ "date": "2026-10-25",
+ "level": "B2",
+ "scene": "QA Practice · Measurement & Calibration",
+ "sceneCn": "品保實務・量測與校驗",
+ "sceneArt": "caliper",
+ "titleArt": ["caliper", "gauge", "calendar"],
+ "cast": {
+  "N": { "name": "Narrator", "cn": "旁白", "voice": "n" },
+  "A": { "name": "Anita", "cn": "Anita・橢圓機工廠品保", "voice": "f" },
+  "M": { "name": "Mike", "cn": "Mike・客戶品保", "voice": "m" }
+ },
+ "chapters": [
+  { "en": "Intro", "cn": "開場" },
+  { "en": "The Basics", "cn": "背景：校驗與 GR&R" },
+  { "en": "The Customer Call", "cn": "情境：數字對不上" },
+  { "en": "Key Expressions", "cn": "重點表達" },
+  { "en": "Grammar", "cn": "文法" },
+  { "en": "Homework Fixes", "cn": "作業訂正" },
+  { "en": "Quick Quiz", "cn": "小測驗" }
+ ],
+ "expr": {
+  "calibration": { "t": "calibration", "cn": "校驗", "tag": ["品保實務", "量測"], "note": "拿量具和可追溯的標準比對；搭配：calibration due date。", "ex": "The torque wrench goes out for calibration every six months.", "exCn": "扭力扳手每六個月送校一次。" },
+  "gauge": { "t": "gauge", "cn": "量具", "tag": ["品保實務", "量測"], "note": "唸 /ɡeɪdʒ/，和 page 押韻；搭配：pin gauge、gauge R&R。", "ex": "Put the gauge back in its box after you use it.", "exCn": "量具用完要放回盒子裡。" },
+  "overdue": { "t": "overdue", "cn": "過期的", "tag": ["品保實務", "量測"], "note": "搭配：overdue for calibration（過了校驗期限）。", "ex": "Two scales on Line 3 are overdue, so don't use them today.", "exCn": "三線有兩台秤過期了，今天先別用。" },
+  "tolerance": { "t": "tolerance", "cn": "公差", "tag": ["品保實務", "圖面"], "note": "搭配：out of tolerance（超出公差）。", "ex": "The tolerance on this shaft is plus or minus 0.02 millimeters.", "exCn": "這根軸的公差是正負 0.02 毫米。" },
+  "quarantine": { "t": "quarantine", "cn": "隔離", "tag": ["品保實務", "不良品處置"], "note": "可疑品先分開放、不准出貨；搭配：quarantine area。", "ex": "Move the failed motors to the quarantine area.", "exCn": "把不合格的馬達移到隔離區。" }
+ },
+ "lines": [
+  { "ch": 0, "sp": "N", "vis": { "type": "title" },
+    "en": "Welcome back. Today our measurement and the customer's measurement don't match.",
+    "cn": "歡迎回來。今天我們量的和客戶量的對不上。" },
+  { "ch": 0, "sp": "N", "vis": { "type": "scene", "art": "qp2Intro" },
+    "en": "Can we trust the number? Let's learn how to talk about calibration and gauge R&R.",
+    "say": "Can we trust the number? Let's learn how to talk about calibration and gauge R and R.",
+    "cn": "這個數字能信嗎？來學怎麼談校驗和 GR&R。" },
+
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp2Cal" },
+    "en": "Calibration compares a gauge with a reference standard, such as a gauge block.",
+    "cn": "校驗是拿量具和參考標準比對，例如塊規。",
+    "hi": [{ "t": "Calibration", "cn": "校驗", "k": "calibration", "c": 1 }] },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp2Due" },
+    "en": "Every gauge has a calibration label with the next due date.",
+    "cn": "每支量具都有校驗標籤，寫著下次到期日。",
+    "hi": [{ "t": "gauge", "cn": "量具", "k": "gauge", "c": 1 }] },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp2Angle" },
+    "en": "But even a calibrated gauge can give a wrong number if people use it in different ways.",
+    "cn": "但就算量具校驗過，大家量法不同，數字還是可能錯。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp2Grr" },
+    "en": "A gauge R&R study checks repeatability and reproducibility.",
+    "say": "A gauge R and R study checks repeatability and reproducibility.",
+    "cn": "GR&R 研究檢查的是重複性和再現性。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp2Rule" },
+    "en": "Under 10 percent is acceptable. Over 30 percent is not acceptable.",
+    "cn": "10% 以下可接受，超過 30% 不可接受。" },
+
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp2Mismatch" },
+    "en": "Your record says 12.06 millimeters, but we measured 12.14. That's out of tolerance. Why is there a difference?",
+    "cn": "你們紀錄寫 12.06 毫米，我們量到 12.14，超出公差了。為什麼會有差異？",
+    "hi": [{ "t": "tolerance", "cn": "公差", "k": "tolerance", "c": 1 }] },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp2Overdue" },
+    "en": "We checked our caliper. It was two weeks overdue for calibration.",
+    "cn": "我們查了卡尺，它已經過了校驗期限兩週。",
+    "hi": [{ "t": "overdue", "cn": "過期的", "k": "overdue", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp2RecalAsk" },
+    "en": "Has it been recalibrated?",
+    "cn": "重新校驗過了嗎？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp2Low" },
+    "en": "Yes, it has. It was reading 0.05 millimeters low.",
+    "cn": "校過了。它讀數偏低 0.05 毫米。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp2GrrAsk" },
+    "en": "Did you do a gauge R&R study?",
+    "say": "Did you do a gauge R and R study?",
+    "cn": "你們有做 GR&R 嗎？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp2Result" },
+    "en": "Yes. The result was 38 percent, so the caliper isn't suitable for this hole.",
+    "cn": "有，結果 38%，所以卡尺不適合量這個孔。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp2InsteadAsk" },
+    "en": "What will you use instead?",
+    "cn": "那你們要改用什麼？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp2Pin" },
+    "en": "We'll use go / no-go pin gauges, 12.00 and 12.10.",
+    "say": "We'll use go, no-go pin gauges, twelve point oh oh, and twelve point one oh.",
+    "cn": "改用通止針規，12.00 和 12.10。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp2StockAsk" },
+    "en": "What about the parts in your warehouse?",
+    "cn": "倉庫裡的零件怎麼辦？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp2Quar" },
+    "en": "We've quarantined 600 pieces, and we'll check all of them by Wednesday.",
+    "cn": "600 件已經隔離了，週三前會全部檢查完。",
+    "hi": [{ "t": "quarantined", "cn": "隔離", "k": "quarantine", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp2AgainAsk" },
+    "en": "How will you stop this from happening again?",
+    "cn": "你們要怎麼防止再發生？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp2Remind" },
+    "en": "Every gauge now has a calibration label, and the system reminds us one week before the due date.",
+    "cn": "現在每支量具都有校驗標籤，系統會在到期前一週提醒我們。" },
+
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "calibration", "ipa": "/ˌkæləˈbreɪʃn/", "pos": "n.", "art": "gauge", "def": "calibration n. — a calibration due date.", "cn": "校驗｜搭配：校驗到期日", "note": "拿量具和可追溯的標準比對。" },
+    "en": "The torque wrench goes out for calibration every six months.", "cn": "扭力扳手每六個月送校一次。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "gauge", "ipa": "/ɡeɪdʒ/", "pos": "n.", "art": "caliper", "def": "gauge n. — a pin gauge.", "cn": "量具｜搭配：針規", "note": "唸 /ɡeɪdʒ/，u 不發音。" },
+    "en": "Put the gauge back in its box after you use it.", "cn": "量具用完要放回盒子裡。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "overdue", "ipa": "/ˌoʊ.vɚˈduː/", "pos": "adj.", "art": "calendar", "def": "overdue adj. — overdue for calibration.", "cn": "過期的｜搭配：過了校驗期限", "note": "後面用 for 接該做的事。" },
+    "en": "Two scales on Line 3 are overdue, so don't use them today.", "cn": "三線有兩台秤過期了，今天先別用。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "tolerance", "ipa": "/ˈtɑː.lɚ.əns/", "pos": "n.", "art": "scalesL", "def": "tolerance n. — out of tolerance.", "cn": "公差｜搭配：超出公差", "note": "圖面允許的誤差範圍。" },
+    "en": "The tolerance on this shaft is plus or minus 0.02 millimeters.", "cn": "這根軸的公差是正負 0.02 毫米。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "quarantine", "ipa": "/ˈkwɔːr.ən.tiːn/", "pos": "n.", "art": "lock", "def": "quarantine n. — the quarantine area.", "cn": "隔離｜搭配：隔離區", "note": "可疑品先分開放，不准出貨。" },
+    "en": "Move the failed motors to the quarantine area.", "cn": "把不合格的馬達移到隔離區。" },
+
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "has / have been + p.p.", "art": "check",
+      "rows": [{ "lab": "已經被處理好", "blocks": [{ "t": "All the gauges on Line 2", "k": "s" }, { "t": "have been checked", "k": "v" }] }] },
+    "en": "All the gauges on Line 2 have been checked.", "cn": "二線所有量具都已經檢查過了。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "There is a difference between A and B", "art": "search",
+      "rows": [{ "lab": "兩個結果有差異", "blocks": [{ "t": "There is a big difference", "k": "s" }, { "t": "between", "k": "v" }, { "t": "the morning and night readings", "k": "o" }] }] },
+    "en": "There is a big difference between the morning and night readings.", "cn": "早班和夜班的讀數差很多。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "by vs until", "art": "hourglass",
+      "rows": [{ "lab": "持續到那時", "blocks": [{ "t": "Keep the parts on hold", "k": "s" }, { "t": "until", "k": "v" }, { "t": "the lab result comes back", "k": "o" }] }] },
+    "en": "Keep the parts on hold until the lab result comes back.", "cn": "零件先保留，等實驗室結果回來再說。" },
+
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 1, "wrong": "The caliper has recalibrated.", "bad": ["has recalibrated"], "fix": "The caliper has been recalibrated." },
+    "en": "The caliper has been recalibrated.", "cn": "卡尺已經重新校驗過了。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 2, "wrong": "We'll finish the check until Wednesday.", "bad": ["until"], "fix": "We'll finish the check by Wednesday." },
+    "en": "We'll finish the check by Wednesday.", "cn": "我們週三前會檢查完。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 3, "wrong": "Every gauges has a calibration label.", "bad": ["gauges"], "fix": "Every gauge has a calibration label." },
+    "en": "Every gauge has a calibration label.", "cn": "每一支量具都有校驗標籤。" },
+
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "The caliper was overdue ___ calibration.", "a": "for", "n": 1 },
+    "en": "The caliper was overdue ___ calibration.", "cn": "那支卡尺已經過了校驗期限。",
+    "say": "The caliper was overdue , blank, calibration.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "Has it ___ recalibrated?", "a": "been", "n": 2 },
+    "en": "Has it ___ recalibrated?", "cn": "重新校驗過了嗎？",
+    "say": "Has it , blank, recalibrated?", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "Why is there a difference ___ our result and yours?", "a": "between", "n": 3 },
+    "en": "Why is there a difference ___ our result and yours?", "cn": "我們的結果和你們的為什麼有差異？",
+    "say": "Why is there a difference , blank, our result and yours?", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We'll check all of them ___ Wednesday.", "a": "by", "n": 4 },
+    "en": "We'll check all of them ___ Wednesday.", "cn": "我們週三＿＿會全部檢查完。",
+    "say": "We'll check all of them , blank, Wednesday.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "end" },
+    "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+ ]
+};
