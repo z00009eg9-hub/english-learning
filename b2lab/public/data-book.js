@@ -22790,6 +22790,216 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- qa02 品保新聞二：Peloton 座管兩次斷裂（CPSC 23-201、26-067）→ 再發防止 ---- */
+  {
+   "id": "qa02",
+   "icon": "🚲",
+   "video": true,
+   "date": "2026-10-25",
+   "title": "QA News II — The Seat Post That Broke Twice",
+   "titleCn": "品保新聞二｜同一個座管壞兩次 → 再發防止為什麼失敗",
+   "topics": "品保新聞, 召回, 再發防止, 飛輪車, 座管, 疲勞測試, recurrence, fatigue, validation, durability",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "The seat post can break during use.",
+     "cn": "座管可能在使用中斷裂。",
+     "pat": "主詞 + can + 動詞原形 + during use",
+     "note": "座管可能在使用中斷裂。can 表示「有可能發生」，召回公告描述風險時常用。"
+    },
+    {
+     "n": 2,
+     "cn": "這是我們第二次看到這種失效。",
+     "pat": "It is the second time + 主詞 + have/has + 過去分詞",
+     "note": "第二次看到這種失效。It is the first/second time 後面要用現在完成式，不用現在式。",
+     "wrong": "It is the second time we see this failure.",
+     "fix": "It is the second time we have seen this failure."
+    },
+    {
+     "n": 3,
+     "ok": "We should have reviewed model B as well.",
+     "cn": "我們當時應該連 B 機種一起檢討。",
+     "pat": "should have + 過去分詞",
+     "note": "當時應該一起檢討 B 機種（但沒做）。should have done 用來檢討過去該做沒做的事。"
+    },
+    {
+     "n": 4,
+     "cn": "我們加了疲勞測試，讓問題不再發生。",
+     "pat": "… so that + 主詞 + 現在式",
+     "note": "加疲勞測試，讓問題不再發生。so that 後面講未來的目的，用現在式 does not happen。",
+     "wrong": "We added a fatigue test so that the problem does not happened again.",
+     "fix": "We added a fatigue test so that the problem does not happen again."
+    },
+    {
+     "n": 5,
+     "ok": "Stop using the bike until the new seat post is installed.",
+     "cn": "新座管裝好之前，先停止使用這台車。",
+     "pat": "Stop + V-ing + until + 主詞 + 現在式",
+     "note": "新座管裝好前停止使用。stop 後接 V-ing 表示停止做某事；until 子句用現在式。"
+    },
+    {
+     "n": 6,
+     "cn": "共有 35 件座管斷裂通報。",
+     "pat": "There were + 數字 + 複數名詞",
+     "note": "35 件通報。數字大於一，report 要加 -s。",
+     "wrong": "There were 35 report of broken seat posts.",
+     "fix": "There were 35 reports of broken seat posts."
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    { "w": "seat post", "ipa": "/ˈsiːt ˌpoʊst/", "pos": "n.", "cn": "座管", "ex": "Please measure the seat post diameter on ten samples.", "exCn": "請量十支樣品的座管外徑。" },
+    { "w": "detach", "ipa": "/dɪˈtætʃ/", "pos": "v.", "cn": "脫離、分離", "ex": "The cover detached during the drop test.", "exCn": "摔落測試時外蓋脫落了。" },
+    { "w": "fatigue", "ipa": "/fəˈtiːɡ/", "pos": "n.", "cn": "（金屬）疲勞", "ex": "Metal fatigue can start at a sharp corner.", "exCn": "金屬疲勞可能從尖角開始。" },
+    { "w": "crack", "ipa": "/kræk/", "pos": "n.", "cn": "裂痕", "ex": "The inspector found a small crack near the weld.", "exCn": "檢驗員在焊道附近發現一條小裂痕。" },
+    { "w": "load", "ipa": "/loʊd/", "pos": "n.", "cn": "負載", "ex": "The rack must hold a load of 300 kilograms.", "exCn": "這個架子必須承受 300 公斤的負載。" },
+    { "w": "validation", "ipa": "/ˌvæl.əˈdeɪ.ʃən/", "pos": "n.", "cn": "驗證（確認設計符合實際使用）", "ex": "Validation must finish before mass production.", "exCn": "驗證必須在量產前完成。" },
+    { "w": "recurrence", "ipa": "/rɪˈkɝː.əns/", "pos": "n.", "cn": "再發", "ex": "Our goal is zero recurrence within six months.", "exCn": "我們的目標是六個月內零再發。" },
+    { "w": "durability", "ipa": "/ˌdʊr.əˈbɪl.ə.t̬i/", "pos": "n.", "cn": "耐久性", "ex": "The new belt passed the durability test.", "exCn": "新皮帶通過了耐久測試。" }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "break during use", "cn": "使用中斷裂" },
+    { "p": "fatigue crack", "cn": "疲勞裂紋" },
+    { "p": "static load test", "cn": "靜態負載測試（只壓一次）" },
+    { "p": "cyclic load", "cn": "反覆負載" },
+    { "p": "part family", "cn": "同系列零件（設計相近的一群零件）" },
+    { "p": "lessons learned", "cn": "經驗教訓（記錄下來給其他機種參考）" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "QA2-A",
+     "title": "It is the second time + 現在完成式（第幾次發生）",
+     "pat": "It is the first / second time + 主詞 + have/has + 過去分詞",
+     "pts": [
+      "說「這是第幾次」時，後面要用現在完成式，因為是在算「到目前為止」的次數。",
+      "向客戶說明再發時很常用，語氣直接、不迴避。",
+      "例：It is the first time this customer has rejected a lot.（這是這個客戶第一次退批。）"
+     ],
+     "ex": "It is the first time this customer has rejected a lot.",
+     "exCn": "這是這個客戶第一次退批。"
+    },
+    {
+     "k": "QA2-B",
+     "title": "should have + 過去分詞（檢討該做沒做的事）",
+     "pat": "主詞 + should have + 過去分詞",
+     "pts": [
+      "表示過去應該做、但實際上沒做，用在 8D 檢討和經驗教訓。",
+      "否定 should not have done＝不應該做卻做了。",
+      "例：We should have checked the welds on every model.（我們當時應該檢查每個機種的焊道。）"
+     ],
+     "ex": "We should have checked the welds on every model.",
+     "exCn": "我們當時應該檢查每個機種的焊道。"
+    },
+    {
+     "k": "QA2-C",
+     "title": "… so that + 子句（說明對策的目的）",
+     "pat": "動作 + so that + 主詞 + 現在式／can／will",
+     "pts": [
+      "so that 後面接完整句子，說明「做這件事是為了什麼結果」。",
+      "講未來的目的時常用現在式或 can、will。",
+      "例：We label every rack so that operators can trace the lot.（每個架子都貼標籤，讓作業員能追溯批號。）"
+     ],
+     "ex": "We label every rack so that operators can trace the lot.",
+     "exCn": "每個架子都貼標籤，讓作業員能追溯批號。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "static load test vs fatigue test",
+     "sc": "static load test 是一次壓到規定重量，看會不會壞；fatigue test 是反覆施加負載幾萬次，模擬長期使用。座管、把手、焊道這類受反覆力的零件，只做靜態測試不夠。",
+     "ex": "The part passed the static load test but failed the fatigue test.",
+     "exCn": "零件通過靜態負載測試，卻沒通過疲勞測試。",
+     "cn": "靜態負載 vs 疲勞測試"
+    },
+    {
+     "u": "correction vs prevention",
+     "sc": "correction 是把這次出問題的東西修好；prevention 是讓同樣問題不再發生，包括其他機種。只修一台機種、沒水平展開，就只做到 correction。",
+     "ex": "Replacing the seat posts is a correction. Reviewing every model is prevention.",
+     "exCn": "更換座管是修正；檢討所有機種才是預防。",
+     "cn": "修正 vs 預防"
+    },
+    {
+     "u": "crack vs break",
+     "sc": "crack 是出現裂痕、零件還連著；break 是斷開。疲勞失效通常先有 crack，再發展成 break。",
+     "ex": "A small crack can grow until the part breaks.",
+     "exCn": "小裂痕會一直擴大，直到零件斷掉。",
+     "cn": "裂痕 vs 斷裂"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "新聞｜同一個座管壞兩次",
+     "title": "The Seat Post That Broke Twice",
+     "titleCn": "新聞｜Peloton 飛輪車座管兩度召回",
+     "paras": [
+      { "en": "In May 2023, Peloton recalled about 2.2 million of its original exercise bikes, model PL01. The seat post could break during use, and riders could fall. The company had received 35 reports of seat posts breaking and detaching, including 13 injuries such as a broken wrist, cuts, and bruises.", "cn": "2023 年 5 月，Peloton 召回約 220 萬台初代飛輪車（型號 PL01）。座管可能在使用中斷裂，騎乘者可能摔倒。公司已接獲 35 件座管斷裂脫落通報，其中 13 件受傷，包括手腕骨折、割傷和瘀傷。" },
+      { "en": "The remedy was a free replacement seat post that owners could install themselves. Until then, they were told to stop using the bike.", "cn": "補救方式是免費更換座管，車主可以自行安裝；在那之前，車主被要求停止使用。" },
+      { "en": "In November 2025, the same kind of problem appeared again — this time on a different model. Peloton recalled about 833,000 Bike+ units, model PL02, because their seat post assembly could also break during use. There were three reports of seat posts breaking and detaching, and two riders were hurt in falls.", "cn": "2025 年 11 月，同類問題再次出現，這次是另一個機型。Peloton 召回約 83.3 萬台 Bike+（型號 PL02），原因同樣是座管組件可能在使用中斷裂。共有 3 件座管斷裂脫落通報，2 名騎乘者摔倒受傷。" },
+      { "en": "Again, the remedy was a free seat post and the same instruction: stop riding until it is replaced. According to the CPSC notices, both bikes were made in Taiwan.", "cn": "補救方式同樣是免費座管，指示也一樣：更換前停止騎乘。根據 CPSC 公告，兩款車都在台灣製造。" },
+      { "en": "The public notices do not explain the engineering cause. But for any quality team, the pattern raises a clear question: when one model has a field failure, which other models share the same part — and who checks them?", "cn": "公開公告沒有說明工程上的原因。但對任何品保團隊來說，這個模式都帶出一個明確的問題：一個機種發生市場失效時，還有哪些機種共用同樣的零件？又是誰去檢查它們？" }
+     ],
+     "questions": [
+      { "q": "What was the hazard in both recalls?", "qCn": "兩次召回的危險是什麼？", "a": "The seat post could break during use, and riders could fall.", "aCn": "座管可能在使用中斷裂，騎乘者可能摔倒。" },
+      { "q": "How was the 2025 recall different from the 2023 recall? (A. It was a different part. / B. It was a different model. / C. It had no injuries. / D. It was made in another country.)", "qCn": "2025 年的召回跟 2023 年有什麼不同？", "a": "B. It was a different model.", "aCn": "B. 是不同的機型。" },
+      { "q": "What question does the article say quality teams should ask?", "qCn": "文章說品保團隊應該問什麼問題？", "a": "Which other models share the same part, and who checks them?", "aCn": "還有哪些機種共用同樣的零件？由誰檢查？" }
+     ]
+    },
+    {
+     "bar": "模擬｜再發的 8D 回覆",
+     "title": "Simulation: Explaining a Recurrence",
+     "titleCn": "模擬｜你是座管供應商 QA，說明為什麼再發（虛構情境）",
+     "paras": [
+      { "en": "Situation: Your factory supplies seat posts for two bike models, A and B. Model A had a field failure last year and was fixed. Now model B has a broken seat post. This is a practice case, not Peloton's real analysis.", "cn": "情境：你的工廠供應 A、B 兩個車款的座管。A 款去年發生市場失效並已改善，現在 B 款也出現座管斷裂。這是練習用的虛構案例，不是 Peloton 的實際分析。" },
+      { "en": "D2 Problem: It is the second time we have seen a broken seat post in the field. This time, it is on model B.", "cn": "D2 問題描述：這是我們第二次在市場上看到座管斷裂，這次是 B 款。" },
+      { "en": "D3 Containment: We have stopped shipping model B seat posts and are checking all stock for cracks.", "cn": "D3 圍堵：B 款座管已停止出貨，所有庫存正在檢查有無裂痕。" },
+      { "en": "D4 Root cause: A fatigue crack formed at the clamp area under repeated loads.", "cn": "D4 根因：在反覆負載下，夾緊處產生疲勞裂紋。" },
+      { "en": "D4 Escape point: Our validation used a single static load test, not a fatigue test. The fix from last year was applied only to model A.", "cn": "D4 流出原因：驗證只做一次靜態負載測試，沒做疲勞測試；去年的對策也只套用到 A 款。" },
+      { "en": "D5/D6 Corrective action: We added a fatigue test to validation so that cracks are found before mass production.", "cn": "D5／D6 矯正對策：驗證加入疲勞測試，讓裂紋在量產前就被找出來。" },
+      { "en": "D7 Prevention: We should have reviewed model B last year. Now every model in the same part family is on one lessons-learned list.", "cn": "D7 預防再發：去年就應該一起檢討 B 款。現在同系列零件的所有機種都列在同一份經驗教訓清單。" }
+     ]
+    },
+    {
+     "bar": "演練｜客戶追問再發",
+     "title": "Practice: Why Did It Happen Again?",
+     "titleCn": "演練｜客戶追問：為什麼又發生？",
+     "paras": [
+      { "en": "Customer: We fixed this on model A. Why did it happen again on model B?", "cn": "客戶：A 款已經改善了，為什麼 B 款又發生？" },
+      { "en": "You: The fix was applied only to model A. We did not review model B at that time.", "cn": "你：對策只套用到 A 款，當時沒有檢討 B 款。" },
+      { "en": "Customer: Didn't your validation test catch it?", "cn": "客戶：你們的驗證測試沒抓到嗎？" },
+      { "en": "You: No. Our test used a single static load, not repeated loads.", "cn": "你：沒有。我們的測試只壓一次靜態負載，沒做反覆負載。" },
+      { "en": "Customer: How will you stop it from happening a third time?", "cn": "客戶：你們要怎麼避免第三次發生？" },
+      { "en": "You: We added a fatigue test, and every model with the same part is now on one checklist.", "cn": "你：我們加了疲勞測試，而且所有用同樣零件的機種都列在同一份檢查清單上。" }
+     ]
+    },
+    {
+     "bar": "討論｜如果發生在我們廠",
+     "title": "Discussion: What If It Happened Here?",
+     "titleCn": "討論｜如果發生在我們廠",
+     "paras": [
+      { "en": "Which of our bikes, ellipticals, and racks share the same seat post, clamp, or weld design?", "cn": "我們的飛輪車、橢圓機、重訓架，哪些共用同樣的座管、夾具或焊接設計？" },
+      { "en": "Do we run fatigue tests, or only static load tests?", "cn": "我們有做疲勞測試，還是只做靜態負載測試？" },
+      { "en": "When we fix one model, who is responsible for checking the others?", "cn": "我們改善一個機種時，由誰負責檢查其他機種？" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "It is the second time we have seen this failure.", "cn": "這是我們第二次看到這種失效。" },
+      { "en": "The fix was applied only to model A.", "cn": "對策只套用到 A 款。" },
+      { "en": "A fatigue crack formed under repeated loads.", "cn": "在反覆負載下產生疲勞裂紋。" },
+      { "en": "Our test used a single static load, not repeated loads.", "cn": "我們的測試只壓一次靜態負載，沒做反覆負載。" },
+      { "en": "We should have reviewed model B as well.", "cn": "當時應該連 B 款一起檢討。" },
+      { "en": "We added a fatigue test so that the problem does not happen again.", "cn": "我們加了疲勞測試，讓問題不再發生。" }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -27608,6 +27818,7 @@ window.BOOK = {
     bk20251218:[[['toilet','wrench','suitcase','doc','moon'],'忙碌修繕的一天：馬桶、洗手台、磁磚出問題 → 打電話請水電工 → 旅行社規劃假期 → 到政府機關辦文件 → 晚上全部修好。']],
     bk20251226b:[[['signpost','exam','piggy','globe','sprout'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
     bk20260922:[[['eye','gear','plug','dumbbell','cart'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
+    qa02:[[['bike','bandage','gift','chartDown','notebook'],'同一個座管壞兩次：2023 初代飛輪車座管斷裂召回 → 13 件受傷 → 免費座管自行更換 → 2025 另一款再度召回 → 再發防止與水平展開。']],
     qa01:[[['dumbbell','bolt','flame','question','toolboxL'],'跑步機電源線召回：家用跑步機擴大召回 → 電源線從插座鬆脫 → 接觸不良過熱 27 件 → 8D 查根因與流出點 → 改自鎖插頭並水平展開。']],
     au01:[[['cert','calendar','stamp','shield','hourglass'],'ISO 認證問答：尚未取得認證 → 目標 2027 年 6 月 → 先提出輔導公司簽呈 → 由品保負責 → 目標日期不等於已完成。']],
     au02:[[['meeting','doc','idcard','timetable','warning'],'組織圖問答：列出課級以上姓名與年資 → 各部門提供資料 → 由人資負責 → 目標 10 月 19 日 → 仍標示 Open，尚未完成。']],

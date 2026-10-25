@@ -50259,3 +50259,295 @@ window.VIDEO.qa01 = {
     "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
  ]
 };
+
+/* ---------- qa02 品保新聞二 影片專屬插圖（每句一張，不重複；2026-10-25） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4', G='#3f9e64', M='#9aa5b1';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'+txt(cx,cy+9,'?',25,'#fff'); };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'+txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round"><path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    return s; };
+  var gap=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="5" fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5"/>'; };
+  var tri=function(cx,cy,s){ return '<path d="M'+cx+' '+(cy-s)+' L'+(cx+s*1.15)+' '+(cy+s*0.8)+' H'+(cx-s*1.15)+' Z" fill="#fff" stroke="'+R+'" stroke-width="3" stroke-linejoin="round"/>'+txt(cx,cy+s*0.5,'!',s*1.1,R); };
+  var arr=function(x1,y1,x2,y2,col){ var a=Math.atan2(y2-y1,x2-x1), h=8;
+    return '<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.5)).toFixed(1)+' '+(y2-h*Math.sin(a-0.5)).toFixed(1)+' M'+x2+' '+y2+' L'+(x2-h*Math.cos(a+0.5)).toFixed(1)+' '+(y2-h*Math.sin(a+0.5)).toFixed(1)+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'; };
+  var g=function(x,y,s,inner){ return '<g transform="translate('+x+' '+y+') scale('+s+')">'+inner+'</g>'; };
+  var zig=function(x,y,w){ return '<path d="M'+x+' '+y+' l'+(w/4)+' -4 l'+(w/4)+' 6 l'+(w/4)+' -6 l'+(w/4)+' 4" stroke="'+R+'" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  /* 飛輪車（約 80×70）；broken＝座管斷開、座墊歪掉；screen＝把手上有螢幕 */
+  var bike=function(x,y,s,o){ o=o||{}; var seat='<path d="M40 30 L36 18" '+thw(5)+'/><path d="M26 16 h18" '+thw(6)+'/>';
+    return g(x,y,s,
+      '<path d="M8 66 h68" '+thw(4)+'/>'
+     +'<path d="M24 66 L40 30 L60 50" '+thw(4)+'/>'
+     +(o.broken? '<path d="M40 30 L39 26" '+thw(5)+'/><g transform="rotate(-28 37 20) translate(-8 -8)">'+seat+'</g>'+zig(31,27,14) : seat)
+     +'<path d="M60 50 L62 16 L72 14" '+thw(4)+'/>'
+     +(o.screen? '<rect x="62" y="0" width="20" height="14" rx="2" fill="'+B+'" '+st+'/>' : '')
+     +'<circle cx="60" cy="50" r="14" fill="#fff" '+st+'/><circle cx="60" cy="50" r="4" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'); };
+  /* 單支座管特寫：(x,y) 座墊左上，h 管長；crack＝裂痕位置（距管頂），ok＝綠色 */
+  var post=function(x,y,h,crack,col){ var s='<path d="M'+x+' '+y+' q22 -10 44 0 q-6 10 -22 10 q-16 0 -22 -10 z" fill="'+(col||A)+'" '+st+'/>'
+     +'<rect x="'+(x+16)+'" y="'+(y+9)+'" width="12" height="'+h+'" rx="3" fill="'+M+'" '+st+'/>'
+     +'<rect x="'+(x+11)+'" y="'+(y+h*0.55)+'" width="22" height="9" rx="3" fill="'+L+'" '+st+'/>';
+    if(crack) s+=zig(x+14,y+9+crack,16);
+    return s; };
+  var cyc=function(cx,cy,r,col){ return '<path d="M'+(cx+r)+' '+cy+' A'+r+' '+r+' 0 1 1 '+cx+' '+(cy-r)+'" fill="none" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M'+cx+' '+(cy-r)+' l9 -5 M'+cx+' '+(cy-r)+' l7 7" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'; };
+  var phone=function(x,y){ return '<path d="M'+x+' '+y+' c-10 10 -6 30 14 46 c10 8 18 10 24 4 l4 -6 l-12 -10 l-6 5 c-6 -3 -14 -12 -16 -18 l5 -6 l-9 -12 z" fill="'+A+'" '+st+'/>'; };
+  var lens=function(cx,cy,r){ return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="#fff" fill-opacity="0.55" stroke="'+D+'" stroke-width="3.5"/>'
+     +'<path d="M'+(cx+r*0.7).toFixed(1)+' '+(cy+r*0.7).toFixed(1)+' l'+(r*0.75).toFixed(1)+' '+(r*0.75).toFixed(1)+'" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'; };
+  var rig=function(x,y){ return '<path d="M'+x+' '+(y+92)+' h96 M'+(x+8)+' '+(y+92)+' V'+y+' M'+(x+88)+' '+(y+92)+' V'+y+' M'+(x+2)+' '+y+' h92" '+thw(4)+'/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 0 旁白：同一個問題，兩次召回 */
+    qa2Intro: svg(
+      bike(10,40,1.0,{broken:true})
+     +bike(104,40,1.0,{broken:true,screen:true})
+     +pill(74,6,52,26,'2×',R,'#fff',15)),
+
+    /* 1 2023：初代飛輪車座管斷裂，約 220 萬台 */
+    qa2News1: svg(
+      bike(14,30,1.35,{broken:true})
+     +tri(160,40,18)
+     +pill(128,96,62,26,'2.2M',R,'#fff',14)),
+
+    /* 2 35 件通報，13 件受傷（手腕骨折等） */
+    qa2Injury: svg(
+      '<g transform="rotate(-20 70 80)"><rect x="20" y="66" width="96" height="26" rx="12" fill="'+L+'" '+st+'/>'
+     +'<rect x="70" y="62" width="40" height="34" rx="8" fill="#fff" '+st+'/>'
+     +'<path d="M80 62 v34 M90 62 v34 M100 62 v34" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>'
+     +'<circle cx="124" cy="79" r="13" fill="'+L+'" '+st+'/></g>'
+     +pill(140,96,48,26,'13',R,'#fff',15)
+     +pill(140,20,48,26,'35',A,'#fff',15)),
+
+    /* 3 補救：免費座管，車主自行更換；之前停止使用 */
+    qa2Remedy: svg(
+      '<path d="M20 70 h70 v54 h-70 z" fill="'+L+'" '+st+'/><path d="M20 70 l10 -14 h70 l-10 14 M90 70 l10 -14 v54 l-10 14" fill="'+C+'" '+st+'/>'
+     +'<g transform="rotate(-12 60 40)">'+post(38,18,44,0,G)+'</g>'
+     +chk(130,40,24,G)
+     +'<circle cx="152" cy="104" r="22" fill="#fff" stroke="'+R+'" stroke-width="3.5"/>'+g(136,92,0.38,bike(0,0,1,{}))
+     +'<path d="M137 89 L167 119" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'),
+
+    /* 4 2025：另一款（有螢幕）同類問題再召回，約 83.3 萬台 */
+    qa2News2: svg(
+      bike(14,26,1.35,{broken:true,screen:true})
+     +pill(122,100,70,26,'833K',R,'#fff',14)),
+
+    /* 5 兩款都在台灣製造 */
+    qa2Taiwan: svg(
+      '<path d="M20 110 V60 l22 -16 v16 l22 -16 v16 l22 -16 v66 z" fill="'+L+'" '+st+'/>'
+     +'<rect x="34" y="84" width="14" height="26" fill="#fff" '+st+'/><rect x="58" y="78" width="16" height="12" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M10 112 h180" '+thw(3)+'/>'
+     +bike(100,72,0.55,{})+bike(146,72,0.55,{screen:true})
+     +'<path d="M150 22 c-12 0 -18 9 -18 18 c0 13 18 28 18 28 s18 -15 18 -28 c0 -9 -6 -18 -18 -18 z" fill="'+R+'" '+st+'/><circle cx="150" cy="40" r="6" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'),
+
+    /* 6 公告沒寫原因：哪些機種共用同樣零件？ */
+    qa2Same: svg(
+      post(14,20,92,40)
+     +post(140,20,92,40)
+     +'<path d="M62 69 H136" stroke="'+B+'" stroke-width="2.8" stroke-dasharray="6 5"/>'
+     +pill(76,86,48,26,'=',B,'#fff',18)),
+
+    /* 7 客戶：A 款修好了，為什麼 B 款又發生？ */
+    qa2CallAsk: svg(
+      phone(28,42)
+     +post(70,24,80,0,G)+chk(86,128,14,G)
+     +post(118,24,80,34)
+     +qb(176,40)),
+
+    /* 8 Anita：對策只套用到 A 款，沒檢討 B 款 */
+    qa2OnlyA: svg(
+      post(22,24,84,0,G)
+     +chk(32,132,18,G)
+     +arr(76,70,104,70,G)
+     +post(118,24,84,0)
+     +gap(108,14,64,116)
+     +ex(182,26,12,R)),
+
+    /* 9 客戶：根因是什麼？ */
+    qa2RootAsk: svg(
+      '<rect x="50" y="10" width="22" height="130" rx="4" fill="'+M+'" '+st+'/>'
+     +'<rect x="40" y="70" width="42" height="18" rx="4" fill="'+L+'" '+st+'/>'
+     +zig(48,64,26)
+     +lens(62,62,24)
+     +qb(160,44)),
+
+    /* 10 Anita：反覆負載下，夾緊處產生疲勞裂紋 */
+    qa2Fatigue: svg(
+      post(30,16,104,52)
+     +'<path d="M120 30 v80 M110 42 l10 -12 l10 12 M110 98 l10 12 l10 -12" stroke="'+B+'" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+     +cyc(164,70,16,B)),
+
+    /* 11 客戶：驗證測試沒抓到嗎？ */
+    qa2TestAsk: svg(
+      rig(14,30)
+     +post(40,48,60,0)
+     +doc(130,74,52,62,true)
+     +qb(156,40)),
+
+    /* 12 Anita：只壓一次靜態負載，沒做反覆負載 */
+    qa2Static: svg(
+      rig(10,30)
+     +'<rect x="38" y="36" width="40" height="24" rx="4" fill="'+D+'"/>'+txt(58,53,'kg',13,'#fff')
+     +'<path d="M58 60 v8" '+thw(4)+'/>'
+     +post(36,68,40,0)
+     +pill(124,24,52,26,'1×',G,'#fff',15)
+     +cyc(150,100,18,M)+'<path d="M128 78 L172 122" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'),
+
+    /* 13 客戶：怎麼避免第三次？ */
+    qa2NextAsk: svg(
+      bike(4,62,0.6,{broken:true})
+     +bike(56,62,0.6,{broken:true,screen:true})
+     +'<rect x="108" y="56" width="54" height="50" rx="8" fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5"/>'
+     +txt(135,92,'3',28,R)
+     +qb(176,34)),
+
+    /* 14 Anita：加疲勞測試，同系列零件全列同一份清單 */
+    qa2Lessons: svg(
+      doc(16,18,80,116,true)
+     +chk(26,54,14,G)+'<path d="M48 50 h38" '+thw(2.5)+'/>'
+     +chk(26,80,14,G)+'<path d="M48 76 h38" '+thw(2.5)+'/>'
+     +chk(26,106,14,G)+'<path d="M48 102 h30" '+thw(2.5)+'/>'
+     +cyc(150,36,18,B)+pill(128,62,44,22,'∞',B,'#fff',15)
+     +post(104,104,22,0,G)+post(152,104,22,0,G))
+  });
+})();
+
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.qa02 = {
+ "title": "QA News II — The Seat Post That Broke Twice",
+ "titleCn": "品保新聞二｜同一個座管壞兩次 → 再發防止為什麼失敗",
+ "date": "2026-10-25",
+ "level": "B2",
+ "scene": "QA News · Why Did It Happen Again?",
+ "sceneCn": "品保新聞・為什麼又發生？",
+ "sceneArt": "bike",
+ "titleArt": ["bike", "wrench", "clipboard"],
+ "cast": {
+  "N": { "name": "Narrator", "cn": "旁白", "voice": "n" },
+  "A": { "name": "Anita", "cn": "Anita・座管供應商品保", "voice": "f" },
+  "M": { "name": "Mike", "cn": "Mike・客戶品保", "voice": "m" }
+ },
+ "chapters": [
+  { "en": "Intro", "cn": "開場" },
+  { "en": "The News", "cn": "新聞：兩次召回" },
+  { "en": "The Customer Call", "cn": "情境：客戶追問再發" },
+  { "en": "Key Expressions", "cn": "重點表達" },
+  { "en": "Grammar", "cn": "文法" },
+  { "en": "Homework Fixes", "cn": "作業訂正" },
+  { "en": "Quick Quiz", "cn": "小測驗" }
+ ],
+ "expr": {
+  "fatigue": { "t": "fatigue", "cn": "（金屬）疲勞", "tag": ["品保新聞", "失效模式"], "note": "搭配：fatigue crack（疲勞裂紋）、fatigue test（疲勞測試）。", "ex": "Metal fatigue can start at a sharp corner.", "exCn": "金屬疲勞可能從尖角開始。" },
+  "detach": { "t": "detach", "cn": "脫離、分離", "tag": ["品保新聞", "召回用語"], "note": "召回公告常見：break and detach（斷裂脫落）。", "ex": "The cover detached during the drop test.", "exCn": "摔落測試時外蓋脫落了。" },
+  "validation": { "t": "validation", "cn": "驗證", "tag": ["品保新聞", "設計驗證"], "note": "確認設計符合實際使用條件。", "ex": "Validation must finish before mass production.", "exCn": "驗證必須在量產前完成。" },
+  "recurrence": { "t": "recurrence", "cn": "再發", "tag": ["品保新聞", "8D D7"], "note": "搭配：prevent recurrence（防止再發）。", "ex": "Our goal is zero recurrence within six months.", "exCn": "我們的目標是六個月內零再發。" },
+  "load": { "t": "load", "cn": "負載", "tag": ["品保新聞", "測試"], "note": "搭配：static load（靜態負載）、repeated loads（反覆負載）。", "ex": "The rack must hold a load of 300 kilograms.", "exCn": "這個架子必須承受 300 公斤的負載。" }
+ },
+ "lines": [
+  { "ch": 0, "sp": "N", "vis": { "type": "title" },
+    "en": "Welcome back. Today's story is about a problem that came back.",
+    "cn": "歡迎回來。今天的故事，是一個「又回來了」的問題。" },
+  { "ch": 0, "sp": "N", "vis": { "type": "scene", "art": "qa2Intro" },
+    "en": "The same kind of part broke on two different bikes. We will ask why, and how to stop it.",
+    "cn": "同一類零件在兩款不同的車上斷裂。我們要問為什麼，以及怎麼阻止它。",
+    "hi": [{ "t": "recurrence", "cn": "再發", "k": "recurrence", "c": 1 }] },
+
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa2News1" },
+    "en": "In May 2023, Peloton recalled about 2.2 million original bikes. The seat post could break during use.",
+    "cn": "2023 年 5 月，Peloton 召回約 220 萬台初代飛輪車，座管可能在使用中斷裂。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa2Injury" },
+    "en": "There were 35 reports of seat posts breaking and detaching, and 13 riders were hurt.",
+    "cn": "共有 35 件座管斷裂脫落通報，13 名騎乘者受傷。",
+    "hi": [{ "t": "detach", "cn": "脫離", "k": "detach", "c": 1 }] },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa2Remedy" },
+    "en": "The fix was a free seat post that owners could install. Until then, they had to stop riding.",
+    "cn": "對策是免費座管，車主可自行安裝；在那之前必須停止騎乘。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa2News2" },
+    "en": "In November 2025, it happened again — on a different model. About 833,000 Bike+ units were recalled.",
+    "cn": "2025 年 11 月，問題再度發生，這次是另一個機型：約 83.3 萬台 Bike+ 被召回。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa2Taiwan" },
+    "en": "According to the recall notices, both bikes were made in Taiwan.",
+    "cn": "根據召回公告，兩款車都在台灣製造。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa2Same" },
+    "en": "The notices do not explain the cause. But they raise a question: which other models share the same part?",
+    "cn": "公告沒有說明原因，但帶出一個問題：還有哪些機種共用同樣的零件？" },
+
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa2CallAsk" },
+    "en": "We fixed this on model A. Why did it happen again on model B?",
+    "cn": "A 款已經改善了，為什麼 B 款又發生？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa2OnlyA" },
+    "en": "The fix was applied only to model A. We did not review model B at that time.",
+    "cn": "對策只套用到 A 款，當時沒有檢討 B 款。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa2RootAsk" },
+    "en": "So what is the root cause?",
+    "cn": "那根因是什麼？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa2Fatigue" },
+    "en": "A fatigue crack formed at the clamp area under repeated loads.",
+    "cn": "在反覆負載下，夾緊處產生了疲勞裂紋。",
+    "hi": [{ "t": "fatigue", "cn": "疲勞", "k": "fatigue", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa2TestAsk" },
+    "en": "Didn't your validation test catch it?",
+    "cn": "你們的驗證測試沒抓到嗎？",
+    "hi": [{ "t": "validation", "cn": "驗證", "k": "validation", "c": 1 }] },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa2Static" },
+    "en": "No. Our test used a single static load, not repeated loads.",
+    "cn": "沒有。我們的測試只壓一次靜態負載，沒做反覆負載。",
+    "hi": [{ "t": "load", "cn": "負載", "k": "load", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa2NextAsk" },
+    "en": "How will you stop it from happening a third time?",
+    "cn": "你們要怎麼避免第三次發生？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa2Lessons" },
+    "en": "We added a fatigue test, and every model with the same part is now on one checklist.",
+    "cn": "我們加了疲勞測試，而且所有用同樣零件的機種都列在同一份清單上。" },
+
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "fatigue", "ipa": "/fəˈtiːɡ/", "pos": "n.", "art": "chartDown", "def": "fatigue n. — fatigue crack.", "cn": "（金屬）疲勞｜搭配：疲勞裂紋", "note": "搭配：fatigue crack、fatigue test。" },
+    "en": "Metal fatigue can start at a sharp corner.", "cn": "金屬疲勞可能從尖角開始。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "detach", "ipa": "/dɪˈtætʃ/", "pos": "v.", "art": "warning", "def": "detach v. — break and detach.", "cn": "脫離｜搭配：斷裂脫落", "note": "召回公告常見：break and detach。" },
+    "en": "The cover detached during the drop test.", "cn": "摔落測試時外蓋脫落了。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "validation", "ipa": "/ˌvæl.əˈdeɪ.ʃən/", "pos": "n.", "art": "cert", "def": "validation n. — design validation.", "cn": "驗證｜搭配：設計驗證", "note": "確認設計符合實際使用條件。" },
+    "en": "Validation must finish before mass production.", "cn": "驗證必須在量產前完成。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "recurrence", "ipa": "/rɪˈkɝː.əns/", "pos": "n.", "art": "shield", "def": "recurrence n. — prevent recurrence.", "cn": "再發｜搭配：防止再發", "note": "搭配：prevent recurrence。" },
+    "en": "Our goal is zero recurrence within six months.", "cn": "我們的目標是六個月內零再發。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "load", "ipa": "/loʊd/", "pos": "n.", "art": "dumbbell", "def": "load n. — repeated loads.", "cn": "負載｜搭配：反覆負載", "note": "搭配：static load、repeated loads。" },
+    "en": "The rack must hold a load of 300 kilograms.", "cn": "這個架子必須承受 300 公斤的負載。" },
+
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "It is the second time + have done", "art": "calendar",
+      "rows": [{ "lab": "第幾次發生", "blocks": [{ "t": "It is the second time", "k": "s" }, { "t": "we have", "k": "v" }, { "t": "過去分詞 …", "k": "o" }] }] },
+    "en": "It is the first time this customer has rejected a lot.", "cn": "這是這個客戶第一次退批。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "should have + past participle", "art": "notebook",
+      "rows": [{ "lab": "該做沒做", "blocks": [{ "t": "We", "k": "s" }, { "t": "should have checked", "k": "v" }, { "t": "the welds", "k": "o" }] }] },
+    "en": "We should have checked the welds on every model.", "cn": "我們當時應該檢查每個機種的焊道。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "… so that + clause", "art": "target",
+      "rows": [{ "lab": "對策的目的", "blocks": [{ "t": "動作", "k": "s" }, { "t": "so that", "k": "v" }, { "t": "主詞 + can / 現在式", "k": "o" }] }] },
+    "en": "We label every rack so that operators can trace the lot.", "cn": "每個架子都貼標籤，讓作業員能追溯批號。" },
+
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 1, "wrong": "It is the second time we see this failure.", "bad": ["see"], "fix": "It is the second time we have seen this failure." },
+    "en": "It is the second time we have seen this failure.", "cn": "這是我們第二次看到這種失效。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 2, "wrong": "We added a fatigue test so that the problem does not happened again.", "bad": ["happened"], "fix": "We added a fatigue test so that the problem does not happen again." },
+    "en": "We added a fatigue test so that the problem does not happen again.", "cn": "我們加了疲勞測試，讓問題不再發生。" },
+
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "The seat post can break ___ use.", "a": "during", "n": 1 },
+    "en": "The seat post can break ___ use.", "cn": "座管可能在使用＿＿斷裂。",
+    "say": "The seat post can break , blank, use.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "A ___ crack formed under repeated loads.", "a": "fatigue", "n": 2 },
+    "en": "A ___ crack formed under repeated loads.", "cn": "在反覆負載下產生＿＿裂紋。",
+    "say": "A , blank, crack formed under repeated loads.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We should have ___ model B as well.", "a": "reviewed", "n": 3 },
+    "en": "We should have ___ model B as well.", "cn": "當時應該連 B 款一起＿＿。",
+    "say": "We should have , blank, model B as well.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "Our goal is zero ___.", "a": "recurrence", "n": 4 },
+    "en": "Our goal is zero ___.", "cn": "我們的目標是零＿＿。",
+    "say": "Our goal is zero , blank.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "end" },
+    "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+ ]
+};
