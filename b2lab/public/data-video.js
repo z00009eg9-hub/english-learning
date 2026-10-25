@@ -51151,3 +51151,323 @@ window.VIDEO.qa04 = {
     "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
  ]
 };
+
+/* ---------- qa05 品保新聞五 影片專屬插圖（每句一張，不重複；2026-10-25） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4', G='#3f9e64', M='#9aa5b1';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'+txt(cx,cy+9,'?',25,'#fff'); };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'+txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round"><path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var tri=function(cx,cy,s){ return '<path d="M'+cx+' '+(cy-s)+' L'+(cx+s*1.15)+' '+(cy+s*0.8)+' H'+(cx-s*1.15)+' Z" fill="#fff" stroke="'+R+'" stroke-width="3" stroke-linejoin="round"/>'+txt(cx,cy+s*0.5,'!',s*1.1,R); };
+  var arr=function(x1,y1,x2,y2,col){ var a=Math.atan2(y2-y1,x2-x1), h=8;
+    return '<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.5)).toFixed(1)+' '+(y2-h*Math.sin(a-0.5)).toFixed(1)+' M'+x2+' '+y2+' L'+(x2-h*Math.cos(a+0.5)).toFixed(1)+' '+(y2-h*Math.sin(a+0.5)).toFixed(1)+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'; };
+  var g=function(x,y,s,inner){ return '<g transform="translate('+x+' '+y+') scale('+s+')">'+inner+'</g>'; };
+  var zig=function(x,y,w){ return '<path d="M'+x+' '+y+' l'+(w/4)+' -4 l'+(w/4)+' 6 l'+(w/4)+' -6 l'+(w/4)+' 4" stroke="'+R+'" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var phone=function(x,y){ return '<path d="M'+x+' '+y+' c-10 10 -6 30 14 46 c10 8 18 10 24 4 l4 -6 l-12 -10 l-6 5 c-6 -3 -14 -12 -16 -18 l5 -6 l-9 -12 z" fill="'+A+'" '+st+'/>'; };
+  var lens=function(cx,cy,r){ return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="#fff" fill-opacity="0.55" stroke="'+D+'" stroke-width="3.5"/>'
+     +'<path d="M'+(cx+r*0.7).toFixed(1)+' '+(cy+r*0.7).toFixed(1)+' l'+(r*0.75).toFixed(1)+' '+(r*0.75).toFixed(1)+'" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'; };
+  var factory=function(x,y,s){ return g(x,y,s,'<path d="M0 66 V16 l22 -16 v16 l22 -16 v16 l22 -16 v66 z" fill="'+L+'" '+st+'/>'
+     +'<rect x="14" y="40" width="14" height="26" fill="#fff" '+st+'/><rect x="38" y="34" width="16" height="12" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/>'); };
+  var box=function(x,y){ return '<path d="M'+x+' '+(y+14)+' h70 v54 h-70 z" fill="'+L+'" '+st+'/><path d="M'+x+' '+(y+14)+' l10 -14 h70 l-10 14 M'+(x+70)+' '+(y+14)+' l10 -14 v54 l-10 14" fill="'+C+'" '+st+'/>'; };
+  var cal=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="44" height="40" rx="4" fill="#fff" '+st+'/><rect x="'+x+'" y="'+y+'" width="44" height="11" rx="4" fill="'+A+'" '+st+'/>'
+     +'<circle cx="'+(x+29)+'" cy="'+(y+26)+'" r="8" fill="none" stroke="'+R+'" stroke-width="3"/><path d="M'+(x+8)+' '+(y+22)+' h8 M'+(x+8)+' '+(y+31)+' h8" stroke="'+M+'" stroke-width="3" stroke-linecap="round"/>'; };
+  var mpin=function(cx,cy){ return '<path d="M'+cx+' '+cy+' c-12 0 -18 9 -18 18 c0 13 18 28 18 28 s18 -15 18 -28 c0 -9 -6 -18 -18 -18 z" fill="'+R+'" '+st+'/><circle cx="'+cx+'" cy="'+(cy+18)+'" r="6" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'; };
+  var stop=function(cx,cy,r){ var p=[]; for(var k=0;k<8;k++){ var a=Math.PI/8+k*Math.PI/4; p.push((cx+r*Math.cos(a)).toFixed(1)+' '+(cy+r*Math.sin(a)).toFixed(1)); }
+    return '<path d="M'+p.join(' L')+' Z" fill="'+R+'" '+st+'/><rect x="'+(cx-r*0.55)+'" y="'+(cy-5)+'" width="'+(r*1.1)+'" height="10" rx="3" fill="#fff"/>'; };
+  var wrench=function(x,y){ return '<g transform="translate('+x+' '+y+') rotate(-30)"><rect x="0" y="-6" width="52" height="12" rx="6" fill="'+M+'" '+st+'/><circle cx="60" cy="0" r="14" fill="'+M+'" '+st+'/><rect x="60" y="-6" width="16" height="12" fill="'+C+'"/></g>'; };
+  var eye=function(cx,cy){ return '<path d="M'+(cx-24)+' '+cy+' q24 -22 48 0 q-24 22 -48 0 z" fill="#fff" '+st+'/><circle cx="'+cx+'" cy="'+cy+'" r="8" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/><circle cx="'+cx+'" cy="'+cy+'" r="3" fill="'+D+'"/>'; };
+  var doc=function(x,y,w,h){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/><rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    for(var k=y+30;k<y+h-8;k+=13) s+='<path d="M'+(x+10)+' '+k+' h'+(w-20)+'" stroke="'+M+'" stroke-width="3" stroke-linecap="round"/>';
+    return s; };
+  /* 橢圓機側視（約 120×110）：off＝踏板脫開掉落；tag＝前支撐管上的序號貼紙標亮 */
+  var ell=function(x,y,s,o){ o=o||{}; var f=o.col||M;
+    var pedal='<rect x="-14" y="-4" width="28" height="8" rx="3" fill="'+A+'" '+st+'/>';
+    var inner='<rect x="4" y="100" width="112" height="8" rx="3" fill="'+f+'" '+st+'/>'
+      +'<circle cx="96" cy="78" r="20" fill="'+L+'" '+st+'/><circle cx="96" cy="78" r="5" fill="'+D+'"/>'
+      +'<path d="M20 102 L32 22" stroke="'+D+'" stroke-width="11" stroke-linecap="round"/><path d="M20 102 L32 22" stroke="'+f+'" stroke-width="6" stroke-linecap="round"/>'
+      +'<path d="M34 30 L54 16" '+thw(5)+'/>'
+      +'<rect x="20" y="6" width="28" height="18" rx="4" fill="'+L+'" '+st+'/><rect x="25" y="10" width="18" height="9" rx="2" fill="'+B+'"/>'
+      +'<path d="M30 62 L96 78" stroke="'+D+'" stroke-width="9" stroke-linecap="round"/><path d="M30 62 L96 78" stroke="'+f+'" stroke-width="4.5" stroke-linecap="round"/>'
+      +'<rect x="'+(o.tag?16:18)+'" y="'+(o.tag?70:73)+'" width="'+(o.tag?14:10)+'" height="'+(o.tag?12:8)+'" rx="2" fill="#fff" stroke="'+(o.tag?A:D)+'" stroke-width="'+(o.tag?3:2)+'"/>'
+      +(o.off? '<g transform="translate(72 94) rotate(18)">'+pedal+'</g>'+zig(52,66,16)
+             : '<g transform="translate(62 70) rotate(14)">'+pedal+'</g>');
+    return g(x,y,s,inner); };
+  /* 序號貼紙（約 64×30）：條碼＋SN */
+  var sn=function(x,y,lab,col){ var s='<rect x="'+x+'" y="'+y+'" width="64" height="30" rx="4" fill="#fff" stroke="'+(col||D)+'" stroke-width="3"/>';
+    [5,8,10,14,17,19,23,26].forEach(function(d,i){ s+='<path d="M'+(x+d)+' '+(y+7)+' v16" stroke="'+D+'" stroke-width="'+(i%3?1.5:2.8)+'"/>'; });
+    return s+txt(x+47,y+20,lab||'SN',11,D); };
+  /* 機台小方塊（18×24），hot＝受影響 */
+  var unit=function(x,y,hot){ return '<rect x="'+x+'" y="'+y+'" width="18" height="24" rx="3" fill="'+(hot?'#f6c9c6':L)+'" stroke="'+(hot?R:D)+'" stroke-width="3"/><path d="M'+(x+5)+' '+(y+17)+' h8" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>'; };
+  /* 板子上的銷孔＋銷：big＝孔徑過大 */
+  var hole=function(cx,cy,big,pinCol){ var r=big?17:12;
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+C+'" '+st+'/>'
+     +'<circle cx="'+(big?cx-4:cx)+'" cy="'+(big?cy+4:cy)+'" r="11" fill="'+(pinCol||L)+'" stroke="'+D+'" stroke-width="2.5"/>'; };
+  /* 通止規（塞規，約 96×20）：左 GO、右 NO-GO */
+  var plug=function(x,y){ return '<rect x="'+(x+26)+'" y="'+(y+4)+'" width="44" height="12" rx="3" fill="'+M+'" '+st+'/>'
+     +'<rect x="'+x+'" y="'+(y+2)+'" width="26" height="16" rx="2" fill="'+G+'" '+st+'/>'
+     +'<rect x="'+(x+70)+'" y="'+y+'" width="26" height="20" rx="2" fill="'+R+'" '+st+'/>'; };
+  var house=function(x,y){ return '<path d="M'+x+' '+(y+34)+' L'+(x+40)+' '+y+' L'+(x+80)+' '+(y+34)+'" fill="none" '+st+'/>'
+     +'<rect x="'+(x+10)+'" y="'+(y+30)+'" width="60" height="50" fill="'+L+'" '+st+'/><rect x="'+(x+32)+'" y="'+(y+52)+'" width="16" height="28" fill="#fff" '+st+'/>'; };
+  var bandage=function(cx,cy){ return '<g transform="rotate(-30 '+cx+' '+cy+')"><rect x="'+(cx-30)+'" y="'+(cy-10)+'" width="60" height="20" rx="10" fill="'+L+'" '+st+'/><rect x="'+(cx-10)+'" y="'+(cy-10)+'" width="20" height="20" fill="#fff" stroke="'+D+'" stroke-width="2.5"/></g>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* 0 旁白：橢圓機踏板脫開；序號能縮小召回範圍 */
+    qa5Intro: svg(
+      ell(4,26,1.05,{off:true})
+     +sn(130,30,'SN')
+     +arr(162,66,162,96,A)
+     +unit(132,104,false)+unit(154,104,true)+unit(176,104,false)),
+
+    /* 1 2010：兩個品牌、約 18,000 台橢圓機召回 */
+    qa5News1: svg(
+      ell(4,52,0.74,{})
+     +ell(102,52,0.74,{col:B})
+     +pill(62,10,76,28,'18,000',R,'#fff',14)),
+
+    /* 2 腳踏板可能脫開，使用者會跌倒 */
+    qa5Pedal: svg(
+      '<path d="M8 124 L112 92" stroke="'+D+'" stroke-width="16" stroke-linecap="round"/><path d="M8 124 L112 92" stroke="'+M+'" stroke-width="9" stroke-linecap="round"/>'
+     +zig(60,98,22)
+     +'<g transform="translate(92 54) rotate(-22)"><rect x="-30" y="-8" width="60" height="16" rx="5" fill="'+A+'" '+st+'/></g>'
+     +arr(80,82,98,68,R)
+     +tri(160,46,24)),
+
+    /* 3 58 件踏板脫開通報，沒有人受傷 */
+    qa5Reports: svg(
+      doc(14,30,58,80)+doc(28,20,58,80)
+     +pill(40,104,56,28,'58',A,'#fff',15)
+     +bandage(144,52)
+     +pill(118,98,52,28,'0',G,'#fff',15)),
+
+    /* 4 中國製造，2009 年 10–11 月販售 */
+    qa5China: svg(
+      factory(10,62,1.1)
+     +mpin(46,8)
+     +cal(122,24)
+     +cal(144,40)
+     +pill(112,100,78,26,'2009',B,'#fff',13)),
+
+    /* 5 通知列出序號範圍；序號在前支撐管上 */
+    qa5Tube: svg(
+      ell(2,24,1.1,{tag:true})
+     +'<path d="M40 104 L124 70" stroke="'+A+'" stroke-width="2.5" stroke-dasharray="5 4"/>'
+     +sn(124,52,'SN',A)
+     +lens(42,103,14)),
+
+    /* 6 客戶：踏板掉了，哪些機台受影響？ */
+    qa5CallAsk: svg(
+      phone(22,42)
+     +ell(66,44,0.76,{off:true})
+     +qb(176,30)),
+
+    /* 7 Anita：只有 EL-1001 到 EL-3400 受影響 */
+    qa5Range: svg(
+      unit(8,76,false)+unit(31,76,false)+unit(54,76,true)+unit(77,76,true)+unit(100,76,true)+unit(123,76,true)+unit(146,76,false)+unit(169,76,false)
+     +'<path d="M54 66 v-8 h87 v8" fill="none" stroke="'+R+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+     +pill(46,24,104,26,'EL-1001~3400',R,'#fff',11)
+     +chk(14,116,14,G)+chk(152,116,14,G)+chk(175,116,14,G)),
+
+    /* 8 客戶：怎麼知道只有這些？ */
+    qa5HowAsk: svg(
+      doc(24,18,74,112)
+     +unit(108,96,true)
+     +lens(64,74,22)
+     +qb(170,44)),
+
+    /* 9 Anita：每個序號都記錄支架批號 */
+    qa5Link: svg(
+      box(10,56)
+     +pill(16,30,60,24,'LOT',B,'#fff',12)
+     +arr(98,94,122,94,A)+arr(122,104,98,104,A)
+     +sn(126,84,'SN')
+     +'<path d="M118 40 h52 l-6 22 h-40 z" fill="'+M+'" '+st+'/><path d="M150 62 v14" '+thw(6)+'/>'
+     +'<path d="M128 74 l-10 8 M160 74 l10 8" stroke="'+R+'" stroke-width="2.5" stroke-dasharray="3 3"/>'),
+
+    /* 10 客戶：那批有什麼問題？ */
+    qa5WrongAsk: svg(
+      box(22,54)
+     +'<rect x="34" y="40" width="16" height="30" rx="2" fill="'+M+'" '+st+'/><rect x="56" y="34" width="16" height="36" rx="2" fill="'+M+'" '+st+'/>'
+     +lens(128,84,24)
+     +qb(176,30)),
+
+    /* 11 Anita：銷孔大了 0.3 mm，銷鎖不住 */
+    qa5Hole: svg(
+      '<rect x="12" y="40" width="110" height="80" rx="6" fill="'+M+'" '+st+'/>'
+     +hole(66,80,true)
+     +'<path d="M44 80 h-14 M88 80 h14" stroke="'+R+'" stroke-width="3" stroke-linecap="round"/>'
+     +pill(126,26,66,26,'+0.3',R,'#fff',13)
+     +ex(160,98,22,R)),
+
+    /* 12 客戶：IQC 為什麼沒抓到？ */
+    qa5IqcAsk: svg(
+      eye(56,48)
+     +plug(16,96)
+     +qb(168,48)),
+
+    /* 13 Anita：只用通規；孔過大照樣通過 → 改用通止規 */
+    qa5GoGauge: svg(
+      '<rect x="8" y="78" width="184" height="54" rx="6" fill="'+M+'" '+st+'/>'
+     +'<circle cx="52" cy="105" r="17" fill="'+C+'" '+st+'/><circle cx="148" cy="105" r="17" fill="'+C+'" '+st+'/>'
+     +'<rect x="44" y="40" width="16" height="70" rx="2" fill="'+G+'" '+st+'/>'
+     +'<rect x="138" y="40" width="20" height="70" rx="2" fill="'+R+'" '+st+'/>'
+     +chk(70,30,22,G)
+     +ex(176,30,20,R)),
+
+    /* 14 客戶：使用者該怎麼做？ */
+    qa5OwnerAsk: svg(
+      ell(10,30,0.95,{})
+     +lens(40,98,14)
+     +qb(168,44)),
+
+    /* 15 Anita：先停用、確認序號；免費到府換踏板 */
+    qa5Home: svg(
+      house(8,40)
+     +stop(36,22,16)
+     +wrench(104,96)
+     +'<g transform="translate(156 44) rotate(-12)"><rect x="-24" y="-7" width="48" height="14" rx="5" fill="'+G+'" '+st+'/></g>'
+     +pill(126,104,56,26,'$0',G,'#fff',14))
+  });
+})();
+
+window.VIDEO.qa05 = {
+ "title": "QA News V — Which Units Are Affected?",
+ "titleCn": "品保新聞五｜哪些機台受影響？→ 用序號追溯縮小召回範圍",
+ "date": "2026-10-25",
+ "level": "B2",
+ "scene": "QA News · Tracing by Serial Number",
+ "sceneCn": "品保新聞・用序號追溯",
+ "sceneArt": "search",
+ "titleArt": ["search", "box", "clipboard"],
+ "cast": {
+  "N": { "name": "Narrator", "cn": "旁白", "voice": "n" },
+  "A": { "name": "Anita", "cn": "Anita・橢圓機工廠品保", "voice": "f" },
+  "M": { "name": "Mike", "cn": "Mike・客戶品保", "voice": "m" }
+ },
+ "chapters": [
+  { "en": "Intro", "cn": "開場" },
+  { "en": "The News", "cn": "新聞：橢圓機召回" },
+  { "en": "The Customer Call", "cn": "情境：客戶追問影響範圍" },
+  { "en": "Key Expressions", "cn": "重點表達" },
+  { "en": "Grammar", "cn": "文法" },
+  { "en": "Homework Fixes", "cn": "作業訂正" },
+  { "en": "Quick Quiz", "cn": "小測驗" }
+ ],
+ "expr": {
+  "disengage": { "t": "disengage", "cn": "脫開", "tag": ["品保新聞", "故障"], "note": "零件脫開、沒卡住；和 break（斷裂）不同。", "ex": "The belt disengaged from the pulley during the run test.", "exCn": "跑合測試時皮帶從皮帶輪脫開了。" },
+  "serial": { "t": "serial", "cn": "序號的", "tag": ["品保新聞", "追溯"], "note": "搭配：serial number（序號）、serial range（序號範圍）。", "ex": "Scan the serial label before you pack the unit.", "exCn": "包裝前先掃序號標籤。" },
+  "affected": { "t": "affected", "cn": "受影響的", "tag": ["品保新聞", "召回範圍"], "note": "搭配：affected units（受影響機台）。", "ex": "Move the affected boxes to the red area.", "exCn": "把受影響的箱子移到紅色區。" },
+  "batch": { "t": "batch", "cn": "一批", "tag": ["品保新聞", "追溯"], "note": "搭配：a batch of parts（一批零件）。", "ex": "This batch of screws came from a new supplier.", "exCn": "這批螺絲來自新供應商。" },
+  "replacement": { "t": "replacement", "cn": "替換品", "tag": ["品保新聞", "對策"], "note": "搭配：free replacement（免費更換）。", "ex": "The replacement motor will arrive on Thursday.", "exCn": "替換的馬達週四會到。" }
+ },
+ "lines": [
+  { "ch": 0, "sp": "N", "vis": { "type": "title" },
+    "en": "Welcome back. Today's question is simple: which units are affected?",
+    "cn": "歡迎回來。今天的問題很簡單：哪些機台受影響？" },
+  { "ch": 0, "sp": "N", "vis": { "type": "scene", "art": "qa5Intro" },
+    "en": "A pedal came off an elliptical. We will learn how serial numbers can narrow a recall.",
+    "cn": "一台橢圓機的踏板脫開了。我們來學序號怎麼縮小召回範圍。" },
+
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa5News1" },
+    "en": "In January 2010, Johnson Health Tech recalled about 18,000 elliptical trainers sold under two brands, Horizon Fitness and LIVESTRONG Fitness.",
+    "cn": "2010 年 1 月，Johnson Health Tech 召回約 18,000 台橢圓機，以 Horizon Fitness 和 LIVESTRONG Fitness 兩個品牌販售。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa5Pedal" },
+    "en": "According to the CPSC, the foot pedal could become disengaged, and the user could fall.",
+    "cn": "根據 CPSC，腳踏板可能脫開，使用者可能跌倒。",
+    "hi": [{ "t": "disengaged", "cn": "脫開", "k": "disengage", "c": 1 }] },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa5Reports" },
+    "en": "The company had 58 reports of pedals disengaging. No injuries were reported.",
+    "cn": "公司接獲 58 件踏板脫開的通報，沒有受傷通報。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa5China" },
+    "en": "The trainers were made in China and sold from October to November 2009.",
+    "cn": "這批機台在中國製造，2009 年 10 月到 11 月販售。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa5Tube" },
+    "en": "The notice listed a serial number range for each model. The serial number is on the front support tube.",
+    "cn": "召回通知列出每個型號的序號範圍。序號在前支撐管上。",
+    "hi": [{ "t": "serial", "cn": "序號的", "k": "serial", "c": 1 }] },
+
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa5CallAsk" },
+    "en": "A pedal came off one of your ellipticals. Which units are affected?",
+    "cn": "你們有一台橢圓機的踏板掉了，哪些機台受影響？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa5Range" },
+    "en": "Only units in the serial range EL-1001 to EL-3400 are affected.",
+    "cn": "只有序號 EL-1001 到 EL-3400 範圍內的機台受影響。",
+    "hi": [{ "t": "affected", "cn": "受影響的", "k": "affected", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa5HowAsk" },
+    "en": "How do you know it is only those?",
+    "cn": "你們怎麼知道只有這些？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa5Link" },
+    "en": "We record the bracket lot number for every serial number. The bad batch went into those units only.",
+    "cn": "我們每個序號都記錄支架批號，有問題的那批只裝在這些機台上。",
+    "hi": [{ "t": "batch", "cn": "一批", "k": "batch", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa5WrongAsk" },
+    "en": "What was wrong with the batch?",
+    "cn": "那批有什麼問題？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa5Hole" },
+    "en": "The pin holes were 0.3 millimeters too large, so the pin did not lock.",
+    "cn": "銷孔大了 0.3 mm，所以銷鎖不住。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa5IqcAsk" },
+    "en": "Why didn't your IQC catch it?",
+    "cn": "你們 IQC 為什麼沒抓到？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa5GoGauge" },
+    "en": "They used a go gauge only. An oversized hole still passes a go gauge, so we now use a go/no-go gauge.",
+    "cn": "IQC 只用通規。孔徑過大一樣會通過通規，所以現在改用通止規。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa5OwnerAsk" },
+    "en": "What should the owners do?",
+    "cn": "使用者該怎麼做？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa5Home" },
+    "en": "Please stop using the machine and check the serial number. The replacement pedals are fitted at home for free.",
+    "cn": "請先停止使用並確認序號。替換踏板會免費到府安裝。",
+    "hi": [{ "t": "replacement", "cn": "替換品", "k": "replacement", "c": 1 }] },
+
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "disengage", "ipa": "/ˌdɪs.ɪnˈɡeɪdʒ/", "pos": "v.", "art": "warning", "def": "disengage v. — come loose from a part.", "cn": "脫開｜搭配：從…脫開", "note": "脫開不等於斷裂，根因方向不同。" },
+    "en": "The belt disengaged from the pulley during the run test.", "cn": "跑合測試時皮帶從皮帶輪脫開了。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "serial", "ipa": "/ˈsɪr.i.əl/", "pos": "adj.", "art": "search", "def": "serial adj. — serial number.", "cn": "序號的｜搭配：序號", "note": "每台一個，獨一無二。" },
+    "en": "Scan the serial label before you pack the unit.", "cn": "包裝前先掃序號標籤。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "affected", "ipa": "/əˈfektɪd/", "pos": "adj.", "art": "box", "def": "affected adj. — affected units.", "cn": "受影響的｜搭配：受影響機台", "note": "搭配：affected units、affected lot。" },
+    "en": "Move the affected boxes to the red area.", "cn": "把受影響的箱子移到紅色區。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "batch", "ipa": "/bætʃ/", "pos": "n.", "art": "clipboard", "def": "batch n. — a batch of parts.", "cn": "一批｜搭配：一批零件", "note": "搭配：a batch of screws。" },
+    "en": "This batch of screws came from a new supplier.", "cn": "這批螺絲來自新供應商。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "replacement", "ipa": "/rɪˈpleɪs.mənt/", "pos": "n.", "art": "wrench", "def": "replacement n. — free replacement.", "cn": "替換品｜搭配：免費更換", "note": "搭配：replacement part、free replacement。" },
+    "en": "The replacement motor will arrive on Thursday.", "cn": "替換的馬達週四會到。" },
+
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "were + p.p. + between A and B", "art": "hourglass",
+      "rows": [{ "lab": "生產期間", "blocks": [{ "t": "These boxes", "k": "s" }, { "t": "were packed", "k": "v" }, { "t": "between Monday and Wednesday", "k": "o" }] }] },
+    "en": "These boxes were packed between Monday and Wednesday.", "cn": "這些箱子是在週一到週三之間包裝的。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "the + noun + that were + p.p.", "art": "search",
+      "rows": [{ "lab": "限定範圍", "blocks": [{ "t": "We must recheck", "k": "s" }, { "t": "the motors", "k": "v" }, { "t": "that were tested on Line 2", "k": "o" }] }] },
+    "en": "We must recheck the motors that were tested on Line 2.", "cn": "2 號線測過的馬達都要重驗。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "Only + noun + are affected", "art": "box",
+      "rows": [{ "lab": "只有…受影響", "blocks": [{ "t": "Only the parts", "k": "s" }, { "t": "from Lot 7", "k": "v" }, { "t": "are affected", "k": "o" }] }] },
+    "en": "Only the parts from Lot 7 are affected.", "cn": "只有第 7 批的零件受影響。" },
+
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 1, "wrong": "The units were sell from October to November 2009.", "bad": ["sell"], "fix": "The units were sold from October to November 2009." },
+    "en": "The units were sold from October to November 2009.", "cn": "這些機台在 2009 年 10 月到 11 月販售。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 2, "wrong": "No injuries has been reported.", "bad": ["has"], "fix": "No injuries have been reported." },
+    "en": "No injuries have been reported.", "cn": "目前沒有受傷通報。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 3, "wrong": "The units that built after May 3 need new pedals.", "bad": ["built"], "fix": "The units that were built after May 3 need new pedals." },
+    "en": "The units that were built after May 3 need new pedals.", "cn": "5 月 3 日之後組裝的機台需要換新踏板。" },
+
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "Only units in this serial range are ___.", "a": "affected", "n": 1 },
+    "en": "Only units in this serial range are ___.", "cn": "只有這個序號範圍內的機台＿＿。",
+    "say": "Only units in this serial range are , blank.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "The units were ___ from October to November 2009.", "a": "sold", "n": 2 },
+    "en": "The units were ___ from October to November 2009.", "cn": "這些機台在 2009 年 10 月到 11 月＿＿。",
+    "say": "The units were , blank, from October to November 2009.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "No injuries ___ been reported.", "a": "have", "n": 3 },
+    "en": "No injuries ___ been reported.", "cn": "目前＿＿受傷通報。",
+    "say": "No injuries , blank, been reported.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We record the lot number for every ___ number.", "a": "serial", "n": 4 },
+    "en": "We record the lot number for every ___ number.", "cn": "我們每個＿＿都記錄批號。",
+    "say": "We record the lot number for every , blank, number.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "end" },
+    "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+ ]
+};

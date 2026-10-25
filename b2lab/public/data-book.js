@@ -23424,6 +23424,220 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- qa05 品保新聞五：Horizon／LIVESTRONG 橢圓機踏板脫開（CPSC 10-116）→ 序號追溯縮小召回範圍 ---- */
+  {
+   "id": "qa05",
+   "icon": "🏷️",
+   "video": true,
+   "date": "2026-10-25",
+   "title": "QA News V — Which Units Are Affected?",
+   "titleCn": "品保新聞五｜哪些機台受影響？→ 用序號追溯縮小召回範圍",
+   "topics": "品保新聞, 召回, 追溯性, 序號, 批號, 召回範圍, 通止規, 橢圓機, 踏板, traceability, serial number, lot number, go/no-go gauge",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "The foot pedal can become disengaged.",
+     "cn": "腳踏板可能會脫開。",
+     "pat": "can + become + 過去分詞／形容詞",
+     "note": "可能會脫開。become 表示「變成某種狀態」，後面接 disengaged、loose 這類描述狀態的字。"
+    },
+    {
+     "n": 2,
+     "cn": "這些機台在 2009 年 10 月到 11 月販售。",
+     "pat": "were + 過去分詞（過去被動）",
+     "note": "機台是「被賣」的，要用被動 were sold；sell 的過去分詞是不規則的 sold。",
+     "wrong": "The units were sell from October to November 2009.",
+     "fix": "The units were sold from October to November 2009."
+    },
+    {
+     "n": 3,
+     "ok": "Only units in this serial range are affected.",
+     "cn": "只有這個序號範圍內的機台受影響。",
+     "pat": "Only + 名詞 + are affected",
+     "note": "只有這個範圍受影響。only 放在名詞前面，直接框出「哪些」，召回通知最常用。"
+    },
+    {
+     "n": 4,
+     "cn": "目前沒有受傷通報。",
+     "pat": "No + 複數名詞 + have been + 過去分詞",
+     "note": "沒有受傷通報。injuries 是複數，助動詞要用 have，不是 has。",
+     "wrong": "No injuries has been reported.",
+     "fix": "No injuries have been reported."
+    },
+    {
+     "n": 5,
+     "ok": "We record the bracket lot number for every serial number.",
+     "cn": "我們每個序號都記錄支架批號。",
+     "pat": "record A for every B",
+     "note": "每個序號都記錄批號。every 後面接單數名詞，表示一個都不漏。"
+    },
+    {
+     "n": 6,
+     "cn": "5 月 3 日之後組裝的機台需要換新踏板。",
+     "pat": "名詞 + that + were + 過去分詞",
+     "note": "5 月 3 日之後組裝的機台。機台是「被組裝」的，that 子句裡要有 were，不能只寫 built。",
+     "wrong": "The units that built after May 3 need new pedals.",
+     "fix": "The units that were built after May 3 need new pedals."
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    { "w": "pedal", "ipa": "/ˈped.əl/", "pos": "n.", "cn": "踏板", "ex": "Tighten the pedal until it does not wobble.", "exCn": "把踏板鎖緊到不會晃動為止。" },
+    { "w": "disengage", "ipa": "/ˌdɪs.ɪnˈɡeɪdʒ/", "pos": "v.", "cn": "脫開、鬆脫", "ex": "The belt disengaged from the pulley during the run test.", "exCn": "跑合測試時皮帶從皮帶輪脫開了。" },
+    { "w": "serial", "ipa": "/ˈsɪr.i.əl/", "pos": "adj.", "cn": "序號的（serial number＝序號）", "ex": "Scan the serial label before you pack the unit.", "exCn": "包裝前先掃序號標籤。" },
+    { "w": "range", "ipa": "/reɪndʒ/", "pos": "n.", "cn": "範圍", "ex": "The reading must stay within the range on the drawing.", "exCn": "讀數必須在圖面規定的範圍內。" },
+    { "w": "batch", "ipa": "/bætʃ/", "pos": "n.", "cn": "一批（零件、產品）", "ex": "This batch of screws came from a new supplier.", "exCn": "這批螺絲來自新供應商。" },
+    { "w": "scope", "ipa": "/skoʊp/", "pos": "n.", "cn": "範圍（問題或工作涵蓋的部分）", "ex": "First, define the scope of the problem.", "exCn": "先界定問題的範圍。" },
+    { "w": "affected", "ipa": "/əˈfektɪd/", "pos": "adj.", "cn": "受影響的", "ex": "Move the affected boxes to the red area.", "exCn": "把受影響的箱子移到紅色區。" },
+    { "w": "replacement", "ipa": "/rɪˈpleɪs.mənt/", "pos": "n.", "cn": "替換品、更換", "ex": "The replacement motor will arrive on Thursday.", "exCn": "替換的馬達週四會到。" }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "serial number range", "cn": "序號範圍" },
+    { "p": "stop using", "cn": "停止使用" },
+    { "p": "in-home replacement", "cn": "到府更換" },
+    { "p": "narrow the scope", "cn": "縮小範圍" },
+    { "p": "trace back to", "cn": "追溯到（某批、某站）" },
+    { "p": "go/no-go gauge", "cn": "通止規" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "QA5-A",
+     "title": "過去被動 + from A to B ／ between A and B（說生產、販售期間）",
+     "pat": "主詞 + was / were + 過去分詞 + from A to B",
+     "pts": [
+      "產品是「被做、被賣、被出貨」的，說期間時用過去被動：were made、were sold、were shipped。",
+      "from A to B 和 between A and B 都可以框出起訖時間。",
+      "例：These boxes were packed between Monday and Wednesday.（這些箱子是在週一到週三之間包裝的。）"
+     ],
+     "ex": "These boxes were packed between Monday and Wednesday.",
+     "exCn": "這些箱子是在週一到週三之間包裝的。"
+    },
+    {
+     "k": "QA5-B",
+     "title": "名詞 + that + were + 過去分詞（限定是哪一些）",
+     "pat": "the + 名詞 + that + was / were + 過去分詞 + …",
+     "pts": [
+      "用 that 子句把範圍縮小到「某條件下的那些」，圍堵和召回時一定會用。",
+      "名詞是被處理的對象時，that 後面要用被動：that were tested、that were built。",
+      "例：We must recheck the motors that were tested on Line 2.（2 號線測過的馬達都要重驗。）"
+     ],
+     "ex": "We must recheck the motors that were tested on Line 2.",
+     "exCn": "2 號線測過的馬達都要重驗。"
+    },
+    {
+     "k": "QA5-C",
+     "title": "Only + 名詞 + be affected（只有…受影響）",
+     "pat": "Only + 名詞 + is / are + affected",
+     "pts": [
+      "only 放在名詞前面，清楚告訴客戶「範圍到哪裡為止」，避免整個型號都被當成不良。",
+      "affected 是形容詞，主詞是複數就用 are affected。",
+      "例：Only the parts from Lot 7 are affected.（只有第 7 批的零件受影響。）"
+     ],
+     "ex": "Only the parts from Lot 7 are affected.",
+     "exCn": "只有第 7 批的零件受影響。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "serial number vs lot number",
+     "sc": "serial number 是每一台獨一無二的序號；lot number 是同一批零件或產品共用的批號。追溯時要把兩者連起來：這一台用了哪一批零件。",
+     "ex": "Each unit has its own serial number, but a whole lot shares one lot number.",
+     "exCn": "每一台都有自己的序號，但同一批共用一個批號。",
+     "cn": "序號 vs 批號"
+    },
+    {
+     "u": "disengage vs break",
+     "sc": "disengage 是脫開、沒卡住，零件本身可能完好；break 是斷裂、零件壞了。根因方向完全不同：脫開先查配合和鎖止，斷裂先查材料和強度。",
+     "ex": "The pedal did not break; it disengaged from the arm.",
+     "exCn": "踏板沒有斷，是從曲臂上脫開了。",
+     "cn": "脫開 vs 斷裂"
+    },
+    {
+     "u": "go gauge vs no-go gauge",
+     "sc": "go gauge（通規）要能通過，確認孔不會太小；no-go gauge（止規）要進不去，確認孔不會太大。只用通規，孔徑過大也會被判合格。",
+     "ex": "The go side must fit, and the no-go side must not.",
+     "exCn": "通規端要進得去，止規端要進不去。",
+     "cn": "通規 vs 止規"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "新聞｜橢圓機踏板脫開",
+     "title": "The Pedal That Came Loose",
+     "titleCn": "新聞｜Horizon Fitness／LIVESTRONG Fitness 橢圓機召回",
+     "paras": [
+      { "en": "In January 2010, Johnson Health Tech North America recalled about 18,000 elliptical trainers. They were sold under two brands, Horizon Fitness and LIVESTRONG Fitness, and eight models were included.", "cn": "2010 年 1 月，Johnson Health Tech North America 召回約 18,000 台橢圓機。這批機台以 Horizon Fitness 和 LIVESTRONG Fitness 兩個品牌販售，共涵蓋八個型號。" },
+      { "en": "According to the CPSC, the foot pedal could become disengaged, so the user could fall. The company had received 58 reports of pedals disengaging. No injuries were reported.", "cn": "根據 CPSC，腳踏板可能脫開，使用者可能因此跌倒。公司接獲 58 件踏板脫開的通報，沒有受傷通報。" },
+      { "en": "The trainers were made in China and sold in sporting goods stores and online from October to November 2009.", "cn": "這批機台在中國製造，2009 年 10 月到 11 月在運動用品店和網路上販售。" },
+      { "en": "The notice did not cover every unit of these models. It listed a serial number range for each model, and owners could find the serial number on the front support tube. They were told to stop using the machine and to schedule a free in-home replacement of the pedals.", "cn": "召回通知並不是涵蓋這些型號的每一台，而是列出每個型號的序號範圍；使用者可以在前支撐管上找到序號。使用者被要求停止使用，並預約免費到府更換踏板。" },
+      { "en": "A serial number range tells owners exactly which machines are affected. To draw that line, a factory must know which parts went into which unit. That is traceability.", "cn": "序號範圍讓使用者清楚知道哪些機台受影響。要畫出這條界線，工廠必須知道哪些零件裝進了哪一台。這就是追溯性。" }
+     ],
+     "questions": [
+      { "q": "What could happen to the foot pedal?", "qCn": "腳踏板可能發生什麼事？", "a": "It could become disengaged.", "aCn": "可能會脫開。" },
+      { "q": "How many injuries were reported? (A. None / B. Three / C. 58 / D. 18,000)", "qCn": "共有幾件受傷通報？", "a": "A. None.", "aCn": "A. 沒有。" },
+      { "q": "Where could owners find the serial number?", "qCn": "使用者可以在哪裡找到序號？", "a": "On the front support tube.", "aCn": "在前支撐管上。" }
+     ]
+    },
+    {
+     "bar": "模擬｜用序號縮小範圍",
+     "title": "Simulation: Drawing the Line",
+     "titleCn": "模擬｜你是橢圓機工廠品保，說明怎麼用序號追溯縮小範圍（虛構情境）",
+     "paras": [
+      { "en": "Situation: You are a QA engineer at an elliptical factory. A customer reports that a pedal came off during use. This is a practice case, not Johnson Health Tech's real analysis.", "cn": "情境：你是橢圓機工廠的品保工程師，客戶反映使用中踏板脫開。這是練習用的虛構案例，不是 Johnson Health Tech 的實際分析。" },
+      { "en": "D2 Problem: A pedal disengaged from the pedal arm. The locking pin was not fully seated in its hole.", "cn": "D2 問題描述：踏板從踏板曲臂脫開，鎖定銷沒有完全卡進孔裡。" },
+      { "en": "D3 Containment: We traced the problem back to one batch of pedal brackets. Our records show that this batch went into units EL-1001 to EL-3400 only. We stopped shipping those units and asked customers to stop using them.", "cn": "D3 圍堵：問題追溯到同一批踏板支架。紀錄顯示這批只裝在序號 EL-1001 到 EL-3400 的機台上。這些機台全部停止出貨，並請客戶停止使用。" },
+      { "en": "D4 Root cause: The supplier changed a drill bit, and the pin holes in this batch were 0.3 mm too large, so the pin did not lock.", "cn": "D4 根因：供應商換了鑽頭，這批的銷孔大了 0.3 mm，所以銷鎖不住。" },
+      { "en": "D4 Escape point: IQC checked the holes with a go gauge only. An oversized hole still passes a go gauge.", "cn": "D4 流出原因：IQC 只用通規檢查孔。孔徑過大一樣會通過通規。" },
+      { "en": "D5/D6 Corrective action: We replace the pedal brackets on every unit in the affected range, and IQC now checks pin holes with a go/no-go gauge.", "cn": "D5／D6 矯正對策：受影響範圍內的每一台都更換踏板支架；IQC 改用通止規檢查銷孔。" },
+      { "en": "D7 Prevention: The bracket lot number is scanned and linked to each serial number. If a batch is bad, we can list every affected unit in minutes.", "cn": "D7 預防再發：支架批號掃描後綁定每個序號。只要某批有問題，幾分鐘內就能列出所有受影響機台。" }
+     ]
+    },
+    {
+     "bar": "演練｜客戶追問影響範圍",
+     "title": "Practice: Which Units Are Affected?",
+     "titleCn": "演練｜客戶追問：哪些機台受影響？",
+     "paras": [
+      { "en": "Customer: A pedal came off one of your ellipticals. Which units are affected?", "cn": "客戶：你們有一台橢圓機的踏板掉了，哪些機台受影響？" },
+      { "en": "You: Only units in the serial range EL-1001 to EL-3400 are affected.", "cn": "你：只有序號 EL-1001 到 EL-3400 範圍內的機台受影響。" },
+      { "en": "Customer: How do you know it is only those?", "cn": "客戶：你們怎麼知道只有這些？" },
+      { "en": "You: We record the bracket lot number for every serial number. The bad batch went into those units only.", "cn": "你：我們每個序號都記錄支架批號，有問題的那批只裝在這些機台上。" },
+      { "en": "Customer: What was wrong with the batch?", "cn": "客戶：那批有什麼問題？" },
+      { "en": "You: The pin holes were 0.3 mm too large, so the pin did not lock.", "cn": "你：銷孔大了 0.3 mm，所以銷鎖不住。" },
+      { "en": "Customer: Why didn't your IQC catch it?", "cn": "客戶：你們 IQC 為什麼沒抓到？" },
+      { "en": "You: They used a go gauge only. An oversized hole still passes a go gauge, so we now use a go/no-go gauge.", "cn": "你：IQC 只用通規。孔徑過大一樣會通過通規，所以現在改用通止規。" },
+      { "en": "Customer: What should the owners do?", "cn": "客戶：使用者該怎麼做？" },
+      { "en": "You: Please stop using the machine and check the serial number. We will replace the pedals at home for free.", "cn": "你：請先停止使用並確認序號，我們會免費到府更換踏板。" }
+     ]
+    },
+    {
+     "bar": "討論｜如果發生在我們廠",
+     "title": "Discussion: What If It Happened Here?",
+     "titleCn": "討論｜如果發生在我們廠",
+     "paras": [
+      { "en": "If one batch of parts is bad, can we list every unit that used it within one hour?", "cn": "如果某一批零件有問題，我們能在一小時內列出所有用到它的機台嗎？" },
+      { "en": "Which parts do we track by lot number, and which parts do we not track at all?", "cn": "我們哪些零件有記批號？哪些完全沒追蹤？" },
+      { "en": "Do we check the holes for safety pins with both a go gauge and a no-go gauge?", "cn": "安全銷的孔，我們有同時用通規和止規檢查嗎？" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "Only units in this serial range are affected.", "cn": "只有這個序號範圍內的機台受影響。" },
+      { "en": "We record the bracket lot number for every serial number.", "cn": "我們每個序號都記錄支架批號。" },
+      { "en": "The pin holes were 0.3 mm too large, so the pin did not lock.", "cn": "銷孔大了 0.3 mm，所以銷鎖不住。" },
+      { "en": "An oversized hole still passes a go gauge.", "cn": "孔徑過大一樣會通過通規。" },
+      { "en": "Please stop using the machine and check the serial number.", "cn": "請先停止使用並確認序號。" },
+      { "en": "No injuries have been reported.", "cn": "目前沒有受傷通報。" }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -28242,6 +28456,7 @@ window.BOOK = {
     bk20251218:[[['toilet','wrench','suitcase','doc','moon'],'忙碌修繕的一天：馬桶、洗手台、磁磚出問題 → 打電話請水電工 → 旅行社規劃假期 → 到政府機關辦文件 → 晚上全部修好。']],
     bk20251226b:[[['signpost','exam','piggy','globe','sprout'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
     bk20260922:[[['eye','gear','plug','dumbbell','cart'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
+    qa05:[[['steps','globe','signpost','door','tap'],'橢圓機踏板脫開：2010 兩品牌橢圓機召回約 18,000 台 → 踏板脫開 58 件、無人受傷 → 依序號範圍只召回受影響機台 → 模擬：銷孔過大、只用通規抓不到 → 序號綁批號、改用通止規。']],
     qa04:[[['flashlight','nurse','alarm','scales','resume'],'J-cup 插銷焊道斷裂：2011 掛鉤召回約 5,500 個 → 焊道外觀正常卻熔深不足 → 1 人手腕扭傷 → 每班首件＋每兩小時破壞測試 → 不合格就停線隔離。']],
     qa03:[[['sign','toolbox','mail','caliper','pin'],'安全支架少焊兩道：2021 重訓架安全支架召回 → 上下各漏一道焊 → 重物掉落斷裂 3 件 → 對焊接供應商發 SCAR、每批附焊道圖 → IQC 數焊道、批號追溯。']],
     qa02:[[['bike','bandage','gift','chartDown','notebook'],'同一個座管壞兩次：2023 初代飛輪車座管斷裂召回 → 13 件受傷 → 免費座管自行更換 → 2025 另一款再度召回 → 再發防止與水平展開。']],
