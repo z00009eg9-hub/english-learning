@@ -52126,3 +52126,321 @@ window.VIDEO.qp02 = {
     "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
  ]
 };
+
+/* ---------- qp03 品保實務三 影片專屬插圖（每句一張，不重複；2026-10-25） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4', G='#3f9e64', M='#9aa5b1', Y='#f0b429';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'+txt(cx,cy+9,'?',25,'#fff'); };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'+txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round"><path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var arr=function(x1,y1,x2,y2,col){ var a=Math.atan2(y2-y1,x2-x1), h=8;
+    return '<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.5)).toFixed(1)+' '+(y2-h*Math.sin(a-0.5)).toFixed(1)+' M'+x2+' '+y2+' L'+(x2-h*Math.cos(a+0.5)).toFixed(1)+' '+(y2-h*Math.sin(a+0.5)).toFixed(1)+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'; };
+  var cal=function(x,y,col){ return '<rect x="'+x+'" y="'+y+'" width="44" height="40" rx="4" fill="#fff" '+st+'/><rect x="'+x+'" y="'+y+'" width="44" height="11" rx="4" fill="'+(col||A)+'" '+st+'/>'
+     +'<path d="M'+(x+8)+' '+(y+21)+' h28 M'+(x+8)+' '+(y+31)+' h28" stroke="'+M+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 4"/>'; };
+  var doc=function(x,y,w,h,hd){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" stroke="'+D+'" stroke-width="3"/>'
+     +'<rect x="'+(x+7)+'" y="'+(y+8)+'" width="'+(w-14)+'" height="8" rx="3" fill="'+(hd||A)+'"/>';
+    for(var k=y+27;k<y+h-30;k+=11) s+='<path d="M'+(x+9)+' '+k+' h'+(w-18)+'" stroke="'+M+'" stroke-width="3" stroke-linecap="round"/>';
+    return s; };
+  /* 立柱（粉體藍，寬 26）；pe＝前幾個孔周圍掉漆 */
+  var tube=function(x,y,h,pe){ var s='<rect x="'+x+'" y="'+y+'" width="26" height="'+h+'" rx="3" fill="'+B+'" '+st+'/>', n=0;
+    for(var k=y+12;k<y+h-12;k+=20){
+      if(n<(pe||0)) s+='<path d="M'+(x+3)+' '+(k-5)+' l13 -3 l8 4 l-1 16 l-14 3 l-6 -6 z" fill="'+M+'" stroke="'+D+'" stroke-width="2"/>'
+        +'<path d="M'+(x+24)+' '+(k-2)+' q10 -7 15 3 q-7 1 -15 9" fill="'+B+'" stroke="'+D+'" stroke-width="2" stroke-linejoin="round"/>';
+      s+='<rect x="'+(x+8)+'" y="'+k+'" width="10" height="9" rx="2" fill="#fff" stroke="'+D+'" stroke-width="2"/>'; n++; }
+    return s; };
+  /* 橫放立柱（倉庫用） */
+  var bar=function(x,y,w){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="12" rx="3" fill="'+B+'" '+st+'/>'; };
+  var eye=function(cx,cy){ return '<path d="M'+(cx-24)+' '+cy+' q24 -22 48 0 q-24 22 -48 0 z" fill="#fff" '+st+'/><circle cx="'+cx+'" cy="'+cy+'" r="8" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/><circle cx="'+cx+'" cy="'+cy+'" r="3" fill="'+D+'"/>'; };
+  var lamp=function(x,y){ return '<path d="M'+(x+20)+' '+y+' v8" stroke="'+D+'" stroke-width="3"/><path d="M'+x+' '+(y+26)+' l8 -18 h24 l8 18 z" fill="'+Y+'" '+st+'/>'
+     +'<path d="M'+(x+4)+' '+(y+34)+' l-6 8 M'+(x+20)+' '+(y+34)+' v10 M'+(x+36)+' '+(y+34)+' l6 8" stroke="'+Y+'" stroke-width="3" stroke-linecap="round"/>'; };
+  /* 百格：n×n；rm＝被撕掉的格子（灰＝露出鋼材） */
+  var grid=function(x,y,s,rm){ var c=s/5, o='<rect x="'+x+'" y="'+y+'" width="'+s+'" height="'+s+'" fill="'+B+'" '+st+'/>';
+    (rm||[]).forEach(function(i){ o+='<rect x="'+(x+(i%5)*c)+'" y="'+(y+Math.floor(i/5)*c)+'" width="'+c+'" height="'+c+'" fill="'+M+'"/>'; });
+    for(var i=1;i<5;i++) o+='<path d="M'+(x+i*c)+' '+y+' v'+s+' M'+x+' '+(y+i*c)+' h'+s+'" stroke="#fff" stroke-width="1.5"/>';
+    return o+'<rect x="'+x+'" y="'+y+'" width="'+s+'" height="'+s+'" fill="none" '+st+'/>'; };
+  var knife=function(x,y){ return '<path d="M'+x+' '+y+' l34 -26 l10 6 l-30 28 z" fill="'+L+'" '+st+'/><path d="M'+(x+34)+' '+(y-26)+' l14 -10 l6 8 l-10 8" fill="'+M+'" '+st+'/>'; };
+  var tape=function(x,y,w,rot){ return '<g transform="rotate('+(rot||0)+' '+x+' '+y+')"><rect x="'+x+'" y="'+y+'" width="'+w+'" height="14" rx="2" fill="'+Y+'" opacity="0.9" '+st+'/></g>'; };
+  var tank=function(x,y,w,h,col,lab){ return '<path d="M'+x+' '+y+' v'+h+' h'+w+' v-'+h+'" fill="none" '+st+'/><rect x="'+(x+3)+'" y="'+(y+14)+'" width="'+(w-6)+'" height="'+(h-17)+'" fill="'+col+'"/>'
+     +'<path d="M'+x+' '+y+' v'+h+' h'+w+' v-'+h+'" fill="none" '+st+'/>'+txt(x+w/2,y+h-10,lab,13,D); };
+  var drop=function(cx,cy,s){ s=s||1; return '<path d="M'+cx+' '+(cy-12*s)+' q'+(9*s)+' '+(12*s)+' '+(9*s)+' '+(17*s)+' a'+(9*s)+' '+(9*s)+' 0 0 1 -'+(18*s)+' 0 q0 -'+(5*s)+' '+(9*s)+' -'+(17*s)+' z" fill="#c9a227" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var crate=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="44" height="30" rx="2" fill="'+L+'" '+st+'/><path d="M'+(x+22)+' '+y+' v30 M'+x+' '+(y+10)+' h44" stroke="'+A+'" stroke-width="3"/>'; };
+  var plane=function(x,y){ return '<path d="M'+x+' '+(y+20)+' l70 -6 q12 0 12 6 q0 6 -12 6 l-70 -6 z" fill="#fff" '+st+'/><path d="M'+(x+30)+' '+(y+16)+' l10 -22 h8 l-2 20 z M'+(x+30)+' '+(y+24)+' l10 20 h8 l-2 -18 z M'+(x+4)+' '+(y+18)+' l-4 -12 h7 l8 12 z" fill="'+B+'" '+st+'/>'; };
+  var camera=function(x,y){ return '<rect x="'+x+'" y="'+(y+10)+'" width="60" height="42" rx="6" fill="'+M+'" '+st+'/><path d="M'+(x+16)+' '+(y+10)+' l6 -10 h16 l6 10" fill="'+M+'" '+st+'/><circle cx="'+(x+30)+'" cy="'+(y+31)+'" r="13" fill="#fff" '+st+'/><circle cx="'+(x+30)+'" cy="'+(y+31)+'" r="6" fill="'+B+'"/>'; };
+  var rack=function(x,y){ return tube(x,y+10,110,0)+tube(x+70,y+10,110,0)+'<rect x="'+(x-4)+'" y="'+y+'" width="104" height="14" rx="3" fill="'+B+'" '+st+'/>'
+     +'<path d="M'+(x+10)+' '+(y+62)+' h-14 v10 h14 M'+(x+86)+' '+(y+62)+' h14 v10 h-14" fill="'+M+'" '+st+'/>'; };
+  var lens=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="20" fill="#fff" fill-opacity="0.4" stroke="'+D+'" stroke-width="4"/><path d="M'+(cx+14)+' '+(cy+14)+' l18 18" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'; };
+  var loop=function(cx,cy,r,col){ var sx=cx+r*0.5, sy=cy-r*0.866, ex2=cx-r*0.5, ey=cy-r*0.866;
+    return '<path d="M'+sx+' '+sy+' A'+r+' '+r+' 0 1 1 '+ex2+' '+ey+'" fill="none" stroke="'+col+'" stroke-width="5" stroke-linecap="round"/>'+arr(ex2,ey,ex2+9,ey-5,col); };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* 0 旁白：漆為什麼會掉？ */
+    qp3Intro: svg(
+      tube(40,14,122,2)+tube(84,14,122,0)
+     +qb(162,44)
+     +pill(132,100,62,26,'PEEL',R,'#fff',12)),
+
+    /* 1 外觀：良好光線、一公尺目視 */
+    qp3Look: svg(
+      lamp(80,4)
+     +eye(36,84)
+     +'<path d="M64 84 H142" stroke="'+A+'" stroke-width="3" stroke-dasharray="6 5"/>'
+     +tube(150,30,110,0)
+     +pill(78,104,56,26,'1 m',A,'#fff',13)),
+
+    /* 2 限度樣品：可接受的最差刮傷 */
+    qp3Limit: svg(
+      '<rect x="14" y="14" width="74" height="84" rx="6" fill="#fff" '+st+'/><rect x="38" y="24" width="26" height="64" rx="3" fill="'+B+'" '+st+'/><path d="M46 46 l8 6" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<rect x="112" y="14" width="74" height="84" rx="6" fill="#fff" '+st+'/><rect x="136" y="24" width="26" height="64" rx="3" fill="'+B+'" '+st+'/><path d="M140 34 l18 40" stroke="#fff" stroke-width="3" stroke-linecap="round"/>'
+     +pill(22,108,58,26,'OK',G,'#fff',13)+pill(120,108,58,26,'NG',R,'#fff',13)),
+
+    /* 3 百格：劃格、貼膠帶、快速撕起 */
+    qp3Grid: svg(
+      grid(20,50,70,[])
+     +knife(30,48)
+     +tape(112,64,74,-28)
+     +arr(150,96,178,72,A)),
+
+    /* 4 ASTM D3359：5B 到 0B */
+    qp3Rate: svg(
+      grid(10,22,40,[])+grid(58,22,40,[3])+grid(106,22,40,[0,1,6,7,12,18])+grid(154,22,40,[0,1,2,5,6,7,8,10,11,12,13,15,16,17,20,21,22,23])
+     +txt(30,82,'5B',13,D)+txt(78,82,'4B',13,D)+txt(126,82,'2B',13,D)+txt(174,82,'0B',13,D)
+     +'<rect x="6" y="16" width="96" height="74" rx="8" fill="none" stroke="'+G+'" stroke-width="3" stroke-dasharray="6 4"/>'
+     +pill(60,106,80,28,'≥ 4B',G,'#fff',14)),
+
+    /* 5 前處理：脫脂、水洗、皮膜 */
+    qp3Pre: svg(
+      tank(8,62,56,72,'#e9dcb0','1')+tank(72,62,56,72,'#cfe3f5','2')+tank(136,62,56,72,'#d6ecd9','3')
+     +arr(24,30,176,30,A)
+     +'<rect x="26" y="36" width="20" height="30" rx="3" fill="'+M+'" '+st+'/>'),
+
+    /* 6 客戶：40 支掉漆，2B，規格 4B */
+    qp3Peel: svg(
+      tube(22,14,122,3)
+     +pill(78,22,56,28,'40',A,'#fff',14)
+     +pill(78,70,52,26,'2B',R,'#fff',13)+txt(146,89,'≠',26,R)
+     +pill(146,104,48,26,'4B',G,'#fff',13)),
+
+    /* 7 Anita：同批也是 2B，抱歉 */
+    qp3Same: svg(
+      grid(18,26,60,[0,1,6,7,12,18])
+     +txt(100,66,'=',30,D)
+     +grid(122,26,60,[2,3,7,8,13,19])
+     +pill(70,106,60,26,'2B',R,'#fff',13)),
+
+    /* 8 客戶：報告寫合格 */
+    qp3ReportAsk: svg(
+      doc(22,14,72,112,G)
+     +chk(40,96,26,G)
+     +qb(156,56)),
+
+    /* 9 Anita：只測平的測試片，沒測實際零件 */
+    qp3Panel: svg(
+      '<rect x="10" y="40" width="80" height="60" rx="3" fill="'+B+'" '+st+'/>'+grid(30,52,36,[])
+     +chk(36,124,20,G)
+     +'<rect x="140" y="14" width="26" height="122" rx="3" fill="none" stroke="'+D+'" stroke-width="3" stroke-dasharray="6 5"/>'
+     +txt(153,84,'?',26,A)
+     +arr(98,70,128,70,M)),
+
+    /* 10 客戶：根本原因？ */
+    qp3CauseAsk: svg(
+      tube(30,14,122,2)
+     +lens(60,40)
+     +qb(162,56)),
+
+    /* 11 Anita：脫脂槽三週沒換，油殘留 */
+    qp3Oil: svg(
+      tank(10,40,86,96,'#e9dcb0','')
+     +drop(34,72,0.8)+drop(56,66,1)+drop(78,74,0.7)
+     +cal(122,22,R)
+     +pill(112,92,80,28,'3 wk',R,'#fff',14)),
+
+    /* 12 客戶：倉庫裡的立柱呢？ */
+    qp3StockAsk: svg(
+      '<path d="M12 20 V136 M134 20 V136 M12 70 H134 M12 120 H134" '+st+' fill="none"/>'
+     +bar(20,40,106)+bar(20,54,106)+bar(20,90,106)+bar(20,104,106)
+     +qb(168,46)),
+
+    /* 13 Anita：300 支保留，每批測 */
+    qp3Hold: svg(
+      '<rect x="10" y="18" width="118" height="114" rx="4" fill="none" stroke="'+R+'" stroke-width="3" stroke-dasharray="8 6"/>'
+     +bar(22,36,94)+bar(22,54,94)+bar(22,72,94)+bar(22,90,94)+bar(22,108,94)
+     +pill(136,30,58,28,'HOLD',Y,D,12)
+     +pill(136,96,58,28,'300',A,'#fff',14)),
+
+    /* 14 客戶：健身房那 40 支呢？ */
+    qp3GymAsk: svg(
+      rack(24,14)
+     +qb(168,44)
+     +pill(140,100,52,26,'40',A,'#fff',13)),
+
+    /* 15 Anita：免費空運 40 支 */
+    qp3Air: svg(
+      plane(20,24)
+     +crate(30,96)+crate(80,96)
+     +pill(136,100,58,28,'FREE',G,'#fff',12)),
+
+    /* 16 客戶：怎麼確保不再發生？ */
+    qp3AgainAsk: svg(
+      loop(76,80,44,A)
+     +drop(76,84,1.1)
+     +qb(170,40)),
+
+    /* 17 Anita：每班測實際零件、附照片 */
+    qp3Shift: svg(
+      tube(14,14,122,0)
+     +grid(10,54,34,[])
+     +camera(70,40)
+     +chk(150,62,26,G)
+     +pill(66,108,128,26,'EVERY SHIFT',B,'#fff',11))
+  });
+})();
+
+window.VIDEO.qp03 = {
+ "title": "QA Practice III — Why Is the Paint Peeling?",
+ "titleCn": "品保實務三｜重訓架立柱掉漆：附著力 2B、脫脂槽三週沒換",
+ "date": "2026-10-25",
+ "level": "B2",
+ "scene": "QA Practice · Coating & Adhesion",
+ "sceneCn": "品保實務・塗裝外觀與附著力",
+ "sceneArt": "spray",
+ "titleArt": ["spray", "eye", "faucet"],
+ "cast": {
+  "N": { "name": "Narrator", "cn": "旁白", "voice": "n" },
+  "A": { "name": "Anita", "cn": "Anita・重訓架工廠品保", "voice": "f" },
+  "M": { "name": "Mike", "cn": "Mike・客戶品保", "voice": "m" }
+ },
+ "chapters": [
+  { "en": "Intro", "cn": "開場" },
+  { "en": "The Basics", "cn": "背景：外觀與附著力" },
+  { "en": "The Customer Call", "cn": "情境：立柱掉漆" },
+  { "en": "Key Expressions", "cn": "重點表達" },
+  { "en": "Grammar", "cn": "文法" },
+  { "en": "Homework Fixes", "cn": "作業訂正" },
+  { "en": "Quick Quiz", "cn": "小測驗" }
+ ],
+ "expr": {
+  "adhesion": { "t": "adhesion", "cn": "附著力", "tag": ["品保實務", "塗裝"], "note": "塗層黏住底材的程度；搭配：poor adhesion、lose adhesion。", "ex": "We changed the primer, and the adhesion on aluminum parts is much better now.", "exCn": "換了底漆以後，鋁件的附著力好很多。" },
+  "coating": { "t": "coating", "cn": "塗層", "tag": ["品保實務", "塗裝"], "note": "搭配：powder coating（粉體塗裝）、coating thickness（膜厚）。", "ex": "Measure the coating thickness at five points on each tube.", "exCn": "每支管子量五個點的塗層膜厚。" },
+  "peel": { "t": "peel", "cn": "剝落", "tag": ["品保實務", "塗裝"], "note": "搭配：peel off；和 chip（撞到崩一小塊）不同。", "ex": "The warning label started to peel after the unit was cleaned with alcohol.", "exCn": "機台用酒精擦過以後，警告標籤開始翹起來。" },
+  "pretreatment": { "t": "pretreatment", "cn": "前處理", "tag": ["品保實務", "塗裝"], "note": "塗裝前的脫脂、水洗、皮膜；搭配：pretreatment line。", "ex": "Parts with rust must be sanded before they go into pretreatment.", "exCn": "有生鏽的零件要先打磨才能進前處理。" },
+  "scratch": { "t": "scratch", "cn": "刮傷", "tag": ["品保實務", "外觀"], "note": "只傷表面塗層；和 dent（凹痕）不同。", "ex": "Put foam between the tubes so they don't get scratches in the box.", "exCn": "管子之間要放泡棉，才不會在箱子裡互相刮傷。" }
+ },
+ "lines": [
+  { "ch": 0, "sp": "N", "vis": { "type": "title" },
+    "en": "Welcome back. Today a customer says the paint on our power racks is coming off.",
+    "cn": "歡迎回來。今天客戶說我們重訓架的漆在掉。" },
+  { "ch": 0, "sp": "N", "vis": { "type": "scene", "art": "qp3Intro" },
+    "en": "Why is the paint peeling? Let's learn how to talk about appearance and adhesion.",
+    "cn": "漆為什麼會剝落？來學怎麼談外觀和附著力。",
+    "hi": [{ "t": "peeling", "cn": "剝落", "k": "peel", "c": 1 }] },
+
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp3Look" },
+    "en": "We check the appearance by eye under good light, from about one meter.",
+    "cn": "外觀是在良好光線下、大約一公尺的距離目視檢查。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp3Limit" },
+    "en": "A limit sample shows the worst scratch the customer will still accept.",
+    "cn": "限度樣品標示客戶還能接受的最嚴重刮傷。",
+    "hi": [{ "t": "scratch", "cn": "刮傷", "k": "scratch", "c": 1 }] },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp3Grid" },
+    "en": "In a cross-cut test, you cut a grid through the coating, put tape on it and pull it off fast.",
+    "cn": "百格測試是在塗層上劃出方格，貼上膠帶再快速撕起。",
+    "hi": [{ "t": "coating", "cn": "塗層", "k": "coating", "c": 1 }] },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp3Rate" },
+    "en": "The result goes from 5B, the best, to 0B, the worst. Many customers require 4B or better.",
+    "say": "The result goes from five B, the best, to zero B, the worst. Many customers require four B or better.",
+    "cn": "結果從最好的 5B 到最差的 0B。很多客戶要求 4B 以上。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp3Pre" },
+    "en": "Good adhesion starts in pretreatment: degreasing, rinsing and a phosphate coating.",
+    "cn": "好的附著力從前處理開始：脫脂、水洗、磷酸鹽皮膜。",
+    "hi": [{ "t": "adhesion", "cn": "附著力", "k": "adhesion", "c": 1 }, { "t": "pretreatment", "cn": "前處理", "k": "pretreatment", "c": 1 }] },
+
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp3Peel" },
+    "en": "The paint is peeling off around the J-cup holes on 40 uprights. Our cross-cut result was 2B, and your spec says 4B. What happened?",
+    "say": "The paint is peeling off around the J-cup holes on 40 uprights. Our cross-cut result was two B, and your spec says four B. What happened?",
+    "cn": "有 40 支立柱在掛鉤孔周圍掉漆。我們百格測出來 2B，你們規格寫 4B。怎麼回事？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp3Same" },
+    "en": "We tested parts from the same lot and also got 2B. I'm sorry about this.",
+    "say": "We tested parts from the same lot and also got two B. I'm sorry about this.",
+    "cn": "我們測了同批的零件，也是 2B。很抱歉。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp3ReportAsk" },
+    "en": "But your inspection report says the cross-cut test passed.",
+    "cn": "可是你們的檢驗報告寫百格測試合格。" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp3Panel" },
+    "en": "It did, but we only tested a flat test panel, not a real part.",
+    "cn": "是合格，但我們只測了平的測試片，沒有測實際零件。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp3CauseAsk" },
+    "en": "So what was the root cause?",
+    "cn": "那根本原因是什麼？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp3Oil" },
+    "en": "Our degreasing tank was three weeks overdue for a change. Oil on the steel caused the paint to lose adhesion.",
+    "cn": "我們的脫脂槽超過三週沒換，鋼材上的油讓塗層失去附著力。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp3StockAsk" },
+    "en": "What about the uprights in your warehouse?",
+    "cn": "你們倉庫裡的立柱呢？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp3Hold" },
+    "en": "We've put 300 uprights on hold, and we're testing every batch.",
+    "cn": "300 支立柱已經先保留了，每一批都在測。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp3GymAsk" },
+    "en": "And the 40 at the gym?",
+    "cn": "那健身房那 40 支呢？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp3Air" },
+    "en": "We'll air-ship 40 new uprights free of charge this week.",
+    "cn": "這週會免費空運 40 支新立柱過去。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp3AgainAsk" },
+    "en": "How will you make sure this doesn't happen again?",
+    "cn": "你們要怎麼確保不再發生？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp3Shift" },
+    "en": "We'll test a real part from every shift instead of a test panel, and we'll send you the photos with each shipment.",
+    "cn": "每班改測一支實際零件，不再只測試片，每次出貨也會附照片給你們。" },
+
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "adhesion", "ipa": "/ədˈhiː.ʒən/", "pos": "n.", "art": "bandage", "def": "adhesion n. — poor adhesion.", "cn": "附著力｜搭配：附著力差", "note": "塗層黏住底材的程度。" },
+    "en": "We changed the primer, and the adhesion on aluminum parts is much better now.", "cn": "換了底漆以後，鋁件的附著力好很多。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "coating", "ipa": "/ˈkoʊ.tɪŋ/", "pos": "n.", "art": "spray", "def": "coating n. — powder coating.", "cn": "塗層｜搭配：粉體塗裝", "note": "coating thickness 是膜厚。" },
+    "en": "Measure the coating thickness at five points on each tube.", "cn": "每支管子量五個點的塗層膜厚。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "peel", "ipa": "/piːl/", "pos": "v.", "art": "warning", "def": "peel v. — peel off.", "cn": "剝落｜搭配：剝掉、翹起來", "note": "一整片剝；被撞崩一小塊是 chip。" },
+    "en": "The warning label started to peel after the unit was cleaned with alcohol.", "cn": "機台用酒精擦過以後，警告標籤開始翹起來。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "pretreatment", "ipa": "/ˌpriːˈtriːt.mənt/", "pos": "n.", "art": "faucet", "def": "pretreatment n. — the pretreatment line.", "cn": "前處理｜搭配：前處理線", "note": "脫脂、水洗、皮膜。" },
+    "en": "Parts with rust must be sanded before they go into pretreatment.", "cn": "有生鏽的零件要先打磨才能進前處理。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "scratch", "ipa": "/skrætʃ/", "pos": "n.", "art": "eye", "def": "scratch n. — a deep scratch.", "cn": "刮傷｜搭配：很深的刮痕", "note": "只傷表面；金屬凹下去是 dent。" },
+    "en": "Put foam between the tubes so they don't get scratches in the box.", "cn": "管子之間要放泡棉，才不會在箱子裡互相刮傷。" },
+
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "cause + O + to V", "art": "bolt",
+      "rows": [{ "lab": "原因造成某東西怎樣", "blocks": [{ "t": "Moisture in the powder", "k": "s" }, { "t": "caused", "k": "v" }, { "t": "the coating to bubble", "k": "o" }] }] },
+    "en": "Moisture in the powder caused the coating to bubble.", "cn": "粉受潮讓塗層起泡。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "instead of + N / V-ing", "art": "signpost",
+      "rows": [{ "lab": "改用…，不用…", "blocks": [{ "t": "Wipe the frame with a soft cloth", "k": "s" }, { "t": "instead of", "k": "v" }, { "t": "a brush", "k": "o" }] }] },
+    "en": "Wipe the frame with a soft cloth instead of a brush.", "cn": "車架用軟布擦，不要用刷子。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "as long as + present", "art": "check",
+      "rows": [{ "lab": "只要…就…", "blocks": [{ "t": "You can reuse the hooks", "k": "s" }, { "t": "as long as", "k": "v" }, { "t": "they are clean", "k": "o" }] }] },
+    "en": "You can reuse the hooks as long as they are clean.", "cn": "掛具只要乾淨就可以再用。" },
+
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 1, "wrong": "Oil on the steel caused the paint lose adhesion.", "bad": ["paint lose"], "fix": "Oil on the steel caused the paint to lose adhesion." },
+    "en": "Oil on the steel caused the paint to lose adhesion.", "cn": "鋼材上的油讓塗層失去附著力。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 2, "wrong": "We'll test a real part every shift instead of use a test panel.", "bad": ["use"], "fix": "We'll test a real part every shift instead of using a test panel." },
+    "en": "We'll test a real part every shift instead of using a test panel.", "cn": "我們每班都會測一支實際零件，不再用測試片。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 3, "wrong": "We can ship the frames as long as they will pass the cross-cut test.", "bad": ["will pass"], "fix": "We can ship the frames as long as they pass the cross-cut test." },
+    "en": "We can ship the frames as long as they pass the cross-cut test.", "cn": "只要通過百格測試，就可以出貨。" },
+
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "The paint is peeling ___ around the holes.", "a": "off", "n": 1 },
+    "en": "The paint is peeling ___ around the holes.", "cn": "孔的周圍在掉漆。",
+    "say": "The paint is peeling , blank, around the holes.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "Oil on the steel caused the paint ___ lose adhesion.", "a": "to", "n": 2 },
+    "en": "Oil on the steel caused the paint ___ lose adhesion.", "cn": "鋼材上的油讓塗層失去附著力。",
+    "say": "Oil on the steel caused the paint , blank, lose adhesion.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We'll test a real part instead ___ a test panel.", "a": "of", "n": 3 },
+    "en": "We'll test a real part instead ___ a test panel.", "cn": "我們會改測實際零件，不再只測試片。",
+    "say": "We'll test a real part instead , blank, a test panel.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We've put 300 uprights ___ hold.", "a": "on", "n": 4 },
+    "en": "We've put 300 uprights ___ hold.", "cn": "我們已經把 300 支立柱先保留了。",
+    "say": "We've put 300 uprights , blank, hold.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "end" },
+    "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+ ]
+};

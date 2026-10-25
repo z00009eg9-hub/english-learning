@@ -24071,6 +24071,222 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- qp03 品保實務三：重訓架立柱掉漆 → 脫脂槽沒換、百格只測試片 ---- */
+  {
+   "id": "qp03",
+   "icon": "🎨",
+   "video": true,
+   "date": "2026-10-25",
+   "title": "QA Practice III — Why Is the Paint Peeling?",
+   "titleCn": "品保實務三｜重訓架立柱掉漆：附著力 2B、脫脂槽三週沒換",
+   "topics": "品保實務, 塗裝, 粉體塗裝, 外觀檢驗, 限度樣品, 刮傷, 色差, 附著力, 百格測試, ASTM D3359, 前處理, 脫脂, 鹽霧測試, 重訓架, adhesion, cross-cut test, powder coating, limit sample, salt spray",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "The paint is peeling off around the holes.",
+     "cn": "孔的周圍在掉漆。",
+     "pat": "be peeling off（正在剝落）",
+     "note": "peel off 是塗層一片一片翹起來剝掉；用現在進行式表示「現在看得到正在剝」，客訴最常這樣描述。"
+    },
+    {
+     "n": 2,
+     "cn": "鋼材上的油讓塗層失去附著力。",
+     "pat": "cause + 受詞 + to + 原形動詞",
+     "note": "cause 說「造成某東西去怎樣」時，後面要接 to + 原形動詞；少了 to 是常見錯誤。",
+     "wrong": "Oil on the steel caused the paint lose adhesion.",
+     "fix": "Oil on the steel caused the paint to lose adhesion."
+    },
+    {
+     "n": 3,
+     "ok": "We now test a real part instead of a test panel.",
+     "cn": "我們現在改測實際零件，而不是測試片。",
+     "pat": "A instead of B（改用 A，不用 B）",
+     "note": "instead of 是介系詞，後面接名詞：instead of a test panel。說明對策「改成什麼」很好用。"
+    },
+    {
+     "n": 4,
+     "cn": "我們每班都會測一支實際零件，不再用測試片。",
+     "pat": "instead of + V-ing",
+     "note": "instead of 是介系詞，後面接動詞要用 V-ing，不能接原形。",
+     "wrong": "We'll test a real part every shift instead of use a test panel.",
+     "fix": "We'll test a real part every shift instead of using a test panel."
+    },
+    {
+     "n": 5,
+     "ok": "We've put 300 uprights on hold.",
+     "cn": "我們已經把 300 支立柱先保留、不出貨。",
+     "pat": "put + 東西 + on hold",
+     "note": "on hold 是「暫停、先擱著」，品保用來說可疑品先扣住不出貨；已經做好的處置用現在完成式。"
+    },
+    {
+     "n": 6,
+     "cn": "只要通過百格測試，就可以出貨。",
+     "pat": "as long as + 現在式（只要…就…）",
+     "note": "as long as 是條件子句，和 if 一樣用現在式表示未來，不要在子句裡加 will。",
+     "wrong": "We can ship the frames as long as they will pass the cross-cut test.",
+     "fix": "We can ship the frames as long as they pass the cross-cut test."
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    { "w": "adhesion", "ipa": "/ədˈhiː.ʒən/", "pos": "n.", "cn": "附著力（塗層黏住底材的程度）", "ex": "We changed the primer, and the adhesion on aluminum parts is much better now.", "exCn": "換了底漆以後，鋁件的附著力好很多。" },
+    { "w": "coating", "ipa": "/ˈkoʊ.tɪŋ/", "pos": "n.", "cn": "塗層、塗裝", "ex": "Measure the coating thickness at five points on each tube.", "exCn": "每支管子量五個點的塗層膜厚。" },
+    { "w": "peel", "ipa": "/piːl/", "pos": "v.", "cn": "（塗層、貼紙）剝落", "ex": "The warning label started to peel after the unit was cleaned with alcohol.", "exCn": "機台用酒精擦過以後，警告標籤開始翹起來。" },
+    { "w": "pretreatment", "ipa": "/ˌpriːˈtriːt.mənt/", "pos": "n.", "cn": "前處理（塗裝前的清洗與皮膜）", "ex": "Parts with rust must be sanded before they go into pretreatment.", "exCn": "有生鏽的零件要先打磨才能進前處理。" },
+    { "w": "degrease", "ipa": "/ˌdiːˈɡriːs/", "pos": "v.", "cn": "脫脂、去油", "ex": "Degrease the bolts before you apply the thread locker.", "exCn": "上螺絲膠之前，先把螺絲去油。" },
+    { "w": "scratch", "ipa": "/skrætʃ/", "pos": "n.", "cn": "刮傷、刮痕", "ex": "Put foam between the tubes so they don't get scratches in the box.", "exCn": "管子之間要放泡棉，才不會在箱子裡互相刮傷。" },
+    { "w": "corrosion", "ipa": "/kəˈroʊ.ʒən/", "pos": "n.", "cn": "腐蝕、鏽蝕", "ex": "Sweat from users can cause corrosion on the handlebar over time.", "exCn": "使用者的汗水久了會讓把手腐蝕。" },
+    { "w": "shade", "ipa": "/ʃeɪd/", "pos": "n.", "cn": "（顏色的）色調、深淺", "ex": "This new powder is a slightly darker shade of red than the old one.", "exCn": "這批新粉的紅色比舊的稍微深一點。" }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "cross-cut test", "cn": "百格測試（劃格附著力測試）" },
+    { "p": "limit sample", "cn": "限度樣品（可接受的最差樣品）" },
+    { "p": "color difference", "cn": "色差" },
+    { "p": "salt spray test", "cn": "鹽霧測試" },
+    { "p": "degreasing tank", "cn": "脫脂槽" },
+    { "p": "put … on hold", "cn": "先保留、暫停出貨" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "QP3-A",
+     "title": "cause + 受詞 + to + 原形動詞（造成某東西怎樣）",
+     "pat": "原因 + caused + 東西 + to + 原形動詞",
+     "pts": [
+      "說根本原因時很好用：主詞是原因，受詞是受影響的東西，後面接 to + 原形動詞。",
+      "to 不能省略；如果只說造成什麼問題，也可以直接 cause + 名詞：cause corrosion。",
+      "例：Moisture in the powder caused the coating to bubble.（粉受潮讓塗層起泡。）"
+     ],
+     "ex": "Moisture in the powder caused the coating to bubble.",
+     "exCn": "粉受潮讓塗層起泡。"
+    },
+    {
+     "k": "QP3-B",
+     "title": "instead of + 名詞 / V-ing（改用…，不用…）",
+     "pat": "A + instead of + B（名詞）／ 動作 + instead of + V-ing",
+     "pts": [
+      "說明「改成什麼做法」：前面是新做法，instead of 後面是舊做法。",
+      "instead of 是介系詞，後面接動詞要變成 V-ing。",
+      "例：Wipe the frame with a soft cloth instead of a brush.（車架用軟布擦，不要用刷子。）"
+     ],
+     "ex": "Wipe the frame with a soft cloth instead of a brush.",
+     "exCn": "車架用軟布擦，不要用刷子。"
+    },
+    {
+     "k": "QP3-C",
+     "title": "as long as + 現在式（只要…就…）",
+     "pat": "結果 + as long as + 主詞 + 現在式",
+     "pts": [
+      "訂外觀或允收條件時常用：只要符合這個條件，就可以接受。",
+      "as long as 子句和 if 一樣，用現在式表示未來，不加 will。",
+      "例：You can reuse the hooks as long as they are clean.（掛具只要乾淨就可以再用。）"
+     ],
+     "ex": "You can reuse the hooks as long as they are clean.",
+     "exCn": "掛具只要乾淨就可以再用。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "peel vs chip",
+     "sc": "peel（剝落）是塗層一整片從底材翹起來，通常是附著力差、前處理沒做好；chip（崩漆）是被撞到掉一小塊，通常是搬運或包裝碰撞。客訴時先分清楚，原因和對策完全不同。",
+     "ex": "This corner chipped when the box fell, but the rest of the paint is fine.",
+     "exCn": "箱子掉下來時這個角崩掉一塊，其他地方的漆都沒問題。",
+     "cn": "剝落 vs 崩漆"
+    },
+    {
+     "u": "scratch vs dent",
+     "sc": "scratch（刮傷）只傷到表面塗層，輕微的可以補漆；dent（凹痕）是金屬本身被撞凹，結構件通常要換掉，不能只補漆。",
+     "ex": "There's a dent in the tube, so it needs to be replaced, not touched up.",
+     "exCn": "管子凹下去了，要換掉，不能只補漆。",
+     "cn": "刮傷 vs 凹痕"
+    },
+    {
+     "u": "shade vs gloss",
+     "sc": "shade（色調）是顏色的深淺，色差講的就是這個；gloss（光澤）是表面亮不亮。兩支管子可能顏色一樣，但一支比較亮、一支比較霧。",
+     "ex": "The color is right, but this batch is less glossy than the sample.",
+     "exCn": "顏色是對的，但這批光澤比樣品霧。",
+     "cn": "色調 vs 光澤"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "背景｜塗裝外觀與附著力怎麼檢查",
+     "title": "Looks Good, Sticks Well",
+     "titleCn": "背景｜塗裝外觀檢驗、百格測試與前處理",
+     "paras": [
+      { "en": "Most of our frames are powder coated. The coating protects the steel from rust, and it is the first thing a user sees, so we check both appearance and adhesion.", "cn": "我們的車架大多是粉體塗裝。塗層保護鋼材不生鏽，也是使用者第一眼看到的東西，所以外觀和附著力都要檢查。" },
+      { "en": "Appearance is checked by eye under good light, usually from about one meter. A limit sample shows the worst scratch, dirt spot or color difference that the customer will still accept.", "cn": "外觀是在良好光線下目視檢查，通常距離約一公尺。限度樣品標示客戶還能接受的最嚴重刮傷、髒點或色差。" },
+      { "en": "Adhesion means how well the coating sticks to the steel. In a cross-cut test, you cut a small grid through the coating, put tape on it and pull the tape off quickly.", "cn": "附著力是塗層黏住鋼材的程度。百格測試是用刀在塗層上劃出小方格，貼上膠帶再快速撕起。" },
+      { "en": "Under ASTM D3359, the result is rated from 5B, with no coating removed, to 0B, with more than 65 percent removed. Many customers require 4B or better.", "cn": "依 ASTM D3359，結果從 5B（完全沒掉）到 0B（掉超過 65%）分級。很多客戶要求 4B 以上。" },
+      { "en": "Good adhesion starts before painting. In the pretreatment line, the steel is degreased, rinsed and given a conversion coating, such as phosphate.", "cn": "好的附著力從塗裝前就開始。前處理線會把鋼材脫脂、水洗，再上一層化成皮膜，例如磷酸鹽皮膜。" },
+      { "en": "A salt spray test checks corrosion resistance. Test panels stay in a salt fog chamber for a set time, such as 500 hours, and then they are checked for rust and blisters.", "cn": "鹽霧測試檢查耐腐蝕性。試片放在鹽霧試驗箱一段規定時間，例如 500 小時，再檢查有沒有生鏽、起泡。" }
+     ],
+     "questions": [
+      { "q": "What does a limit sample show?", "qCn": "限度樣品標示什麼？", "a": "The worst scratch, dirt spot or color difference that the customer will still accept.", "aCn": "客戶還能接受的最嚴重刮傷、髒點或色差。" },
+      { "q": "In a cross-cut test, what do you do after cutting the grid?", "qCn": "百格測試劃完格子之後要做什麼？", "a": "Put tape on it and pull the tape off quickly.", "aCn": "貼上膠帶再快速撕起。" },
+      { "q": "A cross-cut result of 2B means ___. (A. no coating removed / B. less than 5 percent removed / C. 15 to 35 percent removed / D. more than 65 percent removed)", "qCn": "百格結果 2B 代表什麼？", "a": "C. 15 to 35 percent removed.", "aCn": "C. 掉了 15% 到 35%。" }
+     ]
+    },
+    {
+     "bar": "情境｜重訓架立柱掉漆",
+     "title": "Our Case: Peeling Around the Holes",
+     "titleCn": "情境｜客戶百格 2B、規格要 4B：脫脂槽三週沒換（虛構情境）",
+     "paras": [
+      { "en": "Situation: A US customer received 200 power racks. Two weeks later, the paint was peeling off around the J-cup holes on 40 uprights at a gym. Their cross-cut result was 2B, but the spec requires 4B. This is a practice case.", "cn": "情境：美國客戶收到 200 組重訓架。兩週後，健身房裡有 40 支立柱在掛鉤孔周圍掉漆。客戶的百格結果是 2B，但規格要求 4B。這是練習用的虛構案例。" },
+      { "en": "Check 1: We tested retained uprights from the same lot and also got 2B. Our daily cross-cut test had passed because we only tested a flat test panel, not a real part.", "cn": "查核一：我們拿同批的留樣立柱測試，也是 2B。我們每天的百格測試會過，是因為只測平的測試片，沒有測實際零件。" },
+      { "en": "Check 2: The degreasing tank should be changed every week, but it had not been changed for three weeks. Oil left on the steel caused the powder coating to lose adhesion.", "cn": "查核二：脫脂槽規定每週換一次，但已經三週沒換。鋼材上殘留的油讓粉體塗層失去附著力。" },
+      { "en": "Action 1: We put the 300 uprights in our warehouse on hold and tested parts from every batch. We will air-ship 40 new uprights to the customer free of charge.", "cn": "對策一：倉庫裡的 300 支立柱先保留不出貨，每一批都抽零件測試。另外免費空運 40 支新立柱給客戶。" },
+      { "en": "Action 2: The degreasing tank is now changed every week, and its concentration is checked at the start of every shift.", "cn": "對策二：脫脂槽現在每週更換，每班開工時檢查濃度。" },
+      { "en": "Action 3: We now do the cross-cut test on a real part from every shift instead of a test panel, and we send the photos with each shipment.", "cn": "對策三：現在每班改拿實際零件做百格測試，不再只測試片，並且每次出貨附上照片。" }
+     ]
+    },
+    {
+     "bar": "演練｜客戶問為什麼會掉漆",
+     "title": "Practice: Why Is the Paint Peeling?",
+     "titleCn": "演練｜客戶來電：立柱為什麼掉漆？",
+     "paras": [
+      { "en": "Customer: The paint is peeling off around the J-cup holes on 40 uprights. Our cross-cut result was 2B, and your spec says 4B. What happened?", "cn": "客戶：有 40 支立柱在掛鉤孔周圍掉漆。我們百格測出來 2B，你們規格寫 4B。怎麼回事？" },
+      { "en": "You: We tested parts from the same lot and also got 2B. I'm sorry about this.", "cn": "你：我們測了同批的零件，也是 2B。很抱歉。" },
+      { "en": "Customer: But your inspection report says the cross-cut test passed.", "cn": "客戶：可是你們的檢驗報告寫百格測試合格。" },
+      { "en": "You: It did, but we only tested a flat test panel, not a real part.", "cn": "你：是合格，但我們只測了平的測試片，沒有測實際零件。" },
+      { "en": "Customer: So what was the root cause?", "cn": "客戶：那根本原因是什麼？" },
+      { "en": "You: Our degreasing tank was three weeks overdue for a change. Oil on the steel caused the paint to lose adhesion.", "cn": "你：我們的脫脂槽超過三週沒換，鋼材上的油讓塗層失去附著力。" },
+      { "en": "Customer: What about the uprights in your warehouse?", "cn": "客戶：你們倉庫裡的立柱呢？" },
+      { "en": "You: We've put 300 uprights on hold, and we're testing every batch.", "cn": "你：300 支立柱已經先保留了，每一批都在測。" },
+      { "en": "Customer: And the 40 at the gym?", "cn": "客戶：那健身房那 40 支呢？" },
+      { "en": "You: We'll air-ship 40 new uprights free of charge this week.", "cn": "你：這週會免費空運 40 支新立柱過去。" },
+      { "en": "Customer: How will you make sure this doesn't happen again?", "cn": "客戶：你們要怎麼確保不再發生？" },
+      { "en": "You: We'll test a real part from every shift instead of a test panel, and we'll send you the photos with each shipment.", "cn": "你：每班改測一支實際零件，不再只測試片，每次出貨也會附照片給你們。" }
+     ]
+    },
+    {
+     "bar": "討論｜我們廠的現況",
+     "title": "Discussion: How Do We Check Our Paint?",
+     "titleCn": "討論｜我們廠的現況",
+     "paras": [
+      { "en": "Do we have limit samples for scratches and color difference, and does every inspector use the same light and distance?", "cn": "我們有刮傷和色差的限度樣品嗎？每位檢驗員用的光線和距離都一樣嗎？" },
+      { "en": "Do we do the cross-cut test on real parts or only on test panels, and how often?", "cn": "我們的百格測試是測實際零件，還是只測試片？多久測一次？" },
+      { "en": "Who checks the pretreatment tanks, and what happens if a tank is overdue for a change?", "cn": "誰在檢查前處理槽？如果槽液過期沒換，會怎麼處理？" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "The paint is peeling off around the holes.", "cn": "孔的周圍在掉漆。" },
+      { "en": "Our cross-cut result was 2B.", "cn": "我們的百格結果是 2B。" },
+      { "en": "Oil on the steel caused the paint to lose adhesion.", "cn": "鋼材上的油讓塗層失去附著力。" },
+      { "en": "We've put 300 uprights on hold.", "cn": "我們已經把 300 支立柱先保留了。" },
+      { "en": "We'll test a real part instead of a test panel.", "cn": "我們會改測實際零件，不再只測試片。" },
+      { "en": "A small scratch is acceptable as long as you can't see it from one meter.", "cn": "小刮傷只要在一公尺外看不到，就可以接受。" }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -28889,6 +29105,7 @@ window.BOOK = {
     bk20251218:[[['toilet','wrench','suitcase','doc','moon'],'忙碌修繕的一天：馬桶、洗手台、磁磚出問題 → 打電話請水電工 → 旅行社規劃假期 → 到政府機關辦文件 → 晚上全部修好。']],
     bk20251226b:[[['signpost','exam','piggy','globe','sprout'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
     bk20260922:[[['eye','gear','plug','dumbbell','cart'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
+    qp03:[[['spray','faucet','mirror','cloudRain','umbrella'],'重訓架立柱掉漆：客戶百格 2B、規格要 4B → 我們只測平的測試片、沒測實際零件 → 脫脂槽三週沒換、油殘留 → 300 支保留、空運 40 支 → 脫脂槽每週換、每班測實際零件附照片。']],
     qp02:[[['videocall','facesL','traffic','screenL','window'],'客戶量的孔徑和我們不一樣：我們量 12.06、客戶量 12.14 → 卡尺校驗過期兩週、讀數偏低 0.05 → GR&R 38% 不可接受 → 600 件隔離、改用通止針規 → 校驗標籤＋到期前提醒。']],
     qp01:[[['booksL','stethoL','building','officeL','briefcase'],'客戶要 EN ISO 20957 測試報告：手上只有內部測試紀錄 → 誠實說明、內部紀錄僅供參考 → 對照第 1、6 部做差異分析 → 送兩台樣品到認證實驗室、約四週出報告。']],
     qa05:[[['stepsL','globe','signpost','door','card'],'橢圓機踏板脫開：2010 兩品牌橢圓機召回約 18,000 台 → 踏板脫開 58 件、無人受傷 → 依序號範圍只召回受影響機台 → 模擬：銷孔過大、只用通規抓不到 → 序號綁批號、改用通止規。']],
