@@ -23000,6 +23000,430 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- qa03 品保新聞三：Rep Fitness 安全支架漏焊（CPSC 21-721）→ 對供應商發 SCAR ---- */
+  {
+   "id": "qa03",
+   "icon": "🏋️",
+   "video": true,
+   "date": "2026-10-25",
+   "title": "QA News III — Two Missing Welds",
+   "titleCn": "品保新聞三｜支架少焊兩道 → 對焊接供應商發 SCAR",
+   "topics": "品保新聞, 召回, SCAR, 供應商管理, 焊接, 漏焊, 進料檢驗, 重訓架, weld, supplier, incoming inspection, traceability",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "The brackets may be improperly welded.",
+     "cn": "支架可能焊接不當。",
+     "pat": "may be + 過去分詞",
+     "note": "支架可能焊接不當。may be welded 是「推測＋被動」，召回公告描述「可能有問題」時常用。"
+    },
+    {
+     "n": 2,
+     "cn": "這些支架漏了兩道焊。",
+     "pat": "were + 過去分詞（被動）",
+     "note": "漏了兩道焊。被動語態 be 動詞後面要接過去分詞 missed，不能用原形 miss。",
+     "wrong": "Two welds were miss on these brackets.",
+     "fix": "Two welds were missed on these brackets."
+    },
+    {
+     "n": 3,
+     "ok": "We require the supplier to send a weld map with every lot.",
+     "cn": "我們要求供應商每批都附焊道圖。",
+     "pat": "require + 人 + to + 動詞原形",
+     "note": "要求供應商每批附焊道圖。require 後面先接「人」，再接 to + 動詞原形。"
+    },
+    {
+     "n": 4,
+     "cn": "請在週五前交 8D 報告。",
+     "pat": "by + 時間（最晚期限）",
+     "note": "週五前交。by 是「最晚在…之前完成」；until 是「一直持續到…」，交期限要用 by。",
+     "wrong": "Please send the 8D report until Friday.",
+     "fix": "Please send the 8D report by Friday."
+    },
+    {
+     "n": 5,
+     "ok": "Keep the straps and bolts; only the brackets are recalled.",
+     "cn": "綁帶和螺栓留著，只召回支架。",
+     "pat": "only + 主詞 + are + 過去分詞",
+     "note": "只召回支架。only 放在主詞前面，限定範圍；are recalled 是現在式被動。"
+    },
+    {
+     "n": 6,
+     "cn": "我們的 IQC 只量尺寸，沒數焊道數量。",
+     "pat": "the number of + 複數名詞",
+     "note": "沒數焊道數量。the number of 後面接複數名詞，weld 要加 -s。",
+     "wrong": "Our IQC checked dimensions only, not the number of weld.",
+     "fix": "Our IQC checked dimensions only, not the number of welds."
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    { "w": "bracket", "ipa": "/ˈbræk.ɪt/", "pos": "n.", "cn": "支架、托架", "ex": "Tighten all four bolts on the motor bracket.", "exCn": "把馬達支架上的四顆螺栓都鎖緊。" },
+    { "w": "weld", "ipa": "/weld/", "pos": "n.", "cn": "焊道、焊接處", "ex": "Each weld on the frame must be at least 30 millimeters long.", "exCn": "車架上每道焊都至少要 30 毫米長。" },
+    { "w": "skip", "ipa": "/skɪp/", "pos": "v.", "cn": "跳過、漏做", "ex": "Never skip a step on the check sheet.", "exCn": "檢查表上的步驟一個都不能跳過。" },
+    { "w": "drop", "ipa": "/drɑːp/", "pos": "v.", "cn": "（突然）掉落、放下", "ex": "Do not drop the frame on the concrete floor.", "exCn": "不要讓車架摔在水泥地上。" },
+    { "w": "supplier", "ipa": "/səˈplaɪɚ/", "pos": "n.", "cn": "供應商", "ex": "The supplier changed its paint without telling us.", "exCn": "供應商沒通知我們就換了漆。" },
+    { "w": "require", "ipa": "/rɪˈkwaɪɚ/", "pos": "v.", "cn": "要求、規定", "ex": "This customer requires a test report with every shipment.", "exCn": "這個客戶規定每次出貨都要附測試報告。" },
+    { "w": "deadline", "ipa": "/ˈdedlaɪn/", "pos": "n.", "cn": "期限、截止日", "ex": "The deadline for the drawing change is next Monday.", "exCn": "圖面變更的期限是下週一。" },
+    { "w": "traceability", "ipa": "/ˌtreɪ.səˈbɪl.ə.t̬i/", "pos": "n.", "cn": "可追溯性", "ex": "Good traceability lets us find every affected unit within an hour.", "exCn": "可追溯性做得好，一小時內就能找出所有受影響的產品。" }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "missing weld", "cn": "漏焊（該焊的地方沒焊）" },
+    { "p": "weld map", "cn": "焊道圖（標示每道焊的位置和長度）" },
+    { "p": "incoming inspection", "cn": "進料檢驗（IQC）" },
+    { "p": "issue a SCAR", "cn": "發出供應商矯正對策要求單" },
+    { "p": "fixture change", "cn": "換治具" },
+    { "p": "free replacement", "cn": "免費更換" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "QA3-A",
+     "title": "was / were + 過去分詞（被動：說明發生了什麼）",
+     "pat": "主詞（東西）+ was / were + 過去分詞",
+     "pts": [
+      "重點在「東西發生了什麼事」、不在「誰做的」時，用被動語態。",
+      "8D 的 D2 問題描述很常用：was missed、were not welded、was damaged。",
+      "例：The label was printed on the wrong side.（標籤印在錯的那一面。）"
+     ],
+     "ex": "The label was printed on the wrong side.",
+     "exCn": "標籤印在錯的那一面。"
+    },
+    {
+     "k": "QA3-B",
+     "title": "require + 人 + to + 動詞原形（正式要求）",
+     "pat": "主詞 + require(s) + 人 + to + 動詞原形",
+     "pts": [
+      "require 比 ask 正式，用在規定、合約、SCAR 這種「一定要做」的要求。",
+      "也可以說 be required to do：The supplier is required to reply within seven days.",
+      "例：We require every welder to sign the check sheet.（我們要求每位焊工都要在檢查表上簽名。）"
+     ],
+     "ex": "We require every welder to sign the check sheet.",
+     "exCn": "我們要求每位焊工都要在檢查表上簽名。"
+    },
+    {
+     "k": "QA3-C",
+     "title": "by + 時間（期限）vs until + 時間（持續）",
+     "pat": "動作 + by + 期限 ／ 狀態 + until + 時間",
+     "pts": [
+      "by Friday＝最晚週五「完成」，交報告、回覆、出貨都用 by。",
+      "until Friday＝一直「持續」到週五，例如 hold the lot until Friday。",
+      "例：Please confirm the new drawing by Wednesday.（請在週三前確認新圖面。）"
+     ],
+     "ex": "Please confirm the new drawing by Wednesday.",
+     "exCn": "請在週三前確認新圖面。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "SCAR vs 8D",
+     "sc": "SCAR（Supplier Corrective Action Request）是買方發給供應商的「矯正對策要求單」；8D 是解決問題的步驟和報告格式。我們發 SCAR，供應商用 8D 回覆。",
+     "ex": "We issued a SCAR, and the supplier answered with an 8D.",
+     "exCn": "我們發了 SCAR，供應商用 8D 回覆。",
+     "cn": "矯正要求單 vs 8D 報告"
+    },
+    {
+     "u": "missing weld vs weak weld",
+     "sc": "missing weld 是該焊的地方根本沒焊（漏焊），用眼睛數焊道就抓得到；weak weld 是有焊但強度不夠（例如熔深不足），外觀可能正常，要靠破壞測試才知道。",
+     "ex": "A missing weld is easy to see, but a weak weld is not.",
+     "exCn": "漏焊很容易看到，強度不足的焊道卻不容易。",
+     "cn": "漏焊 vs 焊接強度不足"
+    },
+    {
+     "u": "by vs until",
+     "sc": "by 是期限，表示「在那之前完成一次」；until 是持續，表示「一直保持到那時」。交 8D 用 by，隔離庫存直到判定用 until。",
+     "ex": "Send the report by Friday, and hold the stock until we reply.",
+     "exCn": "週五前交報告，庫存先隔離，直到我們回覆。",
+     "cn": "期限 vs 持續"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "新聞｜安全支架少焊兩道",
+     "title": "Two Missing Welds",
+     "titleCn": "新聞｜Rep Fitness 重訓架安全支架召回",
+     "paras": [
+      { "en": "In February 2021, Rep Fitness recalled about 1,940 strap safety brackets for its PR-4000 and PR-5000 power racks. The brackets hold the safety straps that catch the barbell when a lifter cannot finish a lift.", "cn": "2021 年 2 月，Rep Fitness 召回約 1,940 組用於 PR-4000、PR-5000 重訓架的安全綁帶支架。這些支架固定安全綁帶，在舉重者撐不住時接住槓鈴。" },
+      { "en": "According to the CPSC, the brackets may be improperly welded. If a heavy weight is suddenly dropped onto the straps, the brackets can detach from the rack.", "cn": "根據 CPSC，這些支架可能焊接不當。重物突然掉到綁帶上時，支架可能從架子上脫落。" },
+      { "en": "The company said the affected brackets were missing two welds, one at the top and one at the bottom. There were three reports of brackets breaking when a large weight was dropped. No injuries were reported.", "cn": "公司表示，受影響的支架少了兩道焊，上方一道、下方一道。共有 3 件重物掉落時支架斷裂的通報，沒有人受傷。" },
+      { "en": "The brackets were sold online from April to December 2020 and were made in China. Owners were told to stop using them and to contact the company for free replacements. Only the brackets were recalled; owners kept the straps and bolts.", "cn": "這批支架在 2020 年 4 月到 12 月於網路販售，在中國製造。車主被要求停止使用，並聯絡公司免費更換。只召回支架，綁帶和螺栓由使用者保留。" },
+      { "en": "A missing weld is not a hidden defect. It can be seen with the eyes. So for a quality team, the real question is: why did no one count the welds before the parts were shipped?", "cn": "漏焊不是看不見的缺陷，用眼睛就看得到。所以對品保團隊來說，真正的問題是：零件出貨前，為什麼沒有人數一下焊道？" }
+     ],
+     "questions": [
+      { "q": "What was wrong with the recalled brackets?", "qCn": "被召回的支架有什麼問題？", "a": "They were missing two welds, one at the top and one at the bottom.", "aCn": "少了兩道焊，上方一道、下方一道。" },
+      { "q": "When did the brackets break? (A. During shipping. / B. When a heavy weight was suddenly dropped. / C. When the rack was assembled. / D. After rust formed.)", "qCn": "支架在什麼時候斷裂？", "a": "B. When a heavy weight was suddenly dropped.", "aCn": "B. 重物突然掉落時。" },
+      { "q": "Why does the article say a missing weld is not a hidden defect?", "qCn": "文章為什麼說漏焊不是看不見的缺陷？", "a": "Because it can be seen with the eyes.", "aCn": "因為用眼睛就看得到。" }
+     ]
+    },
+    {
+     "bar": "模擬｜對焊接供應商發 SCAR",
+     "title": "Simulation: Issuing a SCAR",
+     "titleCn": "模擬｜你是重訓架工廠 QA，對支架供應商發 SCAR（虛構情境）",
+     "paras": [
+      { "en": "Situation: Your factory buys welded safety brackets from a supplier and assembles them onto power racks. A customer has returned three broken brackets. This is a practice case, not Rep Fitness's real analysis.", "cn": "情境：你的工廠向供應商採購焊好的安全支架，再組裝到重訓架上。客戶退回三個斷裂的支架。這是練習用的虛構案例，不是 Rep Fitness 的實際分析。" },
+      { "en": "D2 Problem: Two welds were missed on some brackets. The brackets broke when a heavy weight was dropped.", "cn": "D2 問題描述：部分支架漏了兩道焊，重物掉落時支架斷裂。" },
+      { "en": "D3 Containment: We have held all brackets in stock and are checking every one for missing welds. Good parts get a green dot.", "cn": "D3 圍堵：所有庫存支架已隔離，逐一檢查有無漏焊，合格品貼綠點。" },
+      { "en": "D4 Root cause (supplier): The welder skipped two welds after a fixture change, and there was no weld count check.", "cn": "D4 根因（供應商）：換治具後焊工漏焊兩道，而且沒有焊道數量檢查。" },
+      { "en": "D4 Escape point (our side): Our incoming inspection measured the brackets but did not count the welds.", "cn": "D4 流出原因（我方）：我們的進料檢驗有量支架尺寸，但沒有數焊道。" },
+      { "en": "D5/D6 Corrective action: We issued a SCAR. We require the supplier to send a weld map and a weld count record with every lot.", "cn": "D5／D6 矯正對策：發出 SCAR，要求供應商每批都附焊道圖和焊道數量紀錄。" },
+      { "en": "D7 Prevention: Our IQC now counts welds against the weld map, and the supplier must reply with an 8D by the deadline.", "cn": "D7 預防再發：IQC 現在對照焊道圖數焊道，供應商必須在期限前用 8D 回覆。" }
+     ]
+    },
+    {
+     "bar": "演練｜客戶來電問漏焊",
+     "title": "Practice: Why Were the Welds Missing?",
+     "titleCn": "演練｜客戶來電：為什麼少焊？",
+     "paras": [
+      { "en": "Customer: Three of your brackets broke when weight was dropped. What happened?", "cn": "客戶：你們有三個支架在重量掉下來時斷了，怎麼回事？" },
+      { "en": "You: Two welds were missed on some brackets. Our welding supplier skipped them.", "cn": "你：部分支架漏了兩道焊，是焊接供應商漏做的。" },
+      { "en": "Customer: Didn't your incoming inspection catch it?", "cn": "客戶：你們的進料檢驗沒抓到嗎？" },
+      { "en": "You: No. Our IQC checked dimensions only, not the number of welds.", "cn": "你：沒有。IQC 只量尺寸，沒數焊道數量。" },
+      { "en": "Customer: What have you asked the supplier to do?", "cn": "客戶：你們要求供應商做什麼？" },
+      { "en": "You: We issued a SCAR. We require them to send a weld map with every lot, and the deadline for their 8D is Friday.", "cn": "你：我們發了 SCAR，要求他們每批附焊道圖，8D 的期限是週五。" },
+      { "en": "Customer: Can you tell which racks have bad brackets?", "cn": "客戶：你們知道是哪些架子裝到不良支架嗎？" },
+      { "en": "You: Yes. Lot numbers give us traceability, so we know which racks to check.", "cn": "你：知道。有批號可以追溯，所以我們知道要檢查哪些架子。" }
+     ]
+    },
+    {
+     "bar": "討論｜如果發生在我們廠",
+     "title": "Discussion: What If It Happened Here?",
+     "titleCn": "討論｜如果發生在我們廠",
+     "paras": [
+      { "en": "Which welded parts do we buy from suppliers — brackets, J-cups, frames — and do they come with a weld map?", "cn": "我們向供應商買哪些焊接件（支架、掛鉤、車架）？有附焊道圖嗎？" },
+      { "en": "Does our IQC check only dimensions, or also the number and length of welds?", "cn": "我們的 IQC 只量尺寸，還是也檢查焊道的數量和長度？" },
+      { "en": "When we issue a SCAR, who follows up, and what happens if the supplier misses the deadline?", "cn": "我們發 SCAR 後由誰追蹤？供應商超過期限會怎樣？" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "Some brackets were missing two welds.", "cn": "部分支架少了兩道焊。" },
+      { "en": "Our welding supplier skipped them after a fixture change.", "cn": "焊接供應商換治具後漏焊。" },
+      { "en": "Lot numbers give us traceability back to each rack.", "cn": "有批號就能追溯到每一台架子。" },
+      { "en": "We issued a SCAR to the welding supplier.", "cn": "我們對焊接供應商發了 SCAR。" },
+      { "en": "We require the supplier to send a weld map with every lot.", "cn": "我們要求供應商每批都附焊道圖。" },
+      { "en": "Please send your 8D report by Friday.", "cn": "請在週五前交 8D 報告。" }
+     ]
+    }
+   ]
+  },
+  /* ---- qa04 品保新聞四：Rogue Fitness J-cup 插銷焊道斷裂（CPSC 11-193）→ IPQC 巡檢與破壞測試 ---- */
+  {
+   "id": "qa04",
+   "icon": "🔩",
+   "video": true,
+   "date": "2026-10-25",
+   "title": "QA News IV — The Weld That Looked Fine",
+   "titleCn": "品保新聞四｜焊道看起來沒問題 → IPQC 怎麼抓強度不足",
+   "topics": "品保新聞, 召回, IPQC, 製程巡檢, 首件檢查, 破壞測試, 焊接強度, 熔深, 重訓架, J-cup, weld, penetration, destructive test",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "The weld between the bracket and the pin can break.",
+     "cn": "支架和插銷之間的焊道可能斷裂。",
+     "pat": "the + 名詞 + between A and B",
+     "note": "支架和插銷之間的焊道。between A and B 說明「兩者之間」，描述接合處很常用。"
+    },
+    {
+     "n": 2,
+     "cn": "我們每兩小時抽一個樣品。",
+     "pat": "every + 數字 + 複數名詞",
+     "note": "每兩小時。every 後面有數字時，時間名詞用複數 hours。",
+     "wrong": "We check one sample every two hour.",
+     "fix": "We check one sample every two hours."
+    },
+    {
+     "n": 3,
+     "ok": "If a sample fails, we stop the line and hold the parts.",
+     "cn": "如果樣品不合格，我們就停線並隔離零件。",
+     "pat": "If + 現在式, 主詞 + 現在式",
+     "note": "樣品不合格就停線隔離。講固定的反應規則時，if 子句和主要子句都用現在式。"
+    },
+    {
+     "n": 4,
+     "cn": "焊道強度不夠，撐不住槓鈴。",
+     "pat": "形容詞 + enough + to + 動詞原形",
+     "note": "強度不夠撐住槓鈴。enough 修飾形容詞時要放在形容詞後面：strong enough。",
+     "wrong": "The weld was not enough strong to hold the bar.",
+     "fix": "The weld was not strong enough to hold the bar."
+    },
+    {
+     "n": 5,
+     "ok": "A weld can look good but still be weak.",
+     "cn": "焊道可能外觀很好，強度卻不夠。",
+     "pat": "can + 動詞原形 + but still + 動詞原形",
+     "note": "外觀好但強度不夠。but still 表示「儘管如此還是」，用來提醒外觀不等於品質。"
+    },
+    {
+     "n": 6,
+     "cn": "有一位使用者扭傷了手腕。",
+     "pat": "過去式（已發生的事故）",
+     "note": "扭傷了手腕。已經發生的事故用過去式，sprain 要加 -ed。",
+     "wrong": "One user sprain a wrist.",
+     "fix": "One user sprained a wrist."
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    { "w": "pin", "ipa": "/pɪn/", "pos": "n.", "cn": "插銷、銷", "ex": "Check that the safety pin locks fully into the hole.", "exCn": "確認安全插銷完全卡進孔裡。" },
+    { "w": "penetration", "ipa": "/ˌpen.əˈtreɪ.ʃən/", "pos": "n.", "cn": "（焊接）熔深", "ex": "Cut the sample to check the weld penetration.", "exCn": "把樣品切開檢查焊道熔深。" },
+    { "w": "sample", "ipa": "/ˈsæm.pəl/", "pos": "n.", "cn": "樣品", "ex": "Take five samples from each pallet.", "exCn": "每個棧板抽五個樣品。" },
+    { "w": "shift", "ipa": "/ʃɪft/", "pos": "n.", "cn": "班別、輪班", "ex": "The night shift found two bad parts.", "exCn": "夜班發現了兩個不良品。" },
+    { "w": "destructive", "ipa": "/dɪˈstrʌk.tɪv/", "pos": "adj.", "cn": "破壞性的", "ex": "A destructive test turns the sample into scrap.", "exCn": "破壞測試會讓樣品變成報廢品。" },
+    { "w": "sprain", "ipa": "/spreɪn/", "pos": "v.", "cn": "扭傷", "ex": "A worker sprained an ankle on the wet floor.", "exCn": "一名作業員在濕地板上扭傷了腳踝。" },
+    { "w": "rated", "ipa": "/ˈreɪ.t̬ɪd/", "pos": "adj.", "cn": "額定的", "ex": "Do not load the shelf above its rated weight.", "exCn": "不要讓層架超過額定重量。" },
+    { "w": "hold", "ipa": "/hoʊld/", "pos": "v.", "cn": "隔離、暫扣（等判定）", "ex": "Please hold this pallet until QA releases it.", "exCn": "這個棧板請先暫扣，等品保放行。" }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "break test", "cn": "破壞測試（把樣品敲斷看強度）" },
+    { "p": "first-piece inspection", "cn": "首件檢查" },
+    { "p": "patrol inspection", "cn": "巡檢（生產中定時抽檢）" },
+    { "p": "welding current", "cn": "焊接電流" },
+    { "p": "last good check", "cn": "上一次合格的檢查點" },
+    { "p": "reaction plan", "cn": "異常反應計畫" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "QA4-A",
+     "title": "頻率說法：every + 時間 ／ once + a / every + 時間",
+     "pat": "動作 + every two hours ／ once a shift ／ once every hour",
+     "pts": [
+      "說檢驗頻率時，every 後面接單數（every shift）或「數字＋複數」（every two hours）。",
+      "once a shift＝每班一次；twice a day＝每天兩次。",
+      "例：The line leader checks the torque once an hour.（線長每小時檢查一次扭力。）"
+     ],
+     "ex": "The line leader checks the torque once an hour.",
+     "exCn": "線長每小時檢查一次扭力。"
+    },
+    {
+     "k": "QA4-B",
+     "title": "If + 現在式, 現在式（反應計畫的固定規則）",
+     "pat": "If + 主詞 + 現在式, 主詞 + 現在式",
+     "pts": [
+      "描述「只要發生 A，就一定做 B」的固定規則，兩邊都用現在式。",
+      "寫 SOP、反應計畫、控制計畫時最常用。",
+      "例：If the gauge reads out of range, the operator calls QA.（量規讀數超出範圍時，作業員就通知品保。）"
+     ],
+     "ex": "If the gauge reads out of range, the operator calls QA.",
+     "exCn": "量規讀數超出範圍時，作業員就通知品保。"
+    },
+    {
+     "k": "QA4-C",
+     "title": "形容詞 + enough + to + 動詞原形（夠不夠…）",
+     "pat": "主詞 + be (not) + 形容詞 + enough + to + 動詞原形",
+     "pts": [
+      "enough 修飾形容詞時放在形容詞後面：strong enough、thick enough。",
+      "否定 not … enough to do＝不夠…，所以無法做到。",
+      "例：The box is not strong enough to stack five high.（這個箱子不夠堅固，不能疊五層。）"
+     ],
+     "ex": "The box is not strong enough to stack five high.",
+     "exCn": "這個箱子不夠堅固，不能疊五層。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "visual inspection vs destructive test",
+     "sc": "visual inspection 是用眼睛看外觀：有沒有焊、焊道長度、氣孔；destructive test 是把樣品敲斷或切開，看熔深和強度。破壞測試的樣品會報廢，所以只能抽樣。",
+     "ex": "Visual inspection checks the shape; a destructive test checks the strength.",
+     "exCn": "目視檢查看形狀；破壞測試看強度。",
+     "cn": "目視檢查 vs 破壞測試"
+    },
+    {
+     "u": "first-piece inspection vs patrol inspection",
+     "sc": "first-piece inspection 是開線、換班、換模或維修後做的第一件檢查；patrol inspection 是生產中按固定頻率抽檢。首件抓「設定錯」，巡檢抓「途中跑掉」。",
+     "ex": "Do a first-piece inspection after every repair.",
+     "exCn": "每次維修後都要做首件檢查。",
+     "cn": "首件檢查 vs 巡檢"
+    },
+    {
+     "u": "hold vs scrap",
+     "sc": "hold 是先隔離、暫停使用，等判定結果；scrap 是判定不良後報廢。發現異常先 hold，確認不良才 scrap。",
+     "ex": "We hold the lot first and scrap only the parts that fail.",
+     "exCn": "我們先隔離整批，只報廢不合格的零件。",
+     "cn": "隔離 vs 報廢"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "新聞｜插銷焊道斷裂",
+     "title": "The Pin That Came Off",
+     "titleCn": "新聞｜Rogue Fitness 槓鈴掛鉤（J-cup）召回",
+     "paras": [
+      { "en": "In April 2011, Rogue Fitness recalled about 5,500 J-cup brackets. J-cups are the metal hooks that hold a barbell on a squat stand or power rack. The recalled brackets were used on several of the company's stands, racks, and rigs.", "cn": "2011 年 4 月，Rogue Fitness 召回約 5,500 個 J-cup 掛鉤。J-cup 是把槓鈴掛在深蹲架或重訓架上的金屬掛鉤，被召回的掛鉤用在該公司好幾款架子上。" },
+      { "en": "Each J-cup has a pin that locks it into the rack. According to the CPSC, the weld between the bracket and the pin could break, and the weights could fall.", "cn": "每個 J-cup 都有一根插銷把它固定在架子上。根據 CPSC，掛鉤和插銷之間的焊道可能斷裂，槓鈴片可能掉下來。" },
+      { "en": "The company had received three reports of this weld breaking. In one case, a user sprained a wrist.", "cn": "公司接獲 3 件這處焊道斷裂的通報，其中一件使用者扭傷了手腕。" },
+      { "en": "The brackets were sold from March 2009 to December 2010, both on their own and as part of racks. They were made by a machine shop in Ohio, USA. Owners were told to stop using them and to get free replacement brackets. Only the older style was affected.", "cn": "這批掛鉤在 2009 年 3 月到 2010 年 12 月販售，有單獨賣，也有隨架子一起賣，由美國俄亥俄州的一家機械加工廠製造。使用者被要求停止使用並免費換新，只有舊款受影響。" },
+      { "en": "Unlike a missing weld, a weak weld can look normal from the outside. So how does a factory find it before the product ships? That is the job of in-process quality control.", "cn": "和漏焊不同，強度不足的焊道從外面看可能完全正常。那工廠要怎麼在出貨前找出來？這就是製程品管（IPQC）的工作。" }
+     ],
+     "questions": [
+      { "q": "What could break on the recalled J-cups?", "qCn": "被召回的 J-cup 哪裡可能斷裂？", "a": "The weld between the bracket and the pin.", "aCn": "掛鉤和插銷之間的焊道。" },
+      { "q": "What happened in one of the three reports? (A. A rack fell over. / B. A user sprained a wrist. / C. A barbell bent. / D. A pin rusted.)", "qCn": "三件通報中有一件發生了什麼？", "a": "B. A user sprained a wrist.", "aCn": "B. 一位使用者扭傷了手腕。" },
+      { "q": "Why is a weak weld harder to find than a missing weld?", "qCn": "為什麼強度不足的焊道比漏焊更難發現？", "a": "Because it can look normal from the outside.", "aCn": "因為從外面看可能完全正常。" }
+     ]
+    },
+    {
+     "bar": "模擬｜IPQC 抓焊接強度",
+     "title": "Simulation: A Weak Weld",
+     "titleCn": "模擬｜你是重訓架工廠 IPQC 組長，說明怎麼抓焊接強度（虛構情境）",
+     "paras": [
+      { "en": "Situation: You are the IPQC lead at a rack factory. A customer reports that the pin came off a J-cup. This is a practice case, not Rogue Fitness's real analysis.", "cn": "情境：你是重訓架工廠的 IPQC 組長，客戶反映 J-cup 的插銷脫落。這是練習用的虛構案例，不是 Rogue Fitness 的實際分析。" },
+      { "en": "D2 Problem: The weld between the J-cup and the pin broke under load. The weld looked normal.", "cn": "D2 問題描述：J-cup 和插銷之間的焊道在受力時斷裂，焊道外觀正常。" },
+      { "en": "D3 Containment: We have held all J-cups made since the last good check and are break-testing samples from each lot.", "cn": "D3 圍堵：上一次合格檢查之後生產的 J-cup 全部隔離，每批抽樣做破壞測試。" },
+      { "en": "D4 Root cause: The welding current was set too low after maintenance, so the weld did not have enough penetration.", "cn": "D4 根因：維修後焊接電流設定太低，焊道熔深不足。" },
+      { "en": "D4 Escape point: IPQC checked the weld by eye only. A weld can look good but still be weak.", "cn": "D4 流出原因：IPQC 只用目視檢查焊道。焊道可能外觀很好，強度卻不夠。" },
+      { "en": "D5/D6 Corrective action: We now break-test the first piece of every shift and one sample every two hours. The welding current is recorded at each check.", "cn": "D5／D6 矯正對策：現在每班首件和每兩小時一個樣品做破壞測試，每次檢查都記錄焊接電流。" },
+      { "en": "D7 Prevention: After any maintenance, a first-piece break test is required. If a sample fails, the operator stops the line and holds every part since the last good check.", "cn": "D7 預防再發：任何維修後都必須做首件破壞測試。樣品不合格時，作業員停線，並隔離上一次合格檢查之後的所有零件。" }
+     ]
+    },
+    {
+     "bar": "演練｜客戶追問焊接強度",
+     "title": "Practice: How Did It Pass Inspection?",
+     "titleCn": "演練｜客戶追問：怎麼通過檢驗的？",
+     "paras": [
+      { "en": "Customer: The pin came off a J-cup. How did this pass your inspection?", "cn": "客戶：J-cup 的插銷掉了，這是怎麼通過你們檢驗的？" },
+      { "en": "You: Our IPQC checked the weld by eye only. It looked fine, but the penetration was too shallow.", "cn": "你：IPQC 只用目視檢查焊道。外觀沒問題，但熔深太淺。" },
+      { "en": "Customer: Why was it shallow?", "cn": "客戶：為什麼會太淺？" },
+      { "en": "You: The welding current was set too low after maintenance.", "cn": "你：維修後焊接電流設得太低。" },
+      { "en": "Customer: How do you check weld strength now?", "cn": "客戶：你們現在怎麼檢查焊接強度？" },
+      { "en": "You: We do a destructive test on the first piece of every shift, and on one sample every two hours.", "cn": "你：每班首件和每兩小時一個樣品，都做破壞測試。" },
+      { "en": "Customer: And if a sample fails?", "cn": "客戶：那樣品不合格呢？" },
+      { "en": "You: If a sample fails, we stop the line and hold every part since the last good check.", "cn": "你：樣品不合格就停線，上一次合格檢查之後的零件全部隔離。" }
+     ]
+    },
+    {
+     "bar": "討論｜如果發生在我們廠",
+     "title": "Discussion: What If It Happened Here?",
+     "titleCn": "討論｜如果發生在我們廠",
+     "paras": [
+      { "en": "Which welds on our racks, benches, and frames carry the user's weight directly?", "cn": "我們的重訓架、訓練椅、車架，哪些焊道是直接承受使用者重量的？" },
+      { "en": "How often do we run destructive tests on welds, and who records the results?", "cn": "我們多久做一次焊道破壞測試？結果由誰記錄？" },
+      { "en": "After a welding machine is repaired, do we always do a first-piece check?", "cn": "焊接機修好之後，我們一定會做首件檢查嗎？" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "The weld looked fine, but the penetration was too shallow.", "cn": "焊道外觀沒問題，但熔深太淺。" },
+      { "en": "The welding current was set too low after maintenance.", "cn": "維修後焊接電流設得太低。" },
+      { "en": "We break-test the first piece of every shift.", "cn": "每班首件都做破壞測試。" },
+      { "en": "We check one sample every two hours.", "cn": "每兩小時抽一個樣品。" },
+      { "en": "If a sample fails, we stop the line and hold the parts.", "cn": "樣品不合格就停線並隔離零件。" },
+      { "en": "The weld was not strong enough to hold the bar.", "cn": "焊道強度不夠，撐不住槓鈴。" }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -27818,6 +28242,8 @@ window.BOOK = {
     bk20251218:[[['toilet','wrench','suitcase','doc','moon'],'忙碌修繕的一天：馬桶、洗手台、磁磚出問題 → 打電話請水電工 → 旅行社規劃假期 → 到政府機關辦文件 → 晚上全部修好。']],
     bk20251226b:[[['signpost','exam','piggy','globe','sprout'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
     bk20260922:[[['eye','gear','plug','dumbbell','cart'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
+    qa04:[[['flashlight','nurse','alarm','scales','resume'],'J-cup 插銷焊道斷裂：2011 掛鉤召回約 5,500 個 → 焊道外觀正常卻熔深不足 → 1 人手腕扭傷 → 每班首件＋每兩小時破壞測試 → 不合格就停線隔離。']],
+    qa03:[[['sign','toolbox','mail','caliper','pin'],'安全支架少焊兩道：2021 重訓架安全支架召回 → 上下各漏一道焊 → 重物掉落斷裂 3 件 → 對焊接供應商發 SCAR、每批附焊道圖 → IQC 數焊道、批號追溯。']],
     qa02:[[['bike','bandage','gift','chartDown','notebook'],'同一個座管壞兩次：2023 初代飛輪車座管斷裂召回 → 13 件受傷 → 免費座管自行更換 → 2025 另一款再度召回 → 再發防止與水平展開。']],
     qa01:[[['dumbbell','bolt','flame','question','toolboxL'],'跑步機電源線召回：家用跑步機擴大召回 → 電源線從插座鬆脫 → 接觸不良過熱 27 件 → 8D 查根因與流出點 → 改自鎖插頭並水平展開。']],
     au01:[[['cert','calendar','stamp','shield','hourglass'],'ISO 認證問答：尚未取得認證 → 目標 2027 年 6 月 → 先提出輔導公司簽呈 → 由品保負責 → 目標日期不等於已完成。']],

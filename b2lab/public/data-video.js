@@ -50551,3 +50551,603 @@ window.VIDEO.qa02 = {
     "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
  ]
 };
+
+/* ---------- qa03／qa04 品保新聞三、四 影片專屬插圖（每句一張，不重複；2026-10-25） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4', G='#3f9e64', M='#9aa5b1';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'+txt(cx,cy+9,'?',25,'#fff'); };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'+txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round"><path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    return s; };
+  var tri=function(cx,cy,s){ return '<path d="M'+cx+' '+(cy-s)+' L'+(cx+s*1.15)+' '+(cy+s*0.8)+' H'+(cx-s*1.15)+' Z" fill="#fff" stroke="'+R+'" stroke-width="3" stroke-linejoin="round"/>'+txt(cx,cy+s*0.5,'!',s*1.1,R); };
+  var arr=function(x1,y1,x2,y2,col){ var a=Math.atan2(y2-y1,x2-x1), h=8;
+    return '<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.5)).toFixed(1)+' '+(y2-h*Math.sin(a-0.5)).toFixed(1)+' M'+x2+' '+y2+' L'+(x2-h*Math.cos(a+0.5)).toFixed(1)+' '+(y2-h*Math.sin(a+0.5)).toFixed(1)+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'; };
+  var g=function(x,y,s,inner){ return '<g transform="translate('+x+' '+y+') scale('+s+')">'+inner+'</g>'; };
+  var zig=function(x,y,w){ return '<path d="M'+x+' '+y+' l'+(w/4)+' -4 l'+(w/4)+' 6 l'+(w/4)+' -6 l'+(w/4)+' 4" stroke="'+R+'" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var phone=function(x,y){ return '<path d="M'+x+' '+y+' c-10 10 -6 30 14 46 c10 8 18 10 24 4 l4 -6 l-12 -10 l-6 5 c-6 -3 -14 -12 -16 -18 l5 -6 l-9 -12 z" fill="'+A+'" '+st+'/>'; };
+  var lens=function(cx,cy,r){ return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="#fff" fill-opacity="0.55" stroke="'+D+'" stroke-width="3.5"/>'
+     +'<path d="M'+(cx+r*0.7).toFixed(1)+' '+(cy+r*0.7).toFixed(1)+' l'+(r*0.75).toFixed(1)+' '+(r*0.75).toFixed(1)+'" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'; };
+  /* 重訓架立柱（寬 14，帶孔） */
+  var upr=function(x,y,h){ var s='<rect x="'+x+'" y="'+y+'" width="14" height="'+h+'" rx="2" fill="'+M+'" '+st+'/>';
+    for(var k=y+12;k<y+h-6;k+=14) s+='<circle cx="'+(x+7)+'" cy="'+k+'" r="2.2" fill="'+D+'"/>';
+    return s; };
+  /* 安全綁帶支架（側視，約 48×64）：missing＝上下兩道焊漏掉；broken＝托臂斷開下垂；flip＝左右鏡像 */
+  var brk=function(x,y,s,o){ o=o||{}; var f=o.col||L;
+    var arm='<rect x="18" y="40" width="30" height="12" rx="2" fill="'+f+'" '+st+'/>';
+    var welds=o.missing
+      ? '<circle cx="23" cy="39" r="6" fill="none" stroke="'+R+'" stroke-width="2.6" stroke-dasharray="4 3"/><circle cx="23" cy="53" r="6" fill="none" stroke="'+R+'" stroke-width="2.6" stroke-dasharray="4 3"/>'
+      : '<circle cx="21" cy="38.5" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="1.2"/><circle cx="26" cy="38.5" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="1.2"/>'
+       +'<circle cx="21" cy="53.5" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="1.2"/><circle cx="26" cy="53.5" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="1.2"/>';
+    var inner='<rect x="0" y="0" width="18" height="64" rx="3" fill="'+f+'" '+st+'/>'
+      +'<circle cx="9" cy="14" r="3" fill="#fff" stroke="'+D+'" stroke-width="2"/><circle cx="9" cy="28" r="3" fill="#fff" stroke="'+D+'" stroke-width="2"/>'
+      +(o.broken? '<g transform="rotate(38 18 52)">'+arm+'</g>'+zig(12,44,14) : arm+welds);
+    return '<g transform="translate('+x+' '+y+') scale('+(o.flip?-s:s)+' '+s+')">'+inner+'</g>'; };
+  /* 槓鈴（側視）：橫桿＋兩端槓片 */
+  var barbell=function(x1,x2,y){ return '<path d="M'+x1+' '+y+' H'+x2+'" '+thw(5)+'/>'
+     +'<rect x="'+(x1+4)+'" y="'+(y-20)+'" width="9" height="40" rx="2" fill="'+D+'"/><rect x="'+(x2-13)+'" y="'+(y-20)+'" width="9" height="40" rx="2" fill="'+D+'"/>'; };
+  var plate=function(cx,cy,r){ return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+D+'"/><circle cx="'+cx+'" cy="'+cy+'" r="'+(r*0.62)+'" fill="none" stroke="'+M+'" stroke-width="2"/><circle cx="'+cx+'" cy="'+cy+'" r="'+(r*0.22)+'" fill="#fff" stroke="'+M+'" stroke-width="2"/>'; };
+  var factory=function(x,y,s){ return g(x,y,s,'<path d="M0 66 V16 l22 -16 v16 l22 -16 v16 l22 -16 v66 z" fill="'+L+'" '+st+'/>'
+     +'<rect x="14" y="40" width="14" height="26" fill="#fff" '+st+'/><rect x="38" y="34" width="16" height="12" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/>'); };
+  var box=function(x,y){ return '<path d="M'+x+' '+(y+14)+' h70 v54 h-70 z" fill="'+L+'" '+st+'/><path d="M'+x+' '+(y+14)+' l10 -14 h70 l-10 14 M'+(x+70)+' '+(y+14)+' l10 -14 v54 l-10 14" fill="'+C+'" '+st+'/>'; };
+  var bolt=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="18" height="10" rx="2" fill="'+M+'" '+st+'/><rect x="'+(x+5)+'" y="'+(y+10)+'" width="8" height="30" fill="'+M+'" '+st+'/>'
+     +'<path d="M'+(x+5)+' '+(y+20)+' h8 M'+(x+5)+' '+(y+27)+' h8 M'+(x+5)+' '+(y+34)+' h8" stroke="'+D+'" stroke-width="1.8"/>'; };
+  var torch=function(x,y){ return '<g transform="translate('+x+' '+y+') rotate(35)"><rect x="0" y="0" width="14" height="48" rx="5" fill="'+B+'" '+st+'/><path d="M7 48 v12" '+thw(4)+'/><path d="M3 -8 h8" '+thw(3)+'/></g>'; };
+  var caliper=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="112" height="10" rx="2" fill="'+M+'" '+st+'/>'
+     +'<path d="M'+(x+16)+' '+(y+2)+' v6 M'+(x+26)+' '+(y+2)+' v6 M'+(x+36)+' '+(y+2)+' v6 M'+(x+86)+' '+(y+2)+' v6 M'+(x+96)+' '+(y+2)+' v6" stroke="'+D+'" stroke-width="1.6"/>'
+     +'<path d="M'+x+' '+(y+10)+' v26 h10 v-26" fill="'+M+'" '+st+'/>'
+     +'<rect x="'+(x+48)+'" y="'+(y-6)+'" width="28" height="22" rx="3" fill="'+L+'" '+st+'/><path d="M'+(x+56)+' '+(y+16)+' v20 h10 v-20" fill="'+M+'" '+st+'/>'; };
+  var cal=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="44" height="40" rx="4" fill="#fff" '+st+'/><rect x="'+x+'" y="'+y+'" width="44" height="11" rx="4" fill="'+A+'" '+st+'/>'
+     +'<circle cx="'+(x+29)+'" cy="'+(y+26)+'" r="8" fill="none" stroke="'+R+'" stroke-width="3"/><path d="M'+(x+8)+' '+(y+22)+' h8 M'+(x+8)+' '+(y+31)+' h8" stroke="'+M+'" stroke-width="3" stroke-linecap="round"/>'; };
+  var tag=function(x,y){ var s='<path d="M'+x+' '+y+' h44 l12 14 l-12 14 h-44 z" fill="#fff" '+st+'/><circle cx="'+(x+46)+'" cy="'+(y+14)+'" r="3" fill="'+D+'"/>';
+    [4,9,12,17,22,25,30,35].forEach(function(d,i){ s+='<path d="M'+(x+d)+' '+(y+6)+' v16" stroke="'+D+'" stroke-width="'+(i%3?1.6:3)+'"/>'; });
+    return s; };
+  var rackMini=function(x,y,col){ return '<path d="M'+x+' '+(y+56)+' V'+y+' H'+(x+34)+' V'+(y+56)+'" stroke="'+(col||D)+'" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round"/>'
+     +'<path d="M'+(x+2)+' '+(y+32)+' h10 M'+(x+32)+' '+(y+32)+' h-10" stroke="'+(col||D)+'" stroke-width="4" stroke-linecap="round"/>'; };
+  /* J-cup 槓鈴掛鉤（側視，背板 16×56＋J 形鉤＋插銷）：broken＝插銷脫離；flip＝鏡像 */
+  var jc=function(x,y,s,o){ o=o||{};
+    var pin='<rect x="-18" y="12" width="18" height="9" rx="3" fill="'+L+'" '+st+'/>';
+    var inner='<path d="M14 54 h22 q6 0 6 -6 v-14" stroke="'+D+'" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+      +'<path d="M14 54 h22 q6 0 6 -6 v-14" stroke="'+(o.col||M)+'" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+      +'<rect x="0" y="0" width="16" height="58" rx="3" fill="'+(o.col||M)+'" '+st+'/>'
+      +(o.broken? '<g transform="translate(-8 16) rotate(-24 -9 16)">'+pin+'</g>'+zig(-10,12,14)
+                : pin+'<path d="M-1 9 q5 7 0 15" stroke="'+A+'" stroke-width="4" fill="none" stroke-linecap="round"/>');
+    return '<g transform="translate('+x+' '+y+') scale('+(o.flip?-s:s)+' '+s+')">'+inner+'</g>'; };
+  /* 焊道剖面：shallow＝熔深太淺（紅）、否則夠深（綠） */
+  var xsec=function(x,y,o){ o=o||{}; var sh=o.shallow;
+    return '<rect x="'+x+'" y="'+y+'" width="84" height="22" rx="2" fill="'+M+'" '+st+'/>'
+     +'<path d="M'+(x+26)+' '+y+' q16 '+(sh?5:18)+' 32 0 z" fill="'+(sh?R:G)+'" fill-opacity="0.75" stroke="'+(sh?R:G)+'" stroke-width="2.5"/>'
+     +'<path d="M'+(x+24)+' '+y+' q18 -20 36 0 z" fill="'+A+'" '+st+'/>'; };
+  /* T 形焊接接頭：miss＝兩側漏焊 */
+  var tj=function(x,y,o){ o=o||{};
+    return '<rect x="'+x+'" y="'+(y+50)+'" width="80" height="14" rx="2" fill="'+M+'" '+st+'/><rect x="'+(x+34)+'" y="'+y+'" width="12" height="50" rx="2" fill="'+M+'" '+st+'/>'
+     +(o.miss? '<circle cx="'+(x+29)+'" cy="'+(y+45)+'" r="7" fill="none" stroke="'+R+'" stroke-width="2.6" stroke-dasharray="4 3"/><circle cx="'+(x+51)+'" cy="'+(y+45)+'" r="7" fill="none" stroke="'+R+'" stroke-width="2.6" stroke-dasharray="4 3"/>'
+             : '<path d="M'+(x+34)+' '+(y+40)+' q-8 6 -10 10 h10 z M'+(x+46)+' '+(y+40)+' q8 6 10 10 h-10 z" fill="'+A+'" stroke="'+D+'" stroke-width="2.2" stroke-linejoin="round"/>'); };
+  var eye=function(cx,cy){ return '<path d="M'+(cx-24)+' '+cy+' q24 -22 48 0 q-24 22 -48 0 z" fill="#fff" '+st+'/><circle cx="'+cx+'" cy="'+cy+'" r="8" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/><circle cx="'+cx+'" cy="'+cy+'" r="3" fill="'+D+'"/>'; };
+  var clock=function(cx,cy,r){ return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="#fff" '+st+'/><path d="M'+cx+' '+cy+' V'+(cy-r*0.7)+' M'+cx+' '+cy+' L'+(cx+r*0.55).toFixed(1)+' '+(cy-r*0.3).toFixed(1)+'" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'; };
+  var stop=function(cx,cy,r){ var p=[]; for(var k=0;k<8;k++){ var a=Math.PI/8+k*Math.PI/4; p.push((cx+r*Math.cos(a)).toFixed(1)+' '+(cy+r*Math.sin(a)).toFixed(1)); }
+    return '<path d="M'+p.join(' L')+' Z" fill="'+R+'" '+st+'/><rect x="'+(cx-r*0.55)+'" y="'+(cy-5)+'" width="'+(r*1.1)+'" height="10" rx="3" fill="#fff"/>'; };
+  var hammer=function(x,y,rot){ return '<g transform="translate('+x+' '+y+') rotate('+rot+')"><rect x="-17" y="0" width="34" height="16" rx="3" fill="'+M+'" '+st+'/><rect x="-4" y="16" width="8" height="48" rx="3" fill="'+A+'" '+st+'/></g>'; };
+  var wrench=function(x,y){ return '<g transform="translate('+x+' '+y+') rotate(-30)"><rect x="0" y="-6" width="52" height="12" rx="6" fill="'+M+'" '+st+'/><circle cx="60" cy="0" r="14" fill="'+M+'" '+st+'/><rect x="60" y="-6" width="16" height="12" fill="'+C+'"/></g>'; };
+  var mpin=function(cx,cy){ return '<path d="M'+cx+' '+cy+' c-12 0 -18 9 -18 18 c0 13 18 28 18 28 s18 -15 18 -28 c0 -9 -6 -18 -18 -18 z" fill="'+R+'" '+st+'/><circle cx="'+cx+'" cy="'+(cy+18)+'" r="6" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'; };
+  var rig=function(x,y){ return '<path d="M'+x+' '+(y+92)+' h96 M'+(x+8)+' '+(y+92)+' V'+y+' M'+(x+88)+' '+(y+92)+' V'+y+' M'+(x+2)+' '+y+' h92" '+thw(4)+'/>'; };
+  var arm=function(){ return '<rect x="20" y="66" width="96" height="26" rx="12" fill="'+L+'" '+st+'/>'
+     +'<rect x="70" y="62" width="40" height="34" rx="8" fill="#fff" '+st+'/>'
+     +'<path d="M80 62 v34 M90 62 v34 M100 62 v34" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>'
+     +'<circle cx="124" cy="79" r="13" fill="'+L+'" '+st+'/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* ===== qa03 ===== */
+    /* 0 旁白：支架少了兩道焊 */
+    qa3Intro: svg(
+      upr(28,8,134)
+     +brk(42,30,1.4,{missing:true})
+     +pill(132,22,52,28,'2',R,'#fff',17)),
+
+    /* 1 2021：約 1,940 組安全支架召回 */
+    qa3News1: svg(
+      upr(30,20,124)+upr(156,20,124)+'<rect x="30" y="12" width="140" height="10" rx="3" fill="'+M+'" '+st+'/>'
+     +brk(44,74,0.8,{})+brk(156,74,0.8,{flip:true})
+     +'<path d="M82 106 H118" stroke="'+B+'" stroke-width="6" stroke-linecap="round"/>'
+     +pill(70,34,60,26,'1,940',R,'#fff',13)),
+
+    /* 2 支架固定綁帶，撐不住時接住槓鈴 */
+    qa3Strap: svg(
+      upr(44,16,130)+upr(142,16,130)
+     +brk(58,50,0.8,{})+brk(142,50,0.8,{flip:true})
+     +'<path d="M96 81 H104" stroke="'+B+'" stroke-width="6" stroke-linecap="round"/>'
+     +'<path d="M58 84 H142" stroke="'+B+'" stroke-width="6" stroke-linecap="round"/>'
+     +barbell(8,192,70)
+     +chk(150,118,18,G)),
+
+    /* 3 上方、下方各少一道焊 */
+    qa3Missing: svg(
+      g(50,8,2,'<rect x="0" y="0" width="18" height="64" rx="3" fill="'+L+'" '+st+'/><rect x="18" y="40" width="30" height="12" rx="2" fill="'+L+'" '+st+'/>')
+     +'<circle cx="96" cy="86" r="11" fill="none" stroke="'+R+'" stroke-width="3" stroke-dasharray="5 4"/>'
+     +'<circle cx="96" cy="114" r="11" fill="none" stroke="'+R+'" stroke-width="3" stroke-dasharray="5 4"/>'
+     +pill(154,58,30,24,'1',R,'#fff',14)+pill(154,116,30,24,'2',R,'#fff',14)
+     +'<path d="M108 82 L152 70 M108 118 L152 128" stroke="'+R+'" stroke-width="2.4" stroke-dasharray="4 4"/>'),
+
+    /* 4 重物掉落，3 件斷裂，無人受傷 */
+    qa3Drop: svg(
+      upr(24,10,130)
+     +brk(38,40,1.3,{broken:true})
+     +plate(122,32,22)
+     +arr(122,62,122,92,R)
+     +pill(148,96,42,22,'3',R,'#fff',14)
+     +pill(148,124,42,20,'0',G,'#fff',13)
+     +'<path d="M30 144 H180" '+thw(3)+'/>'),
+
+    /* 5 中國製；免費換新支架，綁帶和螺栓留著 */
+    qa3Remedy: svg(
+      box(14,70)
+     +brk(32,20,0.9,{col:'#d6efdd'})
+     +chk(66,42,22,G)
+     +'<rect x="112" y="52" width="40" height="40" rx="20" fill="none" stroke="'+B+'" stroke-width="7"/>'
+     +bolt(162,48)
+     +chk(130,112,22,G)),
+
+    /* 6 漏焊用眼睛就看得到：為什麼沒人數焊道？ */
+    qa3Count: svg(
+      brk(26,12,1.8,{})
+     +lens(78,94,26)
+     +qb(170,36)),
+
+    /* 7 客戶：三個支架斷了，怎麼回事？ */
+    qa3CallAsk: svg(
+      phone(24,42)
+     +brk(82,34,1.2,{broken:true})
+     +qb(176,36)),
+
+    /* 8 Anita：焊接供應商漏焊兩道 */
+    qa3Skipped: svg(
+      brk(24,14,1.7,{missing:true})
+     +torch(150,26)
+     +ex(170,118,20,R)),
+
+    /* 9 客戶：進料檢驗沒抓到嗎？ */
+    qa3IqcAsk: svg(
+      '<path d="M16 72 h80 v58 h-80 z" fill="'+L+'" '+st+'/><path d="M16 72 l10 -12 h80 l-10 12 M96 72 l10 -12 v58 l-10 12" fill="'+C+'" '+st+'/>'
+     +pill(30,92,52,24,'IQC',G,'#fff',13)
+     +lens(96,46,20)
+     +qb(170,40)),
+
+    /* 10 Anita：只量尺寸，沒數焊道 */
+    qa3DimOnly: svg(
+      caliper(14,16)
+     +g(40,60,1.1,'<rect x="0" y="0" width="18" height="64" rx="3" fill="'+L+'" '+st+'/><rect x="18" y="40" width="30" height="12" rx="2" fill="'+L+'" '+st+'/>')
+     +chk(140,22,22,G)
+     +'<circle cx="62" cy="103" r="7" fill="none" stroke="'+R+'" stroke-width="2.6" stroke-dasharray="4 3"/><circle cx="62" cy="119" r="7" fill="none" stroke="'+R+'" stroke-width="2.6" stroke-dasharray="4 3"/>'
+     +ex(158,108,22,R)),
+
+    /* 11 客戶：要求供應商做什麼？ */
+    qa3ScarAsk: svg(
+      doc(14,40,56,72,true)
+     +arr(78,80,108,80,A)
+     +factory(112,48,0.9)
+     +qb(176,30)),
+
+    /* 12 Anita：發 SCAR，每批附焊道圖；8D 週五到期 */
+    qa3Scar: svg(
+      doc(14,12,82,124,true)
+     +g(30,36,0.9,'<rect x="0" y="0" width="18" height="64" rx="3" fill="none" stroke="'+D+'" stroke-width="2.5"/><rect x="18" y="40" width="30" height="12" rx="2" fill="none" stroke="'+D+'" stroke-width="2.5"/>')
+     +'<circle cx="51" cy="71" r="4" fill="'+A+'"/><circle cx="51" cy="84" r="4" fill="'+A+'"/>'
+     +'<path d="M30 110 h50 M30 122 h36" '+thw(2.5)+'/>'
+     +arr(102,46,128,46,A)
+     +factory(132,14,0.75)
+     +cal(140,94)),
+
+    /* 13 客戶：知道哪些架子裝到不良支架嗎？ */
+    qa3TraceAsk: svg(
+      rackMini(12,64)+rackMini(60,64)+rackMini(108,64)
+     +'<path d="M8 126 H150" '+thw(3)+'/>'
+     +qb(176,36)),
+
+    /* 14 Anita：有批號可追溯，知道要查哪些架子 */
+    qa3Trace: svg(
+      tag(10,24)
+     +arr(70,38,96,62,A)
+     +rackMini(30,82,M)+rackMini(96,74)+rackMini(152,82,M)
+     +lens(113,98,22)),
+
+    /* ===== qa04 ===== */
+    /* 0 旁白：插銷掉了；外觀正常的焊道也可能不夠強 */
+    qa4Intro: svg(
+      upr(30,8,134)
+     +jc(52,34,1.4,{broken:true})
+     +xsec(106,98,{shallow:true})
+     +lens(148,104,20)),
+
+    /* 1 2011：約 5,500 個 J-cup 召回 */
+    qa4News1: svg(
+      upr(28,14,130)+upr(158,14,130)
+     +jc(42,56,1,{})+jc(158,56,1,{flip:true})
+     +barbell(6,194,104)
+     +pill(70,22,60,26,'5,500',R,'#fff',13)),
+
+    /* 2 插銷把 J-cup 固定在架上；掛鉤和插銷之間的焊道可能斷 */
+    qa4Pin: svg(
+      upr(26,6,138)
+     +jc(76,20,2,{})
+     +zig(60,44,18)
+     +lens(160,48,22)),
+
+    /* 3 槓鈴片掉落；3 件通報，1 人手腕扭傷 */
+    qa4Fall: svg(
+      plate(48,40,26)
+     +arr(48,74,48,108,R)
+     +'<path d="M12 130 H88" '+thw(3)+'/>'
+     +g(92,38,0.66,arm())
+     +pill(110,10,40,24,'3',A,'#fff',14)
+     +pill(150,106,40,24,'1',R,'#fff',14)),
+
+    /* 4 美國俄亥俄州製造；免費換新，只有舊款受影響 */
+    qa4Ohio: svg(
+      factory(14,60,1.1)
+     +mpin(52,8)
+     +box(110,70)
+     +jc(136,26,1,{col:'#d6efdd'})
+     +chk(166,40,20,G)),
+
+    /* 5 漏焊看得到；強度不足的焊道外觀正常 */
+    qa4Hidden: svg(
+      tj(8,60,{miss:true})
+     +tj(112,60,{})
+     +eye(152,24)
+     +chk(108,18,16,G)
+     +qb(184,64)),
+
+    /* 6 客戶：插銷掉了，怎麼通過檢驗的？ */
+    qa4CallAsk: svg(
+      phone(24,42)
+     +jc(108,36,1.3,{broken:true})
+     +qb(176,32)),
+
+    /* 7 Anita：只用目視；外觀沒問題，但熔深太淺 */
+    qa4ByEye: svg(
+      eye(52,24)
+     +chk(82,14,18,G)
+     +tj(12,52,{})
+     +xsec(108,96,{shallow:true})
+     +ex(150,56,18,R)),
+
+    /* 8 客戶：為什麼太淺？ */
+    qa4CauseAsk: svg(
+      g(14,20,1.5,xsec(0,40,{shallow:true}))
+     +lens(78,84,24)
+     +qb(172,38)),
+
+    /* 9 Anita：維修後焊接電流設太低 */
+    qa4Current: svg(
+      wrench(12,52)
+     +arr(80,40,104,56,A)
+     +'<rect x="104" y="44" width="84" height="76" rx="6" fill="'+L+'" '+st+'/>'
+     +'<circle cx="146" cy="80" r="24" fill="#fff" '+st+'/>'
+     +'<path d="M128 90 A20 20 0 0 1 164 90" fill="none" stroke="'+M+'" stroke-width="3"/>'
+     +'<path d="M146 80 L128 88" stroke="'+R+'" stroke-width="4" stroke-linecap="round"/><circle cx="146" cy="80" r="3.5" fill="'+D+'"/>'
+     +'<path d="M120 120 v14 M172 120 v14" '+thw(4)+'/>'),
+
+    /* 10 客戶：現在怎麼檢查焊接強度？ */
+    qa4HowAsk: svg(
+      jc(46,34,1.5,{})
+     +hammer(118,40,28)
+     +qb(174,36)),
+
+    /* 11 Anita：每班首件＋每兩小時一個樣品做破壞測試 */
+    qa4BreakTest: svg(
+      '<rect x="14" y="122" width="88" height="16" rx="3" fill="'+M+'" '+st+'/>'
+     +'<rect x="24" y="84" width="16" height="38" rx="2" fill="'+M+'" '+st+'/><rect x="76" y="84" width="16" height="38" rx="2" fill="'+M+'" '+st+'/>'
+     +'<rect x="44" y="70" width="28" height="12" rx="2" fill="'+L+'" '+st+'/><rect x="52" y="82" width="12" height="40" fill="'+L+'" '+st+'/>'
+     +hammer(80,20,40)
+     +clock(160,40,22)
+     +pill(134,74,52,22,'2h',B,'#fff',13)
+     +pill(134,104,52,22,'1st',G,'#fff',13)),
+
+    /* 12 客戶：樣品不合格呢？ */
+    qa4FailAsk: svg(
+      '<g transform="rotate(-8 60 60)"><rect x="40" y="26" width="18" height="48" rx="2" fill="'+L+'" '+st+'/></g>'
+     +'<g transform="rotate(10 60 110)"><rect x="46" y="84" width="18" height="48" rx="2" fill="'+L+'" '+st+'/></g>'
+     +zig(34,80,36)
+     +qb(150,56)),
+
+    /* 13 Anita：停線，隔離上次合格之後的零件 */
+    qa4Hold: svg(
+      stop(46,56,32)
+     +'<rect x="98" y="78" width="40" height="32" rx="3" fill="'+L+'" '+st+'/><rect x="142" y="78" width="40" height="32" rx="3" fill="'+L+'" '+st+'/><rect x="120" y="44" width="40" height="32" rx="3" fill="'+L+'" '+st+'/>'
+     +pill(108,116,64,24,'HOLD',R,'#fff',12)
+     +'<path d="M10 140 H190" '+thw(3)+'/>'),
+
+    /* 14 客戶：新焊道夠強嗎？ */
+    qa4StrongAsk: svg(
+      upr(30,8,134)
+     +jc(52,40,1.4,{col:'#d6efdd'})
+     +plate(102,92,18)
+     +qb(168,40)),
+
+    /* 15 Anita：每個樣品都撐住超過三倍額定負載 */
+    qa4Rated: svg(
+      rig(10,30)
+     +jc(46,40,0.9,{})
+     +'<path d="M80 86 v14" '+thw(3)+'/>'
+     +'<rect x="60" y="100" width="40" height="22" rx="4" fill="'+D+'"/>'+txt(80,116,'kg',13,'#fff')
+     +pill(124,30,58,28,'3×',G,'#fff',16)
+     +chk(138,92,30,G))
+  });
+})();
+
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.qa03 = {
+ "title": "QA News III — Two Missing Welds",
+ "titleCn": "品保新聞三｜支架少焊兩道 → 對焊接供應商發 SCAR",
+ "date": "2026-10-25",
+ "level": "B2",
+ "scene": "QA News · Issuing a SCAR",
+ "sceneCn": "品保新聞・對供應商發 SCAR",
+ "sceneArt": "factory",
+ "titleArt": ["factory", "doc", "clipboard"],
+ "cast": {
+  "N": { "name": "Narrator", "cn": "旁白", "voice": "n" },
+  "A": { "name": "Anita", "cn": "Anita・重訓架工廠品保", "voice": "f" },
+  "M": { "name": "Mike", "cn": "Mike・客戶品保", "voice": "m" }
+ },
+ "chapters": [
+  { "en": "Intro", "cn": "開場" },
+  { "en": "The News", "cn": "新聞：安全支架召回" },
+  { "en": "The Customer Call", "cn": "情境：客戶追問漏焊" },
+  { "en": "Key Expressions", "cn": "重點表達" },
+  { "en": "Grammar", "cn": "文法" },
+  { "en": "Homework Fixes", "cn": "作業訂正" },
+  { "en": "Quick Quiz", "cn": "小測驗" }
+ ],
+ "expr": {
+  "weld": { "t": "weld", "cn": "焊道、焊接處", "tag": ["品保新聞", "焊接"], "note": "搭配：missing weld（漏焊）、weld map（焊道圖）。", "ex": "Each weld on the frame must be at least 30 millimeters long.", "exCn": "車架上每道焊都至少要 30 毫米長。" },
+  "supplier": { "t": "supplier", "cn": "供應商", "tag": ["品保新聞", "供應商管理"], "note": "搭配：welding supplier（焊接供應商）。", "ex": "The supplier changed its paint without telling us.", "exCn": "供應商沒通知我們就換了漆。" },
+  "require": { "t": "require", "cn": "要求、規定", "tag": ["品保新聞", "SCAR"], "note": "require + 人 + to do，比 ask 正式。", "ex": "This customer requires a test report with every shipment.", "exCn": "這個客戶規定每次出貨都要附測試報告。" },
+  "deadline": { "t": "deadline", "cn": "期限", "tag": ["品保新聞", "追蹤"], "note": "搭配：meet / miss the deadline（趕上／錯過期限）。", "ex": "The deadline for the drawing change is next Monday.", "exCn": "圖面變更的期限是下週一。" },
+  "traceability": { "t": "traceability", "cn": "可追溯性", "tag": ["品保新聞", "追溯"], "note": "批號、序號讓我們能追到每一台產品。", "ex": "Good traceability lets us find every affected unit within an hour.", "exCn": "可追溯性做得好，一小時內就能找出所有受影響的產品。" }
+ },
+ "lines": [
+  { "ch": 0, "sp": "N", "vis": { "type": "title" },
+    "en": "Welcome back. Today, two small welds caused a big recall.",
+    "cn": "歡迎回來。今天，兩道小小的焊，造成一次大召回。" },
+  { "ch": 0, "sp": "N", "vis": { "type": "scene", "art": "qa3Intro" },
+    "en": "Some brackets were missing welds. We will see how a factory asks its supplier to fix the problem.",
+    "cn": "有些支架少了焊道。我們來看工廠怎麼要求供應商解決問題。",
+    "hi": [{ "t": "supplier", "cn": "供應商", "k": "supplier", "c": 1 }] },
+
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa3News1" },
+    "en": "In February 2021, Rep Fitness recalled about 1,940 strap safety brackets for its power racks.",
+    "cn": "2021 年 2 月，Rep Fitness 召回約 1,940 組重訓架用的安全綁帶支架。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa3Strap" },
+    "en": "The brackets hold the safety straps that catch the bar when a lift fails.",
+    "cn": "這些支架固定安全綁帶，舉重失敗時由綁帶接住槓鈴。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa3Missing" },
+    "en": "The company said the brackets were missing two welds, one at the top and one at the bottom.",
+    "cn": "公司表示，這些支架少了兩道焊，上方一道、下方一道。",
+    "hi": [{ "t": "welds", "cn": "焊道", "k": "weld", "c": 1 }] },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa3Drop" },
+    "en": "Three brackets broke when a heavy weight was dropped. No injuries were reported.",
+    "cn": "重物掉落時有三個支架斷裂，沒有人受傷。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa3Remedy" },
+    "en": "The brackets were made in China. Owners got free replacements and kept the straps and bolts.",
+    "cn": "支架在中國製造。使用者免費換新支架，綁帶和螺栓留著。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa3Count" },
+    "en": "A missing weld can be seen with the eyes. So why did no one count the welds?",
+    "cn": "漏焊用眼睛就看得到。那為什麼沒有人數焊道？" },
+
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa3CallAsk" },
+    "en": "Three of your brackets broke when weight was dropped. What happened?",
+    "cn": "你們有三個支架在重量掉下來時斷了，怎麼回事？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa3Skipped" },
+    "en": "Two welds were missed on some brackets. Our welding supplier skipped them.",
+    "cn": "部分支架漏了兩道焊，是焊接供應商漏做的。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa3IqcAsk" },
+    "en": "Didn't your incoming inspection catch it?",
+    "cn": "你們的進料檢驗沒抓到嗎？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa3DimOnly" },
+    "en": "No. Our IQC checked dimensions only, not the number of welds.",
+    "cn": "沒有。IQC 只量尺寸，沒數焊道數量。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa3ScarAsk" },
+    "en": "What have you asked the supplier to do?",
+    "cn": "你們要求供應商做什麼？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa3Scar" },
+    "en": "We issued a SCAR. We require them to send a weld map with every lot, and the deadline for their 8D is Friday.",
+    "cn": "我們發了 SCAR，要求他們每批附焊道圖，8D 的期限是週五。",
+    "hi": [{ "t": "require", "cn": "要求", "k": "require", "c": 1 }, { "t": "deadline", "cn": "期限", "k": "deadline", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa3TraceAsk" },
+    "en": "Can you tell which racks have bad brackets?",
+    "cn": "你們知道是哪些架子裝到不良支架嗎？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa3Trace" },
+    "en": "Yes. Lot numbers give us traceability, so we know which racks to check.",
+    "cn": "知道。有批號可以追溯，所以我們知道要檢查哪些架子。",
+    "hi": [{ "t": "traceability", "cn": "可追溯性", "k": "traceability", "c": 1 }] },
+
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "weld", "ipa": "/weld/", "pos": "n.", "art": "flame", "def": "weld n. — missing weld.", "cn": "焊道｜搭配：漏焊", "note": "搭配：missing weld、weld map。" },
+    "en": "Each weld on the frame must be at least 30 millimeters long.", "cn": "車架上每道焊都至少要 30 毫米長。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "supplier", "ipa": "/səˈplaɪɚ/", "pos": "n.", "art": "factory", "def": "supplier n. — welding supplier.", "cn": "供應商｜搭配：焊接供應商", "note": "搭配：welding supplier。" },
+    "en": "The supplier changed its paint without telling us.", "cn": "供應商沒通知我們就換了漆。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "require", "ipa": "/rɪˈkwaɪɚ/", "pos": "v.", "art": "stamp", "def": "require v. — require someone to do.", "cn": "要求｜句型：要求某人做", "note": "require + 人 + to do。" },
+    "en": "This customer requires a test report with every shipment.", "cn": "這個客戶規定每次出貨都要附測試報告。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "deadline", "ipa": "/ˈdedlaɪn/", "pos": "n.", "art": "calendar", "def": "deadline n. — meet the deadline.", "cn": "期限｜搭配：趕上期限", "note": "搭配：meet / miss the deadline。" },
+    "en": "The deadline for the drawing change is next Monday.", "cn": "圖面變更的期限是下週一。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "traceability", "ipa": "/ˌtreɪ.səˈbɪl.ə.t̬i/", "pos": "n.", "art": "search", "def": "traceability n. — lot traceability.", "cn": "可追溯性｜搭配：批號追溯", "note": "批號、序號讓產品可追溯。" },
+    "en": "Good traceability lets us find every affected unit within an hour.", "cn": "可追溯性做得好，一小時內就能找出所有受影響的產品。" },
+
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "was / were + past participle", "art": "notebook",
+      "rows": [{ "lab": "被動：發生了什麼", "blocks": [{ "t": "The label", "k": "s" }, { "t": "was printed", "k": "v" }, { "t": "on the wrong side", "k": "o" }] }] },
+    "en": "The label was printed on the wrong side.", "cn": "標籤印在錯的那一面。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "require + someone + to do", "art": "doc",
+      "rows": [{ "lab": "正式要求", "blocks": [{ "t": "We require", "k": "s" }, { "t": "every welder", "k": "v" }, { "t": "to sign the check sheet", "k": "o" }] }] },
+    "en": "We require every welder to sign the check sheet.", "cn": "我們要求每位焊工都要在檢查表上簽名。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "by + deadline", "art": "calendar",
+      "rows": [{ "lab": "最晚期限", "blocks": [{ "t": "Please confirm", "k": "s" }, { "t": "the new drawing", "k": "v" }, { "t": "by Wednesday", "k": "o" }] }] },
+    "en": "Please confirm the new drawing by Wednesday.", "cn": "請在週三前確認新圖面。" },
+
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 1, "wrong": "Two welds were miss on these brackets.", "bad": ["miss"], "fix": "Two welds were missed on these brackets." },
+    "en": "Two welds were missed on these brackets.", "cn": "這些支架漏了兩道焊。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 2, "wrong": "Please send the 8D report until Friday.", "bad": ["until"], "fix": "Please send the 8D report by Friday." },
+    "en": "Please send the 8D report by Friday.", "cn": "請在週五前交 8D 報告。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 3, "wrong": "Our IQC checked dimensions only, not the number of weld.", "bad": ["weld"], "fix": "Our IQC checked dimensions only, not the number of welds." },
+    "en": "Our IQC checked dimensions only, not the number of welds.", "cn": "IQC 只量尺寸，沒數焊道數量。" },
+
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "Two welds were ___ on some brackets.", "a": "missed", "n": 1 },
+    "en": "Two welds were ___ on some brackets.", "cn": "部分支架＿＿了兩道焊。",
+    "say": "Two welds were , blank, on some brackets.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We ___ the supplier to send a weld map.", "a": "require", "n": 2 },
+    "en": "We ___ the supplier to send a weld map.", "cn": "我們＿＿供應商附焊道圖。",
+    "say": "We , blank, the supplier to send a weld map.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "Please send the 8D report ___ Friday.", "a": "by", "n": 3 },
+    "en": "Please send the 8D report ___ Friday.", "cn": "請＿＿週五交 8D 報告。",
+    "say": "Please send the 8D report , blank, Friday.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "Lot numbers give us ___.", "a": "traceability", "n": 4 },
+    "en": "Lot numbers give us ___.", "cn": "批號讓我們有＿＿。",
+    "say": "Lot numbers give us , blank.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "end" },
+    "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+ ]
+};
+
+window.VIDEO.qa04 = {
+ "title": "QA News IV — The Weld That Looked Fine",
+ "titleCn": "品保新聞四｜焊道看起來沒問題 → IPQC 怎麼抓強度不足",
+ "date": "2026-10-25",
+ "level": "B2",
+ "scene": "QA News · Catching a Weak Weld",
+ "sceneCn": "品保新聞・抓出強度不足的焊道",
+ "sceneArt": "gauge",
+ "titleArt": ["gauge", "eye", "hourglass"],
+ "cast": {
+  "N": { "name": "Narrator", "cn": "旁白", "voice": "n" },
+  "A": { "name": "Anita", "cn": "Anita・重訓架工廠 IPQC 組長", "voice": "f" },
+  "M": { "name": "Mike", "cn": "Mike・客戶品保", "voice": "m" }
+ },
+ "chapters": [
+  { "en": "Intro", "cn": "開場" },
+  { "en": "The News", "cn": "新聞：J-cup 召回" },
+  { "en": "The Customer Call", "cn": "情境：客戶追問焊接強度" },
+  { "en": "Key Expressions", "cn": "重點表達" },
+  { "en": "Grammar", "cn": "文法" },
+  { "en": "Homework Fixes", "cn": "作業訂正" },
+  { "en": "Quick Quiz", "cn": "小測驗" }
+ ],
+ "expr": {
+  "penetration": { "t": "penetration", "cn": "熔深", "tag": ["品保新聞", "焊接"], "note": "焊道熔入母材的深度；太淺強度就不夠。", "ex": "Cut the sample to check the weld penetration.", "exCn": "把樣品切開檢查焊道熔深。" },
+  "destructive": { "t": "destructive", "cn": "破壞性的", "tag": ["品保新聞", "測試"], "note": "搭配：destructive test（破壞測試）。", "ex": "A destructive test turns the sample into scrap.", "exCn": "破壞測試會讓樣品變成報廢品。" },
+  "sample": { "t": "sample", "cn": "樣品", "tag": ["品保新聞", "抽樣"], "note": "搭配：take a sample（抽樣）。", "ex": "Take five samples from each pallet.", "exCn": "每個棧板抽五個樣品。" },
+  "hold": { "t": "hold", "cn": "隔離、暫扣", "tag": ["品保新聞", "反應計畫"], "note": "先 hold、判定後才 scrap 或 release。", "ex": "Please hold this pallet until QA releases it.", "exCn": "這個棧板請先暫扣，等品保放行。" },
+  "rated": { "t": "rated", "cn": "額定的", "tag": ["品保新聞", "規格"], "note": "搭配：rated load（額定負載）。", "ex": "Do not load the shelf above its rated weight.", "exCn": "不要讓層架超過額定重量。" }
+ },
+ "lines": [
+  { "ch": 0, "sp": "N", "vis": { "type": "title" },
+    "en": "Welcome back. Today's weld looked fine — but it was not.",
+    "cn": "歡迎回來。今天的焊道看起來沒問題，其實不然。" },
+  { "ch": 0, "sp": "N", "vis": { "type": "scene", "art": "qa4Intro" },
+    "en": "A pin came off a barbell hook. We will learn how in-process checks can catch a weak weld.",
+    "cn": "槓鈴掛鉤的插銷掉了。我們來學製程檢查怎麼抓出強度不足的焊道。" },
+
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa4News1" },
+    "en": "In April 2011, Rogue Fitness recalled about 5,500 J-cup brackets. J-cups hold the barbell on a rack.",
+    "cn": "2011 年 4 月，Rogue Fitness 召回約 5,500 個 J-cup 掛鉤。J-cup 是把槓鈴掛在架子上的掛鉤。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa4Pin" },
+    "en": "Each J-cup has a pin that locks it into the rack. The weld between the bracket and the pin could break.",
+    "cn": "每個 J-cup 都有插銷固定在架子上。掛鉤和插銷之間的焊道可能斷裂。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa4Fall" },
+    "en": "Then the weights could fall. There were three reports, and one user sprained a wrist.",
+    "cn": "接著槓鈴片就可能掉下來。共有三件通報，一位使用者扭傷手腕。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa4Ohio" },
+    "en": "The brackets were made in Ohio, USA. Owners got free replacements, and only the older style was affected.",
+    "cn": "這批掛鉤在美國俄亥俄州製造。使用者免費換新，只有舊款受影響。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa4Hidden" },
+    "en": "Unlike a missing weld, a weak weld can look normal from the outside.",
+    "cn": "和漏焊不同，強度不足的焊道從外面看可能完全正常。" },
+
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa4CallAsk" },
+    "en": "The pin came off a J-cup. How did this pass your inspection?",
+    "cn": "J-cup 的插銷掉了，這是怎麼通過你們檢驗的？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa4ByEye" },
+    "en": "Our IPQC checked the weld by eye only. It looked fine, but the penetration was too shallow.",
+    "cn": "IPQC 只用目視檢查焊道。外觀沒問題，但熔深太淺。",
+    "hi": [{ "t": "penetration", "cn": "熔深", "k": "penetration", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa4CauseAsk" },
+    "en": "Why was it shallow?",
+    "cn": "為什麼會太淺？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa4Current" },
+    "en": "The welding current was set too low after maintenance.",
+    "cn": "維修後焊接電流設得太低。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa4HowAsk" },
+    "en": "How do you check weld strength now?",
+    "cn": "你們現在怎麼檢查焊接強度？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa4BreakTest" },
+    "en": "We do a destructive test on the first piece of every shift, and on one sample every two hours.",
+    "cn": "每班首件和每兩小時一個樣品，都做破壞測試。",
+    "hi": [{ "t": "destructive", "cn": "破壞性的", "k": "destructive", "c": 1 }, { "t": "sample", "cn": "樣品", "k": "sample", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa4FailAsk" },
+    "en": "And if a sample fails?",
+    "cn": "那樣品不合格呢？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa4Hold" },
+    "en": "If a sample fails, we stop the line and hold every part since the last good check.",
+    "cn": "樣品不合格就停線，上一次合格檢查之後的零件全部隔離。",
+    "hi": [{ "t": "hold", "cn": "隔離", "k": "hold", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa4StrongAsk" },
+    "en": "Is the new weld strong enough?",
+    "cn": "新的焊道夠強嗎？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa4Rated" },
+    "en": "Yes. In our tests, every sample held more than three times the rated load.",
+    "cn": "夠。我們的測試中，每個樣品都撐住超過三倍額定負載。",
+    "hi": [{ "t": "rated", "cn": "額定的", "k": "rated", "c": 1 }] },
+
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "penetration", "ipa": "/ˌpen.əˈtreɪ.ʃən/", "pos": "n.", "art": "search", "def": "penetration n. — weld penetration.", "cn": "熔深｜搭配：焊道熔深", "note": "熔深太淺，焊道強度就不夠。" },
+    "en": "Cut the sample to check the weld penetration.", "cn": "把樣品切開檢查焊道熔深。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "destructive", "ipa": "/dɪˈstrʌk.tɪv/", "pos": "adj.", "art": "warning", "def": "destructive adj. — destructive test.", "cn": "破壞性的｜搭配：破壞測試", "note": "搭配：destructive test。" },
+    "en": "A destructive test turns the sample into scrap.", "cn": "破壞測試會讓樣品變成報廢品。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "sample", "ipa": "/ˈsæm.pəl/", "pos": "n.", "art": "box", "def": "sample n. — take a sample.", "cn": "樣品｜搭配：抽樣", "note": "搭配：take a sample。" },
+    "en": "Take five samples from each pallet.", "cn": "每個棧板抽五個樣品。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "hold", "ipa": "/hoʊld/", "pos": "v.", "art": "lock", "def": "hold v. — hold the lot.", "cn": "隔離｜搭配：隔離整批", "note": "先 hold，判定後才 scrap 或 release。" },
+    "en": "Please hold this pallet until QA releases it.", "cn": "這個棧板請先暫扣，等品保放行。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "rated", "ipa": "/ˈreɪ.t̬ɪd/", "pos": "adj.", "art": "dumbbell", "def": "rated adj. — rated load.", "cn": "額定的｜搭配：額定負載", "note": "搭配：rated load。" },
+    "en": "Do not load the shelf above its rated weight.", "cn": "不要讓層架超過額定重量。" },
+
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "once an hour / every two hours", "art": "hourglass",
+      "rows": [{ "lab": "檢驗頻率", "blocks": [{ "t": "The line leader", "k": "s" }, { "t": "checks the torque", "k": "v" }, { "t": "once an hour", "k": "o" }] }] },
+    "en": "The line leader checks the torque once an hour.", "cn": "線長每小時檢查一次扭力。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "If + present, present", "art": "warning",
+      "rows": [{ "lab": "反應規則", "blocks": [{ "t": "If the gauge reads out of range", "k": "s" }, { "t": "the operator", "k": "v" }, { "t": "calls QA", "k": "o" }] }] },
+    "en": "If the gauge reads out of range, the operator calls QA.", "cn": "量規讀數超出範圍時，作業員就通知品保。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "adjective + enough + to do", "art": "box",
+      "rows": [{ "lab": "夠不夠", "blocks": [{ "t": "The box", "k": "s" }, { "t": "is not strong enough", "k": "v" }, { "t": "to stack five high", "k": "o" }] }] },
+    "en": "The box is not strong enough to stack five high.", "cn": "這個箱子不夠堅固，不能疊五層。" },
+
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 1, "wrong": "We check one sample every two hour.", "bad": ["hour"], "fix": "We check one sample every two hours." },
+    "en": "We check one sample every two hours.", "cn": "我們每兩小時抽一個樣品。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 2, "wrong": "The weld was not enough strong to hold the bar.", "bad": ["enough", "strong"], "fix": "The weld was not strong enough to hold the bar." },
+    "en": "The weld was not strong enough to hold the bar.", "cn": "焊道強度不夠，撐不住槓鈴。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 3, "wrong": "One user sprain a wrist.", "bad": ["sprain"], "fix": "One user sprained a wrist." },
+    "en": "One user sprained a wrist.", "cn": "有一位使用者扭傷了手腕。" },
+
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We check one sample every two ___.", "a": "hours", "n": 1 },
+    "en": "We check one sample every two ___.", "cn": "我們每兩＿＿抽一個樣品。",
+    "say": "We check one sample every two , blank.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "If a sample ___, we stop the line.", "a": "fails", "n": 2 },
+    "en": "If a sample ___, we stop the line.", "cn": "如果樣品＿＿，我們就停線。",
+    "say": "If a sample , blank, we stop the line.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "The weld was not strong ___ to hold the bar.", "a": "enough", "n": 3 },
+    "en": "The weld was not strong ___ to hold the bar.", "cn": "焊道強度＿＿，撐不住槓鈴。",
+    "say": "The weld was not strong , blank, to hold the bar.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "A ___ test turns the sample into scrap.", "a": "destructive", "n": 4 },
+    "en": "A ___ test turns the sample into scrap.", "cn": "＿＿測試會讓樣品報廢。",
+    "say": "A , blank, test turns the sample into scrap.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "end" },
+    "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+ ]
+};
