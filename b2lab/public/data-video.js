@@ -52444,3 +52444,314 @@ window.VIDEO.qp03 = {
     "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
  ]
 };
+
+/* ---------- qp04 品保實務四 影片專屬插圖（每句一張，不重複；2026-10-25） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4', G='#3f9e64', M='#9aa5b1', Y='#f0b429';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'+txt(cx,cy+9,'?',25,'#fff'); };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'+txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round"><path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var arr=function(x1,y1,x2,y2,col){ var a=Math.atan2(y2-y1,x2-x1), h=8;
+    return '<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.5)).toFixed(1)+' '+(y2-h*Math.sin(a-0.5)).toFixed(1)+' M'+x2+' '+y2+' L'+(x2-h*Math.cos(a+0.5)).toFixed(1)+' '+(y2-h*Math.sin(a+0.5)).toFixed(1)+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'; };
+  var doc=function(x,y,w,h,hd){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" stroke="'+D+'" stroke-width="3"/>'
+     +'<rect x="'+(x+7)+'" y="'+(y+8)+'" width="'+(w-14)+'" height="8" rx="3" fill="'+(hd||A)+'"/>';
+    for(var k=y+27;k<y+h-30;k+=11) s+='<path d="M'+(x+9)+' '+k+' h'+(w-18)+'" stroke="'+M+'" stroke-width="3" stroke-linecap="round"/>';
+    return s; };
+  /* 馬達支架（正視板＋兩孔），寬 w；回傳孔心 x 由呼叫端自己算：x+18、x+w-18 */
+  var brk=function(x,y,w,col){ return '<path d="M'+x+' '+y+' h'+w+' v30 h-'+(w-22)+' v20 h-22 z" fill="'+(col||M)+'" '+st+'/>'
+     +'<circle cx="'+(x+18)+'" cy="'+(y+15)+'" r="6" fill="#fff" stroke="'+D+'" stroke-width="2.5"/><circle cx="'+(x+w-18)+'" cy="'+(y+15)+'" r="6" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'; };
+  /* 尺寸線：x1→x2，在 y 高度，上方標字 */
+  var dim=function(x1,x2,y,s,col,sz){ col=col||D; var h=6;
+    return '<path d="M'+x1+' '+(y-10)+' v20 M'+x2+' '+(y-10)+' v20" stroke="'+col+'" stroke-width="2"/>'
+     +'<path d="M'+x1+' '+y+' H'+x2+'" stroke="'+col+'" stroke-width="2.5"/>'
+     +'<path d="M'+(x1+h)+' '+(y-4)+' L'+x1+' '+y+' L'+(x1+h)+' '+(y+4)+' M'+(x2-h)+' '+(y-4)+' L'+x2+' '+y+' L'+(x2-h)+' '+(y+4)+'" fill="none" stroke="'+col+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +txt((x1+x2)/2,y-7,s,sz||14,col); };
+  /* 圖面：圖框＋右下標題欄寫版次 */
+  var dwg=function(x,y,w,h,rev,rc){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="#fff" '+st+'/>'
+     +'<path d="M'+(x+10)+' '+(y+h*0.45)+' h'+(w*0.55)+' v-'+(h*0.22)+' M'+(x+10+w*0.15)+' '+(y+h*0.45)+' v'+(h*0.12)+'" stroke="'+B+'" stroke-width="2.5" fill="none"/>'
+     +'<rect x="'+(x+w-40)+'" y="'+(y+h-24)+'" width="34" height="18" fill="'+(rc||L)+'" stroke="'+D+'" stroke-width="2"/>'+txt(x+w-23,y+h-10,rev,12,D); };
+  var stampR=function(x,y,w,s,rot){ return '<g transform="rotate('+(rot||-14)+' '+(x+w/2)+' '+(y+11)+')"><rect x="'+x+'" y="'+y+'" width="'+w+'" height="22" rx="3" fill="none" stroke="'+R+'" stroke-width="3"/>'+txt(x+w/2,y+16,s,12,R)+'</g>'; };
+  var motor=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="56" height="34" rx="8" fill="'+B+'" '+st+'/><path d="M'+(x+12)+' '+y+' v34 M'+(x+24)+' '+y+' v34 M'+(x+36)+' '+y+' v34" stroke="#fff" stroke-width="2" opacity="0.7"/>'
+     +'<rect x="'+(x+56)+'" y="'+(y+12)+'" width="14" height="10" rx="2" fill="'+M+'" '+st+'/>'; };
+  var line=function(x,y,w){ /* 數線：綠色合格區在中間 */
+    return '<path d="M'+x+' '+y+' H'+(x+w)+'" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<rect x="'+(x+w*0.3)+'" y="'+(y-9)+'" width="'+(w*0.4)+'" height="18" rx="4" fill="'+G+'" opacity="0.35" stroke="'+G+'" stroke-width="2.5"/>'; };
+  var crate=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="50" height="34" rx="2" fill="'+L+'" '+st+'/><path d="M'+(x+25)+' '+y+' v12" stroke="'+A+'" stroke-width="3"/>'; };
+  var drill=function(x,y){ return '<path d="M'+x+' '+y+' h36 l8 8 v14 h-44 z" fill="'+Y+'" '+st+'/><rect x="'+(x+8)+'" y="'+(y+22)+'" width="16" height="26" rx="3" fill="'+Y+'" '+st+'/>'
+     +'<path d="M'+(x+44)+' '+(y+15)+' h22" stroke="'+M+'" stroke-width="5" stroke-linecap="round"/><path d="M'+(x+48)+' '+(y+12)+' l4 6 l4 -6 l4 6 l4 -6" fill="none" stroke="'+D+'" stroke-width="1.5"/>'; };
+  var torch=function(x,y){ return '<path d="M'+x+' '+y+' l40 30" stroke="'+D+'" stroke-width="9" stroke-linecap="round"/><path d="M'+x+' '+y+' l40 30" stroke="'+M+'" stroke-width="5" stroke-linecap="round"/>'
+     +'<path d="M'+(x+46)+' '+(y+36)+' l8 -6 M'+(x+46)+' '+(y+36)+' l10 2 M'+(x+46)+' '+(y+36)+' l4 10 M'+(x+46)+' '+(y+36)+' l-4 10" stroke="'+Y+'" stroke-width="3" stroke-linecap="round"/>'; };
+  var lens=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="20" fill="#fff" fill-opacity="0.4" stroke="'+D+'" stroke-width="4"/><path d="M'+(cx+14)+' '+(cy+14)+' l18 18" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'; };
+  var loop=function(cx,cy,r,col){ var sx=cx+r*0.5, sy=cy-r*0.866, ex2=cx-r*0.5, ey=cy-r*0.866;
+    return '<path d="M'+sx+' '+sy+' A'+r+' '+r+' 0 1 1 '+ex2+' '+ey+'" fill="none" stroke="'+col+'" stroke-width="5" stroke-linecap="round"/>'+arr(ex2,ey,ex2+9,ey-5,col); };
+  var bin=function(x,y){ return '<path d="M'+x+' '+y+' h44 l-5 46 h-34 z" fill="'+M+'" '+st+'/><path d="M'+(x-4)+' '+y+' h52" '+st+'/><path d="M'+(x+15)+' '+(y+10)+' v28 M'+(x+29)+' '+(y+10)+' v28" stroke="'+D+'" stroke-width="2"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* 0 旁白：超出公差的零件能出貨嗎？ */
+    qp4Intro: svg(
+      brk(14,52,120,M)
+     +dim(32,116,32,'85.4',R,15)
+     +qb(168,48)
+     +pill(128,104,66,26,'SHIP?',A,'#fff',12)),
+
+    /* 1 公差：85.0 ± 0.2 → 84.8 到 85.2 都可以 */
+    qp4Tol: svg(
+      pill(40,10,120,30,'85.0 ± 0.2',B,'#fff',15)
+     +line(14,84,172)
+     +txt(66,116,'84.8',13,D)+txt(134,116,'85.2',13,D)
+     +'<path d="M66 72 v24 M134 72 v24" stroke="'+G+'" stroke-width="2.5"/>'
+     +chk(88,94,24,G)),
+
+    /* 2 版次：B 改 C，現場只能有最新版 */
+    qp4Rev: svg(
+      dwg(10,30,78,64,'B',M)
+     +arr(94,62,114,62,A)
+     +dwg(118,22,76,74,'C',Y)
+     +pill(118,110,76,26,'LATEST',G,'#fff',11)),
+
+    /* 3 不合格：超出範圍，品保不能自己放行 */
+    qp4Out: svg(
+      line(14,50,172)
+     +'<circle cx="168" cy="50" r="8" fill="'+R+'" '+st+'/>'
+     +arr(168,70,168,60,R)
+     +crate(30,92)
+     +ex(112,108,28,R)
+     +pill(136,96,58,26,'OUT',R,'#fff',12)),
+
+    /* 4 偏差許可（生產前） vs 特採（做好之後） */
+    qp4Dev: svg(
+      doc(16,14,56,72,B)
+     +pill(10,100,70,26,'BEFORE',B,'#fff',11)
+     +'<path d="M100 16 V134" stroke="'+M+'" stroke-width="3" stroke-dasharray="6 5"/>'
+     +brk(122,24,56,M)+brk(122,52,56,M)
+     +pill(120,100,70,26,'AFTER',A,'#fff',11)),
+
+    /* 5 客戶：500 個支架的特採申請，哪裡有問題？ */
+    qp4Ask: svg(
+      doc(18,12,70,104,Y)
+     +pill(26,120,54,24,'500',A,'#fff',12)
+     +brk(104,30,64,M)
+     +qb(170,98)),
+
+    /* 6 Anita：孔距 85.35–85.40，規格 85.0 ± 0.2 */
+    qp4Spacing: svg(
+      brk(20,82,160,M)
+     +dim(38,162,66,'85.35–85.40',R,14)
+     +pill(42,10,116,26,'85.0 ± 0.2',G,'#fff',13)),
+
+    /* 7 客戶：怎麼會這樣？ */
+    qp4HowAsk: svg(
+      brk(12,60,110,M)
+     +lens(100,56)
+     +qb(170,40)),
+
+    /* 8 Anita：加工課用印出來的舊版 Rev B */
+    qp4OldRev: svg(
+      '<rect x="8" y="10" width="104" height="96" rx="3" fill="'+L+'" '+st+'/>'
+     +dwg(18,20,84,70,'B',M)
+     +'<rect x="50" y="12" width="20" height="10" fill="'+Y+'" opacity="0.9"/>'
+     +txt(40,82,'± 0.5',13,D)
+     +dwg(126,44,66,60,'C',Y)
+     +txt(159,124,'± 0.2',13,G)
+     +pill(20,116,80,26,'OLD COPY',R,'#fff',11)),
+
+    /* 9 客戶：馬達還裝得上嗎？ */
+    qp4FitAsk: svg(
+      motor(18,22)
+     +arr(52,66,52,84,A)
+     +brk(14,92,96,M)
+     +qb(162,58)),
+
+    /* 10 Anita：30 個試裝、手鎖得進去、跑四小時正常 */
+    qp4Fit: svg(
+      motor(16,30)
+     +brk(10,64,96,M)
+     +chk(122,60,28,G)
+     +pill(130,14,62,26,'30',B,'#fff',13)
+     +pill(130,104,62,26,'4 h',G,'#fff',13)),
+
+    /* 11 客戶：為什麼不直接重工？ */
+    qp4ReworkAsk: svg(
+      drill(12,24)
+     +brk(20,96,110,M)
+     +qb(168,52)),
+
+    /* 12 Anita：補焊再鑽孔會讓支架變弱 */
+    qp4Weld: svg(
+      brk(40,74,130,M)
+     +torch(14,18)
+     +'<path d="M110 74 l-6 10 l8 6 l-6 12" fill="none" stroke="'+R+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+     +pill(126,24,68,28,'WEAK',R,'#fff',12)),
+
+    /* 13 客戶：核准的話，怎麼知道是哪些零件？ */
+    qp4LabelAsk: svg(
+      crate(14,96)+crate(70,96)+crate(42,60)
+     +qb(162,58)),
+
+    /* 14 Anita：每箱貼黃色特採標籤，只限 2610 批 */
+    qp4Label: svg(
+      '<rect x="14" y="40" width="100" height="70" rx="3" fill="'+L+'" '+st+'/>'
+     +'<rect x="34" y="56" width="60" height="38" rx="4" fill="'+Y+'" '+st+'/>'+txt(64,81,'CR-01',13,D)
+     +pill(126,58,68,28,'2610',A,'#fff',13)),
+
+    /* 15 客戶：怎麼防止再發生？ */
+    qp4AgainAsk: svg(
+      loop(70,80,44,A)
+     +dwg(46,58,48,40,'B',M)
+     +qb(168,40)),
+
+    /* 16 Anita：舊圖全收、只用蓋章受控圖面、首件對最新版 */
+    qp4Stamp: svg(
+      bin(14,80)
+     +dwg(10,40,52,40,'B',M)
+     +dwg(86,14,104,90,'C',Y)
+     +stampR(92,38,94,'CONTROLLED',-12)
+     +chk(124,118,22,G))
+  });
+})();
+
+window.VIDEO.qp04 = {
+ "title": "QA Practice IV — Can We Ship Parts Out of Tolerance?",
+ "titleCn": "品保實務四｜馬達支架孔距超差：用了舊版圖面、向客戶申請特採",
+ "date": "2026-10-25",
+ "level": "B2",
+ "scene": "QA Practice · Drawings & Concessions",
+ "sceneCn": "品保實務・圖面、公差與特採",
+ "sceneArt": "caliper",
+ "titleArt": ["book", "caliper", "ticket"],
+ "cast": {
+  "N": { "name": "Narrator", "cn": "旁白", "voice": "n" },
+  "A": { "name": "Anita", "cn": "Anita・跑步機工廠品保", "voice": "f" },
+  "M": { "name": "Mike", "cn": "Mike・客戶品保", "voice": "m" }
+ },
+ "chapters": [
+  { "en": "Intro", "cn": "開場" },
+  { "en": "The Basics", "cn": "背景：公差、版次與特採" },
+  { "en": "The Customer Call", "cn": "情境：支架孔距超差" },
+  { "en": "Key Expressions", "cn": "重點表達" },
+  { "en": "Grammar", "cn": "文法" },
+  { "en": "Homework Fixes", "cn": "作業訂正" },
+  { "en": "Quick Quiz", "cn": "小測驗" }
+ ],
+ "expr": {
+  "tolerance": { "t": "tolerance", "cn": "公差", "tag": ["品保實務", "圖面"], "note": "尺寸允許的範圍；搭配：out of tolerance、a tight tolerance。", "ex": "Ask the engineer why the tolerance on the plastic cover is so tight.", "exCn": "去問工程師，塑膠外蓋的公差為什麼訂得這麼嚴。" },
+  "revision": { "t": "revision", "cn": "版次", "tag": ["品保實務", "圖面"], "note": "圖面每改一次換一個字母；搭配：the latest revision。", "ex": "The new revision of the user manual adds a warning about the safety key.", "exCn": "新版的使用手冊加了一條安全鑰匙的警告。" },
+  "concession": { "t": "concession", "cn": "特採", "tag": ["品保實務", "不合格品"], "note": "零件已做好、超出規格，請客戶同意接受；搭配：concession request。", "ex": "The customer accepted the scratched covers as a concession, but only this one time.", "exCn": "客戶同意特採這批刮傷的外蓋，但只限這一次。" },
+  "deviation": { "t": "deviation", "cn": "偏差許可", "tag": ["品保實務", "不合格品"], "note": "生產前先申請暫時用不同方式做；和 concession（事後）不同。", "ex": "Purchasing asked for a deviation to use a different screw supplier for one month.", "exCn": "採購申請偏差許可，這一個月改用另一家螺絲供應商。" },
+  "obsolete": { "t": "obsolete", "cn": "作廢的", "tag": ["品保實務", "文件管制"], "note": "舊版圖面、標籤不能再用；常見蓋章 OBSOLETE。", "ex": "Throw away the obsolete labels so nobody uses them by mistake.", "exCn": "把作廢的標籤丟掉，免得有人誤用。" }
+ },
+ "lines": [
+  { "ch": 0, "sp": "N", "vis": { "type": "title" },
+    "en": "Welcome back. Today we found motor brackets with their holes in the wrong place.",
+    "cn": "歡迎回來。今天我們發現一批馬達支架的孔位置不對。" },
+  { "ch": 0, "sp": "N", "vis": { "type": "scene", "art": "qp4Intro" },
+    "en": "Can we ship parts that are out of tolerance? Let's learn how to talk about drawings and concessions.",
+    "cn": "超出公差的零件可以出貨嗎？來學怎麼談圖面和特採。",
+    "hi": [{ "t": "tolerance", "cn": "公差", "k": "tolerance", "c": 1 }] },
+
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp4Tol" },
+    "en": "85.0 ± 0.2 mm means any size from 84.8 to 85.2 is acceptable.",
+    "say": "Eighty-five point oh, plus or minus point two millimeters, means any size from eighty-four point eight to eighty-five point two is acceptable.",
+    "cn": "85.0 ± 0.2 mm 代表 84.8 到 85.2 之間都可以接受。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp4Rev" },
+    "en": "Each time a drawing changes, it gets a new revision letter. Only the latest one belongs on the shop floor.",
+    "cn": "圖面每改一次就換新的版次字母，現場只能放最新版。",
+    "hi": [{ "t": "revision", "cn": "版次", "k": "revision", "c": 1 }] },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp4Out" },
+    "en": "Parts that don't meet the drawing are nonconforming, and QA can't ship them without the customer's OK.",
+    "cn": "不符合圖面的零件就是不合格品，沒有客戶同意，品保不能出貨。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp4Dev" },
+    "en": "A deviation is asked for before production. A concession is for parts that are already made.",
+    "cn": "偏差許可是生產前申請；特採是針對已經做好的零件。",
+    "hi": [{ "t": "deviation", "cn": "偏差許可", "k": "deviation", "c": 1 }, { "t": "concession", "cn": "特採", "k": "concession", "c": 1 }] },
+
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp4Ask" },
+    "en": "You sent us a concession request for 500 motor brackets. What exactly is wrong?",
+    "cn": "你們送來 500 個馬達支架的特採申請。到底哪裡有問題？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp4Spacing" },
+    "en": "The hole spacing is 85.35 to 85.40 mm. Rev C says 85.0 ± 0.2, so they're out of tolerance by up to 0.2 mm.",
+    "say": "The hole spacing is eighty-five point three five to eighty-five point four oh millimeters. Rev C says eighty-five point oh, plus or minus point two, so they're out of tolerance by up to point two millimeters.",
+    "cn": "孔距是 85.35 到 85.40 mm。Rev C 規定 85.0 ± 0.2，所以最多超出公差 0.2 mm。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp4HowAsk" },
+    "en": "How did that happen?",
+    "cn": "怎麼會這樣？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp4OldRev" },
+    "en": "Our machine shop was using an old printed copy of Rev B. We should have removed it when Rev C came out.",
+    "cn": "我們加工課用的是印出來的舊版 Rev B。Rev C 出來的時候，我們早該把它收掉的。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp4FitAsk" },
+    "en": "Will the motor still fit?",
+    "cn": "馬達還裝得上嗎？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp4Fit" },
+    "en": "Yes. We mounted motors on 30 brackets, and every bolt went in by hand. The belt ran normally for four hours.",
+    "cn": "可以。我們裝了 30 個支架，每支螺絲都能用手鎖進去，皮帶跑了四小時都正常。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp4ReworkAsk" },
+    "en": "Why don't you just rework them?",
+    "cn": "為什麼不直接重工？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp4Weld" },
+    "en": "We'd have to weld the holes and drill them again. That would make the brackets weaker.",
+    "cn": "那要把孔補焊再重新鑽，會讓支架變弱。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp4LabelAsk" },
+    "en": "If we approve it, how will we know which parts they are?",
+    "cn": "如果我們核准，要怎麼知道是哪些零件？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp4Label" },
+    "en": "Every box will have a yellow concession label with the request number. It's only for lot 2610.",
+    "say": "Every box will have a yellow concession label with the request number. It's only for lot twenty-six ten.",
+    "cn": "每一箱都會貼黃色特採標籤，上面有申請編號。只限 2610 這一批。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp4AgainAsk" },
+    "en": "And how will you stop this from happening again?",
+    "cn": "那你們要怎麼防止再發生？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp4Stamp" },
+    "en": "We've collected all the printed drawings. The shop now uses only stamped controlled copies, and we won't run a lot unless the first part matches the latest revision.",
+    "cn": "印出來的圖面全部收回了。加工課現在只用蓋章的受控圖面，而且首件沒有符合最新版，就不開始生產那一批。" },
+
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "tolerance", "ipa": "/ˈtɑː.lɚ.əns/", "pos": "n.", "art": "caliper", "def": "tolerance n. — out of tolerance.", "cn": "公差｜搭配：超出公差", "note": "尺寸允許的範圍，例如 ±0.2 mm。" },
+    "en": "Ask the engineer why the tolerance on the plastic cover is so tight.", "cn": "去問工程師，塑膠外蓋的公差為什麼訂得這麼嚴。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "revision", "ipa": "/rɪˈvɪʒ.ən/", "pos": "n.", "art": "book", "def": "revision n. — the latest revision.", "cn": "版次｜搭配：最新版", "note": "Rev B → Rev C，每改一次換字母。" },
+    "en": "The new revision of the user manual adds a warning about the safety key.", "cn": "新版的使用手冊加了一條安全鑰匙的警告。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "concession", "ipa": "/kənˈseʃ.ən/", "pos": "n.", "art": "ticket", "def": "concession n. — a concession request.", "cn": "特採｜搭配：特採申請", "note": "已做好的不合格品，請客戶同意接受。" },
+    "en": "The customer accepted the scratched covers as a concession, but only this one time.", "cn": "客戶同意特採這批刮傷的外蓋，但只限這一次。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "deviation", "ipa": "/ˌdiː.viˈeɪ.ʃən/", "pos": "n.", "art": "signpost", "def": "deviation n. — ask for a deviation.", "cn": "偏差許可｜搭配：申請偏差許可", "note": "生產前先申請、限期使用。" },
+    "en": "Purchasing asked for a deviation to use a different screw supplier for one month.", "cn": "採購申請偏差許可，這一個月改用另一家螺絲供應商。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "obsolete", "ipa": "/ˌɑːb.səˈliːt/", "pos": "adj.", "art": "trash", "def": "obsolete adj. — an obsolete drawing.", "cn": "作廢的｜搭配：作廢的圖面", "note": "舊版不能再用，要收回或蓋作廢章。" },
+    "en": "Throw away the obsolete labels so nobody uses them by mistake.", "cn": "把作廢的標籤丟掉，免得有人誤用。" },
+
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "should have + p.p.", "art": "hourglass",
+      "rows": [{ "lab": "早該…卻沒做", "blocks": [{ "t": "We", "k": "s" }, { "t": "should have asked", "k": "v" }, { "t": "the customer before we changed the bolt", "k": "o" }] }] },
+    "en": "We should have asked the customer before we changed the bolt.", "cn": "換螺絲之前，我們早該先問客戶。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "unless + present", "art": "lock",
+      "rows": [{ "lab": "除非…否則不…", "blocks": [{ "t": "The line can't restart", "k": "s" }, { "t": "unless", "k": "v" }, { "t": "QA signs the first-piece report", "k": "o" }] }] },
+    "en": "The line can't restart unless QA signs the first-piece report.", "cn": "除非品保簽了首件報告，否則產線不能重新開線。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "must be + p.p.", "art": "check",
+      "rows": [{ "lab": "必須被…", "blocks": [{ "t": "Every gauge", "k": "s" }, { "t": "must be checked", "k": "v" }, { "t": "before the shift starts", "k": "o" }] }] },
+    "en": "Every gauge must be checked before the shift starts.", "cn": "每支量具都必須在開班前檢查。" },
+
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 1, "wrong": "We should have remove the old drawing.", "bad": ["remove"], "fix": "We should have removed the old drawing." },
+    "en": "We should have removed the old drawing.", "cn": "我們早該把舊圖面收掉的。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 2, "wrong": "We can't ship the brackets unless you will sign the concession.", "bad": ["will sign"], "fix": "We can't ship the brackets unless you sign the concession." },
+    "en": "We can't ship the brackets unless you sign the concession.", "cn": "除非你們簽核特採單，否則支架不能出貨。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 3, "wrong": "The first part of every lot must check against the latest revision.", "bad": ["must check"], "fix": "The first part of every lot must be checked against the latest revision." },
+    "en": "The first part of every lot must be checked against the latest revision.", "cn": "每批的首件都必須對照最新版圖面檢查。" },
+
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "The hole spacing is out ___ tolerance.", "a": "of", "n": 1 },
+    "en": "The hole spacing is out ___ tolerance.", "cn": "孔距超出公差。",
+    "say": "The hole spacing is out , blank, tolerance.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We should have ___ the old copy. (remove)", "a": "removed", "n": 2 },
+    "en": "We should have ___ the old copy.", "cn": "我們早該把舊圖收掉。",
+    "say": "We should have , blank, the old copy.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We can't ship them ___ you approve it.", "a": "unless", "n": 3 },
+    "en": "We can't ship them ___ you approve it.", "cn": "除非你們核准，否則我們不能出貨。",
+    "say": "We can't ship them , blank, you approve it.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "Every box must ___ labeled with the concession number.", "a": "be", "n": 4 },
+    "en": "Every box must ___ labeled with the concession number.", "cn": "每一箱都必須貼上特採編號。",
+    "say": "Every box must , blank, labeled with the concession number.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "end" },
+    "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+ ]
+};

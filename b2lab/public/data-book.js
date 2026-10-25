@@ -24287,6 +24287,222 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- qp04 品保實務四：馬達支架孔距超差 → 用舊版圖面、申請特採 ---- */
+  {
+   "id": "qp04",
+   "icon": "📐",
+   "video": true,
+   "date": "2026-10-25",
+   "title": "QA Practice IV — Can We Ship Parts Out of Tolerance?",
+   "titleCn": "品保實務四｜馬達支架孔距超差：用了舊版圖面、向客戶申請特採",
+   "topics": "品保實務, 圖面, 工程圖, 公差, 尺寸, 孔距, 圖面版次, 舊版圖面, 受控文件, 特採, 偏差許可, 不合格品, 跑步機, 馬達支架, tolerance, revision, deviation, concession, nonconforming, controlled copy",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "The hole spacing is out of tolerance.",
+     "cn": "孔距超出公差。",
+     "pat": "be out of tolerance（超出公差）",
+     "note": "out of tolerance 是「尺寸超出允許範圍」，反義是 within tolerance；品保回報不合格時最常用。"
+    },
+    {
+     "n": 2,
+     "cn": "我們早該把舊圖面收掉的。",
+     "pat": "should have + 過去分詞（早該…卻沒做）",
+     "note": "should have 後面一定接過去分詞，表示過去該做卻沒做；向客戶說明疏失時很常用。",
+     "wrong": "We should have remove the old drawing.",
+     "fix": "We should have removed the old drawing."
+    },
+    {
+     "n": 3,
+     "ok": "We can't ship them unless you approve the concession.",
+     "cn": "除非你們核准特採，否則我們不能出貨。",
+     "pat": "can't + 動詞 + unless + 子句（除非…否則不…）",
+     "note": "unless 本身就有「如果不」的意思，所以子句用肯定句：unless you approve，不要再加 don't。"
+    },
+    {
+     "n": 4,
+     "cn": "除非你們簽核特採單，否則支架不能出貨。",
+     "pat": "unless + 現在式",
+     "note": "unless 是條件子句，和 if 一樣用現在式表示未來，子句裡不加 will。",
+     "wrong": "We can't ship the brackets unless you will sign the concession.",
+     "fix": "We can't ship the brackets unless you sign the concession."
+    },
+    {
+     "n": 5,
+     "ok": "Every box must be labeled with the concession number.",
+     "cn": "每一箱都必須貼上特採編號。",
+     "pat": "must be + 過去分詞（必須被…）",
+     "note": "寫規定時常用被動：重點是「東西要被怎麼處理」，不是誰去做。"
+    },
+    {
+     "n": 6,
+     "cn": "每批的首件都必須對照最新版圖面檢查。",
+     "pat": "must be + 過去分詞",
+     "note": "零件不會自己檢查，所以要用被動 must be checked；少了 be 意思就變成零件去檢查別的東西。",
+     "wrong": "The first part of every lot must check against the latest revision.",
+     "fix": "The first part of every lot must be checked against the latest revision."
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    { "w": "tolerance", "ipa": "/ˈtɑː.lɚ.əns/", "pos": "n.", "cn": "公差（尺寸允許的範圍）", "ex": "Ask the engineer why the tolerance on the plastic cover is so tight.", "exCn": "去問工程師，塑膠外蓋的公差為什麼訂得這麼嚴。" },
+    { "w": "dimension", "ipa": "/daɪˈmen.ʃən/", "pos": "n.", "cn": "尺寸", "ex": "Write down the dimensions of the carton before you order the foam.", "exCn": "訂泡棉之前，先把紙箱的尺寸記下來。" },
+    { "w": "revision", "ipa": "/rɪˈvɪʒ.ən/", "pos": "n.", "cn": "（圖面、文件的）版次、改版", "ex": "The new revision of the user manual adds a warning about the safety key.", "exCn": "新版的使用手冊加了一條安全鑰匙的警告。" },
+    { "w": "deviation", "ipa": "/ˌdiː.viˈeɪ.ʃən/", "pos": "n.", "cn": "偏差；（事先申請的）偏差許可", "ex": "Purchasing asked for a deviation to use a different screw supplier for one month.", "exCn": "採購申請偏差許可，這一個月改用另一家螺絲供應商。" },
+    { "w": "concession", "ipa": "/kənˈseʃ.ən/", "pos": "n.", "cn": "特採（同意接受已做好的不合格品）", "ex": "The customer accepted the scratched covers as a concession, but only this one time.", "exCn": "客戶同意特採這批刮傷的外蓋，但只限這一次。" },
+    { "w": "bracket", "ipa": "/ˈbræk.ɪt/", "pos": "n.", "cn": "支架、托架", "ex": "Tighten the bracket bolts before you put the console on.", "exCn": "裝儀表板之前，先把支架螺絲鎖緊。" },
+    { "w": "approve", "ipa": "/əˈpruːv/", "pos": "v.", "cn": "核准、批准", "ex": "The plant manager approved the overtime for Saturday.", "exCn": "廠長核准了星期六加班。" },
+    { "w": "obsolete", "ipa": "/ˌɑːb.səˈliːt/", "pos": "adj.", "cn": "作廢的、過時的", "ex": "Throw away the obsolete labels so nobody uses them by mistake.", "exCn": "把作廢的標籤丟掉，免得有人誤用。" }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "out of tolerance", "cn": "超出公差" },
+    { "p": "hole spacing", "cn": "孔距" },
+    { "p": "latest revision", "cn": "最新版次" },
+    { "p": "controlled copy", "cn": "受控文件（有管制章的正式版本）" },
+    { "p": "concession request", "cn": "特採申請" },
+    { "p": "run test", "cn": "運轉測試" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "QP4-A",
+     "title": "should have + 過去分詞（早該…卻沒做）",
+     "pat": "主詞 + should have + 過去分詞",
+     "pts": [
+      "說明過去的疏失：本來應該做，但當時沒有做。向客戶承認錯誤時語氣誠懇又清楚。",
+      "should have 後面接過去分詞，不能接原形；口語常縮成 should've。",
+      "例：We should have asked the customer before we changed the bolt.（換螺絲之前，我們早該先問客戶。）"
+     ],
+     "ex": "We should have asked the customer before we changed the bolt.",
+     "exCn": "換螺絲之前，我們早該先問客戶。"
+    },
+    {
+     "k": "QP4-B",
+     "title": "unless + 現在式（除非…否則不…）",
+     "pat": "結果（否定）+ unless + 主詞 + 現在式",
+     "pts": [
+      "訂放行條件時常用：條件沒達成就不能做下一步。",
+      "unless = if … not，子句用肯定句；和 if 一樣用現在式表示未來，不加 will。",
+      "例：The line can't restart unless QA signs the first-piece report.（除非品保簽了首件報告，否則產線不能重新開線。）"
+     ],
+     "ex": "The line can't restart unless QA signs the first-piece report.",
+     "exCn": "除非品保簽了首件報告，否則產線不能重新開線。"
+    },
+    {
+     "k": "QP4-C",
+     "title": "must be + 過去分詞（必須被…）",
+     "pat": "東西 + must be + 過去分詞",
+     "pts": [
+      "寫 SOP、規定或對客戶的承諾時常用被動：重點放在東西要被怎麼處理。",
+      "be 不能省略；要說是誰做，可以在後面加 by + 人。",
+      "例：Every gauge must be checked before the shift starts.（每支量具都必須在開班前檢查。）"
+     ],
+     "ex": "Every gauge must be checked before the shift starts.",
+     "exCn": "每支量具都必須在開班前檢查。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "deviation vs concession",
+     "sc": "deviation（偏差許可）是生產前先申請，例如材料缺貨、這一批想暫時改用別的；concession（特採）是零件已經做好、發現不合格後才請客戶同意接受。兩種都只限申請的數量，不會改圖面。",
+     "ex": "We asked for a deviation before production, so the customer knew about the new paint in advance.",
+     "exCn": "我們在生產前就申請了偏差許可，所以客戶事先就知道要換新漆。",
+     "cn": "偏差許可 vs 特採"
+    },
+    {
+     "u": "tolerance vs clearance",
+     "sc": "tolerance（公差）是單一尺寸允許差多少，例如 ±0.2 mm；clearance（間隙）是兩個零件組起來中間留的空間，例如螺絲和孔之間的空隙。孔做大了，clearance 會變大，但不一定超出 tolerance。",
+     "ex": "There's enough clearance between the belt and the frame, so they won't rub.",
+     "exCn": "皮帶和車架之間的間隙夠，不會互相摩擦。",
+     "cn": "公差 vs 間隙"
+    },
+    {
+     "u": "dimension vs measurement",
+     "sc": "dimension（尺寸）是圖面上規定的數字，例如 85.0 mm；measurement（量測值）是實際拿量具量到的數字，例如 85.37 mm。品保就是在比對這兩個。",
+     "ex": "The measurement is 0.1 mm bigger than the dimension on the drawing.",
+     "exCn": "量測值比圖面上的尺寸大 0.1 mm。",
+     "cn": "尺寸 vs 量測值"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "背景｜圖面、公差與特採是什麼",
+     "title": "Drawings, Tolerances and Concessions",
+     "titleCn": "背景｜看懂圖面公差、版次與特採",
+     "paras": [
+      { "en": "An engineering drawing tells us the shape and size of a part. An important dimension has a tolerance, such as 85.0 ± 0.2 mm, so any size from 84.8 to 85.2 mm is acceptable.", "cn": "工程圖告訴我們零件的形狀和尺寸。重要尺寸都有公差，例如 85.0 ± 0.2 mm，代表 84.8 到 85.2 mm 之間都可以接受。" },
+      { "en": "The tolerance depends on how the part works. Holes for motor bolts need a tight tolerance, but the length of a plastic cover can be looser.", "cn": "公差要看零件的功能。鎖馬達螺絲的孔要求比較嚴，塑膠外蓋的長度就可以比較寬鬆。" },
+      { "en": "Drawings change over time. Each change gets a new revision letter, such as Rev B to Rev C, and only the latest revision should be on the shop floor.", "cn": "圖面會隨時間修改。每改一次就換新的版次字母，例如從 Rev B 改成 Rev C，現場只能有最新版。" },
+      { "en": "Parts that do not meet the drawing are nonconforming. QA cannot decide alone to ship them. The customer has to agree in writing.", "cn": "不符合圖面的零件就是不合格品。品保不能自己決定出貨，必須由客戶書面同意。" },
+      { "en": "A deviation is permission, asked before production, to make parts differently for a limited time. A concession is permission to accept parts that have already been made out of tolerance.", "cn": "偏差許可是生產前先申請、在一段期間內用不同方式生產；特採是同意接受已經做好、但超出公差的零件。" },
+      { "en": "A concession request usually includes the measurements, test results, the quantity and lot number, and how the parts will be marked. It covers only that quantity and does not change the drawing.", "cn": "特採申請通常要附量測數據、測試結果、數量和批號，以及零件要怎麼標示。它只適用這個數量，不會改變圖面。" }
+     ],
+     "questions": [
+      { "q": "If a dimension is 85.0 ± 0.2 mm, what sizes are acceptable?", "qCn": "如果尺寸是 85.0 ± 0.2 mm，哪些尺寸可以接受？", "a": "Any size from 84.8 to 85.2 mm.", "aCn": "84.8 到 85.2 mm 之間都可以。" },
+      { "q": "Which drawing revision should be on the shop floor?", "qCn": "現場應該放哪一版圖面？", "a": "Only the latest revision.", "aCn": "只能放最新版。" },
+      { "q": "Parts have already been made out of tolerance, and the customer agrees to accept them. This is ___. (A. a revision / B. a deviation / C. a concession / D. a dimension)", "qCn": "零件已經做出來而且超出公差，客戶同意接受，這叫什麼？", "a": "C. a concession.", "aCn": "C. 特採。" }
+     ]
+    },
+    {
+     "bar": "情境｜馬達支架孔距超差",
+     "title": "Our Case: The Holes Are 0.4 mm Too Far Apart",
+     "titleCn": "情境｜孔距 85.4、圖面 85.0 ± 0.2：現場用的是舊版圖（虛構情境）",
+     "paras": [
+      { "en": "Situation: We made 500 motor brackets for a customer's treadmill. At final inspection, the spacing between the two mounting holes was 85.35 to 85.40 mm. The drawing, Rev C, says 85.0 ± 0.2 mm. This is a practice case.", "cn": "情境：我們幫客戶的跑步機做了 500 個馬達支架。最終檢驗時，兩個安裝孔的孔距是 85.35 到 85.40 mm。圖面 Rev C 寫的是 85.0 ± 0.2 mm。這是練習用的虛構案例。" },
+      { "en": "Check 1: The machine shop was using a printed copy of Rev B, where the tolerance was ± 0.5 mm. Rev C made it tighter three months ago, but nobody removed the old copy.", "cn": "查核一：加工課用的是印出來的 Rev B，那一版公差是 ± 0.5 mm。三個月前 Rev C 把公差改嚴了，但沒有人把舊圖收掉。" },
+      { "en": "Check 2: We mounted motors on 30 brackets. Every bolt went in by hand, and the belt ran straight and quietly in a four-hour run test.", "cn": "查核二：我們拿 30 個支架裝上馬達。每支螺絲都能用手鎖進去，四小時運轉測試皮帶走得正、聲音也正常。" },
+      { "en": "Action 1: Moving the holes would mean welding and drilling again, which would weaken the brackets. So we sent the customer a concession request with the data, test results and photos.", "cn": "對策一：要移孔就得補焊再重新鑽孔，會讓支架強度變差。所以我們附上數據、測試結果和照片，向客戶提出特採申請。" },
+      { "en": "Action 2: If the customer approves, every box will carry a yellow concession label with the request number. The concession covers lot 2610 only.", "cn": "對策二：如果客戶核准，每一箱都會貼上印有申請編號的黃色特採標籤。特採只限 2610 這一批。" },
+      { "en": "Action 3: All printed drawings were collected. The shop now uses only controlled copies with a red stamp, and the first part of every lot is checked against the latest revision.", "cn": "對策三：所有印出來的圖面都收回了。加工課現在只用蓋紅色管制章的受控圖面，每批首件都要對照最新版檢查。" }
+     ]
+    },
+    {
+     "bar": "演練｜客戶問特採申請",
+     "title": "Practice: Will the Motor Still Fit?",
+     "titleCn": "演練｜客戶來電：特採的支架裝得上嗎？",
+     "paras": [
+      { "en": "Customer: You sent us a concession request for 500 motor brackets. What exactly is wrong?", "cn": "客戶：你們送來 500 個馬達支架的特採申請。到底哪裡有問題？" },
+      { "en": "You: The hole spacing is 85.35 to 85.40 mm. Rev C says 85.0 ± 0.2, so they're out of tolerance by up to 0.2 mm.", "cn": "你：孔距是 85.35 到 85.40 mm。Rev C 規定 85.0 ± 0.2，所以最多超出公差 0.2 mm。" },
+      { "en": "Customer: How did that happen?", "cn": "客戶：怎麼會這樣？" },
+      { "en": "You: Our machine shop was using an old printed copy of Rev B. We should have removed it when Rev C came out.", "cn": "你：我們加工課用的是印出來的舊版 Rev B。Rev C 出來的時候，我們早該把它收掉的。" },
+      { "en": "Customer: Will the motor still fit?", "cn": "客戶：馬達還裝得上嗎？" },
+      { "en": "You: Yes. We mounted motors on 30 brackets, and every bolt went in by hand. The belt ran normally for four hours.", "cn": "你：可以。我們裝了 30 個支架，每支螺絲都能用手鎖進去，皮帶跑了四小時都正常。" },
+      { "en": "Customer: Why don't you just rework them?", "cn": "客戶：為什麼不直接重工？" },
+      { "en": "You: We'd have to weld the holes and drill them again. That would make the brackets weaker.", "cn": "你：那要把孔補焊再重新鑽，會讓支架變弱。" },
+      { "en": "Customer: If we approve it, how will we know which parts they are?", "cn": "客戶：如果我們核准，要怎麼知道是哪些零件？" },
+      { "en": "You: Every box will have a yellow concession label with the request number. It's only for lot 2610.", "cn": "你：每一箱都會貼黃色特採標籤，上面有申請編號。只限 2610 這一批。" },
+      { "en": "Customer: And how will you stop this from happening again?", "cn": "客戶：那你們要怎麼防止再發生？" },
+      { "en": "You: We've collected all the printed drawings. The shop now uses only stamped controlled copies, and we won't run a lot unless the first part matches the latest revision.", "cn": "你：印出來的圖面全部收回了。加工課現在只用蓋章的受控圖面，而且首件沒有符合最新版，就不開始生產那一批。" }
+     ]
+    },
+    {
+     "bar": "討論｜我們廠的現況",
+     "title": "Discussion: How Do We Control Our Drawings?",
+     "titleCn": "討論｜我們廠的現況",
+     "paras": [
+      { "en": "When a drawing changes, who tells the shop floor, and who takes the old copies away?", "cn": "圖面改版時，誰通知現場？誰負責把舊圖收回？" },
+      { "en": "Can our inspectors tell which revision they are using just by looking at the drawing?", "cn": "我們的檢驗員看圖面就能分辨自己用的是哪一版嗎？" },
+      { "en": "Who in our company can sign a concession, and how do we mark and track the parts after the customer approves?", "cn": "公司裡誰可以簽特採？客戶核准之後，我們怎麼標示和追蹤那些零件？" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "The hole spacing is out of tolerance by 0.2 mm.", "cn": "孔距超出公差 0.2 mm。" },
+      { "en": "The shop was using an old revision of the drawing.", "cn": "現場用的是舊版圖面。" },
+      { "en": "We should have removed the old copy.", "cn": "我們早該把舊圖收掉。" },
+      { "en": "We'd like to request a concession for this lot.", "cn": "這一批我們想申請特採。" },
+      { "en": "We can't ship them unless you approve it.", "cn": "除非你們核准，否則我們不能出貨。" },
+      { "en": "Every box must be labeled with the concession number.", "cn": "每一箱都必須貼上特採編號。" }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -29105,6 +29321,7 @@ window.BOOK = {
     bk20251218:[[['toilet','wrench','suitcase','doc','moon'],'忙碌修繕的一天：馬桶、洗手台、磁磚出問題 → 打電話請水電工 → 旅行社規劃假期 → 到政府機關辦文件 → 晚上全部修好。']],
     bk20251226b:[[['signpost','exam','piggy','globe','sprout'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
     bk20260922:[[['eye','gear','plug','dumbbell','cart'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
+    qp04:[[['book','scissors','ticket','orgchart','broomL'],'馬達支架孔距超差：孔距 85.35–85.40、圖面 Rev C 要 85.0 ± 0.2 → 加工課用印出來的舊版 Rev B → 30 個試裝馬達、運轉四小時正常 → 不重工、向客戶申請特採、每箱貼黃標只限 2610 批 → 收回舊圖、只用受控圖面、首件對最新版。']],
     qp03:[[['spray','faucet','mirror','cloudRain','umbrella'],'重訓架立柱掉漆：客戶百格 2B、規格要 4B → 我們只測平的測試片、沒測實際零件 → 脫脂槽三週沒換、油殘留 → 300 支保留、空運 40 支 → 脫脂槽每週換、每班測實際零件附照片。']],
     qp02:[[['videocall','facesL','traffic','screenL','window'],'客戶量的孔徑和我們不一樣：我們量 12.06、客戶量 12.14 → 卡尺校驗過期兩週、讀數偏低 0.05 → GR&R 38% 不可接受 → 600 件隔離、改用通止針規 → 校驗標籤＋到期前提醒。']],
     qp01:[[['booksL','stethoL','building','officeL','briefcase'],'客戶要 EN ISO 20957 測試報告：手上只有內部測試紀錄 → 誠實說明、內部紀錄僅供參考 → 對照第 1、6 部做差異分析 → 送兩台樣品到認證實驗室、約四週出報告。']],
