@@ -2749,10 +2749,12 @@ nav button{font-size:11px}
 .lastcard .lc-t{font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .lastcard .lc-s{font-size:var(--font-secondary);color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .lastcard .lc-go{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 16px;border-radius:999px;background:var(--accent2);color:#fff;font-weight:700;font-size:var(--font-secondary);white-space:nowrap}
+/* 全站 emoji 線稿（emoji-art.js） */
+svg.emo-ic{display:inline-block;width:1.2em!important;height:1.2em!important;max-width:none;vertical-align:-.24em;flex:none;overflow:visible;margin:0}
 @media(max-width:640px){
   .lastcard{gap:10px;padding:8px 12px}
   .lastcard .lc-k{display:none}
-  .lastcard .lc-s::before{content:"▶ ";color:var(--accent2)}
+  .lastcard .lc-s::before{content:"";display:inline-block;width:.8em;height:.8em;margin-right:.3em;vertical-align:-.05em;background:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Cpath d=%27M7 4.5l12 7.5-12 7.5z%27 fill=%27%233f9e64%27 stroke=%27%232b2118%27 stroke-width=%271.8%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E") center/contain no-repeat}
   .lastcard .lc-go{margin-left:auto}
 }
 /* 打開內頁時的「上次讀到…［跳過去］×」浮動提示：不佔版面，捲動或按 × 就消失 */
@@ -2909,6 +2911,7 @@ nav button{font-size:11px}
 <script src="data-gvplus.js"></script>
 <script src="data-listen.js"></script>
 <script src="data-daily.js"></script>
+<script src="emoji-art.js"></script>
 <script src="data-book.js"></script>
 <script src="data-rel.js"></script>
 <script src="gvideo/index.js"></script>
@@ -4034,7 +4037,7 @@ RENDER.read=function(){
     /* 篩選工具列：左＝程度＋文法篩選，右＝搜尋＋類型；空間不夠時自然換行，不硬縮控制項 */
     +'<div class="rdtool">'
     +'<div class="rdtool-l"><div class="seg-ctrl">'+lb.map(([k,t])=>'<button'+(rdFilter.level===k?' class="on"':'')+' onclick="rdSet(\'level\',\''+k+'\')">'+t+'</button>').join('')+'</div>'+gramBtn+'</div>'
-    +'<div class="rdtool-r"><input id="rd-q" type="search" value="'+esc(rdQuery)+'" oninput="rdQ(this.value)" placeholder="🔍 搜尋文章…" aria-label="搜尋文章">'
+    +'<div class="rdtool-r"><input id="rd-q" type="search" value="'+esc(rdQuery)+'" oninput="rdQ(this.value)" placeholder="搜尋文章…" aria-label="搜尋文章">'
     +'<select class="filter-sel" onchange="rdSet(\'kind\',this.value)" aria-label="文章類型">'+kb.map(([k,t])=>'<option value="'+k+'"'+(rdFilter.kind===k?' selected':'')+'>'+t+'</option>').join('')+'</select></div>'
     +'</div>'
     +gramRow
@@ -5880,7 +5883,7 @@ RENDER.book=function(){
   v.innerHTML=
     '<div class="card bk-search"><h2 class="sec" style="margin:0 0 4px">📕 課本</h2>'
     +'<div class="bk-hdr-row">'
-    +'<input id="bk-q" value="'+esc(bkQuery)+'" oninput="bkSearch(this.value)" placeholder="🔍 搜尋單字、片語、主題…">'
+    +'<input id="bk-q" value="'+esc(bkQuery)+'" oninput="bkSearch(this.value)" placeholder="搜尋單字、片語、主題…">'
     +'<button class="spk" id="bk-hint-btn" onclick="bkTogHint()">'+(bkHintOpen?'💡 說明 ▲':'💡 說明 ▼')+'</button></div>'
     +'<div class="hint" id="bk-hint" style="display:'+(bkHintOpen?'block':'none')+';margin-top:4px">'
     +'課堂筆記的完整版面，內容與上課的 Google 文件一字不差。'
@@ -7803,17 +7806,17 @@ function auApplyVoices(){
   if(auSpeakers.length>=1) auSpMap[auSpeakers[0]]=auPickedVoice('a')||VOICE;
   if(auSpeakers.length>=2) auSpMap[auSpeakers[1]]=auPickedVoice('b')||VOICE2||VOICE;
 }
-/* 口音一目瞭然：依語音的地區代碼加上對應國旗 */
+/* 口音一目瞭然：依語音的地區代碼加上國碼（下拉選單 option 放不了線稿圖，所以用文字） */
 function auFlag(lang){
   const l=String(lang||'').toLowerCase();
-  return l.indexOf('en-us')>=0||l.indexOf('en_us')>=0?'🇺🇸':
-         l.indexOf('en-gb')>=0||l.indexOf('en_gb')>=0?'🇬🇧':
-         l.indexOf('en-au')>=0||l.indexOf('en_au')>=0?'🇦🇺':
-         l.indexOf('en-ca')>=0||l.indexOf('en_ca')>=0?'🇨🇦':
-         l.indexOf('en-in')>=0||l.indexOf('en_in')>=0?'🇮🇳':
-         l.indexOf('en-ie')>=0||l.indexOf('en_ie')>=0?'🇮🇪':
-         l.indexOf('en-nz')>=0||l.indexOf('en_nz')>=0?'🇳🇿':
-         l.indexOf('en-za')>=0||l.indexOf('en_za')>=0?'🇿🇦':'🌐';
+  return l.indexOf('en-us')>=0||l.indexOf('en_us')>=0?'US':
+         l.indexOf('en-gb')>=0||l.indexOf('en_gb')>=0?'GB':
+         l.indexOf('en-au')>=0||l.indexOf('en_au')>=0?'AU':
+         l.indexOf('en-ca')>=0||l.indexOf('en_ca')>=0?'CA':
+         l.indexOf('en-in')>=0||l.indexOf('en_in')>=0?'IN':
+         l.indexOf('en-ie')>=0||l.indexOf('en_ie')>=0?'IE':
+         l.indexOf('en-nz')>=0||l.indexOf('en_nz')>=0?'NZ':
+         l.indexOf('en-za')>=0||l.indexOf('en_za')>=0?'ZA':'';
 }
 function auFillVoices(){
   const vs=auVoiceList();
