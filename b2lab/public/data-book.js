@@ -23638,6 +23638,223 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- qp01 品保實務一：客戶要 EN ISO 20957 測試報告，我們只有內部測試紀錄 ---- */
+  {
+   "id": "qp01",
+   "icon": "🧪",
+   "video": true,
+   "date": "2026-10-25",
+   "title": "QA Practice I — We Only Have Internal Records",
+   "titleCn": "品保實務一｜客戶要 EN ISO 20957 測試報告，我們只有內部紀錄",
+   "topics": "品保實務, 產品安全標準, 測試報告, 內部測試紀錄, 第三方實驗室, 認證實驗室, 差異分析, 跑步機, EN ISO 20957, test report, accredited lab, gap analysis",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "We only have internal test records.",
+     "cn": "我們只有內部測試紀錄。",
+     "pat": "主詞 + only + 動詞",
+     "note": "我們只有內部紀錄。only 放在動詞前面，誠實說出「手上只有這個」，不要讓客戶以為有正式報告。"
+    },
+    {
+     "n": 2,
+     "cn": "報告必須由認證實驗室出具。",
+     "pat": "must + be + 過去分詞",
+     "note": "報告是「被出具」的，must 後面要接 be + 過去分詞，不能少了 be。",
+     "wrong": "The report must issued by an accredited lab.",
+     "fix": "The report must be issued by an accredited lab."
+    },
+    {
+     "n": 3,
+     "ok": "We haven't tested stability yet.",
+     "cn": "我們還沒測過穩定性。",
+     "pat": "haven't + 過去分詞 + yet",
+     "note": "還沒測。yet 放句尾，表示「到目前為止還沒做，之後會做」。"
+    },
+    {
+     "n": 4,
+     "cn": "可以告訴我你們需要哪一個等級嗎？",
+     "pat": "Could you tell me + 疑問詞 + 主詞 + 動詞",
+     "note": "問句放在 Could you tell me 後面就變成名詞子句，語序要改回「主詞 + 動詞」，不再用 do。",
+     "wrong": "Could you tell me which class do you need?",
+     "fix": "Could you tell me which class you need?"
+    },
+    {
+     "n": 5,
+     "ok": "I can send them as reference only.",
+     "cn": "我可以寄給你們，僅供參考。",
+     "pat": "send + 名詞 + as reference only",
+     "note": "僅供參考。先講清楚文件的身分，客戶就不會把內部紀錄當成正式報告。"
+    },
+    {
+     "n": 6,
+     "cn": "我們的紀錄沒有寫出是依據哪個標準。",
+     "pat": "複數主詞 + don't + 原形動詞",
+     "note": "records 是複數，否定要用 don't，不是 doesn't。",
+     "wrong": "Our records doesn't name the standard.",
+     "fix": "Our records don't name the standard."
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    { "w": "standard", "ipa": "/ˈstæn.dɚd/", "pos": "n.", "cn": "標準（業界共同遵守的規範）", "ex": "Which standard does this drop test follow?", "exCn": "這個落下測試是依據哪個標準？" },
+    { "w": "requirement", "ipa": "/rɪˈkwaɪr.mənt/", "pos": "n.", "cn": "要求、規定", "ex": "Check the packing requirements before you ship.", "exCn": "出貨前先確認包裝要求。" },
+    { "w": "accredited", "ipa": "/əˈkred.ɪ.t̬ɪd/", "pos": "adj.", "cn": "經認證的、有認可資格的", "ex": "Is this lab accredited for electrical tests?", "exCn": "這家實驗室有電性測試的認證資格嗎？" },
+    { "w": "compliance", "ipa": "/kəmˈplaɪ.əns/", "pos": "n.", "cn": "符合（法規、標準）", "ex": "We keep a compliance file for each model.", "exCn": "我們每個型號都有一份符合性文件。" },
+    { "w": "sample", "ipa": "/ˈsæm.pəl/", "pos": "n.", "cn": "樣品", "ex": "Take five samples from each lot.", "exCn": "每批抽五個樣品。" },
+    { "w": "gap", "ipa": "/ɡæp/", "pos": "n.", "cn": "差距、缺口", "ex": "There is a gap between the drawing and the real part.", "exCn": "圖面和實際零件之間有落差。" },
+    { "w": "stability", "ipa": "/stəˈbɪl.ə.t̬i/", "pos": "n.", "cn": "穩定性（不會傾倒）", "ex": "Check the stability of the rack before you load the plates.", "exCn": "掛槓片之前先確認架子穩不穩。" },
+    { "w": "reference", "ipa": "/ˈref.ɚ.əns/", "pos": "n.", "cn": "參考", "ex": "Keep this photo as a reference for the next inspection.", "exCn": "把這張照片留著，下次檢驗時參考。" }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "test report", "cn": "測試報告" },
+    { "p": "internal test record", "cn": "內部測試紀錄" },
+    { "p": "accredited lab", "cn": "認證實驗室" },
+    { "p": "third-party testing", "cn": "第三方測試" },
+    { "p": "gap analysis", "cn": "差異分析" },
+    { "p": "for reference only", "cn": "僅供參考" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "QP1-A",
+     "title": "must be + 過去分詞（規定一定要被怎麼做）",
+     "pat": "主詞 + must be + 過去分詞 + (by …)",
+     "pts": [
+      "標準和客戶要求常用被動：重點是「這件事一定要被做到」，不是誰去做。",
+      "must 後面接原形 be，再接過去分詞：must be tested、must be calibrated、must be signed。",
+      "例：All test weights must be calibrated every year.（所有測試砝碼每年都必須校驗。）"
+     ],
+     "ex": "All test weights must be calibrated every year.",
+     "exCn": "所有測試砝碼每年都必須校驗。"
+    },
+    {
+     "k": "QP1-B",
+     "title": "have / has not + 過去分詞 + yet（到目前還沒做）",
+     "pat": "主詞 + have / has not + 過去分詞 + yet",
+     "pts": [
+      "回報進度時用現在完成式：說的是「到現在為止」的狀態，客戶最想知道這個。",
+      "否定句的 yet 放句尾，暗示「之後會做」；肯定句改用 already。",
+      "例：We have not received the lab's quote yet.（我們還沒收到實驗室的報價。）"
+     ],
+     "ex": "We have not received the lab's quote yet.",
+     "exCn": "我們還沒收到實驗室的報價。"
+    },
+    {
+     "k": "QP1-C",
+     "title": "Could you tell me + 疑問詞 + 主詞 + 動詞（禮貌的間接問句）",
+     "pat": "Could you tell me + what / which / when + 主詞 + 動詞?",
+     "pts": [
+      "直接問 Which class do you need? 沒有錯，但對客戶用間接問句更客氣。",
+      "疑問句放進 Could you tell me 之後，語序改回「主詞 + 動詞」，do / does / did 要拿掉。",
+      "例：Could you tell me when the samples will arrive?（可以告訴我樣品什麼時候會到嗎？）"
+     ],
+     "ex": "Could you tell me when the samples will arrive?",
+     "exCn": "可以告訴我樣品什麼時候會到嗎？"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "test record vs test report",
+     "sc": "test record 是自己廠內的測試紀錄，格式自訂，客戶不一定認；test report 是依標準寫出的正式報告，寫明標準版本、型號、樣品、每個測試項目和合格／不合格，通常由第三方實驗室簽發。",
+     "ex": "A record shows what we did; a report shows that the product meets the standard.",
+     "exCn": "紀錄說明我們做了什麼；報告證明產品符合標準。",
+     "cn": "測試紀錄 vs 測試報告"
+    },
+    {
+     "u": "standard vs specification",
+     "sc": "standard 是公開的業界標準，例如 EN ISO 20957，所有廠商都適用；specification（spec）是這個客戶或這張圖面自己的規格。兩個都要符合，不能拿 spec 代替 standard。",
+     "ex": "The part meets the customer's spec, but we still need to test it to the standard.",
+     "exCn": "零件符合客戶規格，但我們還是要照標準測試。",
+     "cn": "標準 vs 規格"
+    },
+    {
+     "u": "Class H vs Class S",
+     "sc": "EN ISO 20957 依使用場所分等級：Class H 是家用（home），Class S 是健身房等專業或商業用途。等級不同，測試要求也不同，所以先問清楚客戶要哪一級。",
+     "ex": "This bike is Class H, so it is not for gym use.",
+     "exCn": "這台飛輪車是 H 級，所以不適合健身房使用。",
+     "cn": "家用級 vs 商用級"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "背景｜EN ISO 20957 是什麼",
+     "title": "The Standard Behind the Machine",
+     "titleCn": "背景｜固定式健身器材的安全標準 EN ISO 20957",
+     "paras": [
+      { "en": "EN ISO 20957 is a safety standard for stationary training equipment, such as treadmills, exercise bikes and elliptical trainers. Many buyers in Europe ask for it before they place an order.", "cn": "EN ISO 20957 是固定式健身器材的安全標準，適用於跑步機、健身車、橢圓機等。很多歐洲買家下單前都會要求。" },
+      { "en": "The standard has several parts. Part 1 gives the general safety requirements and test methods. Other parts add rules for one type of machine; for example, Part 6 covers treadmills and Part 9 covers elliptical trainers.", "cn": "這個標準分好幾部。第 1 部是通用安全要求和測試方法；其他部針對單一種機型加規定，例如第 6 部是跑步機、第 9 部是橢圓機。" },
+      { "en": "The standard also sorts equipment into classes. Class H is for home use, and Class S is for professional or commercial use, such as a gym.", "cn": "標準也把器材分等級：Class H 是家用，Class S 是專業或商業用途，例如健身房。" },
+      { "en": "The tests check things like strength, stability, pinch points between moving parts, and warning labels.", "cn": "測試項目包括強度、穩定性、活動部件之間的夾手點，以及警告標示等。" },
+      { "en": "Most buyers want a test report from an accredited third-party lab, such as SGS. An accredited lab works under ISO/IEC 17025, so other companies can trust its results.", "cn": "大多數買家要的是第三方認證實驗室出的測試報告，例如 SGS。認證實驗室依 ISO/IEC 17025 運作，所以結果能被其他公司信任。" },
+      { "en": "A proper report names the standard and its version, the model, the samples, every test item, and a clear pass or fail result.", "cn": "正式的報告會寫明標準和版本、型號、樣品、每個測試項目，以及清楚的合格或不合格結果。" }
+     ],
+     "questions": [
+      { "q": "Which part of the standard covers treadmills?", "qCn": "標準的哪一部是跑步機？", "a": "Part 6.", "aCn": "第 6 部。" },
+      { "q": "Which class is for home use? (A. Class S / B. Class H / C. Class A / D. Class I)", "qCn": "哪一個等級是家用？", "a": "B. Class H.", "aCn": "B. Class H。" },
+      { "q": "What kind of lab do most buyers want the report from?", "qCn": "大多數買家要哪一種實驗室出的報告？", "a": "An accredited third-party lab.", "aCn": "第三方認證實驗室。" }
+     ]
+    },
+    {
+     "bar": "情境｜我們廠只有內部紀錄",
+     "title": "Our Case: A Record Is Not a Report",
+     "titleCn": "情境｜客戶要測試報告，我們手上只有內部測試紀錄（虛構情境）",
+     "paras": [
+      { "en": "Situation: A distributor in Germany wants to order our treadmill, the TM-500, for home use. Before they order, their QA team asks for an EN ISO 20957 test report. This is a practice case.", "cn": "情境：一家德國經銷商想訂我們的家用跑步機 TM-500。下單前，對方品保要求提供 EN ISO 20957 測試報告。這是練習用的虛構案例。" },
+      { "en": "What we have: internal test records. Our lab did a static load test and a run-in test on three units. The records are in Chinese and Vietnamese, and they do not name the standard.", "cn": "我們手上有的：內部測試紀錄。廠內實驗室對三台做過靜負載測試和跑合測試，紀錄是中文和越文，也沒有寫出依據哪個標準。" },
+      { "en": "Gap 1: Our test method is not the method in the standard, so the customer cannot compare our results with the requirements.", "cn": "缺口一：我們的測試方法不是標準裡的方法，客戶無法拿結果去對照要求。" },
+      { "en": "Gap 2: We have never tested stability, pinch points or the warning labels.", "cn": "缺口二：穩定性、夾手點和警告標示，我們從來沒測過。" },
+      { "en": "Gap 3: The test weights have no calibration records, so even our own results are hard to prove.", "cn": "缺口三：測試砝碼沒有校驗紀錄，連我們自己的結果都很難證明。" },
+      { "en": "Plan: We do a gap analysis against Part 1 and Part 6, fix what we can, and send two samples to an accredited lab. The lab says the report will take about four weeks.", "cn": "計畫：先對照第 1 部和第 6 部做差異分析，能改的先改，再送兩台樣品到認證實驗室。實驗室說報告大約要四週。" },
+      { "en": "Until then: We send our internal records as reference only and tell the customer clearly that they are not a third-party report.", "cn": "在那之前：內部紀錄寄給客戶僅供參考，並清楚告知這不是第三方報告。" }
+     ]
+    },
+    {
+     "bar": "演練｜客戶來信要報告",
+     "title": "Practice: Can You Send the Test Report?",
+     "titleCn": "演練｜客戶來電：可以寄測試報告給我們嗎？",
+     "paras": [
+      { "en": "Customer: Could you send us your EN ISO 20957 test report for the TM-500?", "cn": "客戶：可以寄 TM-500 的 EN ISO 20957 測試報告給我們嗎？" },
+      { "en": "You: To be honest, we don't have a third-party report yet. We only have internal test records.", "cn": "你：老實說，我們還沒有第三方報告，只有內部測試紀錄。" },
+      { "en": "Customer: Can we see the internal records?", "cn": "客戶：內部紀錄可以給我們看嗎？" },
+      { "en": "You: Yes, I can send them as reference only. They don't follow the test method in the standard.", "cn": "你：可以，我寄給你們僅供參考。這些紀錄沒有照標準的測試方法做。" },
+      { "en": "Customer: Which tests have you done?", "cn": "客戶：你們做過哪些測試？" },
+      { "en": "You: We have done a static load test and a run-in test. We haven't tested stability or pinch points yet.", "cn": "你：做過靜負載測試和跑合測試，穩定性和夾手點還沒測。" },
+      { "en": "Customer: The report must be issued by an accredited lab.", "cn": "客戶：報告必須由認證實驗室出具。" },
+      { "en": "You: I understand. We're sending two samples to an accredited lab next week.", "cn": "你：了解，我們下週會送兩台樣品到認證實驗室。" },
+      { "en": "Customer: When will the report be ready?", "cn": "客戶：報告什麼時候會好？" },
+      { "en": "You: The lab says about four weeks. Could you tell me which class you need, H or S?", "cn": "你：實驗室說大約四週。可以告訴我你們需要哪一級嗎？H 還是 S？" },
+      { "en": "Customer: Class H. It's for home use.", "cn": "客戶：H 級，是家用的。" },
+      { "en": "You: Got it. I'll send you our test plan by Friday.", "cn": "你：了解，我週五前把測試計畫寄給你。" }
+     ]
+    },
+    {
+     "bar": "討論｜我們廠的現況",
+     "title": "Discussion: Where Do We Stand?",
+     "titleCn": "討論｜我們廠的現況",
+     "paras": [
+      { "en": "Which of our models have a third-party test report, and which have only internal records?", "cn": "我們哪些型號有第三方測試報告？哪些只有內部紀錄？" },
+      { "en": "Do our internal test records name the standard, the model, the samples and the result?", "cn": "我們的內部測試紀錄，有寫出標準、型號、樣品和結果嗎？" },
+      { "en": "Are our test weights and gauges calibrated, and can we show the records to a customer?", "cn": "我們的測試砝碼和量具有校驗嗎？校驗紀錄能拿給客戶看嗎？" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "We only have internal test records.", "cn": "我們只有內部測試紀錄。" },
+      { "en": "We don't have a third-party report yet.", "cn": "我們還沒有第三方報告。" },
+      { "en": "I can send them as reference only.", "cn": "我可以寄給你們，僅供參考。" },
+      { "en": "We haven't tested stability or pinch points yet.", "cn": "穩定性和夾手點我們還沒測。" },
+      { "en": "We're sending two samples to an accredited lab.", "cn": "我們會送兩台樣品到認證實驗室。" },
+      { "en": "Could you tell me which class you need?", "cn": "可以告訴我你們需要哪一級嗎？" }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -28456,6 +28673,7 @@ window.BOOK = {
     bk20251218:[[['toilet','wrench','suitcase','doc','moon'],'忙碌修繕的一天：馬桶、洗手台、磁磚出問題 → 打電話請水電工 → 旅行社規劃假期 → 到政府機關辦文件 → 晚上全部修好。']],
     bk20251226b:[[['signpost','exam','piggy','globe','sprout'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
     bk20260922:[[['eye','gear','plug','dumbbell','cart'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
+    qp01:[[['booksL','stethoL','building','officeL','briefcase'],'客戶要 EN ISO 20957 測試報告：手上只有內部測試紀錄 → 誠實說明、內部紀錄僅供參考 → 對照第 1、6 部做差異分析 → 送兩台樣品到認證實驗室、約四週出報告。']],
     qa05:[[['stepsL','globe','signpost','door','card'],'橢圓機踏板脫開：2010 兩品牌橢圓機召回約 18,000 台 → 踏板脫開 58 件、無人受傷 → 依序號範圍只召回受影響機台 → 模擬：銷孔過大、只用通規抓不到 → 序號綁批號、改用通止規。']],
     qa04:[[['flashlight','nurse','alarm','trophy','resume'],'J-cup 插銷焊道斷裂：2011 掛鉤召回約 5,500 個 → 焊道外觀正常卻熔深不足 → 1 人手腕扭傷 → 每班首件＋每兩小時破壞測試 → 不合格就停線隔離。']],
     qa03:[[['signL','board','mail','caliper','pin'],'安全支架少焊兩道：2021 重訓架安全支架召回 → 上下各漏一道焊 → 重物掉落斷裂 3 件 → 對焊接供應商發 SCAR、每批附焊道圖 → IQC 數焊道、批號追溯。']],

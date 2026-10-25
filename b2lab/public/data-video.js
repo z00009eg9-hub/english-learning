@@ -51471,3 +51471,333 @@ window.VIDEO.qa05 = {
     "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
  ]
 };
+
+/* ---------- qp01 品保實務一 影片專屬插圖（每句一張，不重複；2026-10-25） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4', G='#3f9e64', M='#9aa5b1';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'+txt(cx,cy+9,'?',25,'#fff'); };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'+txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round"><path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var tri=function(cx,cy,s){ return '<path d="M'+cx+' '+(cy-s)+' L'+(cx+s*1.15)+' '+(cy+s*0.8)+' H'+(cx-s*1.15)+' Z" fill="#fff" stroke="'+R+'" stroke-width="3" stroke-linejoin="round"/>'+txt(cx,cy+s*0.5,'!',s*1.1,R); };
+  var arr=function(x1,y1,x2,y2,col){ var a=Math.atan2(y2-y1,x2-x1), h=8;
+    return '<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.5)).toFixed(1)+' '+(y2-h*Math.sin(a-0.5)).toFixed(1)+' M'+x2+' '+y2+' L'+(x2-h*Math.cos(a+0.5)).toFixed(1)+' '+(y2-h*Math.sin(a+0.5)).toFixed(1)+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'; };
+  var g=function(x,y,s,inner){ return '<g transform="translate('+x+' '+y+') scale('+s+')">'+inner+'</g>'; };
+  var zig=function(x,y,w){ return '<path d="M'+x+' '+y+' l'+(w/4)+' -4 l'+(w/4)+' 6 l'+(w/4)+' -6 l'+(w/4)+' 4" stroke="'+R+'" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var phone=function(x,y){ return '<path d="M'+x+' '+y+' c-10 10 -6 30 14 46 c10 8 18 10 24 4 l4 -6 l-12 -10 l-6 5 c-6 -3 -14 -12 -16 -18 l5 -6 l-9 -12 z" fill="'+A+'" '+st+'/>'; };
+  var eye=function(cx,cy){ return '<path d="M'+(cx-24)+' '+cy+' q24 -22 48 0 q-24 22 -48 0 z" fill="#fff" '+st+'/><circle cx="'+cx+'" cy="'+cy+'" r="8" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/><circle cx="'+cx+'" cy="'+cy+'" r="3" fill="'+D+'"/>'; };
+  var cal=function(x,y,col){ return '<rect x="'+x+'" y="'+y+'" width="44" height="40" rx="4" fill="#fff" '+st+'/><rect x="'+x+'" y="'+y+'" width="44" height="11" rx="4" fill="'+(col||A)+'" '+st+'/>'
+     +'<path d="M'+(x+8)+' '+(y+21)+' h28 M'+(x+8)+' '+(y+31)+' h28" stroke="'+M+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 4"/>'; };
+  /* 文件（hd＝表頭色；dash＝虛線框＝還不存在） */
+  var doc=function(x,y,w,h,hd,dash){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" stroke="'+D+'" stroke-width="3"'+(dash?' stroke-dasharray="6 5"':'')+'/>';
+    if(!dash){ s+='<rect x="'+(x+7)+'" y="'+(y+8)+'" width="'+(w-14)+'" height="8" rx="3" fill="'+(hd||A)+'"/>';
+      for(var k=y+27;k<y+h-7;k+=11) s+='<path d="M'+(x+9)+' '+k+' h'+(w-18)+'" stroke="'+M+'" stroke-width="3" stroke-linecap="round"/>'; }
+    return s; };
+  /* 認證印章 */
+  var seal=function(cx,cy,r){ return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="#fff" stroke="'+G+'" stroke-width="3"/><circle cx="'+cx+'" cy="'+cy+'" r="'+(r-5)+'" fill="none" stroke="'+G+'" stroke-width="2" stroke-dasharray="3 3"/>'+chk(cx-r*0.42,cy,r*0.85,G); };
+  /* 跑步機側視（約 130×88）：tilt＝傾斜（穩定性） */
+  var tm=function(x,y,s,o){ o=o||{};
+    var inner='<rect x="2" y="70" width="116" height="12" rx="5" fill="'+L+'" '+st+'/>'
+      +'<path d="M12 70 H108" stroke="'+D+'" stroke-width="2"/><circle cx="12" cy="76" r="3.5" fill="'+D+'"/><circle cx="108" cy="76" r="3.5" fill="'+D+'"/>'
+      +'<rect x="8" y="82" width="10" height="5" rx="1" fill="'+D+'"/><rect x="100" y="82" width="10" height="5" rx="1" fill="'+D+'"/>'
+      +'<path d="M104 72 L116 20" stroke="'+D+'" stroke-width="11" stroke-linecap="round"/><path d="M104 72 L116 20" stroke="'+M+'" stroke-width="6" stroke-linecap="round"/>'
+      +'<path d="M113 36 L82 42" '+thw(5)+'/>'
+      +'<rect x="98" y="4" width="32" height="18" rx="4" fill="'+L+'" '+st+'/><rect x="103" y="8" width="22" height="9" rx="2" fill="'+B+'"/>';
+    return o.tilt? '<g transform="translate('+x+' '+y+') rotate(-9 10 86) scale('+s+')">'+inner+'</g>' : g(x,y,s,inner); };
+  /* 標準書（約 52×64） */
+  var book=function(x,y,lab){ return '<rect x="'+(x+6)+'" y="'+y+'" width="46" height="62" rx="3" fill="'+B+'" '+st+'/><rect x="'+x+'" y="'+(y+4)+'" width="46" height="62" rx="3" fill="#fff" '+st+'/>'
+     +'<rect x="'+(x+6)+'" y="'+(y+12)+'" width="34" height="14" rx="2" fill="'+B+'"/>'+txt(x+23,y+23,'ISO',10,'#fff')
+     +txt(x+23,y+46,lab||'20957',11,D)+'<path d="M'+(x+8)+' '+(y+56)+' h30" stroke="'+M+'" stroke-width="3" stroke-linecap="round"/>'; };
+  /* 實驗室建築＋燒瓶 */
+  var lab=function(x,y){ return '<rect x="'+x+'" y="'+(y+18)+'" width="74" height="58" fill="'+L+'" '+st+'/><path d="M'+(x-4)+' '+(y+20)+' L'+(x+37)+' '+y+' L'+(x+78)+' '+(y+20)+'" fill="none" '+st+'/>'
+     +'<rect x="'+(x+29)+'" y="'+(y+52)+'" width="16" height="24" fill="#fff" '+st+'/>'
+     +'<path d="M'+(x+12)+' '+(y+28)+' h8 v8 l7 12 h-22 l7 -12 z" fill="'+B+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'
+     +'<path d="M'+(x+52)+' '+(y+28)+' h8 v8 l7 12 h-22 l7 -12 z" fill="'+G+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var house=function(x,y){ return '<path d="M'+x+' '+(y+34)+' L'+(x+40)+' '+y+' L'+(x+80)+' '+(y+34)+'" fill="none" '+st+'/>'
+     +'<rect x="'+(x+10)+'" y="'+(y+30)+'" width="60" height="50" fill="'+L+'" '+st+'/><rect x="'+(x+32)+'" y="'+(y+52)+'" width="16" height="28" fill="#fff" '+st+'/>'; };
+  var dumbbell=function(x,y){ return '<rect x="'+(x+8)+'" y="'+(y+7)+'" width="34" height="6" rx="2" fill="'+M+'" '+st+'/>'
+     +'<rect x="'+x+'" y="'+y+'" width="10" height="20" rx="2" fill="'+D+'"/><rect x="'+(x+40)+'" y="'+y+'" width="10" height="20" rx="2" fill="'+D+'"/>'; };
+  /* 砝碼 */
+  var wt=function(x,y,lab){ return '<path d="M'+(x+8)+' '+y+' h24 l8 34 h-40 z" fill="'+M+'" '+st+'/><path d="M'+(x+13)+' '+y+' a7 7 0 0 1 14 0" '+thw(3)+'/>'+txt(x+20,y+26,lab||'kg',11,'#fff'); };
+  /* 夾手點：兩個滾輪中間夾手指 */
+  var pinch=function(x,y){ return '<circle cx="'+(x+14)+'" cy="'+(y+14)+'" r="14" fill="'+M+'" '+st+'/><circle cx="'+(x+14)+'" cy="'+(y+42)+'" r="14" fill="'+M+'" '+st+'/>'
+     +'<rect x="'+(x-16)+'" y="'+(y+22)+'" width="34" height="12" rx="6" fill="'+L+'" '+st+'/>'+zig(x+30,y+28,16); };
+  var envl=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="70" height="46" rx="4" fill="#fff" '+st+'/><path d="M'+x+' '+y+' l35 26 l35 -26" fill="none" '+st+'/>'; };
+  var truck=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="54" height="34" rx="3" fill="'+L+'" '+st+'/><path d="M'+(x+54)+' '+(y+10)+' h16 l10 12 v12 h-26 z" fill="'+A+'" '+st+'/>'
+     +'<circle cx="'+(x+14)+'" cy="'+(y+36)+'" r="7" fill="'+D+'"/><circle cx="'+(x+66)+'" cy="'+(y+36)+'" r="7" fill="'+D+'"/>'; };
+  var cbox=function(x,y,on){ return '<rect x="'+x+'" y="'+y+'" width="18" height="18" rx="3" fill="#fff" '+st+'/>'+(on?chk(x+3,y+9,13,G):''); };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+    /* 0 旁白：客戶要報告，我們只有內部紀錄 */
+    qp1Intro: svg(
+      tm(4,52,0.82,{})
+     +doc(124,10,46,58,M)
+     +doc(146,78,46,60,null,true)+txt(169,116,'?',28,A)),
+
+    /* 1 EN ISO 20957：固定式健身器材安全標準 */
+    qp1Std: svg(
+      book(12,30,'20957')
+     +tm(76,40,0.86,{})
+     +pill(20,112,52,24,'EN',B,'#fff',12)),
+
+    /* 2 第 1 部通用要求；第 6 部跑步機 */
+    qp1Parts: svg(
+      doc(10,18,46,58,B)+pill(18,84,30,24,'1',B,'#fff',13)
+     +doc(62,18,46,58,A)+pill(70,84,30,24,'6',A,'#fff',13)
+     +arr(110,60,124,70,D)
+     +tm(124,64,0.56,{})),
+
+    /* 3 Class H 家用、Class S 健身房 */
+    qp1Class: svg(
+      house(6,40)
+     +pill(30,10,32,26,'H',G,'#fff',15)
+     +'<rect x="112" y="52" width="80" height="68" fill="'+L+'" '+st+'/><rect x="112" y="44" width="80" height="12" fill="'+A+'" '+st+'/>'
+     +dumbbell(127,82)
+     +pill(136,10,32,26,'S',B,'#fff',15)),
+
+    /* 4 測強度、穩定性、夾手點、警告標示 */
+    qp1Tests: svg(
+      wt(8,16,'kg')
+     +tm(108,2,0.6,{tilt:true})
+     +pinch(32,82)
+     +tri(150,118,20)),
+
+    /* 5 買家要第三方認證實驗室的報告 */
+    qp1Lab: svg(
+      lab(12,40)
+     +doc(116,22,62,86,G)
+     +seal(166,100,18)
+     +pill(10,8,82,24,'17025',B,'#fff',12)),
+
+    /* 6 客戶：可以寄 TM-500 的測試報告嗎？ */
+    qp1Ask: svg(
+      phone(22,44)
+     +doc(76,30,56,76,A)
+     +qb(168,40)),
+
+    /* 7 Anita：還沒有第三方報告，只有內部紀錄 */
+    qp1Honest: svg(
+      doc(16,26,58,78,M)
+     +chk(30,124,16,G)
+     +doc(112,26,58,78,null,true)
+     +ex(141,124,16,R)),
+
+    /* 8 客戶：內部紀錄可以看嗎？ */
+    qp1SeeAsk: svg(
+      doc(18,40,56,76,M)
+     +eye(110,60)
+     +qb(170,104)),
+
+    /* 9 Anita：寄過去僅供參考 */
+    qp1RefOnly: svg(
+      doc(22,14,50,64,M)
+     +arr(48,84,48,98,A)
+     +envl(13,100)
+     +pill(110,56,76,30,'REF',A,'#fff',15)),
+
+    /* 10 客戶：做過哪些測試？ */
+    qp1WhichAsk: svg(
+      '<rect x="24" y="20" width="84" height="112" rx="6" fill="'+L+'" '+st+'/><rect x="48" y="12" width="36" height="16" rx="4" fill="'+M+'" '+st+'/>'
+     +'<path d="M40 54 h52 M40 76 h52 M40 98 h52" stroke="'+M+'" stroke-width="4" stroke-linecap="round"/>'
+     +qb(158,60)),
+
+    /* 11 Anita：做過靜負載、跑合；穩定性、夾手點還沒 */
+    qp1Done: svg(
+      cbox(18,22,true)+wt(48,10,'kg')
+     +cbox(18,62,true)+tm(48,48,0.36,{})
+     +cbox(110,22,false)+tm(140,6,0.36,{tilt:true})
+     +cbox(110,62,false)+pinch(154,48)
+     +pill(56,112,88,26,'2 / 4',A,'#fff',13)),
+
+    /* 12 客戶：報告必須由認證實驗室出具 */
+    qp1MustLab: svg(
+      doc(28,16,72,104,A)
+     +seal(86,104,22)
+     +pill(118,44,72,30,'MUST',R,'#fff',14)),
+
+    /* 13 Anita：下週送兩台樣品到認證實驗室 */
+    qp1Samples: svg(
+      '<rect x="8" y="22" width="32" height="34" fill="'+L+'" '+st+'/><rect x="44" y="22" width="32" height="34" fill="'+L+'" '+st+'/>'
+     +txt(24,45,'1',14,D)+txt(60,45,'2',14,D)
+     +truck(6,82)
+     +arr(98,100,118,100,A)
+     +lab(122,52)),
+
+    /* 14 客戶：報告什麼時候好？ */
+    qp1WhenAsk: svg(
+      doc(18,30,52,70,null,true)
+     +cal(84,48)
+     +qb(168,36)),
+
+    /* 15 Anita：約四週；要 H 還是 S？ */
+    qp1Weeks: svg(
+      cal(10,22,B)+cal(32,38,B)
+     +pill(10,96,72,26,'4 wk',B,'#fff',13)
+     +pill(110,30,32,26,'H',G,'#fff',14)+pill(152,30,32,26,'S',B,'#fff',14)
+     +qb(147,98)),
+
+    /* 16 客戶：H 級，家用 */
+    qp1HomeUse: svg(
+      house(12,26)
+     +tm(30,72,0.4,{})
+     +pill(116,52,62,34,'H',G,'#fff',18)
+     +chk(130,116,20,G)),
+
+    /* 17 Anita：週五前寄測試計畫 */
+    qp1Plan: svg(
+      doc(14,18,64,92,B)
+     +pill(22,114,48,22,'PLAN',B,'#fff',11)
+     +cal(112,30,A)+txt(134,77,'FRI',12,D)
+     +chk(126,100,24,G))
+  });
+})();
+
+window.VIDEO.qp01 = {
+ "title": "QA Practice I — We Only Have Internal Records",
+ "titleCn": "品保實務一｜客戶要 EN ISO 20957 測試報告，我們只有內部紀錄",
+ "date": "2026-10-25",
+ "level": "B2",
+ "scene": "QA Practice · Test Reports",
+ "sceneCn": "品保實務・測試報告",
+ "sceneArt": "clipboard",
+ "titleArt": ["clipboard", "search", "doc"],
+ "cast": {
+  "N": { "name": "Narrator", "cn": "旁白", "voice": "n" },
+  "A": { "name": "Anita", "cn": "Anita・跑步機工廠品保", "voice": "f" },
+  "M": { "name": "Mike", "cn": "Mike・客戶品保", "voice": "m" }
+ },
+ "chapters": [
+  { "en": "Intro", "cn": "開場" },
+  { "en": "The Standard", "cn": "背景：EN ISO 20957" },
+  { "en": "The Customer Call", "cn": "情境：客戶要測試報告" },
+  { "en": "Key Expressions", "cn": "重點表達" },
+  { "en": "Grammar", "cn": "文法" },
+  { "en": "Homework Fixes", "cn": "作業訂正" },
+  { "en": "Quick Quiz", "cn": "小測驗" }
+ ],
+ "expr": {
+  "standard": { "t": "standard", "cn": "標準", "tag": ["品保實務", "安全標準"], "note": "業界公開的規範；和 spec（客戶規格）不同。", "ex": "Which standard does this drop test follow?", "exCn": "這個落下測試是依據哪個標準？" },
+  "stability": { "t": "stability", "cn": "穩定性", "tag": ["品保實務", "測試項目"], "note": "器材會不會傾倒；EN ISO 20957 的測試項目之一。", "ex": "Check the stability of the rack before you load the plates.", "exCn": "掛槓片之前先確認架子穩不穩。" },
+  "accredited": { "t": "accredited", "cn": "經認證的", "tag": ["品保實務", "第三方測試"], "note": "搭配：accredited lab（認證實驗室）。", "ex": "Is this lab accredited for electrical tests?", "exCn": "這家實驗室有電性測試的認證資格嗎？" },
+  "reference": { "t": "reference", "cn": "參考", "tag": ["品保實務", "客戶往來"], "note": "搭配：as reference only（僅供參考）。", "ex": "Keep this photo as a reference for the next inspection.", "exCn": "把這張照片留著，下次檢驗時參考。" },
+  "sample": { "t": "sample", "cn": "樣品", "tag": ["品保實務", "第三方測試"], "note": "搭配：send samples to the lab（送樣到實驗室）。", "ex": "Take five samples from each lot.", "exCn": "每批抽五個樣品。" }
+ },
+ "lines": [
+  { "ch": 0, "sp": "N", "vis": { "type": "title" },
+    "en": "Welcome back. Today a customer asks for a test report that we don't have.",
+    "cn": "歡迎回來。今天客戶要一份我們手上沒有的測試報告。" },
+  { "ch": 0, "sp": "N", "vis": { "type": "scene", "art": "qp1Intro" },
+    "en": "We only have internal test records. Let's learn how to explain the gap honestly.",
+    "cn": "我們只有內部測試紀錄。來學怎麼誠實說明這個落差。" },
+
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp1Std" },
+    "en": "EN ISO 20957 is a safety standard for stationary training equipment, such as treadmills and ellipticals.",
+    "say": "E N, I S O, twenty nine fifty-seven, is a safety standard for stationary training equipment, such as treadmills and ellipticals.",
+    "cn": "EN ISO 20957 是固定式健身器材的安全標準，例如跑步機和橢圓機。",
+    "hi": [{ "t": "standard", "cn": "標準", "k": "standard", "c": 1 }] },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp1Parts" },
+    "en": "Part 1 gives the general requirements. Part 6 adds the rules for treadmills.",
+    "cn": "第 1 部是通用要求，第 6 部再加上跑步機的規定。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp1Class" },
+    "en": "Class H is for home use, and Class S is for gyms and other commercial use.",
+    "cn": "H 級是家用，S 級是健身房等商業用途。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp1Tests" },
+    "en": "The tests check strength, stability, pinch points and warning labels.",
+    "cn": "測試項目包括強度、穩定性、夾手點和警告標示。",
+    "hi": [{ "t": "stability", "cn": "穩定性", "k": "stability", "c": 1 }] },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qp1Lab" },
+    "en": "Most buyers want a report from an accredited third-party lab, such as SGS.",
+    "cn": "大多數買家要第三方認證實驗室出的報告，例如 SGS。",
+    "hi": [{ "t": "accredited", "cn": "經認證的", "k": "accredited", "c": 1 }] },
+
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp1Ask" },
+    "en": "Could you send us your EN ISO 20957 test report for the TM-500?",
+    "say": "Could you send us your E N, I S O, twenty nine fifty-seven test report for the T M five hundred?",
+    "cn": "可以寄 TM-500 的 EN ISO 20957 測試報告給我們嗎？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp1Honest" },
+    "en": "To be honest, we don't have a third-party report yet. We only have internal test records.",
+    "cn": "老實說，我們還沒有第三方報告，只有內部測試紀錄。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp1SeeAsk" },
+    "en": "Can we see the internal records?",
+    "cn": "內部紀錄可以給我們看嗎？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp1RefOnly" },
+    "en": "Yes, I can send them as reference only. They don't follow the test method in the standard.",
+    "cn": "可以，我寄給你們僅供參考。這些紀錄沒有照標準的測試方法做。",
+    "hi": [{ "t": "reference", "cn": "參考", "k": "reference", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp1WhichAsk" },
+    "en": "Which tests have you done?",
+    "cn": "你們做過哪些測試？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp1Done" },
+    "en": "We have done a static load test and a run-in test. We haven't tested stability or pinch points yet.",
+    "cn": "做過靜負載測試和跑合測試，穩定性和夾手點還沒測。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp1MustLab" },
+    "en": "The report must be issued by an accredited lab.",
+    "cn": "報告必須由認證實驗室出具。" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp1Samples" },
+    "en": "I understand. We're sending two samples to an accredited lab next week.",
+    "cn": "了解，我們下週會送兩台樣品到認證實驗室。",
+    "hi": [{ "t": "samples", "cn": "樣品", "k": "sample", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp1WhenAsk" },
+    "en": "When will the report be ready?",
+    "cn": "報告什麼時候會好？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp1Weeks" },
+    "en": "The lab says about four weeks. Could you tell me which class you need, H or S?",
+    "cn": "實驗室說大約四週。可以告訴我你們需要哪一級嗎？H 還是 S？" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qp1HomeUse" },
+    "en": "Class H. It's for home use.",
+    "cn": "H 級，是家用的。" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qp1Plan" },
+    "en": "Got it. I'll send you our test plan by Friday.",
+    "cn": "了解，我週五前把測試計畫寄給你。" },
+
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "standard", "ipa": "/ˈstæn.dɚd/", "pos": "n.", "art": "book", "def": "standard n. — a safety standard.", "cn": "標準｜搭配：安全標準", "note": "公開的業界規範，所有廠商都適用。" },
+    "en": "Which standard does this drop test follow?", "cn": "這個落下測試是依據哪個標準？" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "stability", "ipa": "/stəˈbɪl.ə.t̬i/", "pos": "n.", "art": "warning", "def": "stability n. — a stability test.", "cn": "穩定性｜搭配：穩定性測試", "note": "器材會不會傾倒。" },
+    "en": "Check the stability of the rack before you load the plates.", "cn": "掛槓片之前先確認架子穩不穩。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "accredited", "ipa": "/əˈkred.ɪ.t̬ɪd/", "pos": "adj.", "art": "cert", "def": "accredited adj. — an accredited lab.", "cn": "經認證的｜搭配：認證實驗室", "note": "實驗室依 ISO/IEC 17025 取得認可。" },
+    "en": "Is this lab accredited for electrical tests?", "cn": "這家實驗室有電性測試的認證資格嗎？" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "reference", "ipa": "/ˈref.ɚ.əns/", "pos": "n.", "art": "doc", "def": "reference n. — as reference only.", "cn": "參考｜搭配：僅供參考", "note": "先講清楚文件的身分。" },
+    "en": "Keep this photo as a reference for the next inspection.", "cn": "把這張照片留著，下次檢驗時參考。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "sample", "ipa": "/ˈsæm.pəl/", "pos": "n.", "art": "box", "def": "sample n. — send samples to the lab.", "cn": "樣品｜搭配：送樣", "note": "搭配：take samples、send samples。" },
+    "en": "Take five samples from each lot.", "cn": "每批抽五個樣品。" },
+
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "must be + p.p.", "art": "clipboard",
+      "rows": [{ "lab": "一定要被做到", "blocks": [{ "t": "All test weights", "k": "s" }, { "t": "must be calibrated", "k": "v" }, { "t": "every year", "k": "o" }] }] },
+    "en": "All test weights must be calibrated every year.", "cn": "所有測試砝碼每年都必須校驗。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "have not + p.p. + yet", "art": "hourglass",
+      "rows": [{ "lab": "到目前還沒", "blocks": [{ "t": "We", "k": "s" }, { "t": "have not received", "k": "v" }, { "t": "the lab's quote yet", "k": "o" }] }] },
+    "en": "We have not received the lab's quote yet.", "cn": "我們還沒收到實驗室的報價。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "Could you tell me + wh- + S + V", "art": "question",
+      "rows": [{ "lab": "間接問句", "blocks": [{ "t": "Could you tell me", "k": "s" }, { "t": "when the samples", "k": "v" }, { "t": "will arrive?", "k": "o" }] }] },
+    "en": "Could you tell me when the samples will arrive?", "cn": "可以告訴我樣品什麼時候會到嗎？" },
+
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 1, "wrong": "The report must issued by an accredited lab.", "bad": ["must issued"], "fix": "The report must be issued by an accredited lab." },
+    "en": "The report must be issued by an accredited lab.", "cn": "報告必須由認證實驗室出具。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 2, "wrong": "Could you tell me which class do you need?", "bad": ["do you need"], "fix": "Could you tell me which class you need?" },
+    "en": "Could you tell me which class you need?", "cn": "可以告訴我你們需要哪一級嗎？" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 3, "wrong": "Our records doesn't name the standard.", "bad": ["doesn't"], "fix": "Our records don't name the standard." },
+    "en": "Our records don't name the standard.", "cn": "我們的紀錄沒有寫出是依據哪個標準。" },
+
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We ___ have internal test records.", "a": "only", "n": 1 },
+    "en": "We ___ have internal test records.", "cn": "我們＿＿內部測試紀錄。",
+    "say": "We , blank, have internal test records.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "The report must ___ issued by an accredited lab.", "a": "be", "n": 2 },
+    "en": "The report must ___ issued by an accredited lab.", "cn": "報告必須＿＿認證實驗室出具。",
+    "say": "The report must , blank, issued by an accredited lab.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We haven't tested stability ___.", "a": "yet", "n": 3 },
+    "en": "We haven't tested stability ___.", "cn": "我們＿＿測過穩定性。",
+    "say": "We haven't tested stability , blank.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "I can send them as ___ only.", "a": "reference", "n": 4 },
+    "en": "I can send them as ___ only.", "cn": "我可以寄給你們，僅供＿＿。",
+    "say": "I can send them as , blank, only.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "end" },
+    "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+ ]
+};
