@@ -2886,7 +2886,7 @@ nav button{font-size:11px}
   <div class="ms-panel" role="dialog" aria-label="更多功能">
     <div class="ms-grip"></div>
     <div class="ms-grid">
-      <button id="m-work" onclick="moreGo('work')"><i></i><b>職場</b><span>稽核英文＋設備 3D</span></button>
+      <button id="m-work" onclick="moreGo('work')"><i></i><b>職場</b><span>稽核・品保新聞・設備 3D</span></button>
       <button id="m-listen" onclick="moreGo('listen')"><i></i><b>聽力</b><span>影片＋逐字稿跟讀</span></button>
       <button id="m-real" onclick="moreGo('real')"><i></i><b>實景</b><span>真實語速的影片</span></button>
       <button id="m-prac" onclick="moreGo('vocab')"><i></i><b>單字卡</b><span>間隔複習與收藏字</span></button>
@@ -3701,7 +3701,7 @@ const HOME_CARDS=[
   {t:'listen',i:HOME_IC.listen, n:'聽力',   d:'影片＋逐字稿跟讀'},
   {t:'real',  i:HOME_IC.real, n:'實景',   d:'真實語速影片'},
   {t:'vocab', i:HOME_IC.vocab, n:'單字卡', d:'間隔複習與收藏字'},
-  {t:'work',  i:HOME_IC.work, n:'職場',   d:'稽核英文＋設備 3D'},
+  {t:'work',  i:HOME_IC.work, n:'職場',   d:'稽核・品保新聞・設備 3D'},
   {t:'prog',  i:HOME_IC.prog, n:'進度',   d:'打卡、統計與設定'}
 ];
 RENDER.home=function(){
@@ -5812,8 +5812,8 @@ document.addEventListener('click',e=>{
 const BOOK_LESSONS=((window.BOOK||{}).lessons||[]).slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
 // 課本單字也進字庫，全站點字都查得到
 BOOK_LESSONS.forEach(b=>(b.vocab||[]).concat(b.vocab2||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:'',exEn:t.ex,exCn:t.exCn,src:'課本：'+b.titleCn})));
-/* 職場分頁收的課（稽核英文 au01…）：課本目錄、搜尋、「上次讀到」都不列；課文內頁仍用課本的 */
-const isWorkLesson=b=>/^au\d/.test(b.id||'');
+/* 職場分頁收的課（稽核英文 au01…、品保新聞 qa01…）：課本目錄、搜尋、「上次讀到」都不列；課文內頁仍用課本的 */
+const isWorkLesson=b=>/^(au|qa)\d/.test(b.id||'');
 let bkOpen=null, bkQuery='', bkRevYM=null, mrChIdx=0, mrChShow=false;
 /* 例句裡用到該單字／片語就加粗（compensate 也會對到 compensated；片語去掉 something/someone 佔位字再比對） */
 function bkHi(sent,w){
@@ -6134,12 +6134,15 @@ RENDER.work=function(){
     });
     return;
   }
-  const au=BOOK_LESSONS.filter(isWorkLesson).sort((a,b)=>String(a.id).localeCompare(String(b.id)));
+  const wl=BOOK_LESSONS.filter(isWorkLesson).sort((a,b)=>String(a.id).localeCompare(String(b.id)));
+  const au=wl.filter(b=>/^au/.test(b.id)), qa=wl.filter(b=>/^qa/.test(b.id));
   v.innerHTML=
     '<div class="card"><h2 class="sec" style="margin:0 0 4px">💼 職場</h2>'
-    +'<div class="hint">工作上用得到的英文：稽核問答，以及設備 3D 部件認識。</div></div>'
+    +'<div class="hint">工作上用得到的英文：稽核問答、品保新聞案例，以及設備 3D 部件認識。</div></div>'
     +'<h3 class="sec" style="margin:14px 2px 0">🔍 稽核英文 <span class="muted" style="font-weight:400">'+au.length+' 課</span></h3>'
     +'<div class="bkc-grid" role="list">'+au.map((b,i)=>bkCard(b,i+1,{go:"wkOpenLesson('"+b.id+"')"})).join('')+'</div>'
+    +(qa.length?'<h3 class="sec" style="margin:18px 2px 0">📰 品保新聞 <span class="muted" style="font-weight:400">'+qa.length+' 課・真實召回案例 → 8D</span></h3>'
+      +'<div class="bkc-grid" role="list">'+qa.map((b,i)=>bkCard(b,i+1,{go:"wkOpenLesson('"+b.id+"')"})).join('')+'</div>':'')
     +'<h3 class="sec" style="margin:18px 2px 0">🏭 設備 3D</h3>'
     +'<div id="wk-eq" class="bkc-grid" role="list"><div class="muted">載入中…</div></div>';
   wkLoadEquip().then(list=>{

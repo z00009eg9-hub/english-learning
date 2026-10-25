@@ -22579,6 +22579,217 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- qa01 品保新聞一：跑步機電源線召回（CPSC 26-203）→ 8D ---- */
+  {
+   "id": "qa01",
+   "icon": "🔌",
+   "video": true,
+   "date": "2026-10-25",
+   "title": "QA News I — Treadmill Power Cord Recall",
+   "titleCn": "品保新聞一｜跑步機電源線鬆脫召回 → 寫 8D",
+   "topics": "品保新聞, 召回, 8D, 跑步機, 電源線, recall, overheat, containment, root cause, retention force, scope",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "The power cord can work loose from the socket.",
+     "cn": "電源線可能從插座鬆脫。",
+     "pat": "主詞 + can work loose from + 位置",
+     "note": "電源線可能從插座鬆脫。work loose＝（因震動、使用）逐漸鬆脫，比 become loose 更口語。"
+    },
+    {
+     "n": 2,
+     "cn": "根因判定為保持力不足。",
+     "pat": "The root cause was identified as + 名詞",
+     "note": "根因判定為保持力不足。被動式 was identified 要用過去分詞，不是原形 identify。",
+     "wrong": "The root cause was identify as low force.",
+     "fix": "The root cause was identified as low retention force."
+    },
+    {
+     "n": 3,
+     "ok": "We have put all finished goods on hold.",
+     "cn": "所有成品已暫停出貨。",
+     "pat": "We have put + 對象 + on hold",
+     "note": "所有成品已暫停出貨。put … on hold＝暫停；圍堵已經做了就用現在完成式。"
+    },
+    {
+     "n": 4,
+     "cn": "支架到貨前，請檢查電源線。",
+     "pat": "Until + 主詞 + 現在式, + 指示",
+     "note": "支架到貨前先檢查電源線。until 子句講未來也用現在式，主詞單數動詞加 -s。",
+     "wrong": "Until the bracket arrive, check the cord.",
+     "fix": "Until the bracket arrives, check the cord."
+    },
+    {
+     "n": 5,
+     "ok": "We are expanding the review to include the ellipticals.",
+     "cn": "我們正把檢討範圍擴大到橢圓機。",
+     "pat": "expand + 範圍 + to include + 對象",
+     "note": "檢討範圍擴大到橢圓機。to include 後面直接接新加入的對象。"
+    },
+    {
+     "n": 6,
+     "cn": "目前沒有受傷報告。",
+     "pat": "No + 複數名詞 + have been reported",
+     "note": "沒有受傷報告。No injuries 是複數，動詞用 have。",
+     "wrong": "No injury have been reported.",
+     "fix": "No injuries have been reported."
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    { "w": "recall", "ipa": "/rɪˈkɑːl/", "pos": "n.", "cn": "召回", "ex": "The customer asked whether this lot is part of the recall.", "exCn": "客戶問這批是否在召回範圍內。" },
+    { "w": "overheat", "ipa": "/ˌoʊ.vɚˈhiːt/", "pos": "v.", "cn": "過熱", "ex": "The motor overheated after two hours at full speed.", "exCn": "馬達全速運轉兩小時後過熱。" },
+    { "w": "socket", "ipa": "/ˈsɑːkɪt/", "pos": "n.", "cn": "插座", "ex": "Please check the socket for burn marks.", "exCn": "請檢查插座有沒有燒痕。" },
+    { "w": "bracket", "ipa": "/ˈbræk.ɪt/", "pos": "n.", "cn": "支架", "ex": "The bracket keeps the cable away from the flywheel.", "exCn": "支架讓線材遠離飛輪。" },
+    { "w": "containment", "ipa": "/kənˈteɪn.mənt/", "pos": "n.", "cn": "圍堵", "ex": "Containment must start within 24 hours.", "exCn": "圍堵要在 24 小時內開始。" },
+    { "w": "root cause", "ipa": "/ˌruːt ˈkɑːz/", "pos": "n.", "cn": "根本原因", "ex": "We need test data before we name the root cause.", "exCn": "要有測試數據才能下根因結論。" },
+    { "w": "scope", "ipa": "/skoʊp/", "pos": "n.", "cn": "範圍", "ex": "Please confirm the scope by serial number.", "exCn": "請用序號確認範圍。" },
+    { "w": "retention force", "ipa": "/rɪˈten.ʃən ˌfɔːrs/", "pos": "n.", "cn": "保持力", "ex": "The connector's retention force dropped after the drop test.", "exCn": "摔落測試後，接頭的保持力下降。" }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "expand a recall", "cn": "擴大召回" },
+    { "p": "work loose", "cn": "（因震動、使用）逐漸鬆脫" },
+    { "p": "put … on hold", "cn": "暫停（出貨、使用）" },
+    { "p": "field report", "cn": "市場通報（客戶端回報的案例）" },
+    { "p": "escape point", "cn": "流出點（問題在哪一關沒被擋下）" },
+    { "p": "horizontal deployment", "cn": "水平展開（同樣設計的其他機種一起檢討）" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "QA1-A",
+     "title": "The root cause was identified as X（下根因結論）",
+     "pat": "The root cause was identified as + 名詞",
+     "pts": [
+      "用被動式，把重點放在「根因是什麼」，不強調是誰查出來的，語氣客觀。",
+      "as 後面接名詞片語：low retention force、a missing torque check。",
+      "例：The root cause was identified as a missing torque check.（根因判定為缺少扭力檢查。）"
+     ],
+     "ex": "The root cause was identified as a missing torque check.",
+     "exCn": "根因判定為缺少扭力檢查。"
+    },
+    {
+     "k": "QA1-B",
+     "title": "Until X happens, do Y（對策完成前的暫時措施）",
+     "pat": "Until + 主詞 + 現在式, + 指示／暫時措施",
+     "pts": [
+      "until 子句即使講未來，也用現在式，不用 will。",
+      "常用來交代圍堵：在正式對策到位前先怎麼做。",
+      "例：Until the new cables arrive, operators must check every plug by hand.（新線到貨前，作業員須手動檢查每個插頭。）"
+     ],
+     "ex": "Until the new cables arrive, operators must check every plug by hand.",
+     "exCn": "新線到貨前，作業員須手動檢查每個插頭。"
+    },
+    {
+     "k": "QA1-C",
+     "title": "expand X to include Y（擴大範圍）",
+     "pat": "expand + 範圍 + to include + 新加入的對象",
+     "pts": [
+      "召回、檢查、檢討的範圍變大時用這個句型。",
+      "to include 後面只放「新加進來的」對象。",
+      "例：We expanded the inspection to include the rowing machines.（我們把檢查擴大到划船機。）"
+     ],
+     "ex": "We expanded the inspection to include the rowing machines.",
+     "exCn": "我們把檢查擴大到划船機。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "containment vs corrective action",
+     "sc": "containment 是先把問題擋住（隔離、全檢、暫停出貨）；corrective action 是消除根因、讓問題不再發生。8D 的 D3 是圍堵，D5／D6 才是對策。",
+     "ex": "Sorting the warehouse stock is containment. Changing to a locking plug is a corrective action.",
+     "exCn": "倉庫全檢是圍堵；改用自鎖插頭才是矯正對策。",
+     "cn": "圍堵 vs 矯正對策"
+    },
+    {
+     "u": "root cause vs escape point",
+     "sc": "root cause 是問題「為什麼發生」；escape point 是問題「為什麼沒被抓到、流到客戶端」。好的 8D 兩個都要回答。",
+     "ex": "The root cause was low retention force. The escape point was incoming inspection.",
+     "exCn": "根因是保持力不足；流出點是進料檢驗。",
+     "cn": "發生原因 vs 流出原因"
+    },
+    {
+     "u": "recall vs return",
+     "sc": "recall 是廠商或主管機關主動通知、收回或修理已售出的產品；return 是客戶個別退貨。",
+     "ex": "A single return is a quality signal. A recall covers every unit in the affected range.",
+     "exCn": "單一退貨是品質警訊；召回則涵蓋受影響範圍內的每一台。",
+     "cn": "召回 vs 退貨"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "新聞｜跑步機電源線召回",
+     "title": "Loose Power Cords Lead to Expanded Treadmill Recall",
+     "titleCn": "新聞｜電源線鬆脫，跑步機召回擴大",
+     "paras": [
+      { "en": "In January 2026, the US Consumer Product Safety Commission (CPSC) announced that Johnson Health Tech was expanding a treadmill recall. About 47,000 more home treadmills, sold under the Matrix and Vision brands, are now included.", "cn": "2026 年 1 月，美國消費品安全委員會（CPSC）宣布 Johnson Health Tech 擴大跑步機召回，新增約 47,000 台 Matrix 與 Vision 品牌的家用跑步機。" },
+      { "en": "The problem is a simple part: the power cord. On the affected models, the cord can work loose from the power socket. A loose connection creates heat, and the company has received 27 reports of overheating at that spot. No injuries have been reported.", "cn": "問題出在一個很簡單的零件：電源線。受影響機型的電源線可能從電源插座鬆脫；接觸不良會發熱，公司已接獲 27 件該處過熱的通報，目前沒有受傷報告。" },
+      { "en": "The treadmills were made in China between June 2007 and January 2024, and sold from 2012 to 2025 for $2,100 to $8,100. Owners can check one detail: recalled units came with a straight power cord and no cord bracket.", "cn": "這些跑步機於 2007 年 6 月至 2024 年 1 月在中國製造，2012 到 2025 年間售出，售價 2,100 至 8,100 美元。車主可檢查一個細節：召回機台附的是直型電源線，而且沒有電線固定支架。" },
+      { "en": "The remedy is a free replacement cord with a locking plug, which owners can install without tools. Until it arrives, they should push the cord all the way into the socket before every workout.", "cn": "補救方式是免費更換附自鎖插頭的電源線，不需工具即可安裝。在新線寄到前，每次運動前都要把電源線完全插到底。" },
+      { "en": "This is not the first time. An earlier recall covered Matrix T1 and T3 commercial treadmills for the same issue, and that fix was a cord bracket that needed tools to install. Now the scope has grown to include retail models — a reminder that when one product line has a weakness, similar designs may share it.", "cn": "這不是第一次。先前已有一次召回，針對同樣問題的 Matrix T1、T3 商用跑步機，當時的對策是需要工具安裝的電線支架。如今範圍擴大到家用機型——提醒我們：一條產品線有弱點時，類似設計可能也有同樣問題。" }
+     ],
+     "questions": [
+      { "q": "What part of the treadmill causes the hazard?", "qCn": "跑步機的哪個部位造成危險？", "a": "The power cord can come loose from the power socket.", "aCn": "電源線可能從電源插座鬆脫。" },
+      { "q": "How can owners tell if their treadmill is affected? (A. It has a red power switch. / B. It has a straight cord and no cord bracket. / C. It was sold after 2025. / D. It makes a loud noise.)", "qCn": "車主怎麼判斷自己的跑步機在召回範圍內？", "a": "B. It has a straight cord and no cord bracket.", "aCn": "B. 附直型電源線，而且沒有電線固定支架。" },
+      { "q": "Why is the new remedy easier for owners than the old bracket?", "qCn": "為什麼新的補救方式對車主來說比舊支架容易？", "a": "The locking plug needs no tools, so owners can install it themselves.", "aCn": "自鎖插頭不需要工具，車主可以自己安裝。" }
+     ]
+    },
+    {
+     "bar": "模擬｜供應商 8D 摘要",
+     "title": "Simulation: Your 8D Summary to the Customer",
+     "titleCn": "模擬｜你是代工廠 QA，寫 8D 摘要給客戶（虛構情境）",
+     "paras": [
+      { "en": "Situation: Your factory builds treadmills for a US brand. The customer has two field reports of a burnt power socket. This is a practice case, not the real company's analysis.", "cn": "情境：你的工廠替美國品牌代工跑步機，客戶接獲兩件市場通報：電源插座燒黑。這是練習用的虛構案例，不是該公司的實際分析。" },
+      { "en": "D2 Problem: Two field units showed a burnt power socket. In both cases, the power cord was not fully inserted.", "cn": "D2 問題描述：兩台市場機出現電源插座燒黑，兩案的電源線都沒有完全插入。" },
+      { "en": "D3 Containment: We have put all finished goods on hold and are checking cord insertion on 1,200 units in our warehouse.", "cn": "D3 圍堵：所有成品已暫停出貨，倉庫 1,200 台正在逐台檢查插入狀態。" },
+      { "en": "D4 Root cause: The root cause was identified as low retention force. After vibration, the plug can slide out of the socket, and the design has no bracket to hold it in place.", "cn": "D4 根因：根因判定為保持力不足。震動後插頭會從插座滑出，而且設計上沒有固定支架。" },
+      { "en": "D4 Escape point: Our incoming inspection tested the cord only before vibration, so the problem escaped.", "cn": "D4 流出原因：進料檢驗只在震動前測試，所以問題流出。" },
+      { "en": "D5/D6 Corrective action: We will change to a locking plug and add a pull test after vibration to the control plan.", "cn": "D5／D6 矯正對策：改用自鎖插頭，並在管制計畫加入震動後拉力測試。" },
+      { "en": "D7 Prevention: We are expanding the review to include our ellipticals and bikes that use the same socket.", "cn": "D7 預防再發：把檢討範圍擴大到使用同款插座的橢圓機與飛輪車。" },
+      { "en": "D8 Closure: We will close this 8D after three lots pass the new test.", "cn": "D8 結案：連續三批通過新測試後結案。" }
+     ]
+    },
+    {
+     "bar": "演練｜客戶來電追問",
+     "title": "Practice: The Customer Call",
+     "titleCn": "演練｜客戶 QA 來電追問",
+     "paras": [
+      { "en": "Customer: We have two field reports of a burnt power socket. What is your containment?", "cn": "客戶：我們接到兩件電源插座燒黑的市場通報，你們的圍堵是什麼？" },
+      { "en": "You: We have put all finished goods on hold, and we are checking 1,200 units in our warehouse.", "cn": "你：所有成品已暫停出貨，倉庫 1,200 台正在檢查。" },
+      { "en": "Customer: What is the root cause?", "cn": "客戶：根因是什麼？" },
+      { "en": "You: The root cause was identified as low retention force. After vibration, the plug can slide out.", "cn": "你：根因判定為保持力不足，震動後插頭會滑出。" },
+      { "en": "Customer: Do other models use the same socket?", "cn": "客戶：其他機種有用同款插座嗎？" },
+      { "en": "You: Yes. We are expanding the review to include our ellipticals and bikes.", "cn": "你：有，我們正把檢討範圍擴大到橢圓機和飛輪車。" }
+     ]
+    },
+    {
+     "bar": "討論｜如果發生在我們廠",
+     "title": "Discussion: What If It Happened Here?",
+     "titleCn": "討論｜如果發生在我們廠",
+     "paras": [
+      { "en": "Which of our treadmills, ellipticals, and bikes use the same power socket?", "cn": "我們的跑步機、橢圓機、飛輪車，哪些用同一款電源插座？" },
+      { "en": "Does our incoming inspection include a pull test after vibration?", "cn": "我們的進料檢驗有沒有做「震動後」的拉力測試？" },
+      { "en": "If the customer wants our containment within 24 hours, what three things should the first email say?", "cn": "如果客戶要求 24 小時內回覆圍堵，第一封信要寫哪三件事？" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "The power cord can work loose from the socket.", "cn": "電源線可能從插座鬆脫。" },
+      { "en": "We have put all finished goods on hold.", "cn": "所有成品已暫停出貨。" },
+      { "en": "The root cause was identified as low retention force.", "cn": "根因判定為保持力不足。" },
+      { "en": "Our inspection tested the cord only before vibration, so the problem escaped.", "cn": "檢驗只在震動前測試，所以問題流出。" },
+      { "en": "Until the new cord arrives, push the plug all the way in.", "cn": "新線到貨前，把插頭完全插到底。" },
+      { "en": "We are expanding the review to include other models with the same socket.", "cn": "檢討範圍擴大到使用同款插座的其他機種。" }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -27397,6 +27608,7 @@ window.BOOK = {
     bk20251218:[[['toilet','wrench','suitcase','doc','moon'],'忙碌修繕的一天：馬桶、洗手台、磁磚出問題 → 打電話請水電工 → 旅行社規劃假期 → 到政府機關辦文件 → 晚上全部修好。']],
     bk20251226b:[[['signpost','exam','piggy','globe','sprout'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
     bk20260922:[[['eye','gear','plug','dumbbell','cart'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
+    qa01:[[['dumbbell','bolt','flame','question','toolboxL'],'跑步機電源線召回：家用跑步機擴大召回 → 電源線從插座鬆脫 → 接觸不良過熱 27 件 → 8D 查根因與流出點 → 改自鎖插頭並水平展開。']],
     au01:[[['cert','calendar','stamp','shield','hourglass'],'ISO 認證問答：尚未取得認證 → 目標 2027 年 6 月 → 先提出輔導公司簽呈 → 由品保負責 → 目標日期不等於已完成。']],
     au02:[[['meeting','doc','idcard','timetable','warning'],'組織圖問答：列出課級以上姓名與年資 → 各部門提供資料 → 由人資負責 → 目標 10 月 19 日 → 仍標示 Open，尚未完成。']],
     au03:[[['bottleL','factory','cart','lock','eye'],'化學品管控問答：缺領用紀錄、存放位置、效期、警示標籤與防護設備 → 還要管控送到產線的化學品 → 由資材負責建立管控 → 只有倉儲管理不能涵蓋 → 仍標示 Open，尚未完成。']],

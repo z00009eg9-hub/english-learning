@@ -11036,7 +11036,7 @@ articles:[
     },
     {
       "w": "recall",
-      "ipa": "/rɪˈkɔːl/",
+      "ipa": "/rɪˈkɑːl/",
       "pos": "n./v.",
       "cn": "（產品）回收",
       "def": "An order for a company to take a product back because it is unsafe.",

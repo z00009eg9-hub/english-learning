@@ -49916,3 +49916,346 @@ window.VIDEO["bk20261023"] = {
   }
  ]
 };
+
+/* ---------- qa01 品保新聞一 影片專屬插圖（每句一張，不重複；2026-10-25） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4', G='#3f9e64';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var thw=function(w){ return 'stroke="'+D+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round" fill="none"'; };
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'+txt(cx,cy+9,'?',25,'#fff'); };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'+txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round"><path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>';
+    if(head) s+='<rect x="'+(x+8)+'" y="'+(y+9)+'" width="'+(w-16)+'" height="9" rx="3" fill="'+A+'"/>';
+    var n=Math.floor((h-(head?30:16))/11), i;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(y+(head?30:18)+i*11)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var gap=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="5" fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5"/>'; };
+  var cube=function(x,y,s,f){ return '<rect x="'+x+'" y="'+y+'" width="'+s+'" height="'+s+'" rx="3" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'; };
+  var tag=function(x,y,w,h,f){ return '<path d="M'+x+' '+y+' h'+(w-12)+' l12 '+(h/2)+' l-12 '+(h/2)+' h-'+(w-12)+' z" fill="'+f+'" '+st+'/>'
+     +'<circle cx="'+(x+9)+'" cy="'+(y+h/2)+'" r="3" fill="#fff" stroke="'+D+'" stroke-width="2"/>'; };
+  var tri=function(cx,cy,s){ return '<path d="M'+cx+' '+(cy-s)+' L'+(cx+s*1.15)+' '+(cy+s*0.8)+' H'+(cx-s*1.15)+' Z" fill="#fff" stroke="'+R+'" stroke-width="3" stroke-linejoin="round"/>'+txt(cx,cy+s*0.5,'!',s*1.1,R); };
+  var arr=function(x1,y1,x2,y2,col){ var a=Math.atan2(y2-y1,x2-x1), h=8;
+    return '<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +'<path d="M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.5)).toFixed(1)+' '+(y2-h*Math.sin(a-0.5)).toFixed(1)+' M'+x2+' '+y2+' L'+(x2-h*Math.cos(a+0.5)).toFixed(1)+' '+(y2-h*Math.sin(a+0.5)).toFixed(1)+'" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round"/>'; };
+  var g=function(x,y,s,inner){ return '<g transform="translate('+x+' '+y+') scale('+s+')">'+inner+'</g>'; };
+  /* 跑步機（區域座標約 120×74） */
+  var tread=function(x,y,s,f){ return g(x,y,s,
+      '<rect x="4" y="56" width="110" height="13" rx="6" fill="'+(f||L)+'" '+st+'/>'
+     +'<circle cx="13" cy="62.5" r="3.5" fill="#fff" stroke="'+D+'" stroke-width="2.5"/><circle cx="105" cy="62.5" r="3.5" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M98 56 L86 18" '+thw(6)+'/>'
+     +'<path d="M86 24 L56 32" '+thw(4)+'/>'
+     +'<rect x="68" y="4" width="40" height="17" rx="4" fill="#fff" '+st+'/><rect x="74" y="8.5" width="20" height="8" rx="2" fill="'+B+'"/>'); };
+  /* 飛輪車（約 80×70） */
+  var bike=function(x,y,s){ return g(x,y,s,
+      '<path d="M8 66 h68" '+thw(4)+'/>'
+     +'<path d="M24 66 L40 30 L60 50 M40 30 L36 20" '+thw(4)+'/>'
+     +'<path d="M28 18 h16" '+thw(6)+'/>'
+     +'<path d="M60 50 L62 16 L72 14" '+thw(4)+'/>'
+     +'<circle cx="60" cy="50" r="14" fill="#fff" '+st+'/><circle cx="60" cy="50" r="4" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'); };
+  /* 橢圓機（約 90×70） */
+  var ellip=function(x,y,s){ return g(x,y,s,
+      '<path d="M6 66 h80" '+thw(4)+'/>'
+     +'<path d="M74 66 L66 16" '+thw(4)+'/>'
+     +'<path d="M66 16 L56 6 M66 16 L78 4" '+thw(3)+'/>'
+     +'<path d="M20 50 L68 58" '+thw(4)+'/><rect x="50" y="50" width="18" height="7" rx="2" fill="'+A+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<circle cx="20" cy="50" r="13" fill="#fff" '+st+'/><circle cx="20" cy="50" r="4" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'); };
+  /* 電源插座面板（34×44） */
+  var sock=function(x,y,burn){ return '<rect x="'+x+'" y="'+y+'" width="34" height="44" rx="5" fill="'+(burn?'#5b4a3e':'#fff')+'" '+st+'/>'
+     +'<rect x="'+(x+8)+'" y="'+(y+9)+'" width="18" height="26" rx="3" fill="'+(burn?'#2b2118':L)+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(x+14)+' '+(y+16)+' v12 M'+(x+20)+' '+(y+16)+' v12" stroke="'+(burn?'#9a8577':D)+'" stroke-width="2.5" stroke-linecap="round"/>'; };
+  /* 插頭（本體 26×20，左側插腳，右側電線往右下） */
+  var plug=function(x,y,col,lock){ var s='<path d="M'+(x+26)+' '+(y+10)+' c22 0 18 34 50 34" '+thw(4)+'/>'
+     +'<path d="M'+x+' '+(y+6)+' h-10 M'+x+' '+(y+14)+' h-10" '+thw(3)+'/>'
+     +'<rect x="'+x+'" y="'+y+'" width="26" height="20" rx="5" fill="'+(col||A)+'" '+st+'/>';
+    if(lock) s+='<path d="M'+(x+4)+' '+y+' v-8 h-12 v6" '+thw(3)+'/>';
+    return s; };
+  var heat=function(x,y){ var s='', i; for(i=0;i<3;i++) s+='<path d="M'+(x+i*12)+' '+y+' c-5 -6 5 -10 0 -16 c-5 -6 5 -10 0 -16" stroke="'+R+'" stroke-width="3" fill="none" stroke-linecap="round"/>'; return s; };
+  var vib=function(x,y,w){ var s='M'+x+' '+y, i; for(i=0;i<w/8;i++) s+=' l4 '+(i%2?6:-6)+' l4 '+(i%2?-6:6); return '<path d="'+s+'" stroke="'+B+'" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round"/>'; };
+  var phone=function(x,y){ return '<path d="M'+x+' '+y+' c-10 10 -6 30 14 46 c10 8 18 10 24 4 l4 -6 l-12 -10 l-6 5 c-6 -3 -14 -12 -16 -18 l5 -6 l-9 -12 z" fill="'+A+'" '+st+'/>'; };
+  var lens=function(cx,cy,r){ return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="#fff" fill-opacity="0.55" stroke="'+D+'" stroke-width="3.5"/>'
+     +'<path d="M'+(cx+r*0.7).toFixed(1)+' '+(cy+r*0.7).toFixed(1)+' l'+(r*0.75).toFixed(1)+' '+(r*0.75).toFixed(1)+'" stroke="'+D+'" stroke-width="7" stroke-linecap="round"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 0 旁白：從新聞到 8D */
+    qa1Intro: svg(
+      doc(16,30,66,88,true)
+     +'<rect x="24" y="66" width="50" height="22" rx="3" fill="'+L+'" stroke="'+D+'" stroke-width="2"/>'
+     +arr(92,74,112,74,A)
+     +doc(120,30,66,88,true)
+     +pill(130,62,46,24,'8D',B,'#fff',15)),
+
+    /* 1 新聞：擴大召回約 47,000 台 */
+    qa1NewsRecall: svg(
+      tread(30,40,1.05)
+     +tri(42,34,18)
+     +pill(128,104,58,26,'47K',R,'#fff',15)),
+
+    /* 2 電源線從插座鬆脫 */
+    qa1CordLoose: svg(
+      '<rect x="14" y="30" width="30" height="96" rx="6" fill="'+L+'" '+st+'/>'
+     +sock(40,48)
+     +plug(104,58)
+     +gap(76,56,26,24)
+     +arr(84,44,104,44,R)),
+
+    /* 3 接觸不良發熱，27 件過熱通報 */
+    qa1Overheat: svg(
+      sock(40,62)
+     +plug(78,74)
+     +heat(46,54)
+     +pill(130,20,52,26,'27',R,'#fff',16)),
+
+    /* 4 辨識：直型電線、沒有支架 */
+    qa1NoBracket: svg(
+      sock(30,50)
+     +plug(70,62)
+     +gap(60,40,46,52)
+     +'<circle cx="150" cy="44" r="18" fill="#fff" stroke="'+R+'" stroke-width="3"/>'
+     +ex(150,44,16,R)),
+
+    /* 5 補救：免費自鎖插頭，不用工具 */
+    qa1LockPlug: svg(
+      sock(24,54)
+     +plug(60,66,G,true)
+     +chk(28,36,22,G)
+     +'<g transform="translate(140 30) rotate(35)"><rect x="-4" y="0" width="8" height="40" rx="3" fill="#9aa5b1" '+st+'/><path d="M-12 0 a12 12 0 1 1 24 0 l-6 0 v-8 h-12 v8 z" fill="#9aa5b1" '+st+'/></g>'
+     +'<circle cx="146" cy="50" r="28" fill="none" stroke="'+R+'" stroke-width="3.5"/><path d="M126 30 L166 70" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'),
+
+    /* 6 不是第一次：商用機 → 範圍擴大到家用機 */
+    qa1Earlier: svg(
+      tread(8,52,0.62,'#9aa5b1')
+     +arr(88,84,108,84,A)
+     +tread(112,26,0.6)
+     +tread(112,80,0.6)
+     +'<rect x="104" y="18" width="88" height="114" rx="10" fill="none" stroke="'+B+'" stroke-width="2.8" stroke-dasharray="7 5"/>'),
+
+    /* 7 客戶：插座燒黑，圍堵是什麼？ */
+    qa1CallAsk: svg(
+      phone(30,40)
+     +sock(92,58,true)
+     +'<path d="M96 52 c4 -8 10 -8 14 0 M112 50 c4 -8 10 -8 14 0" stroke="#9a8577" stroke-width="3" fill="none" stroke-linecap="round"/>'
+     +qb(160,40)),
+
+    /* 8 Anita：成品全部暫停出貨，倉庫 1,200 台檢查中 */
+    qa1Hold: svg(
+      cube(20,74,30,L)+cube(52,74,30,L)+cube(84,74,30,L)
+     +cube(36,42,30,L)+cube(68,42,30,L)
+     +'<path d="M14 106 h106" '+thw(3)+'/>'
+     +tag(128,40,62,28,R)+txt(162,59,'HOLD',13,'#fff')
+     +pill(128,92,62,26,'1200',B,'#fff',14)),
+
+    /* 9 客戶：根因是什麼？ */
+    qa1RootAsk: svg(
+      sock(22,48)
+     +plug(62,60)
+     +lens(70,70,22)
+     +qb(160,36)),
+
+    /* 10 Anita：保持力不足，震動後插頭滑出 */
+    qa1Vibe: svg(
+      sock(18,44)
+     +plug(84,56)
+     +arr(66,40,90,40,R)
+     +vib(14,108,72)+vib(14,122,72)
+     +'<path d="M120 24 v40 M110 54 l10 10 l10 -10" stroke="'+B+'" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'),
+
+    /* 11 客戶：檢驗為什麼沒抓到？ */
+    qa1EscapeAsk: svg(
+      doc(22,26,70,96,true)
+     +chk(32,58,14,G)+chk(32,80,14,G)
+     +'<circle cx="40" cy="104" r="6" fill="none" stroke="'+R+'" stroke-width="2.5"/>'
+     +qb(150,60)),
+
+    /* 12 Anita：只在震動前測試，問題流出 */
+    qa1Escape: svg(
+      '<rect x="12" y="44" width="54" height="50" rx="8" fill="#fff" '+st+'/>'+chk(26,72,24,G)
+     +arr(70,69,86,69,D)
+     +'<rect x="90" y="44" width="54" height="50" rx="8" fill="#fff" '+st+'/>'+vib(98,69,38)
+     +gap(86,40,62,58)
+     +arr(150,69,190,69,R)),
+
+    /* 13 客戶：其他機種有用同款插座嗎？ */
+    qa1ScopeAsk: svg(
+      sock(14,40)
+     +'<path d="M48 54 L82 30 M48 62 L82 72 M48 70 L82 112" stroke="'+B+'" stroke-width="2.5" stroke-dasharray="5 4" fill="none"/>'
+     +tread(84,10,0.42)+ellip(88,56,0.44)+bike(92,98,0.4)
+     +qb(170,74)),
+
+    /* 14 Anita：檢討範圍擴大到橢圓機、飛輪車 */
+    qa1Scope: svg(
+      tread(8,48,0.5)
+     +ellip(70,52,0.52)
+     +bike(126,52,0.56)
+     +'<rect x="4" y="30" width="192" height="96" rx="12" fill="none" stroke="'+B+'" stroke-width="2.8" stroke-dasharray="7 5"/>'
+     +chk(28,22,16,G)+chk(92,22,16,G)+chk(152,22,16,G)),
+
+    /* 15 客戶：8D 什麼時候結案？ */
+    qa1CloseAsk: svg(
+      '<rect x="26" y="32" width="80" height="86" rx="8" fill="#fff" '+st+'/>'
+     +'<rect x="26" y="32" width="80" height="22" rx="8" fill="'+R+'" '+st+'/>'
+     +'<path d="M44 26 v14 M88 26 v14" '+thw(4)+'/>'
+     +pill(40,74,52,26,'8D',B,'#fff',14)
+     +qb(156,64)),
+
+    /* 16 Anita：連續三批通過拉力測試才結案，之前每台手檢 */
+    qa1Close: svg(
+      cube(14,70,36,L)+cube(60,70,36,L)+cube(106,70,36,L)
+     +chk(22,92,20,G)+chk(68,92,20,G)+chk(114,92,20,G)
+     +'<path d="M14 116 h128" '+thw(3)+'/>'
+     +'<circle cx="168" cy="54" r="22" fill="#fff" stroke="'+G+'" stroke-width="3.5"/>'+chk(158,56,20,G)
+     +txt(78,54,'1 · 2 · 3',14,D))
+  });
+})();
+
+window.VIDEO = window.VIDEO || {};
+window.VIDEO.qa01 = {
+ "title": "QA News I — Treadmill Power Cord Recall",
+ "titleCn": "品保新聞一｜跑步機電源線鬆脫召回 → 寫 8D",
+ "date": "2026-10-25",
+ "level": "B2",
+ "scene": "QA News · From Recall to 8D",
+ "sceneCn": "品保新聞・從召回案例到 8D",
+ "sceneArt": "plug",
+ "titleArt": ["plug", "flame", "clipboard"],
+ "cast": {
+  "N": { "name": "Narrator", "cn": "旁白", "voice": "n" },
+  "A": { "name": "Anita", "cn": "Anita・代工廠品保", "voice": "f" },
+  "M": { "name": "Mike", "cn": "Mike・客戶品保", "voice": "m" }
+ },
+ "chapters": [
+  { "en": "Intro", "cn": "開場" },
+  { "en": "The News", "cn": "新聞：召回案例" },
+  { "en": "The Customer Call", "cn": "情境：客戶來電追問 8D" },
+  { "en": "Key Expressions", "cn": "重點表達" },
+  { "en": "Grammar", "cn": "文法" },
+  { "en": "Homework Fixes", "cn": "作業訂正" },
+  { "en": "Quick Quiz", "cn": "小測驗" }
+ ],
+ "expr": {
+  "recall": { "t": "recall", "cn": "召回", "tag": ["品保新聞", "召回"], "note": "搭配：expand a recall（擴大召回）。", "ex": "The customer asked whether this lot is part of the recall.", "exCn": "客戶問這批是否在召回範圍內。" },
+  "containment": { "t": "containment", "cn": "圍堵", "tag": ["品保新聞", "8D D3"], "note": "搭配：containment action（圍堵措施）。", "ex": "Containment must start within 24 hours.", "exCn": "圍堵要在 24 小時內開始。" },
+  "root cause": { "t": "root cause", "cn": "根本原因", "tag": ["品保新聞", "8D D4"], "note": "句型：The root cause was identified as …（根因判定為…）。", "ex": "We need test data before we name the root cause.", "exCn": "要有測試數據才能下根因結論。" },
+  "retention force": { "t": "retention force", "cn": "保持力", "tag": ["品保新聞", "接頭"], "note": "插頭、接頭被拉出前能承受的力。", "ex": "The connector's retention force dropped after the drop test.", "exCn": "摔落測試後，接頭的保持力下降。" },
+  "scope": { "t": "scope", "cn": "範圍", "tag": ["品保新聞", "水平展開"], "note": "搭配：expand the scope（擴大範圍）。", "ex": "Please confirm the scope by serial number.", "exCn": "請用序號確認範圍。" }
+ },
+ "lines": [
+  { "ch": 0, "sp": "N", "vis": { "type": "title" },
+    "en": "Welcome back. Today we turn a real recall into an 8D report.",
+    "cn": "歡迎回來。今天我們把一則真實的召回新聞，變成一份 8D 報告。" },
+  { "ch": 0, "sp": "N", "vis": { "type": "scene", "art": "qa1Intro" },
+    "en": "First, we hear the news. Then we answer a customer's questions, step by step.",
+    "cn": "先聽新聞，再一步一步回答客戶的追問。" },
+
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa1NewsRecall" },
+    "en": "In January 2026, a treadmill recall was expanded to about forty-seven thousand more home treadmills.",
+    "cn": "2026 年 1 月，一起跑步機召回擴大，新增約四萬七千台家用跑步機。",
+    "hi": [{ "t": "recall", "cn": "召回", "k": "recall", "c": 1 }] },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa1CordLoose" },
+    "en": "The problem is the power cord. It can work loose from the socket.",
+    "cn": "問題出在電源線，它可能從插座鬆脫。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa1Overheat" },
+    "en": "A loose connection creates heat. There were twenty-seven reports of overheating, but no injuries.",
+    "cn": "接觸不良會發熱；共有 27 件過熱通報，但沒有人受傷。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa1NoBracket" },
+    "en": "Affected units have a straight power cord and no cord bracket.",
+    "cn": "受影響的機台附直型電源線，而且沒有電線固定支架。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa1LockPlug" },
+    "en": "The fix is a free cord with a locking plug. Owners can install it without tools.",
+    "cn": "對策是免費更換附自鎖插頭的電源線，車主不需工具就能安裝。" },
+  { "ch": 1, "sp": "N", "vis": { "type": "scene", "art": "qa1Earlier" },
+    "en": "An earlier recall covered commercial treadmills. Now the scope includes home models too.",
+    "cn": "先前的召回只涵蓋商用跑步機，現在範圍也包含家用機型。",
+    "hi": [{ "t": "scope", "cn": "範圍", "k": "scope", "c": 1 }] },
+
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa1CallAsk" },
+    "en": "We have two field reports of a burnt power socket. What is your containment?",
+    "cn": "我們接到兩件電源插座燒黑的市場通報，你們的圍堵是什麼？",
+    "hi": [{ "t": "containment", "cn": "圍堵", "k": "containment", "c": 1 }] },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa1Hold" },
+    "en": "We have put all finished goods on hold, and we are checking twelve hundred units in our warehouse.",
+    "cn": "所有成品已暫停出貨，倉庫的 1,200 台正在檢查。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa1RootAsk" },
+    "en": "What is the root cause?",
+    "cn": "根因是什麼？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa1Vibe" },
+    "en": "The root cause was identified as low retention force. After vibration, the plug can slide out.",
+    "cn": "根因判定為保持力不足，震動後插頭會滑出。",
+    "hi": [{ "t": "root cause", "cn": "根本原因", "k": "root cause", "c": 1 }, { "t": "retention force", "cn": "保持力", "k": "retention force", "c": 1 }] },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa1EscapeAsk" },
+    "en": "Why didn't your inspection catch it?",
+    "cn": "你們的檢驗為什麼沒抓到？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa1Escape" },
+    "en": "We tested the cord only before vibration, so the problem escaped.",
+    "cn": "我們只在震動前測試電源線，所以問題流出了。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa1ScopeAsk" },
+    "en": "Do other models use the same socket?",
+    "cn": "其他機種有用同款插座嗎？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa1Scope" },
+    "en": "Yes. We are expanding the review to include our ellipticals and bikes.",
+    "cn": "有，我們正把檢討範圍擴大到橢圓機和飛輪車。" },
+  { "ch": 2, "sp": "M", "vis": { "type": "scene", "art": "qa1CloseAsk" },
+    "en": "When will you close the 8D?",
+    "cn": "8D 什麼時候結案？" },
+  { "ch": 2, "sp": "A", "vis": { "type": "scene", "art": "qa1Close" },
+    "en": "After three lots pass the new pull test. Until then, we check every unit by hand.",
+    "cn": "連續三批通過新的拉力測試後結案；在那之前，每一台都手動檢查。" },
+
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "recall", "ipa": "/rɪˈkɑːl/", "pos": "n.", "art": "warning", "def": "recall n. — expand a recall.", "cn": "召回｜搭配：擴大召回", "note": "搭配：expand a recall（擴大召回）。" },
+    "en": "The customer asked whether this lot is part of the recall.",
+    "cn": "客戶問這批是否在召回範圍內。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "containment", "ipa": "/kənˈteɪn.mənt/", "pos": "n.", "art": "shield", "def": "containment n. — containment action.", "cn": "圍堵｜搭配：圍堵措施", "note": "搭配：containment action（圍堵措施）。" },
+    "en": "Containment must start within 24 hours.",
+    "cn": "圍堵要在 24 小時內開始。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "root cause", "ipa": "/ˌruːt ˈkɑːz/", "pos": "n.", "art": "search", "def": "root cause n. — identify the root cause.", "cn": "根本原因｜搭配：找出根因", "note": "句型：The root cause was identified as …" },
+    "en": "We need test data before we name the root cause.",
+    "cn": "要有測試數據才能下根因結論。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "retention force", "ipa": "/rɪˈten.ʃən ˌfɔːrs/", "pos": "n.", "art": "plug", "def": "retention force n. — low retention force.", "cn": "保持力｜搭配：保持力不足", "note": "插頭、接頭被拉出前能承受的力。" },
+    "en": "The connector's retention force dropped after the drop test.",
+    "cn": "摔落測試後，接頭的保持力下降。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "slide", "w": "scope", "ipa": "/skoʊp/", "pos": "n.", "art": "target", "def": "scope n. — expand the scope.", "cn": "範圍｜搭配：擴大範圍", "note": "搭配：expand the scope（擴大範圍）。" },
+    "en": "Please confirm the scope by serial number.",
+    "cn": "請用序號確認範圍。" },
+
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "The root cause was identified as X", "art": "clipboard",
+      "rows": [{ "lab": "下根因結論", "blocks": [{ "t": "The root cause", "k": "s" }, { "t": "was identified as", "k": "v" }, { "t": "名詞（原因）", "k": "o" }] }] },
+    "en": "The root cause was identified as a missing torque check.",
+    "cn": "根因判定為缺少扭力檢查。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "Until X happens, do Y", "art": "hourglass",
+      "rows": [{ "lab": "暫時措施", "blocks": [{ "t": "Until + 現在式", "k": "s" }, { "t": "must", "k": "v" }, { "t": "暫時做法", "k": "o" }] }] },
+    "en": "Until the new cables arrive, operators must check every plug by hand.",
+    "cn": "新線到貨前，作業員須手動檢查每個插頭。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "pattern", "kick": "expand X to include Y", "art": "chartUp",
+      "rows": [{ "lab": "擴大範圍", "blocks": [{ "t": "expand + 範圍", "k": "s" }, { "t": "to include", "k": "v" }, { "t": "新加入的對象", "k": "o" }] }] },
+    "en": "We expanded the inspection to include the rowing machines.",
+    "cn": "我們把檢查擴大到划船機。" },
+
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 1, "wrong": "The root cause was identify as low force.", "bad": ["identify"], "fix": "The root cause was identified as low retention force." },
+    "en": "The root cause was identified as low retention force.",
+    "cn": "根因判定為保持力不足。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "fix", "n": 2, "wrong": "Until the bracket arrive, check the cord.", "bad": ["arrive"], "fix": "Until the bracket arrives, check the cord." },
+    "en": "Until the bracket arrives, check the cord.",
+    "cn": "支架到貨前，請檢查電源線。" },
+
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "The power cord can work ___ from the socket.", "a": "loose", "n": 1 },
+    "en": "The power cord can work ___ from the socket.", "cn": "電源線可能從插座＿＿。",
+    "say": "The power cord can work , blank, from the socket.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We have put all finished goods on ___.", "a": "hold", "n": 2 },
+    "en": "We have put all finished goods on ___.", "cn": "所有成品已＿＿出貨。",
+    "say": "We have put all finished goods on , blank.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "The root cause was ___ as low retention force.", "a": "identified", "n": 3 },
+    "en": "The root cause was ___ as low retention force.", "cn": "根因＿＿為保持力不足。",
+    "say": "The root cause was , blank, as low retention force.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "quiz", "q": "We are expanding the review to ___ our bikes.", "a": "include", "n": 4 },
+    "en": "We are expanding the review to ___ our bikes.", "cn": "我們正把檢討範圍擴大＿＿飛輪車。",
+    "say": "We are expanding the review to , blank, our bikes.", "pause": 4000 },
+  { "ch": 6, "sp": "N", "vis": { "type": "end" },
+    "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+ ]
+};

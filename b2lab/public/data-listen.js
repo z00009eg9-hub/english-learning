@@ -10213,7 +10213,7 @@ notes:[
   "intro": "Anita在辦公室跟同事Mark聊到最近食用油回收的新聞。這一課練習用被動語態描述「新聞裡發生的事」——重點不是誰做的，而是「發生在什麼東西上」。",
   "tip": "留意句子裡的was/were + 過去分詞，那就是被動語態，通常表示「某個東西被檢查、被回收、被影響」。",
   "pre": [
-    {"w": "recall", "ipa": "/rɪˈkɔːl/", "pos": "n.", "cn": "（產品）回收", "def": "An order to take an unsafe product back from shops."},
+    {"w": "recall", "ipa": "/rɪˈkɑːl/", "pos": "n.", "cn": "（產品）回收", "def": "An order to take an unsafe product back from shops."},
     {"w": "contaminate", "ipa": "/kənˈtæmɪneɪt/", "pos": "v.", "cn": "污染", "def": "To make something dirty or unsafe with an unwanted substance."},
     {"w": "inspect", "ipa": "/ɪnˈspekt/", "pos": "v.", "cn": "檢查、稽查", "def": "To look at something carefully to check it is safe."},
     {"w": "limit", "ipa": "/ˈlɪmɪt/", "pos": "n.", "cn": "上限", "def": "The largest amount allowed."},
@@ -10290,7 +10290,7 @@ notes:[
   "pre": [
     {"w": "systemic", "ipa": "/sɪˈstemɪk/", "pos": "adj.", "cn": "系統性的、制度性的", "def": "Affecting an entire system, not just one part."},
     {"w": "isolated", "ipa": "/ˈaɪ.sə.leɪ.tɪd/", "pos": "adj.", "cn": "單一的、孤立的", "def": "Happening alone, not connected to a wider pattern."},
-    {"w": "root cause", "ipa": "/ruːt kɔːz/", "pos": "n.", "cn": "根本原因", "def": "The real reason something happened, not just the surface reason."},
+    {"w": "root cause", "ipa": "/ˌruːt ˈkɑːz/", "pos": "n.", "cn": "根本原因", "def": "The real reason something happened, not just the surface reason."},
     {"w": "batch", "ipa": "/bætʃ/", "pos": "n.", "cn": "一批（產品）", "def": "A group of products made at one time."},
     {"w": "oversight", "ipa": "/ˈoʊvɚsaɪt/", "pos": "n.", "cn": "監督", "def": "The process of checking that something is being done correctly."},
     {"w": "prevent", "ipa": "/prɪˈvent/", "pos": "v.", "cn": "預防", "def": "To stop something from happening."},
@@ -12453,7 +12453,7 @@ notes:[
     {w:"cosmetic",ipa:"/kɑːzˈmet̬.ɪk/",pos:"adj.",cn:"外觀的、表面的",def:"relating to the way something looks on the outside, not how it works."},
     {w:"functional defect",ipa:"/ˈfʌŋk.ʃən.əl ˈdiː.fekt/",pos:"n.",cn:"功能性缺陷",def:"a fault that stops a product from working the way it should."},
     {w:"investigate",ipa:"/ɪnˈvestɪɡeɪt/",pos:"v.",cn:"調查/深入研究",def:"to look into something carefully in order to find out the truth"},
-    {w:"root cause",ipa:"/ruːt kɔːz/",pos:"n.",cn:"根本原因",def:"the real reason something bad or unexpected happens, not just a surface-level reason."},
+    {w:"root cause",ipa:"/ˌruːt ˈkɑːz/",pos:"n.",cn:"根本原因",def:"the real reason something bad or unexpected happens, not just a surface-level reason."},
     {w:"cross-functional",ipa:"/ˌkrɔːs ˈfʌŋk.ʃən.əl/",pos:"adj.",cn:"跨部門的、跨職能的",def:"involving people from different teams or departments working together."}
   ],
   script:[
