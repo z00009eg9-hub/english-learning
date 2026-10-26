@@ -7,6 +7,7 @@ compatibility_date = "2025-01-01"
 [vars]
 B2LAB_URL = "https://english-b2-lab.web.app/"
 QA_URL = "https://rexon-qa-english.web.app/"
+AUDIO_URL = "https://english-b2-lab-audio.web.app/"
 
 # 需要的 secrets（在 Cloudflare 上設定，不在這裡）：
 #   LINE_CHANNEL_SECRET

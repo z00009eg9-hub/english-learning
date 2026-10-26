@@ -13,6 +13,7 @@
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { createContext, runInContext } from 'node:vm';
+import { createRequire } from 'node:module';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -493,6 +494,76 @@ const list = [...words.values()]
     return e;
   })
   .sort((a, b) => a.id.localeCompare(b.id));
+
+/* 8) 🔊 發音：沿用 B2 Read 現成的 edge-tts 音檔（D:\b2lab-audio，Aria 女聲 f/），
+   不另外產生。檔名規則照 b2lab/public/tts-key.js 算，本機有檔案才收，
+   長度從 mp3 frame header 算（LINE audio message 必填 duration）。
+   音檔 repo 不在這台電腦時，沿用上一版 vocabulary.json 的 audio 欄位，避免誤判「內容有變」。 */
+const AUDIO_DIR = process.env.B2LAB_AUDIO_DIR || resolve(ROOT, '..', '..', 'b2lab-audio', 'public');
+let prevWords = null;
+try {
+  prevWords = new Map(JSON.parse(readFileSync(OUT, 'utf8')).words.map((w) => [w.id, w]));
+} catch {
+  /* 沒有舊檔 */
+}
+
+/** MPEG-1/2 Layer III、CBR（edge-tts 輸出就是）：位元率 → 長度 ms */
+function mp3DurationMs(file) {
+  const buf = readFileSync(file);
+  let i = 0;
+  if (buf.slice(0, 3).toString() === 'ID3') {
+    i = 10 + ((buf[6] << 21) | (buf[7] << 14) | (buf[8] << 7) | buf[9]);
+  }
+  for (; i < buf.length - 4; i++) {
+    if (buf[i] !== 0xff || (buf[i + 1] & 0xe0) !== 0xe0) continue;
+    const ver = (buf[i + 1] >> 3) & 3; // 3 = MPEG1, 2 = MPEG2, 0 = MPEG2.5
+    const idx = buf[i + 2] >> 4;
+    const table = ver === 3
+      ? [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320]
+      : [0, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160];
+    const kbps = table[idx];
+    if (!kbps) continue;
+    return Math.max(300, Math.round(((buf.length - i) * 8) / kbps));
+  }
+  return 0;
+}
+
+let audioCount = 0;
+if (existsSync(AUDIO_DIR)) {
+  const require = createRequire(import.meta.url);
+  const { ttsFile, ttsSplit } = require(join(B2LAB_DIR, 'tts-key.js'));
+  const clip = (text) => {
+    const rel = ttsFile('f', text);
+    const abs = join(AUDIO_DIR, rel);
+    if (!existsSync(abs)) return null;
+    const ms = mp3DurationMs(abs);
+    return ms ? [rel, ms] : null;
+  };
+  for (const e of list) {
+    delete e.audio;
+    const w = clip(e.word) || clip(e.word.toLowerCase());
+    // 只收第一句一般例句（卡片上顯示的那句）；切成多句時每句都要有檔才收
+    const ex0 = e.general[0]?.en;
+    let ex = null;
+    if (ex0) {
+      const parts = ttsSplit(ex0).map(clip);
+      if (parts.length && parts.length <= 3 && parts.every(Boolean)) ex = parts;
+    }
+    if (!w && !ex) continue;
+    e.audio = { ...(w ? { w } : {}), ...(ex ? { ex } : {}) };
+    audioCount++;
+  }
+  console.log(`[audio] 有音檔的詞條 ${audioCount} 筆（${AUDIO_DIR}）`);
+} else {
+  for (const e of list) {
+    const prev = prevWords?.get(e.id)?.audio;
+    if (prev) {
+      e.audio = prev;
+      audioCount++;
+    }
+  }
+  console.warn(`[audio] 找不到 ${AUDIO_DIR}，沿用上一版 audio 欄位 ${audioCount} 筆`);
+}
 
 /* generatedAt 只在「單字內容真的變了」時才更新。
    每次都寫新時間戳的話，git 會天天顯示這個檔案有改動，

@@ -11,6 +11,8 @@ export interface Env {
   /** 非機密設定，放在 wrangler.toml 的 [vars] */
   B2LAB_URL?: string;
   QA_URL?: string;
+  /** B2 Read AI 語音檔站（單字卡 🔊 用） */
+  AUDIO_URL?: string;
 }
 
 export interface LineSource {

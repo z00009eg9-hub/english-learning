@@ -36,7 +36,11 @@ export interface WordEntry {
   general: Example[];
   qa: Example[];
   related: string[];
+  /** 🔊 現成 edge-tts 音檔：[相對路徑, 長度 ms]。w＝單字、ex＝第一句一般例句（可能切成多段） */
+  audio?: { w?: AudioClip; ex?: AudioClip[] };
 }
+
+export type AudioClip = [string, number];
 
 interface VocabFile {
   generatedAt: string;

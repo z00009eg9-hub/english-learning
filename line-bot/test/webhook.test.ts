@@ -194,6 +194,18 @@ describe('STEP 4 / 5 / 6 postback', () => {
     expect(dump()).toContain('目前沒有 QA 工作例句');
   });
 
+  it('🔊 聽發音：先單字、再例句的 audio message', async () => {
+    const body = JSON.stringify(postbackEvent('a=say&w=compensate'));
+    await worker.fetch(post(body, await sign(body)), ENV as any);
+    const sent = JSON.parse(dump()).messages;
+    expect(sent.length).toBeGreaterThanOrEqual(2);
+    for (const m of sent) {
+      expect(m.type).toBe('audio');
+      expect(m.originalContentUrl).toMatch(/^https:\/\/english-b2-lab-audio\.web\.app\/f\/.+\.mp3$/);
+      expect(m.duration).toBeGreaterThan(0);
+    }
+  });
+
   it('相關單字', async () => {
     const body = JSON.stringify(postbackEvent('a=rel&w=compensate'));
     await worker.fetch(post(body, await sign(body)), ENV as any);

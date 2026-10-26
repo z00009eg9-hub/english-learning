@@ -17,6 +17,7 @@ import {
   buildNotFoundMessage,
   buildQaExamplesMessage,
   buildRelatedWordsMessage,
+  buildWordAudioMessages,
   buildWordFlexMessage,
   studyUrl,
   textMessage,
@@ -95,6 +96,10 @@ function messagesForPostback(data: string, env: Env): unknown[] {
       return [buildQaExamplesMessage(entry, getQaExamples(entry.word, 3), studyUrl(entry, env))];
     case 'rel':
       return [buildRelatedWordsMessage(entry, getRelatedWords(entry.word, 4))];
+    case 'say': {
+      const audio = buildWordAudioMessages(entry, env);
+      return audio.length ? audio : [textMessage(`「${entry.word}」目前還沒有發音檔。`)];
+    }
     case 'word':
     default:
       return [buildWordFlexMessage(entry, env)];

@@ -127,7 +127,8 @@ describe('STEP 3 第一張卡', () => {
   });
 
   it('按鈕是 2 x 2 格，每顆都有淡色圓角底', () => {
-    const rows = msg.contents.footer.contents.filter((c: any) => c.layout === 'horizontal');
+    // 第 3 列是 🔊 聽發音（有音檔的字才有），這裡只看前兩列
+    const rows = msg.contents.footer.contents.filter((c: any) => c.layout === 'horizontal').slice(0, 2);
     expect(rows).toHaveLength(2);
     for (const row of rows) {
       expect(row.contents).toHaveLength(2);
@@ -150,13 +151,20 @@ describe('STEP 3 第一張卡', () => {
   });
 
   it('四顆按鈕的 action 與改版前完全相同', () => {
-    const actions = actionsIn(msg.contents.footer);
+    const actions = actionsIn(msg.contents.footer).slice(0, 4);
     expect(actions).toHaveLength(4);
     expect(actions.map((a) => a.label)).toEqual(['更多例句', 'QA 例句', '相關單字', '完整學習']);
     expect(actions[0]).toMatchObject({ type: 'postback', data: 'a=more&w=compensate' });
     expect(actions[1]).toMatchObject({ type: 'postback', data: 'a=qa&w=compensate' });
     expect(actions[2]).toMatchObject({ type: 'postback', data: 'a=rel&w=compensate' });
     expect(actions[3]).toMatchObject({ type: 'uri' });
+  });
+
+  it('有音檔的字多一顆 🔊 聽發音（postback a=say），沒有就不畫', () => {
+    const actions = actionsIn(msg.contents.footer);
+    expect(actions[4]).toMatchObject({ type: 'postback', data: 'a=say&w=compensate', label: '🔊 聽發音' });
+    const silent = buildWordFlexMessage({ ...findWord('compensate')!, audio: undefined }, ENV);
+    expect(actionsIn(silent.contents.footer).some((a) => a.data?.startsWith('a=say'))).toBe(false);
   });
 
   it('每個 postback data 都在 300 bytes 以內', () => {
@@ -237,9 +245,9 @@ describe('STEP 7 深連結', () => {
   });
 
   it('QA 對得到主題就帶 topic', () => {
-    const e = findWord('tolerance')!;
+    const e = findWord('caliper')!;
     expect(studyUrl(e, ENV)).toBe(
-      'https://rexon-qa-english.web.app/?w=tolerance&topic=drawing-spec',
+      'https://rexon-qa-english.web.app/?w=caliper&topic=hand-tools',
     );
   });
 

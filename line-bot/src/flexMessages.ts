@@ -355,7 +355,30 @@ export function buildActionGrid(e: WordEntry, env: { B2LAB_URL?: string; QA_URL?
       }),
       tile('完整學習', ACCENT, ACCENT_BG, { type: 'uri', uri: studyUrl(e, env) }),
     ], 'md'),
+    // 沒有現成音檔的字不畫這顆，不顯示按了沒反應的按鈕
+    ...(e.audio
+      ? [row([
+          tile('🔊 聽發音', NEUTRAL_TX, NEUTRAL_BG, {
+            type: 'postback',
+            data: buildPostback('say', e.word),
+            displayText: `${e.word}｜聽發音`,
+          }),
+        ], 'md')]
+      : []),
   ];
+}
+
+/* ---------- 🔊 聽發音：audio message（先唸單字，再唸例句） ---------- */
+
+export function buildWordAudioMessages(e: WordEntry, env: { AUDIO_URL?: string }): any[] {
+  const base = String(env.AUDIO_URL || 'https://english-b2-lab-audio.web.app/').replace(/\/?$/, '/');
+  const clips = [...(e.audio?.w ? [e.audio.w] : []), ...(e.audio?.ex || [])];
+  // reply 一次最多 5 則
+  return clips.slice(0, 5).map(([path, ms]) => ({
+    type: 'audio',
+    originalContentUrl: base + path,
+    duration: ms,
+  }));
 }
 
 /**
