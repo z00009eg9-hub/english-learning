@@ -168,6 +168,8 @@ nav button.on::after{content:'';position:absolute;bottom:1px;left:50%;transform:
 main{width:auto;max-width:none;min-width:0;margin:0;padding:16px clamp(14px,1.2vw + 6px,24px) calc(56px + env(safe-area-inset-bottom) + 12px)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 1px 4px rgba(60,45,30,.05);padding:14px;margin-bottom:12px}
 h2.sec{font-size:var(--font-subhead);line-height:var(--lh-title);font-weight:var(--fw-emph);margin:0 0 8px;display:flex;align-items:center;gap:6px}
+/* 頁內小節標題（職場：稽核英文、品保新聞…）＝卡片標題級 18，比頁首標題 20 小一級；沒設的話會吃瀏覽器 h3 預設而比頁首還大 */
+h3.sec{font-size:var(--cd-title);line-height:1.35;font-weight:700;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
 .muted{color:var(--ink2);font-size:var(--font-secondary);line-height:var(--lh-secondary)}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
@@ -1576,7 +1578,7 @@ header .prof .emo-ic,header .hd-streak .emo-ic{vertical-align:0}
 }
 
 /* 字級：頁首標題 20 > 卡片標題 18 > 內文 16 > 次要 14 > metadata 13 */
-:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) h2.sec{font-size:var(--cd-title-lg);line-height:1.35;font-weight:700}
+:is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen),#v-work) h2.sec{font-size:var(--cd-title-lg);line-height:1.35;font-weight:700}
 :is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) :is(.item .t,.item .t.bkbig,.rw-t,.bkday-t,.mrc-t){font-size:var(--cd-title);line-height:1.4;font-weight:700}
 :is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .item.compact .t{font-size:var(--cd-body);line-height:1.45;font-weight:600}
 :is(#v-daily,#v-prog,#v-vocab:not(.vsession),#v-read:not(.rdopen),#v-book:not(.bkopen),#v-listen:not(.lsopen),#v-real:not(.rwopen),#v-gram:not(.gopen)) .pgrow .pgt{font-size:var(--cd-body);line-height:1.5;font-weight:400}
@@ -5825,8 +5827,8 @@ document.addEventListener('click',e=>{
 const BOOK_LESSONS=((window.BOOK||{}).lessons||[]).slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
 // 課本單字也進字庫，全站點字都查得到
 BOOK_LESSONS.forEach(b=>(b.vocab||[]).concat(b.vocab2||[]).forEach(t=>addGloss(t.w,{w:t.w,ipa:t.ipa,pos:t.pos,cn:t.cn,def:'',exEn:t.ex,exCn:t.exCn,src:'課本：'+b.titleCn})));
-/* 職場分頁收的課（稽核英文 au01…、品保新聞 qa01…、品保實務 qp01…）：課本目錄、搜尋、「上次讀到」都不列；課文內頁仍用課本的 */
-const isWorkLesson=b=>/^(au|qa|qp)\d/.test(b.id||'');
+/* 職場分頁收的課（稽核英文 au01…、品保新聞 qa01…、品保實務 qp01…、我的職場週記 my01…）：課本目錄、搜尋、「上次讀到」都不列；課文內頁仍用課本的 */
+const isWorkLesson=b=>/^(au|qa|qp|my)\d/.test(b.id||'');
 let bkOpen=null, bkQuery='', bkRevYM=null, mrChIdx=0, mrChShow=false;
 /* 例句裡用到該單字／片語就加粗（compensate 也會對到 compensated；片語去掉 something/someone 佔位字再比對） */
 function bkHi(sent,w){
@@ -6148,16 +6150,18 @@ RENDER.work=function(){
     return;
   }
   const wl=BOOK_LESSONS.filter(isWorkLesson).sort((a,b)=>String(a.id).localeCompare(String(b.id)));
-  const au=wl.filter(b=>/^au/.test(b.id)), qa=wl.filter(b=>/^qa/.test(b.id)), qp=wl.filter(b=>/^qp/.test(b.id));
+  const au=wl.filter(b=>/^au/.test(b.id)), qa=wl.filter(b=>/^qa/.test(b.id)), qp=wl.filter(b=>/^qp/.test(b.id)), my=wl.filter(b=>/^my/.test(b.id));
   v.innerHTML=
     '<div class="card"><h2 class="sec" style="margin:0 0 4px">💼 職場</h2>'
-    +'<div class="hint">工作上用得到的英文：稽核問答、品保新聞案例、品保實務情境，以及設備 3D 部件認識。</div></div>'
+    +'<div class="hint">工作上用得到的英文：稽核問答、品保新聞案例、品保實務情境、用自己一週工作句子寫成的週記，以及設備 3D 部件認識。</div></div>'
     +'<h3 class="sec" style="margin:14px 2px 0">🔍 稽核英文 <span class="muted" style="font-weight:400">'+au.length+' 課</span></h3>'
     +'<div class="bkc-grid" role="list">'+au.map((b,i)=>bkCard(b,i+1,{go:"wkOpenLesson('"+b.id+"')"})).join('')+'</div>'
     +(qa.length?'<h3 class="sec" style="margin:18px 2px 0">📰 品保新聞 <span class="muted" style="font-weight:400">'+qa.length+' 課・真實召回案例 → 8D</span></h3>'
       +'<div class="bkc-grid" role="list">'+qa.map((b,i)=>bkCard(b,i+1,{go:"wkOpenLesson('"+b.id+"')"})).join('')+'</div>':'')
     +(qp.length?'<h3 class="sec" style="margin:18px 2px 0">🧪 品保實務 <span class="muted" style="font-weight:400">'+qp.length+' 課・工廠日常情境</span></h3>'
       +'<div class="bkc-grid" role="list">'+qp.map((b,i)=>bkCard(b,i+1,{go:"wkOpenLesson('"+b.id+"')"})).join('')+'</div>':'')
+    +(my.length?'<h3 class="sec" style="margin:18px 2px 0">📝 我的職場週記 <span class="muted" style="font-weight:400">'+my.length+' 課・我這週上班講的話</span></h3>'
+      +'<div class="bkc-grid" role="list">'+my.slice().reverse().map((b,i)=>bkCard(b,my.length-i,{go:"wkOpenLesson('"+b.id+"')"})).join('')+'</div>':'')
     +'<h3 class="sec" style="margin:18px 2px 0">🏭 設備 3D</h3>'
     +'<div id="wk-eq" class="bkc-grid" role="list"><div class="muted">載入中…</div></div>';
   wkLoadEquip().then(list=>{
