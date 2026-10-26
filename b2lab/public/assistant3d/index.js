@@ -5,6 +5,8 @@ root.innerHTML=`<style>
 *{box-sizing:border-box}button,input{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,input:focus-visible{outline:3px solid #bc6b2b;outline-offset:3px}[hidden]{display:none!important}
 .launch{display:block;width:var(--size);height:var(--size);margin-left:auto;border:0;border-radius:50%;background:radial-gradient(circle at 30% 20%,#fff,#dddcd3);box-shadow:0 3px 14px #36261130;padding:0;position:relative}
 .head{position:absolute;inset:7%;border-radius:50%;background:#2b393c;border:3px solid #eee9de;border-top-color:#ee893e}.head:before{content:'••';position:absolute;color:#b0e9d6;font-size:calc(var(--size)*.52);letter-spacing:calc(var(--size)*.1);left:14%;top:-19%}.head:after{content:'⌣';position:absolute;left:33%;top:24%;color:#b0e9d6;font-size:calc(var(--size)*.4)}
+:host([data-shy]) .head{background:radial-gradient(ellipse at 22% 62%,#ff899b 0 8%,transparent 13%),radial-gradient(ellipse at 78% 62%,#ff899b 0 8%,transparent 13%),#2b393c;transform:rotate(-7deg)}
+:host([data-shy]) .head:before{content:'⌒⌒';font-size:calc(var(--size)*.28);top:8%;left:17%}
 .launch canvas{position:absolute;inset:0;width:100%!important;height:100%!important}.launch.rendered .head{display:none}
 .launch{touch-action:none;user-select:none;cursor:grab}.launch.dragging{cursor:grabbing}
 :host([data-sleeping]) .head:before{content:'––';font-size:calc(var(--size)*.35);top:3%}:host([data-sleeping]) .launch:after{content:'z';position:absolute;right:-2px;top:-7px;border-radius:50%;background:#fffcf7;color:#756c60;font-size:12px;padding:0 4px}
@@ -35,7 +37,9 @@ const text=s=>{const e=document.createElement('div');e.innerHTML=String(s||'');r
 const stored=k=>{try{return localStorage.getItem('b2lab_assistant_'+k);}catch{return null;}};
 function store(k,v){try{localStorage.setItem('b2lab_assistant_'+k,v);}catch{}}
 function stop(){audioToken++;if(ownedAudio)api.stop();ownedAudio=false;q('.status').textContent='';}
-function animate(){head?.setSleeping(sleeping);head?.animate(!launch.hidden&&!sleeping&&!document.hidden&&!reducedMotion.matches,()=>ownedAudio&&api.busy());}
+function syncFace(){const shy=!q('.notice').hidden&&q('.notice').dataset.shy==='true'&&!sleeping;host.toggleAttribute('data-shy',shy);head?.setShy(shy);}
+new MutationObserver(syncFace).observe(q('.notice'),{attributes:true,attributeFilter:['hidden','data-shy']});
+function animate(){syncFace();head?.setSleeping(sleeping);head?.animate(!launch.hidden&&!sleeping&&!document.hidden&&!reducedMotion.matches,()=>ownedAudio&&api.busy());}
 function wake(){lastUsed=Date.now();clearTimeout(idleTimer);idleTimer=setTimeout(idle,IDLE_MS);if(sleeping){sleeping=false;host.removeAttribute('data-sleeping');launch.setAttribute('aria-label','開啟 Mini果 英文助理');animate();}}
 function sync(){
  const next=api.context();
@@ -170,7 +174,7 @@ function checkNews(force=false){
  const seen=seenNews(n),fresh=n.articles.filter(a=>!seen.has(a.id));
  if(!fresh.length||opened||sleeping||launch.hidden||document.hidden)return;
  if(greetSeen(n.profile)!==n.date)return;
- q('.notice').dataset.act='news';q('.notice-view').textContent='看看';q('.notice-text').textContent='今天新增 '+fresh.length+' 篇文章！';q('.notice').hidden=false;rememberNews(n);
+ q('.notice').dataset.shy='false';q('.notice').dataset.act='news';q('.notice-view').textContent='看看';q('.notice-text').textContent='今天新增 '+fresh.length+' 篇文章！';q('.notice').hidden=false;rememberNews(n);
 }
 q('.notice-dismiss').onclick=()=>{q('.notice').hidden=true;};
 q('.notice-view').onclick=()=>{const a=q('.notice').dataset.act||'news',id=q('.notice').dataset.id;q('.notice').hidden=true;
@@ -182,14 +186,14 @@ function checkGreet(){
  const g=api.greet(),who=GREET[g.profile]||[g.profile,''];
  if(greetSeen(g.profile)===g.date)return;
  const hi=g.hour<5?'Still up':g.hour<12?'Good morning':g.hour<18?'Good afternoon':'Good evening';
- const lines=[hi+'，'+who[0]+' '+who[1]+'！'];
+ const lines=[g.profile==='tom'?'要來丁丁嗎?':hi+'，'+who[0]+' '+who[1]+'！'];
  lines.push(g.streak>=2?'連續學習 '+g.streak+' 天，繼續保持！':'新的一天，從今天開始累積吧。');
  let act='news',id='',label='看看';
  if(g.due>0){lines.push('有 '+g.due+' 張單字卡該複習了。');act='vocab';label='去複習';}
  else if(g.last){lines.push('上次學到「'+g.last.title+'」。');act='book';id=g.last.id;label='繼續';}
  const n=api.news(releases),seen=seenNews(n),fresh=n.articles.filter(a=>!seen.has(a.id));
  if(fresh.length){lines.push('今天新增 '+fresh.length+' 篇文章。');rememberNews(n);}
- const nt=q('.notice');nt.dataset.act=act;nt.dataset.id=id;q('.notice-view').textContent=label;
+ const nt=q('.notice');nt.dataset.shy=String(g.profile==='tom');nt.dataset.act=act;nt.dataset.id=id;q('.notice-view').textContent=label;
  q('.notice-text').textContent=lines.join('\n');nt.hidden=false;store('greet_seen_'+g.profile,g.date);
 }
 function idle(){
