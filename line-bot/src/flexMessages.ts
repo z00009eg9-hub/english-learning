@@ -914,23 +914,18 @@ export function buildSentenceDetailMessage(r: SentenceCardData) {
 
 /* ---------- 「本週句子」清單 ---------- */
 
-const WEEK_LIST_MAX = 12;
+/* 一頁 10 句、最多 6 頁（60 句）。LINE carousel 最多 12 頁、整則 50KB，60 句約 35KB，留一點餘裕 */
+const WEEK_PAGE_SIZE = 10;
+const WEEK_PAGES_MAX = 6;
 
-export function buildWeekSentencesMessage(label: string, week: string, list: SentenceCardData[]) {
-  if (!list.length) {
-    return flex(`${label}：還沒有句子`, bubble([
-      ...headerBox(label, week, ACCENT),
-      emptyLine('這週還沒有記句子。傳一句上班講的中文（超過 4 個字或有標點），我就會記下來。'),
-    ]));
-  }
-  const done = list.filter((r) => r.corrected).length;
-  const shown = list.slice(-WEEK_LIST_MAX);
-  const items = shown.map((r, i) => ({
+function weekItem(r: SentenceCardData, first: boolean) {
+  return {
     type: 'box',
     layout: 'vertical',
-    margin: i === 0 ? 'lg' : 'xl',
+    margin: first ? 'lg' : 'xl',
     // 點一下等同按那句的「常犯錯・更多」
-    action: { type: 'postback', data: buildPostback('mis', r.id), displayText: cut(r.zh, 40), label: '詳細' },
+    action: { type: 'postback', data: buildPostback('mis', r.id), displayText: cut(r.zh, 20), label: '詳細' },
+    // 清單只當總覽（原句＋口語英文），英文的中文翻譯點進去看 —— 60 句全列也要壓在 LINE 50KB 內
     contents: [
       {
         type: 'text',
@@ -940,21 +935,46 @@ export function buildWeekSentencesMessage(label: string, week: string, list: Sen
           r.corrected
             ? { type: 'span', text: '✅ 已校正  ', color: RIGHT }
             : { type: 'span', text: '⚠ 初稿  ', color: META },
-          { type: 'span', text: cut(r.zh, 80), color: TRANS },
+          { type: 'span', text: cut(r.zh, 40), color: TRANS },
         ],
       },
       r.sp
-        ? { type: 'text', text: cut(r.sp, 200), size: 'sm', weight: 'bold', color: INK, wrap: true, margin: 'xs' }
+        ? { type: 'text', text: cut(r.sp, 140), size: 'sm', weight: 'bold', color: INK, wrap: true, margin: 'xs' }
         : { type: 'text', text: '英文說法週六補', size: 'sm', color: META, margin: 'xs' },
-      ...zhLine(r.spZh),
     ],
-  }));
+  };
+}
+
+/** 句子多（一週 30～40 句）時分成可以左右滑的多頁卡片；超過 60 句只列最新的 60 句 */
+export function buildWeekSentencesMessage(label: string, week: string, list: SentenceCardData[]) {
+  if (!list.length) {
+    return flex(`${label}：還沒有句子`, bubble([
+      ...headerBox(label, week, ACCENT),
+      emptyLine('這週還沒有記句子。傳一句上班講的中文（超過 4 個字或有標點），我就會記下來。'),
+    ]));
+  }
+  const done = list.filter((r) => r.corrected).length;
+  const shown = list.slice(-WEEK_PAGE_SIZE * WEEK_PAGES_MAX);
   const more = list.length - shown.length;
-  const body = [
-    ...headerBox(label, `${week}・${list.length} 句・已校正 ${done} 句`, ACCENT),
-    ...items,
-    ...(more > 0 ? [emptyLine(`（較早的 ${more} 句沒有列出）`)] : []),
-    { type: 'text', text: '點一句看常犯錯與書面說法', size: 'xxs', color: META, margin: 'xl' },
-  ];
-  return flex(`${label}（${list.length} 句）`, bubble(body));
+  const pages: SentenceCardData[][] = [];
+  for (let i = 0; i < shown.length; i += WEEK_PAGE_SIZE) pages.push(shown.slice(i, i + WEEK_PAGE_SIZE));
+
+  const bubbles = pages.map((page, p) => {
+    const last = p === pages.length - 1;
+    const sub = `${week}・${list.length} 句・已校正 ${done} 句` + (pages.length > 1 ? `・${p + 1}/${pages.length}` : '');
+    return bubble([
+      ...headerBox(label, sub, ACCENT),
+      ...(p === 0 && more > 0 ? [emptyLine(`（較早的 ${more} 句沒有列出）`)] : []),
+      ...page.map((r, i) => weekItem(r, i === 0)),
+      {
+        type: 'text',
+        text: last ? '點一句看常犯錯與書面說法' : '點一句看詳細・往左滑看下一頁 →',
+        size: 'xxs',
+        color: META,
+        margin: 'xl',
+      },
+    ]);
+  });
+  const contents = bubbles.length === 1 ? bubbles[0] : { type: 'carousel', contents: bubbles };
+  return flex(`${label}（${list.length} 句）`, contents);
 }

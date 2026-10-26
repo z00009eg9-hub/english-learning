@@ -1,6 +1,6 @@
 # B2 Read — 我的職場週記任務書（my##）
 
-**每週六**由排程 `b2lab-reading-weekly` 的「第 1 段」執行。把使用者這週上班講的中文句子，寫成一課「📝 我的職場週記」，放進職場分頁（`data-book.js`，id `my01`、`my02`…）。
+**每週六**由排程 `b2lab-reading-weekly` 的「第 1 段」執行。把使用者這週上班講的中文句子**依主題分類**，每個主題寫成一課「📝 我的職場週記」（**每週 0～3 課**），放進職場分頁（`data-book.js`，id `my01`、`my02`…）。
 這一段跟第 2 段「原創分級文章」（`READING_TASK.md`）**各自驗證、各自 commit**，這段失敗只還原自己的檔案，不影響第 2 段。
 
 ## 句子從哪來（⚠ 隱私）
@@ -27,39 +27,45 @@
    - **逐句校正（必做）**：LINE 上的書面／口語／常犯錯是免費 AI 即時產生的初稿，常有錯（例：把道地的 "just came in" 說成錯、口語版寫成 "has a color difference issue" 這種中式英文）。使用者是學習者、無法自己判錯，所以每一句（有 `- LINE：` 那行的）都要檢查：文法、是否美式道地口語、常犯錯的 ✗ 是否真的錯、✓ 是否真的對、說明是否正確。錯的直接改寫。**每一句檢查完（不管有沒有改）都在 `- LINE：<id>` 那行後面加 `（已校正）`**。格式維持 `英文（中文）`、關鍵字 `en（中文）, en（中文）`、常犯錯 `✗ 錯 → ✓ 對：說明`，中文也要一起檢查。回報時列出校正了幾句、各改了什麼（只寫英文部分，不寫原句）。
    - **寫回 LINE**：校正完執行 `node line-bot/scripts/push-corrections.mjs`（可先加 `--dry` 看會送什麼）。之後使用者在 LINE 按舊卡片的「常犯錯・更多」、或傳「本週句子」，看到的就是校正版並標「✅ 已校正」；口語版有改的會重做語音。這一步失敗只回報，不擋週記課。
    - 這一步失敗（網路、401）只回報，不影響後面用本機已有的句子繼續做。
-1. 收集 `b2lab/my-week/*.md` 裡所有 `- [ ]` 的句子（可以跨週，上週不夠 5 句留下來的也算）。
-   - **少於 5 句：這段直接跳過**，不改任何檔案。回報「本週 N 句，留到下週」，然後繼續第 2 段。
+1. **收集、合併、分類**（句子可能一週 30～40 句，不能全塞進一課）：
+   - 收集 `b2lab/my-week/*.md` 裡所有 `- [ ]` 的句子（可以跨週，之前留下來的也算）。
+   - **合併重複**：意思相同或幾乎相同的句子（例如一週講三次「來料有色差」）算同一句，挑說法最完整的當代表；其他幾句之後一起標成同一課。
+   - **依主題分組**：用工作情境分，例如來料檢驗、塗裝外觀、量測校驗、製程異常、客訴／8D、供應商溝通、開會報告、日常溝通。一句只歸一組；歸不了的放「日常溝通」。
+   - **出課規則**：合併後**滿 5 句的主題才出課**，一課 5～8 句（超過 8 句挑最常用的 8 句，其餘留下週）。**每週最多 3 課**，超過 3 個主題就挑句子最多的 3 個（同數量挑比較舊的先出）。
+   - 沒有任何主題滿 5 句：**這段直接跳過**，不改任何檔案。回報各主題目前累積幾句，然後繼續第 2 段。
+   - 不滿 5 句的主題、和超出上限的句子都維持 `- [ ]`，下週繼續累積。
+   - 下面第 2～7 步**每一課各做一次**（id 依序 +1）；第 8～10 步全部課做完後一起做一次。
 2. **匿名化**（先做完，才開始寫內容）：
    - 公司、客戶、供應商換成 Customer A／Supplier B；人名換成職稱（my supervisor、the line leader）。
    - 料號、批號換成 part A、Lot 1；精確數量、日期改成大概的說法（about 200 pieces、last week）。
    - 產品類型、問題類型、量測方法可以保留，例如馬達上蓋、色差、塗裝、孔距。這些就是要學的東西。
    - 把這次找到的專有名詞補進 `redact.txt`。
 3. **只用句子裡的事實**：不另外捏造數字、原因或結果。句子之間的空白可以用很一般的連接（例如 "Later that week…"），但不能新增事件。
-4. 讀 `myweek-state.json` 拿 `lastId`；新課 id 是 `my(lastId+1)`，兩位數補零。看 `public/data-book.js` 裡的 `qp04` 當格式範本，新課插在 qp 系列之後（lessons 陣列裡最後一個 qp/my 課的後面）。
+4. 讀 `myweek-state.json` 拿 `lastId`；這週第一課 id 是 `my(lastId+1)`、第二課 `+2`…，兩位數補零。看 `public/data-book.js` 裡的 `qp04` 當格式範本，新課插在 qp 系列之後（lessons 陣列裡最後一個 qp/my 課的後面）。
    - 頂層欄位：`id, icon:'📝', date:執行當天, title, titleCn, topics, hwTitle, hw, vocabTitle, vocab, phrasesTitle, phrases, grammarTitle, grammar, cmpTitle, cmp, reading`。**不加 `video`**（週記不做影片版）。
-   - `title`：`My Work Week NN — <本週主軸，英文>`；`titleCn`：`我的職場週記 NN｜<本週主軸>`。
-   - `topics` 第一個詞固定是「我的職場週記」，它會變成卡片上的分類標籤；後面接本週主題詞。
-   - `hw`（`hwTitle: "中翻英 Say It in English"`）：每句（匿名化後）一題，最多 8 題，挑最常用的。`cn` 是使用者的原意，`ok` 是自然的英文，`pat` 是句型，`note` 用 1～2 句繁中說明。使用者原本的說法很可能有典型錯誤時，改用 `wrong`/`fix`。
+   - `title`：`My Work Week NN — <這課的主題，英文>`；`titleCn`：`我的職場週記 NN｜<這課的主題>`（例：`我的職場週記 03｜塗裝外觀`）。
+   - `topics` 第一個詞固定是「我的職場週記」，它會變成卡片上的分類標籤；第二個是主題名，後面接這課的主題詞。
+   - `hw`（`hwTitle: "中翻英 Say It in English"`）：這課每句（匿名化後、合併後）一題，5～8 題。英文用第 0 步**校正後**的版本。`cn` 是使用者的原意，`ok` 是自然的英文，`pat` 是句型，`note` 用 1～2 句繁中說明。使用者原本的說法很可能有典型錯誤時，改用 `wrong`/`fix`。
    - `vocab` 6～8 個：`{w, ipa, pos, cn, ex, exCn}`。音標一律美式 Cambridge，用 `/…/`。`ex` 要原創、換情境，**不可與本文連續 4 字相同**。
    - `phrases` 4～6 個搭配詞；`grammar` 3 個句型（`k` 用 `MY<nn>-A/B/C`）；`cmp` 2 組易混淆。欄位名照 qp04（`u/sc/ex/exCn/cn`）。
    - `reading` 依序 4 段：
      1. `bar:"週報｜<主軸>"`：📧 一封寄給主管的週報 email，4～6 段 `{en, cn}`，第一行 `Subject: …`。加 3 題 `questions:[{q,qCn,a,aCn}]`。
      2. `bar:"會議｜<主軸>"`：🗣 同一批事件的口語對話，用 `Supervisor:`／`You:`（或 `Supplier:`），8～12 句。
      3. `bar:"討論｜下週我會怎麼做"`：3～4 個問句，讓使用者自己想下一步。
-     4. `bar:"隨身速查｜本週 N 句"`：這週每句的英文（口語版）＋中文。
+     4. `bar:"隨身速查｜本課 N 句"`：這課每句的英文（口語版）＋中文。
    - 文章難度 B1～B1+，句子短、職場口語，避免學術腔。中文用台灣工廠口語（SOP、來料、色差、特採）。
 5. 插圖：在 `data-book.js` 的 `S` 物件加 `my##:[[[五個圖示 key], '圖說']]`，放在 qp 那幾行附近。圖示 key 只能用 `I` 圖示庫裡已有的，5 個不重複；圖說用「A → B → C → D → E。」的格式，不寫圖示名稱。
-6. 更新 `myweek-state.json`：`lastId`、`lastRun`、`runs` 加一筆 `{id, date, sentences:N, theme}`。**不記任何原句**。
-7. 把用過的句子在 `my-week/*.md` 裡改成 `- [x] … → my##`。這是本機檔，不 commit。
+6. 更新 `myweek-state.json`：`lastId`、`lastRun`、`runs` **每課加一筆** `{id, date, sentences:N, theme}`。**不記任何原句**。
+7. 把用過的句子在 `my-week/*.md` 裡改成 `- [x] … → my##`（被合併掉的重複句也標同一個 my##）。這是本機檔，不 commit。
 8. `node tools/build-rel.js`（更新 `data-rel.js`）；升 `public/sw.js` 的 `CACHE`（先 `git pull`，再從最新版號 +1）。
 9. **驗證（沒過不要 commit）**：
-   - 用 node 載入 `data-book.js`：新課欄位齊全、`hw` 都有 `cn` 且有 `ok` 或 `fix`、`vocab`/`grammar`/`cmp` 都有 `exCn`、vocab 例句與本文沒有連續 4 字相同。
+   - 用 node 載入 `data-book.js`：**每一課**欄位齊全、`hw` 都有 `cn` 且有 `ok` 或 `fix`、`vocab`/`grammar`/`cmp` 都有 `exCn`、vocab 例句與本文沒有連續 4 字相同。
    - **洩漏檢查**：`redact.txt` 每一行都不能出現在新課的 JSON 字串裡（不分大小寫）。另外不能有像料號的字串，例如 `/[A-Z]{2,}-?\d{3,}/`，標準編號（EN ISO 20957 這類）除外。
    - `node tools/check-ipa.js && node tools/check-art.js && node tools/check-icons.js && node tools/check-emoji.js`
    - 本機開站（launch.json 的 `b2lab`）：職場分頁出現「📝 我的職場週記」，點進去內容正常、沒有 console error。
-10. commit＋push：只 add `public/data-book.js`、`public/data-rel.js`、`public/sw.js`、`myweek-state.json`。訊息寫 `feat(b2lab): 我的職場週記 my## <主軸>（SW vNNN）`，署名 z00009eg9。push 後 CI 自動部署；AI 語音交給每天的 `b2lab-audio-sync` 補。
+10. commit＋push：只 add `public/data-book.js`、`public/data-rel.js`、`public/sw.js`、`myweek-state.json`。訊息寫 `feat(b2lab): 我的職場週記 my##–my## <主題、主題>（SW vNNN）`（只有一課就寫一個），署名 z00009eg9。push 後 CI 自動部署；AI 語音交給每天的 `b2lab-audio-sync` 補。
 11. **失敗處理**：任何一步修不好就 `git checkout -- <這段改過的檔>`，`my-week/*.md` 的勾選也改回 `[ ]`，在回報寫清楚原因，然後繼續第 2 段。
 
 ## 回報（繁體中文）
 
-本週幾句、課的 id／標題、3 個句型、匿名化換掉了哪些類別（不列原詞）、驗證結果。
+本週收到幾句、合併後幾句、各主題累積幾句；出了哪幾課（id／標題／句數／3 個句型）；哪些主題留到下週、還差幾句；第 0 步校正了幾句；匿名化換掉了哪些類別（不列原詞）；驗證結果。

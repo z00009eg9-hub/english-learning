@@ -480,3 +480,53 @@ describe('週六校正寫回（A）與「本週句子」（B）', () => {
     expect(msgs[1].quickReply.items[0].action).toMatchObject({ type: 'message', text: '本週句子' });
   });
 });
+
+describe('本週句子：句子很多時分頁', () => {
+  // 直接測卡片組裝，不經過 KV
+  const mk = (n: number, long = false) =>
+    Array.from({ length: n }, (_, i) => ({
+      id: `20261026T0900${String(i).padStart(2, '0')}-abcd`,
+      zh: long ? '馬達固定盤使用的原料鐵板均發現壓傷痕跡，要跟供應商確認來料檢驗的抽樣數量與允收標準'.repeat(2) : `第 ${i + 1} 句中文`,
+      sp: long ? 'The steel plates for the motor mounting plates all have dent marks, so we need to check with the supplier. '.repeat(2) : `Sentence ${i + 1}.`,
+      fm: '',
+      spZh: long ? '馬達固定盤的鐵板全部都有壓傷，要跟供應商確認來料抽樣數量與允收標準。'.repeat(2) : `第 ${i + 1} 句`,
+      kw: [],
+      mis: [],
+      ai: true,
+      corrected: i % 2 === 0,
+    }));
+
+  it('10 句以內是單頁', async () => {
+    const { buildWeekSentencesMessage } = await import('../src/flexMessages');
+    expect(buildWeekSentencesMessage('本週句子', '2026-W44', mk(10)).contents.type).toBe('bubble');
+  });
+
+  it('40 句分 4 頁，全部都列出、標頁碼', async () => {
+    const { buildWeekSentencesMessage } = await import('../src/flexMessages');
+    const msg: any = buildWeekSentencesMessage('本週句子', '2026-W44', mk(40));
+    expect(msg.contents.type).toBe('carousel');
+    expect(msg.contents.contents).toHaveLength(4);
+    const s = S(msg);
+    for (const n of [1, 20, 40]) expect(s).toContain(`Sentence ${n}.`);
+    expect(s).toContain('40 句・已校正 20 句・1/4');
+    expect(s).toContain('往左滑看下一頁');
+  });
+
+  it('70 句只列最新 60 句（6 頁），並說明較早的沒列', async () => {
+    const { buildWeekSentencesMessage } = await import('../src/flexMessages');
+    const msg: any = buildWeekSentencesMessage('本週句子', '2026-W44', mk(70));
+    expect(msg.contents.contents).toHaveLength(6);
+    const s = S(msg);
+    expect(s).not.toContain('"Sentence 10."');
+    expect(s).toContain('Sentence 70.');
+    expect(s).toContain('較早的 10 句沒有列出');
+  });
+
+  it('最長的內容也在 LINE 上限內（carousel 50KB、每頁 30KB）', async () => {
+    const { buildWeekSentencesMessage } = await import('../src/flexMessages');
+    const msg: any = buildWeekSentencesMessage('本週句子', '2026-W44', mk(60, true));
+    const bytes = (x: unknown) => new TextEncoder().encode(JSON.stringify(x)).length;
+    expect(bytes(msg.contents)).toBeLessThan(50_000);
+    for (const b of msg.contents.contents) expect(bytes(b)).toBeLessThan(30_000);
+  });
+});
