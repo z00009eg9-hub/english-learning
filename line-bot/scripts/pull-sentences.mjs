@@ -36,9 +36,9 @@ console.log(`[pull] Bot 上有 ${sentences.length} 句還沒取`);
 function block(s) {
   const lines = [`- [ ] ${s.zh.replace(/\s*\n\s*/g, ' ')}`];
   if (s.ai) {
-    if (s.fm) lines.push(`  - 書面：${s.fm}`);
-    if (s.sp) lines.push(`  - 口語：${s.sp}`);
-    if (s.kw?.length) lines.push(`  - 關鍵字：${s.kw.join(', ')}`);
+    if (s.fm) lines.push(`  - 書面：${s.fm}${s.fmZh ? `（${s.fmZh}）` : ''}`);
+    if (s.sp) lines.push(`  - 口語：${s.sp}${s.spZh ? `（${s.spZh}）` : ''}`);
+    if (s.kw?.length) lines.push(`  - 關鍵字：${s.kw.map((k, i) => (s.kwZh?.[i] ? `${k}（${s.kwZh[i]}）` : k)).join(', ')}`);
     for (const m of s.mis || []) lines.push(`  - 常犯錯：${m}`);
   } else {
     lines.push('  - （LINE 上 AI 沒翻出來，請補書面／口語／關鍵字）');

@@ -722,29 +722,54 @@ export interface SentenceCardData {
   kw: string[];
   mis: string[];
   ai: boolean;
+  spZh?: string;
+  fmZh?: string;
+  kwZh?: string[];
 }
 
-function kwTags(kw: string[]) {
-  return {
+/** 英文句下面的中文（小一級、灰） */
+const zhLine = (text: string | undefined) =>
+  text ? [{ type: 'text', text: cut(text, 200), size: 'xs', color: TRANS, wrap: true, margin: 'xs' }] : [];
+
+/**
+ * 關鍵字標籤：兩個一排、等寬、可換行（橫排 flex:0 在 LINE 不會換行，長片語會被切掉）。
+ * 每個標籤是「英文 中文」，英文藍、中文灰。
+ */
+function kwTags(kw: string[], kwZh: string[] = []) {
+  const tag = (k: string, i: number) => ({
     type: 'box',
-    layout: 'horizontal',
-    spacing: 'sm',
-    margin: 'lg',
+    layout: 'vertical',
+    flex: 1,
+    backgroundColor: ACCENT_BG,
+    cornerRadius: '6px',
+    paddingAll: '4px',
+    paddingStart: '8px',
+    paddingEnd: '8px',
     contents: [
-      ...kw.slice(0, 3).map((k) => ({
-        type: 'box',
-        layout: 'vertical',
-        flex: 0,
-        backgroundColor: ACCENT_BG,
-        cornerRadius: '6px',
-        paddingAll: '4px',
-        paddingStart: '8px',
-        paddingEnd: '8px',
-        contents: [{ type: 'text', text: cut(k, 18), size: 'xxs', color: ACCENT }],
-      })),
-      { type: 'filler' },
+      {
+        type: 'text',
+        size: 'xxs',
+        wrap: true,
+        contents: [
+          { type: 'span', text: cut(k, 40), color: ACCENT },
+          ...(kwZh[i] ? [{ type: 'span', text: `  ${cut(kwZh[i], 20)}`, color: TRANS }] : []),
+        ],
+      },
     ],
-  };
+  });
+  const list = kw.slice(0, 4);
+  const rows: any[] = [];
+  for (let i = 0; i < list.length; i += 2) {
+    rows.push({
+      type: 'box',
+      layout: 'horizontal',
+      spacing: 'sm',
+      margin: i === 0 ? 'none' : 'sm',
+      // 單數個時補一個 filler，讓最後一個標籤維持半寬
+      contents: [tag(list[i], i), ...(list[i + 1] ? [tag(list[i + 1], i + 1)] : [{ type: 'filler' }])],
+    });
+  }
+  return { type: 'box', layout: 'vertical', margin: 'lg', contents: rows };
 }
 
 /** LINE 上的英文是 AI 即時產生、沒有人工確認 —— 學習者無法自己判錯，所以明講 */
@@ -766,10 +791,14 @@ export function buildSentenceSavedMessage(r: SentenceCardData, nth: number) {
   if (r.ai && r.sp) {
     body.push(
       { type: 'text', text: cut(r.sp, 300), size: 'lg', weight: 'bold', color: INK, wrap: true, margin: 'lg' },
+      ...zhLine(r.spZh),
       ...(r.fm && r.fm !== r.sp
-        ? [{ type: 'text', text: cut(r.fm, 300), size: 'sm', color: BODY, wrap: true, margin: 'md' }]
+        ? [
+            { type: 'text', text: cut(r.fm, 300), size: 'sm', color: BODY, wrap: true, margin: 'md' },
+            ...zhLine(r.fmZh !== r.spZh ? r.fmZh : ''),
+          ]
         : []),
-      ...(r.kw.length ? [kwTags(r.kw)] : []),
+      ...(r.kw.length ? [kwTags(r.kw, r.kwZh)] : []),
       AI_DRAFT_NOTE,
     );
   } else {
@@ -836,6 +865,7 @@ export function buildSentenceDetailMessage(r: SentenceCardData) {
       ...lines.map((t) => ({ type: 'text', text: cut(t, 300), size: 'sm', color: TEXT, wrap: true, margin: 'sm' })),
     ],
   });
+  const withZh = (box: any, zh?: string) => ({ ...box, contents: [...box.contents, ...zhLine(zh)] });
   const body: any[] = [
     ...headerBox(cut(r.zh, 60), 'MY SENTENCE', ACCENT),
     {
@@ -850,9 +880,11 @@ export function buildSentenceDetailMessage(r: SentenceCardData) {
       ],
     },
     AI_DRAFT_NOTE,
-    section('口語', [r.sp]),
-    ...(r.fm && r.fm !== r.sp ? [section('書面', [r.fm])] : []),
-    ...(r.kw.length ? [section('關鍵字', [r.kw.join('・')])] : []),
+    withZh(section('口語', [r.sp]), r.spZh),
+    ...(r.fm && r.fm !== r.sp ? [withZh(section('書面', [r.fm]), r.fmZh)] : []),
+    ...(r.kw.length
+      ? [section('關鍵字', [r.kw.map((k, i) => (r.kwZh?.[i] ? `${k} ${r.kwZh[i]}` : k)).join('・')])]
+      : []),
   ];
   return flex(`常犯錯：${r.zh}`, bubble(body));
 }

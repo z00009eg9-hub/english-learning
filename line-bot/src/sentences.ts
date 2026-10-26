@@ -24,7 +24,12 @@ export interface SentenceRecord {
   sp: string;
   /** 書面版 */
   fm: string;
+  /** 口語版／書面版的中文（AI 回譯；舊紀錄沒有） */
+  spZh?: string;
+  fmZh?: string;
   kw: string[];
+  /** 跟 kw 一一對應的中文 */
+  kwZh?: string[];
   /** 常犯錯 */
   mis: string[];
   /** ISO 時間 */
@@ -92,10 +97,11 @@ export function isoWeek(dateStr: string): string {
 
 const SYSTEM_PROMPT = `You help a Taiwanese quality-assurance engineer working in a factory in Vietnam say their work sentences in English.
 The user sends one Chinese sentence they actually said at work. Reply with JSON only:
-{"spoken": "...", "formal": "...", "keywords": ["..."], "mistakes": ["..."]}
+{"spoken": "...", "spoken_zh": "...", "formal": "...", "formal_zh": "...", "keywords": [{"en": "...", "zh": "..."}], "mistakes": ["..."]}
 - spoken: natural, casual American English a coworker would say out loud. Short.
 - formal: the same meaning for an email or report.
-- keywords: 2-4 key English words or phrases from your answers.
+- spoken_zh / formal_zh: what your English says, in Traditional Chinese as used in Taiwan factories (short, colloquial, 繁體中文).
+- keywords: 2-4 key English words or phrases from your answers, each with a short Traditional Chinese meaning.
 - mistakes: 1-2 typical ENGLISH mistakes a Chinese speaker would make when saying this sentence in English
   (word-for-word translation, wrong word choice, tense, articles). Format: "✗ <wrong English> → ✓ <better English>：<short reason in Traditional Chinese>".
   Both sides of the arrow must be English. Never write Chinese on either side of the arrow.
@@ -105,12 +111,16 @@ The user sends one Chinese sentence they actually said at work. Reply with JSON 
 Keep every fact from the sentence. Do not add numbers, causes or results that are not in it.
 
 Example input: 這批來料有毛邊，要退回供應商
-Example output: {"spoken": "This batch has burrs. We need to send it back to the supplier.", "formal": "The incoming lot has burrs and will be returned to the supplier.", "keywords": ["burrs", "incoming lot", "send back"], "mistakes": ["✗ This material has hair edge → ✓ This batch has burrs：毛邊是 burr，不是直翻 hair edge", "✗ return back to the supplier → ✓ return to the supplier：return 已經有 back 的意思"]}`;
+Example output: {"spoken": "This batch has burrs. We need to send it back to the supplier.", "spoken_zh": "這批有毛邊，要退回給供應商。", "formal": "The incoming lot has burrs and will be returned to the supplier.", "formal_zh": "此批來料有毛邊，將退回供應商。", "keywords": [{"en": "burrs", "zh": "毛邊"}, {"en": "incoming lot", "zh": "來料批"}, {"en": "send back", "zh": "退回"}], "mistakes": ["✗ This material has hair edge → ✓ This batch has burrs：毛邊是 burr，不是直翻 hair edge", "✗ return back to the supplier → ✓ return to the supplier：return 已經有 back 的意思"]}`;
 
 interface Translation {
   sp: string;
   fm: string;
+  spZh: string;
+  fmZh: string;
   kw: string[];
+  /** 跟 kw 一一對應的中文，沒有就是空字串 */
+  kwZh: string[];
   mis: string[];
 }
 
@@ -139,10 +149,24 @@ export function parseTranslation(raw: unknown): Translation | null {
   const sp = String(obj.spoken ?? '').trim();
   const fm = String(obj.formal ?? '').trim();
   if (!sp && !fm) return null;
+  // keywords 可能是 [{en, zh}] 或舊格式 ["..."]
+  const kws = (Array.isArray(obj.keywords) ? obj.keywords : [])
+    .map((k: any) =>
+      k && typeof k === 'object'
+        ? { en: String(k.en ?? '').trim(), zh: String(k.zh ?? '').trim() }
+        : { en: String(k ?? '').trim(), zh: '' },
+    )
+    .filter((k: { en: string }) => k.en)
+    .slice(0, 4);
+  const spZh = String(obj.spoken_zh ?? '').trim();
+  const fmZh = String(obj.formal_zh ?? '').trim();
   return {
     sp: (sp || fm).slice(0, 300),
     fm: (fm || sp).slice(0, 300),
-    kw: strList(obj.keywords, 4).map((k) => k.slice(0, 40)),
+    spZh: (spZh || fmZh).slice(0, 200),
+    fmZh: (fmZh || spZh).slice(0, 200),
+    kw: kws.map((k: { en: string }) => k.en.slice(0, 40)),
+    kwZh: kws.map((k: { zh: string }) => k.zh.slice(0, 20)),
     mis: strList(obj.mistakes, 2).map((k) => k.slice(0, 200)),
   };
 }
@@ -225,9 +249,16 @@ async function listAll(kv: KVNamespace): Promise<Array<{ name: string; metadata?
   return out;
 }
 
-export async function countWeek(env: Env, week: string): Promise<number> {
+/**
+ * 本週已有幾句（不含 excludeId）。
+ * KV 的 list 是最終一致、剛寫入的 key 可能要等一陣子才列得出來，
+ * 所以「第 N 句」要用「其他句數 + 1」算，不能把剛存的那句也靠 list 數。
+ */
+export async function countWeek(env: Env, week: string, excludeId = ''): Promise<number> {
   if (!env.MY_SENTENCES) return 0;
-  return (await listAll(env.MY_SENTENCES)).filter((k) => k.metadata?.week === week).length;
+  return (await listAll(env.MY_SENTENCES)).filter(
+    (k) => k.metadata?.week === week && k.name !== `s:${excludeId}`,
+  ).length;
 }
 
 export async function getSentence(env: Env, id: string): Promise<SentenceRecord | null> {
@@ -268,7 +299,10 @@ export async function saveSentence(
     zh: zh.slice(0, 500),
     sp: t?.sp ?? '',
     fm: t?.fm ?? '',
+    spZh: t?.spZh ?? '',
+    fmZh: t?.fmZh ?? '',
     kw: t?.kw ?? [],
+    kwZh: t?.kwZh ?? [],
     mis: t?.mis ?? [],
     at: now.toISOString(),
     date,
@@ -277,8 +311,8 @@ export async function saveSentence(
   };
   if (rec.sp) rec.audioMs = await synthesize(env, id, rec.sp);
   await putSentence(env, rec, { week });
-  const nth = await countWeek(env, week);
-  return { rec, nth: Math.max(nth, 1) };
+  const nth = (await countWeek(env, week, id)) + 1;
+  return { rec, nth };
 }
 
 /* ---------- 給週六排程：取句子 / 標記已取 ---------- */

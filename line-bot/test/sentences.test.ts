@@ -41,8 +41,14 @@ function fakeMp3(frames: number): Uint8Array {
 
 const AI_JSON = {
   spoken: "The motor covers just came in, and the color's a bit off.",
+  spoken_zh: '馬達上蓋剛到，顏色有點怪。',
   formal: 'The incoming motor covers show color variation.',
-  keywords: ['incoming', 'color variation', 'off'],
+  formal_zh: '來料馬達上蓋有色差。',
+  keywords: [
+    { en: 'incoming', zh: '來料' },
+    { en: 'color variation', zh: '色差' },
+    { en: 'off', zh: '不對勁' },
+  ],
   mistakes: ['✗ have color difference problem → ✓ the color is off：中文直翻很卡'],
 };
 
@@ -157,7 +163,10 @@ describe('日期與週次（越南 UTC+7）', () => {
 describe('AI 回傳解析', () => {
   it('物件、字串、夾雜文字都能解析', () => {
     expect(parseTranslation(AI_JSON)?.sp).toContain('motor covers');
-    expect(parseTranslation({ response: AI_JSON })?.kw).toHaveLength(3);
+    expect(parseTranslation({ response: AI_JSON })?.kw).toEqual(['incoming', 'color variation', 'off']);
+    expect(parseTranslation({ response: AI_JSON })?.kwZh).toEqual(['來料', '色差', '不對勁']);
+    // 舊格式 keywords 是字串陣列
+    expect(parseTranslation({ spoken: 'a', keywords: ['x', 'y'] })).toMatchObject({ kw: ['x', 'y'], kwZh: ['', ''] });
     expect(parseTranslation({ response: 'Here:\n' + JSON.stringify(AI_JSON) + '\nDone' })?.fm).toContain('incoming');
   });
   it('OpenAI 格式（2026-10 實測 llama-3.3 是這樣回）', () => {
@@ -192,6 +201,10 @@ describe('LINE 記句子', () => {
     expect(card).toContain('馬達上蓋剛來，有色差問題');
     expect(card).toContain("The motor covers just came in, and the color's a bit off.");
     expect(card).toContain('color variation');
+    // 中文同步顯示：口語、書面、關鍵字
+    expect(card).toContain('馬達上蓋剛到，顏色有點怪。');
+    expect(card).toContain('來料馬達上蓋有色差。');
+    expect(card).toContain('  色差');
     for (const l of ['常犯錯・更多', '改查單字', '刪掉']) expect(card).toContain(l);
     expect(msgs[1]).toMatchObject({ type: 'audio', duration: 2400 });
     expect(msgs[1].originalContentUrl).toMatch(/^https:\/\/bot\.example\.com\/audio\/[\w-]+\.mp3$/);
@@ -225,6 +238,19 @@ describe('LINE 記句子', () => {
     await send(env, text('馬達上蓋剛來，有色差問題'));
     const msgs = await send(env, text('#句 明天要跟供應商開會'));
     expect(S(msgs[0])).toContain('本週第 2 句');
+  });
+
+  it('KV list 還沒列出剛存的那句時，第 N 句仍然正確', async () => {
+    const env = makeEnv();
+    await send(env, text('馬達上蓋剛來，有色差問題'));
+    const realList = env.MY_SENTENCES.list.bind(env.MY_SENTENCES);
+    // 模擬最終一致：list 只回「已經存在的舊 key」，看不到這次新寫入的
+    const before = new Set(env.MY_SENTENCES.store.keys());
+    env.MY_SENTENCES.list = async (o: any) => {
+      const r = await realList(o);
+      return { ...r, keys: r.keys.filter((k: any) => before.has(k.name)) };
+    };
+    expect(S(await send(env, text('#句 第二句')))).toContain('本週第 2 句');
   });
 
   it('AI 失敗照樣存，回「英文說法週六補」、不送語音', async () => {
