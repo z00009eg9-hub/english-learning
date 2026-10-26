@@ -286,7 +286,12 @@ describe('LINE 記句子', () => {
     const id = [...env.MY_SENTENCES.store.keys()].find((k) => k.startsWith('s:'))!.slice(2);
 
     const mis = await send(env, postback(`a=mis&w=${id}`));
-    expect(S(mis)).toContain('have color difference problem');
+    // 錯的紅字刪除線、對的綠字，說明另起一行
+    const spans = mis[0].contents.body.contents[2].contents[1].contents;
+    expect(spans[1]).toMatchObject({ text: 'have color difference problem', color: '#FF0000', decoration: 'line-through' });
+    expect(spans[4]).toMatchObject({ text: 'the color is off', color: '#15803D' });
+    expect(S(mis)).toContain('中文直翻很卡');
+    expect(S(mis)).toContain('AI 初稿');
 
     const del = await send(env, postback(`a=del&w=${id}`));
     expect(S(del)).toContain('已刪掉');

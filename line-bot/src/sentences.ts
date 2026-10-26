@@ -99,6 +99,9 @@ The user sends one Chinese sentence they actually said at work. Reply with JSON 
 - mistakes: 1-2 typical ENGLISH mistakes a Chinese speaker would make when saying this sentence in English
   (word-for-word translation, wrong word choice, tense, articles). Format: "✗ <wrong English> → ✓ <better English>：<short reason in Traditional Chinese>".
   Both sides of the arrow must be English. Never write Chinese on either side of the arrow.
+  The wrong side must be really wrong (grammar error or unnatural Chinglish). Never mark natural English as wrong
+  (e.g. "just came in" is a natural way to say goods arrived). If you are not sure, give only one mistake.
+- For spoken, prefer what native speakers actually say ("the color's a bit off") over literal translations ("has a color difference issue").
 Keep every fact from the sentence. Do not add numbers, causes or results that are not in it.
 
 Example input: 這批來料有毛邊，要退回供應商

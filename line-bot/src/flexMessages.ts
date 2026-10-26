@@ -747,6 +747,16 @@ function kwTags(kw: string[]) {
   };
 }
 
+/** LINE 上的英文是 AI 即時產生、沒有人工確認 —— 學習者無法自己判錯，所以明講 */
+const AI_DRAFT_NOTE = {
+  type: 'text',
+  text: '⚠ AI 初稿，週六校正後才進週記課，先別背',
+  size: 'xxs',
+  color: META,
+  wrap: true,
+  margin: 'md',
+};
+
 /** 記句子的回覆卡：小字確認＋原句 → 口語版（大字）→ 書面版 → 關鍵字標籤 → 一排按鈕 */
 export function buildSentenceSavedMessage(r: SentenceCardData, nth: number) {
   const body: any[] = [
@@ -760,6 +770,7 @@ export function buildSentenceSavedMessage(r: SentenceCardData, nth: number) {
         ? [{ type: 'text', text: cut(r.fm, 300), size: 'sm', color: BODY, wrap: true, margin: 'md' }]
         : []),
       ...(r.kw.length ? [kwTags(r.kw)] : []),
+      AI_DRAFT_NOTE,
     );
   } else {
     body.push({ type: 'text', text: '英文說法週六補', size: 'md', weight: 'bold', color: BODY, margin: 'lg' });
@@ -787,6 +798,33 @@ export function buildSentenceSavedMessage(r: SentenceCardData, nth: number) {
   return flex(alt, bubble(body, footer));
 }
 
+/* 錯的英文用紅字＋紅色刪除線、對的用綠字 —— 跟 B2 Read 課本頁的 ✗ 標記一致 */
+const WRONG = '#FF0000';
+const RIGHT = '#15803D';
+
+/** 「✗ 錯 → ✓ 對：說明」拆成上色的 span；格式不符就原樣顯示 */
+export function mistakeLine(line: string): any[] {
+  const m = String(line ?? '').match(/^\s*[✗×xX❌]\s*(.+?)\s*(?:→|->)\s*[✓✔✅]\s*(.+?)\s*(?:[：:]\s*(.*))?$/);
+  if (!m) return [{ type: 'text', text: cut(line, 300), size: 'sm', color: TEXT, wrap: true, margin: 'md' }];
+  const [, wrong, right, why] = m;
+  return [
+    {
+      type: 'text',
+      size: 'sm',
+      wrap: true,
+      margin: 'md',
+      contents: [
+        { type: 'span', text: '✗ ', color: WRONG },
+        { type: 'span', text: cut(wrong, 120), color: WRONG, decoration: 'line-through' },
+        { type: 'span', text: '  →  ', color: META },
+        { type: 'span', text: '✓ ', color: RIGHT },
+        { type: 'span', text: cut(right, 120), color: RIGHT, weight: 'bold' },
+      ],
+    },
+    ...(why ? [{ type: 'text', text: cut(why, 160), size: 'xs', color: TRANS, wrap: true, margin: 'xs' }] : []),
+  ];
+}
+
 /** 「常犯錯・更多」：常犯錯＋兩種說法＋關鍵字 */
 export function buildSentenceDetailMessage(r: SentenceCardData) {
   const section = (title: string, lines: string[], first = false) => ({
@@ -800,7 +838,18 @@ export function buildSentenceDetailMessage(r: SentenceCardData) {
   });
   const body: any[] = [
     ...headerBox(cut(r.zh, 60), 'MY SENTENCE', ACCENT),
-    section('常犯錯', r.mis.length ? r.mis : ['（這句沒有特別要注意的地方）'], true),
+    {
+      type: 'box',
+      layout: 'vertical',
+      margin: 'lg',
+      contents: [
+        { type: 'text', text: '常犯錯', size: 'xxs', weight: 'bold', color: LABEL },
+        ...(r.mis.length
+          ? r.mis.flatMap(mistakeLine)
+          : [{ type: 'text', text: '（這句沒有特別要注意的地方）', size: 'sm', color: TEXT, wrap: true, margin: 'sm' }]),
+      ],
+    },
+    AI_DRAFT_NOTE,
     section('口語', [r.sp]),
     ...(r.fm && r.fm !== r.sp ? [section('書面', [r.fm])] : []),
     ...(r.kw.length ? [section('關鍵字', [r.kw.join('・')])] : []),
