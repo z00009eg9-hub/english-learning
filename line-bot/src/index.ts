@@ -19,16 +19,20 @@ import {
   buildRelatedWordsMessage,
   buildSentenceDetailMessage,
   buildSentenceSavedMessage,
+  buildWeekSentencesMessage,
   buildWordAudioMessages,
   buildWordFlexMessage,
   studyUrl,
   textMessage,
   withSaveAsSentence,
+  withWeekQuickReply,
 } from './flexMessages';
 import {
   ackSentences,
   canSaveSentences,
   classifyText,
+  Correction,
+  correctSentences,
   deleteSentence,
   getAudio,
   getSentence,
@@ -36,6 +40,8 @@ import {
   saveSentence,
   SentenceRecord,
   tokenOk,
+  weekCommand,
+  weekSentences,
 } from './sentences';
 import {
   findByChinese,
@@ -106,7 +112,10 @@ function sentenceAudio(rec: SentenceRecord, origin: string): unknown[] {
 
 async function messagesForSentence(text: string, env: Env, origin: string): Promise<unknown[]> {
   const { rec, nth } = await saveSentence(env, text);
-  return [buildSentenceSavedMessage(rec, nth), ...sentenceAudio(rec, origin)];
+  const messages = [buildSentenceSavedMessage(rec, nth), ...sentenceAudio(rec, origin)];
+  // quick reply 只會顯示在最後一則訊息上
+  messages[messages.length - 1] = withWeekQuickReply(messages[messages.length - 1]);
+  return messages;
 }
 
 /** 中文 ≤4 字照舊查單字；記句子的使用者在結果卡底下多一顆「當句子存」 */
@@ -184,6 +193,12 @@ export async function messagesForEvent(
     if (event.message?.type !== 'text') return null;
     const text = event.message.text ?? '';
     if (canSave) {
+      // 「本週句子」只有 4 個字，要在判斷查單字／記句子之前先攔下來
+      const cmd = weekCommand(text);
+      if (cmd) {
+        const list = await weekSentences(env, cmd.week);
+        return [withWeekQuickReply(buildWeekSentencesMessage(cmd.label, cmd.week, list))];
+      }
       const c = classifyText(text);
       if (c.kind === 'sentence') return messagesForSentence(c.text, env, origin);
     }
@@ -219,8 +234,8 @@ export default {
       });
     }
 
-    /* 給週六排程（b2lab/MYWEEK_TASK.md）：取還沒處理的句子、處理完 ack */
-    if (url.pathname === '/sentences' || url.pathname === '/sentences/ack') {
+    /* 給週六排程（b2lab/MYWEEK_TASK.md）：取還沒處理的句子、處理完 ack、校正完寫回 */
+    if (url.pathname === '/sentences' || url.pathname === '/sentences/ack' || url.pathname === '/sentences/correct') {
       if (!tokenOk(request, env)) return new Response('Unauthorized', { status: 401 });
       if (request.method === 'GET' && url.pathname === '/sentences') {
         return Response.json({ sentences: await pendingSentences(env) }, {
@@ -231,6 +246,13 @@ export default {
         const body = (await request.json().catch(() => ({}))) as { ids?: unknown };
         const ids = Array.isArray(body.ids) ? body.ids.map(String) : [];
         return Response.json({ acked: await ackSentences(env, ids) });
+      }
+      if (request.method === 'POST' && url.pathname === '/sentences/correct') {
+        const body = (await request.json().catch(() => ({}))) as { items?: unknown };
+        const items = (Array.isArray(body.items) ? body.items : []).filter(
+          (x): x is Correction => !!x && typeof x === 'object' && typeof (x as Correction).id === 'string',
+        );
+        return Response.json(await correctSentences(env, items));
       }
       return new Response('Method Not Allowed', { status: 405 });
     }

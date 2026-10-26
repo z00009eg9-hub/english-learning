@@ -15,6 +15,8 @@ export const TTS_MODEL = '@cf/deepgram/aura-2-en';
 const AUDIO_TTL_S = 60 * 24 * 3600;
 /** 週六取走（ack）之後再留 14 天就自動消失 */
 const ACKED_TTL_S = 14 * 24 * 3600;
+/** 校正過的留 30 天，讓「上週句子」和舊卡片的按鈕都還看得到正解 */
+const CORRECTED_TTL_S = 30 * 24 * 3600;
 
 export interface SentenceRecord {
   id: string;
@@ -42,6 +44,9 @@ export interface SentenceRecord {
   ai: boolean;
   /** 口語版語音長度 ms；0 或沒有＝沒有語音 */
   audioMs?: number;
+  /** 週六由 Claude 逐句檢查過（POST /sentences/correct 寫回），內容才算正解 */
+  corrected?: boolean;
+  correctedAt?: string;
 }
 
 interface Meta {
@@ -344,4 +349,81 @@ export async function ackSentences(env: Env, ids: string[]): Promise<number> {
     n++;
   }
   return n;
+}
+
+/* ---------- 週六校正寫回（A）與「本週句子」（B） ---------- */
+
+export interface Correction {
+  id: string;
+  sp?: string;
+  fm?: string;
+  spZh?: string;
+  fmZh?: string;
+  kw?: string[];
+  kwZh?: string[];
+  mis?: string[];
+}
+
+const clip = (v: unknown, n: number) => String(v ?? '').trim().slice(0, n);
+const clipList = (v: unknown, max: number, n: number) =>
+  Array.isArray(v) ? v.slice(0, max).map((x) => clip(x, n)) : undefined;
+
+/**
+ * 把校正後的內容寫回 KV。口語版有改才重做語音（同一個 /audio/<id>.mp3，
+ * 舊卡片的語音也跟著變正確）。重送同樣內容不會重複花 TTS 額度。
+ */
+export async function correctSentences(
+  env: Env,
+  items: Correction[],
+  now = new Date(),
+): Promise<{ updated: number; notFound: string[]; reTts: number }> {
+  const notFound: string[] = [];
+  let updated = 0;
+  let reTts = 0;
+  for (const c of items.slice(0, 100)) {
+    const rec = await getSentence(env, clip(c.id, 40));
+    if (!rec) {
+      notFound.push(String(c.id));
+      continue;
+    }
+    const sp = c.sp !== undefined ? clip(c.sp, 300) : rec.sp;
+    const spChanged = sp !== rec.sp;
+    const next: SentenceRecord = {
+      ...rec,
+      sp,
+      fm: c.fm !== undefined ? clip(c.fm, 300) : rec.fm,
+      spZh: c.spZh !== undefined ? clip(c.spZh, 200) : rec.spZh,
+      fmZh: c.fmZh !== undefined ? clip(c.fmZh, 200) : rec.fmZh,
+      kw: clipList(c.kw, 4, 40) ?? rec.kw,
+      kwZh: clipList(c.kwZh, 4, 20) ?? rec.kwZh,
+      mis: clipList(c.mis, 3, 200) ?? rec.mis,
+      ai: rec.ai || !!sp,
+      corrected: true,
+      correctedAt: now.toISOString(),
+    };
+    if (sp && (spChanged || !rec.audioMs)) {
+      next.audioMs = await synthesize(env, rec.id, sp);
+      reTts++;
+    }
+    await putSentence(env, next, { week: rec.week, acked: 1 }, CORRECTED_TTL_S);
+    updated++;
+  }
+  return { updated, notFound, reTts };
+}
+
+/** 某一週的所有句子（含已取走、已校正的），舊的在前 */
+export async function weekSentences(env: Env, week: string): Promise<SentenceRecord[]> {
+  if (!env.MY_SENTENCES) return [];
+  const keys = (await listAll(env.MY_SENTENCES)).filter((k) => k.metadata?.week === week);
+  const recs = await Promise.all(keys.map((k) => env.MY_SENTENCES!.get<SentenceRecord>(k.name, 'json')));
+  return recs.filter((r): r is SentenceRecord => !!r).sort((a, b) => a.at.localeCompare(b.at));
+}
+
+/** 「本週句子」「上週句子」指令 → 要看哪一週；不是指令回 null */
+export function weekCommand(text: string, now = new Date()): { week: string; label: string } | null {
+  const t = String(text ?? '').replace(/\s+/g, '');
+  const offset = /^(📋)?本週(的)?句子$/.test(t) ? 0 : /^(📋)?上週(的)?句子$/.test(t) ? 7 : -1;
+  if (offset < 0) return null;
+  const week = isoWeek(localDate(new Date(now.getTime() - offset * 86400000)));
+  return { week, label: offset ? '上週句子' : '本週句子' };
 }

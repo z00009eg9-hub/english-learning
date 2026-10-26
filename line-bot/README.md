@@ -322,4 +322,7 @@ Quiz、學習紀錄、Admin 後台、任何付費 Firebase 服務。
 - 語音：Workers AI `@cf/deepgram/aura-2-en` 唸口語版（約 160 neurons／句），mp3 存 KV（60 天），由 `/audio/<id>.mp3` 提供；卡片＋audio message 一起 reply。TTS 失敗只送卡片。（MeloTTS 回 WAV，LINE 不收，所以不用。）
 - 儲存：KV `MY_SENTENCES`，`s:<id>` 句子、`a:<id>` 語音。
 - 週六：`node line-bot/scripts/pull-sentences.mjs` 用 `GET /sentences` 取走、寫進 `b2lab/my-week/<週>.md`，再 `POST /sentences/ack`（ack 過的留 14 天自動刪）。
+- 週六校正：Claude 逐句檢查後標 `（已校正）`，`node line-bot/scripts/push-corrections.mjs` 用 `POST /sentences/correct` 寫回（留 30 天；口語有改才重做語音）。LINE 舊卡片的「常犯錯・更多」改顯示校正版＋「✅ 已校正」。
+- `本週句子`／`上週句子`（帳號主人）：列出那週的句子與校正狀態，點一句看詳細；記句子的回覆附「📋 本週句子」quick reply。
+- AI 即時產生的英文一律標「AI 初稿」，只有週六校正過的才算正解。
 - 零費用：Workers AI 免費額度每天 10,000 neurons，Free 方案超過只會報錯、不扣款；只用 reply、不用 push；不用 R2。

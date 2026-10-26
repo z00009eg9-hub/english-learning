@@ -395,3 +395,88 @@ describe('週六排程 API 與語音檔', () => {
     expect((await worker.fetch(get('/audio/nope.mp3'), env as any)).status).toBe(404);
   });
 });
+
+describe('週六校正寫回（A）與「本週句子」（B）', () => {
+  const postJson = (path: string, body: unknown, token = 'tok-123') =>
+    new Request('https://bot.example.com' + path, {
+      method: 'POST',
+      headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+  const firstId = (env: any) => [...env.MY_SENTENCES.store.keys()].find((k: string) => k.startsWith('s:'))!.slice(2);
+
+  it('POST /sentences/correct 要 token', async () => {
+    const env = makeEnv();
+    expect((await worker.fetch(postJson('/sentences/correct', { items: [] }, 'bad'), env as any)).status).toBe(401);
+  });
+
+  it('寫回後：內容換成校正版、標已校正、口語有改才重做語音，重送不再花 TTS', async () => {
+    const ai = fakeAI();
+    const env = makeEnv(ai);
+    await send(env, text('馬達上蓋剛來，有色差問題'));
+    const id = firstId(env);
+    const ttsCalls = () => ai.run.mock.calls.filter((c: any[]) => String(c[0]).includes('aura')).length;
+    expect(ttsCalls()).toBe(1);
+
+    const item = {
+      id,
+      sp: "The motor covers just came in, and the color looks a bit off.",
+      spZh: '馬達上蓋剛到，顏色有點跑掉。',
+      fm: 'The incoming motor covers show color variation.',
+      kw: ['come in', 'off'],
+      kwZh: ['到貨', '不對勁'],
+      mis: ['✗ The motor cover just come → ✓ The motor covers just came in：時態要用過去式'],
+    };
+    const r1 = (await (await worker.fetch(postJson('/sentences/correct', { items: [item, { id: 'gone' }] }), env as any)).json()) as any;
+    expect(r1).toEqual({ updated: 1, notFound: ['gone'], reTts: 1 });
+    const rec = JSON.parse(env.MY_SENTENCES.store.get('s:' + id)!.value);
+    expect(rec).toMatchObject({ sp: item.sp, spZh: item.spZh, kw: item.kw, corrected: true });
+    expect(env.MY_SENTENCES.store.get('s:' + id)!.ttl).toBe(30 * 24 * 3600);
+    expect(ttsCalls()).toBe(2);
+
+    const r2 = (await (await worker.fetch(postJson('/sentences/correct', { items: [item] }), env as any)).json()) as any;
+    expect(r2.reTts).toBe(0);
+    expect(ttsCalls()).toBe(2);
+
+    // 舊卡片按「常犯錯・更多」看到校正版與 ✅
+    const detail = S(await send(env, postback(`a=mis&w=${id}`)));
+    expect(detail).toContain('✅ 已校正');
+    expect(detail).not.toContain('AI 初稿');
+    expect(detail).toContain('時態要用過去式');
+  });
+
+  it('「本週句子」列出本週句子與校正狀態；只有帳號主人', async () => {
+    const env = makeEnv();
+    await send(env, text('馬達上蓋剛來，有色差問題'));
+    await send(env, text('#句 明天要跟供應商開會'));
+    const id = firstId(env);
+    await worker.fetch(postJson('/sentences/correct', { items: [{ id, sp: 'Fixed sentence.' }] }), env as any);
+
+    const msgs = await send(env, text('本週句子'));
+    expect(msgs).toHaveLength(1);
+    const s = S(msgs[0]);
+    expect(s).toContain('2 句・已校正 1 句');
+    expect(s).toContain('✅ 已校正');
+    expect(s).toContain('⚠ 初稿');
+    expect(s).toContain('Fixed sentence.');
+    expect(s).toContain(`a=mis&w=${id}`);
+    expect(msgs[0].quickReply.items[0].action.text).toBe('本週句子');
+    // 不會被當成句子存起來
+    expect([...env.MY_SENTENCES.store.keys()].filter((k) => k.startsWith('s:'))).toHaveLength(2);
+    // 別人傳一樣的字只是查單字
+    expect(S(await send(env, text('本週句子', 'U-stranger')))).not.toContain('已校正');
+  });
+
+  it('上週句子／沒有句子時給提示', async () => {
+    const env = makeEnv();
+    expect(S(await send(env, text('上週句子')))).toContain('還沒有記句子');
+  });
+
+  it('記句子的回覆最後一則帶「📋 本週句子」quick reply', async () => {
+    const env = makeEnv();
+    const msgs = await send(env, text('馬達上蓋剛來，有色差問題'));
+    expect(msgs[0].quickReply).toBeUndefined();
+    expect(msgs[1].type).toBe('audio');
+    expect(msgs[1].quickReply.items[0].action).toMatchObject({ type: 'message', text: '本週句子' });
+  });
+});

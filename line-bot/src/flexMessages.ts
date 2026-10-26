@@ -725,6 +725,7 @@ export interface SentenceCardData {
   spZh?: string;
   fmZh?: string;
   kwZh?: string[];
+  corrected?: boolean;
 }
 
 /** 英文句下面的中文（小一級、灰） */
@@ -781,6 +782,28 @@ const AI_DRAFT_NOTE = {
   wrap: true,
   margin: 'md',
 };
+
+const CORRECTED_NOTE = {
+  type: 'text',
+  text: '✅ 已校正（週六由 Claude 逐句檢查），可以放心背',
+  size: 'xxs',
+  color: '#15803D',
+  wrap: true,
+  margin: 'md',
+};
+
+/** 快速回覆列的「📋 本週句子」：一按就送出指令，不用自己打字 */
+export function withWeekQuickReply(msg: any): any {
+  return {
+    ...msg,
+    quickReply: {
+      items: [
+        { type: 'action', action: { type: 'message', label: '📋 本週句子', text: '本週句子' } },
+        { type: 'action', action: { type: 'message', label: '上週句子', text: '上週句子' } },
+      ],
+    },
+  };
+}
 
 /** 記句子的回覆卡：小字確認＋原句 → 口語版（大字）→ 書面版 → 關鍵字標籤 → 一排按鈕 */
 export function buildSentenceSavedMessage(r: SentenceCardData, nth: number) {
@@ -879,7 +902,7 @@ export function buildSentenceDetailMessage(r: SentenceCardData) {
           : [{ type: 'text', text: '（這句沒有特別要注意的地方）', size: 'sm', color: TEXT, wrap: true, margin: 'sm' }]),
       ],
     },
-    AI_DRAFT_NOTE,
+    r.corrected ? CORRECTED_NOTE : AI_DRAFT_NOTE,
     withZh(section('口語', [r.sp]), r.spZh),
     ...(r.fm && r.fm !== r.sp ? [withZh(section('書面', [r.fm]), r.fmZh)] : []),
     ...(r.kw.length
@@ -887,4 +910,51 @@ export function buildSentenceDetailMessage(r: SentenceCardData) {
       : []),
   ];
   return flex(`常犯錯：${r.zh}`, bubble(body));
+}
+
+/* ---------- 「本週句子」清單 ---------- */
+
+const WEEK_LIST_MAX = 12;
+
+export function buildWeekSentencesMessage(label: string, week: string, list: SentenceCardData[]) {
+  if (!list.length) {
+    return flex(`${label}：還沒有句子`, bubble([
+      ...headerBox(label, week, ACCENT),
+      emptyLine('這週還沒有記句子。傳一句上班講的中文（超過 4 個字或有標點），我就會記下來。'),
+    ]));
+  }
+  const done = list.filter((r) => r.corrected).length;
+  const shown = list.slice(-WEEK_LIST_MAX);
+  const items = shown.map((r, i) => ({
+    type: 'box',
+    layout: 'vertical',
+    margin: i === 0 ? 'lg' : 'xl',
+    // 點一下等同按那句的「常犯錯・更多」
+    action: { type: 'postback', data: buildPostback('mis', r.id), displayText: cut(r.zh, 40), label: '詳細' },
+    contents: [
+      {
+        type: 'text',
+        size: 'xxs',
+        wrap: true,
+        contents: [
+          r.corrected
+            ? { type: 'span', text: '✅ 已校正  ', color: RIGHT }
+            : { type: 'span', text: '⚠ 初稿  ', color: META },
+          { type: 'span', text: cut(r.zh, 80), color: TRANS },
+        ],
+      },
+      r.sp
+        ? { type: 'text', text: cut(r.sp, 200), size: 'sm', weight: 'bold', color: INK, wrap: true, margin: 'xs' }
+        : { type: 'text', text: '英文說法週六補', size: 'sm', color: META, margin: 'xs' },
+      ...zhLine(r.spZh),
+    ],
+  }));
+  const more = list.length - shown.length;
+  const body = [
+    ...headerBox(label, `${week}・${list.length} 句・已校正 ${done} 句`, ACCENT),
+    ...items,
+    ...(more > 0 ? [emptyLine(`（較早的 ${more} 句沒有列出）`)] : []),
+    { type: 'text', text: '點一句看常犯錯與書面說法', size: 'xxs', color: META, margin: 'xl' },
+  ];
+  return flex(`${label}（${list.length} 句）`, bubble(body));
 }
