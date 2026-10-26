@@ -4630,6 +4630,7 @@ function pick(ns,i,j,ans){
   const qs=qsOf(ns);
   const done=qs.filter((_,x)=>QSTATE[ns+'-'+x]!=null).length;
   if(done===qs.length){
+    window.dispatchEvent(new Event('b2-assistant-complete'));
     const c=qs.filter((_,x)=>QSTATE[ns+'-'+x]===true).length;
     const box=$(scoreBoxId(ns));
     if(box) box.innerHTML='<div class="score">'+(c===qs.length?'🎉 全對！':'成績')+' '+c+' / '+qs.length+'（'+Math.round(c/qs.length*100)+'%）</div>';
@@ -4770,6 +4771,7 @@ function vGrade(g){
   if(g===1){ vSession.again++; vQueue.push(item); }   // 忘記的字這輪結束前再出現一次
   vIdx++; vFlip=false;
   if(vIdx>=vQueue.length){
+    window.dispatchEvent(new Event('b2-assistant-complete'));
     const done=vSession.done, again=vSession.again;
     vQueue=[];
     RENDER.vocab();
@@ -9518,6 +9520,20 @@ window.b2Assistant={
     const n=Object.values(ST.srs||{}).filter(x=>x&&x.due<=today()).length;
     let last=null; try{ const id=localStorage.getItem('b2lab_bkLast_'+PROFILE); const b=id&&BOOK_LESSONS.find(x=>x.id===id); if(b)last={id:b.id,title:b.titleCn||b.title}; }catch(e){}
     return {profile:PROFILE,date:today(),hour:new Date().getHours(),streak:ST.streak||1,due:n,last};
+  },
+  // 只讀現有教材與操作狀態，陪讀不寫入進度或呼叫雲端。
+  reviewWords(){
+    const due=VOCAB.filter(v=>isDue(v.w));
+    return this.context().words.concat(due,VOCAB);
+  },
+  coachBlocked(){
+    if(auOn||document.body.classList.contains('vd-lock')||vQueue.length)return true;
+    if([...document.querySelectorAll('audio,video')].some(el=>!el.paused&&!el.ended))return true;
+    const view=document.getElementById('v-'+TAB);
+    if(!view)return false;
+    const opts=[...view.querySelectorAll('.opt')];
+    const partial=opts.some(el=>el.disabled)&&opts.some(el=>!el.disabled);
+    return partial||opts.some(el=>{const r=el.getBoundingClientRect();return !el.disabled&&r.width>0&&r.bottom>0&&r.top<innerHeight;});
   },
   openVocab(){ go('vocab'); },
   openBook(id){ go('book'); bkGo(id); },

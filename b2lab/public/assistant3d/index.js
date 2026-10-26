@@ -19,7 +19,7 @@ root.innerHTML=`<style>
 :host([data-mini]){--size:32px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
-<aside class="notice" aria-label="新文章提醒" hidden><p class="notice-text" role="status"></p><div class="row"><button class="control notice-view">看看</button><button class="icon notice-dismiss" aria-label="關閉新文章提醒">×</button></div></aside>
+<aside class="notice" aria-label="新文章提醒" hidden><p class="notice-text" role="status"></p><div class="row"><button class="control notice-view">看看</button><button class="icon coach-mute" hidden>先不要</button><button class="icon notice-dismiss" aria-label="關閉助理提醒">×</button></div></aside>
 <section class="panel" role="dialog" aria-label="Mini果 英文助理" hidden>
 <div class="top"><button class="icon hide" aria-label="隱藏小助理" title="隱藏小助理">−</button><strong>Mini果 英文助理</strong><button class="icon close" aria-label="縮小助理面板">縮小</button></div>
 <p class="sub"></p><div class="actions"><button data-action="search">單字查詢</button><button data-action="read">帶我跟讀</button><button data-action="quiz">單字小測</button><button data-action="practice">句子重組</button><button class="news-action" data-action="news">新文章</button></div>
@@ -31,20 +31,73 @@ const IDLE_MS=5*60*1000;
 let head=null,loading=false,opened=false,current=null,selection='',selectionKey='',mode='',cursor=0;
 let ownedAudio=false,audioToken=0,sleeping=false,lastUsed=Date.now(),mini=false,query='',puzzle=null,newsKey='',idleTimer;
 let releases={},newsReady=false,drag=null,suppressClick=false,headEpoch=0;
+const COACH_IDLE=3*60*1000,COACH_GAP=8*60*1000,COACH_LIFE=45000;
+let coachActivity=Date.now(),coachProfile='',coachReview=null,coachReward=false,noticeAt=Date.now(),coachCompletion=0;
+let coachSession={count:0,last:0,muted:false};
+try{const saved=JSON.parse(sessionStorage.getItem('b2lab_assistant_coach_tom')||'null');if(saved&&Number.isInteger(saved.count)&&saved.count>=0&&saved.count<=2&&Number.isFinite(saved.last))coachSession={count:saved.count,last:saved.last,muted:saved.muted===true,rewarded:saved.rewarded===true};}catch{}
+function saveCoach(){try{sessionStorage.setItem('b2lab_assistant_coach_tom',JSON.stringify(coachSession));}catch{}}
+function coachPending(){return api.greet().profile==='tom'&&!coachSession.muted&&coachSession.count<2;}
+function coachNotice(){return ['coach','reward'].includes(q('.notice').dataset.kind);}
+function clearCoach(){if(coachNotice())q('.notice').hidden=true;coachReward=false;syncFace();}
+function coachAct(e){coachActivity=Date.now();if(e?.type==='pointermove'||e?.composedPath().includes(host))return;if(coachNotice()&&!q('.notice').hidden)clearCoach();}
+// 捲動、打字和移動游標都視為閱讀中的活動；背景時間不累積成閒置。
+['pointerdown','pointermove','keydown','input','scroll','wheel','touchstart'].forEach(type=>document.addEventListener(type,coachAct,{capture:true,passive:true}));
+function coachBlocked(){return document.hidden||launch.hidden||opened||api.busy()||api.coachBlocked?.();}
+function showCoach(message,act,label,id='',kind='coach'){
+ noticeAt=Date.now();const nt=q('.notice');nt.dataset.kind=kind;nt.dataset.shy='true';nt.dataset.act=act;nt.dataset.id=id;
+ nt.setAttribute('aria-label','Tom 的陪讀鼓勵');q('.notice-text').textContent=message;q('.notice-view').textContent=label;nt.hidden=false;
+ wake();ensureHead();animate();
+}
+window.addEventListener('b2-assistant-complete',()=>{if(api.greet().profile==='tom'&&!coachSession.muted&&!coachSession.rewarded)coachCompletion=Date.now();});
+function tickCoach(){
+ const now=Date.now(),g=api.greet();
+ if(coachProfile!==g.profile){coachProfile=g.profile;coachActivity=now;coachReview=null;coachCompletion=0;clearCoach();if(mode==='coach-review'){mode='';out.textContent='選一個功能，從這一課開始練習。';}}
+ if(g.profile!=='tom'){clearCoach();return;}
+ if(coachSession.muted){clearCoach();return;}
+ if(coachNotice()&&!q('.notice').hidden&&(now-noticeAt>=COACH_LIFE||coachBlocked()))q('.notice').hidden=true;
+ if(coachBlocked()){coachActivity=now;return;}
+ if(coachCompletion&&now-coachCompletion>60000)coachCompletion=0;
+ if(coachCompletion&&!coachSession.rewarded){coachCompletion=0;coachSession.rewarded=true;saveCoach();showCoach('有認真學耶……今天的丁丁加分。','coach-done','收下鼓勵','','reward');return;}
+ if(!newsReady||!coachPending()||sleeping||now-coachActivity<COACH_IDLE||coachSession.count&&now-coachSession.last<COACH_GAP)return;
+ // 留給每日招呼與新文章至少一段閱讀時間，再換成陪讀邀請。
+ if(!q('.notice').hidden&&now-noticeAt<COACH_LIFE)return;
+ const second=coachSession.count>0;
+ if(second&&g.last)showCoach('丁丁先等等，再陪我看看上次那一課嘛。','book','繼續上次',g.last.id);
+ else showCoach(second?'丁丁先等等，再陪我複習 3 個單字嘛。':'Tom，想丁丁了嗎？先陪我複習 3 個單字嘛。','coach-review','複習 3 個');
+ coachSession.count++;coachSession.last=now;saveCoach();
+}
+function finishCoach(){
+ coachReview=null;coachSession.rewarded=true;saveCoach();coachReward=true;out.innerHTML='<p class="feedback" role="status">有認真學耶……今天的丁丁加分。</p><p class="note">完成 3 個單字的小複習！</p>';syncFace();
+}
+function reviewThree(){
+ if(api.greet().profile!=='tom'||coachSession.muted)return;
+ open();mode='coach-review';markMode();
+ const pool=api.reviewWords?.()||[],seen=new Set();
+ const cards=pool.filter(w=>{const k=String(w.w||'').toLowerCase();if(!k||!w.cn||seen.has(k))return false;seen.add(k);return true;}).slice(0,3);
+ if(cards.length<3){out.textContent='目前可用單字不足三個，先選一課再來練習吧。';return;}
+ coachReview={cards,index:0,profile:'tom'};renderCoachCard();
+}
+function renderCoachCard(){
+ const run=coachReview;if(!run||api.greet().profile!==run.profile)return;
+ const w=run.cards[run.index];coachReward=false;
+ out.innerHTML='<p class="note">小複習 '+(run.index+1)+' / 3</p><p class="en"><b>'+esc(w.w)+'</b></p><p class="note">'+esc([w.ipa,w.pos].filter(Boolean).join(' · '))+'</p><p>先想一下中文意思，再揭曉。</p><button class="control coach-flip">看意思</button><div class="coach-answer" hidden><p>'+esc(w.cn)+'</p>'+(w.ex||w.exEn?'<p class="en">'+esc(text(w.ex||w.exEn))+'</p><p>'+esc(w.exCn||'')+'</p>':'')+'<button class="control coach-next">'+(run.index===2?'完成複習':'下一個')+'</button></div><p class="note">輕鬆複習，不計入正式成績。</p>';
+ out.append(speaker(w.w,'單字發音'));q('.coach-flip').onclick=()=>{q('.coach-answer').hidden=false;q('.coach-flip').hidden=true;};
+ q('.coach-next').onclick=()=>{stop();if(coachReview!==run||api.greet().profile!==run.profile)return;run.index++;if(run.index===3)finishCoach();else renderCoachCard();};syncFace();
+}
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const text=s=>{const e=document.createElement('div');e.innerHTML=String(s||'');return e.textContent.trim();};
 const stored=k=>{try{return localStorage.getItem('b2lab_assistant_'+k);}catch{return null;}};
 function store(k,v){try{localStorage.setItem('b2lab_assistant_'+k,v);}catch{}}
 function stop(){audioToken++;if(ownedAudio)api.stop();ownedAudio=false;q('.status').textContent='';}
-function syncFace(){const shy=!q('.notice').hidden&&q('.notice').dataset.shy==='true'&&!sleeping;host.toggleAttribute('data-shy',shy);head?.setShy(shy);}
-new MutationObserver(syncFace).observe(q('.notice'),{attributes:true,attributeFilter:['hidden','data-shy']});
+function syncFace(){const shy=(!q('.notice').hidden&&q('.notice').dataset.shy==='true'||opened&&coachReward)&&!sleeping;host.toggleAttribute('data-shy',shy);head?.setShy(shy);}
+new MutationObserver(records=>{if(records.some(r=>r.attributeName==='hidden')&&!q('.notice').hidden)noticeAt=Date.now();q('.coach-mute').hidden=!coachNotice()||q('.notice').hidden;syncFace();}).observe(q('.notice'),{attributes:true,attributeFilter:['hidden','data-shy','data-kind']});
 function animate(){syncFace();head?.setSleeping(sleeping);head?.animate(!launch.hidden&&!sleeping&&!document.hidden&&!reducedMotion.matches,()=>ownedAudio&&api.busy());}
 function wake(){lastUsed=Date.now();clearTimeout(idleTimer);idleTimer=setTimeout(idle,IDLE_MS);if(sleeping){sleeping=false;host.removeAttribute('data-sleeping');launch.setAttribute('aria-label','開啟 Mini果 英文助理');animate();}}
 function sync(){
  const next=api.context();
  if(!current||next.key!==current.key){
-  stop();current=next;if(selectionKey!==next.key)selection='';cursor=0;puzzle=null;
+  coachReview=null;coachReward=false;syncFace();stop();current=next;if(selectionKey!==next.key)selection='';cursor=0;puzzle=null;
   // 換課時查詢結果仍可保留，教材練習則重新從該課開始。
   if(mode!=='search'&&mode!=='news'){mode='';out.textContent='選一個功能，從這一課開始練習。';markMode();}
  }else current=next;
@@ -58,8 +111,8 @@ async function ensureHead(){
  catch{ /* WebGL 不可用時保留圓形頭像與教學操作。 */ }
  finally{loading=false;animate();}
 }
-function open(){wake();opened=true;sync();panel.hidden=false;q('.notice').hidden=true;launch.setAttribute('aria-expanded','true');q('.close').focus();ensureHead();animate();}
-function close(focus=true){opened=false;panel.hidden=true;launch.setAttribute('aria-expanded','false');stop();animate();if(focus)launch.focus();}
+function open(){coachReward=false;wake();opened=true;sync();panel.hidden=false;q('.notice').hidden=true;launch.setAttribute('aria-expanded','true');q('.close').focus();ensureHead();animate();}
+function close(focus=true){coachReward=false;opened=false;panel.hidden=true;launch.setAttribute('aria-expanded','false');stop();animate();if(focus)launch.focus();}
 function size(){host.toggleAttribute('data-mini',mini);q('.size').textContent=mini?'恢復一般大小':'縮成迷你（32px）';}
 launch.onclick=e=>{if(suppressClick&&e.detail!==0){suppressClick=false;e.preventDefault();return;}suppressClick=false;opened?close():open();};q('.close').onclick=()=>close();
 // 拖曳只旋轉頭像，不移動入口；超過門檻才攔下點擊，避免誤開面板。
@@ -88,7 +141,7 @@ q('.restore').onclick=()=>{launch.hidden=false;q('.restore').hidden=true;store('
 mini=stored('mini')==='1';size();if(stored('hidden')==='1'){launch.hidden=true;q('.restore').hidden=false;}
 root.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
 ['pointerdown','keydown','input'].forEach(type=>root.addEventListener(type,wake,{capture:true}));
-document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else{idle();checkNews();ensureHead();}animate();});
+document.addEventListener('visibilitychange',()=>{coachActivity=Date.now();clearCoach();if(document.hidden)stop();else{idle();checkNews();ensureHead();}animate();});
 reducedMotion.addEventListener('change',animate);
 // 只讀教材的選取文字，避開其他面板與輸入框。
 document.addEventListener('selectionchange',()=>{
@@ -174,11 +227,12 @@ function checkNews(force=false){
  const seen=seenNews(n),fresh=n.articles.filter(a=>!seen.has(a.id));
  if(!fresh.length||opened||sleeping||launch.hidden||document.hidden)return;
  if(greetSeen(n.profile)!==n.date)return;
- q('.notice').dataset.shy='false';q('.notice').dataset.act='news';q('.notice-view').textContent='看看';q('.notice-text').textContent='今天新增 '+fresh.length+' 篇文章！';q('.notice').hidden=false;rememberNews(n);
+ q('.notice').dataset.kind='news';q('.notice').setAttribute('aria-label','新文章提醒');q('.notice').dataset.shy='false';q('.notice').dataset.act='news';q('.notice-view').textContent='看看';q('.notice-text').textContent='今天新增 '+fresh.length+' 篇文章！';q('.notice').hidden=false;rememberNews(n);
 }
 q('.notice-dismiss').onclick=()=>{q('.notice').hidden=true;};
+q('.coach-mute').onclick=()=>{coachSession.muted=true;saveCoach();clearCoach();};
 q('.notice-view').onclick=()=>{const a=q('.notice').dataset.act||'news',id=q('.notice').dataset.id;q('.notice').hidden=true;
- if(a==='vocab')api.openVocab();else if(a==='book'&&id)api.openBook(id);else{open();mode='news';markMode();news();}};
+ if(a==='coach-done')return;else if(a==='coach-review')reviewThree();else if(a==='vocab')api.openVocab();else if(a==='book'&&id)api.openBook(id);else{open();mode='news';markMode();news();}};
 const GREET={anita:['Anita','🍎'],tom:['Tom','🐻']};
 function greetSeen(p){return stored('greet_seen_'+p);}
 function checkGreet(){
@@ -193,20 +247,22 @@ function checkGreet(){
  else if(g.last){lines.push('上次學到「'+g.last.title+'」。');act='book';id=g.last.id;label='繼續';}
  const n=api.news(releases),seen=seenNews(n),fresh=n.articles.filter(a=>!seen.has(a.id));
  if(fresh.length){lines.push('今天新增 '+fresh.length+' 篇文章。');rememberNews(n);}
- const nt=q('.notice');nt.dataset.shy=String(g.profile==='tom');nt.dataset.act=act;nt.dataset.id=id;q('.notice-view').textContent=label;
+ const nt=q('.notice');nt.dataset.kind='greet';nt.setAttribute('aria-label','每日招呼');nt.dataset.shy=String(g.profile==='tom');nt.dataset.act=act;nt.dataset.id=id;q('.notice-view').textContent=label;
  q('.notice-text').textContent=lines.join('\n');nt.hidden=false;store('greet_seen_'+g.profile,g.date);
 }
 function idle(){
  clearTimeout(idleTimer);if(sleeping)return;
+ // Tom 的兩次陪讀邀請完成前先不睡眠，否則五分鐘睡眠會吞掉第二次提醒。
+ if(coachPending()&&!launch.hidden){idleTimer=setTimeout(idle,15000);return;}
  const left=IDLE_MS-(Date.now()-lastUsed);
  if(left>0||api.busy()){idleTimer=setTimeout(idle,left>0?left:15000);return;}
  sleeping=true;host.setAttribute('data-sleeping','');q('.notice').hidden=true;close(false);launch.setAttribute('aria-label','Mini果 正在睡眠，點一下喚醒');
 }
 root.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>{
- sync();stop();const next=b.dataset.action;if(next===mode&&next==='practice'&&puzzle)return;mode=next;markMode();
+ coachReview=null;coachReward=false;syncFace();sync();stop();const next=b.dataset.action;if(next===mode&&next==='practice'&&puzzle)return;mode=next;markMode();
  if(mode==='search')search(selection&&selection.length<=100&&!/[.!?]/.test(selection)?selection:query);else ({read,quiz,practice,news})[mode]();
 });
-idleTimer=setTimeout(idle,IDLE_MS);setInterval(checkNews,15000);checkNews();
+idleTimer=setTimeout(idle,IDLE_MS);setInterval(checkNews,15000);setInterval(tickCoach,1000);checkNews();
 // 將引擎延到首屏之後載入，收合時也有立體轉頭；隱藏時不下載。
 if('requestIdleCallback' in window)requestIdleCallback(()=>ensureHead(),{timeout:1200});else setTimeout(ensureHead,600);
 fetch('./article-releases.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error('release index');return r.json();}).then(data=>{if(data.version===1&&data.articles&&typeof data.articles==='object')releases=data.articles;}).catch(()=>{}).finally(()=>{newsReady=true;checkNews(true);});
