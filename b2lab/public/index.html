@@ -9514,6 +9514,13 @@ window.b2Assistant={
     });
     return {date,profile:PROFILE,articles:articles.map(a=>({id:a.id,title:a.title,titleCn:a.titleCn,level:a.level}))};
   },
+  greet(){
+    const n=Object.values(ST.srs||{}).filter(x=>x&&x.due<=today()).length;
+    let last=null; try{ const id=localStorage.getItem('b2lab_bkLast_'+PROFILE); const b=id&&BOOK_LESSONS.find(x=>x.id===id); if(b)last={id:b.id,title:b.titleCn||b.title}; }catch(e){}
+    return {profile:PROFILE,date:today(),hour:new Date().getHours(),streak:ST.streak||1,due:n,last};
+  },
+  openVocab(){ go('vocab'); },
+  openBook(id){ go('book'); bkGo(id); },
   openArticle(id){
     const article=ALL_ARTS.find(a=>a.id===id)||DAILY_ALL.find(a=>a.id===id&&a.date<=today());
     if(!article)return;

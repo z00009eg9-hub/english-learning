@@ -10,7 +10,7 @@ root.innerHTML=`<style>
 :host([data-sleeping]) .head:before{content:'––';font-size:calc(var(--size)*.35);top:3%}:host([data-sleeping]) .launch:after{content:'z';position:absolute;right:-2px;top:-7px;border-radius:50%;background:#fffcf7;color:#756c60;font-size:12px;padding:0 4px}
 .panel{position:absolute;right:0;bottom:calc(var(--size) + 14px);width:min(350px,calc(100vw - 28px));max-height:min(590px,calc(100dvh - 150px));overflow:auto;overscroll-behavior:contain;border:1px solid #dfd6c9;background:#fffcf7;border-radius:18px;box-shadow:0 10px 40px #36261126;padding:17px}
 .top{display:flex;align-items:center;gap:5px}.top strong{flex:1}.icon{border:0;background:transparent;min-width:36px;min-height:36px;border-radius:8px}.sub{font-size:12px;color:#756c60;margin:5px 0 12px;overflow-wrap:anywhere}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions button,.control{background:#fff;border:1px solid #ddd1c1;border-radius:10px;padding:9px;min-height:42px}.actions button:hover,.control:hover{background:#fff0dc}.actions button[aria-pressed=true]{background:#fff0dc;border-color:#bc6b2b}.news-action{grid-column:1/-1}.output{margin-top:14px;overflow-wrap:anywhere}.output p{margin:8px 0}.en{font-size:16px;color:#25383c}.note{font-size:12px;color:#756c60}.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.word{padding:12px 0;border-bottom:1px solid #eee3d5}.word b{color:#a3541e}.word .row{align-items:center;margin-top:0}.word .control{padding:5px 9px}.search-row{display:flex;gap:8px;margin:8px 0}.search-row input{width:0;min-width:0;flex:1;padding:9px;border:1px solid #ddd1c1;border-radius:9px;background:#fff;color:#302c27}.restore{border:1px solid #ddd1c1;border-radius:16px;background:#fffcf7;padding:4px 10px;font-size:12px}.feedback{color:#87511e}details{margin-top:9px}summary{cursor:pointer}.foot{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;border-top:1px solid #eee3d5;margin-top:14px;padding-top:8px}.foot button{border:0;background:transparent;color:#756c60;padding:5px;font-size:12px;min-height:32px}
-.status{min-height:1.6em;color:#87511e;font-size:12px}.notice{position:absolute;right:0;bottom:calc(var(--size) + 12px);width:min(285px,calc(100vw - 28px));border:1px solid #e8c7a3;border-radius:14px;background:#fff8eb;box-shadow:0 3px 16px #36261120;padding:12px}.notice p{margin:0}.notice .row{margin-top:5px;align-items:center}.notice .control{padding:5px 10px;min-height:36px}.notice-dismiss{margin-left:auto}
+.status{min-height:1.6em;color:#87511e;font-size:12px}.notice{position:absolute;right:0;bottom:calc(var(--size) + 12px);width:min(285px,calc(100vw - 28px));border:1px solid #e8c7a3;border-radius:14px;background:#fff8eb;box-shadow:0 3px 16px #36261120;padding:12px}.notice p{margin:0;white-space:pre-line}.notice .row{margin-top:5px;align-items:center}.notice .control{padding:5px 10px;min-height:36px}.notice-dismiss{margin-left:auto}
 .notice{width:min(230px,calc(100vw - 28px));padding:10px}.notice:after{content:'';position:absolute;right:calc(var(--size)/2 - 7px);bottom:-8px;width:14px;height:14px;background:#fff8eb;border-right:1px solid #e8c7a3;border-bottom:1px solid #e8c7a3;transform:rotate(45deg)}
 .tray{min-height:64px;border:1px dashed #d3b592;background:#fff9f0;border-radius:10px;padding:8px;display:flex;gap:6px;flex-wrap:wrap;align-content:flex-start}.bank{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.token{border:1px solid #ddd1c1;border-radius:8px;background:#fff;padding:7px 9px;min-height:38px}.token:disabled{opacity:.3;cursor:default}.token.wrong{border-color:#b34b30;background:#fff0e9}.token.correct{border-color:#658b63;background:#eff8ed}.article{display:block;width:100%;text-align:left;margin:8px 0}.article span{display:block}.article small{color:#756c60}.answer{border-left:3px solid #ee893e;padding-left:10px;margin-top:10px}
 @media(max-width:768px){:host{--size:48px;right:12px;bottom:calc(82px + env(safe-area-inset-bottom,0px))}.panel{max-height:calc(100dvh - 190px)}}
@@ -166,11 +166,32 @@ function checkNews(force=false){
  if(!newsReady)return;
  const n=api.news(releases),ids=n.articles.map(a=>a.id).sort(),key=n.profile+':'+n.date+':'+ids.join(',');
  if(force||newsKey!==key){newsKey=key;q('.notice').hidden=true;q('.news-action').textContent='新文章'+(ids.length?'（'+ids.length+'）':'');if(mode==='news'&&opened)news();}
+ checkGreet();
  const seen=seenNews(n),fresh=n.articles.filter(a=>!seen.has(a.id));
  if(!fresh.length||opened||sleeping||launch.hidden||document.hidden)return;
- q('.notice-text').textContent='今天新增 '+fresh.length+' 篇文章！';q('.notice').hidden=false;rememberNews(n);
+ if(greetSeen(n.profile)!==n.date)return;
+ q('.notice').dataset.act='news';q('.notice-view').textContent='看看';q('.notice-text').textContent='今天新增 '+fresh.length+' 篇文章！';q('.notice').hidden=false;rememberNews(n);
 }
-q('.notice-dismiss').onclick=()=>{q('.notice').hidden=true;};q('.notice-view').onclick=()=>{open();mode='news';markMode();news();};
+q('.notice-dismiss').onclick=()=>{q('.notice').hidden=true;};
+q('.notice-view').onclick=()=>{const a=q('.notice').dataset.act||'news',id=q('.notice').dataset.id;q('.notice').hidden=true;
+ if(a==='vocab')api.openVocab();else if(a==='book'&&id)api.openBook(id);else{open();mode='news';markMode();news();}};
+const GREET={anita:['Anita','🍎'],tom:['Tom','🐻']};
+function greetSeen(p){return stored('greet_seen_'+p);}
+function checkGreet(){
+ if(!newsReady||opened||sleeping||launch.hidden||document.hidden)return;
+ const g=api.greet(),who=GREET[g.profile]||[g.profile,''];
+ if(greetSeen(g.profile)===g.date)return;
+ const hi=g.hour<5?'Still up':g.hour<12?'Good morning':g.hour<18?'Good afternoon':'Good evening';
+ const lines=[hi+'，'+who[0]+' '+who[1]+'！'];
+ lines.push(g.streak>=2?'連續學習 '+g.streak+' 天，繼續保持！':'新的一天，從今天開始累積吧。');
+ let act='news',id='',label='看看';
+ if(g.due>0){lines.push('有 '+g.due+' 張單字卡該複習了。');act='vocab';label='去複習';}
+ else if(g.last){lines.push('上次學到「'+g.last.title+'」。');act='book';id=g.last.id;label='繼續';}
+ const n=api.news(releases),seen=seenNews(n),fresh=n.articles.filter(a=>!seen.has(a.id));
+ if(fresh.length){lines.push('今天新增 '+fresh.length+' 篇文章。');rememberNews(n);}
+ const nt=q('.notice');nt.dataset.act=act;nt.dataset.id=id;q('.notice-view').textContent=label;
+ q('.notice-text').textContent=lines.join('\n');nt.hidden=false;store('greet_seen_'+g.profile,g.date);
+}
 function idle(){
  clearTimeout(idleTimer);if(sleeping)return;
  const left=IDLE_MS-(Date.now()-lastUsed);
