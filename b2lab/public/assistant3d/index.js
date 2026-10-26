@@ -16,6 +16,17 @@ root.innerHTML=`<style>
 @media(max-width:768px){:host{--size:48px;right:12px;bottom:calc(82px + env(safe-area-inset-bottom,0px))}.panel{max-height:calc(100dvh - 190px)}}
 :host([data-mini]){--size:32px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+.launch{background:#a2c7e4}
+.head{inset:0;border:0;background:#a2c7e4 url('./assistant3d/avatar.webp') center/cover no-repeat}
+.head:before,.head:after{display:none}
+.dream{position:absolute;right:-2px;top:-15px;width:22px;height:22px;pointer-events:none;opacity:0;color:#687f9d;font-size:12px;transition:opacity .4s}
+.dream span{position:absolute;bottom:0;left:0;opacity:0;animation:assistant-dream 4.8s ease-in-out infinite;animation-play-state:paused}
+.dream span+span{left:12px;font-size:9px;animation-delay:-2.4s}
+:host([data-sleeping]) .dream{opacity:1}:host([data-sleeping]) .dream span{animation-play-state:running}
+:host([data-sleeping]) .launch:after{content:none}
+:host([data-sleeping]) .launch:not(.rendered) .head{transform:rotate(9deg) translateY(1px);filter:brightness(.92)}
+@keyframes assistant-dream{0%{opacity:0;transform:translateY(5px)}20%{opacity:.8}75%{opacity:.6}100%{opacity:0;transform:translateY(-15px)}}
+@media(prefers-reduced-motion:reduce){.dream span{opacity:.7;bottom:0}.dream span+span{bottom:10px}}
 </style>
 <aside class="notice" aria-label="新文章提醒" hidden><p class="notice-text" role="status"></p><div class="row"><button class="control notice-view">看看</button><button class="icon notice-dismiss" aria-label="關閉新文章提醒">×</button></div></aside>
 <section class="panel" role="dialog" aria-label="Mini果 英文助理" hidden>
@@ -23,7 +34,7 @@ root.innerHTML=`<style>
 <p class="sub"></p><div class="actions"><button data-action="search">單字查詢</button><button data-action="read">帶我跟讀</button><button data-action="quiz">單字小測</button><button data-action="practice">句子重組</button><button class="news-action" data-action="news">新文章</button></div>
 <div class="foot"><button class="size">縮成迷你（32px）</button><button class="hide">隱藏助理</button></div>
 <div class="output" aria-live="polite"></div><p class="status" role="status"></p>
-</section><button class="launch" aria-label="開啟 Mini果 英文助理" aria-expanded="false" title="點一下開啟，左右拖曳旋轉"><span class="head" aria-hidden="true"></span></button><button class="restore" hidden>顯示助理</button>`;
+</section><button class="launch" aria-label="開啟 Mini果 英文助理" aria-expanded="false" title="點一下開啟，左右拖曳旋轉"><span class="head" aria-hidden="true"></span><span class="dream" aria-hidden="true"><span>Z</span><span>z</span></span></button><button class="restore" hidden>顯示助理</button>`;
 const q=s=>root.querySelector(s),panel=q('.panel'),launch=q('.launch'),out=q('.output'),api=window.b2Assistant;
 const IDLE_MS=5*60*1000;
 let head=null,loading=false,opened=false,current=null,selection='',selectionKey='',mode='',cursor=0;
@@ -35,7 +46,7 @@ const text=s=>{const e=document.createElement('div');e.innerHTML=String(s||'');r
 const stored=k=>{try{return localStorage.getItem('b2lab_assistant_'+k);}catch{return null;}};
 function store(k,v){try{localStorage.setItem('b2lab_assistant_'+k,v);}catch{}}
 function stop(){audioToken++;if(ownedAudio)api.stop();ownedAudio=false;q('.status').textContent='';}
-function animate(){head?.setSleeping(sleeping);head?.animate(!launch.hidden&&!sleeping&&!document.hidden&&!reducedMotion.matches,()=>ownedAudio&&api.busy());}
+function animate(){head?.setSleeping(sleeping);head?.animate(!launch.hidden&&!document.hidden,()=>ownedAudio&&api.busy());}
 function wake(){lastUsed=Date.now();clearTimeout(idleTimer);idleTimer=setTimeout(idle,IDLE_MS);if(sleeping){sleeping=false;host.removeAttribute('data-sleeping');launch.setAttribute('aria-label','開啟 Mini果 英文助理');animate();}}
 function sync(){
  const next=api.context();
@@ -57,7 +68,9 @@ async function ensureHead(){
 function open(){wake();opened=true;sync();panel.hidden=false;q('.notice').hidden=true;launch.setAttribute('aria-expanded','true');q('.close').focus();ensureHead();animate();}
 function close(focus=true){opened=false;panel.hidden=true;launch.setAttribute('aria-expanded','false');stop();animate();if(focus)launch.focus();}
 function size(){host.toggleAttribute('data-mini',mini);q('.size').textContent=mini?'恢復一般大小':'縮成迷你（32px）';}
-launch.onclick=e=>{if(suppressClick&&e.detail!==0){suppressClick=false;e.preventDefault();return;}suppressClick=false;opened?close():open();};q('.close').onclick=()=>close();
+let wakeOnly=false;
+function toggleLaunch(){if(wakeOnly){wakeOnly=false;return;}opened?close():open();}
+launch.onclick=e=>{if(suppressClick&&e.detail!==0){suppressClick=false;e.preventDefault();return;}suppressClick=false;toggleLaunch();};q('.close').onclick=()=>close();
 // 拖曳只旋轉頭像，不移動入口；超過門檻才攔下點擊，避免誤開面板。
 launch.addEventListener('pointerdown',e=>{
  if(e.button!==0||drag)return;
@@ -74,7 +87,7 @@ function endDrag(e){
  suppressClick=(drag.moved||tapped)&&e.type==='pointerup';drag=null;launch.classList.remove('dragging');head?.endTurn(reducedMotion.matches);
  if(launch.hasPointerCapture(e.pointerId))launch.releasePointerCapture(e.pointerId);
  // 觸控直接在放開時處理，避免瀏覽器將連續手勢的相容 click 延後或省略。
- if(tapped)opened?close():open();
+ if(tapped)toggleLaunch();
 }
 launch.addEventListener('pointerup',endDrag);launch.addEventListener('pointercancel',endDrag);launch.addEventListener('lostpointercapture',endDrag);
 ['touchstart','touchend'].forEach(type=>launch.addEventListener(type,e=>e.stopPropagation(),{passive:true}));
@@ -83,7 +96,7 @@ root.querySelectorAll('.hide').forEach(b=>b.onclick=()=>{close(false);launch.hid
 q('.restore').onclick=()=>{launch.hidden=false;q('.restore').hidden=true;store('hidden','0');wake();ensureHead();animate();launch.focus();checkNews(true);};
 mini=stored('mini')==='1';size();if(stored('hidden')==='1'){launch.hidden=true;q('.restore').hidden=false;}
 root.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
-['pointerdown','keydown','input'].forEach(type=>root.addEventListener(type,wake,{capture:true}));
+['pointerdown','keydown','input'].forEach(type=>root.addEventListener(type,e=>{if(sleeping&&launch.contains(e.target))wakeOnly=true;wake();},{capture:true}));
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else{idle();checkNews();ensureHead();}animate();});
 reducedMotion.addEventListener('change',animate);
 // 只讀教材的選取文字，避開其他面板與輸入框。
