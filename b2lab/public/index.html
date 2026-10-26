@@ -1518,6 +1518,10 @@ body.cnall #v-book span.cnx{display:inline!important}
   background:none;border:none;border-radius:0;padding:0 3px;white-space:nowrap}
 /* 頂欄頭像與連續天數圖示放大 1.5 倍 */
 header .prof .emo-ic,header .hd-streak .emo-ic{width:1.8em!important;height:1.8em!important}
+header .brand h1{display:flex;align-items:center;gap:8px}
+header .hd-logo{width:30px;height:30px;flex:none}
+header .prof button,header .hd-streak{display:inline-flex;align-items:center;gap:5px;line-height:1}
+header .prof .emo-ic,header .hd-streak .emo-ic{vertical-align:0}
 /* tag chips on cards */
 .tag-chip{display:inline-block;font-size:var(--font-meta);font-weight:700;
   background:#f2f7f7;border:1px solid #d5e5e4;border-radius:14px;padding:2px 10px;color:#2b6b69;white-space:nowrap}
@@ -2818,7 +2822,7 @@ svg.emo-ic{display:inline-block;width:1.2em!important;height:1.2em!important;max
   <span class="hd-mtitle" id="hd-mtitle"></span>
   <button class="hd-mcn" id="hd-mcn" onclick="event.stopPropagation();togGlobalCn()" aria-label="切換全站中譯" title="中譯：全部顯示／點開才顯示">中</button>
   <button class="brand" onclick="toTop()" title="回到頁面頂端" style="margin-right:0">
-    <h1>📚 B2 Read</h1>
+    <h1><svg class="hd-logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g stroke="#2b2118" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M32 17C25 12 14 11 6 13v37c8-2 19-1 26 4z" fill="#fff4e0"/><path d="M32 17c7-5 18-6 26-4v37c-8-2-19-1-26 4z" fill="#fff4e0"/><path d="M32 17v37" fill="none"/></g><g stroke="#e8813a" stroke-width="3" stroke-linecap="round"><path d="M12 24c4-1 9-1 14 1M12 33c4-1 9-1 14 1M12 42c4-1 9-1 14 1M38 25c5-2 10-2 14-1M38 34c5-2 10-2 14-1M38 43c5-2 10-2 14-1" fill="none"/></g></svg>B2 Read</h1>
   </button>
   <span id="hd-levels" style="margin-right:auto;display:flex;gap:4px;align-items:center"></span>
   <div class="prof" title="切換學習者，各自獨立進度">
