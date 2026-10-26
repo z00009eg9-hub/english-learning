@@ -101,6 +101,10 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
 `node_modules/`、`/public/`（Speak Up 的部署產物）、`.chrome-check/`。
 **金鑰外洩等於整個 Firebase 專案被接管。**
 
+`b2lab/my-week/`：使用者「我的職場週記」的原句，含公司、客戶名稱（2026-10-26 起）。repo 是公開的，**永遠不能 commit**。
+- 使用者貼工作上的中文句子、說「記句子」時：先回書面＋口語兩種英文說法、關鍵字和常見錯誤，再照 `b2lab/MYWEEK_TASK.md` 的格式，記進 `b2lab/my-week/<ISO 週>.md`。
+- 每週六由排程把句子匿名化，寫成職場分頁的 my## 課。只有匿名化後的成品會上網站。
+
 ---
 
 ## 4. 資料檔的產生關係（不要手改產物）

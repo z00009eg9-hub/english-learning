@@ -26,3 +26,6 @@ node_modules/
 *.p12
 # 瀏覽器檢查快取（純垃圾，數百 MB）
 .chrome-check/
+
+# 我的職場週記：使用者的原句（含公司/客戶名），repo 是公開的，絕對不進版控
+b2lab/my-week/
