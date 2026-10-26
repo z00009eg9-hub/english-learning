@@ -18,12 +18,12 @@ root.innerHTML=`<style>
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 <aside class="notice" aria-label="新文章提醒" hidden><p class="notice-text" role="status"></p><div class="row"><button class="control notice-view">看看</button><button class="icon notice-dismiss" aria-label="關閉新文章提醒">×</button></div></aside>
-<section class="panel" role="dialog" aria-label="Benny 英文助理" hidden>
-<div class="top"><button class="icon hide" aria-label="隱藏小助理" title="隱藏小助理">−</button><strong>Benny 英文助理</strong><button class="icon close" aria-label="縮小助理面板">縮小</button></div>
+<section class="panel" role="dialog" aria-label="Mini果 英文助理" hidden>
+<div class="top"><button class="icon hide" aria-label="隱藏小助理" title="隱藏小助理">−</button><strong>Mini果 英文助理</strong><button class="icon close" aria-label="縮小助理面板">縮小</button></div>
 <p class="sub"></p><div class="actions"><button data-action="search">單字查詢</button><button data-action="read">帶我跟讀</button><button data-action="quiz">單字小測</button><button data-action="practice">句子重組</button><button class="news-action" data-action="news">新文章</button></div>
 <div class="foot"><button class="size">縮成迷你（32px）</button><button class="hide">隱藏助理</button></div>
 <div class="output" aria-live="polite"></div><p class="status" role="status"></p>
-</section><button class="launch" aria-label="開啟 Benny 英文助理" aria-expanded="false" title="點一下開啟，左右拖曳旋轉"><span class="head" aria-hidden="true"></span></button><button class="restore" hidden>顯示助理</button>`;
+</section><button class="launch" aria-label="開啟 Mini果 英文助理" aria-expanded="false" title="點一下開啟，左右拖曳旋轉"><span class="head" aria-hidden="true"></span></button><button class="restore" hidden>顯示助理</button>`;
 const q=s=>root.querySelector(s),panel=q('.panel'),launch=q('.launch'),out=q('.output'),api=window.b2Assistant;
 const IDLE_MS=5*60*1000;
 let head=null,loading=false,opened=false,current=null,selection='',selectionKey='',mode='',cursor=0;
@@ -36,7 +36,7 @@ const stored=k=>{try{return localStorage.getItem('b2lab_assistant_'+k);}catch{re
 function store(k,v){try{localStorage.setItem('b2lab_assistant_'+k,v);}catch{}}
 function stop(){audioToken++;if(ownedAudio)api.stop();ownedAudio=false;q('.status').textContent='';}
 function animate(){head?.setSleeping(sleeping);head?.animate(!launch.hidden&&!sleeping&&!document.hidden&&!reducedMotion.matches,()=>ownedAudio&&api.busy());}
-function wake(){lastUsed=Date.now();clearTimeout(idleTimer);idleTimer=setTimeout(idle,IDLE_MS);if(sleeping){sleeping=false;host.removeAttribute('data-sleeping');launch.setAttribute('aria-label','開啟 Benny 英文助理');animate();}}
+function wake(){lastUsed=Date.now();clearTimeout(idleTimer);idleTimer=setTimeout(idle,IDLE_MS);if(sleeping){sleeping=false;host.removeAttribute('data-sleeping');launch.setAttribute('aria-label','開啟 Mini果 英文助理');animate();}}
 function sync(){
  const next=api.context();
  if(!current||next.key!==current.key){
@@ -175,7 +175,7 @@ function idle(){
  clearTimeout(idleTimer);if(sleeping)return;
  const left=IDLE_MS-(Date.now()-lastUsed);
  if(left>0||api.busy()){idleTimer=setTimeout(idle,left>0?left:15000);return;}
- sleeping=true;host.setAttribute('data-sleeping','');q('.notice').hidden=true;close(false);launch.setAttribute('aria-label','Benny 正在睡眠，點一下喚醒');
+ sleeping=true;host.setAttribute('data-sleeping','');q('.notice').hidden=true;close(false);launch.setAttribute('aria-label','Mini果 正在睡眠，點一下喚醒');
 }
 root.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>{
  sync();stop();const next=b.dataset.action;if(next===mode&&next==='practice'&&puzzle)return;mode=next;markMode();

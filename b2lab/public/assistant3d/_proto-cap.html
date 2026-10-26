@@ -1,0 +1,130 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Cap boy proto</title>
+<style>
+body{margin:0;background:#f4efe6;font:13px system-ui;color:#5a4a3a;padding:16px}
+.row{display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap;margin-bottom:18px}
+.cell{text-align:center}
+.shell{border-radius:50%;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;overflow:hidden}
+</style></head><body>
+<div>3D 模型（會自己轉頭、眨眼；用滑鼠拖曳可以轉著看）</div>
+<div class="row" id="live"></div>
+<div>不同角度（大圖檢視）</div>
+<div class="row" id="big"></div>
+<div>實際尺寸：56 / 48 / 32px（白殼）</div>
+<div class="row" id="real"></div>
+<script type="module">
+import * as T from '../work3d/vendor/three.module.js';
+
+function build(){
+  const g=new T.Group();
+  const grad=new T.DataTexture(new Uint8Array([120,120,120,255,200,200,200,255,255,255,255,255]),3,1);
+  grad.minFilter=grad.magFilter=T.NearestFilter;grad.needsUpdate=true;
+  const toon=c=>new T.MeshToonMaterial({color:c,gradientMap:grad});
+  const skin=toon(0xffdcc4),ear=toon(0xf6c2a6),hair=toon(0x2e211c),cap=toon(0xf57a1f),capD=toon(0xe0661a);
+  const black=new T.MeshBasicMaterial({color:0x221613}),white=new T.MeshBasicMaterial({color:0xffffff});
+  const pink=new T.MeshBasicMaterial({color:0xf59a98,transparent:true,opacity:.7});
+  const line=new T.MeshBasicMaterial({color:0x1a1210,side:T.BackSide});
+  const sph=(w=32,h=24)=>new T.SphereGeometry(1,w,h);
+  function add(parent,geo,mat,pos,scl,rot,ol=0.045){
+    const m=new T.Mesh(geo,mat);m.position.set(...pos);m.scale.set(...scl);if(rot)m.rotation.set(...rot);parent.add(m);
+    if(ol){const o=new T.Mesh(geo,line);o.scale.set(...scl.map(s=>1+ol/Math.abs(s)));m.add(o);}
+    return m;
+  }
+  // 髮束：圓底尖尾的水滴形（尖端朝 +y），Q 版頭髮一撮一撮
+  const pts=[];for(let i=0;i<=24;i++){const u=i/24;pts.push(new T.Vector2(Math.sin(Math.PI*u)*Math.pow(1-u,.55)*.62,u-.35));}
+  const drop=new T.LatheGeometry(pts,20);
+  // lock(位置, 長, 寬, 厚, 尖端方向角 a：0=朝上、π=朝下、正值往左)
+  const lock=(x,y,z,len,w,d,a,tilt=0,yaw=0)=>add(g,drop,hair,[x,y,z],[w,len,d],[tilt,yaw,a],.035);
+  // 頭：Q 版寬大頭、下巴圓
+  const HS=[1.08,.96,1];
+  add(g,sph(48,36),skin,[0,0,0],HS,null,.05);
+  const surf=(x,y,l=0)=>HS[2]*Math.sqrt(Math.max(0,1-(x/HS[0])**2-(y/HS[1])**2))+l;
+  // 耳朵（含內耳）
+  for(const s of[-1,1]){const e=add(g,sph(),skin,[1.04*s,-.18,.02],[.2,.25,.14],null,.05);add(e,sph(),ear,[.15*s,0,.45],[.55,.6,.4],null,0);}
+  // 大眼睛：直立橢圓＋右上大亮點＋左下小亮點
+  const eyes=[];
+  for(const s of[-1,1]){
+    const x=.36*s,y=-.24,z=surf(x,y,-.03);
+    const e=add(g,sph(),black,[x,y,z],[.14,.22,.06],[0,x*.5,0],0);eyes.push(e);
+    add(e,sph(12,8),white,[.3,.4,.85],[.38,.28,.3],null,0);
+    add(e,sph(10,8),white,[-.3,-.45,.85],[.16,.12,.2],null,0);
+  }
+  // 大腮紅
+  for(const s of[-1,1]){const x=.6*s,y=-.5;add(g,sph(),pink,[x,y,surf(x,y,-.03)],[.19,.11,.05],[0,x*.6,0],0);}
+  // 頭髮底層：比頭大一圈，從帽子下方蓬出來
+  add(g,new T.SphereGeometry(1,40,24,0,Math.PI*2,0,Math.PI*.62),hair,[0,.06,-.04],[1.1,1.02,1.06],[-.22,0,0],.04);
+  // 瀏海：大撮往右撇，尖端停在眼睛上方
+  const bang=(x,y,len,w)=>lock(x,y,surf(x,y,.0),len,w*1.05,.24,Math.PI+x*.55,-.45,x*.75);
+  bang(-.76,.2,.6,.32);
+  bang(-.48,.3,.72,.36);
+  bang(-.16,.32,.78,.38);
+  bang(.16,.32,.76,.38);
+  bang(.46,.3,.7,.36);
+  bang(.76,.2,.58,.3);
+  // 帽緣一圈蓬髮：從帽子底下往外往下翹，蓋住帽子和頭髮的接縫
+  for(let i=0;i<16;i++){
+    const f=i/16*Math.PI*2;if(Math.abs(Math.atan2(Math.sin(f),Math.cos(f)))<.85)continue; // 正面交給瀏海
+    const side=Math.abs(Math.sin(f))>.8;
+    const r=new T.Group();r.rotation.y=f;g.add(r);
+    add(r,drop,hair,[0,.28+(i%2)*.08,1.04],[side?.38:.44,side?.6:.72,.3],[Math.PI-.85,0,(i%2?.3:-.3)],.035);
+  }
+  // 瀏海後面再墊一層，看起來更蓬
+  for(const x of[-.66,-.33,0,.33,.66])lock(x,.5,surf(x,.5,-.1),.45,.46,.26,Math.PI+x*.5,-.7,x*.75);
+  // 兩側：往外翹的大撮（右側一撮往上翹）
+  lock(-1.04,.1,.05,.62,.32,.26,2.4,0,.2);
+  lock(-.98,-.22,-.15,.45,.24,.22,2.7,0,.2);
+  lock(1.07,.15,.0,.66,.32,.26,-1.25,0,-.2);
+  lock(1.0,-.2,-.12,.48,.26,.22,-2.5,0,-.2);
+  // 後腦與後頸
+  for(const [x,a] of [[-.6,2.8],[-.2,3.05],[.2,-3.05],[.6,-2.8]])lock(x,-.25,-.82,.6,.36,.28,a,.35);
+  add(g,sph(16,12),hair,[0,-.05,-.75],[.85,.6,.4],null,.035);
+  // 帽子：反戴大帽，帽簷朝左、開口朝右上
+  const capY=new T.Group();capY.position.set(0,.45,-.06);capY.rotation.set(.05,0,.2);g.add(capY);
+  const capG=new T.Group();capG.rotation.y=-1.45;capY.add(capG);
+  add(capG,new T.SphereGeometry(1,48,28,0,Math.PI*2,0,Math.PI*.5),cap,[0,0,0],[1.16,.95,1.13],null,.045);
+  const brim=new T.CylinderGeometry(1,1,1,40,1,false,-Math.PI*.4,Math.PI*.8);
+  add(capG,brim,cap,[0,-.02,.66],[.98,.07,1.08],[.3,0,0],.03);
+  // 帽子亮面
+  add(capY,sph(),new T.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:.45}),[-.42,.62,.72],[.3,.1,.04],[-.75,-.45,.5],0);
+  // 開口：露出頭髮、髮尖往外戳；下方調整帶＋孔
+  const hole=new T.Group();hole.position.set(0,0,0);hole.rotation.x=.42;capG.add(hole);
+  add(hole,sph(24,16),hair,[0,.02,-1.08],[.4,.22,.12],null,.02);
+  add(capG,new T.BoxGeometry(1,1,1),capD,[0,.1,-1.13],[.66,.12,.08],[.18,0,0],.025);
+  for(let i=-3;i<=3;i++)add(capG,sph(10,8),black,[i*.08,.1,-1.18],[.024,.024,.012],null,0);
+  add(capG,sph(),cap,[0,.95,0],[.15,.08,.15],null,.035);
+  g.userData.eyes=eyes;g.userData.eyeH=.22;
+  return g;
+}
+
+function view(host,size,yaw,pitch=0){
+  const r=new T.WebGLRenderer({alpha:true,antialias:true});r.setPixelRatio(2);r.setSize(size,size);r.setClearColor(0,0);host.append(r.domElement);
+  const sc=new T.Scene(),cam=new T.PerspectiveCamera(32,1,.1,30);cam.position.set(0,.2,6.2);cam.lookAt(0,.2,0);
+  sc.add(new T.HemisphereLight(0xffffff,0x887766,2.2));const L=new T.DirectionalLight(0xffffff,2.6);L.position.set(-3,5,6);sc.add(L);
+  const g=build();g.rotation.set(pitch,yaw,0);sc.add(g);r.render(sc,cam);
+}
+// 可互動大圖：自動左右轉、眨眼；拖曳可轉頭
+{
+  const host=document.getElementById('live');
+  const r=new T.WebGLRenderer({alpha:true,antialias:true});r.setPixelRatio(2);r.setSize(280,280);r.setClearColor(0,0);host.append(r.domElement);
+  const sc=new T.Scene(),cam=new T.PerspectiveCamera(32,1,.1,30);cam.position.set(0,.2,6.2);cam.lookAt(0,.2,0);
+  sc.add(new T.HemisphereLight(0xffffff,0x887766,2.2));const L=new T.DirectionalLight(0xffffff,2.6);L.position.set(-3,5,6);sc.add(L);
+  const g=build();sc.add(g);
+  let drag=null,yaw=0,pitch=0;
+  r.domElement.style.cursor='grab';r.domElement.style.touchAction='none';
+  r.domElement.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,yaw,pitch};r.domElement.setPointerCapture(e.pointerId);});
+  r.domElement.addEventListener('pointermove',e=>{if(!drag)return;yaw=drag.yaw+(e.clientX-drag.x)/80;pitch=Math.max(-.6,Math.min(.6,drag.pitch+(e.clientY-drag.y)/120));});
+  r.domElement.addEventListener('pointerup',()=>drag=null);
+  (function loop(t){
+    if(!drag){yaw+=(.4*Math.sin(t/1600)-yaw)*.03;pitch*=.95;}
+    g.rotation.set(pitch,yaw,0);
+    const blink=t%4000<150;g.userData.eyes.forEach(e=>e.scale.y=blink?.02:g.userData.eyeH);
+    r.render(sc,cam);requestAnimationFrame(loop);
+  })(0);
+}
+const big=document.getElementById('big');
+for(const [y,t] of [[-.5,'轉向左'],[0,'正面'],[.5,'轉向右'],[-1.57,'左側'],[1.57,'右側'],[3.14,'背面']]){
+  const c=document.createElement('div');c.className='cell';const h=document.createElement('div');c.append(h);c.append(t);big.append(c);view(h,110,y);
+}
+const real=document.getElementById('real');
+for(const s of[56,48,32]){const c=document.createElement('div');c.className='cell';const sh=document.createElement('div');sh.className='shell';sh.style.cssText=`width:${s}px;height:${s}px`;c.append(sh);c.append(s+'px');real.append(c);view(sh,s,0);}
+</script></body></html>

@@ -34,7 +34,7 @@
     warn:'<path d="M12 3.5L21.5 20h-19z" fill="'+Y+'" '+st+'/><path d="M12 9.5v5" '+ln(D,2.2)+'/><circle cx="12" cy="17.3" r="1.2" fill="'+D+'"/>',
     star:star(12,12.8,9.6,4.3,Y),
     bulb:'<path d="M12 2.8a6 6 0 0 1 3.6 10.8V16H8.4v-2.4A6 6 0 0 1 12 2.8z" fill="'+Y+'" '+st+'/><path d="M9 19h6M10.2 21.4h3.6" '+ln(D,1.8)+'/><path d="M10.4 9.6l1.6 2 1.6-2" '+ln(W,1.5)+'/>',
-    spk:'<path d="M3.5 9.5h3.5L11.5 5.5v13L7 14.5H3.5z" fill="'+A+'" '+st+'/><path d="M15 9a4 4 0 0 1 0 6M17.8 6.4a7.6 7.6 0 0 1 0 11.2" '+ln(D,1.8)+'/>',
+    spk:'<path d="M3.5 9.5h3.5L11.5 5.5v13L7 14.5H3.5z" fill="'+M+'" '+st+'/><path d="M15 9a4 4 0 0 1 0 6M17.8 6.4a7.6 7.6 0 0 1 0 11.2" '+ln(D,1.8)+'/>',
     play:'<path d="M7 4.5l12 7.5-12 7.5z" fill="'+G+'" '+st+'/>',
     pause:'<rect x="5.5" y="4.5" width="4.6" height="15" rx="1.2" fill="'+A+'" '+st+'/><rect x="13.9" y="4.5" width="4.6" height="15" rx="1.2" fill="'+A+'" '+st+'/>',
     stop:'<rect x="5" y="5" width="14" height="14" rx="2.5" fill="'+R+'" '+st+'/>',
