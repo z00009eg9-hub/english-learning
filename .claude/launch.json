@@ -92,6 +92,20 @@
         "-c-1"
       ],
       "port": 8099
+    },
+    {
+      "name": "line-bot",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "line-bot",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8796"
+      ],
+      "port": 8796
     }
   ]
 }

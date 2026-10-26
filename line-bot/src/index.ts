@@ -17,11 +17,26 @@ import {
   buildNotFoundMessage,
   buildQaExamplesMessage,
   buildRelatedWordsMessage,
+  buildSentenceDetailMessage,
+  buildSentenceSavedMessage,
   buildWordAudioMessages,
   buildWordFlexMessage,
   studyUrl,
   textMessage,
+  withSaveAsSentence,
 } from './flexMessages';
+import {
+  ackSentences,
+  canSaveSentences,
+  classifyText,
+  deleteSentence,
+  getAudio,
+  getSentence,
+  pendingSentences,
+  saveSentence,
+  SentenceRecord,
+  tokenOk,
+} from './sentences';
 import {
   findByChinese,
   findSimilarWords,
@@ -81,6 +96,52 @@ function messagesForQuery(rawText: string, env: Env): unknown[] {
   return messagesForWord(query, env);
 }
 
+/* ---------- LINE 記句子 ---------- */
+
+/** 句子語音由這個 Worker 自己提供：/audio/<id>.mp3（KV 裡的 Aura 語音檔） */
+function sentenceAudio(rec: SentenceRecord, origin: string): unknown[] {
+  if (!origin || !rec.audioMs) return [];
+  return [{ type: 'audio', originalContentUrl: `${origin}/audio/${rec.id}.mp3`, duration: rec.audioMs }];
+}
+
+async function messagesForSentence(text: string, env: Env, origin: string): Promise<unknown[]> {
+  const { rec, nth } = await saveSentence(env, text);
+  return [buildSentenceSavedMessage(rec, nth), ...sentenceAudio(rec, origin)];
+}
+
+/** 中文 ≤4 字照舊查單字；記句子的使用者在結果卡底下多一顆「當句子存」 */
+function messagesForText(text: string, env: Env, canSave: boolean): unknown[] {
+  const messages = messagesForQuery(text, env);
+  if (canSave && isChineseQuery(text.trim()) && messages.length === 1) {
+    return [withSaveAsSentence(messages[0], text.trim())];
+  }
+  return messages;
+}
+
+async function messagesForSentencePostback(
+  action: string,
+  id: string,
+  env: Env,
+  origin: string,
+): Promise<unknown[]> {
+  if (action === 'save') return messagesForSentence(id, env, origin); // save 的 w 是原文
+  const rec = await getSentence(env, id);
+  if (!rec) return [textMessage('找不到這句，可能已經刪掉了。')];
+  switch (action) {
+    case 'mis':
+      return [buildSentenceDetailMessage(rec)];
+    case 'asword':
+      await deleteSentence(env, id);
+      return messagesForQuery(rec.zh, env);
+    case 'del':
+    default:
+      await deleteSentence(env, id);
+      return [textMessage(`已刪掉：${rec.zh}`)];
+  }
+}
+
+const SENTENCE_ACTIONS = new Set(['save', 'mis', 'asword', 'del']);
+
 function messagesForPostback(data: string, env: Env): unknown[] {
   const { action, word } = parsePostback(data);
   const entry = findWord(word);
@@ -106,18 +167,37 @@ function messagesForPostback(data: string, env: Env): unknown[] {
   }
 }
 
-/** 決定一個 event 要回什麼；回 null 代表安全忽略（貼圖、圖片、影片…） */
-export function messagesForEvent(event: LineEvent, env: Env): unknown[] | null {
+/**
+ * 決定一個 event 要回什麼；回 null 代表安全忽略（貼圖、圖片、影片…）。
+ * origin 是這個 Worker 的網址，句子語音的 audio message 要用。
+ */
+export async function messagesForEvent(
+  event: LineEvent,
+  env: Env,
+  origin = '',
+): Promise<unknown[] | null> {
   if (!event || !event.replyToken) return null;
+  const canSave = canSaveSentences(env, event.source?.userId);
 
   if (event.type === 'message') {
     /* STEP 15：只處理文字訊息，其他型別安全忽略、不報錯 */
     if (event.message?.type !== 'text') return null;
-    return messagesForQuery(event.message.text ?? '', env);
+    const text = event.message.text ?? '';
+    if (canSave) {
+      const c = classifyText(text);
+      if (c.kind === 'sentence') return messagesForSentence(c.text, env, origin);
+    }
+    return messagesForText(text, env, canSave);
   }
 
   if (event.type === 'postback') {
-    return messagesForPostback(event.postback?.data ?? '', env);
+    const data = event.postback?.data ?? '';
+    const { action, word } = parsePostback(data);
+    if (SENTENCE_ACTIONS.has(action)) {
+      if (!canSave) return [textMessage('這個功能目前只開放給帳號主人。')];
+      return messagesForSentencePostback(action, word, env, origin);
+    }
+    return messagesForPostback(data, env);
   }
 
   return null;
@@ -128,6 +208,32 @@ export function messagesForEvent(event: LineEvent, env: Env): unknown[] | null {
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+
+    /* 句子語音：LINE 的 audio message 會來抓這個網址（公開，id 是不可猜的時間＋亂數） */
+    const audioMatch = url.pathname.match(/^\/audio\/([\w-]+)\.mp3$/);
+    if (request.method === 'GET' && audioMatch) {
+      const buf = await getAudio(env, audioMatch[1]);
+      if (!buf) return new Response('Not Found', { status: 404 });
+      return new Response(buf, {
+        headers: { 'content-type': 'audio/mpeg', 'cache-control': 'public, max-age=86400' },
+      });
+    }
+
+    /* 給週六排程（b2lab/MYWEEK_TASK.md）：取還沒處理的句子、處理完 ack */
+    if (url.pathname === '/sentences' || url.pathname === '/sentences/ack') {
+      if (!tokenOk(request, env)) return new Response('Unauthorized', { status: 401 });
+      if (request.method === 'GET' && url.pathname === '/sentences') {
+        return Response.json({ sentences: await pendingSentences(env) }, {
+          headers: { 'cache-control': 'no-store' },
+        });
+      }
+      if (request.method === 'POST' && url.pathname === '/sentences/ack') {
+        const body = (await request.json().catch(() => ({}))) as { ids?: unknown };
+        const ids = Array.isArray(body.ids) ? body.ids.map(String) : [];
+        return Response.json({ acked: await ackSentences(env, ids) });
+      }
+      return new Response('Method Not Allowed', { status: 405 });
+    }
 
     if (request.method === 'GET') {
       /* 開發用預覽：/preview?w=compensate 直接吐出這個字會回的 Flex JSON，
@@ -185,7 +291,7 @@ export default {
           console.log('[worker] 略過重送的 event', event.webhookEventId);
           continue;
         }
-        const messages = messagesForEvent(event, env);
+        const messages = await messagesForEvent(event, env, url.origin);
         if (!messages || !messages.length) continue;
         const sent = await replyMessage(env.LINE_CHANNEL_ACCESS_TOKEN, event.replyToken!, messages);
         /* Flex 被 LINE 退回時降級成純文字再送一次 —— replyToken 在第一次失敗時還沒被用掉，

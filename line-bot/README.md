@@ -11,8 +11,9 @@ LINE Official Account
 ```
 
 **這一版完全不需要綁信用卡**：沒有 Firebase Cloud Functions、沒有 Cloud Run、沒有任何
-需要 billing account 的 Google Cloud 服務、沒有 AI／OpenAI，只用 Cloudflare Workers 免費方案
+需要 billing account 的 Google Cloud 服務、沒有付費 AI API，只用 Cloudflare Workers 免費方案
 與 LINE Official Account 免費方案，而且只用 Reply API（被動回覆），不做主動 Push／Broadcast。
+（「LINE 記句子」用的 Workers AI 與 KV 都在 Cloudflare 免費額度內，見第 10 節。）
 
 ---
 
@@ -167,6 +168,8 @@ line-bot/
 | --- | --- | --- |
 | `LINE_CHANNEL_SECRET` | LINE channel → Basic settings | 驗證 `x-line-signature` |
 | `LINE_CHANNEL_ACCESS_TOKEN` | LINE channel → Messaging API → Issue | 呼叫 Reply API |
+| `OWNER_USER_ID` | 自己傳訊息後在 `wrangler tail` 看 `source.userId` | LINE 記句子只收這個人（沒設＝功能關閉） |
+| `SENTENCES_TOKEN` | 自己產生，本機同一份放 `b2lab/my-week/.token` | 週六排程 `GET /sentences` |
 
 非機密設定放在 `wrangler.toml` 的 `[vars]`：`B2LAB_URL`、`QA_URL`（「完整學習」的深連結）。
 
@@ -294,6 +297,29 @@ npx firebase-tools deploy --only hosting --project rexon-qa-english
 
 ## 9. 這一版刻意沒有做
 
-依需求排除：OpenAI／Claude／Gemini 等任何 AI、AI 產生例句或翻譯、語音／TTS／STT、
+依需求排除：OpenAI／Claude／Gemini 等付費 AI、AI 產生單字例句、STT、
 登入系統／LINE Login、收藏同步、每日單字、Push Notification／Broadcast、
 Quiz、學習紀錄、Admin 後台、任何付費 Firebase 服務。
+
+---
+
+## 10. 🔊 聽發音與 LINE 記句子（2026-10）
+
+**🔊 聽發音**：單字卡多一顆按鈕（postback `a=say`），回 audio message —— 先唸單字、再唸第一句一般例句。
+音檔是 B2 Read 現成的 edge-tts mp3（`https://english-b2-lab-audio.web.app/f/…`），`build:data` 依
+`b2lab/public/tts-key.js` 的檔名規則對應，並從本機 `D:2lab-audiopublic` 算出長度寫進 `audio` 欄位。
+沒有音檔的字不畫按鈕；音檔 repo 不在這台電腦時沿用上一版的 `audio` 欄位。
+
+**LINE 記句子**（只對 `OWNER_USER_ID`，其他人行為完全不變）：
+
+| 傳什麼 | 做什麼 |
+| --- | --- |
+| 中文、≤4 字、沒有標點 | 照舊查單字，結果卡底下多「📝 當句子存」 |
+| 中文超過 4 字或有標點 | 記成句子 |
+| `#句` 開頭 | 一定記成句子 |
+
+- 翻譯：Workers AI `@cf/meta/llama-3.3-70b-instruct-fp8-fast`，回口語／書面／關鍵字／常犯錯（約 35 neurons／句）。AI 失敗照樣存，卡片寫「英文說法週六補」。
+- 語音：Workers AI `@cf/deepgram/aura-2-en` 唸口語版（約 160 neurons／句），mp3 存 KV（60 天），由 `/audio/<id>.mp3` 提供；卡片＋audio message 一起 reply。TTS 失敗只送卡片。（MeloTTS 回 WAV，LINE 不收，所以不用。）
+- 儲存：KV `MY_SENTENCES`，`s:<id>` 句子、`a:<id>` 語音。
+- 週六：`node line-bot/scripts/pull-sentences.mjs` 用 `GET /sentences` 取走、寫進 `b2lab/my-week/<週>.md`，再 `POST /sentences/ack`（ack 過的留 14 天自動刪）。
+- 零費用：Workers AI 免費額度每天 10,000 neurons，Free 方案超過只會報錯、不扣款；只用 reply、不用 push；不用 R2。

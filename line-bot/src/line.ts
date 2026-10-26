@@ -13,6 +13,15 @@ export interface Env {
   QA_URL?: string;
   /** B2 Read AI 語音檔站（單字卡 🔊 用） */
   AUDIO_URL?: string;
+  /* ---- LINE 記句子（沒設定就整個功能關閉，查單字照舊） ---- */
+  /** 只收這個 LINE userId 傳來的句子（secret） */
+  OWNER_USER_ID?: string;
+  /** 週六排程取句子用的 Bearer token（secret） */
+  SENTENCES_TOKEN?: string;
+  /** Workers AI binding（翻譯＋句子語音，免費額度） */
+  AI?: { run(model: string, input: Record<string, unknown>): Promise<unknown> };
+  /** 句子與句子語音（KV binding） */
+  MY_SENTENCES?: KVNamespace;
 }
 
 export interface LineSource {

@@ -686,3 +686,124 @@ export function buildChineseResultsMessage(query: string, hits: WordEntry[]) {
 
 /** 純文字回覆（只有錯誤或提示時用） */
 export const textMessage = (text: string) => ({ type: 'text', text: cut(text, 400) });
+
+/* ---------- LINE 記句子 ---------- */
+
+/** 查單字的結果卡（中文 ≤4 字）底部加「當句子存」：使用者其實想記的是一句話時一鍵改存 */
+export function withSaveAsSentence(msg: any, text: string): any {
+  const bubbleObj = msg?.contents;
+  if (!bubbleObj || bubbleObj.type !== 'bubble') return msg;
+  const row = {
+    type: 'box',
+    layout: 'horizontal',
+    margin: 'md',
+    contents: [
+      tile('📝 當句子存', NEUTRAL_TX, NEUTRAL_BG, {
+        type: 'postback',
+        data: buildPostback('save', text),
+        displayText: `${text}｜當句子存`,
+      }),
+    ],
+  };
+  if (bubbleObj.footer) {
+    bubbleObj.footer.contents.push(row);
+  } else {
+    const full = bubble(bubbleObj.body.contents, [divider, { ...row, margin: 'lg' }]);
+    bubbleObj.footer = full.footer;
+  }
+  return msg;
+}
+
+export interface SentenceCardData {
+  id: string;
+  zh: string;
+  sp: string;
+  fm: string;
+  kw: string[];
+  mis: string[];
+  ai: boolean;
+}
+
+function kwTags(kw: string[]) {
+  return {
+    type: 'box',
+    layout: 'horizontal',
+    spacing: 'sm',
+    margin: 'lg',
+    contents: [
+      ...kw.slice(0, 3).map((k) => ({
+        type: 'box',
+        layout: 'vertical',
+        flex: 0,
+        backgroundColor: ACCENT_BG,
+        cornerRadius: '6px',
+        paddingAll: '4px',
+        paddingStart: '8px',
+        paddingEnd: '8px',
+        contents: [{ type: 'text', text: cut(k, 18), size: 'xxs', color: ACCENT }],
+      })),
+      { type: 'filler' },
+    ],
+  };
+}
+
+/** 記句子的回覆卡：小字確認＋原句 → 口語版（大字）→ 書面版 → 關鍵字標籤 → 一排按鈕 */
+export function buildSentenceSavedMessage(r: SentenceCardData, nth: number) {
+  const body: any[] = [
+    { type: 'text', text: `✅ 已記下・本週第 ${nth} 句`, size: 'xxs', color: META },
+    { type: 'text', text: cut(r.zh, 200), size: 'xs', color: TRANS, wrap: true, margin: 'xs' },
+  ];
+  if (r.ai && r.sp) {
+    body.push(
+      { type: 'text', text: cut(r.sp, 300), size: 'lg', weight: 'bold', color: INK, wrap: true, margin: 'lg' },
+      ...(r.fm && r.fm !== r.sp
+        ? [{ type: 'text', text: cut(r.fm, 300), size: 'sm', color: BODY, wrap: true, margin: 'md' }]
+        : []),
+      ...(r.kw.length ? [kwTags(r.kw)] : []),
+    );
+  } else {
+    body.push({ type: 'text', text: '英文說法週六補', size: 'md', weight: 'bold', color: BODY, margin: 'lg' });
+  }
+  const pb = (a: string, text: string) => ({
+    type: 'postback',
+    data: buildPostback(a, r.id),
+    displayText: text,
+  });
+  const footer = [
+    divider,
+    {
+      type: 'box',
+      layout: 'horizontal',
+      spacing: 'md',
+      margin: 'lg',
+      contents: [
+        ...(r.ai ? [tile('常犯錯・更多', NEUTRAL_TX, NEUTRAL_BG, pb('mis', '常犯錯・更多'))] : []),
+        tile('改查單字', NEUTRAL_TX, NEUTRAL_BG, pb('asword', `改查單字：${cut(r.zh, 20)}`)),
+        tile('刪掉', NEUTRAL_TX, NEUTRAL_BG, pb('del', '刪掉這句')),
+      ],
+    },
+  ];
+  const alt = r.ai && r.sp ? `已記下：${r.sp}` : `已記下：${r.zh}（英文說法週六補）`;
+  return flex(alt, bubble(body, footer));
+}
+
+/** 「常犯錯・更多」：常犯錯＋兩種說法＋關鍵字 */
+export function buildSentenceDetailMessage(r: SentenceCardData) {
+  const section = (title: string, lines: string[], first = false) => ({
+    type: 'box',
+    layout: 'vertical',
+    margin: first ? 'lg' : 'xl',
+    contents: [
+      { type: 'text', text: title, size: 'xxs', weight: 'bold', color: LABEL },
+      ...lines.map((t) => ({ type: 'text', text: cut(t, 300), size: 'sm', color: TEXT, wrap: true, margin: 'sm' })),
+    ],
+  });
+  const body: any[] = [
+    ...headerBox(cut(r.zh, 60), 'MY SENTENCE', ACCENT),
+    section('常犯錯', r.mis.length ? r.mis : ['（這句沒有特別要注意的地方）'], true),
+    section('口語', [r.sp]),
+    ...(r.fm && r.fm !== r.sp ? [section('書面', [r.fm])] : []),
+    ...(r.kw.length ? [section('關鍵字', [r.kw.join('・')])] : []),
+  ];
+  return flex(`常犯錯：${r.zh}`, bubble(body));
+}

@@ -12,6 +12,18 @@ AUDIO_URL = "https://english-b2-lab-audio.web.app/"
 # 需要的 secrets（在 Cloudflare 上設定，不在這裡）：
 #   LINE_CHANNEL_SECRET
 #   LINE_CHANNEL_ACCESS_TOKEN
+#   OWNER_USER_ID     —— LINE 記句子只收這個 userId（沒設就整個功能關閉）
+#   SENTENCES_TOKEN   —— 週六排程 GET /sentences 用的 Bearer token（本機那份在 b2lab/my-week/.token）
+
+# LINE 記句子：翻譯（Llama 3.3）與句子語音（Aura）都走 Workers AI 免費額度（每天 10,000 neurons）。
+# Free 方案超過額度只會報錯、不會扣款；一句約 35（翻譯）＋ 160（語音）neurons。
+[ai]
+binding = "AI"
+
+# 句子 s:<id> 與句子語音 a:<id>（語音 60 天、ack 過的句子 14 天自動過期）
+[[kv_namespaces]]
+binding = "MY_SENTENCES"
+id = "850cd3edd53e4c379f4326ee36f58141"
 
 [observability]
 enabled = true
