@@ -203,6 +203,23 @@ describe('LINE 記句子', () => {
     expect(audio[1].ttl).toBe(60 * 24 * 3600);
   });
 
+  it('有 ctx 時先回 200，句子在 waitUntil 背景處理後才 reply（避免 LINE 斷線 Canceled）', async () => {
+    const env = makeEnv();
+    const body = JSON.stringify({ events: [{ webhookEventId: 'wu1', replyToken: 'r', ...text('馬達上蓋剛來，有色差問題') }] });
+    const req = new Request('https://bot.example.com/webhook', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-line-signature': await sign(body) },
+      body,
+    });
+    const pending: Promise<unknown>[] = [];
+    calls = [];
+    const res = await worker.fetch(req, env as any, { waitUntil: (p: Promise<unknown>) => pending.push(p) } as any);
+    expect(res.status).toBe(200);
+    expect(pending).toHaveLength(1);
+    await Promise.all(pending);
+    expect(S(calls[0].body.messages)).toContain('已記下');
+  });
+
   it('第二句是本週第 2 句', async () => {
     const env = makeEnv();
     await send(env, text('馬達上蓋剛來，有色差問題'));

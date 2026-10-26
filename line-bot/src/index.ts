@@ -206,7 +206,7 @@ export async function messagesForEvent(
 /* ---------- Worker ---------- */
 
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: Env, ctx?: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
     /* 句子語音：LINE 的 audio message 會來抓這個網址（公開，id 是不可猜的時間＋亂數） */
@@ -285,13 +285,25 @@ export default {
       return new Response('OK');
     }
 
+    /* 記句子要等 AI 翻譯＋TTS（幾秒），LINE 等不及會先斷線，Worker 跟著被 Canceled。
+       所以先回 200，event 放到 waitUntil 背景處理（最多 30 秒），replyToken 一分鐘內都有效。
+       測試或沒有 ctx 時就照舊同步跑完。 */
+    const work = handleEvents(events, env, url.origin);
+    if (ctx?.waitUntil) ctx.waitUntil(work);
+    else await work;
+
+    return new Response('OK');
+  },
+};
+
+async function handleEvents(events: LineEvent[], env: Env, origin: string): Promise<void> {
     for (const event of events) {
       try {
         if (alreadyHandled(event?.webhookEventId)) {
           console.log('[worker] 略過重送的 event', event.webhookEventId);
           continue;
         }
-        const messages = await messagesForEvent(event, env, url.origin);
+        const messages = await messagesForEvent(event, env, origin);
         if (!messages || !messages.length) continue;
         const sent = await replyMessage(env.LINE_CHANNEL_ACCESS_TOKEN, event.replyToken!, messages);
         /* Flex 被 LINE 退回時降級成純文字再送一次 —— replyToken 在第一次失敗時還沒被用掉，
@@ -322,9 +334,6 @@ export default {
         }
       }
     }
-
-    return new Response('OK');
-  },
-};
+}
 
 export { normalize };
