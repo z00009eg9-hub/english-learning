@@ -1516,6 +1516,8 @@ body.cnall #v-book span.cnx{display:inline!important}
 /* streak badge in header (desktop：無膠囊) */
 .hd-streak{font-size:13px;font-weight:700;color:rgba(255,255,255,.9);
   background:none;border:none;border-radius:0;padding:0 3px;white-space:nowrap}
+/* 頂欄頭像與連續天數圖示放大 1.5 倍 */
+header .prof .emo-ic,header .hd-streak .emo-ic{width:1.8em!important;height:1.8em!important}
 /* tag chips on cards */
 .tag-chip{display:inline-block;font-size:var(--font-meta);font-weight:700;
   background:#f2f7f7;border:1px solid #d5e5e4;border-radius:14px;padding:2px 10px;color:#2b6b69;white-space:nowrap}
@@ -2114,6 +2116,7 @@ body.vd-lock{overflow:hidden}
 #vd .vd-ctrl{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:5px 0}
 #vd .vd-play{width:50px;height:50px;border-radius:50%;border:0;background:var(--accent);color:#fff !important;font-size:20px;font-weight:700;cursor:pointer;box-shadow:0 0 0 4px rgba(232,129,58,.2);display:grid;place-items:center;line-height:1}
 #vd .vd-play.on{background:var(--accent2)}
+#vd .vd-play .emo-ic *{fill:#fff;stroke:#fff}
 #vd .vd-cb{border:1px solid transparent;background:none;padding:7px 10px;border-radius:10px;font-size:var(--font-meta);color:var(--ink2);cursor:pointer;white-space:nowrap}
 #vd .vd-cb:hover{background:var(--card);border-color:var(--line);color:var(--ink)}
 #vd .vd-cb.on{background:var(--accent-soft);border-color:#f0c9a0;color:var(--accent2);font-weight:600}

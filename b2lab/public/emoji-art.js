@@ -84,7 +84,7 @@
     '🙂':'smile','😊':'smile','😌':'smile','😋':'smile','😀':'smile','😄':'smile','😓':'sad','😩':'sad','😢':'sad','😞':'sad','😐':'flat','😲':'wow','😮':'wow','😴':'sleep','🤔':'think','😤':'angry','😈':'angry','🤐':'zip','🤒':'sick','🤧':'sick','😷':'sick','🙈':'seeno','👅':'smile',
     '🧑':'person','🧍':'person','👨':'person','🤵':'person','🦱':'person','🧒':'personG','👩':'personA','👵':'personR','🙋':'personA','🙅':'personR','🏃':'personG','🚶':'person','🧑\u200D💻':'person','👥':'@people',
     '👉':'point','👆':'pointUp','👂':'ear','💧':'drop','💦':'drop','☁':'cloud','📰':'news','🧪':'flask','🔮':'crystal','🔤':'abc','🚫':'nosign','🔗':'link','📤':'tray','📥':'tray',
-    '📚':'@booksL','⏳':'@hourglass','⌛':'@hourglass','🧠':'@brainL','🍽':'@plateL','📦':'@box','🍎':'@apple','🐻':'@paw','🐱':'@paw','🐴':'@paw','🪳':'@paw','🦎':'@paw',
+    '📚':'@booksL','⏳':'@hourglass','⌛':'@hourglass','🧠':'@brainL','🍽':'@plateL','📦':'@box','🍎':'@apple','🐻':'@bear','🐱':'@paw','🐴':'@paw','🪳':'@paw','🦎':'@paw',
     '💻':'@laptop','✍':'@pencil','✏':'@pencil','🖌':'@pencil','🎨':'@pencil','🧳':'@suitcase','🌧':'@cloudRain','🌦':'@cloudRain','☕':'@coffee','🛒':'@cart',
     '🚆':'@train','🚄':'@train','🚇':'@train','⚙':'@gear','📜':'@doc','📄':'@doc','📃':'@doc','📊':'@chartUp','📈':'@chartUp','📉':'@chartDown','⚖':'@scalesL','📋':'@clipboard','🗂':'@clipboard','📎':'@clipboard',
     '🧴':'@bottleL','🌞':'@sun','☀':'@sun','🌅':'@sun','🏖':'@sun','🏝':'@sun','🌡':'@thermo','📞':'@phone','☎':'@phone','📱':'@phone','📲':'@phone','🏪':'@storeL','🍳':'@pot','🍲':'@pot',
