@@ -40,7 +40,7 @@ create_file(
 - callout 用**兩欄表格**：第一欄背景 `#FFD54F`（黃色粗直條），第二欄 `#FFFDE7`。
   ⚠ 不要用 `border-left`，那條會太細，跟 20260811 不一樣
   ⚠ **黃色直條欄寬一律 0.4 公分**（轉檔後用 Apps Script `table.setColumnWidth(0, 11.34)`，11.34pt≈0.4cm；2026-08-19 使用者指定）
-  ⚠ **黃底 callout 不要外框線**（2026-10-27 使用者指定）：HTML 的 `td` 邊框轉檔後會留下灰框，轉檔後一律 `table.setBorderWidth(0)`
+  ⚠ **黃底 callout 不要外框線**（2026-10-27 使用者指定）：HTML 的 `td` 邊框轉檔後會留下灰框，轉檔後一律 `table.setBorderColor("#ffffff").setBorderWidth(1)`（改白色；只設寬度 0 在 Docs 仍會顯示灰線）
 - **問答練習（Q／A／中文）用段落式，不要做成表格**（2026-10-27 使用者指定）：每題三行 `N. Q：`／`A：`／`中文：`（標籤粗體、13pt、行距 1.5、題與題之間段後 12pt），
   Q、A 兩行用 Docs API 設 `keepWithNext`，避免同一題被切到兩頁。參考腳本：`20261027-Avoid與Prevent及問題報告/fix-format.gs`
 - callout 內文字顏色：標籤（原句／訂正／中文／結構／文法解說）**粗體黑字**；
