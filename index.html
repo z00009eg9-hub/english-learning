@@ -1475,9 +1475,20 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
 // VOCABULARY DATA  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
-// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260731, 20260804, 20260811, 20260813, 20260818, 20260821, 20260825, 20260827, 20260903, 20260910, 20260915, 20260917, 20260922, 20261001, 20261006, 20261008, 20261013, 20261015, 20261021, 20261023
+// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260731, 20260804, 20260811, 20260813, 20260818, 20260821, 20260825, 20260827, 20260903, 20260910, 20260915, 20260917, 20260922, 20261001, 20261006, 20261008, 20261013, 20261015, 20261021, 20261023, 20261027
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-10-23 count:832
+// ===SYNC:VOCAB_START=== sync_date:2026-10-27 count:842
+  // --- 20261027 Avoid與Prevent及問題報告 ---
+  {w:"under-tightening",ipa:"/ˌʌn.dɚˈtaɪ.tən.ɪŋ/",pos:"n.",cn:"鎖不夠緊",def:"Not tightening a screw or nut enough.",exEn:"Under-tightening may lead to product failure.",exCn:"鎖不夠緊可能導致產品故障。",cat:"workplace"},
+  {w:"incoming parts",ipa:"/ˈɪn.kʌm.ɪŋ pɑːrts/",pos:"n.",cn:"進料零件",def:"Parts that arrive from suppliers before production.",exEn:"We check all incoming parts in the morning.",exCn:"我們早上檢查所有進料零件。",cat:"workplace"},
+  {w:"rework",ipa:"/ˈriː.wɝːk/",pos:"n.",cn:"返工",def:"Work you have to do again because it was not right the first time.",exEn:"Too much rework wastes time.",exCn:"太多返工浪費時間。",cat:"workplace"},
+  {w:"corrosion resistance",ipa:"/kəˈroʊ.ʒən rɪˈzɪs.təns/",pos:"n.",cn:"耐腐蝕性",def:"How well a material or coating resists rust and damage.",exEn:"This coating has good corrosion resistance.",exCn:"這個塗層耐腐蝕性很好。",cat:"workplace"},
+  {w:"coating quality",ipa:"/ˈkoʊ.t̬ɪŋ ˈkwɑː.lə.t̬i/",pos:"n.",cn:"塗層品質",def:"How good the protective layer on a product is.",exEn:"We check the coating quality after painting.",exCn:"上漆後我們檢查塗層品質。",cat:"workplace"},
+  {w:"lot number",ipa:"/lɑːt ˈnʌm.bɚ/",pos:"n.",cn:"批號",def:"A number that shows which batch a product came from.",exEn:"The lot number is printed on the box.",exCn:"批號印在箱子上。",cat:"workplace"},
+  {w:"qualified products",ipa:"/ˈkwɑː.lə.faɪd ˈprɑː.dʌkts/",pos:"n.",cn:"合格品",def:"Products that pass inspection and meet the standard.",exEn:"Only qualified products can be shipped.",exCn:"只有合格品可以出貨。",cat:"workplace"},
+  {w:"durability",ipa:"/ˌdʊr.əˈbɪl.ə.t̬i/",pos:"n.",cn:"耐久性",def:"How long something can last without breaking.",exEn:"We test the durability of the frame.",exCn:"我們測試框架的耐久性。",cat:"workplace"},
+  {w:"prevent",ipa:"/prɪˈvent/",pos:"v.",cn:"預防；防止（prevent + 名詞 / from + V-ing）",def:"To stop something from happening.",exEn:"Safety gloves prevent cuts.",exCn:"安全手套可以防止割傷。",cat:"workplace"},
+  {w:"ensure",ipa:"/ɪnˈʃʊr/",pos:"v.",cn:"確保（= make sure）",def:"To make sure that something happens.",exEn:"Please ensure the door is closed.",exCn:"請確保門有關好。",cat:"workplace"},
   // --- 20261023 品質檢驗與設備維護 ---
   {w:"torque",ipa:"/tɔːrk/",pos:"n.",cn:"扭力",def:"A twisting force used when you tighten a screw.",exEn:"Tighten the screws to the specified torque.",exCn:"把螺絲鎖到規定扭力。",cat:"workplace"},
   {w:"rust",ipa:"/rʌst/",pos:"n.",cn:"鏽",def:"The red-brown layer that forms on wet metal.",exEn:"Check the frame for rust.",exCn:"檢查框架有沒有生鏽。",cat:"workplace"},
@@ -2389,8 +2400,10 @@ const vocab = [
 ];
 
 // 每個單字的筆記來源 (key = word, value = note title)
-// ===SYNC:SOURCES_START=== sync_date:2026-10-23
+// ===SYNC:SOURCES_START=== sync_date:2026-10-27
 const vocabSources = {
+  // --- 20261027 Avoid與Prevent及問題報告 ---
+  "under-tightening":"20261027 Avoid與Prevent及問題報告","incoming parts":"20261027 Avoid與Prevent及問題報告","rework":"20261027 Avoid與Prevent及問題報告","corrosion resistance":"20261027 Avoid與Prevent及問題報告","coating quality":"20261027 Avoid與Prevent及問題報告","lot number":"20261027 Avoid與Prevent及問題報告","qualified products":"20261027 Avoid與Prevent及問題報告","durability":"20261027 Avoid與Prevent及問題報告","prevent":"20261027 Avoid與Prevent及問題報告","ensure":"20261027 Avoid與Prevent及問題報告",
   // --- 20261023 品質檢驗與設備維護 ---
   "torque":"20261023 品質檢驗與設備維護","rust":"20261023 品質檢驗與設備維護","wrench":"20261023 品質檢驗與設備維護","notify":"20261023 品質檢驗與設備維護","notification":"20261023 品質檢驗與設備維護","checklist":"20261023 品質檢驗與設備維護","circuit":"20261023 品質檢驗與設備維護","manufacture":"20261023 品質檢驗與設備維護","visual inspection":"20261023 品質檢驗與設備維護","over-tightening":"20261023 品質檢驗與設備維護",
   // --- 20261021 品保異常處理與溫控儲藏室 ---
@@ -2911,8 +2924,19 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-10-23 count:435
+// ===SYNC:TRANS_START=== sync_date:2026-10-27 count:445
 const allTrans = [
+  // --- 20261027 Avoid與Prevent及問題報告 cn-en ---
+  {p:"我們需要確認扭力扳手的設定，以防止鎖太緊或鎖不夠緊。",a:"We need to verify the torque wrench setting to prevent over-tightening or under-tightening.",h:"verify + 名詞；to prevent 表目的",kw:["verify"],src:"20261027 Avoid與Prevent及問題報告"},
+  {p:"因為天氣潮濕，管子裡面有鏽。",a:"There is rust inside the tube because of the humid weather.",h:"because of / due to + 名詞；rust 不可數",kw:["because of"],src:"20261027 Avoid與Prevent及問題報告"},
+  {p:"檢驗進料零件很重要，因為這能幫我們找出缺陷、減少返工。",a:"It is important to inspect incoming parts because it helps us identify defects and reduce rework.",h:"incoming parts 用複數；identify defects",kw:["incoming parts"],src:"20261027 Avoid與Prevent及問題報告"},
+  {p:"我們用鹽霧試驗機評估耐腐蝕性，並檢查塗層品質。",a:"We use a salt spray tester to evaluate corrosion resistance and check coating quality.",h:"a salt spray tester；evaluate corrosion resistance",kw:["corrosion resistance"],src:"20261027 Avoid與Prevent及問題報告"},
+  {p:"測試工程師依批號找出不良螺絲，然後我們就能辨識並標記不良品。",a:"The test engineer identifies defective screws by lot number. Then we can identify and mark defective units.",h:"identifies 加 s；defective + 名詞",kw:["defective"],src:"20261027 Avoid與Prevent及問題報告"},
+  {p:"適當的包裝可以防止零件在運輸過程中受損。",a:"Proper packaging can prevent damage during transportation.",h:"prevent + 名詞",kw:["prevent"],src:"20261027 Avoid與Prevent及問題報告"},
+  {p:"你應該避免使用損壞的工具。",a:"You should avoid using damaged tools.",h:"avoid + V-ing，不可 avoid to use",kw:["avoid"],src:"20261027 Avoid與Prevent及問題報告"},
+  {p:"我避免把不良品和合格品混在一起。",a:"I avoid mixing defective products with qualified units.",h:"avoid + V-ing；mix A with B",kw:["avoid"],src:"20261027 Avoid與Prevent及問題報告"},
+  {p:"根本原因似乎是圖面沒有更新。",a:"The root cause appears to be that the drawing was not up to date.",h:"The root cause appears to be that ...；not up to date",kw:["root cause"],src:"20261027 Avoid與Prevent及問題報告"},
+  {p:"為防止同樣問題再發生，我們要更新圖面，並確保供應商使用最新版本。",a:"To prevent the same issue from happening again, we need to update the drawing and make sure the supplier uses the latest version.",h:"prevent ... from V-ing；need to + 原形",kw:["prevent"],src:"20261027 Avoid與Prevent及問題報告"},
   // --- 20261023 品質檢驗與設備維護 cn-en ---
   {p:"我們在環境測試期間，在零件上發現了鏽。",a:"We found rust on the part during the environmental test.",h:"rust 不可數，不加 the；during + 名詞",kw:["during"],src:"20261023 品質檢驗與設備維護"},
   {p:"我們使用溫度感測器來監控室溫。",a:"We use a temperature sensor to monitor the room temperature.",h:"室溫用名詞連用 room temperature",kw:["room temperature"],src:"20261023 品質檢驗與設備維護"},
@@ -3404,7 +3428,25 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-10-23 count:85
+// ===SYNC:KW_START=== sync_date:2026-10-27 count:88
+  // --- 20261027 Avoid與Prevent及問題報告（例句全部取自筆記原文）---
+  {w:"prevent",ipa:"/prɪˈvent/",tag:"防止 · v.（prevent + 名詞 / from + V-ing）",exs:[
+    {en:"We use sandbags to prevent flooding.",cn:"我們用沙包防止淹水。"},
+    {en:"The umbrella prevents us from getting wet.",cn:"雨傘可以防止我們淋濕。"},
+    {en:"Proper packaging can prevent damage during transportation.",cn:"適當的包裝可以防止零件在運輸過程中受損。"},
+    {en:"Wearing a helmet can prevent injury at the workplace.",cn:"戴安全帽可以防止工作時受傷。"},
+  ]},
+  {w:"corrosion resistance",ipa:"/kəˈroʊ.ʒən rɪˈzɪs.təns/",tag:"耐腐蝕性 · n.",exs:[
+    {en:"This coating has good corrosion resistance.",cn:"這個塗層耐腐蝕性很好。"},
+    {en:"We use a salt spray tester to evaluate corrosion resistance and check coating quality.",cn:"我們用鹽霧試驗機評估耐腐蝕性，並檢查塗層品質。"},
+    {en:"We use a salt spray tester to evaluate corrosion resistance.",cn:"用鹽霧試驗機評估耐腐蝕性。"},
+  ]},
+  {w:"identify",ipa:"/aɪˈden.t̬ə.faɪ/",tag:"辨識、找出 · v.",exs:[
+    {en:"It is important to inspect incoming parts because it helps us identify defects and reduce rework.",cn:"檢驗進料零件很重要，因為這能幫我們找出缺陷、減少返工。"},
+    {en:"The test engineer identifies defective screws by lot number.",cn:"測試工程師依批號找出不良螺絲。"},
+    {en:"Inspection helps us identify defects or defective units.",cn:"檢驗能幫我們找出缺陷或不良品。"},
+    {en:"We identify them by visual inspection, functional testing, and lot number.",cn:"我們透過目視檢查、功能測試和批號辨識不良品。"},
+  ]},
   // --- 20261023 品質檢驗與設備維護（例句全部取自筆記原文）---
   {w:"torque",ipa:"/tɔːrk/",tag:"扭力 · n.",exs:[
     {en:"Tighten the screws to the specified torque.",cn:"把螺絲鎖到規定扭力。"},
@@ -4955,7 +4997,27 @@ const articles = [
 // 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
 // ═══════════════════════════════════════════════
 const DAYQUIZ = {
-// ===SYNC:DAYQUIZ_START=== sync_date:2026-10-23 count:40
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-10-27 count:41
+  "20261027": {
+    title: "Avoid與Prevent及問題報告",
+    subtitle: "Avoid vs Prevent & Problem Reporting",
+    questions: [
+      {type:"mc",tag:"改錯",q:"哪一句正確？",options:["It is important to inspect incoming part because it helps us find defects and reduce rework.","It is important to inspect incoming parts because it helps us identify defects and reduce rework."],answer:1,explain:"incoming parts 要用複數；identify defects 比 find defects 專業。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",options:["We use salt spray tester to test rust resistance and check coating quality.","We use a salt spray tester to evaluate corrosion resistance and check coating quality."],answer:1,explain:"tester 可數要加 a；技術說法是 evaluate corrosion resistance。"},
+      {type:"fill",tag:"文法",q:"The test engineer ___ defective screws by lot number.",cn:"測試工程師依批號找出不良螺絲。",answer:["identifies"],explain:"主詞是第三人稱單數，現在式動詞加 s。"},
+      {type:"mc",tag:"單字",q:"品管場合，形容不符合規格的零件要用哪個字？",options:["broken","defective","defect"],answer:1,explain:"broken 只指壞掉；defective 是形容詞，後面接名詞（defective units）；defect 是名詞。"},
+      {type:"fill",tag:"介系詞",q:"There is rust inside the tube ___ the humid weather.",cn:"因為天氣潮濕，管子裡面有鏽。",answer:["because of","due to"],explain:"because of = due to，後面只接名詞片語。"},
+      {type:"mc",tag:"易混淆",q:"Proper packaging can ___ damage during transportation.",options:["avoid","prevent"],answer:1,explain:"prevent = 讓事情無法發生，主詞常是方法或物品（包裝）。"},
+      {type:"mc",tag:"易混淆",q:"You should ___ using damaged tools.",options:["avoid","prevent"],answer:0,explain:"avoid = 人自己選擇不做，後面接 V-ing。"},
+      {type:"fill",tag:"介系詞",q:"The umbrella prevents us ___ getting wet.",cn:"雨傘可以防止我們淋濕。",answer:["from"],explain:"prevent + 人／物 + from + V-ing。"},
+      {type:"mc",tag:"文法",q:"I avoid ___ defective products with qualified units.",options:["to mix","mixing","mix"],answer:1,explain:"avoid 後面接 V-ing，不接 to V。"},
+      {type:"fill",tag:"句型",q:"The operator had difficulty ___ the parts.",cn:"作業員安裝零件有困難。",answer:["installing"],explain:"have difficulty + V-ing，不接 to V。"},
+      {type:"mc",tag:"句型",q:"向主管說明原因，哪一句是老師建議的說法？",options:["The root cause is incorrect drawing.","The root cause appears to be that the drawing was not up to date."],answer:1,explain:"不說 incorrect drawing；appears to be 語氣比 is 保守，適合還在確認的原因。"},
+      {type:"mc",tag:"單字",q:"「孔尺寸不對」的標準技術說法是？",options:["incorrect size holes","incorrectly sized holes"],answer:1,explain:"副詞 + 過去分詞：incorrectly sized holes。"},
+      {type:"trans",tag:"翻譯",q:"我們需要確認扭力扳手的設定，以防止鎖太緊或鎖不夠緊。",answer:"We need to verify the torque wrench setting to prevent over-tightening or under-tightening.",explain:"verify + 名詞；to prevent 表目的。"},
+      {type:"trans",tag:"翻譯",q:"為防止同樣問題再發生，我們要更新圖面，並確保供應商使用最新版本。",answer:"To prevent the same issue from happening again, we need to update the drawing and make sure the supplier uses the latest version.",explain:"prevent ... from V-ing；need to + 原形。"}
+    ]
+  },
   "20261023": {
     title: "品質檢驗與設備維護",
     subtitle: "Quality Control English",
@@ -6961,7 +7023,23 @@ const DAYQUIZ = {
 // 沒有腳本的日期會自動退回「教練只說引導語」的模式。
 // ═══════════════════════════════════════════════
 const DAYTALK = {
-// ===SYNC:DAYTALK_START=== sync_date:2026-10-23 count:14
+// ===SYNC:DAYTALK_START=== sync_date:2026-10-27 count:15
+  "20261027": {
+    title: "Avoid與Prevent及問題報告",
+    turns: [
+      {q:"A new operator asks why you check the torque wrench every morning. What do you say?",qCn:"新作業員問你為什麼每天早上都要檢查扭力扳手。你怎麼說？",en:"We need to verify the torque wrench setting to prevent over-tightening or under-tightening.",cn:"我們需要確認扭力扳手的設定，以防止鎖太緊或鎖不夠緊。",hint:"verify + 名詞；to prevent 表目的"},
+      {q:"Your boss asks why there is rust inside the tube. What do you say?",qCn:"主管問為什麼管子裡面有鏽。你怎麼說？",en:"There is rust inside the tube because of the humid weather.",cn:"因為天氣潮濕，管子裡面有鏽。",hint:"because of / due to + 名詞"},
+      {q:"A customer asks why you inspect incoming parts. What do you say?",qCn:"客戶問你們為什麼要檢驗進料零件。你怎麼說？",en:"It is important to inspect incoming parts because it helps us identify defects and reduce rework.",cn:"檢驗進料零件很重要，因為這能幫我們找出缺陷、減少返工。",hint:"incoming parts；identify defects；reduce rework"},
+      {q:"An auditor asks what the salt spray tester is for. What do you say?",qCn:"稽核員問鹽霧試驗機是做什麼用的。你怎麼說？",en:"We use a salt spray tester to evaluate corrosion resistance and check coating quality.",cn:"我們用鹽霧試驗機評估耐腐蝕性，並檢查塗層品質。",hint:"evaluate corrosion resistance"},
+      {q:"Your supervisor asks how the test engineer finds the bad screws. What do you say?",qCn:"主管問測試工程師怎麼找出有問題的螺絲。你怎麼說？",en:"The test engineer identifies defective screws by lot number.",cn:"測試工程師依批號找出不良螺絲。",hint:"identifies 加 s；by lot number"},
+      {q:"A coworker asks how to keep parts safe during shipping. What do you say?",qCn:"同事問運送時怎麼保護零件。你怎麼說？",en:"Proper packaging can prevent damage during transportation.",cn:"適當的包裝可以防止零件在運輸過程中受損。",hint:"prevent + 名詞"},
+      {q:"A new worker picks up a screwdriver with a cracked handle. What do you tell them?",qCn:"新同事拿起一支手柄裂開的起子。你跟他說什麼？",en:"You should avoid using damaged tools.",cn:"你應該避免使用損壞的工具。",hint:"avoid + V-ing"},
+      {q:"Your supervisor asks what the problem with the treadmill frames is. What do you say?",qCn:"主管問跑步機框架出了什麼問題。你怎麼說？",en:"We discovered that several treadmill frames had incorrectly sized holes. The operator had difficulty installing the parts.",cn:"我們發現好幾個跑步機框架的孔尺寸不對，作業員安裝零件有困難。",hint:"incorrectly sized holes；have difficulty + V-ing"},
+      {q:"Your supervisor asks what caused the wrong hole sizes on the treadmill frames. What do you say?",qCn:"主管問跑步機框架孔尺寸錯誤的原因。你怎麼說？",en:"The root cause appears to be that the drawing was not up to date.",cn:"根本原因似乎是圖面沒有更新。",hint:"The root cause appears to be that ..."},
+      {q:"Your supervisor asks how you will stop the hole-size problem from happening again. What do you say?",qCn:"主管問你們要怎麼避免孔尺寸問題再發生。你怎麼說？",en:"To prevent the same issue from happening again, we need to update the drawing and make sure the supplier uses the latest version.",cn:"為防止同樣問題再發生，我們要更新圖面，並確保供應商使用最新版本。",hint:"prevent ... from V-ing"},
+      {q:"In an interview, someone asks you to describe your job. What do you say?",qCn:"面試時，對方請你介紹你的工作。你怎麼說？",en:"I work in a fitness equipment factory as a quality control engineer. The factory manufactures treadmills. Every morning, I check the production line and ensure that the tools and machines are working properly.",cn:"我在一間健身器材工廠當品管工程師，工廠生產跑步機。每天早上，我檢查生產線，確保工具和機器運作正常。",hint:"manufacture；ensure = make sure"}
+    ]
+  },
   "20261023": {
     title: "品質檢驗與設備維護",
     turns: [
