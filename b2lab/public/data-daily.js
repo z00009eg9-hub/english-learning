@@ -13411,9 +13411,9 @@ grammar:[
           "note": "冒煙就是證據"
         },
         {
-          "en": "She has read the whole file twice. She is going to find the mistake.",
-          "cn": "她把整份檔案看了兩次，她會找出那個錯誤。",
-          "note": "從她做的事推出結論"
+          "en": "She has already found three errors on the first page. She is going to find more.",
+          "cn": "她第一頁就已經找到三個錯誤，她會找到更多。",
+          "note": "眼前的結果就是跡象"
         }
       ]
     },
@@ -16137,13 +16137,13 @@ grammar:[
       "q": "Please call back later. She ___ a meeting with the supplier.",
       "qCn": "請稍後再打來，她正在和供應商開會。",
       "opts": [
-        "A. has got",
+        "A. is had",
         "B. is having",
         "C. is have",
         "D. has been"
       ],
       "ans": 1,
-      "expl": "have a meeting 是「開會」，是動作，所以可以用進行式 is having。has got 只能表示擁有，放在這裡會變成「她擁有一場會議」。"
+      "expl": "have a meeting 是「開會」，是動作，所以可以用進行式 is having，正好對上中文的「正在開會」。is had、is have 形狀不對，has been 則變成「她是一場會議」。"
     },
     {
       "q": "The old warehouse ___ three loading doors before the fire.",
@@ -18120,10 +18120,10 @@ grammar:[
         "A. have been waiting",
         "B. had been waiting",
         "C. were waiting",
-        "D. had waited"
+        "D. had wait"
       ],
       "ans": 1,
-      "expl": "called 把主時間點定在過去，而 for forty minutes 是長度，所以用 had been waiting。were waiting 只說當下在等，講不出從更早就開始等。"
+      "expl": "called 把主時間點定在過去，而 for forty minutes 是長度，所以用 had been waiting。were waiting 只說當下在等，講不出從更早就開始等；had wait 少了過去分詞。"
     }
   ]
 },
@@ -18318,8 +18318,8 @@ grammar:[
       "expl": "B用被動加結果式，交代事實也交代補救，不主動遞出一段可以被追問的期間。A和C都把持續的時間或失職寫進去，D則把責任推給客戶。"
     },
     {
-      "q": "Profits ___ by nine percent, which the board had not expected.",
-      "qCn": "獲利下滑了百分之九，這是董事會沒有預料到的。",
+      "q": "By the time the board met in March, profits ___ by nine percent.",
+      "qCn": "到三月董事會開會的時候，獲利已經下滑了百分之九。",
       "opts": [
         "A. had been falling",
         "B. had fallen",
@@ -18327,7 +18327,7 @@ grammar:[
         "D. had been fallen"
       ],
       "ans": 1,
-      "expl": "by nine percent 是完成的幅度，要配 had fallen。had been falling 適合講趨勢而不是幅度；had been fallen 把不及物動詞硬做成被動，不成立。"
+      "expl": "By the time the board met 把主時間點釘在過去，by nine percent 是到那時已完成的幅度，要配 had fallen。had been falling 適合講趨勢而不是幅度；had been fallen 把不及物動詞硬做成被動，不成立。"
     },
     {
       "q": "In a novel, which sentence best builds tension before something breaks?",
@@ -19095,16 +19095,16 @@ grammar:[
   ],
   "quiz": [
     {
-      "q": "The editor cut the article because it ___ twice the agreed length.",
-      "qCn": "編輯把那篇文章砍短，因為它已經超出約定長度一倍。",
+      "q": "The editor cut the article because the writer ___ the word limit.",
+      "qCn": "編輯把那篇文章砍短，因為作者先前沒有理會字數上限。",
       "opts": [
-        "has run to",
-        "had run to",
-        "runs to",
-        "was running to"
+        "has ignored",
+        "had ignored",
+        "ignores",
+        "had ignore"
       ],
       "ans": 1,
-      "expl": "超長發生在編輯動手之前，整段又都在過去，所以退一格用 had run to。"
+      "expl": "作者忽略字數上限發生在編輯動手之前，整段又都在過去，所以退一格用 had ignored。has ignored 是現在完成式、ignores 是現在式，都跟過去的 cut 對不上；had ignore 少了過去分詞。"
     },
     {
       "q": "Which version puts the news first and the background second?",
@@ -19140,13 +19140,13 @@ grammar:[
       "q": "Which sentence uses the past perfect unnecessarily?",
       "qCn": "哪一句用了不必要的過去完成式？",
       "opts": [
-        "A. She had finished the draft before the deadline moved.",
+        "A. She had finished the draft when the deadline moved.",
         "B. We had waited an hour when the notice finally appeared.",
         "C. He had opened the door and had walked into the hall.",
         "D. They knew the price because they had checked it that morning."
       ],
       "optsCn": [
-        "A. 期限更動前她已經寫完草稿。",
+        "A. 期限更動的時候，她已經寫完草稿了。",
         "B. 我們等了一小時，公告才終於出現。",
         "C. 他打開門，然後走進大廳。",
         "D. 他們知道價格，因為那天早上查過了。"
@@ -19559,9 +19559,9 @@ grammar:[
             "this morning 已經關上了"
           ],
           [
-            "十二月三十一日晚上",
-            "We opened nine stores this year.",
-            "今年實際上已經結束"
+            "一月二日回顧去年",
+            "We opened nine stores last year.",
+            "去年已經結束"
           ]
         ]
       },
@@ -21387,7 +21387,7 @@ grammar:[
   "title": "Have Done vs Have Been Doing: Common Confusions",
   "titleCn": "have done 跟 have been doing：更多容易搞混的地方",
   "srcDays": [],
-  "summary": "延伸have done跟have been doing的基本區分：有具體數量用have done、暫時安排常用have been doing、狀態動詞（know, want, like）永遠不能加ing。",
+  "summary": "延伸have done跟have been doing的基本區分：有具體數量用have done、暫時安排常用have been doing、狀態動詞（know, want, like）通常不加ing。",
   "sections": [
     {
       "h": "有數字、有數量，用have done",
@@ -21440,16 +21440,16 @@ grammar:[
       ]
     },
     {
-      "h": "狀態動詞（stative verbs）不能用continuous",
+      "h": "狀態動詞（stative verbs）通常不用continuous",
       "bullets": [
-        "know, like, want, believe, own, understand這類狀態動詞不能加ing",
-        "就算要表達『持續』的意思，也只能用have + Vpp"
+        "know, like, want, believe, own, understand這類狀態動詞通常不加ing",
+        "就算要表達『持續』的意思，通常也用have + Vpp（口語 I've been wanting to… 是常見例外）"
       ],
       "examples": [
         {
           "en": "I have wanted a bike like this for years.",
           "cn": "我想要這種腳踏車已經好幾年了。",
-          "note": "want是狀態動詞，只能用have wanted"
+          "note": "want是狀態動詞，通常用have wanted"
         }
       ]
     }
@@ -21463,7 +21463,7 @@ grammar:[
     {
       "bad": "I have wanting this bike for years.",
       "good": "I have wanted this bike for years.",
-      "why": "want是狀態動詞，不能加ing，只能用have wanted表示『持續想要』。"
+      "why": "have wanting 少了 been，本身就不成立；want是狀態動詞，通常不加ing，標準說法是have wanted，表示『持續想要』。"
     },
     {
       "bad": "I have been living in Taipei my whole life.",
@@ -21506,12 +21506,12 @@ grammar:[
       "qCn": "我想要這種腳踏車已經好幾年了。",
       "opts": [
         "have wanted",
-        "have been wanting",
+        "have been want",
         "want",
         "am wanting"
       ],
       "ans": 0,
-      "expl": "want是狀態動詞，不能加ing，只能用have wanted。"
+      "expl": "want是狀態動詞，通常不加ing，標準說法是have wanted；have been want 少了 -ing，形狀也不對。（口語偶爾聽得到 I've been wanting…，但這題依標準用法。）"
     },
     {
       "q": "I ___ in Taipei my whole life.",
@@ -22363,12 +22363,12 @@ grammar:[
       "qCn": "我已經主持這個每週例會三年了（現在還在主持）。",
       "opts": [
         "led",
-        "have led",
+        "had led",
         "have been leading",
         "lead"
       ],
       "ans": 2,
-      "expl": "這件事持續到現在還在做，強調『持續進行』的職責，用have been leading。"
+      "expl": "這件事持續到現在還在做，強調『持續進行』的職責，用have been leading。had led 是過去完成式，跟「現在還在主持」對不上。"
     },
     {
       "q": "Which sentence better fits a resume's 'Achievements' section?",
@@ -22568,7 +22568,7 @@ grammar:[
     }
   ],
   "traps": [
-    {"bad": "This is the first time I experienced such a strong storm.", "good": "This is the first time I have experienced such a strong storm.", "why": "This is the first time後面固定接現在完成式have experienced，不能用過去簡單式experienced。"},
+    {"bad": "This is the first time I experienced such a strong storm.", "good": "This is the first time I have experienced such a strong storm.", "why": "This is the first time後面固定接現在完成式have experienced，不能用過去簡單式experienced。（如果整件事在過去，就用 It was the first time + 過去完成式：It was the first time I had experienced such a strong storm.）"},
     {"bad": "This is the strongest typhoon I ever experience.", "good": "This is the strongest typhoon I have ever experienced.", "why": "最高級後面常接『that/which + have/has ever + 過去分詞』，強調『到目前為止』，不能只用現在簡單式。"},
     {"bad": "This is the third time that the office closed early this month.", "good": "This is the third time that the office has closed early this month.", "why": "『第幾次』的句型固定用現在完成式has closed，因為在算『到目前為止一共發生了幾次』。"},
     {"bad": "This is the first time she has already evacuated.", "good": "This is the first time she has evacuated.", "why": "first time這個句型本身已經有『第一次』的意思，不需要再加already，兩個疊在一起會很奇怪。"}
@@ -22610,20 +22610,20 @@ grammar:[
     {
       "h": "為什麼不能全部都用過去簡單式",
       "bullets": [
-        "如果把警報改成過去簡單式（The agency issued warnings...），聽起來像是『事情已經結束、跟現在沒關係』",
+        "如果把警報改成過去簡單式（The agency issued warnings...），重點會落在『發布這個動作』，比較不會讓人聯想到『目前仍然有效』",
         "但警報通常還在生效中，所以正式文件會刻意選用現在完成式來維持『目前仍然有效』的語感"
       ]
     }
   ],
   "traps": [
-    {"bad": "（氣象警報）The agency issued a warning for the affected counties.（聽起來像警報已經結束、失效了）", "good": "The agency has issued a warning for the affected counties, and it remains in effect.", "why": "警報通常『現在仍然有效』，用現在完成式has issued比過去簡單式issued更準確傳達這個語感。"},
+    {"bad": "（氣象警報）The agency issued a warning for the affected counties.（只陳述發布這個動作，沒有突顯警報仍然有效）", "good": "The agency has issued a warning for the affected counties, and it remains in effect.", "why": "這句不算文法錯誤，只是較不自然：警報通常『現在仍然有效』，用現在完成式has issued比過去簡單式issued更準確傳達這個語感；過去簡單式本身並不代表警報已經解除。"},
     {"bad": "This is one of the wettest summers Taiwan recorded in years.", "good": "This is one of the wettest summers Taiwan has recorded in years.", "why": "『破紀錄』宣稱要強調『到目前為止的累計統計』，習慣搭配現在完成式has recorded，不是過去簡單式。"},
     {"bad": "新聞細節句：Rain has begun falling at 3pm and has continued through the evening.（明確時間卻用現在完成式）", "good": "Rain began falling at 3pm and continued through the evening.", "why": "3pm是明確的過去時間點，敘事細節句要用過去簡單式，不能用現在完成式，即使前面用了現在完成式當前導句。"},
-    {"bad": "堅持氣象局的正式警報只能用過去簡單式才『正確』。", "good": "氣象局正式警報常刻意用現在完成式，強調警報『目前仍然有效』，這是文類慣例，不是文法錯誤。", "why": "這是語域選擇：正式警報文類偏好現在完成式來維持『尚未結束』的語感，過去簡單式反而會讓讀者誤以為警報已經解除。"}
+    {"bad": "堅持氣象局的正式警報只能用過去簡單式才『正確』。", "good": "氣象局正式警報常刻意用現在完成式，強調警報『目前仍然有效』，這是文類慣例，不是文法錯誤。", "why": "這是語域選擇：正式警報文類偏好現在完成式來維持『尚未結束』的語感，過去簡單式則只是陳述發布這個動作，比較不突顯『仍然有效』。"}
   ],
   "quiz": [
     {"q": "（正式警報，強調目前仍生效）The CWA ___ warnings for four typhoons this season.", "qCn": "中央氣象署這一季已經對四個颱風發布了警報。", "opts": ["issued", "has issued", "issues", "was issuing"], "ans": 1, "expl": "正式警報強調『目前仍然有效』，用現在完成式has issued。"},
-    {"q": "This ___ one of the wettest summers Taiwan has recorded in years.", "qCn": "這是台灣近年來記錄到最潮濕的夏天之一。", "opts": ["was", "has been", "is being", "had been"], "ans": 1, "expl": "『破紀錄』宣稱搭配現在完成式has been，強調累積至今的統計結論。"},
+    {"q": "This ___ one of the wettest summers Taiwan has recorded in years.", "qCn": "這是台灣近年來記錄到最潮濕的夏天之一。", "opts": ["has be", "has been", "is being", "had been"], "ans": 1, "expl": "『破紀錄』宣稱搭配現在完成式has been，強調累積至今的統計結論。has be 少了過去分詞 been；had been 跟後面的 has recorded 時間對不上。"},
     {"q": "（敘事細節句，有明確時間）Rain ___ falling heavily at 3pm and continued through the evening.", "qCn": "雨在下午三點開始下得很大，並持續到傍晚。", "opts": ["has begun", "begun", "began", "has begin"], "ans": 2, "expl": "3pm是明確的過去時間點，敘事細節句用過去簡單式began，不是現在完成式。"},
     {"q": "Which best explains why weather agencies often use the present perfect in warnings?", "qCn": "哪一個最能解釋氣象單位常常在警報中使用現在完成式的原因？", "opts": ["Because the past simple is grammatically incorrect in warnings", "Because the present perfect signals that the warning is still in effect", "Because warnings never mention any past events", "Because the present perfect is always more polite"], "optsCn": ["因為警報裡用過去簡單式是文法錯誤", "因為現在完成式表示警報目前仍然有效", "因為警報從來不會提到任何過去發生的事", "因為現在完成式永遠比較有禮貌"], "ans": 1, "expl": "現在完成式在警報中的功能是傳達『這個結論／狀態到目前為止依然成立』，不是文法對錯的問題。"}
   ]
@@ -22987,14 +22987,14 @@ grammar:[
       "table": {
         "head": ["句子", "對不對", "為什麼"],
         "rows": [
-          ["While she chopped vegetables, the doorbell rang.", "✗ 不自然", "while後面通常接『正在進行的背景動作』，要用過去進行式"],
+          ["While she chopped vegetables, the doorbell rang.", "較不自然", "while後面通常接『正在進行的背景動作』，通常用過去進行式"],
           ["While she was answering the phone, her sister came in.", "✓ 常見", "接電話這段時間是背景，妹妹進來是突然發生的事"]
         ]
       }
     }
   ],
   "traps": [
-    {"bad": "While I waited for the train, my phone died.", "good": "While I was waiting for the train, my phone died.", "why": "while後面通常接「正在進行的背景動作」，要用過去進行式was waiting，不是過去簡單式waited。"},
+    {"bad": "While I waited for the train, my phone died.", "good": "While I was waiting for the train, my phone died.", "why": "這句不算文法錯誤，只是較不自然：while後面通常接「正在進行的背景動作」，用過去進行式was waiting最自然；過去簡單式waited也看得到，但比較少見。"},
     {"bad": "Amy was frying the chicken when the smoke alarm was going off.", "good": "Amy was frying the chicken when the smoke alarm went off.", "why": "突然發生的短動作（警報器響）用過去簡單式went off，不是過去進行式。"},
     {"bad": "When I was cooking dinner, my friend was arriving.", "good": "When I was cooking dinner, my friend arrived.", "why": "到達（arrive）是瞬間發生的短動作，用過去簡單式arrived，不是過去進行式。"},
     {"bad": "While I was watch TV, she called me.", "good": "While I was watching TV, she called me.", "why": "was後面要加V-ing：watching，不能用原形watch。"}
@@ -23002,7 +23002,7 @@ grammar:[
   "quiz": [
     {"q": "While Amy ___ vegetables, the doorbell rang.", "qCn": "Amy正在切菜的時候，門鈴響了。", "opts": ["chopped", "was chopping", "chops", "chop"], "ans": 1, "expl": "while後面接背景動作，用過去進行式was chopping。"},
     {"q": "The smoke alarm ___ while Amy was frying the chicken.", "qCn": "Amy正在炸雞的時候，警報器響了。", "opts": ["was going off", "went off", "goes off", "were going off"], "ans": 1, "expl": "警報器響是突然發生的短動作，用過去簡單式went off。"},
-    {"q": "While Tom ___ dinner, Amy ___ the table.", "qCn": "Tom煮飯的時候，Amy正在擺餐桌。", "opts": ["cooked / set", "was cooking / was setting", "cooks / sets", "was cooking / set"], "ans": 1, "expl": "兩件事同時進行，前後都用過去進行式was cooking / was setting。"},
+    {"q": "While Tom ___ dinner, Amy ___ the table.", "qCn": "Tom煮飯的時候，Amy正在擺餐桌。", "opts": ["cooking / setting", "was cooking / was setting", "cooks / sets", "was cooking / was set"], "ans": 1, "expl": "兩件事同時進行，前後都用過去進行式was cooking / was setting。cooking / setting 少了 was；was set 會變成被動，Amy 不是被擺的那一方。"},
     {"q": "When Lily arrived, Amy ___ vegetables.", "qCn": "Lily到的時候，Amy正在切菜。", "opts": ["chopped", "chops", "was chopping", "is chopping"], "ans": 2, "expl": "arrived是突然發生的短動作，Amy正在做的背景動作用過去進行式was chopping。"}
   ]
 },
@@ -23091,7 +23091,7 @@ grammar:[
       "table": {
         "head": ["句子", "強調重點"],
         "rows": [
-          ["Inspectors were testing the batches for two days.", "強調『過程』——花了多久、多麼繁瑣"],
+          ["Inspectors were testing the batches all week.", "強調『過程』——花了多久、多麼繁瑣"],
           ["Inspectors tested the batches.", "強調『結果』——單純陳述完成的動作"]
         ]
       }
@@ -23663,7 +23663,7 @@ grammar:[
     {
       "bad": "One study has estimated that commuting costs were high.",
       "good": "One study estimated that commuting costs were high.",
-      "why": "引用已發表的研究結果，用過去簡單式（那篇研究已經完成了）。"
+      "why": "這句不算文法錯誤，只是較不自然：引用已發表研究的具體結果時，通常用過去簡單式（那篇研究已經完成了）；學術寫作引述文獻時也常用 has estimated 或 estimates。"
     },
     {
       "bad": "The government has introduced a rent cap last year, and it helped so far.",
@@ -23694,12 +23694,12 @@ grammar:[
       "qCn": "一項研究估計，家庭搬遷之後在通勤上花了更多錢。",
       "opts": [
         "estimated",
-        "has estimated",
-        "estimates",
+        "has estimate",
+        "estimate",
         "estimating"
       ],
       "ans": 0,
-      "expl": "引用已完成的研究結果，用過去簡單式 estimated。"
+      "expl": "引用已完成的研究結果，用過去簡單式 estimated。has estimate 少了過去分詞；One study 是單數，estimate 主詞動詞不一致；estimating 少了動詞。（學術寫作引述文獻時也常用 estimates 或 has estimated。）"
     },
     {
       "q": "Housing costs ___ sharply in recent years, and the trend continues.",
@@ -24461,7 +24461,7 @@ grammar:[
   quiz:[
     {q:"I ___ my manager at nine tomorrow — we already agreed on it.",qCn:"我明天九點要跟主管開會——我們已經約好了。",opts:["will meet","am meeting","meet","met"],ans:1,expl:"已經約好的計畫用現在進行式表未來：am meeting。（will meet 不算文法錯誤，只是較不自然。）"},
     {q:"The first train ___ the station at five thirty every day.",qCn:"首班車每天五點半從車站出發。",opts:["is leaving","leaves","will leave","leave"],ans:1,expl:"固定的時刻表用現在簡單式表未來：leaves。"},
-    {q:"More people ___ bikes to commute these days.",qCn:"這陣子越來越多人騎腳踏車通勤。",opts:["use","uses","are using","used"],ans:2,expl:"these days 表示這陣子的趨勢，用現在進行式：are using。"},
+    {q:"More people ___ bikes to commute these days.",qCn:"這陣子越來越多人騎腳踏車通勤。",opts:["are use","uses","are using","used"],ans:2,expl:"these days 表示這陣子的趨勢，用現在進行式：are using。are use 少了 -ing，uses 主詞不一致，used 是過去式。"},
     {q:"___ the MRT run on public holidays?",qCn:"國定假日捷運有開嗎？",opts:["Is","Are","Does","Do"],ans:2,expl:"問一般規則用現在簡單式疑問句，主詞 the MRT 是第三人稱單數：Does。"}
   ]
 },
@@ -24503,7 +24503,7 @@ grammar:[
   quiz:[
     {q:"Which sentence best expresses a complaint?",qCn:"哪一句最能表達「抱怨」的語氣？",opts:["The Red Line has signal problems sometimes.","The Red Line is always having signal problems.","The Red Line had a signal problem yesterday.","The Red Line will have a signal problem."],ans:1,expl:"always + 現在進行式是表達不滿、抱怨的固定用法。"},
     {q:"Which is a typical news headline style?",qCn:"哪一個比較像典型的新聞標題寫法？",opts:["Signal Fault Delays Thousands","A Signal Fault Delayed Thousands This Morning","A Signal Fault Was Delaying Thousands","A Signal Fault Has Delayed Thousands"],ans:0,expl:"新聞標題習慣用現在簡單式製造即時感，即使事情已經發生。"},
-    {q:"Ridership ___ this month, and analysts are not sure why yet.",qCn:"這個月的搭乘人次正在下滑，分析師還不確定原因。",opts:["falls","is falling","fell","has fallen"],ans:1,expl:"強調「正在變化中、還沒有定論」的趨勢，用現在進行式：is falling。"},
+    {q:"Ridership ___ this month, and analysts are not sure why yet.",qCn:"這個月的搭乘人次正在下滑，分析師還不確定原因。",opts:["falls","is falling","was fallen","falling"],ans:1,expl:"強調「正在變化中、還沒有定論」的趨勢，用現在進行式：is falling。fall 是不及物動詞，不能寫成 was fallen；falling 少了 be 動詞。"},
     {q:"Which sentence is more appropriate in a formal report?",qCn:"哪一句比較適合出現在正式報告中？",opts:["Aging infrastructure is tending to cause more frequent delays.","Aging infrastructure tends to cause more frequent delays.","Aging infrastructure is always causing more frequent delays.","Aging infrastructure will be causing more frequent delays."],ans:1,expl:"tend to 表達「傾向、通常」，正式報告的客觀陳述通常不加 -ing。"}
   ]
 },
@@ -24861,9 +24861,9 @@ grammar:[
   ],
   quiz:[
     {q:"Which is a typical news headline?",qCn:"哪一個是典型的新聞標題？",opts:["A. Typhoon Is Hitting Coast","B. Typhoon Hits Coast","C. Typhoon Has Hit Coast","D. Typhoon Was Hitting Coast"],ans:1,expl:"新聞標題用現在簡單式報導已發生的事。"},
-    {q:"Fill in for a formal report: The data ____ a clear pattern.",qCn:"正式報告的填空：數據顯示出清楚的模式。",opts:["are suggesting","suggest","suggested","have been suggesting"],ans:1,expl:"正式報告用 suggest（簡單式）陳述客觀事實。"},
+    {q:"Fill in for a formal report: The data ____ a clear pattern.",qCn:"正式報告的填空：數據顯示出清楚的模式。",opts:["are suggesting","suggest","is suggest","have been suggesting"],ans:1,expl:"正式報告用 suggest（簡單式）陳述客觀事實；is suggest 把 be 動詞和原形硬湊在一起，不成立。"},
     {q:"Which creates a vivid narrative scene?",qCn:"哪一句營造出生動的敘事場景？",opts:["A. Rain falls and wind blows.","B. Rain is falling and wind is blowing.","C. Rain fell and wind blew.","D. Rain has fallen and wind has blown."],ans:1,expl:"進行式建立「此刻正在發生」的畫面感，是敘事的標準手法。"},
-    {q:"Prices ____ faster than expected this quarter.",qCn:"這一季價格上漲得比預期快。",opts:["rise","are rising","rose","rising"],ans:1,expl:"this quarter 表示趨勢還在持續中，用進行式強調「還在漲」。"}
+    {q:"Prices ____ faster than expected this quarter.",qCn:"這一季價格上漲得比預期快。",opts:["rise","are rising","are rise","rising"],ans:1,expl:"this quarter 表示趨勢還在持續中，用進行式強調「還在漲」；are rise 少了 -ing，rising 少了 be 動詞。"}
   ]
 },
 

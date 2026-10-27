@@ -859,7 +859,7 @@ window.GVPLUS = {
     },
     {
       "label": "先問定了沒",
-      "text": "號碼牌不用先約，但你心裡的日子已經挑好了，而且是你自己排的行程，所以走 be 加 V-ing 這條路。"
+      "text": "你已經在網路上預約了下星期二的臨櫃時間，行程已經排定，所以走 be 加 V-ing 這條路。"
     },
     {
       "label": "挑形狀",
@@ -3807,13 +3807,13 @@ window.GVPLUS = {
     {
       "q": "Which sentence does not need had?",
       "opts": [
-        "A. He had eaten before we arrived.",
+        "A. The train had left when we reached the platform.",
         "B. She opened the box and looked inside.",
         "C. The shop had shut when we came.",
-        "D. They had paid before the price went up."
+        "D. The guests had gone home when the band arrived."
       ],
       "ans": 1,
-      "expl": "B的兩個動作照順序發生，讀者自然知道先後，不必退格。"
+      "expl": "B的兩個動作照順序發生，讀者自然知道先後，不必退格。其他三句的 when 後面接的是較晚的事，拿掉 had 意思就會變。"
     }
   ]
 },
@@ -4117,13 +4117,13 @@ window.GVPLUS = {
     {
       "q": "His shirt was soaked because he ___ in the rain.",
       "opts": [
-        "had cycled",
+        "had cycle",
         "had been cycling",
         "has been cycling",
         "cycles"
       ],
       "ans": 1,
-      "expl": "衣服濕透是「一路騎」累積出來的狀態，而且整段在過去，所以用 had been cycling。"
+      "expl": "衣服濕透是「一路騎」累積出來的狀態，而且整段在過去，所以用 had been cycling。had cycle 少了過去分詞，has been cycling 跟過去的 was soaked 對不上。"
     },
     {
       "q": "Which sentence is wrong?",
@@ -4313,7 +4313,7 @@ window.GVPLUS = {
       "expl": "B用被動加結果式，交代事實也交代補救，不寫出期間也不點名責任；其他三個都把長度或失職寫給客戶看。"
     },
     {
-      "q": "Output ___ by fourteen percent that year, which nobody had predicted.",
+      "q": "By the time the year ended, output ___ by fourteen percent.",
       "opts": [
         "had been falling",
         "had fallen",
@@ -4321,7 +4321,7 @@ window.GVPLUS = {
         "had been fallen"
       ],
       "ans": 1,
-      "expl": "by fourteen percent 是完成的幅度，要配結果式 had fallen；進行式適合講趨勢，而 fall 是不及物動詞，不能做被動。"
+      "expl": "By the time the year ended 把主時間點釘在過去，by fourteen percent 是到那時已完成的幅度，要配結果式 had fallen；has fallen 是現在完成式，時間對不上；進行式適合講趨勢，而 fall 是不及物動詞，不能做被動。"
     }
   ]
 },
@@ -4836,13 +4836,13 @@ window.GVPLUS = {
     {
       "q": "Which sentence does not need the past perfect?",
       "opts": [
-        "A. He had eaten before the film started.",
+        "A. The film had started when we arrived.",
         "B. She stood up and walked out.",
         "C. The bus had gone when we got there.",
-        "D. They had booked the room before the price rose."
+        "D. The tickets had sold out when we got to the box office."
       ],
       "ans": 1,
-      "expl": "B的兩個動作照順序發生，讀者自然知道先後，不必退格。"
+      "expl": "B的兩個動作照順序發生，讀者自然知道先後，不必退格。其他三句的 when 後面接的是較晚的事，拿掉 had 意思就會變。"
     }
   ]
 },
@@ -7223,7 +7223,7 @@ dg20260911a2: {
 },
 dg20260911b1: {
   "vis": true,
-  "oneLine": "有具體數字用have done，沒有數字、只強調『一直在做』用have been doing——know、want這類狀態動詞永遠不能加ing。",
+  "oneLine": "有具體數字用have done，沒有數字、只強調『一直在做』用have been doing——know、want這類狀態動詞通常不加ing。",
   "map": {
     "when": "要說清楚『做了多少』還是『做了多久、還在做』的時候",
     "why": "英文要求你選邊站：講數量用簡單完成式，講過程用進行式完成式，中文這兩種語感常常混在一起，容易搞混",
@@ -7231,11 +7231,11 @@ dg20260911b1: {
   },
   "visual": {
     "type": "matrix",
-    "cap": "橫向看每一列：有數字就走左欄、強調過程就走中欄，遇到know這種狀態動詞就只能走右欄，不能用進行式。",
+    "cap": "橫向看每一列：有數字就走左欄、強調過程就走中欄，遇到know這種狀態動詞通常走右欄，一般不用進行式。",
     "cols": [
       "有數字/數量",
       "沒有數字，強調過程",
-      "狀態動詞（不可加ing）"
+      "狀態動詞（通常不加ing）"
     ],
     "rows": [
       {
@@ -7332,7 +7332,7 @@ dg20260911b1: {
       "ask": "want可以加ing變成have been wanting嗎？",
       "en": "I have wanted this bike for years.",
       "cn": "我想要這台腳踏車已經好幾年了。",
-      "why": "want是狀態動詞，不能加ing，就算要表達『持續』的意思，也只能用have wanted。"
+      "why": "want是狀態動詞，通常不加ing，就算要表達『持續』的意思，標準說法也是have wanted（口語 I've been wanting to… 是常見例外）。"
     }
   ],
   "steps": [
@@ -7387,19 +7387,19 @@ dg20260911b1: {
         "常搭配all day這類時間片語"
       ]
     },
-    "note": "口訣：句子裡有數字，用have done；沒數字、只強調過程，用have been doing；遇到know/want這種狀態動詞，永遠只能用have done。"
+    "note": "口訣：句子裡有數字，用have done；沒數字、只強調過程，用have been doing；遇到know/want這種狀態動詞，通常用have done。"
   },
   "quizMore": [
     {
       "q": "I ___ this bike for years.",
       "opts": [
         "have wanted",
-        "have been wanting",
+        "have been want",
         "want",
         "am wanting"
       ],
       "ans": 0,
-      "expl": "want是狀態動詞，不能加ing，只能用have wanted。"
+      "expl": "want是狀態動詞，通常不加ing，標準說法是have wanted；have been want 少了 -ing，形狀也不對。"
     },
     {
       "q": "I ___ in Taipei my whole life.",
@@ -11786,7 +11786,7 @@ dg20260826b1p: {
       ask: '順序已經清楚了嗎？',
       en: 'After I ate, I went to bed.',
       cn: '我吃完就去睡了。',
-      why: '連接詞已經標明順序，用過去簡單式就好。過去完成式留給「沒有連接詞、但需要強調更早發生」的情況：I was hungry because I had not eaten.' }
+      why: '連接詞已經標明順序，通常用過去簡單式就好。過去完成式留給「沒有連接詞、但需要強調更早發生」的情況：I was hungry because I had not eaten.；另外 when 子句若先後會改變意思，也要用 had + 過去分詞。' }
   ],
   steps: [
     { label: '要講的故事', text: '「我下班後去超市，買了菜，然後回家煮飯。」' },
@@ -11811,7 +11811,7 @@ dg20260826b1p: {
       cn: '我很餓，我一整天沒吃東西。',
       pts: ['沒有 after / before 幫你標順序', '用 had + Vpp 表示「更早」', '常用來解釋原因']
     },
-    note: '過去完成式不是「講很久以前」，是「在另一個過去時間點之前」。有連接詞時它多半是多餘的。'
+    note: '過去完成式不是「講很久以前」，是「在另一個過去時間點之前」。有 after、before 這類標明順序的連接詞時，它通常可以省略；但 when 例外：When I arrived, the train left.（我到時車才開）和 the train had left.（我到時車早開走了）意思不同。'
   },
   quizMore: [
     { q: 'As soon as I ____ the news, I ____ my sister.', opts: ['heard / called', 'had heard / had called', 'hear / called', 'was hearing / called'], ans: 0,
@@ -11877,7 +11877,7 @@ dg20260828b1p: {
       ask: '你在講「那一次」還是「那一整段時期」？',
       en: 'I used to swim a lot. I was swimming when I hurt my shoulder.',
       cn: '我以前很常游泳。我受傷那次正在游泳。',
-      why: 'used to 講「過去的習慣，現在沒了」；was doing 講「過去某一刻正在做」。不能互換：I was swimming every day（✗ 應該用 used to swim）。' },
+      why: 'used to 講「過去的習慣，現在沒了」；was doing 講「過去某一刻正在做」。兩者通常不互換：講「以前的習慣、現在沒有了」用 used to swim；I was swimming every day 只適合講一段暫時的時期，例如 That summer I was swimming every day.。' },
     { key: 'passive', icon: 'tool',
       title: 'Passive form', titleCn: '跟被動語態一起用',
       ask: '主詞是被動的一方嗎？',
@@ -12077,7 +12077,7 @@ dg20260814b2: {
   ],
   steps: [
     { label: '情境', text: '你要寫一段關於公司營收下滑的說明。' },
-    { label: '如果是給董事會的報告', text: '要客觀、要像定論 → 簡單式：Revenue falls short of target.' },
+    { label: '如果是給董事會的報告', text: '要客觀、要像定論 → 講這一季的結果，通常用過去式：Revenue fell short of target in the third quarter.；講長期通則才用簡單式。' },
     { label: '如果是給團隊的說明', text: '要強調「還在惡化、要趕快處理」→ 進行式：Revenue is falling faster than expected.' },
     { label: '如果是新聞標題', text: '要即時感 → 簡單式無助動詞：Revenue Misses Target' },
     { label: '關鍵', text: '三句都對。差別是你想讓讀者感受到什麼——這才是 B2 的能力。' }
@@ -12954,7 +12954,7 @@ dg20260904b2: {
       ask: '這個狀態現在還在嗎？',
       en: 'A land warning has been issued for the whole island.',
       cn: '全島已發布陸上警報。',
-      why: '用完成式表示「警報現在還沒解除」。如果寫成 was issued，讀者會以為那是稍早的事、可能已經解除了——在防災資訊上這是很嚴重的誤導。' },
+      why: '用完成式表示「警報現在還沒解除」。寫成 was issued 只是陳述發布這個動作，並不代表已經解除；但完成式更能突顯「現在仍然有效」，在防災資訊上通常比較清楚。' },
     { key: 'record', icon: 'star',
       title: 'Record claims', titleCn: '破紀錄：紀錄至今仍成立',
       ask: '這個紀錄還沒被打破嗎？',
@@ -12995,9 +12995,9 @@ dg20260904b2: {
       head: 'a closed event', headCn: '已結束的事件',
       en: 'A warning was issued on Tuesday.',
       cn: '警報於週二發布。',
-      pts: ['有明確時間', '讀者可能理解成「已經解除」', '敘事細節、事後回顧']
+      pts: ['有明確時間', '沒有突顯「目前仍然有效」', '敘事細節、事後回顧']
     },
-    note: '在防災與新聞寫作裡，選錯時態不只是文法問題——會讓讀者誤判狀況是否解除。'
+    note: '在防災與新聞寫作裡，時態選擇會影響語感——完成式更能突顯「目前仍然有效」，通常比較不容易讓讀者誤判狀況。'
   },
   quizMore: [
     { q: 'Which sentence tells the reader the warning is STILL active?', opts: ['A typhoon warning was issued at noon.', 'A typhoon warning has been issued.', 'A typhoon warning issued at noon.', 'A typhoon warning was issuing.'], ans: 1,

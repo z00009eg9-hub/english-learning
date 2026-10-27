@@ -342,7 +342,7 @@ r10:{ unit:"g11", title:"分詞構句與倒裝",
   ],
   examples:[
     {en:"Having finished the report, she went home.",cn:"寫完報告後，她就回家了。",note:"先完成的動作"},
-    {en:"Not only did the drivers respond slowly; they also felt fine.",cn:"這些駕駛不僅反應變慢，還覺得自己沒問題。",note:"Not only 倒裝"},
+    {en:"Not only did the drivers respond slowly, but they also made more errors.",cn:"這些駕駛不僅反應變慢，還犯了更多錯。",note:"Not only 倒裝"},
     {en:"Only after the meeting did I understand the real problem.",cn:"直到會議之後我才明白真正的問題。",note:"Only after 倒裝"}
   ],
   traps:[
@@ -518,7 +518,7 @@ r19:{ unit:"g11", title:"分裂句 It is ... that 與 Nowhere 倒裝",
   ],
   traps:[
     {bad:"Nowhere the cost is more visible.",good:"Nowhere is the cost more visible.",why:"Nowhere 置句首要把 be 動詞提到主詞前。"},
-    {bad:"It is not a shortage of buildings which keeps rents high.",good:"It is not a shortage of buildings that keeps rents high.",why:"分裂句習慣用 that，不用 which。"}
+    {bad:"It is not a shortage of buildings which keeps rents high.",good:"It is not a shortage of buildings that keeps rents high.",why:"這句不算文法錯誤，只是較不自然：分裂句習慣用 that，which 比較少見。"}
   ]
 },
 

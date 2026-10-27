@@ -104,7 +104,7 @@ window.GRAMMAR = [
   ],
   quiz:[
     {q:"I ____ TV when the electricity went off.",qCn:"停電的時候我正在看電視。",opts:["watch","watched","was watching","have watched"],ans:2,expl:"停電是事件，看電視是背景 → 過去進行式。"},
-    {q:"____ she was studying, her brother was playing games.",qCn:"她在讀書的時候，她弟弟在打電動。",opts:["During","While","For","When"],ans:1,expl:"後面接子句且兩件事同時進行 → While。"},
+    {q:"____ she was studying, her brother was playing games.",qCn:"她在讀書的時候，她弟弟在打電動。",opts:["During","While","For","Meanwhile"],ans:1,expl:"後面接子句且兩件事同時進行 → While。During、For 後面要接名詞；Meanwhile 是副詞，不能直接帶出子句。"},
     {q:"Choose the correct sentence.",qCn:"選出正確的句子。",opts:["While the meeting, my phone rang.","During the meeting, my phone rang.","While of the meeting, my phone rang.","During I was in the meeting, my phone rang."],ans:1,expl:"during + 名詞。"}
   ]
 },
@@ -394,7 +394,7 @@ window.GRAMMAR = [
       "✓ Walking home, I felt the rain start."
     ]},
     {h:"倒裝：否定或限定詞置句首", table:{head:["開頭詞","倒裝形式","例句"],rows:[
-      ["Not only","助動詞 + 主詞 + 原形","Not only did they respond slowly, but they also felt fine."],
+      ["Not only","助動詞 + 主詞 + 原形","Not only did they respond slowly, but they also made more errors."],
       ["Only when / Only after","助動詞 + 主詞 + 原形","Only when sleep becomes regular do these systems recover."],
       ["Never / Rarely / Seldom","助動詞 + 主詞 + 原形","Never have I seen such a storm."],
       ["No sooner ... than","助動詞 + 主詞","No sooner had he arrived than the phone rang."]

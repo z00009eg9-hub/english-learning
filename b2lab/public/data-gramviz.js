@@ -447,7 +447,7 @@ V.dg20260819b1p=card(
  {pw:190,title:'普遍事實／定律',
   draw:em(160,156,56,'🌡️')
    +'<text x="160" y="210" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c9631f">不管什麼時候，一直都對</text>',
-  en:'A fever means infection.', cn:'不受時間影響的事實、道理'},
+  en:'Water boils at 100°C.', cn:'不受時間影響的事實、道理'},
  {pw:200,title:'已排定的未來時刻表',
   draw:em(160,150,54,'🗓️')
    +'<text x="160" y="200" text-anchor="middle" font-size="15" font-weight="900" fill="#2b5f92">9:00 → 18:00</text>'
