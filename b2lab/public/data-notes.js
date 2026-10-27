@@ -2269,7 +2269,7 @@ window.NOTES = {
        ans:1,expl:"中文解析：文章寫道「Many people get insurance from their employer. Others buy it by themselves.」說明美國人多半是透過雇主取得保險，或自行購買，因此答案為 B，而非台灣式的全民健保（NHI 是台灣的制度）。"},
       {q:"Why does the passage say medical costs in Taiwan are generally lower than in the USA?",
        opts:["Because Taiwanese hospitals refuse to treat serious illness","Because Taiwan has a government insurance system that covers most costs and requires only a small co-pay","Because medicine is free for everyone in Taiwan","Because the USA has no health insurance system at all"],
-       ans:1,expl:"中文解析：文章結論指出「Taiwan has lower medical costs because it has a government insurance system. People only pay a small co-pay when they see a doctor.」說明台灣費用較低的原因是政府保險制度幫忙負擔大部分費用，民眾只需支付少額部分負擔，故答案為 B。"}
+       ans:1,expl:"中文解析：文章結論指出「Most medical costs, especially for serious illnesses or surgeries, are covered by government insurance, so healthcare is relatively affordable.」說明台灣費用較低的原因是政府保險制度幫忙負擔大部分費用，民眾只需支付少額部分負擔，故答案為 B。"}
     ]
   },
   // --- synced from 20260423: The Farmer and the Wise Woman ---

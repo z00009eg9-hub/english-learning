@@ -28591,7 +28591,7 @@ window.VIDEO.au02 = {
     "art": "au2TrainWho"
    },
    "en": "Who owns operator training?",
-   "cn": "谁負責作業員訓練？"
+   "cn": "誰負責作業員訓練？"
   },
   {
    "ch": 1,

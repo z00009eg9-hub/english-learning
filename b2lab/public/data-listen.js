@@ -233,8 +233,8 @@ notes:[
   "titleCn": "十位客人和一個借來的鍋子",
   "series": "本站自製聽力 · 食物與生活主題",
   "topic": "🥬 下班前討論星期五的辦公室午餐",
-  "focus": "going to 講自己做好的決定（I'm going to cook），現在進行式講兩人談定的分工（you're bringing、we're meeting），will 留給臨時的備案（I'll order）",
-  "intro": "Anita跟越南同事Mai在下班前把星期五的午餐講定。請注意三種形狀怎麼分工：Anita自己的決定用 going to，兩個人談好的事一談定就跳到現在進行式，而「萬一不夠」的備案只能用 will。另外聽聽Mai怎麼用 going to 從眼前的數量推出結論。",
+  "focus": "going to 講自己做好的決定（I am going to cook），現在進行式講兩人談定的時間（we are meeting），will 留給當場的決定和備案（I'll bring、I will order）",
+  "intro": "Anita跟越南同事Mai在下班前把星期五的午餐講定。請注意三種形狀怎麼分工：Anita自己的決定用 going to，Mai當場答應幫忙用 I'll，兩個人談好的碰面時間就跳到現在進行式，而「萬一不夠」的備案也用 will。另外聽聽Mai怎麼用 going to 從眼前的數量推出結論。",
   "tip": "第一次聽抓三個數字：幾個人、幾點碰面、春捲大概要幾個。第二次聽注意每一次換形狀的那一瞬間——同一件事從「我決定」變成「我們約好」時，動詞形狀就跟著跳。",
   "pre": [
     {
@@ -313,8 +313,8 @@ notes:[
     },
     {
       "sp": "Mai",
-      "en": "Clever. Then I am bringing the herbs. I pass the market every morning.",
-      "cn": "聰明。那我負責帶香菜，我每天早上都會經過市場。"
+      "en": "Clever. Then I'll bring the herbs. I pass the market every morning.",
+      "cn": "聰明。那我來帶香草，我每天早上都會經過市場。"
     },
     {
       "sp": "Anita",
@@ -329,7 +329,7 @@ notes:[
     {
       "sp": "Anita",
       "en": "One big tray of fresh herbs is enough, I think.",
-      "cn": "我想一大盤新鮮香菜就夠了。"
+      "cn": "我想一大盤新鮮香草就夠了。"
     },
     {
       "sp": "Mai",
@@ -338,8 +338,8 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "Seven is perfect. I am also going to borrow the big pot for the sauce.",
-      "cn": "七點很好。我還要借那個大鍋子來裝醬。"
+      "en": "Seven is perfect. I am also going to borrow the big pot to make the sauce.",
+      "cn": "七點很好。我還要借那個大鍋子來煮醬。"
     },
     {
       "sp": "Mai",
@@ -353,8 +353,8 @@ notes:[
     },
     {
       "sp": "Mai",
-      "en": "Look at the size of your rolls. Three each is going to disappear fast.",
-      "cn": "看看你春捲的大小，一人三個會很快就沒了。"
+      "en": "Look at the size of your rolls. They are going to disappear fast, even at three each.",
+      "cn": "看看你春捲的大小，就算一人三個，也會很快就沒了。"
     },
     {
       "sp": "Anita",
@@ -402,12 +402,12 @@ notes:[
       ],
       "optsCn": [
         "A. 一個大鍋子",
-        "B. 一盤新鮮香菜",
+        "B. 一盤新鮮香草",
         "C. 隔壁買的麵",
         "D. 她媽媽的食譜"
       ],
       "ans": 1,
-      "expl": "Then I am bringing the herbs... One big tray of fresh herbs is enough——分工一談定，Mai就用現在進行式。"
+      "expl": "Then I'll bring the herbs... One big tray of fresh herbs is enough——Mai聽完Anita的話才當場決定帶香草，所以用 I'll bring。"
     },
     {
       "q": "When are the two of them meeting on Friday?",
@@ -461,7 +461,7 @@ notes:[
         "D. 醬太鹹"
       ],
       "ans": 1,
-      "expl": "Look at the size of your rolls. Three each is going to disappear fast.——她先叫對方看大小，再推出結論，這就是有跡象的 going to。"
+      "expl": "Look at the size of your rolls. They are going to disappear fast, even at three each.——她先叫對方看大小，再推出結論，這就是有跡象的 going to。"
     }
   ]
 },
@@ -475,7 +475,7 @@ notes:[
   "titleCn": "四箱永遠上不了架的東西",
   "series": "本站自製聽力 · 食物與生活主題",
   "topic": "📰 午餐後聊邊境攔下的烘焙紙杯",
-  "focus": "被動語態講貨物被怎麼處理（were stopped、will be returned），going to 講照現在的處理看結局已定，will 講官方宣布的做法",
+  "focus": "被動語態講貨物被怎麼處理（were stopped、is going to be returned、will be opened），going to 講照現在的處理看結局已定，will 講官方宣布的做法",
   "intro": "Anita和Mai午餐後聊起當天的食安新聞。請注意對話裡的被動語態：講貨的時候英文幾乎都用被動，因為重點是那批貨被怎麼處理，不是誰動手。另外注意 will 和 going to 的分工：will 報官方公告的做法，going to 講照目前的處理看已經確定的結局。",
   "tip": "第一次聽抓三個數字：有幾批被攔下、法定限量是多少、最高測出多少。第二次聽數被動語態出現幾次，並注意兩人用 will 和 going to 時語氣有什麼不同。",
   "pre": [
@@ -547,8 +547,8 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "Paper cups, baking paper, and a set of kitchen utensils, if I remember right.",
-      "cn": "紙杯、烘焙紙，還有一組廚房用具，如果我記得沒錯。"
+      "en": "Paper baking cups, baking paper, and a set of kitchen utensils, if I remember right.",
+      "cn": "紙烤杯、烘焙紙，還有一組廚房用具，如果我記得沒錯。"
     },
     {
       "sp": "Mai",
@@ -568,7 +568,7 @@ notes:[
     {
       "sp": "Anita",
       "en": "The legal limit is thirty. Two of the cup batches came back at 217 and 226.",
-      "cn": "法定限量是三十。其中兩批紙杯測出217和226。"
+      "cn": "法定限量是三十。其中兩批紙烤杯測出217和226。"
     },
     {
       "sp": "Mai",
@@ -582,8 +582,8 @@ notes:[
     },
     {
       "sp": "Mai",
-      "en": "So what happens to all of it now?",
-      "cn": "那這些東西現在會怎麼樣？"
+      "en": "So what happens to the rejected goods now?",
+      "cn": "那這些不合格的貨現在會怎麼樣？"
     },
     {
       "sp": "Anita",
@@ -607,8 +607,8 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "Very slow. For one of the importers the testing rate will rise to half of all shipments.",
-      "cn": "非常慢。其中一家進口商的送驗比例會提高到所有批次的一半。"
+      "en": "Very slow. For one of the importers the testing rate will rise to as much as half of all shipments.",
+      "cn": "非常慢。其中一家進口商的送驗比例最高會提高到所有批次的一半。"
     },
     {
       "sp": "Mai",
@@ -692,7 +692,7 @@ notes:[
       "opts": [
         "A. Because the fine is very large",
         "B. Because containers sit at the port and earn nothing",
-        "C. Because the importer loses its licence",
+        "C. Because the importer loses its license",
         "D. Because the test has to be repeated"
       ],
       "optsCn": [
@@ -705,16 +705,16 @@ notes:[
       "expl": "Their containers are going to sit at the port for weeks... That is the real punishment——成本是時間，公告上不會寫。"
     },
     {
-      "q": "Anita says: \"I ___ pull two samples before the audit.\" She decided this morning.",
+      "q": "Anita says: \"I ___ two samples before the audit.\" She decided this morning.",
       "qCn": "Anita說她要在稽核之前抽兩個樣品，這是她今天早上就決定的。",
       "opts": [
-        "A. will",
-        "B. am going to",
-        "C. am pulling",
+        "A. will pull",
+        "B. am going to pull",
+        "C. pulled",
         "D. pull"
       ],
       "ans": 1,
-      "expl": "決定在今天早上就做好了，不是講話這一秒才想到，所以用 am going to。will 會變成她被問了才臨時決定。"
+      "expl": "決定在今天早上就做好了，不是講話這一秒才想到，所以用 am going to pull。will pull 會變成她被問了才臨時決定；pulled 是過去式，但抽樣還沒做；pull 的現在簡單式講未來只用在時刻表這類固定行程。"
     }
   ]
 },
@@ -728,9 +728,9 @@ notes:[
   "titleCn": "誰該先攔下來",
   "series": "本站自製聽力 · 食物與生活主題",
   "topic": "🧾 稽核前跟品保主管討論邊境查驗的意義",
-  "focus": "will 在正式語域裡報的是既定措施（inspectors will open、the cost will fall on），對話裡的 I'll 表達當下的意願；搭配名詞化讓論點更密實",
-  "intro": "Anita在稽核前跟品保主管Henry交換意見：邊境查驗到底該由誰負責。請注意同一個 will 在這段對話裡換了兩種身分——引用公告時它是冷靜的既定措施，Anita自己開口承諾時它又變回「我願意」。也聽聽Henry怎麼把一整件事壓縮成名詞。",
-  "tip": "第一次聽抓三個事實：不合格率是多少、新的查驗方式持續多久、Anita最後答應做什麼。第二次聽把每一個 will 標出來，判斷它是在報告制度，還是在表達說話者的意願。",
+  "focus": "will 在這段對話裡有兩種身分：根據新規定做的冷靜推測（the cost of that will fall on the importers），以及 I'll 表達當下的意願（I'll put the five point three percent on one slide）；搭配名詞化讓論點更密實",
+  "intro": "Anita在稽核前跟品保主管Henry交換意見：邊境查驗到底該由誰負責。請注意同一個 will 在這段對話裡換了兩種身分——Henry根據新規定推測後果時它冷靜客觀，Anita自己開口承諾時它又變回「我願意」。也聽聽Henry怎麼把一整件事壓縮成名詞。",
+  "tip": "第一次聽抓三個事實：不合格率是多少、新的查驗方式持續多久、Anita最後答應做什麼。第二次聽把每一個 will 標出來，判斷它是在冷靜推測，還是在表達說話者的意願。",
   "pre": [
     {
       "w": "regulator",
@@ -810,13 +810,13 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "Exactly. One bad result is refused at the dock and forgotten. A rate changes the rules of entry.",
-      "cn": "正是。一筆不合格在碼頭退掉就沒事了，但一個比率會改變進關規則。"
+      "en": "Exactly. One bad batch is refused at the dock and forgotten. A rate changes the rules of entry.",
+      "cn": "正是。一批不合格的貨在碼頭退掉就沒事了，但一個比率會改變進關規則。"
     },
     {
       "sp": "Henry",
-      "en": "Which is what happened. Sampling becomes batch-by-batch inspection for a month.",
-      "cn": "結果就是這樣：抽驗變成為期一個月的逐批查驗。"
+      "en": "Which is what the regulator did. Sampling becomes batch-by-batch inspection for a month.",
+      "cn": "主管機關就是這麼做的：抽驗變成為期一個月的逐批查驗。"
     },
     {
       "sp": "Anita",
@@ -845,13 +845,13 @@ notes:[
     },
     {
       "sp": "Henry",
-      "en": "Anything already in a kitchen is beyond its reach.",
-      "cn": "已經在廚房裡的東西，它伸不到手。"
+      "en": "Anything already in a consumer's kitchen is beyond its reach.",
+      "cn": "已經在消費者廚房裡的東西，它伸不到手。"
     },
     {
       "sp": "Anita",
-      "en": "Which is why I keep telling our suppliers to test before they ship, not after.",
-      "cn": "所以我一直跟我們的供應商說，要在出貨前驗，不是出貨後。"
+      "en": "Which is why I keep telling our suppliers to test to our standard before they ship, not after.",
+      "cn": "所以我一直跟我們的供應商說，要在出貨前照我們的標準驗，不是出貨後。"
     },
     {
       "sp": "Henry",
@@ -937,7 +937,7 @@ notes:[
         "D. 因為進口商會賄賂查驗人員"
       ],
       "ans": 1,
-      "expl": "A border post only inspects what arrives through it... Anything already in a kitchen is beyond its reach——兩句合起來就是她的理由。"
+      "expl": "A border post only inspects what arrives through it... Anything already in a consumer's kitchen is beyond its reach——兩句合起來就是她的理由。"
     },
     {
       "q": "What makes Anita's argument work with suppliers?",
@@ -961,19 +961,19 @@ notes:[
       "q": "\"The cost of that will fall on the importers\" and \"Then I'll put the five point three percent on one slide\" use will differently because ___.",
       "qCn": "「那筆成本會落在進口商身上」和「那我把百分之五點三做成一張投影片」兩句的 will 用法不同，因為什麼？",
       "opts": [
-        "A. the first reports an already decided outcome, the second is a decision made while speaking",
+        "A. the first predicts a consequence of the new rules, the second is a decision made while speaking",
         "B. the first is a question and the second is an answer",
         "C. the first is informal and the second is formal",
         "D. the first refers to the past"
       ],
       "optsCn": [
-        "A. 前者報告已經確定的結果，後者是說話當下才做的決定",
+        "A. 前者預測新規定帶來的後果，後者是說話當下才做的決定",
         "B. 前者是問句，後者是答句",
         "C. 前者口語，後者正式",
         "D. 前者指的是過去"
       ],
       "ans": 0,
-      "expl": "第一句引用的是制度的必然結果，語氣冷靜；第二句是Anita聽完Henry的話才答應做的，所以縮寫成 I'll，帶著「我願意」的意志。"
+      "expl": "第一句是Henry根據新規定推測的後果，語氣冷靜；第二句是Anita聽完Henry的話才答應做的，所以縮寫成 I'll，帶著「我願意」的意志。"
     }
   ]
 },
@@ -1904,11 +1904,11 @@ notes:[
       "def": "A group of people who work or play together."
     },
     {
-      "w": "desk",
-      "ipa": "/desk/",
+      "w": "convenience store",
+      "ipa": "/kənˈviːniəns stɔːr/",
       "pos": "n.",
-      "cn": "書桌；辦公桌",
-      "def": "A table that you sit at to write or use a computer."
+      "cn": "便利商店",
+      "def": "A small shop that stays open long hours and sells food and daily items."
     },
     {
       "w": "noisy",
@@ -2290,7 +2290,7 @@ notes:[
   "id": "dl20261009b1p",
   "date": "2026-10-09",
   "level": "B1+",
-  "minutes": 4,
+  "minutes": 3,
   "kind": "note",
   "title": "Four Days, and Then a Deal",
   "titleCn": "罷工四天，然後談成了",
@@ -2514,7 +2514,7 @@ notes:[
   "id": "dl20261009b2",
   "date": "2026-10-09",
   "level": "B2",
-  "minutes": 4,
+  "minutes": 3,
   "kind": "note",
   "title": "Three Dates and One Blank",
   "titleCn": "三個日期，一個空白",
@@ -2795,11 +2795,11 @@ notes:[
       "def": "A tall container for water or other drinks."
     },
     {
-      "w": "pack",
-      "ipa": "/pæk/",
+      "w": "book",
+      "ipa": "/bʊk/",
       "pos": "v.",
-      "cn": "打包、整理行李",
-      "def": "To put things into a bag or a box."
+      "cn": "預訂（票、座位）",
+      "def": "To arrange to have a ticket, seat or room for a later time."
     }
   ],
   "script": [
@@ -2963,7 +2963,7 @@ notes:[
   "id": "dl20261006b1",
   "date": "2026-10-06",
   "level": "B1",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "The Early Shuttle Leaves Ten Minutes Sooner",
   "titleCn": "早班接駁車早十分鐘出發",
@@ -2974,11 +2974,11 @@ notes:[
   "tip": "第一次聽抓三件事（新接駁車幾點走、Anita為什麼換車、Mai還在猶豫什麼）；第二次聽每次聽到 have 就在心裡標一下：這一個是「有」還是「在做」。",
   "pre": [
     {
-      "w": "commute",
-      "ipa": "/kəˈmjuːt/",
-      "pos": "n./v.",
-      "cn": "通勤（的路程）",
-      "def": "The journey you make to work and back every day."
+      "w": "break down",
+      "ipa": "/breɪk daʊn/",
+      "pos": "phr.v.",
+      "cn": "（車輛、機器）故障、拋錨",
+      "def": "To stop working because something is wrong with it."
     },
     {
       "w": "shuttle",
@@ -3444,7 +3444,7 @@ notes:[
   "id": "dl20261006b2",
   "date": "2026-10-06",
   "level": "B2",
-  "minutes": 4,
+  "minutes": 3,
   "kind": "note",
   "title": "The First Monday I Used to Lose",
   "titleCn": "以前每個月第一個星期一就這樣沒了",
@@ -3455,11 +3455,11 @@ notes:[
   "tip": "第一次聽抓三個數字（以前多久飛一次、現在多久一次、五個工作日裡有幾天花在路上）；第二次聽每次聽到 used to 就判斷一下：後面接的是原形動詞，還是名詞或 V-ing。",
   "pre": [
     {
-      "w": "audit",
-      "ipa": "/ˈɑː.dɪt/",
-      "pos": "n./v.",
-      "cn": "稽核、查帳",
-      "def": "An official check of how a company works or keeps its records."
+      "w": "auditor",
+      "ipa": "/ˈɔːdɪtɚ/",
+      "pos": "n.",
+      "cn": "稽核員",
+      "def": "A person whose job is to check a company's records or ways of working."
     },
     {
       "w": "transit",
@@ -3476,11 +3476,11 @@ notes:[
       "def": "Happening four times a year."
     },
     {
-      "w": "paperwork",
-      "ipa": "/ˈpeɪ.pɚ.wɝːk/",
+      "w": "demotion",
+      "ipa": "/dɪˈmoʊʃən/",
       "pos": "n.",
-      "cn": "文書作業、文件",
-      "def": "The forms and documents a job requires you to fill in."
+      "cn": "降職",
+      "def": "A move to a lower or less important position at work."
     },
     {
       "w": "inherit",
@@ -3490,11 +3490,11 @@ notes:[
       "def": "To get something from the person who had the job before you."
     },
     {
-      "w": "consume",
-      "ipa": "/kənˈsuːm/",
+      "w": "settle",
+      "ipa": "/ˈsetəl/",
       "pos": "v.",
-      "cn": "耗掉、消耗",
-      "def": "To use up time, money or energy."
+      "cn": "解決（問題、爭議）",
+      "def": "To decide or solve something so that it is finished."
     },
     {
       "w": "evaporate",
@@ -3923,11 +3923,11 @@ notes:[
       "def": "A line of people waiting for something."
     },
     {
-      "w": "colleague",
-      "ipa": "/ˈkɑː.liːɡ/",
-      "pos": "n.",
-      "cn": "同事",
-      "def": "Someone who works in the same place as you."
+      "w": "sign up",
+      "ipa": "/saɪn ʌp/",
+      "pos": "phr.v.",
+      "cn": "報名、登記",
+      "def": "To put your name on a list to take part in something."
     },
     {
       "w": "book",
@@ -4171,11 +4171,11 @@ notes:[
       "def": "To keep something for one person or group only."
     },
     {
-      "w": "peak",
-      "ipa": "/piːk/",
-      "pos": "n./v.",
-      "cn": "高峰、達到高點",
-      "def": "The highest point of something."
+      "w": "enhanced",
+      "ipa": "/ɪnˈhænst/",
+      "pos": "adj.",
+      "cn": "加強的、強化的",
+      "def": "Made better, stronger or more effective than before."
     },
     {
       "w": "stage",
@@ -4364,7 +4364,7 @@ notes:[
   "id": "dl20261002b2",
   "date": "2026-10-02",
   "level": "B2",
-  "minutes": 5,
+  "minutes": 4,
   "kind": "note",
   "title": "The Mask in the Gym Class",
   "titleCn": "體育課上的那張口罩",
@@ -5022,7 +5022,7 @@ notes:[
   "id": "dl20260929b1p",
   "date": "2026-09-29",
   "level": "B1+",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "Eight Counties on the List",
   "titleCn": "名單上的八個縣市",
@@ -5241,7 +5241,7 @@ notes:[
   "id": "dl20260929b2",
   "date": "2026-09-29",
   "level": "B2",
-  "minutes": 4,
+  "minutes": 3,
   "kind": "note",
   "title": "The Number on the Wall",
   "titleCn": "牆上的那個數字",
@@ -5483,11 +5483,11 @@ notes:[
       "def": "A book of empty pages for writing in."
     },
     {
-      "w": "practice",
-      "ipa": "/ˈpræktɪs/",
-      "pos": "n.",
-      "cn": "練習",
-      "def": "Doing something again and again to get better."
+      "w": "get better",
+      "ipa": "/ɡet ˈbetɚ/",
+      "pos": "phr.",
+      "cn": "進步、變好",
+      "def": "To improve; to become better at something."
     },
     {
       "w": "remember",
@@ -5674,7 +5674,7 @@ notes:[
   "id": "dl20260925b1",
   "date": "2026-09-25",
   "level": "B1",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "When Did You Start?",
   "titleCn": "你是什麼時候開始的？",
@@ -5685,11 +5685,11 @@ notes:[
   "tip": "第一次聽抓兩個數字（幾個月、幾個字），第二次聽專心分辨每個問句是在問「哪一天」還是「多久」。",
   "pre": [
     {
-      "w": "colleague",
-      "ipa": "/ˈkɑː.liːɡ/",
-      "pos": "n.",
-      "cn": "同事",
-      "def": "A person you work with."
+      "w": "hold a conversation",
+      "ipa": "/hoʊld ə ˌkɑːnvɚˈseɪʃən/",
+      "pos": "phr.",
+      "cn": "與人交談、撐起一段對話",
+      "def": "To talk with someone for a while in a natural way."
     },
     {
       "w": "freeze",
@@ -5888,7 +5888,7 @@ notes:[
   "id": "dl20260925b1p",
   "date": "2026-09-25",
   "level": "B1+",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "The Hours Nobody Counted",
   "titleCn": "沒有人算過的時數",
@@ -6102,7 +6102,7 @@ notes:[
   "id": "dl20260925b2",
   "date": "2026-09-25",
   "level": "B2",
-  "minutes": 4,
+  "minutes": 2,
   "kind": "note",
   "title": "A Ranking Can Rise While Learning Falls",
   "titleCn": "排名往上，學習往下",
@@ -6520,7 +6520,7 @@ notes:[
   "id": "dl20260922b1",
   "date": "2026-09-22",
   "level": "B1",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "My First Batch",
   "titleCn": "我的第一盤",
@@ -6734,7 +6734,7 @@ notes:[
   "id": "dl20260922b1p",
   "date": "2026-09-22",
   "level": "B1+",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "Sold Out Before the Festival",
   "titleCn": "節前就賣光了",
@@ -6766,11 +6766,11 @@ notes:[
       "def": "A request asking a shop to supply goods."
     },
     {
-      "w": "confidence",
-      "ipa": "/ˈkɑːnfɪdəns/",
+      "w": "batch",
+      "ipa": "/bætʃ/",
       "pos": "n.",
-      "cn": "自信",
-      "def": "The feeling that you can do something well."
+      "cn": "一批（同時做出的量）",
+      "def": "A group of things that are made or baked at the same time."
     },
     {
       "w": "skill",
@@ -6948,7 +6948,7 @@ notes:[
   "id": "dl20260922b2",
   "date": "2026-09-22",
   "level": "B2",
-  "minutes": 4,
+  "minutes": 3,
   "kind": "note",
   "title": "The Month I Cooked Every Night",
   "titleCn": "我天天下廚的那一個月",
@@ -6966,11 +6966,11 @@ notes:[
       "def": "The act of bringing goods to someone's address."
     },
     {
-      "w": "habit",
-      "ipa": "/ˈhæbɪt/",
+      "w": "default",
+      "ipa": "/ˈdiːfɔːlt/",
       "pos": "n.",
-      "cn": "習慣",
-      "def": "Something you do regularly without thinking."
+      "cn": "預設狀態、常態",
+      "def": "What happens or is normal unless you choose something different."
     },
     {
       "w": "afford",
@@ -6987,11 +6987,11 @@ notes:[
       "def": "Something that does not follow the usual rule."
     },
     {
-      "w": "market",
-      "ipa": "/ˈmɑːrkɪt/",
-      "pos": "n.",
-      "cn": "市場",
-      "def": "A place where people sell food and goods."
+      "w": "run late",
+      "ipa": "/rʌn leɪt/",
+      "pos": "phr.v.",
+      "cn": "（會議、行程）延誤、超時",
+      "def": "To take longer than planned, so that it ends later than expected."
     },
     {
       "w": "worth",
@@ -7398,7 +7398,7 @@ notes:[
   "id": "dl20260918b1",
   "date": "2026-09-18",
   "level": "B1",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "The Rent Went Up",
   "titleCn": "房租漲了",
@@ -7444,11 +7444,11 @@ notes:[
       "def": "The way two things are not the same."
     },
     {
-      "w": "afford",
-      "ipa": "/əˈfɔːrd/",
+      "w": "cover",
+      "ipa": "/ˈkʌvɚ/",
       "pos": "v.",
-      "cn": "負擔得起",
-      "def": "To have enough money to pay for something."
+      "cn": "足夠支付",
+      "def": "To be enough money to pay for something."
     }
   ],
   "script": [
@@ -7614,7 +7614,7 @@ notes:[
   "id": "dl20260918b1p",
   "date": "2026-09-18",
   "level": "B1+",
-  "minutes": 4,
+  "minutes": 2,
   "kind": "note",
   "title": "Seventy Percent Instead of Sixty",
   "titleCn": "從六成變七成",
@@ -7682,7 +7682,7 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "Not yet. Were the rates changed again?",
+      "en": "Not yet. Were the interest rates changed again?",
       "cn": "還沒。利率又調整了嗎？"
     },
     {
@@ -7717,7 +7717,7 @@ notes:[
     },
     {
       "sp": "Wei",
-      "en": "Yes. The rules for home loans have been loosened.",
+      "en": "Yes. The rules for mortgages have been loosened.",
       "cn": "有。房貸的規定放寬了。"
     },
     {
@@ -7830,7 +7830,7 @@ notes:[
       "expl": "Two years ago, when speculation was a real problem."
     },
     {
-      "q": "The rules for home loans ___ this week.",
+      "q": "The rules for mortgages ___ this week.",
       "qCn": "房貸的規定這個星期被放寬了。（選出正確的被動形式）",
       "opts": [
         "A. have loosened",
@@ -7847,7 +7847,7 @@ notes:[
   "id": "dl20260918b2",
   "date": "2026-09-18",
   "level": "B2",
-  "minutes": 5,
+  "minutes": 3,
   "kind": "note",
   "title": "Rent, Mortgage, and the Gap Between",
   "titleCn": "房租、房貸，還有中間那道落差",
@@ -7855,7 +7855,7 @@ notes:[
   "topic": "💬 政策鬆綁之後的午餐對話",
   "focus": "現在完成式與過去簡單式在同一段話裡的切換；完成式帶出的言外之意",
   "intro": "同一則央行新聞，換成兩位資深同事的深入討論。留意他們怎麼在 has kept、have risen 這種完成式和 introduced、cut back 這種過去式之間切換，以及完成式怎麼暗示「問題還沒解決」。",
-  "tip": "聽的時候記下每一個時間詞（since 2024、two years ago、this year），再回頭檢查說話者用了哪個時態。",
+  "tip": "聽的時候記下每一個時間詞（since 2021、two years ago、since then），再回頭檢查說話者用了哪個時態。",
   "pre": [
     {
       "w": "quarter",
@@ -8258,7 +8258,7 @@ notes:[
   "id": "dl20260915b1",
   "date": "2026-09-15",
   "level": "B1",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "The Interview Question",
   "titleCn": "面試現場的那道題",
@@ -8269,11 +8269,11 @@ notes:[
   "tip": "先聽一次抓「Tom用哪套軟體最久」，再聽一次抓「經理最後說什麼」。",
   "pre": [
     {
-      "w": "manager",
-      "ipa": "/ˈmæn.ə.dʒɚ/",
+      "w": "customer service",
+      "ipa": "/ˈkʌstəmɚ ˈsɝːvɪs/",
       "pos": "n.",
-      "cn": "經理",
-      "def": "A person who is in charge of a business or office."
+      "cn": "客服、顧客服務",
+      "def": "The part of a company that helps customers and answers their questions."
     },
     {
       "w": "software",
@@ -8442,7 +8442,7 @@ notes:[
   "id": "dl20260915b1p",
   "date": "2026-09-15",
   "level": "B1+",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "On the Other Side of the Desk",
   "titleCn": "坐到桌子的另一邊",
@@ -8626,7 +8626,7 @@ notes:[
   "id": "dl20260915b2",
   "date": "2026-09-15",
   "level": "B2",
-  "minutes": 4,
+  "minutes": 2,
   "kind": "note",
   "title": "For Ages or Since 2019?",
   "titleCn": "「好久了」還是「從2019年」？",
@@ -8672,11 +8672,11 @@ notes:[
       "def": "The willingness to give time and energy to something."
     },
     {
-      "w": "impression",
-      "ipa": "/ɪmˈpreʃən/",
-      "pos": "n.",
-      "cn": "印象",
-      "def": "The way something seems to other people."
+      "w": "drift",
+      "ipa": "/drɪft/",
+      "pos": "v.",
+      "cn": "漫無目標地度過、漂泊",
+      "def": "To move through life or work without a clear aim."
     },
     {
       "w": "duration",
@@ -9000,7 +9000,7 @@ notes:[
   "id": "dl20260911b1",
   "date": "2026-09-11",
   "level": "B1",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "How Many Countries Have You Visited?",
   "titleCn": "你今年去過幾個國家了？",
@@ -9178,7 +9178,7 @@ notes:[
   "id": "dl20260911b1p",
   "date": "2026-09-11",
   "level": "B1+",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "How Long Have You Worked Overseas?",
   "titleCn": "你在海外工作多久了？",
@@ -9598,16 +9598,16 @@ notes:[
   "titleCn": "Amy的颱風準備通話",
   "series": "本站自製聽力 · 天災與天氣主題",
   "topic": "☎️ 颱風前的準備",
-  "focus": "現在完成式基礎（has already prepared, has never experienced）vs 過去簡單式（announced, cancelled）",
-  "intro": "Lily打電話問Amy颱風天有沒有準備好。這一課練習現在完成式（has already prepared, has never experienced）講『到目前為止』做了什麼，也留意過去簡單式（announced, cancelled）交代『那件事發生的細節』。",
+  "focus": "現在完成式基礎（has already prepared, have you ever experienced）vs 過去簡單式（announced, cancelled）",
+  "intro": "Lily打電話問Amy颱風天有沒有準備好。這一課練習現在完成式（has already prepared, have you ever experienced）講『到目前為止』做了什麼，也留意過去簡單式（announced, cancelled）交代『那件事發生的細節』。",
   "tip": "留意Amy什麼時候用has already prepared（到目前為止），什麼時候改用過去簡單式announced、cancelled（那件事的細節）。",
   "pre": [
     {"w": "announce", "ipa": "/əˈnaʊns/", "pos": "v.", "cn": "宣布", "def": "To tell people something officially."},
     {"w": "cancel", "ipa": "/ˈkænsl/", "pos": "v.", "cn": "取消", "def": "To stop something from happening."},
     {"w": "candle", "ipa": "/ˈkændl/", "pos": "n.", "cn": "蠟燭", "def": "A stick of wax with a string that burns for light."},
     {"w": "prepare", "ipa": "/prɪˈper/", "pos": "v.", "cn": "準備", "def": "To get ready for something."},
-    {"w": "neighbor", "ipa": "/ˈneɪbɚ/", "pos": "n.", "cn": "鄰居", "def": "A person who lives near you."},
-    {"w": "nervous", "ipa": "/ˈnɝːvəs/", "pos": "adj.", "cn": "緊張的", "def": "Feeling worried or afraid."}
+    {"w": "typhoon", "ipa": "/taɪˈfuːn/", "pos": "n.", "cn": "颱風", "def": "A very strong tropical storm with heavy rain and wind."},
+    {"w": "scary", "ipa": "/ˈskeri/", "pos": "adj.", "cn": "可怕的、令人害怕的", "def": "Making you feel afraid."}
   ],
   "script": [
     {"sp": "Lily", "en": "Amy, I heard your company announced a typhoon day off. Is that true?", "cn": "Amy，我聽說你們公司宣布放颱風假了，是真的嗎？"},
@@ -9660,7 +9660,7 @@ notes:[
   "id": "dl20260904b1p",
   "date": "2026-09-04",
   "level": "B1+",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "The Delayed Shipment",
   "titleCn": "被延誤的貨運",
@@ -9673,9 +9673,9 @@ notes:[
     {"w": "delay", "ipa": "/dɪˈleɪ/", "pos": "v.", "cn": "延誤", "def": "To make something happen later than planned."},
     {"w": "flood", "ipa": "/flʌd/", "pos": "v.", "cn": "淹水", "def": "To cover a place with water."},
     {"w": "backup", "ipa": "/ˈbækʌp/", "pos": "adj.", "cn": "備援的", "def": "Used as an alternative if the main plan fails."},
-    {"w": "coordinate", "ipa": "/koʊˈɔːrdɪneɪt/", "pos": "v.", "cn": "協調", "def": "To organize people or things to work together."},
+    {"w": "access road", "ipa": "/ˈækses roʊd/", "pos": "n.", "cn": "聯外道路、進出道路", "def": "A road that lets vehicles get into a particular place."},
     {"w": "warehouse", "ipa": "/ˈwerhaʊs/", "pos": "n.", "cn": "倉庫", "def": "A large building where goods are stored."},
-    {"w": "checklist", "ipa": "/ˈtʃeklɪst/", "pos": "n.", "cn": "檢查清單", "def": "A list of things to check or do."}
+    {"w": "shipment", "ipa": "/ˈʃɪpmənt/", "pos": "n.", "cn": "（一批）貨物、出貨", "def": "A load of goods that is sent together."}
   ],
   "script": [
     {"sp": "Mark", "en": "Anita, I heard the shipment has been delayed by the storm. Is that right?", "cn": "Anita，我聽說這批貨被暴風延誤了，是真的嗎？"},
@@ -9738,12 +9738,12 @@ notes:[
   "intro": "這是Anita錄的一段簡短獨白，反思這一季破紀錄的颱風數量對日常生活與工作的影響。語氣比對話更正式，句子也更長，留意她怎麼用現在完成式表達『到目前為止累積的結果』。",
   "tip": "這是獨白不是對話，可以先聽整段抓大意，再逐句聽細節，留意她怎麼用has been/have had這種句型講『這一季至今』的整體印象。",
   "pre": [
-    {"w": "unprecedented", "ipa": "/ʌnˈpresɪdentɪd/", "pos": "adj.", "cn": "前所未有的", "def": "Never having happened before."},
+    {"w": "barely", "ipa": "/ˈberli/", "pos": "adv.", "cn": "幾乎沒有、勉強", "def": "Almost not; only just."},
     {"w": "resilience", "ipa": "/rɪˈzɪliəns/", "pos": "n.", "cn": "韌性、應變能力", "def": "The ability to recover quickly from difficulties."},
     {"w": "disruption", "ipa": "/dɪsˈrʌpʃn/", "pos": "n.", "cn": "干擾、中斷", "def": "Something that stops a process from continuing normally."},
     {"w": "adapt", "ipa": "/əˈdæpt/", "pos": "v.", "cn": "調整、適應", "def": "To change in order to deal with a new situation."},
     {"w": "backup", "ipa": "/ˈbækʌp/", "pos": "adj.", "cn": "備援的", "def": "Used as an alternative if the main plan fails."},
-    {"w": "statistic", "ipa": "/stəˈtɪstɪk/", "pos": "n.", "cn": "統計數據", "def": "A number that shows information about something."}
+    {"w": "add up", "ipa": "/æd ʌp/", "pos": "phr.v.", "cn": "累積起來", "def": "To slowly become a large amount or a big effect."}
   ],
   "script": [
     {"sp": "Anita", "en": "Hi, this is Anita. I want to talk briefly about something that has shaped almost every week of my life this season: the weather.", "cn": "嗨，我是Anita。我想簡短談談這一季幾乎每個禮拜都影響著我生活的一件事：天氣。"},
@@ -9929,7 +9929,7 @@ notes:[
   "id": "dl20260902b1p",
   "date": "2026-09-02",
   "level": "B1+",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "Talking About the New Training Course",
   "titleCn": "聊聊新的培訓課程",
@@ -9941,7 +9941,7 @@ notes:[
   "pre": [
     {"w": "enroll", "ipa": "/ɪnˈroʊl/", "pos": "v.", "cn": "註冊、報名", "def": "To officially join a course."},
     {"w": "challenging", "ipa": "/ˈtʃælɪndʒɪŋ/", "pos": "adj.", "cn": "有挑戰性的", "def": "Difficult in a way that tests your skill."},
-    {"w": "defect rate", "ipa": "/ˈdiːfekt reɪt/", "pos": "n.", "cn": "不良率", "def": "The percentage of products that are faulty."},
+    {"w": "uncomfortable", "ipa": "/ʌnˈkʌmftəbəl/", "pos": "adj.", "cn": "不自在的、不舒服的", "def": "Feeling slightly worried, embarrassed or not relaxed."},
     {"w": "impressive", "ipa": "/ɪmˈpresɪv/", "pos": "adj.", "cn": "令人印象深刻的", "def": "Causing admiration because of quality or skill."},
     {"w": "worth", "ipa": "/wɝːθ/", "pos": "adj.", "cn": "值得的", "def": "Deserving the time or effort spent."},
     {"w": "registration", "ipa": "/ˌredʒɪˈstreɪʃn/", "pos": "n.", "cn": "報名、註冊", "def": "The process of signing up for something."}
@@ -9997,7 +9997,7 @@ notes:[
   "id": "dl20260902b2",
   "date": "2026-09-02",
   "level": "B2",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "Rethinking Discomfort",
   "titleCn": "重新看待不舒服的感覺",
@@ -10147,7 +10147,7 @@ notes:[
     {"w": "burn", "ipa": "/bɝːn/", "pos": "v.", "cn": "燒焦", "def": "To damage something with too much heat."},
     {"w": "smoke", "ipa": "/smoʊk/", "pos": "n.", "cn": "煙", "def": "The grey cloud that rises when something burns."},
     {"w": "alarm", "ipa": "/əˈlɑːrm/", "pos": "n.", "cn": "警報器", "def": "A device that makes a loud sound to warn people."},
-    {"w": "distract", "ipa": "/dɪˈstrækt/", "pos": "v.", "cn": "分散注意力", "def": "To take someone's attention away from what they are doing."},
+    {"w": "boil over", "ipa": "/bɔɪl ˈoʊvɚ/", "pos": "phr.v.", "cn": "（煮沸的液體）溢出來", "def": "To rise and flow over the side of a pot when it boils."},
     {"w": "mess", "ipa": "/mes/", "pos": "n.", "cn": "亂七八糟的狀況", "def": "A dirty or untidy situation."}
   ],
   "script": [
@@ -10203,7 +10203,7 @@ notes:[
   "id": "dl20260828b1p",
   "date": "2026-08-28",
   "level": "B1+",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "Talking About the Oil Recall",
   "titleCn": "聊食用油回收事件",
@@ -10215,7 +10215,7 @@ notes:[
   "pre": [
     {"w": "recall", "ipa": "/rɪˈkɑːl/", "pos": "n.", "cn": "（產品）回收", "def": "An order to take an unsafe product back from shops."},
     {"w": "contaminate", "ipa": "/kənˈtæmɪneɪt/", "pos": "v.", "cn": "污染", "def": "To make something dirty or unsafe with an unwanted substance."},
-    {"w": "inspect", "ipa": "/ɪnˈspekt/", "pos": "v.", "cn": "檢查、稽查", "def": "To look at something carefully to check it is safe."},
+    {"w": "scandal", "ipa": "/ˈskændəl/", "pos": "n.", "cn": "醜聞、弊案", "def": "Something bad that shocks people and makes them angry."},
     {"w": "limit", "ipa": "/ˈlɪmɪt/", "pos": "n.", "cn": "上限", "def": "The largest amount allowed."},
     {"w": "affected", "ipa": "/əˈfektɪd/", "pos": "adj.", "cn": "受影響的", "def": "Changed or damaged by something."},
     {"w": "brand", "ipa": "/brænd/", "pos": "n.", "cn": "品牌", "def": "The name a company sells its products under."}
@@ -10300,8 +10300,8 @@ notes:[
     {"sp": "Anita", "en": "Hi, this is Anita. I want to share a few thoughts about the recent cooking oil scandal, from a quality engineer's point of view.", "cn": "嗨，我是Anita。我想以品質工程師的角度，分享一些對最近食用油事件的想法。"},
     {"sp": "Anita", "en": "As a quality engineer, I read stories like this oil recall a little differently than most people.", "cn": "身為品質工程師，我讀這類食用油回收的新聞時，角度跟大部分人不太一樣。"},
     {"sp": "Anita", "en": "The public usually asks, 'How could this happen?' But my first question is always, 'Was this really one bad batch, or a sign of a bigger problem?'", "cn": "大眾通常會問：『這怎麼會發生？』但我的第一個問題永遠是：『這真的只是一批出問題，還是更大問題的徵兆？』"},
-    {"sp": "Anita", "en": "In this case, investigators found that the earlier contamination was not caused by a single accident.", "cn": "在這個案例裡，調查人員發現先前的污染不是單一意外造成的。"},
-    {"sp": "Anita", "en": "It was caused by weak controls over raw materials and not enough testing before products left the factory.", "cn": "而是原料控管不足，加上產品出廠前檢驗不夠所造成的。"},
+    {"sp": "Anita", "en": "In this case, investigators found that the root cause of the earlier contamination was not a single accident.", "cn": "在這個案例裡，調查人員發現先前污染的根本原因不是單一意外。"},
+    {"sp": "Anita", "en": "It was caused by weak oversight of raw materials and not enough testing before products left the factory.", "cn": "而是原料監督不足，加上產品出廠前檢驗不夠所造成的。"},
     {"sp": "Anita", "en": "That is what we call a systemic issue, not an isolated one.", "cn": "這就是我們所說的『系統性問題』，而不是單一事件。"},
     {"sp": "Anita", "en": "An isolated problem can be fixed by punishing one company.", "cn": "單一事件只要處罰一家公司就能解決。"},
     {"sp": "Anita", "en": "A systemic problem needs every company in the industry to change how often they test, not just react after something goes wrong.", "cn": "但系統性問題需要整個產業的每一家公司都改變檢驗的頻率，而不是只在出事之後才反應。"},
@@ -10320,10 +10320,10 @@ notes:[
     {
       "q": "What did investigators find caused the earlier contamination?",
       "qCn": "調查人員發現先前的污染是什麼原因造成的？",
-      "opts": ["A. A single accident", "B. Weak controls over raw materials and insufficient testing", "C. Bad weather", "D. A new law"],
-      "optsCn": ["A. 單一意外", "B. 原料控管不足與檢驗不夠", "C. 天氣不好", "D. 一項新法規"],
+      "opts": ["A. A single accident", "B. Weak oversight of raw materials and insufficient testing", "C. Bad weather", "D. A new law"],
+      "optsCn": ["A. 單一意外", "B. 原料監督不足與檢驗不夠", "C. 天氣不好", "D. 一項新法規"],
       "ans": 1,
-      "expl": "It was caused by weak controls over raw materials and not enough testing before products left the factory."
+      "expl": "It was caused by weak oversight of raw materials and not enough testing before products left the factory."
     },
     {
       "q": "How does Anita distinguish a systemic issue from an isolated one?",
@@ -10334,8 +10334,8 @@ notes:[
       "expl": "An isolated problem can be fixed by punishing one company. A systemic problem needs every company in the industry to change."
     },
     {
-      "q": "The contamination ___ by weak controls over raw materials.",
-      "qCn": "污染是原料控管不足所造成的。（選出正確的動詞形式）",
+      "q": "The contamination ___ by weak oversight of raw materials.",
+      "qCn": "污染是原料監督不足所造成的。（選出正確的動詞形式）",
       "opts": ["A. was caused", "B. caused", "C. causes", "D. has cause"],
       "ans": 0,
       "expl": "污染是被造成的，用被動語態was caused。"
@@ -10541,7 +10541,7 @@ notes:[
   "series": "本站自製聯力 · 金錢與居住主題",
   "topic": "💰 租屋押金",
   "focus": "過去簡單式敘述已結束的事件（paid, moved, kept）；because / so 表達因果關係",
-  "intro": "Anita上個月搬家了，但她的舊房東沒有退還押金。她跟同事Ben聊這件事。注意她用過去式講已經結束的經歷（I paid, he kept, I found），用 because 和 so 把原因和結果串起來。",
+  "intro": "Anita上個月搬家了，但她的舊房東沒有退還押金。她跟同事Ben聊這件事。注意她用過去式講已經結束的經歷（I paid, he kept, I cleaned），用 because 和 so 把原因和結果串起來。",
   "tip": "第一次聽先抓「Anita到底拿回押金了沒有」，第二次注意 because 和 so 各出現幾次。",
   "pre": [
     {
@@ -10723,7 +10723,7 @@ notes:[
   "id": "dl20260826b1p",
   "date": "2026-08-26",
   "level": "B1+",
-  "minutes": 3,
+  "minutes": 2,
   "kind": "note",
   "title": "The Night the Pipe Burst",
   "titleCn": "水管爆裂的那一晚",
@@ -10748,11 +10748,11 @@ notes:[
       "def": "To break open suddenly with force."
     },
     {
-      "w": "leak",
-      "ipa": "/liːk/",
-      "pos": "n.",
-      "cn": "漏水",
-      "def": "Water coming through a hole or crack it shouldn't."
+      "w": "soaked",
+      "ipa": "/soʊkt/",
+      "pos": "adj.",
+      "cn": "濕透的",
+      "def": "Completely wet."
     },
     {
       "w": "plumber",
@@ -10921,7 +10921,7 @@ notes:[
         "D. Lily借錢給Anita"
       ],
       "ans": 2,
-      "expl": "He agreed to pay. Luckily, the insurance covered most of it."
+      "expl": "He called back the next morning and agreed to pay. Luckily, the insurance covered most of it."
     }
   ]
 },
@@ -11176,11 +11176,11 @@ notes:[
       "def": "Just made; new and good."
     },
     {
-      "w": "hungry",
-      "ipa": "/ˈhʌŋɡri/",
-      "pos": "adj.",
-      "cn": "餓的",
-      "def": "Wanting to eat food."
+      "w": "arrive",
+      "ipa": "/əˈraɪv/",
+      "pos": "v.",
+      "cn": "抵達、到達",
+      "def": "To get to a place."
     },
     {
       "w": "early",
@@ -11353,11 +11353,11 @@ notes:[
       "def": "The trip between your home and your work."
     },
     {
-      "w": "completely",
-      "ipa": "/kəmˈpliːtli/",
-      "pos": "adv.",
-      "cn": "完全地",
-      "def": "Totally; in every way."
+      "w": "routine",
+      "ipa": "/ruːˈtiːn/",
+      "pos": "n.",
+      "cn": "例行作息、慣例",
+      "def": "The usual things you do and the order you do them in."
     },
     {
       "w": "at first",
@@ -11606,8 +11606,8 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "I heard the school names are hidden now. Is that true?",
-      "cn": "我聽說現在學校名稱都會被遮住，是真的嗎？"
+      "en": "I heard it's a blind review now — the school names are hidden. Is that true?",
+      "cn": "我聽說現在改成匿名審查，學校名稱都會被遮住，是真的嗎？"
     },
     {
       "sp": "Manager",
@@ -11998,7 +11998,7 @@ notes:[
   id:"dl20260821b1",
   date:"2026-08-21",
   level:"B1",
-  minutes:3,
+  minutes:2,
   kind:"note",
   title:"Mia's Delayed Commute",
   titleCn:"Mia的通勤延誤",
@@ -12040,7 +12040,7 @@ notes:[
   id:"dl20260821b1p",
   date:"2026-08-21",
   level:"B1+",
-  minutes:3,
+  minutes:2,
   kind:"note",
   title:"Commuters React to the Signal Fault",
   titleCn:"通勤族對號誌故障的反應",
@@ -12081,7 +12081,7 @@ notes:[
   id:"dl20260821b2",
   date:"2026-08-21",
   level:"B2",
-  minutes:4,
+  minutes:2,
   kind:"note",
   title:"The Secret to Handling Travel Delays",
   titleCn:"應付出差延誤的訣竅",
@@ -12163,7 +12163,7 @@ notes:[
   id:"dl20260819b1",
   date:"2026-08-19",
   level:"B1",
-  minutes:3,
+  minutes:2,
   kind:"note",
   title:"A Distracted Day at the Office",
   titleCn:"心不在焉的上班日",
@@ -12205,7 +12205,7 @@ notes:[
   id:"dl20260819b1p",
   date:"2026-08-19",
   level:"B1+",
-  minutes:3,
+  minutes:2,
   kind:"note",
   title:"Two Hours in the Waiting Room",
   titleCn:"在候診室等了兩小時",
@@ -12246,7 +12246,7 @@ notes:[
   id:"dl20260819b2",
   date:"2026-08-19",
   level:"B2",
-  minutes:4,
+  minutes:2,
   kind:"note",
   title:"Extending the Vaccination Window",
   titleCn:"延長疫苗接種期",
@@ -12288,7 +12288,7 @@ notes:[
   id:"au01",
   date:"2026-08-14",
   level:"B1",
-  minutes:3,
+  minutes:4,
   kind:"note",
   title:"When One Angry Video Goes Viral",
   titleCn:"當一支客訴影片爆紅",
@@ -12341,7 +12341,7 @@ notes:[
   id:"au12",
   date:"2026-08-14",
   level:"B1+",
-  minutes:3,
+  minutes:4,
   kind:"note",
   title:"If I Won the Lottery",
   titleCn:"如果我中了樂透",
@@ -12394,7 +12394,7 @@ notes:[
   id:"vlog01",
   date:"2026-08-14",
   level:"A2",
-  minutes:3,
+  minutes:2,
   kind:"note",
   title:"Morning Routine: Phrasal Verbs",
   titleCn:"早晨例行公事：片語動詞",
@@ -12436,7 +12436,7 @@ notes:[
   id:"au02",
   date:"2026-08-12",
   level:"B1",
-  minutes:3,
+  minutes:4,
   kind:"note",
   title:"The Quality Engineer Interview",
   titleCn:"品質工程師的面試現場",
@@ -12489,7 +12489,7 @@ notes:[
   id:"au07",
   date:"2026-08-12",
   level:"B1",
-  minutes:3,
+  minutes:4,
   kind:"note",
   title:"At the Doctor's Office",
   titleCn:"在診所看醫生",
@@ -12540,7 +12540,7 @@ notes:[
   id:"vlog03",
   date:"2026-08-12",
   level:"B1+",
-  minutes:6,
+  minutes:2,
   kind:"note",
   title:"Talking About the Future",
   titleCn:"聊未來的計畫",
@@ -12584,7 +12584,7 @@ notes:[
   id:"au04",
   date:"2026-08-07",
   level:"B1",
-  minutes:3,
+  minutes:4,
   kind:"note",
   title:"Check-in, Gate, and Takeoff",
   titleCn:"報到、登機門與起飛",
@@ -12637,7 +12637,7 @@ notes:[
   id:"au10",
   date:"2026-08-07",
   level:"B1",
-  minutes:3,
+  minutes:4,
   kind:"note",
   title:"One Way or Return?",
   titleCn:"單程還是來回？",
@@ -12690,7 +12690,7 @@ notes:[
   id:"vlog04",
   date:"2026-08-07",
   level:"B1+",
-  minutes:8,
+  minutes:2,
   kind:"note",
   title:"A Day in My Life",
   titleCn:"我的一天",
@@ -12784,7 +12784,7 @@ notes:[
   id:"au11",
   date:"2026-08-05",
   level:"B1",
-  minutes:3,
+  minutes:4,
   kind:"note",
   title:"A Pessimist Who Shows Up",
   titleCn:"一個會出現的悲觀者",
@@ -12837,7 +12837,7 @@ notes:[
   id:"vlog02",
   date:"2026-08-05",
   level:"B1",
-  minutes:5,
+  minutes:2,
   kind:"note",
   title:"How to Talk About Your Daily Routine",
   titleCn:"怎麼談你的一天",
@@ -12931,7 +12931,7 @@ notes:[
   id:"au08",
   date:"2026-07-31",
   level:"B1",
-  minutes:3,
+  minutes:4,
   kind:"note",
   title:"Understanding Taiwan's Health Insurance",
   titleCn:"認識台灣的健保",
@@ -12982,7 +12982,7 @@ notes:[
   id:"au13",
   date:"2026-07-31",
   level:"B1",
-  minutes:3,
+  minutes:4,
   kind:"note",
   title:"Who Will Lead the Reading Program?",
   titleCn:"誰來帶這個閱讀計畫？",
@@ -13035,7 +13035,7 @@ notes:[
   id:"au06",
   date:"2026-07-29",
   level:"B1",
-  minutes:3,
+  minutes:4,
   kind:"note",
   title:"Water Through the Ceiling",
   titleCn:"天花板漏水了",

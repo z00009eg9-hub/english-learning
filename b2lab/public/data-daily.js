@@ -191,11 +191,11 @@ articles:[
   "date": "2026-10-21",
   "level": "B1",
   "topic": "飲食",
-  "words": 160,
+  "words": 161,
   "kind": "orig",
   "title": "Anita Is Going to Cook for Ten",
   "titleCn": "Anita要煮十個人的份",
-  "focus": "be going to 講已經決定的計畫（is going to cook、is going to borrow），現在進行式講跟別人約好的事（is bringing、are meeting），will 留給臨時的決定（she will order）",
+  "focus": "be going to 講已經決定的計畫（is going to cook、is also going to borrow），現在進行式講跟別人約好的事（is bringing、are meeting），will 留給「萬一不夠才做」的備案（she will order）",
   "upFrom": "B1",
   "upTo": "B1+",
   "intro": "同樣是廚房裡的事，鏡頭從一個人的蛋糕換到一整個辦公室的午餐。這一篇有三種講未來的形狀：going to 是Anita自己的決定，is bringing 和 are meeting 是她跟Mai講好的，而 will order 是萬一不夠才會做的事。請一邊讀一邊問自己：這件事定到什麼程度了？",
@@ -206,33 +206,33 @@ articles:[
     },
     {
       "en": "Spring rolls. Mom's recipe. No hot plate.",
-      "cn": "春捲，我媽的食譜，不用熱盤。"
+      "cn": "春捲，我媽的食譜，不用保溫。"
     },
     {
       "en": "Mai's bringing herbs. Seven in the morning.",
-      "cn": "Mai會帶香菜來，早上七點。"
+      "cn": "Mai會帶香草來，早上七點。"
     },
     {
-      "en": "If it runs out, noodles downstairs.",
-      "cn": "不夠的話就叫樓下的麵。"
+      "en": "If it runs out, noodles next door.",
+      "cn": "不夠的話就叫隔壁的麵。"
     }
   ],
   "paras": [
     {
       "en": "Anita is going to cook for her team this Friday. The company moved to a new office last month, and nobody has had a proper lunch together since then. She decided on Monday, so the plan is already in her notebook.",
-      "cn": "Anita這個星期五要煮給她的團隊吃。公司上個月搬進新辦公室，從那之後大家都沒有好好一起吃過一頓午餐。她星期一晚上就決定了，所以計畫早就寫在她的筆記本上。"
+      "cn": "Anita這個星期五要煮給她的團隊吃。公司上個月搬進新辦公室，從那之後大家都沒有好好一起吃過一頓午餐。她星期一就決定了，所以計畫早就寫在她的筆記本上。"
     },
     {
       "en": "She is making Vietnamese spring rolls, because her mother's recipe is simple and nothing has to stay hot. Her colleague Mai is bringing a tray of fresh herbs from the market. They are meeting at seven on Friday morning to roll everything.",
-      "cn": "她要做越南春捲，因為她媽媽的食譜很簡單，而且沒有東西需要保持熱度。她的同事Mai會從傳統市場帶一盤新鮮香菜來。她們星期五早上七點要碰面，把春捲捲好。"
+      "cn": "她要做越南春捲，因為她媽媽的食譜很簡單，而且沒有東西需要保持熱度。她的同事Mai會從市場帶一盤新鮮香草來。她們星期五早上七點要碰面，把春捲捲好。"
     },
     {
-      "en": "Anita is a little worried about the amount. Ten guests always eat more than she expects, and her rolls are smaller than the ones downstairs. She is also going to borrow a large pot for the dipping sauce.",
-      "cn": "Anita有點擔心份量。十位客人總是吃得比她預期的多，而且她捲的春捲比樓下賣的小。她還要借一個大鍋子來裝沾醬。"
+      "en": "Anita is a little worried about the amount. Ten guests always eat more than she expects, and her rolls are smaller than the ones downstairs. She is also going to borrow a large pot to make the dipping sauce.",
+      "cn": "Anita有點擔心份量。十位客人總是吃得比她預期的多，而且她捲的春捲比樓下賣的小。她還要借一個大鍋子來煮沾醬。"
     },
     {
       "en": "She has not told the team yet. If the tray looks empty before one o'clock, she will order noodles from the shop next door. But when everyone walks in and smells the herbs, they are going to guess anyway.",
-      "cn": "她還沒告訴團隊。如果一點以前盤子就看起來空了，她會去隔壁那家店叫麵。不過等大家走進來聞到香菜味，他們反正也會猜到。"
+      "cn": "她還沒告訴團隊。如果一點以前盤子就看起來空了，她會去隔壁那家店叫麵。不過等大家走進來聞到香草味，他們反正也會猜到。"
     }
   ],
   "target": [
@@ -321,16 +321,16 @@ articles:[
       ],
       "optsCn": [
         "A. 叫麵",
-        "B. 帶新鮮香菜來並幫忙捲",
+        "B. 帶新鮮香草來並幫忙捲",
         "C. 借一個鍋子",
         "D. 訂餐廳"
       ],
       "ans": 1,
-      "expl": "Mai is bringing a tray of fresh herbs... The two of them are meeting at seven——第二段用現在進行式講兩人講好的事。"
+      "expl": "Mai is bringing a tray of fresh herbs... They are meeting at seven——第二段用現在進行式講兩人講好的事。"
     },
     {
       "q": "If the tray looks empty before one o'clock, Anita ___ noodles.",
-      "qCn": "如果一點以前盤子看起來就空了，Anita會去叫麵。",
+      "qCn": "如果一點以前盤子看起來就空了，Anita＿＿（叫）麵。",
       "opts": [
         "A. is ordering",
         "B. orders",
@@ -358,9 +358,9 @@ articles:[
       "note": "兩個人已經分工講好了，這種「約定」在英文裡屬於現在進行式的地盤。用 will bring 聽起來像Mai自己剛剛才想到要帶，Anita還不知道，分工的感覺就消失了。",
       "sp": "Mai's on herbs.",
       "spNote": "口語用 be on 加名詞表示「某人負責某件事」。",
-      "b1Cn": "Mai會帶一些香菜。",
-      "b2Cn": "Mai會帶一盤新鮮香菜來。",
-      "spCn": "香菜Mai負責。"
+      "b1Cn": "Mai會帶一些香草。",
+      "b2Cn": "Mai會帶一盤新鮮香草來。",
+      "spCn": "香草Mai負責。"
     }
   ]
 },
@@ -373,10 +373,10 @@ articles:[
   "kind": "news",
   "title": "Four Shipments Stopped Before the Shelf",
   "titleCn": "四批貨在上架前被攔下",
-  "focus": "被動語態（were rejected、is tested、will be sent back）加上 going to 講「照目前的處理看就要發生」，再練一個關係子句（the test that measures…）",
+  "focus": "被動語態（were all rejected、had been stopped、are going to be sent back）加上 going to 講「照目前的處理看就要發生」，再練一個關係子句（a test that measures…）",
   "upFrom": "B1+",
   "upTo": "B2",
-  "intro": "前兩篇是自己家的廚房，這一篇把鏡頭拉到海關。請先數被動語態出現幾次：新聞英文愛用它，因為重點是「那批貨被怎麼處理」，不是誰動手處理。再注意 will 和 going to 的分工：will 報的是官方宣布的做法，going to 講的是照現在的處理方式看，結局已經確定了。",
+  "intro": "前兩篇是家裡和辦公室的廚房，這一篇把鏡頭拉到海關。請先數被動語態出現幾次：新聞英文愛用它，因為重點是「那批貨被怎麼處理」，不是誰動手處理。再注意 will 和 going to 的分工：will 報的是官方宣布的做法，going to 講的是照現在的處理方式看，結局已經確定了。",
   "source": "改寫自 Focus Taiwan 報導（2026/10/20）— 事實取自原文，英文由本站重寫",
   "sourceUrl": "https://focustaiwan.tw/society/202610200011",
   "spoken": [
@@ -407,12 +407,12 @@ articles:[
       "cn": "這四批都是同一項檢查沒過。那是一項測量產品在使用過程中會溶出多少物質的檢驗，法定限量是百萬分之三十。兩批紙烤杯的結果是217和226。烘焙紙是67，廚房用具則測到123。"
     },
     {
-      "en": "The rejected goods are going to be sent back or destroyed. Until November 19, every incoming batch in this product group is going to be opened and tested, instead of being sampled. For one importer of kitchen utensils, the share of shipments that are pulled aside will rise to between 20 and 50 percent.",
-      "cn": "不合格的貨品將被退運或銷毀。到11月19日為止，這一類產品每一批進來都會被拆開檢驗，而不是只抽驗。其中一家廚房用具的進口商，被攔下送驗的批次比例將提高到百分之二十到五十之間。"
+      "en": "The rejected goods are going to be sent back or destroyed. Until November 19, every incoming batch of these paper goods from China is going to be opened and tested, instead of being sampled. For one importer of kitchen utensils, the share of shipments that are pulled aside will rise to between 20 and 50 percent.",
+      "cn": "不合格的貨品將被退運或銷毀。到11月19日為止，這類中國紙製品每一批進來都會被拆開檢驗，而不是只抽驗。其中一家廚房用具的進口商，被攔下送驗的批次比例將提高到百分之二十到五十之間。"
     },
     {
-      "en": "The failure rate is small but steady. Between April 12 and October 12, eleven of 206 batches of this kind of Chinese paper utensil did not pass. Food was stopped at the same border posts too: fresh durian from Vietnam and radishes from China were held for reasons that had nothing to do with this test.",
-      "cn": "不合格率不高，但一直都在。從4月12日到10月12日，這類中國紙製用具有206批中的11批沒過。食品也在同樣的邊境關卡被攔下：越南的新鮮榴槤和中國的白蘿蔔也被留置，原因跟這項檢驗無關。"
+      "en": "The failure rate is small but steady. Between April 12 and October 12, eleven of 206 batches of this kind of Chinese paper utensil did not pass. Food was stopped at the border too: fresh durian from Vietnam and radishes from China were held for reasons that had nothing to do with this test.",
+      "cn": "不合格率不高，但一直都在。從4月12日到10月12日，這類中國紙製用具有206批中的11批沒過。食品也在邊境被攔下：越南的新鮮榴槤和中國的白蘿蔔也被留置，原因跟這項檢驗無關。"
     }
   ],
   "target": [
@@ -587,10 +587,10 @@ articles:[
   "topic": "新聞·食安",
   "words": 297,
   "kind": "news",
-  "title": "Five Point Three Percent, Twice a Week",
-  "titleCn": "百分之五點三，一週兩次",
-  "focus": "will 的兩種身分：報導制度即將採取的做法（inspectors will open、the cost will fall on），以及表達推測與意願；搭配名詞化與被動語態寫出新聞語域",
-  "intro": "同一則食安新聞，這一篇換成制度的角度。請注意 will 在新聞裡幾乎沒有「我現在才決定」的意思，它報的是官方已經公告、即將生效的做法，語氣冷靜而不帶情緒。另外看看作者怎麼用名詞化（the rejection、a tightening）把一整件事壓縮成一個名詞，這是 B2 寫作最常見的升級動作。",
+  "title": "Five Point Three Percent: The Number That Mattered",
+  "titleCn": "百分之五點三：真正關鍵的數字",
+  "focus": "will 的兩種身分：報導制度即將採取的做法（inspectors will open、will rise），以及表達作者的推測（that cost will fall on importers）；搭配名詞化與被動語態寫出新聞語域",
+  "intro": "同一則食安新聞，這一篇換成制度的角度。請注意 will 在新聞裡幾乎沒有「我現在才決定」的意思，它報的是官方已經公告、即將生效的做法，語氣冷靜而不帶情緒。另外看看作者怎麼用名詞化（a refusal at the dock、completeness）把一整件事壓縮成一個名詞，這是 B2 寫作最常見的升級動作。",
   "source": "改寫自 Focus Taiwan 報導（2026/10/20）— 事實取自原文，英文由本站重寫",
   "sourceUrl": "https://focustaiwan.tw/society/202610200011",
   "spoken": [
@@ -603,7 +603,7 @@ articles:[
       "cn": "抽驗變成逐批查驗。"
     },
     {
-      "en": "Testing costs time. Importers pay the waiting.",
+      "en": "Testing costs time. Importers pay for the wait.",
       "cn": "檢驗要時間，等待的成本在進口商身上。"
     },
     {
@@ -613,8 +613,8 @@ articles:[
   ],
   "paras": [
     {
-      "en": "A regulator rarely announces a single bad result. What it announces is a pattern. When Taiwan's drug and food authority listed four rejected shipments of Chinese kitchen goods on Tuesday, the number that mattered was not 226 parts per million, high as that figure was against a threshold of 30. It was 5.3 percent: eleven failures in 206 batches of the same product group over six months.",
-      "cn": "主管機關很少只為了一筆不合格的結果開記者會，它公布的是一個趨勢。台灣的食藥主管機關星期二列出四批不合格的中國廚房用品時，真正關鍵的數字不是百萬分之226——儘管這個數字遠超過30的限量——而是百分之5.3：半年之間，同一類產品206批裡有11批不合格。"
+      "en": "A regulator rarely announces a single bad result. What it announces is a pattern. When Taiwan's food and drug authority listed four rejected shipments of Chinese kitchen goods on Tuesday, the number that mattered was not 226 parts per million, high as that figure was against a threshold of 30. It was 5.3 percent: eleven failures in 206 batches of the same product group over six months.",
+      "cn": "主管機關很少只公布一筆不合格的結果，它公布的是一個趨勢。台灣的食藥主管機關星期二列出四批不合格的中國廚房用品時，真正關鍵的數字不是百萬分之226——儘管這個數字遠超過30的限量——而是百分之5.3：半年之間，同一類產品206批裡有11批不合格。"
     },
     {
       "en": "That rate explains the response. A one-off failure is handled by a refusal at the dock; a rate closer to one batch in twenty is handled by changing the rules of entry. From Tuesday until November 19, inspectors will open every incoming batch in the category rather than sampling it, and for one importer the proportion of shipments pulled aside for testing will rise to somewhere between a fifth and a half.",
@@ -625,8 +625,8 @@ articles:[
       "cn": "這種法規遵循的代價，用的是公告裡看不到的一種貨幣：時間。一個櫃子在等實驗室報告，就是一個沒有在賺錢的櫃子，而這筆成本會先落在進口商身上，很久以後才反映到架上的價格。所以那些把自己紀錄維持乾淨的公司，除了法律上的理由，還有商業上的理由在出貨前先自行檢驗。"
     },
     {
-      "en": "What the announcement cannot promise is completeness. The same list named fresh durian from Vietnam, Chinese radishes and dried beans from Indonesia, each held for a different reason, and each a reminder that a border post inspects what arrives through it and nothing else. Products that are already in a kitchen are beyond its reach. For a shopper, the practical lesson is narrower than the headline: keep the receipt, read the label, and treat a baking cup as a thing that was manufactured somewhere, by someone, to some standard.",
-      "cn": "這份公告唯一不能保證的，就是完整。同一份清單上還有越南的新鮮榴槤、中國的白蘿蔔和印尼的乾豆，各自因為不同的原因被留置，也各自提醒我們：邊境關卡只檢查從它那裡進來的東西，別的管不到。已經在廚房裡的產品，它伸不到手。對消費者來說，實際能學到的事比標題小得多：留著收據、看標籤，並且把一個紙烤杯當成「某個地方、某個人、按某種標準做出來的東西」。"
+      "en": "What the announcement cannot promise is completeness. The same list named fresh durian from Vietnam, Chinese radishes and dried beans from Indonesia, each held for a different reason, and each a reminder that a border post inspects what arrives through it and nothing else. Products that are already in a kitchen are beyond its reach. For a consumer, the practical lesson is narrower than the headline: keep the receipt, read the label, and treat a baking cup as a thing that was manufactured somewhere, by someone, to some standard.",
+      "cn": "這份公告不能保證的，是完整。同一份清單上還有越南的新鮮榴槤、中國的白蘿蔔和印尼的乾豆，各自因為不同的原因被留置，也各自提醒我們：邊境關卡只檢查從它那裡進來的東西，別的管不到。已經在廚房裡的產品，它伸不到手。對消費者來說，實際能學到的事比標題小得多：留著收據、看標籤，並且把一個紙烤杯當成「某個地方、某個人、按某種標準做出來的東西」。"
     }
   ],
   "target": [
@@ -759,8 +759,8 @@ articles:[
       "expl": "A container that waits for a laboratory result is a container that is not earning anything——第三段把成本定義為時間，不是罰款，也沒有提到費用上漲。"
     },
     {
-      "q": "In this article, the many uses of will mainly ___.",
-      "qCn": "本文中大量出現的 will 主要是用來做什麼？",
+      "q": "In this article, the uses of will mainly ___.",
+      "qCn": "本文中的 will 主要是用來做什麼？",
       "opts": [
         "A. report decisions made while speaking",
         "B. report measures that are already announced and about to take effect",
@@ -774,14 +774,14 @@ articles:[
         "D. 表達作者個人的希望"
       ],
       "ans": 1,
-      "expl": "inspectors will open every incoming batch、that cost will fall on importers 都是已經公告的制度安排，不是當場決定，也不是提議。新聞語域裡的 will 多半就是這種「預告既定措施」的用法。"
+      "expl": "inspectors will open every incoming batch、the proportion of shipments pulled aside for testing will rise 都是已經公告的制度安排，不是當場決定，也不是提議（that cost will fall on importers 則是作者根據制度做的推測）。新聞語域裡的 will 多半就是這種「預告既定措施」的用法。"
     }
   ],
   "upgrade": [
     {
-      "b1": "They refused the goods, and that shows the rate is too high.",
+      "b1": "They rejected the goods, and that shows the rate is too high.",
       "b2": "The rejection of these four shipments points to a rate the authority can no longer treat as noise.",
-      "note": "把動詞 refuse 變成名詞 rejection，整件事就被壓縮成一個可以當主詞的東西，後面才有空間接評論。這是新聞與報告英文最常用的升級動作，叫名詞化；中文習慣一路用動詞往下講，所以要特別練。",
+      "note": "把動詞 reject 變成名詞 rejection，整件事就被壓縮成一個可以當主詞的東西，後面才有空間接評論。這是新聞與報告英文最常用的升級動作，叫名詞化；中文習慣一路用動詞往下講，所以要特別練。",
       "sp": "Four rejections. That's the story.",
       "spNote": "口語可以只丟名詞，讓對方自己補上動詞。",
       "b1Cn": "他們把貨退了，這表示不合格率太高。",
@@ -2173,7 +2173,7 @@ articles:[
   "kind": "news",
   "title": "A 99 Percent Yes, and No Date",
   "titleCn": "九成九贊成，日期卻還沒定",
-  "focus": "用現在式講已排定的未來（the board meets、it is holding a rally、the two sides return to mediation），並對照 may be called 這種還沒定案的說法",
+  "focus": "用現在式講已排定的未來（the board meets、it is holding a rally、the company and the Taichung union return to mediation），並對照 may be called 這種還沒定案的說法",
   "intro": "這是一則還在進行中的勞資新聞改寫，重點在最後一段：三個日期已經排定，所以英文用現在簡單式與現在進行式去講未來，而不是 will。相對地，罷工本身沒有日期，所以只能用 may be called。讀的時候請把「已排定」和「還沒定」兩種寫法分開看。",
   "source": "改寫自 Focus Taiwan 報導（2026/10/07）— 事實取自原文，英文由本站重寫",
   "sourceUrl": "https://focustaiwan.tw/business/202610070021",
@@ -2304,7 +2304,7 @@ articles:[
         "D. 凱達格蘭大道的集會"
       ],
       "ans": 1,
-      "expl": "the company offered its Taiwanese staff at least NT$1.7 million in cash… The union turned that down——第二段先給金額再說被拒絕；A 其實是工會自己想要的東西。"
+      "expl": "the company offered Taiwanese staff at least NT$1.7 million in cash… The union turned that down——第二段先給金額再說被拒絕；A 其實是工會自己想要的東西。"
     },
     {
       "q": "Why does the union keep repeating the company's revenue and operating income?",
@@ -2322,7 +2322,7 @@ articles:[
         "D. 為了向勞動部要求調解"
       ],
       "ans": 1,
-      "expl": "figures the union repeats whenever it is told that its demand is unaffordable——第三段最後一句就是答案。"
+      "expl": "figures the union repeats whenever it is told its demand is unaffordable——第三段最後一句就是答案。"
     },
     {
       "q": "Why might the strike be called at short notice?",
@@ -2340,7 +2340,7 @@ articles:[
         "D. 因為只能用簡訊聯絡會員"
       ],
       "ans": 1,
-      "expl": "which may be called at short notice precisely so that the plant cannot prepare——最後一句用 so that 說出了目的。"
+      "expl": "which may be called at short notice so that the plant cannot prepare——最後一句用 so that 說出了目的。"
     },
     {
       "q": "Which event is NOT already fixed in the calendar?",
@@ -4351,7 +4351,7 @@ articles:[
   "date": "2026-09-29",
   "level": "B1+",
   "topic": "新聞·天災與天氣",
-  "words": 192,
+  "words": 191,
   "kind": "news",
   "title": "Eight Cities Warned as Summer Refuses to Leave",
   "titleCn": "夏天還不肯走：八個縣市同時發布高溫警示",
@@ -4381,7 +4381,7 @@ articles:[
   ],
   "paras": [
     {
-      "en": "Heat advisories were issued for eight cities and counties on Monday by Taiwan's Central Weather Administration, which expected readings to climb past thirty-six degrees around noon. The warning covered Taipei, New Taipei, Tainan, Changhua, Nantou, Yunlin, Pingtung and Hualien, a spread that reached almost every corner of the island.",
+      "en": "Heat advisories were issued for eight cities and counties on Monday by Taiwan's Central Weather Administration, which expected readings to exceed thirty-six degrees around noon. The warning covered Taipei, New Taipei, Tainan, Changhua, Nantou, Yunlin, Pingtung and Hualien, a spread that reached almost every corner of the island.",
       "cn": "中央氣象署星期一針對八個縣市發布高溫警示，該署預期中午前後氣溫會爬升到超過攝氏三十六度。警示範圍涵蓋台北、新北、台南、彰化、南投、雲林、屏東與花蓮，幾乎全島每個角落都被掃到。"
     },
     {
@@ -6250,13 +6250,13 @@ articles:[
       "exCn": "每個人都付一樣的費用，只有一個小小的例外。"
     },
     {
-      "w": "deposit",
-      "ipa": "/dɪˈpɑːzɪt/",
+      "w": "recipe",
+      "ipa": "/ˈresəpi/",
       "pos": "n.",
-      "cn": "押金",
-      "def": "Money paid in advance and returned later.",
-      "ex": "The landlord returned the deposit within two weeks.",
-      "exCn": "房東在兩個星期內退還了押金。"
+      "cn": "食譜",
+      "def": "A set of instructions for cooking a dish.",
+      "ex": "My grandmother wrote her soup recipe on a small card.",
+      "exCn": "我外婆把她的湯食譜寫在一張小卡片上。"
     }
   ],
   "questions": [
@@ -6533,7 +6533,7 @@ articles:[
   "date": "2026-09-18",
   "level": "B1",
   "topic": "金錢與居住",
-  "words": 137,
+  "words": 141,
   "kind": "orig",
   "title": "Amy Shops With a Budget",
   "titleCn": "Amy抓著預算買菜",
@@ -6573,8 +6573,8 @@ articles:[
       "cn": "那個差距讓她很驚訝。在市場，同樣一籃東西便宜了將近兩百元。當她算了一整個月，省下的金額比她想像的還多。"
     },
     {
-      "en": "Now Amy buys her food at the market every week. She has already saved enough to cover one month of the higher rent. Small choices, she says, work better than big worries.",
-      "cn": "現在Amy每個星期都在市場買菜。她已經存到足夠的錢，可以付一個月漲上去的房租。她說，小小的選擇比大大的煩惱更有用。"
+      "en": "Now Amy keeps to a weekly budget and buys her food at the market. She has already saved enough to cover one month of the higher rent. Small choices, she says, work better than big worries.",
+      "cn": "現在Amy每個星期都照預算在市場買菜。她已經存到足夠的錢，可以付一個月漲上去的房租。她說，小小的選擇比大大的煩惱更有用。"
     }
   ],
   "target": [
@@ -7661,7 +7661,7 @@ articles:[
         "D. 全市場的薪水都會被砍"
       ],
       "ans": 1,
-      "expl": "90% of companies say salaries will be raised in 2026, and most increases will fall between 3% and 6%.——只有AI／半導體專才才可能拿到高達30%的加薪。"
+      "expl": "90% of companies say salaries will be raised in 2026, most by 3% to 6%.——只有AI／半導體專才才可能拿到高達30%的加薪。"
     },
     {
       "q": "How has geopolitics affected technology firms?",
@@ -8504,7 +8504,7 @@ articles:[
   "sourceUrl": "https://focustaiwan.tw/business/202608150005",
   "title": "A New Direct Route Links Hanoi and Tainan",
   "titleCn": "河內與台南首度直航",
-  "focus": "被動語態描述新聞事實（will be launched, was suspended）；現在完成進行的擴張語氣（continues to expand, having added）；正式語域的新聞寫作用字",
+  "focus": "被動語態描述新聞事實（is often overlooked, was suspended）；現在完成進行的擴張語氣（continues to expand, having added）；正式語域的新聞寫作用字",
   "intro": "這篇是改寫自Focus Taiwan的真實新聞，講越南廉價航空VietJet即將開通河內到台南的新航線。留意文章怎麼用被動語態交代事實（was suspended, are scheduled），也留意having added這種分詞構句怎麼在正式新聞寫作裡補充背景資訊。",
   "spoken": [
     {
@@ -8601,10 +8601,10 @@ articles:[
       "w": "network",
       "ipa": "/ˈnet.wɝːk/",
       "pos": "n.",
-      "cn": "（航線）網絡",
+      "cn": "（航線）網路",
       "def": "A large system of connected routes or places.",
       "ex": "The city plans to expand its bike lane network so cyclists can reach every district safely.",
-      "exCn": "市政府計畫擴大自行車道網絡，讓騎士能安全地到達每個區域。"
+      "exCn": "市政府計畫擴大自行車道網路，讓騎士能安全地到達每個區域。"
     }
   ],
   "questions": [
@@ -10986,7 +10986,7 @@ articles:[
   "title": "A Sesame Oil Recall Joins Taiwan's Widening Cooking-Oil Scandal",
   "titleCn": "芝麻油回收案，加入台灣持續擴大的食用油風暴",
   "focus": "被動語態陳述新聞事實（was found, was ordered, will be pulled）",
-  "intro": "這篇報導改寫自嘉義芝麻油廠商自報檢驗未過關、遭勒令停產的新聞。文章大量使用被動語態（was found, was ordered, were being tested）陳述已確認的事實，也點出這起事件跟七月黃豆油風暴的關聯。",
+  "intro": "這篇報導改寫自嘉義芝麻油廠商自報檢驗未過關、遭勒令停產的新聞。文章大量使用被動語態（was found, was ordered, were affected）陳述已確認的事實，也點出這起事件跟七月黃豆油風暴的關聯。",
   "spoken": [{"en":"The cooking-oil scandal just got bigger — now a seventy-year-old sesame oil brand flagged its own product for a carcinogen.","cn":"食用油風暴又擴大了——一家七十年老牌的麻油廠自己驗出致癌物。"},{"en":"The black sesame oil tested way over the legal limit, so inspectors shut down production right away.","cn":"那款黑麻油檢驗值遠超法定上限，稽查員立刻勒令停產。"},{"en":"This all started in July with the soybean oil case — that recall hit over 400 products and ended in a record fine.","cn":"這一切從七月的大豆油案開始——那次回收波及超過四百項產品，罰款也創了紀錄。"},{"en":"Investigators say it's the same story every time: weak checks, poor oversight. Now they want every batch tested.","cn":"調查人員說每次都是同一套劇本：檢驗鬆散、監管不力。現在他們要求每批都要驗。"}],
   "paras": [
     {
@@ -12842,7 +12842,7 @@ articles:[
      optsCn:["A. 護理師常說候診室幾乎沒空過。","B. 每年夏天，台灣各地的診所都擠滿比平常更多的病患。","C. 健康專家提醒大家微小習慣很重要。","D. Anita在外地工作。"],ans:1,expl:"are filled ＝ be動詞＋過去分詞，是被動語態；其他三句主詞都是動作的執行者。"},
     {q:"What does the article suggest about people like Anita, who work far from their family?",qCn:"文章對像Anita這種在外地工作的人提出了什麼看法？",
      opts:["A. They should move back home immediately","B. Staying healthy means one less worry for their family","C. They cannot get sick because they work abroad","D. Telemedicine does not work for them"],
-     optsCn:["A. 他們應該立刻搬回家","B. 保持健康代表讓家人少一件事擔心","C. 因為在國外工作所以不會生病","D. 遠距醫療對他們沒用"],ans:1,expl:"staying healthy also means one less worry for her mother."}
+     optsCn:["A. 他們應該立刻搬回家","B. 保持健康代表讓家人少一件事擔心","C. 因為在國外工作所以不會生病","D. 遠距醫療對他們沒用"],ans:1,expl:"staying healthy means one less worry for her mother."}
   ],
   upgrade:[
     {b1:"More people got sick this year. Last year fewer people got sick.",
@@ -13084,7 +13084,7 @@ articles:[
 },
 
 {
-  id:"d20260813", date:"2026-08-13", level:"B1+", topic:"新聞·天災", words:215,
+  id:"d20260813", date:"2026-08-13", level:"B1+", topic:"新聞·天災", words:199,
   title:"A Sea Warning, but No Landfall",
   titleCn:"發布海上警報，但沒有登陸",
   focus:"現在完成進行式與距離／速度的描述",
@@ -13353,7 +13353,7 @@ grammar:[
   "sections": [
     {
       "h": "第一張臉：我已經決定了",
-      "body": "這是最常見的用法。決定在說話之前就做好了，說話只是把它報告出來。因為決定已經成立，所以你通常講得出細節：什麼時候、在哪裡、跟誰。這也是為什麼面試或會議裡被問到計畫時，英文母語者幾乎都用 going to，而不是 will——will 會讓對方覺得你是現在才想到的。",
+      "body": "這是最常見的用法。決定在說話之前就做好了，說話只是把它報告出來。因為決定已經成立，所以你通常講得出細節：什麼時候、在哪裡、跟誰。這也是為什麼面試或會議裡被問到計畫時，英文母語者通常用 going to，而不是 will——will 會讓對方覺得你是現在才想到的。",
       "table": {
         "head": [
           "你想表達的",
@@ -13440,7 +13440,7 @@ grammar:[
           [
             "已經約好時間了",
             "現在進行式",
-            "I am asking the supplier at ten on Friday."
+            "I am meeting the supplier at ten on Friday."
           ]
         ]
       },
@@ -13472,17 +13472,17 @@ grammar:[
     {
       "bad": "I am going to meet the auditor at nine tomorrow, we agreed last week.",
       "good": "I am meeting the auditor at nine tomorrow. We agreed last week.",
-      "why": "時間報到九點、而且雙方上週就談定了，這已經是約定，不只是我的決定，所以升級成現在進行式。going to 不算錯得很嚴重，但會讓對方以為對方還不知道這件事。另外兩個完整句子之間要用句點或連接詞，不能只用逗號。"
+      "why": "時間報到九點、而且雙方上週就談定了，這已經是約定，不只是我的決定，所以用現在進行式最貼切。going to 其實也說得通，母語者也常這樣講，只是聽不出「對方也已經同意」。這一句真正的錯誤在標點：兩個完整句子之間要用句點或連接詞，不能只用逗號。"
     },
     {
       "bad": "He is going to buying a new fridge.",
       "good": "He is going to buy a new fridge.",
-      "why": "going to 後面接原形動詞，這一點從 A2 到 B2 都不會變。寫成 buying 是因為前面那個 going 帶著 ing，手就順勢也加了一個。檢查方法：一句話裡只能有一個 ing，而那個 ing 屬於 going。"
+      "why": "going to 後面接原形動詞，這一點從 A2 到 B2 都不會變。寫成 buying 是因為前面那個 going 帶著 ing，手就順勢也加了一個。檢查方法：看 going to 後面緊接的第一個動詞，它一定是原形（buy），不加 ing。"
     },
     {
       "bad": "I am going to can finish it today.",
       "good": "I am going to be able to finish it today.",
-      "why": "can 不能直接放在 going to 後面，因為兩個都是助動性質的字，不能疊著用。要講未來的能力就換成 be able to。中文「我今天應該可以做完」讓人以為英文也可以把兩個字疊起來，但英文一個位置只放一個。"
+      "why": "can 不能直接放在 going to 後面，因為 can 是情態助動詞，沒有原形或不定詞的形式，to 後面接不上它。要講未來的能力就換成 be able to。中文「我今天可以做完」讓人以為英文也可以把兩個字疊起來，但英文一個位置只放一個。"
     }
   ],
   "quiz": [
@@ -13500,7 +13500,7 @@ grammar:[
     },
     {
       "q": "We decided last night. We ___ the kitchen next month.",
-      "qCn": "我們昨天晚上決定了，下個月要重新整理廚房。",
+      "qCn": "我們昨天晚上決定了，下個月要重新粉刷廚房。",
       "opts": [
         "A. will repaint",
         "B. are going to repaint",
@@ -13544,11 +13544,11 @@ grammar:[
   "title": "Will: The Word You Reach for in the Same Breath",
   "titleCn": "will：話說出口才決定的那個字",
   "srcDays": [],
-  "summary": "will 的主場不是未來，而是「說話這一刻」。你在這一秒決定、答應、提議或拒絕，英文就用 will；事情如果在開口之前就定了，那是 going to 或現在進行式的地盤。",
+  "summary": "在對話裡，will 的主場是「說話這一刻」：你在這一秒決定、答應、提議或拒絕，英文就用 will；事情如果在開口之前就定了，那是 going to 或現在進行式的地盤。（will 也用來預測，以及在公告、新聞裡報導官方已定的措施，這部分見 B2 單元。）",
   "sections": [
     {
       "h": "核心：決定發生在說話的那一秒",
-      "body": "把 will 想成一個時間戳記：它蓋的是「現在」。你聽到一件事、看到一個狀況，然後當場做出反應，那個反應就用 will。這也是為什麼 will 很少出現在你事先準備好的行程報告裡，卻大量出現在對話中——對話就是一連串的即時反應。口語幾乎都縮成 I'll、we'll、they'll，縮寫本身就在告訴你這是脫口而出的。",
+      "body": "把 will 想成一個時間戳記：它蓋的是「現在」。你聽到一件事、看到一個狀況，然後當場做出反應，那個反應就用 will。這也是為什麼 will 很少用來報告你自己事先排好的行程，卻大量出現在對話中——對話就是一連串的即時反應。口語幾乎都縮成 I'll、we'll、they'll，縮寫本身就在告訴你這是脫口而出的。",
       "table": {
         "head": [
           "情況",
@@ -13615,7 +13615,7 @@ grammar:[
     },
     {
       "h": "will 不做的事",
-      "body": "will 不報告既定行程。公司明天的會議、你訂好的機票、簽好的合約日期，這些都不是 will 的工作。另外要特別小心兩個地方：第一，if 和 when 引導的那半句不寫 will，動詞用現在式，但主句照樣可以用 will；第二，I think、I'm sure、probably 這些字後面接 will 很自然，因為那本來就是你當下的判斷。",
+      "body": "will 不報告既定行程。公司明天的會議、你訂好的機票、簽好的合約日期，這些都不是 will 的工作。另外要特別小心兩個地方：第一，if 和 when 引導的那半句不寫 will，動詞用現在式，但主句照樣可以用 will；第二，I think、I'm sure 後面接 will 很自然（probably 則放在 will 後面：will probably），因為那本來就是你當下的判斷。",
       "table": {
         "head": [
           "寫法",
@@ -13668,7 +13668,7 @@ grammar:[
     {
       "bad": "When the report will arrive, I will forward it to you.",
       "good": "When the report arrives, I will forward it to you.",
-      "why": "when 和 if 引導的子句裡不放 will，動詞用現在式就代表未來，主句才用 will。中文兩半都說「會」，所以很容易兩邊都寫上去。檢查方法：一個句子裡有 when 或 if 時，will 只准出現在沒有連接詞的那一半。"
+      "why": "when 和 if 引導的子句裡不放 will，動詞用現在式就代表未來，主句才用 will。中文兩半都說「會」，所以很容易兩邊都寫上去。檢查方法：when 或 if 表示時間或條件時，will 只放在沒有連接詞的那一半（I don't know when he will arrive 這種當受詞的 when 子句是例外，可以用 will）。"
     },
     {
       "bad": "Will I carry your bag?",
@@ -13678,13 +13678,13 @@ grammar:[
     {
       "bad": "I'll going to call the lab.",
       "good": "I'll call the lab.",
-      "why": "will 和 going to 是兩個不同的句型，不能疊在一起。寫成這樣通常是先想到 will、又想補上確定感，結果兩個都放。要很確定就只留 going to，要表達當場決定就只留 will。"
+      "why": "will 和 going to 是兩個不同的句型，不能疊在一起。寫成這樣通常是先想到 will、又想補上確定感，結果兩個都放。事先決定好的就只留 going to，要表達當場決定就只留 will。"
     }
   ],
   "quiz": [
     {
-      "q": "A: The printer has no paper. B: Don't worry, I ___ some from the store room.",
-      "qCn": "A：印表機沒紙了。B：別擔心，我去倉庫拿一些。",
+      "q": "A: The printer has no paper. B: Don't worry, I ___ some from the storeroom.",
+      "qCn": "A：印表機沒紙了。B：別擔心，我去儲藏室拿一些。",
       "opts": [
         "A. am getting",
         "B. will get",
@@ -13692,7 +13692,7 @@ grammar:[
         "D. am going to getting"
       ],
       "ans": 1,
-      "expl": "B 是聽完 A 那句話才決定去拿紙的，決定就在這一秒，所以用 will。am getting 會變成他早就安排好要去倉庫。"
+      "expl": "B 是聽完 A 那句話才決定去拿紙的，決定就在這一秒，所以用 will。am getting 會變成他早就安排好要去儲藏室。"
     },
     {
       "q": "___ we postpone the tasting until the lab result comes back?",
@@ -13830,7 +13830,7 @@ grammar:[
             "告知讀者即將生效的做法"
           ],
           [
-            "Inspection is tightened for 30 days.",
+            "Inspection is tightened for 30 days after any failure.",
             "制度性描述",
             "流程文件、程序書"
           ],
@@ -13864,7 +13864,7 @@ grammar:[
     {
       "bad": "I shall send you the certificate this afternoon.",
       "good": "I'll send you the certificate this afternoon.",
-      "why": "用 shall 寫一般的敘述句，在現代英語裡聽起來像十九世紀的信件，或是刻意裝正式。shall 的日常地盤只剩下 Shall I 與 Shall we 的問句。檢查方法：如果句子不是問句、也不是合約條款，就把 shall 換成 will。"
+      "why": "用 shall 寫一般的敘述句，在現代英語裡聽起來很老派，或像刻意裝正式（英式正式書面偶爾還見得到）。shall 的日常地盤只剩下 Shall I 與 Shall we 的問句。檢查方法：如果句子不是問句、也不是合約條款，就把 shall 換成 will。"
     },
     {
       "bad": "The company will reserve the right to cancel the order.",
@@ -13879,7 +13879,7 @@ grammar:[
     {
       "bad": "Shall you join the review meeting?",
       "good": "Will you join the review meeting?",
-      "why": "shall 現在只跟 I 和 we 連用。問對方要不要參加，用 Will you 或 Would you like to。Shall you 在現代英語裡幾乎只會出現在模仿舊時代語氣的文本裡，寫在公司信件裡會讓人誤以為是機器翻譯。"
+      "why": "問句裡的 shall 現在只跟 I 和 we 連用（合約條款的 Each party shall 是另一回事）。問對方要不要參加，用 Will you 或 Would you like to。Shall you 在現代英語裡幾乎只會出現在模仿舊時代語氣的文本裡，寫在公司信件裡會讓人誤以為是機器翻譯。"
     }
   ],
   "quiz": [
@@ -13913,7 +13913,7 @@ grammar:[
       "opts": [
         "A. We're gonna check every box for a month.",
         "B. I think we'll check the boxes.",
-        "C. Every consignment will be examined for thirty days.",
+        "C. For the next thirty days, every consignment will be examined.",
         "D. Shall we examine every consignment?"
       ],
       "ans": 2,
@@ -14320,7 +14320,7 @@ grammar:[
     {
       "bad": "Tomorrow the weather is being hot.",
       "good": "Tomorrow the weather will be hot.",
-      "why": "現在進行式的未來只能用在「人可以安排」的事情上。天氣不會跟你約時間，所以它只能被預測，要用 will。同理，價格、匯率、比賽結果也都不能用 be + V-ing 講未來。"
+      "why": "現在進行式的未來只能用在「人可以安排」的事情上。天氣不會跟你約時間，所以它只能被預測，要用 will（看到烏雲這種跡象時也可以用 going to）。同理，價格、匯率、比賽結果也都不能用 be + V-ing 講未來。"
     }
   ],
   "quiz": [
@@ -14688,7 +14688,7 @@ grammar:[
     },
     {
       "h": "will 的禮貌與距離",
-      "body": "will 在正式書面語裡最常見的功能其實不是預測，而是保持距離。英文寫信常用 I will 來承諾，因為它把動作放在未來，同時留下一點彈性；加上 would、may、might 之後，語氣還能再退一步。這就是為什麼客服信、拒絕信、談判信幾乎都是 will 和 would 的天下。相反地，想把語氣壓實、不給對方討論空間，就換回現在簡單式——這也是合約一律用現在簡單式的原因。",
+      "body": "will 在正式書面語裡最常見的功能其實不是預測，而是保持距離。英文寫信常用 I will 來承諾，因為它把動作放在未來，同時留下一點彈性；加上 would、may、might 之後，語氣還能再退一步。這就是為什麼客服信、拒絕信、談判信幾乎都是 will 和 would 的天下。相反地，想把語氣壓實、不給對方討論空間，就換回現在簡單式——這也是合約條文常用現在簡單式的原因。",
       "table": {
         "head": [
           "你想要的語氣",
@@ -14757,7 +14757,7 @@ grammar:[
     {
       "bad": "Under clause four, the tenant will pay the service charge each quarter.",
       "good": "Under clause four, the tenant pays the service charge each quarter.",
-      "why": "引述條文的時候用 will，語氣會從「規定如此」掉到「我預期他會付」，等於把義務講成期待。合約、規章、政策一律用現在簡單式，因為它們描述的是一個持續有效的狀態，不是某一次的未來事件。"
+      "why": "引述條文的時候用 will，語氣會從「規定如此」掉到「我預期他會付」，等於把義務講成期待。合約、規章、政策常用現在簡單式（正式合約寫義務時也會用 shall），因為它們描述的是一個持續有效的狀態，不是某一次的未來事件。"
     },
     {
       "bad": "The figures are bad, so the fund will run out within ten years.",
@@ -15651,7 +15651,7 @@ grammar:[
         {
           "en": "If the offer improves, the union will drop the threat.",
           "cn": "如果條件變好，工會就會收回威脅。",
-          "note": "條件句的主句一律 will"
+          "note": "條件句的主句常用 will"
         },
         {
           "en": "Nobody knows how long the dispute will last.",
@@ -18433,7 +18433,7 @@ grammar:[
       "h": "中文看不出差別，所以最容易錯",
       "bullets": [
         "中文的「我昨天吃了」和「我吃過了」都用一個「了」，英文卻是兩種句子",
-        "英文這條規則很機械：時間講明了就換過去式，沒有例外",
+        "英文這條規則很機械：講明了已經結束的時間（yesterday、at nine），就換過去式",
         "寫完一句先掃一眼有沒有時間詞，有就回頭把動詞改掉"
       ],
       "examples": [
@@ -18611,9 +18611,9 @@ grammar:[
       ]
     },
     {
-      "h": "When 和 What time 永遠配過去式",
+      "h": "問過去的時刻：When / What time 配過去式",
       "bullets": [
-        "問 When...? 或 What time...? 就是在指一個已經過去的時刻，所以動詞一定是過去式",
+        "問過去發生的事時，When...? 或 What time...? 是在指一個已經過去的時刻，所以動詞一定是過去式",
         "英文沒有 When have you...? 這種問法，這是中文母語者最常自創的句型之一",
         "想用完成式提問的話，要換成 How long have you...? 或 Have you ever...?"
       ],
@@ -21590,7 +21590,7 @@ grammar:[
     {
       "h": "狀態動詞只能用have + Vpp，不能用continuous",
       "bullets": [
-        "know, live, work這類動詞可以視情況用simple或continuous，但like, want, believe這種純狀態動詞只能用simple"
+        "live, work, study這類動詞可以視情況用simple或continuous，但know, like, want, believe這種純狀態動詞只能用simple"
       ],
       "examples": [
         {

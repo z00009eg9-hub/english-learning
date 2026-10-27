@@ -477,7 +477,7 @@ window.GVPLUS = {
       "ask": "同事說機器停了，你要怎麼回？",
       "en": "The line has stopped? I'll go down and look.",
       "cn": "產線停了？我下去看看。",
-      "why": "你的決定是被對方那句話觸發的，時間點就在這一秒，所以用 will。換成 going to 會讓對方困惑：你早就打算下去？那怎麼現在才說。對話裡的 will 幾乎都在做這件事，因此口語一律縮成 I'll。"
+      "why": "你的決定是被對方那句話觸發的，時間點就在這一秒，所以用 will。換成 going to 會讓對方困惑：你早就打算下去？那怎麼現在才說。對話裡的 will 幾乎都在做這件事，因此口語通常縮成 I'll。"
     },
     {
       "key": "offer",
@@ -1087,7 +1087,7 @@ window.GVPLUS = {
       "pts": [
         "常配 probably、I think、maybe",
         "也用在當場的承諾與提議",
-        "天氣、價格、結果只能用它"
+        "天氣、價格、結果不能用現在進行式，要用 will（有跡象時也可用 going to）"
       ]
     },
     "note": "判斷口訣：能說出「是誰、什麼時候講好的」就用現在進行式；說不出來就用 will。"
@@ -1113,7 +1113,7 @@ window.GVPLUS = {
         "I am seeing the agent at three."
       ],
       "ans": 1,
-      "expl": "雨不會跟你約時間，天氣只能被預測，所以要用 will。其他三句都是人能安排的事。"
+      "expl": "雨不會跟你約時間，天氣只能被預測，所以不能用現在進行式，要用 will。其他三句都是人能安排的事。"
     }
   ]
 },
@@ -2077,7 +2077,7 @@ window.GVPLUS = {
       "ask": "什麼時候非用 will 不可？",
       "en": "I will confirm the unit price before you leave today.",
       "cn": "我會在你今天離開前確認單價。",
-      "why": "這句的重點不是「什麼時候」，而是「我負責」。承諾的本質是把責任放在自己身上，而 will 正是扛這個功能的字；改成 I am confirming 會把它降級成行程表上的一格，責任感就消失了。同理，條件句的主句與純預測也只能用 will。"
+      "why": "這句的重點不是「什麼時候」，而是「我負責」。承諾的本質是把責任放在自己身上，而 will 正是扛這個功能的字；改成 I am confirming 會把它降級成行程表上的一格，責任感就消失了。同理，條件句的主句與沒有跡象的純預測也通常用 will。"
     },
     {
       "key": "news",
@@ -4597,7 +4597,7 @@ window.GVPLUS = {
       "ask": "只想知道對方做過沒有，該用哪一種？",
       "en": "Have you ever run an internal audit?",
       "cn": "你做過內部稽核嗎？",
-      "why": "這種問題不在乎哪一天，只在乎「有沒有這個經驗」，所以用 Have you ever。要注意 ever 只能配完成式；想問細節再補一句 When did you do it，這時才換回過去式。"
+      "why": "這種問題不在乎哪一天，只在乎「有沒有這個經驗」，所以用 Have you ever。要注意問經驗時 ever 要配完成式；想問細節再補一句 When did you do it，這時才換回過去式。"
     }
   ],
   "steps": [

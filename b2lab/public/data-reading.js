@@ -7,7 +7,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 01 */
 {
-  id:"r01", level:"B1", topic:"交通與旅行", words:205,
+  id:"r01", level:"B1", topic:"交通與旅行", words:159,
   title:"The Man Who Missed His Train",
   titleCn:"錯過火車的男人",
   focus:"過去簡單式 vs. 過去進行式",
@@ -56,7 +56,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 02 */
 {
-  id:"r02", level:"B1", topic:"健康與習慣", words:215,
+  id:"r02", level:"B1", topic:"健康與習慣", words:145,
   title:"One Small Change in the Morning",
   titleCn:"早晨的一個小改變",
   focus:"現在簡單式 vs. 現在進行式；頻率副詞",
@@ -103,7 +103,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 03 */
 {
-  id:"r03", level:"B1+", topic:"食物與浪費", words:240,
+  id:"r03", level:"B1+", topic:"食物與浪費", words:164,
   title:"Why Do We Throw Away So Much Food?",
   titleCn:"我們為什麼丟掉這麼多食物？",
   focus:"被動語態；數量詞 (much / a great deal of / a third of)",
@@ -154,7 +154,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 04 */
 {
-  id:"r04", level:"B1+", topic:"職場", words:250,
+  id:"r04", level:"B1+", topic:"職場", words:173,
   title:"Working From Home: Two Sides of the Story",
   titleCn:"在家工作：故事的兩面",
   focus:"對比連接詞 however / whereas / on the other hand",
@@ -205,7 +205,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 05 */
 {
-  id:"r05", level:"B1+", topic:"居家修繕與鄰居", words:245,
+  id:"r05", level:"B1+", topic:"居家修繕與鄰居", words:158,
   title:"The Neighbour Who Could Fix Anything",
   titleCn:"什麼都會修的鄰居",
   focus:"關係子句 who / which / whose；使役 have / get something done",
@@ -256,7 +256,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 06 */
 {
-  id:"r06", level:"B1+", topic:"天災", words:255,
+  id:"r06", level:"B1+", topic:"天災", words:182,
   title:"The Night the Typhoon Cut the Power",
   titleCn:"颱風停電的那一夜",
   focus:"過去完成式；used to / would 表過去習慣",
@@ -307,10 +307,10 @@ window.READING = [
 
 /* ---------------------------------------------------------- 07 */
 {
-  id:"r07", level:"B2", topic:"面試與職涯", words:270,
+  id:"r07", level:"B2", topic:"面試與職涯", words:195,
   title:"The Interview That Changed Her Mind",
   titleCn:"改變她想法的那場面試",
-  focus:"假設語氣（if I were / would have）；轉述句",
+  focus:"假設語氣（if the team had been stable, she would have…）；轉述句",
   intro:"進入 B2：注意第二、第三條件句的動詞形式，以及轉述句中時態往後退一格的規則。",
   "spoken": [{"en":"Claire was all set to take this job — better pay, ten minutes from home, fancy title.","cn":"Claire 本來鐵了心要接那份工作——薪水更高、離家十分鐘、頭銜好聽。"},{"en":"Then in the interview she found out four people had quit in eighteen months, and weekends were basically mandatory.","cn":"結果面試時她發現一年半內走了四個人，週末基本上都要上班。"},{"en":"When she asked why everyone left, the manager just said they 'weren't the right fit.' Huge red flag.","cn":"她問為什麼大家都離職，主管只說他們「不合適」。超大警訊。"},{"en":"She turned it down and never looked back. Her line: 'A salary is easy to measure. A manager who can't explain why people leave tells you way more.'","cn":"她婉拒了，也從沒後悔。她的名言：「薪水好衡量。一個說不清員工為何離開的主管，透露的訊息多得多。」"}],
   paras:[
@@ -359,7 +359,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 08 */
 {
-  id:"r08", level:"B2", topic:"社會議題／意見表達", words:280,
+  id:"r08", level:"B2", topic:"社會議題／意見表達", words:188,
   title:"Is Cosmetic Surgery a Personal Choice?",
   titleCn:"整形手術是個人選擇嗎？",
   focus:"讓步與情態動詞（admittedly / it may be true that / arguably）",
@@ -412,7 +412,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 09 */
 {
-  id:"r09", level:"B2", topic:"金錢與保險", words:275,
+  id:"r09", level:"B2", topic:"金錢與保險", words:185,
   title:"The Real Cost of Cheap Insurance",
   titleCn:"便宜保險的真正代價",
   focus:"名詞化與複雜名詞片語；比較結構",
@@ -465,11 +465,11 @@ window.READING = [
 
 /* ---------------------------------------------------------- 10 */
 {
-  id:"r10", level:"B2", topic:"睡眠與健康", words:285,
+  id:"r10", level:"B2", topic:"睡眠與健康", words:187,
   title:"Sleep Debt: The Habit We Cannot Repay",
   titleCn:"睡眠負債：還不了的習慣",
   focus:"分詞構句；倒裝（Not only... / Only when...）",
-  intro:"科普說明文。注意分詞開頭的句子（Having slept... / Lying in bed...）與倒裝句的動詞位置——這兩者是 B2 閱讀最常卡住的地方。",
+  intro:"科普說明文。注意分詞開頭的句子（Having tested drivers... / Repeated for a week...）與倒裝句的動詞位置——這兩者是 B2 閱讀最常卡住的地方。",
   "spoken": [{"en":"Losing an hour of sleep a night sounds like nothing — but stack up a week of it and your attention takes a real hit.","cn":"每晚少睡一小時聽起來沒什麼——但累積一週，專注力就真的垮了。"},{"en":"They tested drivers after five short nights, and their reactions looked like they'd been drinking — and they thought they were fine.","cn":"研究測了連續五天睡不夠的駕駛，反應跟喝了酒差不多——而他們還自以為沒事。"},{"en":"And no, sleeping in twelve hours on Saturday doesn't fix it. Memory needs deep sleep spread over several nights.","cn":"還有，週六補睡十二小時沒用。記憶需要的是連續好幾晚的深層睡眠。"},{"en":"The fix is boring: same wake-up time every day, even after a rough night. Bragging about four hours of sleep isn't toughness — it's debt.","cn":"解法很無聊：每天同一時間起床，睡爛了也一樣。炫耀只睡四小時不是強悍——是欠債。"}],
   paras:[
     {en:"Losing an hour of sleep sounds harmless. Repeated for a week, however, it produces a measurable drop in attention, and the person affected is usually the last to notice it. Researchers call this accumulated shortage \"sleep debt\".",
@@ -522,7 +522,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 11 */
 {
-  id:"r11", level:"B2", topic:"健康醫療", words:280,
+  id:"r11", level:"B2", topic:"健康醫療", words:212,
   title:"What the Doctor Does Not Have Time to Ask",
   titleCn:"醫生沒時間問的那些事",
   focus:"轉述句；委婉推測語氣（seem / tend to / appear）",
@@ -575,10 +575,10 @@ window.READING = [
 
 /* ---------------------------------------------------------- 12 */
 {
-  id:"r12", level:"B2", topic:"健康醫療", words:290,
+  id:"r12", level:"B2", topic:"健康醫療", words:203,
   title:"Two Systems, Two Waiting Rooms",
   titleCn:"兩種制度，兩間候診室",
-  focus:"比較結構（twice as ... as / by contrast / whereas）",
+  focus:"比較結構（twenty times as much / by contrast）",
   intro:"制度比較文。B2 寫作最常需要的就是「精準比較」：注意 twice as much as、far more likely to、by contrast、the former / the latter 這些工具。",
   "spoken": [{"en":"Same illness, two cities: in Taipei you pay a small fixed fee; in Chicago the bill shows up three weeks later at twenty times the price.","cn":"同樣的病，兩個城市：在台北付少少的固定費用；在芝加哥帳單三週後才來，貴二十倍。"},{"en":"Taiwan's system covers basically everyone — visits are cheap and quick, so waiting rooms are packed but nobody skips the doctor over money.","cn":"台灣的制度幾乎涵蓋所有人——看病便宜又快，候診室雖擠，但沒人因為錢不敢看醫生。"},{"en":"In the States it runs on employer insurance — longer appointments, but switch jobs and you might lose your doctor, so people put off check-ups.","cn":"美國靠雇主保險運作——看診時間較長，但換工作可能連醫生都換掉，所以大家拖著不檢查。"},{"en":"Neither one wins. You're trading time and depth for access, or security for choice. The real price is never just the bill.","cn":"沒有哪邊完勝。你不是用時間深度換可近性，就是用保障換選擇。真正的代價從來不只是帳單。"}],
   paras:[
@@ -627,7 +627,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 13 */
 {
-  id:"r13", level:"B2", topic:"健康醫療", words:285,
+  id:"r13", level:"B2", topic:"健康醫療", words:218,
   title:"The Quiet Kind of Tired",
   titleCn:"安靜的那種累",
   focus:"名詞化；情態動詞推測（may well / might have been）",
@@ -684,7 +684,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 14 */
 {
-  id:"r14", level:"B2", topic:"旅遊跨文化", words:290,
+  id:"r14", level:"B2", topic:"旅遊跨文化", words:204,
   title:"When the Plan Falls Apart",
   titleCn:"當行程整個垮掉",
   focus:"混合條件句；should have + p.p. 的檢討語氣",
@@ -737,7 +737,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 15 */
 {
-  id:"r15", level:"B2", topic:"旅遊跨文化", words:285,
+  id:"r15", level:"B2", topic:"旅遊跨文化", words:185,
   title:"The Guest Who Never Asked",
   titleCn:"從不開口問的客人",
   focus:"分詞構句；關係子句壓縮資訊",
@@ -789,7 +789,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 16 */
 {
-  id:"r16", level:"B2", topic:"旅遊跨文化", words:295,
+  id:"r16", level:"B2", topic:"旅遊跨文化", words:223,
   title:"Who Pays for the View?",
   titleCn:"風景的帳單誰來付？",
   focus:"被動語態的正式用法；讓步論述",
@@ -846,11 +846,11 @@ window.READING = [
 
 /* ---------------------------------------------------------- 17 */
 {
-  id:"r17", level:"B2", topic:"金錢與居住", words:295,
+  id:"r17", level:"B2", topic:"金錢與居住", words:222,
   title:"The Deposit That Never Came Back",
   titleCn:"再也沒回來的押金",
   focus:"被動語態＋條件句；正式書面語氣",
-  intro:"實用主題：租屋押金爭議。注意正式書信裡大量使用被動（was informed / has been deducted）與條件句（If the deposit is not returned...），語氣要堅定但不情緒化。",
+  intro:"實用主題：租屋押金爭議。注意正式書信裡大量使用被動（was informed / were dated / is protected）與條件句（If the deposit is not returned...），語氣要堅定但不情緒化。",
   "spoken": [{"en":"Yiting moved out, left the place spotless, photographed every room — and still got told they were keeping half her deposit for 'cleaning and wear.'","cn":"Yiting 搬走時房子乾乾淨淨，每個房間都拍了照——結果還是被告知要扣一半押金當「清潔與耗損」費。"},{"en":"But she had receipts: dated photos and the signed move-in inventory. Normal wear isn't damage — landlords just bet on you not knowing that.","cn":"但她有證據：有日期的照片和簽過的點交清單。正常耗損不是損壞——房東只是賭你不懂。"},{"en":"Her email was three calm sentences: here's the deduction, here's my evidence, send an itemized receipt or the money in fourteen days — or we go to mediation.","cn":"她的信就三句冷靜的話：扣了多少、我的證據在此、十四天內給明細或還錢——不然就調解見。"},{"en":"Full refund, nine days, no apology. Moral of the story: a deposit is protected by evidence, not fairness.","cn":"九天後全額退回，連個道歉都沒有。教訓是：押金靠的是證據，不是公道。"}],
   paras:[
     {en:"When Yiting moved out of her flat, the walls were clean, the floor was undamaged, and she had photographed every room. Six weeks later she was informed that half of her two-month deposit had been kept for \"general cleaning and wear\".",
@@ -899,11 +899,11 @@ window.READING = [
 
 /* ---------------------------------------------------------- 18 */
 {
-  id:"r18", level:"B2", topic:"金錢與居住", words:290,
+  id:"r18", level:"B2", topic:"金錢與居住", words:225,
   title:"Why Saving Feels Impossible",
   titleCn:"為什麼存錢感覺不可能",
   focus:"數據描述與比較；名詞化",
-  intro:"財經說明文。注意描述數字的語言（rise by / rise to、a fifth of、outpace）以及把動作變成名詞的寫法，這是讀懂財經文章的關鍵。",
+  intro:"財經說明文。注意描述數字的語言（rose considerably faster than、a third of … instead of a fifth、a price rise of three per cent）以及把動作變成名詞的寫法，這是讀懂財經文章的關鍵。",
   "spoken": [{"en":"Ask anyone under forty why they can't save — it's not discipline. Rents shot up way faster than paychecks.","cn":"問任何四十歲以下的人為什麼存不了錢——不是不自律，是房租漲得遠比薪水快。"},{"en":"And inflation quietly makes it worse: money sitting in your account loses about a quarter of its value in ten years.","cn":"通膨還在偷偷加碼：錢放在帳戶裡不動，十年會蒸發大概四分之一的價值。"},{"en":"Skipping your daily coffee saves like two percent. Renegotiating rent or switching one insurance policy? Ten or fifteen.","cn":"戒掉每天那杯咖啡大概省 2%。重談房租或換一張保單？10% 到 15%。"},{"en":"The trick that actually works is boring: move a fixed amount out on payday, before you spend anything. Save first, spend what's left.","cn":"真正有效的方法很無聊：發薪日當天先轉走固定金額，再花剩下的。先存再花。"}],
   paras:[
     {en:"Ask anyone under forty why they cannot save, and the answer is rarely a lack of discipline. Between 2015 and 2025, average rents in most Asian cities rose considerably faster than average wages. When housing takes a third of your income instead of a fifth, the money that used to become savings simply disappears into somebody else's mortgage.",
@@ -952,7 +952,7 @@ window.READING = [
 
 /* ---------------------------------------------------------- 19 */
 {
-  id:"r19", level:"B2", topic:"金錢與居住", words:290,
+  id:"r19", level:"B2", topic:"金錢與居住", words:237,
   title:"The Empty Flats Above the Shops",
   titleCn:"店面樓上的空屋",
   focus:"倒裝與強調句（It is ... that / Nowhere is ... more visible）",
