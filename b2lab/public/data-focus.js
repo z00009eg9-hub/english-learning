@@ -474,7 +474,7 @@ r17:{ unit:"g09", title:"正式書信的被動語態與條件句",
     "結構順序：① 陳述事實與金額 ② 列出你的依據（照片、清單、日期）③ 提出兩個具體選項與期限。三句話就夠——這篇文章裡的信只有三句。"
   ],
   examples:[
-    {en:"I was informed that NT$12,000 had been deducted for cleaning.",cn:"我被告知有 12,000 元因清潔費被扣除。",note:"被動＋轉述"},
+    {en:"I was informed that NT$12,000 had been deducted for cleaning.",cn:"我接到通知，說已經扣了 12,000 元清潔費。",note:"被動＋轉述"},
     {en:"An itemised receipt is required before any deduction can be accepted.",cn:"任何扣款在被接受前都需要逐項收據。",note:"雙重被動，語氣正式"},
     {en:"If the amount is not refunded by 30 June, mediation will be requested.",cn:"若款項未於 6 月 30 日前退還，將申請調解。",note:"條件句設定後果"}
   ],
@@ -487,7 +487,7 @@ r17:{ unit:"g09", title:"正式書信的被動語態與條件句",
 r18:{ unit:"g14", title:"描述數據的語言",
   formula:"rise / fall + by + 幅度　|　rise / fall + to + 終點　|　a fifth of / a third of",
   points:[
-    "by 和 to 完全不同：Rents rose by 10%（上漲了 10%，講幅度）vs. Rents rose to NT$30,000（漲到三萬，講終點）。中文都說「漲到」，很容易混。",
+    "by 和 to 完全不同：Rents rose by 10%（上漲了 10%，講幅度）vs. Rents rose to NT$30,000（漲到三萬，講終點）。中文的「漲了」和「漲到」只差一個字，很容易混。",
     "描述速度差異用 faster / more slowly than：Rents rose considerably faster than wages. 這比 Rents are expensive 有說服力得多，因為它有比較基準。",
     "分數的說法是 a third of / a fifth of / three quarters of + 名詞，動詞單複數看後面的名詞：A third of the food is...（food 不可數，用 is）／A third of the students are...。",
     "百分比與趨勢的常用動詞：rise, fall, increase, decrease, double, halve, outpace（超越）。outpace 特別好用：Rents have outpaced wages for a decade."
@@ -556,7 +556,7 @@ r21:{ unit:"g01", title:"be going to 與 will：計畫 vs. 當下決定",
   ],
   traps:[
     {bad:"A: Do you want some tea? B: Yes, I'm going to have some.",good:"A: Do you want some tea? B: Yes, I'll have some.",why:"當場被問才決定，要用 will，不是事先的計畫。"},
-    {bad:"I will visit my aunt tomorrow. I already bought the ticket.",good:"I'm going to visit my aunt tomorrow. I already bought the ticket.",why:"票都買了，代表事先已有計畫，用 be going to 更自然。"}
+    {bad:"I will visit my aunt tomorrow. I already bought the ticket.",good:"I'm going to visit my aunt tomorrow. I already bought the ticket.",why:"這句不算文法錯誤，只是較不自然：票都買了，代表事先已有計畫，用 be going to（或 I'm visiting）更自然。"}
   ]
 },
 
@@ -689,7 +689,7 @@ r28:{ unit:"g01", title:"未來完成式與未來進行式",
   ],
   traps:[
     {bad:"By the time the bus will arrive, we will have eaten.",good:"By the time the bus arrives, we will have eaten.",why:"by the time 引導的時間子句用現在簡單式表示未來，不能用 will。"},
-    {bad:"By Friday I will finish the report.",good:"By Friday I will have finished the report.",why:"by + 未來時間點強調「在那之前就完成」，要用 will have + p.p.；單純 will finish 沒有「在期限前完成」的意思。"}
+    {bad:"By Friday I will finish the report.",good:"By Friday I will have finished the report.",why:"這句不算文法錯誤，只是較不自然：by + 未來時間點強調「在那之前就完成」，用 will have + p.p. 最清楚；單純 will finish 也看得到，但「在期限前完成」的意思比較弱。"}
   ]
 },
 

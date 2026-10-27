@@ -86,7 +86,7 @@ V.goneBeen=card(
    +dash('M84 132 Q160 84 234 122')+head(240,126,32)
    +em(250,150,46,'🍕')
    +em(250,214,44,'🧍')
-   +bub(145,206,'Still here! 還在那裡',160),
+   +bub(145,206,'Still there! 還在那裡',160),
   en:'James has gone to Italy.', cn:'去了「還沒回來」，人現在在義大利'},
  {pw:150,title:'been to',
   draw:em(250,150,46,'🍕')
@@ -265,7 +265,7 @@ V.g06=card(
    +'<path d="M120 166 L172 166" stroke="#2f9e5f" stroke-width="4" stroke-linecap="round"/>'+head(182,166,0,'#2f9e5f')
    +'<text x="160" y="256" text-anchor="middle" font-size="14.5" font-weight="900" fill="#1f8a4c">let + 人 + 原形</text>',
   en:'Mom let me go out.', cn:'允許、開綠燈'},
- '四個使役動詞force感由強到弱：make（強迫）> have（交辦）> get（說服，要加 to）> let（允許）。make/have/let 後面接原形動詞，只有 get 要加 to：get him to help。');
+ '四個使役動詞的強制力由強到弱：make（強迫）> have（交辦）> get（說服，要加 to）> let（允許）。make/have/let 後面接原形動詞，get 要加 to：get him to help。');
 
 /* ---------- B2：假設語氣 If 句型 ---------- */
 V.g08=card(
@@ -609,7 +609,7 @@ V.dg20260826b1p=card(
    +em(100,148,46,'🔧')+em(160,148,20,'⏳')+em(220,148,46,'💦')
    +'<text x="160" y="206" text-anchor="middle" font-size="13" font-weight="800" fill="#c9631f">By the time he arrived, the floor was soaked.</text>',
   en:'By the time he arrived, the floor was soaked.', cn:'他到的時候，地板已經濕透了'},
- 'as soon as 強調兩件事緊接發生（一……就……）；by the time 強調「到那時候，另一件事已經先發生了」。兩者都用過去簡單式，但 by the time 的主句常帶 already，暗示等待的結果。');
+ 'as soon as 強調兩件事緊接發生（一……就……）；by the time 強調「到那時候，另一件事已經先發生了」。兩者的時間子句都用過去簡單式；by the time 的主句常用 had already + 過去分詞，或像 was soaked 這樣描述那時已經形成的狀態。');
 
 /* ---------- 2026-08-26 B2：過去簡單式在正式報告中的用法 ---------- */
 V.dg20260826b2=card(

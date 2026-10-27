@@ -482,7 +482,7 @@ grammar:[
   ],
   quiz:[
     {q:"____ a convenience store next to my building.",qCn:"我住的大樓旁邊有一家便利商店。",opts:["There are","There is","There have","It has"],ans:1,expl:"a convenience store 是單數 → There is。"},
-    {q:"They didn't have ____ rice.",qCn:"他們沒有任何米了。",opts:["some","any","many","a"],ans:1,expl:"否定句用 any。"},
+    {q:"They didn't have ____ rice.",qCn:"他們當時沒有米。",opts:["some","any","many","a"],ans:1,expl:"否定句用 any。"},
     {q:"There ____ many people at the stop yesterday.",qCn:"昨天站牌那裡有很多人。",opts:["is","are","was","were"],ans:3,expl:"過去 + 複數 → were。"},
     {q:"I bought two ____ of water.",qCn:"我買了兩瓶水。",opts:["bottle","bottles","bottled","bottle's"],ans:1,expl:"two 後面名詞要複數 bottles。"}
   ]

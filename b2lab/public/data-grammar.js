@@ -61,7 +61,7 @@ window.GRAMMAR = [
       {en:"These days I am getting up twenty minutes earlier.",cn:"最近我比以前早起二十分鐘。",note:"近期的改變 → 進行式"}
     ]},
     {h:"不用進行式的狀態動詞", bullets:[
-      "感官/心理：know, believe, understand, remember, want, need, prefer",
+      "心理/想法：know, believe, understand, remember, want, need, prefer",
       "擁有：have（擁有時不用進行式）、own, belong",
       "但 have 當「吃／經歷」時可以：I am having lunch. / She is having a hard time."
     ]}
@@ -141,9 +141,9 @@ window.GRAMMAR = [
     {bad:"How long do you work here?",good:"How long have you worked here?",why:"問「持續多久到現在」要用現在完成式。"}
   ],
   quiz:[
-    {q:"I ____ my homework, so I can watch TV now.",qCn:"我已經做完功課了，所以現在可以看電視。",opts:["finish","finished","have finished","was finishing"],ans:2,expl:"剛完成且影響現在 → 現在完成式。"},
+    {q:"I ____ my homework, so I can watch TV now.",qCn:"我已經做完功課了，所以現在可以看電視。",opts:["finish","finished","have finished","was finishing"],ans:2,expl:"剛完成且影響現在 → 現在完成式。（美式口語也常用過去簡單式 I finished my homework，這題依標準用法選 have finished。）"},
     {q:"We ____ in Taipei since 2019.",qCn:"我們從2019年就住在台北了。",opts:["live","lived","have lived","are living"],ans:2,expl:"since + 起點，持續到現在。"},
-    {q:"Have you eaten lunch ____?",qCn:"你吃過午餐了嗎？",opts:["already","yet","since","ever"],ans:1,expl:"疑問句表「還沒／到目前」用 yet。"}
+    {q:"Have you eaten lunch ____?",qCn:"你吃過午餐了嗎？",opts:["already","yet","since","ever"],ans:1,expl:"疑問句表「還沒／到目前」用 yet。（美式口語也常用過去簡單式加 yet，例如 Did you eat lunch yet?，這題依標準用法選 yet 配現在完成式。）"}
   ]
 },
 
@@ -289,7 +289,7 @@ window.GRAMMAR = [
   quiz:[
     {q:"If I ____ you, I wouldn't accept that job.",qCn:"如果我是你，我不會接受那份工作。",opts:["am","was","were","would be"],ans:2,expl:"第二條件句慣用 were。"},
     {q:"If we ____ earlier, we wouldn't have missed the train.",qCn:"如果我們早一點出發，就不會錯過那班火車了。",opts:["left","had left","would leave","leave"],ans:1,expl:"與過去事實相反 → had left。"},
-    {q:"____ you book now, the price will go up.",qCn:"除非你現在訂，不然價格會上漲。",opts:["Unless","If","When","While"],ans:0,expl:"Unless ＝ 如果不…，語意才通。"},
+    {q:"____ you book now, you will pay more.",qCn:"除非你現在訂，不然你會付更多錢。",opts:["Unless","If","When","While"],ans:0,expl:"Unless ＝ 如果不…，語意才通。"},
     {q:"I wish I ____ more sleep last night.",qCn:"我真希望昨晚多睡一點。",opts:["have","had had","would have","having"],ans:1,expl:"對過去的遺憾 → wish + had p.p.。"}
   ]
 },
@@ -449,7 +449,7 @@ window.GRAMMAR = [
     {bad:"The delay was because of the weather was bad.",good:"The delay was because the weather was bad. / due to bad weather.",why:"because of 後面只能接名詞片語。"}
   ],
   quiz:[
-    {q:"____ the high price, the policy covers very little.",qCn:"儘管價格很高，這份保單的保障範圍卻很少。",opts:["Although","Despite","However","Because"],ans:1,expl:"後面是名詞片語 the high price → Despite。"},
+    {q:"____ the high price, the policy covers very little.",qCn:"儘管價格很高，這份保單的保障範圍卻很小。",opts:["Although","Despite","However","Because"],ans:1,expl:"後面是名詞片語 the high price → Despite。"},
     {q:"Online meetings are efficient, ____ informal chats are hard to replace.",qCn:"線上會議很有效率，但非正式的聊天很難被取代。",opts:["because","so","whereas","therefore"],ans:2,expl:"對比關係且接子句 → whereas。"},
     {q:"She was exhausted. ____, she finished the report before midnight.",qCn:"她已經精疲力盡了。不過，她還是在午夜前完成了報告。",opts:["Although","Despite","However","Whereas"],ans:2,expl:"獨立句之後用副詞 However, 開頭。"},
     {q:"Which phrase admits the other side of an argument?",qCn:"哪個詞語用來承認對方的論點？",opts:["Therefore","Admittedly","Because of","In addition"],ans:1,expl:"Admittedly ＝ 不可否認地，典型讓步標記。"}
@@ -540,7 +540,7 @@ window.GRAMMAR = [
     ], examples:[
       {en:"The bill cost twenty times as much as the fixed fee.",cn:"那張帳單是固定費用的二十倍。",note:"倍數句型"},
       {en:"Rents rose considerably faster than wages.",cn:"房租上漲遠快於薪資。",note:"程度副詞＋比較級＋than"},
-      {en:"This policy is by far the most expensive of the three.",cn:"這份保單是三份裡面最貴的。",note:"by far 加強最高級"}
+      {en:"This policy is by far the most expensive of the three.",cn:"這份保單是三份裡面最貴的，而且遠遠貴過另外兩份。",note:"by far 加強最高級"}
     ]},
     {h:"the former / the latter 與其他對照工具", bullets:[
       "the former ＝ 前面提到的那個｜the latter ＝ 後面提到的那個（順序不能顛倒）",
@@ -557,7 +557,7 @@ window.GRAMMAR = [
     {q:"The new plan is ____ more expensive than the old one.",qCn:"新方案比舊方案貴很多。",opts:["very","much","most","so"],ans:1,expl:"修飾比較級用 much / far。"},
     {q:"My rent is ____ as high as hers.",qCn:"我的房租是她的兩倍高。",opts:["twice","two times more","double more","twice more"],ans:0,expl:"twice as + 原級 + as。"},
     {q:"Which sentence is correct?",qCn:"哪一句是正確的？",opts:["Rents rose to 10% last year.","Rents rose by 10% last year.","Rents rose in 10% last year.","Rents rose of 10% last year."],ans:1,expl:"講漲幅用 rise by；rise to 是漲到某個數字。"},
-    {q:"Both options work; ____ is cheaper but slower.",qCn:"兩個方案都行；前者比較便宜但比較慢。",opts:["the latter","the former","the last","the first one which"],ans:1,expl:"指前面先提到的那一個 → the former。"}
+    {q:"Both options — the bus and the train — work; ____ is cheaper but slower.",qCn:"兩個方案（公車和火車）都行；前者比較便宜但比較慢。",opts:["the latter","the former","the last","the first one which"],ans:1,expl:"指前面先提到的那一個 → the former。"}
   ]
 },
 

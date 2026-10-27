@@ -13782,7 +13782,7 @@ grammar:[
         },
         {
           "en": "I'll walk the inspector through the paperwork myself.",
-          "cn": "我自己帶查驗人員看過文件。",
+          "cn": "我會親自帶查驗人員把文件看一遍。",
           "note": "對話語域，表達意願"
         }
       ]
@@ -14006,7 +14006,7 @@ grammar:[
         "rows": [
           [
             "火車七點開（時刻表）",
-            "The train arrives at seven.",
+            "The train leaves at seven.",
             "表上寫的，不是我排的"
           ],
           [
@@ -14084,12 +14084,12 @@ grammar:[
     {
       "bad": "I will go to the dentist tomorrow at three.",
       "good": "I am going to the dentist tomorrow at three.",
-      "why": "時間都報到三點了，表示電話早就打了、位子早就掛了，這種事在英文裡屬於「已經排定」，要用 be + V-ing。寫 will 會讓對方以為你只是「打算哪天去」，還沒約。檢查方法：句子裡出現具體的時間點，而且是你自己安排的，就不要用 will。"
+      "why": "這句不算文法錯誤，只是較不自然：時間都報到三點了，表示電話早就打了、位子早就掛了，這種事在英文裡屬於「已經排定」，要用 be + V-ing。寫 will 會讓對方以為你只是「打算哪天去」，還沒約。檢查方法：句子裡出現具體的時間點，而且是你自己安排的，就優先用 be + V-ing，不要用 will。"
     },
     {
       "bad": "The movie will start at eight.",
       "good": "The movie starts at eight.",
-      "why": "電影時刻是戲院排的，不是你決定的，所以歸在時刻表那一類，用現在簡單式。中文的「會」沒有分這一層，所以學生一看到未來就伸手去拿 will。只要那個時間是印在表上、牌子上、票上的，就用現在簡單式。"
+      "why": "這句不算文法錯誤，只是較不自然：電影時刻是戲院排的，不是你決定的，所以歸在時刻表那一類，用現在簡單式。中文的「會」沒有分這一層，所以學生一看到未來就伸手去拿 will。只要那個時間是印在表上、牌子上、票上的，就用現在簡單式。"
     },
     {
       "bad": "He is play basketball on Sunday.",
@@ -14308,8 +14308,8 @@ grammar:[
       "why": "自己都說「已經約好了」，卻用 will，前後矛盾。will 的語氣是「還沒定、我現在決定」，而 be + V-ing 的語氣是「定了，我只是在報行程」。檢查方法：如果這件事你已經跟某個人講過了，就把 will 換掉。"
     },
     {
-      "bad": "The new price will start from January, it says so in the contract.",
-      "good": "The new price starts in January, it says so in the contract.",
+      "bad": "The new price will start from January. It says so in the contract.",
+      "good": "The new price starts in January. It says so in the contract.",
       "why": "合約上寫好的日期屬於「別人決定、我照著走」，所以用現在簡單式，語氣才像在引述條文。另外 start 後面接時間點用 in，不用 from，from 要搭配一個終點才自然。"
     },
     {
@@ -14450,7 +14450,7 @@ grammar:[
         },
         {
           "en": "She is going to look at three flats before she decides.",
-          "cn": "她決定先看三間房子再做決定。",
+          "cn": "她打算先看三間房子再決定。",
           "note": "決定明確，日期還沒排"
         }
       ]
@@ -14526,7 +14526,7 @@ grammar:[
     {
       "bad": "Look at the ceiling. It will leak again.",
       "good": "Look at the ceiling. It is going to leak again.",
-      "why": "前一句已經叫對方去看，證據就在眼前，這種「有根據的預測」要用 going to。will 的語氣是沒有證據的猜測，跟 Look at 這個開場互相衝突。判斷方法：如果你能指著某個東西說「就是因為這個」，就用 going to。"
+      "why": "這句不算文法錯誤，只是較不自然：前一句已經叫對方去看，證據就在眼前，這種「有根據的預測」要用 going to。will 比較像一般的預測，沒把「眼前有證據」這層意思帶出來，跟 Look at 這個開場不太搭。判斷方法：如果你能指著某個東西說「就是因為這個」，就用 going to。"
     },
     {
       "bad": "We decided last week. We will change the supplier.",
@@ -14541,7 +14541,7 @@ grammar:[
     {
       "bad": "I am going to go to the bank tomorrow morning.",
       "good": "I am going to the bank tomorrow morning.",
-      "why": "文法上沒有錯，但母語者聽起來很囉嗦，因為 going 已經有「去」的意思了。動詞是 go 的時候，直接用現在進行式就好。反過來說，如果你要強調「這是我早就決定的」，就換個動詞：I am going to open an account tomorrow."
+      "why": "文法上沒有錯，只是較不自然：母語者口語也常說 going to go，但寫起來顯得重複，因為 going 已經有「去」的意思了。動詞是 go 的時候，直接用現在進行式就好。反過來說，如果你要強調「這是我早就決定的」，就換個動詞：I am going to open an account tomorrow."
     },
     {
       "bad": "I was going to call the agent, so I called him at noon.",
@@ -14560,7 +14560,7 @@ grammar:[
         "D. is asking"
       ],
       "ans": 1,
-      "expl": "第一句就是眼前的證據（數字看起來不對），所以用 going to 的有根據預測。will 在這裡會變成沒來由的猜測。"
+      "expl": "第一句就是眼前的證據（數字看起來不對），所以用 going to 的有根據預測。will ask 不算文法錯誤，只是較不自然，聽不出是從眼前證據推出來的。"
     },
     {
       "q": "The minimum rate ___ to eight percent under one of the bills.",
@@ -14666,7 +14666,7 @@ grammar:[
       "bullets": [
         "前面鋪了證據，結論用 going to，因果關係最清楚",
         "最正式的場合可以換成 is likely to、is expected to、is set to",
-        "把 going to 全部換成 will，整篇會失去「有憑有據」的語氣"
+        "把 going to 全部換成 will 不算錯，只是較不自然，整篇會失去「有憑有據」的語氣"
       ],
       "examples": [
         {
@@ -14757,17 +14757,17 @@ grammar:[
     {
       "bad": "Under clause four, the tenant will pay the service charge each quarter.",
       "good": "Under clause four, the tenant pays the service charge each quarter.",
-      "why": "引述條文的時候用 will，語氣會從「規定如此」掉到「我預期他會付」，等於把義務講成期待。合約、規章、政策常用現在簡單式（正式合約寫義務時也會用 shall），因為它們描述的是一個持續有效的狀態，不是某一次的未來事件。"
+      "why": "這句不算文法錯誤，只是較不自然：引述條文的時候用 will，語氣會從「規定如此」掉到「我預期他會付」，等於把義務講成期待。合約、規章、政策常用現在簡單式（正式合約寫義務時也會用 shall），因為它們描述的是一個持續有效的狀態，不是某一次的未來事件。"
     },
     {
       "bad": "The figures are bad, so the fund will run out within ten years.",
       "good": "The figures are bad, so the fund is going to run out within ten years.",
-      "why": "前半句已經把證據攤開了，後半句卻用 will，因果鏈就斷了，讀起來像作者的個人猜測而不是從數據推出來的結論。有證據鋪在前面，就讓 going to 或 is expected to 把那層因果接起來。"
+      "why": "這句不算文法錯誤，只是較不自然：前半句已經把證據攤開了，後半句卻用 will，因果鏈就斷了，讀起來像作者的個人猜測而不是從數據推出來的結論。有證據鋪在前面，就讓 going to 或 is expected to 把那層因果接起來。"
     },
     {
       "bad": "I am going to send you the revised draft tomorrow at ten.",
       "good": "I am sending you the revised draft tomorrow at ten.",
-      "why": "時間都報到十點了，這是已排定的安排，用現在進行式才是郵件裡的標準語氣。going to 會讓對方覺得你只是「打算」，時間還可能變動，在商務信件裡反而製造不確定感。"
+      "why": "這句不算文法錯誤，只是較不自然：時間都報到十點了，這是已排定的安排，用現在進行式才是郵件裡的標準語氣。going to 會讓對方覺得你只是「打算」，時間還可能變動，在商務信件裡反而製造不確定感。"
     },
     {
       "bad": "We are going to be delighted to review the clause with you.",
@@ -14791,7 +14791,7 @@ grammar:[
         "D. is going to accrue"
       ],
       "ans": 1,
-      "expl": "引述條文要用現在簡單式，語氣才是「規定如此」。用 will 會把義務講成預期，是法律英文裡不會出現的寫法。"
+      "expl": "引述條文要用現在簡單式，語氣才是「規定如此」。用 will 不算文法錯誤，只是較不自然，會把義務講成預期（合約寫義務時也常見 shall 或 will）。"
     },
     {
       "q": "Occupancy has fallen for six quarters, so the yield ___ under pressure.",
@@ -14803,7 +14803,7 @@ grammar:[
         "D. came"
       ],
       "ans": 2,
-      "expl": "前半句是攤開的數據，後半句的結論要承接那層證據，所以用 going to 把因果接起來。"
+      "expl": "前半句是攤開的數據，後半句的結論要承接那層證據，所以用 going to 把因果接起來。（will come 不算文法錯誤，只是較不自然，聽起來像個人猜測。）"
     },
     {
       "q": "We ___ the signed copy to your office tomorrow morning; the courier is booked.",
@@ -15284,7 +15284,7 @@ grammar:[
         "D. was used to"
       ],
       "ans": 1,
-      "expl": "now 告訴你這是現在的狀態，而且後面接名詞 the heat，所以要用 be used to 的現在式 am used to。used to 會變成「以前習慣、現在不習慣」，跟後半句打架。"
+      "expl": "now 告訴你這是現在的狀態，而且後面接名詞 the heat，所以要用 be used to 的現在式 am used to。used to 後面要接原形動詞，意思是「以前常常…、現在不再」，不能直接接名詞 the heat，而且也跟 now 打架。"
     }
   ]
 },
@@ -15420,7 +15420,7 @@ grammar:[
     },
     {
       "h": "為什麼不乾脆都用 will",
-      "body": "都寫 will 當然看得懂，但語感會整個鬆掉：對方會以為你只是打算，還沒定案。這在工作信件裡差別很大——寫 I will visit your plant next week，對方可能還要再跟你確認一次；寫 I am visiting your plant next week，對方知道你機票都訂了。把確定的事寫成 will，等於把已經談好的事又丟回談判桌。",
+      "body": "都寫 will 當然看得懂，但語感會整個鬆掉：對方會以為你只是打算，還沒定案。這在工作信件裡差別很大——寫 I will visit your plant next week 不算錯，只是較不自然，對方可能還要再跟你確認一次；寫 I am visiting your plant next week，對方知道你機票都訂了。把確定的事寫成 will，等於把已經談好的事又丟回談判桌。",
       "bullets": [
         "已經訂好票、約好人、排進會議室 → 現在進行式",
         "公告在牌子上、網站上、班表上 → 現在簡單式",
@@ -15454,7 +15454,7 @@ grammar:[
     {
       "bad": "The shuttle will leave at seven every morning.",
       "good": "The shuttle leaves at seven every morning.",
-      "why": "every morning 告訴你這是固定班次，不是某一次的預測，所以用現在簡單式。加了 will 反而像在猜「它應該會七點開」，把公告好的事說得不確定。"
+      "why": "這句不算文法錯誤，只是較不自然：every morning 告訴你這是固定班次，不是某一次的預測，所以用現在簡單式。加了 will 反而像在猜「它應該會七點開」，把公告好的事說得不確定。"
     },
     {
       "bad": "I am seeing the supplier.",
@@ -15490,7 +15490,7 @@ grammar:[
         "D. left"
       ],
       "ans": 1,
-      "expl": "班次是公告好的時刻表，用現在簡單式最自然。這裡 is leaving 不算錯，但 leaves 更能表達「表上就是這個時間」；will leave 則像在猜。"
+      "expl": "班次是公告好的時刻表，用現在簡單式最自然。這裡 is leaving 不算錯，但 leaves 更能表達「表上就是這個時間」；will leave 文法上也通，只是較不自然，像在猜。"
     },
     {
       "q": "Which sentence tells you the rally is already organized?",
@@ -15701,7 +15701,7 @@ grammar:[
     {
       "bad": "The supplier will deliver within thirty days, as the contract says.",
       "good": "The supplier shall deliver within thirty days.",
-      "why": "這句本身不算錯，但在合約語域裡 shall 才是標準，因為它標記的是義務而非時程。把義務寫成 will，日後爭議時對方可以主張那只是預期。正式文件選字的標準不是「聽得懂」，而是「追究得起」。"
+      "why": "這句不算文法錯誤，只是較不像條文：它在轉述合約，用 will 很自然；如果要寫成條款本身，傳統合約常用 shall 標記義務（現代白話合約也常用 will 或 must）。把義務寫得像預期，日後爭議時對方可能主張那只是預期。正式文件選字的標準不是「聽得懂」，而是「追究得起」。"
     },
     {
       "bad": "The talks resume on Thursday and a strike starts next week.",
@@ -15895,7 +15895,7 @@ grammar:[
         "have 還有另一個意思是「做」：have breakfast（吃早餐）、have a shower（洗澡）、have a rest（休息一下）",
         "這種 have 是動作，不是擁有，所以不能寫成 have got",
         "判斷方法：如果中文翻成「吃、洗、玩得」就是動作；翻成「有」才可以加 got",
-        "過去式只要用 had 就好，不管是擁有還是動作，都沒有 had got 這種寫法"
+        "過去式只要用 had 就好，不管是擁有還是動作，都不用 had got 來代替（had got 是 get 的過去完成式，意思是『已經取得』）"
       ],
       "examples": [
         {
@@ -15930,7 +15930,7 @@ grammar:[
     {
       "bad": "Yesterday I had got a headache.",
       "good": "Yesterday I had a headache.",
-      "why": "have got 只能用在「現在」。一旦句子跑到過去，就只剩 had 這一個形狀，沒有 had got。中文的「我昨天頭痛」沒有時態記號，所以要靠 yesterday 提醒自己把 got 刪掉。"
+      "why": "have got 只能用在「現在」。一旦句子跑到過去，就只剩 had 這一個形狀，不用 had got（had got 是 get 的過去完成式，意思是『已經取得』）。中文的「我昨天頭痛」沒有時態記號，所以要靠 yesterday 提醒自己把 got 刪掉。"
     }
   ],
   "quiz": [
@@ -15986,7 +15986,7 @@ grammar:[
         "D. had got"
       ],
       "ans": 2,
-      "expl": "Last summer 把句子釘在過去，have got 只能講現在，所以要用 had。英文裡沒有 had got 這個寫法。"
+      "expl": "Last summer 把句子釘在過去，have got 只能講現在，所以要用 had。表示『擁有』時不用 had got（had got 是 get 的過去完成式，意思是『已經取得』）。"
     }
   ]
 },
@@ -16155,7 +16155,7 @@ grammar:[
         "D. had got"
       ],
       "ans": 2,
-      "expl": "before the fire 把句子釘在過去，而且講的是擁有，所以只能用 had。had got 不是英文的寫法。"
+      "expl": "before the fire 把句子釘在過去，而且講的是擁有，所以只能用 had。had got 是 get 的過去完成式（已經取得），不能用來表示過去的擁有。"
     },
     {
       "q": "Which sentence is wrong?",
@@ -16739,9 +16739,9 @@ grammar:[
           "note": "before his alarm rang 就是那條界線"
         },
         {
-          "en": "We had been standing in the rain because there was no shelter.",
-          "cn": "我們一直站在雨裡，因為那裡沒有地方可以躲。",
-          "note": "because 後面講原因，動詞用過去式"
+          "en": "We had been standing in the rain for an hour when the bus came.",
+          "cn": "公車來的時候，我們已經在雨裡站了一個小時。",
+          "note": "when the bus came 就是那條界線"
         }
       ]
     },
@@ -16784,16 +16784,16 @@ grammar:[
     {
       "bad": "I had been waited for an hour.",
       "good": "I had been waiting for an hour.",
-      "why": "been 後面一定要接 -ing，不能接過去分詞。中文說「我等了一小時」只有一個動詞，看不出主動被動，所以學生常常隨手寫成 waited。記住：waited 是「被等」的形狀，自己在等就要用 waiting。"
+      "why": "been 後面一定要接 -ing，不能接過去分詞。中文說「我等了一小時」只有一個動詞，看不出主動被動，所以學生常常隨手寫成 waited。記住：been 後面接 waited 會變成被動（had been waited ＝ 被等），自己在等就要用 waiting。"
     },
     {
       "bad": "I had been knowing him for five years.",
       "good": "I had known him for five years.",
-      "why": "know、like、want、have 這幾個字講的是「狀態」，不是「動作」，所以不加 -ing。中文的「我認識他五年了」聽起來像一直在做某件事，但英文把「認識」當成一個狀態，所以只能用 had known。"
+      "why": "know、like、want、have（表示擁有時）這幾個字講的是「狀態」，不是「動作」，所以不加 -ing。中文的「我認識他五年了」聽起來像一直在做某件事，但英文把「認識」當成一個狀態，所以只能用 had known。"
     },
     {
       "bad": "Yesterday I have been waiting outside for an hour.",
-      "good": "Yesterday I had been waiting outside for an hour.",
+      "good": "Yesterday I had been waiting outside for an hour when the door finally opened.",
       "why": "yesterday 把整句釘在過去，基準點就不是現在，所以要用 had 而不是 have。have been 的基準點永遠在「現在」，跟 yesterday 擺在一起就互相打架。"
     },
     {
@@ -17187,7 +17187,7 @@ grammar:[
     {
       "h": "換時態就只剩 have",
       "bullets": [
-        "過去式只有 had，沒有 had got，問句用 Did you have 而不是 Had you got",
+        "表示擁有的過去式只用 had，不用 had got（had got 是 get 的過去完成式，意思是『已經取得』），問句用 Did you have 而不是 Had you got",
         "未來式、不定詞、動名詞也都只能用 have：will have、to have、having",
         "have got 只有現在式這一種形狀，所以它不是時態，只是一種口語說法",
         "判斷口訣：句子一旦離開現在式，got 就要拿掉"
@@ -17196,7 +17196,7 @@ grammar:[
         {
           "en": "When I was a student, I had only one pair of shoes.",
           "cn": "學生時代我只有一雙鞋。",
-          "note": "過去式沒有 had got 這種寫法"
+          "note": "表示過去擁有只用 had，不用 had got"
         },
         {
           "en": "Next year the department will have its own budget.",
@@ -17408,7 +17408,7 @@ grammar:[
     {
       "h": "口語裡動不了的固定說法",
       "bullets": [
-        "You have got to be joking 這種驚訝的反應，換成 have to 就沒有那個語氣了",
+        "You have got to be joking 這種驚訝的反應是固定說法；美式口語也常說 You have to be joking，語氣一樣是驚訝，但換成其他 have to 句子就沒有那個語氣了",
         "I have got a feeling 這種講直覺的說法，也幾乎只以 have got 的形狀出現",
         "這些固定說法屬於口語，寫進正式文件會顯得突兀，說話時卻非常自然",
         "學起來的方式是整句背，不要試著套進前面的改寫規則"
@@ -17417,7 +17417,7 @@ grammar:[
         {
           "en": "You have got to be joking, the deadline is tomorrow?",
           "cn": "你開玩笑的吧，期限是明天？",
-          "note": "固定說法，換成 have to 語氣就不見了"
+          "note": "固定說法；美式口語也常說 You have to be joking，同樣是驚訝的語氣"
         },
         {
           "en": "I have got a feeling the second sample will fail too.",
@@ -17439,9 +17439,9 @@ grammar:[
       "why": "連續兩個 must 會讓讀者覺得你在下命令。第一句是公司規定，寫成 are required to 比較像制度；第二句是你自己的需求，寫成 need to 就夠了。中文的「必須」一個字包了所有情況，英文卻會因為選字而讓語氣差很多。"
     },
     {
-      "bad": "The laboratory had got the certificate before the audit.",
-      "good": "The laboratory had held the certificate before the audit.",
-      "why": "過去式不能用 had got，而在這種稽核情境裡，held 比 had 更精準，因為它暗示證書是有效期間內持有的。改寫時不要只把 got 刪掉，順手挑一個更具體的動詞，文件的專業度就上來了。"
+      "bad": "The laboratory had got the certificate for five years before the audit.",
+      "good": "The laboratory had held the certificate for five years before the audit.",
+      "why": "had got 是 get 的過去完成式，意思是「已經取得」；取得是一瞬間的事，不能配 for five years 這種持續時間。要講稽核前已經持有多久，用 had held 最精準，因為它強調證書在有效期間內一直持有。改寫時不要只把 got 刪掉，順手挑一個更具體的動詞，文件的專業度就上來了。"
     },
     {
       "bad": "Does the new line have got its own quality check?",
@@ -17496,7 +17496,7 @@ grammar:[
         "D. You have got some nerve."
       ],
       "ans": 2,
-      "expl": "C講的是真正的期限，換成 We have to submit the form by noon 意思和語氣都沒變。A、B、D都是固定的口語說法，換掉之後味道就不見了。"
+      "expl": "C講的是真正的期限，換成 We have to submit the form by noon 意思和語氣都沒變。A、B、D都是固定的口語說法，換掉之後味道就不見了。（A 在美式口語裡常說成 You have to be joking，語氣一樣是驚訝，這是常見的美式用法；這題依英式語感，以 C 為答案。）"
     }
   ]
 },
@@ -17690,7 +17690,7 @@ grammar:[
     },
     {
       "q": "Which sentence is correct?",
-      "qCn": "哪一句是正確的？（意思都是：他已經去看過醫生了。）",
+      "qCn": "哪一句是正確的？（意思都是：他（那時）已經去看醫生了。）",
       "opts": [
         "A. He had went to the doctor.",
         "B. He had gone to the doctor.",
@@ -18360,8 +18360,8 @@ grammar:[
   "summary": "句子裡只要出現 yesterday、last night、two weeks ago、in 2019 這種已經過完的時間，動詞就一定用過去式，不可以用 have done。",
   "sections": [
     {
-      "h": "三種最常見的過去時間詞",
-      "body": "這三種字一出現，動詞就沒有選擇。看到它們，先把動詞改成過去式，再看句子其他地方。",
+      "h": "四種最常見的過去時間詞",
+      "body": "這四種字一出現，動詞就沒有選擇。看到它們，先把動詞改成過去式，再看句子其他地方。",
       "table": {
         "head": [
           "時間詞",
@@ -19306,7 +19306,7 @@ grammar:[
         "will lose"
       ],
       "ans": 1,
-      "expl": "重點是「現在打不開門」這個結果，沒有說什麼時候弄丟的，所以用現在完成式 have lost。"
+      "expl": "重點是「現在打不開門」這個結果，沒有說什麼時候弄丟的，所以用現在完成式 have lost。（美式口語也常用過去簡單式 I lost my keys.，這題依標準用法選 have lost。）"
     },
     {
       "q": "We ___ dinner at seven last night.",
@@ -19460,7 +19460,7 @@ grammar:[
     {
       "bad": "Did you finish yet?",
       "good": "Have you finished yet?",
-      "why": "yet 表示「到現在為止還在等這件事」，屬於現在完成式的世界。用 Did 會讓句子變成在問某個已經結束的場合，跟 yet 互相打架。"
+      "why": "yet 表示「到現在為止還在等這件事」，屬於現在完成式的世界。用 Did 會讓句子變成在問某個已經結束的場合，跟 yet 互相打架。（美式口語也常用過去簡單式，Did you finish yet? 很常聽到；這裡依標準用法改成現在完成式。）"
     },
     {
       "bad": "I have met your brother last summer.",
@@ -19525,7 +19525,7 @@ grammar:[
         "was breaking"
       ],
       "ans": 1,
-      "expl": "後半句用現在式 should take，表示問題現在還在，所以前半句要用現在完成式 has broken。"
+      "expl": "後半句用現在式 should take，表示問題現在還在，所以前半句要用現在完成式 has broken。（美式口語也常用過去簡單式 The lift broke down again，這題依標準用法選 has broken。）"
     }
   ]
 },
@@ -19677,7 +19677,7 @@ grammar:[
         "was seeing"
       ],
       "ans": 1,
-      "expl": "早上還沒過完，這段時間還開著，用現在完成式 has seen，配 already 更自然。"
+      "expl": "早上還沒過完，這段時間還開著，用現在完成式 has seen，配 already 更自然。（美式口語也常用過去簡單式 she already saw four customers，這題依標準用法選 has seen。）"
     },
     {
       "q": "Our first manager ___ the night shift system in 2009.",
@@ -20707,7 +20707,7 @@ grammar:[
     {
       "bad": "How long do you work here?",
       "good": "How long have you worked here?",
-      "why": "問『到現在為止做了多久』要用現在完成式 have worked，用現在簡單式 do you work 會變成問『你通常都幾點上班』的意思，中文的『多久了』沒有這個差別，很容易搞錯。"
+      "why": "問『到現在為止做了多久』要用現在完成式 have worked，用現在簡單式 do you work 會變成問『你平常一天工作多久』的意思，中文的『多久了』沒有這個差別，很容易搞錯。"
     },
     {
       "bad": "I have studied English since six years.",
@@ -20784,7 +20784,7 @@ grammar:[
   "title": "How Long Have You ...? — Common Confusions",
   "titleCn": "How long have you...？更多容易搞混的地方",
   "srcDays": [],
-  "summary": "延伸 how long 問句：強調『一直在做的動作』用 have you been + Ving；狀態動詞（know, have, like）永遠不能加 ing；回答時 for 接長度、since 接起點，兩者不能互換。",
+  "summary": "延伸 how long 問句：強調『一直在做的動作』用 have you been + Ving；狀態動詞（know, like，以及表示擁有的 have）不能加 ing；回答時 for 接長度、since 接起點，兩者不能互換。",
   "sections": [
     {
       "h": "問『動作持續多久』：加 been + Ving",
@@ -20820,7 +20820,7 @@ grammar:[
     {
       "h": "狀態動詞不能加 ing",
       "bullets": [
-        "know, have, like, want 這類狀態動詞不能用進行式",
+        "know, like, want，以及表示擁有的 have，這類狀態動詞不能用進行式",
         "就算要表達『持續』，也只能用 have + 過去分詞"
       ],
       "examples": [
@@ -21027,8 +21027,8 @@ grammar:[
     },
     {
       "bad": "I have known her since three years ago.",
-      "good": "I have known her for three years. / ...since three years ago.",
-      "why": "three years ago 本身已是起點，勉強可搭 since，但最自然的講『長度』方式是 for three years；學習者常把 for 和 since ... ago 混在一起用錯。"
+      "good": "I have known her for three years.",
+      "why": "標準、自然的講法是 for three years；since three years ago 口語偶爾聽得到，但不建議這樣寫。學習者常把 for 和 since ... ago 混在一起用錯。"
     }
   ],
   "quiz": [
@@ -21315,7 +21315,7 @@ grammar:[
     {
       "bad": "I have been clean my room this morning, so it's tidy now.",
       "good": "I have cleaned my room this morning, so it's tidy now.",
-      "why": "已經有具體結果（房間乾淨了）時，要用have cleaned而不是have been cleaning，中文『打掃』沒有這種形式差異，容易搞混。"
+      "why": "have been 後面要接 V-ing，不能接原形 clean；而且已經有具體結果（房間乾淨了），要用have cleaned而不是have been cleaning，中文『打掃』沒有這種形式差異，容易搞混。"
     },
     {
       "bad": "I have been knowing him for five years.",
@@ -21325,7 +21325,7 @@ grammar:[
     {
       "bad": "I have already been finished my homework.",
       "good": "I have already finished my homework.",
-      "why": "finish本身已經是過去分詞，不需要再加been，have been finished是多餘且錯誤的形式。"
+      "why": "finished 就是過去分詞，have finished 就是現在完成式，不需要再加been；have been finished 在這句是多餘且錯誤的形式。"
     }
   ],
   "quiz": [
@@ -22164,7 +22164,7 @@ grammar:[
       ]
     },
     {
-      "h": "為什麼髒亂的房間要用have been doing，乾淨的手要用have done",
+      "h": "為什麼髒亂的廚房要用have been doing，做好的晚餐要用have done",
       "bullets": [
         "Why is the kitchen so messy? — I have been cooking.（強調過程留下的痕跡，不是重點在『煮好了幾道菜』）",
         "I have cooked dinner.（強調『晚餐已經做好了』這個結果）"
@@ -22173,7 +22173,7 @@ grammar:[
         {
           "en": "Why are your eyes so red? — I have been staring at the screen all day.",
           "cn": "你的眼睛怎麼這麼紅？——我一整天都一直盯著螢幕。",
-          "note": "用還沒做完的『過程』解釋現在的狀態"
+          "note": "用剛剛一直在做的『過程』解釋現在的狀態"
         },
         {
           "en": "I have painted the bedroom. It looks great now.",
@@ -22199,7 +22199,7 @@ grammar:[
     {
       "bad": "Why are your hands so dirty? — I have fixed the car.",
       "good": "Why are your hands so dirty? — I have been fixing the car.",
-      "why": "這裡在解釋『現在手髒』這個正在進行的痕跡，強調過程，用have been fixing，不是have fixed（那聽起來像已經修好了、手應該乾淨了）。"
+      "why": "這裡在解釋『現在手髒』這個痕跡，強調剛剛一直在做的過程，用have been fixing，不是have fixed（have fixed 的重點是『車修好了』這個結果，回答不了『手為什麼髒』）。"
     },
     {
       "bad": "How many emails have you been writing?",
@@ -22235,7 +22235,7 @@ grammar:[
         "fixed"
       ],
       "ans": 2,
-      "expl": "強調『正在做、還沒做完』的過程留下的痕跡，用have been fixing。"
+      "expl": "強調『剛剛一直在做』的過程留下的痕跡（動作可能剛結束，也可能還在進行），用have been fixing。"
     },
     {
       "q": "How many emails ___ today?",
@@ -22259,7 +22259,7 @@ grammar:[
         "cooked"
       ],
       "ans": 2,
-      "expl": "強調『一直在做』的過程，還沒做完（廚房還亂），用have been cooking。"
+      "expl": "強調『一直在做』的過程，廚房還亂就是留下的痕跡，用have been cooking。"
     }
   ]
 },
@@ -22466,10 +22466,10 @@ grammar:[
     {"bad": "She has broke her phone.", "good": "She has broken her phone.", "why": "break的過去分詞是broken，不是broke（那是過去簡單式）。"}
   ],
   "quiz": [
-    {"q": "Tom can't open the door. He ___ his key.", "qCn": "Tom打不開門，他的鑰匙不見了。", "opts": ["loses", "lost", "has lost", "is losing"], "ans": 2, "expl": "現在的結果（鑰匙現在不見了）用現在完成式has lost。"},
+    {"q": "Tom can't open the door. He ___ his key.", "qCn": "Tom打不開門，他的鑰匙不見了。", "opts": ["loses", "lost", "has lost", "is losing"], "ans": 2, "expl": "現在的結果（鑰匙現在不見了）用現在完成式has lost。（美式口語也常用過去簡單式 He lost his key.，這題依標準用法選 has lost。）"},
     {"q": "The rain ___ at three o'clock.", "qCn": "雨在三點的時候停了。", "opts": ["has stopped", "stopped", "stops", "is stopping"], "ans": 1, "expl": "at three o'clock是明確時間，用過去簡單式stopped。"},
-    {"q": "I ___ my umbrella! Have you seen it?", "qCn": "我的傘不見了！你有看到嗎？", "opts": ["lose", "lost", "have lost", "am losing"], "ans": 2, "expl": "have後面要接過去分詞lost，強調現在的結果。"},
-    {"q": "She ___ her phone. Now she can't call anyone.", "qCn": "她的手機壞了，現在她沒辦法打給任何人。", "opts": ["breaks", "broke", "has broken", "is breaking"], "ans": 2, "expl": "現在的結果（手機現在壞了）用現在完成式has broken，過去分詞是broken不是broke。"}
+    {"q": "I ___ my umbrella! Have you seen it?", "qCn": "我的傘不見了！你有看到嗎？", "opts": ["lose", "lost", "have lost", "am losing"], "ans": 2, "expl": "傘到現在還找不到，強調『現在的結果』，所以用 have + 過去分詞 have lost。（美式口語也常用過去簡單式 I lost my umbrella!，這題依標準用法選 have lost。）"},
+    {"q": "She ___ her phone. Now she can't call anyone.", "qCn": "她的手機壞了，現在她沒辦法打給任何人。", "opts": ["breaks", "broke", "has broken", "is breaking"], "ans": 2, "expl": "現在的結果（手機現在壞了）用現在完成式has broken，過去分詞是broken不是broke。（美式口語也常用過去簡單式 She broke her phone.，這題依標準用法選 has broken。）"}
   ]
 },
 
@@ -22516,11 +22516,11 @@ grammar:[
     {"bad": "Anita has been to the shelter now, so she is safe there.", "good": "Anita has gone to the shelter now, so she is safe there.", "why": "她現在人還在避難所，還沒回來，要用gone to，不是been to。"},
     {"bad": "Have you ever gone to a typhoon shelter before?", "good": "Have you ever been to a typhoon shelter before?", "why": "問『有沒有這樣的經驗』、而且人已經回來了，要用been to，不是gone to。"},
     {"bad": "He has went to the airport to check on his flight.", "good": "He has gone to the airport to check on his flight.", "why": "go的過去分詞是gone，不是went（went是過去簡單式）。"},
-    {"bad": "They have gone to Da Nang three times before, but they live there now.", "good": "They had been to Da Nang three times before they moved there.", "why": "『去過三次』是經驗，人現在住在那裡了（不是還在路上），要用been to。"}
+    {"bad": "They have gone to Da Nang three times before, but they live there now.", "good": "They had been to Da Nang three times before they moved there.", "why": "『去過三次』是經驗，人現在住在那裡了（不是還在路上），要用been to；改正句講的是搬過去之前的經驗，所以用過去完成式 had been to。"}
   ],
   "quiz": [
     {"q": "Where is Anita? — She ___ to the shelter. She isn't home yet.", "qCn": "Anita在哪裡？她去避難所了，還沒回家。", "opts": ["has been", "has gone", "went", "goes"], "ans": 1, "expl": "她現在還沒回來，用has gone to。"},
-    {"q": "___ you ever ___ to a typhoon shelter?", "qCn": "你有去過颱風避難所嗎？", "opts": ["Did / go", "Have / been", "Have / gone", "Do / go"], "ans": 1, "expl": "問經驗、人已經回來了，用Have you ever been to...?"},
+    {"q": "___ you ever ___ to a typhoon shelter?", "qCn": "你有去過颱風避難所嗎？", "opts": ["Did / go", "Have / been", "Have / gone", "Do / go"], "ans": 1, "expl": "問經驗、人已經回來了，用Have you ever been to...?（美式口語也常用過去簡單式 Did you ever go to...?，這題依標準用法選 Have you ever been to...?）"},
     {"q": "He ___ to the airport to check on his flight.", "qCn": "他去機場查他的班機狀況了。", "opts": ["has went", "has gone", "goes", "go"], "ans": 1, "expl": "go的過去分詞是gone，不是went。"},
     {"q": "My parents ___ to that beach town many times, but they have never lived there.", "qCn": "我爸媽去過那個海邊小鎮很多次，但從來沒住過那裡。", "opts": ["have gone", "have been", "have go", "are going"], "ans": 1, "expl": "『去過很多次』是經驗、人已經回來了，用have been to。"}
   ]
@@ -22739,7 +22739,7 @@ grammar:[
   ],
   "traps": [
     {"bad": "I have visited Da Nang in 2023.", "good": "I visited Da Nang in 2023.", "why": "in 2023是明確的過去時間，要用過去簡單式，不能用現在完成式。"},
-    {"bad": "Did you ever eat pho?", "good": "Have you ever eaten pho?", "why": "ever問「有沒有這樣的經驗」，通常搭配現在完成式Have you ever + 過去分詞，不是過去簡單式。"},
+    {"bad": "Did you ever eat pho?", "good": "Have you ever eaten pho?", "why": "ever問「有沒有這樣的經驗」，通常搭配現在完成式Have you ever + 過去分詞，不是過去簡單式。（美式口語也常用過去簡單式，Did you ever eat pho? 也很常聽到；這裡依標準用法改成現在完成式。）"},
     {"bad": "I have eaten already lunch.", "good": "I have already eaten lunch.", "why": "already通常放在have和過去分詞中間，不是放在動詞後面。"},
     {"bad": "She has finished her homework last night.", "good": "She finished her homework last night.", "why": "last night是明確過去時間，要用過去簡單式finished。"}
   ],
@@ -22937,7 +22937,7 @@ grammar:[
     {"bad": "I was cook dinner.", "good": "I was cooking dinner.", "why": "was/were 後面一定要加V-ing，不能用原形動詞。"},
     {"bad": "She were watching TV.", "good": "She was watching TV.", "why": "she是單數主詞要用was，不能用were（were是you/we/they用的）。"},
     {"bad": "I was cooking dinner yesterday I finished at eight.", "good": "I was cooking dinner at eight last night.", "why": "過去進行式通常搭配一個時間點（at eight），不是整句話都用進行式描述已完成的事。"},
-    {"bad": "I cooking dinner now.", "good": "I was cooking dinner last night.", "why": "忘記加was/were，現在進行式才用am/is/are，過去要用was/were。"}
+    {"bad": "I cooking dinner at seven last night.", "good": "I was cooking dinner last night.", "why": "忘記加was/were，現在進行式才用am/is/are，過去要用was/were。"}
   ],
   "quiz": [
     {"q": "I ___ dinner at seven last night.", "qCn": "我昨晚七點的時候正在煮晚餐。", "opts": ["cook", "cooked", "was cooking", "am cooking"], "ans": 2, "expl": "at seven last night是過去某個時間點，正在做的事用was cooking。"},
@@ -23673,7 +23673,7 @@ grammar:[
     {
       "bad": "Housing costs rose sharply in recent years.",
       "good": "Housing costs have risen sharply in recent years.",
-      "why": "in recent years 包含現在，暗示趨勢還在繼續，用現在完成式更準確。"
+      "why": "in recent years 包含現在，暗示趨勢還在繼續，用現在完成式更準確。（美式口語也常用過去簡單式，rose sharply in recent years 也看得到；正式寫作仍以現在完成式為準。）"
     }
   ],
   "quiz": [
@@ -24459,7 +24459,7 @@ grammar:[
     {bad:"Does the MRT running on public holidays?",good:"Does the MRT run on public holidays?",why:"疑問句 Does 後面的動詞要用原形 run，不能加 -ing。"}
   ],
   quiz:[
-    {q:"I ___ my manager at nine tomorrow — we already agreed on it.",qCn:"我明天九點要跟主管開會——我們已經約好了。",opts:["will meet","am meeting","meet","met"],ans:1,expl:"已經約好的計畫用現在進行式表未來：am meeting。"},
+    {q:"I ___ my manager at nine tomorrow — we already agreed on it.",qCn:"我明天九點要跟主管開會——我們已經約好了。",opts:["will meet","am meeting","meet","met"],ans:1,expl:"已經約好的計畫用現在進行式表未來：am meeting。（will meet 不算文法錯誤，只是較不自然。）"},
     {q:"The first train ___ the station at five thirty every day.",qCn:"首班車每天五點半從車站出發。",opts:["is leaving","leaves","will leave","leave"],ans:1,expl:"固定的時刻表用現在簡單式表未來：leaves。"},
     {q:"More people ___ bikes to commute these days.",qCn:"這陣子越來越多人騎腳踏車通勤。",opts:["use","uses","are using","used"],ans:2,expl:"these days 表示這陣子的趨勢，用現在進行式：are using。"},
     {q:"___ the MRT run on public holidays?",qCn:"國定假日捷運有開嗎？",opts:["Is","Are","Does","Do"],ans:2,expl:"問一般規則用現在簡單式疑問句，主詞 the MRT 是第三人稱單數：Does。"}
@@ -24495,9 +24495,9 @@ grammar:[
     ]}
   ],
   traps:[
-    {bad:"The Red Line is always have signal problems, I'm so tired of it!",good:"The Red Line is always having signal problems, I'm so tired of it!",why:"抱怨「老是這樣」用 is always + V-ing，be 後面要接 -ing。（The Red Line has signal problems sometimes. 也正確，只是語氣中性、沒有抱怨的感覺。）"},
+    {bad:"The Red Line is always have signal problems. I'm so tired of it!",good:"The Red Line is always having signal problems. I'm so tired of it!",why:"抱怨「老是這樣」用 is always + V-ing，be 後面要接 -ing。（The Red Line has signal problems sometimes. 也正確，只是語氣中性、沒有抱怨的感覺。）"},
     {bad:"（新聞內文）A signal fault delays thousands of commuters this morning.",good:"（新聞內文）A signal fault delayed thousands of commuters this morning.",why:"現在簡單式是新聞「標題」的寫法（Signal Fault Delays Thousands）；內文報導已經發生的事，要用過去式 delayed。"},
-    {bad:"Ridership falls this month compared to last month, we don't know why yet.",good:"Ridership is falling this month compared to last month, we don't know why yet.",why:"講「正在變化中、還沒結束」的趨勢，常用現在進行式；現在簡單式聽起來像是已經確定、固定的模式。"},
+    {bad:"Ridership falls this month compared to last month. We don't know why yet.",good:"Ridership is falling this month compared to last month. We don't know why yet.",why:"講「正在變化中、還沒結束」的趨勢，常用現在進行式；現在簡單式聽起來像是已經確定、固定的模式。"},
     {bad:"Customer complaints are tending to rise in the summer months.（正式報告）",good:"Customer complaints tend to rise in the summer months.",why:"tend to 本身已經表達「傾向、通常」的意思，正式寫作中通常不加 -ing。"}
   ],
   quiz:[
@@ -24622,13 +24622,13 @@ grammar:[
     ]}
   ],
   traps:[
-    {bad:"The clinic will open at nine tomorrow. (照表定的營業時間)",good:"The clinic opens at nine tomorrow.",why:"固定的營業時間表用現在簡單式講未來；will 聽起來像是臨時的預測或決定。"},
+    {bad:"The clinic will open at nine tomorrow. (照表定的營業時間)",good:"The clinic opens at nine tomorrow.",why:"這句不算文法錯誤，只是較不自然：固定的營業時間表用現在簡單式講未來；will 聽起來像是臨時的預測或決定。"},
     {bad:"Anita hardly ever doesn't answer her phone.",good:"Anita hardly ever answers her phone late.",why:"hardly ever 本身已經是否定的意思，後面不能再加 doesn't，等於雙重否定。"},
     {bad:"If her mother will feel sick, she calls the clinic.",good:"If her mother feels sick, she calls the clinic.",why:"if / when 子句講一般性規則時，就算指未來也不能用 will，要用現在簡單式。"},
     {bad:"A fever is meaning the body is fighting an infection.",good:"A fever means the body is fighting an infection.",why:"mean 是狀態動詞，描述普遍事實用簡單式，不能加 -ing。"}
   ],
   quiz:[
-    {q:"The clinic ____ at nine every weekday morning, according to the schedule on the door.",qCn:"根據門上的時刻表，這間診所平日每天早上九點開門。",opts:["will open","opens","is opening","opened"],ans:1,expl:"固定的營業時刻表用現在簡單式講未來。"},
+    {q:"The clinic ____ at nine every weekday morning, according to the schedule on the door.",qCn:"根據門上的時刻表，這間診所平日每天早上九點開門。",opts:["will open","opens","is opening","opened"],ans:1,expl:"固定的營業時刻表（每天都這樣）用現在簡單式。"},
     {q:"Anita ____ misses her mother's calls — she always answers within a minute.",qCn:"Anita幾乎不會漏接媽媽的電話——她總是一分鐘內就接。",opts:["never not","hardly ever","doesn't hardly","not ever"],ans:1,expl:"hardly ever 本身已含否定，是「幾乎不」的固定用法。"},
     {q:"If her mother ____ sick, she ____ the clinic right away.",qCn:"只要她媽媽不舒服，她就會馬上打給診所。",opts:["feels / calls","will feel / will call","feel / will call","will feel / calls"],ans:0,expl:"if 子句講一般性規則，if 子句裡不能用 will（排除 B、D）；主詞 her mother 是第三人稱單數，要用 feels（排除 C）。講「每次都會這樣」的習慣，主句也用現在簡單式 calls。"},
     {q:"Which sentence describes a general truth?",qCn:"哪一句在描述一個普遍事實？",opts:["A fever is meaning an infection.","A fever usually means the body is fighting an infection.","A fever was meaning an infection.","A fever means infection yesterday."],ans:1,expl:"mean 是狀態動詞，描述普遍成立的事實要用現在簡單式，不能用進行式。"}
@@ -24644,7 +24644,7 @@ grammar:[
     {h:"① 歷史現在式（historical present）：說故事更生動", body:[
       "明明講的是過去的事，卻刻意用現在簡單式，讓聽者感覺「事情正在眼前發生」：",
       "So I walk into the clinic, and the waiting room is already full.（口語敘事，明明是過去發生的）",
-      "In 1979, the WHO declares smallpox eradicated worldwide.（歷史敘述也可以用現在式，增加戲劇效果）",
+      "In 1980, the WHO declares smallpox eradicated worldwide.（歷史敘述也可以用現在式，增加戲劇效果；世界衛生組織於 1980 年 5 月正式宣布根除天花）",
       "這種用法常見於口語故事、新聞回顧、紀錄片旁白，正式書面報告則避免使用。"
     ]},
     {h:"② 泛稱 you：指示與食譜的現在簡單式", bullets:[
@@ -24808,14 +24808,14 @@ grammar:[
     ]}
   ],
   traps:[
-    {bad:"I will fly to Taipei on Thursday. (機票早就訂好)",good:"I'm flying to Taipei on Thursday.",why:"已敲定的安排用進行式；will 聽起來像剛剛才決定。中文都是「我週四飛台北」，但英文靠時態區分「早就訂好」跟「臨時決定」。"},
+    {bad:"I will fly to Taipei on Thursday. (機票早就訂好)",good:"I'm flying to Taipei on Thursday.",why:"這句不算文法錯誤，只是較不自然：已敲定的安排用進行式最自然；will 聽起來像剛剛才決定。中文都是「我週四飛台北」，但英文靠時態區分「早就訂好」跟「臨時決定」。"},
     {bad:"The printer always is breaking down.",good:"The printer is always breaking down.",why:"always 要放在 be 動詞後面、V-ing 前面，位置錯了整句就垮。"},
     {bad:"I'm living in Taoyuan all my life.",good:"I have lived in Taoyuan all my life.",why:"all my life 是「一輩子」，不是暫時狀態；進行式只能配暫時的期間（this year / these days）。"},
     {bad:"She is knowing the new process very well.",good:"She knows the new process very well.",why:"know 是狀態動詞，再進階的用法也救不了它——狀態動詞就是不用進行式。"}
   ],
   quiz:[
     {q:"My car is at the garage, so I ____ the bus to work this week.",qCn:"我的車在修車廠，所以這禮拜我都搭公車上班。",opts:["take","am taking","will take","took"],ans:1,expl:"this week ＝ 暫時狀態（車修好就結束），用現在進行式。"},
-    {q:"We ____ the new client at 10 a.m. tomorrow — the meeting room is already booked.",qCn:"我們明天早上十點要見新客戶——會議室已經訂好了。",opts:["will meet","meet","are meeting","met"],ans:2,expl:"會議室都訂了＝敲定的安排 → are meeting。"},
+    {q:"We ____ the new client at 10 a.m. tomorrow — the meeting room is already booked.",qCn:"我們明天早上十點要見新客戶——會議室已經訂好了。",opts:["will meet","meet","are meeting","met"],ans:2,expl:"會議室都訂了＝敲定的安排 → are meeting。（will meet 不算文法錯誤，只是較不自然，聽起來像剛剛才決定。）"},
     {q:"選出「抱怨」語氣最強的一句：",qCn:"選出「抱怨」語氣最強的一句：",opts:["My roommate always leaves dishes in the sink.","My roommate is always leaving dishes in the sink.","My roommate left dishes in the sink.","My roommate leaves dishes in the sink sometimes."],optsCn:["A. 我室友總是把碗盤留在水槽。", "B. 我室友老是把碗盤留在水槽（抱怨語氣）。", "C. 我室友把碗盤留在水槽了。", "D. 我室友有時候把碗盤留在水槽。"],ans:1,expl:"always ＋ 進行式 ＝ 「老是這樣、受不了」的抱怨語氣。"},
     {q:"Why ____ so quiet today? You're usually the loudest person in the office.",qCn:"你今天怎麼這麼安靜？你平常是辦公室最大聲的人。",opts:["are you been","are you being","do you be","you are"],ans:1,expl:"be 的進行式 are you being 表示「今天暫時的表現」，跟平常不同——後句的 usually 就是線索。"}
   ]

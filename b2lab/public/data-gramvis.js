@@ -161,13 +161,13 @@ window.GRAMVIS = [
     { label: '英文', text: 'I have lost my keys.' },
     { label: '意思', text: '「弄丟」發生在剛才，但你現在進不了門。' },
     { label: '規則', text: '過去的動作 + 現在的結果 → have / has + 過去分詞。' },
-    { label: '比較', text: '如果只是在講昨天發生過什麼事：I lost my keys yesterday.（現在已經找到了也沒差，時間關起來了。）' }
+    { label: '比較', text: '如果只是在講昨天發生過什麼事：I lost my keys yesterday.（不管鑰匙現在找到了沒有都可以這樣說，因為 yesterday 是已經結束的時間。）' }
   ],
 
   quiz: [
     { q: 'I ____ my keys, so I can\'t get into my apartment.', opts: ['lost', 'have lost', 'was losing', 'had lost'], ans: 1,
       qCn: '我的鑰匙弄丟了，所以進不了家門。',
-      expl: '重點是「現在進不去」——過去的動作留下現在的結果 → 現在完成式 have lost。' },
+      expl: '重點是「現在進不去」——過去的動作留下現在的結果 → 現在完成式 have lost。（美式口語也常用過去簡單式 I lost my keys.，這題依標準用法選 have lost。）' },
     { q: 'I ____ him yesterday.', opts: ['have seen', 'saw', 'have been seeing', 'was seen'], ans: 1,
       qCn: '我昨天有看到他。',
       expl: 'yesterday 是已經結束的時間，不能配現在完成式 → 過去簡單式 saw。' },

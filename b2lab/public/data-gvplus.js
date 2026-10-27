@@ -262,7 +262,7 @@ window.GVPLUS = {
         "items": [
           {
             "en": "Mai is picking up the herbs at seven.",
-            "cn": "Mai七點要去拿香菜。",
+            "cn": "Mai七點要去拿香草。",
             "nt": "時間跟對方講好了"
           },
           {
@@ -574,7 +574,7 @@ window.GVPLUS = {
         "I am going to booking it."
       ],
       "ans": 1,
-      "expl": "B 是聽到 A 的話才決定去訂會議室的，決定就在這一秒，所以用 I'll。第一句暗示早就約好，第四句形狀錯誤。"
+      "expl": "B 是聽到 A 的話才決定去訂會議室的，決定就在這一秒，所以用 I'll。第一句是「此刻正在訂」，講的是正在進行的動作，不是聽到之後當下的決定；第四句形狀錯誤。"
     },
     {
       "q": "Choose the most natural way to suggest a joint action.",
@@ -750,7 +750,7 @@ window.GVPLUS = {
         "The agent would keep the originals."
       ],
       "ans": 1,
-      "expl": "條款描述持續有效的義務，用現在簡單式最乾淨。進行式把義務變成動作，going to 語域太口語，would 變成假設。"
+      "expl": "條款描述持續有效的義務，用現在簡單式最乾淨。進行式把義務變成動作，going to 語域太口語，would 變成假設。（合約寫義務時也常見 shall 或 will，will be keeping 不算文法錯誤，只是較不自然；這四個選項裡，現在簡單式最乾淨。）"
     }
   ]
 },
@@ -1005,7 +1005,7 @@ window.GVPLUS = {
       "ask": "為什麼講合約上的日期不用 will？",
       "en": "The deposit becomes refundable after twelve months.",
       "cn": "押金十二個月後就可以退。",
-      "why": "條文描述的是一個持續有效的規定，不是某一次的未來事件，所以英文用現在簡單式，語氣才會像在引述而不是在預測。一旦改成 will，讀者會覺得那只是你以為的規則，整句的可信度就掉了。這也是合約通篇幾乎看不到 will 的原因。"
+      "why": "條文描述的是一個持續有效的規定，不是某一次的未來事件，所以英文用現在簡單式，語氣才會像在引述而不是在預測。一旦改成 will，讀者會覺得那只是你以為的規則，整句的可信度就掉了。改成 will 不算文法錯誤，只是較不自然（合約寫義務時也常見 shall 或 will）。"
     },
     {
       "key": "trip",
@@ -1175,7 +1175,7 @@ window.GVPLUS = {
       "ask": "為什麼指著東西講未來時要用 going to？",
       "en": "Look at that gauge. It is going to trip again.",
       "cn": "你看那個儀表，它又要跳掉了。",
-      "why": "叫對方去看，等於把證據攤在他面前，這時候用 will 就自相矛盾——will 的語氣是沒有根據的猜測。going to 把「我是從這個現象推出來的」這層意思一起帶進句子，所以它在工程報告和警告裡特別常見。判斷方法：你能指著某個東西說「就是因為這個」，就用 going to。"
+      "why": "叫對方去看，等於把證據攤在他面前，這時候用 will 不算錯，只是較不自然——will 比較像一般的預測，沒把「眼前有證據」帶出來。going to 把「我是從這個現象推出來的」這層意思一起帶進句子，所以它在工程報告和警告裡特別常見。判斷方法：你能指著某個東西說「就是因為這個」，就用 going to。"
     },
     {
       "key": "decided",
@@ -1272,7 +1272,7 @@ window.GVPLUS = {
         "is failing"
       ],
       "ans": 1,
-      "expl": "前一句的漏水就是證據，所以用 going to 的有根據預測；will 在這裡會變成毫無依據的猜測。"
+      "expl": "前一句的漏水就是證據，所以用 going to 的有根據預測；will fail 不算文法錯誤，只是較不自然，聽不出是從證據推出來的。"
     },
     {
       "q": "Two of the three bills ___ in the next session, according to the committee.",
@@ -1337,10 +1337,10 @@ window.GVPLUS = {
       "icon": "balance",
       "title": "條文不預測",
       "titleCn": "現在簡單式的硬度",
-      "ask": "為什麼合約幾乎看不到 will？",
+      "ask": "為什麼引述條文時少用 will？",
       "en": "The tenant settles the service charge each quarter.",
       "cn": "承租人每季結清服務費。",
-      "why": "條款描述的是一個持續有效的義務，不是某一次的未來事件。用現在簡單式，句子讀起來像規則本身在說話，沒有留下討論空間；換成 will，同一句就變成「我預期他會付」，把義務降級成期待。法律英文怕的就是這一點點語氣鬆動。"
+      "why": "條款描述的是一個持續有效的義務，不是某一次的未來事件。用現在簡單式，句子讀起來像規則本身在說話，沒有留下討論空間；換成 will 不算錯，只是較不自然，同一句就變成「我預期他會付」，把義務降級成期待。法律英文怕的就是這一點點語氣鬆動。"
     },
     {
       "key": "proof",
@@ -1437,7 +1437,7 @@ window.GVPLUS = {
         "is going to run"
       ],
       "ans": 1,
-      "expl": "引述條款要用現在簡單式，語氣才是規定本身在說話。用 will 會把義務講成預期。"
+      "expl": "引述條款要用現在簡單式，語氣才是規定本身在說話。用 will 不算文法錯誤，只是較不自然，會把義務講成預期。"
     },
     {
       "q": "Which ending keeps the most room for revision in a formal report?",
@@ -1816,7 +1816,7 @@ window.GVPLUS = {
         "didn't use to"
       ],
       "ans": 1,
-      "expl": "now 指出這是現在的狀態，而且後面接名詞 the long commute，所以用 be used to 的現在式。used to 會變成「以前通勤很久、現在不是」，跟後半句對不上。"
+      "expl": "now 指出這是現在的狀態，而且後面接名詞 the long commute，所以用 be used to 的現在式。used to 後面要接原形動詞，意思是「以前常常…、現在不再」，不能直接接名詞 the long commute，而且也跟 now 對不上。"
     }
   ]
 },
@@ -1851,7 +1851,7 @@ window.GVPLUS = {
           },
           {
             "en": "I will interview two candidates on Friday.",
-            "cn": "弱：對方會以為還沒確定"
+            "cn": "較不自然：對方可能以為還沒確定"
           }
         ]
       },
@@ -1869,7 +1869,7 @@ window.GVPLUS = {
           },
           {
             "en": "The gate will close at nine.",
-            "cn": "弱：像在猜，不像公告"
+            "cn": "較不自然：像在猜，不像公告"
           }
         ]
       },
@@ -2470,7 +2470,7 @@ window.GVPLUS = {
       "ask": "為什麼過去式不能寫 had got？",
       "en": "The first warehouse had only two forklifts.",
       "cn": "第一座倉庫只有兩台堆高機。",
-      "why": "have got 這個組合的基準點永遠釘在現在，所以它沒有過去式，也沒有未來式。一旦句子跑到過去就只剩 had，跑到未來就只剩 will have。這也是為什麼 had got 和 will have got 在英文裡都不存在——不是比較不常用，而是根本不是這個句型的形狀。"
+      "why": "have got 這個組合的基準點永遠釘在現在，所以表示「擁有」時它沒有過去式，也沒有未來式。一旦句子跑到過去就只剩 had，跑到未來就只剩 will have。had got 和 will have got 雖然也是正確的英文，但那是 get 的完成式（「已經取得」／「到時候將已取得」），不是「擁有」的過去式或未來式。"
     },
     {
       "key": "formal",
@@ -2517,7 +2517,7 @@ window.GVPLUS = {
       "cn": "Anita有越南的駕照。",
       "pts": [
         "可以換成 has got，語氣變口語",
-        "不能加 -ing，也沒有 had got 這種過去式",
+        "不能加 -ing，過去式也不用 had got",
         "同一類的狀態動詞還有 own、know、belong、need"
       ]
     },
@@ -2539,7 +2539,7 @@ window.GVPLUS = {
   },
   "quizMore": [
     {
-      "q": "Sorry, she can't come to the phone. She ___ a fitting with the auditor.",
+      "q": "Sorry, she can't come to the phone. She ___ lunch with the auditor.",
       "opts": [
         "has got",
         "is having",
@@ -2547,7 +2547,7 @@ window.GVPLUS = {
         "had got"
       ],
       "ans": 1,
-      "expl": "have a fitting 是進行一場會面，是動作，所以可以用進行式表示此刻正在發生。has got 只能表示擁有。"
+      "expl": "have lunch 是吃午餐，是動作，所以可以用進行式表示此刻正在發生。has got 只能表示擁有。"
     },
     {
       "q": "Which sentence is correct?",
@@ -3318,16 +3318,16 @@ window.GVPLUS = {
         "h": "動作片語",
         "cells": [
           {
-            "en": "We have a short meeting every Monday.",
-            "cn": "我們每個星期一開一場短會。",
+            "en": "We have lunch together every Monday.",
+            "cn": "我們每個星期一一起吃午餐。",
             "hi": true
           },
           {
-            "en": "We have got a short meeting every Monday.",
-            "cn": "（錯）開會是動作，不能加 got"
+            "en": "We have got lunch together every Monday.",
+            "cn": "（錯）吃午餐是動作，不能加 got"
           },
           {
-            "en": "We are having got a short meeting right now.",
+            "en": "We are having got lunch right now.",
             "cn": "（錯）進行式和 got 不能同時出現"
           }
         ]
@@ -3442,7 +3442,7 @@ window.GVPLUS = {
       "cn": "她正在跟客戶視訊。",
       "pts": [
         "可以有進行式",
-        "過去式就是 had，沒有 had got",
+        "過去式就是 had，不用 had got",
         "問句一律走 do 或 did"
       ]
     },
@@ -3634,7 +3634,7 @@ window.GVPLUS = {
         "You must be joking me."
       ],
       "ans": 2,
-      "expl": "這是固定的口語說法，只有 have got to 的形狀留得住那個驚訝的語氣。換成 have to 或 are required to 就變成在講義務了。"
+      "expl": "這是固定的口語說法，have got to 的形狀最能留住那個驚訝的語氣。換成 are required to 就變成在講義務了。注意：You have to be joking 是常見的美式用法，語氣一樣是驚訝；這題依英式語感選 have got to。"
     }
   ]
 },
@@ -3720,7 +3720,7 @@ window.GVPLUS = {
     {
       "key": "read",
       "icon": "book",
-      "title": "讀過了",
+      "title": "沒吃過",
       "titleCn": "never 也放中間",
       "ask": "「在那之前從來沒有」要怎麼講？",
       "en": "I had never tried mango before that trip.",
@@ -5157,7 +5157,7 @@ window.GVPLUS = {
         "have broken"
       ],
       "ans": 2,
-      "expl": "窗戶現在是破的，講到現在的結果用 has broken；someone 是單數，所以不是 have。"
+      "expl": "窗戶現在是破的，講到現在的結果用 has broken；someone 是單數，所以不是 have。（美式口語也常用過去簡單式 Someone broke the window!，這題依標準用法選 has broken。）"
     },
     {
       "q": "They ___ the new bakery last Friday.",
@@ -5272,7 +5272,7 @@ window.GVPLUS = {
     },
     {
       "label": "對照錯誤版",
-      "text": "錯誤版：Did you sign it yet? yet 屬於完成式的世界，要改成 Have you signed it yet?"
+      "text": "較不自然版：Did you sign it yet?（美式口語也常用過去簡單式這樣問）。yet 屬於完成式的世界，標準說法是 Have you signed it yet?"
     }
   ],
   "comparison": {
@@ -5885,7 +5885,7 @@ window.GVPLUS = {
           },
           {
             "en": "I have started it last month.",
-            "cn": "（錯）ago 與明確過去時間不配完成式"
+            "cn": "（錯）last month 是明確過去時間，不配完成式"
           }
         ]
       },
@@ -6481,7 +6481,7 @@ window.GVPLUS = {
     },
     {
       "label": "換個說法",
-      "text": "錯誤說法：How long do you work here?——那是在問『你通常幾點上班』，答不出『多久了』。"
+      "text": "錯誤說法：How long do you work here?——那是在問『你平常一天工作多久』，答不出『多久了』。"
     }
   ],
   "comparison": {
@@ -6543,7 +6543,7 @@ window.GVPLUS = {
 },
 "dg20260915b1": {
   "vis": true,
-  "oneLine": "問時間長度用 have you + Vpp，強調『一直在做的動作』用 have you been + Ving——但 know、want 這種狀態動詞永遠不能加 ing。",
+  "oneLine": "問時間長度用 have you + Vpp，強調『一直在做的動作』用 have you been + Ving——但 know、want 這種狀態動詞通常不加 ing。",
   "map": {
     "when": "要問『到現在為止做了多久』、又想分清楚『結果』還是『持續的動作』時",
     "why": "英文用有沒有 been + Ving 來區分『單純時間長度』和『一直在進行的動作』，中文常常混在一起",
@@ -7478,7 +7478,7 @@ dg20260911b1p: {
       "ask": "要怎麼問『你在這裡工作多久了』？",
       "en": "How long have you worked at this company?",
       "cn": "你在這家公司做多久了？",
-      "why": "問『從過去到現在做了多久』要用現在完成式How long have you worked，不能用現在簡單式How long do you work（那是問『通常做什麼』）。"
+      "why": "問『從過去到現在做了多久』要用現在完成式How long have you worked，不能用現在簡單式How long do you work（那是問『你平常一天工作多久』）。"
     },
     {
       "key": "ask-duration-wait",
@@ -8161,12 +8161,12 @@ dg20260909b1p: {
     {
       "key": "ongoing",
       "icon": "star",
-      "title": "還沒做完就用have been doing",
-      "titleCn": "還在繼續、沒有要停",
+      "title": "解釋痕跡就用have been doing",
+      "titleCn": "剛剛一直在做、留下痕跡",
       "ask": "廚房怎麼還這麼亂？",
       "en": "I have been cooking all afternoon.",
       "cn": "我整個下午都在煮飯。",
-      "why": "廚房還亂表示還沒做完，強調『一直在做』的過程，用have been cooking，不是have cooked。"
+      "why": "廚房還亂，是『一直在煮』留下的痕跡（動作可能剛停，也可能還在進行），強調過程，用have been cooking，不是have cooked。"
     }
   ],
   "steps": [
@@ -8233,7 +8233,7 @@ dg20260909b1p: {
         "cooked"
       ],
       "ans": 1,
-      "expl": "廚房還亂，表示還在做的過程，用have been cooking。"
+      "expl": "廚房還亂，是一直在煮留下的痕跡，用have been cooking。"
     },
     {
       "q": "She ___ five emails this morning.",
@@ -8504,7 +8504,7 @@ g01: {
       expl: 'Look! 表示「此刻」，正在下 → 現在進行式 is raining。' },
     { q: 'I ____ my homework, so I can go out now.', opts: ['finish', 'finished', 'have finished', 'was finishing'], ans: 2,
       qCn: '我做完功課了，所以現在可以出去。',
-      expl: '過去的動作留下「現在可以出門」的結果 → 現在完成式 have finished。' },
+      expl: '過去的動作留下「現在可以出門」的結果 → 現在完成式 have finished。（美式口語也常用過去簡單式 I finished my homework，這題依標準用法選 have finished。）' },
     { q: 'She ____ for two hours when I finally arrived.', opts: ['waited', 'has waited', 'had been waiting', 'is waiting'], ans: 2,
       qCn: '當我終於到的時候，她已經等了兩個小時。',
       expl: '到「我抵達」這個過去的點為止已經持續兩小時 → 過去完成進行式 had been waiting。' }
@@ -8685,7 +8685,7 @@ g03: {
       qCn: '她在等公車的時候掉了鑰匙。',
       expl: '弄丟是一瞬間 → 過去簡單式 lost；等公車是一段背景 → was waiting。' },
     { q: 'I ____ to work, ____ my coffee and ____ my emails.', opts: ['was driving / was drinking / was checking', 'drove / drank / checked', 'drove / was drinking / checked', 'was driving / drank / was checking'], ans: 1,
-      qCn: '我開車去上班、喝了咖啡、收了信。',
+      qCn: '我開車去上班、喝了咖啡、看了信。',
       expl: '照順序報告三件做完的事，沒有要強調「正在中間」→ 全部用過去簡單式。' }
   ]
 },
@@ -8778,10 +8778,10 @@ g04: {
       expl: 'we were children 是一個起點（而且是一整句）→ 用 since。' },
     { q: 'Have you eaten ____?', opts: ['already', 'yet', 'still', 'ever since'], ans: 1,
       qCn: '你吃了沒？',
-      expl: '疑問句問「做了沒」，固定用句尾的 yet。' },
+      expl: '疑問句問「做了沒」，固定用句尾的 yet。（美式口語也常用過去簡單式 Did you eat yet?，這題依標準用法選 yet。）' },
     { q: 'Which sentence is correct?', opts: ['I have finished already my work.', 'I have already finished my work.', 'I already have finished my work.', 'I have finished my work yet.'], ans: 1,
       qCn: '哪一句是正確的？',
-      expl: 'already 放在 have 和過去分詞中間；yet 不能用在肯定句。' }
+      expl: 'already 放在 have 和過去分詞中間；yet 不能用在肯定句。（美式口語也常用過去簡單式 I already finished my work.，但用現在完成式時，already 的標準位置是 have 和過去分詞中間。）' }
   ]
 },
 
@@ -10891,7 +10891,7 @@ dg20260821b1: {
       ask: '這是感覺、想法還是擁有？',
       en: 'I believe you.',
       cn: '我相信你。',
-      why: 'believe、know、understand、want、need、prefer、own、belong、seem、cost 這些動詞沒有進行式，就算你想強調「現在」也不行。' },
+      why: 'believe、know、understand、want、need、prefer、own、belong、seem 這些動詞沒有進行式，就算你想強調「現在」也不行。' },
     { key: 'exception', icon: 'balance',
       title: 'have is special', titleCn: 'have 是例外',
       ask: '這個 have 是「擁有」還是「做某件事」？',
@@ -11435,7 +11435,7 @@ dg20260814: {
       ask: '這個動詞有沒有進行式？',
       en: 'I need it now.',
       cn: '我現在就需要。',
-      why: '不管是講暫時、講未來安排還是講抱怨，狀態動詞（need / know / want / believe / own）都不能加 -ing。這條界線沒有例外。' }
+      why: '不管是講暫時、講未來安排還是講抱怨，狀態動詞（need / know / want / believe / own）都不能加 -ing。（像 think、be 這種本身可以有動作意思的字例外，但上面這幾個不行。）' }
   ],
   steps: [
     { label: '情境', text: '朋友問你明天有沒有空。' },
@@ -11465,7 +11465,7 @@ dg20260814: {
   quizMore: [
     { q: "I can't come — I ____ my sister at the airport at six.", opts: ['meet', 'am meeting', 'will meet', 'have met'], ans: 1,
       qCn: '我不能去——我六點要去機場接我姊。',
-      expl: '已經約好的安排 → 現在進行式表未來。' },
+      expl: '已經約好的安排 → 現在進行式表未來。（will meet 不算文法錯誤，只是較不自然。）' },
     { q: 'You ____ your phone at home! That is the third time this week.', opts: ['always leave', 'are always leaving', 'always left', 'have always left'], ans: 1,
       qCn: '你又把手機忘在家了！這禮拜已經第三次了。',
       expl: '帶抱怨語氣 → always + 進行式。' }
@@ -11655,7 +11655,7 @@ dg20260821b1p: {
       expl: '節目時間是排定的 → 現在簡單式 does… start。' },
     { q: 'I can\'t make it — I ____ my parents to the airport that morning.', opts: ['take', 'am taking', 'will take', 'took'], ans: 1,
       qCn: '我沒辦法去——那天早上我要送我爸媽去機場。',
-      expl: '已經安排好的個人計畫 → 現在進行式。' }
+      expl: '已經安排好的個人計畫 → 現在進行式。（will take 不算文法錯誤，只是較不自然。）' }
   ]
 },
 
@@ -11703,7 +11703,7 @@ dg20260824b1p: {
       ask: '這是感覺還是想法？',
       en: 'I know / I believe / I understand',
       cn: '我知道／我相信／我懂',
-      why: 'know、believe、understand、own、belong、cost、seem 這些字沒有「暫時版」，永遠只能用簡單式。這一組沒有彈性。' }
+      why: 'know、believe、understand、own、belong、seem 這些字沒有「暫時版」，永遠只能用簡單式。這一組沒有彈性。' }
   ],
   steps: [
     { label: '情境', text: '同事今天話很少，你想關心一下。' },
