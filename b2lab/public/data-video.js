@@ -46819,6 +46819,309 @@ window.VIDEO.au05 = {
  ]
 };
 
+/* ---------- au06 影片專屬插圖（每句一張，不重複；2026-10-27） ---------- */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4', G='#4a9d5b';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  /* 文件：head 為標題字（可空） */
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>', t=y+18, i, n;
+    if(head){ s+='<rect x="'+(x+6)+'" y="'+(y+7)+'" width="'+(w-12)+'" height="15" rx="3" fill="'+A+'"/>'+txt(x+w/2,y+19,head,11,'#fff'); t=y+34; }
+    n=Math.floor((y+h-8-t)/10)+1;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(t+i*10)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var gap=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="5" fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5"/>'; };
+  /* 水平箭頭 */
+  var arr=function(x1,x2,y,col){ col=col||D; return '<path d="M'+x1+' '+y+' H'+(x2-6)+'" stroke="'+col+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M'+(x2-9)+' '+(y-6)+' L'+x2+' '+y+' L'+(x2-9)+' '+(y+6)+'" fill="none" stroke="'+col+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  /* 迷你流程圖：三個方塊由上而下 */
+  var flow=function(cx,y,col){ var s='', i;
+    for(i=0;i<3;i++){ s+='<rect x="'+(cx-14)+'" y="'+(y+i*22)+'" width="28" height="13" rx="3" fill="#fff" stroke="'+col+'" stroke-width="2.5"/>';
+      if(i<2) s+='<path d="M'+cx+' '+(y+i*22+13)+' v9" stroke="'+col+'" stroke-width="2.5"/>'; }
+    return s; };
+  /* 盾牌（防錯） */
+  var shield=function(cx,cy,s){ return '<path d="M'+cx+' '+(cy-s)+' L'+(cx+s*0.85)+' '+(cy-s*0.65)+' V'+(cy+s*0.05)+' Q'+(cx+s*0.8)+' '+(cy+s*0.75)+' '+cx+' '+(cy+s)+' Q'+(cx-s*0.8)+' '+(cy+s*0.75)+' '+(cx-s*0.85)+' '+(cy+s*0.05)+' V'+(cy-s*0.65)+' Z" fill="'+G+'" '+st+'/>'
+     +chk(cx-s*0.38,cy+s*0.02,s*0.75,'#fff'); };
+  /* 扳手 */
+  /* 扳手：(x,y) 為開口端圓心，握把往 ang 方向延伸 */
+  var wrench=function(x,y,ang){ return '<g transform="translate('+x+' '+y+') rotate('+ang+')">'
+     +'<rect x="6" y="-6" width="48" height="12" rx="6" fill="'+L+'" '+st+'/>'
+     +'<circle cx="0" cy="0" r="14" fill="'+L+'" '+st+'/>'
+     +'<path d="M-16 -6 H-3 V6 H-16" fill="#fff" '+st+'/></g>'; };
+  /* 紙箱（產品） */
+  var box=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+L+'" '+st+'/>'
+     +'<path d="M'+(x+w/2-6)+' '+y+' v'+(h*0.4)+' h12 v-'+(h*0.4)+'" fill="'+A+'" stroke="'+D+'" stroke-width="2" stroke-linejoin="round"/>'; };
+  /* 磅秤（平台＋數字窗） */
+  var scale=function(x,y,w){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="10" rx="3" fill="#fff" '+st+'/>'
+     +'<rect x="'+(x+8)+'" y="'+(y+10)+'" width="'+(w-16)+'" height="16" rx="3" fill="'+L+'" '+st+'/>'
+     +'<rect x="'+(x+w/2-13)+'" y="'+(y+13)+'" width="26" height="10" rx="2" fill="'+D+'"/>'; };
+  /* 條碼 */
+  var bar=function(x,y,w,h){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="#fff" '+st+'/>', i, xx=x+6, ws=[2,4,2,3,5,2,3,2,4,2,3];
+    for(i=0;i<ws.length && xx+ws[i]<x+w-6;i++){ s+='<rect x="'+xx+'" y="'+(y+5)+'" width="'+ws[i]+'" height="'+(h-10)+'" fill="'+D+'"/>'; xx+=ws[i]+2; }
+    return s; };
+  /* 貨車（車頭朝右） */
+  var truck=function(x,y){ return '<rect x="'+x+'" y="'+y+'" width="54" height="34" rx="3" fill="#fff" '+st+'/>'
+     +'<path d="M'+(x+54)+' '+(y+10)+' h14 l10 12 v12 h-24 z" fill="'+A+'" '+st+'/>'
+     +'<circle cx="'+(x+14)+'" cy="'+(y+38)+'" r="7" fill="'+D+'"/><circle cx="'+(x+64)+'" cy="'+(y+38)+'" r="7" fill="'+D+'"/>'; };
+  /* 月台（平台＋屋簷） */
+  var dock=function(x,y,w){ return '<path d="M'+x+' '+y+' h'+w+' l-8 -14 h-'+(w-16)+' z" fill="'+A+'" '+st+'/>'
+     +'<rect x="'+(x+4)+'" y="'+y+'" width="'+(w-8)+'" height="40" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+4)+' '+(y+12)+' h'+(w-8)+' M'+(x+4)+' '+(y+24)+' h'+(w-8)+'" stroke="'+D+'" stroke-width="2"/>'; };
+  /* 對話泡泡 */
+  var bub=function(x,y,w,h,tail){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="8" fill="#fff" '+st+'/>'
+     +'<path d="M'+(x+tail)+' '+(y+h)+' l-4 10 l12 -10" fill="#fff" '+st+'/>'
+     +'<path d="M'+(x+tail-1)+' '+(y+h-1.5)+' h10" stroke="#fff" stroke-width="3"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 2 Tom：PFMEA 哪裡需要改善？ */
+    au6PfmeaAsk: svg(
+      doc(34,22,80,108,'PFMEA')
+     +'<circle cx="112" cy="96" r="20" fill="'+C+'" fill-opacity=".6" '+st+'/><path d="M126 110 l18 18" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'
+     +qb(160,40)),
+
+    /* 3 Anita：現有 PFMEA 需依台灣格式補強 */
+    au6PfmeaStrengthen: svg(
+      doc(14,30,62,84,'PFMEA')
+     +arr(84,116,72,A)
+     +doc(124,22,66,100,'PFMEA')
+     +'<rect x="128" y="96" width="58" height="22" rx="4" fill="'+G+'" '+st+'/>'
+     +'<path d="M157 100 v14 M150 107 h14" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>'
+     +pill(16,124,58,20,'TW',D,'#fff',11)),
+
+    /* 4 Tom：還缺什麼？ */
+    au6MissingAsk: svg(
+      '<rect x="30" y="26" width="84" height="108" rx="6" fill="'+L+'" '+st+'/>'
+     +'<rect x="54" y="18" width="36" height="16" rx="4" fill="'+A+'" '+st+'/>'
+     +chk(44,62,16,G)+'<path d="M66 58 h36" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +gap(40,76,64,20)+gap(40,104,64,20)
+     +qb(158,46)),
+
+    /* 5 Anita：缺當地管理規定與流程圖 */
+    au6FlowGap: svg(
+      doc(10,22,56,84,'PFMEA')
+     +chk(28,122,20,G)
+     +gap(78,18,52,112)
+     +doc(84,28,40,50,'')
+     +txt(104,100,'LOCAL',11,R)
+     +gap(140,18,52,112)
+     +flow(166,34,R)
+     +txt(166,118,'FLOW',11,R)),
+
+    /* 6 Tom：如何將防錯連到 PFMEA？ */
+    au6EpAsk: svg(
+      shield(48,70,32)
+     +'<path d="M84 70 h12 M104 70 h12" stroke="'+D+'" stroke-width="3" stroke-dasharray="4 5" stroke-linecap="round"/>'
+     +doc(122,40,64,86,'PFMEA')
+     +qb(100,30)),
+
+    /* 7 Anita：在 SOP 建立防錯措施並納入 PFMEA */
+    au6EpLink: svg(
+      doc(10,26,64,92,'SOP')
+     +shield(42,92,18)
+     +arr(80,120,72,G)
+     +doc(126,26,64,92,'PFMEA')
+     +shield(158,92,18)),
+
+    /* 8 Tom：只更新 PFMEA 就能結案嗎？ */
+    au6OneDocAsk: svg(
+      doc(24,30,70,94,'PFMEA')
+     +'<circle cx="84" cy="110" r="16" fill="'+G+'" '+st+'/>'+chk(76,110,16,'#fff')
+     +arr(104,128,78,D)
+     +pill(132,66,60,24,'CLOSE',D,'#fff',11)
+     +qb(160,30)),
+
+    /* 9 Anita：不能，計畫也要求 SOP 與防錯連結 */
+    au6OneDocNo: svg(
+      doc(10,18,52,72,'PFMEA')+chk(26,108,18,G)
+     +gap(74,18,52,72)+txt(100,58,'SOP',13,R)
+     +gap(138,18,52,72)+shield(164,54,16)
+     +pill(40,112,120,26,'CLOSED',C,D,12)
+     +ex(100,125,30,R)),
+
+    /* 10 Tom：有重工 SOP 嗎？ */
+    au6ReworkAsk: svg(
+      box(22,70,60,50)
+     +wrench(66,58,-30)
+     +gap(118,34,52,72)+txt(144,76,'SOP',13,R)
+     +qb(160,122)),
+
+    /* 11 Anita：先做 FMEA 分析，再以實際案例建立 SOP */
+    au6ReworkPlan: svg(
+      doc(8,30,52,74,'FMEA')
+     +txt(34,126,'1',18,A)
+     +arr(64,82,66,D)
+     +box(86,48,30,30)+'<path d="M92 92 h18" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +txt(101,126,'2',18,A)
+     +arr(120,138,66,D)
+     +doc(142,30,50,74,'SOP')
+     +txt(167,126,'3',18,A)),
+
+    /* 12 Tom：為何改善包含 FMEA 分析？ */
+    au6FmeaWhyAsk: svg(
+      doc(28,22,74,108,'FMEA')
+     +'<rect x="38" y="62" width="54" height="12" rx="3" fill="'+R+'" fill-opacity=".25"/>'
+     +'<path d="M114 76 h18" stroke="'+D+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 5"/>'
+     +wrench(140,100,-30)
+     +qb(160,36)),
+
+    /* 13 Anita：辨識重工可能出錯之處，作業指示才能對應風險 */
+    au6RiskFirst: svg(
+      box(16,66,52,44)
+     +wrench(26,38,20)
+     +'<path d="M84 16 L102 48 H66 Z" fill="#fff" stroke="'+R+'" stroke-width="3" stroke-linejoin="round"/>'+txt(84,43,'!',20,R)
+     +arr(104,128,82,D)
+     +doc(134,30,58,100,'')
+     +chk(142,62,14,G)+chk(142,86,14,G)+chk(142,110,14,G)),
+
+    /* 14 Tom：SOP 修訂有管控嗎？ */
+    au6RevisionAsk: svg(
+      '<rect x="40" y="38" width="64" height="88" rx="4" fill="'+L+'" '+st+'/>'
+     +'<rect x="32" y="30" width="64" height="88" rx="4" fill="'+C+'" '+st+'/>'
+     +doc(24,22,64,88,'SOP')
+     +pill(54,114,52,20,'REV',A,'#fff',11)
+     +qb(158,42)),
+
+    /* 15 Anita：已有 SOP 修訂紀錄，但管制計畫沒對應更新 */
+    au6CpNotUpdated: svg(
+      doc(8,22,54,64,'SOP')
+     +pill(10,92,22,16,'1',L,D,10)+pill(36,92,22,16,'2',L,D,10)+pill(22,112,22,16,'3',A,'#fff',10)
+     +arr(70,104,58,D)
+     +doc(112,22,80,90,'CONTROL')
+     +pill(122,118,60,22,'OLD',C,R,11)),
+
+    /* 16 Tom：所有機種用同一個重量限值嗎？ */
+    au6LimitAsk: svg(
+      box(14,62,30,26)+box(52,50,40,38)+box(100,38,50,50)
+     +scale(10,92,146)
+     +'<path d="M12 30 H150" stroke="'+R+'" stroke-width="3" stroke-dasharray="7 5"/>'
+     +qb(176,34)),
+
+    /* 17 Anita：各機種分別訂上下限 */
+    au6LimitEach: svg(
+      box(14,70,26,22)+box(80,58,36,34)+box(148,46,42,46)
+     +'<path d="M8 50 h40 M8 62 h40" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M74 38 h48 M74 50 h48" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M144 22 h50 M144 36 h50" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'
+     +scale(6,96,46)+scale(74,96,48)+scale(144,96,50)),
+
+    /* 18 Tom：出貨月台也有相同條碼管控嗎？ */
+    au6DockAsk: svg(
+      bar(14,30,62,34)
+     +'<path d="M84 47 h14" stroke="'+D+'" stroke-width="3" stroke-dasharray="4 4" stroke-linecap="round"/>'
+     +dock(104,62,90)
+     +truck(14,84)
+     +qb(150,30)),
+
+    /* 19 Anita：EOL 有此功能，月台沒有 */
+    au6EolVsDock: svg(
+      '<rect x="8" y="72" width="80" height="14" rx="3" fill="'+L+'" '+st+'/>'
+     +box(22,46,26,26)
+     +bar(54,22,40,26)+'<path d="M58 52 l-6 18" stroke="'+B+'" stroke-width="3" stroke-linecap="round"/>'
+     +pill(16,98,64,22,'EOL',G,'#fff',12)
+     +dock(104,60,90)
+     +gap(118,22,64,30)+ex(150,37,16,R)
+     +pill(116,108,70,22,'DOCK',C,D,12)),
+
+    /* 20 Tom：月台功能已增加嗎？ */
+    au6DockAddAsk: svg(
+      dock(16,58,96)
+     +'<circle cx="64" cy="30" r="15" fill="'+G+'" '+st+'/><path d="M64 22 v16 M56 30 h16" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>'
+     +bar(124,62,60,30)
+     +qb(160,30)),
+
+    /* 21 Anita：計畫只要求討論是否增加 */
+    au6DockDiscuss: svg(
+      per(46,62,14,L)+per(154,62,14,L)
+     +bub(20,14,62,30,40)+'<circle cx="38" cy="29" r="3" fill="'+D+'"/><circle cx="51" cy="29" r="3" fill="'+D+'"/><circle cx="64" cy="29" r="3" fill="'+D+'"/>'
+     +bub(118,14,62,30,30)+txt(149,35,'?',18,A)
+     +bar(76,92,48,26)
+     +pill(60,124,80,20,'NOT YET',C,R,11))
+  });
+})();
+
+window.VIDEO.au06 = {
+ "title": "Audit English VI — Manufacturing Engineering",
+ "titleCn": "稽核英文六｜生技",
+ "date": "2026-10-26",
+ "level": "B1+",
+ "scene": "Factory Audit · Manufacturing Engineering",
+ "sceneCn": "工廠稽核・生技",
+ "sceneArt": "wrench",
+ "titleArt": ["wrench", "shield", "scalesL"],
+ "cast": {
+  "N": { "name": "Narrator", "cn": "旁白", "voice": "n" },
+  "A": { "name": "Anita", "cn": "Anita・現場窗口", "voice": "f" },
+  "T": { "name": "Tom", "cn": "Tom・客戶稽核員", "voice": "m" }
+ },
+ "chapters": [
+  { "en": "Intro", "cn": "開場" },
+  { "en": "The Audit Conversation", "cn": "情境：稽核問答" },
+  { "en": "Key Expressions", "cn": "重點表達" },
+  { "en": "Grammar", "cn": "文法" },
+  { "en": "Homework Fixes", "cn": "作業訂正" },
+  { "en": "Quick Quiz", "cn": "小測驗" }
+ ],
+ "expr": {
+  "flowchart": { "t": "flowchart", "cn": "流程圖", "tag": ["稽核英文", "生技"], "note": "搭配：process flowchart（製程流程圖）。", "ex": "The local procedure and flowchart are missing.", "exCn": "缺少當地管理規定及流程圖。" },
+  "error-proofing": { "t": "error-proofing", "cn": "防錯", "tag": ["稽核英文", "生技"], "note": "搭配：error-proofing controls（防錯措施）。", "ex": "The plan links error-proofing controls to the PFMEA.", "exCn": "計畫將防錯措施連結到 PFMEA。" },
+  "rework": { "t": "rework", "cn": "重工", "tag": ["稽核英文", "生技"], "note": "搭配：rework instructions（重工作業指示）。", "ex": "Rework instructions are missing in the assessment.", "exCn": "評估記載缺少重工作業指示。" },
+  "revision": { "t": "revision", "cn": "修訂版", "tag": ["稽核英文", "文件管制"], "note": "搭配：revision records（修訂紀錄）。", "ex": "SOP revision records are available.", "exCn": "已有 SOP 修訂紀錄。" },
+  "limit": { "t": "limit", "cn": "限值", "tag": ["稽核英文", "包裝"], "note": "搭配：upper and lower limits（上下限）。", "ex": "The plan requires weight limits for each model.", "exCn": "計畫要求訂定各機種重量限值。" }
+ },
+ "lines": [
+  { "ch": 0, "sp": "N", "vis": { "type": "title" }, "en": "Welcome back. Today we practice answering a customer auditor about manufacturing engineering.", "cn": "歡迎回來。今天我們練習用英文回答客戶稽核員有關生技的問題。" },
+  { "ch": 0, "sp": "N", "vis": { "type": "scene", "art": "auFiveKeys" }, "en": "Listen for five key words, the answer patterns, and how to tell an existing document or one station from the full scope.", "cn": "注意聽五個關鍵詞、回答句型，以及如何分辨「現有文件、單一站點」與完整範圍。" },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au6PfmeaAsk" }, "en": "What needs improvement in your PFMEA?", "cn": "PFMEA 哪裡需要改善？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au6PfmeaStrengthen" }, "en": "The existing PFMEA needs to be strengthened using the Taiwan format.", "cn": "現有 PFMEA 需依台灣格式補強。" },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au6MissingAsk" }, "en": "What else is missing?", "cn": "還缺什麼？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au6FlowGap" }, "en": "The local procedure and flowchart are missing in the assessment.", "cn": "評估記載缺當地管理規定與流程圖。", "hi": [{ "t": "flowchart", "cn": "流程圖", "k": "flowchart", "c": 1 }] },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au6EpAsk" }, "en": "How will you connect error-proofing to the PFMEA?", "cn": "你們計畫如何將防錯連到 PFMEA？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au6EpLink" }, "en": "We plan to define error-proofing controls in the SOP and include them in the PFMEA.", "cn": "我們計畫在 SOP 建立防錯措施，並納入 PFMEA。", "hi": [{ "t": "error-proofing", "cn": "防錯", "k": "error-proofing", "c": 1 }] },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au6OneDocAsk" }, "en": "Does updating the PFMEA alone close this action?", "cn": "只更新 PFMEA 就能結案嗎？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au6OneDocNo" }, "en": "No. The plan also requires the SOP and error-proofing link.", "cn": "不能。計畫也要求 SOP 與防錯連結。" },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au6ReworkAsk" }, "en": "Do you have a rework SOP?", "cn": "有重工 SOP 嗎？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au6ReworkPlan" }, "en": "Not yet. The action is to develop it after FMEA analysis, using an actual case.", "cn": "還沒有。對策是在 FMEA 分析後，以實際案例建立。", "hi": [{ "t": "rework", "cn": "重工", "k": "rework", "c": 1 }] },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au6FmeaWhyAsk" }, "en": "Why is the FMEA review part of the action?", "cn": "為何改善包含 FMEA 分析？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au6RiskFirst" }, "en": "It helps identify what could go wrong during rework, so the instructions can address those risks.", "cn": "分析有助辨識重工可能出錯之處，作業指示才能針對這些風險。" },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au6RevisionAsk" }, "en": "Are SOP revisions controlled?", "cn": "SOP 修訂有管控嗎？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au6CpNotUpdated" }, "en": "SOP revision records are available, but the Control Plan was not updated accordingly.", "cn": "已有 SOP 修訂紀錄，但管制計畫沒有對應更新。", "hi": [{ "t": "revision", "cn": "修訂版", "k": "revision", "c": 1 }] },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au6LimitAsk" }, "en": "Will you use one weight limit for every model?", "cn": "所有機種使用相同重量限值嗎？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au6LimitEach" }, "en": "No. The plan calls for upper and lower limits for each model.", "cn": "不會。計畫要求各機種分別訂定上下限。", "hi": [{ "t": "limits", "cn": "限值", "k": "limit", "c": 1 }] },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au6DockAsk" }, "en": "Is the same barcode control available at the shipping dock?", "cn": "出貨月台也有相同條碼管控嗎？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au6EolVsDock" }, "en": "EOL has the function, but the shipping dock does not have the same function.", "cn": "EOL 有此功能，但出貨月台沒有相同功能。" },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au6DockAddAsk" }, "en": "Has the dock function been added?", "cn": "月台功能已增加了嗎？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au6DockDiscuss" }, "en": "Not yet. The plan only calls for discussion about adding it.", "cn": "還沒有。計畫只要求討論是否增加。" },
+  { "ch": 2, "sp": "N", "vis": { "type": "slide", "w": "flowchart", "ipa": "/ˈfloʊtʃɑːrt/", "pos": "n.", "art": "stepsL", "def": "flowchart n. — process flowchart.", "cn": "流程圖｜搭配：製程流程圖", "note": "搭配：process flowchart（製程流程圖）。" }, "en": "The local procedure and flowchart are missing.", "cn": "缺少當地管理規定及流程圖。" },
+  { "ch": 2, "sp": "N", "vis": { "type": "slide", "w": "error-proofing", "ipa": "/ˈerɚ ˌpruːfɪŋ/", "pos": "n.", "art": "shield", "def": "error-proofing n. — error-proofing controls.", "cn": "防錯｜搭配：防錯措施", "note": "搭配：error-proofing controls（防錯措施）。" }, "en": "The plan links error-proofing controls to the PFMEA.", "cn": "計畫將防錯措施連結到 PFMEA。" },
+  { "ch": 2, "sp": "N", "vis": { "type": "slide", "w": "rework", "ipa": "/ˈriː.wɝːk/", "pos": "n.", "art": "wrench", "def": "rework n. — rework instructions.", "cn": "重工｜搭配：重工作業指示", "note": "搭配：rework instructions（重工作業指示）。" }, "en": "Rework instructions are missing in the assessment.", "cn": "評估記載缺少重工作業指示。" },
+  { "ch": 2, "sp": "N", "vis": { "type": "slide", "w": "revision", "ipa": "/rɪˈvɪʒ.ən/", "pos": "n.", "art": "doc", "def": "revision n. — revision records.", "cn": "修訂版｜搭配：修訂紀錄", "note": "搭配：revision records（修訂紀錄）。" }, "en": "SOP revision records are available.", "cn": "已有 SOP 修訂紀錄。" },
+  { "ch": 2, "sp": "N", "vis": { "type": "slide", "w": "limit", "ipa": "/ˈlɪmɪt/", "pos": "n.", "art": "scalesL", "def": "limit n. — upper and lower limits.", "cn": "限值｜搭配：上下限", "note": "搭配：upper and lower limits（上下限）。" }, "en": "The plan requires weight limits for each model.", "cn": "計畫要求訂定各機種重量限值。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "pattern", "kick": "We have X, but Y are missing", "art": "clipboard", "rows": [{ "lab": "已有，但仍缺", "blocks": [{ "t": "We have", "k": "s" }, { "t": "名詞, but", "k": "v" }, { "t": "缺口 are missing", "k": "o" }] }] }, "en": "We have a PFMEA, but the local procedure and flowchart are missing.", "cn": "我們已有 PFMEA，但缺當地管理規定與流程圖。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "pattern", "kick": "We plan to + 動詞原形", "art": "calendar", "rows": [{ "lab": "計畫做什麼", "blocks": [{ "t": "We", "k": "s" }, { "t": "plan to 動詞原形", "k": "v" }, { "t": "計畫內容", "k": "o" }] }] }, "en": "We plan to define upper and lower weight limits for each model.", "cn": "我們計畫訂定各機種重量上下限。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "pattern", "kick": "The plan calls for X after Y", "art": "stepsL", "rows": [{ "lab": "先後順序", "blocks": [{ "t": "The plan", "k": "s" }, { "t": "calls for 名詞", "k": "v" }, { "t": "after 名詞", "k": "o" }] }] }, "en": "The plan calls for a rework SOP after the FMEA review.", "cn": "計畫要求在 FMEA 分析後建立重工 SOP。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "fix", "n": 2, "wrong": "Updating the PFMEA closes all error-proofing actions.", "bad": [], "fix": "Updating the PFMEA alone does not close the action. The plan also requires error-proofing controls in the SOP." }, "en": "Updating the PFMEA alone does not close the action. The plan also requires error-proofing controls in the SOP.", "cn": "只更新 PFMEA 不能結案；計畫也要求在 SOP 建立防錯措施。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "quiz", "q": "The local procedure and ___ are missing.", "a": "flowchart", "n": 1 }, "en": "The local procedure and ___ are missing.", "cn": "缺少當地管理規定及＿＿。", "say": "The local procedure and , blank, are missing.", "pause": 4000 },
+  { "ch": 5, "sp": "N", "vis": { "type": "quiz", "q": "The plan links ___ controls to the PFMEA.", "a": "error-proofing", "n": 2 }, "en": "The plan links ___ controls to the PFMEA.", "cn": "計畫將＿＿措施連結到 PFMEA。", "say": "The plan links , blank, controls to the PFMEA.", "pause": 4000 },
+  { "ch": 5, "sp": "N", "vis": { "type": "quiz", "q": "The plan calls for a ___ SOP after the FMEA review.", "a": "rework", "n": 3 }, "en": "The plan calls for a ___ SOP after the FMEA review.", "cn": "計畫要求在 FMEA 分析後建立＿＿SOP。", "say": "The plan calls for a , blank, SOP after the FMEA review.", "pause": 4000 },
+  { "ch": 5, "sp": "N", "vis": { "type": "quiz", "q": "The plan requires weight ___ for each model.", "a": "limits", "n": 4 }, "en": "The plan requires weight ___ for each model.", "cn": "計畫要求訂定各機種重量＿＿。", "say": "The plan requires weight , blank, for each model.", "pause": 4000 },
+  { "ch": 5, "sp": "N", "vis": { "type": "end" }, "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.", "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+ ]
+};
+
+
 /* ===== bk20261015 Quality Specifications & Question Practice ===== */
 window.VIDEO = window.VIDEO || {};
 window.VIDEO["bk20261015"] = {

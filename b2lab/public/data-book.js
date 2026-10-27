@@ -22579,6 +22579,323 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- au06 Audit English VI — Manufacturing Engineering ---- */
+  {
+   "id": "au06",
+   "icon": "🛠️",
+   "video": true,
+   "date": "2026-10-26",
+   "title": "Audit English VI — Manufacturing Engineering",
+   "titleCn": "稽核英文六｜生技",
+   "topics": "稽核英文, 生技, PFMEA, 防錯, 重工, SOP 修訂, 管制計畫, 包裝秤重, EOL 條碼, flowchart, error-proofing, rework, revision, limit",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "The PFMEA needs to be strengthened using the Taiwan format. The local procedure and flowchart also need to be added.",
+     "cn": "需依台灣格式補強 PFMEA，並補上當地管理規定及流程圖。",
+     "pat": "主詞 + needs to be strengthened / also need to be added",
+     "note": "現有 PFMEA 要補強，還缺當地規定與流程圖。常見錯誤：有 PFMEA 就說文件已完整。"
+    },
+    {
+     "n": 2,
+     "cn": "只更新 PFMEA 不能結案；計畫也要求 SOP 防錯措施，以及它和 PFMEA 的連結。",
+     "pat": "Updating A alone does not close the action. The plan also requires B.",
+     "note": "PFMEA 文件補強和現場防錯連結是兩件事。常見錯誤：把 10/19 的文件目標說成所有防錯都完成。",
+     "wrong": "Updating the PFMEA closes all error-proofing actions.",
+     "fix": "Updating the PFMEA alone does not close the action. The plan also requires error-proofing controls in the SOP and their link to the PFMEA."
+    },
+    {
+     "n": 3,
+     "ok": "FMEA analysis is planned before the rework SOP is developed using an actual case.",
+     "cn": "計畫先做 FMEA 分析，再以實際案例建立重工 SOP。",
+     "pat": "A is planned before B is developed",
+     "note": "先做風險分析，再寫作業依據。常見錯誤：說重工 SOP 已經有了。"
+    },
+    {
+     "n": 4,
+     "ok": "The Control Plan was not updated with the SOP changes.",
+     "cn": "管制計畫沒有隨 SOP 變更而更新。",
+     "pat": "A was not updated with B",
+     "note": "SOP 有修訂紀錄，但管制計畫沒跟著改。常見錯誤：把「有修訂紀錄」當成「文件都同步」。"
+    },
+    {
+     "n": 5,
+     "ok": "It includes weight limits for each model, a scale calibration procedure, and large-print Chinese and Vietnamese instructions.",
+     "cn": "包含各機種重量限值、秤重設備校驗程序，以及大字中越文作業說明。",
+     "pat": "It includes + A, B, and C",
+     "note": "三項要說齊。常見錯誤：說「所有機種用同一個重量限值」。"
+    },
+    {
+     "n": 6,
+     "ok": "No. EOL has the function, but the dock does not. The plan calls for discussion about adding it.",
+     "cn": "不能。EOL 有此功能，月台沒有；計畫要求討論是否增加。",
+     "pat": "No. A has …, but B does not.",
+     "note": "說清楚功能在哪個站點。常見錯誤：EOL 有條碼管控，就說出貨也都管控了。"
+    }
+   ],
+   "vocabTitle": "五個關鍵詞 Key Words",
+   "vocab": [
+    {
+     "w": "flowchart",
+     "ipa": "/ˈfloʊtʃɑːrt/",
+     "pos": "n.",
+     "cn": "流程圖",
+     "ex": "The local procedure and flowchart are missing.",
+     "exCn": "缺少當地管理規定及流程圖。（IIA-3）"
+    },
+    {
+     "w": "error-proofing",
+     "ipa": "/ˈerɚ ˌpruːfɪŋ/",
+     "pos": "n.",
+     "cn": "防錯",
+     "ex": "The plan links error-proofing controls to the PFMEA.",
+     "exCn": "計畫將防錯措施連結到 PFMEA。（IIA-5）"
+    },
+    {
+     "w": "rework",
+     "ipa": "/ˈriː.wɝːk/",
+     "pos": "n.",
+     "cn": "重工",
+     "ex": "Rework instructions are missing in the assessment.",
+     "exCn": "評估記載缺少重工作業指示。（IIIA-5）"
+    },
+    {
+     "w": "revision",
+     "ipa": "/rɪˈvɪʒ.ən/",
+     "pos": "n.",
+     "cn": "修訂版",
+     "ex": "SOP revision records are available.",
+     "exCn": "已有 SOP 修訂紀錄。（IIIA-4）"
+    },
+    {
+     "w": "limit",
+     "ipa": "/ˈlɪmɪt/",
+     "pos": "n.",
+     "cn": "限值",
+     "ex": "The plan requires weight limits for each model.",
+     "exCn": "計畫要求訂定各機種重量限值。（IIIF-6）"
+    }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "process flowchart", "cn": "製程流程圖" },
+    { "p": "error-proofing controls", "cn": "防錯措施" },
+    { "p": "rework instructions", "cn": "重工作業指示" },
+    { "p": "revision records", "cn": "修訂紀錄" },
+    { "p": "upper and lower limits", "cn": "上下限" },
+    { "p": "Control Plan", "cn": "管制計畫" },
+    { "p": "engineering change (ECN)", "cn": "工程變更（通知）" },
+    { "p": "scale calibration", "cn": "秤重設備校驗" },
+    { "p": "shipping dock", "cn": "出貨月台" },
+    { "p": "end of line (EOL)", "cn": "產線末端" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "VI-A",
+     "title": "We have X, but Y are missing（已有，但仍缺）",
+     "pat": "We have + 名詞, but + 缺口 + are missing",
+     "pts": [
+      "同時說清楚已有的資料與不足。",
+      "客戶問 PFMEA 是否完整時用。",
+      "例：We have a PFMEA, but the local procedure and flowchart are missing.（我們已有 PFMEA，但缺當地管理規定與流程圖。）"
+     ],
+     "ex": "We have a PFMEA, but the local procedure and flowchart are missing.",
+     "exCn": "我們已有 PFMEA，但缺當地管理規定與流程圖。（IIA-3）"
+    },
+    {
+     "k": "VI-B",
+     "title": "We plan to + V（計畫做什麼）",
+     "pat": "We plan to + 動詞原形",
+     "pts": [
+      "表示計畫要做，不能改成「已完成」。",
+      "解釋秤重改善內容時用。",
+      "例：We plan to define upper and lower weight limits for each model.（我們計畫訂定各機種重量上下限。）"
+     ],
+     "ex": "We plan to define upper and lower weight limits for each model.",
+     "exCn": "我們計畫訂定各機種重量上下限。（IIIF-6）"
+    },
+    {
+     "k": "VI-C",
+     "title": "The plan calls for X after Y（先後順序）",
+     "pat": "The plan calls for + 名詞 + after + 名詞",
+     "pts": [
+      "calls for 後接計畫要求的東西，after 說明要先完成什麼。",
+      "先做風險分析，再建立作業依據。",
+      "例：The plan calls for a rework SOP after the FMEA review.（計畫要求在 FMEA 分析後建立重工 SOP。）"
+     ],
+     "ex": "The plan calls for a rework SOP after the FMEA review.",
+     "exCn": "計畫要求在 FMEA 分析後建立重工 SOP。（IIIA-5）"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "existing vs complete",
+     "sc": "existing 是「現有的」，complete 是「完整的」。有一份文件，不代表所有要求都符合。（IIA-3）",
+     "ex": "An existing PFMEA is available, but the local procedure is missing.",
+     "exCn": "已有 PFMEA，但缺當地管理規定。",
+     "cn": "現有 vs 完整"
+    },
+    {
+     "u": "rework vs revision",
+     "sc": "rework 是重新加工以符合要求；revision 是文件修訂。不能用「有修訂紀錄」回答「有沒有重工規範」。（IIIA-4、IIIA-5）",
+     "ex": "The rework SOP is missing. SOP revision records are available.",
+     "exCn": "缺少重工 SOP，但已有 SOP 修訂紀錄。",
+     "cn": "重工 vs 修訂"
+    },
+    {
+     "u": "station vs scope",
+     "sc": "station 是站點，scope 是涵蓋範圍。回答管控功能時說明在哪個站點，避免擴大成整個流程。（IIIF-4）",
+     "ex": "EOL has the function. The shipping dock does not have the same function.",
+     "exCn": "EOL 有此功能；出貨月台沒有相同功能。",
+     "cn": "站點 vs 範圍"
+    },
+    {
+     "u": "target vs completion",
+     "sc": "target 是計畫目標日，completion 是已經完成。目標日期不是完成證據。（IIA-3、IIA-5）",
+     "ex": "October 19 is the target in the September plan. It does not prove completion on that date.",
+     "exCn": "10/19 是九月計畫的目標，不能證明當天已完成。",
+     "cn": "目標 vs 完成"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "案例 01｜PFMEA 補強",
+     "title": "Strengthening the PFMEA",
+     "titleCn": "案例 01｜PFMEA 補強（IIA-3）",
+     "paras": [
+      { "en": "Auditor: What needs improvement in your PFMEA?", "cn": "稽核員：PFMEA 哪裡需要改善？" },
+      { "en": "You: The existing PFMEA needs to be strengthened using the Taiwan format. The local procedure and flowchart also need to be added.", "cn": "你：現有 PFMEA 需依台灣格式補強，並補上當地管理規定與流程圖。" },
+      { "en": "Auditor: Who owns this document action?", "cn": "稽核員：誰負責這項文件改善？" },
+      { "en": "You: Manufacturing Engineering owns the PFMEA update. The action includes strengthening the document and establishing local rules in Vietnam.", "cn": "你：生技負責 PFMEA 更新，包含補強文件及建立越南當地規定。" },
+      { "en": "Auditor: Was the action completed on October 19?", "cn": "稽核員：10/19 已完成了嗎？" },
+      { "en": "You: October 19 is the target in the September plan. That plan lists the action as Open; it does not prove completion on that date.", "cn": "你：10/19 是九月計畫的目標。該計畫列為 Open，不能證明當天已完成。" }
+     ]
+    },
+    {
+     "bar": "案例 02｜SOP 與防錯連結",
+     "title": "Linking Error-Proofing",
+     "titleCn": "案例 02｜SOP 與防錯連結（IIA-5）",
+     "paras": [
+      { "en": "Auditor: How will you connect error-proofing to the PFMEA?", "cn": "稽核員：你們計畫如何將防錯連到 PFMEA？" },
+      { "en": "You: We plan to define error-proofing controls in the SOP and include them in the PFMEA. This is a separate action in the plan.", "cn": "你：我們計畫在 SOP 建立防錯措施，並納入 PFMEA；這是計畫中的另一項改善。" },
+      { "en": "Auditor: Does updating the PFMEA alone close this action?", "cn": "稽核員：只更新 PFMEA 就能結案嗎？" },
+      { "en": "You: No. The plan also requires the SOP and error-proofing link. Updating one document does not show that the full action is complete.", "cn": "你：不能。計畫也要求 SOP 與防錯連結；只更新一份文件不能證明整項改善完成。" },
+      { "en": "Auditor: Do these two actions have the same target?", "cn": "稽核員：兩項改善的目標相同嗎？" },
+      { "en": "You: No. The PFMEA document target is October 19. The SOP and error-proofing link has a November 2 target.", "cn": "你：不同。PFMEA 文件目標是 10/19，SOP 與防錯連結的目標是 11/2。" }
+     ]
+    },
+    {
+     "bar": "案例 03｜重工 SOP",
+     "title": "Rework SOP",
+     "titleCn": "案例 03｜重工 SOP（IIIA-5）",
+     "paras": [
+      { "en": "Auditor: Do you have a rework SOP?", "cn": "稽核員：有重工 SOP 嗎？" },
+      { "en": "You: The assessment lists a missing rework SOP. The action is to develop it after FMEA analysis, using an actual case.", "cn": "你：評估列出缺少重工 SOP；對策是在 FMEA 分析後，以實際案例建立 SOP。" },
+      { "en": "Auditor: Why is the FMEA review part of the action?", "cn": "稽核員：為何改善包含 FMEA 分析？" },
+      { "en": "You: It helps identify what could go wrong during rework. The instructions can then address those risks.", "cn": "你：分析有助辨識重工可能出錯之處，作業指示才能針對這些風險。" },
+      { "en": "Auditor: What is the target in the action plan?", "cn": "稽核員：改善計畫的目標何時？" },
+      { "en": "You: The listed target is November 2. The September record does not show a completed rework SOP or a verified rework result.", "cn": "你：表列目標是 11/2；九月紀錄沒有顯示已完成的重工 SOP 或驗證後的重工結果。" }
+     ]
+    },
+    {
+     "bar": "案例 04｜SOP 與管制計畫同步",
+     "title": "SOP & Control Plan",
+     "titleCn": "案例 04｜SOP 與管制計畫同步（IIIA-4）",
+     "paras": [
+      { "en": "Auditor: Are SOP revisions controlled?", "cn": "稽核員：SOP 修訂有管控嗎？" },
+      { "en": "You: The assessment records controlled SOP issue and revision records. However, the Control Plan was not updated accordingly.", "cn": "你：評估記載已有 SOP 發行管控與修訂紀錄，但管制計畫沒有對應更新。" },
+      { "en": "Auditor: What is the corrective action?", "cn": "稽核員：改善對策是什麼？" },
+      { "en": "You: The plan is to use the Taiwan engineering change and document change process. Vietnam is to update the Control Plan at the same time.", "cn": "你：計畫採用台灣工程變更與文件變更流程；越南要同步更新管制計畫。" },
+      { "en": "Auditor: Who owns this action in the PSA?", "cn": "稽核員：PSA 將這項改善列給誰？" },
+      { "en": "You: QA owns this action, with a November 2 target. We include it in this review because engineering changes need consistent process documents.", "cn": "你：這項由品保負責，目標 11/2。本次納入，是因為工程變更需要製程文件保持一致。" }
+     ]
+    },
+    {
+     "bar": "案例 05｜包裝秤重防短裝",
+     "title": "Weight Checks in Packing",
+     "titleCn": "案例 05｜包裝秤重防短裝（IIIF-1、IIIF-6）",
+     "paras": [
+      { "en": "Auditor: How do you prevent missing items in packing?", "cn": "稽核員：包裝如何防止短裝？" },
+      { "en": "You: Weight checks are used to prevent missing items. The procedure still needs model-specific limits and a scale calibration procedure.", "cn": "你：已用秤重確認防止短裝；程序仍需各機種限值與秤重設備校驗程序。" },
+      { "en": "Auditor: Will you use one weight limit for every model?", "cn": "稽核員：所有機種使用相同重量限值嗎？" },
+      { "en": "You: The plan calls for upper and lower limits for each model. It does not provide one common limit for all models.", "cn": "你：計畫要求各機種分別訂定上下限，並未提供全部機種共用的單一限值。" },
+      { "en": "Auditor: What else will the instructions include?", "cn": "稽核員：作業說明還會包含什麼？" },
+      { "en": "You: The plan includes large-print instructions in Chinese and Vietnamese. The weight-control action is shared by Production and Manufacturing Engineering.", "cn": "你：計畫包含大字中越文作業說明；重量管控改善由製造與生技共同負責。" }
+     ]
+    },
+    {
+     "bar": "案例 06｜EOL 與月台範圍",
+     "title": "EOL & Shipping Dock",
+     "titleCn": "案例 06｜EOL 與月台範圍（IIIF-4、IIIF-6）",
+     "paras": [
+      { "en": "Auditor: Is the same barcode control available at the shipping dock?", "cn": "稽核員：出貨月台也有相同條碼管控嗎？" },
+      { "en": "You: EOL has the function, but the shipping dock does not have the same function in the assessment.", "cn": "你：評估記載 EOL 有此功能，但出貨月台尚無相同功能。" },
+      { "en": "Auditor: What is the next step for the shipping dock?", "cn": "稽核員：月台的下一步是什麼？" },
+      { "en": "You: The plan calls for discussion about adding the function. It does not state that the dock function has already been installed.", "cn": "你：計畫要求討論是否增加功能，並未記載月台功能已安裝完成。" },
+      { "en": "Auditor: Does the October 20 plan prove dock control is complete?", "cn": "稽核員：10/20 計畫可證明月台管控完成嗎？" },
+      { "en": "You: No. That date concerns the serial-number printing plan. It is not an approved completion date for the dock barcode control.", "cn": "你：不能。該日期是序號列印導入計畫，不是月台條碼管控已核定的完成日期。" }
+     ]
+    },
+    {
+     "bar": "演練 A｜追問 PFMEA",
+     "title": "PFMEA Follow-up",
+     "titleCn": "演練 A｜追問 PFMEA",
+     "paras": [
+      { "en": "Auditor: Q1. Do you have a PFMEA?", "cn": "稽核員：有 PFMEA 嗎？" },
+      { "en": "You: Yes, but it needs to be strengthened using the Taiwan format.", "cn": "你：有，但需依台灣格式補強。" },
+      { "en": "Auditor: Q2. What else is missing?", "cn": "稽核員：還缺什麼？" },
+      { "en": "You: The local procedure and flowchart are missing in the assessment.", "cn": "你：評估記載缺當地管理規定與流程圖。" },
+      { "en": "Auditor: Q3. Is the error-proofing link complete?", "cn": "稽核員：防錯連結完整了嗎？" },
+      { "en": "You: It is a separate Open action in the September plan. Controls are to be defined in the SOP and included in the PFMEA.", "cn": "你：九月計畫將它列為另一項 Open 改善；需在 SOP 建立措施並納入 PFMEA。" },
+      { "en": "Auditor: Q4. What are the target dates?", "cn": "稽核員：目標日期是什麼？" },
+      { "en": "You: October 19 for the PFMEA document, and November 2 for the SOP and error-proofing link. These dates are targets, not completion evidence.", "cn": "你：PFMEA 文件是 10/19，SOP 與防錯連結是 11/2；這些是目標，不是完成證據。" }
+     ]
+    },
+    {
+     "bar": "演練 B｜包裝與出貨",
+     "title": "Packing & Shipping Follow-up",
+     "titleCn": "演練 B｜包裝與出貨",
+     "paras": [
+      { "en": "Auditor: Q1. Do you use weight checks?", "cn": "稽核員：有做秤重確認嗎？" },
+      { "en": "You: Yes. Weight checks are used to prevent missing items in packing.", "cn": "你：有，以秤重確認防止包裝短裝。" },
+      { "en": "Auditor: Q2. Is the procedure complete?", "cn": "稽核員：程序完整嗎？" },
+      { "en": "You: The plan requires weight limits for each model, a scale calibration procedure, and large-print bilingual instructions.", "cn": "你：計畫要求各機種重量限值、秤重設備校驗程序及大字雙語說明。" },
+      { "en": "Auditor: Q3. Does EOL control also cover the shipping dock?", "cn": "稽核員：EOL 管控也涵蓋出貨月台嗎？" },
+      { "en": "You: The assessment says EOL has the function, but the shipping dock does not have the same function.", "cn": "你：評估記載 EOL 有此功能，但月台沒有相同功能。" },
+      { "en": "Auditor: Q4. Has the dock function been added?", "cn": "稽核員：月台功能已增加嗎？" },
+      { "en": "You: The September plan only calls for discussion about adding it. It does not show completed installation.", "cn": "你：九月計畫僅要求討論是否增加，未顯示已安裝完成。" }
+     ]
+    },
+    {
+     "bar": "完整口說稿｜生技區導覽",
+     "title": "Full Speaking Script",
+     "titleCn": "完整口說稿｜生技區導覽",
+     "paras": [
+      { "en": "Welcome to the Manufacturing Engineering review. We will explain PFMEA, error-proofing, rework, and related packing controls.", "cn": "歡迎進行生技審查。我們會說明 PFMEA、防錯、重工及相關包裝管控。" },
+      { "en": "We have a PFMEA, but it needs to be strengthened. The local procedure and flowchart are also missing in the September assessment.", "cn": "我們已有 PFMEA，但需要補強；九月評估也記載缺少當地規定與流程圖。" },
+      { "en": "The plan links error-proofing controls in the SOP to the PFMEA. It also calls for a rework SOP after FMEA analysis.", "cn": "計畫將 SOP 防錯措施連結至 PFMEA，也要求在 FMEA 分析後建立重工 SOP。" },
+      { "en": "QA owns the action to update the Control Plan with document changes. This supports consistent instructions across the process.", "cn": "品保負責隨文件變更更新管制計畫，以協助製程作業依據保持一致。" },
+      { "en": "Weight checks are used, but model-specific limits and calibration procedures need improvement. EOL barcode control does not mean the same control is available at the dock.", "cn": "已有秤重確認，但各機種限值與校驗程序需要改善。EOL 有條碼管控，不表示月台也有相同管控。" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "We have a PFMEA, but the local procedure and flowchart are missing.", "cn": "已有 PFMEA，但缺當地管理規定與流程圖。（IIA-3）" },
+      { "en": "We plan to define error-proofing controls in the SOP and include them in the PFMEA.", "cn": "計畫在 SOP 建立防錯措施並納入 PFMEA。（IIA-5）" },
+      { "en": "The rework SOP is planned after FMEA analysis.", "cn": "重工 SOP 計畫於 FMEA 分析後建立。（IIIA-5）" },
+      { "en": "SOP revision records are available, but the Control Plan was not updated accordingly.", "cn": "已有 SOP 修訂紀錄，但管制計畫未對應更新。（IIIA-4）" },
+      { "en": "The plan requires weight limits for each model and a scale calibration procedure.", "cn": "計畫要求各機種重量限值及秤重設備校驗程序。（IIIF-6）" },
+      { "en": "EOL has the function, but the shipping dock does not have the same function.", "cn": "EOL 有此功能，但出貨月台沒有相同功能。（IIIF-4）" }
+     ]
+    }
+   ]
+  },
   /* ---- qa01 品保新聞一：跑步機電源線召回（CPSC 26-203）→ 8D ---- */
   {
    "id": "qa01",
@@ -29335,6 +29652,7 @@ window.BOOK = {
     au02:[[['meeting','doc','idcard','timetable','warning'],'組織圖問答：列出課級以上姓名與年資 → 各部門提供資料 → 由人資負責 → 目標 10 月 19 日 → 仍標示 Open，尚未完成。']],
     au03:[[['bottleL','factory','cart','lock','eye'],'化學品管控問答：缺領用紀錄、存放位置、效期、警示標籤與防護設備 → 還要管控送到產線的化學品 → 由資材負責建立管控 → 只有倉儲管理不能涵蓋 → 仍標示 Open，尚未完成。']],
     au05:[[['gauge','clipboard','box','scalesL','exam'],'品保：標籤≠校驗報告 → 補抽樣計畫與關鍵尺寸檢驗 → 進料不良流程 → 材料證明與硬度 → 8D 範例≠訓練紀錄、結案前確認有效性 → 校驗≠GR&R。']],
+    au06:[[['stairs','sprout','platform','receipt','truck'],'生技：現有 PFMEA≠完整（缺當地規定與流程圖）→ SOP 防錯連到 PFMEA → FMEA 分析後建立重工 SOP → SOP 有修訂但管制計畫沒同步 → 各機種重量上下限 → EOL 有條碼≠月台也有。']],
     au04:[[['gear','flag','laptop','chartUp','thumb'],'開發與專案管理：設變通知單≠完整程序 → 台灣主導安規越南協助 → PDM 存放≠審核程序 → 台灣提供時程越南更新實際進度 → 填表≠核准 → 追蹤量產問題至結案。']],
     bk20261006:[[['board','stairs','gauge','orgchart','clipboard'],'操作員訓練五階段：獨立作業前提供實務訓練並評估技能 → 每站分 A/B/C 三個技能等級逐級晉升 → 內部評估未通過先安排較簡單的工作站 → 所有人都受過訓可互相代班維持生產 → 客戶稽核時出示訓練紀錄說明驗證方式。']],
     bk20261013:[[['key','plug','search','map','ballot'],'品保會議五階段：確認新治具能否投入生產 → 機器出狀況先停止測試 → 螺絲組裝時斷裂、不良率變高 → 問題最先出現在第三站、檢查治具是否對準 → 預計明天下午重啟、週五前完成訓練並更新 SOP。']],
