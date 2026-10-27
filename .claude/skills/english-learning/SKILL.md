@@ -267,6 +267,10 @@ cd "D:/english-learning" && git log --oneline origin/main..main && git branch --
 4. **單字表（II-A）用短例句**：若該字的完整例句已在作業複習出現，單字表改寫**精簡版短句**
    （例：作業句 `The cloud service was down, which caused the document to become corrupted.`
    → 單字表 corrupted 寫 `The document became corrupted.`），不要整句照抄。
+   ⛔ **例句欄、答案欄絕對不可寫「見 IV-A」「見 V-C 第 1 題」「見第 1 題」這種指引**（2026-10-27 使用者第二次指正）：
+   單字表每個字都要有**實際英文例句＋中譯**；問答（含複習問題、口說練習）每題都要寫**實際答案句＋中譯**。
+   去重只代表「換一句不同的短句」，不代表可以留空或指路。唯一可以寫章節代號的是片語索引表的「詳見」欄。
+   產出前用搜尋檢查全文沒有「見 I」「見 V」「見第」字樣。
 5. **同一個點只列一次**：
    - 時差章節「句型列」與「時間換算列」合併成同一列（一地區一列），不要拆成兩列各講一次
    - 品味章節不要列 9 列 `have the same taste in ○○`；領域清單併進 callout 一行帶過，
