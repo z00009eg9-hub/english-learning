@@ -639,10 +639,10 @@ window.GVPLUS = {
       "icon": "balance",
       "title": "條款不預測",
       "titleCn": "現在簡單式的硬度",
-      "ask": "為什麼合約條文常常看不到 will？",
+      "ask": "為什麼這條合約條文不用 will？",
       "en": "Payment becomes due thirty days after delivery.",
       "cn": "付款於交貨後三十日到期。",
-      "why": "條款描述的是一個持續有效的義務，不是某一次的未來事件。用現在簡單式，句子讀起來像規則本身在說話；換成 will，同一句就滑向「我預期會這樣」，把義務降級成期待。法律英文最怕的就是這一點點語氣鬆動。"
+      "why": "這條描述的是一個持續有效的規則（什麼時候到期），不是某一次的未來事件。用現在簡單式，句子讀起來像規則本身在說話。這跟上面「合約的 will 等於必須」並不衝突：要寫某一方必須做某件事時，合約常用 will 或 shall；描述到期日、定義這類本來就成立的規則時，現在簡單式最乾淨。"
     },
     {
       "key": "shall",
@@ -2347,15 +2347,15 @@ window.GVPLUS = {
       "icon": "clock",
       "head": "you are doing it",
       "headCn": "你在做這件事",
-      "en": "Tom has a swimming lesson on Tuesdays.",
-      "cn": "Tom星期二有游泳課。",
+      "en": "Tom has lunch at twelve every day.",
+      "cn": "Tom每天十二點吃午餐。",
       "pts": [
-        "整個片語才是動作，像 have a lesson、have lunch",
-        "絕對不能寫成 has got a swimming lesson",
+        "整個片語才是動作，像 have lunch、have a shower",
+        "絕對不能寫成 has got lunch",
         "可以變成 is having，因為它是動作"
       ]
     },
-    "note": "判斷口訣：中文說「有」就可以加 got，中文說「吃、洗、上課、休息」就不能加。"
+    "note": "判斷口訣：中文說「有」就可以加 got，中文說「吃、洗澡、休息」就不能加。"
   },
   "quizMore": [
     {
@@ -2374,11 +2374,11 @@ window.GVPLUS = {
       "opts": [
         "She has a sister.",
         "She has got a sister.",
-        "She has got a piano lesson at four.",
+        "She has got a shower every morning.",
         "She has a piano lesson at four."
       ],
       "ans": 2,
-      "expl": "have a piano lesson 的 have 是「上課」，是動作，所以不能加 got。前兩句講的是擁有一個姊妹，兩種寫法都對。"
+      "expl": "have a shower 的 have 是「洗澡」，是動作，所以不能加 got。前兩句講的是擁有一個姊妹，兩種寫法都對；She has a piano lesson at four. 也正確。"
     }
   ]
 },
@@ -2552,13 +2552,13 @@ window.GVPLUS = {
     {
       "q": "Which sentence is correct?",
       "opts": [
-        "By next year the plant will have got a third line.",
+        "By next year the plant has got a third line.",
         "By next year the plant will have a third line.",
         "By next year the plant is having a third line.",
         "By next year the plant had got a third line."
       ],
       "ans": 1,
-      "expl": "未來的擁有只能用 will have，不加 got；have got 沒有未來式也沒有過去式。進行式則不能用在「擁有」上。"
+      "expl": "By next year 指未來，講到時候的擁有用 will have。has got（現在）和 had got（過去）時間都不對；進行式則不能用在「擁有」上。"
     }
   ]
 },
@@ -7715,23 +7715,23 @@ dg20260911b2: {
       "q": "It ___ a week since I last called my parents.",
       "opts": [
         "has been",
-        "is",
+        "have been",
         "was",
         "has"
       ],
       "ans": 0,
-      "expl": "It has been...since...固定用現在完成式has been。"
+      "expl": "It has been...since... 表示「從那時到現在多久了」，主詞 It 是單數，用 has been，不用 have been。"
     },
     {
       "q": "Which is the correct question form?",
       "opts": [
         "How long has it been since you called me?",
         "How long has been since you called me?",
-        "How long is it since you called me?",
+        "How long it has been since you called me?",
         "How long has called since you?"
       ],
       "ans": 0,
-      "expl": "問句需要虛主詞it，正確形式是How long has it been since...？"
+      "expl": "問句需要虛主詞it，而且 has 要移到 it 前面，正確形式是How long has it been since...？"
     }
   ]
 },
@@ -10630,8 +10630,8 @@ dg20260902a2: {
     { key: 'vpp', icon: 'book',
       title: 'Past participle', titleCn: '過去分詞要另外背',
       ask: '這個動詞的第三態是什麼？',
-      en: 'I have seen that film. / I have gone there.',
-      cn: '我看過那部電影。／我去過那裡。',
+      en: 'I have seen that film. / He has gone to work.',
+      cn: '我看過那部電影。／他已經去上班了（現在不在這裡）。',
       why: '常用字的三態：eat-ate-eaten、see-saw-seen、go-went-gone、do-did-done、take-took-taken、write-wrote-written。規則動詞的過去分詞跟過去式一樣（cleaned）。' }
   ],
   steps: [
@@ -11731,7 +11731,7 @@ dg20260824b1p: {
     note: '檢查法：這個形容詞能不能「選擇要不要表現出來」？能（rude、kind、quiet）才可以用 be being；不能（tall、Taiwanese）就不行。'
   },
   quizMore: [
-    { q: 'Why ____ so difficult today? You are normally easy-going.', opts: ['are you', 'are you being', 'do you be', 'you are'], ans: 1,
+    { q: 'Why ____ so difficult today? You are normally easy-going.', opts: ['are you been', 'are you being', 'do you be', 'you are'], ans: 1,
       qCn: '你今天怎麼這麼難搞？你平常很好相處的。',
       expl: '講「今天特別如此」的行為 → are you being。' },
     { q: 'Which sentence is WRONG?', opts: ['This coffee tastes bitter.', 'I am tasting the coffee.', 'I am knowing the answer.', "I'm feeling better."], ans: 2,
@@ -11817,9 +11817,9 @@ dg20260826b1p: {
     { q: 'As soon as I ____ the news, I ____ my sister.', opts: ['heard / called', 'had heard / had called', 'hear / called', 'was hearing / called'], ans: 0,
       qCn: '我一聽到消息就打給我姊了。',
       expl: 'as soon as 已標順序 → 兩邊都用過去簡單式。' },
-    { q: 'She was upset because she ____ the train.', opts: ['missed', 'had missed', 'misses', 'was missing'], ans: 1,
+    { q: 'She was upset because she ____ the train.', opts: ['has missed', 'had missed', 'misses', 'was missing'], ans: 1,
       qCn: '她很沮喪，因為她沒趕上火車。',
-      expl: '沒有連接詞，要標「更早發生」→ 過去完成式 had missed。' }
+      expl: '沒趕上火車發生在「很沮喪」之前，用過去完成式 had missed 標出「更早發生」；has missed 是現在完成式，不能接在過去的 was upset 後面。' }
   ]
 },
 
@@ -12914,9 +12914,9 @@ dg20260904b1p: {
     { q: 'This is the second time the roof ____ this year.', opts: ['leaks', 'leaked', 'has leaked', 'is leaking'], ans: 2,
       qCn: '這是今年屋頂第二次漏水了。',
       expl: '「第二次」句型後面接現在完成式。' },
-    { q: 'It was the coldest winter that we ____ experienced.', opts: ['have never', 'had ever', 'have ever', 'ever have'], ans: 2,
-      qCn: '那是我們經歷過最冷的冬天。',
-      expl: '最高級 + that + have ever + 過去分詞；ever 放在 have 和 Vpp 中間。' }
+    { q: 'It is the coldest winter that we ____ experienced.', opts: ['have never', 'had ever', 'have ever', 'ever have'], ans: 2,
+      qCn: '這是我們經歷過最冷的冬天。',
+      expl: '最高級 + that + have ever + 過去分詞；ever 放在 have 和 Vpp 中間。主句是 It is（現在），所以用 have ever；如果主句是 It was，才用 had ever。' }
   ]
 },
 

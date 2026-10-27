@@ -354,7 +354,7 @@ r10:{ unit:"g11", title:"分詞構句與倒裝",
 r11:{ unit:"g13", title:"轉述句與委婉推測",
   formula:"S + said/told + that + 時態退一格　|　seem / appear / tend to + 原形",
   points:[
-    "轉述句的三個動作：① 去引號加 that ② 時態退一格 ③ 換人稱與時間副詞。The doctor said, \"It is caused by the dose.\" → The doctor said that it had been caused by the dose.",
+    "轉述句的三個動作：① 去引號加 that ② 時態退一格 ③ 換人稱與時間副詞。The doctor said, \"It is caused by the dose.\" → The doctor said that it was caused by the dose.",
     "say 後面直接接 that 子句；tell 後面必須先接人：He told me that ...（✗ He told that ...）。這是最常見的錯誤之一。",
     "醫療與學術英文很少直接斷定，而是用委婉推測：It seems to be...、It appears to have been...、Patients tend to...、It could be that...。這不是不確定，而是專業的分寸。",
     "appear / seem 後面接 to have been + p.p. 表示「看起來（過去）曾經被…」：The dizziness appears to have been caused by the dose. 這是 B2 閱讀常見但初學者幾乎不會主動用的結構。"

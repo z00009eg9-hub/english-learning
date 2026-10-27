@@ -15894,7 +15894,7 @@ grammar:[
       "bullets": [
         "have 還有另一個意思是「做」：have breakfast（吃早餐）、have a shower（洗澡）、have a rest（休息一下）",
         "這種 have 是動作，不是擁有，所以不能寫成 have got",
-        "判斷方法：如果中文翻成「吃、洗、上、玩得」就是動作；翻成「有」才可以加 got",
+        "判斷方法：如果中文翻成「吃、洗、玩得」就是動作；翻成「有」才可以加 got",
         "過去式只要用 had 就好，不管是擁有還是動作，都沒有 had got 這種寫法"
       ],
       "examples": [
@@ -17270,12 +17270,12 @@ grammar:[
       "qCn": "到下個月底，那個團隊會有三台新的檢測機。",
       "opts": [
         "A. has got",
-        "B. will have got",
+        "B. will has got",
         "C. will have",
         "D. is having"
       ],
       "ans": 2,
-      "expl": "句子講的是未來，have got 只有現在式，所以要用 will have。"
+      "expl": "By the end of next month 講的是未來，表示「到時會有」用 will have。has got 是現在式；will 後面要接原形，不能接 has；is having 不能表示擁有。"
     }
   ]
 },
@@ -17886,7 +17886,7 @@ grammar:[
         "A. He was late because the alarm had failed.",
         "B. She picked up her bag and walked out.",
         "C. The flight had boarded when we got to the gate.",
-        "D. They had booked the room before the price rose."
+        "D. By the time the police arrived, the thief had escaped."
       ],
       "ans": 1,
       "expl": "B的兩個動作照時間順序寫下來，讀者自然知道先後，不必退格。其他三句都需要交代「更早發生」的那一件。"
@@ -19073,9 +19073,9 @@ grammar:[
   ],
   "traps": [
     {
-      "bad": "The audit found that the line had been running smoothly ever since.",
+      "bad": "The audit found that the line has been running smoothly until that week.",
       "good": "The audit found that the line had been running smoothly until that week.",
-      "why": "ever since 的基準點是現在，跟 had done 的過去基準點互相打架。退一格的句子只能搭配同樣指向過去的時間說法，例如 until that week、by then、up to that point。"
+      "why": "until that week 是過去的終點，動作在過去就已經結束，不能用基準點在現在的 has been；要退一格用 had been。退一格的句子要搭配同樣指向過去的時間說法，例如 until that week、by then、up to that point。"
     },
     {
       "bad": "Sales had risen in 2023, had peaked in 2024, and had fallen in 2025.",
@@ -21795,12 +21795,12 @@ grammar:[
       "qCn": "你上次去台南是多久以前的事了？",
       "opts": [
         "has it been",
-        "is it",
+        "it has been",
         "has been",
         "was it"
       ],
       "ans": 0,
-      "expl": "問句需要虛主詞it，固定用How long has it been since...？"
+      "expl": "問句需要虛主詞it，而且 has 要移到 it 前面：How long has it been since...？"
     },
     {
       "q": "Which sentence best fits a news article's opening line?",
@@ -22816,7 +22816,7 @@ grammar:[
   "quiz": [
     {"q": "Anita ___ five modules this month.", "qCn": "Anita這個月已經完成五個單元了。", "opts": ["completed", "has completed", "complete", "is completing"], "ans": 1, "expl": "this month還沒結束，用現在完成式has completed。"},
     {"q": "She has studied statistics ___ two months.", "qCn": "她已經學統計學兩個月了。", "opts": ["since", "for", "from", "during"], "ans": 1, "expl": "表示「一段時間長度」用for，不是since。"},
-    {"q": "Anita has just ___ the training session.", "qCn": "Anita剛去上完那堂訓練課。", "opts": ["went", "go", "gone", "going"], "ans": 2, "expl": "has後面要接過去分詞gone，不能用went。"},
+    {"q": "Anita has just ___ to the training session.", "qCn": "Anita剛去參加那堂訓練課了（人現在還在那裡）。", "opts": ["went", "go", "gone", "going"], "ans": 2, "expl": "has後面要接過去分詞gone，不能用went；has gone to 表示人已經去了、現在還在那裡。"},
     {"q": "The final project ___ for next month.", "qCn": "期末專題已經被指派在下個月了。", "opts": ["has assigned", "has been assigned", "assigned", "is assigning"], "ans": 1, "expl": "project是被指派的一方，要用現在完成式的被動has been assigned。"}
   ]
 },
@@ -24138,10 +24138,10 @@ grammar:[
       "q": "The new inspector ___ very careful with every measurement today — maybe the manager is watching.",
       "qCn": "這位新檢驗員今天每個量測都特別小心——也許是主管在看吧。",
       "opts": [
-        "is",
+        "is been",
         "is being",
         "be",
-        "was"
+        "were"
       ],
       "ans": 1,
       "expl": "「今天特別小心（平常不一定）」是暫時行為，用 is being careful。"
@@ -24174,7 +24174,7 @@ grammar:[
       "q": "Ben is usually loud, but he ___ very quiet in this meeting.",
       "qCn": "Ben平常很大聲，但這場會議裡他特別安靜。",
       "opts": [
-        "is",
+        "is been",
         "is being",
         "be",
         "been"
@@ -24630,7 +24630,7 @@ grammar:[
   quiz:[
     {q:"The clinic ____ at nine every weekday morning, according to the schedule on the door.",qCn:"根據門上的時刻表，這間診所平日每天早上九點開門。",opts:["will open","opens","is opening","opened"],ans:1,expl:"固定的營業時刻表用現在簡單式講未來。"},
     {q:"Anita ____ misses her mother's calls — she always answers within a minute.",qCn:"Anita幾乎不會漏接媽媽的電話——她總是一分鐘內就接。",opts:["never not","hardly ever","doesn't hardly","not ever"],ans:1,expl:"hardly ever 本身已含否定，是「幾乎不」的固定用法。"},
-    {q:"If her mother ____ sick, she ____ the clinic right away.",qCn:"只要她媽媽不舒服，她就會馬上打給診所。",opts:["feels / calls","will feel / will call","feels / will call","will feel / calls"],ans:0,expl:"if 子句講一般性規則，兩邊都用現在簡單式，不能用 will。"},
+    {q:"If her mother ____ sick, she ____ the clinic right away.",qCn:"只要她媽媽不舒服，她就會馬上打給診所。",opts:["feels / calls","will feel / will call","feel / will call","will feel / calls"],ans:0,expl:"if 子句講一般性規則，if 子句裡不能用 will（排除 B、D）；主詞 her mother 是第三人稱單數，要用 feels（排除 C）。講「每次都會這樣」的習慣，主句也用現在簡單式 calls。"},
     {q:"Which sentence describes a general truth?",qCn:"哪一句在描述一個普遍事實？",opts:["A fever is meaning an infection.","A fever usually means the body is fighting an infection.","A fever was meaning an infection.","A fever means infection yesterday."],ans:1,expl:"mean 是狀態動詞，描述普遍成立的事實要用現在簡單式，不能用進行式。"}
   ]
 },
@@ -24817,7 +24817,7 @@ grammar:[
     {q:"My car is at the garage, so I ____ the bus to work this week.",qCn:"我的車在修車廠，所以這禮拜我都搭公車上班。",opts:["take","am taking","will take","took"],ans:1,expl:"this week ＝ 暫時狀態（車修好就結束），用現在進行式。"},
     {q:"We ____ the new client at 10 a.m. tomorrow — the meeting room is already booked.",qCn:"我們明天早上十點要見新客戶——會議室已經訂好了。",opts:["will meet","meet","are meeting","met"],ans:2,expl:"會議室都訂了＝敲定的安排 → are meeting。"},
     {q:"選出「抱怨」語氣最強的一句：",qCn:"選出「抱怨」語氣最強的一句：",opts:["My roommate always leaves dishes in the sink.","My roommate is always leaving dishes in the sink.","My roommate left dishes in the sink.","My roommate leaves dishes in the sink sometimes."],optsCn:["A. 我室友總是把碗盤留在水槽。", "B. 我室友老是把碗盤留在水槽（抱怨語氣）。", "C. 我室友把碗盤留在水槽了。", "D. 我室友有時候把碗盤留在水槽。"],ans:1,expl:"always ＋ 進行式 ＝ 「老是這樣、受不了」的抱怨語氣。"},
-    {q:"Why ____ so quiet today? You're usually the loudest person in the office.",qCn:"你今天怎麼這麼安靜？你平常是辦公室最大聲的人。",opts:["are you","are you being","do you be","you are"],ans:1,expl:"be 的進行式 are you being 表示「今天暫時的表現」，跟平常不同——後句的 usually 就是線索。"}
+    {q:"Why ____ so quiet today? You're usually the loudest person in the office.",qCn:"你今天怎麼這麼安靜？你平常是辦公室最大聲的人。",opts:["are you been","are you being","do you be","you are"],ans:1,expl:"be 的進行式 are you being 表示「今天暫時的表現」，跟平常不同——後句的 usually 就是線索。"}
   ]
 },
 
