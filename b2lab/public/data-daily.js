@@ -7,6 +7,791 @@
 window.DAILY = {
 
 articles:[
+/* ---------- 2026-10-28 每日文章（學習與心理：決心、承諾與那句「我會」） ---------- */
+{
+  "id": "d20261028a2",
+  "date": "2026-10-28",
+  "level": "A2",
+  "topic": "週末活動",
+  "words": 90,
+  "kind": "orig",
+  "title": "Tom Will Start on Saturday",
+  "titleCn": "Tom星期六就開始",
+  "focus": "will 用在話說出口那一刻才決定的事（he will start、she will listen），won't 講「不會那樣做」，I think／She thinks 加 will 講猜測",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom想學吉他，在星期五晚上做了一個決定。這一篇請數一數 will 出現幾次：每一次都是當下才決定，或是對還沒發生的事做猜測。注意第三段的 will not，那是「他不打算那樣做」；最後一句的 She thinks Tom will play 是姊姊在猜。中文都講「會」，英文的形狀卻只有一種：will 加原形動詞。",
+  "spoken": [
+    {
+      "en": "Guitar. Cousin has an old one.",
+      "cn": "吉他，表哥有一把舊的。"
+    },
+    {
+      "en": "Busy week. Saturday morning free.",
+      "cn": "一整週都忙，星期六早上有空。"
+    },
+    {
+      "en": "Ten minutes. Not two hours.",
+      "cn": "十分鐘，不是兩小時。"
+    },
+    {
+      "en": "A bit shy. Sister will listen.",
+      "cn": "有點害羞，姊姊會聽。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom wants to learn the guitar. His cousin has an old one at home. Tom can borrow it this week.",
+      "cn": "Tom想學吉他。他表哥家裡有一把舊的。Tom這個星期可以把它借來。"
+    },
+    {
+      "en": "Tom is busy from Monday to Friday. He looks at his free Saturday morning. Then he decides: he will start on Saturday.",
+      "cn": "Tom星期一到星期五都很忙。他看著自己星期六早上空著的時間。然後他決定了：他星期六就開始。"
+    },
+    {
+      "en": "He will practice for ten minutes every Saturday. He will not practice for two hours. A short time is easier to keep.",
+      "cn": "他每個星期六要練十分鐘。他不會練兩個小時。時間短一點比較好維持。"
+    },
+    {
+      "en": "Tom is shy about the noise in his room. His sister says she will listen to him. She thinks Tom will play a real song soon.",
+      "cn": "Tom對房間裡的聲音有點害羞。他姊姊說她會聽他彈。她覺得Tom很快就會彈出一首真正的歌。"
+    }
+  ],
+  "target": [
+    {
+      "w": "guitar",
+      "ipa": "/ɡɪˈtɑːr/",
+      "pos": "n.",
+      "cn": "吉他",
+      "def": "A music tool with six strings that you play with your fingers.",
+      "ex": "A man played a guitar beside the river.",
+      "exCn": "一個男人在河邊彈吉他。"
+    },
+    {
+      "w": "borrow",
+      "ipa": "/ˈbɑːroʊ/",
+      "pos": "v.",
+      "cn": "借（來）",
+      "def": "To take something from someone and give it back later.",
+      "ex": "Can I borrow your umbrella for one hour?",
+      "exCn": "我可以借你的傘一小時嗎？"
+    },
+    {
+      "w": "practice",
+      "ipa": "/ˈpræktɪs/",
+      "pos": "v.",
+      "cn": "練習",
+      "def": "To do something again and again to get better at it.",
+      "ex": "My brother practices his drums after dinner.",
+      "exCn": "我弟弟晚餐後練他的鼓。"
+    },
+    {
+      "w": "free",
+      "ipa": "/friː/",
+      "pos": "adj.",
+      "cn": "有空的",
+      "def": "Not busy, with no work to do at that time.",
+      "ex": "Are you free on Thursday evening?",
+      "exCn": "你星期四晚上有空嗎？"
+    },
+    {
+      "w": "shy",
+      "ipa": "/ʃaɪ/",
+      "pos": "adj.",
+      "cn": "害羞的",
+      "def": "Not comfortable when other people watch or listen to you.",
+      "ex": "The new student is shy, but he smiles a lot.",
+      "exCn": "新同學很害羞，但他常常笑。"
+    },
+    {
+      "w": "minute",
+      "ipa": "/ˈmɪn.ɪt/",
+      "pos": "n.",
+      "cn": "分鐘",
+      "def": "A short time of sixty seconds.",
+      "ex": "Wait ten minutes and the soup will be hot.",
+      "exCn": "等十分鐘，湯就會是熱的。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Where does Tom get the guitar?",
+      "qCn": "Tom從哪裡拿到吉他？",
+      "opts": [
+        "A. From a shop",
+        "B. From his cousin",
+        "C. From his school",
+        "D. From his sister"
+      ],
+      "optsCn": [
+        "A. 從一家店",
+        "B. 從他表哥那裡",
+        "C. 從他的學校",
+        "D. 從他姊姊那裡"
+      ],
+      "ans": 1,
+      "expl": "His cousin has an old one at home.——第一段說表哥家裡有一把舊吉他，Tom這個星期可以借。"
+    },
+    {
+      "q": "How long will Tom practice each Saturday?",
+      "qCn": "Tom每個星期六要練多久？",
+      "opts": [
+        "A. Ten minutes",
+        "B. One hour",
+        "C. Two hours",
+        "D. All morning"
+      ],
+      "optsCn": [
+        "A. 十分鐘",
+        "B. 一小時",
+        "C. 兩小時",
+        "D. 一整個早上"
+      ],
+      "ans": 0,
+      "expl": "He will practice for ten minutes every Saturday.——第三段寫得很清楚，而且下一句還說他不會練兩小時。"
+    },
+    {
+      "q": "Tom looks at the free Saturday and says, I ___ start on Saturday.",
+      "qCn": "Tom看著空著的星期六說：我星期六就開始。",
+      "opts": [
+        "A. will",
+        "B. am going to",
+        "C. start",
+        "D. starting"
+      ],
+      "ans": 0,
+      "expl": "他是看到那段空時間、話說出口的那一刻才決定的，這種當下的決定用 will 加原形動詞。am going to 是事先就決定好的，start 少了未來的意思，starting 不能自己站著。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Maybe Saturday. I don't know.",
+      "b2": "I will start on Saturday.",
+      "note": "第一句只是把猶豫說出來，聽的人不知道你到底要不要做。will 的功能是替這一刻的決定蓋章：話一說出口，事情就定了。A2 階段只要記住 will 後面永遠接原形動詞，不加 s、不加 ing。",
+      "sp": "Starting Saturday.",
+      "spNote": "口語常把主詞和 will 吃掉，只留動作和日子。",
+      "b1Cn": "也許星期六吧，我不知道。",
+      "b2Cn": "我星期六就開始。",
+      "spCn": "星期六開始。"
+    },
+    {
+      "b1": "I don't practice two hours.",
+      "b2": "I will not practice for two hours.",
+      "note": "中文的「我不練兩小時」沒有時間的形狀，所以很容易寫成現在簡單式，變成在講習慣。要講「我不打算那樣做」就用 will not（口語 won't），那是對未來的決定，不是在描述每天的生活。",
+      "sp": "Won't do two hours.",
+      "spNote": "won't 是 will not 的縮寫，口語幾乎只用這個。",
+      "b1Cn": "我不練兩小時。",
+      "b2Cn": "我不會練兩個小時。",
+      "spCn": "不練兩小時。"
+    }
+  ]
+},
+{
+  "id": "d20261028b1",
+  "date": "2026-10-28",
+  "level": "B1",
+  "topic": "學習與心理",
+  "words": 130,
+  "kind": "orig",
+  "title": "The Decision Anita Made at Lunch",
+  "titleCn": "Anita在午餐桌上做的決定",
+  "focus": "will 講當下才做的決定（she will try again），won't 講不打算做的事，並用 She is sure that…／She does not think…／probably 調整預測的確定程度",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Anita兩年前就想學騎機車，去年試過又放棄。這一篇的重點不在她學不學得會，而在同一個 will 可以有兩種工作：一種是當場做決定（she will try again this Sunday），一種是對還沒發生的事下判斷（the first ten minutes will be the hardest part）。另外注意 is sure that、does not think、probably 這三個零件怎麼把同一個 will 的確定程度調高或調低。",
+  "spoken": [
+    {
+      "en": "Two years. Still no scooter.",
+      "cn": "兩年了，還是沒騎機車。"
+    },
+    {
+      "en": "Three lessons last winter. Then stopped.",
+      "cn": "去年冬天上三堂，然後停了。"
+    },
+    {
+      "en": "Chopsticks down. Trying again Sunday.",
+      "cn": "筷子一放，星期天再試一次。"
+    },
+    {
+      "en": "Small promise. Easier to keep.",
+      "cn": "小小的承諾，比較守得住。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita has wanted to ride a scooter since she moved to Vietnam. She tried once last winter, but she stopped after three lessons. The traffic near her office frightened her.",
+      "cn": "Anita搬到越南以後就一直想學騎機車。她去年冬天試過一次，但上了三堂課就停了。辦公室附近的車流讓她很害怕。"
+    },
+    {
+      "en": "Today at lunch her colleague Mai asks about the scooter again. Anita puts down her chopsticks and thinks for a few seconds. Then she says it out loud: she will try again this Sunday.",
+      "cn": "今天午餐時，她的同事Mai又問起機車的事。Anita放下筷子，想了幾秒鐘。然後她把話說出來了：她這個星期天要再試一次。"
+    },
+    {
+      "en": "Mai offers to ride behind her on Sunday, so Anita will not feel alone on the road. Anita is sure that the first ten minutes will be the hardest part of the lesson.",
+      "cn": "Mai說她星期天會騎在Anita後面，這樣Anita在路上就不會覺得孤單。Anita很確定，最難的一定是上課的頭十分鐘。"
+    },
+    {
+      "en": "She does not think she will be a fast rider this year, and she probably will not ride at night. But a small promise is much easier to keep than a big one.",
+      "cn": "她覺得自己今年不會變成騎得很快的人，而且她大概不會在晚上騎。但是一個小小的承諾，比一個大的承諾好守太多了。"
+    }
+  ],
+  "target": [
+    {
+      "w": "afraid",
+      "ipa": "/əˈfreɪd/",
+      "pos": "adj.",
+      "cn": "害怕的",
+      "def": "Feeling worried that something bad may happen.",
+      "ex": "Many new drivers are afraid of narrow streets.",
+      "exCn": "很多新手駕駛都怕窄巷子。"
+    },
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person who works with you at the same company.",
+      "ex": "My colleagues meet in the kitchen every Friday morning.",
+      "exCn": "我的同事們每個星期五早上在茶水間聚一下。"
+    },
+    {
+      "w": "traffic",
+      "ipa": "/ˈtræfɪk/",
+      "pos": "n.",
+      "cn": "車流；交通",
+      "def": "All the cars and bikes moving on a road.",
+      "ex": "The traffic lights changed before the truck arrived.",
+      "exCn": "紅綠燈在卡車到達前就變了。"
+    },
+    {
+      "w": "offer",
+      "ipa": "/ˈɑː.fɚ/",
+      "pos": "v.",
+      "cn": "主動說要（做某事）",
+      "def": "To say that you are willing to do something for someone.",
+      "ex": "The hotel offers a free breakfast to every guest.",
+      "exCn": "那家旅館提供每位房客免費早餐。"
+    },
+    {
+      "w": "probably",
+      "ipa": "/ˈprɑːbəbli/",
+      "pos": "adv.",
+      "cn": "大概；很可能",
+      "def": "Used when you think something is true but are not sure.",
+      "ex": "The box is probably too heavy for one person.",
+      "exCn": "那個箱子大概一個人搬不動。"
+    },
+    {
+      "w": "promise",
+      "ipa": "/ˈprɑː.mɪs/",
+      "pos": "n.",
+      "cn": "承諾",
+      "def": "Something you tell someone you will certainly do.",
+      "ex": "He kept his promise and paid the money back.",
+      "exCn": "他守住了承諾，把錢還了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Anita stop her lessons last winter?",
+      "qCn": "Anita去年冬天為什麼停掉課程？",
+      "opts": [
+        "A. The lessons were too expensive",
+        "B. The traffic near her office frightened her",
+        "C. Mai was too busy to help",
+        "D. She moved to another city"
+      ],
+      "optsCn": [
+        "A. 課程太貴",
+        "B. 辦公室附近的車流讓她害怕",
+        "C. Mai太忙沒辦法幫她",
+        "D. 她搬到別的城市"
+      ],
+      "ans": 1,
+      "expl": "The traffic near her office frightened her.——第一段最後一句直接寫出原因。"
+    },
+    {
+      "q": "What does Mai offer to do on Sunday?",
+      "qCn": "Mai說星期天要做什麼？",
+      "opts": [
+        "A. Lend Anita her own scooter",
+        "B. Ride behind Anita on the road",
+        "C. Teach Anita at the office",
+        "D. Drive Anita in a car"
+      ],
+      "optsCn": [
+        "A. 把自己的機車借給Anita",
+        "B. 在路上騎在Anita後面",
+        "C. 在辦公室教Anita",
+        "D. 開車載Anita"
+      ],
+      "ans": 1,
+      "expl": "Mai offers to ride behind her on Sunday.——第三段第一句說得很清楚，目的是讓Anita不覺得孤單。"
+    },
+    {
+      "q": "She ___ she will be a fast rider this year.",
+      "qCn": "她覺得自己今年不會變成騎得很快的人。",
+      "opts": [
+        "A. does not think",
+        "B. thinks not",
+        "C. will not think",
+        "D. is not thinking"
+      ],
+      "ans": 0,
+      "expl": "英文把否定放在前面的 think 上，說 I don't think she will…，而不是把 not 丟到後面那個 will 旁邊。thinks not 是很舊的書面說法，will not think 變成「以後不會去想」，is not thinking 是此刻沒在想。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Maybe I try again. I am not sure.",
+      "b2": "I will try again this Sunday.",
+      "note": "第一句用 maybe 加現在簡單式，聽起來像還在考慮，對方也不會把它當成約定。把它換成 will，意思就從「想一想」變成「我決定了」，而且決定是在說話的這一秒成立的。這也是為什麼下一句Mai馬上就能接著安排星期天。",
+      "sp": "Trying again Sunday.",
+      "spNote": "口語常省掉主詞和助動詞，只留動作和時間。",
+      "b1Cn": "也許我再試一次吧，我不確定。",
+      "b2Cn": "我這個星期天要再試一次。",
+      "spCn": "星期天再試一次。"
+    },
+    {
+      "b1": "I think the first ten minutes are very hard.",
+      "b2": "I am sure the first ten minutes will be the hardest part.",
+      "note": "第一句用現在簡單式，講的是一般道理；但Anita說的是還沒發生的那一堂課，所以要用 will。前面再加上 I am sure，就把這個預測的確定程度拉到最高。想降低確定程度時，換成 probably 或 I don't think 就可以了。",
+      "sp": "First ten minutes, the worst.",
+      "spNote": "口語常把 will be 整個省掉，直接把兩塊名詞擺在一起。",
+      "b1Cn": "我覺得前十分鐘很難。",
+      "b2Cn": "我很確定前十分鐘會是最難的部分。",
+      "spCn": "前十分鐘最難。"
+    }
+  ]
+},
+{
+  "id": "d20261028b1p",
+  "date": "2026-10-28",
+  "level": "B1+",
+  "topic": "新聞·教育",
+  "words": 205,
+  "kind": "news",
+  "title": "Twenty-Four Desks by 2029",
+  "titleCn": "二○二九年前，一班二十四張桌子",
+  "focus": "will 的被動式（will be capped、will be kept、will be piloted）講政策承諾，再用 that／who 關係子句把「哪一種老師、哪一群家長」說清楚",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "這是台北市長選舉的教育政見改寫。讀的時候請把注意力放在兩個結構上：第一，政見幾乎都寫成 will be 加過去分詞（will be capped、will be opened），因為重點是「班級、職位」會被怎麼處理，不是誰去處理；第二，文章用 that 和 who 的關係子句把名詞講細（the funding that pays for the meals、parents who want to pay a little more）。這兩樣是B1篇沒有的工具。",
+  "source": "改寫自 Focus Taiwan 報導（2026/10/02）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/politics/202610020021",
+  "spoken": [
+    {
+      "en": "Mayoral race. Now about classrooms.",
+      "cn": "市長選戰，現在吵到教室裡。"
+    },
+    {
+      "en": "Twenty-four per class. By 2029.",
+      "cn": "一班二十四人，二○二九年前達成。"
+    },
+    {
+      "en": "Same teachers. Fewer pupils each.",
+      "cn": "老師人數不變，每人帶的學生變少。"
+    },
+    {
+      "en": "Free lunches. Mayor pushes back.",
+      "cn": "免費午餐，市長反過來追問。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Taipei's mayoral race has moved into the classroom. On October 2, the candidate Puma Shen presented an education platform at his party headquarters. He says that elementary classes will be capped at twenty-four pupils, and junior high classes at twenty-five, by the 2028-2029 school year.",
+      "cn": "台北市長選戰打進了教室。十月二日，候選人沈伯洋在黨部提出一份教育政見。他說小學班級人數將被限制在二十四人、國中二十五人，在二○二八到二○二九學年前完成。"
+    },
+    {
+      "en": "Teacher numbers will be kept at today's level even as enrollment falls, so the workload that many teachers complain about should get lighter. More permanent posts will be opened. Two ideas that few city schools have tried, a second homeroom teacher and an administrative assistant, will be piloted in elementary schools.",
+      "cn": "即使學生人數下降，老師的編制仍會維持在現在的水準，所以很多老師抱怨的那種工作量應該會變輕。學校也會開出更多正式教職。還有兩個很少有市立學校試過的做法——第二位班級導師與行政助理——將在小學試辦。"
+    },
+    {
+      "en": "School lunches drew the sharpest reply. Shen says the funding that pays for the meals will be adjusted so that it keeps pace with inflation, and parents who want to pay a little more for better food will still be allowed to. Meal quality, he argued, should not be judged against a fixed spending ceiling.",
+      "cn": "營養午餐引來最直接的回應。沈伯洋說，支付餐費的那筆經費會調整，讓它跟得上物價；而想多付一點錢讓孩子吃好一些的家長，仍然可以這樣做。他主張，餐點品質不該用一個固定的花費上限來評斷。"
+    },
+    {
+      "en": "Mayor Chiang Wan-an, who is running again, defended the free lunches his city already offers. They ease the burden on families, he said, and they stop children from noticing which classmates have less. He then asked Shen to clarify a position that seemed to promise free meals and parental payments at the same time.",
+      "cn": "正在爭取連任的市長蔣萬安，則替台北市已經在做的免費午餐辯護。他說免費午餐減輕家庭負擔，也讓孩子不會注意到哪些同學家裡比較辛苦。接著他要沈伯洋說清楚：一份政見怎麼能同時承諾免費午餐和家長加錢。"
+    }
+  ],
+  "target": [
+    {
+      "w": "cap",
+      "ipa": "/kæp/",
+      "pos": "v.",
+      "cn": "設上限；限制在",
+      "def": "To set the highest number or amount that is allowed.",
+      "ex": "The club caps its membership at eighty people.",
+      "exCn": "那個社團把會員人數限制在八十人。"
+    },
+    {
+      "w": "pupil",
+      "ipa": "/ˈpjuː.pəl/",
+      "pos": "n.",
+      "cn": "（中小學）學生",
+      "def": "A child who is studying at a school.",
+      "ex": "Each pupil in the room raised a hand.",
+      "exCn": "房間裡每個學生都舉了手。"
+    },
+    {
+      "w": "enrollment",
+      "ipa": "/ɪnˈroʊl.mənt/",
+      "pos": "n.",
+      "cn": "就學人數；註冊人數",
+      "def": "The number of people who join a school or a course.",
+      "ex": "Enrollment in evening classes rose again this spring.",
+      "exCn": "今年春天夜間課程的註冊人數又上升了。"
+    },
+    {
+      "w": "workload",
+      "ipa": "/ˈwɝːkloʊd/",
+      "pos": "n.",
+      "cn": "工作量",
+      "def": "The amount of work a person has to finish.",
+      "ex": "A clear checklist lightens the workload before an audit.",
+      "exCn": "一份清楚的檢查表能減輕稽核前的工作量。"
+    },
+    {
+      "w": "permanent",
+      "ipa": "/ˈpɝː.mə.nənt/",
+      "pos": "adj.",
+      "cn": "長期的；正式編制的",
+      "def": "Lasting for a long time, not just for a short period.",
+      "ex": "She finally signed a permanent contract last month.",
+      "exCn": "她上個月終於簽下正式的長期合約。"
+    },
+    {
+      "w": "pilot",
+      "ipa": "/ˈpaɪlət/",
+      "pos": "v.",
+      "cn": "試辦；試行",
+      "def": "To try a new plan in a small way before using it everywhere.",
+      "ex": "The company will pilot the new form in two offices.",
+      "exCn": "公司會先在兩個辦公室試行這份新表單。"
+    },
+    {
+      "w": "inflation",
+      "ipa": "/ɪnˈfleɪʃn/",
+      "pos": "n.",
+      "cn": "通膨；物價上漲",
+      "def": "A general rise in the prices of things over time.",
+      "ex": "Inflation pushed the price of bus tickets up.",
+      "exCn": "通膨把公車票價往上推。"
+    },
+    {
+      "w": "ceiling",
+      "ipa": "/ˈsiːlɪŋ/",
+      "pos": "n.",
+      "cn": "上限",
+      "def": "The highest level that something is allowed to reach.",
+      "ex": "Our budget has no ceiling for safety equipment.",
+      "exCn": "我們的預算對安全設備沒有設上限。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "By the 2028-2029 school year, how many pupils would an elementary class have at most?",
+      "qCn": "到二○二八至二○二九學年，小學一班最多幾個學生？",
+      "opts": [
+        "A. Twenty",
+        "B. Twenty-four",
+        "C. Twenty-five",
+        "D. Thirty"
+      ],
+      "optsCn": [
+        "A. 二十人",
+        "B. 二十四人",
+        "C. 二十五人",
+        "D. 三十人"
+      ],
+      "ans": 1,
+      "expl": "elementary classes will be capped at twenty-four pupils, and junior high classes at twenty-five——第一段分開寫了兩個數字，二十五是國中。"
+    },
+    {
+      "q": "Why should teachers' workload get lighter under the plan?",
+      "qCn": "依照這份政見，老師的工作量為什麼應該變輕？",
+      "opts": [
+        "A. Teachers will work fewer days each week",
+        "B. Teacher numbers stay the same while enrollment falls",
+        "C. Classes will be taught online",
+        "D. Parents will take over the paperwork"
+      ],
+      "optsCn": [
+        "A. 老師每週上班天數變少",
+        "B. 學生人數下降，老師編制卻維持不變",
+        "C. 課程會改成線上上課",
+        "D. 家長會接手行政文書"
+      ],
+      "ans": 1,
+      "expl": "Teacher numbers will be kept at today's level even as enrollment falls——第二段第一句：人數不變、學生變少，每位老師帶的人就少了。"
+    },
+    {
+      "q": "What did Mayor Chiang ask Shen to do?",
+      "qCn": "蔣市長要沈伯洋做什麼？",
+      "opts": [
+        "A. Drop the class-size plan",
+        "B. Clarify a position on lunches that sounded like two things at once",
+        "C. Publish the full budget",
+        "D. Visit every elementary school"
+      ],
+      "optsCn": [
+        "A. 放棄縮小班級的計畫",
+        "B. 把聽起來同時講兩件事的午餐立場說清楚",
+        "C. 公開完整預算",
+        "D. 走訪每一所小學"
+      ],
+      "ans": 1,
+      "expl": "He then asked Shen to clarify a position that seemed to promise free meals and parental payments at the same time.——最後一句就是這個要求。"
+    },
+    {
+      "q": "More permanent posts ___ in city schools.",
+      "qCn": "市立學校會開出更多正式教職。",
+      "opts": [
+        "A. will open",
+        "B. will be opened",
+        "C. will be open",
+        "D. will opening"
+      ],
+      "ans": 1,
+      "expl": "職位是被人開出來的，重點不在誰去開，所以用被動 will be 加過去分詞 opened。will open 會變成職位自己打開，will be open 是形容詞「開著的」，will opening 這種形狀不存在。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The city will keep the same number of teachers.",
+      "b2": "Teacher numbers will be kept at today's level.",
+      "note": "主動句得先找到一個主詞（the city），但政見談的其實是「編制會被怎麼處理」。改成 will be kept，句子的焦點就從市政府移到 teacher numbers 上，這也是新聞與公文最常見的寫法。公式：will be 加過去分詞。",
+      "sp": "Same teacher numbers. No cuts.",
+      "spNote": "口語直接把兩個名詞片語丟出來，動詞整個省掉。",
+      "b1Cn": "市政府會維持一樣的老師人數。",
+      "b2Cn": "老師的編制會維持在現在的水準。",
+      "spCn": "老師人數不變，不砍。"
+    },
+    {
+      "b1": "Some parents want to pay more for better food. They can still do it.",
+      "b2": "Parents who want to pay a little more for better food will still be allowed to.",
+      "note": "兩句話各講一半，讀者得自己把它們接起來。用 who 的關係子句，就能把「哪一群家長」直接黏在 parents 後面，一句話交代完畢。注意 who 代替的是人，而且後面的動詞要跟著 parents 用複數 want。",
+      "sp": "Parents can still add money.",
+      "spNote": "口語會把關係子句拆掉，用最短的主詞加動詞講重點。",
+      "b1Cn": "有些家長想多付錢換好一點的食物。他們還是可以這樣做。",
+      "b2Cn": "想多付一點錢換好一點食物的家長，仍然可以這樣做。",
+      "spCn": "家長還是可以加錢。"
+    }
+  ]
+},
+{
+  "id": "d20261028b2",
+  "date": "2026-10-28",
+  "level": "B2",
+  "topic": "學習與心理",
+  "words": 258,
+  "kind": "original",
+  "title": "The Sentence Anita Said Out Loud",
+  "titleCn": "Anita說出口的那一句話",
+  "focus": "will 的人際用法：當場答應（I will do it）、承諾、請求；won't／wouldn't 表示「拒絕配合」；Shall we…? 用來把提議的決定權交給對方",
+  "intro": "這一篇寫的是「說出口」這件事本身。注意三個地方：第一，I will do it 不是在預報未來，而是當場把工作接下來；第二，the projector would not cooperate 用 wouldn't 講機器「不肯配合」，這是 will／would 很道地的一種用法；第三，最後那句 Shall we do one more session 不是在問未來會不會發生，而是把要不要做的決定權交到對方手上。",
+  "spoken": [
+    {
+      "en": "Monday meeting. Nobody raised a hand.",
+      "cn": "週一會議，沒人舉手。"
+    },
+    {
+      "en": "Heard her own voice. Already out.",
+      "cn": "聽見自己的聲音，話已經出去了。"
+    },
+    {
+      "en": "In your head: free to drop.",
+      "cn": "只在心裡：隨時可以放掉。"
+    },
+    {
+      "en": "Third week. He corrected her math.",
+      "cn": "第三週，他糾正了她的算式。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "The question came up at the end of a Monday meeting, when everyone was already looking at the clock. Three new operators had joined the line, and somebody had to teach them how to read a gauge properly. Anita looked around the table. Nobody raised a hand, and the silence stretched long enough to become awkward.",
+      "cn": "那個問題是在週一會議快結束時冒出來的，大家已經在看時鐘了。生產線上來了三位新作業員，得有人教他們怎麼正確判讀量具。Anita環視了一圈會議桌。沒有人舉手，沉默拖得久到變得尷尬。"
+    },
+    {
+      "en": "Then she heard her own voice. I will do it, she said, and the words were out before she had finished deciding. For a second she wanted them back. She had no training material, no slides, and no free afternoon. What she did have was eleven people who had now heard her say it.",
+      "cn": "然後她聽見了自己的聲音。我來做，她說，而這句話在她還沒想完之前就已經出去了。有一秒鐘她想把話收回來。她沒有教材、沒有簡報，也沒有空下來的下午。她唯一有的，是十一個現在都聽見她這麼說的人。"
+    },
+    {
+      "en": "That, she thinks now, is the whole trick. An intention that stays in your head costs nothing to drop; nobody notices, and you can always promise yourself you will start next month. A promise said out loud in a room full of colleagues behaves differently. The cost of quitting moves outside your own head, and it becomes a thing other people are waiting for.",
+      "cn": "她現在覺得，關鍵就在這裡。一個只留在腦袋裡的打算，放掉是零成本的；沒有人會發現，而你永遠可以跟自己說下個月再開始。但一句在滿是同事的會議室裡說出口的承諾，性質就完全不一樣了。放棄的成本被搬到你自己的腦袋外面，它變成了別人正在等的一件事。"
+    },
+    {
+      "en": "The first session was rough. One operator was reluctant to ask anything, and the projector would not cooperate, so Anita drew the gauge on a whiteboard instead. By the third week the same operator was correcting her arithmetic in front of everyone. Shall we do one more session on tolerances, he asked, and Anita realized the group had stopped being hers to carry. She had expected to be the one who carried it, and now she was only the one who had started it.",
+      "cn": "第一堂課很克難。有一位作業員什麼都不肯問，投影機又不肯配合，所以Anita改用白板把量具畫出來。到了第三週，同一位作業員已經會在大家面前糾正她的算式。我們要不要再上一堂公差的課，他問；Anita這才意識到，這個班已經不需要她一個人扛了。她原本以為自己得一路扛著，現在她只是那個把事情開始起來的人。"
+    }
+  ],
+  "target": [
+    {
+      "w": "volunteer",
+      "ipa": "/ˌvɑː.lənˈtɪr/",
+      "pos": "v.",
+      "cn": "自願（做某事）",
+      "def": "To offer to do a job that nobody has asked you to do.",
+      "ex": "Two engineers volunteered to review the drawings overnight.",
+      "exCn": "兩位工程師自願連夜把圖面看過一遍。"
+    },
+    {
+      "w": "hesitate",
+      "ipa": "/ˈhez.ə.teɪt/",
+      "pos": "v.",
+      "cn": "猶豫",
+      "def": "To wait a moment before acting because you are not sure.",
+      "ex": "He hesitated at the door and then knocked twice.",
+      "exCn": "他在門口猶豫了一下，然後敲了兩次門。"
+    },
+    {
+      "w": "commitment",
+      "ipa": "/kəˈmɪtmənt/",
+      "pos": "n.",
+      "cn": "承諾；許下的責任",
+      "def": "A promise that makes you responsible for doing something.",
+      "ex": "A written commitment is harder to forget than a nod.",
+      "exCn": "寫下來的承諾比點個頭難忘得多。"
+    },
+    {
+      "w": "reluctant",
+      "ipa": "/rɪˈlʌk.tənt/",
+      "pos": "adj.",
+      "cn": "不太願意的",
+      "def": "Not wanting to do something, although you may still do it.",
+      "ex": "The supplier was reluctant to share its test data.",
+      "exCn": "那家供應商不太願意提供自己的測試數據。"
+    },
+    {
+      "w": "accountable",
+      "ipa": "/əˈkaʊn.t̬ə.bəl/",
+      "pos": "adj.",
+      "cn": "需要負責交代的",
+      "def": "Having to explain your actions and results to other people.",
+      "ex": "Monthly reviews keep every shift accountable for its own numbers.",
+      "exCn": "每月檢討讓每個班別都得為自己的數字負責。"
+    },
+    {
+      "w": "intention",
+      "ipa": "/ɪnˈten.ʃən/",
+      "pos": "n.",
+      "cn": "打算；意圖",
+      "def": "A plan in your mind that you have not acted on yet.",
+      "ex": "Good intentions rarely survive a busy Friday.",
+      "exCn": "再好的打算，碰上忙碌的星期五也很難活下來。"
+    },
+    {
+      "w": "aloud",
+      "ipa": "/əˈlaʊd/",
+      "pos": "adv.",
+      "cn": "出聲地；大聲地",
+      "def": "In a voice that other people can hear.",
+      "ex": "Reading the checklist aloud catches mistakes faster.",
+      "exCn": "把檢查表唸出聲，更快抓到錯誤。"
+    },
+    {
+      "w": "gauge",
+      "ipa": "/ɡeɪdʒ/",
+      "pos": "n.",
+      "cn": "量具；量錶",
+      "def": "A tool that shows a measurement such as size or pressure.",
+      "ex": "The gauge on the old press sticks in cold weather.",
+      "exCn": "那台舊沖床上的量錶，天冷時會卡住。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What made Anita speak up at the meeting?",
+      "qCn": "是什麼讓Anita在會議上開口的？",
+      "opts": [
+        "A. Her manager asked her directly",
+        "B. Nobody volunteered and the silence became awkward",
+        "C. She had already prepared a training plan",
+        "D. The new operators asked her for help"
+      ],
+      "optsCn": [
+        "A. 她的主管直接點她",
+        "B. 沒有人自願，沉默變得尷尬",
+        "C. 她早就準備好一份訓練計畫",
+        "D. 新作業員來找她幫忙"
+      ],
+      "ans": 1,
+      "expl": "Nobody raised a hand, and the silence stretched long enough to become awkward.——第一段最後一句，加上第二段「話在她還沒想完之前就出去了」。"
+    },
+    {
+      "q": "According to the third paragraph, why is a spoken promise different from an intention?",
+      "qCn": "依第三段，說出口的承諾和心裡的打算差在哪裡？",
+      "opts": [
+        "A. It is easier to remember",
+        "B. Other people are now waiting for it",
+        "C. It takes less time to finish",
+        "D. It can be written into a contract"
+      ],
+      "optsCn": [
+        "A. 比較容易記住",
+        "B. 已經有別人在等它了",
+        "C. 做完花的時間比較少",
+        "D. 可以寫進合約裡"
+      ],
+      "ans": 1,
+      "expl": "It becomes a thing other people are waiting for.——第三段最後一句就是這個對比的結論。"
+    },
+    {
+      "q": "What happened by the third week?",
+      "qCn": "到了第三週發生了什麼事？",
+      "opts": [
+        "A. The projector was replaced",
+        "B. The quiet operator was correcting Anita's arithmetic",
+        "C. Anita handed the class to her manager",
+        "D. The sessions were moved online"
+      ],
+      "optsCn": [
+        "A. 投影機被換掉了",
+        "B. 原本安靜的那位作業員會糾正Anita的算式",
+        "C. Anita把課交給主管",
+        "D. 課程改到線上"
+      ],
+      "ans": 1,
+      "expl": "By the third week the same operator was correcting her arithmetic in front of everyone.——就是第一堂課什麼都不肯問的那一位。"
+    },
+    {
+      "q": "The projector ___ cooperate, so Anita used a whiteboard.",
+      "qCn": "投影機就是不肯配合，所以Anita改用白板。",
+      "opts": [
+        "A. did not want",
+        "B. would not",
+        "C. will not have",
+        "D. was not going to"
+      ],
+      "ans": 1,
+      "expl": "講機器或人「就是不肯」配合時，英文用 won't／wouldn't，過去的事用 wouldn't。did not want 把機器講得像有慾望，will not have 時態不對，was not going to 聽起來像機器事先有計畫。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "I am going to do it.",
+      "b2": "I will do it.",
+      "note": "be going to 代表決定早就做好了，但Anita是在那一秒才接下這件事。這種當場答應、把工作攬下來的場合，英文固定用 I'll／I will；換成 going to，同事會以為她早就準備好教材，只是等著宣布。",
+      "sp": "I'll take it.",
+      "spNote": "口語用 I'll 加最短的動詞，當場答應就這麼說。",
+      "b1Cn": "我本來就打算做這件事。",
+      "b2Cn": "我來做。",
+      "spCn": "我接。"
+    },
+    {
+      "b1": "Do you want to do one more session on tolerances?",
+      "b2": "Shall we do one more session on tolerances?",
+      "note": "Do you want 把問題變成「你想不想」，責任全推到對方身上。Shall we 問的是「我們要不要」，提議的人把自己也算進去，同時把決定權交出去，在會議與工作場合聽起來既客氣又平等。注意 shall 只跟 I 和 we 搭，不跟 he、she、they 用。",
+      "sp": "One more on tolerances?",
+      "spNote": "口語只留關鍵名詞加上揚的語調，就是一個提議。",
+      "b1Cn": "你想再上一堂公差的課嗎？",
+      "b2Cn": "我們要不要再上一堂公差的課？",
+      "spCn": "再上一堂公差？"
+    }
+  ]
+},
 /* ---------- 2026-10-21 每日文章（食物與生活：買菜、烤蛋糕與邊境上的廚具） ---------- */
 {
   "id": "d20261021a2",
@@ -13140,6 +13925,955 @@ articles:[
 ],
 
 grammar:[
+/* ---------- 2026-10-28 每日文法（will and shall 1／2） ---------- */
+{
+  "id": "dg20261028a2",
+  "date": "2026-10-28",
+  "unitNo": 21,
+  "level": "A2",
+  "title": "I'll Do It: Deciding as You Speak",
+  "titleCn": "我來：話說出口才決定的 will",
+  "srcDays": [],
+  "summary": "will 只有兩個工作：講你這一秒才做的決定，或講你對還沒發生的事的猜測。形狀永遠一樣——will 加原形動詞，主詞是誰都不變；否定是 will not，口語說 won't。",
+  "sections": [
+    {
+      "h": "形狀：will + 原形動詞，主詞不影響它",
+      "body": "這個句型只有兩塊，比大部分時態都好記。第一塊是 will，它不管主詞是 I、he 還是 they，永遠寫成 will，不會變成 wills，也不會變成 willed。第二塊是原形動詞，不加 s、不加 ed、不加 ing，也不加 to。中文母語者最常多加一個 to，因為中文的「我會去打電話」聽起來像有兩個動作，但英文的 will 後面直接接動詞就好。",
+      "table": {
+        "head": [
+          "主詞",
+          "will",
+          "原形動詞"
+        ],
+        "rows": [
+          [
+            "I / You",
+            "will",
+            "answer the door."
+          ],
+          [
+            "He / She / It",
+            "will",
+            "check the box."
+          ],
+          [
+            "We / They",
+            "will",
+            "wait outside."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I will answer the door.",
+          "cn": "我去開門。",
+          "note": "主詞是 I，will 還是 will"
+        },
+        {
+          "en": "She will check the box.",
+          "cn": "她會檢查那個箱子。",
+          "note": "第三人稱單數也不加 s"
+        },
+        {
+          "en": "They will wait outside.",
+          "cn": "他們會在外面等。",
+          "note": "後面是原形 wait，不加 to"
+        }
+      ]
+    },
+    {
+      "h": "用法一：這一秒才做的決定",
+      "body": "will 最常出現的場合，是你聽到或看到一件事，話說出口的那一刻才決定要怎麼做。重點不在未來很遠，而在「決定是現在才成立的」。如果你昨天就決定好了、單子也寫了，那就不是 will 的場合。口語幾乎都把 I will 縮寫成 I'll，念起來只有一個音節。",
+      "bullets": [
+        "聽到有人敲門 → 我去開：這一秒才決定",
+        "看到杯子空了 → 我幫你倒：這一秒才決定",
+        "昨天就排好的行程 → 不用 will"
+      ],
+      "examples": [
+        {
+          "en": "The phone is ringing. I'll get it.",
+          "cn": "電話在響，我去接。",
+          "note": "聽到聲音才決定"
+        },
+        {
+          "en": "Your glass is empty. I'll fill it.",
+          "cn": "你的杯子空了，我幫你倒。",
+          "note": "看到眼前的狀況才決定"
+        },
+        {
+          "en": "It is late. I'll take a taxi home.",
+          "cn": "很晚了，我搭計程車回家。",
+          "note": "當下看時間才改變主意"
+        }
+      ]
+    },
+    {
+      "h": "用法二：猜一件還沒發生的事",
+      "body": "will 的第二個工作是猜。你不知道答案，但你有一個想法，就用 will 把它說出來。這時候句子前面常常掛一個表示想法的零件：I think、maybe、I'm sure。注意這些零件只是在調整你有多確定，動詞的形狀完全沒變，還是 will 加原形。",
+      "table": {
+        "head": [
+          "你有多確定",
+          "英文",
+          "中文"
+        ],
+        "rows": [
+          [
+            "很確定",
+            "I'm sure the bus will come.",
+            "我很確定公車會來。"
+          ],
+          [
+            "有個想法",
+            "I think the bus will come.",
+            "我想公車會來。"
+          ],
+          [
+            "不太確定",
+            "Maybe the bus will come.",
+            "也許公車會來。"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I think my brother will like this song.",
+          "cn": "我想我弟弟會喜歡這首歌。",
+          "note": "猜別人的反應"
+        },
+        {
+          "en": "Maybe the shop will be open at eight.",
+          "cn": "也許那家店八點會開。",
+          "note": "maybe 放句首，動詞不變"
+        },
+        {
+          "en": "I'm sure you will find your keys.",
+          "cn": "我很確定你會找到你的鑰匙。",
+          "note": "I'm sure 讓猜測變得很肯定"
+        }
+      ]
+    },
+    {
+      "h": "否定與問句：won't 和 Will you…?",
+      "body": "否定很簡單，就在 will 後面加 not，寫成 will not；口語幾乎都說 won't。問句則是把 will 搬到主詞前面，其他一個字都不動。要注意 Will you…? 在生活裡常常不是在問未來，而是在拜託別人做事，語氣跟中文的「你幫我…好不好」很像。",
+      "table": {
+        "head": [
+          "句型",
+          "寫法",
+          "注意"
+        ],
+        "rows": [
+          [
+            "肯定",
+            "He will bring the ladder.",
+            "will 加原形"
+          ],
+          [
+            "否定",
+            "He won't bring the ladder.",
+            "won't 就是 will not"
+          ],
+          [
+            "問句",
+            "Will he bring the ladder?",
+            "will 搬到主詞前面"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "He won't bring the ladder today.",
+          "cn": "他今天不會把梯子帶來。",
+          "note": "won't 念起來像 wont"
+        },
+        {
+          "en": "Will you close the window for me?",
+          "cn": "你可以幫我關一下窗戶嗎？",
+          "note": "形狀是問句，功能是拜託"
+        },
+        {
+          "en": "I won't be late again.",
+          "cn": "我不會再遲到了。",
+          "note": "won't 也可以用來保證"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I will to call you tonight.",
+      "good": "I will call you tonight.",
+      "why": "中文的「我會打電話給你」在腦中是「會」加「打電話」兩塊，所以手一順就多寫一個 to。但 will 已經是助動詞了，後面直接接字典上那個形狀的動詞。檢查方法：看到 will，下一個字一定是動詞本人，中間不能夾東西。"
+    },
+    {
+      "bad": "My sister will helps me.",
+      "good": "My sister will help me.",
+      "why": "第三人稱單數加 s 的規則只作用在真正負責時態的那個字上。這個句子裡負責時態的是 will，而 will 本身不變化，所以後面的動詞回到原形。寫成 helps 等於同一件事標了兩次。"
+    },
+    {
+      "bad": "I will going home now.",
+      "good": "I will go home now.",
+      "why": "will 和 be going to 是兩個不同的句型，把它們疊起來就壞掉了。如果你想說的是「我現在決定回家」，用 will go；如果是「我早就打算回家」，那就整句改成 I am going home，不要兩個都寫。"
+    },
+    {
+      "bad": "I not will come tomorrow.",
+      "good": "I will not come tomorrow.",
+      "why": "中文的「我不會來」把否定放在最前面，所以很容易照順序翻成 I not will。英文的規矩是 not 永遠跟在助動詞後面，所以是 will not，縮寫成 won't。記一個口訣：先 will，再 not。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Someone is knocking. I ___ the door.",
+      "qCn": "有人在敲門，我去開門。",
+      "opts": [
+        "A. will open",
+        "B. open",
+        "C. will opening",
+        "D. am opening"
+      ],
+      "ans": 0,
+      "expl": "聽到敲門聲、這一秒才決定去開，用 will 加原形動詞。open 少了未來的意思，will opening 這種形狀不存在，am opening 是「我正在開門」。"
+    },
+    {
+      "q": "My father ___ the car on Sunday.",
+      "qCn": "我爸爸星期日會洗車。",
+      "opts": [
+        "A. will washes",
+        "B. will wash",
+        "C. wills wash",
+        "D. will to wash"
+      ],
+      "ans": 1,
+      "expl": "will 本身不隨主詞變化，後面也一定是原形。washes 多加了 s，wills 不存在，to 不該出現在 will 後面。"
+    },
+    {
+      "q": "I ___ be late again. I promise.",
+      "qCn": "我不會再遲到了，我保證。",
+      "opts": [
+        "A. don't will",
+        "B. won't",
+        "C. not will",
+        "D. am not will"
+      ],
+      "ans": 1,
+      "expl": "否定是 will not，口語縮寫成 won't。will 是助動詞，不需要再借 do；not 也不能放在 will 前面。"
+    },
+    {
+      "q": "Which sentence is a guess about the future?",
+      "qCn": "哪一句是在猜一件還沒發生的事？",
+      "opts": [
+        "A. I think it will be cold tonight.",
+        "B. It is cold tonight.",
+        "C. It was cold last night.",
+        "D. I am getting cold."
+      ],
+      "optsCn": [
+        "A. 我想今晚會很冷。",
+        "B. 今晚很冷。",
+        "C. 昨晚很冷。",
+        "D. 我開始覺得冷了。"
+      ],
+      "ans": 0,
+      "expl": "只有 A 用 I think 加 will，講的是還沒到的今晚。B 是現在的事實，C 是過去，D 是此刻的感覺。"
+    }
+  ]
+},
+{
+  "id": "dg20261028b1",
+  "date": "2026-10-28",
+  "unitNo": 21,
+  "level": "B1",
+  "title": "How Sure Are You? will with I think, probably and I'm sure",
+  "titleCn": "你有多確定？will 搭配 I think、probably、I'm sure",
+  "srcDays": [],
+  "summary": "will 本身只負責一件事：這是還沒發生的。你有多確定，是靠 I'm sure、I think、probably、I don't think 這些零件去調整的，動詞的形狀從頭到尾都沒變。",
+  "sections": [
+    {
+      "h": "確定程度不是改 will，是加零件",
+      "body": "中文會用「一定」「應該」「大概」「我看不會」來調整語氣，英文的 will 卻一個字都不改。換句話說，英文把「未來」和「我有多確定」拆成兩件事：will 負責未來，前面或中間的零件負責確定程度。所以 I'm sure it will work 和 Maybe it will work 用的是同一個 will，差別全在前面那幾個字。",
+      "table": {
+        "head": [
+          "確定程度",
+          "常用零件",
+          "例句"
+        ],
+        "rows": [
+          [
+            "幾乎確定",
+            "I'm sure / definitely",
+            "I'm sure the report will arrive by noon."
+          ],
+          [
+            "偏向會",
+            "I think / probably",
+            "The report will probably arrive by noon."
+          ],
+          [
+            "不太會",
+            "Maybe / I'm not sure",
+            "Maybe the report will arrive by noon."
+          ],
+          [
+            "偏向不會",
+            "I don't think",
+            "I don't think the report will arrive by noon."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I'm sure the new machine will save us time.",
+          "cn": "我很確定新機器會幫我們省時間。",
+          "note": "I'm sure 把確定程度拉到最高"
+        },
+        {
+          "en": "The rain will probably stop before lunch.",
+          "cn": "雨大概會在午餐前停。",
+          "note": "probably 夾在 will 和動詞之間"
+        },
+        {
+          "en": "I don't think the shop will have my size.",
+          "cn": "我覺得那家店不會有我的尺寸。",
+          "note": "否定搬到前面的 think 上"
+        }
+      ]
+    },
+    {
+      "h": "probably 和 definitely 放哪裡",
+      "body": "這兩個字的位置有固定規則：肯定句放在 will 後面、動詞前面，寫成 will probably、will definitely。但句子一變成否定，它們就要跳到 won't 前面，寫成 probably won't、definitely won't。中文完全沒有這個搬位置的動作，所以這裡是很容易失分的地方，寫完請特別檢查一次。",
+      "bullets": [
+        "肯定句：主詞 + will + probably + 原形動詞",
+        "否定句：主詞 + probably + won't + 原形動詞",
+        "放句尾的 I will go probably 是中式語序，母語者不這樣說"
+      ],
+      "examples": [
+        {
+          "en": "She will definitely ask about the deadline.",
+          "cn": "她一定會問交期的事。",
+          "note": "肯定句：will 在 definitely 前面"
+        },
+        {
+          "en": "She probably won't ask about the price.",
+          "cn": "她大概不會問價格。",
+          "note": "否定句：probably 跑到 won't 前面"
+        },
+        {
+          "en": "We will probably finish the audit on Friday.",
+          "cn": "我們大概星期五會做完稽核。",
+          "note": "最標準的肯定句語序"
+        }
+      ]
+    },
+    {
+      "h": "否定往前搬：I don't think it will…",
+      "body": "想說「我覺得不會…」的時候，中文的否定長在後半句，英文卻習慣把它搬到前面的 think 上。所以母語者說 I don't think it will rain，而不是 I think it won't rain。後者文法上不算壞掉，但聽起來很生硬，而且在口語裡幾乎不會出現。同樣的搬法也用在 I don't expect 和 I don't suppose 上。",
+      "table": {
+        "head": [
+          "中文",
+          "母語者說法",
+          "中式說法"
+        ],
+        "rows": [
+          [
+            "我覺得他不會同意",
+            "I don't think he will agree.",
+            "I think he won't agree."
+          ],
+          [
+            "我看這批貨趕不上",
+            "I don't think the goods will arrive in time.",
+            "I think the goods won't arrive in time."
+          ],
+          [
+            "我不覺得會變貴",
+            "I don't think prices will go up.",
+            "I think prices won't go up."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I don't think he will agree with the new layout.",
+          "cn": "我覺得他不會同意新的版面。",
+          "note": "否定放在 think 上，後半句保持肯定"
+        },
+        {
+          "en": "I don't expect the parts will come before Thursday.",
+          "cn": "我不認為零件會在星期四之前到。",
+          "note": "expect 也走同一套搬法"
+        },
+        {
+          "en": "I'm not sure the line will be ready by then.",
+          "cn": "我不確定那時候生產線會不會準備好。",
+          "note": "不確定時用 I'm not sure 開頭"
+        }
+      ]
+    },
+    {
+      "h": "同一個 will，兩種工作",
+      "body": "到這裡要分清楚 will 的兩種身分。第一種是當場做決定，重點在「我現在決定了」；第二種是預測，重點在「我猜」。前者前面不會掛 I think，因為決定不需要猜；後者幾乎都會掛一個表示確定程度的零件。判斷方法很簡單：問自己這句話是在答應一件事，還是在下判斷。",
+      "examples": [
+        {
+          "en": "Fine, I'll book the meeting room now.",
+          "cn": "好，我現在就去訂會議室。",
+          "note": "當場決定：前面不加 I think"
+        },
+        {
+          "en": "I think the meeting room will be free at three.",
+          "cn": "我想會議室三點會是空的。",
+          "note": "預測：前面掛 I think"
+        },
+        {
+          "en": "I'm sure nobody will mind the change.",
+          "cn": "我很確定沒有人會介意這個改動。",
+          "note": "預測別人的反應"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I think it won't snow this week.",
+      "good": "I don't think it will snow this week.",
+      "why": "中文的「我覺得這週不會下雪」把否定放在後半句，照著翻就會寫出 I think it won't。英文習慣把否定搬到前面那個表示想法的動詞上，所以是 I don't think 加肯定的 will。文法上不算全錯，但在口語與寫作裡都會被視為不自然。"
+    },
+    {
+      "bad": "He will go probably.",
+      "good": "He will probably go.",
+      "why": "中文的「他大概會去」可以把「大概」放在中間或句尾，英文的 probably 位置卻是固定的：肯定句夾在 will 和原形動詞之間。放到句尾聽起來像臨時補一句，母語者不這樣排。否定句時再往前跳到 won't 前面。"
+    },
+    {
+      "bad": "Maybe I will can finish it tonight.",
+      "good": "Maybe I will be able to finish it tonight.",
+      "why": "will 和 can 都是助動詞，英文一個句子裡只能有一個助動詞負責時態，不能疊在一起。要表達未來的能力，就把 can 換成同義的 be able to，變成 will be able to。這是中文母語者寫未來句時最常撞到的牆。"
+    },
+    {
+      "bad": "I am sure that it is raining tomorrow.",
+      "good": "I am sure that it will rain tomorrow.",
+      "why": "現在進行式講未來，只能用在已經約好、安排好的事情上，天氣沒有人安排得了。預測必須用 will。反過來說，如果是你跟客戶約好的會議，用現在進行式反而才對，因為那是真的排進行程的安排。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I ___ the parts will arrive before Thursday.",
+      "qCn": "我不認為零件會在星期四之前到。",
+      "opts": [
+        "A. think not",
+        "B. don't think",
+        "C. will not think",
+        "D. am not thinking"
+      ],
+      "ans": 1,
+      "expl": "英文把否定搬到前面的 think 上，說 I don't think 加肯定的 will。think not 是很舊的書面說法，will not think 變成「以後不會去想」，am not thinking 是此刻沒在想。"
+    },
+    {
+      "q": "She ___ ask about the deadline in the meeting.",
+      "qCn": "她在會議上一定會問交期的事。",
+      "opts": [
+        "A. definitely will",
+        "B. will definitely",
+        "C. will definitely to",
+        "D. definitely"
+      ],
+      "ans": 1,
+      "expl": "肯定句的語序是 will 加 definitely 加原形動詞。選項 A 雖然母語者在強調時偶爾會這樣說，但標準語序是 B；C 多了一個 to，D 完全沒有未來的意思。"
+    },
+    {
+      "q": "The warehouse ___ open on the holiday.",
+      "qCn": "倉庫在假日大概不會開。",
+      "opts": [
+        "A. will probably not",
+        "B. probably won't",
+        "C. won't probably",
+        "D. probably will not be"
+      ],
+      "ans": 1,
+      "expl": "否定句時 probably 要跳到 won't 前面，寫成 probably won't。C 的語序母語者不用；D 多了一個 be，句子就變成形容詞結構，意思也改了。"
+    },
+    {
+      "q": "Maybe the new tool ___ us half an hour a day.",
+      "qCn": "也許這個新工具每天會幫我們省半小時。",
+      "opts": [
+        "A. will save",
+        "B. will saves",
+        "C. will can save",
+        "D. is saving"
+      ],
+      "ans": 0,
+      "expl": "maybe 只是調整確定程度，動詞照舊是 will 加原形 save。saves 多加了 s，will can 兩個助動詞疊在一起，is saving 講的是現在正在發生的事。"
+    }
+  ]
+},
+{
+  "id": "dg20261028b1p",
+  "date": "2026-10-28",
+  "unitNo": 22,
+  "level": "B1+",
+  "title": "Offers, Promises, Requests, Refusals: will Between People",
+  "titleCn": "答應、承諾、請求、拒絕：will 的四種人際功能",
+  "srcDays": [],
+  "summary": "這一課的 will 幾乎不在講時間，而在講人跟人之間的動作：我幫你、我保證、請你、我不要。認出功能，就知道為什麼這些句子不能換成現在簡單式或 be going to。",
+  "sections": [
+    {
+      "h": "四種功能一次看清楚",
+      "body": "同一個 will 在對話裡其實分飾四角。第一是 offer，看到對方有需要，當場說我來；第二是 promise，給對方一個保證；第三是 request，用 Will you 開頭請對方做事；第四是 refusal，用 won't 說明某人或某個東西就是不肯。這四種都有一個共同點：決定或意願是在說話的那一刻成立的，所以不能用事先安排的 be going to。",
+      "table": {
+        "head": [
+          "功能",
+          "例句",
+          "說話者在做什麼"
+        ],
+        "rows": [
+          [
+            "Offer 答應幫忙",
+            "Those boxes look heavy. I'll carry them.",
+            "當場把事情接下來"
+          ],
+          [
+            "Promise 保證",
+            "I'll send you the revised drawing tonight.",
+            "給對方一個可以依靠的承諾"
+          ],
+          [
+            "Request 請求",
+            "Will you check the serial number for me?",
+            "請對方做一件事"
+          ],
+          [
+            "Refusal 拒絕",
+            "The trainee won't admit that he guessed.",
+            "說明某人就是不肯"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Those boxes look heavy. I'll carry them.",
+          "cn": "那些箱子看起來很重，我來搬。",
+          "note": "offer：看到狀況才決定"
+        },
+        {
+          "en": "Will you check the serial number for me?",
+          "cn": "你可以幫我核對一下序號嗎？",
+          "note": "request：形狀是問句，功能是請託"
+        },
+        {
+          "en": "The trainee won't admit that he guessed.",
+          "cn": "那位學員就是不肯承認他是猜的。",
+          "note": "refusal：won't 表示拒絕"
+        }
+      ]
+    },
+    {
+      "h": "Offer 與 promise：為什麼不能用 be going to",
+      "body": "be going to 的前提是「決定早就做好了」，所以用它來答應幫忙會很怪：對方才剛開口，你卻說自己早就打算這麼做。promise 也一樣，承諾的重量來自你此刻對對方做出的保證，不是來自一份既有的計畫。這也是為什麼 I'll 在口語裡出現得那麼頻繁——它專門負責「現在成立」的意願。",
+      "bullets": [
+        "offer：對方還沒要求，你主動接下 → I'll",
+        "promise：給對方一個保證，常跟 I promise 一起出現 → I'll",
+        "事先排好的行程 → be going to 或現在進行式，不是 will"
+      ],
+      "examples": [
+        {
+          "en": "Don't worry about the audit folder. I'll put it together.",
+          "cn": "稽核資料夾你別擔心，我來整理。",
+          "note": "對方一開口就當場接下"
+        },
+        {
+          "en": "I promise I'll call the supplier before five.",
+          "cn": "我保證五點前會打給供應商。",
+          "note": "promise 加 I'll 是固定的搭配"
+        },
+        {
+          "en": "I'm visiting the plant on Thursday, so I'll take the samples with me.",
+          "cn": "我星期四要去廠裡，所以我會順便把樣品帶過去。",
+          "note": "前半是早排好的安排，後半才是當場決定"
+        }
+      ]
+    },
+    {
+      "h": "Request：Will you…? 與它的語氣層次",
+      "body": "Will you 開頭的句子在形狀上是問句，功能卻是請求。語氣的輕重差很多：Will you 直接、Would you 客氣、Could you 最軟。在工作場合寫信給客戶時，多數人會選 Would you 或 Could you；跟熟同事講話用 Will you 就很自然。另外要記得，Will you 問的是對方願不願意，所以回答常常是 Sure 或 I will，而不是在談時間。",
+      "table": {
+        "head": [
+          "語氣",
+          "句型",
+          "適合的場合"
+        ],
+        "rows": [
+          [
+            "直接",
+            "Will you send me the file?",
+            "熟同事、口頭交辦"
+          ],
+          [
+            "客氣",
+            "Would you send me the file?",
+            "跨部門、半正式的信"
+          ],
+          [
+            "最客氣",
+            "Could you possibly send me the file?",
+            "客戶、第一次聯絡"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Will you hold the ladder while I change the lamp?",
+          "cn": "我換燈的時候你幫我扶一下梯子好嗎？",
+          "note": "熟人之間的直接請求"
+        },
+        {
+          "en": "Would you let me know when the shipment clears customs?",
+          "cn": "貨一通關可以通知我嗎？",
+          "note": "半正式場合，語氣柔和"
+        },
+        {
+          "en": "Will you please stop moving the gauge while I read it?",
+          "cn": "我在讀數的時候，請你不要再動量具了。",
+          "note": "加 please 後語氣變成有點不耐"
+        }
+      ]
+    },
+    {
+      "h": "Refusal：won't 和 wouldn't 說的是「不肯」",
+      "body": "won't 除了單純的否定未來，還有一個很道地的用法：表示某人或某個東西拒絕配合。這時候 won't 講的不是時間，而是意願。機器也可以不肯——The printer won't start 的意思不是印表機以後不會啟動，而是現在怎麼按都不動。過去發生的同一種情況就用 wouldn't。中文剛好有對應的字：「不肯」「就是不」。",
+      "examples": [
+        {
+          "en": "The old press won't hold the pressure for more than a minute.",
+          "cn": "那台舊沖床的壓力撐不過一分鐘。",
+          "note": "機器不肯配合，用 won't"
+        },
+        {
+          "en": "I asked twice, but he wouldn't give me a straight answer.",
+          "cn": "我問了兩次，他就是不肯給我一個明確的答覆。",
+          "note": "過去的拒絕用 wouldn't"
+        },
+        {
+          "en": "My laptop wouldn't connect to the plant network yesterday.",
+          "cn": "我的筆電昨天就是連不上廠內網路。",
+          "note": "描述昨天的狀況，不是昨天的計畫"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "That bag looks heavy. I help you.",
+      "good": "That bag looks heavy. I'll help you.",
+      "why": "中文的「我幫你」沒有時間的形狀，所以很容易寫成現在簡單式。但現在簡單式在英文裡講的是習慣，I help you 聽起來像「我平常都幫你」。當場答應一件事，一定要用 will，而口語幾乎都縮寫成 I'll。"
+    },
+    {
+      "bad": "I promise I pay you back on Friday.",
+      "good": "I promise I'll pay you back on Friday.",
+      "why": "promise 後面那一句講的是你保證要做的動作，還沒發生，所以要有 will。寫成 I pay 會變成在描述習慣，承諾的重量整個消失。固定搭配是 I promise 加 I'll 加原形動詞。"
+    },
+    {
+      "bad": "Do you open the window?",
+      "good": "Will you open the window?",
+      "why": "Do you open 問的是習慣：你平常會不會開窗。要請對方現在去做一件事，英文用 Will you 開頭，問的是意願。想更客氣就換成 Would you 或 Could you，但絕對不是 Do you。"
+    },
+    {
+      "bad": "The door doesn't open, so I used the side entrance.",
+      "good": "The door wouldn't open, so I used the side entrance.",
+      "why": "doesn't open 在描述一個長期的事實，像在說這扇門設計上就是打不開。要講當時怎麼推都推不動，用 wouldn't，那是「不肯配合」的意思；如果是現在正在發生，就用 won't。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "A: This report is due at four. B: Don't worry, ___ finish it for you.",
+      "qCn": "甲：這份報告四點要交。乙：別擔心，我幫你做完。",
+      "opts": [
+        "A. I finish",
+        "B. I'm finishing",
+        "C. I'll",
+        "D. I'm going to"
+      ],
+      "ans": 2,
+      "expl": "對方才剛開口，乙當場把工作接下來，這是 offer，固定用 I'll 加原形動詞。I finish 是習慣，I'm finishing 是已經排好的安排，I'm going to 代表早就決定好了。"
+    },
+    {
+      "q": "___ you move your scooter? It is blocking the door.",
+      "qCn": "你可以把你的機車移開嗎？它擋住門了。",
+      "opts": [
+        "A. Do",
+        "B. Will",
+        "C. Are",
+        "D. Shall"
+      ],
+      "ans": 1,
+      "expl": "請對方現在做一件事，用 Will you 開頭問意願。Do you move 問的是習慣，Are you moving 問的是已排好的安排，Shall you 在現代英文不使用。"
+    },
+    {
+      "q": "I pressed the button several times, but the machine ___ restart.",
+      "qCn": "我按了好幾次按鈕，但機器就是不肯重新啟動。",
+      "opts": [
+        "A. didn't want to",
+        "B. wouldn't",
+        "C. will not",
+        "D. was not going to"
+      ],
+      "ans": 1,
+      "expl": "描述當時怎麼按都不動，用 wouldn't 表示拒絕配合。didn't want to 把機器講得像有慾望，will not 時態對不上過去，was not going to 聽起來像機器事先有計畫。"
+    },
+    {
+      "q": "Which sentence is a promise rather than a plan?",
+      "qCn": "哪一句是承諾，而不是既有的計畫？",
+      "opts": [
+        "A. I'm meeting the auditor at nine.",
+        "B. I'll send you the numbers before you leave.",
+        "C. I am going to rewrite the manual this month.",
+        "D. The audit starts on Monday."
+      ],
+      "optsCn": [
+        "A. 我九點要跟稽核員碰面。",
+        "B. 你走之前我會把數字寄給你。",
+        "C. 我這個月要重寫那本手冊。",
+        "D. 稽核星期一開始。"
+      ],
+      "ans": 1,
+      "expl": "只有 B 用 I'll，是當下對聽話者做出的保證。A 是已約好的安排，C 是早就決定的計畫，D 是表定的時程。"
+    }
+  ]
+},
+{
+  "id": "dg20261028b2",
+  "date": "2026-10-28",
+  "unitNo": 22,
+  "level": "B2",
+  "title": "Shall We? Willingness and Register in will and shall",
+  "titleCn": "Shall we？will 與 shall 的意願與語域",
+  "srcDays": [],
+  "summary": "shall 在現代英文只剩兩條活路：Shall I 與 Shall we 的提議，以及合約規章裡表示義務的 shall。will 則承載意願——答應、保證、拒絕——而語氣的輕重，靠你選哪個句型決定。",
+  "sections": [
+    {
+      "h": "Shall I / Shall we：把決定權交出去",
+      "body": "Shall I 和 Shall we 的功能不是預報未來，而是徵詢對方的意見。說話者把自己放進提議裡，同時把要不要做的決定權交到對方手上，所以在會議與服務場合聽起來既主動又不強勢。要注意它跟幾個相近句型的差別：Shall we 是把決定權交出去，Should we 偏向詢問「這樣做合不合適」，Do you want me to 則把責任整個推給對方，語氣比較消極。",
+      "table": {
+        "head": [
+          "句型",
+          "說話者的立場",
+          "語感"
+        ],
+        "rows": [
+          [
+            "Shall I take the minutes?",
+            "我願意做，請你決定",
+            "主動、得體"
+          ],
+          [
+            "Should I take the minutes?",
+            "我在問這樣合不合適",
+            "偏向徵詢規範"
+          ],
+          [
+            "Do you want me to take the minutes?",
+            "你要的話我才做",
+            "較被動"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Shall I summarize the findings before we vote?",
+          "cn": "要不要我在投票前把發現整理一下？",
+          "note": "提議加上把決定權交給對方"
+        },
+        {
+          "en": "Shall we move the review to Thursday morning?",
+          "cn": "我們要不要把檢討會改到星期四早上？",
+          "note": "把自己也算進提議裡"
+        },
+        {
+          "en": "Should we tell the client before the data is confirmed?",
+          "cn": "資料還沒確認，我們就該先告訴客戶嗎？",
+          "note": "這裡問的是合不合適，不是提議"
+        }
+      ]
+    },
+    {
+      "h": "shall 的使用邊界：人稱與正式度",
+      "body": "現代英文裡的 shall 幾乎只跟 I 和 we 搭配。He shall、They shall 這種寫法，在日常句子裡會讓母語者皺眉頭，因為那是法律條文的語氣，讀起來像在對人下規定。另外，陳述句的 I shall 與 we shall 在英式書面語仍存在，但在美式英文與一般商業往來裡，絕大多數人都改用 will，I shall 會顯得刻意老派。簡單記法：疑問句的 Shall I 和 Shall we 隨便用，陳述句的 shall 留給合約。",
+      "bullets": [
+        "疑問句：Shall I…? / Shall we…? → 日常都可以用",
+        "陳述句：I shall… → 很書面，美式英文通常改用 will",
+        "第三人稱：He shall… → 只出現在條文與規章裡"
+      ],
+      "examples": [
+        {
+          "en": "Shall we take the escalation to the quality committee?",
+          "cn": "我們要不要把這件事升到品質委員會？",
+          "note": "疑問句的 Shall we，完全自然"
+        },
+        {
+          "en": "I will confirm the arrangement by email this afternoon.",
+          "cn": "我今天下午會用電子郵件確認這個安排。",
+          "note": "陳述句選 will，不選 shall"
+        },
+        {
+          "en": "The supplier shall retain the records for five years.",
+          "cn": "供應商應保存紀錄五年。",
+          "note": "條文語氣，表示義務"
+        }
+      ]
+    },
+    {
+      "h": "合約裡的 shall：義務，不是未來",
+      "body": "讀過品保文件的人都見過滿篇的 shall。那裡的 shall 不是在講時間，而是在規定責任，等於中文的「應」。這就是為什麼同一份文件裡 will 和 shall 不能互換：The seller shall provide 是義務，The seller will provide 只是在預告會發生的事。近年很多英文寫作規範建議改用 must 讓責任更明確，但傳統合約仍以 shall 為主，讀的時候要分得出來。",
+      "table": {
+        "head": [
+          "寫法",
+          "法律上的意思",
+          "中文"
+        ],
+        "rows": [
+          [
+            "The seller shall replace defective parts.",
+            "這是義務，不做就違約",
+            "賣方應更換不良品"
+          ],
+          [
+            "The seller will replace defective parts.",
+            "只是陳述將會發生",
+            "賣方將會更換不良品"
+          ],
+          [
+            "The seller may replace defective parts.",
+            "這是權利，可以選擇",
+            "賣方得選擇更換不良品"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Each lot shall be accompanied by a test certificate.",
+          "cn": "每一批貨應附上檢驗報告。",
+          "note": "義務：沒附就是違約"
+        },
+        {
+          "en": "We will issue the credit note once the claim is closed.",
+          "cn": "索賠案結案後我們會開折讓單。",
+          "note": "一般商業往來用 will"
+        },
+        {
+          "en": "The buyer may inspect the goods at the port.",
+          "cn": "買方得在港口驗貨。",
+          "note": "may 給的是權利"
+        }
+      ]
+    },
+    {
+      "h": "拒絕的強度：won't、wouldn't 與緩衝說法",
+      "body": "won't 是英文裡最硬的拒絕之一，因為它直接宣告你的意願。在工作場合，I won't do that 聽起來近乎對抗，所以多數人會換成緩衝的說法：I'd rather not、I'm not comfortable with that、I don't think I can commit to that。反過來，描述機器或他人不肯配合時，won't 和 wouldn't 卻非常好用，而且沒有攻擊性，因為主詞不是你。選詞的關鍵是：拒絕的是人還是東西。",
+      "examples": [
+        {
+          "en": "I'd rather not commit to a date until the lab replies.",
+          "cn": "實驗室回覆之前，我不太想先給一個日期。",
+          "note": "比 I won't 柔軟得多"
+        },
+        {
+          "en": "The second line wouldn't run at full speed all morning.",
+          "cn": "第二條線整個早上就是跑不到全速。",
+          "note": "描述設備，won't 系列很自然"
+        },
+        {
+          "en": "He won't take the training unless his supervisor asks him.",
+          "cn": "除非他的主管開口，他就是不願意去上那個訓練。",
+          "note": "描述第三人的拒絕，語氣可以強"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "He shall send the file tomorrow.",
+      "good": "He will send the file tomorrow.",
+      "why": "陳述句配第三人稱的 shall，在現代英文裡只出現在合約與規章裡，意思是「他有義務這麼做」。你想說的只是「他明天會寄」，那是單純的未來，要用 will。寫成 shall，收信的人會覺得你在對同事下規定。"
+    },
+    {
+      "bad": "Shall we to start the review now?",
+      "good": "Shall we start the review now?",
+      "why": "shall 跟 will、can 一樣是助動詞，後面直接接原形動詞，不能加 to。中文的「我們要不要開始」在腦中有「要」和「開始」兩塊，所以手一順就多一個 to。檢查方法：助動詞後面一定是動詞本人。"
+    },
+    {
+      "bad": "Will I open the window for you?",
+      "good": "Shall I open the window for you?",
+      "why": "Will I 問的是「我將來會不會做這件事」，像在問別人預測自己的行為，語意很怪。要提議由自己來做、並把決定權交給對方，固定用 Shall I。這組是中文母語者在服務與會議場合最常出錯的地方。"
+    },
+    {
+      "bad": "The supplier shall not answer my emails.",
+      "good": "The supplier won't answer my emails.",
+      "why": "shall not 是條文裡的禁止，意思變成「依規定供應商不得回覆我的信」。你真正想說的是對方就是不肯回，那是意願的問題，要用 won't。這也說明了為什麼合約語言不能隨手搬進日常溝通。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "___ I walk you through the calibration steps first?",
+      "qCn": "要不要我先帶你走一遍校正步驟？",
+      "opts": [
+        "A. Will",
+        "B. Shall",
+        "C. Do",
+        "D. Would"
+      ],
+      "ans": 1,
+      "expl": "提議由自己來做、把決定權交給對方，用 Shall I。Will I 變成在預測自己的行為，Do I 問習慣，Would I 需要配上假設的條件才成立。"
+    },
+    {
+      "q": "In a purchase contract, The seller shall replace defective parts means that replacing them is ___.",
+      "qCn": "在採購合約裡，這句話的意思是更換不良品屬於什麼？",
+      "opts": [
+        "A. an obligation",
+        "B. a prediction",
+        "C. an option",
+        "D. a request"
+      ],
+      "optsCn": [
+        "A. 一項義務",
+        "B. 一個預測",
+        "C. 一個可選項",
+        "D. 一個請求"
+      ],
+      "ans": 0,
+      "expl": "合約裡的 shall 表示義務，相當於中文的「應」。換成 will 只是陳述將會發生，換成 may 才是可以選擇的權利。"
+    },
+    {
+      "q": "I asked for the raw data three times, but the lab ___ release it.",
+      "qCn": "我要了三次原始數據，但實驗室就是不肯給。",
+      "opts": [
+        "A. shall not",
+        "B. wouldn't",
+        "C. isn't going to",
+        "D. doesn't"
+      ],
+      "optsCn": [
+        "A. 依規定不得",
+        "B. 就是不肯",
+        "C. 原本就不打算",
+        "D. 平常不會"
+      ],
+      "ans": 1,
+      "expl": "描述過去反覆被拒絕，用 wouldn't 表示不肯配合。shall not 是規章裡的禁止，isn't going to 暗示對方早有計畫，doesn't 在講長期的習慣。"
+    },
+    {
+      "q": "Which reply softens a refusal in a work email?",
+      "qCn": "哪一個回覆在工作信件裡把拒絕講得比較軟？",
+      "opts": [
+        "A. I won't give you a date.",
+        "B. I'd rather not give a date yet.",
+        "C. You shall not have a date.",
+        "D. I don't give dates."
+      ],
+      "optsCn": [
+        "A. 我不會給你日期。",
+        "B. 我暫時不太想給日期。",
+        "C. 依規定你不得取得日期。",
+        "D. 我不給日期。"
+      ],
+      "ans": 1,
+      "expl": "I'd rather not 把拒絕包成個人偏好，保留了後續空間。A 的 won't 直接宣告意願，近乎對抗；C 是條文語氣；D 在講自己的習慣，聽起來像規定對方。"
+    }
+  ]
+},
 /* ---------- 2026-10-21 每日文法（be going to；will and shall） ---------- */
 {
   "id": "dg20261021a2",

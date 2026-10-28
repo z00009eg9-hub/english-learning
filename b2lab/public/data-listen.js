@@ -14,6 +14,961 @@ window.LISTEN = {
 
 /* ========== 依課堂筆記自製（每週三更新） ========== */
 notes:[
+/* ---------- 2026-10-28 學習與心理主題（四個程度） ---------- */
+{
+  "id": "dl20261028a2",
+  "date": "2026-10-28",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Ten Minutes on Saturday",
+  "titleCn": "星期六的十分鐘",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "🎸 午休時聊週末要開始練的吉他",
+  "focus": "will 用在話說出口才決定的事（I'll start、I'll lend）與簡單的猜測（I think you will），won't 講不打算做的事",
+  "intro": "Tom在午休時跟同事Lisa說他要開始學吉他。請注意Tom講計畫時用的都是 will：I'll start、I'll practice，因為這些是他剛剛才決定的。Lisa聽完也當場決定要借他一樣東西，所以她也用 I'll。最後一句 I think you will 是Lisa在猜，不是在答應。",
+  "tip": "第一次聽只抓三件事：吉他是誰的、Tom一次要練多久、Lisa要借他什麼。第二次聽專心數 will 和 won't 各出現幾次，並想一想每一次說話的人是在決定、在猜，還是在說自己不打算做。",
+  "pre": [
+    {
+      "w": "guitar",
+      "ipa": "/ɡɪˈtɑːr/",
+      "pos": "n.",
+      "cn": "吉他",
+      "def": "A music tool with six strings that you play with your fingers."
+    },
+    {
+      "w": "borrow",
+      "ipa": "/ˈbɑːroʊ/",
+      "pos": "v.",
+      "cn": "借（來）",
+      "def": "To take something from someone and give it back later."
+    },
+    {
+      "w": "practice",
+      "ipa": "/ˈpræktɪs/",
+      "pos": "v.",
+      "cn": "練習",
+      "def": "To do something again and again to get better at it."
+    },
+    {
+      "w": "free",
+      "ipa": "/friː/",
+      "pos": "adj.",
+      "cn": "有空的",
+      "def": "Not busy, with no work to do at that time."
+    },
+    {
+      "w": "shy",
+      "ipa": "/ʃaɪ/",
+      "pos": "adj.",
+      "cn": "害羞的",
+      "def": "Not comfortable when other people watch or listen to you."
+    },
+    {
+      "w": "minute",
+      "ipa": "/ˈmɪn.ɪt/",
+      "pos": "n.",
+      "cn": "分鐘",
+      "def": "A short time of sixty seconds."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Lisa",
+      "en": "You look happy today. What is in that bag?",
+      "cn": "你今天看起來很開心，那個袋子裡是什麼？"
+    },
+    {
+      "sp": "Tom",
+      "en": "My cousin's old guitar. He doesn't play it now.",
+      "cn": "我表哥的舊吉他，他現在不彈了。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Nice! So you can keep it?",
+      "cn": "不錯啊！所以你可以留著？"
+    },
+    {
+      "sp": "Tom",
+      "en": "I can borrow it. I'll start on Saturday.",
+      "cn": "我可以借。我星期六就開始。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Saturday? That is in three days.",
+      "cn": "星期六？那是三天後。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes. Monday to Friday I am busy, but Saturday morning is free.",
+      "cn": "對，星期一到五我都很忙，但星期六早上有空。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "How long will you practice?",
+      "cn": "你要練多久？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Ten minutes. I won't practice for two hours.",
+      "cn": "十分鐘。我不會練兩個小時。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Only ten minutes? Why so short?",
+      "cn": "只有十分鐘？為什麼這麼短？"
+    },
+    {
+      "sp": "Tom",
+      "en": "A short time is easier to keep. Last year I tried one hour and stopped.",
+      "cn": "時間短一點比較好維持。去年我試一小時，後來就停了。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "That makes sense. Is your room quiet?",
+      "cn": "有道理。你房間安靜嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Not really. I am a little shy about the noise.",
+      "cn": "不太安靜。我對那個聲音有點害羞。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "Wait. I have small headphones at home. I'll lend them to you.",
+      "cn": "等等，我家有一副小耳機，我借你。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Really? Thank you. That will help a lot.",
+      "cn": "真的嗎？謝謝你，那會幫很大的忙。"
+    },
+    {
+      "sp": "Lisa",
+      "en": "I think you will play a song before Christmas.",
+      "cn": "我想你聖誕節前就會彈出一首歌。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Ten minutes a week? Maybe one short song.",
+      "cn": "一週十分鐘？也許一首短的吧。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Where does the guitar come from?",
+      "qCn": "那把吉他是從哪裡來的？",
+      "opts": [
+        "A. Tom bought it",
+        "B. His cousin's old one",
+        "C. Lisa gave it to him",
+        "D. His school lent it"
+      ],
+      "optsCn": [
+        "A. Tom買的",
+        "B. 他表哥的舊吉他",
+        "C. Lisa給他的",
+        "D. 學校借他的"
+      ],
+      "ans": 1,
+      "expl": "My cousin's old guitar. He doesn't play it now.——Tom第一次回答就說了。"
+    },
+    {
+      "q": "How long will Tom practice each time?",
+      "qCn": "Tom每次要練多久？",
+      "opts": [
+        "A. Ten minutes",
+        "B. Thirty minutes",
+        "C. One hour",
+        "D. Two hours"
+      ],
+      "optsCn": [
+        "A. 十分鐘",
+        "B. 三十分鐘",
+        "C. 一小時",
+        "D. 兩小時"
+      ],
+      "ans": 0,
+      "expl": "Ten minutes. I won't practice for two hours.——他還說去年試一小時就停了。"
+    },
+    {
+      "q": "What does Lisa decide to lend Tom?",
+      "qCn": "Lisa決定借Tom什麼？",
+      "opts": [
+        "A. A bag",
+        "B. A quiet room",
+        "C. Small headphones",
+        "D. Another guitar"
+      ],
+      "optsCn": [
+        "A. 一個袋子",
+        "B. 一個安靜的房間",
+        "C. 一副小耳機",
+        "D. 另一把吉他"
+      ],
+      "ans": 2,
+      "expl": "I have small headphones at home. I'll lend them to you.——她聽到Tom說怕吵才決定的。"
+    },
+    {
+      "q": "Why does Tom practice only a short time?",
+      "qCn": "Tom為什麼只練一小段時間？",
+      "opts": [
+        "A. His room is too small",
+        "B. A short time is easier to keep",
+        "C. His cousin asks for the guitar back",
+        "D. He has lessons every day"
+      ],
+      "optsCn": [
+        "A. 他房間太小",
+        "B. 時間短一點比較好維持",
+        "C. 他表哥要把吉他要回去",
+        "D. 他每天都有課"
+      ],
+      "ans": 1,
+      "expl": "A short time is easier to keep. Last year I tried one hour and stopped.——這是他自己的經驗。"
+    },
+    {
+      "q": "Lisa says, I ___ lend them to you. Which word goes in the gap?",
+      "qCn": "Lisa說「我借你」，空格該放哪個字？",
+      "opts": [
+        "A. will",
+        "B. am",
+        "C. do",
+        "D. was"
+      ],
+      "ans": 0,
+      "expl": "她是聽到Tom怕吵、話說出口那一刻才決定的，這種當下的決定用 will 加原形動詞，口語說 I'll。"
+    }
+  ]
+},
+{
+  "id": "dl20261028b1",
+  "date": "2026-10-28",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "A Promise Over Lunch",
+  "titleCn": "午餐桌上的一個承諾",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "🛵 午休時決定重新去學騎機車",
+  "focus": "同一個 will 的兩種工作：當場決定（I'll try again）與預測；並用 I'm sure、probably、I don't think 調整確定程度",
+  "intro": "Anita和越南同事Mai在午休時聊起機車的事。請注意兩種不同的 will：Anita說 I'll try again 是當場做的決定，Mai說 I'll ride behind you 是當場答應；但 the first ten minutes will be the worst 和 you probably won't need me 都是在預測。另外聽一下 probably 在肯定句和否定句裡站的位置不一樣。",
+  "tip": "第一次聽只抓三件事：Anita上次上了幾堂課、她決定哪一天再試、Mai答應做什麼。第二次聽專心分辨哪幾句 will 是在決定或答應、哪幾句是在猜，並注意 I'm sure、probably、I don't think 這三個零件各出現在哪一句。",
+  "pre": [
+    {
+      "w": "afraid",
+      "ipa": "/əˈfreɪd/",
+      "pos": "adj.",
+      "cn": "害怕的",
+      "def": "Feeling worried that something bad may happen."
+    },
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person who works with you at the same company."
+    },
+    {
+      "w": "traffic",
+      "ipa": "/ˈtræfɪk/",
+      "pos": "n.",
+      "cn": "車流；交通",
+      "def": "All the cars and bikes moving on a road."
+    },
+    {
+      "w": "offer",
+      "ipa": "/ˈɑː.fɚ/",
+      "pos": "v.",
+      "cn": "主動說要（做某事）",
+      "def": "To say that you are willing to do something for someone."
+    },
+    {
+      "w": "probably",
+      "ipa": "/ˈprɑːbəbli/",
+      "pos": "adv.",
+      "cn": "大概；很可能",
+      "def": "Used when you think something is true but are not sure."
+    },
+    {
+      "w": "promise",
+      "ipa": "/ˈprɑː.mɪs/",
+      "pos": "n.",
+      "cn": "承諾",
+      "def": "Something you tell someone you will certainly do."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "Are you still taking the company shuttle every morning?",
+      "cn": "你每天早上還是搭公司的接駁車嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Every morning. It leaves at six forty, so I get up very early.",
+      "cn": "每天早上。它六點四十開，所以我起得很早。"
+    },
+    {
+      "sp": "Mai",
+      "en": "You know, a scooter would give you an extra hour of sleep.",
+      "cn": "你知道嗎，騎機車可以讓你多睡一小時。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I tried last winter. I stopped after three lessons.",
+      "cn": "我去年冬天試過，上了三堂課就停了。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Three lessons is nothing. What happened?",
+      "cn": "三堂課根本不算什麼。發生了什麼事？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The traffic near our office. I was afraid of the big trucks.",
+      "cn": "我們辦公室附近的車流。我很怕那些大卡車。"
+    },
+    {
+      "sp": "Mai",
+      "en": "The trucks only come before eight. After that the road is quiet.",
+      "cn": "卡車只有八點前會來，之後那條路很安靜。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Really? Nobody told me that last year.",
+      "cn": "真的嗎？去年沒有人跟我說這件事。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So? Will you book another lesson?",
+      "cn": "所以呢？你要再約一堂課嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Give me a second. Fine, I'll try again this Sunday.",
+      "cn": "等我一下。好，我這個星期天再試一次。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Then I'll ride behind you. My scooter is slow anyway.",
+      "cn": "那我騎在你後面。反正我的機車很慢。"
+    },
+    {
+      "sp": "Anita",
+      "en": "You don't have to do that on your day off.",
+      "cn": "你休假日不用這樣啦。"
+    },
+    {
+      "sp": "Mai",
+      "en": "I want to. And you probably won't need me after two weeks.",
+      "cn": "我想去。而且兩個星期後你大概就不需要我了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I'm sure the first ten minutes will be the worst part.",
+      "cn": "我很確定前十分鐘會是最難受的部分。"
+    },
+    {
+      "sp": "Mai",
+      "en": "They will. Everyone says that about the first corner.",
+      "cn": "一定會。大家講到第一個轉彎都這麼說。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I don't think I will ride at night this year, though.",
+      "cn": "不過我覺得我今年不會在晚上騎。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Nobody asked you to. Small promise, Sunday morning, one lesson.",
+      "cn": "沒人要你晚上騎。小小的承諾：星期天早上，一堂課。"
+    },
+    {
+      "sp": "Anita",
+      "en": "One lesson. I'll write it in my phone right now.",
+      "cn": "一堂課。我現在就寫進手機裡。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What time does the company shuttle leave?",
+      "qCn": "公司的接駁車幾點開？",
+      "opts": [
+        "A. Six twenty",
+        "B. Six forty",
+        "C. Seven ten",
+        "D. Eight o'clock"
+      ],
+      "optsCn": [
+        "A. 六點二十",
+        "B. 六點四十",
+        "C. 七點十分",
+        "D. 八點"
+      ],
+      "ans": 1,
+      "expl": "It leaves at six forty, so I get up very early.——Anita第一次回答就說了時間。"
+    },
+    {
+      "q": "Why did Anita stop last winter?",
+      "qCn": "Anita去年冬天為什麼停掉？",
+      "opts": [
+        "A. The lessons cost too much",
+        "B. She was afraid of the big trucks",
+        "C. Her scooter broke down",
+        "D. Mai was not free"
+      ],
+      "optsCn": [
+        "A. 課程太貴",
+        "B. 她很怕那些大卡車",
+        "C. 她的機車壞了",
+        "D. Mai沒空"
+      ],
+      "ans": 1,
+      "expl": "The traffic near our office. I was afraid of the big trucks.——而Mai接著說卡車只有八點前會來。"
+    },
+    {
+      "q": "What does Mai offer to do on Sunday?",
+      "qCn": "Mai說星期天要做什麼？",
+      "opts": [
+        "A. Lend Anita her scooter",
+        "B. Ride behind Anita",
+        "C. Book the lesson for her",
+        "D. Drive her to the school"
+      ],
+      "optsCn": [
+        "A. 把機車借給Anita",
+        "B. 騎在Anita後面",
+        "C. 幫她約課",
+        "D. 開車載她去駕訓班"
+      ],
+      "ans": 1,
+      "expl": "Then I'll ride behind you. My scooter is slow anyway.——她是聽到Anita的決定才當場答應的。"
+    },
+    {
+      "q": "What does Anita say about riding at night?",
+      "qCn": "Anita對晚上騎車怎麼說？",
+      "opts": [
+        "A. She is sure she will do it",
+        "B. She does not think she will do it this year",
+        "C. She will do it after two weeks",
+        "D. Mai told her not to"
+      ],
+      "optsCn": [
+        "A. 她很確定她會這樣做",
+        "B. 她覺得自己今年不會",
+        "C. 兩個星期後她就會",
+        "D. Mai叫她不要"
+      ],
+      "ans": 1,
+      "expl": "I don't think I will ride at night this year, though.——英文把否定放在前面的 think 上。"
+    },
+    {
+      "q": "Mai says, you ___ need me after two weeks.",
+      "qCn": "Mai說：兩個星期後你大概就不需要我了。",
+      "opts": [
+        "A. probably won't",
+        "B. won't probably",
+        "C. will probably not be",
+        "D. don't probably"
+      ],
+      "ans": 0,
+      "expl": "否定句時 probably 要跳到 won't 前面，寫成 probably won't。肯定句才是 will probably。"
+    }
+  ]
+},
+{
+  "id": "dl20261028b1p",
+  "date": "2026-10-28",
+  "level": "B1+",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Twenty-Four in a Room",
+  "titleCn": "一間教室二十四個人",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "📰 下班前聊台北的縮小班級政見",
+  "focus": "will 的被動式（will be capped、will be opened、will be judged）加上 that／who 關係子句，用來談政策承諾",
+  "intro": "Tom和Anita在下班前聊當天那則教育新聞。請注意兩個結構：第一，講政策時幾乎都用 will be 加過去分詞，因為重點是班級、職位會被怎麼處理，不是誰去處理；第二，兩個人都用 that 和 who 的關係子句把名詞講細，例如 the teachers who stay late 和 a number that nobody checks。這兩樣是B1那一課沒有的工具。",
+  "tip": "第一次聽只抓三個數字：小學一班幾人、國中一班幾人、政策要在哪一個學年前完成。第二次聽專心數被動語態出現幾次，並注意 that 和 who 後面接的是什麼，想一想如果拆成兩句話會變得多囉嗦。",
+  "pre": [
+    {
+      "w": "cap",
+      "ipa": "/kæp/",
+      "pos": "v.",
+      "cn": "設上限；限制在",
+      "def": "To set the highest number or amount that is allowed."
+    },
+    {
+      "w": "pupil",
+      "ipa": "/ˈpjuː.pəl/",
+      "pos": "n.",
+      "cn": "（中小學）學生",
+      "def": "A child who is studying at a school."
+    },
+    {
+      "w": "enrollment",
+      "ipa": "/ɪnˈroʊl.mənt/",
+      "pos": "n.",
+      "cn": "就學人數",
+      "def": "The number of people who join a school or a course."
+    },
+    {
+      "w": "workload",
+      "ipa": "/ˈwɝːkloʊd/",
+      "pos": "n.",
+      "cn": "工作量",
+      "def": "The amount of work a person has to finish."
+    },
+    {
+      "w": "permanent",
+      "ipa": "/ˈpɝː.mə.nənt/",
+      "pos": "adj.",
+      "cn": "長期的；正式編制的",
+      "def": "Lasting for a long time, not just for a short period."
+    },
+    {
+      "w": "ceiling",
+      "ipa": "/ˈsiːlɪŋ/",
+      "pos": "n.",
+      "cn": "上限",
+      "def": "The highest level that something is allowed to reach."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Tom",
+      "en": "Did you see the education story from Taipei this morning?",
+      "cn": "你看到今天早上台北那則教育新聞了嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The class-size one? My sister teaches third grade, so she sent it to me twice.",
+      "cn": "縮小班級那則嗎？我姊姊教三年級，所以她傳給我兩次。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Twenty-four pupils in an elementary class. That sounds small to me.",
+      "cn": "小學一班二十四個學生。我覺得聽起來很少。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Twenty-four for elementary, twenty-five for junior high. Both will be capped by the 2028 school year.",
+      "cn": "小學二十四，國中二十五。兩個都要在二○二八學年前限制下來。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And the teachers? Will any of them lose their jobs?",
+      "cn": "那老師呢？會有人失去工作嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "No. Teacher numbers will be kept at today's level even as enrollment falls.",
+      "cn": "不會。即使學生人數下降，老師的編制還是維持現在的水準。"
+    },
+    {
+      "sp": "Tom",
+      "en": "So the workload that everyone complains about should get lighter.",
+      "cn": "所以大家一直抱怨的那種工作量應該會變輕。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is the idea. More permanent posts will be opened too.",
+      "cn": "就是這個意思。也會開出更多正式教職。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Permanent, not one-year contracts?",
+      "cn": "正式編制，不是一年一聘？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Permanent. And two ideas that few schools have tried will be piloted in elementary schools.",
+      "cn": "正式的。而且有兩個很少學校試過的做法會在小學試辦。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Which two?",
+      "cn": "哪兩個？"
+    },
+    {
+      "sp": "Anita",
+      "en": "A second homeroom teacher, and an administrative assistant for the paperwork.",
+      "cn": "第二位班級導師，還有一位處理行政文書的助理。"
+    },
+    {
+      "sp": "Tom",
+      "en": "My sister would cry. She is the one who stays until seven filling in forms.",
+      "cn": "我姊姊會哭吧。她就是那個留到七點在填表格的人。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Mine too. But the part that got the loudest reply was the school lunches.",
+      "cn": "我姊姊也是。但引來最大聲回應的，其實是營養午餐那一段。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Because the lunches are free now, right?",
+      "cn": "因為現在午餐是免費的，對吧？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Right. The funding will be adjusted so that it keeps pace with inflation, and parents who want better food can still add money.",
+      "cn": "對。經費會調整到跟得上物價，而想要吃好一點的家長還是可以加錢。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Both at once? The mayor must have asked about that.",
+      "cn": "兩件事一起？市長一定有追問這一點。"
+    },
+    {
+      "sp": "Anita",
+      "en": "He did. He said meal quality should not be judged against a number that nobody checks.",
+      "cn": "他問了。他說餐點品質不該用一個沒人查核的數字來評斷。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That is a fair question, honestly.",
+      "cn": "老實說，那是個合理的問題。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It is. My sister only cares about one thing: will the assistant start before the next audit?",
+      "cn": "是啊。我姊姊只在乎一件事：那個助理會在下次稽核前到職嗎？"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many pupils will a junior high class have at most?",
+      "qCn": "國中一班最多幾個學生？",
+      "opts": [
+        "A. Twenty-three",
+        "B. Twenty-four",
+        "C. Twenty-five",
+        "D. Twenty-eight"
+      ],
+      "optsCn": [
+        "A. 二十三人",
+        "B. 二十四人",
+        "C. 二十五人",
+        "D. 二十八人"
+      ],
+      "ans": 2,
+      "expl": "Twenty-four for elementary, twenty-five for junior high.——Anita把兩個數字分開講清楚。"
+    },
+    {
+      "q": "What happens to teacher numbers under the plan?",
+      "qCn": "依照這個計畫，老師的編制會怎麼樣？",
+      "opts": [
+        "A. They will be cut as enrollment falls",
+        "B. They will be kept at today's level",
+        "C. They will double by 2028",
+        "D. Only contract teachers will stay"
+      ],
+      "optsCn": [
+        "A. 隨著學生人數下降而縮減",
+        "B. 維持在現在的水準",
+        "C. 到二○二八年變成兩倍",
+        "D. 只留約聘老師"
+      ],
+      "ans": 1,
+      "expl": "Teacher numbers will be kept at today's level even as enrollment falls.——所以每位老師帶的學生變少。"
+    },
+    {
+      "q": "What are the two ideas that will be piloted?",
+      "qCn": "會試辦的兩個做法是什麼？",
+      "opts": [
+        "A. Longer lunch breaks and online classes",
+        "B. A second homeroom teacher and an administrative assistant",
+        "C. Free textbooks and free uniforms",
+        "D. Smaller desks and new buildings"
+      ],
+      "optsCn": [
+        "A. 更長的午休和線上課程",
+        "B. 第二位班級導師和一位行政助理",
+        "C. 免費教科書和免費制服",
+        "D. 比較小的桌子和新大樓"
+      ],
+      "ans": 1,
+      "expl": "A second homeroom teacher, and an administrative assistant for the paperwork.——Tom問哪兩個，Anita直接回答。"
+    },
+    {
+      "q": "Why does Tom mention his sister staying until seven?",
+      "qCn": "Tom為什麼提到他姊姊留到七點？",
+      "opts": [
+        "A. She teaches an evening class",
+        "B. She fills in forms after school",
+        "C. She is waiting for the shuttle",
+        "D. She is training new teachers"
+      ],
+      "optsCn": [
+        "A. 她教夜間課程",
+        "B. 她放學後在填表格",
+        "C. 她在等接駁車",
+        "D. 她在訓練新老師"
+      ],
+      "ans": 1,
+      "expl": "She is the one who stays until seven filling in forms.——所以行政助理對她特別有感。"
+    },
+    {
+      "q": "More permanent posts ___ in city schools.",
+      "qCn": "市立學校會開出更多正式教職。",
+      "opts": [
+        "A. will open",
+        "B. will be opened",
+        "C. will be open",
+        "D. are opening"
+      ],
+      "ans": 1,
+      "expl": "職位是被人開出來的，重點不在誰去開，所以用被動 will be 加過去分詞。對話裡Anita說的就是 More permanent posts will be opened too."
+    }
+  ]
+},
+{
+  "id": "dl20261028b2",
+  "date": "2026-10-28",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "The Hand Nobody Raised",
+  "titleCn": "沒有人舉起的那隻手",
+  "series": "本站自製聽力 · 學習與心理主題",
+  "topic": "🏭 下班後聊會議上那句「我來」",
+  "focus": "will 的人際用法：當場答應（I'll take it）、承諾、請求；won't／wouldn't 表示不肯配合；Shall we 用來提議並把決定權交出去",
+  "intro": "Anita在會議上接下了訓練新作業員的工作，下班後跟Tom聊這件事。請注意三種用法：I'll take it 是當場答應，不是計畫；the projector wouldn't come on 是講投影機不肯配合；最後 Shall we 是把提議的決定權交到對方手上。也注意Tom用 Will you 請Anita幫忙，而不是 Do you。",
+  "tip": "第一次聽只抓三件事：Anita接下了什麼工作、第一堂課出了什麼狀況、第三週誰糾正了誰。第二次聽專心分辨 I'll、won't、wouldn't、Shall we 各出現在什麼場合，並想一想如果換成 be going to，語氣會變成什麼樣子。",
+  "pre": [
+    {
+      "w": "volunteer",
+      "ipa": "/ˌvɑː.lənˈtɪr/",
+      "pos": "v.",
+      "cn": "自願（做某事）",
+      "def": "To offer to do a job that nobody has asked you to do."
+    },
+    {
+      "w": "hesitate",
+      "ipa": "/ˈhez.ə.teɪt/",
+      "pos": "v.",
+      "cn": "猶豫",
+      "def": "To wait a moment before acting because you are not sure."
+    },
+    {
+      "w": "commitment",
+      "ipa": "/kəˈmɪtmənt/",
+      "pos": "n.",
+      "cn": "承諾；許下的責任",
+      "def": "A promise that makes you responsible for doing something."
+    },
+    {
+      "w": "reluctant",
+      "ipa": "/rɪˈlʌk.tənt/",
+      "pos": "adj.",
+      "cn": "不太願意的",
+      "def": "Not wanting to do something, although you may still do it."
+    },
+    {
+      "w": "intention",
+      "ipa": "/ɪnˈten.ʃən/",
+      "pos": "n.",
+      "cn": "打算；意圖",
+      "def": "A plan in your mind that you have not acted on yet."
+    },
+    {
+      "w": "gauge",
+      "ipa": "/ɡeɪdʒ/",
+      "pos": "n.",
+      "cn": "量具；量錶",
+      "def": "A tool that shows a measurement such as size or pressure."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Tom",
+      "en": "I heard you walked out of the Monday meeting with a new job.",
+      "cn": "我聽說你從週一的會議帶著一個新任務走出來。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I did, and I still do not know how it happened.",
+      "cn": "是啊，而且我到現在還不知道那是怎麼發生的。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Somebody had to train the three new operators, I suppose.",
+      "cn": "我猜是得有人訓練那三位新作業員吧。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Somebody did. The room went quiet for about eight seconds.",
+      "cn": "是啊。那間會議室安靜了大概八秒鐘。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Eight seconds is a very long time in a meeting.",
+      "cn": "八秒鐘在會議裡是非常久的。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Long enough. Then I heard myself say, I'll take it.",
+      "cn": "久到不行。然後我聽見自己說：我接。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Did you have anything ready? Slides, a handout?",
+      "cn": "你有準備好什麼嗎？簡報、講義？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Nothing at all. I had hesitated for a week about offering, and then the words came out before the decision did.",
+      "cn": "什麼都沒有。我猶豫了一個星期要不要開口，結果話比決定先出來。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Honestly, that is the only reason it happened.",
+      "cn": "老實說，那正是它會成真的唯一原因。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I think so too. An intention in my head costs nothing to drop.",
+      "cn": "我也這麼覺得。只留在我腦袋裡的打算，放掉是零成本的。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And once eleven people have heard it, it is a commitment.",
+      "cn": "而一旦有十一個人聽到了，它就變成一個承諾。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Exactly. So how did the first session go? Badly, since you asked.",
+      "cn": "就是這樣。那第一堂課上得怎麼樣？既然你問了，很糟。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How badly are we talking?",
+      "cn": "有多糟？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The projector wouldn't come on, so I drew the gauge on the whiteboard.",
+      "cn": "投影機就是不肯亮，所以我在白板上把量具畫出來。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That old one in training room two never works.",
+      "cn": "第二訓練室那台舊的從來不會動。"
+    },
+    {
+      "sp": "Anita",
+      "en": "And one of them was reluctant to ask a single question for the whole hour.",
+      "cn": "而且其中一位整整一小時什麼問題都不肯問。"
+    },
+    {
+      "sp": "Tom",
+      "en": "The quiet ones usually come back.",
+      "cn": "安靜的那些人通常會回來的。"
+    },
+    {
+      "sp": "Anita",
+      "en": "He did. By the third week he was correcting my arithmetic in front of the others.",
+      "cn": "他真的回來了。到第三週他已經在其他人面前糾正我的算式。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That is the best thing you could possibly tell me.",
+      "cn": "那是你能告訴我的最好的事了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "He even asked, shall we do one more session on tolerances. Will you sit in on that one?",
+      "cn": "他甚至開口問：我們要不要再上一堂公差的課。那一堂你要不要來旁聽？"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How long did the room stay quiet in the meeting?",
+      "qCn": "會議上那間會議室安靜了多久？",
+      "opts": [
+        "A. About three seconds",
+        "B. About eight seconds",
+        "C. About half a minute",
+        "D. Nobody noticed"
+      ],
+      "optsCn": [
+        "A. 大約三秒",
+        "B. 大約八秒",
+        "C. 大約半分鐘",
+        "D. 沒有人注意到"
+      ],
+      "ans": 1,
+      "expl": "The room went quiet for about eight seconds.——Tom接著說八秒在會議裡非常久。"
+    },
+    {
+      "q": "What had Anita prepared before she volunteered?",
+      "qCn": "Anita開口自願之前準備了什麼？",
+      "opts": [
+        "A. Slides and a handout",
+        "B. A full training plan",
+        "C. Nothing at all",
+        "D. A whiteboard drawing"
+      ],
+      "optsCn": [
+        "A. 簡報和講義",
+        "B. 一份完整的訓練計畫",
+        "C. 什麼都沒有",
+        "D. 一張白板圖"
+      ],
+      "ans": 2,
+      "expl": "Nothing at all. I had hesitated for a week about offering——她猶豫了一週，話卻比決定先出來。"
+    },
+    {
+      "q": "What went wrong in the first session?",
+      "qCn": "第一堂課出了什麼狀況？",
+      "opts": [
+        "A. The projector would not come on",
+        "B. Nobody showed up",
+        "C. The gauge was broken",
+        "D. The room was double-booked"
+      ],
+      "optsCn": [
+        "A. 投影機就是不肯亮",
+        "B. 沒有人出現",
+        "C. 量具壞了",
+        "D. 教室被重複預約"
+      ],
+      "ans": 0,
+      "expl": "The projector wouldn't come on, so I drew the gauge on the whiteboard.——wouldn't 在這裡是「不肯配合」。"
+    },
+    {
+      "q": "What happened by the third week?",
+      "qCn": "到第三週發生了什麼事？",
+      "opts": [
+        "A. Anita handed the class to Tom",
+        "B. The quiet operator corrected her arithmetic",
+        "C. The projector was replaced",
+        "D. The sessions were cancelled"
+      ],
+      "optsCn": [
+        "A. Anita把課交給Tom",
+        "B. 原本安靜的作業員糾正了她的算式",
+        "C. 投影機被換掉",
+        "D. 課程被取消"
+      ],
+      "ans": 1,
+      "expl": "By the third week he was correcting my arithmetic in front of the others.——就是第一堂課什麼都不肯問的那一位。"
+    },
+    {
+      "q": "Anita ends with, ___ you sit in on that one?",
+      "qCn": "Anita最後問：那一堂你要不要來旁聽？",
+      "opts": [
+        "A. Do",
+        "B. Will",
+        "C. Shall",
+        "D. Are"
+      ],
+      "ans": 1,
+      "expl": "她請Tom去做一件事，問的是他的意願，所以用 Will you。Do you 問習慣；Shall 只跟 I 和 we 搭；Are you 後面得接 ing，意思會變成問既有的安排。"
+    }
+  ]
+},
 /* ---------- 2026-10-21 食物與生活主題（四個程度） ---------- */
 {
   "id": "dl20261021a2",
@@ -3491,7 +4446,7 @@ notes:[
     },
     {
       "w": "settle",
-      "ipa": "/ˈsetəl/",
+      "ipa": "/ˈset̬.əl/",
       "pos": "v.",
       "cn": "解決（問題、爭議）",
       "def": "To decide or solve something so that it is finished."
@@ -6967,7 +7922,7 @@ notes:[
     },
     {
       "w": "default",
-      "ipa": "/ˈdiːfɔːlt/",
+      "ipa": "/dɪˈfɔːlt/",
       "pos": "n.",
       "cn": "預設狀態、常態",
       "def": "What happens or is normal unless you choose something different."
@@ -9675,7 +10630,7 @@ notes:[
     {"w": "backup", "ipa": "/ˈbækʌp/", "pos": "adj.", "cn": "備援的", "def": "Used as an alternative if the main plan fails."},
     {"w": "access road", "ipa": "/ˈækses roʊd/", "pos": "n.", "cn": "聯外道路、進出道路", "def": "A road that lets vehicles get into a particular place."},
     {"w": "warehouse", "ipa": "/ˈwerhaʊs/", "pos": "n.", "cn": "倉庫", "def": "A large building where goods are stored."},
-    {"w": "shipment", "ipa": "/ˈʃɪpmənt/", "pos": "n.", "cn": "（一批）貨物、出貨", "def": "A load of goods that is sent together."}
+    {"w": "shipment", "ipa": "/ˈʃɪp.mənt/", "pos": "n.", "cn": "（一批）貨物、出貨", "def": "A load of goods that is sent together."}
   ],
   "script": [
     {"sp": "Mark", "en": "Anita, I heard the shipment has been delayed by the storm. Is that right?", "cn": "Anita，我聽說這批貨被暴風延誤了，是真的嗎？"},
@@ -9941,7 +10896,7 @@ notes:[
   "pre": [
     {"w": "enroll", "ipa": "/ɪnˈroʊl/", "pos": "v.", "cn": "註冊、報名", "def": "To officially join a course."},
     {"w": "challenging", "ipa": "/ˈtʃælɪndʒɪŋ/", "pos": "adj.", "cn": "有挑戰性的", "def": "Difficult in a way that tests your skill."},
-    {"w": "uncomfortable", "ipa": "/ʌnˈkʌmftəbəl/", "pos": "adj.", "cn": "不自在的、不舒服的", "def": "Feeling slightly worried, embarrassed or not relaxed."},
+    {"w": "uncomfortable", "ipa": "/ʌnˈkʌm.fɚ.t̬ə.bəl/", "pos": "adj.", "cn": "不自在的、不舒服的", "def": "Feeling slightly worried, embarrassed or not relaxed."},
     {"w": "impressive", "ipa": "/ɪmˈpresɪv/", "pos": "adj.", "cn": "令人印象深刻的", "def": "Causing admiration because of quality or skill."},
     {"w": "worth", "ipa": "/wɝːθ/", "pos": "adj.", "cn": "值得的", "def": "Deserving the time or effort spent."},
     {"w": "registration", "ipa": "/ˌredʒɪˈstreɪʃn/", "pos": "n.", "cn": "報名、註冊", "def": "The process of signing up for something."}
