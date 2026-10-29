@@ -9418,7 +9418,17 @@ function vdOpen(id,autoplay){
   const gram=vdIsGram(id);
   vdLoad(()=>{
     const src=gram?window.GVIDEO:window.VIDEO, d=src&&src[id];
-    if(!d){ alert(gram?'這個單元還沒有影片解說。':'這一課還沒有影片版。'); return; }
+    if(!d){
+      /* 記憶體裡的影片資料可能是舊版（App 開著沒重載、或被快取）：加時間戳重抓一次再試 */
+      if(!gram&&!vdOpen._retry){
+        vdOpen._retry=1;
+        const s=document.createElement('script'); s.src='data-video.js?v='+Date.now();
+        s.onload=()=>{ vdOpen._retry=0; vdOpen(id,autoplay); };
+        s.onerror=()=>{ vdOpen._retry=0; alert('影片資料載入失敗，請檢查網路後再試一次。'); };
+        document.head.appendChild(s); return;
+      }
+      vdOpen._retry=0; alert(gram?'這個單元還沒有影片解說。':'這一課還沒有影片版。'); return;
+    }
     if(typeof auStop==='function') auStop();
     ttsStop();
     Object.assign(VD,{id:id,d:d,lines:d.lines||[],i:0,on:false,loop:false,shadow:false,expr:null,more:false});
