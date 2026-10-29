@@ -7637,7 +7637,7 @@ function bookHTML(b){
          +opts.map(o=>'<div class="een" style="margin:3px 0 0 22px;font-weight:400">'+esc(o.trim())+'</div>').join('')
          +'<div class="ecn cnx">'+esc(q.qCn)+'</div>'
          +'<div class="bkans"><div style="margin-top:5px"><span class="sent" data-t="'+esc(q.a)+'" onclick="saySent(this)">'+esc(q.a)+'</span> '+spk(q.a)+'</div>'
-         +'<div class="ecn cnx">'+esc(q.aCn)+'</div></div></div>';}).join('')
+         +'<div class="ecn cnx">'+esc(q.aCn).replace(/s*🔬/g,'<br>🔬')+'</div></div></div>';}).join('')
        +'</div>';
     }
     if((r.sumEn||[]).length){
@@ -7680,7 +7680,7 @@ function bookHTML(b){
      + b.discussion.map(d=>'<div class="bkex"><div class="een">• <span class="sent" data-t="'+esc(d.q)+'" onclick="saySent(this)">'+esc(d.q)+'</span> '+spk(d.q)+'</div>'
        +'<div class="ecn cnx">'+esc(d.qCn)+'</div>'
        +'<div style="margin-top:5px"><span class="sent" data-t="'+esc(d.a)+'" onclick="saySent(this)">'+esc(d.a)+'</span> '+spk(d.a)+'</div>'
-       +'<div class="ecn cnx">'+esc(d.aCn)+'</div></div>').join('')
+       +'<div class="ecn cnx">'+esc(d.aCn).replace(/s*🔬/g,'<br>🔬')+'</div></div>').join('')
      +'</div>';
   }
 
