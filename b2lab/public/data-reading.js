@@ -1843,6 +1843,144 @@ window.READING = [
      b2Cn:"她的主管讓她自己主持那些課。",
      spCn:"她老闆對她帶那些課沒什麼意見。"}
   ]
+},
+
+/* ---------------------------------------------------------- 32 */
+{
+  id:"r32", level:"B1", topic:"園藝與陽台植物", words:223,
+  title:"Three Pots on a Small Balcony",
+  titleCn:"小陽台上的三個花盆",
+  focus:"可數與不可數：some / any / much / many / a few / a little",
+  intro:"Tom 在台中的小陽台上種東西，從三個花盆開始。注意可數名詞用 many / a few（a few seeds），不可數名詞用 much / a little（a little water）；some 多半用在肯定句，any 用在否定句與疑問句，a lot of / plenty of 兩種名詞都接得下去。",
+  spoken:[
+    {en:"When I started, I only had three pots and a little soil.",cn:"我剛開始的時候，只有三個花盆和一點土。"},
+    {en:"I put too many seeds in one pot and gave them too much water.",cn:"我在一個花盆裡放了太多種子，又澆了太多水。"},
+    {en:"My neighbour gave me a few mint cuttings, and the mint never died.",cn:"鄰居給了我幾根薄荷插枝，那薄荷怎麼都死不了。"},
+    {en:"Now I have plenty of mint and I don't buy any seeds.",cn:"現在我薄荷多得是，種子一包都不用買。"}
+  ],
+  paras:[
+    {en:"Tom has a small balcony in Taichung. For years there was nothing on it but a broken chair and some old boxes. Last March he decided to grow a little food there, so he bought three plastic pots, a bag of soil and a few packets of seeds.",
+     cn:"Tom 在台中有一個小陽台。好幾年來，上面除了一張壞掉的椅子和一些舊紙箱，什麼都沒有。去年三月他決定在那裡種一點吃的，所以買了三個塑膠花盆、一袋土和幾包種子。"},
+    {en:"He did not know much about plants. He put too many seeds in each pot and gave them too much water. After two weeks he had a lot of tiny green leaves, and then almost all of them turned brown. Only a few tomato plants were still alive in May.",
+     cn:"他對植物不太懂。他在每個花盆裡放了太多種子，又澆了太多水。兩個星期後，他長出一堆小小的綠葉子，然後幾乎全部都變成褐色。到了五月，只剩幾株番茄還活著。"},
+    {en:"His neighbour, Mrs Lin, watched him from her window and laughed. She brought him a few mint cuttings in a cup of water. \"Mint needs some sun and a little water,\" she said. \"It does not need any special soil. Just try it.\"",
+     cn:"他的鄰居林太太從窗戶看著他，笑了出來。她拿了幾根薄荷插枝給他，泡在一杯水裡。「薄荷只要一些陽光和一點水，」她說，「它不需要任何特別的土。你試試就知道。」"},
+    {en:"The mint grew fast. By August Tom had five pots of it and did not know what to do with so much mint. He put some in his tea, dried a little for the winter, and still had plenty left. He gave three pots away to people at work.",
+     cn:"薄荷長得很快。到了八月，Tom 有五盆薄荷，多到不知道該怎麼辦。他放了一些在茶裡，曬乾了一點留到冬天，還是剩下很多。他送了三盆給公司的同事。"},
+    {en:"Now the balcony has eleven pots and no room for any boxes. Tom still kills a few plants every year, but he does not buy many seeds now. He asks his neighbours instead.",
+     cn:"現在陽台上有十一個花盆，再也放不下任何紙箱。Tom 每年還是會種死幾株，但他現在不買很多種子了。他改成去問鄰居。"}
+  ],
+  target:[
+    {w:"balcony",ipa:"/ˈbælkəni/",pos:"n.",cn:"陽台",def:"A small outdoor floor on the wall of a building, with a rail around it.",ex:"Their flat is tiny, but the balcony is big enough for two chairs.",exCn:"他們的公寓很小，但陽台放得下兩張椅子。"},
+    {w:"soil",ipa:"/sɔɪl/",pos:"n.",cn:"土；土壤",def:"The brown material on the ground that plants grow in.",ex:"The soil beside the river is dark and always wet.",exCn:"河邊的土又黑又濕。"},
+    {w:"seed",ipa:"/siːd/",pos:"n.",cn:"種子",def:"A small hard part of a plant that a new plant grows from.",ex:"Sunflower seeds are cheap at the market behind the temple.",exCn:"廟後面那個市場的葵花子很便宜。"},
+    {w:"alive",ipa:"/əˈlaɪv/",pos:"adj.",cn:"活著的",def:"Living, not dead.",ex:"The fish we bought on Sunday is still alive in the tank.",exCn:"我們星期天買的那條魚還活在水族箱裡。"},
+    {w:"cutting",ipa:"/ˈkʌt̬.ɪŋ/",pos:"n.",cn:"插枝；剪下來的枝條",def:"A short piece cut off a plant so that a new plant can grow from it.",ex:"She rooted a cutting from her mother's rose bush in a jam jar.",exCn:"她把從媽媽那叢玫瑰剪下的枝條插在果醬罐裡養出了根。"},
+    {w:"plenty",ipa:"/ˈplenti/",pos:"n.",cn:"很多；足夠",def:"More than enough of something.",ex:"Take your time; there is plenty of hot water tonight.",exCn:"慢慢來，今晚熱水很夠。"}
+  ],
+  questions:[
+    {q:"Why did almost all of Tom's first plants die?",
+     opts:["A. He forgot to water them for two weeks","B. He used too many seeds in each pot and gave them too much water","C. The balcony got no sun at all","D. His neighbour moved them to her own flat"],
+     ans:1,
+     expl:"第二段：He put too many seeds in each pot and gave them too much water。"},
+    {q:"The story says “a few mint cuttings” but “a little water”. Why not “a few water”?",
+     opts:["A. Because water is uncountable, so it takes a little, not a few","B. Because water is always plural in English","C. Because a few can only be used in questions","D. Because water comes after the verb needs"],
+     ans:0,
+     expl:"不可數名詞（water、soil、mint）的「少量」用 a little、「多」用 much；可數複數（cuttings、seeds、pots）才用 a few 和 many。"},
+    {q:"What does Tom do now when he wants a new plant?",
+     opts:["A. He buys many packets of seeds","B. He asks his neighbours","C. He uses the old boxes as pots","D. He has stopped growing anything"],
+     ans:1,
+     expl:"最後一段：he does not buy many seeds now. He asks his neighbours instead。"}
+  ],
+  upgrade:[
+    {b1:"I had a lot of small green leaves. Then they died.",
+     b2:"Two weeks later there were plenty of tiny green leaves, but almost all of them turned brown.",
+     note:"a lot of 在口語和書寫都通；plenty of 多了「多到夠用、甚至太多」的味道，而且可數、不可數名詞都能接（plenty of pots／plenty of water）。",
+     sp:"I had loads of little green leaves — and then they all went brown.",
+     spNote:"loads of 是口語版的 a lot of；口語講顏色變化常用 go（go brown、go bad），不一定要用 turn。",
+     b1Cn:"我有很多小綠葉。然後它們就死了。",
+     b2Cn:"兩個星期後，小綠葉長了一大堆，但幾乎全都變成褐色。",
+     spCn:"我長了一大堆小綠葉——然後它們全都變褐色了。"},
+    {b1:"Mint does not need special soil. It only needs sun and water.",
+     b2:"Mint does not need any special soil; it just needs some sun and a little water.",
+     note:"否定句與疑問句裡用 any（not ... any special soil），肯定句用 some；不可數名詞的「一點」是 a little，可數名詞才用 a few。",
+     sp:"Mint'll grow in anything — bit of sun, bit of water, that's it.",
+     spNote:"口語常用 a bit of 代替 a little，而且常把 a 省略掉（bit of sun）；that's it 是「就這樣，沒別的了」。",
+     b1Cn:"薄荷不需要特別的土。它只需要陽光和水。",
+     b2Cn:"薄荷不需要任何特別的土，只要一些陽光和一點水。",
+     spCn:"薄荷什麼土都能長——一點陽光、一點水，就這樣。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 33 */
+{
+  id:"r33", level:"B1+", topic:"工安與消防演練", words:253,
+  title:"Four Minutes to the Gate",
+  titleCn:"四分鐘走到大門",
+  focus:"義務與禁止：must / have to / mustn't / be allowed to",
+  intro:"Anita 的工廠辦了一次消防演練，規則寫得很短也很硬。注意 must 和 have to 都是「必須」，但 mustn't 是「禁止」、don't have to 是「不必」，兩者差很多；be allowed to 講的是「有沒有被准許」，而且 must 沒有過去式，過去的義務一律用 had to。",
+  spoken:[
+    {en:"The notice said that everyone inside the factory had to take part.",cn:"公告上寫，工廠裡的每一個人都必須參加。"},
+    {en:"You mustn't go back for your bag, and you have to walk, not run.",cn:"你不可以回去拿包包，而且必須走，不能跑。"},
+    {en:"Nobody is allowed to use the lift during a drill.",cn:"演練的時候任何人都不准搭電梯。"},
+    {en:"Two men thought they didn't have to come, because they were on a break.",cn:"有兩個人以為自己不必來，因為他們在休息。"}
+  ],
+  paras:[
+    {en:"The notice went up on the board by the canteen: fire drill, Tuesday, ten o'clock. Everyone inside the factory had to take part, including visitors and the drivers in the yard. The rules were short. You must leave your line the moment the alarm starts. You mustn't go back for a bag. And you have to walk, not run.",
+     cn:"公告貼在員工餐廳旁邊的佈告板上：消防演練，星期二，十點。工廠裡的每一個人都必須參加，包括訪客和在院子裡等的司機。規則很短。警報一響，你就必須離開你的生產線。你不可以回去拿包包。而且你必須走，不能跑。"},
+    {en:"Anita had heard that alarm twice before, but never from the packing area, and it was far louder than she expected. Two new operators stood still and looked at her, so she pointed at the stairs. Nobody is allowed to use the lift during a drill: a lift can stop between floors and trap people inside.",
+     cn:"那個警報 Anita 之前聽過兩次，但從來不是在包裝區聽到的，而且比她想像中大聲得多。兩個新來的作業員站著不動、看著她，所以她指了樓梯。演練時任何人都不准搭電梯：電梯可能停在樓層之間，把人困在裡面。"},
+    {en:"At the gate the supervisors counted heads. Anita's group took six minutes and forty seconds, and two names were missing. Both men were found in the smoking area; they had thought they didn't have to come, because they were on a break. The safety officer did not shout. He simply said that four minutes was the target, and that a fire does not wait for anybody's break.",
+     cn:"在大門口，組長們一個一個點人數。Anita 這一組花了六分四十秒，而且少了兩個名字。那兩位男同事後來在吸菸區被找到；他們以為自己不必來，因為他們在休息。安全管理員沒有大聲罵人。他只說四分鐘才是目標，而火不會等任何人休息完。"},
+    {en:"Three weeks later they reached the gate in four minutes ten seconds. After that, every worker had to learn to use an extinguisher: pull the pin, aim low, squeeze, sweep. Anita checks the ones on her floor every month now. She isn't allowed to repair them, but she must report any that is empty. Nobody has to be brave in a drill; you only have to know where the door is.",
+     cn:"三個星期後，他們四分十秒就走到大門。在那之後，每位員工都必須學會使用滅火器：拔插銷、瞄低、壓下、左右掃。現在 Anita 每個月都檢查她那層樓的滅火器。她不被允許自己修，但只要有哪一支是空的，她就必須回報。演練裡沒有人需要勇敢；你只需要知道門在哪裡。"}
+  ],
+  target:[
+    {w:"notice",ipa:"/ˈnoʊtɪs/",pos:"n.",cn:"公告；通知",def:"A written sign put up to tell people something.",ex:"A notice on the lift door said it would be closed all weekend.",exCn:"電梯門上的公告說整個週末都會停用。"},
+    {w:"drill",ipa:"/drɪl/",pos:"n.",cn:"演練",def:"A practice of what everyone should do in an emergency.",ex:"Our school held an earthquake drill before the summer holiday.",exCn:"我們學校在暑假前辦了一次地震演練。"},
+    {w:"alarm",ipa:"/əˈlɑːrm/",pos:"n.",cn:"警報器；警報聲",def:"A loud sound or machine that warns people of danger.",ex:"The smoke alarm went off because somebody burnt the toast.",exCn:"有人把吐司烤焦了，煙霧警報器就響了。"},
+    {w:"trap",ipa:"/træp/",pos:"v.",cn:"困住",def:"To keep someone in a place that they cannot get out of.",ex:"Heavy snow trapped the climbers in the hut for two nights.",exCn:"大雪把登山客困在山屋裡兩個晚上。"},
+    {w:"supervisor",ipa:"/ˈsuː.pɚ.vaɪ.zɚ/",pos:"n.",cn:"組長；現場主管",def:"A person whose job is to watch and check other people's work.",ex:"Ask your supervisor to sign the form before Friday.",exCn:"星期五之前請你的組長在表格上簽名。"},
+    {w:"extinguisher",ipa:"/ɪkˈstɪŋ.ɡwɪ.ʃɚ/",pos:"n.",cn:"滅火器",def:"A metal container with something inside that puts out a fire.",ex:"There is a red extinguisher behind the kitchen door.",exCn:"廚房門後面有一支紅色的滅火器。"},
+    {w:"squeeze",ipa:"/skwiːz/",pos:"v.",cn:"壓；擠",def:"To press something firmly, usually with your hand.",ex:"Squeeze half a lemon over the fish before you serve it.",exCn:"上菜前在魚上面擠半顆檸檬。"},
+    {w:"canteen",ipa:"/kænˈtiːn/",pos:"n.",cn:"員工餐廳",def:"A place in a factory or school where people can eat.",ex:"The canteen stops serving soup at one o'clock.",exCn:"員工餐廳一點之後就不供應湯了。"}
+  ],
+  questions:[
+    {q:"According to the notice, who had to take part in the drill?",
+     opts:["A. Only the workers on the packing line","B. Everyone inside the factory, including visitors and drivers","C. Only the two new operators","D. Only the supervisors and the safety officer"],
+     ans:1,
+     expl:"第一段：Everyone inside the factory had to take part, including visitors and the drivers in the yard。"},
+    {q:"Why is the lift not used during a drill?",
+     opts:["A. It is too slow for a large group","B. It can stop between floors and trap people inside","C. The supervisors need it for themselves","D. It is switched off at ten o'clock every day"],
+     ans:1,
+     expl:"第二段：a lift can stop between floors and trap people inside。"},
+    {q:"“They didn't have to come” and “You mustn't go back for a bag” — what is the difference?",
+     opts:["A. didn't have to ＝ it was not necessary; mustn't ＝ it is not allowed","B. They mean exactly the same thing","C. didn't have to ＝ it is not allowed; mustn't ＝ it was not necessary","D. Only mustn't can be used about rules"],
+     ans:0,
+     expl:"don't／didn't have to 是「不必、沒必要」，mustn't 是「禁止」。中文都可能說成「不用」，英文差很多；而且 must 沒有過去式，過去的義務一律用 had to。"},
+    {q:"What is Anita's job with the extinguishers now?",
+     opts:["A. She repairs the empty ones herself","B. She checks them every month and reports any empty one","C. She teaches the drill to the drivers in the yard","D. She keeps one at her own work station"],
+     ans:1,
+     expl:"最後一段：Anita checks the ones on her floor every month ... she must report any that is empty，而且 She isn't allowed to repair them。"}
+  ],
+  upgrade:[
+    {b1:"Everyone in the factory must join the drill. Visitors must join too.",
+     b2:"Everyone inside the factory had to take part, including visitors and the drivers in the yard.",
+     note:"must 沒有過去式，講已經發生的義務一律用 had to；要把兩句併成一句，用 including + 名詞比再寫一個句子乾淨得多。",
+     sp:"Basically everyone had to go out — visitors, drivers, the lot.",
+     spNote:"the lot 是口語的「全部都算進去」，放句尾收尾；basically 在這裡是「總之、大致上」。",
+     b1Cn:"工廠裡的每個人都必須參加演練。訪客也必須參加。",
+     b2Cn:"工廠裡的每一個人都必須參加，包括訪客和在院子裡等的司機。",
+     spCn:"基本上所有人都得出去——訪客、司機，全部都要。"},
+    {b1:"They thought it was not necessary to come. But staying inside is not allowed.",
+     b2:"They had thought they didn't have to come, but nobody is allowed to stay inside during a drill.",
+     note:"didn't have to 是「不必」，be not allowed to 是「不准」。說成 They mustn't come 意思會變成「禁止他們來」，完全相反；過去的想法用過去完成式 had thought 更清楚。",
+     sp:"They reckoned they could just stay put — you can't, though.",
+     spNote:"reckon 是口語的 think，stay put 是「待在原地不動」；句尾加 though 是「不過……」的補充語氣。",
+     b1Cn:"他們以為不用來。但待在裡面是不准的。",
+     b2Cn:"他們本來以為自己不必來，但演練時任何人都不准留在裡面。",
+     spCn:"他們以為待著不動就好——但不行。"}
+  ]
 }
 
 ];

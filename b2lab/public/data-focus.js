@@ -748,6 +748,43 @@ r31:{ unit:"g06", title:"使役與 have / get something done",
     {bad:"She had adjusted the lighting by the engineers.",good:"She had the lighting adjusted by the engineers.",why:"have something done 的語序是 have + 受詞 + p.p.；had adjusted 是過去完成式，意思會變成「她自己早就調好了」。"},
     {bad:"My manager let me to run the session.",good:"My manager let me run the session.",why:"let / make / have 後面接原形動詞，不加 to；只有 get 才是 get someone to do。"}
   ]
+},
+r32:{ unit:"g14", title:"可數與不可數：some / any / much / many / a few / a little",
+  formula:"可數名詞 → many / a few / how many　|　不可數名詞 → much / a little / how much　|　some（肯定）↔ any（否定、疑問）　|　a lot of / plenty of 兩種都能接",
+  points:[
+    "可數名詞（seeds、pots、plants）配 many / a few / how many；不可數名詞（water、soil、rice、mint）配 much / a little / how much：too many seeds 對上 too much water。",
+    "some 用在肯定句（Mint needs some sun.），any 用在否定句與疑問句（It does not need any special soil. / Is there any soil left?）；但「要不要、給不給」這種提議或請求的問句習慣用 some：Would you like some tea?",
+    "a few / a little 是「有一些，夠用」；few / little 不加 a 是「很少，幾乎沒有」：A few plants were still alive.（還有幾株活著）≠ Few plants were still alive.（幾乎都死了）。",
+    "a lot of、lots of、plenty of 後面可數、不可數都能接（plenty of pots／plenty of water）；much 在肯定句裡很少單獨用，口語通常改說 a lot of。"
+  ],
+  examples:[
+    {en:"How much soil do you need for three pots?",cn:"三個花盆需要多少土？",note:"不可數 → how much"},
+    {en:"I only bought a few packets of seeds.",cn:"我只買了幾包種子。",note:"可數 → a few"},
+    {en:"We don't have any sugar left.",cn:"我們一點糖都不剩了。",note:"否定句 → any"}
+  ],
+  traps:[
+    {bad:"I gave the pots too much seeds.",good:"I gave the pots too many seeds.",why:"seeds 是可數複數，要用 many；much 只接不可數名詞。"},
+    {bad:"A few water is enough for mint.",good:"A little water is enough for mint.",why:"water 不可數，「一點」要用 a little；a few 只接可數複數。"}
+  ]
+},
+
+r33:{ unit:"g15", title:"義務與禁止：must / have to / mustn't / be allowed to",
+  formula:"must / have to + 原形V ＝ 必須　|　mustn't ＝ 禁止　|　don't have to / needn't ＝ 不必　|　be (not) allowed to ＝ 准／不准（過去一律 had to、wasn't allowed to）",
+  points:[
+    "must 和 have to 都是「必須」：must 多半是說話者自己認定的，或規則就寫在那裡（You must leave your line.）；have to 偏向外在規定或情況逼的（Everyone had to take part.）。",
+    "⚠ mustn't ≠ don't have to：mustn't 是「禁止」（You mustn't go back for a bag. 不可以回去拿），don't have to 是「不必」（They didn't have to come. 不來也沒關係）。中文常常都說成「不用」，英文意思卻相反。",
+    "must 沒有過去式也沒有未來式：過去的義務用 had to（Yesterday everyone had to take part.），未來用 will have to（Next month we will all have to do it again.）。",
+    "be allowed to 把焦點放在「有沒有被准許」，而且能配合各種時態：Nobody is allowed to use the lift. / She wasn't allowed to repair them.；想把 mustn't 講得客氣一點，就改用 be not allowed to。"
+  ],
+  examples:[
+    {en:"You must sign in at the gate before eight.",cn:"你必須在八點前在大門口簽到。",note:"must：規則"},
+    {en:"You mustn't park in front of the fire door.",cn:"你不可以停在消防門前面。",note:"mustn't：禁止"},
+    {en:"We didn't have to work on Saturday.",cn:"我們星期六不用上班。",note:"didn't have to：不必"}
+  ],
+  traps:[
+    {bad:"We mustn't work on Saturday, so we stayed at home.",good:"We didn't have to work on Saturday, so we stayed at home.",why:"mustn't 是「禁止」；要說「不必上班」得用 don't／didn't have to。"},
+    {bad:"Yesterday everyone must take part in the drill.",good:"Yesterday everyone had to take part in the drill.",why:"must 沒有過去式，講過去的義務一律用 had to。"}
+  ]
 }
 
 };

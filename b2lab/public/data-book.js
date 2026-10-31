@@ -30224,7 +30224,10 @@ window.BOOK = {
     screenL:'<rect x="8" y="12" width="48" height="32" rx="4" fill="#fff" stroke="'+D+'" stroke-width="3"/><rect x="14" y="18" width="36" height="20" rx="1" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><path d="M32 44 v8 M22 54 h20" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>',
     tornadoL:'<path d="M10 14 h44 M14 24 h36 M20 34 h24 M25 44 h14 M29 54 h6" stroke="'+D+'" stroke-width="5" stroke-linecap="round"/><path d="M10 14 h44 M14 24 h36 M20 34 h24 M25 44 h14 M29 54 h6" stroke="'+A+'" stroke-width="2" stroke-linecap="round"/>',
     caliper:'<rect x="8" y="32" width="48" height="14" rx="2" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M17 32 v6 M25 32 v8 M33 32 v6 M41 32 v8 M49 32 v6" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/><path d="M10 32 V12 h9 v20" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M36 32 V20 h9 v12" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M14 46 v8 M40 46 v8" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>',
-    spray:'<path d="M10 20 h26 a6 6 0 0 1 6 6 v8 H16 a6 6 0 0 1 -6 -6z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M20 34 l-4 20 h11 l3 -20" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M42 27 h5" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><circle cx="53" cy="20" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><circle cx="56" cy="29" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><circle cx="52" cy="38" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>'
+    spray:'<path d="M10 20 h26 a6 6 0 0 1 6 6 v8 H16 a6 6 0 0 1 -6 -6z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M20 34 l-4 20 h11 l3 -20" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M42 27 h5" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><circle cx="53" cy="20" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><circle cx="56" cy="29" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><circle cx="52" cy="38" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>',
+    /* 2026-10-31 排程新增：陽台園藝、消防演練 */
+    flowerpot:'<rect x="13" y="18" width="38" height="9" rx="2" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><path d="M18 27 h28 l-4 25 a3 3 0 0 1 -3 2 H25 a3 3 0 0 1 -3 -2z" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M22 34 h20" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>',
+    extinguisher:'<rect x="22" y="20" width="20" height="34" rx="5" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><rect x="27" y="11" width="10" height="9" rx="2" fill="#fff" stroke="'+D+'" stroke-width="3"/><path d="M26 13 h-8" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><path d="M38 16 q12 6 8 20" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><path d="M45 32 l9 5 l-9 5z" fill="'+D+'" stroke="'+D+'" stroke-width="2" stroke-linejoin="round"/><rect x="26" y="31" width="12" height="11" rx="1" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
   };
   /* 2026-10-11 貼紙線稿風（同閱讀清單的籃子縮圖）：橫幅圖示的主色改用「東西本來的顏色」，
      不再每個都是暖橘 #e8813a。閱讀橫幅（tools/genart.js）也讀這張表，改一處兩邊一致。
@@ -30251,7 +30254,7 @@ window.BOOK = {
     sun:Y, syringe:B, talk:B, tap:GR, target:R, teacup:GN, temple:R, thermo:R, thumb:Y,
     ticket:Y, timetable:B, toilet:LB, toolbox:R, tornado:SKY, train:B, trash:GN, trophy:Y,
     truck:B, tv:B, typhoon:B, umbrella:B, videocall:B, wallet:BR, warning:Y, wave:B, wind:SKY,
-    window:R, wrench:GR, caliper:B, spray:TAN,
+    window:R, wrench:GR, caliper:B, spray:TAN, extinguisher:R, flowerpot:TAN,
     /* 只有課本／聽力用到的 */
     bike:R, tooth:B, ball:Y, mountain:GN, clock2:R, washer:B, ambulance:R, nametag:B, magnify:B
   };
