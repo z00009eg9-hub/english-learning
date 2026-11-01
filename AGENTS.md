@@ -54,28 +54,14 @@ Claude Code 讀 `.claude/`，Codex 讀 `.agents/`（同一份 skill 的轉換副
 ## 1. 開工前的固定檢查（每次都要做）
 
 ```bash
-git fetch && git status
+git fetch && git status -sb && git pull --rebase
 ```
 
-1. **一定先 `git pull --rebase`。** 這個 repo 有多個寫入者：人類、每日排程 agent、
-   不同的 AI 工具。`index.html` 是單一巨檔，兩邊同時改幾乎必定衝突而且很難合。
-   **同一時間只讓一個 agent 改同一個檔案。**
-2. **確認 index.html 沒有被 Google Drive 截斷。** 開工前比對檔案大小與 `git HEAD` 的版本：
-   ```bash
-   git cat-file -s HEAD:b2lab/public/index.html   # 對照 wc -c b2lab/public/index.html
-   ```
-   工作區是 CRLF、git 內是 LF，所以本機**本來就會大約多 1~2%**（每行多一個 `\r`）；
-   正常。若本機**明顯比較小**（少好幾 KB 以上）→ 檔案被 Drive 同步截斷了，
-   用 `git checkout -- <path>` 還原後再開工。
-3. `git fetch` 若報 `bad object refs/desktop.ini`：
-   ```bash
-   find .git -iname desktop.ini -delete
-   ```
-4. **不要在 `G:\我的雲端硬碟\英文筆記` 跑 git 或 `npm install`。** 那是雲端硬碟上的舊副本，
-   已停用：在那裡跑 git 會讓雲端冒出大量雜湊檔名的物件檔，`npm install` 會 EBADF 失敗，
-   資料也是舊的。一律在 `D:\english-learning` 做事。
-5. 換電腦時的設定步驟見 `CLAUDE.md` 的「換電腦設定步驟」；雲端冒出雜湊檔名檔案的清法
-   （G: 跑 `git gc --prune=now`，不要在雲端手動刪）也在同一節。
+這個 repo 有多個寫入者：人類、每日排程 agent、不同的 AI 工具。`index.html` 是單一巨檔，兩邊同時改幾乎必定衝突而且很難合，所以**同一時間只讓一個 agent 改同一個檔案**，改完立刻 push，不要讓本地 commit 過夜。
+
+- `git pull --rebase` 出衝突：解完走 `git rebase --continue`。**不要 `--abort` 當作沒事**（本地 commit 會脫離 main 落單）；`git rebase --skip` 之前一定先 `git show --stat <hash>` 看完整 diff（2026-08-28 就是 skip 掉一個夾帶側邊欄改版的 commit，線上少了一版）。
+- 收工檢查：`git log --oneline origin/main..main` 要空的；`git branch --no-merged main` 列出的分支要逐一確認是否該併回。
+- 不要在 `G:我的雲端硬碟英文筆記` 跑 git 或 `npm install`（停用的舊副本，見 `CLAUDE.md`）。一律在 `D:english-learning` 做事。
 
 ---
 
@@ -124,7 +110,7 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
 這些是使用者反覆確認過的規則，不是建議：
 
 - **中文一律繁體台灣用語。** 中英交界要有空白（顯示層有 `rwPad()` 處理）。
-- **音標統一美式 Cambridge**：用 `ɑː / ɚ / ɝː / e`，一律寫成 `/…/`。新資料照此格式。
+- **音標統一美式 Cambridge**：規則見 `b2lab/TASK_COMMON.md`「音標」，寫完跑 `node b2lab/tools/check-ipa.js`；一律 `/…/`。
 - **文法內容必須與 *Grammar in Use* 一致**（規則、例句、quiz、解說）。
   學習者無法自行判斷對錯，寧可不寫也不要寫錯。
 - **文章與實景的單字例句不可照抄本文**：閱讀／每日／A2 的 `target[].ex` 與實景 `vocab[].ex`
@@ -139,7 +125,7 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
     **絕對不可以依標題或單字自己生成原句。** 沒有來源就留空，UI 有 fallback。
   - 自己寫的句子只能放 `exs`（延伸例句），永遠不混進 `quotes`。
   - UI 不顯示第三方平台品牌，連結一律寫「觀看原影片 ↗」。
-  - `icons[3]` / `steps[3]` 要隨內容挑，不要沿用別課的。 圖示庫現有 50 個（原 30＋禮物/帳單/握手/鍋具/行李等 20）；sign 已被 59% 的課使用，非必要不用，優先挑沒用過或少用的。
+  - `icons[3]` / `steps[3]` 要隨內容挑，不要沿用別課的。 sign 用得很多，非必要不用，優先挑沒用過或少用的。
   - 清單縮圖：實景每課設 `thumb`（課本圖示庫 `BOOK_ICONS` 的名稱，跟別課不重複）；閱讀文章自動從插圖挑一格沒用過的圖示，不用另外設。
 - **清單縮圖一律用線稿圖示，不要用 emoji（2026-10-06 使用者指定）**：
   全站卡片（課本、閱讀、實景、聽力）的縮圖都是 `data-book.js` 的 `BOOK_ICONS` 線稿（橘黑兩色）。
@@ -169,33 +155,14 @@ Firebase service account 金鑰（`*-firebase-adminsdk-*.json`）、`.env`、`*.
 - **生詞本同步（b2wb）**：Speak Up 的 `cloudPush` 必須剔除 `b2wb` 再 `set(merge:true)`。
   merge 是深合併，推回舊 map 會讓已移除的字復活。
 
-### 5-1. 課堂筆記同步到 B2 Read 課本（Codex 與 Claude 共用的必做清單）
+### 5-1. 課堂筆記同步到 B2 Read 課本
 
-完整流程與 schema 在 `.claude/skills/english-learning/SKILL.md`「同步到 B2 Read 課本」一節，
-**那份是權威版本，同步前先讀**。以下是最常漏掉、使用者已經抓到過的項目，每一項都必做：
+完整流程與 schema 在 `.claude/skills/english-learning/references/flow-h-b2-book.md`（**權威版本，同步前先讀**）。最常漏、使用者抓過的底線：每次都重讀 Google Doc 最新版（長文用 `/mobilebasic`）、已存在的課逐節比對不增不減、每課同時做影片版（`data-video.js` ＋ `data-book.js` 的 `"video": true`）、改了單字要跑 `build-rel.js` 與 `check-ipa.js`、`sw.js` 的 `CACHE` +1。
 
-1. **每次都重讀 Google Doc 最新版**，不可沿用稍早讀過的內容或資料夾裡的 `.html`／`.gs` 快照。
-   `read_file_content` 長文件會截斷 → 用 `https://docs.google.com/document/d/<ID>/mobilebasic`
-   讀全文。（2026-10-02：10/01 用了舊草稿，少了單字、閱讀理解問題，句型被改寫）
-2. **已存在的課要逐節比對，不增不減**：Doc 有、課本沒有的補上；**Doc 已刪掉的章節課本也要刪**
-   （例：Doc 拿掉「快速總結」，課本的 `summary` 就要移除）。內容逐字取自 Doc，不改寫、不濃縮。
-3. **欄位格式照 SKILL.md**：例如 `summary` 是 `[{k, v}]`，不是字串陣列
-   （寫成字串會在網站上顯示 `undefined`）；理解問題用 `reading[].questions[{q,qCn,a,aCn}]`。
-4. **每一課都要同時做影片版**（2026-09-27 起使用者規定）：
-   - `b2lab/public/data-video.js` 加 `window.VIDEO.<lessonId> = {…}`，`data-book.js` 該課加 `"video": true`
-     （沒加這個旗標，課本頁不會出現「▶ 影片版」按鈕）。
-   - 範本：`data-video.js` 的 `bk20261001`、`bk20260922`（章節 0 開場／1 情境對話／2 重點表達／
-     3 片語／4 文法／5 作業訂正／6 小測驗）。
-   - 驗證：每個 `hi[].t` 必須逐字出現在該句 `en`、`hi[].k` 必須在 `expr` 裡；`en`／`say` 不可有中文
-     （喇叭會唸出來）；長度 150–300 秒；`expr` 的例句不可和情境對話連續 5 個字相同。
-5. 改了 `data-book.js` 的單字 → 重跑 `node b2lab/tools/build-rel.js`，產物 `data-rel.js` 一起 commit。
-   再跑 `node b2lab/tools/check-ipa.js`：同一個字全站只能有一種音標寫法（美式 Cambridge），沒過不要 commit。
-6. `b2lab/public/sw.js` 的 `CACHE` 版號 +1。
-7. **收尾檢查（必跑，輸出必須是「(無)」）**：
-   ```bash
-   node -e "global.window={};require('./b2lab/public/data-book.js');require('./b2lab/public/data-video.js');const L=window.BOOK.lessons,V=window.VIDEO;console.log('沒有影片版的課:',L.filter(l=>!l.video||!V[l.id]).map(l=>l.id).join(', ')||'(無)')"
-   ```
-   本機開 `?video=<lessonId>` 把各種畫面切一遍、手機寬度也看一次，主控台沒有錯誤才算完成。
+收尾必跑，輸出必須是「(無)」：
+```bash
+node -e "global.window={};require('./b2lab/public/data-book.js');require('./b2lab/public/data-video.js');const L=window.BOOK.lessons,V=window.VIDEO;console.log('沒有影片版的課:',L.filter(l=>!l.video||!V[l.id]).map(l=>l.id).join(', ')||'(無)')"
+```
 
 ---
 

@@ -15,59 +15,13 @@ description: 英文課堂筆記的完整自動化工作流程 — 自動建立�
 > 流程 F（Speak Up 出考題）、流程 F2（DAYTALK）、流程 G（Firebase 部署）、流程 H（B2 Read 課本）都只在使用者**明確要求**時才執行
 > （例如說「同步 Speak Up／出考題／部署／更新課本／同步筆記」）。完成筆記後在回報中提醒一句「Speak Up 與 B2 Read 尚未同步」即可。
 
-情境 1、2 用同一套核心技術：**在 Chrome 渲染 HTML → 全選複製（保留格式）→ 透過 Edit 選單貼到 Google 文件**。
-此方法已於 2026-06-10 驗證成功，橘色表頭、灰白交錯列、⭐ B2 標記、文法解說區塊格式完整保留。
-⚠ 2026-06-19 確認：`computer key ctrl+v` 在 Google Docs 無效（isTrusted:false），**必須用 Edit 選單 → 貼上的滑鼠點擊方式**（詳見「核心技術」章節）。
+建立或更新格式化 Google 文件，首選「流程 A0：HTML 直接上傳 Drive」。舊法（Chrome 渲染後從 Edit 選單貼上，`ctrl+v` 在 Google Docs 無效）只在 A0 不能用時才參考 `references/legacy-chrome-paste-and-font.md`。
 
 ---
 
-## 流程 00：Git 前置與收尾檢查（2026-08-29 新增，**每次同步/部署都必做**）
+## 流程 00：Git 前置與收尾檢查（每次同步/部署都必做）
 
-> ⚠ **為什麼有這一節**：這個 repo 有**兩個寫入者**在推同一條 `main` —— 你在本機推，
-> 雲端 daily content routine 也用 `Claude <noreply@anthropic.com>` 直接推 `origin/main`。
-> 2026-08-28 就出過事：本機三個 commit（含 B2 Read 桌機側邊欄改版、8/25 課本內容）還沒 push，
-> 雲端又推了新的，`git pull --rebase` 撞到衝突後 `--abort`，那三個 commit 被留在
-> `backup-local-0828` 分支再也沒人接回來，線上網站整整少了一版排版和一堂課。
-> 8/29 才發現並手動還原。以下三步就是為了不要再發生。
-
-### A. 開工前（改任何檔案「之前」）
-
-**A-1　先 fetch 對一次遠端狀態，看清楚再動作**（2026-08-29 使用者指定，不可跳過）：
-```bash
-cd "D:/english-learning" && git fetch origin && git status -sb --untracked-files=no && git log --oneline HEAD..origin/main && git log --oneline origin/main..HEAD
-```
-- 先 `fetch` 而不是直接 `pull --rebase`：要先**知道**本地與遠端各差哪些 commit，再決定怎麼併。
-  這個 repo 除了雲端 routine，還可能有**其他 Claude Code session 併行在動同一條 `main`**
-  （2026-08-29 就出現過我這邊剛 push 完，另一個 session 隨即推了三個 commit）。
-- 兩份清單都看過、確認沒有不認識的東西，才進入 A-2。
-
-**A-2　工作區乾淨時再 rebase**：
-```bash
-cd "D:/english-learning" && git status --porcelain && git pull --rebase origin main
-```
-- **如果 rebase 出現衝突**：解完衝突走 `git rebase --continue`。
-  **不要**用 `git rebase --abort` 就當作沒事——abort 會讓本地 commit 停在原地脫離 `main`。
-  真的要 abort，就當場記下落單的 commit hash，並在收尾檢查（C）把它們 cherry-pick 回來。
-- ⚠ **`git rebase --skip` 之前一定要先看那個 commit 的完整 diff 清單**
-  （`git show --stat <hash>`），不能只看衝突的那幾個檔就 skip。
-  2026-08-28 被 skip 掉的 daily content commit 裡，還夾帶了 B2 Read 桌機側邊欄、
-  課本 Dashboard Calendar 版面與 8/25 課本內容——那些檔案**沒有衝突**，所以完全沒被提示，
-  就跟著整個 commit 一起消失了，隔天才由另一個 session 手動補回。
-  只想丟掉 commit 裡的一部分時，正確做法是解衝突後改內容再 `--continue`，不是 `--skip`。
-
-### B. 收工立刻 push
-不要讓本地 commit 過夜。commit 完就 `git push origin main`，
-本地與 `origin/main` 之間留的 commit 越少，下次撞車的機率越低。
-
-### C. 收尾檢查：有沒有東西落單
-```bash
-cd "D:/english-learning" && git log --oneline origin/main..main && git branch --no-merged main
-```
-- 第一個指令要**空的**（表示本地沒有沒 push 的 commit）。
-- 第二個指令列出來的分支，都是**還沒併回 `main`** 的——逐一確認裡面的東西是不是該併回來。
-  2026-08-28 那次如果有跑這條，當天就會看到 `backup-local-0828`。
-- 兩個指令都乾淨才算同步完成，再進入部署（流程 G / 流程 H 的部署步驟）。
-
+做法與原因見 `AGENTS.md` §1（先 `git fetch`，看清楚本地與 `origin/main` 各差哪些 commit，再 `git pull --rebase origin main`；rebase 衝突不要 `--abort`，`--skip` 前先 `git show --stat`；收工立刻 push；收尾 `git log --oneline origin/main..main` 與 `git branch --no-merged main` 要乾淨）。這個 repo 同時有雲端排程與其他 Claude／Codex session 在推 `main`，2026-08-28 就因為 abort 與 skip 掉了三個 commit。
 ---
 
 ## 流程 0：自動建立/尋找當天日期資料夾（2026-06-11 新增）
@@ -118,18 +72,9 @@ cd "D:/english-learning" && git log --oneline origin/main..main && git branch --
     - ⚠ **片語表自 2026-08-25 起改成索引表**：`片語｜中文｜詳見`（**不放例句**），例句只寫在對應主題章節。
       這張表沒有「例句」欄，所以上面的欄序通則不適用。理由與完整去重規則見下方「⭐ 內容去重原則」。
   - 章節框架也比照 20260813：標題＋英文副標＋Topics 行 → I. ★ MM/DD 作業複習（卡片：❌原句/✅訂正紅斜體/中文/結構藍粗體/🔬文法解說）→ II. 單字（含「補充單字」h3 小節）→ III. 片語與搭配詞 → IV. 句型與文法解說（h3 A/B/C… 每個一張 callout：句型：藍粗體＋• 條列）→ V… 閱讀/情境 → 補充字彙與句型（補充內容｜英文｜中文 三欄）→ 快速總結（重點｜說明）。參考重建腳本：`20260821-電腦檔案與辦公室英文/rebuild20260821.gs`
-- **音標一律美式（Cambridge US 記法，2026-09-09 全站統一，2026-09-21 補強捲舌規則）**
-  - 符號：`ɑː` 不用 `ɒ`、`oʊ` 不用 `əʊ`、`e` 不用 `ɛ`、`tuː` 不用 `tjuː`、`ɪr`/`er`/`ʊr` 不用 `ɪə`/`eə`/`ʊə`；一律 `/…/` 不用 `[…]`
-  - ⭐ **捲舌 r 最常漏，是 2026-09-21 全站盤點抓到的主因**：美式沒有不發音的 r，拼字裡每個母音後的 r 都要標出來
-    - 非重音的 -er/-or/-ar → `ɚ`：leadership `/ˈliː.dɚ.ʃɪp/`、government `/ˈɡʌv.ɚn.mənt/`、manager `/ˈmæn.ə.dʒɚ/`
-    - 重音的 bird 類 → `ɝː`：courage `/ˈkɝː.ɪdʒ/`、surgery `/ˈsɝː.dʒɚ.i/`、civil servant `/ˈsɪv.əl ˈsɝː.vənt/`
-    - 其餘位置直接留 `r`：cargo hold `/ˈkɑːr.ɡoʊ hoʊld/`、performance `/pɚˈfɔːr.məns/`、tarmac `/ˈtɑːr.mæk/`、support `/səˈpɔːrt/`
-    - ⚠ `aɪə`／`aʊə`／`ɔɪə` 後面接 r 不可比照 `ɪər→ɪr` 壓縮成一個音節：power `/ˈpaʊ.ɚ/`、employer `/ɪmˈplɔɪ.ɚ/`、supplier `/səˈplaɪ.ɚ/`
-  - **產出前自我檢查（每個單字都要做）**：數「拼字裡有幾個 r」對上「音標裡有幾個 r／ɚ／ɝ」，前者多就是漏了捲舌
-    （雙寫 r 的 arrive `/əˈraɪv/`、borrow `/ˈbɑːroʊ/` 是正常例外）
-  - 同一個字在所有課要同一寫法（例：`/kənˈvɪns/`、`/pɚˈsweɪd/`、`/ˈmɑː.nə.t̬ɚ/`）。B2 Read 的單字卡、課本、關聯頁與雲端 Google 文件共用同一套音標，寫法不一致學習者會當成兩種讀音
-  - **既有筆記要批次改**：對照表在 `b2lab/public/us-ipa-map.json`（線上 <https://english-b2-lab.web.app/us-ipa-map.json>）；批次腳本正本在 `b2lab/tools/us-ipa-pass2.gs`（`pass2()` 會掃過雲端全部課堂筆記，只替換「斜線包起來且含音標符號」的字串，不動表格結構；用法寫在檔頭）。要跑時貼到 Apps Script 專案「英文筆記-音標統一美式」執行——那個專案的程式碼會被其他工作覆蓋，**以 repo 這份為準**。新加的例外字寫進 json 再 push 即可
-  - 🔊 **發音也只用美式**：B2 Read 的 `pickVoice()` 先過濾 `en-US`，沒有美式語音才退回其他 en —— 英式 premium／enhanced 的分數會贏過美式，manager 就會被唸成無捲舌的 /ˈmænɪdʒə/
+- **音標一律美式 Cambridge**：完整規則（符號、捲舌 r、自我檢查）見 `b2lab/TASK_COMMON.md`「音標」；寫完跑 `node b2lab/tools/check-ipa.js`。同一個字全站同一寫法，因為 B2 Read、課本、關聯頁與 Google 文件共用。
+  - **既有筆記要批次改**：對照表 `b2lab/public/us-ipa-map.json`，批次腳本正本 `b2lab/tools/us-ipa-pass2.gs`（`pass2()` 掃全部課堂筆記，只替換斜線包起來且含音標符號的字串；用法在檔頭；以 repo 這份為準）。新例外字寫進 json 再 push。
+  - 🔊 發音也只用美式：`pickVoice()` 先過濾 `en-US`。
 - B1 以上單字、句型、片語**全部收錄**，不省略（但同一句例句全文件只出現一次，見「⭐ 內容去重原則」）
 - B2+ 單字加 ⭐ 標記
 - 每個句型必附繁體中文文法解說，格式：
@@ -235,7 +180,7 @@ cd "D:/english-learning" && git log --oneline origin/main..main && git branch --
 
 ## ⭐ 產出前自我檢查（2026-06-11 確立，文法解說品質把關）
 
-在執行「核心技術：渲染並貼上」之前，**先針對本次新增的所有「文法解說」內容自我檢查一遍**，確認：
+在貼上或上傳 Google 文件之前，**先針對本次新增的所有「文法解說」內容自我檢查一遍**，確認：
 1. 文法規則描述正確（例如被動語態結構、不定詞用法、時態規則等，不能有錯誤的文法說明）
 2. 中文解析語句通順、用詞精準，沒有翻譯腔或語意錯誤
 3. `<span class="kw">` 標記的範圍正確涵蓋該句真正的文法重點，且沒有過度標記或遺漏核心重點
@@ -332,7 +277,7 @@ cd "D:/english-learning" && git log --oneline origin/main..main && git branch --
    - `parentId`: 流程 0 取得的資料夾 ID
    - 不帶 `textContent`（建立空白文件）
 5. 取得回傳的 `id`，組出編輯網址 `https://docs.google.com/document/d/FILE_ID/edit`
-6. 執行下方「核心技術：渲染並貼上」，目標分頁為這份新文件
+6. 執行「核心技術：渲染並貼上」（見 `references/legacy-chrome-paste-and-font.md`），目標分頁為這份新文件
 7. ⚠ **筆記生成後不要自動部署**（2026-08-21 使用者指定）：**不要**自動接著執行流程 F（出考題／Speak Up）、流程 G（Firebase 部署）或流程 H（B2 Read 課本）；等使用者明確要求「同步／出考題／部署／更新課本」時才做
 8. 完成後回報 Google 文件連結 + 教材摘要（幾個單字、幾個句型等），並提醒使用者：Speak Up 與 B2 Read 課本尚未同步，需要時再說一聲
 
@@ -341,7 +286,7 @@ cd "D:/english-learning" && git log --oneline origin/main..main && git branch --
 1. 用 `search_files` 或使用者提供的連結/ID 找到目標 Google 文件
 2. 用 `read_file_content` 讀取現有內容，避免重複收錄相同單字/句型
 3. 生成「新增段落」HTML（同樣套用上方 CSS），章節編號接續現有文件（例如現有到 VI，新增從 VII 開始）
-4. 執行下方「核心技術：渲染並貼上」，**貼上前先 `ctrl+End` 移到文件最末**
+4. 執行「核心技術：渲染並貼上」（見 `references/legacy-chrome-paste-and-font.md`），**貼上前先 `ctrl+End` 移到文件最末**
 5. 完成後回報新增了哪些章節/內容摘要
 
 ## 流程 C：同步筆記到 index.html + 推送 GitHub（細節已拆檔）
@@ -395,179 +340,19 @@ cd "D:/english-learning" && git log --oneline origin/main..main && git branch --
 
 ---
 
-### ⭐ 產出前自我檢查
+## 流程 G：部署
 
-- 每個 `mc` 的 `answer` 索引確實指向正確選項（0-based，別 off-by-one）
-- 每個 `fill` 的 `answer` 陣列涵蓋合理寫法變體
-- 答案、選項、解說拼字正確，解說與題目一致
-- **所有題目都能在當天筆記中找到出處**，沒有自行杜撰
-- JS 語法正確（逗號、引號、跳脫）；若題幹含 `"` 用單引號包字串或跳脫
+Speak Up 與 B2 Read 都是 **push 到 main 由 CI 自動部署**（`.github/workflows/deploy-speakup.yml`、`deploy-b2lab.yml`），不需要手動部署。部署前：`git status` 乾淨、`git pull --rebase`、`git log --oneline -3` 確認最新 commit。
 
-### 完成後回報
+備案（CI 壞掉才用）：`cd /d/english-learning && cp index.html public/index.html && npx firebase-tools deploy --only hosting --project learning-english-notes`。要重新登入時叫使用者自己 `firebase login`，不要代填帳密。
 
-- 為哪一天（日期＋主題）新增了幾題、涵蓋哪些類型
-- GitHub 推送結果
-- 提醒使用者開網站（https://learning-english-notes.web.app）選該日期 →「📝 快速檢查」活動即可作答
-
----
-
-## 流程 G：部署到 Firebase Hosting（2026-07-30 確立）
-
-**每次 `index.html` 有更新並推上 GitHub 後，接著執行本流程，把最新版同步上線。**
-線上網址：**https://learning-english-notes.web.app**（公開、無密碼；Firebase 專案 ID `learning-english-notes`）。
-
-### 觸發時機
-- 流程 C（同步筆記）push GitHub 之後
-- 流程 F（出考題）push GitHub 之後
-- 使用者說「部署網站 / 更新線上網站 / deploy」
-
-### 部署指令（一行完成：複製最新 index.html → 部署）
-```bash
-cd "D:/english-learning" && cp index.html public/index.html && firebase deploy --only hosting
-```
-- 部署設定檔已存在：`firebase.json`（public 目錄 `public/`、index.html 設 no-cache）、`.firebaserc`（default = `learning-english-notes`）。
-- `public/index.html` 只是部署用複本，來源永遠是根目錄的 `index.html`，故每次先 `cp` 覆蓋再 deploy。
-- 成功會輸出 `Deploy complete!` 與 `Hosting URL: https://learning-english-notes.web.app`。
-
-### 完成後回報
-- 部署結果（成功／失敗）
-- 線上網址 https://learning-english-notes.web.app（提醒重新整理即可看到最新內容，因已設 no-cache）
-
-### 常見問題
-| 狀況 | 處理 |
-|------|------|
-| `firebase: command not found` | Firebase CLI 未安裝／不在 PATH，請使用者確認（本機已裝 v15.23.0） |
-| `Failed to authenticate` / 要求登入 | 執行 `firebase login`（需使用者互動，不要代填帳密） |
-| deploy 卡住或逾時 | 重跑一次指令；網路問題居多 |
-
----
-
-## 核心技術：渲染並貼上（Chrome MCP）
-
-> 前置：確保 `mcp__Claude_in_Chrome__*` 工具已載入（若是 deferred tool，用 ToolSearch 載入）
-
-> ⚠ **重要：Ctrl+V 在 Google Docs 無效**（2026-06-19 確認）  
-> Chrome MCP 的 `computer key ctrl+v` 產生 `isTrusted: false` 鍵盤事件，Google Docs 會忽略。  
-> **必須改用「編輯選單 → 貼上」的滑鼠點擊方式**（`isTrusted: true` click 才被接受）。
-
-### 完整步驟
-
-1. `tabs_context_mcp` (`createIfEmpty: true`) 取得分頁群組
-2. 確認已有可用分頁（例如 `example.com`），若無則 `tabs_create_mcp` 開一個並 `navigate` 到 `https://example.com`
-   - ⚠ 不能用 `about:blank` 或 `data:` URL，會被導覽工具拒絕
-3. `javascript_tool`（`action: javascript_exec`）在 example.com 分頁執行：
-   ```js
-   document.open();
-   document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8">
-   <style> ...上方 CSS... </style></head>
-   <body> ...本次要寫入的 HTML 內容... </body></html>`);
-   document.close();
-   'rendered OK';
-   ```
-4. `computer left_click` example.com 頁面任一處（取得焦點，clipboard API 需要 document focused）
-5. `computer key ctrl+a`（全選）
-6. `computer key ctrl+c`（複製，保留 HTML 格式）
-7. 切換到目標 Google 文件分頁（該分頁應已開啟）
-8. **游標定位**：`computer left_click` 文件內容最末的**空白區域**（表格下方的空白處）
-   - ⚠ **不要點在表格內**：若文件末尾有表格，點擊太靠近表格可能落入儲存格，貼上會插入表格中間
-   - 安全做法：點擊比最後一列表格低至少 60–100px 的空白頁面區域
-9. 用 JS 確認 Edit 選單按鈕位置：
-   ```js
-   const r = document.getElementById('docs-edit-menu').getBoundingClientRect();
-   `center=(${Math.round(r.x+r.width/2)},${Math.round(r.y+r.height/2)})`;
-   ```
-10. `computer left_click` Edit 選單（使用上一步查到的座標，通常約 (120, 47)）
-11. 選單開啟後，立刻用 JS 查 Paste 項目位置：
-    ```js
-    const p = document.getElementById(':73').getBoundingClientRect();
-    `center=(${Math.round(p.x+p.width/2)},${Math.round(p.y+p.height/2)}), visible=${p.width>0}`;
-    ```
-    - Paste 項目的 DOM id 固定為 `:73`，通常位於約 (259, 227)
-    - ⚠ **截圖在選單開啟時會 timeout**，不要嘗試截圖——直接用 JS 查座標
-12. 確認 `visible=true` 後，`computer left_click` 該座標（isTrusted:true 點擊，Google Docs 接受）
-13. `wait` 3–4 秒讓貼上完成（大型內容需要稍長時間）
-14. 關閉可能出現的 `slidingdialog`（Google Docs 有時會彈出提示框導致截圖 timeout）：
-    ```js
-    const btn = document.querySelector('.docs-slidingdialog-close, [aria-label="關閉"]');
-    if (btn) { btn.click(); 'closed'; } else { 'no dialog'; }
-    ```
-15. 截圖確認貼上結果，回報 Google 文件連結
-
-### 出錯時的 Undo
-
-若貼上位置錯誤（例如插入到表格中間）：
-1. `computer left_click` 文件內容區確保焦點
-2. `computer key ctrl+z` （repeat: 10）一次復原所有變更
-3. `wait` 2 秒後截圖確認文件已恢復
-4. 若出現 slidingdialog 阻擋截圖，先用上方 JS 關閉再截圖
+只在使用者明確要求時才進入本流程（見檔頭最高規則）。完成後回報部署結果與網址，提醒重新整理即可（`no-cache`）。
 
 ---
 
 ## 修復「貼上後表格內文字逐字換行」（細節已拆檔）
 
 貼上 Google 文件後表格文字逐字換行時，**先讀** `references/fix-table-wrap.md`（完整內容，未刪減）。絕對禁止對表格文件按 Ctrl+Z。
-
-## 流程 D：修改 Google 文件整體字型與字體大小（2026-06-19 確立）
-
-> ⚠ **嚴禁用工具列 font input 操作**（2026-06-19 確認）  
-> Chrome MCP 透過工具列修改字型時，輸入的文字會取代整份文件內容（已連續發生 3 次）。  
-> **唯一安全方法：使用 Google Apps Script**。
-
-### 腳本存放位置
-
-本腳本以 container-bound（嵌入式）方式附加在 20260618 天然災害格式版文件上，  
-名稱：**20260619-字型格式化腳本-Google-Sans**  
-開啟方式：在任一英文筆記 Google 文件中點選 **擴充功能 → Apps Script**，貼入下方腳本即可重複使用。
-
-### 操作步驟
-
-1. 在目標 Google 文件分頁，用 JS 查詢選單座標後點選 **擴充功能**（Extensions，約 354, 47）
-2. 鍵盤導覽：**Down × 2 → Enter**（跳過「外掛程式」子選單，直達 Apps Script）
-3. Apps Script 編輯器在新分頁開啟後，用 `javascript_tool` 寫入腳本：
-   ```javascript
-   monaco.editor.getModels()[0].setValue(`...腳本內容...`);
-   ```
-4. **Ctrl+S** 儲存，確認工具列函式下拉選單顯示正確函式名稱
-5. 點擊 **▶ 執行**（座標約 443, 83）
-6. 若出現「需要授權」對話框 → 點擊 **審查權限** → 授予存取 Google 文件的權限
-7. 等待執行記錄出現「**執行完畢**」（16 頁文件約需 49 秒）
-8. 若截圖 timeout → 先用 JS `document.querySelector('[aria-label="關閉"]')?.click()` 關閉彈出框
-
-### 標準字型格式化腳本（Google Sans + 階層字級）
-
-```javascript
-function changeFontToGoogleSans() {
-  var doc = DocumentApp.getActiveDocument();
-  var body = doc.getBody();
-
-  // 全文改為 Google Sans 13pt
-  body.editAsText().setFontFamily('Google Sans').setFontSize(13);
-
-  // 依標題層級覆蓋字級
-  var n = body.getNumChildren();
-  for (var i = 0; i < n; i++) {
-    var child = body.getChild(i);
-    if (child.getType() === DocumentApp.ElementType.PARAGRAPH) {
-      var heading = child.asParagraph().getHeading();
-      if (heading === DocumentApp.ParagraphHeading.HEADING1)
-        child.asParagraph().editAsText().setFontSize(20);
-      else if (heading === DocumentApp.ParagraphHeading.HEADING2)
-        child.asParagraph().editAsText().setFontSize(16);
-      else if (heading === DocumentApp.ParagraphHeading.HEADING3)
-        child.asParagraph().editAsText().setFontSize(14);
-    }
-  }
-}
-```
-
-**字級規則**：一般文字 13pt ｜ H3 14pt ｜ H2 16pt ｜ H1 20pt
-
-### 重要注意事項
-
-- 執行前確認文件內容正確，字型修改後 Ctrl+Z 可逐步復原，但步驟較多
-- 以「一般文字」樣式貼入的段落（非 Google Docs 標題樣式）大小固定為 13pt，不受標題覆蓋影響
-- 執行約 3 秒/頁；16 頁約 49 秒，耐心等待執行記錄出現「執行完畢」再關閉
-- 若出現紅色錯誤（授權問題），重新點擊「▶ 執行」再授權即可
 
 ---
 

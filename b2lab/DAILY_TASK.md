@@ -7,19 +7,11 @@
 | **Anita** | B1 / B1+ / B2 | 在越南工作，品質工程師；情境多為辦公室、出差搭機、租屋、就醫、颱風 |
 | **Tom** | A2 / B1 / B1+ | 初階學習者，需要短句與最基本的生活情境 |
 
-### ⭐ 人物設定：主角只有 Tom 和 Anita（2026-09-22 使用者指定）
+### ⭐ 人物與共用規則
 
-文章（以及對應的聽力對話）的主角**只能是 Tom 或 Anita**，
-**不要再出現 Amy**，也不要自創第三位學習者當主角。
+人物（主角只有 Tom 與 Anita）、版權／原創、音標、橫幅圖規則、驗證與收尾，**兩份任務書共用的規則都在 `b2lab/TASK_COMMON.md`，動手前先讀。** 本檔只寫每日內容專屬的部分。
 
-- A2 篇的主角是 **Tom**；B2 篇的主角是 **Anita**。
-- B1／B1+ 兩級兩人共用，主角挑 Tom 或 Anita 都可以——
-  任務書要求「B1 篇換一個角度或換一個主角」時，就在這兩人之間換
-  （例如 A2 寫 Tom，B1 就寫 Anita）。
-- 對話裡需要說話對象時，可以用配角（同事、店員、房東、醫生等），
-  例如 Anita 的越南同事 **Mai**、Tom 的同事 **Lisa**；配角不是主角，可以自由取名，
-  但不要取名叫 Amy。
-- 2026-09-22 以前的舊資料裡還有 Amy，那是舊制，保留不動即可；新產生的一律照這條規則。
+- A2 篇的主角是 **Tom**；B2 篇的主角是 **Anita**；B1／B1+ 兩人共用，主角在兩人之間換（例如 A2 寫 Tom，B1 就寫 Anita）。
 
 ## ⭐ 核心規則：每次執行要產生 **4 個程度**
 
@@ -53,11 +45,7 @@
 
 ## ⚠️ 版權鐵則（違反就等於這次任務失敗）
 
-1. **絕對不要複製任何新聞或書籍的句子。** 你只能取「事實」，英文全部自己重寫。
-2. `b2lab/syllabus.json` 是參照 *English Grammar in Use* 目錄整理出來的**教學大綱**。
-   你只能用它決定「今天教哪個文法點」。解說、例句、練習題**全部必須自己原創撰寫**。
-   不要引用、改寫或重製該書任何解說文字或習題。
-3. 不要讀取或引用 repo 外的 PDF 教科書內容。
+版權與原創規則見 `TASK_COMMON.md`「原創與版權」。`syllabus.json` 只決定「今天教哪個文法點」，違反就等於這次任務失敗。
 
 ---
 
@@ -68,7 +56,7 @@
 ```bash
 cd b2lab
 cat daily-state.json          # lastRun / nextKind / usedUnits / usedSources / usedTitles / topicRotation
-cat syllabus.json             # 145 個單元的教學大綱
+cat syllabus.json             # 教學大綱
 date +%Y-%m-%d                # 今天日期（用 UTC 即可，排程在當地早上七點跑）
 ```
 
@@ -179,7 +167,7 @@ B1+ 篇固定是新聞改寫，需要對外連新聞站。排程環境的「網�
 | `focus` | 這篇的文法焦點（一句話） |
 | `intro` | 2–3 句中文導讀，說明要注意什麼結構 |
 | `paras` | 4 個 `{en, cn}`，每段都要有完整中譯 |
-| `ipa`（所有 target / pre 共用） | **音標一律美式、Cambridge 記法（2026-09-09 全站統一，2026-09-21 補強捲舌規則）**<br>① 符號：ɑː 不用 ɒ、oʊ 不用 əʊ、用 e 不用 ɛ、tuː 不用 tjuː、ɪr/er/ʊr 不用 ɪə/eə/ʊə、IPA 的 ɡ、一律 `/…/` 不用 `[…]`。<br>② ⭐ **捲舌 r 最常漏**（2026-09-21 全站盤點抓到的主因）：美式沒有不發音的 r，拼字裡每一段 r 都要標出來 —— 非重音 -er/-or/-ar 寫 `ɚ`（leadership /ˈliː.dɚ.ʃɪp/、government /ˈɡʌv.ɚn.mənt/），重音 bird 類寫 `ɝː`（courage /ˈkɝː.ɪdʒ/、surgery /ˈsɝː.dʒɚ.i/），其餘位置直接留 `r`（cargo hold /ˈkɑːr.ɡoʊ hoʊld/、performance /pɚˈfɔːr.məns/、tarmac /ˈtɑːr.mæk/）。⚠ `aɪə`／`aʊə`／`ɔɪə` 後接 r 不可壓縮成一個音節：power /ˈpaʊ.ɚ/、employer /ɪmˈplɔɪ.ɚ/、supplier /səˈplaɪ.ɚ/。<br>③ **自我檢查**：每個字數一下「拼字裡有幾段 r」對上「音標裡有幾個 r／ɚ／ɝ」，前者多就是漏了（雙寫 r 的 arrive、borrow 是正常例外）。<br>④ 同一個字若已出現在任何 `public/data-*.js`，**先 grep 並沿用完全相同的音標字串**，同字不能有兩種寫法。例：/kənˈvɪns/、/pɚˈsweɪd/、/ˈmɑː.nə.t̬ɚ/。<br>寫完用 `node tools/check-ipa.js` 自己驗一次（第 5 步也會再跑一次），它會抓出同字多寫法、缺音標、非美式符號與漏掉的捲舌 r |
+| `ipa`（所有 target / pre 共用） | 美式 Cambridge 記法，規則（符號、捲舌 r、自我檢查、同字沿用既有寫法）見 `TASK_COMMON.md`「音標」。寫完用 `node tools/check-ipa.js` 驗（第 5 步也會跑） |
 | `target` | A2/B1 篇 5–6 個、B1+/B2 篇 7–9 個 `{w, ipa, pos, cn, def, ex, exCn}`；`def` 用簡單英文（網站顯示為斜體、比例句小一級）；**`ex` 必須原創、換一個跟本文不同的情境**——不可照抄或改寫本文句子，不沿用本文的人物、地點、公司、事件、數字，程度對應這一篇（2026-09-14 使用者指定，第 5 步驗證會擋「與本文連續 4 字相同」）；`exCn` 是 `ex` 的繁體中文翻譯（一定要有） |
 | `questions` | A2/B1 篇 3 題、B1+/B2 篇 4 題 `{q, qCn, opts, optsCn, ans, expl}`；`opts` 4 個選項且以 `"A. "`–`"D. "` 開頭，`ans` 是 0-based 索引，`expl` 用中文並引用原文依據 |
 | `qCn` / `optsCn` | **每題都要**：`qCn` 是題目的中文翻譯；內容理解題加 `optsCn`（四個選項的中文，一樣 A–D 開頭）。純文法填空題（選項是動詞變化）只要 `qCn` 寫出整句中文意思、不用 `optsCn`。網站的「顯示中譯」開關靠這兩個欄位 |
@@ -309,7 +297,7 @@ dg20260904b1: {
 
 ### 3.5 為今天的四篇文章各產生一張橫幅圖
 
-**不要手寫 SVG**，用現成的產生器（約 182 個圖示與 7 套配色，含課本線稿圖示庫 BOOK_ICONS，風格才會跟其他文章一致）：
+**不要手寫 SVG**，用現成的產生器（圖示與 7 套配色，含課本線稿圖示庫 BOOK_ICONS，風格才會跟其他文章一致）：
 
 ```bash
 cd b2lab
@@ -335,20 +323,7 @@ node tools/check-art.js --free 20261014   # 換成今天日期：列出今天還
 - `p` 配色依主題挑：天災／夜晚用 `night`、健康用 `rose`、金錢與環境用 `green`、
   職場與科技用 `blue` 或 `teal`、生活與飲食用 `warm`、心理與抽象用 `violet`。
   **同一天的四篇要用四套不同的配色**（剛好 7 套可挑，不會不夠）。
-- `i` 挑 **5 個**能代表文章「五個階段／五個要點」的圖示（只能用 `--list` 列出來的名稱），
-  順序照文章敘事順序排。
-- **⚠ 圖示不能一直重複（2026-10-11 使用者反映「閱讀的線稿圖重複性很高」）**，以下四條 `tools/check-art.js` 會擋：
-  1. 一張橫幅 5 個圖示不重複
-  2. **萬用圖示每張最多 1 個**：`star` `clock` `people` `doc` `chat` `talk` `phone` `house` `chart` `calendar` `question`
-     ——它們什麼文章都套得上，以前常被拿來湊數（尤其第 5 格放 `star` 收尾），每張看起來都一樣。
-     要畫「每個階段的具體東西」：等公車就 `sign`、罷工就 `flag`、搬家就 `truck`/`sofa`。
-  3. **同一天四篇之間圖示不重複**、配色不重複
-  4. **前兩批（前兩個日期）用過的圖示今天不能用**（`--free` 會列出可用的）。挑不到貼切的就在 data-book.js 的 `var I={…}` 補新圖示，不要拿萬用圖示湊
-  - 長得幾乎一樣的算同一個：`chat`/`talk`、`magnify`/`search`、`bag`/`toolbox`/`briefcase`、
-    `bowl`/`rice`/`food`、`tap`/`faucet`、`chart`/`chartUp`（見 genart.js 的 `SAME`）
-- `cap` 裡**不要寫圖示名稱**（例如「時鐘=…」「（wind）」），只寫五個階段的內容。
-- `cap` 用「A → B → C → D → E。」的五段式寫法，對應五個圖示各代表文章哪一段，
-  最後點出本課文法重點；不要寫成純裝飾的句子。
+- 圖示、配色、`cap` 的寫法與重複限制見 `TASK_COMMON.md`「橫幅圖」。`cap` 要寫「圖中的 X 對應文章的哪一句」，並點出這課的文法重點。
 
 #### 3.5.1 圖示不夠時**自己補畫**，不用問使用者（2026-10-11 使用者指定）
 
@@ -386,41 +361,12 @@ node tools/genart.js /tmp/spec-today.json /tmp/art-today.txt
 # 在最後一筆的 } 後面補上逗號，再把內容貼在結尾的 }; 之前
 ```
 
-驗證（**一定要跑**）：
-
-```bash
-cd b2lab/public
-node -e "global.window={};require('./data-art.js');
-const A=window.ART, ids=Object.keys(A);
-console.log('總圖數', ids.length);
-ids.forEach(k=>{const v=A[k];
-  if(!/^<svg/.test(v.svg.trim())) throw k+' 不是 SVG';
-  if(!v.cap) throw k+' 缺圖說';
-  if(/undefined|NaN/.test(v.svg)) throw k+' 有未展開的值';
-  const o=(v.svg.match(/<(svg|g|text)\b/g)||[]).length, c=(v.svg.match(/<\/(svg|g|text)>/g)||[]).length;
-  if(o!==c) throw k+' 標籤沒配對';
-});
-console.log('OK');"
-cd ..
-node tools/check-art.js   # 圖示重複檢查，沒有「✓ 圖示重複檢查通過」就回頭換圖示
-node tools/check-listen-thumb.js   # 聽力清單縮圖重複檢查（新增聽力課後要在 index.html 的 LS_THUMB 補一筆圖示）
-```
 
 ⚠️ 只能畫**橫幅**。文章裡如果有明確數字想畫成圖表，不要自己編數據——沒有把握就只做橫幅。
 
 ### 3.6 追加**四課聽力**（A2 / B1 / B1+ / B2）→ 都插入 `public/data-listen.js` 的 `notes` 陣列**最前面**
 
-> **⭐ 2026-08-19 起：聽力一律是本站原創的 TTS 對話，不用外部影片。**
-> 在這之前試過 VOA 棚內教材，也試過 YouTube 真人 vlog，兩種都踩到同樣的問題：
-> 影片會下架、字幕抓不到（`youtube-transcript-api` 動不動回 `IpBlocked`）、
-> 版權又不允許把逐字稿放進站內，結果有些課只收得到影片，沒有逐字稿、沒有理解題。
->
-> 現在改成**自己寫對話**：逐字稿直接寫在課程物件的 `script` 欄位裡，
-> 網站用裝置內建語音（TTS）朗讀，離線也能練，每一課都一定有完整中譯與理解題。
->
-> 所以這一步**不要上 YouTube 找影片**，也不要寫 `yt`／`source`／`sourceUrl`／`keyLines`／
-> `cc`／`needsSubs` 這些欄位——index.html 已經不讀它們了（`lessonHTML()` 的判斷是：
-> 沒有 `yt` 而且有 `script`，就走 TTS 跟讀版面）。`data-scripts.js` 也不用動，見 3.6.2。
+> 聽力一律是本站原創的 TTS 對話，逐字稿寫在課程物件的 `script` 欄位，**不用外部影片**：不要寫 `yt`／`source`／`sourceUrl`／`keyLines`／`cc`／`needsSubs`。`data-scripts.js` 現在是空的，不用動、第 6 步也不用 `git add`。
 
 網站「今日」分頁會列出**該學習者程度區間內、當天所有程度**的聽力，所以每次執行要補四課：
 
@@ -434,7 +380,7 @@ node tools/check-listen-thumb.js   # 聽力清單縮圖重複檢查（新增聽�
 - **四課都必須有 `date:"YYYY-MM-DD"` 欄位**（今天日期），網站才會把它當成今天的新聽力顯示。
 - 四課的 `level` 必須剛好是 A2、B1、B1+、B2 各一個，`kind` 一律 `"note"`。
 - 四課跟當天四篇文章走**同一個情境**，主角只用 Tom 與 Anita
-  （配角如同事、店員、房東可自由取名，但不要叫 Amy——見開頭的人物設定）。
+  （配角如同事、店員、房東可自由取名，但不要叫 Amy——見 TASK_COMMON.md）。
 - **四課都要在 `index.html` 的 `LS_THUMB` 登記一個線稿圖示**（見 3.6.1），漏了卡片會變成 emoji。
 - **不用管 `usedVoa`**：沒有外部素材要防重複，那個欄位保留現值不動
   （只有未來真的改回外部影片時才需要登記）。
@@ -468,7 +414,7 @@ node tools/check-listen-thumb.js   # 聽力清單縮圖重複檢查（新增聽�
 #### 3.6.1 四課聽力都要在 `index.html` 的 `LS_THUMB` 補一個線稿圖示（**2026-10-06 使用者指定**）
 
 > 聽力卡片的縮圖跟課本、閱讀、實景一樣，**一律用線稿圖示**
-> （`public/data-book.js` 的 `BOOK_ICONS`，橘黑兩色、共 114 個）。
+> （`public/data-book.js` 的 `BOOK_ICONS`，橘黑兩色）。
 > `index.html` 的 `lsThumb()` 會去查 `LS_THUMB[課程 id]`，
 > **查不到就退回 `topic` 開頭的 emoji**——卡片上就會冒出 🚐🚧✈️ 這種彩色 emoji，
 > 跟其他卡片的線稿風格對不起來。所以每次補四課聽力，一定要同時補這四筆。
@@ -484,64 +430,22 @@ const LS_THUMB={
 
 挑圖示的規則：
 
-- 只能用 `BOOK_ICONS` 裡有的名稱。先把可以挑的列出來：
-  ```bash
-  cd b2lab/public
-  node -e "const fs=require('fs');global.window={};require('./data-book.js');
-  const COOL=6;   /* 冷卻批數：最近 6 批（每週一批，約六週）用過的不能再用 */
-  const m=/const LS_THUMB=\{([\s\S]*?)\n\};/.exec(fs.readFileSync('index.html','utf8'))[1];
-  const rows=[...m.matchAll(/(dl(\d{8})[a-z0-9]*)\s*:\s*'([a-zA-Z0-9]+)'/g)];
-  const days=[...new Set(rows.map(r=>r[2]))].sort().reverse().slice(0,COOL);
-  const cooling=new Set(rows.filter(r=>days.includes(r[2])).map(r=>r[3]));
-  const everUsed=new Set([...m.matchAll(/:'([a-zA-Z0-9]+)'/g)].map(x=>x[1]));
-  const all=Object.keys(window.BOOK_ICONS);
-  const fresh=all.filter(k=>!everUsed.has(k));
-  const reusable=all.filter(k=>everUsed.has(k)&&!cooling.has(k));
-  console.log('① 從沒用過（優先挑）'+fresh.length+' 個：'); console.log('   '+fresh.join(' '));
-  console.log('② 可重用（冷卻期已過）'+reusable.length+' 個：'); console.log('   '+reusable.join(' '));
-  console.log('③ 冷卻中（最近 '+COOL+' 批用過，不可用）'+cooling.size+' 個：'); console.log('   '+[...cooling].join(' '));"
-  ```
+- 先列出可挑的圖示：`cd b2lab && node tools/list-thumb-icons.js`（① 從沒用過 ② 可重用 ③ 冷卻中）。只能用 `BOOK_ICONS` 裡有的名稱。
 - **同一天四課絕對不能重複。**
 - **優先挑 ①「從沒用過」的**；①裡找不到語意貼切的，才去 ② 挑可重用的。
 - **③「冷卻中」的絕對不能用**——最近 6 批（每週一批，約六週）用過的圖示再出現，清單看起來會很重複。
   第 5 步的驗證會擋下來。
 - 挑**語意貼切**的，不要隨便抓一個沒用過的。例：接駁車 `car`、舊車站／古蹟 `temple`、
   打包行李 `box`、兩個廠之間的角色 `orgchart`。
-- ⚠ 圖示庫裡有幾個是「帶字的徽章」（例如 `clock2` 畫出來是「24」兩個字），
-  語意對不上就不要用。**不確定長什麼樣就先渲染出來看一眼**，不要照名字猜：
-  ```bash
-  cd b2lab/public
-  node -e "const fs=require('fs');global.window={};require('./data-book.js');
-  const I=window.BOOK_ICONS;
-  const m=/const LS_THUMB=\{([\s\S]*?)\n\};/.exec(fs.readFileSync('index.html','utf8'))[1];
-  const used=[...m.matchAll(/:'([a-zA-Z0-9]+)'/g)].map(x=>x[1]);
-  const free=Object.keys(I).filter(k=>!used.includes(k));
-  const t=i=>'<svg viewBox=\'-6.7 -6.7 77.4 77.4\' xmlns=\'http://www.w3.org/2000/svg\'><rect x=\'-6.7\' y=\'-6.7\' width=\'77.4\' height=\'77.4\' fill=\'#fdf6ec\'/><circle cx=\'32\' cy=\'32\' r=\'33\' fill=\'#fff\' stroke=\'#f7e3c9\' stroke-width=\'2.5\'/>'+i+'</svg>';
-  const OUT=process.env.ICONS_OUT||(process.platform==='win32'?'D:/icons-preview.html':'/tmp/icons-preview.html');
-  fs.writeFileSync(OUT,'<!doctype html><meta charset=utf-8><style>body{font-family:system-ui;display:flex;flex-wrap:wrap;gap:10px;padding:16px}figure{margin:0;width:104px;text-align:center}svg{width:84px;height:84px;border:1px solid #f0e2cf;border-radius:12px;display:block;margin:0 auto}figcaption{font-size:12px;color:#6b5540}</style>'+free.map(k=>'<figure>'+t(I[k])+'<figcaption>'+k+'</figcaption></figure>').join(''));
-  console.log('已寫出 '+OUT+'（'+free.length+' 個未使用圖示）');"
-  ```
-  用瀏覽器開那個檔看過再挑（Windows 會寫到 `D:\icons-preview.html`，
-  不寫 C: 的暫存目錄；要改路徑就設環境變數 `ICONS_OUT`）。
+- ⚠ 圖示庫裡有幾個是「帶字的徽章」（例如 `clock2` 畫出來是「24」兩個字），語意對不上就不要用。**不確定長什麼樣就先渲染出來看一眼**：`node tools/list-thumb-icons.js --sheet`（寫到 `D:/icons-preview.html`，可用環境變數 `ICONS_OUT` 改路徑），用瀏覽器開來挑。
 - 寧可從 ② 重用一個語意對的，也不要從 ① 硬挑一個語意不對的。
 - 找不到語意貼切的，就照 **3.5.1** 自己補畫新圖示，不用問使用者。
 
 **這一步會改到 `public/index.html`，所以第 6 步的 `git add` 一定要包含它**（見第 6 步的清單）。
 
-#### 3.6.2 `public/data-scripts.js` 現在是空的，不用動
+### 3.7 （已併入 3.5）
 
-> 這個檔原本放 VOA／TED-Ed 這類公共領域影片的逐字稿（`window.LISTEN_SCRIPTS[課程 id]`）。
-> 2026-08-19 之後聽力全部自製、逐字稿寫在課程物件的 `script` 欄位裡，所以它目前是空的，
-> 只保留給未來真的改回外部影片時使用。
-> **每日流程不需要改它，第 6 步也不用 `git add` 它。**
->
-> 網站另外還有一個 `LSUBS` 機制（學習者自己貼上的時間軸字幕），也不由這個流程產生。
-
-### 3.7 配圖是硬性要求
-
-3.5 產生的橫幅圖**四篇都不能少**：網站每篇文章上方都會顯示它，缺圖那篇上方會是空的。
-收尾驗證會逐篇檢查 `window.ART[文章 id]`，缺圖就不要 commit。
-（`cap` 圖說要寫「圖中的 X 對應文章的哪一句」，並點出這課的文法重點。）
+四篇文章的橫幅配圖都不能少，缺圖不要 commit（`check-daily.js` 會逐篇檢查）。
 
 ### 3.8 為今天的**四個文法單元**各做一支文法影片
 
@@ -581,207 +485,17 @@ node b2lab/tools/check-gvideo.js dg…a1 dg…a2 dg…b1 dg…b2   # 換成今�
 ### 5. 驗證（**沒過就不要 commit**）
 
 ```bash
-cd b2lab/public
-node -e "global.window={};require('./data-daily.js');
-const d=window.DAILY, TODAY=new Date().toISOString().slice(0,10);
-const LV=['A2','B1','B1+','B2'];
-const WORDS={'A2':[60,120],'B1':[110,175],'B1+':[140,240],'B2':[230,320]};
-const UP={'A2':['A2','B1'],'B1':['B1','B1+'],'B1+':['B1+','B2']};
-const todays=d.articles.filter(a=>a.date===TODAY);
-if(todays.length!==4) throw '今天應該有四篇文章（A2/B1/B1+/B2），實際 '+todays.length+' 篇';
-LV.forEach(l=>{ if(todays.filter(a=>a.level===l).length!==1) throw '文章缺少或重複 '+l+' 這一級'; });
-todays.forEach(a=>{
-  const w=a.paras.reduce((n,p)=>n+p.en.split(/\s+/).filter(Boolean).length,0);
-  const [lo,hi]=WORDS[a.level];
-  if(w<lo||w>hi) throw a.level+' 篇字數應在 '+lo+'–'+hi+'，實際 '+w;
-  if(a.words!==w) throw a.id+' words 欄位與實際字數不符（寫 '+a.words+'，實際 '+w+'）';
-  if(UP[a.level]&&(a.upFrom!==UP[a.level][0]||a.upTo!==UP[a.level][1])) throw a.level+' 篇要有 upFrom:'+UP[a.level][0]+' / upTo:'+UP[a.level][1];
-  if(a.paras.length<3) throw a.id+' 段落不足';
-  if(!a.paras.every(p=>p.en&&p.cn)) throw a.id+' 有段落缺中譯';
-  if(a.questions.length<3) throw a.id+' 題目不足';
-  a.questions.forEach(q=>{if(!q.qCn) throw a.id+' 題目缺 qCn 中譯: '+q.q});
-  a.questions.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw a.id+' ans 索引錯誤: '+q.q});
-  if(a.target.length<5) throw a.id+' 重點字不足';
-  a.target.forEach(t=>{if(t.ex&&!t.exCn) throw a.id+' 重點字缺 exCn 中譯: '+t.w});
-  /* 重點字例句不可照抄或改寫本文（2026-09-14 使用者指定）：例句跟本文不能有連續 4 個字相同（重點字本身不算） */
-  const _nm=s=>s.toLowerCase().replace(/[^a-z' ]/g,' ').replace(/ +/g,' ').trim();
-  const _bw=_nm(a.paras.map(p=>p.en).join(' ')).split(' '); const _g4=new Set();
-  for(let i=0;i+4<=_bw.length;i++) _g4.add(_bw.slice(i,i+4).join(' '));
-  a.target.forEach(t=>{ if(!t.ex) return;
-    const skip=new Set(_nm(t.w).split(' ').map(x=>x.slice(0,4)));
-    const ew=_nm(t.ex).split(' ').filter(x=>!skip.has(x.slice(0,4)));
-    for(let k=0;k+4<=ew.length;k++){ if(_g4.has(ew.slice(k,k+4).join(' '))) throw a.id+' 重點字例句跟本文重複，要換情境原創: '+t.w+' → '+t.ex; } });
-  if(a.upgrade.length<2) throw a.id+' 升級句不足';
-});
-const grams=d.grammar.filter(x=>x.date===TODAY);
-if(grams.length!==4) throw '今天應該有四個文法單元（A2/B1/B1+/B2），實際 '+grams.length;
-LV.forEach(l=>{ if(grams.filter(g=>g.level===l).length!==1) throw '文法缺少或重複 '+l+' 這一級'; });
-grams.forEach(g=>{
-  if(g.quiz.length<4) throw g.id+' 文法題目不足';
-  g.quiz.forEach(q=>{if(!q.qCn) throw g.id+' 文法題缺 qCn 中譯: '+q.q});
-  g.quiz.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw g.id+' 文法 ans 索引錯誤: '+q.q});
-  if(!g.sections.length||!g.traps.length) throw g.id+' 文法單元不完整';
-});
-/* 視覺化教材（data-gvplus.js）：全站 48 個單元都走這個版面，新單元不能漏 */
-global.window=global.window||{};require('./data-gvplus.js');
-const GP=window.GVPLUS||{};
-const VT=['timeline','matrix','cols','chain','merge','shift','scale','swap','branch'];
-const ICONS='house plane key calendar clock person bubble check cross arrow book tool pin star cycle balance link fork eye money flag'.split(' ');
-grams.forEach(g=>{
-  const p=GP[g.id];
-  if(!p) throw g.id+' 沒有視覺化教材（data-gvplus.js）';
-  ['vis','oneLine','map','visual','scenarios','steps','comparison','quizMore'].forEach(k=>{
-    if(p[k]==null) throw g.id+' 視覺化教材缺 '+k;
-  });
-  if(!p.visual.type||VT.indexOf(p.visual.type)<0) throw g.id+' visual.type 不是支援的型別: '+p.visual.type;
-  if(!p.visual.cap) throw g.id+' visual 缺 cap 圖說';
-  if(p.scenarios.length<4) throw g.id+' 情境卡不足 4 張';
-  p.scenarios.forEach(x=>{
-    if(ICONS.indexOf(x.icon)<0) throw g.id+' 情境卡 icon 無效: '+x.icon;
-    if(!x.ask||x.ask.indexOf('？')<0) throw g.id+' 情境卡 ask 要寫成問句: '+x.title;
-    if(!x.why) throw g.id+' 情境卡缺 why 解說: '+x.title;
-  });
-  if(p.steps.length<5) throw g.id+' 逐步理解不足 5 步';
-  if(!p.comparison.left||!p.comparison.right||!p.comparison.note) throw g.id+' comparison 不完整';
-  if(p.quizMore.length<2) throw g.id+' quizMore 不足 2 題（quiz 4 + quizMore 2 = 6 題）';
-  p.quizMore.forEach(q=>{if(q.ans<0||q.ans>=q.opts.length) throw g.id+' quizMore ans 索引錯誤: '+q.q});
-  /* 資料裡不准出現 HTML 標籤與內嵌 SVG */
-  if(/<[a-zA-Z\/]/.test(JSON.stringify(p))) throw g.id+' 視覺化教材裡有 HTML 標籤或 SVG（一律寫純文字）';
-  /* 重複文法、不重複句子：同一句完整英文例句（5 字以上）整頁最多 2 次；練習題選項只算一次 */
-  const cnt={};
-  const key=s=>s.toLowerCase().replace(/[^a-z ]/g,'').replace(/ +/g,' ').trim();
-  const grab=(o,fn)=>{ if(typeof o==='string'){ (o.match(/[A-Z][^.?!。？！]*[.?!]/g)||[]).forEach(fn); } else if(o&&typeof o==='object'){ Object.values(o).forEach(x=>grab(x,fn)); } };
-  grab([Object.assign({},g,{quiz:null}),Object.assign({},p,{quizMore:null})],s=>{ const k=key(s); if(k.split(' ').length>=5) cnt[k]=(cnt[k]||0)+1; });
-  const qs=new Set(); grab([g.quiz||[],p.quizMore||[]],s=>qs.add(key(s)));
-  qs.forEach(k=>{ if(k.split(' ').length>=5) cnt[k]=(cnt[k]||0)+1; });
-  Object.keys(cnt).forEach(k=>{ if(cnt[k]>2) throw g.id+' 同一句例句出現 '+cnt[k]+' 次（重複文法、不重複句子）: '+k; });
-});
-const byLv=l=>todays.find(a=>a.level===l);
-console.log('OK 文章:', LV.map(l=>l+' '+byLv(l).id+' ('+byLv(l).words+'字)').join(' | '));
-console.log('OK 文法:', LV.map(l=>l+' '+grams.find(g=>g.level===l).titleCn).join(' | '));"
-node -e "JSON.parse(require('fs').readFileSync('../daily-state.json','utf8'));console.log('state ok')"
-```
-
-**音標一致性檢查（2026-09-18 起一定要跑）：**
-
-```bash
 cd b2lab
-node tools/check-ipa.js          # 沒過會 exit 1，加 --list 看完整清單
-```
-
-它掃 `public/data-*.js` 全部詞條（含 `data-rel.js` 的關聯成員），擋下四種問題：
-
-1. **同一個字有兩種以上音標寫法** —— 今天新寫的字若跟既有資料不一致會直接被抓出來。
-   修法是挑一個合規且用得最多的寫法，把其他處一起改掉，不要只改自己新加的那筆。
-2. **缺音標**（寫成 `—` 或空字串）。
-3. **非美式符號**：ɒ、ɛ、ɜː(r)、əʊ、ɪə/eə/ʊə、ə(r)、一般字母 g、tjuː，以及沒有用 `/…/` 包起來。
-4. **漏掉捲舌 r**（2026-09-21 新增）：拼字裡的 r 比音標裡的 r／ɚ／ɝ 多，
-   例如 cargo hold 寫成 `/ˈkɑːɡəʊ həʊld/`、performance 寫成 `/pəˈfɔːməns/`。
-   修法見第 2 步欄位表的音標規則②。
-5. **自由文字裡的音標**（2026-10-08 新增）：課本 `k:`、`patLabel`、解說文字裡直接寫的 `/…/` 或 `[…]`，
-   一樣不能有英式符號、不能用方括號、`ɑ`／`ɔ` 要寫成 `ɑː`／`ɔː`。
-
-刻意保留的例外寫在腳本開頭的 `ALLOW` 表裡（目前只有 `elaborate`：adj. 與 v.
-兩個詞性發音不同，是合併的教學條目）。真的需要新增例外時改那張表，並在裡面寫清楚理由。
-
-> 背景：2026-09-18 做過一次全站大掃除，當時累積到 87 個字有兩種以上寫法、43 筆沒填音標。
-> 2026-09-21 又發現「符號對了但漏捲舌」是另一種漏網（manager 被唸錯就是從這裡來的），
-> 連雲端 123 份課堂筆記一起重掃了 433 處，第 4 項檢查就是為了不要再累積第三次。
-
-也驗證今天四篇文章都有配圖：
-
-```bash
-cd b2lab/public
-node -e "global.window={};require('./data-daily.js');require('./data-art.js');
-const ART=window.ART||{}, TODAY=new Date().toISOString().slice(0,10);
-const todays=(window.DAILY.articles||[]).filter(a=>a.date===TODAY);
-todays.forEach(a=>{ if(!ART[a.id]||!ART[a.id].svg) throw a.id+' 沒有配圖（data-art.js）'; });
-console.log('art ok', todays.map(a=>a.id).join(' | '));"
-```
-
-橫幅圖示重複檢查＋圖示庫風格檢查（規則見 3.5／3.5.1；沒過就不要 commit）：
-
-```bash
-cd b2lab && node tools/check-art.js && node tools/check-listen-thumb.js && node tools/check-icons.js
-```
-
-也驗證今天補的四課聽力（沒過就不要 commit 聽力那步的改動）。
-⚠ 2026-10-06 修正：這段腳本以前讀的是 `window.LISTEN.lessons`，但 2026-08-19 起聽力
-改成本站原創對話、放在 `notes[]`，舊的寫法會直接 `TypeError`。現在讀 `notes`：
-
-```bash
-cd b2lab/public
-node -e "global.window={};require('./data-listen.js');
-const L=window.LISTEN.notes||[], TODAY=new Date().toISOString().slice(0,10);
-const LV=['A2','B1','B1+','B2'];
-const todays=L.filter(x=>x.date===TODAY);
-if(todays.length!==4) throw '今天聽力應該有四課（A2/B1/B1+/B2），實際 '+todays.length+' 課';
-LV.forEach(l=>{ if(todays.filter(x=>x.level===l).length!==1) throw '聽力缺少或重複 '+l+' 這一級'; });
-const MIN={'A2':12,'B1':14,'B1+':16,'B2':16};
-todays.forEach(x=>{
-  if(!/^dl\d{8}(a2|b1|b1p|b2)$/.test(x.id)) throw 'id 格式錯: '+x.id;
-  if(x.kind!=='note') throw x.id+' kind 要是 \'note\'（本站自製 TTS 對話），實際 '+x.kind;
-  ['date','level','minutes','title','titleCn','series','topic','focus','intro','tip'].forEach(k=>{
-    if(!x[k]) throw x.id+' 缺欄位 '+k; });
-  if(x.yt||x.sourceUrl||x.keyLines||x.cc||x.needsSubs) throw x.id+' 不該有外部影片的欄位（yt/sourceUrl/keyLines/cc/needsSubs）';
-  const sc=x.script||[];
-  if(sc.length<MIN[x.level]) throw x.id+' 對話不足 '+MIN[x.level]+' 句，實際 '+sc.length;
-  sc.forEach((s,i)=>{ if(!s.en||!s.cn) throw x.id+' 第 '+(i+1)+' 句缺英文或中譯'; });
-  if(new Set(sc.map(s=>s.sp).filter(Boolean)).size<2) throw x.id+' 對話至少要有兩個說話者';
-  const pre=x.pre||[];
-  if(pre.length<5||pre.length>7) throw x.id+' 聽前單字要 5–7 個，實際 '+pre.length;
-  pre.forEach(t=>{ if(!t.w||!t.ipa||!t.cn||!t.def) throw x.id+' 聽前單字欄位不全: '+t.w;
-    if(!/^\/.*\/$/.test(t.ipa)) throw x.id+' 音標要用 /…/ 包起來: '+t.w+' '+t.ipa; });
-  if((x.questions||[]).length<4) throw x.id+' 理解題不足 4 題';
-  x.questions.forEach(q=>{
-    if(!q.qCn) throw x.id+' 題目缺 qCn 中譯: '+q.q;
-    if(q.ans<0||q.ans>=q.opts.length) throw x.id+' ans 索引錯誤: '+q.q;
-  });
-});
-const ids=todays.map(x=>x.id);
-if(new Set(ids).size!==ids.length) throw '今天有重複的聽力 id';
-console.log('listen ok', todays.map(x=>x.id+'('+x.level+', '+x.script.length+'句, '+x.questions.length+'題)').join(' | '));"
-```
-
-也驗證四課聽力都在 `index.html` 的 `LS_THUMB` 登記了線稿圖示（見 3.6.1；漏登記卡片會變成 emoji）：
-
-```bash
-cd b2lab/public
-node -e "const fs=require('fs');global.window={};
-require('./data-book.js');require('./data-listen.js');
-const I=window.BOOK_ICONS||{}, TODAY=new Date().toISOString().slice(0,10);
-const src=fs.readFileSync('index.html','utf8');
-const m=/const LS_THUMB=\{([\s\S]*?)\n\};/.exec(src);
-if(!m) throw '在 index.html 找不到 LS_THUMB';
-const map={}; [...m[1].matchAll(/([A-Za-z0-9_]+)\s*:\s*'([A-Za-z0-9]+)'/g)].forEach(x=>map[x[1]]=x[2]);
-const todays=(window.LISTEN.notes||[]).filter(x=>x.date===TODAY);
-const picks=[];
-todays.forEach(x=>{
-  const k=map[x.id];
-  if(!k) throw x.id+' 沒有在 index.html 的 LS_THUMB 登記圖示（卡片會退回 emoji，見 3.6.1）';
-  if(!I[k]) throw x.id+' 的圖示 '+k+' 不在 BOOK_ICONS 裡';
-  picks.push(k);
-});
-if(new Set(picks).size!==picks.length) throw '今天四課的圖示有重複: '+picks.join(',');
-/* 冷卻期：最近 COOL 批（不含今天）用過的圖示不可以再用，否則清單看起來很重複 */
-const COOL=6, today=TODAY.replace(/-/g,'');
-const rows=[...m[1].matchAll(/(dl(\d{8})[a-z0-9]*)\s*:\s*'([a-zA-Z0-9]+)'/g)];
-const days=[...new Set(rows.map(r=>r[2]))].filter(d=>d!==today).sort().reverse().slice(0,COOL);
-const cooling=new Map();
-rows.filter(r=>days.includes(r[2])).forEach(r=>{ if(!cooling.has(r[3])) cooling.set(r[3],r[2]); });
-todays.forEach(x=>{ const k=map[x.id];
-  if(cooling.has(k)) throw x.id+' 用的圖示 '+k+' 還在冷卻期（'+cooling.get(k)+' 那批用過，最近 '+COOL+' 批不可重複），換一個'; });
-console.log('thumb ok', todays.map(x=>x.id+'→'+map[x.id]).join(' | '),
-  '| 冷卻中 '+cooling.size+' 個，可選 '+(Object.keys(I).length-cooling.size)+' 個');"
-```
-
-**文法影片（3.8）的驗證**也要過：
-
-```bash
-node b2lab/tools/build-gvideo-index.js && node b2lab/tools/check-gvideo.js dg…a1 dg…a2 dg…b1 dg…b2   # 今天四個 id
+node tools/check-daily.js     # 四篇文章、四個文法單元、視覺化教材、橫幅配圖；可帶 YYYY-MM-DD 驗證指定日期
+node tools/check-listen.js    # 四課聽力、LS_THUMB 登記與冷卻期；同樣可帶日期
+node tools/check-ipa.js       # 音標一致性（規則見 TASK_COMMON.md）
+node tools/check-art.js && node tools/check-listen-thumb.js && node tools/check-icons.js
+node tools/build-gvideo-index.js && node tools/check-gvideo.js dg…a2 dg…b1 dg…b1p dg…b2   # 今天四個文法單元 id（3.8）
+node -e "JSON.parse(require('fs').readFileSync('daily-state.json','utf8'));console.log('state ok')"
 ```
 
 並確認 `window.GVIDEO_IDS` 含今天四個 id；缺任何一支或有 ✗ 就不要 commit。
+`check-ipa.js` 逼你回頭改其他資料檔的音標時，那幾個檔也要一起 `git add`（第 6 步）。
 
 ### 6. commit 並 push
 
@@ -792,7 +506,7 @@ git push origin main
 ```
 
 上面的檔是每次執行**一定**會動到的（`index.html` 只為了 3.6.1 的 `LS_THUMB` 那一行；`gvideo/` 資料夾含 3.8 的四支影片與重產的 `index.js`；`sw.js` 是版號 +1）。
-`data-scripts.js` 不要加（見 3.6.2，它現在是空的）。
+`data-scripts.js` 不要加（它現在是空的，見 3.6）。
 如果照 3.5.1 補了新圖示，`b2lab/public/data-book.js` 也要一起 `git add`。
 另外，如果第 5 步的 `check-ipa.js` 逼你回頭去改其他資料檔的音標
 （例如今天的字跟 `data-book.js`／`data-notes.js` 既有寫法不一致），

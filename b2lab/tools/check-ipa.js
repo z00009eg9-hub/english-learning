@@ -6,7 +6,7 @@
      node tools/check-ipa.js --list     # 額外印出每個問題的完整清單
 
    為什麼有這個檔（2026-09-18 建立）：
-     全站音標規則是「一律美式 Cambridge 記法」（DAILY_TASK.md 第 2 步的欄位表），
+     全站音標規則是「一律美式 Cambridge 記法」（TASK_COMMON.md「音標」），
      但同一個字散在 data-book / data-notes / data-listen / data-daily / data-a2 /
      data-reading 六個檔裡，靠人工 grep 很容易漏掉，實際上曾累積到
      87 個字有兩種以上寫法、43 筆根本沒填音標。
