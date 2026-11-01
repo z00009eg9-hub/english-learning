@@ -7,6 +7,19 @@ const fs=require('fs'), path=require('path'), vm=require('vm');
 const PUB=path.join(__dirname,'..','public'), DIR=path.join(PUB,'gvideo');
 const LEGACY_ART=new Set(['dg20261014b1']);   // 試做版的插圖名沒有加單元前綴
 
+/* 載入失敗時指出第幾行；最常見的是單引號字串裡有撇號（won't），整個字串要改用雙引號 */
+function explain(e,file){
+  let msg=e.message;
+  try{
+    const m=/:(\d+)\n/.exec(e.stack||'');
+    if(m&&e.name==='SyntaxError'){
+      const line=fs.readFileSync(file,'utf8').split('\n')[+m[1]-1]||'';
+      msg+='（第 '+m[1]+' 行：'+line.trim().slice(0,70)+'）';
+      if(/'[^'\n]*[A-Za-z]'[A-Za-z]/.test(line)) msg+='\n    → 單引號字串裡有撇號（如 won\'t、I\'m）：整個字串改用雙引號 "…"，或把撇號寫成 \\\'';
+    }
+  }catch(_){}
+  return msg;
+}
 function run(file, ctx){
   ctx=ctx||{}; ctx.window=ctx.window||ctx; ctx.self=ctx.window; ctx.console=console; ctx.document={}; ctx.navigator={userAgent:''};
   vm.runInNewContext(fs.readFileSync(file,'utf8'), ctx, {filename:path.basename(file)});
@@ -32,7 +45,7 @@ const files=fs.readdirSync(DIR).filter(f=>/\.js$/.test(f)&&f!=='index.js').sort(
 const artOwner={}, V={}, ART={};
 for(const f of files){
   const id=f.replace(/\.js$/,'');
-  let c; try{ c=run(path.join(DIR,f),{}); }catch(e){ V[id]={err:'載入失敗：'+e.message}; continue; }
+  let c; try{ c=run(path.join(DIR,f),{}); }catch(e){ V[id]={err:'載入失敗：'+explain(e,path.join(DIR,f))}; continue; }
   const arts=c.GVIDEO_ART||{};
   for(const k in arts){ (artOwner[k]=artOwner[k]||[]).push(id); ART[k]=arts[k]; }
   V[id]={d:(c.GVIDEO||{})[id], ids:Object.keys(c.GVIDEO||{}), arts:Object.keys(arts)};
