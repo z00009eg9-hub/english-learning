@@ -13,7 +13,7 @@ articles:[
   "date": "2026-10-28",
   "level": "A2",
   "topic": "週末活動",
-  "words": 90,
+  "words": 89,
   "kind": "orig",
   "title": "Tom Will Start on Saturday",
   "titleCn": "Tom星期六就開始",
@@ -53,8 +53,8 @@ articles:[
       "cn": "他每個星期六要練十分鐘。他不會練兩個小時。時間短一點比較好維持。"
     },
     {
-      "en": "Tom is shy about the noise in his room. His sister says she will listen to him. She thinks Tom will play a real song soon.",
-      "cn": "Tom對房間裡的聲音有點害羞。他姊姊說她會聽他彈。她覺得Tom很快就會彈出一首真正的歌。"
+      "en": "Tom feels shy when people hear him play. His sister says she will listen to him. She thinks Tom will play a real song soon.",
+      "cn": "別人聽到他彈琴，Tom會有點害羞。他姊姊說她會聽他彈。她覺得Tom很快就會彈出一首真正的歌。"
     }
   ],
   "target": [
@@ -63,7 +63,7 @@ articles:[
       "ipa": "/ɡɪˈtɑːr/",
       "pos": "n.",
       "cn": "吉他",
-      "def": "A music tool with six strings that you play with your fingers.",
+      "def": "A musical instrument with six strings that you play with your fingers.",
       "ex": "A man played a guitar beside the river.",
       "exCn": "一個男人在河邊彈吉他。"
     },
@@ -191,7 +191,7 @@ articles:[
   "date": "2026-10-28",
   "level": "B1",
   "topic": "學習與心理",
-  "words": 130,
+  "words": 135,
   "kind": "orig",
   "title": "The Decision Anita Made at Lunch",
   "titleCn": "Anita在午餐桌上做的決定",
@@ -219,8 +219,8 @@ articles:[
   ],
   "paras": [
     {
-      "en": "Anita has wanted to ride a scooter since she moved to Vietnam. She tried once last winter, but she stopped after three lessons. The traffic near her office frightened her.",
-      "cn": "Anita搬到越南以後就一直想學騎機車。她去年冬天試過一次，但上了三堂課就停了。辦公室附近的車流讓她很害怕。"
+      "en": "Anita has wanted to ride a scooter since she moved to Vietnam two years ago. She tried once last winter, but she stopped after three lessons. She was afraid of the traffic near her office.",
+      "cn": "Anita兩年前搬到越南，從那時起就一直想學騎機車。她去年冬天試過一次，但上了三堂課就停了。她很怕辦公室附近的車流。"
     },
     {
       "en": "Today at lunch her colleague Mai asks about the scooter again. Anita puts down her chopsticks and thinks for a few seconds. Then she says it out loud: she will try again this Sunday.",
@@ -308,7 +308,7 @@ articles:[
         "D. 她搬到別的城市"
       ],
       "ans": 1,
-      "expl": "The traffic near her office frightened her.——第一段最後一句直接寫出原因。"
+      "expl": "She was afraid of the traffic near her office.——第一段最後一句直接寫出原因。"
     },
     {
       "q": "What does Mai offer to do on Sunday?",
@@ -585,7 +585,7 @@ articles:[
   "date": "2026-10-28",
   "level": "B2",
   "topic": "學習與心理",
-  "words": 258,
+  "words": 267,
   "kind": "original",
   "title": "The Sentence Anita Said Out Loud",
   "titleCn": "Anita說出口的那一句話",
@@ -611,16 +611,16 @@ articles:[
   ],
   "paras": [
     {
-      "en": "The question came up at the end of a Monday meeting, when everyone was already looking at the clock. Three new operators had joined the line, and somebody had to teach them how to read a gauge properly. Anita looked around the table. Nobody raised a hand, and the silence stretched long enough to become awkward.",
-      "cn": "那個問題是在週一會議快結束時冒出來的，大家已經在看時鐘了。生產線上來了三位新作業員，得有人教他們怎麼正確判讀量具。Anita環視了一圈會議桌。沒有人舉手，沉默拖得久到變得尷尬。"
+      "en": "The question came up at the end of a Monday meeting, when everyone was already looking at the clock. Three new operators had joined the line, and somebody had to teach them how to read a gauge properly. Anita looked around the table. Nobody raised a hand to volunteer, and the silence stretched long enough to become awkward.",
+      "cn": "那個問題是在週一會議快結束時冒出來的，大家已經在看時鐘了。生產線上來了三位新作業員，得有人教他們怎麼正確判讀量具。Anita環視了一圈會議桌。沒有人舉手自願，沉默拖得久到變得尷尬。"
     },
     {
-      "en": "Then she heard her own voice. I will do it, she said, and the words were out before she had finished deciding. For a second she wanted them back. She had no training material, no slides, and no free afternoon. What she did have was eleven people who had now heard her say it.",
-      "cn": "然後她聽見了自己的聲音。我來做，她說，而這句話在她還沒想完之前就已經出去了。有一秒鐘她想把話收回來。她沒有教材、沒有簡報，也沒有空下來的下午。她唯一有的，是十一個現在都聽見她這麼說的人。"
+      "en": "Then she heard her own voice. I will do it, she said, and the words were out before she had time to hesitate. For a second she wanted them back. She had no training material, no slides, and no free afternoon. What she did have was eleven people who had now heard her say it.",
+      "cn": "然後她聽見了自己的聲音。我來做，她說，而這句話在她還來不及猶豫之前就已經出去了。有一秒鐘她想把話收回來。她沒有教材、沒有簡報，也沒有空下來的下午。她唯一有的，是十一個現在都聽見她這麼說的人。"
     },
     {
-      "en": "That, she thinks now, is the whole trick. An intention that stays in your head costs nothing to drop; nobody notices, and you can always promise yourself you will start next month. A promise said out loud in a room full of colleagues behaves differently. The cost of quitting moves outside your own head, and it becomes a thing other people are waiting for.",
-      "cn": "她現在覺得，關鍵就在這裡。一個只留在腦袋裡的打算，放掉是零成本的；沒有人會發現，而你永遠可以跟自己說下個月再開始。但一句在滿是同事的會議室裡說出口的承諾，性質就完全不一樣了。放棄的成本被搬到你自己的腦袋外面，它變成了別人正在等的一件事。"
+      "en": "That, she thinks now, is the whole trick. An intention that stays in your head costs nothing to drop; nobody notices, and you can always promise yourself you will start next month. A commitment said aloud in a room full of colleagues behaves differently, because it makes you accountable to them. The cost of quitting moves outside your own head, and it becomes a thing other people are waiting for.",
+      "cn": "她現在覺得，關鍵就在這裡。一個只留在腦袋裡的打算，放掉是零成本的；沒有人會發現，而你永遠可以跟自己說下個月再開始。但一句在滿是同事的會議室裡說出口的承諾，性質就完全不一樣了，因為它讓你得對他們負責交代。放棄的成本被搬到你自己的腦袋外面，它變成了別人正在等的一件事。"
     },
     {
       "en": "The first session was rough. One operator was reluctant to ask anything, and the projector would not cooperate, so Anita drew the gauge on a whiteboard instead. By the third week the same operator was correcting her arithmetic in front of everyone. Shall we do one more session on tolerances, he asked, and Anita realized the group had stopped being hers to carry. She had expected to be the one who carried it, and now she was only the one who had started it.",
@@ -718,7 +718,7 @@ articles:[
         "D. 新作業員來找她幫忙"
       ],
       "ans": 1,
-      "expl": "Nobody raised a hand, and the silence stretched long enough to become awkward.——第一段最後一句，加上第二段「話在她還沒想完之前就出去了」。"
+      "expl": "Nobody raised a hand to volunteer, and the silence stretched long enough to become awkward.——第一段最後一句，加上第二段「話在她還來不及猶豫之前就出去了」。"
     },
     {
       "q": "According to the third paragraph, why is a spoken promise different from an intention?",
@@ -14208,7 +14208,7 @@ grammar:[
             "The report will probably arrive by noon."
           ],
           [
-            "不太會",
+            "不太確定",
             "Maybe / I'm not sure",
             "Maybe the report will arrive by noon."
           ],
@@ -14369,25 +14369,25 @@ grammar:[
       "q": "She ___ ask about the deadline in the meeting.",
       "qCn": "她在會議上一定會問交期的事。",
       "opts": [
-        "A. definitely will",
+        "A. is definitely",
         "B. will definitely",
         "C. will definitely to",
         "D. definitely"
       ],
       "ans": 1,
-      "expl": "肯定句的語序是 will 加 definitely 加原形動詞。選項 A 雖然母語者在強調時偶爾會這樣說，但標準語序是 B；C 多了一個 to，D 完全沒有未來的意思。"
+      "expl": "肯定句的語序是 will 加 definitely 加原形動詞。A 的 is 後面不能直接接原形動詞 ask；C 多了一個 to；D 少了 will，既沒有未來的意思，ask 也和主詞 she 不搭。"
     },
     {
       "q": "The warehouse ___ open on the holiday.",
       "qCn": "倉庫在假日大概不會開。",
       "opts": [
-        "A. will probably not",
+        "A. probably don't",
         "B. probably won't",
         "C. won't probably",
-        "D. probably will not be"
+        "D. probably not will"
       ],
       "ans": 1,
-      "expl": "否定句時 probably 要跳到 won't 前面，寫成 probably won't。C 的語序母語者不用；D 多了一個 be，句子就變成形容詞結構，意思也改了。"
+      "expl": "否定句時 probably 要跳到 won't 前面，寫成 probably won't。A 的 don't 和單數主詞 the warehouse 不搭，也沒有未來的意思；C 的語序母語者不用；D 把 not 放在 will 前面，英文沒有這種語序。"
     },
     {
       "q": "Maybe the new tool ___ us half an hour a day.",

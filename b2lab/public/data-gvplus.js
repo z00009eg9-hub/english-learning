@@ -374,13 +374,13 @@ window.GVPLUS = {
     {
       "q": "The line ___ run at full speed until the part is replaced.",
       "opts": [
-        "will probably not",
+        "probably don't",
         "probably won't",
         "won't probably",
-        "probably will not be"
+        "probably not will"
       ],
       "ans": 1,
-      "expl": "否定句時副詞要跳到 won't 前面，寫成 probably won't。第三個選項的語序母語者不用，第四個多了一個 be，句子結構整個變了。"
+      "expl": "否定句時副詞要跳到 won't 前面，寫成 probably won't。第一個選項的 don't 和單數主詞 the line 不搭，也沒有未來的意思；第三個選項的語序母語者不用；第四個把 not 放在 will 前面，英文沒有這種語序。"
     }
   ]
 },

@@ -263,11 +263,11 @@ notes:[
       "def": "Feeling worried that something bad may happen."
     },
     {
-      "w": "colleague",
-      "ipa": "/ˈkɑː.liːɡ/",
+      "w": "shuttle",
+      "ipa": "/ˈʃʌt̬.əl/",
       "pos": "n.",
-      "cn": "同事",
-      "def": "A person who works with you at the same company."
+      "cn": "接駁車",
+      "def": "A bus that goes back and forth between two places, for example between home and work."
     },
     {
       "w": "traffic",
@@ -277,11 +277,11 @@ notes:[
       "def": "All the cars and bikes moving on a road."
     },
     {
-      "w": "offer",
-      "ipa": "/ˈɑː.fɚ/",
+      "w": "book",
+      "ipa": "/bʊk/",
       "pos": "v.",
-      "cn": "主動說要（做某事）",
-      "def": "To say that you are willing to do something for someone."
+      "cn": "預約；訂",
+      "def": "To arrange to have a seat, room or lesson at a later time."
     },
     {
       "w": "probably",
@@ -488,7 +488,7 @@ notes:[
   "series": "本站自製聽力 · 學習與心理主題",
   "topic": "📰 下班前聊台北的縮小班級政見",
   "focus": "will 的被動式（will be capped、will be opened、will be judged）加上 that／who 關係子句，用來談政策承諾",
-  "intro": "Tom和Anita在下班前聊當天那則教育新聞。請注意兩個結構：第一，講政策時幾乎都用 will be 加過去分詞，因為重點是班級、職位會被怎麼處理，不是誰去處理；第二，兩個人都用 that 和 who 的關係子句把名詞講細，例如 the teachers who stay late 和 a number that nobody checks。這兩樣是B1那一課沒有的工具。",
+  "intro": "Tom和Anita在下班前聊當天那則教育新聞。請注意兩個結構：第一，講政策時幾乎都用 will be 加過去分詞，因為重點是班級、職位會被怎麼處理，不是誰去處理；第二，兩個人都用 that 和 who 的關係子句把名詞講細，例如 the one who stays until seven 和 the part that got the loudest reply。這兩樣是B1那一課沒有的工具。",
   "tip": "第一次聽只抓三個數字：小學一班幾人、國中一班幾人、政策要在哪一個學年前完成。第二次聽專心數被動語態出現幾次，並注意 that 和 who 後面接的是什麼，想一想如果拆成兩句話會變得多囉嗦。",
   "pre": [
     {
@@ -552,8 +552,8 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "Twenty-four for elementary, twenty-five for junior high. Both will be capped by the 2028 school year.",
-      "cn": "小學二十四，國中二十五。兩個都要在二○二八學年前限制下來。"
+      "en": "Twenty-four for elementary, twenty-five for junior high. Both will be capped by the 2028-2029 school year.",
+      "cn": "小學二十四，國中二十五。兩個都要在二○二八到二○二九學年前限制下來。"
     },
     {
       "sp": "Tom",
@@ -612,8 +612,8 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "Right. The funding will be adjusted so that it keeps pace with inflation, and parents who want better food can still add money.",
-      "cn": "對。經費會調整到跟得上物價，而想要吃好一點的家長還是可以加錢。"
+      "en": "Right. The funding will be adjusted so that it keeps pace with inflation, and parents who want better food can still add money. Puma Shen, the candidate, says meal quality should not be judged against a fixed spending ceiling.",
+      "cn": "對。經費會調整到跟得上物價，而想要吃好一點的家長還是可以加錢。候選人沈伯洋說，餐點品質不該用一個固定的花費上限來評斷。"
     },
     {
       "sp": "Tom",
@@ -622,8 +622,8 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "He did. He said meal quality should not be judged against a number that nobody checks.",
-      "cn": "他問了。他說餐點品質不該用一個沒人查核的數字來評斷。"
+      "en": "He did. He asked how free lunches and parents paying extra can go together.",
+      "cn": "他問了。他問免費午餐和家長加錢要怎麼同時成立。"
     },
     {
       "sp": "Tom",
@@ -818,8 +818,8 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "Nothing at all. I had hesitated for a week about offering, and then the words came out before the decision did.",
-      "cn": "什麼都沒有。我猶豫了一個星期要不要開口，結果話比決定先出來。"
+      "en": "Nothing at all. I had hesitated for a week about volunteering, and then the words came out before the decision did.",
+      "cn": "什麼都沒有。我猶豫了一個星期要不要自願，結果話比決定先出來。"
     },
     {
       "sp": "Tom",
@@ -833,13 +833,13 @@ notes:[
     },
     {
       "sp": "Tom",
-      "en": "And once eleven people have heard it, it is a commitment.",
-      "cn": "而一旦有十一個人聽到了，它就變成一個承諾。"
+      "en": "And once eleven people have heard it, it is a commitment. So how did the first session go?",
+      "cn": "而一旦有十一個人聽到了，它就變成一個承諾。那第一堂課上得怎麼樣？"
     },
     {
       "sp": "Anita",
-      "en": "Exactly. So how did the first session go? Badly, since you asked.",
-      "cn": "就是這樣。那第一堂課上得怎麼樣？既然你問了，很糟。"
+      "en": "Exactly. Badly, since you asked.",
+      "cn": "就是這樣。既然你問了：很糟。"
     },
     {
       "sp": "Tom",
@@ -854,7 +854,7 @@ notes:[
     {
       "sp": "Tom",
       "en": "That old one in training room two never works.",
-      "cn": "第二訓練室那台舊的從來不會動。"
+      "cn": "第二訓練室那台舊的從來沒正常過。"
     },
     {
       "sp": "Anita",
@@ -917,7 +917,7 @@ notes:[
         "D. 一張白板圖"
       ],
       "ans": 2,
-      "expl": "Nothing at all. I had hesitated for a week about offering——她猶豫了一週，話卻比決定先出來。"
+      "expl": "Nothing at all. I had hesitated for a week about volunteering——她猶豫了一週，話卻比決定先出來。"
     },
     {
       "q": "What went wrong in the first session?",

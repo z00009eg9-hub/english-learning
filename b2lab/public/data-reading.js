@@ -1932,8 +1932,8 @@ window.READING = [
      cn:"那個警報 Anita 之前聽過兩次，但從來不是在包裝區聽到的，而且比她想像中大聲得多。兩個新來的作業員站著不動、看著她，所以她指了樓梯。演練時任何人都不准搭電梯：電梯可能停在樓層之間，把人困在裡面。"},
     {en:"At the gate the supervisors counted heads. Anita's group took six minutes and forty seconds, and two names were missing. Both men were found in the smoking area; they had thought they didn't have to come, because they were on a break. The safety officer did not shout. He simply said that four minutes was the target, and that a fire does not wait for anybody's break.",
      cn:"在大門口，組長們一個一個點人數。Anita 這一組花了六分四十秒，而且少了兩個名字。那兩位男同事後來在吸菸區被找到；他們以為自己不必來，因為他們在休息。安全管理員沒有大聲罵人。他只說四分鐘才是目標，而火不會等任何人休息完。"},
-    {en:"Three weeks later they reached the gate in four minutes ten seconds. After that, every worker had to learn to use an extinguisher: pull the pin, aim low, squeeze, sweep. Anita checks the ones on her floor every month now. She isn't allowed to repair them, but she must report any that is empty. Nobody has to be brave in a drill; you only have to know where the door is.",
-     cn:"三個星期後，他們四分十秒就走到大門。在那之後，每位員工都必須學會使用滅火器：拔插銷、瞄低、壓下、左右掃。現在 Anita 每個月都檢查她那層樓的滅火器。她不被允許自己修，但只要有哪一支是空的，她就必須回報。演練裡沒有人需要勇敢；你只需要知道門在哪裡。"}
+    {en:"Three weeks later they reached the gate in four minutes ten seconds. After that, every worker had to learn to use an extinguisher: pull the pin, aim low, squeeze, sweep. Anita checks the ones on her floor every month now. She isn't allowed to repair them, but she must report any that are empty. Nobody has to be brave in a drill; you only have to know where the door is.",
+     cn:"三個星期後，他們四分十秒就走到大門。在那之後，每位員工都必須學會使用滅火器：拔插銷、瞄低、壓下、左右掃。現在 Anita 每個月都檢查她那層樓的滅火器。她不能自己修，但只要有哪一支是空的，她就必須回報。演練裡沒有人需要勇敢；你只需要知道門在哪裡。"}
   ],
   target:[
     {w:"notice",ipa:"/ˈnoʊtɪs/",pos:"n.",cn:"公告；通知",def:"A written sign put up to tell people something.",ex:"A notice on the lift door said it would be closed all weekend.",exCn:"電梯門上的公告說整個週末都會停用。"},
@@ -1961,7 +1961,7 @@ window.READING = [
     {q:"What is Anita's job with the extinguishers now?",
      opts:["A. She repairs the empty ones herself","B. She checks them every month and reports any empty one","C. She teaches the drill to the drivers in the yard","D. She keeps one at her own work station"],
      ans:1,
-     expl:"最後一段：Anita checks the ones on her floor every month ... she must report any that is empty，而且 She isn't allowed to repair them。"}
+     expl:"最後一段：Anita checks the ones on her floor every month ... she must report any that are empty，而且 She isn't allowed to repair them。"}
   ],
   upgrade:[
     {b1:"Everyone in the factory must join the drill. Visitors must join too.",
