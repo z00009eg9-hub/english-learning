@@ -34,7 +34,7 @@ notes:[
       "ipa": "/ɡɪˈtɑːr/",
       "pos": "n.",
       "cn": "吉他",
-      "def": "A music tool with six strings that you play with your fingers."
+      "def": "A musical instrument with six strings that you play with your fingers."
     },
     {
       "w": "borrow",
@@ -130,8 +130,8 @@ notes:[
     },
     {
       "sp": "Tom",
-      "en": "Not really. I am a little shy about the noise.",
-      "cn": "不太安靜。我對那個聲音有點害羞。"
+      "en": "Not really. I feel shy when people hear me play.",
+      "cn": "不太安靜。別人聽到我彈琴，我會有點害羞。"
     },
     {
       "sp": "Lisa",
@@ -207,7 +207,7 @@ notes:[
         "D. 另一把吉他"
       ],
       "ans": 2,
-      "expl": "I have small headphones at home. I'll lend them to you.——她聽到Tom說怕吵才決定的。"
+      "expl": "I have small headphones at home. I'll lend them to you.——她聽到Tom說怕別人聽到他彈琴才決定的。"
     },
     {
       "q": "Why does Tom practice only a short time?",
@@ -237,7 +237,7 @@ notes:[
         "D. was"
       ],
       "ans": 0,
-      "expl": "她是聽到Tom怕吵、話說出口那一刻才決定的，這種當下的決定用 will 加原形動詞，口語說 I'll。"
+      "expl": "她是聽到Tom怕別人聽到他彈琴、話說出口那一刻才決定的，這種當下的決定用 will 加原形動詞，口語說 I'll。"
     }
   ]
 },
