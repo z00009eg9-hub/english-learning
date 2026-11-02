@@ -9520,6 +9520,29 @@ window.b2Assistant={
     Object.values(GLOSS).filter(w=>w.w.toLowerCase().includes(term)).slice(0,12).forEach(w=>add(w,w.src||'全站字庫'));
     return results.slice(0,8);
   },
+  /* 全站句子搜尋：課本、文章、實景的英文句與例句；索引第一次搜尋時才建，之後重用 */
+  searchSentences(raw){
+    const term=String(raw||'').toLowerCase().replace(/[’‘]/g,"'").replace(/\s+/g,' ').trim().slice(0,100);
+    if(term.length<2)return [];
+    const rw=Object.values(ST.rw||{}).filter(l=>l&&!l.del), sig=BOOK_LESSONS.length+':'+ALL_ARTS.length+':'+DAILY_ALL.length+':'+rw.length;
+    if(!this._sidx||this._sidx.sig!==sig){
+      const rows=[], dup=new Set(), skip=['art','coverArt','iconSvg','quiz','questions','hw','homework','corrections','spoken'];
+      const clean=s=>{ const el=document.createElement('div'); el.innerHTML=String(s||''); return el.textContent.trim(); };
+      const push=(en,cn,src)=>{ en=clean(en); if(en.length<12||en.length>400||!/[a-z]/i.test(en))return; const k=en.toLowerCase(); if(dup.has(k))return; dup.add(k); rows.push({en,cn:clean(cn),src,lc:k,cl:clean(cn).toLowerCase()}); };
+      const walk=(item,depth,src,seen)=>{
+        if(!item||typeof item!=='object'||depth>8||seen.has(item))return; seen.add(item);
+        if(typeof item.en==='string')push(item.en,item.cn||item.zh||item.enCn,src);
+        const ex=item.ex||item.exEn; if(typeof ex==='string')push(ex,item.exCn,src);
+        Object.entries(item).forEach(([k,v])=>{ if(!skip.includes(k))walk(v,depth+1,src,seen); });
+      };
+      BOOK_LESSONS.forEach(b=>{ const o={id:b.id,type:'book'}; const n=rows.length; walk(b,0,'課本：'+(b.titleCn||b.title),new Set()); for(let i=n;i<rows.length;i++)Object.assign(rows[i],o); });
+      ALL_ARTS.concat(DAILY_ALL).forEach(a=>{ const o={id:a.id,type:'read'}; const n=rows.length; walk(a,0,'文章：'+a.title,new Set()); for(let i=n;i<rows.length;i++)Object.assign(rows[i],o); });
+      rw.forEach(l=>walk(l,0,'實景：'+l.ti,new Set()));
+      this._sidx={sig,rows};
+    }
+    const hit=r=>r.lc.includes(term)||r.cl.includes(term);
+    return this._sidx.rows.filter(hit).sort((a,b)=>a.en.length-b.en.length).slice(0,10).map(({en,cn,src,id,type})=>({en,cn,src,id,type}));
+  },
   news(releases={}){
     const date=today(), seen=new Set();
     const articles=DAILY_ALL.concat(ORIG_ARTS,NOTE_ARTS).filter(a=>{

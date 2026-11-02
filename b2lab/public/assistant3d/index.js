@@ -11,7 +11,7 @@ root.innerHTML=`<style>
 .launch{touch-action:none;user-select:none;cursor:grab}.launch.dragging{cursor:grabbing}
 :host([data-sleeping]) .head:before{content:'––';font-size:calc(var(--size)*.35);top:3%}:host([data-sleeping]) .launch:after{content:'z';position:absolute;right:-2px;top:-7px;border-radius:50%;background:#fffcf7;color:#756c60;font-size:12px;padding:0 4px}
 .panel{position:absolute;right:0;bottom:calc(var(--size) + 14px);width:min(350px,calc(100vw - 28px));max-height:min(590px,calc(100dvh - 150px));overflow:auto;overscroll-behavior:contain;border:1px solid #dfd6c9;background:#fffcf7;border-radius:18px;box-shadow:0 10px 40px #36261126;padding:17px}
-.top{display:flex;align-items:center;gap:5px}.top strong{flex:1}.icon{border:0;background:transparent;min-width:36px;min-height:36px;border-radius:8px}.sub{font-size:12px;color:#756c60;margin:5px 0 12px;overflow-wrap:anywhere}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions button,.control{background:#fff;border:1px solid #ddd1c1;border-radius:10px;padding:9px;min-height:42px}.actions button:hover,.control:hover{background:#fff0dc}.actions button[aria-pressed=true]{background:#fff0dc;border-color:#bc6b2b}.news-action{grid-column:1/-1}.output{margin-top:14px;overflow-wrap:anywhere}.output p{margin:8px 0}.en{font-size:16px;color:#25383c}.note{font-size:12px;color:#756c60}.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.word{padding:12px 0;border-bottom:1px solid #eee3d5}.word b{color:#a3541e}.word .row{align-items:center;margin-top:0}.word .control{padding:5px 9px}.search-row{display:flex;gap:8px;margin:8px 0}.search-row input{width:0;min-width:0;flex:1;padding:9px;border:1px solid #ddd1c1;border-radius:9px;background:#fff;color:#302c27}.restore{border:1px solid #ddd1c1;border-radius:16px;background:#fffcf7;padding:4px 10px;font-size:12px}.feedback{color:#87511e}details{margin-top:9px}summary{cursor:pointer}.foot{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;border-top:1px solid #eee3d5;margin-top:14px;padding-top:8px}.foot button{border:0;background:transparent;color:#756c60;padding:5px;font-size:12px;min-height:32px}
+.top{display:flex;align-items:center;gap:5px}.top strong{flex:1}.icon{border:0;background:transparent;min-width:36px;min-height:36px;border-radius:8px}.sub{font-size:12px;color:#756c60;margin:5px 0 12px;overflow-wrap:anywhere}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions button,.control{background:#fff;border:1px solid #ddd1c1;border-radius:10px;padding:9px;min-height:42px}.actions button:hover,.control:hover{background:#fff0dc}.actions button[aria-pressed=true]{background:#fff0dc;border-color:#bc6b2b}.output{margin-top:14px;overflow-wrap:anywhere}.output p{margin:8px 0}.en{font-size:16px;color:#25383c}.note{font-size:12px;color:#756c60}.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.word{padding:12px 0;border-bottom:1px solid #eee3d5}.word b{color:#a3541e}.word .row{align-items:center;margin-top:0}.word .control{padding:5px 9px}.search-row{display:flex;gap:8px;margin:8px 0}.search-row input{width:0;min-width:0;flex:1;padding:9px;border:1px solid #ddd1c1;border-radius:9px;background:#fff;color:#302c27}.restore{border:1px solid #ddd1c1;border-radius:16px;background:#fffcf7;padding:4px 10px;font-size:12px}.feedback{color:#87511e}details{margin-top:9px}summary{cursor:pointer}.foot{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;border-top:1px solid #eee3d5;margin-top:14px;padding-top:8px}.foot button{border:0;background:transparent;color:#756c60;padding:5px;font-size:12px;min-height:32px}
 .status{min-height:1.6em;color:#87511e;font-size:12px}.notice{position:absolute;right:0;bottom:calc(var(--size) + 12px);width:min(285px,calc(100vw - 28px));border:1px solid #e8c7a3;border-radius:14px;background:#fff8eb;box-shadow:0 3px 16px #36261120;padding:12px}.notice p{margin:0;white-space:pre-line}.notice .row{margin-top:5px;align-items:center}.notice .control{padding:5px 10px;min-height:36px}.notice-dismiss{margin-left:auto}
 .notice{width:min(230px,calc(100vw - 28px));padding:10px}.notice:after{content:'';position:absolute;right:calc(var(--size)/2 - 7px);bottom:-8px;width:14px;height:14px;background:#fff8eb;border-right:1px solid #e8c7a3;border-bottom:1px solid #e8c7a3;transform:rotate(45deg)}
 .tray{min-height:64px;border:1px dashed #d3b592;background:#fff9f0;border-radius:10px;padding:8px;display:flex;gap:6px;flex-wrap:wrap;align-content:flex-start}.bank{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.token{border:1px solid #ddd1c1;border-radius:8px;background:#fff;padding:7px 9px;min-height:38px}.token:disabled{opacity:.3;cursor:default}.token.wrong{border-color:#b34b30;background:#fff0e9}.token.correct{border-color:#658b63;background:#eff8ed}.article{display:block;width:100%;text-align:left;margin:8px 0}.article span{display:block}.article small{color:#756c60}.answer{border-left:3px solid #ee893e;padding-left:10px;margin-top:10px}
@@ -22,7 +22,7 @@ root.innerHTML=`<style>
 <aside class="notice" aria-label="新文章提醒" hidden><p class="notice-text" role="status"></p><div class="row"><button class="control notice-view">看看</button><button class="icon coach-mute" hidden>先不要</button><button class="icon notice-dismiss" aria-label="關閉助理提醒">×</button></div></aside>
 <section class="panel" role="dialog" aria-label="Mini果 英文助理" hidden>
 <div class="top"><button class="icon hide" aria-label="隱藏小助理" title="隱藏小助理">−</button><strong>Mini果 英文助理</strong><button class="icon close" aria-label="縮小助理面板">縮小</button></div>
-<p class="sub"></p><div class="actions"><button data-action="search">單字查詢</button><button data-action="read">帶我跟讀</button><button data-action="quiz">單字小測</button><button data-action="practice">句子重組</button><button class="news-action" data-action="news">新文章</button></div>
+<p class="sub"></p><div class="actions"><button data-action="search">單字查詢</button><button data-action="read">帶我跟讀</button><button data-action="quiz">單字小測</button><button data-action="practice">句子重組</button><button class="news-action" data-action="news">新文章</button><button data-action="sentence">搜尋句子</button></div>
 <div class="foot"><button class="size">縮成迷你（32px）</button><button class="hide">隱藏助理</button></div>
 <div class="output" aria-live="polite"></div><p class="status" role="status"></p>
 </section><button class="launch" aria-label="開啟 Mini果 英文助理" aria-expanded="false" title="點一下開啟，左右拖曳旋轉"><span class="head" aria-hidden="true"></span></button><button class="restore" hidden>顯示助理</button>`;
@@ -212,6 +212,24 @@ function practice(){
  q('.reveal').onclick=()=>{const a=q('.answer');a.hidden=false;a.innerHTML=`<p class="en">${esc(text(s.en))}</p>${s.cn?`<p>${esc(text(s.cn))}</p>`:''}`;a.append(speaker(s.en,'朗讀答案'));};
  q('.next').onclick=()=>{stop();cursor++;practice();};render();
 }
+let sentQuery='';
+function sentence_search(){
+ out.innerHTML=`<form class="search-form"><label for="sent-query">輸入英文或中文關鍵字</label><div class="search-row"><input id="sent-query" aria-label="搜尋句子關鍵字" placeholder="例如 deadline 或 延期" maxlength="100" autocomplete="off" autocapitalize="off" spellcheck="false" value="${esc(sentQuery)}"><button class="control" type="submit">搜尋</button></div></form><div class="results"></div><p class="note">搜尋全站課本、文章與實景中的句子。</p>`;
+ const run=()=>{
+  const box=q('.results');box.replaceChildren();
+  if(sentQuery.trim().length<2){box.textContent='至少輸入 2 個字再搜尋。';return;}
+  const found=api.searchSentences(sentQuery);if(!found.length){box.innerHTML=`<p>找不到包含「${esc(sentQuery)}」的句子。</p>`;return;}
+  for(const s of found){
+   const el=document.createElement('div');el.className='word';
+   el.innerHTML=`<p class="en">${esc(text(s.en))}</p>${s.cn?`<p>${esc(text(s.cn))}</p>`:''}<p class="note">${esc(s.src)}</p><div class="row"></div>`;
+   const row=el.querySelector('.row');row.append(speaker(s.en,'朗讀句子'));
+   if(s.id){const g=document.createElement('button');g.className='control';g.type='button';g.textContent='前往';g.onclick=()=>{close(false);s.type==='book'?api.openBook(s.id):api.openArticle(s.id);};row.append(g);}
+   box.append(el);
+  }
+ };
+ q('.search-form').onsubmit=e=>{e.preventDefault();stop();sentQuery=q('#sent-query').value.trim();run();};
+ q('#sent-query').oninput=e=>{sentQuery=e.target.value;};if(sentQuery)run();
+}
 function news(){
  if(!newsReady){out.textContent='正在確認新文章…';return;}
  const n=api.news(releases);rememberNews(n);out.innerHTML=`<p>${esc(n.date)}${n.articles.length?' · 今天有 '+n.articles.length+' 篇新文章':' · 今天尚無新文章'}</p><div class="articles"></div>`;
@@ -260,7 +278,7 @@ function idle(){
 }
 root.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>{
  coachReview=null;coachReward=false;syncFace();sync();stop();const next=b.dataset.action;if(next===mode&&next==='practice'&&puzzle)return;mode=next;markMode();
- if(mode==='search')search(selection&&selection.length<=100&&!/[.!?]/.test(selection)?selection:query);else ({read,quiz,practice,news})[mode]();
+ if(mode==='search')search(selection&&selection.length<=100&&!/[.!?]/.test(selection)?selection:query);else ({read,quiz,practice,news,sentence:sentence_search})[mode]();
 });
 idleTimer=setTimeout(idle,IDLE_MS);setInterval(checkNews,15000);setInterval(tickCoach,1000);checkNews();
 // 將引擎延到首屏之後載入，收合時也有立體轉頭；隱藏時不下載。
