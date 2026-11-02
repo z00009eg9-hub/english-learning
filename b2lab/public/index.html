@@ -1701,6 +1701,7 @@ header .prof .emo-ic,header .hd-streak .emo-ic{vertical-align:0}
 #v-book table.bkrev td:nth-child(3),#v-book table.bkrev th:nth-child(3){width:10%}
 /* 課本標題卡：右側大圖示（純裝飾）＋彩色徽章 */
 #v-book .magttl h2{padding-right:84px}
+#v-book .magttl .cn,#v-book .magttl .set{padding-right:124px}   /* 避開右上 96px 圖示，Topics 才不會被蓋住 */
 #v-book .magico,#v-real .magico{position:absolute;right:20px;top:16px;font-size:58px;line-height:1;
   filter:drop-shadow(3px 3px 0 rgba(43,33,24,.22))}
 #v-book .magico svg{width:96px;height:96px;display:block}
@@ -1740,7 +1741,7 @@ header .prof .emo-ic,header .hd-streak .emo-ic{vertical-align:0}
   #v-book .magttl .bar [data-ratebtn]{margin-left:0}
   #v-book .magttl .bar .doclink .dl-tx{display:none}
   #v-book .magttl .bar .doclink{padding:2px 9px}
-  #v-book .magico,#v-real .magico{font-size:36px;right:12px;top:12px} #v-book .magico svg{width:56px;height:56px} #v-book .magttl h2,#v-real .magttl h2{padding-right:52px} }
+  #v-book .magico,#v-real .magico{font-size:36px;right:12px;top:12px} #v-book .magico svg{width:56px;height:56px} #v-book .magttl h2,#v-real .magttl h2{padding-right:52px} #v-book .magttl .cn,#v-book .magttl .set{padding-right:68px} }
 #v-book .sent{cursor:pointer;border-radius:4px;transition:background .15s}
 #v-book .sent.reading,#v-real .sent.reading,#v-read .sent.reading{background:#fff2d9;box-shadow:0 0 0 2px #fff2d9}
 /* 課本文章：標題加大 3pt；段落開頭不空格（與左邊界對齊） */
