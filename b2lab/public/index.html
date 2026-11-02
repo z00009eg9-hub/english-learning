@@ -8700,7 +8700,20 @@ function oldSiteCard(){
 
 /* ---------- Service Worker（可安裝成 app、離線也能讀） ---------- */
 if('serviceWorker' in navigator){
-  window.addEventListener('load',()=>{ navigator.serviceWorker.register('sw.js').catch(()=>{}); });
+  window.addEventListener('load',()=>{ navigator.serviceWorker.register('sw.js').then(reg=>{
+    /* 手機回到前景時主動檢查新版；新 SW 接手後跳提示，由使用者點了才重新整理（不打斷錄音／測驗） */
+    const chk=()=>{ try{ reg.update(); }catch(e){} };
+    document.addEventListener('visibilitychange',()=>{ if(!document.hidden) chk(); });
+    setInterval(chk,30*60*1000);
+    if(navigator.serviceWorker.controller) navigator.serviceWorker.addEventListener('controllerchange',()=>{
+      if(document.getElementById('swUpd')) return;
+      const d=document.createElement('div'); d.id='swUpd';
+      d.style.cssText='position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:99999;background:#3b2a1a;color:#fff;border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:center;justify-content:space-between;box-shadow:0 4px 18px #0004;font-size:14px';
+      d.innerHTML='<span>有新版本了</span><button style="background:#ee893e;color:#fff;border:0;border-radius:8px;padding:8px 14px;font-size:14px">立即更新</button>';
+      d.querySelector('button').onclick=()=>location.reload();
+      document.body.appendChild(d);
+    });
+  }).catch(()=>{}); });
 }
 
 /* 各分區打開／關閉詳細頁都會經過 RENDER.*，統一在重畫後更新手機返回列的文字 */
