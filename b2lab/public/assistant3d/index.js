@@ -223,7 +223,7 @@ function sentence_search(){
    const el=document.createElement('div');el.className='word';
    el.innerHTML=`<p class="en">${esc(text(s.en))}</p>${s.cn?`<p>${esc(text(s.cn))}</p>`:''}<p class="note">${esc(s.src)}</p><div class="row"></div>`;
    const row=el.querySelector('.row');row.append(speaker(s.en,'朗讀句子'));
-   if(s.id){const g=document.createElement('button');g.className='control';g.type='button';g.textContent='前往';g.onclick=()=>{close(false);s.type==='book'?api.openBook(s.id):api.openArticle(s.id);};row.append(g);}
+   if(s.id){const g=document.createElement('button');g.className='control';g.type='button';g.textContent='前往';g.onclick=()=>{close(false);s.type==='book'?api.openBook(s.id):api.openArticle(s.id);setTimeout(()=>api.locate(s.en),150);};row.append(g);}
    box.append(el);
   }
  };

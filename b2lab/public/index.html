@@ -4205,7 +4205,7 @@ function upDiff(b1,b2){
 /* 內文點編號重點字 → 右欄 Words & Phrases 同步捲動並閃爍定位（窄版單欄不捲，避免跳走） */
 function wpFlash(n){
   const el=$('wp-'+n); if(!el) return;
-  if(window.innerWidth>=900) el.scrollIntoView({block:'center',behavior:'smooth'});
+  if(window.innerWidth>=900) el.scrollIntoView({block:'center',behavior:'auto'});
   el.classList.add('flash');
   setTimeout(()=>el.classList.remove('flash'),1600);
 }
@@ -4556,7 +4556,7 @@ function stepRead(){
   if(readSeq.i>=readSeq.list.length){ stopReadAll(); return; }
   const el=readSeq.list[readSeq.i];
   el.classList.add('reading');
-  el.scrollIntoView({block:'center',behavior:'smooth'});
+  el.scrollIntoView({block:'center',behavior:'auto'});
   /* cancel 之後馬上 speak 在 iOS 會偶爾掉句（音訊跟畫面對不上），隔一小拍再唸 */
   const seq=readSeq; let moved=false;
   const next=function(){ if(moved||readSeq!==seq) return; moved=true; if(seq.wd) clearTimeout(seq.wd); seq.i++; stepRead(); };
@@ -7348,7 +7348,7 @@ function bkStep(){
   document.querySelectorAll('.sent.reading').forEach(x=>x.classList.remove('reading'));
   if(seq.i>=seq.list.length){ bkStop(); return; }
   const el=seq.list[seq.i]; el.classList.add('reading');
-  el.scrollIntoView({block:'center',behavior:'smooth'});
+  el.scrollIntoView({block:'center',behavior:'auto'});
   let moved=false;
   const next=()=>{ if(moved||bkSeq!==seq) return; moved=true; if(seq.wd) clearTimeout(seq.wd); seq.i++; bkStep(); };
   const words=String(el.dataset.t||'').split(/\s+/).filter(Boolean).length;
@@ -7919,7 +7919,7 @@ function auClearHi(){ document.querySelectorAll('#sublist .sline').forEach(el=>e
 function auHi(i){
   auClearHi();
   const el=$('sl-'+i);
-  if(el){ el.classList.add('cur'); el.scrollIntoView({block:'center',behavior:'smooth'}); }
+  if(el){ el.classList.add('cur'); el.scrollIntoView({block:'center',behavior:'auto'}); }
   const total=auLines.length||1;
   const pt=$('au-prog-txt'); if(pt) pt.textContent='句 '+(i+1)+' / '+total;
   const pf=$('au-prog-fill'); if(pf) pf.style.width=Math.round((i+1)*100/total)+'%';
@@ -8516,9 +8516,9 @@ function setCurLine(i,scroll){
   curLine=i;
   const el=$('sl-'+i); if(!el) return;
   el.classList.add('cur');
-  if(scroll!==false) el.scrollIntoView({block:'center',behavior:'smooth'});
+  if(scroll!==false) el.scrollIntoView({block:'center',behavior:'auto'});
 }
-function jumpCur(){ const el=$('sl-'+curLine); if(el) el.scrollIntoView({block:'center',behavior:'smooth'}); }
+function jumpCur(){ const el=$('sl-'+curLine); if(el) el.scrollIntoView({block:'center',behavior:'auto'}); }
 window.jumpCur=jumpCur;
 function startSync(){
   stopSync();
@@ -9555,6 +9555,32 @@ window.b2Assistant={
     }
     const hit=r=>r.lc.includes(term)||r.cl.includes(term);
     return this._sidx.rows.filter(hit).sort((a,b)=>a.en.length-b.en.length).slice(0,10).map(({en,cn,src,id,type})=>({en,cn,src,id,type}));
+  },
+  /* 前往句子後定位：找內容裡「最內層」含該句的元素，展開折疊、捲到畫面中央並閃黃底 */
+  locate(en,tries=12){
+    const norm=s=>String(s||'').toLowerCase().replace(/[’‘]/g,"'").replace(/[“”]/g,'"').replace(/\s+/g,' ').trim();
+    const full=norm(en), part=full.slice(0,40);
+    const root=document.querySelector('main')||document.body;
+    const pick=needle=>{
+      let best=null;
+      for(const el of root.querySelectorAll('*')){
+        if(/^(SCRIPT|STYLE|SVG|INPUT|TEXTAREA|BUTTON)$/i.test(el.tagName)||el.closest('svg'))continue;
+        if(!norm(el.textContent).includes(needle))continue;
+        if([...el.children].some(c=>norm(c.textContent).includes(needle)))continue;
+        const vis=el.getClientRects().length>0;
+        if(!best||vis&&!best.vis)best={el,vis};
+        if(vis)break;
+      }
+      return best&&best.el;
+    };
+    const el=pick(full)||pick(part);
+    if(!el){ if(tries>0)setTimeout(()=>this.locate(en,tries-1),250); return false; }
+    for(let p=el.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;
+    el.scrollIntoView({block:'center',behavior:'auto'});
+    const old=el.style.cssText;
+    el.style.transition='background-color .4s'; el.style.backgroundColor='#ffe08a'; el.style.borderRadius='6px';
+    setTimeout(()=>{ el.style.backgroundColor=''; setTimeout(()=>{ el.style.cssText=old; },500); },3500);
+    return true;
   },
   news(releases={}){
     const date=today(), seen=new Set();
