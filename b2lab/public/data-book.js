@@ -22896,6 +22896,323 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- au07 Audit English VII — Production ---- */
+  {
+   "id": "au07",
+   "icon": "🏭",
+   "video": true,
+   "date": "2026-11-02",
+   "title": "Audit English VII — Production",
+   "titleCn": "稽核英文七｜製造",
+   "topics": "稽核英文, 製造, 組長培訓, 多能工表, 代理人, PDCA, 品質看板, 不良品隔離, 包裝秤重, 出貨標籤, EOL 條碼, assessment, backup, quarantine, tracking, label",
+   "hwTitle": "六題測驗 Quiz & Answers",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "Assessment records and backup-operator evidence are not complete in the September record.",
+     "cn": "九月紀錄中，考核紀錄及代理人實績尚未完整。",
+     "pat": "A and B are not complete in + 紀錄",
+     "note": "兩項證據要說齊。常見錯誤：只說「訓練還在進行」，沒點出考核紀錄與代理人實績。"
+    },
+    {
+     "n": 2,
+     "cn": "只有多能工表不能證明資格；需一起檢視考核紀錄及代理人實績。",
+     "pat": "A alone does not prove B. C need to be reviewed with it.",
+     "note": "多能工表只是名單，資格要靠考核結果。常見錯誤：有表就說所有人都合格。",
+     "wrong": "A skills matrix proves that all operators are qualified.",
+     "fix": "A skills matrix alone does not prove qualification. Assessment records and backup-operator evidence need to be reviewed with it."
+    },
+    {
+     "n": 3,
+     "ok": "The PDCA tracking list is missing. The response includes quality contacts and line quality boards.",
+     "cn": "缺少 PDCA 追蹤總表；回覆包含品質窗口與產線品質看板。",
+     "pat": "A is missing. The response includes B and C.",
+     "note": "缺口和對策分開說。常見錯誤：有看板就說改善都結案了。"
+    },
+    {
+     "n": 4,
+     "ok": "The plan calls for local rules, red boxes, and labels. QA and Production share the action.",
+     "cn": "計畫要求當地規定、紅色箱及標籤，由品保與製造共同負責。",
+     "pat": "The plan calls for + A, B, and C. X and Y share the action.",
+     "note": "三項對策＋兩個部門要說齊。常見錯誤：說成只有製造負責。"
+    },
+    {
+     "n": 5,
+     "ok": "No. Weight checks address missing items. Shipping-label checking is a separate improvement.",
+     "cn": "不能。秤重針對短裝，出貨標籤核對是另一項改善。",
+     "pat": "No. A addresses B. C is a separate improvement.",
+     "note": "秤重和標籤核對回答不同問題。常見錯誤：重量對了就說標籤也對。"
+    },
+    {
+     "n": 6,
+     "ok": "No. EOL has the function, but the dock does not. The plan calls for discussion about adding it.",
+     "cn": "沒有。EOL 有此功能，月台沒有；計畫要求討論是否增加。",
+     "pat": "No. A has …, but B does not.",
+     "note": "說清楚功能在哪個站點。常見錯誤：EOL 有條碼管控，就說月台也有。"
+    }
+   ],
+   "vocabTitle": "五個關鍵詞 Key Words",
+   "vocab": [
+    {
+     "w": "assessment",
+     "ipa": "/əˈsesmənt/",
+     "pos": "n.",
+     "cn": "考核",
+     "ex": "Assessment records are not complete in the September plan.",
+     "exCn": "九月計畫記載考核紀錄尚未完整。（IIIA-1）"
+    },
+    {
+     "w": "backup",
+     "ipa": "/ˈbækʌp/",
+     "pos": "n.",
+     "cn": "代理人",
+     "ex": "The action requires evidence for backup operators.",
+     "exCn": "改善要求代理作業員實績。（IIIA-1、IIIA-2）"
+    },
+    {
+     "w": "quarantine",
+     "ipa": "/ˈkwɔːr.ən.tiːn/",
+     "pos": "n.",
+     "cn": "隔離",
+     "ex": "The assessment identifies a missing area for rejected finished products.",
+     "exCn": "評估指出缺少成品不良品隔離區。（IIID-8）"
+    },
+    {
+     "w": "tracking",
+     "ipa": "/ˈtræk.ɪŋ/",
+     "pos": "n.",
+     "cn": "追蹤",
+     "ex": "The PDCA tracking list is missing in the assessment.",
+     "exCn": "評估記載缺少 PDCA 追蹤總表。（IIIC-1）"
+    },
+    {
+     "w": "label",
+     "ipa": "/ˈleɪ.bəl/",
+     "pos": "n.",
+     "cn": "標籤",
+     "ex": "The shipping-label checking process needs to be defined.",
+     "exCn": "出貨標籤核對流程需要建立。（IIIF-5）"
+    }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    { "p": "assessment records", "cn": "考核紀錄" },
+    { "p": "backup operator", "cn": "代理作業員" },
+    { "p": "quarantine area", "cn": "隔離區" },
+    { "p": "quality tracking", "cn": "品質追蹤" },
+    { "p": "shipping label", "cn": "出貨標籤" },
+    { "p": "skills matrix", "cn": "多能工表" },
+    { "p": "team-leader training", "cn": "組長培訓" },
+    { "p": "line quality board", "cn": "產線品質看板" },
+    { "p": "red box", "cn": "紅色箱（不良品箱）" },
+    { "p": "repair records", "cn": "維修紀錄" }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "VII-A",
+     "title": "The plan says X are being + p.p.（依紀錄說進度）",
+     "pat": "The plan says + 主詞 + are being + 過去分詞",
+     "pts": [
+      "表示當時正在進行，不是已完成或已通過。",
+      "說明訓練狀態時用。",
+      "例：The September plan says team leaders are being trained.（九月計畫記載組長正在接受培訓。）"
+     ],
+     "ex": "The September plan says team leaders are being trained.",
+     "exCn": "九月計畫記載組長正在接受培訓。（IIIA-1）"
+    },
+    {
+     "k": "VII-B",
+     "title": "X alone does not prove that…（不能只看一項證據）",
+     "pat": "名詞 + alone + does not prove that + 子句",
+     "pts": [
+      "alone 表示「僅憑這一項」。",
+      "客戶追問考核證據時用。",
+      "例：A skills matrix alone does not prove that all operators are qualified.（只有多能工表，不能證明所有作業員均已合格。）"
+     ],
+     "ex": "A skills matrix alone does not prove that all operators are qualified.",
+     "exCn": "只有多能工表，不能證明所有作業員均已合格。（IIIA-1、IIIA-2）"
+    },
+    {
+     "k": "VII-C",
+     "title": "The plan calls for + N（說明改善要求）",
+     "pat": "The plan calls for + 名詞",
+     "pts": [
+      "calls for 表示計畫要求這些措施，不代表已完成。",
+      "說明不良品管控對策時用。",
+      "例：The plan calls for local rules, red boxes, and labels.（計畫要求建立當地規定、紅色箱及標籤。）"
+     ],
+     "ex": "The plan calls for local rules, red boxes, and labels.",
+     "exCn": "計畫要求建立當地規定、紅色箱及標籤。（IIID-8）"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "training vs qualification",
+     "sc": "training 是訓練；qualification 是執行工作的資格。不能只因有訓練計畫就說所有人已合格。（IIIA-1）",
+     "ex": "Training is listed, but assessment records are incomplete.",
+     "exCn": "有列出訓練，但考核紀錄尚未完整。",
+     "cn": "訓練 vs 資格"
+    },
+    {
+     "u": "quarantine vs release",
+     "sc": "quarantine 是隔離；release 是放行。隔離標示與放行判定是不同概念，原表沒有可宣稱已放行的紀錄。（IIID-8）",
+     "ex": "The plan calls for red boxes and labels. It does not prove that rejected products are approved for release.",
+     "exCn": "計畫要求紅色箱及標籤，不能證明不良品已獲准放行。",
+     "cn": "隔離 vs 放行"
+    },
+    {
+     "u": "weight check vs label check",
+     "sc": "重量正確不等於標籤內容正確。此案例有秤重做法，但標籤核對流程仍列為待改善。（IIIF-1、IIIF-5）",
+     "ex": "Weight checks address missing items. Shipping-label checks are a separate process.",
+     "exCn": "秤重針對短裝；出貨標籤核對是不同流程。",
+     "cn": "秤重 vs 標籤核對"
+    },
+    {
+     "u": "target vs completion",
+     "sc": "target 是計畫目標日，completion 是已經完成。目標日期不是完成證據。（IIIA-1、IIID-8）",
+     "ex": "October 30 is a target in the September plan. It does not prove that training and assessment were completed.",
+     "exCn": "10/30 是九月計畫的目標，不能證明訓練與考核已完成。",
+     "cn": "目標 vs 完成"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "案例 01｜組長訓練與考核",
+     "title": "Team-Leader Training",
+     "titleCn": "案例 01｜組長訓練與考核（IIIA-1）",
+     "paras": [
+      { "en": "Auditor: What is the training status in the plan?", "cn": "稽核員：計畫中的訓練進度如何？" },
+      { "en": "You: The September plan says team leaders are being trained and skills matrices are being updated. Assessment records are not complete yet.", "cn": "你：九月計畫記載組長培訓中、多能工表更新中，考核紀錄尚未完整。" },
+      { "en": "Auditor: What will Production provide?", "cn": "稽核員：製造需提供什麼？" },
+      { "en": "You: The action includes team-leader training, assessment records, and the training plan. Production is also to provide skills matrices for Departments 1, 2, and 3.", "cn": "你：改善包含組長培訓、考核紀錄與訓練計畫，製造也需提供製一、製二及製三部多能工表。" },
+      { "en": "Auditor: Does the October 30 target prove completion?", "cn": "稽核員：10/30 目標能證明完成嗎？" },
+      { "en": "You: No. October 30 is a target in the September plan. It does not prove that training and assessment were completed.", "cn": "你：不能。10/30 是九月計畫的目標，不能證明訓練與考核已完成。" }
+     ]
+    },
+    {
+     "bar": "案例 02｜多能工與代理人",
+     "title": "Skills Matrix & Backups",
+     "titleCn": "案例 02｜多能工與代理人（IIIA-1、IIIA-2）",
+     "paras": [
+      { "en": "Auditor: What is missing from the skills matrices?", "cn": "稽核員：多能工表缺少什麼？" },
+      { "en": "You: The finding calls for assessment records and evidence for backup operators. The matrices alone do not close these gaps.", "cn": "你：缺失要求考核紀錄與代理人實績，只有多能工表不能消除這些缺口。" },
+      { "en": "Auditor: How can you support a backup operator assignment?", "cn": "稽核員：如何佐證代理作業員安排？" },
+      { "en": "You: The skills matrix, assessment results, and backup-operator evidence need to be reviewed together. A name on a list is not enough.", "cn": "你：需一起檢視多能工表、考核結果與代理人實績；只有名單上的姓名並不足夠。" },
+      { "en": "Auditor: Can you say all backups are qualified?", "cn": "稽核員：可以說所有代理人都合格嗎？" },
+      { "en": "You: The September record does not support that statement. It identifies incomplete assessment records and backup-operator evidence.", "cn": "你：九月紀錄不支持這種說法；它指出考核紀錄與代理人實績尚未完整。" }
+     ]
+    },
+    {
+     "bar": "案例 03｜品質追蹤與看板",
+     "title": "Quality Tracking & Boards",
+     "titleCn": "案例 03｜品質追蹤與看板（IIIC-1）",
+     "paras": [
+      { "en": "Auditor: What quality tracking gap was identified?", "cn": "稽核員：發現什麼品質追蹤缺口？" },
+      { "en": "You: The assessment identifies a missing PDCA tracking list. The action involves QA and Production.", "cn": "你：評估指出缺少 PDCA 追蹤總表，此項涉及品保與製造。" },
+      { "en": "Auditor: What does the response propose?", "cn": "稽核員：回覆提出什麼安排？" },
+      { "en": "You: The response includes quality contacts and line quality boards for BU/BR25VS. The listed target is October 30.", "cn": "你：回覆包含品質窗口及 BU/BR25VS 產線品質看板，表列目標為 10/30。" },
+      { "en": "Auditor: Does a board prove that every action is closed?", "cn": "稽核員：有看板就證明每項改善已結案嗎？" },
+      { "en": "You: No. A board can display information, but it does not by itself prove action completion. The assessment still identifies the tracking-list gap.", "cn": "你：不能。看板可呈現資訊，但本身不能證明改善完成；評估仍指出追蹤總表缺口。" }
+     ]
+    },
+    {
+     "bar": "案例 04｜不良成品隔離",
+     "title": "Quarantine of Rejected Products",
+     "titleCn": "案例 04｜不良成品隔離（IIID-8）",
+     "paras": [
+      { "en": "Auditor: How are rejected finished products controlled?", "cn": "稽核員：不良成品如何管控？" },
+      { "en": "You: The assessment identifies gaps in local nonconforming-product rules, the quarantine area, repair records, and the related SOP.", "cn": "你：評估指出當地不合格品規定、隔離區、維修紀錄與相關 SOP 的缺口。" },
+      { "en": "Auditor: What corrective measures are planned?", "cn": "稽核員：計畫採取什麼改善？" },
+      { "en": "You: The plan calls for local rules, red boxes, and labels. QA and Production share this action.", "cn": "你：計畫要求建立當地規定、紅色箱及標籤，由品保與製造共同負責。" },
+      { "en": "Auditor: Is the target before the November 16 audit?", "cn": "稽核員：目標是在 11/16 稽核之前嗎？" },
+      { "en": "You: No. The listed target is November 30, after the audit. The September plan does not show completion before the visit.", "cn": "你：不是。表列目標 11/30，在稽核之後；九月計畫未顯示會在來訪前完成。" }
+     ]
+    },
+    {
+     "bar": "案例 05｜包裝秤重與說明",
+     "title": "Weight Checks & Instructions",
+     "titleCn": "案例 05｜包裝秤重與說明（IIIF-1、IIIF-6）",
+     "paras": [
+      { "en": "Auditor: How do you prevent missing items in packing?", "cn": "稽核員：如何防止包裝短裝？" },
+      { "en": "You: Weight checks are used to prevent missing items. The procedure still needs upper and lower weight limits for each model.", "cn": "你：已有秤重確認以防短裝；程序仍需訂定各機種重量上下限。" },
+      { "en": "Auditor: What instructions are planned for operators?", "cn": "稽核員：計畫為作業員提供什麼說明？" },
+      { "en": "You: The plan calls for large-print instructions in Chinese and Vietnamese. It also includes a scale calibration procedure.", "cn": "你：計畫要求大字中越文作業說明，也包含秤重設備校驗程序。" },
+      { "en": "Auditor: What is the acceptable weight for this model?", "cn": "稽核員：這個機種的允收重量是多少？" },
+      { "en": "You: The September action plan does not give the numerical limits. It requires separate upper and lower limits for each model.", "cn": "你：九月改善計畫沒有提供數值；它要求為各機種分別訂定上下限。" }
+     ]
+    },
+    {
+     "bar": "案例 06｜出貨標籤與條碼",
+     "title": "Shipping Labels & Barcodes",
+     "titleCn": "案例 06｜出貨標籤與條碼（IIIF-4、IIIF-5、IIIF-6）",
+     "paras": [
+      { "en": "Auditor: What needs improvement in shipping-label checks?", "cn": "稽核員：出貨標籤核對需改善什麼？" },
+      { "en": "You: The shipping-label checking process needs to be defined. This is separate from the weight-check action.", "cn": "你：出貨標籤核對流程需要建立，這與秤重改善是不同事項。" },
+      { "en": "Auditor: Does EOL barcode control also cover the dock?", "cn": "稽核員：EOL 條碼管控也涵蓋月台嗎？" },
+      { "en": "You: The assessment says EOL has the function, but the shipping dock does not have the same function.", "cn": "你：評估記載 EOL 有此功能，但出貨月台沒有相同功能。" },
+      { "en": "Auditor: What is planned for the dock?", "cn": "稽核員：月台計畫如何處理？" },
+      { "en": "You: The plan calls for discussion about adding the function. It does not show that the dock function has already been installed.", "cn": "你：計畫要求討論是否增加功能，未顯示月台功能已安裝完成。" }
+     ]
+    },
+    {
+     "bar": "演練 A｜人員資格追問",
+     "title": "Operator Qualification Follow-up",
+     "titleCn": "演練 A｜人員資格追問",
+     "paras": [
+      { "en": "Auditor: Q1. Are all operators qualified?", "cn": "稽核員：所有作業員都合格嗎？" },
+      { "en": "You: The September record does not support that statement. Assessment records are not complete.", "cn": "你：九月紀錄不支持這種說法，考核紀錄尚未完整。" },
+      { "en": "Auditor: Q2. But you have a skills matrix, correct?", "cn": "稽核員：但你們有多能工表，對嗎？" },
+      { "en": "You: Yes. However, the finding also requires assessment records and backup-operator evidence.", "cn": "你：有，但缺失也要求考核紀錄及代理人實績。" },
+      { "en": "Auditor: Q3. Who is responsible for this action?", "cn": "稽核員：誰負責這項改善？" },
+      { "en": "You: Production owns the action, including team-leader training and skills matrices.", "cn": "你：製造負責此項，包含組長培訓與多能工表。" },
+      { "en": "Auditor: Q4. Was it completed by October 30?", "cn": "稽核員：10/30 前完成了嗎？" },
+      { "en": "You: That is the target in the September plan. The plan alone does not prove completion by that date.", "cn": "你：那是九月計畫的目標；僅憑計畫不能證明當天已完成。" }
+     ]
+    },
+    {
+     "bar": "演練 B｜隔離與出貨",
+     "title": "Quarantine & Shipping Follow-up",
+     "titleCn": "演練 B｜隔離與出貨",
+     "paras": [
+      { "en": "Auditor: Q1. Is rejected-product control complete?", "cn": "稽核員：不良品管控完整嗎？" },
+      { "en": "You: The assessment lists gaps in local rules, quarantine, repair records, and the SOP.", "cn": "你：評估列出當地規定、隔離、維修紀錄與 SOP 的缺口。" },
+      { "en": "Auditor: Q2. What is the planned action?", "cn": "稽核員：計畫對策是什麼？" },
+      { "en": "You: Local rules, red boxes, and labels are planned. QA and Production share the action.", "cn": "你：計畫建立當地規定、紅色箱與標籤，由品保與製造共同負責。" },
+      { "en": "Auditor: Q3. Do weight checks prove the shipping label is correct?", "cn": "稽核員：秤重能證明出貨標籤正確嗎？" },
+      { "en": "You: No. Weight checks address missing items. The shipping-label checking process is a separate improvement.", "cn": "你：不能。秤重針對短裝；出貨標籤核對流程是另一項改善。" },
+      { "en": "Auditor: Q4. Does the dock have the same barcode function as EOL?", "cn": "稽核員：月台有與 EOL 相同的條碼功能嗎？" },
+      { "en": "You: The assessment says it does not. Adding the dock function is still a discussion item in the plan.", "cn": "你：評估記載沒有。增加月台功能仍是計畫中的討論事項。" }
+     ]
+    },
+    {
+     "bar": "完整口說稿｜產線導覽",
+     "title": "Full Speaking Script",
+     "titleCn": "完整口說稿｜產線導覽",
+     "paras": [
+      { "en": "Welcome to the production review. We will explain training, backup arrangements, quality tracking, and packing controls.", "cn": "歡迎進行製造審查。我們會說明訓練、代理安排、品質追蹤與包裝管控。" },
+      { "en": "The September plan records team-leader training and skills-matrix updates. Assessment records and backup-operator evidence still need improvement.", "cn": "九月計畫記載組長培訓與多能工表更新；考核紀錄及代理人實績仍需改善。" },
+      { "en": "The quality action includes contacts and line quality boards. The assessment also identifies a missing PDCA tracking list.", "cn": "品質改善包含窗口與產線品質看板；評估也指出缺少 PDCA 追蹤總表。" },
+      { "en": "For rejected products, local rules, red boxes, and labels are planned. QA and Production share this action.", "cn": "不良品方面，計畫建立當地規定、紅色箱及標籤，由品保與製造共同負責。" },
+      { "en": "Weight checks are used to prevent missing items. Model-specific limits and calibration procedures need improvement. Shipping-label checks and dock barcode control are separate topics.", "cn": "已有秤重確認以防短裝；各機種限值與校驗程序需改善。出貨標籤核對及月台條碼管控是另外的議題。" }
+     ]
+    },
+    {
+     "bar": "隨身速查｜六句重點",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜六句重點",
+     "paras": [
+      { "en": "Production owns the team-leader training action.", "cn": "製造負責組長培訓改善。（IIIA-1）" },
+      { "en": "The skills matrices need assessment records and backup-operator evidence.", "cn": "多能工表需補上考核紀錄與代理人實績。（IIIA-1、IIIA-2）" },
+      { "en": "The assessment identifies a missing PDCA tracking list.", "cn": "評估指出缺少 PDCA 追蹤總表。（IIIC-1）" },
+      { "en": "Local rules, red boxes, and labels are planned for nonconforming products.", "cn": "不合格品計畫建立當地規定、紅色箱與標籤。（IIID-8）" },
+      { "en": "Weight checks are used, but model-specific limits and calibration procedures need improvement.", "cn": "已有秤重確認，但各機種限值與校驗程序需改善。（IIIF-1、IIIF-6）" },
+      { "en": "The shipping-label checking process needs to be defined. EOL control does not cover the dock in the assessment.", "cn": "出貨標籤核對流程需建立；評估中的 EOL 管控未涵蓋月台。（IIIF-4、IIIF-5）" }
+     ]
+    }
+   ]
+  },
   /* ---- qa01 品保新聞一：跑步機電源線召回（CPSC 26-203）→ 8D ---- */
   {
    "id": "qa01",
@@ -30339,6 +30656,7 @@ window.BOOK = {
     au03:[[['bottleL','factory','cart','lock','eye'],'化學品管控問答：缺領用紀錄、存放位置、效期、警示標籤與防護設備 → 還要管控送到產線的化學品 → 由資材負責建立管控 → 只有倉儲管理不能涵蓋 → 仍標示 Open，尚未完成。']],
     au05:[[['gauge','clipboard','box','scalesL','exam'],'品保：標籤≠校驗報告 → 補抽樣計畫與關鍵尺寸檢驗 → 進料不良流程 → 材料證明與硬度 → 8D 範例≠訓練紀錄、結案前確認有效性 → 校驗≠GR&R。']],
     au06:[[['stairs','sprout','platform','receipt','truck'],'生技：現有 PFMEA≠完整（缺當地規定與流程圖）→ SOP 防錯連到 PFMEA → FMEA 分析後建立重工 SOP → SOP 有修訂但管制計畫沒同步 → 各機種重量上下限 → EOL 有條碼≠月台也有。']],
+    au07:[[['gradcap','search','tv','facemask','key'],'製造：組長培訓中≠已合格 → 多能工表要配考核紀錄與代理人實績 → 缺 PDCA 追蹤總表、看板≠結案 → 不良品紅箱與標籤、目標 11/30 在稽核後 → 秤重防短裝≠標籤正確 → EOL 有條碼≠月台也有。']],
     au04:[[['gear','flag','laptop','chartUp','thumb'],'開發與專案管理：設變通知單≠完整程序 → 台灣主導安規越南協助 → PDM 存放≠審核程序 → 台灣提供時程越南更新實際進度 → 填表≠核准 → 追蹤量產問題至結案。']],
     bk20261006:[[['board','stairs','gauge','orgchart','clipboard'],'操作員訓練五階段：獨立作業前提供實務訓練並評估技能 → 每站分 A/B/C 三個技能等級逐級晉升 → 內部評估未通過先安排較簡單的工作站 → 所有人都受過訓可互相代班維持生產 → 客戶稽核時出示訓練紀錄說明驗證方式。']],
     bk20261013:[[['key','plug','search','map','ballot'],'品保會議五階段：確認新治具能否投入生產 → 機器出狀況先停止測試 → 螺絲組裝時斷裂、不良率變高 → 問題最先出現在第三站、檢查治具是否對準 → 預計明天下午重啟、週五前完成訓練並更新 SOP。']],

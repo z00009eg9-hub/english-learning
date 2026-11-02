@@ -47121,6 +47121,292 @@ window.VIDEO.au06 = {
  ]
 };
 
+/* ===== au07 稽核英文七｜製造：每個場景句一張專屬線稿 ===== */
+(function(){
+  var D='#2b2118', A='#e8813a', C='#fdf6ec', L='#f7e3c9', R='#d9534f', B='#3b82c4', G='#4a9d5b';
+  var st='stroke="'+D+'" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+  var svg=function(inner){ return '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">'+inner+'</svg>'; };
+  var txt=function(x,y,s,sz,f){ return '<text x="'+x+'" y="'+y+'" text-anchor="middle" font-family="sans-serif" font-size="'+sz+'" font-weight="700" fill="'+f+'">'+s+'</text>'; };
+  var qb=function(cx,cy){ return '<circle cx="'+cx+'" cy="'+cy+'" r="17" fill="'+A+'" '+st+'/>'
+    +txt(cx,cy+9,'?',25,'#fff'); };
+  var per=function(cx,cy,s,f){ var w=+(s*1.7).toFixed(1), y=+(cy+s*2.9).toFixed(1);
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+s+'" fill="'+f+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +'<path d="M'+(cx-w)+' '+y+' a'+w+' '+w+' 0 0 1 '+(2*w)+' 0" fill="'+f+'" stroke="'+D+'" stroke-width="2.5" stroke-linejoin="round"/>'; };
+  var pill=function(x,y,w,h,s,bg,fg,sz){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+(h/2)+'" fill="'+bg+'" '+st+'/>'
+     +txt(x+w/2,y+h/2+sz*0.36,s,sz,fg); };
+  var chk=function(x,y,sz,col){ return '<path d="M'+x+' '+y+' l'+(sz*0.32)+' '+(sz*0.36)+' l'+(sz*0.68)+' -'+(sz*0.82)+'" fill="none" stroke="'+col+'" stroke-width="'+(sz*0.22)+'" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var ex=function(cx,cy,sz,col){ var h=sz/2; return '<g stroke="'+col+'" stroke-width="'+(sz*0.2)+'" stroke-linecap="round">'
+     +'<path d="M'+(cx-h)+' '+(cy-h)+' l'+sz+' '+sz+'"/><path d="M'+(cx+h)+' '+(cy-h)+' l-'+sz+' '+sz+'"/></g>'; };
+  var doc=function(x,y,w,h,head){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>', t=y+18, i, n;
+    if(head){ s+='<rect x="'+(x+6)+'" y="'+(y+7)+'" width="'+(w-12)+'" height="15" rx="3" fill="'+A+'"/>'+txt(x+w/2,y+19,head,11,'#fff'); t=y+34; }
+    n=Math.floor((y+h-8-t)/10)+1;
+    for(i=0;i<n;i++) s+='<path d="M'+(x+8)+' '+(t+i*10)+' h'+(w-16-(i%2?10:0))+'" stroke="'+D+'" stroke-width="2" stroke-linecap="round"/>';
+    return s; };
+  var gap=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="5" fill="none" stroke="'+R+'" stroke-width="2.8" stroke-dasharray="6 5"/>'; };
+  var arr=function(x1,x2,y,col){ col=col||D; return '<path d="M'+x1+' '+y+' H'+(x2-6)+'" stroke="'+col+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<path d="M'+(x2-9)+' '+(y-6)+' L'+x2+' '+y+' L'+(x2-9)+' '+(y+6)+'" fill="none" stroke="'+col+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'; };
+  var box=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+L+'" '+st+'/>'
+     +'<path d="M'+(x+w/2-6)+' '+y+' v'+(h*0.4)+' h12 v-'+(h*0.4)+'" fill="'+A+'" stroke="'+D+'" stroke-width="2" stroke-linejoin="round"/>'; };
+  var scale=function(x,y,w){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="10" rx="3" fill="#fff" '+st+'/>'
+     +'<rect x="'+(x+8)+'" y="'+(y+10)+'" width="'+(w-16)+'" height="16" rx="3" fill="'+L+'" '+st+'/>'
+     +'<rect x="'+(x+w/2-13)+'" y="'+(y+13)+'" width="26" height="10" rx="2" fill="'+D+'"/>'; };
+  var bar=function(x,y,w,h){ var s='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="#fff" '+st+'/>', i, xx=x+6, ws=[2,4,2,3,5,2,3,2,4,2,3];
+    for(i=0;i<ws.length && xx+ws[i]<x+w-6;i++){ s+='<rect x="'+xx+'" y="'+(y+5)+'" width="'+ws[i]+'" height="'+(h-10)+'" fill="'+D+'"/>'; xx+=ws[i]+2; }
+    return s; };
+  var dock=function(x,y,w){ return '<path d="M'+x+' '+y+' h'+w+' l-8 -14 h-'+(w-16)+' z" fill="'+A+'" '+st+'/>'
+     +'<rect x="'+(x+4)+'" y="'+y+'" width="'+(w-8)+'" height="40" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(x+4)+' '+(y+12)+' h'+(w-8)+' M'+(x+4)+' '+(y+24)+' h'+(w-8)+'" stroke="'+D+'" stroke-width="2"/>'; };
+  var bub=function(x,y,w,h,tail){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="8" fill="#fff" '+st+'/>'
+     +'<path d="M'+(x+tail)+' '+(y+h)+' l-4 10 l12 -10" fill="#fff" '+st+'/>'
+     +'<path d="M'+(x+tail-1)+' '+(y+h-1.5)+' h10" stroke="#fff" stroke-width="3"/>'; };
+  /* 學士帽（組長培訓），(cx,cy) 為帽頂中心 */
+  var cap=function(cx,cy){ return '<path d="M'+(cx-20)+' '+cy+' L'+cx+' '+(cy-9)+' L'+(cx+20)+' '+cy+' L'+cx+' '+(cy+9)+' Z" fill="'+D+'"/>'
+     +'<path d="M'+(cx+14)+' '+(cy+3)+' v12" stroke="'+A+'" stroke-width="3" stroke-linecap="round"/>'; };
+  /* 多能工表：cols×rows 格，marks 為打勾格的索引 */
+  var grid=function(x,y,cols,rows,cs,marks){ var s='<rect x="'+x+'" y="'+y+'" width="'+(cols*cs)+'" height="'+(rows*cs)+'" rx="3" fill="#fff" '+st+'/>', i, j;
+    for(i=1;i<cols;i++) s+='<path d="M'+(x+i*cs)+' '+y+' v'+(rows*cs)+'" stroke="'+D+'" stroke-width="2"/>';
+    for(j=1;j<rows;j++) s+='<path d="M'+x+' '+(y+j*cs)+' h'+(cols*cs)+'" stroke="'+D+'" stroke-width="2"/>';
+    for(i=0;i<marks.length;i++){ var c=marks[i]%cols, r=Math.floor(marks[i]/cols);
+      s+=chk(x+c*cs+cs*0.22,y+r*cs+cs*0.52,cs*0.56,G); }
+    return s; };
+  /* 品質看板（白板＋腳架） */
+  var board=function(x,y,w,h){ return '<path d="M'+(x+14)+' '+(y+h)+' l-8 22 M'+(x+w-14)+' '+(y+h)+' l8 22" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +'<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="#fff" '+st+'/>'
+     +'<rect x="'+(x+4)+'" y="'+(y+4)+'" width="'+(w-8)+'" height="6" rx="2" fill="'+B+'"/>'; };
+  /* 標籤吊牌 */
+  var tag=function(x,y,w,h,col){ return '<path d="M'+x+' '+y+' h'+(w-12)+' l12 '+(h/2)+' l-12 '+(h/2)+' h-'+(w-12)+' z" fill="'+col+'" '+st+'/>'
+     +'<circle cx="'+(x+w-13)+'" cy="'+(y+h/2)+'" r="3" fill="#fff" stroke="'+D+'" stroke-width="2"/>'; };
+  /* PDCA 循環圈 */
+  var pdca=function(cx,cy,r){ var k=r*0.45;
+    return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+C+'" '+st+'/>'
+     +'<path d="M'+(cx-r)+' '+cy+' h'+(2*r)+' M'+cx+' '+(cy-r)+' v'+(2*r)+'" stroke="'+D+'" stroke-width="2.5"/>'
+     +txt(cx-k,cy-k+5,'P',14,A)+txt(cx+k,cy-k+5,'D',14,A)+txt(cx+k,cy+k+5,'C',14,A)+txt(cx-k,cy+k+5,'A',14,A); };
+  /* 紅色不良品箱 */
+  var redbox=function(x,y,w,h){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+R+'" '+st+'/>'
+     +'<path d="M'+(x-4)+' '+y+' h'+(w+8)+'" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'; };
+
+  window.VIDEO_ART = window.VIDEO_ART || {};
+  Object.assign(window.VIDEO_ART, {
+
+    /* 2 Tom：計畫中的訓練進度如何？ */
+    au7TrainAsk: svg(
+      per(54,58,17,L)+cap(54,40)
+     +doc(92,34,60,92,'PLAN')
+     +qb(172,32)),
+
+    /* 3 Anita：組長培訓中，但考核紀錄尚未完整 */
+    au7TrainingGap: svg(
+      per(36,44,14,L)+cap(36,29)
+     +'<rect x="10" y="96" width="54" height="14" rx="7" fill="#fff" '+st+'/><rect x="12" y="98" width="26" height="10" rx="5" fill="'+A+'"/>'
+     +arr(74,104,72,D)
+     +gap(112,20,78,110)+doc(122,30,58,78,'TEST')
+     +txt(151,124,'NOT YET',11,R)),
+
+    /* 4 Tom：但你們有多能工表，對嗎？ */
+    au7MatrixAsk: svg(
+      grid(20,34,4,3,24,[0,1,5,6,10])
+     +'<path d="M20 26 h96" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/>'
+     +qb(162,52)),
+
+    /* 5 Anita：只有多能工表，不能證明所有人都合格 */
+    au7MatrixAlone: svg(
+      grid(8,40,3,3,22,[0,4,8])
+     +'<path d="M86 66 h22 M86 78 h22" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/>'+'<path d="M90 90 L104 54" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +per(132,56,12,L)+per(170,56,12,L)
+     +pill(118,104,68,22,'ALL OK?',C,R,11)),
+
+    /* 6 Tom：缺失還要求什麼？ */
+    au7FindingAsk: svg(
+      doc(26,24,78,108,'FINDING')
+     +'<rect x="34" y="70" width="44" height="10" rx="3" fill="'+A+'" fill-opacity=".35"/>'
+     +'<path d="M112 96 l22 0" stroke="'+D+'" stroke-width="3" stroke-dasharray="4 5" stroke-linecap="round"/>'
+     +qb(158,92)),
+
+    /* 7 Anita：也要求代理作業員實績 */
+    au7BackupEvidence: svg(
+      per(44,46,16,L)
+     +pill(18,108,52,20,'MAIN',G,'#fff',11)
+     +'<circle cx="104" cy="46" r="16" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="5 4"/>'
+     +'<path d="M76.8 92.4 a27.2 27.2 0 0 1 54.4 0" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="5 4"/>'
+     +pill(76,108,58,20,'BACKUP',C,D,10)
+     +gap(144,30,48,76)+doc(150,38,36,60,'')),
+
+    /* 8 Tom：誰負責這項改善？ */
+    au7OwnerAsk: svg(
+      per(36,74,12,L)+per(80,74,12,C)+per(124,74,12,L)
+     +'<path d="M24 124 h112" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +qb(80,30)),
+
+    /* 9 Anita：製造負責，包含組長培訓與多能工表 */
+    au7ProdOwns: svg(
+      '<path d="M10 120 V64 l22 -14 v14 l22 -14 v14 l22 -14 V120 Z" fill="'+L+'" '+st+'/>'
+     +'<rect x="30" y="92" width="16" height="28" fill="'+C+'" '+st+'/>'
+     +pill(10,126,66,18,'PROD',A,'#fff',11)
+     +arr(86,108,86,D)
+     +cap(146,36)+grid(118,62,3,2,20,[0,3,4])
+     +'<circle cx="182" cy="114" r="12" fill="'+G+'" '+st+'/>'+chk(175,114,13,'#fff')),
+
+    /* 10 Tom：發現什麼品質追蹤缺口？ */
+    au7TrackAsk: svg(
+      pdca(70,78,46)
+     +'<circle cx="138" cy="96" r="16" fill="'+C+'" fill-opacity=".6" '+st+'/><path d="M150 108 l16 16" stroke="'+D+'" stroke-width="6" stroke-linecap="round"/>'
+     +qb(164,36)),
+
+    /* 11 Anita：缺少 PDCA 追蹤總表 */
+    au7PdcaMissing: svg(
+      pdca(52,70,40)
+     +arr(98,116,70,D)
+     +gap(124,18,66,114)
+     +'<path d="M136 46 h42 M136 64 h42 M136 82 h42 M136 100 h42" stroke="'+R+'" stroke-width="2.5" stroke-dasharray="5 5" stroke-linecap="round"/>'
+     +txt(157,36,'LIST',12,R)),
+
+    /* 12 Tom：有看板就證明每項改善已結案嗎？ */
+    au7BoardAsk: svg(
+      board(14,30,80,66)
+     +'<rect x="26" y="68" width="10" height="20" fill="'+B+'"/><rect x="42" y="56" width="10" height="32" fill="'+A+'"/><rect x="58" y="62" width="10" height="26" fill="'+G+'"/>'
+     +arr(104,126,62,D)
+     +pill(130,50,62,24,'CLOSED',D,'#fff',11)
+     +qb(160,112)),
+
+    /* 13 Anita：看板呈現資訊，不能證明改善完成 */
+    au7BoardNotProof: svg(
+      board(8,26,78,64)
+     +'<path d="M18 46 h40 M18 58 h54 M18 70 h32" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>'
+     +'<path d="M96 54 h20 M96 66 h20" stroke="'+D+'" stroke-width="3.5" stroke-linecap="round"/><path d="M100 76 L112 44" stroke="'+R+'" stroke-width="3.5" stroke-linecap="round"/>'
+     +pill(124,48,66,24,'CLOSED',C,D,11)
+     +ex(157,60,30,R)),
+
+    /* 14 Tom：不良成品如何管控？ */
+    au7RejectAsk: svg(
+      box(22,62,52,46)+box(80,62,52,46)
+     +'<circle cx="106" cy="54" r="14" fill="'+R+'" '+st+'/>'+ex(106,54,12,'#fff')
+     +'<path d="M14 112 h128" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/>'
+     +qb(168,40)),
+
+    /* 15 Anita：缺當地規定、隔離區與維修紀錄 */
+    au7QuarantineGap: svg(
+      gap(8,24,56,96)+doc(16,34,40,56,'')+txt(36,110,'RULE',11,R)
+     +gap(72,24,56,96)+'<rect x="80" y="52" width="40" height="40" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="4 4"/>'+box(88,62,24,22)+txt(100,110,'AREA',11,R)
+     +gap(136,24,56,96)+doc(144,34,40,56,'')+txt(164,110,'REPAIR',10,R)),
+
+    /* 16 Tom：計畫對策是什麼？ */
+    au7ActionAsk: svg(
+      '<rect x="28" y="30" width="78" height="100" rx="6" fill="'+L+'" '+st+'/>'
+     +'<rect x="50" y="22" width="34" height="16" rx="4" fill="'+A+'" '+st+'/>'
+     +'<path d="M42 60 h50 M42 80 h50 M42 100 h36" stroke="'+D+'" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round"/>'
+     +qb(156,56)),
+
+    /* 17 Anita：計畫要求紅色箱與標籤，品保與製造共同負責 */
+    au7RedBoxLabel: svg(
+      redbox(16,48,72,56)
+     +tag(28,64,48,22,'#fff')
+     +pill(108,36,80,24,'QA',B,'#fff',12)
+     +pill(108,90,80,24,'PROD',A,'#fff',12)
+     +'<path d="M148 62 v26" stroke="'+D+'" stroke-width="3" stroke-dasharray="4 4" stroke-linecap="round"/>'),
+
+    /* 18 Tom：秤重能證明出貨標籤正確嗎？ */
+    au7WeightLabelAsk: svg(
+      box(24,52,56,44)+scale(14,98,76)
+     +'<path d="M96 76 h14" stroke="'+D+'" stroke-width="3" stroke-dasharray="4 4" stroke-linecap="round"/>'
+     +tag(116,64,62,26,L)
+     +qb(150,32)),
+
+    /* 19 Anita：秤重針對短裝；標籤核對是另一項流程 */
+    au7WeightVsLabel: svg(
+      box(18,50,48,40)+scale(10,92,64)
+     +'<circle cx="42" cy="32" r="12" fill="'+G+'" '+st+'/>'+chk(35,32,13,'#fff')
+     +'<path d="M100 18 v118" stroke="'+D+'" stroke-width="3" stroke-dasharray="6 6" stroke-linecap="round"/>'
+     +gap(118,40,74,60)+tag(126,58,58,24,'#fff')
+     +pill(118,110,74,22,'SEPARATE',C,R,10)),
+
+    /* 20 Tom：月台有與 EOL 相同的條碼功能嗎？ */
+    au7DockBarAsk: svg(
+      pill(14,26,60,22,'EOL',G,'#fff',12)
+     +bar(14,56,60,30)
+     +'<path d="M82 72 h16" stroke="'+D+'" stroke-width="3" stroke-dasharray="4 4" stroke-linecap="round"/>'
+     +dock(104,80,90)
+     +qb(150,40)),
+
+    /* 21 Anita：EOL 有，月台沒有；計畫只要求討論 */
+    au7EolNotDock: svg(
+      bar(8,22,56,28)+chk(24,74,22,G)
+     +pill(8,96,56,22,'EOL',G,'#fff',12)
+     +dock(76,74,70)
+     +gap(84,22,54,30)+ex(111,37,14,R)
+     +bub(150,20,44,28,14)+'<circle cx="162" cy="34" r="3" fill="'+D+'"/><circle cx="172" cy="34" r="3" fill="'+D+'"/><circle cx="182" cy="34" r="3" fill="'+D+'"/>'
+     +per(170,84,11,L))
+  });
+})();
+
+window.VIDEO.au07 = {
+ "title": "Audit English VII — Production",
+ "titleCn": "稽核英文七｜製造",
+ "date": "2026-11-02",
+ "level": "B1+",
+ "scene": "Factory Audit · Production",
+ "sceneCn": "工廠稽核・製造",
+ "sceneArt": "factory",
+ "titleArt": ["gradcap", "search", "nametag"],
+ "cast": {
+  "N": { "name": "Narrator", "cn": "旁白", "voice": "n" },
+  "A": { "name": "Anita", "cn": "Anita・現場窗口", "voice": "f" },
+  "T": { "name": "Tom", "cn": "Tom・客戶稽核員", "voice": "m" }
+ },
+ "chapters": [
+  { "en": "Intro", "cn": "開場" },
+  { "en": "The Audit Conversation", "cn": "情境：稽核問答" },
+  { "en": "Key Expressions", "cn": "重點表達" },
+  { "en": "Grammar", "cn": "文法" },
+  { "en": "Homework Fixes", "cn": "作業訂正" },
+  { "en": "Quick Quiz", "cn": "小測驗" }
+ ],
+ "expr": {
+  "assessment": { "t": "assessment", "cn": "考核", "tag": ["稽核英文", "製造"], "note": "搭配：assessment records（考核紀錄）。", "ex": "Assessment records are not complete in the September plan.", "exCn": "九月計畫記載考核紀錄尚未完整。" },
+  "backup": { "t": "backup", "cn": "代理人", "tag": ["稽核英文", "製造"], "note": "搭配：backup operator（代理作業員）。", "ex": "The action requires evidence for backup operators.", "exCn": "改善要求代理作業員實績。" },
+  "quarantine": { "t": "quarantine", "cn": "隔離", "tag": ["稽核英文", "不良品"], "note": "搭配：quarantine area（隔離區）。", "ex": "The assessment identifies a missing area for rejected finished products.", "exCn": "評估指出缺少成品不良品隔離區。" },
+  "tracking": { "t": "tracking", "cn": "追蹤", "tag": ["稽核英文", "品質"], "note": "搭配：quality tracking（品質追蹤）。", "ex": "The PDCA tracking list is missing in the assessment.", "exCn": "評估記載缺少 PDCA 追蹤總表。" },
+  "label": { "t": "label", "cn": "標籤", "tag": ["稽核英文", "出貨"], "note": "搭配：shipping label（出貨標籤）。", "ex": "The shipping-label checking process needs to be defined.", "exCn": "出貨標籤核對流程需要建立。" }
+ },
+ "lines": [
+  { "ch": 0, "sp": "N", "vis": { "type": "title" }, "en": "Welcome back. Today we practice answering a customer auditor about production.", "cn": "歡迎回來。今天我們練習用英文回答客戶稽核員有關製造的問題。" },
+  { "ch": 0, "sp": "N", "vis": { "type": "scene", "art": "auFiveKeys" }, "en": "Listen for five key words, the answer patterns, and how to tell training or a plan from real completion.", "cn": "注意聽五個關鍵詞、回答句型，以及如何分辨「有訓練、有計畫」與真正完成。" },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au7TrainAsk" }, "en": "What is the training status in the plan?", "cn": "計畫中的訓練進度如何？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au7TrainingGap" }, "en": "Team leaders are being trained, but assessment records are not complete yet.", "cn": "組長正在受訓，但考核紀錄尚未完整。", "hi": [{ "t": "assessment", "cn": "考核", "k": "assessment", "c": 1 }] },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au7MatrixAsk" }, "en": "But you have a skills matrix, correct?", "cn": "但你們有多能工表，對嗎？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au7MatrixAlone" }, "en": "Yes, but a skills matrix alone does not prove that all operators are qualified.", "cn": "有，但只有多能工表，不能證明所有作業員都合格。" },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au7FindingAsk" }, "en": "What else does the finding require?", "cn": "缺失還要求什麼？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au7BackupEvidence" }, "en": "It also requires evidence for backup operators.", "cn": "也要求代理作業員的實績。", "hi": [{ "t": "backup", "cn": "代理人", "k": "backup", "c": 1 }] },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au7OwnerAsk" }, "en": "Who owns this action?", "cn": "誰負責這項改善？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au7ProdOwns" }, "en": "Production owns it, including team-leader training and skills matrices.", "cn": "製造負責，包含組長培訓與多能工表。" },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au7TrackAsk" }, "en": "What quality tracking gap was identified?", "cn": "發現什麼品質追蹤缺口？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au7PdcaMissing" }, "en": "The assessment identifies a missing PDCA tracking list.", "cn": "評估指出缺少 PDCA 追蹤總表。", "hi": [{ "t": "tracking", "cn": "追蹤", "k": "tracking", "c": 1 }] },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au7BoardAsk" }, "en": "Does a quality board prove that every action is closed?", "cn": "有品質看板就證明每項改善已結案嗎？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au7BoardNotProof" }, "en": "No. A board can display information, but it does not by itself prove completion.", "cn": "不能。看板可呈現資訊，但本身不能證明改善完成。" },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au7RejectAsk" }, "en": "How are rejected finished products controlled?", "cn": "不良成品如何管控？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au7QuarantineGap" }, "en": "The assessment lists gaps in local rules, the quarantine area, and repair records.", "cn": "評估列出當地規定、隔離區與維修紀錄的缺口。", "hi": [{ "t": "quarantine", "cn": "隔離", "k": "quarantine", "c": 1 }] },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au7ActionAsk" }, "en": "What is the planned action?", "cn": "計畫對策是什麼？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au7RedBoxLabel" }, "en": "The plan calls for local rules, red boxes, and labels. QA and Production share the action.", "cn": "計畫要求當地規定、紅色箱及標籤，由品保與製造共同負責。" },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au7WeightLabelAsk" }, "en": "Do weight checks prove the shipping label is correct?", "cn": "秤重能證明出貨標籤正確嗎？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au7WeightVsLabel" }, "en": "No. Weight checks address missing items. Shipping-label checking is a separate process.", "cn": "不能。秤重針對短裝，出貨標籤核對是另一項流程。", "hi": [{ "t": "label", "cn": "標籤", "k": "label", "c": 1 }] },
+  { "ch": 1, "sp": "T", "vis": { "type": "scene", "art": "au7DockBarAsk" }, "en": "Does the dock have the same barcode function as EOL?", "cn": "月台有與 EOL 相同的條碼功能嗎？" },
+  { "ch": 1, "sp": "A", "vis": { "type": "scene", "art": "au7EolNotDock" }, "en": "No. EOL has the function, but the dock does not. The plan only calls for discussion about adding it.", "cn": "沒有。EOL 有此功能，月台沒有；計畫只要求討論是否增加。" },
+  { "ch": 2, "sp": "N", "vis": { "type": "slide", "w": "assessment", "ipa": "/əˈsesmənt/", "pos": "n.", "art": "exam", "def": "assessment n. — assessment records.", "cn": "考核｜搭配：考核紀錄", "note": "搭配：assessment records（考核紀錄）。" }, "en": "Assessment records are not complete in the September plan.", "cn": "九月計畫記載考核紀錄尚未完整。" },
+  { "ch": 2, "sp": "N", "vis": { "type": "slide", "w": "backup", "ipa": "/ˈbækʌp/", "pos": "n.", "art": "facesL", "def": "backup n. — backup operator.", "cn": "代理人｜搭配：代理作業員", "note": "搭配：backup operator（代理作業員）。" }, "en": "The action requires evidence for backup operators.", "cn": "改善要求代理作業員實績。" },
+  { "ch": 2, "sp": "N", "vis": { "type": "slide", "w": "quarantine", "ipa": "/ˈkwɔːr.ən.tiːn/", "pos": "n.", "art": "lock", "def": "quarantine n. — quarantine area.", "cn": "隔離｜搭配：隔離區", "note": "搭配：quarantine area（隔離區）。" }, "en": "The assessment identifies a missing area for rejected finished products.", "cn": "評估指出缺少成品不良品隔離區。" },
+  { "ch": 2, "sp": "N", "vis": { "type": "slide", "w": "tracking", "ipa": "/ˈtræk.ɪŋ/", "pos": "n.", "art": "search", "def": "tracking n. — quality tracking.", "cn": "追蹤｜搭配：品質追蹤", "note": "搭配：quality tracking（品質追蹤）。" }, "en": "The PDCA tracking list is missing in the assessment.", "cn": "評估記載缺少 PDCA 追蹤總表。" },
+  { "ch": 2, "sp": "N", "vis": { "type": "slide", "w": "label", "ipa": "/ˈleɪ.bəl/", "pos": "n.", "art": "nametag", "def": "label n. — shipping label.", "cn": "標籤｜搭配：出貨標籤", "note": "搭配：shipping label（出貨標籤）。" }, "en": "The shipping-label checking process needs to be defined.", "cn": "出貨標籤核對流程需要建立。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "pattern", "kick": "The plan says X are being + p.p.", "art": "clipboard", "rows": [{ "lab": "依紀錄說進度", "blocks": [{ "t": "The plan says", "k": "s" }, { "t": "主詞 are being", "k": "v" }, { "t": "過去分詞", "k": "o" }] }] }, "en": "The September plan says team leaders are being trained.", "cn": "九月計畫記載組長正在接受培訓。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "pattern", "kick": "X alone does not prove that…", "art": "search", "rows": [{ "lab": "不能只看一項證據", "blocks": [{ "t": "名詞 alone", "k": "s" }, { "t": "does not prove", "k": "v" }, { "t": "that 子句", "k": "o" }] }] }, "en": "A skills matrix alone does not prove that all operators are qualified.", "cn": "只有多能工表，不能證明所有作業員均已合格。" },
+  { "ch": 3, "sp": "N", "vis": { "type": "pattern", "kick": "The plan calls for + 名詞", "art": "calendar", "rows": [{ "lab": "說明改善要求", "blocks": [{ "t": "The plan", "k": "s" }, { "t": "calls for", "k": "v" }, { "t": "名詞", "k": "o" }] }] }, "en": "The plan calls for local rules, red boxes, and labels.", "cn": "計畫要求建立當地規定、紅色箱及標籤。" },
+  { "ch": 4, "sp": "N", "vis": { "type": "fix", "n": 2, "wrong": "A skills matrix proves that all operators are qualified.", "bad": [], "fix": "A skills matrix alone does not prove qualification. Assessment records need to be reviewed with it." }, "en": "A skills matrix alone does not prove qualification. Assessment records need to be reviewed with it.", "cn": "只有多能工表不能證明資格；需要一起檢視考核紀錄。" },
+  { "ch": 5, "sp": "N", "vis": { "type": "quiz", "q": "___ records are not complete in the September plan.", "a": "Assessment", "n": 1 }, "en": "___ records are not complete in the September plan.", "cn": "九月計畫記載＿＿紀錄尚未完整。", "say": "Blank, records are not complete in the September plan.", "pause": 4000 },
+  { "ch": 5, "sp": "N", "vis": { "type": "quiz", "q": "The action requires evidence for ___ operators.", "a": "backup", "n": 2 }, "en": "The action requires evidence for ___ operators.", "cn": "改善要求＿＿作業員實績。", "say": "The action requires evidence for , blank, operators.", "pause": 4000 },
+  { "ch": 5, "sp": "N", "vis": { "type": "quiz", "q": "The PDCA ___ list is missing.", "a": "tracking", "n": 3 }, "en": "The PDCA ___ list is missing.", "cn": "缺少 PDCA ＿＿總表。", "say": "The P D C A , blank, list is missing.", "pause": 4000 },
+  { "ch": 5, "sp": "N", "vis": { "type": "quiz", "q": "The shipping-___ checking process needs to be defined.", "a": "label", "n": 4 }, "en": "The shipping-___ checking process needs to be defined.", "cn": "出貨＿＿核對流程需要建立。", "say": "The shipping , blank, checking process needs to be defined.", "pause": 4000 },
+  { "ch": 5, "sp": "N", "vis": { "type": "end" }, "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.", "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
+ ]
+};
+
 
 /* ===== bk20261015 Quality Specifications & Question Practice ===== */
 window.VIDEO = window.VIDEO || {};
