@@ -80,8 +80,8 @@ notes:[
     },
     {
       "sp": "Tom",
-      "en": "My cousin's old guitar. He doesn't play it now.",
-      "cn": "我表哥的舊吉他，他現在不彈了。"
+      "en": "My cousin's old electric guitar. He doesn't play it now.",
+      "cn": "我表哥的舊電吉他，他現在不彈了。"
     },
     {
       "sp": "Lisa",
@@ -130,8 +130,8 @@ notes:[
     },
     {
       "sp": "Tom",
-      "en": "Not really. I feel shy when people hear me play.",
-      "cn": "不太安靜。別人聽到我彈琴，我會有點害羞。"
+      "en": "Not really. Tom feels shy when people hear him play.",
+      "cn": "不太安靜。別人聽到他彈琴，Tom會有點害羞。"
     },
     {
       "sp": "Lisa",
@@ -171,7 +171,7 @@ notes:[
         "D. 學校借他的"
       ],
       "ans": 1,
-      "expl": "My cousin's old guitar. He doesn't play it now.——Tom第一次回答就說了。"
+      "expl": "My cousin's old electric guitar. He doesn't play it now.——Tom第一次回答就說了。"
     },
     {
       "q": "How long will Tom practice each time?",
