@@ -30348,6 +30348,239 @@ window.BOOK = {
       { "q": "What happens if a unit fails the test?", "qCn": "", "a": "If I find a defective part, I label the unit as defective and separate it from the qualified products. Then I record the serial number and the defect description in the quality report.", "aCn": "如果發現不良零件，我會把它標示為不良品，與合格品分開，再把序號和不良描述記在品質報告中。" },
       { "q": "How do you identify and record defective products?", "qCn": "", "a": "We identify defective products by visual inspection and functional testing. Then, we attach a defect label and record defect description.", "aCn": "我們透過目視檢查和功能測試找出不良品，接著貼上不良標籤並記錄不良描述。" }
     ]
+  },
+  /* ---- bk20261103 First-Piece Inspection & Outdated Drawings ---- */
+  {
+    "id": "bk20261103",
+    "video": true,
+    "icon": "📐",
+    "iconSvg": "<svg viewBox=\"0 0 96 96\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"48\" cy=\"48\" r=\"45\" fill=\"#fff\" stroke=\"#f0c9a0\" stroke-width=\"3\"/><rect x=\"14\" y=\"22\" width=\"44\" height=\"50\" rx=\"4\" fill=\"#fdf6ec\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><path d=\"M22 34 h28 M22 34 v26 M22 60 h18\" fill=\"none\" stroke=\"#3b82c4\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"36\" cy=\"47\" r=\"6\" fill=\"none\" stroke=\"#3b82c4\" stroke-width=\"3\"/><path d=\"M16 70 l40 -46\" stroke=\"#d9534f\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"58\" y=\"48\" width=\"24\" height=\"22\" rx=\"3\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><circle cx=\"70\" cy=\"34\" r=\"10\" fill=\"#fff\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><path d=\"M65 34 l4 4 l7 -8\" fill=\"none\" stroke=\"#3f9e64\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+    "date": "2026-11-03",
+    "doc": "https://docs.google.com/document/d/11vnPo4xvDm1z1Br_yr_vzDHtXJ4UYHCCjQ2zvjexPbI/edit",
+    "title": "First-Piece Inspection & Outdated Drawings",
+    "titleCn": "首件檢驗與過時圖面",
+    "topics": "outdated drawing・first piece inspection・rejected parts・prevent A from getting mixed up・問題報告句型・被動語態報告缺陷・溫控儲藏室與環境試驗箱",
+    "hwTitle": "I. ★ 11/03 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "wrong": "The supplier used an outdated drawing to produce the part that explained why they couldn't assemble it.",
+        "fix": "The supplier used an outdated drawing to manufacture the part, which explained why they couldn't assemble it.",
+        "cn": "供應商用過時的圖面製造零件，這就說明了為什麼他們無法組裝。",
+        "pat": "use A to + V／..., which explained why + 子句",
+        "note": "原句的 that 會指到 the part，變成「這個零件解釋了為什麼……」，意思不對；在逗號後用 which，才是指前面「用舊圖面製造零件」整件事。 produce 和 manufacture 都可以，但工廠量產零件用 manufacture the part 更貼切。 事情已經發生，所以用 couldn't（過去式）。 outdated drawing 指已經不是現行有效的圖面；圖面改了尺寸或規格，用舊圖面會造成組裝或生產問題。"
+      },
+      {
+        "n": 2,
+        "ok": "There is no need to inspect the same lot number again because it has already passed the inspection.",
+        "cn": "不需要再檢驗同一個批號，因為它已經通過檢驗了。",
+        "pat": "There is no need to + V／pass the inspection",
+        "note": "lot number ＝ 批號，是同一批、同一條件下製造或處理的產品的識別編號。 pass the inspection ＝ 通過檢驗，表示產品或整批符合品質標準；除非有特殊原因，同一批通常不需要再檢驗。 has already passed 是現在完成式，already 放在 has 和 passed 中間。"
+      },
+      {
+        "n": 3,
+        "wrong": "We need to perform an inspection on first unit when the production line changes.",
+        "fix": "We need to perform a first piece inspection when the production line changes.",
+        "cn": "更換生產線時，我們需要做首件檢驗。",
+        "pat": "perform / conduct a first piece inspection",
+        "note": "「首件檢驗」的正確說法是 first piece inspection，不是 inspection first unit。 動詞 perform an inspection 和 conduct an inspection 都可以，所以 We need to conduct a first piece inspection ... 也對。 首件檢驗在開始生產、重新生產或有重要變動時進行，確認第一件產品符合規格後再繼續量產。 when 後面接時間／條件子句，用現在式 changes。 更簡單的說法：We need to inspect the first product before mass production.（不能說 perform the first product，perform 後面要接 inspection 這類名詞；要用 perform 就說 perform an inspection on the first product，但比較長。）"
+      },
+      {
+        "n": 4,
+        "wrong": "We need to prevent reject parts for entering the warehouse.",
+        "fix": "We need to prevent rejected parts from entering the warehouse.",
+        "cn": "我們必須防止不良品進入倉庫。",
+        "pat": "prevent + A + from + V-ing",
+        "note": "prevent A from doing something：from 後面的動詞要用 -ing，介系詞是 from，不是 for。 reject 是動詞；要修飾 parts（沒通過檢驗、不符合要求的零件）要用 rejected。 rejected parts 不可以和合格品一起進倉庫，否則可能把不合格品出貨，或和良品混在一起。"
+      },
+      {
+        "n": 5,
+        "wrong": "The supplier used different color boxes to prevent left and right handlebar from being mixed up.",
+        "fix": "The supplier uses different color bins to prevent left- and right-handed parts from being mixed up.",
+        "cn": "供應商用不同顏色的箱子，防止左右手零件被搞混。",
+        "pat": "prevent A from being / getting mixed up",
+        "note": "句型是 prevent A from being mixed up，也可以說 prevent A from getting mixed up，兩種都可以，語法形式稍有不同。 用顏色、標籤、不同儲位區分相似零件，可以避免它們混淆。 課堂上老師寫的是 Prevent A from getting mixed up，例：We use different labels to prevent the products from getting mixed up."
+      }
+    ],
+    "vocabTitle": "II. 單字 Vocabulary",
+    "vocab": [
+      { "w": "outdated", "ipa": "/ˌaʊtˈdeɪ.t̬ɪd/", "pos": "adj.", "cn": "過時的", "ex": "The factory uses an outdated machine.", "exCn": "這家工廠使用過時的機器。" },
+      { "w": "updated / the latest version", "ipa": "/ˌʌpˈdeɪ.t̬ɪd/", "pos": "adj.", "cn": "已更新的／最新版本（outdated 的反義）", "ex": "This is the latest version of the drawing.", "exCn": "這是圖面的最新版本。" },
+      { "w": "drawing", "ipa": "/ˈdrɑː.ɪŋ/", "pos": "n.", "cn": "圖面、圖紙", "ex": "Please check the latest drawing.", "exCn": "請確認最新版圖面。" },
+      { "w": "manufacture", "ipa": "/ˌmæn.jəˈfæk.tʃɚ/", "pos": "v.", "cn": "製造", "ex": "We manufacture treadmill frames.", "exCn": "我們製造跑步機車架。" },
+      { "w": "assemble", "ipa": "/əˈsembəl/", "pos": "v.", "cn": "組裝", "ex": "The operator assembles the frame and the handlebars.", "exCn": "作業員組裝車架和把手。" },
+      { "w": "first piece inspection", "star": true, "ipa": "/ˌfɝːst ˈpiːs ɪnˈspek.ʃən/", "pos": "n.", "cn": "首件檢驗", "ex": "We do a first piece inspection before mass production.", "exCn": "量產前我們會做首件檢驗。" },
+      { "w": "production line", "ipa": "/prəˈdʌk.ʃən laɪn/", "pos": "n.", "cn": "生產線", "ex": "The production line stopped for one hour.", "exCn": "生產線停了一小時。" },
+      { "w": "conduct", "ipa": "/kənˈdʌkt/", "pos": "v.", "cn": "進行、執行", "ex": "The QC team conducts an inspection every morning.", "exCn": "品管團隊每天早上進行檢驗。" },
+      { "w": "reject / rejected", "star": true, "ipa": "/rɪˈdʒekt/ /rɪˈdʒek.tɪd/", "pos": "v.／adj.", "cn": "拒絕、判定不合格；rejected parts ＝ 不良品", "ex": "The inspector rejected the whole lot.", "exCn": "檢驗員判定整批不合格。" },
+      { "w": "defective", "ipa": "/dɪˈfek.tɪv/", "pos": "adj.", "cn": "有缺陷的（描述產品狀況）；rejected 是檢驗後的判定", "ex": "These products are defective and cannot be shipped.", "exCn": "這些產品有瑕疵，不能出貨。" },
+      { "w": "batch", "ipa": "/bætʃ/", "pos": "n.", "cn": "批、一批（一起製造或處理的一組產品）", "ex": "We rejected this batch.", "exCn": "我們判定這一批不合格。" },
+      { "w": "poor appearance", "ipa": "/ˌpʊr əˈpɪr.əns/", "pos": "n.", "cn": "外觀不良", "ex": "The product was rejected because of poor appearance.", "exCn": "這個產品因為外觀不良被判定不合格。" },
+      { "w": "scratch", "ipa": "/skrætʃ/", "pos": "n.", "cn": "刮痕", "ex": "There is a scratch on the surface.", "exCn": "表面有一道刮痕。" },
+      { "w": "dent", "ipa": "/dent/", "pos": "n.", "cn": "凹痕", "ex": "There is a dent on the frame.", "exCn": "車架上有凹痕。" },
+      { "w": "warehouse", "ipa": "/ˈwerhaʊs/", "pos": "n.", "cn": "倉庫", "ex": "The parts are stored in the warehouse.", "exCn": "零件存放在倉庫裡。" },
+      { "w": "handlebar", "ipa": "/ˈhæn.dəl.bɑːr/", "pos": "n.", "cn": "把手", "ex": "Each treadmill has a left and a right handlebar.", "exCn": "每台跑步機有左右兩支把手。" },
+      { "w": "get mixed up", "star": true, "ipa": "/ɡet ˌmɪkst ˈʌp/", "pos": "phr. v.", "cn": "混淆、搞混", "ex": "The old and new parts got mixed up.", "exCn": "新舊零件被搞混了。" },
+      { "w": "isolate", "ipa": "/ˈaɪ.sə.leɪt/", "pos": "v.", "cn": "隔離（把可疑或不良品分開管制）", "ex": "We need to isolate the units immediately.", "exCn": "我們需要立刻隔離這些產品。" },
+      { "w": "inform", "ipa": "/ɪnˈfɔːrm/", "pos": "v.", "cn": "通知（清楚正式地告知）", "ex": "We need to inform the supplier.", "exCn": "我們需要通知供應商。" },
+      { "w": "specification", "ipa": "/ˌspes.ə.fɪˈkeɪ.ʃən/", "pos": "n.", "cn": "規格", "ex": "The dimension does not meet specification.", "exCn": "這個尺寸不符合規格。" },
+      { "w": "quantity (QTY)", "ipa": "/ˈkwɑːn.t̬ə.t̬i/", "pos": "n.", "cn": "數量（QTY 是表單縮寫，完整句子要寫 quantity）", "ex": "Please record the quantity of defective units.", "exCn": "請記錄不良品的數量。" },
+      { "w": "replace", "ipa": "/rɪˈpleɪs/", "pos": "v.", "cn": "更換", "ex": "We replace the defective part with a new one.", "exCn": "我們用新零件更換不良零件。" },
+      { "w": "checklist", "ipa": "/ˈtʃeklɪst/", "pos": "n.", "cn": "檢查表", "ex": "The QC team fills out the checklist.", "exCn": "品管團隊填寫檢查表。" },
+      { "w": "count", "ipa": "/kaʊnt/", "pos": "v.", "cn": "統計、計算", "ex": "We count the defective units every day.", "exCn": "我們每天統計不良品數量。" }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases",
+    "phrases": [
+      { "p": "outdated drawing / the latest drawing", "cn": "過時的圖面／最新版圖面" },
+      { "p": "manufacture the part", "cn": "製造零件" },
+      { "p": "update the drawing in the system", "cn": "在系統中更新圖面" },
+      { "p": "inform the supplier / send it to the supplier", "cn": "通知供應商／寄給供應商" },
+      { "p": "perform / conduct an inspection", "cn": "進行檢驗" },
+      { "p": "first piece inspection", "cn": "首件檢驗" },
+      { "p": "pass the inspection", "cn": "通過檢驗" },
+      { "p": "rejected parts", "cn": "不良品／被判定不合格的零件" },
+      { "p": "enter the warehouse", "cn": "進入倉庫" },
+      { "p": "take measures to + V", "cn": "採取措施" },
+      { "p": "prevent A from getting mixed up", "cn": "防止 A 被搞混" },
+      { "p": "poor appearance", "cn": "外觀不良" },
+      { "p": "outside / not within the set range", "cn": "超出設定範圍" },
+      { "p": "evaluate corrosion resistance", "cn": "評估耐腐蝕性" },
+      { "p": "send the unit to the QC team", "cn": "將產品送交品管團隊" },
+      { "p": "record the total quantity", "cn": "記錄總數量" }
+    ],
+    "grammarTitle": "IV. 句型與文法解說 Sentence Patterns",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "prevent A from doing something",
+        "pat": "prevent + A + from + V-ing ／ prevent A from getting mixed up",
+        "pts": [
+          "結構：prevent 後面先放被防止的對象（A），再接 from + V-ing。",
+          "中文解析：「防止 A 發生什麼事」；from 後面不能接原形動詞或 to。",
+          "take measures 是「採取措施、採取行動」，用來解決或預防問題。",
+          "使用情境：品管常見錯誤多半來自相似零件沒有清楚分開、標示或存放；用不同顏色的箱子、標籤和儲位區域，可以避免混淆。"
+        ],
+        "exs": [
+          { "tag": "take measures to prevent", "en": "We need to take measures to prevent defective products from entering the warehouse.", "cn": "我們需要採取措施，防止不良品進入倉庫。" },
+          { "tag": "prevent A from getting mixed up", "en": "We use different labels to prevent the products from getting mixed up.", "cn": "我們用不同的標籤，防止產品被搞混。" }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "首件檢驗與 perform／conduct",
+        "pat": "perform / conduct a first piece inspection ／ inspect the first product",
+        "pts": [
+          "結構：perform / conduct + an inspection；單純說「檢驗第一個產品」則直接用動詞 inspect。",
+          "中文解析：perform 和 conduct 都可以接 inspection，不可以直接接 the first product。",
+          "使用情境：生產線更換、開始生產或重新開機時，先確認第一件產品符合規格。"
+        ],
+        "exs": [
+          { "tag": "inspect + 物", "en": "We need to inspect the first product before mass production.", "cn": "量產前，我們需要檢驗第一個產品。" }
+        ]
+      },
+      {
+        "k": "IV-C",
+        "title": "過時圖面與改善措施",
+        "pat": "To prevent this from happening again, we should + V",
+        "pts": [
+          "inform 是動詞，意思是清楚正式地告知；這裡供應商必須被通知圖面已經更新。",
+          "「最新版」是 the latest drawing，不是 last version drawing。",
+          "outdated 的反義是 updated 或 the latest version：The machine is outdated.／We need the latest version of the drawing.／The drawing has been updated.",
+          "updated 可以當形容詞（The drawing is updated.），技術文件常寫 has been updated。"
+        ],
+        "exs": [
+          { "tag": "改善措施", "en": "To prevent this from happening again, we should update the drawing in the system and inform the supplier.", "cn": "為了防止這種情況再次發生，我們應該在系統中更新圖面，並通知供應商。" },
+          { "tag": "改善措施", "en": "To prevent this from happening again, we should update the outdated drawing and send it to the supplier.", "cn": "為了防止這種情況再次發生，我們應該更新過時的圖面並寄給供應商。" },
+          { "tag": "the latest drawing", "en": "We should use the latest drawing.", "cn": "我們應該使用最新版圖面。" }
+        ]
+      },
+      {
+        "k": "IV-D",
+        "title": "問題報告常用句型 Useful sentence patterns",
+        "pat": "We need to make sure that... ／ The main reason is that... ／ The product was rejected because of / because there were... ／ We found a defect during the inspection, so...",
+        "pts": [
+          "The main reason is that 後面要接完整子句（有主詞和動詞），不能只寫 because of several rainy days。",
+          "管子是金屬做的，遇到濕氣才會生鏽；塑膠一般不會生鏽。也可以說 The main reason is that there was too much humidity.",
+          "because of 後面接名詞（poor appearance）；because there were 後面接完整子句。",
+          "defective 描述產品的狀況，rejected 是檢驗後的判定；產品可能因為 defective 而被 rejected。",
+          "scratch 是表面的線狀刮痕，dent 是凹陷或受損的地方；表面缺陷常見這兩種。",
+          "batch 是一起製造或處理的一組產品；一個零件有缺陷，可能要整批退回或再檢驗，要看檢驗規則。"
+        ],
+        "exs": [
+          { "tag": "We need to make sure that...", "en": "We need to make sure that the supplier uses the latest drawing.", "cn": "我們必須確認供應商使用最新版圖面。" },
+          { "tag": "The main reason is that...", "en": "There was rust inside the tube. The main reason is that it has rained a lot during the past few days.", "cn": "管子裡面有生鏽。主要原因是過去幾天下了很多雨。" },
+          { "tag": "The product was rejected because of...", "en": "The product was rejected because of poor appearance.", "cn": "這個產品因為外觀不良被判定不合格。" },
+          { "tag": "The product was rejected because there were...", "en": "The product was rejected because there were some scratches or dents on the surface.", "cn": "這個產品被判定不合格，因為表面有一些刮痕或凹痕。" },
+          { "tag": "We found a defect during the inspection, so...", "en": "We found a defect during the inspection, so we rejected this batch.", "cn": "我們在檢驗時發現瑕疵，所以判定這一批不合格。" }
+        ]
+      },
+      {
+        "k": "IV-E",
+        "title": "用被動語態報告缺陷",
+        "pat": "Active：We found + 缺陷 ／ Passive：缺陷 + was found",
+        "pts": [
+          "主動寫法：We found rust on the surface.；被動寫法 Rust was found on the surface. 在品質文件裡更客觀、更專業，很常用。",
+          "缺陷描述還有 missing parts（零件缺失）。",
+          "does not meet specification 的意思是測量到的尺寸超出公差，或和圖面、標準不一致。"
+        ],
+        "exs": [
+          { "tag": "被動語態", "en": "Rust was found on the surface during inspection.", "cn": "檢驗時，表面發現生鏽。" },
+          { "tag": "不符合規格", "en": "The dimension does not meet specification.", "cn": "這個尺寸不符合規格。" }
+        ]
+      },
+      {
+        "k": "IV-F",
+        "title": "溫控儲藏室、環境試驗箱與警報",
+        "pat": "If the temperature is not within the set range, the system automatically sends us an alert.",
+        "pts": [
+          "「超出設定範圍」要說 outside the set range 或 not within the set range，不是 out of space。",
+          "alert、warning、notification 都可以指警報通知。",
+          "climate-controlled storage room 是控制溫濕度、保護零件存放的空間；environmental chamber 是在受控的溫度、濕度或腐蝕條件下測試產品的設備。",
+          "測試要評估的是 corrosion resistance（耐腐蝕性），不是單說 corrosion（腐蝕）；用字不精準，別人可能會誤解。"
+        ],
+        "exs": [
+          { "tag": "溫度監控", "en": "We have installed a temperature monitoring system in the climate-controlled storage room. This device can monitor the temperature 24/7 and send notifications to our phones if the temperature is outside the set range.", "cn": "我們在溫控儲藏室裝了溫度監控系統。這個裝置可以全天候監控溫度，溫度超出設定範圍時會傳通知到我們的手機。" },
+          { "tag": "溫控儲藏室", "en": "We have built a climate-controlled storage room because electrical parts may be damaged by humidity.", "cn": "我們建了溫控儲藏室，因為電氣零件可能會被濕氣損壞。" },
+          { "tag": "環境試驗箱", "en": "We perform the test in the environmental chamber to evaluate corrosion resistance.", "cn": "我們在環境試驗箱做測試，評估耐腐蝕性。" }
+        ]
+      }
+    ],
+    "extraTitle": "V. 練習 Practice",
+    "extra": [
+      {
+        "title": "A. 中文翻譯（老師只給中文，英文為參考）",
+        "exs": [
+          { "tag": "隔離不良品", "en": "isolate the defective products", "cn": "隔離不良品" },
+          { "tag": "合格品", "en": "qualified products", "cn": "合格品" },
+          { "tag": "通知供應商", "en": "inform the supplier", "cn": "通知供應商" },
+          { "tag": "表面發現生鏽", "en": "Rust was found on the surface.", "cn": "表面發現生鏽" },
+          { "tag": "零件缺失", "en": "missing parts", "cn": "零件缺失" },
+          { "tag": "尺寸不符合規格", "en": "The dimension does not meet specification.", "cn": "尺寸不符合規格" },
+          { "tag": "最新版圖面", "en": "the latest drawing / the latest version of the drawing", "cn": "最新版圖面" }
+        ]
+      },
+      {
+        "title": "B. 段落翻譯：發現不良零件的處理",
+        "exs": [
+          { "tag": "段落", "en": "When an operator finds a defective part, they need to replace it and send the unit to the Quality Control (QC) team. The QC team must complete the checklist and count the defective units, recording the total quantity.", "cn": "當作業員發現有瑕疵的零件時，必須更換該零件，並將產品送交品管部門檢查。品管部門必須填寫檢查表，並統計及記錄不良品的數量。" }
+        ]
+      },
+      {
+        "title": "C. 填空練習（附答案）",
+        "exs": [
+          { "tag": "1. Q", "en": "We need to ______ the first product before mass production.", "cn": "" },
+          { "tag": "A", "en": "We need to inspect the first product before mass production.", "cn": "量產前，我們需要檢驗第一個產品。" },
+          { "tag": "2. Q", "en": "The supplier used an ______ drawing.", "cn": "" },
+          { "tag": "A", "en": "The supplier used an outdated drawing.", "cn": "供應商使用了過時的圖面。" },
+          { "tag": "3. Q", "en": "These products are ______ and cannot be shipped.", "cn": "" },
+          { "tag": "A", "en": "These products are defective and cannot be shipped.", "cn": "這些產品有瑕疵，不能出貨。" },
+          { "tag": "4. Q", "en": "We use different labels to prevent the products from getting ______.", "cn": "" },
+          { "tag": "A", "en": "We use different labels to prevent the products from getting mixed up.", "cn": "我們用不同的標籤，防止產品被搞混。" },
+          { "tag": "5. Q", "en": "We need to take measures to ______ defective products from entering the warehouse.", "cn": "" },
+          { "tag": "A", "en": "We need to take measures to prevent defective products from entering the warehouse.", "cn": "我們需要採取措施，防止不良品進入倉庫。" }
+        ]
+      }
+    ]
   }
   ]
 };
