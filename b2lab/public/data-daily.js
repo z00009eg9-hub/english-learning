@@ -7,6 +7,793 @@
 window.DAILY = {
 
 articles:[
+/* ---------- 2026-11-04 每日文章（天災與天氣：颱風Champi與那句「我來」） ---------- */
+{
+  "id": "d20261104a2",
+  "date": "2026-11-04",
+  "level": "A2",
+  "topic": "家人與朋友",
+  "words": 92,
+  "kind": "orig",
+  "title": "Everyone Will Help Tom",
+  "titleCn": "大家都會來幫Tom",
+  "focus": "I'll 用在話說出口那一刻的提議與答應（I'll go、I'll bring），Shall I…? 是問對方「要不要我來做」，won't 講「我不會那樣做」",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "颱風今晚要來，Tom家裡少了水，朋友也打電話來。這一篇請注意兩個形狀：Shall I 開頭的句子是在問對方要不要自己動手，I'll 開頭的句子是這一秒才決定要做。中文兩種都講「我來」或「我會」，英文卻分得很清楚。最後一句的 will leave 是Tom在猜，不是他能決定的事。",
+  "spoken": [
+    {
+      "en": "No water left. Shall I go?",
+      "cn": "水沒了，要我去嗎？"
+    },
+    {
+      "en": "I'll go to the store.",
+      "cn": "我去店裡。"
+    },
+    {
+      "en": "Kevin will bring tape.",
+      "cn": "Kevin會帶膠帶來。"
+    },
+    {
+      "en": "One flashlight. That's enough.",
+      "cn": "一支手電筒就夠了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "A big typhoon is coming to Taiwan tonight. Tom is at home with his mother and his sister. They look at the empty water bottles on the shelf.",
+      "cn": "一個大颱風今晚要來台灣。Tom和媽媽、姊姊在家裡。他們看著架子上空的水瓶。"
+    },
+    {
+      "en": "\"Shall I buy some water?\" Tom asks. His mother says that is a good idea. \"I'll go to the store now,\" Tom says.",
+      "cn": "「要我去買水嗎？」Tom問。媽媽說這是個好主意。「我現在就去店裡。」Tom說。"
+    },
+    {
+      "en": "His friend Kevin calls him. Kevin will bring tape for the windows. \"I won't be late,\" Kevin says.",
+      "cn": "他的朋友Kevin打電話給他。Kevin會帶膠帶來貼窗戶。「我不會遲到。」Kevin說。"
+    },
+    {
+      "en": "At eight the rain is very heavy. The family sits together and uses one flashlight. Tom thinks the storm will leave on Thursday.",
+      "cn": "八點的時候雨很大。一家人坐在一起，用一支手電筒。Tom覺得颱風星期四會走。"
+    }
+  ],
+  "target": [
+    {
+      "w": "typhoon",
+      "ipa": "/taɪˈfuːn/",
+      "pos": "n.",
+      "cn": "颱風",
+      "def": "A very big storm with strong wind and heavy rain.",
+      "ex": "Our school closed for one day after the typhoon.",
+      "exCn": "颱風過後我們學校停課一天。"
+    },
+    {
+      "w": "bottle",
+      "ipa": "/ˈbɑːtl/",
+      "pos": "n.",
+      "cn": "瓶子",
+      "def": "A tall container for water, milk or juice.",
+      "ex": "She put two bottles of milk in the fridge.",
+      "exCn": "她把兩瓶牛奶放進冰箱。"
+    },
+    {
+      "w": "store",
+      "ipa": "/stɔːr/",
+      "pos": "n.",
+      "cn": "商店",
+      "def": "A place where you go to buy things.",
+      "ex": "The store near the park opens at seven.",
+      "exCn": "公園旁邊那家店七點開門。"
+    },
+    {
+      "w": "tape",
+      "ipa": "/teɪp/",
+      "pos": "n.",
+      "cn": "膠帶",
+      "def": "A long thin piece of plastic that sticks two things together.",
+      "ex": "He fixed the box with brown tape.",
+      "exCn": "他用棕色膠帶把箱子黏好。"
+    },
+    {
+      "w": "flashlight",
+      "ipa": "/ˈflæʃ.laɪt/",
+      "pos": "n.",
+      "cn": "手電筒",
+      "def": "A small light you hold in your hand.",
+      "ex": "I keep a flashlight beside my bed.",
+      "exCn": "我在床邊放一支手電筒。"
+    },
+    {
+      "w": "storm",
+      "ipa": "/stɔːrm/",
+      "pos": "n.",
+      "cn": "暴風雨",
+      "def": "Very bad weather with wind and rain.",
+      "ex": "The storm broke three trees in the park.",
+      "exCn": "那場暴風雨把公園裡三棵樹折斷了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What does Tom offer to do first?",
+      "qCn": "Tom第一個提議要做什麼？",
+      "opts": [
+        "A. Buy some water",
+        "B. Close the windows",
+        "C. Call his sister",
+        "D. Cook dinner"
+      ],
+      "optsCn": [
+        "A. 去買水",
+        "B. 關窗戶",
+        "C. 打電話給姊姊",
+        "D. 煮晚餐"
+      ],
+      "ans": 0,
+      "expl": "\"Shall I buy some water?\" Tom asks.——第二段Tom看到空瓶子，馬上問媽媽要不要他去買水，這是全文第一個提議。"
+    },
+    {
+      "q": "What will Kevin bring?",
+      "qCn": "Kevin會帶什麼來？",
+      "opts": [
+        "A. Water",
+        "B. Tape",
+        "C. A flashlight",
+        "D. Food"
+      ],
+      "optsCn": [
+        "A. 水",
+        "B. 膠帶",
+        "C. 一支手電筒",
+        "D. 食物"
+      ],
+      "ans": 1,
+      "expl": "Kevin will bring tape for the windows.——第三段寫得很清楚，膠帶是要貼窗戶用的。"
+    },
+    {
+      "q": "The windows are open and the rain is starting. Tom says to his sister, \"___ close them?\"",
+      "qCn": "窗戶開著，雨開始下了。Tom對姊姊說：「要我把窗戶關上嗎？」",
+      "opts": [
+        "A. Shall I",
+        "B. Will I",
+        "C. Do I will",
+        "D. I shall to"
+      ],
+      "ans": 0,
+      "expl": "要問對方「要不要我來做」，英文用 Shall I 加原形動詞。Will I 是在問自己的未來會不會發生，聽起來很怪；Do I will 和 I shall to 都把兩個助動詞或 to 混在一起，英文沒有這種形狀。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "I buy some water now.",
+      "b2": "I'll buy the water for you.",
+      "note": "第一句用現在簡單式，講的是「我平常都買水」，媽媽聽了會覺得你在描述習慣。要表達「這一秒我決定去買」，一定要用 I'll。A2 階段只要記住：看到眼前的情況才決定要做，就用 I'll 加原形動詞。",
+      "sp": "I'll get it.",
+      "spNote": "口語常用最短的 I'll 加一個動詞，當場答應就這樣講。",
+      "b1Cn": "我現在買水。",
+      "b2Cn": "我幫你買水。",
+      "spCn": "我去拿。"
+    },
+    {
+      "b1": "Do you want me to close the window?",
+      "b2": "Shall I close the window?",
+      "note": "第一句文法沒錯，但繞了一大圈，像在確認對方的心意。英文要提議自己動手，最短也最自然的就是 Shall I 加原形動詞，而且後面什麼都不用加 to。問別人要不要一起做則是 Shall we。",
+      "sp": "Shall I?",
+      "spNote": "動作已經講過的時候，口語只留 Shall I 兩個字。",
+      "b1Cn": "你要我關窗戶嗎？",
+      "b2Cn": "要我關窗戶嗎？",
+      "spCn": "要我來嗎？"
+    }
+  ]
+},
+{
+  "id": "d20261104b1",
+  "date": "2026-11-04",
+  "level": "B1",
+  "topic": "天災與天氣",
+  "words": 143,
+  "kind": "orig",
+  "title": "The Night the Lights Went Out",
+  "titleCn": "停電的那一晚",
+  "focus": "I'll 與 Shall I 用在當場的提議和答應，won't 用在「我不打算那樣做」；已經安排好的事不能用 will",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Anita回台北住一個星期，剛好碰上颱風。請注意她和房東先生講話時的三種形狀：Shall I 是提議、I'll 是當場答應、I won't 是拒絕。這三種都發生在「話說出口的那一刻」，所以英文一律用 will，不用 going to。最後一段的 has never enjoyed 是現在完成式，講的是到現在為止的經驗。",
+  "spoken": [
+    {
+      "en": "Shall I take two of those?",
+      "cn": "要我幫你拿兩個嗎？"
+    },
+    {
+      "en": "I'll clean it now.",
+      "cn": "我現在就去清。"
+    },
+    {
+      "en": "I won't light anything tonight.",
+      "cn": "今晚我什麼都不點。"
+    },
+    {
+      "en": "Calmer than I expected.",
+      "cn": "比我想的平靜。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita was staying in Taipei for one week when the typhoon warning came. Her landlord, Mr. Chen, was carrying heavy boxes up the stairs alone. Anita put her bag down and asked, \"Shall I take two of those?\"",
+      "cn": "Anita回台北住一個星期，剛好碰上颱風警報。房東陳先生正一個人把一箱箱重物搬上樓。Anita放下包包問：「要我幫你拿兩個嗎？」"
+    },
+    {
+      "en": "Mr. Chen has lived in that building for thirty years, so he knew what to do first. He said the balcony drain always blocks before the rain gets heavy. \"I'll clean it now,\" Anita answered, and she went out with a bucket.",
+      "cn": "陳先生在那棟樓住了三十年，所以他知道該先做什麼。他說雨變大之前，陽台的排水孔一定先堵住。「我現在就去清。」Anita回答，然後拿著水桶走了出去。"
+    },
+    {
+      "en": "At nine the wind got stronger and the lights went out. Anita found two candles, but Mr. Chen did not want them near the gas pipe. \"I won't light anything tonight,\" he said, and they used her phone instead.",
+      "cn": "九點的時候風更大了，燈也熄了。Anita找到兩根蠟燭，但陳先生不想把它們放在瓦斯管旁邊。「今晚我什麼都不點。」他說，於是他們改用她的手機照明。"
+    },
+    {
+      "en": "They sat in the dark and talked about older, bigger typhoons. Anita has never enjoyed storms, but this evening felt calmer than she expected.",
+      "cn": "他們坐在暗處，聊起以前更大的颱風。Anita從來不喜歡暴風雨，但這一晚比她想像中平靜。"
+    }
+  ],
+  "target": [
+    {
+      "w": "warning",
+      "ipa": "/ˈwɔːr.nɪŋ/",
+      "pos": "n.",
+      "cn": "警報；警告",
+      "def": "Information that tells you something bad may happen soon.",
+      "ex": "The factory sends a warning email every Friday morning.",
+      "exCn": "工廠每個星期五早上都會寄一封警告信。"
+    },
+    {
+      "w": "landlord",
+      "ipa": "/ˈlændˌlɔːrd/",
+      "pos": "n.",
+      "cn": "房東",
+      "def": "The person who owns the place you rent.",
+      "ex": "Our landlord fixed the lock in one afternoon.",
+      "exCn": "我們房東一個下午就把鎖修好了。"
+    },
+    {
+      "w": "drain",
+      "ipa": "/dreɪn/",
+      "pos": "n.",
+      "cn": "排水孔",
+      "def": "A hole or pipe that takes water away.",
+      "ex": "The kitchen drain smells after a long weekend.",
+      "exCn": "連假過後廚房的排水孔會有味道。"
+    },
+    {
+      "w": "bucket",
+      "ipa": "/ˈbʌk.ɪt/",
+      "pos": "n.",
+      "cn": "水桶",
+      "def": "An open container with a handle, used for carrying water.",
+      "ex": "He filled a bucket with warm water and soap.",
+      "exCn": "他在水桶裡裝了溫水和肥皂。"
+    },
+    {
+      "w": "candle",
+      "ipa": "/ˈkændl/",
+      "pos": "n.",
+      "cn": "蠟燭",
+      "def": "A stick of wax that gives light when it burns.",
+      "ex": "She lights a candle on her birthday cake.",
+      "exCn": "她在生日蛋糕上點一根蠟燭。"
+    },
+    {
+      "w": "calm",
+      "ipa": "/kɑːm/",
+      "pos": "adj.",
+      "cn": "平靜的",
+      "def": "Quiet and not moving or worried.",
+      "ex": "The sea looked calm from the ferry deck.",
+      "exCn": "從渡輪甲板看出去，海面很平靜。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did Anita offer to do when she first saw Mr. Chen?",
+      "qCn": "Anita第一次看到陳先生時，提議要做什麼？",
+      "opts": [
+        "A. Carry two of the boxes",
+        "B. Clean the balcony drain",
+        "C. Buy candles for him",
+        "D. Lend him her phone"
+      ],
+      "optsCn": [
+        "A. 幫他搬兩箱",
+        "B. 清陽台的排水孔",
+        "C. 幫他買蠟燭",
+        "D. 把手機借他"
+      ],
+      "ans": 0,
+      "expl": "\"Shall I take two of those?\"——第一段她看到陳先生一個人搬東西，當場提議幫他拿兩箱；清排水孔是後來第二段的事。"
+    },
+    {
+      "q": "Why did Mr. Chen refuse to use the candles?",
+      "qCn": "陳先生為什麼不肯用蠟燭？",
+      "opts": [
+        "A. The candles were too old",
+        "B. He was worried about the gas pipe",
+        "C. Anita needed them herself",
+        "D. The wind would blow them out"
+      ],
+      "optsCn": [
+        "A. 蠟燭太舊了",
+        "B. 他擔心瓦斯管",
+        "C. Anita自己要用",
+        "D. 風會把蠟燭吹熄"
+      ],
+      "ans": 1,
+      "expl": "Mr. Chen did not want them near the gas pipe.——第三段說他不想把蠟燭放在瓦斯管旁邊，所以接著說 I won't light anything tonight。"
+    },
+    {
+      "q": "Mr. Chen bought his plane ticket to Hualien last week. Which sentence is natural?",
+      "qCn": "陳先生上星期就買好飛花蓮的機票了。哪一句比較自然？",
+      "opts": [
+        "A. I'll fly to Hualien on Sunday.",
+        "B. I'm flying to Hualien on Sunday.",
+        "C. Shall I fly to Hualien on Sunday?",
+        "D. I won't fly to Hualien on Sunday."
+      ],
+      "optsCn": [
+        "A. 我星期天會飛花蓮。（當場決定）",
+        "B. 我星期天要飛花蓮。（已安排好）",
+        "C. 要我星期天飛花蓮嗎？",
+        "D. 我星期天不會飛花蓮。"
+      ],
+      "ans": 1,
+      "expl": "機票上星期就買好了，這是已經安排好的行程，英文用現在進行式（或 be going to）來報告，不用 will。will 和 Shall I 都屬於「話說出口那一刻」的用法：A 聽起來像他現在才決定，C 像在問對方的意見，D 則是拒絕。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "I want to help you with the boxes.",
+      "b2": "Shall I take a couple of those?",
+      "note": "第一句講的是你的意願，對方還要再回一句「好啊那你拿吧」才會動起來。Shall I 直接把動作攤在桌上，對方只要回 yes 或 no，所以在英文裡這才是真正的「提議」。注意 Shall I 後面接原形動詞，不加 to。",
+      "sp": "Shall I grab a couple?",
+      "spNote": "口語會把 take 換成 grab，更隨意。",
+      "b1Cn": "我想幫你搬箱子。",
+      "b2Cn": "要我幫你拿兩個嗎？",
+      "spCn": "我幫你抓兩個？"
+    },
+    {
+      "b1": "I don't light candles tonight.",
+      "b2": "I won't light anything tonight.",
+      "note": "現在簡單式的 I don't light 聽起來像在講習慣：我平常不點蠟燭。但陳先生要表達的是「今晚這件事我不做」，那是對眼前狀況的決定，英文用 won't。won't 除了預測，還有一個很常被忽略的工作：把拒絕說得明確又不失禮。",
+      "sp": "Not tonight.",
+      "spNote": "拒絕的時候，口語常只留時間詞，語氣比整句軟。",
+      "b1Cn": "我今晚不點蠟燭。",
+      "b2Cn": "今晚我什麼都不點。",
+      "spCn": "今晚不要。"
+    }
+  ]
+},
+{
+  "id": "d20261104b1p",
+  "date": "2026-11-04",
+  "level": "B1+",
+  "topic": "新聞·天災與天氣",
+  "words": 201,
+  "kind": "news",
+  "title": "Eight Meters of Water on the Road",
+  "titleCn": "八公尺的浪打上馬路",
+  "focus": "被動語態（was closed、was washed away、had been reconnected）與關係子句（residents who live…、the office that looks after…）：把焦點放在被影響的東西上，而不是誰做的",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "這是2026年10月23日颱風Champi襲台當天的報導改寫。整篇請數一數被動語態出現幾次：was closed、was washed away、had been reconnected。新聞英文愛用被動，因為讀者在意的是「路斷了、電停了」，不是「誰把它弄斷的」。另外注意兩個關係子句，who 接人、that 接東西或單位。",
+  "source": "改寫自 Focus Taiwan 報導（2026/10/23）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202610230010",
+  "spoken": [
+    {
+      "en": "A crane went into the sea.",
+      "cn": "一台吊車被捲進海裡。"
+    },
+    {
+      "en": "The southbound lane was closed.",
+      "cn": "南下車道封閉了。"
+    },
+    {
+      "en": "Nearly fourteen hundred people moved.",
+      "cn": "將近一千四百人撤離。"
+    },
+    {
+      "en": "Three quarters had power back.",
+      "cn": "四分之三復電了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Typhoon Champi reached Taiwan on Thursday night, and by Friday morning the damage could be seen along the east coast. At Fugang Harbor in Taitung, waves of about six meters lifted a large crane and carried it into the sea at around 9:40 a.m. Farther north, at Changbin Harbor, eight-meter waves pushed seawater onto the road and turned over three bamboo rafts.",
+      "cn": "颱風Champi在星期四晚間抵達台灣，到了星期五早上，東海岸沿線已經看得到災情。台東富岡漁港約六公尺高的浪，在上午九點四十分左右把一台大型吊車抬起，捲進海裡。再往北的長濱漁港，八公尺的浪把海水推上馬路，還掀翻了三艘竹筏。"
+    },
+    {
+      "en": "Roads were also hit. On Provincial Highway 9 in Taitung County, the southbound lane was closed after the roadbed beside the northbound lane was washed away. Traffic kept moving, but the maintenance office that looks after the area planned to put concrete blocks along the damaged edge.",
+      "cn": "道路也受到衝擊。台東縣台九線上，北上車道外側的路基被掏空後，南下車道隨即封閉。車流沒有中斷，但負責該路段的養護工務段打算在受損的外緣放置混凝土塊。"
+    },
+    {
+      "en": "Local governments moved people out of the hills. New Taipei said 1,397 residents who live in landslide areas of Yingge, Xindian, Pingxi and Shulin would be moved to safer places, and Yilan County evacuated 350 people from Datong and Nan'ao.",
+      "cn": "地方政府把山區的居民往外撤。新北市表示，住在鶯歌、新店、平溪、樹林等土石流地區的一千三百九十七位居民將被移往較安全的地方；宜蘭縣則從大同與南澳撤離了三百五十人。"
+    },
+    {
+      "en": "Power was the biggest problem for households. Taiwan Power Company reported that 77,498 homes had lost electricity, and by two in the afternoon about three quarters of them had been reconnected. That still left 19,029 homes in the dark. One man had died and 94 people had been injured by Friday morning.",
+      "cn": "對一般家戶來說，最大的問題是停電。台電表示共有七萬七千四百九十八戶停電，到下午兩點為止約四分之三已經復電，但仍有一萬九千零二十九戶沒有電。到星期五早上為止，已有一人死亡、九十四人受傷。"
+    }
+  ],
+  "target": [
+    {
+      "w": "coast",
+      "ipa": "/koʊst/",
+      "pos": "n.",
+      "cn": "海岸",
+      "def": "The land next to the sea.",
+      "ex": "The train runs along the coast for two hours.",
+      "exCn": "這班火車沿著海岸開兩個小時。"
+    },
+    {
+      "w": "crane",
+      "ipa": "/kreɪn/",
+      "pos": "n.",
+      "cn": "吊車；起重機",
+      "def": "A tall machine that lifts very heavy things.",
+      "ex": "A yellow crane stood beside the new office tower.",
+      "exCn": "一台黃色吊車立在新辦公大樓旁邊。"
+    },
+    {
+      "w": "raft",
+      "ipa": "/ræft/",
+      "pos": "n.",
+      "cn": "筏",
+      "def": "A flat boat made of wood or bamboo tied together.",
+      "ex": "Children paddled a small raft across the quiet lake.",
+      "exCn": "孩子們划著一艘小筏穿過平靜的湖面。"
+    },
+    {
+      "w": "lane",
+      "ipa": "/leɪn/",
+      "pos": "n.",
+      "cn": "車道",
+      "def": "One of the marked strips that cars drive in on a road.",
+      "ex": "Cyclists use the lane next to the school gate.",
+      "exCn": "騎自行車的人走學校大門旁邊那條道。"
+    },
+    {
+      "w": "evacuate",
+      "ipa": "/ɪˈvækjueɪt/",
+      "pos": "v.",
+      "cn": "撤離",
+      "def": "To move people away from a dangerous place.",
+      "ex": "The hotel had to evacuate guests after a gas leak.",
+      "exCn": "瓦斯漏氣後，飯店必須把房客撤出。"
+    },
+    {
+      "w": "household",
+      "ipa": "/ˈhaʊshoʊld/",
+      "pos": "n.",
+      "cn": "家戶",
+      "def": "All the people who live together in one home.",
+      "ex": "A typical household in the city pays more for parking.",
+      "exCn": "市區一般家戶付的停車費比較高。"
+    },
+    {
+      "w": "electricity",
+      "ipa": "/ɪˌlekˈtrɪs.ə.t̬i/",
+      "pos": "n.",
+      "cn": "電力",
+      "def": "The power that comes through wires and makes lights work.",
+      "ex": "Solar panels gave the farm free electricity all summer.",
+      "exCn": "太陽能板讓那座農場整個夏天的電都不用錢。"
+    },
+    {
+      "w": "injure",
+      "ipa": "/ˈɪn.dʒɚ/",
+      "pos": "v.",
+      "cn": "使受傷",
+      "def": "To hurt someone's body.",
+      "ex": "Two players were injured during the final match.",
+      "exCn": "最後一場比賽有兩名球員受傷。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What happened at Fugang Harbor on Friday morning?",
+      "qCn": "星期五早上富岡漁港發生了什麼事？",
+      "opts": [
+        "A. Three bamboo rafts turned over",
+        "B. A large crane was carried into the sea",
+        "C. The roadbed was washed away",
+        "D. Power was cut to the whole harbor"
+      ],
+      "optsCn": [
+        "A. 三艘竹筏被掀翻",
+        "B. 一台大型吊車被捲進海裡",
+        "C. 路基被掏空",
+        "D. 整個漁港停電"
+      ],
+      "ans": 1,
+      "expl": "waves of about six meters lifted a large crane and carried it into the sea at around 9:40 a.m.——第一段寫的是富岡；掀翻竹筏是長濱漁港，路基被掏空是台九線。"
+    },
+    {
+      "q": "Why was the southbound lane of Highway 9 closed?",
+      "qCn": "台九線的南下車道為什麼封閉？",
+      "opts": [
+        "A. Because traffic had stopped completely",
+        "B. Because concrete blocks were already in the way",
+        "C. Because the roadbed next to the northbound lane was washed away",
+        "D. Because residents were being evacuated through it"
+      ],
+      "optsCn": [
+        "A. 因為車流已經完全停住",
+        "B. 因為混凝土塊已經擋在路上",
+        "C. 因為北上車道外側的路基被掏空",
+        "D. 因為居民正從那裡撤離"
+      ],
+      "ans": 2,
+      "expl": "the southbound lane was closed after the roadbed beside the northbound lane was washed away——第二段還補了一句 Traffic kept moving，所以車流並沒有停。"
+    },
+    {
+      "q": "How many homes still had no electricity at two in the afternoon?",
+      "qCn": "到下午兩點為止，還有多少戶沒有電？",
+      "opts": [
+        "A. 1,397",
+        "B. 19,029",
+        "C. 77,498",
+        "D. 350"
+      ],
+      "optsCn": [
+        "A. 一千三百九十七戶",
+        "B. 一萬九千零二十九戶",
+        "C. 七萬七千四百九十八戶",
+        "D. 三百五十戶"
+      ],
+      "ans": 1,
+      "expl": "That still left 19,029 homes in the dark.——77,498 是停電總戶數，其中約四分之三已復電；1,397 和 350 是撤離人數，不是戶數。"
+    },
+    {
+      "q": "The report says the lane ___ after the roadbed gave way.",
+      "qCn": "報導說，路基崩塌之後那條車道就被封閉了。",
+      "opts": [
+        "A. was closed",
+        "B. closed was",
+        "C. is closing",
+        "D. has closing"
+      ],
+      "ans": 0,
+      "expl": "新聞要講的是車道「被」封閉，而且事情已經發生，所以用過去式被動：was 加過去分詞 closed。B 的語序英文沒有；C 是現在正在關；D 把現在完成式和進行式混在一起，形狀不存在（完成式要寫 has closed）。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The waves took a crane into the sea.",
+      "b2": "A large crane was carried into the sea by six-meter waves.",
+      "note": "主動句把浪放在句首，讀起來像在講浪；但新聞的重點是那台吊車出事了。改成被動之後，受害的東西站到主詞位置，施事者用 by 掛在後面——這是新聞英文最常用的一招，也是 B1+ 往 B2 的分水嶺。",
+      "b1Cn": "浪把一台吊車帶進海裡。",
+      "b2Cn": "一台大型吊車被六公尺高的浪捲進海裡。"
+    },
+    {
+      "b1": "New Taipei has 1,397 residents. They live in landslide areas.",
+      "b2": "New Taipei has 1,397 residents who live in landslide areas.",
+      "note": "兩句短句用 who 併成一句，資訊密度立刻提高，而且不必重複 they。選 who 還是 that 看前面是人還是東西：residents 是人，就用 who；下一段的 the maintenance office 是單位，所以用 that。",
+      "b1Cn": "新北市有一千三百九十七位居民。他們住在土石流地區。",
+      "b2Cn": "新北市有一千三百九十七位住在土石流地區的居民。"
+    }
+  ]
+},
+{
+  "id": "d20261104b2",
+  "date": "2026-11-04",
+  "level": "B2",
+  "topic": "新聞·天災與天氣",
+  "words": 279,
+  "kind": "news",
+  "title": "Nine Thousand Pieces of Paper",
+  "titleCn": "九千多份災情通報",
+  "focus": "will 與 be going to 的分工：報導裡的 would 是過去的 will，結尾的 is going to be remembered 靠的是眼前已經攤開的證據；全篇以被動語態承擔客觀語氣",
+  "intro": "這是颱風Champi離開台灣後，2026年10月24日的統計報導改寫。請特別注意最後一句的 is going to be remembered：寫的人不是當場決定什麼，而是看著眼前九千多筆災情做出的推論，所以用 be going to 而不是 will。第四段的 said it would finish 則是把當時的 will 往回退一格，變成報導裡的 would。",
+  "source": "改寫自 Focus Taiwan 報導（2026/10/24）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202610240017",
+  "spoken": [
+    {
+      "en": "Nine thousand damage reports total.",
+      "cn": "災情通報總共九千多筆。"
+    },
+    {
+      "en": "Yilan took six hundred fifty.",
+      "cn": "宜蘭下了六百五十毫米。"
+    },
+    {
+      "en": "Twenty-two thousand homes still waiting.",
+      "cn": "還有兩萬兩千戶在等。"
+    },
+    {
+      "en": "It's going to be remembered.",
+      "cn": "這場風會被記住。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "By Saturday afternoon Typhoon Champi had moved away from Taiwan, and the authorities began to count what it had cost. One man died: he was swept off a beach in Liuqiu Township, Pingtung County, by storm-driven waves on Thursday. Another 616 people were hurt, although most of their injuries were scrapes and bruises, and nobody was reported missing. The land warning was lifted at 2:30 in the afternoon, and the sea warning was expected to end a few hours later.",
+      "cn": "到了星期六下午，颱風Champi已經遠離台灣，主管機關開始清算它的代價。一人死亡：星期四，一名男子在屏東縣琉球鄉的海邊被風浪捲走。另有六百一十六人受傷，不過多數是擦傷和瘀青，沒有人失蹤。陸上警報在下午兩點半解除，海上警報預計再過幾個小時結束。"
+    },
+    {
+      "en": "The paperwork tells the rest of the story. Officials logged 9,027 reports of damage across the island. Fallen trees accounted for 3,287 of them, with 1,282 in Taipei alone and 646 in Taichung; essential infrastructure made up another 3,033 cases, and 1,014 involved billboards and signs that the wind had torn loose.",
+      "cn": "剩下的故事寫在那些表單裡。官方登錄了全島九千零二十七筆災情通報。其中三千兩百八十七筆是倒樹，光台北就有一千兩百八十二筆、台中六百四十六筆；民生必要設施另占三千零三十三件；還有一千零一十四件是被風扯鬆的廣告看板與招牌。"
+    },
+    {
+      "en": "Rain, not wind, did most of the quiet damage. Between Thursday and four o'clock on Saturday afternoon, Yilan recorded 650 millimeters, the highest total in the country, while Taoyuan and Hsinchu County each passed 500 and Taipei reached 469.5. Because such rain loosens hillsides, 4,960 people were moved out of landslide-prone districts in New Taipei, Taoyuan, Keelung, Tainan and several counties.",
+      "cn": "造成最多無聲損害的是雨，不是風。從星期四到星期六下午四點，宜蘭累積六百五十毫米，是全國最高；桃園與新竹縣各超過五百毫米，台北則達四百六十九點五毫米。這樣的雨會讓山坡鬆動，因此新北、桃園、基隆、台南與數個縣市共有四千九百六十人被移出易發生土石流的地區。"
+    },
+    {
+      "en": "Recovery was uneven. More than 340,000 households lost electricity at some point during the storm; by Saturday evening about 22,000 were still waiting, and the power company said it would finish the work by eleven that night. The Danjiang Bridge in New Taipei, shut at three on Friday afternoon, reopened at five on Saturday. Anyone reading the figures can see the pattern: the storm is going to be remembered less for its wind speed than for the slow, expensive job of putting a city back together.",
+      "cn": "復原的速度並不平均。風雨期間超過三十四萬戶曾經停電；到星期六傍晚還有約兩萬兩千戶在等，電力公司說會在當晚十一點前把工作做完。新北的淡江大橋星期五下午三點封閉，星期六下午五點重新開放。任何讀過這些數字的人都看得出一個模式：這場颱風被記住的，不會是風速，而是把一座城市重新拼回去那段緩慢又昂貴的工程。"
+    }
+  ],
+  "target": [
+    {
+      "w": "authorities",
+      "ipa": "/əˈθɔːr.ə.t̬iz/",
+      "pos": "n.",
+      "cn": "主管機關",
+      "def": "The official groups that run a country or a city.",
+      "ex": "Local authorities now publish the water test results online.",
+      "exCn": "地方主管機關現在把水質檢驗結果公布在網路上。"
+    },
+    {
+      "w": "scrape",
+      "ipa": "/skreɪp/",
+      "pos": "n.",
+      "cn": "擦傷",
+      "def": "A small wound made when skin rubs against something rough.",
+      "ex": "He got a scrape on his elbow playing basketball.",
+      "exCn": "他打籃球的時候手肘擦傷了。"
+    },
+    {
+      "w": "bruise",
+      "ipa": "/bruːz/",
+      "pos": "n.",
+      "cn": "瘀青",
+      "def": "A dark mark on the skin after something hits it.",
+      "ex": "A small bruise appeared on her knee after the fall.",
+      "exCn": "跌倒之後她膝蓋上出現一塊小瘀青。"
+    },
+    {
+      "w": "infrastructure",
+      "ipa": "/ˈɪn.frəˌstrʌk.tʃɚ/",
+      "pos": "n.",
+      "cn": "基礎設施",
+      "def": "The roads, pipes, wires and systems a place needs to work.",
+      "ex": "The island's digital infrastructure needs a serious upgrade.",
+      "exCn": "這座島的數位基礎設施需要認真升級。"
+    },
+    {
+      "w": "billboard",
+      "ipa": "/ˈbɪl.bɔːrd/",
+      "pos": "n.",
+      "cn": "廣告看板",
+      "def": "A very large board outdoors that carries advertisements.",
+      "ex": "A huge billboard advertises noodles above the market.",
+      "exCn": "市場上方有一面巨大的看板在賣麵。"
+    },
+    {
+      "w": "loosen",
+      "ipa": "/ˈluːsən/",
+      "pos": "v.",
+      "cn": "使鬆動",
+      "def": "To make something less tight or less firm.",
+      "ex": "Heat can loosen the glue under old floor tiles.",
+      "exCn": "高溫會讓舊地磚底下的膠鬆掉。"
+    },
+    {
+      "w": "uneven",
+      "ipa": "/ʌnˈiː.vən/",
+      "pos": "adj.",
+      "cn": "不平均的",
+      "def": "Not the same everywhere; not level or regular.",
+      "ex": "The pavement is uneven, so push the cart slowly.",
+      "exCn": "人行道不平，推車要慢一點。"
+    },
+    {
+      "w": "recovery",
+      "ipa": "/rɪˈkʌv.ɚ.i/",
+      "pos": "n.",
+      "cn": "復原",
+      "def": "The process of getting back to a normal state.",
+      "ex": "His recovery took longer than the doctor had promised.",
+      "exCn": "他的復原比醫生說的久。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many damage reports did officials log across the island?",
+      "qCn": "官方在全島登錄了多少筆災情通報？",
+      "opts": [
+        "A. 3,287",
+        "B. 3,033",
+        "C. 9,027",
+        "D. 1,014"
+      ],
+      "optsCn": [
+        "A. 三千兩百八十七筆",
+        "B. 三千零三十三筆",
+        "C. 九千零二十七筆",
+        "D. 一千零一十四筆"
+      ],
+      "ans": 2,
+      "expl": "Officials logged 9,027 reports of damage across the island.——第二段的總數；3,287 是倒樹、3,033 是民生設施、1,014 是看板與招牌，都是其中一類。"
+    },
+    {
+      "q": "Where did the heaviest rain fall?",
+      "qCn": "雨量最大的地方是哪裡？",
+      "opts": [
+        "A. Taipei",
+        "B. Yilan",
+        "C. Hsinchu County",
+        "D. Taoyuan"
+      ],
+      "optsCn": [
+        "A. 台北",
+        "B. 宜蘭",
+        "C. 新竹縣",
+        "D. 桃園"
+      ],
+      "ans": 1,
+      "expl": "Yilan recorded 650 millimeters, the highest total in the country——第三段直接說是全國最高；台北是四百六十九點五，桃園與新竹縣各超過五百。"
+    },
+    {
+      "q": "What does the article say about the Danjiang Bridge?",
+      "qCn": "文章怎麼說淡江大橋？",
+      "opts": [
+        "A. It was damaged and stayed closed",
+        "B. It closed on Friday and reopened on Saturday",
+        "C. It was used to evacuate residents",
+        "D. It lost power for two days"
+      ],
+      "optsCn": [
+        "A. 它受損而且一直封閉",
+        "B. 星期五封閉，星期六重新開放",
+        "C. 它被用來撤離居民",
+        "D. 它停電兩天"
+      ],
+      "ans": 1,
+      "expl": "The Danjiang Bridge in New Taipei, shut at three on Friday afternoon, reopened at five on Saturday.——文章沒有提到橋體受損或停電，也沒說它用於撤離。"
+    },
+    {
+      "q": "In the last sentence, the writer chooses \"is going to be remembered\" rather than \"will be remembered\" because",
+      "qCn": "最後一句作者選 is going to be remembered 而不是 will be remembered，原因是",
+      "opts": [
+        "A. the evidence for it is already on the table",
+        "B. the writer is deciding at the moment of writing",
+        "C. it is a fixed item on a timetable",
+        "D. it is a promise made to the reader"
+      ],
+      "optsCn": [
+        "A. 支持這個判斷的證據已經攤在眼前",
+        "B. 作者是在寫的那一刻才決定的",
+        "C. 這是時刻表上固定的項目",
+        "D. 這是對讀者的承諾"
+      ],
+      "ans": 0,
+      "expl": "前面三段已經把九千多筆通報、六百五十毫米雨量、三十四萬戶停電攤開來了，結論是從這些現有跡象推出來的，所以用 be going to。will 用在當場才做的決定或純粹的看法；時刻表要用現在簡單式；承諾則是 I will 的工作。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "I think people will remember this storm for a long time.",
+      "b2": "Judging by these figures, the storm is going to be remembered for years.",
+      "note": "兩句都在預測，差別在於憑什麼。I think + will 說的是「我個人覺得」，沒有把證據帶進句子；be going to 的語感是「眼前的狀況已經指向這個結果」，所以前面很自然可以掛 Judging by these figures。寫報導、寫分析時選 going to，讀者會覺得你有依據。",
+      "b1Cn": "我想大家會記得這場風很久。",
+      "b2Cn": "從這些數字看，這場颱風會被記上好幾年。"
+    },
+    {
+      "b1": "The power company said: \"We will finish the work by eleven.\"",
+      "b2": "The power company said it would finish the work by eleven that night.",
+      "note": "把別人當時說的 will 寫進報導，時間座標要往回退一格：will 變 would，tonight 變 that night。這不是另一個時態，而是同一個 will 被包進過去的句子裡。B2 寫作最常漏的就是後面那半句——時間詞沒跟著退，整句就會前後矛盾。",
+      "b1Cn": "電力公司說：「我們會在十一點前完成。」",
+      "b2Cn": "電力公司說他們會在當晚十一點前完成。"
+    }
+  ]
+},
 /* ---------- 2026-10-28 每日文章（學習與心理：決心、承諾與那句「我會」） ---------- */
 {
   "id": "d20261028a2",
@@ -13925,6 +14712,860 @@ articles:[
 ],
 
 grammar:[
+/* ---------- 2026-11-04 每日文法（will and shall 2／I will and I am going to） ---------- */
+{
+  "id": "dg20261104a2",
+  "date": "2026-11-04",
+  "unitNo": 22,
+  "level": "A2",
+  "title": "I'll and Shall I: Offers and Promises",
+  "titleCn": "我來、要不要我來：I'll 與 Shall I",
+  "srcDays": [],
+  "summary": "I'll 是把你這一秒的決定說出口——主動幫忙、答應別人、給一個承諾都用它。Shall I 是把同一個動作先問一聲：要不要我來做。兩個後面都接原形動詞，什麼都不加。",
+  "sections": [
+    {
+      "h": "I'll 的三個工作",
+      "body": "中文的「我來」「我會」「好啊」在英文裡其實是同一個零件：I'll。它不是在報告行程，而是在把你剛剛才下的決定說給對方聽。這一點很重要，因為中文沒有「什麼時候決定的」這個概念，很多人會直接寫成現在簡單式 I help you，對方聽起來卻像「我平常都幫你」，完全不是你的意思。",
+      "table": {
+        "head": [
+          "工作",
+          "什麼時候用",
+          "例句"
+        ],
+        "rows": [
+          [
+            "提議",
+            "看到對方需要幫忙，你決定出手",
+            "I'll open the door for you."
+          ],
+          [
+            "答應",
+            "對方請你做一件事，你說好",
+            "Sure, I'll tell him tonight."
+          ],
+          [
+            "承諾",
+            "你要對方放心",
+            "I won't forget your name."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "That box looks heavy. I'll carry it for you.",
+          "cn": "那個箱子看起來很重，我幫你搬。",
+          "note": "看到箱子才決定，所以用 I'll"
+        },
+        {
+          "en": "I'll call you at six, I promise.",
+          "cn": "我六點打給你，我保證。",
+          "note": "承諾也是 I'll 的工作"
+        },
+        {
+          "en": "He won't eat cold rice.",
+          "cn": "他不吃冷飯。",
+          "note": "won't 是 will not 的縮寫，講「他不打算那樣做」"
+        }
+      ]
+    },
+    {
+      "h": "Shall I…? 和 Shall we…?",
+      "body": "想提議卻又想先問一下對方的意思，英文用 Shall。Shall I 是「要不要我來做」，動手的人是你自己；Shall we 是「我們要不要一起」，兩個人一起做。這兩個開頭的句子都是問句，對方只要回 yes 或 no 就好，所以比繞一圈的 Do you want me to… 俐落很多。",
+      "bullets": [
+        "要不要我來做：Shall I + 原形動詞 + …？",
+        "我們要不要一起：Shall we + 原形動詞 + …？",
+        "Shall 後面不加 to，也不會因為主詞改變形狀"
+      ],
+      "examples": [
+        {
+          "en": "Shall I turn on the fan?",
+          "cn": "要我開電風扇嗎？",
+          "note": "動手的是我"
+        },
+        {
+          "en": "Shall we take the bus together?",
+          "cn": "我們要不要一起搭公車？",
+          "note": "一起做就用 we"
+        },
+        {
+          "en": "Shall I ask the teacher for you?",
+          "cn": "要我幫你問老師嗎？",
+          "note": "for you 表示這件事是為了對方"
+        }
+      ]
+    },
+    {
+      "h": "形狀只有兩塊",
+      "body": "will 和 shall 都是助動詞，負責時間的是它們，所以後面的動詞回到字典上那個樣子：不加 s、不加 ing、不加 ed。這一條在 A2 階段最常出錯，因為中文的動詞本來就不變形，大家會不小心把習慣帶進來，寫出 She will helps you 這種句子。",
+      "table": {
+        "head": [
+          "主詞",
+          "助動詞",
+          "動詞",
+          "其他"
+        ],
+        "rows": [
+          [
+            "I",
+            "will",
+            "wait",
+            "here"
+          ],
+          [
+            "She",
+            "will",
+            "wait",
+            "outside"
+          ],
+          [
+            "Shall",
+            "I",
+            "wait",
+            "here?"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "She will wait for us outside.",
+          "cn": "她會在外面等我們。",
+          "note": "主詞是 she，will 和動詞都不變"
+        },
+        {
+          "en": "They will bring two chairs.",
+          "cn": "他們會帶兩張椅子來。",
+          "note": "複數主詞也一樣"
+        },
+        {
+          "en": "I will not be late again.",
+          "cn": "我不會再遲到了。",
+          "note": "否定就在 will 後面加 not"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I will to help you.",
+      "good": "I'll help you.",
+      "why": "中文的「我來幫你」裡沒有 to，但很多人記得 want to、need to，就順手加了上去。will 是助動詞，後面直接接原形動詞，中間放任何東西都不行。"
+    },
+    {
+      "bad": "Shall I to close the window?",
+      "good": "Shall I close the window?",
+      "why": "跟上面同一個毛病。Shall 也是助動詞，後面一樣直接接原形動詞。記法很簡單：助動詞和動詞之間永遠不放 to。"
+    },
+    {
+      "bad": "She will helps you.",
+      "good": "She will help you.",
+      "why": "中文動詞不會因為主詞變形，所以寫英文時第三人稱的 s 容易亂加。但負責時態的是 will，動詞已經卸下這份工作，一定要回到原形。"
+    },
+    {
+      "bad": "I help you with the bags.",
+      "good": "I'll help you with the bags.",
+      "why": "現在簡單式講的是習慣：我平常都幫你提袋子。你要說的是「我現在決定幫你」，那一定要用 I'll，不然對方根本不知道你正要動手。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Your friend is holding two bags. You say: \"___ take one?\"",
+      "qCn": "朋友提著兩個袋子，你說：「要我幫你拿一個嗎？」",
+      "opts": [
+        "A. Shall I",
+        "B. Will I",
+        "C. Do I",
+        "D. Am I"
+      ],
+      "ans": 0,
+      "expl": "要問對方「要不要我來做」就用 Shall I。Will I 是在問自己未來會不會發生某件事；Do I 和 Am I 都沒有提議的意思。"
+    },
+    {
+      "q": "The phone is ringing. I ___ answer it.",
+      "qCn": "電話在響，我去接。",
+      "opts": [
+        "A. answer",
+        "B. will",
+        "C. am answering",
+        "D. answered"
+      ],
+      "ans": 1,
+      "expl": "聽到電話響才決定去接，是這一秒的決定，用 will 加原形動詞。answer 少了未來；am answering 是我現在正在接；answered 是已經接過了。"
+    },
+    {
+      "q": "She ___ be here before nine.",
+      "qCn": "她九點前會到。",
+      "opts": [
+        "A. will",
+        "B. wills",
+        "C. will to",
+        "D. will is"
+      ],
+      "ans": 0,
+      "expl": "will 不隨主詞變化，所以沒有 wills；後面也不加 to，更不會再放一個 be 動詞之外的 is。這題只要記住「will 加原形動詞」就不會錯。"
+    },
+    {
+      "q": "I promise I ___ tell anyone.",
+      "qCn": "我保證我不會告訴任何人。",
+      "opts": [
+        "A. won't",
+        "B. don't",
+        "C. am not",
+        "D. will"
+      ],
+      "ans": 0,
+      "expl": "承諾「我不會做某件事」用 won't，也就是 will not。don't 是講習慣、am not 後面不能直接接原形動詞，will 的意思剛好相反。"
+    }
+  ]
+},
+{
+  "id": "dg20261104b1",
+  "date": "2026-11-04",
+  "unitNo": 22,
+  "level": "B1",
+  "title": "The Four Jobs of I'll, and One Job It Cannot Do",
+  "titleCn": "I'll 的四個工作，以及它做不來的那一件",
+  "srcDays": [],
+  "summary": "I'll 做四件事：提議、答應、承諾、拒絕。它們的共同點是「決定就發生在你說話的這一刻」。反過來說，早就安排好的行程不是這一刻才決定的，所以不能用 will，要用現在進行式或 be going to。",
+  "sections": [
+    {
+      "h": "四個工作，一個共同點",
+      "body": "把 I'll 的用法攤開來看，會發現它們都站在同一個時間點上：你一邊說，一邊才把事情定下來。提議是你決定出手，答應是你決定接下來，承諾是你決定不讓對方失望，拒絕是你決定不做。中文把這四件事分得很細（我來、好啊、我保證、我不要），英文卻用同一個零件處理，所以關鍵不是背四種句型，而是認出「決定的時刻」。",
+      "table": {
+        "head": [
+          "工作",
+          "語氣",
+          "例句"
+        ],
+        "rows": [
+          [
+            "提議 offer",
+            "我主動出手",
+            "I'll check the schedule and let you know."
+          ],
+          [
+            "答應 agree",
+            "你說了，我接",
+            "All right, I'll take the early shift."
+          ],
+          [
+            "承諾 promise",
+            "你可以放心",
+            "Don't worry, I won't mention the price."
+          ],
+          [
+            "拒絕 refuse",
+            "這件事我不做",
+            "I won't sign it without the test report."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Leave the samples on my desk and I'll label them.",
+          "cn": "樣品放我桌上，我來貼標籤。",
+          "note": "提議：聽到之後才決定"
+        },
+        {
+          "en": "Fine, I'll move my flight to Monday.",
+          "cn": "好，我把班機改到星期一。",
+          "note": "答應：對方開口，你接下來"
+        },
+        {
+          "en": "I won't ask you to work another weekend.",
+          "cn": "我不會再要你多做一個週末。",
+          "note": "承諾：用 won't 保證不做某事"
+        }
+      ]
+    },
+    {
+      "h": "Shall we 是提議，不是未來式",
+      "body": "很多人以為 shall 只是老式的 will，其實在現代美式英文裡，shall 幾乎只活在兩個問句裡：Shall I 和 Shall we。它們的功能是提議與徵詢，不是在講未來。Shall we 比 Let's 客氣一點，因為它把決定權交回給對方；Let's 則已經假設大家同意了。開會、跟客戶往來的時候，這個差別很有感覺。",
+      "bullets": [
+        "Shall we + 原形動詞 + …？＝我們要不要…（把決定權交給對方）",
+        "Let's + 原形動詞＝我們就這樣做（已經當作講好了）",
+        "想更正式可以用 Would you like me to…，但長度是 Shall I 的兩倍"
+      ],
+      "examples": [
+        {
+          "en": "Shall we move the meeting to Thursday?",
+          "cn": "我們要不要把會議移到星期四？",
+          "note": "徵詢：對方可以說不要"
+        },
+        {
+          "en": "Shall I bring the samples with me?",
+          "cn": "要我把樣品帶過去嗎？",
+          "note": "動手的人是我"
+        },
+        {
+          "en": "Let's start with the packaging problem.",
+          "cn": "我們就先從包裝的問題開始。",
+          "note": "Let's 已經假設大家同意"
+        }
+      ]
+    },
+    {
+      "h": "已經安排好的事，不能用 will",
+      "body": "這是 B1 最值得花時間弄懂的一條。如果事情在你開口之前就已經決定、訂好、排進行事曆了，它就不是「這一刻的決定」，英文不用 will。確定的約會與行程用現在進行式，心裡早就有的打算用 be going to。寫成 I will meet the supplier at ten tomorrow 文法沒壞，但聽的人會以為你是現在才想到要去見供應商，跟你真正的意思差很遠。",
+      "table": {
+        "head": [
+          "情況",
+          "英文用什麼",
+          "例句"
+        ],
+        "rows": [
+          [
+            "已經約好、寫進行事曆",
+            "現在進行式",
+            "I'm meeting the supplier at ten."
+          ],
+          [
+            "早就有的打算，還沒約",
+            "be going to",
+            "We're going to repaint the office next month."
+          ],
+          [
+            "話說出口才決定",
+            "will",
+            "I'll answer that email now."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I'm meeting the supplier at ten.",
+          "cn": "我十點要見供應商。",
+          "note": "約好了，所以用現在進行式"
+        },
+        {
+          "en": "We're going to repaint the office next month.",
+          "cn": "我們下個月要把辦公室重新粉刷。",
+          "note": "打算早就有了"
+        },
+        {
+          "en": "I'll answer that email now.",
+          "cn": "那封信我現在就回。",
+          "note": "看到信才決定"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I will meet the supplier at ten tomorrow.（行程上週就排好了）",
+      "good": "I'm meeting the supplier at ten tomorrow.",
+      "why": "會議上星期就定了，不是你現在才決定的。英文用現在進行式報告確定的約會；用 will 會讓對方以為你剛剛才想到，甚至懷疑這場會還沒約。"
+    },
+    {
+      "bad": "Shall I to send the report?",
+      "good": "Shall I send the report?",
+      "why": "shall 和 will 一樣是助動詞，後面直接接原形動詞。這個 to 通常是從 want to、plan to 帶過來的習慣，寫完記得回頭刪掉。"
+    },
+    {
+      "bad": "I will not to work on Sunday.",
+      "good": "I won't work on Sunday.",
+      "why": "否定只要在 will 後面加 not，動詞還是原形，中間不放 to。口語幾乎一律縮成 won't，拒絕的語氣也因此比 will not 柔和一些。"
+    },
+    {
+      "bad": "Do you want that I help you?",
+      "good": "Shall I help you?",
+      "why": "這是把中文「你要不要我幫你」逐字搬過來的結果，英文沒有 want that 加句子的用法。要提議自己動手，最短、最自然的就是 Shall I；想講得客氣一點才用 Would you like me to help。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "A客戶臨時要一份報價。你當場接下這件事，應該說：",
+      "qCn": "客戶臨時要一份報價，你當場接下這件事。",
+      "opts": [
+        "A. I'm sending you a quote this afternoon.",
+        "B. I'll send you a quote this afternoon.",
+        "C. I send you a quote this afternoon.",
+        "D. I'm going to send you a quote this afternoon."
+      ],
+      "optsCn": [
+        "A. 我今天下午要寄報價給你。（已排好）",
+        "B. 我今天下午寄報價給你。（當場答應）",
+        "C. 我今天下午寄報價給你。（講習慣）",
+        "D. 我今天下午打算寄報價給你。（早有打算）"
+      ],
+      "ans": 1,
+      "expl": "客戶是「臨時」要的，你是在這一刻才決定，所以用 I'll。A 和 D 都暗示你早就安排好；C 的現在簡單式在講習慣，聽起來像你每天下午都寄報價。"
+    },
+    {
+      "q": "The hotel is already booked. Which sentence is natural?",
+      "qCn": "飯店已經訂好了。哪一句自然？",
+      "opts": [
+        "A. I will stay at the airport hotel on Friday.",
+        "B. I'm staying at the airport hotel on Friday.",
+        "C. Shall I stay at the airport hotel on Friday?",
+        "D. I won't stay at the airport hotel on Friday."
+      ],
+      "optsCn": [
+        "A. 我星期五會住機場飯店。（當場決定）",
+        "B. 我星期五住機場飯店。（已訂好）",
+        "C. 要我星期五住機場飯店嗎？",
+        "D. 我星期五不會住機場飯店。"
+      ],
+      "ans": 1,
+      "expl": "已經訂好的住宿是確定的安排，用現在進行式報告。A 聽起來像你現在才決定；C 是在問對方的意見；D 的意思剛好相反。"
+    },
+    {
+      "q": "___ we start with the packaging issue?",
+      "qCn": "我們要不要先從包裝的問題開始？",
+      "opts": [
+        "A. Shall",
+        "B. Will",
+        "C. Do",
+        "D. Are"
+      ],
+      "ans": 0,
+      "expl": "提議「我們要不要一起做」固定用 Shall we。Will we 是在問未來會不會發生；Do we 和 Are we 都問不出提議的語氣。"
+    },
+    {
+      "q": "I ___ approve the shipment until the test report arrives.",
+      "qCn": "測試報告來之前，我不會放行這批貨。",
+      "opts": [
+        "A. don't",
+        "B. am not",
+        "C. won't",
+        "D. will"
+      ],
+      "ans": 2,
+      "expl": "這是拒絕，也是 I'll 四個工作之一，用 won't 把「這件事我不做」講清楚。don't 在講習慣；am not 後面不能直接接原形動詞；will 的意思相反。"
+    }
+  ]
+},
+{
+  "id": "dg20261104b1p",
+  "date": "2026-11-04",
+  "unitNo": 23,
+  "level": "B1+",
+  "title": "I will or I'm going to: When Was It Decided?",
+  "titleCn": "will 還是 going to：你是什麼時候決定的",
+  "srcDays": [],
+  "summary": "兩個都在講未來，分界線有兩條。講自己的行動時，看決定發生在什麼時候：話說出口才決定用 will，開口之前就決定好用 be going to。講預測時，看有沒有眼前的跡象：看得到徵兆用 be going to，只是個人看法用 will。",
+  "sections": [
+    {
+      "h": "第一條線：你是什麼時候決定的",
+      "body": "這是最實用的一條。英文把「決定」和「動作」當成兩個時間點：動作都在未來，但決定可能在你開口之前，也可能就在你開口的那一秒。開口之前已經決定好的，用 be going to，因為那個打算已經存在一段時間了；開口的那一秒才下的決定，用 will。中文完全不標示這個差別，所以這條線要靠刻意練習才會變成反射。",
+      "table": {
+        "head": [
+          "決定在什麼時候",
+          "用什麼",
+          "例句"
+        ],
+        "rows": [
+          [
+            "開口之前就決定了",
+            "be going to",
+            "We're going to replace all the gaskets."
+          ],
+          [
+            "開口的這一秒才決定",
+            "will",
+            "The valve is leaking, so I'll shut the line."
+          ],
+          [
+            "已經約好、寫進行事曆",
+            "現在進行式",
+            "I'm seeing the auditor at nine."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "We're going to replace all the gaskets this quarter.",
+          "cn": "這一季我們要把所有墊片換掉。",
+          "note": "計畫上季就定了"
+        },
+        {
+          "en": "The valve is leaking, so I'll shut the line.",
+          "cn": "閥門在漏，我把產線停掉。",
+          "note": "看到漏水才決定"
+        },
+        {
+          "en": "Nobody has booked the room, so I'll do it before lunch.",
+          "cn": "沒人訂會議室，我午餐前去訂。",
+          "note": "發現問題的那一刻才決定"
+        }
+      ]
+    },
+    {
+      "h": "第二條線：預測有沒有眼前的跡象",
+      "body": "兩個都能做預測，但語感不同。be going to 的意思接近「照現在的狀況看下去，這件事會發生」，所以句子前面常常可以接一句描述現況的話；will 則是把你腦袋裡的判斷講出來，常跟 I think、probably、I'm sure 一起出現。被動語態也能套進來：如果你是從報表、天氣圖、現場看到的跡象推論，就寫 is going to be delayed，而不是 will be delayed。",
+      "table": {
+        "head": [
+          "依據",
+          "用什麼",
+          "例句"
+        ],
+        "rows": [
+          [
+            "眼前看得到的跡象",
+            "be going to",
+            "The sky is black. It's going to pour."
+          ],
+          [
+            "你的看法或估計",
+            "will",
+            "I think the rain will stop before noon."
+          ],
+          [
+            "跡象 ＋ 被動",
+            "be going to be + 過去分詞",
+            "Two containers are going to be held at customs."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The sky over the harbor is black. It's going to pour.",
+          "cn": "港口上面的天空都黑了，等一下會傾盆大雨。",
+          "note": "跡象就在眼前"
+        },
+        {
+          "en": "I think the rain will stop before noon.",
+          "cn": "我想雨會在中午前停。",
+          "note": "沒有特別的跡象，只是看法"
+        },
+        {
+          "en": "Two containers are going to be held at customs.",
+          "cn": "有兩個貨櫃會被卡在海關。",
+          "note": "文件有問題，跡象已經出現"
+        }
+      ]
+    },
+    {
+      "h": "形狀與口語縮讀",
+      "body": "be going to 的 be 動詞一定要跟著主詞變化，而且絕對不能省略——這是中文母語者最常漏的一塊，因為中文的「要」前面沒有任何東西。另外在口語裡 going to 會黏成一個音，聽起來像 gonna，但那只在對話中出現，寫下來一律還原成 going to。最後，be going to 後面也可以接 go，所以 I'm going to go home 不是錯句，只是口語常直接說 I'm going home。",
+      "bullets": [
+        "肯定：主詞 + am／is／are + going to + 原形動詞",
+        "否定：主詞 + am／is／are + not + going to + 原形動詞",
+        "問句：Am／Is／Are + 主詞 + going to + 原形動詞 …？",
+        "口語會把 going to 唸成一個音，但寫作時一律還原"
+      ],
+      "examples": [
+        {
+          "en": "They aren't going to extend the lease.",
+          "cn": "他們不打算續租。",
+          "note": "否定把 not 放在 be 動詞後面"
+        },
+        {
+          "en": "Are you going to take the night train?",
+          "cn": "你要搭夜車嗎？",
+          "note": "問句把 be 動詞搬到前面"
+        },
+        {
+          "en": "She's going to go back to Hanoi in March.",
+          "cn": "她三月要回河內。",
+          "note": "going to 後面接 go 完全可以"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "Look at that sky. It will rain.",
+      "good": "Look at that sky. It's going to rain.",
+      "why": "前一句已經把跡象指給對方看了，接下來就不該退回純粹的個人看法。英文在這種「證據已經攤開」的場合用 be going to；用 will 會讓兩句話脫鉤，聽起來像你根本沒看天空。"
+    },
+    {
+      "bad": "The phone is ringing. I'm going to answer it.",
+      "good": "The phone is ringing. I'll answer it.",
+      "why": "電話是現在才響的，你不可能在它響之前就計畫好要接。be going to 暗示這個打算已經存在一段時間，用在這裡會很奇怪。聽到聲音才決定的事，一律 I'll。"
+    },
+    {
+      "bad": "I will going to visit the factory next week.",
+      "good": "I'm going to visit the factory next week.",
+      "why": "will 和 be going to 是兩套並列的做法，不能疊在一起。會寫成這樣通常是因為心裡想著「未來式」，就反射性地先放一個 will。選一套就好。"
+    },
+    {
+      "bad": "We going to move the line next week.",
+      "good": "We're going to move the line next week.",
+      "why": "going to 前面的 be 動詞是必要零件，不是可以省的裝飾。中文的「我們下週要移產線」裡沒有對應的字，所以這個 be 動詞特別容易蒸發，寫完請專門檢查一次。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "You open the fridge and see there is no milk. You say:",
+      "qCn": "你打開冰箱，發現沒有牛奶了。",
+      "opts": [
+        "A. I'm going to buy some on the way home.",
+        "B. I'll buy some on the way home.",
+        "C. I buy some on the way home.",
+        "D. I am buying some on the way home."
+      ],
+      "optsCn": [
+        "A. 我回家路上要買一些。（早就打算）",
+        "B. 我回家路上買一些。（當場決定）",
+        "C. 我回家路上買一些。（講習慣）",
+        "D. 我回家路上要買一些。（已安排好）"
+      ],
+      "ans": 1,
+      "expl": "你是打開冰箱那一刻才知道沒牛奶，決定就發生在說話的當下，所以用 I'll。A 和 D 都暗示這個打算在開冰箱之前就存在；C 的現在簡單式在講習慣。"
+    },
+    {
+      "q": "The two front tires are nearly bald. The car ___ fail the inspection.",
+      "qCn": "兩個前輪幾乎沒有胎紋了，這台車驗車會不通過。",
+      "opts": [
+        "A. will",
+        "B. is going to",
+        "C. shall",
+        "D. is failing"
+      ],
+      "ans": 1,
+      "expl": "前一句已經把證據放在眼前，從現狀推下去必然如此，用 be going to。will 偏向沒有特別依據的個人判斷；shall 在美式英文幾乎只用於 Shall I／Shall we 的提議；is failing 是現在正在發生。"
+    },
+    {
+      "q": "We ___ going to raise the price before the contract ends.",
+      "qCn": "合約到期之前我們不打算調價。",
+      "opts": [
+        "A. don't",
+        "B. won't",
+        "C. aren't",
+        "D. not"
+      ],
+      "ans": 2,
+      "expl": "be going to 的否定是在 be 動詞後面加 not，主詞是 we 所以用 aren't。don't 和 won't 都不能接 going to；單獨一個 not 少了 be 動詞，句子就站不起來。"
+    },
+    {
+      "q": "Which sentence reports a plan that was already made last month?",
+      "qCn": "哪一句報告的是上個月就已經定好的計畫？",
+      "opts": [
+        "A. I'll apply for the Vietnamese licence.",
+        "B. I'm going to apply for the Vietnamese licence.",
+        "C. Shall I apply for the Vietnamese licence?",
+        "D. I applied for the Vietnamese licence."
+      ],
+      "optsCn": [
+        "A. 我會去申請越南執照。（當場決定）",
+        "B. 我要去申請越南執照。（早就定好）",
+        "C. 要我去申請越南執照嗎？",
+        "D. 我申請過越南執照了。"
+      ],
+      "ans": 1,
+      "expl": "上個月就定好的打算，開口之前已經存在，用 be going to。A 是這一刻才決定；C 是在徵詢對方；D 講的是已經做完的事。"
+    }
+  ]
+},
+{
+  "id": "dg20261104b2",
+  "date": "2026-11-04",
+  "unitNo": 23,
+  "level": "B2",
+  "title": "Will, Going To and the Voice You Choose",
+  "titleCn": "will、going to 與你選的語氣",
+  "srcDays": [],
+  "summary": "到了 B2，will 和 be going to 不只是對錯問題，而是語氣的選擇：be going to 帶著現場感與口語味，will 乾淨、正式、適合書面；而別人說過的 will 一旦寫進報導，就得退成 would，連時間詞一起退。",
+  "sections": [
+    {
+      "h": "正式度：同一個意思，兩種聲音",
+      "body": "兩個形式在語意上有分工，但在正式度上也有分工，這一點文法書很少明寫。be going to 的語感貼近說話現場，所以用在會議、通訊軟體、口頭報告裡很自然；正式的書面文件、對外公告、學術寫作則偏好 will，因為它短、乾淨，而且不把讀者拉進「我現在看到什麼」的視角。縮寫形式更是分水嶺：gonna 只存在於口語與極度隨意的訊息裡，任何正式文件都要還原成 going to。",
+      "table": {
+        "head": [
+          "場合",
+          "偏好",
+          "為什麼"
+        ],
+        "rows": [
+          [
+            "口頭報告、現場討論",
+            "be going to",
+            "帶著現場感，聽起來像在描述眼前的局勢"
+          ],
+          [
+            "公告、合約、對外信件",
+            "will",
+            "簡短中性，不把讀者綁在某個觀察時點"
+          ],
+          [
+            "學術或技術寫作的推論",
+            "be going to ＋ 證據句",
+            "先給依據，再給結論，讀者才服氣"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The committee will publish the revised standard in June.",
+          "cn": "委員會將於六月公布修訂後的標準。",
+          "note": "公告體：乾淨中性的 will"
+        },
+        {
+          "en": "At this burn rate the budget is going to run out in August.",
+          "cn": "照這個燒錢速度，預算八月就會見底。",
+          "note": "口頭報告：帶現場感"
+        },
+        {
+          "en": "Given the audit findings, the line is going to be reclassified.",
+          "cn": "依稽核結果看，這條產線會被重新分類。",
+          "note": "先給依據，再下結論"
+        }
+      ]
+    },
+    {
+      "h": "預測要不要把證據放進句子",
+      "body": "B2 寫作最有用的一招，是讓句型自己承載證據。be going to 的語感天生就在說「眼前的狀況指向這個結果」，所以前面掛一個 Given…、Judging by…、At this rate… 的片語會非常順；反過來，will 搭配 I think、probably、in all likelihood 這些軟化詞，表達的是你願意承擔多少判斷。兩者都不是「比較有禮貌」或「比較確定」，而是你要讓讀者看見依據，還是看見你的立場。",
+      "bullets": [
+        "證據在句子裡：Given + 名詞片語 + 主詞 + be going to + 原形動詞",
+        "立場在句子裡：主詞 + will probably + 原形動詞，或 I expect + 主詞 + will",
+        "想完全不表態，就改成無人稱的 It is expected that…",
+        "同一段裡兩種交替使用，讀起來比全用一種更有層次"
+      ],
+      "examples": [
+        {
+          "en": "Judging by the first two weeks, the pilot run is going to miss its target.",
+          "cn": "從前兩週看，這次試產會達不到目標。",
+          "note": "證據先行"
+        },
+        {
+          "en": "The revised layout will probably cut walking distance by a fifth.",
+          "cn": "新的動線大概會把行走距離減少五分之一。",
+          "note": "立場先行，用 probably 軟化"
+        },
+        {
+          "en": "It is expected that the shortage will ease after the new year.",
+          "cn": "預期缺料情況在年後會緩解。",
+          "note": "無人稱，誰在預期不重要"
+        }
+      ]
+    },
+    {
+      "h": "把別人的 will 寫進報導：退一格",
+      "body": "引述別人說過的未來，時間座標要整組往回退一格：will 變 would，now 變 then，tonight 變 that night，tomorrow 變 the next day。這不是新時態，而是同一個 will 被包進一個過去的句子裡。真正常漏的是後面那半句——很多人把 will 改成 would 之後就停手，時間詞留在原地，整句就前後矛盾。另外，若那件事到現在仍然成立，直接保留 will 也可以，這時候你是在陳述一個仍然有效的安排，而不是在回報當時的說法。",
+      "table": {
+        "head": [
+          "當時說的話",
+          "寫進報導",
+          "注意"
+        ],
+        "rows": [
+          [
+            "We will restore power by eleven tonight.",
+            "said it would restore power by eleven that night",
+            "will 退成 would，tonight 退成 that night"
+          ],
+          [
+            "I am going to resign.",
+            "said he was going to resign",
+            "be going to 退的是 be 動詞"
+          ],
+          [
+            "The warning will stay until Sunday.（現在仍有效）",
+            "says the warning will stay until Sunday",
+            "仍然成立就不必退"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The utility said it would restore power by eleven that night.",
+          "cn": "電力公司說會在當晚十一點前恢復供電。",
+          "note": "時間詞跟著退"
+        },
+        {
+          "en": "The plant manager said he was going to bring the audit forward.",
+          "cn": "廠長說他要把稽核提前。",
+          "note": "be going to 退的是 be 動詞"
+        },
+        {
+          "en": "The bureau says the warning will stay in place until Sunday.",
+          "cn": "該局表示警報會持續到星期日。",
+          "note": "現在仍有效，所以不退"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "The report notes that the plant is gonna close in 2028.",
+      "good": "The report notes that the plant is going to close in 2028.",
+      "why": "gonna 是語音上的縮讀，不是書寫形式。它一出現在正式文件裡，整句的可信度就跟著掉。口語聽到再多次，寫下來一律還原成 going to。"
+    },
+    {
+      "bad": "The bureau said it will lift the warning at two.",
+      "good": "The bureau said it would lift the warning at two.",
+      "why": "主要動詞 said 已經把整句拉到過去，被引述的 will 必須跟著退成 would。留著 will 會讓讀者以為那是現在仍然有效的說法，而不是當時講的話。"
+    },
+    {
+      "bad": "The airline said it would resume flights tomorrow.",
+      "good": "The airline said it would resume flights the next day.",
+      "why": "這是最常見的半套修改：助動詞退了，時間詞沒退。tomorrow 以寫作的今天為基準，would 以當時為基準，兩個座標撞在一起，讀者會算不出到底是哪一天。"
+    },
+    {
+      "bad": "Judging by these numbers, I will say the cost rises next quarter.",
+      "good": "Judging by these numbers, the cost is going to rise next quarter.",
+      "why": "前半句已經把依據攤開了，後半句卻把焦點拉回「我要說什麼」，證據就白放了。既然依據在眼前，就讓 be going to 去承載結論；另外 I will say 在英文裡不是用來引出判斷的句型。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Which version belongs in a formal public notice?",
+      "qCn": "哪一個版本適合放進正式公告？",
+      "opts": [
+        "A. The service is gonna stop at midnight.",
+        "B. The service is going to stop at midnight, we think.",
+        "C. The service will be suspended at midnight.",
+        "D. The service stops at midnight, probably."
+      ],
+      "optsCn": [
+        "A. 服務午夜要停。（口語縮讀）",
+        "B. 我們覺得服務午夜要停。",
+        "C. 服務將於午夜暫停。（公告體）",
+        "D. 服務午夜停，大概吧。"
+      ],
+      "ans": 2,
+      "expl": "公告要短、中性、不帶觀察視角，所以用 will 搭配被動語態。A 的 gonna 不進書面；B 加了 we think 反而削弱公告的效力；D 的 probably 讓公告變成猜測。"
+    },
+    {
+      "q": "\"We will ship the samples tomorrow,\" the supplier said on Monday. Report it:",
+      "qCn": "供應商星期一說：「我們明天會寄出樣品。」請改成報導。",
+      "opts": [
+        "A. The supplier said they will ship the samples tomorrow.",
+        "B. The supplier said they would ship the samples the next day.",
+        "C. The supplier said they would ship the samples tomorrow.",
+        "D. The supplier said they are going to ship the samples tomorrow."
+      ],
+      "optsCn": [
+        "A. 供應商說他們明天會寄樣品。（will 沒退）",
+        "B. 供應商說他們隔天會寄樣品。（都退了）",
+        "C. 供應商說他們明天會寄樣品。（時間詞沒退）",
+        "D. 供應商說他們明天要寄樣品。（都沒退）"
+      ],
+      "ans": 1,
+      "expl": "said 把整句拉到過去，will 要退成 would，tomorrow 也要退成 the next day。C 是最常見的半套修改；A 和 D 連助動詞都沒退，讀者會以為那是現在才聽到的話。"
+    },
+    {
+      "q": "Given the backlog at the port, the delivery date ___ slip by two weeks.",
+      "qCn": "考慮到港口的積壓，交期會延後兩週。",
+      "opts": [
+        "A. will probably",
+        "B. is going to",
+        "C. shall",
+        "D. would"
+      ],
+      "ans": 1,
+      "expl": "Given 開頭的片語已經把依據放在句子裡，結論自然交給 be going to。A 的 probably 把句子變回個人估計，依據就浪費了；shall 在美式英文幾乎只用於提議；would 需要一個過去的句子來掛。"
+    },
+    {
+      "q": "Which sentence keeps the writer completely out of the prediction?",
+      "qCn": "哪一句完全不把作者本人放進預測裡？",
+      "opts": [
+        "A. I think demand will recover in the spring.",
+        "B. Demand is going to recover in the spring, I'd say.",
+        "C. It is expected that demand will recover in the spring.",
+        "D. I'm sure demand will recover in the spring."
+      ],
+      "optsCn": [
+        "A. 我想春天需求會回升。",
+        "B. 我會說春天需求會回升。",
+        "C. 預期春天需求會回升。（無人稱）",
+        "D. 我很確定春天需求會回升。"
+      ],
+      "ans": 2,
+      "expl": "It is expected that 是無人稱句型，不交代是誰在預期，所以作者完全退場。A、B、D 都有第一人稱，讀者看到的是作者的立場而不是中立的推估。"
+    }
+  ]
+},
 /* ---------- 2026-10-28 每日文法（will and shall 1／2） ---------- */
 {
   "id": "dg20261028a2",

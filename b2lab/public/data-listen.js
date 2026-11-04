@@ -14,6 +14,897 @@ window.LISTEN = {
 
 /* ========== 依課堂筆記自製（每週三更新） ========== */
 notes:[
+/* ---------- 2026-11-04 天災與天氣主題（四個程度） ---------- */
+{
+  "id": "dl20261104a2",
+  "date": "2026-11-04",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Two Flashlights Left",
+  "titleCn": "只剩兩支手電筒",
+  "series": "本站自製聽力 · 天災與天氣主題",
+  "topic": "🔋 颱風前一晚在便利商店採買",
+  "focus": "I'll 用在當場決定要做的事（I'll get、I'll ask），Shall I…? 問對方要不要我來做，won't 講我不買、不做",
+  "intro": "颱風要來了，Tom和朋友Kevin在便利商店裡分工採買。請注意兩個人講話的形狀：Shall I 是先問一聲，I'll 是當場決定。兩個人一直在分配誰做什麼，所以 I'll 出現很多次，每一次都是剛剛才決定的。最後Kevin說 I won't buy any，那是他聽到家裡已經有膠帶之後才改變主意。",
+  "tip": "第一次聽只抓三個數字：他們買了幾瓶水、店裡還剩幾支手電筒、Kevin幾點要到Tom家。第二次聽專心聽 I'll 和 Shall I 的差別——誰在問、誰在決定，並注意 I'll 後面的動詞一律是原形。",
+  "pre": [
+    {
+      "w": "typhoon",
+      "ipa": "/taɪˈfuːn/",
+      "pos": "n.",
+      "cn": "颱風",
+      "def": "A very big storm with strong wind and heavy rain."
+    },
+    {
+      "w": "store",
+      "ipa": "/stɔːr/",
+      "pos": "n.",
+      "cn": "商店",
+      "def": "A place where you go to buy things."
+    },
+    {
+      "w": "bottle",
+      "ipa": "/ˈbɑːtl/",
+      "pos": "n.",
+      "cn": "瓶子",
+      "def": "A tall container for water, milk or juice."
+    },
+    {
+      "w": "flashlight",
+      "ipa": "/ˈflæʃ.laɪt/",
+      "pos": "n.",
+      "cn": "手電筒",
+      "def": "A small light you hold in your hand."
+    },
+    {
+      "w": "shelf",
+      "ipa": "/ʃelf/",
+      "pos": "n.",
+      "cn": "架子",
+      "def": "A flat board on a wall where things are put."
+    },
+    {
+      "w": "tape",
+      "ipa": "/teɪp/",
+      "pos": "n.",
+      "cn": "膠帶",
+      "def": "A long thin piece of plastic that sticks two things together."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Kevin",
+      "en": "This store is really busy tonight.",
+      "cn": "今天晚上這家店好多人。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Everybody is buying water. Shall I get the bottles?",
+      "cn": "大家都在買水。要我去拿水嗎？"
+    },
+    {
+      "sp": "Kevin",
+      "en": "Yes, please. I'll look for a flashlight.",
+      "cn": "好，麻煩你。我去找手電筒。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How many bottles do we need?",
+      "cn": "我們需要幾瓶？"
+    },
+    {
+      "sp": "Kevin",
+      "en": "Six is enough for three people.",
+      "cn": "三個人六瓶就夠了。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Okay. Six bottles, and I'll pay for them.",
+      "cn": "好。六瓶，我來付。"
+    },
+    {
+      "sp": "Kevin",
+      "en": "There is no flashlight on this shelf.",
+      "cn": "這個架子上沒有手電筒。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I'll ask the man at the desk.",
+      "cn": "我去問櫃台那位先生。"
+    },
+    {
+      "sp": "Tom",
+      "en": "He says they have two left, near the bread.",
+      "cn": "他說還剩兩支，在麵包旁邊。"
+    },
+    {
+      "sp": "Kevin",
+      "en": "Only two? Then I'll take one now.",
+      "cn": "只剩兩支？那我現在就拿一支。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Do we need tape for the windows?",
+      "cn": "窗戶要不要膠帶？"
+    },
+    {
+      "sp": "Kevin",
+      "en": "My mother has a lot of tape at home.",
+      "cn": "我媽家裡有很多膠帶。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Then I won't buy any.",
+      "cn": "那我就不買了。"
+    },
+    {
+      "sp": "Kevin",
+      "en": "What time does the rain start?",
+      "cn": "雨幾點開始下？"
+    },
+    {
+      "sp": "Tom",
+      "en": "At about eight. I think the wind will come first.",
+      "cn": "大概八點。我想風會先來。"
+    },
+    {
+      "sp": "Kevin",
+      "en": "I'll come to your house at seven, then.",
+      "cn": "那我七點到你家。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many bottles of water do they buy?",
+      "qCn": "他們買了幾瓶水？",
+      "opts": [
+        "A. Two",
+        "B. Three",
+        "C. Six",
+        "D. Eight"
+      ],
+      "optsCn": [
+        "A. 兩瓶",
+        "B. 三瓶",
+        "C. 六瓶",
+        "D. 八瓶"
+      ],
+      "ans": 2,
+      "expl": "Six is enough for three people.——Kevin說三個人六瓶就夠，Tom接著說 Six bottles, and I'll pay for them。"
+    },
+    {
+      "q": "How many flashlights does the store still have?",
+      "qCn": "店裡還剩幾支手電筒？",
+      "opts": [
+        "A. None",
+        "B. One",
+        "C. Two",
+        "D. Six"
+      ],
+      "optsCn": [
+        "A. 一支都沒有",
+        "B. 一支",
+        "C. 兩支",
+        "D. 六支"
+      ],
+      "ans": 2,
+      "expl": "He says they have two left, near the bread.——Tom問過櫃台之後回報的數字；架子上找不到不代表店裡沒有。"
+    },
+    {
+      "q": "Why does Kevin decide not to buy tape?",
+      "qCn": "Kevin為什麼決定不買膠帶？",
+      "opts": [
+        "A. The store has no tape",
+        "B. His mother already has a lot at home",
+        "C. Tape is too expensive",
+        "D. The windows are already closed"
+      ],
+      "optsCn": [
+        "A. 店裡沒有膠帶",
+        "B. 他媽媽家裡已經有很多",
+        "C. 膠帶太貴",
+        "D. 窗戶已經關好了"
+      ],
+      "ans": 1,
+      "expl": "My mother has a lot of tape at home.——Tom一問要不要買，Kevin就說家裡有很多，Tom才說 Then I won't buy any。"
+    },
+    {
+      "q": "Tom sees that the shelf is empty and says, \"___ ask the man at the desk.\"",
+      "qCn": "Tom看到架子空的，說：「我去問櫃台那位先生。」",
+      "opts": [
+        "A. I'll",
+        "B. I ask",
+        "C. Shall I",
+        "D. I asked"
+      ],
+      "ans": 0,
+      "expl": "他是看到架子空了那一刻才決定要去問，所以用 I'll 加原形動詞。I ask 是講習慣；Shall I 會變成問句，但他沒有在問Kevin的意見；I asked 是已經問過了。"
+    }
+  ]
+},
+{
+  "id": "dl20261104b1",
+  "date": "2026-11-04",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "The Drain on the Fourth Floor",
+  "titleCn": "四樓的排水孔",
+  "series": "本站自製聽力 · 天災與天氣主題",
+  "topic": "🪟 颱風夜在樓梯間跟鄰居分工",
+  "focus": "I'll 用在當場的提議與答應，Shall I／Shall we 用來徵詢，won't 用來拒絕；已經排好的事改用現在進行式",
+  "intro": "Anita住的公寓在颱風夜停電了，她在樓梯間遇到樓上的林太太。兩個人一邊聊一邊把事情分掉，所以 I'll 和 Shall we 出現得很密集。請特別注意林太太提到明天早上的安排時，她沒有用 will——因為水電師傅早就約好了，那是已經確定的事。",
+  "tip": "第一次聽抓三個事實：林太太在這裡住了幾年、去年排水孔堵了幾次、幾點停電。第二次聽數 I'll 出現幾次，並想一想每一次是提議、答應還是拒絕；最後再回頭聽林太太講明天早上那一句用的是什麼形狀。",
+  "pre": [
+    {
+      "w": "warning",
+      "ipa": "/ˈwɔːr.nɪŋ/",
+      "pos": "n.",
+      "cn": "警報；警告",
+      "def": "Information that tells you something bad may happen soon."
+    },
+    {
+      "w": "drain",
+      "ipa": "/dreɪn/",
+      "pos": "n.",
+      "cn": "排水孔",
+      "def": "A hole or pipe that takes water away."
+    },
+    {
+      "w": "bucket",
+      "ipa": "/ˈbʌk.ɪt/",
+      "pos": "n.",
+      "cn": "水桶",
+      "def": "An open container with a handle, used for carrying water."
+    },
+    {
+      "w": "balcony",
+      "ipa": "/ˈbælkəni/",
+      "pos": "n.",
+      "cn": "陽台",
+      "def": "A small outdoor floor on the outside wall of a building."
+    },
+    {
+      "w": "leak",
+      "ipa": "/liːk/",
+      "pos": "n.",
+      "cn": "漏水",
+      "def": "A hole or crack that lets water through."
+    },
+    {
+      "w": "candle",
+      "ipa": "/ˈkændl/",
+      "pos": "n.",
+      "cn": "蠟燭",
+      "def": "A stick of wax that gives light when it burns."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mrs. Lin",
+      "en": "Anita? Is that you on the stairs?",
+      "cn": "Anita？在樓梯上的是你嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Yes, Mrs. Lin. The lights went out about ten minutes ago.",
+      "cn": "是啊，林太太。燈大概十分鐘前熄的。"
+    },
+    {
+      "sp": "Mrs. Lin",
+      "en": "Nine o'clock, right on time. It happens every big typhoon.",
+      "cn": "九點，很準時。每次大颱風都這樣。"
+    },
+    {
+      "sp": "Anita",
+      "en": "You have lived here a long time, haven't you?",
+      "cn": "您在這裡住很久了吧？"
+    },
+    {
+      "sp": "Mrs. Lin",
+      "en": "Twelve years. The drain on the fourth floor is the real problem.",
+      "cn": "十二年了。真正的問題是四樓的排水孔。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Does it block often?",
+      "cn": "常常堵住嗎？"
+    },
+    {
+      "sp": "Mrs. Lin",
+      "en": "Twice last year. Water came down my balcony wall both times.",
+      "cn": "去年堵了兩次，兩次水都從我家陽台牆上流下來。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Shall we go up and look at it now?",
+      "cn": "我們要不要現在上去看一下？"
+    },
+    {
+      "sp": "Mrs. Lin",
+      "en": "Let me get my shoes. Can you bring a bucket?",
+      "cn": "我去穿鞋。你可以帶個水桶嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I'll bring the bucket and my phone light.",
+      "cn": "我帶水桶和手機的燈。"
+    },
+    {
+      "sp": "Mrs. Lin",
+      "en": "Good. I have candles, but my son won't let me use them.",
+      "cn": "好。我有蠟燭，可是我兒子不准我點。"
+    },
+    {
+      "sp": "Anita",
+      "en": "He is right. A phone is safer than a candle tonight.",
+      "cn": "他說得對。今晚手機比蠟燭安全。"
+    },
+    {
+      "sp": "Mrs. Lin",
+      "en": "Look, the drain is full of leaves again.",
+      "cn": "你看，排水孔又塞滿葉子了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I'll clear the top layer, and you hold the light.",
+      "cn": "我把上面那層清掉，你拿燈。"
+    },
+    {
+      "sp": "Mrs. Lin",
+      "en": "The water is going down already. That was fast.",
+      "cn": "水已經在往下流了，好快。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Shall I check it again before I go to work?",
+      "cn": "我上班前要不要再來看一次？"
+    },
+    {
+      "sp": "Mrs. Lin",
+      "en": "No need. The plumber is coming at eight tomorrow morning.",
+      "cn": "不用了。水電師傅明天早上八點要來。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Then I won't worry about it. Good night, Mrs. Lin.",
+      "cn": "那我就不擔心了。晚安，林太太。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How long has Mrs. Lin lived in the building?",
+      "qCn": "林太太在這棟樓住了多久？",
+      "opts": [
+        "A. Two years",
+        "B. Nine years",
+        "C. Twelve years",
+        "D. Twenty years"
+      ],
+      "optsCn": [
+        "A. 兩年",
+        "B. 九年",
+        "C. 十二年",
+        "D. 二十年"
+      ],
+      "ans": 2,
+      "expl": "Twelve years. The drain on the fourth floor is the real problem.——她直接回答了年數；九點是停電的時間，不是年數。"
+    },
+    {
+      "q": "How many times did the drain block last year?",
+      "qCn": "去年排水孔堵了幾次？",
+      "opts": [
+        "A. Once",
+        "B. Twice",
+        "C. Four times",
+        "D. Every month"
+      ],
+      "optsCn": [
+        "A. 一次",
+        "B. 兩次",
+        "C. 四次",
+        "D. 每個月都堵"
+      ],
+      "ans": 1,
+      "expl": "Twice last year. Water came down my balcony wall both times.——林太太還補了一句兩次都從陽台牆流下來。"
+    },
+    {
+      "q": "Why does Mrs. Lin not use her candles?",
+      "qCn": "林太太為什麼不用她的蠟燭？",
+      "opts": [
+        "A. She cannot find them",
+        "B. Her son does not let her",
+        "C. They are too short",
+        "D. The wind blows them out"
+      ],
+      "optsCn": [
+        "A. 她找不到",
+        "B. 她兒子不准",
+        "C. 蠟燭太短",
+        "D. 風會把它們吹熄"
+      ],
+      "ans": 1,
+      "expl": "I have candles, but my son won't let me use them.——這裡的 won't 是「不准、不肯」，Anita接著也說手機比蠟燭安全。"
+    },
+    {
+      "q": "Mrs. Lin says the plumber is coming at eight tomorrow. Why not \"the plumber will come\"?",
+      "qCn": "林太太說水電師傅明天八點要來，為什麼不用 will come？",
+      "opts": [
+        "A. Because the time is already arranged",
+        "B. Because she is guessing",
+        "C. Because she decided while speaking",
+        "D. Because it is a promise to Anita"
+      ],
+      "optsCn": [
+        "A. 因為時間早就約好了",
+        "B. 因為她在猜",
+        "C. 因為她講的時候才決定",
+        "D. 因為那是給Anita的承諾"
+      ],
+      "ans": 0,
+      "expl": "師傅是先前就約好的，屬於已經確定的安排，英文用現在進行式報告。will 要留給「說話這一刻才決定」的事，例如Anita的 I'll bring the bucket。"
+    }
+  ]
+},
+{
+  "id": "dl20261104b1p",
+  "date": "2026-11-04",
+  "level": "B1+",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Three Quarters Back On",
+  "titleCn": "四分之三已經復電",
+  "series": "本站自製聽力 · 天災與天氣主題",
+  "topic": "🌀 上班前跟越南同事聊颱風新聞",
+  "focus": "被動語態講災情（was closed、were evacuated、had been restored），be going to 講眼前跡象指向的結果，will 講個人判斷",
+  "intro": "Anita和越南同事Mai在視訊前先聊了幾句颱風新聞。這一課的語言焦點有兩層：講災情的句子大量使用被動語態，因為重點是「哪裡斷了、幾戶停電」，不是誰做的；講接下來會怎樣的時候，兩個人一個用 be going to、一個用 will，差別就在手上有沒有眼前的數據。",
+  "tip": "第一次聽抓三個數字：停電戶數、到下午兩點復電的比例、新北市撤離的人數。第二次聽專心找被動語態，每聽到一個 was 或 were 加過去分詞就記一筆；最後比較 Mai 的 going to 和 Anita 的 will，想一想誰手上有證據。",
+  "pre": [
+    {
+      "w": "household",
+      "ipa": "/ˈhaʊshoʊld/",
+      "pos": "n.",
+      "cn": "家戶",
+      "def": "All the people who live together in one home."
+    },
+    {
+      "w": "electricity",
+      "ipa": "/ɪˌlekˈtrɪs.ə.t̬i/",
+      "pos": "n.",
+      "cn": "電力",
+      "def": "The power that comes through wires and makes lights work."
+    },
+    {
+      "w": "evacuate",
+      "ipa": "/ɪˈvækjueɪt/",
+      "pos": "v.",
+      "cn": "撤離",
+      "def": "To move people away from a dangerous place."
+    },
+    {
+      "w": "lane",
+      "ipa": "/leɪn/",
+      "pos": "n.",
+      "cn": "車道",
+      "def": "One of the marked strips that cars drive in on a road."
+    },
+    {
+      "w": "coast",
+      "ipa": "/koʊst/",
+      "pos": "n.",
+      "cn": "海岸",
+      "def": "The land next to the sea."
+    },
+    {
+      "w": "crane",
+      "ipa": "/kreɪn/",
+      "pos": "n.",
+      "cn": "吊車；起重機",
+      "def": "A tall machine that lifts very heavy things."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "Anita, did your building lose power last night?",
+      "cn": "Anita，你那棟樓昨晚停電了嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "For about four hours. The news says 77,498 households were cut off.",
+      "cn": "停了大概四個小時。新聞說有七萬七千四百九十八戶斷電。"
+    },
+    {
+      "sp": "Mai",
+      "en": "That is a huge number. Has any of it been fixed?",
+      "cn": "好大的數字。有修好一些嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Three quarters had been restored by two in the afternoon.",
+      "cn": "到下午兩點已經復電四分之三。"
+    },
+    {
+      "sp": "Mai",
+      "en": "So about nineteen thousand homes were still dark.",
+      "cn": "所以還有大概一萬九千戶沒有電。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Yes, and most of them are on the east coast.",
+      "cn": "對，而且大部分在東海岸。"
+    },
+    {
+      "sp": "Mai",
+      "en": "I saw a photo of a crane in the water. Was that real?",
+      "cn": "我看到一張吊車在水裡的照片。那是真的嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "It was lifted off the harbor by six-meter waves.",
+      "cn": "它被六公尺高的浪從漁港抬了起來。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Six meters. In Hue we had something similar in October.",
+      "cn": "六公尺。十月的時候我們順化也遇到差不多的情況。"
+    },
+    {
+      "sp": "Anita",
+      "en": "The roads were worse, actually. One lane of Highway 9 was closed.",
+      "cn": "其實路更慘。台九線有一條車道被封閉。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Was anybody moved out of the hills?",
+      "cn": "有人從山區被撤離嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "New Taipei evacuated 1,397 residents, and Yilan moved 350 more.",
+      "cn": "新北撤離了一千三百九十七位居民，宜蘭又撤了三百五十人。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Look at the rain radar. The band is going to sit over us all day.",
+      "cn": "你看雨量雷達，這一條雨帶整天都會壓在我們頭上。"
+    },
+    {
+      "sp": "Anita",
+      "en": "You have the radar open, so I believe you.",
+      "cn": "你開著雷達圖，那我信你。"
+    },
+    {
+      "sp": "Mai",
+      "en": "The factory audit is going to be postponed. The road team cannot reach us.",
+      "cn": "工廠稽核會被延後。道路小組到不了我們這裡。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I think the office will stay open anyway.",
+      "cn": "我想辦公室還是會照常開。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Is that a guess or did somebody tell you?",
+      "cn": "那是你猜的，還是有人跟你說？"
+    },
+    {
+      "sp": "Anita",
+      "en": "A guess. That is why I said will and not going to.",
+      "cn": "猜的。所以我說的是 will，不是 going to。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Then I'll send you the radar link, and you can decide.",
+      "cn": "那我把雷達的連結傳給你，你自己判斷。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many households lost electricity according to the news?",
+      "qCn": "根據新聞，有多少戶停電？",
+      "opts": [
+        "A. 1,397",
+        "B. 19,000",
+        "C. 77,498",
+        "D. 350"
+      ],
+      "optsCn": [
+        "A. 一千三百九十七戶",
+        "B. 一萬九千戶",
+        "C. 七萬七千四百九十八戶",
+        "D. 三百五十戶"
+      ],
+      "ans": 2,
+      "expl": "The news says 77,498 households were cut off.——一萬九千是尚未復電的戶數，一千三百九十七與三百五十是撤離人數。"
+    },
+    {
+      "q": "What had happened by two in the afternoon?",
+      "qCn": "到下午兩點為止發生了什麼事？",
+      "opts": [
+        "A. All power had been restored",
+        "B. Three quarters of the power had been restored",
+        "C. Highway 9 had reopened",
+        "D. The rain band had moved away"
+      ],
+      "optsCn": [
+        "A. 全部復電",
+        "B. 四分之三已經復電",
+        "C. 台九線重新開放",
+        "D. 雨帶移走了"
+      ],
+      "ans": 1,
+      "expl": "Three quarters had been restored by two in the afternoon.——用的是現在完成式的被動，重點在復電的比例。"
+    },
+    {
+      "q": "Why does Mai say the audit \"is going to be postponed\"?",
+      "qCn": "Mai為什麼說稽核「會被延後」？",
+      "opts": [
+        "A. Because her manager announced it",
+        "B. Because the road team cannot reach the plant",
+        "C. Because she decided it while speaking",
+        "D. Because it is on the timetable"
+      ],
+      "optsCn": [
+        "A. 因為她主管宣布了",
+        "B. 因為道路小組到不了廠區",
+        "C. 因為她講的時候才決定",
+        "D. 因為那是時刻表上的事"
+      ],
+      "ans": 1,
+      "expl": "The road team cannot reach us.——跡象就在眼前，所以她用 be going to；如果只是個人猜測，英文會改用 will。"
+    },
+    {
+      "q": "Anita says \"the office will stay open\" instead of \"is going to stay open\" because",
+      "qCn": "Anita說 will stay open 而不是 is going to stay open，原因是",
+      "opts": [
+        "A. she has data in front of her",
+        "B. it is only her guess",
+        "C. somebody promised her",
+        "D. it is already arranged"
+      ],
+      "optsCn": [
+        "A. 她手上有資料",
+        "B. 那只是她的猜測",
+        "C. 有人向她承諾過",
+        "D. 那已經安排好了"
+      ],
+      "ans": 1,
+      "expl": "A guess. That is why I said will and not going to.——她自己把理由講出來了：沒有證據，只是看法，所以用 will。"
+    }
+  ]
+},
+{
+  "id": "dl20261104b2",
+  "date": "2026-11-04",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Should the Policy Change?",
+  "titleCn": "颱風假的規定該不該改",
+  "series": "本站自製聽力 · 天災與天氣主題",
+  "topic": "🗂️ 風災後的部門會議：要不要改颱風假規定",
+  "focus": "引述別人說過的未來時 will 要退成 would、時間詞跟著退；帶證據的推論用 be going to，中性的宣布用 will",
+  "intro": "風災過後，Anita和廠長Daniel在小型會議裡討論公司的颱風假規定。這一課請注意三種語氣：Daniel引述總部說過的話時用 would，而且時間詞也跟著退；Anita拿著九千多筆災情數據做推論，用的是 be going to；最後決議要公告出去的那一句，則回到乾淨中性的 will。",
+  "tip": "第一次聽抓三個事實：全島災情通報幾筆、星期六傍晚還有多少戶沒電、他們決定把稽核移到哪一天。第二次聽專心分辨 would、going to、will 各出現在什麼位置，並試著說出為什麼那裡不能換成另一個。",
+  "pre": [
+    {
+      "w": "authorities",
+      "ipa": "/əˈθɔːr.ə.t̬iz/",
+      "pos": "n.",
+      "cn": "主管機關",
+      "def": "The official groups that run a country or a city."
+    },
+    {
+      "w": "infrastructure",
+      "ipa": "/ˈɪn.frəˌstrʌk.tʃɚ/",
+      "pos": "n.",
+      "cn": "基礎設施",
+      "def": "The roads, pipes, wires and systems a place needs to work."
+    },
+    {
+      "w": "recovery",
+      "ipa": "/rɪˈkʌv.ɚ.i/",
+      "pos": "n.",
+      "cn": "復原",
+      "def": "The process of getting back to a normal state."
+    },
+    {
+      "w": "uneven",
+      "ipa": "/ʌnˈiː.vən/",
+      "pos": "adj.",
+      "cn": "不平均的",
+      "def": "Not the same everywhere; not level or regular."
+    },
+    {
+      "w": "policy",
+      "ipa": "/ˈpɑːləsi/",
+      "pos": "n.",
+      "cn": "政策；規定",
+      "def": "An official rule about how something should be done."
+    },
+    {
+      "w": "shift",
+      "ipa": "/ʃɪft/",
+      "pos": "n.",
+      "cn": "班；輪班",
+      "def": "A set period of work in a factory or office."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Daniel",
+      "en": "Thanks for coming in early. Head office called me on Saturday.",
+      "cn": "謝謝你提早進來。總部星期六打電話給我。"
+    },
+    {
+      "sp": "Anita",
+      "en": "What did they say about the two shifts we lost?",
+      "cn": "他們對我們損失的兩班怎麼說？"
+    },
+    {
+      "sp": "Daniel",
+      "en": "They said they would review the typhoon policy before the end of the month.",
+      "cn": "他們說會在月底前檢討颱風假的規定。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Before the end of this month, or the month they were in?",
+      "cn": "是這個月底，還是他們說話那個月的月底？"
+    },
+    {
+      "sp": "Daniel",
+      "en": "Good question. They meant November, so the deadline has not moved.",
+      "cn": "好問題。他們指的是十一月，所以期限沒有變。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I pulled the public figures. The authorities logged 9,027 damage reports.",
+      "cn": "我把公開數據調出來了。官方登錄了九千零二十七筆災情通報。"
+    },
+    {
+      "sp": "Daniel",
+      "en": "Across the whole island, or just the north?",
+      "cn": "是全島，還是只有北部？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The whole island. And on Saturday evening 22,000 homes still had no power.",
+      "cn": "全島。而且星期六傍晚還有兩萬兩千戶沒有電。"
+    },
+    {
+      "sp": "Daniel",
+      "en": "So the recovery was uneven.",
+      "cn": "所以復原的速度並不平均。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Very uneven. Given those gaps, our commute rule is going to fail again.",
+      "cn": "非常不平均。從這些落差看，我們的通勤規定還是會再出問題。"
+    },
+    {
+      "sp": "Daniel",
+      "en": "You sound certain. Is that because of the numbers?",
+      "cn": "你聽起來很確定。是因為那些數字嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Yes. The infrastructure data is doing the arguing, not me.",
+      "cn": "對。是基礎設施的數據在說話，不是我。"
+    },
+    {
+      "sp": "Daniel",
+      "en": "Then let us not guess. Shall we move the audit to Wednesday?",
+      "cn": "那我們就別猜了。要不要把稽核移到星期三？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Wednesday works. The road team will have access by then.",
+      "cn": "星期三可以。到那時候道路小組進得來。"
+    },
+    {
+      "sp": "Daniel",
+      "en": "I'll write the notice this morning and copy head office.",
+      "cn": "我今天早上寫公告，副本給總部。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Keep the wording neutral. A notice should not sound like a forecast.",
+      "cn": "用字保持中性。公告不該聽起來像氣象預報。"
+    },
+    {
+      "sp": "Daniel",
+      "en": "Understood. The audit will take place on Wednesday at nine.",
+      "cn": "了解。稽核將於星期三上午九點進行。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is the right voice for a notice. Short and flat.",
+      "cn": "公告就該是這種口氣，短而平。"
+    },
+    {
+      "sp": "Daniel",
+      "en": "And I won't promise anything about next month until they reply.",
+      "cn": "在他們回覆之前，下個月的事我什麼都不保證。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many damage reports were logged across the island?",
+      "qCn": "全島登錄了多少筆災情通報？",
+      "opts": [
+        "A. 2,200",
+        "B. 9,027",
+        "C. 22,000",
+        "D. 1,014"
+      ],
+      "optsCn": [
+        "A. 兩千兩百筆",
+        "B. 九千零二十七筆",
+        "C. 兩萬兩千筆",
+        "D. 一千零一十四筆"
+      ],
+      "ans": 1,
+      "expl": "The authorities logged 9,027 damage reports.——兩萬兩千是星期六傍晚還沒復電的戶數，不是通報筆數。"
+    },
+    {
+      "q": "What did head office say on Saturday?",
+      "qCn": "總部星期六說了什麼？",
+      "opts": [
+        "A. They would cancel the audit",
+        "B. They would review the typhoon policy before the end of the month",
+        "C. They would pay for the two lost shifts",
+        "D. They would send a road team"
+      ],
+      "optsCn": [
+        "A. 他們會取消稽核",
+        "B. 他們會在月底前檢討颱風假規定",
+        "C. 他們會支付損失的兩班費用",
+        "D. 他們會派道路小組來"
+      ],
+      "ans": 1,
+      "expl": "They said they would review the typhoon policy before the end of the month.——注意這裡的 would 是當時那句 will 被引述後退的結果。"
+    },
+    {
+      "q": "When will the audit take place?",
+      "qCn": "稽核什麼時候進行？",
+      "opts": [
+        "A. Monday morning",
+        "B. Tuesday at nine",
+        "C. Wednesday at nine",
+        "D. The end of the month"
+      ],
+      "optsCn": [
+        "A. 星期一早上",
+        "B. 星期二上午九點",
+        "C. 星期三上午九點",
+        "D. 月底"
+      ],
+      "ans": 2,
+      "expl": "The audit will take place on Wednesday at nine.——Daniel最後用公告體把時間定下來，前面Anita也先說 Wednesday works。"
+    },
+    {
+      "q": "Why does Anita use \"is going to fail\" about the commute rule?",
+      "qCn": "Anita講通勤規定時為什麼用 is going to fail？",
+      "opts": [
+        "A. Because head office decided it",
+        "B. Because the published figures point that way",
+        "C. Because she decided during the meeting",
+        "D. Because it is written in the notice"
+      ],
+      "optsCn": [
+        "A. 因為總部決定了",
+        "B. 因為公開數據指向這個結果",
+        "C. 因為她在會議中才決定",
+        "D. 因為公告上這樣寫"
+      ],
+      "ans": 1,
+      "expl": "The infrastructure data is doing the arguing, not me.——她手上有九千多筆通報和兩萬兩千戶的落差，依據就在眼前，所以用 be going to 而不是 will。"
+    }
+  ]
+},
 /* ---------- 2026-10-28 學習與心理主題（四個程度） ---------- */
 {
   "id": "dl20261028a2",
