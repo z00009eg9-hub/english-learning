@@ -93,7 +93,7 @@
     '💭':'@talk','💬':'@talk','🚧':'@signL','🍱':'@bowl','🥣':'@bowl','🍚':'@rice','🌏':'@globe','🌐':'@globe','🌍':'@globe','🌎':'@globe','🌪':'@tornadoL','🌀':'@typhoon',
     '🛂':'@passport','🛫':'@plane','✈':'@plane','🚀':'@plane','💺':'@sofa','🪑':'@sofa','🔑':'@key','🦺':'@shirt','👔':'@shirt','🎩':'@shirt','🎓':'@gradcap','🏋':'@dumbbell',
     '🏷':'@nametag','📺':'@tv','🎮':'@tv','🍕':'@food','🍔':'@food','🐟':'@fish','🗓':'@calendar','📅':'@calendar','📆':'@calendar','🍞':'@bread','🏙':'@building','🏢':'@building','🏦':'@building',
-    '🎫':'@ticket','🎤':'@mic','🎙':'@mic','📣':'@mic','📢':'@mic','🎁':'@gift','🧨':'@firework','🎆':'@firework','🕯':'@candle','🏘':'@house','🏠':'@house','🏡':'@house',
+    '🎫':'@ticket','🎤':'@mic','🎙':'@mic','📣':'@mic','📢':'@mic','🎁':'@gift','🧨':'@firework','🎆':'@firework','🕯':'@candle','🏘':'@house','🏠':'@house','🪟':'@house','🏡':'@house',
     '📶':'@chartUp','🦠':'@mask','🌩':'@bolt','⚡':'@bolt','💈':'@scissors','🪒':'@scissors','✂':'@scissors','💨':'@wind','🌬':'@wind','🌋':'@mountain','⛰':'@mountain','🏔':'@mountain',
     '🛶':'@ship','🚢':'@ship','🎭':'@facesL','🎵':'@music','🎶':'@music','🔌':'@plug','🚲':'@bike','🛵':'@scooter','🚬':'@flame','🔥':'@flame','🌃':'@moon','🌙':'@moon','👑':'@trophy','🏆':'@trophy','🧩':'@board',
     '🗳':'@ballot','🚐':'@bus','🚌':'@bus','🪞':'@mirror','🥮':'@cake','🎂':'@cake','🛍':'@bag','🎒':'@bag','🛼':'@scooter','🎰':'@coin','🪙':'@coin','💰':'@moneyL','💵':'@moneyL',
