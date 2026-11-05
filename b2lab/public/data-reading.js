@@ -758,7 +758,7 @@ window.READING = [
     {w:"preference",ipa:"/ˈprefrəns/",pos:"n.",cn:"偏好",def:"The thing you like better than another.",ex:"I have no strong preference; either restaurant is fine with me.",exCn:"我沒有特別偏好，哪家餐廳都可以。"},
     {w:"host",ipa:"/hoʊst/",pos:"n.",cn:"主人、招待方",def:"A person who receives and looks after guests.",ex:"As the host of the dinner party, Mark made sure every guest had something to drink.",exCn:"身為晚宴的主人，馬克確保每位客人都有飲料可喝。"},
     {w:"politeness",ipa:"/pəˈlaɪtnəs/",pos:"n.",cn:"客氣、禮貌",def:"Behaviour that shows respect for others.",ex:"In Taiwan, offering your seat to an elderly person is basic politeness.",exCn:"在台灣，讓座給長輩是基本的禮貌。"},
-    {w:"satisfaction",ipa:"/ˌsætɪsˈfækʃn/",pos:"n.",cn:"滿意",def:"The feeling of being pleased with something.",ex:"Finishing a difficult jigsaw puzzle always gives my father a deep sense of satisfaction.",exCn:"完成一幅困難的拼圖，總是讓我爸爸感到非常滿足。"},
+    {w:"satisfaction",ipa:"/ˌsæt̬.ɪsˈfæk.ʃən/",pos:"n.",cn:"滿意",def:"The feeling of being pleased with something.",ex:"Finishing a difficult jigsaw puzzle always gives my father a deep sense of satisfaction.",exCn:"完成一幅困難的拼圖，總是讓我爸爸感到非常滿足。"},
     {w:"verdict",ipa:"/ˈvɝːdɪkt/",pos:"n.",cn:"判定、結論",def:"A decision or judgement about something.",ex:"The jury reached a verdict after three days of deliberation.",exCn:"陪審團經過三天的審議後做出了裁決。"},
     {w:"assignment",ipa:"/əˈsaɪnmənt/",pos:"n.",cn:"派任、任務",def:"A job or task given to someone.",ex:"Her first overseas assignment was a six-month post in Singapore.",exCn:"她的第一個海外派任是到新加坡工作六個月。"},
     {w:"custom",ipa:"/ˈkʌstəm/",pos:"n.",cn:"習俗",def:"A traditional way of behaving in a society.",ex:"In Japanese custom, you take off your shoes before entering a home.",exCn:"按照日本的習俗，進門前要先脫鞋。"}

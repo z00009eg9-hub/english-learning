@@ -26449,7 +26449,7 @@ window.BOOK = {
       {
         "w": "identify",
         "star": true,
-        "ipa": "/aɪˈden.t̬ə.faɪ/",
+        "ipa": "/aɪˈdentəˌfaɪ/",
         "pos": "v.",
         "cn": "找出、辨識",
         "ex": "Has anyone identified the root cause?",
@@ -30578,6 +30578,702 @@ window.BOOK = {
           { "tag": "A", "en": "We use different labels to prevent the products from getting mixed up.", "cn": "我們用不同的標籤，防止產品被搞混。" },
           { "tag": "5. Q", "en": "We need to take measures to ______ defective products from entering the warehouse.", "cn": "" },
           { "tag": "A", "en": "We need to take measures to prevent defective products from entering the warehouse.", "cn": "我們需要採取措施，防止不良品進入倉庫。" }
+        ]
+      }
+    ]
+  },
+  /* ---- bk20261105 Identifying & Resolving Quality Issues ---- */
+  {
+    "id": "bk20261105",
+    "video": true,
+    "icon": "🔍",
+    "iconSvg": "<svg viewBox=\"0 0 96 96\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"48\" cy=\"48\" r=\"45\" fill=\"#fff\" stroke=\"#f0c9a0\" stroke-width=\"3\"/><rect x=\"14\" y=\"40\" width=\"40\" height=\"34\" rx=\"4\" fill=\"#3b82c4\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><rect x=\"24\" y=\"28\" width=\"40\" height=\"34\" rx=\"4\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><path d=\"M34 40 l10 10 M44 40 l-10 10\" stroke=\"#d9534f\" stroke-width=\"3.5\" stroke-linecap=\"round\"/><circle cx=\"64\" cy=\"54\" r=\"15\" fill=\"#fff\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><path d=\"M75 65 l11 11\" stroke=\"#2b2118\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M57 54 l5 5 l9 -10\" fill=\"none\" stroke=\"#3f9e64\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+    "date": "2026-11-05",
+    "doc": "https://docs.google.com/document/d/1vsytwCVGlkCWbsQUQawxCivaXtomHjO0NS6BRY-A2e8/edit",
+    "title": "Identifying & Resolving Quality Issues",
+    "titleCn": "找出並解決品質問題",
+    "topics": "different-colored boxes・missing weld・outdated software・self-introduction・effect / affect / effective / effectively・quality control・maintenance records・multimeter & continuity test",
+    "hwTitle": "I. ★ 11/05 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "wrong": "We use different color parts boxes to prevent assembly parts from getting mixed up.",
+        "fix": "We use different-colored boxes for parts to prevent assembly components from getting mixed up.",
+        "cn": "我們使用不同顏色的零件盒，以避免組裝零件混淆。",
+        "pat": "use A to + V／prevent A from + V-ing",
+        "note": "different-colored 是複合形容詞(形容詞＋過去分詞形式的 colored)，意思是「不同顏色的」；原句的 different color 少了 -ed。 「零件盒」說成 boxes for parts(用來裝零件的盒子)比 parts boxes 自然。句中 parts 已經用過一次，所以把 assembly parts 換成 assembly components(component 是組裝用的零組件，也是工廠與技術文件常用字)。 prevent A from V-ing：防止 A 發生某事，from 後面接動名詞(getting)。 get mixed up 是 get＋過去分詞，表示「被搞混」。"
+      },
+      {
+        "n": 2,
+        "ok": "The inspector found a missing weld with the visual inspection.",
+        "cn": "檢驗員在目視檢驗時發現了漏焊。",
+        "pat": "find + 名詞 + during / with + 名詞",
+        "note": "另一種說法：The inspector found a missing weld during the visual inspection. 兩種說法都可以，但 during the visual inspection 聽起來特別自然。 missing weld 是「漏焊」，指該有的焊接處不見了：missing 是形容詞(缺少的)，weld 在這裡是名詞(焊接處、焊縫)。 visual inspection 是「目視檢驗」。 during＋名詞表示「在……期間」；with 則是「藉由、透過」的意思。 found 是 find 的過去式(find–found–found)。"
+      },
+      {
+        "n": 3,
+        "wrong": "The supplier set an outdated software version from China, then the supplier needs to come to our factory to update the software.",
+        "fix": "The supplier installed an outdated software version from China, so they need to come to our factory to update it.",
+        "cn": "供應商安裝了從中國提供的舊版軟體，因此他們需要到我們工廠更新軟體。",
+        "pat": "A installed B, so they need to + V",
+        "note": "中文想說的是「安裝」，所以動詞要用 install；set 是「設定、放置」。 第二句主詞重複了 the supplier，改用代名詞 they；軟體也不必再說 the software，用 it 就好，句子比較流暢。 then 是副詞，不能用逗號接兩個完整句子；表示因果要用 so(因此)，前面加逗號。(課堂版本拆成兩句：…from China. Then they need to come…) outdated(過時的)＋ software version(軟體版本)＝舊版軟體。 need to ＋原形動詞；to update it 是不定詞，表示目的。"
+      },
+      {
+        "n": 4,
+        "ok": "Taiwan will hold local elections in November, so there is election news on TV every day now.",
+        "cn": "台灣十一月將舉行地方選舉，所以現在電視上每天都有選舉新聞。",
+        "pat": "will + V／子句, so + 子句",
+        "note": "這句話文法正確，結構與語意都清楚。 will hold 是未來式；hold an election 是「舉行選舉」的固定搭配。 月份前面用 in：in November。 news 是不可數名詞，動詞用單數 is(there is election news)。 every day 分開寫是副詞「每天」；everyday 連寫是形容詞「日常的」。"
+      },
+      {
+        "n": 5,
+        "wrong": "Hi, I'm Anita. I'm responsible for new product quality. My main job is to work with our engineering and production teams to find and solve quality problems before mass production. It's great to meet the Peloton team, and I look forward to working with you!",
+        "fix": "Hi, I'm Anita. I'm responsible for new product quality. My main responsibility is to work closely with our engineering and production teams to identify and resolve quality issues before mass production. It's great to meet the Peloton team, and I look forward to working with you!",
+        "cn": "自我介紹 Self-Introduction（訂正第 3 句）：嗨，我是 Anita。我負責新產品品質。我的主要職責是與工程及生產團隊密切合作，在量產前找出並解決品質問題。很高興認識 Peloton 團隊，期待與你們合作！",
+        "pat": "be responsible for + N／My main responsibility is to + V／look forward to + V-ing",
+        "note": "原本的自我介紹已經很好，只需「polish」(潤飾)得更專業；polish 原指擦亮(如擦鞋)，在這裡指把語言修得更好。 改動：job → responsibility(較正式)、加 closely(work closely with 是自然的商務說法)、find and solve → identify and resolve、problems → issues。課堂上拆成三段練習(My main responsibility is to work closely with our engineering and production teams. / Identify and resolve quality issues. / Before mass production.)，上面是合併後的完整句。 「the Peloton team」：專有名稱前面通常不用 the。這是常見傾向但不是絕對規則；指特定的某個團隊時，the Peloton team 也是正確、自然的說法。 be responsible for＋名詞：負責……。 look forward to 的 to 是介系詞，後面接 V-ing(working)，不是原形 work。"
+      }
+    ],
+    "vocabTitle": "II. 單字 Vocabulary",
+    "vocab": [
+      {
+        "w": "identify",
+        "ipa": "/aɪˈdentəˌfaɪ/",
+        "pos": "v.",
+        "cn": "找出、辨識",
+        "ex": "We need to identify the cause."
+      },
+      {
+        "w": "resolve",
+        "ipa": "/rɪˈzɑːlv/",
+        "pos": "v.",
+        "cn": "解決",
+        "ex": "The team resolved the issue in one day."
+      },
+      {
+        "w": "investigate",
+        "ipa": "/ɪnˈvestɪɡeɪt/",
+        "pos": "v.",
+        "cn": "調查",
+        "ex": "Please investigate why the part cracked."
+      },
+      {
+        "w": "prevent",
+        "ipa": "/prɪˈvent/",
+        "pos": "v.",
+        "cn": "預防、防止",
+        "ex": "Good training prevents mistakes."
+      },
+      {
+        "w": "reduce",
+        "ipa": "/rɪˈduːs/",
+        "pos": "v.",
+        "cn": "減少、降低",
+        "ex": "This tool can reduce waste."
+      },
+      {
+        "w": "conduct",
+        "ipa": "/kənˈdʌkt/",
+        "pos": "v.",
+        "cn": "進行(檢驗、稽核)",
+        "ex": "We conduct audits every month."
+      },
+      {
+        "w": "install",
+        "ipa": "/ɪnˈstɑːl/",
+        "pos": "v.",
+        "cn": "安裝",
+        "ex": "He installed the new driver yesterday."
+      },
+      {
+        "w": "respond",
+        "ipa": "/rɪˈspɑːnd/",
+        "pos": "v.",
+        "cn": "反應、回應",
+        "ex": "The screen did not respond."
+      },
+      {
+        "w": "satisfy",
+        "ipa": "/ˈsæt̬.ɪs.faɪ/",
+        "pos": "v.",
+        "cn": "使滿意、滿足",
+        "ex": "We want to satisfy every customer."
+      },
+      {
+        "w": "track",
+        "ipa": "/træk/",
+        "pos": "v.",
+        "cn": "追蹤、記錄",
+        "ex": "We track every repair in a log."
+      },
+      {
+        "w": "polish",
+        "ipa": "/ˈpɑː.lɪʃ/",
+        "pos": "v.",
+        "cn": "潤飾、擦亮",
+        "ex": "Let me polish this report before I send it."
+      },
+      {
+        "w": "defect",
+        "star": true,
+        "ipa": "/ˈdiː.fekt/",
+        "pos": "n.",
+        "cn": "瑕疵、缺陷",
+        "ex": "We found a small defect on the frame."
+      },
+      {
+        "w": "weld",
+        "ipa": "/weld/",
+        "pos": "n. / v.",
+        "cn": "焊接處；焊接",
+        "ex": "The weld on the handlebar is cracked."
+      },
+      {
+        "w": "component",
+        "ipa": "/kəmˈpoʊ.nənt/",
+        "pos": "n.",
+        "cn": "零組件",
+        "ex": "Each component has a part number."
+      },
+      {
+        "w": "assembly",
+        "ipa": "/əˈsem.bli/",
+        "pos": "n.",
+        "cn": "組裝",
+        "ex": "The assembly line stopped at noon."
+      },
+      {
+        "w": "specification",
+        "ipa": "/ˌspes.ə.fɪˈkeɪ.ʃən/",
+        "pos": "n.",
+        "cn": "規格",
+        "ex": "The part meets the specification."
+      },
+      {
+        "w": "inspection",
+        "ipa": "/ɪnˈspek.ʃən/",
+        "pos": "n.",
+        "cn": "檢驗",
+        "ex": "The inspection takes ten minutes."
+      },
+      {
+        "w": "inspector",
+        "ipa": "/ɪnˈspektɚ/",
+        "pos": "n.",
+        "cn": "檢驗員",
+        "ex": "The inspector checked every box."
+      },
+      {
+        "w": "supplier",
+        "ipa": "/səˈplaɪɚ/",
+        "pos": "n.",
+        "cn": "供應商",
+        "ex": "Our supplier delivers every Monday."
+      },
+      {
+        "w": "satisfaction",
+        "ipa": "/ˌsæt̬.ɪsˈfæk.ʃən/",
+        "pos": "n.",
+        "cn": "滿意、滿意度",
+        "ex": "Customer satisfaction is our priority."
+      },
+      {
+        "w": "delay",
+        "ipa": "/dɪˈleɪ/",
+        "pos": "n.",
+        "cn": "延誤",
+        "ex": "The delay cost us a day."
+      },
+      {
+        "w": "loss",
+        "ipa": "/lɑːs/",
+        "pos": "n.",
+        "cn": "損失",
+        "ex": "Poor planning led to a big loss."
+      },
+      {
+        "w": "risk",
+        "ipa": "/rɪsk/",
+        "pos": "n.",
+        "cn": "風險",
+        "ex": "A loose cable is a safety risk."
+      },
+      {
+        "w": "procedure",
+        "ipa": "/prəˈsiː.dʒɚ/",
+        "pos": "n.",
+        "cn": "程序、流程",
+        "ex": "Follow the test procedure step by step."
+      },
+      {
+        "w": "checklist",
+        "ipa": "/ˈtʃeklɪst/",
+        "pos": "n.",
+        "cn": "檢查表",
+        "ex": "Fill in the checklist after each shift."
+      },
+      {
+        "w": "maintenance",
+        "ipa": "/ˈmeɪn.t̬ən.əns/",
+        "pos": "n.",
+        "cn": "保養、維護",
+        "ex": "Regular maintenance extends machine life."
+      },
+      {
+        "w": "controller",
+        "ipa": "/kənˈtroʊ.lɚ/",
+        "pos": "n.",
+        "cn": "控制器",
+        "ex": "The controller shows an error code."
+      },
+      {
+        "w": "incline",
+        "ipa": "/ˈɪn.klaɪn/",
+        "pos": "n.",
+        "cn": "坡度、斜度",
+        "ex": "The incline can be adjusted from 0% to 15%."
+      },
+      {
+        "w": "multimeter",
+        "ipa": "/ˈmʌl.t̬i.miː.t̬ɚ/",
+        "pos": "n.",
+        "cn": "萬用電表",
+        "ex": "Use a multimeter to measure voltage."
+      },
+      {
+        "w": "circuit",
+        "ipa": "/ˈsɝː.kɪt/",
+        "pos": "n.",
+        "cn": "電路",
+        "ex": "The circuit is open."
+      },
+      {
+        "w": "continuity",
+        "ipa": "/ˌkɑːn.tɪˈnuː.ə.t̬i/",
+        "pos": "n.",
+        "cn": "導通性、連續性",
+        "ex": "This test checks continuity."
+      },
+      {
+        "w": "election",
+        "ipa": "/iˈlek.ʃən/",
+        "pos": "n.",
+        "cn": "選舉",
+        "ex": "The election is next month."
+      },
+      {
+        "w": "visual",
+        "ipa": "/ˈvɪʒ.u.əl/",
+        "pos": "adj.",
+        "cn": "視覺的、目視的",
+        "ex": "A visual check is the first step."
+      },
+      {
+        "w": "outdated",
+        "ipa": "/ˌaʊtˈdeɪ.t̬ɪd/",
+        "pos": "adj.",
+        "cn": "過時的",
+        "ex": "This drawing is outdated."
+      },
+      {
+        "w": "corrective",
+        "ipa": "/kəˈrektɪv/",
+        "pos": "adj.",
+        "cn": "矯正的",
+        "ex": "We need a corrective action plan."
+      },
+      {
+        "w": "potential",
+        "ipa": "/pəˈtenʃəl/",
+        "pos": "adj.",
+        "cn": "潛在的",
+        "ex": "This is a potential safety risk."
+      },
+      {
+        "w": "unusual",
+        "ipa": "/ʌnˈjuː.ʒu.əl/",
+        "pos": "adj.",
+        "cn": "異常的",
+        "ex": "Report any unusual sound right away."
+      },
+      {
+        "w": "smoothly",
+        "ipa": "/ˈsmuːð.li/",
+        "pos": "adv.",
+        "cn": "順暢地",
+        "ex": "The belt runs smoothly."
+      }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases & Collocations",
+    "phrases": [
+      {
+        "p": "new product quality",
+        "cn": "新產品品質"
+      },
+      {
+        "p": "main responsibility",
+        "cn": "主要職責"
+      },
+      {
+        "p": "quality issues / problems",
+        "cn": "品質問題"
+      },
+      {
+        "p": "quality inspection",
+        "cn": "品質檢驗"
+      },
+      {
+        "p": "quality control",
+        "cn": "品質管制"
+      },
+      {
+        "p": "missing weld",
+        "cn": "漏焊"
+      },
+      {
+        "p": "outdated software",
+        "cn": "舊版軟體"
+      },
+      {
+        "p": "install the latest software version",
+        "cn": "安裝最新版軟體"
+      },
+      {
+        "p": "assembly components",
+        "cn": "組裝零件"
+      },
+      {
+        "p": "get mixed up",
+        "cn": "混淆、搞混"
+      },
+      {
+        "p": "mass production",
+        "cn": "量產"
+      },
+      {
+        "p": "identify a problem / issue",
+        "cn": "找出問題"
+      },
+      {
+        "p": "resolve an issue",
+        "cn": "解決問題"
+      },
+      {
+        "p": "investigate problems",
+        "cn": "調查問題"
+      },
+      {
+        "p": "work closely with",
+        "cn": "與……密切合作"
+      },
+      {
+        "p": "product specifications",
+        "cn": "產品規格"
+      },
+      {
+        "p": "conduct / perform inspections",
+        "cn": "進行檢驗"
+      },
+      {
+        "p": "meet quality standards",
+        "cn": "符合品質標準"
+      },
+      {
+        "p": "root cause",
+        "cn": "根本原因"
+      },
+      {
+        "p": "corrective actions",
+        "cn": "矯正措施"
+      },
+      {
+        "p": "potential issues / problems",
+        "cn": "潛在問題"
+      },
+      {
+        "p": "prevent defects",
+        "cn": "預防瑕疵"
+      },
+      {
+        "p": "reduce production costs",
+        "cn": "降低生產成本"
+      },
+      {
+        "p": "avoid production delays",
+        "cn": "避免生產延誤"
+      },
+      {
+        "p": "save time and money",
+        "cn": "節省時間與金錢"
+      },
+      {
+        "p": "fix problems early",
+        "cn": "及早解決問題"
+      },
+      {
+        "p": "affect a large number of products",
+        "cn": "影響大量產品"
+      },
+      {
+        "p": "maintain product quality",
+        "cn": "維持產品品質"
+      },
+      {
+        "p": "customer satisfaction",
+        "cn": "客戶滿意度"
+      },
+      {
+        "p": "financial loss(es)",
+        "cn": "財務損失"
+      },
+      {
+        "p": "electrical continuity test",
+        "cn": "電氣導通測試"
+      },
+      {
+        "p": "normal and complete",
+        "cn": "正常且完整"
+      },
+      {
+        "p": "testing procedure (vs work instructions)",
+        "cn": "測試程序(作業指導書)"
+      },
+      {
+        "p": "responds correctly / moves smoothly",
+        "cn": "反應正確/運轉順暢"
+      },
+      {
+        "p": "unusual noise / error messages",
+        "cn": "異常噪音/錯誤訊息"
+      },
+      {
+        "p": "maintenance records",
+        "cn": "保養紀錄"
+      },
+      {
+        "p": "daily maintenance activities",
+        "cn": "每日保養作業"
+      },
+      {
+        "p": "maintenance log",
+        "cn": "保養紀錄簿"
+      },
+      {
+        "p": "track equipment condition",
+        "cn": "追蹤設備狀況"
+      },
+      {
+        "p": "identify potential risks",
+        "cn": "找出潛在風險"
+      },
+      {
+        "p": "inspection results / maintenance actions taken",
+        "cn": "檢驗結果/已採取的保養動作"
+      }
+    ],
+    "grammarTitle": "IV. 句型與文法解說 Patterns & Grammar",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "effect / affect / effective / effectively",
+        "pat": "have an effect on + 名詞 ／ affect + 名詞",
+        "pts": [
+          "effect＝名詞(影響、結果)；affect＝動詞(影響)；effective＝形容詞(有效的)；effectively＝副詞(有效地)。",
+          "重點：不要只背中文，要看句子裡需要名詞、動詞、形容詞還是副詞。",
+          "「影響」當動作用 affect(影響某事)；「影響、結果」當一個東西用 effect(have an effect on)。",
+          "affect 後面直接接受詞，不加 on；名詞 effect 才搭配 on。"
+        ],
+        "exs": [
+          {
+            "tag": "effect (n.)・have an effect on",
+            "en": "The new software has a positive effect on product quality.",
+            "cn": "新軟體對產品品質有正面的影響。"
+          },
+          {
+            "tag": "effect (n.)・have an effect on",
+            "en": "The product has a positive effect on production quality.",
+            "cn": "這個產品對生產品質有正面的影響。"
+          },
+          {
+            "tag": "effect (n.)・have an effect on",
+            "en": "Exercise has a good effect on our health.",
+            "cn": "運動對我們的身體健康有很多好處。"
+          },
+          {
+            "tag": "effect (n.)・事物(結果)",
+            "en": "The defect had a negative effect on product quality.",
+            "cn": "這個瑕疵對產品品質造成負面影響。"
+          },
+          {
+            "tag": "effective (adj.)・be effective",
+            "en": "We need an effective solution to this quality problem.",
+            "cn": "我們需要一個有效的解決方案來處理這個品質問題。"
+          },
+          {
+            "tag": "effective (adj.)・deal with 的對象",
+            "en": "We need an effective solution to deal with this quality problem.",
+            "cn": "我們需要一個有效的方法來處理這個品質問題。"
+          },
+          {
+            "tag": "effective (adj.)・be effective",
+            "en": "This inspection method is very effective.",
+            "cn": "這種檢驗方法非常有效。"
+          },
+          {
+            "tag": "affect (v.)・affect + N",
+            "en": "Poor product quality can affect customer satisfaction.",
+            "cn": "產品品質不佳可能會影響客戶滿意度。"
+          },
+          {
+            "tag": "affect (v.)・動作(影響)",
+            "en": "Defects may affect product quality.",
+            "cn": "瑕疵可能影響產品品質。"
+          },
+          {
+            "tag": "effectively (adv.)・修飾動詞",
+            "en": "We need to communicate effectively with our suppliers.",
+            "cn": "我們需要與供應商有效地溝通。"
+          }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "cause ... to ...(造成損失)",
+        "pat": "cause + 損失 + to + 受損失的對象",
+        "pts": [
+          "問題沒有及早發現，工廠就可能蒙受損失：品質不只是技術要求，也關係到財務。",
+          "cause＝造成；主詞是原因(poor quality control)，受詞是結果(financial losses)，to 後面接承受的對象(the factory)。",
+          "quality control 是不可數名詞，前面不加 a；poor 形容它「不佳」。",
+          "loss 可寫單數或複數：financial loss(整體損失)、financial losses(一筆又一筆的損失)；can 表示「有可能」。"
+        ],
+        "exs": [
+          {
+            "tag": "原句",
+            "en": "Poor quality control can cause financial losses to the factory.",
+            "cn": "品質管制不佳可能對工廠造成財務損失。(也可說：對公司造成損失/讓公司蒙受損失)"
+          }
+        ]
+      },
+      {
+        "k": "IV-C",
+        "title": "use A to + V(用工具做測試)",
+        "pat": "use A to + V1 and + V2",
+        "pts": [
+          "常見問法：What do you use a multimeter for?（簡答：用來測導通）；下面第一句是完整的專業句，第二句是結尾的另一個版本(normal and complete＝正常且完整；check if 與 check whether 意思相同)。",
+          "use A to ＋原形動詞：用 A 來做……；perform 和 check 用 and 並列，共用同一個 to。",
+          "perform a test＝進行測試，perform 比 do 正式；continuity test 是「導通測試」，circuit 的發音也要練習(electrical circuit)。",
+          "check whether ＋子句：確認是否……(whether 比 if 正式)。",
+          "complete 在這裡是「完整的」，指電路沒有斷路。"
+        ],
+        "exs": [
+          {
+            "tag": "原句",
+            "en": "We use a multimeter to perform an electrical continuity test and check whether the electrical circuit is complete.",
+            "cn": "我們使用萬用電表進行電氣導通測試，以確認電路是否完整。"
+          },
+          {
+            "tag": "另一個結尾",
+            "en": "…check if the electrical circuit is normal and complete.",
+            "cn": "……確認電路是否正常且完整。"
+          }
+        ]
+      }
+    ],
+    "extraTitle": "V. 閱讀與口說練習 Reading & Speaking",
+    "extra": [
+      {
+        "title": "A. Why is it important to identify quality issues before mass production?",
+        "exs": [
+          {
+            "tag": "說明",
+            "en": "prevent defects / reduce production costs / avoid production delays / save time and money / protect customer satisfaction",
+            "cn": "問題沒解決，產線就無法順暢生產；而找出問題的真正目的是避免大規模損失。如果量產後才發現瑕疵，很多產品都會受影響、客戶可能退貨，公司會浪費時間與金錢。"
+          },
+          {
+            "tag": "A",
+            "en": "It's important to identify quality issues before mass production because it helps us prevent defects, reduce production costs, and avoid delays. If we find problems early, we can fix them before they affect a large number of products. It also helps us maintain product quality and customer satisfaction.",
+            "cn": "在量產前找出品質問題非常重要，因為這可以幫助我們預防瑕疵、降低生產成本，並避免延誤生產進度。如果我們能及早發現問題，就可以在大量產品受到影響之前解決問題。這也有助於維持產品品質及客戶滿意度。"
+          }
+        ]
+      },
+      {
+        "title": "B. How do you work with engineering and production teams?",
+        "exs": [
+          {
+            "tag": "A",
+            "en": "I work closely with the engineering and production teams to identify, investigate, and solve quality problems. We discuss potential issues, review product specifications, and conduct inspections to make sure everything meets quality standards. If we find any defects, we work together to find the root cause and take corrective actions before mass production.",
+            "cn": "工程部提供圖面與尺寸，品保要檢查有沒有尺寸錯誤或其他瑕疵，可擴充成這段：我與工程及生產團隊密切合作，以找出、調查並解決品質問題。我們會討論潛在問題、檢視產品規格，並進行檢驗，以確保所有項目都符合品質標準。如果我們發現任何瑕疵，就會一起找出根本原因，並在量產前採取矯正措施。"
+          },
+          {
+            "tag": "短版・原本",
+            "en": "I discuss potential problems with them and ask them to solve the product problems.",
+            "cn": ""
+          },
+          {
+            "tag": "短版・改成",
+            "en": "I identify potential problems, discuss them with the engineering and production teams, and work with them to find the root cause and take corrective actions.",
+            "cn": "我找出潛在問題，與工程及生產團隊討論，並與他們一起找出根本原因、採取矯正措施。"
+          }
+        ]
+      },
+      {
+        "title": "C. 問答練習 Q&A",
+        "exs": [
+          {
+            "tag": "1. Q",
+            "en": "How do you check whether a treadmill controller or incline motor is working properly?",
+            "cn": "你們如何檢查跑步機控制器或升降馬達是否運作正常？"
+          },
+          {
+            "tag": "A",
+            "en": "We follow the testing procedure to check whether the treadmill controller responds correctly and whether the incline motor moves smoothly. We also check for unusual noise or error messages.",
+            "cn": "我們依照測試程序，檢查跑步機控制器的反應是否正確、升降馬達是否運轉順暢，也會檢查有沒有異常噪音或錯誤訊息。"
+          },
+          {
+            "tag": "說明",
+            "en": "Follow the testing procedure. / Check whether the incline motor moves smoothly. / Check for unusual noise or error messages.",
+            "cn": "follow work instructions 要改成 testing procedure，因為品保工程師的角色不只是作業員。可簡化成這三個重點幫助記憶。"
+          },
+          {
+            "tag": "2. Q",
+            "en": "Why is it important to keep maintenance records?",
+            "cn": "為什麼保存保養紀錄很重要？"
+          },
+          {
+            "tag": "A",
+            "en": "It is important to keep maintenance records because they help us track equipment condition and identify potential risks.",
+            "cn": "因為它們能幫助我們追蹤設備狀況並找出潛在風險。💡 說明：每天檢查可以找出潛在問題、確認機器運作正常；這句點出保養紀錄的兩個目的：長期追蹤設備狀況、在問題變嚴重前找出風險。"
+          },
+          {
+            "tag": "3. Q",
+            "en": "How do workers record daily maintenance activities?",
+            "cn": "作業員如何記錄每日保養作業？"
+          },
+          {
+            "tag": "A",
+            "en": "Workers record daily maintenance activities on a checklist or in a maintenance log. They include the inspection results, problems found, and maintenance actions taken.",
+            "cn": "作業員把每日保養作業記錄在檢查表或保養紀錄簿上，內容包括檢驗結果、發現的問題和已採取的保養動作。"
+          }
+        ]
+      },
+      {
+        "title": "D. 課堂複習句 Review Sentences（記整句對口說流暢度很有幫助，要常複習過去的作業）",
+        "exs": [
+          {
+            "tag": "1",
+            "en": "My main responsibility is to work closely with our engineering and production teams to identify quality issues, investigate the root cause, and take corrective actions.",
+            "cn": "我的主要職責是與工程及生產團隊密切合作，找出品質問題、調查根本原因並採取矯正措施。"
+          },
+          {
+            "tag": "2",
+            "en": "They installed an outdated software version.",
+            "cn": "他們安裝了舊版軟體。"
+          },
+          {
+            "tag": "3",
+            "en": "I will ask them to install the latest software version.",
+            "cn": "我會請他們安裝最新版軟體。(ask＋人＋to＋原形動詞)"
+          }
         ]
       }
     ]
