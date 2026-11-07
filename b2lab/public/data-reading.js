@@ -1981,6 +1981,146 @@ window.READING = [
      b2Cn:"他們本來以為自己不必來，但演練時任何人都不准留在裡面。",
      spCn:"他們以為待著不動就好——但不行。"}
   ]
+},
+
+/* ---------------------------------------------------------- 34 */
+{
+  id:"r34", level:"B2", topic:"圖書館與閱讀", words:293,
+  title:"The Quiet Floor",
+  titleCn:"安靜的那一層",
+  focus:"冠詞：a / an、the 與零冠詞",
+  intro:"一場下不停的雨把 Anita 推進了一間公共圖書館，她在那裡待了一年。注意冠詞：第一次提到、「其中一個」用 a / an；雙方都知道是哪一個、獨一無二、序數與最高級用 the；而泛指的複數名詞和不可數名詞（libraries、books、coffee、knowledge、advice）前面什麼都不加。中文沒有冠詞，這是最容易一路錯到底的地方。",
+  spoken:[
+    {en:"She had always thought libraries were for students, and she was not a student.",cn:"她一直以為圖書館是學生的地方，而她不是學生。"},
+    {en:"The librarian took her to the third floor, and that floor was the quiet one.",cn:"館員帶她去三樓，那一層才是安靜的。"},
+    {en:"She borrowed a thin novel in English and a book about Taiwanese birds.",cn:"她借了一本薄薄的英文小說，和一本講台灣鳥類的書。"},
+    {en:"The library is free, but the coffee she drinks there is not.",cn:"圖書館是免費的，但她在那裡喝的咖啡不是。"}
+  ],
+  paras:[
+    {en:"Anita had lived in Taoyuan for three years before she walked into a public library. She had always thought libraries were for students, and she was not a student; she was an operator on a packing line. One Saturday the rain would not stop, so she went in to dry her jacket. A woman at the desk asked whether she had a card. Five minutes later she had one, and it had cost nothing.",
+     cn:"Anita 在桃園住了三年，才第一次走進一間公共圖書館。她一直以為圖書館是學生的地方，而她不是學生；她是包裝線上的作業員。有個星期六雨一直不停，她就進去把外套弄乾。櫃台的一位女士問她有沒有借書證。五分鐘後她就有了一張，而且一毛錢都沒花。"},
+    {en:"The librarian, whose name was Pei-chen, took her to the third floor. The ground floor was for newspapers and children, and it was noisy in a friendly way; the third floor was the quiet one. There were no computers, only long tables, a lamp on each one, and a sign asking people to keep their phones silent. Anita borrowed two books: a thin novel in English, and a book about Taiwanese birds with a photograph on every page.",
+     cn:"那位館員叫佩真，帶她上三樓。一樓是放報紙、給小孩看書的地方，熱鬧得很友善；三樓才是安靜的那一層。那裡沒有電腦，只有長桌、每張桌上一盞檯燈，還有一塊牌子請大家把手機保持靜音。那天下午 Anita 借了兩本書：一本薄薄的英文小說，和一本每一頁都有照片的台灣鳥類圖鑑。"},
+    {en:"Reading in English had always been slow work, and the novel took a month. She read it in bed, on the bus, and at the table after dinner. Pei-chen told her not to look up every word, which was hard advice to follow. By the summer she had finished four novels, and she had noticed something odd: the books were getting easier, but the language was not.",
+     cn:"用英文讀東西對她來說一直很慢，那本小說花了一個月。她在床上讀、在公車上讀、晚餐後在餐桌邊讀。佩真叫她不要每個字都查，這個建議很難照做。到了夏天，她已經讀完四本小說，而且發現一件奇怪的事：書變得比較好讀了，但語言並沒有變簡單。"},
+    {en:"Now she goes to the library most Saturdays, and she has a favorite seat by the window. Her husband teases her: the library is free, but the coffee she drinks there is not. She has also started to lend books to a neighbor, a nurse who works nights. Anita cannot explain what the third floor gave her. It was not knowledge, exactly. It was an hour a week when nobody needed anything from her.",
+     cn:"現在她大部分的星期六都去圖書館，而且靠窗那裡有一個最喜歡的座位。她先生會笑她：圖書館是免費的，但她在那裡喝的咖啡不是。她也開始借書給一位鄰居，一位上夜班的護理師。Anita 講不清楚三樓到底給了她什麼。那不完全是知識。那是一個星期裡有一個小時，沒有人需要她做任何事。"}
+  ],
+  target:[
+    {w:"librarian",ipa:"/laɪˈbrer.i.ən/",pos:"n.",cn:"圖書館員",def:"A person whose job is to look after a library.",ex:"A librarian helped me find a map of the old city walls.",exCn:"一位館員幫我找到一張舊城牆的地圖。"},
+    {w:"photograph",ipa:"/ˈfoʊ.t̬ə.ɡræf/",pos:"n.",cn:"照片",def:"A picture that you make with a camera.",ex:"There is an old photograph of my grandparents above the stairs.",exCn:"樓梯上方掛著一張我祖父母的老照片。"},
+    {w:"borrow",ipa:"/ˈbɑːroʊ/",pos:"v.",cn:"借（入）",def:"To take something from someone and give it back later.",ex:"Can I borrow your umbrella until Thursday?",exCn:"你的雨傘可以借我到星期四嗎？"},
+    {w:"novel",ipa:"/ˈnɑː.vəl/",pos:"n.",cn:"小說",def:"A long written story about people who are not real.",ex:"He writes one novel every two years and nothing else.",exCn:"他每兩年寫一本小說，其他什麼都不寫。"},
+    {w:"silent",ipa:"/ˈsaɪlənt/",pos:"adj.",cn:"無聲的；靜音的",def:"Making no sound at all.",ex:"The whole street went silent when the music stopped.",exCn:"音樂一停，整條街都安靜了下來。"},
+    {w:"odd",ipa:"/ɑːd/",pos:"adj.",cn:"奇怪的",def:"Strange, or different from what you expect.",ex:"It felt odd to wear a coat in April.",exCn:"四月穿大衣感覺很奇怪。"},
+    {w:"advice",ipa:"/ədˈvaɪs/",pos:"n.",cn:"建議（不可數）",def:"An opinion about what someone should do.",ex:"My uncle gave me some advice about buying a second-hand scooter.",exCn:"我叔叔給了我一些買二手機車的建議。"},
+    {w:"lend",ipa:"/lend/",pos:"v.",cn:"借（出）",def:"To let someone use something of yours for a while.",ex:"I can lend you my drill if you bring it back on Sunday.",exCn:"我可以把電鑽借你，只要你星期天還回來。"},
+    {w:"knowledge",ipa:"/ˈnɑː.lɪdʒ/",pos:"n.",cn:"知識（不可數）",def:"The things that a person knows.",ex:"Her knowledge of local plants surprised the whole team.",exCn:"她對本地植物的了解讓整個團隊很驚訝。"},
+    {w:"tease",ipa:"/tiːz/",pos:"v.",cn:"（善意地）取笑、逗",def:"To laugh at someone in a friendly way.",ex:"My brothers still tease me about my first haircut.",exCn:"我哥哥們到現在還拿我第一次剪的頭髮笑我。"}
+  ],
+  questions:[
+    {q:"Why did Anita go into the library on that Saturday?",
+     opts:["A. Her husband had asked her to return a book","B. The rain would not stop and she wanted to dry her jacket","C. She had decided to study for an examination","D. The librarian had invited her to come in"],
+     ans:1,
+     expl:"第一段：One Saturday the rain would not stop, so she went in to dry her jacket。"},
+    {q:"What was the third floor like?",
+     opts:["A. It had the newest computers in the building","B. It was noisy in a friendly way, like the ground floor","C. It was quiet, with long tables and no computers","D. It was only open to students with a card"],
+     ans:2,
+     expl:"第二段：the third floor was the quiet one；There were no computers, only long tables, a lamp on each one。"},
+    {q:"「She was an operator on a packing line.」用了 an，「It was not knowledge, exactly.」卻什麼都不加，為什麼？",
+     opts:["A. 講職業要用 a / an ＋單數可數名詞；knowledge 是不可數名詞，泛指時前面不加冠詞","B. an 和不加冠詞可以互換，只看下一個字是不是母音開頭","C. knowledge 是專有名詞，專有名詞一律不加冠詞","D. 職業前面本來就不該加冠詞，這句是例外"],
+     ans:0,
+     expl:"講職業一定要 a／an ＋單數可數名詞（an operator、a nurse、a librarian）；knowledge、advice、coffee 這類不可數名詞泛指時什麼都不加。用 an 而不是 a，是因為 operator 以母音開頭。"},
+    {q:"What does Anita say the third floor gave her?",
+     opts:["A. The knowledge she needed for a better job","B. An hour a week when nobody needed anything from her","C. A free cup of coffee every Saturday","D. A group of friends who read the same books"],
+     ans:1,
+     expl:"最後一段：It was not knowledge, exactly. It was an hour a week when nobody needed anything from her。"}
+  ],
+  upgrade:[
+    {b1:"She is a worker in a factory. She reads books in English.",
+     b2:"She is an operator on a packing line, and she reads novels in English.",
+     note:"講職業的單數可數名詞前面一定要 a / an（a worker、an operator），不能說 She is operator；但 books、novels 這種泛指的複數名詞前面什麼都不加，加了 the 會變成「那幾本特定的書」。",
+     sp:"She's on the packing line — and she gets through novels in English, too.",
+     spNote:"be on the line 是口語講「做某條生產線」；get through a book 是「把一本書讀完」。",
+     b1Cn:"她是工廠的工人。她讀英文的書。",
+     b2Cn:"她是包裝線上的作業員，而且她讀英文小說。",
+     spCn:"她做包裝線的——而且她還讀英文小說呢。"},
+    {b1:"The library is free. But she pays for coffee there.",
+     b2:"The library is free, but the coffee she drinks there is not.",
+     note:"泛指的 coffee 不加冠詞（pays for coffee）；一旦後面用 she drinks there 把它限定成「她在那裡喝的那一杯」，就一定要加 the。這就是「泛指不加、限定加 the」的對照。",
+     sp:"The library's free — the coffee isn't, mind you.",
+     spNote:"mind you 是口語的「不過話說回來」，放句尾補一句；the coffee isn't 後面省掉了 free。",
+     b1Cn:"圖書館是免費的。但她在那裡要付咖啡的錢。",
+     b2Cn:"圖書館是免費的，但她在那裡喝的咖啡不是。",
+     spCn:"圖書館免費——不過咖啡可不免費喔。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 35 */
+{
+  id:"r35", level:"B1", topic:"郵局與寄件", words:219,
+  title:"The Coat That Went to Vancouver",
+  titleCn:"寄到溫哥華的那件大衣",
+  focus:"already / yet / still 與 not ... any more",
+  intro:"Tom 的姊姊搬到加拿大，冬天的大衣卻留在台南。這篇跟著那件大衣從郵局寄出去。注意四個小字：already 是「比預期早就已經」，用在肯定句；yet 是「還（沒）」，只用在疑問句和否定句；still 是「到現在仍然」；not ... any more 是「以前會、現在不會了」。中文常常都講成「已經」「還」，英文的位置和句型卻分得很清楚。",
+  spoken:[
+    {en:"By October she still did not have her winter coat.",cn:"到了十月，她還是沒有她的冬天大衣。"},
+    {en:"He had already written the address twice, in English and in Chinese.",cn:"他已經把地址寫了兩遍，一遍英文一遍中文。"},
+    {en:"Has it left Taiwan yet?",cn:"它已經離開台灣了嗎？"},
+    {en:"Tom's sister does not complain about the cost any more.",cn:"Tom 的姊姊現在不再抱怨那筆費用了。"}
+  ],
+  paras:[
+    {en:"Tom's sister moved to Vancouver in March. By October she still did not have her winter coat, because it was hanging in her old room in Tainan. So one Monday Tom put it in a box and took it to the post office.",
+     cn:"Tom 的姊姊三月搬到溫哥華。到了十月，她還是沒有她的冬天大衣，因為那件大衣掛在台南老家她以前的房間裡。所以某個星期一，Tom 把它裝進箱子，拿去郵局。"},
+    {en:"The clerk put the box on the scales: four point two kilos. “Air or sea?” he asked. Sea was cheaper, but it took two months, so Tom chose air. He had already written the address twice, in English and in Chinese, but the clerk said the Chinese part was not needed any more.",
+     cn:"櫃台人員把箱子放到磅秤上：四點二公斤。「空運還是海運？」他問。海運比較便宜，但要兩個月，所以 Tom 選了空運。他已經把地址寫了兩遍，一遍英文一遍中文，但櫃台人員說中文那部分現在不需要了。"},
+    {en:"The postage cost more than the coat. Tom paid, took a photo of the receipt, and sent his sister the tracking number. “Has it left Taiwan yet?” she asked that evening. It had not. It was still sitting in a warehouse near the airport.",
+     cn:"郵資比那件大衣還貴。Tom 付了錢，拍了收據的照片，把追蹤號碼傳給姊姊。「它已經離開台灣了嗎？」那天晚上她問。還沒有。它還放在機場附近的一個倉庫裡。"},
+    {en:"For eleven days nothing moved. Tom checked the number every morning. Then the website changed: the parcel had already cleared customs. His sister had not received it yet, but it was close.",
+     cn:"有十一天完全沒有動。Tom 每天早上都查那個號碼。然後網站更新了：那個包裹已經通過海關。他姊姊還沒收到，但已經很接近了。"},
+    {en:"It arrived on a Friday. The coat smelled of the box and one sleeve was creased, but it was warm. Tom's sister does not complain about the cost any more. She says she is still wearing it, and that she has already decided what to send back.",
+     cn:"它在一個星期五送到。大衣有箱子的味道，一邊袖子壓出了摺痕，但很暖。Tom 的姊姊現在不再抱怨那筆費用了。她說她到現在還穿著它，而且已經決定要寄什麼回來。"}
+  ],
+  target:[
+    {w:"clerk",ipa:"/klɝːk/",pos:"n.",cn:"櫃台人員；辦事員",def:"A person who serves people at a counter.",ex:"The clerk at the bank asked for two forms of identification.",exCn:"銀行的櫃台人員要了兩種身分證明。"},
+    {w:"scales",ipa:"/skeɪlz/",pos:"n.",cn:"磅秤",def:"A machine that tells you how heavy something is.",ex:"Our bathroom scales have been wrong since we dropped them.",exCn:"我們浴室的磅秤自從摔過之後就不準了。"},
+    {w:"postage",ipa:"/ˈpoʊ.stɪdʒ/",pos:"n.",cn:"郵資",def:"The money you pay to send a letter or a parcel.",ex:"Postage to Europe went up again in July.",exCn:"寄到歐洲的郵資七月又漲了。"},
+    {w:"receipt",ipa:"/rɪˈsiːt/",pos:"n.",cn:"收據",def:"A piece of paper that shows what you paid.",ex:"Keep the receipt in case the shoes do not fit.",exCn:"收據留著，萬一鞋子不合腳。"},
+    {w:"warehouse",ipa:"/ˈwerhaʊs/",pos:"n.",cn:"倉庫",def:"A very large building where goods are kept.",ex:"They store rice in a warehouse behind the market.",exCn:"他們把米放在市場後面的一間倉庫裡。"},
+    {w:"customs",ipa:"/ˈkʌs.təmz/",pos:"n.",cn:"海關",def:"The place where officers check what people bring into a country.",ex:"My cheese was taken away at customs in Sydney.",exCn:"我的起司在雪梨的海關被沒收了。"}
+  ],
+  questions:[
+    {q:"Why did Tom's sister not have her winter coat in October?",
+     opts:["A. She had sold it before she left Tainan","B. It was still hanging in her old room in Tainan","C. The post office had lost it in March","D. She had left it at the airport in Vancouver"],
+     ans:1,
+     expl:"第一段：she still did not have her winter coat, because it was hanging in her old room in Tainan。"},
+    {q:"「She has already decided what to send back.」裡的 already 可以換成 yet 嗎？",
+     opts:["A. 可以，already 和 yet 意思完全一樣","B. 不可以，yet 只能放在句首","C. 不可以，yet 只用在疑問句和否定句；肯定句要用 already","D. 可以，但意思會變成「以前會、現在不會了」"],
+     ans:2,
+     expl:"already 用在肯定句，表示「比預期早就已經」；yet 只出現在疑問句（Has it left Taiwan yet?）和否定句（His sister had not received it yet）。「以前會、現在不會了」是 not ... any more，又是另一回事。"},
+    {q:"What does Tom's sister say at the end?",
+     opts:["A. She is still wearing the coat and has already decided what to send back","B. She wants Tom to use sea mail next time","C. She does not need a winter coat in Vancouver any more","D. She has asked the post office for her money back"],
+     ans:0,
+     expl:"最後一段：She says she is still wearing it, and that she has already decided what to send back。"}
+  ],
+  upgrade:[
+    {b1:"In October she did not have her coat. It was in Tainan.",
+     b2:"By October she still did not have her winter coat, because it was hanging in her old room in Tainan.",
+     note:"still 表示「到那個時候仍然沒變」，放在 did not 前面（still did not have）；說成 did not still have 就不自然了。兩句要合成一句，用 because 帶出原因比再開一句乾淨。",
+     sp:"By October she hadn't got the coat yet — it was back in Tainan.",
+     spNote:"haven't got something yet 是口語的「還沒拿到」，yet 放句尾；back in Tainan 的 back 是「還留在原來那邊」。",
+     b1Cn:"十月的時候她沒有她的大衣。大衣在台南。",
+     b2Cn:"到了十月，她還是沒有她的冬天大衣，因為它掛在台南老家她以前的房間裡。",
+     spCn:"到十月她還沒拿到那件大衣——它還在台南。"},
+    {b1:"He wrote the address in Chinese. The clerk said it is not necessary now.",
+     b2:"He had already written the address in Chinese, but the clerk said it was not needed any more.",
+     note:"already 配完成式講「早就做了」，位置在 had 和過去分詞中間；「以前需要、現在不需要了」用 not ... any more 放句尾。轉述別人說過的話，is 要往後退成 was。",
+     sp:"He'd done the Chinese bit as well — turns out they don't bother with that now.",
+     spNote:"the Chinese bit 是口語的「中文那部分」；not bother with something 是「現在不弄那個了」，turns out 是「結果發現」。",
+     b1Cn:"他把地址寫了中文。櫃台人員說現在不需要了。",
+     b2Cn:"他已經把地址寫了中文，但櫃台人員說那現在不需要了。",
+     spCn:"他連中文那部分也寫了——結果現在根本不用那個了。"}
+  ]
 }
 
 ];

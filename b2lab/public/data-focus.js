@@ -785,6 +785,44 @@ r33:{ unit:"g15", title:"義務與禁止：must / have to / mustn't / be allowed
     {bad:"We mustn't work on Saturday, so we stayed at home.",good:"We didn't have to work on Saturday, so we stayed at home.",why:"mustn't 是「禁止」；要說「不必上班」得用 don't／didn't have to。"},
     {bad:"Yesterday everyone must take part in the drill.",good:"Yesterday everyone had to take part in the drill.",why:"must 沒有過去式，講過去的義務一律用 had to。"}
   ]
+},
+
+r34:{ unit:"g14", title:"冠詞：a / an、the 與零冠詞",
+  formula:"第一次提到／其中一個 → a / an ＋單數可數名詞　|　雙方都知道是哪一個、獨一無二、序數與最高級 → the　|　泛指的複數名詞與不可數名詞 → 什麼都不加",
+  points:[
+    "a / an 是「其中一個、第一次提到」：She walked into a public library.（聽的人還不知道是哪一間）。同一個東西再提到就換成 the：The library is free. 用 a 還是 an 看聲音不看字母：an operator、an hour（h 不發音）、a university（開頭發 you 的音）。",
+    "the 用在「對方知道是哪一個」：前面提過的（the novel、the books）、現場唯一的（the desk、the window）、序數與最高級（the third floor、the quiet one、the best seat）。職業則是 a / an：She is a nurse.",
+    "⚠ 泛指的時候，複數可數名詞和不可數名詞前面什麼都不加：Libraries are for everybody.、It was not knowledge.、hard advice to follow。加了 the 就變成「那些特定的」：The books were getting easier. 指的是她借的那幾本。",
+    "固定搭配要整組記：at home、in bed、at work、by bus、after dinner、go to school 不加冠詞；in the morning、on the bus、at the end of the room、play the piano 一定要 the。這類片語沒有道理可講，只能整組背。"
+  ],
+  examples:[
+    {en:"She is a nurse, and she works in a hospital near the station.",cn:"她是護理師，在車站附近一間醫院工作。",note:"職業 a；第一次提到的醫院 a；雙方都知道的車站 the"},
+    {en:"Coffee is cheap here, but the coffee at the airport is not.",cn:"這裡咖啡很便宜，但機場的咖啡不便宜。",note:"泛指不加；被限定住就加 the"},
+    {en:"We travel by train, but we always walk to the station.",cn:"我們搭火車，但我們都走路去車站。",note:"by train 不加；the station 是雙方都知道的那個"}
+  ],
+  traps:[
+    {bad:"She is operator on a packing line.",good:"She is an operator on a packing line.",why:"講職業的單數可數名詞前面一定要 a / an；operator 開頭是母音，所以用 an 不用 a。"},
+    {bad:"It was not the knowledge, exactly.",good:"It was not knowledge, exactly.",why:"knowledge 是不可數名詞，泛指時不加冠詞；加了 the 會變成「那個特定的知識」，聽起來像在指前面講過的某一門學問。"}
+  ]
+},
+
+r35:{ unit:"g04", title:"already / yet / still 與 not ... any more",
+  formula:"already ＝ 比預期早就已經（肯定句）　|　yet ＝ 還（疑問句、否定句，放句尾）　|　still ＝ 到現在仍然　|　not ... any more ＝ 以前會、現在不會了",
+  points:[
+    "already 用在肯定句，表示「比預期早就已經」，位置在助動詞和主要動詞中間：He had already written the address twice. 口語也可以丟到句尾：He wrote it twice already.",
+    "yet 只用在疑問句和否定句，而且幾乎都放句尾：Has it left Taiwan yet?（已經離開了嗎？）／ His sister had not received it yet.（還沒收到）。⚠ 肯定句不可以用 yet 代替 already。",
+    "still 是「原本的狀態一直沒變」：be 動詞後面（It was still sitting in a warehouse.）、一般動詞前面（She is still wearing it.）、否定時放在 not 前面（she still did not have her coat）。",
+    "⚠ not ... any more（＝ no longer）是「以前是這樣，現在不是了」，放句尾：The Chinese part was not needed any more. 這跟 still（仍然是）剛好相反，也跟 not ... yet（還沒，但預期會）不一樣。"
+  ],
+  examples:[
+    {en:"Have you paid the deposit yet?",cn:"你已經付訂金了嗎？",note:"疑問句 → yet 放句尾"},
+    {en:"I have already sent the form twice.",cn:"我已經把表格寄了兩次。",note:"肯定句 → already 放在 have 和過去分詞之間"},
+    {en:"They do not open on Sundays any more.",cn:"他們星期天已經不開了。",note:"not ... any more：以前開，現在不開"}
+  ],
+  traps:[
+    {bad:"She has yet decided what to send back.",good:"She has already decided what to send back.",why:"yet 不能用在肯定句；「已經」要用 already。yet 只出現在 Has she decided yet? 和 She has not decided yet. 這兩種句型。"},
+    {bad:"The Chinese part was not needed yet.",good:"The Chinese part was not needed any more.",why:"not ... yet 是「還沒，但等一下會」；要講「以前需要、現在不需要了」必須用 not ... any more。"}
+  ]
 }
 
 };
