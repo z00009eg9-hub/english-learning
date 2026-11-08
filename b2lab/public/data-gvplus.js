@@ -244,7 +244,7 @@ window.GVPLUS = {
             "hi": true
           },
           {
-            "en": "I'm labelling them after lunch.",
+            "en": "I'm labeling them after lunch.",
             "cn": "我午餐後會貼。"
           }
         ]
@@ -316,7 +316,7 @@ window.GVPLUS = {
       "title": "Shall we or let's",
       "titleCn": "徵詢還是宣布",
       "ask": "Shall we 和 Let's 的差別在哪裡？",
-      "en": "Shall we take the figures again before the call?",
+      "en": "Shall we go over the figures again before the call?",
       "cn": "我們要不要在會議前再對一次數字？",
       "why": "Shall we 把決定權交回給對方，對方可以說不要；Let's 已經假設大家同意了，語氣上接近宣布。跟客戶或主管講話時這個差別很有感覺：用 Shall we 顯得你在徵詢，用 Let's 顯得你在帶節奏。兩個後面都接原形動詞，差別純粹在誰決定。"
     }
@@ -392,7 +392,7 @@ window.GVPLUS = {
       "opts": [
         "will travel",
         "travel",
-        "are travelling",
+        "are traveling",
         "shall travel"
       ],
       "ans": 2,
@@ -447,7 +447,7 @@ window.GVPLUS = {
       "title": "The plan came first",
       "titleCn": "打算早就有了",
       "ask": "上個月就想好的事，為什麼不能用 will？",
-      "en": "I'm going to apply for the Vietnamese licence in December.",
+      "en": "I'm going to apply for the Vietnamese license in December.",
       "cn": "我十二月要去申請越南的執照。",
       "why": "因為 will 的語感是「我現在才決定」，而這個打算上個月就存在了。be going to 的字面是「正走向某件事」，剛好把「打算已經在路上」這個感覺帶進來。注意它和現在進行式的差別：如果已經約好時間、掛號、訂票，就改用現在進行式；還只是心裡的打算，就用 be going to。"
     },
@@ -501,7 +501,7 @@ window.GVPLUS = {
     },
     {
       "label": "連起來說一次",
-      "text": "兩種可以放在同一段話裡：I'll reprint this one now, and we're going to rewrite the whole labelling step this week."
+      "text": "兩種可以放在同一段話裡：I'll reprint this one now, and we're going to rewrite the whole labeling step this week."
     }
   ],
   "comparison": {

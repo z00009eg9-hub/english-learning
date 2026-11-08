@@ -26,15 +26,15 @@ notes:[
   "series": "本站自製聽力 · 天災與天氣主題",
   "topic": "🔋 颱風前一晚在便利商店採買",
   "focus": "I'll 用在當場決定要做的事（I'll get、I'll ask），Shall I…? 問對方要不要我來做，won't 講我不買、不做",
-  "intro": "颱風要來了，Tom和朋友Kevin在便利商店裡分工採買。請注意兩個人講話的形狀：Shall I 是先問一聲，I'll 是當場決定。兩個人一直在分配誰做什麼，所以 I'll 出現很多次，每一次都是剛剛才決定的。最後Kevin說 I won't buy any，那是他聽到家裡已經有膠帶之後才改變主意。",
+  "intro": "颱風要來了，Tom和朋友Kevin在便利商店裡分工採買。請注意兩個人講話的形狀：Shall I 是先問一聲，I'll 是當場決定。兩個人一直在分配誰做什麼，所以 I'll 出現很多次，每一次都是剛剛才決定的。最後 Tom 說 I won't buy any，那是他聽到家裡已經有膠帶之後才改變主意。",
   "tip": "第一次聽只抓三個數字：他們買了幾瓶水、店裡還剩幾支手電筒、Kevin幾點要到Tom家。第二次聽專心聽 I'll 和 Shall I 的差別——誰在問、誰在決定，並注意 I'll 後面的動詞一律是原形。",
   "pre": [
     {
-      "w": "typhoon",
-      "ipa": "/taɪˈfuːn/",
+      "w": "bread",
+      "ipa": "/bred/",
       "pos": "n.",
-      "cn": "颱風",
-      "def": "A very big storm with strong wind and heavy rain."
+      "cn": "麵包",
+      "def": "A food made from flour and water and baked in an oven."
     },
     {
       "w": "store",
@@ -192,17 +192,17 @@ notes:[
       "expl": "He says they have two left, near the bread.——Tom問過櫃台之後回報的數字；架子上找不到不代表店裡沒有。"
     },
     {
-      "q": "Why does Kevin decide not to buy tape?",
-      "qCn": "Kevin為什麼決定不買膠帶？",
+      "q": "Why does Tom decide not to buy tape?",
+      "qCn": "Tom 為什麼決定不買膠帶？",
       "opts": [
         "A. The store has no tape",
-        "B. His mother already has a lot at home",
+        "B. Kevin's mother already has a lot at home",
         "C. Tape is too expensive",
         "D. The windows are already closed"
       ],
       "optsCn": [
         "A. 店裡沒有膠帶",
-        "B. 他媽媽家裡已經有很多",
+        "B. Kevin 的媽媽家裡已經有很多",
         "C. 膠帶太貴",
         "D. 窗戶已經關好了"
       ],
@@ -238,11 +238,11 @@ notes:[
   "tip": "第一次聽抓三個事實：林太太在這裡住了幾年、去年排水孔堵了幾次、幾點停電。第二次聽數 I'll 出現幾次，並想一想每一次是提議、答應還是拒絕；最後再回頭聽林太太講明天早上那一句用的是什麼形狀。",
   "pre": [
     {
-      "w": "warning",
-      "ipa": "/ˈwɔːr.nɪŋ/",
+      "w": "plumber",
+      "ipa": "/ˈplʌmɚ/",
       "pos": "n.",
-      "cn": "警報；警告",
-      "def": "Information that tells you something bad may happen soon."
+      "cn": "水電師傅",
+      "def": "A person who repairs water pipes, sinks, and toilets."
     },
     {
       "w": "drain",
@@ -266,11 +266,11 @@ notes:[
       "def": "A small outdoor floor on the outside wall of a building."
     },
     {
-      "w": "leak",
-      "ipa": "/liːk/",
+      "w": "layer",
+      "ipa": "/ˈleɪ.ɚ/",
       "pos": "n.",
-      "cn": "漏水",
-      "def": "A hole or crack that lets water through."
+      "cn": "層",
+      "def": "An amount of something that covers a surface."
     },
     {
       "w": "candle",
@@ -469,11 +469,11 @@ notes:[
       "def": "All the people who live together in one home."
     },
     {
-      "w": "electricity",
-      "ipa": "/ɪˌlekˈtrɪs.ə.t̬i/",
+      "w": "power",
+      "ipa": "/ˈpaʊ.ɚ/",
       "pos": "n.",
       "cn": "電力",
-      "def": "The power that comes through wires and makes lights work."
+      "def": "Electricity used to make lights and machines work."
     },
     {
       "w": "evacuate",
@@ -636,7 +636,7 @@ notes:[
         "D. 雨帶移走了"
       ],
       "ans": 1,
-      "expl": "Three quarters had been restored by two in the afternoon.——用的是現在完成式的被動，重點在復電的比例。"
+      "expl": "Three quarters had been restored by two in the afternoon.——用的是過去完成式被動，重點在復電的比例。"
     },
     {
       "q": "Why does Mai say the audit \"is going to be postponed\"?",
@@ -796,7 +796,7 @@ notes:[
     },
     {
       "sp": "Daniel",
-      "en": "Then let us not guess. Shall we move the audit to Wednesday?",
+      "en": "Then let's not guess. Shall we move the audit to Wednesday?",
       "cn": "那我們就別猜了。要不要把稽核移到星期三？"
     },
     {

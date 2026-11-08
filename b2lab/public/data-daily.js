@@ -223,7 +223,7 @@ articles:[
       "cn": "Anita回台北住一個星期，剛好碰上颱風警報。房東陳先生正一個人把一箱箱重物搬上樓。Anita放下包包問：「要我幫你拿兩個嗎？」"
     },
     {
-      "en": "Mr. Chen has lived in that building for thirty years, so he knew what to do first. He said the balcony drain always blocks before the rain gets heavy. \"I'll clean it now,\" Anita answered, and she went out with a bucket.",
+      "en": "Mr. Chen had lived in that building for thirty years, so he knew what to do first. He said the balcony drain always blocks before the rain gets heavy. \"I'll clean it now,\" Anita answered, and she went out with a bucket.",
       "cn": "陳先生在那棟樓住了三十年，所以他知道該先做什麼。他說雨變大之前，陽台的排水孔一定先堵住。「我現在就去清。」Anita回答，然後拿著水桶走了出去。"
     },
     {
@@ -329,8 +329,8 @@ articles:[
       "expl": "Mr. Chen did not want them near the gas pipe.——第三段說他不想把蠟燭放在瓦斯管旁邊，所以接著說 I won't light anything tonight。"
     },
     {
-      "q": "Mr. Chen bought his plane ticket to Hualien last week. Which sentence is natural?",
-      "qCn": "陳先生上星期就買好飛花蓮的機票了。哪一句比較自然？",
+      "q": "Mr. Chen bought his plane ticket to Hualien last week. Which sentence is most natural?",
+      "qCn": "陳先生上星期就買好飛花蓮的機票了。哪一句最自然？",
       "opts": [
         "A. I'll fly to Hualien on Sunday.",
         "B. I'm flying to Hualien on Sunday.",
@@ -377,7 +377,7 @@ articles:[
   "topic": "新聞·天災與天氣",
   "words": 201,
   "kind": "news",
-  "title": "Eight Meters of Water on the Road",
+  "title": "Eight-Meter Waves on the East Coast",
   "titleCn": "八公尺的浪打上馬路",
   "focus": "被動語態（was closed、was washed away、had been reconnected）與關係子句（residents who live…、the office that looks after…）：把焦點放在被影響的東西上，而不是誰做的",
   "upFrom": "B1+",
@@ -15073,7 +15073,7 @@ grammar:[
   ],
   "quiz": [
     {
-      "q": "A客戶臨時要一份報價。你當場接下這件事，應該說：",
+      "q": "客戶臨時要一份報價。你當場接下這件事，應該說：",
       "qCn": "客戶臨時要一份報價，你當場接下這件事。",
       "opts": [
         "A. I'm sending you a quote this afternoon.",
@@ -15091,8 +15091,8 @@ grammar:[
       "expl": "客戶是「臨時」要的，你是在這一刻才決定，所以用 I'll。A 和 D 都暗示你早就安排好；C 的現在簡單式在講習慣，聽起來像你每天下午都寄報價。"
     },
     {
-      "q": "The hotel is already booked. Which sentence is natural?",
-      "qCn": "飯店已經訂好了。哪一句自然？",
+      "q": "The hotel is already booked. Which sentence is most natural?",
+      "qCn": "飯店已經訂好了。哪一句最自然？",
       "opts": [
         "A. I will stay at the airport hotel on Friday.",
         "B. I'm staying at the airport hotel on Friday.",
@@ -15331,10 +15331,10 @@ grammar:[
       "q": "Which sentence reports a plan that was already made last month?",
       "qCn": "哪一句報告的是上個月就已經定好的計畫？",
       "opts": [
-        "A. I'll apply for the Vietnamese licence.",
-        "B. I'm going to apply for the Vietnamese licence.",
-        "C. Shall I apply for the Vietnamese licence?",
-        "D. I applied for the Vietnamese licence."
+        "A. I'll apply for the Vietnamese license.",
+        "B. I'm going to apply for the Vietnamese license.",
+        "C. Shall I apply for the Vietnamese license?",
+        "D. I applied for the Vietnamese license."
       ],
       "optsCn": [
         "A. 我會去申請越南執照。（當場決定）",
@@ -15355,7 +15355,7 @@ grammar:[
   "title": "Will, Going To and the Voice You Choose",
   "titleCn": "will、going to 與你選的語氣",
   "srcDays": [],
-  "summary": "到了 B2，will 和 be going to 不只是對錯問題，而是語氣的選擇：be going to 帶著現場感與口語味，will 乾淨、正式、適合書面；而別人說過的 will 一旦寫進報導，就得退成 would，連時間詞一起退。",
+  "summary": "到了 B2，will 和 be going to 不只是對錯問題，而是語氣的選擇：be going to 帶著現場感與口語味，will 乾淨、正式、適合書面；而別人說過的 will 寫進報導時，通常退成 would，時間詞也隨轉述時點調整。",
   "sections": [
     {
       "h": "正式度：同一個意思，兩種聲音",
@@ -15484,7 +15484,7 @@ grammar:[
     {
       "bad": "The bureau said it will lift the warning at two.",
       "good": "The bureau said it would lift the warning at two.",
-      "why": "主要動詞 said 已經把整句拉到過去，被引述的 will 必須跟著退成 would。留著 will 會讓讀者以為那是現在仍然有效的說法，而不是當時講的話。"
+      "why": "主要動詞 said 已經把整句拉到過去，被引述的 will 通常跟著退成 would。若事情到現在仍然成立，也可以保留 will；這裡用 would 回報當時的說法。"
     },
     {
       "bad": "The airline said it would resume flights tomorrow.",
@@ -15538,13 +15538,13 @@ grammar:[
       "q": "Given the backlog at the port, the delivery date ___ slip by two weeks.",
       "qCn": "考慮到港口的積壓，交期會延後兩週。",
       "opts": [
-        "A. will probably",
+        "A. will to",
         "B. is going to",
         "C. shall",
         "D. would"
       ],
       "ans": 1,
-      "expl": "Given 開頭的片語已經把依據放在句子裡，結論自然交給 be going to。A 的 probably 把句子變回個人估計，依據就浪費了；shall 在美式英文幾乎只用於提議；would 需要一個過去的句子來掛。"
+      "expl": "Given 開頭的片語已經把依據放在句子裡，結論自然交給 be going to。A 的 will 後面直接接原形動詞，不能加 to；shall 在美式英文幾乎只用於提議；would 需要一個過去的句子來掛。"
     },
     {
       "q": "Which sentence keeps the writer completely out of the prediction?",
