@@ -1,5 +1,12 @@
 {
-  "lastId": 0,
-  "lastRun": null,
-  "runs": []
+  "lastId": 1,
+  "lastRun": "2026-11-07",
+  "runs": [
+    {
+      "id": "my01",
+      "date": "2026-11-07",
+      "sentences": 5,
+      "theme": "來料檢驗"
+    }
+  ]
 }

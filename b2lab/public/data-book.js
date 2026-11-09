@@ -25137,6 +25137,355 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- my01 我的職場週記：來料檢驗 ---- */
+  {
+   "id": "my01",
+   "icon": "📝",
+   "date": "2026-11-07",
+   "title": "My Work Week 01 — Incoming Inspection",
+   "titleCn": "我的職場週記 01｜來料檢驗",
+   "topics": "我的職場週記, 來料檢驗, 色差, 壓傷, 生鏽, 管材, 拒收, 廠商, 運輸, incoming, color, dent, rust, crooked, reject, shipment",
+   "hwTitle": "中翻英 Say It in English",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "The motor covers just came in, and the color's a bit off.",
+     "cn": "馬達上蓋剛來，有色差問題。",
+     "pat": "just + 過去式（剛…）",
+     "note": "剛到貨是已經發生的事，所以用過去式 came in。口語說色差用 the color's a bit off，書面才寫 color variation。"
+    },
+    {
+     "n": 2,
+     "cn": "馬達固定盤用的原料鐵板全都有壓傷。",
+     "pat": "All the + 複數名詞 + have…（全都有…）",
+     "note": "鐵板是 steel plate，固定盤是 mounting plate，壓傷是 dent；all the 後面是複數，動詞要用 have。",
+     "wrong": "All the iron plates for the motor fixed disks has press marks.",
+     "fix": "All the steel plates for the motor mounting plates have dents on them."
+    },
+    {
+     "n": 3,
+     "ok": "There's rust inside the handrail tube.",
+     "cn": "扶手管裡面生鏽了。",
+     "pat": "There's + 東西 + 地點（某處有…）",
+     "note": "先說有什麼，再說在哪裡。rust 是不可數名詞，前面不加 a。"
+    },
+    {
+     "n": 4,
+     "cn": "管材整支是歪的，這樣會害我撞機，而且歪得很誇張。",
+     "pat": "That could + 動詞（這樣可能會…）",
+     "note": "管子歪了用 crooked 或 bent，slant 不能這樣當形容詞。撞機要講 crash my machine，只說 I crash 會像開車出車禍。",
+     "wrong": "The pipe is all slant. It could cause me to crash.",
+     "fix": "The whole tube is crooked. That could crash my machine... and it's really bad."
+    },
+    {
+     "n": 5,
+     "ok": "I already told the supplier this driver doesn't handle loads well. I warned them that if it happens again, we'll reject the shipment and have the driver take it back, fix it, and then come back.",
+     "cn": "已經通知廠商了，這司機運輸技術不好。我警告廠商，下次再有這種情況，就直接拒收，叫司機載回去改善後再回來。",
+     "pat": "if + 現在式, we'll + 動詞；have + 人 + 原形動詞",
+     "note": "「下次再有這種情況」直接說 if it happens again，if 子句用現在式。「叫司機做某事」用 have the driver + 原形動詞。"
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    {
+     "w": "dent",
+     "ipa": "/dent/",
+     "pos": "n.",
+     "cn": "壓傷、凹痕",
+     "ex": "The forklift left a big dent in the metal door.",
+     "exCn": "堆高機在鐵門上撞出一個大凹痕。"
+    },
+    {
+     "w": "rust",
+     "ipa": "/rʌst/",
+     "pos": "n.",
+     "cn": "鏽",
+     "ex": "Wipe the rust off the old toolbox before you paint it.",
+     "exCn": "噴漆前，先把舊工具箱上的鏽擦掉。"
+    },
+    {
+     "w": "crooked",
+     "ipa": "/ˈkrʊkɪd/",
+     "pos": "adj.",
+     "cn": "歪的、不直的",
+     "ex": "The label on this carton is crooked, so please put on a new one.",
+     "exCn": "這個紙箱的標籤貼歪了，請換一張新的。"
+    },
+    {
+     "w": "crash",
+     "ipa": "/kræʃ/",
+     "pos": "v.",
+     "cn": "（機台）撞機；撞毀",
+     "ex": "One wrong setting can crash a CNC lathe.",
+     "exCn": "一個設定錯誤就可能讓 CNC 車床撞機。"
+    },
+    {
+     "w": "notify",
+     "ipa": "/ˈnoʊ.t̬ə.faɪ/",
+     "pos": "v.",
+     "cn": "（正式）通知",
+     "ex": "Please notify the warehouse when the new pallets arrive.",
+     "exCn": "新棧板到的時候，請通知倉庫。"
+    },
+    {
+     "w": "reject",
+     "ipa": "/rɪˈdʒekt/",
+     "pos": "v.",
+     "cn": "拒收、判退",
+     "ex": "The inspector rejected three boxes because the labels were wrong.",
+     "exCn": "標籤貼錯了，檢驗員判退了三箱。"
+    },
+    {
+     "w": "shipment",
+     "ipa": "/ˈʃɪp.mənt/",
+     "pos": "n.",
+     "cn": "（一批）貨",
+     "ex": "The next shipment of screws should get here on Monday.",
+     "exCn": "下一批螺絲應該星期一會到。"
+    },
+    {
+     "w": "supplier",
+     "ipa": "/səˈplaɪɚ/",
+     "pos": "n.",
+     "cn": "廠商、供應商",
+     "ex": "We're looking for a second supplier for cardboard boxes.",
+     "exCn": "我們正在找第二家紙箱供應商。"
+    }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    {
+     "p": "the color is a bit off",
+     "cn": "顏色有點不對（色差）"
+    },
+    {
+     "p": "steel plate",
+     "cn": "鐵板"
+    },
+    {
+     "p": "motor mounting plate",
+     "cn": "馬達固定盤"
+    },
+    {
+     "p": "handrail tube",
+     "cn": "扶手管"
+    },
+    {
+     "p": "handle a load",
+     "cn": "運貨、處理貨物"
+    },
+    {
+     "p": "reject a shipment",
+     "cn": "拒收一批貨"
+    }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "MY01-A",
+     "title": "There's + 東西 + 地點（某處有…）",
+     "pat": "There's + 單數或不可數名詞 + 地點",
+     "pts": [
+      "回報不良時先說有什麼，再說在哪裡，對方馬上聽得懂。",
+      "There's 是 There is 的縮寫；複數要用 There are。",
+      "例：There's oil on the floor next to the press.（沖床旁邊的地上有油。）"
+     ],
+     "ex": "There's oil on the floor next to the press.",
+     "exCn": "沖床旁邊的地上有油。"
+    },
+    {
+     "k": "MY01-B",
+     "title": "if + 現在式, we'll + 動詞（如果…就會…）",
+     "pat": "if + 主詞 + 現在式, 主詞 + will + 原形動詞",
+     "pts": [
+      "跟廠商講清楚「再發生會怎樣」時很好用。",
+      "if 子句雖然講未來，還是用現在式，不加 will；主要子句才用 will。",
+      "例：If the test fails again, we'll stop the line.（如果測試再失敗，我們就停線。）"
+     ],
+     "ex": "If the test fails again, we'll stop the line.",
+     "exCn": "如果測試再失敗，我們就停線。"
+    },
+    {
+     "k": "MY01-C",
+     "title": "have + 人 + 原形動詞（叫某人做…）",
+     "pat": "主詞 + have + 人 + 原形動詞",
+     "pts": [
+      "意思是請或叫某人去做某件事，工廠裡交代工作很常用。",
+      "have 後面的人接原形動詞，不加 to，也不加 -ing。",
+      "例：I'll have the line leader check the labels.（我會請線長檢查標籤。）"
+     ],
+     "ex": "I'll have the line leader check the labels.",
+     "exCn": "我會請線長檢查標籤。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "dent vs scratch",
+     "sc": "dent（壓傷）是表面被壓得凹下去；scratch（刮傷）是表面被刮出痕跡。摸起來有凹陷多半是 dent，只有一條線痕是 scratch。",
+     "ex": "This panel has a dent, but the paint isn't scratched.",
+     "exCn": "這塊面板有壓傷，但烤漆沒有刮傷。",
+     "cn": "壓傷 vs 刮傷"
+    },
+    {
+     "u": "crooked vs bent",
+     "sc": "crooked 是看起來不直、歪歪的，連貼紙貼歪都可以用；bent 強調東西被彎到、變形了。管子兩個字都可以用，貼紙只能用 crooked。",
+     "ex": "The sticker is crooked, and the bracket is bent.",
+     "exCn": "貼紙貼歪了，支架則是彎掉了。",
+     "cn": "歪的 vs 彎掉的"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "週報｜來料問題",
+     "title": "Weekly Report: Material Problems",
+     "titleCn": "📧 週報｜給主管的來料問題回報",
+     "paras": [
+      {
+       "en": "Subject: Material problems from the past two weeks",
+       "cn": "主旨：這兩週的來料問題"
+      },
+      {
+       "en": "Hi, here's a quick update on the material problems from the past two weeks.",
+       "cn": "您好，跟您簡單回報這兩週的來料問題。"
+      },
+      {
+       "en": "The motor covers just came in, and the color's a bit off. We also found dents on all the steel plates for the motor mounting plates.",
+       "cn": "馬達上蓋剛來，有色差問題。馬達固定盤用的鐵板也全都發現壓傷。"
+      },
+      {
+       "en": "There's rust inside the handrail tube. We also have a problem with a tube that's crooked along its whole length. It's really bad, and it could crash my machine.",
+       "cn": "扶手管裡面生鏽了。另外還有一支管材整支是歪的，歪得很誇張，可能會害我撞機。"
+      },
+      {
+       "en": "I've notified the supplier that this driver doesn't handle loads well. I warned them that if it happens again, we'll reject the shipment.",
+       "cn": "我已經通知廠商，這位司機運輸技術不好。我也警告他們，下次再這樣就直接拒收。"
+      },
+      {
+       "en": "The driver will have to take it back, fix it, and then come back.",
+       "cn": "司機要載回去，改善好再回來。"
+      }
+     ],
+     "questions": [
+      {
+       "q": "What's wrong with the motor covers?",
+       "qCn": "馬達上蓋有什麼問題？",
+       "a": "The color's a bit off.",
+       "aCn": "有色差。"
+      },
+      {
+       "q": "Where is the rust?",
+       "qCn": "生鏽在哪裡？",
+       "a": "Inside the handrail tube.",
+       "aCn": "在扶手管裡面。"
+      },
+      {
+       "q": "What will happen if the driver problem happens again?",
+       "qCn": "司機的問題如果再發生，會怎麼處理？",
+       "a": "They will reject the shipment and have the driver take it back.",
+       "aCn": "直接拒收，叫司機載回去。"
+      }
+     ]
+    },
+    {
+     "bar": "會議｜來料問題",
+     "title": "Meeting: Any Material Problems?",
+     "titleCn": "🗣 會議｜跟主管講來料問題",
+     "paras": [
+      {
+       "en": "Supervisor: Any material problems to report?",
+       "cn": "主管：有來料問題要報告嗎？"
+      },
+      {
+       "en": "You: Yes, a few. The motor covers just came in, and the color's a bit off.",
+       "cn": "你：有幾個。馬達上蓋剛來，顏色有點不對。"
+      },
+      {
+       "en": "Supervisor: Anything else?",
+       "cn": "主管：還有嗎？"
+      },
+      {
+       "en": "You: All the steel plates for the motor mounting plates have dents on them. And there's rust inside the handrail tube.",
+       "cn": "你：馬達固定盤用的鐵板全都有壓傷。還有扶手管裡面生鏽了。"
+      },
+      {
+       "en": "Supervisor: Is that everything?",
+       "cn": "主管：就這些嗎？"
+      },
+      {
+       "en": "You: Not quite. We have a crooked tube, too. It's really bad, and it could crash my machine.",
+       "cn": "你：還有。有一支管材是歪的，歪得很誇張，可能會害我撞機。"
+      },
+      {
+       "en": "Supervisor: Have you talked to the supplier?",
+       "cn": "主管：跟廠商講了嗎？"
+      },
+      {
+       "en": "You: Yes. I told them this driver doesn't handle loads well.",
+       "cn": "你：講了。我跟他們說這司機運輸技術不好。"
+      },
+      {
+       "en": "Supervisor: And if it happens again?",
+       "cn": "主管：那如果再發生呢？"
+      },
+      {
+       "en": "You: We'll reject the shipment and have the driver take it back. I already warned them.",
+       "cn": "你：我們就直接拒收，叫司機載回去。我已經警告過他們了。"
+      }
+     ]
+    },
+    {
+     "bar": "討論｜下週我會怎麼做",
+     "title": "Discussion: What Will I Do Next Week?",
+     "titleCn": "討論｜下週我會怎麼做",
+     "paras": [
+      {
+       "en": "When the next motor covers come in, how will I check the color?",
+       "cn": "下一批馬達上蓋來的時候，我要怎麼檢查顏色？"
+      },
+      {
+       "en": "How can I look inside a tube to check for rust?",
+       "cn": "要怎麼看管子裡面有沒有生鏽？"
+      },
+      {
+       "en": "If I find dents or a crooked tube again, who do I tell first?",
+       "cn": "如果又發現壓傷或歪掉的管材，我要先通知誰？"
+      },
+      {
+       "en": "If I have to reject a shipment, what will I say to the driver?",
+       "cn": "如果真的要拒收，我要跟司機怎麼說？"
+      }
+     ]
+    },
+    {
+     "bar": "隨身速查｜本課 5 句",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜本課 5 句",
+     "paras": [
+      {
+       "en": "The motor covers just came in, and the color's a bit off.",
+       "cn": "馬達上蓋剛來，有色差問題。"
+      },
+      {
+       "en": "All the steel plates for the motor mounting plates have dents on them.",
+       "cn": "馬達固定盤用的鐵板全都有壓傷。"
+      },
+      {
+       "en": "There's rust inside the handrail tube.",
+       "cn": "扶手管裡面生鏽了。"
+      },
+      {
+       "en": "The whole tube is crooked. That could crash my machine... and it's really bad.",
+       "cn": "管材整支是歪的，這樣會害我撞機，而且歪得很誇張。"
+      },
+      {
+       "en": "I already told the supplier this driver doesn't handle loads well. I warned them that if it happens again, we'll reject the shipment and have the driver take it back, fix it, and then come back.",
+       "cn": "已經通知廠商了，這司機運輸技術不好。我警告廠商，下次再有這種情況就直接拒收，叫司機載回去改善後再回來。"
+      }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -31571,6 +31920,7 @@ window.BOOK = {
     bk20251218:[[['toilet','wrench','suitcase','doc','moon'],'忙碌修繕的一天：馬桶、洗手台、磁磚出問題 → 打電話請水電工 → 旅行社規劃假期 → 到政府機關辦文件 → 晚上全部修好。']],
     bk20251226b:[[['signpost','exam','piggy','globe','sprout'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
     bk20260922:[[['eye','gear','plug','dumbbell','cart'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
+    my01:[[['sun','pot','wind','tornadoL','car'],'馬達上蓋剛來顏色不對 → 鐵板全都有壓傷 → 扶手管裡面生鏽 → 管材整支歪掉會撞機 → 通知廠商、再發生就拒收。']],
     qp04:[[['book','scissors','ticket','orgchart','broomL'],'馬達支架孔距超差：孔距 85.35–85.40、圖面 Rev C 要 85.0 ± 0.2 → 加工課用印出來的舊版 Rev B → 30 個試裝馬達、運轉四小時正常 → 不重工、向客戶申請特採、每箱貼黃標只限 2610 批 → 收回舊圖、只用受控圖面、首件對最新版。']],
     qp03:[[['spray','faucet','mirror','cloudRain','umbrella'],'重訓架立柱掉漆：客戶百格 2B、規格要 4B → 我們只測平的測試片、沒測實際零件 → 脫脂槽三週沒換、油殘留 → 300 支保留、空運 40 支 → 脫脂槽每週換、每班測實際零件附照片。']],
     qp02:[[['videocall','facesL','traffic','screenL','window'],'客戶量的孔徑和我們不一樣：我們量 12.06、客戶量 12.14 → 卡尺校驗過期兩週、讀數偏低 0.05 → GR&R 38% 不可接受 → 600 件隔離、改用通止針規 → 校驗標籤＋到期前提醒。']],
