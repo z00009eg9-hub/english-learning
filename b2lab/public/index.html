@@ -2820,13 +2820,14 @@ svg.emo-ic{display:inline-block;width:1.2em!important;height:1.2em!important;max
 .bkc-ft .vd .emo-ic path,.magbadge.vdbtn .emo-ic path{fill:currentColor}
 .bkc-ft .d{margin-left:auto;white-space:nowrap}
 @media(max-width:999px){ .bkc-grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media(max-width:360px){ .bkc-ft{font-size:12.5px;gap:4px 8px} .bkc-ft .d{font-size:12.5px} }
 @media(max-width:640px){
   .bkc-grid{grid-template-columns:minmax(0,1fr);gap:8px}
   .bkc-th{width:64px;height:64px}
   .bkc-bd{padding:9px 10px;gap:9px}
   /* 手機卡片精簡：英文標題完整顯示；中文標題 1 行；重點句型留到課文內再看 */
   .bkc-cn{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .bkc-g{display:none}
+  .bkc-g{-webkit-line-clamp:2}
   .bktoc-hd{padding:9px 12px}
 }
 </style>
@@ -6053,6 +6054,19 @@ function sceneThumb(svg){
 function emojiThumb(e){ return '<div class="lthumb emo" aria-hidden="true">'+esc(e||'🎧')+'</div>'; }
 /* ===== 閱讀／實景／聽力共用卡片（比照課本目錄的 .bkc）：上方色條 → 縮圖＋標題 → 資訊列。整張卡可點 =====
    o={click, lv, cat, thumb, en, cn, g, ft:[html…], right:html, done} */
+/* 卡片短摘要：取「重點」的第一段完整意思（到第一個分號／句號為止），太長就在逗號處收尾，不在半句硬截斷 */
+function shortG(t){
+  t=String(t||'').trim(); if(!t) return '';
+  let x=t.split(/[；;。]/)[0].trim();
+  if(x.length>40){
+    const cut=x.slice(0,40), m=cut.match(/^(.*[，、,：:])/);
+    x=m?m[1].replace(/[，、,：:]$/,''):cut.replace(/\s+\S*$/,'');
+  }
+  /* 括號沒收尾就退到括號前，避免半截括號 */
+  const open=Math.max(x.lastIndexOf('（'),x.lastIndexOf('('));
+  if(open>=0&&x.indexOf('）',open)<0&&x.indexOf(')',open)<0) x=x.slice(0,open).trim();
+  return x;
+}
 function lCard(o){
   return '<div class="bkc lcard'+(o.done?' fin':'')+'" role="listitem" tabindex="0" onclick="'+o.click+'" onkeydown="if(event.key===\'Enter\')this.click()">'
    +'<div class="bkc-hd">'+(o.lv?'<span class="lv '+lvCls(o.lv)+'">'+esc(o.lv)+'</span>':'')
@@ -6061,7 +6075,7 @@ function lCard(o){
    +'<div class="bkc-bd">'+(o.thumb||'')+'<div class="bkc-tx">'
    +'<div class="bkc-en">'+esc(o.en||'')+'</div>'
    +(o.cn?'<div class="bkc-cn">'+esc(o.cn)+'</div>':'')
-   +(o.g?'<div class="bkc-g lc-clamp">✪ '+esc(o.g)+'</div>':'')
+   +(o.g?'<div class="bkc-g lc-clamp" title="'+esc(o.g)+'">✪ '+esc(shortG(o.g))+'</div>':'')
    +'</div></div>'
    /* o.vd＝有影片的 id：比照課本目錄卡片，「▶ 影片版」放資訊列最前面 */
    +'<div class="bkc-ft">'+(o.vd?'<span class="vd" onclick="event.stopPropagation();vdOpen(\''+esc(o.vd)+'\',true)">▶ 影片版</span>':'')
