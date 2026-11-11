@@ -17,6 +17,8 @@ root.innerHTML=`<style>
 .tray{min-height:64px;border:1px dashed #d3b592;background:#fff9f0;border-radius:10px;padding:8px;display:flex;gap:6px;flex-wrap:wrap;align-content:flex-start}.bank{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.token{border:1px solid #ddd1c1;border-radius:8px;background:#fff;padding:7px 9px;min-height:38px}.token:disabled{opacity:.3;cursor:default}.token.wrong{border-color:#b34b30;background:#fff0e9}.token.correct{border-color:#658b63;background:#eff8ed}.article{display:block;width:100%;text-align:left;margin:8px 0}.article span{display:block}.article small{color:#756c60}.answer{border-left:3px solid #ee893e;padding-left:10px;margin-top:10px}
 @media(max-width:768px){:host{--size:48px;right:12px;bottom:calc(82px + env(safe-area-inset-bottom,0px))}.panel{max-height:calc(100dvh - 190px)}}
 :host([data-mini]){--size:32px}
+:host{transition:transform .22s ease}
+@media(max-width:768px){:host([data-away]){transform:translateX(calc(100% + 24px))}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 <aside class="notice" aria-label="新文章提醒" hidden><p class="notice-text" role="status"></p><div class="row"><button class="control notice-view">看看</button><button class="icon coach-mute" hidden>先不要</button><button class="icon notice-dismiss" aria-label="關閉助理提醒">×</button></div></aside>
@@ -248,6 +250,15 @@ function checkNews(force=false){
  q('.notice').dataset.kind='news';q('.notice').setAttribute('aria-label','新文章提醒');q('.notice').dataset.shy='false';q('.notice').dataset.act='news';q('.notice-view').textContent='看看';q('.notice-text').textContent='今天新增 '+fresh.length+' 篇文章！';q('.notice').hidden=false;rememberNews(n);
 }
 q('.notice-dismiss').onclick=()=>{q('.notice').hidden=true;};
+/* 招呼／新文章泡泡只停留 10 秒，不會一直蓋住首頁卡片；教練提醒不受影響 */
+let noticeTimer;
+new MutationObserver(()=>{const nt=q('.notice');clearTimeout(noticeTimer);if(nt.hidden)return;const k=nt.dataset.kind;if(k!=='greet'&&k!=='news')return;noticeTimer=setTimeout(()=>{if(nt.dataset.kind===k)nt.hidden=true;},10000);}).observe(q('.notice'),{attributes:true,attributeFilter:['hidden']});
+/* 手機閱讀時往下捲就把助理按鈕滑到邊外，往回捲或回到頁首／頁尾才出現，正文不被遮住 */
+(function(){let y=window.scrollY;window.addEventListener('scroll',()=>{
+ const ny=window.scrollY,dy=ny-y;y=ny;if(Math.abs(dy)<6)return;
+ const atEdge=ny<120||ny+window.innerHeight>=document.documentElement.scrollHeight-80;
+ host.toggleAttribute('data-away',dy>0&&!atEdge&&!opened&&q('.notice').hidden);
+},{passive:true});})();
 q('.coach-mute').onclick=()=>{coachSession.muted=true;saveCoach();clearCoach();};
 q('.notice-view').onclick=()=>{const a=q('.notice').dataset.act||'news',id=q('.notice').dataset.id;q('.notice').hidden=true;
  if(a==='coach-done')return;else if(a==='coach-review')reviewThree();else if(a==='vocab')api.openVocab();else if(a==='book'&&id)api.openBook(id);else{open();mode='news';markMode();news();}};

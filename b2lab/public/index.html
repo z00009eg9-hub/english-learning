@@ -165,7 +165,7 @@ nav button.on::after{content:'';position:absolute;bottom:1px;left:50%;transform:
 /* Main 只吃「側邊欄以外的剩餘寬度」：不寫死寬度、不設 1100px 上限，
    側邊欄展開/收合時由 margin-left 自動讓位，右側不再留大片空白。
    左右內距隨螢幕縮放：手機 14px → 平板 15~18px → 桌機 24px。 */
-main{width:auto;max-width:none;min-width:0;margin:0;padding:16px clamp(14px,1.2vw + 6px,24px) calc(56px + env(safe-area-inset-bottom) + 12px)}
+main{width:auto;max-width:none;min-width:0;margin:0;padding:16px clamp(14px,1.2vw + 6px,24px) calc(120px + env(safe-area-inset-bottom))}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 1px 4px rgba(60,45,30,.05);padding:14px;margin-bottom:12px}
 h2.sec{font-size:var(--font-subhead);line-height:var(--lh-title);font-weight:var(--fw-emph);margin:0 0 8px;display:flex;align-items:center;gap:6px}
 /* 頁內小節標題（職場：稽核英文、品保新聞…）＝卡片標題級 18，比頁首標題 20 小一級；沒設的話會吃瀏覽器 h3 預設而比頁首還大 */
@@ -420,6 +420,7 @@ tr:nth-child(even) td{background:#fdfbf8}
 @media(hover:hover){#bk-cal .cell.sel:hover{background:var(--accent2)}}
 #bk-cal .calhd .m{font-size:calc(17px * var(--fs))}
 .cell.future{opacity:.4}
+[role=button]:focus-visible,.spk:focus-visible,.lcard:focus-visible,.chip:focus-visible{outline:3px solid var(--accent2,#e8813a);outline-offset:2px}
 .callegend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:var(--font-meta);color:var(--ink2)}
 .callegend i{display:inline-block;width:12px;height:12px;border-radius:4px;vertical-align:-1px;margin-right:5px}
 .callegend .leg-has{width:6px;height:6px;border-radius:50%;background:#3B82F6;vertical-align:1px}
@@ -1659,6 +1660,15 @@ header .prof .emo-ic,header .hd-streak .emo-ic{vertical-align:0}
   cursor:pointer;color:var(--ink2);font-weight:600;border-right:1px solid var(--line)}
 .au-mode button:last-child{border-right:0}
 .au-mode button.on{background:var(--accent);color:#fff}
+.au-tools{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.au-bar .spk,.au-mode button{min-height:44px}
+.au-bar .spk{min-width:44px}
+.au-help{cursor:pointer}.au-help summary{font-weight:700;color:var(--accent2);min-height:32px;display:flex;align-items:center}
+@media(max-width:520px){
+  .au-tools{flex:1 1 100%}
+  .au-mode{flex:1}.au-mode button{flex:1}
+}
+@media(max-width:768px){#v-read .spk,#v-read .wbb,#v-read .btn.sm{min-height:44px;min-width:44px}}
 /* completion toast */
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(80px);
   background:var(--card);border:1.5px solid var(--ok);border-radius:14px;padding:14px 18px;
@@ -3557,7 +3567,7 @@ function sayWord(el){
 }
 window.sayWord=sayWord;
 function spk(text,label){
-  return '<button class="spk" onclick="spkGo(this);event.stopPropagation()" data-t="'+esc(text)+'">🔊'+(label?' '+label:'')+'</button>';
+  return '<button class="spk" aria-label="'+(label?esc(label):'朗讀：'+esc(String(text).slice(0,40)))+'" onclick="spkGo(this);event.stopPropagation()" data-t="'+esc(text)+'">🔊'+(label?' '+label:'')+'</button>';
 }
 /* 把一段文字切成一句一句（保留句尾標點）。
    縮寫（a. m. / p.m. / Mr. / U.S. 等）後面的句點不能當斷句，
@@ -4715,7 +4725,7 @@ RENDER.vocab=function(){
       +'<div class="stats"><div class="stat"><b>'+VOCAB.length+'</b><span>課堂總單字</span></div>'
       +'<div class="stat"><b>'+learned+'</b><span>已開始學</span></div>'
       +'<div class="stat"><b>'+dueN+'</b><span>今天該複習</span></div>'
-      +'<div class="stat"><b>'+(ST.streak||1)+'</b><span>連續天數</span></div></div>'
+      +'<div class="stat"><b>'+studyStreakInfo().n+'</b><span>連續天數</span></div></div>'
       +'<div class="chips" style="margin-top:14px"><button class="chip'+(vCat==='all'?' on':'')+'" onclick="vSet(\'all\')">全部 '+VOCAB.length+'</button>'
       + Object.keys(CATS).map(c=>'<button class="chip'+(vCat===c?' on':'')+'" onclick="vSet(\''+c+'\')">'+CATS[c]+' '+counts[c]+'</button>').join('')+'</div>'
       +'<div class="muted">這一輪：該複習 '+q.due.length+' 個 · 新字 '+q.fresh.length+' 個'
@@ -5552,6 +5562,15 @@ function studyDaySet(){
   (DAILY_GRAM||[]).forEach(g=>{ if(g.date&&ST.gramDone[g.id]) s.add(g.date); });
   return s;
 }
+/* 連續學習天數：與日曆同一口徑（有學習紀錄的日子），從今天（今天還沒學就從昨天）往前數 */
+function studyStreakInfo(){
+  const set=studyDaySet(), t=today();
+  const prev=d=>{ const x=new Date(d+'T00:00:00'); x.setDate(x.getDate()-1); return dstr(x); };
+  let d=set.has(t)?t:prev(t), n=0;
+  while(set.has(d)){ n++; d=prev(d); }
+  const last=[...set].filter(x=>x<=t).sort().pop()||'';
+  return {n,last,todayDone:set.has(t)};
+}
 function calendarCard(){
   const now=new Date();
   const cy=calYM?calYM.y:now.getFullYear();
@@ -5563,13 +5582,16 @@ function calendarCard(){
   const startWd=new Date(cy,cm,1).getDay();      // 0=週日
   const days=new Date(cy,cm+1,0).getDate();
   const wd=['日','一','二','三','四','五','六'];
+  const SK=studyStreakInfo();
   let studied=0;
   for(let i=1;i<=days;i++){ const ds=key(i); if(set.has(ds)&&ds<=t) studied++; }
   const atCurrent=(cy>now.getFullYear())||(cy===now.getFullYear()&&cm>=now.getMonth());
   let h='<div class="card"><h2 class="sec">🗓 每日打卡</h2>'
-   +'<div class="hint">完成當天的文章、文法或單字複習，那一天就會亮起來。目前連續打卡 <b>'+(ST.streak||1)+'</b> 天。</div>'
+   +'<div class="hint">完成當天的文章、文法或單字複習，那一天就會亮起來。'
+   +(SK.n?'目前連續打卡 <b>'+SK.n+'</b> 天'+(SK.todayDone?'（含今天）':'（到昨天為止，今天還沒打卡）'):'目前沒有連續紀錄，今天學一點就能重新開始')
+   +(SK.last?'；最近一次打卡：<b>'+SK.last+'</b>':'')+'。</div>'
    +'<div class="calhd"><button class="calnav" onclick="calShift(-1)">‹</button>'
-   +'<div class="m">'+cy+' 年 '+(cm+1)+' 月 · 本月打卡 '+studied+' 天</div>'
+   +'<div class="m">'+cy+' 年 '+(cm+1)+' 月 · '+(atCurrent?'本月':(cm+1)+' 月')+'打卡 '+studied+' 天</div>'
    +'<button class="calnav" onclick="calShift(1)"'+(atCurrent?' disabled':'')+'>›</button></div>'
    +'<div class="calgrid">'+wd.map(w=>'<div class="wd">'+w+'</div>').join('');
   for(let i=0;i<startWd;i++) h+='<div class="cell empty"></div>';
@@ -5577,13 +5599,15 @@ function calendarCard(){
     const ds=key(i); let cls='cell'; const done=set.has(ds);
     if(done) cls+=' done';
     if(ds===t) cls+=' today'; else if(ds>t) cls+=' future';
-    h+='<div class="'+cls+'">'+i+(done?'<span class="dot">✓</span>':'')+'</div>';
+    const stt=done?'已打卡':ds===t?'今天，還沒打卡':ds>t?'還沒到':'沒打卡';
+    h+='<div class="'+cls+'" role="img" aria-label="'+(cm+1)+' 月 '+i+' 日，'+stt+'">'+i+(done?'<span class="dot">✓</span>':'')+'</div>';
   }
   h+='</div>'
    +'<div class="callegend">'
    +'<span><i style="background:linear-gradient(135deg,#f7bd76,#ef9a4f)"></i>有完成</span>'
    +'<span><i style="background:var(--card);border:1px solid var(--line)"></i>沒打卡</span>'
    +'<span><i style="background:var(--card);border:2px solid var(--accent2)"></i>今天</span>'
+   +'<span><i style="background:var(--card);border:1px solid var(--line);opacity:.4"></i>還沒到</span>'
    +'</div></div>';
   return h;
 }
@@ -5710,7 +5734,7 @@ RENDER.prog=function(){
 
   $('v-prog').innerHTML=
    '<div class="card"><h2 class="sec">📊 我的進度</h2>'
-   +'<div class="stats"><div class="stat"><b>'+(ST.streak||1)+'</b><span>連續學習天數</span></div>'
+   +'<div class="stats"><div class="stat"><b>'+studyStreakInfo().n+'</b><span>連續學習天數</span></div>'
    +'<div class="stat"><b>'+learned+'</b><span>學過的單字</span></div>'
    +'<div class="stat"><b>'+mature+'</b><span>已精熟 (≥21天)</span></div>'
    +'<div class="stat"><b>'+dueN+'</b><span>今天該複習</span></div></div>'
@@ -5764,7 +5788,7 @@ RENDER.prog=function(){
    +'<div class="muted" style="margin-top:10px">朗讀速度（各內容頁的 ⏱ 鈕也能直接切換）</div><div class="chips" style="margin-top:6px">'
    +RATES.map(r=>'<button class="chip" data-ratechip="'+r+'" onclick="setRate('+r+')">'+RATE_LB[r]+' '+r+'x</button>').join('')+'</div>'
    +'<div style="margin-top:14px"><button class="btn gray" onclick="wipe()">清除本機學習紀錄</button></div>'
-   +'<div class="muted" style="margin-top:9px;font-size:var(--font-meta)">學習紀錄只存在這台裝置的瀏覽器裡，不會上傳。</div>'
+   +'<div class="muted" style="margin-top:9px;font-size:var(--font-meta)">學習紀錄會先存在這台裝置，並自動同步到雲端，所以同一位學習者換手機、電腦也看得到。B2 Read 與 Speak Up 各有自己的紀錄，彼此不互通。</div>'
    +'</div>'
 
    + installCard() + oldSiteCard();
@@ -5821,11 +5845,43 @@ function applyEye(){ document.documentElement.classList.toggle('eye', !!ST.eye);
 function setEye(v){ ST.eye=!!Number(v); save(); applyEye(); go('prog'); }
 window.setEye=setEye; window.applyEye=applyEye;
 function wipe(){
-  if(!confirm('確定清除 '+PROFILES[PROFILE]+' 的所有學習紀錄（單字複習進度、閱讀與文法成績）嗎？\n雲端上的紀錄也會一起清空，此動作無法復原。')) return;
-  ST=blank(); ST.streak=1; ST.lastDay=today();
-  save(); go('prog');
+  if(!confirm('確定清除 '+PROFILES[PROFILE]+' 在 B2 Read 的所有學習紀錄（單字複習進度、閱讀與文法成績）嗎？\n這台裝置與雲端上的紀錄都會清空（Speak Up 的紀錄不受影響），此動作無法復原。')) return;
+  const fresh=blank(); fresh.streak=1; fresh.lastDay=today(); fresh.updatedAt=Date.now();
+  const finish=()=>{ ST=fresh; saveLocal(); go('prog'); };
+  const d=cloudDoc();
+  if(!d){ finish(); return; }
+  /* 雲端要整份覆蓋（不能 merge），否則舊紀錄會在下次同步時又合併回來 */
+  d.set(fresh).then(finish).catch(()=>{
+    alert('雲端暫時連不上，紀錄沒有清除。請確認網路後再試一次（只清本機的話，舊紀錄會在下次同步時回來）。');
+  });
 }
 window.setRate=setRate; window.wipe=wipe;
+
+/* ---------- 無障礙補強：朗讀鈕名稱、可點的一般元素補成按鈕語意（Tab / Enter / Space） ---------- */
+(function(){
+  const CLICKABLE='.pgrow[onclick],.ring[onclick],.stat[onclick],.vd[onclick],.chip:not(button)[onclick]';
+  function fix(root){
+    root.querySelectorAll('button.spk:not([aria-label])').forEach(b=>{
+      const t=(b.dataset.t||b.closest('[data-t]')?.dataset.t||'').trim();
+      b.setAttribute('aria-label',(b.textContent.replace('🔊','').trim()||'朗讀')+(t?'：'+t.slice(0,40):''));
+    });
+    root.querySelectorAll(CLICKABLE).forEach(e=>{
+      if(e.matches('button,a,[role=button]')) return;
+      e.setAttribute('role','button'); e.tabIndex=0;
+      if(!e.getAttribute('aria-label')){ const t=e.textContent.replace(/\s+/g,' ').trim(); if(t) e.setAttribute('aria-label',t.slice(0,60)); }
+    });
+  }
+  let q=0;
+  function sched(){ if(q) return; q=setTimeout(()=>{ q=0; fix(document); },60); }
+  function start(){
+    fix(document);
+    new MutationObserver(sched).observe(document.body,{childList:true,subtree:true});
+    document.addEventListener('keydown',e=>{
+      if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('[role=button][onclick]:not(button):not(a)')){ e.preventDefault(); e.target.click(); }
+    });
+  }
+  if(document.body) start(); else document.addEventListener('DOMContentLoaded',start);
+})();
 
 /* ---------- 點空白處關閉字義卡 ---------- */
 document.addEventListener('click',e=>{
@@ -8028,7 +8084,7 @@ function auAdvTog(){
   const show=e.style.display==='none';
   e.style.display=show?'block':'none';
   try{ localStorage.setItem('b2lab_auadv',show?'1':'0'); }catch(x){}
-  const b=$('au-advbtn'); if(b) b.classList.toggle('on',show);
+  const b=$('au-advbtn'); if(b){ b.classList.toggle('on',show); b.setAttribute('aria-expanded',show?'true':'false'); }
 }
 window.auAdvTog=auAdvTog;
 /* 聽力逐字稿的唯一來源：列表句數、播放器總句數、逐字稿顯示都用它 */
@@ -8039,15 +8095,15 @@ function audioControls(n){
   const adv=localStorage.getItem('b2lab_auadv')==='1';
   const total=n||auLines.length||1;
   return '<div class="au-bar">'
-   +'<button class="au-main" id="au-play" onclick="auPlay(false)" title="播放全部">▶</button>'
+   +'<button class="au-main" id="au-play" onclick="auPlay(false)" title="播放全部" aria-label="播放全部">▶</button>'
    +'<div class="au-prog-wrap"><div class="au-prog-info"><span id="au-prog-txt">句 0 / '+total+'</span><span id="au-speed">'+auRate+'x</span></div>'
    +'<div class="au-prog-bar"><i id="au-prog-fill" style="width:0"></i></div></div>'
-   +'<div class="au-mode">'
+   +'<div class="au-tools"><div class="au-mode">'
    +'<button id="au-mode-play" class="on" onclick="auPlay(false)">▶ 連播</button>'
    +'<button id="au-shadow" onclick="auPlay(true)">🔁 跟讀</button></div>'
-   +'<button class="spk" onclick="auStop()" title="停止">⏹</button>'
-   +'<button class="spk'+(adv?' on':'')+'" id="au-advbtn" onclick="auAdvTog()" title="速度設定">⚙️</button>'
-   +'</div>'
+   +'<button class="spk" onclick="auStop()" title="停止" aria-label="停止播放">⏹</button>'
+   +'<button class="spk'+(adv?' on':'')+'" id="au-advbtn" onclick="auAdvTog()" title="速度設定" aria-label="朗讀速度設定" aria-expanded="'+(adv?'true':'false')+'">⚙️</button>'
+   +'</div></div>'
    +'<div id="au-adv" style="display:'+(adv?'block':'none')+'">'
    +'<div class="row" style="margin-top:6px">'
    +'<span class="muted" style="font-size:var(--font-meta);font-weight:700">速度</span>'
@@ -8270,9 +8326,9 @@ function lessonHTML(l){
   /* 逐字稿移到最上面：先看對話內容，再看文法焦點和單字 */
   if(au){
     h+='<div class="card"><h2 class="sec">📜 對話逐字稿（含中譯）</h2>'
-     +'<div class="hint">上面的控制列會一直黏在頂端。<b>▶️ 播放全部</b>整段連著念、<b>🔁 逐句跟讀</b>會念一句停一下讓你跟著念；'
+     +'<details class="hint au-help"><summary>操作說明（點開）</summary>上面的控制列會一直黏在頂端。<b>▶️ 播放全部</b>整段連著念、<b>🔁 逐句跟讀</b>會念一句停一下讓你跟著念；'
      +'<b>點任一句</b>可以從那一句開始播，<b>點任何一個英文字</b>會跳出中文。'
-     +'每句右邊的 <b>🎙️ 可以錄下自己的發音</b>，錄完按 ▶️🎙️ 回放、再按 🔊 聽原音交叉比對咬字與語調。想自我測驗就把英文或中譯蓋起來。</div>'
+     +'每句右邊的 <b>🎙️ 可以錄下自己的發音</b>，錄完按 ▶️🎙️ 回放、再按 🔊 聽原音交叉比對咬字與語調。想自我測驗就把英文或中譯蓋起來。</details>'
      +'<div id="sublist">'+ au.map((k,i)=>
         '<div class="sline" id="sl-'+i+'">'
         +(k.sp?'<div class="ssp '+spCls(k.sp)+'">'+esc(k.sp)+'</div>':'')
@@ -9638,7 +9694,7 @@ window.b2Assistant={
   greet(){
     const n=Object.values(ST.srs||{}).filter(x=>x&&x.due<=today()).length;
     let last=null; try{ const id=localStorage.getItem('b2lab_bkLast_'+PROFILE); const b=id&&BOOK_LESSONS.find(x=>x.id===id); if(b)last={id:b.id,title:b.titleCn||b.title}; }catch(e){}
-    return {profile:PROFILE,date:today(),hour:new Date().getHours(),streak:ST.streak||1,due:n,last};
+    return {profile:PROFILE,date:today(),hour:new Date().getHours(),streak:studyStreakInfo().n,due:n,last};
   },
   // 只讀現有教材與操作狀態，陪讀不寫入進度或呼叫雲端。
   reviewWords(){
