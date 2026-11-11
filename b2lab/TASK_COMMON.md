@@ -33,6 +33,7 @@
 - **萬用圖示每張最多 1 個**：`star clock people doc chat talk phone house chart calendar question`。要畫具體東西（等公車用 `sign`、罷工用 `flag`、搬家用 `truck`/`sofa`）。
 - 長得幾乎一樣的算同一個（見 genart.js 的 `SAME`）。
 - 舊文章區塊同一圖示全站最多 4 次；同一天的橫幅之間圖示、配色都不重複；前兩批用過的圖示不能用（`node tools/check-art.js --free YYYYMMDD` 列出可用的）。
+- **課本封面圖示全站唯一**（2026-11-11 使用者指定）：每課 `data-book.js` 的 `S[id][0]` 第一個圖示就是卡片封面，不能和任何其他課的封面相同（沒有冷卻期，永久唯一；`check-art.js` 會擋 2026-11-01 之後的新課）。新增課程先跑 `node tools/list-thumb-icons.js`，優先從「從沒用過」挑；封面也要貼切主題，不要拿第一個順手的圖示。
 - 不夠貼切就補畫新圖示，做法見 `DAILY_TASK.md` 3.5.1，補完跑 `node tools/check-icons.js`，並回報新增了哪些。
 
 ## 驗證與收尾

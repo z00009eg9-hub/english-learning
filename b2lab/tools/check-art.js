@@ -143,6 +143,23 @@ bk.forEach(x => {
 Object.entries(bookUse).forEach(([f, n]) => {
   if (n > BOOK_MAX) err.push('課本：' + f + ' 用了 ' + n + ' 次（上限 ' + BOOK_MAX + '）');
 });
+const oldCoverDup = [];
+
+/* ---------- 封面圖示全站唯一（2026-11-11 使用者指定：11/10 封面機車與 6/9 重複）----------
+   課本卡片顯示的是每課第一組（S[id][0]）的第一個圖示；沒有 S 時看 C 封面。
+   這個圖示不能和任何其他課的封面相同（沒有冷卻期，永久唯一）。從這天之後的新課才擋，舊的重複只提示。 */
+const COVER_FROM = '20261101';
+const covers = {};
+const coverIds = new Set([...Object.keys(S), ...Object.keys(C)]);
+[...coverIds].map(id => ({ id, d: (id.match(/\d{8}/) || ['00000000'])[0], n: (S[id] ? S[id][0][0][0] : C[id][0]) }))
+  .sort((a, b) => a.d.localeCompare(b.d)).forEach(c => {
+    const f = family(c.n);
+    if (covers[f]) {
+      const msg = c.id + '（封面）：' + c.n + ' 已經是 ' + covers[f] + ' 的封面（封面圖示全站唯一）';
+      if (c.d >= COVER_FROM) err.push(msg); else oldCoverDup.push(msg);
+    } else covers[f] = c.id;
+  });
+if (oldCoverDup.length) console.log('（提示）2026-11-01 以前有 ' + oldCoverDup.length + ' 組舊封面重複，不擋：\n  ' + oldCoverDup.join('\n  '));
 console.log('舊文章 ' + oldIds.length + ' 張（' + Object.keys(oldUse).length + ' 種圖示）；課本 '
   + bk.length + ' 組（' + Object.keys(bookUse).length + ' 種圖示）');
 
