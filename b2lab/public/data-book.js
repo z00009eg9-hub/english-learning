@@ -31626,6 +31626,967 @@ window.BOOK = {
         ]
       }
     ]
+  },
+  /* ---- bk20261110 Corrective Action, First-Piece Inspection & Hard vs Hardly ---- */
+  {
+    "id": "bk20261110",
+    "video": true,
+    "icon": "📐",
+    "date": "2026-11-10",
+    "doc": "https://docs.google.com/document/d/1-rwMzz4nkpuY45s0AzYLw02Mtww_2fOQ-IJK0sehNsQ/edit",
+    "title": "Corrective Action, First-Piece Inspection & Hard vs Hardly",
+    "titleCn": "矯正措施、首件檢驗與 hard / hardly",
+    "topics": "作業複習(品保句型)・單字與片語・effective / effectively・hard / hardly・首件檢驗閱讀與理解問題・翻譯練習",
+    "hwTitle": "I. ★ 11/10 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "ok": "The investigation showed that we mixed up the parts during assembly.",
+        "cn": "調查顯示，我們在組裝時把零件搞混了。",
+        "pat": "The investigation + showed + that 子句",
+        "note": "✅ 文法正確。 show that + 子句：「顯示/指出……」，that 後接完整句子。 mix up 是片語動詞「搞混」，過去式 mixed up；零件是被搞混的對象，放在 mix up 後面。 during + 名詞(assembly)：「在組裝期間」。"
+      },
+      {
+        "n": 2,
+        "wrong": "We conducted a visual inspection and found a rust on the frame.",
+        "fix": "We conducted a visual inspection and found rust on the frame.",
+        "cn": "我們進行了目視檢查，發現框架上有鏽。",
+        "pat": "conduct + a visual inspection；find + 不可數名詞 + on + 地方",
+        "note": "rust(鏽)是不可數名詞，前面不能加 a。 conduct an inspection＝進行檢查，是品保常用搭配；visual inspection＝目視檢查。 on the frame：鏽附著在框架「表面」上，用 on。"
+      },
+      {
+        "n": 3,
+        "wrong": "During the customer audit, we found some testing equipment had no maintenance records, so we needed to improve it.",
+        "fix": "During the customer audit, we found that some testing equipment had no maintenance records, so we needed to take corrective action.",
+        "cn": "客戶稽核時，我們發現部分測試設備沒有維護紀錄，所以我們需要採取矯正措施。",
+        "pat": "found (that) + 子句；take corrective action",
+        "note": "found 後面的 that 可省略，寫出來句子結構更清楚。 improve it 的 it 指代不明(是設備還是紀錄？)；稽核發現不符合事項時，正式說法是 take corrective action(採取矯正措施)。 equipment 是不可數名詞，前面用 some，不加 s。"
+      },
+      {
+        "n": 4,
+        "ok": "The new inspection is effective because it can identify defects.",
+        "cn": "新的檢驗方法幫助我們更有效地辨識缺陷。（老師建議說法）",
+        "pat": "help + 人 + 原形動詞；比較級 more effectively",
+        "note": "✅ 老師建議說法：The new inspection method helps us identify defects more effectively. inspection 單獨出現是「檢驗」這個動作，要講「方法」就用 inspection method。 help us identify：help + 人 + 原形動詞(to 可省略)。 effectively 是副詞，修飾動詞 identify；effective 是形容詞(詳見 III-A)。"
+      },
+      {
+        "n": 5,
+        "wrong": "The delivery delay may affect our production date so we need to communicate with purchasing team.",
+        "fix": "The delivery delay may affect our production schedule, so we need to communicate with the purchasing team.",
+        "cn": "交貨延遲可能影響我們的生產時程，所以我們需要與採購部門溝通。",
+        "pat": "may + 原形動詞；communicate with + 對象",
+        "note": "老師課堂用 production schedule(生產時程)；affect 是動詞「影響」，後面直接接名詞。 the purchasing team 指公司裡特定的那個團隊，要加 the。 so 連接兩個完整句子時，前面通常加逗號。"
+      }
+    ],
+    "vocabTitle": "II-A. 單字 Vocabulary",
+    "vocab": [
+      {
+        "w": "investigation",
+        "ipa": "/ɪnˌves.təˈɡeɪ.ʃən/",
+        "pos": "n.",
+        "cn": "調查",
+        "ex": "The investigation took two days.",
+        "exCn": "調查花了兩天。"
+      },
+      {
+        "w": "assembly",
+        "ipa": "/əˈsem.bli/",
+        "pos": "n.",
+        "cn": "組裝",
+        "ex": "The assembly line stopped at noon.",
+        "exCn": "組裝線中午停了。"
+      },
+      {
+        "w": "rust",
+        "ipa": "/rʌst/",
+        "pos": "n.",
+        "cn": "鏽",
+        "ex": "Rust can weaken the metal.",
+        "exCn": "鏽會讓金屬變脆弱。"
+      },
+      {
+        "w": "frame",
+        "ipa": "/freɪm/",
+        "pos": "n.",
+        "cn": "框架",
+        "ex": "The bike frame is made of aluminum.",
+        "exCn": "這輛腳踏車的車架是鋁製的。"
+      },
+      {
+        "w": "audit",
+        "ipa": "/ˈɑː.dɪt/",
+        "pos": "n.",
+        "cn": "稽核",
+        "ex": "The audit lasted three days.",
+        "exCn": "稽核進行了三天。"
+      },
+      {
+        "w": "maintenance",
+        "star": true,
+        "ipa": "/ˈmeɪn.t̬ən.əns/",
+        "pos": "n.",
+        "cn": "維護",
+        "ex": "Regular maintenance keeps machines running.",
+        "exCn": "定期維護讓機器持續運作。"
+      },
+      {
+        "w": "inspection",
+        "ipa": "/ɪnˈspek.ʃən/",
+        "pos": "n.",
+        "cn": "檢驗",
+        "ex": "Every box goes through inspection.",
+        "exCn": "每個箱子都要經過檢驗。"
+      },
+      {
+        "w": "effective",
+        "ipa": "/ɪˈfektɪv/",
+        "pos": "adj.",
+        "cn": "有效的",
+        "ex": "Your plan is very effective.",
+        "exCn": "你的計畫非常有效。"
+      },
+      {
+        "w": "defect",
+        "ipa": "/ˈdiː.fekt/",
+        "pos": "n.",
+        "cn": "缺陷",
+        "ex": "One defect is enough to reject the part.",
+        "exCn": "只要有一個缺陷，零件就會被退回。"
+      },
+      {
+        "w": "schedule",
+        "ipa": "/ˈskedʒuːl/",
+        "pos": "n.",
+        "cn": "時程",
+        "ex": "The schedule is tight this month.",
+        "exCn": "這個月的時程很緊。"
+      },
+      {
+        "w": "delay",
+        "ipa": "/dɪˈleɪ/",
+        "pos": "n.",
+        "cn": "延遲",
+        "ex": "A short delay is acceptable.",
+        "exCn": "短暫的延遲是可以接受的。"
+      },
+      {
+        "w": "corrective",
+        "star": true,
+        "ipa": "/kəˈrektɪv/",
+        "pos": "adj.",
+        "cn": "矯正的",
+        "ex": "Corrective steps were taken right away.",
+        "exCn": "立刻採取了改正的步驟。"
+      },
+      {
+        "w": "purchasing",
+        "ipa": "/ˈpɝː.tʃə.sɪŋ/",
+        "pos": "n.",
+        "cn": "採購",
+        "ex": "The purchasing department orders raw materials.",
+        "exCn": "採購部門負責訂購原料。"
+      },
+      {
+        "w": "handlebar",
+        "ipa": "/ˈhæn.dəl.bɑːr/",
+        "pos": "n.",
+        "cn": "把手/車把",
+        "ex": "The handlebar is slightly bent.",
+        "exCn": "車把有點彎了。"
+      },
+      {
+        "w": "manufacture",
+        "star": true,
+        "ipa": "/ˌmæn.jəˈfæk.tʃɚ/",
+        "pos": "v.",
+        "cn": "製造",
+        "ex": "We manufacture exercise bikes.",
+        "exCn": "我們製造健身車。"
+      },
+      {
+        "w": "process",
+        "ipa": "/ˈprɑː.ses/",
+        "pos": "n.",
+        "cn": "流程",
+        "ex": "The painting process is automatic.",
+        "exCn": "塗裝流程是自動化的。"
+      },
+      {
+        "w": "specification",
+        "star": true,
+        "ipa": "/ˌspes.ə.fɪˈkeɪ.ʃən/",
+        "pos": "n.",
+        "cn": "規格",
+        "ex": "The customer changed the specification.",
+        "exCn": "客戶更改了規格。"
+      },
+      {
+        "w": "drawing",
+        "ipa": "/ˈdrɑː.ɪŋ/",
+        "pos": "n.",
+        "cn": "圖面",
+        "ex": "Please check the drawing number.",
+        "exCn": "請確認圖面編號。"
+      },
+      {
+        "w": "dimension",
+        "ipa": "/daɪˈmen.ʃən/",
+        "pos": "n.",
+        "cn": "尺寸",
+        "ex": "Each dimension has a tolerance.",
+        "exCn": "每個尺寸都有公差。"
+      },
+      {
+        "w": "engineer",
+        "ipa": "/ˌen.dʒɪˈnɪr/",
+        "pos": "n.",
+        "cn": "工程師",
+        "ex": "The engineer reviewed the design.",
+        "exCn": "工程師檢視了設計。"
+      },
+      {
+        "w": "sample",
+        "ipa": "/ˈsæm.pəl/",
+        "pos": "n.",
+        "cn": "樣品",
+        "ex": "Please send us a sample.",
+        "exCn": "請寄一個樣品給我們。"
+      },
+      {
+        "w": "approved",
+        "ipa": "/əˈpruːvd/",
+        "pos": "adj.",
+        "cn": "核准的",
+        "ex": "Only approved suppliers can ship to us.",
+        "exCn": "只有核准的供應商可以出貨給我們。"
+      },
+      {
+        "w": "document",
+        "ipa": "/ˈdɑː.kjə.mənt/",
+        "pos": "n.",
+        "cn": "文件",
+        "ex": "This document has expired.",
+        "exCn": "這份文件已經過期了。"
+      },
+      {
+        "w": "adjust",
+        "ipa": "/əˈdʒʌst/",
+        "pos": "v.",
+        "cn": "調整",
+        "ex": "Adjust the speed slowly.",
+        "exCn": "慢慢調整速度。"
+      },
+      {
+        "w": "outdated",
+        "ipa": "/ˌaʊtˈdeɪ.t̬ɪd/",
+        "pos": "adj.",
+        "cn": "過時的",
+        "ex": "That form is outdated.",
+        "exCn": "那份表單已經過時了。"
+      }
+    ],
+    "phrasesTitle": "II-B. 片語 Phrases",
+    "phrases": [
+      {
+        "p": "mix up",
+        "cn": "搞混、混淆",
+        "ex": "Please don't mix up the two drawings.",
+        "exCn": "請不要把這兩張圖面搞混。"
+      },
+      {
+        "p": "visual inspection",
+        "cn": "目視檢查",
+        "ex": "We perform a visual inspection before packing.",
+        "exCn": "我們在包裝前進行目視檢查。"
+      },
+      {
+        "p": "conduct an inspection",
+        "cn": "進行檢查",
+        "ex": "The QC team conducts inspections every morning.",
+        "exCn": "品管團隊每天早上進行檢查。"
+      },
+      {
+        "p": "customer audit",
+        "cn": "客戶稽核",
+        "ex": "We have a customer audit next Monday.",
+        "exCn": "我們下週一有客戶稽核。"
+      },
+      {
+        "p": "testing equipment",
+        "cn": "測試設備",
+        "ex": "The testing equipment must be calibrated every year.",
+        "exCn": "測試設備每年都必須進行校正。"
+      },
+      {
+        "p": "maintenance records",
+        "cn": "維護紀錄",
+        "ex": "Please retain the maintenance records for three years.",
+        "exCn": "請將維護紀錄保存三年。"
+      },
+      {
+        "p": "take corrective action",
+        "cn": "採取矯正措施",
+        "ex": "We need to take corrective action right away.",
+        "exCn": "我們必須立即採取矯正措施。"
+      },
+      {
+        "p": "inspection method",
+        "cn": "檢驗方法",
+        "ex": "Which inspection method do you use for this part?",
+        "exCn": "這個零件你們使用哪一種檢驗方法？"
+      },
+      {
+        "p": "identify defects",
+        "cn": "辨識缺陷",
+        "ex": "Operators are trained to identify defects early.",
+        "exCn": "作業員接受訓練，以便及早辨識缺陷。"
+      },
+      {
+        "p": "production schedule",
+        "cn": "生產時程",
+        "ex": "The production schedule is very tight this month.",
+        "exCn": "這個月的生產時程非常緊湊。"
+      },
+      {
+        "p": "affect the production schedule",
+        "cn": "影響生產時程",
+        "ex": "A machine breakdown can affect the production schedule.",
+        "exCn": "機台故障可能會影響生產時程。"
+      },
+      {
+        "p": "delivery delay",
+        "cn": "交貨延遲",
+        "ex": "The typhoon caused a delivery delay.",
+        "exCn": "颱風造成了交貨延遲。"
+      },
+      {
+        "p": "communicate with the purchasing team",
+        "cn": "與採購部門溝通",
+        "ex": "We should communicate with the purchasing team about the new supplier.",
+        "exCn": "我們應該與採購部門討論新供應商的事情。"
+      },
+      {
+        "p": "work hard / hardly work",
+        "cn": "努力工作／幾乎不工作",
+        "ex": "He works hard, but his brother hardly works.",
+        "exCn": "他工作很努力，但他的弟弟幾乎不工作。"
+      },
+      {
+        "p": "be hard on someone",
+        "cn": "對某人嚴格、苛刻",
+        "ex": "The manager is hard on new employees.",
+        "exCn": "經理對新進員工很嚴格。"
+      },
+      {
+        "p": "hardly any",
+        "cn": "幾乎沒有",
+        "ex": "There is hardly any time left.",
+        "exCn": "幾乎沒有剩餘時間了。"
+      },
+      {
+        "p": "hardly anything",
+        "cn": "幾乎沒有任何東西",
+        "ex": "I can hardly see anything on the screen.",
+        "exCn": "我幾乎看不清楚螢幕上的任何東西。"
+      },
+      {
+        "p": "first-piece inspection",
+        "cn": "首件檢驗",
+        "ex": "We perform a first-piece inspection at the start of each production run.",
+        "exCn": "每次開始生產時，我們都會進行首件檢驗。"
+      },
+      {
+        "p": "outdated drawing",
+        "cn": "過時的圖面、舊版圖面",
+        "ex": "Never use an outdated drawing on the production line.",
+        "exCn": "絕對不要在產線上使用舊版圖面。"
+      },
+      {
+        "p": "technical drawing",
+        "cn": "技術圖面",
+        "ex": "Please check the dimensions on the technical drawing.",
+        "exCn": "請確認技術圖面上的尺寸。"
+      },
+      {
+        "p": "manufacturing process",
+        "cn": "製造流程",
+        "ex": "We improved the manufacturing process last year.",
+        "exCn": "我們去年改善了製造流程。"
+      },
+      {
+        "p": "required specifications",
+        "cn": "規定規格、要求規格",
+        "ex": "The product must meet all required specifications.",
+        "exCn": "產品必須符合所有規定的規格要求。"
+      },
+      {
+        "p": "mass production",
+        "cn": "量產",
+        "ex": "Mass production will start next month.",
+        "exCn": "下個月將開始量產。"
+      },
+      {
+        "p": "QC engineer",
+        "cn": "品管工程師",
+        "ex": "The QC engineer approved the sample.",
+        "exCn": "品管工程師核准了樣品。"
+      },
+      {
+        "p": "machine settings",
+        "cn": "機台設定",
+        "ex": "Don't change the machine settings without approval.",
+        "exCn": "未經核准，請勿更改機台設定。"
+      },
+      {
+        "p": "document control",
+        "cn": "文件管制",
+        "ex": "Good document control ensures everyone uses the latest approved version.",
+        "exCn": "良好的文件管制可確保所有人使用最新核准版本。"
+      },
+      {
+        "p": "fail an inspection",
+        "cn": "未通過檢驗",
+        "ex": "The batch failed inspection due to scratches.",
+        "exCn": "這批產品因刮傷而未通過檢驗。"
+      }
+    ],
+    "grammarTitle": "III. 句型與文法解說 Grammar",
+    "grammar": [
+      {
+        "k": "III-A",
+        "title": "effective(形容詞)vs. effectively(副詞)",
+        "pat": "effective + 名詞/be effective；動詞 + effectively",
+        "pts": [
+          "結構：effective 是形容詞，放在名詞前或 be 動詞後；effectively 是副詞，放在動詞後面說明「怎麼做」。",
+          "中文解析：看中文「有效的」→ effective；「有效地」→ effectively。"
+        ],
+        "exs": [
+          {
+            "tag": "形容詞修飾名詞",
+            "en": "Effective communication saves time.",
+            "cn": "有效的溝通能省時間。"
+          },
+          {
+            "tag": "副詞修飾動詞",
+            "en": "We communicate effectively.",
+            "cn": "我們溝通得很有效。"
+          }
+        ]
+      },
+      {
+        "k": "III-C",
+        "title": "hard 與 hardly 的差別",
+        "pat": "hard=努力/困難/猛烈；hardly=幾乎不(否定意味)",
+        "pts": [
+          "結構：hard 可當形容詞(困難的)也可當副詞(努力地、猛烈地)，形式相同；hardly 只當副詞，意思是「幾乎不」，本身已有否定意味。",
+          "中文解析：hardly 不是 hard 的副詞形式，千萬不能當成「努力地」或「困難地」；「努力」只能用 hard。",
+          "hardly 的位置：放在 be 動詞或助動詞後、一般動詞前(can hardly eat、hardly have)。",
+          "⚠️ hardly 本身是否定，不要再加 not 或 never(雙重否定)。",
+          "hardly any ＋名詞、hardly anything=幾乎沒有。",
+          "be hard on sb=對某人嚴苛。"
+        ],
+        "exs": []
+      }
+    ],
+    "cmpTitle": "III-B. hard vs. hardly",
+    "cmp": [
+      {
+        "u": "hard",
+        "sc": "副詞：努力地",
+        "ex": "I work hard.",
+        "exCn": "我很努力工作。",
+        "cn": "努力地"
+      },
+      {
+        "u": "hardly",
+        "sc": "幾乎不",
+        "ex": "I hardly work.",
+        "exCn": "我幾乎不工作。",
+        "cn": "幾乎不"
+      },
+      {
+        "u": "hard",
+        "sc": "副詞：努力地",
+        "ex": "She studies hard.",
+        "exCn": "她很努力讀書。",
+        "cn": "努力地"
+      },
+      {
+        "u": "hardly",
+        "sc": "幾乎不",
+        "ex": "She hardly studies.",
+        "exCn": "她幾乎不讀書。",
+        "cn": "幾乎不"
+      },
+      {
+        "u": "hard",
+        "sc": "形容詞：困難的",
+        "ex": "This test is hard.",
+        "exCn": "這個考試很難。",
+        "cn": "困難的"
+      },
+      {
+        "u": "hard",
+        "sc": "形容詞：艱難的 †",
+        "ex": "This is a hard decision.",
+        "exCn": "這是一個艱難的決定。",
+        "cn": "艱難的"
+      },
+      {
+        "u": "hard-working",
+        "sc": "形容詞：勤奮的 †",
+        "ex": "She is a hard-working person.",
+        "exCn": "她是一個努力工作的人。",
+        "cn": "勤奮的"
+      },
+      {
+        "u": "hard",
+        "sc": "副詞：猛烈地",
+        "ex": "It is raining hard.",
+        "exCn": "雨下得很大。",
+        "cn": "猛烈地"
+      },
+      {
+        "u": "hard",
+        "sc": "副詞：猛烈地",
+        "ex": "It was raining hard last night.",
+        "exCn": "昨晚雨下得很大。",
+        "cn": "猛烈地"
+      },
+      {
+        "u": "hard",
+        "sc": "副詞：強勁地",
+        "ex": "The wind was blowing hard.",
+        "exCn": "風刮得很強。",
+        "cn": "強勁地"
+      },
+      {
+        "u": "hard",
+        "sc": "副詞：用力地",
+        "ex": "He hit the ball hard.",
+        "exCn": "他用力擊球。",
+        "cn": "用力地"
+      },
+      {
+        "u": "hard",
+        "sc": "副詞：努力地",
+        "ex": "I have to work hard to earn money.",
+        "exCn": "我必須努力工作賺錢。",
+        "cn": "努力地"
+      },
+      {
+        "u": "hardly",
+        "sc": "幾乎不",
+        "ex": "I hardly know him.",
+        "exCn": "我幾乎不認識他。",
+        "cn": "幾乎不"
+      },
+      {
+        "u": "hardly",
+        "sc": "幾乎不（原文小錯，見快速總結）",
+        "ex": "I have sore throat, I hardly can eat or speak.",
+        "exCn": "我喉嚨痛，幾乎沒辦法吃東西或說話。",
+        "cn": "幾乎不"
+      }
+    ],
+    "reading": [
+      {
+        "bar": "V. 閱讀 Reading：首件檢驗 First-Piece Inspection",
+        "title": "First-Piece Inspection",
+        "titleCn": "首件檢驗",
+        "paras": [
+          {
+            "en": "During the production process, the quality control team conducted a first-piece inspection on a newly manufactured handlebar. The purpose of this inspection was to make sure that the product met all the required specifications before mass production began.",
+            "cn": "在生產過程中，品管團隊對一支新製造的把手進行了首件檢驗。這次檢驗的目的，是在量產開始前確認產品符合所有規定的規格。"
+          },
+          {
+            "en": "During the inspection, the QC engineer noticed that the dimensions of the handlebar did not match the technical drawing. After further investigation, the team discovered that the production department had been using an outdated drawing.",
+            "cn": "檢驗時，品管工程師注意到把手的尺寸與技術圖面不符。進一步調查後，團隊發現生產部門一直在使用過時的圖面。"
+          },
+          {
+            "en": "The outdated drawing contained incorrect dimensions, which caused the workers to manufacture the handlebar with the wrong specifications. As a result, the first piece failed the inspection.",
+            "cn": "過時的圖面上有錯誤的尺寸，導致作業員用錯誤的規格製造把手。結果，首件沒有通過檢驗。"
+          },
+          {
+            "en": "The QC engineer immediately informed the production and engineering departments. The engineering team reviewed the design and provided an updated drawing. The production team then adjusted the machine settings and manufactured another sample.",
+            "cn": "品管工程師立即通知生產部門與工程部門。工程團隊檢視設計並提供了更新版圖面，生產團隊接著調整機台設定，又製作了一個樣品。"
+          },
+          {
+            "en": "After making the necessary adjustments, the team conducted another first-piece inspection. This time, all dimensions met the requirements, and the sample was approved for mass production.",
+            "cn": "完成必要的調整後，團隊再做了一次首件檢驗。這一次所有尺寸都符合要求，樣品獲准進入量產。"
+          },
+          {
+            "en": "To prevent the same issue from happening again, the company decided to improve its document control process. All departments must ensure they are using the latest approved drawings before starting production.",
+            "cn": "為了避免同樣的問題再次發生，公司決定改善文件管制流程。所有部門在開始生產前，都必須確認自己使用的是最新核准的圖面。"
+          }
+        ],
+        "questions": [
+          {
+            "q": "Why did the QC team conduct a first-piece inspection?",
+            "qCn": "",
+            "a": "To make sure the product met all the required specifications before mass production began.",
+            "aCn": "為了確認產品在量產開始前符合所有規定規格。"
+          },
+          {
+            "q": "What problem did the QC engineer discover?",
+            "qCn": "",
+            "a": "The dimensions of the handlebar did not match the technical drawing.",
+            "aCn": "把手的尺寸與技術圖面不符。"
+          },
+          {
+            "q": "Why did the handlebar fail the first inspection?",
+            "qCn": "",
+            "a": "Because the production department was using an outdated drawing with incorrect dimensions.",
+            "aCn": "因為生產部門使用的是尺寸有誤的過時圖面。"
+          },
+          {
+            "q": "Which department was responsible for providing the updated drawing?",
+            "qCn": "",
+            "a": "The engineering department.",
+            "aCn": "工程部門。"
+          },
+          {
+            "q": "What adjustments did the production team make?",
+            "qCn": "",
+            "a": "They adjusted the machine settings and made another sample.",
+            "aCn": "他們調整了機台設定，並重新做了一個樣品。"
+          },
+          {
+            "q": "Why did the company improve its document control process?",
+            "qCn": "",
+            "a": "To prevent the same issue from happening again.",
+            "aCn": "為了避免再次發生相同的問題。"
+          },
+          {
+            "q": "How can a company prevent workers from using incorrect versions of documents?",
+            "qCn": "",
+            "a": "It can improve document control and make sure everyone uses the latest approved version before work starts.",
+            "aCn": "公司可以改善文件管制，確保每個人在開工前都使用最新的核准版本。"
+          }
+        ],
+        "sumEn": [
+          "During the first-piece inspection, the QC engineer found that the handlebar dimensions did not match the technical drawing. After investigation, the team discovered that production had been using an outdated drawing. The engineering department provided an updated version, and the production team adjusted the machine settings and manufactured a new sample. After another inspection, the sample met all specifications and was approved for mass production. To prevent the same problem from happening again, the company improved its document control process."
+        ],
+        "sumCn": [
+          "在首件檢驗過程中，品管工程師發現把手的尺寸與技術圖面不符。經過調查後，團隊發現生產部門一直使用過時的圖面。工程部門提供了更新版本，生產部門隨後調整機台設定並重新製作了一個樣品。經過再次檢驗後，樣品符合所有規格要求，並獲准進入量產。為了避免再次發生相同的問題，公司改善了文件管制流程。"
+        ]
+      }
+    ],
+    "extraTitle": "練習、翻譯與老師補充 Practice, Translation & Teacher's Notes",
+    "extra": [
+      {
+        "title": "IV. 練習 hard / hardly 填空",
+        "exs": [
+          {
+            "tag": "1. Q",
+            "en": "He tried ___ to fix the machine.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "He tried hard to fix the machine.",
+            "cn": "他很努力想修好那台機器。"
+          },
+          {
+            "tag": "2. Q",
+            "en": "Don't be so ___ on your employees.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "Don't be so hard on your employees.",
+            "cn": "別對你的員工那麼嚴苛。"
+          },
+          {
+            "tag": "3. Q",
+            "en": "This question is too ___ for me.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "This question is too hard for me.",
+            "cn": "這個問題對我來說太難了。"
+          },
+          {
+            "tag": "4. Q",
+            "en": "I ___ have time to watch TV because I am so busy.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "I hardly have time to watch TV because I am so busy.",
+            "cn": "我太忙了，幾乎沒時間看電視。"
+          },
+          {
+            "tag": "5. Q",
+            "en": "There is ___ anything in the refrigerator.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "There is hardly anything in the refrigerator.",
+            "cn": "冰箱裡幾乎沒有東西。(口語常說 fridge)"
+          }
+        ]
+      },
+      {
+        "title": "VII. 翻譯練習 Translation",
+        "exs": [
+          {
+            "tag": "English",
+            "en": "When an operator finds a defective part, they must replace it and send the product to the QC department for inspection. The QC team must fill out the inspection checklist, count the defective products, and record the total number.",
+            "cn": "當作業員發現有瑕疵的零件時，必須更換該零件，並將產品送交品管部門檢查。品管部門必須填寫檢查表，並統計及記錄不良品的數量。"
+          }
+        ]
+      },
+      {
+        "title": "VIII-A. 天氣閒聊",
+        "exs": [
+          {
+            "tag": "",
+            "en": "It's been really cold this week.",
+            "cn": "這週真的很冷。"
+          },
+          {
+            "tag": "",
+            "en": "What's the temperature at night?",
+            "cn": "晚上幾度？"
+          },
+          {
+            "tag": "",
+            "en": "Twelve degrees is cold for me.",
+            "cn": "十二度對我來說很冷。"
+          },
+          {
+            "tag": "",
+            "en": "Take good care of yourself.",
+            "cn": "好好照顧自己。"
+          },
+          {
+            "tag": "",
+            "en": "How do you warm up the house?",
+            "cn": "你們怎麼讓家裡暖和起來？"
+          },
+          {
+            "tag": "",
+            "en": "Is there any heater?",
+            "cn": "有暖氣嗎？💡 潮濕的地方會讓熱更熱、冷更冷，所以台灣人覺得 12°C 就很冷。"
+          }
+        ]
+      },
+      {
+        "title": "VIII-B. 作業補充",
+        "exs": [
+          {
+            "tag": "過去完成式",
+            "en": "The investigation showed that we had mixed up the parts during assembly.",
+            "cn": "調查顯示，我們在組裝時就已經把零件搞混了。💡 過去完成式強調搞混發生在調查之前；簡單過去式同樣自然。"
+          },
+          {
+            "tag": "不可數",
+            "en": "rust / water / coffee",
+            "cn": "rust 與 water、coffee 一樣不可數。點餐說 two coffees 是指兩杯，正式寫作仍要照不可數處理。"
+          },
+          {
+            "tag": "動作",
+            "en": "These parts are under inspection.",
+            "cn": "這些零件正在檢驗中。💡 inspection 指動作時這樣用；指方法時用 inspection method。"
+          },
+          {
+            "tag": "副詞位置",
+            "en": "The new inspection method can identify defects effectively.",
+            "cn": "新的檢驗方法能有效地辨識缺陷。💡 副詞 effectively 放在動詞片語之後。"
+          },
+          {
+            "tag": "同義字",
+            "en": "detect / identify / detective",
+            "cn": "detect 可以替換 identify，意思是找出不明顯的東西，可聯想 detective(偵探)。"
+          }
+        ]
+      },
+      {
+        "title": "VIII-C. 客戶稽核與交貨延遲",
+        "exs": [
+          {
+            "tag": "定義",
+            "en": "A customer audit is a kind of evaluation that customers use to check whether the manufacturer's production process and product quality meet their standards.",
+            "cn": "客戶用來檢查製造商的生產流程與產品品質是否符合標準的評估。"
+          },
+          {
+            "tag": "Q",
+            "en": "Have you ever experienced a delivery delay? How did your team handle it?",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "We experienced a delivery delay once. Our supplier provided the wrong parts, so we could not manufacture the products and send them to the customer on time. The production team informed the customer about the delay. Then we worked very hard, 24/7, to produce and send the products to the customer as soon as possible.",
+            "cn": "我們曾經遇過一次交貨延遲。供應商提供了錯誤的零件，所以我們無法準時製造並出貨給客戶。生產團隊通知了客戶。接著我們全天候拚命趕工，盡快把產品送給客戶。💡 24/7＝全天候、日夜不停。"
+          },
+          {
+            "tag": "once",
+            "en": "Once, we had a delivery delay because the supplier sent the wrong parts.",
+            "cn": "有一次，因為供應商寄錯零件，我們發生了交貨延遲。💡 once＝有一次。"
+          }
+        ]
+      },
+      {
+        "title": "VIII-D. 形容詞、副詞與 hard / hardly",
+        "exs": [
+          {
+            "tag": "形容詞變副詞",
+            "en": "slow → slowly / smooth → smoothly / fluent → fluently / efficient → efficiently",
+            "cn": ""
+          },
+          {
+            "tag": "形容詞",
+            "en": "She has fluent English skills.",
+            "cn": "她的英文能力很流利。"
+          },
+          {
+            "tag": "副詞",
+            "en": "She speaks English fluently.",
+            "cn": "她英文說得很流利。"
+          },
+          {
+            "tag": "hardly",
+            "en": "I hardly speak Chinese.",
+            "cn": "我幾乎不說中文。💡 hardly 的意思是 seldom、almost not、barely。"
+          },
+          {
+            "tag": "hardly",
+            "en": "She hardly plays piano.",
+            "cn": "她幾乎不彈鋼琴。"
+          },
+          {
+            "tag": "❌",
+            "en": "I must work hard to earn money.",
+            "cn": ""
+          },
+          {
+            "tag": "✅",
+            "en": "I have to work hard to earn money.",
+            "cn": "💡 must 聽起來像規定；日常必要但不一定開心的事用 have to。"
+          },
+          {
+            "tag": "天氣",
+            "en": "It rains hard. = It rains heavily.",
+            "cn": "談天氣主詞用 it，rain 可搭配 hard 或 heavily。"
+          },
+          {
+            "tag": "hardworking",
+            "en": "He is a hardworking employee.",
+            "cn": "他是一位勤奮的員工。💡 hardworking(勤奮的)是形容詞；worker 指產線作業人員，employee 泛指員工；hardworking 與 hard-working 都可以。"
+          }
+        ]
+      },
+      {
+        "title": "VIII-E. 首件檢驗補充",
+        "exs": [
+          {
+            "tag": "定義",
+            "en": "First-piece inspection is an inspection conducted on the first manufactured product or sample to make sure it meets the required specifications before mass production begins.",
+            "cn": "量產前對第一個製造出來的產品或樣品進行檢驗，確認符合規定規格。"
+          },
+          {
+            "tag": "補充單字",
+            "en": "quality engineer / approval / approved drawing / pass inspection",
+            "cn": "品質工程師／核准／核准的圖面／通過檢驗"
+          },
+          {
+            "tag": "更正",
+            "en": "engineering team / engineering department",
+            "cn": "學生回答哪個部門提供新圖面時說 design team，老師改為 engineering team 或 engineering department。"
+          }
+        ]
+      },
+      {
+        "title": "VIII-F. 說明問題的順序與下次作業",
+        "exs": [
+          {
+            "tag": "順序",
+            "en": "Background → Problem → Cause → Action taken → Result → Prevention",
+            "cn": "向客戶說明問題的順序：背景 → 問題 → 原因 → 處置 → 結果 → 預防。"
+          },
+          {
+            "tag": "情境 1",
+            "en": "The Newly Built Room",
+            "cn": "新建的檢驗室"
+          },
+          {
+            "tag": "Background",
+            "en": "Last month, our company built a new inspection room to improve our quality control process.",
+            "cn": "上個月，公司新建了一間檢驗室，以改善品質管制流程。"
+          },
+          {
+            "tag": "Problem",
+            "en": "During your audit, you found that some testing equipment in the new room did not have maintenance records.",
+            "cn": "在這次稽核中，您發現新檢驗室裡有些測試設備沒有維護紀錄。"
+          },
+          {
+            "tag": "Cause",
+            "en": "The equipment was installed quickly, but no one had set up a maintenance schedule or a record system.",
+            "cn": "設備安裝得很快，但沒有人建立維護計畫或紀錄管理制度。"
+          },
+          {
+            "tag": "Action taken",
+            "en": "We took corrective action. The QC team checked the equipment, completed the required maintenance, and recorded the results. We also created a maintenance schedule for all the testing equipment.",
+            "cn": "我們採取了矯正措施。品管團隊檢查設備、完成必要的維護，並記錄結果。我們也為所有測試設備建立了維護時程。"
+          },
+          {
+            "tag": "Result",
+            "en": "The auditor reviewed the new maintenance records and confirmed that the problem had been corrected.",
+            "cn": "稽核員審查了新的維護紀錄，並確認問題已完成改善。"
+          },
+          {
+            "tag": "Prevention",
+            "en": "To prevent the same problem from happening again, we improved our document control process. Now, every new piece of equipment must have a maintenance schedule and the required inspection records before it is used.",
+            "cn": "為避免相同問題再次發生，我們改善了文件管制流程。現在每台新設備在使用前，都必須有維護時程及必要的檢查紀錄。"
+          },
+          {
+            "tag": "情境 2",
+            "en": "The Outdated Drawing",
+            "cn": "過時的圖面"
+          },
+          {
+            "tag": "Background",
+            "en": "Last year, while we were preparing for mass production of a new exercise bike frame, we conducted a first-piece inspection.",
+            "cn": "去年，我們在準備量產一款新的健身車車架時，進行了首件檢驗。"
+          },
+          {
+            "tag": "Problem",
+            "en": "The QC engineer found that the hole positions on the frame did not match the latest technical drawing.",
+            "cn": "品管工程師發現車架上的孔位與最新版技術圖面不符。"
+          },
+          {
+            "tag": "Cause",
+            "en": "The operator used an outdated drawing because the old version was still on the production line.",
+            "cn": "作業員使用了舊版圖面，因為舊版本仍留在產線上。"
+          },
+          {
+            "tag": "Action taken",
+            "en": "We stopped production and checked the affected parts. The engineering team provided the latest approved drawing. The production team adjusted the machine settings and made a new sample. We also removed all outdated drawings from the production line.",
+            "cn": "我們停止生產並檢查受影響的零件。工程部門提供最新版核准圖面，生產部門調整機台設定並製作新樣品。我們也移除了產線上所有舊版圖面。"
+          },
+          {
+            "tag": "Result",
+            "en": "The new sample passed the first-piece inspection and met all required specifications. After the required approval, we started mass production.",
+            "cn": "新樣品通過首件檢驗，並符合所有規格要求。取得必要核准後，我們開始量產。"
+          },
+          {
+            "tag": "Prevention",
+            "en": "To prevent this problem from happening again, we improved our document control process. Now, operators must check the drawing version before starting production. Only the latest approved drawings can be used on the production line.",
+            "cn": "為防止此問題再次發生，我們改善了文件管制流程。現在作業員在開始生產前，必須確認圖面版本。產線只能使用最新版核准圖面。"
+          }
+        ]
+      }
+    ],
+    "summaryTitle": "快速總結 Quick Summary",
+    "summary": [
+      {
+        "k": "⚠ 原文的 1 處小錯",
+        "v": "III-B 最後一句 I have sore throat, I hardly can eat or speak. 應為 I have a sore throat, so I can hardly eat or speak.（sore throat 前加 a；hardly 放在助動詞 can 後面；兩個完整句子用 so 連接，不用逗號直接接）"
+      }
+    ]
   }
   ]
 };
@@ -31822,7 +32783,11 @@ window.BOOK = {
     spray:'<path d="M10 20 h26 a6 6 0 0 1 6 6 v8 H16 a6 6 0 0 1 -6 -6z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M20 34 l-4 20 h11 l3 -20" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M42 27 h5" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><circle cx="53" cy="20" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><circle cx="56" cy="29" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/><circle cx="52" cy="38" r="2.6" fill="'+A+'" stroke="'+D+'" stroke-width="2"/>',
     /* 2026-10-31 排程新增：陽台園藝、消防演練 */
     flowerpot:'<rect x="13" y="18" width="38" height="9" rx="2" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><path d="M18 27 h28 l-4 25 a3 3 0 0 1 -3 2 H25 a3 3 0 0 1 -3 -2z" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><path d="M22 34 h20" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>',
-    extinguisher:'<rect x="22" y="20" width="20" height="34" rx="5" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><rect x="27" y="11" width="10" height="9" rx="2" fill="#fff" stroke="'+D+'" stroke-width="3"/><path d="M26 13 h-8" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><path d="M38 16 q12 6 8 20" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><path d="M45 32 l9 5 l-9 5z" fill="'+D+'" stroke="'+D+'" stroke-width="2" stroke-linejoin="round"/><rect x="26" y="31" width="12" height="11" rx="1" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>'
+    extinguisher:'<rect x="22" y="20" width="20" height="34" rx="5" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><rect x="27" y="11" width="10" height="9" rx="2" fill="#fff" stroke="'+D+'" stroke-width="3"/><path d="M26 13 h-8" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><path d="M38 16 q12 6 8 20" fill="none" stroke="'+D+'" stroke-width="3" stroke-linecap="round"/><path d="M45 32 l9 5 l-9 5z" fill="'+D+'" stroke="'+D+'" stroke-width="2" stroke-linejoin="round"/><rect x="26" y="31" width="12" height="11" rx="1" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>',
+    /* 2026-11-11 新增：首件檢驗（技術圖面、機台控制面板、合格標籤） */
+    blueprint:'<rect x="9" y="12" width="46" height="40" rx="3" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><rect x="19" y="24" width="22" height="16" rx="2" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><path d="M19 46 h22 M19 43 v6 M41 43 v6 M47 24 v16 M44 24 h6 M44 40 h6" fill="none" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/><circle cx="30" cy="32" r="3.5" fill="#fff" stroke="'+D+'" stroke-width="2.5"/>',
+    controlPanel:'<rect x="10" y="14" width="44" height="38" rx="4" fill="#fff" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><rect x="16" y="20" width="32" height="10" rx="2" fill="#a7d8f0" stroke="'+D+'" stroke-width="2.5"/><circle cx="23" cy="41" r="6" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><path d="M23 41 l3 -4" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/><circle cx="41" cy="41" r="6" fill="'+A+'" stroke="'+D+'" stroke-width="3"/><path d="M41 41 l-4 -2" stroke="'+D+'" stroke-width="2.5" stroke-linecap="round"/>',
+    passTag:'<path d="M14 18 h28 l12 14 l-12 14 h-28 a3 3 0 0 1 -3 -3 v-22 a3 3 0 0 1 3 -3z" fill="'+A+'" stroke="'+D+'" stroke-width="3" stroke-linejoin="round"/><circle cx="44" cy="32" r="3" fill="#fff" stroke="'+D+'" stroke-width="2.5"/><path d="M19 32 l5 5 l9 -10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'
   };
   /* 2026-10-11 貼紙線稿風（同閱讀清單的籃子縮圖）：橫幅圖示的主色改用「東西本來的顏色」，
      不再每個都是暖橘 #e8813a。閱讀橫幅（tools/genart.js）也讀這張表，改一處兩邊一致。
@@ -31850,6 +32815,7 @@ window.BOOK = {
     ticket:Y, timetable:B, toilet:LB, toolbox:R, tornado:SKY, train:B, trash:GN, trophy:Y,
     truck:B, tv:B, typhoon:B, umbrella:B, videocall:B, wallet:BR, warning:Y, wave:B, wind:SKY,
     window:R, wrench:GR, caliper:B, spray:TAN, extinguisher:R, flowerpot:TAN,
+    blueprint:B, controlPanel:GR, passTag:GN,
     /* 只有課本／聽力用到的 */
     bike:R, tooth:B, ball:Y, mountain:GN, clock2:R, washer:B, ambulance:R, nametag:B, magnify:B
   };
@@ -31940,6 +32906,7 @@ window.BOOK = {
     bk20261006:[[['board','stairs','gauge','orgchart','clipboard'],'操作員訓練五階段：獨立作業前提供實務訓練並評估技能 → 每站分 A/B/C 三個技能等級逐級晉升 → 內部評估未通過先安排較簡單的工作站 → 所有人都受過訓可互相代班維持生產 → 客戶稽核時出示訓練紀錄說明驗證方式。']],
     bk20261013:[[['key','plug','search','map','ballot'],'品保會議五階段：確認新治具能否投入生產 → 機器出狀況先停止測試 → 螺絲組裝時斷裂、不良率變高 → 問題最先出現在第三站、檢查治具是否對準 → 預計明天下午重啟、週五前完成訓練並更新 SOP。']],
     bk20261023:[[['wrench','magnifyL','cross','thermo','target'],'妮娜的品管一天：作業員把螺絲鎖到規定扭力 → 檢查框架瑕疵、用三用電表做導通測試 → 坡度馬達故障，標示不良品並隔離 → 環境試驗箱維護紀錄未更新、回報主管 → 找出根本原因、採取矯正措施防止再發生。']],
+    bk20261110:[[['scooter','blueprint','trash','controlPanel','passTag'],'把手首件檢驗：新製把手做首件檢驗 → 尺寸與技術圖面不符 → 查出用了過時圖面 → 工程部提供新圖面並調整機台設定 → 再驗合格核准量產並改善文件管制。']],
     bk20261027:[[['coffee','camera','nametag','basket','brainL'],'妮娜的品管一天：每天早上檢查產線 → 目視檢查刮痕、裂縫、鏽 → 坡度馬達故障，標示為不良品 → 與合格品分開、記錄序號 → 找出根本原因，預防同樣問題再發生。']],
   };;
   ((window.BOOK||{}).lessons||[]).forEach(function(b){
