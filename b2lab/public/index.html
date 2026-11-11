@@ -933,6 +933,10 @@ body.cnall .rel span.cnx{display:inline}
 .gvtlrow .axl{display:flex;justify-content:space-between;max-width:320px;
   font-size:var(--font-meta);color:var(--ink2);margin:-2px 0 5px}
 .gvtlrow .axl .now{color:var(--accent2);font-weight:800}
+.gvtlrow .axl.pos{display:block;position:relative;height:1.5em;justify-content:initial}
+.gvtlrow .axl.pos span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap}
+.gvtlrow .axl.pos .now{transform:translateX(-30%)}
+.gvtlrow .axl.pos .mk{color:#3d332a;font-weight:800}
 .gvtlrow .en{font-size:calc(16px * var(--fs));font-weight:700;color:#1f2937;line-height:1.6}
 .gvtlrow .cn{font-size:calc(15px * var(--fs));color:var(--ink2);line-height:1.7}
 .gvh{display:flex;align-items:center;gap:8px;margin:0 0 8px}
@@ -5050,15 +5054,35 @@ function gvTimeline(t){
   const rows=t.rows;
   /* 每列 = 一條小軸線（SVG 只畫線與點，不放文字）＋ 標籤、時間、句子用 HTML 排版。
      文字才會吃文法內頁共用字級（--gt-*）、自動換行；桌機是左軸線右句子兩欄，手機上下堆疊。
-     （2026-09-15 起桌機也不再用整張含文字的 640 寬 SVG） */
-  const NB=(function(){
-    const bw=280, bx0=12, bx1=268, bnow=228;
-    return rows.map(function(r){
+     兩種資料：
+     (1) 舊式（過去式教材）：at/from 是文字，NOW 固定在右側。
+     (2) 百分比式：at/from/to 是 0–100 的數字，三列共用同一條時間軸；
+         NOW 位置由 t.nowAt（沒有則 t.timelineNow）決定，t.mark={at,label} 在每列畫出同一條「觀察點」垂直線。 */
+  const pct=rows.some(function(r){return typeof r.at==='number'||typeof r.from==='number'||typeof r.to==='number';});
+  const bw=280, bx0=12, bx1=268;
+  const px=function(p){return +(bx0+(bx1-bx0)*Math.max(0,Math.min(100,p))/100).toFixed(1);};
+  const nowP=t.nowAt!=null?t.nowAt:(t.timelineNow!=null?t.timelineNow:8);
+  const mark=t.mark&&typeof t.mark.at==='number'?t.mark:null;
+  const NB=rows.map(function(r){
       const col=r.tone==='accent'?'#e8813a':'#8a7d6d';
+      const bnow=pct?px(nowP):228;
       let b='<svg class="bar" viewBox="0 0 '+bw+' 34" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">';
       b+='<line x1="'+bx0+'" y1="17" x2="'+bx1+'" y2="17" stroke="#e6dccf" stroke-width="2"/>';
       b+='<line x1="'+bnow+'" y1="2" x2="'+bnow+'" y2="32" stroke="#e8813a" stroke-width="2" stroke-dasharray="4 3"/>';
-      if(r.kind==='span'){
+      if(pct){
+        if(mark){const mx=px(mark.at); b+='<line x1="'+mx+'" y1="2" x2="'+mx+'" y2="32" stroke="#3d332a" stroke-width="2"/>';}
+        if(r.kind==='span'){
+          const x0=px(r.from!=null?r.from:nowP), x1=px(r.to!=null?r.to:100);
+          b+='<line x1="'+x0+'" y1="17" x2="'+x1+'" y2="17" stroke="'+col+'" stroke-width="6" stroke-linecap="round"/>'
+           + '<circle cx="'+x0+'" cy="17" r="6" fill="#fff" stroke="'+col+'" stroke-width="3.5"/>'
+           + '<path d="M'+(x1-2)+' 10 l8 7 -8 7" fill="none" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>';
+        } else if(r.kind==='range'){
+          const x0=px(r.from!=null?r.from:nowP), x1=px(r.to!=null?r.to:nowP);
+          b+='<rect x="'+x0+'" y="6" width="'+Math.max(4,x1-x0)+'" height="22" rx="6" fill="#fdead9" stroke="'+col+'" stroke-width="2.5"/>';
+        } else {
+          b+='<circle cx="'+px(r.at!=null?r.at:nowP)+'" cy="17" r="7.5" fill="'+col+'" stroke="#fff" stroke-width="2.5"/>';
+        }
+      } else if(r.kind==='span'){
         b+='<line x1="46" y1="17" x2="'+bnow+'" y2="17" stroke="'+col+'" stroke-width="6" stroke-linecap="round"/>'
          + '<circle cx="46" cy="17" r="6" fill="#fff" stroke="'+col+'" stroke-width="3.5"/>'
          + '<path d="M'+(bnow-2)+' 10 l8 7 -8 7" fill="none" stroke="'+col+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>';
@@ -5068,17 +5092,22 @@ function gvTimeline(t){
         b+='<circle cx="112" cy="17" r="7.5" fill="'+col+'" stroke="#fff" stroke-width="2.5"/>';
       }
       b+='</svg>';
-      const axl=r.kind==='point' ? esc(r.at||'') : esc((r.from||'')+(r.kind==='range'?' → ':' ')+'');
+      let axl;
+      if(pct){
+        axl='<div class="axl pos"><span class="now" style="left:'+(100*(px(nowP)/bw)).toFixed(1)+'%">現在</span>'
+          +(mark&&mark.label?'<span class="mk" style="left:'+(100*(px(mark.at)/bw)).toFixed(1)+'%">'+esc(mark.label)+'</span>':'')+'</div>';
+      } else {
+        const at=r.kind==='point' ? esc(r.at||'') : esc((r.from||'')+(r.kind==='range'?' → ':' ')+'');
+        axl='<div class="axl"><span>'+at+'</span><span class="now">NOW</span></div>';
+      }
       return '<div class="gvtlrow">'
-        +'<div class="vis"><div class="lb">'+esc(r.label||'')+'</div>'+b
-        +'<div class="axl"><span>'+axl+'</span><span class="now">NOW</span></div></div>'
+        +'<div class="vis"><div class="lb">'+esc(r.label||'')+'</div>'+b+axl+'</div>'
         +'<div class="txt">'
         +(r.sub?'<div class="en"><span class="sent" data-t="'+esc(r.sub)+'" onclick="saySent(this)">'+esc(r.sub)+'</span> '+spk(r.sub)+'</div>':'')
         +(r.subCn?'<div class="cn cnx">'+esc(r.subCn)+'</div>':'')
         +'</div></div>';
     }).join('');
-  })();
-  return '<figure class="artbox gvtl">'
+  return '<figure class="artbox gvtl"'+(pct&&t.alt?' role="group" aria-label="'+esc(t.alt)+'"':'')+'>'
     +'<div class="gvtl-rows">'+NB+'</div>'
     +(t.cap?'<figcaption>'+esc(t.cap)+'</figcaption>':'')+'</figure>';
 }
@@ -5586,6 +5615,11 @@ function pgHot(g){
   if(/現在完成|關係/.test(t)) return '⭐ 必修重點';
   return '';
 }
+/* 進度統計的共同口徑：只算目前學習者程度區間（inBand）內、依 id 去重的單元；
+   完成＝有作答紀錄（artDone/gramDone），與閱讀清單的「已完成」一致。 */
+function uniqById(a){ const m=new Set(); return a.filter(x=>x&&!m.has(x.id)&&m.add(x.id)); }
+const artPool=()=>uniqById(ALL_ARTS.filter(a=>inBand(a.level)));
+const gramPool=()=>uniqById(ALL_GRAM.filter(g=>inBand(g.level)));
 function pgStatus(g){
   const d=ST.gramDone[g.id];
   return !d?'todo':(d.correct>=d.total?'done':'part');
@@ -5599,7 +5633,7 @@ function ringMini(pct){
    +'stroke-dasharray="'+c.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'" transform="rotate(-90 13 13)"/></svg>';
 }
 function pgGramHTML(){
-  const pool=ALL_GRAM.filter(g=>inBand(g.level));
+  const pool=gramPool();
   const stCnt={todo:0,part:0,done:0};
   pool.forEach(g=>stCnt[pgStatus(g)]++);
   if(pgLv!=='all'&&!inBand(pgLv)) pgLv='all';
@@ -5612,7 +5646,7 @@ function pgGramHTML(){
   }
   const lvChips=[['all','全部程度']].concat(band().map(l=>[l,l]))
     .map(([k,t])=>'<button class="chip'+(pgLv===k?' on':'')+'" onclick="pgSet(\'lv\',\''+k+'\')">'+t+'</button>').join('');
-  const stChips=[['all','全部'],['todo','未開始 '+stCnt.todo],['part','進行中 '+stCnt.part],['done','已完成 '+stCnt.done]]
+  const stChips=[['all','全部'],['todo','未開始 '+stCnt.todo],['part','練過未全對 '+stCnt.part],['done','全對 '+stCnt.done]]
     .map(([k,t])=>'<button class="chip'+(pgSt===k?' on':'')+'" onclick="pgSet(\'st\',\''+k+'\')">'+t+'</button>').join('');
   const order={part:0,todo:1,done:2};
   let h='<div class="chips" style="margin-top:12px">'+lvChips+'</div><div class="chips">'+stChips+'</div>';
@@ -5620,7 +5654,7 @@ function pgGramHTML(){
     const items=list.filter(g=>pgCat(g)===name).sort((a,b)=>order[pgStatus(a)]-order[pgStatus(b)]);
     if(!items.length) return;
     const dn=items.filter(g=>pgStatus(g)==='done').length;
-    /* 篩選「未開始/進行中/已完成」時全部展開，收合的組才不會藏住符合的單元 */
+    /* 篩選「未開始/練過未全對/全對」時全部展開，收合的組才不會藏住符合的單元 */
     const open=pgSt!=='all'||!!pgGrpOpen[name];
     h+='<button class="pggrp" onclick="pgGrpTog(\''+name+'\')">'+(open?'▾':'▸')+' '+name
       +'<span class="muted" style="margin-left:auto;font-size:var(--font-meta)">'+dn+' / '+items.length+' 完成</span></button>';
@@ -5658,16 +5692,18 @@ RENDER.prog=function(){
   const learned=Object.keys(ST.srs).length;
   const mature=Object.values(ST.srs).filter(s=>s.int>=21).length;
   const dueN=VOCAB.filter(x=>isDue(x.w)).length;
-  const artN=Object.keys(ST.artDone).length;
-  const gramN=Object.keys(ST.gramDone).length;
-  const artScores=Object.values(ST.artDone);
+  const artP=artPool(), gramP=gramPool();
+  const artN=artP.filter(a=>ST.artDone[a.id]).length;
+  const gramN=gramP.filter(g=>ST.gramDone[g.id]).length;
+  const gramPerfect=gramP.filter(g=>pgStatus(g)==='done').length;
+  const artScores=artP.map(a=>ST.artDone[a.id]).filter(Boolean);
   const avg=artScores.length?Math.round(artScores.reduce((a,b)=>a+b.correct/b.total,0)/artScores.length*100):0;
-  const gs=Object.values(ST.gramDone);
+  const gs=gramP.map(g=>ST.gramDone[g.id]).filter(Boolean);
   const gavg=gs.length?Math.round(gs.reduce((a,b)=>a+b.correct/b.total,0)/gs.length*100):0;
 
   const byLv=l=>{
-    const tot=ALL_ARTS.filter(a=>a.level===l).length;
-    const dn=ALL_ARTS.filter(a=>a.level===l&&ST.artDone[a.id]).length;
+    const tot=artP.filter(a=>a.level===l).length;
+    const dn=artP.filter(a=>a.level===l&&ST.artDone[a.id]).length;
     return {tot,dn};
   };
   const bar=(dn,tot)=>'<div class="pbwrap"><div class="pbfill" style="width:'+(tot?Math.round(dn/tot*100):0)+'%"></div></div>';
@@ -5684,8 +5720,8 @@ RENDER.prog=function(){
       const lsDn=pool.filter(l=>(ST.listenDone||{})[l.id]).length;
       const pct=(a,b)=>b?a/b*100:0;
       const R=[
-        {lb:'閱讀',c:'#3b82c4',dn:artN,tot:ALL_ARTS.length,tab:'read'},
-        {lb:'文法',c:'#8b5cf6',dn:gramN,tot:ALL_GRAM.length,tab:'gram'},
+        {lb:'閱讀',c:'#3b82c4',dn:artN,tot:artP.length,tab:'read'},
+        {lb:'文法',c:'#8b5cf6',dn:gramN,tot:gramP.length,tab:'gram'},
         {lb:'聽力',c:'#159AA6',dn:lsDn,tot:pool.length,tab:'listen'},
         {lb:'單字',c:'#e8813a',dn:learned,tot:VOCAB.length,tab:'vocab'}
       ];
@@ -5699,7 +5735,7 @@ RENDER.prog=function(){
    + calendarCard()
 
    +'<div class="card"><h2 class="sec">📖 閱讀</h2>'
-   +'<div class="muted">完成 '+artN+' / '+ALL_ARTS.length+' 篇 · 平均理解測驗 '+avg+'%</div>'+bar(artN,ALL_ARTS.length)
+   +'<div class="muted">完成 '+artN+' / '+artP.length+' 篇（目前程度 '+band().join('、')+'） · 平均理解測驗 '+avg+'%</div>'+bar(artN,artP.length)
    +band().map(l=>{const b=byLv(l);return '<div style="margin-top:9px"><span class="lv '+lvCls(l)+'">'+l+'</span> <span class="muted">'+b.dn+' / '+b.tot+' 篇</span>'+bar(b.dn,b.tot)+'</div>';}).join('')
    +'</div>'
 
@@ -5714,7 +5750,7 @@ RENDER.prog=function(){
        +bar(dn,pool.length)+'</div>';
     })()
    +'<div class="card"><h2 class="sec">📐 文法</h2>'
-   +'<div class="muted">完成 '+gramN+' / '+ALL_GRAM.length+' 單元 · 平均練習 '+gavg+'%</div>'+bar(gramN,ALL_GRAM.length)
+   +'<div class="muted">已練習 '+gramN+' / '+gramP.length+' 單元（其中全對 '+gramPerfect+'） · 平均練習 '+gavg+'%</div>'+bar(gramN,gramP.length)
    +'<div id="pg-gram">'+pgGramHTML()+'</div>'
    +'</div>'
 
@@ -7911,7 +7947,8 @@ function recReset(){
 window.recTog=recTog; window.recPlay=recPlay;
 
 function auSet(lines){
-  auStop(); recReset(); auLines=lines||[];
+  auLines=lines||[];   /* 先換成新逐字稿，auStop 重畫進度文字時才不會讀到上一課的句數 */
+  auStop(); recReset();
   auSpeakers=[...new Set(auLines.map(l=>l.sp).filter(Boolean))];
   auApplyVoices(); auFillVoices();
 }
@@ -7994,9 +8031,13 @@ function auAdvTog(){
   const b=$('au-advbtn'); if(b) b.classList.toggle('on',show);
 }
 window.auAdvTog=auAdvTog;
-function audioControls(){
+/* 聽力逐字稿的唯一來源：列表句數、播放器總句數、逐字稿顯示都用它 */
+function lsBody(l){
+  return (l.script||[]).length?l.script:(l.keyLines||[]).length?l.keyLines:(l.drill||[]).length?l.drill:null;
+}
+function audioControls(n){
   const adv=localStorage.getItem('b2lab_auadv')==='1';
-  const total=auLines.length||1;
+  const total=n||auLines.length||1;
   return '<div class="au-bar">'
    +'<button class="au-main" id="au-play" onclick="auPlay(false)" title="播放全部">▶</button>'
    +'<div class="au-prog-wrap"><div class="au-prog-info"><span id="au-prog-txt">句 0 / '+total+'</span><span id="au-speed">'+auRate+'x</span></div>'
@@ -8088,7 +8129,7 @@ const LS_THUMB={
 /* 聽力卡（聽力清單與今日頁共用） */
 function lsCardHTML(l,opts){
     opts=opts||{};
-    const lines=(l.script||l.keyLines||[]).length;
+    const lines=(lsBody(l)||[]).length;
     return lCard({click:(opts.click||'lsGo')+"('"+l.id+"')", isNew:opts.isNew&&opts.isNew(l), lv:l.level, cat:(opts.kind?opts.kind+' · ':'')+String(l.topic||'').replace(/^\S*[^\sA-Za-z0-9一-鿿]\S*\s+/,''),
       thumb:lsThumb(l), en:l.title, cn:l.titleCn, g:l.focus, done:!!(ST.listenDone||{})[l.id],
       ft:['約 '+l.minutes+' 分鐘', lines?lines+' 句':''], right:lcDate(l.date)});
@@ -8203,9 +8244,7 @@ function lessonIllust(id){
 function lessonHTML(l){
   const timed=lessonSubs(l);   /* 學習者貼的時間軸字幕 */
   /* 這一課的逐字稿內容：自製對話，或早期教材的關鍵句／練習句 */
-  const body=(l.script||[]).length?l.script
-            :(l.keyLines||[]).length?l.keyLines
-            :(l.drill||[]).length?l.drill:null;
+  const body=lsBody(l);
   /* 沒有影片的課一律走 TTS 語音跟讀（現在所有內建課程都是這一種） */
   const au=(!l.yt&&body)?body:null;
   const klSc=null, drill=null;
@@ -8219,7 +8258,7 @@ function lessonHTML(l){
   const spCls=s=>{ const idx=speakers.indexOf(s); return idx===0?'sp-a':idx>=1?'sp-b':''; };
   let h=''
    /* 有逐字稿時，影片（或語音控制列）黏在最上面，往下捲字幕仍在手邊 */
-   +(au?'<div class="aupin"><div class="row" style="align-items:center"><div style="flex:1">'+audioControls()+'</div></div></div>'
+   +(au?'<div class="aupin"><div class="row" style="align-items:center"><div style="flex:1">'+audioControls(au.length)+'</div></div></div>'
        :''+(hasScript?'<div class="vidpin"><div class="ytwrap"><div id="yt-main"></div></div></div>':''))
    +'<div class="card"><div class="row" style="justify-content:space-between;align-items:flex-start">'
    +'<h2 class="sec" style="margin:0">'+tBack('listen')+(au?'🎧 ':'🎬 ')+esc(l.title)+'</h2><span class="lv '+lvCls(l.level)+'">'+esc(l.level)+'</span></div>'
