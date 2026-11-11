@@ -14,6 +14,865 @@ window.LISTEN = {
 
 /* ========== 依課堂筆記自製（每週三更新） ========== */
 notes:[
+/* ---------- 2026-11-11 健康與醫療主題（四個程度） ---------- */
+{
+  "id": "dl20261111a2",
+  "date": "2026-11-11",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Number Twelve, Please Wait",
+  "titleCn": "十二號，請稍等",
+  "series": "本站自製聽力 · 健康與醫療主題",
+  "topic": "🩺 診所櫃台的掛號與叫號",
+  "focus": "I'll 用在當場決定的事（我先幫你量體溫、我坐窗邊），be going to 用在早就約好的安排（要看哪一位醫師）",
+  "intro": "Tom喉嚨痛，九點到小診所看醫生。櫃台的林護理師一邊幫他掛號一邊問話，兩個人講話都很短。請注意兩種形狀：I'll 是說話那一秒才決定要做的事，Are you going to 問的是他早就約好的安排。整段只有四個數字，抓到就等於聽懂了。",
+  "tip": "第一次聽只抓四個數字：門診時間、量出來的體溫、Tom的號碼，以及他前面有幾個人。第二次聽專心數 I'll 出現幾次，每一次都想一下「這是誰、在哪一秒決定的」，並注意 I'll 後面的動詞一律是原形。",
+  "pre": [
+    {
+      "w": "appointment",
+      "ipa": "/əˈpɔɪntmənt/",
+      "pos": "n.",
+      "cn": "預約；門診時間",
+      "def": "A time you agree to meet someone."
+    },
+    {
+      "w": "clinic",
+      "ipa": "/ˈklɪnɪk/",
+      "pos": "n.",
+      "cn": "診所",
+      "def": "A small place where doctors see people."
+    },
+    {
+      "w": "nurse",
+      "ipa": "/nɝːs/",
+      "pos": "n.",
+      "cn": "護理師",
+      "def": "A person whose job is to help doctors and sick people."
+    },
+    {
+      "w": "throat",
+      "ipa": "/θroʊt/",
+      "pos": "n.",
+      "cn": "喉嚨",
+      "def": "The front part of your neck, and the tube inside it."
+    },
+    {
+      "w": "temperature",
+      "ipa": "/ˈtemprətʃɚ/",
+      "pos": "n.",
+      "cn": "溫度；體溫",
+      "def": "How hot or cold something or someone is."
+    },
+    {
+      "w": "medicine",
+      "ipa": "/ˈmedɪsɪn/",
+      "pos": "n.",
+      "cn": "藥",
+      "def": "Something you take when you are ill."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Nurse Lin",
+      "en": "Good morning. Do you have an appointment?",
+      "cn": "早安，你有預約嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes. My appointment is at nine.",
+      "cn": "有，我的門診是九點。"
+    },
+    {
+      "sp": "Nurse Lin",
+      "en": "Can I see your health card, please?",
+      "cn": "可以給我你的健保卡嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Here it is. My throat hurts a lot.",
+      "cn": "在這裡。我喉嚨很痛。"
+    },
+    {
+      "sp": "Nurse Lin",
+      "en": "I'll check your temperature first.",
+      "cn": "我先幫你量體溫。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Is it high?",
+      "cn": "有發燒嗎？"
+    },
+    {
+      "sp": "Nurse Lin",
+      "en": "Thirty-seven point eight. A little high.",
+      "cn": "三十七點八度，有一點高。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How many people are waiting now?",
+      "cn": "現在有幾個人在等？"
+    },
+    {
+      "sp": "Nurse Lin",
+      "en": "You are number twelve. Eleven people are before you.",
+      "cn": "你是十二號，你前面有十一個人。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Then I'll sit by the window.",
+      "cn": "那我坐窗邊。"
+    },
+    {
+      "sp": "Nurse Lin",
+      "en": "Are you going to see Doctor Hsu today?",
+      "cn": "你今天是要看許醫師嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes. My mother booked him last week.",
+      "cn": "是，我媽上個星期幫我約的。"
+    },
+    {
+      "sp": "Nurse Lin",
+      "en": "Good. He will call your number soon.",
+      "cn": "好，他很快就會叫你的號。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Thank you. I'll wait here with my water.",
+      "cn": "謝謝，我拿著水在這裡等。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What time is Tom's appointment?",
+      "qCn": "Tom的門診是幾點？",
+      "opts": [
+        "A. At eight",
+        "B. At nine",
+        "C. At ten",
+        "D. At eleven"
+      ],
+      "optsCn": [
+        "A. 八點",
+        "B. 九點",
+        "C. 十點",
+        "D. 十一點"
+      ],
+      "ans": 1,
+      "expl": "My appointment is at nine.——Tom第二句就回答了。十一是他前面等的人數，不是時間。"
+    },
+    {
+      "q": "What is Tom's temperature?",
+      "qCn": "Tom的體溫是多少？",
+      "opts": [
+        "A. Thirty-six point eight",
+        "B. Thirty-seven point two",
+        "C. Thirty-seven point eight",
+        "D. Thirty-eight point five"
+      ],
+      "optsCn": [
+        "A. 三十六點八",
+        "B. 三十七點二",
+        "C. 三十七點八",
+        "D. 三十八點五"
+      ],
+      "ans": 2,
+      "expl": "Thirty-seven point eight. A little high.——林護理師量完就直接報數字，還補了一句有一點高。"
+    },
+    {
+      "q": "Who booked Doctor Hsu for Tom?",
+      "qCn": "是誰幫Tom約許醫師的？",
+      "opts": [
+        "A. Tom himself",
+        "B. His mother",
+        "C. Nurse Lin",
+        "D. His friend"
+      ],
+      "optsCn": [
+        "A. Tom自己",
+        "B. 他媽媽",
+        "C. 林護理師",
+        "D. 他的朋友"
+      ],
+      "ans": 1,
+      "expl": "My mother booked him last week.——Tom回答的時候講得很清楚，而且是上個星期就約好了，所以林護理師用 Are you going to 問他這個既定安排。"
+    },
+    {
+      "q": "The nurse hears that Tom's throat hurts. She says, \"___ check your temperature first.\"",
+      "qCn": "護理師聽到Tom說喉嚨痛，她說：「我先幫你量體溫。」",
+      "opts": [
+        "A. I'll",
+        "B. I check",
+        "C. I'm going to",
+        "D. I checked"
+      ],
+      "ans": 0,
+      "expl": "她是聽到Tom說喉嚨痛那一秒才決定要量體溫，所以用 I'll 加原形動詞。I check 是講習慣；I'm going to 表示她開口之前就計畫好了；I checked 是已經量過了。"
+    }
+  ]
+},
+{
+  "id": "dl20261111b1",
+  "date": "2026-11-11",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Eight to Eleven, Two Streets Away",
+  "titleCn": "八點到十一點，兩條街外",
+  "series": "本站自製聽力 · 健康與醫療主題",
+  "topic": "📞 上班前跟同事問哪家診所比較快",
+  "focus": "was going to 講原本的打算、I'll 講當場決定、I'm going to 講剛剛定下來的計畫、現在進行式講已經約好的時間",
+  "intro": "Anita星期一早上幾乎發不出聲音，打電話問越南同事Mai該去哪裡看。這一課裡四種講未來的形狀都出現了，而且出現得很快：was going to 後面馬上接 but，I'll 是講到一半才決定的，I'm going to 是聽完Mai的說明才定下來的，最後一句的 I'm seeing 則是時間已經敲好。",
+  "tip": "第一次聽抓三件事：診所的營業時間、Anita等了多久的預期，以及她最後約的時間。第二次聽把每一個未來式標出來，問自己「這個決定是在這通電話之前，還是電話進行中」，答案就是選 going to 還是 will 的理由。",
+  "pre": [
+    {
+      "w": "voice",
+      "ipa": "/vɔɪs/",
+      "pos": "n.",
+      "cn": "聲音；嗓子",
+      "def": "The sound you make when you speak or sing."
+    },
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person who works with you."
+    },
+    {
+      "w": "clinic",
+      "ipa": "/ˈklɪnɪk/",
+      "pos": "n.",
+      "cn": "診所",
+      "def": "A small place where doctors see people."
+    },
+    {
+      "w": "form",
+      "ipa": "/fɔːrm/",
+      "pos": "n.",
+      "cn": "表格",
+      "def": "A sheet of paper with spaces for your answers."
+    },
+    {
+      "w": "mask",
+      "ipa": "/mæsk/",
+      "pos": "n.",
+      "cn": "口罩",
+      "def": "A cover for your mouth and nose."
+    },
+    {
+      "w": "serious",
+      "ipa": "/ˈsɪriəs/",
+      "pos": "adj.",
+      "cn": "嚴重的",
+      "def": "Bad enough to worry about."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "Your voice sounds terrible. Are you all right?",
+      "cn": "你的聲音聽起來很糟，你還好嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "My throat started hurting on Sunday night.",
+      "cn": "我喉嚨從星期天晚上開始痛。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Are you going to the big hospital in the city?",
+      "cn": "你要去市中心那家大醫院嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I was going to, but it takes a whole morning.",
+      "cn": "我本來要去，但那樣要耗掉一整個早上。"
+    },
+    {
+      "sp": "Mai",
+      "en": "There is a small clinic two streets from your building.",
+      "cn": "你那棟樓過去兩條街有一家小診所。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Does it open early? I start work at nine.",
+      "cn": "它開得早嗎？我九點要上班。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Eight to eleven, Monday to Saturday.",
+      "cn": "八點到十一點，星期一到星期六。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Then I'm going to walk there before work.",
+      "cn": "那我上班前走過去。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Take your passport. They ask new patients for it.",
+      "cn": "帶護照去，他們會跟初診的人要。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Do they give you a form at the counter?",
+      "cn": "櫃台會給表格嗎？"
+    },
+    {
+      "sp": "Mai",
+      "en": "Yes, one page. And they hand you a mask.",
+      "cn": "會，一頁而已。他們還會給你一個口罩。"
+    },
+    {
+      "sp": "Anita",
+      "en": "How long did you wait there last time?",
+      "cn": "你上次在那裡等多久？"
+    },
+    {
+      "sp": "Mai",
+      "en": "Twenty minutes. Only one doctor works on Mondays.",
+      "cn": "二十分鐘。星期一只有一位醫生看診。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is fine. I'll message the team about being late.",
+      "cn": "那沒問題。我來跟團隊說我會晚到。"
+    },
+    {
+      "sp": "Mai",
+      "en": "I'll put it in the group chat for you. Save your voice.",
+      "cn": "我幫你發到群組，你別說話了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Thanks. I'm seeing the doctor at half past eight.",
+      "cn": "謝謝。我八點半看醫生。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "When did Anita's throat start hurting?",
+      "qCn": "Anita的喉嚨是什麼時候開始痛的？",
+      "opts": [
+        "A. Saturday morning",
+        "B. Sunday night",
+        "C. Monday morning",
+        "D. Friday evening"
+      ],
+      "optsCn": [
+        "A. 星期六早上",
+        "B. 星期天晚上",
+        "C. 星期一早上",
+        "D. 星期五晚上"
+      ],
+      "ans": 1,
+      "expl": "My throat started hurting on Sunday night.——Anita第一句回答就講了時間；這通電話本身是星期一早上打的。"
+    },
+    {
+      "q": "What are the clinic's opening hours?",
+      "qCn": "那家小診所的看診時間是什麼時候？",
+      "opts": [
+        "A. Eight to eleven",
+        "B. Nine to twelve",
+        "C. Eight to five",
+        "D. Ten to one"
+      ],
+      "optsCn": [
+        "A. 八點到十一點",
+        "B. 九點到十二點",
+        "C. 八點到五點",
+        "D. 十點到一點"
+      ],
+      "ans": 0,
+      "expl": "Eight to eleven, Monday to Saturday.——Mai直接報出時間，所以Anita才有辦法在九點上班前先去一趟。"
+    },
+    {
+      "q": "Why does Mai tell Anita to take her passport?",
+      "qCn": "Mai為什麼叫Anita帶護照？",
+      "opts": [
+        "A. The clinic is in another city",
+        "B. New patients are asked for it",
+        "C. She needs it to pay",
+        "D. The doctor keeps a copy"
+      ],
+      "optsCn": [
+        "A. 診所在別的城市",
+        "B. 初診的人會被要求出示",
+        "C. 付錢需要用到",
+        "D. 醫生要留一份影本"
+      ],
+      "ans": 1,
+      "expl": "Take your passport. They ask new patients for it.——Mai給的理由就是初診；對話裡沒有提到付錢或影本。"
+    },
+    {
+      "q": "The time with the doctor is already fixed. Anita says, \"I ___ the doctor at half past eight.\"",
+      "qCn": "跟醫生的時間已經定好了。Anita說：「我八點半看醫生。」",
+      "opts": [
+        "A. am seeing",
+        "B. will see",
+        "C. see",
+        "D. was going to see"
+      ],
+      "ans": 0,
+      "expl": "時間已經敲定，這種行程用現在進行式最自然。will see 聽起來像她現在才決定；see 是講習慣；was going to see 是原本打算、後來沒做。"
+    }
+  ]
+},
+{
+  "id": "dl20261111b1p",
+  "date": "2026-11-11",
+  "level": "B1+",
+  "minutes": 4,
+  "kind": "note",
+  "title": "The Doctor Who Comes to You",
+  "titleCn": "醫師來到你家附近",
+  "series": "本站自製聽力 · 健康與醫療主題",
+  "topic": "☎️ 跨國通話聊胡志明市的醫師輪派新制",
+  "focus": "will be + V-ing 講未來那段時間會一直在做，will have been + 過去分詞 講到某個年份之前就已經完成，而且用被動",
+  "intro": "Anita跟台灣的Tom通電話，講她住的那一區衛生站多了醫師進駐。對話裡有一連串數字，也有兩個進階的未來式：will be running 講的是一段還會持續的時間，will have been paired 講的是到二〇三〇年之前就已經完成的配對。被動語態在這裡不是為了艱深，而是因為重點在衛生站，不在誰去配對。",
+  "tip": "第一次聽只抓數字：第一階段派出幾位醫師、來自幾家醫院、進駐幾個衛生站、計畫到哪一年、全市共有幾個站。第二次聽專心聽兩個長一點的未來式各出現在哪一句，並注意 will have been paired 前面一定有一個時間界線。",
+  "pre": [
+    {
+      "w": "rotation",
+      "ipa": "/roʊˈteɪ.ʃən/",
+      "pos": "n.",
+      "cn": "輪調；輪派",
+      "def": "A system where people take turns in different places or jobs."
+    },
+    {
+      "w": "phase",
+      "ipa": "/feɪz/",
+      "pos": "n.",
+      "cn": "階段",
+      "def": "One part of a plan that happens before the next part."
+    },
+    {
+      "w": "specialist",
+      "ipa": "/ˈspeʃəlɪst/",
+      "pos": "n.",
+      "cn": "專科醫師",
+      "def": "A doctor or worker who knows one narrow field very well."
+    },
+    {
+      "w": "referral",
+      "ipa": "/rɪˈfɝː.əl/",
+      "pos": "n.",
+      "cn": "轉診",
+      "def": "A note that sends a patient on to another doctor or hospital."
+    },
+    {
+      "w": "chronic",
+      "ipa": "/ˈkrɑː.nɪk/",
+      "pos": "adj.",
+      "cn": "慢性的",
+      "def": "Lasting for a long time and hard to cure."
+    },
+    {
+      "w": "station",
+      "ipa": "/ˈsteɪʃən/",
+      "pos": "n.",
+      "cn": "站；衛生站",
+      "def": "A building where one kind of service is given."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Tom",
+      "en": "You said something changed at your local health station.",
+      "cn": "你說你家附近的衛生站有變化。"
+    },
+    {
+      "sp": "Anita",
+      "en": "The city started sending hospital doctors there last month.",
+      "cn": "市政府上個月開始派醫院的醫師過去。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How many doctors are we talking about?",
+      "cn": "我們講的是幾位醫師？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Seventy-nine in the first phase, from thirty-nine hospitals.",
+      "cn": "第一階段七十九位，來自三十九家醫院。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And they all go to the small stations?",
+      "cn": "他們都去小的衛生站嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Thirty-seven of them, the ones that are short of staff.",
+      "cn": "三十七個站，就是人力不足的那些。"
+    },
+    {
+      "sp": "Tom",
+      "en": "So you won't be traveling into the city for a check anymore.",
+      "cn": "所以你以後看診不必再跑進市區了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Not for a simple one. Almost half of them are specialists.",
+      "cn": "簡單的就不用。他們將近一半是專科醫師。"
+    },
+    {
+      "sp": "Tom",
+      "en": "What do they actually do there all day?",
+      "cn": "他們一整天在那裡到底做什麼？"
+    },
+    {
+      "sp": "Anita",
+      "en": "See patients, manage chronic illness, and train the local nurses.",
+      "cn": "看病人、管慢性病，還訓練當地的護理人員。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Who writes the referral if you need a bigger hospital?",
+      "cn": "如果要去大醫院，轉診單誰開？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The rotating doctor does it himself now.",
+      "cn": "現在是輪派的那位醫師自己開。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How long will this rotation be running?",
+      "cn": "這個輪派制會持續多久？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Until 2030. It is a five-year program.",
+      "cn": "到二〇三〇年，是五年的計畫。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Will every station have a hospital behind it by then?",
+      "cn": "到那時候每個站後面都會有一家醫院嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "All one hundred and sixty-eight will have been paired.",
+      "cn": "一百六十八個站都會已經配對完成。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That is a lot of paperwork for somebody.",
+      "cn": "那對某些人來說是一大堆文書工作。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It is. But next winter I'll be walking there in five minutes.",
+      "cn": "確實。不過明年冬天我走過去只要五分鐘。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many hospitals sent doctors in the first phase?",
+      "qCn": "第一階段有幾家醫院派出醫師？",
+      "opts": [
+        "A. Thirty-seven",
+        "B. Thirty-nine",
+        "C. Seventy-nine",
+        "D. One hundred and sixty-eight"
+      ],
+      "optsCn": [
+        "A. 三十七家",
+        "B. 三十九家",
+        "C. 七十九家",
+        "D. 一百六十八家"
+      ],
+      "ans": 1,
+      "expl": "Seventy-nine in the first phase, from thirty-nine hospitals.——七十九是醫師人數，三十九才是醫院數；三十七是衛生站數，一百六十八是全市總數。"
+    },
+    {
+      "q": "Who writes a referral now if a patient needs a bigger hospital?",
+      "qCn": "病人需要去大醫院時，現在轉診單由誰開？",
+      "opts": [
+        "A. The local nurse",
+        "B. The city health office",
+        "C. The rotating doctor",
+        "D. The patient's company"
+      ],
+      "optsCn": [
+        "A. 當地的護理人員",
+        "B. 市衛生局",
+        "C. 輪派的醫師",
+        "D. 病人的公司"
+      ],
+      "ans": 2,
+      "expl": "The rotating doctor does it himself now.——Anita回答得很直接，而且用 now 強調這是新制之後才有的改變。"
+    },
+    {
+      "q": "How long will the program run?",
+      "qCn": "這個計畫會進行多久？",
+      "opts": [
+        "A. One year",
+        "B. Three years",
+        "C. Five years",
+        "D. Ten years"
+      ],
+      "optsCn": [
+        "A. 一年",
+        "B. 三年",
+        "C. 五年",
+        "D. 十年"
+      ],
+      "ans": 2,
+      "expl": "Until 2030. It is a five-year program.——Anita先給年份再補上長度，兩個資訊互相印證。"
+    },
+    {
+      "q": "Tom asks about the end of the program. Anita says, \"All one hundred and sixty-eight ___ .\"",
+      "qCn": "Tom問到計畫結束的時候。Anita說：「一百六十八個站都會已經配對完成。」",
+      "opts": [
+        "A. will have been paired",
+        "B. will be pairing",
+        "C. are pairing",
+        "D. will pair"
+      ],
+      "ans": 0,
+      "expl": "到某個時間點之前「已經完成」用 will have 加過去分詞，而且衛生站是被配對的一方，所以再加被動的 been。will be pairing 表示那時候正在配對別人；are pairing 和 will pair 都把衛生站變成動作的執行者。"
+    }
+  ]
+},
+{
+  "id": "dl20261111b2",
+  "date": "2026-11-11",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Move the Work, Not the Treatment",
+  "titleCn": "移工作，不要移治療",
+  "series": "本站自製聽力 · 健康與醫療主題",
+  "topic": "🗓️ 把復健時段塞進稽核週的那通電話",
+  "focus": "will have done 把進度切在截止線上，will be doing 把鏡頭停在未來的某一刻，兩個在同一段對話裡分工",
+  "intro": "Anita的肩膀要做八次復健，客戶稽核卻排在十二月第一週。她跟Tom在電話裡一來一往算時間，算到最後決定移動工作，而不是移動治療。對話裡的 will have finished、will be sitting、will have done 各有分工：一個算做完幾次，一個把鏡頭停在稽核那天早上，一個收在最後當結論。",
+  "tip": "第一次聽抓五個事實：療程總次數、一週做幾個早上、稽核開始之前會做完幾次、復健師只有哪兩天有時段，以及Mai幫忙代班幾個星期。第二次聽把 will have 和 will be 各出現在哪一句標出來，並想一想為什麼Anita在結論那一句選了完成式。",
+  "pre": [
+    {
+      "w": "shoulder",
+      "ipa": "/ˈʃoʊl.dɚ/",
+      "pos": "n.",
+      "cn": "肩膀",
+      "def": "The joint where your arm meets your body."
+    },
+    {
+      "w": "ache",
+      "ipa": "/eɪk/",
+      "pos": "n./v.",
+      "cn": "痠痛",
+      "def": "A dull pain that keeps going."
+    },
+    {
+      "w": "therapy",
+      "ipa": "/ˈθer.ə.pi/",
+      "pos": "n.",
+      "cn": "治療；復健",
+      "def": "Regular treatment that helps a part of the body work again."
+    },
+    {
+      "w": "session",
+      "ipa": "/ˈseʃ.ən/",
+      "pos": "n.",
+      "cn": "一次療程",
+      "def": "One period of time spent doing one activity."
+    },
+    {
+      "w": "schedule",
+      "ipa": "/ˈskedʒuːl/",
+      "pos": "n.",
+      "cn": "行程表",
+      "def": "A plan that says when each thing happens."
+    },
+    {
+      "w": "treatment",
+      "ipa": "/ˈtriːtmənt/",
+      "pos": "n.",
+      "cn": "治療",
+      "def": "What a doctor does to make someone better."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Tom",
+      "en": "Did the company doctor say anything serious about your shoulder?",
+      "cn": "廠醫對你的肩膀有說什麼嚴重的事嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Eight sessions of therapy, two mornings a week for a month.",
+      "cn": "八次復健，一個月、每週兩個早上。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That does not sound too bad.",
+      "cn": "聽起來還不算太糟。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It would not be, except the audit opens in the first week of December.",
+      "cn": "本來不會，問題是稽核十二月第一週就開始。"
+    },
+    {
+      "sp": "Tom",
+      "en": "So how many will you have finished by then?",
+      "cn": "那到那時候你會做完幾次？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Six. The other two land inside the audit week.",
+      "cn": "六次。另外兩次剛好卡在稽核那個星期。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Can you push them to the week after?",
+      "cn": "不能推到下一個星期嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The physio only has Tuesday and Thursday slots.",
+      "cn": "復健師只有星期二和星期四有時段。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Then move the work instead of the treatment.",
+      "cn": "那就移工作，不要移治療。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is exactly what I did yesterday afternoon.",
+      "cn": "我昨天下午就是這麼做的。"
+    },
+    {
+      "sp": "Tom",
+      "en": "What did you move?",
+      "cn": "你移了什麼？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The supplier report goes to Wednesday now.",
+      "cn": "供應商報告現在改成星期三。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And the Friday walk round the line?",
+      "cn": "那星期五的產線巡查呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Mai takes it for three weeks. She offered on Monday.",
+      "cn": "Mai幫我代三個星期，她星期一自己說要幫的。"
+    },
+    {
+      "sp": "Tom",
+      "en": "What happens at ten on the first audit morning?",
+      "cn": "稽核第一天早上十點你在哪裡？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I'll be sitting in the physio room, not on the line.",
+      "cn": "我會坐在復健室裡，不在產線上。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And the auditors?",
+      "cn": "那稽核員呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Downstairs, counting labels without me for ninety minutes.",
+      "cn": "在樓下數標籤，九十分鐘沒有我。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Does your manager know all of this?",
+      "cn": "你主管知道這些嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "He signed it off. By Christmas I'll have done all eight.",
+      "cn": "他簽了。到聖誕節我八次都會做完。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many therapy sessions will Anita have finished before the audit starts?",
+      "qCn": "稽核開始之前，Anita會做完幾次復健？",
+      "opts": [
+        "A. Four",
+        "B. Six",
+        "C. Eight",
+        "D. Ten"
+      ],
+      "optsCn": [
+        "A. 四次",
+        "B. 六次",
+        "C. 八次",
+        "D. 十次"
+      ],
+      "ans": 1,
+      "expl": "Six. The other two land inside the audit week.——八次是總數，稽核開始之前只做完六次，剩下兩次卡在稽核週。"
+    },
+    {
+      "q": "Why can't Anita move the last two sessions to the following week?",
+      "qCn": "Anita為什麼不能把最後兩次推到下個星期？",
+      "opts": [
+        "A. The physio only works Tuesday and Thursday",
+        "B. Her manager said no",
+        "C. The clinic closes in December",
+        "D. Mai is away that week"
+      ],
+      "optsCn": [
+        "A. 復健師只有星期二和星期四有時段",
+        "B. 主管不同意",
+        "C. 診所十二月休診",
+        "D. Mai那個星期不在"
+      ],
+      "ans": 0,
+      "expl": "The physio only has Tuesday and Thursday slots.——理由是時段，不是人。主管其實簽了，Mai也在，而且還幫她代班。"
+    },
+    {
+      "q": "What did Mai agree to take over?",
+      "qCn": "Mai答應接手什麼？",
+      "opts": [
+        "A. The supplier report",
+        "B. The Friday line walk",
+        "C. The audit meeting",
+        "D. The physio booking"
+      ],
+      "optsCn": [
+        "A. 供應商報告",
+        "B. 星期五的產線巡查",
+        "C. 稽核會議",
+        "D. 復健預約"
+      ],
+      "ans": 1,
+      "expl": "Mai takes it for three weeks. She offered on Monday.——前一句Tom問的就是 the Friday walk round the line；供應商報告是Anita自己改到星期三。"
+    },
+    {
+      "q": "Tom asks where Anita will be at ten on the first audit morning. Which shape does she use, and why?",
+      "qCn": "Tom問稽核第一天早上十點Anita在哪裡。她用了哪個形狀，為什麼？",
+      "opts": [
+        "A. will be sitting, because the action is in progress at that moment",
+        "B. will sit, because it happens only once",
+        "C. will have sat, because it is finished by then",
+        "D. sits, because it is a habit"
+      ],
+      "optsCn": [
+        "A. will be sitting，因為那一刻動作正在進行",
+        "B. will sit，因為只發生一次",
+        "C. will have sat，因為到那時已經結束",
+        "D. sits，因為那是習慣"
+      ],
+      "ans": 0,
+      "expl": "I'll be sitting in the physio room, not on the line.——Tom問的是未來某一刻她在哪裡，所以要用 will be 加 V-ing 把鏡頭停在十點那一刻。完成式會變成那時候已經結束；現在簡單式則變成描述習慣。"
+    }
+  ]
+},
 /* ---------- 2026-11-04 天災與天氣主題（四個程度） ---------- */
 {
   "id": "dl20261104a2",

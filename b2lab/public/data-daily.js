@@ -7,6 +7,785 @@
 window.DAILY = {
 
 articles:[
+/* ---------- 2026-11-11 每日文章（健康與醫療：診所、回診與未來式） ---------- */
+{
+  "id": "d20261111a2",
+  "date": "2026-11-11",
+  "level": "A2",
+  "topic": "健康",
+  "words": 106,
+  "kind": "orig",
+  "title": "Tom's Appointment at Nine",
+  "titleCn": "Tom九點的門診",
+  "focus": "早就決定好的計畫用 be going to（去看醫生、帶健保卡），這一秒才決定的事用 I'll（我去買藥）",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom喉嚨痛，今天早上要去看醫生。這一篇請分辨兩個形狀：is going to 開頭的句子是昨天就排好的，I'll 開頭的句子是他講話那一秒才決定的。中文兩種都說「我要」，英文卻靠動詞形狀把「什麼時候決定」講出來。最後一句的 is going to rest 也是看醫生之前就打算好的。",
+  "spoken": [
+    {
+      "en": "My appointment is at nine.",
+      "cn": "我的門診是九點。"
+    },
+    {
+      "en": "I'll eat something after the clinic.",
+      "cn": "我看完診再吃東西。"
+    },
+    {
+      "en": "Tom is number twelve.",
+      "cn": "Tom是十二號。"
+    },
+    {
+      "en": "I'll buy the medicine downstairs.",
+      "cn": "我去樓下買藥。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom has a sore throat this week. He is going to see a doctor this morning. His appointment at the small clinic is at nine.",
+      "cn": "Tom這個星期喉嚨痛。他今天早上要去看醫生。他在小診所的門診是九點。"
+    },
+    {
+      "en": "He is going to take his health card and some cash. His mother asks him about breakfast before he leaves. \"I'll eat something after the clinic,\" Tom says.",
+      "cn": "他要帶健保卡和一些現金。出門前媽媽問他早餐的事。「我看完診再吃東西。」Tom說。"
+    },
+    {
+      "en": "The waiting room is very busy this morning. A nurse checks his temperature and gives him a number. Tom is number twelve, so he will wait.",
+      "cn": "今天早上候診室很多人。一位護理師幫他量體溫，給他一個號碼。Tom是十二號，所以他要等一下。"
+    },
+    {
+      "en": "The doctor listens to his chest and writes a short note. \"I'll buy the medicine downstairs,\" Tom says. He is going to rest at home all afternoon.",
+      "cn": "醫生聽了他的胸腔，寫了一張小紙條。「我去樓下買藥。」Tom說。他下午要在家休息。"
+    }
+  ],
+  "target": [
+    {
+      "w": "throat",
+      "ipa": "/θroʊt/",
+      "pos": "n.",
+      "cn": "喉嚨",
+      "def": "The front part of your neck, and the tube inside it.",
+      "ex": "My sister had a bad throat after the concert.",
+      "exCn": "我姊姊看完演唱會之後喉嚨很不舒服。"
+    },
+    {
+      "w": "clinic",
+      "ipa": "/ˈklɪnɪk/",
+      "pos": "n.",
+      "cn": "診所",
+      "def": "A small place where doctors see people.",
+      "ex": "There is a new clinic beside the park.",
+      "exCn": "公園旁邊有一家新診所。"
+    },
+    {
+      "w": "nurse",
+      "ipa": "/nɝːs/",
+      "pos": "n.",
+      "cn": "護理師",
+      "def": "A person whose job is to help doctors and sick people.",
+      "ex": "A nurse came to our office to talk about first aid.",
+      "exCn": "一位護理師來我們辦公室講急救。"
+    },
+    {
+      "w": "temperature",
+      "ipa": "/ˈtemprətʃɚ/",
+      "pos": "n.",
+      "cn": "溫度；體溫",
+      "def": "How hot or cold something or someone is.",
+      "ex": "The oven temperature was too high for the cake.",
+      "exCn": "烤箱的溫度對那個蛋糕來說太高了。"
+    },
+    {
+      "w": "medicine",
+      "ipa": "/ˈmedɪsɪn/",
+      "pos": "n.",
+      "cn": "藥",
+      "def": "Something you take when you are ill.",
+      "ex": "She keeps her medicine in a blue box.",
+      "exCn": "她把藥放在一個藍色盒子裡。"
+    },
+    {
+      "w": "appointment",
+      "ipa": "/əˈpɔɪntmənt/",
+      "pos": "n.",
+      "cn": "預約；門診時間",
+      "def": "A time you agree to meet someone.",
+      "ex": "My appointment with the bank is on Friday.",
+      "exCn": "我跟銀行約的時間是星期五。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What time is Tom's appointment?",
+      "qCn": "Tom的門診是幾點？",
+      "opts": [
+        "A. At eight",
+        "B. At nine",
+        "C. At ten",
+        "D. At twelve"
+      ],
+      "optsCn": [
+        "A. 八點",
+        "B. 九點",
+        "C. 十點",
+        "D. 十二點"
+      ],
+      "ans": 1,
+      "expl": "His appointment at the small clinic is at nine.——第一段最後一句直接寫出時間。十二是他的號碼，不是時間。"
+    },
+    {
+      "q": "What does Tom decide to do after the clinic?",
+      "qCn": "Tom決定看完診之後要做什麼？",
+      "opts": [
+        "A. Eat something",
+        "B. Go to work",
+        "C. Call his mother",
+        "D. Buy a new bag"
+      ],
+      "optsCn": [
+        "A. 吃點東西",
+        "B. 去上班",
+        "C. 打電話給媽媽",
+        "D. 買新包包"
+      ],
+      "ans": 0,
+      "expl": "\"I'll eat something after the clinic,\" Tom says.——媽媽問起早餐，他才決定看完診再吃，所以用 I'll。"
+    },
+    {
+      "q": "Tom made this plan yesterday. Today he tells his friend, \"I ___ see a doctor this morning.\"",
+      "qCn": "這個計畫是Tom昨天就決定的。今天他告訴朋友：「我今天早上要去看醫生。」",
+      "opts": [
+        "A. am going to",
+        "B. will to",
+        "C. going to",
+        "D. am go to"
+      ],
+      "ans": 0,
+      "expl": "計畫昨天就定好了，不是這一秒才決定，所以用 be going to 加原形動詞。will to 和 am go to 都把兩個零件疊在一起，英文沒有這種形狀；going to 前面少了 be 動詞。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Tomorrow I see the doctor.",
+      "b2": "Tomorrow I'm going to see the doctor.",
+      "note": "現在簡單式講的是每天都在做的事，所以 I see the doctor 聽起來像你天天去看醫生。要講「我已經打算好明天去」，一定要用 be going to 加原形動詞：決定在前，講出來在後。",
+      "sp": "I'm seeing the doctor tomorrow.",
+      "spNote": "連時間都約好了的行程，口語最常用現在進行式。",
+      "b1Cn": "明天我看醫生。",
+      "b2Cn": "明天我要去看醫生。",
+      "spCn": "我明天約了醫生。"
+    },
+    {
+      "b1": "I buy the medicine downstairs.",
+      "b2": "I'll buy the medicine downstairs.",
+      "note": "拿到處方那一秒才決定要去買，這是「說話當下的決定」，英文一定要有 I'll。少了 will，句子就變成在描述習慣，醫生會以為你每次都在樓下買。",
+      "sp": "I'll grab it downstairs.",
+      "spNote": "口語常用 grab 代替 buy，形狀完全一樣。",
+      "b1Cn": "我在樓下買藥。",
+      "b2Cn": "我去樓下買藥。",
+      "spCn": "我去樓下拿。"
+    }
+  ]
+},
+{
+  "id": "d20261111b1",
+  "date": "2026-11-11",
+  "level": "B1",
+  "topic": "健康與醫療",
+  "words": 151,
+  "kind": "orig",
+  "title": "The Clinic Two Streets Away",
+  "titleCn": "兩條街外的小診所",
+  "focus": "was going to 講原本的打算，I'll 講當場的決定，be going to 講剛剛定下來的計畫，現在進行式講已經約好的行程",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Anita在越南上班，星期一早上發不出聲音。這一篇有四種講未來的形狀，請一個一個看清楚：was going to 是原本打算（後來沒做）、I'll 是講話那一秒決定的、I'm going to 是剛剛才定下來的計畫、is seeing 是已經跟醫生約好的時間。最後一句的 has learned 是現在完成式，講的是到現在為止得到的心得。",
+  "spoken": [
+    {
+      "en": "I'll call the clinic first.",
+      "cn": "我先打電話問診所。"
+    },
+    {
+      "en": "Then I'm going to walk there before work.",
+      "cn": "那我上班前走過去。"
+    },
+    {
+      "en": "Only one doctor was working that day.",
+      "cn": "那天只有一位醫生看診。"
+    },
+    {
+      "en": "I'm seeing the doctor again on Thursday.",
+      "cn": "我星期四要再回診。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita woke up on Monday with a sore throat and almost no voice. She was going to work from the office all week, but she changed her plan at breakfast. \"I'll call the clinic first,\" she told her colleague Mai on the phone.",
+      "cn": "Anita星期一早上醒來，喉嚨痛，幾乎發不出聲音。她原本打算整個星期都在辦公室上班，但吃早餐的時候改變了計畫。「我先打電話問診所。」她在電話裡對同事Mai說。"
+    },
+    {
+      "en": "Mai said the big hospital in the city center takes a whole morning. The small clinic two streets away opens at eight and closes at eleven. \"Then I'm going to walk there before work,\" Anita said.",
+      "cn": "Mai說市中心那家大醫院要耗掉一整個早上。兩條街外的小診所八點開門、十一點休診。「那我上班前走過去。」Anita說。"
+    },
+    {
+      "en": "At the clinic a nurse gave her a paper form and a clean mask. Anita waited twenty minutes, because only one doctor was working that day. The doctor looked at her throat and said it was not serious.",
+      "cn": "到了診所，護理師給她一張紙本初診表和一個乾淨的口罩。Anita等了二十分鐘，因為那天只有一位醫生看診。醫生看了她的喉嚨，說情況不嚴重。"
+    },
+    {
+      "en": "Anita is seeing the doctor again on Thursday, so she will keep the form in her bag. She has learned something useful this week: a small clinic is often faster than a big hospital.",
+      "cn": "Anita星期四要再回診，所以她會把那張表留在包包裡。這個星期她學到一件有用的事：小診所常常比大醫院快。"
+    }
+  ],
+  "target": [
+    {
+      "w": "voice",
+      "ipa": "/vɔɪs/",
+      "pos": "n.",
+      "cn": "聲音；嗓子",
+      "def": "The sound you make when you speak or sing.",
+      "ex": "The singer lost her voice before the show.",
+      "exCn": "那位歌手在演出前失聲了。"
+    },
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person who works with you.",
+      "ex": "My colleague drove me to the airport last night.",
+      "exCn": "昨天晚上我同事載我去機場。"
+    },
+    {
+      "w": "form",
+      "ipa": "/fɔːrm/",
+      "pos": "n.",
+      "cn": "表格",
+      "def": "A sheet of paper with spaces for your answers.",
+      "ex": "Please sign the form at the bottom.",
+      "exCn": "請在表格下方簽名。"
+    },
+    {
+      "w": "mask",
+      "ipa": "/mæsk/",
+      "pos": "n.",
+      "cn": "口罩",
+      "def": "A cover for your mouth and nose.",
+      "ex": "He wore a thin mask on the scooter.",
+      "exCn": "他騎機車時戴了一個薄口罩。"
+    },
+    {
+      "w": "serious",
+      "ipa": "/ˈsɪriəs/",
+      "pos": "adj.",
+      "cn": "嚴重的",
+      "def": "Bad enough to worry about.",
+      "ex": "The damage to the roof was not serious.",
+      "exCn": "屋頂的損壞並不嚴重。"
+    },
+    {
+      "w": "plan",
+      "ipa": "/plæn/",
+      "pos": "n.",
+      "cn": "計畫",
+      "def": "What you have decided to do.",
+      "ex": "Our plan for Sunday changed twice.",
+      "exCn": "我們星期天的計畫改了兩次。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why does Anita decide not to go to the big hospital?",
+      "qCn": "Anita為什麼決定不去大醫院？",
+      "opts": [
+        "A. It is closed on Monday",
+        "B. It takes a whole morning",
+        "C. It is too expensive",
+        "D. It has no doctor"
+      ],
+      "optsCn": [
+        "A. 星期一沒開",
+        "B. 要耗掉一整個早上",
+        "C. 太貴",
+        "D. 沒有醫生"
+      ],
+      "ans": 1,
+      "expl": "Mai said the big hospital in the city center takes a whole morning.——第二段Mai一講完這句，Anita馬上改口說要走去小診所。"
+    },
+    {
+      "q": "What does the nurse give Anita?",
+      "qCn": "護理師給了Anita什麼？",
+      "opts": [
+        "A. A paper form and a mask",
+        "B. Medicine and water",
+        "C. A number and a towel",
+        "D. A card and a receipt"
+      ],
+      "optsCn": [
+        "A. 一張紙本表格和一個口罩",
+        "B. 藥和水",
+        "C. 號碼和毛巾",
+        "D. 一張卡和一張收據"
+      ],
+      "ans": 0,
+      "expl": "At the clinic a nurse gave her a paper form and a clean mask.——第三段第一句寫得很清楚；藥是醫生看完之後的事，文章沒提。"
+    },
+    {
+      "q": "The time with the doctor is already fixed. Anita says, \"I ___ the doctor again on Thursday.\"",
+      "qCn": "跟醫生的時間已經約好了。Anita說：「我星期四要再回診。」",
+      "opts": [
+        "A. will see",
+        "B. am seeing",
+        "C. see",
+        "D. will to see"
+      ],
+      "ans": 1,
+      "expl": "時間已經約定、對方也記下來了，這種行程英文用現在進行式最自然。will see 聽起來像她現在才決定要再去一次；see 是講習慣；will to see 多了一個 to，助動詞後面不放 to。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "My plan was to stay in the office all week.",
+      "b2": "I was going to stay in the office all week.",
+      "note": "用 plan 這個名詞只是把「計畫」講出來，聽不出後來有沒有做。was going to 不一樣：它幾乎一定接著 but，等於先告訴對方「原本打算，後來沒成」，一個形狀就把轉折帶進來了。",
+      "sp": "I was going to, but then this throat.",
+      "spNote": "口語常常講到 was going to 就停住，後面用 but 接改變的原因。",
+      "b1Cn": "我的計畫是整個星期待在辦公室。",
+      "b2Cn": "我原本打算整個星期待在辦公室。",
+      "spCn": "我本來要的，結果喉嚨這樣。"
+    },
+    {
+      "b1": "I will see the doctor again on Thursday.",
+      "b2": "I'm seeing the doctor again on Thursday.",
+      "note": "will 的工作是「說話這一刻才決定」，所以用在已經約好的門診會怪：對方會以為你剛剛才想到要再去。時間已經排進行事曆、而且牽涉到別人，英文用現在進行式講行程。",
+      "sp": "I'm back in on Thursday.",
+      "spNote": "口語會把 see the doctor 整個省掉，只說 back in。",
+      "b1Cn": "我星期四會再去看醫生。",
+      "b2Cn": "我星期四要再回診。",
+      "spCn": "我星期四再回去一趟。"
+    }
+  ]
+},
+{
+  "id": "d20261111b1p",
+  "date": "2026-11-11",
+  "level": "B1+",
+  "topic": "新聞·健康",
+  "words": 161,
+  "kind": "news",
+  "title": "Seventy-Nine Doctors on Rotation",
+  "titleCn": "七十九位醫師輪派到基層",
+  "focus": "will be + V-ing 把鏡頭停在未來的某段時間，will have been + 過去分詞 講到某個年份之前會已經完成，而且用被動把衛生站放到主詞位置",
+  "source": "改寫自 Saigon Giai Phong（SGGP）報導（2026/10/29）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://en.sggp.org.vn/ho-chi-minh-city-brings-quality-healthcare-closer-to-residents-post130612.html",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "胡志明市把大醫院的醫師輪派到社區衛生站，Anita住的那一區也在裡面。這一篇請注意兩個未來式：will be seeing 是「未來那段時間會一直在做」，will have been paired 是「到某個年份之前就已經完成」，而且被動語態把衛生站推到主詞位置，因為重點不是誰去配對，而是衛生站都配到了。",
+  "spoken": [
+    {
+      "en": "Patients will be seeing a specialist without traveling into the city.",
+      "cn": "病人不必跑進市區就能看到專科醫師。"
+    },
+    {
+      "en": "All 168 stations will have been paired with a hospital.",
+      "cn": "一百六十八個衛生站都會配對到一家醫院。"
+    },
+    {
+      "en": "Almost half of these doctors hold a second-level qualification.",
+      "cn": "這些醫師將近一半有二級專科資格。"
+    },
+    {
+      "en": "Health stations at the center, hospitals as the foundation.",
+      "cn": "衛生站是核心，醫院是後盾。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "On October 28 the health department of Ho Chi Minh City started the first phase of a program that sends hospital doctors out to local health stations. Seventy-nine doctors from thirty-nine hospitals and regional medical centers were moved to thirty-seven stations that are short of staff.",
+      "cn": "十月二十八日，胡志明市衛生局啟動了一項計畫的第一階段，把大醫院的醫師派到社區衛生站。七十九位醫師來自三十九家醫院與區域醫療中心，被派到三十七個人力不足的衛生站。"
+    },
+    {
+      "en": "Almost half of these doctors hold a second-level specialist qualification. From now on, patients in those wards will be seeing a specialist without traveling into the city. The doctors also manage chronic illness, handle referrals, and train the local staff who stay behind.",
+      "cn": "這些醫師將近一半擁有二級專科資格。從現在起，那些坊里的病人不用跑進市區，就會有專科醫師看診。這些醫師同時管理慢性病、處理轉診，也訓練留在當地的人員。"
+    },
+    {
+      "en": "The program runs from 2026 to 2030. By the time it ends, all one hundred and sixty-eight commune, ward and special-zone health stations will have been paired with a hospital.",
+      "cn": "這項計畫從二〇二六年進行到二〇三〇年。等它結束的時候，全市一百六十八個社、坊與特區的衛生站都會已經配對到一家醫院。"
+    },
+    {
+      "en": "City officials say the aim is to move away from care that only reacts to illness. One deputy secretary described the design in one line: health stations at the center, hospitals as the foundation, and rotation of staff as the main tool.",
+      "cn": "市政府官員說，目標是擺脫那種只在生病之後才反應的醫療。一位市委副書記用一句話描述這個設計：衛生站是核心，醫院是後盾，人員輪派是主要手段。"
+    }
+  ],
+  "target": [
+    {
+      "w": "rotation",
+      "ipa": "/roʊˈteɪ.ʃən/",
+      "pos": "n.",
+      "cn": "輪調；輪班",
+      "def": "A system where people take turns in different places or jobs.",
+      "ex": "The night rotation at the plant changes every two weeks.",
+      "exCn": "廠裡的夜班輪調每兩週換一次。"
+    },
+    {
+      "w": "phase",
+      "ipa": "/feɪz/",
+      "pos": "n.",
+      "cn": "階段",
+      "def": "One part of a plan that happens before the next part.",
+      "ex": "The second phase of the bridge opens next spring.",
+      "exCn": "那座橋的第二階段明年春天通行。"
+    },
+    {
+      "w": "specialist",
+      "ipa": "/ˈspeʃəlɪst/",
+      "pos": "n.",
+      "cn": "專科醫師；專家",
+      "def": "A doctor or worker who knows one narrow field very well.",
+      "ex": "Her brother is a specialist in food safety.",
+      "exCn": "她哥哥是食品安全方面的專家。"
+    },
+    {
+      "w": "qualification",
+      "ipa": "/ˌkwɑːlɪfɪˈkeɪʃn/",
+      "pos": "n.",
+      "cn": "資格；證照",
+      "def": "Proof that you have passed the training for a job.",
+      "ex": "He finished the qualification in two years.",
+      "exCn": "他兩年就把那張證照拿到了。"
+    },
+    {
+      "w": "referral",
+      "ipa": "/rɪˈfɝː.əl/",
+      "pos": "n.",
+      "cn": "轉診",
+      "def": "A note that sends a patient on to another doctor or hospital.",
+      "ex": "She asked the nurse for a referral to a bigger hospital.",
+      "exCn": "她向護理師要一張轉到大醫院的轉診單。"
+    },
+    {
+      "w": "chronic",
+      "ipa": "/ˈkrɑː.nɪk/",
+      "pos": "adj.",
+      "cn": "慢性的",
+      "def": "Lasting for a long time and hard to cure.",
+      "ex": "My uncle has had chronic back pain for years.",
+      "exCn": "我叔叔的慢性背痛已經好幾年了。"
+    },
+    {
+      "w": "staff",
+      "ipa": "/stæf/",
+      "pos": "n.",
+      "cn": "人員；員工",
+      "def": "All the people who work in one place.",
+      "ex": "The kitchen staff arrive before six every morning.",
+      "exCn": "廚房人員每天早上六點前就到。"
+    },
+    {
+      "w": "foundation",
+      "ipa": "/faʊnˈdeɪ.ʃən/",
+      "pos": "n.",
+      "cn": "基礎；後盾",
+      "def": "The part that everything else stands on.",
+      "ex": "Good records are the foundation of every audit.",
+      "exCn": "完整的紀錄是每一次稽核的基礎。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many doctors were moved in the first phase?",
+      "qCn": "第一階段派出了幾位醫師？",
+      "opts": [
+        "A. Thirty-seven",
+        "B. Thirty-nine",
+        "C. Seventy-nine",
+        "D. One hundred and sixty-eight"
+      ],
+      "optsCn": [
+        "A. 三十七位",
+        "B. 三十九位",
+        "C. 七十九位",
+        "D. 一百六十八位"
+      ],
+      "ans": 2,
+      "expl": "Seventy-nine doctors from thirty-nine hospitals and regional medical centers were moved to thirty-seven stations.——三十九是醫院數、三十七是衛生站數、一百六十八是全市衛生站總數，只有七十九是醫師人數。"
+    },
+    {
+      "q": "What will every health station have by the time the program ends?",
+      "qCn": "計畫結束時，每一個衛生站都會有什麼？",
+      "opts": [
+        "A. A hospital partner",
+        "B. A new building",
+        "C. Five specialists",
+        "D. Its own ambulance"
+      ],
+      "optsCn": [
+        "A. 一家配對的醫院",
+        "B. 一棟新大樓",
+        "C. 五位專科醫師",
+        "D. 自己的救護車"
+      ],
+      "ans": 0,
+      "expl": "...all one hundred and sixty-eight commune, ward and special-zone health stations will have been paired with a hospital.——第三段講的是配對，不是蓋房子或買車，文章也沒給每站的醫師人數。"
+    },
+    {
+      "q": "Besides treating patients, what else do the rotating doctors do?",
+      "qCn": "除了看診，輪派的醫師還做什麼？",
+      "opts": [
+        "A. Build new stations",
+        "B. Train the local staff",
+        "C. Collect the fees",
+        "D. Write the city budget"
+      ],
+      "optsCn": [
+        "A. 蓋新的衛生站",
+        "B. 訓練當地人員",
+        "C. 收費",
+        "D. 編市政預算"
+      ],
+      "ans": 1,
+      "expl": "The doctors also manage chronic illness, handle referrals, and train the local staff who stay behind.——第二段最後一句列出三件事，訓練當地人員是其中一項。"
+    },
+    {
+      "q": "Fill in: \"By the end of 2030, all 168 stations ___ with a hospital.\"",
+      "qCn": "填空：「到二〇三〇年底，一百六十八個衛生站都會已經配對到一家醫院。」",
+      "opts": [
+        "A. will have been paired",
+        "B. will be pairing",
+        "C. will pair",
+        "D. are paired"
+      ],
+      "ans": 0,
+      "expl": "「到某個時間點之前會已經完成」用 will have 加過去分詞；這裡是衛生站被配對，所以再加被動的 been，合起來就是 will have been paired。will be pairing 是未來那段時間正在配對別人；will pair 和 are paired 都讓衛生站變成動作的執行者。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The doctors will do this work until 2030.",
+      "b2": "The doctors will be doing this work until 2030.",
+      "note": "will do 只說這件事會發生，聽起來像一次就做完。加上 be doing，鏡頭就停在那段時間裡面：從現在到二〇三〇年，你隨便挑一天去衛生站，都會看到醫師在那裡。報導寫一段長期政策時，這個形狀比 will do 精確得多。",
+      "b1Cn": "醫師會做這件工作到二〇三〇年。",
+      "b2Cn": "醫師會一路做這件工作到二〇三〇年。"
+    },
+    {
+      "b1": "In 2030 the pairing will be finished.",
+      "b2": "By 2030 all the stations will have been paired.",
+      "note": "in 2030 是「在那一年裡」，讀起來像配對那一年才動工。改成 by 2030 加上 will have been paired，時間就變成截止線：那一年到之前，事情已經完成。by 幾乎都跟 will have 搭配，看到 by + 年份就該想到完成式。",
+      "b1Cn": "二〇三〇年配對會完成。",
+      "b2Cn": "到二〇三〇年之前，所有衛生站都會已經配對完成。"
+    }
+  ]
+},
+{
+  "id": "d20261111b2",
+  "date": "2026-11-11",
+  "level": "B2",
+  "topic": "健康與醫療",
+  "words": 271,
+  "kind": "original",
+  "title": "Eight Sessions Before the Audit",
+  "titleCn": "稽核前的八次復健",
+  "focus": "will have done 把時間切在一條截止線上，will be doing 把鏡頭停在未來的某一刻；兩個一起用，就能講清楚「那時候哪些做完了、哪些還在進行」",
+  "intro": "Anita的右肩在九月開始痛，復健要做一個月，客戶稽核卻排在十二月第一個星期。這一篇的重點是兩種未來式怎麼分工：will have finished 是截止線之前已經完成的部分，will still be lying 是那一刻正在進行的事。讀的時候請把每個 by 和每個 this time 找出來，它們都是在替未來定位。",
+  "spoken": [
+    {
+      "en": "By that Monday she will have finished only six of them.",
+      "cn": "到那個星期一，她只會做完其中六次。"
+    },
+    {
+      "en": "This time next month she will still be lying on a narrow table.",
+      "cn": "下個月的這個時候，她還會躺在那張窄床上。"
+    },
+    {
+      "en": "The report will be drafted on Wednesday from now on.",
+      "cn": "從現在起，那份報告改在星期三先寫好。"
+    },
+    {
+      "en": "The audit will have come and gone.",
+      "cn": "稽核那關就已經過去了。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita's right shoulder started to ache in September, after three weeks of checking parts at a bench that was slightly too high for her. The company doctor in Binh Duong told her the damage was not dangerous, but that she would need therapy twice a week for a month. She booked the first session for a Tuesday morning, and then she opened her calendar, because the customer audit was already circled in red.",
+      "cn": "Anita的右肩在九月開始痛，起因是連續三個星期在一張對她來說稍微太高的檢驗台前驗料。平陽的廠醫告訴她，傷不危險，但她需要做一個月、每週兩次的復健。她把第一次療程約在某個星期二早上，接著打開行事曆，因為客戶稽核早就用紅筆圈起來了。"
+    },
+    {
+      "en": "The arithmetic was not comforting. Two mornings a week for four weeks makes eight sessions, and the audit begins on the first Monday of December. By that Monday she will have finished only six of them, which leaves two appointments sitting inside the busiest week of her year. This time next month she will still be lying on a narrow table with a heat pack on her shoulder while the auditors walk the line downstairs.",
+      "cn": "算起來並不讓人安心。一週兩個早上、做四個星期，就是八次療程，而稽核從十二月第一個星期一開始。到那個星期一，她只會做完其中六次，剩下兩次剛好卡在一年裡最忙的那個星期。下個月的這個時候，她還會躺在那張窄床上、肩上放著熱敷包，而稽核員正在樓下走產線。"
+    },
+    {
+      "en": "So she did what a quality engineer does with any schedule that will not fit: she moved the smaller pieces. Her Thursday session became a Thursday evening. The weekly supplier report, which she usually writes on Thursday afternoon, will be drafted on Wednesday from now on. Mai agreed to take the Friday line walk for three weeks.",
+      "cn": "於是她做了品質工程師面對塞不進去的行程時會做的事：把比較小的零件移位。星期四的療程改到星期四晚上。每週的供應商報告她本來都在星期四下午寫，從現在起改成星期三先寫好。Mai答應幫她代三個星期的星期五產線巡查。"
+    },
+    {
+      "en": "None of this makes the shoulder heal faster. What it removes is the excuse. Anita has watched colleagues stop treatment in week two because a shipment was late, and she knows how that ends: the same ache a year later, and a longer course. By the middle of December she will have given the shoulder its full month, and the audit will have come and gone.",
+      "cn": "這些安排並不會讓肩膀好得更快，它們拿掉的是藉口。Anita看過同事因為一批貨延誤，第二週就停掉治療，她也知道結局：一年後同樣的痛，加上更長的療程。到十二月中，她就會把這一個月完整地給了肩膀，而稽核那關也已經過去了。"
+    }
+  ],
+  "target": [
+    {
+      "w": "shoulder",
+      "ipa": "/ˈʃoʊl.dɚ/",
+      "pos": "n.",
+      "cn": "肩膀",
+      "def": "The joint where your arm meets your body.",
+      "ex": "He carried the bag on one shoulder all day.",
+      "exCn": "他整天把那個袋子掛在一邊肩膀上。"
+    },
+    {
+      "w": "ache",
+      "ipa": "/eɪk/",
+      "pos": "n./v.",
+      "cn": "痠痛",
+      "def": "A dull pain that keeps going.",
+      "ex": "A cold room gives me an ache in my knees.",
+      "exCn": "房間一冷我膝蓋就會痠。"
+    },
+    {
+      "w": "therapy",
+      "ipa": "/ˈθer.ə.pi/",
+      "pos": "n.",
+      "cn": "治療；復健",
+      "def": "Regular treatment that helps a part of the body work again.",
+      "ex": "Speech therapy helped the boy after his operation.",
+      "exCn": "語言治療幫助那個男孩在手術後恢復。"
+    },
+    {
+      "w": "audit",
+      "ipa": "/ˈɑː.dɪt/",
+      "pos": "n.",
+      "cn": "稽核",
+      "def": "An official check of how a company works.",
+      "ex": "The audit of the warehouse found two missing labels.",
+      "exCn": "倉庫那次稽核查出兩張標籤不見了。"
+    },
+    {
+      "w": "session",
+      "ipa": "/ˈseʃ.ən/",
+      "pos": "n.",
+      "cn": "一次療程；一場",
+      "def": "One period of time spent doing one activity.",
+      "ex": "The training session starts right after lunch.",
+      "exCn": "訓練課程午餐後馬上開始。"
+    },
+    {
+      "w": "schedule",
+      "ipa": "/ˈskedʒuːl/",
+      "pos": "n.",
+      "cn": "行程表",
+      "def": "A plan that says when each thing happens.",
+      "ex": "Our delivery schedule changes every Chinese New Year.",
+      "exCn": "我們的出貨排程每逢農曆年都會變。"
+    },
+    {
+      "w": "supplier",
+      "ipa": "/səˈplaɪɚ/",
+      "pos": "n.",
+      "cn": "供應商",
+      "def": "A company that sells parts or goods to another company.",
+      "ex": "A new supplier in Hanoi sent us free samples.",
+      "exCn": "河內一家新的供應商寄了免費樣品給我們。"
+    },
+    {
+      "w": "treatment",
+      "ipa": "/ˈtriːtmənt/",
+      "pos": "n.",
+      "cn": "治療",
+      "def": "What a doctor does to make someone better.",
+      "ex": "Her treatment cost less than she expected.",
+      "exCn": "她的治療費用比她預期的少。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many sessions will Anita have finished by the first Monday of December?",
+      "qCn": "到十二月第一個星期一，Anita會做完幾次療程？",
+      "opts": [
+        "A. Four",
+        "B. Six",
+        "C. Eight",
+        "D. Ten"
+      ],
+      "optsCn": [
+        "A. 四次",
+        "B. 六次",
+        "C. 八次",
+        "D. 十次"
+      ],
+      "ans": 1,
+      "expl": "By that Monday she will have finished only six of them.——八次是整個療程的總數，到稽核開始的那個星期一只完成六次，所以還剩兩次。"
+    },
+    {
+      "q": "What did Mai agree to do?",
+      "qCn": "Mai答應做什麼？",
+      "opts": [
+        "A. Write the supplier report",
+        "B. Drive Anita to therapy",
+        "C. Take the Friday line walk",
+        "D. Talk to the auditors"
+      ],
+      "optsCn": [
+        "A. 寫供應商報告",
+        "B. 載Anita去復健",
+        "C. 代星期五的產線巡查",
+        "D. 跟稽核員談"
+      ],
+      "ans": 2,
+      "expl": "Mai agreed to take the Friday line walk for three weeks.——供應商報告是Anita自己移到星期三寫的，不是Mai接手。"
+    },
+    {
+      "q": "According to the last paragraph, what happens to colleagues who stop treatment in week two?",
+      "qCn": "根據最後一段，第二週就停掉治療的同事後來會怎樣？",
+      "opts": [
+        "A. They recover faster",
+        "B. They pay a smaller bill",
+        "C. The same ache returns a year later",
+        "D. The company sends them home"
+      ],
+      "optsCn": [
+        "A. 復原得更快",
+        "B. 帳單變少",
+        "C. 一年後同樣的痛又回來",
+        "D. 公司讓他們回家休養"
+      ],
+      "ans": 2,
+      "expl": "...the same ache a year later, and a longer course.——Anita看過的結局是痛會回來，而且療程更長，所以停掉治療並沒有省到時間。"
+    },
+    {
+      "q": "Which sentence means \"at that moment she will be in the middle of the treatment\"?",
+      "qCn": "哪一句的意思是「在那一刻她正在接受治療的中途」？",
+      "opts": [
+        "A. She will have finished the therapy by then.",
+        "B. She will still be lying on the table then.",
+        "C. She will lie on the table then.",
+        "D. She lies on the table then."
+      ],
+      "optsCn": [
+        "A. 到那時她已經做完復健了。",
+        "B. 到那時她還會躺在床上。",
+        "C. 到那時她會躺上床。",
+        "D. 她那時躺在床上。"
+      ],
+      "ans": 1,
+      "expl": "will be + V-ing 把鏡頭停在未來的某一刻，看到的是「正在進行中」。A 的 will have finished 是已經完成；C 的 will lie 只說會發生一次這個動作，像是剛躺下去；D 是現在簡單式，講的是習慣。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "In December the audit will finish and she will finish her therapy too.",
+      "b2": "By the middle of December the audit will have come and gone, and the therapy will have run its full month.",
+      "note": "第一句把兩件事排成「會發生」，讀者還得自己推時間先後。改成 by + 時間點 加 will have 加過去分詞，兩件事就被同一條截止線綁在一起：到那天為止，兩件都已經結束。come and gone 這種成對動詞在 will have 後面特別常見，語氣帶一點「終於過去了」。",
+      "b1Cn": "十二月稽核會結束，她的復健也會結束。",
+      "b2Cn": "到十二月中，稽核已經來過也走了，復健也跑完整整一個月。"
+    },
+    {
+      "b1": "Next month at this time she will lie on the table again.",
+      "b2": "This time next month she will still be lying on that table.",
+      "note": "will lie 只說「會躺上去」，像是講一個會發生一次的動作；加上 still be lying，鏡頭就停在未來那一刻的中途，而且 still 帶出「到那時候居然還沒結束」的語氣。報導與敘事要讓讀者感覺到時間的長度時，用的就是這個形狀。",
+      "b1Cn": "下個月這個時候她會再躺上那張床。",
+      "b2Cn": "下個月的這個時候，她還會躺在那張床上。"
+    }
+  ]
+},
 /* ---------- 2026-11-04 每日文章（天災與天氣：颱風Champi與那句「我來」） ---------- */
 {
   "id": "d20261104a2",
@@ -14712,6 +15491,867 @@ articles:[
 ],
 
 grammar:[
+/* ---------- 2026-11-11 每日文法（I will and I am going to／will be doing and will have done） ---------- */
+{
+  "id": "dg20261111a2",
+  "date": "2026-11-11",
+  "unitNo": 23,
+  "level": "A2",
+  "title": "I'll or I'm Going To: When Did You Decide?",
+  "titleCn": "你是什麼時候決定的：I'll 與 I'm going to",
+  "srcDays": [],
+  "summary": "同一件未來的事，英文要看你是什麼時候決定的。話說出口那一秒才決定，用 I'll；開口之前就打算好了，用 I'm going to。兩個後面都接原形動詞，差別不在動作，在決定。",
+  "sections": [
+    {
+      "h": "兩個都講未來，差在決定的時間",
+      "body": "中文說「我要去看醫生」，不管你是昨天決定的還是剛剛才想到的，講出來都是同一句。英文不行：它要你把「什麼時候決定」放進動詞的形狀裡。剛剛才決定用 I'll，開口之前就定好用 I'm going to。這一條是這個單元唯一的分界線，先把它記牢，後面的細節都是從這裡長出來的。",
+      "table": {
+        "head": [
+          "你什麼時候決定的",
+          "用哪一個",
+          "例句"
+        ],
+        "rows": [
+          [
+            "話說出口那一秒",
+            "I'll + 原形動詞",
+            "I'll turn the fan on."
+          ],
+          [
+            "開口之前就打算好",
+            "I'm going to + 原形動詞",
+            "I'm going to paint my door."
+          ],
+          [
+            "已經跟別人約好時間",
+            "現在進行式",
+            "I'm meeting her at six."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The baby is crying. I'll pick her up.",
+          "cn": "寶寶在哭，我去抱她。",
+          "note": "聽到哭聲才決定，所以用 I'll"
+        },
+        {
+          "en": "I'm going to clean my room on Sunday.",
+          "cn": "我星期天要打掃房間。",
+          "note": "星期天的打算，早就想好了"
+        },
+        {
+          "en": "I'm going to take the early bus tomorrow.",
+          "cn": "我明天要搭早班公車。",
+          "note": "計畫，不是這一秒才想到"
+        }
+      ]
+    },
+    {
+      "h": "be going to 的形狀有三塊",
+      "body": "I'll 只有兩塊，很好記。be going to 多一塊，就多一個出錯的地方：前面的 be 動詞要跟主詞變，中間的 going to 兩個字永遠不動，後面一定是字典上那個形狀的動詞。台灣學生最常漏掉的是中間那個 to，因為中文裡沒有對應的零件，寫快一點就不見了。",
+      "table": {
+        "head": [
+          "主詞",
+          "be 動詞",
+          "going to",
+          "動詞"
+        ],
+        "rows": [
+          [
+            "I",
+            "am",
+            "going to",
+            "rest"
+          ],
+          [
+            "He",
+            "is",
+            "going to",
+            "call"
+          ],
+          [
+            "They",
+            "are",
+            "going to",
+            "wait"
+          ]
+        ]
+      },
+      "bullets": [
+        "肯定：主詞 + am / is / are + going to + 原形動詞",
+        "否定：not 放在 be 動詞後面，不要放到 going 後面",
+        "問句：把 be 動詞搬到主詞前面，going to 不動"
+      ],
+      "examples": [
+        {
+          "en": "She is going to bring her own cup.",
+          "cn": "她要自己帶杯子來。",
+          "note": "主詞是 she，所以用 is"
+        },
+        {
+          "en": "We are not going to wait outside.",
+          "cn": "我們不要在外面等。",
+          "note": "not 放在 are 後面"
+        },
+        {
+          "en": "Are you going to join us?",
+          "cn": "你要跟我們一起嗎？",
+          "note": "問句把 are 提到最前面"
+        }
+      ]
+    },
+    {
+      "h": "眼前看得出來的事，用 going to",
+      "body": "講「我覺得會怎樣」的時候也分兩種。如果眼前已經有東西讓你看出來——烏雲、空油表、搖搖晃晃的杯子——英文用 be going to，因為證據就在那裡。如果只是你的想法，沒有東西可以指，那就用 will。這一條跟上面那條其實是同一個精神：有沒有「已經存在的東西」在支持你。",
+      "bullets": [
+        "眼前已經有證據：be going to",
+        "只是你的想法、指不出證據：will"
+      ],
+      "examples": [
+        {
+          "en": "Look at the sky. It's going to rain.",
+          "cn": "你看天空，要下雨了。",
+          "note": "烏雲就是證據"
+        },
+        {
+          "en": "I think the bus will be late today.",
+          "cn": "我覺得今天公車會遲到。",
+          "note": "只是猜，沒有東西可以指"
+        },
+        {
+          "en": "That glass is going to fall.",
+          "cn": "那個杯子要掉下去了。",
+          "note": "已經在桌邊搖了，看得出來"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I will buy a ticket tomorrow.",
+      "good": "I'm going to buy a ticket tomorrow.",
+      "why": "如果票是你昨天就決定要買的，用 will 會讓對方以為你剛剛才想到。寫之前先問自己一句：我是什麼時候決定的？昨天決定就用 be going to。"
+    },
+    {
+      "bad": "I am going to help you with that box.",
+      "good": "I'll help you with that box.",
+      "why": "你是看到箱子才決定幫忙，這是當場的決定，一定用 I'll。be going to 會變成「我早就計畫好要幫這個忙」，對方聽起來很奇怪。"
+    },
+    {
+      "bad": "She is going help me.",
+      "good": "She is going to help me.",
+      "why": "going 和動詞之間的 to 不能省。中文沒有這個零件，所以最容易漏掉；請把 going to 當成一整組，搬的時候一起搬。"
+    },
+    {
+      "bad": "Look at those clouds, it will rain.",
+      "good": "Look at those clouds, it's going to rain.",
+      "why": "你已經叫對方看烏雲了，證據就在眼前，這種時候英文用 be going to。will 留給沒有證據、純粹是你想法的猜測。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The phone is ringing. I ___ get it.",
+      "qCn": "電話在響，我去接。",
+      "opts": [
+        "A. will",
+        "B. am going to",
+        "C. get",
+        "D. getting"
+      ],
+      "ans": 0,
+      "expl": "聽到電話響才決定去接，是這一秒的決定，用 will 加原形動詞。am going to 會變成你早就計畫好要接這通電話；get 少了未來；getting 前面缺 be 動詞。"
+    },
+    {
+      "q": "I bought the train ticket last night. I ___ visit my grandmother next weekend.",
+      "qCn": "我昨天晚上買好火車票了。我下個週末要去看奶奶。",
+      "opts": [
+        "A. will",
+        "B. am going to",
+        "C. visit",
+        "D. am visit"
+      ],
+      "ans": 1,
+      "expl": "票昨天就買了，表示決定早就做好，用 be going to。will 聽起來像你現在才想到要去；visit 是現在簡單式，講習慣；am visit 把 be 動詞和原形動詞硬放在一起，英文沒有這種形狀。"
+    },
+    {
+      "q": "___ you going to call the clinic this morning?",
+      "qCn": "你今天早上要打電話給診所嗎？",
+      "opts": [
+        "A. Are",
+        "B. Do",
+        "C. Will",
+        "D. Is"
+      ],
+      "ans": 0,
+      "expl": "going to 的問句要把 be 動詞提到主詞前面，主詞是 you 所以用 Are。Do 和 Will 後面不能接 going to；Is 配的是 he、she、it。"
+    },
+    {
+      "q": "The sky is very dark now. It ___ rain.",
+      "qCn": "現在天很暗，要下雨了。",
+      "opts": [
+        "A. will",
+        "B. is going to",
+        "C. rains",
+        "D. raining"
+      ],
+      "ans": 1,
+      "expl": "天色已經暗了，證據在眼前，所以用 be going to。will 用在沒有證據的猜測；rains 是現在簡單式，講的是天氣的習慣；raining 前面少了 be 動詞。"
+    }
+  ]
+},
+{
+  "id": "dg20261111b1",
+  "date": "2026-11-11",
+  "unitNo": 23,
+  "level": "B1",
+  "title": "Decided Just Now, or Decided Already?",
+  "titleCn": "剛剛才決定，還是早就決定了",
+  "srcDays": [],
+  "summary": "will 和 be going to 都指向未來，分界卻在過去：決定發生在你開口的那一秒用 will，決定在開口之前就做好了用 be going to。預測也照同一條線分——眼前有證據用 going to，純粹判斷用 will。",
+  "sections": [
+    {
+      "h": "一條線，兩邊各站一個",
+      "body": "很多人以為 will 和 be going to 差在「多久以後」或「確定的程度」，其實都不是。真正的分界是一條垂直線，畫在你開口的那一刻：決定掉在線的右邊（也就是說話的同時），用 will；掉在線的左邊（開口之前），用 be going to。所以判斷的問題不是「這件事什麼時候發生」，而是「我是什麼時候決定的」。",
+      "table": {
+        "head": [
+          "決定的時刻",
+          "說法",
+          "例句"
+        ],
+        "rows": [
+          [
+            "一邊說一邊決定",
+            "will",
+            "Fine, I'll take the late shift."
+          ],
+          [
+            "開口之前就決定好",
+            "be going to",
+            "I'm going to ask for two days off."
+          ],
+          [
+            "之前決定、後來沒做",
+            "was going to",
+            "I was going to email him, but I forgot."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "There is no milk left. I'll pick some up on the way home.",
+          "cn": "牛奶沒了，我回家路上順便買。",
+          "note": "打開冰箱才決定，用 will"
+        },
+        {
+          "en": "I'm going to look for a new apartment in March.",
+          "cn": "我三月要開始找新房子。",
+          "note": "計畫已經在心裡放了一段時間"
+        },
+        {
+          "en": "She was going to drive, but the road was closed.",
+          "cn": "她本來要開車，但路封了。",
+          "note": "was going to 幾乎都接一個 but"
+        }
+      ]
+    },
+    {
+      "h": "預測分兩種：指得出證據，和指不出來",
+      "body": "講未來的「我覺得會怎樣」時，英文也要你交代根據。如果現在就有東西讓人看出結果——排到門外的隊伍、亮紅燈的儀表、已經腫起來的腳踝——用 be going to，意思是「照這個樣子下去就會這樣」。如果你只是憑經驗或感覺判斷，沒有現場的東西可以指，用 will。兩種都正確，選錯的代價是對方抓不到你有沒有把握。",
+      "table": {
+        "head": [
+          "你的根據",
+          "說法",
+          "例句"
+        ],
+        "rows": [
+          [
+            "現場就有證據",
+            "be going to",
+            "The line is going to take an hour."
+          ],
+          [
+            "只是你的判斷",
+            "will",
+            "I think it will be quiet after lunch."
+          ],
+          [
+            "幾乎確定的事實",
+            "will",
+            "The clinic will close at eleven."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "His ankle is already swollen. It's going to hurt tomorrow.",
+          "cn": "他腳踝已經腫了，明天會痛。",
+          "note": "腫起來就是證據"
+        },
+        {
+          "en": "I'm sure the doctor will say the same thing.",
+          "cn": "我確定醫生會說一樣的話。",
+          "note": "憑經驗判斷，沒有現場證據"
+        },
+        {
+          "en": "The results will arrive in three working days.",
+          "cn": "報告三個工作日會到。",
+          "note": "制度上就是這樣，用 will 最乾淨"
+        }
+      ]
+    },
+    {
+      "h": "be going to 和現在進行式差在哪裡",
+      "body": "兩個都可以講未來，差別在「這件事有沒有跟別人敲定」。be going to 是你的打算，可能只存在你心裡；現在進行式是已經有時間、地點，或是對方也知道的安排。所以講給人聽的時候，現在進行式聽起來比較「定了」，be going to 聽起來比較「我打算」。這一組中文都說「我要」，一定要靠上下文自己判斷。",
+      "table": {
+        "head": [
+          "狀態",
+          "說法",
+          "例句"
+        ],
+        "rows": [
+          [
+            "只是我的打算",
+            "be going to",
+            "I'm going to start running again."
+          ],
+          [
+            "已經約好、別人也知道",
+            "現在進行式",
+            "I'm running with Mai on Saturday."
+          ],
+          [
+            "時刻表上的事",
+            "現在簡單式",
+            "The gym opens at six."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I'm going to book a dental check sometime this month.",
+          "cn": "我這個月要找時間約牙科檢查。",
+          "note": "還沒打電話，只是打算"
+        },
+        {
+          "en": "I'm seeing the dentist at four on Friday.",
+          "cn": "我星期五四點看牙醫。",
+          "note": "時間已經敲定"
+        },
+        {
+          "en": "The last train leaves at eleven twenty.",
+          "cn": "末班車十一點二十開。",
+          "note": "時刻表用現在簡單式"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I think I'm going to call you tonight.",
+      "good": "I think I'll call you tonight.",
+      "why": "I think 前面擺著，表示你是正在判斷、正在決定，所以後面要用 will。中文的「我想我會」很容易讓人順手寫成 going to，但那會變成「我早就計畫好今晚打給你」，跟 I think 的語氣打架。"
+    },
+    {
+      "bad": "We are going to move the meeting. I just decided.",
+      "good": "We'll move the meeting. I just decided.",
+      "why": "自己都說 I just decided 了，決定就落在說話這一刻，應該用 will。be going to 把決定推到開口之前，兩句話會互相矛盾——這是審閱信件時最常被挑出來的不一致。"
+    },
+    {
+      "bad": "Look, the bus will leave without us.",
+      "good": "Look, the bus is going to leave without us.",
+      "why": "你已經叫對方看了，證據就在眼前，英文用 be going to。這裡用 will 會聽起來像在發表一個遙遠的猜測，跟你急著要人快跑的語氣完全不合。"
+    },
+    {
+      "bad": "I will going to rest at home.",
+      "good": "I'm going to rest at home.",
+      "why": "will 和 be going to 是兩套不同的零件，不能疊在一起用。寫出這種句子通常是想加強語氣，但英文的加強方式是換副詞（definitely、really），不是把兩個未來式黏起來。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "A: We need someone to take the samples upstairs. B: OK, I ___ do it.",
+      "qCn": "A：樣品需要有人送上樓。B：好，我來。",
+      "opts": [
+        "A. will",
+        "B. am going to",
+        "C. do",
+        "D. was going to"
+      ],
+      "ans": 0,
+      "expl": "對方開口你才接下來，決定落在說話這一刻，用 will。am going to 表示開口之前就打算好；do 是現在簡單式；was going to 是過去的打算。"
+    },
+    {
+      "q": "I ___ change jobs next year. I started looking in September.",
+      "qCn": "我明年要換工作，九月就開始找了。",
+      "opts": [
+        "A. will",
+        "B. am going to",
+        "C. change",
+        "D. will be"
+      ],
+      "ans": 1,
+      "expl": "九月就開始找，表示這個決定早就做好了，用 be going to。will 會聽起來像剛剛才冒出這個念頭；change 是現在簡單式；will be 後面接不了原形動詞。"
+    },
+    {
+      "q": "Careful, that pile of boxes ___ fall.",
+      "qCn": "小心，那堆箱子要倒了。",
+      "opts": [
+        "A. will",
+        "B. is going to",
+        "C. falls",
+        "D. is falling"
+      ],
+      "ans": 1,
+      "expl": "箱子已經在搖，證據就在眼前，所以用 be going to。will 用在沒有現場證據的判斷；falls 講的是習慣；is falling 表示它現在正在倒下，但你要講的是「馬上就會」。"
+    },
+    {
+      "q": "I ___ hand in the report yesterday, but the printer broke.",
+      "qCn": "我本來昨天要交報告，但印表機壞了。",
+      "opts": [
+        "A. will",
+        "B. am going to",
+        "C. was going to",
+        "D. will have"
+      ],
+      "ans": 2,
+      "expl": "事情發生在昨天，而且後面接 but 表示沒做到，這是 was going to 的典型用法。will 和 am going to 都指向未來；will have 要配過去分詞，而且意思完全不同。"
+    }
+  ]
+},
+{
+  "id": "dg20261111b1p",
+  "date": "2026-11-11",
+  "unitNo": 24,
+  "level": "B1+",
+  "title": "will be doing and will have done",
+  "titleCn": "未來進行式與未來完成式",
+  "srcDays": [],
+  "summary": "兩個形狀都要先在未來釘一個時間點。will be doing 把鏡頭停在那一刻，看到的是動作正在跑；will have done 把那一刻當成截止線，看到的是動作已經結束。前者回答「那時候我在做什麼」，後者回答「到那時候做完了沒有」。",
+  "sections": [
+    {
+      "h": "先釘時間點，再決定看進行還是看完成",
+      "body": "這兩個形狀最容易被當成「比較難的未來式」隨便亂用，其實它們都不是在講時間，是在講進度。寫句子的順序應該反過來：先決定未來那個時間點是什麼（明天十點、下週一、年底），再問自己到那一刻動作是還在跑，還是已經結束。還在跑就是 will be doing，已經結束就是 will have done。",
+      "table": {
+        "head": [
+          "到那個時間點",
+          "形狀",
+          "例句"
+        ],
+        "rows": [
+          [
+            "動作還在跑",
+            "will be + V-ing",
+            "At ten tomorrow I'll be driving to the plant."
+          ],
+          [
+            "動作已經結束",
+            "will have + 過去分詞",
+            "By Friday I'll have signed the report."
+          ],
+          [
+            "動作只是會發生",
+            "will + 原形動詞",
+            "I'll drive to the plant tomorrow."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Don't call me at nine. I'll be sitting in the dentist's chair.",
+          "cn": "九點別打給我，那時候我在牙醫的椅子上。",
+          "note": "九點那一刻動作正在進行"
+        },
+        {
+          "en": "By the end of the month she'll have taken six classes.",
+          "cn": "到月底她會上完六堂課。",
+          "note": "月底是截止線，數到那裡已經完成"
+        },
+        {
+          "en": "We'll know the answer next week.",
+          "cn": "我們下週就知道答案了。",
+          "note": "只是會發生，不必用花俏的形狀"
+        }
+      ]
+    },
+    {
+      "h": "will be doing 的第二個工作：不帶壓力地問行程",
+      "body": "除了「某一刻正在進行」，will be doing 還有一個很實用的用途：問別人的安排，而且不給對方壓力。Will you be using the printer this afternoon 問的是「你下午本來就會用嗎」，純粹打聽事實；Will you use the printer 聽起來像在請對方去用，或在要求他配合。中文的「你下午會用印表機嗎」分不出這兩層，但英文母語者聽得很清楚，辦公室英文裡這個差別常常比文法課本教的更有用。",
+      "bullets": [
+        "問對方本來的安排：Will you be + V-ing + …？",
+        "請對方做某件事：Will you + 原形動詞 + …？",
+        "講自己既定的行程也可以用：I'll be going past the post office anyway."
+      ],
+      "examples": [
+        {
+          "en": "Will you be working late tonight?",
+          "cn": "你今天晚上本來就會留下來加班嗎？",
+          "note": "打聽安排，沒有要求的意思"
+        },
+        {
+          "en": "Will you work late tonight?",
+          "cn": "你今天晚上可以留下來加班嗎？",
+          "note": "這一句聽起來是請求"
+        },
+        {
+          "en": "I'll be passing the pharmacy on my way back.",
+          "cn": "我回來的路上本來就會經過藥局。",
+          "note": "既定行程，不是特地為你去"
+        }
+      ]
+    },
+    {
+      "h": "will have done 跟 by 幾乎形影不離",
+      "body": "未來完成式幾乎都跟一個「截止線」一起出現，而英文標截止線的字就是 by：by Friday、by the end of the year、by the time she arrives。看到 by 加時間，就該想到 will have done；反過來，寫 will have done 的時候如果句子裡找不到截止線，通常是用錯了。要特別注意 by the time 後面接的是現在式，不是未來式。",
+      "table": {
+        "head": [
+          "截止線的寫法",
+          "句子",
+          "中文"
+        ],
+        "rows": [
+          [
+            "by + 時間點",
+            "By December I'll have paid off the loan.",
+            "到十二月我就把貸款還完了"
+          ],
+          [
+            "by the time + 現在式",
+            "By the time you land, I'll have left the office.",
+            "你落地的時候我已經離開辦公室了"
+          ],
+          [
+            "in + 時間長度",
+            "In two weeks they'll have finished the floor.",
+            "再過兩週他們就把地板做完了"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "By the time the auditors arrive, we'll have printed every record.",
+          "cn": "稽核員到的時候，我們已經把每一份紀錄印好了。",
+          "note": "by the time 後面用現在式 arrive"
+        },
+        {
+          "en": "She'll have been here for a year in April.",
+          "cn": "到四月她就在這裡滿一年了。",
+          "note": "講到某個時間點累積多久"
+        },
+        {
+          "en": "I hope the rain will have stopped before the parade.",
+          "cn": "我希望遊行之前雨已經停了。",
+          "note": "before 也可以當截止線"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "At eight tomorrow I will have dinner with my parents, so don't call.",
+      "good": "At eight tomorrow I'll be having dinner with my parents, so don't call.",
+      "why": "你要講的是「八點那一刻我正在吃」，所以要用 will be having。will have dinner 只說這件事會發生，聽不出那一刻你忙不忙，後面的 don't call 就失去理由。"
+    },
+    {
+      "bad": "By the time you will arrive, I will have left.",
+      "good": "By the time you arrive, I'll have left.",
+      "why": "by the time 已經把句子推到未來了，後面的子句一定用現在式。中文的「等你到的時候」沒有時態，所以很多人會在兩邊都塞 will，結果句子重複標了兩次未來。"
+    },
+    {
+      "bad": "I will have finished the course in 2028.",
+      "good": "By 2028 I'll have finished the course.",
+      "why": "in 2028 是「在那一年裡面」，跟完成式的截止線概念打架。未來完成式要搭 by：by 2028 的意思是「二〇二八年到之前就已經完成」，時間的邏輯才對得上。"
+    },
+    {
+      "bad": "Will you be helping me with this box?",
+      "good": "Will you help me with this box?",
+      "why": "你是在請對方幫忙，這是請求，要用 Will you help。Will you be helping 問的是「你本來就會幫這件事嗎」，用來拜託人會顯得莫名其妙，像在確認對方的班表。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Don't ring me at seven tomorrow. I ___ on the shuttle bus.",
+      "qCn": "明天七點別打給我，那時候我在接駁車上。",
+      "opts": [
+        "A. will be sitting",
+        "B. will have sat",
+        "C. will sit",
+        "D. sit"
+      ],
+      "ans": 0,
+      "expl": "七點那一刻動作正在進行，用 will be + V-ing。will have sat 表示那時候已經坐完了；will sit 只說這件事會發生，聽不出那一刻你不方便；sit 是現在簡單式。"
+    },
+    {
+      "q": "The course lasts eight weeks. By the middle of January he ___ all of it.",
+      "qCn": "課程有八週。到一月中他就把整個課程上完了。",
+      "opts": [
+        "A. will be finishing",
+        "B. will have finished",
+        "C. will finish",
+        "D. finishes"
+      ],
+      "ans": 1,
+      "expl": "by the middle of January 是截止線，問的是到那時候做完了沒有，用 will have 加過去分詞。will be finishing 是那一刻正在收尾；will finish 和 finishes 都沒有把「已經完成」講出來。"
+    },
+    {
+      "q": "By the time the results ___ , the clinic will have closed.",
+      "qCn": "報告出來的時候，診所已經關門了。",
+      "opts": [
+        "A. will come",
+        "B. come",
+        "C. will have come",
+        "D. are coming"
+      ],
+      "ans": 1,
+      "expl": "by the time 後面的子句一定用現在式，所以是 come。三個帶 will 或進行式的選項都在同一個句子裡重複標了未來，英文不允許這樣疊。"
+    },
+    {
+      "q": "You want to know whether your colleague already plans to use the meeting room. You ask: \"___ the meeting room at two?\"",
+      "qCn": "你想知道同事兩點本來是不是就要用會議室。你問：「你兩點會用會議室嗎？」",
+      "opts": [
+        "A. Will you be using",
+        "B. Will you use",
+        "C. Are you use",
+        "D. Will you have used"
+      ],
+      "ans": 0,
+      "expl": "你只是打聽對方既定的安排，不是在請他去用，所以用 Will you be using。Will you use 聽起來像在請求或建議；Are you use 不是英文的形狀；Will you have used 問的是「到那時用完了沒有」。"
+    }
+  ]
+},
+{
+  "id": "dg20261111b2",
+  "date": "2026-11-11",
+  "unitNo": 24,
+  "level": "B2",
+  "title": "Standing at a Future Point and Looking Around",
+  "titleCn": "站到未來的那一刻，再決定往哪邊看",
+  "srcDays": [],
+  "summary": "把未來某個時刻當成觀測站：站上去往四周看，動作還在跑就寫 will be doing，動作已經收尾就寫 will have done。這兩個形狀在報告、公告與敘事裡負責的不是時間，是進度與語氣。",
+  "sections": [
+    {
+      "h": "觀測站：形狀選的是視角，不是時間遠近",
+      "body": "進階學習者最常見的毛病是把 will be doing 和 will have done 當成「比較正式的未來式」，想讓句子看起來成熟一點就套上去。其實這兩個形狀都預設了一個觀測站：你先在未來站定一個位置，再決定鏡頭往哪邊轉。往動作中間看，寫進行式；往動作後面看，寫完成式。如果你的句子沒有這個觀測站，再漂亮的形狀都會讀起來空洞，而且母語讀者立刻感覺得出來。",
+      "table": {
+        "head": [
+          "觀測站",
+          "鏡頭方向",
+          "形狀與效果"
+        ],
+        "rows": [
+          [
+            "明天下午三點",
+            "動作正在跑",
+            "will be reviewing：讀者看見畫面"
+          ],
+          [
+            "本季結束之前",
+            "動作已經收尾",
+            "will have closed：讀者看見結果"
+          ],
+          [
+            "明年某個時候",
+            "沒有特定鏡頭",
+            "will review：只交代事情會發生"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "At three tomorrow the committee will be reviewing the second batch.",
+          "cn": "明天三點委員會正在審第二批。",
+          "note": "觀測站是三點，鏡頭對著進行中的動作"
+        },
+        {
+          "en": "Before the quarter closes, we will have cleared the backlog.",
+          "cn": "本季結束之前，我們會把積壓的件數清完。",
+          "note": "觀測站是季末，鏡頭對著結果"
+        },
+        {
+          "en": "The committee will review the second batch at some point.",
+          "cn": "委員會總會審到第二批。",
+          "note": "沒有觀測站，所以用最樸素的 will"
+        }
+      ]
+    },
+    {
+      "h": "語域：will be doing 是辦公室裡最客氣的問法",
+      "body": "在正式或半正式的場合，will be doing 常常不是在講時間，而是在收斂語氣。Will you be submitting the revised figures today 聽起來像在確認對方原本的安排；Will you submit the revised figures today 則帶著催促，甚至像上級的要求。寫信給客戶、問主管的行程、跟不熟的同事確認事情，選前者幾乎不會出錯。這是道地英文裡很細但很有用的一層，課本常常只用一句「問對方計畫」帶過。",
+      "bullets": [
+        "確認既有安排、語氣中性：Will you be + V-ing + …？",
+        "請求或催促、帶有要求：Will you + 原形動詞 + …？",
+        "說明自己的行程順便幫忙：I'll be going that way anyway, so …"
+      ],
+      "examples": [
+        {
+          "en": "Will you be joining the call from the Hanoi office?",
+          "cn": "你是從河內辦公室加入這場會議嗎？",
+          "note": "純粹確認安排，不含要求"
+        },
+        {
+          "en": "Will you join the call and explain the deviation?",
+          "cn": "你可以加入會議說明那個異常嗎？",
+          "note": "這一句是請求"
+        },
+        {
+          "en": "I'll be stopping at the lab anyway, so leave the samples with me.",
+          "cn": "我本來就會去實驗室一趟，樣品給我吧。",
+          "note": "用既定行程把幫忙說得很輕"
+        }
+      ]
+    },
+    {
+      "h": "will have been doing：到那一刻已經持續多久",
+      "body": "再往上一層是未來完成進行式。它要回答的不是「做完了沒有」，而是「到那一刻已經連續做了多久」，所以句子裡一定會出現一段長度：for three years、for six weeks。這個形狀在履歷、年度報告、紀念文字裡特別常見，因為它把「累積」寫成一個可以被引用的數字。要注意的是，它跟 will have done 分工清楚：一個算時間長度，一個算結果。",
+      "table": {
+        "head": [
+          "你想說的",
+          "形狀",
+          "例句"
+        ],
+        "rows": [
+          [
+            "到那一刻已經連續多久",
+            "will have been + V-ing",
+            "In March she'll have been managing the line for two years."
+          ],
+          [
+            "到那一刻完成了幾件",
+            "will have + 過去分詞",
+            "By March she'll have trained nine operators."
+          ],
+          [
+            "那一刻正在做",
+            "will be + V-ing",
+            "In March she'll be training the night shift."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "By the time the contract ends, we'll have been working together for a decade.",
+          "cn": "合約結束的時候，我們已經合作十年了。",
+          "note": "重點在十年這個長度"
+        },
+        {
+          "en": "Next winter he'll have been studying Vietnamese for three years.",
+          "cn": "明年冬天他學越南語就滿三年了。",
+          "note": "履歷與自我介紹很常用"
+        },
+        {
+          "en": "That machine will have been running non-stop since April.",
+          "cn": "那台機器從四月起就沒停過了。",
+          "note": "since 標起點，長度自己算"
+        }
+      ]
+    },
+    {
+      "h": "寫作效果：完成式交代進度，進行式製造畫面",
+      "body": "把這兩個形狀放進同一段文字，可以做出很清楚的層次：先用 will have done 把讀者帶到截止線，交代哪些已經結束；再用 will be doing 把鏡頭推進那一刻的現場，讓讀者看到人還在動。報導與企劃書常常這樣寫，因為單純堆 will 會讓整段讀起來像清單。反過來說，如果一段裡每一句都用這兩個形狀，效果就被稀釋了——它們是重音，不是底色。",
+      "examples": [
+        {
+          "en": "By then the line will have passed its validation, and the night shift will be running it alone.",
+          "cn": "到那時產線已經通過驗證，夜班會自己獨立運轉。",
+          "note": "一句裡完成式交代進度、進行式給畫面"
+        },
+        {
+          "en": "By the time the rain arrives, the roof crew will have gone home.",
+          "cn": "雨來的時候，屋頂的工班已經回家了。",
+          "note": "完成式把兩件事排出先後"
+        },
+        {
+          "en": "This time next year nobody will be asking about the old system.",
+          "cn": "明年的這個時候，沒有人會再問舊系統的事了。",
+          "note": "進行式把未來的某一刻寫成現場"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "In five years I will have been finishing my master's degree.",
+      "good": "In five years I will have finished my master's degree.",
+      "why": "finish 是一次就結束的動作，沒有「持續在完成」的狀態，所以不能放進完成進行式。完成進行式要搭可以拉長的動作，例如 work、study、manage；想講學位拿到了，用 will have finished。"
+    },
+    {
+      "bad": "Will you be sending me the report, please?",
+      "good": "Will you send me the report, please?",
+      "why": "加了 please 就明白是請求，這時候要用 Will you send。Will you be sending 問的是對方原本的安排，跟 please 的拜託語氣互相抵消，讀起來會卡。兩種形狀都對，但不能混在同一句裡。"
+    },
+    {
+      "bad": "By next month we will be having completed the move.",
+      "good": "By next month we will have completed the move.",
+      "why": "will be having completed 把進行式和完成式硬疊成四層，英文沒有這種形狀。想講截止線之前已經完成，就只用 will have 加過去分詞；想講那一刻正在搬，才是 will be moving。"
+    },
+    {
+      "bad": "At the end of 2027 the programme will have been paired every station.",
+      "good": "By the end of 2027 every station will have been paired with a hospital.",
+      "why": "這一句有兩個問題：at the end of 應該換成 by，截止線才站得住；而且 pair 的動作是落在 station 身上，主詞要換成被配對的那一方，用 will have been paired 的被動。寫公告時先確定誰是受影響的人，再決定主詞。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Which sentence politely asks about a colleague's existing plan, without pushing them?",
+      "qCn": "哪一句是客氣地打聽同事原本的安排，而不是在催他？",
+      "opts": [
+        "A. Will you be attending the supplier review?",
+        "B. Will you attend the supplier review?",
+        "C. Do you attend the supplier review?",
+        "D. Are you attend the supplier review?"
+      ],
+      "optsCn": [
+        "A. 你原本就會參加供應商審查會嗎？",
+        "B. 你可以參加供應商審查會嗎？",
+        "C. 你平常都參加供應商審查會嗎？",
+        "D. （不是英文的形狀）"
+      ],
+      "ans": 0,
+      "expl": "will be + V-ing 問的是對方既定的安排，語氣最中性。B 的 will you attend 帶著請求或催促；C 的現在簡單式在問習慣；D 把 be 動詞和原形動詞放在一起，英文沒有這種形狀。"
+    },
+    {
+      "q": "She joined the line in March 2025. In March 2028 she ___ it for three years.",
+      "qCn": "她二〇二五年三月接下那條產線。到二〇二八年三月，她就管了三年。",
+      "opts": [
+        "A. will have been managing",
+        "B. will have managed",
+        "C. will be managing",
+        "D. will manage"
+      ],
+      "ans": 0,
+      "expl": "句子裡有 for three years 這一段長度，而且動作是連續的，所以用 will have been + V-ing。will have managed 算的是完成的件數；will be managing 只講那一刻在做；will manage 什麼都沒交代。"
+    },
+    {
+      "q": "A report says: \"___ the audit begins, the corrective actions will have been closed.\"",
+      "qCn": "報告寫：「稽核開始的時候，矯正措施已經結案了。」",
+      "opts": [
+        "A. By the time",
+        "B. By",
+        "C. Until",
+        "D. While"
+      ],
+      "ans": 0,
+      "expl": "後面接的是一個完整子句 the audit begins，所以要用 by the time；單獨的 by 後面只能接時間名詞。until 的意思是「一直到…才」，與這句的邏輯不合；while 講的是同時進行，但這裡要的是先後。"
+    },
+    {
+      "q": "Which sentence puts the reader inside the moment rather than reporting a result?",
+      "qCn": "哪一句把讀者帶進那一刻的現場，而不是只報告結果？",
+      "opts": [
+        "A. By noon the team will have packed the last pallet.",
+        "B. At noon the team will be packing the last pallet.",
+        "C. The team will pack the last pallet at noon.",
+        "D. The team packs the last pallet at noon."
+      ],
+      "optsCn": [
+        "A. 到中午團隊已經把最後一板打包完了。",
+        "B. 中午的時候團隊正在打包最後一板。",
+        "C. 團隊中午會打包最後一板。",
+        "D. 團隊中午打包最後一板。"
+      ],
+      "ans": 1,
+      "expl": "will be + V-ing 把鏡頭停在中午那一刻，讀者看到的是人還在動，這就是「現場感」。A 的完成式交代的是結果；C 只說事情會發生；D 的現在簡單式像在描述每天的流程。"
+    }
+  ]
+},
 /* ---------- 2026-11-04 每日文法（will and shall 2／I will and I am going to） ---------- */
 {
   "id": "dg20261104a2",

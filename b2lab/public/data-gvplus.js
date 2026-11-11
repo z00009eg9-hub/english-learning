@@ -32,6 +32,715 @@
    ⚠ 文字欄位一律寫純文字，不要寫 HTML 標籤（渲染時會被轉義顯示出來）。
    ============================================================ */
 window.GVPLUS = {
+/* ---------- 2026-11-11 每日文法（I will and I am going to／will be doing and will have done） ---------- */
+"dg20261111a2": {
+  "vis": true,
+  "oneLine": "動作一樣是未來的事，差的是你什麼時候決定——這一秒決定用 I'll，開口之前就打算好用 I'm going to。",
+  "map": {
+    "when": "要講一件還沒發生的事，而且想讓對方知道這是你剛剛決定的，還是本來就打算好的",
+    "why": "中文的「我要」不標示決定的時間，英文一定要標，不然對方分不出你是臨時幫忙還是早有計畫",
+    "form": "剛剛決定 主詞 + will + 原形動詞　|　早就打算 主詞 + be + going to + 原形動詞"
+  },
+  "visual": {
+    "type": "cols",
+    "cap": "三欄的動作都發生在未來，形狀卻不一樣。左欄是你一邊說一邊決定，中欄是開口之前心裡就有的打算，右欄是眼前已經有東西讓你看出結果。先看三欄的時間其實都在前面，再看每一欄前面掛了什麼零件，就會明白英文標的是決定，不是時間。語法重點：will 管當場的決定，be going to 管先前的打算與眼前的證據。",
+    "cols": [
+      {
+        "tag": "JUST NOW",
+        "tagCn": "這一秒決定",
+        "tone": 1,
+        "items": [
+          {
+            "en": "I'll close the window.",
+            "cn": "我去把窗戶關上。",
+            "nt": "看到雨飄進來才決定"
+          },
+          {
+            "en": "I'll answer the door.",
+            "cn": "我去開門。",
+            "nt": "聽到門鈴才決定"
+          }
+        ]
+      },
+      {
+        "tag": "ALREADY",
+        "tagCn": "早就打算",
+        "tone": 2,
+        "items": [
+          {
+            "en": "I'm going to cut my hair.",
+            "cn": "我要去剪頭髮。",
+            "nt": "想了好幾天了"
+          },
+          {
+            "en": "She's going to learn to swim.",
+            "cn": "她要去學游泳。",
+            "nt": "決定在開口之前"
+          }
+        ]
+      },
+      {
+        "tag": "I CAN SEE IT",
+        "tagCn": "看得出來",
+        "tone": 3,
+        "items": [
+          {
+            "en": "The cat is going to jump.",
+            "cn": "那隻貓要跳了。",
+            "nt": "牠已經蹲低了"
+          },
+          {
+            "en": "My phone is going to die.",
+            "cn": "我手機快沒電了。",
+            "nt": "電量只剩一格"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "now",
+      "icon": "bubble",
+      "title": "Decide while you speak",
+      "titleCn": "邊說邊決定",
+      "ask": "為什麼看到別人提不動東西，不能說 I am going to help you？",
+      "en": "I'll carry the bag for you.",
+      "cn": "我幫你拿那個袋子。",
+      "why": "因為你是看到那個畫面才決定要幫忙，決定和說話是同時發生的。be going to 把決定推到開口之前，等於告訴對方「我早就計畫好今天要幫你拿袋子」，那聽起來像你一路跟著他。英文的提議幾乎都縮成 I'll，就是因為這兩件事同時發生，講得越短越自然。"
+    },
+    {
+      "key": "plan",
+      "icon": "calendar",
+      "title": "Decided before you spoke",
+      "titleCn": "開口前就定了",
+      "ask": "明天的行程是昨天決定的，要用哪一個？",
+      "en": "I'm going to wash my shoes tonight.",
+      "cn": "我今天晚上要洗鞋子。",
+      "why": "用 be going to。決定在昨天就做好了，今天只是把它說出來，所以要選「決定在前」的那個形狀。很多人覺得 will 比較簡單就一直用它，結果每句話都像臨時起意；只要那件事你已經想過一陣子，就換成 be going to，對方才知道這是計畫。"
+    },
+    {
+      "key": "see",
+      "icon": "eye",
+      "title": "The proof is right there",
+      "titleCn": "證據就在眼前",
+      "ask": "為什麼叫對方看天空之後要用 going to？",
+      "en": "It's going to snow tonight.",
+      "cn": "今天晚上要下雪了。",
+      "why": "因為你已經把證據指給對方看了。英文的 be going to 除了講計畫，也講「照現在這個樣子下去就會這樣」，所以烏雲、空的油表、搖晃的杯子都會配 going to。will 留給沒有東西可以指、純粹是你想法的猜測，兩者在聽者耳裡的把握程度差很多。"
+    },
+    {
+      "key": "form",
+      "icon": "check",
+      "title": "Don't lose the little to",
+      "titleCn": "別把 to 弄丟",
+      "ask": "going 和動詞之間那個 to 可以省略嗎？",
+      "en": "He is going to open the shop at seven.",
+      "cn": "他七點要開店。",
+      "why": "不可以。going to 是一整組零件，中間的 to 跟 want to、need to 的 to 一樣不能拿掉。中文沒有對應的字，所以寫快一點就會漏；漏掉之後句子變成 is going open，讀起來像兩個動詞撞在一起。檢查的方法很簡單：唸出來的時候 going 後面一定要聽到一個輕輕的 to。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你跟同學走出教室，看到窗戶還開著，外面開始下雨。"
+    },
+    {
+      "label": "先問自己",
+      "text": "這件事是我剛剛看到才決定要做的嗎？是的話就走 will 這條路。"
+    },
+    {
+      "label": "決定形狀",
+      "text": "剛剛才決定，所以用 I'll 加原形動詞，不要用 be going to。"
+    },
+    {
+      "label": "組起來",
+      "text": "主詞加 will 再加原形動詞，說出來就是 I'll shut the windows."
+    },
+    {
+      "label": "換個情況",
+      "text": "如果這是老師昨天就交代你今天要做的事，同一個動作要改成 I'm going to shut them."
+    }
+  ],
+  "comparison": {
+    "title": "I'll（這一秒決定）　vs　I'm going to（早就決定）",
+    "left": {
+      "tag": "I'LL",
+      "tagCn": "剛剛才決定",
+      "icon": "arrow",
+      "head": "decided while speaking",
+      "headCn": "一邊說一邊決定",
+      "en": "I'll take the stairs.",
+      "cn": "我走樓梯。",
+      "pts": [
+        "決定和說話同時發生",
+        "常用在提議、答應、臨時改變",
+        "形狀只有兩塊：will 加原形動詞"
+      ]
+    },
+    "right": {
+      "tag": "GOING TO",
+      "tagCn": "早就決定",
+      "icon": "pin",
+      "head": "decided before speaking",
+      "headCn": "開口之前就定了",
+      "en": "I'm going to take the stairs every day.",
+      "cn": "我以後每天都要走樓梯。",
+      "pts": [
+        "決定在開口之前就做好了",
+        "也用在眼前有證據的預測",
+        "形狀有三塊，中間的 to 不能省"
+      ]
+    },
+    "note": "判斷口訣：先問「我是什麼時候決定的」。剛剛才決定就 I'll，之前就決定好就 going to。"
+  },
+  "quizMore": [
+    {
+      "q": "Someone knocks at the door. You say: \"I ___ see who it is.\"",
+      "opts": [
+        "will",
+        "am going to",
+        "see",
+        "seeing"
+      ],
+      "ans": 0,
+      "expl": "聽到敲門聲才決定去看，是當場的決定，用 will 加原形動詞。am going to 表示你早就計畫好要去看門；see 是現在簡單式；seeing 前面少了 be 動詞。"
+    },
+    {
+      "q": "My bag is already packed. I ___ leave at five tomorrow.",
+      "opts": [
+        "will",
+        "am going to",
+        "leave",
+        "am leave"
+      ],
+      "ans": 1,
+      "expl": "包包都打包好了，表示決定早就做好，用 be going to。will 聽起來像現在才想到要走；leave 是現在簡單式；am leave 把 be 動詞和原形動詞硬放在一起。"
+    }
+  ]
+},
+"dg20261111b1": {
+  "vis": true,
+  "oneLine": "分界不在未來，在過去——決定掉在你開口的那一刻就寫 will，掉在開口之前就寫 be going to。",
+  "map": {
+    "when": "講一件未來的事，而且想讓對方聽出這是臨時決定、既有計畫，還是有證據的預測",
+    "why": "英文用動詞形狀交代「決定的時刻」和「有沒有根據」，中文兩者都靠上下文，所以直譯一定會失真",
+    "form": "當場決定 will + 原形動詞　|　先前的打算 be going to + 原形動詞　|　原本打算卻沒做 was going to"
+  },
+  "visual": {
+    "type": "matrix",
+    "cap": "橫軸是你的決定或根據落在哪裡，縱軸是你在做哪一種事。左欄全部屬於 will：決定或判斷發生在你開口的同時；右欄全部屬於 be going to：決定早就做好，或證據就在現場。看完整張表，請把判斷的順序記成「先問決定的時刻，再問有沒有東西可以指」。語法重點：will 與 be going to 的分野是決定與根據，不是時間遠近。",
+    "cols": [
+      "說話這一刻才定下來",
+      "開口之前就定了／眼前有證據"
+    ],
+    "rows": [
+      {
+        "h": "我要做的事",
+        "cells": [
+          {
+            "en": "I'll swap shifts with Mai.",
+            "cn": "我跟Mai換班。",
+            "hi": true
+          },
+          {
+            "en": "I'm going to swap shifts in December.",
+            "cn": "我十二月要換班。"
+          }
+        ]
+      },
+      {
+        "h": "我不做的事",
+        "cells": [
+          {
+            "en": "I won't argue about the price.",
+            "cn": "價錢我不爭。",
+            "hi": true
+          },
+          {
+            "en": "I'm not going to argue with her again.",
+            "cn": "我不打算再跟她爭。"
+          }
+        ]
+      },
+      {
+        "h": "我對未來的看法",
+        "cells": [
+          {
+            "en": "I think the fever will drop tonight.",
+            "cn": "我覺得今晚會退燒。",
+            "hi": true
+          },
+          {
+            "en": "His fever is going to break soon.",
+            "cn": "他的燒快要退了。"
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "line",
+      "icon": "pin",
+      "title": "Put the decision on the line",
+      "titleCn": "把決定插在線上",
+      "ask": "判斷 will 或 going to 的第一個問題應該問什麼？",
+      "en": "I'll take the early appointment then.",
+      "cn": "那我約早一點的時段。",
+      "why": "要問的是「我是什麼時候決定的」，不是「這件事什麼時候發生」。很多人被課本的「will 比較不確定」誤導，結果一直用把握程度去判斷。正確的做法是在心裡畫一條線代表你開口的那一刻，把決定插上去：線的右邊用 will，左邊用 be going to。這一招對 90% 的句子都有效。"
+    },
+    {
+      "key": "proof",
+      "icon": "eye",
+      "title": "Can you point at it?",
+      "titleCn": "指得出證據嗎",
+      "ask": "為什麼眼前的隊伍會讓你改用 going to？",
+      "en": "That queue is going to take an hour.",
+      "cn": "那個隊伍要排一小時。",
+      "why": "因為隊伍就在那裡，你是照現在的狀況推出結果，這種有現場根據的預測英文用 be going to。如果你只是憑經驗說「這間診所下午人會比較少」，沒有東西可以指，就用 will。兩種都正確，但選錯會讓對方誤判你有多少把握——在工作場合這個差別比文法對錯更重要。"
+    },
+    {
+      "key": "arranged",
+      "icon": "calendar",
+      "title": "Plan or appointment?",
+      "titleCn": "打算還是約好了",
+      "ask": "已經跟別人敲定時間的事，為什麼不用 be going to？",
+      "en": "I'm collecting the results on Thursday morning.",
+      "cn": "我星期四早上去拿報告。",
+      "why": "因為現在進行式帶著「已經敲定、對方也知道」的意思，而 be going to 只是你的打算，還沒跟任何人約。中文都說「我要去拿報告」，英文卻分得很細：講 going to，同事會以為你還沒打電話；講現在進行式，他就知道時間已經定了，可以直接排班表。"
+    },
+    {
+      "key": "failed",
+      "icon": "fork",
+      "title": "I was going to, but",
+      "titleCn": "本來要，後來沒有",
+      "ask": "怎麼用一個形狀就表示「原本打算、結果沒做」？",
+      "en": "I was going to join the gym, but my shoulder started hurting.",
+      "cn": "我本來要去健身房，結果肩膀開始痛。",
+      "why": "用 was going to。它不只是 be going to 的過去式，而是一個有固定語氣的零件：講出來幾乎一定接著 but，等於先替對方準備好「後來沒成」這個轉折。如果你只說 I wanted to join the gym，聽起來像你還有機會去；was going to 則明確告訴對方計畫已經作廢了。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "主管在會議上問：這批退貨的報告誰要寫？"
+    },
+    {
+      "label": "先問自己",
+      "text": "我是現在才決定要接下來的嗎？還是我本來就打算寫？"
+    },
+    {
+      "label": "選邊站",
+      "text": "現在才決定接下來，決定落在說話的這一刻，所以走 will。"
+    },
+    {
+      "label": "組起來",
+      "text": "主詞加 will 再加原形動詞，說出來就是 I'll write it this afternoon."
+    },
+    {
+      "label": "換個情況",
+      "text": "如果你上週就跟同事講好要寫，同一件事要改成 I'm writing it this afternoon."
+    }
+  ],
+  "comparison": {
+    "title": "will（決定在說話這一刻）　vs　be going to（決定在開口之前）",
+    "left": {
+      "tag": "WILL",
+      "tagCn": "當場決定",
+      "icon": "bubble",
+      "head": "the decision happens now",
+      "headCn": "決定就發生在這一秒",
+      "en": "All right, I'll book it for you.",
+      "cn": "好，我幫你約。",
+      "pts": [
+        "提議、答應、拒絕、臨時改變",
+        "沒有現場證據的判斷也用它",
+        "常跟 I think、I'm sure、maybe 一起出現"
+      ]
+    },
+    "right": {
+      "tag": "GOING TO",
+      "tagCn": "早有打算",
+      "icon": "clock",
+      "head": "the decision was already made",
+      "headCn": "決定在開口之前就做好了",
+      "en": "I'm going to book a full check-up in January.",
+      "cn": "我一月要去約全身健檢。",
+      "pts": [
+        "心裡已經放了一段時間的打算",
+        "眼前有證據的預測也用它",
+        "過去式 was going to 幾乎都接 but"
+      ]
+    },
+    "note": "判斷口訣：決定在說話之後出現用 will，在說話之前就存在用 going to；指得出證據的預測也歸 going to。"
+  },
+  "quizMore": [
+    {
+      "q": "A: The printer is out of paper. B: Oh, I ___ refill it.",
+      "opts": [
+        "will",
+        "am going to",
+        "refill",
+        "was going to"
+      ],
+      "ans": 0,
+      "expl": "聽到對方說紙沒了才決定去補，決定落在說話這一刻，用 will。am going to 表示你開口之前就打算好；refill 是現在簡單式；was going to 指過去的打算。"
+    },
+    {
+      "q": "Look at his ankle. It ___ swell up tonight.",
+      "opts": [
+        "will",
+        "is going to",
+        "swells",
+        "would"
+      ],
+      "ans": 1,
+      "expl": "你已經叫對方看腳踝，證據就在眼前，所以用 be going to。will 用在沒有現場根據的判斷；swells 講的是習慣；would 是過去或假設的語氣。"
+    }
+  ]
+},
+"dg20261111b1p": {
+  "vis": true,
+  "oneLine": "先在未來釘一個時間點，再決定鏡頭往哪看——動作還在跑寫 will be doing，動作已經收尾寫 will have done。",
+  "map": {
+    "when": "講未來某一刻正在進行的事、到某條截止線之前會完成的事，或客氣地打聽別人既定的安排",
+    "why": "單用 will 只說「會發生」，交代不出進度；英文靠這兩個形狀告訴讀者那一刻是進行中還是已結束",
+    "form": "那一刻在做 will be + V-ing　|　到那時完成 will have + 過去分詞　|　截止線用 by + 時間"
+  },
+  "visual": {
+    "type": "timeline",
+    "timelineNow": 8,
+    "cap": "線上最左邊是現在，中間那個記號是你釘下的未來時間點。上面一條粗線穿過記號，表示動作在那一刻還在跑，這就是 will be doing。下面那一段在記號之前就結束，表示到那一刻已經完成，這就是 will have done。先在線上找到自己的時間點，再看動作有沒有碰到它，形狀就選出來了。語法重點：兩個形狀都先要一個未來的時間點，差別在動作有沒有跨過它。",
+    "rows": [
+      {
+        "kind": "point",
+        "at": 56,
+        "label": "釘下的時間點",
+        "tone": "accent",
+        "sub": "at ten tomorrow",
+        "subCn": "明天十點，先把這一刻釘住"
+      },
+      {
+        "kind": "span",
+        "from": 30,
+        "to": 90,
+        "label": "那一刻還在跑",
+        "tone": "ink",
+        "sub": "I'll be queueing at the counter.",
+        "subCn": "那時候我正在櫃台排隊（will be doing）"
+      },
+      {
+        "kind": "range",
+        "label": "到那時已結束",
+        "tone": "ink",
+        "sub": "I'll have handed in the form.",
+        "subCn": "到那時候表格已經交出去了（will have done）"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "mid",
+      "icon": "clock",
+      "title": "In the middle of it",
+      "titleCn": "那一刻正在進行",
+      "ask": "為什麼說「九點別打給我」的時候要用 will be doing？",
+      "en": "At nine I'll be waiting for my number to come up.",
+      "cn": "九點的時候我正在等叫號。",
+      "why": "因為你要講的不是「九點會發生這件事」，而是「九點那一刻我正忙著」。will wait 只說這個動作會出現，對方聽不出你那時候方不方便；加上 be waiting，鏡頭就停在九點那一刻，對方立刻明白為什麼不要打。這也是為什麼請人改時間的句子幾乎都用這個形狀。"
+    },
+    {
+      "key": "by",
+      "icon": "arrow",
+      "title": "by marks the deadline",
+      "titleCn": "by 標的是截止線",
+      "ask": "為什麼未來完成式幾乎都跟 by 一起出現？",
+      "en": "By Thursday the lab will have sent both reports.",
+      "cn": "到星期四實驗室就把兩份報告寄出了。",
+      "why": "因為完成式要一條截止線才站得住，而英文標截止線的字就是 by。寫 will have done 的時候如果句子裡找不到 by、by the time 或 before，通常是形狀用錯了，應該退回 will do。反過來說，看到 by 加時間點，第一個該想到的就是 will have 加過去分詞。"
+    },
+    {
+      "key": "bythetime",
+      "icon": "key",
+      "title": "by the time takes the present",
+      "titleCn": "by the time 後面用現在式",
+      "ask": "by the time 後面的子句為什麼不能再放 will？",
+      "en": "By the time you get here, I'll have picked up the medicine.",
+      "cn": "你到的時候我已經把藥拿回來了。",
+      "why": "因為 by the time 本身已經把整句推到未來了，後面的子句只負責說「什麼時候」，所以用現在式。中文的「等你到的時候」沒有時態，所以很多人會在兩邊都塞 will，結果同一句標了兩次未來。記法：主句用未來，時間子句用現在，這條規則跟 when、before、as soon as 一樣。"
+    },
+    {
+      "key": "polite",
+      "icon": "person",
+      "title": "Asking without pushing",
+      "titleCn": "打聽但不施壓",
+      "ask": "問同事下午會不會用會議室，兩種問法差在哪裡？",
+      "en": "Will you be using the room after lunch?",
+      "cn": "你午餐後本來就會用那間會議室嗎？",
+      "why": "will be doing 問的是對方已經有的安排，純粹打聽事實；will use 聽起來像在請對方去用，或在要求他配合。中文的「你下午會用嗎」兩層意思都包在裡面，英文母語者卻聽得很清楚。寫信給客戶或問主管行程時選前者，幾乎不會失禮。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要跟越南的同事約線上會議，可是下午三點你正在做復健。"
+    },
+    {
+      "label": "第一步",
+      "text": "先把未來那個時間點釘住：三點。沒有這個點，兩個形狀都用不上。"
+    },
+    {
+      "label": "第二步",
+      "text": "問自己三點那一刻動作是還在跑，還是已經結束。復健還在做，所以是進行中。"
+    },
+    {
+      "label": "組起來",
+      "text": "主詞加 will be 再加 V-ing，說出來就是 I'll be having therapy at three."
+    },
+    {
+      "label": "換個方向",
+      "text": "如果你想講的是五點之前療程已經結束，就把鏡頭轉向結果：By five I'll have finished."
+    }
+  ],
+  "comparison": {
+    "title": "will be doing（那一刻在跑）　vs　will have done（到那時已完成）",
+    "left": {
+      "tag": "BE DOING",
+      "tagCn": "進行中",
+      "icon": "cycle",
+      "head": "the action is still running",
+      "headCn": "動作跨過那個時間點",
+      "en": "At four she'll be reading the night shift log.",
+      "cn": "四點的時候她正在看夜班紀錄。",
+      "pts": [
+        "回答「那時候你在做什麼」",
+        "也用來客氣地打聽對方的安排",
+        "常配 at 幾點、this time next week"
+      ]
+    },
+    "right": {
+      "tag": "HAVE DONE",
+      "tagCn": "已完成",
+      "icon": "check",
+      "head": "the action ends before that point",
+      "headCn": "動作在那個時間點之前結束",
+      "en": "By four she'll have closed the night shift log.",
+      "cn": "四點之前她就把夜班紀錄結掉了。",
+      "pts": [
+        "回答「到那時候做完了沒有」",
+        "幾乎一定搭 by、by the time、before",
+        "by the time 後面的子句用現在式"
+      ]
+    },
+    "note": "判斷口訣：動作跨過那個時間點就 be doing，停在它前面就 have done；看到 by 先想完成式。"
+  },
+  "quizMore": [
+    {
+      "q": "This time next week I ___ in Hanoi with the supplier.",
+      "opts": [
+        "will be sitting",
+        "will have sat",
+        "will sit",
+        "sit"
+      ],
+      "ans": 0,
+      "expl": "this time next week 釘住未來的一刻，而那一刻動作還在跑，所以用 will be + V-ing。will have sat 表示那時候已經結束；will sit 只說會發生；sit 是現在簡單式。"
+    },
+    {
+      "q": "The course has ten units. By March he ___ all of them.",
+      "opts": [
+        "will be studying",
+        "will have studied",
+        "will study",
+        "studies"
+      ],
+      "ans": 1,
+      "expl": "by March 是截止線，問的是到那時候十個單元讀完了沒有，用 will have 加過去分詞。will be studying 是那一刻正在讀；will study 和 studies 都沒有交代完成。"
+    }
+  ]
+},
+"dg20261111b2": {
+  "vis": true,
+  "oneLine": "這兩個形狀選的是視角不是時間：先在未來站定一個觀測站，鏡頭往動作中間看寫進行式，往動作後面看寫完成式。",
+  "map": {
+    "when": "寫報告、公告、企劃或敘事，需要交代未來某一刻的進度，或要把語氣收斂成中性的打聽",
+    "why": "單用 will 只能排出事件清單；這兩個形狀讓讀者知道那一刻哪些已經結束、哪些還在動，也能調整禮貌層次",
+    "form": "觀測站 + will be + V-ing（進行中）　|　觀測站 + will have + 過去分詞（已完成）　|　長度用 will have been + V-ing"
+  },
+  "visual": {
+    "type": "chain",
+    "cap": "這條鏈子把未來完成式拆成四塊：will 負責未來，have 負責完成，過去分詞是動作本身，最後掛上 by 開頭的截止線才算完整。少了截止線，完成式就沒有落腳的地方，讀起來會空。下面三個變形分別把鏡頭轉向進行中、轉向累積的長度，以及把受影響的一方推到主詞位置的被動寫法。",
+    "links": [
+      {
+        "t": "We",
+        "c": "主詞",
+        "role": "subj"
+      },
+      {
+        "t": "will",
+        "c": "未來",
+        "role": "glue"
+      },
+      {
+        "t": "have",
+        "c": "完成",
+        "role": "mute"
+      },
+      {
+        "t": "closed",
+        "c": "過去分詞",
+        "role": "verb"
+      },
+      {
+        "t": "by Friday",
+        "c": "截止線",
+        "role": "obj"
+      }
+    ],
+    "eg": {
+      "en": "We will have closed every corrective action by Friday.",
+      "cn": "我們星期五之前會把每一項矯正措施結案。"
+    },
+    "variants": [
+      {
+        "k": "鏡頭轉向進行中",
+        "en": "On Friday we will be closing the last two actions.",
+        "cn": "星期五那天我們正在結最後兩項。（鏡頭停在當天）"
+      },
+      {
+        "k": "算累積的長度",
+        "en": "By Friday the team will have been working on this for six weeks.",
+        "cn": "到星期五，團隊處理這件事就滿六週了。（重點在長度）"
+      },
+      {
+        "k": "被動：受影響的一方當主詞",
+        "en": "Every action will have been closed by Friday.",
+        "cn": "每一項措施在星期五之前都會結案。（誰結的不重要）"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "station",
+      "icon": "pin",
+      "title": "Fix the vantage point first",
+      "titleCn": "先把觀測站釘好",
+      "ask": "為什麼沒有時間點的句子不該用這兩個形狀？",
+      "en": "By the end of the shift the line will have produced four thousand units.",
+      "cn": "這一班結束之前，產線會做出四千件。",
+      "why": "因為這兩個形狀的意義完全依附在那個未來的時間點上。沒有觀測站，will have done 只是把 will do 加長，讀者得不到任何新資訊，母語讀者會覺得句子在裝腔。寫作時的檢查動作很簡單：找出句子裡的 by、at、this time、before；找不到就退回樸素的 will，句子反而乾淨。"
+    },
+    {
+      "key": "register",
+      "icon": "balance",
+      "title": "The polite enquiry",
+      "titleCn": "最客氣的問法",
+      "ask": "為什麼問客戶行程時該用 will you be doing 而不是 will you do？",
+      "en": "Will you be sending the revised drawings this week?",
+      "cn": "這週您原本就會把修改後的圖寄過來嗎？",
+      "why": "因為 will you be doing 問的是對方既有的安排，語氣中性；will you do 帶著請求甚至催促，寫給客戶或上級容易顯得逼人。這一層差別不是文法對錯，而是語域選擇：同一件事，形狀換了，收信的人感受完全不同。想催的時候當然可以用 will you do，但那應該是你有意識的選擇。"
+    },
+    {
+      "key": "length",
+      "icon": "cycle",
+      "title": "Counting the years",
+      "titleCn": "算到那時累積多久",
+      "ask": "履歷上要寫「到明年就滿五年」，該用哪一個形狀？",
+      "en": "Next June I will have been auditing suppliers for five years.",
+      "cn": "到明年六月，我稽核供應商就滿五年了。",
+      "why": "用 will have been + V-ing，因為你要講的是一段連續的長度，不是完成的件數。句子裡一定會出現 for 加時間，這是辨認它最快的方法。要注意動詞必須是可以拉長的：work、study、audit 都行，但 finish、arrive 這種一次就結束的動作不能放進來，那是 will have done 的工作。"
+    },
+    {
+      "key": "texture",
+      "icon": "book",
+      "title": "Two shapes, one paragraph",
+      "titleCn": "一段裡兩種鏡頭",
+      "ask": "怎麼用這兩個形狀讓一段文字有層次？",
+      "en": "By then the audit will have ended, and the team will be catching up on sleep.",
+      "cn": "到那時稽核已經結束，團隊正在補眠。",
+      "why": "先用完成式把讀者帶到截止線，交代哪些事已經收尾；再用進行式把鏡頭推進那一刻的現場，讓讀者看到人還在動。報導與企劃書常用這個組合，因為只堆 will 會讓整段讀起來像清單。但要節制：一段裡每句都這樣寫，重音就變成底色，效果反而沒了。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要在企劃書裡交代：十二月稽核開始時，改善案的進度到哪裡。"
+    },
+    {
+      "label": "第一步",
+      "text": "先釘觀測站。十二月第一個星期一就是你的觀測站，整段文字都要圍著它寫。"
+    },
+    {
+      "label": "第二步",
+      "text": "把事情分成兩堆：到那一刻已經結束的，和那一刻還在跑的。"
+    },
+    {
+      "label": "選形狀",
+      "text": "已結束的寫 will have 加過去分詞，還在跑的寫 will be 加 V-ing，兩句可以併成一句。"
+    },
+    {
+      "label": "最後檢查",
+      "text": "確認截止線在句子裡看得到，而且整段不要每一句都用這兩個形狀，否則重音會失效。"
+    }
+  ],
+  "comparison": {
+    "title": "完成式交代結果　vs　進行式製造畫面",
+    "left": {
+      "tag": "RESULT",
+      "tagCn": "交代結果",
+      "icon": "check",
+      "head": "what is already settled",
+      "headCn": "到那一刻已經定案的部分",
+      "en": "By March the second site will have taken over the testing.",
+      "cn": "到三月，第二廠就接下測試了。",
+      "pts": [
+        "讀者得到的是一個可以引用的狀態",
+        "公告、合約、進度報告的主力形狀",
+        "截止線通常寫成 by 或 before"
+      ]
+    },
+    "right": {
+      "tag": "SCENE",
+      "tagCn": "製造畫面",
+      "icon": "eye",
+      "head": "what the reader can picture",
+      "headCn": "那一刻讀者看得見的動作",
+      "en": "In March the second site will be testing around the clock.",
+      "cn": "三月的時候，第二廠正在日夜測試。",
+      "pts": [
+        "讀者得到的是一個正在動的畫面",
+        "敘事與報導用來放慢節奏",
+        "也可當中性、不施壓的問句"
+      ]
+    },
+    "note": "判斷口訣：想讓讀者記住一個數字或狀態就用完成式，想讓讀者看見現場就用進行式。"
+  },
+  "quizMore": [
+    {
+      "q": "Which sentence reads as a neutral enquiry rather than a request?",
+      "opts": [
+        "Will you be submitting the deviation report today?",
+        "Will you submit the deviation report today?",
+        "Do you submit the deviation report today?",
+        "Are you submit the deviation report today?"
+      ],
+      "ans": 0,
+      "expl": "will be + V-ing 問的是對方既有的安排，語氣中性。第二句的 will you submit 帶著請求或催促；第三句的現在簡單式在問習慣；第四句把 be 動詞和原形動詞放在一起，不是英文的形狀。"
+    },
+    {
+      "q": "He started the night course in 2024. In 2029 he ___ it for five years.",
+      "opts": [
+        "will have been attending",
+        "will have attended",
+        "will be attending",
+        "will attend"
+      ],
+      "ans": 0,
+      "expl": "句子裡有 for five years 這一段長度，而且上課是可以持續的動作，所以用 will have been + V-ing。will have attended 算的是完成的次數；will be attending 只講那一刻在上課；will attend 什麼進度都沒交代。"
+    }
+  ]
+},
 /* ---------- 2026-11-04 每日文法（will and shall 2／I will and I am going to） ---------- */
 "dg20261104a2": {
   "vis": true,
