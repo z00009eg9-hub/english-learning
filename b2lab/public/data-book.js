@@ -32579,13 +32579,6 @@ window.BOOK = {
           }
         ]
       }
-    ],
-    "summaryTitle": "快速總結 Quick Summary",
-    "summary": [
-      {
-        "k": "⚠ 原文的 1 處小錯",
-        "v": "III-B 最後一句 I have sore throat, I hardly can eat or speak. 應為 I have a sore throat, so I can hardly eat or speak.（sore throat 前加 a；hardly 放在助動詞 can 後面；兩個完整句子用 so 連接，不用逗號直接接）"
-      }
     ]
   }
   ]
