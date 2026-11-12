@@ -32580,6 +32580,1379 @@ window.BOOK = {
         ]
       }
     ]
+  },
+  /* ---- bk20261112 Audit Preparation, Go Well vs Go Smoothly & Running into Problems ---- */
+  {
+    "id": "bk20261112",
+    "video": true,
+    "icon": "🔧",
+    "date": "2026-11-12",
+    "doc": "https://docs.google.com/document/d/1Afch-EOcUiYvCsshTSIvwB6TJFE517bBqJDWbUE4QgA/edit",
+    "title": "Audit Preparation, Go Well vs Go Smoothly & Running into Problems",
+    "titleCn": "稽核準備、go well / go smoothly 與遇到問題的說法",
+    "topics": "作業複習(稽核前準備)・單字與片語・go well / go smoothly・事情不順利的說法・coming up / under pressure・翻譯練習・稽核與鏽蝕情境口說・課堂摘要補充",
+    "hwTitle": "I. ★ 11/12 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "wrong": "Today, our manager from Taiwan department is visiting our factory in Vietman.",
+        "fix": "Today, our manager from the Taiwan department is visiting our factory in Vietnam.",
+        "cn": "今天，台灣部門的經理來我們越南的工廠。",
+        "pat": "主詞 + is visiting + 地點(現在進行式)",
+        "note": "特定的部門要加 the(the Taiwan department)，原句漏了冠詞。 is visiting 是現在進行式，講「今天正在」發生的事。"
+      },
+      {
+        "n": 2,
+        "ok": "We have an important customer audit next week, so everyone is busy preparing for it.",
+        "cn": "下週我們有一場重要的客戶稽核，所以大家都忙著準備。",
+        "pat": "be busy + V-ing；原因, so + 結果",
+        "note": "✅ 文法正確(只有 aduit 拼錯，正確是 audit)。 be busy + V-ing：忙著做某事(busy preparing)；for it 的 it 指 the audit。 so 連接「原因, 結果」兩句，前面加逗號。"
+      },
+      {
+        "n": 3,
+        "wrong": "As a quality assurance engineer, I need to check inspection report, review quality documents, and make sure testing equipment is working properly.",
+        "fix": "As a quality assurance engineer, I need to check inspection reports, review quality documents, and make sure testing equipment is working properly.",
+        "cn": "身為品保工程師，我需要檢查檢驗報告、審查品質文件，並確認測試設備運作正常。",
+        "pat": "need to + 動詞1, 動詞2, and 動詞3",
+        "note": "inspection report 是可數名詞，這裡指很多份，要用複數 reports(跟 quality documents 一致)。 check、review、make sure 三個動詞並列，都接在 need to 後面。 make sure + 子句：「確認……」；equipment 不可數，後面直接用 is。"
+      },
+      {
+        "n": 4,
+        "wrong": "I feel a little stressed because we have many work to do, but I hope everything will smoothly next week.",
+        "fix": "I feel a little stressed because we have a lot of work to do, but I hope everything will go smoothly next week.",
+        "cn": "我覺得有一點壓力，因為要做的事情很多，不過我希望下週一切順利。",
+        "pat": "a lot of + 不可數名詞；will + 原形動詞(go smoothly)",
+        "note": "work(工作)是不可數名詞，不能用 many，要用 a lot of / much。 will 後面一定要接動詞：go smoothly = 順利進行，少了 go 句子不完整(詳見 III-A)。"
+      },
+      {
+        "n": 5,
+        "wrong": "Last month, our company bulit a new Reliability Lab to make sure our product meet customer test requestment.",
+        "fix": "Last month, our company built a new Reliability Lab to make sure our products meet customer test requirements.",
+        "cn": "上個月，公司蓋了一間新的可靠度實驗室，確保我們的產品符合客戶的測試要求。",
+        "pat": "to + 原形動詞(目的)；make sure + 子句",
+        "note": "build 的過去式是 built(原句拼成 bulit)。 主詞和動詞要對上：products 複數用 meet；單數 product 才用 meets。 requestment 不是英文字，要寫 requirement(要求)；客戶的要求通常用複數 requirements。"
+      },
+      {
+        "n": 6,
+        "ok": "During this pre-audit, we found that some testing equipment didn't have maintenance records.",
+        "cn": "在這次預先稽核中，我們發現有些測試設備沒有維護紀錄。",
+        "pat": "found (that) + 子句；some + 不可數名詞",
+        "note": "✅ 文法正確(只有 pre-aduit、redords 拼錯，正確是 pre-audit、records)。 found that + 子句：「發現……」，that 可省略。 pre-audit 是正式稽核前先自己檢查一次(預先稽核)。 equipment 不可數，some testing equipment 不加 s。"
+      },
+      {
+        "n": 7,
+        "wrong": "The reason was equipment installed quickly, but no one to build maintenance records.",
+        "fix": "The reason was that the equipment was installed quickly, but no one set up maintenance records.",
+        "cn": "原因是設備安裝得很匆忙，但沒有人建立維護紀錄。",
+        "pat": "The reason was that + 子句；was + 過去分詞(被動)",
+        "note": "reason was 後面要接完整句子，常加 that(The reason was that…)。 設備是「被安裝」，要用被動 was installed(老師課堂句：The equipment was installed quickly)。 no one to build 少了動詞；「建立紀錄」用 set up / create records，build 是「蓋東西」。"
+      },
+      {
+        "n": 8,
+        "wrong": "We took corrective action immediately, the lab team checked equipment and completed the records.",
+        "fix": "We took corrective action immediately. The lab team checked the equipment and completed the records.",
+        "cn": "我們立即採取了矯正措施。實驗室團隊檢查了設備並完成了紀錄。",
+        "pat": "take corrective action；兩個完整句子要分開",
+        "note": "兩個完整句子不能只用逗號接，要用句號分開，或加 and / so 連接。 take corrective action = 採取矯正措施，是品保固定搭配。 checked 和 completed 是兩個過去式並列，共用主詞 the lab team。"
+      },
+      {
+        "n": 9,
+        "wrong": "Then we arrange maintenance schedule for all the testing equipment.",
+        "fix": "Then we arranged a maintenance schedule for all the testing equipment.",
+        "cn": "接著我們為所有測試設備安排了維護時程。",
+        "pat": "arrange + a + 名詞 + for + 對象",
+        "note": "前一句是過去式(took、checked)，這句也要用 arranged，時態一致。 schedule 是可數名詞，單數前面要加 a(a maintenance schedule)。 for all the testing equipment：「為全部設備」，for 後面接對象。"
+      }
+    ],
+    "vocabTitle": "II-A. 單字 Vocabulary",
+    "vocab": [
+      {
+        "w": "calibration",
+        "star": true,
+        "ipa": "/ˌkæləˈbreɪʃn/",
+        "pos": "n.",
+        "cn": "校正",
+        "ex": "Calibration is done once a year.",
+        "exCn": "校正每年做一次。"
+      },
+      {
+        "w": "reliability",
+        "star": true,
+        "ipa": "/rɪˌlaɪ.əˈbɪl.ə.t̬i/",
+        "pos": "n.",
+        "cn": "可靠度",
+        "ex": "The test checks the reliability of the motor.",
+        "exCn": "這個測試檢查馬達的可靠度。"
+      },
+      {
+        "w": "equipment",
+        "ipa": "/ɪˈkwɪpmənt/",
+        "pos": "n.",
+        "cn": "設備",
+        "ex": "The new equipment arrives on Friday.",
+        "exCn": "新設備星期五到。"
+      },
+      {
+        "w": "install",
+        "ipa": "/ɪnˈstɑːl/",
+        "pos": "v.",
+        "cn": "安裝",
+        "ex": "They will install the machine tomorrow.",
+        "exCn": "他們明天會安裝這台機器。"
+      },
+      {
+        "w": "maintenance",
+        "star": true,
+        "ipa": "/ˈmeɪn.t̬ən.əns/",
+        "pos": "n.",
+        "cn": "維護",
+        "ex": "The machine is under maintenance.",
+        "exCn": "這台機器正在維護中。"
+      },
+      {
+        "w": "corrective",
+        "star": true,
+        "ipa": "/kəˈrektɪv/",
+        "pos": "adj.",
+        "cn": "矯正的",
+        "ex": "We need a corrective plan.",
+        "exCn": "我們需要一個矯正計畫。"
+      },
+      {
+        "w": "prevent",
+        "ipa": "/prɪˈvent/",
+        "pos": "v.",
+        "cn": "預防",
+        "ex": "Training helps prevent mistakes.",
+        "exCn": "訓練有助於預防錯誤。"
+      },
+      {
+        "w": "pressure",
+        "ipa": "/ˈpreʃɚ/",
+        "pos": "n.",
+        "cn": "壓力",
+        "ex": "I work well under pressure.",
+        "exCn": "我在壓力下表現得很好。"
+      },
+      {
+        "w": "preparation",
+        "ipa": "/ˌprepəˈreɪʃn/",
+        "pos": "n.",
+        "cn": "準備",
+        "ex": "Good preparation saves time.",
+        "exCn": "準備充分能省時間。"
+      },
+      {
+        "w": "smoothly",
+        "ipa": "/ˈsmuːð.li/",
+        "pos": "adv.",
+        "cn": "順利地",
+        "ex": "The line is running smoothly.",
+        "exCn": "產線運作得很順。"
+      },
+      {
+        "w": "double-check",
+        "ipa": "/ˌdʌb.əlˈtʃek/",
+        "pos": "v.",
+        "cn": "再次仔細檢查",
+        "ex": "Please double-check the serial number.",
+        "exCn": "請再次確認序號。"
+      },
+      {
+        "w": "requirement",
+        "ipa": "/rɪˈkwaɪr.mənt/",
+        "pos": "n.",
+        "cn": "要求、規定",
+        "ex": "This part meets the requirement.",
+        "exCn": "這個零件符合要求。"
+      },
+      {
+        "w": "procedure",
+        "star": true,
+        "ipa": "/prəˈsiː.dʒɚ/",
+        "pos": "n.",
+        "cn": "程序",
+        "ex": "Follow the procedure step by step.",
+        "exCn": "請依照程序一步一步做。"
+      },
+      {
+        "w": "treadmill",
+        "ipa": "/ˈtredmɪl/",
+        "pos": "n.",
+        "cn": "跑步機",
+        "ex": "We test every treadmill before shipping.",
+        "exCn": "每台跑步機出貨前我們都會測試。"
+      },
+      {
+        "w": "supplier",
+        "ipa": "/səˈplaɪɚ/",
+        "pos": "n.",
+        "cn": "供應商",
+        "ex": "Please contact the supplier today.",
+        "exCn": "請今天聯絡供應商。"
+      },
+      {
+        "w": "rust",
+        "ipa": "/rʌst/",
+        "pos": "v.",
+        "cn": "生鏽",
+        "ex": "Tools rust in damp air.",
+        "exCn": "工具在潮濕的空氣中會生鏽。"
+      },
+      {
+        "w": "corrosion",
+        "star": true,
+        "ipa": "/kəˈroʊ.ʒən/",
+        "pos": "n.",
+        "cn": "腐蝕",
+        "ex": "Corrosion starts when metal stays wet.",
+        "exCn": "金屬一直濕濕的就會開始腐蝕。"
+      },
+      {
+        "w": "corroded",
+        "star": true,
+        "ipa": "/kəˈroʊ.dɪd/",
+        "pos": "adj.",
+        "cn": "被腐蝕的",
+        "ex": "The corroded bolt broke easily.",
+        "exCn": "腐蝕的螺栓很容易斷。"
+      },
+      {
+        "w": "frame",
+        "ipa": "/freɪm/",
+        "pos": "n.",
+        "cn": "框架",
+        "ex": "The frame is made of steel.",
+        "exCn": "框架是鋼製的。"
+      },
+      {
+        "w": "surface",
+        "ipa": "/ˈsɝː.fɪs/",
+        "pos": "n.",
+        "cn": "表面",
+        "ex": "The surface must be clean and dry.",
+        "exCn": "表面必須乾淨又乾燥。"
+      },
+      {
+        "w": "treatment",
+        "ipa": "/ˈtriːtmənt/",
+        "pos": "n.",
+        "cn": "處理",
+        "ex": "This treatment protects the metal.",
+        "exCn": "這種處理能保護金屬。"
+      },
+      {
+        "w": "rework",
+        "ipa": "/ˈriː.wɝːk/",
+        "pos": "n.",
+        "cn": "返工",
+        "ex": "Rework adds cost and time.",
+        "exCn": "返工會增加成本和時間。"
+      },
+      {
+        "w": "reject",
+        "ipa": "/rɪˈdʒekt/",
+        "pos": "v.",
+        "cn": "拒收",
+        "ex": "We reject any part with a crack.",
+        "exCn": "有裂痕的零件我們一律拒收。"
+      },
+      {
+        "w": "accept",
+        "ipa": "/əkˈsept/",
+        "pos": "v.",
+        "cn": "接受",
+        "ex": "The customer accepted our report.",
+        "exCn": "客戶接受了我們的報告。"
+      },
+      {
+        "w": "severe",
+        "ipa": "/sɪˈvɪr/",
+        "pos": "adj.",
+        "cn": "嚴重的",
+        "ex": "The damage is severe.",
+        "exCn": "損壞很嚴重。"
+      },
+      {
+        "w": "minor",
+        "ipa": "/ˈmaɪnɚ/",
+        "pos": "adj.",
+        "cn": "輕微的",
+        "ex": "It is only a minor scratch.",
+        "exCn": "只是輕微的刮傷。"
+      },
+      {
+        "w": "outdated",
+        "ipa": "/ˌaʊtˈdeɪ.t̬ɪd/",
+        "pos": "adj.",
+        "cn": "過期的",
+        "ex": "The outdated manual was removed.",
+        "exCn": "過期的手冊已經被拿掉了。"
+      },
+      {
+        "w": "appearance",
+        "ipa": "/əˈpɪrəns/",
+        "pos": "n.",
+        "cn": "外觀",
+        "ex": "Check the appearance of each unit.",
+        "exCn": "檢查每一台的外觀。"
+      },
+      {
+        "w": "crack",
+        "ipa": "/kræk/",
+        "pos": "n.",
+        "cn": "裂痕",
+        "ex": "There is a small crack on the cover.",
+        "exCn": "外殼上有一道小裂痕。"
+      },
+      {
+        "w": "weld",
+        "ipa": "/weld/",
+        "pos": "n.",
+        "cn": "焊接處",
+        "ex": "A missing weld can cause a safety problem.",
+        "exCn": "漏焊可能造成安全問題。"
+      },
+      {
+        "w": "packaging",
+        "ipa": "/ˈpæk.ɪ.dʒɪŋ/",
+        "pos": "n.",
+        "cn": "包裝",
+        "ex": "Packaging starts after the final check.",
+        "exCn": "最後檢查完才開始包裝。"
+      },
+      {
+        "w": "metal",
+        "ipa": "/ˈmet̬.əl/",
+        "pos": "n.",
+        "cn": "金屬",
+        "ex": "The metal cover is very thin.",
+        "exCn": "這個金屬外殼很薄。(別和 mental「心理的」搞混)"
+      },
+      {
+        "w": "establish",
+        "ipa": "/ɪˈstæb.lɪʃ/",
+        "pos": "v.",
+        "cn": "建立",
+        "ex": "We will establish a new review process.",
+        "exCn": "我們會建立新的審查流程。"
+      },
+      {
+        "w": "conduct",
+        "ipa": "/kənˈdʌkt/",
+        "pos": "v.",
+        "cn": "進行",
+        "ex": "They conduct an audit every year.",
+        "exCn": "他們每年進行一次稽核。"
+      },
+      {
+        "w": "calibrate",
+        "ipa": "/ˈkæl.ə.breɪt/",
+        "pos": "v.",
+        "cn": "校正",
+        "ex": "We calibrate the scale every month.",
+        "exCn": "我們每個月校正這台秤。"
+      },
+      {
+        "w": "repair",
+        "ipa": "/rɪˈper/",
+        "pos": "v.",
+        "cn": "修理",
+        "ex": "Can you repair this fixture?",
+        "exCn": "你可以修這個治具嗎？"
+      }
+    ],
+    "vocab2Title": "VIII-A. 環境測試單字",
+    "vocab2": [
+      {
+        "w": "temperature",
+        "ipa": "/ˈtemprətʃɚ/",
+        "pos": "n.",
+        "cn": "溫度",
+        "ex": "The temperature in the lab is 25 degrees.",
+        "exCn": "實驗室的溫度是 25 度。"
+      },
+      {
+        "w": "humidity",
+        "ipa": "/hjuːˈmɪdɪti/",
+        "pos": "n.",
+        "cn": "濕度",
+        "ex": "High humidity can cause rust.",
+        "exCn": "濕度高可能造成生鏽。"
+      },
+      {
+        "w": "durability",
+        "star": true,
+        "ipa": "/ˌdʊr.əˈbɪl.ə.t̬i/",
+        "pos": "n.",
+        "cn": "耐久性",
+        "ex": "The test checks the durability of the handle.",
+        "exCn": "這個測試檢查把手的耐久性。"
+      },
+      {
+        "w": "controller",
+        "ipa": "/kənˈtroʊ.lɚ/",
+        "pos": "n.",
+        "cn": "控制器",
+        "ex": "The controller sends a signal to the motor.",
+        "exCn": "控制器會傳送訊號給馬達。"
+      },
+      {
+        "w": "continuity",
+        "star": true,
+        "ipa": "/ˌkɑːn.tɪˈnuː.ə.t̬i/",
+        "pos": "n.",
+        "cn": "導通、連續性",
+        "ex": "We check continuity with a multimeter.",
+        "exCn": "我們用三用電錶檢查導通。"
+      },
+      {
+        "w": "defective",
+        "ipa": "/dɪˈfek.tɪv/",
+        "pos": "adj.",
+        "cn": "有瑕疵的",
+        "ex": "Defective units are marked with a red tag.",
+        "exCn": "不良品會貼上紅色標籤。"
+      }
+    ],
+    "phrasesTitle": "II-B. 片語 Phrases",
+    "phrases": [
+      {
+        "p": "go well",
+        "cn": "進行得很好、結果不錯",
+        "ex": "Our trial run went well this morning.",
+        "exCn": "我們今天早上的試產很順利。"
+      },
+      {
+        "p": "go smoothly",
+        "cn": "順利進行",
+        "ex": "The shipment went smoothly, and the customer was happy.",
+        "exCn": "出貨很順利，客戶也很滿意。"
+      },
+      {
+        "p": "not go as planned",
+        "cn": "沒有照計畫進行",
+        "ex": "The trial run didn't go as planned.",
+        "exCn": "試產沒有照計畫進行。"
+      },
+      {
+        "p": "not work out",
+        "cn": "沒有如願、行不通",
+        "ex": "The first fixture didn't work out, so we made a new one.",
+        "exCn": "第一個治具不行，所以我們做了新的。"
+      },
+      {
+        "p": "not turn out well",
+        "cn": "結果不太理想",
+        "ex": "The paint job didn't turn out well.",
+        "exCn": "塗裝的結果不太好。"
+      },
+      {
+        "p": "run into problems",
+        "cn": "遇到問題",
+        "ex": "We ran into problems with the new gauge.",
+        "exCn": "我們在新的量規上遇到了問題。"
+      },
+      {
+        "p": "go wrong",
+        "cn": "出差錯",
+        "ex": "Something went wrong with the test machine.",
+        "exCn": "測試機台出了點問題。"
+      },
+      {
+        "p": "be coming up",
+        "cn": "快到了",
+        "ex": "The year-end inspection is coming up soon.",
+        "exCn": "年底的檢驗快到了。"
+      },
+      {
+        "p": "be just around the corner",
+        "cn": "近在眼前",
+        "ex": "The deadline is just around the corner.",
+        "exCn": "截止日就在眼前了。"
+      },
+      {
+        "p": "under a lot of pressure",
+        "cn": "壓力很大",
+        "ex": "The team is under a lot of pressure this week.",
+        "exCn": "這個星期團隊壓力很大。"
+      },
+      {
+        "p": "double-check everything",
+        "cn": "再仔細檢查一遍",
+        "ex": "Let's double-check everything before we ship.",
+        "exCn": "出貨前我們再仔細檢查一遍所有東西。"
+      },
+      {
+        "p": "speed up preparations",
+        "cn": "加快準備",
+        "ex": "Extra staff can help speed up the preparations.",
+        "exCn": "增加人手可以加快準備工作。"
+      },
+      {
+        "p": "pre-audit",
+        "cn": "預先稽核",
+        "ex": "We hold a pre-audit one month before the real audit.",
+        "exCn": "我們在正式稽核前一個月先做預先稽核。"
+      },
+      {
+        "p": "maintenance records",
+        "cn": "維護紀錄",
+        "ex": "The auditor asked to see the maintenance records.",
+        "exCn": "稽核員要求看維護紀錄。"
+      },
+      {
+        "p": "take corrective action",
+        "cn": "採取矯正措施",
+        "ex": "Please take corrective action within three days.",
+        "exCn": "請在三天內採取矯正措施。"
+      },
+      {
+        "p": "maintenance schedule",
+        "cn": "維護時程表",
+        "ex": "The maintenance schedule is posted next to the machine.",
+        "exCn": "維護時程表貼在機台旁邊。"
+      },
+      {
+        "p": "root cause",
+        "cn": "根本原因",
+        "ex": "We are still looking for the root cause.",
+        "exCn": "我們還在找根本原因。"
+      },
+      {
+        "p": "calibration schedule",
+        "cn": "校正時程表",
+        "ex": "Check the calibration schedule before you use the gauge.",
+        "exCn": "使用量規前請先確認校正時程表。"
+      },
+      {
+        "p": "metal frame",
+        "cn": "金屬框架",
+        "ex": "The metal frame is welded and then painted.",
+        "exCn": "金屬框架先焊接再上漆。"
+      },
+      {
+        "p": "surface treatment",
+        "cn": "表面處理",
+        "ex": "Surface treatment prevents the frame from rusting.",
+        "exCn": "表面處理可以防止框架生鏽。"
+      },
+      {
+        "p": "visual inspection",
+        "cn": "外觀檢驗、目視檢驗",
+        "ex": "Visual inspection takes about five minutes per unit.",
+        "exCn": "每台外觀檢驗大約要五分鐘。"
+      },
+      {
+        "p": "accept / reject / rework",
+        "cn": "接受／拒收／返工",
+        "ex": "The manager decides whether to accept, reject, or rework the batch.",
+        "exCn": "經理決定這批要接受、拒收還是返工。"
+      },
+      {
+        "p": "approved procedure",
+        "cn": "核准的程序",
+        "ex": "Always follow the approved procedure when you repair a unit.",
+        "exCn": "修理機台時一定要照核准的程序。"
+      },
+      {
+        "p": "fail to meet requirements",
+        "cn": "未能符合要求",
+        "ex": "The sample failed to meet the customer's requirements.",
+        "exCn": "樣品沒有達到客戶的要求。"
+      },
+      {
+        "p": "pass / fail a test",
+        "cn": "通過／沒通過測試",
+        "ex": "The new design passed the drop test.",
+        "exCn": "新設計通過了落下測試。"
+      },
+      {
+        "p": "first piece inspection",
+        "cn": "首件檢驗",
+        "ex": "The first piece inspection is done before every production run.",
+        "exCn": "每次生產前都要先做首件檢驗。"
+      },
+      {
+        "p": "step up",
+        "cn": "加強",
+        "ex": "We need to step up our checks this month.",
+        "exCn": "這個月我們需要加強檢查。"
+      },
+      {
+        "p": "calibration records",
+        "cn": "校正紀錄",
+        "ex": "The calibration records are kept in the lab.",
+        "exCn": "校正紀錄放在實驗室。"
+      },
+      {
+        "p": "tracker list",
+        "cn": "追蹤清單",
+        "ex": "I update the tracker list every Friday.",
+        "exCn": "我每週五更新追蹤清單。"
+      },
+      {
+        "p": "100% visual inspection",
+        "cn": "全數外觀檢驗",
+        "ex": "We ordered a 100% visual inspection of the whole lot.",
+        "exCn": "我們要求對整批貨做全數外觀檢驗。"
+      },
+      {
+        "p": "preventive action",
+        "cn": "預防措施",
+        "ex": "Regular training is a good preventive action.",
+        "exCn": "定期訓練是很好的預防措施。"
+      }
+    ],
+    "grammarTitle": "III. 句型與文法解說 Grammar",
+    "grammar": [
+      {
+        "k": "III-A",
+        "title": "go well vs. go smoothly",
+        "pat": "主詞 + go well / go smoothly",
+        "pts": [
+          "go well = 進行得很好、結果不錯",
+          "go smoothly = 順利進行、過程沒有問題",
+          "結構：go 是動詞，well / smoothly 說明「怎麼進行」；過去式 went、進行式 going。",
+          "中文解析：well 看「結果好不好」，smoothly 看「過程有沒有卡關」。I hope… 後面兩個都能用。"
+        ],
+        "exs": [
+          {
+            "tag": "go well",
+            "en": "I hope everything goes well next week.",
+            "cn": "我希望下週一切順利。"
+          },
+          {
+            "tag": "go well",
+            "en": "I hope the customer audit goes well.",
+            "cn": "我希望客戶稽核順利。"
+          },
+          {
+            "tag": "go well",
+            "en": "The meeting went well.",
+            "cn": "會議進行得很順利。"
+          },
+          {
+            "tag": "go well",
+            "en": "Everything is going well so far.",
+            "cn": "到目前為止，一切都很順利。"
+          }
+        ]
+      },
+      {
+        "k": "III-B",
+        "title": "事情不順利的說法",
+        "pat": "It didn't + go / turn out / work out…；We ran into + 名詞",
+        "pts": [
+          "結構：didn't 後面接原形(go、turn out、work out)；ran into 是 run into 的過去式，後面接 problems。",
+          "中文解析：下表大致由輕到重，It was a disaster 最嚴重；run into problems 是「做的過程中碰到問題」。"
+        ],
+        "exs": [
+          {
+            "tag": "",
+            "en": "It didn't go as planned.",
+            "cn": "事情沒有按照計畫進行。"
+          },
+          {
+            "tag": "",
+            "en": "Things didn't work out.",
+            "cn": "事情沒有如願。"
+          },
+          {
+            "tag": "",
+            "en": "It didn't turn out well.",
+            "cn": "結果不太理想。"
+          },
+          {
+            "tag": "",
+            "en": "It was unsuccessful.",
+            "cn": "沒有成功。"
+          },
+          {
+            "tag": "",
+            "en": "It didn't go smoothly.",
+            "cn": "過程不太順利。"
+          },
+          {
+            "tag": "",
+            "en": "We ran into some problems.",
+            "cn": "我們遇到了一些問題。"
+          },
+          {
+            "tag": "",
+            "en": "Things went wrong.",
+            "cn": "出了一些差錯。"
+          },
+          {
+            "tag": "",
+            "en": "It was a disaster.",
+            "cn": "簡直是一場災難。"
+          }
+        ]
+      },
+      {
+        "k": "III-C",
+        "title": "稽核快到了：coming up / just around the corner",
+        "pat": "主詞 + is coming up；主詞 + is just around the corner",
+        "pts": [
+          "because + 子句：原因放在後面；Since + 子句, 主句：原因放在句首",
+          "結構：coming up = 快到了；just around the corner 更口語，有「近在眼前」的壓迫感。"
+        ],
+        "exs": [
+          {
+            "tag": "coming up",
+            "en": "The customer audit is coming up.",
+            "cn": "客戶稽核快到了。"
+          },
+          {
+            "tag": "just around the corner",
+            "en": "The customer audit is just around the corner.",
+            "cn": "客戶稽核就在眼前了。"
+          },
+          {
+            "tag": "under pressure + because",
+            "en": "We're under a lot of pressure because the customer audit is coming up next week.",
+            "cn": "因為下週就要進行客戶稽核了，所以我們承受很大的壓力。"
+          },
+          {
+            "tag": "Since…, double-check",
+            "en": "Since the audit is just around the corner, we need to double-check everything.",
+            "cn": "由於稽核日期迫在眉睫，我們需要再次仔細檢查所有事項。"
+          }
+        ]
+      },
+      {
+        "k": "VI",
+        "title": "範例答案(接受／拒收／返工)",
+        "pat": "If + 現在式, we could + 原形；However, 主詞 should be + 過去分詞",
+        "pts": [
+          "if 子句用現在式，主句用 could arrange，語氣比 can 客氣、比較不武斷。",
+          "according to + 名詞 = 依照……；fail to + 原形 = 未能……；should be rejected 是被動，表示「應該被拒收」。",
+          "What might have caused…：might have + 過去分詞，推測「過去可能是什麼原因」。"
+        ],
+        "exs": [
+          {
+            "tag": "✅ 更正",
+            "en": "If the rust is minor and the products can be repaired according to the approved procedure, we could arrange rework. However, severely corroded frames should be rejected if they fail to meet quality or safety requirements.",
+            "cn": "如果鏽蝕程度輕微，而且產品可以按照核准的程序修復，我們可以安排返工。然而，如果嚴重腐蝕的框架不符合品質或安全要求，就應該予以拒收。"
+          }
+        ]
+      },
+      {
+        "k": "VII-A",
+        "title": "go well 的問與答",
+        "pat": "Is everything going well? ／ How did + 主詞 + go?",
+        "pts": [
+          "問現在的狀況用 Is everything going well / smoothly?；問過去的事用 How did the meeting go?",
+          "肯定句過去式用 went；加了 didn't 之後，go 要用原形。"
+        ],
+        "exs": [
+          {
+            "tag": "現在進行式問句",
+            "en": "Is everything going smoothly?",
+            "cn": "一切都順利嗎？"
+          },
+          {
+            "tag": "so far",
+            "en": "Everything is going smoothly so far.",
+            "cn": "到目前為止一切都很順。"
+          },
+          {
+            "tag": "How did…go?",
+            "en": "How did the meeting go?",
+            "cn": "會議進行得怎麼樣？"
+          },
+          {
+            "tag": "didn't go well",
+            "en": "The meeting didn't go well.",
+            "cn": "會議進行得不太好。"
+          }
+        ]
+      },
+      {
+        "k": "VII-B",
+        "title": "假設問句：What would you do if…?",
+        "pat": "What would you do if + 主詞 + 過去式…?",
+        "pts": [
+          "結構：if 後面用過去式，主要子句用 would，問的是「想像中的情況」，不是真的發生了。",
+          "中文解析：稽核面試常用這種問法，回答時也用 I would + 原形動詞。"
+        ],
+        "exs": [
+          {
+            "tag": "if + found",
+            "en": "What would you do if you found outdated inspection reports?",
+            "cn": "如果你發現檢驗報告過期了，你會怎麼做？"
+          },
+          {
+            "tag": "if + had",
+            "en": "What would you do if some testing equipment had no calibration records?",
+            "cn": "如果有些測試設備沒有校正紀錄，你會怎麼做？"
+          }
+        ]
+      },
+      {
+        "k": "VII-C",
+        "title": "pass / fail 與首件檢驗",
+        "pat": "主詞 + passed / failed + the test",
+        "pts": [
+          "first piece inspection = 首件檢驗：量產前先檢驗第一個做出來的零件",
+          "pass、fail 都是及物動詞，後面直接接 the test，不用加 in。"
+        ],
+        "exs": [
+          {
+            "tag": "pass",
+            "en": "The product passed the test.",
+            "cn": "產品通過了測試。"
+          },
+          {
+            "tag": "fail",
+            "en": "The product failed the test.",
+            "cn": "產品沒有通過測試。"
+          },
+          {
+            "tag": "If + failed, should",
+            "en": "If the first piece inspection failed, we should identify the root cause and adjust the fixture.",
+            "cn": "如果首件檢驗沒過，我們應該找出根本原因並調整治具。"
+          }
+        ]
+      },
+      {
+        "k": "VII-D",
+        "title": "稽核說法修正：be held / be conducted、speed up vs step up",
+        "pat": "活動 + will be held / will be conducted",
+        "pts": [
+          "audit 是活動，不是人，不會自己「來」；來的是 auditor(稽核員)。活動要用 be held / be conducted(被動)，或 coming up。",
+          "speed up = 做得更快；step up = 加強力道、更投入。"
+        ],
+        "exs": [
+          {
+            "tag": "❌ 課堂原句",
+            "en": "The customer audit will come to our factory next week.",
+            "cn": ""
+          },
+          {
+            "tag": "✅ 更自然的說法",
+            "en": "The customer audit is coming soon. / will be held next week. / will be conducted next week.",
+            "cn": "客戶稽核下週會進行。"
+          },
+          {
+            "tag": "be held",
+            "en": "The customer audit will be held next week.",
+            "cn": "客戶稽核將在下週舉行。"
+          },
+          {
+            "tag": "be conducted",
+            "en": "The customer audit will be conducted next week.",
+            "cn": "客戶稽核將在下週進行。"
+          },
+          {
+            "tag": "around the corner",
+            "en": "The audit date is around the corner, so we need to check everything carefully.",
+            "cn": "稽核日期快到了，所以我們需要仔細檢查所有事項。"
+          },
+          {
+            "tag": "speed up",
+            "en": "We need to speed up our preparation before the audit.",
+            "cn": "稽核前我們需要加快準備。"
+          },
+          {
+            "tag": "step up",
+            "en": "We need to step up our preparation because the audit date is around the corner.",
+            "cn": "因為稽核日期快到了，我們需要加強準備。"
+          }
+        ]
+      },
+      {
+        "k": "VII-E",
+        "title": "被動語態、維護 vs 校正",
+        "pat": "主詞 + was / were + 過去分詞；The root cause was that + 子句",
+        "pts": [
+          "maintenance 維護：保養、檢查、清潔、修理，讓設備維持正常運作",
+          "calibration 校正：檢查並調整，確保量測設備量得準",
+          "設備、紀錄是被人處理的，所以用被動；主詞複數用 were。",
+          "紀錄的動詞：create、complete 比 make 更精準、更正式。"
+        ],
+        "exs": [
+          {
+            "tag": "were + 過去分詞",
+            "en": "The testing machines were installed quickly.",
+            "cn": "測試機台安裝得很匆忙。"
+          },
+          {
+            "tag": "were not + 過去分詞",
+            "en": "The records were not created on time.",
+            "cn": "紀錄沒有準時建立。"
+          },
+          {
+            "tag": "calibrate",
+            "en": "The testing equipment must be calibrated regularly.",
+            "cn": "測試設備必須定期校正。"
+          }
+        ]
+      },
+      {
+        "k": "VII-F",
+        "title": "corrective vs corrected、預防措施",
+        "pat": "corrective action；corrected + 文件",
+        "pts": [
+          "corrective：為了消除原因、避免再發生而採取的(corrective action)",
+          "corrected：已經改正好的(corrected document / report / record)",
+          "preventive action = 預防措施：事情還沒發生，先做好避免發生"
+        ],
+        "exs": [
+          {
+            "tag": "corrected report",
+            "en": "The corrected report was submitted to the auditor.",
+            "cn": "修正後的報告已經交給稽核員。"
+          }
+        ]
+      },
+      {
+        "k": "VIII-C",
+        "title": "問題報告五步驟",
+        "pat": "Problem → Cause → Root cause → Corrective action → Prevention",
+        "pts": [
+          "The root cause appears to be…：appears to be 是「似乎是、看起來是」，語氣比 is 保守，原因還在確認時很好用。",
+          "To prevent recurrence, we need to…：To + 原形表目的；recurrence = 再次發生，比 happen again 正式。"
+        ],
+        "exs": [
+          {
+            "tag": "Problem: What did we discover?",
+            "en": "We discovered that...",
+            "cn": "我們發現……"
+          },
+          {
+            "tag": "Cause: Why did it happen?",
+            "en": "The problem was caused by...",
+            "cn": "問題是由……造成的"
+          },
+          {
+            "tag": "Root cause: What was the underlying reason?",
+            "en": "The root cause appears to be...",
+            "cn": "根本原因似乎是……"
+          },
+          {
+            "tag": "Corrective action: What should we do now?",
+            "en": "We should take immediate corrective action by...",
+            "cn": "我們應該立即採取矯正措施，做法是……"
+          },
+          {
+            "tag": "Prevention: How can we stop it from happening again?",
+            "en": "To prevent recurrence, we need to...",
+            "cn": "為了避免再發生，我們需要……"
+          }
+        ]
+      }
+    ],
+    "extraTitle": "練習、翻譯與情境口說 Practice, Translation & Speaking",
+    "extra": [
+      {
+        "title": "IV. 練習 填空與改錯",
+        "exs": [
+          {
+            "tag": "1. Q",
+            "en": "The customer audit is ______ ______, so everyone is busy preparing.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "The customer audit is coming up, so everyone is busy preparing.",
+            "cn": "客戶稽核快到了，所以大家都忙著準備。(也可填 just around the corner)"
+          },
+          {
+            "tag": "2. Q",
+            "en": "Our products must meet customer testing ______.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "Our products must meet customer testing requirements.",
+            "cn": "我們的產品必須符合客戶的測試要求。"
+          },
+          {
+            "tag": "3. Q",
+            "en": "Some testing equipment didn't have ______ records.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "Some testing equipment didn't have maintenance records.",
+            "cn": "有些測試設備沒有維護紀錄。"
+          },
+          {
+            "tag": "4. Q",
+            "en": "We took immediate ______ action.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "We took immediate corrective action.",
+            "cn": "我們立即採取了矯正措施。"
+          },
+          {
+            "tag": "5. Q",
+            "en": "The lab team ______ all the testing equipment.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "The lab team checked all the testing equipment.",
+            "cn": "實驗室團隊檢查了所有的測試設備。"
+          },
+          {
+            "tag": "6. Q",
+            "en": "We hope the customer audit goes ______.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "We hope the customer audit goes well.",
+            "cn": "我們希望客戶稽核順利。(也可填 smoothly)"
+          },
+          {
+            "tag": "7. Q(找錯)",
+            "en": "Our company build a new Reliability Lab last month.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "Our company built a new Reliability Lab last month.",
+            "cn": "我們公司上個月蓋了一間新的可靠度實驗室。(last month 是過去，build → built)"
+          },
+          {
+            "tag": "8. Q(找錯)",
+            "en": "We need to make sure our products meets customer requirements.",
+            "cn": ""
+          },
+          {
+            "tag": "A",
+            "en": "We need to make sure our products meet customer requirements.",
+            "cn": "我們必須確保我們的產品符合客戶的要求。(products 是複數，動詞不加 s)"
+          }
+        ]
+      },
+      {
+        "title": "V. 翻譯練習 Translation",
+        "exs": [
+          {
+            "tag": "1",
+            "en": "The test didn't turn out well.",
+            "cn": "測試結果不太理想。"
+          },
+          {
+            "tag": "2",
+            "en": "The new production process didn't go as planned.",
+            "cn": "新的生產流程執行結果不太理想。(也可用 didn't turn out well)"
+          },
+          {
+            "tag": "3",
+            "en": "We ran into some problems during the customer audit.",
+            "cn": "我們在客戶稽核期間遇到了一些問題。"
+          },
+          {
+            "tag": "4",
+            "en": "We ran into some problems while installing the new equipment.",
+            "cn": "我們在安裝新設備時遇到了一些問題。"
+          },
+          {
+            "tag": "5",
+            "en": "What would you do if you ran into problems during an inspection?",
+            "cn": "如果你在檢驗過程中遇到問題，你會怎麼做？"
+          },
+          {
+            "tag": "6",
+            "en": "The customer audit is coming up, so we need to speed up our preparations.",
+            "cn": "客戶稽核即將到來，所以我們必須加快準備工作。"
+          },
+          {
+            "tag": "7",
+            "en": "We found that some testing equipment had no maintenance records.",
+            "cn": "我們發現有些測試設備沒有維護紀錄。"
+          },
+          {
+            "tag": "8",
+            "en": "The root cause was that the equipment was installed quickly, but no one was responsible for creating the records.",
+            "cn": "根本原因是設備安裝得很匆忙，但是沒有人負責建立紀錄。(老師：The equipment was installed quickly)"
+          },
+          {
+            "tag": "9",
+            "en": "The QA team took corrective action immediately.",
+            "cn": "品保團隊立即採取矯正措施。"
+          }
+        ]
+      },
+      {
+        "title": "VI. 情境 1：稽核前發現問題 The Pre-audit",
+        "exs": [
+          {
+            "tag": "情境",
+            "en": "Your factory is preparing for an important customer audit. During the pre-audit, you discover that some inspection reports are outdated and several testing machines have no calibration records.",
+            "cn": "你的工廠正在準備一場重要的客戶稽核。預先稽核時，你發現有些檢驗報告已經過期，而且好幾台測試機台沒有校正紀錄。"
+          },
+          {
+            "tag": "提示",
+            "en": "calibration schedule",
+            "cn": "校正時程表"
+          },
+          {
+            "tag": "1. Q",
+            "en": "What problems did you discover?",
+            "cn": "你發現了什麼問題？"
+          },
+          {
+            "tag": "A",
+            "en": "We discovered that some inspection reports were outdated and several testing machines had no calibration records.",
+            "cn": "我們發現有些檢驗報告已經過期，而且好幾台測試機台沒有校正紀錄。"
+          },
+          {
+            "tag": "2. Q",
+            "en": "What was the root cause?",
+            "cn": "根本原因是什麼？"
+          },
+          {
+            "tag": "A",
+            "en": "The root cause was that some testing equipment was installed quickly, but no one created the calibration records.",
+            "cn": "根本原因是有些測試設備安裝得很匆忙，但沒有人建立校正紀錄。"
+          },
+          {
+            "tag": "3. Q",
+            "en": "What corrective actions did you take?",
+            "cn": "你採取了什麼矯正措施？"
+          },
+          {
+            "tag": "A",
+            "en": "Our lab team completed the missing calibration records and arranged a calibration schedule for all testing equipment.",
+            "cn": "實驗室團隊補齊了缺少的校正紀錄，並為所有測試設備安排了校正時程。"
+          },
+          {
+            "tag": "4. Q",
+            "en": "How will you prevent these problems from happening again?",
+            "cn": "你要怎麼避免這些問題再發生？"
+          },
+          {
+            "tag": "A",
+            "en": "We should establish a regular document review and calibration schedule. We will also use a tracker list to check the status every month.",
+            "cn": "我們應該建立定期的文件審查和校正時程。我們也會用追蹤清單，每個月檢查進度。(tracker list = 追蹤清單)"
+          }
+        ]
+      },
+      {
+        "title": "VI. 情境 2：跑步機框架生鏽 The Rusty Treadmill Frames",
+        "exs": [
+          {
+            "tag": "情境",
+            "en": "During a visual inspection, you find rust on several treadmill frames before packaging.",
+            "cn": "外觀檢驗時，你在包裝前發現好幾個跑步機框架生鏽。"
+          },
+          {
+            "tag": "提示",
+            "en": "metal frame / surface treatment / rework",
+            "cn": "金屬框架／表面處理／返工、重新加工"
+          },
+          {
+            "tag": "1. Q",
+            "en": "Where did you find the rust?",
+            "cn": "你在哪裡發現鏽？"
+          },
+          {
+            "tag": "A",
+            "en": "We found rust on the treadmill frame.",
+            "cn": "我們在跑步機的框架上發現鏽。(rust 不可數，不加 a)"
+          },
+          {
+            "tag": "2. Q",
+            "en": "What might have caused the corrosion?",
+            "cn": "腐蝕可能是什麼造成的？"
+          },
+          {
+            "tag": "A",
+            "en": "Humidity might have caused the corrosion. / The corrosion might have been caused by humidity.",
+            "cn": "濕度可能造成了腐蝕。／腐蝕可能是濕度造成的。(主動、被動都可以)"
+          },
+          {
+            "tag": "3. Q",
+            "en": "How would you check whether other products have the same problem?",
+            "cn": "你會怎麼檢查其他產品有沒有同樣的問題？"
+          },
+          {
+            "tag": "A",
+            "en": "I would conduct a 100% visual inspection and then check the production records.",
+            "cn": "我會進行全數外觀檢驗，然後檢查生產紀錄。(conduct a visual inspection 比 check by visual 專業)"
+          },
+          {
+            "tag": "4. Q",
+            "en": "Would you accept, reject, or rework the affected products?",
+            "cn": "你會接受、拒收還是返工受影響的產品？"
+          },
+          {
+            "tag": "A",
+            "en": "It depends on the severity. We would rework the minor cases and reject the severely corroded frames.",
+            "cn": "要看嚴重程度。輕微的我們會返工，嚴重腐蝕的框架就拒收。"
+          },
+          {
+            "tag": "5. Q",
+            "en": "How would you communicate this issue to the supplier?",
+            "cn": "你會怎麼把這個問題告知供應商？"
+          },
+          {
+            "tag": "A",
+            "en": "We would send the supplier an inspection report with photos of the rust, ask for the root cause, and request a corrective action plan.",
+            "cn": "我們會把附有鏽蝕照片的檢驗報告寄給供應商，請對方找出根本原因，並提出矯正措施計畫。"
+          }
+        ]
+      },
+      {
+        "title": "VIII-B. 環境測試片語",
+        "exs": [
+          {
+            "tag": "environmental testing",
+            "en": "Environmental testing includes heat and humidity tests.",
+            "cn": "環境測試包括高溫和濕度測試。"
+          },
+          {
+            "tag": "incline motor",
+            "en": "The incline motor raises the front of the treadmill.",
+            "cn": "揚升馬達會把跑步機的前端抬高。"
+          },
+          {
+            "tag": "electrical continuity test",
+            "en": "We use a multimeter for the electrical continuity test.",
+            "cn": "做電氣導通測試時，我們用三用電錶。"
+          },
+          {
+            "tag": "work instructions",
+            "en": "Operators must follow the latest work instructions.",
+            "cn": "作業員必須照最新的作業指導書做。"
+          },
+          {
+            "tag": "defective products",
+            "en": "Defective products are marked with a red tag.",
+            "cn": "不良品會貼上紅色標籤。"
+          }
+        ]
+      },
+      {
+        "title": "VIII-E. 情境 3：孔徑尺寸錯誤 The Incorrectly Sized Holes",
+        "exs": [
+          {
+            "tag": "情境",
+            "en": "An inspector discovers that several treadmill frames have incorrectly sized holes. The operator has difficulty installing the parts because the factory is using outdated work instructions.",
+            "cn": "檢驗員發現好幾個跑步機框架的孔徑尺寸不對。作業員安裝零件有困難，因為工廠用的是過期的作業指導書。"
+          },
+          {
+            "tag": "任務",
+            "en": "Explain the situation to your supervisor.",
+            "cn": "向你的主管說明這個狀況。"
+          },
+          {
+            "tag": "文法",
+            "en": "have difficulty + V-ing",
+            "cn": "做某事有困難；because + 子句說明原因。"
+          },
+          {
+            "tag": "1. Q",
+            "en": "What is the problem?",
+            "cn": "問題是什麼？"
+          },
+          {
+            "tag": "A",
+            "en": "We discovered that several treadmill frames have incorrectly sized holes.",
+            "cn": "我們發現好幾個跑步機框架的孔徑尺寸不對。"
+          },
+          {
+            "tag": "2. Q",
+            "en": "How did the problem happen?",
+            "cn": "問題是怎麼發生的？"
+          },
+          {
+            "tag": "A",
+            "en": "The operator used outdated work instructions, so the parts did not fit.",
+            "cn": "作業員用了過期的作業指導書，所以零件裝不上去。"
+          },
+          {
+            "tag": "3. Q",
+            "en": "What caused the incorrect measurements?",
+            "cn": "是什麼造成尺寸錯誤？"
+          },
+          {
+            "tag": "A",
+            "en": "The problem was caused by old work instructions that still showed the previous hole size. The root cause appears to be that the old version was not removed from the production line.",
+            "cn": "問題是舊版作業指導書上還是舊的孔徑尺寸造成的。根本原因似乎是舊版本沒有從產線上撤掉。"
+          },
+          {
+            "tag": "4. Q",
+            "en": "What corrective actions should be taken?",
+            "cn": "應該採取哪些矯正措施？"
+          },
+          {
+            "tag": "A",
+            "en": "We should take immediate corrective action by stopping production, checking the affected frames, and replacing the work instructions with the latest approved version.",
+            "cn": "我們應該立即採取矯正措施：停止生產、檢查受影響的框架，並把作業指導書換成最新的核准版本。"
+          },
+          {
+            "tag": "5. Q",
+            "en": "How can you prevent the same problem from happening again?",
+            "cn": "你要怎麼避免同樣的問題再發生？"
+          },
+          {
+            "tag": "A",
+            "en": "To prevent recurrence, we need to improve document control so that only the latest approved work instructions are available at each workstation.",
+            "cn": "為了避免再發生，我們需要改善文件管制，讓每個工作站只放最新的核准版作業指導書。"
+          }
+        ]
+      }
+    ],
+    "discussionTitle": "VIII-D. 口說問答：工廠與測試",
+    "discussion": [
+      {
+        "q": "What kind of products does your factory manufacture?",
+        "qCn": "你們工廠製造什麼樣的產品？",
+        "a": "We manufacture treadmills, exercise bikes, and other fitness equipment.",
+        "aCn": "我們製造跑步機、健身車和其他健身器材。"
+      },
+      {
+        "q": "What equipment do you use during production?",
+        "qCn": "生產時你們使用什麼設備？",
+        "a": "We use welding machines, a painting line, and assembly tools.",
+        "aCn": "我們使用焊接機、塗裝線和組裝工具。"
+      },
+      {
+        "q": "How do workers record daily maintenance activities?",
+        "qCn": "作業員怎麼記錄每天的維護工作？",
+        "a": "Workers write the daily maintenance activities on a checklist and sign it after each check.",
+        "aCn": "作業員把每天的維護工作寫在檢查表上，每次檢查完都要簽名。"
+      },
+      {
+        "q": "Why is it important to keep maintenance records?",
+        "qCn": "為什麼保存維護紀錄很重要？",
+        "a": "Maintenance records show that the equipment is in good condition, and auditors always ask to see them.",
+        "aCn": "維護紀錄能證明設備狀況良好，而且稽核員一定會要求看。"
+      },
+      {
+        "q": "How do you check whether a treadmill controller or incline motor is working properly?",
+        "qCn": "你們怎麼檢查跑步機的控制器或揚升馬達是否運作正常？",
+        "a": "We run the treadmill and check that the controller responds correctly and the incline motor moves up and down smoothly.",
+        "aCn": "我們讓跑步機運轉，確認控制器反應正確，揚升馬達能順利地升高和降低。"
+      },
+      {
+        "q": "What equipment do you use to perform an electrical continuity test?",
+        "qCn": "做電氣導通測試時，你們使用什麼設備？",
+        "a": "We use a multimeter to check the wires and connections for continuity.",
+        "aCn": "我們用三用電錶檢查電線和接頭有沒有導通。"
+      },
+      {
+        "q": "What happens if a unit fails the test?",
+        "qCn": "如果機台沒有通過測試會怎麼樣？",
+        "a": "If a unit fails the test, we stop shipping it, find the problem, and test it again after the repair.",
+        "aCn": "如果機台沒有通過測試，我們不出貨，先找出問題，修好後再測一次。"
+      },
+      {
+        "q": "How do you identify and record defective products?",
+        "qCn": "你們怎麼辨識並記錄不良品？",
+        "a": "We separate defective products, label them clearly, and record the defect type and quantity on the inspection sheet.",
+        "aCn": "我們把不良品隔開、清楚標示，並把不良類型和數量記在檢驗表上。"
+      }
+    ]
   }
   ]
 };
@@ -32911,6 +34284,7 @@ window.BOOK = {
   });
   /* 沒有閱讀段落的課：目錄封面圖（只給課本目錄的卡片縮圖用，課文頁不顯示） */
   var C={
+    bk20261112:['magnifyL','wrench','clock','plug','target'],
     bk20260827:['booksL','bulb','people','briefcase','check'],
     bk20260825:['globe','clock','plane','smile','heart'],
     bk20260811:['gauge','gear','wallet','car','check'],

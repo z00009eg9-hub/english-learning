@@ -54482,3 +54482,989 @@ window.VIDEO["bk20261110"] = {
     "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。" }
  ]
 };
+
+/* ===== bk20261112 Audit Preparation, Go Well vs Go Smoothly & Running into Problems ===== */
+/* 新增專屬插圖：auditCal（月曆上圈出稽核日＋沙漏：稽核快到了）、reworkSort（生鏽零件分三箱：接受綠勾／返工扳手／拒收紅叉） */
+window.VIDEO_ART = window.VIDEO_ART || {};
+window.VIDEO_ART.auditCal = '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="184" height="134" rx="8" fill="#fdf6ec" stroke="#2b2118" stroke-width="3"/><rect x="24" y="30" width="112" height="100" rx="8" fill="#fff" stroke="#2b2118" stroke-width="3.5"/><rect x="24" y="30" width="112" height="24" rx="8" fill="#e8813a" stroke="#2b2118" stroke-width="3.5"/><path d="M48 22 v16 M112 22 v16" stroke="#2b2118" stroke-width="4" stroke-linecap="round"/><rect x="34" y="64" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="54" y="64" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="74" y="64" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="94" y="64" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="114" y="64" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="34" y="82" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="54" y="82" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="74" y="82" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="94" y="82" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="114" y="82" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="34" y="100" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="54" y="100" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="74" y="100" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="94" y="100" width="14" height="11" rx="2" fill="#f7e3c9"/><rect x="114" y="100" width="14" height="11" rx="2" fill="#f7e3c9"/><circle cx="101" cy="105.5" r="12" fill="none" stroke="#d9534f" stroke-width="3.5"/><path d="M150 40 h30 M150 120 h30 M153 40 c0 22 24 22 24 40 c0 18 -24 18 -24 40 M177 40 c0 22 -24 22 -24 40 c0 18 24 18 24 40" fill="none" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><path d="M158 112 h14 l-7 -8 z" fill="#e8813a"/></svg>';
+window.VIDEO_ART.reworkSort = '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="184" height="134" rx="8" fill="#fdf6ec" stroke="#2b2118" stroke-width="3"/><path d="M16 78 h46 l-6 50 h-34 z" fill="#e6f4ea" stroke="#2b2118" stroke-width="3.5" stroke-linejoin="round"/><path d="M77 78 h46 l-6 50 h-34 z" fill="#fde7d3" stroke="#2b2118" stroke-width="3.5" stroke-linejoin="round"/><path d="M138 78 h46 l-6 50 h-34 z" fill="#fbe0df" stroke="#2b2118" stroke-width="3.5" stroke-linejoin="round"/><path d="M27 103 l8 8 l14 -16" fill="none" stroke="#3f9e64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M90 116 l16 -16 M103 96 a7 7 0 1 0 8 8" fill="none" stroke="#e8813a" stroke-width="5" stroke-linecap="round"/><path d="M151 96 l20 20 M171 96 l-20 20" stroke="#d9534f" stroke-width="5" stroke-linecap="round"/><rect x="72" y="22" width="56" height="34" rx="4" fill="#b8b0a4" stroke="#2b2118" stroke-width="3.5"/><circle cx="86" cy="34" r="4" fill="#c0622d"/><circle cx="110" cy="44" r="5" fill="#c0622d"/><circle cx="98" cy="30" r="2.5" fill="#c0622d"/><path d="M60 60 l-16 12 M100 60 v12 M140 60 l16 12" stroke="#2b2118" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 4"/></svg>';
+window.VIDEO = window.VIDEO || {};
+window.VIDEO["bk20261112"] = {
+ "title": "Audit Preparation, Go Well vs Go Smoothly & Running into Problems",
+ "titleCn": "稽核準備、go well / go smoothly 與遇到問題的說法",
+ "date": "2026-11-12",
+ "level": "B1",
+ "scene": "The Audit Is Coming Up",
+ "sceneCn": "稽核快到了",
+ "sceneArt": "auditCal",
+ "titleArt": [
+  "auditCal",
+  "rustPart",
+  "reworkSort"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・品保工程師",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・客戶",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "The Audit Is Coming Up",
+   "cn": "情境：稽核快到了"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Phrases & Collocations",
+   "cn": "片語搭配"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "comingUp": {
+   "t": "coming up",
+   "cn": "快到了",
+   "tag": [
+    "片語",
+    "時間"
+   ],
+   "note": "be coming up＝快到了；audit 是活動，不說 will come to our factory。",
+   "ex": "My sister's wedding is coming up in May.",
+   "exCn": "我姊姊的婚禮五月就要到了。"
+  },
+  "corner": {
+   "t": "just around the corner",
+   "cn": "近在眼前",
+   "tag": [
+    "片語",
+    "口語"
+   ],
+   "note": "比 coming up 更口語，有「快到了」的壓迫感。",
+   "ex": "Summer vacation is just around the corner.",
+   "exCn": "暑假就快到了。"
+  },
+  "goWell": {
+   "t": "goes well",
+   "cn": "進行得很好",
+   "tag": [
+    "片語",
+    "結果"
+   ],
+   "note": "go well 看「結果好不好」；過去式 went well。",
+   "ex": "I hope your job interview goes well.",
+   "exCn": "希望你的面試順利。"
+  },
+  "goSmoothly": {
+   "t": "goes smoothly",
+   "cn": "順利進行",
+   "tag": [
+    "片語",
+    "過程"
+   ],
+   "note": "go smoothly 看「過程有沒有卡關」；will 後面一定要有 go。",
+   "ex": "I hope your move goes smoothly this weekend.",
+   "exCn": "希望你這週末搬家順順利利。"
+  },
+  "runInto": {
+   "t": "ran into some problems",
+   "cn": "遇到了一些問題",
+   "tag": [
+    "片語",
+    "問題"
+   ],
+   "note": "run into problems＝做的過程中碰到問題；過去式 ran into。",
+   "ex": "We ran into some problems on our road trip.",
+   "exCn": "我們開車旅行時遇到了一些問題。"
+  },
+  "calRecords": {
+   "t": "calibration records",
+   "cn": "校正紀錄",
+   "tag": [
+    "片語",
+    "稽核"
+   ],
+   "note": "calibration＝確保量得準；maintenance＝保養讓設備正常運作，兩者不同。",
+   "ex": "The gym keeps calibration records for its scales.",
+   "exCn": "健身房有保存體重計的校正紀錄。"
+  },
+  "passive": {
+   "t": "was installed quickly",
+   "cn": "安裝得很匆忙",
+   "tag": [
+    "文法",
+    "被動"
+   ],
+   "note": "設備是「被安裝」，用 was + 過去分詞。",
+   "ex": "The new air conditioner was installed in one hour.",
+   "exCn": "新冷氣一個小時就裝好了。"
+  },
+  "corrective": {
+   "t": "took corrective action",
+   "cn": "採取了矯正措施",
+   "tag": [
+    "片語",
+    "稽核"
+   ],
+   "note": "take corrective action＝消除原因、避免再發生；corrected 是「已改正好的」。",
+   "ex": "After the complaint, the hotel took corrective action at once.",
+   "exCn": "接到客訴後，飯店立刻採取了矯正措施。"
+  },
+  "rust": {
+   "t": "found rust",
+   "cn": "發現了鏽",
+   "tag": [
+    "單字",
+    "不可數"
+   ],
+   "note": "rust 不可數，不加 a。",
+   "ex": "I found rust on my old bike chain.",
+   "exCn": "我在舊腳踏車的鏈條上發現了鏽。"
+  },
+  "mightHave": {
+   "t": "might have caused",
+   "cn": "可能造成了",
+   "tag": [
+    "文法",
+    "推測"
+   ],
+   "note": "might have + 過去分詞＝推測過去可能的原因。",
+   "ex": "The heavy rain might have caused the traffic jam.",
+   "exCn": "大雨可能造成了塞車。"
+  },
+  "visual": {
+   "t": "visual inspection",
+   "cn": "外觀檢驗",
+   "tag": [
+    "片語",
+    "檢驗"
+   ],
+   "note": "動詞用 conduct：conduct a 100% visual inspection＝全數外觀檢驗。",
+   "ex": "The mechanic did a quick visual inspection of my tires.",
+   "exCn": "技師快速目視檢查了我的輪胎。"
+  },
+  "rework": {
+   "t": "rework the minor cases",
+   "cn": "輕微的返工",
+   "tag": [
+    "片語",
+    "處置"
+   ],
+   "note": "依嚴重程度決定 accept / rework / reject。",
+   "ex": "The tailor will rework the sleeves of my jacket.",
+   "exCn": "裁縫會重新修改我外套的袖子。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today, a customer audit is coming up, and Anita has a few problems to explain.",
+   "cn": "歡迎回來。今天客戶稽核快到了，Anita 有幾個問題要說明。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Listen for go well, go smoothly, run into problems, and just around the corner.",
+   "cn": "注意聽 go well、go smoothly、run into problems 和 just around the corner。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "auditCal"
+   },
+   "en": "Hi, Anita. The audit's coming up next week. How's everything going?",
+   "cn": "嗨，Anita。稽核下週就到了，一切還好嗎？",
+   "hi": [
+    {
+     "t": "coming up",
+     "cn": "快到了",
+     "k": "comingUp",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "au5CalLabelGap"
+   },
+   "en": "Pretty well so far. But we ran into some problems during our pre-audit.",
+   "cn": "到目前為止還不錯。不過預先稽核時我們遇到了一些問題。",
+   "hi": [
+    {
+     "t": "ran into some problems",
+     "cn": "遇到了一些問題",
+     "k": "runInto",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au5CalLabelGap"
+   },
+   "en": "Like what?",
+   "cn": "像是什麼？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "qa5Reports"
+   },
+   "en": "Some inspection reports were outdated, and a few testing machines had no calibration records.",
+   "cn": "有些檢驗報告過期了，還有幾台測試機台沒有校正紀錄。",
+   "hi": [
+    {
+     "t": "calibration records",
+     "cn": "校正紀錄",
+     "k": "calRecords",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "measureCaliper"
+   },
+   "en": "How come?",
+   "cn": "怎麼會這樣？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "labExperiment"
+   },
+   "en": "The equipment was installed quickly, but no one created the records.",
+   "cn": "設備安裝得很匆忙，但沒有人建立紀錄。",
+   "hi": [
+    {
+     "t": "was installed quickly",
+     "cn": "安裝得很匆忙",
+     "k": "passive",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "maintLog"
+   },
+   "en": "Okay. So what did you do?",
+   "cn": "好。那你們怎麼處理？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "maintLog"
+   },
+   "en": "We took corrective action right away and set up a calibration schedule.",
+   "cn": "我們馬上採取矯正措施，並排好校正時程。",
+   "hi": [
+    {
+     "t": "took corrective action",
+     "cn": "採取了矯正措施",
+     "k": "corrective",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "treadmill"
+   },
+   "en": "Good. Anything else?",
+   "cn": "很好。還有別的嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "rustPart"
+   },
+   "en": "Yeah—we found rust on several treadmill frames before packaging.",
+   "cn": "有——包裝前我們在好幾個跑步機框架上發現了鏽。",
+   "hi": [
+    {
+     "t": "found rust",
+     "cn": "發現了鏽",
+     "k": "rust",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "dehumidifierTank"
+   },
+   "en": "Hmm. What might have caused the corrosion?",
+   "cn": "嗯，腐蝕可能是什麼造成的？",
+   "hi": [
+    {
+     "t": "might have caused",
+     "cn": "可能造成了",
+     "k": "mightHave",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "dehumidifierTank"
+   },
+   "en": "Probably humidity. So we're doing a full visual inspection now.",
+   "cn": "大概是濕度。所以我們現在在做全數外觀檢驗。",
+   "hi": [
+    {
+     "t": "visual inspection",
+     "cn": "外觀檢驗",
+     "k": "visual",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "reworkSort"
+   },
+   "en": "Are you going to reject them?",
+   "cn": "你們會拒收嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "reworkSort"
+   },
+   "en": "It depends. We'll rework the minor cases and reject the badly corroded frames.",
+   "cn": "要看情況。輕微的返工，嚴重腐蝕的框架就拒收。",
+   "hi": [
+    {
+     "t": "rework the minor cases",
+     "cn": "輕微的返工",
+     "k": "rework",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "videoMeeting"
+   },
+   "en": "Makes sense. I hope the audit goes smoothly.",
+   "cn": "有道理。希望稽核順利。",
+   "hi": [
+    {
+     "t": "goes smoothly",
+     "cn": "順利進行",
+     "k": "goSmoothly",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "auditCal"
+   },
+   "en": "Me too. It's just around the corner, so we're double-checking everything.",
+   "cn": "我也是。稽核就在眼前了，所以我們正在把所有東西再檢查一遍。",
+   "hi": [
+    {
+     "t": "just around the corner",
+     "cn": "近在眼前",
+     "k": "corner",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "go well",
+     "ipa": "/ɡoʊ wel/",
+     "cn": "進行得很好（看結果）",
+     "def": "To have a good result.",
+     "art": "videoMeeting"
+    },
+    "b": {
+     "w": "go smoothly",
+     "ipa": "/ɡoʊ ˈsmuːð.li/",
+     "cn": "順利進行（看過程）",
+     "def": "To happen without problems.",
+     "art": "auditCal"
+    }
+   },
+   "en": "Go well is about the result. Go smoothly is about the process. After I hope, both work.",
+   "cn": "go well 看結果，go smoothly 看過程；I hope 後面兩個都能用。",
+   "hi": [
+    {
+     "t": "Go well",
+     "cn": "進行得很好",
+     "k": "goWell",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "maintenance",
+     "ipa": "/ˈmeɪn.t̬ən.əns/",
+     "cn": "維護（保養讓設備正常運作）",
+     "def": "Work that keeps a machine in good condition.",
+     "art": "maintLog"
+    },
+    "b": {
+     "w": "calibration",
+     "ipa": "/ˌkæləˈbreɪʃn/",
+     "cn": "校正（確保量得準）",
+     "def": "Checking and adjusting a tool so it measures correctly.",
+     "art": "measureCaliper"
+    }
+   },
+   "en": "Maintenance keeps machines running. Calibration makes sure they measure correctly. Auditors check both records.",
+   "cn": "maintenance 讓機器正常運作；calibration 確保量得準。稽核員兩種紀錄都會看。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "corroded",
+    "ipa": "/kəˈroʊ.dɪd/",
+    "pos": "adj.",
+    "art": "rustPart",
+    "def": "Damaged by rust or chemicals.",
+    "cn": "被腐蝕的。",
+    "note": "名詞 corrosion；rust 不可數。"
+   },
+   "en": "Corroded means damaged by rust. Humidity might have caused the corrosion.",
+   "cn": "corroded 是被腐蝕的。濕度可能造成了腐蝕。",
+   "hi": [
+    {
+     "t": "might have caused",
+     "cn": "可能造成了",
+     "k": "mightHave",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "rework",
+    "ipa": "/ˈriː.wɝːk/",
+    "pos": "n. / v.",
+    "art": "reworkSort",
+    "def": "Fixing a product so it meets the requirements.",
+    "cn": "返工、重新加工。",
+    "note": "accept 接受／rework 返工／reject 拒收，看嚴重程度。"
+   },
+   "en": "Rework means fixing a product. It depends on the severity. We'll rework the minor cases.",
+   "cn": "rework 是返工。要看嚴重程度，輕微的就返工。",
+   "hi": [
+    {
+     "t": "rework the minor cases",
+     "cn": "輕微的返工",
+     "k": "rework",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "go",
+    "coreCn": "事情順不順",
+    "art": "auditCal",
+    "items": [
+     {
+      "t": "~ well",
+      "cn": "進行得很好"
+     },
+     {
+      "t": "~ smoothly",
+      "cn": "順利進行"
+     },
+     {
+      "t": "not ~ as planned",
+      "cn": "沒照計畫"
+     },
+     {
+      "t": "~ wrong",
+      "cn": "出差錯"
+     }
+    ]
+   },
+   "en": "Go well, go smoothly, didn't go as planned, went wrong.",
+   "cn": "進行得很好、順利進行、沒照計畫、出差錯。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "audit",
+    "coreCn": "audit 的搭配",
+    "art": "au5CalLabelGap",
+    "items": [
+     {
+      "t": "customer ~",
+      "cn": "客戶稽核"
+     },
+     {
+      "t": "pre-~",
+      "cn": "預先稽核"
+     },
+     {
+      "t": "the ~ is coming up",
+      "cn": "稽核快到了"
+     },
+     {
+      "t": "the ~ will be held",
+      "cn": "稽核將舉行"
+     }
+    ]
+   },
+   "en": "Customer audit, pre-audit, the audit is coming up, the audit will be held.",
+   "cn": "客戶稽核、預先稽核、稽核快到了、稽核將舉行。",
+   "hi": [
+    {
+     "t": "coming up",
+     "cn": "快到了",
+     "k": "comingUp",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "records",
+    "coreCn": "records 的搭配",
+    "art": "maintLog",
+    "items": [
+     {
+      "t": "maintenance ~",
+      "cn": "維護紀錄"
+     },
+     {
+      "t": "calibration ~",
+      "cn": "校正紀錄"
+     },
+     {
+      "t": "create / complete ~",
+      "cn": "建立／補齊紀錄"
+     }
+    ]
+   },
+   "en": "Maintenance records, calibration records, create and complete the records.",
+   "cn": "維護紀錄、校正紀錄、建立和補齊紀錄。",
+   "hi": [
+    {
+     "t": "calibration records",
+     "cn": "校正紀錄",
+     "k": "calRecords",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "What would you do if + 主詞 + 過去式…?",
+    "art": "qa5Reports",
+    "rows": [
+     {
+      "lab": "if 用過去式，主句用 would（想像的情況）",
+      "blocks": [
+       {
+        "t": "What",
+        "k": "n"
+       },
+       {
+        "t": "would you do",
+        "k": "v"
+       },
+       {
+        "t": "if",
+        "k": "n"
+       },
+       {
+        "t": "you",
+        "k": "s"
+       },
+       {
+        "t": "ran into",
+        "k": "v"
+       },
+       {
+        "t": "problems during an inspection",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "回答也用 I would + 原形動詞。"
+   },
+   "en": "What would you do if you ran into problems during an inspection?",
+   "cn": "如果你在檢驗過程中遇到問題，你會怎麼做？"
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "The root cause was that + 子句（被動 was + 過去分詞）",
+    "art": "labExperiment",
+    "rows": [
+     {
+      "lab": "設備是「被安裝」",
+      "blocks": [
+       {
+        "t": "The root cause was",
+        "k": "s"
+       },
+       {
+        "t": "that",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "the equipment",
+        "k": "s"
+       },
+       {
+        "t": "was installed",
+        "k": "v"
+       },
+       {
+        "t": "quickly",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "reason / root cause was 後面接完整句子，常加 that。"
+   },
+   "en": "The root cause was that the equipment was installed quickly, but no one was responsible for creating the records.",
+   "cn": "根本原因是設備安裝得很匆忙，但是沒有人負責建立紀錄。"
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "Since + 原因, 主句；主詞 + is just around the corner",
+    "art": "auditCal",
+    "rows": [
+     {
+      "lab": "原因放句首用 Since",
+      "blocks": [
+       {
+        "t": "Since",
+        "k": "n"
+       },
+       {
+        "t": "the audit",
+        "k": "s"
+       },
+       {
+        "t": "is",
+        "k": "v"
+       },
+       {
+        "t": "just around the corner",
+        "k": "o"
+       },
+       {
+        "t": "we",
+        "k": "s"
+       },
+       {
+        "t": "need to double-check",
+        "k": "v"
+       },
+       {
+        "t": "everything",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "原因放後面就用 because：under a lot of pressure because…"
+   },
+   "en": "Since the audit is just around the corner, we need to double-check everything.",
+   "cn": "由於稽核日期迫在眉睫，我們需要再次仔細檢查所有事項。",
+   "hi": [
+    {
+     "t": "just around the corner",
+     "cn": "近在眼前",
+     "k": "corner",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 4,
+    "wrong": "I feel a little stressed because we have many work to do, but I hope everything will smoothly next week.",
+    "bad": [
+     "many work",
+     "will smoothly"
+    ],
+    "fix": "I feel a little stressed because we have a lot of work to do, but I hope everything will go smoothly next week.",
+    "good": [
+     "a lot of work",
+     "will go smoothly"
+    ],
+    "why": "Work is uncountable, and will needs a verb.",
+    "whyCn": "work 不可數用 a lot of；will 後面一定要接動詞 go。"
+   },
+   "en": "I feel a little stressed because we have a lot of work to do, but I hope everything will go smoothly next week.",
+   "cn": "我覺得有一點壓力，因為要做的事情很多，不過我希望下週一切順利。",
+   "hi": [
+    {
+     "t": "go smoothly",
+     "cn": "順利進行",
+     "k": "goSmoothly",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 7,
+    "wrong": "The reason was equipment installed quickly, but no one to build maintenance records.",
+    "bad": [
+     "was equipment installed",
+     "no one to build"
+    ],
+    "fix": "The reason was that the equipment was installed quickly, but no one set up maintenance records.",
+    "good": [
+     "was that the equipment was installed",
+     "no one set up"
+    ],
+    "why": "Add that, use the passive, and set up records.",
+    "whyCn": "加 that 接完整句子；設備用被動 was installed；建立紀錄用 set up。"
+   },
+   "en": "The reason was that the equipment was installed quickly, but no one set up maintenance records.",
+   "cn": "原因是設備安裝得很匆忙，但沒有人建立維護紀錄。",
+   "hi": [
+    {
+     "t": "was installed quickly",
+     "cn": "安裝得很匆忙",
+     "k": "passive",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We hope the customer audit goes ___.",
+    "a": "well",
+    "n": 1
+   },
+   "en": "We hope the customer audit goes ___.",
+   "cn": "我們希望客戶稽核___。",
+   "say": "We hope the customer audit goes, blank.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We hope the customer audit goes ___.",
+    "a": "well",
+    "n": 1,
+    "show": true
+   },
+   "en": "We hope the customer audit goes well.",
+   "cn": "我們希望客戶稽核順利。(也可填 smoothly)",
+   "hi": [
+    {
+     "t": "goes well",
+     "cn": "進行得很好",
+     "k": "goWell",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We ___ ___ some problems during the customer audit.",
+    "a": "ran into",
+    "n": 2
+   },
+   "en": "We ___ ___ some problems during the customer audit.",
+   "cn": "我們在客戶稽核期間___了一些問題。",
+   "say": "We, blank, blank, some problems during the customer audit.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We ___ ___ some problems during the customer audit.",
+    "a": "ran into",
+    "n": 2,
+    "show": true
+   },
+   "en": "We ran into some problems during the customer audit.",
+   "cn": "我們在客戶稽核期間遇到了一些問題。",
+   "hi": [
+    {
+     "t": "ran into some problems",
+     "cn": "遇到了一些問題",
+     "k": "runInto",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The customer audit is ___ ___, so everyone is busy preparing.",
+    "a": "coming up",
+    "n": 3
+   },
+   "en": "The customer audit is ___ ___, so everyone is busy preparing.",
+   "cn": "客戶稽核___了，所以大家都忙著準備。",
+   "say": "The customer audit is, blank, blank, so everyone is busy preparing.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The customer audit is ___ ___, so everyone is busy preparing.",
+    "a": "coming up",
+    "n": 3,
+    "show": true
+   },
+   "en": "The customer audit is coming up, so everyone is busy preparing.",
+   "cn": "客戶稽核快到了，所以大家都忙著準備。",
+   "hi": [
+    {
+     "t": "coming up",
+     "cn": "快到了",
+     "k": "comingUp",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
