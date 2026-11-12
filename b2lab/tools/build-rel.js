@@ -58,6 +58,7 @@ function norm(s) {
     .replace(/（[^）]*）|\([^)]*\)/g, ' ')            // 去括號註記
     .replace(/[／/]/g, ' / ')
     .replace(/\bsomebody\b|\bsomeone\b/g, 'sb').replace(/\bsomething\b/g, 'sth')
+    .replace(/([a-z0-9])\s*&\s*(?=[a-z0-9])/g, '$1')   // GR&R → grr、Q&A → qa
     .replace(/[^a-z0-9'\- /+…]/g, ' ')
     .replace(/\s+/g, ' ').trim();
 }
@@ -285,7 +286,7 @@ function fromCmp(lessons, idx) {
         const keep = new Set(); sets.forEach(set => { const hit = g0.filter(r => set.includes(r.key)); if (hit.length >= 2) hit.forEach(r => keep.add(r.key)); });
         g = g0.filter(r => keep.has(r.key)); if (g.length < 2) return;
       }
-      const members = g.map(r => { const kind = idx.words[r.key] ? 'w' : 'p'; const m = mkMember(idx, r.key, kind); if (r.cn) m.cn = r.cn; return m; })
+      const members = g.map(r => { const kind = idx.words[r.key] ? 'w' : 'p'; const m = mkMember(idx, r.key, kind); if (r.cn) m.cn = r.cn; if (m.en === r.key && r.u) m.en = String(r.u).trim(); if (/^[a-z]+&[a-z]+$/.test(m.en)) m.en = m.en.toUpperCase(); return m; })
         .sort((a, c) => a.key.localeCompare(c.key));
       // 概念名：標題的中文開頭（「默契的四種說法 chemistry / rapport…」→「默契的四種說法」）；沒有中文就用英文標題；都沒有就用成員中文
       let concept = cmpConcept(label);
