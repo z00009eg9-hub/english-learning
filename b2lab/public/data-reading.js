@@ -2121,6 +2121,150 @@ window.READING = [
      b2Cn:"他已經把地址寫了中文，但櫃台人員說那現在不需要了。",
      spCn:"他連中文那部分也寫了——結果現在根本不用那個了。"}
   ]
+},
+
+/* ---------------------------------------------------------- 36 */
+{
+  id:"r36", level:"B1+", topic:"婚禮與喜宴", words:259,
+  title:"Two Halls, One Deposit",
+  titleCn:"兩個會場，一筆訂金",
+  focus:"both / neither / either 與 all / none of",
+  intro:"Anita 陪越南同事 Mai 看兩家喜宴會場，兩個場地、兩個日期，全部都要二選一。注意：兩個東西「都」用 both（＋複數動詞），「都不」用 neither（＋單數動詞），「任一個」用 either（＋單數動詞）；三個以上才換成 all of 和 none of。中文的「都」兩邊通吃，英文卻會因為數量和肯定／否定換字，而且 both ... not 這種寫法在英文裡是不通的。",
+  spoken:[
+    {en:"Both of them had a free parking lot, and neither of them was cheap.",cn:"兩個都有免費停車場，而且兩個都不便宜。"},
+    {en:"At the second hall, either Saturday or Sunday was still free.",cn:"第二個會場，星期六或星期日任一天都還空著。"},
+    {en:"All of Mai's relatives were flying in from Hanoi, and none of the flights was cheap either.",cn:"Mai 的親戚全部要從河內飛過來，而且沒有一班機票是便宜的。"},
+    {en:"None of the guests complained about the drive.",cn:"沒有一位客人抱怨那段車程。"}
+  ],
+  paras:[
+    {en:"Anita's friend Mai was getting married in April, and she asked Anita to look at two banquet halls with her. Both halls were in the same district of Taoyuan, ten minutes apart by scooter. Both of them had a free parking lot, and neither of them was cheap. Mai had already chosen her dress, so the hall was the only thing left.",
+     cn:"Anita 的朋友 Mai 四月要結婚，她請 Anita 陪她去看兩家喜宴會場。兩個會場都在桃園的同一區，騎機車相距十分鐘。兩個都有免費停車場，而且兩個都不便宜。Mai 的禮服已經挑好了，所以只剩會場還沒決定。"},
+    {en:"The first hall could seat three hundred guests. The second one was smaller, but it had a window along one whole wall. The manager of the first hall said that all of his Saturdays in April were taken, so only Sunday was possible. At the second hall, either Saturday or Sunday was still free. Neither manager would lower the price, and both of them wanted a deposit that day.",
+     cn:"第一個會場可以容納三百位客人。第二個比較小，但有一整面牆都是窗戶。第一個會場的經理說，他四月所有的星期六都被訂走了，所以只有星期日可以。第二個會場則是星期六或星期日任一天都還空著。兩個經理都不肯降價，而且兩個都要求當天就付訂金。"},
+    {en:"Mai and Anita sat outside with two cups of tea. Neither of them had planned a wedding before. All of Mai's relatives were flying in from Hanoi, and none of the flights was cheap either. Anita added it up on her phone: with three hundred guests, both halls came to almost the same number. The only real difference was the window.",
+     cn:"Mai 和 Anita 端著兩杯茶坐在外面。她們兩個以前都沒籌辦過婚禮。Mai 的親戚全部要從河內飛過來，而且沒有一班機票是便宜的。Anita 在手機上加了一下：三百位客人的話，兩個會場算起來幾乎是同一個數字。真正的差別只有那面窗。"},
+    {en:"In the end Mai took the smaller hall and paid the deposit. Both families were happy with the Sunday, and none of the guests complained about the drive. Anita still remembers what the manager said at the door: neither the food nor the flowers make a wedding, the room does. She is not sure that is true. But all of the photographs have that window in them.",
+     cn:"最後 Mai 選了比較小的那個會場，付了訂金。兩家人都滿意星期日這個日子，也沒有一位客人抱怨那段車程。Anita 到現在還記得經理在門口說的話：婚禮不是菜和花撐起來的，是那個空間。她不確定這句話對不對。但所有的照片裡都有那面窗。"}
+  ],
+  target:[
+    {w:"banquet",ipa:"/ˈbæŋ.kwɪt/",pos:"n.",cn:"喜宴；宴會",def:"A formal dinner for a large number of people.",ex:"The company holds a banquet for the night shift every January.",exCn:"公司每年一月為夜班同事辦一場宴會。"},
+    {w:"district",ipa:"/ˈdɪstrɪkt/",pos:"n.",cn:"區；行政區",def:"One of the parts that a city is divided into.",ex:"My dentist moved to a quieter district near the river.",exCn:"我的牙醫搬到河邊比較安靜的一區。"},
+    {w:"seat",ipa:"/siːt/",pos:"v.",cn:"可容納（…人入座）",def:"To have enough seats for a number of people.",ex:"The new auditorium seats eight hundred students.",exCn:"新的禮堂可以容納八百個學生。"},
+    {w:"manager",ipa:"/ˈmæn.ə.dʒɚ/",pos:"n.",cn:"經理；負責人",def:"The person in charge of a shop, a team or a building.",ex:"A manager from head office checked our records on Tuesday.",exCn:"總公司的一位經理星期二來查我們的紀錄。"},
+    {w:"deposit",ipa:"/dɪˈpɑːzɪt/",pos:"n.",cn:"訂金",def:"Money you pay first so that something is kept for you.",ex:"We lost the deposit because we changed our minds too late.",exCn:"我們太晚改變心意，所以訂金沒了。"},
+    {w:"relative",ipa:"/ˈrelətɪv/",pos:"n.",cn:"親戚",def:"A member of your family.",ex:"Three relatives slept on the floor during the typhoon.",exCn:"颱風那幾天有三個親戚睡在地板上。"},
+    {w:"flight",ipa:"/flaɪt/",pos:"n.",cn:"班機",def:"A journey in a plane.",ex:"Their flight to Da Nang was moved to six in the morning.",exCn:"他們飛峴港的班機被改到早上六點。"},
+    {w:"complain",ipa:"/kəmˈpleɪn/",pos:"v.",cn:"抱怨",def:"To say that you are not happy about something.",ex:"Nobody complained when the boss paid for the taxi.",exCn:"老闆付計程車錢的時候，沒有人抱怨。"}
+  ],
+  questions:[
+    {q:"What was true about both of the halls?",
+     opts:["A. Both of them were in the same district and neither of them was cheap","B. Both of them could seat three hundred guests","C. Neither of them had a parking lot","D. Both of them were free on Saturday"],
+     ans:0,
+     expl:"第一段：Both halls were in the same district of Taoyuan；Both of them had a free parking lot, and neither of them was cheap。"},
+    {q:"Why could Mai not book the first hall on a Saturday?",
+     opts:["A. The manager did not work at weekends","B. All of the Saturdays in April were already taken","C. The hall was too small for three hundred guests","D. Her relatives could only arrive on Sunday"],
+     ans:1,
+     expl:"第二段：all of his Saturdays in April were taken, so only Sunday was possible。"},
+    {q:"文章寫 Neither of them was cheap，為什麼不寫成 Both of them were not cheap？",
+     opts:["A. both 不用在否定句；「兩個都不」要用 neither（＋單數動詞）或 not ... either","B. both 和 neither 可以互換，只差動詞的單複數","C. both 後面一定要加 of，neither 後面不能加 of","D. cheap 是形容詞，形容詞前面不能用 both"],
+     ans:0,
+     expl:"both 只用在肯定句（Both halls were in the same district.）；「兩個都不」固定用 neither，後面動詞用單數（Neither of them was cheap.），或把動詞變否定再加 either（I did not like either of them.）。三個以上「都沒有」才換成 none of。"},
+    {q:"What does Anita notice about the wedding photographs?",
+     opts:["A. None of them shows the food","B. All of them have the window in them","C. Both of the halls appear in them","D. Neither family is in them"],
+     ans:1,
+     expl:"最後一段：But all of the photographs have that window in them。"}
+  ],
+  upgrade:[
+    {b1:"The two halls were in the same district. The two halls were not cheap.",
+     b2:"Both halls were in the same district, and neither of them was cheap.",
+     note:"both ＋複數名詞（both halls）講「兩個都」，動詞用複數；「兩個都不」不能寫成 both ... not，要用 neither of them ＋單數動詞。兩句合成一句時用 and 把兩件事接起來，比各寫一句乾淨。",
+     sp:"Same street, the pair of them — and neither was cheap.",
+     spNote:"the pair of them 是口語的「那兩個」，放在句尾補說明；neither was cheap 後面省掉了 of them。",
+     b1Cn:"那兩個會場在同一區。那兩個會場都不便宜。",
+     b2Cn:"兩個會場都在同一區，而且兩個都不便宜。",
+     spCn:"那兩個在同一條街上——而且都不便宜。"},
+    {b1:"All her relatives came from Hanoi. The flights were expensive.",
+     b2:"All of Mai's relatives were flying in from Hanoi, and none of the flights was cheap either.",
+     note:"all of ＋the／所有格／代名詞＋複數名詞（all of Mai's relatives）；三個以上「都沒有」用 none of，動詞用單數比較安全（none of the flights was）。只有兩個才用 neither。句尾的 either 是「也不」，只出現在否定句。",
+     sp:"Her whole family's coming over from Hanoi — and none of those flights are cheap.",
+     spNote:"whole family 是口語的「全家」；口語裡 none of 後面常接複數動詞（are），寫作時用單數。",
+     b1Cn:"她所有親戚都從河內來。機票很貴。",
+     b2Cn:"Mai 的親戚全部要從河內飛過來，而且沒有一班機票是便宜的。",
+     spCn:"她全家都要從河內過來——而且那些機票都不便宜。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 37 */
+{
+  id:"r37", level:"B2", topic:"報稅與文件期限", words:276,
+  title:"A Day to Be Finished By",
+  titleCn:"要在那天之前做完的日子",
+  focus:"by 與 until、by the time ...",
+  intro:"五月是台灣的報稅月，Tom 第七年才學會不要拖到最後一個週末。注意兩個小字：by 是「最晚到那個時間點就要完成」，until 是「一直持續到那個時間點」；by the time ＋子句是「等到…的時候」，子句裡只能用簡單式，完成式放在主句。中文兩個都講成「到…」，英文選錯就會從「做完了」變成「還在做」。",
+  spoken:[
+    {en:"The bank wanted a copy of his return by the fifteenth.",cn:"銀行要他在十五號之前交一份申報書的副本。"},
+    {en:"He waited on the line until a tired voice told him that all of his figures were already in the system.",cn:"他在電話上一直等，直到一個疲倦的聲音告訴他，他所有的數字早就在系統裡了。"},
+    {en:"By the time he opened the website again, it was almost dark.",cn:"等到他再打開那個網站的時候，天幾乎黑了。"},
+    {en:"A deadline is not a day you work until, it is a day you are finished by.",cn:"期限不是一個你做到那天的日子，而是一個你要在那天之前做完的日子。"}
+  ],
+  paras:[
+    {en:"Tom had always filed his income tax at the last minute. The system opens on the first of May and closes on the thirty-first, and for six years he had done nothing until the final weekend. This May was different. He was applying for a mortgage, and the bank wanted a copy of his return by the fifteenth.",
+     cn:"Tom 報所得稅一向都拖到最後一刻。系統五月一日開放、五月三十一日關閉，而他有六年都是什麼都不做，一直撐到最後那個週末。這個五月不一樣。他正在申請房貸，銀行要他在十五號之前交一份申報書的副本。"},
+    {en:"He started early on a Saturday. By ten he had found his insurance papers, but not the statement from his second job: the company that had hired him for three months in the autumn had closed in February. Tom called the tax office and waited on the line until a tired voice told him that all of his figures were already in the system. He did not need the paper at all.",
+     cn:"他在某個星期六一早就開始。到十點他已經找出保險的文件，但第二份工作的明細沒找到：秋天僱用他三個月的那家公司二月就倒了。Tom 打電話到稅務機關，在線上一直等，直到一個疲倦的聲音告訴他，他所有的數字早就在系統裡了。那張紙他根本不需要。"},
+    {en:"By the time he opened the website again, it was almost dark. He had expected to fight with the software until midnight, but the whole return took forty minutes, because most of the boxes were filled in for him. He pressed send. A message said that the refund would reach his account by the end of July, and that until then he should keep every document in case the office asked.",
+     cn:"等到他再打開那個網站的時候，天幾乎黑了。他本來以為要跟那套軟體奮戰到半夜，但整份申報書只花四十分鐘，因為大部分的欄位都已經幫他填好了。他按下送出。畫面出現一行訊息：退稅會在七月底之前匯進他的帳戶，而在那之前，他應該把每一份文件留著，萬一稽核要看。"},
+    {en:"Two days before the deadline his neighbor, Mr. Kuo, knocked on the door with a brown folder he had not opened until that morning. Tom sat with him until eleven at night, reading each line aloud. By the time the thirty-first came, Mr. Kuo had filed, and he understood something it had taken Tom six years to learn: a deadline is not a day you work until, it is a day you are finished by.",
+     cn:"期限前兩天，他的鄰居郭先生敲了門，手上拿著一個棕色資料夾，那天早上才打開。Tom 陪他坐到晚上十一點，一行一行念出聲來。等到三十一號那天，郭先生已經申報完了，而且他懂了一件 Tom 花六年才學會的事：期限不是一個你做到那天的日子，而是一個你要在那天之前做完的日子。"}
+  ],
+  target:[
+    {w:"income",ipa:"/ˈɪn.kʌm/",pos:"n.",cn:"收入",def:"The money you receive from work or from a business.",ex:"Half of her income goes on rent and electricity.",exCn:"她收入的一半花在房租和電費上。"},
+    {w:"file",ipa:"/faɪl/",pos:"v.",cn:"提交（申報文件）",def:"To send an official document to an office.",ex:"Small shops must file their accounts twice a year.",exCn:"小店家一年必須申報兩次帳目。"},
+    {w:"mortgage",ipa:"/ˈmɔːrɡɪdʒ/",pos:"n.",cn:"房貸",def:"Money you borrow from a bank to buy a home.",ex:"They paid off the mortgage after nineteen years.",exCn:"他們十九年後把房貸還完了。"},
+    {w:"insurance",ipa:"/ɪnˈʃʊrəns/",pos:"n.",cn:"保險",def:"An agreement in which a company pays your costs if something goes wrong.",ex:"Her scooter insurance covers the other driver as well.",exCn:"她的機車保險也保另一位駕駛。"},
+    {w:"statement",ipa:"/ˈsteɪt.mənt/",pos:"n.",cn:"明細；對帳單",def:"A printed list of money paid in and out.",ex:"The bank sends a statement to my old address.",exCn:"銀行把對帳單寄到我以前的地址。"},
+    {w:"figure",ipa:"/ˈfɪɡjɚ/",pos:"n.",cn:"數字",def:"A number in a record or a report.",ex:"The figures on the second page do not add up.",exCn:"第二頁的數字加起來不對。"},
+    {w:"refund",ipa:"/ˈriːfʌnd/",pos:"n.",cn:"退款；退稅",def:"Money that is given back to you.",ex:"She asked for a refund on the broken kettle.",exCn:"她要求那個壞掉的水壺退款。"},
+    {w:"deadline",ipa:"/ˈdedlaɪn/",pos:"n.",cn:"截止期限",def:"The last day or time you can do something.",ex:"Our deadline for the safety report moved to Monday.",exCn:"我們安全報告的期限改到星期一。"},
+    {w:"folder",ipa:"/ˈfoʊl.dɚ/",pos:"n.",cn:"資料夾",def:"A cover of thin card for keeping papers in.",ex:"Each new worker gets a folder with the rules inside.",exCn:"每個新進人員都會拿到一個裡面放著規章的資料夾。"},
+    {w:"aloud",ipa:"/əˈlaʊd/",pos:"adv.",cn:"出聲地",def:"In a voice that other people can hear.",ex:"He counted the coins aloud so his daughter could hear.",exCn:"他把硬幣出聲數出來，讓他女兒聽得見。"}
+  ],
+  questions:[
+    {q:"Why was this May different for Tom?",
+     opts:["A. The tax system opened two weeks later than usual","B. He was applying for a mortgage, and the bank wanted his return by the fifteenth","C. He had lost all of his papers in February","D. He had moved to a different district in April"],
+     ans:1,
+     expl:"第一段：He was applying for a mortgage, and the bank wanted a copy of his return by the fifteenth。"},
+    {q:"What did the tax office tell Tom on the phone?",
+     opts:["A. He had to ask his old company for the statement","B. All of his figures were already in the system","C. The system would close on the fifteenth of May","D. His refund had already been paid"],
+     ans:1,
+     expl:"第二段：a tired voice told him that all of his figures were already in the system。"},
+    {q:"最後一句說 a deadline is not a day you work until, it is a day you are finished by。by 和 until 差在哪裡？",
+     opts:["A. by 是「不晚於那個時間點就完成」，until 是「一直持續到那個時間點」","B. by 用在未來，until 用在過去","C. 兩個意思一樣，by 只是比較正式","D. by 後面一定要接 the time，until 不可以"],
+     ans:0,
+     expl:"by the fifteenth、by the end of July 是「最晚到那時候就要做完」；waited on the line until a tired voice told him、sat with him until eleven 是「一直做到那一刻」。所以 ✗ I will finish it until Friday 是錯的，要說 by Friday。"},
+    {q:"What had happened by the thirty-first of May?",
+     opts:["A. Mr. Kuo had filed his tax return","B. Tom's refund had reached his account","C. Mr. Kuo had still not opened his folder","D. The tax office had asked Tom for every document"],
+     ans:0,
+     expl:"最後一段：By the time the thirty-first came, Mr. Kuo had filed。退稅要到七月底之前才入帳，所以 B 不對。"}
+  ],
+  upgrade:[
+    {b1:"He waited on the phone. Then someone told him the numbers were in the system.",
+     b2:"He waited on the line until a tired voice told him that all of his figures were already in the system.",
+     note:"until 帶出「一直等到某件事發生」，後面可以接整個子句，子句用過去簡單式（until a voice told him），不用過去完成式。轉述那個人說的話時，are 要往後退成 were。✗ He waited by someone told him 是錯的：by 後面只放時間點，不放子句。",
+     sp:"He hung on until someone finally told him it was all in there already.",
+     spNote:"hang on 是口語的「在電話上等著」；it was all in there 的 in there 指「系統裡面」。",
+     b1Cn:"他在電話上等。然後有人告訴他那些數字在系統裡。",
+     b2Cn:"他在線上一直等，直到一個疲倦的聲音告訴他，他所有的數字早就在系統裡了。",
+     spCn:"他一直掛在線上，直到終於有人跟他說那些資料早就都在裡面了。"},
+    {b1:"When he opened the website again, it was almost dark.",
+     b2:"By the time he opened the website again, it was almost dark.",
+     note:"when 只說「那個時候」，by the time 多了「中間已經過了很久」的意思。by the time 的子句裡只能用簡單式：講過去用過去簡單式，講未來用現在簡單式（By the time I get home, it will be dark.），完成式留給主句（By the time the thirty-first came, Mr. Kuo had filed.）。",
+     sp:"By the time he got back to it, the light had gone.",
+     spNote:"get back to something 是口語的「再回去弄那件事」；the light had gone 是「天已經黑了」。",
+     b1Cn:"他再打開那個網站的時候，天幾乎黑了。",
+     b2Cn:"等到他再打開那個網站的時候，天幾乎黑了。",
+     spCn:"等他再回去弄的時候，天已經暗了。"}
+  ]
 }
 
 ];

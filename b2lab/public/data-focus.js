@@ -823,6 +823,44 @@ r35:{ unit:"g04", title:"already / yet / still 與 not ... any more",
     {bad:"She has yet decided what to send back.",good:"She has already decided what to send back.",why:"yet 不能用在肯定句；「已經」要用 already。yet 只出現在 Has she decided yet? 和 She has not decided yet. 這兩種句型。"},
     {bad:"The Chinese part was not needed yet.",good:"The Chinese part was not needed any more.",why:"not ... yet 是「還沒，但等一下會」；要講「以前需要、現在不需要了」必須用 not ... any more。"}
   ]
+},
+
+r36:{ unit:"g14", title:"both / neither / either 與 all / none of",
+  formula:"兩個 → both ＋複數動詞　|　neither ＋單數動詞　|　either ＋單數動詞　‖　三個以上 → all of ...、none of ...　‖　成對：both ... and / neither ... nor / either ... or",
+  points:[
+    "both ＝「兩個都」，動詞用複數：Both halls were in the same district.、Both families were happy. 後面可以直接接複數名詞（both halls）；接代名詞或 the／my／these 時用 both of：both of them、both of the managers（✗ both them）。",
+    "neither ＝「兩個都不」，動詞用單數：Neither manager would lower the price.、Neither of them was cheap. 它本身已經是否定，不可以再加 not（✗ Neither of them was not cheap），也不要用 both ... not 代替。成對時用 neither ... nor：neither the food nor the flowers。",
+    "either ＝「兩個之中任一個」，後面接單數名詞、動詞也用單數：Either Saturday or Sunday was still free.、Either of the halls is big enough. 否定句的 not ... either 等於 neither：I did not like either hall. ＝ I liked neither hall.",
+    "⚠ 三個以上就要換字：all of Mai's relatives（都）、none of the flights（都沒有）、none of the guests complained。all 和 none 後面接 of ＋the／所有格／代名詞；none of ＋複數名詞的動詞寫作時用單數比較安全（none of the flights was），口語常聽到複數。句尾的 either 是「也不」，只用在否定句。"
+  ],
+  examples:[
+    {en:"Both of my sisters live in Kaohsiung, but neither of them drives.",cn:"我兩個姊妹都住高雄，但兩個都不開車。",note:"both ＋複數動詞；neither ＋單數動詞"},
+    {en:"You can pay by card or by cash — either way is fine.",cn:"你可以刷卡或付現——兩種任一種都可以。",note:"either ＋單數名詞＋單數動詞"},
+    {en:"All of the forms were in Chinese, and none of them had an English page.",cn:"所有表格都是中文的，而且沒有一張有英文頁。",note:"三個以上用 all of／none of"}
+  ],
+  traps:[
+    {bad:"Both of them were not cheap.",good:"Neither of them was cheap.",why:"英文不用 both ... not 講「兩個都不」。要用 neither ＋單數動詞，或把動詞變否定再加 either（I did not like either of them.）。"},
+    {bad:"None of the two halls was cheap.",good:"Neither of the two halls was cheap.",why:"none of 用在三個以上；只有兩個東西時「都沒有」一律用 neither of。反過來，三個以上就不能用 neither。"}
+  ]
+},
+
+r37:{ unit:"g04", title:"by 與 until、by the time ...",
+  formula:"by ＋時間點 ＝ 最晚到那時候就要完成　|　until ＋時間點／子句 ＝ 一直持續到那一刻　|　by the time ＋簡單式子句，完成式放主句",
+  points:[
+    "by ＝「不晚於」，看的是截止線：The bank wanted a copy of his return by the fifteenth.、The refund would reach his account by the end of July. 只要在那個時間點之前做完就算達成，哪一天做的不重要。",
+    "until（＝ till）＝「一直到那一刻」，看的是持續的那一段：He waited on the line until a tired voice told him ...、Tom sat with him until eleven at night. 後面可以接時間點，也可以接一整個子句。",
+    "⚠ 「做完」用 by、「持續」用 until，不能互換：✗ I will finish it until Friday ／ ✓ by Friday；✗ The shop is closed by Monday ／ ✓ until Monday。否定的 not ... until 是「要到那時候才」：He had not opened it until that morning.（那天早上才打開）。",
+    "by the time ＋子句 ＝「等到…的時候」，暗示中間已經過了一段時間。子句裡只能用簡單式：講過去用過去簡單式、講未來用現在簡單式，完成式留給主句：By the time he opened the website again, it was almost dark.、By the time the thirty-first came, Mr. Kuo had filed.、By the time I get home, it will be dark."
+  ],
+  examples:[
+    {en:"Please send the photographs by Thursday.",cn:"請在星期四之前把照片寄來。",note:"by ＝ 截止線，不晚於星期四"},
+    {en:"We cannot use the lift until the inspection is finished.",cn:"檢查完成之前我們不能用電梯。",note:"not ... until ＝ 要到那時候才"},
+    {en:"By the time the bus arrived, we had been standing there for an hour.",cn:"等公車到的時候，我們已經在那裡站了一小時。",note:"by the time ＋過去簡單式，主句用過去完成式"}
+  ],
+  traps:[
+    {bad:"I will file the return until the thirty-first.",good:"I will file the return by the thirty-first.",why:"file 是一次就完成的動作，要用 by（最晚那天之前做完）；until 會變成「一直在申報、報到三十一號」，意思不通。"},
+    {bad:"By the time I will get home, it will be dark.",good:"By the time I get home, it will be dark.",why:"by the time 的子句裡不用 will，用現在簡單式就代表未來；未來的部分放在主句（it will be dark）。"}
+  ]
 }
 
 };
