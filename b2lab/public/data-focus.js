@@ -835,7 +835,7 @@ r36:{ unit:"g14", title:"both / neither / either 與 all / none of",
   ],
   examples:[
     {en:"Both of my sisters live in Kaohsiung, but neither of them drives.",cn:"我兩個姊妹都住高雄，但兩個都不開車。",note:"both ＋複數動詞；neither ＋單數動詞"},
-    {en:"You can pay by card or by cash — either way is fine.",cn:"你可以刷卡或付現——兩種任一種都可以。",note:"either ＋單數名詞＋單數動詞"},
+    {en:"You can pay by card or in cash — either way is fine.",cn:"你可以刷卡或付現——哪一種都可以。",note:"either ＋單數名詞＋單數動詞"},
     {en:"All of the forms were in Chinese, and none of them had an English page.",cn:"所有表格都是中文的，而且沒有一張有英文頁。",note:"三個以上用 all of／none of"}
   ],
   traps:[

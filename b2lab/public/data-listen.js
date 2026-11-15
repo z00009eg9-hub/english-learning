@@ -19,7 +19,7 @@ notes:[
   "id": "dl20261111a2",
   "date": "2026-11-11",
   "level": "A2",
-  "minutes": 2,
+  "minutes": 1,
   "kind": "note",
   "title": "Number Twelve, Please Wait",
   "titleCn": "十二號，請稍等",
@@ -37,18 +37,18 @@ notes:[
       "def": "A time you agree to meet someone."
     },
     {
-      "w": "clinic",
-      "ipa": "/ˈklɪnɪk/",
-      "pos": "n.",
-      "cn": "診所",
-      "def": "A small place where doctors see people."
+      "w": "wait",
+      "ipa": "/weɪt/",
+      "pos": "v.",
+      "cn": "等；等候",
+      "def": "To stay in one place until something happens."
     },
     {
-      "w": "nurse",
-      "ipa": "/nɝːs/",
-      "pos": "n.",
-      "cn": "護理師",
-      "def": "A person whose job is to help doctors and sick people."
+      "w": "book",
+      "ipa": "/bʊk/",
+      "pos": "v.",
+      "cn": "預約；訂",
+      "def": "To arrange to see someone or use something at a set time."
     },
     {
       "w": "throat",
@@ -65,11 +65,11 @@ notes:[
       "def": "How hot or cold something or someone is."
     },
     {
-      "w": "medicine",
-      "ipa": "/ˈmedɪsɪn/",
-      "pos": "n.",
-      "cn": "藥",
-      "def": "Something you take when you are ill."
+      "w": "check",
+      "ipa": "/tʃek/",
+      "pos": "v.",
+      "cn": "檢查；量",
+      "def": "To look at something to see if it is all right."
     }
   ],
   "script": [
@@ -217,7 +217,7 @@ notes:[
   "id": "dl20261111b1",
   "date": "2026-11-11",
   "level": "B1",
-  "minutes": 3,
+  "minutes": 1,
   "kind": "note",
   "title": "Eight to Eleven, Two Streets Away",
   "titleCn": "八點到十一點，兩條街外",
@@ -235,11 +235,11 @@ notes:[
       "def": "The sound you make when you speak or sing."
     },
     {
-      "w": "colleague",
-      "ipa": "/ˈkɑː.liːɡ/",
+      "w": "patient",
+      "ipa": "/ˈpeɪ.ʃənt/",
       "pos": "n.",
-      "cn": "同事",
-      "def": "A person who works with you."
+      "cn": "病人；患者",
+      "def": "A person who is getting care from a doctor."
     },
     {
       "w": "clinic",
@@ -263,11 +263,11 @@ notes:[
       "def": "A cover for your mouth and nose."
     },
     {
-      "w": "serious",
-      "ipa": "/ˈsɪriəs/",
-      "pos": "adj.",
-      "cn": "嚴重的",
-      "def": "Bad enough to worry about."
+      "w": "counter",
+      "ipa": "/ˈkaʊn.t̬ɚ/",
+      "pos": "n.",
+      "cn": "櫃台",
+      "def": "A long table in a shop or office where people are helped."
     }
   ],
   "script": [
@@ -425,7 +425,7 @@ notes:[
   "id": "dl20261111b1p",
   "date": "2026-11-11",
   "level": "B1+",
-  "minutes": 4,
+  "minutes": 1,
   "kind": "note",
   "title": "The Doctor Who Comes to You",
   "titleCn": "醫師來到你家附近",
@@ -643,7 +643,7 @@ notes:[
   "id": "dl20261111b2",
   "date": "2026-11-11",
   "level": "B2",
-  "minutes": 4,
+  "minutes": 1,
   "kind": "note",
   "title": "Move the Work, Not the Treatment",
   "titleCn": "移工作，不要移治療",
@@ -651,7 +651,7 @@ notes:[
   "topic": "🗓️ 把復健時段塞進稽核週的那通電話",
   "focus": "will have done 把進度切在截止線上，will be doing 把鏡頭停在未來的某一刻，兩個在同一段對話裡分工",
   "intro": "Anita的肩膀要做八次復健，客戶稽核卻排在十二月第一週。她跟Tom在電話裡一來一往算時間，算到最後決定移動工作，而不是移動治療。對話裡的 will have finished、will be sitting、will have done 各有分工：一個算做完幾次，一個把鏡頭停在稽核那天早上，一個收在最後當結論。",
-  "tip": "第一次聽抓五個事實：療程總次數、一週做幾個早上、稽核開始之前會做完幾次、復健師只有哪兩天有時段，以及Mai幫忙代班幾個星期。第二次聽把 will have 和 will be 各出現在哪一句標出來，並想一想為什麼Anita在結論那一句選了完成式。",
+  "tip": "第一次聽抓五個事實：療程總次數、一週做幾個早上、稽核開始之前會做完幾次、復健師下個星期還有沒有時段，以及Mai幫忙代班幾個星期。第二次聽把 will have 和 will be 各出現在哪一句標出來，並想一想為什麼Anita在結論那一句選了完成式。",
   "pre": [
     {
       "w": "shoulder",
@@ -661,11 +661,11 @@ notes:[
       "def": "The joint where your arm meets your body."
     },
     {
-      "w": "ache",
-      "ipa": "/eɪk/",
-      "pos": "n./v.",
-      "cn": "痠痛",
-      "def": "A dull pain that keeps going."
+      "w": "physio",
+      "ipa": "/ˈfɪz.i.oʊ/",
+      "pos": "n.",
+      "cn": "復健師；物理治療師",
+      "def": "A person who helps you move a hurt body part again."
     },
     {
       "w": "therapy",
@@ -682,11 +682,11 @@ notes:[
       "def": "One period of time spent doing one activity."
     },
     {
-      "w": "schedule",
-      "ipa": "/ˈskedʒuːl/",
+      "w": "supplier",
+      "ipa": "/səˈplaɪɚ/",
       "pos": "n.",
-      "cn": "行程表",
-      "def": "A plan that says when each thing happens."
+      "cn": "供應商",
+      "def": "A company that sells things to another company."
     },
     {
       "w": "treatment",
@@ -734,8 +734,8 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "The physio only has Tuesday and Thursday slots.",
-      "cn": "復健師只有星期二和星期四有時段。"
+      "en": "The physio is fully booked the week after.",
+      "cn": "復健師下個星期的時段全滿了。"
     },
     {
       "sp": "Tom",
@@ -769,7 +769,7 @@ notes:[
     },
     {
       "sp": "Tom",
-      "en": "What happens at ten on the first audit morning?",
+      "en": "Where will you be at ten on the first audit morning?",
       "cn": "稽核第一天早上十點你在哪裡？"
     },
     {
@@ -821,19 +821,19 @@ notes:[
       "q": "Why can't Anita move the last two sessions to the following week?",
       "qCn": "Anita為什麼不能把最後兩次推到下個星期？",
       "opts": [
-        "A. The physio only works Tuesday and Thursday",
+        "A. The physio is fully booked the week after",
         "B. Her manager said no",
         "C. The clinic closes in December",
         "D. Mai is away that week"
       ],
       "optsCn": [
-        "A. 復健師只有星期二和星期四有時段",
+        "A. 復健師下個星期的時段全滿了",
         "B. 主管不同意",
         "C. 診所十二月休診",
         "D. Mai那個星期不在"
       ],
       "ans": 0,
-      "expl": "The physio only has Tuesday and Thursday slots.——理由是時段，不是人。主管其實簽了，Mai也在，而且還幫她代班。"
+      "expl": "The physio is fully booked the week after.——理由是時段，不是人。主管其實簽了，Mai也在，而且還幫她代班。"
     },
     {
       "q": "What did Mai agree to take over?",

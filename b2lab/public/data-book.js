@@ -31665,9 +31665,9 @@ window.BOOK = {
       {
         "n": 4,
         "ok": "The new inspection is effective because it can identify defects.",
-        "cn": "新的檢驗方法幫助我們更有效地辨識缺陷。（老師建議說法）",
+        "cn": "新的檢驗很有效，因為它能辨識缺陷。",
         "pat": "help + 人 + 原形動詞；比較級 more effectively",
-        "note": "✅ 老師建議說法：The new inspection method helps us identify defects more effectively. inspection 單獨出現是「檢驗」這個動作，要講「方法」就用 inspection method。 help us identify：help + 人 + 原形動詞(to 可省略)。 effectively 是副詞，修飾動詞 identify；effective 是形容詞(詳見 III-A)。"
+        "note": "✅ 這句文法正確。老師建議說法：The new inspection method helps us identify defects more effectively.（新的檢驗方法幫助我們更有效地辨識缺陷。） inspection 單獨出現是「檢驗」這個動作，要講「方法」就用 inspection method。 help us identify：help + 人 + 原形動詞(to 可省略)。 effectively 是副詞，修飾動詞 identify；effective 是形容詞(詳見 III-A)。"
       },
       {
         "n": 5,

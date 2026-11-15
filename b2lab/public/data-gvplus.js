@@ -736,12 +736,12 @@ window.GVPLUS = {
       "q": "He started the night course in 2024. In 2029 he ___ it for five years.",
       "opts": [
         "will have been attending",
-        "will have attended",
+        "will have been attend",
         "will be attending",
         "will attend"
       ],
       "ans": 0,
-      "expl": "句子裡有 for five years 這一段長度，而且上課是可以持續的動作，所以用 will have been + V-ing。will have attended 算的是完成的次數；will be attending 只講那一刻在上課；will attend 什麼進度都沒交代。"
+      "expl": "句子裡有 for five years 這一段長度，而且上課是可以持續的動作，所以用 will have been + V-ing。will have been 後面要接 V-ing，不能接原形 attend；will be attending 只講那一刻在上課；will attend 什麼進度都沒交代。"
     }
   ]
 },

@@ -15848,9 +15848,9 @@ grammar:[
   ],
   "traps": [
     {
-      "bad": "I think I'm going to call you tonight.",
-      "good": "I think I'll call you tonight.",
-      "why": "I think 前面擺著，表示你是正在判斷、正在決定，所以後面要用 will。中文的「我想我會」很容易讓人順手寫成 going to，但那會變成「我早就計畫好今晚打給你」，跟 I think 的語氣打架。"
+      "bad": "Look at those black clouds. It will rain.",
+      "good": "Look at those black clouds. It's going to rain.",
+      "why": "眼前有看得到的證據（烏雲），預測接下來會發生的事要用 be going to。will 是沒有明顯根據的判斷或臨時決定，拿來講「看得見跡象」的預測，聽起來像是隨口猜。"
     },
     {
       "bad": "We are going to move the meeting. I just decided.",
@@ -16060,7 +16060,7 @@ grammar:[
     {
       "bad": "I will have finished the course in 2028.",
       "good": "By 2028 I'll have finished the course.",
-      "why": "in 2028 是「在那一年裡面」，跟完成式的截止線概念打架。未來完成式要搭 by：by 2028 的意思是「二〇二八年到之前就已經完成」，時間的邏輯才對得上。"
+      "why": "這句想說「最晚到二〇二八年就完成」，要表達截止線得用 by 2028。in 2028 只指「在那一年」，沒有交代截止線，意思會變得不清楚；in 並不是完全不能和完成式並用（例如 In 2028 I'll have been here ten years），但那是拿那一年當參照點，跟這句不同。"
     },
     {
       "bad": "Will you be helping me with this box?",
@@ -16239,9 +16239,9 @@ grammar:[
           "note": "履歷與自我介紹很常用"
         },
         {
-          "en": "That machine will have been running non-stop since April.",
-          "cn": "那台機器從四月起就沒停過了。",
-          "note": "since 標起點，長度自己算"
+          "en": "By Friday that machine will have been running non-stop for six weeks.",
+          "cn": "到星期五，那台機器就連續運轉六週沒停過了。",
+          "note": "by 標終點，for 標長度"
         }
       ]
     },
@@ -16313,12 +16313,12 @@ grammar:[
       "qCn": "她二〇二五年三月接下那條產線。到二〇二八年三月，她就管了三年。",
       "opts": [
         "A. will have been managing",
-        "B. will have managed",
+        "B. will have been manage",
         "C. will be managing",
         "D. will manage"
       ],
       "ans": 0,
-      "expl": "句子裡有 for three years 這一段長度，而且動作是連續的，所以用 will have been + V-ing。will have managed 算的是完成的件數；will be managing 只講那一刻在做；will manage 什麼都沒交代。"
+      "expl": "句子裡有 for three years 這一段長度，而且動作是連續的，所以用 will have been + V-ing。will have been 後面要接 V-ing，不能接原形 manage；will be managing 只講那一刻在做；will manage 什麼都沒交代。"
     },
     {
       "q": "A report says: \"___ the audit begins, the corrective actions will have been closed.\"",
