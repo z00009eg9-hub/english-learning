@@ -16055,7 +16055,7 @@ grammar:[
     {
       "bad": "By the time you will arrive, I will have left.",
       "good": "By the time you arrive, I'll have left.",
-      "why": "by the time 已經把句子推到未來了，後面的子句一定用現在式。中文的「等你到的時候」沒有時態，所以很多人會在兩邊都塞 will，結果句子重複標了兩次未來。"
+      "why": "by the time 已經把句子推到未來了，後面的子句通常用現在簡單式、不用 will（也可以用現在完成式）。中文的「等你到的時候」沒有時態，所以很多人會在兩邊都塞 will，結果句子重複標了兩次未來。"
     },
     {
       "bad": "I will have finished the course in 2028.",
@@ -16103,7 +16103,7 @@ grammar:[
         "D. are coming"
       ],
       "ans": 1,
-      "expl": "by the time 後面的子句一定用現在式，所以是 come。三個帶 will 或進行式的選項都在同一個句子裡重複標了未來，英文不允許這樣疊。"
+      "expl": "by the time 後面的子句通常用現在簡單式、不用 will（也可以用現在完成式），所以是 come。三個帶 will 或進行式的選項都在同一個句子裡重複標了未來，英文不允許這樣疊。"
     },
     {
       "q": "You want to know whether your colleague already plans to use the meeting room. You ask: \"___ the meeting room at two?\"",
@@ -22009,7 +22009,7 @@ grammar:[
     {
       "bad": "They had been belonging to the same club for years.",
       "good": "They had belonged to the same club for years.",
-      "why": "belong 是狀態動詞，沒有進行式。中文的「他們一直屬於同一個社團」裡的「一直」讓人很想加 -ing，但英文的 belong 本身就含有持續的意思，再加 -ing 反而不通。"
+      "why": "belong 是狀態動詞，通常沒有進行式（少數例外）。中文的「他們一直屬於同一個社團」裡的「一直」讓人很想加 -ing，但英文的 belong 本身就含有持續的意思，再加 -ing 反而不通。"
     },
     {
       "bad": "The floor had been cleaning before the guests arrived.",
@@ -22057,7 +22057,7 @@ grammar:[
         "D. We had waited for two hours."
       ],
       "ans": 1,
-      "expl": "know 是狀態動詞，沒有進行式，所以B錯。C是同一個意思的正確寫法。"
+      "expl": "know 是狀態動詞，通常沒有進行式（少數例外），所以B錯。C是同一個意思的正確寫法。"
     },
     {
       "q": "The machine ___ twice before the engineer found the loose cable.",
@@ -23050,7 +23050,7 @@ grammar:[
     {
       "h": "有些動詞沒有進行式",
       "bullets": [
-        "know、own、belong、understand 這類狀態動詞沒有進行式，只能寫 had known、had owned",
+        "know、own、belong、understand 這類狀態動詞通常沒有進行式（少數例外），只能寫 had known、had owned",
         "所以「他在那之前已經認識她十年了」是 He had known her for ten years，不是 had been knowing",
         "live、work、study 兩種都可以，had lived 和 had been living 意思差別很小，只是後者更強調過程",
         "want、need、hate 也一樣：用 had wanted、had needed，不要加 -ing"
@@ -23126,7 +23126,7 @@ grammar:[
         "D. She had been studying in Tainan."
       ],
       "ans": 1,
-      "expl": "own 是狀態動詞，沒有進行式，要寫 had owned that car for years。其他三句的動詞都可以用進行式。"
+      "expl": "own 是狀態動詞，通常沒有進行式（少數例外），要寫 had owned that car for years。其他三句的動詞都可以用進行式。"
     },
     {
       "q": "We ___ for the shuttle for forty minutes when the driver finally called.",
@@ -25833,9 +25833,9 @@ grammar:[
       ]
     },
     {
-      "h": "狀態動詞不能加 ing",
+      "h": "狀態動詞通常不加 -ing（少數例外）",
       "bullets": [
-        "know, like, want，以及表示擁有的 have，這類狀態動詞不能用進行式",
+        "know, like, want，以及表示擁有的 have，這類狀態動詞通常不用進行式（少數例外）",
         "就算要表達『持續』，也只能用 have + 過去分詞"
       ],
       "examples": [
@@ -25912,7 +25912,7 @@ grammar:[
         "knowing"
       ],
       "ans": 1,
-      "expl": "know 是狀態動詞，不能加 ing，只能用 have known。"
+      "expl": "know 是狀態動詞，通常不加 -ing（少數例外），只能用 have known。"
     },
     {
       "q": "I have been living here ___ I got the job.",
@@ -26378,7 +26378,7 @@ grammar:[
         "am knowing"
       ],
       "ans": 0,
-      "expl": "know是狀態動詞，不能用進行式，只能用have known。"
+      "expl": "know是狀態動詞，通常不用進行式（少數例外），只能用have known。"
     },
     {
       "q": "He ___ three emails this morning.",
@@ -26635,7 +26635,7 @@ grammar:[
     {
       "bad": "How long have you been knowing him?",
       "good": "How long have you known him?",
-      "why": "know是狀態動詞，不能用進行式been knowing，只能用have known。"
+      "why": "know是狀態動詞，通常不用進行式（少數例外）been knowing，只能用have known。"
     }
   ],
   "quiz": [
@@ -26685,7 +26685,7 @@ grammar:[
         "are you knowing"
       ],
       "ans": 0,
-      "expl": "know是狀態動詞，不能用進行式，只能用have known。"
+      "expl": "know是狀態動詞，通常不用進行式（少數例外），只能用have known。"
     }
   ]
 },
@@ -28849,7 +28849,7 @@ grammar:[
       "ans": 1,
       "expl": "like 是狀態動詞不加 -ing，主詞Tom是三單，動詞加s：likes。",
       "optExpl": [
-        "💡 like 是狀態動詞，不能用進行式喔！",
+        "💡 like 是狀態動詞，通常不用進行式（少數例外）喔！",
         null,
         "💡 主詞 Tom 是第三人稱單數，記得加 -s 喔！",
         "💡 liking 前面沒有 be 動詞不能單獨當動詞，而且 like 是狀態動詞——直接用 likes。"
@@ -28867,7 +28867,7 @@ grammar:[
       "ans": 2,
       "expl": "know 是狀態動詞，主詞是I，用原形 know。",
       "optExpl": [
-        "💡 know 是狀態動詞，不能用進行式喔！",
+        "💡 know 是狀態動詞，通常不用進行式（少數例外）喔！",
         "💡 主詞是 I，動詞不用加 -s。",
         null,
         "💡 knowing 前面沒有 be 動詞不能單獨當動詞，而且 know 是狀態動詞——直接用 know。"
@@ -28903,7 +28903,7 @@ grammar:[
       "ans": 1,
       "expl": "need 是狀態動詞，疑問句用 Do you need...?，不能用進行式。",
       "optExpl": [
-        "💡 need 是狀態動詞，不能用進行式喔！",
+        "💡 need 是狀態動詞，通常不用進行式（少數例外）喔！",
         null,
         "💡 主詞是 you，助動詞用 Do 不是 Does。",
         "💡 一般動詞的疑問句用 Do，不是 Are。"
@@ -29135,7 +29135,7 @@ grammar:[
     {
       "bad": "I'm feeling this schedule is too tight.",
       "good": "I feel this schedule is too tight.",
-      "why": "feel 接「意見子句」時是狀態動詞，只能用簡單式；-ing 只用在身體感受（I'm feeling tired）。"
+      "why": "feel 接「意見子句」時是狀態動詞，一般只用簡單式（少數例外）；-ing 只用在身體感受（I'm feeling tired）。"
     },
     {
       "bad": "The chef tastes the soup right now.",
@@ -29414,7 +29414,7 @@ grammar:[
       {en:"Mia takes the MRT to work every day.",cn:"Mia每天都搭捷運上班。",note:"長期的通勤方式"},
       {en:"Mia is taking a taxi this week because of the signal problem.",cn:"因為號誌問題，Mia這禮拜改搭計程車。",note:"這禮拜的暫時安排"}
     ]},
-    {h:"⚠ 狀態動詞不能用進行式", bullets:[
+    {h:"⚠ 狀態動詞通常不用進行式（少數例外）", bullets:[
       "know, like, want, need, believe, have（擁有）這類動詞描述「狀態」，不是「動作」",
       "✓ Mia knows the platform is crowded. ✗ Mia is knowing the platform is crowded."
     ]},
@@ -29428,13 +29428,13 @@ grammar:[
     ]}
   ],
   traps:[
-    {bad:"Mia is knowing the train is late.",good:"Mia knows the train is late.",why:"know 是狀態動詞，不能加 -ing，不管句子聽起來多「現在」都一樣。"},
+    {bad:"Mia is knowing the train is late.",good:"Mia knows the train is late.",why:"know 是狀態動詞，通常不加 -ing（少數例外），不管句子聽起來多「現在」都一樣。"},
     {bad:"Mia takes a taxi this week because of the signal problem.",good:"Mia is taking a taxi this week because of the signal problem.",why:"this week 是暫時的安排，要用現在進行式，不能用習慣性的現在簡單式。"},
-    {bad:"Mia is having a monthly pass.",good:"Mia has a monthly pass.",why:"have 表示「擁有」時是狀態動詞，不能用進行式；只有 have 表示「經歷」時才能加 -ing。"},
+    {bad:"Mia is having a monthly pass.",good:"Mia has a monthly pass.",why:"have 表示「擁有」時是狀態動詞，通常不用進行式（少數例外）；只有 have 表示「經歷」時才能加 -ing。"},
     {bad:"The platform usually is crowded at eight.",good:"The platform is usually crowded at eight.",why:"頻率副詞 usually 要放在 be 動詞後面，不是前面。"}
   ],
   quiz:[
-    {q:"Mia ___ the platform is more crowded than usual today.",qCn:"Mia知道今天月台比平常擁擠。",opts:["is knowing","knows","know","is know"],ans:1,expl:"know 是狀態動詞，不能用進行式，第三人稱要加s：knows。"},
+    {q:"Mia ___ the platform is more crowded than usual today.",qCn:"Mia知道今天月台比平常擁擠。",opts:["is knowing","knows","know","is know"],ans:1,expl:"know 是狀態動詞，通常不用進行式（少數例外），第三人稱要加s：knows。"},
     {q:"Mia ___ a taxi this week because the MRT line has a problem.",qCn:"因為捷運線出問題，Mia這禮拜改搭計程車。",opts:["takes","take","is taking","took"],ans:2,expl:"this week 是暫時的安排，用現在進行式：is taking。"},
     {q:"The platform ___ usually crowded before eight.",qCn:"月台通常八點前都很擁擠。",opts:["are","is","be","being"],ans:1,expl:"主詞 platform 是單數，用 is；usually 放在 be 動詞後面。"},
     {q:"Which sentence is correct?",qCn:"哪一句是正確的？",opts:["Mia is having a monthly pass.","Mia has a monthly pass.","Mia have a monthly pass.","Mia is have a monthly pass."],ans:1,expl:"have 表示「擁有」是狀態動詞，第三人稱單數用 has，不能用進行式。"}
@@ -29580,7 +29580,7 @@ grammar:[
       {en:"Her mother takes care of two grandchildren every day.",cn:"她媽媽每天都要照顧兩個孫子。",note:"習慣、常態"},
       {en:"Her mother is resting today because she has a cough.",cn:"她媽媽今天因為咳嗽在休息。",note:"今天的特殊狀況"}
     ]},
-    {h:"⚠ 狀態動詞不能用進行式", bullets:[
+    {h:"⚠ 狀態動詞通常不用進行式（少數例外）", bullets:[
       "know, believe, want, need, like, love, have（擁有）這類動詞描述「狀態」而不是「動作」",
       "✓ Anita knows her mother is tired. ✗ Anita is knowing her mother is tired.",
       "have 例外：have 當「經歷、吃」的意思時可以用進行式：She is having a hard week."
@@ -29591,7 +29591,7 @@ grammar:[
     ]}
   ],
   traps:[
-    {bad:"Anita is knowing her mother is worried.",good:"Anita knows her mother is worried.",why:"know 是狀態動詞，不能加 -ing，不管句子聽起來多「現在」都一樣。"},
+    {bad:"Anita is knowing her mother is worried.",good:"Anita knows her mother is worried.",why:"know 是狀態動詞，通常不加 -ing（少數例外），不管句子聽起來多「現在」都一樣。"},
     {bad:"Her mother rests today because she is sick.",good:"Her mother is resting today because she is sick.",why:"today 是特定的今天，屬於暫時的狀況，要用現在進行式，不能用習慣性的現在簡單式。"},
     {bad:"Anita is calling her mother every Sunday.",good:"Anita calls her mother every Sunday.",why:"every Sunday 是固定的習慣，要用現在簡單式；用進行式會讓人以為只是「這個星期」剛好在打。"},
     {bad:"Anita usually is worried about her mother.",good:"Anita is usually worried about her mother.",why:"頻率副詞 usually 要放在 be 動詞後面，不是前面。"}
@@ -29771,7 +29771,7 @@ grammar:[
     ]}
   ],
   traps:[
-    {bad:"I am knowing the answer.",good:"I know the answer.",why:"know 是狀態動詞，不能用進行式。中文的「我知道」不分進行不進行，但英文一定用簡單式。"},
+    {bad:"I am knowing the answer.",good:"I know the answer.",why:"know 是狀態動詞，通常不用進行式（少數例外）。中文的「我知道」不分進行不進行，但英文一定用簡單式。"},
     {bad:"I live with my parents this month.",good:"I'm living with my parents this month.",why:"this month 表示暫時的情況，用進行式才自然。用簡單式會變成「我一直住爸媽家」。"},
     {bad:"She is working at a bank. (指她的職業)",good:"She works at a bank.",why:"講職業這種長期事實要用簡單式。進行式暗示「暫時的」，面試官可能以為你馬上要離職。"},
     {bad:"I have dinner now.",good:"I'm having dinner now.",why:"have 當「吃」的意思時是動作動詞，配 now 要用進行式。"}
@@ -29918,7 +29918,7 @@ grammar:[
   ],
   traps:[
     {bad:"I am working here for five years.",good:"I have been working here for five years.",why:"「持續到現在」不能用現在進行式，要用現在完成進行式。"},
-    {bad:"I have been knowing her since 2020.",good:"I have known her since 2020.",why:"know 是狀態動詞，沒有進行式。"},
+    {bad:"I have been knowing her since 2020.",good:"I have known her since 2020.",why:"know 是狀態動詞，通常沒有進行式（少數例外）。"},
     {bad:"How long are you waiting?",good:"How long have you been waiting?",why:"問「到現在為止多久」要用完成進行式。"},
     {bad:"I have been reading three books this month.",good:"I have read three books this month.",why:"講「數量／完成幾個」用 have done，不用進行式。"}
   ],

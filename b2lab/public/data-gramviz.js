@@ -210,7 +210,7 @@ V.ga03=card(
   en:'some ↔ any', cn:'肯定用 some；否定、疑問用 any'},
  'There is + 單數、There are + 複數。some 用在肯定句，any 用在否定句和問句：Is there any milk? — Yes, there is some.');
 
-/* ---------- B1：八大時態總覽 ---------- */
+/* ---------- B1：十二種時態總覽 ---------- */
 V.g01=card(
  {pw:170,title:'簡單式家族',
   draw:tl(196)
@@ -232,7 +232,7 @@ V.g01=card(
    +'<text x="274" y="166" text-anchor="middle" font-size="13" font-weight="900" fill="#8b5cf6">will be doing</text>'
    +'<text x="160" y="244" text-anchor="middle" font-size="14" font-weight="800" fill="#c9631f">一段「線」：那個時間正在做</text>',
   en:'was doing → am doing', cn:'把動作拉成一段正在進行的線'},
- '八大時態＝三個時間（過去／現在／未來）×「點或線」再加上完成式。簡單式是點，進行式是線；完成式（have done）則是「到某個時間點為止」的累積。先抓住點和線，其他就好懂了。');
+ '十二種時態＝三個時間（過去／現在／未來）×「點或線」再加上完成式。簡單式是點，進行式是線；完成式（have done）則是「到某個時間點為止」的累積。先抓住點和線，其他就好懂了。');
 
 /* ---------- B1+：used to / be used to / would ---------- */
 V.g05=card(

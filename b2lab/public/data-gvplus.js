@@ -10519,7 +10519,7 @@ dg20260909b2: {
 },
 
 
-/* ==================== g01 八大時態總覽（B1） ==================== */
+/* ==================== g01 十二種時態總覽（B1） ==================== */
 g01: {
   vis: true,
   oneLine: '時態不是十六個公式要背，而是兩個問題的答案：這件事什麼時候發生？那個動作是一個點、一段進行，還是連到另一個時間點？',
@@ -10699,8 +10699,8 @@ g02: {
       qCn: '我哥住高雄，但他這個夏天暫時住我們家。',
       expl: '住高雄是常態 → lives；今年夏天暫時住我們家 → is staying。' },
     { q: 'These days more and more people ____ mobile payment instead of cash.', opts: ['use', 'are using', 'uses', 'have used'], ans: 1,
-      qCn: '最近越來越多人用行動支付取代現金。',
-      expl: 'These days ＋「越來越多」是正在改變的趨勢 → 現在進行式 are using。' },
+      qCn: '最近越來越多人用行動支付取代現金。（強調正在發生的趨勢）',
+      expl: 'These days ＋「越來越多」是正在改變的趨勢，題目要強調「正在發生的變化」→ 現在進行式 are using。單純陳述大家的習慣時，use 也說得通。' },
     { q: 'Which sentence is WRONG?', opts: ['I am wanting a coffee.', 'I want a coffee.', 'I am having lunch.', 'I have a car.'], ans: 0,
       qCn: '哪一句是錯的？',
       expl: 'want 是狀態動詞，沒有進行式；have 當「吃」是動作，所以 am having lunch 是對的。' }
@@ -10879,9 +10879,9 @@ g04: {
     { q: "I have known her ____ we were children.", opts: ['for', 'since', 'from', 'during'], ans: 1,
       qCn: '我從我們小時候就認識她了。',
       expl: 'we were children 是一個起點（而且是一整句）→ 用 since。' },
-    { q: 'Have you eaten ____?', opts: ['already', 'yet', 'still', 'ever since'], ans: 1,
+    { q: 'Have you eaten ____?', opts: ['for', 'yet', 'still', 'ever since'], ans: 1,
       qCn: '你吃了沒？',
-      expl: '疑問句問「做了沒」，固定用句尾的 yet。（美式口語也常用過去簡單式 Did you eat yet?，這題依標準用法選 yet。）' },
+      expl: '疑問句問「做了沒」，標準用法是句尾的 yet。（口語裡 Have you eaten already? 也很常見，美式口語也常用過去簡單式 Did you eat yet?，所以選項刻意不放 already。）' },
     { q: 'Which sentence is correct?', opts: ['I have finished already my work.', 'I have already finished my work.', 'I already have finished my work.', 'I have finished my work yet.'], ans: 1,
       qCn: '哪一句是正確的？',
       expl: 'already 放在 have 和過去分詞中間；yet 不能用在肯定句。（美式口語也常用過去簡單式 I already finished my work.，但用現在完成式時，already 的標準位置是 have 和過去分詞中間。）' }
@@ -12467,7 +12467,7 @@ dg20260824a2: {
       ask: '這是腦袋裡的狀態嗎？',
       en: 'I understand now.',
       cn: '我現在懂了。',
-      why: '「懂」是一個狀態，不是一個進行中的動作。I am understanding（✗）不通。要講「我正在想」才用 I am thinking（那是動作）。' },
+      why: '「懂」是一個狀態，不是一個進行中的動作。I am understanding 口語偶爾聽到但較不自然，一般用 I understand。要講「我正在想」才用 I am thinking（那是動作）。' },
     { key: 'own', icon: 'money',
       title: 'Possession', titleCn: '擁有：have / own / belong',
       ask: '這是「擁有」嗎？',
@@ -13806,7 +13806,7 @@ dg20260824b1p: {
       ask: '這是感覺還是想法？',
       en: 'I know / I believe / I understand',
       cn: '我知道／我相信／我懂',
-      why: 'know、believe、understand、own、belong、seem 這些字沒有「暫時版」，永遠只能用簡單式。這一組沒有彈性。' }
+      why: 'know、believe、understand、own、belong、seem 這些字通常沒有「暫時版」，一般只用簡單式（少數例外見 I am loving it 那一課）。' }
   ],
   steps: [
     { label: '情境', text: '同事今天話很少，你想關心一下。' },

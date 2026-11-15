@@ -7,7 +7,7 @@ window.GRAMMAR = [
 
 /* ============================ 1 ============================ */
 {
-  id:"g01", level:"B1", title:"The Eight Tenses — Overview", titleCn:"八大時態總覽",
+  id:"g01", level:"B1", title:"The Twelve Tenses — Overview", titleCn:"十二種時態總覽",
   srcDays:["20260310","20260312"],
   summary:"先把「時間（現在／過去／未來）」和「狀態（簡單／進行／完成／完成進行）」分開想，時態就不會亂。",
   sections:[
@@ -74,7 +74,7 @@ window.GRAMMAR = [
   quiz:[
     {q:"Water ____ at 100°C.",qCn:"水在攝氏一百度沸騰。",opts:["is boiling","boils","boil","has boiled"],ans:1,expl:"科學事實 → 現在簡單式。"},
     {q:"Be quiet! The baby ____.",qCn:"安靜！寶寶在睡覺。",opts:["sleeps","is sleeping","slept","has slept"],ans:1,expl:"此刻正在進行 → is sleeping。"},
-    {q:"Which sentence is correct?",qCn:"哪一句是正確的？",opts:["I am understanding now.","I understand now.","I am understand now.","I understanding now."],ans:1,expl:"understand 是狀態動詞，用簡單式。"}
+    {q:"Which sentence is correct?",qCn:"哪一句是正確的？",opts:["I am understanding now.","I understand now.","I am understand now.","I understanding now."],ans:1,expl:"understand 是狀態動詞，一般用簡單式。I am understanding now 口語偶爾聽得到（強調「漸漸懂了」），但較不自然；後兩句則是文法錯誤。考試與正式寫作選 I understand now。"}
   ]
 },
 
@@ -143,7 +143,7 @@ window.GRAMMAR = [
   quiz:[
     {q:"I ____ my homework, so I can watch TV now.",qCn:"我已經做完功課了，所以現在可以看電視。",opts:["finish","finished","have finished","was finishing"],ans:2,expl:"剛完成且影響現在 → 現在完成式。（美式口語也常用過去簡單式 I finished my homework，這題依標準用法選 have finished。）"},
     {q:"We ____ in Taipei since 2019.",qCn:"我們從2019年就住在台北了。",opts:["live","lived","have lived","are living"],ans:2,expl:"since + 起點，持續到現在。"},
-    {q:"Have you eaten lunch ____?",qCn:"你吃過午餐了嗎？",opts:["already","yet","since","ever"],ans:1,expl:"疑問句表「還沒／到目前」用 yet。（美式口語也常用過去簡單式加 yet，例如 Did you eat lunch yet?，這題依標準用法選 yet 配現在完成式。）"}
+    {q:"Have you eaten lunch ____?",qCn:"你吃過午餐了嗎？",opts:["for","yet","since","ever"],ans:1,expl:"疑問句問「做了沒」用 yet。（口語裡 Have you eaten lunch already? 也很常聽到，美式口語也常用過去簡單式，例如 Did you eat lunch yet?；這題依標準用法選 yet 配現在完成式，所以選項刻意不放 already。）"}
   ]
 },
 
