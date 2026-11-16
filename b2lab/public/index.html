@@ -2525,9 +2525,13 @@ nav button{font-size:11px}
 .hm-card:active{transform:scale(.98);background:var(--accent-soft)}
 .hm-today{flex-direction:row;align-items:center;gap:12px;min-height:52px;margin-bottom:10px;padding:10px 14px;border:0;
   background:linear-gradient(135deg,#f0964f,#d9691f);color:#fff;box-shadow:0 4px 14px rgba(200,100,30,.25)}
-.hm-today b{margin:0;font-size:calc(20px * var(--fs))}
-.hm-today span{color:rgba(255,255,255,.92);margin-left:auto;text-align:right;display:inline-flex;align-items:center;gap:7px;min-width:0}
-.hm-today span::after{content:"→";flex:none;line-height:1;font-weight:700}
+/* 首頁主入口保持橫列，標題不因右側說明擠壓而折行。 */
+.hm-today{gap:8px}
+.hm-today i{flex:none}
+.hm-today i svg{width:32px;height:32px}
+.hm-today b{flex:none;white-space:nowrap;margin:0;font-size:calc(17px * var(--fs))}
+.hm-today span{color:rgba(255,255,255,.92);margin-left:auto;text-align:right;display:block;position:relative;padding-right:18px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hm-today span::after{content:"→";position:absolute;right:0;top:50%;transform:translateY(-50%);line-height:1;font-weight:700}
 .hm-today:active{background:linear-gradient(135deg,#e8873f,#c95f17)}
 .hm-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .hm-set{margin-top:18px;padding:12px 14px;border:1px solid var(--line);border-radius:16px;background:var(--card);display:flex;flex-direction:column;gap:10px}
@@ -3787,7 +3791,7 @@ RENDER.home=function(){
   v.innerHTML=
     '<div class="hm-top"><div><div class="hm-hi">Hi, '+esc(nm)+' 👋</div><div class="hm-date">'+(d.getMonth()+1)+' 月 '+d.getDate()+' 日・週'+wd+'</div></div>'
     +'<span class="hm-streak">🔥 '+(ST.streak||1)+' 天連續造訪</span></div>'
-    +'<button class="hm-card hm-today" onclick="homeGo(\'daily\')"><i>'+HOME_IC.daily+'</i><b>今日計畫</b><span>讀一篇、練文法、複習 10 個單字</span></button>'
+    +'<button class="hm-card hm-today" onclick="homeGo(\'daily\')"><i>'+HOME_IC.daily+'</i><b>今日計畫</b><span>讀一篇・練文法・複習 10 字</span></button>'
     /* 手機導覽首頁也放「繼續上次」，一打開網站就接得上 */
     +lastCardHTML()
     +'<div class="hm-grid">'+HOME_CARDS.map(card).join('')+'</div>'
