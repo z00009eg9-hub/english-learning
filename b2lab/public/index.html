@@ -8990,7 +8990,7 @@ function lastTrack(){
 function lastVideoTrack(){
   if(!VD||!VD.id||!VD.lines||!VD.lines.length) return;
   const n=VD.lines.length, i=VD.i||0;
-  lastSet({tab:'video',id:VD.id,title:(VD.d&&VD.d.title)||'',pos:i,n,seed:VD.seed||0,lab:LAST_MARK.video.lab(i,n),end:i>=n-1,t:Date.now()});
+  lastSet({tab:'video',id:VD.id,title:(VD.d&&VD.d.title)||'',pos:i,n,seed:VD.seed||0,tpl:VD.tpl||'std',lab:LAST_MARK.video.lab(i,n),end:i>=n-1,t:Date.now()});
 }
 /* 今日頁：最近一次讀到一半的內容 */
 function lastPick(){
@@ -9022,7 +9022,7 @@ function lastResume(key){
   else if(e.tab==='book'){ go('book'); bkGo(e.id); }
   else if(e.tab==='real'){ go('real'); rwGo(e.id); }
   else if(e.tab==='video'){
-    vdOpen(e.id,false,e.seed);
+    vdOpen(e.id,false,e.seed,e.tpl);
     let tries=0; const w=setInterval(()=>{ if((VD&&VD.id===e.id&&VD.lines&&VD.lines.length)||++tries>40){ clearInterval(w); if(VD.id===e.id) vdGo(e.pos,false); LAST_RESUME=null; } },150);
   }
 }
@@ -9186,6 +9186,7 @@ const VD_WPS=2.4;   /* 1x 語速約每秒 2.4 個英文字（含句間停頓）�
 /* 一個單元一個檔 gvideo/<id>.js；有哪些單元記在 gvideo/index.js 的 GVIDEO_IDS（tools/build-gvideo-index.js 產生，頁面一開就載入） */
 function vdIsGram(id){ return (window.GVIDEO_IDS||[]).includes(id); }
 function vdLoad(cb,gram,id){
+  if(!gram&&!window.VIDEO_TPL){ const t=document.createElement('script'); t.src='data-vtpl.js'; const go=()=>{ window.VIDEO_TPL=window.VIDEO_TPL||{}; vdLoad(cb,gram,id); }; t.onload=go; t.onerror=go; document.head.appendChild(t); return; }
   if(gram?(window.GVIDEO&&window.GVIDEO[id]):window.VIDEO){ cb(); return; }
   const s=document.createElement('script');
   s.src=gram?'gvideo/'+id+'.js':'data-video.js';
@@ -9314,9 +9315,12 @@ function vdStageHTML(l){
      +(l.cn?'<div class="vd-fxcn">'+esc(l.cn)+'</div>':'')
      +'<div class="vd-why">💡 '+esc(v.why||'')+'</div>'
      +(v.whyCn?'<div class="vd-fxcn">'+esc(v.whyCn)+'</div>':'')+'</div>';
+  }else if(v.type==='cue'){
+    h='<div class="vd-scn" style="align-items:center;text-align:center"><div class="vd-kick">'+esc(v.kick||'')+'</div>'
+     +'<div class="vd-big" style="font-size:clamp(20px,4.2cqw,40px);margin-top:1.5cqw">'+esc(l.en)+'</div><div class="vd-bigcn">'+esc(l.cn||'')+'</div></div>';
   }else if(v.type==='quiz'){
     const q=esc(v.q).replace('___','<span class="vd-blank">'+(v.show?esc(v.a):'&nbsp;')+'</span>');
-    const tot=VD.lines.filter(x=>x.vis&&x.vis.type==='quiz'&&!x.vis.show).length;
+    const tot=VD.lines.filter(x=>x.vis&&x.vis.type==='quiz'&&!x.vis.show&&x.ch===l.ch).length;
     h='<div class="vd-scn"><div class="vd-kick" style="text-align:center">Quick Quiz '+esc(v.n)+' / '+tot+'</div>'
      +'<div class="vd-q" style="margin-top:2cqw">'+q+'</div>'
      +(v.show?'':'<div class="vd-cd" id="vd-cd"></div>')+'</div>';
@@ -9408,7 +9412,7 @@ function vdMoreTog(){ vdPaint(); }
 function vdListHTML(){
   const d=VD.d; let h='', ch=-1;
   VD.lines.forEach((l,i)=>{
-    if(l.ch!==ch){ ch=l.ch; const c=d.chapters[ch]||{}; h+='<div class="vd-chh">'+esc(c.cn||c.en||'')+'</div>'; }
+    if(l.ch!==ch){ ch=l.ch; const c=(VD.chs||d.chapters)[ch]||{}; h+='<div class="vd-chh">'+esc(c.cn||c.en||'')+'</div>'; }
     const c=d.cast[l.sp]||{};
     h+='<div class="vd-row'+(i===VD.i?' cur':'')+'" id="vd-r'+i+'" onclick="vdGo('+i+',true)">'
      +'<div class="tm">'+vdTime(VD.times[i])+'</div><div>'
@@ -9428,11 +9432,11 @@ function vdRender(){
   const vs=vdVoiceList();
   const sel=(kind,lab)=>{ const cur=vdVoiceFor(Object.keys(d.cast).find(k=>d.cast[k].voice===kind)||'N');
     return '<label>'+esc(lab)+'<select onchange="vdSetVoice(\''+kind+'\',this.value)">'+(vs.length?vs.map(v=>'<option value="'+esc(v.name)+'"'+(cur&&cur.name===v.name?' selected':'')+'>'+esc(v.name.replace(/^Microsoft |^Google /,''))+'</option>').join(''):'<option>（此裝置沒有英文語音）</option>')+'</select></label>'; };
-  const ticks=d.chapters.map((c,k)=>{ const i=VD.lines.findIndex(l=>l.ch===k); return i>0?'<b style="left:'+(VD.times[i]/VD.total*100)+'%"></b>':''; }).join('');
+  const ticks=(VD.chs||d.chapters).map((c,k)=>{ const i=VD.lines.findIndex(l=>l.ch===k); return i>0?'<b style="left:'+(VD.times[i]/VD.total*100)+'%"></b>':''; }).join('');
   el.innerHTML=
     /* 標題列一行：標題｜中文 · 第 N 句 · 長度 · 關閉 */
     '<div class="vd-top"><div class="vd-ttl"><b>'+esc(d.title)+'<span class="ttc"><span class="ttsep">｜</span>'+esc(d.titleCn)+'</span></b>'
-   +'<span class="vd-meta"><span id="vd-cnt"></span> · 約 '+Math.round(VD.total/60)+' 分鐘</span></div>'
+   +'<span class="vd-meta"><span id="vd-cnt"></span>'+(VD.tpl&&VD.tpl!=='std'?' · '+VD_TPL_N[VD.tpl]:'')+' · 約 '+Math.round(VD.total/60)+' 分鐘</span></div>'
    +'<button class="vd-x" onclick="vdClose()" aria-label="關閉影片" title="關閉（Esc）">×</button></div>'
    +'<div class="vd-main">'
    /* 左欄只有影片；電腦版控制列疊在影片底部（.vd-ctrlwrap 由 CSS 決定疊上去或排在下面） */
@@ -9517,7 +9521,7 @@ function vdSpeak(){
   const step=()=>{
     if(done||!VD.on) return; done=true;
     if(VD.watch){ clearTimeout(VD.watch); VD.watch=null; }
-    let gap=VD.shadow ? Math.max(1400, words*420/VD.rate) : 350;
+    let gap=(VD.shadow||l._shadow) ? Math.max(1400, words*420/VD.rate) : 350;
     if(l.pause && !VD.loop){ gap=l.pause; vdCountdown(l.pause); }
     VD.timer=setTimeout(()=>{
       if(!VD.on) return;
@@ -9644,7 +9648,7 @@ function vdVary(lines,seed){
     if(v.type==='quiz'&&!v.show&&nx&&nx.vis&&nx.vis.type==='quiz'&&nx.vis.show&&nx.vis.n===v.n){ units.push({c:'quiz',ls:[l,nx]}); i++; }
     else units.push({c:cls(l),ls:[l]});
   }
-  const out=[]; let i=0, qn=0;
+  const out=[]; let i=0; const qc={};
   while(i<units.length){
     let j=i; while(j<units.length&&units[j].c&&units[j].c===units[i].c&&units[j].ls[0].ch===units[i].ls[0].ch) j++;
     if(j===i) j=i+1;
@@ -9652,8 +9656,8 @@ function vdVary(lines,seed){
     if(run[0].c&&run.length>1) for(let k=run.length-1;k>0;k--){ const r=Math.floor(rnd()*(k+1)); [run[k],run[r]]=[run[r],run[k]]; }
     run.forEach(u=>u.ls.forEach(l=>{
       let x=l;
-      if(u.c==='quiz'&&!l.vis.show) qn++;
-      if(u.c==='quiz') x=Object.assign({},l,{vis:Object.assign({},l.vis,{n:qn})});
+      if(u.c==='quiz'&&!l.vis.show) qc[l.ch]=(qc[l.ch]||0)+1;
+      if(u.c==='quiz') x=Object.assign({},l,{vis:Object.assign({},l.vis,{n:qc[l.ch]||1})});
       if(l.vis&&(l.vis.type==='slide'||l.vis.type==='family')&&rnd()<0.5) x=Object.assign({},x,{_rev:1});
       out.push(x);
     }));
@@ -9661,7 +9665,85 @@ function vdVary(lines,seed){
   }
   return out;
 }
-function vdOpen(id,autoplay,seed){
+/* 課本影片的 4 種結構模板（2026-11-16 使用者指定）：每次打開隨機挑一種、不跟這課上一次相同。
+   std 標準：對話 → 單字 → 片語 → 句型 → 改錯 → 測驗（原始順序）
+   pre 先考後學：先出測驗題（不給答案）→ 正常上課 → 再做一次、對答案（需要「題＋答案」成對的測驗）
+   split 邊看邊學：對話切兩半，每半段後面緊接它出現過的單字／片語
+   first 學完跟讀：先學單字片語 → 聽對話 → 句型、改錯 → 重點句重播、每句停頓跟念 → 測驗
+   只重排既有的句子，另加 data-vtpl.js 的共用過場句（有 AI 音檔）。模板與 seed 都記在「繼續上次」。 */
+const VD_TPL_N={std:'標準',pre:'先考後學',split:'邊看邊學',first:'學完跟讀'};
+function vdTplParts(d){
+  const L=d.lines||[], C=d.chapters||[], by={};
+  const kind=l=>{ const t=(l.vis||{}).type||'scene'; return t==='vs'||t==='slide'?'vocab':t; };
+  let end=null;
+  L.forEach(l=>{ if((l.vis||{}).type==='end'){ end=l; return; } (by[l.ch]=by[l.ch]||[]).push(l); });
+  const secs=Object.keys(by).map(Number).sort((a,b)=>a-b).map(ch=>{
+    const ls=by[ch], cnt={}; ls.forEach(l=>{ const k=kind(l); cnt[k]=(cnt[k]||0)+1; });
+    const k=ch===0?'intro':Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a])[0];
+    return {k,c:C[ch]||{},ls};
+  });
+  return {secs,end};
+}
+function vdTplInfo(d){
+  const T=window.VIDEO_TPL||{}, P=vdTplParts(d), S=P.secs, ok=['intro','scene','vocab','family','pattern','fix','quiz'];
+  if(!T.try||!P.end||S.some(x=>!ok.includes(x.k))) return {cands:['std'],P};
+  const scenes=S.filter(x=>x.k==='scene'), talk=l=>l.sp&&l.sp!=='N';
+  const main=scenes.slice().sort((a,b)=>b.ls.filter(talk).length-a.ls.filter(talk).length)[0];
+  const pool=S.filter(x=>x.k==='vocab'||x.k==='family').flatMap(x=>x.ls);
+  const quiz=S.find(x=>x.k==='quiz');
+  const cands=['std'];
+  if(quiz&&quiz.ls.some(l=>(l.vis||{}).show)) cands.push('pre');
+  let split=null;
+  if(main&&main.ls.length>=8&&pool.length>=2){
+    const m=Math.ceil(main.ls.length/2), a=main.ls.slice(0,m), b=main.ls.slice(m);
+    const low=x=>String(x||'').toLowerCase(), keys=l=>(l.hi||[]).map(h=>h.k).filter(Boolean);
+    const ka=new Set(a.flatMap(keys)), ta=a.map(x=>low(x.say||x.en)).join(' ');
+    const hit=l=>{ if(keys(l).some(k=>ka.has(k))) return true;
+      const v=l.vis||{};
+      return [v.w,v.phrase,v.core,v.a&&v.a.w,v.b&&v.b.w].filter(Boolean).some(w=>{
+        const t=low(w).replace(/[~.…()]/g,' ').split(/[\s/]+/).filter(x=>x.length>=4)[0];
+        return t&&ta.includes(t.slice(0,Math.max(4,t.length-2))); }); };
+    const g1=pool.filter(hit), g2=pool.filter(l=>!g1.includes(l));
+    if(g1.length&&g2.length){ split={a,b,g1,g2}; cands.push('split'); }
+  }
+  if(scenes.length&&pool.length&&main&&main.ls.filter(talk).length>=3) cands.push('first');
+  return {cands,P,main,split};
+}
+function vdTpl(d,tp,I){
+  const T=window.VIDEO_TPL, S=I.P.secs, end=I.P.end;
+  const cue=k=>({sp:'N',vis:{type:'cue',kick:T[k].kick},en:T[k].en,cn:T[k].cn});
+  const of=k=>S.filter(x=>x.k===k), one=k=>of(k)[0];
+  const sec=(x,pre)=>({c:x.c,ls:(pre?[pre]:[]).concat(x.ls)});
+  let out=[];
+  if(tp==='pre'){
+    const q=one('quiz');
+    out=[sec(one('intro')),{c:{en:'Try First',cn:'先試試看'},ls:[cue('try')].concat(q.ls.filter(l=>!(l.vis||{}).show))}]
+      .concat(S.filter(x=>!['intro','quiz'].includes(x.k)).map(x=>sec(x)),[sec(q,cue('check'))]);
+  }else if(tp==='split'){
+    const sp=I.split, mc=I.main.c;
+    out=[sec(one('intro'))].concat(of('scene').filter(x=>x!==I.main).map(x=>sec(x)),[
+      {c:{en:(mc.en||'')+' (1)',cn:(mc.cn||'')+'（前半）'},ls:sp.a},
+      {c:{en:'Words So Far',cn:'前半段的重點'},ls:[cue('pause')].concat(sp.g1)},
+      {c:{en:(mc.en||'')+' (2)',cn:(mc.cn||'')+'（後半）'},ls:[cue('rest')].concat(sp.b)},
+      {c:{en:'More Words',cn:'後半段的重點'},ls:sp.g2}
+    ],['pattern','fix','quiz'].flatMap(k=>of(k).map(x=>sec(x))));
+  }else if(tp==='first'){
+    const talk=I.main.ls.filter(l=>l.sp&&l.sp!=='N'), wc=l=>String(l.en||'').split(/\s+/).length;
+    let rp=talk.filter(l=>(l.hi||[]).length);
+    if(rp.length<4) rp=rp.concat(talk.filter(l=>!rp.includes(l)).sort((a,b)=>wc(b)-wc(a)).slice(0,4-rp.length));
+    rp=talk.filter(l=>rp.slice(0,6).includes(l)).map(l=>Object.assign({},l,{_shadow:1}));
+    const sc=of('scene');
+    out=[sec(one('intro'))].concat(of('vocab').map(x=>sec(x)),of('family').map(x=>sec(x)),
+      sc.map((x,i)=>sec(x,i===0?cue('listen'):null)),of('pattern').map(x=>sec(x)),of('fix').map(x=>sec(x)),
+      [{c:{en:'Your Turn',cn:'換你說'},ls:[cue('turn')].concat(rp)}],of('quiz').map(x=>sec(x)));
+  }
+  out=out.filter(x=>x.ls.length);
+  out[out.length-1].ls.push(end);
+  const chs=out.map(x=>x.c), lines=[];
+  out.forEach((x,ch)=>x.ls.forEach(l=>lines.push(Object.assign({},l,{ch}))));
+  return {lines,chs};
+}
+function vdOpen(id,autoplay,seed,tpl){
   const gram=vdIsGram(id);
   vdLoad(()=>{
     const src=gram?window.GVIDEO:window.VIDEO, d=src&&src[id];
@@ -9679,7 +9761,16 @@ function vdOpen(id,autoplay,seed){
     if(typeof auStop==='function') auStop();
     ttsStop();
     const sd=(seed>>>0)||((Math.random()*4294967296)>>>0);
-    Object.assign(VD,{id:id,d:d,seed:gram?0:sd,lines:gram?(d.lines||[]):vdVary(d.lines||[],sd),i:0,on:false,loop:false,shadow:false,expr:null,more:false});
+    let tp='std', T={lines:d.lines||[],chs:d.chapters||[]};
+    if(!gram){
+      const I=vdTplInfo(d); let last=null, M={};
+      try{ M=JSON.parse(localStorage.getItem('b2lab_vdtpl')||'{}')||{}; last=M[id]; }catch(e){}
+      if(I.cands.includes(tpl)) tp=tpl;
+      else { const p=I.cands.length>1?I.cands.filter(x=>x!==last):I.cands; tp=p[Math.floor(Math.random()*p.length)]; }
+      try{ M[id]=tp; localStorage.setItem('b2lab_vdtpl',JSON.stringify(M)); }catch(e){}
+      if(tp!=='std') T=vdTpl(d,tp,I);
+    }
+    Object.assign(VD,{id:id,d:d,seed:gram?0:sd,tpl:tp,chs:T.chs,lines:gram?T.lines:vdVary(T.lines,sd),i:0,on:false,loop:false,shadow:false,expr:null,more:false});
     VD.mode=vdDefaultMode(); try{ const m=localStorage.getItem('b2lab_vdsub'); if(VD_MODES.includes(m)) VD.mode=m; }catch(e){}
     vdCalc(); vdRender();
     document.body.classList.add('vd-lock');
