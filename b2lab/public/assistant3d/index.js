@@ -241,6 +241,7 @@ function seenNews(n){try{const saved=JSON.parse(stored('news_seen_'+n.profile)||
 function rememberNews(n){store('news_seen_'+n.profile,JSON.stringify({date:n.date,ids:[...new Set([...seenNews(n),...n.articles.map(a=>a.id)])]}));}
 function checkNews(force=false){
  if(!newsReady)return;
+ if(!['home','daily'].includes(document.body.dataset.tab)){q('.notice').hidden=true;return;}
  const n=api.news(releases),ids=n.articles.map(a=>a.id).sort(),key=n.profile+':'+n.date+':'+ids.join(',');
  if(force||newsKey!==key){newsKey=key;q('.notice').hidden=true;q('.news-action').textContent='新文章'+(ids.length?'（'+ids.length+'）':'');if(mode==='news'&&opened)news();}
  checkGreet();
@@ -252,6 +253,7 @@ function checkNews(force=false){
 q('.notice-dismiss').onclick=()=>{q('.notice').hidden=true;};
 /* 招呼／新文章泡泡只停留 10 秒，不會一直蓋住首頁卡片；教練提醒不受影響 */
 let noticeTimer;
+new MutationObserver(()=>{if(!['home','daily'].includes(document.body.dataset.tab))q('.notice').hidden=true;}).observe(document.body,{attributes:true,attributeFilter:['data-tab']});
 new MutationObserver(()=>{const nt=q('.notice');clearTimeout(noticeTimer);if(nt.hidden)return;const k=nt.dataset.kind;if(k!=='greet'&&k!=='news')return;noticeTimer=setTimeout(()=>{if(nt.dataset.kind===k)nt.hidden=true;},10000);}).observe(q('.notice'),{attributes:true,attributeFilter:['hidden']});
 /* 手機閱讀時往下捲就把助理按鈕滑到邊外，往回捲或回到頁首／頁尾才出現，正文不被遮住 */
 (function(){let y=window.scrollY;window.addEventListener('scroll',()=>{
@@ -265,7 +267,7 @@ q('.notice-view').onclick=()=>{const a=q('.notice').dataset.act||'news',id=q('.n
 const GREET={anita:['Anita','🍎'],tom:['Tom','🐻']};
 function greetSeen(p){return stored('greet_seen_'+p);}
 function checkGreet(){
- if(!newsReady||opened||sleeping||launch.hidden||document.hidden)return;
+ if(!newsReady||opened||sleeping||launch.hidden||document.hidden||!['home','daily'].includes(document.body.dataset.tab))return;
  const g=api.greet(),who=GREET[g.profile]||[g.profile,''];
  if(greetSeen(g.profile)===g.date)return;
  const hi=g.hour<5?'Still up':g.hour<12?'Good morning':g.hour<18?'Good afternoon':'Good evening';
