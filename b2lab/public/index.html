@@ -2880,10 +2880,10 @@ body[data-tab="read"] .sw-update,body[data-tab="vocab"] .sw-update{bottom:auto;t
 .daily-plan .plan-task b{display:inline}
 #v-daily .dh-card .stats{display:flex;flex-wrap:nowrap;gap:8px;max-width:none;margin:0;overflow-x:auto;scrollbar-width:none}
 #v-daily .dh-card .stats::-webkit-scrollbar{display:none}
-@media(max-width:640px){#v-daily .dh-card .stats{flex-wrap:wrap;overflow:visible}}
-#v-daily .dh-card .stats .stat{flex:0 0 auto;display:inline-flex;align-items:baseline;gap:6px;padding:5px 12px;border-radius:999px}
+@media(max-width:640px){#v-daily .dh-card .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;overflow:visible}#v-daily .dh-card .stats .stat{flex-direction:column;gap:1px;padding:5px 2px;border-radius:12px;justify-content:center}#v-daily .dh-card .stats .stat span{font-size:calc(10px * var(--fs))}}
+#v-daily .dh-card .stats .stat{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px}
 #v-daily .dh-card .stats .stat b{display:inline;font-size:calc(17px * var(--fs));line-height:1.2;white-space:nowrap}
-#v-daily .dh-card .stats .stat b i{margin-left:2px}
+#v-daily .dh-card .stats .stat b i{margin-left:2px;vertical-align:baseline}
 #v-daily .dh-card .stats .stat span{white-space:nowrap}
 @media(max-width:640px){#v-read :is(.spk,.wbb),#v-vocab :is(.spk,.wbb){min-height:44px;min-width:44px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
@@ -5595,7 +5595,7 @@ RENDER.daily=function(){
    +'<div class="hint" id="dh-hint" hidden style="margin-bottom:10px"><b>每週三</b>更新，每次都會依你的程度給<b>三份文章</b>、<b>三個文法單元</b>與<b>三課聽力</b>（由淺到深，可以先讀最簡單的再往上挑戰）。文章一半是真實新聞改寫（附原文連結）、一半依你的筆記主題原創；文法依 Grammar in Use 的單元順序推進；聽力是<b>依你的課堂筆記單字自製的對話</b>，用語音朗讀跟讀練習。</div>'
    +'<div class="stats"><button type="button" class="stat go" onclick="statGo(\'read\')" title="點一下看全部每日文章"><b>'+pool.length+'<i>篇</i></b><span>累積文章 ›</span></button>'
    +'<button type="button" class="stat go" onclick="statGo(\'gram\')" title="點一下看全部文法單元"><b>'+DAILY_GRAM.length+'<i>單元</i></b><span>累積文法 ›</span></button>'
-   +'<button type="button" class="stat go" onclick="statGo(\'prog\')" title="點一下看打卡日曆與成就"><b><span style="font-size:.7em">🔥</span> '+(ST.streak||1)+'<i>天</i></b><span>全站連續造訪 ›</span></button>'
+   +'<button type="button" class="stat go" onclick="statGo(\'prog\')" title="點一下看打卡日曆與成就"><b><span style="font-size:.7em">🔥</span> '+(ST.streak||1)+'<i>天</i></b><span>連續造訪 ›</span></button>'
    +'<button type="button" class="stat tap'+(VOCAB.filter(x=>isDue(x.w)).length>0?' cta':'')+'" onclick="goReview()" title="點一下直接開始複習"><b>'+VOCAB.filter(x=>isDue(x.w)).length+'<i>個</i></b><span>今日待複習 ›</span></button></div></div>';
 
   /* 今日新內容比照課本目錄：卡片牆（電腦 3 欄、平板 2 欄、手機 1 欄），文章 → 文法 → 聽力；當天新增的掛 NEW */
