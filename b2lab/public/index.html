@@ -2878,8 +2878,10 @@ body[data-tab="read"] .sw-update,body[data-tab="vocab"] .sw-update{bottom:auto;t
 .daily-plan .plan-tasks{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--cd-gap)}
 .daily-plan .plan-task{padding:6px 12px;border-radius:999px;font-size:var(--font-secondary);font-weight:600}
 .daily-plan .plan-task b{display:inline}
-#v-daily .dh-card .stats{display:flex;flex-wrap:wrap;gap:8px}
-#v-daily .dh-card .stats .stat{flex:0 1 auto;display:inline-flex;align-items:baseline;gap:6px;padding:5px 12px;border-radius:999px}
+#v-daily .dh-card .stats{display:flex;flex-wrap:nowrap;gap:8px;max-width:none;margin:0;overflow-x:auto;scrollbar-width:none}
+#v-daily .dh-card .stats::-webkit-scrollbar{display:none}
+@media(max-width:640px){#v-daily .dh-card .stats{flex-wrap:wrap;overflow:visible}}
+#v-daily .dh-card .stats .stat{flex:0 0 auto;display:inline-flex;align-items:baseline;gap:6px;padding:5px 12px;border-radius:999px}
 #v-daily .dh-card .stats .stat b{display:inline;font-size:calc(17px * var(--fs));line-height:1.2;white-space:nowrap}
 #v-daily .dh-card .stats .stat b i{margin-left:2px}
 #v-daily .dh-card .stats .stat span{white-space:nowrap}
