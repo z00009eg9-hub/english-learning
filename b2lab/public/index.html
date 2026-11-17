@@ -2871,6 +2871,18 @@ svg.emo-ic{display:inline-block;width:1.2em!important;height:1.2em!important;max
 .sw-update p{margin:0 0 8px}.sw-update .row{gap:8px;flex-wrap:wrap}
 body[data-tab="read"] .sw-update,body[data-tab="vocab"] .sw-update{bottom:auto;top:calc(var(--hd-h,60px) + 10px)}
 @media(max-width:820px){.daily-plan .plan-tasks{grid-template-columns:1fr}.daily-plan .plan-task{padding:var(--cd-pad-compact)}}
+
+/* 首頁精簡：計畫卡只留一個主按鈕＋三個小標籤；統計縮成一排小膠囊 */
+.daily-plan .plan-main{width:100%;margin-top:var(--cd-gap)}
+.daily-plan .plan-ok{margin:var(--cd-gap) 0 0;color:var(--ink2)}
+.daily-plan .plan-tasks{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--cd-gap)}
+.daily-plan .plan-task{padding:6px 12px;border-radius:999px;font-size:var(--font-secondary);font-weight:600}
+.daily-plan .plan-task b{display:inline}
+#v-daily .dh-card .stats{display:flex;flex-wrap:wrap;gap:8px}
+#v-daily .dh-card .stats .stat{flex:0 1 auto;display:inline-flex;align-items:baseline;gap:6px;padding:5px 12px;border-radius:999px}
+#v-daily .dh-card .stats .stat b{display:inline;font-size:calc(17px * var(--fs));line-height:1.2;white-space:nowrap}
+#v-daily .dh-card .stats .stat b i{margin-left:2px}
+#v-daily .dh-card .stats .stat span{white-space:nowrap}
 @media(max-width:640px){#v-read :is(.spk,.wbb),#v-vocab :is(.spk,.wbb){min-height:44px;min-width:44px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
@@ -5545,16 +5557,15 @@ function dailyPlanHTML(arts,grams){
   const reviewed=Object.keys((ST.reviewDays||{})[today()]||{}).length;
   const q=buildQueue('all'), available=q.due.length+q.fresh.length;
   const tasks=[];
-  if(a) tasks.push({label:'讀一篇文章',title:a.titleCn||a.title,done:!!ST.artDone[a.id],fn:"dailyArt('"+a.id+"')"});
-  if(g) tasks.push({label:'練一個文法',title:g.titleCn||g.title,done:!!ST.gramDone[g.id],fn:"dailyGram('"+g.id+"')"});
-  tasks.push({label:'複習 10 個單字',title:'今天已複習 '+reviewed+' 個'+(!available?' · 目前沒有待複習的字':''),done:reviewed>=10||!available,fn:'goReview()'});
+  if(a) tasks.push({label:'讀文章',title:a.titleCn||a.title,done:!!ST.artDone[a.id],fn:"dailyArt('"+a.id+"')"});
+  if(g) tasks.push({label:'練文法',title:g.titleCn||g.title,done:!!ST.gramDone[g.id],fn:"dailyGram('"+g.id+"')"});
+  tasks.push({label:'複習 10 字',title:'今天已複習 '+reviewed+' 個'+(!available?' · 目前沒有待複習的字':''),done:reviewed>=10||!available,fn:'goReview()'});
   const done=tasks.filter(x=>x.done).length, next=tasks.find(x=>!x.done);
   const resume=lastPick();
+  const main=resume?'':next?'<button class="btn plan-main" onclick="'+next.fn+'">'+(done?'繼續：':'開始：')+next.label+' →</button>':'<p class="plan-ok">今日計畫已完成，可以自由探索其他內容。</p>';
   return '<section class="card daily-plan" aria-label="今日學習計畫"><div class="plan-head"><h2 class="sec">今天學一點</h2><span>'+done+' / '+tasks.length+' 項完成</span></div>'
-    +'<p class="muted">'+esc(PROFILES[PROFILE])+'，先從一項開始，完成後再決定要不要繼續。</p>'
-    +(resume?'':next?'<button class="btn" onclick="'+next.fn+'">開始今日練習 →</button>':'<p>今日計畫已完成，可以自由探索其他內容。</p>')
-    +lastCardHTML()+'<progress value="'+done+'" max="'+tasks.length+'" aria-label="今日任務完成進度"></progress>'
-    +'<div class="plan-tasks">'+tasks.map(x=>'<button class="plan-task'+(x.done?' done':'')+'" onclick="'+x.fn+'"><b>'+(x.done?'✓ ':'')+x.label+'</b><small>'+esc(x.title)+'</small></button>').join('')+'</div></section>';
+    +lastCardHTML()+main
+    +'<div class="plan-tasks">'+tasks.map(x=>'<button class="plan-task'+(x.done?' done':'')+'" title="'+esc(x.title)+'" onclick="'+x.fn+'">'+(x.done?'✓ ':'○ ')+x.label+'</button>').join('')+'</div></section>';
 }
 RENDER.daily=function(){
   const t=today();
