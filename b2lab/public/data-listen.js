@@ -14,6 +14,895 @@ window.LISTEN = {
 
 /* ========== 依課堂筆記自製（每週三更新） ========== */
 notes:[
+/* ---------- 2026-11-18 旅遊與交通主題（四個程度） ---------- */
+{
+  "id": "dl20261118a2",
+  "date": "2026-11-18",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "Platform Two at Six Twenty",
+  "titleCn": "六點二十分，第二月台",
+  "series": "本站自製聽力 · 旅遊與交通主題",
+  "topic": "🚉 車站售票口買早班車的票",
+  "focus": "will be + V-ing 用在「未來那一刻正在做」（我會正在看海、我會正在搭公車）；單純會做的事用 will + 原形動詞",
+  "intro": "Tom星期六要去花蓮，前一天先到車站買票。售票員許小姐講話很短，每一句都帶一個數字。請注意Tom用了三次 will be 加 V-ing，每一次都是在講未來某一刻他正在做什麼；而許小姐的 The gate opens at six 用的是現在式，因為那是車站固定的時間。",
+  "tip": "第一次聽只抓五個數字：發車時間、票價、月台號碼、閘門開放時間，還有到花蓮的時間。第二次聽專心找 will be 這兩個字，每聽到一次就想一下「那是哪一個時刻、誰正在做什麼」，並確認後面的動詞都加了 ing。",
+  "pre": [
+    {
+      "w": "ticket",
+      "ipa": "/ˈtɪkɪt/",
+      "pos": "n.",
+      "cn": "票",
+      "def": "A small paper or card that lets you travel or go in."
+    },
+    {
+      "w": "platform",
+      "ipa": "/ˈplætˌfɔːrm/",
+      "pos": "n.",
+      "cn": "月台",
+      "def": "The place in a station where you wait for the train."
+    },
+    {
+      "w": "seat",
+      "ipa": "/siːt/",
+      "pos": "n.",
+      "cn": "座位",
+      "def": "The place where you sit."
+    },
+    {
+      "w": "station",
+      "ipa": "/ˈsteɪʃən/",
+      "pos": "n.",
+      "cn": "車站",
+      "def": "A place where trains or buses stop for people."
+    },
+    {
+      "w": "gate",
+      "ipa": "/ɡeɪt/",
+      "pos": "n.",
+      "cn": "閘門；大門",
+      "def": "The place where you go in or come out."
+    },
+    {
+      "w": "sea",
+      "ipa": "/siː/",
+      "pos": "n.",
+      "cn": "海",
+      "def": "The salt water that covers a big part of the earth."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Tom",
+      "en": "Good morning. I want a ticket to Hualien.",
+      "cn": "早安，我要一張到花蓮的票。"
+    },
+    {
+      "sp": "Ms. Hsu",
+      "en": "Which train? The early one leaves at six twenty.",
+      "cn": "哪一班？早班車六點二十分開。"
+    },
+    {
+      "sp": "Tom",
+      "en": "The early one, please. One seat.",
+      "cn": "請給我早班車，一個位子。"
+    },
+    {
+      "sp": "Ms. Hsu",
+      "en": "Do you want a window seat?",
+      "cn": "你要靠窗的位子嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes. I will be watching the sea the whole way.",
+      "cn": "要，我會一路看著海。"
+    },
+    {
+      "sp": "Ms. Hsu",
+      "en": "Good choice. It is four hundred and forty dollars.",
+      "cn": "很好的選擇，四百四十元。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Here you are. Which platform is it?",
+      "cn": "錢在這裡。是哪一個月台？"
+    },
+    {
+      "sp": "Ms. Hsu",
+      "en": "Platform two. The gate opens at six.",
+      "cn": "第二月台，閘門六點開。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How long is the ride?",
+      "cn": "車程多久？"
+    },
+    {
+      "sp": "Ms. Hsu",
+      "en": "About two hours. You will be there by eight thirty.",
+      "cn": "大概兩個小時，你八點半前會到。"
+    },
+    {
+      "sp": "Tom",
+      "en": "My friend will be waiting at the gate in Hualien.",
+      "cn": "我朋友會在花蓮的閘門口等我。"
+    },
+    {
+      "sp": "Ms. Hsu",
+      "en": "Then please come to the station before six ten.",
+      "cn": "那請你六點十分以前到車站。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I will. At six I will be getting on the bus.",
+      "cn": "我會的。六點我會正在上公車。"
+    },
+    {
+      "sp": "Ms. Hsu",
+      "en": "You have time. Keep the ticket in your bag.",
+      "cn": "時間夠。票放在包包裡收好。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What time does the early train leave?",
+      "qCn": "早班車幾點開？",
+      "opts": [
+        "A. At six",
+        "B. At six ten",
+        "C. At six twenty",
+        "D. At eight thirty"
+      ],
+      "optsCn": [
+        "A. 六點",
+        "B. 六點十分",
+        "C. 六點二十分",
+        "D. 八點半"
+      ],
+      "ans": 2,
+      "expl": "The early one leaves at six twenty.——許小姐第一句就講了。六點是閘門開放的時間，六點十分是她叫Tom到車站的時間，八點半是到花蓮的時間。"
+    },
+    {
+      "q": "How much is the ticket?",
+      "qCn": "票多少錢？",
+      "opts": [
+        "A. Four hundred dollars",
+        "B. Four hundred and forty dollars",
+        "C. Four hundred and fourteen dollars",
+        "D. Four thousand dollars"
+      ],
+      "optsCn": [
+        "A. 四百元",
+        "B. 四百四十元",
+        "C. 四百一十四元",
+        "D. 四千元"
+      ],
+      "ans": 1,
+      "expl": "It is four hundred and forty dollars.——Tom選了靠窗的位子之後，許小姐直接報價。"
+    },
+    {
+      "q": "Which platform does Tom use?",
+      "qCn": "Tom要去哪一個月台？",
+      "opts": [
+        "A. Platform one",
+        "B. Platform two",
+        "C. Platform six",
+        "D. Platform eight"
+      ],
+      "optsCn": [
+        "A. 第一月台",
+        "B. 第二月台",
+        "C. 第六月台",
+        "D. 第八月台"
+      ],
+      "ans": 1,
+      "expl": "Platform two. The gate opens at six.——許小姐回答月台號碼時，順便講了閘門時間，六和八都是時間，不是月台。"
+    },
+    {
+      "q": "Tom says, \"At six I ___ on the bus.\"",
+      "qCn": "Tom說：「六點我會正在上公車。」",
+      "opts": [
+        "A. will be getting",
+        "B. will getting",
+        "C. am getting",
+        "D. will got"
+      ],
+      "ans": 0,
+      "expl": "at six 釘住了未來的一刻，而那一刻動作還在進行，所以用 will be 加 V-ing。B 漏掉 be；C 是現在進行式，講的是現在；D 把 will 和過去式放在一起，英文沒有這種形狀。"
+    }
+  ]
+},
+{
+  "id": "dl20261118b1",
+  "date": "2026-11-18",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "By Wednesday Evening",
+  "titleCn": "到星期三傍晚",
+  "series": "本站自製聽力 · 旅遊與交通主題",
+  "topic": "✈️ 出差前一天和同事對行程",
+  "focus": "will be + V-ing 講未來某一刻正在做的事；will have + 過去分詞 講到那一刻之前已經完成的事",
+  "intro": "Anita明天要飛河內做工廠訪查，同事Mai拿著行程表來找她對時間。兩個人都在講未來，但形狀不一樣：Mai問的 Will you have finished 和 Anita說的 I will have checked 都是「到那時候已經完成」；而 I will be having breakfast、I will be writing 則是「那一刻正在做」。請一邊聽一邊分這兩堆。",
+  "tip": "第一次聽抓四個數字：要檢查幾台機器、接駁車原本幾點、後來改成幾點、報告什麼時候要交。第二次聽數 will have 和 will be 各出現幾次，每一次都問自己一句：這是已經做完，還是那一刻還在做？",
+  "pre": [
+    {
+      "w": "schedule",
+      "ipa": "/ˈskedʒuːl/",
+      "pos": "n.",
+      "cn": "行程表；時刻表",
+      "def": "A plan that says when things happen."
+    },
+    {
+      "w": "factory",
+      "ipa": "/ˈfæk.tɚ.i/",
+      "pos": "n.",
+      "cn": "工廠",
+      "def": "A building where things are made with machines."
+    },
+    {
+      "w": "machine",
+      "ipa": "/məˈʃiːn/",
+      "pos": "n.",
+      "cn": "機器",
+      "def": "A thing with moving parts that does a job for you."
+    },
+    {
+      "w": "report",
+      "ipa": "/rɪˈpɔːrt/",
+      "pos": "n.",
+      "cn": "報告",
+      "def": "A piece of writing that tells people what you found."
+    },
+    {
+      "w": "shuttle",
+      "ipa": "/ˈʃʌt̬.əl/",
+      "pos": "n.",
+      "cn": "接駁車",
+      "def": "A bus or van that goes between two places again and again."
+    },
+    {
+      "w": "deadline",
+      "ipa": "/ˈdedlaɪn/",
+      "pos": "n.",
+      "cn": "截止時間",
+      "def": "The time by which something must be done."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mai",
+      "en": "Anita, I printed the schedule for Hanoi.",
+      "cn": "Anita，我把河內的行程表印出來了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Thanks. How many machines are on the list?",
+      "cn": "謝謝。清單上有幾台機器？"
+    },
+    {
+      "sp": "Mai",
+      "en": "Twelve. Eight in the old building and four in the new one.",
+      "cn": "十二台。舊廠區八台，新廠區四台。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Then by Wednesday evening I will have checked them all.",
+      "cn": "那到星期三傍晚我會全部檢查完。"
+    },
+    {
+      "sp": "Mai",
+      "en": "The shuttle leaves the hotel at seven on Tuesday.",
+      "cn": "星期二接駁車七點從飯店出發。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Seven? At seven I will be having breakfast.",
+      "cn": "七點？七點我會正在吃早餐。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Then move it to six forty. I will be waiting at the desk.",
+      "cn": "那改六點四十分。我會在櫃台等你。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Fine. Breakfast at six twenty, then.",
+      "cn": "好，那早餐改六點二十分。"
+    },
+    {
+      "sp": "Mai",
+      "en": "One more thing. The report deadline is Friday morning.",
+      "cn": "還有一件事，報告星期五早上要交。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I know. I will be writing it on the plane home.",
+      "cn": "我知道。我會在回程的飛機上寫。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Will you have finished it before you land?",
+      "cn": "你落地之前會寫完嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Only half. The numbers always take the longest.",
+      "cn": "只會寫一半。數字那部分總是最花時間。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Send me the first half and I will check the tables.",
+      "cn": "把前面一半寄給我，我幫你看表格。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Deal. By Thursday night you will have my draft.",
+      "cn": "成交。星期四晚上之前你會拿到我的草稿。"
+    },
+    {
+      "sp": "Mai",
+      "en": "Good. So on Friday afternoon we will both be resting.",
+      "cn": "很好，那星期五下午我們兩個都可以休息了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I wish. On Friday afternoon I will be starting the next audit.",
+      "cn": "想得美。星期五下午我會正在開始下一個稽核。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many machines are on Anita's list?",
+      "qCn": "Anita的清單上有幾台機器？",
+      "opts": [
+        "A. Eight",
+        "B. Four",
+        "C. Twelve",
+        "D. Twenty"
+      ],
+      "optsCn": [
+        "A. 八台",
+        "B. 四台",
+        "C. 十二台",
+        "D. 二十台"
+      ],
+      "ans": 2,
+      "expl": "Twelve. Eight in the old building and four in the new one.——Mai把總數和分配都講了，八和四是兩個廠區的數字。"
+    },
+    {
+      "q": "What time will the shuttle leave after they change it?",
+      "qCn": "改過之後接駁車幾點出發？",
+      "opts": [
+        "A. At seven",
+        "B. At six forty",
+        "C. At six twenty",
+        "D. At six"
+      ],
+      "optsCn": [
+        "A. 七點",
+        "B. 六點四十分",
+        "C. 六點二十分",
+        "D. 六點"
+      ],
+      "ans": 1,
+      "expl": "Then move it to six forty.——七點是原本的時間，Anita說那時候正在吃早餐，所以Mai改成六點四十分；六點二十分是改過後的早餐時間。"
+    },
+    {
+      "q": "Why can Anita not finish the whole report on the plane?",
+      "qCn": "Anita為什麼沒辦法在飛機上寫完整份報告？",
+      "opts": [
+        "A. The numbers take the longest",
+        "B. The plane has no table",
+        "C. Mai has the data",
+        "D. The flight is too short"
+      ],
+      "optsCn": [
+        "A. 數字那部分最花時間",
+        "B. 飛機上沒有桌子",
+        "C. 資料在Mai手上",
+        "D. 航程太短"
+      ],
+      "ans": 0,
+      "expl": "Only half. The numbers always take the longest.——她自己給了理由，所以才答應先把前半段寄給Mai看表格。"
+    },
+    {
+      "q": "Mai asks about seven o'clock. Anita answers, \"At seven I ___ breakfast.\"",
+      "qCn": "Mai問七點的事，Anita回答：「七點我會正在吃早餐。」",
+      "opts": [
+        "A. will be having",
+        "B. will have had",
+        "C. have",
+        "D. will having"
+      ],
+      "ans": 0,
+      "expl": "她要說的是七點那一刻動作還在進行，所以用 will be 加 V-ing。B 表示七點之前就吃完了，那就趕得上接駁車；C 是現在式講習慣；D 漏掉了 be。"
+    }
+  ]
+},
+{
+  "id": "dl20261118b1p",
+  "date": "2026-11-18",
+  "level": "B1+",
+  "minutes": 4,
+  "kind": "note",
+  "title": "The Rules Inside My Phone",
+  "titleCn": "手機裡的新規矩",
+  "series": "本站自製聽力 · 旅遊與交通主題",
+  "topic": "🚕 下班路上聊叫車平台的新規定",
+  "focus": "規定用被動語態講（are treated、must be shown、cannot be canceled）；when／if／once 帶出的子句一律用現在式",
+  "intro": "Tom在新聞上看到交通部修了網路叫車的規則，下班路上問Anita。請注意兩種形狀：一是被動語態，因為規定在意的是「什麼被要求、什麼不可以」，不是誰下的命令；二是 when you book、if the app cancels、once the change takes effect 這些子句，講的都是未來，裡面卻沒有 will。",
+  "tip": "第一次聽抓四個事實：新規定哪一天上路、平台有多久要取得許可、罰鍰的上下限、司機得到什麼好處。第二次聽專心聽 when、if、once 開頭的子句，每聽到一次就確認裡面的動詞是現在式，並找出整句的 will 落在哪一邊。",
+  "pre": [
+    {
+      "w": "platform",
+      "ipa": "/ˈplætˌfɔːrm/",
+      "pos": "n.",
+      "cn": "平台（網路服務）",
+      "def": "A company or app that brings buyers and sellers together online."
+    },
+    {
+      "w": "approval",
+      "ipa": "/əˈpruːvl/",
+      "pos": "n.",
+      "cn": "核准；許可",
+      "def": "Official permission to do something."
+    },
+    {
+      "w": "insurance",
+      "ipa": "/ɪnˈʃʊrəns/",
+      "pos": "n.",
+      "cn": "保險",
+      "def": "Money you pay so that a company will pay if something goes wrong."
+    },
+    {
+      "w": "complaint",
+      "ipa": "/kəmˈpleɪnt/",
+      "pos": "n.",
+      "cn": "抱怨；申訴",
+      "def": "What you say when you are not happy with a service."
+    },
+    {
+      "w": "fine",
+      "ipa": "/faɪn/",
+      "pos": "n.",
+      "cn": "罰鍰",
+      "def": "Money you must pay because you broke a rule."
+    },
+    {
+      "w": "fleet",
+      "ipa": "/fliːt/",
+      "pos": "n.",
+      "cn": "車隊",
+      "def": "All the cars, trucks or ships that one company uses."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Tom",
+      "en": "Did you see the news about the ride-hailing apps?",
+      "cn": "你看到網路叫車平台的新聞了嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The amended rules? They take effect on Thursday.",
+      "cn": "修正後的規定嗎？星期四上路。"
+    },
+    {
+      "sp": "Tom",
+      "en": "So the apps are treated like taxi companies now?",
+      "cn": "所以現在這些 App 被當成計程車公司了？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Yes. A platform that dispatches cars counts as an operator.",
+      "cn": "對。派遣車輛的平台算是客運服務業者。"
+    },
+    {
+      "sp": "Tom",
+      "en": "What changes for me when I book a car?",
+      "cn": "那我叫車的時候有什麼不一樣？"
+    },
+    {
+      "sp": "Anita",
+      "en": "When you book online, the car and the driver must be shown.",
+      "cn": "你線上叫車的時候，車輛和駕駛都必須揭露。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That helps. Last month my ride was canceled twice.",
+      "cn": "那有幫助。上個月我的車被取消了兩次。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Now a confirmed ride cannot be canceled without a good reason.",
+      "cn": "現在已經成立的訂單不可以沒有正當理由就取消。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And if the app cancels anyway?",
+      "cn": "那如果 App 還是取消了呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Then it becomes a complaint, and the operator has to handle it.",
+      "cn": "那就變成申訴案，業者必須處理。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Does the platform need insurance as well?",
+      "cn": "平台也需要保險嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Third-party insurance, driver training, the whole list.",
+      "cn": "第三人責任險、駕駛訓練，整份清單都要。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How long do they have to get approval?",
+      "cn": "他們有多久的時間取得許可？"
+    },
+    {
+      "sp": "Anita",
+      "en": "One year, until November 2027.",
+      "cn": "一年，到2027年11月。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And if a company just ignores all of this?",
+      "cn": "那如果有公司根本不理這些規定呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Fines run from one hundred thousand to twenty-five million.",
+      "cn": "罰鍰從十萬到兩千五百萬。"
+    },
+    {
+      "sp": "Tom",
+      "en": "That is serious money. Is anything good for the drivers?",
+      "cn": "那是很大的數字。對司機有什麼好處嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Once the change takes effect, they are no longer tied to one fleet.",
+      "cn": "新制一生效，他們就不再被綁在一個車隊裡。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "When do the amended rules take effect?",
+      "qCn": "修正後的規定哪一天上路？",
+      "opts": [
+        "A. On Thursday",
+        "B. In November 2027",
+        "C. Next month",
+        "D. On Tuesday"
+      ],
+      "optsCn": [
+        "A. 星期四",
+        "B. 2027年11月",
+        "C. 下個月",
+        "D. 星期二"
+      ],
+      "ans": 0,
+      "expl": "They take effect on Thursday.——Anita第一次回答就講了。2027年11月是平台取得許可的最後期限，不是上路日。"
+    },
+    {
+      "q": "What must the platform show when a passenger books online?",
+      "qCn": "乘客線上叫車時，平台必須揭露什麼？",
+      "opts": [
+        "A. The car and the driver",
+        "B. The fare only",
+        "C. The number of complaints",
+        "D. The insurance papers"
+      ],
+      "optsCn": [
+        "A. 車輛和駕駛",
+        "B. 只要車資",
+        "C. 申訴件數",
+        "D. 保險文件"
+      ],
+      "ans": 0,
+      "expl": "the car and the driver must be shown——Anita用被動語態講這條規定，因為重點是「必須被揭露」，不是誰去揭露。"
+    },
+    {
+      "q": "What is the highest fine mentioned?",
+      "qCn": "對話裡提到的最高罰鍰是多少？",
+      "opts": [
+        "A. Twenty-five million",
+        "B. One hundred thousand",
+        "C. One million",
+        "D. Two hundred thousand"
+      ],
+      "optsCn": [
+        "A. 兩千五百萬",
+        "B. 十萬",
+        "C. 一百萬",
+        "D. 二十萬"
+      ],
+      "ans": 0,
+      "expl": "Fines run from one hundred thousand to twenty-five million.——十萬是下限，兩千五百萬是上限。"
+    },
+    {
+      "q": "Fill in what Anita says: \"___ the change takes effect, they are no longer tied to one fleet.\"",
+      "qCn": "填空：「新制一生效，他們就不再被綁在一個車隊裡。」",
+      "opts": [
+        "A. Once",
+        "B. Once will",
+        "C. Once it will take",
+        "D. Once has"
+      ],
+      "ans": 0,
+      "expl": "once 帶出時間子句，裡面一律用現在式 takes，不可以放 will。B、C 都把 will 塞進子句；D 的 has 後面接不上原形動詞。"
+    },
+    {
+      "q": "Why is the new rule good news for drivers?",
+      "qCn": "新規定對司機來說為什麼是好消息？",
+      "opts": [
+        "A. They can work with more than one fleet",
+        "B. They pay no service fee",
+        "C. They get free insurance",
+        "D. They can cancel rides freely"
+      ],
+      "optsCn": [
+        "A. 他們可以同時跟多個車隊合作",
+        "B. 他們不用付服務費",
+        "C. 他們有免費保險",
+        "D. 他們可以隨意取消訂單"
+      ],
+      "ans": 0,
+      "expl": "they are no longer tied to one fleet——最後一句。服務費還是要經過核准才能收，取消訂單反而被管得更嚴。"
+    }
+  ]
+},
+{
+  "id": "dl20261118b2",
+  "date": "2026-11-18",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Which Terminal Will I Be Standing In?",
+  "titleCn": "我會站在哪一座航廈",
+  "series": "本站自製聽力 · 旅遊與交通主題",
+  "topic": "🛫 晚餐後聊越南新機場開航",
+  "focus": "until／when／by the time 帶出的子句用現在式或現在完成式，未來只在主句標一次；被動語態把「誰決定」留白",
+  "intro": "Anita常飛河內，越南那座新機場要開航了，她和Tom在晚餐後聊這件事。這一課的語言焦點是時間子句：until the slots have been agreed、when the allocation plan is signed、by the time you fly——三個子句講的都是未來，裡面卻一個 will 都沒有。另外請注意 Nothing is confirmed 這種被動句，它刻意不說是誰還沒決定。",
+  "tip": "第一次聽抓五個數字：開航的日期、距離市區多遠、一週最多幾班、國際線幾班、國內線幾班。第二次聽圈出 until、when、by the time 三個連接詞，確認後面的動詞是現在式或現在完成式，再找出整句的 will 落在哪一邊。",
+  "pre": [
+    {
+      "w": "terminal",
+      "ipa": "/ˈtɝː.mə.nəl/",
+      "pos": "n.",
+      "cn": "航廈",
+      "def": "The building where passengers wait and board."
+    },
+    {
+      "w": "domestic",
+      "ipa": "/dəˈmes.tɪk/",
+      "pos": "adj.",
+      "cn": "國內的",
+      "def": "Inside one country, not between countries."
+    },
+    {
+      "w": "carrier",
+      "ipa": "/ˈker.i.ɚ/",
+      "pos": "n.",
+      "cn": "航空公司",
+      "def": "A company that moves people or goods for money."
+    },
+    {
+      "w": "slot",
+      "ipa": "/slɑːt/",
+      "pos": "n.",
+      "cn": "時間帶",
+      "def": "A fixed time that is kept for one flight or one job."
+    },
+    {
+      "w": "phase",
+      "ipa": "/feɪz/",
+      "pos": "n.",
+      "cn": "期；階段",
+      "def": "One stage of a long piece of work."
+    },
+    {
+      "w": "allocation",
+      "ipa": "/ˌæl.əˈkeɪ.ʃən/",
+      "pos": "n.",
+      "cn": "分配",
+      "def": "The way something is divided and given out."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Anita",
+      "en": "My Hanoi flight may move to the new airport next year.",
+      "cn": "我飛河內的班機明年可能會搬到新機場。"
+    },
+    {
+      "sp": "Tom",
+      "en": "The big one outside Ho Chi Minh City?",
+      "cn": "胡志明市外面那座大的嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Long Thanh. Commercial flights begin at midnight on December twenty-fourth.",
+      "cn": "隆城機場。商業航班12月24日午夜開始。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Midnight? That is an odd hour for a first flight.",
+      "cn": "午夜？首航選這個時間很奇怪。"
+    },
+    {
+      "sp": "Anita",
+      "en": "It is a timetable change, not a party. The clock simply turns over.",
+      "cn": "那是換時刻表，不是辦派對，時間一到就換過去了。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How far is it from the city?",
+      "cn": "離市區多遠？"
+    },
+    {
+      "sp": "Anita",
+      "en": "About forty kilometers. The old airport is almost downtown.",
+      "cn": "大概四十公里。舊機場幾乎就在市中心。"
+    },
+    {
+      "sp": "Tom",
+      "en": "So your taxi ride gets a lot longer.",
+      "cn": "那你搭計程車的時間會長很多。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is the part nobody talks about. The terminal is beautiful; the road is not.",
+      "cn": "那就是沒有人在討論的部分。航廈很漂亮，路可不漂亮。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How many flights will it handle at the start?",
+      "cn": "一開始承接多少班次？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Up to three hundred and sixty-six a week, and most of them are domestic.",
+      "cn": "一週最多366班，而且大部分是國內線。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How many international ones?",
+      "cn": "國際線有幾班？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Forty-four. The other three hundred and twenty-two stay inside Vietnam.",
+      "cn": "44班。另外322班都在越南境內。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And your carrier? Has it decided anything?",
+      "cn": "那你的航空公司呢？有決定什麼嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Nothing is confirmed until the slots have been agreed.",
+      "cn": "時間帶談定之前，什麼都不算確定。"
+    },
+    {
+      "sp": "Tom",
+      "en": "So you cannot book a ticket yet.",
+      "cn": "所以你現在還不能訂票。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I can book. I just cannot be sure which terminal I will be standing in.",
+      "cn": "訂票可以。我只是沒辦法確定自己會站在哪一座航廈。"
+    },
+    {
+      "sp": "Tom",
+      "en": "When the allocation plan is signed, will passengers be told?",
+      "cn": "分配計畫簽定之後，會通知旅客嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "They will. Until then both airports keep their current timetables.",
+      "cn": "會。在那之前兩座機場都維持現行時刻表。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Fine. By the time you fly, I will have learned both airport names.",
+      "cn": "好吧。等你要飛的時候，我會把兩座機場的名字都記起來。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "When do commercial flights begin at the new airport?",
+      "qCn": "新機場的商業航班什麼時候開始？",
+      "opts": [
+        "A. At midnight on December twenty-fourth",
+        "B. On December first",
+        "C. Next spring",
+        "D. When the second phase opens"
+      ],
+      "optsCn": [
+        "A. 12月24日午夜",
+        "B. 12月1日",
+        "C. 明年春天",
+        "D. 第二期啟用的時候"
+      ],
+      "ans": 0,
+      "expl": "Commercial flights begin at midnight on December twenty-fourth.——Anita第二句就講了，而且她解釋午夜只是時刻表交接的時間點。"
+    },
+    {
+      "q": "How many of the weekly flights are international?",
+      "qCn": "每週的班次裡有幾班是國際線？",
+      "opts": [
+        "A. Forty-four",
+        "B. Three hundred and twenty-two",
+        "C. Three hundred and sixty-six",
+        "D. Forty"
+      ],
+      "optsCn": [
+        "A. 44班",
+        "B. 322班",
+        "C. 366班",
+        "D. 40班"
+      ],
+      "ans": 0,
+      "expl": "Forty-four. The other three hundred and twenty-two stay inside Vietnam.——366是總數，322是國內線，40是公里數，不是班次。"
+    },
+    {
+      "q": "Why is Anita not sure about her flight yet?",
+      "qCn": "Anita為什麼還不確定自己的班機？",
+      "opts": [
+        "A. The slots have not been agreed",
+        "B. The terminal is not finished",
+        "C. Her carrier has stopped the route",
+        "D. The taxi fare is too high"
+      ],
+      "optsCn": [
+        "A. 時間帶還沒談定",
+        "B. 航廈還沒完工",
+        "C. 她的航空公司停飛了這條線",
+        "D. 計程車太貴"
+      ],
+      "ans": 0,
+      "expl": "Nothing is confirmed until the slots have been agreed.——她用被動語態，刻意不說是誰還沒談定。航廈她自己說很漂亮，所以不是沒完工。"
+    },
+    {
+      "q": "What does Anita say about the road to the new airport?",
+      "qCn": "Anita怎麼說到新機場的那段路？",
+      "opts": [
+        "A. It is the part nobody talks about",
+        "B. It is shorter than before",
+        "C. It has a new train line",
+        "D. The company pays for it"
+      ],
+      "optsCn": [
+        "A. 那是沒有人在討論的部分",
+        "B. 比以前短",
+        "C. 有新的鐵路",
+        "D. 公司會付錢"
+      ],
+      "ans": 0,
+      "expl": "That is the part nobody talks about. The terminal is beautiful; the road is not.——她把漂亮的航廈和不漂亮的路對比起來，這也是全篇的重點。"
+    },
+    {
+      "q": "Fill in: \"Nothing is confirmed until the slots ___ .\"",
+      "qCn": "填空：「時間帶談定之前，什麼都不算確定。」",
+      "opts": [
+        "A. have been agreed",
+        "B. will be agreed",
+        "C. will have been agreed",
+        "D. agreeing"
+      ],
+      "ans": 0,
+      "expl": "until 帶出時間子句，裡面不放 will；而且時間帶是「被談定」的，所以用現在完成式的被動 have been agreed，順便表示「談定在前」。B、C 把 will 塞進子句；D 形狀不完整。"
+    }
+  ]
+},
 /* ---------- 2026-11-11 健康與醫療主題（四個程度） ---------- */
 {
   "id": "dl20261111a2",

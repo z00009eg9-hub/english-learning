@@ -7,6 +7,781 @@
 window.DAILY = {
 
 articles:[
+/* ---------- 2026-11-18 每日文章（旅遊與交通：未來進行式、未來完成式與時間子句） ---------- */
+{
+  "id": "d20261118a2",
+  "date": "2026-11-18",
+  "level": "A2",
+  "topic": "交通",
+  "words": 98,
+  "kind": "orig",
+  "title": "Tom's Six O'Clock Bus",
+  "titleCn": "Tom的六點公車",
+  "focus": "明天這個時刻「正在做」的事用 will be + V-ing；只是講會做的事用 will + 原形動詞",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom星期六要搭火車去花蓮。這一篇請分辨兩種形狀：will + 原形動詞只說「他會做這件事」，will be + V-ing 多了一個畫面——在未來的某一個時刻，他正在做這件事。看到 This time tomorrow、At six、At noon 這種「指定時刻」，後面幾乎都會接 will be + V-ing。",
+  "spoken": [
+    {
+      "en": "This time tomorrow, he will be sitting by the window.",
+      "cn": "明天這個時候，他會坐在窗邊。"
+    },
+    {
+      "en": "At six he will be riding the bus to the station.",
+      "cn": "六點他會在搭公車去車站。"
+    },
+    {
+      "en": "Tom will pack his bag tonight.",
+      "cn": "Tom今天晚上會把包包打包好。"
+    },
+    {
+      "en": "At noon they will be eating lunch together.",
+      "cn": "中午他們會一起吃午餐。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom will take the train to Hualien on Saturday. He has a ticket for the early train. The ticket is in his small bag.",
+      "cn": "Tom星期六要搭火車去花蓮。他有一張早班火車的票。票放在他的小包包裡。"
+    },
+    {
+      "en": "This time tomorrow, he will be sitting by the window. He will be looking at the sea. He is very happy about that.",
+      "cn": "明天這個時候，他會坐在窗邊。他會一直看著海。他對這件事很開心。"
+    },
+    {
+      "en": "At six he will be riding the bus to the station. The bus stops near his house. He does not want to run for the train again.",
+      "cn": "六點他會在搭公車去車站。那班公車停在他家附近。他不想再為了趕火車跑一次。"
+    },
+    {
+      "en": "His friend Kevin will wait at the gate in Hualien. At noon they will be eating lunch together. Tom will pack his bag tonight.",
+      "cn": "他的朋友Kevin會在花蓮的閘門口等他。中午他們會一起吃午餐。Tom今天晚上會把包包打包好。"
+    }
+  ],
+  "target": [
+    {
+      "w": "ticket",
+      "ipa": "/ˈtɪkɪt/",
+      "pos": "n.",
+      "cn": "票",
+      "def": "A small paper or card that lets you travel or go in.",
+      "ex": "I lost my ticket in the taxi last night.",
+      "exCn": "我昨天晚上把票掉在計程車上了。"
+    },
+    {
+      "w": "station",
+      "ipa": "/ˈsteɪʃən/",
+      "pos": "n.",
+      "cn": "車站",
+      "def": "A place where trains or buses stop for people.",
+      "ex": "The new station has a big clock inside.",
+      "exCn": "新的車站裡面有一個大時鐘。"
+    },
+    {
+      "w": "bus",
+      "ipa": "/bʌs/",
+      "pos": "n.",
+      "cn": "公車",
+      "def": "A big road car that carries many people.",
+      "ex": "We missed the last bus and walked home.",
+      "exCn": "我們錯過最後一班公車，走路回家。"
+    },
+    {
+      "w": "gate",
+      "ipa": "/ɡeɪt/",
+      "pos": "n.",
+      "cn": "閘門；大門",
+      "def": "The place where you go in or come out.",
+      "ex": "The school gate opens at seven in the morning.",
+      "exCn": "學校大門早上七點開。"
+    },
+    {
+      "w": "pack",
+      "ipa": "/pæk/",
+      "pos": "v.",
+      "cn": "打包；收行李",
+      "def": "To put things into a bag before a trip.",
+      "ex": "My sister packs her clothes the night before.",
+      "exCn": "我姊姊前一天晚上就把衣服收好。"
+    },
+    {
+      "w": "sea",
+      "ipa": "/siː/",
+      "pos": "n.",
+      "cn": "海",
+      "def": "The salt water that covers a big part of the earth.",
+      "ex": "From the hill we can see the sea clearly.",
+      "exCn": "從那座小山上我們可以清楚看到海。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Where will Tom be sitting on the train?",
+      "qCn": "Tom在火車上會坐在哪裡？",
+      "opts": [
+        "A. By the window",
+        "B. By the door",
+        "C. Near the driver",
+        "D. In the last seat"
+      ],
+      "optsCn": [
+        "A. 窗邊",
+        "B. 門邊",
+        "C. 司機旁邊",
+        "D. 最後一個座位"
+      ],
+      "ans": 0,
+      "expl": "He will be sitting by the window.——第二段第一句直接寫出位置，而且用 will be sitting，畫面是明天那個時刻他正坐在那裡。"
+    },
+    {
+      "q": "How does Tom get to the station?",
+      "qCn": "Tom怎麼去車站？",
+      "opts": [
+        "A. By bus",
+        "B. By bike",
+        "C. On foot",
+        "D. By taxi"
+      ],
+      "optsCn": [
+        "A. 搭公車",
+        "B. 騎腳踏車",
+        "C. 走路",
+        "D. 搭計程車"
+      ],
+      "ans": 0,
+      "expl": "At six he will be riding the bus to the station.——第三段講得很清楚，而且那班公車就停在他家附近。"
+    },
+    {
+      "q": "It is Friday night. Tom says, \"This time tomorrow I ___ on the train.\"",
+      "qCn": "現在是星期五晚上。Tom說：「明天這個時候我會正在火車上。」",
+      "opts": [
+        "A. will be sitting",
+        "B. will sitting",
+        "C. am sitting",
+        "D. will sat"
+      ],
+      "ans": 0,
+      "expl": "This time tomorrow 指定了未來的一個時刻，那一刻他正在進行這個動作，所以用 will be 加 V-ing。will sitting 少了 be；am sitting 講的是現在正在做；will sat 把 will 和過去式放在一起，英文沒有這種形狀。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "Tomorrow at nine I take the bus.",
+      "b2": "Tomorrow at nine I will be taking the bus.",
+      "note": "現在簡單式講的是每天都在做的事，所以 I take the bus 聽起來像你天天這個時間搭公車。要講「明天九點那一刻我正在車上」，就要用 will be 加 V-ing：先有 will，再有 be，動詞才加 ing。",
+      "sp": "I'll be on the bus at nine tomorrow.",
+      "spNote": "口語常直接用 be 動詞講位置，形狀一樣簡單。",
+      "b1Cn": "明天九點我搭公車。",
+      "b2Cn": "明天九點我會正在搭公車。",
+      "spCn": "我明天九點會在公車上。"
+    },
+    {
+      "b1": "We will eat lunch at noon.",
+      "b2": "We will be eating lunch at noon.",
+      "note": "will eat 只告訴對方「這件事會發生」，will be eating 多了一個畫面：中午那一刻我們正在吃。想說「那個時間別打電話給我」的時候，英文幾乎都用 will be + V-ing。",
+      "sp": "We'll be having lunch then.",
+      "spNote": "口語常用 have 代替 eat，形狀完全一樣。",
+      "b1Cn": "我們中午會吃午餐。",
+      "b2Cn": "我們中午會正在吃午餐。",
+      "spCn": "我們那時候正在吃午餐。"
+    }
+  ]
+},
+{
+  "id": "d20261118b1",
+  "date": "2026-11-18",
+  "level": "B1",
+  "topic": "旅遊與交通",
+  "words": 138,
+  "kind": "orig",
+  "title": "What Anita Will Have Finished by Friday",
+  "titleCn": "到星期五，Anita會做完哪些事",
+  "focus": "will be + V-ing 講未來某一刻正在進行的事；will have + 過去分詞 講到那一刻之前已經完成的事",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "Anita要去河內出差三天，行程很緊。這一篇有兩種未來式，請分開看：will be waiting、will be writing 是「那個時刻正在做」，畫面在進行中；will have checked、will have sent 是「到那個時刻之前已經做完」，畫面是完成。兩種常常出現在同一段裡，差別只在你想強調進行還是完成。",
+  "spoken": [
+    {
+      "en": "By Wednesday evening she will have checked every machine.",
+      "cn": "到星期三晚上，她會把每一台機器都檢查完。"
+    },
+    {
+      "en": "Mai will be waiting at the hotel desk at seven.",
+      "cn": "七點Mai會在飯店櫃台等她。"
+    },
+    {
+      "en": "She will be writing it on the plane home.",
+      "cn": "她會在回程的飛機上寫。"
+    },
+    {
+      "en": "This time next week she will be sitting at her own desk.",
+      "cn": "下個星期這個時候，她會坐在自己的位子上。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita flies to Hanoi early on Monday for a factory visit. She only has three days there, and the schedule is tight. By Wednesday evening she will have checked every machine on her list.",
+      "cn": "Anita星期一清早飛去河內做工廠訪查。她在那裡只有三天，行程很緊。到星期三晚上，她會把清單上的每一台機器都檢查完。"
+    },
+    {
+      "en": "On Tuesday her colleague Mai will be waiting at the hotel desk at seven. They will be driving to the factory before the traffic gets heavy. Anita hates morning traffic, so she always leaves early.",
+      "cn": "星期二七點，她的同事Mai會在飯店櫃台等她。他們會在車潮變多之前開車去工廠。Anita很討厭早上的車潮，所以她總是提早出門。"
+    },
+    {
+      "en": "Her report is due on Friday morning. She will be writing it on the plane home, because she will not have time in the office. By the time the plane lands, half of it will be done.",
+      "cn": "她的報告星期五早上要交。她會在回程的飛機上寫，因為她在辦公室不會有時間。等飛機落地的時候，報告已經寫完一半了。"
+    },
+    {
+      "en": "This time next week Anita will be sitting at her own desk again. She will have sent the report, and she will be planning her next trip. She likes that quiet feeling.",
+      "cn": "下個星期這個時候，Anita又會坐在自己的位子上。她會已經把報告寄出去，然後開始規劃下一趟出差。她喜歡那種安靜的感覺。"
+    }
+  ],
+  "target": [
+    {
+      "w": "schedule",
+      "ipa": "/ˈskedʒuːl/",
+      "pos": "n.",
+      "cn": "行程表；時刻表",
+      "def": "A plan that says when things happen.",
+      "ex": "Our class schedule changes every two weeks.",
+      "exCn": "我們的課表每兩個星期換一次。"
+    },
+    {
+      "w": "colleague",
+      "ipa": "/ˈkɑː.liːɡ/",
+      "pos": "n.",
+      "cn": "同事",
+      "def": "A person who works with you.",
+      "ex": "A colleague from Taipei showed me a shortcut.",
+      "exCn": "一位台北來的同事教我一條捷徑。"
+    },
+    {
+      "w": "factory",
+      "ipa": "/ˈfæk.tɚ.i/",
+      "pos": "n.",
+      "cn": "工廠",
+      "def": "A building where things are made with machines.",
+      "ex": "The old shoe factory is now a coffee shop.",
+      "exCn": "那家舊鞋廠現在是一間咖啡店。"
+    },
+    {
+      "w": "report",
+      "ipa": "/rɪˈpɔːrt/",
+      "pos": "n.",
+      "cn": "報告",
+      "def": "A piece of writing that tells people what you found.",
+      "ex": "He read the safety report twice before the meeting.",
+      "exCn": "開會之前他把那份安全報告讀了兩次。"
+    },
+    {
+      "w": "traffic",
+      "ipa": "/ˈtræfɪk/",
+      "pos": "n.",
+      "cn": "車流；車潮",
+      "def": "All the cars and buses moving on a road.",
+      "ex": "Heavy traffic on the bridge made us an hour late.",
+      "exCn": "橋上的車潮讓我們晚了一個小時。"
+    },
+    {
+      "w": "machine",
+      "ipa": "/məˈʃiːn/",
+      "pos": "n.",
+      "cn": "機器",
+      "def": "A thing with moving parts that does a job for you.",
+      "ex": "The coffee machine in our office broke again.",
+      "exCn": "我們辦公室的咖啡機又壞了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What will Anita have finished by Wednesday evening?",
+      "qCn": "到星期三晚上，Anita會完成什麼？",
+      "opts": [
+        "A. Every machine on her list",
+        "B. The whole report",
+        "C. Her flight home",
+        "D. Next month's schedule"
+      ],
+      "optsCn": [
+        "A. 清單上的每一台機器",
+        "B. 整份報告",
+        "C. 回程的班機",
+        "D. 下個月的行程表"
+      ],
+      "ans": 0,
+      "expl": "By Wednesday evening she will have checked every machine on her list.——第一段最後一句用 will have checked，講的是到那個時間點之前已經完成的事。報告要到星期五才交。"
+    },
+    {
+      "q": "Why will Anita write the report on the plane?",
+      "qCn": "Anita為什麼會在飛機上寫報告？",
+      "opts": [
+        "A. Because she will not have time in the office",
+        "B. Because Mai asked her to",
+        "C. Because the factory has no desk",
+        "D. Because the plane is quiet"
+      ],
+      "optsCn": [
+        "A. 因為她在辦公室不會有時間",
+        "B. 因為Mai叫她寫",
+        "C. 因為工廠沒有桌子",
+        "D. 因為飛機上很安靜"
+      ],
+      "ans": 0,
+      "expl": "because she will not have time in the office——第三段自己給了原因。飛機安靜是最後一段講她喜歡的感覺，不是寫報告的理由。"
+    },
+    {
+      "q": "Mai arrives at the desk at seven and stays there. Anita comes down at ten past seven. At ten past seven, Mai ___ for her.",
+      "qCn": "Mai七點就到櫃台等，Anita七點十分才下來。七點十分那一刻，Mai正在等她。",
+      "opts": [
+        "A. will be waiting",
+        "B. will have waited",
+        "C. waits",
+        "D. will wait"
+      ],
+      "ans": 0,
+      "expl": "題目要的是「那一刻正在進行」，所以用 will be 加 V-ing。will have waited 強調的是等的動作已經結束；waits 講習慣；will wait 只說她會等，沒有把那一刻的畫面講出來。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "On Friday I finish the report.",
+      "b2": "By Friday I will have finished the report.",
+      "note": "現在簡單式沒有把「截止」這件事講出來。要說「到星期五之前就做完」，英文用 by 加 will have 加過去分詞；by 是這個句型的信號字，看到 by Friday、by then，後面幾乎都接 will have done。",
+      "sp": "I'll have it done by Friday.",
+      "spNote": "口語常把 have 加 done 擺在一起，意思一樣是「到時候已經完成」。",
+      "b1Cn": "星期五我把報告寫完。",
+      "b2Cn": "到星期五我就會把報告寫完。",
+      "spCn": "我星期五之前會弄好。"
+    },
+    {
+      "b1": "Tomorrow morning I drive to the factory.",
+      "b2": "At seven tomorrow I will be driving to the factory.",
+      "note": "現在簡單式講的是每天的習慣。加上 at seven 這種指定時刻，又想強調那一刻人在路上，就要用 will be 加 V-ing。這個形狀常用來拒絕約時間：那個時間我正在忙。",
+      "sp": "I'll be on the road at seven.",
+      "spNote": "口語用 on the road 就講完了同一件事。",
+      "b1Cn": "明天早上我開車去工廠。",
+      "b2Cn": "明天七點我會正在開車去工廠。",
+      "spCn": "我七點會在路上。"
+    }
+  ]
+},
+{
+  "id": "d20261118b1p",
+  "date": "2026-11-18",
+  "level": "B1+",
+  "topic": "新聞·交通",
+  "words": 169,
+  "kind": "news",
+  "title": "New Rules for the Car in Your App",
+  "titleCn": "手機叫來的那台車，現在也有規矩了",
+  "focus": "被動語態（is treated、cannot be canceled、has been removed）配上 when／if／once 時間條件句——子句裡用現在式，主句才講未來或規定",
+  "source": "改寫自 Focus Taiwan 報導（2026/11/17）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/society/202611170022",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "台灣交通部修了網路叫車平台的管理規則。這一篇請注意兩件事：第一，規定幾乎都用被動語態寫（誰被當成什麼、什麼不可以被取消），因為重點在規定本身，不在誰下的命令；第二，when、if、once 開頭的子句裡一律用現在式，未來的意思留給主句。這兩個特徵就是法規英文的樣子。",
+  "spoken": [
+    {
+      "en": "The rules take effect on Thursday.",
+      "cn": "新規定星期四上路。"
+    },
+    {
+      "en": "A confirmed ride cannot be canceled without a good reason.",
+      "cn": "已經成立的訂單不可以沒有正當理由就取消。"
+    },
+    {
+      "en": "Approval must be obtained first.",
+      "cn": "要先取得核准。"
+    },
+    {
+      "en": "Drivers are no longer tied to a single fleet.",
+      "cn": "司機不再被綁在一個車隊裡。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Taiwan's Ministry of Transportation and Communications announced amended rules for ride-hailing apps on Tuesday. Under the new framework, a platform that dispatches taxis through an app is treated as a taxi service operator. The rules take effect on Thursday.",
+      "cn": "台灣交通部在星期二公告了網路叫車平台的修正規定。在新的架構下，用手機應用程式派遣計程車的平台，會被當成計程車客運服務業者。新規定星期四上路。"
+    },
+    {
+      "en": "When a passenger books a ride online, the platform has to show the car and the driver before the trip starts. A confirmed ride cannot be canceled without a good reason. If a platform wants to charge its drivers a service fee, approval must be obtained first.",
+      "cn": "乘客在線上叫車的時候，平台必須在行程開始前揭露車輛與駕駛的資訊。已經成立的訂單不可以沒有正當理由就取消。平台如果想向司機收服務費，必須先取得核准。"
+    },
+    {
+      "en": "Operators are also expected to train their drivers, carry third-party insurance and deal with complaints. Every business plan has to say what happens if the system goes down, and how personal data is kept safe.",
+      "cn": "業者還要提供駕駛的專業訓練、投保第三人責任險，並處理消費爭議。每一份營運計畫都要寫明系統掛掉的時候怎麼辦，以及個人資料怎麼保護。"
+    },
+    {
+      "en": "Platforms have one year, until November 2027, to win approval. A company that ignores the rules can be fined between NT$100,000 and NT$25 million, or ordered to stop. One old limit has been removed: once the change takes effect, drivers are no longer tied to a single fleet.",
+      "cn": "平台有一年的時間，到2027年11月為止，必須取得營運許可。不遵守規定的公司可以被處10萬到2500萬元新台幣的罰鍰，或被命令停業。有一條舊限制被拿掉了：新制生效之後，司機不再被綁在單一的派遣車隊裡。"
+    }
+  ],
+  "target": [
+    {
+      "w": "platform",
+      "ipa": "/ˈplætˌfɔːrm/",
+      "pos": "n.",
+      "cn": "平台（網路服務）",
+      "def": "A company or app that brings buyers and sellers together online.",
+      "ex": "My cousin sells dried fruit on a shopping platform.",
+      "exCn": "我表妹在一個購物平台上賣果乾。"
+    },
+    {
+      "w": "dispatch",
+      "ipa": "/dɪˈspætʃ/",
+      "pos": "v.",
+      "cn": "派遣；調度",
+      "def": "To send a car, a worker or goods somewhere to do a job.",
+      "ex": "The office dispatches two engineers whenever a line stops.",
+      "exCn": "只要有一條線停下來，辦公室就會派兩個工程師過去。"
+    },
+    {
+      "w": "approval",
+      "ipa": "/əˈpruːvl/",
+      "pos": "n.",
+      "cn": "核准；許可",
+      "def": "Official permission to do something.",
+      "ex": "Our budget still needs approval from head office.",
+      "exCn": "我們的預算還要總公司核准。"
+    },
+    {
+      "w": "insurance",
+      "ipa": "/ɪnˈʃʊrəns/",
+      "pos": "n.",
+      "cn": "保險",
+      "def": "Money you pay so that a company will pay if something goes wrong.",
+      "ex": "Travel insurance saved me when my flight was canceled.",
+      "exCn": "我的班機取消的時候，旅行保險救了我。"
+    },
+    {
+      "w": "complaint",
+      "ipa": "/kəmˈpleɪnt/",
+      "pos": "n.",
+      "cn": "抱怨；申訴",
+      "def": "What you say when you are not happy with a service.",
+      "ex": "The shop answers every complaint within one working day.",
+      "exCn": "那家店每一件申訴都在一個工作日內回覆。"
+    },
+    {
+      "w": "fine",
+      "ipa": "/faɪn/",
+      "pos": "v.",
+      "cn": "罰款；處以罰鍰",
+      "def": "To make someone pay money because they broke a rule.",
+      "ex": "Drivers who park on the corner are fined every week.",
+      "exCn": "停在轉角的車主每個星期都被開罰單。"
+    },
+    {
+      "w": "fleet",
+      "ipa": "/fliːt/",
+      "pos": "n.",
+      "cn": "車隊",
+      "def": "All the cars, trucks or ships that one company uses.",
+      "ex": "The hotel keeps a small fleet of electric vans.",
+      "exCn": "那家飯店有一小支電動廂型車車隊。"
+    },
+    {
+      "w": "operator",
+      "ipa": "/ˈɑːpəreɪtɚ/",
+      "pos": "n.",
+      "cn": "業者；經營者",
+      "def": "A person or company that runs a service.",
+      "ex": "Every tour operator on the island must report its prices.",
+      "exCn": "島上每一家旅遊業者都要申報價格。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Under the new framework, how is an app that dispatches taxis treated?",
+      "qCn": "在新架構下，派遣計程車的應用程式被當成什麼？",
+      "opts": [
+        "A. As a taxi service operator",
+        "B. As a software company",
+        "C. As a private driver",
+        "D. As a travel agency"
+      ],
+      "optsCn": [
+        "A. 計程車客運服務業者",
+        "B. 軟體公司",
+        "C. 私人駕駛",
+        "D. 旅行社"
+      ],
+      "ans": 0,
+      "expl": "a platform that dispatches taxis through an app is treated as a taxi service operator——第一段用被動語態寫出這個身分，所以平台要負和計程車業者一樣的責任。"
+    },
+    {
+      "q": "What must a platform do before it charges drivers a service fee?",
+      "qCn": "平台在向司機收服務費之前必須做什麼？",
+      "opts": [
+        "A. Obtain approval",
+        "B. Tell every passenger",
+        "C. Buy new cars",
+        "D. Lower the fare"
+      ],
+      "optsCn": [
+        "A. 取得核准",
+        "B. 告知每一位乘客",
+        "C. 買新車",
+        "D. 降低車資"
+      ],
+      "ans": 0,
+      "expl": "If a platform wants to charge its drivers a service fee, approval must be obtained first.——第二段最後一句，if 子句用現在式，主句用被動的 must be obtained。"
+    },
+    {
+      "q": "How long do platforms have to win approval?",
+      "qCn": "平台有多久的時間取得營運許可？",
+      "opts": [
+        "A. One year",
+        "B. Three months",
+        "C. Two years",
+        "D. Until the end of this year"
+      ],
+      "optsCn": [
+        "A. 一年",
+        "B. 三個月",
+        "C. 兩年",
+        "D. 到今年年底"
+      ],
+      "ans": 0,
+      "expl": "Platforms have one year, until November 2027, to win approval.——第四段第一句，而且文章也寫出到期的月份。"
+    },
+    {
+      "q": "Fill in: \"___ the change takes effect, drivers are no longer tied to a single fleet.\"",
+      "qCn": "填空：「新制一旦生效，司機就不再被綁在單一車隊裡。」",
+      "opts": [
+        "A. Once",
+        "B. Once will",
+        "C. Once it will take",
+        "D. Once has"
+      ],
+      "ans": 0,
+      "expl": "once 帶出時間子句，子句裡一律用現在式 takes，不可以放 will。B、C 把 will 塞進子句；D 的 has 後面接不上動詞原形，形狀也不對。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The ministry will punish companies that break the rules.",
+      "b2": "Companies that break the rules can be fined or ordered to stop.",
+      "note": "法規英文幾乎不寫「誰來罰你」，因為誰罰不是重點，會被罰才是。把受詞搬到句首、動詞換成 be 加過去分詞，句子立刻有公文的語氣，也省掉主詞。",
+      "b1Cn": "交通部會處罰違規的公司。",
+      "b2Cn": "違規的公司可以被罰款或被命令停業。"
+    },
+    {
+      "b1": "When the new rule will start, drivers can join two fleets.",
+      "b2": "Once the new rule takes effect, drivers can join more than one fleet.",
+      "note": "中文說「等新制開始的時候」，很多人直譯就把 will 放進 when／once 的子句裡。英文不行：時間子句一律用現在式，未來的意思靠主句或上下文表達。記住一句話——will 不進 when。",
+      "b1Cn": "等新規定開始，司機可以加入兩個車隊。",
+      "b2Cn": "新規定一生效，司機就可以加入不只一個車隊。"
+    }
+  ]
+},
+{
+  "id": "d20261118b2",
+  "date": "2026-11-18",
+  "level": "B2",
+  "topic": "新聞·旅遊與交通",
+  "words": 261,
+  "kind": "news",
+  "title": "The Airport That Opens at Midnight",
+  "titleCn": "午夜開張的新機場",
+  "focus": "when／once／until／by the time 帶出的時間子句：子句用現在式或現在完成式，主句才放 will，正式書寫尤其明顯",
+  "source": "改寫自 The Star 引述 VnExpress 報導（2026/11/01）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/01/vietnam039s-largest-airport-long-thanh-to-open-on-dec-24-with-up-to-366-flights-a-week",
+  "intro": "越南面積最大的機場要開始載客了。這一篇的語法焦點是時間子句：when the first phase opens、once every phase has been completed、until the allocation plan is signed、by the time their airline has moved——四個子句講的都是未來，裡面卻一個 will 都沒有。請一邊讀一邊圈出這些連接詞，再看主句把 will 放在哪裡。",
+  "spoken": [
+    {
+      "en": "Commercial flights are expected to begin at midnight on December 24.",
+      "cn": "商業航班預計在12月24日午夜開始。"
+    },
+    {
+      "en": "When the first phase opens, the airport is designed to handle twenty-five million passengers a year.",
+      "cn": "第一期啟用的時候，機場的設計容量是一年兩千五百萬人次。"
+    },
+    {
+      "en": "Nothing can be printed on a ticket until slots have been agreed.",
+      "cn": "時間帶談定之前，機票上什麼都印不了。"
+    },
+    {
+      "en": "The move will happen in stages rather than overnight.",
+      "cn": "搬遷會分階段進行，不是一夜之間完成。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Vietnam's largest airport by area is almost ready to carry passengers. The Airports Corporation of Vietnam has told the authorities in Dong Nai province that commercial flights are expected to begin at midnight on December 24. Long Thanh covers five thousand hectares, about forty kilometers from Ho Chi Minh City, and it has been under construction for years. The runway itself is not new: test flights landed there in December 2025.",
+      "cn": "越南面積最大的機場快要開始載客了。越南機場公司已經向同奈省政府表示，商業航班預計在12月24日午夜開始。隆城機場占地五千公頃，距離胡志明市約四十公里，已經蓋了好幾年。跑道本身不是新的：2025年12月就有試飛的班機降落在那裡。"
+    },
+    {
+      "en": "When the first phase opens, the airport is designed to handle twenty-five million passengers a year, and once every phase has been completed, that figure rises to one hundred million. At launch it will take up to 366 flights a week: 322 of them domestic and 44 international. The plan is deliberately cautious, because an airport this size cannot be filled in a single season.",
+      "cn": "第一期啟用的時候，機場的設計容量是一年兩千五百萬人次；等所有期程都完工之後，這個數字會上升到一億。開場的時候，一週最多承接366班航班，其中322班是國內線、44班是國際線。這個規劃刻意保守，因為這種規模的機場不可能一季就填滿。"
+    },
+    {
+      "en": "Vietnam Airlines is expected to open the Long Thanh to Hanoi route together with several international services, while Vietjet plans domestic flights to tourism and business centers around the country. Many foreign carriers have shown interest as well, but nothing can be printed on a ticket until slots have been agreed.",
+      "cn": "越南航空預計會開隆城到河內的航線，另外還有幾條國際線；越捷航空則打算飛國內線，連結全國的觀光與商業重鎮。不少外籍航空公司也表達了興趣，但時間帶談定之前，機票上什麼都印不了。"
+    },
+    {
+      "en": "The move will happen in stages rather than overnight. Until the allocation plan is signed, both Long Thanh and Tan Son Nhat keep their current timetables, and planners are still matching schedules at the two airports. For travelers in the south, the practical question is not the ceremony but the ground: by the time their airline has moved, how long will the ride to the new terminal take, and who will pay for it?",
+      "cn": "搬遷會分階段進行，不是一夜之間完成。航班分配計畫定案之前，隆城和新山一都維持現行的時刻表，規劃人員還在對兩邊的時間帶。對南部的旅客來說，實際的問題不是典禮，而是地面交通：等自己的航空公司搬過去的時候，到新航廈那段路要花多久，又是誰付錢？"
+    }
+  ],
+  "target": [
+    {
+      "w": "commercial",
+      "ipa": "/kəˈmɝːʃl/",
+      "pos": "adj.",
+      "cn": "商業的；營運的",
+      "def": "Connected with buying and selling, not with tests or training.",
+      "ex": "The bridge opened to commercial traffic last spring.",
+      "exCn": "那座橋去年春天對商用車輛開放。"
+    },
+    {
+      "w": "phase",
+      "ipa": "/feɪz/",
+      "pos": "n.",
+      "cn": "期；階段",
+      "def": "One stage of a long piece of work.",
+      "ex": "The second phase of the housing project starts in June.",
+      "exCn": "那個住宅案的第二期六月動工。"
+    },
+    {
+      "w": "domestic",
+      "ipa": "/dəˈmes.tɪk/",
+      "pos": "adj.",
+      "cn": "國內的",
+      "def": "Inside one country, not between countries.",
+      "ex": "Domestic mail still arrives faster than any courier here.",
+      "exCn": "在這裡國內郵件還是比任何快遞都快。"
+    },
+    {
+      "w": "carrier",
+      "ipa": "/ˈker.i.ɚ/",
+      "pos": "n.",
+      "cn": "航空公司；運輸業者",
+      "def": "A company that moves people or goods for money.",
+      "ex": "Three carriers now compete on that short sea route.",
+      "exCn": "現在有三家業者在那條短程海運航線上競爭。"
+    },
+    {
+      "w": "slot",
+      "ipa": "/slɑːt/",
+      "pos": "n.",
+      "cn": "時間帶；時段",
+      "def": "A fixed time that is kept for one flight or one job.",
+      "ex": "My dentist gave me the last slot on Thursday.",
+      "exCn": "牙醫給了我星期四最後一個時段。"
+    },
+    {
+      "w": "allocation",
+      "ipa": "/ˌæl.əˈkeɪ.ʃən/",
+      "pos": "n.",
+      "cn": "分配",
+      "def": "The way something is divided and given out.",
+      "ex": "The allocation of parking spaces upset half the staff.",
+      "exCn": "停車位的分配讓一半的員工不開心。"
+    },
+    {
+      "w": "terminal",
+      "ipa": "/ˈtɝː.mə.nəl/",
+      "pos": "n.",
+      "cn": "航廈",
+      "def": "The building where passengers wait and board.",
+      "ex": "We ran through the whole terminal with two minutes left.",
+      "exCn": "剩下兩分鐘的時候我們跑過整座航廈。"
+    },
+    {
+      "w": "runway",
+      "ipa": "/ˈrʌn.weɪ/",
+      "pos": "n.",
+      "cn": "跑道",
+      "def": "The long flat strip where planes take off and land.",
+      "ex": "Fog closed the shorter runway for most of the morning.",
+      "exCn": "濃霧讓那條較短的跑道關閉了大半個早上。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "According to the article, when are commercial flights expected to begin?",
+      "qCn": "根據文章，商業航班預計什麼時候開始？",
+      "opts": [
+        "A. At midnight on December 24",
+        "B. On December 19, 2025",
+        "C. In November 2026",
+        "D. Once all phases are finished"
+      ],
+      "optsCn": [
+        "A. 12月24日午夜",
+        "B. 2025年12月19日",
+        "C. 2026年11月",
+        "D. 等所有期程完工之後"
+      ],
+      "ans": 0,
+      "expl": "commercial flights are expected to begin at midnight on December 24——第一段引述越南機場公司給同奈省的說法。2025年12月是試飛降落，不是載客。"
+    },
+    {
+      "q": "How many of the 366 weekly flights are international?",
+      "qCn": "每週366班航班裡有幾班是國際線？",
+      "opts": [
+        "A. 44",
+        "B. 322",
+        "C. 100",
+        "D. 25"
+      ],
+      "optsCn": [
+        "A. 44班",
+        "B. 322班",
+        "C. 100班",
+        "D. 25班"
+      ],
+      "ans": 0,
+      "expl": "322 of them domestic and 44 international——第二段把兩個數字分開寫清楚。322是國內線，100和25是容量的數字，不是班次。"
+    },
+    {
+      "q": "Why can the airlines not print tickets yet?",
+      "qCn": "航空公司為什麼還不能印機票？",
+      "opts": [
+        "A. Because slots have not been agreed",
+        "B. Because the runway is not finished",
+        "C. Because the ceremony has not happened",
+        "D. Because no carrier is interested"
+      ],
+      "optsCn": [
+        "A. 因為時間帶還沒談定",
+        "B. 因為跑道還沒完工",
+        "C. 因為典禮還沒舉行",
+        "D. 因為沒有業者有興趣"
+      ],
+      "ans": 0,
+      "expl": "nothing can be printed on a ticket until slots have been agreed——第三段最後一句。跑道已經可以用了，外籍業者也有興趣，所以其他選項都和原文相反。"
+    },
+    {
+      "q": "Fill in: \"Until the allocation plan ___, both airports keep their current timetables.\"",
+      "qCn": "填空：「航班分配計畫定案之前，兩座機場都維持現行時刻表。」",
+      "opts": [
+        "A. is signed",
+        "B. will be signed",
+        "C. will sign",
+        "D. signs"
+      ],
+      "ans": 0,
+      "expl": "until 帶的是時間子句，裡面不放 will，而且計畫是「被簽」的，所以用現在式的被動 is signed。D 的 signs 會變成計畫自己去簽；B、C 都把 will 塞進子句裡。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "After all the phases will be finished, the airport can take 100 million passengers.",
+      "b2": "Once every phase has been completed, the airport can take one hundred million passengers.",
+      "note": "時間子句不放 will，這是第一層；第二層是：如果你要強調「完工在前、載客在後」，子句用現在完成式 has been completed，先後順序就寫進動詞裡了，讀者不必自己推。",
+      "b1Cn": "等所有期程完工之後，機場可以承載一億人次。",
+      "b2Cn": "所有期程一完工，機場就可以承載一億人次。"
+    },
+    {
+      "b1": "The airlines will move slowly. They will not move on the same day.",
+      "b2": "Rather than moving overnight, the airlines will transfer in stages.",
+      "note": "兩個短句各講一半，讀起來像口語。把否定的那一半改成 rather than 加 V-ing 放句首，一個句子就交代完「不是哪樣、而是哪樣」，這是新聞與報告最常用的壓縮方式。",
+      "b1Cn": "航空公司會慢慢搬。他們不會同一天搬。",
+      "b2Cn": "航空公司不會一夜搬完，而是分階段轉場。"
+    }
+  ]
+},
 /* ---------- 2026-11-11 每日文章（健康與醫療：診所、回診與未來式） ---------- */
 {
   "id": "d20261111a2",
@@ -15491,6 +16266,885 @@ articles:[
 ],
 
 grammar:[
+/* ---------- 2026-11-18 每日文法（will be doing and will have done／when I do and when I have done; if and when） ---------- */
+{
+  "id": "dg20261118a2",
+  "date": "2026-11-18",
+  "unitNo": 24,
+  "level": "A2",
+  "title": "This Time Tomorrow: will be doing",
+  "titleCn": "明天這個時候：will be + V-ing",
+  "srcDays": [],
+  "summary": "先在未來釘一個時刻，再說那一刻你正在做什麼，用 will be 加 V-ing。will go 只告訴對方你會去，will be going 多給了一個畫面：那一刻你正在路上。",
+  "sections": [
+    {
+      "h": "先釘住一個時刻，再放進畫面",
+      "body": "講未來最常用的是 will 加原形動詞，它只回答一件事：這件事會不會發生。但我們常常想講得更細一點——不是「我會洗車」，而是「明天九點那一刻，我正在洗車」。這時候英文會在 will 後面加 be，再把動詞換成 V-ing。中文兩句都說「我要洗車」，所以你必須自己決定要不要那個畫面：句子裡有 at nine、this time tomorrow、next Monday 這種指定時刻的時候，畫面幾乎都該留著。",
+      "table": {
+        "head": [
+          "你想說的",
+          "形狀",
+          "例句"
+        ],
+        "rows": [
+          [
+            "這件事會發生",
+            "will + 原形動詞",
+            "I will wash the car."
+          ],
+          [
+            "那一刻正在做",
+            "will be + V-ing",
+            "At nine I will be washing the car."
+          ],
+          [
+            "那一刻人在哪裡",
+            "will be + V-ing",
+            "Tomorrow night we will be flying home."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "At nine tomorrow I will be washing the car.",
+          "cn": "明天九點我會正在洗車。",
+          "note": "九點那一刻動作還在跑"
+        },
+        {
+          "en": "Do not call me at seven. I will be eating.",
+          "cn": "七點不要打給我，我會正在吃飯。",
+          "note": "最常用的用法：請對方換時間"
+        },
+        {
+          "en": "Next Monday Kevin will be working in Tainan.",
+          "cn": "下個星期一Kevin會在台南工作。",
+          "note": "那一天他人在台南"
+        }
+      ]
+    },
+    {
+      "h": "三塊都不能少：will + be + V-ing",
+      "body": "這個形狀有三塊，台灣學生最常漏掉中間那個 be。原因很簡單：中文沒有對應的字，唸快一點就不見了。請把 will be 當成一整組搬動，後面的動詞一律加 ing，不加 s、不換成過去式。另外 will 不會隨主詞變化，所以不管主詞是 I、she 還是 they，中間永遠是 be，不會變成 is 或 are。",
+      "table": {
+        "head": [
+          "主詞",
+          "will be",
+          "V-ing"
+        ],
+        "rows": [
+          [
+            "I",
+            "will be",
+            "waiting"
+          ],
+          [
+            "She",
+            "will be",
+            "driving"
+          ],
+          [
+            "They",
+            "will be",
+            "sleeping"
+          ]
+        ]
+      },
+      "bullets": [
+        "肯定：主詞 + will be + V-ing",
+        "否定：won't be + V-ing，not 接在 will 後面，不要放到 be 後面",
+        "問句：Will 搬到主詞前面，be 和 V-ing 留在原位",
+        "中間永遠是 be，不會變成 is、am、are"
+      ],
+      "examples": [
+        {
+          "en": "I will be waiting outside the gate.",
+          "cn": "我會在門外等。",
+          "note": "will be 一組，後面 waiting"
+        },
+        {
+          "en": "We won't be using the big room tonight.",
+          "cn": "今天晚上我們不會用大的那間。",
+          "note": "not 縮在 will 後面"
+        },
+        {
+          "en": "Will you be sleeping at ten?",
+          "cn": "你十點會在睡覺嗎？",
+          "note": "Will 提到最前面"
+        }
+      ]
+    },
+    {
+      "h": "什麼時候最用得上",
+      "body": "這個形狀在生活裡其實只有三種常見場合，記住場合比記住規則有用。第一種是請人換時間：那個時間我正在忙。第二種是講行程中的某一段：火車上、飛機上、路上。第三種是禮貌地問對方的安排，Will you be…? 聽起來比 Will you…? 客氣很多，因為它問的是「你那時候的狀態」，不是「你要不要替我做」。",
+      "bullets": [
+        "請對方換時間：那一刻我正在做別的事",
+        "講行程中的一段：在車上、在路上、在開會",
+        "禮貌地問安排：Will you be using the car tonight?"
+      ],
+      "examples": [
+        {
+          "en": "At three I will be sitting in a meeting.",
+          "cn": "三點我會正在開會。",
+          "note": "所以三點不要排事情"
+        },
+        {
+          "en": "This time next week I will be riding a bike by the river.",
+          "cn": "下個星期這個時候，我會正在河邊騎腳踏車。",
+          "note": "把未來的一刻畫成畫面"
+        },
+        {
+          "en": "Will you be using the car tonight?",
+          "cn": "你今天晚上會用車嗎？",
+          "note": "問安排，比直接問要不要借客氣"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I will sitting on the bus at eight.",
+      "good": "I will be sitting on the bus at eight.",
+      "why": "中間漏了 be。will 後面一定要先有一個動詞的原形，be 就是那個原形；sitting 只是後面那一塊。請把 will be 當成一整組背下來，寫的時候一次寫完兩個字，就不會掉。"
+    },
+    {
+      "bad": "At eight tomorrow I am sitting on the bus.",
+      "good": "At eight tomorrow I will be sitting on the bus.",
+      "why": "現在進行式講的是「現在正在做」，或是已經約好時間的行程。句子裡有 at eight tomorrow 這種未來時刻，而且你想講那一刻的畫面，就要用 will be 加 V-ing，前面那個 will 不能省。"
+    },
+    {
+      "bad": "I will be go to the market at ten.",
+      "good": "I will be going to the market at ten.",
+      "why": "be 後面不能接原形動詞。be 的後面只有兩種可能：V-ing（正在做）或過去分詞（被動）。要講那一刻正在前往，就要寫 going。"
+    },
+    {
+      "bad": "She will be is busy tomorrow.",
+      "good": "She will be busy tomorrow.",
+      "why": "一個句子只能有一個 be 動詞。will be 已經包含 be 了，後面直接接形容詞就好。這一句裡 busy 是形容詞，不是動作，所以根本不需要 V-ing。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Don't phone me at six. I ___ dinner then.",
+      "qCn": "六點不要打電話給我，那時候我正在吃晚餐。",
+      "opts": [
+        "A. will be cooking",
+        "B. will cooking",
+        "C. am cooking",
+        "D. will cooked"
+      ],
+      "ans": 0,
+      "expl": "句子釘住了六點這個未來時刻，而且你要講那一刻正在進行，所以用 will be 加 V-ing。B 少了 be；C 是現在進行式，講的是現在；D 把 will 和過去式放在一起，英文沒有這種形狀。"
+    },
+    {
+      "q": "___ you be using the printer this afternoon?",
+      "qCn": "你今天下午會用印表機嗎？",
+      "opts": [
+        "A. Will",
+        "B. Do",
+        "C. Are",
+        "D. Shall"
+      ],
+      "ans": 0,
+      "expl": "問句要把 will 提到主詞前面，後面的 be using 不動。Do 和 Are 都接不上 be using；Shall 現在只用在 Shall I、Shall we 的提議句。"
+    },
+    {
+      "q": "At ten tonight the children ___ in their room.",
+      "qCn": "今天晚上十點，孩子們會在房間裡睡覺。",
+      "opts": [
+        "A. will be sleeping",
+        "B. will be sleep",
+        "C. are sleep",
+        "D. will sleeping"
+      ],
+      "ans": 0,
+      "expl": "be 後面只能接 V-ing，所以是 sleeping。B 在 be 後面放原形動詞；C 形狀不完整；D 漏掉了 be。"
+    },
+    {
+      "q": "Which sentence gives you a picture of one moment in the future?",
+      "qCn": "哪一句畫出了未來某一刻的畫面？",
+      "opts": [
+        "A. At noon I will be standing in line.",
+        "B. I will stand in line.",
+        "C. I stand in line.",
+        "D. I stood in line."
+      ],
+      "optsCn": [
+        "A. 中午我會正在排隊。",
+        "B. 我會去排隊。",
+        "C. 我排隊。",
+        "D. 我排了隊。"
+      ],
+      "ans": 0,
+      "expl": "只有 A 同時有未來的時刻（at noon）和進行的形狀（will be standing），所以畫得出畫面。B 只說會去排；C 講習慣；D 是過去的事。"
+    }
+  ]
+},
+{
+  "id": "dg20261118b1",
+  "date": "2026-11-18",
+  "unitNo": 24,
+  "level": "B1",
+  "title": "In Progress or Already Done?",
+  "titleCn": "那一刻正在做，還是已經做完",
+  "srcDays": [],
+  "summary": "同一個未來時間點，英文有兩種鏡頭：will be doing 把鏡頭停在那一刻，動作還在跑；will have done 把鏡頭往前推一點，那一刻動作已經結束。決定用哪一個，先問「動作有沒有跨過那條線」。",
+  "sections": [
+    {
+      "h": "先畫一條線，再看動作有沒有跨過去",
+      "body": "這兩個形狀都需要一個未來的時間點，差別只在動作跟那個時間點的關係。把那一刻想成一條垂直的線：動作橫跨過去、那一刻還在進行，就是 will be doing；動作在線之前就收尾，就是 will have done。英文裡還有一個很好用的信號字：at 配進行（at six、at that moment），by 配完成（by six、by then）。看到 by，幾乎可以直接伸手去拿 will have done。",
+      "table": {
+        "head": [
+          "那一刻的狀態",
+          "形狀",
+          "信號字",
+          "例句"
+        ],
+        "rows": [
+          [
+            "還在進行",
+            "will be + V-ing",
+            "at、this time",
+            "At six she will be driving home."
+          ],
+          [
+            "已經結束",
+            "will have + 過去分詞",
+            "by、by the time",
+            "By six she will have left the office."
+          ],
+          [
+            "單純會發生",
+            "will + 原形動詞",
+            "tomorrow、next week",
+            "She will drive home tomorrow."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "At four Mai will be training the new operators.",
+          "cn": "四點Mai會正在訓練新進作業員。",
+          "note": "四點那一刻課還在上"
+        },
+        {
+          "en": "By four Mai will have signed all three forms.",
+          "cn": "到四點Mai會把三張表都簽好。",
+          "note": "四點之前就結束了"
+        },
+        {
+          "en": "By the time the bus arrives, I will have bought the tickets.",
+          "cn": "公車到的時候，我已經把票買好了。",
+          "note": "by the time 後面用現在式"
+        }
+      ]
+    },
+    {
+      "h": "兩個形狀的零件",
+      "body": "will be doing 是三塊：will、be、V-ing。will have done 也是三塊：will、have、過去分詞。兩個的第一塊都是 will，所以主詞再怎麼變都不用動；真正要小心的是第三塊。寫 will have 的時候，很多人會順手寫成過去式（will have went），但那個位置只收過去分詞（gone、left、sent、written）。不規則動詞的第三欄一定要背，這個形狀才寫得順。",
+      "table": {
+        "head": [
+          "形狀",
+          "第二塊",
+          "第三塊",
+          "完整例句"
+        ],
+        "rows": [
+          [
+            "進行",
+            "be",
+            "V-ing",
+            "They will be loading the truck."
+          ],
+          [
+            "完成",
+            "have",
+            "過去分詞",
+            "They will have loaded the truck."
+          ],
+          [
+            "完成（被動）",
+            "have been",
+            "過去分詞",
+            "The truck will have been loaded."
+          ]
+        ]
+      },
+      "bullets": [
+        "否定：won't be doing／won't have done，not 都接在 will 後面",
+        "問句：Will 提到主詞前面，後面兩塊不動",
+        "will have 後面只收過去分詞，不收過去式",
+        "主詞不影響 will，所以 he、they 都一樣寫 will be、will have"
+      ],
+      "examples": [
+        {
+          "en": "We won't be answering calls after seven.",
+          "cn": "七點以後我們不接電話。",
+          "note": "那段時間都不在線上"
+        },
+        {
+          "en": "Will you have packed everything by Sunday?",
+          "cn": "你星期天之前會把東西都打包好嗎？",
+          "note": "問的是完成，不是進行"
+        },
+        {
+          "en": "The samples will have been sent before lunch.",
+          "cn": "樣品在午餐前就會寄出去。",
+          "note": "完成式的被動，誰寄的不重要"
+        }
+      ]
+    },
+    {
+      "h": "兩個形狀常常同時出現",
+      "body": "真正的句子裡，這兩個鏡頭很常並排放，因為人講行程的時候同時關心「那時我在哪」和「那時什麼已經結束」。寫的時候先排時間點，再一個一個決定鏡頭，句子就不會打結。也要注意：這兩個形狀都不該出現在 when、by the time 這種時間子句裡面——子句裡用現在式或現在完成式就好，will 留給主句。",
+      "bullets": [
+        "主句放 will be doing／will have done，時間子句用現在式",
+        "同一段話可以兩種都用，只要時間點排清楚",
+        "by the time 後面接現在式，不要再寫一次 will"
+      ],
+      "examples": [
+        {
+          "en": "By the time you land, I will have booked the hotel.",
+          "cn": "你落地的時候，我已經把飯店訂好了。",
+          "note": "子句 land 用現在式"
+        },
+        {
+          "en": "When you get here, we will still be checking the boxes.",
+          "cn": "你到的時候，我們還在清點箱子。",
+          "note": "主句用進行，子句用現在式"
+        },
+        {
+          "en": "By Friday I will have written the report, so on Saturday I will be resting.",
+          "cn": "星期五之前我會把報告寫完，所以星期六我會在休息。",
+          "note": "先完成、再進行，兩個鏡頭接起來"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "By six I will be finishing the report.",
+      "good": "By six I will have finished the report.",
+      "why": "by 指的是「到那個時間之前」，重點在完成，所以要用 will have done。will be finishing 把鏡頭停在六點那一刻，意思變成六點時你還在收尾，跟 by 想講的截止感相反。"
+    },
+    {
+      "bad": "At eight tomorrow I will have driven to the factory.",
+      "good": "At eight tomorrow I will be driving to the factory.",
+      "why": "如果你想說的是八點那一刻人在車上，要用進行的形狀。will have driven 表示八點之前就開完了，那時候你已經坐在工廠裡，兩句的畫面完全不同。先問自己：八點時動作結束了嗎？"
+    },
+    {
+      "bad": "I will have went to the warehouse by then.",
+      "good": "I will have gone to the warehouse by then.",
+      "why": "will have 後面只能放過去分詞。went 是過去式，gone 才是過去分詞。這類不規則動詞請把三欄一起背：go、went、gone，寫完成式的時候伸手拿第三欄。"
+    },
+    {
+      "bad": "By the time the bus will arrive, I will have bought the tickets.",
+      "good": "By the time the bus arrives, I will have bought the tickets.",
+      "why": "by the time 帶出的是時間子句，子句裡不放 will，一律用現在式。中文說「等公車到的時候」會讓人想加未來，但英文的未來只在主句出現一次就夠了。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "By the end of this month we ___ the new line twice.",
+      "qCn": "到這個月底，我們會把新產線測試過兩次。",
+      "opts": [
+        "A. will have tested",
+        "B. will be testing",
+        "C. will test",
+        "D. will have test"
+      ],
+      "ans": 0,
+      "expl": "by the end of 指截止，重點在完成，所以用 will have 加過去分詞。B 把鏡頭停在月底那一刻；C 沒有交代完成；D 第三塊放了原形動詞。"
+    },
+    {
+      "q": "Don't come at eleven. We ___ the floor then.",
+      "qCn": "十一點不要來，那時候我們正在洗地板。",
+      "opts": [
+        "A. will be washing",
+        "B. will have washed",
+        "C. wash",
+        "D. will washing"
+      ],
+      "ans": 0,
+      "expl": "你要講的是十一點那一刻正在進行，所以用 will be 加 V-ing。B 表示十一點前就洗完了，那就可以來；C 講習慣；D 漏掉 be。"
+    },
+    {
+      "q": "When the inspector ___ , we will already be waiting in the lobby.",
+      "qCn": "稽核員到的時候，我們已經在大廳等了。",
+      "opts": [
+        "A. arrives",
+        "B. will arrive",
+        "C. will have arrived",
+        "D. arrived"
+      ],
+      "ans": 0,
+      "expl": "when 帶的是時間子句，裡面一律用現在式，所以選 arrives。B、C 把 will 塞進子句；D 是過去式，跟主句的未來對不上。"
+    },
+    {
+      "q": "Which sentence means the job is over before five?",
+      "qCn": "哪一句的意思是工作在五點之前就結束了？",
+      "opts": [
+        "A. By five I will have handed in the samples.",
+        "B. At five I will be handing in the samples.",
+        "C. At five I will hand in the samples.",
+        "D. I will be at the counter at five."
+      ],
+      "optsCn": [
+        "A. 五點之前我會把樣品交出去。",
+        "B. 五點我正在交樣品。",
+        "C. 五點我會去交樣品。",
+        "D. 五點我會在櫃台。"
+      ],
+      "ans": 0,
+      "expl": "只有 A 用 by 加 will have done，明確表示五點之前完成。B 的動作在五點還在進行；C 是五點才開始；D 只講位置。"
+    }
+  ]
+},
+{
+  "id": "dg20261118b1p",
+  "date": "2026-11-18",
+  "unitNo": 25,
+  "level": "B1+",
+  "title": "will Does Not Go Inside when",
+  "titleCn": "will 不進 when：時間子句用現在式",
+  "srcDays": [],
+  "summary": "when、until、as soon as、once、by the time 帶出的子句講的就算是未來，裡面也一律用現在式；想強調「做完才接下去」就改用現在完成式。未來的 will 只在主句出現一次。",
+  "sections": [
+    {
+      "h": "一個句子裡的未來只標一次",
+      "body": "中文會在兩邊都標未來：「等飛機到了，我就會打電話給你」——「到了」和「會打」都指向未來。英文覺得這樣重複，所以把規則定得很乾脆：時間子句負責交代時間，用現在式；主句負責交代未來，放 will。這條規則適用於 when、after、before、until、till、as soon as、once、the moment、by the time 這一整家族。只要句首是這些字，心裡就先把 will 鎖起來。",
+      "table": {
+        "head": [
+          "時間子句（用現在式）",
+          "主句（放 will）",
+          "中文"
+        ],
+        "rows": [
+          [
+            "When the app finds a car,",
+            "it will show the driver's name.",
+            "App 找到車之後，會顯示駕駛的名字。"
+          ],
+          [
+            "Until the fee is approved,",
+            "the platform will charge nothing.",
+            "費率核准之前，平台不會收費。"
+          ],
+          [
+            "As soon as the rule takes effect,",
+            "drivers will be free to switch.",
+            "規定一生效，司機就可以換車隊。"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I will text you when the shuttle leaves the plant.",
+          "cn": "接駁車離開廠區的時候我會傳訊息給你。",
+          "note": "子句 leaves 用現在式"
+        },
+        {
+          "en": "We will wait here until the gate opens.",
+          "cn": "我們會在這裡等到閘門開。",
+          "note": "until 後面不放 will"
+        },
+        {
+          "en": "The moment he signs the form, the ride is confirmed.",
+          "cn": "他一簽表格，訂單就成立。",
+          "note": "the moment 也算時間子句"
+        }
+      ]
+    },
+    {
+      "h": "when I've done：把先後順序寫進動詞",
+      "body": "如果兩個動作幾乎同時，子句用現在式就夠了。但如果你想強調「前面那件事要先做完，後面才接得下去」，子句就換成現在完成式：when I've checked、after the plan has been signed。這個差別在工作英文裡很實用，因為它把「順序」寫進句子，對方不用猜。注意現在完成式在這裡仍然不帶 will，它只是用來表示「在那之前已經結束」。",
+      "table": {
+        "head": [
+          "子句形狀",
+          "強調的事",
+          "例句"
+        ],
+        "rows": [
+          [
+            "when + 現在式",
+            "兩件事幾乎同時",
+            "When the car arrives, I will get in."
+          ],
+          [
+            "when + 現在完成式",
+            "前一件先做完",
+            "When the car has arrived, I will pay the driver."
+          ],
+          [
+            "by the time + 現在完成式",
+            "到那時早就結束",
+            "By the time we have landed, the shuttle will be gone."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "When I have read the terms, I will decide.",
+          "cn": "我把條款看完之後再決定。",
+          "note": "先看完，才決定"
+        },
+        {
+          "en": "After the audit has been closed, we will release the shipment.",
+          "cn": "稽核結案之後我們才放貨。",
+          "note": "被動也一樣不放 will"
+        },
+        {
+          "en": "Once the data has been checked, the report goes out.",
+          "cn": "資料核對完，報告就發出去。",
+          "note": "主句也可以用現在式表示固定流程"
+        }
+      ]
+    },
+    {
+      "h": "if 和 when 不能亂換",
+      "body": "兩個都接現在式，所以形狀上很容易混，但意思差很多。when 表示你認為這件事一定會發生，只是不知道什麼時候；if 表示你不確定它會不會發生。「等我拿到許可」是 when I get the licence，「萬一我拿不到」是 if I don't get it。對讀者來說，你用哪一個就是在表態；在公文或信件裡選錯，語氣會直接走偏。",
+      "bullets": [
+        "when：一定會發生，只是時間未定",
+        "if：不確定會不會發生",
+        "兩者後面都用現在式，不要因為是未來就加 will",
+        "when 不能用在純假設，if 不能用在已確定的時程"
+      ],
+      "examples": [
+        {
+          "en": "When the new terminal opens, the fare will go up.",
+          "cn": "新航廈啟用之後，車資會漲。",
+          "note": "啟用是確定的事"
+        },
+        {
+          "en": "If the system goes down, passengers will be told at once.",
+          "cn": "萬一系統掛掉，會立刻通知乘客。",
+          "note": "不確定會不會發生"
+        },
+        {
+          "en": "If the fee is not approved, the platform will keep the old price.",
+          "cn": "費率如果沒核准，平台就維持原價。",
+          "note": "條件，不是時程"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "When the rule will take effect, drivers can join two fleets.",
+      "good": "When the rule takes effect, drivers can join two fleets.",
+      "why": "時間子句裡不放 will。中文的「等規定開始的時候」讓人想標未來，但英文已經靠 when 和主句交代了未來，子句再放一次就重複。請把這條記成一句口訣：will 不進 when。"
+    },
+    {
+      "bad": "I will call you when I will arrive at the airport.",
+      "good": "I will call you when I arrive at the airport.",
+      "why": "同一個句子裡的未來只標一次，而且標在主句。這一句的 will 已經放在 will call，所以 when 後面回到現在式 arrive。順序寫錯不會造成誤解，但一聽就知道是中文語序直譯。"
+    },
+    {
+      "bad": "After I will have paid, the app sends a receipt.",
+      "good": "After I have paid, the app sends a receipt.",
+      "why": "要強調「付完才寄收據」，子句用現在完成式 have paid 就夠了，不要在前面加 will。現在完成式在時間子句裡本來就代表「在那之前已經完成」，加了 will 反而把形狀弄壞。"
+    },
+    {
+      "bad": "When it rains tomorrow, we will cancel the trip.",
+      "good": "If it rains tomorrow, we will cancel the trip.",
+      "why": "下不下雨你並不確定，所以要用 if。用 when 等於告訴對方「明天一定會下雨」，那這趟行程根本不必討論。確定會發生的才用 when，不確定的用 if。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "The platform will refund the fare as soon as the complaint ___ .",
+      "qCn": "申訴一經受理，平台就會退還車資。",
+      "opts": [
+        "A. is accepted",
+        "B. will be accepted",
+        "C. will accept",
+        "D. accepting"
+      ],
+      "ans": 0,
+      "expl": "as soon as 帶出時間子句，裡面用現在式，而且申訴是「被受理」的，所以用被動的 is accepted。B、C 把 will 塞進子句；D 形狀不完整。"
+    },
+    {
+      "q": "___ I have compared the two quotes, I will send you my choice.",
+      "qCn": "我把兩份報價比完之後，會把我的選擇寄給你。",
+      "opts": [
+        "A. When",
+        "B. When will",
+        "C. Will when",
+        "D. When I will"
+      ],
+      "ans": 0,
+      "expl": "子句用現在完成式 have compared 表示先比完，前面只要 when。其他三個選項都在子句裡塞了 will，違反時間子句的規則。"
+    },
+    {
+      "q": "___ the driver cancels without a reason, the operator has to answer for it.",
+      "qCn": "如果駕駛沒有理由就取消，業者要負責處理。",
+      "opts": [
+        "A. If",
+        "B. When",
+        "C. Until",
+        "D. By the time"
+      ],
+      "ans": 0,
+      "expl": "駕駛會不會無故取消並不確定，所以用 If。When 表示一定會發生；Until 和 By the time 講的是時間先後，接不上這個意思。"
+    },
+    {
+      "q": "We will not know the new fare until the ministry ___ the plan.",
+      "qCn": "要等交通部核准那個方案，我們才會知道新的車資。",
+      "opts": [
+        "A. approves",
+        "B. will approve",
+        "C. approved",
+        "D. is approve"
+      ],
+      "ans": 0,
+      "expl": "until 後面是時間子句，用現在式 approves。B 在子句裡放 will；C 的過去式跟主句的未來對不上；D 的形狀不存在。"
+    }
+  ]
+},
+{
+  "id": "dg20261118b2",
+  "date": "2026-11-18",
+  "unitNo": 25,
+  "level": "B2",
+  "title": "if, when, once: Choosing the Frame",
+  "titleCn": "if、when、once：你挑的是確定度，不是連接詞",
+  "srcDays": [],
+  "summary": "時間與條件子句不放 will，這只是入場券。真正決定句子語氣的是你挑哪一個連接詞：when 宣告確定、if 保留不確定、once 強調門檻、until 強調期限，而正式書寫還有 in the event that、should 這些更冷的選項。",
+  "sections": [
+    {
+      "h": "同一個事實，四種語氣",
+      "body": "到了 B2，問題不再是「要不要放 will」，而是「我想讓讀者感覺多確定」。四個常見的連接詞其實是四種姿態：when 把事情當成既定時程；once 把它當成一道門檻，過了才算；until 把焦點放在期限之前的狀態；if 則公開承認自己不確定。同一組事實換個連接詞，責任歸屬就跟著變，這在公告、合約、報告裡都是有意義的選擇，不是風格問題。",
+      "table": {
+        "head": [
+          "連接詞",
+          "讀者收到的訊息",
+          "例句"
+        ],
+        "rows": [
+          [
+            "when",
+            "一定會發生，只是時間未定",
+            "When the allocation is confirmed, carriers will publish schedules."
+          ],
+          [
+            "once",
+            "過了這道門檻才算",
+            "Once the allocation is confirmed, carriers may sell seats."
+          ],
+          [
+            "until",
+            "期限之前維持原狀",
+            "Until the allocation is confirmed, both airports keep their slots."
+          ],
+          [
+            "if",
+            "我不保證它會發生",
+            "If the allocation is delayed, the transfer will slip to spring."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "When the plan is published, we will brief the whole team.",
+          "cn": "計畫公布之後，我們會向整個團隊說明。",
+          "note": "公布被視為既定事項"
+        },
+        {
+          "en": "Once the licence has been issued, the service may operate.",
+          "cn": "許可一核發，服務就可以營運。",
+          "note": "once 加完成式，門檻感最強"
+        },
+        {
+          "en": "If the licence is refused, the company will appeal.",
+          "cn": "許可若被駁回，公司會提出申訴。",
+          "note": "if 保留了不確定"
+        }
+      ]
+    },
+    {
+      "h": "子句要不要用完成式",
+      "body": "現在式和現在完成式在時間子句裡都合法，差別是你有沒有要強調「前一件事必須收尾」。When the audit closes 只交代時間，When the audit has closed 多了一層「結案是前提」。寫流程、條件、驗收標準的時候，完成式特別好用，因為它把因果順序鎖進動詞，讀者不會把兩件事看成同時發生。反過來說，如果兩件事本來就幾乎同時，硬加完成式會讓句子變重。",
+      "table": {
+        "head": [
+          "子句",
+          "語氣",
+          "適合寫在哪"
+        ],
+        "rows": [
+          [
+            "when the audit closes",
+            "單純交代時間",
+            "進度說明、行程表"
+          ],
+          [
+            "when the audit has closed",
+            "結案是前提",
+            "流程規定、驗收條件"
+          ],
+          [
+            "by the time the audit has closed",
+            "到那時早已完成",
+            "回顧、預估、風險說明"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "When the inspection has been signed off, production resumes.",
+          "cn": "檢驗簽核完成後，生產恢復。",
+          "note": "簽核是恢復生產的前提"
+        },
+        {
+          "en": "By the time the notice reaches the drivers, most of them will already know.",
+          "cn": "等通知傳到駕駛手上，多數人早就知道了。",
+          "note": "主句才放 will"
+        },
+        {
+          "en": "Until the figures have been checked, no number leaves this room.",
+          "cn": "數字核對完之前，任何一個數字都不會離開這個房間。",
+          "note": "完成式把門檻說得很硬"
+        }
+      ]
+    },
+    {
+      "h": "正式書寫的冷處理",
+      "body": "公告和合約常常刻意讓句子聽起來不帶人味，手法有三種。第一種是把 if 換成 in the event that 或 should：Should the system fail… 把條件寫得更正式，也不必寫出主詞。第二種是用 provided that、unless 把條件變成門檻。第三種是把子句改成被動或名詞化：on completion of the transfer，連動作者都不見了。這些句型本身沒有比較高級，但它們適合的場合很窄——在口語或一般信件裡用，會顯得僵硬。",
+      "bullets": [
+        "Should + 主詞 + 原形動詞：最正式的條件寫法，不用 if",
+        "in the event that：公告與合約常見，語氣比 if 冷",
+        "provided that／unless：把條件寫成門檻，責任界線清楚",
+        "on + 名詞（on completion、on arrival）：連動作者都省掉"
+      ],
+      "examples": [
+        {
+          "en": "Should the transfer be postponed, passengers will be notified in writing.",
+          "cn": "轉場若延後，將以書面通知旅客。",
+          "note": "Should 開頭，不用 if"
+        },
+        {
+          "en": "In the event that a flight is moved, the ticket remains valid.",
+          "cn": "航班如有變更，機票仍然有效。",
+          "note": "公告語氣"
+        },
+        {
+          "en": "On completion of the first phase, the terminal will take domestic flights only.",
+          "cn": "第一期完工後，航廈僅承接國內線。",
+          "note": "名詞化，動作者消失"
+        }
+      ]
+    },
+    {
+      "h": "寫作時的順序選擇",
+      "body": "子句放前面還是後面，也是在調語氣。放前面（When the plan is signed, we will…）等於先把條件端出來，讀者帶著條件讀主句，適合公告與流程。放後面（We will move the flights when the plan is signed.）重心落在你要做的事，條件變成補充，適合提案與回信。同一句話調一下位置，就能決定你是在設限還是在承諾——這一層比文法本身更接近寫作。",
+      "bullets": [
+        "子句在前：先設條件，讀者讀主句時已經知道前提",
+        "子句在後：先給承諾，條件當補充",
+        "子句在前時要加逗號，在後時通常不加",
+        "一個句子裡不要塞兩個以上的時間條件子句"
+      ],
+      "examples": [
+        {
+          "en": "When the slots are agreed, we will confirm the schedule.",
+          "cn": "時間帶談定之後，我們會確認班表。",
+          "note": "條件在前，像公告"
+        },
+        {
+          "en": "We will confirm the schedule when the slots are agreed.",
+          "cn": "時間帶談定之後我們會確認班表。",
+          "note": "承諾在前，像回信"
+        },
+        {
+          "en": "Unless the slots are agreed this month, the launch moves to spring.",
+          "cn": "除非這個月談定時間帶，否則啟用會延到春天。",
+          "note": "unless 把條件寫成門檻"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "When the allocation will be signed, the airlines will move.",
+      "good": "When the allocation is signed, the airlines will move.",
+      "why": "時間子句不放 will，這是形狀問題；但更值得注意的是語氣：這一句用 when，等於宣告分配一定會簽成。如果你其實沒有把握，應該換成 if，否則讀者會把你的推測當成時程表。"
+    },
+    {
+      "bad": "If the first phase opens in December, the second phase follows in 2028.",
+      "good": "When the first phase opens in December, the second phase follows in 2028.",
+      "why": "第一期的啟用日期已經公告，用 if 會讓讀者以為還沒定案，也順帶讓後半句失去依據。確定的時程用 when；把 if 留給你真的不確定的事，這樣你的 if 才有重量。"
+    },
+    {
+      "bad": "Once the figures will have been checked, we will release them.",
+      "good": "Once the figures have been checked, we will release them.",
+      "why": "once 帶的子句同樣不放 will，要表達「核對完才放」用現在完成式就夠。will have been checked 是主句用的形狀，搬進子句之後整句會出現兩個未來標記，讀起來像翻譯稿。"
+    },
+    {
+      "bad": "In the event that it rains, I guess we will just stay in.",
+      "good": "If it rains, we will just stay in.",
+      "why": "形狀沒錯，但語域撞車：in the event that 是公告與合約的用語，後面接 I guess、just stay in 這種口語，句子會自己打自己。正式句型要整句一起正式，否則不如直接用 if。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "___ the allocation plan is signed, both airports keep their current timetables.",
+      "qCn": "航班分配計畫定案之前，兩座機場都維持現行時刻表。",
+      "opts": [
+        "A. Until",
+        "B. Once",
+        "C. If",
+        "D. By the time"
+      ],
+      "ans": 0,
+      "expl": "主句講的是「維持原狀」，所以需要一個標示期限之前的連接詞，Until 最準。Once 和 By the time 把焦點放在門檻之後；If 會把已排定的簽署變成不確定的假設。"
+    },
+    {
+      "q": "Choose the most formal version.",
+      "qCn": "選出最正式的寫法。",
+      "opts": [
+        "A. Should the launch be delayed, tickets will remain valid.",
+        "B. If the launch is delayed, tickets will stay good.",
+        "C. When the launch gets delayed, tickets are still OK.",
+        "D. The launch gets delayed, so tickets are fine."
+      ],
+      "optsCn": [
+        "A. 啟用若延後，機票仍然有效。",
+        "B. 如果啟用延後，票還是可以用。",
+        "C. 啟用延後的時候，機票還是沒問題。",
+        "D. 啟用延後了，所以機票沒問題。"
+      ],
+      "ans": 0,
+      "expl": "A 用 Should 開頭的倒裝條件句，是公告與合約的標準寫法，後半句也維持正式用語。B 的 stay good、C 的 OK 都偏口語；D 連條件都消失了，變成已經延後。"
+    },
+    {
+      "q": "By the time the notice ___ every driver, the new fee will already be in force.",
+      "qCn": "等通知傳到每一位駕駛手上，新的費率早就上路了。",
+      "opts": [
+        "A. reaches",
+        "B. will reach",
+        "C. reached",
+        "D. will have reached"
+      ],
+      "ans": 0,
+      "expl": "by the time 帶出時間子句，用現在式 reaches；未來的意思由主句的 will already be 承擔。B、D 在子句裡放了 will；C 的過去式跟主句對不上。"
+    },
+    {
+      "q": "Which sentence puts the promise first and the condition second?",
+      "qCn": "哪一句把承諾放前面、條件放後面？",
+      "opts": [
+        "A. We will publish the schedule once the slots are agreed.",
+        "B. Once the slots are agreed, we will publish the schedule.",
+        "C. Unless the slots are agreed, nothing is published.",
+        "D. The slots are agreed, and the schedule is published."
+      ],
+      "optsCn": [
+        "A. 時間帶談定之後我們會公布班表。",
+        "B. 時間帶一談定，我們就會公布班表。",
+        "C. 除非時間帶談定，否則什麼都不公布。",
+        "D. 時間帶談定了，班表也公布了。"
+      ],
+      "ans": 0,
+      "expl": "A 把主句放在前面，條件子句跟在後面當補充，重心落在「我們會公布」。B 的條件在前，語氣像公告；C 用 unless 設限；D 兩件事都已完成，沒有條件關係。"
+    }
+  ]
+},
 /* ---------- 2026-11-11 每日文法（I will and I am going to／will be doing and will have done） ---------- */
 {
   "id": "dg20261111a2",

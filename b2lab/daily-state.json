@@ -1,7 +1,7 @@
 {
   "_note": "內容排程狀態檔（每週三跑一次；2026-10-10 之前是每週二、五各一次）。每次執行讓兩位學習者各拿到一整份：四個程度（A2/B1/B1+/B2）的文章、文法、聽力。usedUnits = Anita 那條線（B1+/B2）已教過的文法單元編號；usedUnitsTom = Tom 那條線（A2/B1）已教過的文法單元編號（各自從 syllabus.json 依序走、互不影響）；usedSources = 已改寫過的新聞網址；usedVoa = 已加入聽力庫的 VOA／YouTube 素材代號（2026-08-19 起聽力改為本站原創 TTS 對話，未使用外部影片，故此欄位本次未異動）；lastRun = 最後一次成功產生的日期。",
-  "lastRun": "2026-11-11",
-  "nextKind": "news",
+  "lastRun": "2026-11-18",
+  "nextKind": "original",
   "usedVoa": [
     "L1-1",
     "L1-7",
@@ -34,7 +34,8 @@
     21,
     22,
     23,
-    24
+    24,
+    25
   ],
   "usedUnitsTom": [
     1,
@@ -59,7 +60,8 @@
     20,
     21,
     22,
-    23
+    23,
+    24
   ],
   "usedSources": [
     "https://www.taipeitimes.com/News/front/archives/2026/08/08/2003862135",
@@ -84,7 +86,9 @@
     "https://focustaiwan.tw/politics/202610020021",
     "https://focustaiwan.tw/society/202610230010",
     "https://focustaiwan.tw/society/202610240017",
-    "https://en.sggp.org.vn/ho-chi-minh-city-brings-quality-healthcare-closer-to-residents-post130612.html"
+    "https://en.sggp.org.vn/ho-chi-minh-city-brings-quality-healthcare-closer-to-residents-post130612.html",
+    "https://focustaiwan.tw/society/202611170022",
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/01/vietnam039s-largest-airport-long-thanh-to-open-on-dec-24-with-up-to-366-flights-a-week"
   ],
   "usedTitles": [
     "A Sea Warning, but No Landfall",
@@ -177,16 +181,20 @@
     "Tom's Appointment at Nine",
     "The Clinic Two Streets Away",
     "Seventy-Nine Doctors on Rotation",
-    "Eight Sessions Before the Audit"
+    "Eight Sessions Before the Audit",
+    "Tom's Six O'Clock Bus",
+    "What Anita Will Have Finished by Friday",
+    "New Rules for the Car in Your App",
+    "The Airport That Opens at Midnight"
   ],
   "topicRotation": [
-    "旅遊與交通",
     "職場與面試",
     "金錢與居住",
     "食物與生活",
     "學習與心理",
     "天災與天氣",
-    "健康與醫療"
+    "健康與醫療",
+    "旅遊與交通"
   ],
   "dualLevel": {
     "tom": "A2",
@@ -205,6 +213,7 @@
     "家人與朋友"
   ],
   "usedA2Topics": [
-    "健康"
+    "健康",
+    "交通"
   ]
 }

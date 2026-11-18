@@ -32,6 +32,691 @@
    ⚠ 文字欄位一律寫純文字，不要寫 HTML 標籤（渲染時會被轉義顯示出來）。
    ============================================================ */
 window.GVPLUS = {
+/* ---------- 2026-11-18 每日文法（未來進行式／未來完成式／時間與條件子句） ---------- */
+"dg20261118a2": {
+  "vis": true,
+  "oneLine": "will 只說「這件事會發生」；中間插一個 be、動詞加上 ing，句子就多了一個畫面——未來那一刻，你正在做。",
+  "map": {
+    "when": "句子裡有 at eight、this time tomorrow、next Monday 這種指定時刻，而你想講那一刻的畫面",
+    "why": "中文的「我要洗車」沒有畫面與否的分別，英文靠 be 加 V-ing 把「正在進行」畫出來",
+    "form": "會發生 主詞 + will + 原形動詞　|　那一刻正在做 主詞 + will be + V-ing"
+  },
+  "visual": {
+    "type": "chain",
+    "cap": "這條鏈子把未來進行式拆成四塊：will 負責未來，be 負責「正在」，V-ing 是動作本身，最後掛上一個指定時刻，畫面才站得住。少了最後那一塊，進行式會讓人問「什麼時候正在做」。下面三個變形分別把動詞換掉、把句子變成否定、把它改成問安排的問句。語法重點：will be 是一整組，後面一律加 ing。",
+    "links": [
+      {
+        "t": "I",
+        "c": "主詞",
+        "role": "subj"
+      },
+      {
+        "t": "will",
+        "c": "未來",
+        "role": "glue"
+      },
+      {
+        "t": "be",
+        "c": "正在",
+        "role": "mute"
+      },
+      {
+        "t": "waiting",
+        "c": "動作加 ing",
+        "role": "verb"
+      },
+      {
+        "t": "at eight",
+        "c": "指定時刻",
+        "role": "obj"
+      }
+    ],
+    "eg": {
+      "en": "I will be waiting by the ticket machine at eight.",
+      "cn": "八點我會在售票機旁邊等。"
+    },
+    "variants": [
+      {
+        "k": "換一個動作",
+        "en": "At eight I will be putting my bag on the rack.",
+        "cn": "八點我會正在把包包放到架子上。（動作換了，形狀不變）"
+      },
+      {
+        "k": "否定：那時候不做",
+        "en": "I won't be checking my phone during the ride.",
+        "cn": "坐車的時候我不會一直看手機。（not 縮在 will 後面）"
+      },
+      {
+        "k": "問對方的安排",
+        "en": "Will you be coming to the station too?",
+        "cn": "你也會來車站嗎？（比直接問要不要來客氣）"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "clock",
+      "icon": "clock",
+      "title": "Pin the moment first",
+      "titleCn": "先把時刻釘住",
+      "ask": "為什麼 at nine 這種時間後面常常接 will be + V-ing？",
+      "en": "At nine I will be riding my bike to school.",
+      "cn": "九點我會正在騎腳踏車去學校。",
+      "why": "因為 at nine 把未來切出一個點，而你想說的是那個點上動作還在跑。如果寫 I will ride my bike at nine，意思變成九點那一刻你才跨上車出發。中文兩句都說「九點我騎車去學校」，所以必須自己決定：你要講出發，還是講正在路上？想講正在路上，就留著 be 和 ing。"
+    },
+    {
+      "key": "busy",
+      "icon": "calendar",
+      "title": "Ask them to move the time",
+      "titleCn": "請對方換時間",
+      "ask": "想告訴朋友那個時段不方便，要怎麼說？",
+      "en": "Don't come at six. I will be taking a shower.",
+      "cn": "六點不要來，我會正在洗澡。",
+      "why": "這是這個形狀在生活裡最常用的場合。你不是要講「我會洗澡」這件事，而是要讓對方知道那一刻你沒空。用 will be 加 V-ing，對方立刻懂你在說時段衝突；只寫 I will take a shower 聽起來像在報告行程，對方還是不知道能不能來。"
+    },
+    {
+      "key": "form",
+      "icon": "check",
+      "title": "Keep the little be",
+      "titleCn": "別把 be 弄丟",
+      "ask": "為什麼不能寫成 I will sitting？",
+      "en": "She will be standing near the second door.",
+      "cn": "她會站在第二個門附近。",
+      "why": "因為 will 後面一定要先接一個原形動詞，而這裡的原形動詞就是 be。sitting、standing 這些 V-ing 自己不能直接掛在 will 後面。把 will be 當成一個不可分割的零件背下來，寫的時候兩個字一起寫完，就不會漏。唸出來也要聽得到那個輕輕的 be。"
+    },
+    {
+      "key": "state",
+      "icon": "person",
+      "title": "Not every verb needs ing",
+      "titleCn": "有些字不用加 ing",
+      "ask": "形容詞或 be 動詞後面還要再加一個 be 嗎？",
+      "en": "He will be free after lunch.",
+      "cn": "午餐後他會有空。",
+      "why": "不用。will be 已經含了 be 動詞，後面接形容詞（free、busy、tired）就完整了。只有在要講「正在做一個動作」的時候才把動詞加 ing 掛上去。另外 know、like、want 這種講狀態的字也很少加 ing，因為狀態本來就是一直在的，不需要再強調正在。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "朋友問你明天早上八點可不可以講電話。"
+    },
+    {
+      "label": "先問自己",
+      "text": "八點那一刻我在做什麼？我是正在做，還是那時候才開始做？"
+    },
+    {
+      "label": "決定形狀",
+      "text": "八點我人會在公車上，動作還在進行，所以要用 will be 加 V-ing。"
+    },
+    {
+      "label": "組起來",
+      "text": "主詞加 will be，動詞加 ing，再補上時刻，就是 At eight I will be riding the bus."
+    },
+    {
+      "label": "換個情況",
+      "text": "如果你想說的是八點才上車、八點之前還在家，那就改成 I will get on the bus at eight."
+    }
+  ],
+  "comparison": {
+    "title": "will + 原形（會發生）　vs　will be + V-ing（那一刻正在做）",
+    "left": {
+      "tag": "WILL DO",
+      "tagCn": "會發生",
+      "icon": "arrow",
+      "head": "it will happen",
+      "headCn": "只說會不會發生",
+      "en": "I will clean my room tomorrow.",
+      "cn": "我明天會打掃房間。",
+      "pts": [
+        "只回答會不會發生",
+        "沒有特定的時刻也可以用",
+        "形狀兩塊：will 加原形動詞"
+      ]
+    },
+    "right": {
+      "tag": "WILL BE DOING",
+      "tagCn": "正在做",
+      "icon": "clock",
+      "head": "in progress at that moment",
+      "headCn": "那一刻動作還在跑",
+      "en": "At three tomorrow I will be cleaning my room.",
+      "cn": "明天三點我會正在打掃房間。",
+      "pts": [
+        "需要一個指定的時刻",
+        "常用來說那時候沒空",
+        "形狀三塊：will、be、V-ing"
+      ]
+    },
+    "note": "判斷口訣：句子裡有沒有一個「幾點」？有，而且那一刻動作還在跑，就加 be 和 ing。"
+  },
+  "quizMore": [
+    {
+      "q": "At seven tomorrow we ___ breakfast at the station.",
+      "opts": [
+        "will be having",
+        "will having",
+        "are having",
+        "will had"
+      ],
+      "ans": 0,
+      "expl": "at seven tomorrow 釘住未來的一刻，而那一刻動作還在進行，所以用 will be 加 V-ing。第二個選項漏了 be；第三個是現在進行式；第四個把 will 和過去式放在一起。"
+    },
+    {
+      "q": "I ___ my phone during the film, so send me a message after.",
+      "opts": [
+        "won't be checking",
+        "won't checking",
+        "am not checking",
+        "will not checked"
+      ],
+      "ans": 0,
+      "expl": "要說的是那整段時間都不會在看手機，用 won't be 加 V-ing。第二個選項漏了 be；第三個講的是現在；第四個的形狀不存在。"
+    }
+  ]
+},
+"dg20261118b1": {
+  "vis": true,
+  "oneLine": "在未來畫一條線：動作跨過去就寫 will be doing，動作在線之前收尾就寫 will have done——at 配進行，by 配完成。",
+  "map": {
+    "when": "你已經有一個未來的時間點，想告訴對方那一刻動作還在跑，還是早就結束",
+    "why": "中文的「到時候我在忙」和「到時候我做完了」都靠上下文，英文把它寫進動詞的形狀裡",
+    "form": "還在跑 will be + V-ing　|　已結束 will have + 過去分詞"
+  },
+  "visual": {
+    "type": "timeline",
+    "timelineNow": 8,
+    "mark": {
+      "at": 58,
+      "label": "星期三 18:00"
+    },
+    "alt": "三列共用同一條時間軸：最左邊是現在，中間的黑線是星期三傍晚六點。第一列只標出那個時間點；第二列的進行線從現在之後開始、跨過記號繼續向右；第三列的完成線在記號之前就結束。",
+    "cap": "最左邊的橘色虛線是現在，中間的黑線是你釘下的未來時間點。上面那條粗線穿過記號，表示那一刻動作還在跑，這就是 will be doing。下面那一段在記號之前就收尾，表示到那一刻已經完成，這就是 will have done。先在線上找到自己的時間點，再看動作有沒有碰到它。語法重點：at 配進行，by 配完成。",
+    "rows": [
+      {
+        "kind": "point",
+        "at": 58,
+        "label": "釘下的時間點",
+        "tone": "accent",
+        "sub": "by Wednesday evening",
+        "subCn": "星期三傍晚，先把這一刻釘住"
+      },
+      {
+        "kind": "span",
+        "from": 28,
+        "to": 92,
+        "label": "那一刻還在跑",
+        "tone": "ink",
+        "sub": "I'll be loading the samples then.",
+        "subCn": "那時候我正在裝樣品（will be doing）"
+      },
+      {
+        "kind": "range",
+        "from": 16,
+        "to": 48,
+        "label": "到那時已結束",
+        "tone": "ink",
+        "sub": "I'll have emailed the summary.",
+        "subCn": "到那時候摘要已經寄出去了（will have done）"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "line",
+      "icon": "pin",
+      "title": "Find the line first",
+      "titleCn": "先找那條線",
+      "ask": "判斷這兩個形狀，第一個該問的問題是什麼？",
+      "en": "At eleven the team will be unpacking the new jigs.",
+      "cn": "十一點團隊會正在開箱新治具。",
+      "why": "該問的是「我的時間點在哪裡」，不是「這件事多久以後發生」。先把那個時刻當成一條線畫出來，再問動作有沒有跨過它。很多人憑感覺選形狀，結果同一句話每次寫得不一樣；先畫線的習慣可以讓你每次都得到同一個答案。"
+    },
+    {
+      "key": "signal",
+      "icon": "balance",
+      "title": "at or by",
+      "titleCn": "看信號字",
+      "ask": "為什麼看到 by 幾乎就可以直接用完成式？",
+      "en": "By Thursday the supplier will have replaced both valves.",
+      "cn": "到星期四，供應商會把兩顆閥都換好。",
+      "why": "因為 by 的意思本來就是「在這個時間之前」，它天生就在找一個結束點，而結束點正是完成式要講的事。相對地 at 指的是那一個點本身，所以配進行式。這組信號字不是百分之百，但在工作英文裡命中率很高，可以先當作第一道判斷。"
+    },
+    {
+      "key": "pp",
+      "icon": "cross",
+      "title": "The third column, not the second",
+      "titleCn": "要第三欄，不是第二欄",
+      "ask": "為什麼 will have went 是錯的？",
+      "en": "By noon she will have driven back to the plant.",
+      "cn": "中午之前她會開車回到廠裡。",
+      "why": "because will have 後面只收過去分詞，也就是動詞三態的第三欄。went 是第二欄，gone 才是第三欄。中文母語者很容易把「過去的形狀」當成一種就好，但英文在完成式這個位置只認第三欄。遇到不規則動詞，寧可停下來查，也不要憑語感寫。"
+    },
+    {
+      "key": "clause",
+      "icon": "arrow",
+      "title": "Keep will in the main clause",
+      "titleCn": "will 留在主句",
+      "ask": "by the time 後面可以放 will 嗎？",
+      "en": "By the time you reach the counter, I will have paid.",
+      "cn": "你走到櫃台的時候，我已經付好了。",
+      "why": "不可以。by the time、when、until 帶出的是時間子句，裡面一律用現在式或現在完成式，未來只在主句標一次。這一條下一級會整個單元細講，但在這裡先養成習慣：寫完句子回頭數一數，整句應該只有一個 will。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "同事問你星期三傍晚六點能不能一起對帳。"
+    },
+    {
+      "label": "畫一條線",
+      "text": "把星期三傍晚六點畫成一條線，再把你那天的工作排上去。"
+    },
+    {
+      "label": "問一句話",
+      "text": "六點那一刻，裝樣品這件事還在進行嗎？還是已經收尾了？"
+    },
+    {
+      "label": "選形狀",
+      "text": "還在進行就用 will be 加 V-ing；已經收尾就用 will have 加過去分詞。"
+    },
+    {
+      "label": "換個說法",
+      "text": "如果你想強調六點之前就全部結束，把 at 換成 by，句子就變成 By six I will have finished the count."
+    }
+  ],
+  "comparison": {
+    "title": "will be doing（那一刻還在跑）　vs　will have done（到那時已結束）",
+    "left": {
+      "tag": "IN PROGRESS",
+      "tagCn": "還在跑",
+      "icon": "cycle",
+      "head": "the line is crossed",
+      "headCn": "動作跨過那個時間點",
+      "en": "At five I will be testing the second batch.",
+      "cn": "五點我會正在測第二批。",
+      "pts": [
+        "常配 at、this time、then",
+        "用來說那段時間沒空",
+        "零件：will、be、V-ing"
+      ]
+    },
+    "right": {
+      "tag": "DONE",
+      "tagCn": "已結束",
+      "icon": "check",
+      "head": "it ends before the line",
+      "headCn": "動作在那之前收尾",
+      "en": "By five I will have tested the second batch.",
+      "cn": "五點之前我會把第二批測完。",
+      "pts": [
+        "常配 by、by the time",
+        "用來承諾截止時間",
+        "零件：will、have、過去分詞"
+      ]
+    },
+    "note": "判斷口訣：at 問「那一刻在做什麼」，by 問「那之前做完了沒」。"
+  },
+  "quizMore": [
+    {
+      "q": "By the end of the shift the line ___ four hundred units.",
+      "opts": [
+        "will have produced",
+        "will be producing",
+        "will produce",
+        "will have produce"
+      ],
+      "ans": 0,
+      "expl": "by the end of 指截止，重點在完成，所以用 will have 加過去分詞。第二個選項把鏡頭停在那一刻；第三個沒交代完成；第四個第三塊放了原形動詞。"
+    },
+    {
+      "q": "Call me after nine. At eight I ___ with the auditor.",
+      "opts": [
+        "will still be talking",
+        "will still talk",
+        "am still talking",
+        "will still have talked"
+      ],
+      "ans": 0,
+      "expl": "你要說的是八點那一刻談話還在進行，所以用 will be 加 V-ing。第二個只說會談；第三個講現在；第四個表示八點前就談完了，那就可以打電話。"
+    }
+  ]
+},
+"dg20261118b1p": {
+  "vis": true,
+  "oneLine": "整句的未來只標一次，而且標在主句——when、until、once、by the time 的子句裡一律回到現在式，想強調先做完就換現在完成式。",
+  "map": {
+    "when": "一句話裡有兩個動作，一個當時間標記、一個是你真正要講的未來",
+    "why": "中文會在兩邊都標未來，英文覺得重複，所以把未來的標記集中在主句",
+    "form": "when／until／once + 現在式　|　強調先完成 when + 現在完成式　|　主句 will + 原形動詞"
+  },
+  "visual": {
+    "type": "merge",
+    "cap": "兩句都指向未來，但只有一句能帶 will。先判斷哪一句只是時間標記：那一句換成現在式，想強調先做完就換現在完成式；真正要宣告的那一句留著 will。中間用 when、until、once 接起來，一個句子裡的未來就只標一次。語法重點：will 不進 when。",
+    "a": {
+      "n": "時間標記（回到現在式）",
+      "en": "The app finds a car.",
+      "cn": "App 找到車。"
+    },
+    "b": {
+      "n": "主句（留著 will）",
+      "en": "It will show the driver's name.",
+      "cn": "它會顯示駕駛的名字。"
+    },
+    "glue": "when",
+    "glueCn": "when 接的是時間標記那一句。換成 as soon as 強調「一……就……」，換成 until 則變成「在那之前都不」。",
+    "out": {
+      "n": "合併後",
+      "parts": [
+        {
+          "t": "When",
+          "role": "glue"
+        },
+        {
+          "t": "the app",
+          "role": "subj"
+        },
+        {
+          "t": "finds",
+          "role": "verb"
+        },
+        {
+          "t": "a car,",
+          "role": "obj"
+        },
+        {
+          "t": "it will show the driver's name.",
+          "role": "plain"
+        }
+      ],
+      "cn": "App 找到車之後，會顯示駕駛的名字。"
+    }
+  },
+  "scenarios": [
+    {
+      "key": "once",
+      "icon": "link",
+      "title": "One future marker per sentence",
+      "titleCn": "一句只標一次未來",
+      "ask": "為什麼 when 後面不能再放一個 will？",
+      "en": "I will message you when the shuttle pulls out.",
+      "cn": "接駁車開出去的時候我會傳訊息給你。",
+      "why": "因為 when 本身已經把這件事推到未來了，主句的 will 又標了一次，英文覺得同一個訊息說兩遍。中文的「等車開出去的時候，我會傳訊息」兩邊都有未來感，所以直譯幾乎一定會多一個 will。寫完之後數一數整句有幾個 will，超過一個就先停下來檢查。"
+    },
+    {
+      "key": "perfect",
+      "icon": "key",
+      "title": "Finish first, then go on",
+      "titleCn": "先做完才接下去",
+      "ask": "when I check 和 when I've checked 差在哪裡？",
+      "en": "When I have checked the terms, I will sign.",
+      "cn": "我把條款看完之後才會簽。",
+      "why": "when I check 只說兩件事大約同時，when I've checked 多了一層「看完是簽名的前提」。在工作英文裡這個差別很重要，因為它把順序寫進句子，對方不必猜你是邊看邊簽還是看完才簽。要注意的是現在完成式在這裡仍然不帶 will，它只負責表示「在那之前已經結束」。"
+    },
+    {
+      "key": "ifwhen",
+      "icon": "fork",
+      "title": "when is certain, if is not",
+      "titleCn": "when 確定，if 不確定",
+      "ask": "同樣接現在式，怎麼決定要用 when 還是 if？",
+      "en": "If the platform cancels the ride, you get your money back.",
+      "cn": "平台如果取消訂單，你的錢會退回來。",
+      "why": "看你對那件事有多少把握。when 表示它一定會發生，只是時間還沒定；if 表示你不確定它會不會發生。你選的那個字就是你的表態：把不確定的事寫成 when，讀者會當成你的承諾；把已排定的時程寫成 if，又會讓人以為還有變數。"
+    },
+    {
+      "key": "until",
+      "icon": "eye",
+      "title": "until keeps things as they are",
+      "titleCn": "until 守住現狀",
+      "ask": "為什麼 until 的句子常常是否定的？",
+      "en": "We will not release the car until the fee is approved.",
+      "cn": "費率核准之前我們不會放車。",
+      "why": "因為 until 的重點是「在那個時間點之前」，而人最常拿它來講在那之前什麼都不做。主句用否定，until 子句用現在式，整句就變成一條界線很清楚的規定。如果你改用 when，意思會跑掉：那會變成核准之後才開始談放車，而不是在那之前不放。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要告訴客戶：等交通部核准費率之後，平台才會調整收費。"
+    },
+    {
+      "label": "先分工",
+      "text": "兩個動作裡，哪一個只是時間標記？核准是標記，調整收費才是你要宣告的事。"
+    },
+    {
+      "label": "子句回到現在式",
+      "text": "標記那一句用現在式，而且核准是被動的，所以寫成 the fee is approved。"
+    },
+    {
+      "label": "主句放 will",
+      "text": "真正要宣告的那一句留著 will，整句的未來只標這一次。"
+    },
+    {
+      "label": "換個強度",
+      "text": "想強調「核准完才動」，子句就換成現在完成式：once the fee has been approved。"
+    }
+  ],
+  "comparison": {
+    "title": "時間子句（現在式）　vs　主句（will）",
+    "left": {
+      "tag": "TIME CLAUSE",
+      "tagCn": "時間子句",
+      "icon": "clock",
+      "head": "present tense only",
+      "headCn": "只用現在式",
+      "en": "as soon as the licence arrives",
+      "cn": "許可一到",
+      "pts": [
+        "when、until、once、as soon as、by the time",
+        "要強調先做完就用現在完成式",
+        "裡面絕對不放 will"
+      ]
+    },
+    "right": {
+      "tag": "MAIN CLAUSE",
+      "tagCn": "主句",
+      "icon": "flag",
+      "head": "this is where will lives",
+      "headCn": "未來標在這裡",
+      "en": "we will start the trial run",
+      "cn": "我們會開始試跑",
+      "pts": [
+        "will、be going to 都放這裡",
+        "一個句子只標一次未來",
+        "也可以放情態動詞 can、must"
+      ]
+    },
+    "note": "判斷口訣：will 不進 when。寫完數一數，整句只該有一個 will。"
+  },
+  "quizMore": [
+    {
+      "q": "The driver will be paid as soon as the trip ___ .",
+      "opts": [
+        "ends",
+        "will end",
+        "ended",
+        "will have ended"
+      ],
+      "ans": 0,
+      "expl": "as soon as 帶出時間子句，裡面用現在式 ends。第二、四個選項把 will 塞進子句；第三個的過去式跟主句的未來對不上。"
+    },
+    {
+      "q": "___ the two quotes have been compared, I will tell you which one we take.",
+      "opts": [
+        "Once",
+        "Once will",
+        "Once it will be",
+        "Once has"
+      ],
+      "ans": 0,
+      "expl": "子句用現在完成式的被動 have been compared，表示比完是前提，前面只要 Once。其他選項都在子句裡多塞了 will 或把形狀弄壞。"
+    }
+  ]
+},
+"dg20261118b2": {
+  "vis": true,
+  "oneLine": "子句不放 will 只是入場券——真正在說話的是你挑的連接詞：when 宣告、once 設門檻、until 守期限、if 承認自己不確定。",
+  "map": {
+    "when": "要寫公告、流程、提案，而同一組事實可以寫得很確定，也可以寫得留有餘地",
+    "why": "連接詞決定讀者收到的確定度與責任歸屬，選錯不是文法錯，是立場錯",
+    "form": "確定 when + 現在式　|　門檻 once + 現在完成式　|　期限 until + 現在式　|　不確定 if／should + 原形"
+  },
+  "visual": {
+    "type": "scale",
+    "cap": "這條刻度從左到右是確定度由低到高，四個停點講的是同一件事：航班分配定案。最左邊的 if 公開承認可能不會發生；往右一格的 unless 把它變成門檻；再往右的 once 已經假定它會成立，只問什麼時候跨過去；最右邊的 when 直接當成既定時程。寫作前先決定你要站在哪一格，再挑連接詞。語法重點：四個子句都用現在式，差別全在語氣。",
+    "lo": "最不確定",
+    "hi": "最確定",
+    "stops": [
+      {
+        "at": 8,
+        "label": "if",
+        "labelCn": "我不保證",
+        "en": "If the plan is delayed, the move slips to spring.",
+        "cn": "計畫若延後，轉場會延到春天。"
+      },
+      {
+        "at": 36,
+        "label": "unless",
+        "labelCn": "除非跨過門檻",
+        "en": "Unless the plan is signed this month, nothing changes.",
+        "cn": "除非這個月簽，否則什麼都不變。"
+      },
+      {
+        "at": 66,
+        "label": "once",
+        "labelCn": "跨過就算",
+        "en": "Once the plan has been signed, seats go on sale.",
+        "cn": "計畫一簽，機位就開賣。"
+      },
+      {
+        "at": 92,
+        "label": "when",
+        "labelCn": "既定時程",
+        "en": "When the plan is signed, carriers publish their schedules.",
+        "cn": "計畫簽定之後，業者公布班表。"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "key": "stance",
+      "icon": "flag",
+      "title": "The conjunction is a stance",
+      "titleCn": "連接詞就是立場",
+      "ask": "同一組事實，為什麼換個連接詞責任就不一樣？",
+      "en": "When the terminal opens, the shuttle fare rises.",
+      "cn": "航廈啟用之後，接駁車資會漲。",
+      "why": "因為 when 等於你替讀者保證那件事會發生。寫成 if，讀者知道你只是在談可能性；寫成 when，讀者會據此安排自己的事，事後沒發生就是你的問題。公告與對外信件尤其要小心：這不是語感問題，是你願不願意把話說到那麼滿。"
+    },
+    {
+      "key": "perfect",
+      "icon": "tool",
+      "title": "Lock the order with the perfect",
+      "titleCn": "用完成式鎖住順序",
+      "ask": "什麼時候值得把子句換成現在完成式？",
+      "en": "Once the figures have been verified, the report goes out.",
+      "cn": "數字核實之後，報告才發出去。",
+      "why": "當「前一件事必須收尾」本身就是規則的時候。寫流程、驗收條件、放行標準，用完成式把順序鎖進動詞，讀者不會把兩件事看成同時進行。反過來說，如果兩件事本來幾乎同時，硬加完成式只會讓句子變重，讀起來像在拖時間。"
+    },
+    {
+      "key": "formal",
+      "icon": "book",
+      "title": "Should, not if",
+      "titleCn": "用 Should 取代 if",
+      "ask": "公告裡為什麼常看到 Should 開頭的句子？",
+      "en": "Should the transfer be postponed, passengers will be notified in writing.",
+      "cn": "轉場若延後，將以書面通知旅客。",
+      "why": "這是把 if 的倒裝寫法，語氣更冷、更正式，而且不必寫出是誰在假設。公告、合約、保險條款很愛用它，因為整句讀起來像制度在說話，不是某個人在推測。但它只適合整句都正式的場合——後面接口語用字，句子會自己打自己。"
+    },
+    {
+      "key": "order",
+      "icon": "star",
+      "title": "Front or back",
+      "titleCn": "子句放前還是放後",
+      "ask": "把條件放在句首和句尾，差別在哪裡？",
+      "en": "We will confirm the schedule when the slots are agreed.",
+      "cn": "時間帶談定之後我們會確認班表。",
+      "why": "放前面是先設條件，讀者帶著前提讀主句，語氣像公告與流程；放後面是先給承諾，條件變成補充，語氣像提案或回信。內容完全一樣，收到的人感覺卻不同：一個在設限，一個在承諾。這一層已經不是文法，是你想要的效果。"
+    }
+  ],
+  "steps": [
+    {
+      "label": "情境",
+      "text": "你要寫一段對外公告，說明航班什麼時候搬到新航廈。"
+    },
+    {
+      "label": "先問確定度",
+      "text": "分配計畫到底簽了沒？已排定就用 when，還在談就用 if 或 unless。"
+    },
+    {
+      "label": "再問順序",
+      "text": "要不要強調「簽完才動」？要的話子句換成現在完成式。"
+    },
+    {
+      "label": "挑語域",
+      "text": "公告可以把 if 換成 Should 或 in the event that，但整句都要維持同一個溫度。"
+    },
+    {
+      "label": "最後排位置",
+      "text": "要設限就把子句放句首加逗號；要承諾就把主句放前面，條件跟在後面。"
+    }
+  ],
+  "comparison": {
+    "title": "when（宣告既定）　vs　if（保留不確定）",
+    "left": {
+      "tag": "WHEN",
+      "tagCn": "既定時程",
+      "icon": "calendar",
+      "head": "treated as settled",
+      "headCn": "當成已經排定",
+      "en": "When the licence is issued, the service starts.",
+      "cn": "許可核發之後，服務就開始。",
+      "pts": [
+        "讀者會據此安排自己的事",
+        "適合已公告的時程",
+        "說錯了責任在作者"
+      ]
+    },
+    "right": {
+      "tag": "IF",
+      "tagCn": "仍有變數",
+      "icon": "fork",
+      "head": "openly uncertain",
+      "headCn": "公開承認不確定",
+      "en": "If the licence is refused, the service is postponed.",
+      "cn": "許可若被駁回，服務就延後。",
+      "pts": [
+        "保留餘地，也保護自己",
+        "適合風險說明與備案",
+        "用在已定案的事會顯得推託"
+      ]
+    },
+    "note": "判斷口訣：先問「我願不願意替這件事背書」。願意就 when，不願意就 if。"
+  },
+  "quizMore": [
+    {
+      "q": "___ the figures have been verified, no number leaves this office.",
+      "opts": [
+        "Until",
+        "Once",
+        "When",
+        "By the time"
+      ],
+      "ans": 0,
+      "expl": "主句是否定的「不離開」，需要一個標示期限之前的連接詞，Until 最準。Once 和 When 把焦點放在核實之後；By the time 強調的是到那時早已完成，接不上這個意思。"
+    },
+    {
+      "q": "Pick the sentence that keeps one register all the way through.",
+      "opts": [
+        "In the event that a flight is moved, the ticket remains valid.",
+        "In the event that a flight is moved, your ticket is still fine.",
+        "If a flight is moved, the ticket shall be deemed valid, no worries.",
+        "When a flight gets moved, the ticket remains valid, probably."
+      ],
+      "ans": 0,
+      "expl": "第一句從頭到尾都是公告語氣。第二句前正式後口語；第三句在合約用語後面加了 no worries；第四句用 gets moved 搭 probably，語氣也散掉了。"
+    }
+  ]
+},
 /* ---------- 2026-11-11 每日文法（I will and I am going to／will be doing and will have done） ---------- */
 "dg20261111a2": {
   "vis": true,
