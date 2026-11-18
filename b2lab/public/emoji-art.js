@@ -86,7 +86,7 @@
     '👉':'point','👆':'pointUp','👂':'ear','💧':'drop','💦':'drop','☁':'cloud','📰':'news','🧪':'flask','🔮':'crystal','🔤':'abc','🚫':'nosign','🔗':'link','📤':'tray','📥':'tray',
     '📚':'@booksL','⏳':'@hourglass','⌛':'@hourglass','🧠':'@brainL','🍽':'@plateL','📦':'@box','🍎':'@apple','🐻':'@bear','🐱':'@paw','🐴':'@paw','🪳':'@paw','🦎':'@paw',
     '💻':'@laptop','✍':'@pencil','✏':'@pencil','🖌':'@pencil','🎨':'@pencil','🧳':'@suitcase','🌧':'@cloudRain','🌦':'@cloudRain','☕':'@coffee','🛒':'@cart',
-    '🚆':'@train','🚄':'@train','🚇':'@train','⚙':'@gear','📜':'@doc','📄':'@doc','📃':'@doc','📊':'@chartUp','📈':'@chartUp','📉':'@chartDown','⚖':'@scalesL','📋':'@clipboard','🗂':'@clipboard','📎':'@clipboard',
+    '🚆':'@train','🚉':'@train','🚄':'@train','🚇':'@train','⚙':'@gear','📜':'@doc','📄':'@doc','📃':'@doc','📊':'@chartUp','📈':'@chartUp','📉':'@chartDown','⚖':'@scalesL','📋':'@clipboard','🗂':'@clipboard','📎':'@clipboard',
     '🧴':'@bottleL','🌞':'@sun','☀':'@sun','🌅':'@sun','🏖':'@sun','🏝':'@sun','🌡':'@thermo','📞':'@phone','☎':'@phone','📱':'@phone','📲':'@phone','🏪':'@storeL','🍳':'@pot','🍲':'@pot',
     '🚗':'@car','🚕':'@car','💳':'@card','🗺':'@map','🎬':'@camera','🖼':'@camera','📷':'@camera','🕐':'@clock','🕘':'@clock','🕠':'@clock','🕰':'@clock','💉':'@syringe','🧾':'@receipt',
     '🛠':'@toolboxL','🔧':'@wrench','🔩':'@wrench','🧧':'@redpacket','🩺':'@stethoL','⚕':'@cross','🌿':'@sprout','🌸':'@sprout','🥕':'@sprout','🥬':'@sprout','🧹':'@broomL','🧺':'@basket',
