@@ -55468,3 +55468,955 @@ window.VIDEO["bk20261112"] = {
   }
  ]
 };
+window.VIDEO["bk20261119"] = {
+ "title": "Quality Boards, Insurance & Speaking with Confidence",
+ "titleCn": "職場品質看板、保險與存錢",
+ "date": "2026-11-19",
+ "level": "B1",
+ "scene": "A Busy Week and Some Money Talk",
+ "sceneCn": "忙碌的一週與聊聊錢",
+ "sceneArt": "assemblyLine",
+ "titleArt": [
+  "auPackingBoard",
+  "nhiCard",
+  "emergencySupplies"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・品保工程師",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・客戶",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "A Busy Week and Some Money Talk",
+   "cn": "情境：忙碌的一週與聊聊錢"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Phrases & Collocations",
+   "cn": "片語搭配"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "perfect": {
+   "t": "have already visited",
+   "cn": "已經來過",
+   "tag": [
+    "文法",
+    "現在完成式"
+   ],
+   "note": "「到現在已經」用 have + already + 過去分詞；groups 複數用 have。",
+   "ex": "My parents have already visited Japan twice.",
+   "exCn": "我爸媽已經去過日本兩次了。"
+  },
+  "appearance": {
+   "t": "appearance problems",
+   "cn": "外觀問題",
+   "tag": [
+    "片語",
+    "品質"
+   ],
+   "note": "some 後面接複數 problems；appearance 當形容詞修飾 problems。",
+   "ex": "My new sofa came with a few appearance problems.",
+   "exCn": "我的新沙發送來時有幾個外觀問題。"
+  },
+  "qualityBoard": {
+   "t": "quality boards",
+   "cn": "品質看板",
+   "tag": [
+    "片語",
+    "現場"
+   ],
+   "note": "放在生產現場，告訴作業員良品與不良品的標準；there were no + 複數。",
+   "ex": "The new quality boards show photos of good parts.",
+   "exCn": "新的品質看板上有良品的照片。"
+  },
+  "discuss": {
+   "t": "discuss these problems",
+   "cn": "討論這些問題",
+   "tag": [
+    "單字",
+    "易錯"
+   ],
+   "note": "discuss 後面直接接名詞，不加 about。",
+   "ex": "Let's discuss our holiday plans tonight.",
+   "exCn": "我們今晚討論一下假期計畫吧。"
+  },
+  "cover": {
+   "t": "covered the medical costs",
+   "cn": "負擔了醫療費用",
+   "tag": [
+    "片語",
+    "保險"
+   ],
+   "note": "cover the cost(s)＝保險或公司負擔費用。",
+   "ex": "The company will cover the cost of the training.",
+   "exCn": "公司會負擔訓練的費用。"
+  },
+  "putAside": {
+   "t": "put some money aside",
+   "cn": "存一點錢",
+   "tag": [
+    "片語",
+    "存錢"
+   ],
+   "note": "put + 錢 + aside，aside 放在名詞後面；for a rainy day＝以備不時之需。",
+   "ex": "Try to put some money aside every payday.",
+   "exCn": "每次發薪日都試著存一點錢。"
+  },
+  "outOfPocket": {
+   "t": "pay out of pocket",
+   "cn": "自掏腰包",
+   "tag": [
+    "片語",
+    "費用"
+   ],
+   "note": "保險沒給付就自己付；自付費用叫 out-of-pocket expenses。",
+   "ex": "I paid for the dental cleaning out of pocket.",
+   "exCn": "洗牙的錢是我自掏腰包付的。"
+  },
+  "happyWork": {
+   "t": "happy to work with you",
+   "cn": "很高興和你們合作",
+   "tag": [
+    "句型",
+    "開會"
+   ],
+   "note": "be happy to + 原形動詞；也可以說 happy to cooperate with you。",
+   "ex": "Thank you for the meeting. We are happy to work with you.",
+   "exCn": "謝謝這次會議，我們很高興和你們合作。"
+  },
+  "subsidy": {
+   "t": "meal subsidy",
+   "cn": "餐費補助",
+   "tag": [
+    "單字",
+    "補助"
+   ],
+   "note": "subsidy 是補助；政府補助 government subsidy。",
+   "ex": "Farmers can get a government subsidy after a typhoon.",
+   "exCn": "颱風過後，農民可以拿到政府補助。"
+  },
+  "compensation": {
+   "t": "provides compensation",
+   "cn": "提供賠償",
+   "tag": [
+    "單字",
+    "保險"
+   ],
+   "note": "compensation 不可數；主詞 insurance 單數，動詞加 s。",
+   "ex": "He received compensation after the accident.",
+   "exCn": "他在事故後得到了賠償。"
+  },
+  "perfCont": {
+   "t": "have been working",
+   "cn": "一直在工作",
+   "tag": [
+    "文法",
+    "完成進行式"
+   ],
+   "note": "have been + V-ing + for + 一段時間；不要說 I work in this field ten years。",
+   "ex": "Have you worked in this field for a long time?",
+   "exCn": "你在這個領域工作很久了嗎？"
+  },
+  "applyFor": {
+   "t": "applied for",
+   "cn": "申請了",
+   "tag": [
+    "片語",
+    "目的"
+   ],
+   "note": "apply for + 東西 + to pay for …：申請……來支付……。",
+   "ex": "Tom applied for a part-time job to pay for his English classes.",
+   "exCn": "Tom 申請了一份兼職工作來支付他的英文課。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today, Anita talks about a busy week at the factory, and then about insurance and saving money.",
+   "cn": "歡迎回來。今天 Anita 先聊工廠忙碌的一週，再聊保險和存錢。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Listen for have already visited, quality boards, cover the costs, and put some money aside.",
+   "cn": "注意聽 have already visited、quality boards、cover the costs 和 put some money aside。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "coffeeBreak"
+   },
+   "en": "Hey Anita, busy week?",
+   "cn": "嗨，Anita，這週很忙嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "assemblyLine"
+   },
+   "en": "Very. It's only Thursday, and two groups of customers have already visited.",
+   "cn": "超忙。才禮拜四，已經有兩組客人來過了。",
+   "hi": [
+    {
+     "t": "have already visited",
+     "cn": "已經來過",
+     "k": "perfect",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "assemblyLine"
+   },
+   "en": "Wow. How did it go?",
+   "cn": "哇，結果怎麼樣？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "scratch"
+   },
+   "en": "Not bad, but they found some appearance problems.",
+   "cn": "還不錯，不過他們發現了一些外觀問題。",
+   "hi": [
+    {
+     "t": "appearance problems",
+     "cn": "外觀問題",
+     "k": "appearance",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "scratch"
+   },
+   "en": "Anything else?",
+   "cn": "還有別的嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "auPackingBoard"
+   },
+   "en": "They also noticed there were no quality boards on the floor.",
+   "cn": "他們也注意到現場沒有品質看板。",
+   "hi": [
+    {
+     "t": "quality boards",
+     "cn": "品質看板",
+     "k": "qualityBoard",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "au7BoardNotProof"
+   },
+   "en": "So what's next?",
+   "cn": "那下一步呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "videoMeeting"
+   },
+   "en": "We need to discuss these problems with the production team.",
+   "cn": "我們需要和生產部門討論這些問題。",
+   "hi": [
+    {
+     "t": "discuss these problems",
+     "cn": "討論這些問題",
+     "k": "discuss",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "medicineBottle"
+   },
+   "en": "Got it. By the way, didn't your dad have surgery?",
+   "cn": "了解。對了，你爸爸是不是動過手術？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "nhiCard"
+   },
+   "en": "Yeah, last year. Luckily, his health insurance covered the medical costs.",
+   "cn": "對，去年。幸好他的健康保險負擔了醫療費用。",
+   "hi": [
+    {
+     "t": "covered the medical costs",
+     "cn": "負擔了醫療費用",
+     "k": "cover",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "premiumMonthly"
+   },
+   "en": "That's lucky. Insurance isn't cheap, though.",
+   "cn": "真幸運。不過保險不便宜。"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "emergencySupplies"
+   },
+   "en": "True. So I put some money aside every month, just in case.",
+   "cn": "對啊。所以我每個月都存一點錢，以防萬一。",
+   "hi": [
+    {
+     "t": "put some money aside",
+     "cn": "存一點錢",
+     "k": "putAside",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "bigBill"
+   },
+   "en": "Smart. And if the insurance doesn't cover something?",
+   "cn": "聰明。那如果保險不給付呢？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "deductibleBar"
+   },
+   "en": "Then you pay out of pocket, or apply for a subsidy.",
+   "cn": "那就得自掏腰包，或申請補助。",
+   "hi": [
+    {
+     "t": "pay out of pocket",
+     "cn": "自掏腰包",
+     "k": "outOfPocket",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "interviewDesk"
+   },
+   "en": "Good to know. Thanks, Anita.",
+   "cn": "了解。謝謝你，Anita。"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "videoMeeting"
+   },
+   "en": "Anytime. We're always happy to work with you.",
+   "cn": "不客氣。我們一直都很高興和你們合作。",
+   "hi": [
+    {
+     "t": "happy to work with you",
+     "cn": "很高興和你們合作",
+     "k": "happyWork",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "cover the cost",
+     "ipa": "/ˈkʌv.ɚ ðə ˈkɑːst/",
+     "cn": "負擔費用（保險或公司付）",
+     "def": "When insurance or a company pays for something.",
+     "art": "nhiCard"
+    },
+    "b": {
+     "w": "pay out of pocket",
+     "ipa": "/peɪ aʊt əv ˈpɑː.kɪt/",
+     "cn": "自掏腰包（自己付）",
+     "def": "To pay with your own money.",
+     "art": "bigBill"
+    }
+   },
+   "en": "If the insurance covers the cost, you don't pay. If it doesn't, you pay out of pocket.",
+   "cn": "保險負擔費用你就不用付；保險不給付，就得自掏腰包。",
+   "hi": [
+    {
+     "t": "pay out of pocket",
+     "cn": "自掏腰包",
+     "k": "outOfPocket",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "subsidy",
+    "ipa": "/ˈsʌb.sə.di/",
+    "pos": "n.",
+    "art": "deductibleBar",
+    "def": "Money given to help pay for something.",
+    "cn": "補助、津貼。",
+    "note": "government subsidy 政府補助；meal subsidy 餐費補助。"
+   },
+   "en": "A subsidy is money that helps you pay. The company gives a meal subsidy to every employee.",
+   "cn": "subsidy 是幫你付錢的補助。公司給每位員工餐費補助。",
+   "hi": [
+    {
+     "t": "meal subsidy",
+     "cn": "餐費補助",
+     "k": "subsidy",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "compensation",
+    "ipa": "/ˌkɑːm.pənˈseɪ.ʃən/",
+    "pos": "n.",
+    "art": "accidentJam",
+    "def": "Money you get after an accident, injury, or loss.",
+    "cn": "賠償。",
+    "note": "不可數；Accident insurance provides compensation."
+   },
+   "en": "Compensation is money you get after an accident or a loss. Accident insurance provides compensation.",
+   "cn": "compensation 是發生意外或損失後拿到的錢。意外險提供賠償。",
+   "hi": [
+    {
+     "t": "provides compensation",
+     "cn": "提供賠償",
+     "k": "compensation",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "discuss",
+    "ipa": "/dɪˈskʌs/",
+    "pos": "v.",
+    "art": "videoMeeting",
+    "def": "To talk about something with other people.",
+    "cn": "討論。",
+    "note": "discuss 後面直接接名詞，不加 about。"
+   },
+   "en": "Discuss means talk about, so don't add about. We need to discuss these problems.",
+   "cn": "discuss 就是 talk about，所以不要再加 about。我們需要討論這些問題。",
+   "hi": [
+    {
+     "t": "discuss these problems",
+     "cn": "討論這些問題",
+     "k": "discuss",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "insurance",
+    "coreCn": "保險種類",
+    "art": "nhiCard",
+    "items": [
+     {
+      "t": "health ~",
+      "cn": "健康保險"
+     },
+     {
+      "t": "life ~",
+      "cn": "人壽保險"
+     },
+     {
+      "t": "accident ~",
+      "cn": "意外險"
+     },
+     {
+      "t": "travel ~",
+      "cn": "旅遊險"
+     }
+    ]
+   },
+   "en": "Health insurance, life insurance, accident insurance, travel insurance.",
+   "cn": "健康保險、人壽保險、意外險、旅遊險。"
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "money",
+    "coreCn": "存錢的說法",
+    "art": "emergencySupplies",
+    "items": [
+     {
+      "t": "save ~",
+      "cn": "存錢"
+     },
+     {
+      "t": "put ~ aside",
+      "cn": "把錢存起來"
+     },
+     {
+      "t": "save ~ for a rainy day",
+      "cn": "存錢以備不時之需"
+     }
+    ]
+   },
+   "en": "Save money, put money aside, save money for a rainy day.",
+   "cn": "存錢、把錢存起來、存錢以備不時之需。",
+   "hi": [
+    {
+     "t": "put money aside",
+     "cn": "把錢存起來",
+     "k": "putAside",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "expenses",
+    "coreCn": "費用的搭配",
+    "art": "bigBill",
+    "items": [
+     {
+      "t": "medical ~",
+      "cn": "醫療費用"
+     },
+     {
+      "t": "out-of-pocket ~",
+      "cn": "自付費用"
+     },
+     {
+      "t": "pay for ~",
+      "cn": "支付費用"
+     }
+    ]
+   },
+   "en": "Medical expenses, out-of-pocket expenses, pay for your expenses.",
+   "cn": "醫療費用、自付費用、支付費用。"
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "have / has been + V-ing + for + 一段時間",
+    "art": "interviewDesk",
+    "rows": [
+     {
+      "lab": "從過去一直做到現在",
+      "blocks": [
+       {
+        "t": "I",
+        "k": "s"
+       },
+       {
+        "t": "have been working",
+        "k": "v"
+       },
+       {
+        "t": "in this field",
+        "k": "o"
+       },
+       {
+        "t": "for",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "ten years",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "不要說 I work in this field ten years。"
+   },
+   "en": "I have been working in this field for ten years.",
+   "cn": "我在這個領域工作十年了。",
+   "hi": [
+    {
+     "t": "have been working",
+     "cn": "一直在工作",
+     "k": "perfCont",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "apply for + 東西 + to + 原形動詞（目的）",
+    "art": "deductibleBar",
+    "rows": [
+     {
+      "lab": "to pay for 說明申請的目的",
+      "blocks": [
+       {
+        "t": "She",
+        "k": "s"
+       },
+       {
+        "t": "applied for",
+        "k": "v"
+       },
+       {
+        "t": "government financial aid",
+        "k": "o"
+       },
+       {
+        "t": "to pay for",
+        "k": "n"
+       },
+       {
+        "t": "her medical expenses",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "applied 是 apply 的過去式（y 變 ied）。"
+   },
+   "en": "She applied for government financial aid to pay for her medical expenses.",
+   "cn": "她申請政府補助來支付醫療費用。",
+   "hi": [
+    {
+     "t": "applied for",
+     "cn": "申請了",
+     "k": "applyFor",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "Insurance + 動詞加 s … if + 現在式",
+    "art": "accidentJam",
+    "rows": [
+     {
+      "lab": "主詞單數動詞加 s；if 子句不用 will",
+      "blocks": [
+       {
+        "t": "Accident insurance",
+        "k": "s"
+       },
+       {
+        "t": "provides",
+        "k": "v"
+       },
+       {
+        "t": "compensation",
+        "k": "o"
+       },
+       {
+        "t": "if",
+        "k": "n"
+       },
+       {
+        "t": "you",
+        "k": "s"
+       },
+       {
+        "t": "have",
+        "k": "v"
+       },
+       {
+        "t": "an accident",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "helps、provides、protects、covers 都要加 s。"
+   },
+   "en": "Accident insurance provides compensation if you have an accident.",
+   "cn": "如果你發生意外，意外險會提供賠償。",
+   "hi": [
+    {
+     "t": "provides compensation",
+     "cn": "提供賠償",
+     "k": "compensation",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 2,
+    "wrong": "It's only Thursday, but two groups of customers already visit our factory.",
+    "bad": [
+     "already visit"
+    ],
+    "fix": "It's only Thursday, but two groups of customers have already visited our factory.",
+    "good": [
+     "have already visited"
+    ],
+    "why": "Use the present perfect for something that has already happened.",
+    "whyCn": "「到現在已經發生了」用現在完成式 have + 過去分詞。"
+   },
+   "en": "It's only Thursday, but two groups of customers have already visited our factory.",
+   "cn": "才禮拜四，已經有兩組客人來過我們工廠了。",
+   "hi": [
+    {
+     "t": "have already visited",
+     "cn": "已經來過",
+     "k": "perfect",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 6,
+    "wrong": "We need to discuss about these problems with the production team.",
+    "bad": [
+     "discuss about"
+    ],
+    "fix": "We need to discuss these problems with the production team.",
+    "good": [
+     "discuss these problems"
+    ],
+    "why": "Discuss already means talk about, so drop about.",
+    "whyCn": "discuss 本身就是「討論」，後面直接接名詞，不加 about。"
+   },
+   "en": "We need to discuss these problems with the production team.",
+   "cn": "我們需要和生產部門討論這些問題。",
+   "hi": [
+    {
+     "t": "discuss these problems",
+     "cn": "討論這些問題",
+     "k": "discuss",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "I have been working in this field ___ ten years.",
+    "a": "for",
+    "n": 1
+   },
+   "en": "I have been working in this field ___ ten years.",
+   "cn": "我在這個領域工作___十年了。",
+   "say": "I have been working in this field, blank, ten years.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "I have been working in this field ___ ten years.",
+    "a": "for",
+    "n": 1,
+    "show": true
+   },
+   "en": "I have been working in this field for ten years.",
+   "cn": "我在這個領域工作十年了。",
+   "hi": [
+    {
+     "t": "have been working",
+     "cn": "一直在工作",
+     "k": "perfCont",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "If the insurance does not cover the treatment, you have to pay out of ___.",
+    "a": "pocket",
+    "n": 2
+   },
+   "en": "If the insurance does not cover the treatment, you have to pay out of ___.",
+   "cn": "如果保險不給付這項治療，你就得自掏___。",
+   "say": "If the insurance does not cover the treatment, you have to pay out of, blank.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "If the insurance does not cover the treatment, you have to pay out of ___.",
+    "a": "pocket",
+    "n": 2,
+    "show": true
+   },
+   "en": "If the insurance does not cover the treatment, you have to pay out of pocket.",
+   "cn": "如果保險不給付這項治療，你就得自掏腰包。",
+   "hi": [
+    {
+     "t": "pay out of pocket",
+     "cn": "自掏腰包",
+     "k": "outOfPocket",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We should put some money ___ every month for emergencies.",
+    "a": "aside",
+    "n": 3
+   },
+   "en": "We should put some money ___ every month for emergencies.",
+   "cn": "我們每個月應該把一些錢___，以備緊急情況。",
+   "say": "We should put some money, blank, every month for emergencies.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "We should put some money ___ every month for emergencies.",
+    "a": "aside",
+    "n": 3,
+    "show": true
+   },
+   "en": "We should put some money aside every month for emergencies.",
+   "cn": "我們每個月應該把一些錢存起來，以備緊急情況。",
+   "hi": [
+    {
+     "t": "put some money aside",
+     "cn": "存一點錢",
+     "k": "putAside",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};

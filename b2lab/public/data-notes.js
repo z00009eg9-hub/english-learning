@@ -37,7 +37,7 @@ window.NOTES = {
   {w:"car horn",ipa:"/kɑːr hɔːrn/",pos:"n.",cn:"汽車喇叭",def:"A device in a car that makes a loud warning sound.",exEn:"The car horn is stuck and won't stop honking.",exCn:"汽車喇叭卡住了，一直響不停。",cat:"daily"},
   {w:"honk",ipa:"/hɑːŋk/",pos:"v.",cn:"按喇叭",def:"To press the horn of a car to make a loud sound.",exEn:"Cars in Vietnam constantly honk their horns.",exCn:"越南的車經常按喇叭。",cat:"daily"},
   {w:"refund",ipa:"/ˈriːfʌnd/",pos:"n.",cn:"退款",def:"Money that is given back to you.",exEn:"The sponsor offered refunds to compensate the customers.",exCn:"贊助商提供退款來補償顧客。",cat:"daily"},
-  {w:"compensation",ipa:"/ˌkɑːmpenˈseɪʃən/",pos:"n.",cn:"補償金、賠償",def:"Money or something else given to make up for a loss or problem.",exEn:"The insurance company offered us compensation for the car accident.",exCn:"保險公司為車禍事故提供我們賠償。",cat:"daily"},
+  {w:"compensation",ipa:"/ˌkɑːm.pənˈseɪ.ʃən/",pos:"n.",cn:"補償金、賠償",def:"Money or something else given to make up for a loss or problem.",exEn:"The insurance company offered us compensation for the car accident.",exCn:"保險公司為車禍事故提供我們賠償。",cat:"daily"},
   // --- 20250717 永遠的好朋友 Always Together ---
   {w:"commute",ipa:"/kəˈmjuːt/",pos:"v. / n.",cn:"通勤",def:"to travel between home and work.",exEn:"I commute by scooter.",exCn:"我騎摩托車上下班。",cat:"daily"},
   {w:"seldom",ipa:"/ˈsel.dəm/",pos:"adv.",cn:"很少、難得",def:"almost never.",exEn:"I seldom get sick.",exCn:"我很少生病。",cat:"daily"},

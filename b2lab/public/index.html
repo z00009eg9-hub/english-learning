@@ -7491,7 +7491,7 @@ function bkWhere(b,s){
   if(has((b.vocab2||[]).flatMap(t=>[t.w,t.cn,t.ex,t.exCn]))) w.push('補充單字');
   if(has((b.vocabReview||[]).flatMap(t=>[t.w,t.cn]))) w.push('前次已學');
   if(has((b.colloc||[]).flatMap(c=>[c.p,c.cn,c.def,c.defCn])
-      .concat((b.phrases||[]).flatMap(p=>[p.p,p.cn,p.ex,p.exCn])))) w.push('片語與搭配詞');
+      .concat((b.phrases||[]).flatMap(p=>[p.p,p.cn,p.ex,p.exCn,p.ex2,p.ex2Cn])))) w.push('片語與搭配詞');
   if(has((b.grammar||[]).flatMap(g=>[g.title,g.pat,g.patLabel].concat(g.pts||[],(g.exs||[]).flatMap(e=>[e.en,e.cn]))))) w.push('句型文法');
   (b.reading||[]).forEach(r=>{
     if(has([r.title,r.titleCn]
@@ -7774,7 +7774,8 @@ function bookHTML(b){
      例句寫在對應章節。沒有 ex 就不畫例句列，不要讓 exRow 印出 undefined。 */
   h+= (b.phrases||[]).map(p=>'<div class="bkq"><div class="bkline" style="margin-bottom:2px"><b>'+bkVars(p.p)+'</b>'+spk(p.p)
      +'<span class="muted cnx cnR">'+esc(p.cn)+'</span></div>'
-     +(p.ex?exRow({en:p.ex,cn:p.exCn,hi:p.p}):'')+'</div>').join('');
+     +(p.ex?exRow({en:p.ex,cn:p.exCn,hi:p.p}):'')
+     +(p.ex2?exRow({en:p.ex2,cn:p.ex2Cn,hi:p.p}):'')+'</div>').join('');
 
   /* 句型與文法解説（沒有就整節跳過） */
   if((b.grammar||[]).length) h+='<div class="bkbar" id="bksec-gram">'+bkTitle(b.grammarTitle||'III. 句型與文法解説 Sentence Patterns & Grammar')+'</div>'

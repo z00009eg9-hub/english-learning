@@ -33953,6 +33953,749 @@ window.BOOK = {
         "aCn": "我們把不良品隔開、清楚標示，並把不良類型和數量記在檢驗表上。"
       }
     ]
+  },
+  /* ---- bk20261119 Quality Boards, Insurance & Speaking with Confidence ---- */
+  {
+    "id": "bk20261119",
+    "video": true,
+    "icon": "🛡️",
+    "date": "2026-11-19",
+    "doc": "https://docs.google.com/document/d/1Gq-bBoIJfHFljz-VHfi3_tnJHjxzrlz-OVRjn0XEdqY/edit",
+    "title": "Quality Boards, Insurance & Speaking with Confidence",
+    "titleCn": "職場品質看板、保險與存錢",
+    "topics": "作業複習(品質看板)・單字(工廠稽核／保險費用／口說日常)・片語與搭配詞・現在完成進行式・apply for … to pay for …・保險種類・自掏腰包與補助・口說開場句・閱讀 Insurance and Saving Money",
+    "hwTitle": "I. ★ 11/19 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "ok": "I'm very busy this week.",
+        "cn": "我這個禮拜很忙。",
+        "pat": "主詞 + be + 形容詞",
+        "note": "✅ 文法正確。老師的訂正版寫成 I am，意思相同。"
+      },
+      {
+        "n": 2,
+        "wrong": "It's only Thursday, but two groups of customers already visit our factory.",
+        "fix": "It's only Thursday, but two groups of customers have already visited our factory.",
+        "cn": "才禮拜四，已經有兩組客人來過我們工廠了。",
+        "pat": "主詞 + have / has + already + 過去分詞(現在完成式)",
+        "note": "「到現在已經發生了」要用現在完成式 have + 過去分詞(have visited)，不能用現在式 visit。 already 放在 have 和過去分詞中間，表示「已經」。 two groups of customers 的主詞是 groups(複數)，所以用 have。"
+      },
+      {
+        "n": 3,
+        "wrong": "They visited our production lines and found some appearance problem.",
+        "fix": "They visited our production lines and found some appearance problems.",
+        "cn": "他們參觀了我們的生產線，發現了一些外觀問題。",
+        "pat": "some + 複數名詞",
+        "note": "some 後面接可數名詞要用複數，所以 problem 要改成 problems。 appearance problems：appearance 在這裡當形容詞用，修飾 problems，意思是「外觀問題」。"
+      },
+      {
+        "n": 4,
+        "ok": "They also found that there were no quality boards on the production floor.",
+        "cn": "他們也注意到生產現場沒有品質看板。",
+        "pat": "there were no + 複數名詞 + 地點",
+        "note": "✅ 老師建議：第一句已經用過 found，這句換成 noticed：They also noticed that there were no quality boards on the production floor. found that / noticed that 後面接一整個子句。 there were no ... 表示「沒有……」，名詞是複數 boards，所以用 were。 客人「發現」外觀問題，也「注意到」沒有品質看板，換動詞讓句子不重複。 on the production floor：在生產現場(用 on)。"
+      },
+      {
+        "n": 5,
+        "ok": "I think quality boards are very important for operators.",
+        "cn": "我認為品質看板對作業員來說非常重要。",
+        "pat": "I think + 子句；important for + 人",
+        "note": "✅ 課堂朗讀版：I think quality is very important for operators. It's a good point.，老師認可、沒有大錯。 I think 後面直接接子句，不需要 that。 important for operators：對作業員很重要。 quality board 是放在生產現場的看板／告示，告訴作業員正確與不良的組裝或外觀標準。"
+      },
+      {
+        "n": 6,
+        "wrong": "We need to discuss about these problems with the production team.",
+        "fix": "We need to discuss these problems with the production team.",
+        "cn": "我們需要和生產部門討論這些問題。",
+        "pat": "discuss + 事情 + with + 人",
+        "note": "課堂朗讀版已是這樣，老師認可。 discuss 本身就是「討論」，後面直接接名詞，不加 about(about 多餘)。 discuss + 事情 + with + 人：跟某人討論某件事。 need to + 原形動詞：需要做某事。"
+      },
+      {
+        "n": 7,
+        "ok": "I still have a lot of work to do.",
+        "cn": "我還有很多工作要做。",
+        "pat": "have a lot of + 名詞 + to + 原形動詞",
+        "note": "✅ 文法正確。 work 是不可數名詞，用 a lot of 修飾(不能加 s、不能用 many)。 to do 說明這些是「要做的」工作，修飾前面的 work。 still 放在 have 前面，強調「還」有很多。"
+      },
+      {
+        "n": 8,
+        "ok": "I hope next week will be better.",
+        "cn": "我希望下禮拜會更好。",
+        "pat": "I hope + 子句",
+        "note": "✅ 文法正確。 hope 後面直接接子句，不需要 that。 next week 是未來，所以用 will be；better 是 good 的比較級，表示「比這週更好」。"
+      }
+    ],
+    "vocabTitle": "II-A. 工廠與稽核 Factory & Audit",
+    "vocab": [
+      {
+        "w": "operator",
+        "ipa": "/ˈɑːpəreɪtɚ/",
+        "pos": "n.",
+        "cn": "作業員、操作員",
+        "ex": "The operator checks every product before it goes to the next station.",
+        "exCn": "作業員在產品送到下一站之前，會逐一檢查。"
+      },
+      {
+        "w": "appearance",
+        "ipa": "/əˈpɪrəns/",
+        "pos": "n.",
+        "cn": "外觀",
+        "ex": "Customers care about the appearance of the product.",
+        "exCn": "客人很在意產品的外觀。"
+      },
+      {
+        "w": "notice",
+        "ipa": "/ˈnoʊtɪs/",
+        "pos": "v.",
+        "cn": "注意到",
+        "ex": "Did you notice the scratch on the cover?",
+        "exCn": "你有注意到外蓋上的刮痕嗎？"
+      },
+      {
+        "w": "issue",
+        "ipa": "/ˈɪʃuː/",
+        "pos": "n.",
+        "cn": "問題、議題",
+        "ex": "We found a quality issue during the inspection.",
+        "exCn": "我們在檢驗時發現了一個品質問題。"
+      },
+      {
+        "w": "discuss",
+        "ipa": "/dɪˈskʌs/",
+        "pos": "v.",
+        "cn": "討論(後面不加 about)",
+        "ex": "Let's discuss the schedule in tomorrow's meeting.",
+        "exCn": "我們在明天的會議上討論時程吧。"
+      },
+      {
+        "w": "audit",
+        "star": true,
+        "ipa": "/ˈɑː.dɪt/",
+        "pos": "n.",
+        "cn": "稽核",
+        "ex": "The customer will do a factory audit next month.",
+        "exCn": "客戶下個月會來做工廠稽核。"
+      },
+      {
+        "w": "corrosion",
+        "star": true,
+        "ipa": "/kəˈroʊ.ʒən/",
+        "pos": "n.",
+        "cn": "腐蝕",
+        "ex": "Salt spray can cause corrosion on metal parts.",
+        "exCn": "鹽霧可能造成金屬零件腐蝕。"
+      },
+      {
+        "w": "rust",
+        "ipa": "/rʌst/",
+        "pos": "n.",
+        "cn": "鏽(v. 生鏽)",
+        "ex": "There is some rust on the screw.",
+        "exCn": "螺絲上有一點鏽。"
+      },
+      {
+        "w": "chamber",
+        "star": true,
+        "ipa": "/ˈtʃeɪm.bɚ/",
+        "pos": "n.",
+        "cn": "(測試)箱、腔室",
+        "ex": "The sample stays in the test chamber for 24 hours.",
+        "exCn": "樣品在測試箱裡放 24 小時。"
+      }
+    ],
+    "vocab2Title": "II-B／II-C. 保險與費用、口說與日常 Insurance, Costs & Daily Life",
+    "vocab2": [
+      {
+        "w": "insurance",
+        "ipa": "/ɪnˈʃʊrəns/",
+        "pos": "n.",
+        "cn": "保險(不可數)",
+        "ex": "Do you have car insurance?",
+        "exCn": "你有汽車保險嗎？"
+      },
+      {
+        "w": "policy",
+        "ipa": "/ˈpɑːləsi/",
+        "pos": "n.",
+        "cn": "保單、政策",
+        "ex": "Please read your insurance policy carefully.",
+        "exCn": "請仔細閱讀你的保險保單。"
+      },
+      {
+        "w": "compensation",
+        "star": true,
+        "ipa": "/ˌkɑːm.pənˈseɪ.ʃən/",
+        "pos": "n.",
+        "cn": "賠償(不可數)",
+        "ex": "He received compensation after the accident.",
+        "exCn": "他在事故後得到了賠償。"
+      },
+      {
+        "w": "accident",
+        "ipa": "/ˈæk.sə.dənt/",
+        "pos": "n.",
+        "cn": "意外事故",
+        "ex": "The accident happened on a rainy night.",
+        "exCn": "事故發生在一個下雨的夜晚。"
+      },
+      {
+        "w": "expense",
+        "ipa": "/ɪkˈspens/",
+        "pos": "n.",
+        "cn": "費用(常用複數)",
+        "ex": "Medical expenses can be very high without insurance.",
+        "exCn": "沒有保險的話，醫療費用可能很高。"
+      },
+      {
+        "w": "surgery",
+        "ipa": "/ˈsɝːdʒɚi/",
+        "pos": "n.",
+        "cn": "手術(have surgery)",
+        "ex": "She needs surgery on her knee.",
+        "exCn": "她的膝蓋需要動手術。"
+      },
+      {
+        "w": "emergency",
+        "ipa": "/ɪˈmɝː.dʒən.si/",
+        "pos": "n.",
+        "cn": "緊急情況",
+        "ex": "Keep some cash for an emergency.",
+        "exCn": "留一些現金以備緊急情況。"
+      },
+      {
+        "w": "unexpected",
+        "ipa": "/ˌʌn.ɪkˈspek.tɪd/",
+        "pos": "adj.",
+        "cn": "意想不到的",
+        "ex": "An unexpected problem delayed the shipment.",
+        "exCn": "一個意想不到的問題延誤了出貨。"
+      },
+      {
+        "w": "subsidy",
+        "star": true,
+        "ipa": "/ˈsʌb.sə.di/",
+        "pos": "n.",
+        "cn": "補助、津貼",
+        "ex": "The company gives a meal subsidy to every employee.",
+        "exCn": "公司給每位員工餐費補助。"
+      },
+      {
+        "w": "courage",
+        "ipa": "/ˈkɝː.ɪdʒ/",
+        "pos": "n.",
+        "cn": "勇氣",
+        "ex": "It takes courage to speak up in a meeting.",
+        "exCn": "在會議上開口需要勇氣。"
+      },
+      {
+        "w": "cooperate",
+        "ipa": "/koʊˈɑː.pə.reɪt/",
+        "pos": "v.",
+        "cn": "合作",
+        "ex": "Our team will cooperate with the customer.",
+        "exCn": "我們的團隊會和客戶合作。"
+      },
+      {
+        "w": "phone case",
+        "ipa": "/ˈfoʊn ˌkeɪs/",
+        "pos": "n.",
+        "cn": "手機殼",
+        "ex": "This phone case comes in three colors.",
+        "exCn": "這款手機殼有三種顏色。"
+      },
+      {
+        "w": "humid",
+        "ipa": "/ˈhjuːmɪd/",
+        "pos": "adj.",
+        "cn": "潮濕的",
+        "ex": "It is hot and humid in the summer.",
+        "exCn": "夏天又熱又潮濕。"
+      },
+      {
+        "w": "budget-friendly",
+        "ipa": "/ˈbʌdʒ.ɪt ˌfrend.li/",
+        "pos": "adj.",
+        "cn": "不貴的、經濟實惠的",
+        "ex": "This restaurant is budget-friendly.",
+        "exCn": "這家餐廳價格實惠。"
+      },
+      {
+        "w": "dreamland",
+        "ipa": "/ˈdriːm.lænd/",
+        "pos": "n.",
+        "cn": "夢想之地",
+        "ex": "For some young people, big cities are a dreamland.",
+        "exCn": "對一些年輕人來說，大城市是夢想之地。"
+      }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases & Collocations",
+    "phrases": [
+      {
+        "p": "appearance problems",
+        "cn": "外觀問題",
+        "ex": "The inspector found two appearance problems on the cover.",
+        "exCn": "檢驗員在外蓋上發現了兩個外觀問題。",
+        "ex2": "Please take photos of any appearance problems before shipping.",
+        "ex2Cn": "出貨前請把任何外觀問題拍照下來。"
+      },
+      {
+        "p": "production line / production floor",
+        "cn": "生產線／生產現場",
+        "ex": "Line 3 is the busiest production line on our production floor.",
+        "exCn": "3 號線是我們生產現場最忙的一條生產線。",
+        "ex2": "Visitors must wear safety shoes on the production floor.",
+        "ex2Cn": "訪客在生產現場必須穿安全鞋。"
+      },
+      {
+        "p": "quality board",
+        "cn": "品質看板",
+        "ex": "We put a new quality board next to each station.",
+        "exCn": "我們在每個工站旁邊放了一塊新的品質看板。",
+        "ex2": "The quality board shows photos of good and bad parts.",
+        "ex2Cn": "品質看板上有良品和不良品的照片。"
+      },
+      {
+        "p": "discuss an issue",
+        "cn": "討論問題",
+        "ex": "We discussed the packaging issue with the supplier.",
+        "exCn": "我們和供應商討論了包裝問題。",
+        "ex2": "Can we discuss this issue after lunch?",
+        "ex2Cn": "我們可以午餐後再討論這個問題嗎？"
+      },
+      {
+        "p": "have a lot of work to do",
+        "cn": "有很多工作要做",
+        "ex": "Before the holiday, the team has a lot of work to do.",
+        "exCn": "放假前，團隊有很多工作要做。",
+        "ex2": "Sorry, I can't join you tonight. I have a lot of work to do.",
+        "ex2Cn": "抱歉，我今晚不能跟你們去，我有很多工作要做。"
+      },
+      {
+        "p": "factory audit",
+        "cn": "工廠稽核",
+        "ex": "The factory audit took two full days.",
+        "exCn": "工廠稽核花了整整兩天。",
+        "ex2": "We prepared all the documents for the factory audit.",
+        "ex2Cn": "我們為工廠稽核準備好了所有文件。"
+      },
+      {
+        "p": "be in charge of",
+        "cn": "負責……",
+        "ex": "Who is in charge of the incoming inspection?",
+        "exCn": "誰負責進料檢驗？",
+        "ex2": "Mary is in charge of the training program for new operators.",
+        "ex2Cn": "Mary 負責新作業員的訓練計畫。"
+      },
+      {
+        "p": "work in this field",
+        "cn": "在這個領域工作",
+        "ex": "My manager has worked in this field since 2010.",
+        "exCn": "我的主管從 2010 年就在這個領域工作。",
+        "ex2": "Have you worked in this field for a long time?",
+        "ex2Cn": "你在這個領域工作很久了嗎？"
+      },
+      {
+        "p": "be happy to work / cooperate with you",
+        "cn": "很高興和你們一起工作／合作",
+        "ex": "We are happy to cooperate with your team on this project.",
+        "exCn": "我們很高興在這個案子上和你們的團隊合作。",
+        "ex2": "Thank you for the meeting. We are happy to work with you.",
+        "ex2Cn": "謝謝這次會議，我們很高興和你們合作。"
+      },
+      {
+        "p": "apply for ... to pay for ...",
+        "cn": "申請……來支付……",
+        "ex": "He applied for a loan to pay for his new car.",
+        "exCn": "他申請了貸款來買新車。",
+        "ex2": "Tom applied for a part-time job to pay for his English classes.",
+        "ex2Cn": "Tom 申請了一份兼職工作來支付他的英文課。"
+      },
+      {
+        "p": "insurance policy / insurance company",
+        "cn": "保險保單／保險公司",
+        "ex": "The insurance company sent me a new policy by email.",
+        "exCn": "保險公司用電子郵件寄給我一份新保單。",
+        "ex2": "Which insurance company do you use for your car?",
+        "ex2Cn": "你的車是保哪一家保險公司？"
+      },
+      {
+        "p": "health / life / accident / travel / car / cancer insurance",
+        "cn": "健康／人壽／意外／旅遊／汽車／癌症險",
+        "ex": "I bought travel insurance before my trip to Japan.",
+        "exCn": "我去日本之前買了旅遊險。",
+        "ex2": "Health insurance is very important for older people.",
+        "ex2Cn": "健康保險對年長者非常重要。"
+      },
+      {
+        "p": "medical expenses / medical costs",
+        "cn": "醫療費用(兩者意思相同)",
+        "ex": "Medical costs in the U.S. are very high.",
+        "exCn": "美國的醫療費用非常高。",
+        "ex2": "The company helps employees with their medical expenses.",
+        "ex2Cn": "公司幫員工負擔醫療費用。"
+      },
+      {
+        "p": "financial security",
+        "cn": "財務保障",
+        "ex": "A stable job gives my family financial security.",
+        "exCn": "一份穩定的工作給我的家人財務保障。",
+        "ex2": "Saving money every month brings financial security.",
+        "ex2Cn": "每個月存錢能帶來財務保障。"
+      },
+      {
+        "p": "pay out of pocket / out-of-pocket expenses",
+        "cn": "自掏腰包／自付費用",
+        "ex": "I paid for the dental cleaning out of pocket.",
+        "exCn": "洗牙的錢是我自掏腰包付的。",
+        "ex2": "Keep your receipts for all out-of-pocket expenses.",
+        "ex2Cn": "所有自付費用的收據都要留著。"
+      },
+      {
+        "p": "cover the cost(s)",
+        "cn": "負擔費用",
+        "ex": "The company will cover the cost of the training.",
+        "exCn": "公司會負擔訓練的費用。",
+        "ex2": "Does your insurance cover the costs of the medicine?",
+        "ex2Cn": "你的保險有負擔藥品的費用嗎？"
+      },
+      {
+        "p": "government financial aid / government subsidy / financial aid",
+        "cn": "政府補助、政府經濟援助／財務援助",
+        "ex": "Many students receive financial aid for school.",
+        "exCn": "很多學生領取上學的財務援助。",
+        "ex2": "Farmers can get a government subsidy after a typhoon.",
+        "ex2Cn": "颱風過後，農民可以拿到政府補助。"
+      },
+      {
+        "p": "meal subsidy / transportation fees",
+        "cn": "餐費補助／交通費",
+        "ex": "Besides a meal subsidy, the company also pays our transportation fees.",
+        "exCn": "除了餐費補助，公司也支付我們的交通費。",
+        "ex2": "The transportation fees for the trip are about 2,000 NT dollars.",
+        "ex2Cn": "這趟行程的交通費大約兩千元台幣。"
+      },
+      {
+        "p": "get sick / have surgery",
+        "cn": "生病／動手術",
+        "ex": "My uncle got sick last winter and had surgery in March.",
+        "exCn": "我叔叔去年冬天生病，三月動了手術。",
+        "ex2": "If you get sick, please stay at home and rest.",
+        "ex2Cn": "如果你生病了，請待在家休息。"
+      },
+      {
+        "p": "pay every month / save money",
+        "cn": "每個月付款／存錢",
+        "ex": "We pay the rent every month, so it is hard to save money.",
+        "exCn": "我們每個月都要付房租，所以很難存錢。",
+        "ex2": "I want to save money for a trip to Japan.",
+        "ex2Cn": "我想存錢去日本旅行。"
+      },
+      {
+        "p": "put money aside",
+        "cn": "把錢存起來",
+        "ex": "I put money aside for a new laptop.",
+        "exCn": "我把錢存起來準備買新筆電。",
+        "ex2": "Try to put some money aside every payday.",
+        "ex2Cn": "每次發薪日都試著存一點錢。"
+      },
+      {
+        "p": "for a rainy day",
+        "cn": "以備不時之需",
+        "ex": "My mother always saves a little money for a rainy day.",
+        "exCn": "我媽媽總是存一點錢以備不時之需。",
+        "ex2": "Don't spend your bonus; keep it for a rainy day.",
+        "ex2Cn": "別把獎金花掉，留著以備不時之需。"
+      },
+      {
+        "p": "break the ice",
+        "cn": "打破僵局、開啟話題",
+        "ex": "A simple question about the weather can break the ice.",
+        "exCn": "一個關於天氣的簡單問題就能打破僵局。",
+        "ex2": "He told a funny story to break the ice at the meeting.",
+        "ex2Cn": "他在會議上講了一個有趣的故事來打破僵局。"
+      },
+      {
+        "p": "Do not put all your eggs in one basket.",
+        "cn": "不要只靠單一計畫或收入來源",
+        "ex": "It is smart to have two suppliers. Don't put all your eggs in one basket.",
+        "exCn": "有兩家供應商比較聰明。不要把雞蛋放在同一個籃子裡。",
+        "ex2": "Don't put all your eggs in one basket; learn more than one skill.",
+        "ex2Cn": "不要把雞蛋放在同一個籃子裡，要多學幾項技能。"
+      }
+    ],
+    "grammarTitle": "IV–V. 句型與文法、口說自信 Grammar & Speaking with Confidence",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "自我介紹與現在完成進行式",
+        "pat": "I am in charge of + 名詞；have / has been + V-ing + for + 一段時間",
+        "pts": [
+          "I am in charge of + 名詞：我負責……，聽起來是重要、較高階的職務。",
+          "have / has been + V-ing + for + 一段時間(現在完成進行式)：從過去某個時間開始，一直做到現在(而且可能還會繼續)。for ten years 說明「持續了多久」。",
+          "⚠ 避免中式英文：不要說 I work in this field ten years(缺 for，也沒有「持續到現在」的語氣)。",
+          "be happy to + 原形動詞：很高興能做某事；也可以說 I am happy to cooperate with you.(很高興和你們合作)。",
+          "結尾用法：在會議自我介紹，用「很高興和大家一起工作」比較自然；Thanks for listening. / Thank you for your attention. 適合正式演講或簡報結束時。場合不同(正式或非正式)，自我介紹的內容也不同。"
+        ],
+        "exs": [
+          {
+            "tag": "句型",
+            "en": "Hi, I'm Anita. I am in charge of new product quality. I have been working in this field for ten years. I am very happy to work with you all.",
+            "cn": "大家好，我是 Anita。我負責新產品品質。我在這個領域工作十年了。很高興能和大家一起工作。"
+          }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "昨天買了新手機殼：過去式 + yesterday",
+        "pat": "主詞 + 過去式動詞 + 受詞 + 過去的時間",
+        "pts": [
+          "有 yesterday 這種「明確的過去時間」，就用簡單過去式 bought(buy 的過去式，不規則變化)，不用現在完成式。",
+          "a new phone case：phone case 是可數名詞，單數要加 a；new 是形容詞，放在名詞前面。",
+          "對照作業第 2 題：強調「到現在已經」用現在完成式；有 yesterday 就用過去式。",
+          "老師的延伸說法(日常聊天句)："
+        ],
+        "exs": [
+          {
+            "tag": "句型",
+            "en": "I bought a new phone case yesterday.",
+            "cn": "我昨天買了一個新的手機殼。"
+          },
+          {
+            "tag": "老師延伸",
+            "en": "Your phone case is new.",
+            "cn": "你的手機殼是新的。"
+          },
+          {
+            "tag": "老師延伸",
+            "en": "I cannot change my cellphone, so I changed the appearance of my cellphone.",
+            "cn": "我不能換手機，所以我換了手機的外觀。"
+          },
+          {
+            "tag": "老師延伸",
+            "en": "It looks like new.",
+            "cn": "它看起來像新的一樣。"
+          }
+        ]
+      },
+      {
+        "k": "IV-C",
+        "title": "為了某個目的：to + 原形動詞",
+        "pat": "apply for + 申請的東西 + to + 原形動詞(目的)",
+        "pts": [
+          "apply for 後面接「申請的東西」；to pay for ... 說明申請的目的是「為了支付……」。",
+          "pay for + 費用：支付某項費用；her 指「她自己的」醫療費用。applied 是 apply 的過去式(y 變 ied)。",
+          "使用情境：談申請補助、申請保險給付。"
+        ],
+        "exs": [
+          {
+            "tag": "句型",
+            "en": "She applied for government financial aid to pay for her medical expenses.",
+            "cn": "她申請政府補助來支付醫療費用。"
+          }
+        ]
+      },
+      {
+        "k": "IV-D",
+        "title": "保險種類與說明句的結構",
+        "pat": "主詞(第三人稱單數) + 動詞加 s + 受詞",
+        "pts": [
+          "說明「這種保險做什麼」時，主詞是單數的 insurance，所以動詞要加 s：helps、provides、protects、covers。",
+          "if 子句用現在式，表示「萬一發生……」：if you pass away、if you have an accident，if 子句裡不用 will。",
+          "pass away 是「過世」的委婉說法；be involved in an accident 是「牽涉到一場事故」，被動語態。",
+          "provide + 東西：提供某物；protect you against ...：保護你不受……的影響。",
+          "compensation 是發生損害、傷害、意外或損失時給的錢或支持。"
+        ],
+        "exs": [
+          {
+            "tag": "Health insurance 健康保險",
+            "en": "Helps cover medical expenses.",
+            "cn": "幫忙負擔醫療費用。"
+          },
+          {
+            "tag": "Life insurance 人壽保險",
+            "en": "Provides financial support to your family if you pass away.",
+            "cn": "如果你過世，提供家人經濟支持。"
+          },
+          {
+            "tag": "Accident insurance 意外險",
+            "en": "Provides compensation if you have an accident.",
+            "cn": "如果你發生意外，提供賠償。"
+          },
+          {
+            "tag": "Travel insurance 旅遊險",
+            "en": "Protects you against unexpected problems while travelling.",
+            "cn": "旅行時保護你，應付意想不到的問題。"
+          },
+          {
+            "tag": "Car insurance 汽車保險",
+            "en": "Covers certain costs if your car is involved in an accident.",
+            "cn": "如果你的車發生事故，負擔部分費用。"
+          },
+          {
+            "tag": "Cancer insurance 癌症險",
+            "en": "Insurance specific to cancer.",
+            "cn": "專門針對癌症的保險，現在很常見。"
+          }
+        ]
+      },
+      {
+        "k": "IV-E",
+        "title": "自掏腰包與補助 Out of Pocket & Subsidies",
+        "pat": "If + 現在式, 主詞 + have to + 原形動詞",
+        "pts": [
+          "pay out of pocket = 用自己的錢付；沒被保險負擔的費用叫 out-of-pocket expenses；保險「負擔」費用用 cover the cost。",
+          "保險計畫的說法：可以選 five / ten / twenty years；年數越短，每個月要付的錢越多。期滿後保險公司可能把錢退還一部分，可能一次給(lump sum)或每月給，要看保險計畫。",
+          "financial aid = 財務援助(financial help)；government subsidy = 政府提供金錢或支持，幫人付某些費用；government financial aid 意思相近，指政府提供給需要幫助的人。",
+          "公司補助也可以用 subsidy：meal subsidy(餐費補助：早餐、午餐、晚餐)、transportation fees(交通費)。來回機票 round trip 的費用是單程 one-way 的兩倍。"
+        ],
+        "exs": [
+          {
+            "tag": "保險沒給付",
+            "en": "If the insurance does not cover the treatment, you have to pay out of pocket.",
+            "cn": "如果保險不給付這項治療，你就得自掏腰包。"
+          },
+          {
+            "tag": "申請補助",
+            "en": "She applied for a government subsidy to pay medical expenses.",
+            "cn": "她申請政府補助來支付醫療費用。"
+          }
+        ]
+      },
+      {
+        "k": "V-A",
+        "title": "先開口，不必完美",
+        "patLabel": "重點：溝通不需要完美的英文，需要的是願意開口、主動、反覆練習。",
+        "pts": [
+          "話題完不完美不重要，有對話才重要；健康、股票、感情、生活小事，都可以當話題，例如手機殼。"
+        ],
+        "exs": [
+          {
+            "tag": "重點",
+            "en": "Never be afraid of making mistakes.",
+            "cn": "不要害怕犯錯。"
+          },
+          {
+            "tag": "重點",
+            "en": "Having a perfect topic is not important. Having a conversation is important.",
+            "cn": "話題完不完美不重要，有對話才重要。"
+          }
+        ]
+      },
+      {
+        "k": "V-B",
+        "title": "簡單的第一句話 Opening Lines",
+        "pat": "Excuse me, + 句子 ／ How about + 名詞? ／ Could you + 原形動詞, please?",
+        "pts": [
+          "Excuse me 先引起注意再說問題，很禮貌；How about + 名詞?：「……呢？」，把同一個問題丟給對方；Could you ..., please?：客氣地請對方做某事。",
+          "目的是 break the ice(打破僵局)：短、禮貌、真誠的一句話就夠了。"
+        ],
+        "exs": [
+          {
+            "tag": "最基本的日常話題",
+            "en": "What did you do today?",
+            "cn": "你今天做了什麼？"
+          },
+          {
+            "tag": "從天氣開始",
+            "en": "Do you like rain?",
+            "cn": "你喜歡下雨嗎？"
+          },
+          {
+            "tag": "天氣",
+            "en": "It rains a lot in Taiwan. How is the weather in your country?",
+            "cn": "台灣常下雨。你們國家的天氣怎麼樣？"
+          },
+          {
+            "tag": "當地環境",
+            "en": "Vietnam is very humid. How about your country? Is it humid?",
+            "cn": "越南很潮濕。你們國家呢？潮濕嗎？"
+          },
+          {
+            "tag": "問客人的國家",
+            "en": "How many hours is the time difference?",
+            "cn": "時差幾個小時？"
+          },
+          {
+            "tag": "想問事情時的第一句",
+            "en": "Excuse me, I have a question.",
+            "cn": "不好意思，我有個問題。"
+          },
+          {
+            "tag": "誠懇又親切，對方通常會更有耐心、說慢一點",
+            "en": "Excuse me, our English is not so good, but we really like to talk with you.",
+            "cn": "不好意思，我們的英文不太好，但我們真的很想跟你們聊天。"
+          },
+          {
+            "tag": "沒聽懂時",
+            "en": "Could you repeat that, please?",
+            "cn": "可以請你再說一次嗎？"
+          }
+        ]
+      }
+    ],
+    "reading": [
+      {
+        "bar": "VI. 閱讀 Reading：Insurance and Saving Money",
+        "title": "Insurance and Saving Money",
+        "titleCn": "保險與存錢",
+        "paras": [
+          {
+            "en": "Having insurance is important, especially when people get older. Sometimes people get sick or need surgery, and medical costs can be very expensive.",
+            "cn": "有保險很重要，尤其是人年紀變大的時候。有時候人會生病或需要動手術，而醫療費用可能非常昂貴。"
+          },
+          {
+            "en": "Last year, my father had surgery. Luckily, his health insurance covered the medical costs, so he didn't have to pay everything himself.",
+            "cn": "去年，我爸爸動了手術。幸運的是，他的健康保險負擔了醫療費用，所以他不用自己付全部的錢。"
+          },
+          {
+            "en": "However, insurance can be expensive. Sometimes we have to pay a lot of money every month.",
+            "cn": "不過，保險可能很貴。有時候我們每個月都要付很多錢。"
+          },
+          {
+            "en": "I think it's important to have insurance and save money for a rainy day. We should put some money aside every month for emergencies.",
+            "cn": "我認為有保險並且為了不時之需存錢很重要。我們每個月應該把一些錢存起來，以備緊急情況。"
+          },
+          {
+            "en": "This way, we don't have to worry too much when unexpected things happen.",
+            "cn": "這樣一來，當意想不到的事情發生時，我們就不用太擔心。"
+          }
+        ]
+      }
+    ],
+    "extraTitle": "VI. 閱讀文法解說 Grammar in the Reading",
+    "extra": [
+      {
+        "title": "🔬 文法解說：文章裡的重點",
+        "exs": [
+          {
+            "tag": "動名詞當主詞",
+            "en": "Having insurance is important.",
+            "cn": "動名詞(V-ing)當主詞，「擁有保險」是一件事，動詞用單數 is。"
+          },
+          {
+            "tag": "didn't have to",
+            "en": "He didn't have to pay everything himself.",
+            "cn": "didn't have to + 原形動詞：不必做某事(沒有義務)；現在式是 don't have to。注意它和 must not(禁止)不同。have to pay：必須付款。"
+          },
+          {
+            "tag": "should put ... aside",
+            "en": "We should put some money aside every month for emergencies.",
+            "cn": "should + 原形動詞，表示「應該」；put aside 是「把……放到一邊、存起來」，aside 放在名詞後面。"
+          },
+          {
+            "tag": "This way, ...",
+            "en": "This way, we don't have to worry too much when unexpected things happen.",
+            "cn": "「這樣一來……」，承接上面的做法，說明結果。"
+          },
+          {
+            "tag": "Luckily / However / especially",
+            "en": "Luckily, his health insurance covered the medical costs.",
+            "cn": "Luckily 放句首表示「幸運的是」，However 表示轉折，especially 強調「尤其是」。"
+          }
+        ]
+      }
+    ]
   }
   ]
 };
@@ -34273,6 +35016,7 @@ window.BOOK = {
     bk20261013:[[['key','plug','search','map','ballot'],'品保會議五階段：確認新治具能否投入生產 → 機器出狀況先停止測試 → 螺絲組裝時斷裂、不良率變高 → 問題最先出現在第三站、檢查治具是否對準 → 預計明天下午重啟、週五前完成訓練並更新 SOP。']],
     bk20261023:[[['wrench','magnifyL','cross','thermo','target'],'妮娜的品管一天：作業員把螺絲鎖到規定扭力 → 檢查框架瑕疵、用三用電表做導通測試 → 坡度馬達故障，標示不良品並隔離 → 環境試驗箱維護紀錄未更新、回報主管 → 找出根本原因、採取矯正措施防止再發生。']],
     bk20261110:[[['extinguisher','blueprint','trash','controlPanel','passTag'],'把手首件檢驗：新製把手做首件檢驗 → 尺寸與技術圖面不符 → 查出用了過時圖面 → 工程部提供新圖面並調整機台設定 → 再驗合格核准量產並改善文件管制。']],
+    bk20261119:[[['hospital','moneyL','wallet','piggy','typhoon'],'保險與存錢：年紀變大可能生病或動手術、醫療費很貴 → 爸爸動手術，健康保險負擔醫療費 → 保險不便宜，每個月要付很多錢 → 每個月存一點錢以備不時之需 → 意外發生時不用太擔心。']],
     bk20261027:[[['coffee','camera','nametag','basket','brainL'],'妮娜的品管一天：每天早上檢查產線 → 目視檢查刮痕、裂縫、鏽 → 坡度馬達故障，標示為不良品 → 與合格品分開、記錄序號 → 找出根本原因，預防同樣問題再發生。']],
   };;
   ((window.BOOK||{}).lessons||[]).forEach(function(b){
