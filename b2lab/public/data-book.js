@@ -34230,6 +34230,7 @@ window.BOOK = {
       }
     ],
     "phrasesTitle": "III. 片語與搭配詞 Phrases & Collocations",
+    "phrasesCard": true,
     "phrases": [
       {
         "p": "appearance problems",
