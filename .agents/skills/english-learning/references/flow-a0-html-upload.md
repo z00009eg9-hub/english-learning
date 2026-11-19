@@ -40,7 +40,14 @@ create_file(
 - callout 用**兩欄表格**：第一欄背景 `#FFD54F`（黃色粗直條），第二欄 `#FFFDE7`。
   ⚠ 不要用 `border-left`，那條會太細，跟 20260811 不一樣
   ⚠ **黃色直條欄寬一律 0.4 公分**（轉檔後用 Apps Script `table.setColumnWidth(0, 11.34)`，11.34pt≈0.4cm；2026-08-19 使用者指定）
-  ⚠ **黃底 callout 不要外框線**（2026-10-27 使用者指定）：HTML 的 `td` 邊框轉檔後會留下灰框，轉檔後一律 `table.setBorderColor("#ffffff").setBorderWidth(1)`（改白色；只設寬度 0 在 Docs 仍會顯示灰線）
+  ⚠ **黃底 callout 不要外框線**（2026-10-27 使用者指定）：
+  ⭐ **2026-11-19 確認的正解：在 HTML 就把 callout 的每個 `td` 寫成 `border:0px solid #dddddd`**（黃條格加 `padding:0`，內容格 `padding:3pt 7.5pt`），轉檔後就是 20260917 那種無格線卡片。
+  只在轉檔後用 `table.setBorderColor("#ffffff").setBorderWidth(1)` 擋不住 `td` 自帶的灰框，使用者判定「格式完全不對」；這行已從 fix-format.gs 移除，不要再加回去。
+- **作業複習卡片格式（比照 20260917，2026-11-19 使用者指定）**：每題上方一段 `<p><b style="font-size:14pt">第 N 題</b></p>`，
+  下面一張兩欄表格，原句／訂正／中文／結構／🔬 文法解說**各佔一列**（每列左邊都是黃條格）。
+  🔬 那一列：`<p><b>🔬 文法解說：</b></p>` 標籤**自己一行**，解說每一句（以「。」切開）**各自一個 `<p>`**。
+  範本：`20261119-職場品質看板、保險與存錢/note.html`；比對參考文件：`20260917-工廠安全與包裝出貨【格式版】`。
+- 轉檔後要一併跑 `fixOverflow`（防表格列跨頁），Apps Script 專案要先在「服務 +」加 **Google Docs API**；fixFormat 最後直接呼叫 fixOverflow，不要靠下拉選單切換。
 - **問答練習（Q／A／中文）用段落式，不要做成表格**（2026-10-27 使用者指定）：每題三行 `N. Q：`／`A：`／`中文：`（標籤粗體、13pt、行距 1.5、題與題之間段後 12pt），
   Q、A 兩行用 Docs API 設 `keepWithNext`，避免同一題被切到兩頁。參考腳本：`20261027-Avoid與Prevent及問題報告/fix-format.gs`
 - callout 內文字顏色：標籤（原句／訂正／中文／結構／文法解說）**粗體黑字**；
