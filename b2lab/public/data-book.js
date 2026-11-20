@@ -34697,6 +34697,905 @@ window.BOOK = {
         ]
       }
     ]
+  },
+  /* ---- bk20261120 Years of Experience, Applying for Aid & Insurance Coverage ---- */
+  {
+    "id": "bk20261120",
+    "video": true,
+    "icon": "🧾",
+    "date": "2026-11-20",
+    "doc": "https://docs.google.com/document/d/18BPRURb6dCWg7_z3VqSnFTazdZ3xG2vZo9HvXMtnfMM/edit",
+    "title": "Years of Experience, Applying for Aid & Insurance Coverage",
+    "titleCn": "品質管制年資、申請補助與保險給付",
+    "topics": "作業複習(外觀瑕疵／for 與 since／apply for／cover／have to)・單字(品質與外觀／補助與保險／醫療與老年生活)・片語與搭配詞・for 與 since・apply for・cover・have to 與 pay out of pocket・問句・noticed 與 found・被動語態・emergency 與 unexpected things・口說練習・用新單字說故事・課堂填空",
+    "hwTitle": "I. ★ 11/20 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "wrong": "Our customer noticed two appearance problem on the frame..",
+        "fix": "Our customer found two cosmetic defects on the frame.",
+        "cn": "我們的客人在框架上發現了兩個外觀瑕疵。",
+        "pat": "主詞 + found + 數字 + 複數名詞 + on + 物件",
+        "note": "two 後面的名詞要用複數，所以 problem 要改成 problems(或像老師一樣換成 defects)。 cosmetic defect 是「外觀瑕疵」：cosmetic 指表面、外觀上的，不影響功能；比 appearance problem 更專業。 found 是 find 的過去式，表示「發現」；on the frame 是「在框架上」。"
+      },
+      {
+        "n": 2,
+        "wrong": "I've been working in quality control since ten years.",
+        "fix": "I've been working in quality control for ten years.",
+        "cn": "我在品質管制領域工作十年了。",
+        "pat": "have / has been + V-ing + for + 一段時間",
+        "note": "for 後面接「一段時間」(ten years)；since 後面要接「起點」(2016)，所以 since ten years 是錯的。 have been working 是現在完成進行式，表示「從過去一直做到現在」。 in quality control：在品質管制這個領域。"
+      },
+      {
+        "n": 3,
+        "wrong": "She applied a government subsidy to pay for her surgery.",
+        "fix": "She applied for government financial aid to pay for her medical expenses.",
+        "cn": "她申請政府補助來支付醫療費用。",
+        "pat": "apply for + 申請的東西 + to + 原形動詞",
+        "note": "apply 後面一定要加 for：apply for + 申請的東西。 to pay for ... 是不定詞，表示「目的」(為了支付……)。 老師把 subsidy 換成 financial aid(兩者都是「補助」)，surgery 換成 medical expenses(範圍更廣，包含手術、住院、藥費)。"
+      },
+      {
+        "n": 4,
+        "wrong": "My travel insurance cover the plane and taxi costs.",
+        "fix": "My travel insurance covers my flight and taxi expenses.",
+        "cn": "我的旅遊保險涵蓋我的機票和計程車費用。",
+        "pat": "單數主詞 + 動詞加 s + 受詞",
+        "note": "insurance 是不可數名詞，當單數主詞，現在式動詞要加 s：covers。 plane 是「飛機」本身；要說機票、航班的費用，用 flight。 cover the costs ＝ 支付、承擔費用；cover the expenses ＝ 涵蓋費用。兩者意思很接近，實際上常互換。"
+      },
+      {
+        "n": 5,
+        "wrong": "If the insurance doesn't cover the test, I'll have to paid out of pocket.",
+        "fix": "If the insurance doesn't cover the expenses, I'll have to pay out of my pocket.",
+        "cn": "如果保險不給付這些費用，我就得自己掏腰包。",
+        "pat": "If + 現在式, 主詞 + will + have to + 原形動詞",
+        "note": "have to 後面接原形動詞，paid 要改成 pay。 if 子句用現在式(doesn't cover)，主句用 will(I'll have to)。 pay out of pocket ＝ 自費、自己掏腰包；老師寫 out of my pocket，更常聽到 out of pocket 或 out of my own pocket。"
+      },
+      {
+        "n": 6,
+        "wrong": "I have to paid for the examination myself.",
+        "fix": "I have to pay for the examination myself.",
+        "cn": "我必須自己支付這項檢查的費用。",
+        "pat": "have to + 原形動詞 + for + 事物",
+        "note": "to 後面不能接過去式，要用原形 pay。 pay for + 事物：為某樣東西付錢；myself 強調「自己」。"
+      },
+      {
+        "n": 7,
+        "wrong": "She applied a government subsidy last month.",
+        "fix": "She applied for a government subsidy last month.",
+        "cn": "她上個月申請了政府補助。",
+        "pat": "apply for + 申請的東西",
+        "note": "apply 後面缺 for。 last month 是明確的過去時間，所以用過去式 applied。"
+      }
+    ],
+    "vocabTitle": "II-A. 品質與外觀 Quality & Appearance",
+    "vocab": [
+      {
+        "w": "frame",
+        "ipa": "/freɪm/",
+        "pos": "n.",
+        "cn": "框架",
+        "ex": "The frame is made of aluminum.",
+        "exCn": "這個框架是鋁製的。"
+      },
+      {
+        "w": "cosmetic",
+        "star": true,
+        "ipa": "/kɑːzˈmet̬.ɪk/",
+        "pos": "adj.",
+        "cn": "外觀的、表面的",
+        "ex": "This is only a cosmetic problem; it does not affect the function.",
+        "exCn": "這只是外觀上的問題，不影響功能。"
+      },
+      {
+        "w": "defect",
+        "star": true,
+        "ipa": "/ˈdiː.fekt/",
+        "pos": "n.",
+        "cn": "瑕疵、缺陷",
+        "ex": "We found a small defect near the edge.",
+        "exCn": "我們在邊緣附近發現了一個小瑕疵。"
+      },
+      {
+        "w": "appearance",
+        "ipa": "/əˈpɪrəns/",
+        "pos": "n.",
+        "cn": "外觀",
+        "ex": "Please check the appearance of every unit.",
+        "exCn": "請檢查每一台的外觀。"
+      },
+      {
+        "w": "inspection",
+        "ipa": "/ɪnˈspek.ʃən/",
+        "pos": "n.",
+        "cn": "檢驗",
+        "ex": "The inspection starts at nine o'clock.",
+        "exCn": "檢驗九點開始。"
+      },
+      {
+        "w": "quality",
+        "ipa": "/ˈkwɑːləti/",
+        "pos": "n.",
+        "cn": "品質",
+        "ex": "The customer is happy with the quality of our products.",
+        "exCn": "客戶對我們產品的品質很滿意。"
+      }
+    ],
+    "vocab2Title": "II-B／II-C. 補助與保險、醫療與老年生活 Aid, Insurance, Medical & Elderly Life",
+    "vocab2": [
+      {
+        "w": "apply",
+        "ipa": "/əˈplaɪ/",
+        "pos": "v.",
+        "cn": "申請(apply for)",
+        "ex": "You can apply online.",
+        "exCn": "你可以線上申請。"
+      },
+      {
+        "w": "subsidy",
+        "star": true,
+        "ipa": "/ˈsʌb.sə.di/",
+        "pos": "n.",
+        "cn": "補助、津貼",
+        "ex": "The city offers a subsidy for solar panels.",
+        "exCn": "市政府提供太陽能板的補助。"
+      },
+      {
+        "w": "financial",
+        "ipa": "/faɪˈnæn.ʃəl/",
+        "pos": "adj.",
+        "cn": "財務的、經濟的",
+        "ex": "He needs financial help to finish school.",
+        "exCn": "他需要經濟上的協助才能完成學業。"
+      },
+      {
+        "w": "aid",
+        "ipa": "/eɪd/",
+        "pos": "n.",
+        "cn": "援助、補助(不可數)",
+        "ex": "Many students receive aid from the school.",
+        "exCn": "很多學生從學校得到補助。"
+      },
+      {
+        "w": "insurance",
+        "ipa": "/ɪnˈʃʊrəns/",
+        "pos": "n.",
+        "cn": "保險(不可數)",
+        "ex": "Travel insurance is not expensive.",
+        "exCn": "旅遊保險並不貴。"
+      },
+      {
+        "w": "cover",
+        "ipa": "/ˈkʌvɚ/",
+        "pos": "v.",
+        "cn": "涵蓋、負擔(費用)",
+        "ex": "Does this plan cover dental care?",
+        "exCn": "這個方案涵蓋牙科治療嗎？"
+      },
+      {
+        "w": "expense",
+        "ipa": "/ɪkˈspens/",
+        "pos": "n.",
+        "cn": "費用(常用複數)",
+        "ex": "Hotel expenses were higher than we expected.",
+        "exCn": "住宿費用比我們預期的高。"
+      },
+      {
+        "w": "flight",
+        "ipa": "/flaɪt/",
+        "pos": "n.",
+        "cn": "班機、航班",
+        "ex": "Our flight leaves at six.",
+        "exCn": "我們的班機六點起飛。"
+      },
+      {
+        "w": "cancellation",
+        "star": true,
+        "ipa": "/ˌkænsəˈleɪʃn/",
+        "pos": "n.",
+        "cn": "取消",
+        "ex": "The airline announced the cancellation of two flights.",
+        "exCn": "航空公司宣布取消兩個航班。"
+      },
+      {
+        "w": "examination",
+        "ipa": "/ɪɡˌzæm.ɪˈneɪ.ʃən/",
+        "pos": "n.",
+        "cn": "檢查",
+        "ex": "The doctor ordered a blood examination.",
+        "exCn": "醫生安排了血液檢查。"
+      },
+      {
+        "w": "treatment",
+        "ipa": "/ˈtriːtmənt/",
+        "pos": "n.",
+        "cn": "治療",
+        "ex": "The treatment took three weeks.",
+        "exCn": "治療花了三個星期。"
+      },
+      {
+        "w": "medical",
+        "ipa": "/ˈmed.ɪ.kəl/",
+        "pos": "adj.",
+        "cn": "醫療的",
+        "ex": "She has a medical appointment tomorrow.",
+        "exCn": "她明天有看診預約。"
+      },
+      {
+        "w": "surgery",
+        "ipa": "/ˈsɝːdʒɚi/",
+        "pos": "n.",
+        "cn": "手術",
+        "ex": "The surgery went well.",
+        "exCn": "手術很順利。"
+      },
+      {
+        "w": "medicine",
+        "ipa": "/ˈmedɪsɪn/",
+        "pos": "n.",
+        "cn": "藥(不可數)",
+        "ex": "Take this medicine twice a day.",
+        "exCn": "這個藥一天吃兩次。"
+      },
+      {
+        "w": "elderly",
+        "ipa": "/ˈel.dɚ.li/",
+        "pos": "adj.",
+        "cn": "年長的",
+        "ex": "Many elderly people live alone.",
+        "exCn": "許多老年人獨居。"
+      },
+      {
+        "w": "retired",
+        "ipa": "/rɪˈtaɪɚd/",
+        "pos": "adj.",
+        "cn": "退休的",
+        "ex": "My uncle is retired now.",
+        "exCn": "我叔叔現在退休了。"
+      },
+      {
+        "w": "income",
+        "ipa": "/ˈɪn.kʌm/",
+        "pos": "n.",
+        "cn": "收入",
+        "ex": "Her monthly income is stable.",
+        "exCn": "她每個月的收入很穩定。"
+      },
+      {
+        "w": "limited",
+        "ipa": "/ˈlɪm.ɪ.t̬ɪd/",
+        "pos": "adj.",
+        "cn": "有限的",
+        "ex": "We have limited time today.",
+        "exCn": "我們今天的時間有限。"
+      },
+      {
+        "w": "burden",
+        "star": true,
+        "ipa": "/ˈbɝː.dən/",
+        "pos": "n.",
+        "cn": "負擔",
+        "ex": "Rising prices are a heavy burden for families.",
+        "exCn": "物價上漲對家庭是沉重的負擔。"
+      },
+      {
+        "w": "assistance",
+        "star": true,
+        "ipa": "/əˈsɪs.təns/",
+        "pos": "n.",
+        "cn": "協助、援助(不可數)",
+        "ex": "Thank you for your assistance.",
+        "exCn": "謝謝你的協助。"
+      },
+      {
+        "w": "proper",
+        "ipa": "/ˈprɑːpɚ/",
+        "pos": "adj.",
+        "cn": "適當的",
+        "ex": "Everyone should get proper care.",
+        "exCn": "每個人都應該得到適當的照顧。"
+      },
+      {
+        "w": "comfortably",
+        "ipa": "/ˈkʌmf.tɚ.bli/",
+        "pos": "adv.",
+        "cn": "舒適地",
+        "ex": "They live comfortably on their savings.",
+        "exCn": "他們靠存款過得很舒適。"
+      },
+      {
+        "w": "emergency",
+        "ipa": "/ɪˈmɝː.dʒən.si/",
+        "pos": "n.",
+        "cn": "緊急情況",
+        "ex": "Call the hospital in an emergency.",
+        "exCn": "緊急時請打電話給醫院。"
+      },
+      {
+        "w": "unexpected",
+        "ipa": "/ˌʌn.ɪkˈspek.tɪd/",
+        "pos": "adj.",
+        "cn": "意想不到的",
+        "ex": "We had an unexpected visitor.",
+        "exCn": "我們來了一位意想不到的訪客。"
+      }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases & Collocations",
+    "phrasesCard": true,
+    "phrases": [
+      {
+        "p": "appearance problems",
+        "cn": "外觀問題",
+        "ex": "Do you see any appearance problems on this part?",
+        "exCn": "你有看到這個零件有任何外觀問題嗎？",
+        "ex2": "Most appearance problems are caught at the final inspection.",
+        "ex2Cn": "大部分外觀問題會在最終檢驗時被抓到。"
+      },
+      {
+        "p": "cosmetic defects",
+        "cn": "外觀瑕疵",
+        "ex": "The box has two cosmetic defects, but it works well.",
+        "exCn": "這個箱子有兩處外觀瑕疵，但功能正常。",
+        "ex2": "Cosmetic defects such as scratches can lead to complaints.",
+        "ex2Cn": "刮痕之類的外觀瑕疵可能導致客訴。"
+      },
+      {
+        "p": "quality control",
+        "cn": "品質管制",
+        "ex": "Our quality control team checks every shipment.",
+        "exCn": "我們的品質管制團隊會檢查每一批出貨。",
+        "ex2": "She moved to quality control last year.",
+        "ex2Cn": "她去年轉到品質管制部門。"
+      },
+      {
+        "p": "apply for",
+        "cn": "申請",
+        "ex": "You can apply for a parking permit at the front desk.",
+        "exCn": "你可以到櫃檯申請停車證。",
+        "ex2": "Why did you apply for this position?",
+        "ex2Cn": "你為什麼申請這個職位？"
+      },
+      {
+        "p": "apply for a subsidy",
+        "cn": "申請補助",
+        "ex": "Small companies can apply for a subsidy every year.",
+        "exCn": "小公司每年都可以申請補助。",
+        "ex2": "He forgot to apply for a subsidy before the deadline.",
+        "ex2Cn": "他忘了在截止日前申請補助。"
+      },
+      {
+        "p": "travel insurance",
+        "cn": "旅遊保險",
+        "ex": "Did you buy travel insurance before the trip?",
+        "exCn": "你出發前有買旅遊保險嗎？",
+        "ex2": "Travel insurance can help if your luggage is lost.",
+        "ex2Cn": "行李遺失時，旅遊保險可以幫上忙。"
+      },
+      {
+        "p": "cover the costs",
+        "cn": "支付／承擔費用",
+        "ex": "The company will cover the costs of the training.",
+        "exCn": "公司會支付這次訓練的費用。",
+        "ex2": "Who will cover the costs if the shipment is damaged?",
+        "ex2Cn": "如果貨物受損，誰來承擔費用？"
+      },
+      {
+        "p": "pay out of pocket",
+        "cn": "自費、自己掏腰包",
+        "ex": "Some treatments are not covered, so patients pay out of pocket.",
+        "exCn": "有些治療不在給付範圍內，所以病人要自費。",
+        "ex2": "I paid for the taxi out of pocket and asked the company to reimburse me.",
+        "ex2Cn": "我先自己付了計程車費，再請公司報銷。"
+      },
+      {
+        "p": "get sick",
+        "cn": "生病",
+        "ex": "Many people get sick when the weather changes quickly.",
+        "exCn": "天氣變化很快時，很多人會生病。",
+        "ex2": "I got sick after the long trip.",
+        "ex2Cn": "長途旅行後我生病了。"
+      },
+      {
+        "p": "have surgery",
+        "cn": "動手術",
+        "ex": "My grandfather will have surgery next week.",
+        "exCn": "我爺爺下週要動手術。",
+        "ex2": "She had to have surgery on her shoulder.",
+        "ex2Cn": "她的肩膀必須動手術。"
+      },
+      {
+        "p": "medical costs",
+        "cn": "醫療費用",
+        "ex": "Medical costs go up every year.",
+        "exCn": "醫療費用每年都在上漲。",
+        "ex2": "Insurance helps lower your medical costs.",
+        "ex2Cn": "保險可以幫你降低醫療費用。"
+      },
+      {
+        "p": "pay every month",
+        "cn": "每個月付款",
+        "ex": "We pay the rent every month on the first day.",
+        "exCn": "我們每個月一號付房租。",
+        "ex2": "Do you pay this bill every month or once a year?",
+        "ex2Cn": "這張帳單你是每個月付還是一年付一次？"
+      },
+      {
+        "p": "save money",
+        "cn": "存錢、省錢",
+        "ex": "I try to save money by cooking at home.",
+        "exCn": "我試著在家煮飯來省錢。",
+        "ex2": "It is hard to save money when prices are high.",
+        "ex2Cn": "物價高的時候很難存錢。"
+      },
+      {
+        "p": "put money aside",
+        "cn": "把錢存起來",
+        "ex": "She puts some money aside every payday.",
+        "exCn": "她每次發薪日都會存一些錢。",
+        "ex2": "We put money aside for our trip to Japan.",
+        "ex2Cn": "我們把錢存起來，準備去日本旅行。"
+      },
+      {
+        "p": "for a rainy day",
+        "cn": "以備不時之需",
+        "ex": "He keeps some savings for a rainy day.",
+        "exCn": "他留了一些存款以備不時之需。",
+        "ex2": "It is wise to save for a rainy day.",
+        "ex2Cn": "為不時之需存錢是明智的。"
+      },
+      {
+        "p": "in case of an emergency",
+        "cn": "以備緊急情況",
+        "ex": "I keep some medicine at home in case of an emergency.",
+        "exCn": "我在家裡準備了一些藥，以備不時之需。",
+        "ex2": "Keep a flashlight near the door in case of an emergency.",
+        "ex2Cn": "把手電筒放在門邊，以備緊急情況。"
+      },
+      {
+        "p": "retired and have limited income",
+        "cn": "退休且收入有限",
+        "ex": "My neighbors are retired and have limited income, so they spend carefully.",
+        "exCn": "我的鄰居退休了、收入有限，所以花錢很謹慎。",
+        "ex2": "People who are retired and have limited income may need help with rent.",
+        "ex2Cn": "退休且收入有限的人，房租可能需要協助。"
+      },
+      {
+        "p": "cover medical expenses",
+        "cn": "支付醫療費用",
+        "ex": "The fund helps cover medical expenses for low-income families.",
+        "exCn": "這個基金幫助低收入家庭支付醫療費用。",
+        "ex2": "Does your plan cover medical expenses abroad?",
+        "ex2Cn": "你的方案涵蓋國外的醫療費用嗎？"
+      },
+      {
+        "p": "daily living costs",
+        "cn": "日常生活開銷",
+        "ex": "Daily living costs are high in big cities.",
+        "exCn": "大城市的日常生活開銷很高。",
+        "ex2": "She keeps a record of her daily living costs.",
+        "ex2Cn": "她記錄自己的日常生活開銷。"
+      },
+      {
+        "p": "reduce the financial burden",
+        "cn": "減輕經濟負擔",
+        "ex": "A scholarship can reduce the financial burden on students.",
+        "exCn": "獎學金可以減輕學生的經濟負擔。",
+        "ex2": "Lower prices would reduce the financial burden on families.",
+        "ex2Cn": "降低物價可以減輕家庭的經濟負擔。"
+      },
+      {
+        "p": "provide financial assistance",
+        "cn": "提供經濟援助",
+        "ex": "The program provides financial assistance to new small businesses.",
+        "exCn": "這個計畫為新的小型企業提供經濟援助。",
+        "ex2": "Banks sometimes provide financial assistance after a disaster.",
+        "ex2Cn": "災害發生後，銀行有時會提供經濟援助。"
+      },
+      {
+        "p": "receive proper medical care",
+        "cn": "接受適當的醫療照護",
+        "ex": "Every patient should receive proper medical care.",
+        "exCn": "每位病人都應該接受適當的醫療照護。",
+        "ex2": "Rural areas need more doctors so people can receive proper medical care.",
+        "ex2Cn": "偏鄉需要更多醫生，人們才能接受適當的醫療照護。"
+      },
+      {
+        "p": "hospital bills",
+        "cn": "住院／醫院費用",
+        "ex": "The hospital bills were more than he expected.",
+        "exCn": "住院費用比他預期的多。",
+        "ex2": "The insurance covers the hospital bills.",
+        "ex2Cn": "保險給付住院費用。"
+      },
+      {
+        "p": "health examination",
+        "cn": "健康檢查",
+        "ex": "Our company arranges a health examination every spring.",
+        "exCn": "我們公司每年春天安排健康檢查。",
+        "ex2": "You should not eat before the health examination.",
+        "ex2Cn": "健康檢查前你不應該進食。"
+      },
+      {
+        "p": "medical treatment expenses",
+        "cn": "醫療處置費用",
+        "ex": "My insurance covers medical treatment expenses.",
+        "exCn": "我的保險涵蓋醫療處置費用。",
+        "ex2": "Please keep the receipts for all medical treatment expenses.",
+        "ex2Cn": "請保留所有醫療處置費用的收據。"
+      },
+      {
+        "p": "housing",
+        "cn": "住房、住處(accommodation)",
+        "ex": "They can help cover housing, medical treatment, and hospital bills.",
+        "exCn": "它們可以幫忙支付住房、醫療和住院費用。",
+        "ex2": "Housing is a big part of daily living costs.",
+        "ex2Cn": "住房是日常生活開銷中很大的一部分。"
+      }
+    ],
+    "grammarTitle": "IV. 句型與文法解說 Sentence Patterns & Grammar",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "for 與 since：持續多久 vs. 從何時開始",
+        "pat": "have / has been + V-ing + for + 一段時間 ／ have / has been + V-ing + since + 起點",
+        "pts": [
+          "for + 一段時間：for ten years、for three months、for a long time。",
+          "since + 起點：since 2016、since last year、since I was a child。",
+          "❌ since ten years ✅ for ten years(ten years 是「一段時間」，不是「起點」)。",
+          "🔬 have been + V-ing 表示動作從過去開始、一直持續到現在。",
+          "🔬 想問期間時用 How long have you been + V-ing ...?，回答就用 for 或 since。"
+        ],
+        "exs": [
+          {
+            "tag": "老師的例句",
+            "en": "I've been working here since 2016.",
+            "cn": "我從 2016 年起就在這裡工作了。"
+          },
+          {
+            "tag": "for",
+            "en": "We have been using this machine for two years.",
+            "cn": "我們用這台機器用了兩年了。"
+          },
+          {
+            "tag": "since",
+            "en": "He has been sick since Monday.",
+            "cn": "他從週一就一直不舒服。"
+          },
+          {
+            "tag": "since",
+            "en": "My company has provided health insurance since 2020.",
+            "cn": "我的公司從 2020 年起就提供健康保險。"
+          }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "apply for：申請某樣東西",
+        "pat": "apply for + 申請的東西",
+        "pts": [
+          "apply 是動詞，後面一定要接 for 才能接名詞：Apply for ＝ 申請。",
+          "後面再說目的時，用不定詞：apply for aid to pay for ...。",
+          "❌ Apply financial assistance. ✅ Apply for financial assistance.(申請經濟援助)",
+          "apply to 也存在，但意思不同(例如 apply to 某個單位)；介系詞用錯會改變甚至破壞句意，要特別小心。"
+        ],
+        "exs": [
+          {
+            "tag": "apply for a job",
+            "en": "I'm applying for a new job.",
+            "cn": "我正在申請一份新工作。"
+          },
+          {
+            "tag": "apply for a visa",
+            "en": "She applied for a US visa.",
+            "cn": "她申請了美國簽證。"
+          },
+          {
+            "tag": "apply for a loan",
+            "en": "He applied for a bank loan.",
+            "cn": "他申請了銀行貸款。"
+          },
+          {
+            "tag": "apply for a credit card",
+            "en": "I want to apply for a credit card.",
+            "cn": "我想申請信用卡。"
+          },
+          {
+            "tag": "apply for a subsidy",
+            "en": "We applied for a government subsidy.",
+            "cn": "我們申請了政府補助。"
+          },
+          {
+            "tag": "apply for insurance",
+            "en": "He applied for health insurance.",
+            "cn": "他申請了健康保險。"
+          },
+          {
+            "tag": "apply for a position",
+            "en": "She's applying for a management position.",
+            "cn": "她正在申請一個管理職位。"
+          },
+          {
+            "tag": "apply for a refund",
+            "en": "I'd like to apply for a refund.",
+            "cn": "我想申請退款。"
+          },
+          {
+            "tag": "apply for a membership",
+            "en": "I applied for a gym membership.",
+            "cn": "我申請了健身房會員。"
+          }
+        ]
+      },
+      {
+        "k": "IV-C",
+        "title": "cover：涵蓋、負擔費用",
+        "pat": "主詞 + cover(s) + 費用／項目",
+        "pts": [
+          "cover the costs ＝ 支付、承擔費用(強調誰出錢)；cover the expenses ＝ 涵蓋費用(強調保險範圍)。兩者很接近，常互換。",
+          "insurance 是不可數名詞，當單數主詞：covers、helps、provides。",
+          "問句用 does：does 後面 cover 不加 s。",
+          "❌ Does your travel insurance cover for flight cancellation? ✅ Does your travel insurance cover flight cancellation?(cover 後面直接接費用、治療、服務或風險，不加 for)",
+          "flight ＝ 班機、航班；plane ＝ 飛機本身。講機票、航班費用用 flight。",
+          "🔬 cover 在這裡不是「蓋住」，而是「涵蓋、足以支付」。",
+          "🔬 主詞是保險、方案(plan)時，cover 後面接它給付的項目或費用。"
+        ],
+        "exs": [
+          {
+            "tag": "問句",
+            "en": "Does your insurance cover dental treatment?",
+            "cn": "你的保險涵蓋牙科治療嗎？"
+          },
+          {
+            "tag": "問句",
+            "en": "Does your health insurance cover surgery?",
+            "cn": "你的健康保險涵蓋手術嗎？"
+          },
+          {
+            "tag": "例句",
+            "en": "Our health plan covers most hospital costs.",
+            "cn": "我們的健康保險涵蓋大部分的住院費用。"
+          }
+        ]
+      },
+      {
+        "k": "IV-D",
+        "title": "have to 與 pay out of pocket",
+        "pat": "have to + 原形動詞 ／ If + 現在式, 主詞 + will + have to + 原形動詞",
+        "pts": [
+          "✅ have to pay ❌ have to paid。第三人稱單數用 has to，過去用 had to。",
+          "pay 的三態：pay – paid – paid(不規則)。",
+          "pay out of pocket ＝ 自費；也可說 out of my own pocket。",
+          "pay for + 收錢的對象或項目：pay for medical treatment、pay for surgery、pay for hospital bills。",
+          "🔬 have to 表示「必須、不得不」，後面一定接原形動詞。",
+          "🔬 條件句的 if 子句用現在式代替未來式，主句才用 will。"
+        ],
+        "exs": [
+          {
+            "tag": "例句",
+            "en": "If the repair isn't free, we will have to pay out of pocket.",
+            "cn": "如果維修不是免費的，我們就得自費。"
+          }
+        ]
+      },
+      {
+        "k": "IV-E",
+        "title": "問句句型整理",
+        "pat": "How long have you been + V-ing ...? ／ Have you ever + 過去分詞 ...?",
+        "pts": [
+          "How long have you been + V-ing ...? 問「做了多久」，回答用 for／since。",
+          "Have you ever + 過去分詞 ...? 問經驗：Have you ever noticed ...? Have you ever paid ... out of pocket?(paid 是 pay 的過去分詞)",
+          "What expenses does your health insurance cover? 疑問詞 + does + 主詞 + 原形動詞，cover 不加 s。",
+          "Do you think + 子句? think 後面直接接子句，不需要 that；子句主詞 government subsidies 是複數，用 are。"
+        ],
+        "exs": []
+      },
+      {
+        "k": "IV-F",
+        "title": "noticed 與 found：客人察覺 vs. 檢驗發現",
+        "pat": "noticed ＝ 察覺到 ／ found ＝ 發現",
+        "pts": [
+          "noticed：察覺到、注意到(強調意識到問題)；found：發現(檢驗時很常用)。"
+        ],
+        "exs": [
+          {
+            "tag": "noticed",
+            "en": "I have noticed appearance defects during product inspection.",
+            "cn": "我在產品檢驗時注意到過外觀瑕疵。"
+          },
+          {
+            "tag": "find",
+            "en": "We often find cosmetic defects during inspection.",
+            "cn": "我們在檢驗時常會發現外觀瑕疵。"
+          }
+        ]
+      },
+      {
+        "k": "IV-G",
+        "title": "被動語態：強調「費用」而不是「保險」",
+        "pat": "主詞 + be + 過去分詞 (+ by + 做動作的人)",
+        "pts": [
+          "🔬 兩句都正確。主動句的主詞是保險，強調「保險不給付」；被動句的主詞是費用，強調「這筆費用沒人給付」。",
+          "🔬 被動語態用 be + 過去分詞，這裡 be 動詞用 is 配單數主詞 cost。"
+        ],
+        "exs": [
+          {
+            "tag": "主動",
+            "en": "Our health insurance does not cover the cost.",
+            "cn": "我們的健康保險不涵蓋這筆費用。"
+          },
+          {
+            "tag": "被動",
+            "en": "The cost is not covered by our health insurance.",
+            "cn": "這筆費用不在我們的健康保險給付範圍內。"
+          }
+        ]
+      },
+      {
+        "k": "IV-H",
+        "title": "emergency 與 unexpected things",
+        "pat": "emergency ＝ 緊急情況 ／ unexpected things ＝ 沒預料到的事",
+        "pts": [
+          "emergency：緊急、急迫而且通常嚴重的情況；不只是火災、逃生門，醫療或金錢問題也算。",
+          "unexpected things：沒有事先預料、沒有計畫的事，不一定很嚴重。"
+        ],
+        "exs": [
+          {
+            "tag": "emergency",
+            "en": "If an emergency happens, we may need to use the emergency exit.",
+            "cn": "如果發生緊急狀況，我們可能需要走緊急出口。"
+          },
+          {
+            "tag": "urgent",
+            "en": "I have something urgent to take care of.",
+            "cn": "我有急事要處理。"
+          },
+          {
+            "tag": "unexpected",
+            "en": "Insurance is important because when unexpected things happen, we do not have to worry too much.",
+            "cn": "保險很重要，因為意外發生時，我們不用太擔心。"
+          },
+          {
+            "tag": "emergencies",
+            "en": "We should put money aside for emergencies.",
+            "cn": "我們應該為緊急情況把錢存起來。"
+          }
+        ]
+      }
+    ],
+    "reading": [
+      {
+        "bar": "VI. 用新單字說一段自己的故事 Personal Story",
+        "title": "Insurance, Savings and Subsidies",
+        "titleCn": "範例故事：保險、存錢與補助",
+        "paras": [
+          {
+            "en": "Having health insurance is very important because medical expenses can be very high. If someone gets sick or needs surgery, insurance can help cover the cost. However, sometimes insurance does not cover all treatment expenses, so people may have to pay out of their own pocket. That is why it is also important to save money for a rainy day and put money aside for emergencies. For elderly people, government subsidies are also important because many of them are retired and have limited income. Subsidies can reduce their financial burden and help them receive proper medical care.",
+            "cn": "擁有健康保險非常重要，因為醫療費用可能非常高。如果有人生病或需要動手術，保險可以幫忙支付費用。不過，有時保險不涵蓋所有的治療費用，所以人們可能得自掏腰包。這就是為什麼為不時之需存錢、為緊急情況把錢存起來也很重要。對老年人來說，政府補助同樣重要，因為許多老年人已經退休，收入有限。補助可以減輕他們的經濟負擔，幫助他們接受適當的醫療照護。"
+          }
+        ]
+      }
+    ],
+    "extraTitle": "V–VII. 口說重點、故事建議與課堂填空",
+    "extra": [
+      {
+        "title": "🔬 文法解說：第 5 題答案的重點(V. 口說練習)",
+        "exs": [
+          {
+            "tag": "because + 子句",
+            "en": "because many of them are retired ...",
+            "cn": "後面接完整子句(because of 才接名詞)。"
+          },
+          {
+            "tag": "can help／should + 原形",
+            "en": "can help cover ...; should provide ...",
+            "cn": "can help + 原形動詞；should + 原形動詞，表示建議。"
+          },
+          {
+            "tag": "help + 人 + 原形",
+            "en": "help older people live comfortably",
+            "cn": "help 後面的動詞可以不加 to。"
+          },
+          {
+            "tag": "重點片語",
+            "en": "retired and have limited income, cover medical expenses, daily living costs",
+            "cn": "答案裡的重點片語在 III 都有例句。"
+          }
+        ]
+      },
+      {
+        "title": "VI. 老師的建議：用新單字說一段自己的故事",
+        "exs": [
+          {
+            "tag": "建議單字",
+            "en": "financial burden, financial assistance, apply for financial assistance, apply for a subsidy, medical expenses, health insurance, cover the cost, pay out of pocket, save for a rainy day, emergency, put money aside",
+            "cn": "老師建議用這堂課和上一堂的單字，編成自己的小故事，主動使用而不是只背單字。"
+          }
+        ]
+      },
+      {
+        "title": "VII. 課堂填空練習 Fill in the Blank",
+        "exs": [
+          {
+            "tag": "1",
+            "en": "I've been working in this factory ____ 2018.",
+            "cn": "答案：since（我從 2018 年起就在這間工廠工作了。）"
+          },
+          {
+            "tag": "2",
+            "en": "She has worked in quality control ____ ten years.",
+            "cn": "答案：for（她在品質管制領域工作十年了。）"
+          },
+          {
+            "tag": "3",
+            "en": "Our customer ____ three appearance problems on the frame.",
+            "cn": "答案：found／noticed（three 後面名詞用複數；我們的客戶在框架上發現了三個外觀問題。）"
+          },
+          {
+            "tag": "4",
+            "en": "My health insurance ____ the cost of the medical examination.",
+            "cn": "答案：covers（單數主詞，動詞加 s；我的健康保險涵蓋這項健康檢查的費用。）"
+          },
+          {
+            "tag": "5",
+            "en": "Does your travel insurance ____ flight cancellations?",
+            "cn": "答案：cover（does 後面用原形；你的旅遊保險涵蓋班機取消嗎？）"
+          },
+          {
+            "tag": "6",
+            "en": "If insurance doesn't cover the treatment, I'll have to ____ out of pocket.",
+            "cn": "答案：pay（如果保險不給付這項治療，我就得自費。）"
+          },
+          {
+            "tag": "7",
+            "en": "We found several quality ____ during the inspection.",
+            "cn": "答案：issues／problems／defects（several 後面接複數；我們在檢驗時發現了幾個品質問題。）"
+          },
+          {
+            "tag": "8",
+            "en": "My company has provided health insurance ____ five years.",
+            "cn": "答案：for（我的公司提供健康保險已經五年了。）"
+          }
+        ]
+      }
+    ],
+    "discussionTitle": "V. 口說練習 Speaking Practice",
+    "discussion": [
+      {
+        "q": "How long have you been working in your current field?",
+        "qCn": "你在現在的領域工作多久了？",
+        "a": "I have been working in this field since 2016.",
+        "aCn": "我從 2016 年起就在這個領域工作了。"
+      },
+      {
+        "q": "Have you ever noticed an appearance problem during a product inspection?",
+        "qCn": "你在產品檢驗時，有注意過外觀問題嗎？",
+        "a": "Yes, I have. I once noticed a scratch on a metal cover during the final inspection.",
+        "aCn": "有的。我曾經在最終檢驗時發現金屬外蓋上有一道刮痕。"
+      },
+      {
+        "q": "What expenses does your health insurance cover?",
+        "qCn": "你的健康保險涵蓋哪些費用？",
+        "a": "My insurance covers medical expenses and hospital bills.",
+        "aCn": "我的保險涵蓋醫療費用和住院費用。"
+      },
+      {
+        "q": "Have you ever paid for medical treatment out of your pocket?",
+        "qCn": "你有自費支付過醫療嗎？",
+        "a": "Every year, we need to take a health examination, but our health insurance does not cover the cost, so I have to pay out of my pocket.",
+        "aCn": "我們每年都要做健康檢查，但健康保險不涵蓋這筆費用，所以我必須自己掏腰包。"
+      },
+      {
+        "q": "Do you think government subsidies are important for elderly people?",
+        "qCn": "你認為政府補助對老年人重要嗎？",
+        "a": "Yes, I think government subsidies are very important for elderly people because many of them are retired and have limited income. These subsidies can help cover medical expenses, hospital bills, and daily living costs. They can also reduce the financial burden on elderly people and their families. I believe the government should provide more financial assistance to help older people live comfortably and receive proper medical care.",
+        "aCn": "是的，我認為政府補助對老年人來說非常重要，因為許多老年人已經退休，收入有限。這些補助可以幫助支付醫療費用、住院費用和日常生活開銷。它們也可以減輕老年人及其家人的經濟負擔。我認為政府應該提供更多經濟援助，幫助老年人過上舒適的生活，並獲得適當的醫療照護。"
+      },
+      {
+        "q": "Can you explain the reading passage about insurance?",
+        "qCn": "你可以說明一下這篇關於保險的文章嗎？",
+        "a": "Having insurance is important, especially when people get older. Sometimes people need money to have surgery, and medical treatment expenses may be very high. In the reading, the father had surgery, but luckily his health insurance covered all the expenses.",
+        "aCn": "有保險很重要，尤其是人們年紀變大的時候。有時人們需要錢來動手術，而醫療處置費用可能很高。文章裡，爸爸動了手術，幸運的是他的健康保險涵蓋了所有費用。"
+      }
+    ]
   }
   ]
 };
@@ -35018,6 +35917,7 @@ window.BOOK = {
     bk20261023:[[['wrench','magnifyL','cross','thermo','target'],'妮娜的品管一天：作業員把螺絲鎖到規定扭力 → 檢查框架瑕疵、用三用電表做導通測試 → 坡度馬達故障，標示不良品並隔離 → 環境試驗箱維護紀錄未更新、回報主管 → 找出根本原因、採取矯正措施防止再發生。']],
     bk20261110:[[['extinguisher','blueprint','trash','controlPanel','passTag'],'把手首件檢驗：新製把手做首件檢驗 → 尺寸與技術圖面不符 → 查出用了過時圖面 → 工程部提供新圖面並調整機台設定 → 再驗合格核准量產並改善文件管制。']],
     bk20261119:[[['hospital','moneyL','wallet','piggy','typhoon'],'保險與存錢：年紀變大可能生病或動手術、醫療費很貴 → 爸爸動手術，健康保險負擔醫療費 → 保險不便宜，每個月要付很多錢 → 每個月存一點錢以備不時之需 → 意外發生時不用太擔心。']],
+    bk20261120:[[['ambulance','syringe','coin','candle','sofa'],'範例故事：健康保險很重要 → 生病或動手術時保險幫忙支付費用 → 保險不一定涵蓋全部治療費用，可能要自掏腰包 → 存錢以備不時之需、為緊急情況存錢 → 政府補助減輕退休、收入有限的老年人的經濟負擔。']],
     bk20261027:[[['coffee','camera','nametag','basket','brainL'],'妮娜的品管一天：每天早上檢查產線 → 目視檢查刮痕、裂縫、鏽 → 坡度馬達故障，標示為不良品 → 與合格品分開、記錄序號 → 找出根本原因，預防同樣問題再發生。']],
   };;
   ((window.BOOK||{}).lessons||[]).forEach(function(b){

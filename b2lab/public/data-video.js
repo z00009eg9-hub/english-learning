@@ -56420,3 +56420,1020 @@ window.VIDEO["bk20261119"] = {
   }
  ]
 };
+
+window.VIDEO["bk20261120"] = {
+ "title": "Years of Experience, Applying for Aid & Insurance Coverage",
+ "titleCn": "品質管制年資、申請補助與保險給付",
+ "date": "2026-11-20",
+ "level": "B1",
+ "scene": "Cosmetic Defects and a Health Exam",
+ "sceneCn": "外觀瑕疵與健康檢查",
+ "sceneArt": "bikeFrame",
+ "titleArt": [
+  "bikeFrame",
+  "nhiCard",
+  "fillOutForm"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・品保工程師",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・客戶",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "Cosmetic Defects and a Health Exam",
+   "cn": "情境：外觀瑕疵與健康檢查"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Phrases & Collocations",
+   "cn": "片語搭配"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "cosmetic": {
+   "t": "cosmetic defects",
+   "cn": "外觀瑕疵",
+   "tag": [
+    "品質",
+    "單字"
+   ],
+   "note": "cosmetic 指外觀上的、不影響功能；比 appearance problems 更專業。",
+   "ex": "The paint has a few cosmetic defects near the logo.",
+   "exCn": "烤漆在商標附近有幾個外觀瑕疵。"
+  },
+  "forSince": {
+   "t": "for ten years",
+   "cn": "十年了（for + 一段時間）",
+   "tag": [
+    "文法",
+    "for／since"
+   ],
+   "note": "for 接一段時間；since 接起點（since 2016）。",
+   "ex": "We've lived in this city for six years.",
+   "exCn": "我們在這個城市住了六年了。"
+  },
+  "outOfPocket": {
+   "t": "pay out of pocket",
+   "cn": "自費、自掏腰包",
+   "tag": [
+    "片語",
+    "保險"
+   ],
+   "note": "保險不給付時自己付錢；也可說 out of my own pocket。",
+   "ex": "Glasses aren't covered, so I paid out of pocket.",
+   "exCn": "眼鏡不在給付範圍，所以我自費。"
+  },
+  "hospitalBills": {
+   "t": "hospital bills",
+   "cn": "住院費用",
+   "tag": [
+    "片語",
+    "醫療"
+   ],
+   "note": "bills 常用複數；cover hospital bills＝給付住院費用。",
+   "ex": "The hospital bills came by email this morning.",
+   "exCn": "住院費用帳單今天早上用 email 寄來了。"
+  },
+  "applyFor": {
+   "t": "apply for",
+   "cn": "申請",
+   "tag": [
+    "片語",
+    "介系詞"
+   ],
+   "note": "apply 後面一定加 for 再接申請的東西；不要說 apply a subsidy。",
+   "ex": "He's going to apply for a passport next week.",
+   "exCn": "他下週要去申請護照。"
+  },
+  "limitedIncome": {
+   "t": "limited income",
+   "cn": "收入有限",
+   "tag": [
+    "片語",
+    "老年生活"
+   ],
+   "note": "retired and have limited income＝退休且收入有限。",
+   "ex": "Students often live on a limited income.",
+   "exCn": "學生通常靠有限的收入生活。"
+  },
+  "rainyDay": {
+   "t": "for a rainy day",
+   "cn": "以備不時之需",
+   "tag": [
+    "慣用語",
+    "存錢"
+   ],
+   "note": "save / put money aside for a rainy day：為將來的困難存錢。",
+   "ex": "Keep that bonus for a rainy day.",
+   "exCn": "把那筆獎金留著以備不時之需。"
+  },
+  "finAssist": {
+   "t": "Financial assistance",
+   "cn": "經濟援助",
+   "tag": [
+    "片語",
+    "補助"
+   ],
+   "note": "apply for / provide financial assistance；不可數，不加 s。",
+   "ex": "The school offers financial assistance to new students.",
+   "exCn": "學校為新生提供經濟援助。"
+  },
+  "emergency": {
+   "t": "emergency",
+   "cn": "緊急情況",
+   "tag": [
+    "單字",
+    "對比"
+   ],
+   "note": "emergency 緊急又嚴重；unexpected things 只是沒預料到。",
+   "ex": "Keep a first-aid kit in the car for emergencies.",
+   "exCn": "在車上放個急救包以備緊急情況。"
+  },
+  "coverCost": {
+   "t": "cover the costs",
+   "cn": "支付／承擔費用",
+   "tag": [
+    "片語",
+    "保險"
+   ],
+   "note": "cover 後面直接接費用，不加 for；insurance 是單數，用 covers。",
+   "ex": "The airline will cover the costs of the hotel.",
+   "exCn": "航空公司會負擔飯店的費用。"
+  },
+  "finBurden": {
+   "t": "Financial burden",
+   "cn": "經濟負擔",
+   "tag": [
+    "片語",
+    "補助"
+   ],
+   "note": "reduce the financial burden on ...＝減輕……的經濟負擔。",
+   "ex": "A second job can ease the financial burden.",
+   "exCn": "第二份工作可以減輕經濟負擔。"
+  },
+  "haveTo": {
+   "t": "have to pay",
+   "cn": "必須付錢",
+   "tag": [
+    "文法",
+    "have to"
+   ],
+   "note": "have to + 原形動詞；不能寫 have to paid。",
+   "ex": "You have to pay at the counter first.",
+   "exCn": "你得先到櫃檯付款。"
+  },
+  "passive": {
+   "t": "is not covered",
+   "cn": "不在給付範圍",
+   "tag": [
+    "文法",
+    "被動語態"
+   ],
+   "note": "be + 過去分詞，主詞是費用，強調這筆費用沒人付。",
+   "ex": "Cosmetic surgery is not covered by most plans.",
+   "exCn": "大部分方案不給付整形手術。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today, Anita talks about a frame order, her health exam, and insurance.",
+   "cn": "歡迎回來。今天 Anita 聊到框架訂單、她的健康檢查和保險。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Listen for cosmetic defects, for ten years, apply for, and pay out of pocket.",
+   "cn": "注意聽 cosmetic defects、for ten years、apply for 和 pay out of pocket。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "coffeeBreak"
+   },
+   "en": "Hey Anita, how's the new frame order going?",
+   "cn": "嗨，Anita，新的框架訂單進行得怎麼樣？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "bikeFrame"
+   },
+   "en": "Pretty good. We found two cosmetic defects, but nothing serious.",
+   "cn": "還不錯。我們發現兩個外觀瑕疵，但不嚴重。",
+   "hi": [
+    {
+     "t": "cosmetic defects",
+     "cn": "外觀瑕疵",
+     "k": "cosmetic",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "scratch"
+   },
+   "en": "Cosmetic? So the frames still work fine?",
+   "cn": "外觀的？所以框架功能還是正常？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "scratch"
+   },
+   "en": "Yeah, just small scratches. Customers notice them, though.",
+   "cn": "對，只是小刮痕。不過客人會注意到。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "interviewDesk"
+   },
+   "en": "How long have you been doing this job?",
+   "cn": "你做這份工作多久了？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "interviewDesk"
+   },
+   "en": "I've been working in quality control for ten years.",
+   "cn": "我在品質管制領域工作十年了。",
+   "hi": [
+    {
+     "t": "for ten years",
+     "cn": "十年了",
+     "k": "forSince",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "medicineBottle"
+   },
+   "en": "Wow. Hey, did you do your health examination yet?",
+   "cn": "哇。對了，你做健康檢查了嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "bigBill"
+   },
+   "en": "Last week. Our insurance doesn't cover it, so I paid out of pocket.",
+   "cn": "上週做了。我們的保險不給付，所以我自費。",
+   "hi": [
+    {
+     "t": "paid out of pocket",
+     "cn": "自費",
+     "k": "outOfPocket",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "nhiCard"
+   },
+   "en": "That's annoying. So what does your plan cover?",
+   "cn": "真麻煩。那你的方案涵蓋什麼？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "nhiCard"
+   },
+   "en": "Mostly medical expenses and hospital bills.",
+   "cn": "大多是醫療費用和住院費用。",
+   "hi": [
+    {
+     "t": "hospital bills",
+     "cn": "住院費用",
+     "k": "hospitalBills",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "fillOutForm"
+   },
+   "en": "And your mom? Didn't she have surgery?",
+   "cn": "那你媽媽呢？她不是動了手術嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "fillOutForm"
+   },
+   "en": "Yeah. She applied for a government subsidy to help with the costs.",
+   "cn": "對。她申請了政府補助來幫忙支付費用。",
+   "hi": [
+    {
+     "t": "applied for",
+     "cn": "申請了",
+     "k": "applyFor",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "deductibleBar"
+   },
+   "en": "Good. A lot of retired people have limited income.",
+   "cn": "那很好。很多退休的人收入有限。",
+   "hi": [
+    {
+     "t": "limited income",
+     "cn": "收入有限",
+     "k": "limitedIncome",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "emergencySupplies"
+   },
+   "en": "Exactly. That's why I put money aside every month, for a rainy day.",
+   "cn": "沒錯。所以我每個月都存一點錢，以備不時之需。",
+   "hi": [
+    {
+     "t": "for a rainy day",
+     "cn": "以備不時之需",
+     "k": "rainyDay",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "emergencySupplies"
+   },
+   "en": "Smart. You never know when an emergency's coming.",
+   "cn": "聰明。你永遠不知道緊急狀況什麼時候會來。"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "coffeeBreak"
+   },
+   "en": "Alright, back to those frames. Thanks for the coffee!",
+   "cn": "好啦，回去處理那些框架。謝謝你的咖啡！"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "appearance problem",
+     "ipa": "/əˈpɪrəns ˈprɑːbləm/",
+     "cn": "外觀問題（一般說法）",
+     "def": "Any problem with how a product looks.",
+     "art": "scratch"
+    },
+    "b": {
+     "w": "cosmetic defect",
+     "ipa": "/kɑːzˈmet̬.ɪk ˈdiː.fekt/",
+     "cn": "外觀瑕疵（品保專業說法）",
+     "def": "A visible flaw that does not affect how it works.",
+     "art": "defectUp"
+    }
+   },
+   "en": "An appearance problem is any problem with how a product looks. Cosmetic defect sounds more professional.",
+   "cn": "appearance problem 是任何外觀上的問題；cosmetic defect 聽起來更專業。",
+   "hi": [
+    {
+     "t": "Cosmetic defect",
+     "cn": "外觀瑕疵",
+     "k": "cosmetic",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "financial assistance",
+    "ipa": "/faɪˈnæn.ʃəl əˈsɪs.təns/",
+    "pos": "n.",
+    "art": "fillOutForm",
+    "def": "Money or help that someone gives you to pay for things.",
+    "cn": "經濟援助。",
+    "note": "apply for / provide financial assistance；不可數，不加 s。"
+   },
+   "en": "Financial assistance is money or help to pay for things. People apply for it.",
+   "cn": "financial assistance 是幫你支付費用的金錢或協助，可以去申請。",
+   "hi": [
+    {
+     "t": "Financial assistance",
+     "cn": "經濟援助",
+     "k": "finAssist",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "pay out of pocket",
+    "ipa": "/peɪ aʊt əv ˈpɑː.kɪt/",
+    "pos": "v. phr.",
+    "art": "bigBill",
+    "def": "To pay with your own money.",
+    "cn": "自費、自掏腰包。",
+    "note": "也可說 out of my own pocket；have to 後面用 pay，不是 paid。"
+   },
+   "en": "Pay out of pocket means you pay with your own money, because insurance doesn't cover it.",
+   "cn": "pay out of pocket 是保險不給付、自己出錢。",
+   "hi": [
+    {
+     "t": "Pay out of pocket",
+     "cn": "自費",
+     "k": "outOfPocket",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "emergency",
+     "ipa": "/ɪˈmɝː.dʒən.si/",
+     "cn": "緊急情況（急迫又嚴重）",
+     "def": "A sudden, serious situation that needs action now.",
+     "art": "emergencySupplies"
+    },
+    "b": {
+     "w": "unexpected things",
+     "ipa": "/ˌʌn.ɪkˈspek.tɪd θɪŋz/",
+     "cn": "沒預料到的事",
+     "def": "Things that happen without a plan.",
+     "art": "rainSuddenly"
+    }
+   },
+   "en": "An emergency is urgent and serious. Unexpected things just weren't planned.",
+   "cn": "emergency 是急迫又嚴重的情況；unexpected things 只是沒有預料到的事。",
+   "hi": [
+    {
+     "t": "emergency",
+     "cn": "緊急情況",
+     "k": "emergency",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "apply for",
+    "coreCn": "申請",
+    "art": "fillOutForm",
+    "items": [
+     {
+      "t": "~ a job",
+      "cn": "申請工作"
+     },
+     {
+      "t": "~ a visa",
+      "cn": "申請簽證"
+     },
+     {
+      "t": "~ a subsidy",
+      "cn": "申請補助"
+     },
+     {
+      "t": "~ a refund",
+      "cn": "申請退款"
+     }
+    ]
+   },
+   "en": "Apply for a job, apply for a visa, apply for a subsidy, apply for a refund.",
+   "cn": "申請工作、申請簽證、申請補助、申請退款。",
+   "hi": [
+    {
+     "t": "apply for a subsidy",
+     "cn": "申請補助",
+     "k": "applyFor",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "cover",
+    "coreCn": "保險涵蓋",
+    "art": "nhiCard",
+    "items": [
+     {
+      "t": "~ medical expenses",
+      "cn": "涵蓋醫療費用"
+     },
+     {
+      "t": "~ hospital bills",
+      "cn": "涵蓋住院費用"
+     },
+     {
+      "t": "~ the costs",
+      "cn": "支付費用"
+     },
+     {
+      "t": "~ surgery",
+      "cn": "涵蓋手術"
+     }
+    ]
+   },
+   "en": "Cover medical expenses, cover hospital bills, cover the costs, cover surgery.",
+   "cn": "涵蓋醫療費用、住院費用、支付費用、涵蓋手術。",
+   "hi": [
+    {
+     "t": "cover the costs",
+     "cn": "支付費用",
+     "k": "coverCost",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "financial",
+    "coreCn": "經濟相關",
+    "art": "deductibleBar",
+    "items": [
+     {
+      "t": "~ burden",
+      "cn": "經濟負擔"
+     },
+     {
+      "t": "~ assistance",
+      "cn": "經濟援助"
+     },
+     {
+      "t": "~ aid",
+      "cn": "經濟補助"
+     }
+    ]
+   },
+   "en": "Financial burden, financial assistance, financial aid.",
+   "cn": "經濟負擔、經濟援助、經濟補助。",
+   "hi": [
+    {
+     "t": "Financial burden",
+     "cn": "經濟負擔",
+     "k": "finBurden",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "have / has been + V-ing + for / since",
+    "art": "interviewDesk",
+    "rows": [
+     {
+      "lab": "for + 一段時間",
+      "blocks": [
+       {
+        "t": "I",
+        "k": "s"
+       },
+       {
+        "t": "'ve been working",
+        "k": "v"
+       },
+       {
+        "t": "in quality control",
+        "k": "o"
+       },
+       {
+        "t": "for",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "ten years",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "since + 起點",
+      "blocks": [
+       {
+        "t": "I",
+        "k": "s"
+       },
+       {
+        "t": "'ve been working",
+        "k": "v"
+       },
+       {
+        "t": "here",
+        "k": "o"
+       },
+       {
+        "t": "since",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "2016",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "❌ since ten years：ten years 是一段時間，要用 for。"
+   },
+   "en": "I've been working in quality control for ten years. I've been working here since 2016.",
+   "cn": "我在品質管制領域工作十年了。我從 2016 年起就在這裡工作。",
+   "hi": [
+    {
+     "t": "for ten years",
+     "cn": "十年了",
+     "k": "forSince",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "have to + 原形動詞",
+    "art": "bigBill",
+    "rows": [
+     {
+      "lab": "to 後面用原形",
+      "blocks": [
+       {
+        "t": "I",
+        "k": "s"
+       },
+       {
+        "t": "'ll have to",
+        "k": "n"
+       },
+       {
+        "t": "paid",
+        "k": "v",
+        "x": true
+       },
+       {
+        "t": "pay",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "out of pocket",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "has to、had to 後面也一樣接原形動詞。"
+   },
+   "en": "I'll have to pay out of pocket.",
+   "cn": "我就得自費。",
+   "hi": [
+    {
+     "t": "have to pay",
+     "cn": "必須付錢",
+     "k": "haveTo",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "be + 過去分詞（被動語態）",
+    "art": "nhiCard",
+    "rows": [
+     {
+      "lab": "主動：保險當主詞",
+      "blocks": [
+       {
+        "t": "Our health insurance",
+        "k": "s"
+       },
+       {
+        "t": "does not cover",
+        "k": "v"
+       },
+       {
+        "t": "the cost",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "被動：費用當主詞",
+      "blocks": [
+       {
+        "t": "The cost",
+        "k": "s"
+       },
+       {
+        "t": "is not covered",
+        "k": "v",
+        "add": true
+       },
+       {
+        "t": "by",
+        "k": "n"
+       },
+       {
+        "t": "our health insurance",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "兩句都對；被動句強調「這筆費用」。"
+   },
+   "en": "Our health insurance does not cover the cost. The cost is not covered by our health insurance.",
+   "cn": "我們的健康保險不涵蓋這筆費用。這筆費用不在我們的健康保險給付範圍內。",
+   "hi": [
+    {
+     "t": "is not covered",
+     "cn": "不在給付範圍",
+     "k": "passive",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 2,
+    "wrong": "I've been working in quality control since ten years.",
+    "bad": [
+     "since ten years"
+    ],
+    "fix": "I've been working in quality control for ten years.",
+    "good": [
+     "for ten years"
+    ],
+    "why": "Use for with a length of time. Since needs a starting point.",
+    "whyCn": "for 接一段時間；since 要接起點（例如 since 2016）。"
+   },
+   "en": "I've been working in quality control for ten years.",
+   "cn": "我在品質管制領域工作十年了。",
+   "hi": [
+    {
+     "t": "for ten years",
+     "cn": "十年了",
+     "k": "forSince",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 5,
+    "wrong": "If the insurance doesn't cover the test, I'll have to paid out of pocket.",
+    "bad": [
+     "have to paid"
+    ],
+    "fix": "If the insurance doesn't cover the expenses, I'll have to pay out of my pocket.",
+    "good": [
+     "have to pay"
+    ],
+    "why": "Have to is followed by the base form: pay, not paid.",
+    "whyCn": "have to 後面接原形動詞，所以 paid 要改成 pay。"
+   },
+   "en": "If the insurance doesn't cover the expenses, I'll have to pay out of my pocket.",
+   "cn": "如果保險不給付這些費用，我就得自己掏腰包。",
+   "hi": [
+    {
+     "t": "have to pay",
+     "cn": "必須付錢",
+     "k": "haveTo",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "I've been working in this factory ___ 2018.",
+    "a": "since",
+    "n": 1
+   },
+   "en": "I've been working in this factory ___ 2018.",
+   "cn": "我___ 2018 年起就在這間工廠工作了。",
+   "say": "I've been working in this factory, blank, 2018.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "I've been working in this factory ___ 2018.",
+    "a": "since",
+    "n": 1,
+    "show": true
+   },
+   "en": "I've been working in this factory since 2018.",
+   "cn": "我從 2018 年起就在這間工廠工作了。",
+   "hi": [
+    {
+     "t": "since 2018",
+     "cn": "從 2018 年起",
+     "k": "forSince",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "My health insurance ___ the cost of the medical examination.",
+    "a": "covers",
+    "n": 2
+   },
+   "en": "My health insurance ___ the cost of the medical examination.",
+   "cn": "我的健康保險___這項健康檢查的費用。",
+   "say": "My health insurance, blank, the cost of the medical examination.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "My health insurance ___ the cost of the medical examination.",
+    "a": "covers",
+    "n": 2,
+    "show": true
+   },
+   "en": "My health insurance covers the cost of the medical examination.",
+   "cn": "我的健康保險涵蓋這項健康檢查的費用。",
+   "hi": [
+    {
+     "t": "covers the cost",
+     "cn": "涵蓋費用",
+     "k": "coverCost",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "If insurance doesn't cover the treatment, I'll have to ___ out of pocket.",
+    "a": "pay",
+    "n": 3
+   },
+   "en": "If insurance doesn't cover the treatment, I'll have to ___ out of pocket.",
+   "cn": "如果保險不給付這項治療，我就得___。",
+   "say": "If insurance doesn't cover the treatment, I'll have to, blank, out of pocket.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "If insurance doesn't cover the treatment, I'll have to ___ out of pocket.",
+    "a": "pay",
+    "n": 3,
+    "show": true
+   },
+   "en": "If insurance doesn't cover the treatment, I'll have to pay out of pocket.",
+   "cn": "如果保險不給付這項治療，我就得自費。",
+   "hi": [
+    {
+     "t": "pay out of pocket",
+     "cn": "自費",
+     "k": "outOfPocket",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
