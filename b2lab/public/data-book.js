@@ -25486,6 +25486,733 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- my02 我的職場週記：塗裝與表面處理 ---- */
+  {
+   "id": "my02",
+   "icon": "📝",
+   "date": "2026-11-21",
+   "title": "My Work Week 02 — Painting & Surface Treatment",
+   "titleCn": "我的職場週記 02｜塗裝與表面處理",
+   "topics": "我的職場週記, 塗裝與表面處理, 遮噴, 治具, 刮傷, 噴砂, 陽極, 附著力, 毛邊, 色差計, masking, jig, scratch, sandblast, anodizing, adhesion, burr, torch, color meter",
+   "hwTitle": "中翻英 Say It in English",
+   "hw": [
+    {
+     "n": 1,
+     "ok": "It doesn't look like it worked. I'll try a different way of masking it tomorrow.",
+     "cn": "看起來沒有成功，我明天再試試其他遮噴方式。",
+     "pat": "It doesn't look like + 子句（看起來沒有…）",
+     "note": "「沒成功」英文說 it didn't work，前面加 it doesn't look like 表示「看起來」。噴漆時把不要噴到的地方遮起來，業界說 masking。"
+    },
+    {
+     "n": 2,
+     "cn": "治具需要修改，會刮傷噴漆件。",
+     "pat": "need to + 動詞；be + V-ing（一直在…）",
+     "note": "jig 是單數，要說 needs 或改成 We need to modify the jig。噴過漆的零件用過去分詞 painted parts；It's scratching 表示現在一直在刮傷。",
+     "wrong": "The jig need modify, it will scratch paint parts.",
+     "fix": "We need to modify the jig. It's scratching the painted parts."
+    },
+    {
+     "n": 3,
+     "ok": "We sandblast the parts before anodizing to help with adhesion.",
+     "cn": "陽極前先噴砂，可以增加附著力。",
+     "pat": "before + V-ing（在…之前）",
+     "note": "before 後面接動名詞 anodizing。「幫助附著力」說 help with adhesion，書面可以寫 improve adhesion。"
+    },
+    {
+     "n": 4,
+     "cn": "用火烤去除鋁件毛邊。",
+     "pat": "use + 工具 + to + 動詞（用…來…）",
+     "note": "毛邊是 burr，不是 hair edge；火烤用的是火槍 torch，燒掉說 burn off。",
+     "wrong": "We use fire to remove the hair edge of aluminum parts.",
+     "fix": "We use a torch to burn off the burrs on the aluminum parts."
+    },
+    {
+     "n": 5,
+     "ok": "We check the color with a color meter.",
+     "cn": "我們用色差計對顏色。",
+     "pat": "動詞 + with + 工具（用…來做）",
+     "note": "色差計正式名稱是 colorimeter，口語常說 color meter。color 在這裡是名詞，前面要有動詞 check。"
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    {
+     "w": "masking",
+     "ipa": "/ˈmæs.kɪŋ/",
+     "pos": "n.",
+     "cn": "遮噴、遮蔽",
+     "ex": "Good masking keeps paint out of the screw holes.",
+     "exCn": "遮噴做得好，漆就不會跑進螺絲孔。"
+    },
+    {
+     "w": "jig",
+     "ipa": "/dʒɪɡ/",
+     "pos": "n.",
+     "cn": "治具",
+     "ex": "The welder clamps each frame in a jig before welding.",
+     "exCn": "焊工焊接前會先把每支車架夾在治具上。"
+    },
+    {
+     "w": "scratch",
+     "ipa": "/skrætʃ/",
+     "pos": "v.",
+     "cn": "刮傷",
+     "ex": "Put a cloth on the table so the panels don't get scratched.",
+     "exCn": "桌上墊一塊布，面板才不會被刮傷。"
+    },
+    {
+     "w": "modify",
+     "ipa": "/ˈmɑː.də.faɪ/",
+     "pos": "v.",
+     "cn": "修改",
+     "ex": "Engineering modified the drawing to add a bigger hole.",
+     "exCn": "工程部修改了圖面，加了一個比較大的孔。"
+    },
+    {
+     "w": "adhesion",
+     "ipa": "/ədˈhiː.ʒən/",
+     "pos": "n.",
+     "cn": "附著力",
+     "ex": "Oil on the surface can cause poor adhesion.",
+     "exCn": "表面有油會造成附著力不好。"
+    },
+    {
+     "w": "sandblast",
+     "ipa": "/ˈsænd.blæst/",
+     "pos": "v.",
+     "cn": "噴砂",
+     "ex": "The old frames were sandblasted to remove the rust.",
+     "exCn": "舊車架先噴砂把鏽去掉。"
+    },
+    {
+     "w": "burr",
+     "ipa": "/bɝː/",
+     "pos": "n.",
+     "cn": "毛邊",
+     "ex": "Run your finger carefully along the edge to feel for burrs.",
+     "exCn": "用手指小心沿著邊緣摸，看有沒有毛邊。"
+    },
+    {
+     "w": "torch",
+     "ipa": "/tɔːrtʃ/",
+     "pos": "n.",
+     "cn": "火槍、噴槍",
+     "ex": "The maintenance guy used a torch to heat the stuck bolt.",
+     "exCn": "保養人員用火槍加熱卡死的螺栓。"
+    }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    {
+     "p": "try a different way",
+     "cn": "試別的方法"
+    },
+    {
+     "p": "modify the jig",
+     "cn": "修改治具"
+    },
+    {
+     "p": "painted parts",
+     "cn": "噴漆件"
+    },
+    {
+     "p": "help with adhesion",
+     "cn": "幫助附著力"
+    },
+    {
+     "p": "burn off the burrs",
+     "cn": "把毛邊燒掉"
+    },
+    {
+     "p": "check the color",
+     "cn": "對顏色"
+    }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "MY02-A",
+     "title": "It doesn't look like + 子句（看起來沒有…）",
+     "pat": "It doesn't look like + 主詞 + 動詞",
+     "pts": [
+      "試做完還不確定結果時，用它說「看起來不行」，語氣比直接說 It failed 溫和。",
+      "like 後面接完整句子；過去的動作用過去式，例如 it worked。",
+      "例：It doesn't look like the glue is dry yet.（膠看起來還沒乾。）"
+     ],
+     "ex": "It doesn't look like the glue is dry yet.",
+     "exCn": "膠看起來還沒乾。"
+    },
+    {
+     "k": "MY02-B",
+     "title": "use + 工具 + to + 動詞（用…來…）",
+     "pat": "主詞 + use + 工具 + to + 原形動詞",
+     "pts": [
+      "說明製程或檢驗方法時最常用：先講工具，再講要做什麼。",
+      "to 後面接原形動詞；也可以反過來說 動詞 + with + 工具。",
+      "例：We use a gauge to check the hole size.（我們用量規檢查孔徑。）"
+     ],
+     "ex": "We use a gauge to check the hole size.",
+     "exCn": "我們用量規檢查孔徑。"
+    },
+    {
+     "k": "MY02-C",
+     "title": "before + V-ing（在…之前）",
+     "pat": "主詞 + 動詞 + before + V-ing",
+     "pts": [
+      "講製程順序很好用：先做 A，再做 B。",
+      "before 當介系詞時後面接動名詞（-ing），不接原形動詞。",
+      "例：Clean the surface before painting.（噴漆前先把表面清乾淨。）"
+     ],
+     "ex": "Clean the surface before painting.",
+     "exCn": "噴漆前先把表面清乾淨。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "modify vs fix",
+     "sc": "modify 是改設計或設定，讓它更好用，東西本身不一定壞；fix 是把壞掉的東西修好。治具沒壞、只是會刮傷零件，所以用 modify。",
+     "ex": "The jig isn't broken, but we still need to modify it.",
+     "exCn": "治具沒有壞，但我們還是要修改它。",
+     "cn": "修改 vs 修理"
+    },
+    {
+     "u": "adhesion vs adhesive",
+     "sc": "adhesion 是附著力，是一種性質；adhesive 是黏著劑、膠，是一種東西。",
+     "ex": "This adhesive has good adhesion on metal.",
+     "exCn": "這款黏著劑在金屬上的附著力很好。",
+     "cn": "附著力 vs 黏著劑"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "週報｜塗裝與表面處理",
+     "title": "Weekly Report: Painting and Surface Treatment",
+     "titleCn": "📧 週報｜給主管的塗裝與表面處理回報",
+     "paras": [
+      {
+       "en": "Subject: Painting and surface treatment update",
+       "cn": "主旨：塗裝與表面處理進度"
+      },
+      {
+       "en": "Hi, here's a quick update on painting and surface treatment.",
+       "cn": "您好，跟您簡單回報塗裝與表面處理的狀況。"
+      },
+      {
+       "en": "We tried masking the parts, but it doesn't look like it worked. I'll try a different way of masking it tomorrow.",
+       "cn": "我們試了遮噴，但看起來沒有成功。我明天會試其他遮噴方式。"
+      },
+      {
+       "en": "We also need to modify the jig. It's scratching the painted parts.",
+       "cn": "另外治具需要修改，它會刮傷噴漆件。"
+      },
+      {
+       "en": "For the aluminum parts, we use a torch to burn off the burrs. We also sandblast the parts before anodizing to help with adhesion.",
+       "cn": "鋁件的部分，我們用火烤去除毛邊；陽極前也會先噴砂，增加附著力。"
+      },
+      {
+       "en": "To check the color, we use a color meter.",
+       "cn": "顏色的部分，我們用色差計來對。"
+      }
+     ],
+     "questions": [
+      {
+       "q": "What's wrong with the jig?",
+       "qCn": "治具有什麼問題？",
+       "a": "It's scratching the painted parts.",
+       "aCn": "它會刮傷噴漆件。"
+      },
+      {
+       "q": "What will the writer try tomorrow?",
+       "qCn": "寫信的人明天要試什麼？",
+       "a": "A different way of masking.",
+       "aCn": "其他遮噴方式。"
+      },
+      {
+       "q": "Why do they sandblast the parts before anodizing?",
+       "qCn": "為什麼陽極前要先噴砂？",
+       "a": "To help with adhesion.",
+       "aCn": "為了增加附著力。"
+      }
+     ]
+    },
+    {
+     "bar": "會議｜塗裝與表面處理",
+     "title": "Meeting: How Is the Painting Going?",
+     "titleCn": "🗣 會議｜跟主管講塗裝狀況",
+     "paras": [
+      {
+       "en": "Supervisor: How did the masking go?",
+       "cn": "主管：遮噴弄得怎麼樣？"
+      },
+      {
+       "en": "You: It doesn't look like it worked. I'll try a different way tomorrow.",
+       "cn": "你：看起來沒成功。我明天試別的方法。"
+      },
+      {
+       "en": "Supervisor: OK. Any other problems?",
+       "cn": "主管：好。還有別的問題嗎？"
+      },
+      {
+       "en": "You: Yes. We need to modify the jig. It's scratching the painted parts.",
+       "cn": "你：有。治具要改，它會刮傷噴漆件。"
+      },
+      {
+       "en": "Supervisor: Got it. What about the aluminum parts?",
+       "cn": "主管：了解。那鋁件呢？"
+      },
+      {
+       "en": "You: We use a torch to burn off the burrs.",
+       "cn": "你：我們用火烤把毛邊燒掉。"
+      },
+      {
+       "en": "Supervisor: And before anodizing?",
+       "cn": "主管：那陽極之前呢？"
+      },
+      {
+       "en": "You: We sandblast the parts first. It helps with adhesion.",
+       "cn": "你：先噴砂，附著力會比較好。"
+      },
+      {
+       "en": "Supervisor: How do you check the color?",
+       "cn": "主管：顏色怎麼檢查？"
+      },
+      {
+       "en": "You: We check it with a color meter.",
+       "cn": "你：我們用色差計對。"
+      }
+     ]
+    },
+    {
+     "bar": "討論｜下週我會怎麼做",
+     "title": "Discussion: What Will I Do Next Week?",
+     "titleCn": "討論｜下週我會怎麼做",
+     "paras": [
+      {
+       "en": "What different masking method can I try, and how will I know if it worked?",
+       "cn": "我可以試哪一種遮噴方式？要怎麼確認它有沒有成功？"
+      },
+      {
+       "en": "Which part of the jig touches the painted parts, and how can we change it?",
+       "cn": "治具哪個地方碰到噴漆件？可以怎麼改？"
+      },
+      {
+       "en": "How will I explain the sandblasting step to a new operator in English?",
+       "cn": "要怎麼用英文跟新進作業員說明噴砂這一步？"
+      },
+      {
+       "en": "If the color meter shows a problem, who do I tell first?",
+       "cn": "如果色差計量出來有問題，我要先通知誰？"
+      }
+     ]
+    },
+    {
+     "bar": "隨身速查｜本課 5 句",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜本課 5 句",
+     "paras": [
+      {
+       "en": "It doesn't look like it worked. I'll try a different way of masking it tomorrow.",
+       "cn": "看起來沒有成功，我明天再試試其他遮噴方式。"
+      },
+      {
+       "en": "We need to modify the jig. It's scratching the painted parts.",
+       "cn": "治具需要修改，會刮傷噴漆件。"
+      },
+      {
+       "en": "We sandblast the parts before anodizing to help with adhesion.",
+       "cn": "陽極前先噴砂，可以增加附著力。"
+      },
+      {
+       "en": "We use a torch to burn off the burrs on the aluminum parts.",
+       "cn": "用火烤去除鋁件毛邊。"
+      },
+      {
+       "en": "We check the color with a color meter.",
+       "cn": "我們用色差計對顏色。"
+      }
+     ]
+    }
+   ]
+  },
+  /* ---- my03 我的職場週記：日常溝通 ---- */
+  {
+   "id": "my03",
+   "icon": "📝",
+   "date": "2026-11-21",
+   "title": "My Work Week 03 — Everyday Talk",
+   "titleCn": "我的職場週記 03｜日常溝通",
+   "topics": "我的職場週記, 日常溝通, 手機沒電, 行動電源, 筷子, 甜點, 路燈, 遠光燈, 圓環, 機車, dead, portable charger, chopsticks, dessert, streetlight, high beams, roundabout, motorbike",
+   "hwTitle": "中翻英 Say It in English",
+   "hw": [
+    {
+     "n": 1,
+     "cn": "我的手機沒電了，需要行動電源。",
+     "pat": "My phone's dead.（手機沒電了）",
+     "note": "手機沒電口語說 dead，也可以說 out of battery；electricity 是電力供應，不這樣用。行動電源說 portable charger 或 power bank。",
+     "wrong": "My phone no electricity, I need a mobile power.",
+     "fix": "My phone's dead. I need a portable charger."
+    },
+    {
+     "n": 2,
+     "ok": "You're really good with chopsticks.",
+     "cn": "你的筷子用得很好。",
+     "pat": "be good with + 東西（很會用…）",
+     "note": "「很會用某個東西」口語說 be good with；筷子是一雙，要用複數 chopsticks。"
+    },
+    {
+     "n": 3,
+     "ok": "Want some dessert?",
+     "cn": "你想要來些甜點嗎？",
+     "pat": "Want some + 名詞?（要不要來點…？）",
+     "note": "口語常省略 Do you。比較客氣的說法是 Would you like some dessert?。飯後甜點是 dessert，不說 sweet food。"
+    },
+    {
+     "n": 4,
+     "ok": "Coconut milk ice cream.",
+     "cn": "椰奶冰淇淋。",
+     "pat": "材料 + 名詞（名詞修飾名詞）",
+     "note": "英文把材料放在前面當修飾，不說 ice cream of coconut milk。只說 coconut ice cream 也可以，但不一定是椰奶做的。"
+    },
+    {
+     "n": 5,
+     "ok": "There are no streetlights here, so a motorbike could hit you.",
+     "cn": "沒有路燈，機車騎士可能會撞到你。",
+     "pat": "There are no + 複數名詞, so…（沒有…，所以…）",
+     "note": "「沒有…」用 there are no；「可能會」用 could 或 might 加原形動詞。"
+    },
+    {
+     "n": 6,
+     "ok": "The highway doesn't have any streetlights.",
+     "cn": "高速公路沒有路燈。",
+     "pat": "doesn't have any + 名詞（完全沒有…）",
+     "note": "否定要用 doesn't have；加 any 有「一盞都沒有」的感覺。路燈是 streetlights，只說 light 意思不清楚。"
+    },
+    {
+     "n": 7,
+     "cn": "汽車燈光非常刺眼，他們都開遠光燈。",
+     "pat": "have/got + 東西 + on（開著…）",
+     "note": "刺眼可以說 so bright 或 blinding；hurt 是動詞，不能放在 very 後面。開燈不用 open，要說 have … on 或 turn on；遠光燈是複數 high beams。",
+     "wrong": "The car light is very hurt eye, they all open high beam.",
+     "fix": "The headlights are so bright. Everyone's got their high beams on."
+    },
+    {
+     "n": 8,
+     "ok": "There are so many roundabouts on the road.",
+     "cn": "路上好多圓環。",
+     "pat": "There are so many + 複數名詞（好多…）",
+     "note": "在路上用 on the road；in the road 是在馬路中間擋路。so many 比 a lot of 更有「好多喔」的感覺。"
+    }
+   ],
+   "vocabTitle": "八個關鍵詞 Key Words",
+   "vocab": [
+    {
+     "w": "dessert",
+     "ipa": "/dɪˈzɝːt/",
+     "pos": "n.",
+     "cn": "甜點",
+     "ex": "The cafeteria gives us fruit for dessert on Fridays.",
+     "exCn": "員工餐廳星期五會給水果當甜點。"
+    },
+    {
+     "w": "chopsticks",
+     "ipa": "/ˈtʃɑːp.stɪks/",
+     "pos": "n.",
+     "cn": "筷子",
+     "ex": "My coworker brought extra chopsticks for everyone.",
+     "exCn": "同事多帶了筷子給大家用。"
+    },
+    {
+     "w": "charger",
+     "ipa": "/ˈtʃɑːr.dʒɚ/",
+     "pos": "n.",
+     "cn": "充電器",
+     "ex": "Can I borrow your charger for ten minutes?",
+     "exCn": "我可以借你的充電器十分鐘嗎？"
+    },
+    {
+     "w": "streetlight",
+     "ipa": "/ˈstriːt.laɪt/",
+     "pos": "n.",
+     "cn": "路燈",
+     "ex": "The streetlight outside the factory gate is broken.",
+     "exCn": "工廠大門外的路燈壞了。"
+    },
+    {
+     "w": "headlight",
+     "ipa": "/ˈhed.laɪt/",
+     "pos": "n.",
+     "cn": "車頭燈",
+     "ex": "One of the truck's headlights is out.",
+     "exCn": "卡車有一顆頭燈不亮。"
+    },
+    {
+     "w": "blinding",
+     "ipa": "/ˈblaɪn.dɪŋ/",
+     "pos": "adj.",
+     "cn": "刺眼的",
+     "ex": "The sun was blinding on the drive to work.",
+     "exCn": "開車上班時太陽很刺眼。"
+    },
+    {
+     "w": "roundabout",
+     "ipa": "/ˈraʊnd.ə.baʊt/",
+     "pos": "n.",
+     "cn": "圓環",
+     "ex": "Take the second exit at the roundabout.",
+     "exCn": "在圓環走第二個出口。"
+    },
+    {
+     "w": "motorbike",
+     "ipa": "/ˈmoʊ.t̬ɚ.baɪk/",
+     "pos": "n.",
+     "cn": "機車",
+     "ex": "Most workers ride a motorbike to the factory.",
+     "exCn": "大部分員工騎機車來工廠。"
+    }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    {
+     "p": "my phone's dead",
+     "cn": "我手機沒電了"
+    },
+    {
+     "p": "portable charger",
+     "cn": "行動電源"
+    },
+    {
+     "p": "be good with chopsticks",
+     "cn": "很會用筷子"
+    },
+    {
+     "p": "coconut milk ice cream",
+     "cn": "椰奶冰淇淋"
+    },
+    {
+     "p": "have your high beams on",
+     "cn": "開著遠光燈"
+    },
+    {
+     "p": "on the road",
+     "cn": "在路上"
+    }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "MY03-A",
+     "title": "be good with + 東西（很會用…）",
+     "pat": "主詞 + be + good with + 名詞",
+     "pts": [
+      "稱讚別人很會用某個工具或東西，口語很自然。",
+      "with 後面接名詞；如果接動作要改成 be good at + V-ing。",
+      "例：She's good with computers.（她很會用電腦。）"
+     ],
+     "ex": "She's good with computers.",
+     "exCn": "她很會用電腦。"
+    },
+    {
+     "k": "MY03-B",
+     "title": "There are no / so many + 複數名詞（沒有…／好多…）",
+     "pat": "There are + no / so many + 複數名詞 + 地點",
+     "pts": [
+      "描述一個地方「有什麼、沒有什麼」最簡單的句型。",
+      "no 和 so many 後面都接複數名詞；不可數名詞要用 There is no / so much。",
+      "例：There are no chairs in the meeting room.（會議室裡沒有椅子。）"
+     ],
+     "ex": "There are no chairs in the meeting room.",
+     "exCn": "會議室裡沒有椅子。"
+    },
+    {
+     "k": "MY03-C",
+     "title": "have + 東西 + on（開著…）",
+     "pat": "主詞 + have / have got + 東西 + on",
+     "pts": [
+      "表示燈、冷氣、電視等「正開著」的狀態。",
+      "口語常說 have got，縮寫成 've got / 's got；開關燈不用 open，用 turn on / turn off。",
+      "例：Who has the air conditioner on?（誰開著冷氣？）"
+     ],
+     "ex": "Who has the air conditioner on?",
+     "exCn": "誰開著冷氣？"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "dead vs broken",
+     "sc": "手機 dead 是沒電，充電就好；broken 是壞掉了，要拿去修。",
+     "ex": "My phone isn't broken. It's just dead.",
+     "exCn": "我手機沒壞，只是沒電而已。",
+     "cn": "沒電 vs 壞掉"
+    },
+    {
+     "u": "on the road vs in the road",
+     "sc": "on the road 是在路上（正常行駛、路邊有什麼）；in the road 是東西在馬路中間，擋到車子。",
+     "ex": "There are lots of cars on the road, and a box is lying in the road.",
+     "exCn": "路上車很多，而且馬路中間還有一個箱子。",
+     "cn": "在路上 vs 在馬路中間"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "週報｜日常溝通",
+     "title": "Weekly Report: Everyday English",
+     "titleCn": "📧 週報｜給主管的日常英文心得",
+     "paras": [
+      {
+       "en": "Subject: Some everyday English from this week",
+       "cn": "主旨：這週學到的日常英文"
+      },
+      {
+       "en": "Hi, besides work, here are a few everyday things I learned to say in English this week.",
+       "cn": "您好，除了工作以外，跟您分享這週學會用英文說的幾件日常小事。"
+      },
+      {
+       "en": "At dinner, I told someone, \"You're really good with chopsticks.\" We also asked, \"Want some dessert?\" One choice was coconut milk ice cream.",
+       "cn": "吃飯時我跟人說：「你筷子用得很好。」我們也問：「要來點甜點嗎？」其中一個是椰奶冰淇淋。"
+      },
+      {
+       "en": "Then my phone was dead, so I needed a portable charger.",
+       "cn": "後來我手機沒電了，需要行動電源。"
+      },
+      {
+       "en": "On the road, there are so many roundabouts, and the highway doesn't have any streetlights.",
+       "cn": "路上圓環好多，高速公路也都沒有路燈。"
+      },
+      {
+       "en": "The headlights were so bright because everyone had their high beams on. With no streetlights, a motorbike could hit you.",
+       "cn": "車燈超刺眼，因為大家都開遠光燈。沒有路燈，機車可能會撞到你。"
+      }
+     ],
+     "questions": [
+      {
+       "q": "What did the writer need when the phone was dead?",
+       "qCn": "手機沒電時，寫信的人需要什麼？",
+       "a": "A portable charger.",
+       "aCn": "行動電源。"
+      },
+      {
+       "q": "Why were the headlights so bright?",
+       "qCn": "車燈為什麼那麼刺眼？",
+       "a": "Everyone had their high beams on.",
+       "aCn": "因為大家都開遠光燈。"
+      },
+      {
+       "q": "What doesn't the highway have?",
+       "qCn": "高速公路沒有什麼？",
+       "a": "Streetlights.",
+       "aCn": "路燈。"
+      }
+     ]
+    },
+    {
+     "bar": "會議｜日常溝通",
+     "title": "Small Talk: How Was Your Week?",
+     "titleCn": "🗣 會議｜跟主管閒聊這週",
+     "paras": [
+      {
+       "en": "Supervisor: How was your week outside work?",
+       "cn": "主管：這週下班後過得怎麼樣？"
+      },
+      {
+       "en": "You: Pretty good. At dinner, someone was really good with chopsticks.",
+       "cn": "你：還不錯。吃飯時有人筷子用得超好。"
+      },
+      {
+       "en": "Supervisor: Nice. Did you have dessert?",
+       "cn": "主管：不錯喔。有吃甜點嗎？"
+      },
+      {
+       "en": "You: Someone asked, \"Want some dessert?\" There was coconut milk ice cream.",
+       "cn": "你：有人問：「要吃點甜點嗎？」有椰奶冰淇淋。"
+      },
+      {
+       "en": "Supervisor: Sounds good. Anything else?",
+       "cn": "主管：聽起來不錯。還有呢？"
+      },
+      {
+       "en": "You: My phone was dead, so I needed a portable charger.",
+       "cn": "你：我手機沒電，需要行動電源。"
+      },
+      {
+       "en": "Supervisor: How were the roads?",
+       "cn": "主管：路況怎麼樣？"
+      },
+      {
+       "en": "You: There are so many roundabouts, and the highway doesn't have any streetlights.",
+       "cn": "你：圓環好多，高速公路也都沒有路燈。"
+      },
+      {
+       "en": "Supervisor: That sounds dangerous.",
+       "cn": "主管：聽起來很危險。"
+      },
+      {
+       "en": "You: It is. There are no streetlights, so a motorbike could hit you. And everyone's got their high beams on.",
+       "cn": "你：真的。沒有路燈，機車可能會撞到你。而且大家都開遠光燈。"
+      }
+     ]
+    },
+    {
+     "bar": "討論｜下週我會怎麼做",
+     "title": "Discussion: What Will I Do Next Week?",
+     "titleCn": "討論｜下週我會怎麼做",
+     "paras": [
+      {
+       "en": "How can I make sure my phone is not dead next time?",
+       "cn": "下次要怎麼確保手機不會沒電？"
+      },
+      {
+       "en": "What can I say to a driver who is using high beams?",
+       "cn": "遇到一直開遠光燈的駕駛，我可以怎麼說？"
+      },
+      {
+       "en": "How can I stay safe on a road with no streetlights?",
+       "cn": "在沒有路燈的路上，我要怎麼注意安全？"
+      }
+     ]
+    },
+    {
+     "bar": "隨身速查｜本課 8 句",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜本課 8 句",
+     "paras": [
+      {
+       "en": "My phone's dead. I need a portable charger.",
+       "cn": "我的手機沒電了，需要行動電源。"
+      },
+      {
+       "en": "You're really good with chopsticks.",
+       "cn": "你的筷子用得很好。"
+      },
+      {
+       "en": "Want some dessert?",
+       "cn": "你想要來些甜點嗎？"
+      },
+      {
+       "en": "Coconut milk ice cream.",
+       "cn": "椰奶冰淇淋。"
+      },
+      {
+       "en": "There are no streetlights here, so a motorbike could hit you.",
+       "cn": "沒有路燈，機車騎士可能會撞到你。"
+      },
+      {
+       "en": "The highway doesn't have any streetlights.",
+       "cn": "高速公路沒有路燈。"
+      },
+      {
+       "en": "The headlights are so bright. Everyone's got their high beams on.",
+       "cn": "汽車燈光非常刺眼，他們都開遠光燈。"
+      },
+      {
+       "en": "There are so many roundabouts on the road.",
+       "cn": "路上好多圓環。"
+      }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -35895,6 +36622,8 @@ window.BOOK = {
     bk20251218:[[['toilet','wrench','suitcase','doc','moon'],'忙碌修繕的一天：馬桶、洗手台、磁磚出問題 → 打電話請水電工 → 旅行社規劃假期 → 到政府機關辦文件 → 晚上全部修好。']],
     bk20251226b:[[['signpost','exam','piggy','globe','sprout'],'Mia 的夢想與決定：思考自己的未來 → 認真讀書就能通過考試 → 現在存錢明年去旅行 → 想像中了彩券會做什麼 → 努力加上想像力，凡事皆可能。']],
     bk20260922:[[['eye','gear','plug','dumbbell','cart'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
+    my02:[[['mask','knife','wave','thermo','camera'],'遮噴看起來沒成功、明天換方法 → 治具要改、會刮傷噴漆件 → 陽極前先噴砂、增加附著力 → 用火烤燒掉鋁件毛邊 → 用色差計對顏色。']],
+    my03:[[['drumstick','cake','sad','moon','scooter'],'稱讚對方筷子用得好 → 問要不要甜點、椰奶冰淇淋 → 手機沒電、要行動電源 → 車燈刺眼、大家都開遠光燈 → 沒路燈、圓環多、小心機車。']],
     my01:[[['sun','pot','wind','tornadoL','car'],'馬達上蓋剛來顏色不對 → 鐵板全都有壓傷 → 扶手管裡面生鏽 → 管材整支歪掉會撞機 → 通知廠商、再發生就拒收。']],
     qp04:[[['book','scissors','ticket','orgchart','broomL'],'馬達支架孔距超差：孔距 85.35–85.40、圖面 Rev C 要 85.0 ± 0.2 → 加工課用印出來的舊版 Rev B → 30 個試裝馬達、運轉四小時正常 → 不重工、向客戶申請特採、每箱貼黃標只限 2610 批 → 收回舊圖、只用受控圖面、首件對最新版。']],
     qp03:[[['spray','faucet','mirror','cloudRain','umbrella'],'重訓架立柱掉漆：客戶百格 2B、規格要 4B → 我們只測平的測試片、沒測實際零件 → 脫脂槽三週沒換、油殘留 → 300 支保留、空運 40 支 → 脫脂槽每週換、每班測實際零件附照片。']],

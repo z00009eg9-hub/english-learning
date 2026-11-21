@@ -1,12 +1,24 @@
 {
-  "lastId": 1,
-  "lastRun": "2026-11-07",
+  "lastId": 3,
+  "lastRun": "2026-11-21",
   "runs": [
     {
       "id": "my01",
       "date": "2026-11-07",
       "sentences": 5,
       "theme": "來料檢驗"
+    },
+    {
+      "id": "my02",
+      "date": "2026-11-21",
+      "sentences": 5,
+      "theme": "塗裝與表面處理"
+    },
+    {
+      "id": "my03",
+      "date": "2026-11-21",
+      "sentences": 8,
+      "theme": "日常溝通"
     }
   ]
 }
