@@ -2353,7 +2353,7 @@ window.READING = [
     {en:"Nobody had done this before. They met every Sunday evening in the temple itself, and argued about money. Mrs. Yeh and the fruit seller did not trust each other, and for three weeks they would not sit at the same table. Anita kept the accounts on her own, in her own notebook, because the committee had no computer.",
      cn:"沒有人做過這件事。他們每個星期日晚上就在廟裡面開會，為錢吵架。葉太太和那位賣水果的互相不信任，有三個星期不肯坐同一張桌子。Anita 自己一個人記帳，記在她自己的筆記本上，因為管委會沒有電腦。"},
     {en:"On the first morning something went wrong with the incense table, and Anita burned herself on a candle. It was not serious. What surprised her was the children: eleven of them had painted the drums themselves, and they taught each other the rhythm in one afternoon. The oldest helper, Mr. Lin, was eighty-one, and he carried the smaller drum by himself.",
-     cn:"第一天早上香案那邊出了點問題，Anita 被蠟燭燙到自己。不嚴重。真正讓她意外的是那些小孩：有十一個自己把鼓漆好，而且他們一個下午就互相教會了那個節奏。最年長的幫手林先生八十一歲，那面小一點的鼓是他自己搬的。"},
+     cn:"第一天早上香案那邊出了點問題，Anita 被蠟燭燙到了。不嚴重。真正讓她意外的是那些小孩：有十一個自己把鼓漆好，而且他們一個下午就互相教會了那個節奏。最年長的幫手林先生八十一歲，那面小一點的鼓是他自己搬的。"},
     {en:"The festival lasted two days. Nothing was perfect: the sound system failed, and the fireworks went off late. But the lane fed four hundred people, and the committee itself was surprised to find money left over. Anita still has the notebook. On the last page Mrs. Yeh wrote one line, and the fruit seller signed it himself: next year, same thing, no company.",
      cn:"廟會辦了兩天。沒有一樣是完美的：音響掛掉，煙火也晚放。但這條巷子餵了四百個人，而且管委會自己也很意外，錢還有剩。Anita 到現在還留著那本筆記本。最後一頁葉太太寫了一行字，賣水果的那位自己簽了名：明年一樣，不要公司。"}
   ],
