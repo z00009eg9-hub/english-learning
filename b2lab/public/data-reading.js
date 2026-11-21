@@ -2265,6 +2265,144 @@ window.READING = [
      b2Cn:"等到他再打開那個網站的時候，天幾乎黑了。",
      spCn:"等他再回去弄的時候，天已經暗了。"}
   ]
+},
+
+/* ---------------------------------------------------------- 38 */
+{
+  id:"r38", level:"B1", topic:"駕照與路考", words:222,
+  title:"On Time, but Not in Time",
+  titleCn:"準時，卻還是沒趕上",
+  focus:"時間介系詞：at / on / in 與 on time / in time",
+  intro:"Tom 的機車駕照考了三次。這篇跟著他從通知單上的時間一路到把駕照放進皮夾。注意三個小介系詞：鐘點用 at（at eight、at two o'clock），星期和日期用 on（on Tuesday、on his sister's birthday），月份、年份、季節用 in（in March、in April）；一天裡的時段用 in the morning／in the afternoon，但 at night 固定用 at，而且一旦指定了哪一天就要改成 on（on Monday night、on Thursday evenings）。再分清楚兩組最容易混的：on time 是「準時、不早不晚」，in time 是「趕得上」；at the end of ... 是「在…結束的那個時間點」，in the end 是「最後、終於」。中文都講成「在」「到」，英文卻靠這幾個字分工。",
+  spoken:[
+    {en:"The letter said the test began at eight in the morning.",cn:"通知單上說考試早上八點開始。"},
+    {en:"He reached the gate at twenty-nine minutes past seven: on time, but behind forty other people.",cn:"他七點二十九分到大門口：準時，但前面排了四十個人。"},
+    {en:"At the end of the test the officer said one thing: come back in two weeks.",cn:"考試結束時，監考人員只說了一句：兩個星期後再來。"},
+    {en:"In the end he passed in April, on his sister's birthday.",cn:"最後他四月通過了，就在他姊姊生日那天。"}
+  ],
+  paras:[
+    {en:"Tom booked his scooter test for a Tuesday in March. The letter said the test began at eight in the morning, and that riders had to arrive at the office on Minsheng Road by half past seven. He set two alarms on Monday night.",
+     cn:"Tom 把機車路考約在三月的一個星期二。通知單上說考試早上八點開始，而且考生最晚七點半要到民生路上那間辦事處。他星期一晚上設了兩個鬧鐘。"},
+    {en:"On the day of the test it rained. Tom left home at seven, but a truck had broken down at the corner, and he sat in the traffic for fifteen minutes. He reached the gate at twenty-nine minutes past seven: on time, but behind forty other people.",
+     cn:"考試那天下雨。Tom 七點出門，但轉角有一輛卡車故障，他在車陣裡坐了十五分鐘。他七點二十九分到大門口：準時，但前面排了四十個人。"},
+    {en:"The written test came first: forty questions in thirty minutes, on a screen, in a cold room. Tom answered the last one in the final minute and passed. The riding test started in the afternoon, at two o'clock.",
+     cn:"先考筆試：四十題、三十分鐘，在螢幕上作答，在一間很冷的房間裡。Tom 在最後一分鐘答完最後一題，通過了。騎車的路考在下午兩點開始。"},
+    {en:"The course is a painted road with a narrow plank, a crossing, and one set of lights. Tom put a foot down on the plank, so the officer stopped him there. At the end of the test the officer said one thing: come back in two weeks.",
+     cn:"考場是一條畫好線的道路，上面有一道窄窄的直線板、一個行人穿越道，和一組紅綠燈。Tom 在直線板上腳著地了，所以監考人員當場就讓他停下來。考試結束時，監考人員只說了一句：兩個星期後再來。"},
+    {en:"In the end Tom took the test three times. He passed in April, on his sister's birthday, and he still keeps the license in his wallet. On Thursday evenings he rides to the night market, and he is always in time for the last pepper buns.",
+     cn:"最後 Tom 考了三次。他四月通過，就在他姊姊生日那天，而他到現在還把駕照放在皮夾裡。星期四晚上他會騎去夜市，而且他每次都趕得上最後幾個胡椒餅。"}
+  ],
+  target:[
+    {w:"book",ipa:"/bʊk/",pos:"v.",cn:"預約；訂",def:"To arrange to have a seat, a room or a place at a set time.",ex:"She booked a table for six by phone.",exCn:"她用電話訂了六個人的桌位。"},
+    {w:"alarm",ipa:"/əˈlɑːrm/",pos:"n.",cn:"鬧鐘",def:"A clock or a phone that makes a noise to wake you.",ex:"My alarm did not go off, so I missed the shuttle bus.",exCn:"我的鬧鐘沒響，所以我錯過了接駁車。"},
+    {w:"traffic",ipa:"/ˈtræfɪk/",pos:"n.",cn:"車流；交通",def:"All the cars and other vehicles moving on a road.",ex:"Traffic near the school slows down after four.",exCn:"學校附近的車流四點之後就變慢。"},
+    {w:"crossing",ipa:"/ˈkrɑː.sɪŋ/",pos:"n.",cn:"行人穿越道",def:"A marked place where people can walk across a road.",ex:"An old man waited at the crossing with two bags of fruit.",exCn:"一位老先生提著兩袋水果在行人穿越道等著。"},
+    {w:"officer",ipa:"/ˈɑː.fɪ.sɚ/",pos:"n.",cn:"執勤人員；官員",def:"A person with an official job in the police or in a government office.",ex:"An officer checked every helmet before the parade.",exCn:"遊行前有位執勤人員檢查了每一頂安全帽。"},
+    {w:"license",ipa:"/ˈlaɪ.səns/",pos:"n.",cn:"執照；駕照",def:"An official card that allows you to do something.",ex:"You need a license to sell food from a van.",exCn:"你要有執照才能用餐車賣食物。"}
+  ],
+  questions:[
+    {q:"Why did Tom reach the gate only one minute before half past seven?",
+     opts:["A. He had set his alarms for the wrong day","B. A truck had broken down at the corner and he sat in the traffic","C. The office had moved to another road","D. He went to the night market first"],
+     ans:1,
+     expl:"第二段：a truck had broken down at the corner, and he sat in the traffic for fifteen minutes。"},
+    {q:"文章先說 He reached the gate ... on time，最後又說 he is always in time for the last pepper buns。on time 和 in time 差在哪裡？",
+     opts:["A. on time 是「照排定的時間、不早不晚」，in time 是「趕得上、來得及」","B. on time 用在過去，in time 用在未來","C. 兩個意思一樣，in time 只是比較口語","D. on time 後面一定要接 for，in time 不可以"],
+     ans:0,
+     expl:"on time ＝ 準時（He was on time.）；in time ＝ 趕得上，後面常接 for 或 to（in time for the last pepper buns、in time to see it）。所以 ✗ I got to work in time 當「我準時上班」是錯的，要說 on time。"},
+    {q:"What happened in the end?",
+     opts:["A. He passed in April, after taking the test three times","B. He passed on the same day in March","C. He gave up and takes the bus to the night market","D. The officer gave him the license at the end of the first test"],
+     ans:0,
+     expl:"最後一段：In the end Tom took the test three times. He passed in April, on his sister's birthday。"}
+  ],
+  upgrade:[
+    {b1:"He arrived at half past seven. He was not late.",
+     b2:"He reached the gate at twenty-nine minutes past seven: on time, but behind forty other people.",
+     note:"鐘點用 at（at seven、at half past seven、at two o'clock）；日期和星期用 on（on Tuesday、on his sister's birthday）；月份、年份用 in（in March、in April）。「沒遲到」直接說 on time 比 was not late 自然；只有「趕得上某件事」才用 in time（for／to）。✗ He got to the office in time every day 當「他每天準時到」是錯的，準時要用 on time。",
+     sp:"He rolled in at seven twenty-nine — on time, just about.",
+     spNote:"roll in 是口語的「晃進來、到達」；just about 放句尾是「勉勉強強算是」。",
+     b1Cn:"他七點半到。他沒有遲到。",
+     b2Cn:"他七點二十九分到大門口：準時，但前面排了四十個人。",
+     spCn:"他七點二十九分晃進去——勉強算準時。"},
+    {b1:"The test was in the afternoon. It started at two.",
+     b2:"The riding test started in the afternoon, at two o'clock.",
+     note:"一天裡的時段用 in（in the morning／in the afternoon／in the evening），但 at night 是固定用 at，不說 ✗ in the night。一旦前面指定了哪一天，整組就改成 on：on Monday night、on Thursday evenings、on Friday morning。另外 in ＋一段時間是「之後」（come back in two weeks ＝ 兩個星期後），和 for ＋一段時間（for fifteen minutes ＝ 持續十五分鐘）不一樣。",
+     sp:"They ran the riding bit after lunch, two o'clock sharp.",
+     spNote:"the riding bit 是口語的「騎車那一段」；two o'clock sharp 是「兩點整」。",
+     b1Cn:"考試在下午。兩點開始。",
+     b2Cn:"騎車的路考在下午兩點開始。",
+     spCn:"騎車那段是午餐後跑的，兩點整。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 39 */
+{
+  id:"r39", level:"B1+", topic:"廟會與傳統節慶", words:249,
+  title:"The Festival They Ran Themselves",
+  titleCn:"他們自己辦起來的廟會",
+  focus:"反身代名詞與 each other、on my own / my own",
+  intro:"Anita 巷子底的廟今年沒錢請外包公司，整場廟會只能靠鄰居自己辦。這篇練反身代名詞的四種用法：當受詞時用 herself／himself／themselves（Anita burned herself，動作回到自己身上）；放在句尾或主詞後面是加強語氣的「親自、自己動手」（run the festival themselves、the committee itself）；「一個人、沒人幫」是 on my own ＝ by myself；「我自己的東西」是 my own ＋名詞，own 前面一定要有所有格。最容易錯的是把「互相」也寫成反身代名詞：A 教 B、B 教 A 要用 each other，不是 themselves。中文一個「自己」全包，英文卻分成四種寫法。",
+  spoken:[
+    {en:"So the neighbors decided to run the festival themselves.",cn:"所以鄰居們決定自己把廟會辦起來。"},
+    {en:"Mrs. Yeh and the fruit seller did not trust each other.",cn:"葉太太和那位賣水果的互相不信任。"},
+    {en:"Anita kept the accounts on her own, in her own notebook.",cn:"Anita 自己一個人記帳，記在她自己的筆記本上。"},
+    {en:"The fruit seller signed it himself: next year, same thing, no company.",cn:"賣水果的那位自己簽了名：明年一樣，不要公司。"}
+  ],
+  paras:[
+    {en:"The temple at the end of Anita's lane holds its festival in the third lunar month. For years a company from Taichung had set up the stage and the food stalls, but this year the committee could not pay for it. So the neighbors decided to run the festival themselves. Anita put her name on the list because a friend of hers, Mrs. Yeh, asked her to.",
+     cn:"Anita 巷子底的那間廟在農曆三月辦廟會。有好幾年都是台中一家公司來搭舞台、擺小吃攤，但今年管委會付不出那筆錢。所以鄰居們決定自己把廟會辦起來。Anita 把名字寫上去，是因為她的一個朋友葉太太拜託她。"},
+    {en:"Nobody had done this before. They met every Sunday evening in the temple itself, and argued about money. Mrs. Yeh and the fruit seller did not trust each other, and for three weeks they would not sit at the same table. Anita kept the accounts on her own, in her own notebook, because the committee had no computer.",
+     cn:"沒有人做過這件事。他們每個星期日晚上就在廟裡面開會，為錢吵架。葉太太和那位賣水果的互相不信任，有三個星期不肯坐同一張桌子。Anita 自己一個人記帳，記在她自己的筆記本上，因為管委會沒有電腦。"},
+    {en:"On the first morning something went wrong with the incense table, and Anita burned herself on a candle. It was not serious. What surprised her was the children: eleven of them had painted the drums themselves, and they taught each other the rhythm in one afternoon. The oldest helper, Mr. Lin, was eighty-one, and he carried the smaller drum by himself.",
+     cn:"第一天早上香案那邊出了點問題，Anita 被蠟燭燙到自己。不嚴重。真正讓她意外的是那些小孩：有十一個自己把鼓漆好，而且他們一個下午就互相教會了那個節奏。最年長的幫手林先生八十一歲，那面小一點的鼓是他自己搬的。"},
+    {en:"The festival lasted two days. Nothing was perfect: the sound system failed, and the fireworks went off late. But the lane fed four hundred people, and the committee itself was surprised to find money left over. Anita still has the notebook. On the last page Mrs. Yeh wrote one line, and the fruit seller signed it himself: next year, same thing, no company.",
+     cn:"廟會辦了兩天。沒有一樣是完美的：音響掛掉，煙火也晚放。但這條巷子餵了四百個人，而且管委會自己也很意外，錢還有剩。Anita 到現在還留著那本筆記本。最後一頁葉太太寫了一行字，賣水果的那位自己簽了名：明年一樣，不要公司。"}
+  ],
+  target:[
+    {w:"temple",ipa:"/ˈtem.pəl/",pos:"n.",cn:"廟；寺",def:"A building where people pray in some religions.",ex:"A small temple sits between two tall apartment blocks.",exCn:"一間小廟夾在兩棟高公寓之間。"},
+    {w:"committee",ipa:"/kəˈmɪt̬.i/",pos:"n.",cn:"委員會；管委會",def:"A group of people chosen to make decisions for a larger group.",ex:"The safety committee meets on the last Friday of each month.",exCn:"安全委員會每個月最後一個星期五開會。"},
+    {w:"stall",ipa:"/stɑːl/",pos:"n.",cn:"攤位",def:"A small open shop or table from which goods are sold.",ex:"Her mother ran a noodle stall for thirty years.",exCn:"她母親賣了三十年的麵攤。"},
+    {w:"account",ipa:"/əˈkaʊnt/",pos:"n.",cn:"帳目；帳戶",def:"A record of money paid in and out.",ex:"The treasurer showed the accounts to everyone in the hall.",exCn:"財務把帳目給大廳裡的每個人看。"},
+    {w:"incense",ipa:"/ˈɪn.sens/",pos:"n.",cn:"香",def:"A substance that is burned to give a sweet smell.",ex:"The smell of incense stayed in his jacket all evening.",exCn:"香的味道整晚都留在他的外套上。"},
+    {w:"candle",ipa:"/ˈkændl/",pos:"n.",cn:"蠟燭",def:"A stick of wax with a string inside that burns to give light.",ex:"She lit a candle when the lights went out.",exCn:"燈熄掉的時候她點了一根蠟燭。"},
+    {w:"rhythm",ipa:"/ˈrɪð.əm/",pos:"n.",cn:"節奏",def:"A regular pattern of sounds or movements.",ex:"The old man clapped the rhythm with one hand on the table.",exCn:"那位老先生用一隻手在桌上打出節奏。"},
+    {w:"firework",ipa:"/ˈfaɪr.wɝːk/",pos:"n.",cn:"煙火",def:"A device that explodes to make loud noise and bright colors in the sky.",ex:"A single firework woke the whole building at midnight.",exCn:"一發煙火在午夜把整棟樓的人都叫醒。"}
+  ],
+  questions:[
+    {q:"Why did the neighbors run the festival themselves this year?",
+     opts:["A. The temple was too small for a company","B. The committee could not pay the company from Taichung","C. Mrs. Yeh did not want a stage in the lane","D. The lane had no electricity for the sound system"],
+     ans:1,
+     expl:"第一段：this year the committee could not pay for it. So the neighbors decided to run the festival themselves。"},
+    {q:"What did Anita do on her own?",
+     opts:["A. She painted the drums","B. She carried the smaller drum","C. She kept the accounts in her own notebook","D. She wrote the line on the last page"],
+     ans:2,
+     expl:"第二段：Anita kept the accounts on her own, in her own notebook。搬小鼓的是林先生，漆鼓的是小孩，最後一頁寫字的是葉太太。"},
+    {q:"文章寫 they taught each other the rhythm，而不是 they taught themselves the rhythm。差在哪裡？",
+     opts:["A. each other 是「彼此互相（A 教 B、B 教 A）」，themselves 是動作回到自己身上或「親自動手」","B. 兩個完全一樣，each other 比較正式","C. themselves 只能放句尾，each other 不行","D. each other 只用在否定句"],
+     ans:0,
+     expl:"each other（＝ one another）講「彼此之間互相」：they taught each other、did not trust each other。themselves 有兩種用法，都不是「互相」：當受詞（Anita burned herself 燙到自己）和放句尾加強語氣的「親自動手」（had painted the drums themselves）。✗ They met themselves at the temple 是錯的，要說 They met each other 或直接 They met。"},
+    {q:"What did Mrs. Yeh and the fruit seller leave on the last page of the notebook?",
+     opts:["A. The name of the company from Taichung","B. A line saying they would do the same next year without a company","C. The amount of money the committee still owed","D. The names of the eleven children"],
+     ans:1,
+     expl:"最後一段：Mrs. Yeh wrote one line, and the fruit seller signed it himself: next year, same thing, no company。"}
+  ],
+  upgrade:[
+    {b1:"The neighbors did not pay a company. They did the festival.",
+     b2:"The committee could not pay for it, so the neighbors decided to run the festival themselves.",
+     note:"「自己動手、沒請別人」把反身代名詞放在句尾加強語氣：run the festival themselves、painted the drums themselves、signed it himself。這個用法可以整個拿掉、句子照樣通，拿掉只是少了「親自」的味道。它跟當受詞的反身代名詞（Anita burned herself）長得一樣，差在位置：受詞緊跟著動詞，加強語氣的放句尾，或放在主詞後面（the committee itself was surprised）。",
+     sp:"No money for a company that year — so the lane just did it itself.",
+     spNote:"did it itself 的 it 把整條巷子當成一個整體；just 是口語的「就這樣」。",
+     b1Cn:"鄰居們沒有付錢給公司。他們辦了廟會。",
+     b2Cn:"管委會付不出那筆錢，所以鄰居們決定自己把廟會辦起來。",
+     spCn:"那年沒錢請公司——所以這條巷子就自己來了。"},
+    {b1:"Anita was alone when she did the accounts. She used her notebook.",
+     b2:"Anita kept the accounts on her own, in her own notebook.",
+     note:"on her own ＝ by herself ＝「一個人、沒人幫」，是副詞片語，放在動詞後面。my own ＋名詞 ＝「我自己的（不是別人的）」，own 前面一定要有所有格：✗ the own notebook、✗ a own notebook 都不行。要說「某一個朋友」而不是「我所有的朋友」，用 a friend of hers（＝ one of her friends），✗ a her friend 是錯的。",
+     sp:"She did the books herself — her own little notebook, nobody else's.",
+     spNote:"do the books 是口語的「記帳」；nobody else's 是「不是別人的」，後面的 notebook 省掉了。",
+     b1Cn:"Anita 記帳的時候是一個人。她用她的筆記本。",
+     b2Cn:"Anita 自己一個人記帳，記在她自己的筆記本上。",
+     spCn:"帳是她自己記的——她自己的小本子，不是別人的。"}
+  ]
 }
 
 ];

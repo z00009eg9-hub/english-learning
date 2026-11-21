@@ -861,6 +861,44 @@ r37:{ unit:"g04", title:"by 與 until、by the time ...",
     {bad:"I will file the return until the thirty-first.",good:"I will file the return by the thirty-first.",why:"file 是一次就完成的動作，要用 by（最晚那天之前做完）；until 會變成「一直在申報、報到三十一號」，意思不通。"},
     {bad:"By the time I will get home, it will be dark.",good:"By the time I get home, it will be dark.",why:"by the time 的子句裡不用 will，用現在簡單式就代表未來；未來的部分放在主句（it will be dark）。"}
   ]
+},
+
+r38:{ unit:"g04", title:"時間介系詞：at / on / in 與 on time / in time",
+  formula:"at ＋鐘點／at night　|　on ＋星期、日期、指定某天的時段　|　in ＋月份、年份、季節、一天的時段　‖　on time ＝ 準時　|　in time (for / to) ＝ 趕得上",
+  points:[
+    "at ＝ 點狀的鐘點：at eight in the morning、at two o'clock、at half past seven、at twenty-nine minutes past seven。另外 at night、at Christmas、at the moment 也固定用 at（美式說 on the weekend，英式才說 at the weekend）。",
+    "on ＝ 星期與日期：on Tuesday、on Monday night、on Thursday evenings、on his sister's birthday、on the day of the test。⚠ 一天裡的時段本來用 in（in the morning），但只要前面指定了哪一天，整組就換成 on：✗ in Monday night ／ ✓ on Monday night。",
+    "in ＝ 範圍比較大的時間：in March、in April、in the summer、in 2026，以及 in the morning／in the afternoon／in the evening（但 at night，不說 ✗ in the night）。in ＋一段時間還有「之後」的意思：come back in two weeks（兩個星期後）、答完題 in the final minute（在最後一分鐘內）。這個 in 跟 for ＋一段時間（for fifteen minutes ＝ 持續了十五分鐘）不一樣。",
+    "⚠ 兩組固定用法要分清楚：on time ＝「照排定的時間、不早不晚」（The train left on time.）；in time ＝「趕得上」，後面常接 for 或 to（in time for the last pepper buns、in time to catch it）。另外 at the end of ... ＝「在…結束的那個時間點」（At the end of the test the officer said ...）；in the end ＝「最後、終於」（In the end Tom took the test three times.），兩者不能互換。this／last／next／every 前面不加介系詞：✗ on next Tuesday ／ ✓ next Tuesday。"
+  ],
+  examples:[
+    {en:"The clinic opens at nine on weekdays and closes early in August.",cn:"診所平日九點開門，八月會提早關。",note:"at ＋鐘點、on ＋平日、in ＋月份"},
+    {en:"We got to the platform on time, but not in time to buy water.",cn:"我們準時到月台，但來不及買水。",note:"on time 準時 vs. in time 趕得上"},
+    {en:"At the end of the meeting nobody agreed, but in the end they signed.",cn:"會議結束時沒有人同意，但最後他們還是簽了。",note:"at the end of ... vs. in the end"}
+  ],
+  traps:[
+    {bad:"I always get to work in time.",good:"I always get to work on time.",why:"「準時上班」是照規定的時間到，用 on time。in time 是「趕得上某件事」，後面通常要接 for 或 to（in time for the meeting）。"},
+    {bad:"The test began in eight in the morning on March.",good:"The test began at eight in the morning in March.",why:"鐘點用 at、月份用 in；只有星期和日期才用 on（on Tuesday、on March 12）。"}
+  ]
+},
+
+r39:{ unit:"g14", title:"反身代名詞與 each other、on my own / my own",
+  formula:"受詞 ＝ 主詞 → myself / yourself / himself / herself / itself / ourselves / themselves　|　加強語氣「親自」→ 句尾或主詞後　|　「一個人」→ on my own ＝ by myself　|　「我自己的」→ 所有格 ＋ own ＋名詞　|　「互相」→ each other",
+  points:[
+    "動作回到自己身上，受詞就換成反身代名詞：Anita burned herself on a candle.、He cut himself. 主詞是 I／you（單）／he／she／it 時用 -self，we／you（複）／they 用 -selves。",
+    "放在句尾（或主詞後面）是加強語氣的「親自、自己動手，沒請別人」：They decided to run the festival themselves.、The children had painted the drums themselves.、The fruit seller signed it himself.、The committee itself was surprised. 這種 themselves 拿掉句子照樣通，只是少了「親自」的味道。",
+    "「一個人、沒人幫」用 on my own ＝ by myself：Anita kept the accounts on her own.、He carried the drum by himself. 「我自己的（不是別人的）」用所有格 ＋ own ＋名詞：in her own notebook。⚠ own 前面一定要有所有格：✗ the own notebook、✗ a own notebook。要講「某一個朋友」用 a friend of hers（＝ one of her friends），✗ a her friend 是錯的。",
+    "⚠ 「互相」不是反身代名詞，要用 each other（或 one another）：they taught each other the rhythm、did not trust each other。還有一組動詞英文不加反身代名詞：wash、shave、dress、feel、relax、concentrate、meet、complain。✗ I feel myself tired ／ ✓ I feel tired；✗ They met themselves ／ ✓ They met each other。"
+  ],
+  examples:[
+    {en:"She repaired the window herself, and she was proud of herself.",cn:"那扇窗是她自己修的，她也很為自己驕傲。",note:"句尾 herself ＝ 親自；介系詞後 herself ＝ 受詞"},
+    {en:"The two drivers blamed each other, and neither of them said sorry.",cn:"兩位駕駛互相指責，兩個都沒有道歉。",note:"each other ＝ 互相，不用 themselves"},
+    {en:"I painted the gate on my own, with my own brushes.",cn:"那道門是我一個人漆的，用我自己的刷子。",note:"on my own ＝ 一個人；my own ＋名詞 ＝ 我自己的"}
+  ],
+  traps:[
+    {bad:"The children taught themselves the rhythm to one another.",good:"The children taught each other the rhythm.",why:"「A 教 B、B 教 A」是 each other（或 one another），不能用 themselves；themselves 會變成「他們教自己」或「親自教」，意思不同。"},
+    {bad:"She wrote it in the own notebook, by her own.",good:"She wrote it in her own notebook, on her own.",why:"own 前面必須有所有格（her own notebook），不能用 the／a；「一個人」是 on her own 或 by herself，把兩個混成 ✗ by her own 是最常見的錯。"}
+  ]
 }
 
 };
