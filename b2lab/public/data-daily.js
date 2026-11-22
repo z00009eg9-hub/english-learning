@@ -554,7 +554,7 @@ articles:[
         "D. Once has"
       ],
       "ans": 0,
-      "expl": "once 帶出時間子句，子句裡一律用現在式 takes，不可以放 will。B、C 把 will 塞進子句；D 的 has 後面接不上動詞原形，形狀也不對。"
+      "expl": "once 帶出時間子句，子句裡一律用現在式 takes，不可以放 will。B、C 把 will 塞進子句；D 多了 has，子句變成 has the change takes effect，不成句。"
     }
   ],
   "upgrade": [
@@ -16801,7 +16801,7 @@ grammar:[
     },
     {
       "h": "if 和 when 不能亂換",
-      "body": "兩個都接現在式，所以形狀上很容易混，但意思差很多。when 表示你認為這件事一定會發生，只是不知道什麼時候；if 表示你不確定它會不會發生。「等我拿到許可」是 when I get the licence，「萬一我拿不到」是 if I don't get it。對讀者來說，你用哪一個就是在表態；在公文或信件裡選錯，語氣會直接走偏。",
+      "body": "兩個都接現在式，所以形狀上很容易混，但意思差很多。when 表示你認為這件事一定會發生，只是不知道什麼時候；if 表示你不確定它會不會發生。「等我拿到許可」是 when I get the license，「萬一我拿不到」是 if I don't get it。對讀者來說，你用哪一個就是在表態；在公文或信件裡選錯，語氣會直接走偏。",
       "bullets": [
         "when：一定會發生，只是時間未定",
         "if：不確定會不會發生",
@@ -16879,12 +16879,12 @@ grammar:[
       "qCn": "如果駕駛沒有理由就取消，業者要負責處理。",
       "opts": [
         "A. If",
-        "B. When",
+        "B. Unless",
         "C. Until",
         "D. By the time"
       ],
       "ans": 0,
-      "expl": "駕駛會不會無故取消並不確定，所以用 If。When 表示一定會發生；Until 和 By the time 講的是時間先後，接不上這個意思。"
+      "expl": "駕駛會不會無故取消並不確定，所以用 If。Unless 是「除非」，意思剛好相反；Until 和 By the time 講的是時間先後，接不上這個意思。"
     },
     {
       "q": "We will not know the new fare until the ministry ___ the plan.",
@@ -16949,12 +16949,12 @@ grammar:[
           "note": "公布被視為既定事項"
         },
         {
-          "en": "Once the licence has been issued, the service may operate.",
+          "en": "Once the license has been issued, the service may operate.",
           "cn": "許可一核發，服務就可以營運。",
           "note": "once 加完成式，門檻感最強"
         },
         {
-          "en": "If the licence is refused, the company will appeal.",
+          "en": "If the license is refused, the company will appeal.",
           "cn": "許可若被駁回，公司會提出申訴。",
           "note": "if 保留了不確定"
         }

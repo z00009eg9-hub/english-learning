@@ -503,7 +503,7 @@ window.GVPLUS = {
       "icon": "clock",
       "head": "present tense only",
       "headCn": "只用現在式",
-      "en": "as soon as the licence arrives",
+      "en": "as soon as the license arrives",
       "cn": "許可一到",
       "pts": [
         "when、until、once、as soon as、by the time",
@@ -668,7 +668,7 @@ window.GVPLUS = {
       "icon": "calendar",
       "head": "treated as settled",
       "headCn": "當成已經排定",
-      "en": "When the licence is issued, the service starts.",
+      "en": "When the license is issued, the service starts.",
       "cn": "許可核發之後，服務就開始。",
       "pts": [
         "讀者會據此安排自己的事",
@@ -682,7 +682,7 @@ window.GVPLUS = {
       "icon": "fork",
       "head": "openly uncertain",
       "headCn": "公開承認不確定",
-      "en": "If the licence is refused, the service is postponed.",
+      "en": "If the license is refused, the service is postponed.",
       "cn": "許可若被駁回，服務就延後。",
       "pts": [
         "保留餘地，也保護自己",

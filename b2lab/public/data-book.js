@@ -25498,7 +25498,7 @@ window.BOOK = {
    "hw": [
     {
      "n": 1,
-     "ok": "It doesn't look like it worked. I'll try a different way of masking it tomorrow.",
+     "ok": "It doesn't look like it worked. I'll try a different way of masking them tomorrow.",
      "cn": "看起來沒有成功，我明天再試試其他遮噴方式。",
      "pat": "It doesn't look like + 子句（看起來沒有…）",
      "note": "「沒成功」英文說 it didn't work，前面加 it doesn't look like 表示「看起來」。噴漆時把不要噴到的地方遮起來，業界說 masking。"
@@ -25699,7 +25699,7 @@ window.BOOK = {
        "cn": "您好，跟您簡單回報塗裝與表面處理的狀況。"
       },
       {
-       "en": "We tried masking the parts, but it doesn't look like it worked. I'll try a different way of masking it tomorrow.",
+       "en": "We tried masking the parts, but it doesn't look like it worked. I'll try a different way of masking them tomorrow.",
        "cn": "我們試了遮噴，但看起來沒有成功。我明天會試其他遮噴方式。"
       },
       {
@@ -25812,7 +25812,7 @@ window.BOOK = {
      "titleCn": "隨身速查｜本課 5 句",
      "paras": [
       {
-       "en": "It doesn't look like it worked. I'll try a different way of masking it tomorrow.",
+       "en": "It doesn't look like it worked. I'll try a different way of masking them tomorrow.",
        "cn": "看起來沒有成功，我明天再試試其他遮噴方式。"
       },
       {
@@ -26069,7 +26069,7 @@ window.BOOK = {
        "cn": "您好，除了工作以外，跟您分享這週學會用英文說的幾件日常小事。"
       },
       {
-       "en": "At dinner, I told someone, \"You're really good with chopsticks.\" We also asked, \"Want some dessert?\" One choice was coconut milk ice cream.",
+       "en": "At dinner, I told someone, \"You're really good with chopsticks.\" Someone also asked, \"Want some dessert?\" One choice was coconut milk ice cream.",
        "cn": "吃飯時我跟人說：「你筷子用得很好。」我們也問：「要來點甜點嗎？」其中一個是椰奶冰淇淋。"
       },
       {
@@ -35628,8 +35628,8 @@ window.BOOK = {
         "ipa": "/ɪɡˌzæm.ɪˈneɪ.ʃən/",
         "pos": "n.",
         "cn": "檢查",
-        "ex": "The doctor ordered a blood examination.",
-        "exCn": "醫生安排了血液檢查。"
+        "ex": "All new staff need a medical examination before they start.",
+        "exCn": "所有新進員工上工前都要做健康檢查。"
       },
       {
         "w": "treatment",

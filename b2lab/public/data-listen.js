@@ -283,7 +283,7 @@ notes:[
     },
     {
       "sp": "Mai",
-      "en": "Twelve. Eight in the old building and four in the new one.",
+      "en": "Twelve. Eight in the old factory building and four in the new one.",
       "cn": "十二台。舊廠區八台，新廠區四台。"
     },
     {
@@ -369,7 +369,7 @@ notes:[
         "D. 二十台"
       ],
       "ans": 2,
-      "expl": "Twelve. Eight in the old building and four in the new one.——Mai把總數和分配都講了，八和四是兩個廠區的數字。"
+      "expl": "Twelve. Eight in the old factory building and four in the new one.——Mai把總數和分配都講了，八和四是兩個廠區的數字。"
     },
     {
       "q": "What time will the shuttle leave after they change it?",
@@ -635,7 +635,7 @@ notes:[
         "D. Once has"
       ],
       "ans": 0,
-      "expl": "once 帶出時間子句，裡面一律用現在式 takes，不可以放 will。B、C 都把 will 塞進子句；D 的 has 後面接不上原形動詞。"
+      "expl": "once 帶出時間子句，裡面一律用現在式 takes，不可以放 will。B、C 都把 will 塞進子句；D 多了 has，子句變成 has the change takes effect，不成句。"
     },
     {
       "q": "Why is the new rule good news for drivers?",
@@ -767,7 +767,7 @@ notes:[
     },
     {
       "sp": "Anita",
-      "en": "Up to three hundred and sixty-six a week, and most of them are domestic.",
+      "en": "Up to three hundred and sixty-six a week, and most of them are domestic. That is only the first phase.",
       "cn": "一週最多366班，而且大部分是國內線。"
     },
     {
