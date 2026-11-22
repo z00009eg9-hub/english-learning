@@ -23985,7 +23985,7 @@ grammar:[
           ],
           [
             "規格書、合約",
-            "The facility holds a valid licence.",
+            "The facility holds a valid license.",
             "專業動詞，可查證"
           ]
         ]
@@ -24103,8 +24103,8 @@ grammar:[
       "why": "have got 在客戶信裡太隨便，而且原句的 have got 還被當成「收到」用，意思也不對。寫對外文件時先問自己：這個 have 真正的動作是什麼？收到就寫 received，準備好就寫 prepared，語域和精準度會一起提升。"
     },
     {
-      "bad": "All contractors must wear a helmet, and we must see your licence today.",
-      "good": "All contractors are required to wear a helmet, and we need to see your licence today.",
+      "bad": "All contractors must wear a helmet, and we must see your license today.",
+      "good": "All contractors are required to wear a helmet, and we need to see your license today.",
       "why": "連續兩個 must 會讓讀者覺得你在下命令。第一句是公司規定，寫成 are required to 比較像制度；第二句是你自己的需求，寫成 need to 就夠了。中文的「必須」一個字包了所有情況，英文卻會因為選字而讓語氣差很多。"
     },
     {
@@ -24144,7 +24144,7 @@ grammar:[
       "expl": "手冊寫的是制度，用 are required to 把要求放在規定本身，不牽涉到特定的人。A和D太口語，B的 because I say so 完全不適合書面文件。"
     },
     {
-      "q": "Last year the plant ___ three separate licences, all of which expired in June.",
+      "q": "Last year the plant ___ three separate licenses, all of which expired in June.",
       "qCn": "去年那座廠持有三張不同的許可證，全部在六月到期。",
       "opts": [
         "A. has got",

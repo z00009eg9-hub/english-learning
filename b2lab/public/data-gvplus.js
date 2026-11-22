@@ -6212,7 +6212,7 @@ window.GVPLUS = {
       "icon": "key",
       "head": "something you possess",
       "headCn": "你擁有的東西或特徵",
-      "en": "She has got a Vietnamese driving licence.",
+      "en": "She has got a Vietnamese driver's license.",
       "cn": "她有越南的駕照。",
       "pts": [
         "只有現在式能加 got",
