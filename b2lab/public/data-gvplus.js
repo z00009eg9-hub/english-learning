@@ -9988,13 +9988,13 @@ dg20260911a2: {
     {
       "q": "He ___ for the bus for twenty minutes.",
       "opts": [
-        "has waited",
+        "has wait",
         "has been waiting",
         "waits",
         "is waiting"
       ],
       "ans": 1,
-      "expl": "強調『一直在等』的過程，用has been waiting。"
+      "expl": "強調『一直在等』的過程，用has been waiting；has waited 其實也成立，這題的選項沒有放。"
     },
     {
       "q": "I ___ this book already.",
@@ -10193,12 +10193,12 @@ dg20260911b1: {
       "q": "I ___ in Taipei my whole life.",
       "opts": [
         "have lived",
-        "have been living",
+        "have been live",
         "live",
         "am living"
       ],
       "ans": 0,
-      "expl": "my whole life是既定事實的語感，用have lived，而不是暗示暫時的have been living。"
+      "expl": "my whole life是『一輩子』的既定事實，用have lived；have been live 的形式不對。"
     }
   ]
 },

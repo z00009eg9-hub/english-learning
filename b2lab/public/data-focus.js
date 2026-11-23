@@ -41,7 +41,7 @@ a02:{ unit:"ga03", title:"可數與不可數；some 和 any",
   ],
   traps:[
     {bad:"I need two milks.",good:"I need two bottles of milk.",why:"milk 不可數，要借單位。"},
-    {bad:"Do you have some questions?",good:"Do you have any questions?",why:"一般疑問句用 any。"}
+    {bad:"Do you have some questions?",good:"Do you have any questions?",why:"一般疑問句用 any。（例外：預期對方有問題，或客氣詢問時，用 some 也可以，如 Do you have some questions for me?）"}
   ]
 },
 
@@ -203,7 +203,7 @@ r03:{ unit:"g09", title:"被動語態與不可數數量詞",
   formula:"be + 過去分詞（p.p.）　|　a great deal of / much + 不可數名詞",
   points:[
     "被動語態的用途不是「比較高級」，而是「換焦點」。A great deal of food is thrown away. 把重點放在食物，而不是丟食物的人——因為誰丟的並不重要。",
-    "說明文與報告最常用被動，因為它讓句子聽起來客觀：are labelled、is produced、are forgotten，全都不需要指出動作者。",
+    "說明文與報告最常用被動，因為它讓句子聽起來客觀：are labeled、is produced、are forgotten，全都不需要指出動作者。",
     "被動的時態變化只改 be 動詞：is thrown（現在）／was thrown（過去）／has been thrown（完成）／is being thrown（進行）／must be thrown（情態）。過去分詞永遠不變。",
     "food、waste、information、advice 都是不可數名詞：要用 much / a great deal of / a large amount of，不能用 many / a great number of。"
   ],
@@ -279,7 +279,7 @@ r07:{ unit:"g08", title:"第三條件句與轉述句",
   formula:"If + had + p.p., 主詞 + would have + p.p.　|　轉述時時態往後退一格",
   points:[
     "第三條件句談的是「與過去事實相反」的假設：事情已經發生了，只是想像如果當初不一樣會怎樣。if 子句用 had + p.p.，主句用 would have + p.p.，兩邊都要有完成式。",
-    "與第二條件句的差別：If I had more time, I would travel.（現在／一般狀況，不太可能）vs. If I had had more time, I would have travelled.（過去，已經來不及）。",
+    "與第二條件句的差別：If I had more time, I would travel.（現在／一般狀況，不太可能）vs. If I had had more time, I would have traveled.（過去，已經來不及）。",
     "轉述句的鐵則是時態退一格：is → was，was → had been，will → would，have done → had done。同時去掉引號、加上 that。",
     "轉述時人稱與時間詞也要跟著換：I → he/she，today → that day，yesterday → the day before，here → there。"
   ],
@@ -316,7 +316,7 @@ r08:{ unit:"g12", title:"讓步論述與情態動詞的分寸",
 r09:{ unit:"g09", title:"名詞化與長名詞片語",
   formula:"動詞 → 名詞：cancel → the cancellation of ...　|　exclude → exclusion",
   points:[
-    "名詞化就是把動作變成名詞。They cancelled the flight.（動作）→ the cancellation of the flight（一個可以被討論、被涵蓋、被比較的東西）。財經與法律文件幾乎全靠這個寫法。",
+    "名詞化就是把動作變成名詞。They canceled the flight.（動作）→ the cancellation of the flight（一個可以被討論、被涵蓋、被比較的東西）。財經與法律文件幾乎全靠這個寫法。",
     "常見轉換：decide → decision、exclude → exclusion、pay → payment、cover → coverage、transfer → transfer、save → saving。字尾多為 -tion / -ment / -ance / -al。",
     "名詞化的好處是可以在名詞前後掛一堆修飾語：a policy with a very low premium（前後都有修飾）＋ carries a deductible so high that ...（結果句），一句話塞進三層資訊。",
     "缺點是用過頭會很難讀。B2 的分寸是：一段裡有一到兩個名詞化就夠，動詞句與名詞句交替使用。"
@@ -342,7 +342,7 @@ r10:{ unit:"g11", title:"分詞構句與倒裝",
   ],
   examples:[
     {en:"Having finished the report, she went home.",cn:"寫完報告後，她就回家了。",note:"先完成的動作"},
-    {en:"Not only did the drivers respond slowly, but they also made more errors.",cn:"這些駕駛不僅反應變慢，還犯了更多錯。",note:"Not only 倒裝"},
+    {en:"Not only did the drivers respond slowly, but they also rated their own performance as normal.",cn:"這些駕駛不僅反應變慢，還把自己的表現評為正常。",note:"Not only 倒裝"},
     {en:"Only after the meeting did I understand the real problem.",cn:"直到會議之後我才明白真正的問題。",note:"Only after 倒裝"}
   ],
   traps:[
@@ -493,7 +493,7 @@ r18:{ unit:"g14", title:"描述數據的語言",
     "百分比與趨勢的常用動詞：rise, fall, increase, decrease, double, halve, outpace（超越）。outpace 特別好用：Rents have outpaced wages for a decade."
   ],
   examples:[
-    {en:"Prices rose by three per cent last year.",cn:"去年物價上漲了百分之三。",note:"by ＝ 幅度"},
+    {en:"Prices rose by three percent last year.",cn:"去年物價上漲了百分之三。",note:"by ＝ 幅度"},
     {en:"Housing now takes a third of her income instead of a fifth.",cn:"住房現在佔她收入的三分之一，而不是五分之一。",note:"分數對比"},
     {en:"Money in a current account loses roughly a quarter of its value over ten years.",cn:"活存帳戶裡的錢十年約失去四分之一價值。",note:"roughly 表約略"}
   ],
@@ -613,7 +613,7 @@ r24:{ unit:"g14", title:"動名詞與不定詞的意義差別；the more..., the
   ],
   traps:[
     {bad:"She stopped to treat every request as an emergency.",good:"She stopped treating every request as an emergency.",why:"想說「不再這樣做」要用 stop + V-ing，不是 stop + to V。"},
-    {bad:"The more we agree, the others expect more.",good:"The more we agree, the more others expect.",why:"兩邊都要用 the + 比較級的結構，位置在子句開頭。"}
+    {bad:"The more we agree, the others expect more.",good:"The more we agree, the more others expect us to agree.",why:"兩邊都要用 the + 比較級的結構，位置在子句開頭。"}
   ]
 },
 
@@ -703,7 +703,7 @@ r29:{ unit:"g08", title:"第一條件句與 unless / as long as / in case",
   ],
   examples:[
     {en:"If the bus is late, I will take a taxi.",cn:"如果公車誤點，我就搭計程車。",note:"if + 現在簡單式, will"},
-    {en:"You won't pass unless you practise every day.",cn:"除非你每天練習，不然你不會通過。",note:"unless = if ... not"},
+    {en:"You won't pass unless you practice every day.",cn:"除非你每天練習，不然你不會通過。",note:"unless = if ... not"},
     {en:"Take an umbrella in case it rains later.",cn:"帶把傘，以防晚一點下雨。",note:"in case：先做準備"}
   ],
   traps:[

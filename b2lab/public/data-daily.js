@@ -23485,7 +23485,7 @@ grammar:[
       "expl": "整句都在過去，而且下雨持續了一整個下午才造成街道濕，所以用 had been raining。had been rained 是被動的形狀，雨不是被下的。"
     },
     {
-      "q": "She ___ for the train for forty minutes when it was cancelled.",
+      "q": "She ___ for the train for forty minutes when it was canceled.",
       "qCn": "火車被取消的時候，她已經等了四十分鐘。",
       "opts": [
         "A. waits",
@@ -23494,7 +23494,7 @@ grammar:[
         "D. has been waiting"
       ],
       "ans": 1,
-      "expl": "when it was cancelled 是過去的那一刻，等待發生在它之前，所以要用 had been waiting。has been waiting 的基準點在現在，跟 was cancelled 配不起來。"
+      "expl": "when it was canceled 是過去的那一刻，等待發生在它之前，所以要用 had been waiting。has been waiting 的基準點在現在，跟 was canceled 配不起來。"
     },
     {
       "q": "Which sentence is correct?",
@@ -25446,9 +25446,9 @@ grammar:[
             "She had read the file before the meeting began."
           ],
           [
-            "someone cancelled it",
+            "someone canceled it",
             "I called the hotel",
-            "Someone had cancelled it when I called the hotel."
+            "Someone had canceled it when I called the hotel."
           ]
         ]
       },
@@ -27549,12 +27549,12 @@ grammar:[
       "qCn": "你等公車等多久了？",
       "opts": [
         "been waiting",
-        "waited",
+        "were waiting",
         "wait",
         "waiting"
       ],
       "ans": 0,
-      "expl": "強調『一直在等』這個動作，用 have been waiting。"
+      "expl": "問『等多久』比較常用 have been waiting（強調一直在等）；have waited 也說得通，所以這題選項沒有放。"
     },
     {
       "q": "How long have you ___ her?",
@@ -28014,13 +28014,13 @@ grammar:[
       "q": "She ___ for the bus for twenty minutes.",
       "qCn": "她已經等公車等了二十分鐘了。",
       "opts": [
-        "has waited",
+        "has wait",
         "has been waiting",
         "waits",
         "is waiting"
       ],
       "ans": 1,
-      "expl": "強調『一直在等』這個持續的過程，用has been waiting。"
+      "expl": "強調『一直在等』這個持續的過程，用has been waiting；has waited 其實也成立，這題的選項沒有放。"
     },
     {
       "q": "I ___ him since we were kids.",
@@ -28135,9 +28135,9 @@ grammar:[
       "why": "have wanting 少了 been，本身就不成立；want是狀態動詞，通常不加ing，標準說法是have wanted，表示『持續想要』。"
     },
     {
-      "bad": "I have been living in Taipei my whole life.",
+      "bad": "I have live in Taipei my whole life.",
       "good": "I have lived in Taipei my whole life.",
-      "why": "my whole life是『一輩子、既定事實』的語感，適合用have lived，而不是暗示『暫時』的have been living。"
+      "why": "have 後面要接過去分詞 lived，不能用原形 live。my whole life 是『一輩子』的既定事實。"
     },
     {
       "bad": "She has been finished her project.",
@@ -28187,12 +28187,12 @@ grammar:[
       "qCn": "我一輩子都住在台北。",
       "opts": [
         "have lived",
-        "have been living",
+        "have been live",
         "live",
         "am living"
       ],
       "ans": 0,
-      "expl": "my whole life是既定事實的語感，用have lived，而不是暗示暫時的have been living。"
+      "expl": "my whole life是『一輩子』的既定事實，用have lived；have been live 的形式不對。（口語也常聽到 have been living，但這題沒有放進選項。）"
     }
   ]
 },
@@ -28694,7 +28694,7 @@ grammar:[
       "h": "常見混淆情境",
       "bullets": [
         "朋友問『你在幹嘛？』只需要回答I am doing，不用講多久",
-        "朋友問『你等多久了？』一定要用have been doing，因為問的是『持續的時間』"
+        "朋友問『你等多久了？』比較常用have been doing，因為問的是『持續的時間』（have done 有時也行）"
       ],
       "examples": [
         {
@@ -29261,7 +29261,7 @@ grammar:[
   "summary": "正式的氣象警報和新聞常用現在完成式宣稱『這是有紀錄以來最...的一次』，藉此強調『這個結論到目前為止仍然成立』；敘事段落交代明確時間細節時則改用過去簡單式。這種轉換不是隨便的，而是一種語域訊號：現在完成式＝仍在生效的結論／紀錄，過去簡單式＝已經結束的具體事件。",
   "sections": [
     {
-      "h": "警報用語：has issued 強調『目前仍然有效』",
+      "h": "警報用語：has issued 搭配 this season（這一季還沒結束）",
       "examples": [
         {"en": "The Central Weather Administration has issued warnings for four typhoons this season.", "cn": "中央氣象署這一季已經對四個颱風發布了警報。", "note": "正式宣稱『到目前為止累計』的紀錄，用現在完成式"},
         {"en": "Typhoon Bavi brought heavy rain to the north on August 3.", "cn": "巴威颱風在8月3日為北部帶來了大雨。", "note": "敘事細節，交代明確時間，用過去簡單式"}
@@ -29291,7 +29291,7 @@ grammar:[
     {"bad": "堅持氣象局的正式警報只能用過去簡單式才『正確』。", "good": "氣象局正式警報常刻意用現在完成式，強調警報『目前仍然有效』，這是文類慣例，不是文法錯誤。", "why": "這是語域選擇：正式警報文類偏好現在完成式來維持『尚未結束』的語感，過去簡單式則只是陳述發布這個動作，比較不突顯『仍然有效』。"}
   ],
   "quiz": [
-    {"q": "（正式警報，強調目前仍生效）The CWA ___ warnings for four typhoons this season.", "qCn": "中央氣象署這一季已經對四個颱風發布了警報。", "opts": ["issued", "has issued", "issues", "was issuing"], "ans": 1, "expl": "正式警報強調『目前仍然有效』，用現在完成式has issued。"},
+    {"q": "（this season 還沒結束）The CWA ___ warnings for four typhoons this season.", "qCn": "中央氣象署這一季已經對四個颱風發布了警報。", "opts": ["issued", "has issued", "issues", "was issuing"], "ans": 1, "expl": "this season（這一季）還沒結束，累計到現在，所以用現在完成式has issued。"},
     {"q": "This ___ one of the wettest summers Taiwan has recorded in years.", "qCn": "這是台灣近年來記錄到最潮濕的夏天之一。", "opts": ["has be", "has been", "is being", "had been"], "ans": 1, "expl": "『破紀錄』宣稱搭配現在完成式has been，強調累積至今的統計結論。has be 少了過去分詞 been；had been 跟後面的 has recorded 時間對不上。"},
     {"q": "（敘事細節句，有明確時間）Rain ___ falling heavily at 3pm and continued through the evening.", "qCn": "雨在下午三點開始下得很大，並持續到傍晚。", "opts": ["has begun", "begun", "began", "has begin"], "ans": 2, "expl": "3pm是明確的過去時間點，敘事細節句用過去簡單式began，不是現在完成式。"},
     {"q": "Which best explains why weather agencies often use the present perfect in warnings?", "qCn": "哪一個最能解釋氣象單位常常在警報中使用現在完成式的原因？", "opts": ["Because the past simple is grammatically incorrect in warnings", "Because the present perfect signals that the warning is still in effect", "Because warnings never mention any past events", "Because the present perfect is always more polite"], "optsCn": ["因為警報裡用過去簡單式是文法錯誤", "因為現在完成式表示警報目前仍然有效", "因為警報從來不會提到任何過去發生的事", "因為現在完成式永遠比較有禮貌"], "ans": 1, "expl": "現在完成式在警報中的功能是傳達『這個結論／狀態到目前為止依然成立』，不是文法對錯的問題。"}
