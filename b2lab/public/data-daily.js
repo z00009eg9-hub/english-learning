@@ -8295,7 +8295,7 @@ articles:[
       "cn": "國家教育研究院的一份報告，替許多家長原本只是「感覺到」的事情給出了數字。馬來西亞和菲律賓的學童拿到的英語課時數，是台灣學童的兩倍半到五倍，而且兩個國家的課程都從六歲開始上。"
     },
     {
-      "en": "The gap widens with time. By the time pupils reach the upper grades, researchers found, they had already met far more vocabulary than their peers in Taiwan had seen. Textbooks in the two countries carry two and a half to four times as many words, although ninety-three key items at CEFR A1 and A2 level were shared by all of the sets.",
+      "en": "The gap widens with time. By the time pupils reached the upper grades, researchers found, they had already met far more vocabulary than their peers in Taiwan had seen. Textbooks in the two countries carry two and a half to four times as many words, although ninety-three key items at CEFR A1 and A2 level were shared by all of the sets.",
       "cn": "這段差距會隨時間拉大。研究人員發現，等到學生升上高年級時，他們接觸過的單字量早就遠多於台灣同齡學生看過的。這兩個國家的課本所收的單字量是台灣的兩倍半到四倍，不過有九十三個CEFR A1與A2等級的核心字彙是所有版本共通的。"
     },
     {
@@ -8437,7 +8437,7 @@ articles:[
       "expl": "study subjects in English from grade four——幼兒園那個是馬來西亞的做法，六歲是兩國英語課開始的年紀，不是用英語上各科的年紀。"
     },
     {
-      "q": "By the time pupils reach the upper grades, they ___ far more vocabulary than their peers in Taiwan.",
+      "q": "By the time pupils reached the upper grades, they ___ far more vocabulary than their peers in Taiwan.",
       "qCn": "等到學生升上高年級時，他們接觸過的單字量早已遠多於台灣的同儕。（選出正確的動詞形式）",
       "opts": [
         "A. have already met",
@@ -11218,14 +11218,14 @@ articles:[
   ],
   "upgrade": [
     {
-      "b1": "The bus broke down, so Anita took a motorbike taxi instead.",
-      "b2": "Because the bus had broken down, Anita decided to take a motorbike taxi instead.",
-      "note": "用because開頭並改成had broken down（過去完成式），交代「先壞掉，才決定改搭車」的先後順序，是B1+常見的寫法。",
-      "sp": "The bus was out of commission, so Anita just hopped on a motorbike taxi instead.",
-      "spNote": "out of commission（故障、無法使用）、hopped on（迅速跳上）都是口語常見的說法。",
-      "b1Cn": "公車拋錨了，所以Anita改搭摩托車計程車。",
-      "b2Cn": "因為公車已經先拋錨了，Anita才決定改搭摩托車計程車。",
-      "spCn": "公車故障了，所以Anita就直接跳上摩托車計程車。"
+      "b1": "The bus was late, so Tom felt nervous.",
+      "b2": "Because the bus was late, Tom felt nervous about his interview.",
+      "note": "用because開頭說明原因，再補上about his interview說明緊張的對象，句子比用so連接更完整，是B1常見的寫法。",
+      "sp": "The bus was running late, so Tom was kind of freaking out about his interview.",
+      "spNote": "running late（誤點）、kind of（有點）、freaking out（緊張到慌）都是口語常見的說法。",
+      "b1Cn": "公車遲到了，所以Tom覺得很緊張。",
+      "b2Cn": "因為公車遲到了，Tom對他的面試感到緊張。",
+      "spCn": "公車誤點，Tom有點慌，擔心起他的面試。"
     },
     {
       "b1": "Tom arrived at the office early. He met the manager and smiled.",
@@ -13238,15 +13238,15 @@ articles:[
   "kind": "orig",
   "title": "Anita's Steep Learning Curve",
   "titleCn": "Anita的陡峭學習曲線",
-  "focus": "現在完成式＋被動語態（has been enrolled, has been given, has been shared）；which/who帶出的關係子句補充資訊",
+  "focus": "現在完成式＋被動語態（has been given, has been shared）；which/who帶出的關係子句補充資訊",
   "upFrom": "B1+",
   "upTo": "B2",
-  "intro": "Anita被公司安排去上一門統計課程，一開始很挫折，後來靠著真實的職場專題慢慢建立信心。文章大量使用「現在完成式＋被動語態」（has been enrolled, has been given feedback, has been shared）描述「到目前為止發生的事」，也留意which/who帶出的關係子句怎麼補充額外資訊。",
+  "intro": "Anita自己報名了一門統計課程，一開始很挫折，後來靠著真實的職場專題慢慢建立信心。文章大量使用「現在完成式＋被動語態」（has been given feedback, has been shared）描述「到目前為止發生的事」，也留意which/who帶出的關係子句怎麼補充額外資訊。",
   "spoken": [{"en":"Anita signed up for this stats course mostly to push herself — math always freaked her out.","cn":"Anita 報名統計課主要是想挑戰自己——數學一直讓她發怵。"},{"en":"The first couple weeks were rough, but the instructor's feedback after every quiz slowly built her confidence up.","cn":"頭幾週很辛苦，但每次小考後講師的回饋慢慢幫她建立了信心。"},{"en":"Then she actually used one of the methods on a real problem at work — her manager was blown away and shared it with the whole department.","cn":"後來她真的用課堂方法解了工作上的問題——主管驚豔到分享給整個部門。"},{"en":"Five modules down, three to go. Her take: learning hard stuff feels awful right up until it pays off.","cn":"八個單元完成五個了。她的心得：學困難的東西在開花結果前都很難受。"}],
   "paras": [
     {
-      "en": "Anita has recently been enrolled in an online course that teaches statistical methods for quality engineers. She has always felt nervous about math, so she signed up mostly to challenge herself. The course, which runs for eight weeks, has already covered three difficult modules.",
-      "cn": "Anita最近被安排參加了一門教品管工程師統計方法的線上課程。她對數學一直都感到緊張，所以她報名主要是為了挑戰自己。這門課程為期八週，目前已經教完三個困難的單元。"
+      "en": "Anita has recently enrolled in an online course that teaches statistical methods for quality engineers. She has always felt nervous about math, so she signed up mostly to challenge herself. The course, which runs for eight weeks, has already covered five difficult modules.",
+      "cn": "Anita最近報名了一門教品管工程師統計方法的線上課程。她對數學一直都感到緊張，所以她報名主要是為了挑戰自己。這門課程為期八週，目前已經教完五個困難的單元。"
     },
     {
       "en": "In the first two weeks, Anita struggled with the assignments and was often confused by the formulas. She has been given detailed feedback by her instructor after every quiz, which has slowly built her confidence. A study group was formed by several classmates who wanted extra practice.",
@@ -13373,8 +13373,8 @@ articles:[
       "expl": "She has been given detailed feedback by her instructor after every quiz, which has slowly built her confidence."
     },
     {
-      "q": "What happened when a real workplace problem was assigned as a group project?",
-      "qCn": "當一個真實的職場問題被指派為小組專題時，發生了什麼事？",
+      "q": "What happened when Anita used a method from class on a real workplace problem?",
+      "qCn": "當Anita把課堂上學到的方法用在一個真實的職場問題上時，發生了什麼事？",
       "opts": [
         "A. Anita's manager was impressed by her solution",
         "B. Anita failed to solve the problem",
@@ -15643,7 +15643,7 @@ articles:[
       "b1": "Games can teach useful skills.",
       "b2": "The agency asked what their hobby had trained them to do.",
       "note": "把「學到技能」具體化成 what one's hobby had trained them to do 的名詞子句，論點立刻精準有力。"
-    , "sp": "The agency asked them what their hobby taught them to do.", "spNote": "口語直接用 taught，比 had trained them to do 簡單自然。", "b1Cn": "遊戲可以教實用的技能。", "b2Cn": "仲介問他們的興趣訓練出了什麼能力。", "spCn": "仲介問他們：你的興趣教會了你做什麼？"},
+    , "sp": "The agency asked them what their hobby taught them to do.", "spNote": "口語直接用 taught，比 had trained them to do 簡單自然。", "b1Cn": "遊戲可以教實用的技能。", "b2Cn": "航空總署問他們的興趣訓練出了什麼能力。", "spCn": "航空總署問他們：你的興趣教會了你做什麼？"},
     {
       "b1": "Companies should look at real work, not only diplomas.",
       "b2": "Employers should give more weight to work samples than to the name of a university.",
