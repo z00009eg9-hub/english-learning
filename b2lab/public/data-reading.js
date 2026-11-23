@@ -12,7 +12,7 @@ window.READING = [
   titleCn:"錯過火車的男人",
   focus:"過去簡單式 vs. 過去進行式",
   intro:"用一個小故事練習「過去某個時間點正在做什麼」與「當時發生了什麼」的搭配。注意 while / when 後面接的時態。",
-  "spoken": [{"en":"Daniel had a big meeting in Taichung, but his morning totally fell apart.","cn":"Daniel 在台中有個重要會議，但他的早晨整個崩盤。"},{"en":"His manager called while he was making breakfast, and he completely lost track of time.","cn":"他做早餐時主管打來，他就完全忘了時間。"},{"en":"Then halfway to the station it hit him — his wallet was still on the kitchen table. He got there at 7:42. Train was gone.","cn":"跑到半路他才猛然想到——皮夾還在餐桌上。他 7:42 到月台，車已經走了。"},{"en":"Ever since, he's got one rule: never pick up the phone while you're getting ready to leave.","cn":"從那天起他就一條鐵則：出門前準備時絕不接電話。"}],
+  "spoken": [{"en":"Daniel had a big meeting in Taichung, but his morning totally fell apart.","cn":"Daniel 在台中有個重要會議，但他的早晨整個崩盤。"},{"en":"His manager called while he was making breakfast, and he completely lost track of time.","cn":"他做早餐時主管打來，他就完全忘了時間。"},{"en":"Then halfway to the station it hit him — his wallet was still on the kitchen table. He got there at 7:42. Train was gone.","cn":"跑到半路他才猛然想到——錢包還在餐桌上。他 7:42 到月台，車已經走了。"},{"en":"Ever since, he's got one rule: never pick up the phone while you're getting ready to leave.","cn":"從那天起他就一條鐵則：出門前準備時絕不接電話。"}],
   paras:[
     {en:"Daniel had an important meeting in Taichung, so he booked a ticket for the 7:40 train. He usually arrives early, but that morning everything went wrong.",
      cn:"Daniel 在台中有一場重要的會議，所以他訂了 7 點 40 分的火車票。他平常都會提早到，但那天早上一切都出錯了。"},
@@ -38,7 +38,7 @@ window.READING = [
      opts:["A. He was running to the station","B. He was making breakfast","C. He was talking to a station worker","D. He was sitting on the train"],
      ans:1, expl:"文章寫 While he was making breakfast, his phone rang. → 電話響的當下，他正在做早餐。"},
     {q:"Why did Daniel turn around and go back home?",
-     opts:["A. He forgot his ticket","B. His manager called again","C. He had left his wallet on the table","D. The train was cancelled"],
+     opts:["A. He forgot his ticket","B. His manager called again","C. He had left his wallet on the table","D. The train was canceled"],
      ans:2, expl:"he realized that he had left his wallet on the kitchen table：他發現錢包留在廚房桌上。"},
     {q:"How long did he have to wait for the next train?",
      opts:["A. Fifteen minutes","B. Forty minutes","C. Fifty minutes","D. Seventy minutes"],
@@ -67,8 +67,8 @@ window.READING = [
      cn:"Mei 在辦公室工作，每天大約有九個小時面對螢幕。她常常到三點就覺得累，眼睛通常在一天結束時會不舒服。"},
     {en:"Last month her doctor gave her simple advice: drink a glass of water and walk for ten minutes before you check your phone. Mei thought it sounded too easy to work, but she decided to try it.",
      cn:"上個月醫生給了她一個簡單的建議：在看手機之前，先喝一杯水並走十分鐘。Mei 覺得這聽起來簡單得不像會有效，但她決定試試看。"},
-    {en:"These days she is getting up twenty minutes earlier than before. She is also drinking much more water, and she rarely brings her phone to the breakfast table any more.",
-     cn:"最近她比以前早起二十分鐘。她也喝了多很多的水，而且幾乎不再把手機帶到早餐桌上了。"},
+    {en:"These days she is getting up twenty minutes earlier than before. She is also drinking much more water, and she rarely brings her phone to the breakfast table anymore.",
+     cn:"最近她比以前早起二十分鐘。她也多喝了很多水，而且幾乎不再把手機帶到早餐桌上了。"},
     {en:"The change is small, but the result is clear. She hardly ever feels sleepy in the afternoon now, and she says her mind feels quieter. \"I am not doing anything difficult,\" she explains. \"I am just starting the day in a different order.\"",
      cn:"這個改變很小，但結果很明顯。她現在幾乎不會在下午覺得睏，她說自己的思緒感覺比較平靜。「我沒有在做什麼困難的事，」她解釋，「我只是換了一個開始一天的順序。」"}
   ],
@@ -107,13 +107,13 @@ window.READING = [
   title:"Why Do We Throw Away So Much Food?",
   titleCn:"我們為什麼丟掉這麼多食物？",
   focus:"被動語態；數量詞 (much / a great deal of / a third of)",
-  intro:"說明性文章。注意被動語態（is thrown away / are labelled）以及不可數名詞的數量表達。",
+  intro:"說明性文章。注意被動語態（is thrown away / are labeled）以及不可數名詞的數量表達。",
   "spoken": [{"en":"Get this — about a third of all the food we produce never gets eaten.","cn":"你聽聽——全球生產的食物大概有三分之一根本沒被吃掉。"},{"en":"A big reason is the 'best before' label — it's about quality, not safety, but people toss perfectly good food anyway.","cn":"一大原因是「最佳賞味期限」——那是品質不是安全問題，但大家還是把好好的食物扔了。"},{"en":"And we all do it: shop hungry, buy too much, shove the veggies in the back of the fridge and forget them.","cn":"而且我們都幹過：餓著肚子採買、買太多、把菜塞到冰箱深處然後忘掉。"},{"en":"The fix is easy though — plan your meals, store stuff right, cook your leftovers. That alone can cut waste in half.","cn":"解法其實很簡單——規劃餐點、好好保存、把剩菜煮掉。光這樣就能少浪費一半。"}],
   paras:[
     {en:"Around the world, roughly a third of the food that is produced every year is never eaten. Some of it is lost on farms, some is damaged during transport, and a surprising amount is simply thrown away in ordinary kitchens.",
      cn:"在全世界，每年生產的食物大約有三分之一從未被吃掉。有些在農場就損失了，有些在運送過程中受損，而令人意外的是，還有相當多是在普通家庭的廚房裡被直接丟掉。"},
-    {en:"One common reason is confusion about dates. Many products are labelled \"best before\", which is about quality, not safety. Food that is past this date is often still perfectly good, but people throw it away because they are worried.",
-     cn:"一個常見的原因是對日期的誤解。許多產品標示「best before（最佳風味期限）」，那指的是品質，而不是安全。過了這個日期的食物通常還是完全可以吃，但人們因為擔心而把它丟掉。"},
+    {en:"One common reason is confusion about dates. Many products are labeled \"best before\", which is about quality, not safety. Food that is past this date is often still perfectly good, but people throw it away because they are worried.",
+     cn:"一個常見的原因是對日期的誤解。許多產品標示「best before（最佳賞味期限）」，那指的是品質，而不是安全。過了這個日期的食物通常還是完全可以吃，但人們因為擔心而把它丟掉。"},
     {en:"Another reason is shopping habits. When we are hungry, we buy more than we need. Fresh vegetables are put at the back of the fridge, they are forgotten for a week, and by the time they are found, they have gone bad.",
      cn:"另一個原因是購物習慣。當我們餓的時候，就會買得比需要的多。新鮮蔬菜被放到冰箱後面，被遺忘了一個星期，等到被發現時，已經壞掉了。"},
     {en:"The good news is that small habits make a great deal of difference. Planning meals before you shop, storing food properly, and cooking with leftovers can cut household waste by half. None of these actions is difficult; they simply need to become normal.",
@@ -172,7 +172,7 @@ window.READING = [
   ],
   target:[
     {w:"employee",ipa:"/ɪmˈplɔɪiː/",pos:"n.",cn:"員工",def:"A person who is paid to work for a company.",ex:"Every new employee at the hotel gets two days of customer service training.",exCn:"飯店每位新員工都會接受兩天的客服訓練。"},
-    {w:"concentrate",ipa:"/ˈkɑːn.sən.treɪt/",pos:"v.",cn:"專心",def:"To give all your attention to one thing.",ex:"I find it hard to concentrate when my neighbours play loud music.",exCn:"鄰居放很大聲的音樂時，我很難專心。"},
+    {w:"concentrate",ipa:"/ˈkɑːn.sən.treɪt/",pos:"v.",cn:"專心",def:"To give all your attention to one thing.",ex:"I find it hard to concentrate when my neighbors play loud music.",exCn:"鄰居放很大聲的音樂時，我很難專心。"},
     {w:"interrupt",ipa:"/ˌɪntəˈrʌpt/",pos:"v.",cn:"打斷",def:"To stop someone while they are speaking or working.",ex:"Please do not interrupt me while I am on the phone.",exCn:"我講電話的時候請不要打斷我。"},
     {w:"whereas",ipa:"/werˈæz/",pos:"conj.",cn:"然而、相對地",def:"Used to compare two different facts.",ex:"My brother loves spicy hot pot, whereas I can't handle even a little chili.",exCn:"我哥很愛吃麻辣鍋，而我連一點辣椒都受不了。"},
     {w:"build trust",ipa:"/bɪld trʌst/",pos:"phr.",cn:"建立信任",def:"To slowly create a feeling of confidence between people.",ex:"Keeping your promises is the easiest way to build trust with clients.",exCn:"遵守承諾是跟客戶建立信任最簡單的方式。"},
@@ -206,15 +206,15 @@ window.READING = [
 /* ---------------------------------------------------------- 05 */
 {
   id:"r05", level:"B1+", topic:"居家修繕與鄰居", words:158,
-  title:"The Neighbour Who Could Fix Anything",
+  title:"The Neighbor Who Could Fix Anything",
   titleCn:"什麼都會修的鄰居",
   focus:"關係子句 who / which / whose；使役 have / get something done",
   intro:"敘事＋人物描寫。重點是關係子句的連接，以及「請人做某事」的 have / get + 物 + p.p. 結構。",
   "spoken": [{"en":"Mr. Lin downstairs used to be a plumber — the guy can fix anything.","cn":"樓下的林先生以前是水電工——什麼都會修。"},{"en":"When my kitchen pipe started leaking, the repair company said two days. Mr. Lin heard the drip and knocked on my door.","cn":"我廚房水管漏水，維修公司說要等兩天。林先生聽到滴水聲就來敲門了。"},{"en":"Fifteen minutes, a piece of rubber, a metal clip — leak stopped. And he wouldn't take a dime.","cn":"十五分鐘、一片橡膠、一個金屬夾——漏水止住了。他還一毛錢都不收。"},{"en":"That's when it hit me: a building isn't concrete and pipes. It's the people who notice when something's wrong.","cn":"那時我才明白：一棟樓不是水泥和管線，而是那些會注意到不對勁的人。"}],
   paras:[
-    {en:"Mr. Lin, whose flat is on the ground floor, has lived in our building for thirty years. He was a plumber before he retired, and he keeps a wooden box of tools that is older than most of his neighbours.",
+    {en:"Mr. Lin, whose flat is on the ground floor, has lived in our building for thirty years. He was a plumber before he retired, and he keeps a wooden box of tools that is older than most of his neighbors.",
      cn:"林先生的公寓在一樓，他在我們這棟樓已經住了三十年。退休前他是水管工，他有一個木製工具箱，比大部分鄰居的年紀都大。"},
-    {en:"Last winter, the pipe under my kitchen sink started leaking. I called a company which promised to send someone within two days, but the water was already dripping onto the floor. My neighbour heard the noise and knocked on my door.",
+    {en:"Last winter, the pipe under my kitchen sink started leaking. I called a company which promised to send someone within two days, but the water was already dripping onto the floor. My neighbor heard the noise and knocked on my door.",
      cn:"去年冬天，我廚房水槽下的水管開始漏水。我打電話給一家公司，他們承諾兩天內派人來，但水已經滴到地板上了。我的鄰居聽到聲音，來敲我的門。"},
     {en:"In fifteen minutes he had stopped the leak with a piece of rubber and a metal clip. He refused to take any money. \"Get it repaired properly next week,\" he said, \"but tonight you can sleep.\"",
      cn:"十五分鐘內，他用一塊橡膠和一個金屬夾就止住了漏水。他不肯收任何錢。「下週還是要請人好好修，」他說，「但今晚你可以安心睡了。」"},
@@ -288,7 +288,7 @@ window.READING = [
     {q:"Why did the grandmother have to leave the house?",
      opts:["A. The roof was broken","B. She was afraid of the wind","C. Her medicine had to be kept cold","D. There was no food left"],
      ans:2, expl:"who takes medicine that must be kept cold。"},
-    {q:"Which sentence correctly describes a past habit that has stopped?",
+    {q:"Which sentence correctly describes a past habit?",
      opts:["A. My mother uses to buy candles","B. My mother would buy candles before every typhoon","C. My mother is used to buy candles","D. My mother used buy candles"],
      ans:1, expl:"would + 原形 可描述過去反覆的習慣；used to 也可以，但 uses to / used buy 皆為錯誤形式。"},
     {q:"How does the writer feel about typhoons now?",
@@ -454,7 +454,7 @@ window.READING = [
      ans:2, expl:"最後一句明說。"}
   ],
   upgrade:[
-    {b1:"They cancelled the flight. The insurance paid.",
+    {b1:"They canceled the flight. The insurance paid.",
      b2:"The policy covers the cancellation of a flight for any reason.",
      note:"名詞化：cancel → the cancellation of...，讓句子更緊密、更書面。", "sp": "This policy's got you covered if your flight gets canceled — no matter the reason.", "spNote": "have you covered（保障你）是保險與客服的口語慣用。", "b1Cn": "他們取消了班機。保險理賠了。", "b2Cn": "這份保單涵蓋任何原因的班機取消。", "spCn": "只要班機被取消，不管什麼原因，這份保單都罩你。"},
     {b1:"This policy is cheap. But you must pay a lot first.",
@@ -634,7 +634,7 @@ window.READING = [
   intro:"心理健康主題。注意名詞化（exhaust → exhaustion, recover → recovery）如何讓句子更緊密，以及 may well、might have been 這類推測語氣。",
   "spoken": [{"en":"There's regular tired, and then there's the kind sleep doesn't fix — everything works, nothing feels interesting.","cn":"有一種是普通的累，另一種是睡覺也治不好的累——身體還能動，但什麼都提不起勁。"},{"en":"That's burnout, and it sneaks up on you. By the time you notice, you've probably been running on empty for months.","cn":"那就是倦怠，而且它是悄悄逼近的。等你察覺，八成已經透支好幾個月了。"},{"en":"A vacation won't cut it either — you come back to the same workload and the whole thing starts over.","cn":"放假也沒用——你回到同樣的工作量，一切又重來一遍。"},{"en":"Start small: track which tasks drain you for two weeks. Usually it's not the amount of work — it's two or three specific things. Name them and you can finally talk about them.","cn":"從小處開始：花兩週記錄哪些工作最耗你。通常問題不在量，而在兩三個特定情境。把它們點名出來，才有辦法討論。"}],
   paras:[
-    {en:"Everybody knows the tiredness that follows a long day. Fewer people recognise the other kind: the exhaustion that sleep does not fix, in which the body works but nothing feels interesting. It builds slowly, and by the time it is obvious, it may well have been developing for months.",
+    {en:"Everybody knows the tiredness that follows a long day. Fewer people recognize the other kind: the exhaustion that sleep does not fix, in which the body works but nothing feels interesting. It builds slowly, and by the time it is obvious, it may well have been developing for months.",
      cn:"每個人都熟悉忙了一整天之後的疲累。比較少人認得出另外一種：睡覺也解決不了的耗竭——身體還在運作，但什麼都提不起興趣。它慢慢累積，等到明顯的時候，可能已經發展了好幾個月。"},
     {en:"Burnout is not a medical illness in every country's system, but the pattern is consistent: emotional exhaustion, a growing distance from the work itself, and a quiet loss of confidence in one's own competence. The people most affected are rarely lazy. They are usually the ones who found it hardest to say no.",
      cn:"「職業倦怠」並不在每個國家的醫療制度中被列為疾病，但模式是一致的：情緒耗竭、對工作本身越來越疏離，以及對自身能力安靜地失去信心。受影響最深的人很少是懶惰的人，通常正是那些最難說出「不」的人。"},
@@ -691,7 +691,7 @@ window.READING = [
   intro:"旅遊危機處理。注意 should have done（早該做卻沒做）與混合條件句（過去的假設 → 現在的結果）的組合，這是 B2 敘事最有力的工具。",
   "spoken": [{"en":"Our flight to Hanoi got scrapped forty minutes before boarding, and two hundred people jumped into the same line.","cn":"我們飛河內的班機登機前四十分鐘被取消，兩百個人瞬間排進同一條隊伍。"},{"en":"My colleague was smart — she skipped the line, called the airline's overseas number, and got rebooked in four minutes.","cn":"我同事很聰明——她不排隊，直接打航空公司的海外專線，四分鐘就改好票。"},{"en":"We should've saved digital copies of our bookings, and we didn't know they owed us meal vouchers after three hours — so we paid for dinner ourselves.","cn":"我們早該存好訂位資料的數位檔，也不知道延誤三小時他們就該給餐券——晚餐錢白花了。"},{"en":"Now before every flight I save the booking reference, both airline numbers, and a backup route offline. Learned that one the hard way.","cn":"現在每次飛行前我都會離線存好訂位編號、兩支航空公司電話和一條備案路線。這是吃過虧才學會的。"}],
   paras:[
-    {en:"Our flight to Hanoi was cancelled forty minutes before boarding. The announcement gave no reason, and within a minute two hundred people were standing in the same queue. If we had joined that queue, we would still be waiting when the last hotel room in the area was taken.",
+    {en:"Our flight to Hanoi was canceled forty minutes before boarding. The announcement gave no reason, and within a minute two hundred people were standing in the same queue. If we had joined that queue, we would still be waiting when the last hotel room in the area was taken.",
      cn:"我們飛河內的班機在登機前四十分鐘被取消。廣播沒有說原因，一分鐘內就有兩百人排在同一條隊伍裡。如果我們也去排那條隊，等到附近最後一間飯店房間被訂走時，我們還會站在那裡。"},
     {en:"My colleague did something I would not have thought of. Instead of queuing, she phoned the airline's overseas number and was rebooked in four minutes while the desk was still processing the first family. Staff at a counter can only help one passenger at a time; a phone line, by contrast, is answered somewhere else entirely.",
      cn:"我同事做了一件我沒想到的事。她沒有排隊，而是打了航空公司的海外客服電話，在櫃檯還在處理第一組家庭時，她四分鐘內就改好了機位。櫃檯人員一次只能服務一位旅客；相對地，電話線是由完全不同的地方接起來的。"},
@@ -742,9 +742,9 @@ window.READING = [
   titleCn:"從不開口問的客人",
   focus:"分詞構句；關係子句壓縮資訊",
   intro:"跨文化溝通。注意 Not wanting to..., Having lived... 這類分詞開頭的句子，以及用關係子句把兩三個訊息塞進一句話。",
-  "spoken": [{"en":"This Japanese engineer at our Vietnam factory barely ate lunch for two weeks — turned out he couldn't eat chilli and never said a word.","cn":"我們越南廠的日本工程師兩週午餐幾乎沒吃——後來才知道他不能吃辣，卻一個字都沒提。"},{"en":"It wasn't shyness. Where he's from, a guest who states a preference makes work for the host — and that's worse than going hungry.","cn":"那不是害羞。在他的文化裡，客人提出偏好會給主人添麻煩——那比餓肚子還糟。"},{"en":"The fix cost nothing: we stopped asking 'Is everything OK?' and started asking 'Which of these three would you like?'","cn":"解法零成本：我們不再問「還好嗎？」，改問「這三個你想要哪個？」"},{"en":"Cross-cultural work isn't about memorizing customs — it's noticing which questions your habits make impossible to answer honestly.","cn":"跨文化工作不是背習俗清單——而是察覺你的習慣讓哪些問題根本無法誠實回答。"}],
+  "spoken": [{"en":"This Japanese engineer at our Vietnam factory barely ate lunch for two weeks — turned out he couldn't eat chili and never said a word.","cn":"我們越南廠的日本工程師兩週午餐幾乎沒吃——後來才知道他不能吃辣，卻一個字都沒提。"},{"en":"It wasn't shyness. Where he's from, a guest who states a preference makes work for the host — and that's worse than going hungry.","cn":"那不是害羞。在他的文化裡，客人提出偏好會給主人添麻煩——那比餓肚子還糟。"},{"en":"The fix cost nothing: we stopped asking 'Is everything OK?' and started asking 'Which of these three would you like?'","cn":"解法零成本：我們不再問「還好嗎？」，改問「這三個你想要哪個？」"},{"en":"Cross-cultural work isn't about memorizing customs — it's noticing which questions your habits make impossible to answer honestly.","cn":"跨文化工作不是背習俗清單——而是察覺你的習慣讓哪些問題根本無法誠實回答。"}],
   paras:[
-    {en:"A Japanese engineer who had been sent to our Vietnam factory for three months spent his first two weeks eating almost nothing at lunch. Not wanting to seem difficult, he never mentioned that he could not eat chilli. We only discovered the problem when a colleague noticed how much food was left on his plate.",
+    {en:"A Japanese engineer who had been sent to our Vietnam factory for three months spent his first two weeks eating almost nothing at lunch. Not wanting to seem difficult, he never mentioned that he could not eat chili. We only discovered the problem when a colleague noticed how much food was left on his plate.",
      cn:"一位被派到我們越南廠三個月的日本工程師，前兩週午餐幾乎什麼都沒吃。因為不想顯得難相處，他從沒提過自己不能吃辣。我們是在一位同事注意到他盤子裡剩下多少食物後才發現問題。"},
     {en:"His silence was not shyness. In the culture he had grown up in, a guest who states a preference risks creating work for the host, and creating work is worse than going hungry. Our team, having assumed that anyone with a problem would simply say so, had read his politeness as satisfaction.",
      cn:"他的沉默不是害羞。在他成長的文化裡，表達偏好的客人有可能給主人添麻煩，而添麻煩比餓肚子更糟。我們團隊則假設有問題的人自然會直說，於是把他的客氣讀成了滿意。"},
@@ -779,8 +779,8 @@ window.READING = [
   ],
   upgrade:[
     {b1:"He did not want to seem difficult. So he said nothing.",
-     b2:"Not wanting to seem difficult, he never mentioned that he could not eat chilli.",
-     note:"否定分詞構句 Not wanting to...，取代 Because he did not want to...。", "sp": "He didn't want to come across as picky, so he never brought up the chilli thing.", "spNote": "come across as（給人…的感覺）、bring up（提起）、the ... thing（那件事）都是口語。", "b1Cn": "他不想顯得難搞。所以他什麼都沒說。", "b2Cn": "因為不想顯得難搞，他始終沒提自己不能吃辣。", "spCn": "他不想給人難搞的感覺，所以從沒提過吃辣那件事。"},
+     b2:"Not wanting to seem difficult, he never mentioned that he could not eat chili.",
+     note:"否定分詞構句 Not wanting to...，取代 Because he did not want to...。", "sp": "He didn't want to come across as picky, so he never brought up the chili thing.", "spNote": "come across as（給人…的感覺）、bring up（提起）、the ... thing（那件事）都是口語。", "b1Cn": "他不想顯得難搞。所以他什麼都沒說。", "b2Cn": "因為不想顯得難搞，他始終沒提自己不能吃辣。", "spCn": "他不想給人難搞的感覺，所以從沒提過吃辣那件事。"},
     {b1:"Our team thought people would say if there was a problem. So we misunderstood him.",
      b2:"Our team, having assumed that anyone with a problem would say so, had read his politeness as satisfaction.",
      note:"Having assumed... 插在主詞後面補充背景，read A as B 是道地的搭配。", "sp": "We just figured anyone with an issue would speak up — so we read his politeness as him being happy.", "spNote": "figure（以為）、speak up（有話直說）是口語溝通用語。", "b1Cn": "我們團隊以為有問題的人會說。所以我們誤會了他。", "b2Cn": "我們團隊假設有問題的人自然會說，因而把他的客氣讀成了滿意。", "spCn": "我們以為有問題的人自然會開口——結果把他的客氣當成了滿意。"}
@@ -798,7 +798,7 @@ window.READING = [
   paras:[
     {en:"A fishing village that receives four hundred visitors a day is a success story. The same village receiving four thousand is something else. Across Asia and Europe, towns that were once promoted as hidden gems are now discussed in a different vocabulary: crowds, pressure, and residents who have been priced out of the streets they grew up on.",
      cn:"一個每天接待四百名遊客的漁村是成功故事。同一個漁村每天接待四千人，就是另一回事了。在亞洲與歐洲各地，曾被宣傳為「秘境」的小鎮，如今是用另一套詞彙被討論的：人潮、壓力，以及那些被高房價擠出自己成長街區的居民。"},
-    {en:"Tourists are often blamed, but the mechanism is not really their fault. When a flat can be rented to visitors for three times what a local family can pay, it stops being housing. When every second shop sells the same souvenirs, the bakery that served the neighbourhood for forty years closes — not because it was bad, but because the rent was raised.",
+    {en:"Tourists are often blamed, but the mechanism is not really their fault. When a flat can be rented to visitors for three times what a local family can pay, it stops being housing. When every second shop sells the same souvenirs, the bakery that served the neighborhood for forty years closes — not because it was bad, but because the rent was raised.",
      cn:"遊客常被責怪，但這個機制其實不是他們的錯。當一間公寓出租給旅客可以拿到本地家庭所能負擔的三倍租金時，它就不再是「住宅」了。當每隔一間店都在賣一樣的紀念品時，那間服務了社區四十年的麵包店就會關門——不是因為它不好，而是因為房租被調漲了。"},
     {en:"Granted, tourism pays for a great deal. Ferries, festivals and small museums in remote places survive on visitor money, and jobs that would otherwise not exist are created every season. The question is not whether tourism should happen but who decides how much of it a place can hold.",
      cn:"誠然，觀光支撐了很多事。偏遠地區的渡輪、節慶與小型博物館靠遊客的錢維生，每一季都創造了原本不會存在的工作。問題不在於「該不該有觀光」，而在於「一個地方能承載多少，由誰來決定」。"},
@@ -817,7 +817,7 @@ window.READING = [
     {w:"consult",ipa:"/kənˈsʌlt/",pos:"v.",cn:"徵詢意見",def:"To ask someone for their opinion before deciding.",ex:"You should consult a doctor before taking any new supplements.",exCn:"服用任何新的保健食品之前，你應該先諮詢醫生。"}
   ],
   questions:[
-    {q:"Why did the neighbourhood bakery close?",
+    {q:"Why did the neighborhood bakery close?",
      opts:["A. The bread was poor","B. The owner retired","C. The rent was raised","D. Tourists disliked it"],
      ans:2, expl:"not because it was bad, but because the rent was raised。"},
     {q:"What does \"priced out\" mean here?",
@@ -857,7 +857,7 @@ window.READING = [
      cn:"怡庭搬出公寓時，牆壁乾淨、地板沒有損壞，而且她把每個房間都拍了照。六週後她被告知，兩個月押金的一半已被扣下，理由是「一般清潔與損耗」。"},
     {en:"Two things made her case strong. First, the photographs were dated, which meant the condition of the flat at handover could not reasonably be disputed. Second, she had kept the inventory signed at move-in — a document most tenants never look at again. Normal wear from ordinary living is not damage, and a landlord who deducts for it is usually relying on the tenant not knowing the difference.",
      cn:"有兩件事讓她站得住腳。第一，照片有日期，意味著交屋時房屋的狀況難以被合理質疑。第二，她保留了入住時簽署的財物清單——那是大多數房客再也不會看第二眼的文件。日常居住造成的正常損耗不算損壞，而會為此扣款的房東，通常是在指望房客分不出兩者的差別。"},
-    {en:"Her email was three sentences long and contained no anger. It stated the amount deducted, referred to the dated photographs and the signed inventory, and asked for either an itemised receipt for the cleaning or the return of the money within fourteen days. If the deposit is not returned, she added, the matter will be taken to the local mediation committee.",
+    {en:"Her email was three sentences long and contained no anger. It stated the amount deducted, referred to the dated photographs and the signed inventory, and asked for either an itemized receipt for the cleaning or the return of the money within fourteen days. If the deposit is not returned, she added, the matter will be taken to the local mediation committee.",
      cn:"她的信只有三句話，沒有任何怒氣。信中說明被扣的金額，引用了有日期的照片與簽署的清單，並要求對方在十四天內提供清潔費用的逐項收據，或退還款項。她補充：若押金未退還，此事將提交當地調解委員會。"},
     {en:"The full amount arrived nine days later, with no explanation and no apology. The lesson is not that landlords are dishonest — most are not — but that a deposit is protected by evidence rather than by fairness. Photograph the flat on the day you arrive, keep the inventory, and put every request in writing.",
      cn:"全額在九天後入帳，沒有解釋也沒有道歉。這件事的教訓不是房東不誠實——多數並非如此——而是押金靠的是證據，而不是靠公道。到租屋的第一天就把房子拍下來，留好財物清單，並且每一次要求都用書面提出。"}
@@ -867,10 +867,10 @@ window.READING = [
     {w:"deduct",ipa:"/dɪˈdʌkt/",pos:"v.",cn:"扣除",def:"To take an amount away from a total.",ex:"The company will deduct income tax directly from your salary.",exCn:"公司會直接從你的薪水裡扣除所得稅。"},
     {w:"wear",ipa:"/wer/",pos:"n.",cn:"損耗",def:"Damage caused by normal use over time.",ex:"The carpet shows signs of wear after ten years of daily use.",exCn:"那塊地毯用了十年，已經有磨損的痕跡了。"},
     {w:"handover",ipa:"/ˈhændoʊvɚ/",pos:"n.",cn:"交屋、移交",def:"The act of giving something to another person officially.",ex:"The handover of the new office took place on Monday morning.",exCn:"新辦公室的交屋在週一早上完成。"},
-    {w:"dispute",ipa:"/dɪˈspjuːt/",pos:"v.",cn:"爭執、質疑",def:"To say that something is not true or fair.",ex:"The two neighbours have been disputing over the boundary line for years.",exCn:"那兩個鄰居為了地界線爭了好幾年。"},
+    {w:"dispute",ipa:"/dɪˈspjuːt/",pos:"v.",cn:"爭執、質疑",def:"To say that something is not true or fair.",ex:"The two neighbors have been disputing over the boundary line for years.",exCn:"那兩個鄰居為了地界線爭了好幾年。"},
     {w:"inventory",ipa:"/ˈɪnvəntɔːri/",pos:"n.",cn:"財物清單",def:"A written list of the items in a property.",ex:"The shop manager does a full inventory check at the end of every month.",exCn:"店長每個月底都會做一次完整的盤點。"},
     {w:"tenant",ipa:"/ˈtenənt/",pos:"n.",cn:"房客",def:"A person who pays rent to live somewhere.",ex:"The tenant on the third floor always pays rent on time.",exCn:"三樓的房客每次都準時繳房租。"},
-    {w:"itemised receipt",ipa:"/ˈaɪtəmaɪzd rɪˈsiːt/",pos:"n.",cn:"逐項收據",def:"A receipt showing the cost of each separate item.",ex:"Can I have an itemised receipt so I can claim the expense from my company?",exCn:"可以給我一張逐項列明的收據嗎？我要跟公司報帳。"},
+    {w:"itemized receipt",ipa:"/ˈaɪtəmaɪzd rɪˈsiːt/",pos:"n.",cn:"逐項收據",def:"A receipt showing the cost of each separate item.",ex:"Can I have an itemized receipt so I can claim the expense from my company?",exCn:"可以給我一張逐項列明的收據嗎？我要跟公司報帳。"},
     {w:"mediation",ipa:"/ˌmiːdiˈeɪʃn/",pos:"n.",cn:"調解",def:"A process in which a third person helps solve a dispute.",ex:"Both sides agreed to try mediation before going to court.",exCn:"雙方同意在上法院之前先嘗試調解。"}
   ],
   questions:[
@@ -878,7 +878,7 @@ window.READING = [
      opts:["A. Unpaid rent","B. General cleaning and wear","C. A broken window","D. Late notice of moving out"],
      ans:1, expl:"kept for \"general cleaning and wear\"。"},
     {q:"Why were the photographs so useful?",
-     opts:["A. They were taken by a professional","B. They were dated, so the condition could not be disputed","C. They showed the neighbours","D. They were printed and framed"],
+     opts:["A. They were taken by a professional","B. They were dated, so the condition could not be disputed","C. They showed the neighbors","D. They were printed and framed"],
      ans:1, expl:"the photographs were dated, which meant the condition... could not reasonably be disputed。"},
     {q:"What tone did her email have?",
      opts:["A. Angry and threatening","B. Apologetic","C. Short, factual and firm","D. Long and emotional"],
@@ -903,14 +903,14 @@ window.READING = [
   title:"Why Saving Feels Impossible",
   titleCn:"為什麼存錢感覺不可能",
   focus:"數據描述與比較；名詞化",
-  intro:"財經說明文。注意描述數字的語言（rose considerably faster than、a third of … instead of a fifth、a price rise of three per cent）以及把動作變成名詞的寫法，這是讀懂財經文章的關鍵。",
+  intro:"財經說明文。注意描述數字的語言（rose considerably faster than、a third of … instead of a fifth、a price rise of three percent）以及把動作變成名詞的寫法，這是讀懂財經文章的關鍵。",
   "spoken": [{"en":"Ask anyone under forty why they can't save — it's not discipline. Rents shot up way faster than paychecks.","cn":"問任何四十歲以下的人為什麼存不了錢——不是不自律，是房租漲得遠比薪水快。"},{"en":"And inflation quietly makes it worse: money sitting in your account loses about a quarter of its value in ten years.","cn":"通膨還在偷偷加碼：錢放在帳戶裡不動，十年會蒸發大概四分之一的價值。"},{"en":"Skipping your daily coffee saves like two percent. Renegotiating rent or switching one insurance policy? Ten or fifteen.","cn":"戒掉每天那杯咖啡大概省 2%。重談房租或換一張保單？10% 到 15%。"},{"en":"The trick that actually works is boring: move a fixed amount out on payday, before you spend anything. Save first, spend what's left.","cn":"真正有效的方法很無聊：發薪日當天先轉走固定金額，再花剩下的。先存再花。"}],
   paras:[
     {en:"Ask anyone under forty why they cannot save, and the answer is rarely a lack of discipline. Between 2015 and 2025, average rents in most Asian cities rose considerably faster than average wages. When housing takes a third of your income instead of a fifth, the money that used to become savings simply disappears into somebody else's mortgage.",
      cn:"問任何四十歲以下的人為什麼存不了錢，答案很少是缺乏自制力。2015 到 2025 年間，多數亞洲城市的平均房租上漲速度遠快於平均薪資。當住房佔掉你收入的三分之一而不是五分之一時，原本會變成儲蓄的錢，就這樣消失進了別人的房貸裡。"},
-    {en:"Inflation makes the problem harder to see. A price rise of three per cent a year sounds trivial, yet it means that money left in a current account loses roughly a quarter of its value over ten years. Doing nothing is therefore not a neutral choice; it is a slow decision to become poorer.",
+    {en:"Inflation makes the problem harder to see. A price rise of three percent a year sounds trivial, yet it means that money left in a current account loses roughly a quarter of its value over ten years. Doing nothing is therefore not a neutral choice; it is a slow decision to become poorer.",
      cn:"通膨讓這個問題更難被看見。一年三個百分點的漲幅聽起來微不足道，但它意味著放在活存帳戶裡的錢，十年會失去大約四分之一的價值。因此「什麼都不做」並不是中立的選擇，而是一個緩慢地讓自己變窮的決定。"},
-    {en:"That said, the advice usually offered — cut small luxuries — targets the wrong number. Cancelling a daily coffee saves perhaps two per cent of a monthly budget, whereas renegotiating rent, changing a commute, or moving one insurance policy can save ten or fifteen. Big fixed costs, reviewed once a year, matter more than small variable ones watched every day.",
+    {en:"That said, the advice usually offered — cut small luxuries — targets the wrong number. Canceling a daily coffee saves perhaps two percent of a monthly budget, whereas renegotiating rent, changing a commute, or moving one insurance policy can save ten or fifteen. Big fixed costs, reviewed once a year, matter more than small variable ones watched every day.",
      cn:"話說回來，常見的建議——省掉小奢侈——瞄準的是錯的數字。取消每天一杯咖啡大約省下月預算的百分之二，而重新談房租、改變通勤方式，或換一份保單，可以省下百分之十到十五。每年檢視一次的大筆固定支出，比每天盯著的小額變動支出重要得多。"},
     {en:"The most reliable method is also the least exciting: move a fixed amount out of the account on the day you are paid, before any spending decision is made. People who save what is left at the end of the month almost never save. People who spend what is left after saving almost always do.",
      cn:"最可靠的方法也是最不刺激的：在領薪水的當天，就把一筆固定金額移出帳戶，早於任何消費決定。月底才存剩下的錢的人幾乎存不到錢；先存錢再花剩下的錢的人，幾乎都存得到。"}
@@ -965,7 +965,7 @@ window.READING = [
      cn:"屋主讓房子空著的理由，就個別來看都是合理的。等著轉售的房子，裡面沒有房客反而更值錢。修繕要花錢，而上漲的地價本來就會賺回來。在房東可能被難處理的租約困住好幾年的地方，讓房子空著看起來像謹慎，而不像浪費。"},
     {en:"Nowhere is the cost of this more visible than in the shops below. A street where nobody sleeps loses its bakeries, its clinics and its evening buses, because none of them can survive on daytime customers alone. What follows is a slow emptying that no single owner intended and no single owner can reverse.",
      cn:"這件事的代價，在樓下的店面看得最清楚。沒有人居住的街道會失去麵包店、診所與晚間公車，因為它們都無法只靠白天的客人存活。接著發生的，是一種沒有任何單一屋主打算造成、也沒有任何單一屋主能夠逆轉的緩慢空洞化。"},
-    {en:"Several cities have responded with a vacancy tax: a rising charge on homes left empty beyond a set number of months, with exemptions for renovation and genuine sale. Results have been modest but real — a few per cent of units returning to the rental market each year. It is worth remembering that a city is not a collection of assets. It is a place where people have to be able to sleep.",
+    {en:"Several cities have responded with a vacancy tax: a rising charge on homes left empty beyond a set number of months, with exemptions for renovation and genuine sale. Results have been modest but real — a few percent of units returning to the rental market each year. It is worth remembering that a city is not a collection of assets. It is a place where people have to be able to sleep.",
      cn:"有些城市以「空屋稅」回應：對超過一定月數仍空置的住宅逐步加重課徵，並對整修中與真正待售者設有豁免。成效不大但真實——每年有百分之幾的單位回到租賃市場。值得記住的是：城市不是一堆資產的集合，而是一個人必須有辦法睡覺的地方。"}
   ],
   target:[
@@ -1039,11 +1039,11 @@ window.READING = [
   ],
   questions:[
     {q:"Where was Anita's parcel?",
-     opts:["A. Downstairs with the security guard","B. In front of her own door","C. In a neighbour's flat on the sixth floor","D. At the delivery company"],
+     opts:["A. Downstairs with the security guard","B. In front of her own door","C. In a neighbor's flat on the sixth floor","D. At the delivery company"],
      ans:2,
      expl:"送貨照片拍的是 603 號門，Anita 到六樓敲門，年輕男子說包裹還在他那裡。"},
     {q:"How did Anita find out which door the parcel went to?",
-     opts:["A. The security guard told her","B. She saw it on the stairs","C. The delivery company checked a photo","D. A neighbour called her"],
+     opts:["A. The security guard told her","B. She saw it on the stairs","C. The delivery company checked a photo","D. A neighbor called her"],
      ans:2,
      expl:"文章寫 He had just checked the photo from the delivery. The door in the photo was number 603. → 物流職員查了送貨照片。"},
     {q:"Choose the correct sentence: Anita ___ the lamp last Friday.",
@@ -1081,7 +1081,7 @@ window.READING = [
   spoken:[
     {en:"Tom's doctor told him to walk more, so he said he was going to start running.",cn:"Tom 的醫生叫他多走路，所以他說他要開始跑步。"},
     {en:"But first it rained, then it was cold, and he kept saying, “I'll start tomorrow.”",cn:"但先是下雨、後來太冷，他一直說「我明天再開始」。"},
-    {en:"Then his neighbour invited him to the park, and Tom decided on the spot — “OK, I'll get my shoes.”",cn:"後來鄰居約他去公園，Tom 當場就決定：「好，我去拿鞋。」"},
+    {en:"Then his neighbor invited him to the park, and Tom decided on the spot — “OK, I'll get my shoes.”",cn:"後來鄰居約他去公園，Tom 當場就決定：「好，我去拿鞋。」"},
     {en:"Now there's a card on his fridge with his weekly plan.",cn:"現在他冰箱上貼著一張寫著每週計畫的卡片。"}
   ],
   paras:[
@@ -1089,7 +1089,7 @@ window.READING = [
      cn:"Tom 整天坐在辦公桌前工作，上個月醫生給了他一個簡單的建議：多走路。「我打算開始跑步，」那天晚上 Tom 對姊姊說。姊姊笑了。「你去年也這樣說過。」"},
     {en:"The next morning he put on his old running shoes. It was raining, so he said, “I'll start tomorrow.” But the next day was too cold, and the day after that he was too tired. He was not ready to give up, but he was not really moving, either.",
      cn:"隔天早上，他穿上舊的跑鞋。外面在下雨，所以他說：「我明天再開始。」但第二天太冷，再隔天他又太累。他還不想放棄，但也沒真的動起來。"},
-    {en:"On Saturday his neighbour Mr. Lin knocked on the door. “I'm going to the park for a walk,” he said. “Do you want to come?” Tom looked at the sky. It was grey, but it was not raining. “OK, I'll get my shoes,” he said.",
+    {en:"On Saturday his neighbor Mr. Lin knocked on the door. “I'm going to the park for a walk,” he said. “Do you want to come?” Tom looked at the sky. It was gray, but it was not raining. “OK, I'll get my shoes,” he said.",
      cn:"週六，鄰居林先生來敲門。「我要去公園散步，」他說，「你要一起來嗎？」Tom 看了看天空，雖然是灰的，但沒有下雨。「好，我去拿鞋，」他說。"},
     {en:"They walked for twenty minutes, and then Tom tried to run. After ten minutes he had to stop. His legs were shaking, and he was breathing hard. But he felt happy. “Same time next Saturday?” Mr. Lin asked. “Yes,” Tom said. “And I think I'll try a short run on Wednesday, too.”",
      cn:"他們走了二十分鐘，然後 Tom 試著跑起來。十分鐘後他不得不停下來，雙腿發抖，呼吸急促，但他覺得很開心。「下週六同一時間？」林先生問。「好，」Tom 說，「而且我想週三也試著跑一小段。」"},
@@ -1098,7 +1098,7 @@ window.READING = [
   ],
   target:[
     {w:"advice",ipa:"/ədˈvaɪs/",pos:"n.",cn:"建議",def:"An opinion about what someone should do.",ex:"The old taxi driver gave us good advice about the night market.",exCn:"那位老計程車司機給了我們關於夜市的好建議。"},
-    {w:"neighbour",ipa:"/ˈneɪbɚ/",pos:"n.",cn:"鄰居",def:"A person who lives near you.",ex:"Our neighbour waters the plants when we go away.",exCn:"我們出遠門時，鄰居會幫忙澆花。"},
+    {w:"neighbor",ipa:"/ˈneɪbɚ/",pos:"n.",cn:"鄰居",def:"A person who lives near you.",ex:"Our neighbor waters the plants when we go away.",exCn:"我們出遠門時，鄰居會幫忙澆花。"},
     {w:"give up",ipa:"/ɡɪv ˈʌp/",pos:"phr. v.",cn:"放棄",def:"To stop trying to do something.",ex:"Don't give up on your English — you get better every week.",exCn:"別放棄英文——你每週都在進步。"},
     {w:"breathe",ipa:"/briːð/",pos:"v.",cn:"呼吸",def:"To take air into your body and let it out again.",ex:"Breathe in slowly, and then count to four.",exCn:"慢慢吸氣，然後數到四。"},
     {w:"shake",ipa:"/ʃeɪk/",pos:"v.",cn:"發抖；搖動",def:"To move quickly from side to side or up and down.",ex:"My hands shake a little when I speak in front of a big group.",exCn:"在一大群人面前說話時，我的手會微微發抖。"},
@@ -1228,7 +1228,7 @@ window.READING = [
     {en:"Last month her colleague Mai offered a different idea. “If I were you, I wouldn't wait for free time,” Mai said. “I'd learn five minutes at a time.” She suggested one new sentence every morning on the shuttle bus, and a short chat at lunch. Anita wished she had thought of it earlier.",
      cn:"上個月，同事 Mai 提出了不同的想法。「如果我是妳，我不會等有空閒時間，」Mai 說，「我會一次只學五分鐘。」她建議每天早上在交通車上學一個新句子，午餐時再聊幾句。Anita 後悔自己沒有早點想到。"},
     {en:"The plan sounded too small to matter, but Anita tried it. On the bus she repeats one sentence about her day. At lunch she uses it with Mai, who corrects her gently. Some days she makes mistakes and everyone laughs. If she were afraid of looking silly, she would stop, but she has decided that laughing is part of learning.",
-     cn:"這個計畫聽起來小到沒什麼用，但 Anita 還是試了。在車上，她會重複一句關於自己這一天的話。午餐時，她把這句話用在 Mai 身上，Mai 會溫和地糾正她。有些日子她犯了錯，大家一起笑。如果她害怕看起來很蠢，她早就放棄了，但她已經決定，笑也是學習的一部分。"},
+     cn:"這個計畫聽起來小到沒什麼用，但 Anita 還是試了。在車上，她會重複一句關於自己這一天的話。午餐時她拿這句話跟 Mai 練習，Mai 會溫和地糾正她。有些日子她犯了錯，大家一起笑。如果她害怕看起來很蠢，她早就放棄了，但她已經決定，笑也是學習的一部分。"},
     {en:"After six weeks, Anita knows about forty sentences. It is not much, yet the market vendors now smile when she speaks. “I wish I could say more,” she admits, “but if someone had told me this in January, I would have started then.” Her next goal is simple: a full conversation with a taxi driver.",
      cn:"六週後，Anita 會了大約四十個句子。數量不多，但市場的攤販現在聽她開口就會微笑。「我真希望自己能說得更多，」她承認，「但如果一月有人告訴我這個方法，我當時就會開始了。」她的下一個目標很簡單：和計程車司機進行一段完整的對話。"}
   ],
@@ -1305,7 +1305,7 @@ window.READING = [
   ],
   target:[
     {w:"accumulate",ipa:"/əˈkjuːmjəleɪt/",pos:"v.",cn:"累積",def:"To gradually get more and more of something.",ex:"Dust had accumulated on the shelves during the long summer.",exCn:"漫長的夏天裡，架子上積了一層灰塵。"},
-    {w:"annoyed",ipa:"/əˈnɔɪd/",pos:"adj.",cn:"惱火的",def:"Slightly angry about something.",ex:"She was annoyed that the train was cancelled again.",exCn:"火車又被取消了，她很惱火。"},
+    {w:"annoyed",ipa:"/əˈnɔɪd/",pos:"adj.",cn:"惱火的",def:"Slightly angry about something.",ex:"She was annoyed that the train was canceled again.",exCn:"火車又被取消了，她很惱火。"},
     {w:"awkward",ipa:"/ˈɔːkwɚd/",pos:"adj.",cn:"尷尬的",def:"Uncomfortable or difficult to deal with.",ex:"There was an awkward pause when nobody knew the answer.",exCn:"沒有人知道答案時，出現了一陣尷尬的停頓。"},
     {w:"senior",ipa:"/ˈsiːnjɚ/",pos:"adj.",cn:"資深的；職位較高的",def:"Higher in rank or position.",ex:"He was promoted to senior engineer after five years.",exCn:"他工作五年後晉升為資深工程師。"},
     {w:"deadline",ipa:"/ˈdedlaɪn/",pos:"n.",cn:"截止期限",def:"The latest time by which something must be done.",ex:"We extended the deadline by two days because of the typhoon.",exCn:"因為颱風，我們把截止期限延了兩天。"},
@@ -1370,7 +1370,7 @@ window.READING = [
      cn:"在台灣，收垃圾是一件小小的每日大事。官方垃圾袋在便利商店就買得到，有好幾種尺寸，所以就算是再小的住家，也得想想自己到底丟了多少東西。每天傍晚，垃圾車會播放一段旋律，居民提著垃圾袋下樓，親手交給清潔人員。這套制度對本地人來說太熟悉了，大家根本不會多想，但訪客常常驚訝於它需要花多少功夫。"},
     {en:"The system was designed in order to solve a real problem. In the early 2000s, Taipei was producing such large amounts of waste that its landfills were almost full. The city introduced a charge for general rubbish bags so that people would have a reason to throw away less. Recyclables, by contrast, were collected free of charge.",
      cn:"這套制度是為了解決一個真實的問題而設計的。在 2000 年代初期，台北製造的垃圾量大到讓掩埋場幾乎滿載。市政府對一般垃圾袋開始收費，讓大家有理由少丟一點；相對地，資源回收物則是免費收取。"},
-    {en:"The results were encouraging. Recycling rates climbed steadily, and the amount of household waste per person fell. The system works partly because it is so predictable: residents sort their rubbish carefully so as to avoid fines, and collectors check bags to make sure the rules are followed. Neighbours often chat while they wait for the truck, which gives the routine an unexpected social side.",
+    {en:"The results were encouraging. Recycling rates climbed steadily, and the amount of household waste per person fell. The system works partly because it is so predictable: residents sort their rubbish carefully so as to avoid fines, and collectors check bags to make sure the rules are followed. Neighbors often chat while they wait for the truck, which gives the routine an unexpected social side.",
      cn:"成果令人鼓舞。回收率穩定攀升，每人的家戶垃圾量也下降了。這套制度之所以有效，部分原因在於它太可預期：居民仔細分類垃圾以避免罰款，清潔人員也會檢查垃圾袋，確保大家遵守規則。鄰居們常在等垃圾車的時候聊天，讓這個例行公事多了一層意想不到的社交面向。"},
     {en:"Critics point out that the approach demands a lot of time, particularly from working people who cannot be home at the right hour. Even so, many residents defend it. Such a routine, they argue, is a small price to pay for clean streets and a shared sense of responsibility. It is a system inconvenient enough to change habits, and simple enough to keep them.",
      cn:"批評者指出，這種做法需要花很多時間，尤其對無法在固定時間待在家的上班族來說。即便如此，仍有許多居民為它辯護。他們認為，這樣的日常，是為了乾淨的街道和共同的責任感而付出的小小代價。這套制度夠不方便，足以改變習慣；又夠簡單，足以讓習慣持續下去。"}
@@ -1392,7 +1392,7 @@ window.READING = [
      ans:1,
      expl:"第一段：Every evening a truck plays a tune, and residents carry their bags down to hand them over in person。"},
     {q:"Why did the city introduce a charge for general rubbish bags?",
-     opts:["A. To earn more money from tourists","B. To give people a reason to throw away less","C. To close the recycling centres","D. To replace the garbage trucks"],
+     opts:["A. To earn more money from tourists","B. To give people a reason to throw away less","C. To close the recycling centers","D. To replace the garbage trucks"],
      ans:1,
      expl:"第二段：so that people would have a reason to throw away less。"},
     {q:"What do critics say about the system?",
@@ -1455,7 +1455,7 @@ window.READING = [
     {w:"strange",ipa:"/streɪndʒ/",pos:"adj.",cn:"奇怪的；陌生的",def:"Unusual or not familiar in a way that is hard to understand.",ex:"It felt strange to hear my own voice on the recording.",exCn:"聽到錄音裡自己的聲音，感覺很奇怪。"},
     {w:"silence",ipa:"/ˈsaɪləns/",pos:"n.",cn:"寂靜；沉默",def:"A time when there is no sound at all.",ex:"After the music stopped, a long silence filled the hall.",exCn:"音樂停止後，長長的寂靜充滿了大廳。"},
     {w:"habit",ipa:"/ˈhæbɪt/",pos:"n.",cn:"習慣",def:"Something you do often, usually without thinking.",ex:"Drinking a glass of water before breakfast is a good habit.",exCn:"早餐前喝一杯水是個好習慣。"},
-    {w:"disappear",ipa:"/ˌdɪsəˈpɪr/",pos:"v.",cn:"消失",def:"To go away so that you cannot be seen any more.",ex:"The stars disappear when the morning sky gets bright.",exCn:"早晨天空變亮時，星星就消失了。"}
+    {w:"disappear",ipa:"/ˌdɪsəˈpɪr/",pos:"v.",cn:"消失",def:"To go away so that you cannot be seen anymore.",ex:"The stars disappear when the morning sky gets bright.",exCn:"早晨天空變亮時，星星就消失了。"}
   ],
   questions:[
     {q:"What did Anita's grandfather bring home from the market?",
@@ -1570,17 +1570,17 @@ window.READING = [
   focus:"未來完成式與未來進行式（will have done / will have been doing / will be doing）",
   intro:"Anita 在越南的社區中心當了一年志工。注意 by + 未來時間點搭配 will have + p.p.（到那時已完成）與 will have been + V-ing（到那時已持續多久），以及 will be + V-ing 交代「那天正在進行的事」；by the time 後面的時間子句一律用現在簡單式。",
   spoken:[
-    {en:"I started helping out at the community centre almost by accident.",cn:"我會去社區中心幫忙，幾乎是個意外。"},
+    {en:"I started helping out at the community center almost by accident.",cn:"我會去社區中心幫忙，幾乎是個意外。"},
     {en:"By the end of this month I'll have been going for a whole year.",cn:"到這個月底，我就整整去了一年了。"},
     {en:"Next Saturday I'll be reading with a group of six-year-olds.",cn:"下個星期六我會跟一群六歲的孩子一起讀故事。"},
     {en:"Two hours a week isn't much, but I keep turning up.",cn:"一週兩小時不算多，但我一直都有出現。"}
   ],
   paras:[
-    {en:"Anita started volunteering almost by accident. A colleague mentioned that a community centre near the industrial park needed someone to sit with the workers' children on Saturday mornings, while their parents queued downstairs for free health checks. She agreed to try it once. By the end of this month she will have been going for a full year, and those two hours have quietly become the part of her week she protects most carefully.",
+    {en:"Anita started volunteering almost by accident. A colleague mentioned that a community center near the industrial park needed someone to sit with the workers' children on Saturday mornings, while their parents queued downstairs for free health checks. She agreed to try it once. By the end of this month she will have been going for a full year, and those two hours have quietly become the part of her week she protects most carefully.",
      cn:"Anita 會開始當志工，幾乎是個意外。一位同事提起，工業區附近的社區中心需要有人在星期六早上陪工人的孩子，那時他們的父母正在樓下排隊等免費健康檢查。她答應去試一次。到這個月底，她就已經持續去滿一年了，而那兩個小時也悄悄變成她一週裡守得最緊的時段。"},
     {en:"The room above a laundry holds twelve low chairs, a whiteboard and a shelf of battered picture books. Local shops donate what they can, so almost nothing in the room was bought. Anita follows no syllabus. She reads aloud, asks the children to retell the story in their own words, and lets them copy whichever sentences they like. Next Saturday she will be working with a new group of six-year-olds.",
      cn:"洗衣店樓上那個房間裡有十二張矮椅、一塊白板，還有一櫃翻得破破爛爛的故事書。附近的店家捐出他們拿得出來的東西，所以房間裡幾乎沒有一件是買的。Anita 不照任何課程大綱走。她唸故事給孩子聽，請他們用自己的話把故事重說一遍，想抄哪幾句就抄哪幾句。下個星期六，她就會在帶一組新的六歲孩子了。"},
-    {en:"The centre plans carefully, because volunteers come and go. By December it will have trained nine new helpers, and by the time the rainy season ends, every Saturday slot will have been filled twice over. The coordinator says this matters far more than enthusiasm: a child who arrives to find the door locked rarely comes back, however warmly the adults talked about helping.",
+    {en:"The center plans carefully, because volunteers come and go. By December it will have trained nine new helpers, and by the time the rainy season ends, every Saturday slot will have been filled twice over. The coordinator says this matters far more than enthusiasm: a child who arrives to find the door locked rarely comes back, however warmly the adults talked about helping.",
      cn:"社區中心把事情排得很仔細，因為志工來來去去。到十二月，它就已經訓練完九位新幫手；等雨季結束的時候，每一個星期六的時段都會被排滿兩輪。那位統籌的人說，這件事遠比熱情重要：一個孩子來了卻發現門鎖著，就很少會再來，不管當初大人把「要來幫忙」講得多熱切。"},
     {en:"Anita is honest about the limits of two hours a week. She will not have taught anyone to read by next summer, and she knows it. What she can offer is a room that opens when it says it will. Next year, if nothing changes, she will still be sitting on the same low chair with the same worn books. Some kinds of usefulness, she says, only appear when you keep turning up.",
      cn:"對於一週兩小時的限度，Anita 很誠實。到明年夏天，她不會已經教會任何人閱讀，這點她自己清楚。她能給的，是一個「說會開就真的會開」的房間。明年，如果沒什麼變化，她還是會坐在同一張矮椅上，手裡還是那幾本翻舊的書。她說，有些用處只有在你一直出現的時候才會浮出來。"}
@@ -1598,10 +1598,10 @@ window.READING = [
     {w:"limit",ipa:"/ˈlɪmɪt/",pos:"n.",cn:"限度；極限",def:"The point where something stops being possible.",ex:"Everyone has a limit, and he reached his after three night shifts.",exCn:"每個人都有極限，他上了三個夜班之後就到了。"}
   ],
   questions:[
-    {q:"Why did Anita first go to the community centre?",
-     opts:["A. She wanted to teach English professionally","B. A colleague told her the centre needed someone on Saturday mornings","C. The centre offered to pay her","D. Her own children went there"],
+    {q:"Why did Anita first go to the community center?",
+     opts:["A. She wanted to teach English professionally","B. A colleague told her the center needed someone on Saturday mornings","C. The center offered to pay her","D. Her own children went there"],
      ans:1,
-     expl:"第一段：A colleague mentioned that a community centre near the industrial park needed someone to sit with the workers' children on Saturday mornings。"},
+     expl:"第一段：A colleague mentioned that a community center near the industrial park needed someone to sit with the workers' children on Saturday mornings。"},
     {q:"Where do most of the things in the room come from?",
      opts:["A. The city government buys them","B. The children bring them from home","C. Local shops give them away","D. They are rented from a bookshop"],
      ans:2,
@@ -1662,7 +1662,7 @@ window.READING = [
   ],
   target:[
     {w:"shelter",ipa:"/ˈʃel.t̬ɚ/",pos:"n.",cn:"收容所；避難所",def:"A safe place where animals or people can stay.",ex:"The dog spent two months at the shelter before someone took him home.",exCn:"那隻狗在收容所待了兩個月，才有人把牠帶回家。"},
-    {w:"foster",ipa:"/ˈfɔːstɚ/",pos:"v.",cn:"（短期）寄養；當中途",def:"To look after someone else's child or animal for a while.",ex:"Her neighbours foster puppies every spring.",exCn:"她的鄰居每年春天都會寄養小狗。"},
+    {w:"foster",ipa:"/ˈfɔːstɚ/",pos:"v.",cn:"（短期）寄養；當中途",def:"To look after someone else's child or animal for a while.",ex:"Her neighbors foster puppies every spring.",exCn:"她的鄰居每年春天都會寄養小狗。"},
     {w:"cardboard",ipa:"/ˈkɑːrdbɔːrd/",pos:"n.",cn:"硬紙板",def:"Thick stiff paper used to make boxes.",ex:"We cut the cardboard into squares and painted them green.",exCn:"我們把硬紙板剪成方塊，再塗成綠色。"},
     {w:"clinic",ipa:"/ˈklɪnɪk/",pos:"n.",cn:"診所",def:"A small place where people see a doctor.",ex:"The clinic opens at nine and closes for lunch at twelve.",exCn:"那間診所九點開門，十二點休息吃午飯。"},
     {w:"bowl",ipa:"/boʊl/",pos:"n.",cn:"碗",def:"A round deep dish for food or water.",ex:"He filled the bowl with hot noodles and sat down.",exCn:"他把碗裝滿熱麵，然後坐了下來。"},
@@ -1670,7 +1670,7 @@ window.READING = [
   ],
   questions:[
     {q:"Why did the cat come to Tom's home?",
-     opts:["A. He bought it from a pet shop","B. The shelter needed a foster home for three weeks","C. A neighbour moved away and left it","D. He found it in the street"],
+     opts:["A. He bought it from a pet shop","B. The shelter needed a foster home for three weeks","C. A neighbor moved away and left it","D. He found it in the street"],
      ans:1,
      expl:"第一段：an animal shelter near his office asked for foster homes for three weeks。"},
     {q:"“Keep the windows shut in case he tries to climb out.” What does “in case” mean here?",
@@ -1788,7 +1788,7 @@ window.READING = [
   paras:[
     {en:"Last spring the factory where Anita works had an automatic camera system installed above the packing line. The supplier promised that the cameras would read every label and find every defect in less than a second. Anita, who had spent six years doing that inspection by hand, read the specification twice and then could not sleep. If a machine could count faults faster than she could, what was left for her?",
      cn:"去年春天，Anita 工作的工廠在包裝線上方裝了一套自動相機系統。供應商保證那些相機能在不到一秒內讀完每一張標籤、找出每一個瑕疵。Anita 用手工做那項檢驗已經六年，她把規格書讀了兩遍，然後就睡不著了。如果機器數瑕疵比她還快，那還剩下什麼是她的工作？"},
-    {en:"The first month was humbling rather than frightening. The system caught scratches she would certainly have missed, but it also stopped the line for shadows and dust. Anita had the lighting adjusted three times, got two of the cameras moved twenty centimeters higher, and made the engineers write down every setting they changed. By June the false alarms had dropped by half, and nobody asked to switch the system off any more.",
+    {en:"The first month was humbling rather than frightening. The system caught scratches she would certainly have missed, but it also stopped the line for shadows and dust. Anita had the lighting adjusted three times, got two of the cameras moved twenty centimeters higher, and made the engineers write down every setting they changed. By June the false alarms had dropped by half, and nobody asked to switch the system off anymore.",
      cn:"第一個月讓人謙卑，而不是恐懼。那套系統抓到了她肯定會漏掉的刮痕，但它也會因為陰影和灰塵就停線。Anita 請人把燈光調了三次，請人把其中兩台相機往上移了二十公分，並且要求工程師把每一個改過的設定都寫下來。到了六月，誤判已經少了一半，也沒有人再要求把系統關掉。"},
     {en:"What surprised her most was where her day went. She no longer counted defects, because the machine did that better. Instead she spent her mornings asking why the same defect kept coming back, and her afternoons getting operators trained on the new screens. Her manager let her run those sessions herself, and later had her write a short guide for two new trainees. Reading a spreadsheet had quietly become the most important part of her routine.",
      cn:"最讓她意外的，是她一天的時間跑去哪裡了。她不再數瑕疵，因為機器做得更好。她改成用早上問「為什麼同一種瑕疵一直回來」，用下午帶作業員學新的操作畫面。她的主管讓她自己主持那些課，後來還請她為兩位新來的實習工程師寫一份簡短的指南。看懂試算表，已經悄悄變成她例行工作裡最重要的一環。"},
@@ -1799,7 +1799,7 @@ window.READING = [
     {w:"install",ipa:"/ɪnˈstɑːl/",pos:"v.",cn:"安裝",def:"To put a machine or program in place so that it can be used.",ex:"The landlord promised to install a new water heater before winter.",exCn:"房東答應在冬天前裝一台新的熱水器。"},
     {w:"supplier",ipa:"/səˈplaɪɚ/",pos:"n.",cn:"供應商",def:"A company that provides goods or parts to another company.",ex:"Our main supplier in Hanoi closes for a week every Lunar New Year.",exCn:"我們在河內的主要供應商每年農曆新年都休一個星期。"},
     {w:"defect",ipa:"/ˈdiː.fekt/",pos:"n.",cn:"瑕疵；缺陷",def:"A fault that makes something not good enough to sell or use.",ex:"A tiny defect in the zip meant the whole bag was sent back.",exCn:"拉鍊上一個小瑕疵，讓整個包包被退回。"},
-    {w:"inspection",ipa:"/ɪnˈspek.ʃən/",pos:"n.",cn:"檢驗；檢查",def:"The act of looking at something carefully to see if it is correct or safe.",ex:"The lift passed its yearly inspection on Tuesday.",exCn:"那部電梯星期二通過了年度檢查。"},
+    {w:"inspection",ipa:"/ɪnˈspek.ʃən/",pos:"n.",cn:"檢驗；檢查",def:"The act of looking at something carefully to see if it is correct or safe.",ex:"The elevator passed its yearly inspection on Tuesday.",exCn:"那部電梯星期二通過了年度檢查。"},
     {w:"adjust",ipa:"/əˈdʒʌst/",pos:"v.",cn:"調整",def:"To change something a little so that it works better.",ex:"Please adjust your chair before you start typing.",exCn:"開始打字前，請先調整你的椅子。"},
     {w:"operator",ipa:"/ˈɑːpəreɪtɚ/",pos:"n.",cn:"操作員；作業員",def:"A person whose job is to use a machine.",ex:"Each operator signs the log sheet at the end of the night.",exCn:"每位操作員在夜班結束時都要在紀錄表上簽名。"},
     {w:"calibrate",ipa:"/ˈkæl.ə.breɪt/",pos:"v.",cn:"校正；校準",def:"To set a measuring tool so that it gives correct numbers.",ex:"We calibrate the kitchen scales once a season.",exCn:"我們每季校正一次廚房的秤。"},
@@ -1855,7 +1855,7 @@ window.READING = [
   spoken:[
     {en:"When I started, I only had three pots and a little soil.",cn:"我剛開始的時候，只有三個花盆和一點土。"},
     {en:"I put too many seeds in one pot and gave them too much water.",cn:"我在一個花盆裡放了太多種子，又澆了太多水。"},
-    {en:"My neighbour gave me a few mint cuttings, and the mint never died.",cn:"鄰居給了我幾根薄荷插枝，那薄荷怎麼都死不了。"},
+    {en:"My neighbor gave me a few mint cuttings, and the mint never died.",cn:"鄰居給了我幾根薄荷插枝，那薄荷怎麼都死不了。"},
     {en:"Now I have plenty of mint and I don't buy any seeds.",cn:"現在我薄荷多得是，種子一包都不用買。"}
   ],
   paras:[
@@ -1863,11 +1863,11 @@ window.READING = [
      cn:"Tom 在台中有一個小陽台。好幾年來，上面除了一張壞掉的椅子和一些舊紙箱，什麼都沒有。去年三月他決定在那裡種一點吃的，所以買了三個塑膠花盆、一袋土和幾包種子。"},
     {en:"He did not know much about plants. He put too many seeds in each pot and gave them too much water. After two weeks he had a lot of tiny green leaves, and then almost all of them turned brown. Only a few tomato plants were still alive in May.",
      cn:"他對植物不太懂。他在每個花盆裡放了太多種子，又澆了太多水。兩個星期後，他長出一堆小小的綠葉子，然後幾乎全部都變成褐色。到了五月，只剩幾株番茄還活著。"},
-    {en:"His neighbour, Mrs Lin, watched him from her window and laughed. She brought him a few mint cuttings in a cup of water. \"Mint needs some sun and a little water,\" she said. \"It does not need any special soil. Just try it.\"",
+    {en:"His neighbor, Mrs Lin, watched him from her window and laughed. She brought him a few mint cuttings in a cup of water. \"Mint needs some sun and a little water,\" she said. \"It does not need any special soil. Just try it.\"",
      cn:"他的鄰居林太太從窗戶看著他，笑了出來。她拿了幾根薄荷插枝給他，泡在一杯水裡。「薄荷只要一些陽光和一點水，」她說，「它不需要任何特別的土。你試試就知道。」"},
     {en:"The mint grew fast. By August Tom had five pots of it and did not know what to do with so much mint. He put some in his tea, dried a little for the winter, and still had plenty left. He gave three pots away to people at work.",
      cn:"薄荷長得很快。到了八月，Tom 有五盆薄荷，多到不知道該怎麼辦。他放了一些在茶裡，曬乾了一點留到冬天，還是剩下很多。他送了三盆給公司的同事。"},
-    {en:"Now the balcony has eleven pots and no room for any boxes. Tom still kills a few plants every year, but he does not buy many seeds now. He asks his neighbours instead.",
+    {en:"Now the balcony has eleven pots and no room for any boxes. Tom still kills a few plants every year, but he does not buy many seeds now. He asks his neighbors instead.",
      cn:"現在陽台上有十一個花盆，再也放不下任何紙箱。Tom 每年還是會種死幾株，但他現在不買很多種子了。他改成去問鄰居。"}
   ],
   target:[
@@ -1880,7 +1880,7 @@ window.READING = [
   ],
   questions:[
     {q:"Why did almost all of Tom's first plants die?",
-     opts:["A. He forgot to water them for two weeks","B. He used too many seeds in each pot and gave them too much water","C. The balcony got no sun at all","D. His neighbour moved them to her own flat"],
+     opts:["A. He forgot to water them for two weeks","B. He used too many seeds in each pot and gave them too much water","C. The balcony got no sun at all","D. His neighbor moved them to her own flat"],
      ans:1,
      expl:"第二段：He put too many seeds in each pot and gave them too much water。"},
     {q:"The story says “a few mint cuttings” but “a little water”. Why not “a few water”?",
@@ -1888,9 +1888,9 @@ window.READING = [
      ans:0,
      expl:"不可數名詞（water、soil、mint）的「少量」用 a little、「多」用 much；可數複數（cuttings、seeds、pots）才用 a few 和 many。"},
     {q:"What does Tom do now when he wants a new plant?",
-     opts:["A. He buys many packets of seeds","B. He asks his neighbours","C. He uses the old boxes as pots","D. He has stopped growing anything"],
+     opts:["A. He buys many packets of seeds","B. He asks his neighbors","C. He uses the old boxes as pots","D. He has stopped growing anything"],
      ans:1,
-     expl:"最後一段：he does not buy many seeds now. He asks his neighbours instead。"}
+     expl:"最後一段：he does not buy many seeds now. He asks his neighbors instead。"}
   ],
   upgrade:[
     {b1:"I had a lot of small green leaves. Then they died.",
@@ -1922,13 +1922,13 @@ window.READING = [
   spoken:[
     {en:"The notice said that everyone inside the factory had to take part.",cn:"公告上寫，工廠裡的每一個人都必須參加。"},
     {en:"You mustn't go back for your bag, and you have to walk, not run.",cn:"你不可以回去拿包包，而且必須走，不能跑。"},
-    {en:"Nobody is allowed to use the lift during a drill.",cn:"演練的時候任何人都不准搭電梯。"},
+    {en:"Nobody is allowed to use the elevator during a drill.",cn:"演練的時候任何人都不准搭電梯。"},
     {en:"Two men thought they didn't have to come, because they were on a break.",cn:"有兩個人以為自己不必來，因為他們在休息。"}
   ],
   paras:[
     {en:"The notice went up on the board by the canteen: fire drill, Tuesday, ten o'clock. Everyone inside the factory had to take part, including visitors and the drivers in the yard. The rules were short. You must leave your line the moment the alarm starts. You mustn't go back for a bag. And you have to walk, not run.",
      cn:"公告貼在員工餐廳旁邊的佈告板上：消防演練，星期二，十點。工廠裡的每一個人都必須參加，包括訪客和在院子裡等的司機。規則很短。警報一響，你就必須離開你的生產線。你不可以回去拿包包。而且你必須走，不能跑。"},
-    {en:"Anita had heard that alarm twice before, but never from the packing area, and it was far louder than she expected. Two new operators stood still and looked at her, so she pointed at the stairs. Nobody is allowed to use the lift during a drill: a lift can stop between floors and trap people inside.",
+    {en:"Anita had heard that alarm twice before, but never from the packing area, and it was far louder than she expected. Two new operators stood still and looked at her, so she pointed at the stairs. Nobody is allowed to use the elevator during a drill: an elevator can stop between floors and trap people inside.",
      cn:"那個警報 Anita 之前聽過兩次，但從來不是在包裝區聽到的，而且比她想像中大聲得多。兩個新來的作業員站著不動、看著她，所以她指了樓梯。演練時任何人都不准搭電梯：電梯可能停在樓層之間，把人困在裡面。"},
     {en:"At the gate the supervisors counted heads. Anita's group took six minutes and forty seconds, and two names were missing. Both men were found in the smoking area; they had thought they didn't have to come, because they were on a break. The safety officer did not shout. He simply said that four minutes was the target, and that a fire does not wait for anybody's break.",
      cn:"在大門口，組長們一個一個點人數。Anita 這一組花了六分四十秒，而且少了兩個名字。那兩位男同事後來在吸菸區被找到；他們以為自己不必來，因為他們在休息。安全管理員沒有大聲罵人。他只說四分鐘才是目標，而火不會等任何人休息完。"},
@@ -1936,7 +1936,7 @@ window.READING = [
      cn:"三個星期後，他們四分十秒就走到大門。在那之後，每位員工都必須學會使用滅火器：拔插銷、瞄低、壓下、左右掃。現在 Anita 每個月都檢查她那層樓的滅火器。她不能自己修，但只要有哪一支是空的，她就必須回報。演練裡沒有人需要勇敢；你只需要知道門在哪裡。"}
   ],
   target:[
-    {w:"notice",ipa:"/ˈnoʊtɪs/",pos:"n.",cn:"公告；通知",def:"A written sign put up to tell people something.",ex:"A notice on the lift door said it would be closed all weekend.",exCn:"電梯門上的公告說整個週末都會停用。"},
+    {w:"notice",ipa:"/ˈnoʊtɪs/",pos:"n.",cn:"公告；通知",def:"A written sign put up to tell people something.",ex:"A notice on the elevator door said it would be closed all weekend.",exCn:"電梯門上的公告說整個週末都會停用。"},
     {w:"drill",ipa:"/drɪl/",pos:"n.",cn:"演練",def:"A practice of what everyone should do in an emergency.",ex:"Our school held an earthquake drill before the summer holiday.",exCn:"我們學校在暑假前辦了一次地震演練。"},
     {w:"alarm",ipa:"/əˈlɑːrm/",pos:"n.",cn:"警報器；警報聲",def:"A loud sound or machine that warns people of danger.",ex:"The smoke alarm went off because somebody burnt the toast.",exCn:"有人把吐司烤焦了，煙霧警報器就響了。"},
     {w:"trap",ipa:"/træp/",pos:"v.",cn:"困住",def:"To keep someone in a place that they cannot get out of.",ex:"Heavy snow trapped the climbers in the hut for two nights.",exCn:"大雪把登山客困在山屋裡兩個晚上。"},
@@ -1950,10 +1950,10 @@ window.READING = [
      opts:["A. Only the workers on the packing line","B. Everyone inside the factory, including visitors and drivers","C. Only the two new operators","D. Only the supervisors and the safety officer"],
      ans:1,
      expl:"第一段：Everyone inside the factory had to take part, including visitors and the drivers in the yard。"},
-    {q:"Why is the lift not used during a drill?",
+    {q:"Why is the elevator not used during a drill?",
      opts:["A. It is too slow for a large group","B. It can stop between floors and trap people inside","C. The supervisors need it for themselves","D. It is switched off at ten o'clock every day"],
      ans:1,
-     expl:"第二段：a lift can stop between floors and trap people inside。"},
+     expl:"第二段：an elevator can stop between floors and trap people inside。"},
     {q:"“They didn't have to come” and “You mustn't go back for a bag” — what is the difference?",
      opts:["A. didn't have to ＝ it was not necessary; mustn't ＝ it is not allowed","B. They mean exactly the same thing","C. didn't have to ＝ it is not allowed; mustn't ＝ it was not necessary","D. Only mustn't can be used about rules"],
      ans:0,
@@ -2061,24 +2061,24 @@ window.READING = [
   id:"r35", level:"B1", topic:"郵局與寄件", words:219,
   title:"The Coat That Went to Vancouver",
   titleCn:"寄到溫哥華的那件大衣",
-  focus:"already / yet / still 與 not ... any more",
-  intro:"Tom 的姊姊搬到加拿大，冬天的大衣卻留在台南。這篇跟著那件大衣從郵局寄出去。注意四個小字：already 是「比預期早就已經」，用在肯定句；yet 是「還（沒）」，只用在疑問句和否定句；still 是「到現在仍然」；not ... any more 是「以前會、現在不會了」。中文常常都講成「已經」「還」，英文的位置和句型卻分得很清楚。",
+  focus:"already / yet / still 與 not ... anymore",
+  intro:"Tom 的姊姊搬到加拿大，冬天的大衣卻留在台南。這篇跟著那件大衣從郵局寄出去。注意四個小字：already 是「比預期早就已經」，用在肯定句；yet 是「還（沒）」，只用在疑問句和否定句；still 是「到現在仍然」；not ... anymore 是「以前會、現在不會了」。中文常常都講成「已經」「還」，英文的位置和句型卻分得很清楚。",
   spoken:[
     {en:"By October she still did not have her winter coat.",cn:"到了十月，她還是沒有她的冬天大衣。"},
     {en:"He had already written the address twice, in English and in Chinese.",cn:"他已經把地址寫了兩遍，一遍英文一遍中文。"},
     {en:"Has it left Taiwan yet?",cn:"它已經離開台灣了嗎？"},
-    {en:"Tom's sister does not complain about the cost any more.",cn:"Tom 的姊姊現在不再抱怨那筆費用了。"}
+    {en:"Tom's sister does not complain about the cost anymore.",cn:"Tom 的姊姊現在不再抱怨那筆費用了。"}
   ],
   paras:[
     {en:"Tom's sister moved to Vancouver in March. By October she still did not have her winter coat, because it was hanging in her old room in Tainan. So one Monday Tom put it in a box and took it to the post office.",
      cn:"Tom 的姊姊三月搬到溫哥華。到了十月，她還是沒有她的冬天大衣，因為那件大衣掛在台南老家她以前的房間裡。所以某個星期一，Tom 把它裝進箱子，拿去郵局。"},
-    {en:"The clerk put the box on the scales: four point two kilos. “Air or sea?” he asked. Sea was cheaper, but it took two months, so Tom chose air. He had already written the address twice, in English and in Chinese, but the clerk said the Chinese part was not needed any more.",
+    {en:"The clerk put the box on the scales: four point two kilos. “Air or sea?” he asked. Sea was cheaper, but it took two months, so Tom chose air. He had already written the address twice, in English and in Chinese, but the clerk said the Chinese part was not needed anymore.",
      cn:"櫃台人員把箱子放到磅秤上：四點二公斤。「空運還是海運？」他問。海運比較便宜，但要兩個月，所以 Tom 選了空運。他已經把地址寫了兩遍，一遍英文一遍中文，但櫃台人員說中文那部分現在不需要了。"},
     {en:"The postage cost more than the coat. Tom paid, took a photo of the receipt, and sent his sister the tracking number. “Has it left Taiwan yet?” she asked that evening. It had not. It was still sitting in a warehouse near the airport.",
      cn:"郵資比那件大衣還貴。Tom 付了錢，拍了收據的照片，把追蹤號碼傳給姊姊。「它已經離開台灣了嗎？」那天晚上她問。還沒有。它還放在機場附近的一個倉庫裡。"},
     {en:"For eleven days nothing moved. Tom checked the number every morning. Then the website changed: the parcel had already cleared customs. His sister had not received it yet, but it was close.",
      cn:"有十一天完全沒有動。Tom 每天早上都查那個號碼。然後網站更新了：那個包裹已經通過海關。他姊姊還沒收到，但已經很接近了。"},
-    {en:"It arrived on a Friday. The coat smelled of the box and one sleeve was creased, but it was warm. Tom's sister does not complain about the cost any more. She says she is still wearing it, and that she has already decided what to send back.",
+    {en:"It arrived on a Friday. The coat smelled of the box and one sleeve was creased, but it was warm. Tom's sister does not complain about the cost anymore. She says she is still wearing it, and that she has already decided what to send back.",
      cn:"它在一個星期五送到。大衣有箱子的味道，一邊袖子壓出了摺痕，但很暖。Tom 的姊姊現在不再抱怨那筆費用了。她說她到現在還穿著它，而且已經決定要寄什麼回來。"}
   ],
   target:[
@@ -2097,9 +2097,9 @@ window.READING = [
     {q:"「She has already decided what to send back.」裡的 already 可以換成 yet 嗎？",
      opts:["A. 可以，already 和 yet 意思完全一樣","B. 不可以，yet 只能放在句首","C. 不可以，yet 只用在疑問句和否定句；肯定句要用 already","D. 可以，但意思會變成「以前會、現在不會了」"],
      ans:2,
-     expl:"already 用在肯定句，表示「比預期早就已經」；yet 只出現在疑問句（Has it left Taiwan yet?）和否定句（His sister had not received it yet）。「以前會、現在不會了」是 not ... any more，又是另一回事。"},
+     expl:"already 用在肯定句，表示「比預期早就已經」；yet 只出現在疑問句（Has it left Taiwan yet?）和否定句（His sister had not received it yet）。「以前會、現在不會了」是 not ... anymore，又是另一回事。"},
     {q:"What does Tom's sister say at the end?",
-     opts:["A. She is still wearing the coat and has already decided what to send back","B. She wants Tom to use sea mail next time","C. She does not need a winter coat in Vancouver any more","D. She has asked the post office for her money back"],
+     opts:["A. She is still wearing the coat and has already decided what to send back","B. She wants Tom to use sea mail next time","C. She does not need a winter coat in Vancouver anymore","D. She has asked the post office for her money back"],
      ans:0,
      expl:"最後一段：She says she is still wearing it, and that she has already decided what to send back。"}
   ],
@@ -2113,8 +2113,8 @@ window.READING = [
      b2Cn:"到了十月，她還是沒有她的冬天大衣，因為它掛在台南老家她以前的房間裡。",
      spCn:"到十月她還沒拿到那件大衣——它還在台南。"},
     {b1:"He wrote the address in Chinese. The clerk said it is not necessary now.",
-     b2:"He had already written the address in Chinese, but the clerk said it was not needed any more.",
-     note:"already 配完成式講「早就做了」，位置在 had 和過去分詞中間；「以前需要、現在不需要了」用 not ... any more 放句尾。轉述別人說過的話，is 要往後退成 was。",
+     b2:"He had already written the address in Chinese, but the clerk said it was not needed anymore.",
+     note:"already 配完成式講「早就做了」，位置在 had 和過去分詞中間；「以前需要、現在不需要了」用 not ... anymore 放句尾。轉述別人說過的話，is 要往後退成 was。",
      sp:"He'd done the Chinese bit as well — turns out they don't bother with that now.",
      spNote:"the Chinese bit 是口語的「中文那部分」；not bother with something 是「現在不弄那個了」，turns out 是「結果發現」。",
      b1Cn:"他把地址寫了中文。櫃台人員說現在不需要了。",
@@ -2139,10 +2139,10 @@ window.READING = [
   paras:[
     {en:"Anita's friend Mai was getting married in April, and she asked Anita to look at two banquet halls with her. Both halls were in the same district of Taoyuan, ten minutes apart by scooter. Both of them had a free parking lot, and neither of them was cheap. Mai had already chosen her dress, so the hall was the only thing left.",
      cn:"Anita 的朋友 Mai 四月要結婚，她請 Anita 陪她去看兩家喜宴會場。兩個會場都在桃園的同一區，騎機車相距十分鐘。兩個都有免費停車場，而且兩個都不便宜。Mai 的禮服已經挑好了，所以只剩會場還沒決定。"},
-    {en:"The first hall could seat three hundred guests. The second one was smaller, but it had a window along one whole wall. The manager of the first hall said that all of his Saturdays in April were taken, so only Sunday was possible. At the second hall, Mai could have either Saturday or Sunday. Neither manager would lower the price, and both of them wanted a deposit that day.",
-     cn:"第一個會場可以容納三百位客人。第二個比較小，但有一整面牆都是窗戶。第一個會場的經理說，他四月所有的星期六都被訂走了，所以只有星期日可以。第二個會場則是 Mai 星期六或星期日任一天都可以訂。兩個經理都不肯降價，而且兩個都要求當天就付訂金。"},
-    {en:"Mai and Anita sat outside with two cups of tea. Neither of them had planned a wedding before. All of Mai's relatives were flying in from Hanoi, and none of the flights was cheap either. Anita added it up on her phone: with three hundred guests, both halls came to almost the same number. The only real difference was the window.",
-     cn:"Mai 和 Anita 端著兩杯茶坐在外面。她們兩個以前都沒籌辦過婚禮。Mai 的親戚全部要從河內飛過來，而且沒有一班機票是便宜的。Anita 在手機上加了一下：三百位客人的話，兩個會場算起來幾乎是同一個數字。真正的差別只有那面窗。"},
+    {en:"The first hall could seat three hundred guests. The second one was smaller and could seat only two hundred and fifty guests, but it had a window along one whole wall. The manager of the first hall said that all of his Saturdays in April were taken, so only Sunday was possible. At the second hall, Mai could have either Saturday or Sunday. Neither manager would lower the price, and both of them wanted a deposit that day.",
+     cn:"第一個會場可以容納三百位客人。第二個比較小，只能容納兩百五十位客人，但有一整面牆都是窗戶。第一個會場的經理說，他四月所有的星期六都被訂走了，所以只有星期日可以。第二個會場則是 Mai 星期六或星期日任一天都可以訂。兩個經理都不肯降價，而且兩個都要求當天就付訂金。"},
+    {en:"Mai and Anita sat outside with two cups of tea. Neither of them had planned a wedding before. All of Mai's relatives were flying in from Hanoi, and none of the flights was cheap either. Anita added it up on her phone: with two hundred and fifty guests, both halls came to almost the same number. The only real difference was the window.",
+     cn:"Mai 和 Anita 端著兩杯茶坐在外面。她們兩個以前都沒籌辦過婚禮。Mai 的親戚全部要從河內飛過來，而且沒有一班機票是便宜的。Anita 在手機上加了一下：兩百五十位客人的話，兩個會場算起來幾乎是同一個數字。真正的差別只有那面窗。"},
     {en:"In the end Mai took the smaller hall and paid the deposit. Both families were happy with the Sunday, and none of the guests complained about the drive. Anita still remembers what the manager said at the door: neither the food nor the flowers make a wedding, the room does. She is not sure that is true. But all of the photographs have that window in them.",
      cn:"最後 Mai 選了比較小的那個會場，付了訂金。兩家人都滿意星期日這個日子，也沒有一位客人抱怨那段車程。Anita 到現在還記得經理在門口說的話：婚禮不是菜和花撐起來的，是那個空間。她不確定這句話對不對。但所有的照片裡都有那面窗。"}
   ],
