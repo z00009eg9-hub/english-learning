@@ -45,7 +45,7 @@ articles:[
      note:"三個動作共用同一個主詞時，可以只寫一次 I，用逗號和 and 連起來，句子就不會一直重複。", "sp": "I'm up at six thirty, wash my face, and get the coffee going.", "spNote": "I'm up at...（我…就起床）、get the coffee going（把咖啡煮上）是晨間口語。", "b1Cn": "我六點半起床。我洗臉。我泡咖啡。", "b2Cn": "我六點半起床、洗臉，然後泡咖啡。", "spCn": "我六點半就起來，洗把臉，把咖啡煮上。"},
     {b1:"My morning is busy. I like it.",
      b2:"My morning is always busy, but I like it.",
-     note:"用 but 連接兩個相反的意思，比兩個短句自然得多。", "sp": "My mornings are crazy, but honestly, I love it.", "spNote": "crazy（忙翻）、honestly（老實說）是口語裡的情緒潤滑劑。", "b1Cn": "我的早晨很忙。我喜歡。", "b2Cn": "我的早晨總是很忙，但我喜歡。", "spCn": "我的早晨忙翻了，但老實說，我愛這樣。"}
+     note:"用 but 連接兩個相反的意思，比兩個短句自然得多。", "sp": "My mornings are crazy, but honestly, I love them.", "spNote": "crazy（忙翻）、honestly（老實說）是口語裡的情緒潤滑劑。", "b1Cn": "我的早晨很忙。我喜歡。", "b2Cn": "我的早晨總是很忙，但我喜歡。", "spCn": "我的早晨忙翻了，但老實說，我愛這樣。"}
   ]
 },
 
@@ -225,9 +225,9 @@ articles:[
   intro:"第一次接觸現在完成式。重點是「已經做完了」，常配 already 和 yet。",
   "spoken": [{"en":"Saturday mornings are cleaning time at our place — nine till lunch.","cn":"週六早上是我們家的打掃時間——九點掃到中午。"},{"en":"I've done the floor and the bathroom, and my son took out the trash.","cn":"地板和浴室我弄好了，兒子把垃圾拿去倒了。"},{"en":"My husband still hasn't gotten around to the kitchen — there are dishes in the sink.","cn":"我先生還沒空弄廚房——水槽裡還有碗盤。"},{"en":"When we're done, we always sit down for tea. A clean home just feels calm.","cn":"掃完我們都會坐下來喝茶。乾淨的家就是讓人安心。"}],
   paras:[
-    {en:"Every Saturday morning my family cleans the flat. We start at nine and finish before lunch.",
+    {en:"Every Saturday morning my family cleans the apartment. We start at nine and finish before lunch.",
      cn:"每個星期六早上我家會打掃公寓。我們九點開始，午餐前結束。"},
-    {en:"I have already washed the floor and cleaned the bathroom. My son has taken out the rubbish.",
+    {en:"I have already washed the floor and cleaned the bathroom. My son has taken out the trash.",
      cn:"我已經洗好地板、清好浴室了。我兒子把垃圾拿出去了。"},
     {en:"My husband has not finished the kitchen yet. There are still some dishes in the sink.",
      cn:"我先生還沒把廚房弄完。水槽裡還有一些碗盤。"},
@@ -235,16 +235,16 @@ articles:[
      cn:"我們做完之後總是一起喝茶。乾淨的家讓我覺得平靜。"}
   ],
   target:[
-    {w:"flat",ipa:"/flæt/",pos:"n.",cn:"公寓",def:"A home on one floor of a building.",ex:"Sam lives in a small flat near the park with his two cats.",exCn:"山姆和他的兩隻貓住在公園附近的一間小公寓裡。"},
+    {w:"flat",ipa:"/flæt/",pos:"n.",cn:"公寓",def:"A home on one floor of a building.",ex:"Sam lives in a small apartment near the park with his two cats.",exCn:"山姆和他的兩隻貓住在公園附近的一間小公寓裡。"},
     {w:"floor",ipa:"/flɔːr/",pos:"n.",cn:"地板",def:"The surface you walk on inside.",ex:"The baby dropped her cereal all over the floor at breakfast.",exCn:"寶寶吃早餐時把麥片灑得滿地都是。"},
-    {w:"rubbish",ipa:"/ˈrʌbɪʃ/",pos:"n.",cn:"垃圾",def:"Things you throw away.",ex:"After the picnic, we put all our rubbish in a bag and took it home.",exCn:"野餐結束後，我們把所有垃圾裝進袋子帶回家。"},
+    {w:"trash",ipa:"/ˈrʌbɪʃ/",pos:"n.",cn:"垃圾",def:"Things you throw away.",ex:"After the picnic, we put all our trash in a bag and took it home.",exCn:"野餐結束後，我們把所有垃圾裝進袋子帶回家。"},
     {w:"sink",ipa:"/sɪŋk/",pos:"n.",cn:"水槽",def:"The bowl in a kitchen where you wash dishes.",ex:"My dad fixed the leaking pipe under the sink yesterday.",exCn:"我爸爸昨天修好了水槽下面漏水的水管。"},
     {w:"already",ipa:"/ɔːlˈredi/",pos:"adv.",cn:"已經",def:"Before now.",ex:"Mom, my homework is already done, so can I watch a movie now?",exCn:"媽，我的作業已經寫完了，現在可以看電影嗎？"},
     {w:"calm",ipa:"/kɑːm/",pos:"adj.",cn:"平靜的",def:"Quiet and relaxed.",ex:"The sea was calm this morning, so we went out in a small boat.",exCn:"今天早上海面很平靜，所以我們搭小船出海。"}
   ],
   questions:[
-    {q:"What has the son done?",qCn:"兒子已經做了什麼？",opts:["A. Washed the floor","B. Cleaned the bathroom","C. Taken out the rubbish","D. Washed the dishes"],optsCn:["A. 拖了地板", "B. 打掃了浴室", "C. 倒了垃圾", "D. 洗了碗"],ans:2,expl:"My son has taken out the rubbish."},
-    {q:"What is NOT finished?",qCn:"什麼還沒做完？",opts:["A. The floor","B. The bathroom","C. The kitchen","D. The rubbish"],optsCn:["A. 地板", "B. 浴室", "C. 廚房", "D. 垃圾"],ans:2,expl:"My husband has not finished the kitchen yet."},
+    {q:"What has the son done?",qCn:"兒子已經做了什麼？",opts:["A. Washed the floor","B. Cleaned the bathroom","C. Taken out the trash","D. Washed the dishes"],optsCn:["A. 拖了地板", "B. 打掃了浴室", "C. 倒了垃圾", "D. 洗了碗"],ans:2,expl:"My son has taken out the trash."},
+    {q:"What is NOT finished?",qCn:"什麼還沒做完？",opts:["A. The floor","B. The bathroom","C. The kitchen","D. The trash"],optsCn:["A. 地板", "B. 浴室", "C. 廚房", "D. 垃圾"],ans:2,expl:"My husband has not finished the kitchen yet."},
     {q:"Choose the correct sentence.",qCn:"選出正確的句子。",opts:["I have already wash the floor.","I have already washed the floor.","I already washed the floor yet.","I has already washed the floor."],ans:1,expl:"have + 過去分詞 washed；yet 用在否定句。"}
   ],
   upgrade:[

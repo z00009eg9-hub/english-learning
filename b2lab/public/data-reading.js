@@ -121,7 +121,7 @@ window.READING = [
   ],
   target:[
     {w:"roughly",ipa:"/ˈrʌfli/",pos:"adv.",cn:"大約",def:"Approximately; not exactly.",ex:"Roughly two hundred people attended the meeting.",exCn:"大約兩百人參加了那場會議。"},
-    {w:"be thrown away",ipa:"/bi θroʊn əˈweɪ/",pos:"phr.",cn:"被丟掉",def:"To be put in the rubbish because it is not wanted.",ex:"Food that passes its expiry date should be thrown away.",exCn:"過了保存期限的食物應該丟掉。"},
+    {w:"be thrown away",ipa:"/bi θroʊn əˈweɪ/",pos:"phr.",cn:"被丟掉",def:"To be put in the trash because it is not wanted.",ex:"Food that passes its expiry date should be thrown away.",exCn:"過了保存期限的食物應該丟掉。"},
     {w:"label",ipa:"/ˈleɪ.bəl/",pos:"v.",cn:"標示",def:"To put information on a product.",ex:"Please label each box with its contents before moving day.",exCn:"搬家前請在每個箱子上標明裡面裝了什麼。"},
     {w:"go bad",ipa:"/ɡoʊ bæd/",pos:"phr.v.",cn:"（食物）壞掉",def:"To become unfit to eat.",ex:"If you leave milk outside the fridge, it will go bad overnight.",exCn:"牛奶放在冰箱外面的話，一個晚上就會壞掉。"},
     {w:"leftovers",ipa:"/ˈleftˌovɚz/",pos:"n.",cn:"剩菜",def:"Food that has not been eaten at the end of a meal.",ex:"My mom always turns yesterday's leftovers into a new dish.",exCn:"我媽總是把昨天的剩菜變出一道新料理。"},
@@ -1360,17 +1360,17 @@ window.READING = [
   focus:"目的與結果子句（in order to / so that / so ... that / such ... that）",
   intro:"從台北的垃圾車說到都市政策。注意表示「目的」的 in order to、so as to、so that，以及表示「結果」的 so ... that、such ... that，它們在說明政策動機時非常好用。",
   spoken:[
-    {en:"In Taiwan, a truck plays music every evening, and people bring their rubbish down to hand it over.",cn:"在台灣，垃圾車每天傍晚放著音樂，大家把垃圾帶下樓親手交給清潔人員。"},
-    {en:"Taipei started charging for general rubbish bags so people would throw away less.",cn:"台北開始對一般垃圾袋收費，好讓大家少丟一點。"},
+    {en:"In Taiwan, a truck plays music every evening, and people bring their trash down to hand it over.",cn:"在台灣，垃圾車每天傍晚放著音樂，大家把垃圾帶下樓親手交給清潔人員。"},
+    {en:"Taipei started charging for general trash bags so people would throw away less.",cn:"台北開始對一般垃圾袋收費，好讓大家少丟一點。"},
     {en:"Recycling is free, so sorting is worth the effort.",cn:"回收是免費的，所以花力氣分類很划算。"},
     {en:"It takes time, but most residents think it's a fair price for clean streets.",cn:"這很花時間，但大多數居民覺得為了乾淨的街道，這樣很值得。"}
   ],
   paras:[
-    {en:"In Taiwan, rubbish collection is a small daily event. Official bags are sold in convenience stores in several sizes, so even the smallest apartment has to think about how much it throws away. Every evening a truck plays a tune, and residents carry their bags down to hand them over in person. The system is so familiar that most locals never think about it, yet visitors are often surprised by how much effort it involves.",
+    {en:"In Taiwan, trash collection is a small daily event. Official bags are sold in convenience stores in several sizes, so even the smallest apartment has to think about how much it throws away. Every evening a truck plays a tune, and residents carry their bags down to hand them over in person. The system is so familiar that most locals never think about it, yet visitors are often surprised by how much effort it involves.",
      cn:"在台灣，收垃圾是一件小小的每日大事。官方垃圾袋在便利商店就買得到，有好幾種尺寸，所以就算是再小的住家，也得想想自己到底丟了多少東西。每天傍晚，垃圾車會播放一段旋律，居民提著垃圾袋下樓，親手交給清潔人員。這套制度對本地人來說太熟悉了，大家根本不會多想，但訪客常常驚訝於它需要花多少功夫。"},
-    {en:"The system was designed in order to solve a real problem. In the early 2000s, Taipei was producing such large amounts of waste that its landfills were almost full. The city introduced a charge for general rubbish bags so that people would have a reason to throw away less. Recyclables, by contrast, were collected free of charge.",
+    {en:"The system was designed in order to solve a real problem. In the early 2000s, Taipei was producing such large amounts of waste that its landfills were almost full. The city introduced a charge for general trash bags so that people would have a reason to throw away less. Recyclables, by contrast, were collected free of charge.",
      cn:"這套制度是為了解決一個真實的問題而設計的。在 2000 年代初期，台北製造的垃圾量大到讓掩埋場幾乎滿載。市政府對一般垃圾袋開始收費，讓大家有理由少丟一點；相對地，資源回收物則是免費收取。"},
-    {en:"The results were encouraging. Recycling rates climbed steadily, and the amount of household waste per person fell. The system works partly because it is so predictable: residents sort their rubbish carefully so as to avoid fines, and collectors check bags to make sure the rules are followed. Neighbors often chat while they wait for the truck, which gives the routine an unexpected social side.",
+    {en:"The results were encouraging. Recycling rates climbed steadily, and the amount of household waste per person fell. The system works partly because it is so predictable: residents sort their trash carefully so as to avoid fines, and collectors check bags to make sure the rules are followed. Neighbors often chat while they wait for the truck, which gives the routine an unexpected social side.",
      cn:"成果令人鼓舞。回收率穩定攀升，每人的家戶垃圾量也下降了。這套制度之所以有效，部分原因在於它太可預期：居民仔細分類垃圾以避免罰款，清潔人員也會檢查垃圾袋，確保大家遵守規則。鄰居們常在等垃圾車的時候聊天，讓這個例行公事多了一層意想不到的社交面向。"},
     {en:"Critics point out that the approach demands a lot of time, particularly from working people who cannot be home at the right hour. Even so, many residents defend it. Such a routine, they argue, is a small price to pay for clean streets and a shared sense of responsibility. It is a system inconvenient enough to change habits, and simple enough to keep them.",
      cn:"批評者指出，這種做法需要花很多時間，尤其對無法在固定時間待在家的上班族來說。即便如此，仍有許多居民為它辯護。他們認為，這樣的日常，是為了乾淨的街道和共同的責任感而付出的小小代價。這套制度夠不方便，足以改變習慣；又夠簡單，足以讓習慣持續下去。"}
@@ -1388,10 +1388,10 @@ window.READING = [
   ],
   questions:[
     {q:"What happens in Taiwan every evening, according to the first paragraph?",
-     opts:["A. Streets are closed to traffic","B. A truck plays a tune and residents hand over their rubbish","C. Residents leave bags outside their doors","D. Factories stop producing waste"],
+     opts:["A. Streets are closed to traffic","B. A truck plays a tune and residents hand over their trash","C. Residents leave bags outside their doors","D. Factories stop producing waste"],
      ans:1,
      expl:"第一段：Every evening a truck plays a tune, and residents carry their bags down to hand them over in person。"},
-    {q:"Why did the city introduce a charge for general rubbish bags?",
+    {q:"Why did the city introduce a charge for general trash bags?",
      opts:["A. To earn more money from tourists","B. To give people a reason to throw away less","C. To close the recycling centers","D. To replace the garbage trucks"],
      ans:1,
      expl:"第二段：so that people would have a reason to throw away less。"},

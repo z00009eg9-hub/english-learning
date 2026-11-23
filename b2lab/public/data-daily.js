@@ -1389,7 +1389,7 @@ articles:[
     },
     {
       "en": "So she did what a quality engineer does with any schedule that will not fit: she moved the smaller pieces. Her Thursday session became a Thursday evening. The weekly supplier report, which she usually writes on Thursday afternoon, will be drafted on Wednesday from now on. Mai agreed to take the Friday line walk for three weeks.",
-      "cn": "於是她做了品質工程師面對塞不進去的行程時會做的事：把比較小的零件移位。星期四的療程改到星期四晚上。每週的供應商報告她本來都在星期四下午寫，從現在起改成星期三先寫好。Mai答應幫她代三個星期的星期五產線巡查。"
+      "cn": "於是她做了品質工程師面對塞不進去的行程時會做的事：調整比較小的行程項目。星期四的療程改到星期四晚上。每週的供應商報告她本來都在星期四下午寫，從現在起改成星期三先寫好。Mai答應幫她代三個星期的星期五產線巡查。"
     },
     {
       "en": "None of this makes the shoulder heal faster. What it removes is the excuse. Anita has watched colleagues stop treatment in week two because a shipment was late, and she knows how that ends: the same ache a year later, and a longer course. By the middle of December she will have given the shoulder its full month, and the audit will have come and gone.",
@@ -2244,7 +2244,7 @@ articles:[
       "pos": "adj.",
       "cn": "不平均的",
       "def": "Not the same everywhere; not level or regular.",
-      "ex": "The pavement is uneven, so push the cart slowly.",
+      "ex": "The sidewalk is uneven, so push the cart slowly.",
       "exCn": "人行道不平，推車要慢一點。"
     },
     {
@@ -4538,7 +4538,7 @@ articles:[
       "cn": "在那一晚之前，我的預算一直是一種感覺，而不是一個數字。我大概知道自己賺多少，也大概知道租約花掉多少，中間那段差額就讓它自己照顧自己。試算表沒那麼寬容。房租、水電帳單、公車月票、週日市場、一年兩趟回家的機票：等到每一行旁邊都填上數字，我薪水裡「可以放心花」的那部分，原來只占百分之四左右。"
     },
     {
-      "en": "That is the trade-off nobody prints on a lease. A cheaper flat sits forty minutes further out, so a smaller rent buys me a longer commute and two fewer free evenings a week. A flat I can walk to work from costs me the savings cushion I keep promising myself. Inflation does not care which one I pick; it quietly lifts both numbers every year.",
+      "en": "That is the trade-off nobody prints on a lease. A cheaper apartment sits forty minutes further out, so a smaller rent buys me a longer commute and two fewer free evenings a week. An apartment I can walk to work from costs me the savings cushion I keep promising myself. Inflation does not care which one I pick; it quietly lifts both numbers every year.",
       "cn": "那就是沒有人會印在租約上的取捨。便宜的房子在再遠四十分鐘的地方，所以房租少一點，換來的是通勤久一點、一週少兩個自由的晚上。走路就能到公司的房子，代價是我一直答應自己要存的那筆緩衝金。通膨不在乎我選哪一邊，它每年都安靜地把兩邊的數字一起往上推。"
     },
     {
@@ -5108,7 +5108,7 @@ articles:[
     },
     {
       "en": "The union had asked for yearly rises of five to six percent, which is what staff at the Japanese parent company receive. The walkout was planned to last two and a half days, but it was extended on Wednesday after more than 350 members signed a petition.",
-      "cn": "工會原本要求每年全面加薪百分之五到六，也就是日本母公司員工拿到的幅度。這場罷工原定只進行兩天半，但星期三有三百五十多名會員連署之後就延長了。"
+      "cn": "工會原本要求每年加薪百分之五到六，也就是日本母公司員工拿到的幅度。這場罷工原定只進行兩天半，但星期三有三百五十多名會員連署之後就延長了。"
     },
     {
       "en": "An agreement was reached late on Wednesday after seven hours of talks, and union representatives approved it the next morning. Every employee at the Douliu plant will get NT$1,200 more in monthly base pay in 2027, and the same again in 2028. For most workers, whose base pay is around NT$30,000, that first rise is worth about four percent.",
@@ -5908,7 +5908,7 @@ articles:[
   ],
   "paras": [
     {
-      "en": "A new railway station in Tainan is scheduled to open on October 17. It stands beside the old station, which has been kept as a heritage building. The new station has been given a plaza, a car park, a transport hub and an area of green space.",
+      "en": "A new railway station in Tainan is scheduled to open on October 17. It stands beside the old station, which has been kept as a heritage building. The new station has been given a plaza, a parking lot, a transport hub and an area of green space.",
       "cn": "台南一座新的火車站預定在十月十七日啟用。它就蓋在舊站旁邊，而舊站已經被保留下來當古蹟建築。新站配置了站前廣場、停車場、轉運中心，還有一塊綠地。"
     },
     {
@@ -6015,7 +6015,7 @@ articles:[
         "A. It has been pulled down",
         "B. It has been kept as a heritage building",
         "C. It has been moved underground",
-        "D. It has been turned into a car park"
+        "D. It has been turned into a parking lot"
       ],
       "optsCn": [
         "A. 已經被拆掉了",
@@ -7149,7 +7149,7 @@ articles:[
   ],
   "paras": [
     {
-      "en": "Tom checks the weather on his phone every morning. Today the app says thirty-five degrees at noon. He puts on a thin shirt and light trousers.",
+      "en": "Tom checks the weather on his phone every morning. Today the app says thirty-five degrees at noon. He puts on a thin shirt and light pants.",
       "cn": "Tom每天早上都用手機查天氣。今天App說中午三十五度。他穿上一件薄襯衫和輕便的長褲。"
     },
     {
@@ -10609,7 +10609,7 @@ articles:[
     {
       "b1": "The manager said the team would call him next week.",
       "b2": "The manager told him that the team would be in touch the following week.",
-      "note": "把call改成more正式的be in touch，並用the following week取代next week，符合轉述職場對話時較正式的語域，是B1+常見的寫法。",
+      "note": "把call改成比較正式的be in touch，並用the following week取代next week，符合轉述職場對話時較正式的語域，是B1+常見的寫法。",
       "sp": "The manager said they'd get back to him sometime next week.",
       "spNote": "get back to someone（回覆某人）是口語裡最常用的『之後聯絡你』的說法。",
       "b1Cn": "經理說團隊下週會打電話給他。",
@@ -11424,7 +11424,7 @@ articles:[
   "spoken": [
     {
       "en": "Anita's about to fly to Taipei for a big client meeting, and her flight gets delayed like three hours because of a storm.",
-      "cn": "Anita正要飛去台北開重要的客戶會議，結果因為暴風雨，班機被delay了大概三小時。"
+      "cn": "Anita正要飛去台北開重要的客戶會議，結果因為暴風雨，班機延誤了大概三小時。"
     },
     {
       "en": "The gate area's already packed, and now her meeting's basically impossible to make on time.",
@@ -14124,7 +14124,7 @@ articles:[
       "cn": "涉案產品是一瓶255毫升的黑芝麻油。檢測發現苯并芘濃度為每公斤3.2微克，遠超過台灣法規訂定的每公斤2微克上限。稽查人員也在工廠內的儲存槽採樣，確認其他批次是否也受影響，才決定是否允許恢復生產。"
     },
     {
-      "en": "The sesame oil case adds a third product type to a scandal that began in July, when regulators found soybean oil made by Central Union Oil Corp. contained benzo[a]pyrene at more than four times the legal limit, with one batch testing as high as 8.1 micrograms per kilogram. About 1,300 tonnes of that oil had already reached other manufacturers before the problem was caught, and the recall eventually covered more than 400 downstream products, from packaged chicken to instant noodles. Central Union was later fined NT$165.2 million, the largest such penalty in Taiwanese food safety history.",
+      "en": "The sesame oil case adds a third product type to a scandal that began in July, when regulators found soybean oil made by Central Union Oil Corp. contained benzo[a]pyrene at more than four times the legal limit, with one batch testing as high as 8.1 micrograms per kilogram. About 1,300 tons of that oil had already reached other manufacturers before the problem was caught, and the recall eventually covered more than 400 downstream products, from packaged chicken to instant noodles. Central Union was later fined NT$165.2 million, the largest such penalty in Taiwanese food safety history.",
       "cn": "這起芝麻油事件，是這波食安風暴中出現的第三種油品。整起事件從七月開始，主管機關發現 Central Union Oil Corp 生產的黃豆油苯并芘超標四倍以上，其中一批甚至測出每公斤8.1微克。當時已有約1,300公噸的問題油品流入其他下游廠商，最終回收範圍擴及四百多項下游產品，從包裝雞胸肉到泡麵都有。Central Union 後來被裁罰新台幣1億6,520萬元，是台灣食安史上金額最高的一筆罰款。"
     },
     {
@@ -14790,7 +14790,7 @@ articles:[
       "cn": "這個現象不是台灣獨有的。在東南亞，胡志明市和曼谷的特定區域在 2020 到 2025 年間，租金翻了一倍。經濟學家指出，薪資沒有跟上：租金漲了五成到一倍，但平均薪水只成長了一成到一成五。這個落差讓數百萬工作者在「更長的通勤」和「更緊的家庭預算」之間做選擇。"
     },
     {
-      "en": "What makes the problem harder to solve is that housing costs are rarely just the rent. A family that moved from a central neighborhood to a cheaper suburb often found that transport expenses, childcare fees, and the time lost in traffic ate into the savings. One study estimated that a household relocating twenty kilometres from the city center spent an extra eight percent of its income on commuting alone.",
+      "en": "What makes the problem harder to solve is that housing costs are rarely just the rent. A family that moved from a central neighborhood to a cheaper suburb often found that transport expenses, childcare fees, and the time lost in traffic ate into the savings. One study estimated that a household relocating twenty kilometers from the city center spent an extra eight percent of its income on commuting alone.",
       "cn": "問題更難解決的原因在於：居住成本很少只是房租。一個從市中心搬到較便宜郊區的家庭，常常發現交通費、托兒費和通勤時間把省下的錢吃掉了。一項研究估計，搬離市中心二十公里的家庭，光是通勤就多花了收入的百分之八。"
     },
     {
@@ -15426,16 +15426,16 @@ articles:[
       "q": "What happened to the quiet candidate?",
       "qCn": "那位安靜的應徵者後來怎麼了？",
       "opts": [
-        "A. She was rejected and left",
-        "B. She was almost rejected, but is now one of the best inspectors",
-        "C. She became the manager",
-        "D. She failed the thirty-minute task"
+        "A. He was rejected and left",
+        "B. He was almost rejected, but is now one of the best inspectors",
+        "C. He became the manager",
+        "D. He failed the thirty-minute task"
       ],
       "optsCn": [
-        "A. 她被刷掉離開了",
-        "B. 她差點被刷掉，但現在是最優秀的檢驗員之一",
-        "C. 她成為主管",
-        "D. 她三十分鐘的任務沒有過"
+        "A. 他被刷掉離開了",
+        "B. 他差點被刷掉，但現在是最優秀的檢驗員之一",
+        "C. 他成為主管",
+        "D. 他三十分鐘的任務沒有過"
       ],
       "ans": 1,
       "expl": "A quiet candidate who was almost rejected last year is now one of our best inspectors."
@@ -15709,7 +15709,7 @@ articles:[
      cn:"不過今天早上不一樣。Mia到站的時候，廣播說這條線發生了號誌問題。月台很快就變得比平常擁擠，大家看起來都有點擔心。"},
     {en:"Mia waited almost fifteen minutes before a train finally arrived. It was much slower than her usual train, so she sent a quick message to her manager. Her manager said it was fine because two other coworkers were also late.",
      cn:"Mia等了快十五分鐘，列車才終於進站。它比她平常搭的班次慢了很多，所以她傳了一則簡短的訊息給主管。主管說沒關係，因為另外兩位同事也遲到了。"},
-    {en:"Mia has taken this MRT line for three years, but she has never seen the platform so crowded. She hopes the signal problem is fixed again soon, so tomorrow's ride can be as easy as usual.",
+    {en:"Mia has taken this MRT line for three years, but she has never seen the platform so crowded. She hopes the signal problem is fixed soon, so tomorrow's ride can be as easy as usual.",
      cn:"Mia搭這條捷運線已經三年了，但她從沒看過月台這麼擁擠。她希望號誌問題能快點修好，這樣明天的通勤才能跟平常一樣輕鬆。"}
   ],
   target:[
@@ -15749,7 +15749,7 @@ articles:[
   intro:"從Mia一個人的故事拉遠到整個捷運系統的號誌問題。注意被動語態（are slowed down、were held、have been asked）怎麼把焦點放在「發生了什麼事」而不是「誰做的」，還有 who／that／which 引導的關係子句怎麼補充資訊。",
   "spoken": [{"en":"One little signal fault Monday morning and the whole Red Line was backed up for almost two hours.","cn":"週一早上一個小小的號誌故障，整條紅線大塞了快兩小時。"},{"en":"Trains got held at stations while engineers checked things out, and everyone running late just got madder.","cn":"列車被扣在站內等工程師檢查，趕時間的人越等越火。"},{"en":"Apparently it's mostly aging equipment — they're swapping in a new system next year.","cn":"據說主因是設備老化——明年會換新系統。"},{"en":"Till then? Check the app before you head out and give yourself extra time at rush hour.","cn":"在那之前呢？出門前先查 App，尖峰時段多留點時間。"}],
   paras:[
-    {en:"Every few months, a signal problem somewhere on the MRT network causes delays that affect thousands of commuters. When a fault is detected, trains on that line are slowed down immediately, and platforms that are usually quiet within minutes become packed with waiting passengers.",
+    {en:"Every few months, a signal problem somewhere on the MRT network causes delays that affect thousands of commuters. When a fault is detected, trains on that line are slowed down immediately, and platforms that are usually quiet become packed with waiting passengers within minutes.",
      cn:"每隔幾個月，捷運路網上某處的號誌問題就會造成延誤，影響數千名通勤族。一旦偵測到故障，那條線的列車會立刻被降速，原本安靜的月台幾分鐘內就會擠滿等車的乘客。"},
     {en:"This week, a fault that was reported early Monday morning affected the Red Line for nearly two hours. Announcements were made every few minutes, and commuters who were already running late grew increasingly frustrated. Several trains were held at stations while engineers checked the signal system.",
      cn:"這週，一起週一清晨通報的故障，讓紅線受到將近兩小時的影響。廣播每隔幾分鐘就播報一次，本來就快遲到的通勤族越來越不耐煩。好幾班列車被留置在車站，等工程人員檢查號誌系統。"},
@@ -16121,7 +16121,7 @@ articles:[
   intro:"同一個颱風，這次從「通勤族」的角度來看。注意現在完成式搭配被動的用法：have been canceled、has been closed——事情已經發生了，而且影響還在。讀的時候找出哪些句子是「已經發生且仍在持續」的。",
   "spoken": [{"en":"My Taipei trip got called off — the typhoon dumped over 200 millimeters of rain on the mountains overnight.","cn":"我的台北行取消了——颱風一夜之間在山區倒了超過 200 毫米的雨。"},{"en":"Highways are closed, east coast trains are down, and my colleague's neighborhood has been underwater since five a.m.","cn":"高速公路封了、東部火車停駛，我同事的社區從清晨五點就泡在水裡。"},{"en":"Good news is the storm's supposed to turn north tonight and clear out by tomorrow.","cn":"好消息是風暴今晚應該會轉向北邊，明天下午就遠離。"},{"en":"I already rebooked for Friday — for now I'm working from home and praying the power holds.","cn":"我已經改訂週五的票——現在就在家上班，祈禱不要停電。"}],
   paras:[
-    {en:"I was supposed to take the train to Taipei this morning, but my trip has been canceled because of the typhoon. The weather bureau issued a sea warning yesterday, and since then the situation has got worse. More than 200 millimetres of rain has fallen in the northern mountains overnight.",
+    {en:"I was supposed to take the train to Taipei this morning, but my trip has been canceled because of the typhoon. The weather bureau issued a sea warning yesterday, and since then the situation has gotten worse. More than 200 millimeters of rain has fallen in the northern mountains overnight.",
      cn:"我今天早上本來要搭火車去台北，但因為颱風我的行程被取消了。氣象局昨天發布了海上警報，從那之後情況越來越糟。北部山區一個晚上降了超過 200 毫米的雨。"},
     {en:"Several highways have been closed, and train services on the east coast have been suspended until further notice. My colleague texted me that her neighborhood has been flooded since 5 a.m. She has moved to her parents' house on higher ground. I have never seen this much rain in August before.",
      cn:"好幾條高速公路已經封閉，東海岸的火車也停駛到另行通知為止。我同事傳訊息跟我說，她家那一帶從早上五點就開始淹水。她已經搬去住在高處的爸媽家了。我從來沒有在八月看過這麼大的雨。"},
@@ -16152,7 +16152,7 @@ articles:[
      b2:"My trip has been canceled because of the typhoon.",
      note:"重點是「我的行程」不是「誰取消的」，用被動把受影響的事放前面；because of 接名詞比分兩句簡潔。", "sp": "My trip got called off because of the typhoon.", "spNote": "call off（取消）在口語的使用頻率遠高於 cancel。", "b1Cn": "他們取消了我的行程。颱風很嚴重。", "b2Cn": "我的行程因為颱風被取消了。", "spCn": "我的行程因為颱風被取消了。"},
     {b1:"The rain started last night. It is still raining now.",
-     b2:"More than 200 millimetres of rain has fallen overnight.",
+     b2:"More than 200 millimeters of rain has fallen overnight.",
      note:"現在完成式把「過去到現在」壓成一句，加上具體數字讓描述更有力。", "sp": "We got over 200 millimeters of rain overnight.", "spNote": "口語用 we got 承接天氣數字，比被動句自然。", "b1Cn": "雨昨晚開始下。現在還在下。", "b2Cn": "一夜之間降了超過 200 毫米的雨。", "spCn": "我們一個晚上就下了超過 200 毫米的雨。"}
   ]
 },
@@ -16220,9 +16220,9 @@ articles:[
   intro:"這是一篇真實新聞的改寫。注意氣象報導怎麼描述位置（680 km east-northeast of Taipei）、速度（moving west at 10 kph）與範圍（a storm radius of 280 km）——這三種說法幾乎每篇颱風新聞都會出現。",
   "spoken": [{"en":"They put out a sea warning for Typhoon Dolphin last Saturday — it was crawling west at like 10 kilometers an hour.","cn":"上週六海豚颱風發布海上警報——它以一小時大概 10 公里的速度往西龜速移動。"},{"en":"It got closest over the weekend but was never gonna make landfall here — looked like it was headed for Zhejiang instead.","cn":"它週末最接近台灣，但從頭到尾都不會登陸——看起來是往浙江去了。"},{"en":"Didn't matter though — the north still got soaked, and the coasts had big swells through Monday.","cn":"但沒差——北部照樣濕透，海邊的長浪也一路持續到週一。"},{"en":"The advice was simple: stay off the coast and out of the water.","cn":"建議就一句話：離海岸遠一點，別碰水上活動。"}],
   paras:[
-    {en:"Last Saturday the Central Weather Administration issued a sea warning for Typhoon Dolphin. At five in the afternoon the storm was about 680 kilometres east-northeast of Taipei and had been moving west at only 10 kilometres per hour — slow enough for forecasters to be confident about its path.",
+    {en:"Last Saturday the Central Weather Administration issued a sea warning for Typhoon Dolphin. At five in the afternoon the storm was about 680 kilometers east-northeast of Taipei and had been moving west at only 10 kilometers per hour — slow enough for forecasters to be confident about its path.",
      cn:"上週六，中央氣象署對颱風 Dolphin 發布了海上警報。下午五點時，這個風暴位於台北東北東方約 680 公里處，並且一直以每小時僅 10 公里的速度向西移動——慢得足以讓預報人員對它的路徑有信心。"},
-    {en:"Dolphin was a moderate typhoon with maximum sustained winds of 144 kilometres per hour and a storm radius of 280 kilometres. It came closest to Taiwan on Saturday and Sunday, but it was never expected to make landfall here. Forecasters said it would probably reach China's Zhejiang Province instead.",
+    {en:"Dolphin was a moderate typhoon with maximum sustained winds of 144 kilometers per hour and a storm radius of 280 kilometers. It came closest to Taiwan on Saturday and Sunday, but it was never expected to make landfall here. Forecasters said it would probably reach China's Zhejiang Province instead.",
      cn:"Dolphin 是一個中度颱風，最大持續風速為每小時 144 公里，暴風半徑 280 公里。它在週六與週日最接近台灣，但從未預期會在此登陸。預報人員說它應該會轉而抵達中國浙江省。"},
     {en:"A typhoon does not have to land to cause problems. The heaviest rain fell on northern Taiwan and the central mountains, and the mountainous areas north of Taichung were placed under the highest rainfall alert. Long swells were expected along the north and east coasts, as well as around Green Island, Orchid Island and the Hengchun Peninsula, until Monday.",
      cn:"颱風不需要登陸也能造成問題。最強的降雨落在台灣北部與中央山區，台中以北的山區被列入最高等級的降雨警戒。北部與東部海岸，以及綠島、蘭嶼與恆春半島一帶，預期到週一都會有長浪。"},
@@ -16246,16 +16246,16 @@ articles:[
     {q:"Which area was under the highest rainfall alert?",qCn:"哪個地區的降雨警戒最高？",
      opts:["A. Southwestern plains","B. Mountainous areas north of Taichung","C. Orchid Island","D. Taipei city center"],
      optsCn:["A. 西南平原", "B. 台中以北的山區", "C. 蘭嶼", "D. 台北市中心"],ans:1, expl:"the mountainous areas north of Taichung were placed under the highest rainfall alert。"},
-    {q:"What does \"a storm radius of 280 kilometres\" tell us?",qCn:"「暴風半徑 280 公里」告訴我們什麼？",
+    {q:"What does \"a storm radius of 280 kilometers\" tell us?",qCn:"「暴風半徑 280 公里」告訴我們什麼？",
      opts:["A. How fast the storm moved","B. How far the storm's edge is from its center","C. How much rain fell","D. How long the warning lasted"],
      optsCn:["A. 颱風移動多快", "B. 暴風邊緣離中心多遠", "C. 下了多少雨", "D. 警報持續多久"],ans:1, expl:"radius ＝ 半徑，指風暴中心到外緣的距離。"},
     {q:"Why were forecasters fairly confident about the storm's path?",qCn:"預報員為什麼對路徑相當有把握？",
      opts:["A. It was very small","B. It was moving slowly, at only 10 kph","C. It had already landed","D. It changed direction often"],
-     optsCn:["A. 它非常小", "B. 它移動得很慢，時速只有 10 公里", "C. 它已經登陸了", "D. 它常常改變方向"],ans:1, expl:"had been moving west at only 10 kilometres per hour — slow enough for forecasters to be confident。"}
+     optsCn:["A. 它非常小", "B. 它移動得很慢，時速只有 10 公里", "C. 它已經登陸了", "D. 它常常改變方向"],ans:1, expl:"had been moving west at only 10 kilometers per hour — slow enough for forecasters to be confident。"}
   ],
   upgrade:[
     {b1:"The storm moved west. It was slow.",
-     b2:"The storm had been moving west at only 10 kilometres per hour.",
+     b2:"The storm had been moving west at only 10 kilometers per hour.",
      note:"had been + V-ing 表示「到那個時間點為止一直在進行」，是氣象與新聞報導的標準寫法。", "sp": "The storm was crawling west at just 10 kilometers an hour.", "spNote": "crawl（龜速移動）用在車流、颱風都很道地。", "b1Cn": "風暴往西移動。它很慢。", "b2Cn": "風暴一直以每小時僅 10 公里的速度向西移動。", "spCn": "風暴以一小時才 10 公里的速度往西龜速移動。"},
     {b1:"A typhoon can cause problems even if it does not land.",
      b2:"A typhoon does not have to land to cause problems.",
@@ -24002,7 +24002,7 @@ grammar:[
           "note": "同一件事，寫進報告就換成 have"
         },
         {
-          "en": "A deviation of 0.2 millimetres was recorded in the second batch.",
+          "en": "A deviation of 0.2 millimeters was recorded in the second batch.",
           "cn": "第二批記錄到0.2毫米的偏差。",
           "note": "最正式的版本連 have 都不見了"
         }
