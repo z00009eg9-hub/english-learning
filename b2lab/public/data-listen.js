@@ -3583,7 +3583,7 @@ notes:[
         "A. Anita handed the class to Tom",
         "B. The quiet operator corrected her arithmetic",
         "C. The projector was replaced",
-        "D. The sessions were cancelled"
+        "D. The sessions were canceled"
       ],
       "optsCn": [
         "A. Anita把課交給Tom",
@@ -5837,7 +5837,7 @@ notes:[
         "A. Because Mai asked her to",
         "B. Because four candidates sounded exactly the same",
         "C. Because the manager told her to",
-        "D. Because she wanted to practise writing"
+        "D. Because she wanted to practice writing"
       ],
       "optsCn": [
         "A. 因為Mai要她這麼做",
@@ -7228,7 +7228,7 @@ notes:[
       "expl": "She asked what exactly the flight added.——就是這個問題讓整件事改變的。"
     },
     {
-      "q": "How much of the five working days went on travelling?",
+      "q": "How much of the five working days went on traveling?",
       "qCn": "五個工作日裡，有多少天花在交通上？",
       "opts": [
         "A. One day",
@@ -8159,8 +8159,8 @@ notes:[
       "q": "What does the comparison of 10.8 and 3.3 percent show?",
       "qCn": "百分之十點八和百分之三點三的對比說明什麼？",
       "opts": [
-        "A. Severe anxiety was far more common where a parent criticised regularly",
-        "B. Most parents never criticise their children",
+        "A. Severe anxiety was far more common where a parent criticized regularly",
+        "B. Most parents never criticize their children",
         "C. Boys hear more criticism than girls",
         "D. Criticism has no link to anxiety"
       ],
@@ -10486,7 +10486,7 @@ notes:[
       "q": "Why did the bakery become popular?",
       "qCn": "這間烘焙坊為什麼會紅起來？",
       "opts": [
-        "A. A TV programme visited it",
+        "A. A TV program visited it",
         "B. A photo was posted on Threads",
         "C. It lowered its prices",
         "D. It opened a second shop"
@@ -10880,7 +10880,7 @@ notes:[
     },
     {
       "sp": "Clerk",
-      "en": "Yes. This grey jacket is six hundred dollars.",
+      "en": "Yes. This gray jacket is six hundred dollars.",
       "cn": "有。這件灰色外套六百元。"
     },
     {
@@ -10905,7 +10905,7 @@ notes:[
     },
     {
       "sp": "Tom",
-      "en": "Then I will take the grey one. I can save three hundred dollars.",
+      "en": "Then I will take the gray one. I can save three hundred dollars.",
       "cn": "那我就買灰色這件。我可以省下三百元。"
     },
     {
@@ -10939,7 +10939,7 @@ notes:[
       "expl": "Tom說 I need a warm jacket.——他要買溫暖的外套。"
     },
     {
-      "q": "How much is the grey jacket?",
+      "q": "How much is the gray jacket?",
       "qCn": "灰色外套多少錢？",
       "opts": [
         "A. Nine hundred dollars",
@@ -10954,7 +10954,7 @@ notes:[
         "D. 一百元"
       ],
       "ans": 1,
-      "expl": "This grey jacket is six hundred dollars."
+      "expl": "This gray jacket is six hundred dollars."
     },
     {
       "q": "When did the sale start?",
@@ -11607,7 +11607,7 @@ notes:[
       "qCn": "成長預測發生了什麼事？",
       "opts": [
         "A. It was lowered",
-        "B. It was cancelled",
+        "B. It was canceled",
         "C. It was raised",
         "D. It stayed exactly the same"
       ],
@@ -13070,7 +13070,7 @@ notes:[
       "opts": [
         "A. At least one layover",
         "B. A free upgrade",
-        "C. A cancelled meeting",
+        "C. A canceled meeting",
         "D. A shorter workday"
       ],
       "optsCn": [
@@ -13192,9 +13192,9 @@ notes:[
   "titleCn": "Amy的颱風準備通話",
   "series": "本站自製聽力 · 天災與天氣主題",
   "topic": "☎️ 颱風前的準備",
-  "focus": "現在完成式基礎（has already prepared, have you ever experienced）vs 過去簡單式（announced, cancelled）",
-  "intro": "Lily打電話問Amy颱風天有沒有準備好。這一課練習現在完成式（has already prepared, have you ever experienced）講『到目前為止』做了什麼，也留意過去簡單式（announced, cancelled）交代『那件事發生的細節』。",
-  "tip": "留意Amy什麼時候用has already prepared（到目前為止），什麼時候改用過去簡單式announced、cancelled（那件事的細節）。",
+  "focus": "現在完成式基礎（has already prepared, have you ever experienced）vs 過去簡單式（announced, canceled）",
+  "intro": "Lily打電話問Amy颱風天有沒有準備好。這一課練習現在完成式（has already prepared, have you ever experienced）講『到目前為止』做了什麼，也留意過去簡單式（announced, canceled）交代『那件事發生的細節』。",
+  "tip": "留意Amy什麼時候用has already prepared（到目前為止），什麼時候改用過去簡單式announced、canceled（那件事的細節）。",
   "pre": [
     {"w": "announce", "ipa": "/əˈnaʊns/", "pos": "v.", "cn": "宣布", "def": "To tell people something officially."},
     {"w": "cancel", "ipa": "/ˈkænsl/", "pos": "v.", "cn": "取消", "def": "To stop something from happening."},
@@ -13208,8 +13208,8 @@ notes:[
     {"sp": "Amy", "en": "Yes, it's true! They announced it yesterday evening.", "cn": "對，是真的！他們昨天晚上宣布的。"},
     {"sp": "Lily", "en": "Have you prepared everything you need?", "cn": "你需要的東西都準備好了嗎？"},
     {"sp": "Amy", "en": "I have already prepared candles, water, and some snacks.", "cn": "我已經準備好蠟燭、水和一些零食了。"},
-    {"sp": "Lily", "en": "Smart! Did you hear the airline cancelled some flights too?", "cn": "聰明！你有聽說航空公司也取消了一些航班嗎？"},
-    {"sp": "Amy", "en": "Yes, I checked the news this morning. Several flights were cancelled.", "cn": "有，我今天早上看了新聞。好幾班航班被取消了。"},
+    {"sp": "Lily", "en": "Smart! Did you hear the airline canceled some flights too?", "cn": "聰明！你有聽說航空公司也取消了一些航班嗎？"},
+    {"sp": "Amy", "en": "Yes, I checked the news this morning. Several flights were canceled.", "cn": "有，我今天早上看了新聞。好幾班航班被取消了。"},
     {"sp": "Lily", "en": "Have you ever experienced such a strong typhoon before?", "cn": "你以前經歷過這麼強的颱風嗎？"},
     {"sp": "Amy", "en": "No, I haven't. This is actually a bit scary for me.", "cn": "沒有，這對我來說其實有點可怕。"},
     {"sp": "Lily", "en": "Don't worry, you've prepared well. You'll be fine.", "cn": "別擔心，你準備得很好，你會沒事的。"},
@@ -13287,7 +13287,7 @@ notes:[
     {
       "q": "Why has the shipment been delayed?",
       "qCn": "為什麼這批貨被延誤了？",
-      "opts": ["A. The access road has been flooded, and trucks have been blocked", "B. The factory ran out of materials", "C. The customer cancelled the order", "D. The workers went on strike"],
+      "opts": ["A. The access road has been flooded, and trucks have been blocked", "B. The factory ran out of materials", "C. The customer canceled the order", "D. The workers went on strike"],
       "optsCn": ["A. 聯外道路淹水，卡車被困住了", "B. 工廠原料用完了", "C. 客戶取消了訂單", "D. 員工罷工了"],
       "ans": 0,
       "expl": "The access road has been flooded, and trucks have been blocked outside the gate."
@@ -13739,7 +13739,7 @@ notes:[
   "pre": [
     {"w": "stove", "ipa": "/stoʊv/", "pos": "n.", "cn": "瓦斯爐", "def": "A machine used for cooking food."},
     {"w": "burn", "ipa": "/bɝːn/", "pos": "v.", "cn": "燒焦", "def": "To damage something with too much heat."},
-    {"w": "smoke", "ipa": "/smoʊk/", "pos": "n.", "cn": "煙", "def": "The grey cloud that rises when something burns."},
+    {"w": "smoke", "ipa": "/smoʊk/", "pos": "n.", "cn": "煙", "def": "The gray cloud that rises when something burns."},
     {"w": "alarm", "ipa": "/əˈlɑːrm/", "pos": "n.", "cn": "警報器", "def": "A device that makes a loud sound to warn people."},
     {"w": "boil over", "ipa": "/bɔɪl ˈoʊvɚ/", "pos": "phr.v.", "cn": "（煮沸的液體）溢出來", "def": "To rise and flow over the side of a pot when it boils."},
     {"w": "mess", "ipa": "/mes/", "pos": "n.", "cn": "亂七八糟的狀況", "def": "A dirty or untidy situation."}
@@ -13985,7 +13985,7 @@ notes:[
       "ipa": "/peɪnt/",
       "pos": "v.",
       "cn": "油漆、粉刷",
-      "def": "To put colour on a wall using a brush."
+      "def": "To put color on a wall using a brush."
     },
     {
       "w": "shelf",
@@ -15582,7 +15582,7 @@ notes:[
   questions:[
     {q:"How did Tom feel this morning?",qCn:"Tom今天早上覺得怎麼樣？",opts:["A. Very happy","B. A little stressful","C. Very hungry","D. Very sleepy"],optsCn:["A. 非常開心","B. 有點有壓力","C. 非常餓","D. 非常想睡"],ans:1,expl:"I'm okay, but my morning was a little stressful."},
     {q:"What time did the bus usually come?",qCn:"公車通常幾點會來？",opts:["A. Seven o'clock","B. Eight o'clock","C. Eight fifteen","D. Nine o'clock"],optsCn:["A. 七點","B. 八點","C. 八點十五分","D. 九點"],ans:1,expl:"It usually comes at eight, but it came at eight fifteen."},
-    {q:"Was Tom late for the meeting?",qCn:"Tom會議遲到了嗎？",opts:["A. Yes, he was very late","B. No, he made it just in time","C. He did not go to the meeting","D. The meeting was cancelled"],optsCn:["A. 是的，他遲到很久","B. 沒有，他剛好趕上了","C. 他沒有去開會","D. 會議取消了"],ans:1,expl:"No, I wasn't. I ran to the office and made it just in time."},
+    {q:"Was Tom late for the meeting?",qCn:"Tom會議遲到了嗎？",opts:["A. Yes, he was very late","B. No, he made it just in time","C. He did not go to the meeting","D. The meeting was canceled"],optsCn:["A. 是的，他遲到很久","B. 沒有，他剛好趕上了","C. 他沒有去開會","D. 會議取消了"],ans:1,expl:"No, I wasn't. I ran to the office and made it just in time."},
     {q:"Tom ____ visit the bus stop woman's story to Amy.",qCn:"Tom把公車站那位女士說的話告訴了Amy。（選出正確的動詞形式）",opts:["tell","tells","told","telling"],ans:2,expl:"這是過去發生的事，動詞用過去式：told。"},
     {q:"Why was the bus late, according to the woman at the bus stop?",qCn:"根據公車站那位女士的說法，公車為什麼遲到？",opts:["A. The driver was sick","B. There was a problem on the road","C. It was a public holiday","D. The bus broke down"],optsCn:["A. 司機生病了","B. 路上有狀況","C. 那天是國定假日","D. 公車故障了"],ans:1,expl:"A woman at the bus stop said there was a problem on the road."}
   ]
@@ -15701,13 +15701,13 @@ notes:[
     {sp:"Host",en:"Is there a mindset shift that helps?",cn:"有什麼心態上的轉變有幫助嗎？"},
     {sp:"Ms. Chen",en:"Definitely. A delay is rarely a real crisis unless you treat it as one. What matters is protecting your sleep and your focus, not the exact arrival time.",cn:"當然有。延誤很少真的是危機，除非你把它當成危機看待。重要的是保護你的睡眠和專注力，而不是精確的抵達時間。"},
     {sp:"Host",en:"Any final advice for someone flying for an important meeting tomorrow?",cn:"對明天要搭機去開重要會議的人，有什麼最後的建議嗎？"},
-    {sp:"Ms. Chen",en:"Plan a buffer if you can, but if a delay happens anyway, remember: the meeting almost always still goes ahead. It's usually just shorter, not cancelled.",cn:"可以的話，安排一點緩衝時間；但就算還是延誤了，記住：會議幾乎都還是會照常進行，通常只是變短，不會被取消。"}
+    {sp:"Ms. Chen",en:"Plan a buffer if you can, but if a delay happens anyway, remember: the meeting almost always still goes ahead. It's usually just shorter, not canceled.",cn:"可以的話，安排一點緩衝時間；但就算還是延誤了，記住：會議幾乎都還是會照常進行，通常只是變短，不會被取消。"}
   ],
   questions:[
     {q:"According to Ms. Chen, what do frequent travelers tend to do?",qCn:"根據Ms. Chen的說法，常出差的人往往會怎麼做？",opts:["A. Avoid business trips completely","B. Build small routines like carrying a backup charger","C. Always fly first class","D. Complain to the airline immediately"],optsCn:["A. 完全避免出差","B. 建立像帶備用充電器這樣的小習慣","C. 總是搭商務艙","D. 立刻向航空公司抱怨"],ans:1,expl:"Frequent travelers tend to build small routines — a backup charger, offline documents, that sort of thing."},
     {q:"What does Ms. Chen do instead of watching the departure board?",qCn:"Ms. Chen不會一直盯著出境看板，而是做什麼？",opts:["A. She calls her family","B. She keeps working on her laptop","C. She goes shopping at the airport","D. She sleeps in the lounge"],optsCn:["A. 她打電話給家人","B. 她繼續用筆電工作","C. 她去機場逛街","D. 她在貴賓室睡覺"],ans:1,expl:"I open my laptop and keep working on whatever I can, rather than watching the departure board."},
     {q:"In this conversation, what does \"tend to\" suggest?",qCn:"在這段對話中，「tend to」這個說法暗示什麼？",opts:["A. A rule with no exceptions","B. A general pattern, not an absolute rule","C. Something that happened only once","D. A personal opinion with no evidence"],optsCn:["A. 一個沒有例外的規則","B. 一種普遍傾向，不是絕對規則","C. 只發生過一次的事","D. 沒有根據的個人意見"],ans:1,expl:"tend to 是正式語域緩和武斷語氣的說法，表示「通常、往往」而非「every single time」。"},
-    {q:"What does Ms. Chen say usually happens to a meeting after a travel delay?",qCn:"Ms. Chen說，出差延誤後，會議通常會怎麼樣？",opts:["A. It is always cancelled","B. It almost always still goes ahead, just shorter","C. It is rescheduled for the next week","D. It is moved online"],optsCn:["A. 一定會被取消","B. 幾乎都還是會照常進行，只是變短","C. 會延到下週","D. 會改成線上進行"],ans:1,expl:"the meeting almost always still goes ahead. It's usually just shorter, not cancelled."}
+    {q:"What does Ms. Chen say usually happens to a meeting after a travel delay?",qCn:"Ms. Chen說，出差延誤後，會議通常會怎麼樣？",opts:["A. It is always canceled","B. It almost always still goes ahead, just shorter","C. It is rescheduled for the next week","D. It is moved online"],optsCn:["A. 一定會被取消","B. 幾乎都還是會照常進行，只是變短","C. 會延到下週","D. 會改成線上進行"],ans:1,expl:"the meeting almost always still goes ahead. It's usually just shorter, not canceled."}
   ]
 },
 
@@ -15957,7 +15957,7 @@ notes:[
   ],
   script:[
     {sp:"Mia",en:"Okay, quick warm-up before we start. If you won the lottery tomorrow, what would you do first?",cn:"好，開始上課前先來個暖身。如果你明天中了樂透，你會先做什麼？"},
-    {sp:"Anna",en:"Ha, that's my favourite daydream. If I won, I would quit my job the same afternoon.",cn:"哈，那是我最愛的白日夢。如果我中了，我當天下午就辭職。"},
+    {sp:"Anna",en:"Ha, that's my favorite daydream. If I won, I would quit my job the same afternoon.",cn:"哈，那是我最愛的白日夢。如果我中了，我當天下午就辭職。"},
     {sp:"Ben",en:"Really? I would keep working. I'd just move somewhere with better scenery.",cn:"真的嗎？我會繼續工作。我只會搬去風景比較好的地方。"},
     {sp:"Mia",en:"Nice. And notice what you both just did - that's the second conditional.",cn:"很好。而且注意你們兩個剛剛做了什麼 - 那就是第二條件句。"},
     {sp:"Anna",en:"So the second conditional is for imaginary situations, right? Not real ones.",cn:"所以第二條件句是用在想像的情況，對吧？不是真實的情況。"},
@@ -16073,7 +16073,7 @@ notes:[
   questions:[
     {q:"What does David say is his main responsibility?",opts:["A. Selling products to global customers.","B. Finding problems before the product reaches the customer.","C. Training new operators on the line.","D. Designing new machines for production."],ans:1,expl:"David 第一個回答就是 to identify problems before the product reaches the customer。"},
     {q:"Which problem does David see most often?",opts:["A. Software errors","B. Late deliveries","C. Dimensional issues","D. Packaging damage"],ans:2,expl:"他說 Mostly dimensional issues，也就是零件差半毫米導致裝不進去的尺寸問題。"},
-    {q:"In the switch example, why did the team stop the line?",opts:["A. The colour of the housing was wrong.","B. It was only a cosmetic problem.","C. A customer had already complained.","D. It was a functional defect."],ans:3,expl:"外殼看起來完美，但開關失效，David 判斷那是 functional defect（影響功能），所以停線。"},
+    {q:"In the switch example, why did the team stop the line?",opts:["A. The color of the housing was wrong.","B. It was only a cosmetic problem.","C. A customer had already complained.","D. It was a functional defect."],ans:3,expl:"外殼看起來完美，但開關失效，David 判斷那是 functional defect（影響功能），所以停線。"},
     {q:"What does \"root cause\" mean in this dialogue?",opts:["A. The real reason behind the problem","B. The first person who reported the problem","C. The cost of repairing the parts","D. The final report sent to the customer"],ans:0,expl:"root cause 是根本原因；David 強調不修正根本原因，同樣的問題三個月後會再出現。"},
     {q:"Why does David want to join a global company?",opts:["A. To earn a much higher salary.","B. To work alone more often.","C. To broaden his experience on a bigger scale.","D. To stop doing quality work."],ans:2,expl:"他說 I want to broaden my experience，同樣的工作但規模更大。"}
   ]
@@ -16274,9 +16274,9 @@ notes:[
   questions:[
     {q:"Why can't Kai decide between a one-way ticket and a return ticket?",opts:["A. He does not know how much money he has.","B. He is not sure when his meeting will finish.","C. He has never been to Munich before.","D. The return ticket is sold out."],ans:1,expl:"Kai 說 My meeting could run long，他不確定會議何時結束，所以無法決定回程時間。"},
     {q:"What does Mia advise Kai to do?",opts:["A. Buy the one-way ticket now and the return part later.","B. Buy the return ticket and cancel it if needed.","C. Wait until tomorrow to buy anything.","D. Book online instead of at the counter."],ans:0,expl:"Mia 說 I'd just take the one-way ticket now and buy the second half later，先買單程、之後再買回程。"},
-    {q:"When does the passenger have to pay a cancellation fee?",opts:["A. Every time a ticket is cancelled.","B. Only for business class tickets.","C. Only if you cancel less than one day before.","D. Only if you cancel on the platform."],ans:2,expl:"Mia 說 only if you cancel less than one day before，出發前一天以內取消才要付。"},
+    {q:"When does the passenger have to pay a cancellation fee?",opts:["A. Every time a ticket is canceled.","B. Only for business class tickets.","C. Only if you cancel less than one day before.","D. Only if you cancel on the platform."],ans:2,expl:"Mia 說 only if you cancel less than one day before，出發前一天以內取消才要付。"},
     {q:"What happens if Kai misses his train?",opts:["A. His ticket becomes useless.","B. He pays a ten-euro penalty and takes the next train.","C. He must buy a new return ticket.","D. He gets a free upgrade to business class."],ans:1,expl:"Mia 說 You'd pay a ten-euro penalty and take the next one，付十歐元罰款後搭下一班。"},
-    {q:"In this dialogue, \"timetable\" means:",opts:["A. the price list for tickets","B. the number of the platform","C. the list of train arrival and departure times","D. the rules about cancelling a ticket"],ans:2,expl:"timetable 是時刻表，也就是列出班次到站與發車時間的表，對應 The timetable changed on Monday。"}
+    {q:"In this dialogue, \"timetable\" means:",opts:["A. the price list for tickets","B. the number of the platform","C. the list of train arrival and departure times","D. the rules about canceling a ticket"],ans:2,expl:"timetable 是時刻表，也就是列出班次到站與發車時間的表，對應 The timetable changed on Monday。"}
   ]
 },
 
@@ -16411,7 +16411,7 @@ notes:[
     {sp:"Ben",en:"An album? Really? A grumpy doctor who makes records.",cn:"專輯？真的假的？一個脾氣很差的醫生還出唱片。"},
     {sp:"Lily",en:"He's passionate about music. He said acting paid the bills, but music kept him happy.",cn:"他對音樂充滿熱忱。他說演戲是為了生活，但音樂讓他保持快樂。"},
     {sp:"Ben",en:"Okay, that's impressive. Was the show a hit right from the start?",cn:"好吧，這確實厲害。那部戲一開始就很紅嗎？"},
-    {sp:"Lily",en:"It became a huge hit, but he never expected it. He thought it would be cancelled in six weeks.",cn:"它後來變成超級熱門影集，但他從沒料到。他以為六個星期就會被停播。"},
+    {sp:"Lily",en:"It became a huge hit, but he never expected it. He thought it would be canceled in six weeks.",cn:"它後來變成超級熱門影集，但他從沒料到。他以為六個星期就會被停播。"},
     {sp:"Ben",en:"See? Pessimist.",cn:"你看吧？悲觀者。"},
     {sp:"Lily",en:"Maybe. But he kept working anyway. That's the part I actually like.",cn:"也許吧。但他還是繼續做下去。這才是我真正欣賞的地方。"},
     {sp:"Ben",en:"So an optimist says this will work, and he said this won't work and did it anyway.",cn:"所以樂觀的人會說「這會成功」，而他是說「這不會成功」然後照做不誤。"},
@@ -16422,7 +16422,7 @@ notes:[
     {q:"How does Ben describe himself at the beginning?",opts:["A. As an optimist.","B. As a realist.","C. As a musician.","D. As a doctor."],ans:1,expl:"Ben 一開始說 A realist，並開玩笑說那只是比較有禮貌的悲觀者。"},
     {q:"What does Lily say about the main character of the medical series?",opts:["A. He constantly expects the worst to happen.","B. He is always kind to his patients.","C. He gave up medicine to play music.","D. He is the most hopeful person on the show."],ans:0,expl:"Lily 說 he's constantly telling everyone that the worst thing will happen，主角不斷預期最糟的結果。"},
     {q:"Why does Lily think Hugh Laurie is talented?",opts:["A. Because he wrote the TV series himself.","B. Because he speaks several languages.","C. Because he plays piano, sings, and recorded an album.","D. Because he trained as a real doctor."],ans:2,expl:"Lily 說他會彈鋼琴、唱歌，甚至錄過一張藍調專輯，所以說他非常有才華。"},
-    {q:"What did the actor think about the show at the start?",opts:["A. He thought it would win many prizes.","B. He thought it would be cancelled in six weeks.","C. He thought it would run for ten years.","D. He refused to join the show."],ans:1,expl:"Lily 說 He thought it would be cancelled in six weeks，他沒想到這部戲會變成熱門作品。"},
+    {q:"What did the actor think about the show at the start?",opts:["A. He thought it would win many prizes.","B. He thought it would be canceled in six weeks.","C. He thought it would run for ten years.","D. He refused to join the show."],ans:1,expl:"Lily 說 He thought it would be canceled in six weeks，他沒想到這部戲會變成熱門作品。"},
     {q:"In this dialogue, \"passionate about\" means:",opts:["A. worried about something","B. having very strong feelings about something you love","C. very good at explaining something","D. paid a lot of money for something"],ans:1,expl:"be passionate about 是「對……充滿熱忱」，對應 He's passionate about music。"}
   ]
 },
@@ -16620,7 +16620,7 @@ notes:[
     {q:"How long will the community reading program run?",opts:["A. Three months","B. Six months","C. One whole year","D. Two years"],ans:2,expl:"Leo 一開始就說 The community reading program runs for a whole year，市政府核准了一年的補助。"},
     {q:"Why does Leo want Grace to take the leadership role?",opts:["A. She has been running the Saturday group since March.","B. She works at the city office.","C. She is the only volunteer left.","D. She has managed several teams before."],ans:0,expl:"Leo 說 You've been running the Saturday group since March，理由是她已經帶了半年多的週六班；她自己也說從沒帶過團隊。"},
     {q:"What makes Grace nervous?",opts:["A. Teaching eight children on Saturday","B. Speaking to an audience of forty parents","C. Losing the funding from the city","D. Working together with Ray and Ms Lin"],ans:1,expl:"Grace 說對星期五的家長會緊張，因為 standing in front of an audience of forty adults 跟教八個小孩不一樣。"},
-    {q:"What condition does Grace give before accepting the role?",opts:["A. She wants to be paid for the work.","B. She wants the meeting to be cancelled.","C. She wants two co-leaders to work with her.","D. She wants to start only next year."],ans:2,expl:"她說 I'll take the role. But I want two co-leaders working with me. 答應了，但要求有兩位共同負責人。"},
+    {q:"What condition does Grace give before accepting the role?",opts:["A. She wants to be paid for the work.","B. She wants the meeting to be canceled.","C. She wants two co-leaders to work with her.","D. She wants to start only next year."],ans:2,expl:"她說 I'll take the role. But I want two co-leaders working with me. 答應了，但要求有兩位共同負責人。"},
     {q:"In this dialogue, \"achievement\" means:",opts:["A. a duty that somebody expects you to do","B. a group of people listening to a speech","C. a chance to do something new","D. something good you succeed in doing through effort"],ans:3,expl:"achievement 是「成就」，指靠努力做成的好事；Leo 說對害羞的人來說，敢念公告已經是一項成就了。"}
   ]
 },

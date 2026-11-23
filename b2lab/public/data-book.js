@@ -444,7 +444,7 @@ window.BOOK = {
         { w: 'consider', ipa: '/kənˈsɪdɚ/', pos: 'v.', cn: '考慮',
           ex: 'I considered applying for the job.', exCn: '我考慮過應徵那份工作。' },
         { w: 'recommend', ipa: '/ˌrekəˈmend/', pos: 'v.', cn: '推薦、建議（suggest 的近義詞）',
-          ex: 'I recommend travelling by train.', exCn: '我建議搭火車。' },
+          ex: 'I recommend traveling by train.', exCn: '我建議搭火車。' },
         { w: 'risk', ipa: '/rɪsk/', pos: 'v.', cn: '冒……的風險',
           ex: 'If you gamble, you risk losing your money.', exCn: '如果你賭博，你就有輸錢的風險。' },
         { w: 'afford', star: true, ipa: '/əˈfɔːrd/', pos: 'v.', cn: '負擔得起',
@@ -557,7 +557,7 @@ window.BOOK = {
           pts: [
             'They denied doing anything wrong. ＝ They denied that they had done anything wrong.（他們否認做錯任何事。）',
             'Chris suggested going to the cinema. ＝ Chris suggested that we go to the cinema.（Chris 建議我們去看電影。）',
-            'I recommend travelling by train. ＝ I recommend that you travel by train.（我建議你搭火車。）',
+            'I recommend traveling by train. ＝ I recommend that you travel by train.（我建議你搭火車。）',
             '⚠️ 課堂訂正：學生寫的 I suggest Ted running outside. 不通順。要嘛簡單寫 I suggested going for a run.（我建議去跑步）；要嘛指名某人時改用 that 子句：I suggested that Ted go for a run.（正式英文中 that 子句用原形動詞 go）。'
           ]
         },
@@ -627,7 +627,7 @@ window.BOOK = {
           patLabel: '反義詞／近義詞／詞性不同',
           pts: [
             'admit ↔ deny（反義詞）：admit ＝ 承認、deny ＝ 否認。She admitted not telling the truth. ↔ They denied doing anything wrong.',
-            'recommend ≈ suggest（近義詞）：兩者都是「建議」，後面都接 V-ing 或 that 子句。I recommend travelling by train. ／ Chris suggested going to the cinema.',
+            'recommend ≈ suggest（近義詞）：兩者都是「建議」，後面都接 V-ing 或 that 子句。I recommend traveling by train. ／ Chris suggested going to the cinema.',
             'imagine ↔ image（詞性不同）：imagine 是動詞（想像）；image 是名詞（影像、圖片、形象）。I can’t imagine George riding a motorbike. ／ This image is not clear.',
             'silence ↔ silent（詞性不同）：silence 是名詞；silent 是形容詞。There was silence. ／ Please put your phone on silent mode.',
             'convince ≈ persuade（近義詞）：詳見下方比較表。'
@@ -734,7 +734,7 @@ window.BOOK = {
             { en: 'I considered applying for the job, but in the end I decided against it.', cn: '4. 我考慮過應徵那份工作，但最後決定不去。', hi: 'applying' },
             { en: 'Have you finished reading the newspaper yet?', cn: '5. 報紙你看完了嗎？', hi: 'reading' },
             { en: "We need to change our routine. We can't go on living like this.", cn: '6. 我們得改變作息，不能再這樣過下去了。', hi: 'living' },
-            { en: "It's better to avoid travelling during the rush hour.", cn: '7. 最好避免在尖峰時間移動。', hi: 'travelling' },
+            { en: "It's better to avoid traveling during the rush hour.", cn: '7. 最好避免在尖峰時間移動。', hi: 'traveling' },
             { en: 'My memory is getting worse. I keep forgetting things.', cn: '8. 我記性越來越差，老是忘東忘西。', hi: 'forgetting' },
             { en: "I've put off paying this bill so many times. I really must do it today.", cn: '9. 這張帳單我已經拖了好多次沒付，今天真的得付了。', hi: 'paying' },
             { en: "I've given up trying to learn Japanese. I was making no progress.", cn: '10. 我放棄學日文了，一直沒有進步。', hi: 'trying' },
@@ -817,7 +817,7 @@ window.BOOK = {
           exs: [
             { en: 'Do you know how to get to the airport from here?', cn: '1. 你知道從這裡怎麼去機場嗎？', hi: 'how to get to' },
             { en: 'Would you know what to do if there was a fire in the building?', cn: '2. 如果大樓失火，你知道該怎麼做嗎？', hi: 'what to do' },
-            { en: "You'll never forget how to ride a bike once you've learnt.", cn: '3. 學會騎腳踏車之後，你永遠不會忘記怎麼騎。', hi: 'how to ride' },
+            { en: "You'll never forget how to ride a bike once you've learned.", cn: '3. 學會騎腳踏車之後，你永遠不會忘記怎麼騎。', hi: 'how to ride' },
             { en: "I've been invited to the party, but I haven't decided whether to go or not.", cn: '4. 我被邀請去派對了，但還沒決定要不要去。', hi: 'whether to go' },
             { en: "My room is very untidy. I've got so many things and I don't know where to put them.", cn: '5. 我的房間很亂，東西太多了，我不知道該把它們放哪裡。', hi: 'where to put' },
             { en: 'I have some clothes to wash. Can you show me how to use the washing machine?', cn: '6. 我有些衣服要洗，你可以教我怎麼用洗衣機嗎？', hi: 'how to use' }
@@ -7656,7 +7656,7 @@ window.BOOK = {
           title: 'Picture Description Practice',
           titleCn: '圖片描述練習',
           paras: [
-            { en: 'I see a woman carrying a clear plastic umbrella. She is wearing a grey coat and a colorful scarf. She is wearing glasses and earrings, and she has tied her hair in a ponytail. She is walking in the park. The wind is strong, and it is blowing her scarf. She has just finished work and is heading home. It is drizzling now.',
+            { en: 'I see a woman carrying a clear plastic umbrella. She is wearing a gray coat and a colorful scarf. She is wearing glasses and earrings, and she has tied her hair in a ponytail. She is walking in the park. The wind is strong, and it is blowing her scarf. She has just finished work and is heading home. It is drizzling now.',
               cn: '我看到一位女士拿著一把透明塑膠雨傘，她穿著灰色外套和一條色彩鮮豔的圍巾。她戴著眼鏡和耳環，並把頭髮綁成馬尾。她正在公園裡走路，風很大，吹動她的圍巾。她剛下班，正在回家，現在在下毛毛雨。' },
             { en: 'I see a man on a motorcycle. He has short black hair and a beard. He is wearing a black T-shirt and sunglasses. The traffic is heavy. He is stuck in traffic and wearing a mask to protect himself from air pollution. It seems the air is polluted because there are too many vehicles on the road. There is also a disposable container on the back of his motorcycle.',
               cn: '我看到一位騎摩托車的男人。他有短黑頭髮和鬍子，穿著黑色 T 恤、戴著太陽眼鏡。交通很擁擠，他被堵在車陣中，並戴著口罩來保護自己免受空氣污染。看起來空氣很髒，因為路上有太多車輛。摩托車後面還放著一個一次性容器。' }
@@ -7809,7 +7809,7 @@ window.BOOK = {
       extraVocabTitle: 'V／VII-C. 圖片描述常用句型 ＋ 四步驟法',
       extraVocab: [
         { k: '描述外貌', en: 'He/She has + 外貌特徵：He has short black hair and a beard.', cn: '他有短黑頭髮和鬍子。' },
-        { k: '描述穿著', en: 'He/She is wearing + 衣物：She is wearing a grey coat and a colorful scarf.', cn: '她穿著灰色外套和色彩鮮豔的圍巾。' },
+        { k: '描述穿著', en: 'He/She is wearing + 衣物：She is wearing a gray coat and a colorful scarf.', cn: '她穿著灰色外套和色彩鮮豔的圍巾。' },
         { k: '描述動作', en: 'He/She is + V-ing：She is walking in the park.', cn: '她正在公園裡走路。' },
         { k: '描述剛發生的事', en: 'He/She has just + 過去分詞：She has just finished work.', cn: '她剛下班。' },
         { k: '描述正在前往', en: 'He/She is heading + 地點：She is heading home.', cn: '她正在回家。' },
@@ -7973,7 +7973,7 @@ window.BOOK = {
         { k: '口罩', en: 'They are wearing masks.', cn: '他們戴著口罩。（be wearing 表「正穿戴著」的狀態。）' },
         { k: '冰雹', en: 'It rarely hails in Taiwan.', cn: '台灣很少下冰雹。（hail 也可當動詞；rarely 為頻率副詞，放在一般動詞前。）' },
         { k: '天氣', en: "It's raining heavily. / It's drizzling. / It's snowing heavily. / The weather is terrible today.", cn: '正在下大雨。／正在下毛毛雨。／正在下大雪。／今天天氣很糟。（天氣動詞一律用虛主詞 it；heavily 修飾程度。）' },
-        { k: '取消', en: 'Because of the typhoon, my friend cancelled our plans.', cn: '因為颱風，我朋友取消了我們的計畫。（because of + 名詞；cancel 過去式 cancelled。）' },
+        { k: '取消', en: 'Because of the typhoon, my friend canceled our plans.', cn: '因為颱風，我朋友取消了我們的計畫。（because of + 名詞；cancel 過去式 canceled。）' },
         { k: '吹倒', en: 'The typhoon blew down trees and power lines.', cn: '颱風吹倒了樹木和電線。（主動語態：主詞是 the typhoon，動詞 blew down。）' }
       ],
       extraTitle: 'V. 填空練習 Fill in the Blanks（blow 片語）',
@@ -8113,7 +8113,7 @@ window.BOOK = {
         { k: 'crack v./n.', en: 'The earthquake cracked the roads.', cn: '地震使道路龜裂。' },
         { k: 'get stuck', en: 'Cars would get stuck in the mud on the road.', cn: '車子會卡在路上的泥漿中動彈不得。' },
         { k: 'mess up', en: 'A typhoon often messes up flight schedules.', cn: '颱風常常打亂班機時刻表。' },
-        { k: 'cancel', en: 'The flights will be cancelled if the typhoon hits.', cn: '如果颱風登陸，班機將被取消。' }
+        { k: 'cancel', en: 'The flights will be canceled if the typhoon hits.', cn: '如果颱風登陸，班機將被取消。' }
       ],
       extraTitle: 'VIII. 問天氣＋颱風敘述結構 Asking About Weather & Disaster Narrative',
       extra: [
@@ -8131,7 +8131,7 @@ window.BOOK = {
           exs: [
             { tag: '① 起因', en: 'Heavy rain fell continuously for three days.', cn: '持續三天的豪雨。（描述初始事件）' },
             { tag: '② 直接影響', en: 'This led to rockfalls and landslides; the roads were covered with mud.', cn: '這導致山區落石和土石流，道路被泥土覆蓋。（描述直接後果）' },
-            { tag: '③ 次級影響', en: 'Cars got stuck, mud flowed into houses, and the typhoon messed up flight schedules — many flights were cancelled.', cn: '車輛卡住動彈不得，泥水流進房屋，颱風也打亂了班機時刻表——許多班機被取消。（描述對人、基礎設施的影響）' }
+            { tag: '③ 次級影響', en: 'Cars got stuck, mud flowed into houses, and the typhoon messed up flight schedules — many flights were canceled.', cn: '車輛卡住動彈不得，泥水流進房屋，颱風也打亂了班機時刻表——許多班機被取消。（描述對人、基礎設施的影響）' }
           ]
         }
       ],
@@ -8837,8 +8837,8 @@ window.BOOK = {
         {
           title: 'V-3. 列車取消：現在完成式被動（最自然）',
           exs: [
-            { en: 'The train has been cancelled due to an accident.',
-              cn: '因為一場意外，火車已經被取消了。（have/has been + 過去分詞——強調動作對「現在」的影響：列車現在仍處於取消狀態，比 is cancelled / was cancelled 更自然；due to 後接名詞，比 because 更正式，常用於書面或廣播。）' }
+            { en: 'The train has been canceled due to an accident.',
+              cn: '因為一場意外，火車已經被取消了。（have/has been + 過去分詞——強調動作對「現在」的影響：列車現在仍處於取消狀態，比 is canceled / was canceled 更自然；due to 後接名詞，比 because 更正式，常用於書面或廣播。）' }
           ]
         },
         {
@@ -8859,7 +8859,7 @@ window.BOOK = {
           exs: [
             { en: 'The train will be delayed for ten minutes.', cn: '火車將會誤點十分鐘。（be delayed for + 時間長度。）' },
             { en: 'It will arrive ten minutes later.', cn: '它會晚十分鐘抵達。（arrive + 時間長度 + later，強調比預定時間晚多久。）' },
-            { en: 'The train to Taipei has been cancelled.', cn: '開往台北的列車已經取消了。（正式廣播公告用語。）' }
+            { en: 'The train to Taipei has been canceled.', cn: '開往台北的列車已經取消了。（正式廣播公告用語。）' }
           ]
         }
       ],
@@ -8885,8 +8885,8 @@ window.BOOK = {
           ex: 'A passenger is a person traveling in a vehicle who is not the driver or crew.', exCn: '乘客是指搭乘交通工具、但不是駕駛或工作人員的人。' },
         { w: 'delayed', ipa: '/dɪˈleɪd/', pos: 'adj.', cn: '延誤的',
           ex: 'The late train can be a little delayed.', exCn: '晚班火車有時候會延誤一點。' },
-        { w: 'cancelled', ipa: '/ˈkænsəld/', pos: 'adj.', cn: '取消的',
-          ex: 'The train has been cancelled due to an accident.', exCn: '因為一場意外，火車已經被取消了。' },
+        { w: 'canceled', ipa: '/ˈkænsəld/', pos: 'adj.', cn: '取消的',
+          ex: 'The train has been canceled due to an accident.', exCn: '因為一場意外，火車已經被取消了。' },
         { w: 'ticket counter', ipa: '/ˈtɪkɪt ˈkaʊntɚ/', pos: 'n.', cn: '售票櫃檯',
           ex: 'Where is the ticket counter?', exCn: '售票櫃檯在哪裡？' },
         { w: 'ticket machine', ipa: '/ˈtɪkɪt məˈʃiːn/', pos: 'n.', cn: '售票機',
@@ -8960,7 +8960,7 @@ window.BOOK = {
               cn: '上個月，我訂了一班機票去另一個國家拜訪我的朋友。' },
             { en: 'Before buying the ticket, I checked the flight timetable carefully to make sure the departure and arrival times matched my travel schedule.',
               cn: '在買票之前，我仔細查看了航班時刻表，以確保起飛和抵達的時間符合我的旅行行程。' },
-            { en: 'On the day of my trip, I arrived at the airport early. However, my flight was delayed because of bad weather. The airline later announced that the flight was cancelled.',
+            { en: 'On the day of my trip, I arrived at the airport early. However, my flight was delayed because of bad weather. The airline later announced that the flight was canceled.',
               cn: '在旅行當天，我很早就到了機場。然而，因為天氣不好，我的班機延誤了。航空公司後來宣布班機取消了。' },
             { en: "I went to the airline counter and asked about a refund. The staff explained that I could apply for a refund through the airline's online platform.",
               cn: '我去航空公司櫃檯詢問退款。工作人員解釋說我可以透過航空公司的線上平台申請退款。' },
@@ -8971,7 +8971,7 @@ window.BOOK = {
             { q: 'Why did the traveler check the flight timetable?', qCn: '為什麼那位旅客查看航班時刻表？',
               a: 'To make sure the departure and arrival times matched his travel schedule.', aCn: '為了確保起飛和抵達時間符合旅行行程。' },
             { q: 'What happened to the flight?', qCn: '那班飛機發生了什麼事？',
-              a: 'It was delayed because of bad weather and later cancelled.', aCn: '因天氣不好而延誤，後來被取消。' },
+              a: 'It was delayed because of bad weather and later canceled.', aCn: '因天氣不好而延誤，後來被取消。' },
             { q: 'Where could the traveler apply for a refund?', qCn: '旅客可以在哪裡申請退款？',
               a: "Through the airline's online platform.", aCn: '透過航空公司的線上平台。' },
             { q: 'Why did the traveler check the platform number?', qCn: '為什麼那位旅客查看月台號碼？',
@@ -8980,7 +8980,7 @@ window.BOOK = {
               a: 'Yes. After getting the refund, he booked another flight for the next day and caught his train.', aCn: '是的，退款後他訂了隔天的班機並趕上火車。' }
           ],
           sumEn: [
-            'Last month, I booked a flight to visit my friend in another country. Before buying the ticket, I checked the flight timetable carefully. On the day of my trip, the flight was delayed because of bad weather and was later cancelled. I went to the airline counter and learned how to apply for a refund online. After receiving the refund, I booked another flight for the next day. At the train station, I checked the platform number carefully so that I would not miss my train.'
+            'Last month, I booked a flight to visit my friend in another country. Before buying the ticket, I checked the flight timetable carefully. On the day of my trip, the flight was delayed because of bad weather and was later canceled. I went to the airline counter and learned how to apply for a refund online. After receiving the refund, I booked another flight for the next day. At the train station, I checked the platform number carefully so that I would not miss my train.'
           ],
           sumCn: [
             '上個月，我訂了一張機票去另一個國家拜訪朋友。在買票前，我仔細查看了航班時刻表。旅行當天，由於天氣不好，班機先延誤後被取消。我到航空公司櫃檯詢問退款方式，並透過線上平台申請退款。收到退款後，我訂了隔天的航班。在火車站時，我也仔細確認月台號碼，以免錯過火車。'
@@ -8995,8 +8995,8 @@ window.BOOK = {
           ex: 'The departure and arrival times matched my travel schedule.', exCn: 'when a flight leaves（航班起飛的時間）。Depart = verb（動詞）；Departure = noun（名詞）。' },
         { w: 'arrival', ipa: '/əˈraɪvəl/', pos: 'n.', cn: '抵達',
           ex: 'The arrival time matched my schedule.', exCn: 'when a flight reaches a place（航班抵達的時間）' },
-        { w: 'cancelled', ipa: '/ˈkænsəld/', pos: 'adj.', cn: '取消的',
-          ex: 'The airline announced that the flight was cancelled.', exCn: 'stopped and not happening（停止且不再進行）' },
+        { w: 'canceled', ipa: '/ˈkænsəld/', pos: 'adj.', cn: '取消的',
+          ex: 'The airline announced that the flight was canceled.', exCn: 'stopped and not happening（停止且不再進行）' },
         { w: 'refund', ipa: '/ˈriːfʌnd/', pos: 'n.', cn: '退款',
           ex: 'I could apply for a refund through the online platform.', exCn: 'money returned after cancellation（取消後退回的錢）' },
         { w: 'platform', ipa: '/ˈplætˌfɔːrm/', pos: 'n.', cn: '月台',
@@ -9067,7 +9067,7 @@ window.BOOK = {
         { k: 'Return / Round-trip ticket 來回票', en: 'A ticket for a journey to a destination and back to the starting point.', cn: '到目的地並返回出發點的票。（💡 移民官 immigration official 常要求出示回程票，作為旅客會在許可停留期限內離境的證明。）' },
         { k: 'Airline counter / Ticket counter', en: 'Check in, check luggage, buy tickets, or handle cancellations and delays.', cn: '辦理報到、託運行李、購票，或處理航班取消、延誤等問題的服務櫃檯。' },
         { k: 'Delayed (flight) 延誤', en: 'My flight was delayed because of bad weather.（被動語態）', cn: '比預定時間晚起飛；常因天氣、技術問題或空中交通壅塞。' },
-        { k: 'Due to / Because of 因為…', en: 'The train has been cancelled due to an accident.', cn: 'due to 後面通常接名詞或名詞片語。' },
+        { k: 'Due to / Because of 因為…', en: 'The train has been canceled due to an accident.', cn: 'due to 後面通常接名詞或名詞片語。' },
         { k: '退款搭配詞', en: 'get a refund（拿到退款）／ask for a refund（要求退款）／apply for a refund（申請退款）／request a refund（請求退款）', cn: 'They want to get a refund. / Could I ask for a refund? / I could apply for a refund through the airline\'s online platform. / If I request a refund, will there be any penalties?' },
         { k: 'Cancellation fee 取消費用', en: "You don't have to pay a cancellation fee if you cancel before 24 hours of departure.", cn: '取消預訂所產生的費用；提前很久取消有時可免除。（出發前 24 小時取消免收取消費）' },
         { k: 'Penalty 罰款／違約金', en: 'We had to pay a penalty because we arrived at the airport late.', cn: '違反規定（例如太晚取消）所需支付的費用。' },
@@ -9289,7 +9289,7 @@ window.BOOK = {
         {
           title: 'VI-C. 旅遊突發狀況 Travel Emergencies ＋ D. 護照狀態的多種說法',
           exs: [
-            { tag: '班機取消', en: 'My flight has been cancelled.', cn: '我的班機被取消了。（被動・現在完成式）' },
+            { tag: '班機取消', en: 'My flight has been canceled.', cn: '我的班機被取消了。（被動・現在完成式）' },
             { tag: '生病', en: 'I got sick during my trip. / I am getting sick.', cn: '我旅行時生病了。／我快生病了。' },
             { tag: '丟棄', en: 'I had to throw it away.', cn: '我必須把它丟掉。' },
             { tag: '倒空', en: 'Please empty the bottle.', cn: '請把瓶子倒空。' },
@@ -11735,7 +11735,7 @@ window.BOOK = {
           exs: [
             { tag: 'decide', en: 'It was a long way to walk, so we decided to take a taxi home.', cn: '路途很遠，所以我們決定搭計程車回家。' },
             { tag: 'agree', en: 'Simon was in a difficult situation, so I agreed to help him.', cn: 'Simon 處境困難，所以我答應幫他。' },
-            { tag: 'learn', en: 'How old were you when you learnt to drive?', cn: '你幾歲學會開車的？' },
+            { tag: 'learn', en: 'How old were you when you learned to drive?', cn: '你幾歲學會開車的？' },
             { tag: 'tend', en: 'Dan tends to talk too much.', cn: 'Dan 常常話太多。' },
             { tag: 'not to + V', en: 'We decided not to go out because of the weather.', cn: '因為天氣，我們決定不出門。' },
             { tag: 'not to + V', en: 'I promised not to be late.', cn: '我保證不會遲到。' }
@@ -11866,7 +11866,7 @@ window.BOOK = {
             { en: 'I considered applying for the job, but I decided against it.', cn: '4. 我考慮過應徵那份工作，但決定不去。', hi: 'applying' },
             { en: 'Have you finished reading the newspaper yet?', cn: '5. 報紙你看完了嗎？', hi: 'reading' },
             { en: "We can't go on living like this.", cn: '6. 我們不能再這樣過下去了。', hi: 'living' },
-            { en: "It's better to avoid travelling during the rush hour.", cn: '7. 最好避免在尖峰時間移動。', hi: 'travelling' },
+            { en: "It's better to avoid traveling during the rush hour.", cn: '7. 最好避免在尖峰時間移動。', hi: 'traveling' },
             { en: 'I keep forgetting things.', cn: '8. 我老是忘東忘西。', hi: 'forgetting' },
             { en: "I've put off paying this bill so many times.", cn: '9. 這張帳單我已經拖了好多次沒付。', hi: 'paying' },
             { en: "I've given up trying to learn Japanese.", cn: '10. 我放棄學日文了。', hi: 'trying' },
@@ -11947,7 +11947,7 @@ window.BOOK = {
           exs: [
             { en: 'Do you know how to get to the airport from here?', cn: '1. 你知道從這裡怎麼去機場嗎？', hi: 'how to get' },
             { en: 'Would you know what to do if there was a fire in the building?', cn: '2. 如果大樓失火，你知道該怎麼做嗎？', hi: 'what to do' },
-            { en: "You'll never forget how to ride a bike once you've learnt.", cn: '3. 學會騎腳踏車就永遠不會忘。', hi: 'how to ride' },
+            { en: "You'll never forget how to ride a bike once you've learned.", cn: '3. 學會騎腳踏車就永遠不會忘。', hi: 'how to ride' },
             { en: "I've been invited to the party, but I haven't decided whether to go or not.", cn: '4. 我被邀請去派對，但還沒決定要不要去。', hi: 'whether to go' },
             { en: "My room is very untidy. I don't know where to put everything.", cn: '5. 我房間很亂，我不知道東西該放哪裡。', hi: 'where to put' },
             { en: 'I have some clothes to wash. Can you show me how to use the washing machine?', cn: '6. 我有些衣服要洗，你能教我怎麼用洗衣機嗎？', hi: 'how to use' }
@@ -12882,7 +12882,7 @@ window.BOOK = {
               "cn": "當她們沒有在一起時，會用電話聊天或互傳訊息。星期六她們通常會進城。她們在街尾碰面，然後走路去城裡。如果下雨，她們就搭公車。早上她們逛商店、買點東西。下午有時去看電影，有時就在教堂旁的公園裡放鬆。"
             },
             {
-              "en": "They see each other on Sundays and they maybe watch a film together in Chelsea's bedroom or play their computer games. They dress the same: they both like jeans and T-shirts or jumpers. Sometimes they swap clothes. They like the same food. Pizza is their favourite dish. They have one difference: Chelsea loves dogs but Sammy-Jo loves cats. They are very good besties and they never argue!",
+              "en": "They see each other on Sundays and they maybe watch a film together in Chelsea's bedroom or play their computer games. They dress the same: they both like jeans and T-shirts or jumpers. Sometimes they swap clothes. They like the same food. Pizza is their favorite dish. They have one difference: Chelsea loves dogs but Sammy-Jo loves cats. They are very good besties and they never argue!",
               "cn": "星期天她們也會見面，可能一起在 Chelsea 的房間看電影，或玩電腦遊戲。她們穿著相似：兩人都喜歡牛仔褲配 T 恤或毛衣。有時她們會交換衣服穿。她們喜歡一樣的食物，披薩是她們最愛的餐點。她們只有一個不同點：Chelsea 喜歡狗，但 Sammy-Jo 喜歡貓。她們是非常要好的閨蜜，而且從不吵架！"
             }
           ],
@@ -12948,9 +12948,9 @@ window.BOOK = {
               "aCn": "她們穿著相似，都喜歡牛仔褲配 T 恤或毛衣。"
             },
             {
-              "q": "What is their favourite food?",
+              "q": "What is their favorite food?",
               "qCn": "她們最愛的食物是什麼？",
-              "a": "Pizza is their favourite dish.",
+              "a": "Pizza is their favorite dish.",
               "aCn": "披薩是她們最愛的餐點。"
             }
           ],
@@ -14364,7 +14364,7 @@ window.BOOK = {
           "ipa": "/ˌkɑː.ləˈkeɪ.ʃən/",
           "pos": "n.",
           "cn": "搭配（詞）",
-          "ex": "We'll do some exercises practising these collocations tomorrow.",
+          "ex": "We'll do some exercises practicing these collocations tomorrow.",
           "exCn": "我們明天會做一些練習，來練習這些搭配詞。"
         },
         {
@@ -14436,7 +14436,7 @@ window.BOOK = {
           "cn": "做體操、做練習題（詳見 IV）"
         },
         {
-          "p": "do someone a favour / do someone a good turn",
+          "p": "do someone a favor / do someone a good turn",
           "cn": "幫某人一個忙（詳見 IV）"
         },
         {
@@ -14647,14 +14647,14 @@ window.BOOK = {
         {
           "u": "do exercises /ˈek.sɚ.saɪz/",
           "sc": "work out",
-          "ex": "We'll do some exercises practising these collocations tomorrow.",
+          "ex": "We'll do some exercises practicing these collocations tomorrow.",
           "exCn": "我們明天會做一些練習，來練習這些搭配詞。",
           "cn": "做體操、健身運動；做練習題"
         },
         {
-          "u": "do someone a favour /ˈfeɪ.vɚ/ ⭐",
+          "u": "do someone a favor /ˈfeɪ.vɚ/ ⭐",
           "sc": "lend someone a hand / give someone a hand",
-          "ex": "Could you do me a favour and pick me up some milk from the supermarket?",
+          "ex": "Could you do me a favor and pick me up some milk from the supermarket?",
           "exCn": "你能幫我個忙，從超市買些牛奶回來嗎？",
           "cn": "幫某人一個忙"
         },
@@ -14899,7 +14899,7 @@ window.BOOK = {
       "summary": [
         {
           "k": "Do ＝ 執行、完成",
-          "v": "do your best／do the washing／do your homework／do an experiment／do someone a favour"
+          "v": "do your best／do the washing／do your homework／do an experiment／do someone a favor"
         },
         {
           "k": "Make ＝ 產生、創造",
@@ -14911,7 +14911,7 @@ window.BOOK = {
         },
         {
           "k": "同義替換",
-          "v": "do someone a favour ＝ give someone a hand；make an effort ＝ try hard；make progress ＝ move forward"
+          "v": "do someone a favor ＝ give someone a hand；make an effort ＝ try hard；make progress ＝ move forward"
         },
         {
           "k": "文法重點",
@@ -15049,11 +15049,11 @@ window.BOOK = {
           "exCn": "閱讀理解"
         },
         {
-          "w": "centre",
+          "w": "center",
           "ipa": "/ˈsen.t̬ɚ/",
           "pos": "n.",
           "cn": "中心點、中心（美式拼法 center）",
-          "ex": "job centre",
+          "ex": "job center",
           "exCn": "就業中心"
         },
         {
@@ -15116,7 +15116,7 @@ window.BOOK = {
           "cn": "工作機會（詳見 V-A）"
         },
         {
-          "p": "job centre",
+          "p": "job center",
           "cn": "就業中心（詳見 I）"
         },
         {
@@ -15286,9 +15286,9 @@ window.BOOK = {
               "hi": "a better life"
             },
             {
-              "en": "I got the new job from the job centre.",
+              "en": "I got the new job from the job center.",
               "cn": "我從就業中心找到了一份新工作。",
-              "hi": "job centre"
+              "hi": "job center"
             },
             {
               "en": "I'm looking for an opportunity to practice my Chinese speaking.",
@@ -22504,7 +22504,7 @@ window.BOOK = {
       { "en": "Auditor: Do you have 8D training records?", "cn": "稽核員：你們有 8D 訓練紀錄嗎？" },
       { "en": "You: The assessment lists missing 8D training records, although an 8D example is available. An example does not prove that training was completed.", "cn": "你：評估列出缺 8D 訓練紀錄，雖然有 8D 範例；範例不能證明訓練已完成。" },
       { "en": "Auditor: How will Vietnam develop its 8D process?", "cn": "稽核員：越南如何建立 8D 流程？" },
-      { "en": "You: The plan uses Taiwan training materials and cases. Vietnam is to practise on actual abnormalities and issue a controlled local procedure and form.", "cn": "你：計畫採用台灣的訓練教材與案例；越南針對實際異常演練，並發行受管制的當地程序與表單。" },
+      { "en": "You: The plan uses Taiwan training materials and cases. Vietnam is to practice on actual abnormalities and issue a controlled local procedure and form.", "cn": "你：計畫採用台灣的訓練教材與案例；越南針對實際異常演練，並發行受管制的當地程序與表單。" },
       { "en": "Auditor: How will you decide when to close an action?", "cn": "稽核員：怎麼決定改善何時結案？" },
       { "en": "You: Vietnam is to track actions in a log. Taiwan and Vietnam are to confirm effectiveness before closure. Taiwan is also to review the first reports.", "cn": "你：越南用清單追蹤；台越雙方結案前確認有效性；台灣也會審查最初幾份報告。" }
      ]
@@ -22560,7 +22560,7 @@ window.BOOK = {
       { "en": "Welcome to the QA review. We will cover calibration, incoming inspection, material records, 8D, and GR&R.", "cn": "歡迎來到品保審查。我們會說明校驗、進料檢驗、材料紀錄、8D 與 GR&R。" },
       { "en": "Our September assessment records a calibration system. Labels are established, but the local procedure and external reports remain gaps.", "cn": "9 月評估記載已有校驗系統。標籤已建立，但當地程序與外部報告仍是缺口。" },
       { "en": "For incoming inspection, the plan requires sampling rules and instructions for critical dimensions. It also calls for material certificates and hardness results.", "cn": "進料檢驗方面，計畫要求抽樣規則與關鍵尺寸檢驗指導書，也要求材料證明與硬度結果。" },
-      { "en": "For 8D, Vietnam is to use Taiwan materials and practise on actual abnormalities. Both teams are to confirm effectiveness before closure.", "cn": "8D 方面，越南採用台灣教材並針對實際異常演練；兩邊團隊結案前都要確認有效性。" },
+      { "en": "For 8D, Vietnam is to use Taiwan materials and practice on actual abnormalities. Both teams are to confirm effectiveness before closure.", "cn": "8D 方面，越南採用台灣教材並針對實際異常演練；兩邊團隊結案前都要確認有效性。" },
       { "en": "GR&R is another open action. The plan includes critical gauges, training, and the first report review. These statements reflect our September 21 records.", "cn": "GR&R 是另一項未結案工作；計畫包含關鍵量具、訓練與第一份報告審查。以上內容反映我們 9/21 的紀錄。" }
      ]
     },
@@ -35252,7 +35252,7 @@ window.BOOK = {
           },
           {
             "tag": "Travel insurance 旅遊險",
-            "en": "Protects you against unexpected problems while travelling.",
+            "en": "Protects you against unexpected problems while traveling.",
             "cn": "旅行時保護你，應付意想不到的問題。"
           },
           {

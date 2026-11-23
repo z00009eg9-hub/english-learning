@@ -144,7 +144,7 @@ window.GVIDEO.dg20260918b2 = {
     T: { name: 'Victor', voice: 'm' }
   },
   expr: {
-    now:  { t: 'have / has + p.p.', cn: '開場、現況、還沒結案 → 現在完成式', ex: 'The airline has cancelled all flights to the island.', exCn: '航空公司已經取消所有飛往該島的航班。', note: '不寫明確時間，或搭配 since、so far' },
+    now:  { t: 'have / has + p.p.', cn: '開場、現況、還沒結案 → 現在完成式', ex: 'The airline has canceled all flights to the island.', exCn: '航空公司已經取消所有飛往該島的航班。', note: '不寫明確時間，或搭配 since、so far' },
     past: { t: 'V-ed + 明確時間', cn: '補細節、回顧 → 過去簡單式', ex: 'The storm reached the coast on Thursday night.', exCn: '颱風在星期四晚上抵達沿海。', note: '一寫出 on Monday、in 2024、ago，就切回過去式' },
     pass: { t: 'It has been + p.p. that…', cn: '正式書面，不點名是誰 → 完成式被動', ex: 'It has been confirmed that the venue will change.', exCn: '已確認場地將會更換。', note: '口語通常直接說 they decided…' }
   },

@@ -152,7 +152,7 @@ window.GVIDEO.dg20261028b1p = {
     { ch: 2, sp: 'N', zh: '答應和承諾的形狀一樣，都是主詞加 will 再加原形動詞，口語縮成 I’ll。',
       hi: [{ t: '答應和承諾', k: 'off', c: 3 }],
       vis: { type: 'pattern', kick: 'Offer and promise', rows: [
-        { lab: '答應', blocks: [{ t: 'I', k: 's' }, { t: "'ll check", k: 'v' }, { t: 'your tyre pressure', k: 'n' }] },
+        { lab: '答應', blocks: [{ t: 'I', k: 's' }, { t: "'ll check", k: 'v' }, { t: 'your tire pressure', k: 'n' }] },
         { lab: '承諾', blocks: [{ t: 'I', k: 's' }, { t: "'ll call", k: 'v' }, { t: 'you', k: 'n' }, { t: 'before closing', k: 'o' }] }
       ], note: '不要用 be going to，那代表你早就打算這麼做' } },
     { ch: 2, sp: 'N', zh: '請求是把 will 搬到主詞前面，變成問句，問的是對方願不願意。',

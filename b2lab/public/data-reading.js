@@ -124,7 +124,7 @@ window.READING = [
     {w:"be thrown away",ipa:"/bi θroʊn əˈweɪ/",pos:"phr.",cn:"被丟掉",def:"To be put in the rubbish because it is not wanted.",ex:"Food that passes its expiry date should be thrown away.",exCn:"過了保存期限的食物應該丟掉。"},
     {w:"label",ipa:"/ˈleɪ.bəl/",pos:"v.",cn:"標示",def:"To put information on a product.",ex:"Please label each box with its contents before moving day.",exCn:"搬家前請在每個箱子上標明裡面裝了什麼。"},
     {w:"go bad",ipa:"/ɡoʊ bæd/",pos:"phr.v.",cn:"（食物）壞掉",def:"To become unfit to eat.",ex:"If you leave milk outside the fridge, it will go bad overnight.",exCn:"牛奶放在冰箱外面的話，一個晚上就會壞掉。"},
-    {w:"leftovers",ipa:"/ˈleftˌovɚz/",pos:"n.",cn:"剩菜",def:"Food that has not been eaten at the end of a meal.",ex:"My mum always turns yesterday's leftovers into a new dish.",exCn:"我媽總是把昨天的剩菜變出一道新料理。"},
+    {w:"leftovers",ipa:"/ˈleftˌovɚz/",pos:"n.",cn:"剩菜",def:"Food that has not been eaten at the end of a meal.",ex:"My mom always turns yesterday's leftovers into a new dish.",exCn:"我媽總是把昨天的剩菜變出一道新料理。"},
     {w:"a great deal of",ipa:"/ə ɡreɪt diːl əv/",pos:"phr.",cn:"大量的（接不可數）",def:"A large amount of something uncountable.",ex:"Learning to play the violin well takes a great deal of patience and practice.",exCn:"要把小提琴拉好，需要大量的耐心和練習。"},
     {w:"household",ipa:"/ˈhaʊshoʊld/",pos:"adj./n.",cn:"家庭的；一戶人家",def:"Relating to a house and the people living in it.",ex:"The average household in Taipei spends about 30,000 a month on rent.",exCn:"台北一般家庭每月大約花三萬元在房租上。"}
   ],
@@ -388,7 +388,7 @@ window.READING = [
   ],
   questions:[
     {q:"Why does the writer mention a patient injured in an accident?",
-     opts:["A. To prove surgery is dangerous","B. To show surgery can be medical, not decorative","C. To argue surgery should be free","D. To criticise clinics"],
+     opts:["A. To prove surgery is dangerous","B. To show surgery can be medical, not decorative","C. To argue surgery should be free","D. To criticize clinics"],
      ans:1, expl:"the operation is arguably a form of medical treatment rather than a luxury。"},
     {q:"What does \"the decision is rarely made in a vacuum\" mean?",
      opts:["A. People decide too slowly","B. People are influenced by what surrounds them","C. Doctors decide for patients","D. The decision costs a lot"],
@@ -547,7 +547,7 @@ window.READING = [
     {w:"tend to",ipa:"/tend tuː/",pos:"phr.",cn:"往往、傾向於",def:"To usually do something.",ex:"People who work from home tend to skip lunch or eat it in front of their laptops.",exCn:"在家工作的人往往會跳過午餐，或是在筆電前面邊工作邊吃。"},
     {w:"dose",ipa:"/doʊs/",pos:"n.",cn:"劑量",def:"A measured amount of medicine.",ex:"Take one dose of the medicine three times a day after meals.",exCn:"每天飯後服用一次劑量，一天三次。"},
     {w:"dizziness",ipa:"/ˈdɪzinəs/",pos:"n.",cn:"暈眩",def:"The feeling that everything is spinning.",ex:"Standing up too quickly can cause a brief feeling of dizziness.",exCn:"站得太快可能會短暫地覺得頭暈。"},
-    {w:"diagnosis",ipa:"/ˌdaɪəɡˈnoʊsɪs/",pos:"n.",cn:"診斷",def:"A doctor's judgement about what illness you have.",ex:"After running several tests, the doctor gave her a clear diagnosis.",exCn:"做了幾項檢查之後，醫生給了她明確的診斷。"}
+    {w:"diagnosis",ipa:"/ˌdaɪəɡˈnoʊsɪs/",pos:"n.",cn:"診斷",def:"A doctor's judgment about what illness you have.",ex:"After running several tests, the doctor gave her a clear diagnosis.",exCn:"做了幾項檢查之後，醫生給了她明確的診斷。"}
   ],
   questions:[
     {q:"According to the writer, what makes a description of symptoms useful?",
@@ -757,9 +757,9 @@ window.READING = [
     {w:"assume",ipa:"/əˈsuːm/",pos:"v.",cn:"假設、以為",def:"To believe something is true without proof.",ex:"Don't assume everyone speaks English when you travel abroad.",exCn:"出國旅行時，不要假設每個人都會說英文。"},
     {w:"preference",ipa:"/ˈprefrəns/",pos:"n.",cn:"偏好",def:"The thing you like better than another.",ex:"I have no strong preference; either restaurant is fine with me.",exCn:"我沒有特別偏好，哪家餐廳都可以。"},
     {w:"host",ipa:"/hoʊst/",pos:"n.",cn:"主人、招待方",def:"A person who receives and looks after guests.",ex:"As the host of the dinner party, Mark made sure every guest had something to drink.",exCn:"身為晚宴的主人，馬克確保每位客人都有飲料可喝。"},
-    {w:"politeness",ipa:"/pəˈlaɪtnəs/",pos:"n.",cn:"客氣、禮貌",def:"Behaviour that shows respect for others.",ex:"In Taiwan, offering your seat to an elderly person is basic politeness.",exCn:"在台灣，讓座給長輩是基本的禮貌。"},
+    {w:"politeness",ipa:"/pəˈlaɪtnəs/",pos:"n.",cn:"客氣、禮貌",def:"Behavior that shows respect for others.",ex:"In Taiwan, offering your seat to an elderly person is basic politeness.",exCn:"在台灣，讓座給長輩是基本的禮貌。"},
     {w:"satisfaction",ipa:"/ˌsæt̬.ɪsˈfæk.ʃən/",pos:"n.",cn:"滿意",def:"The feeling of being pleased with something.",ex:"Finishing a difficult jigsaw puzzle always gives my father a deep sense of satisfaction.",exCn:"完成一幅困難的拼圖，總是讓我爸爸感到非常滿足。"},
-    {w:"verdict",ipa:"/ˈvɝːdɪkt/",pos:"n.",cn:"判定、結論",def:"A decision or judgement about something.",ex:"The jury reached a verdict after three days of deliberation.",exCn:"陪審團經過三天的審議後做出了裁決。"},
+    {w:"verdict",ipa:"/ˈvɝːdɪkt/",pos:"n.",cn:"判定、結論",def:"A decision or judgment about something.",ex:"The jury reached a verdict after three days of deliberation.",exCn:"陪審團經過三天的審議後做出了裁決。"},
     {w:"assignment",ipa:"/əˈsaɪnmənt/",pos:"n.",cn:"派任、任務",def:"A job or task given to someone.",ex:"Her first overseas assignment was a six-month post in Singapore.",exCn:"她的第一個海外派任是到新加坡工作六個月。"},
     {w:"custom",ipa:"/ˈkʌstəm/",pos:"n.",cn:"習俗",def:"A traditional way of behaving in a society.",ex:"In Japanese custom, you take off your shoes before entering a home.",exCn:"按照日本的習俗，進門前要先脫鞋。"}
   ],
@@ -767,7 +767,7 @@ window.READING = [
     {q:"Why did the engineer say nothing about the food?",
      opts:["A. He did not speak English","B. He did not want to create work for his hosts","C. He disliked his colleagues","D. He was on a diet"],
      ans:1, expl:"a guest who states a preference risks creating work for the host。"},
-    {q:"How did the team originally interpret his behaviour?",
+    {q:"How did the team originally interpret his behavior?",
      opts:["A. As rudeness","B. As illness","C. As satisfaction","D. As a language problem"],
      ans:2, expl:"had read his politeness as satisfaction。"},
     {q:"What change actually solved the problem?",
@@ -916,7 +916,7 @@ window.READING = [
      cn:"最可靠的方法也是最不刺激的：在領薪水的當天，就把一筆固定金額移出帳戶，早於任何消費決定。月底才存剩下的錢的人幾乎存不到錢；先存錢再花剩下的錢的人，幾乎都存得到。"}
   ],
   target:[
-    {w:"discipline",ipa:"/ˈdɪsəplɪn/",pos:"n.",cn:"自制力、紀律",def:"The ability to control your own behaviour.",ex:"Learning a new language requires a lot of patience and discipline.",exCn:"學一門新語言需要很多耐心和自律。"},
+    {w:"discipline",ipa:"/ˈdɪsəplɪn/",pos:"n.",cn:"自制力、紀律",def:"The ability to control your own behavior.",ex:"Learning a new language requires a lot of patience and discipline.",exCn:"學一門新語言需要很多耐心和自律。"},
     {w:"wage",ipa:"/weɪdʒ/",pos:"n.",cn:"薪資",def:"Money paid regularly for work.",ex:"The minimum wage in Taiwan was raised again at the start of this year.",exCn:"台灣的基本工資今年初又調漲了。"},
     {w:"mortgage",ipa:"/ˈmɔːrɡɪdʒ/",pos:"n.",cn:"房貸",def:"A loan used to buy a house.",ex:"They applied for a thirty-year mortgage to buy their first apartment.",exCn:"他們申請了三十年的房貸來買第一間公寓。"},
     {w:"inflation",ipa:"/ɪnˈfleɪʃn/",pos:"n.",cn:"通膨",def:"A general rise in prices over time.",ex:"Because of inflation, the same lunch now costs twenty dollars more.",exCn:"因為通膨，同樣一份午餐現在貴了二十元。"},
@@ -933,7 +933,7 @@ window.READING = [
     {q:"According to paragraph 2, what happens to money left in a current account?",
      opts:["A. It doubles in ten years","B. It loses about a quarter of its value in ten years","C. It stays exactly the same","D. It is taxed twice"],
      ans:1, expl:"loses roughly a quarter of its value over ten years。"},
-    {q:"Why does the writer criticise the advice to cut small luxuries?",
+    {q:"Why does the writer criticize the advice to cut small luxuries?",
      opts:["A. Coffee is necessary","B. It saves far less than reviewing big fixed costs","C. It is impossible to do","D. It increases inflation"],
      ans:1, expl:"約 2% vs. 10–15%，大筆固定支出影響大得多。"},
     {q:"What is the method the writer recommends?",

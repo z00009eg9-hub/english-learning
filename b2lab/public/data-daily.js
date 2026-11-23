@@ -5346,7 +5346,7 @@ articles:[
       "pos": "n.",
       "cn": "選票；投票",
       "def": "A secret vote, or the paper you vote on.",
-      "ex": "The tennis club decided its new colours by secret ballot.",
+      "ex": "The tennis club decided its new colors by secret ballot.",
       "exCn": "網球社用不記名投票決定了新的隊色。"
     },
     {
@@ -6230,7 +6230,7 @@ articles:[
       "q": "What does \"she didn't use to think of the trip as travel at all\" tell us?",
       "qCn": "「她以前根本不把那趟行程當成旅行」這句話告訴我們什麼？",
       "opts": [
-        "A. She disliked travelling in general",
+        "A. She disliked traveling in general",
         "B. Back then the trip felt like routine work, not a journey",
         "C. She had never flown before",
         "D. She thought the trip was too short to count"
@@ -6249,7 +6249,7 @@ articles:[
       "qCn": "Anita老實寫下的答案，顯示那趟每月出差是什麼情況？",
       "opts": [
         "A. The checks took almost the whole week",
-        "B. Most of the time went on travelling and on meetings that could have been emails",
+        "B. Most of the time went on traveling and on meetings that could have been emails",
         "C. The parent factory had asked her to stop coming",
         "D. The flights were too expensive for the company"
       ],
@@ -6704,7 +6704,7 @@ articles:[
       "cn": "七百萬劑，第一次超過七百萬。"
     },
     {
-      "en": "My mum's sixty-eight, so she can go from today.",
+      "en": "My mom's sixty-eight, so she can go from today.",
       "cn": "我媽六十八歲，所以她今天就可以去打。"
     },
     {
@@ -8189,7 +8189,7 @@ articles:[
       "qCn": "Anita為什麼被自己的答案嚇了一跳？",
       "opts": [
         "A. She had forgotten the Vietnamese word for the date",
-        "B. She had not realised how long it had been",
+        "B. She had not realized how long it had been",
         "C. Mai gave her the wrong information",
         "D. Her teacher had told her a different date"
       ],
@@ -8350,7 +8350,7 @@ articles:[
       "pos": "n.",
       "cn": "媒介；（教學）語言工具",
       "def": "The thing you use to carry a message or an idea.",
-      "ex": "Oil paint is still her favourite medium.",
+      "ex": "Oil paint is still her favorite medium.",
       "exCn": "油畫顏料仍然是她最喜歡的創作媒材。"
     },
     {
@@ -8715,7 +8715,7 @@ articles:[
       "cn": "他昨天晃進車站旁邊那間小麵包店。"
     },
     {
-      "en": "Red bean ones for his mum — six of them, no hesitation.",
+      "en": "Red bean ones for his mom — six of them, no hesitation.",
       "cn": "紅豆口味的給他媽媽，直接六個，毫不猶豫。"
     },
     {
@@ -8889,7 +8889,7 @@ articles:[
       "cn": "Anita一直都是用買的，但她從來沒真的做過。"
     },
     {
-      "en": "Her mum sent over a recipe, so Saturday she gave it a shot.",
+      "en": "Her mom sent over a recipe, so Saturday she gave it a shot.",
       "cn": "她媽媽傳了食譜過來，所以星期六她試了一下。"
     },
     {
@@ -8897,7 +8897,7 @@ articles:[
       "cn": "第一盤烤得太焦，直接丟。"
     },
     {
-      "en": "Second one though? Her mum's still got the photo on her phone.",
+      "en": "Second one though? Her mom's still got the photo on her phone.",
       "cn": "不過第二盤呢？她媽媽到現在手機裡還留著那張照片。"
     }
   ],
@@ -9503,7 +9503,7 @@ articles:[
       "cn": "有一件藍的他很喜歡，但九百塊？免談。"
     },
     {
-      "en": "He grabs a grey one for six hundred instead, and that's lunch money sorted.",
+      "en": "He grabs a gray one for six hundred instead, and that's lunch money sorted.",
       "cn": "他改拿一件六百的灰色外套，午餐錢就這樣省出來了。"
     }
   ],
@@ -9517,7 +9517,7 @@ articles:[
       "cn": "Tom喜歡窗邊那件藍色外套。價格是九百元。那對他來說現在太貴了。"
     },
     {
-      "en": "Then he finds a grey jacket for six hundred dollars. It is warm, and it fits him very well. Tom can save three hundred dollars today.",
+      "en": "Then he finds a gray jacket for six hundred dollars. It is warm, and it fits him very well. Tom can save three hundred dollars today.",
       "cn": "然後他找到一件六百元的灰色外套。它很溫暖，而且很合身。Tom今天可以省下三百元。"
     },
     {
@@ -9601,7 +9601,7 @@ articles:[
       "expl": "Tom needs a warm jacket for the winter.——他是為了買冬天的外套才去小店的。"
     },
     {
-      "q": "How much is the grey jacket?",
+      "q": "How much is the gray jacket?",
       "qCn": "灰色外套多少錢？",
       "opts": [
         "A. Nine hundred dollars",
@@ -9616,7 +9616,7 @@ articles:[
         "D. 一百元"
       ],
       "ans": 2,
-      "expl": "Then he finds a grey jacket for six hundred dollars."
+      "expl": "Then he finds a gray jacket for six hundred dollars."
     },
     {
       "q": "Tomorrow he ___ buy lunch with the extra money.",
@@ -9644,9 +9644,9 @@ articles:[
     },
     {
       "b1": "Tom can save three hundred dollars today.",
-      "b2": "By choosing the grey one, Tom saves three hundred dollars today.",
+      "b2": "By choosing the gray one, Tom saves three hundred dollars today.",
       "note": "用 By + V-ing 把「怎麼做到的」放進句首，比單純的 can save 更清楚說出原因，是 B1 寫作常用的結構。",
-      "sp": "Going with the grey one puts three hundred back in his pocket.",
+      "sp": "Going with the gray one puts three hundred back in his pocket.",
       "spNote": "go with（選擇某一個）、puts money back in his pocket（省下錢）都是口語表達。",
       "b1Cn": "Tom今天可以省下三百元。",
       "b2Cn": "選了灰色那件，Tom今天省下三百元。",
@@ -9935,7 +9935,7 @@ articles:[
       "pos": "v.",
       "cn": "借入",
       "def": "To take money or a thing and give it back later.",
-      "ex": "She borrowed a bicycle from her neighbour last weekend.",
+      "ex": "She borrowed a bicycle from her neighbor last weekend.",
       "exCn": "她上週末跟鄰居借了一台腳踏車。"
     },
     {
@@ -10212,7 +10212,7 @@ articles:[
       "q": "What is the writer's point in the last paragraph?",
       "qCn": "作者在最後一段想表達什麼？",
       "opts": [
-        "A. The limits failed and had to be cancelled",
+        "A. The limits failed and had to be canceled",
         "B. Relaxing a rule that worked is not the same as giving it up, and first-time buyers are no better off",
         "C. Rent has become cheaper than a mortgage",
         "D. Banks have stopped controlling risk"
@@ -12229,7 +12229,7 @@ articles:[
       "cn": "在診所，Anita的血壓被量了兩次，因為第一次的數值看起來偏高。稍後那天早上做的血液檢查顯示，她的膽固醇也升高了。注意到她擔心表情的護理師解釋說，這在長期承受壓力的人身上很常見。"
     },
     {
-      "en": "Since the appointment, Anita has been advised to cut down on caffeine and to exercise more. Her trip to Singapore has not been cancelled, but it has been postponed by one week for a follow-up test. Anita, who usually pushes through stress without complaint, has finally admitted that she needs to slow down.",
+      "en": "Since the appointment, Anita has been advised to cut down on caffeine and to exercise more. Her trip to Singapore has not been canceled, but it has been postponed by one week for a follow-up test. Anita, who usually pushes through stress without complaint, has finally admitted that she needs to slow down.",
       "cn": "從那次檢查之後，Anita被建議少喝咖啡、多運動。她去新加坡的行程並沒有取消，但為了安排追蹤檢查，被延後了一個禮拜。平常總是硬撐著壓力、不抱怨的Anita，終於承認自己需要放慢腳步。"
     },
     {
@@ -12353,7 +12353,7 @@ articles:[
       "qCn": "Anita去新加坡的行程發生了什麼事？",
       "opts": [
         "A. It has been postponed by one week",
-        "B. It has been cancelled completely",
+        "B. It has been canceled completely",
         "C. It has not changed at all",
         "D. It has been moved to another country"
       ],
@@ -12713,7 +12713,7 @@ articles:[
       "cn": "昨天晚上，Amy的公司宣布放颱風假，因為一個強烈的暴風接近了這座城市。Amy從來沒經歷過這麼強的颱風，所以她覺得有點緊張。"
     },
     {
-      "en": "This morning, Amy checked the news and learned that the airline cancelled several flights. She has already prepared candles, water, and snacks for the storm. Her neighbor came over, and together they taped all the windows.",
+      "en": "This morning, Amy checked the news and learned that the airline canceled several flights. She has already prepared candles, water, and snacks for the storm. Her neighbor came over, and together they taped all the windows.",
       "cn": "今天早上，Amy看新聞，得知航空公司取消了好幾班航班。她已經準備好蠟燭、水和一些零食來應付這場暴風。鄰居過來幫忙，他們一起把所有窗戶都貼上了膠帶。"
     },
     {
@@ -12810,7 +12810,7 @@ articles:[
     {
       "q": "Why did Anita's delivery schedule suddenly become uncertain?",
       "qCn": "為什麼Anita的出貨時程突然變得不確定？",
-      "opts": ["A. A tropical storm suddenly turned toward the coast", "B. The client cancelled the order", "C. The factory ran out of materials", "D. The port workers went on strike"],
+      "opts": ["A. A tropical storm suddenly turned toward the coast", "B. The client canceled the order", "C. The factory ran out of materials", "D. The port workers went on strike"],
       "optsCn": ["A. 一個熱帶風暴突然轉向朝海岸而來", "B. 客戶取消了訂單", "C. 工廠原料用完了", "D. 港口工人罷工"],
       "ans": 0,
       "expl": "a tropical storm, which had formed over the South China Sea days earlier, suddenly turned toward the coast."
@@ -12826,7 +12826,7 @@ articles:[
     {
       "q": "What has Anita already done about the delay?",
       "qCn": "關於延誤，Anita已經做了什麼？",
-      "opts": ["A. She has already emailed the customer to explain the delay", "B. She has ignored the problem", "C. She has cancelled the shipment completely", "D. She has asked for a full refund"],
+      "opts": ["A. She has already emailed the customer to explain the delay", "B. She has ignored the problem", "C. She has canceled the shipment completely", "D. She has asked for a full refund"],
       "optsCn": ["A. 她已經寫信告知客戶延誤的狀況", "B. 她忽略了這個問題", "C. 她完全取消了這批貨", "D. 她要求全額退款"],
       "ans": 0,
       "expl": "Anita has already emailed the customer to explain the delay."
@@ -13379,7 +13379,7 @@ articles:[
         "A. Anita's manager was impressed by her solution",
         "B. Anita failed to solve the problem",
         "C. Anita dropped out of the course",
-        "D. The project was cancelled"
+        "D. The project was canceled"
       ],
       "optsCn": [
         "A. Anita的主管對她的解決方案印象深刻",
@@ -14397,7 +14397,7 @@ articles:[
       "qCn": "誰幫Tom搬箱子？",
       "opts": [
         "A. His mother",
-        "B. His neighbour",
+        "B. His neighbor",
         "C. His friend Amy",
         "D. Nobody"
       ],
@@ -14461,7 +14461,7 @@ articles:[
       "cn": "六個月前她決定每個月多存一些錢。她不再那麼常外食，因為餐廳吃一頓花費不少。她也開始帶午餐去上班，不再外面買。"
     },
     {
-      "en": "The first two months were more difficult than she expected. She missed going to her favourite coffee shop after work. But after a while she got used to cooking at home.",
+      "en": "The first two months were more difficult than she expected. She missed going to her favorite coffee shop after work. But after a while she got used to cooking at home.",
       "cn": "最初那兩個月比她預想的還難。她懷念下班後去最喜歡的咖啡店。但過了一陣子，她就習慣在家煮飯了。"
     },
     {
@@ -14532,7 +14532,7 @@ articles:[
       "opts": [
         "A. The rent is too expensive",
         "B. Her room is too small to invite friends",
-        "C. She does not like her neighbours",
+        "C. She does not like her neighbors",
         "D. Her office is too far"
       ],
       "optsCn": [
@@ -14790,7 +14790,7 @@ articles:[
       "cn": "這個現象不是台灣獨有的。在東南亞，胡志明市和曼谷的特定區域在 2020 到 2025 年間，租金翻了一倍。經濟學家指出，薪資沒有跟上：租金漲了五成到一倍，但平均薪水只成長了一成到一成五。這個落差讓數百萬工作者在「更長的通勤」和「更緊的家庭預算」之間做選擇。"
     },
     {
-      "en": "What makes the problem harder to solve is that housing costs are rarely just the rent. A family that moved from a central neighbourhood to a cheaper suburb often found that transport expenses, childcare fees, and the time lost in traffic ate into the savings. One study estimated that a household relocating twenty kilometres from the city centre spent an extra eight percent of its income on commuting alone.",
+      "en": "What makes the problem harder to solve is that housing costs are rarely just the rent. A family that moved from a central neighborhood to a cheaper suburb often found that transport expenses, childcare fees, and the time lost in traffic ate into the savings. One study estimated that a household relocating twenty kilometres from the city center spent an extra eight percent of its income on commuting alone.",
       "cn": "問題更難解決的原因在於：居住成本很少只是房租。一個從市中心搬到較便宜郊區的家庭，常常發現交通費、托兒費和通勤時間把省下的錢吃掉了。一項研究估計，搬離市中心二十公里的家庭，光是通勤就多花了收入的百分之八。"
     },
     {
@@ -15613,7 +15613,7 @@ articles:[
       "opts": [
         "A. It started hiring gamers",
         "B. It upgraded its AI talent guidelines and added new competencies",
-        "C. It cancelled all certificates",
+        "C. It canceled all certificates",
         "D. It opened a new university"
       ],
       "optsCn": [
@@ -15823,7 +15823,7 @@ articles:[
      opts:["A. Bad weather at the departure airport","B. The incoming aircraft needed a mechanical inspection","C. Anita missed the check-in deadline","D. The airline overbooked the flight"],
      optsCn:["A. 出發機場天氣不好","B. 入境的班機需要接受機械檢查","C. Anita錯過了報到時間","D. 航空公司超賣機位"],ans:1,expl:"the incoming aircraft had been held up by a mechanical inspection at its previous stop."},
     {q:"What did Anita do while waiting for the delayed flight?",qCn:"Anita在等待延誤的班機時做了什麼？",
-     opts:["A. She cancelled the meeting","B. She reviewed her presentation and messaged her manager","C. She booked a hotel near the airport","D. She asked for a full refund"],
+     opts:["A. She canceled the meeting","B. She reviewed her presentation and messaged her manager","C. She booked a hotel near the airport","D. She asked for a full refund"],
      optsCn:["A. 她取消了會議","B. 她複習簡報並傳訊息給主管","C. 她在機場附近訂了旅館","D. 她要求全額退費"],ans:1,expl:"Anita opened her laptop and began reviewing the presentation... She sent a short message to her manager."},
     {q:"According to the article, what do frequent flyers tend to develop?",qCn:"根據文章，常出差的人往往會養成什麼？",
      opts:["A. A dislike of air travel","B. Small routines that make delays easier to handle","C. A habit of complaining to airline staff","D. A preference for late flights"],
@@ -15961,7 +15961,7 @@ articles:[
      opts:["A. Doctors take more holidays in summer","B. Hot weather, crowded transportation, and travel help spread illness","C. Clinics reduce their opening hours","D. Fewer nurses work in summer"],
      optsCn:["A. 醫生夏天休更多假","B. 炎熱天氣、擁擠交通與旅行助長疾病傳播","C. 診所縮短看診時間","D. 夏天護理師變少"],ans:1,expl:"Hot weather, crowded transportation, and frequent travel all help spread seasonal illnesses quickly."},
     {q:"What do some people choose to do to ease the pressure on clinics?",qCn:"有些人為了減輕診所的負擔會選擇做什麼？",
-     opts:["A. Stop seeing a doctor completely","B. Choose telemedicine, a video call with a doctor","C. Only visit clinics at night","D. Ask their neighbours for medicine"],
+     opts:["A. Stop seeing a doctor completely","B. Choose telemedicine, a video call with a doctor","C. Only visit clinics at night","D. Ask their neighbors for medicine"],
      optsCn:["A. 完全不看醫生","B. 選擇遠距醫療，透過視訊看診","C. 只在晚上去診所","D. 向鄰居要藥"],ans:1,expl:"some people now choose telemedicine, a video call with a doctor from home."},
     {q:"Which sentence uses the passive voice?",qCn:"哪一句用了被動語態？",
      opts:["A. Nurses often say the waiting room never really empties.","B. Every summer, clinics across Taiwan are filled with more patients than usual.","C. Health experts remind everyone that small habits make a real difference.","D. Anita works far from her family."],
@@ -16087,7 +16087,7 @@ articles:[
      cn:"上週三有颱風，所以我們沒有去上班。風很大，整個早上雨都下得很大。我媽打電話給我，因為她擔心我們家附近會淹水。"},
     {en:"I stayed home and cleaned the kitchen. Then I watched the news on TV. The reporter said several roads were closed and some trees fell down. When the rain stopped in the afternoon, I went outside to check.",
      cn:"我待在家裡打掃廚房，然後看電視新聞。記者說好幾條路被封了，有些樹倒了。下午雨停的時候，我出去看了一下。"},
-    {en:"There was water on the street, but it was not too deep. My neighbour was cleaning leaves from the drain. I helped him for about twenty minutes. After that, the sky became clear and we could see the sunset. It was actually a beautiful evening.",
+    {en:"There was water on the street, but it was not too deep. My neighbor was cleaning leaves from the drain. I helped him for about twenty minutes. After that, the sky became clear and we could see the sunset. It was actually a beautiful evening.",
      cn:"街上有積水，但不算太深。鄰居在清水溝裡的落葉，我幫他清了大約二十分鐘。之後天空放晴，我們看到了夕陽。那其實是個很美的傍晚。"}
   ],
   target:[
@@ -16118,12 +16118,12 @@ articles:[
   titleCn:"颱風打亂了我的計畫",
   focus:"現在完成式 + 被動語態：描述「到目前為止」的天氣影響",
   upFrom:"B1+", upTo:"B2",
-  intro:"同一個颱風，這次從「通勤族」的角度來看。注意現在完成式搭配被動的用法：have been cancelled、has been closed——事情已經發生了，而且影響還在。讀的時候找出哪些句子是「已經發生且仍在持續」的。",
+  intro:"同一個颱風，這次從「通勤族」的角度來看。注意現在完成式搭配被動的用法：have been canceled、has been closed——事情已經發生了，而且影響還在。讀的時候找出哪些句子是「已經發生且仍在持續」的。",
   "spoken": [{"en":"My Taipei trip got called off — the typhoon dumped over 200 millimeters of rain on the mountains overnight.","cn":"我的台北行取消了——颱風一夜之間在山區倒了超過 200 毫米的雨。"},{"en":"Highways are closed, east coast trains are down, and my colleague's neighborhood has been underwater since five a.m.","cn":"高速公路封了、東部火車停駛，我同事的社區從清晨五點就泡在水裡。"},{"en":"Good news is the storm's supposed to turn north tonight and clear out by tomorrow.","cn":"好消息是風暴今晚應該會轉向北邊，明天下午就遠離。"},{"en":"I already rebooked for Friday — for now I'm working from home and praying the power holds.","cn":"我已經改訂週五的票——現在就在家上班，祈禱不要停電。"}],
   paras:[
-    {en:"I was supposed to take the train to Taipei this morning, but my trip has been cancelled because of the typhoon. The weather bureau issued a sea warning yesterday, and since then the situation has got worse. More than 200 millimetres of rain has fallen in the northern mountains overnight.",
+    {en:"I was supposed to take the train to Taipei this morning, but my trip has been canceled because of the typhoon. The weather bureau issued a sea warning yesterday, and since then the situation has got worse. More than 200 millimetres of rain has fallen in the northern mountains overnight.",
      cn:"我今天早上本來要搭火車去台北，但因為颱風我的行程被取消了。氣象局昨天發布了海上警報，從那之後情況越來越糟。北部山區一個晚上降了超過 200 毫米的雨。"},
-    {en:"Several highways have been closed, and train services on the east coast have been suspended until further notice. My colleague texted me that her neighbourhood has been flooded since 5 a.m. She has moved to her parents' house on higher ground. I have never seen this much rain in August before.",
+    {en:"Several highways have been closed, and train services on the east coast have been suspended until further notice. My colleague texted me that her neighborhood has been flooded since 5 a.m. She has moved to her parents' house on higher ground. I have never seen this much rain in August before.",
      cn:"好幾條高速公路已經封閉，東海岸的火車也停駛到另行通知為止。我同事傳訊息跟我說，她家那一帶從早上五點就開始淹水。她已經搬去住在高處的爸媽家了。我從來沒有在八月看過這麼大的雨。"},
     {en:"The good news is that the typhoon is expected to turn north tonight and move away from Taiwan by tomorrow afternoon. I have already rebooked my train ticket for Friday. For now, I am working from home and hoping the power does not go out.",
      cn:"好消息是颱風預計今晚會轉向北方，明天下午就會離開台灣。我已經把火車票改訂到週五了。現在我先在家工作，希望不要停電。"}
@@ -16137,9 +16137,9 @@ articles:[
     {w:"work from home",ipa:"/wɝːk frəm hoʊm/",pos:"phr.",cn:"在家工作",def:"To do your job at home instead of going to the office.",ex:"Many people still work from home two days a week.",exCn:"很多人現在仍然每週在家工作兩天。"}
   ],
   questions:[
-    {q:"Why has the writer's trip been cancelled?",qCn:"作者的行程為什麼被取消？",
+    {q:"Why has the writer's trip been canceled?",qCn:"作者的行程為什麼被取消？",
      opts:["A. The train broke down","B. Because of the typhoon","C. The ticket was too expensive","D. The office is closed today"],
-     optsCn:["A. 火車故障", "B. 因為颱風", "C. 車票太貴", "D. 辦公室今天關門"],ans:1,expl:"my trip has been cancelled because of the typhoon。"},
+     optsCn:["A. 火車故障", "B. 因為颱風", "C. 車票太貴", "D. 辦公室今天關門"],ans:1,expl:"my trip has been canceled because of the typhoon。"},
     {q:"What has the writer's colleague done?",qCn:"作者的同事做了什麼？",
      opts:["A. Gone to work anyway","B. Stayed in her flooded house","C. Moved to her parents' house","D. Taken the train to Taipei"],
      optsCn:["A. 照樣去上班", "B. 留在淹水的家裡", "C. 搬去爸媽家", "D. 搭火車去台北"],ans:2,expl:"She has moved to her parents' house on higher ground."},
@@ -16148,8 +16148,8 @@ articles:[
      optsCn:["A. 我本來應該搭火車。", "B. 好幾條公路已經被封閉。", "C. 颱風預計轉向北方。", "D. 我正在家工作。"],ans:1,expl:"have been closed ＝ have been + 過去分詞，是現在完成式的被動語態。"}
   ],
   upgrade:[
-    {b1:"They cancelled my trip. The typhoon is very bad.",
-     b2:"My trip has been cancelled because of the typhoon.",
+    {b1:"They canceled my trip. The typhoon is very bad.",
+     b2:"My trip has been canceled because of the typhoon.",
      note:"重點是「我的行程」不是「誰取消的」，用被動把受影響的事放前面；because of 接名詞比分兩句簡潔。", "sp": "My trip got called off because of the typhoon.", "spNote": "call off（取消）在口語的使用頻率遠高於 cancel。", "b1Cn": "他們取消了我的行程。颱風很嚴重。", "b2Cn": "我的行程因為颱風被取消了。", "spCn": "我的行程因為颱風被取消了。"},
     {b1:"The rain started last night. It is still raining now.",
      b2:"More than 200 millimetres of rain has fallen overnight.",
@@ -16162,10 +16162,10 @@ articles:[
   title:"Grounded by the Flood",
   titleCn:"被風雨困在機場",
   focus:"被動語態：描述天氣造成的取消、延誤與官方安排",
-  intro:"完全原創的機場情境文。注意「事情發生在我身上、但不是我做的」全部用被動：was cancelled、were grounded、were told、was rebooked。讀的時候把每個 be + 過去分詞畫出來，想一想動作的執行者是誰、為什麼不用說出來。",
+  intro:"完全原創的機場情境文。注意「事情發生在我身上、但不是我做的」全部用被動：was canceled、were grounded、were told、was rebooked。讀的時候把每個 be + 過去分詞畫出來，想一想動作的執行者是誰、為什麼不用說出來。",
   "spoken": [{"en":"I got to the airport and the whole departure board was red — my flight got grounded 'cause of a typhoon heading for Taiwan.","cn":"我到機場一看，整個航班表都是紅的——颱風撲向台灣，我的班機被停飛了。"},{"en":"The terminal filled up fast. They handed out meal vouchers around noon, which calmed everybody down a bit.","cn":"航廈很快就擠滿人。中午他們發了餐券，大家才稍微冷靜下來。"},{"en":"Watching the flood videos from Taiwan on my phone, I got why the airline was playing it safe.","cn":"在手機上看到台灣的淹水影片，我就懂航空公司為什麼這麼謹慎了。"},{"en":"Two takeaways: never book a big meeting for the day you land, and the calmest person in line always gets helped first.","cn":"兩個心得：重要會議千萬別排在落地當天，還有排隊時最冷靜的人永遠最先被服務。"}],
   paras:[
-    {en:"When I arrived at the airport on Tuesday morning, the departure board was covered in red. My flight to Taipei had been cancelled, and at first no explanation was given. Ten minutes later an announcement was made in three languages: a typhoon was approaching the north coast of Taiwan, and every morning flight to the island had been grounded until further notice.",
+    {en:"When I arrived at the airport on Tuesday morning, the departure board was covered in red. My flight to Taipei had been canceled, and at first no explanation was given. Ten minutes later an announcement was made in three languages: a typhoon was approaching the north coast of Taiwan, and every morning flight to the island had been grounded until further notice.",
      cn:"週二早上我抵達機場時，出境看板一片紅字。我飛台北的航班被取消了，而且一開始沒有給任何說明。十分鐘後，機場用三種語言廣播：颱風正在接近台灣北部海岸，所有飛往台灣的早班機都被停飛，直到另行通知。"},
     {en:"The terminal filled quickly. Long queues formed at the service counters, where we were told that nothing could be confirmed until the storm's path became clearer. Meal vouchers were handed out around noon, which calmed people down a little. I was offered a seat on a flight two days later, but I asked to be put on the waiting list for the next evening instead.",
      cn:"航廈很快就擠滿了人。服務櫃檯前排起長長的隊伍，我們被告知在颱風路徑明朗之前，什麼都無法確認。中午前後發放了餐券，人群才稍微冷靜下來。航空公司給我兩天後的機位，但我要求改排隔天晚上的候補名單。"},
@@ -16186,7 +16186,7 @@ articles:[
     {w:"out of your control",ipa:"/aʊt əv jɚ kənˈtroʊl/",pos:"phr.",cn:"不在你的掌控之中",def:"Something you cannot change or decide.",ex:"Don't blame yourself for the bad reviews; the delivery delays were out of your control.",exCn:"別因為那些負評責怪自己，送貨延誤不在你的掌控之中。"}
   ],
   questions:[
-    {q:"Why was the writer's flight cancelled?",qCn:"作者的班機為什麼被取消？",
+    {q:"Why was the writer's flight canceled?",qCn:"作者的班機為什麼被取消？",
      opts:["A. The plane had a technical problem","B. A typhoon was approaching Taiwan","C. The airline overbooked the flight","D. The airport in Vietnam was flooded"],
      optsCn:["A. 飛機有技術問題", "B. 颱風正在接近台灣", "C. 航空公司超賣機位", "D. 越南的機場淹水"],ans:1, expl:"廣播說 a typhoon was approaching the north coast of Taiwan，所以所有早班機 had been grounded。"},
     {q:"What did the writer ask the airline to do?",qCn:"作者請航空公司做什麼？",
@@ -16200,8 +16200,8 @@ articles:[
      optsCn:["A. 航廈很快就擠滿了人。", "B. 我理解航空公司為何謹慎。", "C. 中午時發放了餐券。", "D. 整個經歷教了我兩件事。"],ans:2, expl:"were handed out ＝ be 動詞 + 過去分詞，是被動語態；其他三句都是主動。"}
   ],
   upgrade:[
-    {b1:"The airline cancelled my flight because of the typhoon.",
-     b2:"My flight was cancelled, and no explanation was given at first.",
+    {b1:"The airline canceled my flight because of the typhoon.",
+     b2:"My flight was canceled, and no explanation was given at first.",
      note:"報告壞消息時，重點是「我的航班」而不是「誰取消的」，用被動把受影響的東西放到句首，語氣也更客觀。", "sp": "They scrapped my flight and didn't even tell us why at first.", "spNote": "scrap（砍掉、取消）、didn't even（甚至沒）是抱怨場景的口語。", "b1Cn": "航空公司因為颱風取消了我的班機。", "b2Cn": "我的班機被取消了，而且一開始沒有任何說明。", "spCn": "他們把我的班機砍了，一開始甚至沒說為什麼。"},
     {b1:"They told us to wait until they knew the storm's path.",
      b2:"We were told that nothing could be confirmed until the storm's path became clearer.",
@@ -16226,13 +16226,13 @@ articles:[
      cn:"Dolphin 是一個中度颱風，最大持續風速為每小時 144 公里，暴風半徑 280 公里。它在週六與週日最接近台灣，但從未預期會在此登陸。預報人員說它應該會轉而抵達中國浙江省。"},
     {en:"A typhoon does not have to land to cause problems. The heaviest rain fell on northern Taiwan and the central mountains, and the mountainous areas north of Taichung were placed under the highest rainfall alert. Long swells were expected along the north and east coasts, as well as around Green Island, Orchid Island and the Hengchun Peninsula, until Monday.",
      cn:"颱風不需要登陸也能造成問題。最強的降雨落在台灣北部與中央山區，台中以北的山區被列入最高等級的降雨警戒。北部與東部海岸，以及綠島、蘭嶼與恆春半島一帶，預期到週一都會有長浪。"},
-    {en:"The advice was simple: stay away from the coastline and avoid all water activities. After the storm passed, southwesterly winds brought scattered showers to the southwest, while most of the island stayed hot and sunny with afternoon thunderstorms in the north and centre.",
+    {en:"The advice was simple: stay away from the coastline and avoid all water activities. After the storm passed, southwesterly winds brought scattered showers to the southwest, while most of the island stayed hot and sunny with afternoon thunderstorms in the north and center.",
      cn:"官方建議很簡單：遠離海岸線，避免所有水域活動。風暴過後，西南風為西南部帶來零星陣雨，而全島大部分地區則維持炎熱晴朗，北部與中部午後有雷雨。"}
   ],
   target:[
     {w:"issue a warning",ipa:"/ˈɪʃuː ə ˈwɔːrnɪŋ/",pos:"phr.",cn:"發布警報",def:"To officially tell the public about a danger.",ex:"The park rangers had to issue a warning after bears were spotted near the campsite.",exCn:"營地附近發現熊的蹤跡後，公園管理員必須發布警告。"},
     {w:"sustained winds",ipa:"/səˈsteɪnd wɪndz/",pos:"n.",cn:"持續風速",def:"Wind speed measured over a period of time, not a single gust.",ex:"Ferries stop running when sustained winds on the lake stay too strong for safe travel.",exCn:"當湖面的持續風速一直太強、無法安全航行時，渡輪就會停駛。"},
-    {w:"storm radius",ipa:"/stɔːrm ˈreɪdiəs/",pos:"n.",cn:"暴風半徑",def:"The distance from the centre of a storm to its outer edge.",ex:"The storm radius is so wide that the whole island will feel strong winds.",exCn:"暴風半徑非常大，全島都會感受到強風。"},
+    {w:"storm radius",ipa:"/stɔːrm ˈreɪdiəs/",pos:"n.",cn:"暴風半徑",def:"The distance from the center of a storm to its outer edge.",ex:"The storm radius is so wide that the whole island will feel strong winds.",exCn:"暴風半徑非常大，全島都會感受到強風。"},
     {w:"make landfall",ipa:"/meɪk ˈlændfɔːl/",pos:"phr.",cn:"登陸",def:"When a storm reaches land from the sea.",ex:"Residents boarded up their windows in case the hurricane would make landfall overnight.",exCn:"居民用木板封住窗戶，以防颶風在夜裡登陸。"},
     {w:"forecaster",ipa:"/ˈfɔːrkæstɚ/",pos:"n.",cn:"預報人員",def:"A person whose job is to say what the weather will be.",ex:"The TV forecaster promised clear skies, so we packed a picnic for the beach.",exCn:"電視上的氣象預報員說會是晴天，所以我們準備了野餐去海邊。"},
     {w:"alert",ipa:"/əˈlɝːt/",pos:"n.",cn:"警戒（等級）",def:"An official warning about a possible danger.",ex:"The city raised its heat alert, urging older people to stay indoors during the afternoon.",exCn:"市政府提高了高溫警戒，呼籲長者下午待在室內。"},
@@ -16244,10 +16244,10 @@ articles:[
      opts:["A. Northern Taiwan","B. Green Island","C. Zhejiang Province, China","D. The Hengchun Peninsula"],
      optsCn:["A. 台灣北部", "B. 綠島", "C. 中國浙江省", "D. 恆春半島"],ans:2, expl:"Forecasters said it would probably reach China's Zhejiang Province instead。"},
     {q:"Which area was under the highest rainfall alert?",qCn:"哪個地區的降雨警戒最高？",
-     opts:["A. Southwestern plains","B. Mountainous areas north of Taichung","C. Orchid Island","D. Taipei city centre"],
+     opts:["A. Southwestern plains","B. Mountainous areas north of Taichung","C. Orchid Island","D. Taipei city center"],
      optsCn:["A. 西南平原", "B. 台中以北的山區", "C. 蘭嶼", "D. 台北市中心"],ans:1, expl:"the mountainous areas north of Taichung were placed under the highest rainfall alert。"},
     {q:"What does \"a storm radius of 280 kilometres\" tell us?",qCn:"「暴風半徑 280 公里」告訴我們什麼？",
-     opts:["A. How fast the storm moved","B. How far the storm's edge is from its centre","C. How much rain fell","D. How long the warning lasted"],
+     opts:["A. How fast the storm moved","B. How far the storm's edge is from its center","C. How much rain fell","D. How long the warning lasted"],
      optsCn:["A. 颱風移動多快", "B. 暴風邊緣離中心多遠", "C. 下了多少雨", "D. 警報持續多久"],ans:1, expl:"radius ＝ 半徑，指風暴中心到外緣的距離。"},
     {q:"Why were forecasters fairly confident about the storm's path?",qCn:"預報員為什麼對路徑相當有把握？",
      opts:["A. It was very small","B. It was moving slowly, at only 10 kph","C. It had already landed","D. It changed direction often"],
@@ -17938,7 +17938,7 @@ grammar:[
       "why": "will be having completed 把進行式和完成式硬疊成四層，英文沒有這種形狀。想講截止線之前已經完成，就只用 will have 加過去分詞；想講那一刻正在搬，才是 will be moving。"
     },
     {
-      "bad": "At the end of 2027 the programme will have been paired every station.",
+      "bad": "At the end of 2027 the program will have been paired every station.",
       "good": "By the end of 2027 every station will have been paired with a hospital.",
       "why": "這一句有兩個問題：at the end of 應該換成 by，截止線才站得住；而且 pair 的動作是落在 station 身上，主詞要換成被配對的那一方，用 will have been paired 的被動。寫公告時先確定誰是受影響的人，再決定主詞。"
     }
@@ -23243,7 +23243,7 @@ grammar:[
       "why": "used to 講的是「反覆的常態」，不是「持續了多久」，所以它和 for 加一段時間互相排斥。中文的「她以前在河內辦公室做了六年」把兩個意思合在一起講，英文必須選一個：要長度就用過去簡單式，要常態對照就把 for six years 拿掉。"
     },
     {
-      "bad": "In the past, the plant used to run three shifts, but now it does not any more.",
+      "bad": "In the past, the plant used to run three shifts, but now it does not anymore.",
       "good": "The plant used to run three shifts.",
       "why": "一句話裡標了三次「過去」：In the past、used to、but now it does not。這不是文法錯，而是寫作問題——讀者會覺得作者不信任他們。留 used to 就夠了；真要寫後半句，就給新資訊，例如 Today it runs two。"
     },
@@ -23263,7 +23263,7 @@ grammar:[
       "q": "Which version is the best piece of writing?",
       "qCn": "哪一個版本的寫作品質最好？",
       "opts": [
-        "A. In the past, trains used to stop here, but now they do not stop here any more.",
+        "A. In the past, trains used to stop here, but now they do not stop here anymore.",
         "B. Trains used to stop here. The platform is now a cycle path.",
         "C. Trains used to stop here in the past.",
         "D. Trains were used to stop here."
@@ -24414,7 +24414,7 @@ grammar:[
             "離開比開會更早"
           ],
           [
-            "He apologised.",
+            "He apologized.",
             "He had forgotten her birthday.",
             "忘記比道歉更早"
           ]
@@ -24427,7 +24427,7 @@ grammar:[
           "note": "主時間點是「教室是空的」，下課比它更早"
         },
         {
-          "en": "She did not recognise the building, because the owners had painted it grey.",
+          "en": "She did not recognize the building, because the owners had painted it gray.",
           "cn": "她認不出那棟樓，因為屋主把它漆成灰色了。",
           "note": "漆牆比認不出更早"
         },
@@ -24935,8 +24935,8 @@ grammar:[
   ],
   "traps": [
     {
-      "bad": "The customer had been receiving the wrong part, so we apologised in the press release.",
-      "good": "The customer had received the wrong part, so we apologised in the press release.",
+      "bad": "The customer had been receiving the wrong part, so we apologized in the press release.",
+      "good": "The customer had received the wrong part, so we apologized in the press release.",
       "why": "文法上兩句都對，但對外文件用 had been receiving 等於昭告「這件事持續了一段時間」，等於自己遞出一段可以被追問的期間。對外只交代結果，過程留在內部報告裡。這是語域判斷，不是對錯判斷。"
     },
     {
@@ -25459,7 +25459,7 @@ grammar:[
           "note": "打掃在前，客人到在後"
         },
         {
-          "en": "I did not recognise the street because it had changed so much.",
+          "en": "I did not recognize the street because it had changed so much.",
           "cn": "我認不出那條街，因為它變太多了。",
           "note": "改變發生在「我認不出」之前"
         },

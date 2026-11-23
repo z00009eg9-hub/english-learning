@@ -511,9 +511,9 @@ window.VIDEO.bk20260707 = {
     delayed: { t: "was delayed because of bad weather", cn: "因為天氣不好而延誤", tag: ["被動", "because of"],
       note: "delay 是「使延誤」，班機是被延誤的，所以用被動 was delayed；because of／due to 後面接名詞。",
       ex: "The meeting was delayed because of a power cut.", exCn: "會議因為停電而延後了。" },
-    cancelled: { t: "the flight is cancelled", cn: "班機取消了", tag: ["旅遊"],
+    canceled: { t: "the flight is canceled", cn: "班機取消了", tag: ["旅遊"],
       note: "cancel 的過去分詞美式拼 canceled、英式 cancelled，兩種都對；「已經被取消」也可說 has been cancelled。",
-      ex: "The concert was cancelled at the last minute.", exCn: "演唱會在最後一刻被取消了。" },
+      ex: "The concert was canceled at the last minute.", exCn: "演唱會在最後一刻被取消了。" },
     rebook: { t: "rebook my flight", cn: "重新訂位", tag: ["旅遊實用句"],
       note: "re- 表示「再一次」：rebook 重新訂、reschedule 改時間。班機取消時就問 Can I rebook my flight?",
       ex: "Can I rebook my hotel for next weekend?", exCn: "我可以把飯店改訂到下週末嗎？" },
@@ -563,7 +563,7 @@ window.VIDEO.bk20260707 = {
   lines: [
     /* ---------- 0 開場 ---------- */
     { ch: 0, sp: "N", vis: { type: "title" },
-      en: "Welcome back. Today, Anita's flight is delayed, and then it's cancelled.",
+      en: "Welcome back. Today, Anita's flight is delayed, and then it's canceled.",
       cn: "歡迎回來。今天 Anita 的班機先延誤，然後被取消了。" },
     { ch: 0, sp: "N", vis: { type: "title" },
       en: "Listen for how she asks about a refund and finds her train platform.",
@@ -582,9 +582,9 @@ window.VIDEO.bk20260707 = {
       cn: "是的，很抱歉。它是因為天氣不好而延誤的。",
       hi: [{ t: "was delayed because of bad weather", cn: "因為天氣不好而延誤", k: "delayed", c: 1 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "va20260707_02" },
-      en: "And I'm afraid we just announced the flight is cancelled.",
+      en: "And I'm afraid we just announced the flight is canceled.",
       cn: "而且很遺憾，我們剛剛宣布班機取消了。",
-      hi: [{ t: "the flight is cancelled", cn: "班機取消了", k: "cancelled", c: 2 }] },
+      hi: [{ t: "the flight is canceled", cn: "班機取消了", k: "canceled", c: 2 }] },
     { ch: 1, sp: "A", vis: { type: "scene", art: "va20260707_03" },
       en: "Oh no. Can I rebook my flight — is there another available flight today?",
       cn: "糟糕。我可以重新訂位嗎——今天還有其他可搭的班機嗎？",
@@ -607,7 +607,7 @@ window.VIDEO.bk20260707 = {
       cn: "我需要付取消費用嗎？",
       hi: [{ t: "pay a cancellation fee", cn: "付取消費用", k: "fee", c: 1 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "va20260707_07" },
-      en: "No, you don't have to pay anything. We cancelled it, not you.",
+      en: "No, you don't have to pay anything. We canceled it, not you.",
       cn: "不用，您不必付任何費用。是我們取消的，不是您。",
       hi: [{ t: "don't have to pay", cn: "不必付", k: "donthaveto", c: 3 }] },
     { ch: 1, sp: "A", vis: { type: "scene", art: "va20260707_08" },
@@ -684,7 +684,7 @@ window.VIDEO.bk20260707 = {
       vis: { type: "pattern", kick: "被動 ＋ because of／due to ＋ 名詞", art: "cloudRain",
         rows: [
           { lab: "because of", blocks: [{ t: "My flight", k: "s" }, { t: "was delayed", k: "v" }, { t: "because of", k: "n" }, { t: "bad weather", k: "o" }] },
-          { lab: "due to", blocks: [{ t: "The train", k: "s" }, { t: "has been cancelled", k: "v" }, { t: "due to", k: "n" }, { t: "an accident", k: "o" }] }
+          { lab: "due to", blocks: [{ t: "The train", k: "s" }, { t: "has been canceled", k: "v" }, { t: "due to", k: "n" }, { t: "an accident", k: "o" }] }
         ],
         note: "because of／due to 後面接名詞；because 後面要接完整子句（主詞＋動詞）。" },
       en: "My flight was delayed because of bad weather. The flight is delayed, so we use the passive.",
@@ -8932,7 +8932,7 @@ window.VIDEO.bk20260122 = {
       ex: "The hotel was beautiful. However, the service was slow.", exCn: "飯店很漂亮。然而，服務很慢。" },
     asaresult: { t: "As a result", cn: "因此、結果", tag: ["連接詞", "結果"],
       note: "because 說原因，as a result 說結果，兩個一起用答案就有邏輯。As a result 後面接完整句子，記得加逗號。",
-      ex: "It rained all week. As a result, the game was cancelled.", exCn: "整週都在下雨。因此，比賽取消了。" },
+      ex: "It rained all week. As a result, the game was canceled.", exCn: "整週都在下雨。因此，比賽取消了。" },
     compare: { t: "compare themselves to", cn: "把自己和……比較", tag: ["反身代名詞", "B2 用法"],
       note: "compare 後面一定要有受詞；「把自己跟……比」要說 compare themselves to／with，反身代名詞不能省。",
       ex: "Don't compare yourself to other people online.", exCn: "別把自己和網路上的人比較。" },
@@ -20143,7 +20143,7 @@ window.VIDEO.bk20260609 = {
       cn: "很好。現在說細節——她穿戴著什麼？",
       hi: [{ t: "is she wearing", cn: "穿戴著", k: "wearing", c: 3 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "va20260609_02" },
-      en: "She is wearing a grey coat, a colorful scarf, glasses, and earrings.",
+      en: "She is wearing a gray coat, a colorful scarf, glasses, and earrings.",
       cn: "她穿著灰色外套、一條色彩鮮豔的圍巾，戴著眼鏡和耳環。",
       hi: [{ t: "She is wearing", cn: "穿戴著", k: "wearing", c: 3 }] },
     { ch: 1, sp: "A", vis: { type: "scene", art: "va20260609_03" },
@@ -20850,7 +20850,7 @@ window.VIDEO.bk20260616 = {
       hi: [{ t: "were flooded", cn: "被淹了", k: "flooded", c: 2 },
            { t: "got stuck", cn: "卡住", k: "getstuck", c: 4 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "va20260616_08" },
-      en: "The typhoon messed up flight schedules too. My sister's flight got cancelled.",
+      en: "The typhoon messed up flight schedules too. My sister's flight got canceled.",
       cn: "颱風也打亂了班機時刻表。我姐姐的班機被取消了。",
       hi: [{ t: "messed up", cn: "打亂", k: "messup", c: 1 }] },
     { ch: 1, sp: "A", vis: { type: "scene", art: "va20260616_09" },
@@ -21848,7 +21848,7 @@ window.VIDEO.bk20260625 = {
       ex: "It takes courage to speak up in a meeting.", exCn: "在會議上發言需要勇氣。" },
     becauseof: { t: "because of", cn: "因為（＋名詞）", tag: ["because of + N"],
       note: "because of 後面只能接名詞片語：because of the rain。❌ because of it was raining。",
-      ex: "The tour was cancelled because of the typhoon.", exCn: "導覽因為颱風取消了。" },
+      ex: "The tour was canceled because of the typhoon.", exCn: "導覽因為颱風取消了。" },
     because: { t: "because", cn: "因為（＋子句）", tag: ["because + S + V"],
       note: "because 後面要接完整子句（主詞＋動詞）：because it was raining。",
       ex: "We stayed inside because it was raining hard.", exCn: "我們待在室內，因為雨下得很大。" },
@@ -21991,7 +21991,7 @@ window.VIDEO.bk20260625 = {
         def: "Stuck in a place and unable to leave.",
         cn: "被困在某地、無法離開。",
         note: "Usually passive: we were stranded at the airport." },
-      en: "Stranded. We were stranded at the airport because all flights were cancelled.",
+      en: "Stranded. We were stranded at the airport because all flights were canceled.",
       cn: "Stranded（滯留）。因為所有班機取消，我們滯留在機場。",
       hi: [{ t: "stranded", cn: "滯留", k: "stranded", c: 2 }] },
 
@@ -22236,9 +22236,9 @@ window.VIDEO.bk20260630 = {
     returnticket: { t: "a return ticket", cn: "來回票", tag: ["車票種類"],
       note: "return ticket ＝ round-trip ticket（美式），兩個都是來回票。",
       ex: "Can I get a return ticket for Sunday?", exCn: "我可以買週日的來回票嗎？" },
-    hasbeencancelled: { t: "has been cancelled", cn: "已經被取消了", tag: ["現在完成式被動"],
+    hasbeencancelled: { t: "has been canceled", cn: "已經被取消了", tag: ["現在完成式被動"],
       note: "has／have been ＋ 過去分詞：強調現在仍是取消狀態，車站公告最常用。",
-      ex: "The 8:15 train has been cancelled.", exCn: "8:15 的列車已經取消了。" },
+      ex: "The 8:15 train has been canceled.", exCn: "8:15 的列車已經取消了。" },
     dueto: { t: "due to", cn: "由於（＋名詞）", tag: ["正式用語"],
       note: "due to 後面接名詞，比 because 正式，常用在公告與書面英文。",
       ex: "The delay is due to heavy rain.", exCn: "誤點是因為大雨。" },
@@ -22304,9 +22304,9 @@ window.VIDEO.bk20260630 = {
       hi: [{ t: "If I cancel early, I will", cn: "第一條件句", k: "firstcond", c: 1 },
            { t: "get a refund", cn: "拿到退款", k: "refund", c: 2 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "va20260630_05" },
-      en: "Exactly. And listen for announcements — sometimes a train has been cancelled due to an accident.",
+      en: "Exactly. And listen for announcements — sometimes a train has been canceled due to an accident.",
       cn: "正是。也請注意廣播——有時候列車會因為事故被取消。",
-      hi: [{ t: "has been cancelled", cn: "已經被取消", k: "hasbeencancelled", c: 4 },
+      hi: [{ t: "has been canceled", cn: "已經被取消", k: "hasbeencancelled", c: 4 },
            { t: "due to", cn: "由於", k: "dueto", c: 3 }] },
     { ch: 1, sp: "A", vis: { type: "scene", art: "va20260630_06" },
       en: "What if it's just late?",
@@ -22422,13 +22422,13 @@ window.VIDEO.bk20260630 = {
     { ch: 4, sp: "N",
       vis: { type: "pattern", kick: "現在完成式被動（車站公告）", art: "departureBoard",
         rows: [
-          { lab: "公告", blocks: [{ t: "The train", k: "s" }, { t: "has been cancelled", k: "v", add: true }, { t: "due to an accident", k: "n", add: true }] },
+          { lab: "公告", blocks: [{ t: "The train", k: "s" }, { t: "has been canceled", k: "v", add: true }, { t: "due to an accident", k: "n", add: true }] },
           { lab: "誤點", blocks: [{ t: "The train", k: "s" }, { t: "will be delayed", k: "v" }, { t: "for ten minutes", k: "n" }] }
         ],
         note: "has been ＋ 過去分詞強調現在仍然取消；due to 後面接名詞。" },
-      en: "The train has been cancelled due to an accident, and the next one will be delayed for ten minutes.",
+      en: "The train has been canceled due to an accident, and the next one will be delayed for ten minutes.",
       cn: "列車因為一場事故已經取消，下一班將誤點十分鐘。",
-      hi: [{ t: "has been cancelled", cn: "已經被取消", k: "hasbeencancelled", c: 1 },
+      hi: [{ t: "has been canceled", cn: "已經被取消", k: "hasbeencancelled", c: 1 },
            { t: "will be delayed for ten minutes", cn: "將誤點十分鐘", k: "delayedfor", c: 4 }] },
 
     /* ---------- 5 作業訂正 ---------- */
@@ -22462,13 +22462,13 @@ window.VIDEO.bk20260630 = {
       en: "If I were in Taiwan now, I would visit my students.",
       cn: "如果我現在在台灣，我會去看我的學生。（第二條件句一律用 were）",
       hi: [{ t: "If I were", cn: "如果我在", k: "ifwere", c: 3 }] },
-    { ch: 6, sp: "N", vis: { type: "quiz", q: "The train ___ been cancelled due to an accident.", a: "has", n: 3 },
-      en: "The train ___ been cancelled due to an accident.", say: "The train, blank, been cancelled due to an accident.",
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The train ___ been canceled due to an accident.", a: "has", n: 3 },
+      en: "The train ___ been canceled due to an accident.", say: "The train, blank, been canceled due to an accident.",
       cn: "列車因為一場事故＿＿被取消。", pause: 4000 },
-    { ch: 6, sp: "N", vis: { type: "quiz", q: "The train ___ been cancelled due to an accident.", a: "has", n: 3, show: true },
-      en: "The train has been cancelled due to an accident.",
+    { ch: 6, sp: "N", vis: { type: "quiz", q: "The train ___ been canceled due to an accident.", a: "has", n: 3, show: true },
+      en: "The train has been canceled due to an accident.",
       cn: "列車因為一場事故已經被取消。（現在完成式被動）",
-      hi: [{ t: "has been cancelled", cn: "已經被取消", k: "hasbeencancelled", c: 1 },
+      hi: [{ t: "has been canceled", cn: "已經被取消", k: "hasbeencancelled", c: 1 },
            { t: "due to", cn: "由於", k: "dueto", c: 4 }] },
     { ch: 6, sp: "N", vis: { type: "end" },
       en: "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
@@ -23933,7 +23933,7 @@ window.VIDEO.bk20250724 = {
      +'<path d="M152 84 h20 v18 a10 10 0 0 1 -20 0 z" fill="'+B+'" stroke="'+D+'" stroke-width="2.5"/>'
      +'<path d="M146 30 h32" stroke="'+D+'" stroke-width="4" stroke-linecap="round"/>'
      +'<line x1="14" y1="134" x2="186" y2="134" '+st+'/>'),
-    /* do someone a favour：一隻手把牛奶遞給另一隻手（give someone a hand） */
+    /* do someone a favor：一隻手把牛奶遞給另一隻手（give someone a hand） */
     lendAHand: svg(
       '<path d="M84 44 L100 30 L116 44 v52 H84 z" fill="#fff" '+st+'/>'
      +'<path d="M84 60 h32" stroke="'+D+'" stroke-width="2.5"/>'
@@ -24004,9 +24004,9 @@ window.VIDEO.bk20250729 = {
     makedecision: { t: "make a decision", cn: "做決定", tag: ["make + 名詞", "易錯"],
       note: "決定用 make：make a decision／make a choice。不可說 do a decision。",
       ex: "We have to make a decision before Friday.", exCn: "我們必須在週五前做決定。" },
-    dofavour: { t: "do me a favour", cn: "幫我一個忙", tag: ["do + 人 + 名詞"],
-      note: "do someone a favour ＝ give someone a hand（幫忙）；人放在中間。",
-      ex: "Could you do me a favour and print this?", exCn: "可以幫我一個忙，把這個印出來嗎？" },
+    dofavour: { t: "do me a favor", cn: "幫我一個忙", tag: ["do + 人 + 名詞"],
+      note: "do someone a favor ＝ give someone a hand（幫忙）；人放在中間。",
+      ex: "Could you do me a favor and print this?", exCn: "可以幫我一個忙，把這個印出來嗎？" },
     doexperiment: { t: "do the experiment", cn: "做實驗", tag: ["do + 名詞"],
       note: "實驗用 do 或 carry out：do an experiment／carry out an experiment。不可說 make an experiment。",
       ex: "We did an experiment to test the metal.", exCn: "我們做了一個實驗來測試那個金屬。" },
@@ -24074,9 +24074,9 @@ window.VIDEO.bk20250729 = {
       cn: "我知道。新租約的事我還得做個決定。",
       hi: [{ t: "make a decision", cn: "做決定", k: "makedecision", c: 4 }] },
     { ch: 1, sp: "A", vis: { type: "scene", art: "lendAHand" },
-      en: "Could you do me a favour and grab some milk on the way home?",
+      en: "Could you do me a favor and grab some milk on the way home?",
       cn: "可以幫我個忙，回家路上順便買牛奶嗎？",
-      hi: [{ t: "do me a favour", cn: "幫我一個忙", k: "dofavour", c: 1 }] },
+      hi: [{ t: "do me a favor", cn: "幫我一個忙", k: "dofavour", c: 1 }] },
     { ch: 1, sp: "T", vis: { type: "scene", art: "va20250729_03" },
       en: "Sure. Consider it done.",
       cn: "當然，包在我身上。" },
@@ -24148,10 +24148,10 @@ window.VIDEO.bk20250729 = {
     /* ---------- 3 片語搭配 ---------- */
     { ch: 3, sp: "N",
       vis: { type: "family", core: "do", coreCn: "do ＋ 家事、練習、實驗", art: "choreChart",
-        items: [{ t: "do the washing", cn: "洗衣服" }, { t: "do the ironing", cn: "燙衣服" }, { t: "do your homework", cn: "寫功課" }, { t: "do an experiment", cn: "做實驗" }, { t: "do someone a favour", cn: "幫某人一個忙" }] },
-      en: "Do the washing, do the ironing, do your homework, do an experiment, do someone a favour.",
+        items: [{ t: "do the washing", cn: "洗衣服" }, { t: "do the ironing", cn: "燙衣服" }, { t: "do your homework", cn: "寫功課" }, { t: "do an experiment", cn: "做實驗" }, { t: "do someone a favor", cn: "幫某人一個忙" }] },
+      en: "Do the washing, do the ironing, do your homework, do an experiment, do someone a favor.",
       cn: "洗衣服、燙衣服、寫功課、做實驗、幫某人一個忙。",
-      hi: [{ t: "do someone a favour", cn: "幫某人一個忙", k: "dofavour", c: 1 }] },
+      hi: [{ t: "do someone a favor", cn: "幫某人一個忙", k: "dofavour", c: 1 }] },
     { ch: 3, sp: "N",
       vis: { type: "family", core: "make", coreCn: "make ＋ 決定、結果", art: "doMakeSplit",
         items: [{ t: "make a decision", cn: "做決定" }, { t: "make progress", cn: "取得進展" }, { t: "make a mistake", cn: "犯錯" }, { t: "make friends", cn: "交朋友" }, { t: "make an effort", cn: "付出努力" }] },
@@ -24160,10 +24160,10 @@ window.VIDEO.bk20250729 = {
       hi: [{ t: "make progress", cn: "取得進展", k: "makeprogress", c: 2 }] },
     { ch: 3, sp: "N",
       vis: { type: "family", core: "same meaning", coreCn: "同義替換說法", art: "lendAHand",
-        items: [{ t: "do someone a favour = give someone a hand", cn: "幫忙" }, { t: "make an effort = try hard", cn: "努力" }, { t: "make progress = move forward", cn: "進展" }, { t: "do damage = cause damage", cn: "造成損害" }] },
-      en: "Do someone a favour equals give someone a hand. Make an effort equals try hard.",
-      cn: "do someone a favour ＝ give someone a hand；make an effort ＝ try hard。",
-      hi: [{ t: "Do someone a favour", cn: "幫某人一個忙", k: "dofavour", c: 3 }] },
+        items: [{ t: "do someone a favor = give someone a hand", cn: "幫忙" }, { t: "make an effort = try hard", cn: "努力" }, { t: "make progress = move forward", cn: "進展" }, { t: "do damage = cause damage", cn: "造成損害" }] },
+      en: "Do someone a favor equals give someone a hand. Make an effort equals try hard.",
+      cn: "do someone a favor ＝ give someone a hand；make an effort ＝ try hard。",
+      hi: [{ t: "Do someone a favor", cn: "幫某人一個忙", k: "dofavour", c: 3 }] },
 
     /* ---------- 4 文法 ---------- */
     { ch: 4, sp: "N",
@@ -24319,7 +24319,7 @@ window.VIDEO.bk20250805 = {
       ex: "I'm looking for an opportunity to practice my Chinese speaking.", exCn: "我正在尋找練習中文口說的機會。" },
     jobopp: { t: "job opportunity", cn: "工作機會", tag: ["搭配詞"],
       note: "job opportunity 是工作機會；找工作的地方叫 job centre（美式拼法 center）。",
-      ex: "I got this job opportunity from the job centre near my house.", exCn: "我從家附近的就業中心得到這個工作機會。" },
+      ex: "I got this job opportunity from the job center near my house.", exCn: "我從家附近的就業中心得到這個工作機會。" },
     attend: { t: "attend", cn: "出席、參加", tag: ["單字"],
       note: "attend 是及物動詞，後面直接接活動，不加 in：attend a meeting（❌ attend in a meeting）。",
       ex: "Almost fifty people attended the wedding.", exCn: "將近五十個人參加了婚禮。" },
@@ -24461,8 +24461,8 @@ window.VIDEO.bk20250805 = {
     /* ---------- 3 片語搭配 ---------- */
     { ch: 3, sp: "N",
       vis: { type: "family", core: "opportunity", coreCn: "機會＋常用搭配", art: "openDoorChance",
-        items: [{ t: "give someone the opportunity to", cn: "給某人機會做" }, { t: "look for an opportunity to", cn: "尋找機會做" }, { t: "a job opportunity", cn: "工作機會" }, { t: "the job centre", cn: "就業中心" }] },
-      en: "Look for an opportunity to practice. Find a better job opportunity at the job centre.",
+        items: [{ t: "give someone the opportunity to", cn: "給某人機會做" }, { t: "look for an opportunity to", cn: "尋找機會做" }, { t: "a job opportunity", cn: "工作機會" }, { t: "the job center", cn: "就業中心" }] },
+      en: "Look for an opportunity to practice. Find a better job opportunity at the job center.",
       cn: "尋找練習的機會。在就業中心找到更好的工作機會。",
       hi: [{ t: "Look for an opportunity to practice", cn: "尋找練習的機會", k: "lookfor", c: 1 },
            { t: "job opportunity", cn: "工作機會", k: "jobopp", c: 3 }] },
@@ -24653,7 +24653,7 @@ window.VIDEO.bk20250807 = {
       ex: "He skipped breakfast because he woke up late.", exCn: "他因為睡晚了所以沒吃早餐。" },
     lastminute: { t: "at the last minute", cn: "在最後一刻", tag: ["搭配詞"],
       note: "minute 這裡唸 /ˈmɪn.ɪt/；當形容詞用要加連字號：a last-minute change。",
-      ex: "They cancelled the meeting at the last minute.", exCn: "他們在最後一刻取消了會議。" },
+      ex: "They canceled the meeting at the last minute.", exCn: "他們在最後一刻取消了會議。" },
     prescont: { t: "am / is / are + V-ing", cn: "現在進行式", tag: ["III-C"],
       note: "現在正在進行的動作。I 用 am，he／she／it 用 is，you／we／they 用 are。",
       ex: "Be quiet. The baby is sleeping in the next room.", exCn: "安靜點，寶寶正在隔壁房間睡覺。" },
@@ -27805,7 +27805,7 @@ window.VIDEO.au01 = {
    "vis": {
     "type": "title"
    },
-   "en": "Welcome back. Today we practise answering a customer auditor in English.",
+   "en": "Welcome back. Today we practice answering a customer auditor in English.",
    "cn": "歡迎回來。今天我們練習用英文回答客戶稽核員。"
   },
   {
@@ -28404,7 +28404,7 @@ window.VIDEO.au01 = {
    "vis": {
     "type": "end"
    },
-   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practise speaking.",
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
   }
  ]
@@ -28530,7 +28530,7 @@ window.VIDEO.au02 = {
    "vis": {
     "type": "title"
    },
-   "en": "Welcome back. Today we practise answering a customer auditor in English.",
+   "en": "Welcome back. Today we practice answering a customer auditor in English.",
    "cn": "歡迎回來。今天我們練習用英文回答客戶稽核員。"
   },
   {
@@ -29072,7 +29072,7 @@ window.VIDEO.au02 = {
    "vis": {
     "type": "end"
    },
-   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practise speaking.",
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
   }
  ]
@@ -29198,7 +29198,7 @@ window.VIDEO.au03 = {
    "vis": {
     "type": "title"
    },
-   "en": "Welcome back. Today we practise answering a customer auditor about materials, planning, and shipping.",
+   "en": "Welcome back. Today we practice answering a customer auditor about materials, planning, and shipping.",
    "cn": "歡迎回來。今天我們練習用英文回答客戶稽核員有關資材、生管與出貨的問題。"
   },
   {
@@ -29752,7 +29752,7 @@ window.VIDEO.au03 = {
    "vis": {
     "type": "end"
    },
-   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practise speaking.",
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
   }
  ]
@@ -29878,7 +29878,7 @@ window.VIDEO.au04 = {
    "vis": {
     "type": "title"
    },
-   "en": "Welcome back. Today we practise answering a customer auditor about development and project management.",
+   "en": "Welcome back. Today we practice answering a customer auditor about development and project management.",
    "cn": "歡迎回來。今天我們練習用英文回答客戶稽核員有關開發與專案管理的問題。"
   },
   {
@@ -30376,7 +30376,7 @@ window.VIDEO.au04 = {
    "vis": {
     "type": "end"
    },
-   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practise speaking.",
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
   }
  ]
@@ -46315,7 +46315,7 @@ window.VIDEO.au05 = {
    "vis": {
     "type": "title"
    },
-   "en": "Welcome back. Today we practise answering a customer auditor about quality assurance.",
+   "en": "Welcome back. Today we practice answering a customer auditor about quality assurance.",
    "cn": "歡迎回來。今天我們練習用英文回答客戶稽核員有關品保的問題。"
   },
   {
@@ -46813,7 +46813,7 @@ window.VIDEO.au05 = {
    "vis": {
     "type": "end"
    },
-   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practise speaking.",
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
    "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
   }
  ]

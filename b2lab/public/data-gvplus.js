@@ -5683,12 +5683,12 @@ window.GVPLUS = {
       "q": "Which sentence should be rewritten?",
       "opts": [
         "The depot used to open at four in the morning.",
-        "In the past, the depot used to open early, but now it does not open early any more.",
+        "In the past, the depot used to open early, but now it does not open early anymore.",
         "The depot opens at six now.",
         "The depot was once the only one in the county."
       ],
       "ans": 1,
-      "expl": "第二句在一句話裡標了三次過去（In the past、used to、but now…any more），後半句沒有新資訊。改成 The depot used to open early. It now opens at six. 就乾淨了。"
+      "expl": "第二句在一句話裡標了三次過去（In the past、used to、but now…anymore），後半句沒有新資訊。改成 The depot used to open early. It now opens at six. 就乾淨了。"
     }
   ]
 },
@@ -6629,8 +6629,8 @@ window.GVPLUS = {
         "nt": "退格之後，主角從寄件者換成我"
       },
       {
-        "a": "He forgot her birthday, so he apologised.",
-        "b": "He apologised because he had forgotten her birthday.",
+        "a": "He forgot her birthday, so he apologized.",
+        "b": "He apologized because he had forgotten her birthday.",
         "nt": "原因塞進 because 子句，主句留給道歉本身"
       }
     ]
@@ -7761,7 +7761,7 @@ window.GVPLUS = {
   },
   "quizMore": [
     {
-      "q": "The committee cancelled the trip because two members ___ their passports.",
+      "q": "The committee canceled the trip because two members ___ their passports.",
       "opts": [
         "have lost",
         "had lost",
@@ -12238,7 +12238,7 @@ g12: {
         tagCn: 'however / nevertheless / therefore / moreover',
         items: [
           { en: 'It was raining. However, we went out.', cn: '當時在下雨。不過我們還是出門了。', nt: '前面用句號或分號' },
-          { en: 'The cost was high; therefore, we cancelled.', cn: '成本太高，因此我們取消了。', nt: '分號後面加逗號' },
+          { en: 'The cost was high; therefore, we canceled.', cn: '成本太高，因此我們取消了。', nt: '分號後面加逗號' },
           { en: 'She was tired. Nevertheless, she finished it.', cn: '她很累，儘管如此還是做完了。', nt: '不能當連接詞用逗號串' }
         ] }
     ]
@@ -12253,7 +12253,7 @@ g12: {
     { key: 'cause', icon: 'link',
       title: 'Cause', titleCn: '因果：為什麼會這樣',
       ask: '後面接的是句子還是名詞？',
-      en: 'The flight was cancelled owing to the typhoon.',
+      en: 'The flight was canceled owing to the typhoon.',
       cn: '班機因為颱風取消。',
       why: 'because + 句子；because of / due to / owing to + 名詞。The delay was because the weather was bad 也對，但 The delay was because of the weather was bad（✗）混用了兩種。' },
     { key: 'concession', icon: 'fork',
@@ -15258,7 +15258,7 @@ dg20260826b2: {
     { q: 'In a methods section, which is correct?', opts: ['We collect data over six months.', 'We collected data over six months.', 'We have collected data over six months.', 'We are collecting data over six months.'], ans: 1,
       qCn: '在研究方法段落中，哪一句是正確的？',
       expl: '研究方法描述已完成的動作 → 過去簡單式。' },
-    { q: 'Which emphasises that the situation is still developing?', opts: ['Prices rose in 2022.', 'Prices have risen since 2022.', 'Prices were rising in 2022.', 'Prices rise in 2022.'], ans: 1,
+    { q: 'Which emphasizes that the situation is still developing?', opts: ['Prices rose in 2022.', 'Prices have risen since 2022.', 'Prices were rising in 2022.', 'Prices rise in 2022.'], ans: 1,
       qCn: '哪一句強調情況仍在發展中？',
       expl: 'since + 現在完成式表示延續到現在、尚未結束。' }
   ]
@@ -15322,7 +15322,7 @@ dg20260828b2: {
   steps: [
     { label: '同一個事件', text: '演唱會中途下大雨，主辦方宣布取消。' },
     { label: '純事實版', text: 'Heavy rain forced organizers to cancel the concert.（簡潔、客觀。）' },
-    { label: '敘事版', text: 'Fans were still singing in the downpour when organizers cancelled the show.（有畫面、有情緒。）' },
+    { label: '敘事版', text: 'Fans were still singing in the downpour when organizers canceled the show.（有畫面、有情緒。）' },
     { label: '帶落差版', text: 'The band was preparing for its final song as the announcement came.（暗示可惜。）' },
     { label: '關鍵', text: '三句都正確。選哪一句取決於你寫的是快訊、特寫還是評論。' }
   ],
@@ -15575,7 +15575,7 @@ dg20260904b1: {
     { key: 'context', icon: 'house',
       title: 'In a typhoon', titleCn: '颱風情境的實際用法',
       ask: '你在解釋「人不在」還是「有經驗」？',
-      en: 'The neighbours have gone to the shelter, but we have been there before and it is safe.',
+      en: 'The neighbors have gone to the shelter, but we have been there before and it is safe.',
       cn: '鄰居去避難所了，我們以前去過，那裡很安全。',
       why: '同一句裡兩個都用得上：前半解釋鄰居現在人不在（gone），後半講我們的經驗（been）。' },
     { key: 'why', icon: 'cross',
@@ -15758,7 +15758,7 @@ dg20260904b2: {
     { key: 'mix', icon: 'balance',
       title: 'Why not all past', titleCn: '為什麼不能全部用過去式',
       ask: '你想讓讀者以為結束了嗎？',
-      en: 'The warning remains in force. Three flights were cancelled this morning.',
+      en: 'The warning remains in force. Three flights were canceled this morning.',
       cn: '警報持續生效。今早三班航班取消。',
       why: '全部用過去式會讓整篇讀起來像「事情都過去了」。專業的氣象與新聞寫作靠時態切換告訴讀者：哪些還在發生、哪些已經結束。' }
   ],

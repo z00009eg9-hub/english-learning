@@ -469,13 +469,13 @@ r17:{ unit:"g09", title:"正式書信的被動語態與條件句",
   formula:"I was informed that ...　|　If + 現在式（被動）, 主詞 + will be + p.p.",
   points:[
     "爭議信件的語氣原則是「堅定但不情緒化」。做法是把「你做了什麼」改寫成「什麼被做了」：Half of the deposit had been kept.（而不是 You kept half of my deposit.）——事實一樣，但不變成人身指控。",
-    "常用的正式被動：I was informed that ...、the amount was deducted、an itemised receipt is required、the matter will be taken to ...。",
+    "常用的正式被動：I was informed that ...、the amount was deducted、an itemized receipt is required、the matter will be taken to ...。",
     "條件句用來設定後果，而不是威脅：If the deposit is not returned within fourteen days, the matter will be taken to mediation. 有時間、有動作、沒有情緒。",
     "結構順序：① 陳述事實與金額 ② 列出你的依據（照片、清單、日期）③ 提出兩個具體選項與期限。三句話就夠——這篇文章裡的信只有三句。"
   ],
   examples:[
     {en:"I was informed that NT$12,000 had been deducted for cleaning.",cn:"我接到通知，說已經扣了 12,000 元清潔費。",note:"被動＋轉述"},
-    {en:"An itemised receipt is required before any deduction can be accepted.",cn:"任何扣款在被接受前都需要逐項收據。",note:"雙重被動，語氣正式"},
+    {en:"An itemized receipt is required before any deduction can be accepted.",cn:"任何扣款在被接受前都需要逐項收據。",note:"雙重被動，語氣正式"},
     {en:"If the amount is not refunded by 30 June, mediation will be requested.",cn:"若款項未於 6 月 30 日前退還，將申請調解。",note:"條件句設定後果"}
   ],
   traps:[
@@ -806,22 +806,22 @@ r34:{ unit:"g14", title:"冠詞：a / an、the 與零冠詞",
   ]
 },
 
-r35:{ unit:"g04", title:"already / yet / still 與 not ... any more",
-  formula:"already ＝ 比預期早就已經（肯定句）　|　yet ＝ 還（疑問句、否定句，放句尾）　|　still ＝ 到現在仍然　|　not ... any more ＝ 以前會、現在不會了",
+r35:{ unit:"g04", title:"already / yet / still 與 not ... anymore",
+  formula:"already ＝ 比預期早就已經（肯定句）　|　yet ＝ 還（疑問句、否定句，放句尾）　|　still ＝ 到現在仍然　|　not ... anymore ＝ 以前會、現在不會了",
   points:[
     "already 用在肯定句，表示「比預期早就已經」，位置在助動詞和主要動詞中間：He had already written the address twice. 口語也可以丟到句尾：He wrote it twice already.",
     "yet 只用在疑問句和否定句，而且幾乎都放句尾：Has it left Taiwan yet?（已經離開了嗎？）／ His sister had not received it yet.（還沒收到）。⚠ 肯定句不可以用 yet 代替 already。",
     "still 是「原本的狀態一直沒變」：be 動詞後面（It was still sitting in a warehouse.）、一般動詞前面（She is still wearing it.）、否定時放在 not 前面（she still did not have her coat）。",
-    "⚠ not ... any more（＝ no longer）是「以前是這樣，現在不是了」，放句尾：The Chinese part was not needed any more. 這跟 still（仍然是）剛好相反，也跟 not ... yet（還沒，但預期會）不一樣。"
+    "⚠ not ... anymore（＝ no longer）是「以前是這樣，現在不是了」，放句尾：The Chinese part was not needed anymore. 這跟 still（仍然是）剛好相反，也跟 not ... yet（還沒，但預期會）不一樣。"
   ],
   examples:[
     {en:"Have you paid the deposit yet?",cn:"你已經付訂金了嗎？",note:"疑問句 → yet 放句尾"},
     {en:"I have already sent the form twice.",cn:"我已經把表格寄了兩次。",note:"肯定句 → already 放在 have 和過去分詞之間"},
-    {en:"They do not open on Sundays any more.",cn:"他們星期天已經不開了。",note:"not ... any more：以前開，現在不開"}
+    {en:"They do not open on Sundays anymore.",cn:"他們星期天已經不開了。",note:"not ... anymore：以前開，現在不開"}
   ],
   traps:[
     {bad:"She has yet decided what to send back.",good:"She has already decided what to send back.",why:"yet 不能用在肯定句；「已經」要用 already。yet 只出現在 Has she decided yet? 和 She has not decided yet. 這兩種句型。"},
-    {bad:"The Chinese part was not needed yet.",good:"The Chinese part was not needed any more.",why:"not ... yet 是「還沒，但等一下會」；要講「以前需要、現在不需要了」必須用 not ... any more。"}
+    {bad:"The Chinese part was not needed yet.",good:"The Chinese part was not needed anymore.",why:"not ... yet 是「還沒，但等一下會」；要講「以前需要、現在不需要了」必須用 not ... anymore。"}
   ]
 },
 
