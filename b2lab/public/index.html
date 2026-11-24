@@ -7645,8 +7645,8 @@ function bkMark(s){
   return xTrail(esc(s))
     .replace(/[✗✘]\s*((?:&#39;|&amp;|&quot;|[^（）()；])*)/g,'<span class="wrong wl"> $1</span>')
     .replace(/(不能說|不可說|別說|不能寫成)\s*([A-Za-z][^，。；（(]*)/g,'$1 <span class="wrong strike">$2</span>')
-    .replace(/❌\s*([^（(]*)/g,'<span class="wrong wl">❌ $1</span>')
-    .replace(/✅\s*([^（(]*)/g,'<span class="right">✅ $1</span>')
+    .replace(/❌\s*([^（(✅❌]*)/g,'<span class="wrong wl">❌ $1</span>')
+    .replace(/✅\s*([^（(✅❌]*)/g,'<span class="right">✅ $1</span>')
     .replace(/(✗|✘|×)/g,'<span class="wrong">$1</span>')
     .replace(/(✓|✔)/g,'<span class="right">$1</span>')
     .replace(//g,'✗');
