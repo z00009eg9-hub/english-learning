@@ -24,7 +24,7 @@ root.innerHTML=`<style>
 <aside class="notice" aria-label="新文章提醒" hidden><p class="notice-text" role="status"></p><div class="row"><button class="control notice-view">看看</button><button class="icon coach-mute" hidden>先不要</button><button class="icon notice-dismiss" aria-label="關閉助理提醒">×</button></div></aside>
 <section class="panel" role="dialog" aria-label="Mini果 英文助理" hidden>
 <div class="top"><button class="icon hide" aria-label="隱藏小助理" title="隱藏小助理">−</button><strong>Mini果 英文助理</strong><button class="icon close" aria-label="縮小助理面板">縮小</button></div>
-<p class="sub"></p><div class="actions"><button data-action="search">單字查詢</button><button data-action="read">帶我跟讀</button><button data-action="quiz">單字小測</button><button data-action="practice">句子重組</button><button class="news-action" data-action="news">新文章</button><button data-action="sentence">搜尋句子</button></div>
+<p class="sub"></p><p class="greeting"></p><div class="actions"><button data-action="search">單字查詢</button><button data-action="read">帶我跟讀</button><button data-action="quiz">單字小測</button><button data-action="practice">句子重組</button><button class="news-action" data-action="news">新文章</button><button data-action="sentence">搜尋句子</button></div>
 <div class="foot"><button class="size">縮成迷你（32px）</button><button class="hide">隱藏助理</button></div>
 <div class="output" aria-live="polite"></div><p class="status" role="status"></p>
 </section><button class="launch" aria-label="開啟 Mini果 英文助理" aria-expanded="false" title="點一下開啟，左右拖曳旋轉"><span class="head" aria-hidden="true"></span></button><button class="restore" hidden>顯示助理</button>`;
@@ -61,7 +61,7 @@ function tickCoach(){
  if(coachCompletion&&now-coachCompletion>60000)coachCompletion=0;
  if(coachCompletion&&!coachSession.rewarded){coachCompletion=0;coachSession.rewarded=true;saveCoach();showCoach('有認真學耶……今天的丁丁加分。','coach-done','收下鼓勵','','reward');return;}
  if(!newsReady||!coachPending()||sleeping||now-coachActivity<COACH_IDLE||coachSession.count&&now-coachSession.last<COACH_GAP)return;
- // 留給每日招呼與新文章至少一段閱讀時間，再換成陪讀邀請。
+ // 已顯示的陪讀邀請先保留，避免新提醒蓋過它。
  if(!q('.notice').hidden&&now-noticeAt<COACH_LIFE)return;
  const second=coachSession.count>0;
  if(second&&g.last)showCoach('丁丁先等等，再陪我看看上次那一課嘛。','book','繼續上次',g.last.id);
@@ -113,7 +113,7 @@ async function ensureHead(){
  catch{ /* WebGL 不可用時保留圓形頭像與教學操作。 */ }
  finally{loading=false;animate();}
 }
-function open(){coachReward=false;wake();opened=true;sync();panel.hidden=false;q('.notice').hidden=true;launch.setAttribute('aria-expanded','true');q('.close').focus();ensureHead();animate();}
+function open(){coachReward=false;wake();opened=true;sync();renderGreeting();panel.hidden=false;q('.notice').hidden=true;launch.setAttribute('aria-expanded','true');q('.close').focus();ensureHead();animate();}
 function close(focus=true){coachReward=false;opened=false;panel.hidden=true;launch.setAttribute('aria-expanded','false');stop();animate();if(focus)launch.focus();}
 function size(){host.toggleAttribute('data-mini',mini);q('.size').textContent=mini?'恢復一般大小':'縮成迷你（32px）';}
 launch.onclick=e=>{if(suppressClick&&e.detail!==0){suppressClick=false;e.preventDefault();return;}suppressClick=false;opened?close():open();};q('.close').onclick=()=>close();
@@ -234,27 +234,20 @@ function sentence_search(){
 }
 function news(){
  if(!newsReady){out.textContent='正在確認新文章…';return;}
- const n=api.news(releases);rememberNews(n);out.innerHTML=`<p>${esc(n.date)}${n.articles.length?' · 今天有 '+n.articles.length+' 篇新文章':' · 今天尚無新文章'}</p><div class="articles"></div>`;
+ const n=api.news(releases);out.innerHTML=`<p>${esc(n.date)}${n.articles.length?' · 今天有 '+n.articles.length+' 篇新文章':' · 今天尚無新文章'}</p><div class="articles"></div>`;
  n.articles.forEach(a=>{const b=document.createElement('button');b.className='control article';b.innerHTML=`<small>${esc(a.level||'')}</small><span>${esc(a.title)}</span><small>${esc(a.titleCn||'')}</small>`;b.onclick=()=>{close(false);api.openArticle(a.id);};q('.articles').append(b);});
 }
-function seenNews(n){try{const saved=JSON.parse(stored('news_seen_'+n.profile)||'{}');return new Set(saved.date===n.date&&Array.isArray(saved.ids)?saved.ids:[]);}catch{return new Set();}}
-function rememberNews(n){store('news_seen_'+n.profile,JSON.stringify({date:n.date,ids:[...new Set([...seenNews(n),...n.articles.map(a=>a.id)])]}));}
 function checkNews(force=false){
  if(!newsReady)return;
- if(!['home','daily'].includes(document.body.dataset.tab)){q('.notice').hidden=true;return;}
  const n=api.news(releases),ids=n.articles.map(a=>a.id).sort(),key=n.profile+':'+n.date+':'+ids.join(',');
- if(force||newsKey!==key){newsKey=key;q('.notice').hidden=true;q('.news-action').textContent='新文章'+(ids.length?'（'+ids.length+'）':'');if(mode==='news'&&opened)news();}
- checkGreet();
- const seen=seenNews(n),fresh=n.articles.filter(a=>!seen.has(a.id));
- if(!fresh.length||opened||sleeping||launch.hidden||document.hidden)return;
- if(greetSeen(n.profile)!==n.date)return;
- q('.notice').dataset.kind='news';q('.notice').setAttribute('aria-label','新文章提醒');q('.notice').dataset.shy='false';q('.notice').dataset.act='news';q('.notice-view').textContent='看看';q('.notice-text').textContent='今天新增 '+fresh.length+' 篇文章！';q('.notice').hidden=false;rememberNews(n);
+ if(force||newsKey!==key){
+  newsKey=key;
+  q('.news-action').textContent='新文章'+(ids.length?'（'+ids.length+'）':'');
+  if(opened){renderGreeting();if(mode==='news')news();}
+ }
 }
 q('.notice-dismiss').onclick=()=>{q('.notice').hidden=true;};
-/* 招呼／新文章泡泡只停留 10 秒，不會一直蓋住首頁卡片；教練提醒不受影響 */
-let noticeTimer;
 new MutationObserver(()=>{if(!['home','daily'].includes(document.body.dataset.tab))q('.notice').hidden=true;}).observe(document.body,{attributes:true,attributeFilter:['data-tab']});
-new MutationObserver(()=>{const nt=q('.notice');clearTimeout(noticeTimer);if(nt.hidden)return;const k=nt.dataset.kind;if(k!=='greet'&&k!=='news')return;noticeTimer=setTimeout(()=>{if(nt.dataset.kind===k)nt.hidden=true;},10000);}).observe(q('.notice'),{attributes:true,attributeFilter:['hidden']});
 /* 手機閱讀時往下捲就把助理按鈕滑到邊外，往回捲或回到頁首／頁尾才出現，正文不被遮住 */
 (function(){let y=window.scrollY;window.addEventListener('scroll',()=>{
  const ny=window.scrollY,dy=ny-y;y=ny;if(Math.abs(dy)<6)return;
@@ -264,22 +257,11 @@ new MutationObserver(()=>{const nt=q('.notice');clearTimeout(noticeTimer);if(nt.
 q('.coach-mute').onclick=()=>{coachSession.muted=true;saveCoach();clearCoach();};
 q('.notice-view').onclick=()=>{const a=q('.notice').dataset.act||'news',id=q('.notice').dataset.id;q('.notice').hidden=true;
  if(a==='coach-done')return;else if(a==='coach-review')reviewThree();else if(a==='vocab')api.openVocab();else if(a==='book'&&id)api.openBook(id);else{open();mode='news';markMode();news();}};
-const GREET={anita:['Anita','🍎'],tom:['Tom','🐻']};
-function greetSeen(p){return stored('greet_seen_'+p);}
-function checkGreet(){
- if(!newsReady||opened||sleeping||launch.hidden||document.hidden||!['home','daily'].includes(document.body.dataset.tab))return;
- const g=api.greet(),who=GREET[g.profile]||[g.profile,''];
- if(greetSeen(g.profile)===g.date)return;
+function renderGreeting(){
+ const g=api.greet();
  const hi=g.hour<5?'Still up':g.hour<12?'Good morning':g.hour<18?'Good afternoon':'Good evening';
- const lines=[g.profile==='tom'?'要來丁丁嗎?':hi+'，'+who[0]+' '+who[1]+'！'];
- lines.push(g.streak>=2?'連續學習 '+g.streak+' 天，繼續保持！':'新的一天，從今天開始累積吧。');
- let act='news',id='',label='看看';
- if(g.due>0){lines.push('有 '+g.due+' 張單字卡該複習了。');act='vocab';label='去複習';}
- else if(g.last){lines.push('上次學到「'+g.last.title+'」。');act='book';id=g.last.id;label='繼續';}
- const n=api.news(releases),seen=seenNews(n),fresh=n.articles.filter(a=>!seen.has(a.id));
- if(fresh.length){lines.push('今天新增 '+fresh.length+' 篇文章。');rememberNews(n);}
- const nt=q('.notice');nt.dataset.kind='greet';nt.setAttribute('aria-label','每日招呼');nt.dataset.shy=String(g.profile==='tom');nt.dataset.act=act;nt.dataset.id=id;q('.notice-view').textContent=label;
- q('.notice-text').textContent=lines.join('\n');nt.hidden=false;store('greet_seen_'+g.profile,g.date);
+ const name=g.profile==='anita'?'Anita':g.profile==='tom'?'Tom':g.profile;
+ q('.greeting').textContent=hi+'，'+name+'！'+(g.due>0?' 有 '+g.due+' 張單字卡待複習。':'');
 }
 function idle(){
  clearTimeout(idleTimer);if(sleeping)return;
