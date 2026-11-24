@@ -36208,23 +36208,23 @@ window.BOOK = {
         "exs": [
           {
             "tag": "because + 子句",
-            "en": "because many of them are retired ...",
-            "cn": "後面接完整子句(because of 才接名詞)。"
+            "en": "Many older people need help because they are retired and have limited income.",
+            "cn": "許多老年人需要協助，因為他們已退休、收入有限。"
           },
           {
             "tag": "can help／should + 原形",
-            "en": "can help cover ...; should provide ...",
-            "cn": "can help + 原形動詞；should + 原形動詞，表示建議。"
+            "en": "The government can help cover medical costs, and it should provide more support for older people.",
+            "cn": "政府可以幫忙支付醫療費用，也應該對老年人提供更多支援。"
           },
           {
             "tag": "help + 人 + 原形",
-            "en": "help older people live comfortably",
-            "cn": "help 後面的動詞可以不加 to。"
+            "en": "Subsidies help older people live comfortably.",
+            "cn": "補助幫助老年人過得舒適。"
           },
           {
             "tag": "重點片語",
-            "en": "retired and have limited income, cover medical expenses, daily living costs",
-            "cn": "答案裡的重點片語在 III 都有例句。"
+            "en": "Many retired people have limited income, so it is hard for them to cover daily living costs and medical expenses.",
+            "cn": "許多退休的人收入有限，所以他們很難負擔日常生活開銷和醫療費用。"
           }
         ]
       },
@@ -36232,9 +36232,59 @@ window.BOOK = {
         "title": "VI. 老師的建議：用新單字說一段自己的故事",
         "exs": [
           {
-            "tag": "建議單字",
-            "en": "financial burden, financial assistance, apply for financial assistance, apply for a subsidy, medical expenses, health insurance, cover the cost, pay out of pocket, save for a rainy day, emergency, put money aside",
-            "cn": "老師建議用這堂課和上一堂的單字，編成自己的小故事，主動使用而不是只背單字。"
+            "tag": "financial burden",
+            "en": "Medical bills became a heavy financial burden for my family last year.",
+            "cn": "去年醫藥費成了我們家沉重的經濟負擔。"
+          },
+          {
+            "tag": "financial assistance",
+            "en": "We asked the hospital if there was any financial assistance for patients.",
+            "cn": "我們問醫院有沒有提供病患的財務補助。"
+          },
+          {
+            "tag": "apply for financial assistance",
+            "en": "My aunt decided to apply for financial assistance to pay for her surgery.",
+            "cn": "我阿姨決定申請財務補助來支付手術費。"
+          },
+          {
+            "tag": "apply for a subsidy",
+            "en": "Retired people can apply for a subsidy to lower their monthly costs.",
+            "cn": "退休的人可以申請補助來降低每月的開銷。"
+          },
+          {
+            "tag": "medical expenses",
+            "en": "Her medical expenses went up after the accident.",
+            "cn": "意外之後，她的醫療費用增加了。"
+          },
+          {
+            "tag": "health insurance",
+            "en": "Good health insurance gives me peace of mind.",
+            "cn": "好的健康保險讓我安心。"
+          },
+          {
+            "tag": "cover the cost",
+            "en": "Luckily, our insurance covered most of the cost.",
+            "cn": "幸好我們的保險支付了大部分費用。"
+          },
+          {
+            "tag": "pay out of pocket",
+            "en": "I had to pay the rest out of pocket.",
+            "cn": "其餘的部分我得自己掏腰包。"
+          },
+          {
+            "tag": "save for a rainy day",
+            "en": "My mother always tells me to save for a rainy day.",
+            "cn": "我媽媽總是叫我為不時之需存錢。"
+          },
+          {
+            "tag": "emergency",
+            "en": "I keep some cash at home in case of an emergency.",
+            "cn": "我在家裡留一些現金，以防緊急情況。"
+          },
+          {
+            "tag": "put money aside",
+            "en": "I put a little money aside every month.",
+            "cn": "我每個月都把一點錢存起來。"
           }
         ]
       },
