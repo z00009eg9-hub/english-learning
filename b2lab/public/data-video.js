@@ -57437,3 +57437,1089 @@ window.VIDEO["bk20261120"] = {
   }
  ]
 };
+
+/* ---- bk20261124 新插圖：緊急停止按鈕（旋轉重置箭頭）、退休交接（資深工程師把扳手交給年輕同事）---- */
+window.VIDEO_ART.estopButton = '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="184" height="134" rx="8" fill="#fdf6ec" stroke="#2b2118" stroke-width="3"/><rect x="48" y="70" width="104" height="62" rx="8" fill="#f2c94c" stroke="#2b2118" stroke-width="3.5"/><path d="M58 120 l10 -10 M74 120 l10 -10 M90 120 l10 -10 M106 120 l10 -10 M122 120 l10 -10" stroke="#2b2118" stroke-width="3" stroke-linecap="round"/><rect x="86" y="56" width="28" height="18" rx="3" fill="#b8b0a4" stroke="#2b2118" stroke-width="3.5"/><ellipse cx="100" cy="52" rx="38" ry="17" fill="#d9534f" stroke="#2b2118" stroke-width="3.5"/><path d="M76 46 q14 -8 30 -6" fill="none" stroke="#fbe0df" stroke-width="4" stroke-linecap="round"/><path d="M150 30 a52 18 0 0 0 -100 0" fill="none" stroke="#e8813a" stroke-width="5" stroke-linecap="round"/><path d="M50 30 l-3 -12 M50 30 l12 -4" stroke="#e8813a" stroke-width="5" stroke-linecap="round"/></svg>';
+window.VIDEO_ART.retireHandover = '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="184" height="134" rx="8" fill="#fdf6ec" stroke="#2b2118" stroke-width="3"/><path d="M34 134 v-38 a26 26 0 0 1 52 0 v38" fill="#8aa4c8" stroke="#2b2118" stroke-width="3.5" stroke-linejoin="round"/><circle cx="60" cy="52" r="17" fill="#f7d9b8" stroke="#2b2118" stroke-width="3.5"/><path d="M44 46 q4 -16 16 -16 q12 0 16 16" fill="#e5e1da" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><path d="M53 62 q7 5 14 0" fill="none" stroke="#2b2118" stroke-width="2.5" stroke-linecap="round"/><path d="M114 134 v-38 a26 26 0 0 1 52 0 v38" fill="#e8813a" stroke="#2b2118" stroke-width="3.5" stroke-linejoin="round"/><circle cx="140" cy="52" r="17" fill="#f7d9b8" stroke="#2b2118" stroke-width="3.5"/><path d="M124 48 q2 -18 16 -18 q14 0 16 18 q-10 -8 -32 0 z" fill="#2b2118"/><path d="M133 62 q7 5 14 0" fill="none" stroke="#2b2118" stroke-width="2.5" stroke-linecap="round"/><path d="M80 102 h40" stroke="#2b2118" stroke-width="3.5" stroke-linecap="round"/><path d="M90 96 l18 0 M86 90 a7 7 0 1 0 6 12 M112 90 a7 7 0 1 1 -6 12" fill="none" stroke="#3f9e64" stroke-width="5" stroke-linecap="round"/><path d="M80 26 q20 -14 40 0" fill="none" stroke="#e8813a" stroke-width="4" stroke-linecap="round"/><path d="M120 26 l-11 -2 M120 26 l-3 -10" stroke="#e8813a" stroke-width="4" stroke-linecap="round"/></svg>';
+window.VIDEO["bk20261124"] = {
+ "title": "Complaints, Retirement & In Case",
+ "titleCn": "品質投訴、退休傳承與 in case",
+ "date": "2026-11-24",
+ "level": "B1",
+ "scene": "A Customer Complaint and an Emergency Stop Button",
+ "sceneCn": "客訴與緊急停止按鈕",
+ "sceneArt": "estopButton",
+ "titleArt": [
+  "damagedBox",
+  "retireHandover",
+  "estopButton"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・品保工程師",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・資深工程師",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "A Customer Complaint and an Emergency Stop Button",
+   "cn": "情境：客訴與緊急停止按鈕"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Phrases & Collocations",
+   "cn": "片語搭配"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "complaintAbout": {
+   "t": "complaint about",
+   "cn": "關於……的投訴",
+   "tag": [
+    "片語",
+    "品質"
+   ],
+   "note": "complain／complaint 後面都接 about，不是 for 或 from。",
+   "ex": "The office received a complaint about the noise.",
+   "exCn": "辦公室收到了關於噪音的投訴。"
+  },
+  "forInspection": {
+   "t": "for inspection",
+   "cn": "送檢、供檢驗",
+   "tag": [
+    "片語",
+    "品質"
+   ],
+   "note": "for + 名詞表示目的：送去「為了檢驗」。",
+   "ex": "All incoming parts go to the warehouse for inspection.",
+   "exCn": "所有進料的零件都先送到倉庫檢驗。"
+  },
+  "reworkCosts": {
+   "t": "rework costs",
+   "cn": "返工成本",
+   "tag": [
+    "片語",
+    "品質"
+   ],
+   "note": "工廠常說 rework costs，比 rework expenses 自然。",
+   "ex": "How much are the rework costs this month?",
+   "exCn": "這個月的返工成本是多少？"
+  },
+  "passOn": {
+   "t": "pass on knowledge",
+   "cn": "傳承知識",
+   "tag": [
+    "片語",
+    "職涯"
+   ],
+   "note": "pass on + 知識／經驗 + to + 人。",
+   "ex": "Senior engineers pass on their experience to young engineers.",
+   "exCn": "資深工程師把經驗傳承給年輕工程師。"
+  },
+  "backup": {
+   "t": "backup engineer",
+   "cn": "備援工程師",
+   "tag": [
+    "片語",
+    "職場"
+   ],
+   "note": "工廠裡說 backup engineer 比 backup employee 自然。",
+   "ex": "We also need a backup operator for the night shift.",
+   "exCn": "夜班我們也需要一位備援作業員。"
+  },
+  "takeLeave": {
+   "t": "take leave",
+   "cn": "請假",
+   "tag": [
+    "片語",
+    "職場"
+   ],
+   "note": "take a day off 是「休一天假」，意思相近。",
+   "ex": "Please tell your manager before you take leave.",
+   "exCn": "請假之前請先告訴你的主管。"
+  },
+  "estop": {
+   "t": "emergency stop button",
+   "cn": "緊急停止按鈕",
+   "tag": [
+    "單字",
+    "安全"
+   ],
+   "note": "emergency button 要說完整：emergency stop button。",
+   "ex": "The emergency stop button is red and easy to see.",
+   "exCn": "緊急停止按鈕是紅色的，很容易看到。"
+  },
+  "inCase": {
+   "t": "in case + 子句",
+   "cn": "以防、萬一",
+   "tag": [
+    "文法",
+    "in case"
+   ],
+   "note": "先做準備；子句用現在式，不用 will。和 if（發生了才做）不同。",
+   "ex": "Save the file again in case the computer crashes.",
+   "exCn": "再存一次檔，以防電腦當機。"
+  },
+  "inCaseOf": {
+   "t": "in case of + 名詞",
+   "cn": "萬一發生……",
+   "tag": [
+    "文法",
+    "in case"
+   ],
+   "note": "of 後面接名詞，例如 in case of fire。",
+   "ex": "Press this button in case of an emergency.",
+   "exCn": "萬一有緊急情況，就按這個按鈕。"
+  },
+  "twistReset": {
+   "t": "twist to reset",
+   "cn": "旋轉來重置",
+   "tag": [
+    "動作",
+    "安全"
+   ],
+   "note": "to + 原形表示目的；緊急停止按鈕常要旋轉或拉出才能重置。",
+   "ex": "You must reset the machine before you restart it.",
+   "exCn": "重新啟動之前，必須先重置機器。"
+  },
+  "ownPocket": {
+   "t": "out of my own pocket",
+   "cn": "自掏腰包",
+   "tag": [
+    "慣用語",
+    "費用"
+   ],
+   "note": "中間要有 own：out of my own pocket。",
+   "ex": "He paid for the repair out of his own pocket.",
+   "exCn": "他自掏腰包付了修理費。"
+  },
+  "reimburse": {
+   "t": "reimburse",
+   "cn": "報銷、償還費用",
+   "tag": [
+    "單字",
+    "費用"
+   ],
+   "note": "reimburse + 人 + for + 費用；名詞 reimbursement。",
+   "ex": "Will they reimburse us for the parts?",
+   "exCn": "他們會報銷我們的零件費用嗎？"
+  },
+  "retireBefore": {
+   "t": "before he retires",
+   "cn": "在他退休前",
+   "tag": [
+    "文法",
+    "時間子句"
+   ],
+   "note": "before 後面講未來也用現在式；he 要加 s。",
+   "ex": "My uncle retires next year.",
+   "exCn": "我叔叔明年退休。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today, Anita deals with a customer complaint, a retiring engineer, and an emergency stop button.",
+   "cn": "歡迎回來。今天 Anita 要處理一件客訴、一位快退休的工程師，還有一顆緊急停止按鈕。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Listen for complaint about, pass on knowledge, in case, and reimburse.",
+   "cn": "注意聽：complaint about、pass on knowledge、in case 和 reimburse。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "coffeeBreak"
+   },
+   "en": "Morning, Anita. You look busy today.",
+   "cn": "早安，Anita。妳今天看起來很忙。"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "damagedBox"
+   },
+   "en": "Yeah. We received a customer complaint about the first batch.",
+   "cn": "對啊。我們收到一件客訴，是關於第一批產品的。",
+   "hi": [
+    {
+     "t": "complaint about the first batch",
+     "cn": "關於第一批的投訴",
+     "k": "complaintAbout",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "defectUp"
+   },
+   "en": "Oh no. What was wrong with it?",
+   "cn": "糟糕。出了什麼問題？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "deliveryTruck"
+   },
+   "en": "A defective motor. We sent it back to the supplier for inspection.",
+   "cn": "一顆故障的馬達。我們把它退回給供應商檢驗了。",
+   "hi": [
+    {
+     "t": "for inspection",
+     "cn": "送檢",
+     "k": "forInspection",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "reworkSort"
+   },
+   "en": "Hmm. So, are we doing rework?",
+   "cn": "嗯。所以我們要返工嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "reworkSort"
+   },
+   "en": "Probably. First, we need to evaluate the rework costs.",
+   "cn": "大概吧。我們得先評估返工成本。",
+   "hi": [
+    {
+     "t": "rework costs",
+     "cn": "返工成本",
+     "k": "reworkCosts",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "careerSteps"
+   },
+   "en": "Well, here's some other news. I retire next spring.",
+   "cn": "嗯，還有另一個消息。我明年春天退休。"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "retireHandover"
+   },
+   "en": "Wow! Then you need to pass on your knowledge before you retire.",
+   "cn": "哇！那你退休前要把你的知識傳承下去。",
+   "hi": [
+    {
+     "t": "pass on your knowledge",
+     "cn": "傳承你的知識",
+     "k": "passOn",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "retireHandover"
+   },
+   "en": "I know. Right now, we don't have a backup engineer.",
+   "cn": "我知道。現在我們還沒有備援工程師。",
+   "hi": [
+    {
+     "t": "backup engineer",
+     "cn": "備援工程師",
+     "k": "backup",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "assemblyLine"
+   },
+   "en": "That's risky. If you take leave, the production line may stop.",
+   "cn": "這有風險。如果你請假，生產線可能會停擺。",
+   "hi": [
+    {
+     "t": "take leave",
+     "cn": "請假",
+     "k": "takeLeave",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "estopButton"
+   },
+   "en": "True. Oh, and before testing, check the emergency stop button.",
+   "cn": "沒錯。喔，還有測試前要檢查緊急停止按鈕。",
+   "hi": [
+    {
+     "t": "emergency stop button",
+     "cn": "緊急停止按鈕",
+     "k": "estop",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "estopButton"
+   },
+   "en": "Sure. We always check it in case something dangerous happens.",
+   "cn": "好。我們一定會檢查，以防發生危險。",
+   "hi": [
+    {
+     "t": "in case something dangerous happens",
+     "cn": "以防發生危險",
+     "k": "inCase",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "estopButton"
+   },
+   "en": "And after a stop, twist it to reset.",
+   "cn": "還有停機之後，要旋轉它來重置。",
+   "hi": [
+    {
+     "t": "twist it to reset",
+     "cn": "旋轉來重置",
+     "k": "twistReset",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "restaurantCheck"
+   },
+   "en": "Got it. By the way, I paid for the supplier dinner out of my own pocket.",
+   "cn": "了解。對了，跟供應商吃的那頓晚餐是我自掏腰包付的。",
+   "hi": [
+    {
+     "t": "out of my own pocket",
+     "cn": "自掏腰包",
+     "k": "ownPocket",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "fillOutForm"
+   },
+   "en": "Just submit the receipt. The company will reimburse you.",
+   "cn": "把收據交出去就好。公司會報銷給妳。",
+   "hi": [
+    {
+     "t": "reimburse you",
+     "cn": "報銷給妳",
+     "k": "reimburse",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "coffeeBreak"
+   },
+   "en": "Great. Thanks, Tom. I'll do it this afternoon.",
+   "cn": "太好了。謝謝你，Tom。我今天下午就去辦。"
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "complain",
+     "ipa": "/kəmˈpleɪn/",
+     "cn": "抱怨（動詞）",
+     "def": "To say that you are not happy about something.",
+     "art": "damagedBox"
+    },
+    "b": {
+     "w": "complaint",
+     "ipa": "/kəmˈpleɪnt/",
+     "cn": "抱怨、投訴（名詞）",
+     "def": "A statement that something is wrong or not good enough.",
+     "art": "clipboard"
+    }
+   },
+   "en": "Complain is a verb. Complaint is a noun. Both go with about, not for or from.",
+   "cn": "complain 是動詞，complaint 是名詞。兩個後面都接 about，不是 for 或 from。",
+   "hi": [
+    {
+     "t": "Complaint",
+     "cn": "投訴（名詞）",
+     "k": "complaintAbout",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "in case",
+     "ipa": "/ɪn ˈkeɪs/",
+     "cn": "以防（先準備）",
+     "def": "You prepare before something happens.",
+     "art": "emergencySupplies"
+    },
+    "b": {
+     "w": "if",
+     "ipa": "/ɪf/",
+     "cn": "如果（發生了才做）",
+     "def": "You act only when it really happens.",
+     "art": "umbrellaWoman"
+    }
+   },
+   "en": "In case means you prepare first. If means you act when it really happens.",
+   "cn": "in case 是先做準備；if 是真的發生了才行動。",
+   "hi": [
+    {
+     "t": "In case",
+     "cn": "以防",
+     "k": "inCase",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "reimburse",
+    "ipa": "/ˌriː.ɪmˈbɝːs/",
+    "pos": "v.",
+    "art": "bigBill",
+    "def": "To pay back money that someone has spent.",
+    "cn": "報銷、償還費用。",
+    "note": "reimburse + 人 + for + 費用；名詞是 reimbursement。"
+   },
+   "en": "Reimburse means the company pays you back for money you spent.",
+   "cn": "reimburse 是公司把你花掉的錢還給你。",
+   "hi": [
+    {
+     "t": "Reimburse",
+     "cn": "報銷",
+     "k": "reimburse",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "backup engineer",
+    "ipa": "/ˈbækʌp ˌen.dʒɪˈnɪr/",
+    "pos": "n.",
+    "art": "retireHandover",
+    "def": "An engineer who can do the job when the main engineer is away.",
+    "cn": "備援工程師。",
+    "note": "工廠裡說 backup engineer 比 backup employee 自然。"
+   },
+   "en": "A backup engineer can do the job when the main engineer is away.",
+   "cn": "主要工程師不在時，備援工程師可以接手工作。",
+   "hi": [
+    {
+     "t": "backup engineer",
+     "cn": "備援工程師",
+     "k": "backup",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "in case of",
+    "coreCn": "萬一發生……",
+    "art": "emergencyDrill",
+    "items": [
+     {
+      "t": "~ fire",
+      "cn": "萬一發生火災"
+     },
+     {
+      "t": "~ an emergency",
+      "cn": "萬一有緊急情況"
+     },
+     {
+      "t": "~ a natural disaster",
+      "cn": "萬一發生天然災害"
+     }
+    ]
+   },
+   "en": "In case of fire, in case of an emergency, in case of a natural disaster.",
+   "cn": "萬一發生火災、萬一有緊急情況、萬一發生天然災害。",
+   "hi": [
+    {
+     "t": "in case of a natural disaster",
+     "cn": "萬一發生天然災害",
+     "k": "inCaseOf",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "a button",
+    "coreCn": "按鈕的動作",
+    "art": "estopButton",
+    "items": [
+     {
+      "t": "press ~",
+      "cn": "按下按鈕"
+     },
+     {
+      "t": "pull ~",
+      "cn": "拉出按鈕"
+     },
+     {
+      "t": "twist ~",
+      "cn": "旋轉按鈕"
+     },
+     {
+      "t": "release ~",
+      "cn": "放開按鈕"
+     }
+    ]
+   },
+   "en": "Press a button, pull a button, twist a button, release a button.",
+   "cn": "按下按鈕、拉出按鈕、旋轉按鈕、放開按鈕。",
+   "hi": [
+    {
+     "t": "twist a button",
+     "cn": "旋轉按鈕",
+     "k": "twistReset",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "emergency",
+    "coreCn": "緊急……",
+    "art": "emergencySupplies",
+    "items": [
+     {
+      "t": "~ supplies",
+      "cn": "緊急物資"
+     },
+     {
+      "t": "~ kit",
+      "cn": "緊急包"
+     },
+     {
+      "t": "~ stop button",
+      "cn": "緊急停止按鈕"
+     },
+     {
+      "t": "~ situation",
+      "cn": "緊急情況"
+     }
+    ]
+   },
+   "en": "Emergency supplies, emergency kit, emergency stop button, emergency situation.",
+   "cn": "緊急物資、緊急包、緊急停止按鈕、緊急情況。",
+   "hi": [
+    {
+     "t": "emergency stop button",
+     "cn": "緊急停止按鈕",
+     "k": "estop",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "complain about ／ make a complaint about",
+    "art": "clipboard",
+    "rows": [
+     {
+      "lab": "動詞",
+      "blocks": [
+       {
+        "t": "The customer",
+        "k": "s"
+       },
+       {
+        "t": "complained",
+        "k": "v"
+       },
+       {
+        "t": "about",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "the first batch",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "名詞",
+      "blocks": [
+       {
+        "t": "The customer",
+        "k": "s"
+       },
+       {
+        "t": "made a complaint",
+        "k": "v"
+       },
+       {
+        "t": "about",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "the motor",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "❌ complain for ／ complaint from　✅ about"
+   },
+   "en": "The customer complained about the first batch. The customer made a complaint about the motor.",
+   "cn": "客戶投訴第一批產品。客戶針對馬達提出投訴。",
+   "hi": [
+    {
+     "t": "made a complaint about",
+     "cn": "提出投訴",
+     "k": "complaintAbout",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "before ／ in case + 主詞 + 現在式",
+    "art": "retireHandover",
+    "rows": [
+     {
+      "lab": "before：未來的事用現在式",
+      "blocks": [
+       {
+        "t": "Tom",
+        "k": "s"
+       },
+       {
+        "t": "needs to train",
+        "k": "v"
+       },
+       {
+        "t": "a backup engineer",
+        "k": "o"
+       },
+       {
+        "t": "before",
+        "k": "n"
+       },
+       {
+        "t": "he retires",
+        "k": "v",
+        "add": true
+       }
+      ]
+     },
+     {
+      "lab": "in case：以防",
+      "blocks": [
+       {
+        "t": "We",
+        "k": "s"
+       },
+       {
+        "t": "need",
+        "k": "v"
+       },
+       {
+        "t": "a backup engineer",
+        "k": "o"
+       },
+       {
+        "t": "in case",
+        "k": "n"
+       },
+       {
+        "t": "Tom is absent",
+        "k": "v",
+        "add": true
+       }
+      ]
+     }
+    ],
+    "note": "時間子句和 in case 子句講未來，也用現在式，不用 will。"
+   },
+   "en": "Tom needs to train a backup engineer before he retires. We need a backup engineer in case Tom is absent.",
+   "cn": "Tom 退休前需要培訓一位備援工程師。我們需要一位備援工程師，以防 Tom 不在。",
+   "hi": [
+    {
+     "t": "in case Tom is absent",
+     "cn": "以防 Tom 不在",
+     "k": "inCase",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "reimburse + 人 + for + 費用",
+    "art": "bigBill",
+    "rows": [
+     {
+      "lab": "報銷某人的某筆費用",
+      "blocks": [
+       {
+        "t": "The company",
+        "k": "s"
+       },
+       {
+        "t": "reimbursed",
+        "k": "v"
+       },
+       {
+        "t": "me",
+        "k": "o"
+       },
+       {
+        "t": "for",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "the taxi",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "名詞：submit the receipt for reimbursement。"
+   },
+   "en": "The company reimbursed me for the taxi.",
+   "cn": "公司報銷了我的計程車費。",
+   "hi": [
+    {
+     "t": "reimbursed me for",
+     "cn": "報銷了我的",
+     "k": "reimburse",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 2,
+    "wrong": "Recently, we received a customer complaint from first batch, so we need to evaluate rework expenses.",
+    "bad": [
+     "from first batch"
+    ],
+    "fix": "Recently, we received a customer complaint about the first batch, so we need to evaluate the rework costs.",
+    "good": [
+     "about the first batch"
+    ],
+    "why": "Complaint goes with about. The first batch is a specific batch, so add the.",
+    "whyCn": "complaint 後面接 about；特定的第一批要加 the。"
+   },
+   "en": "Recently, we received a customer complaint about the first batch, so we need to evaluate the rework costs.",
+   "cn": "最近我們收到客訴，是關於第一批產品的，所以我們需要評估返工成本。",
+   "hi": [
+    {
+     "t": "complaint about the first batch",
+     "cn": "關於第一批的投訴",
+     "k": "complaintAbout",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 4,
+    "wrong": "Before testing, operators need to check emergency button when dangerous situations happen.",
+    "bad": [
+     "when dangerous situations happen"
+    ],
+    "fix": "Operators need to check the emergency stop button before testing in case something dangerous happens.",
+    "good": [
+     "in case something dangerous happens"
+    ],
+    "why": "You check it first to prevent danger, so use in case, not when.",
+    "whyCn": "是事先檢查、預防萬一，所以用 in case，不是 when。"
+   },
+   "en": "Operators need to check the emergency stop button before testing in case something dangerous happens.",
+   "cn": "操作員在測試前需要檢查緊急停止按鈕，以防發生危險。",
+   "hi": [
+    {
+     "t": "in case something dangerous happens",
+     "cn": "以防發生危險",
+     "k": "inCase",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 5,
+    "wrong": "I paid for the dinner out of my pocket but the company can give me money later.",
+    "bad": [
+     "out of my pocket",
+     "can give me money"
+    ],
+    "fix": "I paid for the dinner out of my own pocket, but the company will reimburse me later.",
+    "good": [
+     "out of my own pocket",
+     "will reimburse me"
+    ],
+    "why": "The idiom is out of my own pocket. To pay back costs, use reimburse.",
+    "whyCn": "慣用語是 out of my own pocket；「報銷」用 reimburse。"
+   },
+   "en": "I paid for the dinner out of my own pocket, but the company will reimburse me later.",
+   "cn": "晚餐是我自掏腰包付的，但公司之後會報銷給我。",
+   "hi": [
+    {
+     "t": "out of my own pocket",
+     "cn": "自掏腰包",
+     "k": "ownPocket",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Bring an umbrella ___ it rains.",
+    "a": "in case",
+    "n": 1
+   },
+   "en": "Bring an umbrella ___ it rains.",
+   "cn": "想一想，空格要填什麼？",
+   "say": "Bring an umbrella, blank, it rains.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Bring an umbrella ___ it rains.",
+    "a": "in case",
+    "n": 1,
+    "show": true
+   },
+   "en": "Bring an umbrella in case it rains.",
+   "cn": "帶把傘，以防下雨。",
+   "hi": [
+    {
+     "t": "in case it rains",
+     "cn": "以防下雨",
+     "k": "inCase",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The customer complained ___ the poor quality.",
+    "a": "about",
+    "n": 2
+   },
+   "en": "The customer complained ___ the poor quality.",
+   "cn": "想一想，空格要填什麼？",
+   "say": "The customer complained, blank, the poor quality.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The customer complained ___ the poor quality.",
+    "a": "about",
+    "n": 2,
+    "show": true
+   },
+   "en": "The customer complained about the poor quality.",
+   "cn": "客戶抱怨品質不好。",
+   "hi": [
+    {
+     "t": "complained about",
+     "cn": "抱怨",
+     "k": "complaintAbout",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Tom needs to train a backup engineer before he ___.",
+    "a": "retires",
+    "n": 3
+   },
+   "en": "Tom needs to train a backup engineer before he ___.",
+   "cn": "想一想，空格要填什麼？",
+   "say": "Tom needs to train a backup engineer before he, blank.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Tom needs to train a backup engineer before he ___.",
+    "a": "retires",
+    "n": 3,
+    "show": true
+   },
+   "en": "Tom needs to train a backup engineer before he retires.",
+   "cn": "Tom 退休前需要培訓一位備援工程師。",
+   "hi": [
+    {
+     "t": "before he retires",
+     "cn": "在他退休前",
+     "k": "retireBefore",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};

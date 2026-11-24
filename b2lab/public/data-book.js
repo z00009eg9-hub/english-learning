@@ -36373,6 +36373,1153 @@ window.BOOK = {
         "aCn": "有保險很重要，尤其是人們年紀變大的時候。有時人們需要錢來動手術，而醫療處置費用可能很高。文章裡，爸爸動了手術，幸運的是他的健康保險涵蓋了所有費用。"
       }
     ]
+  },
+  /* ---- bk20261124 Complaints, Retirement & In Case ---- */
+  {
+    "id": "bk20261124",
+    "video": true,
+    "icon": "🧯",
+    "date": "2026-11-24",
+    "doc": "https://docs.google.com/document/d/18FP9UWYM2WEJ4ew4tMNZq-Go1LnzIsj7iKIpjmjXVtM/edit",
+    "title": "Complaints, Retirement & In Case",
+    "titleCn": "品質投訴、退休傳承與 in case",
+    "topics": "作業複習(送檢／complaint about／退休前訓練／in case／報銷)・單字(品質與工廠／人員與職涯／按鈕動作與報銷／緊急物資／補充單字)・片語與搭配詞・complain 與 complaint・退休、備援與請假・in case 與 in case of・緊急停止按鈕的動作・自掏腰包與報銷・名詞、搭配詞與 -ment 名詞・食物容器與罐頭・日常口說・閱讀・複習問答・改錯練習",
+    "hwTitle": "I. ★ 11/24 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "wrong": "We sent the defective motor back to supplier for checking examination.",
+        "fix": "We sent the defective motor back to the supplier for inspection.",
+        "cn": "我們把故障的馬達退回給供應商檢驗。",
+        "pat": "send + 東西 + back to + 對象 + for + 目的",
+        "note": "supplier 是可數名詞，指「那一家」特定的供應商，前面要加 the。 checking 和 examination 都是「檢查」的意思，重複了；改成一個名詞 inspection(檢驗) 就夠。 for + 名詞 表示目的：送回去「為了檢驗」。"
+      },
+      {
+        "n": 2,
+        "wrong": "Recently, we received a customer complaint from first batch, so we need to evaluate rework expenses.",
+        "fix": "Recently, we received a customer complaint about the first batch, so we need to evaluate the rework costs.",
+        "cn": "最近我們收到客訴，是關於第一批產品的，所以我們需要評估返工成本。",
+        "pat": "complaint about + 名詞；so + 子句",
+        "note": "complaint(投訴)後面接 about + 事情，不是 from。 first batch 是「第一批」，特定的那一批，前面要加 the。 老師把 expenses 改成 costs：rework costs = 返工「成本」，工廠常用說法。"
+      },
+      {
+        "n": 3,
+        "ok": "Tom needs to train other people before he retires.",
+        "cn": "Tom 退休前需要訓練其他員工(同事)，把他的知識傳承下去。",
+        "pat": "need to + 原形動詞；before + 主詞 + 現在式",
+        "note": "✅ 老師建議：Tom needs to train other employees before he retires. 或更完整：Tom needs to train his colleagues and pass on his knowledge before he retires. 原句文法正確；people 太口語，工作場合用 employees(員工) 或 colleagues(同事) 更自然。 before he retires：before 引導時間子句，講的是未來的事，但動詞用現在式 retires(不用 will retire)。 pass on his knowledge：把他的知識／經驗傳承下去。"
+      },
+      {
+        "n": 4,
+        "wrong": "Before testing, operators need to check emergency button when dangerous situations happen.",
+        "fix": "Operators need to check the emergency stop button before testing in case something dangerous happens.",
+        "cn": "操作員在測試前需要檢查緊急停止按鈕，以防發生危險。",
+        "pat": "check + 東西 + before + V-ing + in case + 子句",
+        "note": "when dangerous situations happen 變成「發生危險的時候才檢查」，意思不對；要「事先檢查、預防萬一」，用 in case(以防)。 emergency button 要完整說成 emergency stop button(緊急停止按鈕)，前面加 the 指現場那顆按鈕。 something dangerous：形容詞 dangerous 放在 something 後面；something 當單數，動詞 happens 要加 s。"
+      },
+      {
+        "n": 5,
+        "wrong": "I paid for the dinner out of my pocket but the company can give me money later.",
+        "fix": "I paid for the dinner out of my own pocket, but the company will reimburse me later.",
+        "cn": "晚餐是我自掏腰包付的，但公司之後會報銷給我。",
+        "pat": "pay for + 東西 + out of my own pocket；will + 原形動詞",
+        "note": "out of my own pocket 是慣用語「自掏腰包」，中間要有 own。 can give me money 太口語、也不夠明確；「報銷、償還費用」用 reimburse，公司「會」報銷用 will reimburse me。 but 連接兩句相反的內容，前面加逗號。"
+      }
+    ],
+    "vocabTitle": "II-A／II-B. 品質與工廠、人員與職涯 Quality & Factory, People & Career",
+    "vocab": [
+      {
+        "w": "defective",
+        "ipa": "/dɪˈfek.tɪv/",
+        "pos": "adj.",
+        "cn": "有瑕疵的、故障的",
+        "ex": "We found a defective switch in this lot.",
+        "exCn": "我們在這批裡發現一個有瑕疵的開關。"
+      },
+      {
+        "w": "supplier",
+        "ipa": "/səˈplaɪɚ/",
+        "pos": "n.",
+        "cn": "供應商",
+        "ex": "Our supplier delivers parts every Monday.",
+        "exCn": "我們的供應商每週一送零件。"
+      },
+      {
+        "w": "inspection",
+        "ipa": "/ɪnˈspek.ʃən/",
+        "pos": "n.",
+        "cn": "檢查、檢驗",
+        "ex": "The final inspection takes about ten minutes.",
+        "exCn": "最後檢驗大約要十分鐘。"
+      },
+      {
+        "w": "examination",
+        "ipa": "/ɪɡˌzæm.ɪˈneɪ.ʃən/",
+        "pos": "n.",
+        "cn": "檢查、考試",
+        "ex": "The doctor did a careful examination.",
+        "exCn": "醫生做了仔細的檢查。"
+      },
+      {
+        "w": "complaint",
+        "ipa": "/kəmˈpleɪnt/",
+        "pos": "n.",
+        "cn": "抱怨、投訴(名詞)",
+        "ex": "The customer sent a complaint by email.",
+        "exCn": "客戶用電子郵件寄來了一則投訴。"
+      },
+      {
+        "w": "complain",
+        "ipa": "/kəmˈpleɪn/",
+        "pos": "v.",
+        "cn": "抱怨(動詞)",
+        "ex": "Nobody complained about the price.",
+        "exCn": "沒有人抱怨價格。"
+      },
+      {
+        "w": "batch",
+        "ipa": "/bætʃ/",
+        "pos": "n.",
+        "cn": "一批、一組",
+        "ex": "Each batch has its own lot number.",
+        "exCn": "每一批都有自己的批號。"
+      },
+      {
+        "w": "evaluate",
+        "star": true,
+        "ipa": "/ɪˈvæl.ju.eɪt/",
+        "pos": "v.",
+        "cn": "評估",
+        "ex": "We will evaluate three suppliers this month.",
+        "exCn": "我們這個月會評估三家供應商。"
+      },
+      {
+        "w": "rework",
+        "star": true,
+        "ipa": "/ˈriː.wɝːk/",
+        "pos": "n. / v.",
+        "cn": "返工、重做",
+        "ex": "Rework slows down the schedule.",
+        "exCn": "返工會拖慢進度。"
+      },
+      {
+        "w": "retire",
+        "ipa": "/rɪˈtaɪr/",
+        "pos": "v.",
+        "cn": "退休(動詞)",
+        "ex": "My uncle retires next year.",
+        "exCn": "我叔叔明年退休。"
+      },
+      {
+        "w": "retired",
+        "ipa": "/rɪˈtaɪɚd/",
+        "pos": "adj.",
+        "cn": "已退休的(形容詞)",
+        "ex": "He is a retired teacher.",
+        "exCn": "他是一位退休的老師。"
+      },
+      {
+        "w": "retirement",
+        "ipa": "/rɪˈtaɪr.mənt/",
+        "pos": "n.",
+        "cn": "退休(名詞)",
+        "ex": "She is planning for her retirement.",
+        "exCn": "她正在規劃退休生活。"
+      },
+      {
+        "w": "colleague",
+        "ipa": "/ˈkɑː.liːɡ/",
+        "pos": "n.",
+        "cn": "同事",
+        "ex": "My colleagues helped me finish the report.",
+        "exCn": "同事們幫我完成了報告。"
+      },
+      {
+        "w": "knowledge",
+        "ipa": "/ˈnɑː.lɪdʒ/",
+        "pos": "n.",
+        "cn": "知識(不可數)",
+        "ex": "Her knowledge of machines is impressive.",
+        "exCn": "她對機器的了解令人佩服。"
+      },
+      {
+        "w": "absent",
+        "ipa": "/ˈæb.sənt/",
+        "pos": "adj.",
+        "cn": "缺席的、不在的",
+        "ex": "Two operators were absent today.",
+        "exCn": "今天有兩位作業員缺席。"
+      },
+      {
+        "w": "backup",
+        "ipa": "/ˈbækʌp/",
+        "pos": "adj. / n.",
+        "cn": "備援的、備用的",
+        "ex": "Do we have a backup plan?",
+        "exCn": "我們有備案嗎？"
+      }
+    ],
+    "vocab2Title": "II-C／II-D／II-E. 按鈕動作與報銷、緊急物資、補充單字 Buttons, Reimbursement, Emergency Supplies & More Words",
+    "vocab2": [
+      {
+        "w": "press",
+        "ipa": "/pres/",
+        "pos": "v.",
+        "cn": "按下",
+        "ex": "Press the green button to start.",
+        "exCn": "按下綠色按鈕開始。"
+      },
+      {
+        "w": "push",
+        "ipa": "/pʊʃ/",
+        "pos": "v.",
+        "cn": "按、推",
+        "ex": "Push the button twice.",
+        "exCn": "把按鈕按兩下。"
+      },
+      {
+        "w": "pull",
+        "ipa": "/pʊl/",
+        "pos": "v.",
+        "cn": "拉",
+        "ex": "Pull the handle toward you.",
+        "exCn": "把把手往你這邊拉。"
+      },
+      {
+        "w": "twist",
+        "ipa": "/twɪst/",
+        "pos": "v.",
+        "cn": "旋轉、扭轉",
+        "ex": "Twist the cap to open the bottle.",
+        "exCn": "轉動瓶蓋來打開瓶子。"
+      },
+      {
+        "w": "release",
+        "ipa": "/rɪˈliːs/",
+        "pos": "v.",
+        "cn": "放開、釋放",
+        "ex": "Release the button slowly.",
+        "exCn": "慢慢放開按鈕。"
+      },
+      {
+        "w": "reset",
+        "ipa": "/ˌriːˈset/",
+        "pos": "v.",
+        "cn": "重置",
+        "ex": "Please reset the counter to zero.",
+        "exCn": "請把計數器歸零。"
+      },
+      {
+        "w": "clockwise",
+        "ipa": "/ˈklɑːk.waɪz/",
+        "pos": "adv.",
+        "cn": "順時針",
+        "ex": "Turn the knob clockwise.",
+        "exCn": "把旋鈕順時針轉。"
+      },
+      {
+        "w": "counterclockwise",
+        "star": true,
+        "ipa": "/ˌkaʊn.t̬ɚˈklɑːk.waɪz/",
+        "pos": "adv.",
+        "cn": "逆時針",
+        "ex": "Turn the screw counterclockwise to loosen it.",
+        "exCn": "把螺絲逆時針轉來鬆開它。"
+      },
+      {
+        "w": "dangerous",
+        "ipa": "/ˈdeɪn.dʒɚ.əs/",
+        "pos": "adj.",
+        "cn": "危險的",
+        "ex": "The machine is dangerous without a guard.",
+        "exCn": "沒有護蓋的話，這台機器很危險。"
+      },
+      {
+        "w": "reimburse",
+        "star": true,
+        "ipa": "/ˌriː.ɪmˈbɝːs/",
+        "pos": "v.",
+        "cn": "報銷、償還費用",
+        "ex": "The company will reimburse your travel costs.",
+        "exCn": "公司會報銷你的差旅費。"
+      },
+      {
+        "w": "reimbursement",
+        "star": true,
+        "ipa": "/ˌriː.ɪmˈbɝːs.mənt/",
+        "pos": "n.",
+        "cn": "費用報銷(名詞)",
+        "ex": "Send the receipts for reimbursement.",
+        "exCn": "把收據送來申請報銷。"
+      },
+      {
+        "w": "supplies",
+        "ipa": "/səˈplaɪz/",
+        "pos": "n.",
+        "cn": "用品、物資(常用複數)",
+        "ex": "We bought some office supplies.",
+        "exCn": "我們買了一些辦公用品。"
+      },
+      {
+        "w": "disaster",
+        "ipa": "/dɪˈzæs.tɚ/",
+        "pos": "n.",
+        "cn": "災難",
+        "ex": "The flood was a disaster for the town.",
+        "exCn": "那場水災對小鎮是一場災難。"
+      },
+      {
+        "w": "first-aid kit",
+        "ipa": "/ˈfɝːst eɪd kɪt/",
+        "pos": "n.",
+        "cn": "急救箱",
+        "ex": "The first-aid kit is on the wall.",
+        "exCn": "急救箱掛在牆上。"
+      },
+      {
+        "w": "fire extinguisher",
+        "star": true,
+        "ipa": "/ˈfaɪr ɪkˌstɪŋ.ɡwɪ.ʃɚ/",
+        "pos": "n.",
+        "cn": "滅火器",
+        "ex": "Check the fire extinguisher every month.",
+        "exCn": "每個月檢查一次滅火器。"
+      },
+      {
+        "w": "flashlight",
+        "ipa": "/ˈflæʃ.laɪt/",
+        "pos": "n.",
+        "cn": "手電筒",
+        "ex": "I need a flashlight in the dark.",
+        "exCn": "在黑暗中我需要手電筒。"
+      },
+      {
+        "w": "battery",
+        "ipa": "/ˈbæt̬.ɚ.i/",
+        "pos": "n.",
+        "cn": "電池",
+        "ex": "The battery is dead.",
+        "exCn": "電池沒電了。"
+      },
+      {
+        "w": "helmet",
+        "ipa": "/ˈhelmət/",
+        "pos": "n.",
+        "cn": "安全帽",
+        "ex": "Wear a helmet when you ride a motorbike.",
+        "exCn": "騎機車要戴安全帽。"
+      },
+      {
+        "w": "drinking water",
+        "ipa": "/ˈdrɪŋ.kɪŋ ˌwɑː.t̬ɚ/",
+        "pos": "n.",
+        "cn": "飲用水",
+        "ex": "Is this drinking water?",
+        "exCn": "這是飲用水嗎？"
+      },
+      {
+        "w": "canned food",
+        "ipa": "/ˌkænd ˈfuːd/",
+        "pos": "n.",
+        "cn": "罐頭食品",
+        "ex": "Canned food can last for years.",
+        "exCn": "罐頭食品可以放好幾年。"
+      },
+      {
+        "w": "container",
+        "ipa": "/kənˈteɪnɚ/",
+        "pos": "n.",
+        "cn": "容器",
+        "ex": "Put the leftovers in a container.",
+        "exCn": "把剩菜放進容器裡。"
+      },
+      {
+        "w": "reusable",
+        "ipa": "/ˌriːˈjuː.zə.bəl/",
+        "pos": "adj.",
+        "cn": "可重複使用的",
+        "ex": "I bring a reusable bag to the store.",
+        "exCn": "我帶可重複使用的袋子去店裡。"
+      },
+      {
+        "w": "storage",
+        "ipa": "/ˈstɔːr.ɪdʒ/",
+        "pos": "n.",
+        "cn": "儲存、保存",
+        "ex": "We need more storage space.",
+        "exCn": "我們需要更多收納空間。"
+      },
+      {
+        "w": "plastic",
+        "ipa": "/ˈplæs.tɪk/",
+        "pos": "n. / adj.",
+        "cn": "塑膠(的)",
+        "ex": "This box is made of plastic.",
+        "exCn": "這個盒子是塑膠做的。"
+      },
+      {
+        "w": "glass",
+        "ipa": "/ɡlæs/",
+        "pos": "n.",
+        "cn": "玻璃",
+        "ex": "Be careful with the glass bottle.",
+        "exCn": "小心那個玻璃瓶。"
+      },
+      {
+        "w": "deliver",
+        "ipa": "/dɪˈlɪvɚ/",
+        "pos": "v.",
+        "cn": "運送、交貨(動詞)",
+        "ex": "The courier will deliver the box tomorrow morning.",
+        "exCn": "快遞明天早上會送貨。"
+      },
+      {
+        "w": "delivery",
+        "ipa": "/dɪˈlɪv.ɚ.i/",
+        "pos": "n.",
+        "cn": "送貨、貨物(名詞)",
+        "ex": "The delivery arrived two days late.",
+        "exCn": "貨晚了兩天才到。"
+      },
+      {
+        "w": "replace",
+        "ipa": "/rɪˈpleɪs/",
+        "pos": "v.",
+        "cn": "更換、取代",
+        "ex": "Please replace the old filter every month.",
+        "exCn": "請每個月更換舊濾網。"
+      },
+      {
+        "w": "replacement",
+        "ipa": "/rɪˈpleɪs.mənt/",
+        "pos": "n.",
+        "cn": "替換、替代品",
+        "ex": "We ordered a replacement for the broken part.",
+        "exCn": "我們訂了一個替換品來換壞掉的零件。"
+      },
+      {
+        "w": "improvement",
+        "ipa": "/ɪmˈpruːv.mənt/",
+        "pos": "n.",
+        "cn": "進步、改善",
+        "ex": "There has been a big improvement in quality.",
+        "exCn": "品質有很大的進步。"
+      },
+      {
+        "w": "treatment",
+        "ipa": "/ˈtriːtmənt/",
+        "pos": "n.",
+        "cn": "治療、處理",
+        "ex": "The doctor suggested a new treatment.",
+        "exCn": "醫生建議一種新的治療方式。"
+      },
+      {
+        "w": "supplement",
+        "ipa": "/ˈsʌp.lə.mənt/",
+        "pos": "n.",
+        "cn": "補充品",
+        "ex": "She takes a vitamin supplement every day.",
+        "exCn": "她每天吃維他命補充品。"
+      },
+      {
+        "w": "disappointment",
+        "ipa": "/ˌdɪs.əˈpɔɪnt.mənt/",
+        "pos": "n.",
+        "cn": "失望",
+        "ex": "His low score was a big disappointment.",
+        "exCn": "他的低分令人很失望。"
+      },
+      {
+        "w": "experiment",
+        "ipa": "/ɪkˈsper.ə.mənt/",
+        "pos": "n.",
+        "cn": "實驗",
+        "ex": "The students did an experiment in the lab.",
+        "exCn": "學生們在實驗室做了一個實驗。"
+      },
+      {
+        "w": "pension",
+        "ipa": "/ˈpen.ʃən/",
+        "pos": "n.",
+        "cn": "退休金、年金",
+        "ex": "He receives a pension every month.",
+        "exCn": "他每個月領退休金。"
+      },
+      {
+        "w": "submit",
+        "ipa": "/səbˈmɪt/",
+        "pos": "v.",
+        "cn": "提交、送出",
+        "ex": "Please submit the form by Friday.",
+        "exCn": "請在星期五前交出表單。"
+      },
+      {
+        "w": "unstable",
+        "ipa": "/ʌnˈsteɪ.bəl/",
+        "pos": "adj.",
+        "cn": "不穩定的",
+        "ex": "The signal is unstable here.",
+        "exCn": "這裡的訊號不穩定。"
+      },
+      {
+        "w": "client",
+        "ipa": "/ˈklaɪ.ənt/",
+        "pos": "n.",
+        "cn": "客戶(服務業常用)",
+        "ex": "Our client wants a faster delivery.",
+        "exCn": "我們的客戶希望更快交貨。"
+      },
+      {
+        "w": "emergency kit",
+        "ipa": "/ɪˈmɝː.dʒən.si ˌkɪt/",
+        "pos": "n.",
+        "cn": "緊急包、應急用品組",
+        "ex": "Keep an emergency kit in your car.",
+        "exCn": "車上放一個緊急包。"
+      }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases & Collocations",
+    "phrasesCard": true,
+    "phrases": [
+      {
+        "p": "defective motor / defective product",
+        "cn": "故障馬達／瑕疵品",
+        "ex": "The defective product was sent to the quality lab.",
+        "exCn": "瑕疵品被送到品質實驗室。",
+        "ex2": "Please separate the defective motors from the good ones.",
+        "ex2Cn": "請把故障的馬達和好的分開。"
+      },
+      {
+        "p": "send ... back to the supplier",
+        "cn": "退回給供應商",
+        "ex": "Please send the damaged screens back to the supplier.",
+        "exCn": "請把受損的螢幕退回給供應商。",
+        "ex2": "We will send the wrong parts back to the factory today.",
+        "ex2Cn": "我們今天會把錯的零件退回工廠。"
+      },
+      {
+        "p": "for inspection",
+        "cn": "送檢、供檢驗",
+        "ex": "Send the sample to the lab for inspection.",
+        "exCn": "把樣品送到實驗室檢驗。",
+        "ex2": "All incoming parts go to the warehouse for inspection.",
+        "ex2Cn": "所有進料的零件都先送到倉庫檢驗。"
+      },
+      {
+        "p": "customer complaint",
+        "cn": "客戶投訴、客訴",
+        "ex": "We take every customer complaint seriously.",
+        "exCn": "我們認真看待每一件客訴。",
+        "ex2": "The sales team handles customer complaints.",
+        "ex2Cn": "業務團隊負責處理客訴。"
+      },
+      {
+        "p": "make a complaint about",
+        "cn": "針對……提出投訴",
+        "ex": "She made a complaint about the late delivery.",
+        "exCn": "她針對延遲交貨提出投訴。",
+        "ex2": "You can make a complaint about the service on our website.",
+        "ex2Cn": "你可以在我們的網站上針對服務提出投訴。"
+      },
+      {
+        "p": "first batch / second batch",
+        "cn": "第一批／第二批",
+        "ex": "The first batch passed the test.",
+        "exCn": "第一批通過了測試。",
+        "ex2": "The second batch will arrive on Friday.",
+        "ex2Cn": "第二批星期五會到。"
+      },
+      {
+        "p": "rework costs",
+        "cn": "返工成本",
+        "ex": "Rework costs rise when we find defects late.",
+        "exCn": "太晚發現不良時，返工成本會增加。",
+        "ex2": "How much are the rework costs this month?",
+        "ex2Cn": "這個月的返工成本是多少？"
+      },
+      {
+        "p": "pass on knowledge / experience",
+        "cn": "傳承知識／經驗",
+        "ex": "Senior engineers pass on their experience to young engineers.",
+        "exCn": "資深工程師把經驗傳承給年輕工程師。",
+        "ex2": "It is important to pass on knowledge to the next generation.",
+        "ex2Cn": "把知識傳承給下一代很重要。"
+      },
+      {
+        "p": "backup engineer",
+        "cn": "備援工程師",
+        "ex": "A backup engineer can fix the machine when the main engineer is away.",
+        "exCn": "主要工程師不在時，備援工程師可以修機器。",
+        "ex2": "We also need a backup operator for the night shift.",
+        "ex2Cn": "夜班我們也需要一位備援作業員。"
+      },
+      {
+        "p": "take leave",
+        "cn": "請假",
+        "ex": "He took two days of leave last week.",
+        "exCn": "他上週請了兩天假。",
+        "ex2": "Please tell your manager before you take leave.",
+        "ex2Cn": "請假之前請先告訴你的主管。"
+      },
+      {
+        "p": "the production line may stop",
+        "cn": "生產線可能會停擺",
+        "ex": "If a key machine breaks, the production line may stop.",
+        "exCn": "如果關鍵機器壞掉，生產線可能會停擺。",
+        "ex2": "The production line stopped for an hour because of a power cut.",
+        "ex2Cn": "因為停電，生產線停擺了一小時。"
+      },
+      {
+        "p": "in case + 子句",
+        "cn": "以防、萬一(預防)",
+        "ex": "Bring an umbrella in case it rains.",
+        "exCn": "帶把傘，以防下雨。",
+        "ex2": "Save the file again in case the computer crashes.",
+        "ex2Cn": "再存一次檔，以防電腦當機。"
+      },
+      {
+        "p": "in case of + 名詞",
+        "cn": "萬一發生……(的話)",
+        "ex": "In case of fire, use the stairs.",
+        "exCn": "萬一發生火災，請走樓梯。",
+        "ex2": "Press this button in case of an emergency.",
+        "ex2Cn": "萬一有緊急情況，就按這個按鈕。"
+      },
+      {
+        "p": "emergency stop button / emergency situation",
+        "cn": "緊急停止按鈕／緊急情況",
+        "ex": "The emergency stop button is red and easy to see.",
+        "exCn": "緊急停止按鈕是紅色的，很容易看到。",
+        "ex2": "Stay calm in an emergency situation.",
+        "ex2Cn": "遇到緊急情況要保持冷靜。"
+      },
+      {
+        "p": "press / push / pull / twist / release a button",
+        "cn": "按下／按／拉／旋轉／放開按鈕",
+        "ex": "Press the start button once, then release it.",
+        "exCn": "按一下開始按鈕，然後放開。",
+        "ex2": "Pull the knob out, and twist it to lock.",
+        "ex2Cn": "把旋鈕拉出來，再轉動來鎖住。"
+      },
+      {
+        "p": "reset the button / twist to reset",
+        "cn": "重置按鈕／旋轉來重置",
+        "ex": "Twist to reset the button after the test.",
+        "exCn": "測試後，旋轉按鈕來重置。",
+        "ex2": "You must reset the machine before you restart it.",
+        "ex2Cn": "重新啟動之前，必須先重置機器。"
+      },
+      {
+        "p": "clockwise / counterclockwise / the opposite direction",
+        "cn": "順時針／逆時針／反方向",
+        "ex": "Turn the knob clockwise to tighten it.",
+        "exCn": "把旋鈕順時針轉來鎖緊。",
+        "ex2": "Turn it in the opposite direction to loosen it.",
+        "ex2Cn": "往反方向轉來鬆開它。"
+      },
+      {
+        "p": "natural disaster",
+        "cn": "天然災害",
+        "ex": "Earthquakes and typhoons are natural disasters.",
+        "exCn": "地震和颱風都是天然災害。",
+        "ex2": "The town recovered slowly after the natural disaster.",
+        "ex2Cn": "天然災害之後，小鎮慢慢恢復。"
+      },
+      {
+        "p": "emergency supplies",
+        "cn": "緊急物資",
+        "ex": "Keep emergency supplies at home.",
+        "exCn": "家裡要準備緊急物資。",
+        "ex2": "Check your emergency supplies twice a year.",
+        "ex2Cn": "每年檢查兩次你的緊急物資。"
+      },
+      {
+        "p": "storage room",
+        "cn": "儲藏室",
+        "ex": "The tools are in the storage room.",
+        "exCn": "工具在儲藏室裡。",
+        "ex2": "Please lock the storage room after work.",
+        "ex2Cn": "下班後請鎖上儲藏室。"
+      },
+      {
+        "p": "plastic container / glass container / reusable container",
+        "cn": "塑膠容器／玻璃容器／可重複使用的容器",
+        "ex": "Use a glass container for hot soup.",
+        "exCn": "熱湯要用玻璃容器裝。",
+        "ex2": "A reusable container is better for the environment than a plastic container you throw away.",
+        "ex2Cn": "可重複使用的容器比用完就丟的塑膠容器更環保。"
+      },
+      {
+        "p": "out of my own pocket",
+        "cn": "自掏腰包",
+        "ex": "He paid for the repair out of his own pocket.",
+        "exCn": "他自掏腰包付了修理費。",
+        "ex2": "Don't pay out of your own pocket; ask the company first.",
+        "ex2Cn": "不要自掏腰包；先問公司。"
+      },
+      {
+        "p": "reimburse someone for something",
+        "cn": "報銷某人的某筆費用",
+        "ex": "The company reimbursed me for the taxi.",
+        "exCn": "公司報銷了我的計程車費。",
+        "ex2": "Will they reimburse us for the parts?",
+        "ex2Cn": "他們會報銷我們的零件費用嗎？"
+      },
+      {
+        "p": "customer complaint report",
+        "cn": "客訴報告",
+        "ex": "Please read the customer complaint report before the meeting.",
+        "exCn": "開會前請先讀客訴報告。",
+        "ex2": "Who wrote this customer complaint report?",
+        "ex2Cn": "這份客訴報告是誰寫的？"
+      },
+      {
+        "p": "receive a complaint",
+        "cn": "收到投訴",
+        "ex": "Did you receive a complaint from any customer this week?",
+        "exCn": "這週你有收到任何客戶的投訴嗎？",
+        "ex2": "The office received a complaint about the noise.",
+        "ex2Cn": "辦公室收到了關於噪音的投訴。"
+      },
+      {
+        "p": "take a day off",
+        "cn": "休一天假",
+        "ex": "I need to take a day off next Friday.",
+        "exCn": "我下週五需要休一天假。",
+        "ex2": "She took a day off to see a doctor.",
+        "ex2Cn": "她請了一天假去看醫生。"
+      },
+      {
+        "p": "replace ... with a new one",
+        "cn": "把……換成新的",
+        "ex": "We replaced the old motor with a new one.",
+        "exCn": "我們把舊馬達換成了新的。",
+        "ex2": "Please replace the broken parts with new ones.",
+        "ex2Cn": "請把壞掉的零件換成新的。"
+      },
+      {
+        "p": "emergency kit",
+        "cn": "緊急包",
+        "ex": "Everyone should keep an emergency kit at home.",
+        "exCn": "每個人家裡都應該準備一個緊急包。",
+        "ex2": "The emergency kit includes a flashlight and some batteries.",
+        "ex2Cn": "緊急包裡有一支手電筒和一些電池。"
+      },
+      {
+        "p": "food storage container / reusable food container",
+        "cn": "食物保存容器／可重複使用的食物容器",
+        "ex": "Use a reusable food container for your lunch.",
+        "exCn": "午餐請用可重複使用的食物容器裝。",
+        "ex2": "A food storage container keeps the rice fresh.",
+        "ex2Cn": "食物保存容器能讓米飯保持新鮮。"
+      },
+      {
+        "p": "submit the receipt",
+        "cn": "提交收據",
+        "ex": "Please submit the receipt to the accounting office.",
+        "exCn": "請把收據交給會計室。",
+        "ex2": "Submit your receipts within one week.",
+        "ex2Cn": "請在一週內交出你的收據。"
+      }
+    ],
+    "grammarTitle": "IV. 句型與文法解說 Sentence Patterns & Grammar",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "complain(動詞)與 complaint(名詞)",
+        "pat": "complain about + 事情 ／ make a complaint about + 事情",
+        "pts": [
+          "Complain = 動詞，Complaint = 名詞：complain 當動詞用(complained about)；complaint 前面搭配 make / receive / have 當名詞用。",
+          "⚠️ 避免中式英文：complain 和 complaint 後面都接 about，不要寫 complain for、complaint from(錯)；「客戶投訴」兩種說法意思相同，選動詞或名詞其中一種就好，不要重複寫成 complained a complaint。",
+          "make a complaint / receive a complaint(客戶 make，公司 receive)。",
+          "customer complaint report = customer + complaint + report，三個名詞連在一起組成名詞片語，最後一個字 report 才是主角。",
+          "complain about 用在對產品、服務、狀況或問題「不滿」的時候。",
+          "⚠️ 介系詞要用 about：❌ We received a complaint for the first batch. ✅ We received a complaint about the first batch."
+        ],
+        "exs": [
+          {
+            "tag": "老師的中翻英練習",
+            "en": "Customers complained about the defective products.",
+            "cn": "客戶抱怨有瑕疵的產品。"
+          },
+          {
+            "tag": "老師的中翻英練習",
+            "en": "She complained about the poor service.",
+            "cn": "她抱怨服務品質不好。"
+          },
+          {
+            "tag": "老師的中翻英練習",
+            "en": "The customer complained about the first batch.",
+            "cn": "客戶投訴第一批產品。"
+          },
+          {
+            "tag": "老師的中翻英練習",
+            "en": "The customer made a complaint about the motor.",
+            "cn": "客戶針對馬達提出投訴。"
+          },
+          {
+            "tag": "make a complaint",
+            "en": "The customer made a complaint about the motor design.",
+            "cn": "客戶針對馬達設計提出了投訴。"
+          },
+          {
+            "tag": "receive",
+            "en": "We received the customer complaint report.",
+            "cn": "我們收到了客訴報告。"
+          },
+          {
+            "tag": "問句",
+            "en": "What was the customer's complaint about?",
+            "cn": "客戶的投訴是關於什麼？"
+          },
+          {
+            "tag": "回答",
+            "en": "The customer's complaint was about the first batch.",
+            "cn": "客戶的投訴是關於第一批產品。"
+          },
+          {
+            "tag": "complain about",
+            "en": "My learners complain about an unstable internet connection.",
+            "cn": "我的學員抱怨網路連線不穩。"
+          },
+          {
+            "tag": "complain about",
+            "en": "Many bank clients complain about the bank's poor service.",
+            "cn": "許多銀行客戶抱怨銀行的服務很差。"
+          }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "退休、備援與請假",
+        "pat": "need to + 原形動詞 + before + 主詞 + 現在式",
+        "pts": [
+          "Retire = 動詞，Retired = 形容詞，Retirement = 名詞：He will retire. / a retired teacher / planning for retirement。",
+          "before + 主詞 + 現在式：before he retires 說的是未來，但時間子句用現在式；主詞 he 是第三人稱單數，retire 要加 s。",
+          "may + 原形動詞：可能會……；if + 現在式：如果他請假(假設的事，用現在式 takes)。",
+          "backup employee 意思聽得懂，但在工廠／工程環境，說 backup engineer 更自然。",
+          "takes leave = 請假；takes a day off = 休一天假(意思相近)。",
+          "retirement salary 不太自然；依國家與制度，常說 pension(退休金) 或 retirement pay(課堂上沒有定論，依情境選用)。",
+          "What's more = 而且、此外，放句首、後面加逗號，用來補充說明。"
+        ],
+        "exs": [
+          {
+            "tag": "句型",
+            "en": "Tom needs to train a backup engineer before he retires.",
+            "cn": "Tom 退休前需要培訓一位接班的備援工程師。"
+          },
+          {
+            "tag": "句型",
+            "en": "We don't have a backup engineer, so the production line may stop if he takes leave.",
+            "cn": "我們沒有備援工程師，所以如果他請假，生產線可能會停擺。"
+          },
+          {
+            "tag": "老師出的中翻英",
+            "en": "Jack is our backup engineer for the production line.",
+            "cn": "Jack 是我們生產線的備援工程師。"
+          },
+          {
+            "tag": "例句",
+            "en": "Tom should train more engineers for emergency situations.",
+            "cn": "Tom 應該多培訓幾位工程師，以應付緊急情況。"
+          },
+          {
+            "tag": "例句",
+            "en": "The production line may stop if he takes a day off.",
+            "cn": "如果他休一天假，生產線可能會停擺。"
+          }
+        ]
+      },
+      {
+        "k": "IV-C",
+        "title": "in case(以防)與 in case of",
+        "pat": "in case + 子句(現在式) ／ in case of + 名詞",
+        "pts": [
+          "in case + 子句：以防、萬一(預防)。事情還沒發生，所以先做準備；子句用現在式，不用 will。",
+          "in case of + 名詞：萬一發生……(of 後面接名詞，例如 a natural disaster)。",
+          "in case 與 if 不同：In case something happens = 以防某事發生(預防，先準備)；If something happens = 如果某事發生(假設，發生了才做)。例：Take an umbrella in case it rains.(先帶傘，不管有沒有下雨) / If it rains, we will stay home.(下雨了才待在家)。",
+          "supply(單數)／supplies(複數)：emergency supplies 通常用複數；emergency food = 為緊急情況儲存的食物。"
+        ],
+        "exs": [
+          {
+            "tag": "句型",
+            "en": "We need a backup engineer in case Tom is absent.",
+            "cn": "如果 Tom 不在，我們需要一位備援工程師。"
+          },
+          {
+            "tag": "句型",
+            "en": "Take your phone with you in case you need to contact someone.",
+            "cn": "帶著手機，以防你需要聯絡別人。"
+          },
+          {
+            "tag": "句型",
+            "en": "We should prepare a backup motor in case the original one breaks down.",
+            "cn": "我們應該準備一顆備用馬達，以防原本那顆壞掉。"
+          },
+          {
+            "tag": "in case of",
+            "en": "We need to prepare emergency supplies in case of a natural disaster.",
+            "cn": "我們需要準備緊急物資，以防發生天然災害。"
+          },
+          {
+            "tag": "句型",
+            "en": "The company keeps emergency supplies in the storage room.",
+            "cn": "公司把緊急用品存放在儲藏室。"
+          },
+          {
+            "tag": "if",
+            "en": "If an earthquake happens, try to stay away from windows.",
+            "cn": "如果發生地震，盡量遠離窗戶。"
+          },
+          {
+            "tag": "in case",
+            "en": "We should prepare emergency supplies in case an earthquake happens.",
+            "cn": "我們應該準備緊急物資，以防發生地震。"
+          },
+          {
+            "tag": "in case",
+            "en": "Keep emergency supplies in the workplace in case a natural disaster happens.",
+            "cn": "工作場所要備好緊急物資，以防發生天然災害。"
+          },
+          {
+            "tag": "句型",
+            "en": "Emergency supplies include drinking water, canned food, flashlights, batteries, first aid kits, and fire extinguishers.",
+            "cn": "緊急物資包括飲用水、罐頭食品、手電筒、電池、急救箱和滅火器。"
+          }
+        ]
+      },
+      {
+        "k": "IV-D",
+        "title": "緊急停止按鈕的動作",
+        "pat": "Twist the emergency stop button to release it.",
+        "pts": [
+          "to + 原形動詞(不定詞)表示目的：旋轉按鈕「為了」釋放它；按鈕上的字 TWIST TO RESET 就是「旋轉來重置」。",
+          "照片上按鈕的箭頭往左轉，也就是 counterclockwise(逆時針)；要往反方向(clockwise)旋轉才是 the opposite direction。",
+          "Press / Push 都是「按」；Release 是「放開」(手離開)，不是「放出去」；Pull 是「拉出來」。",
+          "一般按鈕用 press；有些緊急停止按鈕按下後，要 turn／twist／pull 才能重置，動詞依機器設計而定。(老師一度質疑 release，查證後確認在這裡可以用。)",
+          "說法對照：Press a button 按下按鈕／Push a button 按按鈕／Release a button 放開按鈕／Pull the emergency stop button 拉出緊急停止按鈕／Reset the emergency stop button 重置緊急停止按鈕／Turn it counterclockwise. 逆時針旋轉／Turn it clockwise. 順時針旋轉／Twist it in the opposite direction. 往反方向旋轉／Emergency situation 緊急情況。"
+        ],
+        "exs": [
+          {
+            "tag": "句型",
+            "en": "Twist the emergency stop button to release it.",
+            "cn": "旋轉緊急停止按鈕來釋放它。"
+          },
+          {
+            "tag": "press",
+            "en": "Press the emergency stop button.",
+            "cn": "按下緊急停止按鈕。"
+          },
+          {
+            "tag": "pull",
+            "en": "Pull the emergency button to reset it.",
+            "cn": "拉起緊急按鈕來重置它。"
+          },
+          {
+            "tag": "reset",
+            "en": "Reset the emergency stop button before restarting the machine.",
+            "cn": "重新啟動機器之前，先重置緊急停止按鈕。"
+          }
+        ]
+      },
+      {
+        "k": "IV-E",
+        "title": "自掏腰包與報銷",
+        "pat": "reimburse + 人 + for + 費用",
+        "pts": [
+          "out of my own pocket = 自掏腰包；reimburse = 報銷、償還費用；reimbursement = 費用報銷(名詞)。",
+          "reimburse + 人 + for + 費用：報銷某人的某筆費用；公司「之後會」做，用 will。",
+          "想表達「申請報銷」可以說 apply for reimbursement 或 ask for reimbursement。"
+        ],
+        "exs": [
+          {
+            "tag": "句型",
+            "en": "I paid for the taxi out of my own pocket, but the company will reimburse me for it.",
+            "cn": "計程車費是我自掏腰包付的，但公司會把這筆錢報銷給我。"
+          },
+          {
+            "tag": "reimbursement",
+            "en": "I will submit the receipt for reimbursement.",
+            "cn": "我會把收據送出，申請報銷。"
+          },
+          {
+            "tag": "reimbursement",
+            "en": "I paid out of my own pocket, but I will get reimbursement later.",
+            "cn": "我是自掏腰包付的，但之後會拿到報銷。"
+          }
+        ]
+      },
+      {
+        "k": "IV-F",
+        "title": "名詞比動詞難用、搭配詞與 -ment 名詞",
+        "pat": "動詞：主詞 + 動詞 ／ 名詞：主詞 + 搭配動詞 + 名詞",
+        "pts": [
+          "用名詞造句常比用動詞難：動詞加上主詞就能成句，名詞要搭配合適的動詞。",
+          "collocation(搭配詞)：母語人士習慣放在一起用的字詞組合。學英文不只要認識單字，還要知道哪些字會一起出現。",
+          "-ment 結尾的字多半是名詞：improvement 進步、改善(improve)；treatment 治療、處理(treat)；supplement 補充品(supplement 補充)；replacement 替換、替代品(replace)；disappointment 失望(disappoint)；retirement 退休(retire)；experiment 實驗(experiment 做實驗)。"
+        ],
+        "exs": [
+          {
+            "tag": "動詞",
+            "en": "Tom delivers the product on time.",
+            "cn": "Tom 準時交貨。"
+          },
+          {
+            "tag": "名詞",
+            "en": "We haven't received the delivery yet.",
+            "cn": "我們還沒收到貨。"
+          }
+        ]
+      },
+      {
+        "k": "IV-G",
+        "title": "食物容器與罐頭",
+        "pat": "keep food in a reusable food container ／ be useful for + V-ing",
+        "pts": [
+          "說法：food container、reusable (food) container、food storage container、plastic container、glass container；reusable = re-(再)+ use + -able(可以……的)。",
+          "can 當名詞是「罐頭、金屬罐」；canned food = 罐裝的食物(過去分詞 canned 當形容詞)。"
+        ],
+        "exs": [
+          {
+            "tag": "句型",
+            "en": "We can keep food in a reusable food container.",
+            "cn": "我們可以把食物放在可重複使用的食物容器裡。"
+          },
+          {
+            "tag": "句型",
+            "en": "A plastic container is useful for storing food.",
+            "cn": "塑膠容器很適合用來存放食物。"
+          },
+          {
+            "tag": "句型",
+            "en": "A glass container can also be used for food storage.",
+            "cn": "玻璃容器也可以用來保存食物。"
+          },
+          {
+            "tag": "句型",
+            "en": "We should prepare canned food in the emergency kit.",
+            "cn": "我們應該在緊急包裡準備罐頭食品。"
+          },
+          {
+            "tag": "句型",
+            "en": "Canned food is useful during emergencies because it can be stored for a long time.",
+            "cn": "罐頭食品在緊急時很有用，因為可以存放很久。"
+          }
+        ]
+      }
+    ],
+    "reading": [
+      {
+        "bar": "VI. 閱讀 Reading：Emergency Preparation Meeting",
+        "title": "Emergency Preparation Meeting",
+        "titleCn": "緊急應變準備會議",
+        "paras": [
+          {
+            "en": "To discuss emergency preparation, the safety manager reminded everyone that we should always keep emergency supplies in the workplace. These supplies include drinking water, canned food, flashlights, batteries, a first aid kit, and a fire extinguisher. Employees were also asked to prepare their own emergency kits at home. One colleague suggested keeping some food containers in the emergency kit because they can be useful for storing food and water.",
+            "cn": "為了討論緊急應變的準備，安全經理提醒大家，工作場所應該隨時備有緊急物資。這些物資包括飲用水、罐頭食品、手電筒、電池、急救箱和滅火器。員工也被要求在家準備自己的緊急包。一位同事建議在緊急包裡放一些食物容器，因為它們可以用來存放食物和水。"
+          }
+        ],
+        "questions": [
+          {
+            "q": "What was the meeting about?",
+            "qCn": "會議是關於什麼？",
+            "a": "It was about emergency supplies and safety preparation.",
+            "aCn": "關於緊急物資和安全準備。"
+          },
+          {
+            "q": "Can you name two emergency supplies?",
+            "qCn": "你能說出兩樣緊急物資嗎？",
+            "a": "A fire extinguisher and a flashlight.",
+            "aCn": "滅火器和手電筒。(其他答案：drinking water 和 canned food；batteries 和 a first aid kit；a safety helmet 和 emergency food)"
+          },
+          {
+            "q": "Why did one colleague suggest keeping food containers in the emergency kit?",
+            "qCn": "為什麼有位同事建議在緊急包裡放食物容器？",
+            "a": "Because they can be useful for storing food and water.",
+            "aCn": "因為可以用來存放食物和水。"
+          }
+        ]
+      }
+    ],
+    "extraTitle": "V／VIII. 日常口說與改錯練習",
+    "extra": [
+      {
+        "title": "V. 日常口說 Daily Talk：What's going on in your life?",
+        "exs": [
+          {
+            "tag": "重點",
+            "en": "What's going on in your life?",
+            "cn": "你最近生活怎麼樣？是朋友之間的閒聊問候。回答可以很簡短，不一定要講大事。"
+          },
+          {
+            "tag": "文法",
+            "en": "I've been + V-ing ／ Life has been + 形容詞",
+            "cn": "I've been + V-ing：我最近一直在……(現在完成進行式)；Life has been + 形容詞：生活最近……(現在完成式，搭配 recently / lately)。"
+          },
+          {
+            "tag": "A1",
+            "en": "Not much, just my normal routine.",
+            "cn": "沒什麼特別的，就是平常的日常。"
+          },
+          {
+            "tag": "A2",
+            "en": "I've been focusing on work and self-improvement.",
+            "cn": "我最近一直專注在工作和自我提升。"
+          },
+          {
+            "tag": "A3",
+            "en": "I've been trying to learn new things lately.",
+            "cn": "我最近一直在嘗試學新東西。"
+          },
+          {
+            "tag": "A4",
+            "en": "Life has been quite busy recently.",
+            "cn": "最近生活相當忙碌。"
+          }
+        ]
+      },
+      {
+        "title": "VIII. 練習 Correct the Mistakes",
+        "exs": [
+          {
+            "tag": "1",
+            "en": "❌ We sent the defective motor back to supplier for checking examination. ✅ We sent the defective motor back to the supplier for inspection.",
+            "cn": "我們把故障的馬達退回給供應商檢驗。錯在哪裡：supplier 前面要加 the；checking examination 重複，改成 inspection。"
+          },
+          {
+            "tag": "2",
+            "en": "❌ The customer complained for the poor quality. ✅ The customer complained about the poor quality.",
+            "cn": "客戶抱怨品質不好。錯在哪裡：complain 後面接 about + 事情，不是 for。"
+          },
+          {
+            "tag": "3",
+            "en": "❌ Tom needs to train a backup engineer before he retire. ✅ Tom needs to train a backup engineer before he retires.",
+            "cn": "Tom 退休前需要培訓一位備援工程師。錯在哪裡：主詞 he 是第三人稱單數，現在式動詞 retire 要加 s。"
+          }
+        ]
+      }
+    ],
+    "discussionTitle": "VII. 複習問答 Review Questions",
+    "discussion": [
+      {
+        "q": "What should Tom do before he retires?",
+        "qCn": "Tom 退休前應該做什麼？",
+        "a": "Tom should train a backup engineer before he retires. 或：Tom should pass on his knowledge to other employees.",
+        "aCn": "Tom 退休前應該培訓一位備援工程師(或把知識傳承給其他員工)。"
+      },
+      {
+        "q": "What should operators do before testing a machine?",
+        "qCn": "操作員在測試機器前應該做什麼？",
+        "a": "Operators should check the emergency stop button before testing a machine in case something dangerous happens.",
+        "aCn": "測試機器前應該檢查緊急停止按鈕，以防發生危險。"
+      },
+      {
+        "q": "What would you do if the product had a problem?",
+        "qCn": "如果產品有問題，你會怎麼做？",
+        "a": "We would replace the product with a new one.",
+        "aCn": "我們會把產品換成新的。replace + 舊的 + with + 新的：單數 replace the product with a new one；複數 replace the products with new ones(one → ones)。"
+      }
+    ]
   }
   ]
 };
@@ -36697,6 +37844,7 @@ window.BOOK = {
     bk20261110:[[['extinguisher','blueprint','trash','controlPanel','passTag'],'把手首件檢驗：新製把手做首件檢驗 → 尺寸與技術圖面不符 → 查出用了過時圖面 → 工程部提供新圖面並調整機台設定 → 再驗合格核准量產並改善文件管制。']],
     bk20261119:[[['hospital','moneyL','wallet','piggy','typhoon'],'保險與存錢：年紀變大可能生病或動手術、醫療費很貴 → 爸爸動手術，健康保險負擔醫療費 → 保險不便宜，每個月要付很多錢 → 每個月存一點錢以備不時之需 → 意外發生時不用太擔心。']],
     bk20261120:[[['ambulance','syringe','coin','candle','sofa'],'範例故事：健康保險很重要 → 生病或動手術時保險幫忙支付費用 → 保險不一定涵蓋全部治療費用，可能要自掏腰包 → 存錢以備不時之需、為緊急情況存錢 → 政府補助減輕退休、收入有限的老年人的經濟負擔。']],
+    bk20261124:[[['controlPanel','extinguisher','quake','house','bowl'],'緊急應變準備會議：安全經理提醒工作場所要隨時備好緊急物資 → 飲用水、罐頭、手電筒、電池、急救箱和滅火器 → 以防天然災害 → 員工在家也要準備自己的緊急包 → 同事建議放食物容器，用來存放食物和水。']],
     bk20261027:[[['coffee','camera','nametag','basket','brainL'],'妮娜的品管一天：每天早上檢查產線 → 目視檢查刮痕、裂縫、鏽 → 坡度馬達故障，標示為不良品 → 與合格品分開、記錄序號 → 找出根本原因，預防同樣問題再發生。']],
   };;
   ((window.BOOK||{}).lessons||[]).forEach(function(b){

@@ -237,7 +237,7 @@ articles:[
   target:[
     {w:"flat",ipa:"/flæt/",pos:"n.",cn:"公寓",def:"A home on one floor of a building.",ex:"Sam lives in a small apartment near the park with his two cats.",exCn:"山姆和他的兩隻貓住在公園附近的一間小公寓裡。"},
     {w:"floor",ipa:"/flɔːr/",pos:"n.",cn:"地板",def:"The surface you walk on inside.",ex:"The baby dropped her cereal all over the floor at breakfast.",exCn:"寶寶吃早餐時把麥片灑得滿地都是。"},
-    {w:"trash",ipa:"/ˈrʌbɪʃ/",pos:"n.",cn:"垃圾",def:"Things you throw away.",ex:"After the picnic, we put all our trash in a bag and took it home.",exCn:"野餐結束後，我們把所有垃圾裝進袋子帶回家。"},
+    {w:"trash",ipa:"/træʃ/",pos:"n.",cn:"垃圾",def:"Things you throw away.",ex:"After the picnic, we put all our trash in a bag and took it home.",exCn:"野餐結束後，我們把所有垃圾裝進袋子帶回家。"},
     {w:"sink",ipa:"/sɪŋk/",pos:"n.",cn:"水槽",def:"The bowl in a kitchen where you wash dishes.",ex:"My dad fixed the leaking pipe under the sink yesterday.",exCn:"我爸爸昨天修好了水槽下面漏水的水管。"},
     {w:"already",ipa:"/ɔːlˈredi/",pos:"adv.",cn:"已經",def:"Before now.",ex:"Mom, my homework is already done, so can I watch a movie now?",exCn:"媽，我的作業已經寫完了，現在可以看電影嗎？"},
     {w:"calm",ipa:"/kɑːm/",pos:"adj.",cn:"平靜的",def:"Quiet and relaxed.",ex:"The sea was calm this morning, so we went out in a small boat.",exCn:"今天早上海面很平靜，所以我們搭小船出海。"}
