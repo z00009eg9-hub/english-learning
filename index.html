@@ -1063,7 +1063,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
 
 <header>
   <div class="hd-in">
-    <div class="hd-brand" onclick="goHome()" style="cursor:pointer" title="回首頁">
+    <div class="hd-brand" data-act="goHome" style="cursor:pointer" title="回首頁">
       <div class="hd-logo">🍎🐻</div>
       <div>
         <div class="hd-ttl">Speak Up!</div>
@@ -1073,15 +1073,15 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
     <div class="hd-topic" id="hd-topic" title="目前選擇的課堂主題"></div>
     <div class="hd-right">
       <div class="prof-sw" title="切換學習者，各自獨立進度">
-        <button class="prof-btn active" id="prof-anita" onclick="setProfile('anita')">🍎 Anita</button>
-        <button class="prof-btn" id="prof-tom" onclick="setProfile('tom')">🐻 Tom</button>
+        <button class="prof-btn active" id="prof-anita" data-act="setProfile" data-args='["anita"]'>🍎 Anita</button>
+        <button class="prof-btn" id="prof-tom" data-act="setProfile" data-args='["tom"]'>🐻 Tom</button>
       </div>
       <div class="hd-streak">🔥 <span id="hd-streak">1</span> 天 <span id="sync-badge" title="進度已雲端同步（跨裝置共用）" style="display:none"><svg class=ic><use href=#i-cloud></use></svg></span></div>
       <div class="hd-gear-wrap">
-        <button class="hd-fs" onclick="gearTog(event)" title="設定與其他學習網站（字級、B2 Read、QA 題庫）"><svg class=ic><use href=#i-gear></use></svg></button>
+        <button class="hd-fs" data-act="gearTog" data-args='["$ev"]' title="設定與其他學習網站（字級、B2 Read、QA 題庫）"><svg class=ic><use href=#i-gear></use></svg></button>
         <div class="gear-menu" id="gear-menu">
-          <button class="gear-it" id="hd-fs" onclick="cycleFS()" title="調整字體大小（標準 → 大 → 特大）">Aa 標準</button>
-          <button class="gear-it" id="rec-mode" onclick="toggleRecMode()" title="精準：錄音後由雲端 Whisper 辨識（較準）；快速：瀏覽器內建辨識"><svg class=ic><use href=#i-mic></use></svg> 語音：快速</button>
+          <button class="gear-it" id="hd-fs" data-act="cycleFS" title="調整字體大小（標準 → 大 → 特大）">Aa 標準</button>
+          <button class="gear-it" id="rec-mode" data-act="toggleRecMode" title="精準：錄音後由雲端 Whisper 辨識（較準）；快速：瀏覽器內建辨識"><svg class=ic><use href=#i-mic></use></svg> 語音：快速</button>
           <a href="https://english-b2-lab.web.app" class="gear-it" title="B2 Read — 閱讀 · 單字間隔複習 · 文法教材，每天自動更新">📚 B2 Read ↗</a>
           <a href="https://rexon-qa-english.web.app/" class="gear-it" title="Rexon QA — 英文練習題庫">📝 QA 題庫 ↗</a>
         </div>
@@ -1107,14 +1107,14 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
       <div class="day-meta" id="day-meta" style="display:none"></div>
     </div>
 
-    <button class="warmup-bar hide" id="warmup-bar" onclick="startWarmup()" title="上課前 15 分鐘快速暖身：5 句說出來，開口熱身">
+    <button class="warmup-bar hide" id="warmup-bar" data-act="startWarmup" title="上課前 15 分鐘快速暖身：5 句說出來，開口熱身">
       <span class="wu-ico">⚡</span>
       <span class="wu-txt"><b>15 分鐘上課暖身 Warm-up</b><span class="wu-sub" id="warmup-sub">今晚有外師口說課！先說 5 句熱個身，上課更快進入狀況</span></span>
       <span class="wu-go">開始暖身 →</span>
     </button>
 
     <div class="grid-ttl">🚀 今日練習路徑（先說，再對話）
-      <button class="help" id="help-btn" onclick="toggleHelp()"><svg class=ic><use href=#i-help></use></svg> 第一次使用？怎麼練口說 ▾</button>
+      <button class="help" id="help-btn" data-act="toggleHelp"><svg class=ic><use href=#i-help></use></svg> 第一次使用？怎麼練口說 ▾</button>
     </div>
     <div class="card hide" id="help-card" style="margin-bottom:14px">
       <div class="help-body">
@@ -1126,7 +1126,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
       </div>
     </div>
     <div class="acts-hero">
-      <button class="act act-say" onclick="openAct('say')" title="看中文開口說英文，麥克風幫你抓漏字並給分"><span class="act-prog" id="ap-say"></span>
+      <button class="act act-say" data-act="openAct" data-args='["say"]' title="看中文開口說英文，麥克風幫你抓漏字並給分"><span class="act-prog" id="ap-say"></span>
         <div class="act-ico i-say">🎤</div>
         <div class="act-h">說出來</div>
         <div class="act-en">Say It Out Loud</div>
@@ -1134,7 +1134,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
         <div class="act-meta"><span>⏱️ 8 min</span><span class="m-hard">🔥 高強度輸出</span></div>
         <span class="act-cta">開始練習 ➔</span>
       </button>
-      <button class="act act-talk" onclick="openAct('talk')" title="像聊天一樣一句一句對話，說錯馬上給你正確說法"><span class="act-prog" id="ap-talk"></span>
+      <button class="act act-talk" data-act="openAct" data-args='["talk"]' title="像聊天一樣一句一句對話，說錯馬上給你正確說法"><span class="act-prog" id="ap-talk"></span>
         <div class="act-ico i-talk">💬</div>
         <div class="act-h">情境對話</div>
         <div class="act-en">Talk Time</div>
@@ -1146,37 +1146,37 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
 
     <div class="grid-ttl">🧩 更多練習</div>
     <div class="acts acts-sub">
-      <button class="act act-shadow" onclick="openAct('shadow')" title="聽標準示範句，馬上跟著複誦，練節奏與流暢度"><span class="act-prog" id="ap-shadow"></span>
+      <button class="act act-shadow" data-act="openAct" data-args='["shadow"]' title="聽標準示範句，馬上跟著複誦，練節奏與流暢度"><span class="act-prog" id="ap-shadow"></span>
         <div class="act-ico i-shadow">🔁</div>
         <div class="act-h">跟讀模仿</div>
         <div class="act-en">Shadowing</div>
         <div class="act-meta"><span>⏱️ 8 min</span><span class="m-lv">B1 鞏固</span></div>
       </button>
-      <button class="act act-listen" onclick="openAct('listen')" title="聽英文句子（可正常/慢速）：基礎用選擇題，進階打字聽寫"><span class="act-prog" id="ap-listen"></span>
+      <button class="act act-listen" data-act="openAct" data-args='["listen"]' title="聽英文句子（可正常/慢速）：基礎用選擇題，進階打字聽寫"><span class="act-prog" id="ap-listen"></span>
         <div class="act-ico i-listen">🎧</div>
         <div class="act-h">聽力練習</div>
         <div class="act-en">Listening</div>
         <div class="act-meta"><span>⏱️ 8 min</span><span class="m-lv">B1 / B2</span></div>
       </button>
-      <button class="act act-word" onclick="openAct('word')" title="看字卡念單字並造句，把生字變成能開口說的字"><span class="act-prog" id="ap-word"></span>
+      <button class="act act-word" data-act="openAct" data-args='["word"]' title="看字卡念單字並造句，把生字變成能開口說的字"><span class="act-prog" id="ap-word"></span>
         <div class="act-ico i-word">🗣️</div>
         <div class="act-h">單字口說</div>
         <div class="act-en">Word Power</div>
         <div class="act-meta"><span>⏱️ 6 min</span><span class="m-lv">B1 鞏固</span></div>
       </button>
-      <button class="act act-read" onclick="openAct('read')" title="一段一段朗讀文章，說對的字會即時亮綠燈"><span class="act-prog" id="ap-read"></span>
+      <button class="act act-read" data-act="openAct" data-args='["read"]' title="一段一段朗讀文章，說對的字會即時亮綠燈"><span class="act-prog" id="ap-read"></span>
         <div class="act-ico i-read">📖</div>
         <div class="act-h">朗讀文章</div>
         <div class="act-en">Read Aloud</div>
         <div class="act-meta"><span>⏱️ 10 min</span><span class="m-lv">B1→B2</span></div>
       </button>
-      <button class="act act-video" onclick="openAct('video')" title="邊看影片邊看雙語字幕，可暫停、單句復讀、循環、變速"><span class="act-prog" id="ap-video"></span>
+      <button class="act act-video" data-act="openAct" data-args='["video"]' title="邊看影片邊看雙語字幕，可暫停、單句復讀、循環、變速"><span class="act-prog" id="ap-video"></span>
         <div class="act-ico i-video">🎬</div>
         <div class="act-h">影片精聽</div>
         <div class="act-en">Watch &amp; Learn</div>
         <div class="act-meta"><span>⏱️ 15 min</span><span class="m-hard">B2 挑戰</span></div>
       </button>
-      <button class="act act-quiz" onclick="openAct('quiz')" title="選擇題測驗：綜合（單字文法）／聽力（用聽的選）／閱讀（讀短文回答）"><span class="act-prog" id="ap-quiz"></span>
+      <button class="act act-quiz" data-act="openAct" data-args='["quiz"]' title="選擇題測驗：綜合（單字文法）／聽力（用聽的選）／閱讀（讀短文回答）"><span class="act-prog" id="ap-quiz"></span>
         <div class="act-ico i-quiz">📝</div>
         <div class="act-h">快速檢查</div>
         <div class="act-en">Quick Check</div>
@@ -1203,7 +1203,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
   <!-- ══════════ SAY IT ══════════ -->
   <section class="screen" id="scr-say">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁"></button>
+      <button class="back" data-act="goHome" title="回首頁"></button>
       <div><div class="sub-h">說出來</div><div class="sub-s" id="say-sub">看中文，開口說英文</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 看中文，先自己想英文 → ② 按 說出來，說完再按一次結束 → ③ 想不出來按 💡 看提示 → ④ 看分數與答案，按下一題</div>
@@ -1221,16 +1221,16 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
       <div class="sticky-ctrl">
         <div class="mic-zone">
           <div class="mic-row">
-            <button class="mic-side" id="say-demo" onclick="sayPlay()" title="播放正確英文示範發音（每題先自己試 4 秒才解鎖）"><span class="ms-ico"><svg class=ic><use href=#i-spk></use></svg></span><span class="ms-t" id="say-demo-t">聽示範</span></button>
-            <button class="mic" id="say-mic" onclick="sayMic()" title="按一下開始說英文，說完再按一次結束並評分"><svg class=ic><use href=#i-mic></use></svg></button>
+            <button class="mic-side" id="say-demo" data-act="sayPlay" title="播放正確英文示範發音（每題先自己試 4 秒才解鎖）"><span class="ms-ico"><svg class=ic><use href=#i-spk></use></svg></span><span class="ms-t" id="say-demo-t">聽示範</span></button>
+            <button class="mic" id="say-mic" data-act="sayMic" title="按一下開始說英文，說完再按一次結束並評分"><svg class=ic><use href=#i-mic></use></svg></button>
             <span class="mic-side-ph"></span>
           </div>
           <div class="mic-lbl" id="say-mlbl">按一下,開始說</div>
         </div>
         <div class="actions">
-          <button class="btn btn-o hide" id="say-redo" onclick="micRestart()" title="剛剛說壞了？按這裡清空重說，麥克風不會關掉">🔄 重說</button>
-          <button class="btn btn-o hide" id="say-reveal" onclick="sayRevealAns()" title="顯示正確的英文答案">👀 看答案</button>
-          <button class="btn btn-p hide" id="say-next" onclick="sayNext()" title="換下一句">下一句 →</button>
+          <button class="btn btn-o hide" id="say-redo" data-act="micRestart" title="剛剛說壞了？按這裡清空重說，麥克風不會關掉">🔄 重說</button>
+          <button class="btn btn-o hide" id="say-reveal" data-act="sayRevealAns" title="顯示正確的英文答案">👀 看答案</button>
+          <button class="btn btn-p hide" id="say-next" data-act="sayNext" title="換下一句">下一句 →</button>
         </div>
       </div>
     </div>
@@ -1239,7 +1239,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
   <!-- ══════════ SHADOW ══════════ -->
   <section class="screen" id="scr-shadow">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁"></button>
+      <button class="back" data-act="goHome" title="回首頁"></button>
       <div><div class="sub-h">🔁 跟讀模仿</div><div class="sub-s">聽一句 → 馬上複誦</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 按 <svg class=ic><use href=#i-spk></use></svg> 正常速聽示範（聽不清用 🐢 慢速）→ ② 按 <svg class=ic><use href=#i-mic></use></svg> 馬上跟著複誦（停下來 2 秒會自動評分）→ ③ 綠字＝說對，紅字＝漏掉。<br>💡 發音標記：<b>粗體＝重音字</b>、<span style="opacity:.5;font-size:.9em">淡字＝弱讀虛詞</span>、<span style="color:var(--coral);font-weight:900">‿</span>＝連音（lend‿you 連著唸）、<span style="color:#C9BFAF">｜</span>＝意群換氣點、句尾 <span style="color:var(--teal);font-weight:900">↗</span><span style="color:var(--coral);font-weight:900">↘</span>＝語調升降；進步後按 👁️ 隱藏字幕，純靠耳朵盲測！</div>
@@ -1256,17 +1256,17 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
       <div class="heard" id="sh-heard"></div>
       <div class="sticky-ctrl">
         <div class="mic-zone">
-          <button class="mic" id="sh-mic" onclick="shMic()" title="按一下開始複誦，說完再按一次結束並評分"><svg class=ic><use href=#i-mic></use></svg></button>
+          <button class="mic" id="sh-mic" data-act="shMic" title="按一下開始複誦，說完再按一次結束並評分"><svg class=ic><use href=#i-mic></use></svg></button>
           <div class="mic-lbl" id="sh-mlbl">先聽示範,再按我複誦</div>
         </div>
         <div class="actions">
-          <button class="btn btn-t" onclick="shPlay(1)" title="用正常速度播放示範句"><svg class=ic><use href=#i-spk></use></svg> 正常速</button>
-          <button class="btn btn-o" onclick="shPlay(.65)" title="放慢速度播放，方便跟讀">🐢 慢速</button>
-          <button class="btn btn-o" id="sh-blind" onclick="shBlindTog()" title="盲測模式：遮住中英文字幕，純靠耳朵聽音複誦（B2 必練）">👁️ 隱藏字幕</button>
-          <button class="btn btn-o hide" id="sh-redo" onclick="micRestart()" title="剛剛說壞了？按這裡清空重說，麥克風不會關掉">🔄 重說</button>
-          <button class="btn btn-p" id="sh-next" onclick="shNext()" title="換下一句">下一句 →</button>
+          <button class="btn btn-t" data-act="shPlay" data-args='[1]' title="用正常速度播放示範句"><svg class=ic><use href=#i-spk></use></svg> 正常速</button>
+          <button class="btn btn-o" data-act="shPlay" data-args='[0.65]' title="放慢速度播放，方便跟讀">🐢 慢速</button>
+          <button class="btn btn-o" id="sh-blind" data-act="shBlindTog" title="盲測模式：遮住中英文字幕，純靠耳朵聽音複誦（B2 必練）">👁️ 隱藏字幕</button>
+          <button class="btn btn-o hide" id="sh-redo" data-act="micRestart" title="剛剛說壞了？按這裡清空重說，麥克風不會關掉">🔄 重說</button>
+          <button class="btn btn-p" id="sh-next" data-act="shNext" title="換下一句">下一句 →</button>
         </div>
-        <div style="margin-top:9px"><button class="autorec" onclick="toggleAutoRec()" title="開啟後，示範句念完會自動開始錄音"><svg class=ic><use href=#i-mic></use></svg> 自動錄音：開</button></div>
+        <div style="margin-top:9px"><button class="autorec" data-act="toggleAutoRec" title="開啟後，示範句念完會自動開始錄音"><svg class=ic><use href=#i-mic></use></svg> 自動錄音：開</button></div>
       </div>
     </div>
   </section>
@@ -1274,13 +1274,13 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
   <!-- ══════════ WORD POWER ══════════ -->
   <section class="screen" id="scr-word">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁"></button>
+      <button class="back" data-act="goHome" title="回首頁"></button>
       <div><div class="sub-h">🗣️ 單字口說</div><div class="sub-s" id="word-sub">念單字 + 造句</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 按 <svg class=ic><use href=#i-spk></use></svg> 聽發音 → ② 按 <svg class=ic><use href=#i-mic></use></svg> 念一次看分數 → ③ 點卡片翻面看中文與例句（<svg class=ic><use href=#i-spk></use></svg> 聽例句）→ ④ 按「下一個 →」換字</div>
     <div class="lvl-tog" id="lvl-word" style="display:none"></div>
     <div class="prog"><i id="word-prog"></i></div>
-    <div class="flip-wrap"><div class="flip" id="word-flip" onclick="wordFlip()" title="點一下翻面，看中文意思與例句">
+    <div class="flip-wrap"><div class="flip" id="word-flip" data-act="wordFlip" title="點一下翻面，看中文意思與例句">
       <div class="face face-f">
         <div class="fw" id="word-w">—</div>
         <div class="pc-ipa" id="word-ipa"></div>
@@ -1297,14 +1297,14 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
     <div class="heard" id="word-heard"></div>
     <div class="sticky-ctrl">
       <div class="mic-zone">
-        <button class="mic" id="word-mic" onclick="wordMic()" title="按一下念出這個單字，再按一次結束並評分"><svg class=ic><use href=#i-mic></use></svg></button>
+        <button class="mic" id="word-mic" data-act="wordMic" title="按一下念出這個單字，再按一次結束並評分"><svg class=ic><use href=#i-mic></use></svg></button>
         <div class="mic-lbl" id="word-mlbl">按一下,念出這個單字</div>
       </div>
       <div class="actions">
-        <button class="btn btn-o" onclick="wordPlay()" title="播放這個單字的標準發音"><svg class=ic><use href=#i-spk></use></svg> 聽發音</button>
-        <button class="btn btn-o hide" id="word-redo" onclick="micRestart()" title="剛剛念壞了？按這裡清空重念，麥克風不會關掉">🔄 重念</button>
-        <button class="btn btn-o" onclick="wordPlayEx()" title="播放例句的發音"><svg class=ic><use href=#i-spk></use></svg> 聽例句</button>
-        <button class="btn btn-p" onclick="wordNext()" title="換下一個單字">下一個 →</button>
+        <button class="btn btn-o" data-act="wordPlay" title="播放這個單字的標準發音"><svg class=ic><use href=#i-spk></use></svg> 聽發音</button>
+        <button class="btn btn-o hide" id="word-redo" data-act="micRestart" title="剛剛念壞了？按這裡清空重念，麥克風不會關掉">🔄 重念</button>
+        <button class="btn btn-o" data-act="wordPlayEx" title="播放例句的發音"><svg class=ic><use href=#i-spk></use></svg> 聽例句</button>
+        <button class="btn btn-p" data-act="wordNext" title="換下一個單字">下一個 →</button>
       </div>
     </div>
   </section>
@@ -1312,7 +1312,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
   <!-- ══════════ READ ALOUD ══════════ -->
   <section class="screen" id="scr-read">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁"></button>
+      <button class="back" data-act="goHome" title="回首頁"></button>
       <div><div class="sub-h">📖 朗讀文章</div><div class="sub-s" id="read-sub">一段一段念出來</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 選一篇文章 → ② 每段先按 <svg class=ic><use href=#i-spk></use></svg> 聽示範 → ③ 按 <svg class=ic><use href=#i-mic></use></svg> 朗讀，說到哪亮到哪 → ④ 唸完再按一次 <svg class=ic><use href=#i-mic></use></svg> 看覆蓋率（點文章裡任一個字可聽發音）</div>
@@ -1324,7 +1324,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
   <!-- ══════════ TALK TIME（情境對話：聊天泡泡＋逐句糾正）══════════ -->
   <section class="screen" id="scr-talk">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁"></button>
+      <button class="back" data-act="goHome" title="回首頁"></button>
       <div><div class="sub-h">💬 情境對話</div><div class="sub-s" id="talk-sub">聽一句 → 用英文回應</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 看教練的訊息（<svg class=ic><use href=#i-spk></use></svg> 聽發音 / 譯 看中文 / 👁 遮字）→ ② 看中文提示 → ③ 按 ⬆ 開口說（說完再按一次）→ ④ 說錯會出現「試著說」正確版，可按「請講解給我聽」看說明</div>
@@ -1333,16 +1333,16 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
       <div class="chat" id="talk-chat"></div>
       <div class="cdots" id="talk-dots"></div>
       <div class="cbar">
-        <button class="side x" id="talk-skip" onclick="talkSkip()" title="跳過這一句">✕</button>
-        <button class="big" id="talk-mic" onclick="talkMic()" title="按一下開始說，說完再按一次結束">⬆</button>
-        <button class="side" id="talk-kb" onclick="talkToggleType()" title="改用打字作答">⌨</button>
+        <button class="side x" id="talk-skip" data-act="talkSkip" title="跳過這一句">✕</button>
+        <button class="big" id="talk-mic" data-act="talkMic" title="按一下開始說，說完再按一次結束">⬆</button>
+        <button class="side" id="talk-kb" data-act="talkToggleType" title="改用打字作答">⌨</button>
       </div>
       <div class="mic-lbl" id="talk-mlbl">按一下,開始說</div>
-      <div class="actions"><button class="btn btn-o btn-sm hide" id="talk-redo" onclick="micRestart()" title="剛剛說壞了？按這裡清空重說，麥克風不會關掉">🔄 重說</button></div>
+      <div class="actions"><button class="btn btn-o btn-sm hide" id="talk-redo" data-act="micRestart" title="剛剛說壞了？按這裡清空重說，麥克風不會關掉">🔄 重說</button></div>
       <div class="ctype hide" id="talk-type">
         <input id="talk-input" placeholder="用英文打出你的回答…" autocomplete="off"
           onkeydown="if(event.key==='Enter')talkTypeSubmit()">
-        <button class="btn btn-p" onclick="talkTypeSubmit()">送出</button>
+        <button class="btn btn-p" data-act="talkTypeSubmit">送出</button>
       </div>
     </div>
   </section>
@@ -1350,7 +1350,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
   <!-- ══════════ 影片精聽 ══════════ -->
   <section class="screen" id="scr-video">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁"></button>
+      <button class="back" data-act="goHome" title="回首頁"></button>
       <div><div class="sub-h">🎬 影片精聽</div><div class="sub-s" id="vid-sub">看影片／聽朗讀，配雙語字幕</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：① 選一個素材 → ② 按 ▶ 播放，字幕會跟著亮（朗讀模式會逐字變色）→ ③ 點任一句跳到那一句、點句尾 <svg class=ic><use href=#i-spk></use></svg> 單獨聽那一句 → ④ 工具列左半是播放操作（倍速/復讀/循環/AB段落循環/±3秒），右半是顯示切換（雙語/遮字/詞彙/練習）<br>⌨️ <b>快捷鍵</b>：<b>空白鍵</b>播放/暫停、<b>←/→</b> 上下句、<b>R</b> 重複這句</div>
@@ -1359,28 +1359,28 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
       <div class="vid-pin">
         <div id="vid-stage"></div>
         <div class="vplay">
-          <button onclick="vPrev()" title="上一句">⏮</button>
-          <button class="pp" id="vid-pp" onclick="vToggle()" title="播放／暫停">▶</button>
-          <button onclick="vNext()" title="下一句">⏭</button>
+          <button data-act="vPrev" title="上一句">⏮</button>
+          <button class="pp" id="vid-pp" data-act="vToggle" title="播放／暫停">▶</button>
+          <button data-act="vNext" title="下一句">⏭</button>
         </div>
         <div class="vtoolbar">
-        <button class="vtool" id="vt-rate" onclick="vCycleRate()" title="播放速度"><span class="i">⏩</span><span id="vt-rate-l">1x</span></button>
-        <button class="vtool" onclick="vRepeat()" title="重播現在這一句"><span class="i">🔂</span>復讀</button>
-        <button class="vtool" id="vt-loop" onclick="vToggleLoop()" title="這一句一直重複"><span class="i">🔁</span>循環</button>
-        <button class="vtool" id="vt-ab" onclick="vAB()" title="AB 段落循環：按一下設 A 點、再按設 B 點開始循環、第三下取消"><span class="i">🅰🅱</span><span id="vt-ab-l">AB循環</span></button>
-        <button class="vtool vt-yt" id="vt-b3" onclick="vJump(-3)" title="倒退 3 秒"><span class="i">↩</span>-3s</button>
-        <button class="vtool vt-yt" id="vt-f3" onclick="vJump(3)" title="前進 3 秒"><span class="i">↪</span>+3s</button>
+        <button class="vtool" id="vt-rate" data-act="vCycleRate" title="播放速度"><span class="i">⏩</span><span id="vt-rate-l">1x</span></button>
+        <button class="vtool" data-act="vRepeat" title="重播現在這一句"><span class="i">🔂</span>復讀</button>
+        <button class="vtool" id="vt-loop" data-act="vToggleLoop" title="這一句一直重複"><span class="i">🔁</span>循環</button>
+        <button class="vtool" id="vt-ab" data-act="vAB" title="AB 段落循環：按一下設 A 點、再按設 B 點開始循環、第三下取消"><span class="i">🅰🅱</span><span id="vt-ab-l">AB循環</span></button>
+        <button class="vtool vt-yt" id="vt-b3" data-act="vJump" data-args='[-3]' title="倒退 3 秒"><span class="i">↩</span>-3s</button>
+        <button class="vtool vt-yt" id="vt-f3" data-act="vJump" data-args='[3]' title="前進 3 秒"><span class="i">↪</span>+3s</button>
         <span class="vt-div"></span>
-        <button class="vtool on" id="vt-cn" onclick="vToggleCn()" title="中文翻譯開關"><span class="i">🈯</span>雙語</button>
-        <button class="vtool" id="vt-hide" onclick="vToggleEn()" title="遮住英文（盲聽模式）"><span class="i">🙈</span>遮字</button>
-        <button class="vtool" id="vt-vocab" onclick="vToggleVocab()" title="把今天的筆記單字標亮"><span class="i">📖</span>詞彙</button>
-        <button class="vtool" id="vt-prac" onclick="vPractice()" title="跟著現在這一句唸一次"><span class="i"><svg class=ic><use href=#i-mic></use></svg></span>練習</button>
+        <button class="vtool on" id="vt-cn" data-act="vToggleCn" title="中文翻譯開關"><span class="i">🈯</span>雙語</button>
+        <button class="vtool" id="vt-hide" data-act="vToggleEn" title="遮住英文（盲聽模式）"><span class="i">🙈</span>遮字</button>
+        <button class="vtool" id="vt-vocab" data-act="vToggleVocab" title="把今天的筆記單字標亮"><span class="i">📖</span>詞彙</button>
+        <button class="vtool" id="vt-prac" data-act="vPractice" title="跟著現在這一句唸一次"><span class="i"><svg class=ic><use href=#i-mic></use></svg></span>練習</button>
         </div>
         <div id="vid-prac" class="hide"></div>
       </div>
       <div class="sub-list" id="vid-subs"></div>
-      <div class="actions"><button class="btn btn-o" onclick="startVideo(DAY)">← 換一個素材</button>
-        <button class="btn btn-p" onclick="vFinish()">✅ 練完了,看成績</button></div>
+      <div class="actions"><button class="btn btn-o" data-act="startVideo" data-args='["$v:DAY"]'>← 換一個素材</button>
+        <button class="btn btn-p" data-act="vFinish">✅ 練完了,看成績</button></div>
     </div>
   </section>
 
@@ -1400,9 +1400,9 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
       <div class="grid-ttl">👉 接下來想練哪一張卡片?</div>
       <div class="nxt-acts" id="sum-nxt"></div>
       <div class="actions" style="margin-top:12px">
-        <button class="btn btn-p" onclick="sumAgain()">🔄 再練一次這張</button>
-        <button class="btn btn-o" id="sum-lvl" onclick="sumSwitchLevel()">切換難度</button>
-        <button class="btn btn-t" onclick="goHome()">🏠 回首頁</button>
+        <button class="btn btn-p" data-act="sumAgain">🔄 再練一次這張</button>
+        <button class="btn btn-o" id="sum-lvl" data-act="sumSwitchLevel">切換難度</button>
+        <button class="btn btn-t" data-act="goHome">🏠 回首頁</button>
       </div>
     </div>
   </section>
@@ -1410,7 +1410,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
   <!-- ══════════ QUICK CHECK ══════════ -->
   <section class="screen" id="scr-quiz">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁"></button>
+      <button class="back" data-act="goHome" title="回首頁"></button>
       <div><div class="sub-h">📝 快速檢查</div><div class="sub-s" id="quiz-sub">單字與文法小測驗</div></div>
     </div>
     <div class="how-bar">📌 <b>怎麼玩</b>：選題型 → 🎧 聽力題按 <svg class=ic><use href=#i-spk></use></svg> 聽完再選、📖 閱讀題先讀短文 → 作答看解說 → 做完可「🔄 再出一份新題」</div>
@@ -1427,7 +1427,7 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
   <!-- ══════════ LISTENING (聽力打字) ══════════ -->
   <section class="screen" id="scr-listen">
     <div class="sub-top">
-      <button class="back" onclick="goHome()" title="回首頁"></button>
+      <button class="back" data-act="goHome" title="回首頁"></button>
       <div><div class="sub-h">🎧 聽力練習</div><div class="sub-s" id="ls-sub">聽句子，把聽到的英文打出來</div></div>
     </div>
     <div class="how-bar" id="ls-how">📌 <b>怎麼玩</b>：① 按 <svg class=ic><use href=#i-spk></use></svg> 聽句子（可重聽、🐢 慢速）→ ② 把聽到的英文打進格子 → ③ 按「✅ 對答案」看逐字對照</div>
@@ -1442,8 +1442,8 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
       <div class="center hide" id="ls-hint-t" style="font-size:.76rem;color:var(--sub);margin-top:6px">💡 提示單字（點一下聽發音）:</div>
       <div class="phrases" id="ls-hint"></div>
       <div class="actions" style="margin-bottom:18px">
-        <button class="btn btn-t" onclick="lsPlay(1)" title="正常速度播放"><svg class=ic><use href=#i-spk></use></svg> 正常速</button>
-        <button class="btn btn-o" onclick="lsPlay(.6)" title="放慢播放">🐢 慢速</button>
+        <button class="btn btn-t" data-act="lsPlay" data-args='[1]' title="正常速度播放"><svg class=ic><use href=#i-spk></use></svg> 正常速</button>
+        <button class="btn btn-o" data-act="lsPlay" data-args='[0.6]' title="放慢播放">🐢 慢速</button>
       </div>
       <!-- 基礎：聽完從四句裡挑一句 -->
       <div id="ls-opts" class="hide"></div>
@@ -1453,12 +1453,12 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
         <div class="scorebox hide" id="ls-score"></div>
         <div class="diff hide" id="ls-diff"></div>
         <div class="actions">
-          <button class="btn btn-p" id="ls-check" onclick="lsCheck()">✅ 對答案</button>
+          <button class="btn btn-p" id="ls-check" data-act="lsCheck">✅ 對答案</button>
         </div>
       </div>
       <div id="ls-expl"></div>
       <div class="actions">
-        <button class="btn btn-p hide" id="ls-next" onclick="lsNext()">下一句 →</button>
+        <button class="btn btn-p hide" id="ls-next" data-act="lsNext">下一句 →</button>
       </div>
     </div>
   </section>
@@ -1472,8 +1472,8 @@ body::after{content:'';position:fixed;left:0;right:0;bottom:0;height:16px;pointe
     <div class="pin-sub" id="pin-sub">4 位數密碼</div>
     <input id="pin-input" class="pin-input" inputmode="numeric" maxlength="4" type="password" autocomplete="off" onkeydown="if(event.key==='Enter')pinSubmit()">
     <div class="pin-msg" id="pin-msg"></div>
-    <button class="btn btn-p btn-lg" onclick="pinSubmit()">確認</button>
-    <button class="btn btn-o btn-sm" style="margin-top:10px;width:100%;justify-content:center" onclick="pinSwitchOther()">切換其他學習者</button>
+    <button class="btn btn-p btn-lg" data-act="pinSubmit">確認</button>
+    <button class="btn btn-o btn-sm" style="margin-top:10px;width:100%;justify-content:center" data-act="pinSwitchOther">切換其他學習者</button>
   </div>
 </dialog>
 
@@ -8107,6 +8107,20 @@ function stripTags(h){const d=document.createElement('div');d.innerHTML=h;return
 function dOf(s){const m=(s||'').match(/(\d{8})/);return m?m[1]:null;}
 function fmtDate(d){if(!d||d==='all')return '全部';return d.slice(0,4)+'/'+d.slice(4,6)+'/'+d.slice(6,8);}
 function $(id){return document.getElementById(id);}
+/* ---------- 統一點擊處理（取代 inline onclick） ----------
+   靜態 HTML：<button data-act="函式名" data-args='[參數…]'>；JS 產生的 HTML 用 actAttr('函式名',參數…)。
+   特殊參數："$el"=被點的元素、"$ev"=事件、"$text"=元素文字、"$prevText"=前一個元素的文字、
+   "$v:名稱"=點擊當下才取的值（見 ACT_VARS）。巢狀時只跑最內層（等於以前的 event.stopPropagation）。
+   函式必須是 function 宣告（才會掛在 window 上）。 */
+const ACT_VARS={DAY:()=>DAY,quizLevel:()=>quizLevel,demoRate:()=>demoRate(),qzAns:()=>qzList[qzI].answer};
+function actAttr(fn,...a){return ' data-act="'+fn+'"'+(a.length?' data-args="'+esc(JSON.stringify(a)).replace(/"/g,'&quot;')+'"':'');}
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-act]');if(!el)return;
+  const fn=window[el.dataset.act];if(typeof fn!=='function'){console.warn('data-act 找不到函式',el.dataset.act);return;}
+  let a=[];if(el.dataset.args){try{a=JSON.parse(el.dataset.args);}catch(err){console.warn('data-args 格式錯',el.dataset.args);return;}}
+  a=a.map(x=>typeof x!=='string'||x[0]!=='$'?x:x==='$el'?el:x==='$ev'?e:x==='$text'?el.textContent
+    :x==='$prevText'?(el.previousElementSibling||{}).textContent:x.startsWith('$v:')&&ACT_VARS[x.slice(3)]?ACT_VARS[x.slice(3)]():x);
+  fn.apply(el,a);});
 /* 共用對話框，取代 alert/confirm/prompt。每次建新的 <dialog>，關掉就移除；可疊加。
    回傳 Promise：按確定 → true（有 <select> 時回傳選到的值）；取消／Esc／點背景 → false（有 <select> 時 null） */
 function uiDialog(msg,o){o=o||{};
@@ -8897,8 +8911,8 @@ function levelLabels(){return PROFILE==='tom'?['基礎 A2','進階 B1']:['基礎
 function lvTag(l){const L=levelLabels();return (l||LEVEL)==='basic'?''+L[0]:''+L[1];}
 function renderLvlBar(act){const el=$('lvl-'+act);if(!el)return;const L=levelLabels();
   el.style.display='flex';
-  el.innerHTML='<button class="lvl-btn'+(lvBasic()?' active':'')+'" onclick="setActLevel(\''+act+'\',\'basic\')">'+L[0]+'</button>'
-    +'<button class="lvl-btn'+(lvBasic()?'':' active')+'" onclick="setActLevel(\''+act+'\',\'advanced\')">'+L[1]+'</button>';}
+  el.innerHTML='<button class="lvl-btn'+(lvBasic()?' active':'')+'"'+actAttr('setActLevel',act,'basic')+'>'+L[0]+'</button>'
+    +'<button class="lvl-btn'+(lvBasic()?'':' active')+'"'+actAttr('setActLevel',act,'advanced')+'>'+L[1]+'</button>';}
 function setActLevel(act,l){if(l===LEVEL)return;saveLevel(l);
   micStop();ttsCancel();
   openAct(act);}
@@ -9603,7 +9617,7 @@ function buildDayList(){const box=$('day-pick');if(!box||!DAY)return;
   const tag=DAY===rec?'👉 今天建議':'已選擇';
   const lessons=DDATES.filter(d=>d!==DAY),SHOW=4;
   const rows=(DAYLIST_OPEN?lessons:lessons.slice(0,SHOW)).map(d=>{const q=dayPillParts(d),t=dayStatus(d);
-    return '<button class="pk-row" type="button" onclick="ddSelect(\''+d+'\')" title="'+esc(ddLabel(d))+'">'
+    return '<button class="pk-row" type="button"'+actAttr('ddSelect',d)+' title="'+esc(ddLabel(d))+'">'
       +'<span class="pk-t">'+esc(q.ttl)+'</span>'
       +'<span class="pk-s '+t.cls+'">'+esc(t.txt)+'</span>'
       +'<span class="pk-d">'+esc(dayDateTxt(q))+'</span></button>';}).join('');
@@ -9611,8 +9625,8 @@ function buildDayList(){const box=$('day-pick');if(!box||!DAY)return;
       +'<div class="pk-tag">'+tag+'</div>'
       +'<div class="pk-title">'+esc(p.ttl)+'</div>'
       +'<div class="pk-sub">'+esc(dayDateTxt(p))+' · '+esc(st.txt)+'</div></div>'
-      +'<div class="pk-btns"><button class="pk-go" type="button" onclick="startTodayPractice()">'+(st.cls==='part'?'繼續':'開始')+' →</button>'
-      +(DDATES.length>1?'<button class="pk-sw" type="button" onclick="openDayJump()">換課 ▾</button>':'')+'</div></div>';}
+      +'<div class="pk-btns"><button class="pk-go" type="button" data-act="startTodayPractice">'+(st.cls==='part'?'繼續':'開始')+' →</button>'
+      +(DDATES.length>1?'<button class="pk-sw" type="button" data-act="openDayJump">換課 ▾</button>':'')+'</div></div>';}
 function toggleDayList(){DAYLIST_OPEN=!DAYLIST_OPEN;buildDayList();}
 /* 舊下拉相容用的 no-op（影片選單另用 <select>，不受影響） */
 function ddToggle(e){if(e)e.stopPropagation();}
@@ -9628,9 +9642,9 @@ function openDayJump(){let ovl=$('dj-ovl');
     ovl.addEventListener('click',e=>{if(e.target===ovl)closeDayJump();});document.body.appendChild(ovl);}
   ovl.innerHTML='<div class="dj-box">'
     +'<div class="dj-hd">📋 全部課程（'+DDATES.length+'）'
-    +'<button class="dj-x" type="button" onclick="closeDayJump()" aria-label="關閉">✕</button></div>'
+    +'<button class="dj-x" type="button" data-act="closeDayJump" aria-label="關閉">✕</button></div>'
     +'<div class="dj-list">'+DDATES.map(d=>{const p=dayPillParts(d);
-      return '<button class="dj-row'+(d===DAY?' sel':'')+'" type="button" onclick="djPick(\''+d+'\')" title="'+esc(ddLabel(d))+'">'
+      return '<button class="dj-row'+(d===DAY?' sel':'')+'" type="button"'+actAttr('djPick',d)+' title="'+esc(ddLabel(d))+'">'
         +'<span class="dj-d">'+esc(p.top)+'<small>'+esc(p.wd)+'</small></span>'
         +'<span class="dj-t">'+esc(p.ttl)+'<small>'+esc(dayPracticeSummary(d))+'</small></span></button>';}).join('')
     +'</div></div>';
@@ -9728,7 +9742,7 @@ function sayRender(){const it=sayList[sayI];sayCur=it;
   if(it.hint&&lvBasic()){
     /* 遮罩提示與解鎖鈕統一成膠囊樣式：灰＝遮罩中、品牌色＝可點解鎖、綠＝已解鎖 */
     h.innerHTML='<span class="hint-cap">💡 '+esc(maskHint(it.hint))+'</span>'
-      +'<button class="hint-cap hint-lock" onclick="sayHintFull()" title="解鎖完整提示"><svg class=ic><use href=#i-lock></use></svg> 完整提示</button>';
+      +'<button class="hint-cap hint-lock" data-act="sayHintFull" title="解鎖完整提示"><svg class=ic><use href=#i-lock></use></svg> 完整提示</button>';
     h.classList.remove('hide');
   }else h.classList.add('hide');
   $('say-tag').textContent='第 '+(sayI+1)+' / '+sayList.length+' 句';
@@ -9751,7 +9765,7 @@ function sayAltsHTML(ans,used){
   const rest=ans.filter(a=>norm(a)!==norm(used));
   if(!rest.length)return '';
   return '<div class="pc-sub" style="margin-top:6px">其他也可以這樣說：'
-    +rest.map(a=>'<span class="phrase" onclick="speak('+JSON.stringify(a)+',0.9)">'+esc(cap(a))+'</span>').join(' ')+'</div>';}
+    +rest.map(a=>'<span class="phrase"'+actAttr('speak',a,0.9)+'>'+esc(cap(a))+'</span>').join(' ')+'</div>';}
 function sayScore(t){
   const ans=answersOf(sayCur),best=scoreBest(t,ans,{fuzzy:true}),r=best.r;
   showRing('say-score',r.pct,r.diff.filter(x=>x.near).length);
@@ -9929,7 +9943,7 @@ function startRead(d){
   const pick=$('read-pick');$('read-body').classList.add('hide');pick.classList.remove('hide');
   if(!arts.length){pick.innerHTML='<div class="note">📖 這個難度還沒有文章，切換難度或換一天試試。</div>';show('scr-read');return;}
   pick.innerHTML='<div class="note">📖 '+(scope==='all'&&d!=='all'?'這一天沒有文章，以下是全部文章：':'選一篇文章，一段一段朗讀。')+(lvBasic()?'':' <b>進階模式：段落中文翻譯隱藏。</b>')+'</div>'
-    +arts.map((a,i)=>'<button class="act" style="width:100%;margin-bottom:10px" onclick="readOpen('+i+')">'
+    +arts.map((a,i)=>'<button class="act" style="width:100%;margin-bottom:10px"'+actAttr('readOpen',i)+'>'
       +'<div class="act-h">'+esc(a.title)+'</div><div class="act-en">'+esc(a.titleCn||'')+'</div>'
       +'<div class="act-d">'+a.paras.length+' 段 · '+esc(a.source||'')+'</div></button>').join('');
   show('scr-read');}
@@ -9939,22 +9953,22 @@ function readOpen(gi){const a=READLIST[gi];READ={a:a,paras:[]};
   body.classList.toggle('nocn',!lvBasic());   /* 進階：隱藏段落中文翻譯 */
   const cnOn=lvBasic();   /* 基礎預設顯示中文 → ON */
   let html='<div class="sub-top" style="margin-bottom:10px"><div style="flex:1"><div class="sub-h" style="font-size:1.35rem;color:var(--coral-d)">'+esc(a.title)+'</div><div class="sub-s">'+esc(a.titleCn||'')+'</div></div>'
-    +'<button class="cn-tog'+(cnOn?' on':'')+'" id="read-cn-btn" onclick="readToggleCn()" title="開啟或關閉每一段的中文翻譯">🈯 中文 '+(cnOn?'ON':'OFF')+'</button></div>'
-    +'<div style="margin:-4px 0 10px"><button class="autorec" onclick="toggleAutoRec()" title="開啟後，每段示範念完會自動開始錄音"><svg class=ic><use href=#i-mic></use></svg> 自動錄音：開</button></div>';
+    +'<button class="cn-tog'+(cnOn?' on':'')+'" id="read-cn-btn" data-act="readToggleCn" title="開啟或關閉每一段的中文翻譯">🈯 中文 '+(cnOn?'ON':'OFF')+'</button></div>'
+    +'<div style="margin:-4px 0 10px"><button class="autorec" data-act="toggleAutoRec" title="開啟後，每段示範念完會自動開始錄音"><svg class=ic><use href=#i-mic></use></svg> 自動錄音：開</button></div>';
   a.paras.forEach((p,pi)=>{const text=stripTags(p.en);const tk=text.split(/(\s+)/);
     const spans=tk.map((w,ti)=>{if(/^\s+$/.test(w))return w;const isw=/[a-zA-Z]/.test(w);
-      return isw?'<span class="tok" id="rt-'+pi+'-'+ti+'" onclick="tapWord(this)" title="點一下聽這個字的發音">'+esc(w)+'</span>':esc(w);}).join('');
+      return isw?'<span class="tok" id="rt-'+pi+'-'+ti+'"'+actAttr('tapWord','$el')+' title="點一下聽這個字的發音">'+esc(w)+'</span>':esc(w);}).join('');
     READ.paras.push({tokens:tk});
     html+='<div class="para"><div class="para-en" id="rp-'+pi+'">'+spans+'</div>'
       +'<div class="para-cn">'+esc(p.cn||cnFor(text))+'</div>'
-      +'<div class="para-bar"><button class="btn btn-o btn-sm" onclick="readDemo('+pi+')" title="播放這一段的標準朗讀，念完會自動開始錄音"><svg class=ic><use href=#i-spk></use></svg> 聽示範</button>'
-      +'<button class="mic" style="width:46px;height:46px;font-size:1.1rem" id="rmic-'+pi+'" onclick="readMic('+pi+')" title="按一下朗讀這一段，說對的字會亮綠燈"><svg class=ic><use href=#i-mic></use></svg></button>'
-      +'<button class="btn btn-o btn-sm hide" id="rredo-'+pi+'" onclick="micRestart()" title="唸壞了？按這裡清空重唸，麥克風不會關掉">🔄 重說</button>'
+      +'<div class="para-bar"><button class="btn btn-o btn-sm"'+actAttr('readDemo',pi)+' title="播放這一段的標準朗讀，念完會自動開始錄音"><svg class=ic><use href=#i-spk></use></svg> 聽示範</button>'
+      +'<button class="mic" style="width:46px;height:46px;font-size:1.1rem" id="rmic-'+pi+'"'+actAttr('readMic',pi)+' title="按一下朗讀這一段，說對的字會亮綠燈"><svg class=ic><use href=#i-mic></use></svg></button>'
+      +'<button class="btn btn-o btn-sm hide" id="rredo-'+pi+'" data-act="micRestart" title="唸壞了？按這裡清空重唸，麥克風不會關掉">🔄 重說</button>'
       +'<span class="mic-lbl" id="rlbl-'+pi+'" style="margin-top:0">按 <svg class=ic><use href=#i-mic></use></svg> 朗讀這段</span>'
       +'<span style="margin-left:auto;font-weight:800;color:var(--good)" id="rcov-'+pi+'"></span></div>'
       +'<div class="heard" id="rheard-'+pi+'"></div></div>';});
-  html+='<div class="actions" style="margin-top:4px"><button class="btn btn-o" onclick="startRead(DAY)">← 換一篇</button>'
-    +'<button class="btn btn-p" onclick="readFinish()">✅ 讀完了,看成績</button></div>';
+  html+='<div class="actions" style="margin-top:4px"><button class="btn btn-o"'+actAttr('startRead','$v:DAY')+'>← 換一篇</button>'
+    +'<button class="btn btn-p" data-act="readFinish">✅ 讀完了,看成績</button></div>';
   body.innerHTML=html;renderAutoRec();window.scrollTo(0,0);}
 /* 聽這一段的示範：正在錄音就先收掉，念完再依設定自動開錄 */
 function readDemo(pi){
@@ -10028,10 +10042,10 @@ function cbub(cls,en,cn,label){
     +'<div class="cbub-en">'+esc(en)+'</div>'
     +(cn?'<div class="cbub-cn hide">'+esc(cn)+'</div>':'')
     +'<div class="cbub-tools">'
-    +'<button class="ctool" onclick="cSpeak(this)" title="聽發音"><svg class=ic><use href=#i-spk></use></svg></button>'
-    +'<button class="ctool" onclick="cSpeak(this,1)" title="慢速聽">🐢</button>'
-    +(cn?'<button class="ctool" onclick="cCn(this)" title="看中文翻譯">譯</button>':'')
-    +'<button class="ctool" onclick="cMask(this)" title="遮住英文，自己先想想看">👁</button>'
+    +'<button class="ctool"'+actAttr('cSpeak','$el')+' title="聽發音"><svg class=ic><use href=#i-spk></use></svg></button>'
+    +'<button class="ctool"'+actAttr('cSpeak','$el',1)+' title="慢速聽">🐢</button>'
+    +(cn?'<button class="ctool"'+actAttr('cCn','$el')+' title="看中文翻譯">譯</button>':'')
+    +'<button class="ctool"'+actAttr('cMask','$el')+' title="遮住英文，自己先想想看">👁</button>'
     +'</div></div>';}
 function cBox(el){return el.closest('.cbub');}
 function cSpeak(el,slow){const b=cBox(el);if(!b)return;
@@ -10118,7 +10132,7 @@ function talkRender(){
   if(lvBasic()) chatAdd('<div class="cloze-card"><div class="cloze-tag"><svg class=ic><use href=#i-mic></use></svg> 請開口說</div>'
     +'<div class="cloze-line">'+talkCloze(t.en)+'</div>'
     +'<div class="cloze-cn">'+esc(t.cn)+'</div></div>');
-  else chatAdd('<div class="thint" id="talk-hint"><button class="btn btn-o btn-sm" onclick="talkHint()">💡 給點提示（第 1 階：關鍵詞）</button></div>');
+  else chatAdd('<div class="thint" id="talk-hint"><button class="btn btn-o btn-sm" data-act="talkHint">💡 給點提示（第 1 階：關鍵詞）</button></div>');
   $('talk-input').value='';
   $('talk-mlbl').textContent=speechOK()?'按一下 ⬆,開口說':'此瀏覽器不支援辨識,可改用 ⌨ 打字';
   talkDots();
@@ -10132,7 +10146,7 @@ function talkHint(){
   if(talkHintLv===1){
     const kws=t.hint?[t.hint]:keyWordsOf(t.en,3);
     box.innerHTML='<div class="thint-body">🔑 關鍵詞：'+kws.map(k=>'<b>'+esc(k)+'</b>').join('、')+'</div>'
-      +'<button class="btn btn-o btn-sm" style="margin-top:6px" onclick="talkHint()">💡 還是卡住（第 2 階：句型骨架）</button>';
+      +'<button class="btn btn-o btn-sm" style="margin-top:6px" data-act="talkHint">💡 還是卡住（第 2 階：句型骨架）</button>';
   }else{
     box.innerHTML='<div class="thint-body">🔑 '+(t.hint?('關鍵詞：<b>'+esc(t.hint)+'</b><br>'):'')
       +'🧱 句型骨架：<span class="cloze-line" style="font-size:1.05rem">'+talkCloze(t.en)+'</span></div>';}
@@ -10165,11 +10179,11 @@ function talkJudge(said){
   chatAdd('<div class="cbub r'+(pass?'':' bad')+'">'
     +(pass?'':'<span class="cbad-mark">❗</span>')
     +'<span class="cbub-en" style="font-weight:600">'+esc(said)+'</span>'
-    +(pass?'':'<div class="cbub-tools"><button class="ctool" onclick="talkMic()" title="再說一次">↻ 再說一次</button></div>')
+    +(pass?'':'<div class="cbub-tools"><button class="ctool" data-act="talkMic" title="再說一次">↻ 再說一次</button></div>')
     +'</div>');
   if(pass){
     /* 評分和正確答案一起給（2026-08-16 使用者要求）：緊湊一行，不用捲動就看得到 */
-    chatAdd('<div class="cok">✅ 說得好 '+pct+'%　<span style="font-weight:600;color:var(--ink);cursor:pointer" onclick="speak(this.textContent,0.92)">'+esc(cap(t.en))+'</span> <button class="ctool" onclick="speak(this.previousElementSibling.textContent,0.5)" title="慢速聽" style="font-size:.85em;vertical-align:middle">🐢</button></div>');
+    chatAdd('<div class="cok">✅ 說得好 '+pct+'%　<span style="font-weight:600;color:var(--ink);cursor:pointer"'+actAttr('speak','$text',0.92)+'>'+esc(cap(t.en))+'</span> <button class="ctool"'+actAttr('speak','$prevText',0.5)+' title="慢速聽" style="font-size:.85em;vertical-align:middle">🐢</button></div>');
     sessLog(talkI,t.en,t.cn,talkBest);
     logSpeak(pct);
     micStop();
@@ -10181,7 +10195,7 @@ function talkJudge(said){
 function talkShowNext(){
   const old=document.getElementById('talk-next');if(old)old.remove();
   const last=talkI>=talkTurns.length-1;
-  chatAdd('<button class="cnext" id="talk-next" onclick="talkNext()">'
+  chatAdd('<button class="cnext" id="talk-next" data-act="talkNext">'
     +(last?'🏁 看這一輪成績':'▶ 下一句')+'</button>');
   $('talk-mlbl').textContent=last?'想再說一次就按 ⬆，好了就按「看這一輪成績」'
                                  :'想再說一次就按 ⬆，好了就按「下一句 ▶」';}
@@ -10193,7 +10207,7 @@ function talkReveal(said,pct){
   if(last){
     if(said!=null){const r=scoreSpeech(said,t.en,{fuzzy:true});
       last.insertAdjacentHTML('beforeend','<div class="cn-line" style="font-size:1rem">逐字對照：'+diffHTML(r,'')+'</div>');}
-    last.insertAdjacentHTML('beforeend','<button class="cexp" onclick="cExplain(this,'+talkI+')">🪄 請講解給我聽</button>');}
+    last.insertAdjacentHTML('beforeend','<button class="cexp"'+actAttr('cExplain','$el',talkI)+'>🪄 請講解給我聽</button>');}
   if(pct!=null){sessLog(talkI,t.en,t.cn,talkBest);logSpeak(pct);}
   $('talk-mlbl').textContent='跟著唸一次,再按 ⬆ 說說看（或按 ✕ 跳過）';
   speak(t.en,demoRate());
@@ -10214,7 +10228,7 @@ let quizLevel=null,quizMode='mix';
 /* 測驗中譯開關：記住上次的選擇（預設顯示） */
 let qzCnOn=(localStorage.getItem('su_qzcn')!=='0');
 function renderQuizCnBtn(){const el=$('quiz-cn');if(!el)return;el.style.display='flex';
-  el.innerHTML='<button class="lvl-btn'+(qzCnOn?' active':'')+'" onclick="togQzCn()">🈶 中譯</button>';}
+  el.innerHTML='<button class="lvl-btn'+(qzCnOn?' active':'')+'" data-act="togQzCn">🈶 中譯</button>';}
 function togQzCn(){qzCnOn=!qzCnOn;localStorage.setItem('su_qzcn',qzCnOn?'1':'0');
   renderQuizCnBtn();applyQzCn();}
 function applyQzCn(){const c=$('quiz-card');if(c)c.classList.toggle('cn-off',!qzCnOn);}
@@ -10249,15 +10263,15 @@ function startQuiz(d,level,mode){
   sessStart('quiz','📝 快速檢查',qzList.length,{kind:'quiz',level:quizLevel});
   show('scr-quiz');qzRender();}
 function renderQuizModeBar(){const el=$('quiz-mode');if(!el)return;el.style.display='flex';
-  el.innerHTML=QUIZ_MODES.map(m=>'<button class="lvl-btn'+(quizMode===m[0]?' active':'')+'" onclick="setQuizMode(\''+m[0]+'\')">'+m[1]+'</button>').join('');}
+  el.innerHTML=QUIZ_MODES.map(m=>'<button class="lvl-btn'+(quizMode===m[0]?' active':'')+'"'+actAttr('setQuizMode',m[0])+'>'+m[1]+'</button>').join('');}
 function setQuizMode(m){if(m===quizMode)return;
   ttsCancel();
   startQuiz(DAY,quizLevel,m);}
 function renderQuizLevelToggle(d){const el=$('quiz-lvl');if(!el)return;
   const L=levelLabels();
   const hasBasic=!!quizSetFor(d,'basic',quizMode),hasAdv=!!quizSetFor(d,'advanced',quizMode);
-  el.innerHTML='<button class="lvl-btn'+(quizLevel==='basic'?' active':'')+'" '+(hasBasic?'':'disabled')+' onclick="setQuizLevel(\'basic\')">'+L[0]+'</button>'
-    +'<button class="lvl-btn'+(quizLevel==='advanced'?' active':'')+'" '+(hasAdv?'':'disabled')+' onclick="setQuizLevel(\'advanced\')">'+L[1]+'</button>';
+  el.innerHTML='<button class="lvl-btn'+(quizLevel==='basic'?' active':'')+'" '+(hasBasic?'':'disabled')+''+actAttr('setQuizLevel','basic')+'>'+L[0]+'</button>'
+    +'<button class="lvl-btn'+(quizLevel==='advanced'?' active':'')+'" '+(hasAdv?'':'disabled')+''+actAttr('setQuizLevel','advanced')+'>'+L[1]+'</button>';
   el.style.display='flex';
 }
 function setQuizLevel(l){if(l===quizLevel)return;
@@ -10274,12 +10288,12 @@ function qzRender(){const q=qzList[qzI];$('quiz-prog').style.width=(qzI/qzList.l
   h+='<div style="font-size:1.12rem;font-weight:700;line-height:1.5;margin:4px 0 3px">'+esc(q.q)+'</div>';
   if(q.cn)h+='<div class="qz-cn">'+esc(q.cn)+'</div>';else h+='<div class="spacer"></div>';
   /* 聽力題：題目用聽的，可重複播放 */
-  if(q.audio)h+='<div class="actions" style="margin:2px 0 12px"><button class="btn btn-t" onclick="qzPlay(1)" title="正常速度再播一次"><svg class=ic><use href=#i-spk></use></svg> 再聽一次</button>'
-    +'<button class="btn btn-o" onclick="qzPlay(.6)" title="放慢播放">🐢 慢速</button></div>';
-  if(q.type==='mc'){h+='<div id="qz-opts">'+q.options.map((o,i)=>'<button class="opt" onclick="qzMc('+i+')">'+esc(o)+'</button>').join('')+'</div>';}
-  else if(q.type==='fill'){h+='<input class="fill-in" id="qz-fill" placeholder="輸入答案…" onkeydown="if(event.key===\'Enter\')qzFill()"><div class="actions"><button class="btn btn-p btn-block" onclick="qzFill()">送出</button></div>';}
+  if(q.audio)h+='<div class="actions" style="margin:2px 0 12px"><button class="btn btn-t"'+actAttr('qzPlay',1)+' title="正常速度再播一次"><svg class=ic><use href=#i-spk></use></svg> 再聽一次</button>'
+    +'<button class="btn btn-o"'+actAttr('qzPlay',.6)+' title="放慢播放">🐢 慢速</button></div>';
+  if(q.type==='mc'){h+='<div id="qz-opts">'+q.options.map((o,i)=>'<button class="opt"'+actAttr('qzMc',i)+'>'+esc(o)+'</button>').join('')+'</div>';}
+  else if(q.type==='fill'){h+='<input class="fill-in" id="qz-fill" placeholder="輸入答案…" onkeydown="if(event.key===\'Enter\')qzFill()"><div class="actions"><button class="btn btn-p btn-block" data-act="qzFill">送出</button></div>';}
   else{h+='<textarea class="fill-in" id="qz-trans" rows="2" placeholder="用英文打出你的翻譯…" style="text-align:left;font-size:1rem;line-height:1.5;resize:vertical" onkeydown="if(event.key===\'Enter\'&&!event.shiftKey){event.preventDefault();qzSubmitTrans();}"></textarea>'
-    +'<div class="actions" id="qz-trans-act"><button class="btn btn-p btn-block" onclick="qzSubmitTrans()" title="送出你的翻譯，並和參考答案逐字對照">✅ 提交並核對答案</button></div>';}
+    +'<div class="actions" id="qz-trans-act"><button class="btn btn-p btn-block" data-act="qzSubmitTrans" title="送出你的翻譯，並和參考答案逐字對照">✅ 提交並核對答案</button></div>';}
   h+='<div id="qz-expl"></div>';c.innerHTML=h;
   if(q.type==='fill')setTimeout(()=>{const el=$('qz-fill');if(el)el.focus();},80);
   if(q.audio)setTimeout(()=>speak(q.audio,demoRate()),350);}
@@ -10314,7 +10328,7 @@ function qzSubmitTrans(){const q=qzList[qzI];const el=$('qz-trans');if(!el||el.d
   /* q.explain 若只是「參考：原句」就不再重複顯示（參考答案上面已經有了） */
   const showExpl=q.explain&&!/^參考[:：]/.test(q.explain.trim());
   let h='<div class="expl">'+(mine?'📝 你的答案：<b>'+mineHTML+'</b><br>':'（這題沒有作答）<br>')
-    +'✅ 參考答案：<b>'+esc(cap(q.answer))+'</b> <button class="btn btn-o btn-sm" onclick="speak(qzList[qzI].answer,0.9)"><svg class=ic><use href=#i-spk></use></svg></button>'
+    +'✅ 參考答案：<b>'+esc(cap(q.answer))+'</b> <button class="btn btn-o btn-sm"'+actAttr('speak','$v:qzAns',0.9)+'><svg class=ic><use href=#i-spk></use></svg></button>'
     +'<div style="margin-top:6px">逐字對照（綠色＝你有寫到）：'+cmp+'</div>'
     +'<div style="margin-top:8px;font-size:1.05em"><b>'+verdict+'</b></div>'
     +(showExpl?'<div style="margin-top:6px">'+explHTML(q.explain)+'</div>':'')+'</div>';
@@ -10322,18 +10336,18 @@ function qzSubmitTrans(){const q=qzList[qzI];const el=$('qz-trans');if(!el||el.d
   qzNextBtn();}
 function qzSelf(ok){if(ok)qzScore++;qzLog(!!ok,'自評'+(ok?'答對':'答錯'));qzNextBtn();}
 function qzExpl(q,ok){$('qz-expl').innerHTML='<div class="expl">'+(ok?'✅ 答對了!':'❌ 再看看~')+(q.explain?' '+explHTML(q.explain):'')+'</div>';qzNextBtn();}
-function qzNextBtn(){const e=$('qz-expl');e.innerHTML+='<div class="actions"><button class="btn btn-p btn-block" onclick="qzNext()">'+(qzI+1>=qzList.length?'看成績':'下一題 →')+'</button></div>';scrollIntoViewSoft(e);}
+function qzNextBtn(){const e=$('qz-expl');e.innerHTML+='<div class="actions"><button class="btn btn-p btn-block" data-act="qzNext">'+(qzI+1>=qzList.length?'看成績':'下一題 →')+'</button></div>';scrollIntoViewSoft(e);}
 function qzNext(){qzI++;if(qzI>=qzList.length)qzFinish();else qzRender();}
 function qzFinish(){$('quiz-prog').style.width='100%';
   /* 統一走「答題狀況總結」畫面：逐題回顧 + 選下一張卡片 */
   const modeName={mix:'綜合',listen:'聽力',read:'閱讀'}[quizMode]||'綜合';
   if(SESS)SESS.title='📝 快速檢查（'+modeName+'）';
   const others=QUIZ_MODES.filter(m=>m[0]!==quizMode)
-    .map(m=>'<button class="btn btn-o" onclick="startQuiz(DAY,quizLevel,\''+m[0]+'\')">換 '+m[1]+'題</button>').join('');
+    .map(m=>'<button class="btn btn-o"'+actAttr('startQuiz','$v:DAY','$v:quizLevel',m[0])+'>換 '+m[1]+'題</button>').join('');
   showSummary();
   const nx=$('sum-nxt');
   if(nx)nx.insertAdjacentHTML('afterend','<div class="actions sum-extra" style="margin-top:12px">'
-    +'<button class="btn btn-p" onclick="startQuiz(DAY,quizLevel)">🔄 同主題再出一份新題</button>'+others+'</div>');}
+    +'<button class="btn btn-p"'+actAttr('startQuiz','$v:DAY','$v:quizLevel')+'>🔄 同主題再出一份新題</button>'+others+'</div>');}
 
 /* ═══════════════════════════════════════════════════════════
    7) LISTENING（聽力打字：你負責口說[TTS 正常/慢速]，我負責打字）
@@ -10373,7 +10387,7 @@ function lsRender(){const it=lsList[lsI];lsCur=it;
     lsOpts=opts;lsAns=opts.indexOf(it.en);
     $('ls-typebox').classList.add('hide');
     $('ls-opts').classList.remove('hide');
-    $('ls-opts').innerHTML=opts.map((o,i)=>'<button class="opt" onclick="lsPick('+i+')"><b style="opacity:.45;margin-right:5px">'+(i+1)+'</b>'+esc(cap(o))+'</button>').join('');
+    $('ls-opts').innerHTML=opts.map((o,i)=>'<button class="opt"'+actAttr('lsPick',i)+'><b style="opacity:.45;margin-right:5px">'+(i+1)+'</b>'+esc(cap(o))+'</button>').join('');
     $('ls-cn').textContent='聽完，選出你聽到的那一句（鍵盤 1~4 快選、空白鍵重播）';
     $('ls-hint').innerHTML='';$('ls-hint-t').classList.add('hide');
   }else{
@@ -10384,9 +10398,9 @@ function lsRender(){const it=lsList[lsI];lsCur=it;
     /* 基礎打字時附上關鍵字提示，減少「完全聽不出來」的挫折 */
     const hint=$('ls-hint'),hintT=$('ls-hint-t');
     if(lvBasic()){const ws=keyWordsOf(it.en,4);
-      hint.innerHTML=ws.map(w=>'<span class="phrase" onclick="speak(\''+w.replace(/'/g,"\\'")+'\',0.8)">'+esc(w)+'</span>').join('');
+      hint.innerHTML=ws.map(w=>'<span class="phrase"'+actAttr('speak',w,0.8)+'>'+esc(w)+'</span>').join('');
       hintT.classList.toggle('hide',!ws.length);}
-    else{hint.innerHTML='<button class="btn btn-o btn-sm" style="padding:3px 12px;font-size:.78rem" onclick="lsSkel()">💡 給點提示（字首＋字數）</button>';hintT.classList.add('hide');}
+    else{hint.innerHTML='<button class="btn btn-o btn-sm" style="padding:3px 12px;font-size:.78rem" data-act="lsSkel">💡 給點提示（字首＋字數）</button>';hintT.classList.add('hide');}
     const inp=$('ls-input');inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.background='';
     $('ls-check').classList.remove('hide');
     setTimeout(()=>{try{inp.focus();}catch(e){}},120);
@@ -10397,7 +10411,7 @@ function kwSentHTML(en){
   const kws=new Set(keyWordsOf(en,5));
   return String(en).split(/\s+/).map((w,i)=>{
     const c=norm(w);let out=esc(i===0?cap(w):w);
-    if(c&&kws.has(c))out='<span class="kw" onclick="speak(\''+c.replace(/'/g,"\\'")+'\',0.75)" title="點一下聽這個字的發音">'+out+'</span>';
+    if(c&&kws.has(c))out='<span class="kw"'+actAttr('speak',c,0.75)+' title="點一下聽這個字的發音">'+out+'</span>';
     return out;}).join(' ');}
 /* 聽力錯題本：答錯自動收錄（存本機），下次基礎聽力優先複習；答對就移出 */
 function lsBookKey(){return 'speakup_lsbook_'+PROFILE;}
@@ -10652,14 +10666,14 @@ function startVideo(d){
   body.classList.add('hide');pick.classList.remove('hide');
   let h='<div class="note">🎬 選一個素材：有影片就邊看邊聽，沒有影片就用「課文朗讀」，字幕一樣會一句一句亮起來。</div>';
   h+=mats.map((m,i)=>'<div style="position:relative">'
-    +'<button class="act vid-pick" onclick="vOpen('+i+')">'
+    +'<button class="act vid-pick"'+actAttr('vOpen',i)+'>'
     +'<div class="act-h" style="padding-right:34px">'+(m.kind==='yt'?'▶️ ':'<svg class=ic><use href=#i-spk></use></svg> ')+esc(m.title)+'</div>'
     +'<div class="act-en">'+esc(m.titleCn||'')+'</div>'
     +'<div class="act-d">'+(m.kind==='yt'?('YouTube 影片 · '+(m.n||(m.lines||[]).length)+' 句字幕 · ☁️ 共用'
       +(m.day&&m.day!=='all'&&/^\d{8}$/.test(m.day)?' · 📅 '+m.day.slice(4,6)+'/'+m.day.slice(6,8):'')):esc(m.note||''))+'</div>'
     +'</button>'
-    +(m.kind==='yt'?'<button class="sum-play" style="position:absolute;top:10px;right:10px" title="刪除這支影片（所有裝置都會移除）" onclick="vDelete(\''+m.id+'\')">🗑</button>'
-      +'<button class="sum-play" style="position:absolute;top:52px;right:10px" title="改成歸在哪一天的課堂" onclick="vChangeDay(\''+m.id+'\')">📅</button>':'')
+    +(m.kind==='yt'?'<button class="sum-play" style="position:absolute;top:10px;right:10px" title="刪除這支影片（所有裝置都會移除）"'+actAttr('vDelete',m.id)+'>🗑</button>'
+      +'<button class="sum-play" style="position:absolute;top:52px;right:10px" title="改成歸在哪一天的課堂"'+actAttr('vChangeDay',m.id)+'>📅</button>':'')
     +'</div>').join('');
   h+='<div class="card vid-add">'
     +'<div class="grid-ttl">➕ 加入 YouTube 影片與字幕</div>'
@@ -10671,8 +10685,8 @@ function startVideo(d){
       +DDATES.map(x=>'<option value="'+x+'"'+(x===(d==='all'?'all':d)?' selected':'')+'>'+esc(vidDayLabel(x))+'</option>').join('')
     +'</select>'
     +'<textarea id="vid-subs-in" rows="5" placeholder="00:07 And the first thing that I always do… | 我做的第一件事…&#10;00:12 is I cook myself good food. | 就是給自己做頓好吃的。"></textarea>'
-    +'<div class="actions"><button class="btn btn-p" onclick="vAdd()">加入影片</button></div>'
-    +(loadUserVideos().length?'<div class="actions"><button class="btn btn-o" onclick="vClearAll()">🗑 清空我加入的影片</button></div>':'')
+    +'<div class="actions"><button class="btn btn-p" data-act="vAdd">加入影片</button></div>'
+    +(loadUserVideos().length?'<div class="actions"><button class="btn btn-o" data-act="vClearAll">🗑 清空我加入的影片</button></div>':'')
     +'</div>';
   pick.innerHTML=h;
   $('vid-sub').textContent=(d==='all'?'全部筆記':lessonTitle(d))+' · '+mats.length+' 個素材';
@@ -10813,8 +10827,8 @@ function vRenderSubs(){
   box.classList.toggle('nocn',!VID.showCn);
   box.classList.toggle('noen',!VID.showEn);
   box.innerHTML=VID.lines.map((l,i)=>
-    '<div class="sub-line'+(i===VID.i?' cur':i<VID.i?' done':'')+'" id="vl-'+i+'" onclick="vSeek('+i+')">'
-    +'<button class="sub-act" onclick="event.stopPropagation();speak('+JSON.stringify(l.en).replace(/&/g,'&amp;').replace(/"/g,'&quot;')+',0.92)" title="單獨聽這一句的發音（不動影片）"><svg class=ic><use href=#i-spk></use></svg></button>'
+    '<div class="sub-line'+(i===VID.i?' cur':i<VID.i?' done':'')+'" id="vl-'+i+'"'+actAttr('vSeek',i)+'>'
+    +'<button class="sub-act"'+actAttr('speak',l.en,0.92)+' title="單獨聽這一句的發音（不動影片）"><svg class=ic><use href=#i-spk></use></svg></button>'
     +(VID.mode==='yt'?'<div class="sub-t">'+vFmt(l.t)+'</div>':'')
     +'<div class="sub-en">'+(VID.vocab?vMark(l.en):esc(l.en))+'</div>'
     +'<div class="sub-cn">'+esc(l.cn||cnFor(l.en))+'</div></div>').join('');}
@@ -10826,7 +10840,7 @@ function vMark(en){
   let h=esc(en);
   ws.forEach(v=>{
     const re=new RegExp('\\b('+reEsc(esc(v.w))+'\\w*)\\b','ig');
-    h=h.replace(re,m=>'<span class="vw" onclick="event.stopPropagation();vWord('+JSON.stringify(v.w)+')" title="'+esc(v.cn)+'">'+m+'</span>');});
+    h=h.replace(re,m=>'<span class="vw"'+actAttr('vWord',v.w)+' title="'+esc(v.cn)+'">'+m+'</span>');});
   return h;}
 function vWord(w){const v=vocab.find(x=>norm(x.w)===norm(w));
   speak(w,0.85);
@@ -11038,10 +11052,10 @@ function vPractice(){
     +'<div class="pc-sub">'+esc(line.cn||cnFor(line.en))+'</div></div>'
     +'<div class="scorebox hide" id="vp-score"></div><div class="diff hide" id="vp-diff"></div>'
     +'<div class="heard" id="vp-heard"></div>'
-    +'<div class="mic-zone"><button class="mic" id="vp-mic" onclick="vPracMic()"><svg class=ic><use href=#i-mic></use></svg></button>'
+    +'<div class="mic-zone"><button class="mic" id="vp-mic" data-act="vPracMic"><svg class=ic><use href=#i-mic></use></svg></button>'
     +'<div class="mic-lbl" id="vp-mlbl">按一下,跟著唸一次</div></div>'
-    +'<div class="actions"><button class="btn btn-o" onclick="speak('+JSON.stringify(line.en)+',demoRate())"><svg class=ic><use href=#i-spk></use></svg> 再聽一次</button>'
-    +'<button class="btn btn-o" onclick="vPracClose()">收起</button></div></div>';
+    +'<div class="actions"><button class="btn btn-o"'+actAttr('speak',line.en,'$v:demoRate')+'><svg class=ic><use href=#i-spk></use></svg> 再聽一次</button>'
+    +'<button class="btn btn-o" data-act="vPracClose">收起</button></div></div>';
   vSetPinH();setTimeout(vScrollCur,550);}
 function vPracClose(){micStop();$('vid-prac').classList.add('hide');$('vid-prac').innerHTML='';
   const pin=document.querySelector('.vid-pin');if(pin)pin.classList.remove('prac');
@@ -11191,11 +11205,11 @@ function showSummary(){
       +'<div class="sum-txt"><div class="sum-en">'+esc(en)+'</div>'
       +(cn?'<div class="sum-cn">'+esc(cn)+'</div>':'')
       +(x&&x.note?'<div class="sum-cn">'+esc(x.note)+'</div>':'')+'</div>'
-      +(x&&x.en&&isEng(x.en)?'<button class="sum-play" onclick="speak('+JSON.stringify(x.en)+',0.9)" title="聽這一句"><svg class=ic><use href=#i-spk></use></svg></button>':'')
+      +(x&&x.en&&isEng(x.en)?'<button class="sum-play"'+actAttr('speak',x.en,0.9)+' title="聽這一句"><svg class=ic><use href=#i-spk></use></svg></button>':'')
       +'<div class="sum-pct '+c+'">'+mark+'</div></div>';}).join('')
     :'<div class="note">這一輪沒有紀錄。</div>';
   $('sum-nxt').innerHTML=ACT_LIST.filter(a=>a[0]!==S.act).map(a=>
-    '<button class="nxt" onclick="sumGo(\''+a[0]+'\')"><div class="nxt-h">'+a[1]+'</div><div class="nxt-d">'+a[2]+'</div></button>').join('');
+    '<button class="nxt"'+actAttr('sumGo',a[0])+'><div class="nxt-h">'+a[1]+'</div><div class="nxt-d">'+a[2]+'</div></button>').join('');
   const L=levelLabels();
   $('sum-lvl').textContent=lvBasic()?('換成'+L[1]+'再練'):('換成'+L[0]+'再練');
   show('scr-done');}
