@@ -14,6 +14,903 @@ window.LISTEN = {
 
 /* ========== 依課堂筆記自製（每週三更新） ========== */
 notes:[
+/* ---------- 2026-11-25 職場與面試主題（四個程度） ---------- */
+{
+  "id": "dl20261125a2",
+  "date": "2026-11-25",
+  "level": "A2",
+  "minutes": 2,
+  "kind": "note",
+  "title": "The Shop Opens at Seven",
+  "titleCn": "麵包店七點開門",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "🥖 麵包店店長打電話來談第一天上班",
+  "focus": "when 和 if 後面用現在簡單式，整句只有主句那一個 will（When you arrive, you will…）",
+  "intro": "Tom在麵包店填了應徵表，店長林小姐打電話來了。林小姐講話很短，每一句幾乎都帶一個數字。請注意她用了三次 when 或 if，每一次後面的動詞都是現在式 arrive、is、are，而 will 只出現在另外半句。Tom自己也學著用了兩次，聽聽看他有沒有把 will 放錯邊。",
+  "tip": "第一次聽只抓四個數字：開門時間、林小姐叫他幾點到、籃子的數量，還有他要穿的東西。第二次聽專心數 will——每一句只能有一個，而且一定不在 when 或 if 後面；聽到 when 就先在心裡確認後面那個動詞有沒有加 will。",
+  "pre": [
+    {
+      "w": "form",
+      "ipa": "/fɔːrm/",
+      "pos": "n.",
+      "cn": "表格",
+      "def": "A paper with spaces for your name and other facts."
+    },
+    {
+      "w": "manager",
+      "ipa": "/ˈmæn.ə.dʒɚ/",
+      "pos": "n.",
+      "cn": "店長；經理",
+      "def": "The person who runs a shop or an office."
+    },
+    {
+      "w": "apron",
+      "ipa": "/ˈeɪ.prən/",
+      "pos": "n.",
+      "cn": "圍裙",
+      "def": "Cloth you wear in front to stay clean when you cook."
+    },
+    {
+      "w": "basket",
+      "ipa": "/ˈbæs.kɪt/",
+      "pos": "n.",
+      "cn": "籃子",
+      "def": "An open bag made of thin wood or plastic."
+    },
+    {
+      "w": "early",
+      "ipa": "/ˈɝːli/",
+      "pos": "adv.",
+      "cn": "提早；早",
+      "def": "Before the usual time."
+    },
+    {
+      "w": "nervous",
+      "ipa": "/ˈnɝːvəs/",
+      "pos": "adj.",
+      "cn": "緊張的",
+      "def": "Worried about something that will happen soon."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Ms. Lin",
+      "en": "Hello, is that Tom? This is Ms. Lin from the bread shop.",
+      "cn": "你好，是Tom嗎？我是麵包店的林小姐。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Oh, hello. Thank you for calling me.",
+      "cn": "喔，你好，謝謝你打電話給我。"
+    },
+    {
+      "sp": "Ms. Lin",
+      "en": "We read your form. Can you work on Saturday?",
+      "cn": "我們看了你的表格。你星期六可以上班嗎？"
+    },
+    {
+      "sp": "Tom",
+      "en": "Yes, I can. What time do I start?",
+      "cn": "可以。我幾點開始？"
+    },
+    {
+      "sp": "Ms. Lin",
+      "en": "The shop opens at seven. Please come at six thirty.",
+      "cn": "店七點開門。請你六點半到。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Six thirty. When I arrive, what do I do first?",
+      "cn": "六點半。我到的時候，要先做什麼？"
+    },
+    {
+      "sp": "Ms. Lin",
+      "en": "When you arrive, you will put on an apron.",
+      "cn": "你到的時候，要先穿上圍裙。"
+    },
+    {
+      "sp": "Tom",
+      "en": "All right. And after that?",
+      "cn": "好。那之後呢？"
+    },
+    {
+      "sp": "Ms. Lin",
+      "en": "If the oven is ready, you will carry the baskets out.",
+      "cn": "如果烤箱準備好了，你就把籃子搬出來。"
+    },
+    {
+      "sp": "Tom",
+      "en": "How many baskets are there?",
+      "cn": "有幾個籃子？"
+    },
+    {
+      "sp": "Ms. Lin",
+      "en": "Twelve. They are big, but they are not heavy.",
+      "cn": "十二個。它們很大，但不重。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I am a little nervous, but I want to try.",
+      "cn": "我有一點緊張，但我想試試看。"
+    },
+    {
+      "sp": "Ms. Lin",
+      "en": "Everyone is nervous on day one. If you are early, I will show you the kitchen.",
+      "cn": "每個人第一天都會緊張。如果你早到，我會帶你看廚房。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Thank you. When I get there, I will look for you first.",
+      "cn": "謝謝。我到的時候會先去找你。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What time does the shop open?",
+      "qCn": "店幾點開門？",
+      "opts": [
+        "A. At six",
+        "B. At six thirty",
+        "C. At seven",
+        "D. At twelve"
+      ],
+      "optsCn": [
+        "A. 六點",
+        "B. 六點半",
+        "C. 七點",
+        "D. 十二點"
+      ],
+      "ans": 2,
+      "expl": "The shop opens at seven.——林小姐第三句就講了。六點半是她叫Tom到店裡的時間，十二是籃子的數量。"
+    },
+    {
+      "q": "What time does Ms. Lin ask Tom to come?",
+      "qCn": "林小姐叫Tom幾點到？",
+      "opts": [
+        "A. At six",
+        "B. At six thirty",
+        "C. At seven",
+        "D. At seven thirty"
+      ],
+      "optsCn": [
+        "A. 六點",
+        "B. 六點半",
+        "C. 七點",
+        "D. 七點半"
+      ],
+      "ans": 1,
+      "expl": "Please come at six thirty.——她先說七點開門，再要Tom提早半小時到。Tom還重複了一次 Six thirty 確認。"
+    },
+    {
+      "q": "How many baskets are there?",
+      "qCn": "有幾個籃子？",
+      "opts": [
+        "A. Two",
+        "B. Seven",
+        "C. Ten",
+        "D. Twelve"
+      ],
+      "optsCn": [
+        "A. 兩個",
+        "B. 七個",
+        "C. 十個",
+        "D. 十二個"
+      ],
+      "ans": 3,
+      "expl": "Twelve. They are big, but they are not heavy.——林小姐直接回答數量，還補了一句不重。七是開門時間，不是籃子數。"
+    },
+    {
+      "q": "Ms. Lin says, \"When you ___, you will put on an apron.\"",
+      "qCn": "林小姐說：「你到的時候，要先穿上圍裙。」",
+      "opts": [
+        "A. arrive",
+        "B. will arrive",
+        "C. arrived",
+        "D. are arriving"
+      ],
+      "ans": 0,
+      "expl": "when 後面用現在簡單式 arrive，will 只留給另外半句 you will put on。B 把 will 放進 when 裡面，是最常見的錯；C 是過去式；D 的現在進行式在這裡講不通。"
+    }
+  ]
+},
+{
+  "id": "dl20261125b1",
+  "date": "2026-11-25",
+  "level": "B1",
+  "minutes": 3,
+  "kind": "note",
+  "title": "Walk the Line First",
+  "titleCn": "先去走一趟產線",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "🏭 收到錄取通知之後跟人資約看廠",
+  "focus": "確定的事用 when、不確定的用 if；when 後面接現在完成式表示「那件事做完以後」",
+  "intro": "Anita收到邊和一間工廠的錄取通知，但她想先去看廠。這一課請分三層聽：第一層是 when 與 if 的分工——約好的日期用 when，量具行不行用 if；第二層是 when I have seen 這種現在完成式，強調「看完以後」才回答；第三層是Phuc先生最後那句 when you have walked，形狀跟Anita一模一樣。",
+  "tip": "第一次聽抓五個事實：約哪一天、早班幾點開始、她幾點到大門、上個月校驗了幾支量具、夜班多久輪一次。第二次聽把注意力放在連接詞上：每聽到一個 when 或 if，就在心裡回答「這件事確定嗎」，並檢查後面的動詞是現在式還是現在完成式。",
+  "pre": [
+    {
+      "w": "offer",
+      "ipa": "/ˈɑː.fɚ/",
+      "pos": "n.",
+      "cn": "錄取通知；提議",
+      "def": "Something a company says it will give you, such as a job."
+    },
+    {
+      "w": "shift",
+      "ipa": "/ʃɪft/",
+      "pos": "n.",
+      "cn": "班；輪班",
+      "def": "A set block of working hours in a day."
+    },
+    {
+      "w": "gauge",
+      "ipa": "/ɡeɪdʒ/",
+      "pos": "n.",
+      "cn": "量具；量規",
+      "def": "A tool that measures size or pressure."
+    },
+    {
+      "w": "honest",
+      "ipa": "/ˈɑːnɪst/",
+      "pos": "adj.",
+      "cn": "誠實的；坦白的",
+      "def": "Saying what is true, even when it is not easy."
+    },
+    {
+      "w": "agree",
+      "ipa": "/əˈɡriː/",
+      "pos": "v.",
+      "cn": "同意",
+      "def": "To say yes to what someone wants or thinks."
+    },
+    {
+      "w": "record",
+      "ipa": "/ˈrekɔːrd/",
+      "pos": "n.",
+      "cn": "紀錄",
+      "def": "A written note that shows what was done and when."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Mr. Phuc",
+      "en": "Anita, have you thought about our offer?",
+      "cn": "Anita，我們的錄取通知你考慮得怎麼樣？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I have. The pay is good. But I would like to see the plant first.",
+      "cn": "我想過了。薪水不錯。但我想先看看那間廠。"
+    },
+    {
+      "sp": "Mr. Phuc",
+      "en": "Of course. When would you like to come?",
+      "cn": "當然可以。你想什麼時候過來？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Friday morning, if that suits your line schedule.",
+      "cn": "星期五早上，如果那樣配合得上你們的產線排程。"
+    },
+    {
+      "sp": "Mr. Phuc",
+      "en": "Friday is fine. The first shift starts at six.",
+      "cn": "星期五沒問題。早班六點開始。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Then I will be at the gate at five forty.",
+      "cn": "那我五點四十會在大門口。"
+    },
+    {
+      "sp": "Mr. Phuc",
+      "en": "That is early. What do you want to look at?",
+      "cn": "那很早。你想看什麼？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The lab. When I have seen the gauges, I will give you an answer.",
+      "cn": "實驗室。等我看過量具，我就給你答覆。"
+    },
+    {
+      "sp": "Mr. Phuc",
+      "en": "That is an honest answer. Most people just say yes on the phone.",
+      "cn": "這是很誠實的回答。大部分的人在電話裡就直接說好了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "If the gauges are out of calibration, I cannot do my job there.",
+      "cn": "如果量具沒在校驗期內，我在那裡沒辦法做事。"
+    },
+    {
+      "sp": "Mr. Phuc",
+      "en": "We had nine gauges checked last month. I will show you the records.",
+      "cn": "我們上個月送了九支量具校驗。我會把紀錄給你看。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Good. And the night shift. How often does it come round?",
+      "cn": "好。還有夜班，多久輪一次？"
+    },
+    {
+      "sp": "Mr. Phuc",
+      "en": "One week in four. We agreed that with the union in July.",
+      "cn": "四週輪一次。我們七月跟工會談定的。"
+    },
+    {
+      "sp": "Anita",
+      "en": "One week in four I can live with.",
+      "cn": "四週一次我可以接受。"
+    },
+    {
+      "sp": "Mr. Phuc",
+      "en": "So when you have walked the line, you will call me?",
+      "cn": "所以等你走過產線，你會打電話給我？"
+    },
+    {
+      "sp": "Anita",
+      "en": "I will call you the same afternoon.",
+      "cn": "我當天下午就打給你。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "When will Anita visit the plant?",
+      "qCn": "Anita什麼時候要去看廠？",
+      "opts": [
+        "A. Friday morning",
+        "B. Monday morning",
+        "C. Friday afternoon",
+        "D. In July"
+      ],
+      "optsCn": [
+        "A. 星期五早上",
+        "B. 星期一早上",
+        "C. 星期五下午",
+        "D. 七月"
+      ],
+      "ans": 0,
+      "expl": "Friday morning, if that suits your line schedule.——Anita自己提的時間，Phuc先生也說 Friday is fine。七月是跟工會談定夜班的時間，不是看廠的日子。"
+    },
+    {
+      "q": "What time will Anita be at the gate?",
+      "qCn": "Anita幾點會在大門口？",
+      "opts": [
+        "A. At five forty",
+        "B. At six",
+        "C. At six forty",
+        "D. At seven"
+      ],
+      "optsCn": [
+        "A. 五點四十",
+        "B. 六點",
+        "C. 六點四十",
+        "D. 七點"
+      ],
+      "ans": 0,
+      "expl": "Then I will be at the gate at five forty.——六點是早班開始的時間，她刻意提早二十分鐘到。"
+    },
+    {
+      "q": "How often does the night shift come round?",
+      "qCn": "夜班多久輪一次？",
+      "opts": [
+        "A. Every week",
+        "B. One week in four",
+        "C. One week in nine",
+        "D. Twice a month"
+      ],
+      "optsCn": [
+        "A. 每個星期",
+        "B. 四週一次",
+        "C. 九週一次",
+        "D. 一個月兩次"
+      ],
+      "ans": 1,
+      "expl": "One week in four. We agreed that with the union in July.——九是上個月送校驗的量具數量，不是夜班的週期。"
+    },
+    {
+      "q": "Anita says, \"When I ___ the gauges, I will give you an answer.\"",
+      "qCn": "Anita說：「等我看過量具，我就給你答覆。」",
+      "opts": [
+        "A. have seen",
+        "B. will see",
+        "C. will have seen",
+        "D. saw"
+      ],
+      "ans": 0,
+      "expl": "when 後面不放 will，所以 B、C 都出局。她要強調「看完以後」才回答，用現在完成式 have seen 最準；D 的過去式跟後半句的 will 搭不起來。"
+    },
+    {
+      "q": "Why does Anita use if for the gauges but when for Friday?",
+      "qCn": "為什麼量具那句用 if，星期五那句用 when？",
+      "opts": [
+        "A. Because if is more polite",
+        "B. Because the visit is fixed but the gauges might be fine or not",
+        "C. Because if is used with people and when with machines",
+        "D. Because the gauges are in the past"
+      ],
+      "optsCn": [
+        "A. 因為 if 比較客氣",
+        "B. 因為看廠已經約定了，但量具行不行還不確定",
+        "C. 因為 if 用在人、when 用在機器",
+        "D. 因為量具的事是過去式"
+      ],
+      "ans": 1,
+      "expl": "Friday is fine.——日期已經談定，所以用 when。If the gauges are out of calibration…——量具的狀況她還沒看過，留了一個不成立的可能，所以用 if。兩個字後面的形狀一樣，差的只有確定度。"
+    }
+  ]
+},
+{
+  "id": "dl20261125b1p",
+  "date": "2026-11-25",
+  "level": "B1+",
+  "minutes": 4,
+  "kind": "note",
+  "title": "The Numbers Tom Read at Lunch",
+  "titleCn": "Tom午餐時間讀到的那些數字",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "📊 午休時聊一份剛發布的 AI 招募報告",
+  "focus": "被動語態（was released、are used）加關係子句（that／which），以及 be able to 講能力",
+  "intro": "這一課就是當天B1+那篇新聞的口語版：Tom在午休讀到報告，跑去問Anita。請注意兩件事。第一是被動語態——報告是「被發布」的，材料是「被用在」硬體裡的，說話的人不在意是誰做的。第二是關係子句，Anita用 that 和 which 把一串數字掛在名詞後面，不用另外開一個句子。",
+  "tip": "第一次聽把數字抓下來就好：化工製造、倉儲、半導體、AI 工程師、資安工程師各成長多少。第二次聽找被動語態，每聽到一個 be 動詞加過去分詞就問自己「動作是誰做的、為什麼沒講」；最後再聽Tom那句 I am not able to，想一想他為什麼不能用 can。",
+  "pre": [
+    {
+      "w": "report",
+      "ipa": "/rɪˈpɔːrt/",
+      "pos": "n.",
+      "cn": "報告",
+      "def": "A written study that gives facts and numbers."
+    },
+    {
+      "w": "demand",
+      "ipa": "/dɪˈmænd/",
+      "pos": "n.",
+      "cn": "需求",
+      "def": "How much people want to buy or hire something."
+    },
+    {
+      "w": "sector",
+      "ipa": "/ˈsek.tɚ/",
+      "pos": "n.",
+      "cn": "產業部門",
+      "def": "One part of an economy, such as farming or banking."
+    },
+    {
+      "w": "material",
+      "ipa": "/məˈtɪr.i.əl/",
+      "pos": "n.",
+      "cn": "材料",
+      "def": "The stuff that something is made from."
+    },
+    {
+      "w": "engineer",
+      "ipa": "/ˌen.dʒɪˈnɪr/",
+      "pos": "n.",
+      "cn": "工程師",
+      "def": "Someone trained to design or fix machines and systems."
+    },
+    {
+      "w": "talent",
+      "ipa": "/ˈtælənt/",
+      "pos": "n.",
+      "cn": "人才",
+      "def": "People with a skill that employers want."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Tom",
+      "en": "Anita, have you seen this report? It was released on Monday.",
+      "cn": "Anita，你看過這份報告嗎？星期一發布的。"
+    },
+    {
+      "sp": "Anita",
+      "en": "The one about AI hiring? My manager sent it to the whole team.",
+      "cn": "那份講 AI 招募的嗎？我主管寄給全組了。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I always thought AI jobs were kept inside the science park.",
+      "cn": "我一直以為 AI 的工作都關在科學園區裡面。"
+    },
+    {
+      "sp": "Anita",
+      "en": "That is the part the report says is no longer true.",
+      "cn": "報告說的就是這一點已經不成立了。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Which sector grew the most?",
+      "cn": "哪一個產業成長最多？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Chemical manufacturing. Openings there rose by seventy-four percent.",
+      "cn": "化工製造。那裡的職缺成長了百分之七十四。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Chemicals? Why would a chemical plant want AI people?",
+      "cn": "化工？化工廠為什麼會想找 AI 的人？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Because those plants make the materials that are used inside AI hardware.",
+      "cn": "因為那些廠生產的材料會用在 AI 硬體裡面。"
+    },
+    {
+      "sp": "Tom",
+      "en": "So the demand is pulled along from the bottom of the chain.",
+      "cn": "所以需求是從供應鏈底端被拉上來的。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Exactly. Warehousing came second, at nearly forty-five percent.",
+      "cn": "沒錯。倉儲排第二，接近百分之四十五。"
+    },
+    {
+      "sp": "Tom",
+      "en": "What about semiconductors? I expected them at the top.",
+      "cn": "半導體呢？我以為它們會排第一。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Only thirteen point six. Those firms were already hiring hard.",
+      "cn": "只有十三點六。那些公司本來就在大量招人了。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And if you look at job titles instead?",
+      "cn": "如果改看職務名稱呢？"
+    },
+    {
+      "sp": "Anita",
+      "en": "AI engineers, up sixty-six percent. Cybersecurity engineers, thirty-five.",
+      "cn": "AI 工程師成長百分之六十六。資安工程師百分之三十五。"
+    },
+    {
+      "sp": "Tom",
+      "en": "I am not able to write code at all. Should I worry?",
+      "cn": "我完全不會寫程式。我該擔心嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "The institute listed four qualities, which they called the four I's.",
+      "cn": "資策會列了四項特質，他們叫做四個 I。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Let me guess. One of them is imagination.",
+      "cn": "我猜一個。其中一個是想像力。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Imagination, integration, impact and investment. Not one of them is a programming language.",
+      "cn": "想像力、整合力、影響力、投入。裡面沒有一個是程式語言。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Which sector showed the biggest rise in openings?",
+      "qCn": "哪一個產業的職缺成長最多？",
+      "opts": [
+        "A. Semiconductors",
+        "B. Warehousing",
+        "C. Chemical manufacturing",
+        "D. Cybersecurity"
+      ],
+      "optsCn": [
+        "A. 半導體",
+        "B. 倉儲",
+        "C. 化工製造",
+        "D. 資安"
+      ],
+      "ans": 2,
+      "expl": "Chemical manufacturing. Openings there rose by seventy-four percent.——Anita直接回答。半導體只有十三點六，是對話裡最低的數字。"
+    },
+    {
+      "q": "Why do chemical plants want AI people?",
+      "qCn": "化工廠為什麼會想找 AI 的人？",
+      "opts": [
+        "A. They sell AI software to the science park",
+        "B. They make materials that go inside AI hardware",
+        "C. They were told to by the institute",
+        "D. They want to replace their warehouses"
+      ],
+      "optsCn": [
+        "A. 它們把 AI 軟體賣給科學園區",
+        "B. 它們生產會裝進 AI 硬體裡的材料",
+        "C. 資策會叫它們這樣做",
+        "D. 它們想把倉庫換掉"
+      ],
+      "ans": 1,
+      "expl": "Because those plants make the materials that are used inside AI hardware.——that 開頭的關係子句就是原因，而且用了被動 are used，因為沒必要說是誰裝進去的。"
+    },
+    {
+      "q": "What are the four I's?",
+      "qCn": "四個 I 是哪四個？",
+      "opts": [
+        "A. Imagination, integration, impact and investment",
+        "B. Imagination, income, impact and interview",
+        "C. Industry, integration, impact and investment",
+        "D. Imagination, integration, income and insight"
+      ],
+      "optsCn": [
+        "A. 想像力、整合力、影響力、投入",
+        "B. 想像力、收入、影響力、面試",
+        "C. 產業、整合力、影響力、投入",
+        "D. 想像力、整合力、收入、洞察"
+      ],
+      "ans": 0,
+      "expl": "Imagination, integration, impact and investment.——Anita在最後一句把四個字講完，並補了一句裡面沒有程式語言。"
+    },
+    {
+      "q": "Tom says, \"This report ___ on Monday.\"",
+      "qCn": "Tom說：「這份報告星期一發布。」",
+      "opts": [
+        "A. was released",
+        "B. released",
+        "C. was releasing",
+        "D. has release"
+      ],
+      "ans": 0,
+      "expl": "報告是被人發布的，主詞不是動作的執行者，所以用被動語態 be 動詞加過去分詞 was released。B 變成報告自己發布了什麼；C 的過去進行式不是被動；D 的形狀不存在。"
+    },
+    {
+      "q": "Why does Tom say \"I am not able to write code\" instead of \"I cannot write code\"?",
+      "qCn": "Tom為什麼說 I am not able to write code，而不是 I cannot write code？",
+      "opts": [
+        "A. Because cannot is wrong here",
+        "B. Because be able to is the only past form",
+        "C. Because both are fine, and be able to just sounds a little heavier",
+        "D. Because cannot cannot be used with verbs"
+      ],
+      "optsCn": [
+        "A. 因為這裡用 cannot 是錯的",
+        "B. 因為 be able to 是唯一的過去式",
+        "C. 因為兩種都可以，be able to 只是語氣重一點",
+        "D. 因為 cannot 不能接動詞"
+      ],
+      "ans": 2,
+      "expl": "現在式的能力標準寫法是 can／cannot，而 am not able to 形狀也對，只是比較正式、語氣重一點。be able to 真正不可取代的地方是未來式、完成式和不定詞那些 can 進不去的位置。"
+    }
+  ]
+},
+{
+  "id": "dl20261125b2",
+  "date": "2026-11-25",
+  "level": "B2",
+  "minutes": 4,
+  "kind": "note",
+  "title": "Three Chairs and a Marker",
+  "titleCn": "三張椅子和一支白板筆",
+  "series": "本站自製聽力 · 職場與面試主題",
+  "topic": "☕ 面試隔天在茶水間覆盤那四十分鐘",
+  "focus": "could 講的是當時具備的本事，was able to 講的是那一次真的交出結果",
+  "intro": "Anita面試完隔天跟Tom聊。這一課的語言焦點很集中：同一段對話裡 could 和 was able to 各出現幾次，位置完全不同。could 用在描述她當時的狀態與限制（答得出來、學得起來、答不出來），was able to 只出現在她真的做到的那一刻，而且後面馬上接了一個數字。聽的時候請留意這個落點。",
+  "tip": "第一次聽抓五個事實：面試官幾位、面試多久、前面多久都在問常規題、她在白板上畫了多久、錄取通知哪一天到。第二次聽只做一件事：每聽到 could 或 was able to 就在心裡標記「這是在講本事，還是在講結果」，你會發現 was able to 只出現一次，而那一次就是整段的重點。",
+  "pre": [
+    {
+      "w": "panel",
+      "ipa": "/ˈpæn.əl/",
+      "pos": "n.",
+      "cn": "小組；評審團",
+      "def": "A small group of people who ask questions and decide together."
+    },
+    {
+      "w": "standard",
+      "ipa": "/ˈstæn.dɚd/",
+      "pos": "n.",
+      "cn": "標準",
+      "def": "A written rule that says how good something must be."
+    },
+    {
+      "w": "complaint",
+      "ipa": "/kəmˈpleɪnt/",
+      "pos": "n.",
+      "cn": "客訴；抱怨",
+      "def": "A message saying that something is wrong."
+    },
+    {
+      "w": "whiteboard",
+      "ipa": "/ˈwaɪt.bɔːrd/",
+      "pos": "n.",
+      "cn": "白板",
+      "def": "A white panel on a wall that you write on with a marker."
+    },
+    {
+      "w": "capacity",
+      "ipa": "/kəˈpæsəti/",
+      "pos": "n.",
+      "cn": "能力；容量",
+      "def": "What a person or thing is able to do."
+    },
+    {
+      "w": "gauge",
+      "ipa": "/ɡeɪdʒ/",
+      "pos": "n.",
+      "cn": "量具；量規",
+      "def": "A tool that measures size or pressure."
+    }
+  ],
+  "script": [
+    {
+      "sp": "Tom",
+      "en": "So how did Tuesday go? Three interviewers, was it?",
+      "cn": "星期二怎麼樣？三個面試官，是嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Three. Forty minutes. A panel that had clearly read my file twice.",
+      "cn": "三個。四十分鐘。那個小組顯然把我的資料看了兩遍。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Did they ask the usual things?",
+      "cn": "他們問的是常規的那些問題嗎？"
+    },
+    {
+      "sp": "Anita",
+      "en": "For the first twenty minutes, yes. I could answer the control chart questions in my sleep.",
+      "cn": "前二十分鐘是。管制圖那些問題我睡著都答得出來。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And then something changed.",
+      "cn": "然後情況變了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "They asked about a German standard I had never opened.",
+      "cn": "他們問起一份我從來沒打開過的德國標準。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Ouch. What did you say?",
+      "cn": "糟了。你怎麼說？"
+    },
+    {
+      "sp": "Anita",
+      "en": "That I had not used it, and that I could learn it in a week.",
+      "cn": "我說我沒用過，但我一個星期可以學會。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Most people would have made something up.",
+      "cn": "大部分的人會硬掰一個答案。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Making something up with three auditors in the room is not a plan.",
+      "cn": "房間裡坐著三個稽核員還硬掰，那不叫策略。"
+    },
+    {
+      "sp": "Tom",
+      "en": "Fair enough. So the interview just died there?",
+      "cn": "說得對。所以面試就這樣斷了？"
+    },
+    {
+      "sp": "Anita",
+      "en": "No. I asked whether I could use the whiteboard.",
+      "cn": "沒有。我問他們我可不可以用白板。"
+    },
+    {
+      "sp": "Tom",
+      "en": "You did not.",
+      "cn": "你不會吧。"
+    },
+    {
+      "sp": "Anita",
+      "en": "I was able to redraw the whole measurement flow from the May complaint. Eleven minutes.",
+      "cn": "我把五月那件客訴的整條量測流程重畫了出來。十一分鐘。"
+    },
+    {
+      "sp": "Tom",
+      "en": "From memory? Every station?",
+      "cn": "憑記憶？每一個站別？"
+    },
+    {
+      "sp": "Anita",
+      "en": "Every station, every gauge, and the two spots where the operators were guessing.",
+      "cn": "每一個站別、每一支量具，還有作業員在猜的那兩個地方。"
+    },
+    {
+      "sp": "Tom",
+      "en": "And the offer came through on Thursday.",
+      "cn": "然後錄取通知星期四就來了。"
+    },
+    {
+      "sp": "Anita",
+      "en": "Thursday afternoon. Saying I can do this is cheap. Showing one result is not.",
+      "cn": "星期四下午。說「我會做這個」很便宜。把一個結果拿出來就不便宜了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How long was the interview, and how many people were on the panel?",
+      "qCn": "面試多久，小組有幾個人？",
+      "opts": [
+        "A. Twenty minutes, two people",
+        "B. Forty minutes, three people",
+        "C. Forty minutes, two people",
+        "D. Eleven minutes, three people"
+      ],
+      "optsCn": [
+        "A. 二十分鐘，兩個人",
+        "B. 四十分鐘，三個人",
+        "C. 四十分鐘，兩個人",
+        "D. 十一分鐘，三個人"
+      ],
+      "ans": 1,
+      "expl": "Three. Forty minutes.——Anita第一句就把兩個數字講完。二十分鐘是常規題佔掉的時間，十一分鐘是她畫白板的時間。"
+    },
+    {
+      "q": "What did Anita say about the German standard?",
+      "qCn": "Anita對那份德國標準怎麼說？",
+      "opts": [
+        "A. She quoted two of its clauses",
+        "B. She said it did not apply to her plant",
+        "C. She said she had not used it but could learn it in a week",
+        "D. She asked the panel to skip the question"
+      ],
+      "optsCn": [
+        "A. 她引用了其中兩條條文",
+        "B. 她說那份標準不適用於她那間廠",
+        "C. 她說她沒用過，但一個星期可以學會",
+        "D. 她請面試小組跳過這題"
+      ],
+      "ans": 2,
+      "expl": "That I had not used it, and that I could learn it in a week.——她先承認沒碰過，再給一個具體的時間，所以沒有變成硬掰。"
+    },
+    {
+      "q": "How long did the whiteboard drawing take?",
+      "qCn": "白板那張圖畫了多久？",
+      "opts": [
+        "A. Eleven minutes",
+        "B. Twenty minutes",
+        "C. Forty minutes",
+        "D. One week"
+      ],
+      "optsCn": [
+        "A. 十一分鐘",
+        "B. 二十分鐘",
+        "C. 四十分鐘",
+        "D. 一個星期"
+      ],
+      "ans": 0,
+      "expl": "I was able to redraw the whole measurement flow from the May complaint. Eleven minutes.——她把時間接在結果後面講，這也是這種句子最有力的寫法。"
+    },
+    {
+      "q": "Anita says, \"I ___ redraw the whole measurement flow from the May complaint.\"",
+      "qCn": "Anita說：「我把五月那件客訴的整條量測流程重畫了出來。」",
+      "opts": [
+        "A. was able to",
+        "B. could",
+        "C. can",
+        "D. will be able to"
+      ],
+      "ans": 0,
+      "expl": "這是過去某一次真的辦到、而且有結果的事，肯定句用 was able to。could 只會說她當時具備這個本事，結果出來沒有不知道；can 是現在；will be able to 把事情推到未來。"
+    },
+    {
+      "q": "Why does Anita use could for the control chart questions?",
+      "qCn": "管制圖那些問題，Anita為什麼用 could？",
+      "opts": [
+        "A. Because she failed to answer them",
+        "B. Because she is describing an ability she had, not one single result",
+        "C. Because could is more polite than was able to",
+        "D. Because the questions happened after the whiteboard"
+      ],
+      "optsCn": [
+        "A. 因為她答不出來",
+        "B. 因為她在描述當時具備的本事，不是某一次的結果",
+        "C. 因為 could 比 was able to 客氣",
+        "D. 因為那些問題發生在白板之後"
+      ],
+      "ans": 1,
+      "expl": "I could answer the control chart questions in my sleep.——這一句在描述她的本事，不是在報告某一次的成果。整段對話裡只有白板那一句用了 was able to，因為那才是一次具體的結果。"
+    }
+  ]
+},
 /* ---------- 2026-11-18 旅遊與交通主題（四個程度） ---------- */
 {
   "id": "dl20261118a2",

@@ -7,6 +7,791 @@
 window.DAILY = {
 
 articles:[
+/* ---------- 2026-11-25 每日文章（職場與面試：時間與條件子句、能力三件組） ---------- */
+{
+  "id": "d20261125a2",
+  "date": "2026-11-25",
+  "level": "A2",
+  "topic": "職場",
+  "words": 103,
+  "kind": "orig",
+  "title": "When Tom Gets the Call",
+  "titleCn": "等到電話來的時候",
+  "focus": "when 和 if 後面的動詞用現在簡單式，不用 will；真正的未來式放在另外半句（When I get there, I will…）",
+  "upFrom": "A2",
+  "upTo": "B1",
+  "intro": "Tom去麵包店應徵打工。這一篇請盯住兩個連接詞：when（一定會發生，只是還沒到）和 if（不一定會發生）。重點是它們後面那個動詞——英文一律用現在式 rings、arrives、gets，不可以寫 will ring；「會怎樣」留給另外半句的 will。中文說「電話響的時候我會馬上接」，兩邊都沒有時態的記號，所以這個形狀要靠眼睛記。",
+  "spoken": [
+    {
+      "en": "When the phone rings, he will answer it fast.",
+      "cn": "電話一響，他會馬上接。"
+    },
+    {
+      "en": "If he arrives early, Ms. Lin will show him the kitchen.",
+      "cn": "如果他早到，林小姐會帶他看廚房。"
+    },
+    {
+      "en": "When he gets there on Saturday, he will wear a clean apron.",
+      "cn": "星期六到店裡的時候，他會穿上乾淨的圍裙。"
+    },
+    {
+      "en": "The manager says she will call him.",
+      "cn": "店長說她會打電話給他。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Tom wants a part-time job near his home. He fills in a form at a small bread shop. The manager, Ms. Lin, says she will call him.",
+      "cn": "Tom想找一份家附近的打工。他在一家小麵包店填了一張表格。店長林小姐說她會打電話給他。"
+    },
+    {
+      "en": "Tom waits at home with his phone on the table. When the phone rings, he will answer it fast. He is a little nervous.",
+      "cn": "Tom在家裡等，手機就放在桌上。電話一響，他會馬上接。他有一點緊張。"
+    },
+    {
+      "en": "The call comes at four o'clock. If he arrives early, Ms. Lin will show him the kitchen. Tom says yes at once.",
+      "cn": "電話四點來了。如果他早到，林小姐會帶他看廚房。Tom馬上說好。"
+    },
+    {
+      "en": "Tom is very happy about his new job. When he gets there on Saturday, he will wear a clean apron. He will carry the bread baskets to the front shelf.",
+      "cn": "Tom對這份新工作很開心。星期六到店裡的時候，他會穿上乾淨的圍裙。他會把麵包籃搬到前面的架子上。"
+    }
+  ],
+  "target": [
+    {
+      "w": "form",
+      "ipa": "/fɔːrm/",
+      "pos": "n.",
+      "cn": "表格",
+      "def": "A paper with spaces for your name and other facts.",
+      "ex": "Please write your phone number on this form.",
+      "exCn": "請把你的電話號碼寫在這張表格上。"
+    },
+    {
+      "w": "manager",
+      "ipa": "/ˈmæn.ə.dʒɚ/",
+      "pos": "n.",
+      "cn": "店長；經理",
+      "def": "The person who runs a shop or an office.",
+      "ex": "Our manager checks the fridge every morning.",
+      "exCn": "我們店長每天早上都會檢查冰箱。"
+    },
+    {
+      "w": "early",
+      "ipa": "/ˈɝːli/",
+      "pos": "adv.",
+      "cn": "提早；早",
+      "def": "Before the usual time.",
+      "ex": "My train leaves early, so I get up at five.",
+      "exCn": "我的火車很早開，所以我五點起床。"
+    },
+    {
+      "w": "nervous",
+      "ipa": "/ˈnɝːvəs/",
+      "pos": "adj.",
+      "cn": "緊張的",
+      "def": "Worried about something that will happen soon.",
+      "ex": "I feel nervous before every English test.",
+      "exCn": "每次英文考試前我都很緊張。"
+    },
+    {
+      "w": "apron",
+      "ipa": "/ˈeɪ.prən/",
+      "pos": "n.",
+      "cn": "圍裙",
+      "def": "Cloth you wear in front to stay clean when you cook.",
+      "ex": "My father ties his apron before he makes soup.",
+      "exCn": "我爸爸煮湯之前會先繫上圍裙。"
+    },
+    {
+      "w": "basket",
+      "ipa": "/ˈbæs.kɪt/",
+      "pos": "n.",
+      "cn": "籃子",
+      "def": "An open bag made of thin wood or plastic.",
+      "ex": "She put two apples in the basket.",
+      "exCn": "她把兩顆蘋果放進籃子裡。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Where does Tom fill in the form?",
+      "qCn": "Tom在哪裡填表格？",
+      "opts": [
+        "A. At a bread shop",
+        "B. At a train station",
+        "C. At a school",
+        "D. At his home"
+      ],
+      "optsCn": [
+        "A. 在一家麵包店",
+        "B. 在火車站",
+        "C. 在學校",
+        "D. 在他家"
+      ],
+      "ans": 0,
+      "expl": "He fills in a form at a small bread shop.——第一段第二句就寫了地點。他在家裡做的是等電話，不是填表格。"
+    },
+    {
+      "q": "What time does the call come?",
+      "qCn": "電話幾點來？",
+      "opts": [
+        "A. At two o'clock",
+        "B. At four o'clock",
+        "C. At five o'clock",
+        "D. On Saturday"
+      ],
+      "optsCn": [
+        "A. 兩點",
+        "B. 四點",
+        "C. 五點",
+        "D. 星期六"
+      ],
+      "ans": 1,
+      "expl": "The call comes at four o'clock.——第三段第一句。星期六是他要去上班的日子，不是電話來的時間。"
+    },
+    {
+      "q": "Tom says, \"When I ___ there on Saturday, I will wear a clean apron.\"",
+      "qCn": "Tom說：「星期六到店裡的時候，我會穿上乾淨的圍裙。」",
+      "opts": [
+        "A. get",
+        "B. will get",
+        "C. got",
+        "D. am getting"
+      ],
+      "ans": 0,
+      "expl": "when 後面講的雖然是未來的事，動詞卻用現在式 get，will 只留給另外半句 I will wear。B 把 will 放進 when 裡面，這是中文母語者最常犯的錯；C 是過去式；D 的現在進行式在這裡講不通。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "First I finish work. Then I will go to the market.",
+      "b2": "When I finish work, I will go to the market.",
+      "note": "兩句都對，但 A2 常把一件事切成兩句講。英文可以用 when 把它們黏成一句：when 後面放先發生的那件事，動詞用現在式 finish，不要寫 will finish；後半句才用 will。黏起來以後聽起來順很多，也更像母語者。",
+      "sp": "I'll go to the market after work.",
+      "spNote": "口語更常用 after 加名詞，連動詞都不用。",
+      "b1Cn": "我先下班。然後我會去市場。",
+      "b2Cn": "我下班以後會去市場。",
+      "spCn": "我下班後會去市場。"
+    },
+    {
+      "b1": "Maybe it rains tomorrow. Then we stay home.",
+      "b2": "If it rains tomorrow, we will stay home.",
+      "note": "when 用在一定會發生、只是還沒到的事；if 用在不一定會發生的事。下雨屬於後者，所以用 if。注意 if 後面同樣用現在式 rains，不寫 will rain；真正的未來式放在後半句 we will stay。",
+      "sp": "We'll stay home if it rains.",
+      "spNote": "口語常把 if 那半句挪到後面，意思完全一樣。",
+      "b1Cn": "明天也許會下雨。然後我們待在家。",
+      "b2Cn": "如果明天下雨，我們就待在家。",
+      "spCn": "下雨的話我們就待在家。"
+    }
+  ]
+},
+{
+  "id": "d20261125b1",
+  "date": "2026-11-25",
+  "level": "B1",
+  "topic": "職場與面試",
+  "words": 140,
+  "kind": "orig",
+  "title": "Before Anita Says Yes",
+  "titleCn": "在Anita說好之前",
+  "focus": "when 與 if 的分工，以及 when 後面可以用現在完成式（when I have seen…）表示「做完那件事之後」",
+  "upFrom": "B1",
+  "upTo": "B1+",
+  "intro": "同一個找工作的情境，這次換成Anita，而且她手上已經有一份錄取通知。請注意三個地方：when 後面用現在式 seen 這類形狀而不是 will；if 用在她還不確定的條件上；以及 when she has seen the lab 用現在完成式，強調「看完以後」才回答。中文的「等我看過」沒有這些記號，所以要靠連接詞後面那個動詞的形狀來判斷。",
+  "spoken": [
+    {
+      "en": "When she has seen the lab, she will give the company an answer.",
+      "cn": "等她看過實驗室，她才會給公司答覆。"
+    },
+    {
+      "en": "If the lab has no proper gauges, Anita will not take the job.",
+      "cn": "如果實驗室沒有合格的量具，Anita就不會接這份工作。"
+    },
+    {
+      "en": "She did not say yes on the phone.",
+      "cn": "她沒有在電話裡答應。"
+    },
+    {
+      "en": "She read the shift plan twice before she signed.",
+      "cn": "她簽名之前把班表看了兩遍。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita got a job offer from a factory in Bien Hoa last Monday. The pay was better than her pay now, but she did not say yes on the phone.",
+      "cn": "上個星期一，Anita收到邊和一間工廠的錄取通知。薪水比她現在的好，但她沒有在電話裡答應。"
+    },
+    {
+      "en": "She asked to walk the production line first. When she has seen the lab, she will give the company an answer. Her friends think she is too careful, and maybe they are right.",
+      "cn": "她先要求去走一趟產線。等她看過實驗室，她才會給公司答覆。她的朋友覺得她太小心了，也許他們說得對。"
+    },
+    {
+      "en": "Mr. Phuc from the HR office agreed at once, because an honest question is better than a quick yes. If the lab has no proper gauges, Anita will not take the job. She has worked in two factories, so she knows the signs.",
+      "cn": "人資部的Phuc先生馬上同意了，因為一個誠實的問題比一句很快的「好」更有價值。如果實驗室沒有合格的量具，Anita就不會接這份工作。她在兩間工廠待過，所以她看得出徵兆。"
+    },
+    {
+      "en": "She visited the plant on Friday and liked the team there. She read the shift plan twice before she signed. When she starts in January, she will already know every machine on that line.",
+      "cn": "她星期五去了那間廠，很喜歡那裡的團隊。她簽名之前把班表看了兩遍。等她一月上工的時候，她已經會認得那條線上的每一台機器。"
+    }
+  ],
+  "target": [
+    {
+      "w": "offer",
+      "ipa": "/ˈɑː.fɚ/",
+      "pos": "n.",
+      "cn": "錄取通知；提議",
+      "def": "Something a company says it will give you, such as a job.",
+      "ex": "He turned down the offer because the hours were too long.",
+      "exCn": "他拒絕了那個提議，因為工時太長。"
+    },
+    {
+      "w": "shift",
+      "ipa": "/ʃɪft/",
+      "pos": "n.",
+      "cn": "班；輪班",
+      "def": "A set block of working hours in a day.",
+      "ex": "My brother takes the night shift twice a week.",
+      "exCn": "我弟弟一個星期值兩次夜班。"
+    },
+    {
+      "w": "agree",
+      "ipa": "/əˈɡriː/",
+      "pos": "v.",
+      "cn": "同意",
+      "def": "To say yes to what someone wants or thinks.",
+      "ex": "The two sides finally agreed on a price.",
+      "exCn": "雙方最後在價格上達成一致。"
+    },
+    {
+      "w": "honest",
+      "ipa": "/ˈɑːnɪst/",
+      "pos": "adj.",
+      "cn": "誠實的；坦白的",
+      "def": "Saying what is true, even when it is not easy.",
+      "ex": "Give me an honest answer, not a polite one.",
+      "exCn": "給我一個誠實的回答，不要客套的。"
+    },
+    {
+      "w": "gauge",
+      "ipa": "/ɡeɪdʒ/",
+      "pos": "n.",
+      "cn": "量具；量規",
+      "def": "A tool that measures size or pressure.",
+      "ex": "The old gauge was off by half a millimetre.",
+      "exCn": "那個舊量具差了半公釐。"
+    },
+    {
+      "w": "sign",
+      "ipa": "/saɪn/",
+      "pos": "n. / v.",
+      "cn": "徵兆；簽名",
+      "def": "A small thing that shows what is really going on; also to write your name.",
+      "ex": "A clean floor is a good sign in any kitchen.",
+      "exCn": "地板乾淨在任何廚房都是好徵兆。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Anita not say yes on the phone?",
+      "qCn": "Anita為什麼沒有在電話裡答應？",
+      "opts": [
+        "A. The pay was too low",
+        "B. She wanted to see the production line and the lab first",
+        "C. She had another offer",
+        "D. She did not like Mr. Phuc"
+      ],
+      "optsCn": [
+        "A. 薪水太低",
+        "B. 她想先看產線和實驗室",
+        "C. 她有另一個錄取通知",
+        "D. 她不喜歡Phuc先生"
+      ],
+      "ans": 1,
+      "expl": "She asked to walk the production line first. When she has seen the lab, she will give the company an answer.——第二段寫得很清楚。薪水其實比現在好，所以 A 不對。"
+    },
+    {
+      "q": "What would make Anita turn the job down?",
+      "qCn": "什麼情況會讓Anita拒絕這份工作？",
+      "opts": [
+        "A. A long shift",
+        "B. A factory far from her home",
+        "C. A lab without proper gauges",
+        "D. A team she does not know"
+      ],
+      "optsCn": [
+        "A. 班太長",
+        "B. 工廠離家太遠",
+        "C. 實驗室沒有合格的量具",
+        "D. 一個她不認識的團隊"
+      ],
+      "ans": 2,
+      "expl": "If the lab has no proper gauges, Anita will not take the job.——第三段的 if 句就是她的條件。這句用 if 而不是 when，因為她還不知道量具到底行不行。"
+    },
+    {
+      "q": "Anita says, \"When I ___ the lab, I will give you an answer.\"",
+      "qCn": "Anita說：「等我看過實驗室，我就給你答覆。」",
+      "opts": [
+        "A. have seen",
+        "B. will see",
+        "C. will have seen",
+        "D. saw"
+      ],
+      "ans": 0,
+      "expl": "when 後面不放 will，所以 B、C 都出局。要強調「看完以後」才回答，用現在完成式 have seen 最準；D 的過去式跟後半句的 will 時間搭不起來。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "I will see the lab. After that I will answer you.",
+      "b2": "When I have seen the lab, I will answer you.",
+      "note": "兩句都講得通，但第一句把一件事拆成兩步，讀起來像在報流程。用 when 加現在完成式，一句就同時交代順序和條件：have seen 表示「那件事做完了」，後半句的 will 才是真正的未來。記住 when 裡面永遠不放 will。",
+      "sp": "I'll answer once I've seen the lab.",
+      "spNote": "口語常用 once 代替 when，語氣更乾脆，形狀完全一樣。",
+      "b1Cn": "我會去看實驗室。之後我會回覆你。",
+      "b2Cn": "等我看過實驗室，我就回覆你。",
+      "spCn": "我一看過實驗室就回覆你。"
+    },
+    {
+      "b1": "Maybe the gauges are bad. Then I will not take the job.",
+      "b2": "If the gauges are not good enough, I will not take the job.",
+      "note": "when 和 if 的差別不在時間，而在確定度。上工日一定會到，所以用 when；量具行不行她還不知道，所以用 if。把 maybe 開頭的兩句合成一個 if 句，條件和結果的關係一眼就看得出來。",
+      "sp": "I won't take it if the gauges aren't good enough.",
+      "spNote": "口語把條件挪到後面，重點就落在「我不接」那半句上。",
+      "b1Cn": "量具也許不行。那我就不接這份工作。",
+      "b2Cn": "如果量具不夠好，我就不接這份工作。",
+      "spCn": "量具不夠好的話我就不接。"
+    }
+  ]
+},
+{
+  "id": "d20261125b1p",
+  "date": "2026-11-25",
+  "level": "B1+",
+  "topic": "新聞·職場與面試",
+  "words": 218,
+  "kind": "news",
+  "source": "改寫自 Focus Taiwan 報導（2026/11/23）— 事實取自原文，英文由本站重寫",
+  "sourceUrl": "https://focustaiwan.tw/sci-tech/202611230013",
+  "title": "Where the AI Jobs Are Opening Now",
+  "titleCn": "AI 的職缺現在開在哪裡",
+  "focus": "被動語態（was released、are used、was found）加上 which／where 關係子句，把數字和來源綁進同一個長句",
+  "upFrom": "B1+",
+  "upTo": "B2",
+  "intro": "這是新聞改寫，語言焦點跟B1篇明顯不同：請找出所有被動語態（be 動詞加過去分詞），問自己「動作是誰做的、為什麼作者不講」。另外注意 which 和 where 開頭的關係子句怎麼把一串數字掛在名詞後面，而不用另外開一個句子。",
+  "spoken": [
+    {
+      "en": "A report on AI hiring was released in Taipei on Monday.",
+      "cn": "一份關於 AI 招募的報告星期一在台北發布。"
+    },
+    {
+      "en": "The biggest jump was found in chemical manufacturing, where openings rose by 74.32 percent.",
+      "cn": "漲幅最大的出現在化工製造業，職缺成長了百分之七十四點三二。"
+    },
+    {
+      "en": "Those plants make materials which are used inside AI hardware.",
+      "cn": "那些廠生產的材料會用在 AI 硬體裡面。"
+    },
+    {
+      "en": "Demand for AI talent is no longer kept inside the technology industry.",
+      "cn": "對 AI 人才的需求已經不再只留在科技業裡面。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "A report on AI hiring was released in Taipei on Monday by the Institute for Information Industry and the job bank 1111. It compared job openings in the third quarter of 2026 with the openings in the first quarter of the same year. The message was short. Demand for AI talent is no longer kept inside the technology industry.",
+      "cn": "一份關於 AI 招募的報告星期一在台北發布，由資策會與人力銀行1111共同提出。報告把二〇二六年第三季的職缺數，拿來跟同一年第一季比。結論很短：對 AI 人才的需求已經不再只留在科技業裡面。"
+    },
+    {
+      "en": "The biggest jump was found in chemical manufacturing, where openings rose by 74.32 percent. Those plants make materials such as glass cloth and copper-clad laminate, which are used inside AI hardware. Warehousing and transport support services came second at 44.83 percent, and architectural planning and design rose by 24.57 percent.",
+      "cn": "漲幅最大的出現在化工製造業，職缺成長了百分之七十四點三二。那些廠生產的是玻璃纖維布、銅箔基板這類材料，而這些材料會用在 AI 硬體裡面。倉儲與運輸輔助服務以百分之四十四點八三居次，建築規劃與設計則成長了百分之二十四點五七。"
+    },
+    {
+      "en": "The tech sectors themselves grew more slowly. Openings in computer and consumer electronics rose 23.26 percent, electronic components 18.61 percent, and semiconductors 13.63 percent. By job title the picture was sharper: AI engineers were wanted most, up 66.12 percent, followed by algorithm engineers at 54.41 percent and cybersecurity engineers at 35.47 percent.",
+      "cn": "科技業本身反而漲得比較慢。電腦及消費性電子的職缺成長百分之二十三點二六，電子零組件百分之十八點六一，半導體百分之十三點六三。若按職務來看就更明顯：AI 相關工程師最搶手，成長百分之六十六點一二，接著是演算法開發工程師百分之五十四點四一，以及資安工程師百分之三十五點四七。"
+    },
+    {
+      "en": "Lin Yu-fan, a deputy executive director at the institute, said workers now need four qualities, which she called the four I's: imagination, integration, impact and investment. She also advised companies to start with one small AI project, so that thin data and weak processes can be found early rather than after a whole system has been bought.",
+      "cn": "資策會副執行長林玉凡說，現在的工作者需要四項特質，她稱之為四個 I：想像力、整合力、影響力與投入。她也建議企業先從一個小型 AI 專案做起，這樣資料不足、流程不夠成熟這些問題才會提早被發現，而不是等整套系統買回來之後才發現。"
+    }
+  ],
+  "target": [
+    {
+      "w": "report",
+      "ipa": "/rɪˈpɔːrt/",
+      "pos": "n.",
+      "cn": "報告",
+      "def": "A written study that gives facts and numbers.",
+      "ex": "The safety report was handed to the mayor last week.",
+      "exCn": "那份安全報告上個星期交到市長手上。"
+    },
+    {
+      "w": "demand",
+      "ipa": "/dɪˈmænd/",
+      "pos": "n.",
+      "cn": "需求",
+      "def": "How much people want to buy or hire something.",
+      "ex": "Demand for cheap flights drops after the holidays.",
+      "exCn": "假期過後，便宜機票的需求就下降了。"
+    },
+    {
+      "w": "sector",
+      "ipa": "/ˈsek.tɚ/",
+      "pos": "n.",
+      "cn": "產業部門",
+      "def": "One part of an economy, such as farming or banking.",
+      "ex": "The banking sector has cut three thousand jobs this year.",
+      "exCn": "銀行業今年已經裁掉三千個職位。"
+    },
+    {
+      "w": "material",
+      "ipa": "/məˈtɪr.i.əl/",
+      "pos": "n.",
+      "cn": "材料",
+      "def": "The stuff that something is made from.",
+      "ex": "Builders here still prefer local stone as a material.",
+      "exCn": "這裡的建築工人還是偏好用本地石材當材料。"
+    },
+    {
+      "w": "warehouse",
+      "ipa": "/ˈwerhaʊs/",
+      "pos": "n.",
+      "cn": "倉庫",
+      "def": "A large building where goods are kept before they are sold.",
+      "ex": "A fire closed the warehouse for a month.",
+      "exCn": "一場火災讓那間倉庫關了一個月。"
+    },
+    {
+      "w": "engineer",
+      "ipa": "/ˌen.dʒɪˈnɪr/",
+      "pos": "n.",
+      "cn": "工程師",
+      "def": "Someone trained to design or fix machines and systems.",
+      "ex": "Two engineers flew in to look at the broken pump.",
+      "exCn": "兩位工程師飛過來看那台壞掉的泵。"
+    },
+    {
+      "w": "design",
+      "ipa": "/dɪˈzaɪn/",
+      "pos": "n. / v.",
+      "cn": "設計",
+      "def": "A plan that shows how something will be made.",
+      "ex": "The new design cut the weight by half.",
+      "exCn": "新的設計把重量減了一半。"
+    },
+    {
+      "w": "talent",
+      "ipa": "/ˈtælənt/",
+      "pos": "n.",
+      "cn": "人才",
+      "def": "People with a skill that employers want.",
+      "ex": "Small towns lose their talent to the capital every year.",
+      "exCn": "小鎮每年都把人才流失到首都去。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Which industry showed the biggest rise in job openings?",
+      "qCn": "哪一個產業的職缺漲幅最大？",
+      "opts": [
+        "A. Semiconductors",
+        "B. Chemical manufacturing",
+        "C. Warehousing and transport support",
+        "D. Architectural planning and design"
+      ],
+      "optsCn": [
+        "A. 半導體",
+        "B. 化工製造",
+        "C. 倉儲與運輸輔助",
+        "D. 建築規劃與設計"
+      ],
+      "ans": 1,
+      "expl": "The biggest jump was found in chemical manufacturing, where openings rose by 74.32 percent.——第二段第一句。半導體只有 13.63%，是文中最低的一個。"
+    },
+    {
+      "q": "Why are chemical plants hiring for AI work?",
+      "qCn": "化工廠為什麼會因為 AI 而招人？",
+      "opts": [
+        "A. They write AI software",
+        "B. They train AI engineers for other firms",
+        "C. They make materials that go inside AI hardware",
+        "D. They buy AI systems from the institute"
+      ],
+      "optsCn": [
+        "A. 它們在寫 AI 軟體",
+        "B. 它們幫別的公司訓練 AI 工程師",
+        "C. 它們生產會裝進 AI 硬體裡的材料",
+        "D. 它們向資策會買 AI 系統"
+      ],
+      "ans": 2,
+      "expl": "Those plants make materials such as glass cloth and copper-clad laminate, which are used inside AI hardware.——which 開頭的關係子句就是原因，玻璃纖維布與銅箔基板都是硬體用料。"
+    },
+    {
+      "q": "What did Lin Yu-fan advise companies to do first?",
+      "qCn": "林玉凡建議企業先做什麼？",
+      "opts": [
+        "A. Buy a complete AI system",
+        "B. Hire four kinds of engineers",
+        "C. Start with one small AI project",
+        "D. Move their warehouses"
+      ],
+      "optsCn": [
+        "A. 先買一整套 AI 系統",
+        "B. 先招四種工程師",
+        "C. 先從一個小型 AI 專案做起",
+        "D. 把倉庫搬走"
+      ],
+      "ans": 2,
+      "expl": "She also advised companies to start with one small AI project…——最後一段。原因也寫在同一句：這樣資料與流程的問題才會提早被發現。"
+    },
+    {
+      "q": "A report on AI hiring ___ in Taipei on Monday.",
+      "qCn": "一份關於 AI 招募的報告星期一在台北發布。",
+      "opts": [
+        "A. was released",
+        "B. released",
+        "C. was releasing",
+        "D. has release"
+      ],
+      "ans": 0,
+      "expl": "報告是被人發布的，主詞不是動作的執行者，所以用被動語態 be 加過去分詞 was released。B 變成報告自己發布別的東西；C 的過去進行式不是被動；D 的形狀不存在。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "The institute released a report on Monday. People read it and found the numbers.",
+      "b2": "A report was released on Monday, and the numbers in it were quickly picked up.",
+      "note": "新聞英文常把動作的執行者藏起來，因為讀者在意的是「發生了什麼」，不是「誰做的」。被動語態 was released、were picked up 就是這個工具。改寫之後兩個主詞都是 report 和 numbers，焦點一路沒跑掉。",
+      "sp": "A report came out on Monday and the numbers spread fast.",
+      "spNote": "口語用 come out 這種片語代替被動，輕鬆但不適合寫進報導。",
+      "b1Cn": "資策會星期一發布了一份報告。大家讀了它，看到那些數字。",
+      "b2Cn": "一份報告星期一發布，裡面的數字很快被引用。",
+      "spCn": "有份報告星期一出來，數字很快傳開。"
+    },
+    {
+      "b1": "Those plants make glass cloth. The glass cloth goes inside AI hardware.",
+      "b2": "Those plants make glass cloth, which is used inside AI hardware.",
+      "note": "兩句之間重複了 glass cloth，讀起來卡。用 which 開頭的關係子句，把第二句掛到第一句的名詞後面，重複的字就消失了。which 後面接的是被動 is used，因為沒有必要說是誰把它裝進去的。",
+      "sp": "Those plants make the glass cloth that goes inside AI hardware.",
+      "spNote": "口語常用 that 加主動動詞，句子更短，但正式報導偏好 which 加被動。",
+      "b1Cn": "那些廠生產玻璃纖維布。玻璃纖維布會裝進 AI 硬體裡。",
+      "b2Cn": "那些廠生產玻璃纖維布，而它會用在 AI 硬體裡面。",
+      "spCn": "那些廠做的玻璃纖維布會裝進 AI 硬體裡。"
+    }
+  ]
+},
+{
+  "id": "d20261125b2",
+  "date": "2026-11-25",
+  "level": "B2",
+  "topic": "職場與面試",
+  "words": 267,
+  "kind": "original",
+  "title": "Forty Minutes and One Whiteboard",
+  "titleCn": "四十分鐘和一塊白板",
+  "focus": "can／could 講的是一種能力，was able to 講的是「那一次真的做到了」；could not 可以講單次失敗，couldn't 與 was not able to 在否定句裡幾乎通用",
+  "intro": "這一篇請把注意力放在三組說法上：can（現在的能力）、could（過去一段時間的能力）、was able to（過去某一次真的辦到）。英文在肯定句裡分得很細，中文全部都說「會」或「能」。讀的時候留意作者什麼時候換成 was able to，那通常就是她想強調「結果真的出來了」的那一刻。",
+  "spoken": [
+    {
+      "en": "She has been able to do that since her second year in the plant.",
+      "cn": "她從進廠第二年起就辦得到這件事。"
+    },
+    {
+      "en": "She could answer the questions about control charts without thinking.",
+      "cn": "管制圖那些問題她不用想就答得出來。"
+    },
+    {
+      "en": "She could not bluff, so she said so plainly.",
+      "cn": "她沒辦法硬掰，所以她就直說了。"
+    },
+    {
+      "en": "She was able to redraw the whole measurement flow from memory.",
+      "cn": "她憑記憶把整條量測流程重畫了出來。"
+    }
+  ],
+  "paras": [
+    {
+      "en": "Anita can read a drawing and run a gauge study in one afternoon. She has been able to do that since her second year in the plant, and nobody on her team doubts it. But an interview room is not a plant floor. On Tuesday morning she sat in front of three strangers who had forty minutes and a list of questions, and none of them could see what she is actually able to do.",
+      "cn": "Anita一個下午就能讀完圖面、跑完一次量具分析。她從進廠第二年起就辦得到這件事，團隊裡沒有人懷疑。但面試室不是廠房。星期二早上，她坐在三個陌生人面前，他們手上有四十分鐘和一張題目清單，而他們沒有一個人看得到她實際上做得到什麼。"
+    },
+    {
+      "en": "The first twenty minutes went well enough. She could answer the questions about control charts without thinking, and she could explain why her last supplier audit had changed the sampling plan. Then the panel asked about a German standard she had never used. She could not bluff, so she said so plainly: she had not worked with that document, but she could learn it in a week.",
+      "cn": "前二十分鐘還算順。管制圖那些問題她不用想就答得出來，也說得清楚為什麼上一次的供應商稽核改掉了抽樣計畫。接著面試小組問起一份她從來沒用過的德國標準。她沒辦法硬掰，所以她就直說了：她沒碰過那份文件，但她一個星期內可以學會。"
+    },
+    {
+      "en": "That answer might have ended the interview. Instead Anita asked for the whiteboard. She was able to redraw, from memory, the measurement flow behind a real customer complaint she had closed in May: every station, every gauge, and the two places where the operators were guessing. It took her eleven minutes. By the end the panel was asking about her plant, not about the standard.",
+      "cn": "那個回答本來可能讓面試就這樣結束。但Anita反而要求用白板。她憑記憶重畫出五月那件客訴背後的整條量測流程：每一個站別、每一支量具，以及作業員在猜的那兩個地方。她花了十一分鐘。到最後，面試小組問的是她那間廠，而不是那份標準。"
+    },
+    {
+      "en": "The offer arrived on Thursday. Anita thinks the lesson is small but worth keeping. Saying I can do this describes a capacity, and anyone can say it. Saying I was able to do this points at one occasion and one result, and that is much harder to argue with. In an interview the second sentence is the one people remember.",
+      "cn": "錄取通知星期四到了。Anita覺得這個心得不大，但值得留著。說 I can do this 講的是一種能力，誰都可以這樣說。說 I was able to do this 指的是某一次、某一個結果，別人要反駁就難多了。在面試裡，第二種句子才是被記住的那一句。"
+    }
+  ],
+  "target": [
+    {
+      "w": "drawing",
+      "ipa": "/ˈdrɑː.ɪŋ/",
+      "pos": "n.",
+      "cn": "圖面；工程圖",
+      "def": "A technical picture that shows sizes and shapes.",
+      "ex": "The welder kept the drawing taped to his bench.",
+      "exCn": "那位焊工把圖面貼在工作檯上。"
+    },
+    {
+      "w": "gauge",
+      "ipa": "/ɡeɪdʒ/",
+      "pos": "n.",
+      "cn": "量具；量規",
+      "def": "A tool that measures size or pressure.",
+      "ex": "A dropped gauge has to be checked before anyone uses it again.",
+      "exCn": "量具掉過之後，要先校驗才能再用。"
+    },
+    {
+      "w": "audit",
+      "ipa": "/ˈɑː.dɪt/",
+      "pos": "n.",
+      "cn": "稽核",
+      "def": "An official check of how a company works.",
+      "ex": "The hotel passed its fire audit with two small notes.",
+      "exCn": "那間飯店通過了消防稽核，只留下兩個小缺點。"
+    },
+    {
+      "w": "standard",
+      "ipa": "/ˈstæn.dɚd/",
+      "pos": "n.",
+      "cn": "標準",
+      "def": "A written rule that says how good something must be.",
+      "ex": "Toy makers follow a stricter standard for children under three.",
+      "exCn": "玩具業對三歲以下的產品適用更嚴格的標準。"
+    },
+    {
+      "w": "panel",
+      "ipa": "/ˈpæn.əl/",
+      "pos": "n.",
+      "cn": "小組；評審團",
+      "def": "A small group of people who ask questions and decide together.",
+      "ex": "A panel of four judges scored each performance.",
+      "exCn": "四位評審組成的小組為每一場表演打分數。"
+    },
+    {
+      "w": "complaint",
+      "ipa": "/kəmˈpleɪnt/",
+      "pos": "n.",
+      "cn": "客訴；抱怨",
+      "def": "A message saying that something is wrong.",
+      "ex": "One complaint about noise closed the bar at midnight.",
+      "exCn": "一件噪音客訴讓那間酒吧半夜就得打烊。"
+    },
+    {
+      "w": "whiteboard",
+      "ipa": "/ˈwaɪt.bɔːrd/",
+      "pos": "n.",
+      "cn": "白板",
+      "def": "A white panel on a wall that you write on with a marker.",
+      "ex": "He wiped the whiteboard before the next class came in.",
+      "exCn": "下一班進來之前他把白板擦乾淨。"
+    },
+    {
+      "w": "capacity",
+      "ipa": "/kəˈpæsəti/",
+      "pos": "n.",
+      "cn": "能力；容量",
+      "def": "What a person or thing is able to do.",
+      "ex": "Nobody questions his capacity for long hours.",
+      "exCn": "沒有人懷疑他長時間工作的能力。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did Anita do when the panel asked about the German standard?",
+      "qCn": "面試小組問起那份德國標準的時候，Anita做了什麼？",
+      "opts": [
+        "A. She guessed an answer",
+        "B. She said she had never used it",
+        "C. She asked to change the question",
+        "D. She quoted the document"
+      ],
+      "optsCn": [
+        "A. 她猜了一個答案",
+        "B. 她說她從來沒用過",
+        "C. 她要求換題目",
+        "D. 她引用了那份文件"
+      ],
+      "ans": 1,
+      "expl": "She could not bluff, so she said so plainly: she had not worked with that document…——第二段最後一句。她接著補了一句自己一星期可以學會，但她沒有硬掰。"
+    },
+    {
+      "q": "What did Anita draw on the whiteboard?",
+      "qCn": "Anita在白板上畫了什麼？",
+      "opts": [
+        "A. The factory's organization chart",
+        "B. The German standard's main clauses",
+        "C. The measurement flow behind a real customer complaint",
+        "D. Her own career plan"
+      ],
+      "optsCn": [
+        "A. 工廠的組織圖",
+        "B. 那份德國標準的主要條文",
+        "C. 一件真實客訴背後的量測流程",
+        "D. 她自己的生涯規劃"
+      ],
+      "ans": 2,
+      "expl": "She was able to redraw, from memory, the measurement flow behind a real customer complaint she had closed in May…——第三段。她連作業員在猜的那兩個地方都畫了出來。"
+    },
+    {
+      "q": "According to the last paragraph, why is \"I was able to do this\" stronger in an interview?",
+      "qCn": "依照最後一段，為什麼在面試裡說 I was able to do this 比較有力？",
+      "opts": [
+        "A. It sounds more polite",
+        "B. It is shorter",
+        "C. It points at one occasion and one result",
+        "D. It avoids the word can"
+      ],
+      "optsCn": [
+        "A. 聽起來比較客氣",
+        "B. 比較短",
+        "C. 它指向某一次、某一個結果",
+        "D. 它避開了 can 這個字"
+      ],
+      "ans": 2,
+      "expl": "Saying I was able to do this points at one occasion and one result, and that is much harder to argue with.——最後一段直接寫出理由：有具體的一次和具體的結果，對方很難反駁。"
+    },
+    {
+      "q": "On Tuesday she ___ redraw the whole flow from memory in eleven minutes.",
+      "qCn": "星期二那天，她在十一分鐘內憑記憶重畫出整條流程。",
+      "opts": [
+        "A. was able to",
+        "B. could",
+        "C. can",
+        "D. is able"
+      ],
+      "ans": 0,
+      "expl": "講過去某一次真的辦到的事，肯定句用 was able to，不用 could——could 聽起來像「她當時具備這種能力」，沒有說出結果。C 的 can 是現在；D 少了 to。"
+    }
+  ],
+  "upgrade": [
+    {
+      "b1": "She could finish the report on time. It was a hard week.",
+      "b2": "Even in that week she was able to finish the report on time.",
+      "note": "第一句用 could，讀者只知道她具備這個本事，結果到底出來沒有要自己猜。換成 was able to 就把「那一次真的做到」講明了；而把 Even in that week 併進同一句，難度也一起帶到，不必另外開一句解釋。報告與自評裡這種壓縮很常見。",
+      "sp": "She still got the report out that week.",
+      "spNote": "口語用 get something out 代替整個結構，輕鬆但不適合寫進正式文件。",
+      "b1Cn": "她當時有辦法準時寫完報告。那是很辛苦的一週。",
+      "b2Cn": "即使在那一週，她還是準時把報告寫完了。",
+      "spCn": "那週她還是把報告交出去了。"
+    },
+    {
+      "b1": "We are not able to ship it now. Sorry about that.",
+      "b2": "We are unable to ship before Friday, but I will confirm a new date today.",
+      "note": "正式信件裡 unable to 比 not able to 緊，也比 cannot 柔和，因為它把焦點放在客觀限制上而不是「我不要」。另外壞消息後面最好接一句具體的下一步，否則整段只剩拒絕，對方沒有東西可以回。",
+      "sp": "We can't ship before Friday, but I'll get you a date today.",
+      "spNote": "口語用 can't 直接說，再補一句下一步，語氣一樣完整。",
+      "b1Cn": "我們現在沒辦法出貨。很抱歉。",
+      "b2Cn": "我們無法在星期五之前出貨，但我今天會確認新的日期。",
+      "spCn": "星期五前出不了，但我今天給你日期。"
+    }
+  ]
+},
 /* ---------- 2026-11-18 每日文章（旅遊與交通：未來進行式、未來完成式與時間子句） ---------- */
 {
   "id": "d20261118a2",
@@ -16266,6 +17051,962 @@ articles:[
 ],
 
 grammar:[
+/* ---------- 2026-11-25 每日文法（when I do and when I have done; if and when／can, could and (be) able to） ---------- */
+{
+  "id": "dg20261125a2",
+  "date": "2026-11-25",
+  "unitNo": 25,
+  "level": "A2",
+  "title": "When I Get There, I Will…",
+  "titleCn": "when 後面用現在式，will 放另外半句",
+  "srcDays": [],
+  "summary": "when 講的是「一定會到、只是還沒到」的時間點。它後面的動詞一律用現在簡單式，不可以放 will；真正的未來式留給句子的另外半句。",
+  "sections": [
+    {
+      "h": "when 那半句不准放 will",
+      "body": "中文說「我到的時候會打給你」，兩個「的時候」和「會」都黏在一起，看不出時態。英文把它拆成兩半：when 那一半只負責交代「什麼時候」，動詞用最乾淨的現在式；另外一半才用 will 說「到時候會怎樣」。所以一個句子裡只會出現一個 will，而且它一定不在 when 後面。初學者最常寫成 When I will arrive，那是把中文的「會」兩邊都放了一次。",
+      "table": {
+        "head": [
+          "你想說的",
+          "when 那半句",
+          "will 那半句"
+        ],
+        "rows": [
+          [
+            "我到了就打給你",
+            "When I arrive",
+            "I will call you."
+          ],
+          [
+            "她回來我們就吃飯",
+            "When she comes back",
+            "we will eat."
+          ],
+          [
+            "下班後我去市場",
+            "When I finish work",
+            "I will go to the market."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "When I arrive, I will call you.",
+          "cn": "我到的時候會打給你。",
+          "note": "arrive 用現在式，call 前面才有 will"
+        },
+        {
+          "en": "When the bus comes, we will get on.",
+          "cn": "公車來的時候我們就上車。",
+          "note": "公車一定會來，所以用 when"
+        },
+        {
+          "en": "When she comes back, we will eat together.",
+          "cn": "她回來我們就一起吃飯。",
+          "note": "comes 加 s，不是 will come"
+        }
+      ]
+    },
+    {
+      "h": "兩半句可以換邊，意思不變",
+      "body": "when 那半句放前面或放後面都可以，差別只有標點。放前面的時候，中間要加一個逗號；放後面的時候，不用逗號。很多人以為放前面才對，其實口語更常把 when 挪到後面，因為重點是「會怎樣」那一半。不管放哪一邊，when 後面還是不能有 will，這一點不會變。",
+      "table": {
+        "head": [
+          "順序",
+          "寫法",
+          "逗號"
+        ],
+        "rows": [
+          [
+            "when 在前",
+            "When I get home, I will cook.",
+            "要逗號"
+          ],
+          [
+            "when 在後",
+            "I will cook when I get home.",
+            "不用逗號"
+          ]
+        ]
+      },
+      "bullets": [
+        "when 在前面：中間加逗號",
+        "when 在後面：不加逗號",
+        "兩種寫法意思一樣，when 後面都不放 will",
+        "一個句子只需要一個 will"
+      ],
+      "examples": [
+        {
+          "en": "I will cook when I get home.",
+          "cn": "我回家以後會煮飯。",
+          "note": "when 放後面，不用逗號"
+        },
+        {
+          "en": "When it stops raining, we will walk to the park.",
+          "cn": "雨停了我們就走去公園。",
+          "note": "when 放前面，中間有逗號"
+        },
+        {
+          "en": "He will text me when he leaves the office.",
+          "cn": "他離開辦公室的時候會傳訊息給我。",
+          "note": "leaves 加 s，沒有 will"
+        }
+      ]
+    },
+    {
+      "h": "一定會發生用 when，不一定用 if",
+      "body": "這兩個字後面的形狀完全一樣，都接現在式，差的是你有多確定。明天早上一定會到，所以用 when；下不下雨你不知道，所以用 if。中文常常都說「如果」或「的時候」，所以要自己想一下：這件事會不會發生，我確定嗎？確定就 when，不確定就 if。",
+      "table": {
+        "head": [
+          "確定度",
+          "連接詞",
+          "例句"
+        ],
+        "rows": [
+          [
+            "一定會發生",
+            "when",
+            "When I see him, I will ask."
+          ],
+          [
+            "不一定會發生",
+            "if",
+            "If it rains, we will stay in."
+          ],
+          [
+            "都接現在式",
+            "both",
+            "動詞用 see、rains，不加 will"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "When I see him tomorrow, I will ask about the key.",
+          "cn": "我明天看到他的時候會問鑰匙的事。",
+          "note": "明天一定會見到，用 when"
+        },
+        {
+          "en": "If it rains, we will stay in.",
+          "cn": "如果下雨，我們就待在裡面。",
+          "note": "下雨不確定，用 if"
+        },
+        {
+          "en": "If he is late, I will start without him.",
+          "cn": "如果他遲到，我就先開始。",
+          "note": "is 是現在式，後半句才有 will"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "When I will arrive, I will call you.",
+      "good": "When I arrive, I will call you.",
+      "why": "一個句子只需要一個 will，而它永遠不在 when 後面。中文的「我到的時候會打給你」裡面，「會」其實只有一個，是你把它在英文裡寫了兩次。寫完請數一下 will 的數量，超過一個就先看 when 那半句。"
+    },
+    {
+      "bad": "When she comes back, we eat together.",
+      "good": "When she comes back, we will eat together.",
+      "why": "反過來的錯：when 那半句對了，另外半句卻忘了 will。we eat together 是「我們平常一起吃」，講的是習慣，不是這一次。要講未來那一次，後半句一定要有 will。"
+    },
+    {
+      "bad": "When it rains tomorrow, we will stay in.",
+      "good": "If it rains tomorrow, we will stay in.",
+      "why": "明天會不會下雨你不知道，這種不確定的事要用 if。when 的意思是「時間一定會到」，用在下雨上面，聽起來像你已經知道明天一定下雨。確定用 when，不確定用 if。"
+    },
+    {
+      "bad": "I will call you when I will be home.",
+      "good": "I will call you when I get home.",
+      "why": "把 when 挪到後面以後，很多人又把 will 放回去了。位置換了，規則沒換：when 那半句一律現在式。另外中文的「到家」在英文裡用 get home 最自然，不用 be home。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "When I ___ to the shop, I will buy some bread.",
+      "qCn": "我到店裡的時候會買一些麵包。",
+      "opts": [
+        "A. get",
+        "B. will get",
+        "C. got",
+        "D. am getting"
+      ],
+      "ans": 0,
+      "expl": "when 後面用現在簡單式 get，will 只出現在後半句 I will buy。B 把 will 放進 when 裡面，是最常見的錯；C 是過去式；D 的現在進行式在這裡講不通。"
+    },
+    {
+      "q": "___ it snows tonight, the road will close.",
+      "qCn": "如果今天晚上下雪，那條路就會封閉。",
+      "opts": [
+        "A. If",
+        "B. When",
+        "C. Will",
+        "D. So"
+      ],
+      "ans": 0,
+      "expl": "下雪不一定會發生，所以用 if。When 會讓人以為你已經確定今晚一定下雪；Will 不能當連接詞；So 的意思是「所以」，接不上後半句。"
+    },
+    {
+      "q": "I ___ you a photo when the cake is ready.",
+      "qCn": "蛋糕好了我會傳一張照片給你。",
+      "opts": [
+        "A. will send",
+        "B. send",
+        "C. sent",
+        "D. sending"
+      ],
+      "ans": 0,
+      "expl": "這一題考的是另外半句：when 在後面用現在式 is，前半句就要有 will。send 沒有 will 變成習慣；sent 是過去式；sending 自己不能當動詞用。"
+    },
+    {
+      "q": "Which sentence is correct?",
+      "qCn": "哪一句是對的？",
+      "opts": [
+        "A. When he will come, I will tell him.",
+        "B. When he comes, I will tell him.",
+        "C. When he comes, I tell him tomorrow.",
+        "D. When he will come, I tell him."
+      ],
+      "optsCn": [
+        "A. 他來的時候，我會告訴他。（when 裡放了 will）",
+        "B. 他來的時候，我會告訴他。",
+        "C. 他來的時候，我明天告訴他。（後半句少了 will）",
+        "D. 他來的時候，我告訴他。（兩邊都錯）"
+      ],
+      "ans": 1,
+      "expl": "正確的形狀是 when 加現在式、另外半句加 will，只有 B 兩邊都對。A 和 D 把 will 放進 when 裡面；C 的後半句少了 will，變成在講習慣。"
+    }
+  ]
+},
+{
+  "id": "dg20261125b1",
+  "date": "2026-11-25",
+  "unitNo": 25,
+  "level": "B1",
+  "title": "when or if, and when I've done",
+  "titleCn": "when 還是 if；以及「做完以後」的 when I've done",
+  "srcDays": [],
+  "summary": "when 與 if 後面的形狀一樣，差的是確定度。而 when 後面換成現在完成式，就多了一層意思：不只是時間到了，而是那件事已經做完。",
+  "sections": [
+    {
+      "h": "確定度決定你用哪個字",
+      "body": "when 和 if 都接現在式，所以學到這裡真正要練的不是形狀，是判斷。問自己一句話就好：這件事會不會發生，我確定嗎？火車會到站、星期一會來、報告總會寫完——這些都確定，用 when。對方會不會答應、機器會不會又停、下不下雨——不確定，用 if。有時候兩個都通，但意思會差一截：When you call me 聽起來像你們已經約好他會打；If you call me 留了一個「他可能不打」的空間。",
+      "table": {
+        "head": [
+          "情況",
+          "連接詞",
+          "語感"
+        ],
+        "rows": [
+          [
+            "時間一定會到",
+            "when",
+            "只是還沒到而已"
+          ],
+          [
+            "事情不一定發生",
+            "if",
+            "留一個不發生的可能"
+          ],
+          [
+            "兩個都通",
+            "when / if",
+            "換字就換了你的假設"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "When the audit starts, we will move the samples.",
+          "cn": "稽核一開始我們就把樣品移走。",
+          "note": "稽核日期已經定了，用 when"
+        },
+        {
+          "en": "If the client asks for a sample, I will send one today.",
+          "cn": "如果客戶要樣品，我今天就寄一個。",
+          "note": "客戶會不會要，不確定"
+        },
+        {
+          "en": "If you need the car, just tell me the night before.",
+          "cn": "你如果需要車，前一天晚上跟我說就好。",
+          "note": "需不需要由對方決定"
+        }
+      ]
+    },
+    {
+      "h": "when I've done：強調「做完以後」",
+      "body": "when 後面除了現在簡單式，還可以放現在完成式。差別在於順序講得更死：When I finish the report, I will send it 只說兩件事接著發生；When I have finished the report, I will send it 明確告訴你「報告完成」是寄出的前提。兩件事如果有先後關係、而且前面那件必須真的結束，用完成式最清楚。注意：形狀是 have 加過去分詞，前面還是不准出現 will。",
+      "table": {
+        "head": [
+          "寫法",
+          "重點",
+          "例句"
+        ],
+        "rows": [
+          [
+            "when + 現在簡單式",
+            "時間點",
+            "When I get the file, I will read it."
+          ],
+          [
+            "when + 現在完成式",
+            "做完才算",
+            "When I have read the file, I will reply."
+          ],
+          [
+            "口語常用 once",
+            "一樣的意思",
+            "Once I have read it, I will reply."
+          ]
+        ]
+      },
+      "bullets": [
+        "形狀：when + have / has + 過去分詞",
+        "意思：前面那件事必須先完成",
+        "兩件事時間很近的時候，簡單式與完成式幾乎通用",
+        "口語常把 when 換成 once，語氣更乾脆"
+      ],
+      "examples": [
+        {
+          "en": "When I have read the file, I will reply to him.",
+          "cn": "等我看完那份檔案，我就回他。",
+          "note": "看完是回信的前提"
+        },
+        {
+          "en": "Once we have signed the contract, the price cannot change.",
+          "cn": "合約一簽，價格就不能改了。",
+          "note": "once 在口語裡更常見"
+        },
+        {
+          "en": "I will book the room when the dates have been fixed.",
+          "cn": "日期確定以後我就訂房間。",
+          "note": "完成式也可以是被動形狀"
+        }
+      ]
+    },
+    {
+      "h": "after、before、until、as soon as 全部同一套",
+      "body": "這個規則不只管 when 和 if。英文裡所有講時間的連接詞，後面都不放 will：after、before、until、till、as soon as、the moment。它們後面一律用現在式或現在完成式，未來的意思靠主句的 will 撐住。這一條記下來，你一次解決六個連接詞，不用一個一個背。唯一要小心的是 when 當疑問詞的時候，那是另一回事，問句 When will you come? 當然可以有 will。",
+      "table": {
+        "head": [
+          "連接詞",
+          "後面接",
+          "例句"
+        ],
+        "rows": [
+          [
+            "as soon as",
+            "現在式",
+            "I will text you as soon as I land."
+          ],
+          [
+            "until",
+            "現在式",
+            "Wait here until the bell rings."
+          ],
+          [
+            "before",
+            "現在式",
+            "Check the gauge before you start."
+          ],
+          [
+            "after",
+            "完成式也可",
+            "After I have eaten, I will drive."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "I will text you as soon as I land in Hanoi.",
+          "cn": "我一落地河內就傳訊息給你。",
+          "note": "as soon as 後面是 land，不是 will land"
+        },
+        {
+          "en": "Wait here until the bell rings.",
+          "cn": "在這裡等到鈴響。",
+          "note": "until 後面也是現在式"
+        },
+        {
+          "en": "After I have eaten, I will drive you home.",
+          "cn": "我吃完以後會載你回家。",
+          "note": "after 可以搭完成式"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "I will tell her as soon as she will arrive.",
+      "good": "I will tell her as soon as she arrives.",
+      "why": "時間連接詞後面不放 will，as soon as 和 when 一樣。中文的「她一到我就跟她說」裡面只有一個「就」，英文也只需要一個 will，放在主句就好。看到 will 出現在 after、before、until、as soon as 後面，直接改成現在式。"
+    },
+    {
+      "bad": "When you will be free, call me.",
+      "good": "When you are free, call me.",
+      "why": "同樣的錯誤換了一件衣服。be 動詞也要改成現在式 are。另外這一句的主句是命令句 call me，本來就沒有 will，所以整句一個 will 都不需要。"
+    },
+    {
+      "bad": "If the audit starts on Monday, we will be ready.",
+      "good": "When the audit starts on Monday, we will be ready.",
+      "why": "句子裡已經寫出 on Monday，表示日期定了，這種確定的事要用 when。用 if 會讓對方以為稽核還可能取消，在工作信件裡容易造成誤會。確定度選錯字，文法沒錯但訊息錯了。"
+    },
+    {
+      "bad": "When I have arrived, I will have called you.",
+      "good": "When I have arrived, I will call you.",
+      "why": "完成式只需要用在 when 那半句。主句的 will have called 是未來完成式，意思變成「在某個更晚的時間點之前，我已經打過了」，跟你想說的「到了就打」不一樣。主句維持最單純的 will 加原形動詞就好。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "I will send the file as soon as I ___ it.",
+      "qCn": "我一拿到那份檔案就寄給你。",
+      "opts": [
+        "A. get",
+        "B. will get",
+        "C. am getting",
+        "D. will have got"
+      ],
+      "ans": 0,
+      "expl": "as soon as 是時間連接詞，後面一律現在式 get。B 和 D 都把未來式放進時間子句；C 的現在進行式在這裡講不出「拿到」這個瞬間。"
+    },
+    {
+      "q": "___ the machine stops again, we will call the supplier.",
+      "qCn": "如果機器又停，我們就打電話給供應商。",
+      "opts": [
+        "A. If",
+        "B. When",
+        "C. Until",
+        "D. Before"
+      ],
+      "ans": 0,
+      "expl": "「又停」是不確定的事，用 if 最準。When 會變成你確定它一定會再停；Until 和 Before 講的是時間界線，接不上後半句的意思。"
+    },
+    {
+      "q": "When I ___ the report, I will put it on your desk.",
+      "qCn": "等我把報告寫完，我會放到你桌上。",
+      "opts": [
+        "A. have finished",
+        "B. will finish",
+        "C. will have finished",
+        "D. finishing"
+      ],
+      "ans": 0,
+      "expl": "要強調「寫完才放」，用現在完成式 have finished。B、C 都在時間子句裡放了 will；D 的 finishing 不能單獨當動詞。"
+    },
+    {
+      "q": "Which sentence fits a date that is already fixed?",
+      "qCn": "哪一句適合用在已經確定的日期上？",
+      "opts": [
+        "A. If the training starts on the fifth, I will book a room.",
+        "B. When the training starts on the fifth, I will book a room.",
+        "C. When the training will start on the fifth, I will book a room.",
+        "D. If the training will start on the fifth, I will book a room."
+      ],
+      "optsCn": [
+        "A. 如果訓練五號開始，我會訂房間。",
+        "B. 訓練五號開始的時候，我會訂房間。",
+        "C. 訓練五號會開始的時候，我會訂房間。（when 裡放了 will）",
+        "D. 如果訓練五號會開始，我會訂房間。（if 裡放了 will）"
+      ],
+      "ans": 1,
+      "expl": "日期定了就用 when，所以 A 的語感不對。C 和 D 都在時間或條件子句裡放了 will，形狀本身就錯。只有 B 既選對連接詞，也用了現在式。"
+    }
+  ]
+},
+{
+  "id": "dg20261125b1p",
+  "date": "2026-11-25",
+  "unitNo": 26,
+  "level": "B1+",
+  "title": "can, could and (be) able to",
+  "titleCn": "能力三件組：can、could、be able to",
+  "srcDays": [],
+  "summary": "can 和 could 只有現在式和過去式兩個形狀，其他時態全部要借 be able to。而過去「某一次真的辦到」，肯定句要用 was able to，不是 could。",
+  "sections": [
+    {
+      "h": "為什麼需要第三個說法",
+      "body": "can 是助動詞，它沒有不定詞、沒有過去分詞、也不能跟 will 或 have 連用，所以 will can、have could 這種形狀英文根本寫不出來。缺的位置就由 be able to 補上：它是一般動詞的形狀，可以變成 will be able to、has been able to、to be able to。換句話說，be able to 不是比較高級的 can，它是 can 進不去的那些格子的備胎。現在式和過去式的格子裡還是以 can、could 為主，因為它們短、也最自然。",
+      "table": {
+        "head": [
+          "時態",
+          "能用的形狀",
+          "例句"
+        ],
+        "rows": [
+          [
+            "現在",
+            "can（首選）／am able to",
+            "I can drive a forklift."
+          ],
+          [
+            "過去（一般能力）",
+            "could／was able to",
+            "She could swim at five."
+          ],
+          [
+            "未來",
+            "只有 will be able to",
+            "He will be able to start in May."
+          ],
+          [
+            "完成式",
+            "只有 have been able to",
+            "We have been able to cut the lead time."
+          ],
+          [
+            "接在另一個動詞後",
+            "只有 to be able to",
+            "I want to be able to read drawings."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "He will be able to start on the line in May.",
+          "cn": "他五月就可以上線了。",
+          "note": "未來沒有 will can，只能用 will be able to"
+        },
+        {
+          "en": "We have been able to cut the lead time twice this year.",
+          "cn": "我們今年已經兩次把交期縮短。",
+          "note": "完成式只能靠 been able to"
+        },
+        {
+          "en": "I want to be able to read a drawing without asking.",
+          "cn": "我希望能夠不用問就看懂圖面。",
+          "note": "want 後面要不定詞，can 進不去"
+        }
+      ]
+    },
+    {
+      "h": "過去那一次真的做到：was able to",
+      "body": "這是整個單元最容易錯的地方。could 講的是「那段時間具備的能力」，像一張證照；was able to 講的是「那一次真的辦到了」，像一張收據。所以 She could speak French 是說她會法文，She was able to calm the customer down 是說那一次她真的把客人安撫下來了。單次的、有結果的、通常帶一點困難的事，肯定句請用 was able to 或 managed to。把 could 用在這裡，母語者會聽成「她當時有這個本事」，但你到底成功了沒有，他不知道。",
+      "table": {
+        "head": [
+          "你想說的",
+          "用哪一個",
+          "例句"
+        ],
+        "rows": [
+          [
+            "過去一段時間的能力",
+            "could",
+            "At twenty he could run ten kilometres."
+          ],
+          [
+            "過去某一次真的辦到",
+            "was / were able to",
+            "On Friday he was able to fix the pump alone."
+          ],
+          [
+            "那一次辦到，而且不容易",
+            "managed to",
+            "She managed to get a seat on the last bus."
+          ]
+        ]
+      },
+      "bullets": [
+        "could＝一種本事，沒說結果",
+        "was able to＝那一次真的做到了，有結果",
+        "managed to 跟 was able to 幾乎一樣，多了一點「不容易」",
+        "否定句沒有這個分別：couldn't 和 wasn't able to 都可以"
+      ],
+      "examples": [
+        {
+          "en": "On Friday he was able to fix the pump alone.",
+          "cn": "星期五他一個人就把泵修好了。",
+          "note": "單次、有結果，用 was able to"
+        },
+        {
+          "en": "At twenty he could run ten kilometres without stopping.",
+          "cn": "二十歲的時候他可以不停地跑十公里。",
+          "note": "一段時間的能力，用 could"
+        },
+        {
+          "en": "She managed to get a seat on the last bus.",
+          "cn": "她設法在最後一班公車上找到位子。",
+          "note": "managed to 帶一點勉強才成功的味道"
+        }
+      ]
+    },
+    {
+      "h": "could 的另外兩張臉：禮貌與可能性",
+      "body": "同一個 could 在不同句子裡可能完全不是在講過去。第一種是禮貌：Could you check this for me? 問的是現在，比 Can you 客氣。第二種是可能性：The delay could be a customs problem 講的是「有可能」，跟能力無關。所以看到 could 不要馬上翻成「曾經能」，先看句子在問什麼。還有一組例外要記住：see、hear、smell、taste、remember、understand 這些字即使講單次經驗，習慣上也用 could，不用 was able to。",
+      "table": {
+        "head": [
+          "用法",
+          "時間",
+          "例句"
+        ],
+        "rows": [
+          [
+            "過去的能力",
+            "過去",
+            "He could read Japanese then."
+          ],
+          [
+            "禮貌的請求",
+            "現在",
+            "Could you check this for me?"
+          ],
+          [
+            "有可能",
+            "現在／未來",
+            "The delay could be a customs problem."
+          ],
+          [
+            "感官與心理動詞",
+            "過去單次也用 could",
+            "I could hear the alarm from the car park."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "Could you check this drawing for me before lunch?",
+          "cn": "你可以在午餐前幫我看一下這張圖嗎？",
+          "note": "禮貌的請求，講的是現在"
+        },
+        {
+          "en": "The delay could be a customs problem.",
+          "cn": "延誤有可能是報關的問題。",
+          "note": "這裡的 could 是「有可能」"
+        },
+        {
+          "en": "I could hear the alarm from the car park.",
+          "cn": "我在停車場就聽得到警報聲。",
+          "note": "感官動詞，單次也用 could"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "She could finish the audit report before the deadline.",
+      "good": "She was able to finish the audit report before the deadline.",
+      "why": "這是在講某一次真的趕完了，屬於單次成功，肯定句要用 was able to。寫 could 的話，母語者聽到的是「她當時有能力趕完」，至於到底趕完沒有，句子沒說。工作信件裡這個差別很重要，因為對方要知道結果。"
+    },
+    {
+      "bad": "He will can start on the line in May.",
+      "good": "He will be able to start on the line in May.",
+      "why": "兩個助動詞不能連在一起，will can 不存在。未來的能力只有 will be able to 這一條路。同理 have could、to can 也都寫不出來，看到要接在 will、have、to 後面，一律換成 be able to。"
+    },
+    {
+      "bad": "I am able to swim.",
+      "good": "I can swim.",
+      "why": "形狀沒錯，但不自然。現在式的能力英文幾乎都用 can，因為它短。am able to 在這裡聽起來像在填表格或講官腔。be able to 留給 can 擠不進去的時態，或是你要特別正式的場合。"
+    },
+    {
+      "bad": "I was able to see the hairline crack from the doorway.",
+      "good": "I could see the hairline crack from the doorway.",
+      "why": "see、hear、smell、taste、feel、remember、understand 這一類字，即使講的是過去某一次，習慣上也配 could。這是用法上的例外，不是規則上的錯。背這六個字比背規則快。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "After three attempts, the team ___ restart the line before midnight.",
+      "qCn": "試了三次之後，團隊在午夜前把產線重新啟動了。",
+      "opts": [
+        "A. was able to",
+        "B. could",
+        "C. can",
+        "D. will be able to"
+      ],
+      "ans": 0,
+      "expl": "After three attempts 告訴你這是某一次、而且不容易的成功，肯定句要用 was able to。could 只會說「他們有這個能力」，沒講結果；can 是現在；will be able to 是未來。"
+    },
+    {
+      "q": "Next year our interns ___ run the test on their own.",
+      "qCn": "明年我們的實習生就可以自己跑這個測試了。",
+      "opts": [
+        "A. will be able to",
+        "B. will can",
+        "C. could",
+        "D. are able"
+      ],
+      "ans": 0,
+      "expl": "未來的能力只有 will be able to；will can 兩個助動詞連用不成立。could 把時間拉回過去；are able 少了 to。"
+    },
+    {
+      "q": "___ you send me the sampling plan this afternoon?",
+      "qCn": "你今天下午可以把抽樣計畫寄給我嗎？",
+      "opts": [
+        "A. Could",
+        "B. Was able to",
+        "C. Will can",
+        "D. Are able"
+      ],
+      "ans": 0,
+      "expl": "這是禮貌的請求，講的是現在，用 Could 開頭最自然（Can 也可以，只是沒那麼客氣）。B 的 was able to 是過去；C 形狀不存在；D 少了 to。"
+    },
+    {
+      "q": "Which sentence tells you the result actually happened?",
+      "qCn": "哪一句真的告訴你結果發生了？",
+      "opts": [
+        "A. He could persuade the supplier.",
+        "B. He was able to persuade the supplier.",
+        "C. He can persuade the supplier.",
+        "D. He will be able to persuade the supplier."
+      ],
+      "optsCn": [
+        "A. 他當時有本事說服那家供應商。",
+        "B. 他那一次真的說服了那家供應商。",
+        "C. 他有辦法說服那家供應商。",
+        "D. 他將會有辦法說服那家供應商。"
+      ],
+      "ans": 1,
+      "expl": "只有 was able to 同時交代了「過去某一次」和「成功了」。A 的 could 只講本事；C 講的是現在的能力；D 把事情推到未來，結果還沒發生。"
+    }
+  ]
+},
+{
+  "id": "dg20261125b2",
+  "date": "2026-11-25",
+  "unitNo": 26,
+  "level": "B2",
+  "title": "Capacity or Outcome: could vs was able to",
+  "titleCn": "你在講本事，還是在講那一次的結果",
+  "srcDays": [],
+  "summary": "could 和 was able to 的差別不是文法對錯，是你要讓讀者注意什麼：一種長期的本事，還是某一次真的交出來的結果。寫作時選錯，句子就說出了你沒打算說的話。",
+  "sections": [
+    {
+      "h": "能力與結果：一個選擇，不是一條規則",
+      "body": "多數文法書把這一組寫成「單次用 was able to」，記起來很快，但不夠用。真正的機制是焦點：could 把鏡頭對在人身上，描述他當時具備什麼；was able to 把鏡頭對在事件上，報告某一次的結果出來了。所以在履歷、績效自評、事故報告這些要交代成果的文件裡，was able to 出現的密度會明顯比小說裡高，因為那些文件的任務就是證明結果。反過來寫人物側寫或回憶，could 的描寫感比較對。",
+      "table": {
+        "head": [
+          "焦點",
+          "選擇",
+          "讀者聽到的"
+        ],
+        "rows": [
+          [
+            "這個人具備什麼",
+            "could",
+            "一種長期狀態，結果不明"
+          ],
+          [
+            "那一次交出什麼",
+            "was able to",
+            "某一次，而且成功了"
+          ],
+          [
+            "過程不容易",
+            "managed to",
+            "成功了，而且費了力"
+          ],
+          [
+            "完全沒成功",
+            "couldn't／wasn't able to",
+            "否定句兩者差異很小"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "As a young auditor she could spot a weak control in minutes.",
+          "cn": "還是菜鳥稽核員的時候，她幾分鐘就看得出哪個管制點很弱。",
+          "note": "描寫一個人的本事"
+        },
+        {
+          "en": "At the November review she was able to close all four findings.",
+          "cn": "在十一月的審查裡，她把四個缺失全部結案了。",
+          "note": "報告某一次的結果"
+        },
+        {
+          "en": "We managed to hold the schedule, but only by splitting the batch.",
+          "cn": "我們勉強守住了時程，但是靠把那批拆開才做到。",
+          "note": "managed to 把代價也帶進來"
+        }
+      ]
+    },
+    {
+      "h": "正式度：be able to 不等於客氣",
+      "body": "很多人以為 be able to 比 can 正式、比較適合寫信，於是通篇寫 I am able to。效果其實相反：現在式的能力用 can 才是標準寫法，連法律文件也這樣寫；am able to 在現在式裡會顯得拗口，甚至有點閃避的味道。be able to 真正不可取代的地方是時態，不是語氣。要客氣，請改句型而不是改這個字——用 could、would be able to，或乾脆改成問句。另外 unable to 在正式書寫裡很常見，而且比 not able to 更緊，用來寫壞消息很好用。",
+      "table": {
+        "head": [
+          "想要的效果",
+          "寫法",
+          "備註"
+        ],
+        "rows": [
+          [
+            "中性陳述現在能力",
+            "can",
+            "最標準，不要改"
+          ],
+          [
+            "婉轉的請求",
+            "Could you…?",
+            "改句型，不是改字"
+          ],
+          [
+            "正式的壞消息",
+            "We are unable to…",
+            "比 not able to 緊"
+          ],
+          [
+            "條件下的能力",
+            "would be able to",
+            "配 if 子句"
+          ]
+        ]
+      },
+      "bullets": [
+        "現在式能力的預設值是 can",
+        "be able to 的價值在時態，不在禮貌",
+        "unable to 適合正式信件裡的拒絕",
+        "would be able to 用來配條件句"
+      ],
+      "examples": [
+        {
+          "en": "We are unable to release the lot without a signed deviation.",
+          "cn": "沒有簽過的允收單，我們無法放行這批貨。",
+          "note": "正式拒絕，unable to 比 not able to 俐落"
+        },
+        {
+          "en": "With one more technician we would be able to cover the night shift.",
+          "cn": "只要再一位技術員，我們就有辦法顧好夜班。",
+          "note": "條件句配 would be able to"
+        },
+        {
+          "en": "Our line can hold the tolerance at full speed.",
+          "cn": "我們的產線在全速下也守得住公差。",
+          "note": "現在式能力就用 can，不要寫 is able to"
+        }
+      ]
+    },
+    {
+      "h": "把它寫進一段敘事裡",
+      "body": "實務上這兩個字很少單獨出現，通常是一段敘事裡的節奏：先用 could 鋪陳條件或限制，再用 was able to 收在結果上。這種「鋪陳—收尾」的寫法，在事故報告和專案回顧裡幾乎是標準套路，因為讀者需要先知道當時的處境，才會覺得結果有份量。倒過來寫也可以，但效果變成辯解：先說結果，再補一句當時只能怎樣，聽起來像在找理由。還有一個小細節：用 was able to 的句子最好帶一個具體的量——時間、數量、金額——沒有量的結果讀起來還是空的。",
+      "table": {
+        "head": [
+          "位置",
+          "用哪一個",
+          "功能"
+        ],
+        "rows": [
+          [
+            "前半段",
+            "could / couldn't",
+            "交代當時的處境與限制"
+          ],
+          [
+            "收尾",
+            "was able to",
+            "把結果壓下來"
+          ],
+          [
+            "收尾附帶",
+            "一個具體數字",
+            "讓結果站得住"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "en": "The log was handwritten, so we could not trace the operator.",
+          "cn": "那份紀錄是手寫的，所以我們查不出是哪位作業員。",
+          "note": "先用 could not 說明限制"
+        },
+        {
+          "en": "Even so, we were able to narrow the window to two shifts.",
+          "cn": "即使這樣，我們還是把範圍縮到兩個班次。",
+          "note": "再用 were able to 收結果，而且帶了數字"
+        },
+        {
+          "en": "Nobody could read the old labels, and that cost us a full day.",
+          "cn": "沒有人看得懂那些舊標籤，這讓我們多花了整整一天。",
+          "note": "could 在這裡描述整體狀況"
+        }
+      ]
+    }
+  ],
+  "traps": [
+    {
+      "bad": "In the May audit I could close all the open findings.",
+      "good": "In the May audit I was able to close all the open findings.",
+      "why": "履歷和自評最怕這個錯。In the May audit 鎖定了一次具體事件，讀者要看的是結果，而 could 只描述你當時的本事。寫 could 等於把自己的成果降級成「我有這個能力」，招募端讀起來完全不同。"
+    },
+    {
+      "bad": "I am able to run a capability study on my own.",
+      "good": "I can run a capability study on my own.",
+      "why": "文法沒錯，但現在式的能力標準寫法是 can。am able to 在這個位置讀起來笨重，而且有些讀者會覺得你在繞路。把 be able to 留給 will、have、to 後面那些 can 進不去的格子。"
+    },
+    {
+      "bad": "We will can cover the night shift next month.",
+      "good": "We will be able to cover the night shift next month.",
+      "why": "will 和 can 都是助動詞，不能並排。這個錯誤在口語裡偶爾會溜出來，寫進信件就很明顯。記住：只要 can 前面需要另一個助動詞或 to，就換成 be able to。"
+    },
+    {
+      "bad": "We were able to find the root cause, but it took three weeks.",
+      "good": "We managed to find the root cause, but it took three weeks.",
+      "why": "這一句不算錯，只是沒把力氣寫出來。後半句已經說了三個星期，表示過程辛苦，用 managed to 才跟語氣一致。was able to 是中性的報告語氣，managed to 多了「費了勁才做到」，兩者選一個要看你想不想讓讀者感覺到那個代價。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "In a performance review, which sentence makes the strongest claim?",
+      "qCn": "在績效自評裡，哪一句的主張最強？",
+      "opts": [
+        "A. I could handle three suppliers at the same time.",
+        "B. I was able to cut one supplier's reject rate by half last quarter.",
+        "C. I am able to handle several suppliers.",
+        "D. I will be able to handle more suppliers."
+      ],
+      "optsCn": [
+        "A. 我當時有辦法同時管三家供應商。",
+        "B. 上一季我把一家供應商的不良率砍了一半。",
+        "C. 我有能力管好幾家供應商。",
+        "D. 我將會有能力管更多供應商。"
+      ],
+      "ans": 1,
+      "expl": "B 同時具備三個條件：鎖定一次事件（上一季）、用 was able to 說出結果、而且附了具體的量（砍一半）。A、C 只講本事，D 把事情推到未來，都還沒有結果。"
+    },
+    {
+      "q": "The valve was buried under the frame, so nobody ___ reach it.",
+      "qCn": "那顆閥被埋在機架底下，所以沒有人碰得到它。",
+      "opts": [
+        "A. could",
+        "B. was able to",
+        "C. can",
+        "D. will be able to"
+      ],
+      "ans": 0,
+      "expl": "否定句裡 could 和 was able to 幾乎通用，但這一句在描述當時的處境與限制，用 could 最順，也跟前半句的過去敘事一致。can 是現在；will be able to 是未來。"
+    },
+    {
+      "q": "Which is the best way to refuse politely in a formal email?",
+      "qCn": "在正式信件裡要客氣地拒絕，哪一種寫法最好？",
+      "opts": [
+        "A. We are not able to ship before Friday.",
+        "B. We are unable to ship before Friday.",
+        "C. We cannot ship before Friday, sorry.",
+        "D. We could not ship before Friday."
+      ],
+      "optsCn": [
+        "A. 我們沒辦法在星期五之前出貨。",
+        "B. 我們無法在星期五之前出貨。",
+        "C. 我們星期五之前不能出貨，抱歉。",
+        "D. 我們當時無法在星期五之前出貨。"
+      ],
+      "ans": 1,
+      "expl": "unable to 是正式書寫裡拒絕的標準說法，比 not able to 緊、比 cannot 柔和。D 的 could not 把時間拉回過去，跟「還沒出貨」的現況不符。"
+    },
+    {
+      "q": "We ___ hold the schedule, but only by running Saturday overtime.",
+      "qCn": "我們勉強守住了時程，但是靠加班星期六才做到。",
+      "opts": [
+        "A. managed to",
+        "B. could",
+        "C. can",
+        "D. are able to"
+      ],
+      "ans": 0,
+      "expl": "後半句把代價寫了出來，語氣上要配 managed to，才讀得出「費了勁才做到」。could 只講本事；can 和 are able to 都把時間搬到現在。"
+    }
+  ]
+},
 /* ---------- 2026-11-18 每日文法（will be doing and will have done／when I do and when I have done; if and when） ---------- */
 {
   "id": "dg20261118a2",
