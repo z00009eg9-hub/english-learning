@@ -6,12 +6,14 @@ name: Deploy Speak Up to Firebase Hosting
 #   Firebase Console → 專案設定 → 服務帳戶 → 產生新的私密金鑰 → 下載的 JSON 全文
 #   貼到 GitHub → Settings → Secrets and variables → Actions → New repository secret
 # 備案：本機仍可用
-#   cp index.html public/index.html && npx firebase-tools deploy --only hosting --project learning-english-notes
+#   cp index.html speakup-data.js public/ && npx firebase-tools deploy --only hosting --project learning-english-notes
+#   （備案不會換版號：speakup-data.js?v=dev，瀏覽器最多快取 1 小時）
 on:
   push:
     branches: [main]
     paths:
       - 'index.html'
+      - 'speakup-data.js'
       - 'manifest.json'
       - 'icons/**'
       - '.github/workflows/deploy-speakup.yml'
@@ -30,17 +32,29 @@ jobs:
       - name: Build public/ (same as the local cp step)
         run: |
           mkdir -p public
-          cp index.html manifest.json public/
+          cp index.html speakup-data.js manifest.json public/
           cp -r icons public/icons
+          # 課程資料換成內容雜湊版號，資料一變瀏覽器就抓新版
+          h=$(sha256sum speakup-data.js | cut -c1-10)
+          sed -i "s/speakup-data\.js?v=dev/speakup-data.js?v=$h/" public/index.html
+          grep -q "speakup-data.js?v=$h" public/index.html || { echo "index.html 找不到 speakup-data.js?v=dev，停止部署"; exit 1; }
 
       - name: Sanity check
         run: |
           size=$(wc -c < public/index.html)
           echo "index.html: $size bytes"
-          if [ "$size" -lt 500000 ]; then
-            echo "index.html 看起來不完整（小於 500KB），停止部署"; exit 1
+          if [ "$size" -lt 250000 ]; then
+            echo "index.html 看起來不完整（小於 250KB），停止部署"; exit 1
           fi
           grep -q "Speak Up" public/index.html || { echo "找不到 Speak Up 標記，停止部署"; exit 1; }
+          dsize=$(wc -c < public/speakup-data.js)
+          echo "speakup-data.js: $dsize bytes"
+          if [ "$dsize" -lt 600000 ]; then
+            echo "speakup-data.js 看起來不完整（小於 600KB），停止部署"; exit 1
+          fi
+          for m in VOCAB_END TRANS_END KW_END ARTICLES_END DAYQUIZ_END DAYTALK_END; do
+            grep -q "===SYNC:$m===" public/speakup-data.js || { echo "speakup-data.js 缺 SYNC:$m（可能被截斷），停止部署"; exit 1; }
+          done
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0

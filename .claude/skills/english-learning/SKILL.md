@@ -1,6 +1,6 @@
 ---
 name: english-learning
-description: 英文課堂筆記的完整自動化工作流程 — 自動建立當天日期資料夾、把課堂筆記寫入 Google 文件（新建或更新，含橘色表頭表格、★作業複習範本、文法解說格式）、把筆記重點同步進互動學習網頁 index.html、以及為當天筆記自動生成考題並同步到 index.html 的「每日測驗」分頁（含成績記錄），推送到 GitHub，最後部署到 Firebase 線上網站（https://learning-english-notes.web.app）。當使用者貼上課堂對話/錄音逐字稿/筆記文字、要求把補充教材加入某份 Google 文件、要求「同步筆記」、要求「出考題/生成考題/更新測驗」、或要求「部署網站/更新線上網站/deploy」時使用。
+description: 英文課堂筆記的完整自動化工作流程 — 自動建立當天日期資料夾、把課堂筆記寫入 Google 文件（新建或更新，含橘色表頭表格、★作業複習範本、文法解說格式）、把筆記重點同步進互動學習網頁的課程資料 speakup-data.js、以及為當天筆記自動生成考題並同步到 speakup-data.js（Speak Up「快速檢查」測驗）（含成績記錄），推送到 GitHub，最後部署到 Firebase 線上網站（https://learning-english-notes.web.app）。當使用者貼上課堂對話/錄音逐字稿/筆記文字、要求把補充教材加入某份 Google 文件、要求「同步筆記」、要求「出考題/生成考題/更新測驗」、或要求「部署網站/更新線上網站/deploy」時使用。
 ---
 
 # 英文學習筆記工作流程（零步驟自動化）
@@ -9,7 +9,7 @@ description: 英文課堂筆記的完整自動化工作流程 — 自動建立�
 
 1. 使用者貼上課堂對話/錄音逐字稿/筆記文字 → 自動建立當天日期資料夾 + 產出**全新**格式化 Google 文件
 2. 使用者要把補充內容（額外單字、句型、文法解說、比較表等）**加入「現有」**的 Google 文件
-3. 使用者說「同步筆記」或執行 `/sync-notes` → 把 Drive 上新筆記的重點同步進 `index.html`（互動學習網頁）並推送到 GitHub
+3. 使用者說「同步筆記」或執行 `/sync-notes` → 把 Drive 上新筆記的重點同步進 `speakup-data.js`（Speak Up 課程資料，2026-11-25 從 index.html 拆出）並推送到 GitHub
 
 > ⚠ **最高規則（2026-08-21 使用者指定）：筆記生成／更新（情境 1、2）完成後，一律停在 Google 文件這一步，不自動部署。**
 > 流程 F（Speak Up 出考題）、流程 F2（DAYTALK）、流程 G（Firebase 部署）、流程 H（B2 Read 課本）都只在使用者**明確要求**時才執行
@@ -298,7 +298,7 @@ description: 英文課堂筆記的完整自動化工作流程 — 自動建立�
 4. 執行「核心技術：渲染並貼上」（見 `references/legacy-chrome-paste-and-font.md`），**貼上前先 `ctrl+End` 移到文件最末**
 5. 完成後回報新增了哪些章節/內容摘要
 
-## 流程 C：同步筆記到 index.html + 推送 GitHub（細節已拆檔）
+## 流程 C：同步筆記到 speakup-data.js + 推送 GitHub（細節已拆檔）
 
 使用者說「同步筆記」或 `/sync-notes` 時，**先讀** `references/flow-c-sync-index.md`（完整內容，未刪減）。最高規則：建立／更新筆記後停在 Google 文件，不自動同步或部署；只在使用者明確要求時才做。
 
@@ -316,7 +316,7 @@ description: 英文課堂筆記的完整自動化工作流程 — 自動建立�
 「請用英文說：保險公司為車禍事故提供我們賠償。」這種前言不對後語的狀況（2026-08-12 使用者回報）。
 現在改成 `DAYTALK` 手寫腳本：**教練的問句由你編寫**，**回答句一律逐字取自筆記原文**。
 
-### 資料結構（在 index.html，`const DAYTALK = {`，標記 `// ===SYNC:DAYTALK_START/END===`）
+### 資料結構（在 speakup-data.js，`const DAYTALK = {`，標記 `// ===SYNC:DAYTALK_START/END===`）
 ```javascript
 "YYYYMMDD": {
   title: "主題",
@@ -353,7 +353,7 @@ description: 英文課堂筆記的完整自動化工作流程 — 自動建立�
 
 Speak Up 與 B2 Read 都是 **push 到 main 由 CI 自動部署**（`.github/workflows/deploy-speakup.yml`、`deploy-b2lab.yml`），不需要手動部署。部署前：`git status` 乾淨、`git pull --rebase`、`git log --oneline -3` 確認最新 commit。
 
-備案（CI 壞掉才用）：`cd /d/english-learning && cp index.html public/index.html && npx firebase-tools deploy --only hosting --project learning-english-notes`。要重新登入時叫使用者自己 `firebase login`，不要代填帳密。
+備案（CI 壞掉才用）：`cd /d/english-learning && cp index.html speakup-data.js public/ && npx firebase-tools deploy --only hosting --project learning-english-notes`。要重新登入時叫使用者自己 `firebase login`，不要代填帳密。
 
 只在使用者明確要求時才進入本流程（見檔頭最高規則）。完成後回報部署結果與網址，提醒重新整理即可（`no-cache`）。
 

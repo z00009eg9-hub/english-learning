@@ -6,7 +6,7 @@
 
 | 名稱 | 網址 | 原始碼 / 部署 |
 |---|---|---|
-| Speak Up（課堂筆記／口說／測驗） | https://learning-english-notes.web.app | 根目錄 `index.html`，push main 由 CI 部署 |
+| Speak Up（課堂筆記／口說／測驗） | https://learning-english-notes.web.app | 根目錄 `index.html`＋課程資料 `speakup-data.js`，push main 由 CI 部署 |
 | B2 Read（閱讀／文法／實景） | https://english-b2-lab.web.app | `b2lab/public/index.html`，push main 由 CI 部署 |
 | LINE 單字查詢 Bot | Cloudflare Worker | `line-bot/` |
 | Speak Up 雲端語音辨識 | https://speakup-stt.anitachen9279.workers.dev | `stt-worker/`（Workers AI Whisper） |

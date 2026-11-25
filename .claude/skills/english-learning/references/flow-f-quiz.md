@@ -1,4 +1,4 @@
-## 流程 F：生成當天考題並同步到 index.html + 推 GitHub（2026-07-27 確立，2026-07-27 併入 index.html）
+## 流程 F：生成當天考題並同步到 speakup-data.js + 推 GitHub（2026-07-27 確立，2026-07-27 併入 index.html）
 
 出考題功能。**觸發時機**（2026-08-21 改為只有使用者明確要求才執行，建立筆記後**不再自動接著執行**）：
 - 使用者說「出考題 / 生成考題 / 更新測驗 / 幫我出題 / 同步 Speak Up」，或針對某一天筆記要求出題
@@ -7,9 +7,9 @@
 > **但資料層完全沒變**：`const vocab / vocabSources / allTrans / allKW / articles / DAYQUIZ` 與所有 `// ===SYNC:*===` 標記原封不動保留，因此 **流程 C / F 的所有插入步驟不受影響、照舊執行**。
 > 差別只在使用者端：考題現在是「📝 快速檢查」活動（不再叫「每日測驗分頁」），成績不再寫 localStorage `el_dq`（口說進度改存 `speakup_v1`）。出題資料格式（DAYQUIZ 的 mc/fill/trans）不變。
 
-### 架構（DAYQUIZ 題庫嵌在 index.html 的 JS 裡）
+### 架構（DAYQUIZ 題庫在 speakup-data.js）
 
-考題資料嵌在 index.html 的 JS 裡：
+考題資料在 `speakup-data.js`（2026-11-25 從 index.html 拆出，標記與格式不變；不要寫回 index.html）：
 - **題庫**：`const DAYQUIZ = { ... }`，含 `// ===SYNC:DAYQUIZ_START/END===` 標記，以日期為 key
 - **作答/批改/算分/隨機抽題**：`initDayQuiz / startDayQuiz / dqRender / dqSelect / dqSubmitFill / dqNext / dqFinish`
 - **成績記錄**：存在 localStorage `el_dq`（`{ "YYYYMMDD": {attempts,best,total,lastScore,lastPct,ts} }`）；
@@ -88,23 +88,23 @@
 
 ### 同步步驟
 
-1. `Read` 讀取 `index.html`，找到 `const DAYQUIZ = {` 與其下的 `// ===SYNC:DAYQUIZ_START===` 標記
+1. `Read` 讀取 `speakup-data.js`，找到 `const DAYQUIZ = {` 與其下的 `// ===SYNC:DAYQUIZ_START===` 標記
 2. 檢查該 `"YYYYMMDD"` key 是否已存在：
    - **已存在** → 若要更新就整組替換該區塊；否則跳過（避免重複）
    - **不存在** → 繼續
 3. 用 **Edit 工具**，在 `// ===SYNC:DAYQUIZ_START=== ...` 那一行的**正下方**插入新題組區塊 `"YYYYMMDD": { ... },`（最新在最上面）
 4. 同步更新標記行的 `sync_date` 與 `count`：
    `// ===SYNC:DAYQUIZ_START=== sync_date:YYYY-MM-DD count:N`（N = 目前總題組數）
-5. 推 GitHub（通常與流程 C 的 index.html 同步一起提交）：
+5. 推 GitHub（通常與流程 C 的 speakup-data.js 同步一起提交）：
    ```bash
-   git add index.html
+   git add speakup-data.js
    git commit -m "Add daily quiz for YYYYMMDD (主題)"   # 附 Co-Authored-By trailer
    git push origin main
    ```
    跑完 push 記得做「流程 00-C」收尾檢查（`git log --oneline origin/main..main` 要空的、`git branch --no-merged main` 沒有落單分支）。
-6. **接著執行「流程 G」部署到 Firebase**，讓線上網站 https://learning-english-notes.web.app 同步更新（若本次是併在流程 C 一起跑，流程 C Step 5.5 已部署，這裡就不必重複）：
+6. push 到 main 後 CI 自動部署到 https://learning-english-notes.web.app，不用手動。CI 壞掉才用備案：
    ```bash
-   cd "D:/english-learning" && cp index.html public/index.html && firebase deploy --only hosting
+   cd "D:/english-learning" && cp index.html speakup-data.js public/ && npx firebase-tools deploy --only hosting --project learning-english-notes
    ```
 
 ---

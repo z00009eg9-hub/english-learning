@@ -1,14 +1,16 @@
-## 流程 C：同步筆記到 index.html + 推送 GitHub（2026-06-11 整合自 /sync-notes）
+## 流程 C：同步筆記到 speakup-data.js + 推送 GitHub（2026-06-11 整合自 /sync-notes）
 
 當使用者說「同步筆記」、「同步進網頁」或執行 `/sync-notes` 時觸發。
 
 ### Step 1 — 讀取同步狀態
-同步狀態**就記在 `index.html` 裡**（2026-09-18 起；舊版寫的 `sync_state.md` 記憶檔從來不存在，不要去找）。
-`html_file` 固定為 `D:\english-learning\index.html`（G: 雲端那份是停用的舊副本，不要改它）：
+> ⚠ **2026-11-25 起課程資料從 `index.html` 拆到 `speakup-data.js`**（`index.html` 只剩程式）。所有 `// ===SYNC:…===` 標記、資料格式都沒變，只是換檔案；**不要再把資料寫回 index.html**。
+
+同步狀態**就記在 `speakup-data.js` 裡**（2026-09-18 起；舊版寫的 `sync_state.md` 記憶檔從來不存在，不要去找）。
+`data_file` 固定為 `D:\english-learning\speakup-data.js`（G: 雲端那份是停用的舊副本，不要改它）：
 ```bash
 cd "D:/english-learning"
-grep -o "===SYNC:PROCESSED_LESSONS===.*" index.html        # 已同步過的課（YYYYMMDD 清單）
-grep -o "VOCAB_START=== sync_date:[0-9-]*" index.html       # 上次同步日 = LAST_SYNC_DATE
+grep -o "===SYNC:PROCESSED_LESSONS===.*" speakup-data.js       # 已同步過的課（YYYYMMDD 清單）
+grep -o "VOCAB_START=== sync_date:[0-9-]*" speakup-data.js      # 上次同步日 = LAST_SYNC_DATE
 ```
 
 ### Step 2 — 搜尋新筆記
@@ -73,7 +75,7 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 ```
 - 最多新增 2 篇文章，避免超過 8 篇
 
-### Step 4 — 更新 index.html
+### Step 4 — 更新 speakup-data.js
 用 **Edit 工具**在每個 `===SYNC:*_START===` 標記後插入新項目，並更新標記中的 `sync_date` 和 `count`：
 - `// ===SYNC:VOCAB_START=== sync_date:YYYY-MM-DD count:N`
 
@@ -82,19 +84,17 @@ mimeType = 'application/vnd.google-apps.document' and modifiedTime > 'LAST_SYNC_
 
 ### Step 5 — 推送到 GitHub
 0. ⚠ **開工前應已跑過「流程 00-A」的 `git pull --rebase origin main`**；若還沒跑，先跑完再 commit
-1. `git add index.html`
+1. `git add speakup-data.js`（這次也改了程式才加 `index.html`）
 2. `git commit -m "Sync English learning notes up to YYYYMMDD (主題)"` + `Co-Authored-By` trailer
 3. `git push origin main`
 4. **跑「流程 00-C」收尾檢查**：`git log --oneline origin/main..main`（要空的）＋ `git branch --no-merged main`（確認沒有落單分支）
 
 ### Step 5.5 — 部署到 Firebase Hosting（更新線上網站）
-push GitHub 後，**接著執行「流程 G」** 把最新 `index.html` 部署上線：
-```bash
-cd "D:/english-learning" && cp index.html public/index.html && firebase deploy --only hosting
-```
-線上網址 https://learning-english-notes.web.app 隨即更新（詳見下方「流程 G」）。
+push 到 main 後 CI（`.github/workflows/deploy-speakup.yml`）**自動部署**，不用手動；CI 會把 `speakup-data.js?v=dev` 換成內容雜湊，瀏覽器會抓到新資料。
+CI 壞掉才用備案：`cd "D:/english-learning" && cp index.html speakup-data.js public/ && npx firebase-tools deploy --only hosting --project learning-english-notes`
+線上網址 https://learning-english-notes.web.app（詳見「流程 G」）。
 
-### Step 6 — 更新同步狀態（寫在 index.html 裡：**實際上在 Step 4 改 index.html 時就一起做**，才會隨 Step 5 一起 commit、隨 Step 5.5 上線）
+### Step 6 — 更新同步狀態（寫在 speakup-data.js 裡：**實際上在 Step 4 改 speakup-data.js 時就一起做**，才會隨 Step 5 一起 commit、隨 Step 5.5 上線）
 - `// ===SYNC:PROCESSED_LESSONS===` 那一行：尾端加上這次同步的課程日期（`, YYYYMMDD`），**漏加下次會被重複處理**
 - 每個有改到的 `===SYNC:XXX_START===` 標記：更新 `sync_date:`（今天）與 `count:`
 - 標記行本身不可以刪或移位（見 AGENTS.md §7）

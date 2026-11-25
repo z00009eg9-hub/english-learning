@@ -14,7 +14,7 @@
 
 | 名稱 | 網址 | 原始碼 | 部署方式 |
 |---|---|---|---|
-| **Speak Up**（課堂筆記／口說／每日測驗） | https://learning-english-notes.web.app | 根目錄 `index.html` | **push 到 main 自動部署**（見 §2；備案本機一行指令） |
+| **Speak Up**（課堂筆記／口說／每日測驗） | https://learning-english-notes.web.app | 根目錄 `index.html`（程式）＋ `speakup-data.js`（課程資料） | **push 到 main 自動部署**（見 §2；備案本機一行指令） |
 | **B2 Read**（分級閱讀／課本／文法／實景） | https://english-b2-lab.web.app | `b2lab/public/index.html` | **push 到 main 自動部署**（見 §2） |
 | LINE 單字查詢 Bot | Cloudflare Worker | `line-bot/` | `npm run deploy`（wrangler） |
 | Speak Up 雲端語音辨識 | Cloudflare Worker | `stt-worker/` | `cd stt-worker && npx --prefix ../line-bot wrangler deploy` |
@@ -24,8 +24,8 @@ CSS 與 JS 全部內嵌在同一個檔案裡：
 
 - B2 Read：`b2lab/public/index.html` 約 45 萬字元，資料另外放同目錄的
   `data-*.js`（掛在 `window.XXX` 上）。架構見 §6。
-- Speak Up：根目錄 `index.html` 約 100 萬字元，**課程資料也在同一個檔案裡**，
-  由 `/sync-notes` 用 `===SYNC:…===` 標記維護。架構見 §7。
+- Speak Up：根目錄 `index.html` 約 41 萬字元（程式）；課程資料在同目錄的
+  `speakup-data.js`（約 92 萬字元，2026-11-25 拆出），由 `/sync-notes` 用 `===SYNC:…===` 標記維護。架構見 §7。
 
 兩個站的版面規則完全不同（B2 Read 有側邊欄、內容吃滿寬度；Speak Up 沒有側邊欄、
 內容置中固定寬度），**不要把其中一邊的做法套到另一邊。**
@@ -72,7 +72,7 @@ git fetch && git status -sb && git pull --rebase
 1. `git add` + `git commit` + `git push` — 先把改動推上 GitHub
 2. `git pull` — 部署前再拉一次，確保本地是 GitHub 上的最新版
 3. 部署指令（依子專案）：
-   - **Speak Up**：push 到 main 後 CI 自動部署（`.github/workflows/deploy-speakup.yml`）。本機備案：`cp index.html public/index.html && npx firebase-tools deploy --only hosting --project learning-english-notes`
+   - **Speak Up**：push 到 main 後 CI 自動部署（`.github/workflows/deploy-speakup.yml`）。本機備案：`cp index.html speakup-data.js public/ && npx firebase-tools deploy --only hosting --project learning-english-notes`
    - **B2 Read**：push 到 main 後 CI 自動部署（`.github/workflows/deploy-b2lab.yml`）
 4. 部署後打開網站確認版本正確（檢查改動是否生效）
 
@@ -204,11 +204,11 @@ node -e "global.window={};require('./b2lab/public/data-book.js');require('./b2la
 
 ---
 
-## 7. Speak Up（根目錄 `index.html`）架構
+## 7. Speak Up（根目錄 `index.html` ＋ `speakup-data.js`）架構
 
 **跟 B2 Read 是兩套完全不同的版面，規則不可以互相套用。**
 
-- 單檔約 100 萬字元：`<header>` ＋ `.wrap` ＋ 十個 `<section class="screen">`
+- `index.html` 約 41 萬字元：`<header>` ＋ `.wrap` ＋ 十個 `<section class="screen">`
   （`scr-home / say / shadow / word / read / talk / video / done / quiz / listen`），
   靠 `.on` 切換畫面，不是路由；沒有 URL、沒有前進後退。
 - **沒有 sidebar。** `.wrap{max-width:920px;margin:0 auto}`，≥700px 放大到 1060px。
@@ -216,7 +216,10 @@ node -e "global.window={};require('./b2lab/public/data-book.js');require('./b2la
   **不要把 B2 Read 那套「main 吃滿剩餘寬度」搬過來。**
 - **沒有 service worker**，靠 `firebase.json` 的 `Cache-Control: no-cache` 更新，
   所以不用 bump 版號；但也代表部署後立刻生效，沒有快取當緩衝。
-- **課程資料就在這個檔案裡**，由 `/sync-notes` 指令維護，用成對標記包住：
+  `speakup-data.js` 由 `index.html` 用 `speakup-data.js?v=dev` 載入，CI 部署時把 `dev` 換成內容雜湊，
+  所以資料改了瀏覽器一定抓新版；**不要手改這個版號**。
+- **課程資料在 `speakup-data.js`**（`vocab / vocabSources / allTrans / allKW / articles / DAYQUIZ / DAYTALK`，
+  一般 `<script>` 載入，`const` 主程式直接用；**不要寫回 index.html**），由 `/sync-notes` 指令維護，用成對標記包住：
   `// ===SYNC:VOCAB_START===` … `_END===`，同樣形式的還有
   `SOURCES` / `TRANS` / `KW` / `ARTICLES` / `DAYQUIZ` / `DAYTALK`，
   加上一行 `// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, …`。
