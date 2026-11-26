@@ -539,7 +539,7 @@ window.READING = [
      cn:"離開之前，值得問三個問題：最可能的原因是什麼？出現什麼情況我該回診？有沒有什麼藥我該停掉？一場看起來是在做診斷的看診，其實是在訂一個計畫——而你記不住的計畫，根本不算計畫。"}
   ],
   target:[
-    {w:"consultation",ipa:"/ˌkɑːnslˈteɪʃn/",pos:"n.",cn:"看診、諮詢",def:"A meeting with a doctor to discuss a health problem.",ex:"The lawyer charges 3,000 dollars for a one-hour consultation.",exCn:"那位律師一小時的諮詢費是三千元。"},
+    {w:"consultation",ipa:"/ˌkɑːn.səlˈteɪ.ʃən/",pos:"n.",cn:"看診、諮詢",def:"A meeting with a doctor to discuss a health problem.",ex:"The lawyer charges 3,000 dollars for a one-hour consultation.",exCn:"那位律師一小時的諮詢費是三千元。"},
     {w:"symptom",ipa:"/ˈsɪmp.təm/",pos:"n.",cn:"症狀",def:"A sign that you have an illness.",ex:"A sore throat is often the first symptom of a cold, followed a day later by a runny nose.",exCn:"喉嚨痛往往是感冒的第一個症狀，隔天接著就會流鼻水。"},
     {w:"examine",ipa:"/ɪɡˈzæmɪn/",pos:"v.",cn:"檢查",def:"To look at someone carefully to find out what is wrong.",ex:"The doctor examined my throat.",exCn:"醫生檢查了我的喉嚨。"},
     {w:"breathe in",ipa:"/briːð ɪn/",pos:"phr.v.",cn:"吸氣",def:"To take air into your lungs.",ex:"Breathe in slowly through your nose, then breathe out through your mouth.",exCn:"用鼻子慢慢吸氣，再用嘴巴吐氣。"},

@@ -36,6 +36,8 @@ const LIST = process.argv.includes('--list');
 const ALLOW = {
   'elaborate|/ɪˈlæb.ɚ.ət/ (adj.) /ɪˈlæb.ɚ.eɪt/ (v.)':
     'adj. 與 v. 兩個詞性發音不同，是刻意合併的教學條目（data-book.js）',
+  'contract|/kənˈtrækt/':
+    '動詞「收縮」重音在後（bk20261126）；名詞「合約」/ˈkɑːn.trækt/ 重音在前，兩個詞性發音不同',
 };
 
 /* w/ipa 相鄰的三種寫法（JSON 風格、單引號物件、雙引號物件）＋ data-rel.js 的 en/ipa 成員 */

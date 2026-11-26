@@ -18220,7 +18220,7 @@ window.BOOK = {
         {
           "w": "conditional",
           "star": true,
-          "ipa": "/kənˈdɪʃənəl/",
+          "ipa": "/kənˈdɪʃ.ən.əl/",
           "pos": "adj. / n.",
           "cn": "條件的；條件句（文法用語）",
           "ex": "This lesson is about the first and second conditionals.",
@@ -37518,6 +37518,862 @@ window.BOOK = {
         "qCn": "如果產品有問題，你會怎麼做？",
         "a": "We would replace the product with a new one.",
         "aCn": "我們會把產品換成新的。replace + 舊的 + with + 新的：單數 replace the product with a new one；複數 replace the products with new ones(one → ones)。"
+      }
+    ]
+  },
+  /* ---- bk20261126 Advisors, Load Conditions & Thermal Expansion ---- */
+  {
+    "id": "bk20261126",
+    "video": true,
+    "icon": "🌡️",
+    "date": "2026-11-26",
+    "doc": "https://docs.google.com/document/d/1vFl7J0RJ9eaSlcEeFetSo21KnOsZehGZi7kXkUq9aQk/edit",
+    "title": "Advisors, Load Conditions & Thermal Expansion",
+    "titleCn": "顧問、負載條件與熱脹冷縮",
+    "topics": "作業複習(work as a／one of our operators／under conditions／investigate the cause)・單字(顧問與諮詢／心情與態度／品保與工廠／實驗與熱脹冷縮／補充單字)・片語與搭配詞・advise／advisor／advice・consult・optimist／optimistic・under ... conditions・熱脹冷縮・溫度條件・詞性變化與名詞字尾・改錯練習",
+    "iconSvg": "<svg viewBox=\"0 0 96 96\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"48\" cy=\"48\" r=\"45\" fill=\"#fff\" stroke=\"#f0c9a0\" stroke-width=\"3\"/><rect x=\"24\" y=\"14\" width=\"14\" height=\"50\" rx=\"7\" fill=\"#fdf6ec\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><circle cx=\"31\" cy=\"70\" r=\"11\" fill=\"#d9534f\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><rect x=\"28\" y=\"34\" width=\"6\" height=\"30\" fill=\"#d9534f\"/><path d=\"M38 26h5M38 36h5M38 46h5\" stroke=\"#2b2118\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect x=\"50\" y=\"48\" width=\"30\" height=\"14\" rx=\"2\" fill=\"#e8813a\" stroke=\"#2b2118\" stroke-width=\"3.5\"/><path d=\"M52 40h-6l4-4M52 40l-2 3M78 40h6l-4-4M78 40l2 3\" fill=\"none\" stroke=\"#2b2118\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M56 40h18\" stroke=\"#2b2118\" stroke-width=\"3\" stroke-dasharray=\"3 3\"/><path d=\"M56 70q4-4 8 0t8 0\" fill=\"none\" stroke=\"#3b82c4\" stroke-width=\"3\" stroke-linecap=\"round\"/></svg>",
+    "hwTitle": "I. ★ 11/26 作業複習 Homework Review",
+    "hw": [
+      {
+        "n": 1,
+        "wrong": "Tom plans to work as quality teacher after retirement.",
+        "fix": "Tom plans to work as a quality teacher after retirement.",
+        "cn": "Tom 計劃退休後擔任品質講師。",
+        "pat": "plan to + V ／ work as + a / an + 職業",
+        "note": "plan to + 原形動詞，表示「計劃做某事」。 work as 後面接職業，可數名詞單數前要加 a／an：work as a quality teacher。"
+      },
+      {
+        "n": 2,
+        "wrong": "Today, we have a operator was absent because of sick, we had a lot of parts needed to be inspected, so I arranged backup inspector to complete.",
+        "fix": "Today, one of our operators was absent because of illness. We had a lot of parts that needed to be inspected, so I arranged a backup inspector to complete the inspections.",
+        "cn": "今天我們有一位作業員因病缺勤。有很多零件需要檢驗，所以我安排了一位替補檢驗員來完成檢驗。",
+        "pat": "one of our + 複數名詞 ／ because of + 名詞 ／ 名詞 + that + 子句",
+        "note": "原句 we have a operator was absent 同時有 have 和 was 兩個動詞，改成 one of our operators was absent，主詞是 one，所以用單數 was。 because of 後面要接名詞 illness，不能接形容詞 sick；也可以說 absent due to illness 或 because he was sick。 更道地的說法是 arranged for a backup inspector to complete the inspection：arrange for + 人 + to + V 表示「安排某人去做某事」。"
+      },
+      {
+        "n": 3,
+        "wrong": "The frame may twist during welding, so we need to inspect the first unit to make sure dimensions are OK.",
+        "fix": "The frame may twist during welding, so we need to inspect the first unit to make sure the dimensions are OK.",
+        "cn": "框架在焊接時可能會扭曲變形，所以我們需要檢驗首件，確保尺寸沒問題。",
+        "pat": "may + V ／ during + 名詞 ／ to make sure + 子句",
+        "note": "這句基本正確，只差一個冠詞：指的是這個框架的尺寸，加 the 比較完整。 may twist 用助動詞 may 表示「可能會」，後面接原形動詞。"
+      },
+      {
+        "n": 4,
+        "ok": "We need to evaluate the rework costs before asking the supplier to reimburse us.",
+        "cn": "在要求供應商賠償之前，我們需要先評估返工成本。",
+        "pat": "before + V-ing ／ ask + 人 + to + V ／ reimburse + 人 (+ for + 費用)",
+        "note": "這句文法正確。 before 是介系詞，後面接動名詞 asking；主詞和前句相同（we），所以可以這樣省略。 ask + 人 + to + V 表示「要求某人做某事」。"
+      },
+      {
+        "n": 5,
+        "wrong": "The experiment was conducted different load conditions.",
+        "fix": "The experiment was conducted under different load conditions.",
+        "cn": "這項實驗是在不同的負載條件下進行的。",
+        "pat": "be + conducted（被動）＋ under + 形容詞 + conditions",
+        "note": "conduct an experiment 是「進行實驗」，這裡用被動語態 was conducted，強調實驗本身。 「在…條件下」英文要用介系詞 under，原句少了 under。"
+      },
+      {
+        "n": 6,
+        "wrong": "The inspector kept some defective parts in case the supplier needed to investigate the reason.",
+        "fix": "The inspector kept some defective parts in case the supplier needed to investigate the cause.",
+        "cn": "檢驗員保留了一些不良品，以防供應商需要調查原因。",
+        "pat": "keep + 物 ／ in case + 子句 ／ investigate the cause",
+        "note": "in case + 子句 表示「以防」；整句是過去式，所以子句用 needed。 品保上「調查（問題的）原因」習慣說 investigate the cause：cause 是造成問題的根源，reason 比較是做某事的理由。"
+      }
+    ],
+    "vocabTitle": "II-A／II-B. 顧問與諮詢、心情與態度 Advisors & Consulting, Feelings & Attitudes",
+    "vocab": [
+      {
+        "w": "consultant",
+        "ipa": "/kənˈsʌl.tənt/",
+        "pos": "n.",
+        "cn": "顧問",
+        "ex": "Our company hired a safety consultant.",
+        "exCn": "我們公司聘請了一位安全顧問。"
+      },
+      {
+        "w": "advisor",
+        "ipa": "/ədˈvaɪ.zɚ/",
+        "pos": "n.",
+        "cn": "顧問、指導者（人）",
+        "ex": "My advisor helped me choose a course.",
+        "exCn": "我的指導顧問幫我選了一門課。"
+      },
+      {
+        "w": "advise",
+        "ipa": "/ədˈvaɪz/",
+        "pos": "v.",
+        "cn": "建議、勸告（動詞）",
+        "ex": "The doctor advised me to rest.",
+        "exCn": "醫生建議我休息。"
+      },
+      {
+        "w": "advice",
+        "ipa": "/ədˈvaɪs/",
+        "pos": "n.",
+        "cn": "建議（名詞，不可數）",
+        "ex": "She gave me some good advice.",
+        "exCn": "她給了我一些好建議。"
+      },
+      {
+        "w": "consult",
+        "ipa": "/kənˈsʌlt/",
+        "pos": "v.",
+        "cn": "諮詢、請教、查閱",
+        "ex": "You should consult the manual first.",
+        "exCn": "你應該先查閱說明書。"
+      },
+      {
+        "w": "supervisor",
+        "ipa": "/ˈsuː.pɚ.vaɪ.zɚ/",
+        "pos": "n.",
+        "cn": "主管、上司",
+        "ex": "My supervisor approved my leave.",
+        "exCn": "我的主管核准了我的假。"
+      },
+      {
+        "w": "depression",
+        "star": true,
+        "ipa": "/dɪˈpreʃ.ən/",
+        "pos": "n.",
+        "cn": "憂鬱、憂鬱症",
+        "ex": "Depression is a common illness.",
+        "exCn": "憂鬱症是一種常見的疾病。"
+      },
+      {
+        "w": "disappointment",
+        "ipa": "/ˌdɪs.əˈpɔɪnt.mənt/",
+        "pos": "n.",
+        "cn": "失望",
+        "ex": "I could see the disappointment on his face.",
+        "exCn": "我看得出他臉上的失望。"
+      },
+      {
+        "w": "pessimism",
+        "star": true,
+        "ipa": "/ˈpes.ə.mɪ.zəm/",
+        "pos": "n.",
+        "cn": "悲觀、消極",
+        "ex": "His pessimism affects the whole team.",
+        "exCn": "他的悲觀影響了整個團隊。"
+      },
+      {
+        "w": "optimist",
+        "ipa": "/ˈɑːptɪmɪst/",
+        "pos": "n.",
+        "cn": "樂觀的人",
+        "ex": "My mother is a real optimist.",
+        "exCn": "我媽媽是個十足樂觀的人。"
+      },
+      {
+        "w": "depressed",
+        "ipa": "/dɪˈprest/",
+        "pos": "adj.",
+        "cn": "憂鬱的、沮喪的",
+        "ex": "He felt depressed after losing his job.",
+        "exCn": "他失業後感到很沮喪。"
+      },
+      {
+        "w": "disappointed",
+        "ipa": "/ˌdɪsəˈpɔɪntɪd/",
+        "pos": "adj.",
+        "cn": "失望的",
+        "ex": "The kids were disappointed about the rain.",
+        "exCn": "孩子們因為下雨很失望。"
+      },
+      {
+        "w": "pessimist",
+        "ipa": "/ˈpesɪmɪst/",
+        "pos": "n.",
+        "cn": "悲觀的人",
+        "ex": "A pessimist always expects the worst.",
+        "exCn": "悲觀的人總是預期最壞的情況。"
+      },
+      {
+        "w": "pessimistic",
+        "ipa": "/ˌpes.əˈmɪs.tɪk/",
+        "pos": "adj.",
+        "cn": "悲觀的",
+        "ex": "The report is pessimistic about sales.",
+        "exCn": "這份報告對銷售很悲觀。"
+      },
+      {
+        "w": "optimistic",
+        "ipa": "/ˌɑːp.təˈmɪs.tɪk/",
+        "pos": "adj.",
+        "cn": "樂觀的、抱持希望的",
+        "ex": "The manager is optimistic about next year.",
+        "exCn": "經理對明年很樂觀。"
+      }
+    ],
+    "vocab2Title": "II-C／II-D／II-E. 品保與工廠、實驗與熱脹冷縮、補充單字 Quality & Factory, Experiments & Temperature, More Words",
+    "vocab2": [
+      {
+        "w": "operator",
+        "ipa": "/ˈɑːpəreɪtɚ/",
+        "pos": "n.",
+        "cn": "作業員",
+        "ex": "The new operator learned quickly.",
+        "exCn": "新來的作業員學得很快。"
+      },
+      {
+        "w": "inspector",
+        "ipa": "/ɪnˈspektɚ/",
+        "pos": "n.",
+        "cn": "檢驗員",
+        "ex": "The inspector checked every box.",
+        "exCn": "檢驗員檢查了每一箱。"
+      },
+      {
+        "w": "backup",
+        "ipa": "/ˈbækʌp/",
+        "pos": "n. / adj.",
+        "cn": "備份、備援、替補的",
+        "ex": "Always keep a backup of your files.",
+        "exCn": "檔案一定要留一份備份。"
+      },
+      {
+        "w": "illness",
+        "ipa": "/ˈɪl.nəs/",
+        "pos": "n.",
+        "cn": "疾病（名詞）",
+        "ex": "She recovered from a long illness.",
+        "exCn": "她從一場長期的病中康復了。"
+      },
+      {
+        "w": "twist",
+        "ipa": "/twɪst/",
+        "pos": "v.",
+        "cn": "扭曲、扭轉",
+        "ex": "Don't twist the cable too hard.",
+        "exCn": "不要把電線扭得太用力。"
+      },
+      {
+        "w": "welding",
+        "ipa": "/ˈwel.dɪŋ/",
+        "pos": "n.",
+        "cn": "焊接",
+        "ex": "Welding needs special training.",
+        "exCn": "焊接需要特別的訓練。"
+      },
+      {
+        "w": "dimension",
+        "ipa": "/daɪˈmen.ʃən/",
+        "pos": "n.",
+        "cn": "尺寸（常用複數）",
+        "ex": "Please write down the dimensions of the box.",
+        "exCn": "請寫下箱子的尺寸。"
+      },
+      {
+        "w": "reimburse",
+        "star": true,
+        "ipa": "/ˌriː.ɪmˈbɝːs/",
+        "pos": "v.",
+        "cn": "償還、賠償",
+        "ex": "The company will reimburse my taxi fare.",
+        "exCn": "公司會補貼我的計程車費。"
+      },
+      {
+        "w": "investigate",
+        "ipa": "/ɪnˈvestɪɡeɪt/",
+        "pos": "v.",
+        "cn": "調查",
+        "ex": "The police are investigating the accident.",
+        "exCn": "警方正在調查這起事故。"
+      },
+      {
+        "w": "vibrate",
+        "ipa": "/ˈvaɪ.breɪt/",
+        "pos": "v.",
+        "cn": "震動",
+        "ex": "My phone vibrated during the meeting.",
+        "exCn": "開會時我的手機震動了。"
+      },
+      {
+        "w": "deform",
+        "star": true,
+        "ipa": "/dɪˈfɔːrm/",
+        "pos": "v.",
+        "cn": "變形",
+        "ex": "Plastic can deform in the hot sun.",
+        "exCn": "塑膠在烈日下會變形。"
+      },
+      {
+        "w": "extreme",
+        "ipa": "/ɪkˈstriːm/",
+        "pos": "adj.",
+        "cn": "極端的",
+        "ex": "This area has extreme weather.",
+        "exCn": "這個地區的天氣很極端。"
+      },
+      {
+        "w": "experiment",
+        "ipa": "/ɪkˈsper.ə.mənt/",
+        "pos": "n.",
+        "cn": "實驗",
+        "ex": "The students did a simple experiment.",
+        "exCn": "學生們做了一個簡單的實驗。"
+      },
+      {
+        "w": "conduct",
+        "star": true,
+        "ipa": "/kənˈdʌkt/",
+        "pos": "v.",
+        "cn": "進行、執行",
+        "ex": "We conduct a safety check every month.",
+        "exCn": "我們每個月進行一次安全檢查。"
+      },
+      {
+        "w": "load",
+        "ipa": "/loʊd/",
+        "pos": "n.",
+        "cn": "負載、負荷、貨物",
+        "ex": "The truck carried a heavy load.",
+        "exCn": "卡車載著很重的貨物。"
+      },
+      {
+        "w": "condition",
+        "ipa": "/kənˈdɪʃ.ən/",
+        "pos": "n.",
+        "cn": "條件、狀況",
+        "ex": "The car is in good condition.",
+        "exCn": "這輛車狀況良好。"
+      },
+      {
+        "w": "structure",
+        "ipa": "/ˈstrʌk.tʃɚ/",
+        "pos": "n.",
+        "cn": "結構",
+        "ex": "The bridge has a strong structure.",
+        "exCn": "這座橋的結構很堅固。"
+      },
+      {
+        "w": "thermal",
+        "star": true,
+        "ipa": "/ˈθɝː.məl/",
+        "pos": "adj.",
+        "cn": "熱的、保暖的",
+        "ex": "I wear thermal underwear in winter.",
+        "exCn": "我冬天穿保暖內衣。"
+      },
+      {
+        "w": "expand",
+        "ipa": "/ɪkˈspænd/",
+        "pos": "v.",
+        "cn": "膨脹、擴大",
+        "ex": "The company plans to expand next year.",
+        "exCn": "公司計劃明年擴張。"
+      },
+      {
+        "w": "contract",
+        "ipa": "/kənˈtrækt/",
+        "pos": "v.",
+        "cn": "收縮（動詞；名詞 /ˈkɑːn.trækt/ 是「合約」）",
+        "ex": "Your muscles contract when you lift something.",
+        "exCn": "你搬東西時肌肉會收縮。"
+      },
+      {
+        "w": "expansion",
+        "ipa": "/ɪkˈspæn.ʃən/",
+        "pos": "n.",
+        "cn": "膨脹、擴張",
+        "ex": "The expansion of the factory took two years.",
+        "exCn": "工廠的擴建花了兩年。"
+      },
+      {
+        "w": "contraction",
+        "ipa": "/kənˈtræk.ʃən/",
+        "pos": "n.",
+        "cn": "收縮（名詞）",
+        "ex": "The contraction of the rubber made the seal loose.",
+        "exCn": "橡膠收縮讓密封變鬆了。"
+      },
+      {
+        "w": "constant",
+        "ipa": "/ˈkɑːnstənt/",
+        "pos": "adj.",
+        "cn": "恆定的、固定的",
+        "ex": "Drive at a constant speed.",
+        "exCn": "以固定速度開車。"
+      },
+      {
+        "w": "temperature",
+        "ipa": "/ˈtemprətʃɚ/",
+        "pos": "n.",
+        "cn": "溫度",
+        "ex": "What's the temperature today?",
+        "exCn": "今天幾度？"
+      },
+      {
+        "w": "consider",
+        "ipa": "/kənˈsɪdɚ/",
+        "pos": "v.",
+        "cn": "考慮",
+        "ex": "Please consider my suggestion.",
+        "exCn": "請考慮我的建議。"
+      },
+      {
+        "w": "vibration",
+        "ipa": "/vaɪˈbreɪ.ʃən/",
+        "pos": "n.",
+        "cn": "震動（名詞）",
+        "ex": "I can feel the vibration of the floor.",
+        "exCn": "我感覺得到地板在震動。"
+      },
+      {
+        "w": "evaluation",
+        "ipa": "/ɪˌvæl.juˈeɪ.ʃən/",
+        "pos": "n.",
+        "cn": "評估（名詞）",
+        "ex": "Each new worker gets an evaluation after three months.",
+        "exCn": "每位新員工三個月後會接受評估。"
+      },
+      {
+        "w": "reimbursement",
+        "star": true,
+        "ipa": "/ˌriː.ɪmˈbɝːs.mənt/",
+        "pos": "n.",
+        "cn": "賠償、報銷（名詞）",
+        "ex": "Send the receipts to Finance for reimbursement.",
+        "exCn": "把收據交給財務部報銷。"
+      },
+      {
+        "w": "consultation",
+        "ipa": "/ˌkɑːn.səlˈteɪ.ʃən/",
+        "pos": "n.",
+        "cn": "諮詢（名詞）",
+        "ex": "The first consultation is free.",
+        "exCn": "第一次諮詢免費。"
+      },
+      {
+        "w": "replacement",
+        "ipa": "/rɪˈpleɪs.mənt/",
+        "pos": "n.",
+        "cn": "替換、替換品",
+        "ex": "We ordered a replacement for the broken fan.",
+        "exCn": "我們訂了一個替換品來換壞掉的風扇。"
+      },
+      {
+        "w": "construction",
+        "ipa": "/kənˈstrʌkʃən/",
+        "pos": "n.",
+        "cn": "建造、結構",
+        "ex": "The new building is still under construction.",
+        "exCn": "新大樓還在施工中。"
+      },
+      {
+        "w": "frustration",
+        "ipa": "/frʌˈstreɪ.ʃən/",
+        "pos": "n.",
+        "cn": "挫折、沮喪",
+        "ex": "She shouted in frustration.",
+        "exCn": "她沮喪得大叫。"
+      },
+      {
+        "w": "appearance",
+        "ipa": "/əˈpɪrəns/",
+        "pos": "n.",
+        "cn": "外觀、出現",
+        "ex": "The appearance of the box was damaged.",
+        "exCn": "箱子的外觀受損了。"
+      },
+      {
+        "w": "accountant",
+        "ipa": "/əˈkaʊn.tənt/",
+        "pos": "n.",
+        "cn": "會計師",
+        "ex": "Our accountant checks the bills every week.",
+        "exCn": "我們的會計每週核對帳單。"
+      },
+      {
+        "w": "defect",
+        "ipa": "/ˈdiː.fekt/",
+        "pos": "n.",
+        "cn": "缺陷、瑕疵（名詞）",
+        "ex": "This defect is too small to see.",
+        "exCn": "這個缺陷小到看不見。"
+      },
+      {
+        "w": "frame",
+        "ipa": "/freɪm/",
+        "pos": "n.",
+        "cn": "框架、車架",
+        "ex": "The bike frame is made of aluminum.",
+        "exCn": "這台腳踏車的車架是鋁做的。"
+      }
+    ],
+    "phrasesTitle": "III. 片語與搭配詞 Phrases & Collocations",
+    "phrasesCard": true,
+    "phrases": [
+      {
+        "p": "financial / technical / legal / business / career advisor",
+        "cn": "財務／技術／法律／商業／職涯顧問",
+        "ex": "She asked a financial advisor how to save money.",
+        "exCn": "她詢問財務顧問該怎麼存錢。",
+        "ex2": "Our technical advisor will visit the plant next week.",
+        "ex2Cn": "我們的技術顧問下週會來工廠。"
+      },
+      {
+        "p": "consult + 人 + about + 事",
+        "cn": "向某人請教某事",
+        "ex": "I consulted a lawyer about the contract.",
+        "exCn": "我就合約的事請教了律師。",
+        "ex2": "You can consult HR about your annual leave.",
+        "ex2Cn": "你可以向人資詢問年假的事。"
+      },
+      {
+        "p": "consult with + 人",
+        "cn": "與某人商量、討論",
+        "ex": "Let me consult with my team first.",
+        "exCn": "讓我先跟團隊商量一下。",
+        "ex2": "She consulted with the engineer before changing the design.",
+        "ex2Cn": "她修改設計前先和工程師討論過。"
+      },
+      {
+        "p": "consult a doctor",
+        "cn": "看醫生、向醫生諮詢",
+        "ex": "If the pain continues, consult a doctor.",
+        "exCn": "如果持續疼痛，請就醫。",
+        "ex2": "He consulted a doctor about his back pain.",
+        "ex2Cn": "他為了背痛去看醫生。"
+      },
+      {
+        "p": "before deciding whether to + V",
+        "cn": "在決定是否…之前",
+        "ex": "Read the reviews before deciding whether to buy it.",
+        "exCn": "決定要不要買之前，先看看評論。",
+        "ex2": "We checked the samples before deciding whether to place an order.",
+        "ex2Cn": "決定是否下單前，我們先檢查了樣品。"
+      },
+      {
+        "p": "a batch of defective parts",
+        "cn": "一批不良品",
+        "ex": "We returned a batch of defective parts last week.",
+        "exCn": "我們上週退回了一批不良品。",
+        "ex2": "A batch of defective parts stopped the assembly line.",
+        "ex2Cn": "一批不良品讓組裝線停了下來。"
+      },
+      {
+        "p": "absent due to illness",
+        "cn": "因病缺勤",
+        "ex": "Three students were absent due to illness.",
+        "exCn": "有三位學生因病缺席。",
+        "ex2": "She was absent due to illness for two days.",
+        "ex2Cn": "她因病請假兩天。"
+      },
+      {
+        "p": "backup inspector",
+        "cn": "替補檢驗員",
+        "ex": "We need a backup inspector for the night shift.",
+        "exCn": "夜班需要一位替補檢驗員。",
+        "ex2": "The backup inspector finished the work on time.",
+        "ex2Cn": "替補檢驗員準時完成了工作。"
+      },
+      {
+        "p": "conduct an experiment / conduct a test",
+        "cn": "進行實驗／進行測試",
+        "ex": "The lab will conduct a test on the new paint.",
+        "exCn": "實驗室會對新塗料進行測試。",
+        "ex2": "They conducted an experiment with three kinds of plastic.",
+        "ex2Cn": "他們用三種塑膠進行了實驗。"
+      },
+      {
+        "p": "under ... conditions",
+        "cn": "在…條件下",
+        "ex": "This tape works well under wet conditions.",
+        "exCn": "這種膠帶在潮濕條件下也很好用。",
+        "ex2": "Under these conditions, we cannot ship on time.",
+        "ex2Cn": "在這些條件下，我們無法準時出貨。"
+      },
+      {
+        "p": "thermal expansion and contraction",
+        "cn": "熱脹冷縮",
+        "ex": "Engineers leave small gaps in bridges for thermal expansion and contraction.",
+        "exCn": "工程師在橋上留小縫隙，以應付熱脹冷縮。",
+        "ex2": "Thermal expansion and contraction can crack the glass.",
+        "ex2Cn": "熱脹冷縮可能讓玻璃破裂。"
+      },
+      {
+        "p": "at room temperature / at a constant temperature",
+        "cn": "在室溫下／在恆溫下",
+        "ex": "Store the glue at room temperature.",
+        "exCn": "膠水請存放在室溫下。",
+        "ex2": "The chamber keeps the samples at a constant temperature.",
+        "ex2Cn": "恆溫箱讓樣品保持在恆定溫度。"
+      },
+      {
+        "p": "in case + 子句",
+        "cn": "以防、以備",
+        "ex": "Keep the receipt in case you need to return it.",
+        "exCn": "保留收據，以防需要退貨。",
+        "ex2": "I wrote down his number in case my phone dies.",
+        "ex2Cn": "我把他的號碼寫下來，以防手機沒電。"
+      },
+      {
+        "p": "investigate the cause",
+        "cn": "調查原因",
+        "ex": "The team will investigate the cause of the leak.",
+        "exCn": "團隊會調查漏水的原因。",
+        "ex2": "We need more time to investigate the cause of the noise.",
+        "ex2Cn": "我們需要更多時間調查噪音的原因。"
+      }
+    ],
+    "grammarTitle": "IV. 句型與文法解說 Sentence Patterns & Grammar",
+    "grammar": [
+      {
+        "k": "IV-A",
+        "title": "advise／advisor／advice 與各種顧問",
+        "pat": "advise（動詞）／ advisor（名詞，人）／ advice（名詞，不可數）",
+        "pts": [
+          "advise 是動詞，字尾發 /z/；advice 是名詞，字尾發 /s/，拼字只差 s 和 c。",
+          "advice 不可數：some advice、a piece of advice，不能說 an advice 或 advices。",
+          "consultant 和 advisor 都是「顧問」：consultant 多指外部、收費提供專業意見的人；advisor 範圍比較廣，也可以指長期給建議的人。"
+        ],
+        "exs": [
+          {
+            "tag": "例句",
+            "en": "My friend always advises me.",
+            "cn": "我朋友總是給我建議。"
+          },
+          {
+            "tag": "例句",
+            "en": "She is a good advisor.",
+            "cn": "她是一位很好的顧問。"
+          }
+        ]
+      },
+      {
+        "k": "IV-B",
+        "title": "consult：請教、諮詢",
+        "pat": "consult + 人 + about + 事 ／ consult with + 人",
+        "pts": [
+          "consult + 人：向專業的人請教（醫生、律師、主管）；consult with + 人：和對方商量、討論，比較是雙向的。",
+          "before deciding：before 是介系詞，後面接 V-ing；whether to + V 表示「是否要…」。",
+          "⚠️ 避免中式英文：consult 直接接人，不要寫成 consult to my supervisor。"
+        ],
+        "exs": [
+          {
+            "tag": "例句",
+            "en": "I consulted my supervisor about the quality issues.",
+            "cn": "我向主管請教了品質問題。"
+          },
+          {
+            "tag": "老師的中翻英練習",
+            "en": "Before deciding whether to accept this batch of defective parts, we need to consult with the quality manager.",
+            "cn": "在決定是否接受這批不良品之前，我們需要先與品質經理討論。"
+          },
+          {
+            "tag": "例句",
+            "en": "If we have any health problems, including depression, feelings of disappointment, or pessimism, we can consult a doctor.",
+            "cn": "如果我們有任何健康問題，包括憂鬱、失望的情緒或悲觀，可以去諮詢醫生。"
+          }
+        ]
+      },
+      {
+        "k": "IV-C",
+        "title": "optimist／optimistic：樂觀與悲觀",
+        "pat": "be + optimistic ／ stay + optimistic",
+        "pts": [
+          "optimist 是名詞「樂觀的人」，optimistic 是形容詞「樂觀的」；樂觀的名詞是 optimism。",
+          "名詞（狀態）vs. 形容詞（形容人）：depression → depressed、disappointment → disappointed、pessimism → pessimistic、optimism → optimistic。",
+          "⚠️ 名詞前面用 have，形容詞前面用 be：不要說 She is depression 或 She has depressed。"
+        ],
+        "exs": [
+          {
+            "tag": "例句",
+            "en": "She is an optimistic person.",
+            "cn": "她是一個樂觀的人。"
+          },
+          {
+            "tag": "例句",
+            "en": "Try to stay optimistic.",
+            "cn": "試著保持樂觀。"
+          },
+          {
+            "tag": "have／be",
+            "en": "She has depression. ／ She is depressed.",
+            "cn": "她有憂鬱症。／她很憂鬱。"
+          },
+          {
+            "tag": "have／be",
+            "en": "She has a feeling of disappointment. ／ She is disappointed.",
+            "cn": "她有一種失望的感覺。／她很失望。"
+          },
+          {
+            "tag": "例句",
+            "en": "Why are you always pessimistic?",
+            "cn": "你為什麼總是那麼悲觀？"
+          }
+        ]
+      },
+      {
+        "k": "IV-D",
+        "title": "under ... conditions：在…條件下",
+        "pat": "under + （形容詞）+ conditions",
+        "pts": [
+          "常見搭配：under a condition 在某一條件下／under certain conditions 在某些特定條件下／under normal conditions 在正常情況下／under different conditions 在不同條件下／under these conditions 在這些條件下／under heavy load conditions 在重負載條件下。",
+          "⚠️ 「只有在嚴重的情況下才能請假」口語更常說 only in serious cases 或 only in an emergency；under serious conditions 聽起來比較像在描述環境。",
+          "⚠️ conduct 後面一定要有受詞（conduct 什麼？）：conduct a test／conduct an experiment／conduct an investigation；不要只寫 conduct under heavy load conditions。"
+        ],
+        "exs": [
+          {
+            "tag": "例句",
+            "en": "The machine operates normally under normal conditions.",
+            "cn": "在正常情況下，這台機器運作正常。"
+          },
+          {
+            "tag": "老師的中翻英練習",
+            "en": "We need to conduct a test under heavy load conditions to make sure the structure is OK.",
+            "cn": "我們需要在重負載條件下進行測試，以確保結構沒有問題。"
+          },
+          {
+            "tag": "例句",
+            "en": "The machine may vibrate under heavy load conditions.",
+            "cn": "在重負載條件下，機器可能會震動。"
+          },
+          {
+            "tag": "老師的中翻英練習",
+            "en": "The product may deform under extreme conditions.",
+            "cn": "產品在極端條件下可能會變形。"
+          },
+          {
+            "tag": "例句",
+            "en": "I can only take leave under certain conditions.",
+            "cn": "只有在某些特定條件下，我才能請假。"
+          },
+          {
+            "tag": "例句",
+            "en": "I can only take leave under serious conditions.",
+            "cn": "只有在嚴重的情況下，我才能請假。"
+          }
+        ]
+      },
+      {
+        "k": "IV-E",
+        "title": "熱脹冷縮 Thermal Expansion and Contraction",
+        "pat": "主詞 + expands when heated and contracts when cooled",
+        "pts": [
+          "when heated = when it is heated：前後主詞相同時，可以省略「主詞 + be」，只留過去分詞。",
+          "affect 是動詞「影響」；名詞「影響」要用 effect。",
+          "⚠️ consider 後面要接名詞片語 thermal expansion and contraction，不要寫 consider expand and contract（那是動詞）。"
+        ],
+        "exs": [
+          {
+            "tag": "老師的中翻英練習",
+            "en": "Metal expands when heated and contracts when cooled.",
+            "cn": "金屬受熱時會膨脹，冷卻時會收縮。"
+          },
+          {
+            "tag": "老師的中翻英練習",
+            "en": "We need to consider thermal expansion and contraction during the design process.",
+            "cn": "在設計過程中，我們需要考慮熱脹冷縮的影響。"
+          },
+          {
+            "tag": "老師的中翻英練習",
+            "en": "Thermal expansion and contraction may affect the dimensions of the frame.",
+            "cn": "熱脹冷縮可能會影響框架的尺寸。"
+          }
+        ]
+      },
+      {
+        "k": "IV-F",
+        "title": "溫度條件 Temperature Conditions",
+        "pat": "under constant temperature conditions ／ at a constant temperature ／ at room temperature",
+        "pts": [
+          "at a constant temperature 在恆定溫度下／under constant temperature conditions 在恆溫條件下／at room temperature 在室溫下：講「某個溫度」用 at，講「條件」用 under。",
+          "at a constant temperature 重點在溫度本身；under constant temperature conditions 聽起來更技術性，強調受控的環境。一般室內環境就說 at room temperature。",
+          "When inspecting：when + V-ing，主詞（we）和後面句子相同時可以省略。"
+        ],
+        "exs": [
+          {
+            "tag": "例句",
+            "en": "When inspecting the product, we need to consider the temperature conditions.",
+            "cn": "當我們檢驗產品時，需要考慮溫度條件。"
+          },
+          {
+            "tag": "老師的中翻英練習",
+            "en": "We need to inspect the product under constant temperature conditions.",
+            "cn": "我們需要在恆溫條件下檢驗產品。"
+          }
+        ]
+      },
+      {
+        "k": "IV-G",
+        "title": "詞性變化與名詞字尾 Word Families & Suffixes",
+        "pat": "動詞 → 名詞（-ment／-tion／-sion／-ance）→ 人（-er／-or／-ant）",
+        "pts": [
+          "-ment：reimburse → reimbursement、replace → replacement、experiment、disappointment。",
+          "-tion／-sion：vibrate → vibration、evaluate → evaluation、construct → construction、frustrate → frustration、expand → expansion、depress → depression、attend → attention、situation、condition。",
+          "表示人：-er（teacher、inspector）、-or（operator、advisor）、-ant（accountant、consultant）。",
+          "defect 是名詞「缺陷」，defective 是形容詞「有缺陷的」：defective parts ＝ 有缺陷的零件。",
+          "詞性表（動詞／名詞／人或形容詞）：advise／advice／advisor；consult／consultation／consultant；inspect／inspection／inspector；reimburse／reimbursement；evaluate／evaluation；vibrate／vibration；expand／expansion；contract／contraction；depress／depression／depressed；disappoint／disappointment／disappointed。"
+        ],
+        "exs": [
+          {
+            "tag": "例句",
+            "en": "The machine may vibrate under heavy load.",
+            "cn": "在重負載下，機器可能會震動。"
+          },
+          {
+            "tag": "例句",
+            "en": "We need to check the vibration of the machine.",
+            "cn": "我們需要檢查機器的震動。"
+          },
+          {
+            "tag": "動詞／名詞",
+            "en": "We need to evaluate the cost. ／ The evaluation is important.",
+            "cn": "我們需要評估成本。／評估很重要。"
+          },
+          {
+            "tag": "動詞／名詞",
+            "en": "The supplier will reimburse us. ／ We need reimbursement from the supplier.",
+            "cn": "供應商會賠償我們。／我們需要供應商的賠償。"
+          },
+          {
+            "tag": "動詞／名詞",
+            "en": "The machine vibrates. ／ The vibration is too strong.",
+            "cn": "機器在震動。／震動太強了。"
+          }
+        ]
+      }
+    ],
+    "extraTitle": "V. 練習 Correct the Mistakes",
+    "extra": [
+      {
+        "title": "V. 練習 Correct the Mistakes",
+        "exs": [
+          {
+            "tag": "1",
+            "en": "❌ She works as engineer in a car factory. ✅ She works as an engineer in a car factory.",
+            "cn": "她在汽車工廠擔任工程師。錯在哪裡：work as + 職業，可數名詞單數前要加冠詞；engineer 是母音開頭，用 an。"
+          },
+          {
+            "tag": "2",
+            "en": "❌ He was absent because of sick yesterday. ✅ He was absent because of illness yesterday.",
+            "cn": "他昨天因病缺勤。錯在哪裡：because of 後面接名詞 illness；也可以改成 because he was sick。"
+          },
+          {
+            "tag": "3",
+            "en": "❌ The test was done different temperatures. ✅ The test was done at different temperatures.",
+            "cn": "這項測試是在不同溫度下進行的。錯在哪裡：講「某個溫度」用 at；講「條件」才用 under ... conditions。"
+          },
+          {
+            "tag": "4",
+            "en": "❌ Thanks for your advices. ✅ Thanks for your advice.",
+            "cn": "謝謝你的建議。錯在哪裡：advice 是不可數名詞，不加 s。"
+          },
+          {
+            "tag": "5",
+            "en": "❌ The government subsidy are very important. ✅ The government subsidies are very important.",
+            "cn": "政府補助非常重要。錯在哪裡：主詞和動詞要一致：複數 subsidies 配 are；如果只講一項補助，就說 The government subsidy is very important。（課堂提醒要複習的舊句子）"
+          },
+          {
+            "tag": "6",
+            "en": "❌ I consulted to my manager about the schedule. ✅ I consulted my manager about the schedule.",
+            "cn": "我向經理請教了時程的事。錯在哪裡：consult 直接接人，不加 to。"
+          }
+        ]
       }
     ]
   }

@@ -7,9 +7,20 @@
 // VOCABULARY DATA  ← 由 /sync-notes 指令自動維護
 // ═══════════════════════════════════════════════
 // 已處理的課程筆記日期（跨批次累計，避免重複處理）
-// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260731, 20260804, 20260811, 20260813, 20260818, 20260821, 20260825, 20260827, 20260903, 20260910, 20260915, 20260917, 20260922, 20261001, 20261006, 20261008, 20261013, 20261015, 20261021, 20261023, 20261027, 20261029, 20261103, 20261105, 20261110, 20261112, 20261119, 20261120, 20261124
+// ===SYNC:PROCESSED_LESSONS=== 20250709, 20250717, 20250722, 20250724, 20250729, 20250805, 20250807, 20251016, 20251202, 20251209, 20251216, 20251218, 20251226, 20260106, 20260108, 20260113, 20260120, 20260122, 20260127, 20260129, 20260203, 20260210, 20260212, 20260224, 20260226, 20260305, 20260310, 20260312, 20260317, 20260319, 20260324, 20260326, 20260331, 20260402, 20260407, 20260409, 20260421, 20260423, 20260507, 20260512, 20260514, 20260519, 20260521, 20260526, 20260528, 20260602, 20260604, 20260609, 20260611, 20260618, 20260624, 20260625, 20260701, 20260708, 20260709, 20260716, 20260721, 20260731, 20260804, 20260811, 20260813, 20260818, 20260821, 20260825, 20260827, 20260903, 20260910, 20260915, 20260917, 20260922, 20261001, 20261006, 20261008, 20261013, 20261015, 20261021, 20261023, 20261027, 20261029, 20261103, 20261105, 20261110, 20261112, 20261119, 20261120, 20261124, 20261126
 const vocab = [
-// ===SYNC:VOCAB_START=== sync_date:2026-11-24 count:922
+// ===SYNC:VOCAB_START=== sync_date:2026-11-26 count:932
+  // --- 20261126 顧問、負載條件與熱脹冷縮 ---
+  {w:"consultant",ipa:"/kənˈsʌl.tənt/",pos:"n.",cn:"顧問",def:"A person who gives expert advice to a company.",exEn:"Our company hired a safety consultant.",exCn:"我們公司聘請了一位安全顧問。",cat:"workplace"},
+  {w:"advise",ipa:"/ədˈvaɪz/",pos:"v.",cn:"建議、勸告",def:"To tell someone what you think they should do.",exEn:"The doctor advised me to rest.",exCn:"醫生建議我休息。",cat:"daily"},
+  {w:"advice",ipa:"/ədˈvaɪs/",pos:"n.",cn:"建議（不可數）",def:"An opinion about what someone should do.",exEn:"She gave me some good advice.",exCn:"她給了我一些好建議。",cat:"daily"},
+  {w:"optimistic",ipa:"/ˌɑːp.təˈmɪs.tɪk/",pos:"adj.",cn:"樂觀的",def:"Hopeful that good things will happen.",exEn:"Try to stay optimistic.",exCn:"試著保持樂觀。",cat:"daily"},
+  {w:"pessimistic",ipa:"/ˌpes.əˈmɪs.tɪk/",pos:"adj.",cn:"悲觀的",def:"Expecting that bad things will happen.",exEn:"Why are you always pessimistic?",exCn:"你為什麼總是那麼悲觀？",cat:"daily"},
+  {w:"twist",ipa:"/twɪst/",pos:"v.",cn:"扭曲、扭轉",def:"To bend or turn something out of its normal shape.",exEn:"The frame may twist during welding.",exCn:"框架在焊接時可能會扭曲變形。",cat:"workplace"},
+  {w:"vibrate",ipa:"/ˈvaɪ.breɪt/",pos:"v.",cn:"震動",def:"To shake quickly with small movements.",exEn:"The machine may vibrate under heavy load conditions.",exCn:"在重負載條件下，機器可能會震動。",cat:"workplace"},
+  {w:"deform",ipa:"/dɪˈfɔːrm/",pos:"v.",cn:"變形",def:"To change from the normal shape.",exEn:"The product may deform under extreme conditions.",exCn:"產品在極端條件下可能會變形。",cat:"workplace"},
+  {w:"expand",ipa:"/ɪkˈspænd/",pos:"v.",cn:"膨脹、擴大",def:"To become bigger.",exEn:"Metal expands when heated and contracts when cooled.",exCn:"金屬受熱時會膨脹，冷卻時會收縮。",cat:"workplace"},
+  {w:"contract",ipa:"/kənˈtrækt/",pos:"v.",cn:"收縮",def:"To become smaller.",exEn:"Your muscles contract when you lift something.",exCn:"你搬東西時肌肉會收縮。",cat:"workplace"},
   // --- 20261124 品質投訴、退休傳承與 in case ---
   {w:"retire",ipa:"/rɪˈtaɪr/",pos:"v.",cn:"退休",def:"To stop working because you have reached a certain age.",exEn:"My uncle retires next year.",exCn:"我叔叔明年退休。",cat:"workplace"},
   {w:"retirement",ipa:"/rɪˈtaɪr.mənt/",pos:"n.",cn:"退休（名詞）",def:"The time when you stop working, usually because of age.",exEn:"She is planning for her retirement.",exCn:"她正在規劃退休生活。",cat:"workplace"},
@@ -1020,8 +1031,10 @@ const vocab = [
 ];
 
 // 每個單字的筆記來源 (key = word, value = note title)
-// ===SYNC:SOURCES_START=== sync_date:2026-11-24
+// ===SYNC:SOURCES_START=== sync_date:2026-11-26
 const vocabSources = {
+  // --- 20261126 顧問、負載條件與熱脹冷縮 ---
+  "consultant":"20261126 顧問、負載條件與熱脹冷縮","advise":"20261126 顧問、負載條件與熱脹冷縮","advice":"20261126 顧問、負載條件與熱脹冷縮","optimistic":"20261126 顧問、負載條件與熱脹冷縮","pessimistic":"20261126 顧問、負載條件與熱脹冷縮","twist":"20261126 顧問、負載條件與熱脹冷縮","vibrate":"20261126 顧問、負載條件與熱脹冷縮","deform":"20261126 顧問、負載條件與熱脹冷縮","expand":"20261126 顧問、負載條件與熱脹冷縮","contract":"20261126 顧問、負載條件與熱脹冷縮",
   // --- 20261124 品質投訴、退休傳承與 in case ---
   "retire":"20261124 品質投訴、退休傳承與 in case","retirement":"20261124 品質投訴、退休傳承與 in case","knowledge":"20261124 品質投訴、退休傳承與 in case","absent":"20261124 品質投訴、退休傳承與 in case","backup":"20261124 品質投訴、退休傳承與 in case","release":"20261124 品質投訴、退休傳承與 in case","counterclockwise":"20261124 品質投訴、退休傳承與 in case","reimburse":"20261124 品質投訴、退休傳承與 in case","reimbursement":"20261124 品質投訴、退休傳承與 in case","flashlight":"20261124 品質投訴、退休傳承與 in case",
   // --- 20261120 品質管制年資、申請補助與保險給付 ---
@@ -1560,8 +1573,19 @@ const vocabSources = {
 };
 // ===SYNC:SOURCES_END===
 
-// ===SYNC:TRANS_START=== sync_date:2026-11-24 count:525
+// ===SYNC:TRANS_START=== sync_date:2026-11-26 count:535
 const allTrans = [
+  // --- 20261126 顧問、負載條件與熱脹冷縮 cn-en ---
+  {p:"Tom 計劃退休後擔任品質講師。",a:"Tom plans to work as a quality teacher after retirement.",h:"plan to + V；work as + a + 職業",kw:["plan to","work as","retirement"],src:"20261126 顧問、負載條件與熱脹冷縮"},
+  {p:"今天我們有一位作業員因病缺勤。",a:"Today, one of our operators was absent because of illness.",h:"one of our + 複數名詞 + 單數動詞；because of + 名詞",kw:["one of our operators","absent","illness"],src:"20261126 顧問、負載條件與熱脹冷縮"},
+  {p:"有很多零件需要檢驗，所以我安排了一位替補檢驗員來完成檢驗。",a:"We had a lot of parts that needed to be inspected, so I arranged a backup inspector to complete the inspections.",h:"名詞 + that + 子句；backup inspector 替補檢驗員",kw:["backup inspector","arrange","inspect"],src:"20261126 顧問、負載條件與熱脹冷縮"},
+  {p:"框架在焊接時可能會扭曲變形，所以我們需要檢驗首件，確保尺寸沒問題。",a:"The frame may twist during welding, so we need to inspect the first unit to make sure the dimensions are OK.",h:"may + V；the dimensions 加 the",kw:["twist","welding","dimensions"],src:"20261126 顧問、負載條件與熱脹冷縮"},
+  {p:"在要求供應商賠償之前，我們需要先評估返工成本。",a:"We need to evaluate the rework costs before asking the supplier to reimburse us.",h:"before + V-ing；ask + 人 + to + V",kw:["evaluate","rework costs","reimburse"],src:"20261126 顧問、負載條件與熱脹冷縮"},
+  {p:"這項實驗是在不同的負載條件下進行的。",a:"The experiment was conducted under different load conditions.",h:"被動 was conducted；under ... conditions",kw:["experiment","conduct","under","load conditions"],src:"20261126 顧問、負載條件與熱脹冷縮"},
+  {p:"檢驗員保留了一些不良品，以防供應商需要調查原因。",a:"The inspector kept some defective parts in case the supplier needed to investigate the cause.",h:"in case + 過去式子句；investigate the cause",kw:["in case","defective","investigate","cause"],src:"20261126 顧問、負載條件與熱脹冷縮"},
+  {p:"在決定是否接受這批不良品之前，我們需要先與品質經理討論。",a:"Before deciding whether to accept this batch of defective parts, we need to consult with the quality manager.",h:"before deciding whether to + V；consult with + 人",kw:["before deciding whether to","batch","consult with"],src:"20261126 顧問、負載條件與熱脹冷縮"},
+  {p:"我們需要在重負載條件下進行測試，以確保結構沒有問題。",a:"We need to conduct a test under heavy load conditions to make sure the structure is OK.",h:"conduct a test；under heavy load conditions",kw:["conduct a test","heavy load","structure"],src:"20261126 顧問、負載條件與熱脹冷縮"},
+  {p:"我們需要在恆溫條件下檢驗產品。",a:"We need to inspect the product under constant temperature conditions.",h:"under constant temperature conditions 恆溫條件下",kw:["inspect","constant","temperature"],src:"20261126 顧問、負載條件與熱脹冷縮"},
   // --- 20261124 品質投訴、退休傳承與 in case cn-en ---
   {p:"我們把故障的馬達退回給供應商檢驗。",a:"We sent the defective motor back to the supplier for inspection.",h:"send back to the supplier；for inspection 送檢",kw:["defective","supplier","inspection"],src:"20261124 品質投訴、退休傳承與 in case"},
   {p:"最近我們收到客訴，是關於第一批產品的，所以我們需要評估返工成本。",a:"Recently, we received a customer complaint about the first batch, so we need to evaluate the rework costs.",h:"complaint about + the first batch；rework costs",kw:["complaint","batch","evaluate","rework"],src:"20261124 品質投訴、退休傳承與 in case"},
@@ -2152,7 +2176,23 @@ const allTrans = [
 ];
 
 const allKW = [
-// ===SYNC:KW_START=== sync_date:2026-11-24 count:111
+// ===SYNC:KW_START=== sync_date:2026-11-26 count:114
+  // --- 20261126 顧問、負載條件與熱脹冷縮（例句全部取自筆記）---
+  {w:"consult",ipa:"/kənˈsʌlt/",tag:"請教、諮詢 · v.（consult + 人 + about + 事；consult with + 人；直接接人，不加 to）",exs:[
+    {en:"I consulted my supervisor about the quality issues.",cn:"我向主管請教了品質問題。"},
+    {en:"Before deciding whether to accept this batch of defective parts, we need to consult with the quality manager.",cn:"在決定是否接受這批不良品之前，我們需要先與品質經理討論。"},
+    {en:"If the pain continues, consult a doctor.",cn:"如果持續疼痛，請就醫。"},
+  ]},
+  {w:"under ... conditions",ipa:"/ˈʌndɚ kənˈdɪʃənz/",tag:"在…條件下 · prep. phr.（講某個溫度用 at）",exs:[
+    {en:"The machine operates normally under normal conditions.",cn:"在正常情況下，這台機器運作正常。"},
+    {en:"The experiment was conducted under different load conditions.",cn:"這項實驗是在不同的負載條件下進行的。"},
+    {en:"The product may deform under extreme conditions.",cn:"產品在極端條件下可能會變形。"},
+  ]},
+  {w:"thermal expansion and contraction",ipa:"/ˈθɝː.məl ɪkˈspæn.ʃən ənd kənˈtræk.ʃən/",tag:"熱脹冷縮 · n. phr.（expand 膨脹 ↔ contract 收縮）",exs:[
+    {en:"Metal expands when heated and contracts when cooled.",cn:"金屬受熱時會膨脹，冷卻時會收縮。"},
+    {en:"We need to consider thermal expansion and contraction during the design process.",cn:"在設計過程中，我們需要考慮熱脹冷縮的影響。"},
+    {en:"Thermal expansion and contraction may affect the dimensions of the frame.",cn:"熱脹冷縮可能會影響框架的尺寸。"},
+  ]},
   // --- 20261124 品質投訴、退休傳承與 in case（例句全部取自筆記）---
   {w:"in case",ipa:"/ɪn ˈkeɪs/",tag:"以防、萬一 · conj.（先做準備；in case of + 名詞）",exs:[
     {en:"Bring an umbrella in case it rains.",cn:"帶把傘，以防下雨。"},
@@ -3894,7 +3934,29 @@ const articles = [
 // 題型：mc（answer 為 0-based 索引）、fill（answer 為可接受答案陣列）。請勿手動更動 SYNC 標記行。
 // ═══════════════════════════════════════════════
 const DAYQUIZ = {
-// ===SYNC:DAYQUIZ_START=== sync_date:2026-11-24 count:49
+// ===SYNC:DAYQUIZ_START=== sync_date:2026-11-26 count:50
+  "20261126": {
+    title: "顧問、負載條件與熱脹冷縮",
+    subtitle: "Advisors, Load Conditions & Thermal Expansion",
+    questions: [
+      {type:"mc",tag:"改錯",q:"哪一句正確？",options:["Tom plans to work as quality teacher after retirement.","Tom plans to work as a quality teacher after retirement."],answer:1,explain:"work as + 職業，可數名詞單數前要加 a／an。"},
+      {type:"mc",tag:"冠詞",q:"She works as ___ engineer in a car factory.",options:["a","an"],answer:1,explain:"engineer 是母音開頭，用 an。"},
+      {type:"fill",tag:"because of",q:"He was absent because of ___ yesterday. (sick)",cn:"他昨天因病缺勤。",answer:["illness"],explain:"because of 後面接名詞 illness，不能接形容詞 sick。"},
+      {type:"mc",tag:"改錯",q:"哪一句正確？",options:["Today, we have a operator was absent because of sick.","Today, one of our operators was absent because of illness."],answer:1,explain:"一句只能有一個主要動詞；one of our + 複數名詞，主詞是 one，用 was。"},
+      {type:"fill",tag:"介系詞",q:"The experiment was conducted ___ different load conditions.",cn:"這項實驗是在不同的負載條件下進行的。",answer:["under"],explain:"「在…條件下」用 under ... conditions。"},
+      {type:"mc",tag:"介系詞",q:"The test was done ___ different temperatures.",options:["under","at"],answer:1,explain:"講「某個溫度」用 at；講「條件」才用 under ... conditions。"},
+      {type:"mc",tag:"用字",q:"The inspector kept some defective parts in case the supplier needed to investigate the ___.",options:["reason","cause"],answer:1,explain:"品保上調查問題的根源說 investigate the cause；reason 是做某事的理由。"},
+      {type:"fill",tag:"consult",q:"I consulted ___ manager about the schedule.",cn:"我向經理請教了時程的事。",answer:["my"],explain:"consult 直接接人，不加 to：consult my manager。"},
+      {type:"mc",tag:"不可數",q:"Thanks for your ___.",options:["advices","advice"],answer:1,explain:"advice 是不可數名詞，不加 s。"},
+      {type:"mc",tag:"詞性",q:"My friend always ___ me.",options:["advices","advises"],answer:1,explain:"動詞是 advise（/z/）；advice（/s/）是名詞。"},
+      {type:"mc",tag:"have／be",q:"She has a feeling of disappointment. ＝ She is ___.",options:["disappointment","disappointed"],answer:1,explain:"have + 名詞（disappointment）；be + 形容詞（disappointed）。"},
+      {type:"fill",tag:"熱脹冷縮",q:"Metal expands when heated and ___ when cooled.",cn:"金屬受熱時會膨脹，冷卻時會收縮。",answer:["contracts"],explain:"expand 膨脹 ↔ contract 收縮；主詞 metal 單數加 s。"},
+      {type:"mc",tag:"主詞動詞一致",q:"The government subsidies ___ very important.",options:["is","are"],answer:1,explain:"複數 subsidies 配 are。"},
+      {type:"mc",tag:"-tion",q:"哪一個是 vibrate 的名詞？",options:["vibration","vibratement"],answer:0,explain:"vibrate → vibration；evaluate → evaluation。"},
+      {type:"trans",tag:"翻譯",q:"我們需要在恆溫條件下檢驗產品。",answer:"We need to inspect the product under constant temperature conditions.",explain:"under constant temperature conditions 恆溫條件下。"},
+      {type:"trans",tag:"翻譯",q:"框架在焊接時可能會扭曲變形。",answer:"The frame may twist during welding.",explain:"may + 原形動詞；during welding 焊接時。"},
+    ]
+  },
   "20261124": {
     title: "品質投訴、退休傳承與 in case",
     subtitle: "Complaints, Retirement & In Case",
@@ -6092,7 +6154,21 @@ const DAYQUIZ = {
 // 沒有腳本的日期會自動退回「教練只說引導語」的模式。
 // ═══════════════════════════════════════════════
 const DAYTALK = {
-// ===SYNC:DAYTALK_START=== sync_date:2026-11-24 count:23
+// ===SYNC:DAYTALK_START=== sync_date:2026-11-26 count:24
+  "20261126": {
+    title: "顧問、負載條件與熱脹冷縮",
+    turns: [
+      {q:"A coworker asks what Tom wants to do after he retires. What do you say?",qCn:"同事問 Tom 退休後想做什麼。你怎麼說？",en:"Tom plans to work as a quality teacher after retirement.",cn:"Tom 計劃退休後擔任品質講師。",hint:"work as + a + 職業"},
+      {q:"Your manager asks why the inspection line was short of people today. What do you say?",qCn:"主管問今天檢驗線為什麼缺人。你怎麼說？",en:"Today, one of our operators was absent because of illness.",cn:"今天我們有一位作業員因病缺勤。",hint:"because of + 名詞 illness"},
+      {q:"Your manager asks why you need to inspect the first unit. What do you say?",qCn:"主管問為什麼要檢驗首件。你怎麼說？",en:"The frame may twist during welding, so we need to inspect the first unit to make sure the dimensions are OK.",cn:"框架在焊接時可能會扭曲變形，所以我們需要檢驗首件，確保尺寸沒問題。",hint:"may twist；make sure the dimensions"},
+      {q:"A coworker asks if we can ask the supplier to pay for the rework now. What do you say?",qCn:"同事問現在可以要供應商賠返工費嗎。你怎麼說？",en:"We need to evaluate the rework costs before asking the supplier to reimburse us.",cn:"在要求供應商賠償之前，我們需要先評估返工成本。",hint:"before + V-ing"},
+      {q:"Your manager asks what you will do with the defective parts. What do you say?",qCn:"主管問那批不良品要怎麼處理。你怎麼說？",en:"Before deciding whether to accept this batch of defective parts, we need to consult with the quality manager.",cn:"在決定是否接受這批不良品之前，我們需要先與品質經理討論。",hint:"consult with + 人"},
+      {q:"A customer asks how you tested the new structure. What do you say?",qCn:"客戶問新結構怎麼測試。你怎麼說？",en:"We need to conduct a test under heavy load conditions to make sure the structure is OK.",cn:"我們需要在重負載條件下進行測試，以確保結構沒有問題。",hint:"conduct a test；under ... conditions"},
+      {q:"A new engineer asks why the frame dimensions change in summer and winter. What do you say?",qCn:"新工程師問框架尺寸為什麼夏天冬天會不一樣。你怎麼說？",en:"Thermal expansion and contraction may affect the dimensions of the frame.",cn:"熱脹冷縮可能會影響框架的尺寸。",hint:"thermal expansion and contraction"},
+      {q:"A new inspector asks if room temperature matters when measuring. What do you say?",qCn:"新檢驗員問量測時室溫有沒有影響。你怎麼說？",en:"We need to inspect the product under constant temperature conditions.",cn:"我們需要在恆溫條件下檢驗產品。",hint:"constant temperature 恆溫"},
+      {q:"A friend says they feel sad all the time. What do you say?",qCn:"朋友說他一直覺得很難過。你怎麼說？",en:"Try to stay optimistic.",cn:"試著保持樂觀。",hint:"stay + 形容詞"},
+    ]
+  },
   "20261124": {
     title: "品質投訴、退休傳承與 in case",
     turns: [

@@ -58523,3 +58523,1129 @@ window.VIDEO["bk20261124"] = {
   }
  ]
 };
+
+/* ---- bk20261126 新插圖：熱脹冷縮（金屬棒受熱向兩側膨脹、下方火焰、溫度計與雪花）---- */
+window.VIDEO_ART.thermalExpand = '<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="184" height="134" rx="8" fill="#fdf6ec" stroke="#2b2118" stroke-width="3"/><rect x="50" y="56" width="100" height="22" rx="3" fill="#b8b0a4" stroke="#2b2118" stroke-width="3.5"/><path d="M46 67 h-24 m0 0 l9 -8 m-9 8 l9 8 M154 67 h24 m0 0 l-9 -8 m9 8 l-9 8" fill="none" stroke="#d9534f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M70 128 q-8 -12 2 -22 q2 8 8 8 q-2 -12 8 -18 q0 12 10 16 q6 -6 4 -14 q12 10 6 30 z" fill="#e8813a" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><path d="M60 128 h80" stroke="#2b2118" stroke-width="3" stroke-linecap="round"/><path d="M150 26 v20 M141 31 l18 10 M141 41 l18 -10" stroke="#3b82c4" stroke-width="3.5" stroke-linecap="round"/><path d="M40 26 h8 v18 a8 8 0 1 1 -8 0 z" fill="#fff" stroke="#2b2118" stroke-width="3" stroke-linejoin="round"/><path d="M44 32 v14" stroke="#d9534f" stroke-width="4" stroke-linecap="round"/></svg>';
+window.VIDEO["bk20261126"] = {
+ "title": "Advisors, Load Conditions & Thermal Expansion",
+ "titleCn": "顧問、負載條件與熱脹冷縮",
+ "date": "2026-11-26",
+ "level": "B1",
+ "scene": "A Busy Day on the Quality Team",
+ "sceneCn": "品保部門忙碌的一天",
+ "sceneArt": "labExperiment",
+ "titleArt": [
+  "heavyLoadCarry",
+  "thermalExpand",
+  "roundTable"
+ ],
+ "cast": {
+  "N": {
+   "name": "Narrator",
+   "cn": "旁白",
+   "voice": "n"
+  },
+  "A": {
+   "name": "Anita",
+   "cn": "Anita・品保工程師",
+   "voice": "f"
+  },
+  "T": {
+   "name": "Tom",
+   "cn": "Tom・資深工程師",
+   "voice": "m"
+  }
+ },
+ "chapters": [
+  {
+   "en": "Intro",
+   "cn": "開場"
+  },
+  {
+   "en": "A Busy Day on the Quality Team",
+   "cn": "情境：品保部門忙碌的一天"
+  },
+  {
+   "en": "Key Expressions",
+   "cn": "重點表達"
+  },
+  {
+   "en": "Phrases & Collocations",
+   "cn": "片語搭配"
+  },
+  {
+   "en": "Grammar",
+   "cn": "文法"
+  },
+  {
+   "en": "Homework Fixes",
+   "cn": "作業訂正"
+  },
+  {
+   "en": "Quick Quiz",
+   "cn": "小測驗"
+  }
+ ],
+ "expr": {
+  "becauseOf": {
+   "t": "because of illness",
+   "cn": "因病",
+   "tag": [
+    "片語",
+    "請假"
+   ],
+   "note": "because of／due to 後面接名詞，不接形容詞 sick。",
+   "ex": "The game was canceled because of the rain.",
+   "exCn": "比賽因為下雨取消了。"
+  },
+  "backup": {
+   "t": "backup inspector",
+   "cn": "替補檢驗員",
+   "tag": [
+    "名詞片語",
+    "品質"
+   ],
+   "note": "可數名詞要加 a；arrange for a backup inspector to + V。",
+   "ex": "We always keep a backup inspector on Saturdays.",
+   "exCn": "我們週六一定會安排一位替補檢驗員。"
+  },
+  "twist": {
+   "t": "twist during welding",
+   "cn": "焊接時扭曲變形",
+   "tag": [
+    "動詞",
+    "製程"
+   ],
+   "note": "may + 原形動詞 表示「可能會」：may twist。",
+   "ex": "Thin metal sheets can twist when they cool too fast.",
+   "exCn": "薄金屬板冷卻太快時可能會扭曲。"
+  },
+  "dims": {
+   "t": "make sure the dimensions are OK",
+   "cn": "確保尺寸沒問題",
+   "tag": [
+    "句型",
+    "檢驗"
+   ],
+   "note": "to make sure + 子句；指特定的尺寸要加 the。",
+   "ex": "Check the drawing to make sure the dimensions are correct.",
+   "exCn": "對一下圖面，確保尺寸正確。"
+  },
+  "underCond": {
+   "t": "under heavy load conditions",
+   "cn": "在重負載條件下",
+   "tag": [
+    "片語",
+    "測試"
+   ],
+   "note": "「在…條件下」用 under：under normal／certain／extreme conditions。",
+   "ex": "The battery lasts longer under normal conditions.",
+   "exCn": "在正常情況下電池可以撐比較久。"
+  },
+  "vibrate": {
+   "t": "may vibrate",
+   "cn": "可能會震動",
+   "tag": [
+    "動詞",
+    "設備"
+   ],
+   "note": "動詞 vibrate，名詞 vibration。",
+   "ex": "The washing machine may vibrate if it isn't level.",
+   "exCn": "洗衣機如果沒放平可能會震動。"
+  },
+  "thermal": {
+   "t": "expands when heated",
+   "cn": "受熱時膨脹",
+   "tag": [
+    "句型",
+    "材料"
+   ],
+   "note": "when heated = when it is heated；名詞片語是 thermal expansion and contraction。",
+   "ex": "The lid opens more easily because metal expands when heated.",
+   "exCn": "因為金屬受熱會膨脹，蓋子比較容易打開。"
+  },
+  "constTemp": {
+   "t": "under constant temperature conditions",
+   "cn": "在恆溫條件下",
+   "tag": [
+    "片語",
+    "量測"
+   ],
+   "note": "講條件用 under；講溫度本身用 at a constant temperature／at room temperature。",
+   "ex": "The samples are stored under constant temperature conditions.",
+   "exCn": "樣品存放在恆溫條件下。"
+  },
+  "inCase": {
+   "t": "in case the supplier needs them",
+   "cn": "以防供應商需要",
+   "tag": [
+    "連接詞",
+    "預防"
+   ],
+   "note": "in case + 子句：先準備，以防萬一。",
+   "ex": "Save the old file in case you need it later.",
+   "exCn": "把舊檔案存起來，以防之後需要。"
+  },
+  "cause": {
+   "t": "investigate the cause",
+   "cn": "調查原因",
+   "tag": [
+    "片語",
+    "品質"
+   ],
+   "note": "品保分析問題用 cause，不用 reason。",
+   "ex": "The engineers will investigate the cause of the crack.",
+   "exCn": "工程師會調查裂縫的原因。"
+  },
+  "consult": {
+   "t": "consult with the quality manager",
+   "cn": "和品質經理商量",
+   "tag": [
+    "動詞",
+    "職場"
+   ],
+   "note": "consult + 人 + about + 事；consult 直接接人，不加 to。",
+   "ex": "Please consult with your doctor before taking this medicine.",
+   "exCn": "服用這個藥之前請先和你的醫生討論。"
+  },
+  "optimistic": {
+   "t": "optimistic",
+   "cn": "樂觀的",
+   "tag": [
+    "形容詞",
+    "情緒"
+   ],
+   "note": "optimist 是人、optimism 是名詞；反義是 pessimistic。",
+   "ex": "She stays optimistic even on bad days.",
+   "exCn": "就算日子不順，她也保持樂觀。"
+  },
+  "advice": {
+   "t": "advice",
+   "cn": "建議（名詞）",
+   "tag": [
+    "名詞",
+    "易混淆"
+   ],
+   "note": "advice 不可數，不說 an advice／advices；動詞是 advise。",
+   "ex": "Can I give you a piece of advice?",
+   "exCn": "我可以給你一個建議嗎？"
+  },
+  "advisorFam": {
+   "t": "technical advisor",
+   "cn": "技術顧問",
+   "tag": [
+    "名詞",
+    "職業"
+   ],
+   "note": "也有 financial／legal／business／career advisor；也可說 consultant。",
+   "ex": "The technical advisor explained the new machine to us.",
+   "exCn": "技術顧問向我們說明了新機器。"
+  },
+  "conduct": {
+   "t": "conduct a test",
+   "cn": "進行測試",
+   "tag": [
+    "動詞",
+    "測試"
+   ],
+   "note": "conduct 後面一定要有受詞：an experiment／a test／an investigation。",
+   "ex": "The school will conduct a fire drill next week.",
+   "exCn": "學校下週會進行消防演習。"
+  }
+ },
+ "lines": [
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Welcome back. Today, Anita deals with an absent operator, a load test, and a frame that may twist.",
+   "cn": "歡迎回來。今天 Anita 要處理一位缺勤的作業員、一場負載測試，還有一個可能變形的框架。"
+  },
+  {
+   "ch": 0,
+   "sp": "N",
+   "vis": {
+    "type": "title"
+   },
+   "en": "Listen for because of illness, under heavy load conditions, expands when heated, and consult with.",
+   "cn": "注意聽：because of illness、under heavy load conditions、expands when heated 和 consult with。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "coffeeBreak"
+   },
+   "en": "Hey Anita. You look busy. What's up?",
+   "cn": "嘿 Anita，妳看起來很忙。怎麼了？"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "sneezeTissue"
+   },
+   "en": "One of our operators was absent today because of illness.",
+   "cn": "我們有一位作業員今天因病缺勤。",
+   "hi": [
+    {
+     "t": "because of illness",
+     "cn": "因病",
+     "k": "becauseOf",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "separateBins"
+   },
+   "en": "Oh no. And we had a ton of parts to inspect.",
+   "cn": "糟糕。我們還有一大堆零件要檢驗。"
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "nameBadge"
+   },
+   "en": "Right, so I arranged for a backup inspector to finish them.",
+   "cn": "對，所以我安排了一位替補檢驗員把它們做完。",
+   "hi": [
+    {
+     "t": "backup inspector",
+     "cn": "替補檢驗員",
+     "k": "backup",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "bikeFrame"
+   },
+   "en": "Nice. Oh, and the new frame may twist during welding.",
+   "cn": "很好。喔，還有新框架在焊接時可能會扭曲變形。",
+   "hi": [
+    {
+     "t": "twist during welding",
+     "cn": "焊接時扭曲變形",
+     "k": "twist",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "firstPiece"
+   },
+   "en": "Then let's inspect the first unit to make sure the dimensions are OK.",
+   "cn": "那我們先檢驗首件，確保尺寸沒問題。",
+   "hi": [
+    {
+     "t": "make sure the dimensions are OK",
+     "cn": "確保尺寸沒問題",
+     "k": "dims",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "heavyLoadCarry"
+   },
+   "en": "Good. We also need to conduct a test under heavy load conditions.",
+   "cn": "好。我們也需要在重負載條件下做測試。",
+   "hi": [
+    {
+     "t": "under heavy load conditions",
+     "cn": "在重負載條件下",
+     "k": "underCond",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "labExperiment"
+   },
+   "en": "How come? Is it the vibration again?",
+   "cn": "為什麼？又是震動的問題嗎？"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "heavyLoadCarry"
+   },
+   "en": "Yeah. The machine may vibrate under heavy load.",
+   "cn": "對。機器在重負載下可能會震動。",
+   "hi": [
+    {
+     "t": "may vibrate",
+     "cn": "可能會震動",
+     "k": "vibrate",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "thermalExpand"
+   },
+   "en": "And metal expands when heated and contracts when cooled, right?",
+   "cn": "而且金屬受熱會膨脹、冷卻會收縮，對吧？",
+   "hi": [
+    {
+     "t": "expands when heated",
+     "cn": "受熱時膨脹",
+     "k": "thermal",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "measureCaliper"
+   },
+   "en": "Exactly. That's why we measure parts under constant temperature conditions.",
+   "cn": "沒錯。所以我們要在恆溫條件下量零件。",
+   "hi": [
+    {
+     "t": "under constant temperature conditions",
+     "cn": "在恆溫條件下",
+     "k": "constTemp",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "reworkSort"
+   },
+   "en": "Got it. Oh — I kept some defective parts in case the supplier needs them.",
+   "cn": "了解。喔，我留了一些不良品，以防供應商需要。",
+   "hi": [
+    {
+     "t": "in case the supplier needs them",
+     "cn": "以防供應商需要",
+     "k": "inCase",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "rootCause"
+   },
+   "en": "Smart. They'll want to investigate the cause.",
+   "cn": "聰明。他們會想調查原因。",
+   "hi": [
+    {
+     "t": "investigate the cause",
+     "cn": "調查原因",
+     "k": "cause",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "bigBill"
+   },
+   "en": "But first, I'll evaluate the rework costs.",
+   "cn": "不過我會先評估返工成本。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "roundTable"
+   },
+   "en": "And before you accept that batch, consult with the quality manager.",
+   "cn": "還有，在接受那批貨之前，先跟品質經理商量。",
+   "hi": [
+    {
+     "t": "consult with the quality manager",
+     "cn": "和品質經理商量",
+     "k": "consult",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 1,
+   "sp": "A",
+   "vis": {
+    "type": "scene",
+    "art": "cheerUp"
+   },
+   "en": "Will do. Don't worry, it'll work out.",
+   "cn": "會的。別擔心，事情會解決的。"
+  },
+  {
+   "ch": 1,
+   "sp": "T",
+   "vis": {
+    "type": "scene",
+    "art": "coffeeBreak"
+   },
+   "en": "Ha. You're always so optimistic.",
+   "cn": "哈，妳總是那麼樂觀。",
+   "hi": [
+    {
+     "t": "optimistic",
+     "cn": "樂觀的",
+     "k": "optimistic",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "advise",
+     "ipa": "/ədˈvaɪz/",
+     "cn": "建議（動詞）",
+     "def": "To tell someone what you think they should do.",
+     "art": "roundTable"
+    },
+    "b": {
+     "w": "advice",
+     "ipa": "/ədˈvaɪs/",
+     "cn": "建議（名詞，不可數）",
+     "def": "An opinion about what someone should do.",
+     "art": "clipboard"
+    }
+   },
+   "en": "Advise is a verb, with a z sound. Advice is a noun, with an s sound, and you can't count it.",
+   "cn": "advise 是動詞，字尾是 z 音；advice 是名詞，字尾是 s 音，而且不可數。",
+   "hi": [
+    {
+     "t": "Advice",
+     "cn": "建議（名詞）",
+     "k": "advice",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "consult",
+    "ipa": "/kənˈsʌlt/",
+    "pos": "v.",
+    "art": "interviewDesk",
+    "def": "To ask an expert for advice or information.",
+    "cn": "諮詢、請教。",
+    "note": "consult + 人 + about + 事；consult 直接接人，不加 to。"
+   },
+   "en": "Consult means you ask someone who knows more for advice.",
+   "cn": "consult 是向比你懂的人請教、徵詢意見。",
+   "hi": [
+    {
+     "t": "Consult",
+     "cn": "請教",
+     "k": "consult",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "vs",
+    "a": {
+     "w": "optimistic",
+     "ipa": "/ˌɑːp.təˈmɪs.tɪk/",
+     "cn": "樂觀的",
+     "def": "Expecting good things to happen.",
+     "art": "cheerUp"
+    },
+    "b": {
+     "w": "pessimistic",
+     "ipa": "/ˌpes.əˈmɪs.tɪk/",
+     "cn": "悲觀的",
+     "def": "Expecting bad things to happen.",
+     "art": "worriedFace"
+    }
+   },
+   "en": "Optimistic people expect good things. Pessimistic people expect the worst.",
+   "cn": "樂觀的人預期好事會發生；悲觀的人總是預期最壞的情況。",
+   "hi": [
+    {
+     "t": "Optimistic",
+     "cn": "樂觀的",
+     "k": "optimistic",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "sp": "N",
+   "vis": {
+    "type": "slide",
+    "w": "thermal",
+    "ipa": "/ˈθɝː.məl/",
+    "pos": "adj.",
+    "art": "thermalExpand",
+    "def": "Connected with heat or temperature.",
+    "cn": "熱的；thermal expansion and contraction ＝ 熱脹冷縮。",
+    "note": "動詞 expand／contract；名詞 expansion／contraction。"
+   },
+   "en": "Thermal means connected with heat. Thermal expansion and contraction changes the size of metal parts.",
+   "cn": "thermal 是「熱的」。熱脹冷縮會改變金屬零件的尺寸。",
+   "hi": [
+    {
+     "t": "Thermal expansion and contraction",
+     "cn": "熱脹冷縮",
+     "k": "thermal",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "advisor",
+    "coreCn": "……顧問",
+    "art": "roundTable",
+    "items": [
+     {
+      "t": "financial ~",
+      "cn": "財務顧問"
+     },
+     {
+      "t": "technical ~",
+      "cn": "技術顧問"
+     },
+     {
+      "t": "legal ~",
+      "cn": "法律顧問"
+     },
+     {
+      "t": "career ~",
+      "cn": "職涯顧問"
+     }
+    ]
+   },
+   "en": "Financial advisor, technical advisor, legal advisor, career advisor.",
+   "cn": "財務顧問、技術顧問、法律顧問、職涯顧問。",
+   "hi": [
+    {
+     "t": "technical advisor",
+     "cn": "技術顧問",
+     "k": "advisorFam",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "under ... conditions",
+    "coreCn": "在……條件下",
+    "art": "heavyLoadCarry",
+    "items": [
+     {
+      "t": "under normal ~",
+      "cn": "在正常情況下"
+     },
+     {
+      "t": "under certain ~",
+      "cn": "在某些特定條件下"
+     },
+     {
+      "t": "under heavy load ~",
+      "cn": "在重負載條件下"
+     },
+     {
+      "t": "under extreme ~",
+      "cn": "在極端條件下"
+     }
+    ]
+   },
+   "en": "Under normal conditions, under certain conditions, under heavy load conditions, under extreme conditions.",
+   "cn": "在正常情況下、在某些特定條件下、在重負載條件下、在極端條件下。",
+   "hi": [
+    {
+     "t": "under extreme conditions",
+     "cn": "在極端條件下",
+     "k": "underCond",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "sp": "N",
+   "vis": {
+    "type": "family",
+    "core": "conduct",
+    "coreCn": "進行……",
+    "art": "labExperiment",
+    "items": [
+     {
+      "t": "~ an experiment",
+      "cn": "進行實驗"
+     },
+     {
+      "t": "~ a test",
+      "cn": "進行測試"
+     },
+     {
+      "t": "~ an investigation",
+      "cn": "進行調查"
+     }
+    ]
+   },
+   "en": "Conduct an experiment, conduct a test, conduct an investigation.",
+   "cn": "進行實驗、進行測試、進行調查。",
+   "hi": [
+    {
+     "t": "conduct a test",
+     "cn": "進行測試",
+     "k": "conduct",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "consult + 人 + about + 事",
+    "art": "interviewDesk",
+    "rows": [
+     {
+      "lab": "向某人請教某事",
+      "blocks": [
+       {
+        "t": "I",
+        "k": "s"
+       },
+       {
+        "t": "consulted",
+        "k": "v"
+       },
+       {
+        "t": "my supervisor",
+        "k": "o"
+       },
+       {
+        "t": "about",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "the quality issues",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "⚠ 不加 to",
+      "blocks": [
+       {
+        "t": "I",
+        "k": "s"
+       },
+       {
+        "t": "consulted",
+        "k": "v"
+       },
+       {
+        "t": "to",
+        "k": "n",
+        "x": true
+       },
+       {
+        "t": "my manager",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "consult with + 人 ＝ 和對方商量、討論。"
+   },
+   "en": "I consulted my supervisor about the quality issues.",
+   "cn": "我向主管請教了品質問題。",
+   "hi": [
+    {
+     "t": "consulted my supervisor about",
+     "cn": "向主管請教",
+     "k": "consult",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "主詞 + expands when heated",
+    "art": "thermalExpand",
+    "rows": [
+     {
+      "lab": "省略「主詞 + be」",
+      "blocks": [
+       {
+        "t": "Metal",
+        "k": "s"
+       },
+       {
+        "t": "expands",
+        "k": "v"
+       },
+       {
+        "t": "when",
+        "k": "n"
+       },
+       {
+        "t": "it is",
+        "k": "n",
+        "x": true
+       },
+       {
+        "t": "heated",
+        "k": "o",
+        "add": true
+       }
+      ]
+     }
+    ],
+    "note": "consider + 名詞片語：consider thermal expansion and contraction。"
+   },
+   "en": "Metal expands when heated and contracts when cooled.",
+   "cn": "金屬受熱時會膨脹，冷卻時會收縮。",
+   "hi": [
+    {
+     "t": "expands when heated",
+     "cn": "受熱時膨脹",
+     "k": "thermal",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "sp": "N",
+   "vis": {
+    "type": "pattern",
+    "kick": "條件用 under／溫度用 at",
+    "art": "measureCaliper",
+    "rows": [
+     {
+      "lab": "條件 → under",
+      "blocks": [
+       {
+        "t": "We",
+        "k": "s"
+       },
+       {
+        "t": "inspect",
+        "k": "v"
+       },
+       {
+        "t": "the product",
+        "k": "o"
+       },
+       {
+        "t": "under",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "constant temperature conditions",
+        "k": "o"
+       }
+      ]
+     },
+     {
+      "lab": "溫度 → at",
+      "blocks": [
+       {
+        "t": "Store",
+        "k": "v"
+       },
+       {
+        "t": "the glue",
+        "k": "o"
+       },
+       {
+        "t": "at",
+        "k": "n",
+        "add": true
+       },
+       {
+        "t": "room temperature",
+        "k": "o"
+       }
+      ]
+     }
+    ],
+    "note": "講「條件」用 under，講「某個溫度」用 at。"
+   },
+   "en": "We need to inspect the product under constant temperature conditions.",
+   "cn": "我們需要在恆溫條件下檢驗產品。",
+   "hi": [
+    {
+     "t": "under constant temperature conditions",
+     "cn": "在恆溫條件下",
+     "k": "constTemp",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 2,
+    "wrong": "Today, we have a operator was absent because of sick, we had a lot of parts needed to be inspected, so I arranged backup inspector to complete.",
+    "bad": [
+     "we have a operator was absent",
+     "because of sick"
+    ],
+    "fix": "Today, one of our operators was absent because of illness. We had a lot of parts that needed to be inspected, so I arranged a backup inspector to complete the inspections.",
+    "good": [
+     "one of our operators",
+     "because of illness"
+    ],
+    "why": "Say one of our operators with was, and use a noun after because of.",
+    "whyCn": "one of our + 複數名詞，動詞用單數 was；because of 後面接名詞。"
+   },
+   "en": "Today, one of our operators was absent because of illness.",
+   "cn": "今天我們有一位作業員因病缺勤。",
+   "hi": [
+    {
+     "t": "because of illness",
+     "cn": "因病",
+     "k": "becauseOf",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 5,
+    "wrong": "The experiment was conducted different load conditions.",
+    "bad": [
+     "conducted different"
+    ],
+    "fix": "The experiment was conducted under different load conditions.",
+    "good": [
+     "under different load conditions"
+    ],
+    "why": "With conditions, we use under.",
+    "whyCn": "「在…條件下」要用介系詞 under。"
+   },
+   "en": "The experiment was conducted under different load conditions.",
+   "cn": "這項實驗是在不同的負載條件下進行的。",
+   "hi": [
+    {
+     "t": "under different load conditions",
+     "cn": "在不同負載條件下",
+     "k": "underCond",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 5,
+   "sp": "N",
+   "vis": {
+    "type": "fix",
+    "n": 6,
+    "wrong": "The inspector kept some defective parts in case the supplier needed to investigate the reason.",
+    "bad": [
+     "the reason"
+    ],
+    "fix": "The inspector kept some defective parts in case the supplier needed to investigate the cause.",
+    "good": [
+     "the cause"
+    ],
+    "why": "In quality work, we investigate the cause of a problem.",
+    "whyCn": "品保上調查問題的根源用 cause，不用 reason。"
+   },
+   "en": "The inspector kept some defective parts in case the supplier needed to investigate the cause.",
+   "cn": "檢驗員保留了一些不良品，以防供應商需要調查原因。",
+   "hi": [
+    {
+     "t": "investigate the cause",
+     "cn": "調查原因",
+     "k": "cause",
+     "c": 2
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "I consulted my manager ___ the schedule.",
+    "a": "about",
+    "n": 1
+   },
+   "en": "I consulted my manager ___ the schedule.",
+   "cn": "想一想，空格要填什麼？",
+   "say": "I consulted my manager, blank, the schedule.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "I consulted my manager ___ the schedule.",
+    "a": "about",
+    "n": 1,
+    "show": true
+   },
+   "en": "I consulted my manager about the schedule.",
+   "cn": "我向經理請教了時程的事。",
+   "hi": [
+    {
+     "t": "consulted my manager about",
+     "cn": "向經理請教",
+     "k": "consult",
+     "c": 3
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The experiment was conducted ___ different load conditions.",
+    "a": "under",
+    "n": 2
+   },
+   "en": "The experiment was conducted ___ different load conditions.",
+   "cn": "想一想，空格要填什麼？",
+   "say": "The experiment was conducted, blank, different load conditions.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "The experiment was conducted ___ different load conditions.",
+    "a": "under",
+    "n": 2,
+    "show": true
+   },
+   "en": "The experiment was conducted under different load conditions.",
+   "cn": "這項實驗是在不同的負載條件下進行的。",
+   "hi": [
+    {
+     "t": "under different load conditions",
+     "cn": "在不同負載條件下",
+     "k": "underCond",
+     "c": 1
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Metal expands when heated and ___ when cooled.",
+    "a": "contracts",
+    "n": 3
+   },
+   "en": "Metal expands when heated and ___ when cooled.",
+   "cn": "想一想，空格要填什麼？",
+   "say": "Metal expands when heated and, blank, when cooled.",
+   "pause": 4000
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "quiz",
+    "q": "Metal expands when heated and ___ when cooled.",
+    "a": "contracts",
+    "n": 3,
+    "show": true
+   },
+   "en": "Metal expands when heated and contracts when cooled.",
+   "cn": "金屬受熱時會膨脹，冷卻時會收縮。",
+   "hi": [
+    {
+     "t": "contracts when cooled",
+     "cn": "冷卻時收縮",
+     "k": "thermal",
+     "c": 4
+    }
+   ]
+  },
+  {
+   "ch": 6,
+   "sp": "N",
+   "vis": {
+    "type": "end"
+   },
+   "en": "Great job! Tap any line to hear it again, or turn on shadowing to practice speaking.",
+   "cn": "做得好！點任何一句可以再聽一次，或打開跟讀模式練習開口說。"
+  }
+ ]
+};
