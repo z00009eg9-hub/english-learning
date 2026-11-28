@@ -899,6 +899,44 @@ r39:{ unit:"g14", title:"反身代名詞與 each other、on my own / my own",
     {bad:"The children taught themselves the rhythm to one another.",good:"The children taught each other the rhythm.",why:"「A 教 B、B 教 A」是 each other（或 one another），不能用 themselves；themselves 會變成「他們教自己」或「親自教」，意思不同。"},
     {bad:"She wrote it in the own notebook, by her own.",good:"She wrote it in her own notebook, on her own.",why:"own 前面必須有所有格（her own notebook），不能用 the／a；「一個人」是 on her own 或 by herself，把兩個混成 ✗ by her own 是最常見的錯。"}
   ]
+},
+
+r40:{ unit:"g12", title:"like 與 as、as if / as though",
+  formula:"like ＋名詞／代名詞／-ing ＝ 像…一樣（其實不是）　|　as ＋主詞＋動詞 ＝ 照…的方式　|　as ＋名詞 ＝ 以…的身分、當作…　‖　as if / as though ＋子句 ＝ 好像…（不是事實就把動詞往後退一個時態）",
+  points:[
+    "like 是介系詞，後面只放名詞、代名詞或 -ing：He spoke like a sergeant.、It sounded like a traffic jam.、It's like waiting for a bus. 意思是「像…一樣」，而且通常暗示「其實不是那個」——他不是士官。",
+    "as 當連接詞時後面要有主詞＋動詞：Do as I do.、As Mr. Hsu had said, nobody can hear the Wednesdays.、Leave it as it is. ⚠ 正式英文不說 ✗ Do like I do、✗ Like I said；口語很常這樣講，但寫作一律用 as。",
+    "as ＋名詞是另一個意思：「以…的身分、當作…」，而且是真的。She joined as a guitarist.（她真的是吉他手）、He worked as a postman.、She did not take it as a compliment. 換成 like a guitarist 就變成「像吉他手一樣，其實不是」，意思整個不同。",
+    "⚠ as if／as though ＋子句 ＝「好像…」。講不是事實或很不可能的事，動詞要往後退一個時態：They sounded as if they had played together for years.（其實只練了幾個月）、He played as though nobody else were in the room.（房間裡明明有人）。這裡的 were 是 was 的正式替換，兩個都可以。如果講的是看起來很可能是真的，就用一般時態：It looks as if the bus is late. 口語常拿 like 代替 as if（It sounds like he's angry.），寫作時用 as if／as though 比較安全。"
+  ],
+  examples:[
+    {en:"She talks like her mother, but she cooks as her grandmother did.",cn:"她講話像她媽媽，但她煮菜是照她阿嬤的方式。",note:"like ＋名詞 vs. as ＋主詞＋動詞"},
+    {en:"He has worked here as a driver since March, and he drives like a man who is never late.",cn:"他三月起就在這裡當司機，而他開車像個從不遲到的人。",note:"as ＋名詞（真的是）vs. like ＋名詞（像而已）"},
+    {en:"The office looks as if nobody had cleaned it for a month.",cn:"那間辦公室看起來好像一個月沒人打掃過。",note:"as if ＋過去完成式：其實有打掃，只是看起來不像"}
+  ],
+  traps:[
+    {bad:"Do like I do: count, breathe, wait.",good:"Do as I do: count, breathe, wait.",why:"後面是「主詞＋動詞」（I do），要用連接詞 as。like 是介系詞，只能接名詞或代名詞（like me、like a sergeant）。"},
+    {bad:"They sounded as if they have played together for years.",good:"They sounded as if they had played together for years.",why:"主句是過去式，而且「一起彈很多年」不是事實，as if 後面要往後退一個時態，用過去完成式 had played。"}
+  ]
+},
+
+r41:{ unit:"g03", title:"during / for / while",
+  formula:"during ＋名詞 ＝ 在那段期間（什麼時候）　|　for ＋一段長度 ＝ 持續多久　|　while ＋主詞＋動詞 ＝ 在…的同時（整個子句）",
+  points:[
+    "during 後面只放名詞或名詞片語，回答的是「什麼時候」：during the day、during the power cut、during the rainy season、during the first week of the rainy season。它不說長度，所以不能接「十天」這種數量。",
+    "for 後面放一段長度，回答的是「多久」：for ten days、for twenty minutes、for two years。口語有時會把 for 省掉（He waited twenty minutes.），但意思一樣是長度。",
+    "while 是連接詞，後面要接完整的子句（主詞＋動詞）：while the machines were running、while his clothes were still wet、while the dryers were still free。同一時間發生的兩件事，持續的那一件常用進行式。",
+    "⚠ 換算的方法：後面是名詞就用 during，後面是長度就用 for，後面是句子就用 while。同一件事可以兩種寫法：during the film ＝ while the film was on；during his stay in Hanoi ＝ while he was staying in Hanoi。另外 during 和 while 都可以放句首，放句首時後面要加逗號。"
+  ],
+  examples:[
+    {en:"During the typhoon we lost power for six hours.",cn:"颱風期間我們停電了六個小時。",note:"during ＋名詞（什麼時候）／for ＋長度（多久）"},
+    {en:"While she was waiting for the bus, she answered eleven messages.",cn:"她等公車的時候回了十一則訊息。",note:"while ＋主詞＋動詞"},
+    {en:"Nobody spoke during the meal, and afterwards they sat outside for an hour.",cn:"吃飯期間沒有人說話，之後他們在外面坐了一個小時。",note:"during the meal 不能寫成 ✗ during an hour"}
+  ],
+  traps:[
+    {bad:"He used the laundry during ten days.",good:"He used the laundry for ten days.",why:"ten days 是長度，不是一段指定的時間，要用 for。during 後面要放「哪一段期間」（during the rainy season、during the power cut）。"},
+    {bad:"Nobody could open the doors while the power cut.",good:"Nobody could open the doors during the power cut.",why:"the power cut 是名詞，後面沒有動詞，所以要用 during。要用 while 就得補成子句：while the power was off。"}
+  ]
 }
 
 };

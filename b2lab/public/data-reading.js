@@ -2403,6 +2403,146 @@ window.READING = [
      b2Cn:"Anita 自己一個人記帳，記在她自己的筆記本上。",
      spCn:"帳是她自己記的——她自己的小本子，不是別人的。"}
   ]
+},
+
+/* ---------------------------------------------------------- 40 */
+{
+  id:"r40", level:"B2", topic:"社區樂團與表演", words:293,
+  title:"As If They Had Played Together for Years",
+  titleCn:"好像一起彈了好多年",
+  focus:"like 與 as、as if / as though",
+  intro:"社區公布欄上的一張告示把 Anita 拉進一個業餘樂團。注意兩組最容易混的字：like 後面接名詞或代名詞，意思是「像…一樣（其實不是）」；as 後面接主詞＋動詞，意思是「照…的方式」，而 as ＋名詞是「以…的身分、當作…」。as if／as though 後面接整個子句，講不是事實的事情時動詞要往後退一個時態（as if they had played together for years ＝ 其實沒有）。中文都講成「像」「好像」，英文卻靠這幾個字分工。",
+  spoken:[
+    {en:"She had played the guitar at school, like most people in her year.",cn:"她學生時代彈過吉他，跟她那一屆大部分人一樣。"},
+    {en:"Eleven strangers sat on plastic chairs, holding their instruments as if they were waiting to see a doctor.",cn:"十一個陌生人坐在塑膠椅上，抱著樂器，好像在等著看醫生。"},
+    {en:"He spoke like a sergeant and listened like a tuner, and he told them to do as he did.",cn:"他講話像士官，聽音像調音師，而他要他們照他的方式做。"},
+    {en:"An old man told Anita they had sounded as if they had played together for years.",cn:"一位老先生跟 Anita 說，他們聽起來好像一起彈了好多年。"}
+  ],
+  paras:[
+    {en:"A notice outside the community center asked for anyone who could hold a tune. Anita had played the guitar at school, like most people in her year, and had not touched one for a decade. The group met on Wednesdays, and on her first evening eleven strangers sat in a borrowed classroom on plastic chairs, holding their instruments as if they were waiting to see a doctor.",
+     cn:"社區活動中心外面的一張告示，徵求任何唱得上調的人。Anita 學生時代彈過吉他，跟她那一屆大部分人一樣，而且十年沒再碰過。這個團每星期三聚一次，她第一天晚上去的時候，十一個陌生人坐在一間借來的教室裡的塑膠椅上，抱著自己的樂器，好像在等著看醫生。"},
+    {en:"The conductor, Mr. Hsu, was a retired postman who spoke like a sergeant and listened like a tuner. He stopped them after four bars. 'You are all playing as though nobody else were in the room,' he said. 'Do as I do: count, breathe, wait.' Anita went home and practiced with headphones, following the recording bar by bar, and for the first time she heard how far behind the beat she was.",
+     cn:"指揮徐先生是個退休的郵差，講話像士官，聽音像調音師。他們才拉了四個小節他就喊停。「你們每個人彈的樣子，都好像房間裡沒有別人，」他說。「照我的方式做：數拍、呼吸、等。」Anita 回家戴上耳機練，一個小節一個小節跟著錄音，第一次聽出自己落在拍子後面有多遠。"},
+    {en:"By November the rehearsals no longer sounded like a traffic jam. Mr. Hsu worked them as a team rather than as eleven soloists, and he used the word listen as if it were an instruction, not advice. Anita, who had joined as a guitarist, was moved to the back to play a hand drum, because, he said, she counted like somebody who could be trusted.",
+     cn:"到了十一月，排練聽起來不再像一場大塞車。徐先生把他們當一支團隊練，而不是當十一個獨奏者，而他講「聽」這個字的時候，像是在下指令，不是在給建議。Anita 當初是以吉他手的身分加入的，後來被調到後排打手鼓，因為徐先生說，她數拍的樣子像個靠得住的人。"},
+    {en:"The concert was on a cold Saturday in the square behind the market, under a banner that flapped like a sail. Eighty neighbors came, mostly for the free soup. The band played six pieces, and the third, a slow song everybody's grandmother knew, went so well that the square went quiet. Afterwards an old man told Anita they had sounded as if they had played together for years. She did not take it as a compliment. As Mr. Hsu had said, nobody in the audience can hear the Wednesdays.",
+     cn:"音樂會辦在一個很冷的星期六，在市場後面那個廣場，頭上那條布條被風吹得像一張帆。八十個鄰居來了，大部分是為了免費的湯。樂團演了六首，第三首是每個人的阿嬤都會的慢歌，演得好到整個廣場都靜下來。結束後一位老先生跟 Anita 說，他們聽起來好像一起彈了好多年。她沒把這句話當成讚美。就像徐先生說過的，台下沒有人聽得見那些星期三。"}
+  ],
+  target:[
+    {w:"notice",ipa:"/ˈnoʊtɪs/",pos:"n.",cn:"告示；公告",def:"A short written sign that gives information to the public.",ex:"A notice by the lift said the water would be off till noon.",exCn:"電梯旁邊的一張告示說水會停到中午。"},
+    {w:"tune",ipa:"/tuːn/",pos:"n.",cn:"曲調",def:"A series of musical notes that make a song.",ex:"My father whistles the same tune every morning.",exCn:"我爸每天早上都吹同一個調子。"},
+    {w:"instrument",ipa:"/ˈɪn.strə.mənt/",pos:"n.",cn:"樂器；儀器",def:"An object you play to make music, or a tool for careful work.",ex:"The school lends an instrument to every new pupil.",exCn:"學校會借一樣樂器給每一個新學生。"},
+    {w:"conductor",ipa:"/kənˈdʌk.tɚ/",pos:"n.",cn:"指揮",def:"The person who stands in front of a group of musicians and leads them.",ex:"Our choir has had three conductors in two years.",exCn:"我們合唱團兩年換了三個指揮。"},
+    {w:"retired",ipa:"/rɪˈtaɪɚd/",pos:"adj.",cn:"退休的",def:"No longer working because of age.",ex:"A retired nurse runs the blood pressure desk on Fridays.",exCn:"星期五的血壓量測台是一位退休護理師在顧。"},
+    {w:"rehearsal",ipa:"/rɪˈhɝː.səl/",pos:"n.",cn:"排練",def:"A meeting where people practice a performance before the real one.",ex:"The last rehearsal before a show is always the worst.",exCn:"演出前最後一次排練永遠是最糟的。"},
+    {w:"soloist",ipa:"/ˈsoʊ.loʊ.ɪst/",pos:"n.",cn:"獨奏者；獨唱者",def:"A musician or singer who performs alone.",ex:"They found a soloist two days before the wedding.",exCn:"他們在婚禮前兩天找到一位獨唱者。"},
+    {w:"beat",ipa:"/biːt/",pos:"n.",cn:"拍子；節拍",def:"The regular pulse you can count or clap in music.",ex:"Clap on the second beat, not the first.",exCn:"在第二拍上拍手，不是第一拍。"},
+    {w:"banner",ipa:"/ˈbæn.ɚ/",pos:"n.",cn:"布條；橫幅",def:"A long piece of cloth with words on it, hung up in public.",ex:"Someone had hung a banner across the temple gate.",exCn:"有人在廟門口橫掛了一條布條。"},
+    {w:"compliment",ipa:"/ˈkɑːm.plə.mənt/",pos:"n.",cn:"讚美",def:"Something you say to show that you think well of someone.",ex:"Calling her careful was meant as a compliment.",exCn:"說她小心是想稱讚她。"}
+  ],
+  questions:[
+    {q:"What did Mr. Hsu do after the band had played four bars?",
+     opts:["A. He asked Anita to move to the back row","B. He stopped them and said they were playing as though nobody else were in the room","C. He sent everyone home to practice with headphones","D. He gave each player a copy of the recording"],
+     ans:1,
+     expl:"第二段：He stopped them after four bars. 'You are all playing as though nobody else were in the room,' he said。"},
+    {q:"Why was Anita moved to the back to play a hand drum?",
+     opts:["A. She had never played the guitar before","B. The band already had too many drummers","C. Mr. Hsu said she counted like somebody who could be trusted","D. She asked Mr. Hsu for a change"],
+     ans:2,
+     expl:"第三段：because, he said, she counted like somebody who could be trusted。"},
+    {q:"文章裡有 spoke like a sergeant、do as he did、joined as a guitarist 三種用法。like 和 as 差在哪裡？",
+     opts:["A. like ＋名詞／代名詞 ＝「像…一樣（其實不是）」；as ＋主詞＋動詞 ＝「照…的方式」，as ＋名詞 ＝「以…的身分、當作…」","B. like 用在過去，as 用在現在","C. 兩個意思一樣，as 只是比較正式","D. like 後面一定要接子句，as 後面一定要接名詞"],
+     ans:0,
+     expl:"spoke like a sergeant ＝ 像士官（他不是士官）；do as he did、As Mr. Hsu had said ＝ 照他的方式／照他說過的（後面是主詞＋動詞）；joined as a guitarist ＝ 真的是以吉他手加入，take it as a compliment ＝ 把它當成讚美。所以 ✗ Do like I do 在正式英文裡是錯的，要說 Do as I do。"},
+    {q:"What did the old man say after the concert, and why did it not please Anita?",
+     opts:["A. He said they had sounded as if they had played together for years — but they had only met in the autumn","B. He said the soup was better than the music","C. He said the third piece had been too slow","D. He said he had once been in the band himself"],
+     ans:0,
+     expl:"最後一段：they had sounded as if they had played together for years。as if ＋過去完成式代表「其實沒有」——他們只練了幾個月，所以她沒把這句話當成讚美。"}
+  ],
+  upgrade:[
+    {b1:"He talked like a soldier. He wanted everyone to copy him.",
+     b2:"He spoke like a sergeant and listened like a tuner, and he told them to do as he did.",
+     note:"like ＋名詞／代名詞 ＝「像…一樣」，而且暗示「其實不是」（like a sergeant、like a tuner、like a traffic jam）。as ＋主詞＋動詞 ＝「照…的方式」（do as he did、As Mr. Hsu had said）。✗ do like he did 在正式英文裡是錯的。另外 as ＋名詞是「以…的身分、當作…」：joined as a guitarist 是她真的以吉他手加入，take it as a compliment 是把它當成讚美；換成 like a guitarist 就變成「像吉他手一樣，其實不是」。",
+     sp:"He barked like a drill sergeant — basically, do it his way.",
+     spNote:"bark 是口語的「大聲喝令」；do it his way 是「照他的方式做」。",
+     b1Cn:"他講話像軍人。他要每個人照他做。",
+     b2Cn:"他講話像士官，聽音像調音師，而他要他們照他的方式做。",
+     spCn:"他像教育班長一樣吼——簡單說就是照他的方式做。"},
+    {b1:"They sounded really good. People thought they had played together a long time.",
+     b2:"An old man told Anita they had sounded as if they had played together for years.",
+     note:"as if／as though ＋子句 ＝「好像…」。講不是事實或不太可能的事，動詞要往後退一個時態：這個團秋天才成立，所以用 had played（過去完成），不是 have played。同理 as though nobody else were in the room、as if it were an instruction 也是刻意退一步的過去式（這裡的 were 是 was 的正式替換，兩個都通）。如果講的是看起來很可能是真的，就用一般時態：It looks as if the bus is late. ⚠ 口語常用 like 代替 as if（they sounded like they had played together for years），寫作時用 as if／as though 比較安全。",
+     sp:"That old guy said they sounded like they'd been playing together for years.",
+     spNote:"that old guy 是口語的「那位老先生」；they'd been playing 是 they had been playing 的縮寫。",
+     b1Cn:"他們聽起來很好。大家以為他們一起彈了很久。",
+     b2Cn:"一位老先生跟 Anita 說，他們聽起來好像一起彈了好多年。",
+     spCn:"那位老先生說他們聽起來像是一起彈了好多年。"}
+  ]
+},
+
+/* ---------------------------------------------------------- 41 */
+{
+  id:"r41", level:"B1", topic:"自助洗衣店", words:222,
+  title:"Ten Days at the Laundry on the Corner",
+  titleCn:"轉角洗衣店的十天",
+  focus:"during / for / while",
+  intro:"Tom 的洗衣機在雨季第一個星期壞掉，他因此在轉角的自助洗衣店待了十天。注意三個字的分工：during ＋名詞，說的是「在那段期間」（during the day、during the power cut）；for ＋一段長度，說的是「持續多久」（for ten days、for twenty minutes）；while ＋主詞＋動詞，後面要接完整的子句（while the machines were running）。中文都講成「在…的時候」「…了十天」，英文選錯字句子就壞了。",
+  spoken:[
+    {en:"His washing machine stopped during the first week of the rainy season.",cn:"他的洗衣機在雨季第一個星期壞掉。"},
+    {en:"For ten days he carried his clothes to the self-service laundry on the corner.",cn:"他有十天把衣服搬到轉角的自助洗衣店去洗。"},
+    {en:"While the machines were running, he sat by the window with a book.",cn:"機器在轉的時候，他就坐在窗邊看書。"},
+    {en:"Nobody could open the doors during the power cut.",cn:"停電期間沒有人打得開那些門。"}
+  ],
+  paras:[
+    {en:"Tom's washing machine stopped in the middle of a wash during the first week of the rainy season. The repair shop said the new part would take ten days, so for ten days he carried his clothes to the self-service laundry on the corner.",
+     cn:"Tom 的洗衣機在雨季第一個星期洗到一半就停了。維修店說新的零件要十天才會到，所以他有十天把衣服搬到轉角那家自助洗衣店去洗。"},
+    {en:"The laundry is open all night. During the day it is almost empty, but after nine it fills up with students and workers on the night shift. Tom always went at half past eight, while the dryers were still free.",
+     cn:"那家洗衣店整晚都開著。白天幾乎沒有人，但九點以後就被學生和上夜班的工人塞滿。Tom 都是八點半去，趁烘衣機還空著的時候。"},
+    {en:"While the machines were running, he sat by the window with a book. During the first evening he read four pages and then watched the rain instead. An old lady showed him which drawer the detergent goes in; at home he had been pouring it into the wrong one for two years.",
+     cn:"機器在轉的時候，他就坐在窗邊看書。第一天晚上他讀了四頁，然後就改成看雨。一位老太太告訴他洗衣精要倒進哪一個抽屜；他在家裡已經倒錯抽屜兩年了。"},
+    {en:"On the fourth evening the power went off while his clothes were still wet. Nobody could open the doors during the power cut, and the street stayed dark for twenty minutes.",
+     cn:"第四天晚上停電了，而他的衣服還是濕的。停電期間沒有人打得開那些門，整條街暗了二十分鐘。"},
+    {en:"The part arrived on a Tuesday. Tom has his own machine back, but during the rainy season he still takes his jackets to the laundry, because the dryers there can dry a jacket in half an hour. He says he learned more about his neighbors in those ten days than in the four years before.",
+     cn:"零件在一個星期二到了。Tom 又有自己的洗衣機可以用，但雨季的時候他還是把外套拿到洗衣店，因為那裡的烘衣機半小時就能把一件外套烘乾。他說那十天他認識鄰居的程度，比之前四年加起來還多。"}
+  ],
+  target:[
+    {w:"laundry",ipa:"/ˈlɑːn.dri/",pos:"n.",cn:"洗衣店；待洗衣物",def:"A shop where you wash clothes in machines, or the clothes you need to wash.",ex:"There is a laundry behind the bus station that opens at six.",exCn:"公車站後面有一家六點就開的洗衣店。"},
+    {w:"repair",ipa:"/rɪˈper/",pos:"n.",cn:"修理",def:"Work done to make something broken work again.",ex:"The repair cost more than a second-hand fan.",exCn:"修理的費用比買一台二手電風扇還貴。"},
+    {w:"dryer",ipa:"/ˈdraɪ.ɚ/",pos:"n.",cn:"烘衣機",def:"A machine that makes wet clothes dry with hot air.",ex:"Our dryer makes a noise like a scooter.",exCn:"我們的烘衣機聲音像一台機車。"},
+    {w:"detergent",ipa:"/dɪˈtɝː.dʒənt/",pos:"n.",cn:"洗衣精；清潔劑",def:"A liquid or powder for washing clothes or dishes.",ex:"Use less detergent and the towels stay soft.",exCn:"洗衣精用少一點，毛巾就不會變硬。"},
+    {w:"drawer",ipa:"/drɔːr/",pos:"n.",cn:"抽屜",def:"A box that slides in and out of a piece of furniture or a machine.",ex:"The spare keys are in the top drawer of the desk.",exCn:"備用鑰匙在書桌最上面那個抽屜。"},
+    {w:"shift",ipa:"/ʃɪft/",pos:"n.",cn:"班；工作時段",def:"A period of work in a place where people work in turns.",ex:"My cousin picked up an extra shift before the holiday.",exCn:"我表哥在假日前多排了一個班。"}
+  ],
+  questions:[
+    {q:"Why did Tom use the self-service laundry for ten days?",
+     opts:["A. His own washing machine had stopped and the new part took ten days","B. The laundry was cheaper during the rainy season","C. His dryer at home was too slow","D. He wanted to read more in the evenings"],
+     ans:0,
+     expl:"第一段：The repair shop said the new part would take ten days, so for ten days he carried his clothes to the self-service laundry。"},
+    {q:"文章裡有 for ten days、during the day、while the machines were running。這三個字怎麼分？",
+     opts:["A. during ＋名詞（說「在哪一段期間」）、for ＋一段長度（說「多久」）、while ＋主詞＋動詞（接整個子句）","B. during 和 for 完全一樣，while 只能用在過去","C. for 後面接名詞，during 後面接子句","D. while 和 during 一樣，for 只能用在未來"],
+     ans:0,
+     expl:"during the day、during the power cut、during the first week 後面都是名詞；for ten days、for twenty minutes、for two years 後面都是長度；while the machines were running、while his clothes were still wet 後面是完整的子句。所以 ✗ during ten days 和 ✗ while the power cut 都是錯的。"},
+    {q:"What happened on the fourth evening?",
+     opts:["A. The new part arrived","B. The power went off while his clothes were still wet","C. The laundry closed before he got there","D. An old lady repaired his machine"],
+     ans:1,
+     expl:"第四段：On the fourth evening the power went off while his clothes were still wet。"}
+  ],
+  upgrade:[
+    {b1:"He sat by the window with a book. The machines were running.",
+     b2:"While the machines were running, he sat by the window with a book.",
+     note:"while 後面一定要接「主詞＋動詞」的完整子句（while the machines were running、while his clothes were still wet、while the dryers were still free）。同樣的意思如果後面只放名詞，就要換成 during：during the power cut、during the first evening、during the rainy season。✗ while the power cut、✗ during the machines were running 都是錯的。兩個都可以放句首，放句首時後面加逗號。",
+     sp:"He'd sit by the window with a book while the stuff was in the machine.",
+     spNote:"the stuff 是口語的「那些東西（指要洗的衣服）」；He'd sit 是 He would sit，講「那段時間常常這樣」。",
+     b1Cn:"他坐在窗邊看書。機器在轉。",
+     b2Cn:"機器在轉的時候，他就坐在窗邊看書。",
+     spCn:"衣服在機器裡的時候，他就會坐在窗邊看書。"},
+    {b1:"He went to the laundry. It was ten days.",
+     b2:"For ten days he carried his clothes to the self-service laundry on the corner.",
+     note:"for ＋一段長度 ＝「持續多久」（for ten days、for twenty minutes、for two years）；during ＋名詞 ＝「在那段期間的某個時候」（during the first week of the rainy season、during the day）。兩個不能互換：✗ during ten days 是錯的，因為 ten days 只說長度、沒有指哪一段時間；反過來 ✗ for the power cut 也不通。口語有時會把 for 省掉（He waited twenty minutes.），但 during 後面永遠不能接長度。",
+     sp:"He lugged his washing down the street for ten days straight.",
+     spNote:"lug 是口語的「吃力地搬」；ten days straight 是「連續十天」。",
+     b1Cn:"他去洗衣店。有十天。",
+     b2Cn:"他有十天把衣服搬到轉角的自助洗衣店去洗。",
+     spCn:"他連續十天把要洗的衣服搬到街上那家店。"}
+  ]
 }
 
 ];
