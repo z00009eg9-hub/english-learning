@@ -1,6 +1,6 @@
 {
-  "lastId": 3,
-  "lastRun": "2026-11-21",
+  "lastId": 4,
+  "lastRun": "2026-11-28",
   "runs": [
     {
       "id": "my01",
@@ -19,6 +19,12 @@
       "date": "2026-11-21",
       "sentences": 8,
       "theme": "日常溝通"
+    },
+    {
+      "id": "my04",
+      "date": "2026-11-28",
+      "sentences": 5,
+      "theme": "表面處理與熱處理"
     }
   ]
 }

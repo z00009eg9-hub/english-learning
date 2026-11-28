@@ -26213,6 +26213,334 @@ window.BOOK = {
     }
    ]
   },
+  /* ---- my04 我的職場週記：表面處理與熱處理 ---- */
+  {
+   "id": "my04",
+   "icon": "📝",
+   "date": "2026-11-28",
+   "title": "My Work Week 04 — Surface Treatment & Heat Treatment",
+   "titleCn": "我的職場週記 04｜表面處理與熱處理",
+   "topics": "我的職場週記, 表面處理與熱處理, 噴砂, 鍍鉻, 熱處理, 表面硬度, 去毛刺, 機械加工, sandblast, chrome-plated, heat treatment, surface hardness, deburr, machining",
+   "hwTitle": "中翻英 Say It in English",
+   "hw": [
+    {
+     "n": 1,
+     "cn": "噴漆前需要噴砂處理。",
+     "pat": "need to + V + before + V-ing（…之前要先…）",
+     "note": "噴砂是一個動詞 sandblast，不是 spray sand；噴漆在工廠說 painting 就好。before 後面接動作要用 V-ing。",
+     "wrong": "Spray sand treatment before spray paint.",
+     "fix": "We need to sandblast it before painting."
+    },
+    {
+     "n": 2,
+     "cn": "這個零件需要鍍鉻。",
+     "pat": "needs to be + p.p.（需要被…）",
+     "note": "零件是「被」鍍鉻，所以用 needs to be chrome-plated；主詞是單數 this part，動詞要用 needs。",
+     "wrong": "This part need chrome.",
+     "fix": "This part needs to be chrome-plated."
+    },
+    {
+     "n": 3,
+     "cn": "熱處理可以提高材料的硬度。",
+     "pat": "主詞 + increases + 名詞（…提高…）",
+     "note": "熱處理是 heat treatment，dispose 是「丟掉、處置」，意思完全不同。說一般事實用現在簡單式 increases。",
+     "wrong": "Heat dispose make material more hard.",
+     "fix": "Heat treatment increases the material's hardness."
+    },
+    {
+     "n": 4,
+     "cn": "熱處理後要檢查表面硬度。",
+     "pat": "after + 名詞（…之後）",
+     "note": "「表面硬度」是固定說法 surface hardness，surface 放前面當形容詞；after 後面直接接名詞 heat treatment，不用加 do。",
+     "wrong": "After do heat treatment, check hardness on surface.",
+     "fix": "We need to check the surface hardness after heat treatment."
+    },
+    {
+     "n": 5,
+     "cn": "加工後需要去除毛刺。",
+     "pat": "need to + V + 受詞 + after + 名詞",
+     "note": "毛刺是 burr，去毛刺是一個動詞 deburr；機械加工說 machining，比 processing 更精準。",
+     "wrong": "After process need remove hair edge.",
+     "fix": "We need to deburr the parts after machining."
+    }
+   ],
+   "vocabTitle": "六個關鍵詞 Key Words",
+   "vocab": [
+    {
+     "w": "sandblast",
+     "ipa": "/ˈsænd.blæst/",
+     "pos": "v.",
+     "cn": "噴砂",
+     "ex": "They sandblasted the old frame to remove the rust.",
+     "exCn": "他們把舊車架噴砂，把鏽去掉。"
+    },
+    {
+     "w": "chrome",
+     "ipa": "/kroʊm/",
+     "pos": "n.",
+     "cn": "鉻；鍍鉻層",
+     "ex": "The handlebar has a shiny chrome finish.",
+     "exCn": "這個把手有亮面的鍍鉻層。"
+    },
+    {
+     "w": "hardness",
+     "ipa": "/ˈhɑːrd.nəs/",
+     "pos": "n.",
+     "cn": "硬度",
+     "ex": "The lab tested the hardness of three sample bolts.",
+     "exCn": "實驗室測了三支樣品螺栓的硬度。"
+    },
+    {
+     "w": "burr",
+     "ipa": "/bɝː/",
+     "pos": "n.",
+     "cn": "毛刺；毛邊",
+     "ex": "Be careful, that sharp burr can cut your glove.",
+     "exCn": "小心，那個尖銳的毛刺會割破手套。"
+    },
+    {
+     "w": "deburr",
+     "ipa": "/diːˈbɝː/",
+     "pos": "v.",
+     "cn": "去毛刺",
+     "ex": "The operator deburrs every hole with a small file.",
+     "exCn": "作業員用小銼刀把每個孔去毛刺。"
+    },
+    {
+     "w": "machining",
+     "ipa": "/məˈʃiː.nɪŋ/",
+     "pos": "n.",
+     "cn": "機械加工",
+     "ex": "The machining area is louder than the assembly line.",
+     "exCn": "機加區比組裝線還吵。"
+    }
+   ],
+   "phrasesTitle": "關鍵搭配 Collocations",
+   "phrases": [
+    {
+     "p": "sandblast before painting",
+     "cn": "噴漆前先噴砂"
+    },
+    {
+     "p": "be chrome-plated",
+     "cn": "鍍鉻"
+    },
+    {
+     "p": "heat treatment",
+     "cn": "熱處理"
+    },
+    {
+     "p": "surface hardness",
+     "cn": "表面硬度"
+    },
+    {
+     "p": "deburr the parts",
+     "cn": "把零件去毛刺"
+    },
+    {
+     "p": "after machining",
+     "cn": "機械加工後"
+    }
+   ],
+   "grammarTitle": "核心句型 Patterns",
+   "grammar": [
+    {
+     "k": "MY04-A",
+     "title": "need to + V + before / after…（…之前／之後要…）",
+     "pat": "We need to + 動詞 + before + V-ing / after + 名詞",
+     "pts": [
+      "說明工序順序最常用的句型：先做什麼、後做什麼。",
+      "before / after 後面可以接名詞（after machining）或 V-ing（before painting）。",
+      "例：We need to clean the parts before packing.（包裝前要先清潔零件。）"
+     ],
+     "ex": "We need to clean the parts before packing.",
+     "exCn": "包裝前要先清潔零件。"
+    },
+    {
+     "k": "MY04-B",
+     "title": "needs to be + p.p.（需要被…）",
+     "pat": "物品 + needs to be + 過去分詞",
+     "pts": [
+      "主詞是東西、不是人的時候，用被動說「這個東西需要被處理」。",
+      "單數主詞用 needs，複數用 need：These parts need to be painted.",
+      "例：This box needs to be sealed today.（這箱今天要封箱。）"
+     ],
+     "ex": "This box needs to be sealed today.",
+     "exCn": "這箱今天要封箱。"
+    },
+    {
+     "k": "MY04-C",
+     "title": "名詞 + 名詞（surface hardness 型）",
+     "pat": "名詞1（說明哪一種）+ 名詞2（主角）",
+     "pts": [
+      "英文常用前面的名詞修飾後面的名詞，不用 of。",
+      "surface hardness＝表面的硬度、heat treatment＝用熱的處理。",
+      "例：Check the paint thickness first.（先檢查漆膜厚度。）"
+     ],
+     "ex": "Check the paint thickness first.",
+     "exCn": "先檢查漆膜厚度。"
+    }
+   ],
+   "cmpTitle": "別混淆 Easily Confused",
+   "cmp": [
+    {
+     "u": "treatment vs dispose",
+     "sc": "treatment 是「處理、加工」（heat treatment 熱處理）；dispose of 是「丟棄、報廢」，用錯會變成把零件丟掉。",
+     "ex": "Send the good parts for heat treatment and dispose of the scrap.",
+     "exCn": "好的零件送熱處理，報廢品丟掉。",
+     "cn": "處理 vs 丟棄"
+    },
+    {
+     "u": "machining vs processing",
+     "sc": "machining 專指車、銑、鑽這類機械加工；processing 是很廣的「處理、流程」，也可以指資料或訂單處理。",
+     "ex": "Order processing takes two days, and machining takes one more.",
+     "exCn": "訂單處理要兩天，機械加工還要再一天。",
+     "cn": "機械加工 vs 處理"
+    }
+   ],
+   "reading": [
+    {
+     "bar": "週報｜表面處理與熱處理",
+     "title": "Weekly Report: Surface and Heat Treatment",
+     "titleCn": "📧 週報｜表面處理與熱處理",
+     "paras": [
+      {
+       "en": "Subject: Notes on surface treatment and heat treatment",
+       "cn": "主旨：表面處理與熱處理重點"
+      },
+      {
+       "en": "Hi, this week I went over a few process steps for our parts.",
+       "cn": "您好，這週我整理了幾個零件的工序重點。"
+      },
+      {
+       "en": "For painted parts, we need to sandblast them before painting. One part also needs to be chrome-plated.",
+       "cn": "噴漆件在噴漆前要先噴砂。另外有一個零件需要鍍鉻。"
+      },
+      {
+       "en": "Heat treatment increases the material's hardness, so we need to check the surface hardness after heat treatment.",
+       "cn": "熱處理會提高材料硬度，所以熱處理後要檢查表面硬度。"
+      },
+      {
+       "en": "After machining, we need to deburr the parts.",
+       "cn": "機械加工後，零件要去毛刺。"
+      }
+     ],
+     "questions": [
+      {
+       "q": "What do we need to do before painting?",
+       "qCn": "噴漆前要做什麼？",
+       "a": "Sandblast the parts.",
+       "aCn": "先噴砂。"
+      },
+      {
+       "q": "What do we check after heat treatment?",
+       "qCn": "熱處理後要檢查什麼？",
+       "a": "The surface hardness.",
+       "aCn": "表面硬度。"
+      },
+      {
+       "q": "What do we do to the parts after machining?",
+       "qCn": "機械加工後零件要做什麼？",
+       "a": "Deburr them.",
+       "aCn": "去毛刺。"
+      }
+     ]
+    },
+    {
+     "bar": "會議｜表面處理與熱處理",
+     "title": "Meeting: Process Steps",
+     "titleCn": "🗣 會議｜跟主管對工序",
+     "paras": [
+      {
+       "en": "Supervisor: Can you go over the process steps for these parts?",
+       "cn": "主管：可以說一下這些零件的工序嗎？"
+      },
+      {
+       "en": "You: Sure. We need to sandblast them before painting.",
+       "cn": "你：好的。噴漆前要先噴砂。"
+      },
+      {
+       "en": "Supervisor: OK. What about this one?",
+       "cn": "主管：好。那這一個呢？"
+      },
+      {
+       "en": "You: This part needs to be chrome-plated.",
+       "cn": "你：這個零件要鍍鉻。"
+      },
+      {
+       "en": "Supervisor: And the heat-treated parts?",
+       "cn": "主管：那熱處理的零件呢？"
+      },
+      {
+       "en": "You: Heat treatment increases the material's hardness.",
+       "cn": "你：熱處理會提高材料的硬度。"
+      },
+      {
+       "en": "Supervisor: So what do we check?",
+       "cn": "主管：所以要檢查什麼？"
+      },
+      {
+       "en": "You: We need to check the surface hardness after heat treatment.",
+       "cn": "你：熱處理後要檢查表面硬度。"
+      },
+      {
+       "en": "Supervisor: Anything else?",
+       "cn": "主管：還有嗎？"
+      },
+      {
+       "en": "You: Yes. We need to deburr the parts after machining.",
+       "cn": "你：有。機械加工後零件要去毛刺。"
+      }
+     ]
+    },
+    {
+     "bar": "討論｜下週我會怎麼做",
+     "title": "Discussion: What Will I Do Next Week?",
+     "titleCn": "討論｜下週我會怎麼做",
+     "paras": [
+      {
+       "en": "How can I explain the order of these process steps to a new operator?",
+       "cn": "我要怎麼跟新作業員說明這些工序的順序？"
+      },
+      {
+       "en": "What should I ask if a part comes back with burrs?",
+       "cn": "如果零件回來還有毛刺，我應該問什麼？"
+      },
+      {
+       "en": "How can I report a surface hardness result in one short sentence?",
+       "cn": "我要怎麼用一句短句回報表面硬度的結果？"
+      }
+     ]
+    },
+    {
+     "bar": "隨身速查｜本課 5 句",
+     "title": "Quick Reference",
+     "titleCn": "隨身速查｜本課 5 句",
+     "paras": [
+      {
+       "en": "We need to sandblast it before painting.",
+       "cn": "噴漆前需要噴砂處理。"
+      },
+      {
+       "en": "This part needs to be chrome-plated.",
+       "cn": "這個零件需要鍍鉻。"
+      },
+      {
+       "en": "Heat treatment increases the material's hardness.",
+       "cn": "熱處理可以提高材料的硬度。"
+      },
+      {
+       "en": "We need to check the surface hardness after heat treatment.",
+       "cn": "熱處理後要檢查表面硬度。"
+      },
+      {
+       "en": "We need to deburr the parts after machining.",
+       "cn": "加工後需要去除毛刺。"
+      }
+     ]
+    }
+   ]
+  },
   /* ---- bk20261008 Machine Problems & How long ---- */
   {
     "id": "bk20261008",
@@ -38677,6 +39005,7 @@ window.BOOK = {
     bk20260922:[[['eye','gear','plug','dumbbell','cart'],'組裝線五個工站：檢查車架外觀 → 安裝控制器與皮帶輪 → 佈線並用束線帶固定 → 功能測試 → 包裝出貨（發現瑕疵先停線隔離）。']],
     my02:[[['mask','knife','wave','thermo','camera'],'遮噴看起來沒成功、明天換方法 → 治具要改、會刮傷噴漆件 → 陽極前先噴砂、增加附著力 → 用火烤燒掉鋁件毛邊 → 用色差計對顏色。']],
     my03:[[['drumstick','cake','sad','moon','scooter'],'稱讚對方筷子用得好 → 問要不要甜點、椰奶冰淇淋 → 手機沒電、要行動電源 → 車燈刺眼、大家都開遠光燈 → 沒路燈、圓環多、小心機車。']],
+    my04:[[['plateL','typhoon','teacupL','magnifyL','wrench'],'零件要鍍鉻 → 噴漆前先噴砂 → 熱處理提高材料硬度 → 熱處理後檢查表面硬度 → 機械加工後去毛刺。']],
     my01:[[['sun','pot','wind','tornadoL','car'],'馬達上蓋剛來顏色不對 → 鐵板全都有壓傷 → 扶手管裡面生鏽 → 管材整支歪掉會撞機 → 通知廠商、再發生就拒收。']],
     qp04:[[['book','scissors','ticket','orgchart','broomL'],'馬達支架孔距超差：孔距 85.35–85.40、圖面 Rev C 要 85.0 ± 0.2 → 加工課用印出來的舊版 Rev B → 30 個試裝馬達、運轉四小時正常 → 不重工、向客戶申請特採、每箱貼黃標只限 2610 批 → 收回舊圖、只用受控圖面、首件對最新版。']],
     qp03:[[['spray','faucet','mirror','cloudRain','umbrella'],'重訓架立柱掉漆：客戶百格 2B、規格要 4B → 我們只測平的測試片、沒測實際零件 → 脫脂槽三週沒換、油殘留 → 300 支保留、空運 40 支 → 脫脂槽每週換、每班測實際零件附照片。']],
